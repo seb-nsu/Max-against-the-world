@@ -1,0 +1,94 @@
+# Rätsel: Welt 3, Neo-Neustadt 2099
+
+Welt 3 hat 13 Rätsel, drei davon schwer, und führt die kreativste Mechanik des Spiels ein: Max kann Eigenschaften von Dingen vertauschen. Dazu spielen Max und Pixel auf zwei verschiedenen Ebenen und müssen sich gegenseitig helfen.
+
+## Neue Mechaniken
+
+**Zwei Ebenen:** Ab der roten Pille ist Max in der Simulation, während sein Körper in einer Kapsel in der echten Unterstadt liegt. Pixel bleibt in der Realität. Der Spieler wechselt zwischen beiden Ebenen, und was Pixel in der Realität tut (Kabel umstecken, Strom abschalten, Kapsel schütteln), verändert die Simulation. Verständigen können sich die beiden nur über ein altes Terminal, auf dem Pixel nur Miau-Morsezeichen tippen kann.
+
+**Code-Sicht:** In der Simulation sieht Max die Eigenschaften von Dingen als grünen Code. Er kann zwei Eigenschaften zwischen zwei Dingen vertauschen, etwa *verschlossen* von einer Tür auf einen Mund oder *schwer* von einem Würfel auf sich selbst. Pro Raum hat er nur eine begrenzte Zahl an Tauschvorgängen.
+
+| Beispiel | Tausch | Ergebnis |
+| --- | --- | --- |
+| Tür und Agent Schmidt | *verschlossen* ↔ *gesprächig* | Die Tür redet ununterbrochen, Schmidt bekommt den Mund nicht auf |
+| Kaffeetasse und Agent | *Original* ↔ *Kopie* | Alle Klone gehorchen der Tasse |
+| Begleitwürfel und Max | *schwer* ↔ *leicht* | Max drückt einen Bodenschalter, der Würfel schwebt davon |
+
+**Wechseln über Telefonzellen:** Nach der roten Pille kann Max über klingelnde Telefonzellen zwischen Simulation und Realität hin und her springen, überall dort, wo eine Zelle steht (*Matrix*). Im Büroturm von Agent Schmidt gibt es allerdings keine Zelle; wer dort festsitzt, kommt nur mit Pixels Hilfe von außen heraus (Rätsel 7). Viele Rätsel verlangen mehrere Sprünge, denn was in der Realität passiert, verändert die Simulation:
+
+| Pixel tut in der Realität | Folge in der Simulation |
+| --- | --- |
+| Stellt den Strom der Kapsel kurz ab | In der ganzen Stadt wird es Nacht |
+| Schüttet Wasser über die Kühlung | Es regnet, auch in geschlossenen Räumen |
+| Öffnet das Fenster über Max' Kapsel | Es schneit |
+| Steckt ein Kabel falsch | Max sieht kurz aus wie eine Ente |
+
+**Was zwischen den Ebenen mitreist:** Gegenstände reisen mit, verwandeln sich dabei aber in ihr Gegenstück. Aus der Simulation in die Realität wird etwas Digitales zu etwas Handfestem, in die Gegenrichtung wird Handfestes zu leuchtendem Code. Die Verwandlung ist umkehrbar, und das Inventar zeigt sie mit einem kurzen Flackern an.
+
+| Gegenstand | In der Simulation | In der Realität |
+| --- | --- | --- |
+| Omas Rezept | Rezeptkarte in schöner Handschrift | Glückskeks mit dem Rezept als Spruch (Rätsel 12) |
+| Schmidts Akte | Leuchtende Datei | Dicker Papierordner (Rätsel 6, 7, 10) |
+| Zugangskarte | Grüner Code-Schlüssel | Plastikkarte von Herrn Vier (Rätsel 9, 12) |
+| Omas Kekse | Ofenwarme Kekse | Hundekuchen, Pixel ist entsetzt; zurück in der Simulation werden es wieder Kekse |
+
+**Wie der Spieler die Regel lernt:** Die Verwandlung wird in drei Schritten eingeführt, bevor ein Rätsel sie braucht.
+
+1. **Erleben:** Beim Eintritt in die Simulation steckt Morphäus Max eine Tüte Kekse zu, „eine Probe von einer alten Dame, die alles vorher weiß“. So hat Max beim ersten Sprung durch eine Telefonzelle in jedem Fall Omas Kekse dabei, egal ob er die Orakel-Oma (4) schon besucht hat. In der Realität greift er in die Tasche und hat Hundekuchen in der Hand. Pixel ist entsetzt, Max ratlos.
+2. **Erklären:** Kabel-Kalle lacht und erklärt die Regel im Widerstand in zwei Sätzen: „Die Simulation übersetzt alles. Was du mitnimmst, kommt als das an, was es auf der anderen Seite wäre.“ Danach steht die Regel in Max' Notizbuch.
+3. **Ausprobieren:** Max springt zurück, und aus dem Hundekuchen werden wieder Kekse. Ab jetzt kommentiert Max jede Verwandlung beim Ansehen im Inventar, etwa: „In der Matrix eine Rezeptkarte. Hier ein Glückskeks. Logisch. Irgendwie.“
+
+Wer die Regel trotzdem vergisst, bekommt sie von Pixel im Hilfesystem bei Stufe 1 noch einmal angedeutet.
+
+**Testkammern:** Auch M.U.T.T.I.s Testkammern sind reine Code-Sicht-Rätsel, ohne Portale und ohne Geschicklichkeit. Die Anspielung auf \*Portal\* steckt in M.U.T.T.I., Bernd und dem Kuchen, nicht in der Steuerung. Ein Portalgerät gibt es trotzdem: Es funktioniert genau einmal für eine Sekunde und geht dann aus, weil die Batterie leer ist (Rätsel 9). Das spart viel Programmierarbeit, und die Code-Sicht trägt die Welt allein.
+
+## Abhängigkeitsdiagramm
+
+*(Diagramm „Rätsel-Abhängigkeiten Welt 3 · 13 Rätsel“ nur im Online-Dokument)*
+
+Drei Stränge laufen parallel: der Laboreingang mit dem Roboter-Hausmeister (ganz links, von Anfang an offen), das Orakel mit Herrn Vier (Mitte links) und der Büroturm mit Kabel-Kalle (rechts). Sie treffen sich erst beim Paradoxon. Mit ⇄ markierte Rätsel verlangen Sprünge zwischen Simulation und Realität.
+
+## Die Rätsel von Welt 3
+
+Max landet in der verregneten Unterstadt. Von Anfang an sind drei Wege offen: der Mensch-Test, die Nudelbude und der Laboreingang. Nach der roten Pille springt Max über Telefonzellen an jeder Telefonzelle zwischen Simulation und Realität.
+
+| Nr. | Rätsel | Stufe | Lösung | Benötigt | Belohnung |
+| --- | --- | --- | --- | --- | --- |
+| 1 | **Der Mensch-Test** | mittel | Detektiv Deckert prüft jeden, ob er ein Replikant ist. Logische Antworten fallen durch, denn Maschinen antworten logisch. Max beobachtet echte Menschen in der Unterstadt (einen Mann, der an der Nudelbude weint, eine Frau, die mit ihrem Regenschirm streitet) und lernt, „menschlich unlogisch“ zu antworten. Die Antworten muss er im Dialog aus diesen Beobachtungen zusammensetzen. | – | Zugang zur Apothekengasse mit dem Pillenautomaten |
+| 2 | **Die Nudelbude „Vier“** | leicht | Der Kontaktmann des Widerstands wartet in der Nudelbude, will aber ein Erkennungsgericht: „zwei mal zwei“. Der Koch versteht nur „Vier“. Max bestellt einfach „Vier“. | – | Treffen mit **Morphäus** |
+| 3 | **Der Pillenautomat** | mittel | Morphäus hat keine Pillen mehr. Der Pillenautomat der Apotheke gibt nur etwas heraus, wenn er ein typisches Matrix-Symptom erkennt, und nur an Menschen, die Deckerts Test bestanden haben. Max lässt Pixel zweimal genau gleich am Automaten vorbeigehen und meldet ein Déjà-vu. Diagnose: „Fehler in der Matrix“. Der Automat wirft zwei Pillen aus, und Max muss selbst wählen. Die blaue verspricht, nie wieder etwas wissen zu müssen: ewige Wiederholungen, keine Fragen, keine Spoiler. Nimmt er sie, erwacht er auf Opas Sofa, bis Pixel ihm eine Ohrfeige verpasst und die Szene neu beginnt. Erst die unbequeme rote Pille führt weiter. | Mensch-Test (1), Morphäus (2) | **Rote Pille**, Eintritt in die **Simulation** |
+| 4 | **Die Vase des Orakels** | mittel | In der Simulation backt die Orakel-Oma Kekse und prophezeit, dass Max ihre Vase zerbrechen wird. In der Vase steckt Omas Geheimrezept für ihr Keksgewürz, aber die Oma lässt niemanden an sie heran. Max dreht die Prophezeiung um: Wenn es ohnehin passiert, kann sie ihm die Vase auch gleich geben. Die Oma seufzt und reicht sie ihm. Im Küchenradio läuft dabei eine Durchsage: „Heute ist der Welttag der vergessenen Geburtstage.“ Dabei verrät ihr Kochbuch eine von M.U.T.T.I.s Regeln (siehe 10). | Simulation (3) | **Omas Rezeptkarte**, **Regel 2** |
+| 5 | **Die gesprächige Tür** | mittel | Einführung der Code-Sicht: Eine Tür ist *verschlossen*, Agent Schmidt ist *gesprächig*. Max tauscht beides. Die Tür öffnet sich und hört nicht mehr auf zu reden, Schmidt bringt kein Wort heraus. | Simulation (3) | Code-Sicht gelernt |
+| 6 | **Die Agenten-Klone** | schwer | Agent Schmidt kopiert sich und füllt das ganze Bürogebäude. Nur das Original kann alle Kopien abberufen, und es ist an Hausschuhen zu erkennen, aber alle Klone tragen inzwischen auch welche. In der Code-Sicht sieht Max: Nur das Original hat die Eigenschaft *Original*. Er tauscht sie mit der *Kopie*-Eigenschaft einer Kaffeetasse. Nun hält sich das Original für eine Kopie, und alle Klone gehorchen der Tasse. Max befiehlt der Tasse, alle Agenten in die Mittagspause zu schicken. Das verunsicherte Original nimmt seine Sonnenbrille ab („Kopien tragen so etwas nicht“), und Max steckt sie ein. Vorher weicht er in Zeitlupe den Kugeln eines Klons aus, biegt sich dabei wie im Film nach hinten und bekommt einen Hexenschuss, den Pixel bis zum Ende der Welt kommentiert. | Code-Sicht (5) | Freier Weg durch das Gebäude, **Schmidts Akte mit Regel 1** |
+| 7 | **Der Ausgang im 50. Stock** | mittel | Das Gebäude hat in der Simulation keinen Ausgang und keine Telefonzelle. Max muss in der Realität aufwachen, aber nur Pixel kann seine Kapsel umstecken. An der Wand in der Simulation steht ein Farbcode, den Max per Terminal an Pixel durchgibt. Pixel kann nur in Miau-Morse antworten, und ein falsch gestecktes Kabel lässt Max in der Simulation kurz als Ente erscheinen. Es sind nur drei Kabel, und die Farben stehen gut lesbar an der Wand; der Witz liegt in der Mühe, sie Pixel per Miau-Morse zu erklären. Kabel-Kalle, der Techniker des Widerstands, übersetzt dabei am Terminal mehr schlecht als recht. Der Spieler wechselt dabei zwischen beiden Figuren. | Agenten-Klone (6), Kalles Morse-Tabelle (13) | Max wacht **in der Realität auf; Schmidts Akte ist jetzt ein echter Papierordner** |
+| 8 | **Der Terminator-Hausmeister** | leicht | Ein Hausmeister-Roboter der Baureihe „Modell 08/15“ mit österreichischem Akzent bewacht den Laboreingang und sucht „Sahra Connor“. Max findet im Telefonbuch der Unterstadt 47 Einträge mit diesem Namen und gibt ihm die Seite. Der Roboter zieht los, sie alle zu besuchen. Vorher kann Max es mit einer feierlichen Handbewegung versuchen: „Das ist nicht der Junge, den du suchst.“ Der Roboter antwortet trocken: „Ich bin ein Hausmeister. Ich suche nur Dreck.“ Wer das Olivenöl aus Welt 2 dabeihat, ölt stattdessen seine quietschenden Gelenke und gewinnt einen Freund, der später im Finale hilft. | – (jederzeit möglich, nützt aber erst mit der Zugangskarte) | Eingang zum **Labor** |
+| 9 | **Die Testkammern** | schwer | Hinter der Panzertür (8) liegt nur der Datenanschluss des Labors. Max öffnet sie mit der Zugangskarte, Kabel-Kalle legt eine Leitung von dort zu Max' Kapsel in der Widerstandsbasis, und Max legt sich wieder hin. Er wacht direkt in M.U.T.T.I.s Labor auf, einer abgeschotteten Ebene derselben Simulation; eine zweite Kapsel gibt es nicht, und die Code-Sicht funktioniert auch hier. Am Eingang hängt ein Portalgerät an der Wand. Max schießt damit, und für eine Sekunde öffnet sich ein Portal direkt in Opas Wohnzimmer. Opa schaut vom Sofa auf: „Hast du an die Milch gedacht?“ Dann piept das Gerät: „Batterie leer. Bitte AA-Batterie einlegen.“ Das Portal schließt sich, und Pixel seufzt: „Hätten wir doch bloß eine Ewige Energiezelle.“ Ab dann ist das Gerät nur noch ein Gag im Inventar. Drei Testkammern, jede mit einem festen Budget an Tauschvorgängen, ganz ohne Geschicklichkeit. Kammer 1: Ein Bodenschalter will Gewicht. Max tauscht *schwer* von Begleitwürfel Bernd auf sich selbst, stellt sich auf den Schalter, und Bernd schwebt beleidigt davon. Kammer 2: Eine Lasersperre ist *tödlich*, ein Gummihuhn *harmlos*. Nach dem Tausch quietscht der Laser nur noch, und das Huhn darf niemand mehr anfassen. Kammer 3: Die Ausgangstür ist *verschlossen*, M.U.T.T.I.s Lautsprecher *gesprächig*; mit nur zwei Tauschen muss Max die Tür öffnen und Bernd so umverteilen, dass er nicht vor der Tür klemmt. M.U.T.T.I. kommentiert jeden Versuch, nach Kammer 1 etwa mit: „Dein Kuchen ist in einer anderen Testkammer.“ In einer Kammer kritzelt jemand, dass der Kuchen nicht existiert, und daneben steht Regel 3. Mit Hermes' geflügelter Sandale aus Welt 2 bekommt Max in Kammer 3 einen zusätzlichen Tausch. | Zugangskarte (12), Eingang (8) | **Regel 3**, Zugang zu M.U.T.T.I. |
+| 10 | **Das M.U.T.T.I.-Paradoxon** | schwer | M.U.T.T.I. hält sich an drei Fürsorge-Regeln: Regel 1 (Testpersonen sind zu beschützen), Regel 2 (nach jedem Test gibt es Kuchen), Regel 3 (Zucker ist gesundheitsschädlich und verboten). Max muss die drei Regeln aus Schmidts Akte, Omas Kochbuch und der Testkammer kennen und sie im Dialog in der richtigen Reihenfolge vorhalten, sodass M.U.T.T.I. sich selbst widerspricht. Falsche Reihenfolgen führen zu passiv-aggressiven Antworten, aber nie zum Scheitern. Wie eine Sprachassistentin antwortet M.U.T.T.I. auf alles Falsche mit: „Das habe ich leider nicht verstanden. Meintest du: Gehorsam?“ | Regeln 1 bis 3 (4, 6, 9) | M.U.T.T.I. fährt herunter |
+| 11 | **Der glühende Kern** | mittel | Die Energiezelle ist glühend heiß. Max tauscht in der Code-Sicht *heiß* mit *kalt* von Omas Keksen, die er noch in der Tasche hat. Die Zelle kühlt ab, die Kekse sind nun ofenwarm. Ohne Kekse springt Max in die Realität und lässt Pixel das Fenster über seiner Kapsel öffnen: In der Simulation schneit es im Kern, und die Zelle kühlt ab. | M.U.T.T.I. aus (10) | **Ewige Energiezelle** |
+
+### Zwei leichte Rätsel zwischendurch
+
+Diese beiden Rätsel liegen zwischen den schweren und geben kleine Erfolgserlebnisse. Gleichzeitig bringen sie zwei eigene Figuren ins Spiel.
+
+| Nr. | Rätsel | Stufe | Lösung | Benötigt | Belohnung |
+| --- | --- | --- | --- | --- | --- |
+| 12 | **Die vierte Zutat** | leicht | Herr Vier kocht nur Gerichte mit genau vier Zutaten, und für seine berühmte Suppe fehlt ihm seit Jahren die vierte. Omas Rezeptkarte hat sich beim Sprung in die Realität in einen Glückskeks verwandelt. Herr Vier bricht ihn auf, liest die vierte Zutat als Spruch und kocht vor Rührung weinend die perfekte Suppe. Zum Dank gibt er Max eine Zugangskarte, die er in einer Lieferung fürs Labor gefunden hat. | Omas Rezeptkarte (4) | **Zugangskarte** für das Labor |
+| 13 | **Kalles Morse-Tabelle** | leicht | Kabel-Kalle soll Pixels Miau-Morse übersetzen, hat aber seine Tabelle verloren. Gespeichert hat sie nur noch Piepsi, ein kleiner runder Putzroboter mit Hut, der seit Jahren eingerostet in der Ecke der Widerstandsbasis steht. Pixel wirft Kalles Kaffeetasse vom Tisch, wie Katzen das eben tun, und der zähe schwarze Kaffee läuft genau in Piepsis Gelenke. Kalle: „Das ist kein Kaffee. Das ist Kalle-Kaffee.“ Piepsi fährt hoch und spielt zuerst eine alte Holo-Nachricht ab: Opa, flackernd und blau, sagt: „Hilf mir, Max. Du bist meine einzige Hoffnung. Und der Einzige, der weiß, wo der Dachbodenschlüssel liegt.“ Danach druckt er die Tabelle aus. Piepsi spricht nur in Pieptönen, und nur Pixel versteht ihn: „Er sagt, du bist ein Idiot. Wörtlich übersetzt.“ Kalle sortiert die Tabelle neu und behauptet danach, er hätte sie nie gebraucht. | Rote Pille (3) | **Morse-Tabelle**; Kalle kann Rätsel 7 übersetzen |
+
+## Inventar
+
+| Gegenstand | Fundort | Verwendung |
+| --- | --- | --- |
+| Notizen über Menschen | Beobachtungen in der Unterstadt | Mensch-Test (1) |
+| Rote Pille | Pillenautomat, nach eigener Wahl | Eintritt in die Simulation (3) |
+| Zugangskarte | Herr Vier (12) | Labor (9) |
+| Omas Kekse | Orakel-Oma | Tausch *heiß* ↔ *kalt* am Kern (11) |
+| Kaffeetasse | Bürogebäude | Trägerin der Eigenschaft *Original* (6) |
+| Schmidts Sonnenbrille | Agent Schmidt, nach dem Tausch (6) | Reisetasche: FBI-Agent in Welt 4 |
+| Farbcode | Wand im 50. Stock | Kabel für Pixel (7) |
+| Telefonbuchseite „Connor, Sahra“ | Telefonzelle, Unterstadt | Modell 08/15 ablenken (8) |
+| Portalgerät mit leerer Batterie | Labor | Ein Gag am Eingang der Testkammern (9); kommentiert jeden Kombinationsversuch, etwa mit dem Drachenei |
+| Begleitwürfel Bernd | Testkammer 1 | Kammern 1 und 3 (9); Pixel ist eifersüchtig |
+| Regel 1 bis 3 | Schmidts Akte, Omas Kochbuch, Testkammer | Paradoxon (10) |
+| Offenes Fenster | Pixel, echte Unterstadt | Alternativer Weg am Kern (11) |
+| Ewige Energiezelle | M.U.T.T.I.s Kern | Ziel der Welt (in der Gegenwart: AA-Batterie) |
