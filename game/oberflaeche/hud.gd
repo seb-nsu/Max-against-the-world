@@ -30,16 +30,16 @@ func _ready() -> void:
 	_punkte.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	wurzel.add_child(_punkte)
 
-	_max = _knopf(wurzel, "portraet_max.png", Vector2(2, 2), "UI_OBJ_MAX")
-	_pixel = _knopf(wurzel, "portraet_pixel.png", Vector2(28, 2), "UI_OBJ_PIXEL")
-	_pfote = _knopf(wurzel, "ui_pfote.png", Vector2(294, 2), "UI_PFOTE")
+	_max = _knopf(wurzel, "portraet_max.png", Vector2(3, 3), "UI_OBJ_MAX")
+	_pixel = _knopf(wurzel, "portraet_pixel.png", Vector2(42, 3), "UI_OBJ_PIXEL")
+	_pfote = _knopf(wurzel, "ui_pfote.png", Vector2(441, 3), "UI_PFOTE")
 	_max.pressed.connect(func(): if C.player != C.Max: Spiel.figur_wechseln())
 	_pixel.pressed.connect(Spiel.pixel_portraet_geklickt)
 	_pfote.pressed.connect(_pfote_geklickt)
 
 	_meldung = Label.new()
-	_meldung.position = Vector2(0, 164)
-	_meldung.size = Vector2(320, 14)
+	_meldung.position = Vector2(0, 246)
+	_meldung.size = Vector2(480, 21)
 	_meldung.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	_meldung.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	_meldung.visible = false

@@ -12,7 +12,7 @@ agent_radius = 0.0
 script = ExtResource("1_k40yk")
 script_name = "Boden"
 description = "Boden"
-interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(4, 140, 316, 140, 316, 178, 4, 178)])
+interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(6, 210, 474, 210, 474, 267, 6, 267)])
 
 [node name="Perimeter" type="NavigationRegion2D" parent="." unique_id=715242435]
 modulate = Color(0, 1, 0, 1)

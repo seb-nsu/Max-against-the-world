@@ -12,7 +12,7 @@ Stand 9. November 2026. Kennungen: S = zurückgestellte Punkte aus Gutachten 4, 
 | S7 | Gewerbe und Steuer | Sebastian, vor der Steam-Seite: Gewerbe anmelden, Steuernummer, Steuerberater-Erstgespräch (Kleinunternehmerregelung, Steam-Steuerinterview) | `03-produktion.md` (Rechtliches) |
 | S10 | Registersuche zum Titel „Couch Quest“ in DPMAregister und EUIPO eSearch (Klassen 9, 28, 41) | Sebastian sucht und schickt das Ergebnis; danach mit Datum eintragen | `03-produktion.md` (Rechtliches), `01-konzept.md` (Rechtscheck) |
 | P1 | Anwaltsstunde für Figurenliste und Titel | Sebastian, vor der Veröffentlichung (Budget 200 bis 350 €) | `03-produktion.md` (Rechtliches, Kosten) |
-| P2 | Schrift festlegen | Sebastian nach dem Umlaut-Test (Monogram Extended oder m5x7, OFL- bzw. CC0-Lizenz) | `05-spielsysteme.md` (Schrift) |
+| P2 | Grundauflösung 480×270 nach den ersten Testszenen noch einmal prüfen (Alternative 640×360) | Sebastian; ein Wechsel ist `python3 tools/aufloesung.py --umrechnen 480x270 640x360`, danach Platzhalter, Prüfung und Tests | `03-produktion.md` (Auflösung), `tools/aufloesung.py` |
 | P3 | Zwei-Klick-Steuerung bestätigen oder doch eine Verbenleiste | Sebastian nach dem ersten Test | `05-spielsysteme.md` (UI) |
 | P4 | Vollvertonung oder Brabbel-Laute | Sebastian, spätestens zu Beginn von Stufe 5 (ab etwa 10.000 Wunschlisten Vollvertonung) | `03-produktion.md`, `04-audio.md` |
 
@@ -31,7 +31,6 @@ Stand 9. November 2026. Kennungen: S = zurückgestellte Punkte aus Gutachten 4, 
 | --- | --- | --- | --- |
 | S15 | Neues Dachboden-Konzeptbild in Seitenansicht | Sebastian erzeugt es mit dem neuen Prompt (Konzept und Retro Diffusion) | `grafik/02-prolog-und-finale.md` |
 | S16 | Erstes Sprite-Paar Max und Pixel mit Silhouetten-Test | Sebastian: beide erzeugen, von Hand nachziehen, als schwarze Umrisse auf hellem und dunklem Grund prüfen; danach Freigabe für alle Figuren und für A10 | `grafik/01-max-und-pixel.md` |
-| S17 | UI-Mockup 320×180 | Bildschirmaufbau einmal zeichnen (Dachboden, Inventarleiste, Sprechblase mit drei Zeilen, Dialogauswahl), Sebastian gibt frei | `05-spielsysteme.md` (Bildschirmaufbau) |
 | S18 | Hörtest des Goblin-Lieds | Sobald das Lied erzeugt ist: Ist der Passwort-Teil verständlich? Untertitel sind schon fest eingeplant | `04-audio.md` |
 | P7 | Retro Diffusion vor dem ersten Auftrag prüfen | Sebastian: Modellnamen und Stil-Liste auf der Website prüfen und mit Datum ins KI-Protokoll; die lokale Version vorher auf der Radeon 7900 XT mit der Demo testen | `grafik/00-stil-und-werkzeuge.md`, `03-produktion.md` (System 2) |
 | P8 | Bildschirm-Einblendungen des Zapp-O-Mat (80×60, im Spiel etwa 40×30): Sind Gesichter lesbar? | Test in Godot; sonst die 80×60-Fassung auch beim Ansehen nutzen | `grafik/02-prolog-und-finale.md` |
@@ -53,7 +52,7 @@ Alle sechzehn Ideen sind in `03-produktion.md` (Abschnitt Automatisierung) mit N
 | A6 | Audio-Pipeline mit ElevenLabs-API und Audacity-Batch | Technik 2, Vollvertonung 5 |
 | A7 | GitHub Actions: Prüfskript, Export, Rätsel-Test, Build | 1 |
 | A8 | Web-Export für Testspieler | 2 |
-| A9 | Telemetrie im Testbuild | 2 |
+| A9 | Telemetrie im Testbuild: gebaut (Protokoll, Zustimmung, Auswertung, Beobachtungsbogen, Testbuild-Workflow; Stand in `03-produktion.md`). Offen: Testbuild einmal am Bildschirm unter Linux und Windows prüfen (Zustimmungsdialog, Einstellungen, Mauszeiger, da Popochiu im Export Fehler in seinen Editor-Skripten meldet), Upload an einen eigenen Dienst statt Datei per Hand | gebaut, Rest 2 |
 | A10 | Grafik-Batch: Prompt-Tabelle, Retro-Diffusion-API, Palettize, Zuschnitt, Protokoll | 3, nach S16 |
 | A11 | KI-Protokoll automatisch als CSV | 1 |
 | A12 | Englische Fassung per Claude aus der CSV mit Glossar | Technik früh, Inhalt 5 |

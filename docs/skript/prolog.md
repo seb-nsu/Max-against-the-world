@@ -205,8 +205,8 @@ Kurze Szene, führt die Reisetasche ein. Im Prolog gibt es nur das Pflichtfach; 
 | P0\_DACH\_MAX\_1110 | Max | Pixel will keinen Draht. Pixel will Fisch. Pixel will immer Fisch. | Kleiderbügel auf Pixel |
 | P0\_DACH\_PIX\_1120 | Pixel | Steck mir das nicht in den Fernseher. Ich bin keine Antenne. Ich bin ein Gesamtkunstwerk. | Pixel-Feld der Inventarleiste auf Zapp-O-Mat; nach P1 |
 | P0\_DACH\_MAX\_1130 | Max | Der Dosenöffner passt nicht in den Fernseher. Hab's geprüft. | Dosenöffner auf Zapp-O-Mat |
-| P0\_DACH\_MAX\_1150 | Max | Erst Strom, dann Empfang. Und für Strom muss der Kater vom Kabel. | Drahtkleiderbügel oder Antenne auf Zapp-O-Mat vor P1 |
 | P0\_DACH\_OPA\_1140 | Opa | Nicht am Knopf drehen, bevor das Bild da ist! Der Werbeblock ist für den Rückweg. // Fünf Sekunden Milchwerbung, dann bist du wieder hier. Keiner weiß, warum. | Drehknopf vor P2 |
+| P0\_DACH\_MAX\_1150 | Max | Erst Strom, dann Empfang. Und für Strom muss der Kater vom Kabel. | Drahtkleiderbügel oder Antenne auf Zapp-O-Mat vor P1 |
 
 ## 8b. Zurufe
 

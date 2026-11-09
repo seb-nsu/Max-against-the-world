@@ -31,20 +31,30 @@ func ansehen() -> String:
 
 func on_click() -> void:
 	Hinweise.objekt_beruehrt(objekt_id())
+	Telemetrie.aktion_beginnen(objekt_id(), "benutzen")
 	if Spiel.ist_pixel() and not bauplan().get("nehmen"):
 		await _pixel_benutzt()
-		return
+	else:
+		await super()
+	Telemetrie.aktion_beenden()
+
+
+func on_right_click() -> void:
+	Telemetrie.aktion_beginnen(objekt_id(), "ansehen")
 	await super()
+	Telemetrie.aktion_beenden()
 
 
 func on_item_used(item: PopochiuInventoryItem) -> void:
 	Hinweise.objekt_beruehrt(objekt_id())
+	Telemetrie.aktion_beginnen(objekt_id(), "gegenstand", Telemetrie.gegenstand_id(item))
 	if item.script_name == Spiel.PIXEL_FELD:
 		I.active = null
 		await _pixel_benutzt()
-		return
-	Hinweise.objekt_beruehrt(Bauplan.gegenstand(item.script_name).get("id", ""))
-	await super(item)
+	else:
+		Hinweise.objekt_beruehrt(Bauplan.gegenstand(item.script_name).get("id", ""))
+		await super(item)
+	Telemetrie.aktion_beenden()
 
 
 func _on_click() -> void:

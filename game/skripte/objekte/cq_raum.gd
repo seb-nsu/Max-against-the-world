@@ -29,6 +29,7 @@ func _on_room_entered() -> void:
 	if not ab.is_empty() and not _im_abschnitt(Zustand.abschnitt):
 		Zustand.abschnitt = ab
 	var erster_besuch := not Zustand.war_in(raum_id())
+	Telemetrie.raum_betreten(raum_id())
 	Zustand.besuche(raum_id())
 	if not Spiel.herkunft_raum.is_empty() and has_marker("Von" + Spiel.herkunft_raum):
 		C.player.position = get_marker_position("Von" + Spiel.herkunft_raum)
@@ -50,6 +51,7 @@ func _on_room_transition_finished() -> void:
 
 func _on_restore_from_savegame() -> void:
 	Spiel.herkunft_raum = ""
+	Telemetrie.raum_betreten(raum_id())
 	partner_aufstellen()
 	_zustand_anwenden()
 	Spiel.pixel_feld_pruefen()

@@ -7,7 +7,7 @@ script = ExtResource("1_4itmo")
 script_name = "Krug"
 description = "Krug"
 cursor = 1
-interaction_polygon = PackedVector2Array(-7, -8, 7, -8, 7, 8, -7, 8)
+interaction_polygon = PackedVector2Array(-11, -12, 11, -12, 11, 12, -11, 12)
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1996430039]
 texture_filter = 1
@@ -17,7 +17,7 @@ texture_filter = 1
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=76490667]
 visible = false
 modulate = Color(1, 1, 0, 1)
-polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+polygon = PackedVector2Array(-18, -18, 18, -18, 18, 18, -18, 18)
 
 [node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=904663581]
 visible = false

@@ -7,7 +7,7 @@ script = ExtResource("1_l40iw")
 script_name = "Eimer"
 description = "Eimer"
 cursor = 1
-interaction_polygon = PackedVector2Array(-6, -6, 6, -6, 6, 6, -6, 6)
+interaction_polygon = PackedVector2Array(-9, -9, 9, -9, 9, 9, -9, 9)
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1879104409]
 texture_filter = 1
@@ -17,7 +17,7 @@ texture_filter = 1
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=695224359]
 visible = false
 modulate = Color(1, 1, 0, 1)
-polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+polygon = PackedVector2Array(-18, -18, 18, -18, 18, 18, -18, 18)
 
 [node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=544716742]
 visible = false

@@ -14,6 +14,8 @@ extends Node
 signal zeile_gesagt(schluessel: String)
 signal prolog_beendet
 signal figur_gewechselt(neu: PopochiuCharacter)
+## Eine Ersatzzeile kam (Telemetrie: Ersatzzeilen und Fehlklicks je Objekt)
+signal ersatz_gesagt(kuerzel: String, zeile: String)
 
 ## Sprecherkürzel der Welt-Tabellen → Popochiu-Figur
 const KUERZEL := {"MAX": "Max", "PIX": "Pixel", "OPA": "Opa"}
@@ -175,7 +177,7 @@ func _objekt_sagt(kuerzel: String, quelle: PopochiuClickable, text: String) -> v
 		stimme.clickable = false
 		stimme.modulate.a = 0.0
 		stimme.text_color = OBJEKTSTIMME_FARBE
-		stimme.dialog_pos = Vector2(0, -4)
+		stimme.dialog_pos = Vector2(0, -6)
 		_objektstimmen[kuerzel] = stimme
 	var oben := 0.0
 	for p in quelle.interaction_polygon:
@@ -205,7 +207,7 @@ func z(kuerzel: String, zeile: String) -> Callable:
 func _stimme_aus_dem_off(c: PopochiuCharacter, an: bool) -> void:
 	if an:
 		R.current.add_character(c)
-		c.position = Vector2(E.width / 2.0, 70)
+		c.position = Vector2(E.width / 2.0, 105)
 		c.modulate.a = 0.0
 		c.clickable = false
 	else:
@@ -237,6 +239,7 @@ func ersatz(kuerzel := "") -> void:
 	while pool.size() > 1 and wahl == _letzte_ersatz.get(kuerzel, ""):
 		wahl = pool.pick_random()
 	_letzte_ersatz[kuerzel] = wahl
+	ersatz_gesagt.emit(kuerzel, wahl)
 	await sagen(kuerzel, wahl)
 
 
@@ -641,10 +644,14 @@ func zwischenspiel_beginnen(nr: int) -> void:
 ## Inline-Dialog mit den übersetzten Texten, liefert den Index. Tests geben die Antwort über
 ## vorgabe_auswahl vor.
 func auswahl(texte: Array) -> int:
+	var index := -1
 	if not vorgabe_auswahl.is_empty():
-		return int(vorgabe_auswahl.pop_front())
-	var opt: PopochiuDialogOption = await D.show_inline_dialog(texte.map(func(t): return tr(t)))
-	return int(opt.id) if is_instance_valid(opt) else -1
+		index = int(vorgabe_auswahl.pop_front())
+	else:
+		var opt: PopochiuDialogOption = await D.show_inline_dialog(texte.map(func(t): return tr(t)))
+		index = int(opt.id) if is_instance_valid(opt) else -1
+	Telemetrie.auswahl(str(texte[index]) if index >= 0 and index < texte.size() else "", index)
+	return index
 
 
 ## Ende des gebauten Teils (Graubox-Ausbaustand): Meldung, das Spiel läuft weiter.

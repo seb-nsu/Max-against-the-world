@@ -11,7 +11,7 @@ raeume:
   - id: testbild
     name: Testbild
     skript_code: [TEST]
-    groesse: 320x180
+    groesse: 480x270
     ausgaenge: [gluecksrad]            # nach R1 wischt das Bild ins Studio
     erreichbar_ab: start
     musik: w4_testbild
@@ -19,21 +19,21 @@ raeume:
   - id: rauschen
     name: Rauschen zwischen den Sendern
     skript_code: [RAU]
-    groesse: 320x180
+    groesse: 480x270
     ausgaenge: [gluecksrad, sitcom_kueche, savanne, friedhof, kapitolis, empfang]   # nur Pixel, kriecht in die Sender
     erreichbar_ab: R1
     musik: w4_testbild
   - id: gluecksrad
     name: Glücksrad-Studio
     skript_code: [GLUE, BONU]
-    groesse: 320x180
+    groesse: 480x270
     ausgaenge: [testbild, sitcom_kueche, savanne, friedhof, kapitolis, werbespot_set, empfang]   # Umschalten
     erreichbar_ab: R1
     musik: w4_gluecksrad
   - id: sitcom_kueche
     name: Sitcom-Küche
     skript_code: [SIT]
-    groesse: 320x180
+    groesse: 480x270
     ausgaenge: [gluecksrad, savanne, friedhof, kapitolis, werbespot_set, empfang]   # Umschalten
     erreichbar_ab: R2
     musik: w4_sitcom
@@ -41,14 +41,14 @@ raeume:
   - id: savanne
     name: Savanne
     skript_code: [SAV, VERH]
-    groesse: 640x180
+    groesse: 960x270
     ausgaenge: [gluecksrad, sitcom_kueche, friedhof, kapitolis, werbespot_set, empfang]   # Umschalten
     erreichbar_ab: R2
     musik: w4_savanne
   - id: friedhof
     name: Musikvideo-Friedhof
     skript_code: [FRIE]
-    groesse: 320x180
+    groesse: 480x270
     ausgaenge: [spukhaus_keller, gluecksrad, sitcom_kueche, savanne, kapitolis, werbespot_set, empfang]   # Keller zu Fuß nach R5, sonst Umschalten
     erreichbar_ab: R2                  # nur um Mitternacht über die Programmzeitschrift, sonst Pausentafel
     musik: w4_mitternacht    # Musikvideo mit Rhythmus-Minispiel
@@ -56,7 +56,7 @@ raeume:
   - id: spukhaus_keller
     name: Spukhaus, Keller
     skript_code: [KELL]
-    groesse: 320x180
+    groesse: 480x270
     ausgaenge: [friedhof, spukhaus_halle]   # Grabplatte zum Friedhof; Sitcom-Tür nach oben ab R6
     erreichbar_ab: R5
     musik: w4_spukhaus
@@ -64,7 +64,7 @@ raeume:
   - id: spukhaus_halle
     name: Spukhaus, Halle
     skript_code: [HALL]
-    groesse: 320x180
+    groesse: 480x270
     ausgaenge: [spukhaus_keller]
     erreichbar_ab: R6
     musik: w4_spukhaus
@@ -72,7 +72,7 @@ raeume:
   - id: kapitolis
     name: Kapitolis
     skript_code: [KAPI]
-    groesse: 320x180
+    groesse: 480x270
     ausgaenge: [fondue_fabrik, gluecksrad, sitcom_kueche, savanne, friedhof, werbespot_set, empfang]   # Fabrik zu Fuß, sonst Umschalten
     erreichbar_ab: R2
     musik: w4_comic
@@ -80,7 +80,7 @@ raeume:
   - id: fondue_fabrik
     name: Fondue-Fabrik
     skript_code: [FABR]
-    groesse: 320x180
+    groesse: 480x270
     ausgaenge: [kapitolis]
     erreichbar_ab: R2
     musik: w4_comic
@@ -88,7 +88,7 @@ raeume:
   - id: werbespot_set
     name: Werbespot-Set
     skript_code: [WERB]
-    groesse: 320x180
+    groesse: 480x270
     ausgaenge: [gluecksrad, sitcom_kueche, savanne, friedhof, kapitolis, empfang]   # hinein über die Programmzeitschrift
     erreichbar_ab: R2
     musik: lied_werbepause   # Dr. Werbepauses Jingle läuft im Spot, bis Stumm ihn abbricht (R11b)
@@ -96,21 +96,21 @@ raeume:
   - id: empfang
     name: Empfang
     skript_code: [EMPF]
-    groesse: 320x180
+    groesse: 480x270
     ausgaenge: [kellerarchiv, zappmanns_studio, gluecksrad, sitcom_kueche, savanne, friedhof, kapitolis, werbespot_set]   # Aufzug nur hinauf (R12); hinaus per Umschalten
     erreichbar_ab: R11                 # Sendersuchlauf, danach Kanal 999 in der Programmzeitschrift
     musik: w4_zentrale
   - id: kellerarchiv
     name: Kellerarchiv
     skript_code: [ARCH]
-    groesse: 320x180
+    groesse: 480x270
     ausgaenge: [empfang]               # Servicetür
     erreichbar_ab: R11
     musik: w4_zentrale
   - id: zappmanns_studio
     name: Zappmanns Studio
     skript_code: [STUD]
-    groesse: 320x180
+    groesse: 480x270
     ausgaenge: [empfang]               # Aufzug; zurück erst nach R13, Umschalten gesperrt
     erreichbar_ab: R12
     musik: w4_zappmann
@@ -126,25 +126,25 @@ figuren:
     name: Max
     kuerzel: MAX
     raum: [testbild, gluecksrad, sitcom_kueche, savanne, friedhof, spukhaus_keller, spukhaus_halle, kapitolis, fondue_fabrik, werbespot_set, empfang, kellerarchiv, zappmanns_studio]
-    groesse_px: 56                     # ab R10 als Käsemann (gleiche Größe)
+    groesse_px: 84                     # ab R10 als Käsemann (gleiche Größe)
     spielbar: true
   - id: pixel
     name: Pixel
     kuerzel: PIX
     raum: [rauschen, testbild, savanne, werbespot_set, zappmanns_studio]   # meist im Rauschen, kann in jeden Sender fallen
-    groesse_px: 18
+    groesse_px: 27
     spielbar: true
   - id: opa
     name: Opa                          # Sprecher-Spalte: „Opa (Lichterkette)“
     kuerzel: OPA
     raum: spukhaus_halle               # spricht über die Lichterkette; Bild: Prolog-Wohnzimmer
-    groesse_px: 44                     # sitzend, Grafik Prolog und Finale
+    groesse_px: 66                     # sitzend, Grafik Prolog und Finale
     spielbar: false
   - id: flimmer
     name: Flimmer
     kuerzel: FLI
     raum: [testbild, rauschen]         # spricht in R5 aus der Leitung auf dem Friedhof
-    groesse_px: 16
+    groesse_px: 24
     spielbar: false
   - id: nachrichtensprecher
     name: Nachrichtensprecher
@@ -156,157 +156,157 @@ figuren:
     name: Gerd Glück
     kuerzel: GER
     raum: gluecksrad
-    groesse_px: 60
+    groesse_px: 90
     spielbar: false
   - id: troedel_experte
     name: Trödel-Experte
     kuerzel: EXP
     raum: gluecksrad
-    groesse_px: 58
+    groesse_px: 87
     spielbar: false
   - id: sitcom_vater
     name: Sitcom-Vater
     kuerzel: VAT
     raum: [sitcom_kueche, spukhaus_keller]   # nach R6 sitzt er im Keller
-    groesse_px: 58
+    groesse_px: 87
     spielbar: false
   - id: sitcom_mutter
     name: Sitcom-Mutter
     kuerzel: SMU
     raum: sitcom_kueche                # in R6 als Stimme in der Bild-in-Bild-Szene
-    groesse_px: 58
+    groesse_px: 87
     spielbar: false
   - id: sitcom_sohn
     name: Sitcom-Sohn
     kuerzel: SOH
     raum: sitcom_kueche
-    groesse_px: 56
+    groesse_px: 84
     spielbar: false
   - id: kommissar
     name: Kommissar
     kuerzel: KOM
     raum: [savanne, sitcom_kueche]     # in der Küche nur als Gast in R3
-    groesse_px: 58
+    groesse_px: 87
     spielbar: false
   - id: erzaehler
     name: Erzähler
     kuerzel: ERZ
     raum: savanne
-    groesse_px: 58                     # Stehgröße, hockt
+    groesse_px: 87                     # Stehgröße, hockt
     spielbar: false
   - id: loewe
     name: Löwe
     kuerzel: LOE
     raum: savanne
-    groesse_px: 60                     # Länge, liegend
+    groesse_px: 90                     # Länge, liegend
     spielbar: false
   - id: hyaene
     name: Hyäne
     kuerzel: HYA
     raum: savanne
-    groesse_px: 34
+    groesse_px: 51
     spielbar: false
   - id: gepard
     name: Gepard
     kuerzel: GEP
     raum: savanne
-    groesse_px: 30
+    groesse_px: 45
     spielbar: false
   - id: geier
     name: Geier
     kuerzel: GEI
     raum: savanne
-    groesse_px: 30
+    groesse_px: 45
     spielbar: false
   - id: nashorn
     name: Nashorn
     kuerzel: NAS
     raum: savanne
-    groesse_px: 60                     # Länge
+    groesse_px: 90                     # Länge
     spielbar: false
   - id: flamingos
     name: Flamingos
     kuerzel: FLA
     raum: savanne
-    groesse_px: 24                     # dreimal
+    groesse_px: 36                     # dreimal
     spielbar: false
   - id: zombie
     name: Zombie
     kuerzel: ZOM
     raum: friedhof
-    groesse_px: 58                     # sechsmal; im Grab 30
+    groesse_px: 87                     # sechsmal; im Grab 30
     spielbar: false
   - id: geist
     name: Geist
     kuerzel: GST
     raum: spukhaus_keller
-    groesse_px: 24                     # dreimal
+    groesse_px: 36                     # dreimal
     spielbar: false
   - id: fbi_agent
     name: FBI-Agent
     kuerzel: AGE
     raum: spukhaus_halle
-    groesse_px: 60
+    groesse_px: 90
     spielbar: false
   - id: super_siegfried
     name: Super-Siegfried
     kuerzel: SIE
     raum: [kapitolis, fondue_fabrik, werbespot_set]
-    groesse_px: 64
+    groesse_px: 96
     spielbar: false
   - id: fledermann
     name: Fledermann
     kuerzel: FLE
     raum: [kapitolis, fondue_fabrik, werbespot_set]
-    groesse_px: 58
+    groesse_px: 87
     spielbar: false
   - id: wonder_wilma
     name: Wonder-Wilma
     kuerzel: WIL
     raum: [kapitolis, fondue_fabrik, werbespot_set]
-    groesse_px: 58
+    groesse_px: 87
     spielbar: false
   - id: fabrikarbeiter
     name: Fabrikarbeiter
     kuerzel: null                      # spricht nicht
     raum: fondue_fabrik
-    groesse_px: 58
+    groesse_px: 87
     spielbar: false
   - id: dr_werbepause
     name: Dr. Werbepause
     kuerzel: WER
     raum: werbespot_set
-    groesse_px: 60
+    groesse_px: 90
     spielbar: false
   - id: empfangsdame
     name: Empfangsdame
     kuerzel: EMP
     raum: empfang
-    groesse_px: 58                     # Stehgröße, sitzt
+    groesse_px: 87                     # Stehgröße, sitzt
     spielbar: false
   - id: sicherheitsmann
     name: Sicherheitsmann
     kuerzel: SIC
     raum: empfang
-    groesse_px: 64                     # zweimal
+    groesse_px: 96                     # zweimal
     spielbar: false
   - id: zappmann
     name: Zappmann
     kuerzel: ZAP
     raum: zappmanns_studio
-    groesse_px: 62
+    groesse_px: 93
     spielbar: false
   - id: junger_zappmann
     name: Junger Zappmann
     kuerzel: null                      # nur im Archivband (Bild-in-Bild)
     raum: zappmanns_studio
-    groesse_px: 56
+    groesse_px: 84
     spielbar: false
   - id: wettkandidat
     name: Wettkandidat
     kuerzel: WET
     raum: zappmanns_studio
-    groesse_px: 56
+    groesse_px: 84
     spielbar: false
 
 gegenstaende:

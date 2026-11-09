@@ -12,63 +12,63 @@
 
 wohnzimmer:
   farbe: "#6b4f3f"
-  laufbereich: [[4, 138], [316, 138], [316, 178], [4, 178]]
+  laufbereich: [[6, 207], [474, 207], [474, 267], [6, 267]]
   marker:
-    start: [70, 150]              # Max liegt auf dem Sofa (Szene 1)
-    von_treppenhaus: [292, 158]
+    start: [105, 225]              # Max liegt auf dem Sofa (Szene 1)
+    von_treppenhaus: [438, 237]
   hotspots:
-    sofa: {rect: [32, 96, 92, 46], gehe: [80, 150]}
-    leerer_platz_auf_dem_couchtisch: {rect: [168, 120, 22, 10], gehe: [175, 150]}
-    teetasse: {rect: [148, 116, 12, 12], gehe: [150, 150]}
-    fernseher: {rect: [218, 78, 52, 62], gehe: [240, 150]}
-    familienfoto: {rect: [128, 34, 44, 34], gehe: [150, 150]}
+    sofa: {rect: [48, 144, 138, 69], gehe: [120, 225]}
+    leerer_platz_auf_dem_couchtisch: {rect: [252, 180, 33, 15], gehe: [263, 225]}
+    teetasse: {rect: [222, 174, 18, 18], gehe: [225, 225]}
+    fernseher: {rect: [327, 117, 78, 93], gehe: [360, 225]}
+    familienfoto: {rect: [192, 51, 66, 51], gehe: [225, 225]}
   ausgaenge:
-    treppenhaus: {rect: [292, 40, 26, 98], gehe: [300, 158]}
+    treppenhaus: {rect: [438, 60, 39, 147], gehe: [450, 237]}
 
 treppenhaus:
   farbe: "#584536"
-  laufbereich: [[4, 150], [120, 150], [296, 46], [316, 46], [316, 60], [140, 178], [4, 178]]
+  laufbereich: [[6, 225], [180, 225], [444, 69], [474, 69], [474, 90], [210, 267], [6, 267]]
   marker:
-    start: [60, 164]
-    von_wohnzimmer: [40, 164]
-    von_dachboden: [292, 54]
+    start: [90, 246]
+    von_wohnzimmer: [60, 246]
+    von_dachboden: [438, 81]
   hotspots:
-    hut_am_haken: {rect: [40, 54, 20, 18], gehe: [52, 160]}
-    fenster: {rect: [140, 34, 34, 44], gehe: [150, 110]}
-    treppe: {rect: [120, 60, 140, 90], gehe: [170, 120]}
+    hut_am_haken: {rect: [60, 81, 30, 27], gehe: [78, 240]}
+    fenster: {rect: [210, 51, 51, 66], gehe: [225, 165]}
+    treppe: {rect: [180, 90, 210, 135], gehe: [255, 180]}
   ausgaenge:
-    wohnzimmer: {rect: [2, 44, 30, 106], gehe: [20, 164]}
-    dachboden: {rect: [270, 0, 48, 40], gehe: [298, 52]}
+    wohnzimmer: {rect: [3, 66, 45, 159], gehe: [30, 246]}
+    dachboden: {rect: [405, 0, 72, 60], gehe: [447, 78]}
 
 dachboden:
   farbe: "#7a5c43"
-  laufbereich: [[4, 146], [316, 146], [316, 178], [4, 178]]
+  laufbereich: [[6, 219], [474, 219], [474, 267], [6, 267]]
   marker:
-    start: [250, 166]
-    von_treppenhaus: [250, 166]   # durch die Bodenluke vorne rechts
-    fernseher: [160, 158]         # vor dem Zapp-O-Mat
+    start: [375, 249]
+    von_treppenhaus: [375, 249]   # durch die Bodenluke vorne rechts
+    fernseher: [240, 237]         # vor dem Zapp-O-Mat
   figuren:
-    pixel: [104, 152]             # schläft auf dem Verlängerungskabel
-    opa: [206, 160]
+    pixel: [156, 228]             # schläft auf dem Verlängerungskabel
+    opa: [309, 240]
   props:
-    zapp_o_mat: {rect: [130, 82, 48, 62], gehe: [154, 158], item: null}
-    thunfischdose: {rect: [62, 132, 10, 8], gehe: [70, 158]}
-    dosenoeffner: {rect: [76, 132, 10, 8], gehe: [80, 158]}
-    drahtkleiderbuegel: {rect: [282, 66, 22, 10], gehe: [282, 160]}
+    zapp_o_mat: {rect: [195, 123, 72, 93], gehe: [231, 237], item: null}
+    thunfischdose: {rect: [93, 198, 15, 12], gehe: [105, 237]}
+    dosenoeffner: {rect: [114, 198, 15, 12], gehe: [120, 237]}
+    drahtkleiderbuegel: {rect: [423, 99, 33, 15], gehe: [423, 240]}
   hotspots:
-    drehknopf: {rect: [180, 96, 12, 14], gehe: [176, 158], name: Drehknopf}
-    werkzeugkiste: {rect: [56, 128, 36, 18], gehe: [74, 158]}
-    werkbank: {rect: [30, 92, 80, 34], gehe: [70, 158]}
-    kleiderschrank: {rect: [270, 40, 46, 104], gehe: [280, 160]}
-    kalender: {rect: [214, 48, 30, 30], gehe: [228, 160]}
-    ohrensessel: {rect: [208, 96, 48, 46], gehe: [232, 160]}
-    dachfenster: {rect: [40, 18, 30, 26], gehe: [60, 158]}
-    poster: {rect: [88, 30, 30, 34], gehe: [100, 158]}
-    ausgestopfter_fisch: {rect: [184, 40, 26, 14], gehe: [196, 158]}
-    kochbuch: {rect: [34, 64, 14, 12], gehe: [50, 158]}
-    toaster: {rect: [52, 80, 14, 12], gehe: [58, 158]}
-    plattenspieler: {rect: [2, 98, 26, 16], gehe: [20, 158]}
-    kiste_mit_fernbedienungen: {rect: [2, 118, 26, 24], gehe: [20, 158]}
-    opas_staubsauger_prototyp: {rect: [196, 118, 12, 26], gehe: [200, 160]}
+    drehknopf: {rect: [270, 144, 18, 21], gehe: [264, 237], name: Drehknopf}
+    werkzeugkiste: {rect: [84, 192, 54, 27], gehe: [111, 237]}
+    werkbank: {rect: [45, 138, 120, 51], gehe: [105, 237]}
+    kleiderschrank: {rect: [405, 60, 69, 156], gehe: [420, 240]}
+    kalender: {rect: [321, 72, 45, 45], gehe: [342, 240]}
+    ohrensessel: {rect: [312, 144, 72, 69], gehe: [348, 240]}
+    dachfenster: {rect: [60, 27, 45, 39], gehe: [90, 237]}
+    poster: {rect: [132, 45, 45, 51], gehe: [150, 237]}
+    ausgestopfter_fisch: {rect: [276, 60, 39, 21], gehe: [294, 237]}
+    kochbuch: {rect: [51, 96, 21, 18], gehe: [75, 237]}
+    toaster: {rect: [78, 120, 21, 18], gehe: [87, 237]}
+    plattenspieler: {rect: [3, 147, 39, 24], gehe: [30, 237]}
+    kiste_mit_fernbedienungen: {rect: [3, 177, 39, 36], gehe: [30, 237]}
+    opas_staubsauger_prototyp: {rect: [294, 177, 18, 39], gehe: [300, 240]}
   ausgaenge:
-    treppenhaus: {rect: [232, 160, 40, 18], gehe: [250, 166], name: Bodenluke, id: bodenluke}
+    treppenhaus: {rect: [348, 240, 60, 27], gehe: [375, 249], name: Bodenluke, id: bodenluke}

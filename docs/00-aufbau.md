@@ -21,6 +21,7 @@ Jede Information hat genau einen Besitzer. Andere Dateien dürfen sie nennen, ab
 | Technik, Werkzeuge, Kosten, Meilensteine, Recht und Markt | `03-produktion.md` | – |
 | Entscheidungen mit Begründung (Kurzfassung) | `entscheidungen.md` | – |
 | Was noch offen ist | `offene-punkte.md` | – |
+| Ablauf eines Playtests, Beobachtungsbogen je Tester | `test/beobachtungsbogen.md` | Zielwerte aus `03-produktion.md`; Telemetrie-Format in `game/skripte/telemetrie.gd`, Auswertung `tools/telemetrie_auswertung.py` |
 
 ## Regeln für Änderungen
 

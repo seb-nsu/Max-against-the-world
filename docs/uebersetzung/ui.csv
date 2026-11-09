@@ -244,3 +244,11 @@ UI_PASSWORT_TEIL_MO,Mo,Mo
 UI_PASSWORT_TEIL_KNUDDEL,Knuddel,Knuddel
 UI_PASSWORT_TEIL_PUDDI,Puddi,Puddi
 UI_PASSWORT_TEIL_BAERCHEN,Bärchen,Bärchen
+UI_TELEMETRIE_TITEL,Testversion: Darf das Spiel mitschreiben?,Test build: may the game keep a log?
+UI_TELEMETRIE_FRAGE,"Das Spiel kann ein anonymes Protokoll schreiben: welche Räume, wie lange je Rätsel, welche Hinweise, welche Klicks ins Leere. Keine Namen, nichts über dich. Die Datei bleibt auf deinem Rechner, bis du sie selbst schickst. Ändern geht jederzeit in den Einstellungen.","The game can keep an anonymous log: which rooms, how long each puzzle takes, which hints, which clicks hit nothing. No names, nothing about you. The file stays on your computer until you send it yourself. You can change this any time in the settings."
+UI_TELEMETRIE_JA,"Ja, mitschreiben","Yes, keep a log"
+UI_TELEMETRIE_NEIN,Nein danke,No thanks
+UI_TELEMETRIE_DANKE,Danke! Das Protokoll läuft.,Thanks! The log is running.
+UI_TELEMETRIE_AUS,Kein Protokoll. Viel Spaß!,No log. Have fun!
+UI_TELEMETRIE_SCHALTER,Telemetrie,Telemetry
+UI_TELEMETRIE_ORDNER,Telemetrie-Ordner öffnen,Open telemetry folder

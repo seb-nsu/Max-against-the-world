@@ -7,9 +7,9 @@ script = ExtResource("1_ewtpn")
 script_name = "Waldweg"
 description = "Waldweg"
 cursor = 1
-interaction_polygon = PackedVector2Array(-18, -22, 18, -22, 18, 22, -18, 22)
+interaction_polygon = PackedVector2Array(-27, -33, 27, -33, 27, 33, -27, 33)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=214147140]
 visible = false
 modulate = Color(1, 0, 1, 1)
-polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+polygon = PackedVector2Array(-18, -18, 18, -18, 18, 18, -18, 18)

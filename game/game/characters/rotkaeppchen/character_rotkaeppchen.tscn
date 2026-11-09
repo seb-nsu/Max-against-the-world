@@ -5,12 +5,12 @@
 
 [node name="CharacterRotkaeppchen" type="Area2D" unique_id=1300244595]
 script = ExtResource("1_75sgc")
-walk_speed = 90.0
-dialog_pos = Vector2(0, -52)
+walk_speed = 135.0
+dialog_pos = Vector2(0, -78)
 script_name = "Rotkaeppchen"
 description = "UI_OBJ_ROTKAEPPCHEN"
 cursor = 8
-interaction_polygon = PackedVector2Array(-8, -48, 8, -48, 8, 0, -8, 0)
+interaction_polygon = PackedVector2Array(-12, -72, 12, -72, 12, 0, -12, 0)
 
 [node name="ScalingPolygon" type="CollisionPolygon2D" parent="." unique_id=590694142]
 polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
@@ -20,11 +20,11 @@ polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=346235172]
 texture_filter = 1
 texture = ExtResource("2_a0mvb")
-offset = Vector2(0, -24)
+offset = Vector2(0, -36)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=111107739]
 visible = false
-polygon = PackedVector2Array(-8, -48, 8, -48, 8, 0, -8, 0)
+polygon = PackedVector2Array(-12, -72, 12, -72, 12, 0, -12, 0)
 
 [node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=1587425575]
 visible = false

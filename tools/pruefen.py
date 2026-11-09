@@ -12,7 +12,7 @@ Geprüft wird:
      Kreis); Gegenstände aus früheren Abschnitten nur, wenn reist_mit: true.
   3. Skript (docs/skript/*.md): Zeilen-ID-Format, eindeutige IDs, Präfix und
      Szenen-Code passen zur Welt-Tabelle, Sprecherkürzel und Sprechername passen
-     zu den Figuren, Zehnerschritte, einzelne Sätze über 120 Zeichen (Warnung).
+     zu den Figuren, aufsteigende Nummern, einzelne Sätze über 120 Zeichen (Warnung).
   4. Namen aus der Tabelle kommen in Rätsel- und Grafik-Datei vor (Warnung).
   5. Audio (docs/04-audio.md): jedes Sprecherkürzel steht mit dem Namen aus der
      Welt-Tabelle in einer Kürzel-Spalte (Warnung), jedes musik eines Raums steht
@@ -26,6 +26,9 @@ Fehler (exit 1) müssen behoben werden, Warnungen werden geprüft.
 import re
 import sys
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from aufloesung import BREITE, HOEHE  # noqa: E402
 
 try:
     import yaml
@@ -167,8 +170,8 @@ def pruefe_tabelle(ab, d, alle):
                 F(ort, f"Szenen-Code {c} doppelt ({codes[c]}, {r.get('id')})")
             codes[c] = r.get("id")
         g = str(r.get("groesse", ""))
-        if not re.match(r"^\d+x180$", g):
-            F(ort, f"Raum {r.get('id')}: groesse {g!r} ungültig (erwartet z. B. 320x180)")
+        if not re.match(rf"^\d+x{HOEHE}$", g):
+            F(ort, f"Raum {r.get('id')}: groesse {g!r} ungültig (erwartet z. B. {BREITE}x{HOEHE}, tools/aufloesung.py)")
         for a in als_liste(r.get("ausgaenge")):
             if a not in raeume:
                 F(ort, f"Raum {r.get('id')}: Ausgang {a} ist kein Raum")
@@ -359,10 +362,9 @@ def pruefe_skript(ab, d, codes, kuerzel, alle_ids):
                 W(ort, f"Sprecher „{zellen[1]}“ passt nicht zu {kz} = {namen[kz]}")
         if code not in OHNE_ZEHNER:
             n = int(num)
-            # Zweitzeilen beim Ansehen: Nummer der ersten Zeile plus 5, bei Kollision die nächste freie
-            zweitzeile = "zweites Mal" in (zellen[-1] if zellen else "")
-            if n % 10 and not zweitzeile:
-                W(ort, f"{roh}: Nummer nicht in Zehnerschritten")
+            # Neue Zeilen in Zehnerschritten; eingeschobene Zeilen nehmen eine
+            # freie Nummer zwischen den Nachbarn (05-spielsysteme.md), daher
+            # wird nur die aufsteigende Reihenfolge geprüft.
             if n <= letzte.get(code, -1):
                 W(ort, f"{roh}: Nummer nicht aufsteigend im Block")
             letzte[code] = n

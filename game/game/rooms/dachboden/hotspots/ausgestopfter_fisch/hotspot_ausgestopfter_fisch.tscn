@@ -7,9 +7,9 @@ script = ExtResource("1_7lw2r")
 script_name = "AusgestopfterFisch"
 description = "Ausgestopfter Fisch"
 cursor = 1
-interaction_polygon = PackedVector2Array(-13, -7, 13, -7, 13, 7, -13, 7)
+interaction_polygon = PackedVector2Array(-20, -11, 20, -11, 20, 11, -20, 11)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=515653720]
 visible = false
 modulate = Color(1, 0, 1, 1)
-polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+polygon = PackedVector2Array(-18, -18, 18, -18, 18, 18, -18, 18)

@@ -28,7 +28,7 @@
    "skript_code": [
     "WOHN"
    ],
-   "groesse": "320x180",
+   "groesse": "480x270",
    "ausgaenge": [
     "treppenhaus"
    ],
@@ -44,7 +44,7 @@
    "skript_code": [
     "TREP"
    ],
-   "groesse": "320x180",
+   "groesse": "480x270",
    "ausgaenge": [
     "wohnzimmer",
     "dachboden"
@@ -61,7 +61,7 @@
    "skript_code": [
     "DACH"
    ],
-   "groesse": "320x180",
+   "groesse": "480x270",
    "ausgaenge": [
     "treppenhaus"
    ],
@@ -82,7 +82,7 @@
     "treppenhaus",
     "dachboden"
    ],
-   "groesse_px": 56,
+   "groesse_px": 84,
    "spielbar": true
   },
   {
@@ -90,7 +90,7 @@
    "name": "Pixel",
    "kuerzel": "PIX",
    "raum": "dachboden",
-   "groesse_px": 18,
+   "groesse_px": 27,
    "spielbar": false
   },
   {
@@ -98,7 +98,7 @@
    "name": "Opa",
    "kuerzel": "OPA",
    "raum": "dachboden",
-   "groesse_px": 60,
+   "groesse_px": 90,
    "spielbar": false
   }
  ],

@@ -31,13 +31,14 @@ Zustand="*res://skripte/zustand.gd"
 Spielstand="*res://skripte/spielstand.gd"
 Hinweise="*res://skripte/hinweise.gd"
 Spiel="*res://skripte/spiel.gd"
+Telemetrie="*res://skripte/telemetrie.gd"
 
 [display]
 
-window/size/viewport_width=320
-window/size/viewport_height=180
-window/size/window_width_override=1280
-window/size/window_height_override=720
+window/size/viewport_width=480
+window/size/viewport_height=270
+window/size/window_width_override=1440
+window/size/window_height_override=810
 window/stretch/mode="viewport"
 window/stretch/scale_mode="integer"
 

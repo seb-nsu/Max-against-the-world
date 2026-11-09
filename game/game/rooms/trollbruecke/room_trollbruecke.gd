@@ -8,6 +8,29 @@ const Data := preload('room_trollbruecke_state.gd')
 
 var state: Data = load("res://game/rooms/trollbruecke/room_trollbruecke.tres")
 
+
+var _erster_besuch := false
+
+
+func _raum_betreten(erster_besuch: bool) -> void:
+	_erster_besuch = erster_besuch
+
+
+## Erstes Betreten (skript/welt-1.md, Troll-Brücke 1210–1230): Waldemar hält Max vorsorglich an.
+func _erste_szene() -> void:
+	if not _erster_besuch:
+		return
+	_erster_besuch = false
+	await Spiel.szene([
+		Spiel.z("WAL", "W1_BRUE_WAL_1210"),
+		Spiel.z("MAX", "W1_BRUE_MAX_1220"),
+		Spiel.z("WAL", "W1_BRUE_WAL_1230"),
+	])
+
+
+func _nach_uebergang() -> void:
+	await _erste_szene()
+
 ## Reihenfolge auf der Brücke (Paragraf 1): klein (Pixel im Fell), mittel, groß.
 const REIHE := ["Pixel", "SchmiedeZiege", "XxlZiege"]
 
@@ -23,7 +46,7 @@ func _zustand_anwenden() -> void:
 		n = 0
 	for i in n:
 		if has_character(REIHE[i]):
-			C.get_character(REIHE[i]).position = get_marker_position("BrueckeMitte") + Vector2(-24 + 24 * i, 0)
+			C.get_character(REIHE[i]).position = get_marker_position("BrueckeMitte") + Vector2(-36 + 36 * i, 0)
 	if not Zustand.geloest("R3") and Zustand.ist("W1_PIXEL_IM_FELL") \
 			and has_character("SchmiedeZiege") and has_character("XxlZiege"):
 		Zustand.loese("R3")

@@ -1,7 +1,10 @@
 # Couch Quest – Godot-Projekt
 
 Godot 4.7.2 mit Popochiu 2.2.1 (Plugin in `addons/popochiu`, Lizenz dort in `LICENSE`).
-Auflösung 320×180, Pixelgrafik ohne Glättung, ganzzahlig skaliert. Stand: Stufe 1
+Auflösung 480×270 (vorläufig; Maße zentral in `tools/aufloesung.py`, Wechsel mit
+`python3 tools/aufloesung.py --umrechnen 480x270 640x360`), Pixelgrafik ohne Glättung, ganzzahlig
+skaliert. Die Popochiu-Oberfläche ist noch die alte Pixel-Fassung; die neue mit Nunito in voller
+Auflösung folgt (`docs/05-spielsysteme.md`, Schrift). Stand: Stufe 1
 (Grundgerüst) und Graubox: Prolog und ganz Welt 1 (R1 bis R13, Rätsel 10 über Weg A oder B)
 sind mit Platzhaltergrafik durchspielbar, danach die Ankunft in Zwischenspiel 1 mit der Abgabe
 des Dracheneis. Reisetasche packen und Kanal 7 fehlen noch: der Drehknopf meldet dort „Ende der
@@ -110,10 +113,69 @@ Autoloads in `skripte/`:
 | `Spiel` | Sprechen über Zeilen-IDs, Zwischensequenzen, Figurenwechsel, Nahansicht, Notizbuch, Zurufe, Ende des Prologs |
 | `Hinweise` | Hilfe-Pfote: Schrittwahl, Stufen, Wartezeiten 30 und 60 Sekunden, Wartezeile |
 | `Spielstand` | Autospeicher bei jedem Raumwechsel (3 Plätze), F5/F9, 12 manuelle Plätze, wartet mit dem Speichern bis eine Szene vorbei ist |
+| `Telemetrie` | anonymes Spielprotokoll, nur im Testbuild und nur mit Zustimmung (siehe Testbuild und Telemetrie) |
 
 Speichern nutzt Popochius eigene Speicherung (Räume, Figuren, Inventar je Figur, Gespräche),
 nur das Dateiformat ist eigenes JSON mit Versionsnummer: `user://saves/<platz>.json`
 (`skripte/cq_save_load.gd`). Der Zustand hängt über `game/popochiu_globals.gd` daran.
+
+## Testbuild und Telemetrie
+
+Für Tests mit Fremden (Stufe 2, `docs/03-produktion.md` A9) gibt es einen Testbuild für Linux
+und Windows. `export_presets.cfg` hat zwei Vorlagen, „Linux Testbuild“ und „Windows Testbuild“,
+beide mit dem Feature-Tag `cq_testbuild`:
+
+```
+godot --headless --path game --export-release "Linux Testbuild" ../build/linux/couch_quest.x86_64
+godot --headless --path game --export-release "Windows Testbuild" ../build/windows/couch_quest.exe
+```
+
+Dafür müssen die Export-Vorlagen 4.7.2 installiert sein (Editor: Editor → Export-Vorlagen
+verwalten; oder `Godot_v4.7.2-stable_export_templates.tpz` nach
+`~/.local/share/godot/export_templates/4.7.2.stable/` entpacken). Ohne eigene Vorlagen geht es
+über GitHub Actions: Workflow „Testbuild“ (`.github/workflows/testbuild.yml`) von Hand starten
+(Actions → Testbuild → Run workflow). Er lädt Godot und die Vorlagen, lässt den Test im
+Testmodus laufen, exportiert beide Builds und legt sie als Artefakte ab (Linux als `tar.gz`,
+damit das Ausführbar-Bit bleibt). Die Build-Kennung im Protokoll ist dort der Commit.
+
+Beim Start des exportierten Spiels meldet Popochiu 2.2.1 Kompilierfehler in seinen
+Editor-Skripten (`EditorInterface` gibt es dort nicht; der Übergangs-Layer hängt am
+Editor-Helfer), dazu „Failed to load script cursor.gd“. Headless startet der Linux-Build
+trotzdem, betritt das Wohnzimmer, zählt Spielzeit und schreibt das Protokoll. Ob Mauszeiger und
+Übergänge im Fenster stimmen, ist am Bildschirm zu prüfen (offener Punkt A9 in
+`docs/offene-punkte.md`).
+
+**Telemetrie** (`skripte/telemetrie.gd`): aktiv nur im Testbuild (Feature-Tag, im Editor zum
+Ausprobieren die Projekteinstellung `couch_quest/testbuild = true`) und nur, wenn der Tester
+zugestimmt hat. Gefragt wird einmal beim ersten Start (Dialog, Texte `UI_TELEMETRIE_*` in
+`docs/uebersetzung/ui.csv`); die Antwort steht in `user://telemetrie/einwilligung.cfg` und lässt
+sich in den Einstellungen (Knopf in der Inventarleiste) mit dem Schalter „Telemetrie“ ändern.
+Daneben öffnet „Telemetrie-Ordner öffnen“ den Ordner im Dateimanager.
+
+- Anonym: zufällige Sitzungs-ID, zufällige Tester-ID (einmal je Zustimmung, damit mehrere
+  Sitzungen eines Testers zusammengehören), keine Namen und Pfade, nur der Name des
+  Betriebssystems.
+- Je Sitzung eine Datei `user://telemetrie/<sitzung>.jsonl`, ein JSON-Objekt je Zeile, nach
+  jeder Zeile geschrieben (übersteht Abstürze). Ereignisse: Sitzung Anfang und Ende, Raum
+  betreten und verlassen (mit Dauer), Rätselschritt offen und gelöst (Status wie Hinweise und
+  Notizbuch: `Zustand.status()`, Schritt-IDs der Hinweis-Datei), Hinweis (Schritt, Stufe, neue
+  Stufe oder Wiederholung, Wartezeile, Pfote oder Opa), Ersatzzeile, Fehlklick (Aktion auf ein
+  Objekt, die in einer Ersatzzeile endet: Objekt, Benutzen/Ansehen/Gegenstand, welcher
+  Gegenstand), Klick ins Leere, Gesprächsoption, Auswahl ohne Gesprächsfigur, Speichern und
+  Laden. Felder und Tabelle im Kopf von `telemetrie.gd`.
+- Angebunden über die Basisklassen (`aktion_beginnen()`/`aktion_beenden()` in `CQHotspot`,
+  `CQProp`, `CQFigur`, `CQGegenstand`, `CQAusgang`), `CQRaum` (Raum), `CQDialog.waehlen()`,
+  `CQSaveLoad` (Speichern, Laden) und die Signale `Hinweise.hinweis_gegeben` und
+  `Spiel.ersatz_gesagt`. Neue Objektskripte brauchen nichts Eigenes.
+- Kein Upload: Tester schicken die Datei selbst. Ein Upload (HTTPS-POST der fertigen Datei beim
+  Sitzungsende an einen kleinen eigenen Dienst, mit derselben Zustimmung) ist für später
+  vorgesehen; bis dahin gibt es keinen Server.
+
+Auswertung: `python3 tools/telemetrie_auswertung.py <dateien oder ordner> -o bericht.md`. Der
+Bericht nennt je Rätselschritt Median und Maximum der Zeit, wie viele Tester Stufe 1, 2, 3
+brauchten, Hinweis-Klicks und Fehlklicks, je Rätsel die Gesamtzeit, Stufe 3 je Welt, die
+Spielzeit bis R4 und vergleicht mit den Zielwerten. Dazu gehört der Beobachtungsbogen
+`docs/test/beobachtungsbogen.md` (ein Blatt je Tester).
 
 ## Grafik ersetzen
 
@@ -149,6 +211,14 @@ Schmiede, Dorfplatz, Troll-Brücke, Wasserschloss, Zauberwald, Bergwerk, Hoggelw
 Fehlversuchen, Hinweisen, Gesprächen und Figurenwechsel und prüft nach jedem Schritt Schalter, Status, Inventar und eine Speichern/Laden-Rundreise
 (speichern, Zustand verfälschen, laden, vergleichen), auch mit Pixel als aktiver Figur.
 Exit-Code 0 heißt alles grün.
+
+Der Test schaltet außerdem die Telemetrie ein (Testbuild, erst ohne, dann mit Zustimmung) und
+prüft am Ende das Protokoll: Sitzung, Räume, Schritte offen und gelöst, Hinweise mit Wartezeile,
+Ersatzzeile und Fehlklick (Dosenöffner auf Poster), Klick ins Leere, Gesprächsoption, Auswahl,
+Speichern, Laden, keine Pfade. Die Datei liegt in `user://test_telemetrie/<prozess>/` (Spielstände in
+`user://test_saves/<prozess>/`, damit zwei Läufe gleichzeitig gehen) und wird danach
+gelöscht; mit `CQ_TELEMETRIE_BEHALTEN=1` bleibt sie liegen (Beispiel für die Auswertung, sie
+zählt dort nur mit `--mit-tests`, wenn sie aus dem Testmodus stammt).
 
 - **Testmodus** (Standard): Zeilen werden nur protokolliert, Wege nicht gelaufen, Nahansicht
   und Notizbuch nicht geöffnet. Raumwechsel, Übergänge, Inventar und Speichern laufen echt.

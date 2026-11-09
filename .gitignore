@@ -5,3 +5,6 @@ __pycache__/
 # Die .import-Dateien werden eingecheckt.
 game/.godot/
 *.translation
+
+# Testbuilds (game/export_presets.cfg, Workflow „Testbuild“)
+build/

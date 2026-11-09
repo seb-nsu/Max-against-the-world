@@ -104,6 +104,7 @@ func waehlen(id: String) -> bool:
 	var opt := get_option(id)
 	if is_instance_valid(opt):
 		opt.used = true
+	Telemetrie.dialog_option(script_name, id)
 	await Spiel.sagen("MAX", o.get("frage", id))
 	for a in await antworten(id):
 		await Spiel.sagen(a.sprecher, a.zeile)

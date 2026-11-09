@@ -29,7 +29,7 @@
     "RAET",
     "AUFL"
    ],
-   "groesse": "320x180",
+   "groesse": "480x270",
    "ausgaenge": [
     "treppenhaus"
    ],
@@ -47,7 +47,7 @@
    "id": "treppenhaus",
    "name": "Treppenhaus",
    "skript_code": [],
-   "groesse": "320x180",
+   "groesse": "480x270",
    "ausgaenge": [
     "dachboden",
     "wohnzimmer"
@@ -65,7 +65,7 @@
     "WOHN",
     "ABSP"
    ],
-   "groesse": "320x180",
+   "groesse": "480x270",
    "ausgaenge": [
     "treppenhaus"
    ],
@@ -81,7 +81,7 @@
    "skript_code": [
     "SUPM"
    ],
-   "groesse": "320x180",
+   "groesse": "480x270",
    "ausgaenge": [],
    "erreichbar_ab": "F1d",
    "musik": "gegenwart",
@@ -100,7 +100,7 @@
     "wohnzimmer",
     "supermarkt"
    ],
-   "groesse_px": 56,
+   "groesse_px": 84,
    "spielbar": true
   },
   {
@@ -111,7 +111,7 @@
     "dachboden",
     "wohnzimmer"
    ],
-   "groesse_px": 18,
+   "groesse_px": 27,
    "spielbar": true
   },
   {
@@ -122,7 +122,7 @@
     "dachboden",
     "wohnzimmer"
    ],
-   "groesse_px": 60,
+   "groesse_px": 90,
    "spielbar": false
   },
   {
@@ -134,7 +134,7 @@
     "dachboden",
     "wohnzimmer"
    ],
-   "groesse_px": 56,
+   "groesse_px": 84,
    "spielbar": false
   },
   {
@@ -142,7 +142,7 @@
    "name": "Mutter",
    "kuerzel": "MUT",
    "raum": "wohnzimmer",
-   "groesse_px": 58,
+   "groesse_px": 87,
    "spielbar": false
   },
   {
@@ -153,7 +153,7 @@
     "dachboden",
     "wohnzimmer"
    ],
-   "groesse_px": 58,
+   "groesse_px": 87,
    "spielbar": false
   },
   {
@@ -164,7 +164,7 @@
     "dachboden",
     "wohnzimmer"
    ],
-   "groesse_px": 58,
+   "groesse_px": 87,
    "spielbar": false
   },
   {

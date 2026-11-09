@@ -77,9 +77,9 @@ static func figuren_anwenden(raum: PopochiuRoom) -> void:
 
 static func _platz(raum: PopochiuRoom, i: int, sn := "") -> Vector2:
 	if sn in ABNEHMER and raum.has_method("has_marker") and raum.has_marker("Abnehmer"):
-		return raum.get_marker_position("Abnehmer") + Vector2(36 * ABNEHMER.find(sn), 0)
+		return raum.get_marker_position("Abnehmer") + Vector2(54 * ABNEHMER.find(sn), 0)
 	if raum.has_method("has_marker") and raum.has_marker("Ziegen"):
-		return raum.get_marker_position("Ziegen") + Vector2(24 * i, 0)
-	var basis: Vector2 = C.Max.position if is_instance_valid(C.Max) else Vector2(160, 160)
+		return raum.get_marker_position("Ziegen") + Vector2(36 * i, 0)
+	var basis: Vector2 = C.Max.position if is_instance_valid(C.Max) else Vector2(240, 240)
 	var richtung := -1.0 if basis.x > raum.width / 2.0 else 1.0
-	return basis + Vector2(richtung * (44 + 22 * i), 4)
+	return basis + Vector2(richtung * (66 + 33 * i), 6)

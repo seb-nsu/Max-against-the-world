@@ -7,9 +7,9 @@ script = ExtResource("1_dyi04")
 script_name = "DekoKram"
 description = "Deko Kram"
 cursor = 1
-interaction_polygon = PackedVector2Array(-20, -15, 20, -15, 20, 15, -20, 15)
+interaction_polygon = PackedVector2Array(-30, -23, 30, -23, 30, 23, -30, 23)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=295834878]
 visible = false
 modulate = Color(1, 0, 1, 1)
-polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+polygon = PackedVector2Array(-18, -18, 18, -18, 18, 18, -18, 18)

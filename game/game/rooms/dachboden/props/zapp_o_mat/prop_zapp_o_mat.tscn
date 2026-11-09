@@ -7,7 +7,7 @@ script = ExtResource("1_268yo")
 script_name = "ZappOMat"
 description = "Zapp O Mat"
 cursor = 1
-interaction_polygon = PackedVector2Array(-24, -31, 24, -31, 24, 31, -24, 31)
+interaction_polygon = PackedVector2Array(-36, -47, 36, -47, 36, 47, -36, 47)
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=21838304]
 texture_filter = 1
@@ -17,7 +17,7 @@ texture_filter = 1
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1486821581]
 visible = false
 modulate = Color(1, 1, 0, 1)
-polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+polygon = PackedVector2Array(-18, -18, 18, -18, 18, 18, -18, 18)
 
 [node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=1090912109]
 visible = false

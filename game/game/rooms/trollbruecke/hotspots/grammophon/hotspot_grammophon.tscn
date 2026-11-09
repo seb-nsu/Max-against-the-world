@@ -7,9 +7,9 @@ script = ExtResource("1_kdhrv")
 script_name = "Grammophon"
 description = "Grammophon"
 cursor = 1
-interaction_polygon = PackedVector2Array(-10, -7, 10, -7, 10, 7, -10, 7)
+interaction_polygon = PackedVector2Array(-15, -11, 15, -11, 15, 11, -15, 11)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=319555215]
 visible = false
 modulate = Color(1, 0, 1, 1)
-polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+polygon = PackedVector2Array(-18, -18, 18, -18, 18, 18, -18, 18)

@@ -7,9 +7,9 @@ script = ExtResource("1_urak2")
 script_name = "ThekeMitKissen"
 description = "Theke Mit Kissen"
 cursor = 1
-interaction_polygon = PackedVector2Array(-42, -18, 42, -18, 42, 18, -42, 18)
+interaction_polygon = PackedVector2Array(-63, -27, 63, -27, 63, 27, -63, 27)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1683804668]
 visible = false
 modulate = Color(1, 0, 1, 1)
-polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+polygon = PackedVector2Array(-18, -18, 18, -18, 18, 18, -18, 18)

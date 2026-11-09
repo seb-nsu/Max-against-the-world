@@ -9,8 +9,28 @@ const Data := preload('room_zauberwald_state.gd')
 var state: Data = load("res://game/rooms/zauberwald/room_zauberwald.tres")
 
 
+var _erster_besuch := false
+
+
+func _raum_betreten(erster_besuch: bool) -> void:
+	_erster_besuch = erster_besuch
+
+
+## Erstes Betreten (skript/welt-1.md, Zauberwald 0740–0760): Rotkäppchen wartet auf die Goblins.
+func _erste_szene() -> void:
+	if not _erster_besuch:
+		return
+	_erster_besuch = false
+	await Spiel.szene([
+		Spiel.z("ROT", "W1_WALD_ROT_0740"),
+		Spiel.z("MAX", "W1_WALD_MAX_0750"),
+		Spiel.z("ROT", "W1_WALD_ROT_0760"),
+	])
+
+
 ## Waldemars Nummer (WALD 0460–0590), wenn er nach Option 0290 im Wald wartet.
 func _nach_uebergang() -> void:
+	await _erste_szene()
 	if Zustand.ist("W1_WALDEMAR_SINGT") and not Zustand.geloest("R7"):
 		await r7_szene()
 
@@ -20,7 +40,7 @@ func _nach_laden() -> void:
 
 
 func r7_szene() -> void:
-	Spiel.figur_hier("Waldemar", true, Vector2(200, 150))
+	Spiel.figur_hier("Waldemar", true, Vector2(300, 225))
 	await Spiel.szene([
 		Spiel.z("WAL", "W1_WALD_WAL_0460"),
 		Spiel.z("MAX", "W1_WALD_MAX_0470"),

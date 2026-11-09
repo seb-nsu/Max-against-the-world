@@ -46,6 +46,19 @@ func _on_click() -> void:
 	set_active()
 
 
+func on_right_click() -> void:
+	Telemetrie.aktion_beginnen(bauplan().get("id", script_name.to_snake_case()), "ansehen")
+	await super()
+	Telemetrie.aktion_beenden()
+
+
+func on_item_used(item: PopochiuInventoryItem) -> void:
+	Telemetrie.aktion_beginnen(bauplan().get("id", script_name.to_snake_case()), "gegenstand",
+		Telemetrie.gegenstand_id(item))
+	await super(item)
+	Telemetrie.aktion_beenden()
+
+
 func _on_right_click() -> void:
 	Hinweise.objekt_beruehrt(bauplan().get("id", ""))
 	await _ansehen()

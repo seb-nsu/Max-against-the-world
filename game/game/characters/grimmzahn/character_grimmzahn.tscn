@@ -5,12 +5,12 @@
 
 [node name="CharacterGrimmzahn" type="Area2D" unique_id=470221475]
 script = ExtResource("1_ein6r")
-walk_speed = 90.0
-dialog_pos = Vector2(0, -44)
+walk_speed = 135.0
+dialog_pos = Vector2(0, -66)
 script_name = "Grimmzahn"
 description = "UI_OBJ_GRIMMZAHN"
 cursor = 8
-interaction_polygon = PackedVector2Array(-8, -40, 8, -40, 8, 0, -8, 0)
+interaction_polygon = PackedVector2Array(-12, -60, 12, -60, 12, 0, -12, 0)
 
 [node name="ScalingPolygon" type="CollisionPolygon2D" parent="." unique_id=1052670057]
 polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
@@ -20,11 +20,11 @@ polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1383957508]
 texture_filter = 1
 texture = ExtResource("2_ubs0q")
-offset = Vector2(0, -20)
+offset = Vector2(0, -30)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1146892910]
 visible = false
-polygon = PackedVector2Array(-8, -40, 8, -40, 8, 0, -8, 0)
+polygon = PackedVector2Array(-12, -60, 12, -60, 12, 0, -12, 0)
 
 [node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=2145852315]
 visible = false

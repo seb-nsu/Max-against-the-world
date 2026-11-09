@@ -7,9 +7,9 @@ script = ExtResource("1_0vqan")
 script_name = "Wildblumen"
 description = "Wildblumen"
 cursor = 1
-interaction_polygon = PackedVector2Array(-15, -7, 15, -7, 15, 7, -15, 7)
+interaction_polygon = PackedVector2Array(-23, -11, 23, -11, 23, 11, -23, 11)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=706324672]
 visible = false
 modulate = Color(1, 0, 1, 1)
-polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+polygon = PackedVector2Array(-18, -18, 18, -18, 18, 18, -18, 18)

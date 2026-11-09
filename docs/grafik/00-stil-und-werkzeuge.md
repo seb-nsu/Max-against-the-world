@@ -1,16 +1,16 @@
 # Grafik: Stil und Werkzeuge
 
-Alle Welten teilen einen Pixel-Art-Stil in 320×180 Pixeln mit einer gemeinsamen Palette; jede Welt bekommt nur ihre eigene Farbstimmung. Die Prompts in den Grafik-Dateien der Welten sind auf Englisch, weil die Generatoren damit zuverlässiger arbeiten.
+Alle Welten teilen einen Pixel-Art-Stil in 480×270 Pixeln mit einer gemeinsamen Palette; jede Welt bekommt nur ihre eigene Farbstimmung. Die Prompts in den Grafik-Dateien der Welten sind auf Englisch, weil die Generatoren damit zuverlässiger arbeiten.
 
 ## Technischer Stil
 
 | Eigenschaft | Festlegung | Warum |
 | --- | --- | --- |
-| Auflösung | 320×180 Pixel, im Spiel 6-fach auf 1920×1080 skaliert | Wenig Zeichenarbeit, passt in die Bildgrößen von Retro Diffusion (bis 384 Pixel) |
-| Hintergründe | 320×180; größere Räume bis 640×180, aus zwei Hälften zusammengesetzt | Breite Räume scrollen seitlich |
-| Figuren | Max etwa 56 Pixel hoch, Erwachsene 56 bis 64, Pixel etwa 18 | Gut lesbare Mimik, genug Platz im Raum |
-| Inventar-Icons | 24×24 Pixel | Einheitliche Inventarleiste |
-| Mauszeiger | 16×16 Pixel |  |
+| Auflösung | 480×270 Pixel, im Spiel 4-fach auf 1920×1080 skaliert (vorläufig festgelegt am 9. November 2026, nach den ersten Testszenen noch einmal prüfen; die Zahl steht zentral in `tools/aufloesung.py`) | Am Laptop und Rechner wirkte 320×180 zu grob; 480×270 bringt deutlich mehr Details bei etwa 2,25-facher Fläche und skaliert glatt auf 1080p und 4K |
+| Hintergründe | 480×270; größere Räume bis 960×270. Retro Diffusion erzeugt höchstens 384 Pixel Kantenlänge, darum entsteht ein Hintergrund aus einem Konzeptbild in voller Größe, das lokal mit Neural Pixelate umgewandelt wird; Ersatzweg sind zwei Hälften zu 240×270 (breite Räume vier Viertel) | Breite Räume scrollen seitlich; das Konzeptbild dient zugleich zum Gegenprüfen |
+| Figuren | Max etwa 84 Pixel hoch, Erwachsene 84 bis 96, Pixel etwa 27 | Gut lesbare Mimik, genug Platz im Raum |
+| Inventar-Icons | 36×36 Pixel | Einheitliche Inventarleiste |
+| Mauszeiger | 24×24 Pixel |  |
 | Palette | Eine gemeinsame Palette mit 32 Farben, zum Beispiel „Endesga 32“ von Lospec | Alle Assets werden darauf umgefärbt; so passen auch fremde Pakete |
 | Perspektive | Streng seitlich wie eine Bühne, Rückwand parallel zur Bildebene; begehbarer Boden als flaches Band im unteren Drittel | Klassische Adventure-Ansicht; Figuren werden nach hinten nur leicht kleiner, Laufwege bleiben lesbar |
 | Licht | Von oben links, weiche Schatten nach rechts unten | Einheitlich über alle Szenen |
@@ -34,10 +34,10 @@ Alle Welten teilen einen Pixel-Art-Stil in 320×180 Pixeln mit einer gemeinsamen
 | Asset | Werkzeug | Modell oder Stil | Ablauf |
 | --- | --- | --- | --- |
 | Konzeptbilder | ChatGPT oder Gemini | – | Baustein „KONZEPT“ voranstellen, 16:9 erzeugen. Nur als Vorlage, nicht ins Spiel |
-| Hintergründe | Retro Diffusion Cloud oder lokal | `rd_plus__environment`, 320×180 | Variante A: direkt erzeugen. Variante B: Konzeptbild lokal mit „Neural Pixelate“ auf 320×180 umwandeln. Danach in Aseprite Perspektive und Laufbereich korrigieren |
+| Hintergründe | Retro Diffusion Cloud oder lokal | `rd_plus__environment`, 480×270 | Standard (Sebastian, 9. November 2026): erst ein Konzeptbild (Baustein KONZEPT, wie beim Dachboden) zum Gegenprüfen, dann lokal mit „Neural Pixelate“ auf 480×270 umwandeln. Ersatzweg: in zwei Hälften zu 240×270 erzeugen (Retro Diffusion kann höchstens 384 Pixel Kantenlänge; Satzteil LEFT HALF oder RIGHT HALF wie beim Dorfplatz, breite Räume in vier Vierteln) und in Aseprite zusammensetzen. Danach in Aseprite Perspektive und Laufbereich korrigieren |
 | Figuren | Retro Diffusion Cloud | `rd_pro__default` mit Referenzbildern, `rd_plus__character_turnaround` | Erst eine Ansicht von der Seite festlegen, dann als Referenz für alle weiteren Bilder nutzen |
 | Animationen | Retro Diffusion Cloud | `rd_advanced_animation__walking`, `__idle`, `__custom_action` | Aus einem fertigen Standbild der Figur erzeugen, danach in Aseprite nacharbeiten |
-| Gegenstände | Retro Diffusion Cloud oder lokal | `rd_plus__item_sheet` oder `rd_pro__inventory_items` | Mehrere Gegenstände pro Bild, dann ausschneiden und auf 24×24 bringen |
+| Gegenstände | Retro Diffusion Cloud oder lokal | `rd_plus__item_sheet` oder `rd_pro__inventory_items` | Mehrere Gegenstände pro Bild, dann ausschneiden und auf 36×36 bringen |
 | Benutzeroberfläche | Retro Diffusion Cloud | `rd_pro__ui_panel` | Rahmen und Knöpfe; Schrift immer von Hand |
 | Umfärben, Freistellen | Retro Diffusion lokal | Palettize, Background Removal | Jedes fertige Asset einmal auf die gemeinsame Palette bringen |
 
@@ -46,12 +46,12 @@ Alle Welten teilen einen Pixel-Art-Stil in 320×180 Pixeln mit einer gemeinsamen
 **Ablauf pro Szene:**
 
 1. Konzeptbild mit ChatGPT oder Gemini, bis Aufbau und Stimmung passen.
-2. Hintergrund in 320×180 erzeugen oder umwandeln.
+2. Hintergrund in 480×270 erzeugen oder umwandeln.
 3. In Aseprite: Palette anwenden, Perspektive prüfen, Laufbereich frei lassen, störende Details entfernen.
 4. Gegenstände der Szene als Sammelbild erzeugen und ausschneiden.
 5. In Godot einsetzen und mit Max als Platzhalter testen, ob Größen und Laufwege stimmen.
 
-**Text in Bildern:** Generatoren schreiben fast immer fehlerhaft. Schilder, Logo, Programmzeitschrift und Kalenderzahlen deshalb ohne Text erzeugen und die Schrift später von Hand in Aseprite setzen. Was der Spieler für ein Rätsel oder das Notizbuch lesen muss (Kalender, Satzung, Kritzeleien, Hinweiszettel, Tafeln), bekommt zusätzlich eine Nahansicht in 320×180; kurze Texte, die Max beim Ansehen vorliest (etwa Steckbrief, Opas Papyrus), bleiben normales Ansehen. Es sind genau 14 Nahansichten; welche, steht in den Welt-Tabellen (`welten/*.yaml`), die Bilder beschreiben die Grafik-Dateien (Zeile „Nahansichten“), den Bildschirm `05-spielsysteme.md`. Kleine Bildschirme in der Szene (Zapp-O-Mat, Monitorwand, Röhrenfernseher, Empfangsmonitor) bekommen kein eigenes Bild: Beim Ansehen blendet Godot den Ausschnitt doppelt vergrößert und ohne Glättung ein.
+**Text in Bildern:** Generatoren schreiben fast immer fehlerhaft. Schilder, Logo, Programmzeitschrift und Kalenderzahlen deshalb ohne Text erzeugen und die Schrift später von Hand in Aseprite setzen. Was der Spieler für ein Rätsel oder das Notizbuch lesen muss (Kalender, Satzung, Kritzeleien, Hinweiszettel, Tafeln), bekommt zusätzlich eine Nahansicht in 480×270; kurze Texte, die Max beim Ansehen vorliest (etwa Steckbrief, Opas Papyrus), bleiben normales Ansehen. Es sind genau 14 Nahansichten; welche, steht in den Welt-Tabellen (`welten/*.yaml`), die Bilder beschreiben die Grafik-Dateien (Zeile „Nahansichten“), den Bildschirm `05-spielsysteme.md`. Kleine Bildschirme in der Szene (Zapp-O-Mat, Monitorwand, Röhrenfernseher, Empfangsmonitor) bekommen kein eigenes Bild: Beim Ansehen blendet Godot den Ausschnitt doppelt vergrößert und ohne Glättung ein.
 
 ## Prompt-Bausteine
 
@@ -81,46 +81,46 @@ Ein vollständiger Prompt besteht aus drei Teilen: **Baustein** (Technik, von hi
 Concept art for a 2D point-and-click adventure game in the style of classic 1990s adventure games, strictly side view like a flat theater stage, camera at chest height looking straight at the back wall, back wall parallel to the picture plane, no vanishing-point perspective, no top-down or three-quarter view, floor as a flat walkable band across the lower third kept free of objects except at the left and right edges, light from the upper left with soft shadows to the lower right, humorous and whimsical, warm hand-painted look, 16:9, no text, no letters, no logos.
 ```
 
-**HINTERGRUND** (`rd_plus__environment`, 320×180):
+**HINTERGRUND** (`rd_plus__environment`, 480×270):
 
 ```text
-Pixel art background, 320x180, strictly side view like a flat stage, camera at eye level, back wall parallel to the picture plane, no vanishing-point perspective, walkable floor as a flat band about 60 pixels high kept clear in the lower third, large objects only against the back wall or at the left and right edges, exits clearly readable, light from upper left with soft shadows to the lower right, clean pixel clusters, no anti-aliasing, no outlines, no characters, all signs, labels and book covers blank.
+Pixel art background, 480x270, strictly side view like a flat stage, camera at eye level, back wall parallel to the picture plane, no vanishing-point perspective, walkable floor as a flat band about 90 pixels high kept clear in the lower third, large objects only against the back wall or at the left and right edges, exits clearly readable, light from upper left with soft shadows to the lower right, clean pixel clusters, no anti-aliasing, no outlines, no characters, all signs, labels and book covers blank.
 ```
 
-**FIGUR** (`rd_pro__default`, Menschen etwa 56 Pixel):
+**FIGUR** (`rd_pro__default`, Menschen etwa 84 Pixel):
 
 ```text
-Pixel art character sprite, exactly one character, full body, strict side view facing right unless the motif says left, about 56 pixels tall on a 64x64 canvas unless the motif gives another height, feet on the bottom edge, dark colored outline (not pure black), light from upper left, expressive cartoon face, flat colors without gradients, plain transparent background, no ground shadow.
+Pixel art character sprite, exactly one character, full body, strict side view facing right unless the motif says left, about 84 pixels tall on a 96x96 canvas unless the motif gives another height, feet on the bottom edge, dark colored outline (not pure black), light from upper left, expressive cartoon face, flat colors without gradients, plain transparent background, no ground shadow.
 ```
 
-**FIGUR-KLEIN** (Tiere und kleine Wesen, 12 bis 30 Pixel; Zahl im Motiv angeben):
+**FIGUR-KLEIN** (Tiere und kleine Wesen, 18 bis 45 Pixel; Zahl im Motiv angeben):
 
 ```text
-Pixel art small creature sprite, exactly one creature, full body, strict side view facing right unless the motif says left, height in pixels as given in the motif on a 32x32 canvas, dark colored outline (not pure black), light from upper left, very readable silhouette, flat colors, plain transparent background, no ground shadow.
+Pixel art small creature sprite, exactly one creature, full body, strict side view facing right unless the motif says left, height in pixels as given in the motif on a 48x48 canvas, dark colored outline (not pure black), light from upper left, very readable silhouette, flat colors, plain transparent background, no ground shadow.
 ```
 
-**FIGUR-GROSS** (große Wesen und Maschinen über 64 Pixel; Zahl im Motiv angeben):
+**FIGUR-GROSS** (große Wesen und Maschinen über 96 Pixel; Zahl im Motiv angeben):
 
 ```text
-Pixel art large character sprite, exactly one character, full body, strict side view facing right unless the motif says left, height in pixels as given in the motif on a canvas up to 128x128, fills most of the frame, dark colored outline (not pure black), light from upper left, flat colors, plain transparent background, no ground shadow.
+Pixel art large character sprite, exactly one character, full body, strict side view facing right unless the motif says left, height in pixels as given in the motif on a canvas up to 192x192, fills most of the frame, dark colored outline (not pure black), light from upper left, flat colors, plain transparent background, no ground shadow.
 ```
 
-**PORTRÄT** (Dialog und Figurenwechsel, 64×64):
+**PORTRÄT** (Dialog und Figurenwechsel, 96×96):
 
 ```text
-Pixel art character portrait, head and shoulders, 64x64, three-quarter view facing right, expressive face, same colors as the character's sprite, dark colored outline, light from upper left, plain transparent background, no hands, no text.
+Pixel art character portrait, head and shoulders, 96x96, three-quarter view facing right, expressive face, same colors as the character's sprite, dark colored outline, light from upper left, plain transparent background, no hands, no text.
 ```
 
-**KARTE** (`rd_plus__topdown_map`, 320×180):
+**KARTE** (`rd_plus__topdown_map`, 480×270):
 
 ```text
-Pixel art top-down illustrated travel map, 320x180, seen straight from above, simple readable shapes, clearly separated clickable locations with at least 16 pixels of space between them, light from upper left, no text, no letters, no labels.
+Pixel art top-down illustrated travel map, 480x270, seen straight from above, simple readable shapes, clearly separated clickable locations with at least 24 pixels of space between them, light from upper left, no text, no letters, no labels.
 ```
 
 **GEGENSTÄNDE** (`rd_plus__item_sheet`; Raster im Motiv angeben):
 
 ```text
-Pixel art item sheet, grid exactly as given in the motif, items in reading order left to right and top to bottom, each item centered in its own cell at the same scale, about 24x24 pixels each, slight front-side view, no overlap between cells, dark colored outline (not pure black), light from upper left, plain transparent background, no text, letters or numbers on any item.
+Pixel art item sheet, grid exactly as given in the motif, items in reading order left to right and top to bottom, each item centered in its own cell at the same scale, about 36x36 pixels each, slight front-side view, no overlap between cells, dark colored outline (not pure black), light from upper left, plain transparent background, no text, letters or numbers on any item.
 ```
 
 **EFFEKT** (Bildfolge für Godot):
@@ -153,10 +153,10 @@ Bei jedem Bild von Max oder Pixel wortgleich verwenden.
 Max, a lanky 16-year-old boy with a slight slouch, messy dark brown hair (#733e39) with shaggy strands falling over his forehead and eyes, sleepy half-closed eyes, lopsided smirk, a few freckles, oversized dark slate blue-grey hoodie (#3a4466) with sleeves over his hands, uneven drawstrings and a tiny retro TV with a turquoise screen (#2ce8f5) on the chest, dark blue jeans (#124e89) slightly too long, worn red sneakers (#e43b44) with white soles, one lace untied, hands in his hoodie pocket.
 ```
 
-**Pixel** (Baustein FIGUR-KLEIN, etwa 18 Pixel hoch):
+**Pixel** (Baustein FIGUR-KLEIN, etwa 27 Pixel hoch):
 
 ```text
-Pixel, a chubby round tomcat about 18 pixels tall when sitting, short legs, light silver-grey fur (#c0cbdc) with three darker blue-grey stripes on his back (#5a6988), white chest and white paws, a very fluffy tail, a notch torn out of his left ear, smug half-closed amber eyes (#feae34), pink nose, a red collar (#e43b44) with a small round silver speaker and a clearly visible two-pixel turquoise light (#2ce8f5), not orange, no tabby markings on the face.
+Pixel, a chubby round tomcat about 27 pixels tall when sitting, short legs, light silver-grey fur (#c0cbdc) with three darker blue-grey stripes on his back (#5a6988), white chest and white paws, a very fluffy tail, a notch torn out of his left ear, smug half-closed amber eyes (#feae34), pink nose, a red collar (#e43b44) with a small round silver speaker and a clearly visible two-pixel turquoise light (#2ce8f5), not orange, no tabby markings on the face.
 ```
 
 Das kostenlose Pet Cat Pack von Luiz Melo (CC0) darf nur als Anschauung für Posen und Laufzyklus neben dem Bild liegen, nicht als Pixelgrundlage: nichts davon übernehmen oder übermalen, sonst bleibt die Silhouette eines weit verbreiteten Asset-Pakets. Max, Pixel und Opa werden nach dem KI-Entwurf in Aseprite Pixel für Pixel von Hand nachgezogen (Produktion, Absprachen).
@@ -185,16 +185,16 @@ Diese Grundanimationen gelten für alle Welten. Weltspezifische Aktionen stehen 
 | Max | Gähnen | 6 | einmalig | Max stretches arms up, mouth opens wide, eyes close, arms drop back into the hoodie pocket, facing right |
 | Max | Auf dem Sofa | 4 | Schleife | Standbild A (Prolog, Welt 3): Max lying flat on a sofa in side view, head on the left armrest, holding his phone above his face with both hands, sneakers on the right armrest; Standbild B (Welt 4): Max slumped half lying on a sofa, remote in hand, feet up, facing right; Animation: slow blinking, thumb tapping the phone or clicking the remote |
 | Max | Vom Sofa aufstehen | 8 | einmalig | Max swings his legs off the sofa, pushes himself up with both hands, stands, stretches, facing right (Prolog: danach Handy in die Bauchtasche; Finale: endet in der aufrechten Pose) |
-| Pixel | Gehen | 8 | Schleife | `walking`: standing sprite of Pixel as input, about 26 pixels long, smug strut with tail held high, collar light stays visible, facing right |
+| Pixel | Gehen | 8 | Schleife | `walking`: standing sprite of Pixel as input, about 39 pixels long, smug strut with tail held high, collar light stays visible, facing right |
 | Pixel | Stehen | 4 | Schleife | `idle`: sitting sprite of Pixel as input, tail tip twitching, one slow blink, body stays still, facing right |
-| Pixel | Schlafen | 4 | Schleife | Pixel curled up asleep, about 10 pixels high and 24 long, belly rising and falling, torn ear twitching once, facing right |
+| Pixel | Schlafen | 4 | Schleife | Pixel curled up asleep, about 15 pixels high and 36 long, belly rising and falling, torn ear twitching once, facing right |
 | Pixel | Putzen | 6 | Schleife | Pixel sitting, licks his front paw and wipes it over his ear, tail still, facing right |
-| Pixel | Springen und Klettern | 6 | einmalig | Pixel crouches, wiggles his rear, leaps up about 30 pixels and lands on a ledge above, facing right (Prolog und Zwischenspiele auf die Werkbank, Welt 1 bis 3) |
+| Pixel | Springen und Klettern | 6 | einmalig | Pixel crouches, wiggles his rear, leaps up about 45 pixels and lands on a ledge above, facing right (Prolog und Zwischenspiele auf die Werkbank, Welt 1 bis 3) |
 | Pixel | Schnuppern | 4 | einmalig | Pixel stretches his neck forward, nose twitching, sniffs twice, pulls back, facing right (Welt 1 bis 3) |
 | Pixel | Tragen | 8 | Schleife | Pixel walking sprite as input, smug strut with tail held high, a small object held in his mouth, head slightly raised, the object stays fixed in the mouth, facing right (Welt 1 bis 3, Rückkehr 3 und Finale mit der Zelle; nicht in Welt 4) |
 | Pixel | Fauchen | 4 | einmalig | Pixel arches his back, fur bristles, mouth wide open hissing, then settles, facing right |
 | Pixel | Ohrfeige | 4 | einmalig | Pixel jumps up and slaps with one front paw, lands again, smug face, facing right (Welt 3, blaue Pastille aus der Apothekendose mit grünem Kreuz). Nur Vorlage: erzeugt wird allein die Fassung mit 6 Bildern in Grafik Welt 3 |
-| Pixel | Vom Schrank fallen | 8 | einmalig | Pixel loses balance on top of a tall cupboard, flails all four legs, falls about 60 pixels, lands flat on the floor, dazed, facing right (Finale, Wohnzimmer) |
+| Pixel | Vom Schrank fallen | 8 | einmalig | Pixel loses balance on top of a tall cupboard, flails all four legs, falls about 90 pixels, lands flat on the floor, dazed, facing right (Finale, Wohnzimmer) |
 
 ## Regeln
 

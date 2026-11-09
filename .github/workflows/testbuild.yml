@@ -1,0 +1,68 @@
+name: Testbuild
+
+# Spielbarer Testbuild für Linux und Windows mit Feature-Tag cq_testbuild (Telemetrie mit
+# Zustimmung, 03-produktion.md A7 und A9). Läuft von Hand: Actions → Testbuild → Run workflow.
+# Ergebnis: zwei Artefakte (couch-quest-testbuild-linux, couch-quest-testbuild-windows).
+
+on:
+  workflow_dispatch:
+
+jobs:
+  testbuild:
+    runs-on: ubuntu-latest
+    env:
+      GODOT_VERSION: "4.7.2"
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Godot laden
+        run: |
+          curl -sSL -o godot.zip "https://github.com/godotengine/godot/releases/download/${GODOT_VERSION}-stable/Godot_v${GODOT_VERSION}-stable_linux.x86_64.zip"
+          unzip -q godot.zip
+          mv "Godot_v${GODOT_VERSION}-stable_linux.x86_64" godot
+
+      - name: Export-Vorlagen aus dem Cache
+        id: vorlagen
+        uses: actions/cache@v4
+        with:
+          path: ~/.local/share/godot/export_templates/${{ env.GODOT_VERSION }}.stable
+          key: godot-vorlagen-${{ env.GODOT_VERSION }}-linux-windows
+
+      - name: Export-Vorlagen laden (nur Linux und Windows x86_64)
+        if: steps.vorlagen.outputs.cache-hit != 'true'
+        run: |
+          curl -sSL -o vorlagen.tpz "https://github.com/godotengine/godot/releases/download/${GODOT_VERSION}-stable/Godot_v${GODOT_VERSION}-stable_export_templates.tpz"
+          unzip -q vorlagen.tpz "templates/version.txt" "templates/linux_*.x86_64" "templates/windows_*_x86_64*"
+          ziel="$HOME/.local/share/godot/export_templates/${GODOT_VERSION}.stable"
+          mkdir -p "$ziel"
+          mv templates/* "$ziel/"
+          rm vorlagen.tpz
+
+      - name: Build-Kennung (Commit) für die Telemetrie
+        run: sed -i "s|^config/features=|config/version=\"${GITHUB_SHA::8}\"\nconfig/features=|" game/project.godot
+
+      - name: Import (erster Import meldet Fehler, bis der Klassen-Cache steht)
+        run: ./godot --headless --path game --import || true
+
+      - name: Prolog-Durchlauf (Testmodus) vor dem Export
+        run: timeout 600 ./godot --headless --path game -s res://tests/prolog_durchlauf.gd
+
+      - name: Export Linux und Windows
+        run: |
+          mkdir -p build/linux build/windows
+          ./godot --headless --path game --export-release "Linux Testbuild" ../build/linux/couch_quest.x86_64
+          ./godot --headless --path game --export-release "Windows Testbuild" ../build/windows/couch_quest.exe
+          test -s build/linux/couch_quest.x86_64
+          test -s build/windows/couch_quest.exe
+          # Artefakte verlieren das Ausführbar-Bit: Linux-Build als tar.gz, das behält es
+          tar -czf build/couch_quest_linux.tar.gz -C build/linux couch_quest.x86_64
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: couch-quest-testbuild-linux
+          path: build/couch_quest_linux.tar.gz
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: couch-quest-testbuild-windows
+          path: build/windows/

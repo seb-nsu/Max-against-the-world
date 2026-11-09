@@ -7,9 +7,9 @@ script = ExtResource("1_rvr4r")
 script_name = "FondueTopf"
 description = "Fondue Topf"
 cursor = 1
-interaction_polygon = PackedVector2Array(-12, -13, 12, -13, 12, 13, -12, 13)
+interaction_polygon = PackedVector2Array(-18, -20, 18, -20, 18, 20, -18, 20)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1792001995]
 visible = false
 modulate = Color(1, 0, 1, 1)
-polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+polygon = PackedVector2Array(-18, -18, 18, -18, 18, 18, -18, 18)

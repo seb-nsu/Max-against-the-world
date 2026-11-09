@@ -26,6 +26,7 @@ func _nach_uebergang() -> void:
 		Spiel.z("MAX", "W1_ANK_MAX_0030"),
 		Spiel.z("PIX", "W1_ANK_PIX_0040"),
 		Spiel.z("MAX", "W1_ANK_MAX_0050"),
+		Spiel.z("PIX", "W1_ANK_PIX_0051"),
 		Spiel.z("MAX", "W1_ANK_MAX_0060"),
 		Spiel.nahansicht_zeigen.bind("opas_zettel"),
 		Spiel.z("OPA", "W1_ANK_OPA_0070"),
@@ -34,10 +35,12 @@ func _nach_uebergang() -> void:
 		Spiel.z("TOA", "W1_ANK_TOA_0100"),
 		Spiel.z("MAX", "W1_ANK_MAX_0110"),
 		Spiel.z("TOA", "W1_ANK_TOA_0120"),
+		Spiel.z("MAX", "W1_ANK_MAX_0121"),
 		Spiel.z("TOA", "W1_ANK_TOA_0130"),
 		Spiel.z("MAX", "W1_ANK_MAX_0140"),
 		Spiel.z("TOA", "W1_ANK_TOA_0150"),
 		Spiel.z("PIX", "W1_ANK_PIX_0160"),
+		Spiel.z("MAX", "W1_ANK_MAX_0161"),
 		Spiel.z("TOA", "W1_ANK_TOA_0170"),
 		Spiel.z("MAX", "W1_ANK_MAX_0180"),
 		Spiel.z("TOA", "W1_ANK_TOA_0190"),
@@ -73,7 +76,7 @@ func _lieferung(an: bool) -> void:
 	var pos := get_marker_position("Lieferung")
 	if an:
 		Spiel.figur_hier("Rotkaeppchen", true, pos)
-		Spiel.figur_hier("XxlZiege", true, pos + Vector2(24, 2))
+		Spiel.figur_hier("XxlZiege", true, pos + Vector2(36, 3))
 		Zustand.setze("W1_XXL_GELIEFERT")  # ab jetzt folgt sie (skripte/welt_1.gd)
 	else:
 		Spiel.figur_hier("Rotkaeppchen", false)

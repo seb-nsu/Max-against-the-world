@@ -7,7 +7,7 @@ script = ExtResource("1_673qb")
 script_name = "ZiegenfellVorleger"
 description = "Ziegenfell Vorleger"
 cursor = 1
-interaction_polygon = PackedVector2Array(-22, -6, 22, -6, 22, 6, -22, 6)
+interaction_polygon = PackedVector2Array(-33, -9, 33, -9, 33, 9, -33, 9)
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1887070915]
 texture_filter = 1
@@ -17,7 +17,7 @@ texture_filter = 1
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=744982893]
 visible = false
 modulate = Color(1, 1, 0, 1)
-polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+polygon = PackedVector2Array(-18, -18, 18, -18, 18, 18, -18, 18)
 
 [node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=711525991]
 visible = false
