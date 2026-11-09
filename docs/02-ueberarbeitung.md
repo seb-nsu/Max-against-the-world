@@ -20,7 +20,7 @@
 | 2 | **Max bekommt eine Entwicklung:** vom Couch-Potato zum Jungen, der am Ende freiwillig die Milch holt. Kleine Momente in jeder Welt bereiten das vor. | Konzept: Überblick, Finale | Fable | Erledigt |
 | 3 | **Episode 1 zuerst:** Prolog und Welt 1 als eigenständige Episode fertigstellen und veröffentlichen, bevor andere Welten gebaut werden. Entschieden am 8. November 2026: verworfen zugunsten einer kostenlosen Demo (Prolog und Welt 1) zum Steam Next Fest (Runde 3 Nr. 165). | Produktion | Beide | Erledigt |
 | 4 | **Grundgerüst vor Inhalt:** Laufen, Klick-Interface, Inventar mit Kombinieren, Dialoge, Figurenwechsel, Speichern und Pixels Hilfesystem in Godot bauen. | Produktion | Fable | Offen |
-| 5 | **Vertical Slice:** Prolog plus Welt 1 Rätsel 1 bis 4 (Taverne, Zauberstab, Ziegen, Troll), etwa 30 Minuten Spielzeit, mit fremden Spielern testen. | Produktion | Beide | Offen |
+| 5 | **Vertical Slice:** Prolog plus Welt 1 Rätsel 1 bis 4 (Taverne, Zauberstab, Ziegen, Troll), etwa 40 Minuten Spielzeit, mit fremden Spielern testen. | Produktion | Beide | Offen |
 | 6 | **Minispiele reduzieren:** zwei Wettkampftage statt drei; nur Hebel und Rede-Ringen bleiben echte Minispiele, die anderen Disziplinen werden Zwischensequenzen nach gelöster Vorbereitung. | Welt 2 | Beide | Erledigt |
 | 7 | **Portale streichen:** Die Testkammern nutzen nur noch die Code-Sicht, ohne Schwung-Physik. | Welt 3, Rätsel 9 | Fable | Erledigt |
 | 8 | **Sendeuhr entschärfen:** nur Alibi (20:15) und Zombie-Video (Mitternacht) sind zeitgebunden; die Programmzeitschrift springt per Klick zur Sendezeit. | Welt 4, Rätsel 4, 5, 11 | Beide | Erledigt |
@@ -290,7 +290,7 @@ Zweites Gutachten vom 8. November 2026 (abends, Gesamtnote 7,5), umgesetzt am se
 | R4-5 | Welt 1: Stolleneingang frei, Rune-Tür = Kellereingang nach Rätsel 10, Geheimtür oben in den Abstellkammern; Raumplan des Dunklen Turms | Rätsel W1: Ortsnetz, Raumplan; Grafik W1: Bergwerk | Erledigt |
 | R4-6 | Grabstein-Haufen als Gag-Lieferung ohne Entwurf (Rätsel 10), nicht „138 Jahre“ | Grafik W2 | Erledigt |
 | R4-7 | Programmzeitschrift ein verbindlicher Aufbau (Doppelseite, fünf Senderspalten links, sechs Detailkästen rechts) | Spielsysteme: Bildschirme; Rätsel W4; Grafik W4: UI | Erledigt |
-| R4-8 | Leertaste nur für Hotspots; „Text weiter“ auf Eingabetaste und Linksklick | Spielsysteme: Optionen | Erledigt |
+| R4-8 | Hotspot-Anzeige auf Umschalt/Shift (halten); „Text weiter“ auf Leertaste, Eingabetaste und Linksklick (geändert am 9. November 2026) | Spielsysteme: Optionen | Erledigt |
 | R4-9 | Backmaschine mit zwei Fassungen (Ei, Mehl) und Empfänger für die Fernbedienung | Grafik Prolog/Finale: Dachboden Finale, Ortstabelle | Erledigt |
 | R4-10 | Omas Kekse sind auf dem Dachboden Hundekuchen (Verwandlungsregel gilt in jeder Realität), Oma isst sie trotzdem | Konzept: Gegenstände zwischen den Welten | Erledigt |
 | R4-11 | Fünfte Nahansicht „Wandkritzelei“ gestrichen; Luftschloss-Kritzelei trägt Rätsel 11 | Grafik W1: Nahansichten | Erledigt |
@@ -314,42 +314,42 @@ Zweites Gutachten vom 8. November 2026 (abends, Gesamtnote 7,5), umgesetzt am se
 
 Punkte, die bewusst zurückgestellt sind: Produktion, Recht und Markt aus dem Gutachten vom 8. November 2026 (abends), die offenen Nummern aus Runde 3 und alles, was Runde 4 nicht umsetzen konnte. Nummern ab 190 gibt es in Runde 3 nicht; die Liste endet bei 189 und A1 bis A16.
 
-| Nr. | Punkt | Kategorie | Quelle |
-| --- | --- | --- | --- |
-| S1 | Pro Stufe ein echtes Kürzungs- oder Abbruchkriterium in „Umsteuern, wenn“ (zum Beispiel: Welt 4 verliert die Senderzentrale, wenn Welt 3 über neun Monate dauert) | Produktion | Bewertung 4, Produktion |
-| S2 | Slice-Dauer auf eine Zahl ziehen (30, 40 oder 45 Minuten stehen nebeneinander) | Produktion | Bewertung 4, Top 10 Nr. 10 |
-| S3 | „12 Zwischenspiele“ gegen 3 Rückkehren plus 4 Packszenen abgleichen | Produktion | Bewertung 4, Top 10 Nr. 10 |
-| S4 | Nahansichten-Zählung angleichen (Produktion 11, Grafik-Tabs jetzt 13: Prolog 2, W1 4, W2 3, W3 4) | Produktion | Bewertung 4, Top 10 Nr. 10 |
-| S5 | Godot- und Popochiu-Version mit Datum eintragen | Produktion | Nr. 172; Bewertung 4 |
-| S6 | Puffer von 20 Prozent und Datum für die Steam-Seite | Produktion | Bewertung 4, zur 9 |
-| S7 | Gewerbe/Steuer mit Termin vor der Steam-Seite, Steuerberater-Erstgespräch | Recht | Nr. 174 |
-| S8 | Altersfreigabe (USK 6 oder 12, PEGI 7) festlegen; Pillen als Pastillen mit Apothekenkreuz | Recht | Nr. 175 |
-| S9 | KI-Offenlegungsstrategie entscheiden und im Store-Text erklären | Recht, Markt | Nr. 176 |
-| S10 | Markencheck des Titels (DPMA, EUIPO, Steam) durchführen und eintragen | Recht, Markt | Nr. 179; Konzept: Rechtscheck |
-| S11 | Halbe Seite Markt: Preis, drei Vergleichstitel mit Verkaufszahlen, Zielgruppe, Wunschlisten-Ziel | Markt | Bewertung 4, zur 9 |
-| S12 | Toadi und Zeldina komplett aus dem Marketing halten, Abspann-Pilz geprüft | Recht | Nr. 173 |
-| S13 | Spalte „Ähnlichkeitsprüfung ok“ im KI-Protokoll, Pflicht bei Parodiefiguren | Grafik, Recht | Nr. 180 |
-| S14 | Pixel-Referenz nur als Posen-Vorlage, nicht als Pixelgrundlage | Grafik | Nr. 181 |
-| S15 | Dachboden-Konzeptbild in Seitenansicht neu erzeugen | Grafik, Produktion | Bewertung 4, Grafik zur 8 |
-| S16 | Erstes Sprite-Paar Max und Pixel mit bestandenem Silhouetten-Test | Grafik, Produktion | Bewertung 4, Grafik zur 9 |
-| S17 | UI-Mockup 320×180 tatsächlich anfertigen | Spielsysteme, Produktion | Bewertung 4, Spielsysteme zur 9 |
-| S18 | Hörtest des Goblin-Lieds mit verständlichem Passwort-Teil vor dem Bau von Rätsel 11 | Audio, Produktion | Bewertung 4, Audio zur 9 |
-| S19 | Welt-1-Skript (Taverne) als zweites Muster schreiben | Dialog-Skript | Bewertung 4; folgt als nächster Schritt |
-| S20 | Prüfskript laufen lassen (Zeilenlänge, IDs, Sprecher) | Dialog-Skript, Technik | A2; Bewertung 4 |
-| S21 | Konsistenz-Check der Rätsel-Tabs automatisieren und vor jedem Review laufen lassen | Durchgängigkeit, Technik | A13; Bewertung 4 |
-| A1 | Skript-Pipeline: Skript-Tabelle, Prüfskript, Godot-Übersetzungs-CSV, Zeilen-ID-Liste für Audio | Automatisierung | Runde 3 A1 |
-| A2 | Prüfregeln im Prüfskript (120 Zeichen, doppelte IDs, Zehnerschritte, Sprecherliste, Bedingungen, Code-Abgleich) | Automatisierung | Runde 3 A2 |
-| A3 | Godot headless: automatischer Rätsel-Durchlauf und Schalterprüfung | Automatisierung | Runde 3 A3 |
-| A4 | Speichern/Laden-Test und Rundreise-Test | Automatisierung | Runde 3 A4 |
-| A5 | Parallele Claude-Agenten je Raum nach dem Grundgerüst | Automatisierung | Runde 3 A5 |
-| A6 | Audio-Pipeline: Skript-CSV, ElevenLabs-API, Audacity-Batch, Import | Automatisierung | Runde 3 A6 |
-| A7 | CI mit GitHub Actions: Prüfskript, Export, Rätsel-Test, Build | Automatisierung | Runde 3 A7 |
-| A8 | Web-Export für Testspieler | Automatisierung | Runde 3 A8 |
-| A9 | Telemetrie im Testbuild | Automatisierung | Runde 3 A9 |
-| A10 | Grafik-Batch: Prompt-Tabelle, Retro-Diffusion-API, Palettize, Zuschnitt, Protokoll | Automatisierung | Runde 3 A10 |
-| A11 | KI-Protokoll automatisch als CSV | Automatisierung | Runde 3 A11 |
-| A12 | Lokalisierung EN per Claude aus der CSV mit Glossar | Automatisierung | Runde 3 A12 |
-| A13 | Automatische Dokument-Konsistenzprüfung aus den Rätsel-Tabs | Automatisierung | Runde 3 A13 |
-| A14 | Hinweis-Datei aus Skript und Rätseltabelle generieren | Automatisierung | Runde 3 A14 |
-| A15 | Automatische Playtest-Auswertung per Claude | Automatisierung | Runde 3 A15 |
-| A16 | Screenshot-Regressionstest headless | Automatisierung | Runde 3 A16 |
+| Nr. | Punkt | Kategorie | Quelle | Stand 9. November 2026 |
+| --- | --- | --- | --- | --- |
+| S1 | Pro Stufe ein echtes Kürzungs- oder Abbruchkriterium in „Umsteuern, wenn“ | Produktion | Bewertung 4, Produktion | Geschlossen (Sebastian): umgesteuert wird am Ablauf, nicht am Inhalt |
+| S2 | Slice-Dauer auf eine Zahl ziehen (30, 40 oder 45 Minuten) | Produktion | Bewertung 4, Top 10 Nr. 10 | Erledigt: 40 Minuten in Nr. 5, Produktion „Umfang“ und Meilenstein 2 |
+| S3 | „12 Zwischenspiele“ gegen 3 Rückkehren plus 4 Packszenen abgleichen | Produktion | Bewertung 4, Top 10 Nr. 10 | Erledigt: 3 Zwischenspiele mit eingebautem Packen (166 Zeilen laut Skript), Finale in acht Abschnitten (rund 270 Zeilen) |
+| S4 | Nahansichten-Zählung angleichen | Produktion | Bewertung 4, Top 10 Nr. 10 | Erledigt: 14 (Prolog 2, W1 4, W2 3, W3 4, W4 1), 28 Stunden |
+| S5 | Godot- und Popochiu-Version mit Datum eintragen | Produktion | Nr. 172; Bewertung 4 | Erledigt: Godot 4.7.2 mit Popochiu 2.2.1, geprüft am 9. November 2026 |
+| S6 | Puffer von 20 Prozent und Datum für die Steam-Seite | Produktion | Bewertung 4, zur 9 | Schätzung in der Produktion; endgültige Termine später |
+| S7 | Gewerbe/Steuer mit Termin vor der Steam-Seite, Steuerberater-Erstgespräch | Recht | Nr. 174 | Offen, erst später |
+| S8 | Altersfreigabe (USK 6 oder 12, PEGI 7); Pillen als Pastillen mit Apothekenkreuz | Recht | Nr. 175 | Pastillen erledigt (Konzept, Rätsel W3, Skript W3, Grafik); Altersfreigabe offen |
+| S9 | KI-Offenlegungsstrategie entscheiden und im Store-Text erklären | Recht, Markt | Nr. 176 | Erledigt: Abschnitt „KI-Offenlegung“ in der Produktion |
+| S10 | Markencheck des Titels (DPMA, EUIPO, Steam) | Recht, Markt | Nr. 179; Konzept: Rechtscheck | Websuche erledigt (Ergebnis in der Produktion); Registersuche DPMA und EUIPO offen |
+| S11 | Halbe Seite Markt | Markt | Bewertung 4, zur 9 | Erledigt: Abschnitt „Markt“ in der Produktion |
+| S12 | Toadi und Zeldina komplett aus dem Marketing halten, Abspann-Pilz geprüft | Recht | Nr. 173 | Erledigt als Regel in der Produktion; Abspann-Pilz vor dem Trailer prüfen |
+| S13 | Spalte „Ähnlichkeitsprüfung ok“ im KI-Protokoll | Grafik, Recht | Nr. 180 | Erledigt: Spalten des KI-Protokolls in der Produktion |
+| S14 | Pixel-Referenz nur als Posen-Vorlage | Grafik | Nr. 181 | Erledigt als Regel in der Produktion (Hauptfiguren) |
+| S15 | Dachboden-Konzeptbild in Seitenansicht neu erzeugen | Grafik, Produktion | Bewertung 4, Grafik zur 8 | Alle Grafik-Prompts geprüft und genauer gefasst; neuer Dachboden-Prompt im Tab Prolog und Finale; Bild selbst noch zu erzeugen |
+| S16 | Erstes Sprite-Paar Max und Pixel mit Silhouetten-Test | Grafik, Produktion | Bewertung 4, Grafik zur 9 | Offen |
+| S17 | UI-Mockup 320×180 | Spielsysteme, Produktion | Bewertung 4, Spielsysteme zur 9 | Offen |
+| S18 | Hörtest des Goblin-Lieds | Audio, Produktion | Bewertung 4, Audio zur 9 | Untertitel für alle Lieder eingebaut (Audio, Spielsysteme); Hörtest nach dem Erzeugen |
+| S19 | Welt-1-Skript als zweites Muster | Dialog-Skript | Bewertung 4 | Erledigt durch die Skripte |
+| S20 | Prüfskript (Zeilenlänge, IDs, Sprecher) | Dialog-Skript, Technik | A2; Bewertung 4 | In Stufe 1 (Grundgerüst) eingeplant |
+| S21 | Konsistenz-Check der Rätsel-Tabs | Durchgängigkeit, Technik | A13; Bewertung 4 | In Stufe 1 (Grundgerüst) eingeplant |
+| A1 | Skript-Pipeline: Skript-Tabelle, Prüfskript, Godot-Übersetzungs-CSV, Zeilen-ID-Liste für Audio | Automatisierung | Runde 3 A1 | In Stufe 1 eingeplant |
+| A2 | Prüfregeln im Prüfskript | Automatisierung | Runde 3 A2 | In Stufe 1 eingeplant |
+| A3 | Godot headless: automatischer Rätsel-Durchlauf und Schalterprüfung | Automatisierung | Runde 3 A3 | Offen, Stufe 2 |
+| A4 | Speichern/Laden-Test und Rundreise-Test | Automatisierung | Runde 3 A4 | Offen, Stufe 1 |
+| A5 | Parallele Claude-Agenten je Raum nach dem Grundgerüst | Automatisierung | Runde 3 A5 | Offen, später |
+| A6 | Audio-Pipeline: Skript-CSV, ElevenLabs-API, Audacity-Batch, Import | Automatisierung | Runde 3 A6 | Offen, Technik in Stufe 2 |
+| A7 | CI mit GitHub Actions | Automatisierung | Runde 3 A7 | In Stufe 1 eingeplant |
+| A8 | Web-Export für Testspieler | Automatisierung | Runde 3 A8 | Offen, Stufe 2 |
+| A9 | Telemetrie im Testbuild | Automatisierung | Runde 3 A9 | Offen, Stufe 2 |
+| A10 | Grafik-Batch: Prompt-Tabelle, Retro-Diffusion-API, Palettize, Zuschnitt, Protokoll | Automatisierung | Runde 3 A10 | Offen, später |
+| A11 | KI-Protokoll automatisch als CSV | Automatisierung | Runde 3 A11 | Offen, Stufe 1; Spalten stehen fest |
+| A12 | Lokalisierung EN per Claude aus der CSV mit Glossar | Automatisierung | Runde 3 A12 | Offen, Stufe 5 |
+| A13 | Automatische Dokument-Konsistenzprüfung aus den Rätsel-Tabs | Automatisierung | Runde 3 A13 | In Stufe 1 eingeplant |
+| A14 | Hinweis-Datei aus Skript und Rätseltabelle generieren | Automatisierung | Runde 3 A14 | Offen, Stufe 2 |
+| A15 | Automatische Playtest-Auswertung per Claude | Automatisierung | Runde 3 A15 | Offen, später |
+| A16 | Screenshot-Regressionstest headless | Automatisierung | Runde 3 A16 | Offen, später |

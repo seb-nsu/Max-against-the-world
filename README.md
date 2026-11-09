@@ -16,7 +16,7 @@
 | [docs/raetsel/](docs/raetsel/) | Alle Rätsel je Welt mit Lösungen und Inventar |
 | [docs/grafik/](docs/grafik/) | Stil, Steckbriefe Max und Pixel, Szenen-, Figuren- und Gegenstands-Prompts je Welt |
 | [docs/skript/](docs/skript/) | Dialog-Skripte für Prolog, Welt 1 bis 4, Zwischenspiele und Finale |
-| [docs/reviews/](docs/reviews/) | Gutachten (Runde 3 und 4), Umsetzungsberichte, Erläuterungen, Skript-Annahmen |
+| [docs/reviews/](docs/reviews/) | Gutachten (Runde 3 und 4), Umsetzungsberichte, Erläuterungen, Skript-Annahmen, Prompt-Prüfung; alle offenen Punkte in [offene-punkte.md](docs/reviews/offene-punkte.md) |
 | [concepts/](concepts/) | Freigegebene Konzeptbilder (Referenz für Retro Diffusion) |
 
 Die Abhängigkeitsdiagramme der Rätsel gibt es nur im Online-Dokument, das die Arbeitsfassung bleibt; die Markdown-Dateien hier sind ein Export mit Stand 9. November 2026.

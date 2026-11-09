@@ -203,7 +203,7 @@ Reisetasche packen für Welt 4. Neu sind die Dinge aus Welt 3. Omas Kekse liegen
 | --- | --- | --- | --- |
 | ZS3\_DACH\_OPA\_0510 | Opa | Letztes Packen. Zwei Fächer. Danach brauchst du die Tasche nie wieder. Hoffe ich. Rechne ich. | öffnet die Tasche, Nahansicht Reisetasche |
 | ZS3\_DACH\_PIX\_0520 | Pixel | Die Sonnenbrille eines Mannes, der nie blinzelt. // Wo du hinfährst, tragen Leute so etwas, um dazuzugehören. Dazugehören spart Zeit. | Berühren: Agent Schmidts Sonnenbrille |
-| ZS3\_DACH\_PIX\_0530 | Pixel | Hundekuchen. In einer Keksdose. Ich habe sie gesehen, als sie Kekse waren. // Ich werde das nie verwinden. // Alte Damen mögen Knuspriges. Irgendeine alte Dame. Irgendwann. | Berühren: Omas Kekse (Hundekuchen); Mimik entsetzt |
+| ZS3\_DACH\_PIX\_0530 | Pixel | Hundekuchen. In einer Kekstüte. Ich habe sie gesehen, als sie Kekse waren. // Ich werde das nie verwinden. // Alte Damen mögen Knuspriges. Irgendeine alte Dame. Irgendwann. | Berühren: Omas Kekse (Hundekuchen); Mimik entsetzt |
 | ZS3\_DACH\_PIX\_0540 | Pixel | Ein Portalgerät ohne Batterie. Es zeigt eine Sekunde lang Opas Wohnzimmer, wenn man es füttert. // Ich sage nicht, womit. Es steht praktisch daneben. | Berühren: Portalgerät mit leerer Batterie |
 | ZS3\_DACH\_PIX\_0550 | Pixel | Siebenundvierzig Mal Konner, Sahra. Ein Blechkopf hat sie alle besucht. Oder keine. // Papier reist gut. Wertlos, aber leicht. | Berühren: Telefonbuchseite |
 | ZS3\_DACH\_PIX\_0560 | Pixel | Eine Kaffeetasse, die für das Original gehalten wird. Jeder Klon gehorcht ihr. // Im Fernsehen gibt es viele Klone. Ich sage nur: Sitcom-Familien. | Berühren: Kaffeetasse |

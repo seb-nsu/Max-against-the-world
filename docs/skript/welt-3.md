@@ -1,6 +1,6 @@
 # Skript Welt 3: Neo-Neustadt 2099
 
-Das komplette Dialog-Skript für Welt 3 als Entwurf: rund 870 Zeilen in 20 Abschnitten, von der Ankunft im Regen bis zum Klingeln des Werbeblocks, ohne die Rückkehr auf den Dachboden. Die Tabellen nutzen die Kurzform aus dem Tab Spielsysteme (ID, Sprecher, Text, Regie oder Auslöser; Bedingungen und die Ebene Simulation, Realität oder Labor stehen in der letzten Spalte), die IDs folgen dem Schema W3\_SZENE\_SPRECHER\_NUMMER in Zehnerschritten, Hinweise heißen W3\_HINT\_PIX\_xxxx, Ersatzzeilen kommen aus dem SYS\_ERS-Pool. Sprecherkürzel dieser Welt: MOR Morphäus, ORA Orakel-Oma, SCH Agent Schmidt, KLO Klon, TUR die Tür, DEC Deckert, VIE Herr Vier, KAL Kabel-Kalle, HAU Modell 08/15, MUT M.U.T.T.I., BER Bernd, PIE Piepsi, AUT Pillenautomat, POR Portalgerät, RAD Radio, WEI weinender Mann, FRA Frau mit Regenschirm, MUS Straßenmusiker, REB Rebellin, REL Rebell, OPA Opa als Hologramm, NAR Regie ohne Text. Schalter mit Wirkung über die Welt hinaus heißen wie im Finale-Skript: FREUND\_0815 (Olivenöl für Modell 08/15) und KEKSE\_DABEI (Omas Kekse in der Tasche).
+Das komplette Dialog-Skript für Welt 3 als Entwurf: rund 870 Zeilen in 20 Abschnitten, von der Ankunft im Regen bis zum Klingeln des Werbeblocks, ohne die Rückkehr auf den Dachboden. Die Tabellen nutzen die Kurzform aus dem Tab Spielsysteme (ID, Sprecher, Text, Regie oder Auslöser; Bedingungen und die Ebene Simulation, Realität oder Labor stehen in der letzten Spalte), die IDs folgen dem Schema W3\_SZENE\_SPRECHER\_NUMMER in Zehnerschritten, Hinweise heißen W3\_HINT\_PIX\_xxxx, Ersatzzeilen kommen aus dem SYS\_ERS-Pool. Sprecherkürzel dieser Welt: MOR Morphäus, ORA Orakel-Oma, SCH Agent Schmidt, KLO Klon, TUR die Tür, DEC Deckert, VIE Herr Vier, KAL Kabel-Kalle, HAU Modell 08/15, MUT M.U.T.T.I., BER Bernd, PIE Piepsi, AUT Pastillenautomat, POR Portalgerät, RAD Radio, WEI weinender Mann, FRA Frau mit Regenschirm, MUS Straßenmusiker, REB Rebellin, REL Rebell, OPA Opa als Hologramm, NAR Regie ohne Text. Schalter mit Wirkung über die Welt hinaus heißen wie im Finale-Skript: FREUND\_0815 (Olivenöl für Modell 08/15) und KEKSE\_DABEI (Omas Kekse in der Tasche).
 
 ## 1. Unterstadt, Straße: Ankunft im Regen
 
@@ -112,10 +112,10 @@ Morphäus steht nach Rätsel 2 neben der Bude. Jede Antwort hat eine Pause, die 
 | ID | Sprecher | Text | Regie |
 | --- | --- | --- | --- |
 | W3\_NUD\_MAX\_0410 | Max | Was ist das für eine Wahl? | Option Morphäus |
-| W3\_NUD\_MOR\_0420 | Morphäus | Die blaue Pille: Du wachst auf, glaubst, was du willst, und alles bleibt bequem. Die rote: Du siehst, wie tief der Kaninchenbau geht. | öffnet die Hand: leer |
+| W3\_NUD\_MOR\_0420 | Morphäus | Die blaue Pastille: Du wachst auf, glaubst, was du willst, und alles bleibt bequem. Die rote: Du siehst, wie tief der Kaninchenbau geht. | öffnet die Hand: leer |
 | W3\_NUD\_MOR\_0430 | Morphäus | Beide zurzeit nicht lieferbar. Lieferkette. Ich hätte Beige. Beige führt nirgendwohin, schmeckt aber nach nichts. | dreht das Schild um: „Beige vorrätig“ |
 | W3\_NUD\_MAX\_0440 | Max | Ich nehm nichts, was nach Wartezimmer aussieht. |  |
-| W3\_NUD\_MAX\_0450 | Max | Wo kriegt man die Pillen sonst? | Option Morphäus |
+| W3\_NUD\_MAX\_0450 | Max | Wo kriegt man die Pastillen sonst? | Option Morphäus |
 | W3\_NUD\_MOR\_0460 | Morphäus | Der Automat in der Apothekengasse. Er gibt nur etwas heraus, wenn er ein echtes Symptom erkennt. Und nur an geprüfte Menschen. |  |
 | W3\_NUD\_MOR\_0470 | Morphäus | Geprüft heißt: von dem Mann mit dem Hut. Ohne seinen Stempel schaut der Automat durch dich hindurch. | Hinweis Rätsel 1 |
 | W3\_NUD\_MAX\_0480 | Max | Was für ein Symptom? | Option Morphäus; nach 0460 |
@@ -180,27 +180,27 @@ Detektiv Deckert unter dem Vordach, Ebene: Realität. Drei Fragen, je drei Antwo
 | W3\_TEST\_MAX\_0380 | Max | Ich sag nichts. Ich schau nur. Das ist der Test, oder? | Reden: Deckert, bevor eine Beobachtung im Notizbuch steht |
 | W3\_TEST\_DEC\_0390 | Deckert | Nein. Das ist Schweigen. Schweigen besteht nur, wenn man Fell hat. Sieh dich um, Junge. Die Straße ist voller Antworten. | Hinweis auf die Beobachtungen |
 
-## 4. Apothekengasse: Rätsel 3, der Pillenautomat
+## 4. Apothekengasse: Rätsel 3, der Pastillenautomat
 
 Ebene: Realität. Morphäus wartet am Gasseneingang, sobald Max ihn kennt. Der Automat spricht mit Apothekenstimme. Pixel ist hier zum ersten Mal in dieser Welt Spielfigur: Er muss zweimal exakt gleich am Automaten vorbeigehen (Figurenwechsel, dann Benutzen: Gehweg vor dem Automaten).
 
 | ID | Sprecher | Text | Auslöser |
 | --- | --- | --- | --- |
-| W3\_APO\_MAX\_0010 | Max | Ein Automat mit Linse, Kreuz und zwei Fächern. Rot und blau. Sofa oder Wahrheit. Klingt wie mein Samstag. | Ansehen: Pillenautomat |
-| W3\_APO\_PIX\_0020 | Pixel | Er hat eine Linse, die größer ist als mein Kopf. Ich fühle mich beobachtet. Ich fühle mich selten beobachtet genug. | Ansehen: Pillenautomat, zweites Mal |
-| W3\_APO\_AUT\_0030 | Pillenautomat | Guten Abend. Bitte Stempel vorzeigen. … Kein Stempel. Kein Mensch. Keine Beratung. | Benutzen: Automat; vor Rätsel 1 |
-| W3\_APO\_AUT\_0040 | Pillenautomat | Mensch, vorläufig. Akzeptiert. Bitte nennen Sie Ihr Symptom. | Benutzen: Automat; nach Rätsel 1 |
+| W3\_APO\_MAX\_0010 | Max | Ein Automat mit Linse, Kreuz und zwei Fächern. Rot und blau. Sofa oder Wahrheit. Klingt wie mein Samstag. | Ansehen: Pastillenautomat |
+| W3\_APO\_PIX\_0020 | Pixel | Er hat eine Linse, die größer ist als mein Kopf. Ich fühle mich beobachtet. Ich fühle mich selten beobachtet genug. | Ansehen: Pastillenautomat, zweites Mal |
+| W3\_APO\_AUT\_0030 | Pastillenautomat | Guten Abend. Bitte Stempel vorzeigen. … Kein Stempel. Kein Mensch. Keine Beratung. | Benutzen: Automat; vor Rätsel 1 |
+| W3\_APO\_AUT\_0040 | Pastillenautomat | Mensch, vorläufig. Akzeptiert. Bitte nennen Sie Ihr Symptom. | Benutzen: Automat; nach Rätsel 1 |
 | W3\_APO\_MAX\_0050 | Max | Kopfschmerzen. | Option Symptom |
-| W3\_APO\_AUT\_0060 | Pillenautomat | Kopfschmerzen sind kein Symptom. Kopfschmerzen sind Dienstag. Abgelehnt. |  |
+| W3\_APO\_AUT\_0060 | Pastillenautomat | Kopfschmerzen sind kein Symptom. Kopfschmerzen sind Dienstag. Abgelehnt. |  |
 | W3\_APO\_MAX\_0070 | Max | Kein WLAN. | Option Symptom |
-| W3\_APO\_AUT\_0080 | Pillenautomat | Das ist kein Symptom. Das ist ein Lebensstil. Abgelehnt. |  |
+| W3\_APO\_AUT\_0080 | Pastillenautomat | Das ist kein Symptom. Das ist ein Lebensstil. Abgelehnt. |  |
 | W3\_APO\_MAX\_0090 | Max | Ich hab ein Déjà-vu. | Option Symptom; vor Pixels zweitem Durchgang |
-| W3\_APO\_AUT\_0100 | Pillenautomat | Behauptung ohne Befund. Zeigen Sie es mir. Ich bin eine Linse, kein Ohr. |  |
+| W3\_APO\_AUT\_0100 | Pastillenautomat | Behauptung ohne Befund. Zeigen Sie es mir. Ich bin eine Linse, kein Ohr. |  |
 | W3\_APO\_MAX\_0110 | Max | Ich hab ein Déjà-vu. Die Katze da. Die lief gerade schon mal genau so vorbei. | Option Symptom; nach Pixels zweitem Durchgang |
-| W3\_APO\_AUT\_0120 | Pillenautomat | Analyse. Bewegung eins. Bewegung zwei. Deckung: hundert Prozent. Das ist kein Kater. Das ist eine Schleife. | Linse leuchtet auf |
-| W3\_APO\_AUT\_0130 | Pillenautomat | Diagnose: Fehler in der Matrix. Schwerer Fall. Bitte selbst wählen. Die Kasse übernimmt nur eine. | beide Fächer öffnen sich |
+| W3\_APO\_AUT\_0120 | Pastillenautomat | Analyse. Bewegung eins. Bewegung zwei. Deckung: hundert Prozent. Das ist kein Kater. Das ist eine Schleife. | Linse leuchtet auf |
+| W3\_APO\_AUT\_0130 | Pastillenautomat | Diagnose: Fehler in der Matrix. Schwerer Fall. Bitte selbst wählen. Die Kasse übernimmt nur eine. | beide Fächer öffnen sich |
 | W3\_APO\_MAX\_0140 | Max | Ich geh einfach rein. | Option Symptom; Unsinn |
-| W3\_APO\_AUT\_0150 | Pillenautomat | Ich bin ein Automat. In mich geht man nicht rein. Man steht davor und ist enttäuscht. |  |
+| W3\_APO\_AUT\_0150 | Pastillenautomat | Ich bin ein Automat. In mich geht man nicht rein. Man steht davor und ist enttäuscht. |  |
 | W3\_APO\_MAX\_0160 | Max | Pixel. Geh mal da vorbei. Und dann noch mal. Genau gleich. Als wärst du ein Video, das hängt. | Pixel ansprechen; erklärt den Figurenwechsel |
 | W3\_APO\_PIX\_0170 | Pixel | Ich wiederhole mich nicht. Ich bin ein Original. Aber ich kann so tun. Für Thunfisch. |  |
 | W3\_APO\_PIX\_0180 | Pixel | Gehen. Würdevoll. Schwanz hoch. Blick geradeaus. Eine Katze mit Ziel. | Spielfigur Pixel: Benutzen Gehweg, erster Durchgang |
@@ -219,17 +219,17 @@ Ebene: Realität. Morphäus wartet am Gasseneingang, sobald Max ihn kennt. Der A
 
 ### Die Wahl
 
-Szene nach der Diagnose. Zwei Pillen liegen im Fach. Max nimmt eine. Beide sind spielbar; die blaue führt auf Opas Sofa und zurück.
+Szene nach der Diagnose. Zwei Pastillen liegen im Fach. Max nimmt eine. Beide sind spielbar; die blaue führt auf Opas Sofa und zurück.
 
 | ID | Sprecher | Text | Regie |
 | --- | --- | --- | --- |
-| W3\_APO\_MAX\_0410 | Max | Zwei Pillen. Eine blau, eine rot. Und ich darf wählen. Kein Zufälliger-Film-Knopf. Echte Wahl. | sieht ins Fach |
+| W3\_APO\_MAX\_0410 | Max | Zwei Pastillen. Eine blau, eine rot. Und ich darf wählen. Kein Zufälliger-Film-Knopf. Echte Wahl. | sieht ins Fach |
 | W3\_APO\_MOR\_0420 | Morphäus | Bevor du wählst: Nimm die hier. Eine Probe von einer alten Dame, die alles vorher weiß. Sie sagte, du brauchst sie. Sie sagte auch, du würdest fragen, warum. | reicht eine Tüte Kekse; Inventar: Omas Kekse; Schalter KEKSE\_DABEI gesetzt |
 | W3\_APO\_MAX\_0430 | Max | Warum? |  |
 | W3\_APO\_MOR\_0440 | Morphäus | Sie sagte, das würdest du fragen. Mehr sagte sie nicht. | zuckt mit den Schultern |
 | W3\_APO\_PIX\_0450 | Pixel | Kekse. In der Tüte. Außerhalb meiner Reichweite. Ich merke mir das. | gierig |
-| W3\_APO\_MAX\_0460 | Max | Die blaue. | Benutzen: blaue Pille |
-| W3\_APO\_AUT\_0470 | Pillenautomat | Blau. Nie wieder etwas wissen müssen. Ewige Wiederholungen, keine Fragen, keine Spoiler. Gute Besserung. | Bildschirm wird weich und warm |
+| W3\_APO\_MAX\_0460 | Max | Die blaue. | Benutzen: blaue Pastille |
+| W3\_APO\_AUT\_0470 | Pastillenautomat | Blau. Nie wieder etwas wissen müssen. Ewige Wiederholungen, keine Fragen, keine Spoiler. Gute Besserung. | Bildschirm wird weich und warm |
 | W3\_SOFA\_NAR\_0480 | – | Opas Wohnzimmer. Max liegt auf dem Sofa, das Handy über dem Gesicht. Der Fernseher zeigt eine Tierdoku ohne Ton. Alles ist ein bisschen zu gemütlich. | Szene; Wohnzimmer aus dem Prolog mit weichem Filter |
 | W3\_SOFA\_MAX\_0490 | Max | Volle Balken. Autoplay an. Nächste Folge in fünf Sekunden. Und ich muss nichts. Gar nichts. | zufrieden |
 | W3\_SOFA\_MAX\_0500 | Max | Irgendwas fehlt. … Nein. Nichts fehlt. Das ist ja das Schöne. | starrt aufs Handy |
@@ -239,13 +239,13 @@ Szene nach der Diagnose. Zwei Pillen liegen im Fach. Max nimmt eine. Beide sind 
 | W3\_SOFA\_PIX\_0540 | Pixel | Das war von Opa. Das hier ist von mir. | zweite Ohrfeige |
 | W3\_SOFA\_MAX\_0550 | Max | Okay! Okay. Ich bin wach. Ich glaube. Bin ich? | setzt sich auf, Bild flackert |
 | W3\_SOFA\_PIX\_0560 | Pixel | Du lagst in einer Gasse und hast gelächelt. Es war das Gruseligste, was ich je gesehen habe. Und ich habe einen Hundekuchen gesehen. | zurück in der Gasse; Szene beginnt neu beim Fach |
-| W3\_APO\_MAX\_0570 | Max | Das war … bequem. Wirklich bequem. Darum nehm ich die nicht. | sieht auf die rote Pille; Entwicklungsmoment |
-| W3\_APO\_MAX\_0580 | Max | Die rote. | Benutzen: rote Pille |
+| W3\_APO\_MAX\_0570 | Max | Das war … bequem. Wirklich bequem. Darum nehm ich die nicht. | sieht auf die rote Pastille; Entwicklungsmoment |
+| W3\_APO\_MAX\_0580 | Max | Die rote. | Benutzen: rote Pastille |
 | W3\_APO\_PIX\_0590 | Pixel | Du wählst freiwillig das Unbequeme. Ich notiere das Datum. Ich habe kein Datum. Ich notiere den Regen. |  |
-| W3\_APO\_MAX\_0600 | Max | Ich weiß nicht, was drüben ist. Das ist der Punkt. Ich will's wissen. | schluckt; Animation Pille schlucken |
+| W3\_APO\_MAX\_0600 | Max | Ich weiß nicht, was drüben ist. Das ist der Punkt. Ich will's wissen. | schluckt; Animation Pastille schlucken |
 | W3\_APO\_MOR\_0610 | Morphäus | Dann sieh zu, wie tief der Kaninchenbau geht. Ich bringe den Kater zu den anderen. Er wird sich äußern. | fängt Pixel auf |
 | W3\_APO\_PIX\_0620 | Pixel | Nass. Getragen. Von einem Mann in Strickjacke. Mein Tiefpunkt. Ich dachte, der läge hinter mir. | Bild wird grün und zu sauber |
-| W3\_APO\_AUT\_0630 | Pillenautomat | Rot. Nebenwirkungen: Wahrheit, Unbequemlichkeit, gelegentlich Ente. Gute Besserung. | Blende |
+| W3\_APO\_AUT\_0630 | Pastillenautomat | Rot. Nebenwirkungen: Wahrheit, Unbequemlichkeit, gelegentlich Ente. Gute Besserung. | Blende |
 
 ## 5. Simulation, Stadtstraße: Zu sauber
 
@@ -714,7 +714,7 @@ Ebene: Realität, von Anfang an erreichbar. Der Roboter wischt vor der Panzertü
 
 ## 13. Nudelbude: Rätsel 12, die vierte Zutat
 
-Ebene: Realität, nach der roten Pille. Omas Rezeptkarte ist beim Sprung in die Realität ein Glückskeks geworden. Herr Vier bricht ihn auf, kocht weinend die perfekte Suppe und gibt Max die Zugangskarte.
+Ebene: Realität, nach der roten Pastille. Omas Rezeptkarte ist beim Sprung in die Realität ein Glückskeks geworden. Herr Vier bricht ihn auf, kocht weinend die perfekte Suppe und gibt Max die Zugangskarte.
 
 | ID | Sprecher | Text | Regie |
 | --- | --- | --- | --- |
@@ -975,7 +975,7 @@ Pixel kommentiert ungefragt, wenn der Spieler 45 Sekunden nichts tut. Zufällig 
 | W3\_STR\_PIX\_0920 | Pixel | Der Mann mit dem Hut starrt dich immer noch an. Einer von euch muss blinzeln. Er wird es nicht sein. | Straße, vor Rätsel 1 |
 | W3\_STR\_PIX\_0930 | Pixel | Die Nudeln dampfen. Du stehst. Ich sitze. Nur einer von uns dreien tut etwas Sinnvolles. | Straße |
 | W3\_APO\_PIX\_0910 | Pixel | Der Automat wartet. Ich warte. Der Regen wartet nicht, der macht einfach weiter. | Apothekengasse |
-| W3\_APO\_PIX\_0920 | Pixel | Wenn du noch länger auf die Pillen starrst, wählt der Automat für dich. Er würde Beige nehmen. | Apothekengasse, nach der Diagnose |
+| W3\_APO\_PIX\_0920 | Pixel | Wenn du noch länger auf die Pastillen starrst, wählt der Automat für dich. Er würde Beige nehmen. | Apothekengasse, nach der Diagnose |
 | W3\_SIM\_PIX\_0910 | Pixel (aus dem Hörer) | Ich sehe dich nicht. Ich höre dich nicht. Ich weiß trotzdem, dass du gerade nichts tust. Das ist Erfahrung. | Stadtstraße, Pixel auf der Leitung |
 | W3\_SIM\_PIX\_0920 | Pixel (aus dem Hörer) | Die Katze läuft wieder vorbei. Sie hat mehr Routine als du. Sie hat auch mehr Motivation. | Stadtstraße |
 | W3\_KUCH\_PIX\_0910 | Pixel (aus dem Wandtelefon) | Da ist ein Ofen mit Keksen, und du stehst daneben. Ich bin in einer anderen Ebene und leide trotzdem. | Küche |
@@ -1008,7 +1008,7 @@ Pixel wird als Gegenstand aus dem Inventar auf eine Figur oder einen Hotspot gez
 | W3\_STR\_PIX\_1080 | Pixel | Der Hörer riecht nach tausend Ohren. Ich höre rein. Regen. Jemand ruft an, um Regen vorzuspielen. Das ist Kunst oder Einsamkeit. | Pixel auf Telefonzelle |
 | W3\_STR\_PIX\_1090 | Pixel | Papier. Nass. Einhornförmig. Ich schnuppere, und das Horn knickt ab. Ich war das nicht. Es war der Regen. | Pixel auf Origami-Einhorn |
 | W3\_STR\_PIX\_1100 | Pixel | Das Plakat riecht nach nichts. Pizza, die nach nichts riecht. Das ist die Zukunft, und sie ist eine Enttäuschung. | Pixel auf Pizza-Plakat |
-| W3\_APO\_PIX\_1010 | Pixel | Ich setze mich vor die Linse. Sie scannt mich. Sie sagt: „Kein Symptom. Nur Haltung.“ Endlich versteht mich eine Maschine. | Pixel auf Pillenautomat |
+| W3\_APO\_PIX\_1010 | Pixel | Ich setze mich vor die Linse. Sie scannt mich. Sie sagt: „Kein Symptom. Nur Haltung.“ Endlich versteht mich eine Maschine. | Pixel auf Pastillenautomat |
 | W3\_BAS\_PIX\_1010 | Pixel | Kabel um den Hals, Schraubenzieher im Mund, Headset. Er riecht nach Tee und Panik. Ich setze mich auf seinen Laptop. Er tippt weiter. Respekt. | Pixel auf Kalle |
 | W3\_BAS\_PIX\_1020 | Pixel | Sie isst Nudeln mit Sonnenbrille, nachts, drinnen. Ich sitze neben ihr und starre auf den Karton. Sie gibt mir eine Nudel. Eine. Von vier. | Pixel auf Rebellin |
 | W3\_BAS\_PIX\_1030 | Pixel | Werkzeuggürtel. Ich klettere dran hoch. Er sagt nichts. Die Sonnenbrille sagt auch nichts. Wir haben uns verstanden. | Pixel auf Rebell |

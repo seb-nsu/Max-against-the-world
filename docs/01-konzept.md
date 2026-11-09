@@ -33,7 +33,7 @@ Max beginnt als Couch-Potato und endet als Junge, der freiwillig die Milch holt.
 | Prolog | Max will nur fernsehen; Opa lockt ihn mit dem neuen WLAN-Passwort auf den Dachboden. Das Passwort gibt es aber erst nach dem vierten Gegenstand; jede Rückkehr beginnt mit Max' Versuch, es Opa vorher zu entlocken. Das ist sein Grund weiterzumachen |
 | Welt 1 | Er hilft Zeldina bei der Wohnungssuche, obwohl es ihn nichts angeht |
 | Welt 2 | Er trainiert zum ersten Mal freiwillig für etwas (Trainings-Szene mit Archimedes nach Rätsel 5) |
-| Welt 3 | Die blaue Pille verspricht bequemes Nichtwissen: ewige Wiederholungen, keine Fragen. Er wählt die rote Pille und das unbequeme Echte |
+| Welt 3 | Die blaue Pastille verspricht bequemes Nichtwissen: ewige Wiederholungen, keine Fragen. Er wählt die rote Pastille und das unbequeme Echte |
 | Welt 4 | Zappmann bietet ihm Ruhm ohne Anstrengung: Max wäre die Show, alle schauen zu, und er müsste nie wieder etwas tun. Max lehnt ab |
 | Finale | Er steht auf und holt die Milch |
 
@@ -57,7 +57,7 @@ Max ist gelassen-genervt, nicht zynisch; der Zyniker ist Pixel. Zusammen funktio
 - Goblin-Streikposten: „Sieht aus wie Montagmorgen, nur grüner.“
 - Die Sphinx: „Hat ein Rätsel im Gesicht und keine Ahnung im Kopf.“
 - Olympisches Stadion: „Sport. Freiwillig. Die spinnen, die Griechen.“
-- Rote und blaue Pille: „Sofa oder Wahrheit. Klingt wie mein Samstag.“
+- Rote und blaue Pastille: „Sofa oder Wahrheit. Klingt wie mein Samstag.“
 - M.U.T.T.I.: „Sie klingt wie die Schulsekretärin, nur mit Laser.“
 - Autoplay-Countdown: „Nächste Folge in fünf Sekunden. Endlich mal eine ehrliche Drohung.“
 - Zappmanns goldenes Sofa: „Verlockend. Genau deshalb nicht.“
@@ -237,7 +237,7 @@ Max braucht die **Ewige Energiezelle** aus dem Kern der KI **M.U.T.T.I.** (Mega-
 **Inspirationen:**
 
 - *Portal*: Eine KI namens GLaDOS lässt die Heldin Testkammern lösen und verspricht Kuchen als Belohnung; „The cake is a lie“ steht als Kritzelei an den Wänden ([Wikipedia](https://en.wikipedia.org/wiki/The_cake_is_a_lie)).
-- *Matrix*: rote und blaue Pille, déjà-vu als Fehler in der Simulation, das Orakel mit Keksen in der Küche ([Wikipedia](<https://en.wikipedia.org/wiki/The_Oracle_(The_Matrix)>), [IMDb](https://m.imdb.com/title/tt0133093/characters/nm0000401)).
+- *Matrix*: rote und blaue Pastille, déjà-vu als Fehler in der Simulation, das Orakel mit Keksen in der Küche ([Wikipedia](<https://en.wikipedia.org/wiki/The_Oracle_(The_Matrix)>), [IMDb](https://m.imdb.com/title/tt0133093/characters/nm0000401)).
 - *Terminator*: Killerroboter aus der Zukunft, „Ich komme wieder“.
 - *Blade Runner*: Neon-Stadt im Dauerregen, Replikanten und der Test, ob jemand ein Mensch ist.
 - Außerdem *WALL-E*, *2001*, *Per Anhalter durch die Galaxis* und *Futurama*.
@@ -245,7 +245,7 @@ Max braucht die **Ewige Energiezelle** aus dem Kern der KI **M.U.T.T.I.** (Mega-
 ### Orte
 
 - **Die Unterstadt:** Verregnete Neonstraßen, Nudelbude, in der jeder nur „Vier“ bestellen darf, und ein Detektiv, der jeden testet.
-- **Die Simulation:** Ein Teil der Stadt ist eine Matrix. Erkennbar daran, dass dieselbe schwarze Katze zweimal vorbeiläuft; sie ist reine Kulisse zum Ansehen, und Pixel würdigt sie keines Blickes. Das Déjà-vu für den Pillenautomaten spielt Pixel selbst (Rätsel 3).
+- **Die Simulation:** Ein Teil der Stadt ist eine Matrix. Erkennbar daran, dass dieselbe schwarze Katze zweimal vorbeiläuft; sie ist reine Kulisse zum Ansehen, und Pixel würdigt sie keines Blickes. Das Déjà-vu für den Pastillenautomaten spielt Pixel selbst (Rätsel 3).
 - **Die Widerstandsbasis:** Ein Hovercraft-Wrack, in dem Rebellen in Ledermantel und Sonnenbrille leben, auch nachts.
 - **Das Testlabor von M.U.T.T.I.:** Weiße Testkammern mit Begleitwürfel und einem Portalgerät, das genau einmal funktioniert: Eine Sekunde lang zeigt es Opas Wohnzimmer, dann ist die Batterie leer.
 - **Der Kern:** Serverraum mit der Energiezelle hinter M.U.T.T.I.s letzter Tür. Keine Wachen: M.U.T.T.I. vertraut ihren Türen und ihrer Logik (Rätsel 10 und 11); Hausmeister Modell 08/15 wischt nicht hier, sondern in der Realität vor der Panzertür zum Laboranschluss (Rätsel 8).
@@ -255,7 +255,7 @@ Max braucht die **Ewige Energiezelle** aus dem Kern der KI **M.U.T.T.I.** (Mega-
 | Figur | Anspielung | Rolle |
 | --- | --- | --- |
 | M.U.T.T.I. | GLaDOS, HAL 9000, Skynet | Endgegnerin; verspricht Kuchen, liefert nie |
-| Morphäus | Morpheus | Bietet Max zwei Pillen an, aber die Farben sind „zurzeit nicht lieferbar“ |
+| Morphäus | Morpheus | Bietet Max zwei Pastillen an, aber die Farben sind „zurzeit nicht lieferbar“ |
 | Die Orakel-Oma | Das Orakel | Backt Kekse und sagt alles voraus, außer den Lottozahlen |
 | Agent Schmidt | Agent Smith | Taucht überall in Kopie auf, ein Klon trägt immer Hausschuhe |
 | Hausmeister Modell 08/15 | Terminator | Hausmeister-Roboter, blechern und übertrieben höflich, mit österreichischer Wortwahl („Servus, Bursche“); will eigentlich nur Ordnung |
@@ -265,7 +265,7 @@ Max braucht die **Ewige Energiezelle** aus dem Kern der KI **M.U.T.T.I.** (Mega-
 ### Rätsel und Aufgaben
 
 - **Der Mensch-Test:** Detektiv Deckert stellt Fragen wie „Eine Schildkröte liegt auf dem Rücken, was tust du?“. Max muss „menschlich falsch“ antworten, um durchzukommen.
-- **Pillen besorgen:** Morphäus' Pillen sind in Rot und Blau „zurzeit nicht lieferbar“, er hätte Beige. Am Pillenautomaten täuscht Max ein Déjà-vu vor und muss sich dann selbst zwischen der bequemen blauen und der unbequemen roten Pille entscheiden.
+- **Pastillen besorgen:** Morphäus' Pastillen sind in Rot und Blau „zurzeit nicht lieferbar“, er hätte Beige. Am Pastillenautomaten täuscht Max ein Déjà-vu vor und muss sich dann selbst zwischen der bequemen blauen und der unbequemen roten Pastille entscheiden.
 - **Kugeln ausweichen:** Ein kurzer Zeitlupen-Gag bei den Agenten-Klonen, in dem Max sich wie in *Matrix* nach hinten biegt und dabei einen Hexenschuss bekommt.
 - **Die Testkammern:** Drei Rätsel mit der Code-Sicht, die M.U.T.T.I. mit Sprüchen wie „Das schaffst du nicht, aber ich glaube an dich“ begleitet.
 - **Hausmeister 08/15 umgehen:** Max gibt Modell 08/15 eine Telefonbuchseite mit 47 Einträgen „Konner, Sahra“. Der Roboter zieht los, sie alle zu besuchen.

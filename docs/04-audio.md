@@ -71,7 +71,7 @@ Aufgebaut wie die Grafik-Tabs: erst die Werkzeuge, dann Regeln für Prompts, dan
 
 **Jingles (je 2–5 Sekunden, kein Loop):** Gegenstand aufgehoben, Rätsel gelöst, Welt geschafft, falscher Versuch (komische Posaune), Lachkonserve, Glücksrad-Gewinn. Prompt-Schema: `short [Stimmung] sting, [Instrument], [Dauer] seconds, not a loop`.
 
-**Gesungene Stücke mit Rätselfunktion:** Diese drei brauchen Gesang und weichen deshalb vom Musik-Baustein ab. Am besten mit ElevenLabs Music oder ACE-Step (beide können Gesang), Text von mir, auf Deutsch.
+**Gesungene Stücke mit Rätselfunktion:** Diese drei brauchen Gesang und weichen deshalb vom Musik-Baustein ab. Am besten mit ElevenLabs Music oder ACE-Step (beide können Gesang), Text von mir, auf Deutsch. Jedes Lied im Spiel bekommt Untertitel, nicht nur diese drei: Liedzeilen erscheinen kursiv mit einem Notenzeichen davor und laufen synchron zum Gesang. Sie haben eigene Zeilen-IDs wie Dialog (Schema LIED\_Welt\_Stück\_Nummer) und werden mit übersetzt. Bei den drei Stücken mit Rätselfunktion sind die Untertitel immer an, auch wenn der Spieler Untertitel ausgeschaltet hat, damit kein Rätsel daran hängt, ob die KI-Stimme eine Silbe verschluckt.
 
 | Stück | Rätsel | Muss hörbar sein | Prompt |
 | --- | --- | --- | --- |
