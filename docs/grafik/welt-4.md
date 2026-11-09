@@ -26,7 +26,7 @@ In Welt 4 darf jeder Sender anders aussehen, das ist der Witz der Welt. Damit es
 | Sitcom-Küche | Küchen-Sitcom | Offene Küche mit Durchreiche, Keksdose, Küchentür, Publikum im Dunkeln | 3, 6 |
 | Savanne mit Wasserloch | Tiertort Savanne | Akazien, Wasserloch mit Flamingos, Felsen mit Löwenthron, Absperrband | 4 |
 | Musikvideo-Friedhof | Mitternachts-TV | Friedhof mit Tanzfläche aus Leuchtfliesen, Gräber, Nebel | 5 |
-| Spukhaus, Halle und Keller | Mitternachts-TV | Verschlossene Tür, Lichterkette mit Buchstaben, Keller mit Gerümpel | 6, 7, 8 |
+| Spukhaus, Halle und Keller | Mitternachts-TV | Keller mit Gerümpel und verketteter Tür nach oben, Halle mit Lichterkette mit Buchstaben | 6, 7, 8 |
 | Kapitolis, Straße | Comic-Kanal | Comic-Stadt mit Wolkenkratzern, Sprechblasen-Schildern ohne Text | 10, 11 |
 | Fondue-Fabrik | Comic-Kanal | Käsebottiche, Laufband, Warnschilder | 10 |
 | Werbespot-Set | Comic-Kanal | Kulisse mit grellem Produktpodest, Kamera, Scheinwerfer | 11 |
@@ -36,7 +36,7 @@ In Welt 4 darf jeder Sender anders aussehen, das ist der Witz der Welt. Damit es
 
 **Figuren:** Gerd Glück, Flimmer, die Sitcom-Familie (Vater, Mutter, Sohn), der Kommissar, Löwe, Hyäne, Gepard, Geier, Nashorn, Flamingos, Zombies, der FBI-Agent, Superhelden (Super-Siegfried, Fledermann, Wonder-Wilma; laut Punkt 28 der Überarbeitung vorerst nur diese drei), Dr. Werbepause, die Empfangsdame, zwei Sicherheitsleute, Intendant Zappmann, Max als Käsemann.
 
-**Gegenstände:** Billig-Fernbedienung, sechs Tasten-Symbole, Splitscreen-Adapter, Programmzeitschrift, Bananenschale (frisch, faulig, als Stinkbombe), Fondue-Käse (normal, leuchtend, Wunderkäse), Küchentür, Keksdose, Amboss, Lichterkette, Lichtröhre Deluxe, Superhelden-Anzug, Comic-Panels, Drehbuch des Erzählers, Goldene Fernbedienung.
+**Gegenstände:** Billig-Fernbedienung, sechs Tasten-Symbole, Splitscreen-Adapter, Programmzeitschrift, Bananenschale (frisch, faulig, als Stinkbombe), Fondue-Käse (normal, leuchtend, Wunderkäse), Küchentür, Keksdose, Amboss, Lichterkette, Lichtröhre Deluxe, Superhelden-Anzug, Comic-Panels, Drehbuch des Erzählers, Archivband, Goldene Fernbedienung.
 
 **Nur zum Ansehen:** Objekte ohne Rätselfunktion, die nur Kommentare von Max und Pixel auslösen. Sie machen die Sender glaubwürdig und tragen viele der Anspielungen. Die vollständige Liste steht unten bei den Prompts.
 
@@ -56,8 +56,8 @@ Alle mit dem Baustein HINTERGRUND.
 | Sitcom-Küche | Küchen-Sitcom | – | Durchreiche, Keksdose, Küchentür, Publikum | A bright 1990s sitcom kitchen set seen from the audience side. Left: a pass-through window to a living room. Center: a counter with a big cookie jar shaped like a chicken and a laugh track machine. Right: a wooden kitchen door with a round window. Top edge: studio lights and the end of the set wall visible. A row of cardboard audience cutouts in the dark foreground |
 | Savanne | Tiertort Savanne | – | Wasserloch, Felsenthron, Absperrband, Mikrofonangel | African savanna at golden hour. Left: acacia trees and a watering hole with three pink flamingos. Center: a rocky outcrop shaped like a throne with an empty spot on top. Right: yellow crime scene tape around a bush. A boom microphone on a pole sticking in from the top edge. Orange evening sky |
 | Musikvideo-Friedhof | Mitternachts-TV | Gräber zu und offen | Leuchtfliesen, Gräber, Mond | A foggy graveyard turned into a dance floor. Center: a square of glowing colored floor tiles among crooked gravestones. Left and right: six closed graves with mounds of earth. Full moon, purple spotlights, a disco ball hanging from a dead tree. Second version: the graves broken open with hands sticking out |
-| Spukhaus, Halle | Mitternachts-TV | Tür zu, Sitcom-Tür eingesetzt | Türrahmen, Lichterkette, Treppe | A creepy old mansion hall. Left: a heavy locked front door covered in chains. Center: a string of colored light bulbs running along faded wallpaper. Right: a grand staircase with cobwebs. Green fog on the floor. Second version: the locked door replaced by a bright cheerful wooden kitchen door with a round window, warm light spilling out |
-| Spukhaus, Keller | Mitternachts-TV | – | Röhrenfernseher, Gerümpel | A dusty basement full of boxes and old furniture under sheets, an old tube TV on a crate showing static, a single hanging light bulb, a small window high up |
+| Spukhaus, Halle | Mitternachts-TV | Lichterkette aus; Lichterkette blinkt (Rätsel 7) | Offene Kellertür mit Treppe nach unten, Lichterkette, Treppe nach oben | A creepy old mansion hall. Left: an open cellar doorway with stone steps leading down, warm light from below. Center: a string of colored light bulbs running along faded wallpaper. Right: a grand staircase with cobwebs. Green fog on the floor |
+| Spukhaus, Keller | Mitternachts-TV | Tür zu, Sitcom-Tür eingesetzt | Röhrenfernseher, Gerümpel, Ankunft aus dem Friedhof, verkettete Tür nach oben | A dusty basement full of boxes and old furniture under sheets, an old tube TV on a crate showing static, a single hanging light bulb, a small window high up. Left: a broken grave slab in the floor where the graveyard tunnel comes out. Right: a few stone steps up to a heavy door covered in chains. Second version: the chained door replaced by a bright cheerful wooden kitchen door with a round window, warm light spilling down the steps |
 | Kapitolis | Comic-Kanal | – | Straße, Wolkenkratzer, Laterne | A comic book city street with thick black outlines and halftone dots. Tall skyscrapers, blank speech-bubble-shaped signs, a water tower on a roof, a street lamp in the foreground, a newspaper kiosk |
 | Fondue-Fabrik | Comic-Kanal | – | Bottiche, Laufband, Warnschilder | A comic book cheese factory. Left: huge bubbling vats of yellow melted cheese with a catwalk above them. Center: a conveyor belt with cheese blocks. Right: blank warning signs and a big lever. A cheese-shaped searchlight on the roof shining into the sky through a window |
 | Werbespot-Set | Comic-Kanal | – | Podest, Kamera, Scheinwerfer, Klappe | A garish TV commercial set. Center: a glowing round product podium under a spotlight. Left: a camera on a tripod and a director's chair. Right: a second spotlight and a fake palm tree in a pot. A clapperboard on the floor. Bright backdrop of rainbow stripes |
@@ -110,9 +110,10 @@ Alle mit dem Baustein GEGENSTÄNDE. Die Fernbedienungen stehen bei den weltenüb
 | Splitscreen-Adapter (1×1) | A small plastic TV adapter box with two cables and a split screen symbol |
 | Genre-Ketten (2×3) | 2x3 grid: a fresh yellow banana peel; a rotten black banana peel; a green banana-shaped stink bomb with a fuse; a block of fondue cheese; the same cheese glowing yellow; a cheese wedge glowing radioactive green with a sparkle |
 | Sender (2×3) | 2x3 grid: a TV guide magazine with a blank cover; a chicken-shaped cookie jar; a wooden kitchen door with a round window; a bedsheet with a cheese-colored eye mask; a heavy black anvil; a string of colored light bulbs |
-| Comic-Panels (1×4) | 1x4 single comic panels with thick black borders and halftone dots: a hero leaping; a jagged empty explosion burst; a villain laughing; a vat of bubbling cheese |
+| Comic-Panels (1×4) | 1x4 single comic panels with thick black borders and halftone dots, each with a small wall clock in the top corner and an empty speech bubble: a villain laughing, clock at 12:00, round bubble; a hero leaping, clock at 12:01, jagged bubble; a jagged empty explosion burst, clock at 12:02, no bubble; a vat of bubbling cheese with the villain's legs sticking out, clock at 12:03, small bubble (Uhrzeiten und Text von Hand; richtige Folge Schurke, Held, Explosion, Bottich) |
 | Drehbuch (1×1) | A thick stapled script with a coffee stain and a pencil clipped to it |
 | Lichtröhre Deluxe (1×1) | A long fluorescent tube glowing pale blue, still in a flashy blister pack with a gold sticker |
+| Archivband (1×1) | A battered black VHS tape with a faded blank handwritten label strip and a bent corner (Aufschrift „Zappis Puppenstube, 1977“ von Hand; kommt aus der Müllpresse, Rätsel 12) |
 
 Krone des Löwen und Alien-Gerät sind keine Inventar-Gegenstände: Die Krone fällt nur in der Hyänen-Animation aus dem Fell, das Gerät ist Requisite des FBI-Agenten.
 
@@ -167,10 +168,10 @@ Suchscheinwerfer, Monitorwand, Mikrofonangel und Wasserturm sind Teil der Hinter
 | Max | Fernbedienung | alle | 4 | einmalig | Max points a remote control forward and presses a button, facing right |
 | Max | In den Käsebottich | 10 | 8 | einmalig | Max slips off a catwalk and falls into a vat of glowing cheese, splash |
 | Max | Käsemann-Pose | 10 | 4 | einmalig | Max in a bedsheet cape strikes a hero pose, cat on his shoulder copies it |
-| Umschalten | Effekt | alle | 6 | einmalig | EFFEKT: a burst of TV static that wipes across the screen, 320x180 |
+| Umschalten | Effekt | alle | 6 | einmalig | EFFEKT: a burst of TV static that wipes across the screen, 320x180; zweite Fassung für die Option „Flackern reduzieren“: ein ruhiger Wischer von links nach rechts ohne Blitz |
 | Pause | Effekt | alle | 2 | Schleife | EFFEKT: two white pause bars blinking in a corner, 32x32 |
 | Rückspulen | Effekt | 4, 5 | 4 | Schleife | EFFEKT: horizontal VHS tracking lines rolling down the screen, 320x180 |
-| Lampenflackern | Effekt | 7 | 4 | einmalig | EFFEKT: a light bulb flickering on and off with a warm glow, 16x32 |
+| Lampenflackern | Effekt | 7 | 4 | einmalig | EFFEKT: a light bulb flickering on and off with a warm glow, 16x32; zweite Fassung für „Flackern reduzieren“: langsames Pulsieren ohne hartes Aus |
 | Max | Röhre schwingen | – | 6 | einmalig | Max swings a pale blue glowing fluorescent tube like a sword in two dramatic arcs, then nearly drops it, facing right |
 | WRRUMM-Blase | Effekt | – | 4 | einmalig | EFFEKT: a jagged comic sound effect burst with thick outline and halftone dots pops up and shakes, empty inside, 64x48 (Schrift von Hand) |
 | Müllpresse | Wände rücken, Auge blinzelt | 12 | 6 | Schleife | EFFEKT: the steel walls of a trash compactor creep inward a few pixels and back, a small eye on a stalk blinks among video tapes, 96x64 |
@@ -184,3 +185,4 @@ Suchscheinwerfer, Monitorwand, Mikrofonangel und Wasserturm sind Teil der Hinter
 | Rhythmus-Leiste | `rd_pro__ui_panel` | A neon dance-game bar with four arrow lanes and a glowing hit zone at the bottom, purple and green, no text |
 | Lichterketten-Alphabet | Von Hand | 26 Glühbirnen mit Buchstaben an die Hintergrundwand setzen; Buchstaben nicht per KI |
 | Autoplay-Countdown | rd\_pro\_\_ui\_panel | A glossy TV overlay panel in the lower right corner with a big circular countdown ring and an empty thumbnail slot, no text (Ziffern von Hand) |
+| Programmzeitschrift (Bildschirm) | rd\_pro\_\_ui\_panel | A full-screen open TV guide magazine: left page with a time column and five channel columns forming a grid of blank programme cells, right page with six blank show boxes with small thumbnails, a dog-eared corner, no text (Zeiten, Sender und die 20:15-Folge von Hand; Aufbau im Tab Spielsysteme) |

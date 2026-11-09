@@ -9,11 +9,14 @@
 | Ordner / Datei | Inhalt |
 | --- | --- |
 | [docs/01-konzept.md](docs/01-konzept.md) | Story, Welten, Figuren, Finale, Twist |
-| [docs/02-ueberarbeitung.md](docs/02-ueberarbeitung.md) | Maßnahmen aus zwei Review-Runden mit Status |
+| [docs/02-ueberarbeitung.md](docs/02-ueberarbeitung.md) | Maßnahmen aus den Review-Runden mit Status |
 | [docs/03-produktion.md](docs/03-produktion.md) | Absprachen zu Godot, KI-Grafik und Audio, Kosten, Arbeitsteilung |
 | [docs/04-audio.md](docs/04-audio.md) | Musik, Geräusche, Sprachausgabe mit Prompts |
+| [docs/05-spielsysteme.md](docs/05-spielsysteme.md) | Dialogsystem, Schrift, UI, Hinweissystem, Speichern |
 | [docs/raetsel/](docs/raetsel/) | Alle Rätsel je Welt mit Lösungen und Inventar |
 | [docs/grafik/](docs/grafik/) | Stil, Steckbriefe Max und Pixel, Szenen-, Figuren- und Gegenstands-Prompts je Welt |
+| [docs/skript/](docs/skript/) | Dialog-Skripte für Prolog, Welt 1 bis 4, Zwischenspiele und Finale |
+| [docs/reviews/](docs/reviews/) | Gutachten (Runde 3 und 4), Umsetzungsberichte, Erläuterungen, Skript-Annahmen |
 | [concepts/](concepts/) | Freigegebene Konzeptbilder (Referenz für Retro Diffusion) |
 
-Die Abhängigkeitsdiagramme der Rätsel gibt es nur im Online-Dokument, das die Arbeitsfassung bleibt; die Markdown-Dateien hier sind ein Export mit Stand 6. November 2026.
+Die Abhängigkeitsdiagramme der Rätsel gibt es nur im Online-Dokument, das die Arbeitsfassung bleibt; die Markdown-Dateien hier sind ein Export mit Stand 9. November 2026.

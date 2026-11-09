@@ -10,7 +10,7 @@ Max ist ein schlaksiger Teenager in einem zu großen dunkelgrauen Hoodie mit rot
 | Haltung | Leicht vorgebeugt, Schultern hängend, Hände in der Bauchtasche | Der Couch-Potato steckt im Umriss, nicht nur im Text |
 | Haare | Dunkelbraun, wuschelig, eine Strähne hängt über ein Auge | Erkennungszeichen von der Seite; verdeckt halb den Blick, passt zu „maulfaul“ |
 | Gesicht | Halb geschlossene, müde Augen, schiefes Grinsen, ein paar Sommersprossen | Grundausdruck „gelassen-genervt“ ohne zynisch zu wirken |
-| Oberteil | Übergroßer dunkel-anthrazitfarbener Hoodie, Ärmel über den Händen, ungleich lange Kordeln, kleines Retro-Fernseher-Motiv mit türkisem Bildschirm auf der Brust | Dunkles Grau trennt ihn klar von Pixels hellem Fell, auch wenn der Kater auf seiner Schulter sitzt; das Fernseher-Motiv verbindet ihn mit dem Zapp-O-Mat |
+| Oberteil | Übergroßer dunkel-anthrazitfarbener Hoodie, Ärmel über den Händen, ungleich lange Kordeln, kleines Retro-Fernseher-Motiv mit türkisem Bildschirm auf der Brust | Dunkles Grau trennt ihn klar von Pixels hellem Fell, auch wenn der Kater auf seiner Schulter sitzt; der Grundton #3a4466 liegt eine Stufe unter Pixels Streifen (#5a6988), damit beide nicht verschmelzen; das Fernseher-Motiv verbindet ihn mit dem Zapp-O-Mat |
 | Hose | Dunkelblaue Jeans, etwas zu lang, unten aufgeschoppt | Wenig Aufmerksamkeit, solide Basis |
 | Schuhe | Abgetretene rote Sneaker mit weißer Sohle, ein Schnürsenkel offen | Der stärkste Farbakzent: im Gewimmel sofort zu finden; der offene Senkel ist ein stiller Running Gag |
 | Requisiten | Handy in der Bauchtasche, Kopfhörer nur in der Gegenwart | Moderner Teenager ohne zusätzliche Umriss-Unruhe in den Welten |
@@ -24,13 +24,13 @@ Max ist ein schlaksiger Teenager in einem zu großen dunkelgrauen Hoodie mit rot
 | --- | --- | --- | --- |
 | Haut | #e8b796 | #c28569 | – |
 | Haare | #733e39 | #3e2731 | #b86f50 |
-| Hoodie | #5a6988 | #3a4466 | #8b9bb4 |
+| Hoodie | #3a4466 | #262b44 | #5a6988 |
 | Fernseher-Motiv | #2ce8f5 | #0099db | – |
 | Jeans | #124e89 | #262b44 | #0099db |
 | Sneaker | #e43b44 | #a22633 | #ffffff (Sohle) |
 | Kontur | #262b44 | – | – |
 
-**Referenz-Konzept Max** (Gemini, freigegeben am 6. November 2026, Datei `w0_concept_max.png`): schiefergrauer Hoodie, Hände in der Tasche, leicht gebeugt. Für das Spiel die Seitenansicht spiegeln, damit er nach rechts schaut. Die aufrechte Fassung für das Finale entsteht aus derselben Vorlage.
+**Referenz-Konzept Max** (Gemini, freigegeben am 6. November 2026, Datei `w0_concept_max.png`): schiefergrauer Hoodie im Konzept, im Spiel auf den dunkleren Grundton #3a4466 gebracht, Hände in der Tasche, leicht gebeugt. Für das Spiel die Seitenansicht spiegeln, damit er nach rechts schaut. Die aufrechte Fassung für das Finale entsteht aus derselben Vorlage. Vor den Animationen den Silhouetten-Test unten durchführen.
 
 ![Konzeptblatt Max](../../concepts/w0_concept_max.png)
 
@@ -41,9 +41,9 @@ Max ist ein schlaksiger Teenager in einem zu großen dunkelgrauen Hoodie mit rot
 | Art, Größe | Kräftiger Hauskater, 18 Pixel hoch im Sitzen, etwa 26 Pixel lang im Gehen | Klein neben Max, aber groß genug für Gesten |
 | Körper | Rund, kleiner Bauch, kurze Beine, sehr buschiger Schwanz | Gemütlichkeit und Verfressenheit im Umriss; der Schwanz zeigt Stimmung |
 | Fell | Hell silbergrau mit drei dunkleren Streifen auf dem Rücken, weiße Brust und weiße „Socken“ an allen Pfoten | Hebt sich von Max' dunklem Hoodie und den meisten Hintergründen ab |
-| Ohren | Linkes Ohr eingerissen | Erkennungszeichen; Hintergrund-Gag: verlor gegen Opas ersten Staubsauger-Prototyp |
+| Ohren | Linkes Ohr eingerissen | Erkennungszeichen; Hintergrund-Gag: verlor gegen Opas ersten Staubsauger-Prototyp, der im Prolog auf dem Dachboden steht (Objekt nur zum Ansehen) |
 | Augen | Bernsteinfarben, fast immer halb geschlossen und herablassend | Grundausdruck „ich weiß es besser“ |
-| Halsband | Rot, vorne ein runder silberner Lautsprecher mit kleiner türkiser Leuchte | Opas Erfindung; die Leuchte blinkt beim Sprechen und ersetzt eine Mund-Animation |
+| Halsband | Rot, vorne ein runder silberner Lautsprecher mit türkiser Leuchte; die Leuchte ist mindestens zwei Pixel groß, sonst verschwindet sie auf 18 Pixel | Opas Erfindung; die Leuchte blinkt beim Sprechen und ersetzt eine Mund-Animation |
 | Haltung | Sitzt kerzengerade mit hochgerecktem Kinn, Schwanz um die Pfoten gelegt | Hochnäsig wie ein König auf dem Thron |
 
 **Abgrenzung:** Pixel ist verfressen und hochnäsig, darf aber nicht an bekannte Comic-Kater erinnern: kein oranges Fell, keine Lasagne, keine dicken Augenlider mit Ringen. Sein Markenzeichen ist das Lautsprecher-Halsband.
@@ -90,7 +90,7 @@ Pixel art game sprite, side view, facing right, full body, transparent backgroun
 ```
 
 ```text
-Pixel art game sprite, side view, facing right, full body, transparent background, dark colored outline. Pixel, a chubby light silver-grey tomcat about 18 pixels tall, sitting upright with chin raised, white chest and paws, fluffy tail around his paws, torn left ear, half-closed amber eyes, red collar with a small round silver speaker.
+Pixel art game sprite, side view, facing right, full body, transparent background, dark colored outline. Pixel, a chubby light silver-grey tomcat about 18 pixels tall, sitting upright with chin raised, white chest and paws, fluffy tail around his paws, torn left ear, half-closed amber eyes, red collar with a small round silver speaker and a clearly visible two-pixel turquoise light.
 ```
 
 **3. Ansichten für Animationen (`rd_plus__character_turnaround`):** dasselbe Motiv mit „front, side, back view“, danach Laufen und Stehen mit `rd_advanced_animation__walking` und `__idle` aus der fertigen Seitenansicht.

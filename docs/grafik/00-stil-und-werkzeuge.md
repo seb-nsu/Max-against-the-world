@@ -12,7 +12,7 @@ Alle Welten teilen einen Pixel-Art-Stil in 320×180 Pixeln mit einer gemeinsamen
 | Inventar-Icons | 24×24 Pixel | Einheitliche Inventarleiste |
 | Mauszeiger | 16×16 Pixel |  |
 | Palette | Eine gemeinsame Palette mit 32 Farben, zum Beispiel „Endesga 32“ von Lospec | Alle Assets werden darauf umgefärbt; so passen auch fremde Pakete |
-| Perspektive | Seitenansicht wie eine Bühne, leicht von oben; begehbarer Boden im unteren Drittel | Klassische Adventure-Ansicht, Figuren werden nach hinten kleiner |
+| Perspektive | Streng seitlich wie eine Bühne, Rückwand parallel zur Bildebene; begehbarer Boden als flaches Band im unteren Drittel | Klassische Adventure-Ansicht; Figuren werden nach hinten nur leicht kleiner, Laufwege bleiben lesbar |
 | Licht | Von oben links, weiche Schatten nach rechts unten | Einheitlich über alle Szenen |
 | Konturen | Figuren und Gegenstände mit dunkler, farbiger Kontur (nicht reines Schwarz); Hintergründe ohne Kontur | Figuren heben sich vom Hintergrund ab |
 | Kantenglättung | Keine; saubere Pixelgruppen ohne Farbverläufe | Echte Pixel-Art |
@@ -27,6 +27,8 @@ Alle Welten teilen einen Pixel-Art-Stil in 320×180 Pixeln mit einer gemeinsamen
 | Welt 3 | Nachtblau, Neon-Magenta, Cyan; Grün für die Code-Sicht; Weiß für das Labor | Regen und Neon |
 | Welt 4 | Je Sender anders | Siehe Tab Welt 4 |
 
+**Zusatzfarben pro Welt:** Endesga 32 hat kein Neon. Welt 3 bekommt zwei Magenta- und zwei Cyan-Töne dazu, Welt 4 je Sender bis zu zwei eigene Töne. Palettize läuft pro Welt mit der erweiterten Welt-Palette, nicht mit der Basis. Max, Pixel und die weltenübergreifenden Gegenstände bleiben in den 32 Grundfarben, damit sie überall gleich aussehen.
+
 ## Werkzeuge und Ablauf
 
 | Asset | Werkzeug | Modell oder Stil | Ablauf |
@@ -39,6 +41,8 @@ Alle Welten teilen einen Pixel-Art-Stil in 320×180 Pixeln mit einer gemeinsamen
 | Benutzeroberfläche | Retro Diffusion Cloud | `rd_pro__ui_panel` | Rahmen und Knöpfe; Schrift immer von Hand |
 | Umfärben, Freistellen | Retro Diffusion lokal | Palettize, Background Removal | Jedes fertige Asset einmal auf die gemeinsame Palette bringen |
 
+**Modellnamen prüfen:** Die Namen `rd_plus__environment`, `rd_pro__default` und die Animationsmodelle entsprechen dem Stand vom 8. November 2026. Vor dem ersten Auftrag auf der Retro-Diffusion-Website prüfen, ob sie noch so heißen, und das Datum der Prüfung im KI-Protokoll notieren.
+
 **Ablauf pro Szene:**
 
 1. Konzeptbild mit ChatGPT oder Gemini, bis Aufbau und Stimmung passen.
@@ -47,7 +51,7 @@ Alle Welten teilen einen Pixel-Art-Stil in 320×180 Pixeln mit einer gemeinsamen
 4. Gegenstände der Szene als Sammelbild erzeugen und ausschneiden.
 5. In Godot einsetzen und mit Max als Platzhalter testen, ob Größen und Laufwege stimmen.
 
-**Text in Bildern:** Generatoren schreiben fast immer fehlerhaft. Schilder, Logo, Programmzeitschrift und Kalenderzahlen deshalb ohne Text erzeugen und die Schrift später von Hand in Aseprite setzen.
+**Text in Bildern:** Generatoren schreiben fast immer fehlerhaft. Schilder, Logo, Programmzeitschrift und Kalenderzahlen deshalb ohne Text erzeugen und die Schrift später von Hand in Aseprite setzen. Alles, was der Spieler lesen muss (Kalender, Zettel, Satzung, Kritzeleien, Steckbrief), bekommt zusätzlich eine Nahansicht in 320×180; die Liste der Nahansichten steht im Tab Spielsysteme.
 
 ## Prompt-Bausteine
 
@@ -72,13 +76,13 @@ Ein vollständiger Prompt besteht aus drei Teilen: **Baustein** (Technik, von hi
 **KONZEPT** (ChatGPT oder Gemini, nur als Vorlage):
 
 ```text
-Concept art for a 2D point-and-click adventure game in the style of classic 1990s adventure games, side view stage perspective seen slightly from above, humorous and whimsical, warm hand-painted look, 16:9, no text, no logos.
+Concept art for a 2D point-and-click adventure game in the style of classic 1990s adventure games, strictly side view like a flat stage, back wall parallel to the picture plane, floor as a flat band in the lower third, humorous and whimsical, warm hand-painted look, 16:9, no text, no logos.
 ```
 
 **HINTERGRUND** (`rd_plus__environment`, 320×180):
 
 ```text
-Pixel art background, 320x180, side view stage perspective seen slightly from above, walkable floor kept clear in the lower third, light from upper left, clean pixel clusters, no anti-aliasing, no characters, all signs, labels and book covers blank.
+Pixel art background, 320x180, strictly side view like a flat stage, back wall parallel to the picture plane, walkable floor as a flat band kept clear in the lower third, light from upper left, clean pixel clusters, no anti-aliasing, no characters, all signs, labels and book covers blank.
 ```
 
 **FIGUR** (`rd_pro__default`, Menschen etwa 56 Pixel):
@@ -150,10 +154,10 @@ Max, a lanky 16-year-old boy with messy brown hair falling into his eyes, sleepy
 **Pixel** (Baustein FIGUR-KLEIN, etwa 18 Pixel hoch):
 
 ```text
-Pixel, a chubby light silver-grey tomcat with white chest and paws about 18 pixels tall, smug half-lidded eyes, a torn left ear, a fluffy grey tail, and a red collar with a small round silver speaker attached.
+Pixel, a chubby light silver-grey tomcat with white chest and paws about 18 pixels tall, smug half-lidded eyes, a torn left ear, a fluffy grey tail, and a red collar with a small round silver speaker and a clearly visible two-pixel turquoise light on it.
 ```
 
-Als Grundlage für Pixel eignet sich das kostenlose Pet Cat Pack von Luiz Melo (CC0): umfärben, Ohr und Halsband ergänzen.
+Als Grundlage für Pixel eignet sich das kostenlose Pet Cat Pack von Luiz Melo (CC0): umfärben, Ohr, Halsband und die zwei Pixel große Leuchte ergänzen.
 
 ### Weltenübergreifende Gegenstände
 
@@ -192,7 +196,7 @@ Diese Grundanimationen gelten für alle Welten. Weltspezifische Aktionen stehen 
 
 ## Regeln
 
-**Parodien:** Keine Namen aus Filmen, Spielen oder Serien in Prompts verwenden. Die Anspielung steckt im Verhalten, im Dialog und in einzelnen Ideen, nicht im Aussehen. Jede Parodiefigur bekommt ein eigenes Design, das das Vorbild höchstens andeutet. Die Prompts in den Welt-Tabs sind schon so formuliert. Wenn ein Ergebnis einer bekannten Figur zu ähnlich sieht, verwerfen oder deutlich umzeichnen.
+**Parodien:** Keine Namen aus Filmen, Spielen oder Serien in Prompts verwenden. Die Anspielung steckt im Verhalten, im Dialog und in einzelnen Ideen, nicht im Aussehen. Jede Parodiefigur bekommt ein eigenes Design, das sich in mindestens zwei sichtbaren Merkmalen vom Vorbild unterscheidet (Kleidung, Farbe, Frisur, Requisit). Welche Merkmale das sind, steht im Rechtscheck im Tab Konzept. Die Prompts in den Welt-Tabs sind so formuliert. Wenn ein Ergebnis einer bekannten Figur trotzdem zu ähnlich sieht, verwerfen oder deutlich umzeichnen.
 
 **Dateinamen:** `welt_art_name_version.png`, zum Beispiel `w1_bg_taverne_v03.png`, `w0_chr_max_walk_v01.png`, `w2_itm_feigen_frisch_v01.png`. W0 steht für Prolog und Finale.
 

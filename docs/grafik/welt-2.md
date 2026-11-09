@@ -16,7 +16,7 @@ Antikodonien besteht aus zwei Epochen, die durch den verknoteten Zeitstrom neben
 
 | Ort | Epoche | Beschreibung | Rätsel |
 | --- | --- | --- | --- |
-| Nil-Delta mit Fährsteg | Ägypten | Schilf, Krokodil-Fähre, Sanduhr am Steg, Tafel mit Jahreszahlen ohne Text; im Hintergrund eine Pyramide, die verkehrt herum auf der Spitze steht | 1, 10 |
+| Nil-Delta mit Fährsteg | Ägypten | Schilf, Krokodil-Fähre, Sanduhr am Steg, Tafel mit den Fährregeln ohne Text (Nahansicht); im Hintergrund eine Pyramide, die verkehrt herum auf der Spitze steht | 1, 10 |
 | Palast, Thronsaal | Ägypten | Säulen mit Hieroglyphen, Thron, Hofkater auf einem Kissen, Fächerwedler | 2, 11 |
 | Palastküche | Ägypten | Lehmöfen, Krüge mit Olivenöl, Obstkörbe, Köchin Nebet | 4 |
 | Die Sphinx | Ägypten | Sphinx mit Nase, davor ein Notizblock und zerknüllte Papyri | 8 |
@@ -28,7 +28,7 @@ Antikodonien besteht aus zwei Epochen, die durch den verknoteten Zeitstrom neben
 
 **Figuren:** Ramses der Unentschlossene, der Hofkater, Sobek das Fährkrokodil, Köchin Nebet, die Sphinx, Archimedes, Cicero, sein Schreiber Tiro, Leonidas der Lautstarke, Hermes, Brian, ein Philosoph in einer Tonne, eine römische Touristengruppe, zwei Beamte, zwei Fächerwedler, der Zeremonienmeister, ein Steinmetz.
 
-**Gegenstände:** Bildtafel mit Hieroglyphen, Startpass, Olivenöl, geflügelte Sandalen, Waage, Messbecher, Krone, Goldbarren, Feigensetzling im Topf, Feigenbaum mit reifen Früchten, Diskus, Pharaonenteller, Schallplatte, Frisbee, Schriftrolle der Sphinx, Grabstein (frisch und verwittert), Olivenkranz, Traubensaft, Wein, Essig, Goldener Sack Pharaonenkorn; dazu die Wunderdinge Handy, Kaugummi, Kugelschreiber.
+**Gegenstände:** Bildtafel mit Hieroglyphen, Startpass, Olivenöl, geflügelte Sandalen, Waage, Messbecher, Krone, Goldbarren, Feigensetzling im Topf, Feigenbaum mit reifen Früchten, Diskus, Pharaonenteller, Schallplatte, Wurfscheibe, Schriftrolle der Sphinx, Grabstein (frisch und verwittert), Olivenkranz, Traubensaft, Wein, Essig, Goldener Sack Pharaonenkorn; dazu die Wunderdinge Handy, Kaugummi, Kugelschreiber.
 
 **Minispiele:** Archimedes' Hebel (Hebel, Gewichte, Flugbahn) und Rede-Ringen gegen Cicero (Sandgrube, Konter-Auswahl).
 
@@ -67,7 +67,7 @@ Alle mit dem Baustein HINTERGRUND, außer der Flusskarte.
 | Figur | Baustein | Motiv |
 | --- | --- | --- |
 | Ramses | FIGUR, 60 Pixel | An indecisive pharaoh, slim. Blue-and-gold striped headdress slightly askew, thin false beard. Golden collar, white linen kilt, sandals. Holding a different scepter in each hand and looking from one to the other, confused frown, facing left |
-| Hofkater | FIGUR-KLEIN, 20 Pixel | A sleek arrogant black temple cat with a golden earring and a jeweled collar, sitting very upright, chin raised, facing left |
+| Hofkater | FIGUR-KLEIN, 20 Pixel | A sleek arrogant sand-coloured temple cat with dark ears with a golden earring and a jeweled collar, sitting very upright, chin raised, facing left |
 | Sobek, im Wasser | FIGUR-KLEIN, 16 Pixel hoch | A lazy teenage crocodile half submerged in water, wearing a reed hat, rolling its eyes, facing right |
 | Sobek, an Land | FIGUR-GROSS, 70 Pixel lang | The same lazy crocodile with a reed hat crawling on land on all fours, head bowed respectfully, facing right |
 | Fährmann | FIGUR | An old Egyptian ferryman with a long white beard, a straw hat and a tattered tunic, leaning on a punting pole, holding out an open palm, facing right |
@@ -78,7 +78,7 @@ Alle mit dem Baustein HINTERGRUND, außer der Flusskarte.
 | König Hieron | FIGUR | A suspicious Greek king, heavyset, curly grey beard, a purple cloak, bare head without his crown, arms crossed, narrowed eyes, facing right |
 | Cicero | FIGUR | A pompous Roman orator, stocky. Receding hairline, double chin. White toga with a purple stripe, right arm raised dramatically mid-speech, a scroll in his left hand, facing left |
 | Tiro | FIGUR, 52 Pixel | A thin nervous Roman scribe, young, with a big wax tablet under his arm and a stylus behind his ear, glancing sideways guiltily, facing right |
-| Leonidas | FIGUR, 64 Pixel | A loud muscular Greek athlete with a bronze crested helmet, a red cape and a tiny loincloth, mouth wide open as if shouting, fists on his hips, facing left |
+| Leonidas | FIGUR, 64 Pixel | A loud muscular Greek athlete in a bronze crested helmet, a blue-and-white striped tracksuit with the jacket open, sandals and a whistle on a cord around his neck, no cape, no loincloth, mouth wide open as if shouting, fists on his hips, facing left |
 | Hermes | FIGUR | A quick young messenger with curly blond hair, a small winged cap, a short blue tunic, barefoot, a satchel full of letters, jogging on the spot, facing right |
 | Brian | FIGUR | An ordinary bearded man with brown hair in a simple brown robe, both hands raised defensively, annoyed and confused look, facing right |
 | Philosoph | FIGUR | A scruffy old Greek philosopher with a wild grey beard, sitting in a large clay barrel lying on its side, pointing and shouting, a lantern next to him, facing right |
@@ -98,15 +98,16 @@ Alle mit dem Baustein GEGENSTÄNDE. Thunfischdose, Olivenöl und geflügelte San
 
 | Sammelbild | Motiv |
 | --- | --- |
-| Ägypten (2×3) | 2x3 grid: a clay tablet with a few painted hieroglyph symbols; a golden plate with an engraved sun; a sack of grain tied with gold rope and a pharaoh seal; a blank papyrus sheet; a tiny ink pot with a squid drawing; a clay amphora of grape juice with painted grapes |
+| Ägypten (2×3) | 2x3 grid: a clay tablet with a few painted hieroglyph symbols; a golden plate with an engraved sun; a sack of grain tied with gold rope and a large round pharaoh seal with a blank center (die Zahl 405 von Hand); a blank papyrus sheet; a tiny ink pot with a squid drawing; a clay amphora of grape juice with painted grapes |
 | Olympia (2×3) | 2x3 grid: a small wax tablet start pass with a seal; an olive wreath; a bronze discus; a colorful plastic flying disc; a black vinyl record; a tiny fig sapling in a clay pot |
 | Feigenbaum (1×1, doppelt so groß) | A small fig tree in a large clay pot, full of plump purple figs |
 | Syrakus (2×3) | 2x3 grid: a bronze balance scale; a clay measuring cup with lines; a golden crown; a gold bar; a scroll with a blueprint of a sphere inside a cylinder; a big clay jug of vinegar with a sour face painted on |
 | Schriftstücke (1×3) | 1x3: a rolled papyrus scroll tied with a red cord; an official document with a huge red wax seal; a folded letter sealed with a small sphinx-shaped seal |
 | Getränke-Zustände (1×3) | 1x3, same amphora shape: grape juice with painted grapes; wine with a painted laurel; vinegar with a painted sour face |
-| Grabstein-Zustände (1×5) | 1x5, same size and shape: a rough uncarved rock block; a freshly carved white tombstone with a sphere and cylinder relief; the same tombstone slightly grey and dusty; the same tombstone weathered, cracked and covered in moss; a crumbled pile of stones |
+| Grabstein-Zustände (1×5) | 1x5, same size and shape: a rough uncarved rock block; a freshly carved white tombstone with a sphere and cylinder relief; the same tombstone slightly grey and dusty; the same tombstone weathered, cracked and covered in moss; a crumbled pile of stones (Gag-Lieferung der Pyramiden-Arbeiter, wenn Max ohne Archimedes' Entwurf bestellt, Rätsel 10; kein Zeitfähre-Zustand) |
 | Wunderdinge (1×3) | 1x3: a smartphone with a nearly empty battery icon on the screen; a pack of chewing gum; a blue ballpoint pen |
-| Hieroglyphen (4×4, 16×16) | `rd_pro__inventory_items`: 4x4 grid of simple Egyptian hieroglyph tiles on sandstone: eye, bird, crocodile, bread, cat, sun, water waves, standing man, feather, reed, hand, snake, house, boat, scarab, seated pharaoh |
+| Hieroglyphen (4×4, 16×16) | `rd_pro__inventory_items`: 4x4 grid of simple Egyptian hieroglyph tiles on sandstone: eye, bird, crocodile, bread, cat, sun, water waves, standing man, feather, reed, hand, ear, house, mouth, scarab, seated pharaoh (Ohr und Mund sind Pflicht: Zielsatz und Grammatik in Rätsel Welt 2, Rätsel 2) |
+| Nahansichten Welt 2 (je 320×180) | HINTERGRUND, je ein Bild: close-up of a sandstone wall inscription with four empty symbol slots in a row and a small table of symbol pairs below (Hieroglyphen-Grammatik, Rätsel 2; Symbole von Hand aus dem 4×4-Satz, die Paare zeigen Ohr für Gehör, Mund für Brot, Hand für Gold); close-up of a blank wooden dock sign with three carved rows (Fährtafel); close-up of a yellowed notice with blank lines pinned to a wall (Aushang im Startbüro). Alle Schriften von Hand |
 
 ### Nur zum Ansehen
 
@@ -141,7 +142,7 @@ Fries, Weizenfeld, Wasserorgel, Adler-Säule und Venusstatue sind Teil der Hinte
 | Ramses | Unentschlossen | – | 4 | Schleife | Ramses looks from the left scepter to the right scepter and back, shrugging slightly each time |
 | Sobek | Verbeugen | 1, 2 | 6 | einmalig | The crocodile lowers its head to the ground in front of a cat, reed hat tipping forward |
 | Pixel | Als Gott schweben | 2, 11 | 4 | Schleife | Pixel sits on a golden cushion carried slightly above the ground, glowing, chin raised |
-| Hofkater | Beleidigt abziehen | 2 | 8 | einmalig | The black temple cat turns away with its tail up and stalks off to the right |
+| Hofkater | Beleidigt abziehen | 2 | 8 | einmalig | The sand-coloured temple cat turns away with its tail up and stalks off to the right |
 | Kaugummi-Sonne | Effekt | 2 | 8 | einmalig | EFFEKT: a pink bubble gum bubble inflates, rises and glows like a small sun, 32x32 |
 | Brennspiegel | Effekt | 2, 11 | 6 | einmalig | EFFEKT: a bright beam of sunlight reflected from a bronze mirror ends in a white flash, 64x32 |
 | Zeitfähre | Effekt | alle | 8 | einmalig | EFFEKT: golden hourglass sparkles swirl around an item while it ages or gets younger, 32x32 |
