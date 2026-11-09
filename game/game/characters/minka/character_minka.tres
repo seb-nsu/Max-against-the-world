@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://ddwrkjop38lxe"]
+
+[ext_resource type="Script" path="res://game/characters/minka/character_minka_state.gd" id="1_8773t"]
+
+[resource]
+resource_name = "Minka"
+script = ExtResource("1_8773t")
+script_name = "Minka"
+scene = "res://game/characters/minka/character_minka.tscn"

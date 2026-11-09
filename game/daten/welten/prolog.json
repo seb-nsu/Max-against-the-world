@@ -7,10 +7,17 @@
  ],
  "sonder_codes": [
   "HINT",
-  "ERS"
+  "ERS",
+  "WDH",
+  "INV"
  ],
  "sonder_sprecher": [
   "NAR"
+ ],
+ "weitere_schalter": [
+  "P0_SCHNEE_GESEHEN",
+  "P0_PIXEL_WECKVERSUCHE",
+  "P0_DRAHTKLEIDERBUEGEL"
  ],
  "raeume": [
   {

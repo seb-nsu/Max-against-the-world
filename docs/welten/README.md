@@ -12,7 +12,7 @@ sonder_codes: [HINT]         # Szenen-Codes ohne eigenen Raum (Hinweise, Ersatzp
 sonder_sprecher: [NAR]       # optional: Sprecherkürzel ohne Figur (NAR = Regie- und Animationszeilen, nicht vertont)
 werte:                       # optional: gespeicherte Werte, die keine Schalter sind
   W2_FAEHRE_STEG: [nil_delta, faehrsteg_olympia, hafen_syrakus]   # Beispiel aus Welt 2
-weitere_schalter: []         # optional: Schalter, die zu keinem Rätsel gehören
+weitere_schalter: []         # optional: Hilfsschalter und -werte, die zu keinem Rätsel gehören (mit Präfix, W1_…)
 
 raeume:
   - id: taverne              # klein, ohne Umlaute, eindeutig im Abschnitt
@@ -65,7 +65,7 @@ Die Felder im Einzelnen, soweit sie nicht selbsterklärend sind:
 | `sonder_codes` | oben | Szenen-Codes, die zu keinem Raum gehören (`HINT`, `ERS`, Zurufe, Fernbedienung …) |
 | `sonder_sprecher` | oben | Sprecherkürzel ohne Figur; bisher nur `NAR` für Regie- und Animationszeilen (Sprecher „–“), die nicht vertont werden |
 | `werte` | oben | Gespeicherte Werte, die keine Schalter sind, mit ihren möglichen Werten (`NAME: [wert, …]`), etwa Fährsteg und Feigenzustand in Welt 2 |
-| `weitere_schalter` | oben | Schalter, die zu keinem Rätsel gehören (etwa `PIXEL_AUF_LEITUNG` in Welt 3) |
+| `weitere_schalter` | oben | Hilfsschalter und Hilfswerte, die zu keinem Rätsel gehören, immer mit dem Präfix des Abschnitts (etwa `P0_SCHNEE_GESEHEN` im Prolog, `W3_PIXEL_AUF_LEITUNG` in Welt 3). Der Code setzt keinen Schalter, der weder hier noch unter `schalter` eines Rätsels steht (`tools/pruefen.py` warnt) |
 | `musik` | Raum | ID des Stücks, das im Raum läuft; die ID steht in der Spalte „ID“ der Musik-Tabelle in `04-audio.md` (oder der Tabelle der gesungenen Stücke, wenn ein Lied im Raum durchläuft). Die Zuordnung Raum → Stück gehört der Welt-Tabelle, Prompt und Beschreibung des Stücks gehören `04-audio.md`. Minispiele und Szenen mit eigenem Stück (etwa Fünfkampf, Mitternachts-TV) stehen in der Audio-Tabelle, nicht beim Raum |
 | `kuerzel` | Figur | Sprecherkürzel; `null` für Figuren, die nie sprechen. Jedes Kürzel steht in `04-audio.md` in einer Kürzel-Spalte (Stimmen oder Nebenstimmen), unter demselben Namen wie hier |
 | `herkunft` | Gegenstand | Raum-, Rätsel- oder Figur-ID; für Gegenstände, die Max aus einem früheren Abschnitt mitbringt, der Name des Abschnitts (`prolog`, `welt-1` …); das Ursprungsrätsel steht im Kommentar |

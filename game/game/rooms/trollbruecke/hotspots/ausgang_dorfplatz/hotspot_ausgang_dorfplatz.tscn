@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://bmiwhn5mxos"]
+
+[ext_resource type="Script" path="res://game/rooms/trollbruecke/hotspots/ausgang_dorfplatz/hotspot_ausgang_dorfplatz.gd" id="1_jp2nd"]
+
+[node name="AusgangDorfplatz" type="Area2D" unique_id=1182182524]
+script = ExtResource("1_jp2nd")
+script_name = "AusgangDorfplatz"
+description = "Ausgang Dorfplatz"
+cursor = 1
+interaction_polygon = PackedVector2Array(-9, -30, 9, -30, 9, 30, -9, 30)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=42023586]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

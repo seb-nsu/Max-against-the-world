@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://dp2n2c11wt3gd"]
+
+[ext_resource type="Script" path="res://game/rooms/dorfplatz/room_dorfplatz_state.gd" id="1_bwp7f"]
+
+[resource]
+resource_name = "Dorfplatz"
+script = ExtResource("1_bwp7f")
+script_name = "Dorfplatz"
+scene = "res://game/rooms/dorfplatz/room_dorfplatz.tscn"

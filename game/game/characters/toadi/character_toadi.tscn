@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://cpjd1c4lcm6c6"]
+
+[ext_resource type="Script" path="res://game/characters/toadi/character_toadi.gd" id="1_y5pk0"]
+[ext_resource type="Texture2D" uid="uid://dscg727jx2v1k" path="res://grafik/platzhalter/figur_toadi.png" id="2_mndmg"]
+
+[node name="CharacterToadi" type="Area2D" unique_id=1625231671]
+script = ExtResource("1_y5pk0")
+walk_speed = 90.0
+dialog_pos = Vector2(0, -34)
+script_name = "Toadi"
+description = "UI_OBJ_TOADI"
+cursor = 8
+interaction_polygon = PackedVector2Array(-8, -30, 8, -30, 8, 0, -8, 0)
+
+[node name="ScalingPolygon" type="CollisionPolygon2D" parent="." unique_id=358495482]
+polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1471945563]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1044501859]
+texture_filter = 1
+texture = ExtResource("2_mndmg")
+offset = Vector2(0, -15)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1868640365]
+visible = false
+polygon = PackedVector2Array(-8, -30, 8, -30, 8, 0, -8, 0)
+
+[node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=1784782750]
+visible = false
+affect_navigation_mesh = true
+carve_navigation_mesh = true

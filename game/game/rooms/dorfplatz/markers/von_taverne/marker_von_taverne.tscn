@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://fg55u8ykdfl5"]
+
+[node name="VonTaverne" type="Marker2D" unique_id=1812390581]
+visible = false

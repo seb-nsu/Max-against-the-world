@@ -1,7 +1,7 @@
 abschnitt: finale
 name: Zwischenspiele und Finale
 skript_praefix: [ZS1, ZS2, ZS3, FI]
-sonder_codes: [HINT]                 # ZS1_HINT_* und FI_HINT_*: Hilfe-Pfote
+sonder_codes: [HINT, INV]            # INV: Inventar ansehen; ZS1_HINT_* und FI_HINT_*: Hilfe-Pfote
 sonder_sprecher: [NAR]               # Regie- und Animationszeilen ohne Sprecher
 
 raeume:

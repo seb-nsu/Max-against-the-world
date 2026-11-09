@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://d3tfu5fp8v86j"]
+
+[ext_resource type="Script" path="res://game/rooms/klassenzimmer/hotspots/tafel/hotspot_tafel.gd" id="1_oc3go"]
+
+[node name="Tafel" type="Area2D" unique_id=1978051340]
+script = ExtResource("1_oc3go")
+script_name = "Tafel"
+description = "Tafel"
+cursor = 1
+interaction_polygon = PackedVector2Array(-35, -20, 35, -20, 35, 20, -35, 20)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1025908930]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

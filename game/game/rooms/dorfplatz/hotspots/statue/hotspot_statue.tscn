@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://brx3q32qplieq"]
+
+[ext_resource type="Script" path="res://game/rooms/dorfplatz/hotspots/statue/hotspot_statue.gd" id="1_1tlrh"]
+
+[node name="Statue" type="Area2D" unique_id=45441241]
+script = ExtResource("1_1tlrh")
+script_name = "Statue"
+description = "Statue"
+cursor = 1
+interaction_polygon = PackedVector2Array(-20, -19, 20, -19, 20, 19, -20, 19)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=725609153]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

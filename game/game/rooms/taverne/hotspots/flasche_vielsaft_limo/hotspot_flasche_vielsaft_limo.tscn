@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://d3cbo73plqa18"]
+
+[ext_resource type="Script" path="res://game/rooms/taverne/hotspots/flasche_vielsaft_limo/hotspot_flasche_vielsaft_limo.gd" id="1_d37jy"]
+
+[node name="FlascheVielsaftLimo" type="Area2D" unique_id=952400443]
+script = ExtResource("1_d37jy")
+script_name = "FlascheVielsaftLimo"
+description = "Flasche Vielsaft Limo"
+cursor = 1
+interaction_polygon = PackedVector2Array(-4, -8, 4, -8, 4, 8, -4, 8)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1358331749]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

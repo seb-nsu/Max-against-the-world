@@ -96,7 +96,13 @@ func _input(event: InputEvent) -> void:
 #region Private ####################################################################################
 # Called when [param item] is added to [param character]'s inventory.
 func _on_item_added(item: PopochiuInventoryItem, character: PopochiuCharacter) -> void:
-	if character != PopochiuUtils.c.player: return
+	# Couch Quest: Die Leiste zeigt nur das Inventar von C.player. PopochiuIInventory wartet aber
+	# nach jedem Hinzufügen/Entfernen auf das Fertig-Signal der GUI – bei einer anderen Figur
+	# (Max/Pixel inaktiv) kam es nie, und der Aufruf hing. Darum hier sofort (deferred, damit
+	# das await im Inventar schon wartet) als fertig melden.
+	if character != PopochiuUtils.c.player:
+		PopochiuUtils.i.item_add_done.emit.call_deferred(item, character)
+		return
 
 	PopochiuUtils.g.block()
 	await show_item(item)
@@ -106,7 +112,10 @@ func _on_item_added(item: PopochiuInventoryItem, character: PopochiuCharacter) -
 
 # Called when [param item] is removed from [param character]'s inventory.
 func _on_item_removed(item: PopochiuInventoryItem, character: PopochiuCharacter) -> void:
-	if character != PopochiuUtils.c.player: return
+	# Couch Quest: siehe _on_item_added.
+	if character != PopochiuUtils.c.player:
+		PopochiuUtils.i.item_remove_done.emit.call_deferred(item, character)
+		return
 
 	PopochiuUtils.g.block()
 	await hide_item(item)
@@ -118,7 +127,10 @@ func _on_item_removed(item: PopochiuInventoryItem, character: PopochiuCharacter)
 func _on_item_replaced(
 	item: PopochiuInventoryItem, new_item: PopochiuInventoryItem, character: PopochiuCharacter
 ) -> void:
-	if character != PopochiuUtils.c.player: return
+	# Couch Quest: siehe _on_item_added.
+	if character != PopochiuUtils.c.player:
+		PopochiuUtils.i.item_replace_done.emit.call_deferred()
+		return
 
 	PopochiuUtils.g.block()
 	await swap_item(item, new_item)
@@ -199,7 +211,10 @@ func _on_tween_finished() -> void:
 
 func show_item(item: PopochiuInventoryItem) -> void:
 	box.add_child(item)
-	
+	# Couch Quest: Das Pixel-Feld steht immer ganz links (05-spielsysteme.md, Steuerung).
+	if item.script_name == "PixelFeld":
+		box.move_child(item, 0)
+
 	item.size_flags_horizontal = Control.SIZE_SHRINK_BEGIN
 	item.size_flags_vertical = Control.SIZE_FILL
 	item.expand_mode = TextureRect.EXPAND_FIT_WIDTH
@@ -229,7 +244,11 @@ func show_item(item: PopochiuInventoryItem) -> void:
 func hide_item(item: PopochiuInventoryItem) -> void:
 	if item.selected.is_connected(_change_cursor):
 		item.selected.disconnect(_change_cursor)
-	box.remove_child(item)
+	# Couch Quest: Beim Laden räumt E.load_game die Inventare aller Figuren leer. Ist dabei
+	# Pixel aktiv, liegen Max' Gegenstände nicht in der Leiste – remove_child meldete dann
+	# Fehler. Nur entfernen, was wirklich hier hängt.
+	if item.get_parent() == box:
+		box.remove_child(item)
 	
 	if not always_visible:
 		PopochiuUtils.cursor.show_cursor()

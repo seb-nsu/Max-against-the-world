@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://d2idn6viql5et"]
+
+[ext_resource type="Script" path="res://game/rooms/wasserschloss/hotspots/ruderboot/hotspot_ruderboot.gd" id="1_6namb"]
+
+[node name="Ruderboot" type="Area2D" unique_id=120034205]
+script = ExtResource("1_6namb")
+script_name = "Ruderboot"
+description = "Ruderboot"
+cursor = 1
+interaction_polygon = PackedVector2Array(-20, -7, 20, -7, 20, 7, -20, 7)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1298198317]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

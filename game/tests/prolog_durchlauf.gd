@@ -1,6 +1,7 @@
 extends SceneTree
-## Headless-Test: spielt den Lösungspfad des Prologs durch (P1–P3) und prüft nach jedem
-## Schritt Schalter, Rätselstatus, Hinweise und eine Speichern/Laden-Rundreise.
+## Headless-Test: spielt den Lösungspfad des Prologs (P1–P3) und danach Welt 1 bis Rätsel 4
+## (Vertical Slice) durch und prüft nach jedem Schritt Schalter, Rätselstatus, Hinweise und
+## eine Speichern/Laden-Rundreise, auch mit Pixel als aktiver Figur.
 ##
 ## Aufruf (aus dem Ordner game/):
 ##   godot --headless --path . -s res://tests/prolog_durchlauf.gd
@@ -92,6 +93,7 @@ func _durchlauf() -> void:
 	await luke.on_click()
 	_pruefe(_gesagt("P0_DACH_MAX_1000"), "Bodenluke vor P3 sagt 1000")
 	_pruefe(_raum_name() == "Dachboden", "Bodenluke vor P3 führt nicht hinaus")
+	await _ansehen(luke, "P0_DACH_MAX_1010")
 
 	# Opa gibt die P1-Hinweise (Option 1322), ohne Wartezeile
 	var opa_d = root.get_node("D").get_instance("Opa")
@@ -120,6 +122,11 @@ func _durchlauf() -> void:
 	await _nehmen("Dosenoeffner", "P0_DACH_MAX_0260")
 	await _nehmen("Drahtkleiderbuegel", "P0_DACH_MAX_0460")
 	_pruefe(_raum().get_prop("Thunfischdose").visible == false, "Prop Thunfischdose weg")
+	await _ansehen_item("Thunfischdose", "P0_INV_MAX_0010")
+	_pruefe(not _i().is_item_in_inventory("PixelFeld"), "kein Pixel-Feld, solange Pixel schläft")
+	# Wiederholung: 1. Mal eigene Zeile, ab dann Pool SYS_WDH (fehlt der Pool, die eigene Zeile)
+	await luke.on_right_click()
+	_pruefe(Z.angesehen.values().any(func(n): return n >= 2), "Ansehen-Zähler zählt mit")
 	await _rundreise("Dachboden, drei Gegenstände")
 	_pruefe(not _raum().get_prop("Dosenoeffner").visible, "Prop Dosenöffner bleibt nach Laden weg")
 
@@ -158,22 +165,19 @@ func _durchlauf() -> void:
 	await H.pfote_geklickt()
 	_pruefe(_gesagt("P0_HINT_PIX_0220") and H.stufe("P2") == 2, "Pfote Stufe 2 nach 30 s")
 
-	# Pixel als Gegenstand auf den Zapp-O-Mat (1120)
+	# Pixel-Feld der Inventarleiste auf den Zapp-O-Mat (1120); das Porträt wechselt nur
+	_pruefe(_i().is_item_in_inventory("PixelFeld"), "Pixel-Feld nach P1 in der Leiste")
 	_spiel().pixel_portraet_geklickt()
-	_pruefe(_spiel().pixel_als_gegenstand, "Pixel-Porträt nach P1 als Gegenstand")
-	await _raum().get_prop("ZappOMat").on_click()
-	_pruefe(_gesagt("P0_DACH_PIX_1120"), "Pixel auf Zapp-O-Mat 1120")
+	_pruefe(_c().player.script_name == "Max", "Porträt im Prolog ohne Wirkung")
+	await _benutze("PixelFeld", _raum().get_prop("ZappOMat"), "P0_DACH_PIX_1120")
 
 	# Zapp-O-Mat ansehen nach P1: 0410–0440 einmalig
 	await _ansehen(_raum().get_prop("ZappOMat"), "P0_DACH_MAX_0410")
 	_pruefe(_gesagt("P0_DACH_OPA_0440"), "Schnee-Szene 0420–0440")
 
-	# --- P2: Bügel biegen, Antenne auf den Zapp-O-Mat ---
-	var buegel = _item("Drahtkleiderbuegel")
-	await buegel.on_item_used(buegel)
-	_pruefe(_gesagt("P0_DACH_MAX_0470") and buegel.zustand() == "antenne", "Bügel zur Antenne gebogen")
-	_pruefe(buegel.description == TranslationServer.translate("UI_OBJ_ANTENNE"), "Name wechselt zu Antenne")
+	# --- P2: gerader Bügel auf den Zapp-O-Mat: wird von selbst zur Antenne (0470, 0480) ---
 	await _benutze("Drahtkleiderbuegel", _raum().get_prop("ZappOMat"), "P0_DACH_MAX_0480")
+	_pruefe(_gesagt("P0_DACH_MAX_0470"), "Bügel beim Anbringen gebogen (0470)")
 	_pruefe(Z.geloest("P2"), "P2 gelöst")
 	_pruefe(_gesagt("P0_DACH_OPA_0610"), "Opa 0610 nach P2")
 	_pruefe(not _i().is_item_in_inventory("Drahtkleiderbuegel"), "Antenne verbraucht")
@@ -185,57 +189,251 @@ func _durchlauf() -> void:
 	await _hotspot("Drehknopf").on_click()
 	_pruefe(_gesagt("P0_DACH_MAX_0680"), "Drehknopf ohne Nummer: Kanal 4 (0680)")
 	await _ansehen(_hotspot("Kalender"), "P0_DACH_MAX_0620")
-	_pruefe(not opa_d.option_sichtbar("0640"), "Opa-Option 0640 vor der Nahansicht verborgen")
+	_pruefe(not opa_d.option_sichtbar("1362"), "Opa-Option 1362 vor der Nahansicht verborgen")
 	await _ansehen(_hotspot("Kalender"), "P0_DACH_MAX_0630")
 	_pruefe("kalender" in Z.nahansichten, "Nahansicht Kalender gesehen")
-	_pruefe(opa_d.option_sichtbar("0640"), "Opa-Option 0640 nach der Nahansicht")
-	await opa_d.waehlen("0640")
-	_pruefe(_gesagt("P0_DACH_OPA_0650") and _gesagt("P0_DACH_PIX_0660"), "Kreis-Gespräch 0650/0660")
+	_pruefe(opa_d.option_sichtbar("1362"), "Opa-Option 1362 nach der Nahansicht")
+	await opa_d.waehlen("1362")
+	_pruefe(_gesagt("P0_DACH_OPA_1364") and _gesagt("P0_DACH_PIX_1366"), "Kreis-Gespräch 1364/1366")
+	_pruefe(opa_d.option_sichtbar("1362"), "Option 1362 (bleibt) nach Nutzung weiter da")
 	await _rundreise("vor P3")
 
 	var ende := [false]
 	_spiel().prolog_beendet.connect(func(): ende[0] = true)
 	await _hotspot("Drehknopf").on_click()
-	_pruefe(Z.geloest("P3"), "P3 gelöst")
+	_pruefe(Z.geloest("P3", "prolog"), "P3 gelöst")
 	_pruefe(_gesagt("P0_DACH_PIX_0880"), "Reisetasche-Szene bis 0880")
-	for sn in ["Reisetasche", "Notizbuch", "OpasZettel", "Thunfischdose", "Dosenoeffner"]:
-		_pruefe(_i().is_item_in_inventory(sn), "Inventar am Ende: " + sn)
 	_pruefe(ende[0], "Prolog beendet (Signal)")
-	_pruefe(Z.offene_schritte().is_empty(), "keine offenen Schritte mehr")
-	await _ansehen_item("OpasZettel", "P0_DACH_MAX_0840")
-	await _rundreise("Ende")
-	await _figurenwechsel_technik()
+	_pruefe(Z.offene_schritte("prolog").is_empty(), "keine offenen Schritte mehr im Prolog")
+
+	await _welt_1()
 	_pruefe(_spiel().protokoll.all(func(b): return TranslationServer.translate(b) != b),
 		"alle gesagten Blasen haben Text in texte.csv")
 
 
-## Figurenwechsel ist im Prolog gesperrt; die Technik wird hier mit „welt-1“ als Abschnitt
-## geprüft (Pixel ist dort spielbar), danach wird alles zurückgestellt.
-func _figurenwechsel_technik() -> void:
+#endregion
+
+#region Welt 1 (Vertical Slice R1–R4) ##############################################################
+func _welt_1() -> void:
 	var Z = _zustand()
-	var max_c: PopochiuCharacter = _c().get_character("Max")
-	var pixel: PopochiuCharacter = _c().get_character("Pixel")
-	Z.abschnitt = "welt-1"
-	_pruefe(_spiel().wechsel_moeglich(), "Figurenwechsel technisch möglich (Welt 1)")
-	# Gegenstände nur bei der aktiven Figur hinzufügen oder entfernen: bei einer anderen Figur
-	# wartet Popochiu 2.2.1 auf die Inventar-Leiste, die nur die aktive Figur zeigt.
-	await _item("Dosenoeffner").remove()
-	_pruefe(_spiel().figur_wechseln() and _c().player == pixel, "Wechsel zu Pixel")
-	_pruefe(_spiel().kann_aufnehmen(pixel), "Pixel kann einen Gegenstand tragen")
-	await _item("Dosenoeffner").add()
-	_pruefe(_i().is_item_in_inventory("Dosenoeffner", pixel), "Pixel trägt den Dosenöffner")
-	_pruefe(not _i().is_item_in_inventory("Dosenoeffner", max_c), "Max trägt ihn nicht mehr")
-	_pruefe(not _spiel().kann_aufnehmen(pixel), "Pixel trägt höchstens einen Gegenstand")
-	_pruefe(_spiel().kann_aufnehmen(max_c), "Max trägt beliebig viel")
-	# Keine Rundreise hier: Laden setzt den Abschnitt aus dem Raum zurück auf „prolog“, und
-	# Laden mit Pixel als aktiver Figur meldet Fehler in der SimpleClick-Leiste (siehe Bericht).
-	await _item("Dosenoeffner").remove()
-	_pruefe(_spiel().figur_wechseln() and _c().player == max_c, "Wechsel zurück zu Max")
-	await _item("Dosenoeffner").add()
-	Z.abschnitt = "prolog"
+	var H = _hinweise()
+	var S = _spiel()
+
+	# --- Ankunft auf dem Dorfplatz ---
+	await _warte_auf_raum("Dorfplatz")
+	await _warte_bis(func(): return _gesagt("W1_ANK_PIX_0240"), 15.0)
+	_pruefe(_gesagt("W1_ANK_TOA_0100"), "Ankunft mit Toadi (W1_ANK 0010–0240)")
+	_pruefe("opas_zettel" in Z.nahansichten, "Opas Zettel als Nahansicht in der Ankunft")
+	_pruefe(Z.abschnitt == "welt-1", "Abschnitt welt-1")
+	for sn in ["Reisetasche", "Notizbuch", "OpasZettel", "Thunfischdose", "PixelFeld"]:
+		_pruefe(_i().is_item_in_inventory(sn, _c().Max), "reist mit: " + sn)
+	for sn in ["Dosenoeffner", "Drahtkleiderbuegel"]:
+		_pruefe(not _i().is_item_in_inventory(sn, _c().Max), "bleibt auf dem Dachboden: " + sn)
+	_pruefe(not S.wechsel_moeglich(), "Wechsel erst ab der Taverne")
+	_pruefe(Z.status("R1a") == "gesperrt", "R1a gesperrt vor der Taverne")
+	_pruefe(Z.status("R5") == "gesperrt" and Z.status("R8") == "gesperrt", "R5 und R8 gesperrt (nicht gebaut)")
+	await _ansehen_item("Thunfischdose", "P0_INV_MAX_0020")
+	await _rundreise("W1 Ankunft")
+
+	# Eimer, Bestellzettel; Eimer am Brunnen füllen
+	await _nehmen("Eimer", "W1_DORF_MAX_0350")
+	await _nehmen("Bestellzettel", "W1_DORF_MAX_0170")
+	await _benutze("Eimer", _hotspot("Brunnen"), "W1_DORF_MAX_0360")
+	_pruefe(_gesagt("W1_DORF_PIX_0370") and _item("Eimer").zustand() == "mit_wasser", "Eimer mit Wasser")
+	await _ansehen(_hotspot("Brunnen"), "W1_DORF_MAX_0110")
+	await _ansehen(_hotspot("Brunnen"), "W1_DORF_MAX_0110")
+	await _ansehen(_hotspot("Brunnen"), "W1_DORF_MAX_0110")
+	_pruefe(Z.angesehen.keys().any(func(k): return "Brunnen" in k and Z.angesehen[k] == 3),
+		"Ansehen-Zähler Brunnen = 3")
+
+	# --- Taverne: R1 ---
+	await _hotspot("TaverneVonAussen").on_click()
+	await _warte_auf_raum("Taverne")
+	await _warte_bis(func(): return _gesagt("W1_TAV_GOL_0070"), 10.0)
+	_pruefe(Z.ist("W1_WECHSEL_FREI") and S.wechsel_moeglich(), "Wechsel in der Taverne freigeschaltet")
+	_pruefe(Z.status("R1a") == "offen" and Z.status("R1b") == "offen", "R1a und R1b offen")
+	_pruefe(Z.status("R1c") == "gesperrt", "R1c gesperrt vor R1a und R1b")
+	_pruefe(H.pfote_aktiv(), "Pfote in Welt 1 aktiv")
+	_protokoll_leeren()
+	await H.pfote_geklickt()
+	_pruefe(_gesagt("W1_HINT_PIX_0111") or _gesagt("W1_HINT_PIX_0112"), "Pfote gibt R1-Hinweis")
+	await _nehmen("ZiegenfellVorleger", "W1_TAV_MAX_1410")
+	var minka: PopochiuCharacter = _c().get_character("Minka")
+	await minka.on_click()
+	_pruefe(_gesagt("W1_TAV_MIN_0910") and _gesagt("W1_TAV_MAX_0920"), "Max an Minka: Fauchen")
+	await _ansehen(_hotspot("Fischsuppe"), "W1_TAV_MAX_0310")
+
+	# Wechsel zu Pixel (0080), Rundreise mit Pixel aktiv
+	_pruefe(S.figur_wechseln() and _c().player.script_name == "Pixel", "Wechsel zu Pixel")
+	await _warte_bis(func(): return _gesagt("W1_TAV_PIX_0080"), 5.0)
+	_pruefe(_gesagt("W1_TAV_PIX_0080"), "erster Wechsel: 0080")
+	await _rundreise("Taverne, Pixel aktiv")
+	_pruefe(_c().player.script_name == "Pixel", "nach Laden ist Pixel aktiv")
+	_pruefe(_i().is_item_in_inventory("PixelFeld", _c().Max), "Pixel-Feld nach Laden bei Max")
+	await _hotspot("AusgangDorfplatz").on_click()
+	_pruefe(_gesagt("W1_WECH_PIX_0080") and _raum_name() == "Taverne", "Pixel geht nicht durch Türen")
+	await _ansehen(_hotspot("Fischsuppe"), "W1_TAV_PIX_0320")
+	_pruefe(_gesagt("W1_TAV_PIX_0340"), "Fischsuppe: Pixels Nase interpretiert (0320–0340)")
+	await _c().get_character("Minka").on_click()
+	_pruefe(Z.geloest("R1a") and _gesagt("W1_TAV_PIX_1000"), "R1a gelöst (0940–1000)")
+	_pruefe(not _raum().has_character("Minka"), "Minka ist weg")
+	_pruefe(S.figur_wechseln() and _c().player.script_name == "Max", "Wechsel zurück zu Max")
+	await _warte_bis(func(): return _gesagt("W1_TAV_MAX_0090"), 5.0)
+	_pruefe(_gesagt("W1_TAV_MAX_0090"), "erster Wechsel zurück: 0090")
+	await _rundreise("nach R1a")
+	_pruefe(not _raum().has_character("Minka"), "Minka bleibt nach Laden weg")
+
+	# R1b: Wein bestellen
+	var hum_d = _dialog("Humbert")
+	_pruefe(not hum_d.option_sichtbar("0590"), "Option 0590 erst nach 0580")
+	await hum_d.waehlen("0510")
+	await hum_d.waehlen("0570")
+	_pruefe(hum_d.option_sichtbar("0570"), "Option 0570 (bleibt) weiter da")
+	_pruefe(not hum_d.option_sichtbar("0510"), "Plauderoption 0510 verschwindet")
+	_pruefe(hum_d.option_sichtbar("0590"), "Option 0590 nach 0580")
+	var weiter: bool = await hum_d.waehlen("0590")
+	_pruefe(not weiter and Z.geloest("R1b") and _gesagt("W1_TAV_HUM_0600"), "R1b gelöst, Gespräch endet")
+	_pruefe(not _raum().has_character("Humbert"), "Humbert im Keller")
+	_pruefe(Z.status("R1c") == "offen", "R1c offen")
+	await _rundreise("nach R1b")
+
+	# R1c: Thunfischdose auf Gollo
+	var gollo: PopochiuCharacter = _c().get_character("Gollo")
+	await _benutze("Thunfischdose", gollo, "W1_TAV_MAX_1120")
+	_pruefe(Z.geloest("R1c") and Z.geloest("R1"), "R1 gelöst")
+	_pruefe(_gesagt("W1_TAV_MAX_1330"), "R1c-Szene bis 1330")
+	for sn in ["Goldmuenze", "Kaesefondue"]:
+		_pruefe(_i().is_item_in_inventory(sn), "Belohnung R1: " + sn)
+	_pruefe(_raum().has_character("Humbert"), "Humbert wieder da")
+	await gollo.on_click()
+	_pruefe(_gesagt("W1_TAV_GOL_1570"), "Gollo schläft (1570)")
+	await _rundreise("nach R1")
+
+	# --- Zauberstab-Laden: R2 ---
+	await _gehe("AusgangDorfplatz", "Dorfplatz")
+	await _gehe("ZauberstabLadenVonAussen", "Zauberstabladen")
+	await _nehmen("Kochloeffel", "W1_STAB_MAX_0440")
+	await _nehmen_ohne("Zahnstocher", "W1_STAB_MAX_0410")
+	_pruefe(Z.status("R2") == "offen", "R2 offen")
+	await _item("Kochloeffel").on_item_used(_item("Kaesefondue"))
+	_pruefe(Z.geloest("R2") and _gesagt("W1_STAB_STA_0530"), "R2 gelöst (0500–0540)")
+	_pruefe(_i().is_item_in_inventory("Socke") and not _i().is_item_in_inventory("Kaesefondue"),
+		"Socke statt Käsefondue")
+	_pruefe(_item("Kochloeffel").description in ["UI_OBJ_KOCHLOEFFEL_ZAUBERSTAB", TranslationServer.translate("UI_OBJ_KOCHLOEFFEL_ZAUBERSTAB")], "Name Kochlöffel-Zauberstab")
+	await _ansehen_item("Kochloeffel", "W1_STAB_MAX_0550")
+	await _rundreise("nach R2")
+
+	# --- Schmiede: Ziege 1 ---
+	await _gehe("AusgangDorfplatz", "Dorfplatz")
+	await _gehe("SchmiedeVonAussen", "Schmiede")
+	await _dialog("Schmied").waehlen("0270")
+	_pruefe(Z.ist("W1_ZIEGE_FOLGT") and _gesagt("W1_SCHM_PIX_0300"), "Schmiede-Ziege folgt (0270–0300)")
+	await _gehe("AusgangDorfplatz", "Dorfplatz")
+	_pruefe(_raum().has_character("SchmiedeZiege"), "Ziege folgt auf den Dorfplatz")
+
+	# --- Dorfplatz: Ziege 2 ---
+	await _benutze("Bestellzettel", _hotspot("Dorfbrett"), "W1_DORF_MAX_0910")
+	_pruefe(_gesagt("W1_DORF_ROT_0980") and _gesagt("W1_DORF_MAX_1010"), "Lieferung 0910–0980 und 1010")
+	_pruefe(_raum().has_character("XxlZiege") and not _raum().has_character("Rotkaeppchen"),
+		"XXL-Ziege da, Rotkäppchen wieder weg")
+	_pruefe(not _i().is_item_in_inventory("Bestellzettel"), "Bestellzettel verbraucht")
+	await _rundreise("zwei Ziegen")
+	_pruefe(_raum().has_character("SchmiedeZiege") and _raum().has_character("XxlZiege"),
+		"beide Ziegen nach Laden da")
+
+	# --- Troll-Brücke: R3, R4 ---
+	await _gehe("Waldweg", "Trollbruecke")
+	_pruefe(_raum().has_character("SchmiedeZiege") and _raum().has_character("XxlZiege"), "Ziegen an der Brücke")
+	await _hotspot("Waldweg").on_click()
+	_pruefe(_gesagt("W1_BRUE_MAX_0190") and _raum_name() == "Trollbruecke", "Weg in den Wald gesperrt")
+	await _c().get_character("SchmiedeZiege").on_click()
+	_pruefe(_gesagt("W1_BRUE_MAX_0470"), "Ziege schicken vor R3: 0470")
+	await _benutze("ZiegenfellVorleger", _c().get_character("Pixel"), "W1_BRUE_PIX_0410")
+	_pruefe(Z.geloest("R3") and Z.ist("W1_PIXEL_IM_FELL"), "R3 gelöst, Pixel im Fell")
+	await _rundreise("nach R3")
+	await _ansehen(_hotspot("Schild"), "W1_BRUE_MAX_0030")
+	_pruefe("maerchen_satzung" in Z.nahansichten and _gesagt("W1_BRUE_MAX_0070"), "Satzung als Nahansicht")
+
+	# R4a: falsch, dann richtig
+	await _c().get_character("XxlZiege").on_click()
+	_pruefe(_gesagt("W1_BRUE_WAL_0480"), "Große zuerst: 0480")
+	await _c().get_character("Pixel").on_click()
+	_pruefe(_gesagt("W1_BRUE_WAL_0510"), "Pixel als Kleine: 0500/0510")
+	await _c().get_character("XxlZiege").on_click()
+	_pruefe(_gesagt("W1_BRUE_WAL_0490") and int(Z.wert("W1_R4A_REIHE", 0)) == 0, "Große als Zweite: 0490, zurück")
+	await _c().get_character("Pixel").on_click()
+	await _c().get_character("SchmiedeZiege").on_click()
+	_pruefe(_gesagt("W1_BRUE_WAL_0520"), "Mittlere: 0520")
+	await _rundreise("R4a halb")
+	await _c().get_character("XxlZiege").on_click()
+	_pruefe(Z.geloest("R4a") and _gesagt("W1_BRUE_PIX_0640"), "R4a gelöst (0530, 0610–0640)")
+
+	# R4b: vorlesen, Pixel übersetzt
+	await _hotspot("Schild").on_click()
+	_pruefe(Z.ist("W1_SATZUNG_VORGELESEN") and _gesagt("W1_BRUE_WAL_0670"), "Satzung vorgelesen (0650–0670)")
+	_pruefe(S.figur_wechseln() and S.ist_pixel(), "Wechsel zu Pixel an der Brücke")
+	await _c().get_character("SchmiedeZiege").on_click()
+	_pruefe(_gesagt("W1_BRUE_WAL_0700"), "Ziege, erster Versuch (0680–0710)")
+	await _rundreise("R4b, Pixel aktiv")
+	_pruefe(_c().player.script_name == "Pixel" and Z.ist("W1_PIXEL_IM_FELL"), "Pixel aktiv und im Fell nach Laden")
+	await _c().get_character("SchmiedeZiege").on_click()
+	_pruefe(_gesagt("W1_BRUE_WAL_0740"), "Ziege, zweiter Versuch (0720–0740)")
+	await _c().get_character("XxlZiege").on_click()
+	await _c().get_character("XxlZiege").on_click()
+	_pruefe(Z.geloest("R4b") and _gesagt("W1_BRUE_WAL_0920"), "R4b gelöst (0750–0820, 0910/0920)")
+	_pruefe(S.figur_wechseln() and not S.ist_pixel(), "Wechsel zurück zu Max")
+
+	# R4c: Eimer mit Wasser auf Waldemar
+	_pruefe(Z.status("R4c") == "offen" and H.schritt_waehlen() == "R4c", "R4c offen, Pfote wählt R4c")
+	await _benutze("Eimer", _c().get_character("Waldemar"), "W1_BRUE_MAX_0950")
+	_pruefe(Z.geloest("R4c") and Z.geloest("R4"), "R4 gelöst")
+	_pruefe(_item("Eimer").zustand() == "leer" and _i().is_item_in_inventory("ZiegenfellVorleger"),
+		"Eimer leer zurück, Vorleger zurück")
+	_pruefe(not Z.ist("W1_PIXEL_IM_FELL") and not Z.ist("W1_ZIEGEN_FOLGEN"), "Fell ab, Begleiter-Schalter aus")
+	_pruefe(not _raum().has_character("SchmiedeZiege") and _raum().has_character("XxlZiege"),
+		"Schmiede-Ziege geht heim, XXL-Ziege bleibt an der Brücke")
+	_pruefe(Z.offene_schritte().is_empty(), "keine offenen Schritte (R5 ff. gesperrt)")
+	_protokoll_leeren()
+	await H.pfote_geklickt()
+	_pruefe(_gesagt("W1_HINT_PIX_0010"), "Pfote: nichts offen (W1_HINT_PIX_0010), kein Verweis auf R5 ff.")
+	await _rundreise("nach R4")
+
+	# --- Was hinter der Brücke liegt ---
+	await _gehe("WegZumWasserschloss", "Wasserschloss")
+	await _warte_bis(func(): return _gesagt("W1_WASS_PIX_0050"), 10.0)
+	_pruefe(_gesagt("W1_WASS_TOA_0020"), "Wasserschloss-Szene")
+	await _gehe("AusgangTrollbruecke", "Trollbruecke")
+	await _gehe("Waldweg", "Zauberwald")
+	await _c().get_character("Rotkaeppchen").on_click()
+	_pruefe(_gesagt("UI_WELT_1_ENDE"), "Rotkäppchen: Ende des Vertical Slice")
+	await _gehe("Stolleneingang", "Bergwerk")
+	await _warte_bis(func(): return _gesagt("W1_BERG_GRI_0010"), 10.0)
+	_pruefe(_gesagt("W1_BERG_GRI_0010"), "Bergwerk: Streik")
+	await _hotspot("RuneTuer").on_click()
+	_pruefe(_gesagt("W1_BERG_MAX_0170") and _raum_name() == "Bergwerk", "Rune-Tür bleibt zu")
+	await _rundreise("Bergwerk")
+
+	# --- Hoggelwarz: Alwin prüft den Stab ---
+	await _gehe("AusgangZauberwald", "Zauberwald")
+	await _gehe("AusgangTrollbruecke", "Trollbruecke")
+	await _gehe("AusgangDorfplatz", "Dorfplatz")
+	await _gehe("WegNachHoggelwarz", "Klassenzimmer")
+	await _warte_bis(func(): return _gesagt("W1_HOGG_ALW_0070"), 10.0)
+	_pruefe(_gesagt("W1_HOGG_ALW_0070"), "Alwin: Kochlöffel (0070)")
+
+
+func _gehe(ausgang: String, raum: String) -> void:
+	await _hotspot(ausgang).on_click()
+	await _warte_auf_raum(raum)
+
+
+func _nehmen_ohne(prop_name: String, zeile: String) -> void:
+	await _raum().get_prop(prop_name).on_click()
+	_pruefe(_gesagt(zeile), "Nehmen ohne Gegenstand %s (%s)" % [prop_name, zeile])
 
 
 #endregion
+
 
 #region Speichern und Laden ########################################################################
 ## Speichert, verändert den Zustand, lädt und vergleicht mit dem gespeicherten Stand.

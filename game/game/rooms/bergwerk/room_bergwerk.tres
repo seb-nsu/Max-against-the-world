@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://cr7sc07x66fm1"]
+
+[ext_resource type="Script" path="res://game/rooms/bergwerk/room_bergwerk_state.gd" id="1_xsd75"]
+
+[resource]
+resource_name = "Bergwerk"
+script = ExtResource("1_xsd75")
+script_name = "Bergwerk"
+scene = "res://game/rooms/bergwerk/room_bergwerk.tscn"

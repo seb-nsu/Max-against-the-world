@@ -223,7 +223,9 @@
   }
  ],
  "sonder_codes": [
-  "HINT"
+  "HINT",
+  "INV",
+  "ABS"
  ],
  "sonder_sprecher": [
   "NAR"
@@ -966,6 +968,6 @@
   }
  ],
  "weitere_schalter": [
-  "PIXEL_AUF_LEITUNG"
+  "W3_PIXEL_AUF_LEITUNG"
  ]
 }

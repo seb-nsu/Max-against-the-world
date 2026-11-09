@@ -65,6 +65,14 @@ func bauen() -> int:
 			_raum(r)
 			gesehen.rooms.append(r.script_name)
 
+	# Pixel-Feld: Pixel als Gegenstand in Max' Inventarleiste (05-spielsysteme.md, UI). Steht in
+	# keiner Welt-Tabelle, weil es kein Fundstück ist; das Spiel legt es ab P1 selbst hinein.
+	_gegenstand({
+		script_name = "PixelFeld", id = "pixel_feld", name_key = "UI_OBJ_PIXEL_FELD",
+		icon = "res://grafik/platzhalter/ui_pixel_feld.png",
+	})
+	gesehen.inventory_items.append("PixelFeld")
+
 	for abschnitt in gesehen:
 		for script_name in PopochiuResources.get_section_keys(abschnitt):
 			if not script_name in gesehen[abschnitt]:

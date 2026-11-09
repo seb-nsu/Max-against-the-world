@@ -1,0 +1,95 @@
+[gd_scene format=3 uid="uid://dbphm6ep4qhvs"]
+
+[ext_resource type="Script" path="res://game/rooms/wasserschloss/room_wasserschloss.gd" id="1_bpps0"]
+[ext_resource type="PackedScene" uid="uid://dsm731is2sdk0" path="res://game/rooms/wasserschloss/walkable_areas/boden/walkable_area_boden.tscn" id="2_0lpsb"]
+[ext_resource type="PackedScene" uid="uid://bn2wmaxjlll1x" path="res://game/rooms/wasserschloss/props/background/prop_background.tscn" id="3_6b1ce"]
+[ext_resource type="Texture2D" uid="uid://bscvuyeia624j" path="res://grafik/platzhalter/raum_wasserschloss.png" id="4_iww8b"]
+[ext_resource type="PackedScene" uid="uid://cvh5srkcg62ij" path="res://game/rooms/wasserschloss/hotspots/schilf/hotspot_schilf.tscn" id="5_hr18c"]
+[ext_resource type="PackedScene" uid="uid://d2idn6viql5et" path="res://game/rooms/wasserschloss/hotspots/ruderboot/hotspot_ruderboot.tscn" id="6_tr6l8"]
+[ext_resource type="PackedScene" uid="uid://hv3ujxnhjjtn" path="res://game/rooms/wasserschloss/hotspots/schild_am_tor/hotspot_schild_am_tor.tscn" id="7_ts4ls"]
+[ext_resource type="PackedScene" uid="uid://dfb27ey3j7yi2" path="res://game/rooms/wasserschloss/hotspots/umzugskartons/hotspot_umzugskartons.tscn" id="8_1q5p3"]
+[ext_resource type="PackedScene" uid="uid://cc17cdd2shf5r" path="res://game/rooms/wasserschloss/hotspots/teppich/hotspot_teppich.tscn" id="9_k3w5v"]
+[ext_resource type="PackedScene" uid="uid://hrg4yfgh4oen" path="res://game/rooms/wasserschloss/hotspots/ausgang_trollbruecke/hotspot_ausgang_trollbruecke.tscn" id="10_1qqkx"]
+[ext_resource type="PackedScene" uid="uid://4q1sqpmpk62m" path="res://game/rooms/wasserschloss/markers/start/marker_start.tscn" id="11_k84vd"]
+[ext_resource type="PackedScene" uid="uid://dw6n7fsgsgjj3" path="res://game/rooms/wasserschloss/markers/von_trollbruecke/marker_von_trollbruecke.tscn" id="12_m68jj"]
+[ext_resource type="PackedScene" uid="uid://d1ikwea6w4s3i" path="res://game/rooms/wasserschloss/markers/tor/marker_tor.tscn" id="13_p8m50"]
+[ext_resource type="PackedScene" uid="uid://d1uonvmbgxgy5" path="res://game/characters/schwan/character_schwan.tscn" id="14_6h2dn"]
+[ext_resource type="PackedScene" uid="uid://cpjd1c4lcm6c6" path="res://game/characters/toadi/character_toadi.tscn" id="15_1byld"]
+
+[node name="RoomWasserschloss" type="Node2D" unique_id=1690898447]
+script = ExtResource("1_bpps0")
+script_name = "Wasserschloss"
+width = 320
+height = 180
+
+[node name="WalkableAreas" type="Node2D" parent="." unique_id=1266379386]
+
+[node name="Boden" parent="WalkableAreas" unique_id=387178585 instance=ExtResource("2_0lpsb")]
+interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(4, 140, 316, 140, 316, 178, 4, 178)])
+
+[node name="Props" type="Node2D" parent="." unique_id=133964875]
+
+[node name="Background" parent="Props" unique_id=1612605142 instance=ExtResource("3_6b1ce")]
+position = Vector2(160, 90)
+texture = ExtResource("4_iww8b")
+description = "UI_RAUM_WASSERSCHLOSS"
+
+[node name="Hotspots" type="Node2D" parent="." unique_id=857091617]
+
+[node name="Schilf" parent="Hotspots" unique_id=2032675821 instance=ExtResource("5_hr18c")]
+position = Vector2(35, 125)
+description = "UI_OBJ_SCHILF"
+baseline = 15
+walk_to_point = Vector2(5, 31)
+
+[node name="Ruderboot" parent="Hotspots" unique_id=120034205 instance=ExtResource("6_tr6l8")]
+position = Vector2(74, 137)
+description = "UI_OBJ_RUDERBOOT"
+baseline = 7
+walk_to_point = Vector2(-4, 19)
+
+[node name="SchildAmTor" parent="Hotspots" unique_id=803278461 instance=ExtResource("7_ts4ls")]
+position = Vector2(172, 68)
+description = "UI_OBJ_SCHILD_AM_TOR"
+baseline = 8
+walk_to_point = Vector2(-2, 84)
+
+[node name="Umzugskartons" parent="Hotspots" unique_id=1116227160 instance=ExtResource("8_1q5p3")]
+position = Vector2(210, 110)
+description = "UI_OBJ_UMZUGSKARTONS"
+baseline = 20
+walk_to_point = Vector2(-10, 42)
+
+[node name="Teppich" parent="Hotspots" unique_id=900954658 instance=ExtResource("9_k3w5v")]
+position = Vector2(249, 122)
+description = "UI_OBJ_TEPPICH"
+baseline = 6
+walk_to_point = Vector2(-9, 30)
+
+[node name="AusgangTrollbruecke" parent="Hotspots" unique_id=287667428 instance=ExtResource("10_1qqkx")]
+position = Vector2(10, 105)
+description = "UI_RAUM_TROLLBRUECKE"
+baseline = 35
+walk_to_point = Vector2(2, 55)
+cursor = 9
+
+[node name="Regions" type="Node2D" parent="." unique_id=1075031856]
+
+[node name="Markers" type="Node2D" parent="." unique_id=2067427507]
+
+[node name="Start" parent="Markers" unique_id=456448769 instance=ExtResource("11_k84vd")]
+position = Vector2(24, 160)
+
+[node name="VonTrollbruecke" parent="Markers" unique_id=34796457 instance=ExtResource("12_m68jj")]
+position = Vector2(24, 160)
+
+[node name="Tor" parent="Markers" unique_id=1447153094 instance=ExtResource("13_p8m50")]
+position = Vector2(170, 152)
+
+[node name="Characters" type="Node2D" parent="." unique_id=387092651]
+
+[node name="CharacterSchwan *" parent="Characters" unique_id=1619974735 instance=ExtResource("14_6h2dn")]
+position = Vector2(270, 168)
+
+[node name="CharacterToadi *" parent="Characters" unique_id=1625231671 instance=ExtResource("15_1byld")]
+position = Vector2(210, 160)

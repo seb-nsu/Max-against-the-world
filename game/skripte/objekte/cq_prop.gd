@@ -2,10 +2,10 @@
 class_name CQProp
 extends PopochiuProp
 ## Basisklasse der Props aus dem Bauplan. Steht das Prop für einen Gegenstand mit
-## Nehmen-Zeile (Bauplan: „gegenstand“, „nehmen“), nimmt Linksklick ihn auf. Sichtbarkeit und
-## Bild leitet der Raum aus dem Zustand ab (CQRaum._zustand_anwenden()).
+## Nehmen-Zeile (Bauplan: „gegenstand“, „nehmen“), nimmt Linksklick ihn auf; ohne Gegenstand
+## bleibt es bei der Nehmen-Zeile. Sichtbarkeit und Bild leitet der Raum aus dem Zustand ab
+## (CQRaum._zustand_anwenden()). Ansehen, Benutzen, Gegenstände und Pixel wie bei CQHotspot.
 
-var ansehen_zaehler := 0
 
 
 func bauplan() -> Dictionary:
@@ -19,19 +19,17 @@ func objekt_id() -> String:
 
 
 func ansehen() -> String:
-	ansehen_zaehler += 1
 	Hinweise.objekt_beruehrt(objekt_id())
 	var eintraege: Array = bauplan().get("ansehen", [])
 	if eintraege.is_empty() and bauplan().get("nehmen"):
 		# Kein eigenes Ansehen im Skript: die Nehmen-Zeile beschreibt das Ding.
 		eintraege = [bauplan().nehmen]
-	return await Spiel.ansehen(eintraege, ansehen_zaehler)
+	return await Spiel.ansehen(eintraege, "%s/%s" % [room.script_name if is_instance_valid(room) else "", script_name])
 
 
 func on_click() -> void:
 	Hinweise.objekt_beruehrt(objekt_id())
-	if Spiel.pixel_als_gegenstand:
-		Spiel.pixel_als_gegenstand = false
+	if Spiel.ist_pixel() and not bauplan().get("nehmen"):
 		await _pixel_benutzt()
 		return
 	await super()
@@ -39,16 +37,24 @@ func on_click() -> void:
 
 func on_item_used(item: PopochiuInventoryItem) -> void:
 	Hinweise.objekt_beruehrt(objekt_id())
+	if item.script_name == Spiel.PIXEL_FELD:
+		I.active = null
+		await _pixel_benutzt()
+		return
 	Hinweise.objekt_beruehrt(Bauplan.gegenstand(item.script_name).get("id", ""))
 	await super(item)
 
 
 func _on_click() -> void:
 	var d := bauplan()
-	if d.get("gegenstand") and d.get("nehmen"):
+	if d.get("nehmen"):
 		await Spiel.nehmen(self, d)
 		return
 	await Spiel.hingehen(self)
+	for e in d.get("benutzen", []):
+		if Spiel.eintrag_passt(e):
+			await Spiel.sagen_eintrag(e)
+			return
 	await Spiel.ersatz()
 
 
@@ -64,10 +70,19 @@ func _on_middle_click() -> void:
 	pass
 
 
-func _on_item_used(_item: PopochiuInventoryItem) -> void:
+func _on_item_used(item: PopochiuInventoryItem) -> void:
 	await Spiel.hingehen(self)
-	await Spiel.ersatz()
+	var e := Spiel.gegenstand_zeile(bauplan().get("gegenstand_auf", []),
+		Bauplan.gegenstand(item.script_name).get("id", ""))
+	if e.is_empty():
+		await Spiel.ersatz()
+	else:
+		await Spiel.sagen_eintrag(e)
 
 
 func _pixel_benutzt() -> void:
+	for e in bauplan().get("ansehen", []):
+		if e.get("figur") == "PIX" and Spiel.eintrag_passt(e):
+			await Spiel.sagen_eintrag(e)
+			return
 	await Spiel.ersatz("PIX")

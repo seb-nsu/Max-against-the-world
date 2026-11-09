@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://cri8wgw1fou0b"]
+
+[ext_resource type="Script" path="res://game/rooms/schmiede/hotspots/esse/hotspot_esse.gd" id="1_jcilj"]
+
+[node name="Esse" type="Area2D" unique_id=282329525]
+script = ExtResource("1_jcilj")
+script_name = "Esse"
+description = "Esse"
+cursor = 1
+interaction_polygon = PackedVector2Array(-35, -35, 35, -35, 35, 35, -35, 35)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=2051221098]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

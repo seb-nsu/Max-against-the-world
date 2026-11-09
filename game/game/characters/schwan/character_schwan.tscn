@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://d1uonvmbgxgy5"]
+
+[ext_resource type="Script" path="res://game/characters/schwan/character_schwan.gd" id="1_trn8w"]
+[ext_resource type="Texture2D" uid="uid://buxqgs8qd56b0" path="res://grafik/platzhalter/figur_schwan.png" id="2_o1hn6"]
+
+[node name="CharacterSchwan" type="Area2D" unique_id=1619974735]
+script = ExtResource("1_trn8w")
+walk_speed = 90.0
+dialog_pos = Vector2(0, -28)
+script_name = "Schwan"
+description = "UI_OBJ_SCHWAN"
+cursor = 8
+interaction_polygon = PackedVector2Array(-8, -24, 8, -24, 8, 0, -8, 0)
+
+[node name="ScalingPolygon" type="CollisionPolygon2D" parent="." unique_id=1093795397]
+polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=2120554264]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1501260338]
+texture_filter = 1
+texture = ExtResource("2_o1hn6")
+offset = Vector2(0, -12)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1365335876]
+visible = false
+polygon = PackedVector2Array(-8, -24, 8, -24, 8, 0, -8, 0)
+
+[node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=578897157]
+visible = false
+affect_navigation_mesh = true
+carve_navigation_mesh = true

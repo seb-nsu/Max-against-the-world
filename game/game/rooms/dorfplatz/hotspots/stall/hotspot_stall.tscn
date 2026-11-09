@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://fot7uxpdcpjo"]
+
+[ext_resource type="Script" path="res://game/rooms/dorfplatz/hotspots/stall/hotspot_stall.gd" id="1_34ymj"]
+
+[node name="Stall" type="Area2D" unique_id=953384071]
+script = ExtResource("1_34ymj")
+script_name = "Stall"
+description = "Stall"
+cursor = 1
+interaction_polygon = PackedVector2Array(-25, -33, 25, -33, 25, 33, -25, 33)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1235414108]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

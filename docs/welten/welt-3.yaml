@@ -107,7 +107,7 @@ raeume:
     musik: w3_kern
     zustaende: [Zelle glühend, Zelle vereist, Sockel leer]
 
-sonder_codes: [HINT]
+sonder_codes: [HINT, INV, ABS]   # INV: Inventar ansehen, ABS: Gespräch erschöpft
 sonder_sprecher: [NAR]   # Regie ohne Text, Sprecher „–“
 
 figuren:
@@ -510,4 +510,4 @@ raetsel:
     optional: false
 
 # Schalter, die zu keinem Rätsel gehören
-weitere_schalter: [PIXEL_AUF_LEITUNG]   # beim ersten Aufwachen in der Basis (W3_BAS_KAL_0160)
+weitere_schalter: [W3_PIXEL_AUF_LEITUNG]   # beim ersten Aufwachen in der Basis (W3_BAS_KAL_0160)

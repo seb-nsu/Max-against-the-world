@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://ckuativkvnatd"]
+
+[ext_resource type="Script" path="res://game/rooms/klassenzimmer/hotspots/flaschenregal/hotspot_flaschenregal.gd" id="1_ue0wh"]
+
+[node name="Flaschenregal" type="Area2D" unique_id=2049295911]
+script = ExtResource("1_ue0wh")
+script_name = "Flaschenregal"
+description = "Flaschenregal"
+cursor = 1
+interaction_polygon = PackedVector2Array(-30, -15, 30, -15, 30, 15, -30, 15)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1747334574]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

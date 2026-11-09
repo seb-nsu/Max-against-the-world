@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://dhuvl3tfmopkc"]
+
+[ext_resource type="Script" path="res://game/rooms/zauberstabladen/room_zauberstabladen_state.gd" id="1_qp8q1"]
+
+[resource]
+resource_name = "Zauberstabladen"
+script = ExtResource("1_qp8q1")
+script_name = "Zauberstabladen"
+scene = "res://game/rooms/zauberstabladen/room_zauberstabladen.tscn"

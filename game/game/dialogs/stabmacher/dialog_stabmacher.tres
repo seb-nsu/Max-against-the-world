@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://b0uvj0q3guqid"]
+
+[ext_resource type="Script" uid="uid://brxefo54wpm32" path="res://addons/popochiu/engine/objects/dialog/popochiu_dialog_option.gd" id="1_tv4l0"]
+[ext_resource type="Script" path="res://game/dialogs/stabmacher/dialog_stabmacher.gd" id="2_ubylq"]
+
+[resource]
+resource_name = "Stabmacher"
+script = ExtResource("2_ubylq")
+script_name = "Stabmacher"

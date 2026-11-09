@@ -1,6 +1,7 @@
 {
  "abschnitt": "prolog",
  "sonderzeilen": {
+  "nichts_offen": "P0_HINT_PIX_0010",
   "wartezeile": "P0_HINT_PIX_9995"
  },
  "schritte": [

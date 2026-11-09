@@ -11,8 +11,3 @@ func _darf_gehen() -> bool:
 		return true
 	await Spiel.sagen("MAX", "P0_DACH_MAX_1000")
 	return false
-
-
-func _on_right_click() -> void:
-	Hinweise.objekt_beruehrt(objekt_id())
-	await Spiel.sagen("MAX", "P0_DACH_MAX_1000")

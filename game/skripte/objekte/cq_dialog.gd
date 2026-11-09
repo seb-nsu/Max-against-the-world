@@ -35,7 +35,58 @@ func option_sichtbar(id: String) -> bool:
 	var o := _plan_option(id)
 	if o.is_empty():
 		return true
+	# Plauderoptionen verschwinden nach Nutzung, Hinweis- und Rätseloptionen („(bleibt)“ im
+	# Skript) bleiben ausgegraut wählbar; „Tschüss“ (beendet) bleibt immer.
+	var opt := get_option(id)
+	if is_instance_valid(opt) and opt.used and not o.get("bleibt", false) and not o.get("beendet", false):
+		return false
+	for b in o.get("bedingung", []):
+		if b.art == "nach_zeile" and not zeile_gehoert(b.zeile):
+			return false
+	if not o.get("bedingung_text", "").is_empty() and not Spiel.bedingung_text_ok(o.bedingung_text):
+		return false
 	return Spiel.bedingung_ok(o.get("bedingung", []))
+
+
+## Erschöpft: Außer „Tschüss“ (beendet) wird keine Option mehr angeboten.
+func erschoepft() -> bool:
+	for o in bauplan().get("optionen", []):
+		if not o.get("beendet", false) and option_sichtbar(o.id):
+			return false
+	return true
+
+
+## Ob alle Plauderoptionen (weder „(bleibt)“ noch beendend) schon gewählt sind. Ohne
+## Plauderoptionen false.
+func plauder_erschoepft() -> bool:
+	build_options()
+	var gab_es := false
+	for o in bauplan().get("optionen", []):
+		if o.get("bleibt", false) or o.get("beendet", false):
+			continue
+		gab_es = true
+		var opt := get_option(o.id)
+		if not (is_instance_valid(opt) and opt.used):
+			return false
+	return gab_es
+
+
+## Abschiedszeile bei erschöpftem Gespräch (zwei Zeilen im Wechsel). "" ohne solche Zeilen.
+func abschied() -> String:
+	var zeilen: Array = bauplan().get("erschoepft", [])
+	if zeilen.is_empty():
+		return ""
+	var n := Zustand.ansehen_zaehlen("Abschied/" + script_name)
+	return zeilen[(n - 1) % zeilen.size()].zeile
+
+
+## Ob die Antwortzeile in diesem Gespräch schon kam (Option mit dieser Antwort gewählt).
+func zeile_gehoert(zeile: String) -> bool:
+	for o in bauplan().get("optionen", []):
+		if o.antworten.any(func(a): return a.zeile == zeile):
+			var opt := get_option(o.id)
+			return is_instance_valid(opt) and opt.used
+	return false
 
 
 func _option_selected(opt: PopochiuDialogOption) -> void:
@@ -56,7 +107,13 @@ func waehlen(id: String) -> bool:
 	await Spiel.sagen("MAX", o.get("frage", id))
 	for a in await antworten(id):
 		await Spiel.sagen(a.sprecher, a.zeile)
-	return not o.get("beendet", false)
+	var ende: bool = await _nach_option(id)
+	return not (o.get("beendet", false) or ende)
+
+
+## Folgen einer Option (Schalter setzen, Szene). true beendet das Gespräch (die Figur geht).
+func _nach_option(_id: String) -> bool:
+	return false
 
 
 ## Antwortzeilen einer Option als [{sprecher, zeile}]. Sonderfälle hier überschreiben.

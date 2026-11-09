@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://cnbaua7y2go0g"]
+
+[ext_resource type="Script" path="res://game/rooms/taverne/props/ziegenfell_vorleger/prop_ziegenfell_vorleger.gd" id="1_673qb"]
+
+[node name="ZiegenfellVorleger" type="Area2D" unique_id=1555550710]
+script = ExtResource("1_673qb")
+script_name = "ZiegenfellVorleger"
+description = "Ziegenfell Vorleger"
+cursor = 1
+interaction_polygon = PackedVector2Array(-22, -6, 22, -6, 22, 6, -22, 6)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1887070915]
+texture_filter = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=2071457265]
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=744982893]
+visible = false
+modulate = Color(1, 1, 0, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+
+[node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=711525991]
+visible = false
+affect_navigation_mesh = true
+carve_navigation_mesh = true

@@ -106,6 +106,8 @@ func p1_loesen() -> void:
 	])
 	# Falls die Szene übersprungen wurde
 	Zustand.loese("P1")
+	# Pixel ist wach: das Pixel-Feld erscheint in der Inventarleiste (05-spielsysteme.md, UI)
+	await Spiel.pixel_feld_pruefen()
 
 
 ## P2: Antenne auf den Zapp-O-Mat (0480–0500, dann 0610).

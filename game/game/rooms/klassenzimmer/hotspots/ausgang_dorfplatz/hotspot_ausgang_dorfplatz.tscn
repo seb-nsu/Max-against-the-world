@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://i686yl1h2h3b"]
+
+[ext_resource type="Script" path="res://game/rooms/klassenzimmer/hotspots/ausgang_dorfplatz/hotspot_ausgang_dorfplatz.gd" id="1_y32qa"]
+
+[node name="AusgangDorfplatz" type="Area2D" unique_id=1585395696]
+script = ExtResource("1_y32qa")
+script_name = "AusgangDorfplatz"
+description = "Ausgang Dorfplatz"
+cursor = 1
+interaction_polygon = PackedVector2Array(-10, -40, 10, -40, 10, 40, -10, 40)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=655124641]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

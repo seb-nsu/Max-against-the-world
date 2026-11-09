@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://dw6n7fsgsgjj3"]
+
+[node name="VonTrollbruecke" type="Marker2D" unique_id=34796457]
+visible = false

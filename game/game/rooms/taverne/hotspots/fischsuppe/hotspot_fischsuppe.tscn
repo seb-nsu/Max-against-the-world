@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://bykdw4yujp6kj"]
+
+[ext_resource type="Script" path="res://game/rooms/taverne/hotspots/fischsuppe/hotspot_fischsuppe.gd" id="1_txdaf"]
+
+[node name="Fischsuppe" type="Area2D" unique_id=155772242]
+script = ExtResource("1_txdaf")
+script_name = "Fischsuppe"
+description = "Fischsuppe"
+cursor = 1
+interaction_polygon = PackedVector2Array(-7, -4, 7, -4, 7, 4, -7, 4)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=764541136]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

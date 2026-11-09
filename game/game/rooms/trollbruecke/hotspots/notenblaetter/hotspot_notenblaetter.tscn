@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://c13a30p6hj8c7"]
+
+[ext_resource type="Script" path="res://game/rooms/trollbruecke/hotspots/notenblaetter/hotspot_notenblaetter.gd" id="1_j0oqv"]
+
+[node name="Notenblaetter" type="Area2D" unique_id=711623878]
+script = ExtResource("1_j0oqv")
+script_name = "Notenblaetter"
+description = "Notenblaetter"
+cursor = 1
+interaction_polygon = PackedVector2Array(-12, -5, 12, -5, 12, 5, -12, 5)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=477330150]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

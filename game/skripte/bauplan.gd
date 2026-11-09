@@ -16,6 +16,10 @@ var welten := {}
 var hinweise := {}
 ## Kürzel → Liste der Ersatzzeilen (SYS_ERS_*)
 var ersatz := {}
+## Kürzel → Wiederholungs-Pool fürs Ansehen ab dem dritten Mal (SYS_WDH_*)
+var wiederholung := {}
+## Kürzel → Pool „Plauderoptionen erschöpft“ (SYS_PLA_*)
+var plauder := {}
 
 var _raeume := {}        # Raum-script_name → {abschnitt, daten}
 var _objekte := {}       # "Raum/Objekt" → Daten (Hotspot, Prop oder Ausgang)
@@ -41,13 +45,52 @@ func laden() -> void:
 				for o in r[liste]:
 					_objekte["%s/%s" % [r.script_name, o.script_name]] = o
 		for f in plan.figuren:
-			_figuren[f.script_name] = f
+			_figuren[f.script_name] = _vereinen(_figuren.get(f.script_name, {}), f)
 		for g in plan.gegenstaende:
-			_gegenstaende[g.script_name] = g
+			_gegenstaende[g.script_name] = _vereinen(_gegenstaende.get(g.script_name, {}), g)
 		for d in plan.dialoge:
 			_dialoge[d.script_name] = d
 		for k in plan.ersatz:
 			ersatz[k] = plan.ersatz[k]
+		for k in plan.get("wiederholung", {}):
+			wiederholung[k] = plan.wiederholung[k]
+		for k in plan.get("plauder", {}):
+			plauder[k] = plan.plauder[k]
+
+
+## Figuren und Gegenstände kommen in mehreren Abschnitten vor (Max, Thunfischdose): Listen
+## (Ansehen-Zeilen, Kombinationen) und Bilder werden zusammengelegt, sonst gilt der spätere Plan.
+func _vereinen(alt: Dictionary, neu: Dictionary) -> Dictionary:
+	if alt.is_empty():
+		return neu.duplicate(true)
+	var out := alt.duplicate(true)
+	for k in neu:
+		if out.get(k) is Array and neu[k] is Array and k != "zustaende":
+			out[k] = out[k] + neu[k]
+		elif out.get(k) is Dictionary and neu[k] is Dictionary:
+			out[k].merge(neu[k], true)
+		else:
+			out[k] = neu[k]
+	return out
+
+
+## Rätselschritte, die im Abschnitt gebaut sind (Layout „_ausbau“); andere bleiben gesperrt.
+func gebaut(abschnitt: String, raetsel_id: String) -> bool:
+	var plan: Dictionary = plaene.get(abschnitt, {})
+	return raetsel_id in plan.get("ausbau", [])
+
+
+## Figurenwechsel-Zeilen des Abschnitts (Pools zu_pixel/zu_max und feste Fälle wie pixel_tuer).
+func figurenwechsel(abschnitt: String) -> Dictionary:
+	return plaene.get(abschnitt, {}).get("figurenwechsel", {})
+
+
+## Sprecherkürzel → script_name der Figur (MAX → Max, TOA → Toadi)
+func figur_zu_kuerzel(kuerzel: String) -> String:
+	for sn in _figuren:
+		if _figuren[sn].get("kuerzel") == kuerzel:
+			return sn
+	return ""
 
 
 func raum(script_name: String) -> Dictionary:

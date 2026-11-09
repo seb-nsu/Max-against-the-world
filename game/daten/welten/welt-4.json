@@ -277,7 +277,9 @@
   "TAST",
   "PIXM",
   "ZURF",
-  "HINT"
+  "HINT",
+  "INV",
+  "ABS"
  ],
  "sonder_sprecher": [
   "NAR"

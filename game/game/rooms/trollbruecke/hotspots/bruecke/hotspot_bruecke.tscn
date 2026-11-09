@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://c176je2lx0615"]
+
+[ext_resource type="Script" path="res://game/rooms/trollbruecke/hotspots/bruecke/hotspot_bruecke.gd" id="1_oh0yc"]
+
+[node name="Bruecke" type="Area2D" unique_id=1249384174]
+script = ExtResource("1_oh0yc")
+script_name = "Bruecke"
+description = "Bruecke"
+cursor = 1
+interaction_polygon = PackedVector2Array(-70, -15, 70, -15, 70, 15, -70, 15)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=785510853]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

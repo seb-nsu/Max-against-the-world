@@ -1,0 +1,103 @@
+[gd_scene format=3 uid="uid://dxo0ogsqosrpl"]
+
+[ext_resource type="Script" path="res://game/rooms/bergwerk/room_bergwerk.gd" id="1_tsh8b"]
+[ext_resource type="PackedScene" uid="uid://bfspfmrsgb5fx" path="res://game/rooms/bergwerk/walkable_areas/boden/walkable_area_boden.tscn" id="2_plfwv"]
+[ext_resource type="PackedScene" uid="uid://cc4i1i4axrn72" path="res://game/rooms/bergwerk/props/background/prop_background.tscn" id="3_n87v6"]
+[ext_resource type="Texture2D" uid="uid://difa8wmqtagdr" path="res://grafik/platzhalter/raum_bergwerk.png" id="4_5ryu7"]
+[ext_resource type="PackedScene" uid="uid://4dh46hi6phlg" path="res://game/rooms/bergwerk/hotspots/loren/hotspot_loren.tscn" id="5_5nwd1"]
+[ext_resource type="PackedScene" uid="uid://blxnynmgvcro2" path="res://game/rooms/bergwerk/hotspots/streikschilder/hotspot_streikschilder.tscn" id="6_yjmiq"]
+[ext_resource type="PackedScene" uid="uid://bu0pjhson8jgx" path="res://game/rooms/bergwerk/hotspots/streikposten/hotspot_streikposten.tscn" id="7_qdpn0"]
+[ext_resource type="PackedScene" uid="uid://bssk5ca3etf8p" path="res://game/rooms/bergwerk/hotspots/kaffeemaschine/hotspot_kaffeemaschine.tscn" id="8_m4nxd"]
+[ext_resource type="PackedScene" uid="uid://4pbo70lhix0r" path="res://game/rooms/bergwerk/hotspots/fackeln/hotspot_fackeln.tscn" id="9_ileh3"]
+[ext_resource type="PackedScene" uid="uid://juarke5dyn6u" path="res://game/rooms/bergwerk/hotspots/ausgang_zauberwald/hotspot_ausgang_zauberwald.tscn" id="10_04lmd"]
+[ext_resource type="PackedScene" uid="uid://j3y8a2m1hsf1" path="res://game/rooms/bergwerk/hotspots/rune_tuer/hotspot_rune_tuer.tscn" id="11_g2k8j"]
+[ext_resource type="PackedScene" uid="uid://db6tdrsirbjw7" path="res://game/rooms/bergwerk/markers/start/marker_start.tscn" id="12_53j0f"]
+[ext_resource type="PackedScene" uid="uid://b55ltldjg4ao7" path="res://game/rooms/bergwerk/markers/von_zauberwald/marker_von_zauberwald.tscn" id="13_tluhg"]
+[ext_resource type="PackedScene" uid="uid://bex7njxqrugn8" path="res://game/characters/grimmzahn/character_grimmzahn.tscn" id="14_kmoqm"]
+[ext_resource type="PackedScene" uid="uid://cnh2w4l2cdg1u" path="res://game/characters/goblin_1/character_goblin_1.tscn" id="15_46rqw"]
+[ext_resource type="PackedScene" uid="uid://m41xvbk5523l" path="res://game/characters/goblin_2/character_goblin_2.tscn" id="16_0s1m8"]
+
+[node name="RoomBergwerk" type="Node2D" unique_id=1658809883]
+script = ExtResource("1_tsh8b")
+script_name = "Bergwerk"
+width = 320
+height = 180
+
+[node name="WalkableAreas" type="Node2D" parent="." unique_id=1379926904]
+
+[node name="Boden" parent="WalkableAreas" unique_id=1597242076 instance=ExtResource("2_plfwv")]
+interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(4, 140, 316, 140, 316, 178, 4, 178)])
+
+[node name="Props" type="Node2D" parent="." unique_id=1988280074]
+
+[node name="Background" parent="Props" unique_id=1932148165 instance=ExtResource("3_n87v6")]
+position = Vector2(160, 90)
+texture = ExtResource("4_5ryu7")
+description = "UI_RAUM_BERGWERK"
+
+[node name="Hotspots" type="Node2D" parent="." unique_id=155230196]
+
+[node name="Loren" parent="Hotspots" unique_id=812579360 instance=ExtResource("5_5nwd1")]
+position = Vector2(54, 128)
+description = "UI_OBJ_LOREN"
+baseline = 12
+walk_to_point = Vector2(2, 28)
+
+[node name="Streikschilder" parent="Hotspots" unique_id=284668402 instance=ExtResource("6_yjmiq")]
+position = Vector2(125, 90)
+description = "UI_OBJ_STREIKSCHILDER"
+baseline = 20
+walk_to_point = Vector2(-1, 64)
+
+[node name="Streikposten" parent="Hotspots" unique_id=1207669041 instance=ExtResource("7_qdpn0")]
+position = Vector2(166, 153)
+description = "UI_OBJ_STREIKPOSTEN"
+baseline = 3
+walk_to_point = Vector2(-46, 9)
+
+[node name="Kaffeemaschine" parent="Hotspots" unique_id=441604541 instance=ExtResource("8_m4nxd")]
+position = Vector2(170, 120)
+description = "UI_OBJ_KAFFEEMASCHINE"
+baseline = 10
+walk_to_point = Vector2(-2, 34)
+
+[node name="Fackeln" parent="Hotspots" unique_id=1605132299 instance=ExtResource("9_ileh3")]
+position = Vector2(130, 38)
+description = "UI_OBJ_FACKELN"
+baseline = 8
+walk_to_point = Vector2(0, 116)
+
+[node name="AusgangZauberwald" parent="Hotspots" unique_id=912339364 instance=ExtResource("10_04lmd")]
+position = Vector2(11, 100)
+description = "UI_RAUM_ZAUBERWALD"
+baseline = 40
+walk_to_point = Vector2(1, 60)
+cursor = 9
+
+[node name="RuneTuer" parent="Hotspots" unique_id=1396300071 instance=ExtResource("11_g2k8j")]
+position = Vector2(293, 100)
+description = "UI_OBJ_RUNE_TUER"
+baseline = 40
+walk_to_point = Vector2(-27, 58)
+cursor = 9
+
+[node name="Regions" type="Node2D" parent="." unique_id=203737789]
+
+[node name="Markers" type="Node2D" parent="." unique_id=2053380719]
+
+[node name="Start" parent="Markers" unique_id=1981673392 instance=ExtResource("12_53j0f")]
+position = Vector2(26, 160)
+
+[node name="VonZauberwald" parent="Markers" unique_id=1574742030 instance=ExtResource("13_tluhg")]
+position = Vector2(26, 160)
+
+[node name="Characters" type="Node2D" parent="." unique_id=1053246625]
+
+[node name="CharacterGrimmzahn *" parent="Characters" unique_id=470221475 instance=ExtResource("14_kmoqm")]
+position = Vector2(180, 160)
+
+[node name="CharacterGoblin1 *" parent="Characters" unique_id=884556655 instance=ExtResource("15_46rqw")]
+position = Vector2(150, 158)
+
+[node name="CharacterGoblin2 *" parent="Characters" unique_id=114347316 instance=ExtResource("16_0s1m8")]
+position = Vector2(214, 162)

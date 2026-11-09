@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://dku6x8uyt6ccm"]
+
+[ext_resource type="Script" path="res://game/characters/minka/character_minka.gd" id="1_8f1ll"]
+[ext_resource type="Texture2D" uid="uid://b7uielaowpgru" path="res://grafik/platzhalter/figur_minka.png" id="2_ihj23"]
+
+[node name="CharacterMinka" type="Area2D" unique_id=1223184642]
+script = ExtResource("1_8f1ll")
+walk_speed = 90.0
+dialog_pos = Vector2(0, -22)
+script_name = "Minka"
+description = "UI_OBJ_MINKA"
+cursor = 8
+interaction_polygon = PackedVector2Array(-8, -18, 8, -18, 8, 0, -8, 0)
+
+[node name="ScalingPolygon" type="CollisionPolygon2D" parent="." unique_id=1632794840]
+polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=552338529]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1027743807]
+texture_filter = 1
+texture = ExtResource("2_ihj23")
+offset = Vector2(0, -9)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1121236985]
+visible = false
+polygon = PackedVector2Array(-8, -18, 8, -18, 8, 0, -8, 0)
+
+[node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=1769425707]
+visible = false
+affect_navigation_mesh = true
+carve_navigation_mesh = true

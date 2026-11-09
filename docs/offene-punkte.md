@@ -63,18 +63,19 @@ Alle sechzehn Ideen sind in `03-produktion.md` (Abschnitt Automatisierung) mit N
 | A15 | Playtest-Auswertung per Claude | 3 |
 | A16 | Screenshot-Regressionstest headless | 4 |
 
-## Funde aus der Prolog-Graubox (9. November 2026)
+## Funde aus der Graubox (9. November 2026)
 
-Beim Bau der Graubox fielen Lücken in den Regeln auf. Die Graubox setzt sie vorläufig wie angegeben um; entschieden und in die Besitzer-Datei eingetragen werden sie spätestens beim Vertical Slice.
+Beim Bau der Graubox (Prolog, dann Welt 1 bis Rätsel 4) fielen Lücken in den Regeln auf. Die Graubox setzt sie vorläufig wie angegeben um; entschieden und in die Besitzer-Datei eingetragen werden sie, sobald der Raum über die Graubox hinaus gebaut wird. G1 bis G8 sind entschieden und eingetragen.
 
 | Nr. | Was offen ist | Vorläufige Umsetzung | Besitzer-Datei |
 | --- | --- | --- | --- |
-| G1 | Kein ID-Schema für Objekt-, Raum- und Zielnamen in der UI | `UI_OBJ_*`, `UI_RAUM_*`, `UI_ZIEL_<Rätsel>` in `uebersetzung/ui.csv` | `05-spielsysteme.md` |
-| G2 | Prolog hat keine Hinweiszeile „nichts offen“ | Pfote bleibt nach P3 stumm | `skript/prolog.md` |
-| G3 | Gegenstände ohne eigene Ansehen-Zeile | Nehmen-Zeile bzw. Ersatzzeile | `skript/prolog.md` |
-| G4 | Bedienung „Pixel als Gegenstand benutzen“ und „Gegenstand im Inventar benutzen“ fehlt | Klick aufs Porträt macht Pixel zum Gegenstand; ausgewählten Gegenstand auf sich selbst klicken | `05-spielsysteme.md` |
-| G5 | Bodenluke vor P3 (Zeile 1000): Ansehen oder Benutzen? | beides | `skript/prolog.md` |
-| G6 | Option „Opa, nach Kalender“ (0640) fehlt im Gesprächsbaum | ergänzt, sichtbar nach Nahansicht Kalender bis P3 | `skript/prolog.md` |
-| G7 | Regel für Hilfsschalter außerhalb der Welt-Tabelle (z. B. `P0_SCHNEE_GESEHEN`) | Präfix des Abschnitts, nur im Code | `05-spielsysteme.md`, `welten/README.md` |
-| G8 | Reisen Thunfischdose (leer) und Dosenöffner nach dem Prolog mit? | wie Tabelle: beide `reist_mit: true` | `welten/prolog.yaml` |
-
+| G9 | Welt 1 hat keine eigene Wartezeile der Hilfe-Pfote (Prolog: P0\_HINT\_PIX\_9995) | die Prolog-Zeile 9995 | `skript/welt-1.md` (Abschnitt 16) |
+| G10 | Rätsel 2 außerhalb des Zauberstab-Ladens: Käse auf den Löffel geht im Inventar überall, die Socke gibt aber der Stabmacher | Lösung überall; die Stabmacher-Zeilen (0510–0530) nur im Laden, die Socke immer | `raetsel/prolog-und-welt-1.md` (Rätsel 2) |
+| G11 | Figuren, deren Gespräch zu Rätseln ab R5 gehört (Alwin, Grimmzahn, Rotkäppchen), im Vertical Slice | Alwin sagt 0060 bzw. 0070, danach und bei Grimmzahn und Rotkäppchen die Meldung `UI_WELT_1_ENDE` | `03-produktion.md` (Vertical Slice) |
+| G12 | Eimer mit Wasser auf Waldemar vor Rätsel 4b hat keine Zeile | Ersatzzeile | `skript/welt-1.md` (Abschnitt 7) |
+| G13 | „Benutzen: Waldemar; Bach“ (0930): Ein Klick auf Waldemar öffnet sein Gespräch | 0930 entfällt vorläufig, der Bach hat nur Ansehen | `skript/welt-1.md` (Abschnitt 7) |
+| G14 | Pixel redet an der Brücke mit den Ziegen, bevor Max die Satzung vorgelesen hat | die allgemeinen Ziegisch-Zeilen (SCHM 0410/0420, DORF 0990/1000) | `skript/welt-1.md` (Abschnitt 7) |
+| G15 | Wohin folgen die Ziegen? „bis zur Troll-Brücke“, aber auch in Taverne, Laden und Hoggelwarz? | in jeden Raum, bis R4c | `raetsel/prolog-und-welt-1.md` (Rätsel 3) |
+| G16 | Sprecher ohne Figur (Grammophon GRA, Brunnen BRU) | Systemtext unten im Bild | `05-spielsysteme.md` (Schreibregeln) |
+| G17 | Zuruf-Bedingung „Pixel auf dem Balken“ (TAV 1630) ist nicht prüfbar, Pixel steht nach dem Wechsel neben Max | der Zuruf entfällt vorläufig | `skript/welt-1.md` (Abschnitt 3) |
+| G18 | Prolog-Optionen 1362–1366 sind nicht in Zehnerschritten (nach dem Umzug in Baum 2b) | Prüfwarnung bleibt; beim nächsten Umnummern glätten | `skript/prolog.md` |

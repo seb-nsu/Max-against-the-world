@@ -76,11 +76,10 @@ func aktualisieren() -> void:
 		return
 	var ist_max := not is_instance_valid(C.player) or C.player.script_name == "Max"
 	_max.modulate = Color.WHITE if ist_max else Color(0.45, 0.45, 0.45)
-	var pixel_wach := Zustand.abschnitt != "prolog" or Zustand.geloest("P1")
-	_pixel.modulate = Color.WHITE if (not ist_max) else (
-		Color(0.7, 0.9, 0.9) if Spiel.pixel_als_gegenstand else Color(0.45, 0.45, 0.45)
-	)
-	_pixel.disabled = not pixel_wach
+	# Pixel als Gegenstand geht über das Pixel-Feld der Inventarleiste (05-spielsysteme.md, UI);
+	# das Porträt wechselt nur die Figur.
+	_pixel.modulate = Color.WHITE if not ist_max else Color(0.45, 0.45, 0.45)
+	_pixel.disabled = not Spiel.pixel_wach()
 	var bild := "ui_pfote_aus.png"
 	if Hinweise.pfote_aktiv():
 		bild = "ui_pfote_leuchtet.png" if Hinweise.leuchtet() else "ui_pfote.png"

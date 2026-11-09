@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://2dfbpa4birce"]
+
+[ext_resource type="Script" path="res://game/characters/schmiede_ziege/character_schmiede_ziege.gd" id="1_oo3ut"]
+[ext_resource type="Texture2D" uid="uid://dyvl17nq72fb3" path="res://grafik/platzhalter/figur_schmiede_ziege.png" id="2_e46b8"]
+
+[node name="CharacterSchmiedeZiege" type="Area2D" unique_id=1898849327]
+script = ExtResource("1_oo3ut")
+walk_speed = 90.0
+dialog_pos = Vector2(0, -32)
+script_name = "SchmiedeZiege"
+description = "UI_OBJ_SCHMIEDE_ZIEGE"
+cursor = 8
+interaction_polygon = PackedVector2Array(-8, -28, 8, -28, 8, 0, -8, 0)
+
+[node name="ScalingPolygon" type="CollisionPolygon2D" parent="." unique_id=260048855]
+polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=133588562]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1904902326]
+texture_filter = 1
+texture = ExtResource("2_e46b8")
+offset = Vector2(0, -14)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=2140435289]
+visible = false
+polygon = PackedVector2Array(-8, -28, 8, -28, 8, 0, -8, 0)
+
+[node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=947721297]
+visible = false
+affect_navigation_mesh = true
+carve_navigation_mesh = true

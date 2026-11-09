@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://bqeuc4hqxfuql"]
+
+[ext_resource type="Script" path="res://game/rooms/trollbruecke/room_trollbruecke_state.gd" id="1_26ml8"]
+
+[resource]
+resource_name = "Trollbruecke"
+script = ExtResource("1_26ml8")
+script_name = "Trollbruecke"
+scene = "res://game/rooms/trollbruecke/room_trollbruecke.tscn"

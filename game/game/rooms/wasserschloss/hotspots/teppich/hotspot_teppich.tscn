@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://cc17cdd2shf5r"]
+
+[ext_resource type="Script" path="res://game/rooms/wasserschloss/hotspots/teppich/hotspot_teppich.gd" id="1_5ikvg"]
+
+[node name="Teppich" type="Area2D" unique_id=900954658]
+script = ExtResource("1_5ikvg")
+script_name = "Teppich"
+description = "Teppich"
+cursor = 1
+interaction_polygon = PackedVector2Array(-15, -6, 15, -6, 15, 6, -15, 6)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=80049919]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

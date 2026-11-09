@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://dsm731is2sdk0"]
+
+[ext_resource type="Script" path="res://game/rooms/wasserschloss/walkable_areas/boden/walkable_area_boden.gd" id="1_0prdk"]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_0prdk"]
+vertices = PackedVector2Array(316, 178, 4, 178, 4, 140, 316, 140)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(4, 140, 316, 140, 316, 178, 4, 178)])
+agent_radius = 0.0
+
+[node name="Boden" type="Node2D" unique_id=387178585]
+script = ExtResource("1_0prdk")
+script_name = "Boden"
+description = "Boden"
+interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(4, 140, 316, 140, 316, 178, 4, 178)])
+
+[node name="Perimeter" type="NavigationRegion2D" parent="." unique_id=2130936335]
+modulate = Color(0, 1, 0, 1)
+navigation_polygon = SubResource("NavigationPolygon_0prdk")

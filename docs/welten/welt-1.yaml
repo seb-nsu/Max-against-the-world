@@ -6,6 +6,18 @@ skript_praefix: W1
 sonder_codes: [WECH, HINT]
 # Sprecher ohne Figur: NAR (Erzähl- und Szenentext, Sprecher „–“ im Skript)
 sonder_sprecher: [NAR]
+# Hilfsschalter und -werte ohne eigenes Rätsel (05-spielsysteme.md, Speichern)
+weitere_schalter:
+  - W1_WECHSEL_FREI          # Figurenwechsel freigeschaltet (erstes Betreten der Taverne)
+  - W1_TAVERNE_WECHSEL       # Wert: erste Wechsel in der Taverne gespielt (TAV 0080, 0090)
+  - W1_ZIEGE_FOLGT           # Schmiede-Ziege folgt Max (SCHM 0280), bis Rätsel 4
+  - W1_XXL_GELIEFERT         # XXL-Ziege geliefert (DORF 0920 bis 0980), folgt bis Rätsel 4
+  - W1_PIXEL_IM_FELL         # Pixel trägt den Ziegenfell-Vorleger (BRUE 0410), bis Rätsel 4
+  - W1_R4A_REIHE             # Wert: Ziegen in richtiger Reihenfolge auf der Brücke (0 bis 3)
+  - W1_SATZUNG_VORGELESEN    # Max hat die Sätze vorgelesen (BRUE 0650)
+  - W1_R4B_ZIE_VERSUCHE      # Wert: Pixels Übersetzungsversuche bei der Schmiede-Ziege
+  - W1_R4B_XXL_VERSUCHE      # Wert: Pixels Übersetzungsversuche bei der XXL-Ziege
+  - W1_EIMER                 # Wert: leer oder mit_wasser
 
 raeume:
   - id: dorfplatz

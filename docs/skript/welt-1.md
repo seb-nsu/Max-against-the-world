@@ -81,7 +81,7 @@ Gespräch mit Toadi. Max fragt, Toadi antwortet; gelesene Optionen werden grau. 
 | W1\_DORF\_TOA\_0520 | Toadi | Lord Moderwort! Hoggelwarz-Abbrecher, erstes Jahr. Seitdem hasst er alle Zauberer. Und Blumen. Also, er niest bei Blumen. Man sagt, das ist dasselbe. | hüpft nervös |
 | W1\_DORF\_MAX\_0530 | Max | Wo hast du überall nachgesehen? | Option Toadi |
 | W1\_DORF\_TOA\_0540 | Toadi | Burg Brösel, Schloss Steinbeiß, die Villa hinterm Mühlbach. Überall Umzugskartons, nirgends Prinzessin. Sie hinterlässt immer Kartons. Ich halte das für ein Zeichen. |  |
-| W1\_DORF\_MAX\_0550 | Max | Und das Schloss da oben? | Option Toadi |
+| W1\_DORF\_MAX\_0550 | Max | Und das Schloss da oben? | Option Toadi (bleibt) |
 | W1\_DORF\_TOA\_0560 | Toadi | Da kommt man nur mit einer Bohnenranke hin. Bohnen gibt's beim Brunnen. Aber der will Gold. Ich habe nur Pilzgeld, und Pilzgeld nimmt keiner. | Hinweis R5 |
 | W1\_DORF\_MAX\_0570 | Max | Warum rennst du mir eigentlich hinterher? | Option Toadi |
 | W1\_DORF\_TOA\_0580 | Toadi | Ich bin der Diener der Prinzessin! Ist sie weg, diene ich dem, der sie sucht. Steht so in meinem Vertrag. Seite vierzig. |  |
@@ -215,7 +215,7 @@ Gespräch mit Humbert:
 | W1\_TAV\_HUM\_0540 | Humbert | Das ist Gerhard, mein Liebling. Daneben Birgit, Gerhard der Zweite und Klaus-Dieter. Klaus-Dieter rostet aus Prinzip. | zeigt nacheinander |
 | W1\_TAV\_MAX\_0550 | Max | Du nennst Schwerter beim Vornamen. | Antwort auf 0540 |
 | W1\_TAV\_HUM\_0560 | Humbert | Und du nennst dein Handy nicht beim Vornamen? Was bist du für ein Mensch. | ehrlich entsetzt |
-| W1\_TAV\_MAX\_0570 | Max | Habt ihr Wein? | Option Humbert |
+| W1\_TAV\_MAX\_0570 | Max | Habt ihr Wein? | Option Humbert (bleibt) |
 | W1\_TAV\_HUM\_0580 | Humbert | Hauswein, Hauswein rot, Hauswein noch röter. Auf der Karte steht noch der Jahrgang Schicksalsberg. Den hat noch nie jemand bestellt. Liegt ganz hinten im Keller, hinter den Rüben. | Hinweis R1b; schaltet Option 0590 frei |
 | W1\_TAV\_MAX\_0590 | Max | Dann nehm ich den Schicksalsberg. | Option Humbert; nach 0580; löst R1b |
 | W1\_TAV\_HUM\_0600 | Humbert | Den Schicksalsberg. Wirklich? Jetzt? … Gut. Das dauert. Fass nichts an. Vor allem nicht Gerhard. | In-den-Keller-Animation |
@@ -231,9 +231,9 @@ Gespräch mit Gollo:
 | --- | --- | --- | --- |
 | W1\_TAV\_MAX\_0710 | Max | Was hast du da? | Option Gollo |
 | W1\_TAV\_GOL\_0720 | Gollo | Nichtsss. Ein Kästchen. Ein Ring darin. Mein Ssschätzchen. Mein Ausverkaufsartikel. Niemand will ihn. Nicht mal im Sonderangebot. | drückt das Kästchen an sich |
-| W1\_TAV\_MAX\_0730 | Max | Warum wirfst du ihn nicht einfach in den Topf? | Option Gollo |
+| W1\_TAV\_MAX\_0730 | Max | Warum wirfst du ihn nicht einfach in den Topf? | Option Gollo (bleibt) |
 | W1\_TAV\_GOL\_0740 | Gollo | Der Vulkan! Ja! Nein! Der Wirt guckt. Die Katze guckt. Und wenn keiner guckt, gucke ich. Ich traue mich nicht. | Hinweis R1a und R1b |
-| W1\_TAV\_MAX\_0750 | Max | Du spielst gern Rätselspiele? | Option Gollo |
+| W1\_TAV\_MAX\_0750 | Max | Du spielst gern Rätselspiele? | Option Gollo (bleibt) |
 | W1\_TAV\_GOL\_0760 | Gollo | Rätsel! Ja! Ich gewinne immer! Was hat Wurzeln, die keiner sieht, und ist höher als Bäume? | kichert |
 | W1\_TAV\_MAX\_0770 | Max | Ein Berg. Das steht in jedem Buch. | Antwort auf 0760 |
 | W1\_TAV\_GOL\_0780 | Gollo | Siehst du! Alle wissen alles! Ich verliere nur, wenn jemand etwas fragt, das niemand wissen kann. Und das passiert nie. | Hinweis R1c |
@@ -399,7 +399,7 @@ Gespräch mit dem Stabmacher:
 | --- | --- | --- | --- |
 | W1\_STAB\_MAX\_0210 | Max | Ich brauche einen Zauberstab. | Option Stabmacher |
 | W1\_STAB\_STA\_0220 | Stabmacher | Der Stab wählt den Zauberer, junger Mann. Nicht umgekehrt. Ich habe noch drei. // Zahnstocher, Zollstock, Kochlöffel. Der Rest ist ausverkauft, seit die Schule jeden nimmt. | beugt sich vor |
-| W1\_STAB\_MAX\_0230 | Max | Wie wählt ein Stab denn? | Option Stabmacher |
+| W1\_STAB\_MAX\_0230 | Max | Wie wählt ein Stab denn? | Option Stabmacher (bleibt) |
 | W1\_STAB\_STA\_0240 | Stabmacher | Mein letzter Stab hat seinen Zauberer gewählt, indem er an ihm kleben blieb. Honigfinger. Drei Tage ließ er nicht los. // Das nenne ich Berufung. | Hinweis R2 |
 | W1\_STAB\_MAX\_0250 | Max | Was ist in den ganzen Schachteln? | Option Stabmacher |
 | W1\_STAB\_STA\_0260 | Stabmacher | Nichts. Aber sie sehen gut aus. Ein Laden braucht Schachteln. Ohne Schachteln ist es ein Flur. |  |
@@ -475,13 +475,13 @@ Gespräch mit Alwin (ab Prüfungsbeginn):
 
 | ID | Sprecher | Text | Regie |
 | --- | --- | --- | --- |
-| W1\_HOGG\_MAX\_0310 | Max | Was muss ich für die Prüfung tun? | Option Alwin |
+| W1\_HOGG\_MAX\_0310 | Max | Was muss ich für die Prüfung tun? | Option Alwin (bleibt) |
 | W1\_HOGG\_ALW\_0320 | Alwin | Den Trank des Leuchtens brauen. Das Rezept: ein Ei, ein Krug Milch, ein Leuchtpilz. Zum Schluss die geheime Zutat aus dem Regal. | liest von der Kelle ab; Rezept bekannt |
 | W1\_HOGG\_MAX\_0330 | Max | Das ist ein Pfannkuchenrezept. | Antwort auf 0320 |
 | W1\_HOGG\_ALW\_0340 | Alwin | Ist es? Ist es nicht? Die Grenzen sind fließend. Wie Teig. |  |
-| W1\_HOGG\_MAX\_0350 | Max | Wo gibt es hier Milch? | Option Alwin; nach 0320 |
+| W1\_HOGG\_MAX\_0350 | Max | Wo gibt es hier Milch? | Option Alwin (bleibt); nach 0320 |
 | W1\_HOGG\_ALW\_0360 | Alwin | Milch? Milch gibt es im ganzen Reich nicht mehr. Die Milch ist in einem anderen Schloss. // Aber Ziegen. Ziegen haben Milch, sagt man. Ich habe nie nachgesehen. | Hinweis R6, Teil 1 |
-| W1\_HOGG\_MAX\_0370 | Max | Was hat es mit dem Regal auf sich? | Option Alwin |
+| W1\_HOGG\_MAX\_0370 | Max | Was hat es mit dem Regal auf sich? | Option Alwin (bleibt) |
 | W1\_HOGG\_ALW\_0380 | Alwin | Sechs Flaschen. Die Etiketten hat jemand vertauscht. Vermutlich ich. Mein Zettel sagt dir, welche die richtige ist. In Reimen. Ich war mal Barde. | gibt Alwins Hinweiszettel |
 | W1\_HOGG\_MAX\_0390 | Max | Wer ist eigentlich dieser Moderwort? | Option Alwin |
 | W1\_HOGG\_ALW\_0400 | Alwin | Ein Schüler. Erstes Jahr. Er nieste in Kräuterkunde, alle lachten, er ging. Sehr empfindlich. // Sein Zeugnis liegt noch im Archiv. Nie abgeholt. | Hinweis auf das Zeugnis |
@@ -574,13 +574,13 @@ Gespräch mit Waldemar:
 
 | ID | Sprecher | Text | Regie |
 | --- | --- | --- | --- |
-| W1\_BRUE\_MAX\_0210 | Max | Lass mich rüber. | Option Waldemar |
+| W1\_BRUE\_MAX\_0210 | Max | Lass mich rüber. | Option Waldemar (bleibt) |
 | W1\_BRUE\_WAL\_0220 | Waldemar | Regel eins: Niemand überquert die Brücke, bevor das Märchen abgelaufen ist. Regel zwei: siehe Regel eins. Regel drei: Lies das Schild. | tippt aufs Regelbuch |
-| W1\_BRUE\_MAX\_0230 | Max | Welches Märchen? | Option Waldemar |
+| W1\_BRUE\_MAX\_0230 | Max | Welches Märchen? | Option Waldemar (bleibt) |
 | W1\_BRUE\_WAL\_0240 | Waldemar | Das mit den drei Ziegenböcken. Klein, mittel, groß, jeder sagt seinen Satz, und am Ende gehe ich ins Wasser. // Das ist der Teil, den ich … nun. Ich kann nicht schwimmen. Aber Regel ist Regel. | räuspert sich |
 | W1\_BRUE\_MAX\_0250 | Max | Was läuft da unten? | Option Waldemar |
 | W1\_BRUE\_WAL\_0260 | Waldemar | Nichts! Schlager! Marschmusik! Trollmusik! // … Musicals. Sag es niemandem. Trolle hören keine Musicals. Es steht in keiner Satzung, aber in jedem Blick. | Fliege zittert |
-| W1\_BRUE\_MAX\_0270 | Max | Du kannst wirklich nicht schwimmen? | Option Waldemar |
+| W1\_BRUE\_MAX\_0270 | Max | Du kannst wirklich nicht schwimmen? | Option Waldemar (bleibt) |
 | W1\_BRUE\_WAL\_0280 | Waldemar | Ich sinke wie ein Paragraf. Aber die Satzung sagt Wasser, also Wasser. Ich bin Troll, kein Anwalt. Leider. | Hinweis R4c |
 | W1\_BRUE\_MAX\_0290 | Max | Würdest du für mich singen? | Option Waldemar; nach R4, mit Socke, Zauberwald betreten |
 | W1\_BRUE\_WAL\_0300 | Waldemar | Hier? Vor der Brücke? Niemals. Die Akustik. Im Wald, zwischen den Pilzen, da trägt der Ton. // Komm. Bevor ich es mir anders überlege. | geht Richtung Wald; weiter in Abschnitt 9, Rätsel 7 |
@@ -716,11 +716,11 @@ Gespräch mit Rotkäppchen:
 | --- | --- | --- | --- |
 | W1\_WALD\_MAX\_0210 | Max | Was lieferst du so? | Option Rotkäppchen |
 | W1\_WALD\_ROT\_0220 | Rotkäppchen | Alles. Kuchen, Wein, Ziegen, Omas. Omas sind am schwersten zu verpacken. | zählt an den Fingern |
-| W1\_WALD\_MAX\_0230 | Max | Kann ich eine Flasche Ketchup haben? | Option Rotkäppchen |
+| W1\_WALD\_MAX\_0230 | Max | Kann ich eine Flasche Ketchup haben? | Option Rotkäppchen (bleibt) |
 | W1\_WALD\_ROT\_0240 | Rotkäppchen | Der ist für die Goblins. Die bestellen jede Woche Ketchup und nie Pommes. Nimm eine, die merken's nicht. Die zählen in Fackeln. | gibt den Ketchup frei |
 | W1\_WALD\_MAX\_0250 | Max | Hast du keine Angst vor dem Wolf? | Option Rotkäppchen |
 | W1\_WALD\_ROT\_0260 | Rotkäppchen | Welcher Wolf? Ach, der. Der ist Kunde. Bestellt immer Nachthemden in Oma-Größe. Ich frag nicht. Trinkgeld stimmt. |  |
-| W1\_WALD\_MAX\_0270 | Max | Was ist mit den Rosen? | Option Rotkäppchen |
+| W1\_WALD\_MAX\_0270 | Max | Was ist mit den Rosen? | Option Rotkäppchen (bleibt) |
 | W1\_WALD\_ROT\_0280 | Rotkäppchen | Niesrosen. Gehen nur auf, wenn einer singt. Richtig singt. Ich hab's probiert. Sie sind zugegangen. Fester. | Hinweis R7 |
 | W1\_WALD\_MAX\_0290 | Max | Bis dann. | Option Rotkäppchen, beendet das Gespräch |
 | W1\_WALD\_ROT\_0300 | Rotkäppchen | Bewertung nicht vergessen! Fünf Körbe! |  |
@@ -883,7 +883,7 @@ Gespräch mit Grimmzahn:
 | --- | --- | --- | --- |
 | W1\_BERG\_MAX\_0310 | Max | Warum streikt ihr? | Option Grimmzahn |
 | W1\_BERG\_GRI\_0320 | Grimmzahn | Bessere Fackeln! Unsere leuchten wie nasse Kerzen! Weißt du, wie oft ich im Dunkeln den Daumen getroffen habe? // Ich habe keinen mehr! | hält die Hand hoch |
-| W1\_BERG\_MAX\_0330 | Max | Was wollt ihr genau? | Option Grimmzahn |
+| W1\_BERG\_MAX\_0330 | Max | Was wollt ihr genau? | Option Grimmzahn (bleibt) |
 | W1\_BERG\_GRI\_0340 | Grimmzahn | Licht. Und einen Tarifvertrag. Schriftlich. Unterschrieben mit Blut. Wir sind traditionell. | Hinweis R10 A |
 | W1\_BERG\_MAX\_0350 | Max | Blut. | Antwort auf 0340 |
 | W1\_BERG\_GRI\_0360 | Grimmzahn | Oder etwas, das so aussieht. Wir sind traditionell, nicht genau. |  |

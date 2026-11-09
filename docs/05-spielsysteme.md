@@ -16,6 +16,16 @@ Jede Zeile des Spiels steht genau einmal in einer Skript-Tabelle pro Welt und ha
 | Szene | Drei bis vier Buchstaben pro Raum, etwa DACH, TAV, WALD, TURM |
 | Sprecher | MAX, PIX, OPA, OMA; NAR für Regie- und Animationszeilen ohne Sprecher (nicht vertont); Nebenfiguren mit drei Buchstaben wie GOL, ZEL, WAL, bei Gruppen auch mit Ziffer (GO1, GO2). Die Kürzel gelten je Abschnitt und stehen in den Welt-Tabellen (`welten/*.yaml`); dasselbe Kürzel kann in einem anderen Abschnitt eine andere Figur meinen (MUT ist in Welt 3 M.U.T.T.I., im Finale die Mutter) |
 
+**Schlüssel für Namen in der Oberfläche:** Was die Maus beim Überfahren zeigt und das Notizbuch als Ziel nennt, steht nicht im Skript, sondern in `uebersetzung/ui.csv` (Spalten keys, de, en):
+
+| Schlüssel | Wofür | Beispiel |
+| --- | --- | --- |
+| `UI_OBJ_<objekt_id>` | Hotspot, Prop, Ausgang mit eigenem Namen, Figur, Gegenstand; ID wie in der Welt-Tabelle bzw. aus dem Auslöser („Ansehen: Fondue-Topf“ → `fondue_topf`) | `UI_OBJ_FONDUE_TOPF` |
+| `UI_RAUM_<raum_id>` | Raumname, auch für Ausgänge ohne eigenen Namen | `UI_RAUM_TAVERNE` |
+| `UI_ZIEL_<Abschnitt>_<Rätsel-ID>` | Ziel im Notizbuch, je Rätselschritt; mit Abschnitt, weil die Rätsel-IDs in jeder Welt neu bei R1 beginnen | `UI_ZIEL_P0_P1`, `UI_ZIEL_W1_R4A` |
+
+Objekt- und Raum-IDs sind über das ganze Spiel ein Name: Dieselbe ID in zwei Räumen (etwa `fenster`) zeigt denselben Namen. Braucht ein Objekt einen anderen Namen, bekommt es eine eigene ID. Zustände mit eigenem Namen hängen den Zustand an (`UI_OBJ_ANTENNE`, `UI_OBJ_EIMER_MIT_WASSER`). `tools/godot_raeume.py` meldet fehlende Schlüssel mit Vorschlag.
+
 **Spalten der Skript-Tabelle:**
 
 | Spalte | Inhalt | Beispiel |
@@ -64,6 +74,12 @@ Eigennamen-Glossar: Sprechende Namen werden nicht wörtlich übersetzt, sondern 
 | Hinweis | Pixels Hilfeknopf | Drei Zeilen pro Rätsel, siehe Hinweissystem |
 | Zuruf | Pixel kommentiert ungefragt, wenn der Spieler eine Weile nichts tut | Zwei bis drei pro Raum |
 | Pixel auf Mensch | Pixel wird als Gegenstand auf eine Figur oder einen Gegenstand gezogen | Eine Zeile je Figur; auf Gegenständen eine Schnuppern-Zeile; 40 bis 60 Zeilen je Welt |
+
+**Wiederholung und Erschöpfung:**
+
+- Ansehen in der Welt und im Inventar: Beim ersten Mal kommt die eigene Zeile, beim zweiten die eigene Zeile mit „zweites Mal“ im Auslöser (jede Ansehen-Stelle bekommt eine, direkt unter der ersten). Ab dem dritten Mal kommt immer eine Zeile aus dem Wiederholungs-Pool (`SYS_WDH_MAX_*`, `SYS_WDH_PIX_*`, Prolog-Skript Abschnitt 9), nie zweimal dieselbe hintereinander, gesprochen vom Sprecher der ersten Zeile. Gezählt wird je Objekt, Zustand und Figur; der Zähler wird mitgespeichert.
+- Inventar-Ansehen: Jeder Gegenstand hat je Zustand eine Zeile im Skript-Abschnitt INV seines Abschnitts, Auslöser „Ansehen: <Name>, <zustand>“, optional „…, zweites Mal“.
+- Gespräche: Optionen mit Hinweis oder Rätselbezug tragen „(bleibt)“ hinter „Option <Figur>“ und bleiben nach Nutzung ausgegraut wählbar; Plauderoptionen verschwinden. Ist nur noch die Option übrig, die das Gespräch beendet, öffnet ein Klick auf die Figur kein Menü, sondern spielt abwechselnd ihre zwei Abschiedszeilen (Auslöser „Reden, Gespräch erschöpft“). Sind alle Plauderoptionen einer Figur weg, sagt Max beim nächsten Klick auf sie einmalig eine Zeile aus dem Pool `SYS_PLA_MAX_*` (Auslöser „Plauderoptionen erschöpft“, Prolog-Skript Abschnitt 9).
 
 **Schreibregeln:**
 
@@ -120,9 +136,10 @@ Die Steuerung ist eine Zwei-Klick-Steuerung ohne Verbenleiste: Linksklick tut da
 | Linksklick auf Boden | Gehen; Doppelklick auf einen Ausgang wechselt sofort den Raum |
 | Linksklick auf Hotspot | Benutzen, Nehmen oder Reden, je nach Objekt; der Zeiger zeigt vorher, was passiert |
 | Rechtsklick | Ansehen |
-| Gegenstand im Inventar anklicken, dann Ziel | Kombinieren oder Benutzen mit; Rechtsklick legt ihn zurück |
+| Gegenstand im Inventar anklicken, dann Ziel | Kombinieren oder Benutzen mit; Rechtsklick legt ihn zurück. Den ausgewählten Gegenstand auf sich selbst anwenden darf eine eigene Zeile haben, aber kein Rätsel hängt davon ab |
+| Pixel-Feld ganz links in der Inventarleiste | Solange Max aktiv und Pixel wach ist, verhält sich Pixel wie ein Gegenstand: auswählen und auf ein Objekt oder eine Figur anwenden („Pixel auf Mensch“, Schnuppern auf Gegenständen) |
 | Umschalt/Shift (halten) | Zeigt alle Hotspots im Raum als kleine Punkte |
-| Tab oder Klick aufs Porträt | Wechsel zwischen Max und Pixel (ab Welt 1) |
+| Tab oder Klick aufs Porträt | Wechsel zwischen Max und Pixel (ab Welt 1); im Prolog ohne Wirkung |
 | Linksklick, Leertaste oder Eingabetaste während Text | Text weiter: überspringt die aktuelle Zeile (Tasten in den Optionen umlegbar) |
 | Esc | Überspringt eine Zwischensequenz, sonst Pausemenü |
 | F5 / F9 | Schnellspeichern / Schnellladen |
@@ -131,7 +148,7 @@ Die Steuerung ist eine Zwei-Klick-Steuerung ohne Verbenleiste: Linksklick tut da
 
 | Element | Ort | Verhalten |
 | --- | --- | --- |
-| Inventarleiste | Oben, 32 Pixel hoch, acht Plätze für 24×24-Symbole | Klappt ein, sobald die Maus den oberen Rand verlässt; Pfeile blättern bei mehr als acht Gegenständen |
+| Inventarleiste | Oben, 32 Pixel hoch, acht Plätze für 24×24-Symbole; bei aktivem Max ist der erste Platz das Pixel-Feld (ab P1), bei aktivem Pixel zeigt die Leiste Pixels einen Gegenstand im Maul | Klappt ein, sobald die Maus den oberen Rand verlässt; Pfeile blättern bei mehr als acht Gegenständen |
 | Porträts von Max und Pixel | Oben links, 24×24 | Immer sichtbar; die aktive Figur ist hell, die andere grau |
 | Hilfe-Pfote | Oben rechts, 24×24 | Immer sichtbar; leuchtet sanft, wenn ein neuer Hinweis bereitliegt |
 | Objektname | Unter dem Zeiger, eine Zeile | Zeigt beim Überfahren den Namen, beim Kombinieren „Thunfischdose mit Pixel“ |
@@ -276,6 +293,7 @@ Während einer Zwischensequenz, eines Gesprächs oder eines Minispiels merkt sic
 
 - Gespeichert werden nur Schalter und Werte, nie etwas, das sich daraus ableiten lässt. Ob eine Tür offen ist, folgt aus dem Rätselschalter.
 - Schalter heißen wie die Rätselschritte, damit Hinweissystem, Notizbuch und Speichern dieselbe Sprache sprechen.
+- Hilfsschalter und Hilfswerte, die zu keinem Rätsel gehören (etwa `P0_SCHNEE_GESEHEN`, `W1_ZIEGE_FOLGT`), tragen das Präfix ihres Abschnitts und stehen in der Welt-Tabelle unter `weitere_schalter`; `tools/pruefen.py` warnt, wenn der Code einen anderen Namen setzt.
 - Claude schreibt einen automatischen Test, der im Vertical Slice nach jedem gelösten Schritt speichert, lädt und prüft, dass nichts fehlt.
 
 ## Offene Entscheidungen

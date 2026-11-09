@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://cbjlalwwp44ut"]
+
+[node name="Keller" type="Marker2D" unique_id=902834580]
+visible = false

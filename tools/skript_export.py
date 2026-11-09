@@ -54,10 +54,14 @@ def zeilen_lesen():
     for ab, rel in SKRIPTE:
         d = yaml.safe_load((DOCS / "welten" / f"{ab}.yaml").read_text(encoding="utf-8"))
         namen = {f.get("kuerzel"): f.get("name") for f in d.get("figuren") or [] if f.get("kuerzel")}
-        spalte4, abschnitt_titel = "Auslöser", ""
+        spalte4, abschnitt_titel, block = "Auslöser", "", ""
         for nr, z in enumerate((DOCS / rel).read_text(encoding="utf-8").splitlines(), 1):
             if z.startswith("#"):
                 abschnitt_titel = z.lstrip("#").strip()
+                block = ""
+                continue
+            if z.strip() and not z.startswith("|"):
+                block = z.strip()   # Absatz vor der Tabelle, z. B. „Gespräch mit Humbert:“
                 continue
             if z.startswith("| ID |"):
                 kopf = [c.strip() for c in z.strip().strip("|").split("|")]
@@ -95,7 +99,7 @@ def zeilen_lesen():
                 "ausloeser": ausloeser, "bedingung": bedingung, "sprecher": kz,
                 "sprecher_name": namen.get(kz, "Erzähler" if kz == "NAR" else ""),
                 "de": text, "regie": regie, "quelle": f"docs/{rel}:{nr}",
-                "kapitel": abschnitt_titel,
+                "kapitel": abschnitt_titel, "block": block,
             })
     return alle
 

@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://dkvn0whjbv3ss"]
+
+[ext_resource type="Script" path="res://game/rooms/zauberwald/hotspots/ketchup_am_karren/hotspot_ketchup_am_karren.gd" id="1_4rw4v"]
+
+[node name="KetchupAmKarren" type="Area2D" unique_id=405937298]
+script = ExtResource("1_4rw4v")
+script_name = "KetchupAmKarren"
+description = "Ketchup Am Karren"
+cursor = 1
+interaction_polygon = PackedVector2Array(-4, -7, 4, -7, 4, 7, -4, 7)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=454204731]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

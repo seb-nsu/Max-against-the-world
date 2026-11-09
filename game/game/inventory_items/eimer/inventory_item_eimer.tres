@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://b233gxntqc04o"]
+
+[ext_resource type="Script" path="res://game/inventory_items/eimer/inventory_item_eimer_state.gd" id="1_mclko"]
+
+[resource]
+resource_name = "Eimer"
+script = ExtResource("1_mclko")
+script_name = "Eimer"
+scene = "res://game/inventory_items/eimer/inventory_item_eimer.tscn"

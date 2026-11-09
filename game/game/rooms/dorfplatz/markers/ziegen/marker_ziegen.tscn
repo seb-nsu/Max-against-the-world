@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://bxt7ur8pufb5m"]
+
+[node name="Ziegen" type="Marker2D" unique_id=1202334774]
+visible = false

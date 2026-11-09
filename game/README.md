@@ -2,7 +2,9 @@
 
 Godot 4.7.2 mit Popochiu 2.2.1 (Plugin in `addons/popochiu`, Lizenz dort in `LICENSE`).
 Auflösung 320×180, Pixelgrafik ohne Glättung, ganzzahlig skaliert. Stand: Stufe 1
-(Grundgerüst), der Prolog ist als Graubox mit Platzhaltergrafik durchspielbar.
+(Grundgerüst) und Vertical Slice als Graubox: Prolog und Welt 1 bis Rätsel 4 sind mit
+Platzhaltergrafik durchspielbar. Räume hinter R4 (Luftschloss, Turm) erscheinen nur als
+gesperrter Ausgang; Gespräche zu Rätseln ab R5 melden „Ende des Vertical Slice“.
 
 ## Öffnen und spielen
 
@@ -13,9 +15,12 @@ Auflösung 320×180, Pixelgrafik ohne Glättung, ganzzahlig skaliert. Stand: Stu
 
 Steuerung: Linksklick benutzt, geht oder redet; Rechtsklick sieht an; Doppelklick auf einen
 Ausgang wechselt sofort den Raum. Gegenstände: anklicken, dann auf das Ziel klicken. Einen
-ausgewählten Gegenstand noch einmal auf sich selbst klicken heißt „im Inventar benutzen“, so
-wird der Drahtbügel zur Antenne. Shift zeigt die Hotspots, F5 und F9 sind Schnellspeichern und
--laden, Tab wechselt die Figur (erst ab Welt 1), N öffnet im Debug-Build das Notizbuch.
+ausgewählten Gegenstand noch einmal auf sich selbst klicken heißt „im Inventar benutzen“ (nur
+Zusatzreaktion, kein Rätsel hängt daran). Ganz links in der Inventarleiste liegt, sobald Pixel
+wach ist, das Pixel-Feld: wie ein Gegenstand auf ein Ziel ziehen, dann schnuppert oder redet
+Pixel dort. Klick aufs Pixel-Porträt oder Tab wechselt die Figur (ab der Taverne in Welt 1).
+Shift zeigt die Hotspots, F5 und F9 sind Schnellspeichern und -laden, N öffnet im Debug-Build
+das Notizbuch.
 
 ## Ordner
 
@@ -29,7 +34,7 @@ wird der Drahtbügel zur Antenne. Shift zeigt die Hotspots, F5 und F9 sind Schne
 | `grafik/platzhalter/` | Platzhalter-PNGs | erzeugt: `tools/godot_raeume.py` |
 | `lokalisierung/` | `texte.csv` mit allen Zeilen und UI-Texten (de, en) | erzeugt: `tools/skript_export.py` |
 | `addons/couch_quest_bau/` | Godot-Bau: legt Popochiu-Objekte nach dem Bauplan an | von Hand |
-| `tests/` | Headless-Durchlauf des Prologs | von Hand |
+| `tests/` | Headless-Durchlauf Prolog und Welt 1 bis R4 | von Hand |
 
 Die Inhalte gehören den Dokumenten in `docs/`. Erzeugte Dateien nie von Hand ändern, sondern
 das Dokument ändern und das Werkzeug neu laufen lassen.
@@ -41,7 +46,7 @@ Der Weg vom Skript ins Spiel hat drei Schritte:
 ```
 python3 tools/skript_export.py          # docs/skript + ui.csv → lokalisierung/texte.csv
 python3 tools/spieldaten.py             # Welt-Tabellen, Hinweise → daten/welten, daten/hinweise
-python3 tools/godot_raeume.py prolog    # + tools/layout/prolog.yaml → daten/raeume/prolog.json, Platzhalter
+python3 tools/godot_raeume.py           # + tools/layout/<abschnitt>.yaml → daten/raeume/*.json, Platzhalter
 godot --headless --editor --path game -- --cq-bauen   # Godot-Bau: fehlende Popochiu-Objekte anlegen
 ```
 
@@ -56,7 +61,18 @@ godot --headless --editor --path game -- --cq-bauen   # Godot-Bau: fehlende Popo
 - **Rätsellogik** steht in den Skripten der Objekte unter `game/`, z. B.
   `game/rooms/dachboden/room_dachboden.gd` (Szenen P1 bis P3),
   `game/rooms/dachboden/props/zapp_o_mat/prop_zapp_o_mat.gd` (Antenne, Fehlversuche),
-  `game/inventory_items/thunfischdose/inventory_item_thunfischdose.gd` (Kombination für P1).
+  `game/inventory_items/thunfischdose/inventory_item_thunfischdose.gd` (Kombination für P1),
+  `game/rooms/taverne/room_taverne.gd` (R1), `game/inventory_items/kochloeffel/` (R2),
+  `game/rooms/dorfplatz/room_dorfplatz.gd` (Lieferung der XXL-Ziege),
+  `game/rooms/trollbruecke/room_trollbruecke.gd` (R3, R4: `figur_benutzt()` für Rätsel mit
+  mehreren Figuren). Regeln über mehrere Räume (Ziegen als Begleiter, Pixel im Fell) stehen in
+  `skripte/welt_1.gd`; `CQRaum` ruft sie nach jedem Betreten und Laden auf.
+
+Das Layout (`tools/layout/<abschnitt>.yaml`) legt fest, welche Räume gebaut werden. Schlüssel
+neben den Räumen: `_ausbau` (gebaute Rätsel; die übrigen gelten als gesperrt, Pfote und
+Notizbuch schweigen dazu), `_alias` (Skriptname → Objekt), `_tiere` (Max versteht nur Miau),
+`_figuren` (Figuren ohne festen Raum). Je Raum: `alias`, `ohne` (Props, die erst später kommen);
+je Ausgang: `gesperrt` (Zeile), `versteckt`, `erreichbar_ab`.
 
 Basisklassen in `skripte/objekte/`: `CQRaum`, `CQHotspot`, `CQAusgang`, `CQProp`, `CQFigur`,
 `CQGegenstand`, `CQDialog`. Sie liefern das Standardverhalten (Ansehen aus dem Bauplan,
@@ -106,9 +122,11 @@ godot --headless --path . -s res://tests/prolog_durchlauf.gd -- --echt   # echte
 
 Der allererste Import nach dem Klonen meldet rund 60 Fehler (Autoloads und Übersetzungen, die erst beim Import entstehen). Das ist normal: Ein zweiter Import und das Öffnen im Editor laufen fehlerfrei. Im Editor genügt es, das Projekt einmal zu öffnen und, falls Godot fragt, neu zu laden.
 
-Der Test spielt den Lösungspfad P1 bis P3 mit allen Fehlversuchen, Hinweisen und Gesprächen
-und prüft nach jedem Schritt Schalter, Status, Inventar und eine Speichern/Laden-Rundreise
-(speichern, Zustand verfälschen, laden, vergleichen). Exit-Code 0 heißt alles grün.
+Der Test spielt den Lösungspfad P1 bis P3 und danach Welt 1 bis R4 (Taverne, Zauberstab-Laden,
+Schmiede, Dorfplatz, Troll-Brücke, Wasserschloss, Zauberwald, Bergwerk, Hoggelwarz) mit
+Fehlversuchen, Hinweisen, Gesprächen und Figurenwechsel und prüft nach jedem Schritt Schalter, Status, Inventar und eine Speichern/Laden-Rundreise
+(speichern, Zustand verfälschen, laden, vergleichen), auch mit Pixel als aktiver Figur.
+Exit-Code 0 heißt alles grün.
 
 - **Testmodus** (Standard): Zeilen werden nur protokolliert, Wege nicht gelaufen, Nahansicht
   und Notizbuch nicht geöffnet. Raumwechsel, Übergänge, Inventar und Speichern laufen echt.
@@ -121,3 +139,17 @@ und prüft nach jedem Schritt Schalter, Status, Inventar und eine Speichern/Lade
 
 GitHub Actions (`.github/workflows/pruefen.yml`, Job `godot`) lädt Godot, importiert und lässt
 beide Varianten laufen.
+
+## Änderungen an Popochiu
+
+Das Addon `addons/popochiu` ist unverändert. Zwei Probleme von Popochiu 2.2.1 sind in der
+Projektkopie der Inventarleiste behoben (`game/gui/components/simple_click_bar/simple_click_bar.gd`,
+Stellen mit „Couch Quest:“ markiert):
+
+- `I.add_item()`/`remove_item()` warten auf ein Fertig-Signal der Leiste. Die Leiste zeigt nur das
+  Inventar der aktiven Figur; bei der anderen Figur kam das Signal nie, und der Aufruf hing. Jetzt
+  meldet die Leiste in dem Fall sofort „fertig“.
+- Beim Laden leert Popochiu die Inventare aller Figuren. War Pixel aktiv, hingen Max' Gegenstände
+  nicht in der Leiste, und `remove_child` meldete Fehler. Jetzt wird nur entfernt, was dort hängt.
+
+Dazu hält die Leiste das Pixel-Feld ganz links.

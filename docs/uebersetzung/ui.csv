@@ -37,9 +37,9 @@ UI_OBJ_ANTENNE,Antenne,Antenna
 UI_OBJ_REISETASCHE,Opas Reisetasche,Grandpa's travel bag
 UI_OBJ_NOTIZBUCH,Notizbuch,Notebook
 UI_OBJ_OPAS_ZETTEL,Opas Zettel,Grandpa's note
-UI_ZIEL_P1,Der schlafende Kater,The sleeping cat
-UI_ZIEL_P2,Nur Rauschen,Just static
-UI_ZIEL_P3,Der richtige Kanal,The right channel
+UI_ZIEL_P0_P1,Der schlafende Kater,The sleeping cat
+UI_ZIEL_P0_P2,Nur Rauschen,Just static
+UI_ZIEL_P0_P3,Der richtige Kanal,The right channel
 UI_PFOTE,Hilfe-Pfote,Help paw
 UI_NOTIZBUCH_ZIELE,Ziele,Goals
 UI_NOTIZBUCH_REGELN,Regeln und Passwort-Teile,Rules and password pieces
@@ -53,3 +53,120 @@ UI_GELADEN,Geladen,Loaded
 UI_KEIN_SPIELSTAND,Kein Spielstand vorhanden,No saved game
 UI_SPEICHERN_GLEICH,Wird nach der Szene gespeichert,Will save after the scene
 UI_PROLOG_ENDE,Ende des Prologs. Weiter geht es in Welt 1.,End of the prologue. To be continued in World 1.
+UI_RAUM_DORFPLATZ,Dorfplatz Unterbrösel,Underbrösel village square
+UI_RAUM_TAVERNE,Taverne,Tavern
+UI_RAUM_SCHMIEDE,Schmiede,Smithy
+UI_RAUM_ZAUBERSTABLADEN,Zauberstab-Laden,Wand shop
+UI_RAUM_KLASSENZIMMER,Hoggelwarz,Hoggelwarz
+UI_RAUM_TROLLBRUECKE,Troll-Brücke,Troll bridge
+UI_RAUM_WASSERSCHLOSS,Wasserschloss,Moated castle
+UI_RAUM_ZAUBERWALD,Zauberwald,Enchanted forest
+UI_RAUM_BERGWERK,Goblin-Bergwerk,Goblin mine
+UI_RAUM_LUFTSCHLOSS,Luftschloss,Castle in the air
+UI_RAUM_TURMKELLER,Dunkler Turm,Dark Tower
+UI_OBJ_TOADI,Toadi,Toadi
+UI_OBJ_ALWIN,Alwin,Alwin
+UI_OBJ_GOLLO,Gollo,Gollo
+UI_OBJ_HUMBERT,Humbert,Humbert
+UI_OBJ_SCHMIED,Schmied,Blacksmith
+UI_OBJ_WALDEMAR,Waldemar,Waldemar
+UI_OBJ_STABMACHER,Stabmacher,Wandmaker
+UI_OBJ_ROTKAEPPCHEN,Rotkäppchen,Little Red
+UI_OBJ_GRIMMZAHN,Grimmzahn,Grimtooth
+UI_OBJ_GOBLIN_1,Goblin,Goblin
+UI_OBJ_GOBLIN_2,Goblin,Goblin
+UI_OBJ_MINKA,Minka,Minka
+UI_OBJ_HUHN,Huhn,Hen
+UI_OBJ_SCHMIEDE_ZIEGE,Schmiede-Ziege,Smithy goat
+UI_OBJ_XXL_ZIEGE,XXL-Ziege,XXL goat
+UI_OBJ_SCHWAN,Schwan,Swan
+UI_OBJ_GOLDMUENZE,Goldmünze,Gold coin
+UI_OBJ_KAESEFONDUE,Käsefondue,Cheese fondue
+UI_OBJ_KOCHLOEFFEL,Kochlöffel,Wooden spoon
+UI_OBJ_KOCHLOEFFEL_ZAUBERSTAB,Kochlöffel-Zauberstab,Spoon wand
+UI_OBJ_SOCKE,Sortierende Socke,Sorting sock
+UI_OBJ_ZIEGENFELL_VORLEGER,Ziegenfell-Vorleger,Goatskin rug
+UI_OBJ_BESTELLZETTEL,Bestellzettel,Order form
+UI_OBJ_STECKBRIEF,Moderworts Steckbrief,Moderwort's wanted poster
+UI_OBJ_EIMER,Eimer,Bucket
+UI_OBJ_EIMER_MIT_WASSER,Eimer mit Wasser,Bucket of water
+UI_OBJ_KRUG,Krug,Jug
+UI_OBJ_EI,Ei,Egg
+UI_OBJ_TAVERNE_VON_AUSSEN,Taverne,Tavern
+UI_OBJ_SCHMIEDE_VON_AUSSEN,Schmiede,Smithy
+UI_OBJ_ZAUBERSTAB_LADEN_VON_AUSSEN,Zauberstab-Laden,Wand shop
+UI_OBJ_WEG_NACH_HOGGELWARZ,Weg nach Hoggelwarz,Path to Hoggelwarz
+UI_OBJ_WALDWEG,Waldweg,Forest path
+UI_OBJ_BOHNENRANKE,Bohnenranke,Beanstalk
+UI_OBJ_LUFTSCHLOSS,Luftschloss,Castle in the air
+UI_OBJ_HAEUSER,Häuser,Houses
+UI_OBJ_STALL,Stall,Stable
+UI_OBJ_RING_LADEN,Ring-Laden,Ring shop
+UI_OBJ_ERDFLECK,Erdfleck,Patch of soil
+UI_OBJ_BRUNNEN,Brunnen,Well
+UI_OBJ_STATUE,Statue,Statue
+UI_OBJ_DORFBRETT,Dorfbrett,Notice board
+UI_OBJ_DACHBALKEN,Dachbalken,Ceiling beams
+UI_OBJ_TRESEN,Tresen,Bar
+UI_OBJ_FISCHSUPPE,Fischsuppe,Fish soup
+UI_OBJ_FLASCHE_VIELSAFT_LIMO,Vielsaft-Limo,Polyjuice lemonade
+UI_OBJ_WEINKARTE_AM_TRESEN,Weinkarte,Wine list
+UI_OBJ_FONDUE_TOPF,Fondue-Topf,Fondue pot
+UI_OBJ_KELLERTUER,Kellertür,Cellar door
+UI_OBJ_STECKBRIEF_PLAKAT_DRACHE,Drachen-Steckbrief,Dragon wanted poster
+UI_OBJ_LAUTE_MIT_MUENZBECHER,Laute,Lute
+UI_OBJ_KAMIN,Kamin,Fireplace
+UI_OBJ_SCHWERTER_SAMMLUNG,Schwerter,Swords
+UI_OBJ_LEERE_SCHILDER,Leere Schilder,Empty name tags
+UI_OBJ_ESSE,Esse,Forge
+UI_OBJ_AMBOSS,Amboss,Anvil
+UI_OBJ_KOCHGESCHIRR,Kochgeschirr,Cookware
+UI_OBJ_ZAHNSTOCHER,Zahnstocher,Toothpick
+UI_OBJ_ZOLLSTOCK,Zollstock,Folding ruler
+UI_OBJ_REGALE,Regale,Shelves
+UI_OBJ_LEITER,Leiter,Ladder
+UI_OBJ_THEKE_MIT_KISSEN,Theke,Counter
+UI_OBJ_SCHULBANK,Schulbänke,Desks
+UI_OBJ_DURCHGELOECHERTE_ZWEITE_SOCKE,Socke,Sock
+UI_OBJ_TAFEL,Tafel,Blackboard
+UI_OBJ_KESSEL,Kessel,Cauldron
+UI_OBJ_FLASCHENREGAL,Flaschenregal,Bottle shelf
+UI_OBJ_BESEN_IM_SCHRANK,Schrank,Cupboard
+UI_OBJ_WEG_ZUM_WASSERSCHLOSS,Weg zum Wasserschloss,Path to the moated castle
+UI_OBJ_SCHILD,Schild,Sign
+UI_OBJ_BRUECKE,Brücke,Bridge
+UI_OBJ_BACH,Bach,Brook
+UI_OBJ_GRAMMOPHON,Grammophon,Gramophone
+UI_OBJ_NOTENBLAETTER,Notenblätter,Sheet music
+UI_OBJ_WILDBLUMEN,Wildblumen,Wildflowers
+UI_OBJ_SCHILF,Schilf,Reeds
+UI_OBJ_RUDERBOOT,Ruderboot,Rowing boat
+UI_OBJ_SCHILD_AM_TOR,Schild,Sign
+UI_OBJ_UMZUGSKARTONS,Umzugskartons,Moving boxes
+UI_OBJ_TEPPICH,Teppich,Carpet
+UI_OBJ_STOLLENEINGANG,Stolleneingang,Mine entrance
+UI_OBJ_RIESENPILZE,Riesenpilze,Giant mushrooms
+UI_OBJ_LEUCHTPILZE,Leuchtpilze,Glowing mushrooms
+UI_OBJ_NIESROSEN,Niesrosen,Sneezeroses
+UI_OBJ_KUERBISTURM_UND_GLASSCHUH,Kürbisturm,Pumpkin tower
+UI_OBJ_GLUEHWUERMCHEN,Glühwürmchen,Fireflies
+UI_OBJ_LIEFERKARREN,Lieferkarren,Delivery cart
+UI_OBJ_KETCHUP_AM_KARREN,Ketchup,Ketchup
+UI_OBJ_BAEUME,Bäume,Trees
+UI_OBJ_RUNE_TUER,Rune-Tür,Rune door
+UI_OBJ_LOREN,Loren,Mine carts
+UI_OBJ_STREIKSCHILDER,Streikschilder,Strike signs
+UI_OBJ_STREIKPOSTEN,Streikposten,Picket line
+UI_OBJ_KAFFEEMASCHINE,Kaffeemaschine,Coffee machine
+UI_OBJ_FACKELN,Fackeln,Torches
+UI_OBJ_MAERCHEN_SATZUNG,Märchen-Satzung,Fairy tale statutes
+UI_OBJ_PIXEL_FELD,Pixel,Pixel
+UI_ZIEL_W1_R1A,Minka vom Topf weglocken,Lure Minka away from the pot
+UI_ZIEL_W1_R1B,Humbert vom Topf weglocken,Get Humbert away from the pot
+UI_ZIEL_W1_R1C,Gollo den Ring abgewinnen,Win Gollo's ring
+UI_ZIEL_W1_R2,Einen Zauberstab bekommen,Get a magic wand
+UI_ZIEL_W1_R3,Drei Ziegenböcke finden,Find three billy goats
+UI_ZIEL_W1_R4A,Die Ziegen in der richtigen Reihenfolge,The goats in the right order
+UI_ZIEL_W1_R4B,Die Ziegen ihre Sätze sagen lassen,Make the goats say their lines
+UI_ZIEL_W1_R4C,Den Troll ins Wasser bringen,Get the troll into the water
+UI_WELT_1_ENDE,Ende des Vertical Slice. Rätsel 5 bis 13 folgen.,End of the vertical slice. Puzzles 5 to 13 to follow.

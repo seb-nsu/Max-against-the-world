@@ -63,13 +63,53 @@ def pascal(ident):
     return "".join(teil.capitalize() for teil in ident.split("_"))
 
 
-def bedingungen(text):
-    """„nach P1, vor P3“ → [{"art": "nach", "raetsel": "P1"}, …]; Rest bleibt als Text."""
+# Zusätze im Auslöser oder in der Bedingung, die nur erklären (Hinweis, Folge, Animation) und
+# nichts bedingen. Alles andere, was keine Rätsel-, Gegenstand- oder Zeilenbedingung ist, bleibt
+# als „bedingung_text“ stehen: Ansehen-Zeilen zeigt das Spiel trotzdem, Gesprächsoptionen und
+# Zurufe nur, wenn Spiel._bedingung_text_ok() den Text kennt (sonst entscheidet der Rätselcode).
+ANMERKUNG_RE = re.compile(
+    r"^(Hinweis|auch |löst |schaltet |führt |Notizbuch|Lösung|Pixels Wunsch|Szene|weiter |"
+    r"Radio|Schwing|öffnet |Weg [AB]$|Max kennt|Rezept bekannt|die Nase lügt|Besen zuckt|"
+    r"Flasche steht|grüner Rauch|Textvariante)")
+# Auslöser im Abschnitt „Figurenwechsel“ (Szenen-Code WECH) → Schlüssel im Bauplan
+WECHSEL_REGELN = [
+    (r"^Wechsel zu Pixel", "zu_pixel"),
+    (r"^Wechsel zu Max", "zu_max"),
+    (r"^Pixel versucht, einen großen Gegenstand zu nehmen", "pixel_nehmen"),
+    (r"^Pixel benutzt eine Tür", "pixel_tuer"),
+    (r"^Max benutzt Dachbalken", "max_pixel_revier"),
+    (r"^Max redet mit einem Tier", "max_tier"),
+    (r"^Pixel redet mit einer Figur ohne", "pixel_figur"),
+]
+GEGENSTAND_BED_RE = re.compile(r"^(mit|ohne)\s+(.+)$")
+ZEILE_BED_RE = re.compile(r"^nach\s+(\d{4})$")
+
+
+def bedingungen(text, gegenstand_id=None, zeile_id=None):
+    """„nach P1, vor P3“ → [{"art": "nach", "raetsel": "P1"}, …]; Rest bleibt als Text.
+
+    gegenstand_id(name) → ID oder None: „mit Goldmünze“ → {"art": "hat", "gegenstand": …}
+    zeile_id(nr) → Zeilen-ID oder None: „nach 0580“ → {"art": "nach_zeile", "zeile": …}
+    """
     if not text:
         return [], ""
     liste = [{"art": a, "raetsel": r} for a, r in BEDINGUNG_RE.findall(text)]
-    rest = BEDINGUNG_RE.sub("", text).strip(" ,;")
-    return liste, rest
+    rest = []
+    for teil in re.split(r"[,;]", BEDINGUNG_RE.sub("", text)):
+        teil = teil.strip()
+        if not teil or ANMERKUNG_RE.match(teil) or teil in ("und", "oder"):
+            continue
+        m = GEGENSTAND_BED_RE.match(teil)
+        if m and gegenstand_id and gegenstand_id(m.group(2)):
+            liste.append({"art": "hat" if m.group(1) == "mit" else "hat_nicht",
+                          "gegenstand": gegenstand_id(m.group(2))})
+            continue
+        m = ZEILE_BED_RE.match(teil)
+        if m and zeile_id and zeile_id(m.group(1)):
+            liste.append({"art": "nach_zeile", "zeile": zeile_id(m.group(1))})
+            continue
+        rest.append(teil)
+    return liste, ", ".join(rest)
 
 
 def objekt_aus_ausloeser(ausloeser):
@@ -95,26 +135,20 @@ def blasen(zid, texte):
     return out
 
 
-def zeile(z, texte, mal=1):
-    bed, rest = bedingungen(z["bedingung"])
-    d = {"zeile": z["id"], "sprecher": z["sprecher"], "blasen": blasen(z["id"], texte)}
-    if bed:
-        d["bedingung"] = bed
-    if rest:
-        d["bedingung_text"] = rest      # nicht maschinenlesbar: Rätselcode entscheidet
-    if mal > 1:
-        d["mal"] = mal
-    return d
-
-
 def baue(abschnitt):
     welt = json.loads((WELTEN / f"{abschnitt}.json").read_text(encoding="utf-8"))
     layout = yaml.safe_load((LAYOUT / f"{abschnitt}.yaml").read_text(encoding="utf-8")) or {}
     texte = texte_schluessel()
     praefixe = welt["skript_praefix"] if isinstance(welt["skript_praefix"], list) else [welt["skript_praefix"]]
     alle = [z for z in skript_export.zeilen_lesen() if z["abschnitt"] in praefixe]
+    nach_id = {z["id"]: z for z in alle}
     code_zu_raum = {c: r["id"] for r in welt["raeume"] for c in r["skript_code"]}
     fehler, warnungen = [], []
+    # Ausbaustand der Graubox (tools/layout, Schlüssel „_ausbau“): nur diese Rätselschritte sind
+    # gebaut; alle anderen bleiben gesperrt (Hilfe-Pfote, Notizbuch, Ausgänge). Ohne Angabe: alle.
+    ausbau = layout.get("_ausbau") or [r["id"] for r in welt.get("raetsel", [])]
+    gebaute_raeume = [r for r in welt["raeume"] if r["id"] in layout] or welt["raeume"]
+    gebaut = {r["id"] for r in gebaute_raeume}
 
     def name_key(ident, de_name):
         key = f"UI_OBJ_{ident.upper()}"
@@ -124,10 +158,20 @@ def baue(abschnitt):
 
     gegenstaende = {g["id"]: g for g in welt.get("gegenstaende", [])}
     figuren = {f["id"]: f for f in welt.get("figuren", [])}
+    # Namen aus dem Skript → Gegenstand-ID („Käsefondue“, „Kochlöffel-Zauberstab“ → kochloeffel@zauberstab)
+    gegenstand_namen = {slug(g["name"]): gid for gid, g in gegenstaende.items()}
+    gegenstand_namen.update({gid: gid for gid in gegenstaende})
+    gegenstand_namen.update(layout.get("_alias") or {})
+    figur_namen = {slug(f["name"]): fid for fid, f in figuren.items()}
+    figur_namen.update({fid: fid for fid in figuren})
+
+    def gegenstand_id(name):
+        g = gegenstand_namen.get(slug(re.sub(r"\s+im Inventar$", "", name.strip())))
+        return g.split("@")[0] if g else None
 
     # ---- Räume -------------------------------------------------------------------------------
     raeume = []
-    for r in welt["raeume"]:
+    for r in gebaute_raeume:
         lay = layout.get(r["id"], {})
         breite, hoehe = (int(x) for x in r["groesse"].split("x"))
         raum = {
@@ -153,11 +197,22 @@ def baue(abschnitt):
             a = (lay.get("ausgaenge") or {}).get(ziel, {})
             aid = a.get("id", f"ausgang_{ziel}")
             anzeige = a.get("name")
-            raum["ausgaenge"].append({
+            ziel_raum = next((x for x in welt["raeume"] if x["id"] == ziel), {})
+            ausgang = {
                 "id": aid, "script_name": pascal(aid), "ziel": ziel,
                 "name_key": name_key(aid, anzeige or f"Zum {ziel}") if anzeige else f"UI_RAUM_{ziel.upper()}",
                 "rect": a.get("rect", [0, 0, 24, 24]), "gehe": a.get("gehe", [0, 0]),
-            })
+                "erreichbar_ab": str(ziel_raum.get("erreichbar_ab", "start")),
+                "ansehen": [],
+            }
+            # Gesperrt (Ziel erst nach einem Rätsel erreichbar): Zeile beim Klick, oder unsichtbar
+            if a.get("gesperrt"):
+                ausgang["gesperrt"] = a["gesperrt"]
+            if a.get("versteckt"):
+                ausgang["versteckt"] = True
+            if ziel not in gebaut and not a.get("versteckt") and ausgang["erreichbar_ab"] in ausbau:
+                fehler.append(f"{r['id']}: Ausgang {ziel} führt in einen Raum ohne Layout")
+            raum["ausgaenge"].append(ausgang)
             if not a:
                 warnungen.append(f"{r['id']}: Ausgang {ziel} ohne Layout")
         for pid, p in (lay.get("props") or {}).items():
@@ -183,8 +238,6 @@ def baue(abschnitt):
             for o in raum[liste]:
                 if o["id"] == oid:
                     return o
-        if oid in [f["id"] for f in raum["figuren"]]:
-            return None
         lay = (layout.get(raum["id"], {}).get("hotspots") or {}).get(oid)
         if not lay:
             warnungen.append(f"{raum['id']}: Hotspot {oid} ohne Layout, Platzhalter-Rechteck oben links")
@@ -195,106 +248,308 @@ def baue(abschnitt):
         raum["hotspots"].append(o)
         return o
 
+    def zeile_id(z):
+        """„nach 0580“ in Zeile z → Zeilen-ID derselben Szene."""
+        def finde(nr):
+            for k in nach_id:
+                if k.startswith(f"{z['abschnitt']}_{z['szene']}_") and k.endswith("_" + nr):
+                    return k
+            return None
+        return finde
+
+    def zeile(z, mal=1, pixel=False):
+        bed, rest = bedingungen(z["bedingung"], gegenstand_id, zeile_id(z))
+        d = {"zeile": z["id"], "sprecher": z["sprecher"], "blasen": blasen(z["id"], texte)}
+        if bed:
+            d["bedingung"] = bed
+        if rest:
+            d["bedingung_text"] = rest      # nur in Worten: Rätselcode entscheidet
+        if mal > 1:
+            d["mal"] = mal
+        if pixel:
+            d["figur"] = "PIX"              # gilt, wenn Pixel die aktive Figur ist
+        return d
+
+    def aufloesen(raum, name):
+        """Name aus dem Skript → ("figur"|"gegenstand"|"objekt", id, anzeige)."""
+        name = re.sub(r"\s*\([^)]*\)", "", name).strip()
+        name = re.sub(r"\s+(nach|vor|bevor|ohne)\s.*$", "", name)   # „Drehknopf nach P2“
+        im_inventar = name.endswith(" im Inventar")
+        name = re.sub(r"\s+im Inventar$", "", name)
+        sl = slug(name)
+        sl = (layout.get(raum["id"], {}).get("alias") or {}).get(sl, sl)
+        lay = layout.get(raum["id"], {})
+        if not im_inventar and (any(o["id"] == sl for li in ("props", "hotspots", "ausgaenge") for o in raum[li])
+                                or sl in (lay.get("hotspots") or {})):
+            return "objekt", sl, name
+        if not im_inventar and sl in figur_namen:
+            return "figur", figur_namen[sl], name
+        if sl in gegenstand_namen and (im_inventar or not (layout.get(raum["id"], {}).get("hotspots") or {}).get(sl)):
+            return "gegenstand", gegenstand_namen[sl], name
+        return "objekt", sl, name
+
     # ---- Zeilen zuordnen ---------------------------------------------------------------------
-    figuren_ansehen = {}
-    zaehler = {}
+    # Ansehen, Nehmen und Benutzen hängen am Objekt, an der Figur oder am Gegenstand;
+    # „X auf Y“ mit einem Gegenstand X ist eine Kombination; „nach 0360“ ist eine Folgezeile.
+    figur_daten = {}      # Figur-ID → {"ansehen": [...], "pixel_auf": [...], "pixel_redet": [...]}
+    gegenstand_daten = {}  # Gegenstand-ID → {"ansehen": [...], "benutzen": [...], "kombinieren": [...]}
+    wurzel = {}            # Zeilen-ID → Eintrag, an den Folgezeilen gehängt werden
+    wechsel = {}           # Figurenwechsel: zu_pixel/zu_max (Pools) und feste Fälle
+    vorige = None
+
+    def ablegen(art, ziel, eintrag, raum, zustand=None):
+        typ, oid, anzeige = ziel
+        if raum and oid in (layout.get(raum["id"], {}).get("ohne") or []):
+            return  # gehört zu einem Rätsel, das noch nicht gebaut ist (Layout „ohne“)
+        if zustand:
+            eintrag["zustand"] = zustand
+        if typ == "figur":
+            liste = figur_daten.setdefault(oid, {}).setdefault(art, [])
+            if raum:
+                eintrag["raum"] = raum["id"]
+        elif typ == "gegenstand":
+            gid, _, zst = oid.partition("@")
+            if zst:
+                eintrag["zustand"] = zst
+            liste = gegenstand_daten.setdefault(gid, {}).setdefault(art, [])
+        else:
+            liste = objekt(raum, oid, anzeige).setdefault(art, [])
+        liste.append(eintrag)
+        wurzel[eintrag["zeile"]] = eintrag
+
     for z in alle:
         raum = raum_nach_id.get(code_zu_raum.get(z["szene"]))
-        if z["kapitel"].lower().endswith("zurufe") and raum:
-            bed, rest = bedingungen(z["bedingung"])
-            d = {"zeile": z["id"], "sprecher": z["sprecher"], "blasen": blasen(z["id"], texte)}
-            if bed:
-                d["bedingung"] = bed
-            if rest:
-                d["bedingung_text"] = rest
-            raum["zurufe"].append(d)
+        a = z["ausloeser"]
+        letzte, vorige = vorige, z
+        if not raum and z["szene"] not in code_zu_raum.keys():
+            raum = None
+        if (z["kapitel"].lower().endswith("zurufe") or a.startswith("Zuruf")
+                or z["block"].startswith("Zurufe")):
+            if raum:
+                raum["zurufe"].append(zeile(z))
             continue
-        if not raum or z["art"] not in ("Ansehen", "Nehmen"):
+        if z["szene"] in code_zu_raum and not raum:
+            continue  # Raum noch nicht gebaut
+        m = re.match(r"^nach (\d{4})$", a)
+        if m:
+            ziel = zeile_id(z)(m.group(1))
+            if ziel in wurzel:
+                d = zeile(z)
+                wurzel[ziel].setdefault("folge", []).append(d)
+                wurzel[z["id"]] = wurzel[ziel]
             continue
-        oid, anzeige, zusatz = objekt_aus_ausloeser(z["ausloeser"])
-        if z["art"] == "Ansehen":
-            if oid in figuren:
-                figuren_ansehen.setdefault(oid, []).append(zeile(z, texte))
-                continue
-            o = objekt(raum, oid, anzeige)
-            zaehler[(raum["id"], oid)] = zaehler.get((raum["id"], oid), 0) + 1
-            mal = 2 if "zweites mal" in zusatz.lower() else 1
-            o["ansehen"].append(zeile(z, texte, mal))
-        elif z["art"] == "Nehmen":
-            treffer = [p for p in raum["props"] if p["id"] == oid]
+        if z["szene"] == "INV" and a.startswith("Ansehen:"):
+            # Inventar ansehen: „Ansehen: Thunfischdose, leer“ (Zustand nach dem Komma)
+            # „Ansehen: Eimer, mit_wasser, zweites Mal“, „…, Pixel“: Zustand, zweites Mal, Pixel
+            teile_inv = [t.strip() for t in a.split(":", 1)[1].split(";")[0].split(",")]
+            gid = gegenstand_id(teil0 := teile_inv[0])
+            if gid:
+                zusatz = [t.lower() for t in teile_inv[1:]]
+                eintrag = zeile(z, 2 if "zweites mal" in zusatz else 1, "pixel" in zusatz)
+                for zst in teile_inv[1:]:
+                    if zst in gegenstaende.get(gid, {}).get("zustaende", []):
+                        eintrag["zustand"] = zst
+                gegenstand_daten.setdefault(gid, {}).setdefault("ansehen", []).append(eintrag)
+                wurzel[z["id"]] = eintrag
+            else:
+                warnungen.append(f"{z['id']}: Gegenstand {teil0} unbekannt")
+            continue
+        if z["szene"] == "WECH":
+            # Figurenwechsel (Welt-Skript, Abschnitt „Figurenwechsel“): Pools und feste Fälle
+            for muster, schluessel in WECHSEL_REGELN:
+                if re.match(muster, a):
+                    if schluessel in ("zu_pixel", "zu_max"):
+                        wechsel.setdefault(schluessel, []).append(z["id"])
+                    else:
+                        wechsel[schluessel] = z["id"]
+            continue
+        if not raum or z["szene"] in ("HINT", "ERS"):
+            continue
+        if re.match(r"^Pixel redet mit [^,;]+$", z["regie"]) and not a:
+            a = z["regie"]
+        if z["regie"] == "Übersetzung" and not a:
+            a = "Übersetzung"
+        if not a:
+            continue
+        teile = [t.strip() for t in re.sub(r"\s*\([^)]*\)", "", a).split(",")]
+        if a.startswith("Pixel auf "):
+            name = a[len("Pixel auf "):].split(",")[0]
+            typ, fid, _ = aufloesen(raum, name)
+            if typ == "figur":
+                ablegen("pixel_auf", ("figur", fid, name), zeile(z), raum)
+            continue
+        if re.match(r"^Pixel redet mit [^,;]+$", a):
+            name = a[len("Pixel redet mit "):]
+            typ, fid, _ = aufloesen(raum, name)
+            if typ == "figur":
+                ablegen("pixel_redet", ("figur", fid, name), zeile(z), raum)
+            continue
+        if a == "Übersetzung" and letzte and letzte["id"] in wurzel:
+            wurzel[letzte["id"]].setdefault("folge", []).append(zeile(z))
+            wurzel[z["id"]] = wurzel[letzte["id"]]
+            continue
+        if teile[0].startswith("Ansehen") and teile[1:2] == ["Fortsetzung"] and letzte and letzte["id"] in wurzel:
+            wurzel[letzte["id"]].setdefault("folge", []).append(zeile(z))
+            wurzel[z["id"]] = wurzel[letzte["id"]]
+            continue
+        pixel = any(t in ("Pixel", "Pixel schnuppert") for t in teile[1:]) or a.startswith("Pixel schnuppert:")
+        if a.startswith("Pixel schnuppert:"):
+            name = a.split(":", 1)[1].split(",")[0]
+            art = "ansehen"
+        elif a.startswith("Ansehen:") or a.startswith("Ansehen "):
+            name = re.sub(r"^Ansehen:?\s*", "", teile[0])
+            art = "ansehen"
+        elif a.startswith("Nehmen:"):
+            name, art = teile[0].split(":", 1)[1], "nehmen"
+        elif a.startswith("Benutzen:"):
+            name, art = teile[0].split(":", 1)[1], "benutzen"
+        elif re.match(r"^(.+?) auf (.+)$", teile[0]) and gegenstand_id(re.match(r"^(.+?) auf (.+)$", teile[0]).group(1)):
+            m = re.match(r"^(.+?) auf (.+)$", teile[0])
+            eintrag = zeile(z)
+            eintrag["gegenstand"] = gegenstand_id(m.group(1))
+            for teil in m.group(2).split(" oder "):   # „Leuchttrank auf Grimmzahn oder Fackeln“
+                ziel = aufloesen(raum, teil)
+                ablegen("kombinieren" if ziel[0] == "gegenstand" else "gegenstand_auf", ziel, dict(eintrag), raum)
+            continue
+        elif ":" not in a and (z["block"].startswith("Ansehen") or pixel):
+            name, art = teile[0], "ansehen"
+        else:
+            continue
+        mal = 2 if any(t.lower() == "zweites mal" for t in teile[1:]) else 1
+        ziel = aufloesen(raum, name.strip())
+        if art == "nehmen" and {ziel[1], slug(name)} & set(layout.get(raum["id"], {}).get("ohne") or []):
+            continue
+        if art == "nehmen":
+            treffer = [p for p in raum["props"] if p["id"] == ziel[1] or p.get("gegenstand") == ziel[1].split("@")[0]]
             if not treffer:
-                warnungen.append(f"{z['id']}: Nehmen {anzeige} ohne Prop im Layout von {raum['id']}")
+                warnungen.append(f"{z['id']}: Nehmen {name.strip()} ohne Prop im Layout von {raum['id']}")
                 continue
-            treffer[0]["nehmen"] = zeile(z, texte)
+            eintrag = zeile(z)
+            treffer[0]["nehmen"] = eintrag
+            wurzel[z["id"]] = eintrag
+            continue
+        ablegen(art, ziel, zeile(z, mal, pixel), raum)
 
     # ---- Figuren und Gegenstände -------------------------------------------------------------
+    in_raeumen = {f["id"] for r in raeume for f in r["figuren"]} | set(layout.get("_figuren") or [])
+    welt_namen = {f["id"]: f.get("name", "") for f in welt.get("figuren", [])}
     figuren_out = []
     for f in welt.get("figuren", []):
+        f_raeume = f["raum"] if isinstance(f["raum"], list) else [f["raum"]]
+        if not (f.get("spielbar") or f["id"] in in_raeumen or (set(f_raeume) & gebaut and abschnitt == "prolog")):
+            continue
+        d = figur_daten.get(f["id"], {})
         figuren_out.append({
             "id": f["id"], "script_name": pascal(f["id"]), "kuerzel": f.get("kuerzel"),
             "name_key": name_key(f["id"], f["name"]), "groesse_px": f.get("groesse_px", 48),
             "spielbar": bool(f.get("spielbar")), "textfarbe": FARBEN.get(f.get("kuerzel"), "#ffffff"),
             "sprite": f"{RES_PLATZHALTER}figur_{f['id']}.png",
-            "raeume": f["raum"] if isinstance(f["raum"], list) else [f["raum"]],
-            "ansehen": figuren_ansehen.get(f["id"], []),
+            "raeume": f_raeume,
+            "tier": f["id"] in (layout.get("_tiere") or []),
+            "ansehen": d.get("ansehen", []),
+            "pixel_auf": d.get("pixel_auf", []),
+            "pixel_redet": d.get("pixel_redet", []),
+            "gegenstand_auf": d.get("gegenstand_auf", []),
+            "benutzen": d.get("benutzen", []),
         })
+    figur_ids = {f["id"] for f in figuren_out}
     gegenstaende_out = []
     for g in welt.get("gegenstaende", []):
+        # Nur Gegenstände, die in der Graubox vorkommen: als Prop im Layout, als Belohnung oder
+        # Voraussetzung eines gebauten Rätsels, oder aus dem Prolog mitgebracht.
+        herkunft = g.get("herkunft", "")
+        als_prop = any(p.get("gegenstand") == g["id"] for r in raeume for p in r["props"])
+        if not (als_prop or herkunft in ausbau or herkunft == "prolog"
+                or set(g.get("verwendet_in", [])) & set(ausbau)):
+            continue
+        d = gegenstand_daten.get(g["id"], {})
         eintrag = {
             "id": g["id"], "script_name": pascal(g["id"]), "name_key": name_key(g["id"], g["name"]),
             "zustaende": g.get("zustaende", []), "reist_mit": g.get("reist_mit", False),
             "nahansicht": g.get("nahansicht", False),
             "icon": f"{RES_PLATZHALTER}gegenstand_{g['id']}.png",
             "icons": {s: f"{RES_PLATZHALTER}gegenstand_{g['id']}_{slug(s)}.png" for s in g.get("zustaende", [])[1:]},
+            "ansehen": d.get("ansehen", []),
+            "benutzen": d.get("benutzen", []),
+            "kombinieren": d.get("kombinieren", []),
         }
         de = texte.get(eintrag["name_key"])
         if de is not None and de != g["name"]:
             warnungen.append(f"{eintrag['name_key']}: ui.csv „{de}“ weicht von der Welt-Tabelle „{g['name']}“ ab")
         gegenstaende_out.append(eintrag)
 
-    # ---- Gespräche (Abschnitt „Gespräche“: Option + Antworten) -------------------------------
+    # ---- Gespräche (Regie „Option <Figur>“, Antworten bis zur nächsten Option) --------------
     dialoge = {}
-    aktuelle = None
+    aktuelle, block = None, None
     for z in alle:
-        if "gespräche" not in z["kapitel"].lower():
-            continue
-        m = re.match(r"Option (\w+)(.*)", z["regie"])
+        if z["block"] != block:
+            aktuelle, block = None, z["block"]
+        raum_id = code_zu_raum.get(z["szene"])
+        m = re.match(r"Option ([A-ZÄÖÜ][\wäöüß]*)(.*)", z["regie"])
         if m:
             fig = slug(m.group(1))
+            if fig not in figur_ids or (raum_id and raum_id not in gebaut):
+                aktuelle = None
+                continue
             rest = m.group(2)
-            bed, _ = bedingungen(rest)
+            bleibt = "(bleibt)" in rest   # Hinweis- oder Rätseloption: bleibt nach Nutzung (grau)
+            rest = rest.replace("(bleibt)", "")
+            bed, text = bedingungen(rest.replace("beendet das Gespräch", ""), gegenstand_id, zeile_id(z))
             if "nur vor" in rest:
                 bed = [{"art": "vor", "raetsel": r} for r in re.findall(r"nur vor\s+([PRF]\d+)", rest)]
+                # übrige Bedingung in Worten behalten („nach der Nahansicht Kalender, nur vor P3“)
+                text = ", ".join(t.strip() for t in re.sub(r"\([^)]*\)|nur vor\s+[PRF]\d+", "", text).split(",") if t.strip() not in ("", "nur"))
             aktuelle = {"id": z["id"].rsplit("_", 1)[1], "frage": z["id"], "antworten": [],
-                        "beendet": "beendet das Gespräch" in rest}
+                        "beendet": "beendet das Gespräch" in rest, "bleibt": bleibt}
             if bed:
                 aktuelle["bedingung"] = bed
+            if text:
+                aktuelle["bedingung_text"] = text
             d = dialoge.setdefault(fig, {"id": fig, "script_name": pascal(fig), "optionen": []})
             d["optionen"].append(aktuelle)
+        elif m_abs := re.match(r"^Reden(?::\s*([^,;]+))?,\s*Gespräch erschöpft", z["ausloeser"] or z["regie"]):
+            # Abschiedszeilen, wenn nur noch „Tschüss“ übrig ist („Reden: Opa, Gespräch erschöpft“);
+            # ohne Figurennamen gilt der Sprecher der Zeile
+            name_abs = slug(m_abs.group(1)) if m_abs.group(1) else None
+            fig = next((f["id"] for f in figuren_out if name_abs and (f["id"] == name_abs or slug(welt_namen.get(f["id"], "")) == name_abs)), None) \
+                or next((f["id"] for f in figuren_out if f.get("kuerzel") == z["sprecher"]), None)
+            if fig:
+                d = dialoge.setdefault(fig, {"id": fig, "script_name": pascal(fig), "optionen": []})
+                d.setdefault("erschoepft", []).append({"zeile": z["id"], "sprecher": z["sprecher"]})
+            aktuelle = None
         elif aktuelle:
             aktuelle["antworten"].append({"zeile": z["id"], "sprecher": z["sprecher"],
                                           "blasen": blasen(z["id"], texte), "regie": z["regie"]})
 
     # ---- Ersatzpool ---------------------------------------------------------------------------
-    ersatz = {}
+    ersatz, wiederholung, plauder = {}, {}, {}
     for z in skript_export.zeilen_lesen():
         if z["szene"] == "ERS":
             ersatz.setdefault(z["sprecher"], []).append(z["id"])
+        elif z["szene"] == "WDH":   # Wiederholungs-Pool fürs Ansehen ab dem dritten Mal
+            wiederholung.setdefault(z["sprecher"], []).append(z["id"])
+        elif z["szene"] == "PLA":   # Plauderoptionen einer Figur erschöpft (einmalig, Max)
+            plauder.setdefault(z["sprecher"], []).append(z["id"])
 
     plan = {
         "abschnitt": abschnitt,
         "erzeugt_von": "tools/godot_raeume.py",
         "praefix": praefixe[0],
+        "ausbau": ausbau,
         "raeume": raeume,
         "figuren": figuren_out,
         "gegenstaende": gegenstaende_out,
         "nahansichten": [{"id": n["id"], "name_key": name_key(n["id"], n["name"]), "raum": n["raum"],
-                          "bild": f"{RES_PLATZHALTER}nah_{n['id']}.png"} for n in welt.get("nahansichten", [])]
+                          "bild": f"{RES_PLATZHALTER}nah_{n['id']}.png"} for n in welt.get("nahansichten", [])
+                         if n["raum"] in gebaut]
                         + [{"id": g["id"], "name_key": f"UI_OBJ_{g['id'].upper()}", "raum": None,
-                            "bild": f"{RES_PLATZHALTER}nah_{g['id']}.png"} for g in welt.get("gegenstaende", [])
+                            "bild": f"{RES_PLATZHALTER}nah_{g['id']}.png"} for g in gegenstaende_out
                            if g.get("nahansicht")],
         "dialoge": list(dialoge.values()),
+        "figurenwechsel": wechsel,
         "ersatz": ersatz,
+        "wiederholung": wiederholung,
+        "plauder": plauder,
     }
     return plan, fehler, warnungen
 
@@ -408,6 +663,12 @@ def platzhalter(plan):
         for cx in (5, 10, 15, 20):
             d.ellipse([cx - 3, 2 + (2 if cx in (5, 20) else 0), cx + 1, 7 + (2 if cx in (5, 20) else 0)], fill=farbe(f))
         img.save(PLATZHALTER / f"ui_{name}.png")
+    # Pixel-Feld ganz links in der Inventarleiste (05-spielsysteme.md, UI)
+    img = Image.new("RGBA", (24, 24), farbe(FARBEN["PIX"], 0.55))
+    d = ImageDraw.Draw(img)
+    d.rectangle([0, 0, 23, 23], outline=(38, 43, 68, 255))
+    d.text((2, 6), "PIX", font=font, fill=(255, 255, 255, 255))
+    img.save(PLATZHALTER / "ui_pixel_feld.png")
 
 
 def main():

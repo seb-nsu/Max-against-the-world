@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://b1g71nyug0cmm"]
+
+[ext_resource type="Script" path="res://game/characters/stabmacher/character_stabmacher_state.gd" id="1_jpmfx"]
+
+[resource]
+resource_name = "Stabmacher"
+script = ExtResource("1_jpmfx")
+script_name = "Stabmacher"
+scene = "res://game/characters/stabmacher/character_stabmacher.tscn"

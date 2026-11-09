@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://b2n6tqroh523n"]
+
+[ext_resource type="Texture2D" uid="uid://dloiriedxh3qr" path="res://grafik/platzhalter/gegenstand_socke.png" id="1_qwo8y"]
+[ext_resource type="Script" path="res://game/inventory_items/socke/inventory_item_socke.gd" id="1_syjt1"]
+
+[node name="ItemSocke" type="TextureRect" unique_id=590173601]
+texture_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 4
+mouse_filter = 0
+texture = ExtResource("1_qwo8y")
+stretch_mode = 5
+script = ExtResource("1_syjt1")
+script_name = "Socke"
+description = "UI_OBJ_SOCKE"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1664430837]

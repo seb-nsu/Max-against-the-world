@@ -4,9 +4,14 @@ extends PopochiuRoom
 ## Basisklasse der Räume.
 ##
 ## Beim Betreten: Raum als besucht merken, Spieler an den Ankunfts-Marker „Von<Herkunft>“
-## stellen, den Zustand anwenden (_zustand_anwenden()), nach dem Übergang automatisch speichern
+## stellen, ab Welt 1 die zweite Spielfigur danebenstellen, den Zustand anwenden
+## (_zustand_anwenden(): Props, Ausgänge, Figuren), nach dem Übergang automatisch speichern
 ## und die eigene Szene des Raums starten (_nach_uebergang()). Nach dem Laden eines Spielstands
 ## wird nur der Zustand angewendet.
+
+
+## Regeln eines Abschnitts, die mehrere Räume betreffen (Begleiter). Siehe skripte/welt_1.gd.
+const ABSCHNITT_REGELN := {"welt-1": preload("res://skripte/welt_1.gd")}
 
 
 func bauplan() -> Dictionary:
@@ -27,8 +32,10 @@ func _on_room_entered() -> void:
 		C.player.position = get_marker_position("Von" + Spiel.herkunft_raum)
 	elif erster_besuch and has_marker("Start"):
 		C.player.position = get_marker_position("Start")
+	partner_aufstellen(true)
 	_zustand_anwenden()
 	await _raum_betreten(erster_besuch)
+	Spiel.pixel_feld_pruefen()
 
 
 func _on_room_transition_finished() -> void:
@@ -41,7 +48,9 @@ func _on_room_transition_finished() -> void:
 
 func _on_restore_from_savegame() -> void:
 	Spiel.herkunft_raum = ""
+	partner_aufstellen()
 	_zustand_anwenden()
+	Spiel.pixel_feld_pruefen()
 	await _nach_laden()
 
 
@@ -49,14 +58,35 @@ func has_marker(name: String) -> bool:
 	return $Markers.has_node(name)
 
 
+## Ab Welt 1 (Pixel spielbar) stehen Max und Pixel immer zusammen im Raum: die nicht aktive
+## Figur kommt neben die aktive, wenn sie noch nicht hier ist.
+## neben_spieler: auch eine schon vorhandene Figur neben die aktive stellen (beim Betreten).
+func partner_aufstellen(neben_spieler := false) -> void:
+	if not Bauplan.figur_spielbar(Zustand.abschnitt, "pixel") or not is_instance_valid(C.player):
+		return
+	var partner: PopochiuCharacter = C.Pixel if C.player == C.Max else C.Max
+	var x := C.player.position.x + (-20.0 if C.player.position.x > width / 2.0 else 20.0)
+	var pos := Vector2(x, C.player.position.y)
+	if not has_character(partner.script_name):
+		Spiel.figur_hier(partner.script_name, true, pos)
+	elif neben_spieler:
+		partner.position = pos
+
+
 ## Bild, Sichtbarkeit und Positionen aus Schaltern und Werten ableiten (nie speichern).
 func _zustand_anwenden() -> void:
+	for h in get_hotspots():
+		if h is CQAusgang:
+			h.sichtbar_anpassen()
 	for p in get_props():
 		if p is CQProp:
 			var g: String = p.bauplan().get("gegenstand", "") if p.bauplan().get("gegenstand") else ""
 			if not g.is_empty():
 				var sn := Bauplan.gegenstand_script_name(g)
 				p.visible = not I.has_item_been_collected(sn)
+	var regeln = ABSCHNITT_REGELN.get(Zustand.abschnitt)
+	if regeln:
+		regeln.figuren_anwenden(self)
 
 
 ## Vor dem Einblenden (Figuren stellen). erster_besuch: Raum zum ersten Mal betreten.

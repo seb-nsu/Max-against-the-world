@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://bppnpxh0ufnvw"]
+
+[ext_resource type="Script" path="res://game/rooms/dorfplatz/hotspots/weg_nach_hoggelwarz/hotspot_weg_nach_hoggelwarz.gd" id="1_vurd4"]
+
+[node name="WegNachHoggelwarz" type="Area2D" unique_id=244028609]
+script = ExtResource("1_vurd4")
+script_name = "WegNachHoggelwarz"
+description = "Weg Nach Hoggelwarz"
+cursor = 1
+interaction_polygon = PackedVector2Array(-17, -25, 17, -25, 17, 25, -17, 25)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=542018945]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

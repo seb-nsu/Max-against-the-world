@@ -96,9 +96,7 @@ func naechste_zeilen(schritt: String, mit_wartezeile := true) -> Array:
 	# Nächste Stufe noch gesperrt: Wartezeile, dann die letzte Stufe noch einmal
 	var out := []
 	if mit_wartezeile and s < 3:
-		var warte: String = Bauplan.hinweise.get(Zustand.abschnitt, {}).get(
-			"sonderzeilen", {}
-		).get("wartezeile", "")
+		var warte := _sonderzeile("wartezeile")
 		if not warte.is_empty():
 			out.append(warte)
 	out.append(_zeile(daten, s))
@@ -140,13 +138,13 @@ func _schritt(schritt: String) -> Dictionary:
 
 
 func _nichts_offen_zeile() -> String:
-	var praefix: String = Bauplan.plaene.get(Zustand.abschnitt, {}).get("praefix", "")
-	var belegt := []
-	for s in _schritte():
-		for h in s.hinweise:
-			belegt.append(h.zeile)
-	for nr in ["9990", "0010"]:
-		var key := "%s_HINT_PIX_%s" % [praefix, nr]
-		if tr(key) != key and not key in belegt:
-			return key
-	return ""
+	return _sonderzeile("nichts_offen")
+
+
+## Sonderzeile der Hinweis-Datei (nichts_offen, wartezeile). Fehlt sie im Abschnitt, gilt die
+## des Prologs (Welt 1 hat keine eigene Wartezeile, siehe offene-punkte.md).
+func _sonderzeile(art: String) -> String:
+	var z: String = Bauplan.hinweise.get(Zustand.abschnitt, {}).get("sonderzeilen", {}).get(art, "")
+	if z.is_empty():
+		z = Bauplan.hinweise.get("prolog", {}).get("sonderzeilen", {}).get(art, "")
+	return z

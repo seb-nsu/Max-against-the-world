@@ -2,7 +2,8 @@ extends CanvasLayer
 ## Notizbuch (05-spielsysteme.md, Bildschirme). Öffnet sich immer auf Seite 1.
 ## Seite 1: aktuelle Ziele (offene Rätselschritte aus der Hinweis-Datei); ein Klick auf ein
 ##          Ziel macht es zum Schritt, den die Hilfe-Pfote nimmt (Hinweis-Regel 2).
-## Seite 2: Regeln und Passwort-Teile (erst nach geöffneter Nahansicht; im Prolog leer).
+## Seite 2: Regeln und Passwort-Teile (erst nach geöffneter Nahansicht; im Prolog leer;
+##          die Graubox zeigt nur den Namen der Nahansicht).
 ## Seite 3: Pixels Einkaufsliste (je Welt ein Wunsch; im Prolog leer).
 
 signal geschlossen
@@ -47,8 +48,22 @@ func blaettern(richtung: int) -> void:
 ## Die Ziele von Seite 1 als [{schritt, text_key}] (auch für Tests).
 static func ziele() -> Array:
 	var out := []
+	var praefix: String = Bauplan.plaene.get(Zustand.abschnitt, {}).get("praefix", "")
 	for schritt in Zustand.offene_schritte():
-		out.append({schritt = schritt, text_key = "UI_ZIEL_" + schritt})
+		# Schlüssel-Schema UI_ZIEL_<Abschnitt>_<Rätsel-ID> (05-spielsysteme.md)
+		out.append({schritt = schritt, text_key = "UI_ZIEL_%s_%s" % [praefix, schritt.to_upper()]})
+	return out
+
+
+## Seite 2: Regeln aus Nahansichten, die im aktuellen Abschnitt angesehen wurden (Satzung …).
+## Der Prolog trägt nichts ein (Kalender und Zettel sind keine Regeln).
+static func regeln() -> Array:
+	var out := []
+	if Zustand.abschnitt == "prolog":
+		return out
+	for n in Bauplan.plaene.get(Zustand.abschnitt, {}).get("nahansichten", []):
+		if n.id in Zustand.nahansichten:
+			out.append(n.name_key)
 	return out
 
 
@@ -67,6 +82,11 @@ func zeigen() -> void:
 				Zustand.notizbuch_ziel = z.schritt
 				zeigen())
 			eintraege.append(b)
+	elif seite == 1:
+		for key in regeln():
+			var l := Label.new()
+			l.text = "- " + tr(key)
+			eintraege.append(l)
 	if eintraege.is_empty():
 		var l := Label.new()
 		l.text = tr("UI_NOTIZBUCH_LEER")

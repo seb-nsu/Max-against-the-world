@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://bullrpcv57c6a"]
+
+[ext_resource type="Script" path="res://game/inventory_items/krug/inventory_item_krug.gd" id="1_a1tgw"]
+[ext_resource type="Texture2D" uid="uid://bptv2jdkodj37" path="res://grafik/platzhalter/gegenstand_krug.png" id="1_ni7ms"]
+
+[node name="ItemKrug" type="TextureRect" unique_id=773808396]
+texture_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 4
+mouse_filter = 0
+texture = ExtResource("1_ni7ms")
+stretch_mode = 5
+script = ExtResource("1_a1tgw")
+script_name = "Krug"
+description = "UI_OBJ_KRUG"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1703905666]

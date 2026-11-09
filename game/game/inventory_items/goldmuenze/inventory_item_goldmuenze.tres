@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://bx0i538qtolyw"]
+
+[ext_resource type="Script" path="res://game/inventory_items/goldmuenze/inventory_item_goldmuenze_state.gd" id="1_r4pct"]
+
+[resource]
+resource_name = "Goldmuenze"
+script = ExtResource("1_r4pct")
+script_name = "Goldmuenze"
+scene = "res://game/inventory_items/goldmuenze/inventory_item_goldmuenze.tscn"

@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://d1ikwea6w4s3i"]
+
+[node name="Tor" type="Marker2D" unique_id=1447153094]
+visible = false

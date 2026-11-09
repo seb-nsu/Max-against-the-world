@@ -1,0 +1,285 @@
+# Platzhalter-Layout Welt 1 für die Graubox (tools/godot_raeume.py), Vertical Slice.
+#
+# Nur Startwerte: Der Godot-Bau (addons/couch_quest_bau) setzt Rechtecke, Laufbereich und
+# Positionen ausschließlich beim ersten Anlegen eines Objekts. Danach gehören Umrisse und
+# Positionen der Szene in Godot (03-produktion.md, Arbeitsteilung). Lage nach
+# grafik/welt-1.md (Motiv-Spalte: links, Mitte, rechts; Bodenband im unteren Drittel).
+#
+# Koordinaten in Spielpixeln, Rechteck = [x, y, breite, hoehe], gehe = Punkt, zu dem die Figur
+# vor der Aktion läuft. Schlüssel der Hotspots = Objekt-ID aus dem Auslöser des Skripts.
+#
+# Sonderschlüssel (beginnen mit _):
+#   _ausbau   Rätselschritte, die in der Graubox gebaut sind (Stufe 2: Rätsel 1 bis 4). Alle
+#             anderen bleiben gesperrt: Pfote, Notizbuch und Ausgänge verweisen nicht auf sie.
+#   _alias    Name im Skript → Gegenstand-ID, optional mit Zustand (id@zustand)
+#   _tiere    Figuren, mit denen nur Pixel reden kann (Max: W1_WECH_MAX_0100)
+#   _figuren  Figuren ohne festen Platz, die erst im Spiel dazukommen (Ziegen, Lieferung)
+# Je Raum:
+#   alias     Name im Skript → Objekt-ID in diesem Raum
+#   ohne      Objekte, deren Zeilen zu noch nicht gebauten Rätseln gehören (werden übergangen)
+#   ausgaenge.<ziel>.gesperrt   Zeile beim Klick, solange das Ziel nicht erreichbar ist
+#   ausgaenge.<ziel>.versteckt  Ausgang unsichtbar, solange das Ziel nicht erreichbar ist
+
+_ausbau: [R1, R1a, R1b, R1c, R2, R3, R4, R4a, R4b, R4c]
+_alias:
+  kochloeffel_zauberstab: kochloeffel@zauberstab
+  socke: socke
+  sortierende_socke: socke
+  ziegenmilch: krug@mit_ziegenmilch
+  vorleger: ziegenfell_vorleger
+  zauberbohne: zauberbohne
+  eimer_mit_wasser: eimer@mit_wasser
+  leerer_eimer: eimer@leer
+  eimer_leer: eimer@leer
+_tiere: [minka, huhn, schmiede_ziege, xxl_ziege, schwan]
+_figuren: [schmiede_ziege, xxl_ziege, rotkaeppchen]
+
+dorfplatz:
+  farbe: "#7d8f4e"
+  laufbereich: [[4, 140], [636, 140], [636, 178], [4, 178]]
+  marker:
+    start: [300, 160]
+    von_taverne: [40, 158]
+    von_schmiede: [548, 158]
+    von_zauberstabladen: [214, 158]
+    von_klassenzimmer: [270, 150]
+    von_trollbruecke: [610, 160]
+    ziegen: [590, 164]           # dort warten die Ziegen, wenn sie Max folgen
+    lieferung: [520, 162]        # Rotkäppchen hält mit dem Karren
+  figuren:
+    toadi: [340, 166]
+  alias:
+    luftschloss_am_himmel: luftschloss
+    stall_mit_kokosnuessen: stall
+    bestellzettel_am_dorfbrett: bestellzettel
+    steckbrief: steckbrief
+    moderworts_steckbrief_am_dorfbrett: steckbrief
+    weg: weg_nach_hoggelwarz
+    erdfleck_links_vom_brunnen: erdfleck
+  hotspots:
+    luftschloss: {rect: [282, 4, 56, 26], gehe: [310, 150], name: Luftschloss}
+    haeuser: {rect: [250, 30, 60, 40], gehe: [280, 150], name: Häuser}
+    stall: {rect: [70, 70, 50, 66], gehe: [94, 152], name: Stall}
+    ring_laden: {rect: [128, 76, 46, 60], gehe: [150, 152], name: Ring-Laden}
+    erdfleck: {rect: [330, 140, 28, 8], gehe: [344, 158], name: Erdfleck}
+    brunnen: {rect: [370, 92, 60, 48], gehe: [400, 152], name: Brunnen}
+    statue: {rect: [380, 52, 40, 38], gehe: [400, 152], name: Statue}
+    dorfbrett: {rect: [446, 74, 54, 56], gehe: [472, 152], name: Dorfbrett}
+  props:
+    eimer: {rect: [432, 128, 12, 12], gehe: [436, 154]}
+    bestellzettel: {rect: [452, 80, 14, 12], gehe: [472, 152]}
+    steckbrief: {rect: [476, 78, 20, 26], gehe: [472, 152]}
+  ausgaenge:
+    taverne: {rect: [8, 60, 52, 80], gehe: [34, 152], id: taverne_von_aussen, name: Taverne}
+    zauberstabladen: {rect: [188, 66, 50, 74], gehe: [212, 152], id: zauberstab_laden_von_aussen, name: Zauberstab-Laden}
+    klassenzimmer: {rect: [244, 74, 34, 50], gehe: [262, 146], id: weg_nach_hoggelwarz, name: Weg nach Hoggelwarz}
+    schmiede: {rect: [516, 64, 62, 76], gehe: [546, 152], id: schmiede_von_aussen, name: Schmiede}
+    trollbruecke: {rect: [602, 96, 36, 44], gehe: [624, 158], id: waldweg, name: Waldweg}
+    luftschloss: {rect: [326, 30, 30, 110], gehe: [344, 158], id: bohnenranke, name: Bohnenranke, versteckt: true}
+
+taverne:
+  farbe: "#6e4a32"
+  laufbereich: [[4, 140], [316, 140], [316, 178], [4, 178]]
+  marker:
+    start: [292, 160]
+    von_dorfplatz: [292, 160]
+    balken: [150, 26]            # Pixel auf dem Dachbalken
+    keller: [70, 140]            # Humbert verschwindet hinter der Kellertür
+  figuren:
+    humbert: [40, 156]
+    gollo: [174, 166]
+    minka: [112, 150]
+    huhn: [150, 126]
+  alias:
+    fondue: fondue_topf
+    laute: laute_mit_muenzbecher
+    schwerter: schwerter_sammlung
+    vielsaft_limo: flasche_vielsaft_limo
+    weinkarte: weinkarte_am_tresen
+    vorleger: ziegenfell_vorleger
+    ei_unter_dem_huhn: ei
+  hotspots:
+    dachbalken: {rect: [0, 0, 320, 18], gehe: [160, 156], name: Dachbalken}
+    tresen: {rect: [4, 104, 86, 34], gehe: [44, 152], name: Tresen}
+    fischsuppe: {rect: [16, 96, 14, 8], gehe: [30, 152], name: Fischsuppe}
+    flasche_vielsaft_limo: {rect: [34, 86, 8, 16], gehe: [40, 152], name: Vielsaft-Limo}
+    weinkarte_am_tresen: {rect: [48, 88, 16, 12], gehe: [54, 152], name: Weinkarte}
+    fondue_topf: {rect: [90, 110, 24, 26], gehe: [104, 154], name: Fondue-Topf}
+    kellertuer: {rect: [62, 54, 24, 44], gehe: [74, 146], name: Kellertür}
+    steckbrief_plakat_drache: {rect: [130, 44, 28, 32], gehe: [146, 150], name: Drachen-Steckbrief}
+    laute_mit_muenzbecher: {rect: [182, 92, 20, 30], gehe: [190, 152], name: Laute}
+    kamin: {rect: [226, 76, 52, 62], gehe: [250, 152], name: Kamin}
+    schwerter_sammlung: {rect: [226, 40, 52, 22], gehe: [250, 152], name: Schwerter}
+    leere_schilder: {rect: [226, 64, 52, 10], gehe: [250, 152], name: Leere Schilder}
+  props:
+    ziegenfell_vorleger: {rect: [222, 154, 44, 12], gehe: [244, 166]}
+    ei: {rect: [146, 130, 8, 6], gehe: [150, 150]}
+  ausgaenge:
+    dorfplatz: {rect: [298, 60, 20, 80], gehe: [300, 160], id: ausgang_dorfplatz}
+
+schmiede:
+  farbe: "#5d4a42"
+  laufbereich: [[4, 140], [316, 140], [316, 178], [4, 178]]
+  marker:
+    start: [290, 160]
+    von_dorfplatz: [290, 160]
+  figuren:
+    schmied: [120, 160]
+    schmiede_ziege: [180, 166]
+  alias:
+    krug_beim_kochgeschirr: krug
+    ziege: schmiede_ziege
+  hotspots:
+    esse: {rect: [10, 70, 70, 70], gehe: [60, 154], name: Esse}
+    amboss: {rect: [130, 116, 40, 24], gehe: [150, 154], name: Amboss}
+    kochgeschirr: {rect: [206, 50, 70, 56], gehe: [240, 152], name: Kochgeschirr}
+  props:
+    krug: {rect: [278, 70, 14, 16], gehe: [276, 152]}
+  ausgaenge:
+    dorfplatz: {rect: [298, 40, 20, 100], gehe: [304, 160], id: ausgang_dorfplatz}
+
+zauberstabladen:
+  farbe: "#4f3f5e"
+  laufbereich: [[4, 140], [316, 140], [316, 178], [4, 178]]
+  marker:
+    start: [290, 160]
+    von_dorfplatz: [290, 160]
+  figuren:
+    stabmacher: [200, 150]
+  alias:
+    theke: theke_mit_kissen
+    schachtel_im_regal: regale
+    kochloeffel_auf_dem_kissen: kochloeffel
+  hotspots:
+    fenster: {rect: [20, 10, 26, 26], gehe: [40, 152], name: Fenster}
+    regale: {rect: [4, 40, 86, 100], gehe: [50, 152], name: Regale}
+    leiter: {rect: [92, 30, 18, 110], gehe: [100, 152], name: Leiter}
+    theke_mit_kissen: {rect: [120, 104, 84, 36], gehe: [160, 154], name: Theke}
+  props:
+    zahnstocher: {rect: [134, 96, 12, 6], gehe: [140, 154], item: null}
+    zollstock: {rect: [152, 96, 18, 6], gehe: [160, 154], item: null}
+    kochloeffel: {rect: [176, 94, 18, 8], gehe: [184, 154]}
+  ausgaenge:
+    dorfplatz: {rect: [298, 50, 20, 90], gehe: [304, 160], id: ausgang_dorfplatz}
+
+klassenzimmer:
+  farbe: "#5a6988"
+  laufbereich: [[4, 140], [316, 140], [316, 178], [4, 178]]
+  marker:
+    start: [30, 160]
+    von_dorfplatz: [30, 160]
+  figuren:
+    alwin: [150, 158]
+    toadi: [16, 150]
+  alias:
+    zweite_socke: durchgeloecherte_zweite_socke
+  ohne: [flasche_1, flasche_2, flasche_3, flasche_4, flasche_5, flasche_6]
+  hotspots:
+    schulbank: {rect: [30, 110, 60, 30], gehe: [60, 154], name: Schulbänke}
+    durchgeloecherte_zweite_socke: {rect: [96, 116, 16, 16], gehe: [104, 154], name: Socke}
+    tafel: {rect: [124, 30, 70, 40], gehe: [160, 152], name: Tafel}
+    kessel: {rect: [136, 100, 44, 40], gehe: [158, 156], name: Kessel}
+    flaschenregal: {rect: [210, 70, 60, 30], gehe: [240, 152], name: Flaschenregal}
+    besen_im_schrank: {rect: [276, 44, 40, 96], gehe: [290, 152], name: Schrank}
+    fenster: {rect: [60, 10, 60, 30], gehe: [90, 152], name: Fenster}
+  ausgaenge:
+    dorfplatz: {rect: [2, 60, 20, 80], gehe: [14, 160], id: ausgang_dorfplatz}
+
+trollbruecke:
+  farbe: "#6a8a4a"
+  laufbereich: [[4, 140], [316, 140], [316, 178], [4, 178]]
+  marker:
+    start: [30, 160]
+    von_dorfplatz: [30, 160]
+    von_zauberwald: [296, 160]
+    von_wasserschloss: [250, 146]
+    ziegen: [64, 166]            # Dorfende der Brücke: hier warten die Ziegen
+    bruecke_mitte: [160, 150]
+    wasser: [200, 170]           # Waldemar im Fußbad
+  figuren:
+    waldemar: [214, 156]
+  alias:
+    lore: bruecke
+  hotspots:
+    schild: {rect: [50, 70, 30, 40], gehe: [64, 154], name: Schild}
+    bruecke: {rect: [90, 110, 140, 30], gehe: [160, 150], name: Brücke}
+    bach: {rect: [90, 160, 140, 18], gehe: [160, 152], name: Bach}
+    grammophon: {rect: [120, 140, 20, 14], gehe: [130, 154], name: Grammophon}
+    notenblaetter: {rect: [146, 144, 24, 10], gehe: [158, 154], name: Notenblätter}
+    wildblumen: {rect: [4, 146, 30, 14], gehe: [24, 160], name: Wildblumen}
+  ausgaenge:
+    dorfplatz: {rect: [2, 80, 18, 60], gehe: [12, 160], id: ausgang_dorfplatz}
+    zauberwald: {rect: [296, 70, 22, 70], gehe: [304, 160], id: waldweg, name: Waldweg, gesperrt: W1_BRUE_MAX_0190}
+    wasserschloss: {rect: [240, 70, 30, 40], gehe: [252, 146], id: weg_zum_wasserschloss, name: Weg zum Wasserschloss, gesperrt: W1_BRUE_MAX_0190}
+
+wasserschloss:
+  farbe: "#4f7a9a"
+  laufbereich: [[4, 140], [316, 140], [316, 178], [4, 178]]
+  marker:
+    start: [24, 160]
+    von_trollbruecke: [24, 160]
+    tor: [170, 152]
+  figuren:
+    schwan: [270, 168]
+    toadi: [210, 160]
+  alias:
+    kartons: umzugskartons
+  hotspots:
+    schilf: {rect: [20, 110, 30, 30], gehe: [40, 156], name: Schilf}
+    ruderboot: {rect: [54, 130, 40, 14], gehe: [70, 156], name: Ruderboot}
+    schild_am_tor: {rect: [160, 60, 24, 16], gehe: [170, 152], name: Schild}
+    umzugskartons: {rect: [190, 90, 40, 40], gehe: [200, 152], name: Umzugskartons}
+    teppich: {rect: [234, 116, 30, 12], gehe: [240, 152], name: Teppich}
+  ausgaenge:
+    trollbruecke: {rect: [2, 70, 16, 70], gehe: [12, 160], id: ausgang_trollbruecke}
+
+zauberwald:
+  farbe: "#3f5a3a"
+  laufbereich: [[4, 140], [316, 140], [316, 178], [4, 178]]
+  marker:
+    start: [24, 160]
+    von_trollbruecke: [24, 160]
+    von_bergwerk: [292, 160]
+  figuren:
+    rotkaeppchen: [240, 160]
+  alias:
+    glasschuh: kuerbisturm_und_glasschuh
+    ketchup: ketchup_am_karren
+    niesrosen_geschlossen: niesrosen
+  ohne: [leuchtpilz, ketchup]   # Rätsel 6 und 10: nur Ansehen
+  hotspots:
+    riesenpilze: {rect: [20, 60, 60, 70], gehe: [50, 154], name: Riesenpilze}
+    leuchtpilze: {rect: [30, 130, 30, 10], gehe: [44, 156], name: Leuchtpilze}
+    niesrosen: {rect: [120, 110, 40, 30], gehe: [140, 154], name: Niesrosen}
+    kuerbisturm_und_glasschuh: {rect: [150, 50, 30, 60], gehe: [166, 154], name: Kürbisturm}
+    gluehwuermchen: {rect: [90, 10, 80, 30], gehe: [130, 154], name: Glühwürmchen}
+    lieferkarren: {rect: [200, 110, 40, 30], gehe: [220, 154], name: Lieferkarren}
+    ketchup_am_karren: {rect: [240, 116, 8, 14], gehe: [236, 154], name: Ketchup}
+    baeume: {rect: [90, 40, 50, 60], gehe: [110, 154], name: Bäume}
+  ausgaenge:
+    trollbruecke: {rect: [2, 70, 16, 70], gehe: [12, 160], id: ausgang_trollbruecke}
+    bergwerk: {rect: [270, 60, 48, 80], gehe: [296, 156], id: stolleneingang, name: Stolleneingang}
+
+bergwerk:
+  farbe: "#4a3f3a"
+  laufbereich: [[4, 140], [316, 140], [316, 178], [4, 178]]
+  marker:
+    start: [26, 160]
+    von_zauberwald: [26, 160]
+  figuren:
+    grimmzahn: [180, 160]
+    goblin_1: [150, 158]
+    goblin_2: [214, 162]
+  alias:
+    lore: loren
+    goblin_arbeiter_1: goblin_1
+    goblin_arbeiter_2: goblin_2
+  hotspots:
+    loren: {rect: [24, 116, 60, 24], gehe: [56, 156], name: Loren}
+    streikschilder: {rect: [100, 70, 50, 40], gehe: [124, 154], name: Streikschilder}
+    streikposten: {rect: [96, 150, 140, 6], gehe: [120, 162], name: Streikposten}
+    kaffeemaschine: {rect: [160, 110, 20, 20], gehe: [168, 154], name: Kaffeemaschine}
+    fackeln: {rect: [60, 30, 140, 16], gehe: [130, 154], name: Fackeln}
+  ausgaenge:
+    zauberwald: {rect: [2, 60, 18, 80], gehe: [12, 160], id: ausgang_zauberwald}
+    turmkeller: {rect: [270, 60, 46, 80], gehe: [266, 158], id: rune_tuer, name: Rune-Tür, gesperrt: W1_BERG_MAX_0170}

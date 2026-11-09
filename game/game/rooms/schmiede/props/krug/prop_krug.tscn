@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://d0t5rog4vrqb2"]
+
+[ext_resource type="Script" path="res://game/rooms/schmiede/props/krug/prop_krug.gd" id="1_4itmo"]
+
+[node name="Krug" type="Area2D" unique_id=843535459]
+script = ExtResource("1_4itmo")
+script_name = "Krug"
+description = "Krug"
+cursor = 1
+interaction_polygon = PackedVector2Array(-7, -8, 7, -8, 7, 8, -7, 8)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1996430039]
+texture_filter = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1923244878]
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=76490667]
+visible = false
+modulate = Color(1, 1, 0, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+
+[node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=904663581]
+visible = false
+affect_navigation_mesh = true
+carve_navigation_mesh = true

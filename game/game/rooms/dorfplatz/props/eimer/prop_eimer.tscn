@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://chgdinqgqjvh8"]
+
+[ext_resource type="Script" path="res://game/rooms/dorfplatz/props/eimer/prop_eimer.gd" id="1_l40iw"]
+
+[node name="Eimer" type="Area2D" unique_id=1760993508]
+script = ExtResource("1_l40iw")
+script_name = "Eimer"
+description = "Eimer"
+cursor = 1
+interaction_polygon = PackedVector2Array(-6, -6, 6, -6, 6, 6, -6, 6)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1879104409]
+texture_filter = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1721807628]
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=695224359]
+visible = false
+modulate = Color(1, 1, 0, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+
+[node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=544716742]
+visible = false
+affect_navigation_mesh = true
+carve_navigation_mesh = true

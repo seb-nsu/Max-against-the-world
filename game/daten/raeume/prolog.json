@@ -2,6 +2,11 @@
  "abschnitt": "prolog",
  "erzeugt_von": "tools/godot_raeume.py",
  "praefix": "P0",
+ "ausbau": [
+  "P1",
+  "P2",
+  "P3"
+ ],
  "raeume": [
   {
    "id": "wohnzimmer",
@@ -180,7 +185,9 @@
      "gehe": [
       300,
       158
-     ]
+     ],
+     "erreichbar_ab": "start",
+     "ansehen": []
     }
    ],
    "zurufe": [
@@ -346,7 +353,9 @@
      "gehe": [
       20,
       164
-     ]
+     ],
+     "erreichbar_ab": "start",
+     "ansehen": []
     },
     {
      "id": "ausgang_dachboden",
@@ -362,7 +371,9 @@
      "gehe": [
       298,
       52
-     ]
+     ],
+     "erreichbar_ab": "start",
+     "ansehen": []
     }
    ],
    "zurufe": []
@@ -442,7 +453,30 @@
       176,
       158
      ],
-     "ansehen": []
+     "ansehen": [],
+     "benutzen": [
+      {
+       "zeile": "P0_DACH_MAX_0670",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_DACH_MAX_0670"
+       ],
+       "bedingung": [
+        {
+         "art": "nach",
+         "raetsel": "P2"
+        }
+       ],
+       "bedingung_text": "und nach 0630"
+      },
+      {
+       "zeile": "P0_DACH_MAX_0680",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_DACH_MAX_0680"
+       ]
+      }
+     ]
     },
     {
      "id": "werkzeugkiste",
@@ -520,7 +554,6 @@
        "blasen": [
         "P0_DACH_MAX_0630"
        ],
-       "bedingung_text": "öffnet die Nahansicht Kalender, Max kennt ab jetzt die Nummer",
        "mal": 2
       }
      ]
@@ -829,7 +862,17 @@
        ]
       }
      ],
-     "nehmen": null
+     "nehmen": null,
+     "gegenstand_auf": [
+      {
+       "zeile": "P0_DACH_MAX_1130",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_DACH_MAX_1130"
+       ],
+       "gegenstand": "dosenoeffner"
+      }
+     ]
     },
     {
      "id": "thunfischdose",
@@ -922,6 +965,31 @@
      "gehe": [
       250,
       166
+     ],
+     "erreichbar_ab": "start",
+     "ansehen": [
+      {
+       "zeile": "P0_DACH_MAX_1010",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_DACH_MAX_1010"
+       ]
+      }
+     ],
+     "benutzen": [
+      {
+       "zeile": "P0_DACH_MAX_1000",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_DACH_MAX_1000"
+       ],
+       "bedingung": [
+        {
+         "art": "vor",
+         "raetsel": "P3"
+        }
+       ]
+      }
      ]
     }
    ],
@@ -974,7 +1042,12 @@
     "treppenhaus",
     "dachboden"
    ],
-   "ansehen": []
+   "tier": false,
+   "ansehen": [],
+   "pixel_auf": [],
+   "pixel_redet": [],
+   "gegenstand_auf": [],
+   "benutzen": []
   },
   {
    "id": "pixel",
@@ -988,13 +1061,38 @@
    "raeume": [
     "dachboden"
    ],
+   "tier": false,
    "ansehen": [
     {
      "zeile": "P0_DACH_MAX_0210",
      "sprecher": "MAX",
      "blasen": [
       "P0_DACH_MAX_0210"
-     ]
+     ],
+     "raum": "dachboden"
+    }
+   ],
+   "pixel_auf": [],
+   "pixel_redet": [],
+   "gegenstand_auf": [
+    {
+     "zeile": "P0_DACH_MAX_0270",
+     "sprecher": "MAX",
+     "blasen": [
+      "P0_DACH_MAX_0270"
+     ],
+     "gegenstand": "thunfischdose",
+     "raum": "dachboden"
+    }
+   ],
+   "benutzen": [
+    {
+     "zeile": "P0_DACH_MAX_0220",
+     "sprecher": "MAX",
+     "blasen": [
+      "P0_DACH_MAX_0220"
+     ],
+     "raum": "dachboden"
     }
    ]
   },
@@ -1010,7 +1108,12 @@
    "raeume": [
     "dachboden"
    ],
-   "ansehen": []
+   "tier": false,
+   "ansehen": [],
+   "pixel_auf": [],
+   "pixel_redet": [],
+   "gegenstand_auf": [],
+   "benutzen": []
   }
  ],
  "gegenstaende": [
@@ -1029,7 +1132,27 @@
    "icons": {
     "offen": "res://grafik/platzhalter/gegenstand_thunfischdose_offen.png",
     "leer": "res://grafik/platzhalter/gegenstand_thunfischdose_leer.png"
-   }
+   },
+   "ansehen": [
+    {
+     "zeile": "P0_INV_MAX_0010",
+     "sprecher": "MAX",
+     "blasen": [
+      "P0_INV_MAX_0010"
+     ],
+     "zustand": "zu"
+    },
+    {
+     "zeile": "P0_INV_MAX_0020",
+     "sprecher": "MAX",
+     "blasen": [
+      "P0_INV_MAX_0020"
+     ],
+     "zustand": "leer"
+    }
+   ],
+   "benutzen": [],
+   "kombinieren": []
   },
   {
    "id": "dosenoeffner",
@@ -1041,7 +1164,18 @@
    "reist_mit": true,
    "nahansicht": false,
    "icon": "res://grafik/platzhalter/gegenstand_dosenoeffner.png",
-   "icons": {}
+   "icons": {},
+   "ansehen": [
+    {
+     "zeile": "P0_INV_MAX_0030",
+     "sprecher": "MAX",
+     "blasen": [
+      "P0_INV_MAX_0030"
+     ]
+    }
+   ],
+   "benutzen": [],
+   "kombinieren": []
   },
   {
    "id": "drahtkleiderbuegel",
@@ -1056,7 +1190,27 @@
    "icon": "res://grafik/platzhalter/gegenstand_drahtkleiderbuegel.png",
    "icons": {
     "antenne": "res://grafik/platzhalter/gegenstand_drahtkleiderbuegel_antenne.png"
-   }
+   },
+   "ansehen": [
+    {
+     "zeile": "P0_INV_MAX_0040",
+     "sprecher": "MAX",
+     "blasen": [
+      "P0_INV_MAX_0040"
+     ],
+     "zustand": "gerade"
+    },
+    {
+     "zeile": "P0_INV_MAX_0050",
+     "sprecher": "MAX",
+     "blasen": [
+      "P0_INV_MAX_0050"
+     ],
+     "zustand": "antenne"
+    }
+   ],
+   "benutzen": [],
+   "kombinieren": []
   },
   {
    "id": "reisetasche",
@@ -1068,7 +1222,18 @@
    "reist_mit": true,
    "nahansicht": false,
    "icon": "res://grafik/platzhalter/gegenstand_reisetasche.png",
-   "icons": {}
+   "icons": {},
+   "ansehen": [
+    {
+     "zeile": "P0_INV_MAX_0060",
+     "sprecher": "MAX",
+     "blasen": [
+      "P0_INV_MAX_0060"
+     ]
+    }
+   ],
+   "benutzen": [],
+   "kombinieren": []
   },
   {
    "id": "notizbuch",
@@ -1080,7 +1245,10 @@
    "reist_mit": true,
    "nahansicht": false,
    "icon": "res://grafik/platzhalter/gegenstand_notizbuch.png",
-   "icons": {}
+   "icons": {},
+   "ansehen": [],
+   "benutzen": [],
+   "kombinieren": []
   },
   {
    "id": "opas_zettel",
@@ -1092,7 +1260,10 @@
    "reist_mit": true,
    "nahansicht": true,
    "icon": "res://grafik/platzhalter/gegenstand_opas_zettel.png",
-   "icons": {}
+   "icons": {},
+   "ansehen": [],
+   "benutzen": [],
+   "kombinieren": []
   }
  ],
  "nahansichten": [
@@ -1127,7 +1298,8 @@
        "regie": "stolz, dann unsicher"
       }
      ],
-     "beendet": false
+     "beendet": false,
+     "bleibt": false
     },
     {
      "id": "1322",
@@ -1160,6 +1332,7 @@
       }
      ],
      "beendet": false,
+     "bleibt": true,
      "bedingung": [
       {
        "art": "vor",
@@ -1180,7 +1353,8 @@
        "regie": "zwinkert"
       }
      ],
-     "beendet": false
+     "beendet": false,
+     "bleibt": false
     },
     {
      "id": "1350",
@@ -1195,7 +1369,39 @@
        "regie": "Hinweis auf den Rechtsklick"
       }
      ],
-     "beendet": false
+     "beendet": false,
+     "bleibt": true
+    },
+    {
+     "id": "1362",
+     "frage": "P0_DACH_MAX_1362",
+     "antworten": [
+      {
+       "zeile": "P0_DACH_OPA_1364",
+       "sprecher": "OPA",
+       "blasen": [
+        "P0_DACH_OPA_1364"
+       ],
+       "regie": "weicht aus, schaut weg"
+      },
+      {
+       "zeile": "P0_DACH_PIX_1366",
+       "sprecher": "PIX",
+       "blasen": [
+        "P0_DACH_PIX_1366"
+       ],
+       "regie": "Hinweis auf Omas Geburtstag"
+      }
+     ],
+     "beendet": false,
+     "bleibt": true,
+     "bedingung": [
+      {
+       "art": "vor",
+       "raetsel": "P3"
+      }
+     ],
+     "bedingung_text": "nach der Nahansicht Kalender"
     },
     {
      "id": "1370",
@@ -1210,7 +1416,8 @@
        "regie": "sieht den Zapp-O-Mat prüfend an"
       }
      ],
-     "beendet": true
+     "beendet": true,
+     "bleibt": false
     }
    ]
   },
@@ -1233,6 +1440,7 @@
       }
      ],
      "beendet": false,
+     "bleibt": false,
      "bedingung": [
       {
        "art": "nach",
@@ -1254,6 +1462,7 @@
       }
      ],
      "beendet": false,
+     "bleibt": true,
      "bedingung": [
       {
        "art": "nach",
@@ -1274,11 +1483,13 @@
        "regie": "rollt sich ein"
       }
      ],
-     "beendet": true
+     "beendet": true,
+     "bleibt": false
     }
    ]
   }
  ],
+ "figurenwechsel": {},
  "ersatz": {
   "MAX": [
    "SYS_ERS_MAX_0010",
@@ -1334,5 +1545,7 @@
    "SYS_ERS_PIX_0340",
    "SYS_ERS_PIX_0350"
   ]
- }
+ },
+ "wiederholung": {},
+ "plauder": {}
 }

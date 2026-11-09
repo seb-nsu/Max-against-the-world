@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://bmuv4kouk7jaa"]
+
+[node name="VonBergwerk" type="Marker2D" unique_id=1208771756]
+visible = false

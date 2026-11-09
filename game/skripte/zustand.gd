@@ -3,8 +3,8 @@ extends Node
 ##
 ## Gespeichert werden nur Schalter und Werte (05-spielsysteme.md, Speichern, Regeln für den
 ## Code). Alles, was daraus folgt, wird abgeleitet und nie gespeichert:
-## - Rätselschritt gelöst  = alle Schalter des Rätsels aus der Welt-Tabelle sind gesetzt
-##                           (z. B. P0_P1_GELOEST)
+## - Rätselschritt gelöst  = alle „…_GELOEST“-Schalter des Rätsels aus der Welt-Tabelle sind
+##                           gesetzt (z. B. P0_P1_GELOEST); Sammelschritte (R1): alle Teile gelöst
 ## - Rätselschritt offen   = nicht gelöst, sein Raum wurde betreten, und jede Voraussetzung aus
 ##                           „benoetigt“ ist erfüllt: Rätsel gelöst, Gegenstand erreichbar
 ##                           (Fundraum erreichbar oder Herkunftsrätsel gelöst)
@@ -30,6 +30,9 @@ var hinweis_stufe := {}
 var hinweis_zeit := {}
 ## Stufe-3-Hinweise je Abschnitt (Errungenschaften „Ohne Pfote“)
 var stufe3_zaehler := {}
+## Wie oft jedes Objekt (je Zustand) angesehen wurde: „Raum/Objekt|zustand“ → Anzahl
+## (Ansehen-Wiederholung, Spiel.ansehen())
+var angesehen := {}
 ## Im Notizbuch gewähltes Ziel und zuletzt berührter Schritt (Hinweis-Regeln 2 und 3)
 var notizbuch_ziel := ""
 var letzter_schritt := ""
@@ -61,6 +64,12 @@ func setze_wert(name: String, w: Variant) -> void:
 		return
 	werte[name] = w
 	geaendert.emit(name)
+
+
+## Zählt ein Ansehen und liefert, das wievielte es war (1, 2 …).
+func ansehen_zaehlen(schluessel: String) -> int:
+	angesehen[schluessel] = int(angesehen.get(schluessel, 0)) + 1
+	return angesehen[schluessel]
 
 
 func besuche(raum_id: String) -> void:
@@ -103,14 +112,21 @@ func loese(id: String, ab := "") -> void:
 		setze(s)
 
 
+## Gelöst = alle „…_GELOEST“-Schalter des Rätsels sind gesetzt. Andere Schalter in der Liste
+## (etwa der Begleiter-Schalter W1_ZIEGEN_FOLGEN bei R3) sind Folgen und dürfen später wieder
+## aus gehen. Sammelschritte ohne eigenen Schalter (R1, R4) sind gelöst, wenn alle Rätsel
+## unter „benoetigt“ gelöst sind.
 func geloest(id: String, ab := "") -> bool:
 	var r := raetsel(id, ab)
-	if r.is_empty() or r.schalter.is_empty():
+	if r.is_empty():
 		return false
-	for s in r.schalter:
-		if not ist(s):
+	var eigene: Array = r.schalter.filter(func(s): return str(s).ends_with("_GELOEST"))
+	if eigene.is_empty():
+		var teile: Array = r.get("benoetigt", []).filter(func(b): return not raetsel(b, ab).is_empty())
+		if teile.is_empty():
 			return false
-	return true
+		return teile.all(func(b): return geloest(b, ab))
+	return eigene.all(func(s): return ist(s))
 
 
 ## „gesperrt“, „offen“ oder „geloest“ (05-spielsysteme.md, Hinweissystem, Regel 1)
@@ -121,6 +137,8 @@ func status(id: String, ab := "") -> String:
 	var r := raetsel(id, ab)
 	if r.is_empty():
 		return "gesperrt"
+	if not Bauplan.gebaut(ab, id):
+		return "gesperrt"  # noch nicht gebaut (Graubox-Ausbaustand): Pfote und Notizbuch schweigen
 	if not war_in(r.raum):
 		return "gesperrt"
 	for v in r.get("benoetigt", []):
@@ -179,6 +197,7 @@ func speichern() -> Dictionary:
 		abschnitt = abschnitt,
 		spielzeit = spielzeit,
 		besucht = besucht.duplicate(),
+		angesehen = angesehen.duplicate(),
 		nahansichten = nahansichten.duplicate(),
 		hinweis_stufe = hinweis_stufe.duplicate(),
 		hinweis_zeit = hinweis_zeit.duplicate(),
@@ -197,6 +216,9 @@ func laden(d: Dictionary) -> void:
 	spielzeit = float(d.get("spielzeit", 0.0))
 	besucht = d.get("besucht", []).duplicate()
 	nahansichten = d.get("nahansichten", []).duplicate()
+	angesehen = {}
+	for k in d.get("angesehen", {}):
+		angesehen[k] = int(d.angesehen[k])
 	hinweis_stufe = {}
 	for k in d.get("hinweis_stufe", {}):
 		hinweis_stufe[k] = int(d.hinweis_stufe[k])  # JSON liefert float

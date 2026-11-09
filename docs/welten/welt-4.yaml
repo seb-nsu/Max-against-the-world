@@ -118,7 +118,7 @@ raeume:
 # Weitere Bilder ohne begehbaren Raum (Grafik Welt 4): Zappmanns erste Kindersendung (Bild-in-Bild in R13),
 # Max auf der Couch (Albtraum in R13), Opa vor flackernden Lampen (Prolog-Wohnzimmer, R7), Pausentafel Mitternachts-TV.
 
-sonder_codes: [FERN, TAST, PIXM, ZURF, HINT]   # Fernbedienung/Programmzeitschrift, Tasten quer, Pixel auf Mensch, Zurufe, Hinweise
+sonder_codes: [FERN, TAST, PIXM, ZURF, HINT, INV, ABS]   # INV Inventar ansehen, ABS Gespräch erschöpft, Fernbedienung/Programmzeitschrift, Tasten quer, Pixel auf Mensch, Zurufe, Hinweise
 sonder_sprecher: [NAR]                          # Szenen- und Tonzeilen ohne Sprecher
 
 figuren:

@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://juarke5dyn6u"]
+
+[ext_resource type="Script" path="res://game/rooms/bergwerk/hotspots/ausgang_zauberwald/hotspot_ausgang_zauberwald.gd" id="1_wjvw3"]
+
+[node name="AusgangZauberwald" type="Area2D" unique_id=912339364]
+script = ExtResource("1_wjvw3")
+script_name = "AusgangZauberwald"
+description = "Ausgang Zauberwald"
+cursor = 1
+interaction_polygon = PackedVector2Array(-9, -40, 9, -40, 9, 40, -9, 40)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=218801838]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

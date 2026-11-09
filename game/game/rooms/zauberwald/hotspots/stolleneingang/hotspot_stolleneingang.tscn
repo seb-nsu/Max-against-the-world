@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://bki1h8u4lkcn7"]
+
+[ext_resource type="Script" path="res://game/rooms/zauberwald/hotspots/stolleneingang/hotspot_stolleneingang.gd" id="1_ahttr"]
+
+[node name="Stolleneingang" type="Area2D" unique_id=1261238752]
+script = ExtResource("1_ahttr")
+script_name = "Stolleneingang"
+description = "Stolleneingang"
+cursor = 1
+interaction_polygon = PackedVector2Array(-24, -40, 24, -40, 24, 40, -24, 40)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=73632368]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://d4efqm3oa3dhg"]
+
+[ext_resource type="Script" path="res://game/rooms/dorfplatz/hotspots/haeuser/hotspot_haeuser.gd" id="1_x53ie"]
+
+[node name="Haeuser" type="Area2D" unique_id=808044248]
+script = ExtResource("1_x53ie")
+script_name = "Haeuser"
+description = "Haeuser"
+cursor = 1
+interaction_polygon = PackedVector2Array(-30, -20, 30, -20, 30, 20, -30, 20)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1481540451]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

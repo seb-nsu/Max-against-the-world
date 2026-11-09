@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://cx0mj82x2bwiu"]
+
+[ext_resource type="Script" path="res://game/rooms/trollbruecke/hotspots/bach/hotspot_bach.gd" id="1_crhe0"]
+
+[node name="Bach" type="Area2D" unique_id=899821672]
+script = ExtResource("1_crhe0")
+script_name = "Bach"
+description = "Bach"
+cursor = 1
+interaction_polygon = PackedVector2Array(-70, -9, 70, -9, 70, 9, -70, 9)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1921493797]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

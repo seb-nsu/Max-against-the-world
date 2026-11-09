@@ -9,6 +9,8 @@ var state: Data = load("res://game/inventory_items/thunfischdose/inventory_item_
 
 ## Zu, bis P1 sie öffnet; danach hat Pixel sie leer gefressen („offen“ nur in der Szene).
 func zustand() -> String:
+	if Zustand.abschnitt != "prolog":
+		return "leer"
 	return "leer" if Zustand.geloest("P1") else "zu"
 
 

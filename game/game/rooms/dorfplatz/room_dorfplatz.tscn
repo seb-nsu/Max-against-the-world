@@ -1,0 +1,199 @@
+[gd_scene format=3 uid="uid://dbrmm3pfxv5ji"]
+
+[ext_resource type="Script" path="res://game/rooms/dorfplatz/room_dorfplatz.gd" id="1_v2h0e"]
+[ext_resource type="PackedScene" uid="uid://b3hf37nhwrbum" path="res://game/rooms/dorfplatz/walkable_areas/boden/walkable_area_boden.tscn" id="2_5pi0j"]
+[ext_resource type="PackedScene" uid="uid://c217bemqc1uc6" path="res://game/rooms/dorfplatz/props/background/prop_background.tscn" id="3_tndmc"]
+[ext_resource type="Texture2D" uid="uid://br77mwltbffaa" path="res://grafik/platzhalter/raum_dorfplatz.png" id="4_56hkr"]
+[ext_resource type="PackedScene" uid="uid://chgdinqgqjvh8" path="res://game/rooms/dorfplatz/props/eimer/prop_eimer.tscn" id="5_vw5er"]
+[ext_resource type="Texture2D" uid="uid://bx5v3sm6f8f2p" path="res://grafik/platzhalter/prop_eimer.png" id="6_qllcp"]
+[ext_resource type="PackedScene" uid="uid://cupjtcfw6rgxc" path="res://game/rooms/dorfplatz/props/bestellzettel/prop_bestellzettel.tscn" id="7_e05f8"]
+[ext_resource type="Texture2D" uid="uid://de1ea5pasqnom" path="res://grafik/platzhalter/prop_bestellzettel.png" id="8_3w1g1"]
+[ext_resource type="PackedScene" uid="uid://cdrjatmbfe2es" path="res://game/rooms/dorfplatz/props/steckbrief/prop_steckbrief.tscn" id="9_ikvc5"]
+[ext_resource type="Texture2D" uid="uid://b16mukaxu2hed" path="res://grafik/platzhalter/prop_steckbrief.png" id="10_jtfo2"]
+[ext_resource type="PackedScene" uid="uid://bxihxqo7a0enu" path="res://game/rooms/dorfplatz/hotspots/luftschloss/hotspot_luftschloss.tscn" id="11_hb03t"]
+[ext_resource type="PackedScene" uid="uid://d4efqm3oa3dhg" path="res://game/rooms/dorfplatz/hotspots/haeuser/hotspot_haeuser.tscn" id="12_rjv5g"]
+[ext_resource type="PackedScene" uid="uid://fot7uxpdcpjo" path="res://game/rooms/dorfplatz/hotspots/stall/hotspot_stall.tscn" id="13_orv5v"]
+[ext_resource type="PackedScene" uid="uid://c1x1ml76o3kqx" path="res://game/rooms/dorfplatz/hotspots/ring_laden/hotspot_ring_laden.tscn" id="14_3gxfl"]
+[ext_resource type="PackedScene" uid="uid://bdm3n1mbi8wyu" path="res://game/rooms/dorfplatz/hotspots/erdfleck/hotspot_erdfleck.tscn" id="15_pnbmf"]
+[ext_resource type="PackedScene" uid="uid://jq0oyhsr8vk2" path="res://game/rooms/dorfplatz/hotspots/brunnen/hotspot_brunnen.tscn" id="16_pj8ld"]
+[ext_resource type="PackedScene" uid="uid://brx3q32qplieq" path="res://game/rooms/dorfplatz/hotspots/statue/hotspot_statue.tscn" id="17_2gyxt"]
+[ext_resource type="PackedScene" uid="uid://bl256eit66hj1" path="res://game/rooms/dorfplatz/hotspots/dorfbrett/hotspot_dorfbrett.tscn" id="18_pfvxa"]
+[ext_resource type="PackedScene" uid="uid://bqatti0tatxqb" path="res://game/rooms/dorfplatz/hotspots/taverne_von_aussen/hotspot_taverne_von_aussen.tscn" id="19_phfhi"]
+[ext_resource type="PackedScene" uid="uid://co8fibjffsxgi" path="res://game/rooms/dorfplatz/hotspots/schmiede_von_aussen/hotspot_schmiede_von_aussen.tscn" id="20_o5hj4"]
+[ext_resource type="PackedScene" uid="uid://bu1n6n0um7b5e" path="res://game/rooms/dorfplatz/hotspots/zauberstab_laden_von_aussen/hotspot_zauberstab_laden_von_aussen.tscn" id="21_vl17p"]
+[ext_resource type="PackedScene" uid="uid://bppnpxh0ufnvw" path="res://game/rooms/dorfplatz/hotspots/weg_nach_hoggelwarz/hotspot_weg_nach_hoggelwarz.tscn" id="22_frp14"]
+[ext_resource type="PackedScene" uid="uid://d0wwgtxuwsv3q" path="res://game/rooms/dorfplatz/hotspots/waldweg/hotspot_waldweg.tscn" id="23_hon0a"]
+[ext_resource type="PackedScene" uid="uid://bi6l1fqt5fc55" path="res://game/rooms/dorfplatz/hotspots/bohnenranke/hotspot_bohnenranke.tscn" id="24_qpwhn"]
+[ext_resource type="PackedScene" uid="uid://d328vywshag24" path="res://game/rooms/dorfplatz/markers/start/marker_start.tscn" id="25_03hfl"]
+[ext_resource type="PackedScene" uid="uid://fg55u8ykdfl5" path="res://game/rooms/dorfplatz/markers/von_taverne/marker_von_taverne.tscn" id="26_3dpll"]
+[ext_resource type="PackedScene" uid="uid://8oqnplh7nlow" path="res://game/rooms/dorfplatz/markers/von_schmiede/marker_von_schmiede.tscn" id="27_dggh2"]
+[ext_resource type="PackedScene" uid="uid://bqjv3dkum8sbq" path="res://game/rooms/dorfplatz/markers/von_zauberstabladen/marker_von_zauberstabladen.tscn" id="28_1pd55"]
+[ext_resource type="PackedScene" uid="uid://b52lcsopvxos8" path="res://game/rooms/dorfplatz/markers/von_klassenzimmer/marker_von_klassenzimmer.tscn" id="29_y3wbd"]
+[ext_resource type="PackedScene" uid="uid://o84s055qipo3" path="res://game/rooms/dorfplatz/markers/von_trollbruecke/marker_von_trollbruecke.tscn" id="30_uae5d"]
+[ext_resource type="PackedScene" uid="uid://bxt7ur8pufb5m" path="res://game/rooms/dorfplatz/markers/ziegen/marker_ziegen.tscn" id="31_27qsc"]
+[ext_resource type="PackedScene" uid="uid://d4ca8qud2d3r2" path="res://game/rooms/dorfplatz/markers/lieferung/marker_lieferung.tscn" id="32_64w01"]
+[ext_resource type="PackedScene" uid="uid://cpjd1c4lcm6c6" path="res://game/characters/toadi/character_toadi.tscn" id="33_dmfdc"]
+
+[node name="RoomDorfplatz" type="Node2D" unique_id=1922022875]
+script = ExtResource("1_v2h0e")
+script_name = "Dorfplatz"
+width = 640
+height = 180
+
+[node name="WalkableAreas" type="Node2D" parent="." unique_id=2019817597]
+
+[node name="Boden" parent="WalkableAreas" unique_id=771815847 instance=ExtResource("2_5pi0j")]
+interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(4, 140, 636, 140, 636, 178, 4, 178)])
+
+[node name="Props" type="Node2D" parent="." unique_id=2036328633]
+
+[node name="Background" parent="Props" unique_id=1444268109 instance=ExtResource("3_tndmc")]
+position = Vector2(320, 90)
+texture = ExtResource("4_56hkr")
+description = "UI_RAUM_DORFPLATZ"
+
+[node name="Eimer" parent="Props" unique_id=1760993508 instance=ExtResource("5_vw5er")]
+position = Vector2(438, 134)
+texture = ExtResource("6_qllcp")
+description = "UI_OBJ_EIMER"
+baseline = 6
+walk_to_point = Vector2(-2, 20)
+
+[node name="Bestellzettel" parent="Props" unique_id=597249500 instance=ExtResource("7_e05f8")]
+position = Vector2(459, 86)
+texture = ExtResource("8_3w1g1")
+description = "UI_OBJ_BESTELLZETTEL"
+baseline = 6
+walk_to_point = Vector2(13, 66)
+
+[node name="Steckbrief" parent="Props" unique_id=1318358708 instance=ExtResource("9_ikvc5")]
+position = Vector2(486, 91)
+texture = ExtResource("10_jtfo2")
+description = "UI_OBJ_STECKBRIEF"
+baseline = 13
+walk_to_point = Vector2(-14, 61)
+
+[node name="Hotspots" type="Node2D" parent="." unique_id=102196144]
+
+[node name="Luftschloss" parent="Hotspots" unique_id=781520882 instance=ExtResource("11_hb03t")]
+position = Vector2(310, 17)
+description = "UI_OBJ_LUFTSCHLOSS"
+baseline = 13
+walk_to_point = Vector2(0, 133)
+
+[node name="Haeuser" parent="Hotspots" unique_id=808044248 instance=ExtResource("12_rjv5g")]
+position = Vector2(280, 50)
+description = "UI_OBJ_HAEUSER"
+baseline = 20
+walk_to_point = Vector2(0, 100)
+
+[node name="Stall" parent="Hotspots" unique_id=953384071 instance=ExtResource("13_orv5v")]
+position = Vector2(95, 103)
+description = "UI_OBJ_STALL"
+baseline = 33
+walk_to_point = Vector2(-1, 49)
+
+[node name="RingLaden" parent="Hotspots" unique_id=1766669076 instance=ExtResource("14_3gxfl")]
+position = Vector2(151, 106)
+description = "UI_OBJ_RING_LADEN"
+baseline = 30
+walk_to_point = Vector2(-1, 46)
+
+[node name="Erdfleck" parent="Hotspots" unique_id=2142488486 instance=ExtResource("15_pnbmf")]
+position = Vector2(344, 144)
+description = "UI_OBJ_ERDFLECK"
+baseline = 4
+walk_to_point = Vector2(0, 14)
+
+[node name="Brunnen" parent="Hotspots" unique_id=20902903 instance=ExtResource("16_pj8ld")]
+position = Vector2(400, 116)
+description = "UI_OBJ_BRUNNEN"
+baseline = 24
+walk_to_point = Vector2(0, 36)
+
+[node name="Statue" parent="Hotspots" unique_id=45441241 instance=ExtResource("17_2gyxt")]
+position = Vector2(400, 71)
+description = "UI_OBJ_STATUE"
+baseline = 19
+walk_to_point = Vector2(0, 81)
+
+[node name="Dorfbrett" parent="Hotspots" unique_id=25099060 instance=ExtResource("18_pfvxa")]
+position = Vector2(473, 102)
+description = "UI_OBJ_DORFBRETT"
+baseline = 28
+walk_to_point = Vector2(-1, 50)
+
+[node name="TaverneVonAussen" parent="Hotspots" unique_id=1049565084 instance=ExtResource("19_phfhi")]
+position = Vector2(34, 100)
+description = "UI_OBJ_TAVERNE_VON_AUSSEN"
+baseline = 40
+walk_to_point = Vector2(0, 52)
+cursor = 9
+
+[node name="SchmiedeVonAussen" parent="Hotspots" unique_id=1626534039 instance=ExtResource("20_o5hj4")]
+position = Vector2(547, 102)
+description = "UI_OBJ_SCHMIEDE_VON_AUSSEN"
+baseline = 38
+walk_to_point = Vector2(-1, 50)
+cursor = 9
+
+[node name="ZauberstabLadenVonAussen" parent="Hotspots" unique_id=2017344714 instance=ExtResource("21_vl17p")]
+position = Vector2(213, 103)
+description = "UI_OBJ_ZAUBERSTAB_LADEN_VON_AUSSEN"
+baseline = 37
+walk_to_point = Vector2(-1, 49)
+cursor = 9
+
+[node name="WegNachHoggelwarz" parent="Hotspots" unique_id=244028609 instance=ExtResource("22_frp14")]
+position = Vector2(261, 99)
+description = "UI_OBJ_WEG_NACH_HOGGELWARZ"
+baseline = 25
+walk_to_point = Vector2(1, 47)
+cursor = 9
+
+[node name="Waldweg" parent="Hotspots" unique_id=999357047 instance=ExtResource("23_hon0a")]
+position = Vector2(620, 118)
+description = "UI_OBJ_WALDWEG"
+baseline = 22
+walk_to_point = Vector2(4, 40)
+cursor = 9
+
+[node name="Bohnenranke" parent="Hotspots" unique_id=1068162148 instance=ExtResource("24_qpwhn")]
+position = Vector2(341, 85)
+description = "UI_OBJ_BOHNENRANKE"
+baseline = 55
+walk_to_point = Vector2(3, 73)
+cursor = 9
+
+[node name="Regions" type="Node2D" parent="." unique_id=1426399088]
+
+[node name="Markers" type="Node2D" parent="." unique_id=131650837]
+
+[node name="Start" parent="Markers" unique_id=399992760 instance=ExtResource("25_03hfl")]
+position = Vector2(300, 160)
+
+[node name="VonTaverne" parent="Markers" unique_id=1812390581 instance=ExtResource("26_3dpll")]
+position = Vector2(40, 158)
+
+[node name="VonSchmiede" parent="Markers" unique_id=1792040735 instance=ExtResource("27_dggh2")]
+position = Vector2(548, 158)
+
+[node name="VonZauberstabladen" parent="Markers" unique_id=1341369222 instance=ExtResource("28_1pd55")]
+position = Vector2(214, 158)
+
+[node name="VonKlassenzimmer" parent="Markers" unique_id=545676840 instance=ExtResource("29_y3wbd")]
+position = Vector2(270, 150)
+
+[node name="VonTrollbruecke" parent="Markers" unique_id=1864275785 instance=ExtResource("30_uae5d")]
+position = Vector2(610, 160)
+
+[node name="Ziegen" parent="Markers" unique_id=1202334774 instance=ExtResource("31_27qsc")]
+position = Vector2(590, 164)
+
+[node name="Lieferung" parent="Markers" unique_id=1879190510 instance=ExtResource("32_64w01")]
+position = Vector2(520, 162)
+
+[node name="Characters" type="Node2D" parent="." unique_id=1644468311]
+
+[node name="CharacterToadi *" parent="Characters" unique_id=1625231671 instance=ExtResource("33_dmfdc")]
+position = Vector2(340, 166)

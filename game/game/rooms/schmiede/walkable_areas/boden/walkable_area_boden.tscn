@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://bqi83rh2hpvww"]
+
+[ext_resource type="Script" path="res://game/rooms/schmiede/walkable_areas/boden/walkable_area_boden.gd" id="1_c0d53"]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_c0d53"]
+vertices = PackedVector2Array(316, 178, 4, 178, 4, 140, 316, 140)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(4, 140, 316, 140, 316, 178, 4, 178)])
+agent_radius = 0.0
+
+[node name="Boden" type="Node2D" unique_id=1190001958]
+script = ExtResource("1_c0d53")
+script_name = "Boden"
+description = "Boden"
+interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(4, 140, 316, 140, 316, 178, 4, 178)])
+
+[node name="Perimeter" type="NavigationRegion2D" parent="." unique_id=795150024]
+modulate = Color(0, 1, 0, 1)
+navigation_polygon = SubResource("NavigationPolygon_c0d53")

@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://cra7ea8vene4m"]
+
+[ext_resource type="Script" path="res://game/rooms/schmiede/hotspots/kochgeschirr/hotspot_kochgeschirr.gd" id="1_d727u"]
+
+[node name="Kochgeschirr" type="Area2D" unique_id=1753322048]
+script = ExtResource("1_d727u")
+script_name = "Kochgeschirr"
+description = "Kochgeschirr"
+cursor = 1
+interaction_polygon = PackedVector2Array(-35, -28, 35, -28, 35, 28, -35, 28)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=560949425]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

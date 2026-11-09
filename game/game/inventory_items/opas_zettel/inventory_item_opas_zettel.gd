@@ -8,5 +8,9 @@ var state: Data = load("res://game/inventory_items/opas_zettel/inventory_item_op
 
 
 ## „Lies den Zettel erst drüben“: im Prolog nur Max' Kommentar (0840).
+## Im Prolog darf Max ihn noch nicht lesen (0840); ab Welt 1 öffnet er die Nahansicht.
 func _ansehen() -> void:
-	await Spiel.sagen("MAX", "P0_DACH_MAX_0840")
+	if Zustand.abschnitt == "prolog":
+		await Spiel.sagen("MAX", "P0_DACH_MAX_0840")
+	else:
+		await Spiel.nahansicht_zeigen("opas_zettel")

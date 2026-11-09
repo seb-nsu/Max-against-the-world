@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://bsni28ycax5mi"]
+
+[ext_resource type="Texture2D" uid="uid://slyyl6yo6qt7" path="res://grafik/platzhalter/gegenstand_eimer.png" id="1_0nmwl"]
+[ext_resource type="Script" path="res://game/inventory_items/eimer/inventory_item_eimer.gd" id="1_ltjap"]
+
+[node name="ItemEimer" type="TextureRect" unique_id=651020604]
+texture_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 4
+mouse_filter = 0
+texture = ExtResource("1_0nmwl")
+stretch_mode = 5
+script = ExtResource("1_ltjap")
+script_name = "Eimer"
+description = "UI_OBJ_EIMER"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1147017582]

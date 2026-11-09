@@ -359,7 +359,9 @@ def pruefe_skript(ab, d, codes, kuerzel, alle_ids):
                 W(ort, f"Sprecher „{zellen[1]}“ passt nicht zu {kz} = {namen[kz]}")
         if code not in OHNE_ZEHNER:
             n = int(num)
-            if n % 10:
+            # Zweitzeilen beim Ansehen tragen die Nummer der ersten Zeile plus 5
+            zweitzeile = n % 10 == 5 and "zweites Mal" in (zellen[-1] if zellen else "")
+            if n % 10 and not zweitzeile:
                 W(ort, f"{roh}: Nummer nicht in Zehnerschritten")
             if n <= letzte.get(code, -1):
                 W(ort, f"{roh}: Nummer nicht aufsteigend im Block")
@@ -545,6 +547,24 @@ def pruefe_nahansichten(alle):
         F("welten/*.yaml", f"{summe} Nahansichten (nahansicht: true plus nahansichten:), festgelegt sind {NAHANSICHTEN_GESAMT}")
 
 
+def pruefe_code_schalter(alle):
+    """Schalter und Werte, die der Godot-Code setzt oder liest, stehen in einer Welt-Tabelle
+    (Rätsel-„schalter“ oder „weitere_schalter“, 05-spielsysteme.md, Regeln für den Code)."""
+    bekannt = set()
+    for d in alle.values():
+        bekannt |= {str(x) for x in als_liste(d.get("weitere_schalter"))}
+        for r in d.get("raetsel") or []:
+            bekannt |= {str(x) for x in als_liste(r.get("schalter"))}
+    muster = re.compile(r'Zustand\.(?:ist|setze|wert|setze_wert)\(\s*"([A-Z][A-Z0-9_]*)"')
+    for datei in sorted((ROOT / "game").rglob("*.gd")):
+        if "addons" in datei.parts:
+            continue
+        for nr, zeile in enumerate(datei.read_text(encoding="utf-8").splitlines(), 1):
+            for name in muster.findall(zeile):
+                if name not in bekannt:
+                    W(f"{datei.relative_to(ROOT)}:{nr}", f"Schalter {name} steht in keiner Welt-Tabelle (weitere_schalter)")
+
+
 def main():
     nur_fehler = "--nur-fehler" in sys.argv
     alle = lade_tabellen()
@@ -560,6 +580,7 @@ def main():
         pruefe_namen(ab, d)
     pruefe_audio(alle)
     pruefe_nahansichten(alle)
+    pruefe_code_schalter(alle)
     import importlib.util
     spec = importlib.util.spec_from_file_location("diagramme", Path(__file__).with_name("diagramme.py"))
     dia = importlib.util.module_from_spec(spec)

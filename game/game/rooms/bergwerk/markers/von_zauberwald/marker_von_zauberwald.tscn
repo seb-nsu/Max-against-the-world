@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://b55ltldjg4ao7"]
+
+[node name="VonZauberwald" type="Marker2D" unique_id=1574742030]
+visible = false

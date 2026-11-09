@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://bf877k6rs3c0l"]
+
+[ext_resource type="Script" path="res://game/rooms/taverne/hotspots/schwerter_sammlung/hotspot_schwerter_sammlung.gd" id="1_273gk"]
+
+[node name="SchwerterSammlung" type="Area2D" unique_id=1052568365]
+script = ExtResource("1_273gk")
+script_name = "SchwerterSammlung"
+description = "Schwerter Sammlung"
+cursor = 1
+interaction_polygon = PackedVector2Array(-26, -11, 26, -11, 26, 11, -26, 11)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1348009907]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

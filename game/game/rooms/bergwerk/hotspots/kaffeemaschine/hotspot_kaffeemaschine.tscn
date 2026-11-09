@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://bssk5ca3etf8p"]
+
+[ext_resource type="Script" path="res://game/rooms/bergwerk/hotspots/kaffeemaschine/hotspot_kaffeemaschine.gd" id="1_h1y7q"]
+
+[node name="Kaffeemaschine" type="Area2D" unique_id=441604541]
+script = ExtResource("1_h1y7q")
+script_name = "Kaffeemaschine"
+description = "Kaffeemaschine"
+cursor = 1
+interaction_polygon = PackedVector2Array(-10, -10, 10, -10, 10, 10, -10, 10)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1012980575]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

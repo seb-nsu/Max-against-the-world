@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://c1x1ml76o3kqx"]
+
+[ext_resource type="Script" path="res://game/rooms/dorfplatz/hotspots/ring_laden/hotspot_ring_laden.gd" id="1_ledxu"]
+
+[node name="RingLaden" type="Area2D" unique_id=1766669076]
+script = ExtResource("1_ledxu")
+script_name = "RingLaden"
+description = "Ring Laden"
+cursor = 1
+interaction_polygon = PackedVector2Array(-23, -30, 23, -30, 23, 30, -23, 30)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=767816642]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

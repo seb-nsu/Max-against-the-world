@@ -10,6 +10,9 @@ var state: Data = load("res://game/characters/pixel/character_pixel.tres")
 ## Vor P1 schläft Pixel: Benutzen (0220), nach zwei Versuchen kommentiert Opa (0230).
 ## Nach P1 startet Linksklick das Gespräch.
 func _on_click() -> void:
+	if Zustand.abschnitt != "prolog":
+		await Spiel.ersatz()  # ab Welt 1: Rätsel mit Pixel regelt der Raum (figur_benutzt)
+		return
 	if Zustand.geloest("P1"):
 		await super()
 		return
@@ -22,6 +25,9 @@ func _on_click() -> void:
 
 
 func _on_item_used(item: PopochiuInventoryItem) -> void:
+	if Zustand.abschnitt != "prolog":
+		await super(item)
+		return
 	await Spiel.hingehen(self)
 	match item.script_name:
 		"Thunfischdose":
