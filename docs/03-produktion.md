@@ -105,6 +105,8 @@ Fünf Stufen mit Dauer, Stundenbudget und einer Regel, wann umgesteuert wird. Na
 
 Welche Automatisierung in welche Stufe gehört, steht unter Automatisierung.
 
+**Stand Stufe 1 (9. November 2026):** Godot 4.7.2 mit Popochiu 2.2.1 eingerichtet (`game/`, Anleitung in `game/README.md`). Der Prolog ist als Graubox mit Platzhaltergrafik durchspielbar: drei Räume, P1 bis P3, alle Zeilen über Zeilen-IDs und tr(), Hilfe-Pfote mit Stufen und Wartezeiten, Notizbuch-Ziele, Nahansicht Kalender, Speichern (Autospeicher, F5/F9, 12 Plätze, JSON mit Versionsnummer). Räume, Hotspots und Ansehen-Zeilen entstehen aus Welt-Tabelle und Skript (`tools/godot_raeume.py`, A5 als Vorlage), die Popochiu-Objekte legt ein Editor-Plugin headless an. Ein Headless-Test spielt den Lösungspfad mit Speichern/Laden-Rundreise nach jedem Schritt (A3 für den Prolog, A4) und läuft in GitHub Actions (A7, ohne Export-Build). Offen: Git LFS, Figurenwechsel nur technisch (im Prolog gesperrt, erster echter Test in Welt 1), Hauptmenü und Optionen, Prüfung „Zeilen im Code ohne Skripteintrag“ (A2, Code-Hälfte), KI-Protokoll (A11).
+
 Bei 10 bis 15 Stunden pro Woche sind das rund drei Jahre, bei 20 Stunden gut zwei. Die Stundenbudgets sind Messlatten, keine Versprechen; die Grafikstunden aus der Zähltabelle stecken darin.
 
 **Puffer und Termin für die Steam-Seite (Schätzung vom 9. November 2026, wird später festgelegt):** Auf jede Stufe kommen 20 Prozent Puffer: Grundgerüst 5 statt 4 Wochen, Vertical Slice 10 statt 8 Wochen, Demo Welt 1 gut 7 statt 6 Monate, Welten 2 bis 4 je 6 bis 8,5 statt 5 bis 7 Monate, Finale und Politur knapp 4 statt 3 Monate. Ohne Puffer ergibt das 27 bis 33 Monate, mit Puffer 32 bis 40 Monate.
