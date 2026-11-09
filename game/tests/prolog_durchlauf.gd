@@ -773,7 +773,7 @@ func _welt_1_r5_bis_r13() -> void:
 
 	# --- Zwischenspiel 1: Dachboden ---
 	await _warte_auf_raum("Dachboden")
-	await _warte_bis(func(): return _gesagt("ZS1_DACH_PIX_0240"), 15.0)
+	await _warte_bis(func(): return _gesagt("ZS1_DACH_PIX_0240"), 45.0)
 	_pruefe(Z.abschnitt == "finale" and int(Z.wert("ZWISCHENSPIEL", 0)) == 1, "Abschnitt finale, Zwischenspiel 1")
 	_pruefe(_gesagt("ZS1_DACH_OPA_0070") and Z.ist("ZS1_EI_ABGEGEBEN")
 		and not _i().is_item_in_inventory("Drachenei"), "ZS1: Opa nimmt das Ei (0010–0240)")
@@ -787,8 +787,46 @@ func _welt_1_r5_bis_r13() -> void:
 	_pruefe(_gesagt("ZS1_HINT_PIX_0010"), "Pfote im Zwischenspiel: ZS1_HINT_PIX_0010")
 	await _rundreise("Zwischenspiel 1")
 	_pruefe(Z.abschnitt == "finale" and not _gesagt("ZS1_DACH_NAR_0010"), "nach Laden: Zwischenspiel, keine zweite Ankunft")
+	print("    Inventar am Ende von Welt 1: ", _c().Max.inventory.keys())
+	# Fundkiste und Gespräch der freien Phase
+	_pruefe(_hotspot("Fundkiste").visible, "Fundkiste sichtbar im Zwischenspiel")
+	await _ansehen(_hotspot("Fundkiste"), "ZS1_DACH_MAX_0420")
+	await _ansehen(_hotspot("Werkbank"), "ZS1_DACH_MAX_0310")
+	var opa_zs = _dialog("Opa")
+	opa_zs.sichtbarkeit_anpassen()
+	_pruefe(opa_zs.option_sichtbar("zs1_0380") and not opa_zs.option_sichtbar("1310"),
+		"Opa im Zwischenspiel: eigene Optionen, keine aus dem Prolog")
+	for o in ["zs1_0380", "zs1_0430", "zs1_0440", "zs1_0450"]:
+		await opa_zs.waehlen(o)
+	_pruefe(_gesagt("ZS1_DACH_PIX_0410") and _gesagt("ZS1_DACH_PIX_0436") and _gesagt("ZS1_DACH_OPA_0446")
+		and _gesagt("ZS1_DACH_PIX_0454"), "Opa-Gespräch Zwischenspiel 1 (0380–0454)")
+	_pruefe(opa_zs.erschoepft(), "Opa-Gespräch erschöpft, nur noch „Ich geh packen“")
+	# Packen: Socke und Zeugnis ein, Zeugnis wieder aus, Dosenöffner ein, drittes Stück abgelehnt
+	var wahl_moeglich: Array = ["Socke", "Zeugnis", "Eimer", "ZiegenfellVorleger"].filter(
+		func(sn): return _i().is_item_in_inventory(sn))
+	_protokoll_leeren()
+	_spiel().vorgabe_tasche = ["Kochloeffel", "Socke", wahl_moeglich[1], wahl_moeglich[1],
+		"Dosenoeffner", wahl_moeglich[2]]
 	await _hotspot("Drehknopf").on_click()
-	_pruefe(_gesagt("UI_WELT_1_ENDE"), "Drehknopf: Ende der Graubox (Packen und Welt 2 folgen)")
+	_pruefe(_gesagt("ZS1_DACH_OPA_0510") and _gesagt("ZS1_DACH_OPA_0514"), "Drehknopf öffnet die Reisetasche (0510–0514)")
+	_pruefe(_gesagt("ZS1_DACH_PIX_0520") and _gesagt("ZS1_DACH_PIX_0540") and _gesagt("ZS1_DACH_PIX_0580"),
+		"Pixel kommentiert beim Berühren (Pflichtfach, Socke, Dosenöffner)")
+	_pruefe(_gesagt("ZS1_DACH_MAX_0610"), "Drittes Wahlstück: 0610")
+	_pruefe(_gesagt("ZS1_DACH_PIX_0620") and _gesagt("ZS1_DACH_OPA_0650") and Z.ist("ZS1_GEPACKT"),
+		"Bestätigt, Opas Abschied (0620–0650)")
+	_pruefe(Z.wert("TASCHE", []) == ["Socke", "Dosenoeffner"], "Wahlfächer: Socke und Dosenöffner")
+	_pruefe(_i().is_item_in_inventory("Socke") and _i().is_item_in_inventory("Dosenoeffner")
+		and not _i().is_item_in_inventory(wahl_moeglich[1]) and not _i().is_item_in_inventory(wahl_moeglich[2])
+		and _i().is_item_in_inventory("Kochloeffel") and _i().is_item_in_inventory("Notizbuch")
+		and _i().is_item_in_inventory("Thunfischdose"), "Inventar nach dem Packen: Pflichtfach und Wahlfächer")
+	_pruefe(wahl_moeglich[1] in Z.wert("FUNDKISTE", []) and not "Dosenoeffner" in Z.wert("FUNDKISTE", []),
+		"Der Rest liegt in der Fundkiste")
+	await _rundreise("Zwischenspiel 1 gepackt")
+	_pruefe(_i().is_item_in_inventory("Dosenoeffner") and Z.wert("TASCHE", []) == ["Socke", "Dosenoeffner"],
+		"nach Laden: Tasche unverändert")
+	await _hotspot("Drehknopf").on_click()
+	_pruefe(_gesagt("ZS1_DACH_MAX_0660") and _gesagt("ZS1_DACH_PIX_0670") and _gesagt("UI_WELT_1_ENDE"),
+		"Zweiter Dreh: Kanal 7 (0660, 0670), Ende des Ausbaustands")
 
 
 func _gehe(ausgang: String, raum: String) -> void:

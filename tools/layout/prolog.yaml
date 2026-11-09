@@ -5,7 +5,7 @@
 # Positionen der Szene in Godot und werden dort von Hand nachgezogen (03-produktion.md,
 # Arbeitsteilung). Grundlage für die Lage: grafik/02-prolog-und-finale.md (Motiv-Spalte).
 #
-# Koordinaten in Spielpixeln (320×180), Rechteck = [x, y, breite, hoehe],
+# Koordinaten in Spielpixeln (tools/aufloesung.py), Rechteck = [x, y, breite, hoehe],
 # gehe = Punkt, zu dem die Figur vor der Aktion läuft.
 # Schlüssel der Hotspots = Objekt-ID, die godot_raeume.py aus dem Auslöser des Skripts
 # ableitet („Ansehen: Ausgestopfter Fisch“ → ausgestopfter_fisch).
@@ -70,5 +70,6 @@ dachboden:
     plattenspieler: {rect: [3, 147, 39, 24], gehe: [30, 237]}
     kiste_mit_fernbedienungen: {rect: [3, 177, 39, 36], gehe: [30, 237]}
     opas_staubsauger_prototyp: {rect: [294, 177, 18, 39], gehe: [300, 240]}
+    fundkiste: {rect: [165, 189, 30, 27], gehe: [180, 237], name: Fundkiste}   # erst ab Zwischenspiel 1 sichtbar
   ausgaenge:
     treppenhaus: {rect: [348, 240, 60, 27], gehe: [375, 249], name: Bodenluke, id: bodenluke}

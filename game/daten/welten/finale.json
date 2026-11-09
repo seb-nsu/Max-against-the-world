@@ -16,7 +16,10 @@
  ],
  "weitere_schalter": [
   "ZWISCHENSPIEL",
-  "ZS1_EI_ABGEGEBEN"
+  "ZS1_EI_ABGEGEBEN",
+  "ZS1_GEPACKT",
+  "TASCHE",
+  "FUNDKISTE"
  ],
  "raeume": [
   {

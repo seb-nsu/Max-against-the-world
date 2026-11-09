@@ -4,7 +4,8 @@ extends SceneTree
 ## Aufruf (aus dem Ordner game/, unter Linux ohne Bildschirm mit xvfb-run):
 ##   xvfb-run -s "-screen 0 1920x1080x24" godot --path . --rendering-driver opengl3 \
 ##       --resolution 1920x1080 -s res://tests/bildschirmfoto.gd -- ZIELORDNER
-## Schreibt foto_1_sprechblase.png, foto_2_leiste.png und foto_3_gespraech.png.
+## Schreibt foto_1_sprechblase.png, foto_2_leiste.png, foto_3_gespraech.png und
+## foto_4_reisetasche.png (Zwischenspiel 1, Reisetasche mit Pixels Kommentar).
 
 const STARTRAUM := "res://game/rooms/wohnzimmer/room_wohnzimmer.tscn"
 var ziel := "user://fotos/"
@@ -52,6 +53,30 @@ func _lauf() -> void:
 		dialog.start()
 	await _warte(2.0)
 	await _foto("foto_3_gespraech")
+	if dialog:
+		dialog.stop()
+	await _warte(1.0)
+	# Reisetasche im Zwischenspiel 1: Dachboden, ein paar Gegenstände aus Welt 1
+	var zustand = root.get_node("Zustand")
+	zustand.abschnitt = "finale"
+	zustand.setze_wert("ZWISCHENSPIEL", 1)
+	zustand.setze("ZS1_EI_ABGEGEBEN")
+	var spiel = root.get_node("Spiel")
+	var inv = root.get_node("I")
+	inv.is_restoring = true  # ohne die Einblend-Wartezeit der Leiste
+	for sn in ["Kochloeffel", "Socke", "Eimer", "Zeugnis", "ZiegenfellVorleger", "Ketchup"]:
+		spiel.geben(sn)
+	inv.is_restoring = false
+	root.get_node("R").goto_room("Dachboden")
+	await _warte(4.0)
+	var tasche = load("res://skripte/reisetasche.gd").new(1)  # erst zur Laufzeit: braucht die Autoloads
+	spiel.hud.visible = false
+	var n = spiel.REISETASCHE.instantiate()
+	spiel.add_child(n)
+	n.zeigen(tasche)
+	tasche.beruehren("Socke")
+	await _warte(1.5)
+	await _foto("foto_4_reisetasche")
 	quit(0)
 
 

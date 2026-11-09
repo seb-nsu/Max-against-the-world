@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://l63b6fb00ey8"]
 
-[ext_resource type="Script" path="res://game/rooms/dachboden/room_dachboden.gd" id="1_27u1a"]
+[ext_resource type="Script" uid="uid://d0gj38owk6jl6" path="res://game/rooms/dachboden/room_dachboden.gd" id="1_27u1a"]
 [ext_resource type="PackedScene" uid="uid://ccgxu2roftehc" path="res://game/rooms/dachboden/walkable_areas/boden/walkable_area_boden.tscn" id="2_8cb7j"]
 [ext_resource type="PackedScene" uid="uid://d0fh0poixomft" path="res://game/rooms/dachboden/props/background/prop_background.tscn" id="3_v3y1t"]
 [ext_resource type="Texture2D" uid="uid://irvdgdals1o7" path="res://grafik/platzhalter/raum_dachboden.png" id="4_pjyx4"]
@@ -28,6 +28,7 @@
 [ext_resource type="PackedScene" uid="uid://db5kwj8ij0rm" path="res://game/rooms/dachboden/hotspots/dachfenster/hotspot_dachfenster.tscn" id="26_h7vyx"]
 [ext_resource type="PackedScene" uid="uid://cdht3gwwjoqio" path="res://game/rooms/dachboden/hotspots/bodenluke/hotspot_bodenluke.tscn" id="27_fqk22"]
 [ext_resource type="PackedScene" uid="uid://bwioj5sty1vjn" path="res://game/rooms/dachboden/markers/start/marker_start.tscn" id="28_180jd"]
+[ext_resource type="PackedScene" uid="uid://dbunxr4fev6x1" path="res://game/rooms/dachboden/hotspots/fundkiste/hotspot_fundkiste.tscn" id="28_v3y1t"]
 [ext_resource type="PackedScene" uid="uid://wgywaxqa3gtb" path="res://game/rooms/dachboden/markers/von_treppenhaus/marker_von_treppenhaus.tscn" id="29_xxq08"]
 [ext_resource type="PackedScene" uid="uid://cs4idsu1anhgi" path="res://game/rooms/dachboden/markers/fernseher/marker_fernseher.tscn" id="30_w5i4a"]
 [ext_resource type="PackedScene" uid="uid://bi52qvl201pvg" path="res://game/characters/pixel/character_pixel.tscn" id="31_0qvcd"]
@@ -42,7 +43,6 @@ height = 270
 [node name="WalkableAreas" type="Node2D" parent="." unique_id=1697259850]
 
 [node name="Boden" parent="WalkableAreas" unique_id=1447233398 instance=ExtResource("2_8cb7j")]
-interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(6, 219, 474, 219, 474, 267, 6, 267)])
 
 [node name="Props" type="Node2D" parent="." unique_id=1697276889]
 
@@ -172,6 +172,12 @@ description = "UI_OBJ_BODENLUKE"
 baseline = 14
 walk_to_point = Vector2(-3, -5)
 cursor = 9
+
+[node name="Fundkiste" parent="Hotspots" unique_id=1133812809 instance=ExtResource("28_v3y1t")]
+position = Vector2(180, 202.5)
+description = "UI_OBJ_FUNDKISTE"
+baseline = 13
+walk_to_point = Vector2(0, 34.5)
 
 [node name="Regions" type="Node2D" parent="." unique_id=182010566]
 

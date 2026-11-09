@@ -252,3 +252,10 @@ UI_TELEMETRIE_DANKE,Danke! Das Protokoll läuft.,Thanks! The log is running.
 UI_TELEMETRIE_AUS,Kein Protokoll. Viel Spaß!,No log. Have fun!
 UI_TELEMETRIE_SCHALTER,Telemetrie,Telemetry
 UI_TELEMETRIE_ORDNER,Telemetrie-Ordner öffnen,Open telemetry folder
+UI_OBJ_FUNDKISTE,Fundkiste,Lost-and-found box
+UI_TASCHE_TITEL,Reisetasche,Travel bag
+UI_TASCHE_PFLICHT,Pflichtfach,Always packed
+UI_TASCHE_WAHL,Zwei Wahlfächer,Two free pockets
+UI_TASCHE_AUSLAGE,Daneben liegt,Also here
+UI_TASCHE_FERTIG,Fertig gepackt,Done packing
+UI_TASCHE_HILFE,Klick packt ein oder aus. Rechtsklick: Pixel fragen.,Click packs or unpacks. Right-click: ask Pixel.

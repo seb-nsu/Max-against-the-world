@@ -48,6 +48,9 @@ func _zustand_anwenden() -> void:
 	var zapp := get_prop("ZappOMat")
 	if is_instance_valid(zapp) and not _p2_laeuft:
 		zapp.current_frame = bild()
+	var fundkiste := get_hotspot("Fundkiste")
+	if is_instance_valid(fundkiste):
+		fundkiste.visible = zwischenspiel() > 0  # Opas Archiv gibt es erst ab der ersten Rückkehr
 	if is_instance_valid(C.Pixel) and has_character("Pixel") and zwischenspiel() == 0:
 		C.Pixel.position = PIXEL_WERKBANK if Zustand.geloest("P1", "prolog") else PIXEL_KABEL
 
@@ -201,19 +204,26 @@ func zs1_ankunft() -> void:
 		Spiel.z("MAX", "ZS1_DACH_MAX_0060"),
 		Spiel.z("OPA", "ZS1_DACH_OPA_0070"),
 		_ei_abgeben,
+		Spiel.z("MAX", "ZS1_DACH_MAX_0072"),
+		Spiel.z("OPA", "ZS1_DACH_OPA_0074"),
 		Spiel.z("OPA", "ZS1_DACH_OPA_0080"),
 		Spiel.z("MAX", "ZS1_DACH_MAX_0090"),
 		Spiel.z("OPA", "ZS1_DACH_OPA_0100"),
 		Spiel.z("NAR", "ZS1_DACH_NAR_0110"),
 		Spiel.z("MAX", "ZS1_DACH_MAX_0120"),
 		Spiel.z("OPA", "ZS1_DACH_OPA_0130"),
+		Spiel.z("MAX", "ZS1_DACH_MAX_0132"),
 		Spiel.z("PIX", "ZS1_DACH_PIX_0140"),
 		Spiel.z("MAX", "ZS1_DACH_MAX_0150"),
 		Spiel.z("OPA", "ZS1_DACH_OPA_0160"),
 		Spiel.z("OPA", "ZS1_DACH_OPA_0170"),
 		Spiel.z("MAX", "ZS1_DACH_MAX_0180"),
 		Spiel.z("PIX", "ZS1_DACH_PIX_0190"),
+		Spiel.z("MAX", "ZS1_DACH_MAX_0192"),
+		Spiel.z("OPA", "ZS1_DACH_OPA_0194"),
 		Spiel.z("OPA", "ZS1_DACH_OPA_0200"),
+		Spiel.z("MAX", "ZS1_DACH_MAX_0202"),
+		Spiel.z("OPA", "ZS1_DACH_OPA_0204"),
 		Spiel.z("PIX", "ZS1_DACH_PIX_0210"),
 		Spiel.z("PIX", "ZS1_DACH_PIX_0220"),
 		Spiel.z("MAX", "ZS1_DACH_MAX_0230"),
@@ -228,9 +238,34 @@ func _ei_abgeben() -> void:
 	Zustand.setze("ZS1_EI_ABGEGEBEN")
 
 
-## Ansehen im Zwischenspiel 1 (0310–0375): nur, was sich verändert hat; sonst gelten die
-## Prolog-Zeilen. Die Werkbank-Ablage mit dem Ei ist in der Graubox die Werkbank; die Fundkiste
-## (0420/0425) hat noch keinen Hotspot.
+## Drehknopf im Zwischenspiel 1: Beim ersten Mal hält Opa Max auf und öffnet die Reisetasche
+## (0510–0514), nach dem Packen verabschiedet er sich (0630–0650). Der zweite Dreh wählt Kanal 7
+## (0660, 0670); Welt 2 ist noch nicht gebaut, also endet hier der Ausbaustand.
+func zs1_drehknopf() -> void:
+	if not Zustand.ist("ZS1_GEPACKT"):
+		await Spiel.szene([
+			Spiel.z("OPA", "ZS1_DACH_OPA_0510"),
+			Spiel.z("MAX", "ZS1_DACH_MAX_0512"),
+			Spiel.z("OPA", "ZS1_DACH_OPA_0514"),
+		])
+		await Spiel.reisetasche_packen(1)
+		Zustand.setze("ZS1_GEPACKT")
+		await Spiel.szene([
+			Spiel.z("OPA", "ZS1_DACH_OPA_0630"),
+			Spiel.z("MAX", "ZS1_DACH_MAX_0640"),
+			Spiel.z("OPA", "ZS1_DACH_OPA_0650"),
+		])
+		Spielstand.autospeichern()
+		return
+	await Spiel.szene([
+		Spiel.z("MAX", "ZS1_DACH_MAX_0660"),
+		Spiel.z("PIX", "ZS1_DACH_PIX_0670"),
+	])
+	Spiel.ausbau_ende("UI_WELT_1_ENDE")
+
+
+## Ansehen im Zwischenspiel 1 (0310–0375, Fundkiste 0420/0425): nur, was sich verändert hat;
+## sonst gelten die Prolog-Zeilen. Die Werkbank-Ablage mit dem Ei ist die Werkbank (G26).
 const ZS1_ANSEHEN := {
 	werkbank = [["MAX", "ZS1_DACH_MAX_0310", 1], ["MAX", "ZS1_DACH_MAX_0315", 2, "ZS1_DACH_PIX_0320"]],
 	dachfenster = [["MAX", "ZS1_DACH_MAX_0330", 1], ["MAX", "ZS1_DACH_MAX_0335", 2]],
@@ -238,6 +273,7 @@ const ZS1_ANSEHEN := {
 	zapp_o_mat = [["MAX", "ZS1_DACH_MAX_0350", 1], ["PIX", "ZS1_DACH_PIX_0355", 2]],
 	kiste_mit_fernbedienungen = [["PIX", "ZS1_DACH_PIX_0360", 1], ["PIX", "ZS1_DACH_PIX_0365", 2]],
 	ohrensessel = [["MAX", "ZS1_DACH_MAX_0370", 1], ["MAX", "ZS1_DACH_MAX_0375", 2]],
+	fundkiste = [["MAX", "ZS1_DACH_MAX_0420", 1], ["MAX", "ZS1_DACH_MAX_0425", 2]],
 }
 
 

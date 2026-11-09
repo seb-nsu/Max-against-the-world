@@ -24,6 +24,7 @@ const ZURUF_NACH := 45.0
 const HUD := preload("res://oberflaeche/hud.tscn")
 const NAHANSICHT := preload("res://oberflaeche/nahansicht.tscn")
 const NOTIZBUCH := preload("res://oberflaeche/notizbuch.tscn")
+const REISETASCHE := preload("res://oberflaeche/reisetasche.tscn")
 
 var testmodus := false
 ## Alle gesagten Sprechblasen-Schlüssel in Reihenfolge (für Tests und Telemetrie)
@@ -38,6 +39,8 @@ var herkunft_raum := ""
 
 ## Vorgegebene Antworten für auswahl() (Tests): Index je Auswahl, der Reihe nach verbraucht
 var vorgabe_auswahl: Array = []
+## Vorgaben für das Packen der Reisetasche (Tests): Gegenstände, die der Reihe nach berührt werden
+var vorgabe_tasche: Array = []
 
 var hud: CanvasLayer
 var _letzte_ersatz := {}
@@ -543,6 +546,30 @@ func notizbuch_oeffnen() -> void:
 	in_szene -= 1
 
 
+## Reisetasche packen (Zwischenspiele): Überlagerung, bis „Fertig gepackt“ gedrückt ist, dann
+## übernimmt CQReisetasche die Auswahl. Mit Vorgaben (Tests) oder im Testmodus werden die
+## Vorgaben ohne Überlagerung der Reihe nach berührt.
+func reisetasche_packen(nr: int) -> void:
+	var t := CQReisetasche.new(nr)
+	in_szene += 1
+	if testmodus or not vorgabe_tasche.is_empty():
+		for sn in vorgabe_tasche:
+			await t.beruehren(sn)
+		vorgabe_tasche.clear()
+	else:
+		G.block()
+		hud.visible = false  # Porträts und Pfote lägen über dem Fenster
+		var n := REISETASCHE.instantiate()
+		add_child(n)
+		n.zeigen(t)
+		await n.geschlossen
+		n.queue_free()
+		hud.visible = true
+		G.unblock()
+	await t.bestaetigen()
+	in_szene -= 1
+
+
 ## Kurze Meldung unten im Bild (Schlüssel aus ui.csv).
 func melden(schluessel: String) -> void:
 	if is_instance_valid(hud):
@@ -607,11 +634,14 @@ func prolog_beenden() -> void:
 
 
 ## Wechsel in einen neuen Abschnitt. Mit reist nur, was die Welt-Tabelle des Ziels als
-## mitgebracht führt (herkunft = früherer Abschnitt), dazu die Reisetasche selbst; der
+## mitgebracht führt (herkunft = früherer Abschnitt), dazu die Reisetasche selbst, das Pflichtfach
+## und die Wahlfächer aus dem letzten Zwischenspiel (Wert TASCHE); der
 ## Dosenöffner bleibt auf dem Dachboden (raetsel/prolog-und-welt-1.md, Was auf dem Dachboden
 ## bleibt). Der erste Raum ist der erste Raum der Welt-Tabelle.
 func welt_beginnen(ab: String) -> void:
 	var mit := ["Reisetasche", PIXEL_FELD]
+	mit.append_array(CQReisetasche.PFLICHT)
+	mit.append_array(Zustand.wert("TASCHE", []))
 	for g in Bauplan.welten.get(ab, {}).get("gegenstaende", []):
 		if g.get("herkunft", "") in Bauplan.welten.keys():
 			mit.append(Bauplan.gegenstand_script_name(g.id))

@@ -91,18 +91,24 @@ func bauen() -> int:
 
 
 #region Grundeinrichtung ###########################################################################
-## Entspricht dem Popochiu-Einrichtungsassistenten (Retro, eigene Auflösung 320×180, GUI
-## „Simple Click“) plus den Projekteinstellungen aus 03-produktion.md und 05-spielsysteme.md.
+## Entspricht dem Popochiu-Einrichtungsassistenten (Retro, eigene Auflösung, GUI „Simple Click“)
+## plus den Projekteinstellungen aus 03-produktion.md und 05-spielsysteme.md.
 func _grundeinrichtung() -> void:
-	# Pixel-Einstellungen (03-produktion.md, System 1): 320×180, Stretch „viewport“,
-	# ganzzahlig, Nearest.
-	ProjectSettings.set_setting("display/window/size/viewport_width", 320)
-	ProjectSettings.set_setting("display/window/size/viewport_height", 180)
-	ProjectSettings.set_setting("display/window/size/window_width_override", 1280)
-	ProjectSettings.set_setting("display/window/size/window_height_override", 720)
-	ProjectSettings.set_setting("display/window/stretch/mode", "viewport")
-	ProjectSettings.set_setting("display/window/stretch/aspect", "keep")
-	ProjectSettings.set_setting("display/window/stretch/scale_mode", "integer")
+	# Pixel-Einstellungen (03-produktion.md, System 1): Grundauflösung aus tools/aufloesung.py
+	# (480×270), Stretch „canvas_items“, damit Text in voller Auflösung gezeichnet wird,
+	# ganzzahlig, Nearest, Pixel-Snap. Nur beim ersten Einrichten (Godot-Standard 1152 breit):
+	# Eine spätere Umstellung trägt tools/aufloesung.py --umrechnen in project.godot ein, und der
+	# Bau darf sie nicht zurücksetzen.
+	if int(ProjectSettings.get_setting("display/window/size/viewport_width", 1152)) == 1152:
+		ProjectSettings.set_setting("display/window/size/viewport_width", 480)
+		ProjectSettings.set_setting("display/window/size/viewport_height", 270)
+		ProjectSettings.set_setting("display/window/size/window_width_override", 1440)
+		ProjectSettings.set_setting("display/window/size/window_height_override", 810)
+		ProjectSettings.set_setting("display/window/stretch/mode", "canvas_items")
+		ProjectSettings.set_setting("display/window/stretch/aspect", "keep")
+		ProjectSettings.set_setting("display/window/stretch/scale_mode", "integer")
+		ProjectSettings.set_setting("rendering/2d/snap/snap_2d_transforms_to_pixel", true)
+		ProjectSettings.set_setting("rendering/2d/snap/snap_2d_vertices_to_pixel", true)
 	ProjectSettings.set_setting("rendering/textures/canvas_textures/default_texture_filter", 0)
 	PopochiuConfig.set_pixel_art_textures(true)
 

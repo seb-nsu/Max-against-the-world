@@ -543,6 +543,22 @@
      ]
     },
     {
+     "id": "fundkiste",
+     "script_name": "Fundkiste",
+     "name_key": "UI_OBJ_FUNDKISTE",
+     "rect": [
+      165,
+      189,
+      30,
+      27
+     ],
+     "gehe": [
+      180,
+      237
+     ],
+     "ansehen": []
+    },
+    {
      "id": "werkzeugkiste",
      "script_name": "Werkzeugkiste",
      "name_key": "UI_OBJ_WERKZEUGKISTE",

@@ -7,6 +7,9 @@ sonder_sprecher: [NAR]               # Regie- und Animationszeilen ohne Sprecher
 weitere_schalter:
   - ZWISCHENSPIEL            # Wert: laufendes Zwischenspiel (1 bis 3); fehlt im Finale
   - ZS1_EI_ABGEGEBEN         # Opa hat das Drachenei genommen (ZS1_DACH 0070), Ankunftsszene gespielt
+  - ZS1_GEPACKT              # Reisetasche für Welt 2 gepackt (ZS1_DACH 0620), der nächste Dreh wählt Kanal 7
+  - TASCHE                   # Wert: Gegenstände der zwei Wahlfächer aus dem letzten Packen (reisen in die nächste Welt mit)
+  - FUNDKISTE                # Wert: was in Opas Fundkiste liegt; vor dem ersten Packen nur der Dosenöffner
 
 raeume:
   - id: dachboden
