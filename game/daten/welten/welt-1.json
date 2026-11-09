@@ -1,0 +1,1247 @@
+{
+ "abschnitt": "welt-1",
+ "name": "Schwurbelstein",
+ "skript_praefix": "W1",
+ "sonder_codes": [
+  "WECH",
+  "HINT"
+ ],
+ "sonder_sprecher": [
+  "NAR"
+ ],
+ "raeume": [
+  {
+   "id": "dorfplatz",
+   "name": "Dorfplatz Unterbrösel",
+   "skript_code": [
+    "ANK",
+    "DORF"
+   ],
+   "groesse": "640x180",
+   "ausgaenge": [
+    "taverne",
+    "schmiede",
+    "zauberstabladen",
+    "klassenzimmer",
+    "trollbruecke",
+    "luftschloss"
+   ],
+   "erreichbar_ab": "start",
+   "musik": "w1_dorf",
+   "zustaende": [
+    "vor_R8",
+    "nach_R8"
+   ]
+  },
+  {
+   "id": "taverne",
+   "name": "Taverne „Zum tänzelnden Pony-Express“",
+   "skript_code": [
+    "TAV"
+   ],
+   "groesse": "320x180",
+   "ausgaenge": [
+    "dorfplatz"
+   ],
+   "erreichbar_ab": "start",
+   "musik": "w1_taverne"
+  },
+  {
+   "id": "schmiede",
+   "name": "Schmiede",
+   "skript_code": [
+    "SCHM"
+   ],
+   "groesse": "320x180",
+   "ausgaenge": [
+    "dorfplatz"
+   ],
+   "erreichbar_ab": "start",
+   "musik": "w1_dorf"
+  },
+  {
+   "id": "zauberstabladen",
+   "name": "Zauberstab-Laden",
+   "skript_code": [
+    "STAB"
+   ],
+   "groesse": "320x180",
+   "ausgaenge": [
+    "dorfplatz"
+   ],
+   "erreichbar_ab": "start",
+   "musik": "w1_dorf"
+  },
+  {
+   "id": "klassenzimmer",
+   "name": "Hoggelwarz, Klassenzimmer",
+   "skript_code": [
+    "HOGG"
+   ],
+   "groesse": "320x180",
+   "ausgaenge": [
+    "dorfplatz"
+   ],
+   "erreichbar_ab": "start",
+   "musik": "w1_schule"
+  },
+  {
+   "id": "trollbruecke",
+   "name": "Troll-Brücke",
+   "skript_code": [
+    "BRUE"
+   ],
+   "groesse": "320x180",
+   "ausgaenge": [
+    "dorfplatz",
+    "zauberwald",
+    "wasserschloss"
+   ],
+   "erreichbar_ab": "start",
+   "musik": "w1_dorf"
+  },
+  {
+   "id": "wasserschloss",
+   "name": "Wasserschloss",
+   "skript_code": [
+    "WASS"
+   ],
+   "groesse": "320x180",
+   "ausgaenge": [
+    "trollbruecke"
+   ],
+   "erreichbar_ab": "R4",
+   "musik": "w1_dorf"
+  },
+  {
+   "id": "zauberwald",
+   "name": "Zauberwald",
+   "skript_code": [
+    "WALD"
+   ],
+   "groesse": "320x180",
+   "ausgaenge": [
+    "trollbruecke",
+    "bergwerk"
+   ],
+   "erreichbar_ab": "R4",
+   "musik": "w1_wald",
+   "zustaende": [
+    "niesrosen_zu",
+    "niesrosen_offen"
+   ]
+  },
+  {
+   "id": "luftschloss",
+   "name": "Luftschloss",
+   "skript_code": [
+    "LUFT"
+   ],
+   "groesse": "320x180",
+   "ausgaenge": [
+    "dorfplatz"
+   ],
+   "erreichbar_ab": "R8",
+   "musik": "w1_luftschloss"
+  },
+  {
+   "id": "bergwerk",
+   "name": "Goblin-Bergwerk",
+   "skript_code": [
+    "BERG"
+   ],
+   "groesse": "320x180",
+   "ausgaenge": [
+    "zauberwald",
+    "turmkeller"
+   ],
+   "erreichbar_ab": "R4",
+   "musik": "w1_bergwerk",
+   "zustaende": [
+    "rune_tuer_zu",
+    "rune_tuer_offen"
+   ]
+  },
+  {
+   "id": "turmkeller",
+   "name": "Dunkler Turm, Keller",
+   "skript_code": [
+    "TURM"
+   ],
+   "groesse": "320x180",
+   "ausgaenge": [
+    "bergwerk",
+    "abstellkammer_1",
+    "abstellkammern"
+   ],
+   "erreichbar_ab": "R10",
+   "musik": "w1_turm",
+   "zustaende": [
+    "vor_R11b",
+    "nach_R11b"
+   ]
+  },
+  {
+   "id": "abstellkammer_1",
+   "name": "Abstellkammer 1",
+   "skript_code": [],
+   "groesse": "320x180",
+   "ausgaenge": [
+    "turmkeller"
+   ],
+   "erreichbar_ab": "R11b",
+   "musik": "w1_turm"
+  },
+  {
+   "id": "abstellkammern",
+   "name": "Smaugis Abstellkammern",
+   "skript_code": [
+    "SMAU"
+   ],
+   "groesse": "320x180",
+   "ausgaenge": [
+    "turmkeller",
+    "thronsaal"
+   ],
+   "erreichbar_ab": "R11b",
+   "musik": "w1_turm",
+   "zustaende": [
+    "voll",
+    "aufgeraeumt"
+   ]
+  },
+  {
+   "id": "thronsaal",
+   "name": "Thronsaal",
+   "skript_code": [
+    "THRO"
+   ],
+   "groesse": "320x180",
+   "ausgaenge": [
+    "abstellkammern"
+   ],
+   "erreichbar_ab": "R12",
+   "musik": "w1_turm"
+  }
+ ],
+ "figuren": [
+  {
+   "id": "max",
+   "name": "Max",
+   "kuerzel": "MAX",
+   "raum": [
+    "dorfplatz",
+    "taverne",
+    "schmiede",
+    "zauberstabladen",
+    "klassenzimmer",
+    "trollbruecke",
+    "wasserschloss",
+    "zauberwald",
+    "luftschloss",
+    "bergwerk",
+    "turmkeller",
+    "abstellkammer_1",
+    "abstellkammern",
+    "thronsaal"
+   ],
+   "groesse_px": 56,
+   "spielbar": true
+  },
+  {
+   "id": "pixel",
+   "name": "Pixel",
+   "kuerzel": "PIX",
+   "raum": [
+    "dorfplatz",
+    "taverne",
+    "schmiede",
+    "zauberstabladen",
+    "klassenzimmer",
+    "trollbruecke",
+    "wasserschloss",
+    "zauberwald",
+    "luftschloss",
+    "bergwerk",
+    "turmkeller",
+    "abstellkammer_1",
+    "abstellkammern",
+    "thronsaal"
+   ],
+   "groesse_px": 18,
+   "spielbar": true
+  },
+  {
+   "id": "opa",
+   "name": "Opa",
+   "kuerzel": "OPA",
+   "raum": [],
+   "groesse_px": 60,
+   "spielbar": false
+  },
+  {
+   "id": "toadi",
+   "name": "Toadi",
+   "kuerzel": "TOA",
+   "raum": [
+    "dorfplatz",
+    "klassenzimmer",
+    "wasserschloss",
+    "zauberwald",
+    "luftschloss",
+    "thronsaal"
+   ],
+   "groesse_px": 30,
+   "spielbar": false
+  },
+  {
+   "id": "alwin",
+   "name": "Alwin",
+   "kuerzel": "ALW",
+   "raum": "klassenzimmer",
+   "groesse_px": 62,
+   "spielbar": false
+  },
+  {
+   "id": "zeldina",
+   "name": "Zeldina",
+   "kuerzel": "ZEL",
+   "raum": [
+    "luftschloss",
+    "bergwerk",
+    "turmkeller",
+    "abstellkammern",
+    "thronsaal"
+   ],
+   "groesse_px": 58,
+   "spielbar": false
+  },
+  {
+   "id": "gollo",
+   "name": "Gollo",
+   "kuerzel": "GOL",
+   "raum": "taverne",
+   "groesse_px": 44,
+   "spielbar": false
+  },
+  {
+   "id": "humbert",
+   "name": "Humbert",
+   "kuerzel": "HUM",
+   "raum": [
+    "taverne",
+    "abstellkammern"
+   ],
+   "groesse_px": 60,
+   "spielbar": false
+  },
+  {
+   "id": "schmied",
+   "name": "Schmied",
+   "kuerzel": "SCH",
+   "raum": "schmiede",
+   "groesse_px": 60,
+   "spielbar": false
+  },
+  {
+   "id": "waldemar",
+   "name": "Waldemar",
+   "kuerzel": "WAL",
+   "raum": [
+    "trollbruecke",
+    "zauberwald"
+   ],
+   "groesse_px": 80,
+   "spielbar": false
+  },
+  {
+   "id": "stabmacher",
+   "name": "Stabmacher",
+   "kuerzel": "STA",
+   "raum": "zauberstabladen",
+   "groesse_px": 58,
+   "spielbar": false
+  },
+  {
+   "id": "rotkaeppchen",
+   "name": "Rotkäppchen",
+   "kuerzel": "ROT",
+   "raum": [
+    "zauberwald",
+    "dorfplatz"
+   ],
+   "groesse_px": 48,
+   "spielbar": false
+  },
+  {
+   "id": "maklerin",
+   "name": "Maklerin",
+   "kuerzel": "MAK",
+   "raum": "luftschloss",
+   "groesse_px": 60,
+   "spielbar": false
+  },
+  {
+   "id": "grimmzahn",
+   "name": "Grimmzahn",
+   "kuerzel": "GRI",
+   "raum": [
+    "bergwerk",
+    "turmkeller",
+    "abstellkammern"
+   ],
+   "groesse_px": 40,
+   "spielbar": false
+  },
+  {
+   "id": "goblin_1",
+   "name": "Goblin 1",
+   "kuerzel": "GO1",
+   "raum": "bergwerk",
+   "groesse_px": 34,
+   "spielbar": false
+  },
+  {
+   "id": "goblin_2",
+   "name": "Goblin 2",
+   "kuerzel": "GO2",
+   "raum": "bergwerk",
+   "groesse_px": 34,
+   "spielbar": false
+  },
+  {
+   "id": "moderwort",
+   "name": "Moderwort",
+   "kuerzel": "MOD",
+   "raum": "thronsaal",
+   "groesse_px": 60,
+   "spielbar": false
+  },
+  {
+   "id": "smaugi",
+   "name": "Smaugi",
+   "kuerzel": "SMA",
+   "raum": "abstellkammern",
+   "groesse_px": 120,
+   "spielbar": false
+  },
+  {
+   "id": "minka",
+   "name": "Minka",
+   "kuerzel": "MIN",
+   "raum": "taverne",
+   "groesse_px": 18,
+   "spielbar": false
+  },
+  {
+   "id": "huhn",
+   "name": "Huhn",
+   "kuerzel": "HUH",
+   "raum": "taverne",
+   "groesse_px": 14,
+   "spielbar": false
+  },
+  {
+   "id": "schmiede_ziege",
+   "name": "Schmiede-Ziege",
+   "kuerzel": "ZIE",
+   "raum": [
+    "schmiede",
+    "dorfplatz",
+    "trollbruecke"
+   ],
+   "groesse_px": 28,
+   "spielbar": false
+  },
+  {
+   "id": "xxl_ziege",
+   "name": "XXL-Ziege",
+   "kuerzel": "XXL",
+   "raum": [
+    "dorfplatz",
+    "trollbruecke"
+   ],
+   "groesse_px": 70,
+   "spielbar": false
+  },
+  {
+   "id": "schwan",
+   "name": "Schwan",
+   "kuerzel": "SWA",
+   "raum": "wasserschloss",
+   "groesse_px": 24,
+   "spielbar": false
+  },
+  {
+   "id": "brunnen",
+   "name": "Brunnen",
+   "kuerzel": "BRU",
+   "raum": "dorfplatz",
+   "groesse_px": 0,
+   "spielbar": false
+  },
+  {
+   "id": "grammophon",
+   "name": "Grammophon",
+   "kuerzel": "GRA",
+   "raum": "trollbruecke",
+   "groesse_px": 0,
+   "spielbar": false
+  },
+  {
+   "id": "spiegel",
+   "name": "Spiegel",
+   "kuerzel": "SPI",
+   "raum": "luftschloss",
+   "groesse_px": 0,
+   "spielbar": false
+  },
+  {
+   "id": "geheimtuer",
+   "name": "Geheimtür",
+   "kuerzel": "TUE",
+   "raum": "abstellkammern",
+   "groesse_px": 0,
+   "spielbar": false
+  },
+  {
+   "id": "zauberbesen",
+   "name": "Zauberbesen",
+   "kuerzel": null,
+   "raum": [
+    "turmkeller",
+    "abstellkammer_1",
+    "abstellkammern"
+   ],
+   "groesse_px": 30,
+   "spielbar": false
+  },
+  {
+   "id": "uebungsbesen",
+   "name": "Übungsbesen",
+   "kuerzel": null,
+   "raum": "klassenzimmer",
+   "groesse_px": 22,
+   "spielbar": false
+  }
+ ],
+ "gegenstaende": [
+  {
+   "id": "thunfischdose",
+   "name": "Thunfischdose",
+   "herkunft": "prolog",
+   "zustaende": [
+    "offen"
+   ],
+   "verwendet_in": [
+    "R1c"
+   ],
+   "reist_mit": true,
+   "nahansicht": false
+  },
+  {
+   "id": "notizbuch",
+   "name": "Notizbuch",
+   "herkunft": "prolog",
+   "zustaende": [
+    "normal"
+   ],
+   "verwendet_in": [
+    "R4a",
+    "R6b",
+    "R11a"
+   ],
+   "reist_mit": true,
+   "nahansicht": false
+  },
+  {
+   "id": "opas_zettel",
+   "name": "Opas Zettel",
+   "herkunft": "prolog",
+   "zustaende": [
+    "normal"
+   ],
+   "verwendet_in": [],
+   "ohne_verwendung": "Ansehen und Notiz",
+   "reist_mit": false,
+   "nahansicht": false
+  },
+  {
+   "id": "goldmuenze",
+   "name": "Goldmünze",
+   "herkunft": "R1c",
+   "zustaende": [
+    "normal"
+   ],
+   "verwendet_in": [
+    "R5"
+   ],
+   "reist_mit": false,
+   "nahansicht": false
+  },
+  {
+   "id": "kaesefondue",
+   "name": "Käsefondue",
+   "herkunft": "R1c",
+   "zustaende": [
+    "normal"
+   ],
+   "verwendet_in": [
+    "R2"
+   ],
+   "reist_mit": false,
+   "nahansicht": false
+  },
+  {
+   "id": "kochloeffel",
+   "name": "Kochlöffel",
+   "herkunft": "zauberstabladen",
+   "zustaende": [
+    "ohne_kaese",
+    "zauberstab"
+   ],
+   "verwendet_in": [
+    "R2",
+    "R6a",
+    "R13"
+   ],
+   "reist_mit": true,
+   "nahansicht": false
+  },
+  {
+   "id": "socke",
+   "name": "Sortierende Socke",
+   "herkunft": "R2",
+   "zustaende": [
+    "leer",
+    "voller_pollen"
+   ],
+   "verwendet_in": [
+    "R7",
+    "R13"
+   ],
+   "reist_mit": true,
+   "nahansicht": false
+  },
+  {
+   "id": "ziegenfell_vorleger",
+   "name": "Ziegenfell-Vorleger",
+   "herkunft": "taverne",
+   "zustaende": [
+    "normal"
+   ],
+   "verwendet_in": [
+    "R3",
+    "R4a"
+   ],
+   "reist_mit": true,
+   "nahansicht": false
+  },
+  {
+   "id": "bestellzettel",
+   "name": "Bestellzettel",
+   "herkunft": "dorfplatz",
+   "zustaende": [
+    "normal"
+   ],
+   "verwendet_in": [
+    "R3"
+   ],
+   "reist_mit": false,
+   "nahansicht": false
+  },
+  {
+   "id": "steckbrief",
+   "name": "Moderworts Steckbrief",
+   "herkunft": "dorfplatz",
+   "zustaende": [
+    "normal"
+   ],
+   "verwendet_in": [
+    "R9"
+   ],
+   "reist_mit": false,
+   "nahansicht": false
+  },
+  {
+   "id": "eimer",
+   "name": "Eimer",
+   "herkunft": "dorfplatz",
+   "zustaende": [
+    "leer",
+    "mit_wasser"
+   ],
+   "verwendet_in": [
+    "R4c",
+    "R8"
+   ],
+   "reist_mit": true,
+   "nahansicht": false
+  },
+  {
+   "id": "krug",
+   "name": "Krug",
+   "herkunft": "schmiede",
+   "zustaende": [
+    "leer",
+    "mit_ziegenmilch"
+   ],
+   "verwendet_in": [
+    "R6a"
+   ],
+   "reist_mit": false,
+   "nahansicht": false
+  },
+  {
+   "id": "ei",
+   "name": "Ei",
+   "herkunft": "huhn",
+   "zustaende": [
+    "normal"
+   ],
+   "verwendet_in": [
+    "R6a"
+   ],
+   "reist_mit": false,
+   "nahansicht": false
+  },
+  {
+   "id": "leuchtpilz",
+   "name": "Leuchtpilz",
+   "herkunft": "zauberwald",
+   "zustaende": [
+    "normal"
+   ],
+   "verwendet_in": [
+    "R6a"
+   ],
+   "reist_mit": false,
+   "nahansicht": false
+  },
+  {
+   "id": "hinweiszettel",
+   "name": "Alwins Hinweiszettel",
+   "herkunft": "alwin",
+   "zustaende": [
+    "normal"
+   ],
+   "verwendet_in": [
+    "R6b"
+   ],
+   "reist_mit": false,
+   "nahansicht": true
+  },
+  {
+   "id": "flasche",
+   "name": "Fläschchen",
+   "herkunft": "klassenzimmer",
+   "zustaende": [
+    "klein",
+    "gross"
+   ],
+   "verwendet_in": [
+    "R6b"
+   ],
+   "reist_mit": false,
+   "nahansicht": false
+  },
+  {
+   "id": "leuchttrank",
+   "name": "Leuchttrank",
+   "herkunft": "R6b",
+   "zustaende": [
+    "normal"
+   ],
+   "verwendet_in": [
+    "R10a"
+   ],
+   "reist_mit": true,
+   "nahansicht": false
+  },
+  {
+   "id": "zeugnis",
+   "name": "Moderworts Zeugnis",
+   "herkunft": "R6b",
+   "zustaende": [
+    "normal"
+   ],
+   "verwendet_in": [
+    "R11a"
+   ],
+   "reist_mit": true,
+   "nahansicht": true
+  },
+  {
+   "id": "zauberbohne",
+   "name": "Zauberbohne",
+   "herkunft": "R5",
+   "zustaende": [
+    "normal"
+   ],
+   "verwendet_in": [
+    "R8"
+   ],
+   "reist_mit": false,
+   "nahansicht": false
+  },
+  {
+   "id": "ketchup",
+   "name": "Ketchup",
+   "herkunft": "zauberwald",
+   "zustaende": [
+    "normal"
+   ],
+   "verwendet_in": [
+    "R10a"
+   ],
+   "reist_mit": true,
+   "nahansicht": false
+  },
+  {
+   "id": "tarifvertrag",
+   "name": "Tarifvertrag",
+   "herkunft": "grimmzahn",
+   "zustaende": [
+    "leer",
+    "unterschrieben"
+   ],
+   "verwendet_in": [
+    "R10a"
+   ],
+   "reist_mit": false,
+   "nahansicht": false
+  },
+  {
+   "id": "schwerter_buendel",
+   "name": "Schwerter-Bündel",
+   "herkunft": "abstellkammern",
+   "zustaende": [
+    "normal"
+   ],
+   "verwendet_in": [
+    "R12"
+   ],
+   "reist_mit": false,
+   "nahansicht": false
+  },
+  {
+   "id": "fackel_buendel",
+   "name": "Fackel-Bündel",
+   "herkunft": "abstellkammern",
+   "zustaende": [
+    "normal"
+   ],
+   "verwendet_in": [
+    "R12"
+   ],
+   "reist_mit": false,
+   "nahansicht": false
+  },
+  {
+   "id": "kronleuchter",
+   "name": "Kronleuchter",
+   "herkunft": "abstellkammern",
+   "zustaende": [
+    "normal"
+   ],
+   "verwendet_in": [
+    "R12"
+   ],
+   "reist_mit": false,
+   "nahansicht": false
+  },
+  {
+   "id": "drachenei",
+   "name": "Drachenei",
+   "herkunft": "R12",
+   "zustaende": [
+    "normal"
+   ],
+   "verwendet_in": [],
+   "ohne_verwendung": "Artefakt, Opa legt es im Zwischenspiel in die Maschine",
+   "reist_mit": false,
+   "nahansicht": false
+  }
+ ],
+ "nahansichten": [
+  {
+   "id": "maerchen_satzung",
+   "name": "Märchen-Satzung",
+   "raum": "trollbruecke"
+  },
+  {
+   "id": "luftschloss_kritzelei",
+   "name": "Kritzelei",
+   "raum": "luftschloss"
+  }
+ ],
+ "raetsel": [
+  {
+   "id": "R1",
+   "name": "Der Taverne-Coup",
+   "raum": "taverne",
+   "benoetigt": [
+    "R1a",
+    "R1b",
+    "R1c"
+   ],
+   "ergibt": [],
+   "schalter": [],
+   "optional": false
+  },
+  {
+   "id": "R1a",
+   "name": "Minka",
+   "raum": "taverne",
+   "benoetigt": [],
+   "ergibt": [],
+   "schalter": [
+    "W1_R01_A_GELOEST"
+   ],
+   "optional": false
+  },
+  {
+   "id": "R1b",
+   "name": "Jahrgang Schicksalsberg",
+   "raum": "taverne",
+   "benoetigt": [],
+   "ergibt": [],
+   "schalter": [
+    "W1_R01_B_GELOEST"
+   ],
+   "optional": false
+  },
+  {
+   "id": "R1c",
+   "name": "Das Rätselspiel",
+   "raum": "taverne",
+   "benoetigt": [
+    "R1a",
+    "R1b",
+    "thunfischdose"
+   ],
+   "ergibt": [
+    "goldmuenze",
+    "kaesefondue"
+   ],
+   "schalter": [
+    "W1_R01_C_GELOEST"
+   ],
+   "optional": false
+  },
+  {
+   "id": "R2",
+   "name": "Der Zauberstab wählt den Zauberer",
+   "raum": "zauberstabladen",
+   "benoetigt": [
+    "kochloeffel",
+    "kaesefondue"
+   ],
+   "ergibt": [
+    "socke"
+   ],
+   "schalter": [
+    "W1_R02_GELOEST"
+   ],
+   "optional": false
+  },
+  {
+   "id": "R3",
+   "name": "Drei Ziegenböcke",
+   "raum": "trollbruecke",
+   "benoetigt": [
+    "bestellzettel",
+    "ziegenfell_vorleger"
+   ],
+   "ergibt": [],
+   "schalter": [
+    "W1_R03_GELOEST",
+    "W1_ZIEGEN_FOLGEN"
+   ],
+   "optional": false
+  },
+  {
+   "id": "R4",
+   "name": "Das Märchen an der Troll-Brücke",
+   "raum": "trollbruecke",
+   "benoetigt": [
+    "R4a",
+    "R4b",
+    "R4c"
+   ],
+   "ergibt": [],
+   "schalter": [],
+   "optional": false
+  },
+  {
+   "id": "R4a",
+   "name": "Die Reihenfolge",
+   "raum": "trollbruecke",
+   "benoetigt": [
+    "R3",
+    "ziegenfell_vorleger"
+   ],
+   "ergibt": [],
+   "schalter": [
+    "W1_R04_A_GELOEST"
+   ],
+   "optional": false
+  },
+  {
+   "id": "R4b",
+   "name": "Ziegisch",
+   "raum": "trollbruecke",
+   "benoetigt": [
+    "R3"
+   ],
+   "ergibt": [],
+   "schalter": [
+    "W1_R04_B_GELOEST"
+   ],
+   "optional": false
+  },
+  {
+   "id": "R4c",
+   "name": "Ins Wasser",
+   "raum": "trollbruecke",
+   "benoetigt": [
+    "R4a",
+    "R4b",
+    "eimer"
+   ],
+   "ergibt": [],
+   "schalter": [
+    "W1_R04_C_GELOEST"
+   ],
+   "optional": false
+  },
+  {
+   "id": "R5",
+   "name": "Der Brunnen der Wünsche",
+   "raum": "dorfplatz",
+   "benoetigt": [
+    "goldmuenze"
+   ],
+   "ergibt": [
+    "zauberbohne"
+   ],
+   "schalter": [
+    "W1_R05_GELOEST"
+   ],
+   "optional": false
+  },
+  {
+   "id": "R6",
+   "name": "Die sechs Flaschen",
+   "raum": "klassenzimmer",
+   "benoetigt": [
+    "R6a",
+    "R6b"
+   ],
+   "ergibt": [],
+   "schalter": [],
+   "optional": false
+  },
+  {
+   "id": "R6a",
+   "name": "Die Zutaten",
+   "raum": "klassenzimmer",
+   "benoetigt": [
+    "R2",
+    "R4",
+    "kochloeffel",
+    "ei",
+    "krug",
+    "leuchtpilz"
+   ],
+   "ergibt": [],
+   "schalter": [
+    "W1_R06_A_GELOEST",
+    "W1_REZEPT_BEKANNT",
+    "W1_MELK_SCHWUR"
+   ],
+   "optional": false
+  },
+  {
+   "id": "R6b",
+   "name": "Die Flaschenwahl",
+   "raum": "klassenzimmer",
+   "benoetigt": [
+    "R6a",
+    "hinweiszettel",
+    "flasche"
+   ],
+   "ergibt": [
+    "leuchttrank",
+    "zeugnis"
+   ],
+   "schalter": [
+    "W1_R06_B_GELOEST"
+   ],
+   "optional": false
+  },
+  {
+   "id": "R7",
+   "name": "Die Niesrosen",
+   "raum": "zauberwald",
+   "benoetigt": [
+    "R4",
+    "socke"
+   ],
+   "ergibt": [],
+   "schalter": [
+    "W1_R07_GELOEST",
+    "W1_WALDEMAR_ABSPANN"
+   ],
+   "optional": false
+  },
+  {
+   "id": "R8",
+   "name": "Die Bohnenranke",
+   "raum": "dorfplatz",
+   "benoetigt": [
+    "zauberbohne",
+    "eimer"
+   ],
+   "ergibt": [],
+   "schalter": [
+    "W1_R08_GELOEST"
+   ],
+   "optional": false
+  },
+  {
+   "id": "R9",
+   "name": "Prinzessin Zeldina",
+   "raum": "luftschloss",
+   "benoetigt": [
+    "R8",
+    "steckbrief"
+   ],
+   "ergibt": [],
+   "schalter": [
+    "W1_R09_GELOEST",
+    "W1_ZELDINA_FOLGT"
+   ],
+   "optional": false
+  },
+  {
+   "id": "R10",
+   "name": "Die Goblin-Frage",
+   "raum": "bergwerk",
+   "benoetigt": [],
+   "ergibt": [],
+   "schalter": [],
+   "optional": false
+  },
+  {
+   "id": "R10a",
+   "name": "Weg A, Tarifvertrag",
+   "raum": "bergwerk",
+   "benoetigt": [
+    "leuchttrank",
+    "ketchup",
+    "tarifvertrag"
+   ],
+   "ergibt": [],
+   "schalter": [
+    "W1_R10_A_GELOEST"
+   ],
+   "optional": true
+  },
+  {
+   "id": "R10b",
+   "name": "Weg B, Karriere",
+   "raum": "bergwerk",
+   "benoetigt": [
+    "R9"
+   ],
+   "ergibt": [],
+   "schalter": [
+    "W1_R10_B_GELOEST",
+    "W1_GRIMMZAHN_FOLGT"
+   ],
+   "optional": true
+  },
+  {
+   "id": "R11",
+   "name": "Der Dunkle Turm",
+   "raum": "turmkeller",
+   "benoetigt": [
+    "R11a",
+    "R11b"
+   ],
+   "ergibt": [],
+   "schalter": [],
+   "optional": false
+  },
+  {
+   "id": "R11a",
+   "name": "Das Passwort",
+   "raum": "abstellkammern",
+   "benoetigt": [
+    "R11b",
+    "zeugnis",
+    "R8",
+    "R9",
+    "R10",
+    "notizbuch"
+   ],
+   "ergibt": [],
+   "schalter": [
+    "W1_R11_A_GELOEST"
+   ],
+   "optional": false
+  },
+  {
+   "id": "R11b",
+   "name": "Die Besen",
+   "raum": "turmkeller",
+   "benoetigt": [
+    "R10"
+   ],
+   "ergibt": [],
+   "schalter": [
+    "W1_R11_B_GELOEST"
+   ],
+   "optional": false
+  },
+  {
+   "id": "R12",
+   "name": "Smaugi räumt auf",
+   "raum": "abstellkammern",
+   "benoetigt": [
+    "R11b",
+    "R9",
+    "R10",
+    "schwerter_buendel",
+    "fackel_buendel",
+    "kronleuchter"
+   ],
+   "ergibt": [
+    "drachenei"
+   ],
+   "schalter": [
+    "W1_R12_GELOEST"
+   ],
+   "optional": false
+  },
+  {
+   "id": "R13",
+   "name": "Lord Moderwort",
+   "raum": "thronsaal",
+   "benoetigt": [
+    "R11a",
+    "R12",
+    "R7",
+    "R9",
+    "socke",
+    "kochloeffel"
+   ],
+   "ergibt": [],
+   "schalter": [
+    "W1_R13_GELOEST"
+   ],
+   "optional": false
+  }
+ ]
+}

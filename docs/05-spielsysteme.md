@@ -32,7 +32,7 @@ Jede Zeile des Spiels steht genau einmal in einer Skript-Tabelle pro Welt und ha
 
 Kurzform in den Skript-Tabellen: Die Tabellen im Dokument zeigen nur ID, Sprecher, Text und Regie (bei Szenen) oder Auslöser (sonst); eine Bedingung steht im Auslöser nach Semikolon, etwa „Kalender; nach P1“. Art und Status ergeben sich aus Abschnitt und ID, Text EN füllt Claude später in der CSV. Die volle Tabelle mit allen zehn Spalten entsteht erst beim Export.
 
-Godot bekommt daraus eine CSV-Übersetzungsdatei mit den Spalten ID, de und en. Ein kleines Export-Skript, das Claude schreibt, wandelt die Tabelle nach jeder Änderung um. Im GDScript steht dann nur die ID, etwa `await C.Max.say("P0_DACH_MAX_0010")`, und Godot setzt je nach Sprache den Text ein. Texte in Menüs und Knöpfen holt Godot mit tr("UI\_MENU\_CONTINUE") aus derselben CSV, also keine festen Strings in Szenen.
+Godot bekommt daraus eine CSV-Übersetzungsdatei mit den Spalten ID, de und en. Ein kleines Export-Skript, das Claude schreibt, wandelt die Tabelle nach jeder Änderung um. Im GDScript steht dann nur die ID, etwa `await C.Max.say("P0_DACH_MAX_0010")`, und Godot setzt je nach Sprache den Text ein. Texte in Menüs und Knöpfen holt Godot mit tr("UI\_MENU\_CONTINUE") aus derselben CSV, also keine festen Strings in Szenen. Umgesetzt in `tools/skript_export.py`: Es schreibt `game/lokalisierung/texte.csv` (keys, de, en), den englischen Text holt es aus `uebersetzung/en.csv`, Menütexte aus `uebersetzung/ui.csv`. Kaskaden mit „//“ werden in Blasen geteilt: Die erste Blase behält die Zeilen-ID, jede weitere bekommt `_2`, `_3` angehängt (`P0_DACH_PIX_0020_2`); dieselben Schlüssel benennen die Audiodateien.
 
 Eigennamen-Glossar: Sprechende Namen werden nicht wörtlich übersetzt, sondern bekommen eine englische Entsprechung mit demselben Witz. Die Liste wächst mit jeder Welt; Claude hält sie beim Übersetzen ein.
 
@@ -203,7 +203,7 @@ Errungenschaften (Steam): 13 Stück, alle aus Zählern und Schaltern, die das Sp
 - Welt gerettet: Finale gesehen
 - Neugier: alle Nahansichten des Spiels geöffnet
 
-**Datenformat:** Eine Datei pro Welt, etwa `hints_w1.tres`, mit einem Eintrag pro Schritt:
+**Datenformat:** Eine Datei pro Abschnitt, `game/daten/hinweise/<abschnitt>.json`, erzeugt von `tools/spieldaten.py` aus Welt-Tabelle und Skript (nie von Hand bearbeiten), mit einem Eintrag pro Schritt:
 
 | Feld | Beispiel |
 | --- | --- |

@@ -1,0 +1,102 @@
+{
+ "abschnitt": "prolog",
+ "sonderzeilen": {
+  "wartezeile": "P0_HINT_PIX_9995"
+ },
+ "schritte": [
+  {
+   "schritt": "P1",
+   "ziel": "Der schlafende Kater",
+   "raum": "dachboden",
+   "offen_wenn": [
+    "thunfischdose",
+    "dosenoeffner"
+   ],
+   "offen_wenn_eins_von": [],
+   "geloest_schalter": [
+    "P0_P1_GELOEST"
+   ],
+   "objekte": [
+    "thunfischdose",
+    "dosenoeffner"
+   ],
+   "optional": false,
+   "sammelschritt": false,
+   "hinweise": [
+    {
+     "stufe": 1,
+     "zeile": "P0_DACH_OPA_1324"
+    },
+    {
+     "stufe": 2,
+     "zeile": "P0_DACH_OPA_1326"
+    },
+    {
+     "stufe": 3,
+     "zeile": "P0_DACH_OPA_1328"
+    }
+   ]
+  },
+  {
+   "schritt": "P2",
+   "ziel": "Nur Rauschen",
+   "raum": "dachboden",
+   "offen_wenn": [
+    "P1",
+    "drahtkleiderbuegel"
+   ],
+   "offen_wenn_eins_von": [],
+   "geloest_schalter": [
+    "P0_P2_GELOEST"
+   ],
+   "objekte": [
+    "drahtkleiderbuegel"
+   ],
+   "optional": false,
+   "sammelschritt": false,
+   "hinweise": [
+    {
+     "stufe": 1,
+     "zeile": "P0_HINT_PIX_0210"
+    },
+    {
+     "stufe": 2,
+     "zeile": "P0_HINT_PIX_0220"
+    },
+    {
+     "stufe": 3,
+     "zeile": "P0_HINT_PIX_0230"
+    }
+   ]
+  },
+  {
+   "schritt": "P3",
+   "ziel": "Der richtige Kanal",
+   "raum": "dachboden",
+   "offen_wenn": [
+    "P2"
+   ],
+   "offen_wenn_eins_von": [],
+   "geloest_schalter": [
+    "P0_P3_GELOEST"
+   ],
+   "objekte": [],
+   "optional": false,
+   "sammelschritt": false,
+   "hinweise": [
+    {
+     "stufe": 1,
+     "zeile": "P0_HINT_PIX_0310"
+    },
+    {
+     "stufe": 2,
+     "zeile": "P0_HINT_PIX_0320"
+    },
+    {
+     "stufe": 3,
+     "zeile": "P0_HINT_PIX_0330"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,23 @@
+name: Prüfen
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  dokumente:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pyyaml
+      - name: Welt-Tabellen, Skript, Audio
+        run: python3 tools/pruefen.py
+      - name: Abhängigkeitsdiagramme aktuell
+        run: python3 tools/diagramme.py --pruefen
+      - name: Übersetzungs-CSV aktuell
+        run: python3 tools/skript_export.py --pruefen
+      - name: Spieldaten aktuell
+        run: python3 tools/spieldaten.py --pruefen

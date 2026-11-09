@@ -1,0 +1,620 @@
+{
+ "abschnitt": "welt-3",
+ "sonderzeilen": {},
+ "schritte": [
+  {
+   "schritt": "R1a",
+   "ziel": "Der Mensch-Test, Beobachtungen",
+   "raum": "unterstadt_strasse",
+   "offen_wenn": [],
+   "offen_wenn_eins_von": [],
+   "geloest_schalter": [
+    "BEOBACHTUNG_SCHIRM"
+   ],
+   "objekte": [],
+   "optional": false,
+   "sammelschritt": false,
+   "hinweise": [
+    {
+     "stufe": 1,
+     "zeile": "W3_HINT_PIX_0110"
+    },
+    {
+     "stufe": 2,
+     "zeile": "W3_HINT_PIX_0120"
+    },
+    {
+     "stufe": 3,
+     "zeile": "W3_HINT_PIX_0130"
+    }
+   ]
+  },
+  {
+   "schritt": "R1b",
+   "ziel": "Der Mensch-Test, die drei Fragen",
+   "raum": "unterstadt_strasse",
+   "offen_wenn": [
+    "R1a"
+   ],
+   "offen_wenn_eins_von": [],
+   "geloest_schalter": [
+    "STEMPEL_MENSCH"
+   ],
+   "objekte": [],
+   "optional": false,
+   "sammelschritt": false,
+   "hinweise": [
+    {
+     "stufe": 1,
+     "zeile": "W3_HINT_PIX_0140"
+    },
+    {
+     "stufe": 2,
+     "zeile": "W3_HINT_PIX_0150"
+    },
+    {
+     "stufe": 3,
+     "zeile": "W3_HINT_PIX_0160"
+    }
+   ]
+  },
+  {
+   "schritt": "R2",
+   "ziel": "Die Nudelbude „Vier“",
+   "raum": "unterstadt_strasse",
+   "offen_wenn": [],
+   "offen_wenn_eins_von": [],
+   "geloest_schalter": [
+    "MORPHAEUS_GETROFFEN"
+   ],
+   "objekte": [],
+   "optional": false,
+   "sammelschritt": false,
+   "hinweise": [
+    {
+     "stufe": 1,
+     "zeile": "W3_HINT_PIX_0210"
+    },
+    {
+     "stufe": 2,
+     "zeile": "W3_HINT_PIX_0220"
+    },
+    {
+     "stufe": 3,
+     "zeile": "W3_HINT_PIX_0230"
+    }
+   ]
+  },
+  {
+   "schritt": "R3a",
+   "ziel": "Der Pastillenautomat, Déjà-vu",
+   "raum": "apothekengasse",
+   "offen_wenn": [
+    "R1b",
+    "R2"
+   ],
+   "offen_wenn_eins_von": [],
+   "geloest_schalter": [
+    "DIAGNOSE_MATRIX"
+   ],
+   "objekte": [],
+   "optional": false,
+   "sammelschritt": false,
+   "hinweise": [
+    {
+     "stufe": 1,
+     "zeile": "W3_HINT_PIX_0310"
+    },
+    {
+     "stufe": 2,
+     "zeile": "W3_HINT_PIX_0320"
+    },
+    {
+     "stufe": 3,
+     "zeile": "W3_HINT_PIX_0330"
+    }
+   ]
+  },
+  {
+   "schritt": "R3b",
+   "ziel": "Der Pastillenautomat, die Wahl",
+   "raum": "apothekengasse",
+   "offen_wenn": [
+    "R3a",
+    "rote_pastille"
+   ],
+   "offen_wenn_eins_von": [],
+   "geloest_schalter": [
+    "KEKSE_DABEI"
+   ],
+   "objekte": [
+    "rote_pastille"
+   ],
+   "optional": false,
+   "sammelschritt": false,
+   "hinweise": [
+    {
+     "stufe": 1,
+     "zeile": "W3_HINT_PIX_0340"
+    },
+    {
+     "stufe": 2,
+     "zeile": "W3_HINT_PIX_0350"
+    },
+    {
+     "stufe": 3,
+     "zeile": "W3_HINT_PIX_0360"
+    }
+   ]
+  },
+  {
+   "schritt": "R4",
+   "ziel": "Die Vase des Orakels",
+   "raum": "kueche_orakel",
+   "offen_wenn": [
+    "R3b"
+   ],
+   "offen_wenn_eins_von": [],
+   "geloest_schalter": [
+    "VASE_ZERBROCHEN"
+   ],
+   "objekte": [],
+   "optional": false,
+   "sammelschritt": false,
+   "hinweise": [
+    {
+     "stufe": 1,
+     "zeile": "W3_HINT_PIX_0410"
+    },
+    {
+     "stufe": 2,
+     "zeile": "W3_HINT_PIX_0420"
+    },
+    {
+     "stufe": 3,
+     "zeile": "W3_HINT_PIX_0430"
+    }
+   ]
+  },
+  {
+   "schritt": "R5",
+   "ziel": "Die gesprächige Tür",
+   "raum": "stadtstrasse",
+   "offen_wenn": [
+    "R3b"
+   ],
+   "offen_wenn_eins_von": [],
+   "geloest_schalter": [
+    "CODE_SICHT"
+   ],
+   "objekte": [],
+   "optional": false,
+   "sammelschritt": false,
+   "hinweise": [
+    {
+     "stufe": 1,
+     "zeile": "W3_HINT_PIX_0510"
+    },
+    {
+     "stufe": 2,
+     "zeile": "W3_HINT_PIX_0520"
+    },
+    {
+     "stufe": 3,
+     "zeile": "W3_HINT_PIX_0530"
+    }
+   ]
+  },
+  {
+   "schritt": "R6a",
+   "ziel": "Die Agenten-Klone, Original und Kopie",
+   "raum": "buero_50",
+   "offen_wenn": [
+    "R5",
+    "kaffeetasse"
+   ],
+   "offen_wenn_eins_von": [],
+   "geloest_schalter": [
+    "HEXENSCHUSS"
+   ],
+   "objekte": [
+    "kaffeetasse"
+   ],
+   "optional": false,
+   "sammelschritt": false,
+   "hinweise": [
+    {
+     "stufe": 1,
+     "zeile": "W3_HINT_PIX_0610"
+    },
+    {
+     "stufe": 2,
+     "zeile": "W3_HINT_PIX_0620"
+    },
+    {
+     "stufe": 3,
+     "zeile": "W3_HINT_PIX_0630"
+    }
+   ]
+  },
+  {
+   "schritt": "R6b",
+   "ziel": "Die Agenten-Klone, Mittagspause",
+   "raum": "buero_50",
+   "offen_wenn": [
+    "R6a",
+    "kaffeetasse"
+   ],
+   "offen_wenn_eins_von": [],
+   "geloest_schalter": [
+    "KLONE_MITTAGSPAUSE"
+   ],
+   "objekte": [
+    "kaffeetasse"
+   ],
+   "optional": false,
+   "sammelschritt": false,
+   "hinweise": [
+    {
+     "stufe": 1,
+     "zeile": "W3_HINT_PIX_0640"
+    },
+    {
+     "stufe": 2,
+     "zeile": "W3_HINT_PIX_0650"
+    },
+    {
+     "stufe": 3,
+     "zeile": "W3_HINT_PIX_0660"
+    }
+   ]
+  },
+  {
+   "schritt": "R7a",
+   "ziel": "Der Ausgang im 50. Stock, Farbcode",
+   "raum": "buero_50",
+   "offen_wenn": [
+    "R6b",
+    "farbcode_zettel",
+    "morse_tabelle"
+   ],
+   "offen_wenn_eins_von": [],
+   "geloest_schalter": [
+    "FARBCODE_GESENDET"
+   ],
+   "objekte": [
+    "farbcode_zettel",
+    "morse_tabelle"
+   ],
+   "optional": false,
+   "sammelschritt": false,
+   "hinweise": [
+    {
+     "stufe": 1,
+     "zeile": "W3_HINT_PIX_0710"
+    },
+    {
+     "stufe": 2,
+     "zeile": "W3_HINT_PIX_0720"
+    },
+    {
+     "stufe": 3,
+     "zeile": "W3_HINT_PIX_0730"
+    }
+   ]
+  },
+  {
+   "schritt": "R7b",
+   "ziel": "Der Ausgang im 50. Stock, Kabel",
+   "raum": "widerstandsbasis",
+   "offen_wenn": [
+    "R7a"
+   ],
+   "offen_wenn_eins_von": [],
+   "geloest_schalter": [
+    "KABEL_GESTECKT"
+   ],
+   "objekte": [],
+   "optional": false,
+   "sammelschritt": false,
+   "hinweise": [
+    {
+     "stufe": 1,
+     "zeile": "W3_HINT_PIX_0740"
+    },
+    {
+     "stufe": 2,
+     "zeile": "W3_HINT_PIX_0750"
+    },
+    {
+     "stufe": 3,
+     "zeile": "W3_HINT_PIX_0760"
+    }
+   ]
+  },
+  {
+   "schritt": "R8",
+   "ziel": "Der Hausmeister Modell 08/15",
+   "raum": "laboreingang",
+   "offen_wenn": [
+    "telefonbuchseite"
+   ],
+   "offen_wenn_eins_von": [],
+   "geloest_schalter": [
+    "HAUSMEISTER_WEG"
+   ],
+   "objekte": [
+    "telefonbuchseite"
+   ],
+   "optional": false,
+   "sammelschritt": false,
+   "hinweise": [
+    {
+     "stufe": 1,
+     "zeile": "W3_HINT_PIX_0810"
+    },
+    {
+     "stufe": 2,
+     "zeile": "W3_HINT_PIX_0820"
+    },
+    {
+     "stufe": 3,
+     "zeile": "W3_HINT_PIX_0830"
+    }
+   ]
+  },
+  {
+   "schritt": "R9a",
+   "ziel": "Die Testkammern, die Leitung",
+   "raum": "laboreingang",
+   "offen_wenn": [
+    "R8",
+    "zugangskarte"
+   ],
+   "offen_wenn_eins_von": [],
+   "geloest_schalter": [
+    "LEITUNG_LABOR"
+   ],
+   "objekte": [
+    "zugangskarte"
+   ],
+   "optional": false,
+   "sammelschritt": false,
+   "hinweise": [
+    {
+     "stufe": 1,
+     "zeile": "W3_HINT_PIX_0910"
+    },
+    {
+     "stufe": 2,
+     "zeile": "W3_HINT_PIX_0920"
+    },
+    {
+     "stufe": 3,
+     "zeile": "W3_HINT_PIX_0930"
+    }
+   ]
+  },
+  {
+   "schritt": "R9b",
+   "ziel": "Die Testkammern, Kammer 1",
+   "raum": "testkammer_1",
+   "offen_wenn": [
+    "R9a"
+   ],
+   "offen_wenn_eins_von": [],
+   "geloest_schalter": [
+    "KAMMER_1_GELOEST"
+   ],
+   "objekte": [],
+   "optional": false,
+   "sammelschritt": false,
+   "hinweise": [
+    {
+     "stufe": 1,
+     "zeile": "W3_HINT_PIX_0940"
+    },
+    {
+     "stufe": 2,
+     "zeile": "W3_HINT_PIX_0950"
+    },
+    {
+     "stufe": 3,
+     "zeile": "W3_HINT_PIX_0960"
+    }
+   ]
+  },
+  {
+   "schritt": "R9c",
+   "ziel": "Die Testkammern, Kammer 2",
+   "raum": "testkammer_2",
+   "offen_wenn": [
+    "R9b",
+    "gummihuhn"
+   ],
+   "offen_wenn_eins_von": [],
+   "geloest_schalter": [
+    "KAMMER_2_GELOEST"
+   ],
+   "objekte": [
+    "gummihuhn"
+   ],
+   "optional": false,
+   "sammelschritt": false,
+   "hinweise": [
+    {
+     "stufe": 1,
+     "zeile": "W3_HINT_PIX_0970"
+    },
+    {
+     "stufe": 2,
+     "zeile": "W3_HINT_PIX_0980"
+    },
+    {
+     "stufe": 3,
+     "zeile": "W3_HINT_PIX_0990"
+    }
+   ]
+  },
+  {
+   "schritt": "R9d",
+   "ziel": "Die Testkammern, Kammer 3",
+   "raum": "testkammer_3",
+   "offen_wenn": [
+    "R9c",
+    "gummihuhn"
+   ],
+   "offen_wenn_eins_von": [],
+   "geloest_schalter": [
+    "KAMMER_3_GELOEST"
+   ],
+   "objekte": [
+    "gummihuhn"
+   ],
+   "optional": false,
+   "sammelschritt": false,
+   "hinweise": [
+    {
+     "stufe": 1,
+     "zeile": "W3_HINT_PIX_1000"
+    },
+    {
+     "stufe": 2,
+     "zeile": "W3_HINT_PIX_1010"
+    },
+    {
+     "stufe": 3,
+     "zeile": "W3_HINT_PIX_1020"
+    }
+   ]
+  },
+  {
+   "schritt": "R10",
+   "ziel": "Das M.U.T.T.I.-Paradoxon",
+   "raum": "kern",
+   "offen_wenn": [
+    "R4",
+    "schmidts_akte",
+    "R9c",
+    "R9d"
+   ],
+   "offen_wenn_eins_von": [],
+   "geloest_schalter": [
+    "MUTTI_AUS"
+   ],
+   "objekte": [
+    "schmidts_akte"
+   ],
+   "optional": false,
+   "sammelschritt": false,
+   "hinweise": [
+    {
+     "stufe": 1,
+     "zeile": "W3_HINT_PIX_1110"
+    },
+    {
+     "stufe": 2,
+     "zeile": "W3_HINT_PIX_1120"
+    },
+    {
+     "stufe": 3,
+     "zeile": "W3_HINT_PIX_1130"
+    }
+   ]
+  },
+  {
+   "schritt": "R11",
+   "ziel": "Der glühende Kern",
+   "raum": "kern",
+   "offen_wenn": [
+    "R10"
+   ],
+   "offen_wenn_eins_von": [
+    "omas_kekse",
+    "R3b"
+   ],
+   "geloest_schalter": [
+    "ZELLE_GEKUEHLT"
+   ],
+   "objekte": [
+    "omas_kekse"
+   ],
+   "optional": false,
+   "sammelschritt": false,
+   "hinweise": [
+    {
+     "stufe": 1,
+     "zeile": "W3_HINT_PIX_1210"
+    },
+    {
+     "stufe": 2,
+     "zeile": "W3_HINT_PIX_1220"
+    },
+    {
+     "stufe": 3,
+     "zeile": "W3_HINT_PIX_1230"
+    }
+   ]
+  },
+  {
+   "schritt": "R12",
+   "ziel": "Die vierte Zutat",
+   "raum": "unterstadt_strasse",
+   "offen_wenn": [
+    "rezeptkarte"
+   ],
+   "offen_wenn_eins_von": [],
+   "geloest_schalter": [
+    "SUPPE_GEKOCHT"
+   ],
+   "objekte": [
+    "rezeptkarte"
+   ],
+   "optional": false,
+   "sammelschritt": false,
+   "hinweise": [
+    {
+     "stufe": 1,
+     "zeile": "W3_HINT_PIX_1310"
+    },
+    {
+     "stufe": 2,
+     "zeile": "W3_HINT_PIX_1320"
+    },
+    {
+     "stufe": 3,
+     "zeile": "W3_HINT_PIX_1330"
+    }
+   ]
+  },
+  {
+   "schritt": "R13",
+   "ziel": "Kalles Morse-Tabelle",
+   "raum": "widerstandsbasis",
+   "offen_wenn": [
+    "R3b"
+   ],
+   "offen_wenn_eins_von": [],
+   "geloest_schalter": [
+    "MORSE_TABELLE"
+   ],
+   "objekte": [],
+   "optional": false,
+   "sammelschritt": false,
+   "hinweise": [
+    {
+     "stufe": 1,
+     "zeile": "W3_HINT_PIX_1410"
+    },
+    {
+     "stufe": 2,
+     "zeile": "W3_HINT_PIX_1420"
+    },
+    {
+     "stufe": 3,
+     "zeile": "W3_HINT_PIX_1430"
+    }
+   ]
+  }
+ ]
+}

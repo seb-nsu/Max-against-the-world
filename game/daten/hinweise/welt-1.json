@@ -1,0 +1,722 @@
+{
+ "abschnitt": "welt-1",
+ "sonderzeilen": {
+  "nichts_offen": "W1_HINT_PIX_0010"
+ },
+ "schritte": [
+  {
+   "schritt": "R1",
+   "ziel": "Der Taverne-Coup",
+   "raum": "taverne",
+   "offen_wenn": [
+    "R1a",
+    "R1b",
+    "R1c"
+   ],
+   "offen_wenn_eins_von": [],
+   "geloest_schalter": [],
+   "objekte": [],
+   "optional": false,
+   "sammelschritt": true,
+   "hinweise": []
+  },
+  {
+   "schritt": "R1a",
+   "ziel": "Minka",
+   "raum": "taverne",
+   "offen_wenn": [],
+   "offen_wenn_eins_von": [],
+   "geloest_schalter": [
+    "W1_R01_A_GELOEST"
+   ],
+   "objekte": [],
+   "optional": false,
+   "sammelschritt": false,
+   "hinweise": [
+    {
+     "stufe": 1,
+     "zeile": "W1_HINT_PIX_0111"
+    },
+    {
+     "stufe": 2,
+     "zeile": "W1_HINT_PIX_0121"
+    },
+    {
+     "stufe": 3,
+     "zeile": "W1_HINT_PIX_0131"
+    }
+   ]
+  },
+  {
+   "schritt": "R1b",
+   "ziel": "Jahrgang Schicksalsberg",
+   "raum": "taverne",
+   "offen_wenn": [],
+   "offen_wenn_eins_von": [],
+   "geloest_schalter": [
+    "W1_R01_B_GELOEST"
+   ],
+   "objekte": [],
+   "optional": false,
+   "sammelschritt": false,
+   "hinweise": [
+    {
+     "stufe": 1,
+     "zeile": "W1_HINT_PIX_0112"
+    },
+    {
+     "stufe": 2,
+     "zeile": "W1_HINT_PIX_0122"
+    },
+    {
+     "stufe": 3,
+     "zeile": "W1_HINT_PIX_0132"
+    }
+   ]
+  },
+  {
+   "schritt": "R1c",
+   "ziel": "Das Rätselspiel",
+   "raum": "taverne",
+   "offen_wenn": [
+    "R1a",
+    "R1b",
+    "thunfischdose"
+   ],
+   "offen_wenn_eins_von": [],
+   "geloest_schalter": [
+    "W1_R01_C_GELOEST"
+   ],
+   "objekte": [
+    "thunfischdose"
+   ],
+   "optional": false,
+   "sammelschritt": false,
+   "hinweise": [
+    {
+     "stufe": 1,
+     "zeile": "W1_HINT_PIX_0113"
+    },
+    {
+     "stufe": 2,
+     "zeile": "W1_HINT_PIX_0123"
+    },
+    {
+     "stufe": 3,
+     "zeile": "W1_HINT_PIX_0133"
+    }
+   ]
+  },
+  {
+   "schritt": "R2",
+   "ziel": "Der Zauberstab wählt den Zauberer",
+   "raum": "zauberstabladen",
+   "offen_wenn": [
+    "kochloeffel",
+    "kaesefondue"
+   ],
+   "offen_wenn_eins_von": [],
+   "geloest_schalter": [
+    "W1_R02_GELOEST"
+   ],
+   "objekte": [
+    "kochloeffel",
+    "kaesefondue"
+   ],
+   "optional": false,
+   "sammelschritt": false,
+   "hinweise": [
+    {
+     "stufe": 1,
+     "zeile": "W1_HINT_PIX_0210"
+    },
+    {
+     "stufe": 2,
+     "zeile": "W1_HINT_PIX_0220"
+    },
+    {
+     "stufe": 3,
+     "zeile": "W1_HINT_PIX_0230"
+    }
+   ]
+  },
+  {
+   "schritt": "R3",
+   "ziel": "Drei Ziegenböcke",
+   "raum": "trollbruecke",
+   "offen_wenn": [
+    "bestellzettel",
+    "ziegenfell_vorleger"
+   ],
+   "offen_wenn_eins_von": [],
+   "geloest_schalter": [
+    "W1_R03_GELOEST"
+   ],
+   "objekte": [
+    "bestellzettel",
+    "ziegenfell_vorleger"
+   ],
+   "optional": false,
+   "sammelschritt": false,
+   "hinweise": [
+    {
+     "stufe": 1,
+     "zeile": "W1_HINT_PIX_0310"
+    },
+    {
+     "stufe": 2,
+     "zeile": "W1_HINT_PIX_0320"
+    },
+    {
+     "stufe": 3,
+     "zeile": "W1_HINT_PIX_0330"
+    }
+   ]
+  },
+  {
+   "schritt": "R4",
+   "ziel": "Das Märchen an der Troll-Brücke",
+   "raum": "trollbruecke",
+   "offen_wenn": [
+    "R4a",
+    "R4b",
+    "R4c"
+   ],
+   "offen_wenn_eins_von": [],
+   "geloest_schalter": [],
+   "objekte": [],
+   "optional": false,
+   "sammelschritt": true,
+   "hinweise": []
+  },
+  {
+   "schritt": "R4a",
+   "ziel": "Die Reihenfolge",
+   "raum": "trollbruecke",
+   "offen_wenn": [
+    "R3",
+    "ziegenfell_vorleger"
+   ],
+   "offen_wenn_eins_von": [],
+   "geloest_schalter": [
+    "W1_R04_A_GELOEST"
+   ],
+   "objekte": [
+    "ziegenfell_vorleger"
+   ],
+   "optional": false,
+   "sammelschritt": false,
+   "hinweise": [
+    {
+     "stufe": 1,
+     "zeile": "W1_HINT_PIX_0411"
+    },
+    {
+     "stufe": 2,
+     "zeile": "W1_HINT_PIX_0421"
+    },
+    {
+     "stufe": 3,
+     "zeile": "W1_HINT_PIX_0431"
+    }
+   ]
+  },
+  {
+   "schritt": "R4b",
+   "ziel": "Ziegisch",
+   "raum": "trollbruecke",
+   "offen_wenn": [
+    "R3"
+   ],
+   "offen_wenn_eins_von": [],
+   "geloest_schalter": [
+    "W1_R04_B_GELOEST"
+   ],
+   "objekte": [],
+   "optional": false,
+   "sammelschritt": false,
+   "hinweise": [
+    {
+     "stufe": 1,
+     "zeile": "W1_HINT_PIX_0412"
+    },
+    {
+     "stufe": 2,
+     "zeile": "W1_HINT_PIX_0422"
+    },
+    {
+     "stufe": 3,
+     "zeile": "W1_HINT_PIX_0432"
+    }
+   ]
+  },
+  {
+   "schritt": "R4c",
+   "ziel": "Ins Wasser",
+   "raum": "trollbruecke",
+   "offen_wenn": [
+    "R4a",
+    "R4b",
+    "eimer"
+   ],
+   "offen_wenn_eins_von": [],
+   "geloest_schalter": [
+    "W1_R04_C_GELOEST"
+   ],
+   "objekte": [
+    "eimer"
+   ],
+   "optional": false,
+   "sammelschritt": false,
+   "hinweise": [
+    {
+     "stufe": 1,
+     "zeile": "W1_HINT_PIX_0413"
+    },
+    {
+     "stufe": 2,
+     "zeile": "W1_HINT_PIX_0423"
+    },
+    {
+     "stufe": 3,
+     "zeile": "W1_HINT_PIX_0433"
+    }
+   ]
+  },
+  {
+   "schritt": "R5",
+   "ziel": "Der Brunnen der Wünsche",
+   "raum": "dorfplatz",
+   "offen_wenn": [
+    "goldmuenze"
+   ],
+   "offen_wenn_eins_von": [],
+   "geloest_schalter": [
+    "W1_R05_GELOEST"
+   ],
+   "objekte": [
+    "goldmuenze"
+   ],
+   "optional": false,
+   "sammelschritt": false,
+   "hinweise": [
+    {
+     "stufe": 1,
+     "zeile": "W1_HINT_PIX_0510"
+    },
+    {
+     "stufe": 2,
+     "zeile": "W1_HINT_PIX_0520"
+    },
+    {
+     "stufe": 3,
+     "zeile": "W1_HINT_PIX_0530"
+    }
+   ]
+  },
+  {
+   "schritt": "R6",
+   "ziel": "Die sechs Flaschen",
+   "raum": "klassenzimmer",
+   "offen_wenn": [
+    "R6a",
+    "R6b"
+   ],
+   "offen_wenn_eins_von": [],
+   "geloest_schalter": [],
+   "objekte": [],
+   "optional": false,
+   "sammelschritt": true,
+   "hinweise": []
+  },
+  {
+   "schritt": "R6a",
+   "ziel": "Die Zutaten",
+   "raum": "klassenzimmer",
+   "offen_wenn": [
+    "R2",
+    "R4",
+    "kochloeffel",
+    "ei",
+    "krug",
+    "leuchtpilz"
+   ],
+   "offen_wenn_eins_von": [],
+   "geloest_schalter": [
+    "W1_R06_A_GELOEST"
+   ],
+   "objekte": [
+    "kochloeffel",
+    "ei",
+    "krug",
+    "leuchtpilz"
+   ],
+   "optional": false,
+   "sammelschritt": false,
+   "hinweise": [
+    {
+     "stufe": 1,
+     "zeile": "W1_HINT_PIX_0611"
+    },
+    {
+     "stufe": 2,
+     "zeile": "W1_HINT_PIX_0621"
+    },
+    {
+     "stufe": 3,
+     "zeile": "W1_HINT_PIX_0631"
+    }
+   ]
+  },
+  {
+   "schritt": "R6b",
+   "ziel": "Die Flaschenwahl",
+   "raum": "klassenzimmer",
+   "offen_wenn": [
+    "R6a",
+    "hinweiszettel",
+    "flasche"
+   ],
+   "offen_wenn_eins_von": [],
+   "geloest_schalter": [
+    "W1_R06_B_GELOEST"
+   ],
+   "objekte": [
+    "hinweiszettel",
+    "flasche"
+   ],
+   "optional": false,
+   "sammelschritt": false,
+   "hinweise": [
+    {
+     "stufe": 1,
+     "zeile": "W1_HINT_PIX_0612"
+    },
+    {
+     "stufe": 2,
+     "zeile": "W1_HINT_PIX_0622"
+    },
+    {
+     "stufe": 3,
+     "zeile": "W1_HINT_PIX_0632"
+    }
+   ]
+  },
+  {
+   "schritt": "R7",
+   "ziel": "Die Niesrosen",
+   "raum": "zauberwald",
+   "offen_wenn": [
+    "R4",
+    "socke"
+   ],
+   "offen_wenn_eins_von": [],
+   "geloest_schalter": [
+    "W1_R07_GELOEST"
+   ],
+   "objekte": [
+    "socke"
+   ],
+   "optional": false,
+   "sammelschritt": false,
+   "hinweise": [
+    {
+     "stufe": 1,
+     "zeile": "W1_HINT_PIX_0710"
+    },
+    {
+     "stufe": 2,
+     "zeile": "W1_HINT_PIX_0720"
+    },
+    {
+     "stufe": 3,
+     "zeile": "W1_HINT_PIX_0730"
+    }
+   ]
+  },
+  {
+   "schritt": "R8",
+   "ziel": "Die Bohnenranke",
+   "raum": "dorfplatz",
+   "offen_wenn": [
+    "zauberbohne",
+    "eimer"
+   ],
+   "offen_wenn_eins_von": [],
+   "geloest_schalter": [
+    "W1_R08_GELOEST"
+   ],
+   "objekte": [
+    "zauberbohne",
+    "eimer"
+   ],
+   "optional": false,
+   "sammelschritt": false,
+   "hinweise": [
+    {
+     "stufe": 1,
+     "zeile": "W1_HINT_PIX_0810"
+    },
+    {
+     "stufe": 2,
+     "zeile": "W1_HINT_PIX_0820"
+    },
+    {
+     "stufe": 3,
+     "zeile": "W1_HINT_PIX_0830"
+    }
+   ]
+  },
+  {
+   "schritt": "R9",
+   "ziel": "Prinzessin Zeldina",
+   "raum": "luftschloss",
+   "offen_wenn": [
+    "R8",
+    "steckbrief"
+   ],
+   "offen_wenn_eins_von": [],
+   "geloest_schalter": [
+    "W1_R09_GELOEST"
+   ],
+   "objekte": [
+    "steckbrief"
+   ],
+   "optional": false,
+   "sammelschritt": false,
+   "hinweise": [
+    {
+     "stufe": 1,
+     "zeile": "W1_HINT_PIX_0910"
+    },
+    {
+     "stufe": 2,
+     "zeile": "W1_HINT_PIX_0920"
+    },
+    {
+     "stufe": 3,
+     "zeile": "W1_HINT_PIX_0930"
+    }
+   ]
+  },
+  {
+   "schritt": "R10",
+   "ziel": "Die Goblin-Frage",
+   "raum": "bergwerk",
+   "offen_wenn": [],
+   "offen_wenn_eins_von": [],
+   "geloest_schalter": [],
+   "objekte": [],
+   "optional": false,
+   "sammelschritt": true,
+   "hinweise": [
+    {
+     "stufe": 1,
+     "zeile": "W1_HINT_PIX_1010"
+    },
+    {
+     "stufe": 2,
+     "zeile": "W1_HINT_PIX_1020"
+    },
+    {
+     "stufe": 3,
+     "zeile": "W1_HINT_PIX_1030"
+    }
+   ]
+  },
+  {
+   "schritt": "R10a",
+   "ziel": "Weg A, Tarifvertrag",
+   "raum": "bergwerk",
+   "offen_wenn": [
+    "leuchttrank",
+    "ketchup",
+    "tarifvertrag"
+   ],
+   "offen_wenn_eins_von": [],
+   "geloest_schalter": [
+    "W1_R10_A_GELOEST"
+   ],
+   "objekte": [
+    "leuchttrank",
+    "ketchup",
+    "tarifvertrag"
+   ],
+   "optional": true,
+   "sammelschritt": false,
+   "hinweise": []
+  },
+  {
+   "schritt": "R10b",
+   "ziel": "Weg B, Karriere",
+   "raum": "bergwerk",
+   "offen_wenn": [
+    "R9"
+   ],
+   "offen_wenn_eins_von": [],
+   "geloest_schalter": [
+    "W1_R10_B_GELOEST"
+   ],
+   "objekte": [],
+   "optional": true,
+   "sammelschritt": false,
+   "hinweise": []
+  },
+  {
+   "schritt": "R11",
+   "ziel": "Der Dunkle Turm",
+   "raum": "turmkeller",
+   "offen_wenn": [
+    "R11a",
+    "R11b"
+   ],
+   "offen_wenn_eins_von": [],
+   "geloest_schalter": [],
+   "objekte": [],
+   "optional": false,
+   "sammelschritt": true,
+   "hinweise": []
+  },
+  {
+   "schritt": "R11a",
+   "ziel": "Das Passwort",
+   "raum": "abstellkammern",
+   "offen_wenn": [
+    "R11b",
+    "zeugnis",
+    "R8",
+    "R9",
+    "R10",
+    "notizbuch"
+   ],
+   "offen_wenn_eins_von": [],
+   "geloest_schalter": [
+    "W1_R11_A_GELOEST"
+   ],
+   "objekte": [
+    "zeugnis",
+    "notizbuch"
+   ],
+   "optional": false,
+   "sammelschritt": false,
+   "hinweise": [
+    {
+     "stufe": 1,
+     "zeile": "W1_HINT_PIX_1111"
+    },
+    {
+     "stufe": 2,
+     "zeile": "W1_HINT_PIX_1121"
+    },
+    {
+     "stufe": 3,
+     "zeile": "W1_HINT_PIX_1131"
+    }
+   ]
+  },
+  {
+   "schritt": "R11b",
+   "ziel": "Die Besen",
+   "raum": "turmkeller",
+   "offen_wenn": [
+    "R10"
+   ],
+   "offen_wenn_eins_von": [],
+   "geloest_schalter": [
+    "W1_R11_B_GELOEST"
+   ],
+   "objekte": [],
+   "optional": false,
+   "sammelschritt": false,
+   "hinweise": [
+    {
+     "stufe": 1,
+     "zeile": "W1_HINT_PIX_1112"
+    },
+    {
+     "stufe": 2,
+     "zeile": "W1_HINT_PIX_1122"
+    },
+    {
+     "stufe": 3,
+     "zeile": "W1_HINT_PIX_1132"
+    }
+   ]
+  },
+  {
+   "schritt": "R12",
+   "ziel": "Smaugi räumt auf",
+   "raum": "abstellkammern",
+   "offen_wenn": [
+    "R11b",
+    "R9",
+    "R10",
+    "schwerter_buendel",
+    "fackel_buendel",
+    "kronleuchter"
+   ],
+   "offen_wenn_eins_von": [],
+   "geloest_schalter": [
+    "W1_R12_GELOEST"
+   ],
+   "objekte": [
+    "schwerter_buendel",
+    "fackel_buendel",
+    "kronleuchter"
+   ],
+   "optional": false,
+   "sammelschritt": false,
+   "hinweise": [
+    {
+     "stufe": 1,
+     "zeile": "W1_HINT_PIX_1210"
+    },
+    {
+     "stufe": 2,
+     "zeile": "W1_HINT_PIX_1220"
+    },
+    {
+     "stufe": 3,
+     "zeile": "W1_HINT_PIX_1230"
+    }
+   ]
+  },
+  {
+   "schritt": "R13",
+   "ziel": "Lord Moderwort",
+   "raum": "thronsaal",
+   "offen_wenn": [
+    "R11a",
+    "R12",
+    "R7",
+    "R9",
+    "socke",
+    "kochloeffel"
+   ],
+   "offen_wenn_eins_von": [],
+   "geloest_schalter": [
+    "W1_R13_GELOEST"
+   ],
+   "objekte": [
+    "socke",
+    "kochloeffel"
+   ],
+   "optional": false,
+   "sammelschritt": false,
+   "hinweise": [
+    {
+     "stufe": 1,
+     "zeile": "W1_HINT_PIX_1310"
+    },
+    {
+     "stufe": 2,
+     "zeile": "W1_HINT_PIX_1320"
+    },
+    {
+     "stufe": 3,
+     "zeile": "W1_HINT_PIX_1330"
+    }
+   ]
+  }
+ ]
+}

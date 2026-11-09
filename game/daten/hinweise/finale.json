@@ -1,0 +1,189 @@
+{
+ "abschnitt": "finale",
+ "sonderzeilen": {
+  "nichts_offen": "FI_HINT_PIX_0190",
+  "wartezeile": "FI_HINT_PIX_0180"
+ },
+ "schritte": [
+  {
+   "schritt": "F1",
+   "ziel": "Verriegelt (Luke erkennen)",
+   "raum": "dachboden",
+   "offen_wenn": [],
+   "offen_wenn_eins_von": [],
+   "geloest_schalter": [
+    "LUKE_ERKANNT"
+   ],
+   "objekte": [],
+   "optional": false,
+   "sammelschritt": true,
+   "hinweise": [
+    {
+     "stufe": 1,
+     "zeile": "FI_HINT_PIX_0010"
+    },
+    {
+     "stufe": 2,
+     "zeile": "FI_HINT_PIX_0020"
+    },
+    {
+     "stufe": 3,
+     "zeile": "FI_HINT_PIX_0030"
+    }
+   ]
+  },
+  {
+   "schritt": "F1a",
+   "ziel": "Der Riegel (Zeldina)",
+   "raum": "dachboden",
+   "offen_wenn": [
+    "F1"
+   ],
+   "offen_wenn_eins_von": [],
+   "geloest_schalter": [
+    "FI_R01_A_GELOEST"
+   ],
+   "objekte": [],
+   "optional": true,
+   "sammelschritt": false,
+   "hinweise": [
+    {
+     "stufe": 1,
+     "zeile": "FI_HINT_PIX_0040"
+    },
+    {
+     "stufe": 2,
+     "zeile": "FI_HINT_PIX_0050"
+    },
+    {
+     "stufe": 3,
+     "zeile": "FI_HINT_PIX_0060"
+    }
+   ]
+  },
+  {
+   "schritt": "F1b",
+   "ziel": "Die Ofentür halten",
+   "raum": "dachboden",
+   "offen_wenn": [
+    "F1",
+    "kochloeffel"
+   ],
+   "offen_wenn_eins_von": [],
+   "geloest_schalter": [
+    "FI_R01_B_GELOEST"
+   ],
+   "objekte": [
+    "kochloeffel"
+   ],
+   "optional": false,
+   "sammelschritt": false,
+   "hinweise": [
+    {
+     "stufe": 1,
+     "zeile": "FI_HINT_PIX_0070"
+    },
+    {
+     "stufe": 2,
+     "zeile": "FI_HINT_PIX_0080",
+     "bedingung": "nur FREUND_0815"
+    },
+    {
+     "stufe": 2,
+     "zeile": "FI_HINT_PIX_0090",
+     "bedingung": "ohne FREUND_0815"
+    },
+    {
+     "stufe": 3,
+     "zeile": "FI_HINT_PIX_0100",
+     "bedingung": "nur FREUND_0815"
+    },
+    {
+     "stufe": 3,
+     "zeile": "FI_HINT_PIX_0110",
+     "bedingung": "ohne FREUND_0815"
+    }
+   ]
+  },
+  {
+   "schritt": "F1c",
+   "ziel": "Die Zündkapsel",
+   "raum": "dachboden",
+   "offen_wenn": [
+    "F1"
+   ],
+   "offen_wenn_eins_von": [],
+   "geloest_schalter": [
+    "FI_R01_C_GELOEST"
+   ],
+   "objekte": [],
+   "optional": false,
+   "sammelschritt": false,
+   "hinweise": [
+    {
+     "stufe": 1,
+     "zeile": "FI_HINT_PIX_0120"
+    },
+    {
+     "stufe": 2,
+     "zeile": "FI_HINT_PIX_0130"
+    },
+    {
+     "stufe": 3,
+     "zeile": "FI_HINT_PIX_0140"
+    }
+   ]
+  },
+  {
+   "schritt": "F1d",
+   "ziel": "Die rote Taste",
+   "raum": "dachboden",
+   "offen_wenn": [
+    "F1b",
+    "F1c",
+    "goldene_fernbedienung"
+   ],
+   "offen_wenn_eins_von": [],
+   "geloest_schalter": [
+    "FI_R01_D_GELOEST"
+   ],
+   "objekte": [
+    "goldene_fernbedienung"
+   ],
+   "optional": false,
+   "sammelschritt": false,
+   "hinweise": [
+    {
+     "stufe": 1,
+     "zeile": "FI_HINT_PIX_0150"
+    },
+    {
+     "stufe": 2,
+     "zeile": "FI_HINT_PIX_0160"
+    },
+    {
+     "stufe": 3,
+     "zeile": "FI_HINT_PIX_0170"
+    }
+   ]
+  },
+  {
+   "schritt": "F2",
+   "ziel": "Hundekuchen zum Geburtstag (Bonus-Gag)",
+   "raum": "dachboden",
+   "offen_wenn": [
+    "omas_kekse"
+   ],
+   "offen_wenn_eins_von": [],
+   "geloest_schalter": [
+    "KEKSE_DABEI"
+   ],
+   "objekte": [
+    "omas_kekse"
+   ],
+   "optional": true,
+   "sammelschritt": false,
+   "hinweise": []
+  }
+ ]
+}
