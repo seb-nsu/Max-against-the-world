@@ -104,6 +104,8 @@ godot --headless --path . -s res://tests/prolog_durchlauf.gd          # Testmodu
 godot --headless --path . -s res://tests/prolog_durchlauf.gd -- --echt   # echte Sprechblasen, 1,5 Minuten
 ```
 
+Der allererste Import nach dem Klonen meldet rund 60 Fehler (Autoloads und Übersetzungen, die erst beim Import entstehen). Das ist normal: Ein zweiter Import und das Öffnen im Editor laufen fehlerfrei. Im Editor genügt es, das Projekt einmal zu öffnen und, falls Godot fragt, neu zu laden.
+
 Der Test spielt den Lösungspfad P1 bis P3 mit allen Fehlversuchen, Hinweisen und Gesprächen
 und prüft nach jedem Schritt Schalter, Status, Inventar und eine Speichern/Laden-Rundreise
 (speichern, Zustand verfälschen, laden, vergleichen). Exit-Code 0 heißt alles grün.
