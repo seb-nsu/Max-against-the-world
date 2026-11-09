@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://b65dhlssie1ad"]
+
+[ext_resource type="Texture2D" uid="uid://4umm8wm4waco" path="res://grafik/platzhalter/gegenstand_notizbuch.png" id="1_7vb4q"]
+[ext_resource type="Script" path="res://game/inventory_items/notizbuch/inventory_item_notizbuch.gd" id="1_101kp"]
+
+[node name="ItemNotizbuch" type="TextureRect" unique_id=712261660]
+texture_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 4
+mouse_filter = 0
+texture = ExtResource("1_7vb4q")
+stretch_mode = 5
+script = ExtResource("1_101kp")
+script_name = "Notizbuch"
+description = "UI_OBJ_NOTIZBUCH"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1440562980]

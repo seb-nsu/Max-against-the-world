@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://bispvqq14wo8l"]
+
+[ext_resource type="Script" path="res://game/rooms/wohnzimmer/hotspots/familienfoto/hotspot_familienfoto.gd" id="1_wcxa4"]
+
+[node name="Familienfoto" type="Area2D" unique_id=94221927]
+script = ExtResource("1_wcxa4")
+script_name = "Familienfoto"
+description = "Familienfoto"
+cursor = 1
+interaction_polygon = PackedVector2Array(-22, -17, 22, -17, 22, 17, -22, 17)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=103442678]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

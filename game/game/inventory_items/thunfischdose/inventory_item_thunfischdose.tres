@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://bysf75yqif8nd"]
+
+[ext_resource type="Script" path="res://game/inventory_items/thunfischdose/inventory_item_thunfischdose_state.gd" id="1_0fmtc"]
+
+[resource]
+resource_name = "Thunfischdose"
+script = ExtResource("1_0fmtc")
+script_name = "Thunfischdose"
+scene = "res://game/inventory_items/thunfischdose/inventory_item_thunfischdose.tscn"

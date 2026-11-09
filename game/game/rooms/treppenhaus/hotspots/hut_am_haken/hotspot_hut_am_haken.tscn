@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://gqidmiy55y42"]
+
+[ext_resource type="Script" path="res://game/rooms/treppenhaus/hotspots/hut_am_haken/hotspot_hut_am_haken.gd" id="1_sry3d"]
+
+[node name="HutAmHaken" type="Area2D" unique_id=847935187]
+script = ExtResource("1_sry3d")
+script_name = "HutAmHaken"
+description = "Hut Am Haken"
+cursor = 1
+interaction_polygon = PackedVector2Array(-10, -9, 10, -9, 10, 9, -10, 9)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1897749652]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

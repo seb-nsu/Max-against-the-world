@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://vvft6a7c1bn5"]
+
+[node name="VonWohnzimmer" type="Marker2D" unique_id=96297152]
+visible = false

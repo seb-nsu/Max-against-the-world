@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://capncmb7ywdcy"]
+
+[node name="VonDachboden" type="Marker2D" unique_id=171942929]
+visible = false

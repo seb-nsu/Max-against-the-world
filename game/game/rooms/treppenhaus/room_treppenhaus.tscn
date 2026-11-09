@@ -1,0 +1,81 @@
+[gd_scene format=3 uid="uid://d3y1nq7eyojcf"]
+
+[ext_resource type="Script" path="res://game/rooms/treppenhaus/room_treppenhaus.gd" id="1_mabc3"]
+[ext_resource type="PackedScene" uid="uid://vhl6fulnwd1v" path="res://game/rooms/treppenhaus/walkable_areas/boden/walkable_area_boden.tscn" id="2_bsj5q"]
+[ext_resource type="PackedScene" uid="uid://cvr1k6y3kolhm" path="res://game/rooms/treppenhaus/props/background/prop_background.tscn" id="3_belpv"]
+[ext_resource type="Texture2D" uid="uid://ckt58il2hves8" path="res://grafik/platzhalter/raum_treppenhaus.png" id="4_dtrsq"]
+[ext_resource type="PackedScene" uid="uid://gqidmiy55y42" path="res://game/rooms/treppenhaus/hotspots/hut_am_haken/hotspot_hut_am_haken.tscn" id="5_r260i"]
+[ext_resource type="PackedScene" uid="uid://b31ll6umfhgr3" path="res://game/rooms/treppenhaus/hotspots/fenster/hotspot_fenster.tscn" id="6_uakd5"]
+[ext_resource type="PackedScene" uid="uid://4qny4vu4wprc" path="res://game/rooms/treppenhaus/hotspots/treppe/hotspot_treppe.tscn" id="7_vkxdx"]
+[ext_resource type="PackedScene" uid="uid://cr1lwyliq6gx1" path="res://game/rooms/treppenhaus/hotspots/ausgang_wohnzimmer/hotspot_ausgang_wohnzimmer.tscn" id="8_nsdmb"]
+[ext_resource type="PackedScene" uid="uid://jiy23p5e10lh" path="res://game/rooms/treppenhaus/hotspots/ausgang_dachboden/hotspot_ausgang_dachboden.tscn" id="9_0vblo"]
+[ext_resource type="PackedScene" uid="uid://ctyvw1bibayyl" path="res://game/rooms/treppenhaus/markers/start/marker_start.tscn" id="10_me7ro"]
+[ext_resource type="PackedScene" uid="uid://vvft6a7c1bn5" path="res://game/rooms/treppenhaus/markers/von_wohnzimmer/marker_von_wohnzimmer.tscn" id="11_5s0sd"]
+[ext_resource type="PackedScene" uid="uid://capncmb7ywdcy" path="res://game/rooms/treppenhaus/markers/von_dachboden/marker_von_dachboden.tscn" id="12_eqpsj"]
+
+[node name="RoomTreppenhaus" type="Node2D" unique_id=100306385]
+script = ExtResource("1_mabc3")
+script_name = "Treppenhaus"
+width = 320
+height = 180
+
+[node name="WalkableAreas" type="Node2D" parent="." unique_id=1177093037]
+
+[node name="Boden" parent="WalkableAreas" unique_id=1192357450 instance=ExtResource("2_bsj5q")]
+interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(4, 150, 120, 150, 296, 46, 316, 46, 316, 60, 140, 178, 4, 178)])
+
+[node name="Props" type="Node2D" parent="." unique_id=13170868]
+
+[node name="Background" parent="Props" unique_id=1908781321 instance=ExtResource("3_belpv")]
+position = Vector2(160, 90)
+texture = ExtResource("4_dtrsq")
+description = "UI_RAUM_TREPPENHAUS"
+
+[node name="Hotspots" type="Node2D" parent="." unique_id=1536147977]
+
+[node name="HutAmHaken" parent="Hotspots" unique_id=847935187 instance=ExtResource("5_r260i")]
+position = Vector2(50, 63)
+description = "UI_OBJ_HUT_AM_HAKEN"
+baseline = 9
+walk_to_point = Vector2(2, 97)
+
+[node name="Fenster" parent="Hotspots" unique_id=1255081746 instance=ExtResource("6_uakd5")]
+position = Vector2(157, 56)
+description = "UI_OBJ_FENSTER"
+baseline = 22
+walk_to_point = Vector2(-7, 54)
+
+[node name="Treppe" parent="Hotspots" unique_id=1402502403 instance=ExtResource("7_vkxdx")]
+position = Vector2(190, 105)
+description = "UI_OBJ_TREPPE"
+baseline = 45
+walk_to_point = Vector2(-20, 15)
+
+[node name="AusgangWohnzimmer" parent="Hotspots" unique_id=862228977 instance=ExtResource("8_nsdmb")]
+position = Vector2(17, 97)
+description = "UI_RAUM_WOHNZIMMER"
+baseline = 53
+walk_to_point = Vector2(3, 67)
+cursor = 9
+
+[node name="AusgangDachboden" parent="Hotspots" unique_id=1667614063 instance=ExtResource("9_0vblo")]
+position = Vector2(294, 20)
+description = "UI_RAUM_DACHBODEN"
+baseline = 20
+walk_to_point = Vector2(4, 32)
+cursor = 9
+
+[node name="Regions" type="Node2D" parent="." unique_id=749996606]
+
+[node name="Markers" type="Node2D" parent="." unique_id=1984489637]
+
+[node name="Start" parent="Markers" unique_id=268551212 instance=ExtResource("10_me7ro")]
+position = Vector2(60, 164)
+
+[node name="VonWohnzimmer" parent="Markers" unique_id=96297152 instance=ExtResource("11_5s0sd")]
+position = Vector2(40, 164)
+
+[node name="VonDachboden" parent="Markers" unique_id=171942929 instance=ExtResource("12_eqpsj")]
+position = Vector2(292, 54)
+
+[node name="Characters" type="Node2D" parent="." unique_id=2045747567]

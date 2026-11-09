@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://4qvfd4yd1tr8"]
+
+[ext_resource type="Texture2D" uid="uid://b7rtxwdayo5wp" path="res://grafik/platzhalter/gegenstand_reisetasche.png" id="1_7k0s8"]
+[ext_resource type="Script" path="res://game/inventory_items/reisetasche/inventory_item_reisetasche.gd" id="1_ak331"]
+
+[node name="ItemReisetasche" type="TextureRect" unique_id=228345212]
+texture_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 4
+mouse_filter = 0
+texture = ExtResource("1_7k0s8")
+stretch_mode = 5
+script = ExtResource("1_ak331")
+script_name = "Reisetasche"
+description = "UI_OBJ_REISETASCHE"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=145216632]

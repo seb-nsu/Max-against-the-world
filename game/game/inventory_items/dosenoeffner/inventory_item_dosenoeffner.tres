@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://b0x44p0j4empx"]
+
+[ext_resource type="Script" path="res://game/inventory_items/dosenoeffner/inventory_item_dosenoeffner_state.gd" id="1_ffxiq"]
+
+[resource]
+resource_name = "Dosenoeffner"
+script = ExtResource("1_ffxiq")
+script_name = "Dosenoeffner"
+scene = "res://game/inventory_items/dosenoeffner/inventory_item_dosenoeffner.tscn"

@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://466rv5c7scqu"]
+
+[ext_resource type="Script" path="res://game/characters/max/character_max_state.gd" id="1_sl0fi"]
+
+[resource]
+resource_name = "Max"
+script = ExtResource("1_sl0fi")
+script_name = "Max"
+scene = "res://game/characters/max/character_max.tscn"

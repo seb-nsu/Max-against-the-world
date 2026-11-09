@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://cr81hxbkydgc5"]
+
+[ext_resource type="Script" path="res://game/rooms/wohnzimmer/hotspots/ausgang_treppenhaus/hotspot_ausgang_treppenhaus.gd" id="1_4d5dn"]
+
+[node name="AusgangTreppenhaus" type="Area2D" unique_id=1121029190]
+script = ExtResource("1_4d5dn")
+script_name = "AusgangTreppenhaus"
+description = "Ausgang Treppenhaus"
+cursor = 1
+interaction_polygon = PackedVector2Array(-13, -49, 13, -49, 13, 49, -13, 49)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=256792379]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

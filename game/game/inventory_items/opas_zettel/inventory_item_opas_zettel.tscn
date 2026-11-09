@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://dcuw1lssnl2lw"]
+
+[ext_resource type="Texture2D" uid="uid://ck2hkpevlrjcc" path="res://grafik/platzhalter/gegenstand_opas_zettel.png" id="1_8n04s"]
+[ext_resource type="Script" path="res://game/inventory_items/opas_zettel/inventory_item_opas_zettel.gd" id="1_htb65"]
+
+[node name="ItemOpasZettel" type="TextureRect" unique_id=1644999830]
+texture_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 4
+mouse_filter = 0
+texture = ExtResource("1_8n04s")
+stretch_mode = 5
+script = ExtResource("1_htb65")
+script_name = "OpasZettel"
+description = "UI_OBJ_OPAS_ZETTEL"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=754430570]

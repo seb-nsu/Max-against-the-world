@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://msjjixl2pelx"]
+
+[ext_resource type="Script" path="res://game/inventory_items/drahtkleiderbuegel/inventory_item_drahtkleiderbuegel.gd" id="1_3vvxb"]
+[ext_resource type="Texture2D" uid="uid://b7ggq8emptyw2" path="res://grafik/platzhalter/gegenstand_drahtkleiderbuegel.png" id="1_h8b5v"]
+
+[node name="ItemDrahtkleiderbuegel" type="TextureRect" unique_id=1120793607]
+texture_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 4
+mouse_filter = 0
+texture = ExtResource("1_h8b5v")
+stretch_mode = 5
+script = ExtResource("1_3vvxb")
+script_name = "Drahtkleiderbuegel"
+description = "UI_OBJ_DRAHTKLEIDERBUEGEL"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=630562887]

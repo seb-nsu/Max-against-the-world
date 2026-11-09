@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://vhl6fulnwd1v"]
+
+[ext_resource type="Script" path="res://game/rooms/treppenhaus/walkable_areas/boden/walkable_area_boden.gd" id="1_upc48"]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_tuqcj"]
+outlines = Array[PackedVector2Array]([PackedVector2Array(4, 150, 120, 150, 296, 46, 316, 46, 316, 60, 140, 178, 4, 178)])
+agent_radius = 0.0
+
+[node name="Boden" type="Node2D" unique_id=1192357450]
+script = ExtResource("1_upc48")
+script_name = "Boden"
+description = "Boden"
+interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(4, 150, 120, 150, 296, 46, 316, 46, 316, 60, 140, 178, 4, 178)])
+
+[node name="Perimeter" type="NavigationRegion2D" parent="." unique_id=1064216562]
+modulate = Color(0, 1, 0, 1)
+navigation_polygon = SubResource("NavigationPolygon_tuqcj")

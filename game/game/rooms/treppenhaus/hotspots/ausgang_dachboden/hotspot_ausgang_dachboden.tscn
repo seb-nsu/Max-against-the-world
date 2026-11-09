@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://jiy23p5e10lh"]
+
+[ext_resource type="Script" path="res://game/rooms/treppenhaus/hotspots/ausgang_dachboden/hotspot_ausgang_dachboden.gd" id="1_2no4i"]
+
+[node name="AusgangDachboden" type="Area2D" unique_id=1667614063]
+script = ExtResource("1_2no4i")
+script_name = "AusgangDachboden"
+description = "Ausgang Dachboden"
+cursor = 1
+interaction_polygon = PackedVector2Array(-24, -20, 24, -20, 24, 20, -24, 20)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1235309038]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

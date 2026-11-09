@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://8sm6r4cjgrif"]
+
+[ext_resource type="Script" path="res://game/rooms/dachboden/hotspots/werkzeugkiste/hotspot_werkzeugkiste.gd" id="1_iuvhb"]
+
+[node name="Werkzeugkiste" type="Area2D" unique_id=850821456]
+script = ExtResource("1_iuvhb")
+script_name = "Werkzeugkiste"
+description = "Werkzeugkiste"
+cursor = 1
+interaction_polygon = PackedVector2Array(-18, -9, 18, -9, 18, 9, -18, 9)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=744539047]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

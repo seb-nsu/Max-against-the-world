@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://diae83p5kee1c"]
+
+[ext_resource type="Script" path="res://game/rooms/dachboden/hotspots/ausgestopfter_fisch/hotspot_ausgestopfter_fisch.gd" id="1_7lw2r"]
+
+[node name="AusgestopfterFisch" type="Area2D" unique_id=1339930703]
+script = ExtResource("1_7lw2r")
+script_name = "AusgestopfterFisch"
+description = "Ausgestopfter Fisch"
+cursor = 1
+interaction_polygon = PackedVector2Array(-13, -7, 13, -7, 13, 7, -13, 7)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=515653720]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

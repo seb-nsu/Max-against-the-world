@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://bv3lmx2wv75so"]
+
+[ext_resource type="Script" path="res://game/rooms/wohnzimmer/room_wohnzimmer_state.gd" id="1_xakr4"]
+
+[resource]
+resource_name = "Wohnzimmer"
+script = ExtResource("1_xakr4")
+script_name = "Wohnzimmer"
+scene = "res://game/rooms/wohnzimmer/room_wohnzimmer.tscn"

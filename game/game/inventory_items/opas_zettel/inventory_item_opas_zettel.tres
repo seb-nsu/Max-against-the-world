@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://b1dgrvi5pm3f6"]
+
+[ext_resource type="Script" path="res://game/inventory_items/opas_zettel/inventory_item_opas_zettel_state.gd" id="1_hvuix"]
+
+[resource]
+resource_name = "OpasZettel"
+script = ExtResource("1_hvuix")
+script_name = "OpasZettel"
+scene = "res://game/inventory_items/opas_zettel/inventory_item_opas_zettel.tscn"

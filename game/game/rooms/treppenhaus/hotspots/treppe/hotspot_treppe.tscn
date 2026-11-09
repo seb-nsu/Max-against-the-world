@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://4qny4vu4wprc"]
+
+[ext_resource type="Script" path="res://game/rooms/treppenhaus/hotspots/treppe/hotspot_treppe.gd" id="1_ncyah"]
+
+[node name="Treppe" type="Area2D" unique_id=1402502403]
+script = ExtResource("1_ncyah")
+script_name = "Treppe"
+description = "Treppe"
+cursor = 1
+interaction_polygon = PackedVector2Array(-70, -45, 70, -45, 70, 45, -70, 45)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=2044815707]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://cs4idsu1anhgi"]
+
+[node name="Fernseher" type="Marker2D" unique_id=1565949662]
+visible = false

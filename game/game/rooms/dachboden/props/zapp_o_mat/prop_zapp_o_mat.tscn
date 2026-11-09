@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://c4cbjhulesib6"]
+
+[ext_resource type="Script" path="res://game/rooms/dachboden/props/zapp_o_mat/prop_zapp_o_mat.gd" id="1_268yo"]
+
+[node name="ZappOMat" type="Area2D" unique_id=145494250]
+script = ExtResource("1_268yo")
+script_name = "ZappOMat"
+description = "Zapp O Mat"
+cursor = 1
+interaction_polygon = PackedVector2Array(-24, -31, 24, -31, 24, 31, -24, 31)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=21838304]
+texture_filter = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=904191146]
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1486821581]
+visible = false
+modulate = Color(1, 1, 0, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+
+[node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=1090912109]
+visible = false
+affect_navigation_mesh = true
+carve_navigation_mesh = true
