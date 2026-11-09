@@ -35,8 +35,8 @@
    "script_name": "Dorfplatz",
    "name_key": "UI_RAUM_DORFPLATZ",
    "groesse": [
-    640,
-    180
+    960,
+    270
    ],
    "hintergrund": "res://grafik/platzhalter/raum_dorfplatz.png",
    "farbe": "#7d8f4e",
@@ -864,8 +864,8 @@
    "script_name": "Taverne",
    "name_key": "UI_RAUM_TAVERNE",
    "groesse": [
-    320,
-    180
+    480,
+    270
    ],
    "hintergrund": "res://grafik/platzhalter/raum_taverne.png",
    "farbe": "#6e4a32",
@@ -1548,8 +1548,8 @@
    "script_name": "Schmiede",
    "name_key": "UI_RAUM_SCHMIEDE",
    "groesse": [
-    320,
-    180
+    480,
+    270
    ],
    "hintergrund": "res://grafik/platzhalter/raum_schmiede.png",
    "farbe": "#5d4a42",
@@ -1834,8 +1834,8 @@
    "script_name": "Zauberstabladen",
    "name_key": "UI_RAUM_ZAUBERSTABLADEN",
    "groesse": [
-    320,
-    180
+    480,
+    270
    ],
    "hintergrund": "res://grafik/platzhalter/raum_zauberstabladen.png",
    "farbe": "#4f3f5e",
@@ -2280,8 +2280,8 @@
    "script_name": "Klassenzimmer",
    "name_key": "UI_RAUM_KLASSENZIMMER",
    "groesse": [
-    320,
-    180
+    480,
+    270
    ],
    "hintergrund": "res://grafik/platzhalter/raum_klassenzimmer.png",
    "farbe": "#5a6988",
@@ -2801,8 +2801,8 @@
    "script_name": "Trollbruecke",
    "name_key": "UI_RAUM_TROLLBRUECKE",
    "groesse": [
-    320,
-    180
+    480,
+    270
    ],
    "hintergrund": "res://grafik/platzhalter/raum_trollbruecke.png",
    "farbe": "#6a8a4a",
@@ -3257,8 +3257,8 @@
    "script_name": "Wasserschloss",
    "name_key": "UI_RAUM_WASSERSCHLOSS",
    "groesse": [
-    320,
-    180
+    480,
+    270
    ],
    "hintergrund": "res://grafik/platzhalter/raum_wasserschloss.png",
    "farbe": "#4f7a9a",
@@ -3536,8 +3536,8 @@
    "script_name": "Zauberwald",
    "name_key": "UI_RAUM_ZAUBERWALD",
    "groesse": [
-    320,
-    180
+    480,
+    270
    ],
    "hintergrund": "res://grafik/platzhalter/raum_zauberwald.png",
    "farbe": "#3f5a3a",
@@ -4049,8 +4049,8 @@
    "script_name": "Luftschloss",
    "name_key": "UI_RAUM_LUFTSCHLOSS",
    "groesse": [
-    320,
-    180
+    480,
+    270
    ],
    "hintergrund": "res://grafik/platzhalter/raum_luftschloss.png",
    "farbe": "#b9c7e6",
@@ -4344,8 +4344,8 @@
    "script_name": "Bergwerk",
    "name_key": "UI_RAUM_BERGWERK",
    "groesse": [
-    320,
-    180
+    480,
+    270
    ],
    "hintergrund": "res://grafik/platzhalter/raum_bergwerk.png",
    "farbe": "#4a3f3a",
@@ -4751,8 +4751,8 @@
    "script_name": "Turmkeller",
    "name_key": "UI_RAUM_TURMKELLER",
    "groesse": [
-    320,
-    180
+    480,
+    270
    ],
    "hintergrund": "res://grafik/platzhalter/raum_turmkeller.png",
    "farbe": "#3b2f4a",
@@ -5134,8 +5134,8 @@
    "script_name": "Abstellkammer1",
    "name_key": "UI_RAUM_ABSTELLKAMMER_1",
    "groesse": [
-    320,
-    180
+    480,
+    270
    ],
    "hintergrund": "res://grafik/platzhalter/raum_abstellkammer_1.png",
    "farbe": "#4a3f3a",
@@ -5230,8 +5230,8 @@
    "script_name": "Abstellkammern",
    "name_key": "UI_RAUM_ABSTELLKAMMERN",
    "groesse": [
-    320,
-    180
+    480,
+    270
    ],
    "hintergrund": "res://grafik/platzhalter/raum_abstellkammern.png",
    "farbe": "#5e4b3a",
@@ -5763,8 +5763,8 @@
    "script_name": "Thronsaal",
    "name_key": "UI_RAUM_THRONSAAL",
    "groesse": [
-    320,
-    180
+    480,
+    270
    ],
    "hintergrund": "res://grafik/platzhalter/raum_thronsaal.png",
    "farbe": "#2e2440",
@@ -6031,7 +6031,7 @@
    "script_name": "Max",
    "kuerzel": "MAX",
    "name_key": "UI_OBJ_MAX",
-   "groesse_px": 56,
+   "groesse_px": 84,
    "spielbar": true,
    "textfarbe": "#ffffff",
    "sprite": "res://grafik/platzhalter/figur_max.png",
@@ -6063,7 +6063,7 @@
    "script_name": "Pixel",
    "kuerzel": "PIX",
    "name_key": "UI_OBJ_PIXEL",
-   "groesse_px": 18,
+   "groesse_px": 27,
    "spielbar": true,
    "textfarbe": "#5fd3c8",
    "sprite": "res://grafik/platzhalter/figur_pixel.png",
@@ -6095,7 +6095,7 @@
    "script_name": "Toadi",
    "kuerzel": "TOA",
    "name_key": "UI_OBJ_TOADI",
-   "groesse_px": 30,
+   "groesse_px": 45,
    "spielbar": false,
    "textfarbe": "#ffffff",
    "sprite": "res://grafik/platzhalter/figur_toadi.png",
@@ -6145,7 +6145,7 @@
    "script_name": "Alwin",
    "kuerzel": "ALW",
    "name_key": "UI_OBJ_ALWIN",
-   "groesse_px": 62,
+   "groesse_px": 93,
    "spielbar": false,
    "textfarbe": "#ffffff",
    "sprite": "res://grafik/platzhalter/figur_alwin.png",
@@ -6182,7 +6182,7 @@
    "script_name": "Zeldina",
    "kuerzel": "ZEL",
    "name_key": "UI_OBJ_ZELDINA",
-   "groesse_px": 58,
+   "groesse_px": 87,
    "spielbar": false,
    "textfarbe": "#ffffff",
    "sprite": "res://grafik/platzhalter/figur_zeldina.png",
@@ -6270,7 +6270,7 @@
    "script_name": "Gollo",
    "kuerzel": "GOL",
    "name_key": "UI_OBJ_GOLLO",
-   "groesse_px": 44,
+   "groesse_px": 66,
    "spielbar": false,
    "textfarbe": "#ffffff",
    "sprite": "res://grafik/platzhalter/figur_gollo.png",
@@ -6307,7 +6307,7 @@
    "script_name": "Humbert",
    "kuerzel": "HUM",
    "name_key": "UI_OBJ_HUMBERT",
-   "groesse_px": 60,
+   "groesse_px": 90,
    "spielbar": false,
    "textfarbe": "#ffffff",
    "sprite": "res://grafik/platzhalter/figur_humbert.png",
@@ -6365,7 +6365,7 @@
    "script_name": "Schmied",
    "kuerzel": "SCH",
    "name_key": "UI_OBJ_SCHMIED",
-   "groesse_px": 60,
+   "groesse_px": 90,
    "spielbar": false,
    "textfarbe": "#ffffff",
    "sprite": "res://grafik/platzhalter/figur_schmied.png",
@@ -6411,7 +6411,7 @@
    "script_name": "Waldemar",
    "kuerzel": "WAL",
    "name_key": "UI_OBJ_WALDEMAR",
-   "groesse_px": 80,
+   "groesse_px": 120,
    "spielbar": false,
    "textfarbe": "#ffffff",
    "sprite": "res://grafik/platzhalter/figur_waldemar.png",
@@ -6467,7 +6467,7 @@
    "script_name": "Stabmacher",
    "kuerzel": "STA",
    "name_key": "UI_OBJ_STABMACHER",
-   "groesse_px": 58,
+   "groesse_px": 87,
    "spielbar": false,
    "textfarbe": "#ffffff",
    "sprite": "res://grafik/platzhalter/figur_stabmacher.png",
@@ -6513,7 +6513,7 @@
    "script_name": "Rotkaeppchen",
    "kuerzel": "ROT",
    "name_key": "UI_OBJ_ROTKAEPPCHEN",
-   "groesse_px": 48,
+   "groesse_px": 72,
    "spielbar": false,
    "textfarbe": "#ffffff",
    "sprite": "res://grafik/platzhalter/figur_rotkaeppchen.png",
@@ -6560,7 +6560,7 @@
    "script_name": "Maklerin",
    "kuerzel": "MAK",
    "name_key": "UI_OBJ_MAKLERIN",
-   "groesse_px": 60,
+   "groesse_px": 90,
    "spielbar": false,
    "textfarbe": "#ffffff",
    "sprite": "res://grafik/platzhalter/figur_maklerin.png",
@@ -6606,7 +6606,7 @@
    "script_name": "Grimmzahn",
    "kuerzel": "GRI",
    "name_key": "UI_OBJ_GRIMMZAHN",
-   "groesse_px": 40,
+   "groesse_px": 60,
    "spielbar": false,
    "textfarbe": "#ffffff",
    "sprite": "res://grafik/platzhalter/figur_grimmzahn.png",
@@ -6709,7 +6709,7 @@
    "script_name": "Goblin1",
    "kuerzel": "GO1",
    "name_key": "UI_OBJ_GOBLIN_1",
-   "groesse_px": 34,
+   "groesse_px": 51,
    "spielbar": false,
    "textfarbe": "#ffffff",
    "sprite": "res://grafik/platzhalter/figur_goblin_1.png",
@@ -6755,7 +6755,7 @@
    "script_name": "Goblin2",
    "kuerzel": "GO2",
    "name_key": "UI_OBJ_GOBLIN_2",
-   "groesse_px": 34,
+   "groesse_px": 51,
    "spielbar": false,
    "textfarbe": "#ffffff",
    "sprite": "res://grafik/platzhalter/figur_goblin_2.png",
@@ -6820,7 +6820,7 @@
    "script_name": "Moderwort",
    "kuerzel": "MOD",
    "name_key": "UI_OBJ_MODERWORT",
-   "groesse_px": 60,
+   "groesse_px": 90,
    "spielbar": false,
    "textfarbe": "#ffffff",
    "sprite": "res://grafik/platzhalter/figur_moderwort.png",
@@ -6934,7 +6934,7 @@
    "script_name": "Smaugi",
    "kuerzel": "SMA",
    "name_key": "UI_OBJ_SMAUGI",
-   "groesse_px": 120,
+   "groesse_px": 180,
    "spielbar": false,
    "textfarbe": "#ffffff",
    "sprite": "res://grafik/platzhalter/figur_smaugi.png",
@@ -6990,7 +6990,7 @@
    "script_name": "Minka",
    "kuerzel": "MIN",
    "name_key": "UI_OBJ_MINKA",
-   "groesse_px": 18,
+   "groesse_px": 27,
    "spielbar": false,
    "textfarbe": "#ffffff",
    "sprite": "res://grafik/platzhalter/figur_minka.png",
@@ -7036,7 +7036,7 @@
    "script_name": "Huhn",
    "kuerzel": "HUH",
    "name_key": "UI_OBJ_HUHN",
-   "groesse_px": 14,
+   "groesse_px": 21,
    "spielbar": false,
    "textfarbe": "#ffffff",
    "sprite": "res://grafik/platzhalter/figur_huhn.png",
@@ -7092,7 +7092,7 @@
    "script_name": "SchmiedeZiege",
    "kuerzel": "ZIE",
    "name_key": "UI_OBJ_SCHMIEDE_ZIEGE",
-   "groesse_px": 28,
+   "groesse_px": 42,
    "spielbar": false,
    "textfarbe": "#ffffff",
    "sprite": "res://grafik/platzhalter/figur_schmiede_ziege.png",
@@ -7169,7 +7169,7 @@
    "script_name": "XxlZiege",
    "kuerzel": "XXL",
    "name_key": "UI_OBJ_XXL_ZIEGE",
-   "groesse_px": 70,
+   "groesse_px": 105,
    "spielbar": false,
    "textfarbe": "#ffffff",
    "sprite": "res://grafik/platzhalter/figur_xxl_ziege.png",
@@ -7208,7 +7208,7 @@
    "script_name": "Schwan",
    "kuerzel": "SWA",
    "name_key": "UI_OBJ_SCHWAN",
-   "groesse_px": 24,
+   "groesse_px": 36,
    "spielbar": false,
    "textfarbe": "#ffffff",
    "sprite": "res://grafik/platzhalter/figur_schwan.png",

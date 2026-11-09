@@ -13,8 +13,8 @@
    "script_name": "Wohnzimmer",
    "name_key": "UI_RAUM_WOHNZIMMER",
    "groesse": [
-    320,
-    180
+    480,
+    270
    ],
    "hintergrund": "res://grafik/platzhalter/raum_wohnzimmer.png",
    "farbe": "#6b4f3f",
@@ -253,8 +253,8 @@
    "script_name": "Treppenhaus",
    "name_key": "UI_RAUM_TREPPENHAUS",
    "groesse": [
-    320,
-    180
+    480,
+    270
    ],
    "hintergrund": "res://grafik/platzhalter/raum_treppenhaus.png",
    "farbe": "#584536",
@@ -447,8 +447,8 @@
    "script_name": "Dachboden",
    "name_key": "UI_RAUM_DACHBODEN",
    "groesse": [
-    320,
-    180
+    480,
+    270
    ],
    "hintergrund": "res://grafik/platzhalter/raum_dachboden.png",
    "farbe": "#7a5c43",
@@ -1247,7 +1247,7 @@
    "script_name": "Max",
    "kuerzel": "MAX",
    "name_key": "UI_OBJ_MAX",
-   "groesse_px": 56,
+   "groesse_px": 84,
    "spielbar": true,
    "textfarbe": "#ffffff",
    "sprite": "res://grafik/platzhalter/figur_max.png",
@@ -1268,7 +1268,7 @@
    "script_name": "Pixel",
    "kuerzel": "PIX",
    "name_key": "UI_OBJ_PIXEL",
-   "groesse_px": 18,
+   "groesse_px": 27,
    "spielbar": false,
    "textfarbe": "#5fd3c8",
    "sprite": "res://grafik/platzhalter/figur_pixel.png",
@@ -1324,7 +1324,7 @@
    "script_name": "Opa",
    "kuerzel": "OPA",
    "name_key": "UI_OBJ_OPA",
-   "groesse_px": 60,
+   "groesse_px": 90,
    "spielbar": false,
    "textfarbe": "#f5a04a",
    "sprite": "res://grafik/platzhalter/figur_opa.png",
