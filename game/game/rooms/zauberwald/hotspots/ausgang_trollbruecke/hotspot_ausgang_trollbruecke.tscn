@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://de5k3fotmrvdc"]
+
+[ext_resource type="Script" path="res://game/rooms/zauberwald/hotspots/ausgang_trollbruecke/hotspot_ausgang_trollbruecke.gd" id="1_23m04"]
+
+[node name="AusgangTrollbruecke" type="Area2D" unique_id=584795113]
+script = ExtResource("1_23m04")
+script_name = "AusgangTrollbruecke"
+description = "Ausgang Trollbruecke"
+cursor = 1
+interaction_polygon = PackedVector2Array(-8, -35, 8, -35, 8, 35, -8, 35)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1057680678]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

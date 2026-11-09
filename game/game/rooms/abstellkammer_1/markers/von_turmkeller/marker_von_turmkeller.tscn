@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://brtsh546ylyv1"]
+
+[node name="VonTurmkeller" type="Marker2D" unique_id=658211824]
+visible = false

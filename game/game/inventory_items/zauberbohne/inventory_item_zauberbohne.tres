@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://1sutkpwy3nv"]
+
+[ext_resource type="Script" path="res://game/inventory_items/zauberbohne/inventory_item_zauberbohne_state.gd" id="1_clank"]
+
+[resource]
+resource_name = "Zauberbohne"
+script = ExtResource("1_clank")
+script_name = "Zauberbohne"
+scene = "res://game/inventory_items/zauberbohne/inventory_item_zauberbohne.tscn"

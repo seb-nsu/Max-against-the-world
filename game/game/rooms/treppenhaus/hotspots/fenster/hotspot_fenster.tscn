@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://b31ll6umfhgr3"]
+
+[ext_resource type="Script" path="res://game/rooms/treppenhaus/hotspots/fenster/hotspot_fenster.gd" id="1_ltjbk"]
+
+[node name="Fenster" type="Area2D" unique_id=1255081746]
+script = ExtResource("1_ltjbk")
+script_name = "Fenster"
+description = "Fenster"
+cursor = 1
+interaction_polygon = PackedVector2Array(-17, -22, 17, -22, 17, 22, -17, 22)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=62727471]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://bu1n6n0um7b5e"]
+
+[ext_resource type="Script" path="res://game/rooms/dorfplatz/hotspots/zauberstab_laden_von_aussen/hotspot_zauberstab_laden_von_aussen.gd" id="1_gabg1"]
+
+[node name="ZauberstabLadenVonAussen" type="Area2D" unique_id=2017344714]
+script = ExtResource("1_gabg1")
+script_name = "ZauberstabLadenVonAussen"
+description = "Zauberstab Laden Von Aussen"
+cursor = 1
+interaction_polygon = PackedVector2Array(-25, -37, 25, -37, 25, 37, -25, 37)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=2105602977]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

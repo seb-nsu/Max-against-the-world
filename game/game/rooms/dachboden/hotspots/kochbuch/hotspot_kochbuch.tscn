@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://by0tys78yev2r"]
+
+[ext_resource type="Script" path="res://game/rooms/dachboden/hotspots/kochbuch/hotspot_kochbuch.gd" id="1_74iqh"]
+
+[node name="Kochbuch" type="Area2D" unique_id=1246725762]
+script = ExtResource("1_74iqh")
+script_name = "Kochbuch"
+description = "Kochbuch"
+cursor = 1
+interaction_polygon = PackedVector2Array(-7, -6, 7, -6, 7, 6, -7, 6)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1056898231]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

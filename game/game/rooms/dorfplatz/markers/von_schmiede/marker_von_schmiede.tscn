@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://8oqnplh7nlow"]
+
+[node name="VonSchmiede" type="Marker2D" unique_id=1792040735]
+visible = false

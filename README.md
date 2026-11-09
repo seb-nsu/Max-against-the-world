@@ -27,6 +27,9 @@ Jede Information hat genau einen Besitzer; welche Datei was besitzt, steht in [d
 
 - `python3 tools/pruefen.py` prüft vor jedem Commit Welt-Tabellen, Lösbarkeit, Skript-IDs, Sprecher, Stimmen und Musik gegeneinander. Fehler werden behoben, Warnungen geprüft.
 - `python3 tools/diagramme.py` erzeugt die Abhängigkeitsdiagramme aus den Welt-Tabellen neu.
+- `python3 tools/skript_export.py` erzeugt die Godot-Übersetzungsdatei `game/lokalisierung/texte.csv` sowie `export/skript-voll.csv` und `export/audio-zeilen.csv`.
+- `python3 tools/spieldaten.py` erzeugt `game/daten/` (Welt-Tabellen als JSON, Hinweis-Dateien der Hilfe-Pfote).
+- GitHub Actions (`.github/workflows/pruefen.yml`) führt alle Prüfungen bei jedem Push aus.
 - `python3 tools/export.py [Ordner]` fasst alles in sieben Dateien zusammen (Konzept, Grafik, Rätsel, Skript, Audio, Produktion, offene Punkte), Standardordner `export/`.
 
 Frühere Gutachten, Review-Runden und Umsetzungsberichte stehen in der Git-Historie (bis Commit 7fea2a1).

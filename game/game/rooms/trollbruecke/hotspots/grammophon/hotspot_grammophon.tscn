@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://dw6p5fuypqdou"]
+
+[ext_resource type="Script" path="res://game/rooms/trollbruecke/hotspots/grammophon/hotspot_grammophon.gd" id="1_kdhrv"]
+
+[node name="Grammophon" type="Area2D" unique_id=109823903]
+script = ExtResource("1_kdhrv")
+script_name = "Grammophon"
+description = "Grammophon"
+cursor = 1
+interaction_polygon = PackedVector2Array(-10, -7, 10, -7, 10, 7, -10, 7)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=319555215]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

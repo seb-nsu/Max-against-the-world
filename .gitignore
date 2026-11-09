@@ -1,2 +1,7 @@
 export/
 __pycache__/
+
+# Godot: Import-Cache und aus texte.csv erzeugte Übersetzungen (entstehen beim Import neu).
+# Die .import-Dateien werden eingecheckt.
+game/.godot/
+*.translation

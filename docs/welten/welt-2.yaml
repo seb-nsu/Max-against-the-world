@@ -3,7 +3,7 @@ name: Antikodonien
 skript_praefix: W2
 
 # Szenen-Codes ohne eigenen Raum: Hinweise, Inventar, Zurufe, Fahrt auf der Zeitfähre (Flusskarte)
-sonder_codes: [HINT, INV, ZURU, FAHR]
+sonder_codes: [HINT, INV, ABS, ZURU, FAHR]
 sonder_sprecher: [NAR]   # Erzähltext zu Animationen, keine Figur
 
 # Gespeicherte Werte (05-spielsysteme, Speichern: Welt 2). Das Alter von Grabstein und Krügen

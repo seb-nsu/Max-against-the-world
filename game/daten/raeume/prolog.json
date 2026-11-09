@@ -1,0 +1,1896 @@
+{
+ "abschnitt": "prolog",
+ "erzeugt_von": "tools/godot_raeume.py",
+ "praefix": "P0",
+ "ausbau": [
+  "P1",
+  "P2",
+  "P3"
+ ],
+ "raeume": [
+  {
+   "id": "wohnzimmer",
+   "script_name": "Wohnzimmer",
+   "name_key": "UI_RAUM_WOHNZIMMER",
+   "groesse": [
+    320,
+    180
+   ],
+   "hintergrund": "res://grafik/platzhalter/raum_wohnzimmer.png",
+   "farbe": "#6b4f3f",
+   "laufbereich": [
+    [
+     4,
+     138
+    ],
+    [
+     316,
+     138
+    ],
+    [
+     316,
+     178
+    ],
+    [
+     4,
+     178
+    ]
+   ],
+   "marker": {
+    "start": [
+     70,
+     150
+    ],
+    "von_treppenhaus": [
+     292,
+     158
+    ]
+   },
+   "figuren": [],
+   "hotspots": [
+    {
+     "id": "fernseher",
+     "script_name": "Fernseher",
+     "name_key": "UI_OBJ_FERNSEHER",
+     "rect": [
+      218,
+      78,
+      52,
+      62
+     ],
+     "gehe": [
+      240,
+      150
+     ],
+     "ansehen": [
+      {
+       "zeile": "P0_WOHN_MAX_0110",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_WOHN_MAX_0110"
+       ]
+      },
+      {
+       "zeile": "P0_WOHN_MAX_0115",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_WOHN_MAX_0115"
+       ],
+       "mal": 2
+      }
+     ]
+    },
+    {
+     "id": "familienfoto",
+     "script_name": "Familienfoto",
+     "name_key": "UI_OBJ_FAMILIENFOTO",
+     "rect": [
+      128,
+      34,
+      44,
+      34
+     ],
+     "gehe": [
+      150,
+      150
+     ],
+     "ansehen": [
+      {
+       "zeile": "P0_WOHN_MAX_0120",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_WOHN_MAX_0120"
+       ]
+      },
+      {
+       "zeile": "P0_WOHN_MAX_0125",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_WOHN_MAX_0125"
+       ],
+       "mal": 2
+      }
+     ]
+    },
+    {
+     "id": "teetasse",
+     "script_name": "Teetasse",
+     "name_key": "UI_OBJ_TEETASSE",
+     "rect": [
+      148,
+      116,
+      12,
+      12
+     ],
+     "gehe": [
+      150,
+      150
+     ],
+     "ansehen": [
+      {
+       "zeile": "P0_WOHN_MAX_0130",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_WOHN_MAX_0130"
+       ]
+      },
+      {
+       "zeile": "P0_WOHN_MAX_0135",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_WOHN_MAX_0135"
+       ],
+       "mal": 2
+      }
+     ]
+    },
+    {
+     "id": "leerer_platz_auf_dem_couchtisch",
+     "script_name": "LeererPlatzAufDemCouchtisch",
+     "name_key": "UI_OBJ_LEERER_PLATZ_AUF_DEM_COUCHTISCH",
+     "rect": [
+      168,
+      120,
+      22,
+      10
+     ],
+     "gehe": [
+      175,
+      150
+     ],
+     "ansehen": [
+      {
+       "zeile": "P0_WOHN_MAX_0140",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_WOHN_MAX_0140"
+       ]
+      },
+      {
+       "zeile": "P0_WOHN_MAX_0145",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_WOHN_MAX_0145"
+       ],
+       "mal": 2
+      }
+     ]
+    },
+    {
+     "id": "sofa",
+     "script_name": "Sofa",
+     "name_key": "UI_OBJ_SOFA",
+     "rect": [
+      32,
+      96,
+      92,
+      46
+     ],
+     "gehe": [
+      80,
+      150
+     ],
+     "ansehen": [
+      {
+       "zeile": "P0_WOHN_MAX_0150",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_WOHN_MAX_0150"
+       ]
+      },
+      {
+       "zeile": "P0_WOHN_MAX_0155",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_WOHN_MAX_0155"
+       ],
+       "mal": 2
+      }
+     ]
+    }
+   ],
+   "props": [],
+   "ausgaenge": [
+    {
+     "id": "ausgang_treppenhaus",
+     "script_name": "AusgangTreppenhaus",
+     "ziel": "treppenhaus",
+     "name_key": "UI_RAUM_TREPPENHAUS",
+     "rect": [
+      292,
+      40,
+      26,
+      98
+     ],
+     "gehe": [
+      300,
+      158
+     ],
+     "erreichbar_ab": "start",
+     "ansehen": []
+    }
+   ],
+   "zurufe": [
+    {
+     "zeile": "P0_WOHN_OPA_1210",
+     "sprecher": "OPA",
+     "blasen": [
+      "P0_WOHN_OPA_1210"
+     ],
+     "bedingung_text": "vor dem Dachboden"
+    },
+    {
+     "zeile": "P0_WOHN_MAX_1220",
+     "sprecher": "MAX",
+     "blasen": [
+      "P0_WOHN_MAX_1220"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "treppenhaus",
+   "script_name": "Treppenhaus",
+   "name_key": "UI_RAUM_TREPPENHAUS",
+   "groesse": [
+    320,
+    180
+   ],
+   "hintergrund": "res://grafik/platzhalter/raum_treppenhaus.png",
+   "farbe": "#584536",
+   "laufbereich": [
+    [
+     4,
+     150
+    ],
+    [
+     120,
+     150
+    ],
+    [
+     296,
+     46
+    ],
+    [
+     316,
+     46
+    ],
+    [
+     316,
+     60
+    ],
+    [
+     140,
+     178
+    ],
+    [
+     4,
+     178
+    ]
+   ],
+   "marker": {
+    "start": [
+     60,
+     164
+    ],
+    "von_wohnzimmer": [
+     40,
+     164
+    ],
+    "von_dachboden": [
+     292,
+     54
+    ]
+   },
+   "figuren": [],
+   "hotspots": [
+    {
+     "id": "hut_am_haken",
+     "script_name": "HutAmHaken",
+     "name_key": "UI_OBJ_HUT_AM_HAKEN",
+     "rect": [
+      40,
+      54,
+      20,
+      18
+     ],
+     "gehe": [
+      52,
+      160
+     ],
+     "ansehen": [
+      {
+       "zeile": "P0_TREP_MAX_0010",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_TREP_MAX_0010"
+       ]
+      },
+      {
+       "zeile": "P0_TREP_MAX_0015",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_TREP_MAX_0015"
+       ],
+       "mal": 2
+      }
+     ]
+    },
+    {
+     "id": "fenster",
+     "script_name": "Fenster",
+     "name_key": "UI_OBJ_FENSTER",
+     "rect": [
+      140,
+      34,
+      34,
+      44
+     ],
+     "gehe": [
+      150,
+      110
+     ],
+     "ansehen": [
+      {
+       "zeile": "P0_TREP_MAX_0020",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_TREP_MAX_0020"
+       ]
+      },
+      {
+       "zeile": "P0_TREP_MAX_0025",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_TREP_MAX_0025"
+       ],
+       "mal": 2
+      }
+     ]
+    },
+    {
+     "id": "treppe",
+     "script_name": "Treppe",
+     "name_key": "UI_OBJ_TREPPE",
+     "rect": [
+      120,
+      60,
+      140,
+      90
+     ],
+     "gehe": [
+      170,
+      120
+     ],
+     "ansehen": [
+      {
+       "zeile": "P0_TREP_MAX_0030",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_TREP_MAX_0030"
+       ]
+      },
+      {
+       "zeile": "P0_TREP_MAX_0035",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_TREP_MAX_0035"
+       ],
+       "mal": 2
+      }
+     ]
+    }
+   ],
+   "props": [],
+   "ausgaenge": [
+    {
+     "id": "ausgang_wohnzimmer",
+     "script_name": "AusgangWohnzimmer",
+     "ziel": "wohnzimmer",
+     "name_key": "UI_RAUM_WOHNZIMMER",
+     "rect": [
+      2,
+      44,
+      30,
+      106
+     ],
+     "gehe": [
+      20,
+      164
+     ],
+     "erreichbar_ab": "start",
+     "ansehen": []
+    },
+    {
+     "id": "ausgang_dachboden",
+     "script_name": "AusgangDachboden",
+     "ziel": "dachboden",
+     "name_key": "UI_RAUM_DACHBODEN",
+     "rect": [
+      270,
+      0,
+      48,
+      40
+     ],
+     "gehe": [
+      298,
+      52
+     ],
+     "erreichbar_ab": "start",
+     "ansehen": []
+    }
+   ],
+   "zurufe": []
+  },
+  {
+   "id": "dachboden",
+   "script_name": "Dachboden",
+   "name_key": "UI_RAUM_DACHBODEN",
+   "groesse": [
+    320,
+    180
+   ],
+   "hintergrund": "res://grafik/platzhalter/raum_dachboden.png",
+   "farbe": "#7a5c43",
+   "laufbereich": [
+    [
+     4,
+     146
+    ],
+    [
+     316,
+     146
+    ],
+    [
+     316,
+     178
+    ],
+    [
+     4,
+     178
+    ]
+   ],
+   "marker": {
+    "start": [
+     250,
+     166
+    ],
+    "von_treppenhaus": [
+     250,
+     166
+    ],
+    "fernseher": [
+     160,
+     158
+    ]
+   },
+   "figuren": [
+    {
+     "id": "pixel",
+     "script_name": "Pixel",
+     "pos": [
+      104,
+      152
+     ]
+    },
+    {
+     "id": "opa",
+     "script_name": "Opa",
+     "pos": [
+      206,
+      160
+     ]
+    }
+   ],
+   "hotspots": [
+    {
+     "id": "drehknopf",
+     "script_name": "Drehknopf",
+     "name_key": "UI_OBJ_DREHKNOPF",
+     "rect": [
+      180,
+      96,
+      12,
+      14
+     ],
+     "gehe": [
+      176,
+      158
+     ],
+     "ansehen": [],
+     "benutzen": [
+      {
+       "zeile": "P0_DACH_MAX_0670",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_DACH_MAX_0670"
+       ],
+       "bedingung": [
+        {
+         "art": "nach",
+         "raetsel": "P2"
+        }
+       ],
+       "bedingung_text": "und nach 0630"
+      },
+      {
+       "zeile": "P0_DACH_MAX_0680",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_DACH_MAX_0680"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "werkzeugkiste",
+     "script_name": "Werkzeugkiste",
+     "name_key": "UI_OBJ_WERKZEUGKISTE",
+     "rect": [
+      56,
+      128,
+      36,
+      18
+     ],
+     "gehe": [
+      74,
+      158
+     ],
+     "ansehen": [
+      {
+       "zeile": "P0_DACH_MAX_0240",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_DACH_MAX_0240"
+       ]
+      },
+      {
+       "zeile": "P0_DACH_MAX_0245",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_DACH_MAX_0245"
+       ],
+       "mal": 2
+      }
+     ]
+    },
+    {
+     "id": "kleiderschrank",
+     "script_name": "Kleiderschrank",
+     "name_key": "UI_OBJ_KLEIDERSCHRANK",
+     "rect": [
+      270,
+      40,
+      46,
+      104
+     ],
+     "gehe": [
+      280,
+      160
+     ],
+     "ansehen": [
+      {
+       "zeile": "P0_DACH_MAX_0450",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_DACH_MAX_0450"
+       ]
+      },
+      {
+       "zeile": "P0_DACH_MAX_0455",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_DACH_MAX_0455"
+       ],
+       "mal": 2
+      }
+     ]
+    },
+    {
+     "id": "kalender",
+     "script_name": "Kalender",
+     "name_key": "UI_OBJ_KALENDER",
+     "rect": [
+      214,
+      48,
+      30,
+      30
+     ],
+     "gehe": [
+      228,
+      160
+     ],
+     "ansehen": [
+      {
+       "zeile": "P0_DACH_MAX_0620",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_DACH_MAX_0620"
+       ]
+      },
+      {
+       "zeile": "P0_DACH_MAX_0630",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_DACH_MAX_0630"
+       ],
+       "mal": 2
+      }
+     ]
+    },
+    {
+     "id": "ausgestopfter_fisch",
+     "script_name": "AusgestopfterFisch",
+     "name_key": "UI_OBJ_AUSGESTOPFTER_FISCH",
+     "rect": [
+      184,
+      40,
+      26,
+      14
+     ],
+     "gehe": [
+      196,
+      158
+     ],
+     "ansehen": [
+      {
+       "zeile": "P0_DACH_MAX_0910",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_DACH_MAX_0910"
+       ]
+      },
+      {
+       "zeile": "P0_DACH_MAX_0915",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_DACH_MAX_0915"
+       ],
+       "mal": 2
+      }
+     ]
+    },
+    {
+     "id": "kiste_mit_fernbedienungen",
+     "script_name": "KisteMitFernbedienungen",
+     "name_key": "UI_OBJ_KISTE_MIT_FERNBEDIENUNGEN",
+     "rect": [
+      2,
+      118,
+      26,
+      24
+     ],
+     "gehe": [
+      20,
+      158
+     ],
+     "ansehen": [
+      {
+       "zeile": "P0_DACH_PIX_0920",
+       "sprecher": "PIX",
+       "blasen": [
+        "P0_DACH_PIX_0920"
+       ],
+       "bedingung": [
+        {
+         "art": "nach",
+         "raetsel": "P1"
+        }
+       ]
+      },
+      {
+       "zeile": "P0_DACH_PIX_0925",
+       "sprecher": "PIX",
+       "blasen": [
+        "P0_DACH_PIX_0925"
+       ],
+       "bedingung": [
+        {
+         "art": "nach",
+         "raetsel": "P1"
+        }
+       ],
+       "mal": 2
+      }
+     ]
+    },
+    {
+     "id": "poster",
+     "script_name": "Poster",
+     "name_key": "UI_OBJ_POSTER",
+     "rect": [
+      88,
+      30,
+      30,
+      34
+     ],
+     "gehe": [
+      100,
+      158
+     ],
+     "ansehen": [
+      {
+       "zeile": "P0_DACH_MAX_0930",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_DACH_MAX_0930"
+       ]
+      },
+      {
+       "zeile": "P0_DACH_MAX_0935",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_DACH_MAX_0935"
+       ],
+       "mal": 2
+      }
+     ]
+    },
+    {
+     "id": "toaster",
+     "script_name": "Toaster",
+     "name_key": "UI_OBJ_TOASTER",
+     "rect": [
+      52,
+      80,
+      14,
+      12
+     ],
+     "gehe": [
+      58,
+      158
+     ],
+     "ansehen": [
+      {
+       "zeile": "P0_DACH_MAX_0940",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_DACH_MAX_0940"
+       ]
+      },
+      {
+       "zeile": "P0_DACH_MAX_0942",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_DACH_MAX_0942"
+       ],
+       "mal": 2
+      }
+     ]
+    },
+    {
+     "id": "opas_staubsauger_prototyp",
+     "script_name": "OpasStaubsaugerPrototyp",
+     "name_key": "UI_OBJ_OPAS_STAUBSAUGER_PROTOTYP",
+     "rect": [
+      196,
+      118,
+      12,
+      26
+     ],
+     "gehe": [
+      200,
+      160
+     ],
+     "ansehen": [
+      {
+       "zeile": "P0_DACH_PIX_0945",
+       "sprecher": "PIX",
+       "blasen": [
+        "P0_DACH_PIX_0945"
+       ],
+       "bedingung": [
+        {
+         "art": "nach",
+         "raetsel": "P1"
+        }
+       ]
+      },
+      {
+       "zeile": "P0_DACH_PIX_0946",
+       "sprecher": "PIX",
+       "blasen": [
+        "P0_DACH_PIX_0946"
+       ],
+       "bedingung": [
+        {
+         "art": "nach",
+         "raetsel": "P1"
+        }
+       ],
+       "mal": 2
+      }
+     ]
+    },
+    {
+     "id": "kochbuch",
+     "script_name": "Kochbuch",
+     "name_key": "UI_OBJ_KOCHBUCH",
+     "rect": [
+      34,
+      64,
+      14,
+      12
+     ],
+     "gehe": [
+      50,
+      158
+     ],
+     "ansehen": [
+      {
+       "zeile": "P0_DACH_PIX_0950",
+       "sprecher": "PIX",
+       "blasen": [
+        "P0_DACH_PIX_0950"
+       ],
+       "bedingung": [
+        {
+         "art": "nach",
+         "raetsel": "P1"
+        }
+       ]
+      },
+      {
+       "zeile": "P0_DACH_PIX_0955",
+       "sprecher": "PIX",
+       "blasen": [
+        "P0_DACH_PIX_0955"
+       ],
+       "bedingung": [
+        {
+         "art": "nach",
+         "raetsel": "P1"
+        }
+       ],
+       "mal": 2
+      }
+     ]
+    },
+    {
+     "id": "plattenspieler",
+     "script_name": "Plattenspieler",
+     "name_key": "UI_OBJ_PLATTENSPIELER",
+     "rect": [
+      2,
+      98,
+      26,
+      16
+     ],
+     "gehe": [
+      20,
+      158
+     ],
+     "ansehen": [
+      {
+       "zeile": "P0_DACH_MAX_0960",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_DACH_MAX_0960"
+       ]
+      },
+      {
+       "zeile": "P0_DACH_MAX_0965",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_DACH_MAX_0965"
+       ],
+       "mal": 2
+      }
+     ]
+    },
+    {
+     "id": "ohrensessel",
+     "script_name": "Ohrensessel",
+     "name_key": "UI_OBJ_OHRENSESSEL",
+     "rect": [
+      208,
+      96,
+      48,
+      46
+     ],
+     "gehe": [
+      232,
+      160
+     ],
+     "ansehen": [
+      {
+       "zeile": "P0_DACH_MAX_0970",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_DACH_MAX_0970"
+       ]
+      },
+      {
+       "zeile": "P0_DACH_MAX_0975",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_DACH_MAX_0975"
+       ],
+       "mal": 2
+      }
+     ]
+    },
+    {
+     "id": "werkbank",
+     "script_name": "Werkbank",
+     "name_key": "UI_OBJ_WERKBANK",
+     "rect": [
+      30,
+      92,
+      80,
+      34
+     ],
+     "gehe": [
+      70,
+      158
+     ],
+     "ansehen": [
+      {
+       "zeile": "P0_DACH_MAX_0980",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_DACH_MAX_0980"
+       ]
+      },
+      {
+       "zeile": "P0_DACH_MAX_0985",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_DACH_MAX_0985"
+       ],
+       "mal": 2
+      }
+     ]
+    },
+    {
+     "id": "dachfenster",
+     "script_name": "Dachfenster",
+     "name_key": "UI_OBJ_DACHFENSTER",
+     "rect": [
+      40,
+      18,
+      30,
+      26
+     ],
+     "gehe": [
+      60,
+      158
+     ],
+     "ansehen": [
+      {
+       "zeile": "P0_DACH_MAX_0990",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_DACH_MAX_0990"
+       ]
+      },
+      {
+       "zeile": "P0_DACH_MAX_0995",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_DACH_MAX_0995"
+       ],
+       "mal": 2
+      }
+     ]
+    }
+   ],
+   "props": [
+    {
+     "id": "zapp_o_mat",
+     "script_name": "ZappOMat",
+     "name_key": "UI_OBJ_ZAPP_O_MAT",
+     "rect": [
+      130,
+      82,
+      48,
+      62
+     ],
+     "gehe": [
+      154,
+      158
+     ],
+     "textur": "res://grafik/platzhalter/prop_zapp_o_mat.png",
+     "gegenstand": null,
+     "ansehen": [
+      {
+       "zeile": "P0_DACH_MAX_0400",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_DACH_MAX_0400"
+       ],
+       "bedingung": [
+        {
+         "art": "vor",
+         "raetsel": "P1"
+        }
+       ]
+      },
+      {
+       "zeile": "P0_DACH_MAX_0405",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_DACH_MAX_0405"
+       ],
+       "bedingung": [
+        {
+         "art": "vor",
+         "raetsel": "P1"
+        }
+       ],
+       "mal": 2
+      },
+      {
+       "zeile": "P0_DACH_MAX_0410",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_DACH_MAX_0410"
+       ],
+       "bedingung": [
+        {
+         "art": "nach",
+         "raetsel": "P1"
+        }
+       ]
+      },
+      {
+       "zeile": "P0_DACH_MAX_0415",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_DACH_MAX_0415"
+       ],
+       "bedingung": [
+        {
+         "art": "nach",
+         "raetsel": "P1"
+        }
+       ],
+       "mal": 2
+      }
+     ],
+     "nehmen": null,
+     "gegenstand_auf": [
+      {
+       "zeile": "P0_DACH_MAX_1130",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_DACH_MAX_1130"
+       ],
+       "gegenstand": "dosenoeffner"
+      }
+     ]
+    },
+    {
+     "id": "thunfischdose",
+     "script_name": "Thunfischdose",
+     "name_key": "UI_OBJ_THUNFISCHDOSE",
+     "rect": [
+      62,
+      132,
+      10,
+      8
+     ],
+     "gehe": [
+      70,
+      158
+     ],
+     "textur": "res://grafik/platzhalter/prop_thunfischdose.png",
+     "gegenstand": "thunfischdose",
+     "ansehen": [],
+     "nehmen": {
+      "zeile": "P0_DACH_MAX_0250",
+      "sprecher": "MAX",
+      "blasen": [
+       "P0_DACH_MAX_0250"
+      ]
+     }
+    },
+    {
+     "id": "dosenoeffner",
+     "script_name": "Dosenoeffner",
+     "name_key": "UI_OBJ_DOSENOEFFNER",
+     "rect": [
+      76,
+      132,
+      10,
+      8
+     ],
+     "gehe": [
+      80,
+      158
+     ],
+     "textur": "res://grafik/platzhalter/prop_dosenoeffner.png",
+     "gegenstand": "dosenoeffner",
+     "ansehen": [],
+     "nehmen": {
+      "zeile": "P0_DACH_MAX_0260",
+      "sprecher": "MAX",
+      "blasen": [
+       "P0_DACH_MAX_0260"
+      ]
+     }
+    },
+    {
+     "id": "drahtkleiderbuegel",
+     "script_name": "Drahtkleiderbuegel",
+     "name_key": "UI_OBJ_DRAHTKLEIDERBUEGEL",
+     "rect": [
+      282,
+      66,
+      22,
+      10
+     ],
+     "gehe": [
+      282,
+      160
+     ],
+     "textur": "res://grafik/platzhalter/prop_drahtkleiderbuegel.png",
+     "gegenstand": "drahtkleiderbuegel",
+     "ansehen": [],
+     "nehmen": {
+      "zeile": "P0_DACH_MAX_0460",
+      "sprecher": "MAX",
+      "blasen": [
+       "P0_DACH_MAX_0460"
+      ]
+     }
+    }
+   ],
+   "ausgaenge": [
+    {
+     "id": "bodenluke",
+     "script_name": "Bodenluke",
+     "ziel": "treppenhaus",
+     "name_key": "UI_OBJ_BODENLUKE",
+     "rect": [
+      232,
+      160,
+      40,
+      18
+     ],
+     "gehe": [
+      250,
+      166
+     ],
+     "erreichbar_ab": "start",
+     "ansehen": [
+      {
+       "zeile": "P0_DACH_MAX_1010",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_DACH_MAX_1010"
+       ]
+      },
+      {
+       "zeile": "P0_DACH_MAX_1015",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_DACH_MAX_1015"
+       ],
+       "mal": 2
+      }
+     ],
+     "benutzen": [
+      {
+       "zeile": "P0_DACH_MAX_1000",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_DACH_MAX_1000"
+       ],
+       "bedingung": [
+        {
+         "art": "vor",
+         "raetsel": "P3"
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "zurufe": [
+    {
+     "zeile": "P0_DACH_PIX_1230",
+     "sprecher": "PIX",
+     "blasen": [
+      "P0_DACH_PIX_1230"
+     ],
+     "bedingung": [
+      {
+       "art": "nach",
+       "raetsel": "P1"
+      }
+     ]
+    },
+    {
+     "zeile": "P0_DACH_PIX_1240",
+     "sprecher": "PIX",
+     "blasen": [
+      "P0_DACH_PIX_1240"
+     ],
+     "bedingung": [
+      {
+       "art": "nach",
+       "raetsel": "P1"
+      },
+      {
+       "art": "vor",
+       "raetsel": "P3"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "figuren": [
+  {
+   "id": "max",
+   "script_name": "Max",
+   "kuerzel": "MAX",
+   "name_key": "UI_OBJ_MAX",
+   "groesse_px": 56,
+   "spielbar": true,
+   "textfarbe": "#ffffff",
+   "sprite": "res://grafik/platzhalter/figur_max.png",
+   "raeume": [
+    "wohnzimmer",
+    "treppenhaus",
+    "dachboden"
+   ],
+   "tier": false,
+   "ansehen": [],
+   "pixel_auf": [],
+   "pixel_redet": [],
+   "gegenstand_auf": [],
+   "benutzen": []
+  },
+  {
+   "id": "pixel",
+   "script_name": "Pixel",
+   "kuerzel": "PIX",
+   "name_key": "UI_OBJ_PIXEL",
+   "groesse_px": 18,
+   "spielbar": false,
+   "textfarbe": "#5fd3c8",
+   "sprite": "res://grafik/platzhalter/figur_pixel.png",
+   "raeume": [
+    "dachboden"
+   ],
+   "tier": false,
+   "ansehen": [
+    {
+     "zeile": "P0_DACH_MAX_0210",
+     "sprecher": "MAX",
+     "blasen": [
+      "P0_DACH_MAX_0210"
+     ],
+     "raum": "dachboden"
+    },
+    {
+     "zeile": "P0_DACH_PIX_0215",
+     "sprecher": "PIX",
+     "blasen": [
+      "P0_DACH_PIX_0215"
+     ],
+     "mal": 2,
+     "raum": "dachboden"
+    }
+   ],
+   "pixel_auf": [],
+   "pixel_redet": [],
+   "gegenstand_auf": [
+    {
+     "zeile": "P0_DACH_MAX_0270",
+     "sprecher": "MAX",
+     "blasen": [
+      "P0_DACH_MAX_0270"
+     ],
+     "gegenstand": "thunfischdose",
+     "raum": "dachboden"
+    }
+   ],
+   "benutzen": [
+    {
+     "zeile": "P0_DACH_MAX_0220",
+     "sprecher": "MAX",
+     "blasen": [
+      "P0_DACH_MAX_0220"
+     ],
+     "raum": "dachboden"
+    }
+   ]
+  },
+  {
+   "id": "opa",
+   "script_name": "Opa",
+   "kuerzel": "OPA",
+   "name_key": "UI_OBJ_OPA",
+   "groesse_px": 60,
+   "spielbar": false,
+   "textfarbe": "#f5a04a",
+   "sprite": "res://grafik/platzhalter/figur_opa.png",
+   "raeume": [
+    "dachboden"
+   ],
+   "tier": false,
+   "ansehen": [],
+   "pixel_auf": [],
+   "pixel_redet": [],
+   "gegenstand_auf": [],
+   "benutzen": []
+  }
+ ],
+ "gegenstaende": [
+  {
+   "id": "thunfischdose",
+   "script_name": "Thunfischdose",
+   "name_key": "UI_OBJ_THUNFISCHDOSE",
+   "zustaende": [
+    "zu",
+    "offen",
+    "leer"
+   ],
+   "reist_mit": true,
+   "nahansicht": false,
+   "icon": "res://grafik/platzhalter/gegenstand_thunfischdose.png",
+   "icons": {
+    "offen": "res://grafik/platzhalter/gegenstand_thunfischdose_offen.png",
+    "leer": "res://grafik/platzhalter/gegenstand_thunfischdose_leer.png"
+   },
+   "ansehen": [
+    {
+     "zeile": "P0_INV_MAX_0010",
+     "sprecher": "MAX",
+     "blasen": [
+      "P0_INV_MAX_0010"
+     ],
+     "zustand": "zu"
+    },
+    {
+     "zeile": "P0_INV_PIX_0015",
+     "sprecher": "PIX",
+     "blasen": [
+      "P0_INV_PIX_0015"
+     ],
+     "mal": 2,
+     "zustand": "zu"
+    },
+    {
+     "zeile": "P0_INV_MAX_0020",
+     "sprecher": "MAX",
+     "blasen": [
+      "P0_INV_MAX_0020"
+     ],
+     "zustand": "leer"
+    },
+    {
+     "zeile": "P0_INV_MAX_0025",
+     "sprecher": "MAX",
+     "blasen": [
+      "P0_INV_MAX_0025"
+     ],
+     "mal": 2,
+     "zustand": "leer"
+    }
+   ],
+   "benutzen": [],
+   "kombinieren": []
+  },
+  {
+   "id": "dosenoeffner",
+   "script_name": "Dosenoeffner",
+   "name_key": "UI_OBJ_DOSENOEFFNER",
+   "zustaende": [
+    "normal"
+   ],
+   "reist_mit": true,
+   "nahansicht": false,
+   "icon": "res://grafik/platzhalter/gegenstand_dosenoeffner.png",
+   "icons": {},
+   "ansehen": [
+    {
+     "zeile": "P0_INV_MAX_0030",
+     "sprecher": "MAX",
+     "blasen": [
+      "P0_INV_MAX_0030"
+     ]
+    },
+    {
+     "zeile": "P0_INV_MAX_0035",
+     "sprecher": "MAX",
+     "blasen": [
+      "P0_INV_MAX_0035"
+     ],
+     "mal": 2
+    }
+   ],
+   "benutzen": [],
+   "kombinieren": []
+  },
+  {
+   "id": "drahtkleiderbuegel",
+   "script_name": "Drahtkleiderbuegel",
+   "name_key": "UI_OBJ_DRAHTKLEIDERBUEGEL",
+   "zustaende": [
+    "gerade",
+    "antenne"
+   ],
+   "reist_mit": false,
+   "nahansicht": false,
+   "icon": "res://grafik/platzhalter/gegenstand_drahtkleiderbuegel.png",
+   "icons": {
+    "antenne": "res://grafik/platzhalter/gegenstand_drahtkleiderbuegel_antenne.png"
+   },
+   "ansehen": [
+    {
+     "zeile": "P0_INV_MAX_0040",
+     "sprecher": "MAX",
+     "blasen": [
+      "P0_INV_MAX_0040"
+     ],
+     "zustand": "gerade"
+    },
+    {
+     "zeile": "P0_INV_MAX_0045",
+     "sprecher": "MAX",
+     "blasen": [
+      "P0_INV_MAX_0045"
+     ],
+     "mal": 2,
+     "zustand": "gerade"
+    },
+    {
+     "zeile": "P0_INV_MAX_0050",
+     "sprecher": "MAX",
+     "blasen": [
+      "P0_INV_MAX_0050"
+     ],
+     "zustand": "antenne"
+    },
+    {
+     "zeile": "P0_INV_MAX_0055",
+     "sprecher": "MAX",
+     "blasen": [
+      "P0_INV_MAX_0055"
+     ],
+     "mal": 2,
+     "zustand": "antenne"
+    }
+   ],
+   "benutzen": [],
+   "kombinieren": []
+  },
+  {
+   "id": "reisetasche",
+   "script_name": "Reisetasche",
+   "name_key": "UI_OBJ_REISETASCHE",
+   "zustaende": [
+    "normal"
+   ],
+   "reist_mit": true,
+   "nahansicht": false,
+   "icon": "res://grafik/platzhalter/gegenstand_reisetasche.png",
+   "icons": {},
+   "ansehen": [
+    {
+     "zeile": "P0_INV_MAX_0060",
+     "sprecher": "MAX",
+     "blasen": [
+      "P0_INV_MAX_0060"
+     ]
+    },
+    {
+     "zeile": "P0_INV_MAX_0065",
+     "sprecher": "MAX",
+     "blasen": [
+      "P0_INV_MAX_0065"
+     ],
+     "mal": 2
+    }
+   ],
+   "benutzen": [],
+   "kombinieren": []
+  },
+  {
+   "id": "notizbuch",
+   "script_name": "Notizbuch",
+   "name_key": "UI_OBJ_NOTIZBUCH",
+   "zustaende": [
+    "normal"
+   ],
+   "reist_mit": true,
+   "nahansicht": false,
+   "icon": "res://grafik/platzhalter/gegenstand_notizbuch.png",
+   "icons": {},
+   "ansehen": [],
+   "benutzen": [],
+   "kombinieren": []
+  },
+  {
+   "id": "opas_zettel",
+   "script_name": "OpasZettel",
+   "name_key": "UI_OBJ_OPAS_ZETTEL",
+   "zustaende": [
+    "normal"
+   ],
+   "reist_mit": true,
+   "nahansicht": true,
+   "icon": "res://grafik/platzhalter/gegenstand_opas_zettel.png",
+   "icons": {},
+   "ansehen": [
+    {
+     "zeile": "P0_DACH_MAX_0840",
+     "sprecher": "MAX",
+     "blasen": [
+      "P0_DACH_MAX_0840"
+     ]
+    },
+    {
+     "zeile": "P0_DACH_MAX_0842",
+     "sprecher": "MAX",
+     "blasen": [
+      "P0_DACH_MAX_0842"
+     ],
+     "mal": 2
+    }
+   ],
+   "benutzen": [],
+   "kombinieren": []
+  }
+ ],
+ "nahansichten": [
+  {
+   "id": "kalender",
+   "name_key": "UI_OBJ_KALENDER",
+   "raum": "dachboden",
+   "bild": "res://grafik/platzhalter/nah_kalender.png"
+  },
+  {
+   "id": "opas_zettel",
+   "name_key": "UI_OBJ_OPAS_ZETTEL",
+   "raum": null,
+   "bild": "res://grafik/platzhalter/nah_opas_zettel.png"
+  }
+ ],
+ "dialoge": [
+  {
+   "id": "opa",
+   "script_name": "Opa",
+   "optionen": [
+    {
+     "id": "1310",
+     "frage": "P0_DACH_MAX_1310",
+     "antworten": [
+      {
+       "zeile": "P0_DACH_OPA_1320",
+       "sprecher": "OPA",
+       "blasen": [
+        "P0_DACH_OPA_1320"
+       ],
+       "regie": "stolz, dann unsicher"
+      }
+     ],
+     "beendet": false,
+     "bleibt": false
+    },
+    {
+     "id": "1322",
+     "frage": "P0_DACH_MAX_1322",
+     "antworten": [
+      {
+       "zeile": "P0_DACH_OPA_1324",
+       "sprecher": "OPA",
+       "blasen": [
+        "P0_DACH_OPA_1324",
+        "P0_DACH_OPA_1324_2"
+       ],
+       "regie": "Hinweis P1, Stufe 1 (Thunfischdose); Kaskade"
+      },
+      {
+       "zeile": "P0_DACH_OPA_1326",
+       "sprecher": "OPA",
+       "blasen": [
+        "P0_DACH_OPA_1326"
+       ],
+       "regie": "Hinweis P1, Stufe 2 (Dosenöffner); ersetzt 1324 beim nächsten Klick auf die Option, frühestens 30 Sekunden nach 1324"
+      },
+      {
+       "zeile": "P0_DACH_OPA_1328",
+       "sprecher": "OPA",
+       "blasen": [
+        "P0_DACH_OPA_1328"
+       ],
+       "regie": "Hinweis P1, Stufe 3; ersetzt 1326 beim nächsten Klick auf die Option, frühestens 60 Sekunden nach 1326; vorher wiederholt Opa die letzte Stufe"
+      }
+     ],
+     "beendet": false,
+     "bleibt": true,
+     "bedingung": [
+      {
+       "art": "vor",
+       "raetsel": "P1"
+      }
+     ]
+    },
+    {
+     "id": "1330",
+     "frage": "P0_DACH_MAX_1330",
+     "antworten": [
+      {
+       "zeile": "P0_DACH_OPA_1340",
+       "sprecher": "OPA",
+       "blasen": [
+        "P0_DACH_OPA_1340"
+       ],
+       "regie": "zwinkert"
+      }
+     ],
+     "beendet": false,
+     "bleibt": false
+    },
+    {
+     "id": "1350",
+     "frage": "P0_DACH_MAX_1350",
+     "antworten": [
+      {
+       "zeile": "P0_DACH_OPA_1360",
+       "sprecher": "OPA",
+       "blasen": [
+        "P0_DACH_OPA_1360"
+       ],
+       "regie": "Hinweis auf den Rechtsklick"
+      }
+     ],
+     "beendet": false,
+     "bleibt": true
+    },
+    {
+     "id": "1362",
+     "frage": "P0_DACH_MAX_1362",
+     "antworten": [
+      {
+       "zeile": "P0_DACH_OPA_1364",
+       "sprecher": "OPA",
+       "blasen": [
+        "P0_DACH_OPA_1364"
+       ],
+       "regie": "weicht aus, schaut weg"
+      },
+      {
+       "zeile": "P0_DACH_PIX_1366",
+       "sprecher": "PIX",
+       "blasen": [
+        "P0_DACH_PIX_1366"
+       ],
+       "regie": "Hinweis auf Omas Geburtstag"
+      }
+     ],
+     "beendet": false,
+     "bleibt": true,
+     "bedingung": [
+      {
+       "art": "vor",
+       "raetsel": "P3"
+      }
+     ],
+     "bedingung_text": "nach der Nahansicht Kalender"
+    },
+    {
+     "id": "1370",
+     "frage": "P0_DACH_MAX_1370",
+     "antworten": [
+      {
+       "zeile": "P0_DACH_OPA_1380",
+       "sprecher": "OPA",
+       "blasen": [
+        "P0_DACH_OPA_1380"
+       ],
+       "regie": "sieht den Zapp-O-Mat prüfend an"
+      }
+     ],
+     "beendet": true,
+     "bleibt": false
+    }
+   ],
+   "erschoepft": [
+    {
+     "zeile": "P0_ABS_OPA_0010",
+     "sprecher": "OPA"
+    },
+    {
+     "zeile": "P0_ABS_OPA_0020",
+     "sprecher": "OPA"
+    }
+   ]
+  },
+  {
+   "id": "pixel",
+   "script_name": "Pixel",
+   "optionen": [
+    {
+     "id": "1390",
+     "frage": "P0_DACH_MAX_1390",
+     "antworten": [
+      {
+       "zeile": "P0_DACH_PIX_1400",
+       "sprecher": "PIX",
+       "blasen": [
+        "P0_DACH_PIX_1400",
+        "P0_DACH_PIX_1400_2"
+       ],
+       "regie": "Kaskade"
+      }
+     ],
+     "beendet": false,
+     "bleibt": false,
+     "bedingung": [
+      {
+       "art": "nach",
+       "raetsel": "P1"
+      }
+     ]
+    },
+    {
+     "id": "1410",
+     "frage": "P0_DACH_MAX_1410",
+     "antworten": [
+      {
+       "zeile": "P0_DACH_PIX_1420",
+       "sprecher": "PIX",
+       "blasen": [
+        "P0_DACH_PIX_1420"
+       ],
+       "regie": "Hinweis auf den Toaster"
+      }
+     ],
+     "beendet": false,
+     "bleibt": true,
+     "bedingung": [
+      {
+       "art": "nach",
+       "raetsel": "P1"
+      }
+     ]
+    },
+    {
+     "id": "1430",
+     "frage": "P0_DACH_MAX_1430",
+     "antworten": [
+      {
+       "zeile": "P0_DACH_PIX_1440",
+       "sprecher": "PIX",
+       "blasen": [
+        "P0_DACH_PIX_1440"
+       ],
+       "regie": "rollt sich ein"
+      }
+     ],
+     "beendet": true,
+     "bleibt": false
+    }
+   ]
+  }
+ ],
+ "figurenwechsel": {},
+ "ersatz": {
+  "MAX": [
+   "SYS_ERS_MAX_0010",
+   "SYS_ERS_MAX_0020",
+   "SYS_ERS_MAX_0030",
+   "SYS_ERS_MAX_0040",
+   "SYS_ERS_MAX_0050",
+   "SYS_ERS_MAX_0060",
+   "SYS_ERS_MAX_0070",
+   "SYS_ERS_MAX_0080",
+   "SYS_ERS_MAX_0090",
+   "SYS_ERS_MAX_0100",
+   "SYS_ERS_MAX_0110",
+   "SYS_ERS_MAX_0120",
+   "SYS_ERS_MAX_0130",
+   "SYS_ERS_MAX_0140",
+   "SYS_ERS_MAX_0150",
+   "SYS_ERS_MAX_0160",
+   "SYS_ERS_MAX_0170",
+   "SYS_ERS_MAX_0180",
+   "SYS_ERS_MAX_0190",
+   "SYS_ERS_MAX_0200",
+   "SYS_ERS_MAX_0210",
+   "SYS_ERS_MAX_0220",
+   "SYS_ERS_MAX_0230",
+   "SYS_ERS_MAX_0240",
+   "SYS_ERS_MAX_0250"
+  ],
+  "PIX": [
+   "SYS_ERS_PIX_0110",
+   "SYS_ERS_PIX_0120",
+   "SYS_ERS_PIX_0130",
+   "SYS_ERS_PIX_0140",
+   "SYS_ERS_PIX_0150",
+   "SYS_ERS_PIX_0160",
+   "SYS_ERS_PIX_0170",
+   "SYS_ERS_PIX_0180",
+   "SYS_ERS_PIX_0190",
+   "SYS_ERS_PIX_0200",
+   "SYS_ERS_PIX_0210",
+   "SYS_ERS_PIX_0220",
+   "SYS_ERS_PIX_0230",
+   "SYS_ERS_PIX_0240",
+   "SYS_ERS_PIX_0250",
+   "SYS_ERS_PIX_0260",
+   "SYS_ERS_PIX_0270",
+   "SYS_ERS_PIX_0280",
+   "SYS_ERS_PIX_0290",
+   "SYS_ERS_PIX_0300",
+   "SYS_ERS_PIX_0310",
+   "SYS_ERS_PIX_0320",
+   "SYS_ERS_PIX_0330",
+   "SYS_ERS_PIX_0340",
+   "SYS_ERS_PIX_0350"
+  ]
+ },
+ "wiederholung": {
+  "MAX": [
+   "SYS_WDH_MAX_0010",
+   "SYS_WDH_MAX_0020",
+   "SYS_WDH_MAX_0030",
+   "SYS_WDH_MAX_0040",
+   "SYS_WDH_MAX_0050",
+   "SYS_WDH_MAX_0060",
+   "SYS_WDH_MAX_0070",
+   "SYS_WDH_MAX_0080",
+   "SYS_WDH_MAX_0090",
+   "SYS_WDH_MAX_0100",
+   "SYS_WDH_MAX_0110",
+   "SYS_WDH_MAX_0120",
+   "SYS_WDH_MAX_0130",
+   "SYS_WDH_MAX_0140",
+   "SYS_WDH_MAX_0150",
+   "SYS_WDH_MAX_0160",
+   "SYS_WDH_MAX_0170",
+   "SYS_WDH_MAX_0180",
+   "SYS_WDH_MAX_0190",
+   "SYS_WDH_MAX_0200"
+  ],
+  "PIX": [
+   "SYS_WDH_PIX_0010",
+   "SYS_WDH_PIX_0020",
+   "SYS_WDH_PIX_0030",
+   "SYS_WDH_PIX_0040",
+   "SYS_WDH_PIX_0050",
+   "SYS_WDH_PIX_0060",
+   "SYS_WDH_PIX_0070",
+   "SYS_WDH_PIX_0080",
+   "SYS_WDH_PIX_0090",
+   "SYS_WDH_PIX_0100"
+  ]
+ },
+ "plauder": {
+  "MAX": [
+   "SYS_PLA_MAX_0010",
+   "SYS_PLA_MAX_0020",
+   "SYS_PLA_MAX_0030",
+   "SYS_PLA_MAX_0040",
+   "SYS_PLA_MAX_0050",
+   "SYS_PLA_MAX_0060"
+  ]
+ }
+}

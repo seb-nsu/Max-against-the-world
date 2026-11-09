@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://bqjv3dkum8sbq"]
+
+[node name="VonZauberstabladen" type="Marker2D" unique_id=1341369222]
+visible = false

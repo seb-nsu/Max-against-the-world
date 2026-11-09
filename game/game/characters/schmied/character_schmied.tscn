@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://crxn1bs7s4647"]
+
+[ext_resource type="Script" path="res://game/characters/schmied/character_schmied.gd" id="1_vktev"]
+[ext_resource type="Texture2D" uid="uid://d1tvxn0yq8s3w" path="res://grafik/platzhalter/figur_schmied.png" id="2_k2wqt"]
+
+[node name="CharacterSchmied" type="Area2D" unique_id=219458842]
+script = ExtResource("1_vktev")
+walk_speed = 90.0
+dialog_pos = Vector2(0, -64)
+script_name = "Schmied"
+description = "UI_OBJ_SCHMIED"
+cursor = 8
+interaction_polygon = PackedVector2Array(-10, -60, 10, -60, 10, 0, -10, 0)
+
+[node name="ScalingPolygon" type="CollisionPolygon2D" parent="." unique_id=1691771568]
+polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=971891907]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1767875805]
+texture_filter = 1
+texture = ExtResource("2_k2wqt")
+offset = Vector2(0, -30)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=805242436]
+visible = false
+polygon = PackedVector2Array(-10, -60, 10, -60, 10, 0, -10, 0)
+
+[node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=599061812]
+visible = false
+affect_navigation_mesh = true
+carve_navigation_mesh = true

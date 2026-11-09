@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://c4nalrribfcqj"]
+
+[ext_resource type="Script" path="res://game/rooms/klassenzimmer/hotspots/durchgeloecherte_zweite_socke/hotspot_durchgeloecherte_zweite_socke.gd" id="1_r10kq"]
+
+[node name="DurchgeloecherteZweiteSocke" type="Area2D" unique_id=2089907969]
+script = ExtResource("1_r10kq")
+script_name = "DurchgeloecherteZweiteSocke"
+description = "Durchgeloecherte Zweite Socke"
+cursor = 1
+interaction_polygon = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=615488833]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

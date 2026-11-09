@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://4mqrst5hv3oe"]
+
+[ext_resource type="Script" path="res://game/rooms/schmiede/hotspots/ausgang_dorfplatz/hotspot_ausgang_dorfplatz.gd" id="1_blnh2"]
+
+[node name="AusgangDorfplatz" type="Area2D" unique_id=874021977]
+script = ExtResource("1_blnh2")
+script_name = "AusgangDorfplatz"
+description = "Ausgang Dorfplatz"
+cursor = 1
+interaction_polygon = PackedVector2Array(-10, -50, 10, -50, 10, 50, -10, 50)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=996892871]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

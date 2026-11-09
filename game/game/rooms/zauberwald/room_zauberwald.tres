@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://bgta4vcr8xv44"]
+
+[ext_resource type="Script" path="res://game/rooms/zauberwald/room_zauberwald_state.gd" id="1_6wtcp"]
+
+[resource]
+resource_name = "Zauberwald"
+script = ExtResource("1_6wtcp")
+script_name = "Zauberwald"
+scene = "res://game/rooms/zauberwald/room_zauberwald.tscn"

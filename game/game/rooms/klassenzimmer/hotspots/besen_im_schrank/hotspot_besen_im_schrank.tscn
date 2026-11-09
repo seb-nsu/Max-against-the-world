@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://djncq3208aydk"]
+
+[ext_resource type="Script" path="res://game/rooms/klassenzimmer/hotspots/besen_im_schrank/hotspot_besen_im_schrank.gd" id="1_edep5"]
+
+[node name="BesenImSchrank" type="Area2D" unique_id=2093887970]
+script = ExtResource("1_edep5")
+script_name = "BesenImSchrank"
+description = "Besen Im Schrank"
+cursor = 1
+interaction_polygon = PackedVector2Array(-20, -48, 20, -48, 20, 48, -20, 48)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=2021180287]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

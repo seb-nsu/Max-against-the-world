@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://clmv1sdxbljf1"]
+
+[ext_resource type="Script" path="res://game/characters/waldemar/character_waldemar_state.gd" id="1_7osy7"]
+
+[resource]
+resource_name = "Waldemar"
+script = ExtResource("1_7osy7")
+script_name = "Waldemar"
+scene = "res://game/characters/waldemar/character_waldemar.tscn"

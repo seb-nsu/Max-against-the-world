@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://cd0w0iper1axa"]
+
+[ext_resource type="Script" path="res://game/rooms/dachboden/hotspots/kiste_mit_fernbedienungen/hotspot_kiste_mit_fernbedienungen.gd" id="1_suqvt"]
+
+[node name="KisteMitFernbedienungen" type="Area2D" unique_id=1779633760]
+script = ExtResource("1_suqvt")
+script_name = "KisteMitFernbedienungen"
+description = "Kiste Mit Fernbedienungen"
+cursor = 1
+interaction_polygon = PackedVector2Array(-13, -12, 13, -12, 13, 12, -13, 12)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=766951136]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

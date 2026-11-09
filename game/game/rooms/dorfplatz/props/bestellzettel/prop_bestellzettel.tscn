@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://cupjtcfw6rgxc"]
+
+[ext_resource type="Script" path="res://game/rooms/dorfplatz/props/bestellzettel/prop_bestellzettel.gd" id="1_ykpg8"]
+
+[node name="Bestellzettel" type="Area2D" unique_id=597249500]
+script = ExtResource("1_ykpg8")
+script_name = "Bestellzettel"
+description = "Bestellzettel"
+cursor = 1
+interaction_polygon = PackedVector2Array(-7, -6, 7, -6, 7, 6, -7, 6)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=539986676]
+texture_filter = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=119028155]
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=812061327]
+visible = false
+modulate = Color(1, 1, 0, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+
+[node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=1047830389]
+visible = false
+affect_navigation_mesh = true
+carve_navigation_mesh = true

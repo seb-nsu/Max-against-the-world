@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://b6qkvihudac2p"]
+
+[ext_resource type="Script" path="res://game/characters/alwin/character_alwin.gd" id="1_aar42"]
+[ext_resource type="Texture2D" uid="uid://ddnriihjx8uw7" path="res://grafik/platzhalter/figur_alwin.png" id="2_jla5e"]
+
+[node name="CharacterAlwin" type="Area2D" unique_id=1939362324]
+script = ExtResource("1_aar42")
+walk_speed = 90.0
+dialog_pos = Vector2(0, -66)
+script_name = "Alwin"
+description = "UI_OBJ_ALWIN"
+cursor = 8
+interaction_polygon = PackedVector2Array(-10, -62, 10, -62, 10, 0, -10, 0)
+
+[node name="ScalingPolygon" type="CollisionPolygon2D" parent="." unique_id=455255687]
+polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1296410645]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2125672882]
+texture_filter = 1
+texture = ExtResource("2_jla5e")
+offset = Vector2(0, -31)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=749339319]
+visible = false
+polygon = PackedVector2Array(-10, -62, 10, -62, 10, 0, -10, 0)
+
+[node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=1106489617]
+visible = false
+affect_navigation_mesh = true
+carve_navigation_mesh = true

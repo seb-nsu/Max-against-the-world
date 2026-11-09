@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://bhfuoka8ww1lq"]
+
+[ext_resource type="Script" path="res://game/inventory_items/pixel_feld/inventory_item_pixel_feld.gd" id="1_28xsq"]
+[ext_resource type="Texture2D" uid="uid://q0l32i5g6l21" path="res://grafik/platzhalter/ui_pixel_feld.png" id="1_ibgrc"]
+
+[node name="ItemPixelFeld" type="TextureRect" unique_id=1662785201]
+texture_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 4
+mouse_filter = 0
+texture = ExtResource("1_ibgrc")
+stretch_mode = 5
+script = ExtResource("1_28xsq")
+script_name = "PixelFeld"
+description = "UI_OBJ_PIXEL_FELD"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1146529436]

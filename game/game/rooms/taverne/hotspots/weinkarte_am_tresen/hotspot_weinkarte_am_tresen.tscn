@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://cgd48hdgbhmbc"]
+
+[ext_resource type="Script" path="res://game/rooms/taverne/hotspots/weinkarte_am_tresen/hotspot_weinkarte_am_tresen.gd" id="1_6f4jw"]
+
+[node name="WeinkarteAmTresen" type="Area2D" unique_id=1695053927]
+script = ExtResource("1_6f4jw")
+script_name = "WeinkarteAmTresen"
+description = "Weinkarte Am Tresen"
+cursor = 1
+interaction_polygon = PackedVector2Array(-8, -6, 8, -6, 8, 6, -8, 6)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=618860639]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

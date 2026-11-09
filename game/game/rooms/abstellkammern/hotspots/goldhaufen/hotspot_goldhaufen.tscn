@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://c8otojlmyx57w"]
+
+[ext_resource type="Script" path="res://game/rooms/abstellkammern/hotspots/goldhaufen/hotspot_goldhaufen.gd" id="1_4ms1l"]
+
+[node name="Goldhaufen" type="Area2D" unique_id=891912294]
+script = ExtResource("1_4ms1l")
+script_name = "Goldhaufen"
+description = "Goldhaufen"
+cursor = 1
+interaction_polygon = PackedVector2Array(-25, -20, 25, -20, 25, 20, -25, 20)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=2075389554]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

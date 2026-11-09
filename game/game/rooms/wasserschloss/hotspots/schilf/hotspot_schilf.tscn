@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://cvh5srkcg62ij"]
+
+[ext_resource type="Script" path="res://game/rooms/wasserschloss/hotspots/schilf/hotspot_schilf.gd" id="1_uadk0"]
+
+[node name="Schilf" type="Area2D" unique_id=2032675821]
+script = ExtResource("1_uadk0")
+script_name = "Schilf"
+description = "Schilf"
+cursor = 1
+interaction_polygon = PackedVector2Array(-15, -15, 15, -15, 15, 15, -15, 15)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=865782856]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

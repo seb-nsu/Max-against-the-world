@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://da0xc0ank66kg"]
+
+[ext_resource type="Script" path="res://game/characters/waldemar/character_waldemar.gd" id="1_frc20"]
+[ext_resource type="Texture2D" uid="uid://7b21h7fls7bq" path="res://grafik/platzhalter/figur_waldemar.png" id="2_qm7lu"]
+
+[node name="CharacterWaldemar" type="Area2D" unique_id=584786914]
+script = ExtResource("1_frc20")
+walk_speed = 90.0
+dialog_pos = Vector2(0, -84)
+script_name = "Waldemar"
+description = "UI_OBJ_WALDEMAR"
+cursor = 8
+interaction_polygon = PackedVector2Array(-13, -80, 13, -80, 13, 0, -13, 0)
+
+[node name="ScalingPolygon" type="CollisionPolygon2D" parent="." unique_id=1587616776]
+polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=2041328016]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1399008767]
+texture_filter = 1
+texture = ExtResource("2_qm7lu")
+offset = Vector2(0, -40)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1729911689]
+visible = false
+polygon = PackedVector2Array(-13, -80, 13, -80, 13, 0, -13, 0)
+
+[node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=1523521539]
+visible = false
+affect_navigation_mesh = true
+carve_navigation_mesh = true

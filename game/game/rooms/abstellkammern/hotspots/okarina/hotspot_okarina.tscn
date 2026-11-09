@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://cxpckcd43kfe"]
+
+[ext_resource type="Script" path="res://game/rooms/abstellkammern/hotspots/okarina/hotspot_okarina.gd" id="1_j0cbo"]
+
+[node name="Okarina" type="Area2D" unique_id=821338632]
+script = ExtResource("1_j0cbo")
+script_name = "Okarina"
+description = "Okarina"
+cursor = 1
+interaction_polygon = PackedVector2Array(-5, -3, 5, -3, 5, 3, -5, 3)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1450544396]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

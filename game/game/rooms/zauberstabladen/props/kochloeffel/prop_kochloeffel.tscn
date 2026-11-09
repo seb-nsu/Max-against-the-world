@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://djyxjm6ae1pdl"]
+
+[ext_resource type="Script" path="res://game/rooms/zauberstabladen/props/kochloeffel/prop_kochloeffel.gd" id="1_84my2"]
+
+[node name="Kochloeffel" type="Area2D" unique_id=1816490374]
+script = ExtResource("1_84my2")
+script_name = "Kochloeffel"
+description = "Kochloeffel"
+cursor = 1
+interaction_polygon = PackedVector2Array(-9, -4, 9, -4, 9, 4, -9, 4)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1953709554]
+texture_filter = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=474227040]
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=734990223]
+visible = false
+modulate = Color(1, 1, 0, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+
+[node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=1825427819]
+visible = false
+affect_navigation_mesh = true
+carve_navigation_mesh = true

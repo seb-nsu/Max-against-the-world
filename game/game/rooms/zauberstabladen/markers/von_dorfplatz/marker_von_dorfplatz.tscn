@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://2h3ehk5hp8nr"]
+
+[node name="VonDorfplatz" type="Marker2D" unique_id=1592480946]
+visible = false

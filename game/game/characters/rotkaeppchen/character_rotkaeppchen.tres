@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://dwodqpnt7k31a"]
+
+[ext_resource type="Script" path="res://game/characters/rotkaeppchen/character_rotkaeppchen_state.gd" id="1_8xd2f"]
+
+[resource]
+resource_name = "Rotkaeppchen"
+script = ExtResource("1_8xd2f")
+script_name = "Rotkaeppchen"
+scene = "res://game/characters/rotkaeppchen/character_rotkaeppchen.tscn"

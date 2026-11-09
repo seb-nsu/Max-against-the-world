@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://26yotvblur8p"]
+
+[ext_resource type="Script" path="res://game/inventory_items/flasche/inventory_item_flasche.gd" id="1_3bemy"]
+[ext_resource type="Texture2D" uid="uid://ch7i1een7fol8" path="res://grafik/platzhalter/gegenstand_flasche.png" id="1_ylk05"]
+
+[node name="ItemFlasche" type="TextureRect" unique_id=1274472225]
+texture_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 4
+mouse_filter = 0
+texture = ExtResource("1_ylk05")
+stretch_mode = 5
+script = ExtResource("1_3bemy")
+script_name = "Flasche"
+description = "UI_OBJ_FLASCHE"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1050694565]

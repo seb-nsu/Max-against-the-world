@@ -13,6 +13,8 @@ Jede Information hat genau einen Besitzer. Andere Dateien dürfen sie nennen, ab
 | Rätsel: Nummer, Raum, benötigt, ergibt, Schalter | `welten/<welt>.yaml` | Rätsel-Datei beschreibt Ablauf, Lösung und Hinweise |
 | Rätsel-Ablauf, Lösungen, Fehlversuche, Hinweisstufen | `raetsel/<welt>.md` (Prolog in `prolog-und-welt-1.md`, Zwischenspiele und Finale in `finale.md`) | Skript enthält den Wortlaut |
 | Wortlaut aller Zeilen, Zeilen-IDs, Regie | `skript/<welt>.md` | – |
+| Englischer Wortlaut je Schlüssel; Menü- und Systemtexte (de, en) | `uebersetzung/en.csv`, `uebersetzung/ui.csv` | – |
+| Spieldaten für Godot (`game/daten/`, `game/lokalisierung/texte.csv`) | werden erzeugt (`tools/spieldaten.py`, `tools/skript_export.py`), nie von Hand bearbeitet | – |
 | Aussehen, Prompts, Zustandsbilder, Animationen | `grafik/*.md` | – |
 | Musik, Geräusche, Stimmen | `04-audio.md` | – |
 | Dialogsystem, Schrift, UI, Hinweissystem, Speichern, ID-Schemata | `05-spielsysteme.md` | – |

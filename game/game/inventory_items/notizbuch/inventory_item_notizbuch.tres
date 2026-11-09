@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://cfndrqw5nrrce"]
+
+[ext_resource type="Script" path="res://game/inventory_items/notizbuch/inventory_item_notizbuch_state.gd" id="1_5j7xc"]
+
+[resource]
+resource_name = "Notizbuch"
+script = ExtResource("1_5j7xc")
+script_name = "Notizbuch"
+scene = "res://game/inventory_items/notizbuch/inventory_item_notizbuch.tscn"

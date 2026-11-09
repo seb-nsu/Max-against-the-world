@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://dfb27ey3j7yi2"]
+
+[ext_resource type="Script" path="res://game/rooms/wasserschloss/hotspots/umzugskartons/hotspot_umzugskartons.gd" id="1_d6n7q"]
+
+[node name="Umzugskartons" type="Area2D" unique_id=1116227160]
+script = ExtResource("1_d6n7q")
+script_name = "Umzugskartons"
+description = "Umzugskartons"
+cursor = 1
+interaction_polygon = PackedVector2Array(-20, -20, 20, -20, 20, 20, -20, 20)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1964447313]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

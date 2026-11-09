@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://c6hlkhrkhcpvi"]
+
+[ext_resource type="Script" path="res://game/rooms/thronsaal/hotspots/blumenvasen/hotspot_blumenvasen.gd" id="1_1aaeh"]
+
+[node name="Blumenvasen" type="Area2D" unique_id=1732873763]
+script = ExtResource("1_1aaeh")
+script_name = "Blumenvasen"
+description = "Blumenvasen"
+cursor = 1
+interaction_polygon = PackedVector2Array(-15, -15, 15, -15, 15, 15, -15, 15)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=520212019]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

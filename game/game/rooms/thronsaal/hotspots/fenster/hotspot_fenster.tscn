@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://cqwdtkpk1sjtr"]
+
+[ext_resource type="Script" path="res://game/rooms/thronsaal/hotspots/fenster/hotspot_fenster.gd" id="1_co53m"]
+
+[node name="Fenster" type="Area2D" unique_id=1987414595]
+script = ExtResource("1_co53m")
+script_name = "Fenster"
+description = "Fenster"
+cursor = 1
+interaction_polygon = PackedVector2Array(-30, -20, 30, -20, 30, 20, -30, 20)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1099895651]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://byqp1kh6tkr6e"]
+
+[node name="Balken" type="Marker2D" unique_id=1394720736]
+visible = false

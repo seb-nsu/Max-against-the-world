@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://ccgxu2roftehc"]
+
+[ext_resource type="Script" path="res://game/rooms/dachboden/walkable_areas/boden/walkable_area_boden.gd" id="1_oypus"]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_tb7ev"]
+outlines = Array[PackedVector2Array]([PackedVector2Array(4, 146, 316, 146, 316, 178, 4, 178)])
+agent_radius = 0.0
+
+[node name="Boden" type="Node2D" unique_id=1447233398]
+script = ExtResource("1_oypus")
+script_name = "Boden"
+description = "Boden"
+interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(4, 146, 316, 146, 316, 178, 4, 178)])
+
+[node name="Perimeter" type="NavigationRegion2D" parent="." unique_id=1814532175]
+modulate = Color(0, 1, 0, 1)
+navigation_polygon = SubResource("NavigationPolygon_tb7ev")

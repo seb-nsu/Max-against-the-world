@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://3glmt2yhrrhy"]
+
+[ext_resource type="Script" path="res://game/rooms/trollbruecke/hotspots/weg_zum_wasserschloss/hotspot_weg_zum_wasserschloss.gd" id="1_n765r"]
+
+[node name="WegZumWasserschloss" type="Area2D" unique_id=14882811]
+script = ExtResource("1_n765r")
+script_name = "WegZumWasserschloss"
+description = "Weg Zum Wasserschloss"
+cursor = 1
+interaction_polygon = PackedVector2Array(-15, -20, 15, -20, 15, 20, -15, 20)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1794765383]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

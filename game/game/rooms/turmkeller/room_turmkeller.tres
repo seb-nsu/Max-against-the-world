@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://kfwtxjh7sakn"]
+
+[ext_resource type="Script" path="res://game/rooms/turmkeller/room_turmkeller_state.gd" id="1_tlufn"]
+
+[resource]
+resource_name = "Turmkeller"
+script = ExtResource("1_tlufn")
+script_name = "Turmkeller"
+scene = "res://game/rooms/turmkeller/room_turmkeller.tscn"

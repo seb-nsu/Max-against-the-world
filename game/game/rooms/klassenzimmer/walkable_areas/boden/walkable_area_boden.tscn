@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://ot5ssb0y4qdw"]
+
+[ext_resource type="Script" path="res://game/rooms/klassenzimmer/walkable_areas/boden/walkable_area_boden.gd" id="1_ibmoi"]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_ibmoi"]
+vertices = PackedVector2Array(316, 178, 4, 178, 4, 140, 316, 140)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(4, 140, 316, 140, 316, 178, 4, 178)])
+agent_radius = 0.0
+
+[node name="Boden" type="Node2D" unique_id=396300271]
+script = ExtResource("1_ibmoi")
+script_name = "Boden"
+description = "Boden"
+interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(4, 140, 316, 140, 316, 178, 4, 178)])
+
+[node name="Perimeter" type="NavigationRegion2D" parent="." unique_id=333054194]
+modulate = Color(0, 1, 0, 1)
+navigation_polygon = SubResource("NavigationPolygon_ibmoi")

@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://bqatti0tatxqb"]
+
+[ext_resource type="Script" path="res://game/rooms/dorfplatz/hotspots/taverne_von_aussen/hotspot_taverne_von_aussen.gd" id="1_fthc1"]
+
+[node name="TaverneVonAussen" type="Area2D" unique_id=1049565084]
+script = ExtResource("1_fthc1")
+script_name = "TaverneVonAussen"
+description = "Taverne Von Aussen"
+cursor = 1
+interaction_polygon = PackedVector2Array(-26, -40, 26, -40, 26, 40, -26, 40)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1427079142]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

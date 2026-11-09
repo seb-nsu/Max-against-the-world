@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://dik8cnibnsx1d"]
+
+[ext_resource type="Script" path="res://game/rooms/wohnzimmer/hotspots/leerer_platz_auf_dem_couchtisch/hotspot_leerer_platz_auf_dem_couchtisch.gd" id="1_ooebf"]
+
+[node name="LeererPlatzAufDemCouchtisch" type="Area2D" unique_id=1687414544]
+script = ExtResource("1_ooebf")
+script_name = "LeererPlatzAufDemCouchtisch"
+description = "Leerer Platz Auf Dem Couchtisch"
+cursor = 1
+interaction_polygon = PackedVector2Array(-11, -5, 11, -5, 11, 5, -11, 5)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=2013445057]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

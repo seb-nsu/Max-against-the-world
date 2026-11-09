@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://cchuxt4r4w7in"]
+
+[ext_resource type="Script" path="res://game/rooms/abstellkammern/room_abstellkammern_state.gd" id="1_igpew"]
+
+[resource]
+resource_name = "Abstellkammern"
+script = ExtResource("1_igpew")
+script_name = "Abstellkammern"
+scene = "res://game/rooms/abstellkammern/room_abstellkammern.tscn"

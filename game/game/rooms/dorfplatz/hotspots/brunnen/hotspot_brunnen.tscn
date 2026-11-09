@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://jq0oyhsr8vk2"]
+
+[ext_resource type="Script" path="res://game/rooms/dorfplatz/hotspots/brunnen/hotspot_brunnen.gd" id="1_qdrq5"]
+
+[node name="Brunnen" type="Area2D" unique_id=20902903]
+script = ExtResource("1_qdrq5")
+script_name = "Brunnen"
+description = "Brunnen"
+cursor = 1
+interaction_polygon = PackedVector2Array(-30, -24, 30, -24, 30, 24, -30, 24)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=683640162]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

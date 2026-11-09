@@ -1,0 +1,236 @@
+{
+ "abschnitt": "prolog",
+ "name": "Opas Dachboden",
+ "skript_praefix": [
+  "P0",
+  "SYS"
+ ],
+ "sonder_codes": [
+  "HINT",
+  "ERS",
+  "WDH",
+  "PLA",
+  "INV",
+  "ABS"
+ ],
+ "sonder_sprecher": [
+  "NAR"
+ ],
+ "weitere_schalter": [
+  "P0_SCHNEE_GESEHEN",
+  "P0_PIXEL_WECKVERSUCHE",
+  "P0_DRAHTKLEIDERBUEGEL"
+ ],
+ "raeume": [
+  {
+   "id": "wohnzimmer",
+   "name": "Wohnzimmer",
+   "skript_code": [
+    "WOHN"
+   ],
+   "groesse": "320x180",
+   "ausgaenge": [
+    "treppenhaus"
+   ],
+   "erreichbar_ab": "start",
+   "musik": "gegenwart",
+   "zustaende": [
+    "Nachmittag"
+   ]
+  },
+  {
+   "id": "treppenhaus",
+   "name": "Treppenhaus",
+   "skript_code": [
+    "TREP"
+   ],
+   "groesse": "320x180",
+   "ausgaenge": [
+    "wohnzimmer",
+    "dachboden"
+   ],
+   "erreichbar_ab": "start",
+   "musik": "gegenwart",
+   "zustaende": [
+    "Nachmittag"
+   ]
+  },
+  {
+   "id": "dachboden",
+   "name": "Dachboden",
+   "skript_code": [
+    "DACH"
+   ],
+   "groesse": "320x180",
+   "ausgaenge": [
+    "treppenhaus"
+   ],
+   "erreichbar_ab": "start",
+   "musik": "gegenwart",
+   "zustaende": [
+    "Nachmittag"
+   ]
+  }
+ ],
+ "figuren": [
+  {
+   "id": "max",
+   "name": "Max",
+   "kuerzel": "MAX",
+   "raum": [
+    "wohnzimmer",
+    "treppenhaus",
+    "dachboden"
+   ],
+   "groesse_px": 56,
+   "spielbar": true
+  },
+  {
+   "id": "pixel",
+   "name": "Pixel",
+   "kuerzel": "PIX",
+   "raum": "dachboden",
+   "groesse_px": 18,
+   "spielbar": false
+  },
+  {
+   "id": "opa",
+   "name": "Opa",
+   "kuerzel": "OPA",
+   "raum": "dachboden",
+   "groesse_px": 60,
+   "spielbar": false
+  }
+ ],
+ "gegenstaende": [
+  {
+   "id": "thunfischdose",
+   "name": "Thunfischdose",
+   "herkunft": "dachboden",
+   "zustaende": [
+    "zu",
+    "offen",
+    "leer"
+   ],
+   "verwendet_in": [
+    "P1"
+   ],
+   "reist_mit": true,
+   "nahansicht": false
+  },
+  {
+   "id": "dosenoeffner",
+   "name": "Dosenöffner",
+   "herkunft": "dachboden",
+   "zustaende": [
+    "normal"
+   ],
+   "verwendet_in": [
+    "P1"
+   ],
+   "reist_mit": true,
+   "nahansicht": false
+  },
+  {
+   "id": "drahtkleiderbuegel",
+   "name": "Drahtkleiderbügel",
+   "herkunft": "dachboden",
+   "zustaende": [
+    "gerade",
+    "antenne"
+   ],
+   "verwendet_in": [
+    "P2"
+   ],
+   "reist_mit": false,
+   "nahansicht": false
+  },
+  {
+   "id": "reisetasche",
+   "name": "Opas Reisetasche",
+   "herkunft": "P3",
+   "zustaende": [
+    "normal"
+   ],
+   "verwendet_in": [],
+   "reist_mit": true,
+   "nahansicht": false
+  },
+  {
+   "id": "notizbuch",
+   "name": "Notizbuch",
+   "herkunft": "P3",
+   "zustaende": [
+    "normal"
+   ],
+   "verwendet_in": [],
+   "reist_mit": true,
+   "nahansicht": false
+  },
+  {
+   "id": "opas_zettel",
+   "name": "Opas Zettel",
+   "herkunft": "P3",
+   "zustaende": [
+    "normal"
+   ],
+   "verwendet_in": [],
+   "reist_mit": true,
+   "nahansicht": true
+  }
+ ],
+ "nahansichten": [
+  {
+   "id": "kalender",
+   "name": "Kalender",
+   "raum": "dachboden"
+  }
+ ],
+ "raetsel": [
+  {
+   "id": "P1",
+   "name": "Der schlafende Kater",
+   "raum": "dachboden",
+   "benoetigt": [
+    "thunfischdose",
+    "dosenoeffner"
+   ],
+   "ergibt": [],
+   "schalter": [
+    "P0_P1_GELOEST"
+   ],
+   "optional": false
+  },
+  {
+   "id": "P2",
+   "name": "Nur Rauschen",
+   "raum": "dachboden",
+   "benoetigt": [
+    "P1",
+    "drahtkleiderbuegel"
+   ],
+   "ergibt": [],
+   "schalter": [
+    "P0_P2_GELOEST"
+   ],
+   "optional": false
+  },
+  {
+   "id": "P3",
+   "name": "Der richtige Kanal",
+   "raum": "dachboden",
+   "benoetigt": [
+    "P2"
+   ],
+   "ergibt": [
+    "reisetasche",
+    "notizbuch",
+    "opas_zettel"
+   ],
+   "schalter": [
+    "P0_P3_GELOEST"
+   ],
+   "optional": false
+  }
+ ]
+}

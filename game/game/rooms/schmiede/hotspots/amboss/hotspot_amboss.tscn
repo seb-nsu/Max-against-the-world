@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://clqcmpkb4cmf5"]
+
+[ext_resource type="Script" path="res://game/rooms/schmiede/hotspots/amboss/hotspot_amboss.gd" id="1_agqbs"]
+
+[node name="Amboss" type="Area2D" unique_id=259612953]
+script = ExtResource("1_agqbs")
+script_name = "Amboss"
+description = "Amboss"
+cursor = 1
+interaction_polygon = PackedVector2Array(-20, -12, 20, -12, 20, 12, -20, 12)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1714440942]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

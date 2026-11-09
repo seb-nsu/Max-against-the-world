@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://ooiq8xwdnq7a"]
+
+[ext_resource type="Script" path="res://game/rooms/wasserschloss/room_wasserschloss_state.gd" id="1_r6blk"]
+
+[resource]
+resource_name = "Wasserschloss"
+script = ExtResource("1_r6blk")
+script_name = "Wasserschloss"
+scene = "res://game/rooms/wasserschloss/room_wasserschloss.tscn"

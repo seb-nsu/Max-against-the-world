@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://bqig6oh2de21g"]
+
+[ext_resource type="Script" path="res://game/characters/max/character_max.gd" id="1_ydepi"]
+[ext_resource type="Texture2D" uid="uid://duppocjkyeg71" path="res://grafik/platzhalter/figur_max.png" id="2_jj2ko"]
+
+[node name="CharacterMax" type="Area2D" unique_id=1645005039]
+script = ExtResource("1_ydepi")
+walk_speed = 90.0
+dialog_pos = Vector2(0, -60)
+script_name = "Max"
+description = "UI_OBJ_MAX"
+cursor = 8
+interaction_polygon = PackedVector2Array(-9, -56, 9, -56, 9, 0, -9, 0)
+
+[node name="ScalingPolygon" type="CollisionPolygon2D" parent="." unique_id=1833730281]
+polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=771620093]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=662144670]
+texture_filter = 1
+texture = ExtResource("2_jj2ko")
+offset = Vector2(0, -28)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=29221061]
+visible = false
+polygon = PackedVector2Array(-9, -56, 9, -56, 9, 0, -9, 0)
+
+[node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=1313513948]
+visible = false
+affect_navigation_mesh = true
+carve_navigation_mesh = true

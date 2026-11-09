@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://do14m1kdrpmm6"]
+
+[ext_resource type="Script" path="res://game/rooms/taverne/hotspots/laute_mit_muenzbecher/hotspot_laute_mit_muenzbecher.gd" id="1_r2ihe"]
+
+[node name="LauteMitMuenzbecher" type="Area2D" unique_id=1318649442]
+script = ExtResource("1_r2ihe")
+script_name = "LauteMitMuenzbecher"
+description = "Laute Mit Muenzbecher"
+cursor = 1
+interaction_polygon = PackedVector2Array(-10, -15, 10, -15, 10, 15, -10, 15)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1276308258]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

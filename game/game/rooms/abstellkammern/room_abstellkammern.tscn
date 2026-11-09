@@ -1,0 +1,137 @@
+[gd_scene format=3 uid="uid://cbttj0tmcsq24"]
+
+[ext_resource type="Script" path="res://game/rooms/abstellkammern/room_abstellkammern.gd" id="1_eprp5"]
+[ext_resource type="PackedScene" uid="uid://dorwulrm0ef2j" path="res://game/rooms/abstellkammern/walkable_areas/boden/walkable_area_boden.tscn" id="2_43nhc"]
+[ext_resource type="PackedScene" uid="uid://d3wx5rjycux5f" path="res://game/rooms/abstellkammern/props/background/prop_background.tscn" id="3_u6hpy"]
+[ext_resource type="Texture2D" uid="uid://by6akd7rsfv6p" path="res://grafik/platzhalter/raum_abstellkammern.png" id="4_m4cdh"]
+[ext_resource type="PackedScene" uid="uid://c6p7ee7n0a411" path="res://game/rooms/abstellkammern/props/kronleuchter/prop_kronleuchter.tscn" id="5_riibq"]
+[ext_resource type="Texture2D" uid="uid://ckos8lag1toxc" path="res://grafik/platzhalter/prop_kronleuchter.png" id="6_gmxmd"]
+[ext_resource type="PackedScene" uid="uid://b5m7yd6b86wte" path="res://game/rooms/abstellkammern/props/schwerter_buendel/prop_schwerter_buendel.tscn" id="7_fgr5r"]
+[ext_resource type="Texture2D" uid="uid://cmugm8651t2r2" path="res://grafik/platzhalter/prop_schwerter_buendel.png" id="8_b6ore"]
+[ext_resource type="PackedScene" uid="uid://bolhwa0800gru" path="res://game/rooms/abstellkammern/props/fackel_buendel/prop_fackel_buendel.tscn" id="9_mwppx"]
+[ext_resource type="Texture2D" uid="uid://brwxwsbbo4hn7" path="res://grafik/platzhalter/prop_fackel_buendel.png" id="10_ispel"]
+[ext_resource type="PackedScene" uid="uid://dt1ll6hyojsga" path="res://game/rooms/abstellkammern/hotspots/drachenei_nest/hotspot_drachenei_nest.tscn" id="11_6yr7v"]
+[ext_resource type="PackedScene" uid="uid://c8otojlmyx57w" path="res://game/rooms/abstellkammern/hotspots/goldhaufen/hotspot_goldhaufen.tscn" id="12_4eom3"]
+[ext_resource type="PackedScene" uid="uid://cxpckcd43kfe" path="res://game/rooms/abstellkammern/hotspots/okarina/hotspot_okarina.tscn" id="13_e3ve3"]
+[ext_resource type="PackedScene" uid="uid://c3dk00qjmyeyl" path="res://game/rooms/abstellkammern/hotspots/schwert_im_stein/hotspot_schwert_im_stein.tscn" id="14_mhs3i"]
+[ext_resource type="PackedScene" uid="uid://46x7cbm20jey" path="res://game/rooms/abstellkammern/hotspots/deko_kram/hotspot_deko_kram.tscn" id="15_ydl2s"]
+[ext_resource type="PackedScene" uid="uid://d3fclsu4s2bq" path="res://game/rooms/abstellkammern/hotspots/stapel/hotspot_stapel.tscn" id="16_cr6l7"]
+[ext_resource type="PackedScene" uid="uid://bbm27fm4m1pva" path="res://game/rooms/abstellkammern/hotspots/wendeltreppe/hotspot_wendeltreppe.tscn" id="17_uhqtc"]
+[ext_resource type="PackedScene" uid="uid://dvkvrgi5y4fq8" path="res://game/rooms/abstellkammern/hotspots/geheimtuer/hotspot_geheimtuer.tscn" id="18_gvw8x"]
+[ext_resource type="PackedScene" uid="uid://c3oavohlbxnsc" path="res://game/rooms/abstellkammern/markers/start/marker_start.tscn" id="19_j2fxm"]
+[ext_resource type="PackedScene" uid="uid://csfth4fal2gn2" path="res://game/rooms/abstellkammern/markers/von_turmkeller/marker_von_turmkeller.tscn" id="20_lblr3"]
+[ext_resource type="PackedScene" uid="uid://bdx2mxqwjrbnl" path="res://game/rooms/abstellkammern/markers/von_thronsaal/marker_von_thronsaal.tscn" id="21_k3hao"]
+[ext_resource type="PackedScene" uid="uid://dige2mk6ysgaw" path="res://game/rooms/abstellkammern/markers/abnehmer/marker_abnehmer.tscn" id="22_la0m5"]
+[ext_resource type="PackedScene" uid="uid://pnveskiecrqi" path="res://game/characters/smaugi/character_smaugi.tscn" id="23_twi7s"]
+
+[node name="RoomAbstellkammern" type="Node2D" unique_id=854672036]
+script = ExtResource("1_eprp5")
+script_name = "Abstellkammern"
+width = 320
+height = 180
+
+[node name="WalkableAreas" type="Node2D" parent="." unique_id=2123468200]
+
+[node name="Boden" parent="WalkableAreas" unique_id=1577697252 instance=ExtResource("2_43nhc")]
+interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(4, 140, 316, 140, 316, 178, 4, 178)])
+
+[node name="Props" type="Node2D" parent="." unique_id=926662758]
+
+[node name="Background" parent="Props" unique_id=662690666 instance=ExtResource("3_u6hpy")]
+position = Vector2(160, 90)
+texture = ExtResource("4_m4cdh")
+description = "UI_RAUM_ABSTELLKAMMERN"
+
+[node name="Kronleuchter" parent="Props" unique_id=87142605 instance=ExtResource("5_riibq")]
+position = Vector2(135, 22)
+texture = ExtResource("6_gmxmd")
+description = "UI_OBJ_KRONLEUCHTER"
+baseline = 12
+walk_to_point = Vector2(-1, 132)
+
+[node name="SchwerterBuendel" parent="Props" unique_id=1268535052 instance=ExtResource("7_fgr5r")]
+position = Vector2(240, 130)
+texture = ExtResource("8_b6ore")
+description = "UI_OBJ_SCHWERTER_BUENDEL"
+baseline = 10
+walk_to_point = Vector2(-4, 26)
+
+[node name="FackelBuendel" parent="Props" unique_id=614849226 instance=ExtResource("9_mwppx")]
+position = Vector2(262, 130)
+texture = ExtResource("10_ispel")
+description = "UI_OBJ_FACKEL_BUENDEL"
+baseline = 10
+walk_to_point = Vector2(-2, 26)
+
+[node name="Hotspots" type="Node2D" parent="." unique_id=1309229227]
+
+[node name="DracheneiNest" parent="Hotspots" unique_id=722836785 instance=ExtResource("11_6yr7v")]
+position = Vector2(210, 120)
+description = "UI_OBJ_DRACHENEI_NEST"
+baseline = 10
+walk_to_point = Vector2(-10, 36)
+
+[node name="Goldhaufen" parent="Hotspots" unique_id=891912294 instance=ExtResource("12_4eom3")]
+position = Vector2(165, 120)
+description = "UI_OBJ_GOLDHAUFEN"
+baseline = 20
+walk_to_point = Vector2(-5, 36)
+
+[node name="Okarina" parent="Hotspots" unique_id=821338632 instance=ExtResource("13_e3ve3")]
+position = Vector2(45, 123)
+description = "UI_OBJ_OKARINA"
+baseline = 3
+walk_to_point = Vector2(1, 33)
+
+[node name="SchwertImStein" parent="Hotspots" unique_id=405485767 instance=ExtResource("14_mhs3i")]
+position = Vector2(67, 111)
+description = "UI_OBJ_SCHWERT_IM_STEIN"
+baseline = 15
+walk_to_point = Vector2(-1, 45)
+
+[node name="DekoKram" parent="Hotspots" unique_id=621975108 instance=ExtResource("15_ydl2s")]
+position = Vector2(104, 125)
+description = "UI_OBJ_DEKO_KRAM"
+baseline = 15
+walk_to_point = Vector2(-4, 31)
+
+[node name="Stapel" parent="Hotspots" unique_id=1089244585 instance=ExtResource("16_cr6l7")]
+position = Vector2(114, 130)
+description = "UI_OBJ_STAPEL"
+baseline = 10
+walk_to_point = Vector2(-4, 26)
+
+[node name="Wendeltreppe" parent="Hotspots" unique_id=1112628063 instance=ExtResource("17_uhqtc")]
+position = Vector2(12, 100)
+description = "UI_OBJ_WENDELTREPPE"
+baseline = 40
+walk_to_point = Vector2(0, 60)
+cursor = 9
+
+[node name="Geheimtuer" parent="Hotspots" unique_id=2112502903 instance=ExtResource("18_gvw8x")]
+position = Vector2(298, 90)
+description = "UI_OBJ_GEHEIMTUER"
+baseline = 50
+walk_to_point = Vector2(-8, 60)
+cursor = 9
+
+[node name="Regions" type="Node2D" parent="." unique_id=1641540041]
+
+[node name="Markers" type="Node2D" parent="." unique_id=1952081546]
+
+[node name="Start" parent="Markers" unique_id=699070164 instance=ExtResource("19_j2fxm")]
+position = Vector2(30, 160)
+
+[node name="VonTurmkeller" parent="Markers" unique_id=903831843 instance=ExtResource("20_lblr3")]
+position = Vector2(30, 160)
+
+[node name="VonThronsaal" parent="Markers" unique_id=773575743 instance=ExtResource("21_k3hao")]
+position = Vector2(270, 150)
+
+[node name="Abnehmer" parent="Markers" unique_id=517010660 instance=ExtResource("22_la0m5")]
+position = Vector2(120, 162)
+
+[node name="Characters" type="Node2D" parent="." unique_id=1298740313]
+
+[node name="CharacterSmaugi *" parent="Characters" unique_id=2130994330 instance=ExtResource("23_twi7s")]
+position = Vector2(180, 140)

@@ -1,0 +1,86 @@
+[gd_scene format=3 uid="uid://djvtc4ipfol05"]
+
+[ext_resource type="Script" path="res://game/rooms/schmiede/room_schmiede.gd" id="1_nay1a"]
+[ext_resource type="PackedScene" uid="uid://bqi83rh2hpvww" path="res://game/rooms/schmiede/walkable_areas/boden/walkable_area_boden.tscn" id="2_fcyh3"]
+[ext_resource type="PackedScene" uid="uid://t66d7laeibkp" path="res://game/rooms/schmiede/props/background/prop_background.tscn" id="3_gq57k"]
+[ext_resource type="Texture2D" uid="uid://cbf3f8njqqpef" path="res://grafik/platzhalter/raum_schmiede.png" id="4_lr1jj"]
+[ext_resource type="PackedScene" uid="uid://d0t5rog4vrqb2" path="res://game/rooms/schmiede/props/krug/prop_krug.tscn" id="5_w123j"]
+[ext_resource type="Texture2D" uid="uid://b4mnwkb63dfan" path="res://grafik/platzhalter/prop_krug.png" id="6_458fk"]
+[ext_resource type="PackedScene" uid="uid://cri8wgw1fou0b" path="res://game/rooms/schmiede/hotspots/esse/hotspot_esse.tscn" id="7_nwspk"]
+[ext_resource type="PackedScene" uid="uid://clqcmpkb4cmf5" path="res://game/rooms/schmiede/hotspots/amboss/hotspot_amboss.tscn" id="8_slgs3"]
+[ext_resource type="PackedScene" uid="uid://cra7ea8vene4m" path="res://game/rooms/schmiede/hotspots/kochgeschirr/hotspot_kochgeschirr.tscn" id="9_a8a7p"]
+[ext_resource type="PackedScene" uid="uid://4mqrst5hv3oe" path="res://game/rooms/schmiede/hotspots/ausgang_dorfplatz/hotspot_ausgang_dorfplatz.tscn" id="10_jeh7w"]
+[ext_resource type="PackedScene" uid="uid://dwj8tnx38n5to" path="res://game/rooms/schmiede/markers/start/marker_start.tscn" id="11_d2axk"]
+[ext_resource type="PackedScene" uid="uid://det5t1hdsnt0b" path="res://game/rooms/schmiede/markers/von_dorfplatz/marker_von_dorfplatz.tscn" id="12_peajo"]
+[ext_resource type="PackedScene" uid="uid://crxn1bs7s4647" path="res://game/characters/schmied/character_schmied.tscn" id="13_6skh3"]
+[ext_resource type="PackedScene" uid="uid://2dfbpa4birce" path="res://game/characters/schmiede_ziege/character_schmiede_ziege.tscn" id="14_idigh"]
+
+[node name="RoomSchmiede" type="Node2D" unique_id=443649800]
+script = ExtResource("1_nay1a")
+script_name = "Schmiede"
+width = 320
+height = 180
+
+[node name="WalkableAreas" type="Node2D" parent="." unique_id=1823957869]
+
+[node name="Boden" parent="WalkableAreas" unique_id=1190001958 instance=ExtResource("2_fcyh3")]
+interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(4, 140, 316, 140, 316, 178, 4, 178)])
+
+[node name="Props" type="Node2D" parent="." unique_id=493911780]
+
+[node name="Background" parent="Props" unique_id=425996567 instance=ExtResource("3_gq57k")]
+position = Vector2(160, 90)
+texture = ExtResource("4_lr1jj")
+description = "UI_RAUM_SCHMIEDE"
+
+[node name="Krug" parent="Props" unique_id=843535459 instance=ExtResource("5_w123j")]
+position = Vector2(285, 78)
+texture = ExtResource("6_458fk")
+description = "UI_OBJ_KRUG"
+baseline = 8
+walk_to_point = Vector2(-9, 74)
+
+[node name="Hotspots" type="Node2D" parent="." unique_id=1930143547]
+
+[node name="Esse" parent="Hotspots" unique_id=282329525 instance=ExtResource("7_nwspk")]
+position = Vector2(45, 105)
+description = "UI_OBJ_ESSE"
+baseline = 35
+walk_to_point = Vector2(15, 49)
+
+[node name="Amboss" parent="Hotspots" unique_id=259612953 instance=ExtResource("8_slgs3")]
+position = Vector2(150, 128)
+description = "UI_OBJ_AMBOSS"
+baseline = 12
+walk_to_point = Vector2(0, 26)
+
+[node name="Kochgeschirr" parent="Hotspots" unique_id=1753322048 instance=ExtResource("9_a8a7p")]
+position = Vector2(241, 78)
+description = "UI_OBJ_KOCHGESCHIRR"
+baseline = 28
+walk_to_point = Vector2(-1, 74)
+
+[node name="AusgangDorfplatz" parent="Hotspots" unique_id=874021977 instance=ExtResource("10_jeh7w")]
+position = Vector2(308, 90)
+description = "UI_RAUM_DORFPLATZ"
+baseline = 50
+walk_to_point = Vector2(-4, 70)
+cursor = 9
+
+[node name="Regions" type="Node2D" parent="." unique_id=823918240]
+
+[node name="Markers" type="Node2D" parent="." unique_id=721572654]
+
+[node name="Start" parent="Markers" unique_id=36849149 instance=ExtResource("11_d2axk")]
+position = Vector2(290, 160)
+
+[node name="VonDorfplatz" parent="Markers" unique_id=983529853 instance=ExtResource("12_peajo")]
+position = Vector2(290, 160)
+
+[node name="Characters" type="Node2D" parent="." unique_id=674367572]
+
+[node name="CharacterSchmied *" parent="Characters" unique_id=219458842 instance=ExtResource("13_6skh3")]
+position = Vector2(120, 160)
+
+[node name="CharacterSchmiedeZiege *" parent="Characters" unique_id=1898849327 instance=ExtResource("14_idigh")]
+position = Vector2(180, 166)

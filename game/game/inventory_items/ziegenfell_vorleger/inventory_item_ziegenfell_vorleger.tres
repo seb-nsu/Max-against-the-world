@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://duqaxgocy40uj"]
+
+[ext_resource type="Script" path="res://game/inventory_items/ziegenfell_vorleger/inventory_item_ziegenfell_vorleger_state.gd" id="1_sg8xx"]
+
+[resource]
+resource_name = "ZiegenfellVorleger"
+script = ExtResource("1_sg8xx")
+script_name = "ZiegenfellVorleger"
+scene = "res://game/inventory_items/ziegenfell_vorleger/inventory_item_ziegenfell_vorleger.tscn"

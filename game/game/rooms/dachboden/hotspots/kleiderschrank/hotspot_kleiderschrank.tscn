@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://ccq6cyj6k2lgv"]
+
+[ext_resource type="Script" path="res://game/rooms/dachboden/hotspots/kleiderschrank/hotspot_kleiderschrank.gd" id="1_74ekt"]
+
+[node name="Kleiderschrank" type="Area2D" unique_id=461528870]
+script = ExtResource("1_74ekt")
+script_name = "Kleiderschrank"
+description = "Kleiderschrank"
+cursor = 1
+interaction_polygon = PackedVector2Array(-23, -52, 23, -52, 23, 52, -23, 52)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1002771618]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

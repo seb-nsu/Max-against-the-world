@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://bi6l1fqt5fc55"]
+
+[ext_resource type="Script" path="res://game/rooms/dorfplatz/hotspots/bohnenranke/hotspot_bohnenranke.gd" id="1_f2ohc"]
+
+[node name="Bohnenranke" type="Area2D" unique_id=1068162148]
+script = ExtResource("1_f2ohc")
+script_name = "Bohnenranke"
+description = "Bohnenranke"
+cursor = 1
+interaction_polygon = PackedVector2Array(-15, -55, 15, -55, 15, 55, -15, 55)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=709457077]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

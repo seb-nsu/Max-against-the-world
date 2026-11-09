@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://co4y20dbs3iu"]
+
+[ext_resource type="Script" path="res://game/rooms/wohnzimmer/hotspots/fernseher/hotspot_fernseher.gd" id="1_cufy3"]
+
+[node name="Fernseher" type="Area2D" unique_id=1360170483]
+script = ExtResource("1_cufy3")
+script_name = "Fernseher"
+description = "Fernseher"
+cursor = 1
+interaction_polygon = PackedVector2Array(-26, -31, 26, -31, 26, 31, -26, 31)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1683368341]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://y6hj8anjqoo8"]
+
+[ext_resource type="Script" path="res://game/inventory_items/steckbrief/inventory_item_steckbrief_state.gd" id="1_1d340"]
+
+[resource]
+resource_name = "Steckbrief"
+script = ExtResource("1_1d340")
+script_name = "Steckbrief"
+scene = "res://game/inventory_items/steckbrief/inventory_item_steckbrief.tscn"

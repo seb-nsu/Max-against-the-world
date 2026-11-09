@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://bdm3n1mbi8wyu"]
+
+[ext_resource type="Script" path="res://game/rooms/dorfplatz/hotspots/erdfleck/hotspot_erdfleck.gd" id="1_jiex1"]
+
+[node name="Erdfleck" type="Area2D" unique_id=2142488486]
+script = ExtResource("1_jiex1")
+script_name = "Erdfleck"
+description = "Erdfleck"
+cursor = 1
+interaction_polygon = PackedVector2Array(-14, -4, 14, -4, 14, 4, -14, 4)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=161700743]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

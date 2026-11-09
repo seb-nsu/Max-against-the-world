@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://c86j8km38topt"]
+
+[ext_resource type="Script" path="res://game/rooms/wohnzimmer/hotspots/sofa/hotspot_sofa.gd" id="1_x3w6n"]
+
+[node name="Sofa" type="Area2D" unique_id=2101987933]
+script = ExtResource("1_x3w6n")
+script_name = "Sofa"
+description = "Sofa"
+cursor = 1
+interaction_polygon = PackedVector2Array(-46, -23, 46, -23, 46, 23, -46, 23)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=2075309774]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

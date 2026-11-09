@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://b70t4tsyuc6dk"]
+
+[ext_resource type="Script" path="res://game/rooms/taverne/hotspots/steckbrief_plakat_drache/hotspot_steckbrief_plakat_drache.gd" id="1_vxlc5"]
+
+[node name="SteckbriefPlakatDrache" type="Area2D" unique_id=361251391]
+script = ExtResource("1_vxlc5")
+script_name = "SteckbriefPlakatDrache"
+description = "Steckbrief Plakat Drache"
+cursor = 1
+interaction_polygon = PackedVector2Array(-14, -16, 14, -16, 14, 16, -14, 16)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=2059666507]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

@@ -52,6 +52,8 @@ Abkürzungen: W1 bis W4 = Welt 1 bis 4, R = Rätsel. „Nov. 2026“ heißt: in 
 | Das Repo ist die Hauptfassung; jede Information hat genau einen Besitzer. | Eine Quelle der Wahrheit | 9. Nov. 2026 | `00-aufbau.md` |
 | Vollvertonung oder Brabbel-Laute wird spätestens zu Beginn von Stufe 5 entschieden: ab etwa 10.000 Wunschlisten Vollvertonung. | Kosten gegen erwartete Einnahmen | 9. Nov. 2026 | `03-produktion.md` (Markt, System 3), `04-audio.md` |
 | Zeilenbudget: Zwischenspiele 170, Finale und Abspann 280 (an die Skript-Entwürfe mit 168 und 276 Zeilen angeglichen); die Welten bleiben bei 700 bis 850, ihre Entwürfe liegen noch darüber (offen als P5). | Budget und Skript widersprachen sich | 9. Nov. 2026 | `05-spielsysteme.md` (Umfang), `03-produktion.md` (Absprachen) |
+| Ansehen: jede Stelle bekommt eine eigene, ebenso witzige Zweitzeile mit Anspielung, ab dem dritten Mal der Wiederholungs-Pool; Inventar-Ansehen im Skript; Plauderoptionen verschwinden (einmalig ein Max-Kommentar), Hinweis- und Rätseloptionen bleiben grau, erschöpfte Gespräche spielen zwei Abschiedszeilen. | Wiederholung wirkt sonst wie ein Fehler, und die zweite Zeile ist eine Belohnung | 9. Nov. 2026 | `05-spielsysteme.md` (Wiederholung und Erschöpfung) |
+| Zeilenbudget angehoben auf etwa 5.000: Welten 1.000 bis 1.100, Zwischenspiele 200, Finale und Abspann 320 (Prolog 170 und Systemtexte 150 bleiben); erledigt P5. | Die Zweitzeilen machen knapp 700 Zeilen aus | 9. Nov. 2026 | `05-spielsysteme.md` (Umfang), `04-audio.md`, `03-produktion.md` |
 
 ## Steuerung, UI und Spielsysteme
 

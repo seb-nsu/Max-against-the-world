@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://bv1p7ct66oos4"]
+
+[ext_resource type="Script" path="res://game/characters/schmiede_ziege/character_schmiede_ziege_state.gd" id="1_437ql"]
+
+[resource]
+resource_name = "SchmiedeZiege"
+script = ExtResource("1_437ql")
+script_name = "SchmiedeZiege"
+scene = "res://game/characters/schmiede_ziege/character_schmiede_ziege.tscn"

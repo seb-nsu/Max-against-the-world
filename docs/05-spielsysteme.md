@@ -16,6 +16,16 @@ Jede Zeile des Spiels steht genau einmal in einer Skript-Tabelle pro Welt und ha
 | Szene | Drei bis vier Buchstaben pro Raum, etwa DACH, TAV, WALD, TURM |
 | Sprecher | MAX, PIX, OPA, OMA; NAR für Regie- und Animationszeilen ohne Sprecher (nicht vertont); Nebenfiguren mit drei Buchstaben wie GOL, ZEL, WAL, bei Gruppen auch mit Ziffer (GO1, GO2). Die Kürzel gelten je Abschnitt und stehen in den Welt-Tabellen (`welten/*.yaml`); dasselbe Kürzel kann in einem anderen Abschnitt eine andere Figur meinen (MUT ist in Welt 3 M.U.T.T.I., im Finale die Mutter) |
 
+**Schlüssel für Namen in der Oberfläche:** Was die Maus beim Überfahren zeigt und das Notizbuch als Ziel nennt, steht nicht im Skript, sondern in `uebersetzung/ui.csv` (Spalten keys, de, en):
+
+| Schlüssel | Wofür | Beispiel |
+| --- | --- | --- |
+| `UI_OBJ_<objekt_id>` | Hotspot, Prop, Ausgang mit eigenem Namen, Figur, Gegenstand; ID wie in der Welt-Tabelle bzw. aus dem Auslöser („Ansehen: Fondue-Topf“ → `fondue_topf`) | `UI_OBJ_FONDUE_TOPF` |
+| `UI_RAUM_<raum_id>` | Raumname, auch für Ausgänge ohne eigenen Namen | `UI_RAUM_TAVERNE` |
+| `UI_ZIEL_<Abschnitt>_<Rätsel-ID>` | Ziel im Notizbuch, je Rätselschritt; mit Abschnitt, weil die Rätsel-IDs in jeder Welt neu bei R1 beginnen | `UI_ZIEL_P0_P1`, `UI_ZIEL_W1_R4A` |
+
+Objekt- und Raum-IDs sind über das ganze Spiel ein Name: Dieselbe ID in zwei Räumen (etwa `fenster`) zeigt denselben Namen. Braucht ein Objekt einen anderen Namen, bekommt es eine eigene ID. Zustände mit eigenem Namen hängen den Zustand an (`UI_OBJ_ANTENNE`, `UI_OBJ_EIMER_MIT_WASSER`). `tools/godot_raeume.py` meldet fehlende Schlüssel mit Vorschlag.
+
 **Spalten der Skript-Tabelle:**
 
 | Spalte | Inhalt | Beispiel |
@@ -32,7 +42,7 @@ Jede Zeile des Spiels steht genau einmal in einer Skript-Tabelle pro Welt und ha
 
 Kurzform in den Skript-Tabellen: Die Tabellen im Dokument zeigen nur ID, Sprecher, Text und Regie (bei Szenen) oder Auslöser (sonst); eine Bedingung steht im Auslöser nach Semikolon, etwa „Kalender; nach P1“. Art und Status ergeben sich aus Abschnitt und ID, Text EN füllt Claude später in der CSV. Die volle Tabelle mit allen zehn Spalten entsteht erst beim Export.
 
-Godot bekommt daraus eine CSV-Übersetzungsdatei mit den Spalten ID, de und en. Ein kleines Export-Skript, das Claude schreibt, wandelt die Tabelle nach jeder Änderung um. Im GDScript steht dann nur die ID, etwa `await C.Max.say("P0_DACH_MAX_0010")`, und Godot setzt je nach Sprache den Text ein. Texte in Menüs und Knöpfen holt Godot mit tr("UI\_MENU\_CONTINUE") aus derselben CSV, also keine festen Strings in Szenen.
+Godot bekommt daraus eine CSV-Übersetzungsdatei mit den Spalten ID, de und en. Ein kleines Export-Skript, das Claude schreibt, wandelt die Tabelle nach jeder Änderung um. Im GDScript steht dann nur die ID, etwa `await C.Max.say("P0_DACH_MAX_0010")`, und Godot setzt je nach Sprache den Text ein. Texte in Menüs und Knöpfen holt Godot mit tr("UI\_MENU\_CONTINUE") aus derselben CSV, also keine festen Strings in Szenen. Umgesetzt in `tools/skript_export.py`: Es schreibt `game/lokalisierung/texte.csv` (keys, de, en), den englischen Text holt es aus `uebersetzung/en.csv`, Menütexte aus `uebersetzung/ui.csv`. Kaskaden mit „//“ werden in Blasen geteilt: Die erste Blase behält die Zeilen-ID, jede weitere bekommt `_2`, `_3` angehängt (`P0_DACH_PIX_0020_2`); dieselben Schlüssel benennen die Audiodateien.
 
 Eigennamen-Glossar: Sprechende Namen werden nicht wörtlich übersetzt, sondern bekommen eine englische Entsprechung mit demselben Witz. Die Liste wächst mit jeder Welt; Claude hält sie beim Übersetzen ein.
 
@@ -56,14 +66,20 @@ Eigennamen-Glossar: Sprechende Namen werden nicht wörtlich übersetzt, sondern 
 | Art | Wann | Umfang |
 | --- | --- | --- |
 | Szene | Zwischensequenzen und Story-Momente | Fest, wird zuerst geschrieben |
-| Gespräch | Dialogbäume mit Auswahl, je Option eine Antwort | Pro Figur ein Baum, drei bis sechs Optionen |
-| Ansehen | Rechtsklick auf Hotspot oder Gegenstand | Jeder Hotspot eine Zeile von Max, etwa jeder dritte zusätzlich Pixel |
-| Benutzen | Benutzen oder Nehmen in der Welt | Jeder Hotspot mit Funktion; sonst Ersatzzeile |
-| Kombinieren | Gegenstand auf Gegenstand oder Hotspot | Alle Lösungen, dazu die naheliegenden Fehlversuche |
+| Gespräch | Dialogbäume mit Auswahl, je Option eine Antwort | Pro Figur ein Baum, drei bis sechs Optionen, dazu zwei Abschiedszeilen (ABS) |
+| Ansehen | Rechtsklick auf Hotspot oder Gegenstand | Jeder Hotspot und jeder Gegenstand (je Zustand) eine erste und eine zweite Zeile von Max, etwa jeder dritte zusätzlich beide von Pixel; ab dem dritten Mal der Wiederholungs-Pool |
+| Benutzen | Benutzen oder Nehmen in der Welt | Jeder Hotspot mit Funktion; sonst Ersatzzeile. Was der Spieler nehmen kann, aber gerade nicht darf (Ketchup vor der Erlaubnis, zweite Flasche), bekommt eine eigene Zeile mit dem Grund, nie Ersatz oder Stille |
+| Kombinieren | Gegenstand auf Gegenstand oder Hotspot | Alle Lösungen, dazu die naheliegenden Fehlversuche. Funktioniert eine Lösung nur an einem Ort, sagt die Zeile am falschen Ort, wohin (etwa Käse auf den Löffel nur beim Stabmacher) |
 | Ersatz | Nichts Spezielles passt | Ein Pool von 25 Zeilen pro Figur, zufällig gezogen, nie zweimal hintereinander |
 | Hinweis | Pixels Hilfeknopf | Drei Zeilen pro Rätsel, siehe Hinweissystem |
 | Zuruf | Pixel kommentiert ungefragt, wenn der Spieler eine Weile nichts tut | Zwei bis drei pro Raum |
 | Pixel auf Mensch | Pixel wird als Gegenstand auf eine Figur oder einen Gegenstand gezogen | Eine Zeile je Figur; auf Gegenständen eine Schnuppern-Zeile; 40 bis 60 Zeilen je Welt |
+
+**Wiederholung und Erschöpfung:**
+
+- Ansehen in der Welt und im Inventar: Beim ersten Mal kommt die eigene Zeile, beim zweiten die eigene Zeile mit „zweites Mal“ im Auslöser (jede Ansehen-Stelle bekommt eine, direkt unter der ersten). Ab dem dritten Mal kommt immer eine Zeile aus dem Wiederholungs-Pool (`SYS_WDH_MAX_*`, `SYS_WDH_PIX_*`, Prolog-Skript Abschnitt 9), nie zweimal dieselbe hintereinander, gesprochen vom Sprecher der ersten Zeile. Gezählt wird je Objekt, Zustand und Figur; der Zähler wird mitgespeichert.
+- Inventar-Ansehen: Jeder Gegenstand hat je Zustand eine Zeile im Skript-Abschnitt INV seines Abschnitts, Auslöser „Ansehen: <Name>, <zustand>“, optional „…, zweites Mal“.
+- Gespräche: Optionen mit Hinweis oder Rätselbezug tragen „(bleibt)“ hinter „Option <Figur>“ und bleiben nach Nutzung ausgegraut wählbar; Plauderoptionen verschwinden. Ist nur noch die Option übrig, die das Gespräch beendet, öffnet ein Klick auf die Figur kein Menü, sondern spielt abwechselnd ihre zwei Abschiedszeilen (Auslöser „Reden, Gespräch erschöpft“). Sind alle Plauderoptionen einer Figur weg, sagt Max beim nächsten Klick auf sie einmalig eine Zeile aus dem Pool `SYS_PLA_MAX_*` (Auslöser „Plauderoptionen erschöpft“, Prolog-Skript Abschnitt 9).
 
 **Schreibregeln:**
 
@@ -74,7 +90,7 @@ Eigennamen-Glossar: Sprechende Namen werden nicht wörtlich übersetzt, sondern 
 - Ein Fehlversuch darf nie wie eine Belohnung für Raten wirken, aber er soll lustig sein. Naheliegende falsche Kombinationen bekommen eine eigene Zeile.
 - Jede Zeile, die eine Lösung andeutet, steht so im Skript, dass das Hinweissystem darauf aufbauen kann.
 
-**Umfang:** Laut `04-audio.md` etwa 3.000 bis 4.000 Zeilen. Als Budget: Prolog 170, jede Welt 700 bis 850, Zwischenspiele 170, Finale und Abspann 280, Menüs und Systemtexte 150. Die Ersatzzeilen-Pools (`SYS_ERS_*`, 50 Zeilen) stehen in `skript/prolog.md`, zählen aber zu Menüs und Systemtexten; der Prolog selbst hat 124 Zeilen. Die Budgets für Zwischenspiele und Finale sind am 9. November 2026 an die Skript-Entwürfe angeglichen (168 und 276 Zeilen); die Welt-Entwürfe liegen noch darüber (siehe `offene-punkte.md`, P5). Die Pixel-auf-Mensch-Zeilen stecken im Budget der Welten.
+**Umfang:** Etwa 5.000 Zeilen (angehoben am 9. November 2026, weil jede Ansehen-Stelle eine Zweitzeile bekommt und Inventar-Ansehen, Abschiedszeilen und Pools dazukamen). Als Budget: Prolog 170, jede Welt 1.000 bis 1.100, Zwischenspiele 200, Finale und Abspann 320, Menüs und Systemtexte 150. Die Systemzeilen (`SYS_ERS_*` 50, `SYS_WDH_*` 30, `SYS_PLA_*` 6) stehen in `skript/prolog.md`, zählen aber zu Menüs und Systemtexten; der Prolog selbst hat 165 Zeilen. Stand der Entwürfe am 9. November 2026: Welten 1.019 bis 1.099, Zwischenspiele 191, Finale und Abspann 315. Die Pixel-auf-Mensch-Zeilen stecken im Budget der Welten.
 
 **Ablauf pro Raum:**
 
@@ -120,9 +136,10 @@ Die Steuerung ist eine Zwei-Klick-Steuerung ohne Verbenleiste: Linksklick tut da
 | Linksklick auf Boden | Gehen; Doppelklick auf einen Ausgang wechselt sofort den Raum |
 | Linksklick auf Hotspot | Benutzen, Nehmen oder Reden, je nach Objekt; der Zeiger zeigt vorher, was passiert |
 | Rechtsklick | Ansehen |
-| Gegenstand im Inventar anklicken, dann Ziel | Kombinieren oder Benutzen mit; Rechtsklick legt ihn zurück |
+| Gegenstand im Inventar anklicken, dann Ziel | Kombinieren oder Benutzen mit; Rechtsklick legt ihn zurück. Den ausgewählten Gegenstand auf sich selbst anwenden darf eine eigene Zeile haben, aber kein Rätsel hängt davon ab |
+| Pixel-Feld ganz links in der Inventarleiste | Solange Max aktiv und Pixel wach ist, verhält sich Pixel wie ein Gegenstand: auswählen und auf ein Objekt oder eine Figur anwenden („Pixel auf Mensch“, Schnuppern auf Gegenständen) |
 | Umschalt/Shift (halten) | Zeigt alle Hotspots im Raum als kleine Punkte |
-| Tab oder Klick aufs Porträt | Wechsel zwischen Max und Pixel (ab Welt 1) |
+| Tab oder Klick aufs Porträt | Wechsel zwischen Max und Pixel (ab Welt 1); im Prolog ohne Wirkung |
 | Linksklick, Leertaste oder Eingabetaste während Text | Text weiter: überspringt die aktuelle Zeile (Tasten in den Optionen umlegbar) |
 | Esc | Überspringt eine Zwischensequenz, sonst Pausemenü |
 | F5 / F9 | Schnellspeichern / Schnellladen |
@@ -131,12 +148,12 @@ Die Steuerung ist eine Zwei-Klick-Steuerung ohne Verbenleiste: Linksklick tut da
 
 | Element | Ort | Verhalten |
 | --- | --- | --- |
-| Inventarleiste | Oben, 32 Pixel hoch, acht Plätze für 24×24-Symbole | Klappt ein, sobald die Maus den oberen Rand verlässt; Pfeile blättern bei mehr als acht Gegenständen |
+| Inventarleiste | Oben, 32 Pixel hoch, acht Plätze für 24×24-Symbole; bei aktivem Max ist der erste Platz das Pixel-Feld (ab P1), bei aktivem Pixel zeigt die Leiste Pixels einen Gegenstand im Maul | Klappt ein, sobald die Maus den oberen Rand verlässt; Pfeile blättern bei mehr als acht Gegenständen |
 | Porträts von Max und Pixel | Oben links, 24×24 | Immer sichtbar; die aktive Figur ist hell, die andere grau |
 | Hilfe-Pfote | Oben rechts, 24×24 | Immer sichtbar; leuchtet sanft, wenn ein neuer Hinweis bereitliegt |
 | Objektname | Unter dem Zeiger, eine Zeile | Zeigt beim Überfahren den Namen, beim Kombinieren „Thunfischdose mit Pixel“ |
-| Sprechblasen | Über der sprechenden Figur | Rand und Farbe je Figur (siehe Schrift) |
-| Dialogauswahl | Unten, bis zu vier Zeilen | Mausrad oder Pfeile bei mehr Optionen; gelesene Optionen werden grau |
+| Sprechblasen | Über der sprechenden Figur | Rand und Farbe je Figur (siehe Schrift). Sprechende Dinge ohne Figur (Brunnen, Grammophon, Geheimtür, Spiegel) sprechen mit Blase über dem Objekt in ihrer Sprecherfarbe, nie als Systemtext |
+| Dialogauswahl | Unten, bis zu vier Zeilen | Mausrad oder Pfeile bei mehr Optionen; gelesene Optionen werden grau. Dieselbe Auswahl dient für Wahlen ohne Gesprächsfigur (Wünsche am Brunnen, Passwort an der Geheimtür); ein Passwort setzt Max Teil für Teil zusammen, gewählte Teile verschwinden, damit nichts geraten wird |
 | Sonder-Leisten | Je nach Welt | Fernbedienung (Welt 4) und Code-Sicht (Welt 3) erscheinen nur dort, unten rechts; in Gesprächen ist die Fernbedienungs-Leiste ausgegraut, außer im Gespräch mit dem Kommissar (Rätsel Welt 4, Gäste zwischen den Sendern) |
 
 Mockup: Bevor Claude die UI baut, entsteht ein Bild in 320×180 mit allen Elementen aus dieser Tabelle auf dem Dachboden-Hintergrund, mit Inventarleiste, Sprechblase mit drei Zeilen und Dialogauswahl. Sebastian gibt das Bild frei, danach erst Code.
@@ -182,7 +199,7 @@ Die Hilfe-Pfote gibt zu jedem offenen Rätselschritt drei Hinweise, vom Stups bi
 4. Gibt es keinen solchen, nimmt er den offenen Schritt mit der kleinsten Rätselnummer.
 5. Ist nichts offen, sagt Pixel, wohin es weitergeht („Da ist ein Ausgang. Ausgänge sind zum Benutzen da.“).
 
-**Stufen und Wartezeit:** Jeder Schritt merkt sich seine erreichte Stufe, auch über Speichern hinweg. Ein erneuter Klick wiederholt den letzten Hinweis. Die nächste Stufe gibt es erst nach 30 Sekunden (Stufe 2) bzw. 60 Sekunden (Stufe 3) seit dem letzten Hinweis; vorher sagt Pixel eine Wartezeile („Ich denke noch nach. Das sieht aus wie Schlafen, ist es aber nicht.“). Die Pfote leuchtet sanft, sobald die nächste Stufe bereitliegt.
+**Stufen und Wartezeit:** Jeder Schritt merkt sich seine erreichte Stufe, auch über Speichern hinweg. Ein erneuter Klick wiederholt den letzten Hinweis. Die nächste Stufe gibt es erst nach 30 Sekunden (Stufe 2) bzw. 60 Sekunden (Stufe 3) seit dem letzten Hinweis; vorher sagt Pixel eine Wartezeile („Ich denke noch nach. Das sieht aus wie Schlafen, ist es aber nicht.“). Jeder Abschnitt mit Pfote hat eine eigene Wartezeile mit der Nummer 9995 im Ton seiner Welt. Die Pfote leuchtet sanft, sobald die nächste Stufe bereitliegt.
 
 **Wer hilft wann:** Im Prolog schläft Pixel bis P1, also gibt Opa die Hinweise zu P1 über Reden; die Pfote ist bis dahin ausgegraut. In den Zwischenspielen ist kein Schritt offen; die Pfote sagt dort nur ZS1\_HINT\_PIX\_0010. In Welt 3 hängt der Weg von der Ebene ab: In der Realität steht Pixel neben Max und spricht normal. In der Simulation hört Max ihn, sobald Kabel-Kalle ihn beim ersten Aufwachen „auf die Leitung“ gelegt hat, aus dem Hörer der nächsten Telefonzelle oder aus Omas Wandtelefon; vorher und im Büroturm (Rätsel 7) gibt es nur das Terminal mit Miau-Morse, das Kalle übersetzt. Im Labor spricht Pixel aus M.U.T.T.I.s Lautsprecher, den Kalle angezapft hat. In Welt 4 meldet er sich aus dem Rauschen. Die Pfote funktioniert also überall, nur ihr Ausgabeweg wechselt.
 
@@ -203,7 +220,7 @@ Errungenschaften (Steam): 13 Stück, alle aus Zählern und Schaltern, die das Sp
 - Welt gerettet: Finale gesehen
 - Neugier: alle Nahansichten des Spiels geöffnet
 
-**Datenformat:** Eine Datei pro Welt, etwa `hints_w1.tres`, mit einem Eintrag pro Schritt:
+**Datenformat:** Eine Datei pro Abschnitt, `game/daten/hinweise/<abschnitt>.json`, erzeugt von `tools/spieldaten.py` aus Welt-Tabelle und Skript (nie von Hand bearbeiten), mit einem Eintrag pro Schritt:
 
 | Feld | Beispiel |
 | --- | --- |
@@ -276,6 +293,7 @@ Während einer Zwischensequenz, eines Gesprächs oder eines Minispiels merkt sic
 
 - Gespeichert werden nur Schalter und Werte, nie etwas, das sich daraus ableiten lässt. Ob eine Tür offen ist, folgt aus dem Rätselschalter.
 - Schalter heißen wie die Rätselschritte, damit Hinweissystem, Notizbuch und Speichern dieselbe Sprache sprechen.
+- Hilfsschalter und Hilfswerte, die zu keinem Rätsel gehören (etwa `P0_SCHNEE_GESEHEN`, `W1_ZIEGE_FOLGT`), tragen das Präfix ihres Abschnitts und stehen in der Welt-Tabelle unter `weitere_schalter`; `tools/pruefen.py` warnt, wenn der Code einen anderen Namen setzt.
 - Claude schreibt einen automatischen Test, der im Vertical Slice nach jedem gelösten Schritt speichert, lädt und prüft, dass nichts fehlt.
 
 ## Offene Entscheidungen

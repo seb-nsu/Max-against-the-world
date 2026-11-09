@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://bsxkgofn5ikqo"]
+
+[ext_resource type="Script" path="res://game/inventory_items/drachenei/inventory_item_drachenei_state.gd" id="1_bj2rk"]
+
+[resource]
+resource_name = "Drachenei"
+script = ExtResource("1_bj2rk")
+script_name = "Drachenei"
+scene = "res://game/inventory_items/drachenei/inventory_item_drachenei.tscn"

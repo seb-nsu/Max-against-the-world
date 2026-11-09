@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://b1lxn6jr1mtg7"]
+
+[ext_resource type="Script" path="res://game/inventory_items/steckbrief/inventory_item_steckbrief.gd" id="1_buxcm"]
+[ext_resource type="Texture2D" uid="uid://dmmbbjxxk5d28" path="res://grafik/platzhalter/gegenstand_steckbrief.png" id="1_n4d4o"]
+
+[node name="ItemSteckbrief" type="TextureRect" unique_id=109056200]
+texture_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 4
+mouse_filter = 0
+texture = ExtResource("1_n4d4o")
+stretch_mode = 5
+script = ExtResource("1_buxcm")
+script_name = "Steckbrief"
+description = "UI_OBJ_STECKBRIEF"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1908072098]

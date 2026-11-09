@@ -1,0 +1,973 @@
+{
+ "abschnitt": "welt-3",
+ "name": "Neo-Neustadt 2099",
+ "skript_praefix": "W3",
+ "raeume": [
+  {
+   "id": "unterstadt_strasse",
+   "name": "Unterstadt, Straße",
+   "skript_code": [
+    "ANK",
+    "STR",
+    "NUD",
+    "TEST",
+    "SUPP"
+   ],
+   "groesse": "640x180",
+   "ausgaenge": [
+    "apothekengasse",
+    "laboreingang",
+    "widerstandsbasis"
+   ],
+   "erreichbar_ab": "start",
+   "musik": "w3_unterstadt",
+   "zustaende": []
+  },
+  {
+   "id": "apothekengasse",
+   "name": "Apothekengasse mit Pastillenautomat",
+   "skript_code": [
+    "APO",
+    "SOFA"
+   ],
+   "groesse": "320x180",
+   "ausgaenge": [
+    "unterstadt_strasse"
+   ],
+   "erreichbar_ab": "R1b",
+   "musik": "w3_unterstadt",
+   "zustaende": [
+    "Fächer zu",
+    "Fächer offen"
+   ]
+  },
+  {
+   "id": "widerstandsbasis",
+   "name": "Widerstandsbasis",
+   "skript_code": [
+    "BAS",
+    "PIEP",
+    "ENDE"
+   ],
+   "groesse": "640x180",
+   "ausgaenge": [
+    "unterstadt_strasse",
+    "kuehlung",
+    "stadtstrasse",
+    "testkammer_1"
+   ],
+   "erreichbar_ab": "R3b",
+   "musik": "w3_basis",
+   "zustaende": [
+    "Fenster zu",
+    "Fenster offen",
+    "Tasse auf dem Tisch",
+    "Kaffee am Boden"
+   ]
+  },
+  {
+   "id": "kuehlung",
+   "name": "Kühlung",
+   "skript_code": [],
+   "groesse": "320x180",
+   "ausgaenge": [
+    "widerstandsbasis"
+   ],
+   "erreichbar_ab": "R3b",
+   "musik": "w3_basis",
+   "zustaende": [
+    "Eimer voll",
+    "Eimer ausgekippt"
+   ]
+  },
+  {
+   "id": "laboreingang",
+   "name": "Laboreingang",
+   "skript_code": [
+    "EING"
+   ],
+   "groesse": "320x180",
+   "ausgaenge": [
+    "unterstadt_strasse"
+   ],
+   "erreichbar_ab": "start",
+   "musik": "w3_unterstadt",
+   "zustaende": [
+    "Tür zu",
+    "Tür offen"
+   ]
+  },
+  {
+   "id": "stadtstrasse",
+   "name": "Stadtstraße",
+   "skript_code": [
+    "SIM",
+    "TUER"
+   ],
+   "groesse": "640x180",
+   "ausgaenge": [
+    "kueche_orakel",
+    "buero_50",
+    "widerstandsbasis"
+   ],
+   "erreichbar_ab": "R3b",
+   "musik": "w3_simulation",
+   "zustaende": [
+    "Tag",
+    "Nacht"
+   ]
+  },
+  {
+   "id": "kueche_orakel",
+   "name": "Küche der Orakel-Oma",
+   "skript_code": [
+    "KUCH"
+   ],
+   "groesse": "320x180",
+   "ausgaenge": [
+    "stadtstrasse"
+   ],
+   "erreichbar_ab": "R3b",
+   "musik": "w3_simulation",
+   "zustaende": [
+    "Vase auf dem Regal",
+    "Scherben am Boden"
+   ]
+  },
+  {
+   "id": "buero_50",
+   "name": "Büroturm, 50. Stock",
+   "skript_code": [
+    "TURM",
+    "TERM"
+   ],
+   "groesse": "320x180",
+   "ausgaenge": [
+    "stadtstrasse"
+   ],
+   "erreichbar_ab": "R5",
+   "musik": "w3_simulation",
+   "zustaende": []
+  },
+  {
+   "id": "testkammer_1",
+   "name": "Testkammer 1",
+   "skript_code": [
+    "KAM1"
+   ],
+   "groesse": "320x180",
+   "ausgaenge": [
+    "testkammer_2",
+    "widerstandsbasis"
+   ],
+   "erreichbar_ab": "R9a",
+   "musik": "w3_labor",
+   "zustaende": [
+    "Ausgangstür zu",
+    "Ausgangstür offen"
+   ]
+  },
+  {
+   "id": "testkammer_2",
+   "name": "Testkammer 2",
+   "skript_code": [
+    "KAM2"
+   ],
+   "groesse": "320x180",
+   "ausgaenge": [
+    "testkammer_1",
+    "testkammer_3"
+   ],
+   "erreichbar_ab": "R9b",
+   "musik": "w3_labor",
+   "zustaende": [
+    "Laser tödlich",
+    "Laser harmlos"
+   ]
+  },
+  {
+   "id": "testkammer_3",
+   "name": "Testkammer 3",
+   "skript_code": [
+    "KAM3"
+   ],
+   "groesse": "320x180",
+   "ausgaenge": [
+    "testkammer_2",
+    "kern"
+   ],
+   "erreichbar_ab": "R9c",
+   "musik": "w3_labor",
+   "zustaende": [
+    "Tür zu",
+    "Tür offen"
+   ]
+  },
+  {
+   "id": "kern",
+   "name": "Kern von M.U.T.T.I.",
+   "skript_code": [
+    "KERN"
+   ],
+   "groesse": "320x180",
+   "ausgaenge": [
+    "testkammer_3"
+   ],
+   "erreichbar_ab": "R9d",
+   "musik": "w3_kern",
+   "zustaende": [
+    "Zelle glühend",
+    "Zelle vereist",
+    "Sockel leer"
+   ]
+  }
+ ],
+ "sonder_codes": [
+  "HINT",
+  "INV",
+  "ABS"
+ ],
+ "sonder_sprecher": [
+  "NAR"
+ ],
+ "figuren": [
+  {
+   "id": "max",
+   "name": "Max",
+   "kuerzel": "MAX",
+   "raum": [
+    "unterstadt_strasse",
+    "apothekengasse",
+    "widerstandsbasis",
+    "laboreingang",
+    "stadtstrasse",
+    "kueche_orakel",
+    "buero_50",
+    "testkammer_1",
+    "testkammer_2",
+    "testkammer_3",
+    "kern"
+   ],
+   "groesse_px": 56,
+   "spielbar": true
+  },
+  {
+   "id": "pixel",
+   "name": "Pixel",
+   "kuerzel": "PIX",
+   "raum": [
+    "unterstadt_strasse",
+    "apothekengasse",
+    "widerstandsbasis",
+    "kuehlung",
+    "laboreingang"
+   ],
+   "groesse_px": 18,
+   "spielbar": true
+  },
+  {
+   "id": "opa",
+   "name": "Opa",
+   "kuerzel": "OPA",
+   "raum": [
+    "widerstandsbasis",
+    "testkammer_1"
+   ],
+   "groesse_px": 24,
+   "spielbar": false
+  },
+  {
+   "id": "morphaeus",
+   "name": "Morphäus",
+   "kuerzel": "MOR",
+   "raum": [
+    "unterstadt_strasse",
+    "apothekengasse"
+   ],
+   "groesse_px": 60,
+   "spielbar": false
+  },
+  {
+   "id": "deckert",
+   "name": "Deckert",
+   "kuerzel": "DEC",
+   "raum": "unterstadt_strasse",
+   "groesse_px": 60,
+   "spielbar": false
+  },
+  {
+   "id": "herr_vier",
+   "name": "Herr Vier",
+   "kuerzel": "VIE",
+   "raum": "unterstadt_strasse",
+   "groesse_px": 56,
+   "spielbar": false
+  },
+  {
+   "id": "weinender_mann",
+   "name": "Weinender Mann",
+   "kuerzel": "WEI",
+   "raum": "unterstadt_strasse",
+   "groesse_px": 58,
+   "spielbar": false
+  },
+  {
+   "id": "frau_regenschirm",
+   "name": "Frau mit Regenschirm",
+   "kuerzel": "FRA",
+   "raum": "unterstadt_strasse",
+   "groesse_px": 56,
+   "spielbar": false
+  },
+  {
+   "id": "strassenmusiker",
+   "name": "Straßenmusiker",
+   "kuerzel": "MUS",
+   "raum": "unterstadt_strasse",
+   "groesse_px": 58,
+   "spielbar": false
+  },
+  {
+   "id": "pastillenautomat",
+   "name": "Pastillenautomat",
+   "kuerzel": "AUT",
+   "raum": "apothekengasse",
+   "groesse_px": 0,
+   "spielbar": false
+  },
+  {
+   "id": "kalle",
+   "name": "Kalle",
+   "kuerzel": "KAL",
+   "raum": [
+    "widerstandsbasis",
+    "laboreingang"
+   ],
+   "groesse_px": 58,
+   "spielbar": false
+  },
+  {
+   "id": "rebellin",
+   "name": "Rebellin",
+   "kuerzel": "REB",
+   "raum": "widerstandsbasis",
+   "groesse_px": 58,
+   "spielbar": false
+  },
+  {
+   "id": "rebell",
+   "name": "Rebell",
+   "kuerzel": "REL",
+   "raum": "widerstandsbasis",
+   "groesse_px": 60,
+   "spielbar": false
+  },
+  {
+   "id": "piepsi",
+   "name": "Piepsi",
+   "kuerzel": "PIE",
+   "raum": "widerstandsbasis",
+   "groesse_px": 18,
+   "spielbar": false
+  },
+  {
+   "id": "hausmeister",
+   "name": "Modell 08/15",
+   "kuerzel": "HAU",
+   "raum": [
+    "laboreingang",
+    "widerstandsbasis"
+   ],
+   "groesse_px": 58,
+   "spielbar": false
+  },
+  {
+   "id": "orakel_oma",
+   "name": "Orakel-Oma",
+   "kuerzel": "ORA",
+   "raum": "kueche_orakel",
+   "groesse_px": 56,
+   "spielbar": false
+  },
+  {
+   "id": "radio",
+   "name": "Radio",
+   "kuerzel": "RAD",
+   "raum": "kueche_orakel",
+   "groesse_px": 0,
+   "spielbar": false
+  },
+  {
+   "id": "schmidt",
+   "name": "Schmidt",
+   "kuerzel": "SCH",
+   "raum": [
+    "stadtstrasse",
+    "buero_50"
+   ],
+   "groesse_px": 60,
+   "spielbar": false
+  },
+  {
+   "id": "klon",
+   "name": "Klon",
+   "kuerzel": "KLO",
+   "raum": "buero_50",
+   "groesse_px": 60,
+   "spielbar": false
+  },
+  {
+   "id": "tuer",
+   "name": "Die Tür",
+   "kuerzel": "TUR",
+   "raum": [
+    "stadtstrasse",
+    "testkammer_3"
+   ],
+   "groesse_px": 0,
+   "spielbar": false
+  },
+  {
+   "id": "schwarze_katze",
+   "name": "Schwarze Katze",
+   "kuerzel": null,
+   "raum": "stadtstrasse",
+   "groesse_px": 14,
+   "spielbar": false
+  },
+  {
+   "id": "mutti",
+   "name": "M.U.T.T.I.",
+   "kuerzel": "MUT",
+   "raum": [
+    "testkammer_1",
+    "testkammer_2",
+    "testkammer_3",
+    "kern"
+   ],
+   "groesse_px": 120,
+   "spielbar": false
+  },
+  {
+   "id": "bernd",
+   "name": "Bernd",
+   "kuerzel": "BER",
+   "raum": [
+    "testkammer_1",
+    "testkammer_3"
+   ],
+   "groesse_px": 16,
+   "spielbar": false
+  },
+  {
+   "id": "portalgeraet_stimme",
+   "name": "Portalgerät",
+   "kuerzel": "POR",
+   "raum": "testkammer_1",
+   "groesse_px": 0,
+   "spielbar": false
+  }
+ ],
+ "gegenstaende": [
+  {
+   "id": "telefonbuchseite",
+   "name": "Telefonbuchseite",
+   "herkunft": "unterstadt_strasse",
+   "zustaende": [
+    "normal"
+   ],
+   "verwendet_in": [
+    "R8"
+   ],
+   "reist_mit": false,
+   "nahansicht": true
+  },
+  {
+   "id": "rote_pastille",
+   "name": "Rote Pastille",
+   "herkunft": "R3a",
+   "zustaende": [
+    "normal"
+   ],
+   "verwendet_in": [
+    "R3b"
+   ],
+   "reist_mit": false,
+   "nahansicht": false
+  },
+  {
+   "id": "blaue_pastille",
+   "name": "Blaue Pastille",
+   "herkunft": "R3a",
+   "zustaende": [
+    "normal"
+   ],
+   "verwendet_in": [],
+   "ohne_verwendung": "Fehlwahl",
+   "reist_mit": false,
+   "nahansicht": false
+  },
+  {
+   "id": "omas_kekse",
+   "name": "Omas Kekse",
+   "herkunft": "R3b",
+   "zustaende": [
+    "kalt",
+    "ofenwarm",
+    "hundekuchen"
+   ],
+   "verwendet_in": [
+    "R11"
+   ],
+   "reist_mit": true,
+   "nahansicht": false
+  },
+  {
+   "id": "rezeptkarte",
+   "name": "Omas Rezeptkarte",
+   "herkunft": "R4",
+   "zustaende": [
+    "rezeptkarte",
+    "glueckskeks"
+   ],
+   "verwendet_in": [
+    "R12"
+   ],
+   "reist_mit": false,
+   "nahansicht": false
+  },
+  {
+   "id": "kaffeetasse",
+   "name": "Kaffeetasse",
+   "herkunft": "buero_50",
+   "zustaende": [
+    "normal"
+   ],
+   "verwendet_in": [
+    "R6a",
+    "R6b"
+   ],
+   "reist_mit": true,
+   "nahansicht": false
+  },
+  {
+   "id": "sonnenbrille",
+   "name": "Agent Schmidts Sonnenbrille",
+   "herkunft": "R6b",
+   "zustaende": [
+    "normal"
+   ],
+   "verwendet_in": [],
+   "reist_mit": true,
+   "nahansicht": false
+  },
+  {
+   "id": "schmidts_akte",
+   "name": "Schmidts Akte",
+   "herkunft": "R6b",
+   "zustaende": [
+    "datei",
+    "ordner"
+   ],
+   "verwendet_in": [
+    "R10"
+   ],
+   "reist_mit": true,
+   "nahansicht": true
+  },
+  {
+   "id": "farbcode_zettel",
+   "name": "Farbcode-Zettel",
+   "herkunft": "buero_50",
+   "zustaende": [
+    "normal"
+   ],
+   "verwendet_in": [
+    "R7a"
+   ],
+   "reist_mit": false,
+   "nahansicht": false
+  },
+  {
+   "id": "morse_tabelle",
+   "name": "Morse-Tabelle",
+   "herkunft": "R13",
+   "zustaende": [
+    "normal"
+   ],
+   "verwendet_in": [
+    "R7a"
+   ],
+   "reist_mit": true,
+   "nahansicht": false
+  },
+  {
+   "id": "zugangskarte",
+   "name": "Zugangskarte",
+   "herkunft": "R12",
+   "zustaende": [
+    "plastikkarte",
+    "code_schluessel"
+   ],
+   "verwendet_in": [
+    "R9a"
+   ],
+   "reist_mit": false,
+   "nahansicht": false
+  },
+  {
+   "id": "portalgeraet",
+   "name": "Portalgerät",
+   "herkunft": "testkammer_1",
+   "zustaende": [
+    "leer"
+   ],
+   "verwendet_in": [],
+   "reist_mit": true,
+   "nahansicht": false
+  },
+  {
+   "id": "gummihuhn",
+   "name": "Gummihuhn",
+   "herkunft": "testkammer_2",
+   "zustaende": [
+    "harmlos",
+    "toedlich"
+   ],
+   "verwendet_in": [
+    "R9c",
+    "R9d"
+   ],
+   "reist_mit": false,
+   "nahansicht": false
+  },
+  {
+   "id": "energiezelle",
+   "name": "Ewige Energiezelle",
+   "herkunft": "R11",
+   "zustaende": [
+    "gluehend",
+    "vereist"
+   ],
+   "verwendet_in": [],
+   "ohne_verwendung": "Artefakt, Opa legt sie im Zwischenspiel in die Maschine",
+   "reist_mit": false,
+   "nahansicht": false
+  }
+ ],
+ "nahansichten": [
+  {
+   "id": "kochbuch",
+   "name": "Kochbuch",
+   "raum": "kueche_orakel"
+  },
+  {
+   "id": "kritzelei_kammer_2",
+   "name": "Kritzelei",
+   "raum": "testkammer_2"
+  }
+ ],
+ "raetsel": [
+  {
+   "id": "R1a",
+   "name": "Der Mensch-Test, Beobachtungen",
+   "raum": "unterstadt_strasse",
+   "benoetigt": [],
+   "ergibt": [],
+   "schalter": [
+    "BEOBACHTUNG_SCHIRM",
+    "BEOBACHTUNG_MUSIKER",
+    "BEOBACHTUNG_SUPPE"
+   ],
+   "optional": false
+  },
+  {
+   "id": "R1b",
+   "name": "Der Mensch-Test, die drei Fragen",
+   "raum": "unterstadt_strasse",
+   "benoetigt": [
+    "R1a"
+   ],
+   "ergibt": [],
+   "schalter": [
+    "STEMPEL_MENSCH"
+   ],
+   "optional": false
+  },
+  {
+   "id": "R2",
+   "name": "Die Nudelbude „Vier“",
+   "raum": "unterstadt_strasse",
+   "benoetigt": [],
+   "ergibt": [],
+   "schalter": [
+    "MORPHAEUS_GETROFFEN"
+   ],
+   "optional": false
+  },
+  {
+   "id": "R3a",
+   "name": "Der Pastillenautomat, Déjà-vu",
+   "raum": "apothekengasse",
+   "benoetigt": [
+    "R1b",
+    "R2"
+   ],
+   "ergibt": [
+    "rote_pastille",
+    "blaue_pastille"
+   ],
+   "schalter": [
+    "DIAGNOSE_MATRIX"
+   ],
+   "optional": false
+  },
+  {
+   "id": "R3b",
+   "name": "Der Pastillenautomat, die Wahl",
+   "raum": "apothekengasse",
+   "benoetigt": [
+    "R3a",
+    "rote_pastille"
+   ],
+   "ergibt": [
+    "omas_kekse"
+   ],
+   "schalter": [
+    "KEKSE_DABEI",
+    "SIMULATION_OFFEN"
+   ],
+   "optional": false
+  },
+  {
+   "id": "R4",
+   "name": "Die Vase des Orakels",
+   "raum": "kueche_orakel",
+   "benoetigt": [
+    "R3b"
+   ],
+   "ergibt": [
+    "rezeptkarte"
+   ],
+   "schalter": [
+    "VASE_ZERBROCHEN",
+    "REGEL_2"
+   ],
+   "optional": false
+  },
+  {
+   "id": "R5",
+   "name": "Die gesprächige Tür",
+   "raum": "stadtstrasse",
+   "benoetigt": [
+    "R3b"
+   ],
+   "ergibt": [],
+   "schalter": [
+    "CODE_SICHT",
+    "GLASTUER_OFFEN"
+   ],
+   "optional": false
+  },
+  {
+   "id": "R6a",
+   "name": "Die Agenten-Klone, Original und Kopie",
+   "raum": "buero_50",
+   "benoetigt": [
+    "R5",
+    "kaffeetasse"
+   ],
+   "ergibt": [],
+   "schalter": [
+    "HEXENSCHUSS",
+    "TASSE_ORIGINAL"
+   ],
+   "optional": false
+  },
+  {
+   "id": "R6b",
+   "name": "Die Agenten-Klone, Mittagspause",
+   "raum": "buero_50",
+   "benoetigt": [
+    "R6a",
+    "kaffeetasse"
+   ],
+   "ergibt": [
+    "sonnenbrille",
+    "schmidts_akte"
+   ],
+   "schalter": [
+    "KLONE_MITTAGSPAUSE",
+    "REGEL_1"
+   ],
+   "optional": false
+  },
+  {
+   "id": "R7a",
+   "name": "Der Ausgang im 50. Stock, Farbcode",
+   "raum": "buero_50",
+   "benoetigt": [
+    "R6b",
+    "farbcode_zettel",
+    "morse_tabelle"
+   ],
+   "ergibt": [],
+   "schalter": [
+    "FARBCODE_GESENDET"
+   ],
+   "optional": false
+  },
+  {
+   "id": "R7b",
+   "name": "Der Ausgang im 50. Stock, Kabel",
+   "raum": "widerstandsbasis",
+   "benoetigt": [
+    "R7a"
+   ],
+   "ergibt": [],
+   "schalter": [
+    "KABEL_GESTECKT"
+   ],
+   "optional": false
+  },
+  {
+   "id": "R8",
+   "name": "Der Hausmeister Modell 08/15",
+   "raum": "laboreingang",
+   "benoetigt": [
+    "telefonbuchseite"
+   ],
+   "ergibt": [],
+   "schalter": [
+    "HAUSMEISTER_WEG",
+    "FREUND_0815"
+   ],
+   "optional": false
+  },
+  {
+   "id": "R9a",
+   "name": "Die Testkammern, die Leitung",
+   "raum": "laboreingang",
+   "benoetigt": [
+    "R8",
+    "zugangskarte"
+   ],
+   "ergibt": [],
+   "schalter": [
+    "LEITUNG_LABOR"
+   ],
+   "optional": false
+  },
+  {
+   "id": "R9b",
+   "name": "Die Testkammern, Kammer 1",
+   "raum": "testkammer_1",
+   "benoetigt": [
+    "R9a"
+   ],
+   "ergibt": [],
+   "schalter": [
+    "KAMMER_1_GELOEST"
+   ],
+   "optional": false
+  },
+  {
+   "id": "R9c",
+   "name": "Die Testkammern, Kammer 2",
+   "raum": "testkammer_2",
+   "benoetigt": [
+    "R9b",
+    "gummihuhn"
+   ],
+   "ergibt": [],
+   "schalter": [
+    "KAMMER_2_GELOEST",
+    "REGEL_3"
+   ],
+   "optional": false
+  },
+  {
+   "id": "R9d",
+   "name": "Die Testkammern, Kammer 3",
+   "raum": "testkammer_3",
+   "benoetigt": [
+    "R9c",
+    "gummihuhn"
+   ],
+   "ergibt": [],
+   "schalter": [
+    "KAMMER_3_GELOEST"
+   ],
+   "optional": false
+  },
+  {
+   "id": "R10",
+   "name": "Das M.U.T.T.I.-Paradoxon",
+   "raum": "kern",
+   "benoetigt": [
+    "R4",
+    "schmidts_akte",
+    "R9c",
+    "R9d"
+   ],
+   "ergibt": [],
+   "schalter": [
+    "MUTTI_AUS"
+   ],
+   "optional": false
+  },
+  {
+   "id": "R11",
+   "name": "Der glühende Kern",
+   "raum": "kern",
+   "benoetigt": [
+    "R10"
+   ],
+   "benoetigt_eins_von": [
+    "omas_kekse",
+    "R3b"
+   ],
+   "ergibt": [
+    "energiezelle"
+   ],
+   "schalter": [
+    "ZELLE_GEKUEHLT"
+   ],
+   "optional": false
+  },
+  {
+   "id": "R12",
+   "name": "Die vierte Zutat",
+   "raum": "unterstadt_strasse",
+   "benoetigt": [
+    "rezeptkarte"
+   ],
+   "ergibt": [
+    "zugangskarte"
+   ],
+   "schalter": [
+    "SUPPE_GEKOCHT"
+   ],
+   "optional": false
+  },
+  {
+   "id": "R13",
+   "name": "Kalles Morse-Tabelle",
+   "raum": "widerstandsbasis",
+   "benoetigt": [
+    "R3b"
+   ],
+   "ergibt": [
+    "morse_tabelle"
+   ],
+   "schalter": [
+    "MORSE_TABELLE",
+    "OPAS_NACHRICHT"
+   ],
+   "optional": false
+  }
+ ],
+ "weitere_schalter": [
+  "W3_PIXEL_AUF_LEITUNG"
+ ]
+}

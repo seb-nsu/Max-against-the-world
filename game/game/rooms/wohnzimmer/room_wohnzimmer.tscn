@@ -1,0 +1,83 @@
+[gd_scene format=3 uid="uid://clbvhyhajwalp"]
+
+[ext_resource type="Script" path="res://game/rooms/wohnzimmer/room_wohnzimmer.gd" id="1_cljk4"]
+[ext_resource type="PackedScene" uid="uid://qvv0itl7m3ga" path="res://game/rooms/wohnzimmer/walkable_areas/boden/walkable_area_boden.tscn" id="2_whx36"]
+[ext_resource type="PackedScene" uid="uid://bwmc8ae2nvb72" path="res://game/rooms/wohnzimmer/props/background/prop_background.tscn" id="3_2l8he"]
+[ext_resource type="Texture2D" uid="uid://dvrukgnswlyr5" path="res://grafik/platzhalter/raum_wohnzimmer.png" id="4_1odig"]
+[ext_resource type="PackedScene" uid="uid://co4y20dbs3iu" path="res://game/rooms/wohnzimmer/hotspots/fernseher/hotspot_fernseher.tscn" id="5_y7vpg"]
+[ext_resource type="PackedScene" uid="uid://bispvqq14wo8l" path="res://game/rooms/wohnzimmer/hotspots/familienfoto/hotspot_familienfoto.tscn" id="6_lnns3"]
+[ext_resource type="PackedScene" uid="uid://c0nnsw5y6pq1y" path="res://game/rooms/wohnzimmer/hotspots/teetasse/hotspot_teetasse.tscn" id="7_lhb87"]
+[ext_resource type="PackedScene" uid="uid://dik8cnibnsx1d" path="res://game/rooms/wohnzimmer/hotspots/leerer_platz_auf_dem_couchtisch/hotspot_leerer_platz_auf_dem_couchtisch.tscn" id="8_cd42f"]
+[ext_resource type="PackedScene" uid="uid://c86j8km38topt" path="res://game/rooms/wohnzimmer/hotspots/sofa/hotspot_sofa.tscn" id="9_01qb2"]
+[ext_resource type="PackedScene" uid="uid://cr81hxbkydgc5" path="res://game/rooms/wohnzimmer/hotspots/ausgang_treppenhaus/hotspot_ausgang_treppenhaus.tscn" id="10_6xbdn"]
+[ext_resource type="PackedScene" uid="uid://b0iox62w45jxo" path="res://game/rooms/wohnzimmer/markers/start/marker_start.tscn" id="11_vyxjo"]
+[ext_resource type="PackedScene" uid="uid://d1slpglnndrpu" path="res://game/rooms/wohnzimmer/markers/von_treppenhaus/marker_von_treppenhaus.tscn" id="12_xnbt0"]
+
+[node name="RoomWohnzimmer" type="Node2D" unique_id=1451506244]
+script = ExtResource("1_cljk4")
+script_name = "Wohnzimmer"
+width = 320
+height = 180
+
+[node name="WalkableAreas" type="Node2D" parent="." unique_id=1570062211]
+
+[node name="Boden" parent="WalkableAreas" unique_id=210142540 instance=ExtResource("2_whx36")]
+interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(4, 138, 316, 138, 316, 178, 4, 178)])
+
+[node name="Props" type="Node2D" parent="." unique_id=1744186134]
+
+[node name="Background" parent="Props" unique_id=1116247810 instance=ExtResource("3_2l8he")]
+position = Vector2(160, 90)
+texture = ExtResource("4_1odig")
+description = "UI_RAUM_WOHNZIMMER"
+
+[node name="Hotspots" type="Node2D" parent="." unique_id=1232061613]
+
+[node name="Fernseher" parent="Hotspots" unique_id=1360170483 instance=ExtResource("5_y7vpg")]
+position = Vector2(244, 109)
+description = "UI_OBJ_FERNSEHER"
+baseline = 31
+walk_to_point = Vector2(-4, 41)
+
+[node name="Familienfoto" parent="Hotspots" unique_id=94221927 instance=ExtResource("6_lnns3")]
+position = Vector2(150, 51)
+description = "UI_OBJ_FAMILIENFOTO"
+baseline = 17
+walk_to_point = Vector2(0, 99)
+
+[node name="Teetasse" parent="Hotspots" unique_id=1513028340 instance=ExtResource("7_lhb87")]
+position = Vector2(154, 122)
+description = "UI_OBJ_TEETASSE"
+baseline = 6
+walk_to_point = Vector2(-4, 28)
+
+[node name="LeererPlatzAufDemCouchtisch" parent="Hotspots" unique_id=1687414544 instance=ExtResource("8_cd42f")]
+position = Vector2(179, 125)
+description = "UI_OBJ_LEERER_PLATZ_AUF_DEM_COUCHTISCH"
+baseline = 5
+walk_to_point = Vector2(-4, 25)
+
+[node name="Sofa" parent="Hotspots" unique_id=2101987933 instance=ExtResource("9_01qb2")]
+position = Vector2(78, 119)
+description = "UI_OBJ_SOFA"
+baseline = 23
+walk_to_point = Vector2(2, 31)
+
+[node name="AusgangTreppenhaus" parent="Hotspots" unique_id=1121029190 instance=ExtResource("10_6xbdn")]
+position = Vector2(305, 89)
+description = "UI_RAUM_TREPPENHAUS"
+baseline = 49
+walk_to_point = Vector2(-5, 69)
+cursor = 9
+
+[node name="Regions" type="Node2D" parent="." unique_id=1030263414]
+
+[node name="Markers" type="Node2D" parent="." unique_id=1167768577]
+
+[node name="Start" parent="Markers" unique_id=789989615 instance=ExtResource("11_vyxjo")]
+position = Vector2(70, 150)
+
+[node name="VonTreppenhaus" parent="Markers" unique_id=70989407 instance=ExtResource("12_xnbt0")]
+position = Vector2(292, 158)
+
+[node name="Characters" type="Node2D" parent="." unique_id=1306791846]

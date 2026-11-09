@@ -1,0 +1,100 @@
+@tool
+class_name CQHotspot
+extends PopochiuHotspot
+## Basisklasse aller Hotspots (vom Godot-Bau gesetzt).
+##
+## Standard aus dem Bauplan: Rechtsklick sagt die Ansehen-Zeile (Bedingungen „vor/nach Px“,
+## „zweites Mal“, Pixel-Varianten), Linksklick die Benutzen-Zeile, ein Gegenstand darauf seine
+## Kombinationszeile („Eimer auf Fondue-Topf“); sonst Ersatzzeile. Spielt Pixel, schnuppert er
+## (seine Ansehen-Zeile), statt zu benutzen. Rätsellogik gehört in das Skript des Hotspots:
+## _on_click() und _on_item_used(item) überschreiben, Ansehen-Sonderfälle in _on_right_click()
+## (dann ansehen() aufrufen), Pixel als Gegenstand in _pixel_benutzt().
+
+
+
+func bauplan() -> Dictionary:
+	if not is_instance_valid(room):
+		return {}
+	return Bauplan.objekt(room.script_name, script_name)
+
+
+func objekt_id() -> String:
+	return bauplan().get("id", script_name.to_snake_case())
+
+
+## Die Ansehen-Zeile sagen; liefert die gesagte Zeilen-ID ("" bei Ersatzzeile).
+func ansehen() -> String:
+	Hinweise.objekt_beruehrt(objekt_id())
+	var eintraege: Array = bauplan().get("ansehen", [])
+	if room is CQRaum:
+		eintraege = eintraege + room.ansehen_zusatz(objekt_id())
+	return await Spiel.ansehen(eintraege, "%s/%s" % [room.script_name if is_instance_valid(room) else "", script_name])
+
+
+func on_click() -> void:
+	Hinweise.objekt_beruehrt(objekt_id())
+	if Spiel.ist_pixel():
+		await _pixel_benutzt()
+		return
+	await super()
+
+
+func on_item_used(item: PopochiuInventoryItem) -> void:
+	Hinweise.objekt_beruehrt(objekt_id())
+	if item.script_name == Spiel.PIXEL_FELD:
+		I.active = null
+		await _pixel_benutzt()
+		return
+	Hinweise.objekt_beruehrt(Bauplan.gegenstand(item.script_name).get("id", ""))
+	await super(item)
+
+
+func _on_click() -> void:
+	await Spiel.hingehen(self)
+	await benutzen_standard()
+
+
+## Benutzen-Zeile aus dem Bauplan, sonst Ersatzzeile.
+func benutzen_standard() -> void:
+	for e in bauplan().get("benutzen", []):
+		if Spiel.eintrag_passt(e):
+			await Spiel.sagen_eintrag(e)
+			return
+	await Spiel.ersatz()
+
+
+func _on_double_click() -> void:
+	await _on_click()
+
+
+func _on_right_click() -> void:
+	await ansehen()
+
+
+func _on_middle_click() -> void:
+	pass
+
+
+func _on_item_used(item: PopochiuInventoryItem) -> void:
+	await Spiel.hingehen(self)
+	await gegenstand_standard(item)
+
+
+## Kombinationszeile aus dem Bauplan („Eimer auf Fondue-Topf“), sonst Ersatzzeile.
+func gegenstand_standard(item: PopochiuInventoryItem) -> void:
+	var e := Spiel.gegenstand_zeile(bauplan().get("gegenstand_auf", []),
+		Bauplan.gegenstand(item.script_name).get("id", ""))
+	if e.is_empty():
+		await Spiel.ersatz()
+	else:
+		await Spiel.sagen_eintrag(e)
+
+
+## Pixel auf dieses Objekt (Pixel-Feld oder Pixel als aktive Figur): Pixels eigene Ansehen-
+## bzw. Schnupper-Zeile, sonst seine Ersatzzeile.
+func _pixel_benutzt() -> void:
+	for e in bauplan().get("ansehen", []):
+		if e.get("figur") == "PIX" and Spiel.eintrag_passt(e):
+			await Spiel.sagen_eintrag(e)
+			return
+	await Spiel.ersatz("PIX")

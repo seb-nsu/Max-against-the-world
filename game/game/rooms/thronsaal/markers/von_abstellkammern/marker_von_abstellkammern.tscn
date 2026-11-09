@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://bqvphhn1irsfj"]
+
+[node name="VonAbstellkammern" type="Marker2D" unique_id=1586908301]
+visible = false

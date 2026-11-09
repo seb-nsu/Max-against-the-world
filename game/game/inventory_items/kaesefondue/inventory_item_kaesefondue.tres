@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://bhvgtbb7ns0m5"]
+
+[ext_resource type="Script" path="res://game/inventory_items/kaesefondue/inventory_item_kaesefondue_state.gd" id="1_mxa8c"]
+
+[resource]
+resource_name = "Kaesefondue"
+script = ExtResource("1_mxa8c")
+script_name = "Kaesefondue"
+scene = "res://game/inventory_items/kaesefondue/inventory_item_kaesefondue.tscn"

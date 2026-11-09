@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://brwhvejnxsh48"]
+
+[ext_resource type="Script" path="res://game/inventory_items/leuchtpilz/inventory_item_leuchtpilz_state.gd" id="1_a2blc"]
+
+[resource]
+resource_name = "Leuchtpilz"
+script = ExtResource("1_a2blc")
+script_name = "Leuchtpilz"
+scene = "res://game/inventory_items/leuchtpilz/inventory_item_leuchtpilz.tscn"

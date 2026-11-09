@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://cl4pptrpk60u5"]
+
+[ext_resource type="Script" path="res://game/rooms/dachboden/hotspots/opas_staubsauger_prototyp/hotspot_opas_staubsauger_prototyp.gd" id="1_c3ww3"]
+
+[node name="OpasStaubsaugerPrototyp" type="Area2D" unique_id=1446933935]
+script = ExtResource("1_c3ww3")
+script_name = "OpasStaubsaugerPrototyp"
+description = "Opas Staubsauger Prototyp"
+cursor = 1
+interaction_polygon = PackedVector2Array(-6, -13, 6, -13, 6, 13, -6, 13)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=405231009]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

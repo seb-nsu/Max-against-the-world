@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://yfhhon03axim"]
+
+[ext_resource type="Script" path="res://game/rooms/zauberstabladen/props/zahnstocher/prop_zahnstocher.gd" id="1_w20eo"]
+
+[node name="Zahnstocher" type="Area2D" unique_id=454319026]
+script = ExtResource("1_w20eo")
+script_name = "Zahnstocher"
+description = "Zahnstocher"
+cursor = 1
+interaction_polygon = PackedVector2Array(-6, -3, 6, -3, 6, 3, -6, 3)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1777541399]
+texture_filter = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=2009487009]
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1736519133]
+visible = false
+modulate = Color(1, 1, 0, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+
+[node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=212188540]
+visible = false
+affect_navigation_mesh = true
+carve_navigation_mesh = true

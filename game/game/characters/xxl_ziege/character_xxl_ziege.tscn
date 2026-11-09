@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://da7n01dj3tsuc"]
+
+[ext_resource type="Script" path="res://game/characters/xxl_ziege/character_xxl_ziege.gd" id="1_ilqrt"]
+[ext_resource type="Texture2D" uid="uid://cjuflgyjh1ao8" path="res://grafik/platzhalter/figur_xxl_ziege.png" id="2_iregp"]
+
+[node name="CharacterXxlZiege" type="Area2D" unique_id=1272118695]
+script = ExtResource("1_ilqrt")
+walk_speed = 90.0
+dialog_pos = Vector2(0, -74)
+script_name = "XxlZiege"
+description = "UI_OBJ_XXL_ZIEGE"
+cursor = 8
+interaction_polygon = PackedVector2Array(-11.5, -70, 11.5, -70, 11.5, 0, -11.5, 0)
+
+[node name="ScalingPolygon" type="CollisionPolygon2D" parent="." unique_id=512901782]
+polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1274407136]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=367317673]
+texture_filter = 1
+texture = ExtResource("2_iregp")
+offset = Vector2(0, -35)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1065017174]
+visible = false
+polygon = PackedVector2Array(-11.5, -70, 11.5, -70, 11.5, 0, -11.5, 0)
+
+[node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=1441003568]
+visible = false
+affect_navigation_mesh = true
+carve_navigation_mesh = true

@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://bxgua2e8mjy6s"]
+
+[ext_resource type="Script" path="res://game/rooms/dachboden/room_dachboden_state.gd" id="1_yg5tc"]
+
+[resource]
+resource_name = "Dachboden"
+script = ExtResource("1_yg5tc")
+script_name = "Dachboden"
+scene = "res://game/rooms/dachboden/room_dachboden.tscn"

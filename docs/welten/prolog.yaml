@@ -1,8 +1,12 @@
 abschnitt: prolog
 name: Opas Dachboden
 skript_praefix: [P0, SYS]    # SYS_ERS_*: Ersatzpool für das ganze Spiel (steht im Prolog-Skript)
-sonder_codes: [HINT, ERS]    # P0_HINT_*: Hilfe-Pfote; ERS: Ersatzpool
+sonder_codes: [HINT, ERS, WDH, PLA, INV, ABS]   # PLA: Plauder-Pool; ABS: Gespräch erschöpft; P0_HINT_*: Hilfe-Pfote; ERS: Ersatzpool; WDH: Wiederholungs-Pool fürs Ansehen; INV: Inventar ansehen
 sonder_sprecher: [NAR]       # Regie- und Animationszeilen ohne Sprecher
+weitere_schalter:             # Hilfsschalter und -werte ohne eigenes Rätsel (05-spielsysteme.md, Speichern)
+  - P0_SCHNEE_GESEHEN         # erstes Ansehen des rauschenden Zapp-O-Mat gespielt (0420–0440)
+  - P0_PIXEL_WECKVERSUCHE     # Wert: Zahl der Weckversuche vor P1 (Opa kommentiert beim zweiten)
+  - P0_DRAHTKLEIDERBUEGEL     # Wert: gerade oder antenne
 
 raeume:
   - id: wohnzimmer

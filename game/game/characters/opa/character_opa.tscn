@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://edkvkxbseb5w"]
+
+[ext_resource type="Script" path="res://game/characters/opa/character_opa.gd" id="1_nd1up"]
+[ext_resource type="Texture2D" uid="uid://dmoyg6ckeayvj" path="res://grafik/platzhalter/figur_opa.png" id="2_6spcm"]
+
+[node name="CharacterOpa" type="Area2D" unique_id=792275399]
+script = ExtResource("1_nd1up")
+text_color = Color(0.9607843, 0.627451, 0.2901961, 1)
+walk_speed = 90.0
+dialog_pos = Vector2(0, -64)
+script_name = "Opa"
+description = "UI_OBJ_OPA"
+cursor = 8
+interaction_polygon = PackedVector2Array(-10, -60, 10, -60, 10, 0, -10, 0)
+
+[node name="ScalingPolygon" type="CollisionPolygon2D" parent="." unique_id=795156284]
+polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1124930264]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=624747451]
+texture_filter = 1
+texture = ExtResource("2_6spcm")
+offset = Vector2(0, -30)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=166052784]
+visible = false
+polygon = PackedVector2Array(-10, -60, 10, -60, 10, 0, -10, 0)
+
+[node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=1496748265]
+visible = false
+affect_navigation_mesh = true
+carve_navigation_mesh = true

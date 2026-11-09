@@ -1,0 +1,598 @@
+{
+ "abschnitt": "welt-2",
+ "sonderzeilen": {
+  "wartezeile": "W2_HINT_PIX_9995"
+ },
+ "schritte": [
+  {
+   "schritt": "R1",
+   "ziel": "Die Krokodil-Fähre",
+   "raum": "nil_delta",
+   "offen_wenn": [],
+   "offen_wenn_eins_von": [],
+   "geloest_schalter": [
+    "W2_R01_GELOEST"
+   ],
+   "objekte": [],
+   "optional": false,
+   "sammelschritt": false,
+   "hinweise": [
+    {
+     "stufe": 1,
+     "zeile": "W2_HINT_PIX_0110"
+    },
+    {
+     "stufe": 2,
+     "zeile": "W2_HINT_PIX_0120"
+    },
+    {
+     "stufe": 3,
+     "zeile": "W2_HINT_PIX_0130"
+    }
+   ]
+  },
+  {
+   "schritt": "R2a",
+   "ziel": "Die Hieroglyphen-Botschaft",
+   "raum": "thronsaal",
+   "offen_wenn": [
+    "bildtafel"
+   ],
+   "offen_wenn_eins_von": [],
+   "geloest_schalter": [
+    "W2_R02_A_GELOEST"
+   ],
+   "objekte": [
+    "bildtafel"
+   ],
+   "optional": false,
+   "sammelschritt": false,
+   "hinweise": [
+    {
+     "stufe": 1,
+     "zeile": "W2_HINT_PIX_0211"
+    },
+    {
+     "stufe": 2,
+     "zeile": "W2_HINT_PIX_0221"
+    },
+    {
+     "stufe": 3,
+     "zeile": "W2_HINT_PIX_0231"
+    }
+   ]
+  },
+  {
+   "schritt": "R2b",
+   "ziel": "Das Götter-Duell",
+   "raum": "thronsaal",
+   "offen_wenn": [
+    "R1",
+    "thunfischdose"
+   ],
+   "offen_wenn_eins_von": [
+    "kaugummi",
+    "brennspiegel"
+   ],
+   "geloest_schalter": [
+    "W2_R02_B_GELOEST"
+   ],
+   "objekte": [
+    "thunfischdose",
+    "kaugummi",
+    "brennspiegel"
+   ],
+   "optional": false,
+   "sammelschritt": false,
+   "hinweise": [
+    {
+     "stufe": 1,
+     "zeile": "W2_HINT_PIX_0212"
+    },
+    {
+     "stufe": 2,
+     "zeile": "W2_HINT_PIX_0222"
+    },
+    {
+     "stufe": 3,
+     "zeile": "W2_HINT_PIX_0232"
+    }
+   ]
+  },
+  {
+   "schritt": "R3a",
+   "ziel": "Das neue Rundschreiben",
+   "raum": "startbuero",
+   "offen_wenn": [
+    "R2a",
+    "R2b"
+   ],
+   "offen_wenn_eins_von": [
+    "kugelschreiber",
+    "leeres_formular",
+    "papyrusblatt",
+    "tintenfass",
+    "socke"
+   ],
+   "geloest_schalter": [
+    "W2_R03_A_GELOEST"
+   ],
+   "objekte": [
+    "kugelschreiber",
+    "leeres_formular",
+    "papyrusblatt",
+    "tintenfass",
+    "socke"
+   ],
+   "optional": true,
+   "sammelschritt": false,
+   "hinweise": [
+    {
+     "stufe": 1,
+     "zeile": "W2_HINT_PIX_0311"
+    },
+    {
+     "stufe": 2,
+     "zeile": "W2_HINT_PIX_0321"
+    },
+    {
+     "stufe": 3,
+     "zeile": "W2_HINT_PIX_0331"
+    }
+   ]
+  },
+  {
+   "schritt": "R3b",
+   "ziel": "Der Passierschein",
+   "raum": "startbuero",
+   "offen_wenn": [
+    "R2a",
+    "R2b"
+   ],
+   "offen_wenn_eins_von": [
+    "rundschreiben",
+    "empfehlungsschreiben"
+   ],
+   "geloest_schalter": [
+    "W2_R03_B_GELOEST"
+   ],
+   "objekte": [
+    "rundschreiben",
+    "empfehlungsschreiben"
+   ],
+   "optional": false,
+   "sammelschritt": false,
+   "hinweise": [
+    {
+     "stufe": 1,
+     "zeile": "W2_HINT_PIX_0312"
+    },
+    {
+     "stufe": 2,
+     "zeile": "W2_HINT_PIX_0322"
+    },
+    {
+     "stufe": 3,
+     "zeile": "W2_HINT_PIX_0332"
+    }
+   ]
+  },
+  {
+   "schritt": "R4",
+   "ziel": "Das Olivenöl",
+   "raum": "palastkueche",
+   "offen_wenn": [
+    "brot",
+    "datteln",
+    "zwiebel",
+    "fladen"
+   ],
+   "offen_wenn_eins_von": [],
+   "geloest_schalter": [
+    "W2_R04_GELOEST"
+   ],
+   "objekte": [
+    "brot",
+    "datteln",
+    "zwiebel",
+    "fladen"
+   ],
+   "optional": true,
+   "sammelschritt": false,
+   "hinweise": [
+    {
+     "stufe": 1,
+     "zeile": "W2_HINT_PIX_0410"
+    },
+    {
+     "stufe": 2,
+     "zeile": "W2_HINT_PIX_0420"
+    },
+    {
+     "stufe": 3,
+     "zeile": "W2_HINT_PIX_0430"
+    }
+   ]
+  },
+  {
+   "schritt": "R5",
+   "ziel": "Archimedes' Krone",
+   "raum": "werkstatt",
+   "offen_wenn": [
+    "R1",
+    "waage",
+    "messbecher",
+    "krone",
+    "goldbarren"
+   ],
+   "offen_wenn_eins_von": [],
+   "geloest_schalter": [
+    "W2_R05_GELOEST"
+   ],
+   "objekte": [
+    "waage",
+    "messbecher",
+    "krone",
+    "goldbarren"
+   ],
+   "optional": false,
+   "sammelschritt": false,
+   "hinweise": [
+    {
+     "stufe": 1,
+     "zeile": "W2_HINT_PIX_0510"
+    },
+    {
+     "stufe": 2,
+     "zeile": "W2_HINT_PIX_0520"
+    },
+    {
+     "stufe": 3,
+     "zeile": "W2_HINT_PIX_0530"
+    }
+   ]
+  },
+  {
+   "schritt": "R12",
+   "ziel": "Wettkampftag 1",
+   "raum": "stadion",
+   "offen_wenn": [
+    "R3b",
+    "R5",
+    "startpass",
+    "sandalen"
+   ],
+   "offen_wenn_eins_von": [],
+   "geloest_schalter": [
+    "W2_TAG1_GELOEST"
+   ],
+   "objekte": [
+    "startpass",
+    "sandalen"
+   ],
+   "optional": false,
+   "sammelschritt": false,
+   "hinweise": []
+  },
+  {
+   "schritt": "R6a",
+   "ziel": "Das Zeichen der Sandale",
+   "raum": "agora",
+   "offen_wenn": [
+    "R12"
+   ],
+   "offen_wenn_eins_von": [],
+   "geloest_schalter": [
+    "W2_R06_A_GELOEST"
+   ],
+   "objekte": [],
+   "optional": true,
+   "sammelschritt": false,
+   "hinweise": [
+    {
+     "stufe": 1,
+     "zeile": "W2_HINT_PIX_0611"
+    },
+    {
+     "stufe": 2,
+     "zeile": "W2_HINT_PIX_0621"
+    },
+    {
+     "stufe": 3,
+     "zeile": "W2_HINT_PIX_0631"
+    }
+   ]
+  },
+  {
+   "schritt": "R6b",
+   "ziel": "Frische Feigen für die Fächerwedler",
+   "raum": "thronsaal",
+   "offen_wenn": [
+    "R6a",
+    "feigensetzling",
+    "feigen"
+   ],
+   "offen_wenn_eins_von": [],
+   "geloest_schalter": [
+    "W2_R06_B_GELOEST"
+   ],
+   "objekte": [
+    "feigensetzling",
+    "feigen"
+   ],
+   "optional": true,
+   "sammelschritt": false,
+   "hinweise": [
+    {
+     "stufe": 1,
+     "zeile": "W2_HINT_PIX_0612"
+    },
+    {
+     "stufe": 2,
+     "zeile": "W2_HINT_PIX_0622"
+    },
+    {
+     "stufe": 3,
+     "zeile": "W2_HINT_PIX_0632"
+    }
+   ]
+  },
+  {
+   "schritt": "R7",
+   "ziel": "Der Diskus-Diebstahl",
+   "raum": "stadion",
+   "offen_wenn": [
+    "R12"
+   ],
+   "offen_wenn_eins_von": [],
+   "geloest_schalter": [
+    "W2_R07_GELOEST"
+   ],
+   "objekte": [],
+   "optional": false,
+   "sammelschritt": false,
+   "hinweise": [
+    {
+     "stufe": 1,
+     "zeile": "W2_HINT_PIX_0710"
+    },
+    {
+     "stufe": 2,
+     "zeile": "W2_HINT_PIX_0720"
+    },
+    {
+     "stufe": 3,
+     "zeile": "W2_HINT_PIX_0730"
+    }
+   ]
+  },
+  {
+   "schritt": "R8",
+   "ziel": "Die Sphinx mit Schreibblockade",
+   "raum": "sphinx",
+   "offen_wenn": [],
+   "offen_wenn_eins_von": [
+    "handy",
+    "kaugummi",
+    "kugelschreiber"
+   ],
+   "geloest_schalter": [
+    "W2_R08_GELOEST"
+   ],
+   "objekte": [
+    "handy",
+    "kaugummi",
+    "kugelschreiber"
+   ],
+   "optional": false,
+   "sammelschritt": false,
+   "hinweise": [
+    {
+     "stufe": 1,
+     "zeile": "W2_HINT_PIX_0810"
+    },
+    {
+     "stufe": 2,
+     "zeile": "W2_HINT_PIX_0820"
+    },
+    {
+     "stufe": 3,
+     "zeile": "W2_HINT_PIX_0830"
+    }
+   ]
+  },
+  {
+   "schritt": "R9",
+   "ziel": "Konter sammeln",
+   "raum": "agora",
+   "offen_wenn": [
+    "R8",
+    "schriftrolle"
+   ],
+   "offen_wenn_eins_von": [],
+   "geloest_schalter": [
+    "W2_R09_GELOEST"
+   ],
+   "objekte": [
+    "schriftrolle"
+   ],
+   "optional": false,
+   "sammelschritt": false,
+   "hinweise": [
+    {
+     "stufe": 1,
+     "zeile": "W2_HINT_PIX_0910"
+    },
+    {
+     "stufe": 2,
+     "zeile": "W2_HINT_PIX_0920"
+    },
+    {
+     "stufe": 3,
+     "zeile": "W2_HINT_PIX_0930"
+    }
+   ]
+  },
+  {
+   "schritt": "R10a",
+   "ziel": "Ein Grab für Archimedes",
+   "raum": "nil_delta",
+   "offen_wenn": [
+    "R5",
+    "R12",
+    "entwurf"
+   ],
+   "offen_wenn_eins_von": [],
+   "geloest_schalter": [
+    "W2_R10_A_GELOEST"
+   ],
+   "objekte": [
+    "entwurf"
+   ],
+   "optional": false,
+   "sammelschritt": false,
+   "hinweise": [
+    {
+     "stufe": 1,
+     "zeile": "W2_HINT_PIX_1011"
+    },
+    {
+     "stufe": 2,
+     "zeile": "W2_HINT_PIX_1021"
+    },
+    {
+     "stufe": 3,
+     "zeile": "W2_HINT_PIX_1031"
+    }
+   ]
+  },
+  {
+   "schritt": "R10b",
+   "ziel": "Das Alter des Grabsteins",
+   "raum": "grabhuegel",
+   "offen_wenn": [
+    "R10a",
+    "grabstein"
+   ],
+   "offen_wenn_eins_von": [],
+   "geloest_schalter": [
+    "W2_R10_B_GELOEST"
+   ],
+   "objekte": [
+    "grabstein"
+   ],
+   "optional": false,
+   "sammelschritt": false,
+   "hinweise": [
+    {
+     "stufe": 1,
+     "zeile": "W2_HINT_PIX_1012"
+    },
+    {
+     "stufe": 2,
+     "zeile": "W2_HINT_PIX_1022"
+    },
+    {
+     "stufe": 3,
+     "zeile": "W2_HINT_PIX_1032"
+    }
+   ]
+  },
+  {
+   "schritt": "R13",
+   "ziel": "Finaltag",
+   "raum": "stadion",
+   "offen_wenn": [
+    "R7",
+    "R9",
+    "R10b"
+   ],
+   "offen_wenn_eins_von": [
+    "diskus",
+    "pharaonenteller",
+    "schallplatte",
+    "wurfscheibe"
+   ],
+   "geloest_schalter": [
+    "W2_FINALTAG_GELOEST"
+   ],
+   "objekte": [
+    "diskus",
+    "pharaonenteller",
+    "schallplatte",
+    "wurfscheibe"
+   ],
+   "optional": false,
+   "sammelschritt": false,
+   "hinweise": []
+  },
+  {
+   "schritt": "R11a",
+   "ziel": "Die Siegesparade",
+   "raum": "stadion",
+   "offen_wenn": [
+    "R13",
+    "olivenkranz",
+    "paraden_plan",
+    "brennspiegel"
+   ],
+   "offen_wenn_eins_von": [],
+   "geloest_schalter": [
+    "W2_R11_A_GELOEST"
+   ],
+   "objekte": [
+    "olivenkranz",
+    "paraden_plan",
+    "brennspiegel"
+   ],
+   "optional": false,
+   "sammelschritt": false,
+   "hinweise": [
+    {
+     "stufe": 1,
+     "zeile": "W2_HINT_PIX_1111"
+    },
+    {
+     "stufe": 2,
+     "zeile": "W2_HINT_PIX_1121"
+    },
+    {
+     "stufe": 3,
+     "zeile": "W2_HINT_PIX_1131"
+    }
+   ]
+  },
+  {
+   "schritt": "R11b",
+   "ziel": "Wein für Ramses",
+   "raum": "stadion",
+   "offen_wenn": [
+    "R11a",
+    "essigkrug"
+   ],
+   "offen_wenn_eins_von": [],
+   "geloest_schalter": [
+    "W2_R11_B_GELOEST"
+   ],
+   "objekte": [
+    "essigkrug"
+   ],
+   "optional": false,
+   "sammelschritt": false,
+   "hinweise": [
+    {
+     "stufe": 1,
+     "zeile": "W2_HINT_PIX_1112"
+    },
+    {
+     "stufe": 2,
+     "zeile": "W2_HINT_PIX_1122"
+    },
+    {
+     "stufe": 3,
+     "zeile": "W2_HINT_PIX_1132"
+    }
+   ]
+  }
+ ]
+}

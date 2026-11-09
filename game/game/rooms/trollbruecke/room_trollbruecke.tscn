@@ -1,0 +1,130 @@
+[gd_scene format=3 uid="uid://pl80ooud0c2"]
+
+[ext_resource type="Script" path="res://game/rooms/trollbruecke/room_trollbruecke.gd" id="1_nefhc"]
+[ext_resource type="PackedScene" uid="uid://d1xfwexlav3wb" path="res://game/rooms/trollbruecke/walkable_areas/boden/walkable_area_boden.tscn" id="2_ewqp7"]
+[ext_resource type="PackedScene" uid="uid://b5u1sgo0ehxly" path="res://game/rooms/trollbruecke/props/background/prop_background.tscn" id="3_ejwgi"]
+[ext_resource type="Texture2D" uid="uid://02fic3ynifga" path="res://grafik/platzhalter/raum_trollbruecke.png" id="4_gc5bf"]
+[ext_resource type="PackedScene" uid="uid://ddqt47yha58o8" path="res://game/rooms/trollbruecke/hotspots/schild/hotspot_schild.tscn" id="5_ffjc2"]
+[ext_resource type="PackedScene" uid="uid://c176je2lx0615" path="res://game/rooms/trollbruecke/hotspots/bruecke/hotspot_bruecke.tscn" id="6_wk28c"]
+[ext_resource type="PackedScene" uid="uid://cx0mj82x2bwiu" path="res://game/rooms/trollbruecke/hotspots/bach/hotspot_bach.tscn" id="7_f0w5c"]
+[ext_resource type="PackedScene" uid="uid://dw6p5fuypqdou" path="res://game/rooms/trollbruecke/hotspots/grammophon/hotspot_grammophon.tscn" id="8_8hk3g"]
+[ext_resource type="PackedScene" uid="uid://c13a30p6hj8c7" path="res://game/rooms/trollbruecke/hotspots/notenblaetter/hotspot_notenblaetter.tscn" id="9_67s6r"]
+[ext_resource type="PackedScene" uid="uid://bd1jbc0y1lpq1" path="res://game/rooms/trollbruecke/hotspots/wildblumen/hotspot_wildblumen.tscn" id="10_xxmoi"]
+[ext_resource type="PackedScene" uid="uid://bmiwhn5mxos" path="res://game/rooms/trollbruecke/hotspots/ausgang_dorfplatz/hotspot_ausgang_dorfplatz.tscn" id="11_5ew10"]
+[ext_resource type="PackedScene" uid="uid://tq4ebs42o63y" path="res://game/rooms/trollbruecke/hotspots/waldweg/hotspot_waldweg.tscn" id="12_bq62v"]
+[ext_resource type="PackedScene" uid="uid://3glmt2yhrrhy" path="res://game/rooms/trollbruecke/hotspots/weg_zum_wasserschloss/hotspot_weg_zum_wasserschloss.tscn" id="13_x6a6m"]
+[ext_resource type="PackedScene" uid="uid://kxrafwgeru1w" path="res://game/rooms/trollbruecke/markers/start/marker_start.tscn" id="14_xl4mc"]
+[ext_resource type="PackedScene" uid="uid://dwhhe71m1tgnt" path="res://game/rooms/trollbruecke/markers/von_dorfplatz/marker_von_dorfplatz.tscn" id="15_emt4r"]
+[ext_resource type="PackedScene" uid="uid://bmr57ujd54jrn" path="res://game/rooms/trollbruecke/markers/von_zauberwald/marker_von_zauberwald.tscn" id="16_egmq4"]
+[ext_resource type="PackedScene" uid="uid://bpcqsguc8oteu" path="res://game/rooms/trollbruecke/markers/von_wasserschloss/marker_von_wasserschloss.tscn" id="17_oms12"]
+[ext_resource type="PackedScene" uid="uid://dfyhfl3wpdu2h" path="res://game/rooms/trollbruecke/markers/ziegen/marker_ziegen.tscn" id="18_n6alj"]
+[ext_resource type="PackedScene" uid="uid://da6yfywysr6vo" path="res://game/rooms/trollbruecke/markers/bruecke_mitte/marker_bruecke_mitte.tscn" id="19_flpg0"]
+[ext_resource type="PackedScene" uid="uid://dq6ix14gemjl5" path="res://game/rooms/trollbruecke/markers/wasser/marker_wasser.tscn" id="20_v1i3g"]
+[ext_resource type="PackedScene" uid="uid://da0xc0ank66kg" path="res://game/characters/waldemar/character_waldemar.tscn" id="21_uuubw"]
+
+[node name="RoomTrollbruecke" type="Node2D" unique_id=313624830]
+script = ExtResource("1_nefhc")
+script_name = "Trollbruecke"
+width = 320
+height = 180
+
+[node name="WalkableAreas" type="Node2D" parent="." unique_id=1541140012]
+
+[node name="Boden" parent="WalkableAreas" unique_id=1979980672 instance=ExtResource("2_ewqp7")]
+interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(4, 140, 316, 140, 316, 178, 4, 178)])
+
+[node name="Props" type="Node2D" parent="." unique_id=421389606]
+
+[node name="Background" parent="Props" unique_id=2069688353 instance=ExtResource("3_ejwgi")]
+position = Vector2(160, 90)
+texture = ExtResource("4_gc5bf")
+description = "UI_RAUM_TROLLBRUECKE"
+
+[node name="Hotspots" type="Node2D" parent="." unique_id=462475189]
+
+[node name="Schild" parent="Hotspots" unique_id=391791635 instance=ExtResource("5_ffjc2")]
+position = Vector2(65, 90)
+description = "UI_OBJ_SCHILD"
+baseline = 20
+walk_to_point = Vector2(-1, 64)
+
+[node name="Bruecke" parent="Hotspots" unique_id=1249384174 instance=ExtResource("6_wk28c")]
+position = Vector2(160, 125)
+description = "UI_OBJ_BRUECKE"
+baseline = 15
+walk_to_point = Vector2(0, 25)
+
+[node name="Bach" parent="Hotspots" unique_id=899821672 instance=ExtResource("7_f0w5c")]
+position = Vector2(160, 169)
+description = "UI_OBJ_BACH"
+baseline = 9
+walk_to_point = Vector2(0, -17)
+
+[node name="Grammophon" parent="Hotspots" unique_id=109823903 instance=ExtResource("8_8hk3g")]
+position = Vector2(130, 147)
+description = "UI_OBJ_GRAMMOPHON"
+baseline = 7
+walk_to_point = Vector2(0, 7)
+
+[node name="Notenblaetter" parent="Hotspots" unique_id=711623878 instance=ExtResource("9_67s6r")]
+position = Vector2(158, 149)
+description = "UI_OBJ_NOTENBLAETTER"
+baseline = 5
+walk_to_point = Vector2(0, 5)
+
+[node name="Wildblumen" parent="Hotspots" unique_id=536227785 instance=ExtResource("10_xxmoi")]
+position = Vector2(19, 153)
+description = "UI_OBJ_WILDBLUMEN"
+baseline = 7
+walk_to_point = Vector2(5, 7)
+
+[node name="AusgangDorfplatz" parent="Hotspots" unique_id=1182182524 instance=ExtResource("11_5ew10")]
+position = Vector2(11, 110)
+description = "UI_RAUM_DORFPLATZ"
+baseline = 30
+walk_to_point = Vector2(1, 50)
+cursor = 9
+
+[node name="Waldweg" parent="Hotspots" unique_id=515465258 instance=ExtResource("12_bq62v")]
+position = Vector2(307, 105)
+description = "UI_OBJ_WALDWEG"
+baseline = 35
+walk_to_point = Vector2(-3, 55)
+cursor = 9
+
+[node name="WegZumWasserschloss" parent="Hotspots" unique_id=14882811 instance=ExtResource("13_x6a6m")]
+position = Vector2(255, 90)
+description = "UI_OBJ_WEG_ZUM_WASSERSCHLOSS"
+baseline = 20
+walk_to_point = Vector2(-3, 56)
+cursor = 9
+
+[node name="Regions" type="Node2D" parent="." unique_id=1174397313]
+
+[node name="Markers" type="Node2D" parent="." unique_id=997303179]
+
+[node name="Start" parent="Markers" unique_id=1507029411 instance=ExtResource("14_xl4mc")]
+position = Vector2(30, 160)
+
+[node name="VonDorfplatz" parent="Markers" unique_id=380774774 instance=ExtResource("15_emt4r")]
+position = Vector2(30, 160)
+
+[node name="VonZauberwald" parent="Markers" unique_id=619507561 instance=ExtResource("16_egmq4")]
+position = Vector2(296, 160)
+
+[node name="VonWasserschloss" parent="Markers" unique_id=1771471729 instance=ExtResource("17_oms12")]
+position = Vector2(250, 146)
+
+[node name="Ziegen" parent="Markers" unique_id=1432009190 instance=ExtResource("18_n6alj")]
+position = Vector2(64, 166)
+
+[node name="BrueckeMitte" parent="Markers" unique_id=405159886 instance=ExtResource("19_flpg0")]
+position = Vector2(160, 150)
+
+[node name="Wasser" parent="Markers" unique_id=1658568463 instance=ExtResource("20_v1i3g")]
+position = Vector2(200, 170)
+
+[node name="Characters" type="Node2D" parent="." unique_id=1488514382]
+
+[node name="CharacterWaldemar *" parent="Characters" unique_id=584786914 instance=ExtResource("21_uuubw")]
+position = Vector2(214, 156)

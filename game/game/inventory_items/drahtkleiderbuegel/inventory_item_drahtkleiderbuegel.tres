@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://dvvqu7t73fmdi"]
+
+[ext_resource type="Script" path="res://game/inventory_items/drahtkleiderbuegel/inventory_item_drahtkleiderbuegel_state.gd" id="1_gf5qj"]
+
+[resource]
+resource_name = "Drahtkleiderbuegel"
+script = ExtResource("1_gf5qj")
+script_name = "Drahtkleiderbuegel"
+scene = "res://game/inventory_items/drahtkleiderbuegel/inventory_item_drahtkleiderbuegel.tscn"

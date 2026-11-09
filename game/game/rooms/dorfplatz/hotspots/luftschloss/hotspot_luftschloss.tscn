@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://bxihxqo7a0enu"]
+
+[ext_resource type="Script" path="res://game/rooms/dorfplatz/hotspots/luftschloss/hotspot_luftschloss.gd" id="1_o4oh3"]
+
+[node name="Luftschloss" type="Area2D" unique_id=781520882]
+script = ExtResource("1_o4oh3")
+script_name = "Luftschloss"
+description = "Luftschloss"
+cursor = 1
+interaction_polygon = PackedVector2Array(-28, -13, 28, -13, 28, 13, -28, 13)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1801459123]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://d4ca8qud2d3r2"]
+
+[node name="Lieferung" type="Marker2D" unique_id=1879190510]
+visible = false

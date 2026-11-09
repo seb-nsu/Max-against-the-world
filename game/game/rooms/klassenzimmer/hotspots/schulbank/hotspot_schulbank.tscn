@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://bap5x2aas82y3"]
+
+[ext_resource type="Script" path="res://game/rooms/klassenzimmer/hotspots/schulbank/hotspot_schulbank.gd" id="1_wud8c"]
+
+[node name="Schulbank" type="Area2D" unique_id=1509065793]
+script = ExtResource("1_wud8c")
+script_name = "Schulbank"
+description = "Schulbank"
+cursor = 1
+interaction_polygon = PackedVector2Array(-30, -15, 30, -15, 30, 15, -30, 15)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1611094582]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://vh63e332ru7"]
+
+[ext_resource type="Script" path="res://game/rooms/luftschloss/hotspots/wolken/hotspot_wolken.gd" id="1_568nu"]
+
+[node name="Wolken" type="Area2D" unique_id=125878728]
+script = ExtResource("1_568nu")
+script_name = "Wolken"
+description = "Wolken"
+cursor = 1
+interaction_polygon = PackedVector2Array(-160, -15, 160, -15, 160, 15, -160, 15)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1560865246]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

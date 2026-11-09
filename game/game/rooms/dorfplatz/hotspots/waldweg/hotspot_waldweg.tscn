@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://d0wwgtxuwsv3q"]
+
+[ext_resource type="Script" path="res://game/rooms/dorfplatz/hotspots/waldweg/hotspot_waldweg.gd" id="1_ewtpn"]
+
+[node name="Waldweg" type="Area2D" unique_id=999357047]
+script = ExtResource("1_ewtpn")
+script_name = "Waldweg"
+description = "Waldweg"
+cursor = 1
+interaction_polygon = PackedVector2Array(-18, -22, 18, -22, 18, 22, -18, 22)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=214147140]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://b2p7baucb2d82"]
+
+[ext_resource type="Script" path="res://game/inventory_items/krug/inventory_item_krug_state.gd" id="1_3va20"]
+
+[resource]
+resource_name = "Krug"
+script = ExtResource("1_3va20")
+script_name = "Krug"
+scene = "res://game/inventory_items/krug/inventory_item_krug.tscn"

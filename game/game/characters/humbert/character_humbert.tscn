@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://br6ca6qyienuc"]
+
+[ext_resource type="Script" path="res://game/characters/humbert/character_humbert.gd" id="1_wqh4x"]
+[ext_resource type="Texture2D" uid="uid://cy2lqse750ngx" path="res://grafik/platzhalter/figur_humbert.png" id="2_n4rml"]
+
+[node name="CharacterHumbert" type="Area2D" unique_id=153118211]
+script = ExtResource("1_wqh4x")
+walk_speed = 90.0
+dialog_pos = Vector2(0, -64)
+script_name = "Humbert"
+description = "UI_OBJ_HUMBERT"
+cursor = 8
+interaction_polygon = PackedVector2Array(-10, -60, 10, -60, 10, 0, -10, 0)
+
+[node name="ScalingPolygon" type="CollisionPolygon2D" parent="." unique_id=1121089920]
+polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=840892404]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=181263992]
+texture_filter = 1
+texture = ExtResource("2_n4rml")
+offset = Vector2(0, -30)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1981526311]
+visible = false
+polygon = PackedVector2Array(-10, -60, 10, -60, 10, 0, -10, 0)
+
+[node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=1551775061]
+visible = false
+affect_navigation_mesh = true
+carve_navigation_mesh = true

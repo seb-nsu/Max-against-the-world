@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://hv3ujxnhjjtn"]
+
+[ext_resource type="Script" path="res://game/rooms/wasserschloss/hotspots/schild_am_tor/hotspot_schild_am_tor.gd" id="1_yw2gy"]
+
+[node name="SchildAmTor" type="Area2D" unique_id=803278461]
+script = ExtResource("1_yw2gy")
+script_name = "SchildAmTor"
+description = "Schild Am Tor"
+cursor = 1
+interaction_polygon = PackedVector2Array(-12, -8, 12, -8, 12, 8, -12, 8)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=959951088]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

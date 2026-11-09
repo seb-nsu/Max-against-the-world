@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://dlawrk17n255d"]
+
+[ext_resource type="Script" path="res://game/inventory_items/kochloeffel/inventory_item_kochloeffel.gd" id="1_7ukvk"]
+[ext_resource type="Texture2D" uid="uid://c6d6aa8wgexja" path="res://grafik/platzhalter/gegenstand_kochloeffel.png" id="1_8m74w"]
+
+[node name="ItemKochloeffel" type="TextureRect" unique_id=1168979116]
+texture_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 4
+mouse_filter = 0
+texture = ExtResource("1_8m74w")
+stretch_mode = 5
+script = ExtResource("1_7ukvk")
+script_name = "Kochloeffel"
+description = "UI_OBJ_KOCHLOEFFEL"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1643404396]

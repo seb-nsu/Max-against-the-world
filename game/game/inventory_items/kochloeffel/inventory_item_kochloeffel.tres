@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://d3c8jwaf8y4lx"]
+
+[ext_resource type="Script" path="res://game/inventory_items/kochloeffel/inventory_item_kochloeffel_state.gd" id="1_ginje"]
+
+[resource]
+resource_name = "Kochloeffel"
+script = ExtResource("1_ginje")
+script_name = "Kochloeffel"
+scene = "res://game/inventory_items/kochloeffel/inventory_item_kochloeffel.tscn"

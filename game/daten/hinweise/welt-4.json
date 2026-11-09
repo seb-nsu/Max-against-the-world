@@ -1,0 +1,847 @@
+{
+ "abschnitt": "welt-4",
+ "sonderzeilen": {
+  "nichts_offen": "W4_HINT_PIX_9990",
+  "wartezeile": "W4_HINT_PIX_9995"
+ },
+ "schritte": [
+  {
+   "schritt": "R1",
+   "ziel": "Raus aus dem Testbild",
+   "raum": "testbild",
+   "offen_wenn": [],
+   "offen_wenn_eins_von": [],
+   "geloest_schalter": [
+    "W4_R01_GELOEST"
+   ],
+   "objekte": [],
+   "optional": false,
+   "sammelschritt": false,
+   "hinweise": [
+    {
+     "stufe": 1,
+     "zeile": "W4_HINT_PIX_0010"
+    },
+    {
+     "stufe": 2,
+     "zeile": "W4_HINT_PIX_0020"
+    },
+    {
+     "stufe": 3,
+     "zeile": "W4_HINT_PIX_0030"
+    }
+   ]
+  },
+  {
+   "schritt": "R2",
+   "ziel": "Glücksrad-Shopping",
+   "raum": "gluecksrad",
+   "offen_wenn": [
+    "R1"
+   ],
+   "offen_wenn_eins_von": [],
+   "geloest_schalter": [
+    "W4_R02_GELOEST"
+   ],
+   "objekte": [],
+   "optional": false,
+   "sammelschritt": false,
+   "hinweise": [
+    {
+     "stufe": 1,
+     "zeile": "W4_HINT_PIX_0040"
+    },
+    {
+     "stufe": 2,
+     "zeile": "W4_HINT_PIX_0050"
+    },
+    {
+     "stufe": 3,
+     "zeile": "W4_HINT_PIX_0060"
+    }
+   ]
+  },
+  {
+   "schritt": "R3",
+   "ziel": "Besuch in der Sitcom",
+   "raum": "sitcom_kueche",
+   "offen_wenn": [
+    "R2",
+    "billig_fernbedienung",
+    "taste_umschalten"
+   ],
+   "offen_wenn_eins_von": [],
+   "geloest_schalter": [
+    "W4_R03_GELOEST"
+   ],
+   "objekte": [
+    "billig_fernbedienung",
+    "taste_umschalten"
+   ],
+   "optional": false,
+   "sammelschritt": false,
+   "hinweise": [
+    {
+     "stufe": 1,
+     "zeile": "W4_HINT_PIX_0070"
+    },
+    {
+     "stufe": 2,
+     "zeile": "W4_HINT_PIX_0080"
+    },
+    {
+     "stufe": 3,
+     "zeile": "W4_HINT_PIX_0090"
+    }
+   ]
+  },
+  {
+   "schritt": "R4a",
+   "ziel": "Das Alibi der Hyäne prüfen",
+   "raum": "sitcom_kueche",
+   "offen_wenn": [
+    "R2",
+    "programmzeitschrift",
+    "taste_umschalten"
+   ],
+   "offen_wenn_eins_von": [],
+   "geloest_schalter": [
+    "W4_R04_A_GELOEST"
+   ],
+   "objekte": [
+    "programmzeitschrift",
+    "taste_umschalten"
+   ],
+   "optional": false,
+   "sammelschritt": false,
+   "hinweise": [
+    {
+     "stufe": 1,
+     "zeile": "W4_HINT_PIX_0100"
+    },
+    {
+     "stufe": 2,
+     "zeile": "W4_HINT_PIX_0110"
+    },
+    {
+     "stufe": 3,
+     "zeile": "W4_HINT_PIX_0120"
+    }
+   ]
+  },
+  {
+   "schritt": "R4b",
+   "ziel": "Das Alibi des Geparden prüfen",
+   "raum": "savanne",
+   "offen_wenn": [
+    "R2"
+   ],
+   "offen_wenn_eins_von": [],
+   "geloest_schalter": [
+    "W4_R04_B_GELOEST"
+   ],
+   "objekte": [],
+   "optional": false,
+   "sammelschritt": false,
+   "hinweise": [
+    {
+     "stufe": 1,
+     "zeile": "W4_HINT_PIX_0130"
+    },
+    {
+     "stufe": 2,
+     "zeile": "W4_HINT_PIX_0140"
+    },
+    {
+     "stufe": 3,
+     "zeile": "W4_HINT_PIX_0150"
+    }
+   ]
+  },
+  {
+   "schritt": "R4c",
+   "ziel": "Das Alibi des Nashorns prüfen",
+   "raum": "savanne",
+   "offen_wenn": [
+    "R2",
+    "drehbuch"
+   ],
+   "offen_wenn_eins_von": [],
+   "geloest_schalter": [
+    "W4_R04_C_GELOEST"
+   ],
+   "objekte": [
+    "drehbuch"
+   ],
+   "optional": false,
+   "sammelschritt": false,
+   "hinweise": [
+    {
+     "stufe": 1,
+     "zeile": "W4_HINT_PIX_0160"
+    },
+    {
+     "stufe": 2,
+     "zeile": "W4_HINT_PIX_0170"
+    },
+    {
+     "stufe": 3,
+     "zeile": "W4_HINT_PIX_0180"
+    }
+   ]
+  },
+  {
+   "schritt": "R4d",
+   "ziel": "Das Alibi des Geiers prüfen",
+   "raum": "gluecksrad",
+   "offen_wenn": [
+    "R2",
+    "taste_umschalten"
+   ],
+   "offen_wenn_eins_von": [],
+   "geloest_schalter": [
+    "W4_R04_D_GELOEST"
+   ],
+   "objekte": [
+    "taste_umschalten"
+   ],
+   "optional": false,
+   "sammelschritt": false,
+   "hinweise": [
+    {
+     "stufe": 1,
+     "zeile": "W4_HINT_PIX_0190"
+    },
+    {
+     "stufe": 2,
+     "zeile": "W4_HINT_PIX_0200"
+    },
+    {
+     "stufe": 3,
+     "zeile": "W4_HINT_PIX_0520"
+    }
+   ]
+  },
+  {
+   "schritt": "R4",
+   "ziel": "Tiertort Savanne",
+   "raum": "savanne",
+   "offen_wenn": [
+    "R4a",
+    "R4b",
+    "R4c",
+    "R4d",
+    "programmzeitschrift"
+   ],
+   "offen_wenn_eins_von": [],
+   "geloest_schalter": [
+    "W4_R04_GELOEST"
+   ],
+   "objekte": [
+    "programmzeitschrift"
+   ],
+   "optional": false,
+   "sammelschritt": true,
+   "hinweise": []
+  },
+  {
+   "schritt": "R5a",
+   "ziel": "Zur Mitternachtssendung kommen",
+   "raum": "friedhof",
+   "offen_wenn": [
+    "programmzeitschrift"
+   ],
+   "offen_wenn_eins_von": [],
+   "geloest_schalter": [
+    "W4_R05_A_GELOEST"
+   ],
+   "objekte": [
+    "programmzeitschrift"
+   ],
+   "optional": false,
+   "sammelschritt": false,
+   "hinweise": [
+    {
+     "stufe": 1,
+     "zeile": "W4_HINT_PIX_0210"
+    },
+    {
+     "stufe": 2,
+     "zeile": "W4_HINT_PIX_0220"
+    },
+    {
+     "stufe": 3,
+     "zeile": "W4_HINT_PIX_0530"
+    }
+   ]
+  },
+  {
+   "schritt": "R5b",
+   "ziel": "An den Zombies vorbei",
+   "raum": "friedhof",
+   "offen_wenn": [
+    "R5a",
+    "taste_rueckspulen"
+   ],
+   "offen_wenn_eins_von": [],
+   "geloest_schalter": [
+    "W4_R05_B_GELOEST"
+   ],
+   "objekte": [
+    "taste_rueckspulen"
+   ],
+   "optional": false,
+   "sammelschritt": false,
+   "hinweise": [
+    {
+     "stufe": 1,
+     "zeile": "W4_HINT_PIX_0230"
+    },
+    {
+     "stufe": 2,
+     "zeile": "W4_HINT_PIX_0240"
+    },
+    {
+     "stufe": 3,
+     "zeile": "W4_HINT_PIX_0250"
+    }
+   ]
+  },
+  {
+   "schritt": "R5",
+   "ziel": "Das Zombie-Video",
+   "raum": "friedhof",
+   "offen_wenn": [
+    "R5a",
+    "R5b"
+   ],
+   "offen_wenn_eins_von": [],
+   "geloest_schalter": [
+    "W4_R05_GELOEST"
+   ],
+   "objekte": [],
+   "optional": false,
+   "sammelschritt": true,
+   "hinweise": []
+  },
+  {
+   "schritt": "R6",
+   "ziel": "Die Genre-Tür",
+   "raum": "spukhaus_keller",
+   "offen_wenn": [
+    "R5",
+    "splitscreen_adapter"
+   ],
+   "offen_wenn_eins_von": [],
+   "geloest_schalter": [
+    "W4_R06_GELOEST"
+   ],
+   "objekte": [
+    "splitscreen_adapter"
+   ],
+   "optional": false,
+   "sammelschritt": false,
+   "hinweise": [
+    {
+     "stufe": 1,
+     "zeile": "W4_HINT_PIX_0260"
+    },
+    {
+     "stufe": 2,
+     "zeile": "W4_HINT_PIX_0270"
+    },
+    {
+     "stufe": 3,
+     "zeile": "W4_HINT_PIX_0280"
+    }
+   ]
+  },
+  {
+   "schritt": "R7",
+   "ziel": "Die Lichterkette",
+   "raum": "spukhaus_halle",
+   "offen_wenn": [
+    "R6"
+   ],
+   "offen_wenn_eins_von": [],
+   "geloest_schalter": [
+    "W4_R07_GELOEST"
+   ],
+   "objekte": [],
+   "optional": false,
+   "sammelschritt": false,
+   "hinweise": [
+    {
+     "stufe": 1,
+     "zeile": "W4_HINT_PIX_0290"
+    },
+    {
+     "stufe": 2,
+     "zeile": "W4_HINT_PIX_0300"
+    },
+    {
+     "stufe": 3,
+     "zeile": "W4_HINT_PIX_0540"
+    }
+   ]
+  },
+  {
+   "schritt": "R8",
+   "ziel": "Die Wahrheit ist irgendwo da draußen",
+   "raum": "spukhaus_halle",
+   "offen_wenn": [
+    "R6"
+   ],
+   "offen_wenn_eins_von": [
+    "R7",
+    "sonnenbrille"
+   ],
+   "geloest_schalter": [
+    "W4_R08_GELOEST"
+   ],
+   "objekte": [],
+   "optional": false,
+   "sammelschritt": false,
+   "hinweise": [
+    {
+     "stufe": 1,
+     "zeile": "W4_HINT_PIX_0310"
+    },
+    {
+     "stufe": 2,
+     "zeile": "W4_HINT_PIX_0320"
+    },
+    {
+     "stufe": 3,
+     "zeile": "W4_HINT_PIX_0550"
+    }
+   ]
+  },
+  {
+   "schritt": "R9",
+   "ziel": "Der Hauptgewinn",
+   "raum": "gluecksrad",
+   "offen_wenn": [
+    "R3",
+    "R4",
+    "R11a",
+    "programmzeitschrift",
+    "taste_umschalten"
+   ],
+   "offen_wenn_eins_von": [],
+   "geloest_schalter": [
+    "W4_R09_GELOEST"
+   ],
+   "objekte": [
+    "programmzeitschrift",
+    "taste_umschalten"
+   ],
+   "optional": false,
+   "sammelschritt": false,
+   "hinweise": [
+    {
+     "stufe": 1,
+     "zeile": "W4_HINT_PIX_0330"
+    },
+    {
+     "stufe": 2,
+     "zeile": "W4_HINT_PIX_0340"
+    },
+    {
+     "stufe": 3,
+     "zeile": "W4_HINT_PIX_0350"
+    }
+   ]
+  },
+  {
+   "schritt": "R10a",
+   "ziel": "Den Käse zum Wunderkäse machen",
+   "raum": "kapitolis",
+   "offen_wenn": [
+    "fondue_kaese",
+    "taste_umschalten"
+   ],
+   "offen_wenn_eins_von": [],
+   "geloest_schalter": [
+    "W4_R10_A_GELOEST"
+   ],
+   "objekte": [
+    "fondue_kaese",
+    "taste_umschalten"
+   ],
+   "optional": false,
+   "sammelschritt": false,
+   "hinweise": [
+    {
+     "stufe": 1,
+     "zeile": "W4_HINT_PIX_0360"
+    },
+    {
+     "stufe": 2,
+     "zeile": "W4_HINT_PIX_0370"
+    },
+    {
+     "stufe": 3,
+     "zeile": "W4_HINT_PIX_0560"
+    }
+   ]
+  },
+  {
+   "schritt": "R10b",
+   "ziel": "Einen Superhelden-Anzug besorgen",
+   "raum": "kapitolis",
+   "offen_wenn": [
+    "R2"
+   ],
+   "offen_wenn_eins_von": [],
+   "geloest_schalter": [
+    "W4_R10_B_GELOEST"
+   ],
+   "objekte": [],
+   "optional": false,
+   "sammelschritt": false,
+   "hinweise": [
+    {
+     "stufe": 1,
+     "zeile": "W4_HINT_PIX_0570"
+    },
+    {
+     "stufe": 2,
+     "zeile": "W4_HINT_PIX_0580"
+    },
+    {
+     "stufe": 3,
+     "zeile": "W4_HINT_PIX_0590"
+    }
+   ]
+  },
+  {
+   "schritt": "R10c",
+   "ziel": "Den Unfall in der Fondue-Fabrik erwischen",
+   "raum": "fondue_fabrik",
+   "offen_wenn": [
+    "R10a",
+    "R10b",
+    "fondue_kaese",
+    "bettlaken",
+    "taste_rueckspulen"
+   ],
+   "offen_wenn_eins_von": [],
+   "geloest_schalter": [
+    "W4_R10_C_GELOEST"
+   ],
+   "objekte": [
+    "fondue_kaese",
+    "bettlaken",
+    "taste_rueckspulen"
+   ],
+   "optional": false,
+   "sammelschritt": false,
+   "hinweise": [
+    {
+     "stufe": 1,
+     "zeile": "W4_HINT_PIX_0380"
+    },
+    {
+     "stufe": 2,
+     "zeile": "W4_HINT_PIX_0390"
+    },
+    {
+     "stufe": 3,
+     "zeile": "W4_HINT_PIX_0600"
+    }
+   ]
+  },
+  {
+   "schritt": "R10",
+   "ziel": "Die Entstehung von Käsemann",
+   "raum": "fondue_fabrik",
+   "offen_wenn": [
+    "R10a",
+    "R10b",
+    "R10c"
+   ],
+   "offen_wenn_eins_von": [],
+   "geloest_schalter": [
+    "W4_R10_GELOEST"
+   ],
+   "objekte": [],
+   "optional": false,
+   "sammelschritt": true,
+   "hinweise": []
+  },
+  {
+   "schritt": "R11a",
+   "ziel": "Dr. Werbepauses Spot finden",
+   "raum": "werbespot_set",
+   "offen_wenn": [
+    "programmzeitschrift"
+   ],
+   "offen_wenn_eins_von": [],
+   "geloest_schalter": [
+    "W4_R11_A_GELOEST"
+   ],
+   "objekte": [
+    "programmzeitschrift"
+   ],
+   "optional": false,
+   "sammelschritt": false,
+   "hinweise": [
+    {
+     "stufe": 1,
+     "zeile": "W4_HINT_PIX_0610"
+    },
+    {
+     "stufe": 2,
+     "zeile": "W4_HINT_PIX_0620"
+    },
+    {
+     "stufe": 3,
+     "zeile": "W4_HINT_PIX_0630"
+    }
+   ]
+  },
+  {
+   "schritt": "R11b",
+   "ziel": "Den Countdown brechen",
+   "raum": "werbespot_set",
+   "offen_wenn": [
+    "R11a",
+    "taste_stumm"
+   ],
+   "offen_wenn_eins_von": [],
+   "geloest_schalter": [
+    "W4_R11_B_GELOEST"
+   ],
+   "objekte": [
+    "taste_stumm"
+   ],
+   "optional": false,
+   "sammelschritt": false,
+   "hinweise": [
+    {
+     "stufe": 1,
+     "zeile": "W4_HINT_PIX_0400"
+    },
+    {
+     "stufe": 2,
+     "zeile": "W4_HINT_PIX_0410"
+    },
+    {
+     "stufe": 3,
+     "zeile": "W4_HINT_PIX_0640"
+    }
+   ]
+  },
+  {
+   "schritt": "R11c",
+   "ziel": "Dr. Werbepause vertreiben",
+   "raum": "werbespot_set",
+   "offen_wenn": [
+    "R11b",
+    "R10",
+    "bananenschale"
+   ],
+   "offen_wenn_eins_von": [],
+   "geloest_schalter": [
+    "W4_R11_C_GELOEST"
+   ],
+   "objekte": [
+    "bananenschale"
+   ],
+   "optional": false,
+   "sammelschritt": false,
+   "hinweise": [
+    {
+     "stufe": 1,
+     "zeile": "W4_HINT_PIX_0420"
+    },
+    {
+     "stufe": 2,
+     "zeile": "W4_HINT_PIX_0430"
+    },
+    {
+     "stufe": 3,
+     "zeile": "W4_HINT_PIX_0650"
+    }
+   ]
+  },
+  {
+   "schritt": "R11d",
+   "ziel": "Die Comic-Panels ordnen",
+   "raum": "werbespot_set",
+   "offen_wenn": [
+    "R11c"
+   ],
+   "offen_wenn_eins_von": [],
+   "geloest_schalter": [
+    "W4_R11_D_GELOEST"
+   ],
+   "objekte": [],
+   "optional": false,
+   "sammelschritt": false,
+   "hinweise": [
+    {
+     "stufe": 1,
+     "zeile": "W4_HINT_PIX_0440"
+    },
+    {
+     "stufe": 2,
+     "zeile": "W4_HINT_PIX_0450"
+    },
+    {
+     "stufe": 3,
+     "zeile": "W4_HINT_PIX_0660"
+    }
+   ]
+  },
+  {
+   "schritt": "R11",
+   "ziel": "Dr. Werbepause",
+   "raum": "werbespot_set",
+   "offen_wenn": [
+    "R11a",
+    "R11b",
+    "R11c",
+    "R11d"
+   ],
+   "offen_wenn_eins_von": [],
+   "geloest_schalter": [
+    "W4_R11_GELOEST"
+   ],
+   "objekte": [],
+   "optional": false,
+   "sammelschritt": true,
+   "hinweise": []
+  },
+  {
+   "schritt": "R12a",
+   "ziel": "Den versteckten Kanal finden",
+   "raum": "empfang",
+   "offen_wenn": [
+    "taste_sendersuchlauf"
+   ],
+   "offen_wenn_eins_von": [],
+   "geloest_schalter": [
+    "W4_R12_A_GELOEST"
+   ],
+   "objekte": [
+    "taste_sendersuchlauf"
+   ],
+   "optional": false,
+   "sammelschritt": false,
+   "hinweise": [
+    {
+     "stufe": 1,
+     "zeile": "W4_HINT_PIX_0460"
+    },
+    {
+     "stufe": 2,
+     "zeile": "W4_HINT_PIX_0670"
+    },
+    {
+     "stufe": 3,
+     "zeile": "W4_HINT_PIX_0680"
+    }
+   ]
+  },
+  {
+   "schritt": "R12b",
+   "ziel": "Mit dem Aufzug nach oben",
+   "raum": "empfang",
+   "offen_wenn": [
+    "R12a",
+    "R7",
+    "taste_untertitel",
+    "taste_pause",
+    "archivband"
+   ],
+   "offen_wenn_eins_von": [],
+   "geloest_schalter": [
+    "W4_R12_B_GELOEST"
+   ],
+   "objekte": [
+    "taste_untertitel",
+    "taste_pause",
+    "archivband"
+   ],
+   "optional": false,
+   "sammelschritt": false,
+   "hinweise": [
+    {
+     "stufe": 1,
+     "zeile": "W4_HINT_PIX_0470"
+    },
+    {
+     "stufe": 2,
+     "zeile": "W4_HINT_PIX_0480"
+    },
+    {
+     "stufe": 3,
+     "zeile": "W4_HINT_PIX_0690"
+    }
+   ]
+  },
+  {
+   "schritt": "R12",
+   "ziel": "Die Senderzentrale",
+   "raum": "empfang",
+   "offen_wenn": [
+    "R12a",
+    "R12b"
+   ],
+   "offen_wenn_eins_von": [],
+   "geloest_schalter": [
+    "W4_R12_GELOEST"
+   ],
+   "objekte": [],
+   "optional": false,
+   "sammelschritt": true,
+   "hinweise": []
+  },
+  {
+   "schritt": "R13",
+   "ziel": "Intendant Zappmann",
+   "raum": "zappmanns_studio",
+   "offen_wenn": [
+    "R7",
+    "billig_fernbedienung",
+    "taste_pause",
+    "splitscreen_adapter",
+    "archivband",
+    "taste_stumm",
+    "taste_untertitel",
+    "taste_sendersuchlauf"
+   ],
+   "offen_wenn_eins_von": [],
+   "geloest_schalter": [
+    "W4_R13_GELOEST"
+   ],
+   "objekte": [
+    "billig_fernbedienung",
+    "taste_pause",
+    "splitscreen_adapter",
+    "archivband",
+    "taste_stumm",
+    "taste_untertitel",
+    "taste_sendersuchlauf"
+   ],
+   "optional": false,
+   "sammelschritt": false,
+   "hinweise": [
+    {
+     "stufe": 1,
+     "zeile": "W4_HINT_PIX_0490"
+    },
+    {
+     "stufe": 2,
+     "zeile": "W4_HINT_PIX_0500"
+    },
+    {
+     "stufe": 3,
+     "zeile": "W4_HINT_PIX_0510"
+    }
+   ]
+  }
+ ]
+}

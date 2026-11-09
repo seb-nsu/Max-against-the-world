@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://84jcws8c8duh"]
+
+[ext_resource type="Script" path="res://game/inventory_items/fackel_buendel/inventory_item_fackel_buendel_state.gd" id="1_h1ajk"]
+
+[resource]
+resource_name = "FackelBuendel"
+script = ExtResource("1_h1ajk")
+script_name = "FackelBuendel"
+scene = "res://game/inventory_items/fackel_buendel/inventory_item_fackel_buendel.tscn"

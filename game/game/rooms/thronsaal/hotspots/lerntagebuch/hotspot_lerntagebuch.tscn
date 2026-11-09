@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://cwtg4y5wmlxp3"]
+
+[ext_resource type="Script" path="res://game/rooms/thronsaal/hotspots/lerntagebuch/hotspot_lerntagebuch.gd" id="1_0ifnx"]
+
+[node name="Lerntagebuch" type="Area2D" unique_id=354739942]
+script = ExtResource("1_0ifnx")
+script_name = "Lerntagebuch"
+description = "Lerntagebuch"
+cursor = 1
+interaction_polygon = PackedVector2Array(-8, -5, 8, -5, 8, 5, -8, 5)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1800197191]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

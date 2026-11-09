@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://dq6ix14gemjl5"]
+
+[node name="Wasser" type="Marker2D" unique_id=1658568463]
+visible = false

@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://c3t4tnm015igw"]
+
+[ext_resource type="Script" path="res://game/rooms/zauberwald/hotspots/gluehwuermchen/hotspot_gluehwuermchen.gd" id="1_48k7v"]
+
+[node name="Gluehwuermchen" type="Area2D" unique_id=1078964061]
+script = ExtResource("1_48k7v")
+script_name = "Gluehwuermchen"
+description = "Gluehwuermchen"
+cursor = 1
+interaction_polygon = PackedVector2Array(-40, -15, 40, -15, 40, 15, -40, 15)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=126213309]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://fb1wnchbjaty"]
+
+[ext_resource type="Script" path="res://game/rooms/taverne/room_taverne_state.gd" id="1_kqxoo"]
+
+[resource]
+resource_name = "Taverne"
+script = ExtResource("1_kqxoo")
+script_name = "Taverne"
+scene = "res://game/rooms/taverne/room_taverne.tscn"

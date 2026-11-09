@@ -1,0 +1,9851 @@
+{
+ "abschnitt": "welt-1",
+ "erzeugt_von": "tools/godot_raeume.py",
+ "praefix": "W1",
+ "ausbau": [
+  "R1",
+  "R1a",
+  "R1b",
+  "R1c",
+  "R2",
+  "R3",
+  "R4",
+  "R4a",
+  "R4b",
+  "R4c",
+  "R5",
+  "R6",
+  "R6a",
+  "R6b",
+  "R7",
+  "R8",
+  "R9",
+  "R10",
+  "R10a",
+  "R10b",
+  "R11",
+  "R11a",
+  "R11b",
+  "R12",
+  "R13"
+ ],
+ "raeume": [
+  {
+   "id": "dorfplatz",
+   "script_name": "Dorfplatz",
+   "name_key": "UI_RAUM_DORFPLATZ",
+   "groesse": [
+    640,
+    180
+   ],
+   "hintergrund": "res://grafik/platzhalter/raum_dorfplatz.png",
+   "farbe": "#7d8f4e",
+   "laufbereich": [
+    [
+     4,
+     140
+    ],
+    [
+     636,
+     140
+    ],
+    [
+     636,
+     178
+    ],
+    [
+     4,
+     178
+    ]
+   ],
+   "marker": {
+    "start": [
+     300,
+     160
+    ],
+    "von_taverne": [
+     40,
+     158
+    ],
+    "von_schmiede": [
+     548,
+     158
+    ],
+    "von_zauberstabladen": [
+     214,
+     158
+    ],
+    "von_klassenzimmer": [
+     270,
+     150
+    ],
+    "von_trollbruecke": [
+     610,
+     160
+    ],
+    "ziegen": [
+     590,
+     164
+    ],
+    "lieferung": [
+     520,
+     162
+    ]
+   },
+   "figuren": [
+    {
+     "id": "toadi",
+     "script_name": "Toadi",
+     "pos": [
+      340,
+      166
+     ]
+    }
+   ],
+   "hotspots": [
+    {
+     "id": "luftschloss",
+     "script_name": "Luftschloss",
+     "name_key": "UI_OBJ_LUFTSCHLOSS",
+     "rect": [
+      282,
+      4,
+      56,
+      26
+     ],
+     "gehe": [
+      310,
+      150
+     ],
+     "ansehen": [
+      {
+       "zeile": "W1_DORF_MAX_0220",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_DORF_MAX_0220"
+       ]
+      },
+      {
+       "zeile": "W1_DORF_MAX_0225",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_DORF_MAX_0225"
+       ],
+       "mal": 2
+      },
+      {
+       "zeile": "W1_DORF_PIX_0230",
+       "sprecher": "PIX",
+       "blasen": [
+        "W1_DORF_PIX_0230",
+        "W1_DORF_PIX_0230_2"
+       ],
+       "figur": "PIX"
+      },
+      {
+       "zeile": "W1_DORF_PIX_0235",
+       "sprecher": "PIX",
+       "blasen": [
+        "W1_DORF_PIX_0235"
+       ],
+       "mal": 2,
+       "figur": "PIX"
+      }
+     ]
+    },
+    {
+     "id": "haeuser",
+     "script_name": "Haeuser",
+     "name_key": "UI_OBJ_HAEUSER",
+     "rect": [
+      250,
+      30,
+      60,
+      40
+     ],
+     "gehe": [
+      280,
+      150
+     ],
+     "ansehen": [
+      {
+       "zeile": "W1_DORF_MAX_0310",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_DORF_MAX_0310"
+       ]
+      },
+      {
+       "zeile": "W1_DORF_MAX_0315",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_DORF_MAX_0315"
+       ],
+       "mal": 2
+      }
+     ]
+    },
+    {
+     "id": "stall",
+     "script_name": "Stall",
+     "name_key": "UI_OBJ_STALL",
+     "rect": [
+      70,
+      70,
+      50,
+      66
+     ],
+     "gehe": [
+      94,
+      152
+     ],
+     "ansehen": [
+      {
+       "zeile": "W1_DORF_MAX_0250",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_DORF_MAX_0250"
+       ]
+      },
+      {
+       "zeile": "W1_DORF_MAX_0255",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_DORF_MAX_0255"
+       ],
+       "mal": 2
+      },
+      {
+       "zeile": "W1_DORF_PIX_0420",
+       "sprecher": "PIX",
+       "blasen": [
+        "W1_DORF_PIX_0420"
+       ],
+       "figur": "PIX"
+      }
+     ]
+    },
+    {
+     "id": "ring_laden",
+     "script_name": "RingLaden",
+     "name_key": "UI_OBJ_RING_LADEN",
+     "rect": [
+      128,
+      76,
+      46,
+      60
+     ],
+     "gehe": [
+      150,
+      152
+     ],
+     "ansehen": [
+      {
+       "zeile": "W1_DORF_MAX_0240",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_DORF_MAX_0240"
+       ]
+      },
+      {
+       "zeile": "W1_DORF_MAX_0245",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_DORF_MAX_0245"
+       ],
+       "mal": 2
+      }
+     ]
+    },
+    {
+     "id": "erdfleck",
+     "script_name": "Erdfleck",
+     "name_key": "UI_OBJ_ERDFLECK",
+     "rect": [
+      330,
+      140,
+      28,
+      8
+     ],
+     "gehe": [
+      344,
+      158
+     ],
+     "ansehen": [
+      {
+       "zeile": "W1_DORF_MAX_0320",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_DORF_MAX_0320"
+       ],
+       "bedingung": [
+        {
+         "art": "vor",
+         "raetsel": "R8"
+        }
+       ]
+      },
+      {
+       "zeile": "W1_DORF_MAX_0325",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_DORF_MAX_0325"
+       ],
+       "bedingung": [
+        {
+         "art": "vor",
+         "raetsel": "R8"
+        }
+       ],
+       "mal": 2
+      }
+     ]
+    },
+    {
+     "id": "brunnen",
+     "script_name": "Brunnen",
+     "name_key": "UI_OBJ_BRUNNEN",
+     "rect": [
+      370,
+      92,
+      60,
+      48
+     ],
+     "gehe": [
+      400,
+      152
+     ],
+     "ansehen": [
+      {
+       "zeile": "W1_DORF_MAX_0110",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_DORF_MAX_0110"
+       ]
+      },
+      {
+       "zeile": "W1_DORF_MAX_0115",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_DORF_MAX_0115"
+       ],
+       "mal": 2
+      },
+      {
+       "zeile": "W1_DORF_PIX_0120",
+       "sprecher": "PIX",
+       "blasen": [
+        "W1_DORF_PIX_0120"
+       ],
+       "figur": "PIX"
+      },
+      {
+       "zeile": "W1_DORF_PIX_0125",
+       "sprecher": "PIX",
+       "blasen": [
+        "W1_DORF_PIX_0125"
+       ],
+       "mal": 2,
+       "figur": "PIX"
+      }
+     ],
+     "gegenstand_auf": [
+      {
+       "zeile": "W1_DORF_MAX_0360",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_DORF_MAX_0360"
+       ],
+       "gegenstand": "eimer",
+       "folge": [
+        {
+         "zeile": "W1_DORF_PIX_0370",
+         "sprecher": "PIX",
+         "blasen": [
+          "W1_DORF_PIX_0370"
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "statue",
+     "script_name": "Statue",
+     "name_key": "UI_OBJ_STATUE",
+     "rect": [
+      380,
+      52,
+      40,
+      38
+     ],
+     "gehe": [
+      400,
+      152
+     ],
+     "ansehen": [
+      {
+       "zeile": "W1_DORF_MAX_0130",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_DORF_MAX_0130"
+       ]
+      },
+      {
+       "zeile": "W1_DORF_MAX_0135",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_DORF_MAX_0135"
+       ],
+       "mal": 2
+      },
+      {
+       "zeile": "W1_DORF_PIX_0140",
+       "sprecher": "PIX",
+       "blasen": [
+        "W1_DORF_PIX_0140",
+        "W1_DORF_PIX_0140_2"
+       ],
+       "figur": "PIX"
+      },
+      {
+       "zeile": "W1_DORF_PIX_0145",
+       "sprecher": "PIX",
+       "blasen": [
+        "W1_DORF_PIX_0145"
+       ],
+       "mal": 2,
+       "figur": "PIX"
+      }
+     ]
+    },
+    {
+     "id": "dorfbrett",
+     "script_name": "Dorfbrett",
+     "name_key": "UI_OBJ_DORFBRETT",
+     "rect": [
+      446,
+      74,
+      54,
+      56
+     ],
+     "gehe": [
+      472,
+      152
+     ],
+     "ansehen": [
+      {
+       "zeile": "W1_DORF_MAX_0150",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_DORF_MAX_0150"
+       ]
+      },
+      {
+       "zeile": "W1_DORF_MAX_0155",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_DORF_MAX_0155"
+       ],
+       "mal": 2
+      },
+      {
+       "zeile": "W1_DORF_PIX_0410",
+       "sprecher": "PIX",
+       "blasen": [
+        "W1_DORF_PIX_0410"
+       ],
+       "figur": "PIX"
+      }
+     ]
+    }
+   ],
+   "props": [
+    {
+     "id": "eimer",
+     "script_name": "Eimer",
+     "name_key": "UI_OBJ_EIMER",
+     "rect": [
+      432,
+      128,
+      12,
+      12
+     ],
+     "gehe": [
+      436,
+      154
+     ],
+     "textur": "res://grafik/platzhalter/prop_eimer.png",
+     "gegenstand": "eimer",
+     "ansehen": [],
+     "nehmen": {
+      "zeile": "W1_DORF_MAX_0350",
+      "sprecher": "MAX",
+      "blasen": [
+       "W1_DORF_MAX_0350"
+      ]
+     }
+    },
+    {
+     "id": "bestellzettel",
+     "script_name": "Bestellzettel",
+     "name_key": "UI_OBJ_BESTELLZETTEL",
+     "rect": [
+      452,
+      80,
+      14,
+      12
+     ],
+     "gehe": [
+      472,
+      152
+     ],
+     "textur": "res://grafik/platzhalter/prop_bestellzettel.png",
+     "gegenstand": "bestellzettel",
+     "ansehen": [
+      {
+       "zeile": "W1_DORF_MAX_0160",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_DORF_MAX_0160"
+       ]
+      },
+      {
+       "zeile": "W1_DORF_MAX_0165",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_DORF_MAX_0165"
+       ],
+       "mal": 2
+      }
+     ],
+     "nehmen": {
+      "zeile": "W1_DORF_MAX_0170",
+      "sprecher": "MAX",
+      "blasen": [
+       "W1_DORF_MAX_0170"
+      ]
+     }
+    },
+    {
+     "id": "steckbrief",
+     "script_name": "Steckbrief",
+     "name_key": "UI_OBJ_STECKBRIEF",
+     "rect": [
+      476,
+      78,
+      20,
+      26
+     ],
+     "gehe": [
+      472,
+      152
+     ],
+     "textur": "res://grafik/platzhalter/prop_steckbrief.png",
+     "gegenstand": "steckbrief",
+     "ansehen": [
+      {
+       "zeile": "W1_DORF_MAX_0180",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_DORF_MAX_0180"
+       ]
+      },
+      {
+       "zeile": "W1_DORF_MAX_0185",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_DORF_MAX_0185"
+       ],
+       "mal": 2,
+       "folge": [
+        {
+         "zeile": "W1_DORF_MAX_0190",
+         "sprecher": "MAX",
+         "blasen": [
+          "W1_DORF_MAX_0190"
+         ]
+        }
+       ]
+      },
+      {
+       "zeile": "W1_DORF_PIX_0200",
+       "sprecher": "PIX",
+       "blasen": [
+        "W1_DORF_PIX_0200"
+       ],
+       "figur": "PIX"
+      }
+     ],
+     "nehmen": {
+      "zeile": "W1_DORF_MAX_0210",
+      "sprecher": "MAX",
+      "blasen": [
+       "W1_DORF_MAX_0210"
+      ]
+     }
+    }
+   ],
+   "ausgaenge": [
+    {
+     "id": "taverne_von_aussen",
+     "script_name": "TaverneVonAussen",
+     "ziel": "taverne",
+     "name_key": "UI_OBJ_TAVERNE_VON_AUSSEN",
+     "rect": [
+      8,
+      60,
+      52,
+      80
+     ],
+     "gehe": [
+      34,
+      152
+     ],
+     "erreichbar_ab": "start",
+     "ansehen": [
+      {
+       "zeile": "W1_DORF_MAX_0260",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_DORF_MAX_0260"
+       ]
+      },
+      {
+       "zeile": "W1_DORF_MAX_0265",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_DORF_MAX_0265"
+       ],
+       "mal": 2
+      }
+     ]
+    },
+    {
+     "id": "schmiede_von_aussen",
+     "script_name": "SchmiedeVonAussen",
+     "ziel": "schmiede",
+     "name_key": "UI_OBJ_SCHMIEDE_VON_AUSSEN",
+     "rect": [
+      516,
+      64,
+      62,
+      76
+     ],
+     "gehe": [
+      546,
+      152
+     ],
+     "erreichbar_ab": "start",
+     "ansehen": [
+      {
+       "zeile": "W1_DORF_MAX_0270",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_DORF_MAX_0270"
+       ]
+      },
+      {
+       "zeile": "W1_DORF_MAX_0275",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_DORF_MAX_0275"
+       ],
+       "mal": 2
+      }
+     ]
+    },
+    {
+     "id": "zauberstab_laden_von_aussen",
+     "script_name": "ZauberstabLadenVonAussen",
+     "ziel": "zauberstabladen",
+     "name_key": "UI_OBJ_ZAUBERSTAB_LADEN_VON_AUSSEN",
+     "rect": [
+      188,
+      66,
+      50,
+      74
+     ],
+     "gehe": [
+      212,
+      152
+     ],
+     "erreichbar_ab": "start",
+     "ansehen": [
+      {
+       "zeile": "W1_DORF_MAX_0280",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_DORF_MAX_0280"
+       ]
+      },
+      {
+       "zeile": "W1_DORF_MAX_0285",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_DORF_MAX_0285"
+       ],
+       "mal": 2
+      }
+     ]
+    },
+    {
+     "id": "weg_nach_hoggelwarz",
+     "script_name": "WegNachHoggelwarz",
+     "ziel": "klassenzimmer",
+     "name_key": "UI_OBJ_WEG_NACH_HOGGELWARZ",
+     "rect": [
+      244,
+      74,
+      34,
+      50
+     ],
+     "gehe": [
+      262,
+      146
+     ],
+     "erreichbar_ab": "start",
+     "ansehen": [
+      {
+       "zeile": "W1_DORF_MAX_0290",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_DORF_MAX_0290"
+       ]
+      },
+      {
+       "zeile": "W1_DORF_MAX_0295",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_DORF_MAX_0295"
+       ],
+       "mal": 2
+      }
+     ]
+    },
+    {
+     "id": "waldweg",
+     "script_name": "Waldweg",
+     "ziel": "trollbruecke",
+     "name_key": "UI_OBJ_WALDWEG",
+     "rect": [
+      602,
+      96,
+      36,
+      44
+     ],
+     "gehe": [
+      624,
+      158
+     ],
+     "erreichbar_ab": "start",
+     "ansehen": [
+      {
+       "zeile": "W1_DORF_MAX_0300",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_DORF_MAX_0300"
+       ]
+      },
+      {
+       "zeile": "W1_DORF_MAX_0305",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_DORF_MAX_0305"
+       ],
+       "mal": 2
+      }
+     ]
+    },
+    {
+     "id": "bohnenranke",
+     "script_name": "Bohnenranke",
+     "ziel": "luftschloss",
+     "name_key": "UI_OBJ_BOHNENRANKE",
+     "rect": [
+      326,
+      30,
+      30,
+      110
+     ],
+     "gehe": [
+      344,
+      158
+     ],
+     "erreichbar_ab": "R8",
+     "ansehen": [
+      {
+       "zeile": "W1_DORF_MAX_0330",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_DORF_MAX_0330"
+       ],
+       "bedingung": [
+        {
+         "art": "nach",
+         "raetsel": "R8"
+        }
+       ]
+      },
+      {
+       "zeile": "W1_DORF_MAX_0335",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_DORF_MAX_0335"
+       ],
+       "bedingung": [
+        {
+         "art": "nach",
+         "raetsel": "R8"
+        }
+       ],
+       "mal": 2
+      },
+      {
+       "zeile": "W1_DORF_PIX_0340",
+       "sprecher": "PIX",
+       "blasen": [
+        "W1_DORF_PIX_0340"
+       ],
+       "bedingung": [
+        {
+         "art": "nach",
+         "raetsel": "R8"
+        }
+       ],
+       "figur": "PIX"
+      },
+      {
+       "zeile": "W1_DORF_PIX_0345",
+       "sprecher": "PIX",
+       "blasen": [
+        "W1_DORF_PIX_0345"
+       ],
+       "bedingung": [
+        {
+         "art": "nach",
+         "raetsel": "R8"
+        }
+       ],
+       "mal": 2,
+       "figur": "PIX"
+      }
+     ],
+     "versteckt": true
+    }
+   ],
+   "zurufe": [
+    {
+     "zeile": "W1_DORF_PIX_1310",
+     "sprecher": "PIX",
+     "blasen": [
+      "W1_DORF_PIX_1310"
+     ]
+    },
+    {
+     "zeile": "W1_DORF_PIX_1320",
+     "sprecher": "PIX",
+     "blasen": [
+      "W1_DORF_PIX_1320"
+     ]
+    },
+    {
+     "zeile": "W1_DORF_PIX_1330",
+     "sprecher": "PIX",
+     "blasen": [
+      "W1_DORF_PIX_1330"
+     ],
+     "bedingung_text": "solange Toadi im Raum ist"
+    }
+   ]
+  },
+  {
+   "id": "taverne",
+   "script_name": "Taverne",
+   "name_key": "UI_RAUM_TAVERNE",
+   "groesse": [
+    320,
+    180
+   ],
+   "hintergrund": "res://grafik/platzhalter/raum_taverne.png",
+   "farbe": "#6e4a32",
+   "laufbereich": [
+    [
+     4,
+     140
+    ],
+    [
+     316,
+     140
+    ],
+    [
+     316,
+     178
+    ],
+    [
+     4,
+     178
+    ]
+   ],
+   "marker": {
+    "start": [
+     292,
+     160
+    ],
+    "von_dorfplatz": [
+     292,
+     160
+    ],
+    "balken": [
+     150,
+     26
+    ],
+    "keller": [
+     70,
+     140
+    ]
+   },
+   "figuren": [
+    {
+     "id": "humbert",
+     "script_name": "Humbert",
+     "pos": [
+      40,
+      156
+     ]
+    },
+    {
+     "id": "gollo",
+     "script_name": "Gollo",
+     "pos": [
+      174,
+      166
+     ]
+    },
+    {
+     "id": "minka",
+     "script_name": "Minka",
+     "pos": [
+      112,
+      150
+     ]
+    },
+    {
+     "id": "huhn",
+     "script_name": "Huhn",
+     "pos": [
+      150,
+      126
+     ]
+    }
+   ],
+   "hotspots": [
+    {
+     "id": "dachbalken",
+     "script_name": "Dachbalken",
+     "name_key": "UI_OBJ_DACHBALKEN",
+     "rect": [
+      0,
+      0,
+      320,
+      18
+     ],
+     "gehe": [
+      160,
+      156
+     ],
+     "ansehen": [
+      {
+       "zeile": "W1_TAV_MAX_0260",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_TAV_MAX_0260"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "tresen",
+     "script_name": "Tresen",
+     "name_key": "UI_OBJ_TRESEN",
+     "rect": [
+      4,
+      104,
+      86,
+      34
+     ],
+     "gehe": [
+      44,
+      152
+     ],
+     "ansehen": [
+      {
+       "zeile": "W1_TAV_MAX_0110",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_TAV_MAX_0110"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "fischsuppe",
+     "script_name": "Fischsuppe",
+     "name_key": "UI_OBJ_FISCHSUPPE",
+     "rect": [
+      16,
+      96,
+      14,
+      8
+     ],
+     "gehe": [
+      30,
+      152
+     ],
+     "ansehen": [
+      {
+       "zeile": "W1_TAV_MAX_0310",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_TAV_MAX_0310"
+       ]
+      },
+      {
+       "zeile": "W1_TAV_PIX_0320",
+       "sprecher": "PIX",
+       "blasen": [
+        "W1_TAV_PIX_0320"
+       ],
+       "figur": "PIX",
+       "folge": [
+        {
+         "zeile": "W1_TAV_MAX_0330",
+         "sprecher": "MAX",
+         "blasen": [
+          "W1_TAV_MAX_0330"
+         ]
+        },
+        {
+         "zeile": "W1_TAV_PIX_0340",
+         "sprecher": "PIX",
+         "blasen": [
+          "W1_TAV_PIX_0340"
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "flasche_vielsaft_limo",
+     "script_name": "FlascheVielsaftLimo",
+     "name_key": "UI_OBJ_FLASCHE_VIELSAFT_LIMO",
+     "rect": [
+      34,
+      86,
+      8,
+      16
+     ],
+     "gehe": [
+      40,
+      152
+     ],
+     "ansehen": [
+      {
+       "zeile": "W1_TAV_MAX_0290",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_TAV_MAX_0290"
+       ]
+      },
+      {
+       "zeile": "W1_TAV_PIX_0300",
+       "sprecher": "PIX",
+       "blasen": [
+        "W1_TAV_PIX_0300"
+       ],
+       "figur": "PIX"
+      }
+     ],
+     "benutzen": [
+      {
+       "zeile": "W1_TAV_MAX_1550",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_TAV_MAX_1550"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "weinkarte_am_tresen",
+     "script_name": "WeinkarteAmTresen",
+     "name_key": "UI_OBJ_WEINKARTE_AM_TRESEN",
+     "rect": [
+      48,
+      88,
+      16,
+      12
+     ],
+     "gehe": [
+      54,
+      152
+     ],
+     "ansehen": [
+      {
+       "zeile": "W1_TAV_MAX_0270",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_TAV_MAX_0270"
+       ]
+      },
+      {
+       "zeile": "W1_TAV_PIX_0280",
+       "sprecher": "PIX",
+       "blasen": [
+        "W1_TAV_PIX_0280"
+       ],
+       "figur": "PIX"
+      }
+     ]
+    },
+    {
+     "id": "fondue_topf",
+     "script_name": "FondueTopf",
+     "name_key": "UI_OBJ_FONDUE_TOPF",
+     "rect": [
+      90,
+      110,
+      24,
+      26
+     ],
+     "gehe": [
+      104,
+      154
+     ],
+     "ansehen": [
+      {
+       "zeile": "W1_TAV_MAX_0120",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_TAV_MAX_0120"
+       ]
+      },
+      {
+       "zeile": "W1_TAV_PIX_0130",
+       "sprecher": "PIX",
+       "blasen": [
+        "W1_TAV_PIX_0130",
+        "W1_TAV_PIX_0130_2"
+       ],
+       "figur": "PIX"
+      }
+     ],
+     "gegenstand_auf": [
+      {
+       "zeile": "W1_TAV_MAX_1480",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_TAV_MAX_1480"
+       ],
+       "gegenstand": "thunfischdose",
+       "folge": [
+        {
+         "zeile": "W1_TAV_PIX_1490",
+         "sprecher": "PIX",
+         "blasen": [
+          "W1_TAV_PIX_1490"
+         ]
+        }
+       ]
+      },
+      {
+       "zeile": "W1_TAV_MAX_1500",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_TAV_MAX_1500"
+       ],
+       "gegenstand": "eimer"
+      },
+      {
+       "zeile": "W1_TAV_MAX_1510",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_TAV_MAX_1510"
+       ],
+       "gegenstand": "kochloeffel"
+      },
+      {
+       "zeile": "W1_TAV_MAX_1540",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_TAV_MAX_1540"
+       ],
+       "bedingung": [
+        {
+         "art": "nach",
+         "raetsel": "R1"
+        }
+       ],
+       "gegenstand": "thunfischdose"
+      }
+     ]
+    },
+    {
+     "id": "kellertuer",
+     "script_name": "Kellertuer",
+     "name_key": "UI_OBJ_KELLERTUER",
+     "rect": [
+      62,
+      54,
+      24,
+      44
+     ],
+     "gehe": [
+      74,
+      146
+     ],
+     "ansehen": [
+      {
+       "zeile": "W1_TAV_MAX_0160",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_TAV_MAX_0160"
+       ]
+      },
+      {
+       "zeile": "W1_TAV_PIX_0380",
+       "sprecher": "PIX",
+       "blasen": [
+        "W1_TAV_PIX_0380"
+       ],
+       "figur": "PIX"
+      }
+     ]
+    },
+    {
+     "id": "steckbrief_plakat_drache",
+     "script_name": "SteckbriefPlakatDrache",
+     "name_key": "UI_OBJ_STECKBRIEF_PLAKAT_DRACHE",
+     "rect": [
+      130,
+      44,
+      28,
+      32
+     ],
+     "gehe": [
+      146,
+      150
+     ],
+     "ansehen": [
+      {
+       "zeile": "W1_TAV_MAX_0170",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_TAV_MAX_0170"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "laute_mit_muenzbecher",
+     "script_name": "LauteMitMuenzbecher",
+     "name_key": "UI_OBJ_LAUTE_MIT_MUENZBECHER",
+     "rect": [
+      182,
+      92,
+      20,
+      30
+     ],
+     "gehe": [
+      190,
+      152
+     ],
+     "ansehen": [
+      {
+       "zeile": "W1_TAV_MAX_0230",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_TAV_MAX_0230"
+       ],
+       "bedingung": [
+        {
+         "art": "hat",
+         "gegenstand": "goldmuenze"
+        }
+       ]
+      },
+      {
+       "zeile": "W1_TAV_MAX_0240",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_TAV_MAX_0240"
+       ],
+       "bedingung": [
+        {
+         "art": "hat_nicht",
+         "gegenstand": "goldmuenze"
+        }
+       ]
+      }
+     ],
+     "benutzen": [
+      {
+       "zeile": "W1_TAV_MAX_1560",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_TAV_MAX_1560"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "kamin",
+     "script_name": "Kamin",
+     "name_key": "UI_OBJ_KAMIN",
+     "rect": [
+      226,
+      76,
+      52,
+      62
+     ],
+     "gehe": [
+      250,
+      152
+     ],
+     "ansehen": [
+      {
+       "zeile": "W1_TAV_MAX_0200",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_TAV_MAX_0200"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "schwerter_sammlung",
+     "script_name": "SchwerterSammlung",
+     "name_key": "UI_OBJ_SCHWERTER_SAMMLUNG",
+     "rect": [
+      226,
+      40,
+      52,
+      22
+     ],
+     "gehe": [
+      250,
+      152
+     ],
+     "ansehen": [
+      {
+       "zeile": "W1_TAV_MAX_0210",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_TAV_MAX_0210"
+       ]
+      },
+      {
+       "zeile": "W1_TAV_PIX_0390",
+       "sprecher": "PIX",
+       "blasen": [
+        "W1_TAV_PIX_0390"
+       ],
+       "figur": "PIX"
+      }
+     ],
+     "benutzen": [
+      {
+       "zeile": "W1_TAV_MAX_1520",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_TAV_MAX_1520"
+       ],
+       "folge": [
+        {
+         "zeile": "W1_TAV_HUM_1530",
+         "sprecher": "HUM",
+         "blasen": [
+          "W1_TAV_HUM_1530"
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "leere_schilder",
+     "script_name": "LeereSchilder",
+     "name_key": "UI_OBJ_LEERE_SCHILDER",
+     "rect": [
+      226,
+      64,
+      52,
+      10
+     ],
+     "gehe": [
+      250,
+      152
+     ],
+     "ansehen": [
+      {
+       "zeile": "W1_TAV_MAX_0220",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_TAV_MAX_0220"
+       ]
+      }
+     ]
+    }
+   ],
+   "props": [
+    {
+     "id": "ziegenfell_vorleger",
+     "script_name": "ZiegenfellVorleger",
+     "name_key": "UI_OBJ_ZIEGENFELL_VORLEGER",
+     "rect": [
+      222,
+      154,
+      44,
+      12
+     ],
+     "gehe": [
+      244,
+      166
+     ],
+     "textur": "res://grafik/platzhalter/prop_ziegenfell_vorleger.png",
+     "gegenstand": "ziegenfell_vorleger",
+     "ansehen": [
+      {
+       "zeile": "W1_TAV_MAX_0250",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_TAV_MAX_0250"
+       ]
+      },
+      {
+       "zeile": "W1_TAV_PIX_0370",
+       "sprecher": "PIX",
+       "blasen": [
+        "W1_TAV_PIX_0370"
+       ],
+       "figur": "PIX"
+      }
+     ],
+     "nehmen": {
+      "zeile": "W1_TAV_MAX_1410",
+      "sprecher": "MAX",
+      "blasen": [
+       "W1_TAV_MAX_1410"
+      ],
+      "folge": [
+       {
+        "zeile": "W1_TAV_PIX_1420",
+        "sprecher": "PIX",
+        "blasen": [
+         "W1_TAV_PIX_1420"
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "ei",
+     "script_name": "Ei",
+     "name_key": "UI_OBJ_EI",
+     "rect": [
+      146,
+      130,
+      8,
+      6
+     ],
+     "gehe": [
+      150,
+      150
+     ],
+     "textur": "res://grafik/platzhalter/prop_ei.png",
+     "gegenstand": "ei",
+     "ansehen": [],
+     "nehmen": {
+      "zeile": "W1_TAV_MAX_1430",
+      "sprecher": "MAX",
+      "blasen": [
+       "W1_TAV_MAX_1430"
+      ],
+      "folge": [
+       {
+        "zeile": "W1_TAV_HUH_1440",
+        "sprecher": "HUH",
+        "blasen": [
+         "W1_TAV_HUH_1440"
+        ]
+       },
+       {
+        "zeile": "W1_TAV_PIX_1450",
+        "sprecher": "PIX",
+        "blasen": [
+         "W1_TAV_PIX_1450",
+         "W1_TAV_PIX_1450_2"
+        ]
+       }
+      ]
+     }
+    }
+   ],
+   "ausgaenge": [
+    {
+     "id": "ausgang_dorfplatz",
+     "script_name": "AusgangDorfplatz",
+     "ziel": "dorfplatz",
+     "name_key": "UI_RAUM_DORFPLATZ",
+     "rect": [
+      298,
+      60,
+      20,
+      80
+     ],
+     "gehe": [
+      300,
+      160
+     ],
+     "erreichbar_ab": "start",
+     "ansehen": []
+    }
+   ],
+   "zurufe": [
+    {
+     "zeile": "W1_TAV_PIX_1610",
+     "sprecher": "PIX",
+     "blasen": [
+      "W1_TAV_PIX_1610"
+     ]
+    },
+    {
+     "zeile": "W1_TAV_PIX_1620",
+     "sprecher": "PIX",
+     "blasen": [
+      "W1_TAV_PIX_1620"
+     ],
+     "bedingung": [
+      {
+       "art": "vor",
+       "raetsel": "R1"
+      }
+     ]
+    },
+    {
+     "zeile": "W1_TAV_PIX_1630",
+     "sprecher": "PIX",
+     "blasen": [
+      "W1_TAV_PIX_1630"
+     ],
+     "bedingung_text": "Pixel auf dem Balken"
+    }
+   ]
+  },
+  {
+   "id": "schmiede",
+   "script_name": "Schmiede",
+   "name_key": "UI_RAUM_SCHMIEDE",
+   "groesse": [
+    320,
+    180
+   ],
+   "hintergrund": "res://grafik/platzhalter/raum_schmiede.png",
+   "farbe": "#5d4a42",
+   "laufbereich": [
+    [
+     4,
+     140
+    ],
+    [
+     316,
+     140
+    ],
+    [
+     316,
+     178
+    ],
+    [
+     4,
+     178
+    ]
+   ],
+   "marker": {
+    "start": [
+     290,
+     160
+    ],
+    "von_dorfplatz": [
+     290,
+     160
+    ]
+   },
+   "figuren": [
+    {
+     "id": "schmied",
+     "script_name": "Schmied",
+     "pos": [
+      120,
+      160
+     ]
+    },
+    {
+     "id": "schmiede_ziege",
+     "script_name": "SchmiedeZiege",
+     "pos": [
+      180,
+      166
+     ]
+    }
+   ],
+   "hotspots": [
+    {
+     "id": "esse",
+     "script_name": "Esse",
+     "name_key": "UI_OBJ_ESSE",
+     "rect": [
+      10,
+      70,
+      70,
+      70
+     ],
+     "gehe": [
+      60,
+      154
+     ],
+     "ansehen": [
+      {
+       "zeile": "W1_SCHM_MAX_0010",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_SCHM_MAX_0010"
+       ]
+      },
+      {
+       "zeile": "W1_SCHM_MAX_0015",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_SCHM_MAX_0015"
+       ],
+       "mal": 2
+      },
+      {
+       "zeile": "W1_SCHM_PIX_0020",
+       "sprecher": "PIX",
+       "blasen": [
+        "W1_SCHM_PIX_0020"
+       ],
+       "figur": "PIX"
+      },
+      {
+       "zeile": "W1_SCHM_PIX_0025",
+       "sprecher": "PIX",
+       "blasen": [
+        "W1_SCHM_PIX_0025"
+       ],
+       "mal": 2,
+       "figur": "PIX"
+      }
+     ],
+     "benutzen": [
+      {
+       "zeile": "W1_SCHM_MAX_0120",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_SCHM_MAX_0120"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "amboss",
+     "script_name": "Amboss",
+     "name_key": "UI_OBJ_AMBOSS",
+     "rect": [
+      130,
+      116,
+      40,
+      24
+     ],
+     "gehe": [
+      150,
+      154
+     ],
+     "ansehen": [
+      {
+       "zeile": "W1_SCHM_MAX_0030",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_SCHM_MAX_0030"
+       ]
+      },
+      {
+       "zeile": "W1_SCHM_MAX_0035",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_SCHM_MAX_0035"
+       ],
+       "mal": 2
+      }
+     ],
+     "benutzen": [
+      {
+       "zeile": "W1_SCHM_MAX_0110",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_SCHM_MAX_0110"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "kochgeschirr",
+     "script_name": "Kochgeschirr",
+     "name_key": "UI_OBJ_KOCHGESCHIRR",
+     "rect": [
+      206,
+      50,
+      70,
+      56
+     ],
+     "gehe": [
+      240,
+      152
+     ],
+     "ansehen": [
+      {
+       "zeile": "W1_SCHM_MAX_0040",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_SCHM_MAX_0040"
+       ]
+      },
+      {
+       "zeile": "W1_SCHM_MAX_0045",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_SCHM_MAX_0045"
+       ],
+       "mal": 2
+      },
+      {
+       "zeile": "W1_SCHM_PIX_0130",
+       "sprecher": "PIX",
+       "blasen": [
+        "W1_SCHM_PIX_0130"
+       ],
+       "figur": "PIX"
+      }
+     ]
+    }
+   ],
+   "props": [
+    {
+     "id": "krug",
+     "script_name": "Krug",
+     "name_key": "UI_OBJ_KRUG",
+     "rect": [
+      278,
+      70,
+      14,
+      16
+     ],
+     "gehe": [
+      276,
+      152
+     ],
+     "textur": "res://grafik/platzhalter/prop_krug.png",
+     "gegenstand": "krug",
+     "ansehen": [
+      {
+       "zeile": "W1_SCHM_MAX_0080",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_SCHM_MAX_0080"
+       ]
+      },
+      {
+       "zeile": "W1_SCHM_MAX_0085",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_SCHM_MAX_0085"
+       ],
+       "mal": 2
+      }
+     ],
+     "nehmen": {
+      "zeile": "W1_SCHM_MAX_0090",
+      "sprecher": "MAX",
+      "blasen": [
+       "W1_SCHM_MAX_0090"
+      ],
+      "folge": [
+       {
+        "zeile": "W1_SCHM_SCH_0100",
+        "sprecher": "SCH",
+        "blasen": [
+         "W1_SCHM_SCH_0100"
+        ]
+       }
+      ]
+     }
+    }
+   ],
+   "ausgaenge": [
+    {
+     "id": "ausgang_dorfplatz",
+     "script_name": "AusgangDorfplatz",
+     "ziel": "dorfplatz",
+     "name_key": "UI_RAUM_DORFPLATZ",
+     "rect": [
+      298,
+      40,
+      20,
+      100
+     ],
+     "gehe": [
+      304,
+      160
+     ],
+     "erreichbar_ab": "start",
+     "ansehen": []
+    }
+   ],
+   "zurufe": [
+    {
+     "zeile": "W1_SCHM_PIX_0610",
+     "sprecher": "PIX",
+     "blasen": [
+      "W1_SCHM_PIX_0610"
+     ]
+    },
+    {
+     "zeile": "W1_SCHM_PIX_0620",
+     "sprecher": "PIX",
+     "blasen": [
+      "W1_SCHM_PIX_0620"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "zauberstabladen",
+   "script_name": "Zauberstabladen",
+   "name_key": "UI_RAUM_ZAUBERSTABLADEN",
+   "groesse": [
+    320,
+    180
+   ],
+   "hintergrund": "res://grafik/platzhalter/raum_zauberstabladen.png",
+   "farbe": "#4f3f5e",
+   "laufbereich": [
+    [
+     4,
+     140
+    ],
+    [
+     316,
+     140
+    ],
+    [
+     316,
+     178
+    ],
+    [
+     4,
+     178
+    ]
+   ],
+   "marker": {
+    "start": [
+     290,
+     160
+    ],
+    "von_dorfplatz": [
+     290,
+     160
+    ]
+   },
+   "figuren": [
+    {
+     "id": "stabmacher",
+     "script_name": "Stabmacher",
+     "pos": [
+      200,
+      150
+     ]
+    }
+   ],
+   "hotspots": [
+    {
+     "id": "fenster",
+     "script_name": "Fenster",
+     "name_key": "UI_OBJ_FENSTER",
+     "rect": [
+      20,
+      10,
+      26,
+      26
+     ],
+     "gehe": [
+      40,
+      152
+     ],
+     "ansehen": [
+      {
+       "zeile": "W1_STAB_MAX_0080",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_STAB_MAX_0080"
+       ]
+      },
+      {
+       "zeile": "W1_STAB_MAX_0085",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_STAB_MAX_0085"
+       ],
+       "mal": 2
+      }
+     ]
+    },
+    {
+     "id": "regale",
+     "script_name": "Regale",
+     "name_key": "UI_OBJ_REGALE",
+     "rect": [
+      4,
+      40,
+      86,
+      100
+     ],
+     "gehe": [
+      50,
+      152
+     ],
+     "ansehen": [
+      {
+       "zeile": "W1_STAB_MAX_0010",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_STAB_MAX_0010"
+       ]
+      },
+      {
+       "zeile": "W1_STAB_MAX_0015",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_STAB_MAX_0015"
+       ],
+       "mal": 2
+      }
+     ],
+     "benutzen": [
+      {
+       "zeile": "W1_STAB_MAX_0100",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_STAB_MAX_0100"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "leiter",
+     "script_name": "Leiter",
+     "name_key": "UI_OBJ_LEITER",
+     "rect": [
+      92,
+      30,
+      18,
+      110
+     ],
+     "gehe": [
+      100,
+      152
+     ],
+     "ansehen": [
+      {
+       "zeile": "W1_STAB_MAX_0020",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_STAB_MAX_0020"
+       ]
+      },
+      {
+       "zeile": "W1_STAB_MAX_0025",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_STAB_MAX_0025"
+       ],
+       "mal": 2
+      }
+     ]
+    },
+    {
+     "id": "theke_mit_kissen",
+     "script_name": "ThekeMitKissen",
+     "name_key": "UI_OBJ_THEKE_MIT_KISSEN",
+     "rect": [
+      120,
+      104,
+      84,
+      36
+     ],
+     "gehe": [
+      160,
+      154
+     ],
+     "ansehen": [
+      {
+       "zeile": "W1_STAB_MAX_0030",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_STAB_MAX_0030"
+       ]
+      },
+      {
+       "zeile": "W1_STAB_MAX_0035",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_STAB_MAX_0035"
+       ],
+       "mal": 2
+      },
+      {
+       "zeile": "W1_STAB_PIX_0120",
+       "sprecher": "PIX",
+       "blasen": [
+        "W1_STAB_PIX_0120"
+       ],
+       "figur": "PIX"
+      }
+     ]
+    }
+   ],
+   "props": [
+    {
+     "id": "zahnstocher",
+     "script_name": "Zahnstocher",
+     "name_key": "UI_OBJ_ZAHNSTOCHER",
+     "rect": [
+      134,
+      96,
+      12,
+      6
+     ],
+     "gehe": [
+      140,
+      154
+     ],
+     "textur": "res://grafik/platzhalter/prop_zahnstocher.png",
+     "gegenstand": null,
+     "ansehen": [
+      {
+       "zeile": "W1_STAB_MAX_0040",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_STAB_MAX_0040"
+       ]
+      },
+      {
+       "zeile": "W1_STAB_MAX_0045",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_STAB_MAX_0045"
+       ],
+       "mal": 2
+      }
+     ],
+     "nehmen": {
+      "zeile": "W1_STAB_MAX_0410",
+      "sprecher": "MAX",
+      "blasen": [
+       "W1_STAB_MAX_0410"
+      ],
+      "folge": [
+       {
+        "zeile": "W1_STAB_STA_0420",
+        "sprecher": "STA",
+        "blasen": [
+         "W1_STAB_STA_0420"
+        ]
+       }
+      ]
+     },
+     "gegenstand_auf": [
+      {
+       "zeile": "W1_STAB_MAX_0460",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_STAB_MAX_0460"
+       ],
+       "gegenstand": "kaesefondue"
+      }
+     ]
+    },
+    {
+     "id": "zollstock",
+     "script_name": "Zollstock",
+     "name_key": "UI_OBJ_ZOLLSTOCK",
+     "rect": [
+      152,
+      96,
+      18,
+      6
+     ],
+     "gehe": [
+      160,
+      154
+     ],
+     "textur": "res://grafik/platzhalter/prop_zollstock.png",
+     "gegenstand": null,
+     "ansehen": [
+      {
+       "zeile": "W1_STAB_MAX_0050",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_STAB_MAX_0050"
+       ]
+      },
+      {
+       "zeile": "W1_STAB_MAX_0055",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_STAB_MAX_0055"
+       ],
+       "mal": 2
+      }
+     ],
+     "nehmen": {
+      "zeile": "W1_STAB_MAX_0430",
+      "sprecher": "MAX",
+      "blasen": [
+       "W1_STAB_MAX_0430"
+      ]
+     },
+     "gegenstand_auf": [
+      {
+       "zeile": "W1_STAB_MAX_0470",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_STAB_MAX_0470"
+       ],
+       "gegenstand": "kaesefondue"
+      }
+     ]
+    },
+    {
+     "id": "kochloeffel",
+     "script_name": "Kochloeffel",
+     "name_key": "UI_OBJ_KOCHLOEFFEL",
+     "rect": [
+      176,
+      94,
+      18,
+      8
+     ],
+     "gehe": [
+      184,
+      154
+     ],
+     "textur": "res://grafik/platzhalter/prop_kochloeffel.png",
+     "gegenstand": "kochloeffel",
+     "ansehen": [
+      {
+       "zeile": "W1_STAB_MAX_0060",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_STAB_MAX_0060"
+       ]
+      },
+      {
+       "zeile": "W1_STAB_MAX_0065",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_STAB_MAX_0065"
+       ],
+       "mal": 2
+      },
+      {
+       "zeile": "W1_STAB_PIX_0070",
+       "sprecher": "PIX",
+       "blasen": [
+        "W1_STAB_PIX_0070"
+       ],
+       "figur": "PIX"
+      },
+      {
+       "zeile": "W1_STAB_PIX_0075",
+       "sprecher": "PIX",
+       "blasen": [
+        "W1_STAB_PIX_0075"
+       ],
+       "mal": 2,
+       "figur": "PIX"
+      }
+     ],
+     "nehmen": {
+      "zeile": "W1_STAB_MAX_0440",
+      "sprecher": "MAX",
+      "blasen": [
+       "W1_STAB_MAX_0440"
+      ],
+      "folge": [
+       {
+        "zeile": "W1_STAB_STA_0450",
+        "sprecher": "STA",
+        "blasen": [
+         "W1_STAB_STA_0450"
+        ]
+       }
+      ]
+     },
+     "gegenstand_auf": [
+      {
+       "zeile": "W1_STAB_MAX_0480",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_STAB_MAX_0480"
+       ],
+       "gegenstand": "thunfischdose",
+       "folge": [
+        {
+         "zeile": "W1_STAB_PIX_0490",
+         "sprecher": "PIX",
+         "blasen": [
+          "W1_STAB_PIX_0490"
+         ]
+        }
+       ]
+      },
+      {
+       "zeile": "W1_STAB_MAX_0600",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_STAB_MAX_0600"
+       ],
+       "bedingung_text": "außerhalb des Zauberstab-Ladens, R2 bleibt offen",
+       "gegenstand": "kaesefondue"
+      }
+     ]
+    }
+   ],
+   "ausgaenge": [
+    {
+     "id": "ausgang_dorfplatz",
+     "script_name": "AusgangDorfplatz",
+     "ziel": "dorfplatz",
+     "name_key": "UI_RAUM_DORFPLATZ",
+     "rect": [
+      298,
+      50,
+      20,
+      90
+     ],
+     "gehe": [
+      304,
+      160
+     ],
+     "erreichbar_ab": "start",
+     "ansehen": []
+    }
+   ],
+   "zurufe": [
+    {
+     "zeile": "W1_STAB_PIX_0610",
+     "sprecher": "PIX",
+     "blasen": [
+      "W1_STAB_PIX_0610"
+     ]
+    },
+    {
+     "zeile": "W1_STAB_PIX_0620",
+     "sprecher": "PIX",
+     "blasen": [
+      "W1_STAB_PIX_0620"
+     ],
+     "bedingung": [
+      {
+       "art": "vor",
+       "raetsel": "R2"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "klassenzimmer",
+   "script_name": "Klassenzimmer",
+   "name_key": "UI_RAUM_KLASSENZIMMER",
+   "groesse": [
+    320,
+    180
+   ],
+   "hintergrund": "res://grafik/platzhalter/raum_klassenzimmer.png",
+   "farbe": "#5a6988",
+   "laufbereich": [
+    [
+     4,
+     140
+    ],
+    [
+     316,
+     140
+    ],
+    [
+     316,
+     178
+    ],
+    [
+     4,
+     178
+    ]
+   ],
+   "marker": {
+    "start": [
+     30,
+     160
+    ],
+    "von_dorfplatz": [
+     30,
+     160
+    ]
+   },
+   "figuren": [
+    {
+     "id": "alwin",
+     "script_name": "Alwin",
+     "pos": [
+      150,
+      158
+     ]
+    },
+    {
+     "id": "toadi",
+     "script_name": "Toadi",
+     "pos": [
+      16,
+      150
+     ]
+    }
+   ],
+   "hotspots": [
+    {
+     "id": "flasche_1",
+     "script_name": "Flasche1",
+     "name_key": "UI_OBJ_FLASCHE_1",
+     "rect": [
+      212,
+      76,
+      8,
+      16
+     ],
+     "gehe": [
+      216,
+      152
+     ],
+     "ansehen": [
+      {
+       "zeile": "W1_HOGG_PIX_0640",
+       "sprecher": "PIX",
+       "blasen": [
+        "W1_HOGG_PIX_0640"
+       ],
+       "figur": "PIX"
+      }
+     ]
+    },
+    {
+     "id": "flasche_2",
+     "script_name": "Flasche2",
+     "name_key": "UI_OBJ_FLASCHE_2",
+     "rect": [
+      222,
+      70,
+      10,
+      22
+     ],
+     "gehe": [
+      226,
+      152
+     ],
+     "ansehen": [
+      {
+       "zeile": "W1_HOGG_PIX_0650",
+       "sprecher": "PIX",
+       "blasen": [
+        "W1_HOGG_PIX_0650"
+       ],
+       "figur": "PIX"
+      }
+     ]
+    },
+    {
+     "id": "flasche_3",
+     "script_name": "Flasche3",
+     "name_key": "UI_OBJ_FLASCHE_3",
+     "rect": [
+      234,
+      76,
+      8,
+      16
+     ],
+     "gehe": [
+      238,
+      152
+     ],
+     "ansehen": [
+      {
+       "zeile": "W1_HOGG_PIX_0660",
+       "sprecher": "PIX",
+       "blasen": [
+        "W1_HOGG_PIX_0660"
+       ],
+       "figur": "PIX"
+      }
+     ]
+    },
+    {
+     "id": "flasche_4",
+     "script_name": "Flasche4",
+     "name_key": "UI_OBJ_FLASCHE_4",
+     "rect": [
+      244,
+      76,
+      8,
+      16
+     ],
+     "gehe": [
+      248,
+      152
+     ],
+     "ansehen": [
+      {
+       "zeile": "W1_HOGG_PIX_0670",
+       "sprecher": "PIX",
+       "blasen": [
+        "W1_HOGG_PIX_0670"
+       ],
+       "figur": "PIX"
+      }
+     ]
+    },
+    {
+     "id": "flasche_5",
+     "script_name": "Flasche5",
+     "name_key": "UI_OBJ_FLASCHE_5",
+     "rect": [
+      254,
+      70,
+      10,
+      22
+     ],
+     "gehe": [
+      258,
+      152
+     ],
+     "ansehen": [
+      {
+       "zeile": "W1_HOGG_PIX_0680",
+       "sprecher": "PIX",
+       "blasen": [
+        "W1_HOGG_PIX_0680"
+       ],
+       "figur": "PIX"
+      }
+     ]
+    },
+    {
+     "id": "flasche_6",
+     "script_name": "Flasche6",
+     "name_key": "UI_OBJ_FLASCHE_6",
+     "rect": [
+      266,
+      76,
+      8,
+      16
+     ],
+     "gehe": [
+      270,
+      152
+     ],
+     "ansehen": [
+      {
+       "zeile": "W1_HOGG_PIX_0690",
+       "sprecher": "PIX",
+       "blasen": [
+        "W1_HOGG_PIX_0690"
+       ],
+       "figur": "PIX"
+      }
+     ]
+    },
+    {
+     "id": "schulbank",
+     "script_name": "Schulbank",
+     "name_key": "UI_OBJ_SCHULBANK",
+     "rect": [
+      30,
+      110,
+      60,
+      30
+     ],
+     "gehe": [
+      60,
+      154
+     ],
+     "ansehen": [
+      {
+       "zeile": "W1_HOGG_MAX_0110",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_HOGG_MAX_0110"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "durchgeloecherte_zweite_socke",
+     "script_name": "DurchgeloecherteZweiteSocke",
+     "name_key": "UI_OBJ_DURCHGELOECHERTE_ZWEITE_SOCKE",
+     "rect": [
+      96,
+      116,
+      16,
+      16
+     ],
+     "gehe": [
+      104,
+      154
+     ],
+     "ansehen": [
+      {
+       "zeile": "W1_HOGG_MAX_0180",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_HOGG_MAX_0180"
+       ]
+      },
+      {
+       "zeile": "W1_HOGG_PIX_0190",
+       "sprecher": "PIX",
+       "blasen": [
+        "W1_HOGG_PIX_0190"
+       ],
+       "figur": "PIX"
+      }
+     ]
+    },
+    {
+     "id": "tafel",
+     "script_name": "Tafel",
+     "name_key": "UI_OBJ_TAFEL",
+     "rect": [
+      124,
+      30,
+      70,
+      40
+     ],
+     "gehe": [
+      160,
+      152
+     ],
+     "ansehen": [
+      {
+       "zeile": "W1_HOGG_MAX_0120",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_HOGG_MAX_0120"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "kessel",
+     "script_name": "Kessel",
+     "name_key": "UI_OBJ_KESSEL",
+     "rect": [
+      136,
+      100,
+      44,
+      40
+     ],
+     "gehe": [
+      158,
+      156
+     ],
+     "ansehen": [
+      {
+       "zeile": "W1_HOGG_MAX_0130",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_HOGG_MAX_0130"
+       ],
+       "bedingung_text": "vor dem Brauen"
+      },
+      {
+       "zeile": "W1_HOGG_PIX_0220",
+       "sprecher": "PIX",
+       "blasen": [
+        "W1_HOGG_PIX_0220"
+       ],
+       "figur": "PIX"
+      }
+     ],
+     "gegenstand_auf": [
+      {
+       "zeile": "W1_HOGG_MAX_0510",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_HOGG_MAX_0510"
+       ],
+       "gegenstand": "ei"
+      },
+      {
+       "zeile": "W1_HOGG_MAX_0520",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_HOGG_MAX_0520"
+       ],
+       "gegenstand": "krug",
+       "folge": [
+        {
+         "zeile": "W1_HOGG_PIX_0530",
+         "sprecher": "PIX",
+         "blasen": [
+          "W1_HOGG_PIX_0530",
+          "W1_HOGG_PIX_0530_2"
+         ]
+        }
+       ]
+      },
+      {
+       "zeile": "W1_HOGG_MAX_0540",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_HOGG_MAX_0540"
+       ],
+       "gegenstand": "leuchtpilz"
+      },
+      {
+       "zeile": "W1_HOGG_ALW_0550",
+       "sprecher": "ALW",
+       "blasen": [
+        "W1_HOGG_ALW_0550"
+       ],
+       "gegenstand": "thunfischdose"
+      },
+      {
+       "zeile": "W1_HOGG_MAX_0560",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_HOGG_MAX_0560"
+       ],
+       "gegenstand": "kaesefondue"
+      },
+      {
+       "zeile": "W1_HOGG_MAX_0570",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_HOGG_MAX_0570"
+       ],
+       "gegenstand": "kochloeffel"
+      },
+      {
+       "zeile": "W1_HOGG_MAX_0590",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_HOGG_MAX_0590"
+       ],
+       "gegenstand": "flasche"
+      },
+      {
+       "zeile": "W1_HOGG_MAX_0880",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_HOGG_MAX_0880"
+       ],
+       "bedingung": [
+        {
+         "art": "nach",
+         "raetsel": "R6"
+        }
+       ],
+       "gegenstand": "flasche"
+      }
+     ]
+    },
+    {
+     "id": "flaschenregal",
+     "script_name": "Flaschenregal",
+     "name_key": "UI_OBJ_FLASCHENREGAL",
+     "rect": [
+      210,
+      70,
+      60,
+      30
+     ],
+     "gehe": [
+      240,
+      152
+     ],
+     "ansehen": [
+      {
+       "zeile": "W1_HOGG_MAX_0140",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_HOGG_MAX_0140"
+       ]
+      },
+      {
+       "zeile": "W1_HOGG_PIX_0150",
+       "sprecher": "PIX",
+       "blasen": [
+        "W1_HOGG_PIX_0150"
+       ],
+       "figur": "PIX"
+      }
+     ]
+    },
+    {
+     "id": "besen_im_schrank",
+     "script_name": "BesenImSchrank",
+     "name_key": "UI_OBJ_BESEN_IM_SCHRANK",
+     "rect": [
+      276,
+      44,
+      40,
+      96
+     ],
+     "gehe": [
+      290,
+      152
+     ],
+     "ansehen": [
+      {
+       "zeile": "W1_HOGG_MAX_0200",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_HOGG_MAX_0200"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "fenster",
+     "script_name": "Fenster",
+     "name_key": "UI_OBJ_FENSTER",
+     "rect": [
+      60,
+      10,
+      60,
+      30
+     ],
+     "gehe": [
+      90,
+      152
+     ],
+     "ansehen": [
+      {
+       "zeile": "W1_HOGG_MAX_0160",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_HOGG_MAX_0160"
+       ]
+      }
+     ]
+    }
+   ],
+   "props": [],
+   "ausgaenge": [
+    {
+     "id": "ausgang_dorfplatz",
+     "script_name": "AusgangDorfplatz",
+     "ziel": "dorfplatz",
+     "name_key": "UI_RAUM_DORFPLATZ",
+     "rect": [
+      2,
+      60,
+      20,
+      80
+     ],
+     "gehe": [
+      14,
+      160
+     ],
+     "erreichbar_ab": "start",
+     "ansehen": []
+    }
+   ],
+   "zurufe": [
+    {
+     "zeile": "W1_HOGG_PIX_0910",
+     "sprecher": "PIX",
+     "blasen": [
+      "W1_HOGG_PIX_0910"
+     ]
+    },
+    {
+     "zeile": "W1_HOGG_PIX_0920",
+     "sprecher": "PIX",
+     "blasen": [
+      "W1_HOGG_PIX_0920"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "trollbruecke",
+   "script_name": "Trollbruecke",
+   "name_key": "UI_RAUM_TROLLBRUECKE",
+   "groesse": [
+    320,
+    180
+   ],
+   "hintergrund": "res://grafik/platzhalter/raum_trollbruecke.png",
+   "farbe": "#6a8a4a",
+   "laufbereich": [
+    [
+     4,
+     140
+    ],
+    [
+     316,
+     140
+    ],
+    [
+     316,
+     178
+    ],
+    [
+     4,
+     178
+    ]
+   ],
+   "marker": {
+    "start": [
+     30,
+     160
+    ],
+    "von_dorfplatz": [
+     30,
+     160
+    ],
+    "von_zauberwald": [
+     296,
+     160
+    ],
+    "von_wasserschloss": [
+     250,
+     146
+    ],
+    "ziegen": [
+     64,
+     166
+    ],
+    "bruecke_mitte": [
+     160,
+     150
+    ],
+    "wasser": [
+     200,
+     170
+    ]
+   },
+   "figuren": [
+    {
+     "id": "waldemar",
+     "script_name": "Waldemar",
+     "pos": [
+      214,
+      156
+     ]
+    }
+   ],
+   "hotspots": [
+    {
+     "id": "schild",
+     "script_name": "Schild",
+     "name_key": "UI_OBJ_SCHILD",
+     "rect": [
+      50,
+      70,
+      30,
+      40
+     ],
+     "gehe": [
+      64,
+      154
+     ],
+     "ansehen": [
+      {
+       "zeile": "W1_BRUE_MAX_0030",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_BRUE_MAX_0030"
+       ]
+      },
+      {
+       "zeile": "W1_BRUE_MAX_0035",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_BRUE_MAX_0035"
+       ],
+       "mal": 2
+      },
+      {
+       "zeile": "W1_BRUE_PIX_0080",
+       "sprecher": "PIX",
+       "blasen": [
+        "W1_BRUE_PIX_0080"
+       ],
+       "figur": "PIX"
+      }
+     ]
+    },
+    {
+     "id": "bruecke",
+     "script_name": "Bruecke",
+     "name_key": "UI_OBJ_BRUECKE",
+     "rect": [
+      90,
+      110,
+      140,
+      30
+     ],
+     "gehe": [
+      160,
+      150
+     ],
+     "ansehen": [
+      {
+       "zeile": "W1_BRUE_MAX_0010",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_BRUE_MAX_0010"
+       ]
+      },
+      {
+       "zeile": "W1_BRUE_MAX_0015",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_BRUE_MAX_0015"
+       ],
+       "mal": 2
+      },
+      {
+       "zeile": "W1_BRUE_MAX_1040",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_BRUE_MAX_1040"
+       ],
+       "bedingung": [
+        {
+         "art": "nach",
+         "raetsel": "R4"
+        }
+       ]
+      },
+      {
+       "zeile": "W1_BRUE_MAX_1045",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_BRUE_MAX_1045"
+       ],
+       "bedingung": [
+        {
+         "art": "nach",
+         "raetsel": "R4"
+        }
+       ],
+       "mal": 2
+      }
+     ],
+     "benutzen": [
+      {
+       "zeile": "W1_BRUE_MAX_0190",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_BRUE_MAX_0190"
+       ],
+       "bedingung": [
+        {
+         "art": "vor",
+         "raetsel": "R4"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "bach",
+     "script_name": "Bach",
+     "name_key": "UI_OBJ_BACH",
+     "rect": [
+      90,
+      160,
+      140,
+      18
+     ],
+     "gehe": [
+      160,
+      152
+     ],
+     "ansehen": [
+      {
+       "zeile": "W1_BRUE_MAX_0020",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_BRUE_MAX_0020"
+       ]
+      },
+      {
+       "zeile": "W1_BRUE_MAX_0025",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_BRUE_MAX_0025"
+       ],
+       "mal": 2
+      }
+     ]
+    },
+    {
+     "id": "grammophon",
+     "script_name": "Grammophon",
+     "name_key": "UI_OBJ_GRAMMOPHON",
+     "rect": [
+      120,
+      140,
+      20,
+      14
+     ],
+     "gehe": [
+      130,
+      154
+     ],
+     "ansehen": [
+      {
+       "zeile": "W1_BRUE_MAX_0090",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_BRUE_MAX_0090"
+       ]
+      },
+      {
+       "zeile": "W1_BRUE_MAX_0095",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_BRUE_MAX_0095"
+       ],
+       "mal": 2
+      }
+     ],
+     "benutzen": [
+      {
+       "zeile": "W1_BRUE_GRA_0110",
+       "sprecher": "GRA",
+       "blasen": [
+        "W1_BRUE_GRA_0110"
+       ],
+       "bedingung_text": "quäkend",
+       "folge": [
+        {
+         "zeile": "W1_BRUE_MAX_0120",
+         "sprecher": "MAX",
+         "blasen": [
+          "W1_BRUE_MAX_0120"
+         ]
+        },
+        {
+         "zeile": "W1_BRUE_PIX_0130",
+         "sprecher": "PIX",
+         "blasen": [
+          "W1_BRUE_PIX_0130"
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "notenblaetter",
+     "script_name": "Notenblaetter",
+     "name_key": "UI_OBJ_NOTENBLAETTER",
+     "rect": [
+      146,
+      144,
+      24,
+      10
+     ],
+     "gehe": [
+      158,
+      154
+     ],
+     "ansehen": [
+      {
+       "zeile": "W1_BRUE_MAX_0100",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_BRUE_MAX_0100"
+       ]
+      },
+      {
+       "zeile": "W1_BRUE_MAX_0105",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_BRUE_MAX_0105"
+       ],
+       "mal": 2
+      }
+     ]
+    },
+    {
+     "id": "wildblumen",
+     "script_name": "Wildblumen",
+     "name_key": "UI_OBJ_WILDBLUMEN",
+     "rect": [
+      4,
+      146,
+      30,
+      14
+     ],
+     "gehe": [
+      24,
+      160
+     ],
+     "ansehen": [
+      {
+       "zeile": "W1_BRUE_MAX_0140",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_BRUE_MAX_0140"
+       ]
+      },
+      {
+       "zeile": "W1_BRUE_MAX_0145",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_BRUE_MAX_0145"
+       ],
+       "mal": 2
+      }
+     ]
+    }
+   ],
+   "props": [],
+   "ausgaenge": [
+    {
+     "id": "ausgang_dorfplatz",
+     "script_name": "AusgangDorfplatz",
+     "ziel": "dorfplatz",
+     "name_key": "UI_RAUM_DORFPLATZ",
+     "rect": [
+      2,
+      80,
+      18,
+      60
+     ],
+     "gehe": [
+      12,
+      160
+     ],
+     "erreichbar_ab": "start",
+     "ansehen": []
+    },
+    {
+     "id": "waldweg",
+     "script_name": "Waldweg",
+     "ziel": "zauberwald",
+     "name_key": "UI_OBJ_WALDWEG",
+     "rect": [
+      296,
+      70,
+      22,
+      70
+     ],
+     "gehe": [
+      304,
+      160
+     ],
+     "erreichbar_ab": "R4",
+     "ansehen": [
+      {
+       "zeile": "W1_BRUE_MAX_0170",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_BRUE_MAX_0170"
+       ],
+       "bedingung": [
+        {
+         "art": "vor",
+         "raetsel": "R4"
+        }
+       ]
+      },
+      {
+       "zeile": "W1_BRUE_MAX_0175",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_BRUE_MAX_0175"
+       ],
+       "bedingung": [
+        {
+         "art": "vor",
+         "raetsel": "R4"
+        }
+       ],
+       "mal": 2
+      }
+     ],
+     "gesperrt": "W1_BRUE_MAX_0190"
+    },
+    {
+     "id": "weg_zum_wasserschloss",
+     "script_name": "WegZumWasserschloss",
+     "ziel": "wasserschloss",
+     "name_key": "UI_OBJ_WEG_ZUM_WASSERSCHLOSS",
+     "rect": [
+      240,
+      70,
+      30,
+      40
+     ],
+     "gehe": [
+      252,
+      146
+     ],
+     "erreichbar_ab": "R4",
+     "ansehen": [],
+     "gesperrt": "W1_BRUE_MAX_0190"
+    }
+   ],
+   "zurufe": [
+    {
+     "zeile": "W1_BRUE_PIX_1110",
+     "sprecher": "PIX",
+     "blasen": [
+      "W1_BRUE_PIX_1110"
+     ]
+    },
+    {
+     "zeile": "W1_BRUE_PIX_1120",
+     "sprecher": "PIX",
+     "blasen": [
+      "W1_BRUE_PIX_1120"
+     ]
+    },
+    {
+     "zeile": "W1_BRUE_PIX_1130",
+     "sprecher": "PIX",
+     "blasen": [
+      "W1_BRUE_PIX_1130"
+     ],
+     "bedingung": [
+      {
+       "art": "vor",
+       "raetsel": "R4"
+      }
+     ],
+     "bedingung_text": "wenn Ziegen dabei sind"
+    }
+   ]
+  },
+  {
+   "id": "wasserschloss",
+   "script_name": "Wasserschloss",
+   "name_key": "UI_RAUM_WASSERSCHLOSS",
+   "groesse": [
+    320,
+    180
+   ],
+   "hintergrund": "res://grafik/platzhalter/raum_wasserschloss.png",
+   "farbe": "#4f7a9a",
+   "laufbereich": [
+    [
+     4,
+     140
+    ],
+    [
+     316,
+     140
+    ],
+    [
+     316,
+     178
+    ],
+    [
+     4,
+     178
+    ]
+   ],
+   "marker": {
+    "start": [
+     24,
+     160
+    ],
+    "von_trollbruecke": [
+     24,
+     160
+    ],
+    "tor": [
+     170,
+     152
+    ]
+   },
+   "figuren": [
+    {
+     "id": "schwan",
+     "script_name": "Schwan",
+     "pos": [
+      270,
+      168
+     ]
+    },
+    {
+     "id": "toadi",
+     "script_name": "Toadi",
+     "pos": [
+      210,
+      160
+     ]
+    }
+   ],
+   "hotspots": [
+    {
+     "id": "schilf",
+     "script_name": "Schilf",
+     "name_key": "UI_OBJ_SCHILF",
+     "rect": [
+      20,
+      110,
+      30,
+      30
+     ],
+     "gehe": [
+      40,
+      156
+     ],
+     "ansehen": [
+      {
+       "zeile": "W1_WASS_MAX_0150",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_WASS_MAX_0150"
+       ]
+      },
+      {
+       "zeile": "W1_WASS_PIX_0155",
+       "sprecher": "PIX",
+       "blasen": [
+        "W1_WASS_PIX_0155"
+       ],
+       "mal": 2
+      }
+     ]
+    },
+    {
+     "id": "ruderboot",
+     "script_name": "Ruderboot",
+     "name_key": "UI_OBJ_RUDERBOOT",
+     "rect": [
+      54,
+      130,
+      40,
+      14
+     ],
+     "gehe": [
+      70,
+      156
+     ],
+     "ansehen": [
+      {
+       "zeile": "W1_WASS_MAX_0110",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_WASS_MAX_0110"
+       ]
+      },
+      {
+       "zeile": "W1_WASS_MAX_0115",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_WASS_MAX_0115"
+       ],
+       "mal": 2
+      }
+     ]
+    },
+    {
+     "id": "schild_am_tor",
+     "script_name": "SchildAmTor",
+     "name_key": "UI_OBJ_SCHILD_AM_TOR",
+     "rect": [
+      160,
+      60,
+      24,
+      16
+     ],
+     "gehe": [
+      170,
+      152
+     ],
+     "ansehen": [
+      {
+       "zeile": "W1_WASS_MAX_0060",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_WASS_MAX_0060"
+       ]
+      },
+      {
+       "zeile": "W1_WASS_MAX_0065",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_WASS_MAX_0065"
+       ],
+       "mal": 2
+      }
+     ]
+    },
+    {
+     "id": "umzugskartons",
+     "script_name": "Umzugskartons",
+     "name_key": "UI_OBJ_UMZUGSKARTONS",
+     "rect": [
+      190,
+      90,
+      40,
+      40
+     ],
+     "gehe": [
+      200,
+      152
+     ],
+     "ansehen": [
+      {
+       "zeile": "W1_WASS_MAX_0070",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_WASS_MAX_0070"
+       ]
+      },
+      {
+       "zeile": "W1_WASS_MAX_0075",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_WASS_MAX_0075"
+       ],
+       "mal": 2
+      },
+      {
+       "zeile": "W1_WASS_PIX_0080",
+       "sprecher": "PIX",
+       "blasen": [
+        "W1_WASS_PIX_0080"
+       ],
+       "figur": "PIX"
+      },
+      {
+       "zeile": "W1_WASS_PIX_0085",
+       "sprecher": "PIX",
+       "blasen": [
+        "W1_WASS_PIX_0085"
+       ],
+       "mal": 2,
+       "figur": "PIX"
+      }
+     ],
+     "benutzen": [
+      {
+       "zeile": "W1_WASS_MAX_0090",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_WASS_MAX_0090"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "teppich",
+     "script_name": "Teppich",
+     "name_key": "UI_OBJ_TEPPICH",
+     "rect": [
+      234,
+      116,
+      30,
+      12
+     ],
+     "gehe": [
+      240,
+      152
+     ],
+     "ansehen": [
+      {
+       "zeile": "W1_WASS_MAX_0100",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_WASS_MAX_0100"
+       ]
+      },
+      {
+       "zeile": "W1_WASS_MAX_0105",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_WASS_MAX_0105"
+       ],
+       "mal": 2
+      }
+     ]
+    }
+   ],
+   "props": [],
+   "ausgaenge": [
+    {
+     "id": "ausgang_trollbruecke",
+     "script_name": "AusgangTrollbruecke",
+     "ziel": "trollbruecke",
+     "name_key": "UI_RAUM_TROLLBRUECKE",
+     "rect": [
+      2,
+      70,
+      16,
+      70
+     ],
+     "gehe": [
+      12,
+      160
+     ],
+     "erreichbar_ab": "start",
+     "ansehen": []
+    }
+   ],
+   "zurufe": [
+    {
+     "zeile": "W1_WASS_PIX_0170",
+     "sprecher": "PIX",
+     "blasen": [
+      "W1_WASS_PIX_0170"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "zauberwald",
+   "script_name": "Zauberwald",
+   "name_key": "UI_RAUM_ZAUBERWALD",
+   "groesse": [
+    320,
+    180
+   ],
+   "hintergrund": "res://grafik/platzhalter/raum_zauberwald.png",
+   "farbe": "#3f5a3a",
+   "laufbereich": [
+    [
+     4,
+     140
+    ],
+    [
+     316,
+     140
+    ],
+    [
+     316,
+     178
+    ],
+    [
+     4,
+     178
+    ]
+   ],
+   "marker": {
+    "start": [
+     24,
+     160
+    ],
+    "von_trollbruecke": [
+     24,
+     160
+    ],
+    "von_bergwerk": [
+     292,
+     160
+    ]
+   },
+   "figuren": [
+    {
+     "id": "rotkaeppchen",
+     "script_name": "Rotkaeppchen",
+     "pos": [
+      240,
+      160
+     ]
+    }
+   ],
+   "hotspots": [
+    {
+     "id": "riesenpilze",
+     "script_name": "Riesenpilze",
+     "name_key": "UI_OBJ_RIESENPILZE",
+     "rect": [
+      20,
+      60,
+      60,
+      70
+     ],
+     "gehe": [
+      50,
+      154
+     ],
+     "ansehen": [
+      {
+       "zeile": "W1_WALD_MAX_0010",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_WALD_MAX_0010"
+       ]
+      },
+      {
+       "zeile": "W1_WALD_MAX_0015",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_WALD_MAX_0015"
+       ],
+       "mal": 2
+      }
+     ]
+    },
+    {
+     "id": "leuchtpilze",
+     "script_name": "Leuchtpilze",
+     "name_key": "UI_OBJ_LEUCHTPILZE",
+     "rect": [
+      30,
+      130,
+      30,
+      10
+     ],
+     "gehe": [
+      44,
+      156
+     ],
+     "ansehen": [
+      {
+       "zeile": "W1_WALD_MAX_0020",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_WALD_MAX_0020"
+       ]
+      },
+      {
+       "zeile": "W1_WALD_MAX_0025",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_WALD_MAX_0025"
+       ],
+       "mal": 2
+      }
+     ]
+    },
+    {
+     "id": "niesrosen",
+     "script_name": "Niesrosen",
+     "name_key": "UI_OBJ_NIESROSEN",
+     "rect": [
+      120,
+      110,
+      40,
+      30
+     ],
+     "gehe": [
+      140,
+      154
+     ],
+     "ansehen": [
+      {
+       "zeile": "W1_WALD_MAX_0050",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_WALD_MAX_0050"
+       ]
+      },
+      {
+       "zeile": "W1_WALD_MAX_0055",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_WALD_MAX_0055"
+       ],
+       "mal": 2
+      },
+      {
+       "zeile": "W1_WALD_PIX_0060",
+       "sprecher": "PIX",
+       "blasen": [
+        "W1_WALD_PIX_0060"
+       ],
+       "figur": "PIX"
+      },
+      {
+       "zeile": "W1_WALD_PIX_0065",
+       "sprecher": "PIX",
+       "blasen": [
+        "W1_WALD_PIX_0065"
+       ],
+       "mal": 2,
+       "figur": "PIX"
+      },
+      {
+       "zeile": "W1_WALD_MAX_0070",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_WALD_MAX_0070"
+       ],
+       "bedingung": [
+        {
+         "art": "nach",
+         "raetsel": "R7"
+        }
+       ]
+      },
+      {
+       "zeile": "W1_WALD_MAX_0075",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_WALD_MAX_0075"
+       ],
+       "bedingung": [
+        {
+         "art": "nach",
+         "raetsel": "R7"
+        }
+       ],
+       "mal": 2
+      }
+     ]
+    },
+    {
+     "id": "kuerbisturm_und_glasschuh",
+     "script_name": "KuerbisturmUndGlasschuh",
+     "name_key": "UI_OBJ_KUERBISTURM_UND_GLASSCHUH",
+     "rect": [
+      150,
+      50,
+      30,
+      60
+     ],
+     "gehe": [
+      166,
+      154
+     ],
+     "ansehen": [
+      {
+       "zeile": "W1_WALD_MAX_0120",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_WALD_MAX_0120"
+       ]
+      },
+      {
+       "zeile": "W1_WALD_MAX_0125",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_WALD_MAX_0125"
+       ],
+       "mal": 2
+      },
+      {
+       "zeile": "W1_WALD_PIX_0130",
+       "sprecher": "PIX",
+       "blasen": [
+        "W1_WALD_PIX_0130"
+       ],
+       "figur": "PIX"
+      },
+      {
+       "zeile": "W1_WALD_PIX_0135",
+       "sprecher": "PIX",
+       "blasen": [
+        "W1_WALD_PIX_0135"
+       ],
+       "mal": 2,
+       "figur": "PIX"
+      }
+     ]
+    },
+    {
+     "id": "gluehwuermchen",
+     "script_name": "Gluehwuermchen",
+     "name_key": "UI_OBJ_GLUEHWUERMCHEN",
+     "rect": [
+      90,
+      10,
+      80,
+      30
+     ],
+     "gehe": [
+      130,
+      154
+     ],
+     "ansehen": [
+      {
+       "zeile": "W1_WALD_MAX_0140",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_WALD_MAX_0140"
+       ]
+      },
+      {
+       "zeile": "W1_WALD_MAX_0145",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_WALD_MAX_0145"
+       ],
+       "mal": 2
+      }
+     ]
+    },
+    {
+     "id": "lieferkarren",
+     "script_name": "Lieferkarren",
+     "name_key": "UI_OBJ_LIEFERKARREN",
+     "rect": [
+      200,
+      110,
+      40,
+      30
+     ],
+     "gehe": [
+      220,
+      154
+     ],
+     "ansehen": [
+      {
+       "zeile": "W1_WALD_MAX_0080",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_WALD_MAX_0080"
+       ]
+      },
+      {
+       "zeile": "W1_WALD_MAX_0085",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_WALD_MAX_0085"
+       ],
+       "mal": 2
+      },
+      {
+       "zeile": "W1_WALD_PIX_0180",
+       "sprecher": "PIX",
+       "blasen": [
+        "W1_WALD_PIX_0180"
+       ],
+       "figur": "PIX"
+      }
+     ]
+    },
+    {
+     "id": "baeume",
+     "script_name": "Baeume",
+     "name_key": "UI_OBJ_BAEUME",
+     "rect": [
+      90,
+      40,
+      50,
+      60
+     ],
+     "gehe": [
+      110,
+      154
+     ],
+     "ansehen": [
+      {
+       "zeile": "W1_WALD_MAX_0170",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_WALD_MAX_0170"
+       ]
+      },
+      {
+       "zeile": "W1_WALD_MAX_0175",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_WALD_MAX_0175"
+       ],
+       "mal": 2
+      }
+     ]
+    }
+   ],
+   "props": [
+    {
+     "id": "leuchtpilz",
+     "script_name": "Leuchtpilz",
+     "name_key": "UI_OBJ_LEUCHTPILZ",
+     "rect": [
+      36,
+      132,
+      8,
+      6
+     ],
+     "gehe": [
+      44,
+      156
+     ],
+     "textur": "res://grafik/platzhalter/prop_leuchtpilz.png",
+     "gegenstand": "leuchtpilz",
+     "ansehen": [],
+     "nehmen": {
+      "zeile": "W1_WALD_MAX_0030",
+      "sprecher": "MAX",
+      "blasen": [
+       "W1_WALD_MAX_0030"
+      ],
+      "folge": [
+       {
+        "zeile": "W1_WALD_PIX_0040",
+        "sprecher": "PIX",
+        "blasen": [
+         "W1_WALD_PIX_0040"
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "ketchup",
+     "script_name": "Ketchup",
+     "name_key": "UI_OBJ_KETCHUP",
+     "rect": [
+      250,
+      116,
+      6,
+      12
+     ],
+     "gehe": [
+      244,
+      154
+     ],
+     "textur": "res://grafik/platzhalter/prop_ketchup.png",
+     "gegenstand": "ketchup",
+     "ansehen": [
+      {
+       "zeile": "W1_WALD_MAX_0090",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_WALD_MAX_0090"
+       ]
+      },
+      {
+       "zeile": "W1_WALD_MAX_0095",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_WALD_MAX_0095"
+       ],
+       "mal": 2
+      },
+      {
+       "zeile": "W1_WALD_PIX_0100",
+       "sprecher": "PIX",
+       "blasen": [
+        "W1_WALD_PIX_0100"
+       ],
+       "figur": "PIX"
+      },
+      {
+       "zeile": "W1_WALD_PIX_0105",
+       "sprecher": "PIX",
+       "blasen": [
+        "W1_WALD_PIX_0105"
+       ],
+       "mal": 2,
+       "figur": "PIX"
+      }
+     ],
+     "nehmen": {
+      "zeile": "W1_WALD_MAX_0730",
+      "sprecher": "MAX",
+      "blasen": [
+       "W1_WALD_MAX_0730"
+      ],
+      "bedingung_text": "vor Rotkäppchens Erlaubnis"
+     }
+    }
+   ],
+   "ausgaenge": [
+    {
+     "id": "ausgang_trollbruecke",
+     "script_name": "AusgangTrollbruecke",
+     "ziel": "trollbruecke",
+     "name_key": "UI_RAUM_TROLLBRUECKE",
+     "rect": [
+      2,
+      70,
+      16,
+      70
+     ],
+     "gehe": [
+      12,
+      160
+     ],
+     "erreichbar_ab": "start",
+     "ansehen": []
+    },
+    {
+     "id": "stolleneingang",
+     "script_name": "Stolleneingang",
+     "ziel": "bergwerk",
+     "name_key": "UI_OBJ_STOLLENEINGANG",
+     "rect": [
+      270,
+      60,
+      48,
+      80
+     ],
+     "gehe": [
+      296,
+      156
+     ],
+     "erreichbar_ab": "R4",
+     "ansehen": [
+      {
+       "zeile": "W1_WALD_MAX_0150",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_WALD_MAX_0150"
+       ]
+      },
+      {
+       "zeile": "W1_WALD_MAX_0155",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_WALD_MAX_0155"
+       ],
+       "mal": 2
+      }
+     ]
+    }
+   ],
+   "zurufe": [
+    {
+     "zeile": "W1_WALD_PIX_0710",
+     "sprecher": "PIX",
+     "blasen": [
+      "W1_WALD_PIX_0710"
+     ]
+    },
+    {
+     "zeile": "W1_WALD_PIX_0720",
+     "sprecher": "PIX",
+     "blasen": [
+      "W1_WALD_PIX_0720"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "luftschloss",
+   "script_name": "Luftschloss",
+   "name_key": "UI_RAUM_LUFTSCHLOSS",
+   "groesse": [
+    320,
+    180
+   ],
+   "hintergrund": "res://grafik/platzhalter/raum_luftschloss.png",
+   "farbe": "#b9c7e6",
+   "laufbereich": [
+    [
+     4,
+     140
+    ],
+    [
+     316,
+     140
+    ],
+    [
+     316,
+     178
+    ],
+    [
+     4,
+     178
+    ]
+   ],
+   "marker": {
+    "start": [
+     30,
+     160
+    ],
+    "von_dorfplatz": [
+     30,
+     160
+    ]
+   },
+   "figuren": [
+    {
+     "id": "maklerin",
+     "script_name": "Maklerin",
+     "pos": [
+      200,
+      158
+     ]
+    },
+    {
+     "id": "zeldina",
+     "script_name": "Zeldina",
+     "pos": [
+      250,
+      160
+     ]
+    }
+   ],
+   "hotspots": [
+    {
+     "id": "torbogen",
+     "script_name": "Torbogen",
+     "name_key": "UI_OBJ_TORBOGEN",
+     "rect": [
+      120,
+      40,
+      60,
+      100
+     ],
+     "gehe": [
+      150,
+      152
+     ],
+     "ansehen": [
+      {
+       "zeile": "W1_LUFT_MAX_0050",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_LUFT_MAX_0050"
+       ]
+      },
+      {
+       "zeile": "W1_LUFT_MAX_0055",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_LUFT_MAX_0055"
+       ],
+       "mal": 2
+      }
+     ]
+    },
+    {
+     "id": "kritzelei",
+     "script_name": "Kritzelei",
+     "name_key": "UI_OBJ_KRITZELEI",
+     "rect": [
+      100,
+      100,
+      16,
+      14
+     ],
+     "gehe": [
+      110,
+      154
+     ],
+     "ansehen": [
+      {
+       "zeile": "W1_LUFT_MAX_0060",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_LUFT_MAX_0060"
+       ]
+      },
+      {
+       "zeile": "W1_LUFT_MAX_0065",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_LUFT_MAX_0065"
+       ],
+       "mal": 2
+      },
+      {
+       "zeile": "W1_LUFT_PIX_0070",
+       "sprecher": "PIX",
+       "blasen": [
+        "W1_LUFT_PIX_0070"
+       ],
+       "figur": "PIX"
+      },
+      {
+       "zeile": "W1_LUFT_PIX_0080",
+       "sprecher": "PIX",
+       "blasen": [
+        "W1_LUFT_PIX_0080"
+       ],
+       "figur": "PIX"
+      }
+     ]
+    },
+    {
+     "id": "balkon",
+     "script_name": "Balkon",
+     "name_key": "UI_OBJ_BALKON",
+     "rect": [
+      230,
+      40,
+      70,
+      30
+     ],
+     "gehe": [
+      270,
+      152
+     ],
+     "ansehen": [
+      {
+       "zeile": "W1_LUFT_MAX_0090",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_LUFT_MAX_0090"
+       ]
+      },
+      {
+       "zeile": "W1_LUFT_MAX_0095",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_LUFT_MAX_0095"
+       ],
+       "mal": 2
+      }
+     ]
+    },
+    {
+     "id": "spiegel",
+     "script_name": "Spiegel",
+     "name_key": "UI_OBJ_SPIEGEL",
+     "rect": [
+      190,
+      70,
+      18,
+      30
+     ],
+     "gehe": [
+      200,
+      152
+     ],
+     "ansehen": [
+      {
+       "zeile": "W1_LUFT_SPI_0100",
+       "sprecher": "SPI",
+       "blasen": [
+        "W1_LUFT_SPI_0100"
+       ],
+       "folge": [
+        {
+         "zeile": "W1_LUFT_MAX_0110",
+         "sprecher": "MAX",
+         "blasen": [
+          "W1_LUFT_MAX_0110"
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "wolken",
+     "script_name": "Wolken",
+     "name_key": "UI_OBJ_WOLKEN",
+     "rect": [
+      0,
+      150,
+      320,
+      30
+     ],
+     "gehe": [
+      160,
+      160
+     ],
+     "ansehen": [
+      {
+       "zeile": "W1_LUFT_MAX_0140",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_LUFT_MAX_0140"
+       ]
+      },
+      {
+       "zeile": "W1_LUFT_MAX_0145",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_LUFT_MAX_0145"
+       ],
+       "mal": 2
+      }
+     ]
+    }
+   ],
+   "props": [],
+   "ausgaenge": [
+    {
+     "id": "rankenende",
+     "script_name": "Rankenende",
+     "ziel": "dorfplatz",
+     "name_key": "UI_OBJ_RANKENENDE",
+     "rect": [
+      2,
+      60,
+      26,
+      80
+     ],
+     "gehe": [
+      16,
+      160
+     ],
+     "erreichbar_ab": "start",
+     "ansehen": [
+      {
+       "zeile": "W1_LUFT_MAX_0040",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_LUFT_MAX_0040"
+       ]
+      },
+      {
+       "zeile": "W1_LUFT_MAX_0045",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_LUFT_MAX_0045"
+       ],
+       "mal": 2
+      }
+     ]
+    }
+   ],
+   "zurufe": [
+    {
+     "zeile": "W1_LUFT_PIX_0810",
+     "sprecher": "PIX",
+     "blasen": [
+      "W1_LUFT_PIX_0810"
+     ]
+    },
+    {
+     "zeile": "W1_LUFT_PIX_0820",
+     "sprecher": "PIX",
+     "blasen": [
+      "W1_LUFT_PIX_0820"
+     ],
+     "bedingung": [
+      {
+       "art": "vor",
+       "raetsel": "R9"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "bergwerk",
+   "script_name": "Bergwerk",
+   "name_key": "UI_RAUM_BERGWERK",
+   "groesse": [
+    320,
+    180
+   ],
+   "hintergrund": "res://grafik/platzhalter/raum_bergwerk.png",
+   "farbe": "#4a3f3a",
+   "laufbereich": [
+    [
+     4,
+     140
+    ],
+    [
+     316,
+     140
+    ],
+    [
+     316,
+     178
+    ],
+    [
+     4,
+     178
+    ]
+   ],
+   "marker": {
+    "start": [
+     26,
+     160
+    ],
+    "von_zauberwald": [
+     26,
+     160
+    ]
+   },
+   "figuren": [
+    {
+     "id": "grimmzahn",
+     "script_name": "Grimmzahn",
+     "pos": [
+      180,
+      160
+     ]
+    },
+    {
+     "id": "goblin_1",
+     "script_name": "Goblin1",
+     "pos": [
+      150,
+      158
+     ]
+    },
+    {
+     "id": "goblin_2",
+     "script_name": "Goblin2",
+     "pos": [
+      214,
+      162
+     ]
+    }
+   ],
+   "hotspots": [
+    {
+     "id": "loren",
+     "script_name": "Loren",
+     "name_key": "UI_OBJ_LOREN",
+     "rect": [
+      24,
+      116,
+      60,
+      24
+     ],
+     "gehe": [
+      56,
+      156
+     ],
+     "ansehen": [
+      {
+       "zeile": "W1_BERG_MAX_0040",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_BERG_MAX_0040"
+       ]
+      },
+      {
+       "zeile": "W1_BERG_MAX_0045",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_BERG_MAX_0045"
+       ],
+       "mal": 2
+      }
+     ],
+     "benutzen": [
+      {
+       "zeile": "W1_BERG_MAX_0160",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_BERG_MAX_0160"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "streikschilder",
+     "script_name": "Streikschilder",
+     "name_key": "UI_OBJ_STREIKSCHILDER",
+     "rect": [
+      100,
+      70,
+      50,
+      40
+     ],
+     "gehe": [
+      124,
+      154
+     ],
+     "ansehen": [
+      {
+       "zeile": "W1_BERG_MAX_0030",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_BERG_MAX_0030"
+       ]
+      },
+      {
+       "zeile": "W1_BERG_MAX_0035",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_BERG_MAX_0035"
+       ],
+       "mal": 2
+      }
+     ]
+    },
+    {
+     "id": "streikposten",
+     "script_name": "Streikposten",
+     "name_key": "UI_OBJ_STREIKPOSTEN",
+     "rect": [
+      96,
+      150,
+      140,
+      6
+     ],
+     "gehe": [
+      120,
+      162
+     ],
+     "ansehen": [
+      {
+       "zeile": "W1_BERG_MAX_0020",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_BERG_MAX_0020"
+       ]
+      },
+      {
+       "zeile": "W1_BERG_MAX_0025",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_BERG_MAX_0025"
+       ],
+       "mal": 2
+      }
+     ]
+    },
+    {
+     "id": "kaffeemaschine",
+     "script_name": "Kaffeemaschine",
+     "name_key": "UI_OBJ_KAFFEEMASCHINE",
+     "rect": [
+      160,
+      110,
+      20,
+      20
+     ],
+     "gehe": [
+      168,
+      154
+     ],
+     "ansehen": [
+      {
+       "zeile": "W1_BERG_MAX_0050",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_BERG_MAX_0050"
+       ]
+      },
+      {
+       "zeile": "W1_BERG_MAX_0055",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_BERG_MAX_0055"
+       ],
+       "mal": 2
+      },
+      {
+       "zeile": "W1_BERG_PIX_0060",
+       "sprecher": "PIX",
+       "blasen": [
+        "W1_BERG_PIX_0060"
+       ],
+       "figur": "PIX"
+      },
+      {
+       "zeile": "W1_BERG_PIX_0065",
+       "sprecher": "PIX",
+       "blasen": [
+        "W1_BERG_PIX_0065"
+       ],
+       "mal": 2,
+       "figur": "PIX"
+      }
+     ],
+     "benutzen": [
+      {
+       "zeile": "W1_BERG_MAX_0150",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_BERG_MAX_0150"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "fackeln",
+     "script_name": "Fackeln",
+     "name_key": "UI_OBJ_FACKELN",
+     "rect": [
+      60,
+      30,
+      140,
+      16
+     ],
+     "gehe": [
+      130,
+      154
+     ],
+     "ansehen": [
+      {
+       "zeile": "W1_BERG_MAX_0070",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_BERG_MAX_0070"
+       ]
+      },
+      {
+       "zeile": "W1_BERG_MAX_0075",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_BERG_MAX_0075"
+       ],
+       "mal": 2
+      }
+     ],
+     "benutzen": [
+      {
+       "zeile": "W1_BERG_MAX_0140",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_BERG_MAX_0140"
+       ]
+      }
+     ],
+     "gegenstand_auf": [
+      {
+       "zeile": "W1_BERG_MAX_0510",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_BERG_MAX_0510"
+       ],
+       "gegenstand": "leuchttrank"
+      }
+     ]
+    }
+   ],
+   "props": [],
+   "ausgaenge": [
+    {
+     "id": "ausgang_zauberwald",
+     "script_name": "AusgangZauberwald",
+     "ziel": "zauberwald",
+     "name_key": "UI_RAUM_ZAUBERWALD",
+     "rect": [
+      2,
+      60,
+      18,
+      80
+     ],
+     "gehe": [
+      12,
+      160
+     ],
+     "erreichbar_ab": "R4",
+     "ansehen": []
+    },
+    {
+     "id": "rune_tuer",
+     "script_name": "RuneTuer",
+     "ziel": "turmkeller",
+     "name_key": "UI_OBJ_RUNE_TUER",
+     "rect": [
+      270,
+      60,
+      46,
+      80
+     ],
+     "gehe": [
+      266,
+      158
+     ],
+     "erreichbar_ab": "R10",
+     "ansehen": [
+      {
+       "zeile": "W1_BERG_MAX_0080",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_BERG_MAX_0080"
+       ],
+       "bedingung": [
+        {
+         "art": "vor",
+         "raetsel": "R10"
+        }
+       ]
+      },
+      {
+       "zeile": "W1_BERG_MAX_0085",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_BERG_MAX_0085"
+       ],
+       "bedingung": [
+        {
+         "art": "vor",
+         "raetsel": "R10"
+        }
+       ],
+       "mal": 2
+      },
+      {
+       "zeile": "W1_BERG_MAX_0090",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_BERG_MAX_0090"
+       ],
+       "bedingung": [
+        {
+         "art": "nach",
+         "raetsel": "R10"
+        }
+       ]
+      },
+      {
+       "zeile": "W1_BERG_MAX_0095",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_BERG_MAX_0095"
+       ],
+       "bedingung": [
+        {
+         "art": "nach",
+         "raetsel": "R10"
+        }
+       ],
+       "mal": 2
+      }
+     ],
+     "gesperrt": "W1_BERG_MAX_0170",
+     "benutzen": [
+      {
+       "zeile": "W1_BERG_MAX_0170",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_BERG_MAX_0170"
+       ],
+       "bedingung": [
+        {
+         "art": "vor",
+         "raetsel": "R10"
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "zurufe": [
+    {
+     "zeile": "W1_BERG_PIX_0810",
+     "sprecher": "PIX",
+     "blasen": [
+      "W1_BERG_PIX_0810"
+     ]
+    },
+    {
+     "zeile": "W1_BERG_PIX_0820",
+     "sprecher": "PIX",
+     "blasen": [
+      "W1_BERG_PIX_0820"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "turmkeller",
+   "script_name": "Turmkeller",
+   "name_key": "UI_RAUM_TURMKELLER",
+   "groesse": [
+    320,
+    180
+   ],
+   "hintergrund": "res://grafik/platzhalter/raum_turmkeller.png",
+   "farbe": "#3b2f4a",
+   "laufbereich": [
+    [
+     4,
+     140
+    ],
+    [
+     316,
+     140
+    ],
+    [
+     316,
+     178
+    ],
+    [
+     4,
+     178
+    ]
+   ],
+   "marker": {
+    "start": [
+     26,
+     160
+    ],
+    "von_bergwerk": [
+     26,
+     160
+    ],
+    "von_abstellkammer_1": [
+     250,
+     158
+    ],
+    "von_abstellkammern": [
+     160,
+     150
+    ]
+   },
+   "figuren": [],
+   "hotspots": [
+    {
+     "id": "gerade_route",
+     "script_name": "GeradeRoute",
+     "name_key": "UI_OBJ_GERADE_ROUTE",
+     "rect": [
+      60,
+      160,
+      60,
+      8
+     ],
+     "gehe": [
+      80,
+      156
+     ],
+     "ansehen": [
+      {
+       "zeile": "W1_TURM_MAX_0050",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_TURM_MAX_0050"
+       ]
+      },
+      {
+       "zeile": "W1_TURM_MAX_0055",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_TURM_MAX_0055"
+       ],
+       "mal": 2
+      }
+     ]
+    },
+    {
+     "id": "zickzack_route",
+     "script_name": "ZickzackRoute",
+     "name_key": "UI_OBJ_ZICKZACK_ROUTE",
+     "rect": [
+      130,
+      162,
+      60,
+      8
+     ],
+     "gehe": [
+      150,
+      156
+     ],
+     "ansehen": [
+      {
+       "zeile": "W1_TURM_MAX_0060",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_TURM_MAX_0060"
+       ]
+      },
+      {
+       "zeile": "W1_TURM_MAX_0065",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_TURM_MAX_0065"
+       ],
+       "mal": 2
+      }
+     ]
+    },
+    {
+     "id": "schleifen_route",
+     "script_name": "SchleifenRoute",
+     "name_key": "UI_OBJ_SCHLEIFEN_ROUTE",
+     "rect": [
+      200,
+      160,
+      60,
+      8
+     ],
+     "gehe": [
+      220,
+      156
+     ],
+     "ansehen": [
+      {
+       "zeile": "W1_TURM_MAX_0070",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_TURM_MAX_0070"
+       ]
+      },
+      {
+       "zeile": "W1_TURM_MAX_0075",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_TURM_MAX_0075"
+       ],
+       "mal": 2
+      }
+     ]
+    },
+    {
+     "id": "kreuzung_1",
+     "script_name": "Kreuzung1",
+     "name_key": "UI_OBJ_KREUZUNG_1",
+     "rect": [
+      92,
+      168,
+      10,
+      8
+     ],
+     "gehe": [
+      96,
+      166
+     ],
+     "ansehen": [
+      {
+       "zeile": "W1_TURM_MAX_0080",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_TURM_MAX_0080"
+       ]
+      },
+      {
+       "zeile": "W1_TURM_MAX_0085",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_TURM_MAX_0085"
+       ],
+       "mal": 2
+      }
+     ]
+    },
+    {
+     "id": "kreuzung_2",
+     "script_name": "Kreuzung2",
+     "name_key": "UI_OBJ_KREUZUNG_2",
+     "rect": [
+      156,
+      168,
+      10,
+      8
+     ],
+     "gehe": [
+      160,
+      166
+     ],
+     "ansehen": []
+    },
+    {
+     "id": "kreuzung_3",
+     "script_name": "Kreuzung3",
+     "name_key": "UI_OBJ_KREUZUNG_3",
+     "rect": [
+      224,
+      168,
+      10,
+      8
+     ],
+     "gehe": [
+      228,
+      166
+     ],
+     "ansehen": []
+    },
+    {
+     "id": "besen",
+     "script_name": "Besen",
+     "name_key": "UI_OBJ_BESEN",
+     "rect": [
+      100,
+      120,
+      80,
+      20
+     ],
+     "gehe": [
+      140,
+      154
+     ],
+     "ansehen": [
+      {
+       "zeile": "W1_TURM_MAX_0090",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_TURM_MAX_0090"
+       ]
+      },
+      {
+       "zeile": "W1_TURM_MAX_0095",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_TURM_MAX_0095"
+       ],
+       "mal": 2
+      },
+      {
+       "zeile": "W1_TURM_PIX_0100",
+       "sprecher": "PIX",
+       "blasen": [
+        "W1_TURM_PIX_0100"
+       ],
+       "figur": "PIX"
+      },
+      {
+       "zeile": "W1_TURM_PIX_0105",
+       "sprecher": "PIX",
+       "blasen": [
+        "W1_TURM_PIX_0105"
+       ],
+       "mal": 2,
+       "figur": "PIX"
+      }
+     ]
+    }
+   ],
+   "props": [],
+   "ausgaenge": [
+    {
+     "id": "kellertreppe",
+     "script_name": "Kellertreppe",
+     "ziel": "bergwerk",
+     "name_key": "UI_OBJ_KELLERTREPPE",
+     "rect": [
+      2,
+      60,
+      22,
+      80
+     ],
+     "gehe": [
+      12,
+      160
+     ],
+     "erreichbar_ab": "R4",
+     "ansehen": [
+      {
+       "zeile": "W1_TURM_MAX_0130",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_TURM_MAX_0130"
+       ]
+      },
+      {
+       "zeile": "W1_TURM_MAX_0135",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_TURM_MAX_0135"
+       ],
+       "mal": 2
+      }
+     ]
+    },
+    {
+     "id": "kammertuer",
+     "script_name": "Kammertuer",
+     "ziel": "abstellkammer_1",
+     "name_key": "UI_OBJ_KAMMERTUER",
+     "rect": [
+      270,
+      70,
+      30,
+      70
+     ],
+     "gehe": [
+      280,
+      156
+     ],
+     "erreichbar_ab": "R11b",
+     "ansehen": [
+      {
+       "zeile": "W1_TURM_MAX_0120",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_TURM_MAX_0120"
+       ]
+      },
+      {
+       "zeile": "W1_TURM_MAX_0125",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_TURM_MAX_0125"
+       ],
+       "mal": 2
+      }
+     ]
+    },
+    {
+     "id": "treppe_nach_oben",
+     "script_name": "TreppeNachOben",
+     "ziel": "abstellkammern",
+     "name_key": "UI_OBJ_TREPPE_NACH_OBEN",
+     "rect": [
+      146,
+      20,
+      30,
+      100
+     ],
+     "gehe": [
+      160,
+      150
+     ],
+     "erreichbar_ab": "R11b",
+     "ansehen": [
+      {
+       "zeile": "W1_TURM_MAX_0110",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_TURM_MAX_0110"
+       ],
+       "bedingung_text": "vor Lösung"
+      },
+      {
+       "zeile": "W1_TURM_MAX_0115",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_TURM_MAX_0115"
+       ],
+       "bedingung_text": "vor Lösung",
+       "mal": 2
+      }
+     ],
+     "gesperrt": "W1_TURM_MAX_0110"
+    }
+   ],
+   "zurufe": [
+    {
+     "zeile": "W1_TURM_PIX_0280",
+     "sprecher": "PIX",
+     "blasen": [
+      "W1_TURM_PIX_0280"
+     ]
+    },
+    {
+     "zeile": "W1_TURM_PIX_0290",
+     "sprecher": "PIX",
+     "blasen": [
+      "W1_TURM_PIX_0290"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "abstellkammer_1",
+   "script_name": "Abstellkammer1",
+   "name_key": "UI_RAUM_ABSTELLKAMMER_1",
+   "groesse": [
+    320,
+    180
+   ],
+   "hintergrund": "res://grafik/platzhalter/raum_abstellkammer_1.png",
+   "farbe": "#4a3f3a",
+   "laufbereich": [
+    [
+     4,
+     140
+    ],
+    [
+     316,
+     140
+    ],
+    [
+     316,
+     178
+    ],
+    [
+     4,
+     178
+    ]
+   ],
+   "marker": {
+    "start": [
+     290,
+     160
+    ],
+    "von_turmkeller": [
+     290,
+     160
+    ]
+   },
+   "figuren": [],
+   "hotspots": [
+    {
+     "id": "besen",
+     "script_name": "Besen",
+     "name_key": "UI_OBJ_BESEN",
+     "rect": [
+      80,
+      110,
+      80,
+      30
+     ],
+     "gehe": [
+      120,
+      154
+     ],
+     "ansehen": []
+    },
+    {
+     "id": "kram",
+     "script_name": "Kram",
+     "name_key": "UI_OBJ_KRAM",
+     "rect": [
+      180,
+      80,
+      80,
+      60
+     ],
+     "gehe": [
+      220,
+      154
+     ],
+     "ansehen": []
+    }
+   ],
+   "props": [],
+   "ausgaenge": [
+    {
+     "id": "ausgang_turmkeller",
+     "script_name": "AusgangTurmkeller",
+     "ziel": "turmkeller",
+     "name_key": "UI_OBJ_AUSGANG_TURMKELLER",
+     "rect": [
+      298,
+      60,
+      20,
+      80
+     ],
+     "gehe": [
+      304,
+      160
+     ],
+     "erreichbar_ab": "R10",
+     "ansehen": []
+    }
+   ],
+   "zurufe": []
+  },
+  {
+   "id": "abstellkammern",
+   "script_name": "Abstellkammern",
+   "name_key": "UI_RAUM_ABSTELLKAMMERN",
+   "groesse": [
+    320,
+    180
+   ],
+   "hintergrund": "res://grafik/platzhalter/raum_abstellkammern.png",
+   "farbe": "#5e4b3a",
+   "laufbereich": [
+    [
+     4,
+     140
+    ],
+    [
+     316,
+     140
+    ],
+    [
+     316,
+     178
+    ],
+    [
+     4,
+     178
+    ]
+   ],
+   "marker": {
+    "start": [
+     30,
+     160
+    ],
+    "von_turmkeller": [
+     30,
+     160
+    ],
+    "von_thronsaal": [
+     270,
+     150
+    ],
+    "abnehmer": [
+     120,
+     162
+    ]
+   },
+   "figuren": [
+    {
+     "id": "smaugi",
+     "script_name": "Smaugi",
+     "pos": [
+      180,
+      140
+     ]
+    }
+   ],
+   "hotspots": [
+    {
+     "id": "drachenei_nest",
+     "script_name": "DracheneiNest",
+     "name_key": "UI_OBJ_DRACHENEI_NEST",
+     "rect": [
+      200,
+      110,
+      20,
+      20
+     ],
+     "gehe": [
+      200,
+      156
+     ],
+     "ansehen": [
+      {
+       "zeile": "W1_SMAU_MAX_0080",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_SMAU_MAX_0080"
+       ]
+      },
+      {
+       "zeile": "W1_SMAU_MAX_0085",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_SMAU_MAX_0085"
+       ],
+       "mal": 2
+      },
+      {
+       "zeile": "W1_SMAU_PIX_0090",
+       "sprecher": "PIX",
+       "blasen": [
+        "W1_SMAU_PIX_0090",
+        "W1_SMAU_PIX_0090_2"
+       ],
+       "bedingung_text": "Andeutung Finale",
+       "figur": "PIX"
+      },
+      {
+       "zeile": "W1_SMAU_PIX_0095",
+       "sprecher": "PIX",
+       "blasen": [
+        "W1_SMAU_PIX_0095"
+       ],
+       "bedingung_text": "Andeutung Finale",
+       "mal": 2,
+       "figur": "PIX"
+      }
+     ]
+    },
+    {
+     "id": "goldhaufen",
+     "script_name": "Goldhaufen",
+     "name_key": "UI_OBJ_GOLDHAUFEN",
+     "rect": [
+      140,
+      100,
+      50,
+      40
+     ],
+     "gehe": [
+      160,
+      156
+     ],
+     "ansehen": [
+      {
+       "zeile": "W1_SMAU_MAX_0100",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_SMAU_MAX_0100"
+       ]
+      },
+      {
+       "zeile": "W1_SMAU_MAX_0105",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_SMAU_MAX_0105"
+       ],
+       "mal": 2
+      },
+      {
+       "zeile": "W1_SMAU_PIX_0190",
+       "sprecher": "PIX",
+       "blasen": [
+        "W1_SMAU_PIX_0190"
+       ],
+       "figur": "PIX"
+      }
+     ],
+     "benutzen": [
+      {
+       "zeile": "W1_SMAU_MAX_0690",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_SMAU_MAX_0690"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "okarina",
+     "script_name": "Okarina",
+     "name_key": "UI_OBJ_OKARINA",
+     "rect": [
+      40,
+      120,
+      10,
+      6
+     ],
+     "gehe": [
+      46,
+      156
+     ],
+     "ansehen": [
+      {
+       "zeile": "W1_SMAU_MAX_0140",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_SMAU_MAX_0140"
+       ]
+      },
+      {
+       "zeile": "W1_SMAU_MAX_0145",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_SMAU_MAX_0145"
+       ],
+       "mal": 2
+      }
+     ],
+     "benutzen": [
+      {
+       "zeile": "W1_SMAU_MAX_0150",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_SMAU_MAX_0150"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "schwert_im_stein",
+     "script_name": "SchwertImStein",
+     "name_key": "UI_OBJ_SCHWERT_IM_STEIN",
+     "rect": [
+      60,
+      96,
+      14,
+      30
+     ],
+     "gehe": [
+      66,
+      156
+     ],
+     "ansehen": [
+      {
+       "zeile": "W1_SMAU_PIX_0160",
+       "sprecher": "PIX",
+       "blasen": [
+        "W1_SMAU_PIX_0160"
+       ],
+       "figur": "PIX"
+      },
+      {
+       "zeile": "W1_SMAU_PIX_0165",
+       "sprecher": "PIX",
+       "blasen": [
+        "W1_SMAU_PIX_0165"
+       ],
+       "mal": 2,
+       "figur": "PIX"
+      }
+     ],
+     "benutzen": [
+      {
+       "zeile": "W1_SMAU_MAX_0170",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_SMAU_MAX_0170"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "deko_kram",
+     "script_name": "DekoKram",
+     "name_key": "UI_OBJ_DEKO_KRAM",
+     "rect": [
+      84,
+      110,
+      40,
+      30
+     ],
+     "gehe": [
+      100,
+      156
+     ],
+     "ansehen": [
+      {
+       "zeile": "W1_SMAU_MAX_0180",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_SMAU_MAX_0180"
+       ]
+      },
+      {
+       "zeile": "W1_SMAU_MAX_0185",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_SMAU_MAX_0185"
+       ],
+       "mal": 2
+      }
+     ]
+    },
+    {
+     "id": "stapel",
+     "script_name": "Stapel",
+     "name_key": "UI_OBJ_STAPEL",
+     "rect": [
+      84,
+      120,
+      60,
+      20
+     ],
+     "gehe": [
+      110,
+      156
+     ],
+     "ansehen": [
+      {
+       "zeile": "W1_SMAU_MAX_0230",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_SMAU_MAX_0230"
+       ],
+       "bedingung": [
+        {
+         "art": "nach",
+         "raetsel": "R12"
+        }
+       ],
+       "bedingung_text": "aufgeräumte Fassung"
+      },
+      {
+       "zeile": "W1_SMAU_MAX_0235",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_SMAU_MAX_0235"
+       ],
+       "bedingung": [
+        {
+         "art": "nach",
+         "raetsel": "R12"
+        }
+       ],
+       "bedingung_text": "aufgeräumte Fassung",
+       "mal": 2
+      }
+     ]
+    }
+   ],
+   "props": [
+    {
+     "id": "kronleuchter",
+     "script_name": "Kronleuchter",
+     "name_key": "UI_OBJ_KRONLEUCHTER",
+     "rect": [
+      120,
+      10,
+      30,
+      24
+     ],
+     "gehe": [
+      134,
+      154
+     ],
+     "textur": "res://grafik/platzhalter/prop_kronleuchter.png",
+     "gegenstand": "kronleuchter",
+     "ansehen": [
+      {
+       "zeile": "W1_SMAU_MAX_0110",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_SMAU_MAX_0110"
+       ]
+      },
+      {
+       "zeile": "W1_SMAU_MAX_0115",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_SMAU_MAX_0115"
+       ],
+       "mal": 2
+      }
+     ],
+     "nehmen": null
+    },
+    {
+     "id": "schwerter_buendel",
+     "script_name": "SchwerterBuendel",
+     "name_key": "UI_OBJ_SCHWERTER_BUENDEL",
+     "rect": [
+      230,
+      120,
+      20,
+      20
+     ],
+     "gehe": [
+      236,
+      156
+     ],
+     "textur": "res://grafik/platzhalter/prop_schwerter_buendel.png",
+     "gegenstand": "schwerter_buendel",
+     "ansehen": [
+      {
+       "zeile": "W1_SMAU_MAX_0120",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_SMAU_MAX_0120"
+       ]
+      },
+      {
+       "zeile": "W1_SMAU_MAX_0125",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_SMAU_MAX_0125"
+       ],
+       "mal": 2
+      }
+     ],
+     "nehmen": null
+    },
+    {
+     "id": "fackel_buendel",
+     "script_name": "FackelBuendel",
+     "name_key": "UI_OBJ_FACKEL_BUENDEL",
+     "rect": [
+      254,
+      120,
+      16,
+      20
+     ],
+     "gehe": [
+      260,
+      156
+     ],
+     "textur": "res://grafik/platzhalter/prop_fackel_buendel.png",
+     "gegenstand": "fackel_buendel",
+     "ansehen": [
+      {
+       "zeile": "W1_SMAU_MAX_0130",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_SMAU_MAX_0130"
+       ]
+      },
+      {
+       "zeile": "W1_SMAU_MAX_0135",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_SMAU_MAX_0135"
+       ],
+       "mal": 2
+      }
+     ],
+     "nehmen": null
+    }
+   ],
+   "ausgaenge": [
+    {
+     "id": "wendeltreppe",
+     "script_name": "Wendeltreppe",
+     "ziel": "turmkeller",
+     "name_key": "UI_OBJ_WENDELTREPPE",
+     "rect": [
+      2,
+      60,
+      20,
+      80
+     ],
+     "gehe": [
+      12,
+      160
+     ],
+     "erreichbar_ab": "R10",
+     "ansehen": []
+    },
+    {
+     "id": "geheimtuer",
+     "script_name": "Geheimtuer",
+     "ziel": "thronsaal",
+     "name_key": "UI_OBJ_GEHEIMTUER",
+     "rect": [
+      280,
+      40,
+      36,
+      100
+     ],
+     "gehe": [
+      290,
+      150
+     ],
+     "erreichbar_ab": "R12",
+     "ansehen": [
+      {
+       "zeile": "W1_SMAU_MAX_0200",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_SMAU_MAX_0200"
+       ]
+      },
+      {
+       "zeile": "W1_SMAU_MAX_0205",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_SMAU_MAX_0205"
+       ],
+       "mal": 2
+      }
+     ],
+     "benutzen": [
+      {
+       "zeile": "W1_SMAU_TUE_0710",
+       "sprecher": "TUE",
+       "blasen": [
+        "W1_SMAU_TUE_0710"
+       ],
+       "bedingung_text": "danach wählt Max die vier Teile aus dem Notizbuch nacheinander (Auswahl wie im Gespräch, gewählte Teile verschwinden)"
+      },
+      {
+       "zeile": "W1_SMAU_MAX_0820",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_SMAU_MAX_0820"
+       ],
+       "bedingung": [
+        {
+         "art": "nach",
+         "raetsel": "R11"
+        },
+        {
+         "art": "vor",
+         "raetsel": "R12"
+        }
+       ],
+       "bedingung_text": "Teil 1"
+      }
+     ]
+    }
+   ],
+   "zurufe": [
+    {
+     "zeile": "W1_SMAU_PIX_0800",
+     "sprecher": "PIX",
+     "blasen": [
+      "W1_SMAU_PIX_0800"
+     ]
+    },
+    {
+     "zeile": "W1_SMAU_PIX_0810",
+     "sprecher": "PIX",
+     "blasen": [
+      "W1_SMAU_PIX_0810"
+     ],
+     "bedingung": [
+      {
+       "art": "vor",
+       "raetsel": "R12"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "thronsaal",
+   "script_name": "Thronsaal",
+   "name_key": "UI_RAUM_THRONSAAL",
+   "groesse": [
+    320,
+    180
+   ],
+   "hintergrund": "res://grafik/platzhalter/raum_thronsaal.png",
+   "farbe": "#2e2440",
+   "laufbereich": [
+    [
+     4,
+     140
+    ],
+    [
+     316,
+     140
+    ],
+    [
+     316,
+     178
+    ],
+    [
+     4,
+     178
+    ]
+   ],
+   "marker": {
+    "start": [
+     30,
+     160
+    ],
+    "von_abstellkammern": [
+     30,
+     160
+    ]
+   },
+   "figuren": [
+    {
+     "id": "moderwort",
+     "script_name": "Moderwort",
+     "pos": [
+      200,
+      150
+     ]
+    }
+   ],
+   "hotspots": [
+    {
+     "id": "thron",
+     "script_name": "Thron",
+     "name_key": "UI_OBJ_THRON",
+     "rect": [
+      180,
+      60,
+      60,
+      80
+     ],
+     "gehe": [
+      200,
+      156
+     ],
+     "ansehen": [
+      {
+       "zeile": "W1_THRO_MAX_0110",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_THRO_MAX_0110"
+       ]
+      },
+      {
+       "zeile": "W1_THRO_MAX_0115",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_THRO_MAX_0115"
+       ],
+       "mal": 2
+      }
+     ]
+    },
+    {
+     "id": "taschentuchstapel",
+     "script_name": "Taschentuchstapel",
+     "name_key": "UI_OBJ_TASCHENTUCHSTAPEL",
+     "rect": [
+      250,
+      120,
+      24,
+      20
+     ],
+     "gehe": [
+      256,
+      156
+     ],
+     "ansehen": [
+      {
+       "zeile": "W1_THRO_MAX_0120",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_THRO_MAX_0120"
+       ]
+      },
+      {
+       "zeile": "W1_THRO_MAX_0125",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_THRO_MAX_0125"
+       ],
+       "mal": 2
+      }
+     ]
+    },
+    {
+     "id": "blumenvasen",
+     "script_name": "Blumenvasen",
+     "name_key": "UI_OBJ_BLUMENVASEN",
+     "rect": [
+      90,
+      110,
+      30,
+      30
+     ],
+     "gehe": [
+      104,
+      156
+     ],
+     "ansehen": [
+      {
+       "zeile": "W1_THRO_MAX_0130",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_THRO_MAX_0130"
+       ]
+      },
+      {
+       "zeile": "W1_THRO_MAX_0135",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_THRO_MAX_0135"
+       ],
+       "mal": 2
+      }
+     ]
+    },
+    {
+     "id": "lerntagebuch",
+     "script_name": "Lerntagebuch",
+     "name_key": "UI_OBJ_LERNTAGEBUCH",
+     "rect": [
+      130,
+      126,
+      16,
+      10
+     ],
+     "gehe": [
+      136,
+      156
+     ],
+     "ansehen": [
+      {
+       "zeile": "W1_THRO_PIX_0140",
+       "sprecher": "PIX",
+       "blasen": [
+        "W1_THRO_PIX_0140"
+       ],
+       "figur": "PIX"
+      },
+      {
+       "zeile": "W1_THRO_PIX_0145",
+       "sprecher": "PIX",
+       "blasen": [
+        "W1_THRO_PIX_0145"
+       ],
+       "mal": 2,
+       "figur": "PIX"
+      },
+      {
+       "zeile": "W1_THRO_MAX_0150",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_THRO_MAX_0150"
+       ]
+      },
+      {
+       "zeile": "W1_THRO_MAX_0155",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_THRO_MAX_0155"
+       ],
+       "mal": 2
+      }
+     ]
+    },
+    {
+     "id": "fenster",
+     "script_name": "Fenster",
+     "name_key": "UI_OBJ_FENSTER",
+     "rect": [
+      120,
+      10,
+      60,
+      40
+     ],
+     "gehe": [
+      150,
+      152
+     ],
+     "ansehen": [
+      {
+       "zeile": "W1_THRO_MAX_0160",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_THRO_MAX_0160"
+       ]
+      },
+      {
+       "zeile": "W1_THRO_MAX_0165",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_THRO_MAX_0165"
+       ],
+       "mal": 2
+      }
+     ]
+    }
+   ],
+   "props": [],
+   "ausgaenge": [
+    {
+     "id": "ausgang_abstellkammern",
+     "script_name": "AusgangAbstellkammern",
+     "ziel": "abstellkammern",
+     "name_key": "UI_OBJ_AUSGANG_ABSTELLKAMMERN",
+     "rect": [
+      2,
+      60,
+      20,
+      80
+     ],
+     "gehe": [
+      12,
+      160
+     ],
+     "erreichbar_ab": "R11b",
+     "ansehen": []
+    }
+   ],
+   "zurufe": [
+    {
+     "zeile": "W1_THRO_PIX_0710",
+     "sprecher": "PIX",
+     "blasen": [
+      "W1_THRO_PIX_0710"
+     ]
+    },
+    {
+     "zeile": "W1_THRO_PIX_0720",
+     "sprecher": "PIX",
+     "blasen": [
+      "W1_THRO_PIX_0720"
+     ],
+     "bedingung_text": "vor dem Duell"
+    }
+   ]
+  }
+ ],
+ "figuren": [
+  {
+   "id": "max",
+   "script_name": "Max",
+   "kuerzel": "MAX",
+   "name_key": "UI_OBJ_MAX",
+   "groesse_px": 56,
+   "spielbar": true,
+   "textfarbe": "#ffffff",
+   "sprite": "res://grafik/platzhalter/figur_max.png",
+   "raeume": [
+    "dorfplatz",
+    "taverne",
+    "schmiede",
+    "zauberstabladen",
+    "klassenzimmer",
+    "trollbruecke",
+    "wasserschloss",
+    "zauberwald",
+    "luftschloss",
+    "bergwerk",
+    "turmkeller",
+    "abstellkammer_1",
+    "abstellkammern",
+    "thronsaal"
+   ],
+   "tier": false,
+   "ansehen": [],
+   "pixel_auf": [],
+   "pixel_redet": [],
+   "gegenstand_auf": [],
+   "benutzen": []
+  },
+  {
+   "id": "pixel",
+   "script_name": "Pixel",
+   "kuerzel": "PIX",
+   "name_key": "UI_OBJ_PIXEL",
+   "groesse_px": 18,
+   "spielbar": true,
+   "textfarbe": "#5fd3c8",
+   "sprite": "res://grafik/platzhalter/figur_pixel.png",
+   "raeume": [
+    "dorfplatz",
+    "taverne",
+    "schmiede",
+    "zauberstabladen",
+    "klassenzimmer",
+    "trollbruecke",
+    "wasserschloss",
+    "zauberwald",
+    "luftschloss",
+    "bergwerk",
+    "turmkeller",
+    "abstellkammer_1",
+    "abstellkammern",
+    "thronsaal"
+   ],
+   "tier": false,
+   "ansehen": [],
+   "pixel_auf": [],
+   "pixel_redet": [],
+   "gegenstand_auf": [],
+   "benutzen": []
+  },
+  {
+   "id": "toadi",
+   "script_name": "Toadi",
+   "kuerzel": "TOA",
+   "name_key": "UI_OBJ_TOADI",
+   "groesse_px": 30,
+   "spielbar": false,
+   "textfarbe": "#ffffff",
+   "sprite": "res://grafik/platzhalter/figur_toadi.png",
+   "raeume": [
+    "dorfplatz",
+    "klassenzimmer",
+    "wasserschloss",
+    "zauberwald",
+    "luftschloss",
+    "thronsaal"
+   ],
+   "tier": false,
+   "ansehen": [
+    {
+     "zeile": "W1_HOGG_MAX_0210",
+     "sprecher": "MAX",
+     "blasen": [
+      "W1_HOGG_MAX_0210"
+     ],
+     "raum": "klassenzimmer"
+    }
+   ],
+   "pixel_auf": [
+    {
+     "zeile": "W1_DORF_TOA_0430",
+     "sprecher": "TOA",
+     "blasen": [
+      "W1_DORF_TOA_0430"
+     ],
+     "raum": "dorfplatz"
+    },
+    {
+     "zeile": "W1_WASS_TOA_0160",
+     "sprecher": "TOA",
+     "blasen": [
+      "W1_WASS_TOA_0160"
+     ],
+     "raum": "wasserschloss"
+    }
+   ],
+   "pixel_redet": [],
+   "gegenstand_auf": [],
+   "benutzen": []
+  },
+  {
+   "id": "alwin",
+   "script_name": "Alwin",
+   "kuerzel": "ALW",
+   "name_key": "UI_OBJ_ALWIN",
+   "groesse_px": 62,
+   "spielbar": false,
+   "textfarbe": "#ffffff",
+   "sprite": "res://grafik/platzhalter/figur_alwin.png",
+   "raeume": [
+    "klassenzimmer"
+   ],
+   "tier": false,
+   "ansehen": [
+    {
+     "zeile": "W1_HOGG_MAX_0170",
+     "sprecher": "MAX",
+     "blasen": [
+      "W1_HOGG_MAX_0170"
+     ],
+     "raum": "klassenzimmer"
+    }
+   ],
+   "pixel_auf": [
+    {
+     "zeile": "W1_HOGG_ALW_0230",
+     "sprecher": "ALW",
+     "blasen": [
+      "W1_HOGG_ALW_0230"
+     ],
+     "raum": "klassenzimmer"
+    }
+   ],
+   "pixel_redet": [],
+   "gegenstand_auf": [],
+   "benutzen": []
+  },
+  {
+   "id": "zeldina",
+   "script_name": "Zeldina",
+   "kuerzel": "ZEL",
+   "name_key": "UI_OBJ_ZELDINA",
+   "groesse_px": 58,
+   "spielbar": false,
+   "textfarbe": "#ffffff",
+   "sprite": "res://grafik/platzhalter/figur_zeldina.png",
+   "raeume": [
+    "luftschloss",
+    "bergwerk",
+    "turmkeller",
+    "abstellkammern",
+    "thronsaal"
+   ],
+   "tier": false,
+   "ansehen": [
+    {
+     "zeile": "W1_LUFT_MAX_0160",
+     "sprecher": "MAX",
+     "blasen": [
+      "W1_LUFT_MAX_0160"
+     ],
+     "raum": "luftschloss"
+    },
+    {
+     "zeile": "W1_LUFT_MAX_0165",
+     "sprecher": "MAX",
+     "blasen": [
+      "W1_LUFT_MAX_0165"
+     ],
+     "mal": 2,
+     "raum": "luftschloss"
+    },
+    {
+     "zeile": "W1_LUFT_PIX_0170",
+     "sprecher": "PIX",
+     "blasen": [
+      "W1_LUFT_PIX_0170"
+     ],
+     "figur": "PIX",
+     "raum": "luftschloss"
+    },
+    {
+     "zeile": "W1_LUFT_PIX_0175",
+     "sprecher": "PIX",
+     "blasen": [
+      "W1_LUFT_PIX_0175"
+     ],
+     "mal": 2,
+     "figur": "PIX",
+     "raum": "luftschloss"
+    }
+   ],
+   "pixel_auf": [
+    {
+     "zeile": "W1_LUFT_ZEL_0190",
+     "sprecher": "ZEL",
+     "blasen": [
+      "W1_LUFT_ZEL_0190"
+     ],
+     "raum": "luftschloss"
+    }
+   ],
+   "pixel_redet": [],
+   "gegenstand_auf": [
+    {
+     "zeile": "W1_SMAU_ZEL_0580",
+     "sprecher": "ZEL",
+     "blasen": [
+      "W1_SMAU_ZEL_0580"
+     ],
+     "gegenstand": "kronleuchter",
+     "raum": "abstellkammern"
+    },
+    {
+     "zeile": "W1_SMAU_ZEL_0660",
+     "sprecher": "ZEL",
+     "blasen": [
+      "W1_SMAU_ZEL_0660"
+     ],
+     "gegenstand": "fackel_buendel",
+     "raum": "abstellkammern"
+    }
+   ],
+   "benutzen": []
+  },
+  {
+   "id": "gollo",
+   "script_name": "Gollo",
+   "kuerzel": "GOL",
+   "name_key": "UI_OBJ_GOLLO",
+   "groesse_px": 44,
+   "spielbar": false,
+   "textfarbe": "#ffffff",
+   "sprite": "res://grafik/platzhalter/figur_gollo.png",
+   "raeume": [
+    "taverne"
+   ],
+   "tier": false,
+   "ansehen": [
+    {
+     "zeile": "W1_TAV_MAX_0360",
+     "sprecher": "MAX",
+     "blasen": [
+      "W1_TAV_MAX_0360"
+     ],
+     "raum": "taverne"
+    }
+   ],
+   "pixel_auf": [
+    {
+     "zeile": "W1_TAV_GOL_0410",
+     "sprecher": "GOL",
+     "blasen": [
+      "W1_TAV_GOL_0410"
+     ],
+     "raum": "taverne"
+    }
+   ],
+   "pixel_redet": [],
+   "gegenstand_auf": [],
+   "benutzen": []
+  },
+  {
+   "id": "humbert",
+   "script_name": "Humbert",
+   "kuerzel": "HUM",
+   "name_key": "UI_OBJ_HUMBERT",
+   "groesse_px": 60,
+   "spielbar": false,
+   "textfarbe": "#ffffff",
+   "sprite": "res://grafik/platzhalter/figur_humbert.png",
+   "raeume": [
+    "taverne",
+    "abstellkammern"
+   ],
+   "tier": false,
+   "ansehen": [
+    {
+     "zeile": "W1_TAV_MAX_0350",
+     "sprecher": "MAX",
+     "blasen": [
+      "W1_TAV_MAX_0350"
+     ],
+     "raum": "taverne"
+    }
+   ],
+   "pixel_auf": [
+    {
+     "zeile": "W1_TAV_HUM_0400",
+     "sprecher": "HUM",
+     "blasen": [
+      "W1_TAV_HUM_0400"
+     ],
+     "raum": "taverne"
+    }
+   ],
+   "pixel_redet": [],
+   "gegenstand_auf": [
+    {
+     "zeile": "W1_SMAU_HUM_0530",
+     "sprecher": "HUM",
+     "blasen": [
+      "W1_SMAU_HUM_0530"
+     ],
+     "bedingung_text": "Kram-hergeben-Animation",
+     "gegenstand": "schwerter_buendel",
+     "raum": "abstellkammern"
+    },
+    {
+     "zeile": "W1_SMAU_HUM_0670",
+     "sprecher": "HUM",
+     "blasen": [
+      "W1_SMAU_HUM_0670"
+     ],
+     "gegenstand": "kronleuchter",
+     "raum": "abstellkammern"
+    }
+   ],
+   "benutzen": []
+  },
+  {
+   "id": "schmied",
+   "script_name": "Schmied",
+   "kuerzel": "SCH",
+   "name_key": "UI_OBJ_SCHMIED",
+   "groesse_px": 60,
+   "spielbar": false,
+   "textfarbe": "#ffffff",
+   "sprite": "res://grafik/platzhalter/figur_schmied.png",
+   "raeume": [
+    "schmiede"
+   ],
+   "tier": false,
+   "ansehen": [
+    {
+     "zeile": "W1_SCHM_MAX_0070",
+     "sprecher": "MAX",
+     "blasen": [
+      "W1_SCHM_MAX_0070"
+     ],
+     "raum": "schmiede"
+    },
+    {
+     "zeile": "W1_SCHM_MAX_0075",
+     "sprecher": "MAX",
+     "blasen": [
+      "W1_SCHM_MAX_0075"
+     ],
+     "mal": 2,
+     "raum": "schmiede"
+    }
+   ],
+   "pixel_auf": [
+    {
+     "zeile": "W1_SCHM_SCH_0140",
+     "sprecher": "SCH",
+     "blasen": [
+      "W1_SCHM_SCH_0140"
+     ],
+     "raum": "schmiede"
+    }
+   ],
+   "pixel_redet": [],
+   "gegenstand_auf": [],
+   "benutzen": []
+  },
+  {
+   "id": "waldemar",
+   "script_name": "Waldemar",
+   "kuerzel": "WAL",
+   "name_key": "UI_OBJ_WALDEMAR",
+   "groesse_px": 80,
+   "spielbar": false,
+   "textfarbe": "#ffffff",
+   "sprite": "res://grafik/platzhalter/figur_waldemar.png",
+   "raeume": [
+    "trollbruecke",
+    "zauberwald"
+   ],
+   "tier": false,
+   "ansehen": [
+    {
+     "zeile": "W1_BRUE_MAX_0150",
+     "sprecher": "MAX",
+     "blasen": [
+      "W1_BRUE_MAX_0150"
+     ],
+     "raum": "trollbruecke"
+    },
+    {
+     "zeile": "W1_BRUE_MAX_0155",
+     "sprecher": "MAX",
+     "blasen": [
+      "W1_BRUE_MAX_0155"
+     ],
+     "mal": 2,
+     "raum": "trollbruecke"
+    },
+    {
+     "zeile": "W1_BRUE_PIX_0160",
+     "sprecher": "PIX",
+     "blasen": [
+      "W1_BRUE_PIX_0160"
+     ],
+     "figur": "PIX",
+     "raum": "trollbruecke"
+    }
+   ],
+   "pixel_auf": [
+    {
+     "zeile": "W1_BRUE_WAL_0180",
+     "sprecher": "WAL",
+     "blasen": [
+      "W1_BRUE_WAL_0180"
+     ],
+     "raum": "trollbruecke"
+    }
+   ],
+   "pixel_redet": [],
+   "gegenstand_auf": [],
+   "benutzen": []
+  },
+  {
+   "id": "stabmacher",
+   "script_name": "Stabmacher",
+   "kuerzel": "STA",
+   "name_key": "UI_OBJ_STABMACHER",
+   "groesse_px": 58,
+   "spielbar": false,
+   "textfarbe": "#ffffff",
+   "sprite": "res://grafik/platzhalter/figur_stabmacher.png",
+   "raeume": [
+    "zauberstabladen"
+   ],
+   "tier": false,
+   "ansehen": [
+    {
+     "zeile": "W1_STAB_MAX_0090",
+     "sprecher": "MAX",
+     "blasen": [
+      "W1_STAB_MAX_0090"
+     ],
+     "raum": "zauberstabladen"
+    },
+    {
+     "zeile": "W1_STAB_MAX_0095",
+     "sprecher": "MAX",
+     "blasen": [
+      "W1_STAB_MAX_0095"
+     ],
+     "mal": 2,
+     "raum": "zauberstabladen"
+    }
+   ],
+   "pixel_auf": [
+    {
+     "zeile": "W1_STAB_STA_0110",
+     "sprecher": "STA",
+     "blasen": [
+      "W1_STAB_STA_0110"
+     ],
+     "raum": "zauberstabladen"
+    }
+   ],
+   "pixel_redet": [],
+   "gegenstand_auf": [],
+   "benutzen": []
+  },
+  {
+   "id": "rotkaeppchen",
+   "script_name": "Rotkaeppchen",
+   "kuerzel": "ROT",
+   "name_key": "UI_OBJ_ROTKAEPPCHEN",
+   "groesse_px": 48,
+   "spielbar": false,
+   "textfarbe": "#ffffff",
+   "sprite": "res://grafik/platzhalter/figur_rotkaeppchen.png",
+   "raeume": [
+    "zauberwald",
+    "dorfplatz"
+   ],
+   "tier": false,
+   "ansehen": [
+    {
+     "zeile": "W1_WALD_MAX_0160",
+     "sprecher": "MAX",
+     "blasen": [
+      "W1_WALD_MAX_0160"
+     ],
+     "raum": "zauberwald"
+    },
+    {
+     "zeile": "W1_WALD_MAX_0165",
+     "sprecher": "MAX",
+     "blasen": [
+      "W1_WALD_MAX_0165"
+     ],
+     "mal": 2,
+     "raum": "zauberwald"
+    }
+   ],
+   "pixel_auf": [
+    {
+     "zeile": "W1_WALD_ROT_0190",
+     "sprecher": "ROT",
+     "blasen": [
+      "W1_WALD_ROT_0190"
+     ],
+     "raum": "zauberwald"
+    }
+   ],
+   "pixel_redet": [],
+   "gegenstand_auf": [],
+   "benutzen": []
+  },
+  {
+   "id": "maklerin",
+   "script_name": "Maklerin",
+   "kuerzel": "MAK",
+   "name_key": "UI_OBJ_MAKLERIN",
+   "groesse_px": 60,
+   "spielbar": false,
+   "textfarbe": "#ffffff",
+   "sprite": "res://grafik/platzhalter/figur_maklerin.png",
+   "raeume": [
+    "luftschloss"
+   ],
+   "tier": false,
+   "ansehen": [
+    {
+     "zeile": "W1_LUFT_MAX_0150",
+     "sprecher": "MAX",
+     "blasen": [
+      "W1_LUFT_MAX_0150"
+     ],
+     "raum": "luftschloss"
+    },
+    {
+     "zeile": "W1_LUFT_MAX_0155",
+     "sprecher": "MAX",
+     "blasen": [
+      "W1_LUFT_MAX_0155"
+     ],
+     "mal": 2,
+     "raum": "luftschloss"
+    }
+   ],
+   "pixel_auf": [
+    {
+     "zeile": "W1_LUFT_MAK_0180",
+     "sprecher": "MAK",
+     "blasen": [
+      "W1_LUFT_MAK_0180"
+     ],
+     "raum": "luftschloss"
+    }
+   ],
+   "pixel_redet": [],
+   "gegenstand_auf": [],
+   "benutzen": []
+  },
+  {
+   "id": "grimmzahn",
+   "script_name": "Grimmzahn",
+   "kuerzel": "GRI",
+   "name_key": "UI_OBJ_GRIMMZAHN",
+   "groesse_px": 40,
+   "spielbar": false,
+   "textfarbe": "#ffffff",
+   "sprite": "res://grafik/platzhalter/figur_grimmzahn.png",
+   "raeume": [
+    "bergwerk",
+    "turmkeller",
+    "abstellkammern"
+   ],
+   "tier": false,
+   "ansehen": [
+    {
+     "zeile": "W1_BERG_MAX_0100",
+     "sprecher": "MAX",
+     "blasen": [
+      "W1_BERG_MAX_0100"
+     ],
+     "raum": "bergwerk"
+    },
+    {
+     "zeile": "W1_BERG_MAX_0105",
+     "sprecher": "MAX",
+     "blasen": [
+      "W1_BERG_MAX_0105"
+     ],
+     "mal": 2,
+     "raum": "bergwerk"
+    }
+   ],
+   "pixel_auf": [
+    {
+     "zeile": "W1_BERG_GRI_0180",
+     "sprecher": "GRI",
+     "blasen": [
+      "W1_BERG_GRI_0180"
+     ],
+     "raum": "bergwerk"
+    }
+   ],
+   "pixel_redet": [],
+   "gegenstand_auf": [
+    {
+     "zeile": "W1_BERG_MAX_0510",
+     "sprecher": "MAX",
+     "blasen": [
+      "W1_BERG_MAX_0510"
+     ],
+     "gegenstand": "leuchttrank",
+     "raum": "bergwerk"
+    },
+    {
+     "zeile": "W1_BERG_GRI_0560",
+     "sprecher": "GRI",
+     "blasen": [
+      "W1_BERG_GRI_0560"
+     ],
+     "gegenstand": "ketchup",
+     "raum": "bergwerk"
+    },
+    {
+     "zeile": "W1_BERG_GRI_0600",
+     "sprecher": "GRI",
+     "blasen": [
+      "W1_BERG_GRI_0600"
+     ],
+     "gegenstand": "thunfischdose",
+     "raum": "bergwerk"
+    },
+    {
+     "zeile": "W1_BERG_GRI_0605",
+     "sprecher": "GRI",
+     "blasen": [
+      "W1_BERG_GRI_0605"
+     ],
+     "gegenstand": "kochloeffel",
+     "raum": "bergwerk"
+    },
+    {
+     "zeile": "W1_SMAU_GRI_0550",
+     "sprecher": "GRI",
+     "blasen": [
+      "W1_SMAU_GRI_0550"
+     ],
+     "gegenstand": "fackel_buendel",
+     "raum": "abstellkammern"
+    },
+    {
+     "zeile": "W1_SMAU_GRI_0650",
+     "sprecher": "GRI",
+     "blasen": [
+      "W1_SMAU_GRI_0650"
+     ],
+     "gegenstand": "schwerter_buendel",
+     "raum": "abstellkammern"
+    }
+   ],
+   "benutzen": []
+  },
+  {
+   "id": "goblin_1",
+   "script_name": "Goblin1",
+   "kuerzel": "GO1",
+   "name_key": "UI_OBJ_GOBLIN_1",
+   "groesse_px": 34,
+   "spielbar": false,
+   "textfarbe": "#ffffff",
+   "sprite": "res://grafik/platzhalter/figur_goblin_1.png",
+   "raeume": [
+    "bergwerk"
+   ],
+   "tier": false,
+   "ansehen": [
+    {
+     "zeile": "W1_BERG_MAX_0110",
+     "sprecher": "MAX",
+     "blasen": [
+      "W1_BERG_MAX_0110"
+     ],
+     "raum": "bergwerk"
+    },
+    {
+     "zeile": "W1_BERG_MAX_0115",
+     "sprecher": "MAX",
+     "blasen": [
+      "W1_BERG_MAX_0115"
+     ],
+     "mal": 2,
+     "raum": "bergwerk"
+    }
+   ],
+   "pixel_auf": [
+    {
+     "zeile": "W1_BERG_GO1_0200",
+     "sprecher": "GO1",
+     "blasen": [
+      "W1_BERG_GO1_0200"
+     ],
+     "raum": "bergwerk"
+    }
+   ],
+   "pixel_redet": [],
+   "gegenstand_auf": [],
+   "benutzen": []
+  },
+  {
+   "id": "goblin_2",
+   "script_name": "Goblin2",
+   "kuerzel": "GO2",
+   "name_key": "UI_OBJ_GOBLIN_2",
+   "groesse_px": 34,
+   "spielbar": false,
+   "textfarbe": "#ffffff",
+   "sprite": "res://grafik/platzhalter/figur_goblin_2.png",
+   "raeume": [
+    "bergwerk"
+   ],
+   "tier": false,
+   "ansehen": [
+    {
+     "zeile": "W1_BERG_MAX_0120",
+     "sprecher": "MAX",
+     "blasen": [
+      "W1_BERG_MAX_0120"
+     ],
+     "raum": "bergwerk"
+    },
+    {
+     "zeile": "W1_BERG_MAX_0125",
+     "sprecher": "MAX",
+     "blasen": [
+      "W1_BERG_MAX_0125"
+     ],
+     "mal": 2,
+     "raum": "bergwerk"
+    },
+    {
+     "zeile": "W1_BERG_PIX_0130",
+     "sprecher": "PIX",
+     "blasen": [
+      "W1_BERG_PIX_0130"
+     ],
+     "figur": "PIX",
+     "raum": "bergwerk"
+    },
+    {
+     "zeile": "W1_BERG_PIX_0135",
+     "sprecher": "PIX",
+     "blasen": [
+      "W1_BERG_PIX_0135"
+     ],
+     "mal": 2,
+     "figur": "PIX",
+     "raum": "bergwerk"
+    }
+   ],
+   "pixel_auf": [
+    {
+     "zeile": "W1_BERG_GO2_0190",
+     "sprecher": "GO2",
+     "blasen": [
+      "W1_BERG_GO2_0190"
+     ],
+     "raum": "bergwerk"
+    }
+   ],
+   "pixel_redet": [],
+   "gegenstand_auf": [],
+   "benutzen": []
+  },
+  {
+   "id": "moderwort",
+   "script_name": "Moderwort",
+   "kuerzel": "MOD",
+   "name_key": "UI_OBJ_MODERWORT",
+   "groesse_px": 60,
+   "spielbar": false,
+   "textfarbe": "#ffffff",
+   "sprite": "res://grafik/platzhalter/figur_moderwort.png",
+   "raeume": [
+    "thronsaal"
+   ],
+   "tier": false,
+   "ansehen": [
+    {
+     "zeile": "W1_THRO_MAX_0170",
+     "sprecher": "MAX",
+     "blasen": [
+      "W1_THRO_MAX_0170"
+     ],
+     "raum": "thronsaal"
+    },
+    {
+     "zeile": "W1_THRO_MAX_0175",
+     "sprecher": "MAX",
+     "blasen": [
+      "W1_THRO_MAX_0175"
+     ],
+     "mal": 2,
+     "raum": "thronsaal"
+    },
+    {
+     "zeile": "W1_THRO_PIX_0180",
+     "sprecher": "PIX",
+     "blasen": [
+      "W1_THRO_PIX_0180"
+     ],
+     "figur": "PIX",
+     "raum": "thronsaal"
+    },
+    {
+     "zeile": "W1_THRO_PIX_0185",
+     "sprecher": "PIX",
+     "blasen": [
+      "W1_THRO_PIX_0185"
+     ],
+     "mal": 2,
+     "figur": "PIX",
+     "raum": "thronsaal"
+    }
+   ],
+   "pixel_auf": [
+    {
+     "zeile": "W1_THRO_MOD_0190",
+     "sprecher": "MOD",
+     "blasen": [
+      "W1_THRO_MOD_0190"
+     ],
+     "raum": "thronsaal"
+    }
+   ],
+   "pixel_redet": [],
+   "gegenstand_auf": [
+    {
+     "zeile": "W1_THRO_MOD_0210",
+     "sprecher": "MOD",
+     "blasen": [
+      "W1_THRO_MOD_0210"
+     ],
+     "bedingung_text": "vor dem Niesen",
+     "gegenstand": "kochloeffel",
+     "raum": "thronsaal"
+    },
+    {
+     "zeile": "W1_THRO_MOD_0220",
+     "sprecher": "MOD",
+     "blasen": [
+      "W1_THRO_MOD_0220"
+     ],
+     "gegenstand": "thunfischdose",
+     "raum": "thronsaal"
+    },
+    {
+     "zeile": "W1_THRO_MAX_0230",
+     "sprecher": "MAX",
+     "blasen": [
+      "W1_THRO_MAX_0230"
+     ],
+     "gegenstand": "eimer",
+     "raum": "thronsaal"
+    },
+    {
+     "zeile": "W1_THRO_MAX_0240",
+     "sprecher": "MAX",
+     "blasen": [
+      "W1_THRO_MAX_0240"
+     ],
+     "bedingung_text": "rosa Wolke",
+     "gegenstand": "socke",
+     "raum": "thronsaal"
+    },
+    {
+     "zeile": "W1_THRO_MAX_0280",
+     "sprecher": "MAX",
+     "blasen": [
+      "W1_THRO_MAX_0280"
+     ],
+     "bedingung_text": "nach dem Niesen",
+     "gegenstand": "kochloeffel",
+     "raum": "thronsaal"
+    }
+   ],
+   "benutzen": []
+  },
+  {
+   "id": "smaugi",
+   "script_name": "Smaugi",
+   "kuerzel": "SMA",
+   "name_key": "UI_OBJ_SMAUGI",
+   "groesse_px": 120,
+   "spielbar": false,
+   "textfarbe": "#ffffff",
+   "sprite": "res://grafik/platzhalter/figur_smaugi.png",
+   "raeume": [
+    "abstellkammern"
+   ],
+   "tier": false,
+   "ansehen": [
+    {
+     "zeile": "W1_SMAU_MAX_0210",
+     "sprecher": "MAX",
+     "blasen": [
+      "W1_SMAU_MAX_0210"
+     ],
+     "raum": "abstellkammern"
+    },
+    {
+     "zeile": "W1_SMAU_MAX_0215",
+     "sprecher": "MAX",
+     "blasen": [
+      "W1_SMAU_MAX_0215"
+     ],
+     "mal": 2,
+     "raum": "abstellkammern"
+    }
+   ],
+   "pixel_auf": [
+    {
+     "zeile": "W1_SMAU_SMA_0220",
+     "sprecher": "SMA",
+     "blasen": [
+      "W1_SMAU_SMA_0220"
+     ],
+     "raum": "abstellkammern"
+    }
+   ],
+   "pixel_redet": [],
+   "gegenstand_auf": [
+    {
+     "zeile": "W1_SMAU_SMA_0680",
+     "sprecher": "SMA",
+     "blasen": [
+      "W1_SMAU_SMA_0680"
+     ],
+     "gegenstand": "thunfischdose",
+     "raum": "abstellkammern"
+    }
+   ],
+   "benutzen": []
+  },
+  {
+   "id": "minka",
+   "script_name": "Minka",
+   "kuerzel": "MIN",
+   "name_key": "UI_OBJ_MINKA",
+   "groesse_px": 18,
+   "spielbar": false,
+   "textfarbe": "#ffffff",
+   "sprite": "res://grafik/platzhalter/figur_minka.png",
+   "raeume": [
+    "taverne"
+   ],
+   "tier": true,
+   "ansehen": [
+    {
+     "zeile": "W1_TAV_MAX_0140",
+     "sprecher": "MAX",
+     "blasen": [
+      "W1_TAV_MAX_0140"
+     ],
+     "raum": "taverne"
+    },
+    {
+     "zeile": "W1_TAV_PIX_0150",
+     "sprecher": "PIX",
+     "blasen": [
+      "W1_TAV_PIX_0150"
+     ],
+     "figur": "PIX",
+     "raum": "taverne"
+    }
+   ],
+   "pixel_auf": [],
+   "pixel_redet": [
+    {
+     "zeile": "W1_TAV_MIN_0940",
+     "sprecher": "MIN",
+     "blasen": [
+      "W1_TAV_MIN_0940"
+     ],
+     "raum": "taverne"
+    }
+   ],
+   "gegenstand_auf": [],
+   "benutzen": []
+  },
+  {
+   "id": "huhn",
+   "script_name": "Huhn",
+   "kuerzel": "HUH",
+   "name_key": "UI_OBJ_HUHN",
+   "groesse_px": 14,
+   "spielbar": false,
+   "textfarbe": "#ffffff",
+   "sprite": "res://grafik/platzhalter/figur_huhn.png",
+   "raeume": [
+    "taverne"
+   ],
+   "tier": true,
+   "ansehen": [
+    {
+     "zeile": "W1_TAV_MAX_0180",
+     "sprecher": "MAX",
+     "blasen": [
+      "W1_TAV_MAX_0180"
+     ],
+     "raum": "taverne"
+    },
+    {
+     "zeile": "W1_TAV_PIX_0190",
+     "sprecher": "PIX",
+     "blasen": [
+      "W1_TAV_PIX_0190"
+     ],
+     "figur": "PIX",
+     "raum": "taverne"
+    }
+   ],
+   "pixel_auf": [],
+   "pixel_redet": [
+    {
+     "zeile": "W1_TAV_HUH_1460",
+     "sprecher": "HUH",
+     "blasen": [
+      "W1_TAV_HUH_1460"
+     ],
+     "raum": "taverne",
+     "folge": [
+      {
+       "zeile": "W1_TAV_PIX_1470",
+       "sprecher": "PIX",
+       "blasen": [
+        "W1_TAV_PIX_1470",
+        "W1_TAV_PIX_1470_2"
+       ]
+      }
+     ]
+    }
+   ],
+   "gegenstand_auf": [],
+   "benutzen": []
+  },
+  {
+   "id": "schmiede_ziege",
+   "script_name": "SchmiedeZiege",
+   "kuerzel": "ZIE",
+   "name_key": "UI_OBJ_SCHMIEDE_ZIEGE",
+   "groesse_px": 28,
+   "spielbar": false,
+   "textfarbe": "#ffffff",
+   "sprite": "res://grafik/platzhalter/figur_schmiede_ziege.png",
+   "raeume": [
+    "schmiede",
+    "dorfplatz",
+    "trollbruecke"
+   ],
+   "tier": true,
+   "ansehen": [
+    {
+     "zeile": "W1_SCHM_MAX_0050",
+     "sprecher": "MAX",
+     "blasen": [
+      "W1_SCHM_MAX_0050"
+     ],
+     "raum": "schmiede"
+    },
+    {
+     "zeile": "W1_SCHM_MAX_0055",
+     "sprecher": "MAX",
+     "blasen": [
+      "W1_SCHM_MAX_0055"
+     ],
+     "mal": 2,
+     "raum": "schmiede"
+    },
+    {
+     "zeile": "W1_SCHM_PIX_0060",
+     "sprecher": "PIX",
+     "blasen": [
+      "W1_SCHM_PIX_0060"
+     ],
+     "figur": "PIX",
+     "raum": "schmiede"
+    },
+    {
+     "zeile": "W1_SCHM_PIX_0065",
+     "sprecher": "PIX",
+     "blasen": [
+      "W1_SCHM_PIX_0065"
+     ],
+     "mal": 2,
+     "figur": "PIX",
+     "raum": "schmiede"
+    }
+   ],
+   "pixel_auf": [],
+   "pixel_redet": [
+    {
+     "zeile": "W1_SCHM_ZIE_0410",
+     "sprecher": "ZIE",
+     "blasen": [
+      "W1_SCHM_ZIE_0410"
+     ],
+     "raum": "schmiede",
+     "folge": [
+      {
+       "zeile": "W1_SCHM_PIX_0420",
+       "sprecher": "PIX",
+       "blasen": [
+        "W1_SCHM_PIX_0420",
+        "W1_SCHM_PIX_0420_2"
+       ]
+      }
+     ]
+    }
+   ],
+   "gegenstand_auf": [],
+   "benutzen": []
+  },
+  {
+   "id": "xxl_ziege",
+   "script_name": "XxlZiege",
+   "kuerzel": "XXL",
+   "name_key": "UI_OBJ_XXL_ZIEGE",
+   "groesse_px": 70,
+   "spielbar": false,
+   "textfarbe": "#ffffff",
+   "sprite": "res://grafik/platzhalter/figur_xxl_ziege.png",
+   "raeume": [
+    "dorfplatz",
+    "trollbruecke"
+   ],
+   "tier": true,
+   "ansehen": [],
+   "pixel_auf": [],
+   "pixel_redet": [
+    {
+     "zeile": "W1_DORF_XXL_0990",
+     "sprecher": "XXL",
+     "blasen": [
+      "W1_DORF_XXL_0990"
+     ],
+     "raum": "dorfplatz",
+     "folge": [
+      {
+       "zeile": "W1_DORF_PIX_1000",
+       "sprecher": "PIX",
+       "blasen": [
+        "W1_DORF_PIX_1000",
+        "W1_DORF_PIX_1000_2"
+       ]
+      }
+     ]
+    }
+   ],
+   "gegenstand_auf": [],
+   "benutzen": []
+  },
+  {
+   "id": "schwan",
+   "script_name": "Schwan",
+   "kuerzel": "SWA",
+   "name_key": "UI_OBJ_SCHWAN",
+   "groesse_px": 24,
+   "spielbar": false,
+   "textfarbe": "#ffffff",
+   "sprite": "res://grafik/platzhalter/figur_schwan.png",
+   "raeume": [
+    "wasserschloss"
+   ],
+   "tier": true,
+   "ansehen": [
+    {
+     "zeile": "W1_WASS_MAX_0120",
+     "sprecher": "MAX",
+     "blasen": [
+      "W1_WASS_MAX_0120"
+     ],
+     "raum": "wasserschloss"
+    },
+    {
+     "zeile": "W1_WASS_MAX_0125",
+     "sprecher": "MAX",
+     "blasen": [
+      "W1_WASS_MAX_0125"
+     ],
+     "mal": 2,
+     "raum": "wasserschloss"
+    }
+   ],
+   "pixel_auf": [],
+   "pixel_redet": [
+    {
+     "zeile": "W1_WASS_SWA_0130",
+     "sprecher": "SWA",
+     "blasen": [
+      "W1_WASS_SWA_0130"
+     ],
+     "raum": "wasserschloss",
+     "folge": [
+      {
+       "zeile": "W1_WASS_PIX_0140",
+       "sprecher": "PIX",
+       "blasen": [
+        "W1_WASS_PIX_0140",
+        "W1_WASS_PIX_0140_2"
+       ]
+      }
+     ]
+    }
+   ],
+   "gegenstand_auf": [],
+   "benutzen": []
+  }
+ ],
+ "gegenstaende": [
+  {
+   "id": "thunfischdose",
+   "script_name": "Thunfischdose",
+   "name_key": "UI_OBJ_THUNFISCHDOSE",
+   "zustaende": [
+    "offen"
+   ],
+   "reist_mit": true,
+   "nahansicht": false,
+   "icon": "res://grafik/platzhalter/gegenstand_thunfischdose.png",
+   "icons": {},
+   "ansehen": [],
+   "benutzen": [],
+   "kombinieren": []
+  },
+  {
+   "id": "notizbuch",
+   "script_name": "Notizbuch",
+   "name_key": "UI_OBJ_NOTIZBUCH",
+   "zustaende": [
+    "normal"
+   ],
+   "reist_mit": true,
+   "nahansicht": false,
+   "icon": "res://grafik/platzhalter/gegenstand_notizbuch.png",
+   "icons": {},
+   "ansehen": [],
+   "benutzen": [],
+   "kombinieren": []
+  },
+  {
+   "id": "opas_zettel",
+   "script_name": "OpasZettel",
+   "name_key": "UI_OBJ_OPAS_ZETTEL",
+   "zustaende": [
+    "normal"
+   ],
+   "reist_mit": false,
+   "nahansicht": false,
+   "icon": "res://grafik/platzhalter/gegenstand_opas_zettel.png",
+   "icons": {},
+   "ansehen": [],
+   "benutzen": [],
+   "kombinieren": []
+  },
+  {
+   "id": "goldmuenze",
+   "script_name": "Goldmuenze",
+   "name_key": "UI_OBJ_GOLDMUENZE",
+   "zustaende": [
+    "normal"
+   ],
+   "reist_mit": false,
+   "nahansicht": false,
+   "icon": "res://grafik/platzhalter/gegenstand_goldmuenze.png",
+   "icons": {},
+   "ansehen": [
+    {
+     "zeile": "W1_DORF_MAX_0380",
+     "sprecher": "MAX",
+     "blasen": [
+      "W1_DORF_MAX_0380"
+     ]
+    },
+    {
+     "zeile": "W1_DORF_MAX_0385",
+     "sprecher": "MAX",
+     "blasen": [
+      "W1_DORF_MAX_0385"
+     ],
+     "mal": 2
+    }
+   ],
+   "benutzen": [],
+   "kombinieren": []
+  },
+  {
+   "id": "kaesefondue",
+   "script_name": "Kaesefondue",
+   "name_key": "UI_OBJ_KAESEFONDUE",
+   "zustaende": [
+    "normal"
+   ],
+   "reist_mit": false,
+   "nahansicht": false,
+   "icon": "res://grafik/platzhalter/gegenstand_kaesefondue.png",
+   "icons": {},
+   "ansehen": [
+    {
+     "zeile": "W1_INV_MAX_0010",
+     "sprecher": "MAX",
+     "blasen": [
+      "W1_INV_MAX_0010"
+     ]
+    },
+    {
+     "zeile": "W1_INV_PIX_0015",
+     "sprecher": "PIX",
+     "blasen": [
+      "W1_INV_PIX_0015"
+     ],
+     "mal": 2
+    }
+   ],
+   "benutzen": [],
+   "kombinieren": []
+  },
+  {
+   "id": "kochloeffel",
+   "script_name": "Kochloeffel",
+   "name_key": "UI_OBJ_KOCHLOEFFEL",
+   "zustaende": [
+    "ohne_kaese",
+    "zauberstab"
+   ],
+   "reist_mit": true,
+   "nahansicht": false,
+   "icon": "res://grafik/platzhalter/gegenstand_kochloeffel.png",
+   "icons": {
+    "zauberstab": "res://grafik/platzhalter/gegenstand_kochloeffel_zauberstab.png"
+   },
+   "ansehen": [
+    {
+     "zeile": "W1_STAB_MAX_0550",
+     "sprecher": "MAX",
+     "blasen": [
+      "W1_STAB_MAX_0550"
+     ],
+     "zustand": "zauberstab"
+    },
+    {
+     "zeile": "W1_STAB_MAX_0555",
+     "sprecher": "MAX",
+     "blasen": [
+      "W1_STAB_MAX_0555"
+     ],
+     "mal": 2,
+     "zustand": "zauberstab"
+    },
+    {
+     "zeile": "W1_INV_MAX_0020",
+     "sprecher": "MAX",
+     "blasen": [
+      "W1_INV_MAX_0020"
+     ],
+     "zustand": "ohne_kaese"
+    },
+    {
+     "zeile": "W1_INV_MAX_0025",
+     "sprecher": "MAX",
+     "blasen": [
+      "W1_INV_MAX_0025"
+     ],
+     "mal": 2,
+     "zustand": "ohne_kaese"
+    }
+   ],
+   "benutzen": [
+    {
+     "zeile": "W1_STAB_MAX_0590",
+     "sprecher": "MAX",
+     "blasen": [
+      "W1_STAB_MAX_0590"
+     ],
+     "zustand": "zauberstab"
+    }
+   ],
+   "kombinieren": [
+    {
+     "zeile": "W1_STAB_MAX_0500",
+     "sprecher": "MAX",
+     "blasen": [
+      "W1_STAB_MAX_0500"
+     ],
+     "gegenstand": "kaesefondue"
+    }
+   ]
+  },
+  {
+   "id": "socke",
+   "script_name": "Socke",
+   "name_key": "UI_OBJ_SOCKE",
+   "zustaende": [
+    "leer",
+    "voller_pollen"
+   ],
+   "reist_mit": true,
+   "nahansicht": false,
+   "icon": "res://grafik/platzhalter/gegenstand_socke.png",
+   "icons": {
+    "voller_pollen": "res://grafik/platzhalter/gegenstand_socke_voller_pollen.png"
+   },
+   "ansehen": [
+    {
+     "zeile": "W1_STAB_MAX_0560",
+     "sprecher": "MAX",
+     "blasen": [
+      "W1_STAB_MAX_0560"
+     ]
+    },
+    {
+     "zeile": "W1_STAB_MAX_0565",
+     "sprecher": "MAX",
+     "blasen": [
+      "W1_STAB_MAX_0565"
+     ],
+     "mal": 2
+    },
+    {
+     "zeile": "W1_STAB_PIX_0570",
+     "sprecher": "PIX",
+     "blasen": [
+      "W1_STAB_PIX_0570"
+     ],
+     "figur": "PIX"
+    },
+    {
+     "zeile": "W1_STAB_PIX_0575",
+     "sprecher": "PIX",
+     "blasen": [
+      "W1_STAB_PIX_0575"
+     ],
+     "mal": 2,
+     "figur": "PIX"
+    },
+    {
+     "zeile": "W1_WALD_MAX_0600",
+     "sprecher": "MAX",
+     "blasen": [
+      "W1_WALD_MAX_0600"
+     ],
+     "zustand": "voller_pollen"
+    },
+    {
+     "zeile": "W1_WALD_MAX_0605",
+     "sprecher": "MAX",
+     "blasen": [
+      "W1_WALD_MAX_0605"
+     ],
+     "mal": 2,
+     "zustand": "voller_pollen"
+    }
+   ],
+   "benutzen": [
+    {
+     "zeile": "W1_STAB_MAX_0580",
+     "sprecher": "MAX",
+     "blasen": [
+      "W1_STAB_MAX_0580"
+     ]
+    }
+   ],
+   "kombinieren": []
+  },
+  {
+   "id": "ziegenfell_vorleger",
+   "script_name": "ZiegenfellVorleger",
+   "name_key": "UI_OBJ_ZIEGENFELL_VORLEGER",
+   "zustaende": [
+    "normal"
+   ],
+   "reist_mit": true,
+   "nahansicht": false,
+   "icon": "res://grafik/platzhalter/gegenstand_ziegenfell_vorleger.png",
+   "icons": {},
+   "ansehen": [
+    {
+     "zeile": "W1_INV_MAX_0030",
+     "sprecher": "MAX",
+     "blasen": [
+      "W1_INV_MAX_0030"
+     ]
+    },
+    {
+     "zeile": "W1_INV_PIX_0035",
+     "sprecher": "PIX",
+     "blasen": [
+      "W1_INV_PIX_0035"
+     ],
+     "mal": 2
+    }
+   ],
+   "benutzen": [],
+   "kombinieren": []
+  },
+  {
+   "id": "bestellzettel",
+   "script_name": "Bestellzettel",
+   "name_key": "UI_OBJ_BESTELLZETTEL",
+   "zustaende": [
+    "normal"
+   ],
+   "reist_mit": false,
+   "nahansicht": false,
+   "icon": "res://grafik/platzhalter/gegenstand_bestellzettel.png",
+   "icons": {},
+   "ansehen": [
+    {
+     "zeile": "W1_INV_MAX_0040",
+     "sprecher": "MAX",
+     "blasen": [
+      "W1_INV_MAX_0040"
+     ]
+    },
+    {
+     "zeile": "W1_INV_MAX_0045",
+     "sprecher": "MAX",
+     "blasen": [
+      "W1_INV_MAX_0045"
+     ],
+     "mal": 2
+    }
+   ],
+   "benutzen": [],
+   "kombinieren": []
+  },
+  {
+   "id": "steckbrief",
+   "script_name": "Steckbrief",
+   "name_key": "UI_OBJ_STECKBRIEF",
+   "zustaende": [
+    "normal"
+   ],
+   "reist_mit": false,
+   "nahansicht": false,
+   "icon": "res://grafik/platzhalter/gegenstand_steckbrief.png",
+   "icons": {},
+   "ansehen": [
+    {
+     "zeile": "W1_INV_MAX_0050",
+     "sprecher": "MAX",
+     "blasen": [
+      "W1_INV_MAX_0050"
+     ]
+    },
+    {
+     "zeile": "W1_INV_MAX_0055",
+     "sprecher": "MAX",
+     "blasen": [
+      "W1_INV_MAX_0055"
+     ],
+     "mal": 2
+    }
+   ],
+   "benutzen": [],
+   "kombinieren": []
+  },
+  {
+   "id": "eimer",
+   "script_name": "Eimer",
+   "name_key": "UI_OBJ_EIMER",
+   "zustaende": [
+    "leer",
+    "mit_wasser"
+   ],
+   "reist_mit": true,
+   "nahansicht": false,
+   "icon": "res://grafik/platzhalter/gegenstand_eimer.png",
+   "icons": {
+    "mit_wasser": "res://grafik/platzhalter/gegenstand_eimer_mit_wasser.png"
+   },
+   "ansehen": [
+    {
+     "zeile": "W1_INV_MAX_0060",
+     "sprecher": "MAX",
+     "blasen": [
+      "W1_INV_MAX_0060"
+     ],
+     "zustand": "leer"
+    },
+    {
+     "zeile": "W1_INV_MAX_0065",
+     "sprecher": "MAX",
+     "blasen": [
+      "W1_INV_MAX_0065"
+     ],
+     "mal": 2,
+     "zustand": "leer"
+    },
+    {
+     "zeile": "W1_INV_MAX_0070",
+     "sprecher": "MAX",
+     "blasen": [
+      "W1_INV_MAX_0070"
+     ],
+     "zustand": "mit_wasser"
+    },
+    {
+     "zeile": "W1_INV_PIX_0075",
+     "sprecher": "PIX",
+     "blasen": [
+      "W1_INV_PIX_0075"
+     ],
+     "mal": 2,
+     "zustand": "mit_wasser"
+    }
+   ],
+   "benutzen": [],
+   "kombinieren": []
+  },
+  {
+   "id": "krug",
+   "script_name": "Krug",
+   "name_key": "UI_OBJ_KRUG",
+   "zustaende": [
+    "leer",
+    "mit_ziegenmilch"
+   ],
+   "reist_mit": false,
+   "nahansicht": false,
+   "icon": "res://grafik/platzhalter/gegenstand_krug.png",
+   "icons": {
+    "mit_ziegenmilch": "res://grafik/platzhalter/gegenstand_krug_mit_ziegenmilch.png"
+   },
+   "ansehen": [
+    {
+     "zeile": "W1_INV_MAX_0080",
+     "sprecher": "MAX",
+     "blasen": [
+      "W1_INV_MAX_0080"
+     ],
+     "zustand": "leer"
+    },
+    {
+     "zeile": "W1_INV_MAX_0085",
+     "sprecher": "MAX",
+     "blasen": [
+      "W1_INV_MAX_0085"
+     ],
+     "mal": 2,
+     "zustand": "leer"
+    },
+    {
+     "zeile": "W1_INV_MAX_0090",
+     "sprecher": "MAX",
+     "blasen": [
+      "W1_INV_MAX_0090"
+     ],
+     "zustand": "mit_ziegenmilch"
+    },
+    {
+     "zeile": "W1_INV_PIX_0095",
+     "sprecher": "PIX",
+     "blasen": [
+      "W1_INV_PIX_0095"
+     ],
+     "mal": 2,
+     "zustand": "mit_ziegenmilch"
+    }
+   ],
+   "benutzen": [],
+   "kombinieren": []
+  },
+  {
+   "id": "ei",
+   "script_name": "Ei",
+   "name_key": "UI_OBJ_EI",
+   "zustaende": [
+    "normal"
+   ],
+   "reist_mit": false,
+   "nahansicht": false,
+   "icon": "res://grafik/platzhalter/gegenstand_ei.png",
+   "icons": {},
+   "ansehen": [
+    {
+     "zeile": "W1_INV_MAX_0100",
+     "sprecher": "MAX",
+     "blasen": [
+      "W1_INV_MAX_0100"
+     ]
+    },
+    {
+     "zeile": "W1_INV_PIX_0105",
+     "sprecher": "PIX",
+     "blasen": [
+      "W1_INV_PIX_0105"
+     ],
+     "mal": 2
+    }
+   ],
+   "benutzen": [],
+   "kombinieren": []
+  },
+  {
+   "id": "leuchtpilz",
+   "script_name": "Leuchtpilz",
+   "name_key": "UI_OBJ_LEUCHTPILZ",
+   "zustaende": [
+    "normal"
+   ],
+   "reist_mit": false,
+   "nahansicht": false,
+   "icon": "res://grafik/platzhalter/gegenstand_leuchtpilz.png",
+   "icons": {},
+   "ansehen": [
+    {
+     "zeile": "W1_INV_MAX_0110",
+     "sprecher": "MAX",
+     "blasen": [
+      "W1_INV_MAX_0110"
+     ]
+    },
+    {
+     "zeile": "W1_INV_MAX_0115",
+     "sprecher": "MAX",
+     "blasen": [
+      "W1_INV_MAX_0115"
+     ],
+     "mal": 2
+    }
+   ],
+   "benutzen": [],
+   "kombinieren": []
+  },
+  {
+   "id": "hinweiszettel",
+   "script_name": "Hinweiszettel",
+   "name_key": "UI_OBJ_HINWEISZETTEL",
+   "zustaende": [
+    "normal"
+   ],
+   "reist_mit": false,
+   "nahansicht": true,
+   "icon": "res://grafik/platzhalter/gegenstand_hinweiszettel.png",
+   "icons": {},
+   "ansehen": [
+    {
+     "zeile": "W1_INV_MAX_0120",
+     "sprecher": "MAX",
+     "blasen": [
+      "W1_INV_MAX_0120"
+     ]
+    },
+    {
+     "zeile": "W1_INV_MAX_0125",
+     "sprecher": "MAX",
+     "blasen": [
+      "W1_INV_MAX_0125"
+     ],
+     "mal": 2
+    }
+   ],
+   "benutzen": [],
+   "kombinieren": []
+  },
+  {
+   "id": "flasche",
+   "script_name": "Flasche",
+   "name_key": "UI_OBJ_FLASCHE",
+   "zustaende": [
+    "klein",
+    "gross"
+   ],
+   "reist_mit": false,
+   "nahansicht": false,
+   "icon": "res://grafik/platzhalter/gegenstand_flasche.png",
+   "icons": {
+    "gross": "res://grafik/platzhalter/gegenstand_flasche_gross.png"
+   },
+   "ansehen": [
+    {
+     "zeile": "W1_INV_MAX_0130",
+     "sprecher": "MAX",
+     "blasen": [
+      "W1_INV_MAX_0130"
+     ],
+     "zustand": "klein"
+    },
+    {
+     "zeile": "W1_INV_MAX_0135",
+     "sprecher": "MAX",
+     "blasen": [
+      "W1_INV_MAX_0135"
+     ],
+     "mal": 2,
+     "zustand": "klein"
+    },
+    {
+     "zeile": "W1_INV_MAX_0140",
+     "sprecher": "MAX",
+     "blasen": [
+      "W1_INV_MAX_0140"
+     ],
+     "zustand": "gross"
+    },
+    {
+     "zeile": "W1_INV_PIX_0145",
+     "sprecher": "PIX",
+     "blasen": [
+      "W1_INV_PIX_0145"
+     ],
+     "mal": 2,
+     "zustand": "gross"
+    }
+   ],
+   "benutzen": [],
+   "kombinieren": []
+  },
+  {
+   "id": "leuchttrank",
+   "script_name": "Leuchttrank",
+   "name_key": "UI_OBJ_LEUCHTTRANK",
+   "zustaende": [
+    "normal"
+   ],
+   "reist_mit": true,
+   "nahansicht": false,
+   "icon": "res://grafik/platzhalter/gegenstand_leuchttrank.png",
+   "icons": {},
+   "ansehen": [
+    {
+     "zeile": "W1_HOGG_MAX_0870",
+     "sprecher": "MAX",
+     "blasen": [
+      "W1_HOGG_MAX_0870"
+     ]
+    },
+    {
+     "zeile": "W1_HOGG_MAX_0875",
+     "sprecher": "MAX",
+     "blasen": [
+      "W1_HOGG_MAX_0875"
+     ],
+     "mal": 2
+    }
+   ],
+   "benutzen": [],
+   "kombinieren": []
+  },
+  {
+   "id": "zeugnis",
+   "script_name": "Zeugnis",
+   "name_key": "UI_OBJ_ZEUGNIS",
+   "zustaende": [
+    "normal"
+   ],
+   "reist_mit": true,
+   "nahansicht": true,
+   "icon": "res://grafik/platzhalter/gegenstand_zeugnis.png",
+   "icons": {},
+   "ansehen": [
+    {
+     "zeile": "W1_HOGG_MAX_0860",
+     "sprecher": "MAX",
+     "blasen": [
+      "W1_HOGG_MAX_0860"
+     ],
+     "mal": 2
+    },
+    {
+     "zeile": "W1_HOGG_MAX_0890",
+     "sprecher": "MAX",
+     "blasen": [
+      "W1_HOGG_MAX_0890"
+     ]
+    }
+   ],
+   "benutzen": [],
+   "kombinieren": []
+  },
+  {
+   "id": "zauberbohne",
+   "script_name": "Zauberbohne",
+   "name_key": "UI_OBJ_ZAUBERBOHNE",
+   "zustaende": [
+    "normal"
+   ],
+   "reist_mit": false,
+   "nahansicht": false,
+   "icon": "res://grafik/platzhalter/gegenstand_zauberbohne.png",
+   "icons": {},
+   "ansehen": [
+    {
+     "zeile": "W1_DORF_MAX_0390",
+     "sprecher": "MAX",
+     "blasen": [
+      "W1_DORF_MAX_0390"
+     ],
+     "folge": [
+      {
+       "zeile": "W1_DORF_PIX_0400",
+       "sprecher": "PIX",
+       "blasen": [
+        "W1_DORF_PIX_0400"
+       ]
+      }
+     ]
+    },
+    {
+     "zeile": "W1_DORF_MAX_0395",
+     "sprecher": "MAX",
+     "blasen": [
+      "W1_DORF_MAX_0395"
+     ],
+     "mal": 2
+    }
+   ],
+   "benutzen": [],
+   "kombinieren": []
+  },
+  {
+   "id": "ketchup",
+   "script_name": "Ketchup",
+   "name_key": "UI_OBJ_KETCHUP",
+   "zustaende": [
+    "normal"
+   ],
+   "reist_mit": true,
+   "nahansicht": false,
+   "icon": "res://grafik/platzhalter/gegenstand_ketchup.png",
+   "icons": {},
+   "ansehen": [
+    {
+     "zeile": "W1_INV_MAX_0150",
+     "sprecher": "MAX",
+     "blasen": [
+      "W1_INV_MAX_0150"
+     ]
+    },
+    {
+     "zeile": "W1_INV_MAX_0155",
+     "sprecher": "MAX",
+     "blasen": [
+      "W1_INV_MAX_0155"
+     ],
+     "mal": 2
+    }
+   ],
+   "benutzen": [],
+   "kombinieren": []
+  },
+  {
+   "id": "tarifvertrag",
+   "script_name": "Tarifvertrag",
+   "name_key": "UI_OBJ_TARIFVERTRAG",
+   "zustaende": [
+    "leer",
+    "unterschrieben"
+   ],
+   "reist_mit": false,
+   "nahansicht": false,
+   "icon": "res://grafik/platzhalter/gegenstand_tarifvertrag.png",
+   "icons": {
+    "unterschrieben": "res://grafik/platzhalter/gegenstand_tarifvertrag_unterschrieben.png"
+   },
+   "ansehen": [
+    {
+     "zeile": "W1_BERG_MAX_0710",
+     "sprecher": "MAX",
+     "blasen": [
+      "W1_BERG_MAX_0710"
+     ]
+    },
+    {
+     "zeile": "W1_BERG_MAX_0715",
+     "sprecher": "MAX",
+     "blasen": [
+      "W1_BERG_MAX_0715"
+     ],
+     "mal": 2
+    },
+    {
+     "zeile": "W1_INV_MAX_0160",
+     "sprecher": "MAX",
+     "blasen": [
+      "W1_INV_MAX_0160"
+     ],
+     "zustand": "leer"
+    },
+    {
+     "zeile": "W1_INV_MAX_0165",
+     "sprecher": "MAX",
+     "blasen": [
+      "W1_INV_MAX_0165"
+     ],
+     "mal": 2,
+     "zustand": "leer"
+    }
+   ],
+   "benutzen": [],
+   "kombinieren": [
+    {
+     "zeile": "W1_BERG_MAX_0570",
+     "sprecher": "MAX",
+     "blasen": [
+      "W1_BERG_MAX_0570"
+     ],
+     "gegenstand": "ketchup"
+    }
+   ]
+  },
+  {
+   "id": "schwerter_buendel",
+   "script_name": "SchwerterBuendel",
+   "name_key": "UI_OBJ_SCHWERTER_BUENDEL",
+   "zustaende": [
+    "normal"
+   ],
+   "reist_mit": false,
+   "nahansicht": false,
+   "icon": "res://grafik/platzhalter/gegenstand_schwerter_buendel.png",
+   "icons": {},
+   "ansehen": [],
+   "benutzen": [],
+   "kombinieren": []
+  },
+  {
+   "id": "fackel_buendel",
+   "script_name": "FackelBuendel",
+   "name_key": "UI_OBJ_FACKEL_BUENDEL",
+   "zustaende": [
+    "normal"
+   ],
+   "reist_mit": false,
+   "nahansicht": false,
+   "icon": "res://grafik/platzhalter/gegenstand_fackel_buendel.png",
+   "icons": {},
+   "ansehen": [],
+   "benutzen": [],
+   "kombinieren": []
+  },
+  {
+   "id": "kronleuchter",
+   "script_name": "Kronleuchter",
+   "name_key": "UI_OBJ_KRONLEUCHTER",
+   "zustaende": [
+    "normal"
+   ],
+   "reist_mit": false,
+   "nahansicht": false,
+   "icon": "res://grafik/platzhalter/gegenstand_kronleuchter.png",
+   "icons": {},
+   "ansehen": [],
+   "benutzen": [],
+   "kombinieren": []
+  },
+  {
+   "id": "drachenei",
+   "script_name": "Drachenei",
+   "name_key": "UI_OBJ_DRACHENEI",
+   "zustaende": [
+    "normal"
+   ],
+   "reist_mit": false,
+   "nahansicht": false,
+   "icon": "res://grafik/platzhalter/gegenstand_drachenei.png",
+   "icons": {},
+   "ansehen": [
+    {
+     "zeile": "W1_INV_MAX_0170",
+     "sprecher": "MAX",
+     "blasen": [
+      "W1_INV_MAX_0170"
+     ]
+    },
+    {
+     "zeile": "W1_INV_PIX_0175",
+     "sprecher": "PIX",
+     "blasen": [
+      "W1_INV_PIX_0175"
+     ],
+     "mal": 2
+    }
+   ],
+   "benutzen": [],
+   "kombinieren": []
+  }
+ ],
+ "nahansichten": [
+  {
+   "id": "maerchen_satzung",
+   "name_key": "UI_OBJ_MAERCHEN_SATZUNG",
+   "raum": "trollbruecke",
+   "bild": "res://grafik/platzhalter/nah_maerchen_satzung.png"
+  },
+  {
+   "id": "luftschloss_kritzelei",
+   "name_key": "UI_OBJ_LUFTSCHLOSS_KRITZELEI",
+   "raum": "luftschloss",
+   "bild": "res://grafik/platzhalter/nah_luftschloss_kritzelei.png"
+  },
+  {
+   "id": "hinweiszettel",
+   "name_key": "UI_OBJ_HINWEISZETTEL",
+   "raum": null,
+   "bild": "res://grafik/platzhalter/nah_hinweiszettel.png"
+  },
+  {
+   "id": "zeugnis",
+   "name_key": "UI_OBJ_ZEUGNIS",
+   "raum": null,
+   "bild": "res://grafik/platzhalter/nah_zeugnis.png"
+  }
+ ],
+ "dialoge": [
+  {
+   "id": "toadi",
+   "script_name": "Toadi",
+   "optionen": [
+    {
+     "id": "0510",
+     "frage": "W1_DORF_MAX_0510",
+     "antworten": [
+      {
+       "zeile": "W1_DORF_TOA_0520",
+       "sprecher": "TOA",
+       "blasen": [
+        "W1_DORF_TOA_0520"
+       ],
+       "regie": "hüpft nervös"
+      }
+     ],
+     "beendet": false,
+     "bleibt": false
+    },
+    {
+     "id": "0530",
+     "frage": "W1_DORF_MAX_0530",
+     "antworten": [
+      {
+       "zeile": "W1_DORF_TOA_0540",
+       "sprecher": "TOA",
+       "blasen": [
+        "W1_DORF_TOA_0540"
+       ],
+       "regie": ""
+      }
+     ],
+     "beendet": false,
+     "bleibt": false
+    },
+    {
+     "id": "0550",
+     "frage": "W1_DORF_MAX_0550",
+     "antworten": [
+      {
+       "zeile": "W1_DORF_TOA_0560",
+       "sprecher": "TOA",
+       "blasen": [
+        "W1_DORF_TOA_0560"
+       ],
+       "regie": "Hinweis R5"
+      }
+     ],
+     "beendet": false,
+     "bleibt": true
+    },
+    {
+     "id": "0570",
+     "frage": "W1_DORF_MAX_0570",
+     "antworten": [
+      {
+       "zeile": "W1_DORF_TOA_0580",
+       "sprecher": "TOA",
+       "blasen": [
+        "W1_DORF_TOA_0580"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W1_DORF_MAX_0590",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_DORF_MAX_0590"
+       ],
+       "regie": "Antwort auf 0580"
+      },
+      {
+       "zeile": "W1_DORF_TOA_0600",
+       "sprecher": "TOA",
+       "blasen": [
+        "W1_DORF_TOA_0600"
+       ],
+       "regie": "ernst, salutiert"
+      }
+     ],
+     "beendet": false,
+     "bleibt": false
+    },
+    {
+     "id": "0610",
+     "frage": "W1_DORF_MAX_0610",
+     "antworten": [
+      {
+       "zeile": "W1_DORF_TOA_0620",
+       "sprecher": "TOA",
+       "blasen": [
+        "W1_DORF_TOA_0620"
+       ],
+       "regie": "rennt auf der Stelle"
+      }
+     ],
+     "beendet": true,
+     "bleibt": false
+    }
+   ],
+   "erschoepft": [
+    {
+     "zeile": "W1_ABS_TOA_0090",
+     "sprecher": "TOA"
+    },
+    {
+     "zeile": "W1_ABS_TOA_0100",
+     "sprecher": "TOA"
+    }
+   ]
+  },
+  {
+   "id": "humbert",
+   "script_name": "Humbert",
+   "optionen": [
+    {
+     "id": "0510",
+     "frage": "W1_TAV_MAX_0510",
+     "antworten": [
+      {
+       "zeile": "W1_TAV_HUM_0520",
+       "sprecher": "HUM",
+       "blasen": [
+        "W1_TAV_HUM_0520"
+       ],
+       "regie": "stolz"
+      }
+     ],
+     "beendet": false,
+     "bleibt": false
+    },
+    {
+     "id": "0530",
+     "frage": "W1_TAV_MAX_0530",
+     "antworten": [
+      {
+       "zeile": "W1_TAV_HUM_0540",
+       "sprecher": "HUM",
+       "blasen": [
+        "W1_TAV_HUM_0540"
+       ],
+       "regie": "zeigt nacheinander"
+      },
+      {
+       "zeile": "W1_TAV_MAX_0550",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_TAV_MAX_0550"
+       ],
+       "regie": "Antwort auf 0540"
+      },
+      {
+       "zeile": "W1_TAV_HUM_0560",
+       "sprecher": "HUM",
+       "blasen": [
+        "W1_TAV_HUM_0560"
+       ],
+       "regie": "ehrlich entsetzt"
+      }
+     ],
+     "beendet": false,
+     "bleibt": false
+    },
+    {
+     "id": "0570",
+     "frage": "W1_TAV_MAX_0570",
+     "antworten": [
+      {
+       "zeile": "W1_TAV_HUM_0580",
+       "sprecher": "HUM",
+       "blasen": [
+        "W1_TAV_HUM_0580"
+       ],
+       "regie": "Hinweis R1b; schaltet Option 0590 frei"
+      }
+     ],
+     "beendet": false,
+     "bleibt": true
+    },
+    {
+     "id": "0590",
+     "frage": "W1_TAV_MAX_0590",
+     "antworten": [
+      {
+       "zeile": "W1_TAV_HUM_0600",
+       "sprecher": "HUM",
+       "blasen": [
+        "W1_TAV_HUM_0600"
+       ],
+       "regie": "In-den-Keller-Animation"
+      },
+      {
+       "zeile": "W1_TAV_PIX_0610",
+       "sprecher": "PIX",
+       "blasen": [
+        "W1_TAV_PIX_0610"
+       ],
+       "regie": "nach 0600, wenn Minka noch da ist"
+      }
+     ],
+     "beendet": false,
+     "bleibt": false,
+     "bedingung": [
+      {
+       "art": "nach_zeile",
+       "zeile": "W1_TAV_HUM_0580"
+      }
+     ]
+    },
+    {
+     "id": "0620",
+     "frage": "W1_TAV_MAX_0620",
+     "antworten": [
+      {
+       "zeile": "W1_TAV_HUM_0630",
+       "sprecher": "HUM",
+       "blasen": [
+        "W1_TAV_HUM_0630"
+       ],
+       "regie": "schüttelt sich"
+      }
+     ],
+     "beendet": false,
+     "bleibt": false
+    },
+    {
+     "id": "0640",
+     "frage": "W1_TAV_MAX_0640",
+     "antworten": [
+      {
+       "zeile": "W1_TAV_HUM_0650",
+       "sprecher": "HUM",
+       "blasen": [
+        "W1_TAV_HUM_0650"
+       ],
+       "regie": ""
+      }
+     ],
+     "beendet": true,
+     "bleibt": false
+    }
+   ],
+   "erschoepft": [
+    {
+     "zeile": "W1_ABS_HUM_0050",
+     "sprecher": "HUM"
+    },
+    {
+     "zeile": "W1_ABS_HUM_0060",
+     "sprecher": "HUM"
+    }
+   ]
+  },
+  {
+   "id": "gollo",
+   "script_name": "Gollo",
+   "optionen": [
+    {
+     "id": "0710",
+     "frage": "W1_TAV_MAX_0710",
+     "antworten": [
+      {
+       "zeile": "W1_TAV_GOL_0720",
+       "sprecher": "GOL",
+       "blasen": [
+        "W1_TAV_GOL_0720"
+       ],
+       "regie": "drückt das Kästchen an sich"
+      }
+     ],
+     "beendet": false,
+     "bleibt": false
+    },
+    {
+     "id": "0730",
+     "frage": "W1_TAV_MAX_0730",
+     "antworten": [
+      {
+       "zeile": "W1_TAV_GOL_0740",
+       "sprecher": "GOL",
+       "blasen": [
+        "W1_TAV_GOL_0740"
+       ],
+       "regie": "Hinweis R1a und R1b"
+      }
+     ],
+     "beendet": false,
+     "bleibt": true
+    },
+    {
+     "id": "0750",
+     "frage": "W1_TAV_MAX_0750",
+     "antworten": [
+      {
+       "zeile": "W1_TAV_GOL_0760",
+       "sprecher": "GOL",
+       "blasen": [
+        "W1_TAV_GOL_0760"
+       ],
+       "regie": "kichert"
+      },
+      {
+       "zeile": "W1_TAV_MAX_0770",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_TAV_MAX_0770"
+       ],
+       "regie": "Antwort auf 0760"
+      },
+      {
+       "zeile": "W1_TAV_GOL_0780",
+       "sprecher": "GOL",
+       "blasen": [
+        "W1_TAV_GOL_0780"
+       ],
+       "regie": "Hinweis R1c"
+      }
+     ],
+     "beendet": false,
+     "bleibt": true
+    },
+    {
+     "id": "0790",
+     "frage": "W1_TAV_MAX_0790",
+     "antworten": [
+      {
+       "zeile": "W1_TAV_GOL_0800",
+       "sprecher": "GOL",
+       "blasen": [
+        "W1_TAV_GOL_0800"
+       ],
+       "regie": ""
+      }
+     ],
+     "beendet": true,
+     "bleibt": false
+    }
+   ],
+   "erschoepft": [
+    {
+     "zeile": "W1_ABS_GOL_0210",
+     "sprecher": "GOL"
+    },
+    {
+     "zeile": "W1_ABS_GOL_0220",
+     "sprecher": "GOL"
+    }
+   ]
+  },
+  {
+   "id": "schmied",
+   "script_name": "Schmied",
+   "optionen": [
+    {
+     "id": "0210",
+     "frage": "W1_SCHM_MAX_0210",
+     "antworten": [
+      {
+       "zeile": "W1_SCHM_SCH_0220",
+       "sprecher": "SCH",
+       "blasen": [
+        "W1_SCHM_SCH_0220"
+       ],
+       "regie": "seufzt"
+      }
+     ],
+     "beendet": false,
+     "bleibt": false
+    },
+    {
+     "id": "0230",
+     "frage": "W1_SCHM_MAX_0230",
+     "antworten": [
+      {
+       "zeile": "W1_SCHM_SCH_0240",
+       "sprecher": "SCH",
+       "blasen": [
+        "W1_SCHM_SCH_0240"
+       ],
+       "regie": ""
+      }
+     ],
+     "beendet": false,
+     "bleibt": false
+    },
+    {
+     "id": "0250",
+     "frage": "W1_SCHM_MAX_0250",
+     "antworten": [
+      {
+       "zeile": "W1_SCHM_SCH_0260",
+       "sprecher": "SCH",
+       "blasen": [
+        "W1_SCHM_SCH_0260"
+       ],
+       "regie": ""
+      }
+     ],
+     "beendet": false,
+     "bleibt": false
+    },
+    {
+     "id": "0270",
+     "frage": "W1_SCHM_MAX_0270",
+     "antworten": [
+      {
+       "zeile": "W1_SCHM_SCH_0280",
+       "sprecher": "SCH",
+       "blasen": [
+        "W1_SCHM_SCH_0280"
+       ],
+       "regie": "fällt fast auf die Knie; Ziege folgt Max ab jetzt"
+      },
+      {
+       "zeile": "W1_SCHM_ZIE_0290",
+       "sprecher": "ZIE",
+       "blasen": [
+        "W1_SCHM_ZIE_0290"
+       ],
+       "regie": "kaut weiter, trottet zu Max"
+      },
+      {
+       "zeile": "W1_SCHM_PIX_0300",
+       "sprecher": "PIX",
+       "blasen": [
+        "W1_SCHM_PIX_0300"
+       ],
+       "regie": ""
+      }
+     ],
+     "beendet": false,
+     "bleibt": false
+    },
+    {
+     "id": "0310",
+     "frage": "W1_SCHM_MAX_0310",
+     "antworten": [
+      {
+       "zeile": "W1_SCHM_SCH_0320",
+       "sprecher": "SCH",
+       "blasen": [
+        "W1_SCHM_SCH_0320"
+       ],
+       "regie": ""
+      }
+     ],
+     "beendet": true,
+     "bleibt": false
+    }
+   ],
+   "erschoepft": [
+    {
+     "zeile": "W1_ABS_SCH_0150",
+     "sprecher": "SCH"
+    },
+    {
+     "zeile": "W1_ABS_SCH_0160",
+     "sprecher": "SCH"
+    }
+   ]
+  },
+  {
+   "id": "stabmacher",
+   "script_name": "Stabmacher",
+   "optionen": [
+    {
+     "id": "0210",
+     "frage": "W1_STAB_MAX_0210",
+     "antworten": [
+      {
+       "zeile": "W1_STAB_STA_0220",
+       "sprecher": "STA",
+       "blasen": [
+        "W1_STAB_STA_0220",
+        "W1_STAB_STA_0220_2"
+       ],
+       "regie": "beugt sich vor"
+      }
+     ],
+     "beendet": false,
+     "bleibt": false
+    },
+    {
+     "id": "0230",
+     "frage": "W1_STAB_MAX_0230",
+     "antworten": [
+      {
+       "zeile": "W1_STAB_STA_0240",
+       "sprecher": "STA",
+       "blasen": [
+        "W1_STAB_STA_0240",
+        "W1_STAB_STA_0240_2"
+       ],
+       "regie": "Hinweis R2"
+      }
+     ],
+     "beendet": false,
+     "bleibt": true
+    },
+    {
+     "id": "0250",
+     "frage": "W1_STAB_MAX_0250",
+     "antworten": [
+      {
+       "zeile": "W1_STAB_STA_0260",
+       "sprecher": "STA",
+       "blasen": [
+        "W1_STAB_STA_0260"
+       ],
+       "regie": ""
+      }
+     ],
+     "beendet": false,
+     "bleibt": false
+    },
+    {
+     "id": "0270",
+     "frage": "W1_STAB_MAX_0270",
+     "antworten": [
+      {
+       "zeile": "W1_STAB_STA_0280",
+       "sprecher": "STA",
+       "blasen": [
+        "W1_STAB_STA_0280"
+       ],
+       "regie": ""
+      }
+     ],
+     "beendet": false,
+     "bleibt": false
+    },
+    {
+     "id": "0290",
+     "frage": "W1_STAB_MAX_0290",
+     "antworten": [
+      {
+       "zeile": "W1_STAB_STA_0300",
+       "sprecher": "STA",
+       "blasen": [
+        "W1_STAB_STA_0300"
+       ],
+       "regie": ""
+      }
+     ],
+     "beendet": true,
+     "bleibt": false
+    }
+   ],
+   "erschoepft": [
+    {
+     "zeile": "W1_ABS_STA_0110",
+     "sprecher": "STA"
+    },
+    {
+     "zeile": "W1_ABS_STA_0120",
+     "sprecher": "STA"
+    }
+   ]
+  },
+  {
+   "id": "alwin",
+   "script_name": "Alwin",
+   "optionen": [
+    {
+     "id": "0310",
+     "frage": "W1_HOGG_MAX_0310",
+     "antworten": [
+      {
+       "zeile": "W1_HOGG_ALW_0320",
+       "sprecher": "ALW",
+       "blasen": [
+        "W1_HOGG_ALW_0320"
+       ],
+       "regie": "liest von der Kelle ab; Rezept bekannt"
+      },
+      {
+       "zeile": "W1_HOGG_MAX_0330",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_HOGG_MAX_0330"
+       ],
+       "regie": "Antwort auf 0320"
+      },
+      {
+       "zeile": "W1_HOGG_ALW_0340",
+       "sprecher": "ALW",
+       "blasen": [
+        "W1_HOGG_ALW_0340"
+       ],
+       "regie": ""
+      }
+     ],
+     "beendet": false,
+     "bleibt": true
+    },
+    {
+     "id": "0350",
+     "frage": "W1_HOGG_MAX_0350",
+     "antworten": [
+      {
+       "zeile": "W1_HOGG_ALW_0360",
+       "sprecher": "ALW",
+       "blasen": [
+        "W1_HOGG_ALW_0360",
+        "W1_HOGG_ALW_0360_2"
+       ],
+       "regie": "Hinweis R6, Teil 1"
+      }
+     ],
+     "beendet": false,
+     "bleibt": true,
+     "bedingung": [
+      {
+       "art": "nach_zeile",
+       "zeile": "W1_HOGG_ALW_0320"
+      }
+     ]
+    },
+    {
+     "id": "0370",
+     "frage": "W1_HOGG_MAX_0370",
+     "antworten": [
+      {
+       "zeile": "W1_HOGG_ALW_0380",
+       "sprecher": "ALW",
+       "blasen": [
+        "W1_HOGG_ALW_0380"
+       ],
+       "regie": "gibt Alwins Hinweiszettel"
+      }
+     ],
+     "beendet": false,
+     "bleibt": true
+    },
+    {
+     "id": "0390",
+     "frage": "W1_HOGG_MAX_0390",
+     "antworten": [
+      {
+       "zeile": "W1_HOGG_ALW_0400",
+       "sprecher": "ALW",
+       "blasen": [
+        "W1_HOGG_ALW_0400",
+        "W1_HOGG_ALW_0400_2"
+       ],
+       "regie": "Hinweis auf das Zeugnis"
+      }
+     ],
+     "beendet": false,
+     "bleibt": false
+    },
+    {
+     "id": "0410",
+     "frage": "W1_HOGG_MAX_0410",
+     "antworten": [
+      {
+       "zeile": "W1_HOGG_ALW_0420",
+       "sprecher": "ALW",
+       "blasen": [
+        "W1_HOGG_ALW_0420"
+       ],
+       "regie": "Hinweis auf Rätsel 11"
+      }
+     ],
+     "beendet": false,
+     "bleibt": false
+    },
+    {
+     "id": "0430",
+     "frage": "W1_HOGG_MAX_0430",
+     "antworten": [
+      {
+       "zeile": "W1_HOGG_ALW_0440",
+       "sprecher": "ALW",
+       "blasen": [
+        "W1_HOGG_ALW_0440"
+       ],
+       "regie": ""
+      }
+     ],
+     "beendet": true,
+     "bleibt": false
+    }
+   ],
+   "erschoepft": [
+    {
+     "zeile": "W1_ABS_ALW_0070",
+     "sprecher": "ALW"
+    },
+    {
+     "zeile": "W1_ABS_ALW_0080",
+     "sprecher": "ALW"
+    }
+   ]
+  },
+  {
+   "id": "waldemar",
+   "script_name": "Waldemar",
+   "optionen": [
+    {
+     "id": "0210",
+     "frage": "W1_BRUE_MAX_0210",
+     "antworten": [
+      {
+       "zeile": "W1_BRUE_WAL_0220",
+       "sprecher": "WAL",
+       "blasen": [
+        "W1_BRUE_WAL_0220"
+       ],
+       "regie": "tippt aufs Regelbuch"
+      }
+     ],
+     "beendet": false,
+     "bleibt": true
+    },
+    {
+     "id": "0230",
+     "frage": "W1_BRUE_MAX_0230",
+     "antworten": [
+      {
+       "zeile": "W1_BRUE_WAL_0240",
+       "sprecher": "WAL",
+       "blasen": [
+        "W1_BRUE_WAL_0240",
+        "W1_BRUE_WAL_0240_2"
+       ],
+       "regie": "räuspert sich"
+      }
+     ],
+     "beendet": false,
+     "bleibt": true
+    },
+    {
+     "id": "0250",
+     "frage": "W1_BRUE_MAX_0250",
+     "antworten": [
+      {
+       "zeile": "W1_BRUE_WAL_0260",
+       "sprecher": "WAL",
+       "blasen": [
+        "W1_BRUE_WAL_0260",
+        "W1_BRUE_WAL_0260_2"
+       ],
+       "regie": "Fliege zittert"
+      }
+     ],
+     "beendet": false,
+     "bleibt": false
+    },
+    {
+     "id": "0270",
+     "frage": "W1_BRUE_MAX_0270",
+     "antworten": [
+      {
+       "zeile": "W1_BRUE_WAL_0280",
+       "sprecher": "WAL",
+       "blasen": [
+        "W1_BRUE_WAL_0280"
+       ],
+       "regie": "Hinweis R4c"
+      }
+     ],
+     "beendet": false,
+     "bleibt": true
+    },
+    {
+     "id": "0290",
+     "frage": "W1_BRUE_MAX_0290",
+     "antworten": [
+      {
+       "zeile": "W1_BRUE_WAL_0300",
+       "sprecher": "WAL",
+       "blasen": [
+        "W1_BRUE_WAL_0300",
+        "W1_BRUE_WAL_0300_2"
+       ],
+       "regie": "geht Richtung Wald; weiter in Abschnitt 9, Rätsel 7"
+      }
+     ],
+     "beendet": false,
+     "bleibt": false,
+     "bedingung": [
+      {
+       "art": "nach",
+       "raetsel": "R4"
+      },
+      {
+       "art": "hat",
+       "gegenstand": "socke"
+      }
+     ],
+     "bedingung_text": "Zauberwald betreten"
+    },
+    {
+     "id": "0310",
+     "frage": "W1_BRUE_MAX_0310",
+     "antworten": [
+      {
+       "zeile": "W1_BRUE_WAL_0320",
+       "sprecher": "WAL",
+       "blasen": [
+        "W1_BRUE_WAL_0320"
+       ],
+       "regie": ""
+      }
+     ],
+     "beendet": true,
+     "bleibt": false
+    }
+   ],
+   "erschoepft": [
+    {
+     "zeile": "W1_ABS_WAL_0030",
+     "sprecher": "WAL"
+    },
+    {
+     "zeile": "W1_ABS_WAL_0040",
+     "sprecher": "WAL"
+    }
+   ]
+  },
+  {
+   "id": "rotkaeppchen",
+   "script_name": "Rotkaeppchen",
+   "optionen": [
+    {
+     "id": "0210",
+     "frage": "W1_WALD_MAX_0210",
+     "antworten": [
+      {
+       "zeile": "W1_WALD_ROT_0220",
+       "sprecher": "ROT",
+       "blasen": [
+        "W1_WALD_ROT_0220"
+       ],
+       "regie": "zählt an den Fingern"
+      }
+     ],
+     "beendet": false,
+     "bleibt": false
+    },
+    {
+     "id": "0230",
+     "frage": "W1_WALD_MAX_0230",
+     "antworten": [
+      {
+       "zeile": "W1_WALD_ROT_0240",
+       "sprecher": "ROT",
+       "blasen": [
+        "W1_WALD_ROT_0240"
+       ],
+       "regie": "gibt den Ketchup frei"
+      }
+     ],
+     "beendet": false,
+     "bleibt": true
+    },
+    {
+     "id": "0250",
+     "frage": "W1_WALD_MAX_0250",
+     "antworten": [
+      {
+       "zeile": "W1_WALD_ROT_0260",
+       "sprecher": "ROT",
+       "blasen": [
+        "W1_WALD_ROT_0260"
+       ],
+       "regie": ""
+      }
+     ],
+     "beendet": false,
+     "bleibt": false
+    },
+    {
+     "id": "0270",
+     "frage": "W1_WALD_MAX_0270",
+     "antworten": [
+      {
+       "zeile": "W1_WALD_ROT_0280",
+       "sprecher": "ROT",
+       "blasen": [
+        "W1_WALD_ROT_0280"
+       ],
+       "regie": "Hinweis R7"
+      }
+     ],
+     "beendet": false,
+     "bleibt": true
+    },
+    {
+     "id": "0290",
+     "frage": "W1_WALD_MAX_0290",
+     "antworten": [
+      {
+       "zeile": "W1_WALD_ROT_0300",
+       "sprecher": "ROT",
+       "blasen": [
+        "W1_WALD_ROT_0300"
+       ],
+       "regie": ""
+      }
+     ],
+     "beendet": true,
+     "bleibt": false
+    }
+   ],
+   "erschoepft": [
+    {
+     "zeile": "W1_ABS_ROT_0170",
+     "sprecher": "ROT"
+    },
+    {
+     "zeile": "W1_ABS_ROT_0180",
+     "sprecher": "ROT"
+    }
+   ]
+  },
+  {
+   "id": "zeldina",
+   "script_name": "Zeldina",
+   "optionen": [
+    {
+     "id": "0210",
+     "frage": "W1_LUFT_MAX_0210",
+     "antworten": [
+      {
+       "zeile": "W1_LUFT_ZEL_0220",
+       "sprecher": "ZEL",
+       "blasen": [
+        "W1_LUFT_ZEL_0220"
+       ],
+       "regie": "stellt den Karton ab"
+      }
+     ],
+     "beendet": false,
+     "bleibt": false
+    },
+    {
+     "id": "0230",
+     "frage": "W1_LUFT_MAX_0230",
+     "antworten": [
+      {
+       "zeile": "W1_LUFT_ZEL_0240",
+       "sprecher": "ZEL",
+       "blasen": [
+        "W1_LUFT_ZEL_0240"
+       ],
+       "regie": ""
+      }
+     ],
+     "beendet": false,
+     "bleibt": false
+    },
+    {
+     "id": "0250",
+     "frage": "W1_LUFT_MAX_0250",
+     "antworten": [
+      {
+       "zeile": "W1_LUFT_ZEL_0260",
+       "sprecher": "ZEL",
+       "blasen": [
+        "W1_LUFT_ZEL_0260",
+        "W1_LUFT_ZEL_0260_2"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W1_LUFT_PIX_0270",
+       "sprecher": "PIX",
+       "blasen": [
+        "W1_LUFT_PIX_0270"
+       ],
+       "regie": "nach 0260"
+      }
+     ],
+     "beendet": false,
+     "bleibt": false
+    },
+    {
+     "id": "0280",
+     "frage": "W1_LUFT_MAX_0280",
+     "antworten": [
+      {
+       "zeile": "W1_LUFT_ZEL_0290",
+       "sprecher": "ZEL",
+       "blasen": [
+        "W1_LUFT_ZEL_0290"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W1_LUFT_PIX_0300",
+       "sprecher": "PIX",
+       "blasen": [
+        "W1_LUFT_PIX_0300",
+        "W1_LUFT_PIX_0300_2"
+       ],
+       "regie": "nach 0290"
+      },
+      {
+       "zeile": "W1_LUFT_MAX_0310",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_LUFT_MAX_0310"
+       ],
+       "regie": "Entwicklungsmoment; schaltet die Maklerin-Optionen frei"
+      }
+     ],
+     "beendet": false,
+     "bleibt": false
+    },
+    {
+     "id": "0320",
+     "frage": "W1_LUFT_MAX_0320",
+     "antworten": [
+      {
+       "zeile": "W1_LUFT_ZEL_0330",
+       "sprecher": "ZEL",
+       "blasen": [
+        "W1_LUFT_ZEL_0330"
+       ],
+       "regie": ""
+      }
+     ],
+     "beendet": true,
+     "bleibt": false
+    },
+    {
+     "id": "0710",
+     "frage": "W1_LUFT_MAX_0710",
+     "antworten": [
+      {
+       "zeile": "W1_LUFT_ZEL_0720",
+       "sprecher": "ZEL",
+       "blasen": [
+        "W1_LUFT_ZEL_0720",
+        "W1_LUFT_ZEL_0720_2"
+       ],
+       "regie": "Notizbuch trägt „Mo“ als Anfang ein"
+      }
+     ],
+     "beendet": false,
+     "bleibt": false,
+     "bedingung": [
+      {
+       "art": "nach",
+       "raetsel": "R9"
+      }
+     ]
+    },
+    {
+     "id": "0730",
+     "frage": "W1_LUFT_MAX_0730",
+     "antworten": [
+      {
+       "zeile": "W1_LUFT_ZEL_0740",
+       "sprecher": "ZEL",
+       "blasen": [
+        "W1_LUFT_ZEL_0740"
+       ],
+       "regie": "Hinweis R12"
+      }
+     ],
+     "beendet": false,
+     "bleibt": false,
+     "bedingung": [
+      {
+       "art": "nach",
+       "raetsel": "R9"
+      }
+     ]
+    },
+    {
+     "id": "0750",
+     "frage": "W1_LUFT_MAX_0750",
+     "antworten": [
+      {
+       "zeile": "W1_LUFT_ZEL_0760",
+       "sprecher": "ZEL",
+       "blasen": [
+        "W1_LUFT_ZEL_0760"
+       ],
+       "regie": "Hinweis R10, Weg B"
+      }
+     ],
+     "beendet": false,
+     "bleibt": false,
+     "bedingung": [
+      {
+       "art": "nach",
+       "raetsel": "R9"
+      },
+      {
+       "art": "vor",
+       "raetsel": "R10"
+      }
+     ]
+    },
+    {
+     "id": "0770",
+     "frage": "W1_LUFT_MAX_0770",
+     "antworten": [
+      {
+       "zeile": "W1_LUFT_ZEL_0780",
+       "sprecher": "ZEL",
+       "blasen": [
+        "W1_LUFT_ZEL_0780"
+       ],
+       "regie": ""
+      }
+     ],
+     "beendet": true,
+     "bleibt": false
+    }
+   ],
+   "erschoepft": [
+    {
+     "zeile": "W1_ABS_ZEL_0010",
+     "sprecher": "ZEL"
+    },
+    {
+     "zeile": "W1_ABS_ZEL_0020",
+     "sprecher": "ZEL"
+    }
+   ]
+  },
+  {
+   "id": "maklerin",
+   "script_name": "Maklerin",
+   "optionen": [
+    {
+     "id": "0410",
+     "frage": "W1_LUFT_MAX_0410",
+     "antworten": [
+      {
+       "zeile": "W1_LUFT_MAK_0420",
+       "sprecher": "MAK",
+       "blasen": [
+        "W1_LUFT_MAK_0420"
+       ],
+       "regie": "notiert"
+      },
+      {
+       "zeile": "W1_LUFT_ZEL_0430",
+       "sprecher": "ZEL",
+       "blasen": [
+        "W1_LUFT_ZEL_0430"
+       ],
+       "regie": "nach 0420"
+      }
+     ],
+     "beendet": false,
+     "bleibt": false,
+     "bedingung_text": "Feilschen"
+    },
+    {
+     "id": "0440",
+     "frage": "W1_LUFT_MAX_0440",
+     "antworten": [
+      {
+       "zeile": "W1_LUFT_MAK_0450",
+       "sprecher": "MAK",
+       "blasen": [
+        "W1_LUFT_MAK_0450"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W1_LUFT_PIX_0460",
+       "sprecher": "PIX",
+       "blasen": [
+        "W1_LUFT_PIX_0460"
+       ],
+       "regie": "nach 0450"
+      }
+     ],
+     "beendet": false,
+     "bleibt": false,
+     "bedingung_text": "Haustier"
+    },
+    {
+     "id": "0470",
+     "frage": "W1_LUFT_MAX_0470",
+     "antworten": [
+      {
+       "zeile": "W1_LUFT_MAX_0480",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_LUFT_MAX_0480"
+       ],
+       "regie": "zeigt den Steckbrief"
+      },
+      {
+       "zeile": "W1_LUFT_MAK_0490",
+       "sprecher": "MAK",
+       "blasen": [
+        "W1_LUFT_MAK_0490"
+       ],
+       "regie": "Augen werden groß"
+      },
+      {
+       "zeile": "W1_LUFT_MAK_0500",
+       "sprecher": "MAK",
+       "blasen": [
+        "W1_LUFT_MAK_0500"
+       ],
+       "regie": "klappt das Klemmbrett zu, springt mit Schirm von der Wolke"
+      },
+      {
+       "zeile": "W1_LUFT_NAR_0510",
+       "sprecher": "NAR",
+       "blasen": [
+        "W1_LUFT_NAR_0510"
+       ],
+       "regie": "Pixel sprachlos; Halsband blinkt leer"
+      },
+      {
+       "zeile": "W1_LUFT_MAX_0520",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_LUFT_MAX_0520"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W1_LUFT_PIX_0530",
+       "sprecher": "PIX",
+       "blasen": [
+        "W1_LUFT_PIX_0530"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W1_LUFT_ZEL_0540",
+       "sprecher": "ZEL",
+       "blasen": [
+        "W1_LUFT_ZEL_0540"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W1_LUFT_MAX_0550",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_LUFT_MAX_0550"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W1_LUFT_ZEL_0560",
+       "sprecher": "ZEL",
+       "blasen": [
+        "W1_LUFT_ZEL_0560"
+       ],
+       "regie": "nimmt den Karton; Zeldina folgt ab jetzt; Begleiter-Schalter"
+      },
+      {
+       "zeile": "W1_LUFT_MAX_0570",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_LUFT_MAX_0570"
+       ],
+       "regie": "fällt ihm erst jetzt ein"
+      },
+      {
+       "zeile": "W1_LUFT_ZEL_0580",
+       "sprecher": "ZEL",
+       "blasen": [
+        "W1_LUFT_ZEL_0580"
+       ],
+       "regie": "grinst"
+      },
+      {
+       "zeile": "W1_LUFT_PIX_0590",
+       "sprecher": "PIX",
+       "blasen": [
+        "W1_LUFT_PIX_0590"
+       ],
+       "regie": "erste Zeile nach der Sprachlosigkeit"
+      },
+      {
+       "zeile": "W1_LUFT_TOA_0600",
+       "sprecher": "TOA",
+       "blasen": [
+        "W1_LUFT_TOA_0600"
+       ],
+       "regie": "stürmt keuchend von der Ranke"
+      },
+      {
+       "zeile": "W1_LUFT_ZEL_0610",
+       "sprecher": "ZEL",
+       "blasen": [
+        "W1_LUFT_ZEL_0610"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W1_LUFT_TOA_0620",
+       "sprecher": "TOA",
+       "blasen": [
+        "W1_LUFT_TOA_0620"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W1_LUFT_ZEL_0630",
+       "sprecher": "ZEL",
+       "blasen": [
+        "W1_LUFT_ZEL_0630"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W1_LUFT_TOA_0640",
+       "sprecher": "TOA",
+       "blasen": [
+        "W1_LUFT_TOA_0640"
+       ],
+       "regie": "R9 gelöst"
+      }
+     ],
+     "beendet": false,
+     "bleibt": false,
+     "bedingung": [
+      {
+       "art": "hat",
+       "gegenstand": "steckbrief"
+      }
+     ],
+     "bedingung_text": "richtig"
+    }
+   ],
+   "erschoepft": [
+    {
+     "zeile": "W1_ABS_MAK_0230",
+     "sprecher": "MAK"
+    },
+    {
+     "zeile": "W1_ABS_MAK_0240",
+     "sprecher": "MAK"
+    }
+   ]
+  },
+  {
+   "id": "grimmzahn",
+   "script_name": "Grimmzahn",
+   "optionen": [
+    {
+     "id": "0310",
+     "frage": "W1_BERG_MAX_0310",
+     "antworten": [
+      {
+       "zeile": "W1_BERG_GRI_0320",
+       "sprecher": "GRI",
+       "blasen": [
+        "W1_BERG_GRI_0320",
+        "W1_BERG_GRI_0320_2"
+       ],
+       "regie": "hält die Hand hoch"
+      }
+     ],
+     "beendet": false,
+     "bleibt": false
+    },
+    {
+     "id": "0330",
+     "frage": "W1_BERG_MAX_0330",
+     "antworten": [
+      {
+       "zeile": "W1_BERG_GRI_0340",
+       "sprecher": "GRI",
+       "blasen": [
+        "W1_BERG_GRI_0340"
+       ],
+       "regie": "Hinweis R10 A"
+      },
+      {
+       "zeile": "W1_BERG_MAX_0350",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_BERG_MAX_0350"
+       ],
+       "regie": "Antwort auf 0340"
+      },
+      {
+       "zeile": "W1_BERG_GRI_0360",
+       "sprecher": "GRI",
+       "blasen": [
+        "W1_BERG_GRI_0360"
+       ],
+       "regie": ""
+      }
+     ],
+     "beendet": false,
+     "bleibt": true
+    },
+    {
+     "id": "0370",
+     "frage": "W1_BERG_MAX_0370",
+     "antworten": [
+      {
+       "zeile": "W1_BERG_GRI_0380",
+       "sprecher": "GRI",
+       "blasen": [
+        "W1_BERG_GRI_0380"
+       ],
+       "regie": ""
+      }
+     ],
+     "beendet": false,
+     "bleibt": false
+    },
+    {
+     "id": "0390",
+     "frage": "W1_BERG_MAX_0390",
+     "antworten": [
+      {
+       "zeile": "W1_BERG_GRI_0400",
+       "sprecher": "GRI",
+       "blasen": [
+        "W1_BERG_GRI_0400"
+       ],
+       "regie": "misstrauisch"
+      },
+      {
+       "zeile": "W1_BERG_ZEL_0410",
+       "sprecher": "ZEL",
+       "blasen": [
+        "W1_BERG_ZEL_0410"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W1_BERG_GRI_0420",
+       "sprecher": "GRI",
+       "blasen": [
+        "W1_BERG_GRI_0420"
+       ],
+       "regie": "Weg B gewählt; weiter mit 0610"
+      }
+     ],
+     "beendet": false,
+     "bleibt": false,
+     "bedingung_text": "nur mit Zeldina im Team"
+    },
+    {
+     "id": "0430",
+     "frage": "W1_BERG_MAX_0430",
+     "antworten": [
+      {
+       "zeile": "W1_BERG_GRI_0440",
+       "sprecher": "GRI",
+       "blasen": [
+        "W1_BERG_GRI_0440"
+       ],
+       "regie": ""
+      }
+     ],
+     "beendet": true,
+     "bleibt": false
+    }
+   ],
+   "erschoepft": [
+    {
+     "zeile": "W1_ABS_GRI_0190",
+     "sprecher": "GRI"
+    },
+    {
+     "zeile": "W1_ABS_GRI_0200",
+     "sprecher": "GRI"
+    }
+   ]
+  },
+  {
+   "id": "smaugi",
+   "script_name": "Smaugi",
+   "optionen": [
+    {
+     "id": "0310",
+     "frage": "W1_SMAU_MAX_0310",
+     "antworten": [
+      {
+       "zeile": "W1_SMAU_SMA_0320",
+       "sprecher": "SMA",
+       "blasen": [
+        "W1_SMAU_SMA_0320"
+       ],
+       "regie": "streichelt eine Teekanne"
+      }
+     ],
+     "beendet": false,
+     "bleibt": false
+    },
+    {
+     "id": "0330",
+     "frage": "W1_SMAU_MAX_0330",
+     "antworten": [
+      {
+       "zeile": "W1_SMAU_SMA_0340",
+       "sprecher": "SMA",
+       "blasen": [
+        "W1_SMAU_SMA_0340",
+        "W1_SMAU_SMA_0340_2"
+       ],
+       "regie": "Hinweis R12"
+      }
+     ],
+     "beendet": false,
+     "bleibt": false
+    },
+    {
+     "id": "0350",
+     "frage": "W1_SMAU_MAX_0350",
+     "antworten": [
+      {
+       "zeile": "W1_SMAU_SMA_0360",
+       "sprecher": "SMA",
+       "blasen": [
+        "W1_SMAU_SMA_0360"
+       ],
+       "regie": ""
+      }
+     ],
+     "beendet": false,
+     "bleibt": false
+    },
+    {
+     "id": "0370",
+     "frage": "W1_SMAU_MAX_0370",
+     "antworten": [
+      {
+       "zeile": "W1_SMAU_SMA_0380",
+       "sprecher": "SMA",
+       "blasen": [
+        "W1_SMAU_SMA_0380"
+       ],
+       "regie": "schnieft"
+      }
+     ],
+     "beendet": false,
+     "bleibt": false
+    },
+    {
+     "id": "0390",
+     "frage": "W1_SMAU_MAX_0390",
+     "antworten": [
+      {
+       "zeile": "W1_SMAU_SMA_0400",
+       "sprecher": "SMA",
+       "blasen": [
+        "W1_SMAU_SMA_0400"
+       ],
+       "regie": ""
+      }
+     ],
+     "beendet": true,
+     "bleibt": false
+    }
+   ],
+   "erschoepft": [
+    {
+     "zeile": "W1_ABS_SMA_0130",
+     "sprecher": "SMA"
+    },
+    {
+     "zeile": "W1_ABS_SMA_0140",
+     "sprecher": "SMA"
+    }
+   ]
+  }
+ ],
+ "figurenwechsel": {
+  "zu_pixel": [
+   "W1_WECH_PIX_0010",
+   "W1_WECH_PIX_0020",
+   "W1_WECH_PIX_0030"
+  ],
+  "zu_max": [
+   "W1_WECH_MAX_0040",
+   "W1_WECH_MAX_0050",
+   "W1_WECH_MAX_0060"
+  ],
+  "pixel_nehmen": "W1_WECH_PIX_0070",
+  "pixel_tuer": "W1_WECH_PIX_0080",
+  "max_pixel_revier": "W1_WECH_MAX_0090",
+  "max_tier": "W1_WECH_MAX_0100",
+  "pixel_figur": "W1_WECH_PIX_0110"
+ },
+ "ersatz": {
+  "MAX": [
+   "SYS_ERS_MAX_0010",
+   "SYS_ERS_MAX_0020",
+   "SYS_ERS_MAX_0030",
+   "SYS_ERS_MAX_0040",
+   "SYS_ERS_MAX_0050",
+   "SYS_ERS_MAX_0060",
+   "SYS_ERS_MAX_0070",
+   "SYS_ERS_MAX_0080",
+   "SYS_ERS_MAX_0090",
+   "SYS_ERS_MAX_0100",
+   "SYS_ERS_MAX_0110",
+   "SYS_ERS_MAX_0120",
+   "SYS_ERS_MAX_0130",
+   "SYS_ERS_MAX_0140",
+   "SYS_ERS_MAX_0150",
+   "SYS_ERS_MAX_0160",
+   "SYS_ERS_MAX_0170",
+   "SYS_ERS_MAX_0180",
+   "SYS_ERS_MAX_0190",
+   "SYS_ERS_MAX_0200",
+   "SYS_ERS_MAX_0210",
+   "SYS_ERS_MAX_0220",
+   "SYS_ERS_MAX_0230",
+   "SYS_ERS_MAX_0240",
+   "SYS_ERS_MAX_0250"
+  ],
+  "PIX": [
+   "SYS_ERS_PIX_0110",
+   "SYS_ERS_PIX_0120",
+   "SYS_ERS_PIX_0130",
+   "SYS_ERS_PIX_0140",
+   "SYS_ERS_PIX_0150",
+   "SYS_ERS_PIX_0160",
+   "SYS_ERS_PIX_0170",
+   "SYS_ERS_PIX_0180",
+   "SYS_ERS_PIX_0190",
+   "SYS_ERS_PIX_0200",
+   "SYS_ERS_PIX_0210",
+   "SYS_ERS_PIX_0220",
+   "SYS_ERS_PIX_0230",
+   "SYS_ERS_PIX_0240",
+   "SYS_ERS_PIX_0250",
+   "SYS_ERS_PIX_0260",
+   "SYS_ERS_PIX_0270",
+   "SYS_ERS_PIX_0280",
+   "SYS_ERS_PIX_0290",
+   "SYS_ERS_PIX_0300",
+   "SYS_ERS_PIX_0310",
+   "SYS_ERS_PIX_0320",
+   "SYS_ERS_PIX_0330",
+   "SYS_ERS_PIX_0340",
+   "SYS_ERS_PIX_0350"
+  ]
+ },
+ "wiederholung": {
+  "MAX": [
+   "SYS_WDH_MAX_0010",
+   "SYS_WDH_MAX_0020",
+   "SYS_WDH_MAX_0030",
+   "SYS_WDH_MAX_0040",
+   "SYS_WDH_MAX_0050",
+   "SYS_WDH_MAX_0060",
+   "SYS_WDH_MAX_0070",
+   "SYS_WDH_MAX_0080",
+   "SYS_WDH_MAX_0090",
+   "SYS_WDH_MAX_0100",
+   "SYS_WDH_MAX_0110",
+   "SYS_WDH_MAX_0120",
+   "SYS_WDH_MAX_0130",
+   "SYS_WDH_MAX_0140",
+   "SYS_WDH_MAX_0150",
+   "SYS_WDH_MAX_0160",
+   "SYS_WDH_MAX_0170",
+   "SYS_WDH_MAX_0180",
+   "SYS_WDH_MAX_0190",
+   "SYS_WDH_MAX_0200"
+  ],
+  "PIX": [
+   "SYS_WDH_PIX_0010",
+   "SYS_WDH_PIX_0020",
+   "SYS_WDH_PIX_0030",
+   "SYS_WDH_PIX_0040",
+   "SYS_WDH_PIX_0050",
+   "SYS_WDH_PIX_0060",
+   "SYS_WDH_PIX_0070",
+   "SYS_WDH_PIX_0080",
+   "SYS_WDH_PIX_0090",
+   "SYS_WDH_PIX_0100"
+  ]
+ },
+ "plauder": {
+  "MAX": [
+   "SYS_PLA_MAX_0010",
+   "SYS_PLA_MAX_0020",
+   "SYS_PLA_MAX_0030",
+   "SYS_PLA_MAX_0040",
+   "SYS_PLA_MAX_0050",
+   "SYS_PLA_MAX_0060"
+  ]
+ }
+}

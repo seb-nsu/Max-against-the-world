@@ -15,7 +15,6 @@ Stand 9. November 2026. Kennungen: S = zurückgestellte Punkte aus Gutachten 4, 
 | P2 | Schrift festlegen | Sebastian nach dem Umlaut-Test (Monogram Extended oder m5x7, OFL- bzw. CC0-Lizenz) | `05-spielsysteme.md` (Schrift) |
 | P3 | Zwei-Klick-Steuerung bestätigen oder doch eine Verbenleiste | Sebastian nach dem ersten Test | `05-spielsysteme.md` (UI) |
 | P4 | Vollvertonung oder Brabbel-Laute | Sebastian, spätestens zu Beginn von Stufe 5 (ab etwa 10.000 Wunschlisten Vollvertonung) | `03-produktion.md`, `04-audio.md` |
-| P5 | Zeilenbudget der Welten: Die Skript-Entwürfe haben 879 (W1), 911 (W2), 873 (W3) und 884 (W4) Zeilen, Budget 700 bis 850. Mit der Prolog-Datei (174 Zeilen: 124 Prolog-Zeilen P0, Budget 170, und 50 Ersatzzeilen SYS\_ERS, die zum Posten Menüs und Systemtexte zählen), den Zwischenspielen (168, Budget 170) und dem Finale (276, Budget 280) sind es insgesamt 4.165 Zeilen statt 3.000 bis 4.000 (ID-Zeilen je Skript-Datei gezählt am 9. November 2026). Prolog, Zwischenspiele und Finale liegen im Budget | Sebastian: beim Kürzen (Ablauf pro Raum, Schritt 3) auf das Budget bringen oder das Budget anheben; danach `05-spielsysteme.md` (Umfang) und `04-audio.md` (Umfang Sprachausgabe) angleichen | `05-spielsysteme.md` (Umfang) |
 
 ## Vor der Steam-Seite auffrischen
 
@@ -58,7 +57,20 @@ Alle sechzehn Ideen sind in `03-produktion.md` (Abschnitt Automatisierung) mit N
 | A10 | Grafik-Batch: Prompt-Tabelle, Retro-Diffusion-API, Palettize, Zuschnitt, Protokoll | 3, nach S16 |
 | A11 | KI-Protokoll automatisch als CSV | 1 |
 | A12 | Englische Fassung per Claude aus der CSV mit Glossar | Technik früh, Inhalt 5 |
-| A13 | Konsistenz-Check der Dokumente (läuft als `tools/pruefen.py`; offen nur die Einbindung in A7) | 1 |
-| A14 | Hinweis-Datei aus Skript und Rätseltabelle erzeugen | 2 |
+| A13 | Konsistenz-Check der Dokumente (läuft als `tools/pruefen.py`, in A7 eingebunden) | erledigt |
+| A14 | Hinweis-Datei aus Skript und Rätseltabelle erzeugen (läuft als `tools/spieldaten.py`) | erledigt |
 | A15 | Playtest-Auswertung per Claude | 3 |
 | A16 | Screenshot-Regressionstest headless | 4 |
+
+## Funde aus der Graubox (9. November 2026)
+
+Beim Bau der Graubox (Prolog, dann Welt 1 bis Rätsel 4, dann bis Rätsel 13 und Zwischenspiel 1) fielen Lücken in den Regeln auf. Die Graubox setzt sie vorläufig wie angegeben um; entschieden und in die Besitzer-Datei eingetragen werden sie, sobald der Raum über die Graubox hinaus gebaut wird. G1 bis G8 sind entschieden und eingetragen.
+
+Am 9. November 2026 gegen Spielablauf, Ton und Bedienung geprüft und eingetragen: G9 (eigene Wartezeile 9995 je Welt, auch W2 und W3), G10 (Käse auf den Löffel nur im Laden, sonst W1\_STAB\_MAX\_0600), G11, G12, G13 (0930 am Bach, neu W1\_BRUE\_WAL\_1070 für den Eimer am Bach), G14, G15, G16 (sprechende Dinge mit Blase über dem Objekt), G19 (Zeugnis: Szene 0830, im Inventar 0890, dann 0860), G20 (Passwort Teil für Teil in der Dialogauswahl), G22 (eigene Zeilen W1\_WALD\_MAX\_0730, W1\_HOGG\_MAX\_0930/0940), G23 (alle drei Kreuzungen mit 0080/0085), G24 und G25 (Zeldina 0620 und Moderwort 0630 in der Schlussszene). Eingetragen in `05-spielsysteme.md` (Zeilenarten, UI, Hinweissystem), `raetsel/prolog-und-welt-1.md` (Rätsel 2, 3, 7, 11), `skript/welt-1.md` bis `welt-3.md` und `uebersetzung/ui.csv`. Offen bleiben:
+
+| Nr. | Was offen ist | Vorläufige Umsetzung | Besitzer-Datei |
+| --- | --- | --- | --- |
+| G17 | Zuruf-Bedingung „Pixel auf dem Balken“ (TAV 1630) ist nicht prüfbar, Pixel steht nach dem Wechsel neben Max | der Zuruf entfällt, bis Pixel in der Taverne einen eigenen Platz auf dem Balken bekommt (Grafik); die Taverne hat mit 1610 und 1620 trotzdem zwei Zurufe | `skript/welt-1.md` (Abschnitt 3) |
+| G18 | Prolog-Optionen 1362–1366 sind nicht in Zehnerschritten (nach dem Umzug in Baum 2b) | Prüfwarnung bleibt; beim nächsten Umnummern glätten | `skript/prolog.md` |
+| G21 | Der Generator liest „Ansehen:“-Zellen jetzt auch aus reinen Regie-Tabellen (Brücke nach R4, Socke voller Pollen, Opas Zettel kommen aus den Daten). „Benutzen:“-Zellen in Regie-Tabellen (z. B. Bach 0930) liest er nicht; Kreuzung 2 und 3 und Abstellkammer 1 brauchen eigene Raum-Codes oder Mehrfach-Aliase; der Tarifvertrag braucht im Skript den Zustand („Ansehen: Tarifvertrag, unterschrieben“) | von Hand im Raum- bzw. Gegenstandsskript, Verhalten wie im Skript | `skript/welt-1.md`, `tools/godot_raeume.py` |
+| G26 | Zwischenspiel 1 hat keinen eigenen Bauplan: „Werkbank-Ablage“ und „Fundkiste“ sind keine Objekte des Dachbodens, der Figurenwechsel braucht einen Schalter (ZS1\_WECHSEL\_FREI?), Opa-Option 0380 und Reisetasche fehlen | Graubox endet nach der Abgabe des Eis (Meldung am Drehknopf); entschieden wird beim Bau von Zwischenspiel 1 | `tools/layout/` (Zwischenspiel-Bauplan), `skript/zwischenspiele-und-finale.md` |

@@ -1,0 +1,195 @@
+[gd_scene format=3 uid="uid://l63b6fb00ey8"]
+
+[ext_resource type="Script" path="res://game/rooms/dachboden/room_dachboden.gd" id="1_27u1a"]
+[ext_resource type="PackedScene" uid="uid://ccgxu2roftehc" path="res://game/rooms/dachboden/walkable_areas/boden/walkable_area_boden.tscn" id="2_8cb7j"]
+[ext_resource type="PackedScene" uid="uid://d0fh0poixomft" path="res://game/rooms/dachboden/props/background/prop_background.tscn" id="3_v3y1t"]
+[ext_resource type="Texture2D" uid="uid://irvdgdals1o7" path="res://grafik/platzhalter/raum_dachboden.png" id="4_pjyx4"]
+[ext_resource type="PackedScene" uid="uid://c4cbjhulesib6" path="res://game/rooms/dachboden/props/zapp_o_mat/prop_zapp_o_mat.tscn" id="5_k8q6h"]
+[ext_resource type="Texture2D" uid="uid://cbjsrrwdps6v3" path="res://grafik/platzhalter/prop_zapp_o_mat.png" id="6_x6nag"]
+[ext_resource type="PackedScene" uid="uid://dypvjac8k0i2" path="res://game/rooms/dachboden/props/thunfischdose/prop_thunfischdose.tscn" id="7_3c6fv"]
+[ext_resource type="Texture2D" uid="uid://8ls4c83m4nti" path="res://grafik/platzhalter/prop_thunfischdose.png" id="8_vyv7m"]
+[ext_resource type="PackedScene" uid="uid://bjk8jriso305i" path="res://game/rooms/dachboden/props/dosenoeffner/prop_dosenoeffner.tscn" id="9_mcqit"]
+[ext_resource type="Texture2D" uid="uid://d2j0lvdfa0p5v" path="res://grafik/platzhalter/prop_dosenoeffner.png" id="10_je6ao"]
+[ext_resource type="PackedScene" uid="uid://b5svirsswb2vx" path="res://game/rooms/dachboden/props/drahtkleiderbuegel/prop_drahtkleiderbuegel.tscn" id="11_m8m18"]
+[ext_resource type="Texture2D" uid="uid://lsqfenf4v86n" path="res://grafik/platzhalter/prop_drahtkleiderbuegel.png" id="12_8pmei"]
+[ext_resource type="PackedScene" uid="uid://5svegdj15ha8" path="res://game/rooms/dachboden/hotspots/drehknopf/hotspot_drehknopf.tscn" id="13_37hlm"]
+[ext_resource type="PackedScene" uid="uid://8sm6r4cjgrif" path="res://game/rooms/dachboden/hotspots/werkzeugkiste/hotspot_werkzeugkiste.tscn" id="14_02ndx"]
+[ext_resource type="PackedScene" uid="uid://ccq6cyj6k2lgv" path="res://game/rooms/dachboden/hotspots/kleiderschrank/hotspot_kleiderschrank.tscn" id="15_2q74p"]
+[ext_resource type="PackedScene" uid="uid://cbl6ejbwx4kjk" path="res://game/rooms/dachboden/hotspots/kalender/hotspot_kalender.tscn" id="16_go1jv"]
+[ext_resource type="PackedScene" uid="uid://diae83p5kee1c" path="res://game/rooms/dachboden/hotspots/ausgestopfter_fisch/hotspot_ausgestopfter_fisch.tscn" id="17_vs5g6"]
+[ext_resource type="PackedScene" uid="uid://cd0w0iper1axa" path="res://game/rooms/dachboden/hotspots/kiste_mit_fernbedienungen/hotspot_kiste_mit_fernbedienungen.tscn" id="18_d6ytt"]
+[ext_resource type="PackedScene" uid="uid://cuvs3th0c22ex" path="res://game/rooms/dachboden/hotspots/poster/hotspot_poster.tscn" id="19_amxu1"]
+[ext_resource type="PackedScene" uid="uid://dll2c3mmgf0tc" path="res://game/rooms/dachboden/hotspots/toaster/hotspot_toaster.tscn" id="20_lkrmy"]
+[ext_resource type="PackedScene" uid="uid://cl4pptrpk60u5" path="res://game/rooms/dachboden/hotspots/opas_staubsauger_prototyp/hotspot_opas_staubsauger_prototyp.tscn" id="21_iust8"]
+[ext_resource type="PackedScene" uid="uid://by0tys78yev2r" path="res://game/rooms/dachboden/hotspots/kochbuch/hotspot_kochbuch.tscn" id="22_hqo30"]
+[ext_resource type="PackedScene" uid="uid://boa6joboh5kcj" path="res://game/rooms/dachboden/hotspots/plattenspieler/hotspot_plattenspieler.tscn" id="23_kk6l1"]
+[ext_resource type="PackedScene" uid="uid://c4wmco02ioy2t" path="res://game/rooms/dachboden/hotspots/ohrensessel/hotspot_ohrensessel.tscn" id="24_tfa2u"]
+[ext_resource type="PackedScene" uid="uid://dmdse4l4hb58h" path="res://game/rooms/dachboden/hotspots/werkbank/hotspot_werkbank.tscn" id="25_mahuv"]
+[ext_resource type="PackedScene" uid="uid://db5kwj8ij0rm" path="res://game/rooms/dachboden/hotspots/dachfenster/hotspot_dachfenster.tscn" id="26_h7vyx"]
+[ext_resource type="PackedScene" uid="uid://cdht3gwwjoqio" path="res://game/rooms/dachboden/hotspots/bodenluke/hotspot_bodenluke.tscn" id="27_fqk22"]
+[ext_resource type="PackedScene" uid="uid://bwioj5sty1vjn" path="res://game/rooms/dachboden/markers/start/marker_start.tscn" id="28_180jd"]
+[ext_resource type="PackedScene" uid="uid://wgywaxqa3gtb" path="res://game/rooms/dachboden/markers/von_treppenhaus/marker_von_treppenhaus.tscn" id="29_xxq08"]
+[ext_resource type="PackedScene" uid="uid://cs4idsu1anhgi" path="res://game/rooms/dachboden/markers/fernseher/marker_fernseher.tscn" id="30_w5i4a"]
+[ext_resource type="PackedScene" uid="uid://bi52qvl201pvg" path="res://game/characters/pixel/character_pixel.tscn" id="31_0qvcd"]
+[ext_resource type="PackedScene" uid="uid://edkvkxbseb5w" path="res://game/characters/opa/character_opa.tscn" id="32_53g1l"]
+
+[node name="RoomDachboden" type="Node2D" unique_id=722265826]
+script = ExtResource("1_27u1a")
+script_name = "Dachboden"
+width = 320
+height = 180
+
+[node name="WalkableAreas" type="Node2D" parent="." unique_id=1697259850]
+
+[node name="Boden" parent="WalkableAreas" unique_id=1447233398 instance=ExtResource("2_8cb7j")]
+interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(4, 146, 316, 146, 316, 178, 4, 178)])
+
+[node name="Props" type="Node2D" parent="." unique_id=1697276889]
+
+[node name="Background" parent="Props" unique_id=555087634 instance=ExtResource("3_v3y1t")]
+position = Vector2(160, 90)
+texture = ExtResource("4_pjyx4")
+description = "UI_RAUM_DACHBODEN"
+
+[node name="ZappOMat" parent="Props" unique_id=145494250 instance=ExtResource("5_k8q6h")]
+position = Vector2(154, 113)
+texture = ExtResource("6_x6nag")
+frames = 5
+description = "UI_OBJ_ZAPP_O_MAT"
+baseline = 31
+walk_to_point = Vector2(0, 45)
+
+[node name="Thunfischdose" parent="Props" unique_id=1593253996 instance=ExtResource("7_3c6fv")]
+position = Vector2(67, 136)
+texture = ExtResource("8_vyv7m")
+description = "UI_OBJ_THUNFISCHDOSE"
+baseline = 4
+walk_to_point = Vector2(3, 22)
+
+[node name="Dosenoeffner" parent="Props" unique_id=1001585250 instance=ExtResource("9_mcqit")]
+position = Vector2(81, 136)
+texture = ExtResource("10_je6ao")
+description = "UI_OBJ_DOSENOEFFNER"
+baseline = 4
+walk_to_point = Vector2(-1, 22)
+
+[node name="Drahtkleiderbuegel" parent="Props" unique_id=505759806 instance=ExtResource("11_m8m18")]
+position = Vector2(293, 71)
+texture = ExtResource("12_8pmei")
+description = "UI_OBJ_DRAHTKLEIDERBUEGEL"
+baseline = 5
+walk_to_point = Vector2(-11, 89)
+
+[node name="Hotspots" type="Node2D" parent="." unique_id=337505337]
+
+[node name="Drehknopf" parent="Hotspots" unique_id=1239165427 instance=ExtResource("13_37hlm")]
+position = Vector2(186, 103)
+description = "UI_OBJ_DREHKNOPF"
+baseline = 7
+walk_to_point = Vector2(-10, 55)
+
+[node name="Werkzeugkiste" parent="Hotspots" unique_id=850821456 instance=ExtResource("14_02ndx")]
+position = Vector2(74, 137)
+description = "UI_OBJ_WERKZEUGKISTE"
+baseline = 9
+walk_to_point = Vector2(0, 21)
+
+[node name="Kleiderschrank" parent="Hotspots" unique_id=461528870 instance=ExtResource("15_2q74p")]
+position = Vector2(293, 92)
+description = "UI_OBJ_KLEIDERSCHRANK"
+baseline = 52
+walk_to_point = Vector2(-13, 68)
+
+[node name="Kalender" parent="Hotspots" unique_id=836887417 instance=ExtResource("16_go1jv")]
+position = Vector2(229, 63)
+description = "UI_OBJ_KALENDER"
+baseline = 15
+walk_to_point = Vector2(-1, 97)
+
+[node name="AusgestopfterFisch" parent="Hotspots" unique_id=1339930703 instance=ExtResource("17_vs5g6")]
+position = Vector2(197, 47)
+description = "UI_OBJ_AUSGESTOPFTER_FISCH"
+baseline = 7
+walk_to_point = Vector2(-1, 111)
+
+[node name="KisteMitFernbedienungen" parent="Hotspots" unique_id=1779633760 instance=ExtResource("18_d6ytt")]
+position = Vector2(15, 130)
+description = "UI_OBJ_KISTE_MIT_FERNBEDIENUNGEN"
+baseline = 12
+walk_to_point = Vector2(5, 28)
+
+[node name="Poster" parent="Hotspots" unique_id=81942331 instance=ExtResource("19_amxu1")]
+position = Vector2(103, 47)
+description = "UI_OBJ_POSTER"
+baseline = 17
+walk_to_point = Vector2(-3, 111)
+
+[node name="Toaster" parent="Hotspots" unique_id=1842592690 instance=ExtResource("20_lkrmy")]
+position = Vector2(59, 86)
+description = "UI_OBJ_TOASTER"
+baseline = 6
+walk_to_point = Vector2(-1, 72)
+
+[node name="OpasStaubsaugerPrototyp" parent="Hotspots" unique_id=1446933935 instance=ExtResource("21_iust8")]
+position = Vector2(202, 131)
+description = "UI_OBJ_OPAS_STAUBSAUGER_PROTOTYP"
+baseline = 13
+walk_to_point = Vector2(-2, 29)
+
+[node name="Kochbuch" parent="Hotspots" unique_id=1246725762 instance=ExtResource("22_hqo30")]
+position = Vector2(41, 70)
+description = "UI_OBJ_KOCHBUCH"
+baseline = 6
+walk_to_point = Vector2(9, 88)
+
+[node name="Plattenspieler" parent="Hotspots" unique_id=1755752097 instance=ExtResource("23_kk6l1")]
+position = Vector2(15, 106)
+description = "UI_OBJ_PLATTENSPIELER"
+baseline = 8
+walk_to_point = Vector2(5, 52)
+
+[node name="Ohrensessel" parent="Hotspots" unique_id=505392774 instance=ExtResource("24_tfa2u")]
+position = Vector2(232, 119)
+description = "UI_OBJ_OHRENSESSEL"
+baseline = 23
+walk_to_point = Vector2(0, 41)
+
+[node name="Werkbank" parent="Hotspots" unique_id=91092950 instance=ExtResource("25_mahuv")]
+position = Vector2(70, 109)
+description = "UI_OBJ_WERKBANK"
+baseline = 17
+walk_to_point = Vector2(0, 49)
+
+[node name="Dachfenster" parent="Hotspots" unique_id=42943460 instance=ExtResource("26_h7vyx")]
+position = Vector2(55, 31)
+description = "UI_OBJ_DACHFENSTER"
+baseline = 13
+walk_to_point = Vector2(5, 127)
+
+[node name="Bodenluke" parent="Hotspots" unique_id=2085397831 instance=ExtResource("27_fqk22")]
+position = Vector2(252, 169)
+description = "UI_OBJ_BODENLUKE"
+baseline = 9
+walk_to_point = Vector2(-2, -3)
+cursor = 9
+
+[node name="Regions" type="Node2D" parent="." unique_id=182010566]
+
+[node name="Markers" type="Node2D" parent="." unique_id=1448627666]
+
+[node name="Start" parent="Markers" unique_id=1036119201 instance=ExtResource("28_180jd")]
+position = Vector2(250, 166)
+
+[node name="VonTreppenhaus" parent="Markers" unique_id=218227756 instance=ExtResource("29_xxq08")]
+position = Vector2(250, 166)
+
+[node name="Fernseher" parent="Markers" unique_id=1565949662 instance=ExtResource("30_w5i4a")]
+position = Vector2(160, 158)
+
+[node name="Characters" type="Node2D" parent="." unique_id=569691744]
+
+[node name="CharacterPixel *" parent="Characters" unique_id=694374571 instance=ExtResource("31_0qvcd")]
+position = Vector2(104, 152)
+
+[node name="CharacterOpa *" parent="Characters" unique_id=792275399 instance=ExtResource("32_53g1l")]
+position = Vector2(206, 160)

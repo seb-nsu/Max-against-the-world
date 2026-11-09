@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://brgjwlgk8ujg7"]
+
+[ext_resource type="Script" path="res://game/rooms/taverne/props/ei/prop_ei.gd" id="1_n37fi"]
+
+[node name="Ei" type="Area2D" unique_id=2004330887]
+script = ExtResource("1_n37fi")
+script_name = "Ei"
+description = "Ei"
+cursor = 1
+interaction_polygon = PackedVector2Array(-4, -3, 4, -3, 4, 3, -4, 3)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1460847778]
+texture_filter = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=570057740]
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1566165771]
+visible = false
+modulate = Color(1, 1, 0, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+
+[node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=1733921761]
+visible = false
+affect_navigation_mesh = true
+carve_navigation_mesh = true

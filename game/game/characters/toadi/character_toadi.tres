@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://c2dt3clte8flx"]
+
+[ext_resource type="Script" path="res://game/characters/toadi/character_toadi_state.gd" id="1_b1s8h"]
+
+[resource]
+resource_name = "Toadi"
+script = ExtResource("1_b1s8h")
+script_name = "Toadi"
+scene = "res://game/characters/toadi/character_toadi.tscn"

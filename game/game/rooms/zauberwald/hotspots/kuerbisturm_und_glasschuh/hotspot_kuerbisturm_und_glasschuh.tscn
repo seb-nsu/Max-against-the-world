@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://chp0ldddlchcj"]
+
+[ext_resource type="Script" path="res://game/rooms/zauberwald/hotspots/kuerbisturm_und_glasschuh/hotspot_kuerbisturm_und_glasschuh.gd" id="1_y50kb"]
+
+[node name="KuerbisturmUndGlasschuh" type="Area2D" unique_id=430258991]
+script = ExtResource("1_y50kb")
+script_name = "KuerbisturmUndGlasschuh"
+description = "Kuerbisturm Und Glasschuh"
+cursor = 1
+interaction_polygon = PackedVector2Array(-15, -30, 15, -30, 15, 30, -15, 30)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=863864456]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

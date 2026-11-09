@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://5svegdj15ha8"]
+
+[ext_resource type="Script" path="res://game/rooms/dachboden/hotspots/drehknopf/hotspot_drehknopf.gd" id="1_3y5o4"]
+
+[node name="Drehknopf" type="Area2D" unique_id=1239165427]
+script = ExtResource("1_3y5o4")
+script_name = "Drehknopf"
+description = "Drehknopf"
+cursor = 1
+interaction_polygon = PackedVector2Array(-6, -7, 6, -7, 6, 7, -6, 7)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=830090475]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

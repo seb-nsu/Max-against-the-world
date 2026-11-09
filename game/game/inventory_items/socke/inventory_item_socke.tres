@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://dfc1s03ghwwx0"]
+
+[ext_resource type="Script" path="res://game/inventory_items/socke/inventory_item_socke_state.gd" id="1_g7rv5"]
+
+[resource]
+resource_name = "Socke"
+script = ExtResource("1_g7rv5")
+script_name = "Socke"
+scene = "res://game/inventory_items/socke/inventory_item_socke.tscn"

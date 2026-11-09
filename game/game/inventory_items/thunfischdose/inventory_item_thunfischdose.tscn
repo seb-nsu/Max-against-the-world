@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://dihibcp42s5sj"]
+
+[ext_resource type="Texture2D" uid="uid://b4l0jseypegnq" path="res://grafik/platzhalter/gegenstand_thunfischdose.png" id="1_02b6q"]
+[ext_resource type="Script" path="res://game/inventory_items/thunfischdose/inventory_item_thunfischdose.gd" id="1_fy4jr"]
+
+[node name="ItemThunfischdose" type="TextureRect" unique_id=580472323]
+texture_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 4
+mouse_filter = 0
+texture = ExtResource("1_02b6q")
+stretch_mode = 5
+script = ExtResource("1_fy4jr")
+script_name = "Thunfischdose"
+description = "UI_OBJ_THUNFISCHDOSE"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1946193932]

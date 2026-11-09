@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://b214vosofbcjr"]
+
+[ext_resource type="Script" path="res://game/rooms/luftschloss/room_luftschloss_state.gd" id="1_e6g10"]
+
+[resource]
+resource_name = "Luftschloss"
+script = ExtResource("1_e6g10")
+script_name = "Luftschloss"
+scene = "res://game/rooms/luftschloss/room_luftschloss.tscn"

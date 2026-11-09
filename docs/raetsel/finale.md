@@ -72,7 +72,7 @@ Alles andere bekommt eine Zeile aus dem Ersatzpool (Prolog-Skript).
 
 ### Hinweisstufen
 
-Pixel steht neben Max und spricht normal. Auswahl des Schritts, Wartezeiten (30 und 60 Sekunden) und Wartezeile wie im Hinweissystem (Spielsysteme). Datei hints\_fi.tres, Schritte FI\_R01\_0 und FI\_R01\_A bis FI\_R01\_D. Ist nach Schritt D nichts mehr offen, sagt Pixel, dass die Luke gleich aufgeht.
+Pixel steht neben Max und spricht normal. Auswahl des Schritts, Wartezeiten (30 und 60 Sekunden) und Wartezeile wie im Hinweissystem (Spielsysteme). Datei game/daten/hinweise/finale.json, Schritte FI\_R01\_0 und FI\_R01\_A bis FI\_R01\_D. Ist nach Schritt D nichts mehr offen, sagt Pixel, dass die Luke gleich aufgeht.
 
 | Schritt | Stufe 1: Stups | Stufe 2: Hinweis | Stufe 3: Lösung |
 | --- | --- | --- | --- |

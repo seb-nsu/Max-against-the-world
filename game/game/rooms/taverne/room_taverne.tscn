@@ -1,0 +1,174 @@
+[gd_scene format=3 uid="uid://casfneoblu0jx"]
+
+[ext_resource type="Script" path="res://game/rooms/taverne/room_taverne.gd" id="1_ycfsc"]
+[ext_resource type="PackedScene" uid="uid://ce24nao31bj3u" path="res://game/rooms/taverne/walkable_areas/boden/walkable_area_boden.tscn" id="2_6de5b"]
+[ext_resource type="PackedScene" uid="uid://dft3rbaw57kft" path="res://game/rooms/taverne/props/background/prop_background.tscn" id="3_2n8x7"]
+[ext_resource type="Texture2D" uid="uid://stt0mifqyoep" path="res://grafik/platzhalter/raum_taverne.png" id="4_kw31j"]
+[ext_resource type="PackedScene" uid="uid://cnbaua7y2go0g" path="res://game/rooms/taverne/props/ziegenfell_vorleger/prop_ziegenfell_vorleger.tscn" id="5_hvpxn"]
+[ext_resource type="Texture2D" uid="uid://5ssnd7l2a6yn" path="res://grafik/platzhalter/prop_ziegenfell_vorleger.png" id="6_e8lec"]
+[ext_resource type="PackedScene" uid="uid://brgjwlgk8ujg7" path="res://game/rooms/taverne/props/ei/prop_ei.tscn" id="7_boni8"]
+[ext_resource type="Texture2D" uid="uid://d2uu4wtr5m558" path="res://grafik/platzhalter/prop_ei.png" id="8_4fvhs"]
+[ext_resource type="PackedScene" uid="uid://6ch6f4sxhrwb" path="res://game/rooms/taverne/hotspots/dachbalken/hotspot_dachbalken.tscn" id="9_32xxb"]
+[ext_resource type="PackedScene" uid="uid://wx7f0k0gmrmy" path="res://game/rooms/taverne/hotspots/tresen/hotspot_tresen.tscn" id="10_iop51"]
+[ext_resource type="PackedScene" uid="uid://bykdw4yujp6kj" path="res://game/rooms/taverne/hotspots/fischsuppe/hotspot_fischsuppe.tscn" id="11_6eg5l"]
+[ext_resource type="PackedScene" uid="uid://d3cbo73plqa18" path="res://game/rooms/taverne/hotspots/flasche_vielsaft_limo/hotspot_flasche_vielsaft_limo.tscn" id="12_c5214"]
+[ext_resource type="PackedScene" uid="uid://cgd48hdgbhmbc" path="res://game/rooms/taverne/hotspots/weinkarte_am_tresen/hotspot_weinkarte_am_tresen.tscn" id="13_3jndl"]
+[ext_resource type="PackedScene" uid="uid://cgf7vfdh1ogts" path="res://game/rooms/taverne/hotspots/fondue_topf/hotspot_fondue_topf.tscn" id="14_cok4g"]
+[ext_resource type="PackedScene" uid="uid://b6y1gebpsew5i" path="res://game/rooms/taverne/hotspots/kellertuer/hotspot_kellertuer.tscn" id="15_f6b4s"]
+[ext_resource type="PackedScene" uid="uid://b70t4tsyuc6dk" path="res://game/rooms/taverne/hotspots/steckbrief_plakat_drache/hotspot_steckbrief_plakat_drache.tscn" id="16_8i70f"]
+[ext_resource type="PackedScene" uid="uid://do14m1kdrpmm6" path="res://game/rooms/taverne/hotspots/laute_mit_muenzbecher/hotspot_laute_mit_muenzbecher.tscn" id="17_s7ikp"]
+[ext_resource type="PackedScene" uid="uid://dhm2fvrvktsxv" path="res://game/rooms/taverne/hotspots/kamin/hotspot_kamin.tscn" id="18_hnmty"]
+[ext_resource type="PackedScene" uid="uid://bf877k6rs3c0l" path="res://game/rooms/taverne/hotspots/schwerter_sammlung/hotspot_schwerter_sammlung.tscn" id="19_vj5su"]
+[ext_resource type="PackedScene" uid="uid://c365kbjf6lsh2" path="res://game/rooms/taverne/hotspots/leere_schilder/hotspot_leere_schilder.tscn" id="20_m80gl"]
+[ext_resource type="PackedScene" uid="uid://dig8vdpwp7vn2" path="res://game/rooms/taverne/hotspots/ausgang_dorfplatz/hotspot_ausgang_dorfplatz.tscn" id="21_n0k77"]
+[ext_resource type="PackedScene" uid="uid://b7tt2ej161eew" path="res://game/rooms/taverne/markers/start/marker_start.tscn" id="22_qpjg0"]
+[ext_resource type="PackedScene" uid="uid://chmuiu2tdiw4g" path="res://game/rooms/taverne/markers/von_dorfplatz/marker_von_dorfplatz.tscn" id="23_y4rni"]
+[ext_resource type="PackedScene" uid="uid://byqp1kh6tkr6e" path="res://game/rooms/taverne/markers/balken/marker_balken.tscn" id="24_fgd0x"]
+[ext_resource type="PackedScene" uid="uid://cbjlalwwp44ut" path="res://game/rooms/taverne/markers/keller/marker_keller.tscn" id="25_0iyer"]
+[ext_resource type="PackedScene" uid="uid://br6ca6qyienuc" path="res://game/characters/humbert/character_humbert.tscn" id="26_d7t36"]
+[ext_resource type="PackedScene" uid="uid://tcs1hovg4gtc" path="res://game/characters/gollo/character_gollo.tscn" id="27_0wiab"]
+[ext_resource type="PackedScene" uid="uid://dku6x8uyt6ccm" path="res://game/characters/minka/character_minka.tscn" id="28_lbl4l"]
+[ext_resource type="PackedScene" uid="uid://dqni6gudenb7d" path="res://game/characters/huhn/character_huhn.tscn" id="29_1pcji"]
+
+[node name="RoomTaverne" type="Node2D" unique_id=1894948490]
+script = ExtResource("1_ycfsc")
+script_name = "Taverne"
+width = 320
+height = 180
+
+[node name="WalkableAreas" type="Node2D" parent="." unique_id=53269426]
+
+[node name="Boden" parent="WalkableAreas" unique_id=746960714 instance=ExtResource("2_6de5b")]
+interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(4, 140, 316, 140, 316, 178, 4, 178)])
+
+[node name="Props" type="Node2D" parent="." unique_id=1091324553]
+
+[node name="Background" parent="Props" unique_id=1597905002 instance=ExtResource("3_2n8x7")]
+position = Vector2(160, 90)
+texture = ExtResource("4_kw31j")
+description = "UI_RAUM_TAVERNE"
+
+[node name="ZiegenfellVorleger" parent="Props" unique_id=1555550710 instance=ExtResource("5_hvpxn")]
+position = Vector2(244, 160)
+texture = ExtResource("6_e8lec")
+description = "UI_OBJ_ZIEGENFELL_VORLEGER"
+baseline = 6
+walk_to_point = Vector2(0, 6)
+
+[node name="Ei" parent="Props" unique_id=2004330887 instance=ExtResource("7_boni8")]
+position = Vector2(150, 133)
+texture = ExtResource("8_4fvhs")
+description = "UI_OBJ_EI"
+baseline = 3
+walk_to_point = Vector2(0, 17)
+
+[node name="Hotspots" type="Node2D" parent="." unique_id=1964189025]
+
+[node name="Dachbalken" parent="Hotspots" unique_id=1525105460 instance=ExtResource("9_32xxb")]
+position = Vector2(160, 9)
+description = "UI_OBJ_DACHBALKEN"
+baseline = 9
+walk_to_point = Vector2(0, 147)
+
+[node name="Tresen" parent="Hotspots" unique_id=579015443 instance=ExtResource("10_iop51")]
+position = Vector2(47, 121)
+description = "UI_OBJ_TRESEN"
+baseline = 17
+walk_to_point = Vector2(-3, 31)
+
+[node name="Fischsuppe" parent="Hotspots" unique_id=155772242 instance=ExtResource("11_6eg5l")]
+position = Vector2(23, 100)
+description = "UI_OBJ_FISCHSUPPE"
+baseline = 4
+walk_to_point = Vector2(7, 52)
+
+[node name="FlascheVielsaftLimo" parent="Hotspots" unique_id=952400443 instance=ExtResource("12_c5214")]
+position = Vector2(38, 94)
+description = "UI_OBJ_FLASCHE_VIELSAFT_LIMO"
+baseline = 8
+walk_to_point = Vector2(2, 58)
+
+[node name="WeinkarteAmTresen" parent="Hotspots" unique_id=1695053927 instance=ExtResource("13_3jndl")]
+position = Vector2(56, 94)
+description = "UI_OBJ_WEINKARTE_AM_TRESEN"
+baseline = 6
+walk_to_point = Vector2(-2, 58)
+
+[node name="FondueTopf" parent="Hotspots" unique_id=344188584 instance=ExtResource("14_cok4g")]
+position = Vector2(102, 123)
+description = "UI_OBJ_FONDUE_TOPF"
+baseline = 13
+walk_to_point = Vector2(2, 31)
+
+[node name="Kellertuer" parent="Hotspots" unique_id=186552006 instance=ExtResource("15_f6b4s")]
+position = Vector2(74, 76)
+description = "UI_OBJ_KELLERTUER"
+baseline = 22
+walk_to_point = Vector2(0, 70)
+
+[node name="SteckbriefPlakatDrache" parent="Hotspots" unique_id=361251391 instance=ExtResource("16_8i70f")]
+position = Vector2(144, 60)
+description = "UI_OBJ_STECKBRIEF_PLAKAT_DRACHE"
+baseline = 16
+walk_to_point = Vector2(2, 90)
+
+[node name="LauteMitMuenzbecher" parent="Hotspots" unique_id=1318649442 instance=ExtResource("17_s7ikp")]
+position = Vector2(192, 107)
+description = "UI_OBJ_LAUTE_MIT_MUENZBECHER"
+baseline = 15
+walk_to_point = Vector2(-2, 45)
+
+[node name="Kamin" parent="Hotspots" unique_id=1318846298 instance=ExtResource("18_hnmty")]
+position = Vector2(252, 107)
+description = "UI_OBJ_KAMIN"
+baseline = 31
+walk_to_point = Vector2(-2, 45)
+
+[node name="SchwerterSammlung" parent="Hotspots" unique_id=1052568365 instance=ExtResource("19_vj5su")]
+position = Vector2(252, 51)
+description = "UI_OBJ_SCHWERTER_SAMMLUNG"
+baseline = 11
+walk_to_point = Vector2(-2, 101)
+
+[node name="LeereSchilder" parent="Hotspots" unique_id=1745546512 instance=ExtResource("20_m80gl")]
+position = Vector2(252, 69)
+description = "UI_OBJ_LEERE_SCHILDER"
+baseline = 5
+walk_to_point = Vector2(-2, 83)
+
+[node name="AusgangDorfplatz" parent="Hotspots" unique_id=412760894 instance=ExtResource("21_n0k77")]
+position = Vector2(308, 100)
+description = "UI_RAUM_DORFPLATZ"
+baseline = 40
+walk_to_point = Vector2(-8, 60)
+cursor = 9
+
+[node name="Regions" type="Node2D" parent="." unique_id=778144894]
+
+[node name="Markers" type="Node2D" parent="." unique_id=258396467]
+
+[node name="Start" parent="Markers" unique_id=469630601 instance=ExtResource("22_qpjg0")]
+position = Vector2(292, 160)
+
+[node name="VonDorfplatz" parent="Markers" unique_id=1083591048 instance=ExtResource("23_y4rni")]
+position = Vector2(292, 160)
+
+[node name="Balken" parent="Markers" unique_id=1394720736 instance=ExtResource("24_fgd0x")]
+position = Vector2(150, 26)
+
+[node name="Keller" parent="Markers" unique_id=902834580 instance=ExtResource("25_0iyer")]
+position = Vector2(70, 140)
+
+[node name="Characters" type="Node2D" parent="." unique_id=297709827]
+
+[node name="CharacterHumbert *" parent="Characters" unique_id=153118211 instance=ExtResource("26_d7t36")]
+position = Vector2(40, 156)
+
+[node name="CharacterGollo *" parent="Characters" unique_id=1891695985 instance=ExtResource("27_0wiab")]
+position = Vector2(174, 166)
+
+[node name="CharacterMinka *" parent="Characters" unique_id=1223184642 instance=ExtResource("28_lbl4l")]
+position = Vector2(112, 150)
+
+[node name="CharacterHuhn *" parent="Characters" unique_id=800413214 instance=ExtResource("29_1pcji")]
+position = Vector2(150, 126)

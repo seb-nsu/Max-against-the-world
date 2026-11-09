@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://gbku2ifxfys6"]
+
+[ext_resource type="Script" path="res://game/rooms/treppenhaus/room_treppenhaus_state.gd" id="1_1ctff"]
+
+[resource]
+resource_name = "Treppenhaus"
+script = ExtResource("1_1ctff")
+script_name = "Treppenhaus"
+scene = "res://game/rooms/treppenhaus/room_treppenhaus.tscn"

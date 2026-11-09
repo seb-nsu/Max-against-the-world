@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://da6yfywysr6vo"]
+
+[node name="BrueckeMitte" type="Marker2D" unique_id=405159886]
+visible = false

@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://ge8lhq8om82b"]
+
+[ext_resource type="Texture2D" uid="uid://imgyuxutgaof" path="res://grafik/platzhalter/gegenstand_ziegenfell_vorleger.png" id="1_digif"]
+[ext_resource type="Script" path="res://game/inventory_items/ziegenfell_vorleger/inventory_item_ziegenfell_vorleger.gd" id="1_l12tg"]
+
+[node name="ItemZiegenfellVorleger" type="TextureRect" unique_id=1444675640]
+texture_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 4
+mouse_filter = 0
+texture = ExtResource("1_digif")
+stretch_mode = 5
+script = ExtResource("1_l12tg")
+script_name = "ZiegenfellVorleger"
+description = "UI_OBJ_ZIEGENFELL_VORLEGER"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1311266482]

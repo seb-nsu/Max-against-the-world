@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://ka4xsgid2gtr"]
+
+[ext_resource type="Script" path="res://game/rooms/abstellkammer_1/hotspots/kram/hotspot_kram.gd" id="1_742b5"]
+
+[node name="Kram" type="Area2D" unique_id=449695085]
+script = ExtResource("1_742b5")
+script_name = "Kram"
+description = "Kram"
+cursor = 1
+interaction_polygon = PackedVector2Array(-40, -30, 40, -30, 40, 30, -40, 30)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=708838883]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

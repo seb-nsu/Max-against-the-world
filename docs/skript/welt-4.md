@@ -28,11 +28,15 @@ Rätsel 1, Ansehen und Benutzen. Als Max sind die Balken bunt und ohne erkennbar
 | ID | Sprecher | Text | Auslöser |
 | --- | --- | --- | --- |
 | W4\_TEST\_MAX\_0210 | Max | Sieben Balken: Weiß, Gelb, Türkis, Grün, Lila, Rot, Blau. Komplett durcheinander. Wie meine Playlist auf Zufall. | Ansehen: Balken |
+| W4\_TEST\_MAX\_0215 | Max | Ich starr so lange auf die Balken, bis sie sich bewegen. Sie bewegen sich nicht. Ich bewege mich. Leicht schwindelig. | Ansehen: Balken, zweites Mal |
 | W4\_TEST\_PIX\_0220 | Pixel | Sieben Grautöne. Der hellste gehört nach links, der dunkelste nach rechts. Das sieht doch ein Blinder. // Oder ein Kater. Wir sind da großzügig. | Ansehen: Balken; als Pixel; Kaskade |
+| W4\_TEST\_PIX\_0225 | Pixel | Graustufen. Die schönste Zeit des Fernsehens. Damals war die Welt klar sortiert: hell, dunkel und Sendeschluss. | Ansehen: Balken, zweites Mal; als Pixel; Kaskade |
 | W4\_TEST\_MAX\_0230 | Max | Ein Kreis mit Fadenkreuz. Jemand will auf uns zielen, hat aber keine Lust. | Ansehen: Testkreis |
 | W4\_TEST\_PIX\_0240 | Pixel | Der Testkreis. Damit hat man früher geprüft, ob der Fernseher rund ist. Vermutlich. | Ansehen: Testkreis; zweites Mal |
 | W4\_TEST\_MAX\_0250 | Max | Am Rand schneit es. Nach innen. Das ist Wetter, das nur im Fernsehen vorkommt. | Ansehen: Rauschen am Rand |
+| W4\_TEST\_MAX\_0255 | Max | Wenn das Rauschen gleich ein kleines Mädchen ausspuckt, das sagt, dass sie hier sind, geh ich. Sofort. Zu Fuß. | Ansehen: Rauschen am Rand, zweites Mal |
 | W4\_TEST\_MAX\_0260 | Max | Flimmer. Sieht aus wie ein Ladesymbol, das sich verselbstständigt hat. | Ansehen: Flimmer |
+| W4\_TEST\_MAX\_0265 | Max | Er dreht sich, wenn er nachdenkt. Er denkt viel. Oder er lädt. Bei ihm weiß man das nie. | Ansehen: Flimmer, zweites Mal |
 | W4\_TEST\_MAX\_0270 | Max | Ich schiebe. Nichts. Entweder zu schwer oder ich bin es nicht wert. | Benutzen: Balken, als Max |
 | W4\_TEST\_MAX\_0280 | Max | Welcher ist heller, Lila oder Rot? Keine Ahnung. Auf meinem Handy hätte ich einen Filter. | Benutzen: Balken, als Max, zweites Mal |
 | W4\_TEST\_PIX\_0290 | Pixel | Da. Und da. Und der Dunkle ganz nach hinten, wie der Hund bei Oma. | Benutzen: Balken, als Pixel; beim Ziehen |
@@ -55,6 +59,7 @@ Das Rauschen ist Pixels Revier. Er kriecht mit Flimmer durch den Schnee, späht 
 | W4\_RAU\_PIX\_0010 | Pixel | Schnee. Von allen Seiten. Und keiner davon kalt. Das Fernsehen ist ein Betrüger. | erstes Betreten als Pixel |
 | W4\_RAU\_FLI\_0020 | Flimmer | Willkommen bei mir! Hier ist nie was los, und das ist das Beste daran. Setz dich. Also, schweb. |  |
 | W4\_RAU\_PIX\_0030 | Pixel | Was sind das für Schatten in den Wänden? | Ansehen: Geisterbilder im Rauschen |
+| W4\_RAU\_PIX\_0035 | Pixel | Die Schatten winken. Ich winke nicht zurück. Wer zu lange ins Rauschen guckt, wird Teil des Programms. | Ansehen: Geisterbilder im Rauschen, zweites Mal |
 | W4\_RAU\_FLI\_0040 | Flimmer | Die anderen Sender! Man sieht alles, nur unscharf. Wie durch eine Dusche. Ohne Wasser. Also durch nichts. |  |
 | W4\_RAU\_FLI\_0050 | Flimmer | Eine Regel noch, weil du gefragt hättest: Wer gerade mit euch redet, wenn ihr umschaltet, kommt mit. // Theoretisch. Fast alle kleben an ihrer Sendung, bei denen bleibt die Fernbedienung stumm. Nur wer Spuren folgt, folgt auch euch. // Das ist kein Fehler. Das ist Dramaturgie. | erstes Umschalten mit der Fernbedienung; Kaskade; auch als Max hörbar |
 | W4\_RAU\_MAX\_0060 | Max | Also wie eine Telefonkonferenz, aus der man nicht rauskommt. | nach 0050 |
@@ -74,6 +79,7 @@ Das Rauschen ist Pixels Revier. Er kriecht mit Flimmer durch den Schnee, späht 
 | W4\_RAU\_PIX\_0200 | Pixel | Acht Uhr. Abendessen. Immer. // Zu Hause. Hier offenbar nicht. | nach 0190; Kaskade |
 | W4\_RAU\_MAX\_0210 | Max | Ein Gong. Ohne Nachrichten. Das ist wie eine Benachrichtigung ohne Nachricht. | nach 0190, wenn Max im Rauschen zu hören ist |
 | W4\_RAU\_PIX\_0220 | Pixel | Flimmer. Das einzige Wesen hier, das mir nichts verkaufen will. Ich bin gerührt. Kurz. | Ansehen: Flimmer |
+| W4\_RAU\_PIX\_0225 | Pixel | Er knistert, wenn er sich freut. Wie eine Wolldecke im Winter. Ich mag ihn. Sag es ihm nicht. | Ansehen: Flimmer, zweites Mal |
 | W4\_RAU\_FLI\_0230 | Flimmer | Hast du Hunger? Ich hab Schnee. Schmeckt nach nichts, macht aber auch nicht satt. | Reden: Flimmer, Option 1 |
 | W4\_RAU\_PIX\_0240 | Pixel | Milch. Ich will Milch. Einmal in diesem ganzen Spiel will ich einfach nur Milch. | nach 0230 |
 | W4\_RAU\_FLI\_0250 | Flimmer | Milch gibt es im Werbeblock. Aber da kommt man nicht hin. Da wird man nur hingeschickt. |  |
@@ -85,6 +91,7 @@ Das Rauschen ist Pixels Revier. Er kriecht mit Flimmer durch den Schnee, späht 
 | W4\_RAU\_PIX\_0310 | Pixel | Ich gehe wieder. Max braucht mich. Er weiß es nur nicht. | Reden: Flimmer, beendet das Gespräch |
 | W4\_RAU\_FLI\_0320 | Flimmer | Komm wieder! Ich bin immer da. Das ist mein Problem. |  |
 | W4\_RAU\_PIX\_0330 | Pixel | Ein Weg aus Schnee. Er führt überallhin und nirgendwohin. Wie ein Flur im Krankenhaus. | Ansehen: Kriechweg |
+| W4\_RAU\_PIX\_0335 | Pixel | Ich hinterlasse Pfotenabdrücke im Schnee. Sie rauschen. Ich bin jetzt Teil der Störung. Endlich anerkannt. | Ansehen: Kriechweg, zweites Mal |
 | W4\_RAU\_MAX\_0340 | Max | Pixel ist im Rauschen. Ich höre ihn, als würde er aus einem Kopfhörer reden, der nicht ganz drin ist. | Max, wenn Pixel im Rauschen spricht |
 
 ## 3. Glücksrad-Shopping: Das Quiz (Rätsel 2)
@@ -127,7 +134,7 @@ Gespräch mit Gerd Glück (nach R2, außerhalb der Bonusrunde) und Ansehen im St
 | --- | --- | --- | --- |
 | W4\_GLUE\_MAX\_0310 | Max | Was gibt es in der Bonusrunde? | Option Gerd; vor R9 |
 | W4\_GLUE\_GER\_0320 | Gerd Glück | Den Hauptgewinn! Ein Gerät, das zwei Sender gleichzeitig zeigt! Für Menschen, die sich nicht entscheiden können! Also alle! |  |
-| W4\_GLUE\_MAX\_0330 | Max | Wer war gestern um Viertel nach acht hier? | Option Gerd; während R4 offen |
+| W4\_GLUE\_MAX\_0330 | Max | Wer war gestern um Viertel nach acht hier? | Option Gerd (bleibt); während R4 offen |
 | W4\_GLUE\_GER\_0340 | Gerd Glück | Der Geier! Live! Er warb für Geier-Gold-Hautcreme, und die Kopfhaut glänzte bis in die letzte Reihe! Ich war fast neidisch. Fast! | Alibi Geier bestätigt, ins Notizbuch |
 | W4\_GLUE\_MAX\_0350 | Max | Ein Geier mit Werbevertrag. Und ich bekomme nicht mal Follower. | nach 0340 |
 | W4\_GLUE\_MAX\_0360 | Max | Was kostet das Preisschild an Ihrem Ärmel? | Option Gerd |
@@ -137,21 +144,31 @@ Gespräch mit Gerd Glück (nach R2, außerhalb der Bonusrunde) und Ansehen im St
 | W4\_GLUE\_MAX\_0400 | Max | Ich geh dann mal zappen. | Option Gerd, beendet das Gespräch |
 | W4\_GLUE\_GER\_0410 | Gerd Glück | Zappen Sie nicht weg! Oder doch! Hauptsache, Sie kommen zurück! |  |
 | W4\_GLUE\_MAX\_0420 | Max | Das Glücksrad. Zwölf Felder, und keins davon heißt Ausgang. | Ansehen: Glücksrad |
+| W4\_GLUE\_MAX\_0425 | Max | Ein Feld heißt „Bankrott“. Es ist das größte. Das Rad weiß, wie das Leben läuft. | Ansehen: Glücksrad, zweites Mal |
 | W4\_GLUE\_MAX\_0430 | Max | Ich darf nicht drehen. Gerd sagt, das Rad gehört zur Moderation. Wie das Mikro und das Lächeln. | Benutzen: Glücksrad |
 | W4\_GLUE\_MAX\_0440 | Max | Das Pult. Glitzer, Knopf, Kaffeeflecken. Alles, was ein Moderator braucht. | Ansehen: Moderationspult |
+| W4\_GLUE\_MAX\_0445 | Max | Unter dem Pult klebt ein Zettel: „Immer lächeln. Auch innen.“ Gerd hat das wörtlich genommen. | Ansehen: Moderationspult, zweites Mal |
 | W4\_GLUE\_MAX\_0450 | Max | Ein Toaster, eine Kreuzfahrt und ein Toaster. Die Auswahl ist erschlagend. | Ansehen: Gestapelte Preise |
+| W4\_GLUE\_MAX\_0455 | Max | Die Kreuzfahrt ist ein Foto von einem Schiff. Auf Pappe. Der Toaster ist echt. Prioritäten. | Ansehen: Gestapelte Preise, zweites Mal |
 | W4\_GLUE\_PIX\_0460 | Pixel | Die Kreuzfahrt ist ein Modell. Der Toaster ist echt. So ist das Leben: Das Große ist aus Plastik, das Kleine macht Krümel. | Ansehen: Preise, zweites Mal |
 | W4\_GLUE\_MAX\_0470 | Max | Eine Leuchtschrift ohne Nummer. Man soll anrufen, aber niemand sagt wo. Das ist ehrlicher als die meisten Hotlines. | Ansehen: Telefon-Leuchtschrift |
+| W4\_GLUE\_MAX\_0475 | Max | „Rufen Sie jetzt an!“ Die Leuchtschrift blinkt hektischer, wenn ich hinsehe. Sie spürt Kundschaft. | Ansehen: Telefon-Leuchtschrift, zweites Mal |
 | W4\_GLUE\_MAX\_0480 | Max | Das Publikum ist dunkel. Entweder sind sie leise oder gar nicht da. Wie in jedem Gruppenchat. | Ansehen: Publikum |
+| W4\_GLUE\_MAX\_0485 | Max | Jemand im Publikum hustet. Einer. Ich bin sehr erleichtert, dass da jemand ist. | Ansehen: Publikum, zweites Mal |
 | W4\_GLUE\_MAX\_0490 | Max | Ein Mann mit Lupe. Er schätzt Dinge. Gerade schätzt er mich. | Ansehen: Trödel-Experte |
+| W4\_GLUE\_MAX\_0495 | Max | Er hat meinen Turnschuh angesehen und „unverkäuflich“ gemurmelt. Ich weiß nicht, ob das ein Kompliment war. | Ansehen: Trödel-Experte, zweites Mal |
 | W4\_GLUE\_EXP\_0500 | Trödel-Experte | Die Schuhe: zwölf Euro. Aus Mitleid. Der Hoodie: Liebhaberpreis. Also null. | Reden: Trödel-Experte |
 | W4\_GLUE\_PIX\_0510 | Pixel | Und der Kater? | nach 0500, wenn Pixel dabei |
 | W4\_GLUE\_EXP\_0520 | Trödel-Experte | Unverkäuflich. Zu viel Patina, zu wenig Nutzen. |  |
 | W4\_GLUE\_MAX\_0530 | Max | Eine Leuchtstoffröhre in der Blisterpackung. Mit Goldaufkleber. Jemand wollte, dass das wie ein Schwert aussieht. | Ansehen: Lichtröhre Deluxe |
+| W4\_GLUE\_MAX\_0535 | Max | Eine Neonröhre mit Goldaufkleber. Ich hab das Gefühl, wenn ich sie auspacke, summt sie wie ein Laserschwert. | Ansehen: Lichtröhre Deluxe, zweites Mal |
 | W4\_GLUE\_MAX\_0540 | Max | Sie summt. Das Original-Summgeräusch. Ich fühle mich nicht mächtiger. | Benutzen: Lichtröhre, außerhalb des Comic-Kanals |
 | W4\_GLUE\_MAX\_0550 | Max | Gerd Glück. Mehr Zähne als Sätze, und er hat viele Sätze. | Ansehen: Gerd Glück |
+| W4\_GLUE\_MAX\_0555 | Max | Er lacht, wenn eine Kamera an ist. Wenn keine an ist, auch. Für alle Fälle. | Ansehen: Gerd Glück, zweites Mal |
 | W4\_GLUE\_MAX\_0560 | Max | Das Kandidatenpodest. Hier stand ich. Hier hab ich gewonnen. Es fühlt sich an wie verlieren. | Ansehen: Kandidatenpodest |
+| W4\_GLUE\_MAX\_0565 | Max | Auf dem Podest sind Fußabdrücke von hundert Kandidaten. Alle stehen ein bisschen nach vorn gelehnt. Hoffnung. | Ansehen: Kandidatenpodest, zweites Mal |
 | W4\_GLUE\_MAX\_0570 | Max | Glühbirnenreihen. Wenn eine ausfällt, merkt es keiner. Ich kenne das Gefühl. | Ansehen: Glühbirnenreihen |
+| W4\_GLUE\_MAX\_0575 | Max | Eine Birne flackert. Keiner wechselt sie. Sie leuchtet trotzdem weiter. Respekt. | Ansehen: Glühbirnenreihen, zweites Mal |
 
 ## 4. Fernbedienung und Programmzeitschrift
 
@@ -160,18 +177,27 @@ Ansehen und Benutzen der beiden Werkzeuge der Welt. Die Programmzeitschrift ist 
 | ID | Sprecher | Text | Auslöser |
 | --- | --- | --- | --- |
 | W4\_FERN\_MAX\_0010 | Max | Die Billig-Fernbedienung. Eine Taste, fünf leere Löcher. Sieht aus wie mein Handy nach dem Update. | Ansehen: Fernbedienung, nur Umschalten |
+| W4\_FERN\_MAX\_0015 | Max | Fünf Löcher und eine Taste. Wie ein Adventskalender, den jemand am ersten Dezember aufgegeben hat. | Ansehen: Fernbedienung, nur Umschalten, zweites Mal |
 | W4\_FERN\_MAX\_0020 | Max | Zwei Tasten. Jetzt ist es offiziell ein Gerät. | Ansehen: Fernbedienung, zwei Tasten |
+| W4\_FERN\_MAX\_0025 | Max | Ich drück abwechselnd auf beide. Nichts passiert. Es fühlt sich trotzdem wie Macht an. | Ansehen: Fernbedienung, zwei Tasten, zweites Mal |
 | W4\_FERN\_MAX\_0030 | Max | Fast voll. Opa hätte längst Klebeband drumgewickelt. | Ansehen: Fernbedienung, fünf oder sechs Tasten |
+| W4\_FERN\_MAX\_0035 | Max | Die Tasten haben unterschiedliche Farben. Wie bei einem Gamecontroller, der sich nicht entscheiden konnte. | Ansehen: Fernbedienung, fünf oder sechs Tasten, zweites Mal |
 | W4\_FERN\_PIX\_0040 | Pixel | Alle Tasten. Und keine davon heißt Futter. Jede Technik hat eine Lücke. | Ansehen: Fernbedienung, alle Tasten; Pixel |
+| W4\_FERN\_PIX\_0045 | Pixel | Ich habe nachgezählt. Alle da. Ich verlange trotzdem eine Taste für Leckerli. Ich schreibe einen Brief an den Hersteller. | Ansehen: Fernbedienung, alle Tasten, zweites Mal; Pixel |
 | W4\_FERN\_MAX\_0050 | Max | Umschalten. Zapp. Das kann ich. Das konnte ich schon immer. Endlich zahlt sich etwas aus. | Benutzen: Umschalten, erstes Mal |
 | W4\_FERN\_NAR\_0060 | – | Rauschen wischt übers Bild. Der neue Sender steht. | Umschalt-Effekt, jedes Mal |
 | W4\_FERN\_MAX\_0070 | Max | Pause. Eine Taste, die die Welt anhält. Hatte ich im Wohnzimmer auch. Da hieß sie Sofa. | Ansehen: Taste Pause, nach dem Fund |
+| W4\_FERN\_MAX\_0075 | Max | Wenn ich die Pause drücke, bleibt dann auch die Zeit für Hausaufgaben stehen? Ich frag für einen Freund. | Ansehen: Taste Pause, nach dem Fund, zweites Mal |
 | W4\_FERN\_MAX\_0080 | Max | Rückspulen. Alles noch mal, nur schneller und rückwärts. Wie meine Entschuldigungen. | Ansehen: Taste Rückspulen |
 | W4\_FERN\_PIX\_0090 | Pixel | Rückspulen. Früher musste man das mit einem Stift machen. In einer Kassette. Ich habe zugesehen. Stundenlang. | Ansehen: Taste Rückspulen, zweites Mal |
 | W4\_FERN\_MAX\_0100 | Max | Stumm. Die wichtigste Taste der Menschheit. Nach Snooze. | Ansehen: Taste Stumm |
+| W4\_FERN\_MAX\_0105 | Max | Ich hab sie zu Hause bei jeder Werbung gedrückt. Jetzt drück ich sie beim Weltretten. Karriere. | Ansehen: Taste Stumm, zweites Mal |
 | W4\_FERN\_MAX\_0110 | Max | Untertitel. Zeigt, was Leute denken. Das will ich bei den meisten Leuten gar nicht wissen. | Ansehen: Taste Untertitel |
+| W4\_FERN\_MAX\_0115 | Max | Wenn ich die auf mich selbst richte, steht da bestimmt nur: „Hunger. Sofa. Hunger.“ Ich lass es lieber. | Ansehen: Taste Untertitel, zweites Mal |
 | W4\_FERN\_MAX\_0120 | Max | Sendersuchlauf. Findet Sender, die sich verstecken. Wie ein Lupensymbol, nur für Fernseher. | Ansehen: Taste Sendersuchlauf |
+| W4\_FERN\_MAX\_0125 | Max | Wenn die Taste lange genug sucht, findet sie bestimmt auch meine Motivation. Irgendwo zwischen zwei Kanälen. | Ansehen: Taste Sendersuchlauf, zweites Mal |
 | W4\_FERN\_MAX\_0130 | Max | Der Splitscreen-Adapter. Zwei Kabel, zwei Bilder, ein Hauptgewinn. Und er riecht nach Gerd. | Ansehen: Splitscreen-Adapter |
+| W4\_FERN\_MAX\_0135 | Max | Zwei Bilder auf einem Schirm. Endlich kann ich gleichzeitig spielen und so tun, als würde ich zuhören. | Ansehen: Splitscreen-Adapter, zweites Mal |
 | W4\_FERN\_MAX\_0140 | Max | Das macht hier nichts. Der Adapter braucht zwei Sender, die nebeneinander Sinn ergeben. Also fast nie. | Benutzen: Splitscreen-Adapter, außerhalb von Keller und Studio |
 | W4\_FERN\_MAX\_0150 | Max | Eine Programmzeitschrift. Fünf Sender, eine Woche, Eselsohr. Opa hat so etwas auf dem Klo liegen. | Ansehen: Programmzeitschrift |
 | W4\_FERN\_PIX\_0160 | Pixel | Die Programmzeitschrift. Früher hat man damit geplant, wann man auf dem Sofa sitzt. // Heute sitzt man einfach. Fortschritt. | Ansehen: Programmzeitschrift, zweites Mal; Kaskade |
@@ -208,36 +234,47 @@ Ansehen, Benutzen und Gespräche in der Küche.
 | ID | Sprecher | Text | Auslöser |
 | --- | --- | --- | --- |
 | W4\_SIT\_MAX\_0110 | Max | Die Lachkonserve. Ein Kasten mit rotem Knopf. Die lacht über alles. Sogar über mich. | Ansehen: Lachkonserven-Maschine |
+| W4\_SIT\_MAX\_0115 | Max | Ich drück nicht auf den Knopf. Aber ich bin mir sicher: Wenn ich stolpere, lacht er von allein. | Ansehen: Lachkonserven-Maschine, zweites Mal |
 | W4\_SIT\_MAX\_0120 | Max | Ich drücke. Gelächter. Ich hab nichts gesagt. Das ist das beste Publikum meines Lebens. | Benutzen: Lachkonserven-Maschine |
 | W4\_SIT\_PIX\_0130 | Pixel | Endlich ein Publikum auf meinem Niveau. | Ansehen: Pappe-Publikum |
 | W4\_SIT\_MAX\_0140 | Max | Pappfiguren in der ersten Reihe. Sie klatschen nie, aber sie gehen auch nie aufs Klo. | Ansehen: Pappe-Publikum, zweites Mal |
 | W4\_SIT\_MAX\_0150 | Max | Eine Keksdose in Form eines Huhns. Der Vater hält sie wie ein Baby. Ein Baby mit Deckel. | Ansehen: Keksdose |
+| W4\_SIT\_MAX\_0155 | Max | Die Huhn-Dose hat ein Gesicht. Es guckt besorgt. Es weiß, was auf es zukommt. | Ansehen: Keksdose, zweites Mal |
 | W4\_SIT\_VAT\_0160 | Sitcom-Vater | Finger weg! Die Dose geht nur auf, wenn Besuch kommt. Richtiger Besuch. Mit Krawatte. | Benutzen: Keksdose; LAC |
 | W4\_SIT\_MAX\_0170 | Max | Besuch mit Krawatte. Wo krieg ich um diese Uhrzeit jemanden mit Krawatte her? | nach 0160 |
 | W4\_SIT\_MAX\_0180 | Max | Die Küchentür. Rundes Fenster, Holz, und alle paar Sekunden platzt jemand rein. Sie ist der eigentliche Star. | Ansehen: Küchentür |
+| W4\_SIT\_MAX\_0185 | Max | Die Tür schwingt nach. Jemand ist gerade reingekommen, gegangen und wieder reingekommen. Pointe vergessen. | Ansehen: Küchentür, zweites Mal |
 | W4\_SIT\_MAX\_0190 | Max | Die kann ich nicht tragen. Die ist größer als ich und hat mehr Auftritte. | Nehmen: Küchentür |
 | W4\_SIT\_MAX\_0200 | Max | Eine Durchreiche. Dahinter ein Wohnzimmer, in dem nie jemand sitzt. Alle stehen in der Küche. Wie auf jeder Party. | Ansehen: Durchreiche |
+| W4\_SIT\_MAX\_0205 | Max | Im Wohnzimmer hängt ein Bild vom Wohnzimmer. Das Set hat Heimweh nach sich selbst. | Ansehen: Durchreiche, zweites Mal |
 | W4\_SIT\_MAX\_0210 | Max | Ein Topf Käse. Geschmolzen, blubbernd, mit zu viel Wein. Opa würde sagen: Das ist kein Essen, das ist ein Ereignis. | Ansehen: Fondue-Topf |
+| W4\_SIT\_PIX\_0215 | Pixel | Geschmolzener Käse. Eine Mahlzeit, die schon tot ist und trotzdem blubbert. Ich bin fasziniert und angewidert. | Ansehen: Fondue-Topf, zweites Mal |
 | W4\_SIT\_MAX\_0220 | Max | Ein Stück Käse für unterwegs. Es tropft. Alles, was ich mitnehme, tropft. | Nehmen: Fondue-Käse |
 | W4\_SIT\_PIX\_0230 | Pixel | Käse. Endlich etwas Essbares in diesem Inventar. Nicht für mich, Katzen vertragen das nicht. Aber das Prinzip stimmt. | Fondue-Käse im Inventar; Pixel |
 | W4\_SIT\_MAX\_0240 | Max | Eine Bananenschale auf dem Boden. In einer Sitcom. Das ist keine Schale, das ist ein Stichwort. | Ansehen: Bananenschale |
+| W4\_SIT\_MAX\_0245 | Max | Die Schale liegt genau da, wo jemand gleich hinläuft. Hier wird nichts dem Zufall überlassen. Nur der Würde. | Ansehen: Bananenschale, zweites Mal |
 | W4\_SIT\_MAX\_0250 | Max | Ich hebe sie auf, bevor es jemand tut. Also drauftritt. Also beides. | Nehmen: Bananenschale |
 | W4\_SIT\_SOH\_0260 | Sitcom-Sohn | Hey! Die war für Papa! | nach 0250; LAC |
 | W4\_SIT\_MAX\_0270 | Max | Scheinwerfer von oben. Das Set hört da hinten einfach auf. Die Wand hat eine Kante. Die Welt hat eine Kante. | Ansehen: Studiolicht und Set-Rand |
+| W4\_SIT\_MAX\_0275 | Max | Da hinten hängt der Himmel an einer Stange. Wenn ich an der Wand klopfe, kommt bestimmt ein Mann mit Megafon und sagt, ich soll weitermachen. | Ansehen: Studiolicht und Set-Rand, zweites Mal |
 | W4\_SIT\_MAX\_0280 | Max | Ein Skateboard. Der Sohn trägt es immer, fährt aber nie. Es ist ein Accessoire wie meine Kopfhörer. | Ansehen: Skateboard |
+| W4\_SIT\_MAX\_0285 | Max | Unter dem Board klebt ein Kaugummi. Das ist das Einzige, was es je erlebt hat. | Ansehen: Skateboard, zweites Mal |
 | W4\_SIT\_MAX\_0290 | Max | Die Mutter. Lockige Haare, Blumenschürze, Hände in den Hüften. Sie hat immer Recht, und das Band lacht trotzdem. | Ansehen: Sitcom-Mutter |
+| W4\_SIT\_MAX\_0295 | Max | Sie stemmt die Hände in die Hüften. Ich hab nichts gemacht und entschuldige mich trotzdem innerlich. | Ansehen: Sitcom-Mutter, zweites Mal |
 | W4\_SIT\_MAX\_0300 | Max | Der Vater. Pullunder, Pantoffeln, Keksdose. Ein Mann, der nichts mehr erwartet außer Kekse. | Ansehen: Sitcom-Vater |
+| W4\_SIT\_MAX\_0305 | Max | Er hat die Füße im Pantoffel und die Hand in der Hose. Er wartet auf eine Ehefrau, die ihn anschreit. Er hat sie. | Ansehen: Sitcom-Vater, zweites Mal |
 | W4\_SIT\_MAX\_0310 | Max | Der Sohn. Kappe falsch rum, Hose zu weit, Sprüche zu laut. In zehn Jahren bin ich sein Vater. | Ansehen: Sitcom-Sohn |
-| W4\_SIT\_MAX\_0320 | Max | Was habt ihr gestern um Viertel nach acht gekocht? | Option Mutter; während R4 offen |
+| W4\_SIT\_MAX\_0315 | Max | Er sagt „Cool“ zu allem. Auch zu Suppe. Das ist sein ganzer Text. | Ansehen: Sitcom-Sohn, zweites Mal |
+| W4\_SIT\_MAX\_0320 | Max | Was habt ihr gestern um Viertel nach acht gekocht? | Option Mutter (bleibt); während R4 offen |
 | W4\_SIT\_SMU\_0330 | Sitcom-Mutter | Fondue! Folge 112! Wer behauptet, es war Lasagne, hat die Folge nicht gesehen. Oder keinen Geschmack. | LAC; Alibi Hyäne widerlegt, ins Notizbuch |
 | W4\_SIT\_VAT\_0340 | Sitcom-Vater | Lasagne gab es in Folge 87. Da ist der Ofen explodiert. Wir reden nicht über Folge 87. | LAC, Applaus |
-| W4\_SIT\_MAX\_0350 | Max | Hat jemand von euch gestern Abend gelacht? | Option Mutter; während R4 offen |
+| W4\_SIT\_MAX\_0350 | Max | Hat jemand von euch gestern Abend gelacht? | Option Mutter (bleibt); während R4 offen |
 | W4\_SIT\_SMU\_0360 | Sitcom-Mutter | Alle lachen. Immer. Außer der gefleckten Dame in Reihe drei. Die saß da wie beim Zahnarzt. | LAC |
 | W4\_SIT\_MAX\_0370 | Max | Warum ist die Tür so laut? | Option Mutter |
 | W4\_SIT\_SMU\_0380 | Sitcom-Mutter | Damit die Leute wissen, dass jemand kommt. Sonst müssten sie zuhören. | LAC |
 | W4\_SIT\_MAX\_0390 | Max | Was ist in der Dose? | Option Vater |
 | W4\_SIT\_VAT\_0400 | Sitcom-Vater | Kekse. Und Dinge, die ich vor meiner Frau verstecke. Also Kekse. | LAC |
-| W4\_SIT\_MAX\_0410 | Max | Erwarten Sie Besuch? | Option Vater |
+| W4\_SIT\_MAX\_0410 | Max | Erwarten Sie Besuch? | Option Vater (bleibt) |
 | W4\_SIT\_VAT\_0420 | Sitcom-Vater | Mein neuer Chef wollte mal vorbeischauen. Irgendwann. Ich habe ihn nie gesehen. Ich weiß nur: Er trägt Mantel. | Hinweis R3; LAC |
 | W4\_SIT\_MAX\_0430 | Max | Was kann man hier essen? | Option Sohn |
 | W4\_SIT\_SOH\_0440 | Sitcom-Sohn | Fondue. Seit 112 Folgen. Ich träume von Pizza. Mein Vertrag verbietet Pizza. | LAC |
@@ -265,6 +302,7 @@ Rätsel 3: Max schaltet aus der Savanne um, während der Kommissar mit ihm spric
 | W4\_SIT\_VAT\_0630 | Sitcom-Vater | Er geht! Habe ich den Job noch? | LAC |
 | W4\_SIT\_SMU\_0640 | Sitcom-Mutter | Du hattest nie einen, Schatz. Du stehst seit 112 Folgen in der Küche. | LAC, Applaus, Abspannmusik kurz |
 | W4\_SIT\_VAT\_0650 | Sitcom-Vater | Meine Dose. Meine schöne Dose. Jetzt habe ich nur noch Kekse. | Ansehen: Scherben der Keksdose; nach R3, vor R6 (danach sitzt der Vater im Keller) |
+| W4\_SIT\_VAT\_0655 | Sitcom-Vater | Sie hatte so schöne Federn. Aus Keramik. Die Kekse sind traurig. Ich höre es. | Ansehen: Scherben der Keksdose, zweites Mal; nach R3, vor R6 (danach sitzt der Vater im Keller) |
 | W4\_SIT\_MAX\_0660 | Max | Der Kommissar redet nur noch mit dem Käse. Beim nächsten Umschalten wandert er von selbst zurück zu seinen Tieren. | Umschalten nach R3, während der Kommissar noch in der Küche steht; er kehrt in die Savanne zurück |
 
 ## 6. Tiertort Savanne: Der Fall (Rätsel 4, Ankunft und Ansehen)
@@ -289,13 +327,18 @@ Ansehen und Benutzen in der Savanne.
 | ID | Sprecher | Text | Auslöser |
 | --- | --- | --- | --- |
 | W4\_SAV\_MAX\_0110 | Max | Ein Felsen in Thronform. Oben eine leere Stelle, wo mal was Goldenes war. Und ein Löwe, der das persönlich nimmt. | Ansehen: Felsenthron |
+| W4\_SAV\_MAX\_0115 | Max | Auf dem Felsen ist ein runder Abdruck. Da hat mal jemand ein Löwenbaby hochgehalten. Ich hör fast noch das Orchester. | Ansehen: Felsenthron, zweites Mal |
 | W4\_SAV\_MAX\_0120 | Max | Der Löwe. Große Mähne, keine Krone, Kinn auf den Pfoten. Er sieht aus, als hätte jemand seine Serie abgesetzt. | Ansehen: Löwe |
+| W4\_SAV\_MAX\_0125 | Max | Er seufzt. Die Mähne bewegt sich mit. Er hätte jetzt gern einen Kreis des Lebens. Er hat einen Kreis aus Absperrband. | Ansehen: Löwe, zweites Mal |
 | W4\_SAV\_LOE\_0130 | Löwe | GROAR. Grrr. | Reden: Löwe, als Max |
 | W4\_SAV\_MAX\_0140 | Max | Ich glaube, das hieß Nein. Oder Mittagessen. Bei Löwen ist das dasselbe. | nach 0130 |
 | W4\_SAV\_MAX\_0150 | Max | Der Löwe kriegt ein Mikro. Ich krieg nicht mal WLAN. | Ansehen: Mikrofonangel |
+| W4\_SAV\_MAX\_0155 | Max | Das Mikro hängt über dem Löwen wie eine Wolke mit Ohren. Er tut so, als würde er es nicht sehen. Profi. | Ansehen: Mikrofonangel, zweites Mal |
 | W4\_SAV\_MAX\_0160 | Max | Gelbes Band um einen Busch. Der Busch ist der Tatort. Der Busch sagt nichts. Typisch Busch. | Ansehen: Absperrband |
+| W4\_SAV\_MAX\_0165 | Max | Ein Blatt vom Busch liegt am Boden. Beweismittel Nummer eins. Ich fass es nicht an. Ich hab genug Krimis gesehen. | Ansehen: Absperrband, zweites Mal |
 | W4\_SAV\_KOM\_0170 | Kommissar | Hinter dem Band bleiben. Das Band ist das Einzige hier, das Regeln hat. | Benutzen: Absperrband |
 | W4\_SAV\_MAX\_0180 | Max | Ein Wasserloch. Drei Flamingos, die tuscheln. Die Savanne hat auch einen Gruppenchat. | Ansehen: Wasserloch |
+| W4\_SAV\_MAX\_0185 | Max | Die Flamingos tauchen kurz die Schnäbel ins Wasser. Gleichzeitig. Synchronklatsch. | Ansehen: Wasserloch, zweites Mal |
 | W4\_SAV\_MAX\_0190 | Max | Ich trinke. Es schmeckt nach Flamingo. | Benutzen: Wasserloch |
 | W4\_SAV\_ERZ\_0200 | Erzähler | Das Männchen trinkt. Es trinkt, wo gestern um Viertel nach acht der Gepard döste. Die Flamingos haben alles gesehen. Sie sehen immer alles. | nach 0190; Hinweis R4b, ins Notizbuch |
 | W4\_SAV\_MAX\_0210 | Max | Er kommentiert, wie ich trinke. Als Nächstes bewertet er meinen Gang. |  |
@@ -303,24 +346,36 @@ Ansehen und Benutzen in der Savanne.
 | W4\_SAV\_ERZ\_0230 | Erzähler | Das Männchen ruht. Wie das Nashorn am anderen Ende der Savanne. Dieses schlief gestern den ganzen Abend, wie es in meinem Drehbuch steht. Seite 14. | nach 0220; Hinweis R4c |
 | W4\_SAV\_MAX\_0240 | Max | Er hat ein Drehbuch. Der Erzähler einer Naturdoku hat ein Drehbuch. Nichts hier ist echt. Nicht mal die Natur. |  |
 | W4\_SAV\_MAX\_0250 | Max | Akazien. Flach wie Tische. Die Giraffen haben hier den besseren Platz, aber keine Giraffe ist da. Budget. | Ansehen: Akazien |
+| W4\_SAV\_MAX\_0255 | Max | Auf einer Akazie hängt ein Schild: „Giraffe ab 20 Uhr“. Ich glaube, die kommt nicht mehr. | Ansehen: Akazien, zweites Mal |
 | W4\_SAV\_MAX\_0260 | Max | Es regnet auf das Schlagzeug. Irgendwer hat das bestimmt so gewollt. | Ansehen: Regenwolke über dem Schlagzeug |
+| W4\_SAV\_MAX\_0265 | Max | Ein Tropfen landet auf der Snare. Ba-dum-tss. Selbst das Wetter macht hier Pointen. | Ansehen: Regenwolke über dem Schlagzeug, zweites Mal |
 | W4\_SAV\_PIX\_0270 | Pixel | Eine Wolke, die nur über einem Schlagzeug regnet. Das ist Rhythmus. Oder Rache. | Ansehen: Regenwolke, zweites Mal |
 | W4\_SAV\_MAX\_0280 | Max | Eine Kiste mit Krabbeltieren und einem Sternchen-Schild. Da greif ich nicht rein, nicht mal für Follower. | Ansehen: Kiste mit Krabbeltieren |
+| W4\_SAV\_MAX\_0285 | Max | Die Kiste hat ein Schild: „Prüfung 3“. Ich hab nichts gewonnen und will trotzdem raus hier. | Ansehen: Kiste mit Krabbeltieren, zweites Mal |
 | W4\_SAV\_PIX\_0290 | Pixel | Ich schon. | nach 0280 |
 | W4\_SAV\_PIX\_0300 | Pixel | Knusprig. Fragt nicht. | Benutzen: Kiste, als Pixel |
 | W4\_SAV\_MAX\_0310 | Max | Der Erzähler. Hockt hinter dem Busch, flüstert ins Mikro und tut, als wäre er nicht da. Wie meine Mutter beim Elternabend. | Ansehen: Erzähler |
+| W4\_SAV\_MAX\_0315 | Max | Er flüstert so leise, dass die Ameisen sich beschweren. Ich hab gesehen, wie eine den Kopf geschüttelt hat. | Ansehen: Erzähler, zweites Mal |
 | W4\_SAV\_MAX\_0320 | Max | Ein dickes Drehbuch mit Kaffeefleck. Er hält es fest wie der Vater die Keksdose. Alle hier haben ein Lieblingsding. | Ansehen: Drehbuch beim Erzähler |
+| W4\_SAV\_MAX\_0325 | Max | Der Kaffeefleck auf dem Drehbuch hat die Form von Afrika. Er ist Profi. Sogar beim Kleckern. | Ansehen: Drehbuch beim Erzähler, zweites Mal |
 | W4\_SAV\_ERZ\_0330 | Erzähler | Das Männchen greift nach dem Skript. Das Skript bleibt, wo es ist. Das Männchen auch. | Nehmen: Drehbuch, als Max |
 | W4\_SAV\_MAX\_0340 | Max | Der Kommissar. Mantel, Zigarre, der Blick von jemandem, der seit 1979 immer noch eine Frage hat. | Ansehen: Kommissar |
+| W4\_SAV\_MAX\_0345 | Max | Er dreht sich halb um, als wäre er schon weg. Gleich kommt er zurück. Mit einer Frage. Nur einer. | Ansehen: Kommissar, zweites Mal |
 | W4\_SAV\_MAX\_0350 | Max | Die Hyäne. Sitzt kerzengerade, Lippen zusammengepresst, Gesicht wie ein Passfoto. Niemand ist so ernst. Niemand ohne Grund. | Ansehen: Hyäne |
+| W4\_SAV\_MAX\_0355 | Max | Ein Mundwinkel zuckt. Nur einer. Wenn sie gleich platzt, will ich nicht danebenstehen. | Ansehen: Hyäne, zweites Mal |
 | W4\_SAV\_MAX\_0360 | Max | Der Gepard. Stirnband, Stoppuhr, hechelt. Er ist das schnellste Tier der Welt und sieht aus, als hätte er trotzdem den Bus verpasst. | Ansehen: Gepard |
+| W4\_SAV\_MAX\_0365 | Max | Er stoppt seine eigene Zeit beim Stillstehen. Persönliche Bestzeit im Herumstehen. Glückwunsch. | Ansehen: Gepard, zweites Mal |
 | W4\_SAV\_MAX\_0370 | Max | Der Geier. Cremt sich die Glatze ein und bewundert sich im Spiegel. Er ist der Einzige hier, der sich selbst mag. | Ansehen: Geier |
+| W4\_SAV\_MAX\_0375 | Max | Er zwinkert seinem Spiegelbild zu. Das Spiegelbild zwinkert zurück. Sie sind ein Paar. | Ansehen: Geier, zweites Mal |
 | W4\_SAV\_MAX\_0380 | Max | Das Nashorn schläft im Stehen. Mit einem Vogel auf dem Horn. Das ist Multitasking. | Ansehen: Nashorn |
+| W4\_SAV\_PIX\_0385 | Pixel | Er schläft im Stehen. Ich schlafe im Liegen, im Sitzen, auf dem Rücken und auf deinem Gesicht. Er ist ein Amateur. | Ansehen: Nashorn, zweites Mal |
 | W4\_SAV\_MAX\_0390 | Max | Hallo? Nashorn? | Reden: Nashorn |
 | W4\_SAV\_NAS\_0400 | Nashorn | Chrrrr. | schläft weiter, der Vogel sieht Max an |
 | W4\_SAV\_MAX\_0410 | Max | Das ist das ehrlichste Alibi, das ich je gehört habe. |  |
 | W4\_SAV\_MAX\_0420 | Max | Drei Flamingos auf je einem Bein. Sie reden nicht mit mir. Sie reden über mich. | Ansehen: Flamingos |
+| W4\_SAV\_MAX\_0425 | Max | Einer hat gerade das Bein gewechselt. Die anderen tuscheln jetzt über ihn. Ich hab Mitleid. | Ansehen: Flamingos, zweites Mal |
 | W4\_SAV\_MAX\_0430 | Max | Oranger Himmel. Golden Hour. Alle sehen gut aus, sogar der Geier. | Ansehen: Himmel |
+| W4\_SAV\_MAX\_0435 | Max | Der Himmel ist so orange, dass jemand bestimmt gleich ein Foto mit Filter macht. Der Geier zum Beispiel. | Ansehen: Himmel, zweites Mal |
 | W4\_SAV\_MAX\_0440 | Max | Die Lichtröhre leuchtet hier nur bläulich. Keine Blase, kein Wumm. Die Savanne nimmt sie nicht ernst. Ich auch nicht. | Benutzen: Lichtröhre in der Savanne |
 | W4\_SAV\_MAX\_0450 | Max | Der Kommissar will keinen Käse. Er will Antworten. Und vielleicht ein Sandwich. | Fondue-Käse auf Kommissar |
 | W4\_SAV\_ERZ\_0460 | Erzähler | Fräulein Pokerface. So nennt man sie in der Savanne. Seit drei Staffeln hat sie nicht gelacht. Nicht ein einziges Mal. | nach 0350, flüsternd; Antwort für die Bonusrunde (R9) |
@@ -331,13 +386,13 @@ Vier Alibis. Gepard und Nashorn prüft Pixel, Geier und Hyäne prüft Max über 
 
 | ID | Sprecher | Text | Auslöser |
 | --- | --- | --- | --- |
-| W4\_VERH\_MAX\_0010 | Max | Wer sind die Verdächtigen? | Option Kommissar |
+| W4\_VERH\_MAX\_0010 | Max | Wer sind die Verdächtigen? | Option Kommissar (bleibt) |
 | W4\_VERH\_KOM\_0020 | Kommissar | Gepard: lag angeblich am Wasserloch. Geier: angeblich live im Werbeblock. Nashorn: hat angeblich geschlafen. Hyäne: hat angeblich ferngesehen. Angeblich. Mein Lieblingswort. | ins Notizbuch |
-| W4\_VERH\_MAX\_0030 | Max | Was hat die Hyäne genau gesagt? | Option Kommissar |
+| W4\_VERH\_MAX\_0030 | Max | Was hat die Hyäne genau gesagt? | Option Kommissar (bleibt) |
 | W4\_VERH\_KOM\_0040 | Kommissar | Sie habe um 20:15 gesehen, wie die Sitcom-Familie Lasagne kocht. Ich habe keine Ahnung, was die Familie kocht. Ich koche nicht. Ich ermittle. | Hinweis R4a |
-| W4\_VERH\_MAX\_0050 | Max | Wo war der Geier? | Option Kommissar |
+| W4\_VERH\_MAX\_0050 | Max | Wo war der Geier? | Option Kommissar (bleibt) |
 | W4\_VERH\_KOM\_0060 | Kommissar | Im Werbeblock. Live. Bei einem Mann mit sehr vielen Zähnen. Ich war noch nicht dort. Ich traue Leuten mit so vielen Zähnen nicht. | Hinweis R4d |
-| W4\_VERH\_MAX\_0070 | Max | Und der Gepard? | Option Kommissar |
+| W4\_VERH\_MAX\_0070 | Max | Und der Gepard? | Option Kommissar (bleibt) |
 | W4\_VERH\_KOM\_0080 | Kommissar | Rennt weg, sobald ich näher komme. Immer. Ich bin nicht gebaut fürs Rennen. Ich bin gebaut fürs Stehen und Fragen. |  |
 | W4\_VERH\_ERZ\_0090 | Erzähler | Der Gepard erreicht in drei Sekunden hundert Stundenkilometer. Nach zwanzig Sekunden ist er erschöpft und braucht eine Pause. Eine lange. | nach 0080 oder beim ersten Nähern an den Gepard; Hinweis R4b |
 | W4\_VERH\_MAX\_0100 | Max | Ich hab noch zu tun. | Option Kommissar, beendet das Gespräch |
@@ -356,8 +411,11 @@ Vier Alibis. Gepard und Nashorn prüft Pixel, Geier und Hyäne prüft Max über 
 | W4\_VERH\_MAX\_0230 | Max | Ein Alibi aus einem Drehbuch. Das ist das erste Mal, dass Fernsehen die Wahrheit sagt. |  |
 | W4\_VERH\_ERZ\_0240 | Erzähler | Das Skript ist zurück. Der Erzähler verzeiht. Der Erzähler hat ohnehin alles auswendig gelernt, seit Staffel zwei. | Drehbuch zurückgegeben oder später |
 | W4\_VERH\_MAX\_0250 | Max | Das Drehbuch des Erzählers. Auf Seite 1 steht: „Leise sprechen. Immer.“ | Ansehen: Drehbuch im Inventar |
+| W4\_VERH\_MAX\_0255 | Max | Seite zwei: „Wenn der Löwe brüllt, Pause machen.“ Seite drei: „Nicht vergessen: leise.“ Ein Drehbuch, das flüstert. | Ansehen: Drehbuch im Inventar, zweites Mal |
 | W4\_VERH\_MAX\_0260 | Max | Hier steht: „Der Zuschauer lacht an dieser Stelle.“ Als Anweisung. Jetzt weiß ich, wie das Band funktioniert. | Ansehen: Drehbuch in der Sitcom |
+| W4\_VERH\_MAX\_0265 | Max | Am Rand steht mit Bleistift: „Hier noch lauter lachen.“ Jemand fand die Folge nicht lustig genug. Das Band hat geliefert. | Ansehen: Drehbuch in der Sitcom, zweites Mal |
 | W4\_VERH\_MAX\_0270 | Max | Im Comic-Kanal sind alle Sätze im Drehbuch in Großbuchstaben. Mit Ausrufezeichen. Auch „Das Nashorn schläft!“ | Ansehen: Drehbuch im Comic-Kanal |
+| W4\_VERH\_MAX\_0275 | Max | Sogar die Seitenzahlen sind im Comic fett. „SEITE DREI!“ Mit Knall-Effekt. | Ansehen: Drehbuch im Comic-Kanal, zweites Mal |
 | W4\_VERH\_MAX\_0280 | Max | Ein Vogel auf einem Horn hat nichts zu sagen. Er hat aber einen Blick, der sagt: Frag nicht. | Reden: Vogel auf dem Nashorn |
 | W4\_VERH\_GEI\_0290 | Geier | Fass die Glatze nicht an, sie ist frisch eingecremt. Ja, ich war im Fernsehen. Live. Ich war brillant. Die Kopfhaut auch. | Reden: Geier |
 | W4\_VERH\_MAX\_0300 | Max | Das sagt er. Ob es stimmt, weiß nur der Mann mit den Zähnen. | nach 0290; Hinweis R4d |
@@ -393,17 +451,26 @@ Außerhalb von Mitternacht zeigt der Sender eine Pausentafel mit schlafendem Gei
 | W4\_FRIE\_MAX\_0050 | Max | Tanzende Tote in Senfanzügen. Das ist das Musikvideo, das Opa immer nachmachen will, wenn er denkt, keiner guckt. |  |
 | W4\_FRIE\_PIX\_0060 | Pixel (aus dem Rauschen) | Sie tanzen besser als du. Das ist kein Kompliment für die Toten. |  |
 | W4\_FRIE\_MAX\_0070 | Max | Der Weg zum Tor führt über die Tanzfläche. Mitten durch die Choreo. Wer da durchläuft, wird Backgroundtänzer. | Ansehen: Gittertor hinter der Tanzfläche |
+| W4\_FRIE\_MAX\_0075 | Max | Das Tor knarrt im Takt der Musik. Selbst die Scharniere sind hier choreografiert. | Ansehen: Gittertor hinter der Tanzfläche, zweites Mal |
 | W4\_FRIE\_ZOM\_0080 | Zombie | Uuuuh. | Max betritt die Tanzfläche; die Zombies schieben ihn im Takt zurück |
 | W4\_FRIE\_MAX\_0090 | Max | Sie schieben mich zurück. Im Takt. Das ist der höflichste Rauswurf meines Lebens. | nach 0080 |
 | W4\_FRIE\_MAX\_0100 | Max | Sechs Zombies, ein Takt. Wenn sie alle gleichzeitig aufstehen, kann man sie alle gleichzeitig durcheinanderbringen. Theoretisch. | Ansehen: Zombies |
+| W4\_FRIE\_MAX\_0105 | Max | Einer trägt eine rote Jacke mit Reißverschlüssen. Er tanzt besser als alle anderen. Er weiß, dass er die Hauptrolle hat. | Ansehen: Zombies, zweites Mal |
 | W4\_FRIE\_MAX\_0110 | Max | Leuchtfliesen. Jede in einer anderen Farbe. Wie ein Dancefloor, nur mit mehr Erdreich. | Ansehen: Leuchtfliesen |
+| W4\_FRIE\_MAX\_0115 | Max | Wenn ich drauftrete, leuchtet die Fliese. Ich trete auf drei hintereinander. Ich bin ein Star. Ein kurzer. | Ansehen: Leuchtfliesen, zweites Mal |
 | W4\_FRIE\_MAX\_0120 | Max | Sechs Gräber, alle offen. Die Erde liegt daneben wie Bettdecken nach dem Aufstehen. | Ansehen: Gräber, offen |
+| W4\_FRIE\_MAX\_0125 | Max | Aus einem Grab schaut ein Kopfkissen. Selbst Zombies wollen bequem liegen. | Ansehen: Gräber, offen, zweites Mal |
 | W4\_FRIE\_MAX\_0130 | Max | Sechs Gräber, alle zu. Hände ragen raus. Sie warten auf den Einsatz. Wie Statisten. | Ansehen: Gräber, zu; nach Rückspulen |
+| W4\_FRIE\_MAX\_0135 | Max | Eine Hand hat den Daumen hoch. Sie hat Lust auf die Probe. Sie ist die Einzige. | Ansehen: Gräber, zu, zweites Mal; nach Rückspulen |
 | W4\_FRIE\_PIX\_0140 | Pixel | Untot und trotzdem besser angezogen als du. | Ansehen: Discokugel im toten Baum |
+| W4\_FRIE\_PIX\_0145 | Pixel | Die Kugel dreht sich, auch ohne Strom. Ich frage nicht wie. Hier fragt man nicht wie. | Ansehen: Discokugel im toten Baum, zweites Mal |
 | W4\_FRIE\_MAX\_0150 | Max | Eine Discokugel in einem toten Baum. Der Baum hat das nicht verdient. Der Baum hat gar nichts mehr verdient. | Ansehen: Discokugel, zweites Mal |
 | W4\_FRIE\_MAX\_0160 | Max | Vollmond. Natürlich. Bei Halbmond würde niemand tanzen. | Ansehen: Mond |
+| W4\_FRIE\_MAX\_0165 | Max | Vor dem Mond fliegt eine Fledermaus. Oder ein Mann im Kostüm. Hier ist beides möglich. | Ansehen: Mond, zweites Mal |
 | W4\_FRIE\_MAX\_0170 | Max | Nebel bis zu den Knien. Entweder Trockeneis oder jemand hat sehr lange geduscht. | Ansehen: Nebel |
+| W4\_FRIE\_MAX\_0175 | Max | Ich wedel mit der Hand durch den Nebel. Er kommt sofort zurück. Er ist bezahlt. | Ansehen: Nebel, zweites Mal |
 | W4\_FRIE\_MAX\_0180 | Max | Lila Scheinwerfer. Hier ist alles lila, was nicht grün ist. Die 80er hatten zwei Farben und keine Angst. | Ansehen: Scheinwerfer |
+| W4\_FRIE\_MAX\_0185 | Max | Wenn ich lange genug in den Scheinwerfer guck, sehe ich alles lila. Auch meine Zukunft. | Ansehen: Scheinwerfer, zweites Mal |
 | W4\_FRIE\_MAX\_0190 | Max | Hinter dem Tor geht ein Weg runter. Zu einem Haus. Jedes Musikvideo endet in einem Haus, das keiner betreten sollte. | Ansehen: Gittertor, zweites Mal |
 | W4\_FRIE\_MAX\_0200 | Max | Zurück. Die Zombies laufen rückwärts in ihre Gräber. Die Erde hüpft zurück. Das Lied singt rückwärts. Klingt besser so. | Rückspulen auf dem Friedhof, während der Refrain läuft |
 | W4\_FRIE\_MAX\_0210 | Max | Kurz vor dem Refrain. Alle liegen. Gleich stehen alle auf. Gleichzeitig. Das ist meine Chance. | nach 0200; Zombies in Startposition |
@@ -425,7 +492,9 @@ Außerhalb von Mitternacht zeigt der Sender eine Pausentafel mit schlafendem Gei
 | W4\_FRIE\_MAX\_0370 | Max | Stumm. Die Musik ist weg, die Zombies tanzen weiter. Das ist noch gruseliger. | Stumm auf dem Friedhof |
 | W4\_FRIE\_MAX\_0380 | Max | Die Lichtröhre leuchtet im Nebel. Sieht fast gut aus. Fast. | Lichtröhre auf dem Friedhof |
 | W4\_FRIE\_MAX\_0390 | Max | Die Bananenschale wird in meiner Tasche weich. Und dunkel. Und sie riecht nach Ende. | Ansehen: Bananenschale auf Mitternachts-TV, nach dem Betreten |
+| W4\_FRIE\_MAX\_0395 | Max | Ich hab sie in die Tasche gesteckt, und jetzt riecht die ganze Tasche nach Ende. Auch das Notizbuch. | Ansehen: Bananenschale auf Mitternachts-TV, nach dem Betreten, zweites Mal |
 | W4\_FRIE\_PIX\_0400 | Pixel | Der Käse leuchtet. Im Dunkeln. Das ist entweder Horror oder Schweizer Qualität. | Ansehen: Fondue-Käse auf Mitternachts-TV |
+| W4\_FRIE\_PIX\_0405 | Pixel | Ich schaue in den Käse. Der Käse schaut zurück. Ich habe zuerst weggesehen. Das bleibt unter uns. | Ansehen: Fondue-Käse auf Mitternachts-TV, zweites Mal |
 
 ## 9. Spukhaus, Keller: Die Genre-Tür (Rätsel 6)
 
@@ -437,19 +506,27 @@ Max kommt durch die Grabplatte in den Keller. Die verkettete Tür nach oben blei
 | W4\_KELL\_GST\_0020 | Geist | Buuuh … | drei Laken-Geister schweben vorbei, einer erschrickt vor Max |
 | W4\_KELL\_MAX\_0030 | Max | Der Geist hat sich vor mir erschreckt. Das ist das Netteste, was mir heute passiert ist. |  |
 | W4\_KELL\_MAX\_0040 | Max | Fernsehen im Fernsehen. Das ist mir zu meta. | Ansehen: Röhrenfernseher mit Rauschen |
+| W4\_KELL\_MAX\_0045 | Max | Im Fernseher läuft ein Keller mit einem Fernseher. Ich guck nicht weiter rein. Am Ende sitzt da ein Junge, der mich anguckt. | Ansehen: Röhrenfernseher mit Rauschen, zweites Mal |
 | W4\_KELL\_PIX\_0050 | Pixel | Da würde ich nicht zu nah rangehen. In solchen Fernsehern wohnen Dinge. Ich weiß das, ich wohne gerade in einem. | Ansehen: Röhrenfernseher, zweites Mal |
 | W4\_KELL\_MAX\_0060 | Max | Ich dreh am Knopf. Schnee. Mehr Schnee. Ein Schneesturm. Der Fernseher hat nur einen Kanal, und der ist Winter. | Benutzen: Röhrenfernseher |
 | W4\_KELL\_PIX\_0070 | Pixel | Band-Salat in vier Teilen. Hatte dein Opa auch mal. | Ansehen: Kassetten-Sammlung |
+| W4\_KELL\_PIX\_0075 | Pixel | Eine Kassette mit Bleistift drin. So hat man früher die Zeit zurückgedreht. Mit Geduld und einem Bleistift. | Ansehen: Kassetten-Sammlung, zweites Mal |
 | W4\_KELL\_MAX\_0080 | Max | „Hits der 80er“, handgeschrieben. Kassetten. Musik, die man nicht überspringen kann. Opa nennt das Charakter. | Ansehen: Kassetten, zweites Mal |
 | W4\_KELL\_MAX\_0090 | Max | Möbel unter Laken. Entweder Umzug oder Geister-Garderobe. | Ansehen: Gerümpel unter Laken |
+| W4\_KELL\_MAX\_0095 | Max | Unter einem Laken bewegt sich etwas. Ich hoffe, es ist nur ein Sessel mit Gefühlen. | Ansehen: Gerümpel unter Laken, zweites Mal |
 | W4\_KELL\_MAX\_0100 | Max | Ich ziehe am Laken. Darunter: ein Sessel. Der Sessel ist nicht beleidigt. Der Geist daneben schon. | Benutzen: Gerümpel |
 | W4\_KELL\_MAX\_0110 | Max | Eine nackte Glühbirne. Sie flackert immer dann, wenn es dramatisch wird. Sie hat Timing. | Ansehen: Glühbirne |
+| W4\_KELL\_MAX\_0115 | Max | Ich sag laut: „Was für ein ruhiger Keller.“ Die Birne flackert. Sie hat mich verstanden. | Ansehen: Glühbirne, zweites Mal |
 | W4\_KELL\_MAX\_0120 | Max | Ein Fenster ganz oben. Zu klein für mich, zu hoch für Pixel, genau richtig für Spinnen. | Ansehen: Kellerfenster |
+| W4\_KELL\_MAX\_0125 | Max | Eine Spinne sitzt im Fenster und guckt raus. Sie hat die beste Aussicht im ganzen Haus. | Ansehen: Kellerfenster, zweites Mal |
 | W4\_KELL\_MAX\_0130 | Max | Die Grabplatte. Da bin ich rausgekommen, da geht es zum Friedhof. Zombies sind schlechte Nachbarn, aber kurze Wege. | Ansehen: Grabplatte im Boden (Ausgang zum Musikvideo-Friedhof) |
+| W4\_KELL\_MAX\_0135 | Max | Unter der Platte hört man noch leise den Bass. Der Friedhof feiert ohne mich weiter. | Ansehen: Grabplatte im Boden (Ausgang zum Musikvideo-Friedhof), zweites Mal |
 | W4\_KELL\_MAX\_0140 | Max | Eine Tür mit mehr Ketten als Holz. Da oben geht es weiter. Hier unten geht es nicht weiter. | Ansehen: verkettete Tür |
+| W4\_KELL\_MAX\_0145 | Max | Ich zähl die Schlösser. Sieben. Wer auch immer da oben wohnt, will wirklich keinen Besuch. | Ansehen: verkettete Tür, zweites Mal |
 | W4\_KELL\_MAX\_0150 | Max | Zu. Natürlich zu. Im Horrorfilm ist die Tür immer zu, bis es am ungeeignetsten ist. | Benutzen: verkettete Tür |
 | W4\_KELL\_PIX\_0160 | Pixel | Diese Tür geht nicht auf. Das ist keine Frage von Schlüsseln, sondern von Genre. Hier geht nichts auf. In der Sitcom geht alles auf. // Denk mal drüber nach. Ich schlafe inzwischen. | Benutzen: verkettete Tür, zweites Mal; Kaskade; Hinweis R6a |
 | W4\_KELL\_MAX\_0170 | Max | Die Geister. Drei Laken mit Löchern. Sie sehen aus wie Kinderkostüme, die niemand abgeholt hat. | Ansehen: Geister |
+| W4\_KELL\_MAX\_0175 | Max | Wenn die gleich einen Song über sich anfangen und ich wen anrufen soll, weiß ich nicht, wen. Ich hab nur Pixel. | Ansehen: Geister, zweites Mal |
 | W4\_KELL\_GST\_0180 | Geist | Buuuh? Buh. | Reden: Geist |
 | W4\_KELL\_MAX\_0190 | Max | Sie sagen nichts. Sie machen nur „Buh“. Als hätte jemand den Ton vergessen. | nach 0180; Hinweis auf Stumm |
 | W4\_KELL\_MAX\_0200 | Max | Die Ketten gehen nicht ab. Ich habe es mit den Händen versucht. Ich habe zwei Hände, der Film hat ein Budget. | Benutzen: Ketten |
@@ -470,9 +547,11 @@ Max kommt durch die Grabplatte in den Keller. Die verkettete Tür nach oben blei
 | W4\_KELL\_PIX\_0350 | Pixel | Stumm. Die Taste, die ich mir für Max wünsche. Und für Gerd. Und für die Lachkonserve. In der Reihenfolge. | nach 0340 |
 | W4\_KELL\_MAX\_0360 | Max | Die Tür geht auf. Ohne dass jemand reinplatzt. Fast enttäuschend. | Benutzen: Sitcom-Tür im Keller; Weg in die Halle |
 | W4\_KELL\_VAT\_0370 | Sitcom-Vater | Ist das die Halle? Gibt es da Kekse? | Ansehen: Sitcom-Vater im Keller |
+| W4\_KELL\_VAT\_0375 | Sitcom-Vater | Kekse im Keller wären schön. Hier ist es dunkel. Kekse mögen es dunkel. In der Dose. | Ansehen: Sitcom-Vater im Keller, zweites Mal |
 | W4\_KELL\_MAX\_0380 | Max | Das Laken bleibt am Sessel. Ich brauche kein Kostüm. Noch nicht. | Nehmen: Laken im Keller |
 | W4\_KELL\_MAX\_0390 | Max | Der Adapter macht hier nichts. Die Tür ist schon da. Man kann eine Tür nicht zweimal klauen. Nicht mal im Fernsehen. | Splitscreen-Adapter im Keller nach R6 |
 | W4\_KELL\_MAX\_0400 | Max | Die Bananenschale ist jetzt schwarz. Komplett. Sie sieht aus, als hätte sie Dinge gesehen. | Ansehen: Bananenschale im Keller, faulig |
+| W4\_KELL\_MAX\_0405 | Max | Ich halt sie mit zwei Fingern. Am ausgestreckten Arm. Sie wackelt bedrohlich. Sie lebt fast. | Ansehen: Bananenschale im Keller, faulig, zweites Mal |
 | W4\_KELL\_MAX\_0410 | Max | Pause im Keller. Die Geister hängen in der Luft wie Wäsche. Die Tür bleibt trotzdem zu. Zeit ist nicht das Problem, Genre ist das Problem. | Pause im Keller vor R6 |
 | W4\_KELL\_MAX\_0420 | Max | Rückspulen. Die Geister schweben rückwärts. Die Tür war vorher auch schon zu. Vor hundert Jahren vermutlich auch. | Rückspulen im Keller |
 
@@ -485,6 +564,7 @@ In der Halle hängt die Lichterkette mit Buchstaben; auf der anderen Seite sitzt
 | W4\_HALL\_MAX\_0010 | Max | Eine Halle mit Nebel, Spinnweben und einer Lichterkette mit Buchstaben. Jemand hat hier Weihnachten mit Scrabble verwechselt. | erstes Betreten |
 | W4\_HALL\_PIX\_0020 | Pixel | Die Kette hat eben geblinkt. Dreimal. Ohne Grund. Dinge, die ohne Grund blinken, wollen etwas. | nach 0010 |
 | W4\_HALL\_MAX\_0030 | Max | Sechsundzwanzig Glühbirnen, auf jeder ein Buchstabe. Das ist eine Tastatur für Leute ohne Strom. | Ansehen: Lichterkette |
+| W4\_HALL\_MAX\_0035 | Max | Ein paar Birnen sind schon heiß. Als hätte da jemand vorhin eine Nachricht von drüben bekommen. | Ansehen: Lichterkette, zweites Mal |
 | W4\_HALL\_MAX\_0040 | Max | Ich tippe. Also, ich berühre Birnen. Das ist das langsamste Chatten meines Lebens. | Benutzen: Lichterkette; öffnet die Nachrichten-Auswahl |
 | W4\_HALL\_MAX\_0050 | Max | H-A-L-L-O. | Nachricht 1 |
 | W4\_HALL\_OPA\_0060 | Opa (Lichterkette) | MAX? BIST DU DAS? MEINE LAMPEN SPINNEN. | Birnen flackern; Opas Stimme leise aus dem Wohnzimmer |
@@ -509,11 +589,16 @@ In der Halle hängt die Lichterkette mit Buchstaben; auf der anderen Seite sitzt
 | W4\_HALL\_PIX\_0250 | Pixel | Vorheizen. Hm. // Vorheizen tut man … nein. Nein, er würde nicht. Doch, er würde. Ich sage nichts. | Kaskade; Pixel-Andeutung |
 | W4\_HALL\_MAX\_0260 | Max | Die Kette ist still. Er hat aufgelegt. Also ausgeknipst. | Benutzen: Lichterkette nach R7 |
 | W4\_HALL\_MAX\_0270 | Max | Eine große Treppe nach oben. Mit Spinnweben wie Geländer. Da oben wohnt niemand. Da oben wohnt Dramatik. | Ansehen: Treppe nach oben |
+| W4\_HALL\_MAX\_0275 | Max | Auf der dritten Stufe sitzt ein Geist und raucht nicht. Er sitzt einfach da. Stimmungsdeko. | Ansehen: Treppe nach oben, zweites Mal |
 | W4\_HALL\_MAX\_0280 | Max | Die Stufen knarren nicht mal. Sie seufzen. | Benutzen: Treppe nach oben |
 | W4\_HALL\_MAX\_0290 | Max | Vergilbte Tapete mit Muster. Das Muster war mal Blumen. Jetzt ist es Angst. | Ansehen: Tapete |
+| W4\_HALL\_MAX\_0295 | Max | Ein Fleck an der Tapete sieht aus wie ein Gesicht. Wenn ich wegschaue, guckt er mir nach. | Ansehen: Tapete, zweites Mal |
 | W4\_HALL\_MAX\_0300 | Max | Grüner Nebel am Boden. In der Sitcom wäre das Trockeneis. Hier ist es Stimmung. | Ansehen: Nebel in der Halle |
+| W4\_HALL\_MAX\_0305 | Max | Der Nebel kriecht mir in die Schuhe. Jetzt hab ich grüne Socken. Das passt zu nichts. | Ansehen: Nebel in der Halle, zweites Mal |
 | W4\_HALL\_MAX\_0310 | Max | Die Kellertür steht offen. Von unten kommt Licht und ein Mann, der auf Lacher wartet. | Ansehen: Kellertür von oben |
+| W4\_HALL\_MAX\_0315 | Max | Von unten hör ich ein leises „Na? Na?“ Der Vater wartet immer noch auf seinen Einsatz. | Ansehen: Kellertür von oben, zweites Mal |
 | W4\_HALL\_MAX\_0320 | Max | Ein Mann in Trenchcoat mit Taschenlampe und einem Ding, das piept. Er sieht aus, als hätte er seit drei Staffeln nicht geschlafen. | Ansehen: FBI-Agent |
+| W4\_HALL\_MAX\_0325 | Max | Er leuchtet mit der Taschenlampe in eine leere Ecke und nickt. Er glaubt. An irgendwas. Die Wahrheit ist irgendwo da drüben. | Ansehen: FBI-Agent, zweites Mal |
 | W4\_HALL\_AGE\_0330 | FBI-Agent | Keine Bewegung. Sind Sie von hier? Von diesem Planeten? | richtet das Gerät auf Max |
 | W4\_HALL\_MAX\_0340 | Max | Ich bin aus dem Wohnzimmer. |  |
 | W4\_HALL\_AGE\_0350 | FBI-Agent | Das sagen sie alle. Die Wahrheit ist irgendwo da draußen. Und ich habe sie noch nie gefunden. Zeigen Sie mir einen Beweis, und ich glaube Ihnen alles. | Hinweis R8 |
@@ -623,27 +708,39 @@ Gespräche und Ansehen in Kapitolis.
 | W4\_KAPI\_WIL\_0410 | Wonder-Wilma | Zu spät. | wirft das Seil |
 | W4\_KAPI\_MAX\_0420 | Max | Ich habe eine ganze Staffel von einer Serie geguckt, nur weil ich zu faul war, die Fernbedienung zu suchen. Es war eine Kochshow. Ich koche nicht. | im Seil, monoton |
 | W4\_KAPI\_PIX\_0430 | Pixel | Das wusste ich. Ich lag daneben. | nach 0420 |
-| W4\_KAPI\_MAX\_0440 | Max | Wie werde ich ein Held? | Option Wilma |
+| W4\_KAPI\_MAX\_0440 | Max | Wie werde ich ein Held? | Option Wilma (bleibt) |
 | W4\_KAPI\_WIL\_0450 | Wonder-Wilma | Durch einen Unfall. Alle großen Helden hatten einen. Spinne, Blitz, Chemikalie. Such dir eine Fabrik, die Dinge umkippt. Da hinten ist eine. | Hinweis R10c |
 | W4\_KAPI\_MAX\_0460 | Max | Wer ist Dr. Werbepause? | Option Wilma |
 | W4\_KAPI\_WIL\_0470 | Wonder-Wilma | Unser Schurke. Er unterbricht jede Szene mit Werbung. Mitten im Kampf: Zahnpasta. Mitten in der Rettung: Matratzen. Wir kommen nie zum Ende. |  |
 | W4\_KAPI\_MAX\_0480 | Max | Ich sehe mich mal um. | Option, beendet jedes Gespräch |
 | W4\_KAPI\_SIE\_0490 | Super-Siegfried | Mach das. Ich schlaf hier kurz. Im Schweben. |  |
 | W4\_KAPI\_MAX\_0500 | Max | Also definitiv der Fledermann. | Ansehen: Umhänge-Schild „Nicht der Fledermann“ |
+| W4\_KAPI\_MAX\_0505 | Max | Auf der Rückseite steht klein: „Wirklich nicht.“ Er gibt sich viel Mühe, jemand anders zu sein. | Ansehen: Umhänge-Schild „Nicht der Fledermann“, zweites Mal |
 | W4\_KAPI\_PIX\_0510 | Pixel | Da wohnt jemand Freundliches aus der Nachbarschaft. | Ansehen: Wasserturm mit Spinnennetz |
+| W4\_KAPI\_PIX\_0515 | Pixel | Das Netz ist ordentlich gespannt. Wer so sauber arbeitet, hat große Verantwortung. Und vermutlich eine Tante. | Ansehen: Wasserturm mit Spinnennetz, zweites Mal |
 | W4\_KAPI\_MAX\_0520 | Max | Wolkenkratzer mit schwarzen Linien. Da drin sind keine Büros. Da drin ist Tusche. | Ansehen: Wolkenkratzer |
+| W4\_KAPI\_MAX\_0525 | Max | An einem Fenster lehnt ein Mann mit Brille und Krawatte. Wenn der gleich in eine Telefonzelle rennt, weiß ich Bescheid. | Ansehen: Wolkenkratzer, zweites Mal |
 | W4\_KAPI\_MAX\_0530 | Max | Schilder in Form von Sprechblasen. Alle leer. Die Stadt hat etwas zu sagen, aber den Text vergessen. | Ansehen: Sprechblasen-Schilder |
+| W4\_KAPI\_MAX\_0535 | Max | Eine Blase ist halb voll. „ZACK–“ steht da, dann nichts. Jemand wurde unterbrochen. Mitten im Zack. | Ansehen: Sprechblasen-Schilder, zweites Mal |
 | W4\_KAPI\_MAX\_0540 | Max | Ein Zeitungskiosk. Schlagzeile: „SCHURKE UNTERBRICHT ALLES!“ Darunter: Werbung. | Ansehen: Kiosk |
+| W4\_KAPI\_MAX\_0545 | Max | Unter der Schlagzeile ein Gewinnspiel: „Erraten Sie den geheimen Namen des Helden!“ Es steht ein Bild daneben. | Ansehen: Kiosk, zweites Mal |
 | W4\_KAPI\_MAX\_0550 | Max | Die Laterne. Daran hängt ein reicher Mann. In anderen Städten hängen da Plakate. | Ansehen: Laterne |
+| W4\_KAPI\_MAX\_0555 | Max | Der reiche Mann winkt mir von der Laterne. Er hat einen Umhang und viel zu viel Geld für einen, der da hängt. | Ansehen: Laterne, zweites Mal |
 | W4\_KAPI\_MAX\_0560 | Max | Ein Amboss. Er ist aus dem Nichts gefallen und sieht sehr zufrieden damit aus. | Ansehen: Amboss |
+| W4\_KAPI\_MAX\_0565 | Max | Unten am Amboss steht der Name einer Firma. Ich hab das Gefühl, die liefert auch Raketen-Rollschuhe. | Ansehen: Amboss, zweites Mal |
 | W4\_KAPI\_MAX\_0570 | Max | Er wiegt nichts. Comic-Physik. Ich stecke einen Amboss ein. Das ist der seltsamste Satz meines Lebens. | Nehmen: Amboss |
 | W4\_KAPI\_PIX\_0580 | Pixel | Der Amboss bleibt im Inventar. Mein Kopf erinnert sich. | Ansehen: Amboss im Inventar; Pixel |
+| W4\_KAPI\_PIX\_0585 | Pixel | Wenn ich ihn ansehe, wird mein Kopf flacher. In Gedanken. Ich habe Erinnerungen in Pfannkuchenform. | Ansehen: Amboss im Inventar, zweites Mal; Pixel |
 | W4\_KAPI\_MAX\_0590 | Max | WRRUMM. Eine riesige Blase. Die Helden weichen zurück. Die Lichtröhre ist hier offiziell eine Waffe. | Benutzen: Lichtröhre im Comic-Kanal; WRRUMM-Blase |
 | W4\_KAPI\_PIX\_0600 | Pixel | Die Macht ist nicht mit dir. Aber das Marketing. | nach 0590 |
 | W4\_KAPI\_MAX\_0610 | Max | Die Bananenschale ist hier knallgelb. Jemand wird darauf meterweit rutschen. Hoffentlich nicht ich. | Ansehen: frische Bananenschale im Comic-Kanal |
+| W4\_KAPI\_MAX\_0615 | Max | Die Schale glänzt wie frisch gewachst. Hier rutscht man nicht aus. Hier fliegt man. | Ansehen: frische Bananenschale im Comic-Kanal, zweites Mal |
 | W4\_KAPI\_MAX\_0620 | Max | Die faule Banane hat sich verändert. Grün, mit Zündschnur. Das ist keine Banane mehr. Das ist ein Argument. | Ansehen: Bananenschale im Comic-Kanal, nach dem Grusel-Sender; Stinkbombe |
+| W4\_KAPI\_MAX\_0625 | Max | Die Zündschnur zischt leise. Oder das ist der Geruch. Bei der Banane weiß man es nicht mehr. | Ansehen: Bananenschale im Comic-Kanal, nach dem Grusel-Sender, zweites Mal; Stinkbombe |
 | W4\_KAPI\_MAX\_0630 | Max | Der Käse glüht grün und funkelt. Radioaktiver Wunderkäse. Ich sollte ihn nicht anfassen. Ich habe ihn in der Tasche. | Ansehen: Fondue-Käse im Comic-Kanal, nach dem Grusel-Sender |
+| W4\_KAPI\_MAX\_0635 | Max | Der Käse summt. Leise. Er hat Kräfte. Ich hab ein mulmiges Gefühl. Ich glaube, das ist die Nebenwirkung. | Ansehen: Fondue-Käse im Comic-Kanal, nach dem Grusel-Sender, zweites Mal |
 | W4\_KAPI\_MAX\_0640 | Max | Normaler Käse. Im Comic. Er ist nur gelber als sonst. Das reicht nicht für eine Herkunftsgeschichte. | Ansehen: Fondue-Käse im Comic-Kanal, ohne Grusel-Sender |
+| W4\_KAPI\_MAX\_0645 | Max | Ich halte den Käse ins Licht. Er ist einfach Käse. Kein Schicksal, keine Bestimmung. Ganz normaler Gouda-Alltag. | Ansehen: Fondue-Käse im Comic-Kanal, ohne Grusel-Sender, zweites Mal |
 | W4\_KAPI\_MAX\_0650 | Max | Pause. Der Fledermann hängt still. Das ist kein Unterschied. | Pause in Kapitolis |
 | W4\_KAPI\_MAX\_0660 | Max | Untertitel bei Siegfried: „Schlafen. Schlafen. Katze auf Baum. Schlafen.“ Ich habe denselben Bildschirmschoner. | Untertitel auf Siegfried |
 
@@ -657,20 +754,30 @@ In der Fabrik läuft ein Unfall als Schleife. Rückspulen hält an vier festen E
 | W4\_FABR\_NAR\_0020 | – | Schleife: Ein Arbeiter winkt, zieht den Hebel, der Bottich klappt auf, Käse spritzt, das Laufband rast. Dann von vorn. | Szene, Dauerschleife |
 | W4\_FABR\_MAX\_0030 | Max | Das ist ein GIF. Ich stehe in einem GIF. |  |
 | W4\_FABR\_PIX\_0040 | Pixel | Wenn es hier nach Käse riecht, ist der Held nicht weit. | Ansehen: Käse-Suchscheinwerfer am Himmel |
+| W4\_FABR\_PIX\_0045 | Pixel | Ein Käse am Himmel. Das ist die schönste Wolke, die ich je gesehen habe. Ich warte, bis sie runterfällt. | Ansehen: Käse-Suchscheinwerfer am Himmel, zweites Mal |
 | W4\_FABR\_MAX\_0050 | Max | Ein Scheinwerfer, der einen Käse an den Himmel wirft. Die Stadt ruft nach jemandem. Nach einem Käse. | Ansehen: Suchscheinwerfer, zweites Mal |
 | W4\_FABR\_MAX\_0060 | Max | Riesige Bottiche voller gelbem Zeug. Es blubbert. Es lebt vielleicht. | Ansehen: Bottiche |
+| W4\_FABR\_MAX\_0065 | Max | Ein Bottich macht Blasen in Form von Gesichtern. Ich zähle drei. Sie lächeln. Ich nicht. | Ansehen: Bottiche, zweites Mal |
 | W4\_FABR\_MAX\_0070 | Max | Zu heiß, zu schnell, zu zu. Der Deckel klappt immer genau dann zu, wenn ich dran bin. Timing ist nicht meins. | Benutzen: Bottiche ohne Rückspulen |
 | W4\_FABR\_MAX\_0080 | Max | Ein Laufsteg über den Bottichen. Ohne Geländer. Das Geländer ist der Unfall. | Ansehen: Laufsteg |
+| W4\_FABR\_MAX\_0085 | Max | Ich guck runter. Das Gelb guckt hoch. Jemand ist in diesem Comic schon mal gefallen, und dann kam ein Kostüm. | Ansehen: Laufsteg, zweites Mal |
 | W4\_FABR\_MAX\_0090 | Max | Ein Laufband mit Käseblöcken. Sie fahren im Kreis. Wie meine Gedanken um drei Uhr nachts. | Ansehen: Laufband |
+| W4\_FABR\_MAX\_0095 | Max | Ein Käseblock hat ein Loch in Herzform. Er wird es nicht weit bringen. Zu viel Gefühl für Fondue. | Ansehen: Laufband, zweites Mal |
 | W4\_FABR\_MAX\_0100 | Max | Warnschilder ohne Text. Ausrufezeichen, Blitz, ein Käse mit Gesicht. Ich verstehe trotzdem alles. | Ansehen: Warnschilder |
+| W4\_FABR\_MAX\_0105 | Max | Das Käse-Gesicht auf dem Schild sieht erschrocken aus. Das macht mir mehr Angst als der Blitz. | Ansehen: Warnschilder, zweites Mal |
 | W4\_FABR\_MAX\_0110 | Max | Ein großer Hebel. Rot. Natürlich rot. Jeder rote Hebel will gezogen werden, und jeder bereut es. | Ansehen: Hebel |
+| W4\_FABR\_MAX\_0115 | Max | Unter dem Hebel steht in Handschrift: „Nein.“ Und darunter: „Doch?“ Hier hat schon einer verloren. | Ansehen: Hebel, zweites Mal |
 | W4\_FABR\_MAX\_0120 | Max | Ich ziehe. Er ist schon gezogen. Die Schleife war schneller. | Benutzen: Hebel |
 | W4\_FABR\_MAX\_0130 | Max | Der Scheinwerfer ist am Dach. Da komme ich nicht hin. Da wollen die meisten Helden hin. | Benutzen: Suchscheinwerfer |
 | W4\_FABR\_MAX\_0140 | Max | Rückspulen. Die Schleife bleibt stehen. Vier Bilder, wie eine Filmrolle. Ich darf eins aussuchen. | Rückspulen in der Fabrik; Einzelbild-Auswahl |
 | W4\_FABR\_MAX\_0150 | Max | Bild eins: Der Arbeiter winkt, der Bottich ist zu. Wenn ich hier springe, lande ich auf einem Deckel. Mit Schwung. | Ansehen: Einzelbild 1 |
+| W4\_FABR\_MAX\_0155 | Max | Bild eins nochmal: Bottich zu, Arbeiter winkt. Ein Deckel ist der beste Boden, den man hier kriegen kann. | Ansehen: Einzelbild 1, zweites Mal |
 | W4\_FABR\_MAX\_0160 | Max | Bild zwei: Der Hebel wird gezogen. Alles spannt sich. Nichts ist offen. | Ansehen: Einzelbild 2 |
+| W4\_FABR\_MAX\_0165 | Max | Bild zwei nochmal: Hebel gezogen, alles gespannt, nichts offen. Der Moment, bevor im Film die Musik aussetzt. | Ansehen: Einzelbild 2, zweites Mal |
 | W4\_FABR\_MAX\_0170 | Max | Bild drei: Der Bottich klappt auf. Der Käse blubbert. Das ist das Bild, auf dem im Comic immer „OH NEIN“ steht. | Ansehen: Einzelbild 3 |
+| W4\_FABR\_MAX\_0175 | Max | Bild drei nochmal: Der Bottich ist offen. Das ist der Moment. In diesem Bild wird man Held. Oder Fondue. | Ansehen: Einzelbild 3, zweites Mal |
 | W4\_FABR\_MAX\_0180 | Max | Bild vier: Das Laufband rast. Der Bottich ist schon wieder zu. Zu spät ist auch eine Zeit. | Ansehen: Einzelbild 4 |
+| W4\_FABR\_MAX\_0185 | Max | Bild vier nochmal: Das Band rast, der Bottich ist zu. Wer hier erst springt, landet bei den Käseblöcken. | Ansehen: Einzelbild 4, zweites Mal |
 | W4\_FABR\_NAR\_0190 | – | Max springt vom Laufsteg und kracht auf den geschlossenen Deckel. BOING. Er federt zurück auf den Steg. | Einzelbild 1 gewählt |
 | W4\_FABR\_MAX\_0200 | Max | Deckel. Ich habe Käse auf den Deckel gesprungen. Niemand wurde je Held durch einen Deckel. | nach 0190 |
 | W4\_FABR\_NAR\_0210 | – | Max greift in den Hebel, der Hebel greift zurück. Er hängt kurz kopfüber wie der Fledermann und fällt zurück auf den Steg. | Einzelbild 2 gewählt |
@@ -691,6 +798,7 @@ In der Fabrik läuft ein Unfall als Schleife. Rückspulen hält an vier festen E
 | W4\_FABR\_MAX\_0360 | Max | Der Bottich ist offen. Aber mein Käse ist nur normaler Käse. Wer in normalen Käse fällt, ist kein Held, sondern Abendessen. | Einzelbild 3 gewählt, Käse nicht als Wunderkäse |
 | W4\_FABR\_MAX\_0370 | Max | Ohne Umhang in den Bottich? Dann bin ich nur ein Junge mit Käse. Das war ich im Grunde schon vorher. | Einzelbild 3 gewählt, ohne Bettlaken |
 | W4\_FABR\_PIX\_0380 | Pixel | Der Käse muss leuchten, bevor er funkelt. Leuchten tun Dinge dort, wo es dunkel ist. Sehr dunkel. Mit Nebel. | Ansehen: normaler Käse in der Fabrik; Hinweis R10a |
+| W4\_FABR\_PIX\_0385 | Pixel | Leuchten kommt vom Dunkeln. Funkeln kommt vom Leuchten. Das ist Käse-Philosophie. Ich hab sie gerade erfunden. | Ansehen: normaler Käse in der Fabrik, zweites Mal; Hinweis R10a |
 | W4\_FABR\_MAX\_0390 | Max | Pause. Der Käse hängt in der Luft. Der Arbeiter winkt eingefroren. Der Bottich bleibt zu. Anhalten ist nicht auswählen. | Pause in der Fabrik |
 | W4\_FABR\_MAX\_0400 | Max | Stumm. Das Blubbern ist weg. Der Unfall passiert trotzdem. Leise Unfälle sind die schlimmsten. | Stumm in der Fabrik |
 | W4\_FABR\_MAX\_0410 | Max | Der Amboss fällt in den Bottich. Platsch. Ein Amboss in Käse. Das Problem bin immer noch ich. | Amboss auf Bottich |
@@ -727,10 +835,15 @@ Max findet den Spot in der Programmzeitschrift und schaltet hinein. Dr. Werbepau
 | W4\_WERB\_MAX\_0240 | Max | Knapp daneben. Im Comic trifft der Amboss nur Leute, die es nicht verdienen. Das ist eine Regel. Pixel kann sie bestätigen. | nach 0230 |
 | W4\_WERB\_WIL\_0250 | Wonder-Wilma | Der Schurke ist weg, aber die Geschichte ist nicht zu Ende. Da liegen die Panels. Wer sie richtig legt, entscheidet, wie es ausgeht. | nach 0210; Panels liegen am Boden, die Taste darunter |
 | W4\_WERB\_MAX\_0260 | Max | Vier Bilder. Wanduhr oben, Sprechblase unten, Schurke mittendrin. Ich soll die Folge schneiden. Das kann ich. Ich habe Recaps gesehen. | Ansehen: Comic-Panels; öffnet das Sortieren |
+| W4\_WERB\_MAX\_0265 | Max | Vier Bilder. Ich hab schon ganze Staffeln in der richtigen Reihenfolge geguckt. Das hier schaff ich. Vermutlich. | Ansehen: Comic-Panels, zweites Mal; öffnet das Sortieren |
 | W4\_WERB\_MAX\_0270 | Max | Der Schurke lacht. Uhr auf zwölf. Runde Blase mit kleinen Blasen, also denkt er nur. Sauber ist er auch noch. Das ist der Anfang. | Ansehen: Panel Schurke lacht |
+| W4\_WERB\_MAX\_0275 | Max | Der Schurke lacht, Uhr auf zwölf, er denkt nur. Wer im Comic denkt, plant was. Wer laut lacht, auch. | Ansehen: Panel Schurke lacht, zweites Mal |
 | W4\_WERB\_MAX\_0280 | Max | Der Held springt, Uhr auf zwölf Uhr eins, die Banane liegt schon. Zackige Blase: Jemand ruft. | Ansehen: Panel Held springt |
+| W4\_WERB\_MAX\_0285 | Max | Zwölf Uhr eins, der Held springt, die Banane liegt bereit. Zackige Blase. Ein Held ruft immer, bevor er springt. Gehört sich so. | Ansehen: Panel Held springt, zweites Mal |
 | W4\_WERB\_MAX\_0290 | Max | Eine Explosion im Käsebottich. Zwölf Uhr zwei. Keine Blase, nur Wumm. Wumm hat keinen Text. | Ansehen: Panel Explosion |
+| W4\_WERB\_MAX\_0295 | Max | Zwölf Uhr zwei. Wumm. Wumm braucht keinen Text. Wumm ist eine Sprache für sich. | Ansehen: Panel Explosion, zweites Mal |
 | W4\_WERB\_MAX\_0300 | Max | Beine ragen aus dem Käse. Zwölf Uhr drei. Kleine Blase. Daneben ein Held mit Krone aus Käse. Das ist das Ende. Mein Ende. Das gute. | Ansehen: Panel Schurke im Käse |
+| W4\_WERB\_MAX\_0305 | Max | Zwölf Uhr drei. Nur Beine im Käse. Ein Abspann ohne Abspann. Mein liebstes Bild. | Ansehen: Panel Schurke im Käse, zweites Mal |
 | W4\_WERB\_PIX\_0310 | Pixel | Die Uhr läuft von Bild zu Bild eine Minute weiter. Wer Uhren lesen kann, braucht keine Geschichte. | Hinweis R11d, nach dem ersten Fehlversuch |
 | W4\_WERB\_NAR\_0320 | – | Falsche Folge: Der Mini-Comic spielt ab. Der Held springt, bevor die Banane liegt, rutscht selbst aus und landet im Käse. Werbepause lacht. ENDE. | Panels falsch geordnet |
 | W4\_WERB\_MAX\_0330 | Max | Der Held liegt im Käse. Der Schurke lacht. Das war die falsche Reihenfolge. Oder einfach ein realistisches Ende. | nach 0320 |
@@ -741,14 +854,22 @@ Max findet den Spot in der Programmzeitschrift und schaltet hinein. Dr. Werbepau
 | W4\_WERB\_WIL\_0380 | Wonder-Wilma | Käsemann. Du hast die Folge gerettet. Nicht die Stadt, die Folge. Das zählt hier mehr. |  |
 | W4\_WERB\_FLE\_0390 | Fledermann | Ich habe alles gesehen! Kopfüber! Es war großartig, aber verkehrt herum! |  |
 | W4\_WERB\_MAX\_0400 | Max | Ein Podest unter einem Scheinwerfer. Darauf stand der Couch-Magnet. Jetzt steht da nichts. Das Nichts ist auch im Angebot. | Ansehen: Produktpodest |
+| W4\_WERB\_MAX\_0405 | Max | Auf dem Podest ist ein runder Abdruck. Der Couch-Magnet war hier. Sogar sein Staub wirkt verkaufsfördernd. | Ansehen: Produktpodest, zweites Mal |
 | W4\_WERB\_MAX\_0410 | Max | Eine Kamera auf drei Beinen. Rotes Licht. Sie nimmt auf. Immer. Wie alles heute. | Ansehen: Kamera |
+| W4\_WERB\_MAX\_0415 | Max | Ich wink in die Kamera. Das rote Licht blinkt. Irgendwo da draußen schaltet jetzt jemand um. | Ansehen: Kamera, zweites Mal |
 | W4\_WERB\_MAX\_0420 | Max | Ein Regiestuhl. Darauf steht „DR. W.“. Es sitzt niemand drin, er regiert im Stehen. | Ansehen: Regiestuhl |
+| W4\_WERB\_MAX\_0425 | Max | Im Stuhl liegt ein Kissen mit „Ich bin der Chef“. Er hat es selbst bestickt. Mit Werbung drauf. | Ansehen: Regiestuhl, zweites Mal |
 | W4\_WERB\_MAX\_0430 | Max | Eine Palme aus Plastik. Im Topf. Sie wirbt für Urlaub, den niemand hier je hatte. | Ansehen: Plastikpalme |
+| W4\_WERB\_MAX\_0435 | Max | An der Palme hängt noch das Preisschild. Sie ist im Angebot. Für immer. | Ansehen: Plastikpalme, zweites Mal |
 | W4\_WERB\_MAX\_0440 | Max | Eine Klappe am Boden. „Szene 1, Take 400“. Er hat den Spot vierhundertmal gedreht. Oder einmal und nie aufgehört. | Ansehen: Klappe |
+| W4\_WERB\_MAX\_0445 | Max | Take 400. Und er hat immer noch nicht den Satz hingekriegt. Ich hab plötzlich Mitleid. Fast. | Ansehen: Klappe, zweites Mal |
 | W4\_WERB\_MAX\_0450 | Max | Regenbogenstreifen als Hintergrund. Grell, laut, bunt. Es ist wie ein Pop-up, das man nicht schließen kann. | Ansehen: Hintergrund |
+| W4\_WERB\_MAX\_0455 | Max | Ich guck auf die Streifen, dann weg. Jetzt seh ich Regenbogen auf allem. Werbung bleibt hängen. Leider. | Ansehen: Hintergrund, zweites Mal |
 | W4\_WERB\_MAX\_0460 | Max | Dr. Werbepause. Ein Anzug aus Aufklebern, ein Megafon, ein Schild ohne Text. Er ist eine Werbepause in Menschenform. Ich habe ihn jahrelang weggeklickt. | Ansehen: Dr. Werbepause |
+| W4\_WERB\_MAX\_0465 | Max | Auf einem Aufkleber an seinem Ärmel steht: „Sind Sie noch da?“ Er fragt das alle paar Minuten. Auch sich selbst. | Ansehen: Dr. Werbepause, zweites Mal |
 | W4\_WERB\_MAX\_0470 | Max | Nur der Jingle, keine Bombe. Werbepause steht da und wartet auf seinen Ton. Er sieht ohne Musik sehr klein aus. Trotzdem steht er im Weg. | Benutzen: Podest nach Stumm, vor der Stinkbombe |
 | W4\_WERB\_MAX\_0480 | Max | Nächste Folge in fünf Sekunden. Endlich mal eine ehrliche Drohung. | Ansehen: Autoplay-Countdown |
+| W4\_WERB\_MAX\_0485 | Max | Vier. Drei. Ich drücke nichts. Zwei. Ich bin stark. Eins. Ich bin sehr stark. Glaube ich. | Ansehen: Autoplay-Countdown, zweites Mal |
 | W4\_WERB\_MAX\_0490 | Max | Allein, ohne Team, ohne Umhang? Im Comic gewinnt nur, wer eine Herkunftsgeschichte hat. Erst Held werden, dann werfen. | Stinkbombe auf Werbepause, noch nicht Käsemann |
 | W4\_WERB\_MAX\_0500 | Max | Die Taste liegt unter den Panels. Erst die Geschichte, dann die Beute. | Nehmen: Taste Sendersuchlauf, bevor die Panels richtig liegen |
 | W4\_WERB\_PIX\_0510 | Pixel | Deine Beine sind gefangen. Dein Daumen nicht. Der war schon immer der fleißigste Teil von dir. | nach 0050, ohne Taste Stumm; Hinweis: Umschalten bringt Max hinaus |
@@ -765,7 +886,7 @@ Der Sendersuchlauf findet Kanal 999. Im Empfang liest Max den Aufzugscode in den
 | W4\_EMPF\_EMP\_0040 | Empfangsdame | Haben Sie einen Termin. | kaut Kaugummi, ohne Fragezeichen |
 | W4\_EMPF\_MAX\_0050 | Max | Ich habe eine Fernbedienung. |  |
 | W4\_EMPF\_EMP\_0060 | Empfangsdame | Das haben alle. Setzen Sie sich. Der Intendant empfängt niemanden. Er sendet nur. |  |
-| W4\_EMPF\_MAX\_0070 | Max | Wie komme ich nach oben? | Option Empfangsdame |
+| W4\_EMPF\_MAX\_0070 | Max | Wie komme ich nach oben? | Option Empfangsdame (bleibt) |
 | W4\_EMPF\_EMP\_0080 | Empfangsdame | Mit dem Aufzug. Mit dem Code. Den ich nicht sage. Den ich auch nicht aufschreibe. Den ich nur denke. | Hinweis R12b |
 | W4\_EMPF\_MAX\_0090 | Max | Wer sind die zwei Herren? | Option Empfangsdame |
 | W4\_EMPF\_EMP\_0100 | Empfangsdame | Sicherheit. Sie stehen da. Das ist ihr Job. Sie sind sehr gut darin. |  |
@@ -784,14 +905,22 @@ Der Sendersuchlauf findet Kanal 999. Im Empfang liest Max den Aufzugscode in den
 | W4\_EMPF\_MAX\_0230 | Max | Untertitel beim Sicherheitsmann: „Mhm.“ Er denkt genau das, was er sagt. Beneidenswert. | Untertitel auf Sicherheitsmann |
 | W4\_EMPF\_MAX\_0240 | Max | Falscher Code. Das Feld piept. Die beiden Schränke sehen mich an, als hätte ich gefurzt. | Zahlenfeld mit falschem Code |
 | W4\_EMPF\_MAX\_0250 | Max | Ein Porträt in Gold: Zappmann mit Sonnenbrille. Messingschild: „Intendant seit 1988. Davor: siehe Kellerarchiv.“ Wer seine Vergangenheit in den Keller schreibt, hat Angst vor ihr. | Ansehen: Porträt; vor der Begegnung |
+| W4\_EMPF\_MAX\_0255 | Max | Die Sonnenbrille auf dem Bild glänzt mehr als das Gold. Selbst sein Porträt ist für Scheinwerfer gemacht. | Ansehen: Porträt, zweites Mal; vor der Begegnung |
 | W4\_EMPF\_PIX\_0260 | Pixel | Und wer sie auf Band hat, gewinnt. | nach 0250 |
 | W4\_EMPF\_MAX\_0270 | Max | Das Fernsehen hat ihn erwischt. Klassischer Fall. | Ansehen: Kaputtes Radio |
+| W4\_EMPF\_MAX\_0275 | Max | Aus dem Radio kommt ein letzter Ton. Er klingt wie ein Lied über einen Videostar, der jemanden umgebracht hat. | Ansehen: Kaputtes Radio, zweites Mal |
 | W4\_EMPF\_PIX\_0280 | Pixel | Lauter Hits, die keiner mehr kennt. Wie bei deinem Opa. | Ansehen: Wand mit goldenen Schallplatten |
+| W4\_EMPF\_PIX\_0285 | Pixel | Eine Platte heißt „Sommer am Kanal“. Das war ein Hit. Ich weiß es. Ich lag damals unter dem Plattenspieler. | Ansehen: Wand mit goldenen Schallplatten, zweites Mal |
 | W4\_EMPF\_MAX\_0290 | Max | Ein Tresen aus schwarzem Marmor. Kalt, glänzend, mit einer Frau dahinter, die beides übertrifft. | Ansehen: Empfangstresen |
+| W4\_EMPF\_MAX\_0295 | Max | Auf dem Tresen steht eine Klingel. Ich klingel nicht. Sie würde mich ansehen. Das will ich nicht erleben. | Ansehen: Empfangstresen, zweites Mal |
 | W4\_EMPF\_MAX\_0300 | Max | Samtkordeln. Sie trennen nichts von nichts. Aber sehr elegant. | Ansehen: Samtkordeln |
+| W4\_EMPF\_MAX\_0305 | Max | Ich steig nicht drüber. Ich geh drum herum. Die Kordel hat gewonnen, ohne sich zu bewegen. | Ansehen: Samtkordeln, zweites Mal |
 | W4\_EMPF\_MAX\_0310 | Max | Ein goldenes Logo ohne Schrift. Die Marke ist so bekannt, dass sie keinen Namen mehr braucht. Oder niemand hat sich einen ausgedacht. | Ansehen: Logo an der Wand |
+| W4\_EMPF\_MAX\_0315 | Max | Das Logo ist ein goldener Kreis. Er sieht aus wie ein Auge. Oder wie ein Knopf. Bei Zappmann ist das dasselbe. | Ansehen: Logo an der Wand, zweites Mal |
 | W4\_EMPF\_MAX\_0320 | Max | Eine goldene Aufzugtür. Dahinter fährt es nach oben. Zum Studio. Zum Sofa. Zu allem, was ich eigentlich wollte. Das ist das Problem. | Ansehen: Aufzug |
+| W4\_EMPF\_MAX\_0325 | Max | Im Aufzug läuft leise Musik. Sogar durch die Tür. Fahrstuhlmusik ist das Einzige, was in jeder Welt gleich ist. | Ansehen: Aufzug, zweites Mal |
 | W4\_EMPF\_MAX\_0330 | Max | Eine Servicetür. Dahinter geht es runter. Es ist immer dasselbe: Oben Gold, unten Beton. | Ansehen: Servicetür zum Keller |
+| W4\_EMPF\_MAX\_0335 | Max | An der Tür steht: „Nur für Personal.“ Darunter, gekratzt: „Und für Vergessene.“ | Ansehen: Servicetür zum Keller, zweites Mal |
 | W4\_EMPF\_PIX\_0340 | Pixel | Halt. Wer seine Vergangenheit in den Keller schreibt, den besucht man nicht mit leeren Pfoten. Erst ins Archiv. | Benutzen: Zahlenfeld oder Aufzug ohne Archivband; nach R7 |
 | W4\_EMPF\_PIX\_0350 | Pixel | Halt. Wir wissen nicht mal, wer der Mann früher war. // Frag deinen Opa. Er hat im Spukhaus eine Lichterkette und zu viel Zeit. | Benutzen: Zahlenfeld oder Aufzug; vor R7; Kaskade |
 
@@ -801,13 +930,19 @@ Kellerarchiv.
 | --- | --- | --- | --- |
 | W4\_ARCH\_MAX\_0010 | Max | Eine Müllpresse voller Kassetten. Die Wände rücken langsam zusammen. Hier landen also alle Serien nach der ersten Staffel. | erstes Betreten |
 | W4\_ARCH\_PIX\_0020 | Pixel | Der guckt seit 1977 nur noch Wiederholungen. | Ansehen: Auge auf dem Stiel |
+| W4\_ARCH\_PIX\_0025 | Pixel | Es blinzelt im Takt des Abspanns. Es hat jede Folge gesehen. Es kennt das Ende. Es verrät nichts. | Ansehen: Auge auf dem Stiel, zweites Mal |
 | W4\_ARCH\_MAX\_0030 | Max | Ein Auge auf einem Stiel. Zwischen den Bändern. Es blinzelt mich an. Ich blinzle zurück. Wir haben jetzt etwas gemeinsam. | Ansehen: Auge, zweites Mal |
 | W4\_ARCH\_MAX\_0040 | Max | Regale voller Bänder ohne Beschriftung. Abgesetzt, vergessen, unbenannt. Das Archiv ist eine Warteliste für nichts. | Ansehen: Regale |
+| W4\_ARCH\_MAX\_0045 | Max | Ein Band heißt nur „Pilot“. Eine Folge, die nie eine Serie wurde. Das ist das Traurigste im ganzen Archiv. | Ansehen: Regale, zweites Mal |
 | W4\_ARCH\_MAX\_0050 | Max | Eine Neonröhre, die flackert. Sogar das Licht hier ist eine Wiederholung. | Ansehen: Neonröhre |
+| W4\_ARCH\_MAX\_0055 | Max | Flacker, flacker, an. Flacker. Ich glaube, die Röhre zählt. Wie ich vor der Mathearbeit. | Ansehen: Neonröhre, zweites Mal |
 | W4\_ARCH\_MAX\_0060 | Max | Die Wände rücken ein Stück, dann zurück. Die Presse hat Zeit. Niemand hat je gegen eine Presse gewonnen, die Zeit hat. | Ansehen: Müllpresse |
+| W4\_ARCH\_MAX\_0065 | Max | Die Wände atmen. Rein, raus. Ich halte die Luft an. Nur aus Solidarität. | Ansehen: Müllpresse, zweites Mal |
 | W4\_ARCH\_MAX\_0070 | Max | Da ragt ein Band heraus. Handschrift auf dem Etikett: „Zappis Puppenstube, 1977“. | Ansehen: Band in der Presse; nach R7 |
+| W4\_ARCH\_MAX\_0075 | Max | „Zappis Puppenstube, 1977.“ Die Schrift ist kindlich. Und ein bisschen traurig. Wie ein Kinderfoto, das man nicht zeigen will. | Ansehen: Band in der Presse, zweites Mal; nach R7 |
 | W4\_ARCH\_MAX\_0080 | Max | Zappis Puppenstube. Opas Lampen haben davon erzählt. Das ist seine erste Sendung. Die, die keiner gesehen hat. Ich nehme sie mit. | Nehmen: Archivband; nach R7 |
 | W4\_ARCH\_MAX\_0090 | Max | Ein Band mit verblasstem Etikett. Irgendwas mit P. Ich kenne keinen, der so heißt. Ich lass es, wo es ist. | Ansehen: Band in der Presse; vor R7 |
+| W4\_ARCH\_MAX\_0095 | Max | Das P auf dem Etikett ist verschnörkelt. Wer schreibt ein P mit so viel Mühe? Jemand, dem es wichtig war. | Ansehen: Band in der Presse, zweites Mal; vor R7 |
 | W4\_ARCH\_PIX\_0100 | Pixel | Wer die Vergangenheit eines Mannes in der Pfote hält, hat einen Trumpf. Oder einen Bandsalat. | Archivband im Inventar |
 | W4\_ARCH\_MAX\_0110 | Max | Pause. Die Wände stehen. Das Auge blinzelt nicht. Es sieht aus wie ein Standbild aus einem Film, den ich nicht zu Ende gesehen habe. | Pause im Archiv |
 | W4\_ARCH\_MAX\_0120 | Max | Rückspulen. Die Wände fahren auseinander, die Bänder richten sich auf. Kurz sieht es aus, als bekäme alles eine zweite Staffel. Dann nicht mehr. | Rückspulen im Archiv |
@@ -824,6 +959,7 @@ Szene. Der Aufzug öffnet sich auf eine Talkshow-Bühne: goldenes Sofa, Applaus-
 | W4\_STUD\_MAX\_0020 | Max | Sie haben Opas Fernbedienung. Die goldene. Ich hätte sie gern zurück. |  |
 | W4\_STUD\_ZAP\_0030 | Zappmann | Alles zu seiner Zeit. Erst das Angebot. Setz dich, Max. Das Sofa ist warm. Es ist immer warm. | klopft aufs Sofa |
 | W4\_STUD\_MAX\_0040 | Max | Verlockend. Genau deshalb nicht. | Ansehen: goldenes Sofa, zugleich Einstieg in das Angebot |
+| W4\_STUD\_MAX\_0045 | Max | Es ist so weich, dass es mich ansieht. Ich sehe zurück. Ich darf nicht blinzeln. | Ansehen: goldenes Sofa, zugleich Einstieg in das Angebot, zweites Mal |
 | W4\_STUD\_ZAP\_0050 | Zappmann | Hör mir zu. Du wärst die Show. Alle schauen dir zu. Du musst nie wieder etwas tun. Nie wieder aufstehen. Nie wieder Milch holen. Nur sitzen. Und gesehen werden. | weich, Monitorwand zeigt Max auf jedem Bildschirm |
 | W4\_STUD\_PIX\_0060 | Pixel | Er kennt dein Leben. Er hat es offenbar gesendet. | auf der Schulter, leise |
 | W4\_STUD\_MAX\_0070 | Max | Klingt gut. | Option 1, Zusage |
@@ -863,6 +999,7 @@ Szene. Der Aufzug öffnet sich auf eine Talkshow-Bühne: goldenes Sofa, Applaus-
 | W4\_STUD\_ZAP\_0410 | Zappmann | Lange Geschichte. Frag ihn. | steht langsam auf |
 | W4\_STUD\_PIX\_0420 | Pixel | Ei, Mehl, Batterie, Fernbedienung, Backofen, Vorheizen. // Ich sage es nicht. Ich bin kein Spoiler. Ich bin ein Kater. | Kaskade; Pixel-Andeutung |
 | W4\_STUD\_MAX\_0430 | Max | Die Goldene Fernbedienung. Sie sieht aus wie Opas normale. Nur dass jemand sie angemalt hat. Mit Gold. Und Bedeutung. | Ansehen: Goldene Fernbedienung |
+| W4\_STUD\_MAX\_0435 | Max | Sie liegt warm in der Hand. Wie Opas Fernbedienung nach drei Stunden Sport. Nur ohne Chipsfett. | Ansehen: Goldene Fernbedienung, zweites Mal |
 | W4\_STUD\_PIX\_0440 | Pixel | Du hast keinen einzigen Hinweis bis zum Ende gebraucht. Ich bin … beeindruckt. Das wird nicht wieder vorkommen. Weder das noch das Sagen. | Abschluss R13; nur wenn Stufe 3 in Welt 4 nie genutzt wurde |
 | W4\_STUD\_PIX\_0450 | Pixel | Milch. Endlich mal Milch. Das kommt auf die Liste. Ganz oben. Unterstrichen. | Abschluss R13; Notizbuch Seite 3 |
 | W4\_STUD\_MAX\_0460 | Max | Die Goldene hat eine rote Taste. Opa würde sagen: Nicht drücken. Ich drücke sie nicht. Noch nicht. | Benutzen: Goldene Fernbedienung; leitet zum Werbeblock und zur Rückkehr über |
@@ -880,16 +1017,23 @@ Falsche Tasten im Kampf (jede Reaktion sagt, was fehlt) und Ansehen im Studio.
 | W4\_STUD\_MAX\_0570 | Max | Stumm während des Puppenbilds? Dann höre ich nicht, wie er leise wird. Der Applaus muss erst laut werden. | Stumm vor Schritt 2 abgeschlossen |
 | W4\_STUD\_MAX\_0580 | Max | Pause. Die Show steht schon. Er steht nicht. Eine Taste wirkt nur einmal pro Grund. | Pause nach Schritt 1 |
 | W4\_STUD\_MAX\_0590 | Max | Ein Moderationspult mit Kaffeetasse. Auf der Tasse steht: „Bester Intendant“. Er hat sie sich selbst geschenkt. | Ansehen: Moderationspult |
+| W4\_STUD\_MAX\_0595 | Max | In der Tasse ist noch Kaffee. Kalt. Er hat ihn stehen lassen, weil er gerade auf Sendung war. Er ist immer auf Sendung. | Ansehen: Moderationspult, zweites Mal |
 | W4\_STUD\_PIX\_0600 | Pixel | So sieht also dein Wochenende aus. | Ansehen: Monitorwand |
 | W4\_STUD\_MAX\_0610 | Max | Eine Wand aus kleinen Fernsehern. Auf jedem läuft etwas anderes. Ich habe das zu Hause auf einem Bildschirm. Es heißt Startseite. | Ansehen: Monitorwand, zweites Mal |
 | W4\_STUD\_MAX\_0620 | Max | Ein Applaus-Schild. Wenn es leuchtet, klatscht ein Band. Das ist das Publikum, das er verdient. | Ansehen: Applaus-Schild |
+| W4\_STUD\_MAX\_0625 | Max | Das Schild flackert auf, obwohl keiner was gemacht hat. Der Applaus läuft ins Leere. Wie bei mir zu Hause. | Ansehen: Applaus-Schild, zweites Mal |
 | W4\_STUD\_MAX\_0630 | Max | Die Quote. Eine Zahl, die sagt, wie viele zuschauen. Er sieht sie öfter an als das Publikum. | Ansehen: Quotenanzeige |
+| W4\_STUD\_MAX\_0635 | Max | Die Quote ist gerade gestiegen. Um einen. Ich glaube, das bin ich. Ich fühl mich benutzt. | Ansehen: Quotenanzeige, zweites Mal |
 | W4\_STUD\_MAX\_0640 | Max | Und ich dachte, mein Hobby ist peinlich. | Ansehen: Wettkandidat, der Buntstifte am Geschmack erkennt |
+| W4\_STUD\_MAX\_0645 | Max | Er hat bei „Dunkelgrün“ gezögert. Ich hab gesehen, wie er gelitten hat. Top, die Wette gilt nicht. | Ansehen: Wettkandidat, der Buntstifte am Geschmack erkennt, zweites Mal |
 | W4\_STUD\_WET\_0650 | Wettkandidat | Ocker. Nein. Siena. Nein, das ist … Fleischfarben. Ich bin mir sicher. | Reden: Wettkandidat, lutscht am Stift |
 | W4\_STUD\_MAX\_0660 | Max | Zappmann. Glitzersakko, Silberhaare, Sonnenbrille drinnen. Ein Mann, der aussieht wie eine Show und sich anfühlt wie eine Wiederholung. | Ansehen: Zappmann |
+| W4\_STUD\_MAX\_0665 | Max | Er grinst, als hätte er die Antwort schon, bevor ich frage. Ich frag nichts. Er grinst trotzdem. | Ansehen: Zappmann, zweites Mal |
 | W4\_STUD\_MAX\_0670 | Max | Der Aufzug. Zurück nach unten geht es nur mit der Goldenen. Oder gar nicht. Zappmann hat die Ausgänge sparsam geplant. | Ansehen: Aufzugtür im Studio |
+| W4\_STUD\_MAX\_0675 | Max | Neben der Tür ist ein Knopf mit der Aufschrift „Notausgang“. Er ist aufgemalt. Natürlich ist er aufgemalt. | Ansehen: Aufzugtür im Studio, zweites Mal |
 | W4\_STUD\_MAX\_0680 | Max | Der Amboss fällt hier nicht. Kein Comic, keine Schwerkraft für Pointen. Er liegt einfach da und ist schwer. | Amboss auf Zappmann |
 | W4\_STUD\_MAX\_0690 | Max | Das Drehbuch des Erzählers in der Zentrale: „Das Männchen erreicht das oberste Stockwerk. Es wird nicht gefeiert. Es wird gesendet.“ | Ansehen: Drehbuch in der Senderzentrale |
+| W4\_STUD\_MAX\_0695 | Max | Weiter unten: „Das Männchen hat Durst.“ Durchgestrichen. Daneben: „Unwichtig.“ Ich hab trotzdem Durst. | Ansehen: Drehbuch in der Senderzentrale, zweites Mal |
 
 ## 17. Fernbedienungs-Tasten quer durch die Sender
 
@@ -955,6 +1099,46 @@ Pixel wird als Gegenstand auf eine Figur oder einen Gegenstand gezogen (eine Zei
 | W4\_PIXM\_PIX\_0270 | Pixel | Riecht nach Staub, 1977 und einem Mann, der Puppen lieber mochte als Menschen. Verständlich. | Schnuppern: Archivband |
 | W4\_PIXM\_PIX\_0280 | Pixel | Pfoten. Ich habe Pfoten. Das ist für Menschen mit Daumen. Also für dich. | Benutzen als Pixel: Fernbedienung, Zahlenfeld, Hebel, Lichterkette |
 | W4\_PIXM\_PIX\_0290 | Pixel | Ich trage nichts. Ich werde getragen. Das ist der Unterschied zwischen Kater und Kurier. | Nehmen als Pixel: jeder Inventar-Gegenstand |
+
+## 18b. Inventar ansehen (INV)
+
+Rechtsklick auf einen Gegenstand in der Inventarleiste. Erstes Mal die erste Zeile, zweites Mal die Zweitzeile, danach der Wiederholungs-Pool (siehe `05-spielsysteme.md`). Gegenstände, die hier fehlen, haben ihre Ansehen-Zeile schon in ihrem Abschnitt oder im Abschnitt, aus dem sie mitreisen.
+
+| ID | Sprecher | Text | Auslöser |
+| --- | --- | --- | --- |
+| W4\_INV\_MAX\_0010 | Max | Ein Bettlaken mit zwei Löchern. Ein Geist hat es mir überlassen. Darunter war nichts. Nicht mal ein Geist. | Ansehen: Bettlaken, Bettlaken |
+| W4\_INV\_MAX\_0015 | Max | Es riecht nach Dachboden und nach Halloween. Wenn ich es überziehe, bin ich entweder Geist oder Picknick. | Ansehen: Bettlaken, Bettlaken, zweites Mal |
+| W4\_INV\_MAX\_0020 | Max | Mein Superhelden-Anzug. Mit Umhang. Aus Bettlaken. Ich trag Bettwäsche, und sie steht mir. | Ansehen: Bettlaken, Superhelden-Anzug |
+| W4\_INV\_MAX\_0025 | Max | Auf der Brust ist ein Fondue-Topf aufgemalt. Jeder Held braucht ein Wappen. Meins blubbert. | Ansehen: Bettlaken, Superhelden-Anzug, zweites Mal |
+| W4\_INV\_MAX\_0030 | Max | Ein Videoband aus dem Kellerarchiv. „Zappis Puppenstube, 1977.“ Es fühlt sich schwer an. Nicht vom Gewicht. | Ansehen: Archivband |
+| W4\_INV\_PIX\_0035 | Pixel | Ein Band. Wenn du es siehst, klingelt in sieben Tagen das Telefon. Das war ein Scherz. Wahrscheinlich. | Ansehen: Archivband, zweites Mal |
+
+## 18c. Gespräch erschöpft (ABS)
+
+Ein Klick auf die Figur, wenn im Gesprächsmenü nur noch „Tschüss“ übrig wäre: Das Menü öffnet sich nicht, die Figur sagt abwechselnd eine dieser beiden Zeilen. Kommt ein neues Thema dazu, öffnet sich das Menü wieder (Regel in `05-spielsysteme.md`).
+
+| ID | Sprecher | Text | Auslöser |
+| --- | --- | --- | --- |
+| W4\_ABS\_GER\_0010 | Gerd Glück | Das war's für heute! Bleiben Sie dran! Nein, wirklich, bleiben Sie dran. Ich habe keine Fragen mehr übrig! | Reden: Gerd, Gespräch erschöpft |
+| W4\_ABS\_GER\_0020 | Gerd Glück | Kein Gespräch mehr im Topf! Aber dieses Lächeln! Das gibt's gratis! Immer! | Reden: Gerd, Gespräch erschöpft |
+| W4\_ABS\_VAT\_0030 | Sitcom-Vater | Wir haben geredet. Jetzt gibt es Kekse. Für mich. Du bist kein richtiger Besuch. | Reden: Vater, Gespräch erschöpft |
+| W4\_ABS\_VAT\_0040 | Sitcom-Vater | Mehr sag ich nicht. Das steht so im Drehbuch. Ich hab es nie gelesen, aber ich spür's. | Reden: Vater, Gespräch erschöpft |
+| W4\_ABS\_SMU\_0050 | Sitcom-Mutter | Schatz, wir haben alles besprochen. Jetzt geh, bevor das Band wieder lacht. | Reden: Mutter, Gespräch erschöpft |
+| W4\_ABS\_SMU\_0060 | Sitcom-Mutter | Das war die Folge. Mehr Text hab ich nicht. Ich hab sowieso nie genug Text. | Reden: Mutter, Gespräch erschöpft |
+| W4\_ABS\_SOH\_0070 | Sitcom-Sohn | Bro. Fertig. Mehr Sätze hab ich nicht im Vertrag. | Reden: Sohn, Gespräch erschöpft |
+| W4\_ABS\_SOH\_0080 | Sitcom-Sohn | Cool. Also … cool. Mehr hab ich nicht. Echt nicht. | Reden: Sohn, Gespräch erschöpft |
+| W4\_ABS\_KOM\_0090 | Kommissar | Ich hätte da noch eine Frage. Nein. Doch nicht. Das ist neu für mich. Ich fühle mich ganz leer. | Reden: Kommissar, Gespräch erschöpft |
+| W4\_ABS\_KOM\_0100 | Kommissar | Gehen Sie ruhig. Ich melde mich, wenn mir noch was einfällt. Mir fällt immer noch was ein. | Reden: Kommissar, Gespräch erschöpft |
+| W4\_ABS\_AGE\_0110 | FBI-Agent | Die Wahrheit ist irgendwo da drüben. Hier jedenfalls nicht mehr. Wir sind durch. | Reden: Agent, Gespräch erschöpft |
+| W4\_ABS\_AGE\_0120 | FBI-Agent | Ich habe alles gesagt. Was ich nicht gesagt habe, ist geheim. Auch vor mir. | Reden: Agent, Gespräch erschöpft |
+| W4\_ABS\_SIE\_0130 | Super-Siegfried | Ich habe dir alles gesagt. Jetzt muss ich die Stadt retten. Oder mich hinlegen. Eins von beiden. | Reden: Siegfried, Gespräch erschöpft |
+| W4\_ABS\_SIE\_0140 | Super-Siegfried | Kein Interview mehr heute. Helden brauchen auch Feierabend. Meiner ist seit 1938 überfällig. | Reden: Siegfried, Gespräch erschöpft |
+| W4\_ABS\_FLE\_0150 | Fledermann | Ich habe alles gesagt! Mit Würde! Kopfüber! Jetzt muss ich zurück in die Nacht! Sie fängt gleich an. Irgendwann. | Reden: Fledermann, Gespräch erschöpft |
+| W4\_ABS\_FLE\_0160 | Fledermann | Kein Wort mehr! Ich bin ein Mann der Schatten! Und der Schirme! Hauptsächlich der Schirme! | Reden: Fledermann, Gespräch erschöpft |
+| W4\_ABS\_WIL\_0170 | Wonder-Wilma | Wir sind fertig. Ich weiß das. Das Springseil weiß das. Nur du weißt es noch nicht. | Reden: Wilma, Gespräch erschöpft |
+| W4\_ABS\_WIL\_0180 | Wonder-Wilma | Mehr gibt's nicht. Ich hab noch drei Jungs zu retten. Vor sich selbst. | Reden: Wilma, Gespräch erschöpft |
+| W4\_ABS\_EMP\_0190 | Empfangsdame | Ich habe Ihnen alles gesagt, was ich nicht sagen darf. Also nichts. Guten Tag. | Reden: Empfangsdame, Gespräch erschöpft |
+| W4\_ABS\_EMP\_0200 | Empfangsdame | Ich kaue. Ich warte. Ich rede nicht mehr. Das ist mein Service. | Reden: Empfangsdame, Gespräch erschöpft |
 
 ## 19. Zurufe
 
