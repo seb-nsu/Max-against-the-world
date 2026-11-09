@@ -1,0 +1,109 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="Couch Quest – Max against the worlds"
+run/main_scene="res://game/rooms/wohnzimmer/room_wohnzimmer.tscn"
+config/features=PackedStringArray("4.7")
+
+[autoload]
+
+Globals="*uid://bhr8adqlkhm0x"
+Cursor="*uid://c2pqh7ajiuiy0"
+E="*uid://rda8wggldt5o"
+R="*uid://d2wgxk7hrluu"
+C="*uid://c3nxajup0vuvc"
+I="*uid://ctefmy3vn313s"
+D="*uid://c7l7o4tdyhblt"
+A="*uid://6cbiypm0qk7h"
+G="*uid://blk6nfpfiqrd2"
+T="*uid://30lm6k5s368s"
+Bauplan="*res://skripte/bauplan.gd"
+Zustand="*res://skripte/zustand.gd"
+Spielstand="*res://skripte/spielstand.gd"
+Hinweise="*res://skripte/hinweise.gd"
+Spiel="*res://skripte/spiel.gd"
+
+[display]
+
+window/size/viewport_width=320
+window/size/viewport_height=180
+window/size/window_width_override=1280
+window/size/window_height_override=720
+window/stretch/mode="viewport"
+window/stretch/scale_mode="integer"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/couch_quest_bau/plugin.cfg", "res://addons/popochiu/editor/gizmos/plugin.cfg", "res://addons/popochiu/editor/importers/plugin.cfg", "res://addons/popochiu/plugin.cfg")
+
+[input]
+
+popochiu-interact={
+&"deadzone": 0.5,
+&"events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":32,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":0,"position":Vector2(0, 0),"global_position":Vector2(0, 0),"factor":1.0,"button_index":1,"canceled":false,"pressed":false,"double_click":false,"script":null)
+]
+}
+popochiu-look={
+&"deadzone": 0.5,
+&"events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":32,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":0,"position":Vector2(0, 0),"global_position":Vector2(0, 0),"factor":1.0,"button_index":2,"canceled":false,"pressed":false,"double_click":false,"script":null)
+]
+}
+popochiu-skip={
+&"deadzone": 0.5,
+&"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":16,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":4194305,"physical_keycode":0,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+]
+}
+cq_figur_wechseln={
+&"deadzone": 0.5,
+&"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":16,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":4194306,"physical_keycode":0,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+]
+}
+cq_schnellspeichern={
+&"deadzone": 0.5,
+&"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":16,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":4194336,"physical_keycode":0,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+]
+}
+cq_schnellladen={
+&"deadzone": 0.5,
+&"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":16,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":4194340,"physical_keycode":0,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+]
+}
+cq_hotspots_zeigen={
+&"deadzone": 0.5,
+&"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":16,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":4194325,"physical_keycode":0,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+]
+}
+cq_text_weiter={
+&"deadzone": 0.5,
+&"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":16,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":32,"physical_keycode":0,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":16,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":4194309,"physical_keycode":0,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+]
+}
+cq_notizbuch={
+&"deadzone": 0.5,
+&"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":16,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":78,"physical_keycode":0,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+]
+}
+
+[internationalization]
+
+locale/translations=PackedStringArray("res://lokalisierung/texte.de.translation", "res://lokalisierung/texte.en.translation")
+locale/translations_pot_files=PackedStringArray("res://game/inventory_items/thunfischdose/inventory_item_thunfischdose.gd", "res://game/inventory_items/dosenoeffner/inventory_item_dosenoeffner.gd", "res://game/inventory_items/drahtkleiderbuegel/inventory_item_drahtkleiderbuegel.gd", "res://game/inventory_items/reisetasche/inventory_item_reisetasche.gd", "res://game/inventory_items/notizbuch/inventory_item_notizbuch.gd", "res://game/inventory_items/opas_zettel/inventory_item_opas_zettel.gd", "res://game/characters/max/character_max.gd", "res://game/characters/pixel/character_pixel.gd", "res://game/characters/opa/character_opa.gd", "res://game/dialogs/opa/dialog_opa.gd", "res://game/dialogs/opa/dialog_opa.tres", "res://game/dialogs/pixel/dialog_pixel.gd", "res://game/dialogs/pixel/dialog_pixel.tres", "res://game/rooms/wohnzimmer/room_wohnzimmer.gd", "res://game/rooms/wohnzimmer/props/background/prop_background.gd", "res://game/rooms/wohnzimmer/hotspots/fernseher/hotspot_fernseher.gd", "res://game/rooms/wohnzimmer/hotspots/familienfoto/hotspot_familienfoto.gd", "res://game/rooms/wohnzimmer/hotspots/teetasse/hotspot_teetasse.gd", "res://game/rooms/wohnzimmer/hotspots/leerer_platz_auf_dem_couchtisch/hotspot_leerer_platz_auf_dem_couchtisch.gd", "res://game/rooms/wohnzimmer/hotspots/sofa/hotspot_sofa.gd", "res://game/rooms/wohnzimmer/hotspots/ausgang_treppenhaus/hotspot_ausgang_treppenhaus.gd", "res://game/rooms/treppenhaus/room_treppenhaus.gd", "res://game/rooms/treppenhaus/props/background/prop_background.gd", "res://game/rooms/treppenhaus/hotspots/hut_am_haken/hotspot_hut_am_haken.gd", "res://game/rooms/treppenhaus/hotspots/fenster/hotspot_fenster.gd", "res://game/rooms/treppenhaus/hotspots/treppe/hotspot_treppe.gd", "res://game/rooms/treppenhaus/hotspots/ausgang_wohnzimmer/hotspot_ausgang_wohnzimmer.gd", "res://game/rooms/treppenhaus/hotspots/ausgang_dachboden/hotspot_ausgang_dachboden.gd", "res://game/rooms/dachboden/room_dachboden.gd", "res://game/rooms/dachboden/props/background/prop_background.gd", "res://game/rooms/dachboden/hotspots/drehknopf/hotspot_drehknopf.gd", "res://game/rooms/dachboden/hotspots/werkzeugkiste/hotspot_werkzeugkiste.gd", "res://game/rooms/dachboden/hotspots/kleiderschrank/hotspot_kleiderschrank.gd", "res://game/rooms/dachboden/hotspots/kalender/hotspot_kalender.gd", "res://game/rooms/dachboden/hotspots/ausgestopfter_fisch/hotspot_ausgestopfter_fisch.gd", "res://game/rooms/dachboden/hotspots/kiste_mit_fernbedienungen/hotspot_kiste_mit_fernbedienungen.gd", "res://game/rooms/dachboden/hotspots/poster/hotspot_poster.gd", "res://game/rooms/dachboden/hotspots/toaster/hotspot_toaster.gd", "res://game/rooms/dachboden/hotspots/opas_staubsauger_prototyp/hotspot_opas_staubsauger_prototyp.gd", "res://game/rooms/dachboden/hotspots/kochbuch/hotspot_kochbuch.gd", "res://game/rooms/dachboden/hotspots/plattenspieler/hotspot_plattenspieler.gd", "res://game/rooms/dachboden/hotspots/ohrensessel/hotspot_ohrensessel.gd", "res://game/rooms/dachboden/hotspots/werkbank/hotspot_werkbank.gd", "res://game/rooms/dachboden/hotspots/dachfenster/hotspot_dachfenster.gd", "res://game/rooms/dachboden/hotspots/bodenluke/hotspot_bodenluke.gd", "res://game/rooms/dachboden/props/zapp_o_mat/prop_zapp_o_mat.gd", "res://game/rooms/dachboden/props/thunfischdose/prop_thunfischdose.gd", "res://game/rooms/dachboden/props/dosenoeffner/prop_dosenoeffner.gd", "res://game/rooms/dachboden/props/drahtkleiderbuegel/prop_drahtkleiderbuegel.gd")
+locale/fallback="de"
+
+[popochiu]
+
+pixel/pixel_art_textures=true
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0
