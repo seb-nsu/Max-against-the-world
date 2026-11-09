@@ -240,6 +240,7 @@ UI_ZIEL_W1_R11A,Das Passwort der Geheimtür,The secret door's password
 UI_ZIEL_W1_R11B,Die Besen loswerden,Get rid of the brooms
 UI_ZIEL_W1_R12,Smaugi das Ei abschwatzen,Talk Smaugi out of the egg
 UI_ZIEL_W1_R13,Lord Moderwort besiegen,Defeat Lord Moderwort
-UI_PASSWORT_W1_1,Puddi-Bärchen-Mo-Knuddel,Puddi-Bärchen-Mo-Knuddel
-UI_PASSWORT_W1_2,Knuddel-Mo-Bärchen-Puddi,Knuddel-Mo-Bärchen-Puddi
-UI_PASSWORT_W1_3,Mo-Knuddel-Puddi-Bärchen,Mo-Knuddel-Puddi-Bärchen
+UI_PASSWORT_TEIL_MO,Mo,Mo
+UI_PASSWORT_TEIL_KNUDDEL,Knuddel,Knuddel
+UI_PASSWORT_TEIL_PUDDI,Puddi,Puddi
+UI_PASSWORT_TEIL_BAERCHEN,Bärchen,Bärchen

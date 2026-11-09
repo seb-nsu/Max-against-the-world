@@ -2219,6 +2219,15 @@
          ]
         }
        ]
+      },
+      {
+       "zeile": "W1_STAB_MAX_0600",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_STAB_MAX_0600"
+       ],
+       "bedingung_text": "außerhalb des Zauberstab-Ladens, R2 bleibt offen",
+       "gegenstand": "kaesefondue"
       }
      ]
     }
@@ -2923,6 +2932,33 @@
        "sprecher": "MAX",
        "blasen": [
         "W1_BRUE_MAX_0015"
+       ],
+       "mal": 2
+      },
+      {
+       "zeile": "W1_BRUE_MAX_1040",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_BRUE_MAX_1040"
+       ],
+       "bedingung": [
+        {
+         "art": "nach",
+         "raetsel": "R4"
+        }
+       ]
+      },
+      {
+       "zeile": "W1_BRUE_MAX_1045",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_BRUE_MAX_1045"
+       ],
+       "bedingung": [
+        {
+         "art": "nach",
+         "raetsel": "R4"
+        }
        ],
        "mal": 2
       }
@@ -3928,12 +3964,12 @@
       }
      ],
      "nehmen": {
-      "zeile": "W1_WALD_MAX_0110",
+      "zeile": "W1_WALD_MAX_0730",
       "sprecher": "MAX",
       "blasen": [
-       "W1_WALD_MAX_0110"
+       "W1_WALD_MAX_0730"
       ],
-      "bedingung_text": "nach Rotkäppchens Erlaubnis"
+      "bedingung_text": "vor Rotkäppchens Erlaubnis"
      }
     }
    ],
@@ -5675,7 +5711,8 @@
        "sprecher": "TUE",
        "blasen": [
         "W1_SMAU_TUE_0710"
-       ]
+       ],
+       "bedingung_text": "danach wählt Max die vier Teile aus dem Notizbuch nacheinander (Auswahl wie im Gespräch, gewählte Teile verschwinden)"
       },
       {
        "zeile": "W1_SMAU_MAX_0820",
@@ -7448,6 +7485,23 @@
      ],
      "mal": 2,
      "figur": "PIX"
+    },
+    {
+     "zeile": "W1_WALD_MAX_0600",
+     "sprecher": "MAX",
+     "blasen": [
+      "W1_WALD_MAX_0600"
+     ],
+     "zustand": "voller_pollen"
+    },
+    {
+     "zeile": "W1_WALD_MAX_0605",
+     "sprecher": "MAX",
+     "blasen": [
+      "W1_WALD_MAX_0605"
+     ],
+     "mal": 2,
+     "zustand": "voller_pollen"
     }
    ],
    "benutzen": [
@@ -7850,27 +7904,19 @@
    "icons": {},
    "ansehen": [
     {
-     "zeile": "W1_HOGG_MAX_0830",
-     "sprecher": "MAX",
-     "blasen": [
-      "W1_HOGG_MAX_0830"
-     ]
-    },
-    {
-     "zeile": "W1_HOGG_MAX_0835",
-     "sprecher": "MAX",
-     "blasen": [
-      "W1_HOGG_MAX_0835"
-     ],
-     "mal": 2
-    },
-    {
      "zeile": "W1_HOGG_MAX_0860",
      "sprecher": "MAX",
      "blasen": [
       "W1_HOGG_MAX_0860"
      ],
      "mal": 2
+    },
+    {
+     "zeile": "W1_HOGG_MAX_0890",
+     "sprecher": "MAX",
+     "blasen": [
+      "W1_HOGG_MAX_0890"
+     ]
     }
    ],
    "benutzen": [],
@@ -7962,6 +8008,21 @@
     "unterschrieben": "res://grafik/platzhalter/gegenstand_tarifvertrag_unterschrieben.png"
    },
    "ansehen": [
+    {
+     "zeile": "W1_BERG_MAX_0710",
+     "sprecher": "MAX",
+     "blasen": [
+      "W1_BERG_MAX_0710"
+     ]
+    },
+    {
+     "zeile": "W1_BERG_MAX_0715",
+     "sprecher": "MAX",
+     "blasen": [
+      "W1_BERG_MAX_0715"
+     ],
+     "mal": 2
+    },
     {
      "zeile": "W1_INV_MAX_0160",
      "sprecher": "MAX",

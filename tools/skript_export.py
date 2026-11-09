@@ -78,7 +78,10 @@ def zeilen_lesen():
             text = entmaskieren(zellen[2]) if len(zellen) > 2 else ""
             letzte = entmaskieren(zellen[3]) if len(zellen) > 3 else ""
             regie = ausloeser = bedingung = ""
-            if spalte4.startswith("Regie") and not spalte4.startswith("Regie oder"):
+            # In reinen Regie-Tabellen gilt eine Zelle „Ansehen: …“ trotzdem als Auslöser
+            # (WALD 0600, BRUE 1040: Ansehen-Zeilen mitten in einer Szene).
+            if spalte4.startswith("Regie") and not spalte4.startswith("Regie oder") \
+                    and not letzte.startswith("Ansehen:"):
                 regie = letzte
             else:
                 ausloeser = letzte

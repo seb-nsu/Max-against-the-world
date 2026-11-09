@@ -318,6 +318,12 @@ func _welt_1() -> void:
 	await _nehmen("Kochloeffel", "W1_STAB_MAX_0440")
 	await _nehmen_ohne("Zahnstocher", "W1_STAB_MAX_0410")
 	_pruefe(Z.status("R2") == "offen", "R2 offen")
+	await _gehe("AusgangDorfplatz", "Dorfplatz")
+	await _item("Kochloeffel").on_item_used(_item("Kaesefondue"))
+	_pruefe(_gesagt("W1_STAB_MAX_0600") and Z.status("R2") == "offen"
+		and _i().is_item_in_inventory("Kaesefondue") and not _i().is_item_in_inventory("Socke"),
+		"Fondue auf Kochlöffel außerhalb des Ladens: nur 0600, R2 offen (G10)")
+	await _gehe("ZauberstabLadenVonAussen", "Zauberstabladen")
 	await _item("Kochloeffel").on_item_used(_item("Kaesefondue"))
 	_pruefe(Z.geloest("R2") and _gesagt("W1_STAB_STA_0530"), "R2 gelöst (0500–0540)")
 	_pruefe(_i().is_item_in_inventory("Socke") and not _i().is_item_in_inventory("Kaesefondue"),
@@ -385,6 +391,8 @@ func _welt_1() -> void:
 	await _c().get_character("XxlZiege").on_click()
 	_pruefe(Z.geloest("R4b") and _gesagt("W1_BRUE_WAL_0920"), "R4b gelöst (0750–0820, 0910/0920)")
 	_pruefe(S.figur_wechseln() and not S.ist_pixel(), "Wechsel zurück zu Max")
+	await _hotspot("Bach").on_click()
+	_pruefe(_gesagt("W1_BRUE_MAX_0930"), "Benutzen Bach nach 0920, vor R4c: 0930 (G13)")
 
 	# R4c: Eimer mit Wasser auf Waldemar
 	_pruefe(Z.status("R4c") == "offen" and H.schritt_waehlen() == "R4c", "R4c offen, Pfote wählt R4c")
@@ -396,6 +404,12 @@ func _welt_1() -> void:
 	_pruefe(not _raum().has_character("SchmiedeZiege") and _raum().has_character("XxlZiege"),
 		"Schmiede-Ziege geht heim, XXL-Ziege bleibt an der Brücke")
 	_pruefe(H.schritt_waehlen() == "R5", "nach R4: Pfote wählt R5 (Goldmünze, Dorfplatz)")
+	await _benutze("Eimer", _hotspot("Bach"), "W1_BRUE_WAL_1070")
+	_protokoll_leeren()
+	await _hotspot("Bach").on_click()
+	_pruefe(not _gesagt("W1_BRUE_MAX_0930"), "nach R4c: Bach ohne 0930")
+	await _ansehen(_hotspot("Bruecke"), "W1_BRUE_MAX_1040")
+	await _ansehen(_hotspot("Bruecke"), "W1_BRUE_MAX_1045")
 	await _rundreise("nach R4")
 
 	# --- Was hinter der Brücke liegt ---
@@ -417,7 +431,8 @@ func _welt_1_r5_bis_r13() -> void:
 	# --- Zauberwald: Ketchup, Leuchtpilz, Rosen zu ---
 	await _ansehen(_raum().get_prop("Ketchup"), "W1_WALD_MAX_0090")
 	await _raum().get_prop("Ketchup").on_click()
-	_pruefe(not _i().is_item_in_inventory("Ketchup"), "Ketchup erst nach Rotkäppchens Erlaubnis")
+	_pruefe(not _i().is_item_in_inventory("Ketchup") and _gesagt("W1_WALD_MAX_0730"),
+		"Ketchup erst nach Rotkäppchens Erlaubnis (0730)")
 	var rot_d = _dialog("Rotkaeppchen")
 	await rot_d.waehlen("0230")
 	_pruefe(Z.ist("W1_KETCHUP_FREI") and _gesagt("W1_WALD_ROT_0240"), "Rotkäppchen erlaubt den Ketchup (0230/0240)")
@@ -510,7 +525,10 @@ func _welt_1_r5_bis_r13() -> void:
 	await _ansehen_item("Hinweiszettel", "W1_HOGG_ALW_0610")
 	_pruefe("hinweiszettel" in Z.nahansichten and _gesagt("W1_HOGG_MAX_0630"), "Hinweiszettel als Nahansicht")
 	await _hotspot("Flasche4").on_click()
-	_pruefe(_i().is_item_in_inventory("Flasche") and int(Z.wert("W1_FLASCHE", 0)) == 4, "Flasche 4 genommen")
+	_pruefe(_i().is_item_in_inventory("Flasche") and int(Z.wert("W1_FLASCHE", 0)) == 4
+		and _gesagt("W1_HOGG_MAX_0930"), "Flasche 4 genommen (0930)")
+	await _hotspot("Flasche2").on_click()
+	_pruefe(_gesagt("W1_HOGG_MAX_0940") and int(Z.wert("W1_FLASCHE", 0)) == 4, "zweite Flasche: 0940")
 	await _benutze("Flasche", _hotspot("Kessel"), "W1_HOGG_MAX_0590")
 	await _benutze("Ei", _hotspot("Kessel"), "W1_HOGG_MAX_0510")
 	await _benutze("Leuchtpilz", _hotspot("Kessel"), "W1_HOGG_MAX_0540")
@@ -552,6 +570,10 @@ func _welt_1_r5_bis_r13() -> void:
 	_pruefe("zeugnis" in Z.nahansichten, "Zeugnis als Nahansicht (Mo-Knuddel)")
 	_pruefe(not _i().is_item_in_inventory("Flasche"), "Flasche im Trank aufgegangen")
 	await _ansehen_item("Leuchttrank", "W1_HOGG_MAX_0870")
+	_protokoll_leeren()
+	await _ansehen_item("Zeugnis", "W1_HOGG_MAX_0890")
+	_pruefe(not _gesagt("W1_HOGG_MAX_0860"), "Zeugnis 1. Ansehen nur 0890 (G19)")
+	await _ansehen_item("Zeugnis", "W1_HOGG_MAX_0860")
 	await _rundreise("nach R6")
 
 	# --- Rätsel 9: Luftschloss ---
@@ -634,6 +656,9 @@ func _welt_1_r5_bis_r13() -> void:
 	_pruefe(_gesagt("W1_TURM_MAX_0270"), "Kammertür vor den Besen: 0270")
 	await _hotspot("Kreuzung1").on_click()
 	_pruefe(_gesagt("W1_TURM_MAX_0140"), "Max auf der Kreuzung: 0140")
+	await _ansehen(_hotspot("Kreuzung2"), "W1_TURM_MAX_0080")
+	await _ansehen(_hotspot("Kreuzung3"), "W1_TURM_MAX_0080")
+	await _ansehen(_hotspot("Kreuzung3"), "W1_TURM_MAX_0085")
 	await _hotspot("Besen").on_click()
 	_pruefe(_gesagt("W1_TURM_NAR_0160") and _gesagt("W1_TURM_PIX_0170"), "Besen fegt Max (0160/0170)")
 	_pruefe(S.figur_wechseln() and S.ist_pixel(), "Wechsel zu Pixel im Turm")
@@ -666,14 +691,19 @@ func _welt_1_r5_bis_r13() -> void:
 	for sn in ["Humbert", "Grimmzahn", "Zeldina", "Smaugi"]:
 		_pruefe(_raum().has_character(sn), "in den Abstellkammern: " + sn)
 	_pruefe(_raum().call("passwort_teile") == 4, "vier Passwort-Teile (Mo, Zeugnis, Lied, Kritzelei)")
-	S.vorgabe_auswahl = [0]
+	# Vier Teile nacheinander; gewählte verschwinden aus der Liste (Index in die Restliste).
+	S.vorgabe_auswahl = [1, 0, 0, 0]  # Knuddel, Mo, Puddi, Bärchen
 	await _hotspot("Geheimtuer").on_click()
 	_pruefe(_gesagt("W1_SMAU_TUE_0710"), "Geheimtür fragt (0710)")
-	_pruefe(_gesagt("W1_SMAU_TUE_0730") and _gesagt("W1_SMAU_MAX_0740"), "falsche Reihenfolge (0730/0740)")
-	S.vorgabe_auswahl = [1]
+	_pruefe(_gesagt("W1_SMAU_TUE_0730") and _gesagt("W1_SMAU_MAX_0740") and not _gesagt("W1_SMAU_TUE_0750"),
+		"falsche Reihenfolge (0730/0740)")
+	_protokoll_leeren()
+	S.vorgabe_auswahl = [2, 2, 0, 0]  # Puddi, Bärchen, Mo, Knuddel
 	await _hotspot("Geheimtuer").on_click()
-	_pruefe(_gesagt("W1_SMAU_TUE_0750") and not Z.geloest("R11a"), "zweite falsche Reihenfolge (0750)")
-	S.vorgabe_auswahl = [2]
+	_pruefe(_gesagt("W1_SMAU_TUE_0750") and not _gesagt("W1_SMAU_TUE_0730") and not Z.geloest("R11a"),
+		"Puddi-Bärchen-Mo (0750 statt 0730)")
+	_pruefe(S.vorgabe_auswahl.is_empty(), "vier Auswahlen je Versuch")
+	S.vorgabe_auswahl = [0, 0, 0, 0]  # Mo, Knuddel, Puddi, Bärchen
 	await _hotspot("Geheimtuer").on_click()
 	_pruefe(Z.geloest("R11a") and Z.geloest("R11") and _gesagt("W1_SMAU_TUE_0770"), "R11a gelöst (0760–0790)")
 	await _hotspot("Geheimtuer").on_click()
@@ -714,6 +744,13 @@ func _welt_1_r5_bis_r13() -> void:
 	var ohne_pfote: bool = int(Z.stufe3_zaehler.get("welt-1", 0)) == 0
 	_pruefe(_gesagt("W1_THRO_PIX_0560" if ohne_pfote else "W1_THRO_PIX_0570") and _gesagt("W1_THRO_PIX_0610"),
 		"Abschluss (0510–0610, Stufe-3-Zähler entscheidet 0560/0570)")
+	var P: Array = S.protokoll
+	var folge := ["W1_THRO_TOA_0540", "W1_THRO_ZEL_0550", "W1_THRO_ZEL_0620", "W1_THRO_MOD_0630",
+		"W1_THRO_PIX_0560" if ohne_pfote else "W1_THRO_PIX_0570", "W1_THRO_MAX_0580", "W1_THRO_PIX_0610"]
+	var stellen := folge.map(func(b): return P.find(b))
+	var sortiert := stellen.duplicate()
+	sortiert.sort()
+	_pruefe(not -1 in stellen and stellen == sortiert, "Abschluss-Reihenfolge 0540, 0550, 0620, 0630, 0560/0570, 0580–0610 (G25)")
 
 	# --- Zwischenspiel 1: Dachboden ---
 	await _warte_auf_raum("Dachboden")

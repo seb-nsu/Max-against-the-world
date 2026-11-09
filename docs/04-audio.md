@@ -99,7 +99,7 @@ Alle mit ElevenLabs Sound Effects oder aus CC0-Sammlungen. Immer mehrere Variant
 
 ## Sprachausgabe
 
-**Umfang (grob geschätzt):** Ein Adventure dieser Größe hat etwa 3.500 Zeilen, weil Max und Pixel fast jeden Gegenstand kommentieren; mit Pixel-auf-Mensch-Zeilen und Zwischenspielen eher 4.000. Bei rund 60 Zeichen pro Zeile und drei bis fünf Versuchen pro Pointe sind das 800.000 bis 1.000.000 Zeichen, Voice-Design-Vorschauen eingerechnet. Das sind etwa drei Monate ElevenLabs Pro (rund 300 $). Der echte Faktor wird mit den 450 Zeilen des Vertical Slice gemessen.
+**Umfang (grob geschätzt):** Das Skript hat etwa 5.000 Zeilen (Budget in `05-spielsysteme.md`, Umfang), weil Max und Pixel fast jeden Gegenstand zweimal kommentieren, dazu Pixel-auf-Mensch-Zeilen, Pools und Zwischenspiele. Bei rund 60 Zeichen pro Zeile und drei bis fünf Versuchen pro Pointe sind das 1.000.000 bis 1.250.000 Zeichen, Voice-Design-Vorschauen eingerechnet. Das sind etwa vier Monate ElevenLabs Pro (rund 400 $). Der echte Faktor wird mit den 450 Zeilen des Vertical Slice gemessen.
 
 **Drei Möglichkeiten:**
 

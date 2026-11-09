@@ -1,6 +1,8 @@
 {
  "abschnitt": "welt-3",
- "sonderzeilen": {},
+ "sonderzeilen": {
+  "wartezeile": "W3_HINT_PIX_9995"
+ },
  "schritte": [
   {
    "schritt": "R1a",

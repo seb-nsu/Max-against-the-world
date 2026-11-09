@@ -6,9 +6,16 @@ extends CQProp
 
 
 ## Nehmen erst nach Rotkäppchens Erlaubnis (WALD 0230/0240, Schalter W1_KETCHUP_FREI).
+## Vorher fragt Max lieber (0730), danach nimmt er die Flasche mit 0110 (G22). Der Bauplan
+## führt 0730 als Nehmen-Zeile (die 0110 wird dort überschrieben), deshalb entscheidet der Code.
 func _on_click() -> void:
-	if not Zustand.ist("W1_KETCHUP_FREI"):
-		await Spiel.hingehen(self)
-		await Spiel.ersatz()
+	if Spiel.ist_pixel():
+		await super()
 		return
-	await super()
+	var d := bauplan().duplicate()
+	if Zustand.ist("W1_KETCHUP_FREI"):
+		d.nehmen = {sprecher = "MAX", zeile = "W1_WALD_MAX_0110"}
+		await Spiel.nehmen(self, d)
+		return
+	await Spiel.hingehen(self)
+	await Spiel.sagen("MAX", "W1_WALD_MAX_0730")

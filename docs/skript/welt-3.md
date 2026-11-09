@@ -1258,3 +1258,4 @@ Drei Stufen je Rätselschritt, vom Stups bis zur Lösung, nach den Regeln in `05
 | W3\_HINT\_PIX\_1410 | Pixel | Kalle kann nichts übersetzen, weil er seine Tabelle verloren hat. Der rostige Eimer in der Ecke hat eine Kopie. Er braucht nur einen Grund aufzuwachen. | R13 Tasse, Stufe 1 |
 | W3\_HINT\_PIX\_1420 | Pixel | Siehst du die Tasse am Tischrand? Siehst du den Eimer darunter? Siehst du mich? Ich bin eine Katze. Ich glaube, du siehst, worauf das hinausläuft. | R13, Stufe 2 |
 | W3\_HINT\_PIX\_1430 | Pixel | Wechsel zu mir und benutze Kalles Tasse. Sie fällt. Der Kaffee weckt Piepsi. Piepsi druckt die Tabelle. Ich übernehme keine Verantwortung. Ich übernehme nie welche. | R13, Stufe 3 |
+| W3\_HINT\_PIX\_9995 | Pixel | Ich rechne noch. Bitte warten. Das sage ich nur, weil hier jeder Toaster das sagt. | Wartezeile, nächste Stufe noch gesperrt |

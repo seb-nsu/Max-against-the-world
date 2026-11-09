@@ -12,3 +12,11 @@ func _on_click() -> void:
 
 func _pixel_benutzt() -> void:
 	await room.call("kreuzung_pixel", 2)
+
+
+## Die Ansehen-Zeilen (TURM 0080/0085) gelten für jede der drei Kreuzungen; der Bauplan hängt
+## sie nur an Kreuzung 1 (Layout-Alias kreuzung → kreuzung_1), G23.
+func ansehen() -> String:
+	Hinweise.objekt_beruehrt(objekt_id())
+	var k1: Dictionary = Bauplan.objekt(room.script_name, "Kreuzung1")
+	return await Spiel.ansehen(k1.get("ansehen", []), "%s/%s" % [room.script_name, script_name])

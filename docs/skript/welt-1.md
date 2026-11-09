@@ -473,6 +473,7 @@ Lösung und Fehlversuche von Rätsel 2:
 | W1\_STAB\_PIX\_0575 | Pixel | Sie hat mich wieder einsortiert. Diesmal unter „Unbezahlbar“. Ich werde ihr ewig treu sein. | Ansehen: Socke, Pixel, zweites Mal |
 | W1\_STAB\_MAX\_0580 | Max | Hm. Hm. Hmm. Sie denkt nach. Über mich. Das macht sonst keiner. | Benutzen: Socke im Inventar |
 | W1\_STAB\_MAX\_0590 | Max | Schwing. Nichts. Noch nichts. Aber es fühlt sich dramatisch an. | Benutzen: Kochlöffel-Zauberstab ohne Ziel; Schwing-Animation |
+| W1\_STAB\_MAX\_0600 | Max | Nicht hier. Wenn mich ein Löffel wählt, soll der Stabmacher zusehen. Der weint bestimmt. | Käsefondue auf Kochlöffel; außerhalb des Zauberstab-Ladens, R2 bleibt offen |
 
 Zurufe im Zauberstab-Laden (Pixel):
 
@@ -572,14 +573,16 @@ Rätsel 6, Teil 2: die sechs Flaschen. Alwins Zettel als Nahansicht, Pixels zwei
 | W1\_HOGG\_ALW\_0800 | Alwin | Bestanden! Der Trank des Leuchtens! Abfüllen, mitnehmen, nicht trinken. Er schmeckt nach Pfannkuchen, und das verwirrt. | gibt den Leuchttrank |
 | W1\_HOGG\_MAX\_0810 | Max | Ein Trank, der leuchtet. Die Taschenlampe in meinem Handy kann das auch. Konnte. Akku. | Inventar: Leuchttrank |
 | W1\_HOGG\_ALW\_0820 | Alwin | Und weil du bestanden hast, zeige ich dir, wie es nicht geht. Moderworts Zeugnis. Aus dem Archiv. Als Abschreckung. | holt das Zeugnis |
-| W1\_HOGG\_MAX\_0830 | Max | „Kräuterkunde: ungenügend. Zaubertränke: ungenügend. Bosheit: befriedigend.“ Und eine Notiz: „Für meinen Mo-Knuddel, stolz!“ | Ansehen: Zeugnis, öffnet die Nahansicht; Notizbuch trägt „Mo-Knuddel“ ein |
-| W1\_HOGG\_MAX\_0835 | Max | Unten rechts: „Betragen: herausragend böse.“ Mit Sternchen. Das hat er sich eingerahmt, wetten. | Ansehen: Zeugnis, öffnet die Nahansicht, zweites Mal; Notizbuch trägt „Mo-Knuddel“ ein |
+| W1\_HOGG\_MAX\_0830 | Max | „Kräuterkunde: ungenügend. Zaubertränke: ungenügend. Bosheit: befriedigend.“ Und eine Notiz: „Für meinen Mo-Knuddel, stolz!“ | Szene nach 0820, öffnet die Nahansicht; Notizbuch trägt „Mo-Knuddel“ ein |
 | W1\_HOGG\_PIX\_0840 | Pixel | Mo-Knuddel. Das schreibt man sich auf. Das schreibt man sich unter die Pfote. |  |
 | W1\_HOGG\_ALW\_0850 | Alwin | Seine Mutti hat es unterschrieben. Er hat es nie abgeholt. Ich glaube, genau deswegen. |  |
-| W1\_HOGG\_MAX\_0860 | Max | Ein Zeugnis mit Kosenamen drauf. Das ist schlimmer als jedes Klassenfoto. | Ansehen: Zeugnis im Inventar, zweites Mal |
+| W1\_HOGG\_MAX\_0860 | Max | Ein Zeugnis mit Kosenamen drauf. Das ist schlimmer als jedes Klassenfoto. | Ansehen: Zeugnis im Inventar, zweites Mal (nach 0890); öffnet die Nahansicht |
 | W1\_HOGG\_MAX\_0870 | Max | Leuchtet im Dunkeln. Steht jedenfalls drauf. | Ansehen: Leuchttrank im Inventar |
 | W1\_HOGG\_MAX\_0875 | Max | Ich halte die Hand drüber. Es wird ein bisschen hell. Für ein Nachtlicht reicht es. Für einen Dunklen Lord nicht. | Ansehen: Leuchttrank im Inventar, zweites Mal |
 | W1\_HOGG\_MAX\_0880 | Max | Die Prüfung ist bestanden. Noch ein Trank, und Alwin stellt mich ein. | Flasche auf Kessel; nach R6 |
+| W1\_HOGG\_MAX\_0890 | Max | Unten rechts: „Betragen: herausragend böse.“ Mit Sternchen. Das hat er sich eingerahmt, wetten. | Ansehen: Zeugnis im Inventar, öffnet die Nahansicht (erstes Ansehen nach der Szene) |
+| W1\_HOGG\_MAX\_0930 | Max | Eine Flasche ohne Etikett. Ob mutig oder dumm, entscheidet gleich der Kessel. | Max nimmt eine der sechs Flaschen aus dem Regal; vor R6b |
+| W1\_HOGG\_MAX\_0940 | Max | Eine Flasche pro Versuch. Zwei Flaschen sind kein Trank, sondern ein Gruppenchat. | Max greift zur zweiten Flasche, während er eine trägt |
 
 Zurufe im Klassenzimmer (Pixel):
 
@@ -657,7 +660,7 @@ Rätsel 3, dritte Ziege: Der Ziegenfell-Vorleger kommt auf Pixel. Danach Rätsel
 | W1\_BRUE\_WAL\_0520 | Waldemar | Der Mittlere. Korrekt. Und der Satz? | Schmiede-Ziege auf der Brücke, nach dem Kleinen |
 | W1\_BRUE\_WAL\_0530 | Waldemar | Der Große. Korrekt. Ich werde ein wenig nervös. Und der Satz? | XXL-Ziege auf der Brücke, nach dem Mittleren |
 
-Rätsel 4b, Ziegisch: Max liest den Text aus der Satzung vor (Benutzen: Schild), dann wechselt der Spieler zu Pixel und redet mit den Ziegen. Der erste Versuch geht schief, der zweite sitzt. Pixel sagt seinen eigenen Satz selbst.
+Rätsel 4b, Ziegisch: Max liest den Text aus der Satzung vor (Benutzen: Schild), dann wechselt der Spieler zu Pixel und redet mit den Ziegen. Der erste Versuch geht schief, der zweite sitzt. Pixel sagt seinen eigenen Satz selbst. Redet Pixel vor dem Vorlesen mit den Ziegen, kommen die allgemeinen Ziegisch-Zeilen (SCHM 0410/0420, DORF 0990/1000).
 
 | ID | Sprecher | Text | Regie |
 | --- | --- | --- | --- |
@@ -690,7 +693,7 @@ Rätsel 4c, ins Wasser: Waldemar muss laut Paragraf 3 ins Wasser. Der Eimer vom 
 | --- | --- | --- | --- |
 | W1\_BRUE\_WAL\_0910 | Waldemar | Und nun … Paragraf drei. Der Troll geht ins Wasser. | sieht in den Bach, zittert |
 | W1\_BRUE\_WAL\_0920 | Waldemar | Ich … kann nicht. Ich stehe hier seit vierzig Jahren und ich kann nicht. | Fliege hängt schief |
-| W1\_BRUE\_MAX\_0930 | Max | Ich schubs keinen Troll in einen Bach. Nicht mal für ein Ei. | Benutzen: Waldemar; Bach |
+| W1\_BRUE\_MAX\_0930 | Max | Ich schubs keinen Troll in einen Bach. Nicht mal für ein Ei. | Benutzen: Bach; nach 0920, vor der Lösung von R4c |
 | W1\_BRUE\_WAL\_0940 | Waldemar | Ein leerer Eimer ist kein Wasser. Paragraf drei kennt keine Symbolik. | leerer Eimer auf Waldemar |
 | W1\_BRUE\_MAX\_0950 | Max | Waldemar. Da steht Wasser. Nicht Fluss. Nicht Bach. Nur Wasser. | Eimer mit Wasser auf Waldemar |
 | W1\_BRUE\_WAL\_0960 | Waldemar | Ein Eimer. Mit Wasser. … Das ist Wasser im Sinne der Satzung. Ich gehe hinein. Mit den Füßen. | setzt sich, Fußbad-Animation |
@@ -705,6 +708,7 @@ Rätsel 4c, ins Wasser: Waldemar muss laut Paragraf 3 ins Wasser. Der Eimer vom 
 | W1\_BRUE\_MAX\_1045 | Max | Er planscht. Er singt dabei. Leise. Ich glaube, er ist glücklich. Ich geh trotzdem schnell. | Ansehen: Brücke, zweites Mal; nach R4 |
 | W1\_BRUE\_WAL\_1050 | Waldemar | Noch ein Eimer? Paragraf drei ist erfüllt. Mehr Wasser wäre Luxus. Ich nehme ihn trotzdem. Nein. Regel ist Regel. | Eimer mit Wasser auf Waldemar; nach R4 |
 | W1\_BRUE\_WAL\_1060 | Waldemar | Wasser? Jetzt schon? Paragraf eins: Erst das Märchen, dann das Bad. Und keine deiner Ziegen hat bisher einen ganzen Satz gesagt. | Eimer mit Wasser auf Waldemar; vor R4b |
+| W1\_BRUE\_WAL\_1070 | Waldemar | Finger weg von meinem Bach. Paragraf neun: Wasser bleibt, wo es wohnt. Hol dir eigenes. | leerer Eimer auf Bach |
 
 Zurufe an der Troll-Brücke (Pixel):
 
@@ -784,6 +788,7 @@ Hier liegen der Leuchtpilz (Rätsel 6), der Ketchup (Rätsel 10, Weg A) und die 
 | W1\_WALD\_MAX\_0175 | Max | Ein Baum hat ein Gesicht in der Rinde. Er sieht genervt aus. Ich auch. Wir sind Kollegen. | Ansehen: Bäume, zweites Mal |
 | W1\_WALD\_PIX\_0180 | Pixel | Pappe, Ketchup, ein Hauch Oma. Dieser Karren hat mehr erlebt als ich, und ich war im Fernseher. | Pixel schnuppert: Lieferkarren |
 | W1\_WALD\_ROT\_0190 | Rotkäppchen | Eine Katze! Hallo! Ich hab Katzenfutter dabei. Nein, hab ich nicht. Das war ein Lieferdienst-Reflex. | Pixel auf Rotkäppchen |
+| W1\_WALD\_MAX\_0730 | Max | Gehört Rotkäppchen. Ich frag lieber. Wer im Wald einfach nimmt, kriegt eine Moral am Ende. | Nehmen: Ketchup; vor Rotkäppchens Erlaubnis |
 
 Gespräch mit Rotkäppchen:
 
@@ -1169,11 +1174,11 @@ Rätsel 11, Teil 1: die Geheimtür. Benutzen öffnet die Eingabe: Der Spieler or
 
 | ID | Sprecher | Text | Regie oder Auslöser |
 | --- | --- | --- | --- |
-| W1\_SMAU\_TUE\_0710 | Geheimtür | Passwort, bitte. Kicher. | Benutzen: Geheimtür |
+| W1\_SMAU\_TUE\_0710 | Geheimtür | Passwort, bitte. Kicher. | Benutzen: Geheimtür; danach wählt Max die vier Teile aus dem Notizbuch nacheinander (Auswahl wie im Gespräch, gewählte Teile verschwinden) |
 | W1\_SMAU\_TUE\_0720 | Geheimtür | Unvollständig. Kicher. Such weiter. | weniger als vier Teile im Notizbuch |
 | W1\_SMAU\_TUE\_0730 | Geheimtür | Kicher! Nein! Kicherkicher! | falsche Reihenfolge |
 | W1\_SMAU\_MAX\_0740 | Max | Die Tür lacht mich aus. Wie Autokorrektur. | nach 0730 |
-| W1\_SMAU\_TUE\_0750 | Geheimtür | Puddi-Bärchen-Mo? Das ist ja nicht mal ein Name. Kicher. | zweite falsche Reihenfolge |
+| W1\_SMAU\_TUE\_0750 | Geheimtür | Puddi-Bärchen-Mo? Das ist ja nicht mal ein Name. Kicher. | falsche Reihenfolge, die mit Puddi, Bärchen, Mo beginnt (statt 0730) |
 | W1\_SMAU\_MAX\_0760 | Max | Mo-Knuddel-Puddi-Bärchen. | richtige Reihenfolge |
 | W1\_SMAU\_TUE\_0770 | Geheimtür | … Kicher. Richtig. Mama? | öffnet sich; R11 Teil 1 gelöst |
 | W1\_SMAU\_PIX\_0780 | Pixel | Die Tür hat „Mama“ gesagt. Ich brauche einen Moment. |  |
@@ -1254,8 +1259,8 @@ Abschluss der Welt:
 | W1\_THRO\_PIX\_0590 | Pixel | Zurück durch den Fernseher. Ich hasse Fernsehreisen. Ich habe es gesagt, ich sage es wieder, ich werde es immer sagen. |  |
 | W1\_THRO\_MAX\_0600 | Max | Opa hat gesagt, zurück holt uns der Werbeblock. |  |
 | W1\_THRO\_PIX\_0610 | Pixel | Dann bitte einen mit Essen. | Bild flimmert; Übergang zum Zwischenspiel |
-| W1\_THRO\_ZEL\_0620 | Zeldina | Wenn ihr oben Hilfe braucht: Ich hab jetzt einen Zauberstab und keinen Umzug mehr. Ruft an. | Ansehen oder Reden: Zeldina nach R13; bereitet das Finale vor |
-| W1\_THRO\_MOD\_0630 | Moderwort | Erstes Jahr, zweiter Anlauf. Hatschi. Diesmal mit Taschentüchern. | Reden: Moderwort nach R13 |
+| W1\_THRO\_ZEL\_0620 | Zeldina | Wenn ihr oben Hilfe braucht: Ich hab jetzt einen Zauberstab und keinen Umzug mehr. Ruft an. | nach 0550; bereitet das Finale vor |
+| W1\_THRO\_MOD\_0630 | Moderwort | Erstes Jahr, zweiter Anlauf. Hatschi. Diesmal mit Taschentüchern. | nach 0620; danach 0560 oder 0570 |
 | W1\_THRO\_PIX\_0710 | Pixel | Er sitzt auf einem Thron für drei und benutzt ein Kissen für einen. Das Traurigste heute, und ich habe Toadi gesehen. | Zuruf |
 | W1\_THRO\_PIX\_0720 | Pixel | Blumen. Taschentücher. Heuschnupfen. Dieser Raum ist ein Rätsel, das sich selbst löst. | Zuruf; vor dem Duell |
 

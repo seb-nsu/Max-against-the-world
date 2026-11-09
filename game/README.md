@@ -77,7 +77,11 @@ godot --headless --editor --path game -- --cq-bauen   # Godot-Bau: fehlende Popo
   `CQRaum` ruft sie nach jedem Betreten und Laden auf.
 - **Auswahl ohne Gesprächsfigur** (Wünsche am Brunnen, Passwort an der Geheimtür):
   `Spiel.auswahl(texte)` zeigt Popochius Inline-Auswahl; Tests geben die Antwort über
-  `Spiel.vorgabe_auswahl` vor.
+  `Spiel.vorgabe_auswahl` vor. Das Passwort sind vier Auswahlen nacheinander (gewählte Teile
+  verschwinden, die Vorgabe ist der Index in die Restliste).
+- **Sprechende Objekte** (Brunnen, Grammophon, Geheimtür, Spiegel; Kürzel ohne Figur): die
+  Blase kommt vom Objekt im Raum (`Spiel.OBJEKTSTIMMEN`, unsichtbare Popochiu-Figur an der
+  Oberkante), sonst als Systemtext.
 - **Zwischenspiele** laufen auf dem Dachboden des Prologs mit dem Abschnitt `finale` (der
   Dachboden steht auch in dessen Welt-Tabelle) und dem Wert `ZWISCHENSPIEL`
   (`Spiel.zwischenspiel_beginnen(nr)`; das Inventar bleibt). Ein Raum, der zum aktuellen

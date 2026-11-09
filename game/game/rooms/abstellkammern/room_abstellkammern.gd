@@ -20,9 +20,9 @@ const ABNEHMER := {
 	"Kronleuchter": ["Zeldina", "W1_R12_KRONLEUCHTER",
 		[["ZEL", "W1_SMAU_ZEL_0580"], ["SMA", "W1_SMAU_SMA_0590"], ["ZEL", "W1_SMAU_ZEL_0600"]]],
 }
-## Passwort-Eingabe an der Geheimtür (Reihenfolgen als UI-Texte); die dritte ist richtig
-const PASSWORT := ["UI_PASSWORT_W1_1", "UI_PASSWORT_W1_2", "UI_PASSWORT_W1_3"]
-const PASSWORT_RICHTIG := 2
+## Passwort an der Geheimtür: vier Teile nacheinander wählen, gewählte verschwinden (G20).
+const PASSWORT_TEILE := ["UI_PASSWORT_TEIL_MO", "UI_PASSWORT_TEIL_KNUDDEL",
+	"UI_PASSWORT_TEIL_PUDDI", "UI_PASSWORT_TEIL_BAERCHEN"]
 
 
 func _raum_betreten(erster_besuch: bool) -> void:
@@ -116,13 +116,19 @@ func geheimtuer() -> void:
 	if passwort_teile() < 4:
 		await Spiel.sagen("TUE", "W1_SMAU_TUE_0720")
 		return
-	var wahl := await Spiel.auswahl(PASSWORT)
-	if wahl != PASSWORT_RICHTIG:
-		if Zustand.ansehen_zaehlen("Geheimtuer/falsch") == 1:
+	var uebrig := PASSWORT_TEILE.duplicate()
+	var folge: Array = []
+	while not uebrig.is_empty():
+		var wahl := await Spiel.auswahl(uebrig)
+		if wahl < 0 or wahl >= uebrig.size():
+			return  # abgebrochen
+		folge.append(uebrig.pop_at(wahl))
+	if folge != PASSWORT_TEILE:
+		if folge.slice(0, 3) == [PASSWORT_TEILE[2], PASSWORT_TEILE[3], PASSWORT_TEILE[0]]:
+			await Spiel.sagen("TUE", "W1_SMAU_TUE_0750")
+		else:
 			await Spiel.sagen("TUE", "W1_SMAU_TUE_0730")
 			await Spiel.sagen("MAX", "W1_SMAU_MAX_0740")
-		else:
-			await Spiel.sagen("TUE", "W1_SMAU_TUE_0750")
 		return
 	var schritte := [
 		Spiel.z("MAX", "W1_SMAU_MAX_0760"),

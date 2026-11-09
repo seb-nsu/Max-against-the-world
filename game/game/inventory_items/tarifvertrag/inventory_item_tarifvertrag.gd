@@ -21,12 +21,10 @@ func _kombinieren(item: PopochiuInventoryItem) -> bool:
 	return false
 
 
-## BERG 0710/0715 stehen in einer Regie-Tabelle und fehlen im Bauplan (offene-punkte.md G21).
+## BERG 0710/0715 stehen seit der Regie-Tabellen-Korrektur im Bauplan, aber ohne Zustand
+## (Skript: „Ansehen: Tarifvertrag“ statt „…, unterschrieben“). Sie gelten nur unterschrieben.
 func _ansehen() -> void:
-	if zustand() != "unterschrieben":
-		await super()
-		return
-	await Spiel.ansehen([
-		{sprecher = "MAX", zeile = "W1_BERG_MAX_0710", mal = 1},
-		{sprecher = "MAX", zeile = "W1_BERG_MAX_0715", mal = 2},
-	], "Gegenstand/" + script_name, zustand())
+	var leer := zustand() == "leer"
+	var eintraege: Array = bauplan().get("ansehen", []).filter(
+		func(e): return (e.get("zustand", "") == "leer") == leer)
+	await Spiel.ansehen(eintraege, "Gegenstand/" + script_name, zustand())

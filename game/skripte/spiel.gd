@@ -119,7 +119,11 @@ func sagen(kuerzel: String, zeile: String) -> void:
 			continue
 		var c := figur(kuerzel)
 		if not is_instance_valid(c):
-			await G.show_system_text(b)
+			var quelle := _objekt_im_raum(OBJEKTSTIMMEN.get(kuerzel, ""))
+			if is_instance_valid(quelle):
+				await _objekt_sagt(kuerzel, quelle, b)
+			else:
+				await G.show_system_text(b)
 			continue
 		var gast := not c.is_inside_tree() and is_instance_valid(R.current)
 		if gast:
@@ -129,6 +133,59 @@ func sagen(kuerzel: String, zeile: String) -> void:
 			_stimme_aus_dem_off(c, false)
 	if testmodus:
 		await get_tree().process_frame
+
+
+## Sprechende Objekte ohne Figur (welt-1.yaml: Figuren mit groesse_px 0) → Objekt-ID im Raum.
+## Die Sprechblase kommt vom Objekt (G16), nicht als Systemtext.
+const OBJEKTSTIMMEN := {"BRU": "brunnen", "GRA": "grammophon", "TUE": "geheimtuer", "SPI": "spiegel"}
+## Farbe der Objektstimmen (wie Figuren ohne eigene Schriftfarbe, 05-spielsysteme.md)
+const OBJEKTSTIMME_FARBE := Color.WHITE
+## Je Kürzel eine Stimme; sie bleibt bestehen, weil Popochius Verlauf (History) sie festhält.
+var _objektstimmen := {}
+
+
+func _exit_tree() -> void:
+	for s in _objektstimmen.values():
+		if is_instance_valid(s) and not s.is_inside_tree():
+			s.free()
+
+
+## Hotspot, Prop oder Ausgang im aktuellen Raum mit dieser Objekt-ID (sonst null).
+func _objekt_im_raum(oid: String) -> PopochiuClickable:
+	if oid.is_empty() or not is_instance_valid(R.current):
+		return null
+	for o in R.current.get_hotspots() + R.current.get_props():
+		if o.has_method("objekt_id") and o.objekt_id() == oid:
+			return o
+	return null
+
+
+## Eine Sprechblase über dem Objekt: eine unsichtbare, nicht klickbare Stimme (Popochius
+## Vorlagen-Figur) steht für die Dauer der Blase an der Oberkante des Objekts und „spricht“
+## über Popochius Signal (Farbe, Position und Verlauf wie bei Figuren).
+func _objekt_sagt(kuerzel: String, quelle: PopochiuClickable, text: String) -> void:
+	if E.cutscene_skipped:
+		await get_tree().process_frame
+		return
+	var stimme: PopochiuCharacter = _objektstimmen.get(kuerzel)
+	if not is_instance_valid(stimme):
+		stimme = load("res://addons/popochiu/engine/objects/character/popochiu_character.tscn").instantiate()
+		stimme.script_name = "Objektstimme" + kuerzel.capitalize()
+		stimme.description = quelle.description
+		stimme.clickable = false
+		stimme.modulate.a = 0.0
+		stimme.text_color = OBJEKTSTIMME_FARBE
+		stimme.dialog_pos = Vector2(0, -4)
+		_objektstimmen[kuerzel] = stimme
+	var oben := 0.0
+	for p in quelle.interaction_polygon:
+		oben = minf(oben, p.y)
+	R.current.add_child(stimme)
+	stimme.global_position = quelle.global_position + Vector2(0, oben)
+	C.character_spoke.emit(stimme, E.translate(text))
+	await G.dialog_line_finished
+	if stimme.get_parent():
+		stimme.get_parent().remove_child(stimme)
 
 
 ## Eine Zeile aus dem Bauplan ({zeile, sprecher, folge?}) samt Folgezeilen („nach 0360“).

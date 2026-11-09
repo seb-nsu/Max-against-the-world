@@ -74,7 +74,7 @@ func figur_benutzt(figur: PopochiuCharacter, item: PopochiuInventoryItem) -> boo
 ## Reden mit Moderwort: nach dem Käse die Option 0350 (Spitzname), dann der Abschluss.
 func moderwort_reden() -> void:
 	if Zustand.geloest("R13"):
-		await Spiel.sagen("MOD", "W1_THRO_MOD_0630")
+		await Spiel.ersatz()  # 0630 gehört seit G25 in den Abschluss
 		return
 	if not Zustand.ist("W1_MOD_KAESE"):
 		await Spiel.ersatz()
@@ -101,7 +101,7 @@ func _r13_setzen() -> void:
 	Zustand.loese("R13")
 
 
-## Abschluss der Welt (0510–0610) und Übergang ins Zwischenspiel 1.
+## Abschluss der Welt (0510–0550, 0620, 0630, 0560–0610; G25) und Übergang ins Zwischenspiel 1.
 func abschluss() -> void:
 	var ohne_pfote := int(Zustand.stufe3_zaehler.get("welt-1", 0)) == 0
 	await Spiel.szene([
@@ -110,6 +110,8 @@ func abschluss() -> void:
 		Spiel.z("ZEL", "W1_THRO_ZEL_0530"),
 		Spiel.z("TOA", "W1_THRO_TOA_0540"),
 		Spiel.z("ZEL", "W1_THRO_ZEL_0550"),
+		Spiel.z("ZEL", "W1_THRO_ZEL_0620"),
+		Spiel.z("MOD", "W1_THRO_MOD_0630"),
 		Spiel.z("PIX", "W1_THRO_PIX_0560" if ohne_pfote else "W1_THRO_PIX_0570"),
 		Spiel.z("MAX", "W1_THRO_MAX_0580"),
 		Spiel.z("PIX", "W1_THRO_PIX_0590"),

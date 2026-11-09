@@ -1324,3 +1324,4 @@ Drei Stufen je Rätselschritt für die Hilfe-Pfote, Wartezeiten laut Spielsystem
 | W2\_HINT\_PIX\_1112 | Pixel | Ramses will Wein. Es gibt keinen. Es gibt Saft im Palast und Essig in der Werkstatt. Was gärt, reist mit der Zeit. | R11b, Stufe 1 |
 | W2\_HINT\_PIX\_1122 | Pixel | Essig war Wein, bevor er Essig wurde. Flussaufwärts wird alles jünger. Fünfundzwanzig Jahre reichen. Nicht mehr. | R11b, Stufe 2 |
 | W2\_HINT\_PIX\_1132 | Pixel | Nimm den Essigkrug aus der Werkstatt, fahr von Syrakus nach Olympia, nicht weiter, und gib Ramses den Wein. Wer bis Ägypten fährt, hat Saft. | R11b, Stufe 3 |
+| W2\_HINT\_PIX\_9995 | Pixel | Ich denke noch nach. Die Sphinx sitzt seit Jahrtausenden über einem Rätsel. Ich brauche nur ein Nickerchen länger. | Wartezeile, nächste Stufe noch gesperrt |

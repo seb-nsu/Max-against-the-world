@@ -240,9 +240,10 @@ UI_ZIEL_W1_R11A,Das Passwort der Geheimtür,The secret door's password
 UI_ZIEL_W1_R11B,Die Besen loswerden,Get rid of the brooms
 UI_ZIEL_W1_R12,Smaugi das Ei abschwatzen,Talk Smaugi out of the egg
 UI_ZIEL_W1_R13,Lord Moderwort besiegen,Defeat Lord Moderwort
-UI_PASSWORT_W1_1,Puddi-Bärchen-Mo-Knuddel,Puddi-Bärchen-Mo-Knuddel
-UI_PASSWORT_W1_2,Knuddel-Mo-Bärchen-Puddi,Knuddel-Mo-Bärchen-Puddi
-UI_PASSWORT_W1_3,Mo-Knuddel-Puddi-Bärchen,Mo-Knuddel-Puddi-Bärchen
+UI_PASSWORT_TEIL_MO,Mo,Mo
+UI_PASSWORT_TEIL_KNUDDEL,Knuddel,Knuddel
+UI_PASSWORT_TEIL_PUDDI,Puddi,Puddi
+UI_PASSWORT_TEIL_BAERCHEN,Bärchen,Bärchen
 P0_WOHN_MAX_0010,Ein Balken. Ein einziger Balken.,
 P0_WOHN_MAX_0020,Und der ist auch nur zur Deko da.,
 P0_WOHN_OPA_0030,Maaax! Komm mal rauf! Wissenschaft!,
@@ -872,6 +873,7 @@ W1_STAB_PIX_0570,Sie hat mich gerade einsortiert. Unter „Edel“. Ich mag sie.
 W1_STAB_PIX_0575,Sie hat mich wieder einsortiert. Diesmal unter „Unbezahlbar“. Ich werde ihr ewig treu sein.,
 W1_STAB_MAX_0580,Hm. Hm. Hmm. Sie denkt nach. Über mich. Das macht sonst keiner.,
 W1_STAB_MAX_0590,Schwing. Nichts. Noch nichts. Aber es fühlt sich dramatisch an.,
+W1_STAB_MAX_0600,"Nicht hier. Wenn mich ein Löffel wählt, soll der Stabmacher zusehen. Der weint bestimmt.",
 W1_STAB_PIX_0610,Der Mann starrt dich durch sein Monokel an. Du bist gerade sehr groß für ihn. Nutz das.,
 W1_STAB_PIX_0620,Drei Dinge auf einem Kissen. Eins davon ist die Antwort. Das ist eine Quizshow für sehr geduldige Leute.,
 W1_HOGG_NAR_0010,"Ein kleiner Besen in der Ecke zuckt, richtet sich auf und rast einem Büschel grauer Katzenhaare hinterher. Krach. Schrank.",
@@ -943,13 +945,15 @@ W1_HOGG_ALW_0800,"Bestanden! Der Trank des Leuchtens! Abfüllen, mitnehmen, nich
 W1_HOGG_MAX_0810,"Ein Trank, der leuchtet. Die Taschenlampe in meinem Handy kann das auch. Konnte. Akku.",
 W1_HOGG_ALW_0820,"Und weil du bestanden hast, zeige ich dir, wie es nicht geht. Moderworts Zeugnis. Aus dem Archiv. Als Abschreckung.",
 W1_HOGG_MAX_0830,"„Kräuterkunde: ungenügend. Zaubertränke: ungenügend. Bosheit: befriedigend.“ Und eine Notiz: „Für meinen Mo-Knuddel, stolz!“",
-W1_HOGG_MAX_0835,"Unten rechts: „Betragen: herausragend böse.“ Mit Sternchen. Das hat er sich eingerahmt, wetten.",
 W1_HOGG_PIX_0840,Mo-Knuddel. Das schreibt man sich auf. Das schreibt man sich unter die Pfote.,
 W1_HOGG_ALW_0850,"Seine Mutti hat es unterschrieben. Er hat es nie abgeholt. Ich glaube, genau deswegen.",
 W1_HOGG_MAX_0860,Ein Zeugnis mit Kosenamen drauf. Das ist schlimmer als jedes Klassenfoto.,
 W1_HOGG_MAX_0870,Leuchtet im Dunkeln. Steht jedenfalls drauf.,
 W1_HOGG_MAX_0875,Ich halte die Hand drüber. Es wird ein bisschen hell. Für ein Nachtlicht reicht es. Für einen Dunklen Lord nicht.,
 W1_HOGG_MAX_0880,"Die Prüfung ist bestanden. Noch ein Trank, und Alwin stellt mich ein.",
+W1_HOGG_MAX_0890,"Unten rechts: „Betragen: herausragend böse.“ Mit Sternchen. Das hat er sich eingerahmt, wetten.",
+W1_HOGG_MAX_0930,"Eine Flasche ohne Etikett. Ob mutig oder dumm, entscheidet gleich der Kessel.",
+W1_HOGG_MAX_0940,"Eine Flasche pro Versuch. Zwei Flaschen sind kein Trank, sondern ein Gruppenchat.",
 W1_HOGG_PIX_0910,"Der Kessel blubbert, die Flaschen schweigen, Alwin summt ein Rezept. Du könntest ruhig mitmachen.",
 W1_HOGG_PIX_0920,Der Besen im Schrank zuckt noch. Er träumt von meinen Haaren. Ich fühle mich geschmeichelt und bedroht.,
 W1_BRUE_MAX_0010,Eine Steinbrücke. Darunter Platz für einen Troll und seine Hobbys.,
@@ -1051,6 +1055,7 @@ W1_BRUE_MAX_1040,Der Troll badet. Die Brücke ist frei. Ich geh einfach rüber. 
 W1_BRUE_MAX_1045,"Er planscht. Er singt dabei. Leise. Ich glaube, er ist glücklich. Ich geh trotzdem schnell.",
 W1_BRUE_WAL_1050,Noch ein Eimer? Paragraf drei ist erfüllt. Mehr Wasser wäre Luxus. Ich nehme ihn trotzdem. Nein. Regel ist Regel.,
 W1_BRUE_WAL_1060,"Wasser? Jetzt schon? Paragraf eins: Erst das Märchen, dann das Bad. Und keine deiner Ziegen hat bisher einen ganzen Satz gesagt.",
+W1_BRUE_WAL_1070,"Finger weg von meinem Bach. Paragraf neun: Wasser bleibt, wo es wohnt. Hol dir eigenes.",
 W1_BRUE_PIX_1110,"Der Troll steht so gerade, dass mir der Rücken wehtut. Vom Zuschauen.",
 W1_BRUE_PIX_1120,Unter der Brücke läuft Musik. Sehr leise. Sehr heimlich. Sehr schlecht versteckt.,
 W1_BRUE_PIX_1130,"Die Ziegen warten. Ich warte. Der Troll wartet. Das ist kein Abenteuer, das ist ein Wartezimmer.",
@@ -1112,6 +1117,7 @@ W1_WALD_MAX_0170,Verdrehte Bäume. Als hätte jemand den Wald beim Wachsen gest�
 W1_WALD_MAX_0175,Ein Baum hat ein Gesicht in der Rinde. Er sieht genervt aus. Ich auch. Wir sind Kollegen.,
 W1_WALD_PIX_0180,"Pappe, Ketchup, ein Hauch Oma. Dieser Karren hat mehr erlebt als ich, und ich war im Fernseher.",
 W1_WALD_ROT_0190,"Eine Katze! Hallo! Ich hab Katzenfutter dabei. Nein, hab ich nicht. Das war ein Lieferdienst-Reflex.",
+W1_WALD_MAX_0730,"Gehört Rotkäppchen. Ich frag lieber. Wer im Wald einfach nimmt, kriegt eine Moral am Ende.",
 W1_WALD_MAX_0210,Was lieferst du so?,
 W1_WALD_ROT_0220,"Alles. Kuchen, Wein, Ziegen, Omas. Omas sind am schwersten zu verpacken.",
 W1_WALD_MAX_0230,Kann ich eine Flasche Ketchup haben?,
@@ -2752,6 +2758,7 @@ W2_HINT_PIX_1131,"Hermes, Spiegel, Cicero, Pixel. In dieser Reihenfolge in die v
 W2_HINT_PIX_1112,"Ramses will Wein. Es gibt keinen. Es gibt Saft im Palast und Essig in der Werkstatt. Was gärt, reist mit der Zeit.",
 W2_HINT_PIX_1122,"Essig war Wein, bevor er Essig wurde. Flussaufwärts wird alles jünger. Fünfundzwanzig Jahre reichen. Nicht mehr.",
 W2_HINT_PIX_1132,"Nimm den Essigkrug aus der Werkstatt, fahr von Syrakus nach Olympia, nicht weiter, und gib Ramses den Wein. Wer bis Ägypten fährt, hat Saft.",
+W2_HINT_PIX_9995,Ich denke noch nach. Die Sphinx sitzt seit Jahrtausenden über einem Rätsel. Ich brauche nur ein Nickerchen länger.,
 W3_ANK_NAR_0010,"Wirbel, Rauschen, dann ein Platschen. Max sitzt in einer Pfütze, Pixel auf seinem Kopf.",
 W3_ANK_MAX_0020,"Nass. Gut. Dann ist die Frage, wo wir sind, schon mal halb beantwortet.",
 W3_ANK_PIX_0030,"Ich sitze auf dem höchsten Punkt dieser Welt, und er ist feucht.",
@@ -3779,6 +3786,7 @@ W3_HINT_PIX_1330,"Gib Herrn Vier den Glückskeks. Er bricht ihn auf, weint, koch
 W3_HINT_PIX_1410,"Kalle kann nichts übersetzen, weil er seine Tabelle verloren hat. Der rostige Eimer in der Ecke hat eine Kopie. Er braucht nur einen Grund aufzuwachen.",
 W3_HINT_PIX_1420,"Siehst du die Tasse am Tischrand? Siehst du den Eimer darunter? Siehst du mich? Ich bin eine Katze. Ich glaube, du siehst, worauf das hinausläuft.",
 W3_HINT_PIX_1430,Wechsel zu mir und benutze Kalles Tasse. Sie fällt. Der Kaffee weckt Piepsi. Piepsi druckt die Tabelle. Ich übernehme keine Verantwortung. Ich übernehme nie welche.,
+W3_HINT_PIX_9995,"Ich rechne noch. Bitte warten. Das sage ich nur, weil hier jeder Toaster das sagt.",
 W4_TEST_MAX_0010,Autsch.,
 W4_TEST_PIX_0020,Weich gelandet. Danke der Nachfrage.,
 W4_TEST_MAX_0030,Bunte Streifen. Ein Piepton. Das ist entweder Kunst oder ein Fehler.,
