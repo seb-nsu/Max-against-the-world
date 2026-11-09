@@ -1,6 +1,6 @@
 # Skript Welt 1: Schwurbelstein
 
-Das ganze Skript für Welt 1 als Entwurf: rund 870 Zeilen in 16 Abschnitten, ein Abschnitt pro Raum oder Szene, in der Kurzform aus dem Tab Spielsysteme (ID, Sprecher, Text, Regie oder Auslöser; Bedingungen nach Semikolon, „//“ trennt Pixels Kaskaden). Die Nummern laufen pro Szene in Zehnerschritten, jeder Tabellenblock beginnt bei einem neuen Hunderter. Sprecherkürzel der Nebenfiguren: TOA Toadi, ALW Alwin Grauwald, ZEL Zeldina, GOL Gollo, HUM Humbert, WAL Waldemar, STA Stabmacher, SCH Schmied, ROT Rotkäppchen, MAK Maklerin, GRI Grimmzahn, GO1 und GO2 Goblin-Arbeiter, MOD Moderwort, SMA Smaugi, MIN Minka, HUH Huhn, ZIE Schmiede-Ziege, XXL XXL-Ziege, SWA Schwan, BRU Brunnen, GRA Grammophon, SPI Spiegel, TUE Geheimtür. Ersatzzeilen kommen aus dem Pool SYS\_ERS im Prolog-Skript; die Hinweis-IDs folgen dem Schema W1\_HINT\_PIX\_RRSK (Abschnitt 16).
+Das ganze Skript für Welt 1 als Entwurf: rund 870 Zeilen in 16 Abschnitten, ein Abschnitt pro Raum oder Szene, in der Kurzform aus `05-spielsysteme.md` (ID, Sprecher, Text, Regie oder Auslöser; Bedingungen nach Semikolon, „//“ trennt Pixels Kaskaden). Die Nummern laufen pro Szene in Zehnerschritten, jeder Tabellenblock beginnt bei einem neuen Hunderter. Sprecherkürzel der Nebenfiguren: TOA Toadi, ALW Alwin Grauwald, ZEL Zeldina, GOL Gollo, HUM Humbert, WAL Waldemar, STA Stabmacher, SCH Schmied, ROT Rotkäppchen, MAK Maklerin, GRI Grimmzahn, GO1 und GO2 Goblin-Arbeiter, MOD Moderwort, SMA Smaugi, MIN Minka, HUH Huhn, ZIE Schmiede-Ziege, XXL XXL-Ziege, SWA Schwan, BRU Brunnen, GRA Grammophon, SPI Spiegel, TUE Geheimtür; NAR steht für Erzähl- und Szenentext ohne Sprecher (Spalte „–“). Räume mit ihren Szenen-Codes, Figuren mit Kürzel und Größe sowie alle Gegenstände stehen in der Welt-Tabelle [`welten/welt-1.yaml`](../welten/welt-1.yaml); WECH und HINT sind Sonder-Codes ohne eigenen Raum. Ersatzzeilen kommen aus dem Pool SYS\_ERS im Prolog-Skript; die Hinweis-IDs folgen dem Schema W1\_HINT\_PIX\_RRSK (Abschnitt 16).
 
 ## 1. Dorfplatz Unterbrösel: Ankunft
 
@@ -73,7 +73,7 @@ Der Dorfplatz ist die Drehscheibe der Welt: Rätsel 3 (Bestellung), 5 (Brunnen) 
 | W1\_DORF\_PIX\_0420 | Pixel | Riecht nach Kokos. Kein Pferd. Das Pferd ist eine Lüge, und ich sage das als Experte für Lügen. | Pixel schnuppert: Stall |
 | W1\_DORF\_TOA\_0430 | Toadi | Eine Katze! Ist sie gefährlich? Sie sieht aus, als hätte sie Meinungen! | Pixel auf Toadi |
 
-Gespräch mit Toadi. Max fragt, Toadi antwortet; gelesene Optionen werden grau. Toadi folgt Max auf dem Dorfplatz und in Hoggelwarz, sonst wartet er.
+Gespräch mit Toadi. Max fragt, Toadi antwortet; gelesene Optionen werden grau. Toadi folgt Max auf dem Dorfplatz und in Hoggelwarz, sonst wartet er; zu den Szenen im Wasserschloss, im Zauberwald (Rätsel 7), im Luftschloss und im Thronsaal rennt er herbei.
 
 | ID | Sprecher | Text | Regie |
 | --- | --- | --- | --- |
@@ -315,7 +315,7 @@ Zurufe in der Taverne (Pixel):
 
 ## 4. Schmiede: Die erste Ziege und die Milch
 
-Der Schmied schmiedet nur noch Kochgeschirr, seit die Ziege bei ihm wohnt. Hier gibt es Ziege 1 (Rätsel 3) und später die Ziegenmilch (Rätsel 6, Teil 1). Der Krug für die Milch hängt beim Kochgeschirr.
+Der Schmied schmiedet nur noch Kochgeschirr, seit die Ziege bei ihm wohnt. Hier gibt es Ziege 1 (Rätsel 3) und später die Ziegenmilch (Rätsel 6, Teil 1). Der Krug für die Milch hängt beim Kochgeschirr. Melken geht überall, wo die Schmiede-Ziege gerade ist; vor Rätsel 4 folgt sie Max, danach steht sie wieder in der Schmiede.
 
 | ID | Sprecher | Text | Auslöser |
 | --- | --- | --- | --- |
@@ -362,7 +362,7 @@ Pixel redet mit der Ziege, und Rätsel 6, Teil 1: die Milch. Melken geht erst, w
 | W1\_SCHM\_ZIE\_0450 | Schmiede-Ziege | MÄÄÄH. | während der Animation |
 | W1\_SCHM\_MAX\_0460 | Max | Fertig. Ein Krug. Ich schwöre hiermit, diese Ziege nie wieder zu melken. Niemals. | Inventar: Ziegenmilch; Schwur-Schalter |
 | W1\_SCHM\_PIX\_0470 | Pixel | Sie schwört dasselbe. Nur mit mehr Schimpfwörtern. Ziegisch hat erstaunlich viele. |  |
-| W1\_SCHM\_SCH\_0480 | Schmied | Ich habe das gesehen. Ich werde es nie vergessen. Leider. | aus dem Hintergrund |
+| W1\_SCHM\_SCH\_0480 | Schmied | Ich habe das gesehen. Ich werde es nie vergessen. Leider. | aus dem Hintergrund; nur wenn in der Schmiede gemolken wird |
 | W1\_SCHM\_MAX\_0490 | Max | Nein. Ich hab geschworen. Und ich halte Schwüre, wenn sie bequem sind. | Krug auf Ziege; nach 0460 |
 | W1\_SCHM\_MAX\_0500 | Max | Ziegen fressen Eisen, keinen Fisch. Das steht fest. Zum Glück. | Thunfischdose auf Ziege |
 | W1\_SCHM\_MAX\_0510 | Max | Pfannen melken geht nicht. Ich hab's geprüft, geistig. | Krug auf Kochgeschirr |
@@ -530,7 +530,7 @@ Rätsel 6, Teil 2: die sechs Flaschen. Alwins Zettel als Nahansicht, Pixels zwei
 | W1\_HOGG\_ALW\_0800 | Alwin | Bestanden! Der Trank des Leuchtens! Abfüllen, mitnehmen, nicht trinken. Er schmeckt nach Pfannkuchen, und das verwirrt. | gibt den Leuchttrank |
 | W1\_HOGG\_MAX\_0810 | Max | Ein Trank, der leuchtet. Die Taschenlampe in meinem Handy kann das auch. Konnte. Akku. | Inventar: Leuchttrank |
 | W1\_HOGG\_ALW\_0820 | Alwin | Und weil du bestanden hast, zeige ich dir, wie es nicht geht. Moderworts Zeugnis. Aus dem Archiv. Als Abschreckung. | holt das Zeugnis |
-| W1\_HOGG\_MAX\_0830 | Max | „Kräuterkunde: ungenügend. Zaubertränke: ungenügend. Bosheit: befriedigend.“ Und eine Notiz: „Für meinen Mo-Knuddel, stolz!“ | Ansehen: Zeugnis; Notizbuch trägt „Mo-Knuddel“ ein |
+| W1\_HOGG\_MAX\_0830 | Max | „Kräuterkunde: ungenügend. Zaubertränke: ungenügend. Bosheit: befriedigend.“ Und eine Notiz: „Für meinen Mo-Knuddel, stolz!“ | Ansehen: Zeugnis, öffnet die Nahansicht; Notizbuch trägt „Mo-Knuddel“ ein |
 | W1\_HOGG\_PIX\_0840 | Pixel | Mo-Knuddel. Das schreibt man sich auf. Das schreibt man sich unter die Pfote. |  |
 | W1\_HOGG\_ALW\_0850 | Alwin | Seine Mutti hat es unterschrieben. Er hat es nie abgeholt. Ich glaube, genau deswegen. |  |
 | W1\_HOGG\_MAX\_0860 | Max | Ein Zeugnis mit Kosenamen drauf. Das ist schlimmer als jedes Klassenfoto. | Ansehen: Zeugnis im Inventar, zweites Mal |
@@ -546,13 +546,13 @@ Zurufe im Klassenzimmer (Pixel):
 
 ## 7. Troll-Brücke: Das Märchen nach Satzung
 
-Rätsel 3 (dritte Ziege) und Rätsel 4 (a, b, c). Waldemar steht kerzengerade neben dem Schild, unter der Brücke läuft leise ein Grammophon. Die Ziegen warten am Dorfende der Brücke, sobald sie Max folgen.
+Rätsel 3 (dritte Ziege) und Rätsel 4 (a, b, c). Waldemar steht kerzengerade neben dem Schild, unter der Brücke läuft leise ein Grammophon. Die Ziegen warten am Dorfende der Brücke, sobald sie Max folgen. Nach Rätsel 4 endet der Begleiter-Schalter: Die XXL-Ziege grast an der Brücke, die Schmiede-Ziege trottet zurück in die Schmiede.
 
 | ID | Sprecher | Text | Auslöser |
 | --- | --- | --- | --- |
 | W1\_BRUE\_MAX\_0010 | Max | Eine Steinbrücke. Darunter Platz für einen Troll und seine Hobbys. | Ansehen: Brücke |
 | W1\_BRUE\_MAX\_0020 | Max | Ein Bach. Knietief. Für einen Troll knöcheltief. Trotzdem Panik. | Ansehen: Bach |
-| W1\_BRUE\_MAX\_0030 | Max | Ein Schild mit mehr Paragrafen als meine Handyvertrag. Die Märchen-Satzung. | Ansehen: Schild, öffnet die Nahansicht |
+| W1\_BRUE\_MAX\_0030 | Max | Ein Schild mit mehr Paragrafen als mein Handyvertrag. Die Märchen-Satzung. | Ansehen: Schild, öffnet die Nahansicht |
 | W1\_BRUE\_WAL\_0040 | Waldemar (Schild) | Paragraf 1: Drei Ziegenböcke überqueren die Brücke, der kleine zuerst, dann der mittlere, dann der große. | Nahansicht Satzung; Notizbuch trägt die Regel ein |
 | W1\_BRUE\_WAL\_0050 | Waldemar (Schild) | Paragraf 2: Jeder Bock spricht seinen Satz. Der Kleine: „Friss mich nicht, mein Bruder ist fetter.“ Der Mittlere: „Friss mich nicht, mein Bruder ist noch fetter.“ Der Große: „Friss mich doch, wenn du dich traust.“ | Nahansicht Satzung |
 | W1\_BRUE\_WAL\_0060 | Waldemar (Schild) | Paragraf 3: Der Troll geht ins Wasser. Paragraf 14b: Leihgaben sind zurückzugeben. | Nahansicht Satzung |
@@ -734,8 +734,8 @@ Rätsel 7, die Niesrosen. Fehlversuche, dann Waldemars Musical-Nummer (ausgelös
 | W1\_WALD\_PIX\_0430 | Pixel | Du singst wie ein Modem. Ich meine das als Kompliment. An das Modem. | nach 0420 |
 | W1\_WALD\_PIX\_0440 | Pixel | Miaaau. … Sie bleiben zu. Banausen. Im Hof war ich legendär. | Pixel benutzt Rosen |
 | W1\_WALD\_MAX\_0450 | Max | Wasser hilft Rosen beim Wachsen. Nicht beim Aufgehen. Hab ich irgendwo gelesen. Oder erfunden. | Eimer auf Rosen |
-| W1\_WALD\_WAL\_0460 | Waldemar | Hier. Zwischen den Pilzen. Sieht jemand zu? | Szene: Waldemar kommt in den Wald |
-| W1\_WALD\_MAX\_0470 | Max | Nur ich, ein Kater, ein Pilzdiener, eine Lieferantin und drei Ziegen. |  |
+| W1\_WALD\_WAL\_0460 | Waldemar | Hier. Zwischen den Pilzen. Sieht jemand zu? | Szene: Waldemar kommt in den Wald, Toadi rennt hinterher und bleibt für die Nummer |
+| W1\_WALD\_MAX\_0470 | Max | Nur ich, ein Kater, ein Pilzdiener, eine Lieferantin und ein Busch voller Rosen. |  |
 | W1\_WALD\_WAL\_0480 | Waldemar | Also niemand. Gut. | legt das Regelbuch ab, Fliege gerade |
 | W1\_WALD\_WAL\_0490 | Waldemar | Ich steh an meiner Brücke, seit vierzig Jahren schon … ich prüfe jede Lücke, in jedem Paragraf-o-on … | Musical-Nummer, Gesang; Text als Untertitel |
 | W1\_WALD\_WAL\_0500 | Waldemar | … doch heute Nacht, da sag ich: WAAASSEEER! | Schlusston, lang; Niesrosen gehen auf |
@@ -977,7 +977,7 @@ Rätsel 11, Teil 2. Drei verzauberte Besen fegen feste Routen (gerade, Zickzack,
 
 ## 13. Smaugis Abstellkammern: Aufräumen und die Geheimtür
 
-Rätsel 12 und Rätsel 11, Teil 1. Smaugi sitzt auf seinem Kram, die Besen fegen die Haufen zu Stapeln. Humbert, Grimmzahn und Zeldina sind schon da. Die kichernde Geheimtür steht oben an der Treppe.
+Rätsel 12 und Rätsel 11, Teil 1, in der obersten Kammer (Ebene 6). Smaugi sitzt auf seinem Kram, die Besen fegen die Haufen zu Stapeln; nach Rätsel 12 ist aufgeräumt. Humbert, Grimmzahn und Zeldina sind schon da. Die kichernde Geheimtür steht am Fuß der Treppe zum Thronsaal; hindurch geht Max erst nach Rätsel 12.
 
 | ID | Sprecher | Text | Regie oder Auslöser |
 | --- | --- | --- | --- |
@@ -1003,7 +1003,7 @@ Rätsel 12 und Rätsel 11, Teil 1. Smaugi sitzt auf seinem Kram, die Besen fegen
 | W1\_SMAU\_MAX\_0200 | Max | Eine Treppe zum obersten Stockwerk. Davor eine Tür, die … kichert? | Ansehen: Geheimtür |
 | W1\_SMAU\_MAX\_0210 | Max | Ein Drache mit Kopftuch und Staubwedel. Er sieht aus, als bräuchte er Urlaub und einen Container. | Ansehen: Smaugi |
 | W1\_SMAU\_SMA\_0220 | Smaugi | Eine Katze! Die kann ich nicht behalten. Oder? Nein. Ich habe schon genug Fell im Haufen. | Pixel auf Smaugi |
-| W1\_SMAU\_MAX\_0230 | Max | Ordentliche Stapel. Die Besen haben gefegt. Smaugi sieht zum ersten Mal den Boden und leidet. | Ansehen: Stapel; aufgeräumte Fassung |
+| W1\_SMAU\_MAX\_0230 | Max | Ordentliche Stapel. Die Besen haben gefegt. Smaugi sieht zum ersten Mal den Boden und leidet. | Ansehen: Stapel; nach R12, aufgeräumte Fassung |
 
 Gespräch mit Smaugi:
 
@@ -1058,7 +1058,8 @@ Rätsel 11, Teil 1: die Geheimtür. Benutzen öffnet die Eingabe: Der Spieler or
 | W1\_SMAU\_PIX\_0780 | Pixel | Die Tür hat „Mama“ gesagt. Ich brauche einen Moment. |  |
 | W1\_SMAU\_ZEL\_0790 | Zeldina | Sieben Stockwerke, und die Tür hat einen Mutterkomplex. Ich nehme ihn trotzdem. |  |
 | W1\_SMAU\_PIX\_0800 | Pixel | Der Drache seufzt alle dreißig Sekunden. Ich habe mitgezählt, weil ich sonst nichts zu tun hatte. | Zuruf |
-| W1\_SMAU\_PIX\_0810 | Pixel | Die Besen fegen Smaugis Haufen zu Stapeln. Ordnung durch Terror. Ich kenne das von Oma. | Zuruf |
+| W1\_SMAU\_PIX\_0810 | Pixel | Die Besen fegen Smaugis Haufen zu Stapeln. Ordnung durch Terror. Ich kenne das von Oma. | Zuruf; vor R12 |
+| W1\_SMAU\_MAX\_0820 | Max | Erst das Ei. Von einem Dunklen Lord stand nichts auf Opas Zettel. | Benutzen: offene Geheimtür; nach R11 Teil 1, vor R12 |
 
 ## 14. Thronsaal: Lord Moderwort und Abschluss der Welt
 
@@ -1149,7 +1150,7 @@ Zeilen, die in jedem Raum von Welt 1 gelten: beim Wechsel zwischen Max und Pixel
 
 ## 16. Hinweise der Hilfe-Pfote
 
-Drei Stufen je Rätselschritt. Die Texte zu Rätsel 1 bis 4 sind die Slice-Hinweise aus dem Tab Spielsysteme, hier mit IDs. ID-Schema: W1\_HINT\_PIX\_RRSK, RR Rätselnummer, S Stufe 1 bis 3, K Teilschritt (0 ohne Teilschritte, 1 bis 3 für a bis c oder Teil 1 und 2).
+Drei Stufen je Rätselschritt. Die Texte zu Rätsel 1 bis 4 sind die Slice-Hinweise aus `05-spielsysteme.md`, hier mit IDs. ID-Schema: W1\_HINT\_PIX\_RRSK, RR Rätselnummer, S Stufe 1 bis 3, K Teilschritt (0 ohne Teilschritte, 1 bis 3 für a bis c oder Teil 1 und 2).
 
 | ID | Sprecher | Text | Schritt |
 | --- | --- | --- | --- |
@@ -1161,13 +1162,13 @@ Drei Stufen je Rätselschritt. Die Texte zu Rätsel 1 bis 4 sind die Slice-Hinwe
 | W1\_HINT\_PIX\_0132 | Pixel | Bestell den Jahrgang Schicksalsberg. Den holt er aus dem Keller, und das dauert. | R1b, Stufe 3 |
 | W1\_HINT\_PIX\_0113 | Pixel | Gollo traut sich nicht. Er will vorher spielen. Rätselspiele, natürlich. | R1c, Stufe 1 |
 | W1\_HINT\_PIX\_0123 | Pixel | Er verliert nur bei einer Frage, die nur du beantworten kannst. | R1c, Stufe 2 |
-| W1\_HINT\_PIX\_0133 | Pixel | Frag ihn, was du in der Tasche hast. Die Thunfischdose. Da kommt er nie drauf. | R1c, Stufe 3 |
+| W1\_HINT\_PIX\_0133 | Pixel | Zieh die Thunfischdose auf Gollo. Dann fragst du ihn, was in deiner Tasche ist. Da kommt er nie drauf. | R1c, Stufe 3 |
 | W1\_HINT\_PIX\_0210 | Pixel | Der Stabmacher sagt, der Stab wählt den Zauberer. Klingt, als bräuchte der Stab einen Grund, an dir zu kleben. | R2, Stufe 1 |
 | W1\_HINT\_PIX\_0220 | Pixel | In der Taverne gibt's etwas Klebriges. | R2, Stufe 2 |
 | W1\_HINT\_PIX\_0230 | Pixel | Schmier Käse auf den Löffel. Ich bin ein Kater, kein Lösungsbuch. | R2, Stufe 3 |
 | W1\_HINT\_PIX\_0310 | Pixel | Der Troll will drei Ziegen. Wir haben null. Schlechter Start. | R3, Stufe 1 |
 | W1\_HINT\_PIX\_0320 | Pixel | Eine Ziege frisst gerade beim Schmied, eine zweite kann man am Dorfbrett bestellen. Die dritte … bitte nicht. | R3, Stufe 2 |
-| W1\_HINT\_PIX\_0330 | Pixel | Hol die Schmiede-Ziege, bestell die zweite mit dem Zettel am Dorfbrett und gib mir den Ziegenfell-Vorleger aus der Taverne. Ich hasse alles daran. | R3, Stufe 3 |
+| W1\_HINT\_PIX\_0330 | Pixel | Hol die Schmiede-Ziege. Bestell die zweite mit dem Zettel am Dorfbrett und gib mir den Ziegenfell-Vorleger aus der Taverne. Ich hasse alles daran. | R3, Stufe 3 |
 | W1\_HINT\_PIX\_0411 | Pixel | Der Troll ist ein Paragrafenreiter. Lies das Brückenschild. | R4a, Stufe 1 |
 | W1\_HINT\_PIX\_0421 | Pixel | Im Märchen läuft immer erst die Kleine, dann die Mittlere, dann die Große. | R4a, Stufe 2 |
 | W1\_HINT\_PIX\_0431 | Pixel | Schick die Ziegen klein, mittel, groß über die Brücke. Ich bin die Kleine. Sag's niemandem. | R4a, Stufe 3 |
@@ -1203,7 +1204,7 @@ Drei Stufen je Rätselschritt. Die Texte zu Rätsel 1 bis 4 sind die Slice-Hinwe
 | W1\_HINT\_PIX\_1131 | Pixel | Mo-Knuddel-Puddi-Bärchen. Sag es der Tür. Sag es nie mir. | R11 Teil 1, Stufe 3 |
 | W1\_HINT\_PIX\_1112 | Pixel | Drei Besen, drei Routen. Sie fegen, was sich bewegt. Am liebsten Haare. Ich habe Haare. Ich sehe, worauf das hinausläuft. | R11 Teil 2, Stufe 1 |
 | W1\_HINT\_PIX\_1122 | Pixel | Wechsel zu mir und such die Stellen, wo sich die Fliesenwege kreuzen. Eine pro Route. Dort schüttle ich mich. Unter Protest. | R11 Teil 2, Stufe 2 |
-| W1\_HINT\_PIX\_1132 | Pixel | Als ich auf die drei Kreuzungen klicken, die Besen rennen in die Kammer, du machst die Tür zu. Und du kaufst mir eine Bürste. | R11 Teil 2, Stufe 3 |
+| W1\_HINT\_PIX\_1132 | Pixel | Wechsel zu mir und klick die drei Kreuzungen an. Die Besen rennen in die Kammer, du machst die Tür zu. Und du kaufst mir eine Bürste. | R11 Teil 2, Stufe 3 |
 | W1\_HINT\_PIX\_1210 | Pixel | Smaugi gibt nichts her, außer jemand braucht es wirklich. Drei Leute stehen hier herum, die etwas brauchen. | R12, Stufe 1 |
 | W1\_HINT\_PIX\_1220 | Pixel | Humbert sammelt Schwerter, Grimmzahn braucht Fackeln, Zeldina will einen Kronleuchter. Smaugis Haufen hat alle drei. | R12, Stufe 2 |
 | W1\_HINT\_PIX\_1230 | Pixel | Schwerter zu Humbert, Fackeln zu Grimmzahn, Kronleuchter zu Zeldina. Dann gibt er das Ei. Und ich will es weich. | R12, Stufe 3 |

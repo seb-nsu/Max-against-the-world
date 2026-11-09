@@ -6,17 +6,27 @@
 
 ## Inhalt
 
+Jede Information hat genau einen Besitzer; welche Datei was besitzt, steht in [docs/00-aufbau.md](docs/00-aufbau.md). Dieses Repo ist die Hauptfassung, das Online-Dokument ist seit 9. November 2026 eingefroren.
+
 | Ordner / Datei | Inhalt |
 | --- | --- |
-| [docs/01-konzept.md](docs/01-konzept.md) | Story, Welten, Figuren, Finale, Twist |
-| [docs/02-ueberarbeitung.md](docs/02-ueberarbeitung.md) | Maßnahmen aus den Review-Runden mit Status |
-| [docs/03-produktion.md](docs/03-produktion.md) | Absprachen zu Godot, KI-Grafik und Audio, Kosten, Arbeitsteilung |
-| [docs/04-audio.md](docs/04-audio.md) | Musik, Geräusche, Sprachausgabe mit Prompts |
-| [docs/05-spielsysteme.md](docs/05-spielsysteme.md) | Dialogsystem, Schrift, UI, Hinweissystem, Speichern |
-| [docs/raetsel/](docs/raetsel/) | Alle Rätsel je Welt mit Lösungen und Inventar |
-| [docs/grafik/](docs/grafik/) | Stil, Steckbriefe Max und Pixel, Szenen-, Figuren- und Gegenstands-Prompts je Welt |
+| [docs/00-aufbau.md](docs/00-aufbau.md) | Wer besitzt welche Information, Regeln für Änderungen |
+| [docs/01-konzept.md](docs/01-konzept.md) | Geschichte, Ton, Figuren, Welt-Ideen, Finale als Erzählung, Rechtscheck |
+| [docs/welten/](docs/welten/) | Welt-Tabellen (YAML): Räume, Wege, Gegenstände, Figuren, Rätsel-Abhängigkeiten |
+| [docs/raetsel/](docs/raetsel/) | Rätsel-Abläufe, Lösungen, Fehlversuche, Hinweise; [Abhängigkeitsdiagramme](docs/raetsel/abhaengigkeiten.md) |
 | [docs/skript/](docs/skript/) | Dialog-Skripte für Prolog, Welt 1 bis 4, Zwischenspiele und Finale |
-| [docs/reviews/](docs/reviews/) | Gutachten (Runde 3 und 4), Umsetzungsberichte, Erläuterungen, Skript-Annahmen, Prompt-Prüfung; alle offenen Punkte in [offene-punkte.md](docs/reviews/offene-punkte.md) |
+| [docs/grafik/](docs/grafik/) | Stil, Steckbriefe Max und Pixel, Szenen-, Figuren- und Gegenstands-Prompts je Welt |
+| [docs/04-audio.md](docs/04-audio.md) | Musik, Geräusche, Stimmen mit Prompts |
+| [docs/05-spielsysteme.md](docs/05-spielsysteme.md) | Dialogsystem, Schrift, UI, Hinweissystem, Speichern, ID-Schemata |
+| [docs/03-produktion.md](docs/03-produktion.md) | Technik, Werkzeuge, Kosten, Meilensteine, Recht und Markt |
+| [docs/entscheidungen.md](docs/entscheidungen.md) | Alle geltenden Entscheidungen mit Begründung |
+| [docs/offene-punkte.md](docs/offene-punkte.md) | Alles, was noch offen ist |
 | [concepts/](concepts/) | Freigegebene Konzeptbilder (Referenz für Retro Diffusion) |
 
-Die Abhängigkeitsdiagramme der Rätsel gibt es nur im Online-Dokument, das die Arbeitsfassung bleibt; die Markdown-Dateien hier sind ein Export mit Stand 9. November 2026.
+## Werkzeuge
+
+- `python3 tools/pruefen.py` prüft vor jedem Commit Welt-Tabellen, Lösbarkeit, Skript-IDs, Sprecher, Stimmen und Musik gegeneinander. Fehler werden behoben, Warnungen geprüft.
+- `python3 tools/diagramme.py` erzeugt die Abhängigkeitsdiagramme aus den Welt-Tabellen neu.
+- `python3 tools/export.py [Ordner]` fasst alles in sieben Dateien zusammen (Konzept, Grafik, Rätsel, Skript, Audio, Produktion, offene Punkte), Standardordner `export/`.
+
+Frühere Gutachten, Review-Runden und Umsetzungsberichte stehen in der Git-Historie (bis Commit 7fea2a1).

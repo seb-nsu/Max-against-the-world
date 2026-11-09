@@ -1,0 +1,130 @@
+abschnitt: prolog
+name: Opas Dachboden
+skript_praefix: [P0, SYS]    # SYS_ERS_*: Ersatzpool für das ganze Spiel (steht im Prolog-Skript)
+sonder_codes: [HINT, ERS]    # P0_HINT_*: Hilfe-Pfote; ERS: Ersatzpool
+sonder_sprecher: [NAR]       # Regie- und Animationszeilen ohne Sprecher
+
+raeume:
+  - id: wohnzimmer
+    name: Wohnzimmer
+    skript_code: [WOHN]
+    groesse: 320x180
+    ausgaenge: [treppenhaus]
+    erreichbar_ab: start
+    musik: gegenwart
+    zustaende: [Nachmittag]          # Abend und Geburtstag gehören zu Welt 3, Welt 4 und Finale
+
+  - id: treppenhaus
+    name: Treppenhaus
+    skript_code: [TREP]
+    groesse: 320x180
+    ausgaenge: [wohnzimmer, dachboden]
+    erreichbar_ab: start
+    musik: gegenwart
+    zustaende: [Nachmittag]
+
+  - id: dachboden
+    name: Dachboden
+    skript_code: [DACH]
+    groesse: 320x180
+    ausgaenge: [treppenhaus]         # Rückweg durch die Bodenluke verweigert Max (P0_DACH_MAX_1000)
+    erreichbar_ab: start
+    musik: gegenwart
+    zustaende: [Nachmittag]
+
+figuren:
+  - id: max
+    name: Max
+    kuerzel: MAX
+    raum: [wohnzimmer, treppenhaus, dachboden]
+    groesse_px: 56
+    spielbar: true
+
+  - id: pixel
+    name: Pixel
+    kuerzel: PIX
+    raum: dachboden
+    groesse_px: 18                   # schlafend 10 hoch, 24 lang
+    spielbar: false                  # Figurenwechsel erst ab Welt 1
+
+  - id: opa
+    name: Opa                        # im Wohnzimmer als „Opa (von oben)“
+    kuerzel: OPA
+    raum: dachboden
+    groesse_px: 60
+    spielbar: false
+
+
+gegenstaende:
+  - id: thunfischdose
+    name: Thunfischdose
+    herkunft: dachboden              # Opas Werkzeugkiste
+    zustaende: [zu, offen, leer]     # nach P1 leer; reist leer weiter
+    verwendet_in: [P1]               # danach Welt 1 R1c, Welt 2 Wunderding
+    reist_mit: true                  # Pflichtfach
+    nahansicht: false
+
+  - id: dosenoeffner
+    name: Dosenöffner
+    herkunft: dachboden              # Opas Werkzeugkiste
+    zustaende: [normal]
+    verwendet_in: [P1]
+    reist_mit: true                  # bleibt nach dem Prolog oben, ab Rückkehr 1 als Wahlfach wählbar
+    nahansicht: false
+
+  - id: drahtkleiderbuegel
+    name: Drahtkleiderbügel          # gebogen heißt er im Inventar „Antenne“
+    herkunft: dachboden              # Kleiderschrank
+    zustaende: [gerade, antenne]
+    verwendet_in: [P2]
+    reist_mit: false                 # bleibt als Antenne auf dem Zapp-O-Mat
+    nahansicht: false
+
+  - id: reisetasche
+    name: Opas Reisetasche
+    herkunft: P3
+    zustaende: [normal]              # Packen als eigener Bildschirm (Grafik, Benutzeroberfläche)
+    verwendet_in: []
+    reist_mit: true
+    nahansicht: false
+
+  - id: notizbuch
+    name: Notizbuch
+    herkunft: P3                     # liegt im Pflichtfach der Reisetasche
+    zustaende: [normal]
+    verwendet_in: []
+    reist_mit: true
+    nahansicht: false                # eigener Bildschirm Notizbuch
+
+  - id: opas_zettel
+    name: Opas Zettel
+    herkunft: P3
+    zustaende: [normal]
+    verwendet_in: []                 # wird erst in Welt 1 gelesen
+    reist_mit: true
+    nahansicht: true                 # eine der zwei Prolog-Nahansichten (mit dem Kalender)
+
+raetsel:
+  - id: P1
+    name: Der schlafende Kater
+    raum: dachboden
+    benoetigt: [thunfischdose, dosenoeffner]
+    ergibt: []                       # Pixel wach, Hilfe-Pfote aktiv, Zapp-O-Mat an
+    schalter: [P0_P1_GELOEST]
+    optional: false
+
+  - id: P2
+    name: Nur Rauschen
+    raum: dachboden
+    benoetigt: [P1, drahtkleiderbuegel]
+    ergibt: []
+    schalter: [P0_P2_GELOEST]
+    optional: false
+
+  - id: P3
+    name: Der richtige Kanal
+    raum: dachboden
+    benoetigt: [P2]                  # Kanalnummer aus der Nahansicht Kalender
+    ergibt: [reisetasche, notizbuch, opas_zettel]
+    schalter: [P0_P3_GELOEST]
+    optional: false

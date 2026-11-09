@@ -1,6 +1,6 @@
 # Skript Prolog: Opas Dachboden
 
-Das ganze Prolog-Skript als Entwurf und Muster für alle Welten: rund 170 Zeilen, Spielzeit etwa zehn Minuten. Die Tabellen nutzen die Kurzform aus dem Tab Spielsysteme: ID, Sprecher, Text und Regie oder Auslöser; eine Bedingung steht im Auslöser nach Semikolon. Eine Sprechblase fasst bis zu drei Zeilen (etwa 120 Zeichen); „//“ trennt Pixels Kaskaden in Folgeblasen. Die Nummern laufen pro Szene in Zehnerschritten durch, egal wer spricht, damit die Reihenfolge an der ID ablesbar ist. Die Kanäle sind festgelegt: 3 für Welt 1, 7 für Welt 2, 42 für Welt 3, 999 für Welt 4.
+Das ganze Prolog-Skript als Entwurf und Muster für alle Welten: rund 170 Zeilen, Spielzeit etwa zehn Minuten. Die Tabellen nutzen die Kurzform aus `05-spielsysteme.md`: ID, Sprecher, Text und Regie oder Auslöser; eine Bedingung steht im Auslöser nach Semikolon. Eine Sprechblase fasst bis zu drei Zeilen (etwa 120 Zeichen); „//“ trennt Pixels Kaskaden in Folgeblasen. Die Nummern laufen pro Szene in Zehnerschritten durch, egal wer spricht, damit die Reihenfolge an der ID ablesbar ist. Die Kanäle sind festgelegt: 3 für Welt 1, 7 für Welt 2, 42 für Welt 3, 999 für Welt 4.
 
 ## 1. Wohnzimmer: Kein WLAN
 
@@ -69,7 +69,8 @@ Reden mit Opa und Pixel auf dem Dachboden. Max stellt die Frage, die Antwort fol
 | P0\_DACH\_OPA\_1320 | Opa | Ein Fernseher, der nicht zeigt, sondern hinschickt. Zurück holt dich der Werbeblock. Frag nicht, warum. | stolz, dann unsicher |
 | P0\_DACH\_MAX\_1322 | Max | Wie krieg ich Pixel vom Kabel? | Option Opa; nur vor P1 (Hinweise zu P1 laut Spielsysteme, Wer hilft wann) |
 | P0\_DACH\_OPA\_1324 | Opa | Mit Argumenten. Er versteht genau eins, und das liegt in meiner Werkzeugkiste. // Zwischen Schraubenzieher und Draht. | Hinweis P1, Stufe 1 (Thunfischdose); Kaskade |
-| P0\_DACH\_OPA\_1326 | Opa | Und die Dose ist zu. Da hilft kein Reden. Da hilft Kurbeln. | Hinweis P1, Stufe 2 (Dosenöffner); ersetzt 1324 beim zweiten Klick auf die Option |
+| P0\_DACH\_OPA\_1326 | Opa | Und die Dose ist zu. Da hilft kein Reden. Da hilft Kurbeln. | Hinweis P1, Stufe 2 (Dosenöffner); ersetzt 1324 beim nächsten Klick auf die Option, frühestens 30 Sekunden nach 1324 |
+| P0\_DACH\_OPA\_1328 | Opa | Mach die Thunfischdose mit dem Dosenöffner auf. Dann ist er sofort da. | Hinweis P1, Stufe 3; ersetzt 1326 beim nächsten Klick auf die Option, frühestens 60 Sekunden nach 1326; vorher wiederholt Opa die letzte Stufe |
 | P0\_DACH\_MAX\_1330 | Max | Warum ich? | Option Opa |
 | P0\_DACH\_OPA\_1340 | Opa | Weil du der Einzige bist, der gerade nichts zu tun hat. Und weil ich dir vertraue. In der Reihenfolge. | zwinkert |
 | P0\_DACH\_MAX\_1350 | Max | Was ist drüben gefährlich? | Option Opa |
@@ -103,7 +104,7 @@ Reden mit Opa und Pixel auf dem Dachboden. Max stellt die Frage, die Antwort fol
 | P0\_DACH\_PIX\_0340 | Pixel | Er redet seit Jahren. Bisher hat nur keiner zugehört. Ist das Thunfisch in Lake oder in Öl? |  |
 | P0\_DACH\_MAX\_0350 | Max | In Lake. |  |
 | P0\_DACH\_PIX\_0360 | Pixel | Barbarisch. Gib her. | frisst, wechselt vom Kabel auf die Werkbank |
-| P0\_DACH\_OPA\_0370 | Opa | Pixel kommt mit. Er kennt die Welten. Und er kennt alle Antworten. |  |
+| P0\_DACH\_OPA\_0370 | Opa | Pixel kommt mit. Er kennt die Welten. Und er kennt alle Antworten. | schaltet nebenbei den Zapp-O-Mat ein, der Bildschirm rauscht |
 | P0\_DACH\_PIX\_0380 | Pixel | Ich kenne alle Antworten. Ich gebe sie nur ungern heraus. // Wer festhängt, kann ja mal die Pfote drücken. Höflich. | Hilfe-Pfote leuchtet zum ersten Mal auf |
 | P0\_DACH\_MAX\_0390 | Max | Ein Kater mit Hilfefunktion. Wie ein Chatbot, nur haariger. |  |
 
@@ -111,14 +112,15 @@ Reden mit Opa und Pixel auf dem Dachboden. Max stellt die Frage, die Antwort fol
 
 | ID | Sprecher | Text | Auslöser |
 | --- | --- | --- | --- |
-| P0\_DACH\_MAX\_0410 | Max | Er ist an. Er zeigt nur nichts. Sieht aus wie ein Ladebildschirm, der aufgegeben hat. | Ansehen: Zapp-O-Mat mit Rauschen |
+| P0\_DACH\_MAX\_0400 | Max | Der Zapp-O-Mat. Aus. Solange Pixel auf dem Kabel liegt, schaltet Opa ihn nicht ein. | Ansehen: Zapp-O-Mat; vor P1 |
+| P0\_DACH\_MAX\_0410 | Max | Er ist an. Er zeigt nur nichts. Sieht aus wie ein Ladebildschirm, der aufgegeben hat. | Ansehen: Zapp-O-Mat mit Rauschen; nach P1 |
 | P0\_DACH\_PIX\_0420 | Pixel | Das nennt man Schnee. Früher hat man das stundenlang angesehen, wenn das Programm vorbei war. |  |
 | P0\_DACH\_MAX\_0430 | Max | Wenn das Programm vorbei war? Das Programm war einfach … vorbei? |  |
 | P0\_DACH\_OPA\_0440 | Opa | Die Antenne fehlt! Empfangsorgan, Modell Kleiderbügel. Ich hab sie verliehen. Oder eingebaut. Irgendwo. |  |
 | P0\_DACH\_MAX\_0450 | Max | Opas Kleiderschrank. Drei Strickjacken, alle braun, alle mit Werkzeug in den Taschen. | Ansehen: Kleiderschrank |
 | P0\_DACH\_MAX\_0460 | Max | Ein Kleiderbügel aus Draht. Leer und traurig. | Nehmen: Drahtkleiderbügel |
-| P0\_DACH\_MAX\_0470 | Max | Wenn ich den hier knicke und da biege … Sieht aus wie ein Hase mit Empfang. Vielversprechend. | Benutzen: Drahtkleiderbügel im Inventar |
-| P0\_DACH\_MAX\_0480 | Max | So. Antenne. Ich bin jetzt offiziell Techniker. | Antenne auf Zapp-O-Mat |
+| P0\_DACH\_MAX\_0470 | Max | Wenn ich den hier knicke und da biege … Sieht aus wie ein Hase mit Empfang. Vielversprechend. | Benutzen: Drahtkleiderbügel im Inventar, oder ungebogener Bügel auf Zapp-O-Mat nach P1 (dann folgt 0480 direkt) |
+| P0\_DACH\_MAX\_0480 | Max | So. Antenne. Ich bin jetzt offiziell Techniker. | Antenne auf Zapp-O-Mat; nach P1, löst P2 |
 | P0\_DACH\_PIX\_0490 | Pixel | Früher war das ein ehrbarer Beruf. |  |
 | P0\_DACH\_OPA\_0500 | Opa | Das Bild ist da! Jetzt nur noch der richtige Kanal. Welcher war's noch mal? | Rauschen wird bunter |
 
@@ -127,13 +129,13 @@ Reden mit Opa und Pixel auf dem Dachboden. Max stellt die Frage, die Antwort fol
 | ID | Sprecher | Text | Auslöser |
 | --- | --- | --- | --- |
 | P0\_DACH\_OPA\_0610 | Opa | Ich hab's mir aufgeschrieben. Ganz bestimmt. Irgendwo, wo ich jeden Tag hinsehe. | nach P2 |
-| P0\_DACH\_MAX\_0620 | Max | Ein Kalender. Ein Tag ist dick rot eingekreist. | Ansehen: Kalender |
-| P0\_DACH\_MAX\_0630 | Max | Und daneben, ganz klein: „K3 – Schwurbelstein“. | Ansehen: Kalender, zweites Mal |
+| P0\_DACH\_MAX\_0620 | Max | Ein Kalender. Ein Tag ist dick rot eingekreist. Entweder Geburtstag oder Zahnarzt. | Ansehen: Kalender |
+| P0\_DACH\_MAX\_0630 | Max | Und daneben, ganz klein: „K3 – Schwurbelstein“. | Ansehen: Kalender, zweites Mal; öffnet die Nahansicht Kalender, Max kennt ab jetzt die Nummer |
 | P0\_DACH\_MAX\_0640 | Max | Opa, was ist mit dem roten Kreis? | Reden: Opa, nach Kalender |
 | P0\_DACH\_OPA\_0650 | Opa | Der Kreis? Ach, der. Das ist … ein Kreis. Kreise sind wichtig. Rund. Ja. | weicht aus, schaut weg |
 | P0\_DACH\_PIX\_0660 | Pixel | Er lügt. Ich rieche das. Es riecht nach Angst und ein bisschen nach Kuchen. |  |
-| P0\_DACH\_MAX\_0670 | Max | Kanal 3. | Benutzen: Drehknopf |
-| P0\_DACH\_MAX\_0680 | Max | Kanal 4. Sieht aus wie Kanal 3, nur langweiliger. | Drehknopf auf falschem Kanal |
+| P0\_DACH\_MAX\_0670 | Max | Kanal 3. | Benutzen: Drehknopf; nach P2 und nach 0630, löst P3 |
+| P0\_DACH\_MAX\_0680 | Max | Kanal 4. Sieht aus wie Kanal 3, nur langweiliger. | Benutzen: Drehknopf nach P2, bevor Max die Nummer kennt (Testbild Kanal 4) |
 | P0\_DACH\_OPA\_0690 | Opa | Halt! Die Tasche! | Bildschirm zeigt den Wirbel |
 
 ## 6. Die Reisetasche
@@ -175,6 +177,7 @@ Kurze Szene, führt die Reisetasche ein. Im Prolog gibt es nur das Pflichtfach; 
 | P0\_DACH\_MAX\_1110 | Max | Pixel will keinen Draht. Pixel will Fisch. Pixel will immer Fisch. | Kleiderbügel auf Pixel |
 | P0\_DACH\_PIX\_1120 | Pixel | Steck mir das nicht in den Fernseher. Ich bin keine Antenne. Ich bin ein Gesamtkunstwerk. | Pixel auf Zapp-O-Mat (Figurenwechsel noch nicht möglich, als Inventar-Versuch; nach P1) |
 | P0\_DACH\_MAX\_1130 | Max | Der Dosenöffner passt nicht in den Fernseher. Hab's geprüft. | Dosenöffner auf Zapp-O-Mat |
+| P0\_DACH\_MAX\_1150 | Max | Erst Strom, dann Empfang. Und für Strom muss der Kater vom Kabel. | Drahtkleiderbügel oder Antenne auf Zapp-O-Mat vor P1 |
 | P0\_DACH\_OPA\_1140 | Opa | Nicht am Knopf drehen, bevor das Bild da ist! Der Werbeblock ist für den Rückweg. // Fünf Sekunden Milchwerbung, dann bist du wieder hier. Keiner weiß, warum. | Drehknopf vor P2 |
 
 ## 8b. Zurufe
@@ -187,6 +190,20 @@ Pixel und Opa kommentieren ungefragt, wenn der Spieler 45 Sekunden nichts tut. Z
 | P0\_WOHN\_MAX\_1220 | Max | Ohne WLAN vergeht die Zeit langsamer. Das ist Physik. Glaube ich. | Wohnzimmer |
 | P0\_DACH\_PIX\_1230 | Pixel | Ich würde ja helfen. Aber ich bin gerade so schön liegengeblieben. | Dachboden; nach P1 |
 | P0\_DACH\_PIX\_1240 | Pixel | Der Fernseher starrt dich an. Du starrst zurück. Einer von euch muss nachgeben. | Dachboden; nach P1, vor P3 |
+
+## 8c. Hinweise der Hilfe-Pfote (P0\_HINT)
+
+Ab P1 gibt Pixel die Hinweise über die Pfote (P1 selbst über Opa, Abschnitt 2b). Schema wie in Welt 1: P0\_HINT\_PIX\_RRSK, RR Rätselnummer, S Stufe, K Teilschritt (0). Datei hints\_p0.tres.
+
+| ID | Sprecher | Text | Auslöser |
+| --- | --- | --- | --- |
+| P0\_HINT\_PIX\_0210 | Pixel | Ein Fernseher ohne Antenne ist wie ein Napf ohne Futter. Sinnlos. | P2, Stufe 1 |
+| P0\_HINT\_PIX\_0220 | Pixel | Im Schrank hängt allerlei Draht. Opa nennt das Garderobe. | P2, Stufe 2 |
+| P0\_HINT\_PIX\_0230 | Pixel | Nimm den Kleiderbügel aus dem Schrank und steck ihn oben auf den Fernseher. Ich habe Pfoten, ich mach das nicht. | P2, Stufe 3 |
+| P0\_HINT\_PIX\_0310 | Pixel | Dein Opa schreibt sich alles irgendwohin. Meistens an die Wand. | P3, Stufe 1 |
+| P0\_HINT\_PIX\_0320 | Pixel | Sieh dir den Kalender genauer an. Nicht nur den roten Kreis. | P3, Stufe 2 |
+| P0\_HINT\_PIX\_0330 | Pixel | Auf dem Kalender steht die Kanalnummer. Stell sie am Drehknopf ein. | P3, Stufe 3 |
+| P0\_HINT\_PIX\_9995 | Pixel | Ich denke noch nach. Das sieht aus wie Schlafen, ist es aber nicht. | Wartezeile, nächste Stufe noch gesperrt |
 
 ## 9. Ersatz-Zeilen (Auszug aus dem Pool)
 

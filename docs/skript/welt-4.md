@@ -1,6 +1,6 @@
 # Skript Welt 4: Kanal 999
 
-Das komplette Dialog-Skript für Welt 4, Kanal 999, von der Ankunft im Testbild bis zur Übergabe der Goldenen Fernbedienung: rund 860 Zeilen in 20 Abschnitten, geordnet nach Sendern und Szenen, mit allen Gesprächsbäumen, Rätsellösungen, Ansehen-, Benutzen- und Kombinieren-Zeilen, den Tastenreaktionen, Pixel-auf-Mensch-Zeilen, Zurufen und den Hinweisen der Hilfe-Pfote. Format wie im Skript Prolog: ID, Sprecher, Text, Regie oder Auslöser (Bedingung nach Semikolon); „//“ trennt Pixels Kaskaden; Ersatzzeilen kommen aus dem SYS\_ERS-Pool. Die Rückkehr auf den Dachboden und das Finale stehen in eigenen Tabs.
+Das komplette Dialog-Skript für Welt 4, Kanal 999, von der Ankunft im Testbild bis zur Übergabe der Goldenen Fernbedienung: rund 880 Zeilen in 20 Abschnitten, geordnet nach Sendern und Szenen, mit allen Gesprächsbäumen, Rätsellösungen, Ansehen-, Benutzen- und Kombinieren-Zeilen, den Tastenreaktionen, Pixel-auf-Mensch-Zeilen, Zurufen und den Hinweisen der Hilfe-Pfote. Format wie im Skript Prolog: ID, Sprecher, Text, Regie oder Auslöser (Bedingung nach Semikolon); „//“ trennt Pixels Kaskaden; Ersatzzeilen kommen aus dem SYS\_ERS-Pool. Die Rückkehr auf den Dachboden und das Finale stehen in eigenen Dateien.
 
 ## 1. Testbild: Ankunft (Rätsel 1)
 
@@ -180,12 +180,12 @@ Ansehen und Benutzen der beiden Werkzeuge der Welt. Die Programmzeitschrift ist 
 | W4\_FERN\_MAX\_0190 | Max | „Werbung: Dr. Werbepause präsentiert den Couch-Magnet 3000“. Da fühle ich mich persönlich angesprochen. | Programmzeitschrift: Werbespot angeklickt |
 | W4\_FERN\_MAX\_0200 | Max | „Tiertort: Der Fall der fehlenden Krone“. Läuft seit 20:15 in Dauerschleife. Krimis enden nie. | Programmzeitschrift: Tiertort angeklickt |
 | W4\_FERN\_MAX\_0210 | Max | „Glücksrad-Shopping, rund um die Uhr“. Gerd schläft nie. Das erklärt einiges. | Programmzeitschrift: Glücksrad angeklickt |
-| W4\_FERN\_MAX\_0220 | Max | Kanal 999: nicht gelistet. Nur ein leeres Feld mit Goldrand. Wer sich nicht ins Programm schreibt, will nicht gefunden werden. | Programmzeitschrift: leeres Feld; vor R11 |
-| W4\_FERN\_MAX\_0230 | Max | Kanal 999 ist angekreuzt. Alle Sender gefunden. Opa würde sagen: Vollempfang. | Programmzeitschrift; nach R12 |
+| W4\_FERN\_MAX\_0220 | Max | Kanal 999: nicht gelistet. Nur ein leeres Feld mit Goldrand. Wer sich nicht ins Programm schreibt, will nicht gefunden werden. | Programmzeitschrift: leeres Feld; vor R12a |
+| W4\_FERN\_MAX\_0230 | Max | Kanal 999 ist angekreuzt. Alle Sender gefunden. Opa würde sagen: Vollempfang. | Programmzeitschrift; nach R12a; ein Klick auf Kanal 999 führt in den Empfang |
 | W4\_FERN\_MAX\_0240 | Max | Ich kann sie lesen oder springen. Warten war gestern. Also früher. Also nie. | Benutzen: Programmzeitschrift, erstes Mal |
 | W4\_FERN\_MAX\_0250 | Max | Die Fernbedienung auf die Zeitschrift. Dafür hat man früher Daumen benutzt. | Fernbedienung mit Programmzeitschrift |
 | W4\_FERN\_PIX\_0260 | Pixel | Die ist aus Plastik. Nicht mal Thunfisch-Plastik. | Pixel auf Fernbedienung |
-| W4\_FERN\_MAX\_0270 | Max | Umschalten geht hier nicht. Der Kanal hat keine Nachbarn. Die Zentrale ist eine Sackgasse mit Teppich. | Umschalten in der Senderzentrale, vor R13 |
+| W4\_FERN\_MAX\_0270 | Max | Umschalten geht hier nicht. Das Studio hat keine Nachbarn. Es ist eine Sackgasse mit Teppich. | Umschalten in Zappmanns Studio, vor R13 (in Empfang und Kellerarchiv geht Umschalten) |
 
 ## 5. Küchen-Sitcom: Die Familie (Rätsel 3)
 
@@ -264,8 +264,8 @@ Rätsel 3: Max schaltet aus der Savanne um, während der Kommissar mit ihm spric
 | W4\_SIT\_KOM\_0620 | Kommissar | Ich gehe zurück zu meinem Fall. Da sind die Verdächtigen wenigstens Tiere. Bei denen weiß man, woran man ist. | bleibt stehen, bis Max umschaltet |
 | W4\_SIT\_VAT\_0630 | Sitcom-Vater | Er geht! Habe ich den Job noch? | LAC |
 | W4\_SIT\_SMU\_0640 | Sitcom-Mutter | Du hattest nie einen, Schatz. Du stehst seit 112 Folgen in der Küche. | LAC, Applaus, Abspannmusik kurz |
-| W4\_SIT\_VAT\_0650 | Sitcom-Vater | Meine Dose. Meine schöne Dose. Jetzt habe ich nur noch Kekse. | Ansehen: Scherben der Keksdose; nach R3 |
-| W4\_SIT\_MAX\_0660 | Max | Der Kommissar bleibt hier, wenn ich jetzt umschalte? Nein, er redet nicht mehr mit mir. Er redet mit dem Käse. | Umschalten, während der Kommissar in der Küche steht und nicht im Gespräch ist |
+| W4\_SIT\_VAT\_0650 | Sitcom-Vater | Meine Dose. Meine schöne Dose. Jetzt habe ich nur noch Kekse. | Ansehen: Scherben der Keksdose; nach R3, vor R6 (danach sitzt der Vater im Keller) |
+| W4\_SIT\_MAX\_0660 | Max | Der Kommissar redet nur noch mit dem Käse. Beim nächsten Umschalten wandert er von selbst zurück zu seinen Tieren. | Umschalten nach R3, während der Kommissar noch in der Küche steht; er kehrt in die Savanne zurück |
 
 ## 6. Tiertort Savanne: Der Fall (Rätsel 4, Ankunft und Ansehen)
 
@@ -323,6 +323,7 @@ Ansehen und Benutzen in der Savanne.
 | W4\_SAV\_MAX\_0430 | Max | Oranger Himmel. Golden Hour. Alle sehen gut aus, sogar der Geier. | Ansehen: Himmel |
 | W4\_SAV\_MAX\_0440 | Max | Die Lichtröhre leuchtet hier nur bläulich. Keine Blase, kein Wumm. Die Savanne nimmt sie nicht ernst. Ich auch nicht. | Benutzen: Lichtröhre in der Savanne |
 | W4\_SAV\_MAX\_0450 | Max | Der Kommissar will keinen Käse. Er will Antworten. Und vielleicht ein Sandwich. | Fondue-Käse auf Kommissar |
+| W4\_SAV\_ERZ\_0460 | Erzähler | Fräulein Pokerface. So nennt man sie in der Savanne. Seit drei Staffeln hat sie nicht gelacht. Nicht ein einziges Mal. | nach 0350, flüsternd; Antwort für die Bonusrunde (R9) |
 
 ## 7. Tiertort Savanne: Die Verhöre (Rätsel 4, Lösung)
 
@@ -406,7 +407,7 @@ Außerhalb von Mitternacht zeigt der Sender eine Pausentafel mit schlafendem Gei
 | W4\_FRIE\_MAX\_0190 | Max | Hinter dem Tor geht ein Weg runter. Zu einem Haus. Jedes Musikvideo endet in einem Haus, das keiner betreten sollte. | Ansehen: Gittertor, zweites Mal |
 | W4\_FRIE\_MAX\_0200 | Max | Zurück. Die Zombies laufen rückwärts in ihre Gräber. Die Erde hüpft zurück. Das Lied singt rückwärts. Klingt besser so. | Rückspulen auf dem Friedhof, während der Refrain läuft |
 | W4\_FRIE\_MAX\_0210 | Max | Kurz vor dem Refrain. Alle liegen. Gleich stehen alle auf. Gleichzeitig. Das ist meine Chance. | nach 0200; Zombies in Startposition |
-| W4\_FRIE\_PIX\_0220 | Pixel (aus dem Rauschen) | Sie stehen jetzt alle im selben Takt auf. Wenn du gegen den Takt tanzt, stolpern sie übereinander. // Ich habe es mit Mäusen so gemacht. Lange Geschichte. | nach 0210; Kaskade; Hinweis R5c |
+| W4\_FRIE\_PIX\_0220 | Pixel (aus dem Rauschen) | Sie stehen jetzt alle im selben Takt auf. Wenn du gegen den Takt tanzt, stolpern sie übereinander. // Ich habe es mit Mäusen so gemacht. Lange Geschichte. | nach 0210; Kaskade; Hinweis R5b |
 | W4\_FRIE\_MAX\_0230 | Max | Zu früh. Die liegen noch alle im Grab, da gibt es nichts zu verwirren. | Rückspulen, während die Zombies schon liegen |
 | W4\_FRIE\_MAX\_0240 | Max | Ich tanze. Freiwillig. Gegen den Takt. Wenn das jemand filmt, ziehe ich um. | Betreten der Tanzfläche in Startposition, Minispiel beginnt |
 | W4\_FRIE\_ZOM\_0250 | Zombie | Uh? Uuuh! | Zombies geraten aus dem Takt, stoßen zusammen |
@@ -444,7 +445,7 @@ Max kommt durch die Grabplatte in den Keller. Die verkettete Tür nach oben blei
 | W4\_KELL\_MAX\_0100 | Max | Ich ziehe am Laken. Darunter: ein Sessel. Der Sessel ist nicht beleidigt. Der Geist daneben schon. | Benutzen: Gerümpel |
 | W4\_KELL\_MAX\_0110 | Max | Eine nackte Glühbirne. Sie flackert immer dann, wenn es dramatisch wird. Sie hat Timing. | Ansehen: Glühbirne |
 | W4\_KELL\_MAX\_0120 | Max | Ein Fenster ganz oben. Zu klein für mich, zu hoch für Pixel, genau richtig für Spinnen. | Ansehen: Kellerfenster |
-| W4\_KELL\_MAX\_0130 | Max | Die Grabplatte. Da bin ich rausgekommen. Da geh ich nicht wieder rein. Zombies sind schlechte Nachbarn. | Ansehen: Grabplatte im Boden |
+| W4\_KELL\_MAX\_0130 | Max | Die Grabplatte. Da bin ich rausgekommen, da geht es zum Friedhof. Zombies sind schlechte Nachbarn, aber kurze Wege. | Ansehen: Grabplatte im Boden (Ausgang zum Musikvideo-Friedhof) |
 | W4\_KELL\_MAX\_0140 | Max | Eine Tür mit mehr Ketten als Holz. Da oben geht es weiter. Hier unten geht es nicht weiter. | Ansehen: verkettete Tür |
 | W4\_KELL\_MAX\_0150 | Max | Zu. Natürlich zu. Im Horrorfilm ist die Tür immer zu, bis es am ungeeignetsten ist. | Benutzen: verkettete Tür |
 | W4\_KELL\_PIX\_0160 | Pixel | Diese Tür geht nicht auf. Das ist keine Frage von Schlüsseln, sondern von Genre. Hier geht nichts auf. In der Sitcom geht alles auf. // Denk mal drüber nach. Ich schlafe inzwischen. | Benutzen: verkettete Tür, zweites Mal; Kaskade; Hinweis R6a |
@@ -513,24 +514,24 @@ In der Halle hängt die Lichterkette mit Buchstaben; auf der anderen Seite sitzt
 | W4\_HALL\_MAX\_0300 | Max | Grüner Nebel am Boden. In der Sitcom wäre das Trockeneis. Hier ist es Stimmung. | Ansehen: Nebel in der Halle |
 | W4\_HALL\_MAX\_0310 | Max | Die Kellertür steht offen. Von unten kommt Licht und ein Mann, der auf Lacher wartet. | Ansehen: Kellertür von oben |
 | W4\_HALL\_MAX\_0320 | Max | Ein Mann in Trenchcoat mit Taschenlampe und einem Ding, das piept. Er sieht aus, als hätte er seit drei Staffeln nicht geschlafen. | Ansehen: FBI-Agent |
-| W4\_HALL\_AGE\_0330 | Agent | Keine Bewegung. Sind Sie von hier? Von diesem Planeten? | richtet das Gerät auf Max |
+| W4\_HALL\_AGE\_0330 | FBI-Agent | Keine Bewegung. Sind Sie von hier? Von diesem Planeten? | richtet das Gerät auf Max |
 | W4\_HALL\_MAX\_0340 | Max | Ich bin aus dem Wohnzimmer. |  |
-| W4\_HALL\_AGE\_0350 | Agent | Das sagen sie alle. Die Wahrheit ist irgendwo da draußen. Und ich habe sie noch nie gefunden. Zeigen Sie mir einen Beweis, und ich glaube Ihnen alles. | Hinweis R8 |
+| W4\_HALL\_AGE\_0350 | FBI-Agent | Das sagen sie alle. Die Wahrheit ist irgendwo da draußen. Und ich habe sie noch nie gefunden. Zeigen Sie mir einen Beweis, und ich glaube Ihnen alles. | Hinweis R8 |
 | W4\_HALL\_MAX\_0360 | Max | Ein Beweis wofür? | Option Agent |
-| W4\_HALL\_AGE\_0370 | Agent | Für sie. Für die anderen. Für die Stimmen von drüben. Ich suche seit Jahren Kontakt mit der anderen Seite. |  |
+| W4\_HALL\_AGE\_0370 | FBI-Agent | Für sie. Für die anderen. Für die Stimmen von drüben. Ich suche seit Jahren Kontakt mit der anderen Seite. |  |
 | W4\_HALL\_MAX\_0380 | Max | Was piept da? | Option Agent |
-| W4\_HALL\_AGE\_0390 | Agent | Mein Detektor. Er piept bei allem. Bei Mikrowellen, bei Katzen, bei meiner Kollegin. Die Kollegin glaubt mir auch nicht. |  |
+| W4\_HALL\_AGE\_0390 | FBI-Agent | Mein Detektor. Er piept bei allem. Bei Mikrowellen, bei Katzen, bei meiner Kollegin. Die Kollegin glaubt mir auch nicht. |  |
 | W4\_HALL\_MAX\_0400 | Max | Glauben Sie an Geister? | Option Agent |
-| W4\_HALL\_AGE\_0410 | Agent | Geister sind ein Schwindel. Außerirdische sind real. Ich habe Prinzipien. |  |
-| W4\_HALL\_MAX\_0420 | Max | Ich hab hier Kontakt mit der anderen Seite. Über eine Lichterkette. Mit Protokoll. | Notizbuch oder Nachrichten von Opa auf Agent; nach R7 |
-| W4\_HALL\_AGE\_0430 | Agent | Buchstaben. Über Lampen. Aus einer anderen Dimension. „VORHEIZEN“. Das ist ein Code. Das ist DER Code. Ich wusste es. | liest, Taschenlampe zittert |
+| W4\_HALL\_AGE\_0410 | FBI-Agent | Geister sind ein Schwindel. Außerirdische sind real. Ich habe Prinzipien. |  |
+| W4\_HALL\_MAX\_0420 | Max | Ich hab hier Kontakt mit der anderen Seite. Über eine Lichterkette. Mit Protokoll. | Notizbuch (Opas Nachrichten) auf FBI-Agent; nach R7 |
+| W4\_HALL\_AGE\_0430 | FBI-Agent | Buchstaben. Über Lampen. Aus einer anderen Dimension. „VORHEIZEN“. Das ist ein Code. Das ist DER Code. Ich wusste es. | liest, Taschenlampe zittert |
 | W4\_HALL\_MAX\_0440 | Max | Das ist mein Opa. |  |
-| W4\_HALL\_AGE\_0450 | Agent | Noch besser. Familie drüben. Hier, nehmen Sie. Dienstausrüstung. Zeigt, was Leute denken. Wir nutzen das bei Verhören. Und bei Dates. | gibt die Taste Untertitel |
+| W4\_HALL\_AGE\_0450 | FBI-Agent | Noch besser. Familie drüben. Hier, nehmen Sie. Dienstausrüstung. Zeigt, was Leute denken. Wir nutzen das bei Verhören. Und bei Dates. | gibt die Taste Untertitel |
 | W4\_HALL\_MAX\_0460 | Max | Untertitel. Jetzt kann ich lesen, was andere denken. Bei Pixel brauche ich das nicht. Er sagt es sowieso. |  |
-| W4\_HALL\_AGE\_0470 | Agent | Kollege! Abteilung? Egal, die Brille sagt alles. Hier, Dienstausrüstung. Melden Sie sich nicht bei mir. Ich bin nicht hier. | Agent Schmidts Sonnenbrille aufgesetzt; überspringt den Beweis; gibt die Taste Untertitel |
+| W4\_HALL\_AGE\_0470 | FBI-Agent | Kollege! Abteilung? Egal, die Brille sagt alles. Hier, Dienstausrüstung. Melden Sie sich nicht bei mir. Ich bin nicht hier. | Agent Schmidts Sonnenbrille aufgesetzt; überspringt den Beweis; gibt die Taste Untertitel |
 | W4\_HALL\_MAX\_0480 | Max | Eine Sonnenbrille aus der Zukunft öffnet Türen in der Gegenwart. Das Fernsehen ist einfach gestrickt. | nach 0470 |
-| W4\_HALL\_AGE\_0490 | Agent | Kein Beweis, kein Vertrauen. Ich habe Prinzipien. Und eine Taschenlampe. | Reden: Agent, ohne Beweis, nach dem ersten Gespräch |
-| W4\_HALL\_AGE\_0500 | Agent | Ich bleibe. Hier blinkt es manchmal. Das reicht mir für Jahre. | Reden: Agent nach R8 |
+| W4\_HALL\_AGE\_0490 | FBI-Agent | Kein Beweis, kein Vertrauen. Ich habe Prinzipien. Und eine Taschenlampe. | Reden: Agent, ohne Beweis, nach dem ersten Gespräch |
+| W4\_HALL\_AGE\_0500 | FBI-Agent | Ich bleibe. Hier blinkt es manchmal. Das reicht mir für Jahre. | Reden: Agent nach R8 |
 | W4\_HALL\_MAX\_0510 | Max | Pause. Der Agent friert mit offenem Mund ein. Jetzt sieht er aus wie auf allen seinen Fotos. | Pause in der Halle |
 | W4\_HALL\_MAX\_0520 | Max | Untertitel beim Agenten: „Ist der Junge ein Alien? Ist die Katze ein Alien? Bin ICH ein Alien?“ Nein. Nein. Vielleicht. | Untertitel auf Agent |
 | W4\_HALL\_MAX\_0530 | Max | Stumm. Der Agent redet weiter, lautlos. Es sieht aus wie eine sehr ernste Pantomime. | Stumm auf Agent |
@@ -696,7 +697,7 @@ In der Fabrik läuft ein Unfall als Schleife. Rückspulen hält an vier festen E
 
 ## 14. Werbespot-Set: Dr. Werbepause (Rätsel 11)
 
-Max findet den Spot in der Programmzeitschrift und schaltet hinein. Dr. Werbepauses Waffe ist der Autoplay-Countdown mit Jingle. Reihenfolge: Jingle stummschalten, Stinkbombe (faule Banane im Comic-Kanal) werfen, vier Comic-Panels ordnen. Die Taste Sendersuchlauf lässt Werbepause auf der Flucht fallen. Beim ersten Ansehen des Spots ohne Käsemann zählt der Besuch für Rätsel 9.
+Max findet den Spot in der Programmzeitschrift und schaltet hinein. Dr. Werbepauses Waffe ist der Autoplay-Countdown mit Jingle. Reihenfolge: Jingle stummschalten, Stinkbombe (faule Banane im Comic-Kanal) als Käsemann werfen, vier Comic-Panels ordnen. Die Taste Sendersuchlauf lässt Werbepause auf der Flucht fallen; sie rutscht unter die Panels, Max nimmt sie nach dem Ordnen. Der Countdown hält Max fest, Umschalten geht trotzdem. Beim ersten Ansehen des Spots ohne Käsemann zählt der Besuch für Rätsel 9.
 
 | ID | Sprecher | Text | Auslöser |
 | --- | --- | --- | --- |
@@ -715,16 +716,16 @@ Max findet den Spot in der Programmzeitschrift und schaltet hinein. Dr. Werbepau
 | W4\_WERB\_MAX\_0130 | Max | Pause gegen den Countdown. Die Zahl steht. Der Jingle spielt weiter. Ich stehe auch. Fest. | Pause während des Countdowns |
 | W4\_WERB\_MAX\_0140 | Max | Rückspulen. 2 … 3 … 4 … 5. Und wieder runter. Ich habe mir Zeit gekauft und sie sofort wieder ausgegeben. | Rückspulen während des Countdowns |
 | W4\_WERB\_MAX\_0150 | Max | Untertitel bei Werbepause: „Kaufen. Kaufen. Hat er ein Handy? Kaufen.“ Er denkt in Preisschildern. | Untertitel auf Werbepause |
-| W4\_WERB\_NAR\_0160 | – | Die gelbe Schale liegt. Werbepause tritt drauf, rutscht quer durchs Set, durch die Kulisse, zurück durch die Kulisse und steht wieder auf dem Podest. | frische Bananenschale auf Werbepause |
+| W4\_WERB\_NAR\_0160 | – | Die gelbe Schale liegt. Werbepause tritt drauf, rutscht quer durchs Set, durch die Kulisse, zurück durch die Kulisse. Dann steht er wieder auf dem Podest. | frische Bananenschale auf Werbepause |
 | W4\_WERB\_WER\_0170 | Dr. Werbepause | Das war … der Rutsch-O-Mat! Jetzt neu! Ich bin unverletzt und IM ANGEBOT! | grinst |
 | W4\_WERB\_MAX\_0180 | Max | Er rutscht meterweit und macht Werbung daraus. Die Schale muss schlimmer werden. Viel schlimmer. | nach 0170; Hinweis R11c |
-| W4\_WERB\_MAX\_0190 | Max | Die Stinkbombe. Grün, Zündschnur, ein Geruch wie ein vergessener Turnbeutel. Ich werfe. | Stinkbombe auf Werbepause |
-| W4\_WERB\_NAR\_0200 | – | PFFFT. Grüne Schwaden. Werbepause hält sich die Nase, springt vom Podest und rennt nach rechts aus dem Bild. Eine Taste fällt aus seiner Tasche. | Szene |
+| W4\_WERB\_MAX\_0190 | Max | Die Stinkbombe. Grün, Zündschnur, ein Geruch wie ein vergessener Turnbeutel. Ich werfe. | Stinkbombe auf Werbepause; als Käsemann, nach R11b |
+| W4\_WERB\_NAR\_0200 | – | PFFFT. Grüne Schwaden. Werbepause hält sich die Nase, springt vom Podest und rennt nach rechts aus dem Bild. Eine Taste fällt aus seiner Tasche und rutscht unter die Comic-Panels am Boden. | Szene |
 | W4\_WERB\_WER\_0210 | Dr. Werbepause | Das ist … das ist NICHT im Angebot! Ich komme wieder! Nach der Werbung! | von draußen |
-| W4\_WERB\_MAX\_0220 | Max | Eine Taste mit Lupe und Wellen. Sendersuchlauf. Damit hat er alle Sender gleichzeitig mit Werbung versorgt. Jetzt versorge ich. | Nehmen: Taste Sendersuchlauf |
+| W4\_WERB\_MAX\_0220 | Max | Eine Taste mit Lupe und Wellen. Sendersuchlauf. Damit hat er alle Sender gleichzeitig mit Werbung versorgt. Jetzt versorge ich. | Nehmen: Taste Sendersuchlauf; nach 0360 (lag unter den Panels) |
 | W4\_WERB\_NAR\_0230 | – | Ein Amboss fällt vom Himmel und schlägt eine Handbreit neben Werbepause ein. Er blinzelt, ihm passiert nichts. | Amboss auf Werbepause |
 | W4\_WERB\_MAX\_0240 | Max | Knapp daneben. Im Comic trifft der Amboss nur Leute, die es nicht verdienen. Das ist eine Regel. Pixel kann sie bestätigen. | nach 0230 |
-| W4\_WERB\_WIL\_0250 | Wonder-Wilma | Der Schurke ist weg, aber die Geschichte ist nicht zu Ende. Da liegen die Panels. Wer sie richtig legt, entscheidet, wie es ausgeht. | nach 0220; Panels liegen am Boden |
+| W4\_WERB\_WIL\_0250 | Wonder-Wilma | Der Schurke ist weg, aber die Geschichte ist nicht zu Ende. Da liegen die Panels. Wer sie richtig legt, entscheidet, wie es ausgeht. | nach 0210; Panels liegen am Boden, die Taste darunter |
 | W4\_WERB\_MAX\_0260 | Max | Vier Bilder. Wanduhr oben, Sprechblase unten, Schurke mittendrin. Ich soll die Folge schneiden. Das kann ich. Ich habe Recaps gesehen. | Ansehen: Comic-Panels; öffnet das Sortieren |
 | W4\_WERB\_MAX\_0270 | Max | Der Schurke lacht. Uhr auf zwölf. Runde Blase mit kleinen Blasen, also denkt er nur. Sauber ist er auch noch. Das ist der Anfang. | Ansehen: Panel Schurke lacht |
 | W4\_WERB\_MAX\_0280 | Max | Der Held springt, Uhr auf zwölf Uhr eins, die Banane liegt schon. Zackige Blase: Jemand ruft. | Ansehen: Panel Held springt |
@@ -735,7 +736,7 @@ Max findet den Spot in der Programmzeitschrift und schaltet hinein. Dr. Werbepau
 | W4\_WERB\_MAX\_0330 | Max | Der Held liegt im Käse. Der Schurke lacht. Das war die falsche Reihenfolge. Oder einfach ein realistisches Ende. | nach 0320 |
 | W4\_WERB\_SIE\_0340 | Super-Siegfried | Wir haben verloren. Wieder. Kann ich jetzt schlafen? | nach 0320 |
 | W4\_WERB\_MAX\_0350 | Max | Noch mal. Die Uhr lesen. Zwölf, eins, zwei, drei. Wie ein Recap, nur richtig herum. | Sortieren erneut geöffnet |
-| W4\_WERB\_NAR\_0360 | – | Richtige Folge: Der Schurke lacht, der Held springt, es knallt im Bottich, der Schurke steckt im Käse und der Held trägt die Käsekrone. Die Helden jubeln. | Panels richtig geordnet |
+| W4\_WERB\_NAR\_0360 | – | Richtige Folge: Der Schurke lacht, der Held springt, es knallt im Bottich. Der Schurke steckt im Käse und der Held trägt die Käsekrone. Die Helden jubeln. | Panels richtig geordnet |
 | W4\_WERB\_MAX\_0370 | Max | Die Helden gewinnen. Wegen mir. Wegen einer Banane, einem Käse und einer Wanduhr. Das steht in keinem Comic. Jetzt schon. | Abschluss R11 |
 | W4\_WERB\_WIL\_0380 | Wonder-Wilma | Käsemann. Du hast die Folge gerettet. Nicht die Stadt, die Folge. Das zählt hier mehr. |  |
 | W4\_WERB\_FLE\_0390 | Fledermann | Ich habe alles gesehen! Kopfüber! Es war großartig, aber verkehrt herum! |  |
@@ -747,10 +748,14 @@ Max findet den Spot in der Programmzeitschrift und schaltet hinein. Dr. Werbepau
 | W4\_WERB\_MAX\_0450 | Max | Regenbogenstreifen als Hintergrund. Grell, laut, bunt. Es ist wie ein Pop-up, das man nicht schließen kann. | Ansehen: Hintergrund |
 | W4\_WERB\_MAX\_0460 | Max | Dr. Werbepause. Ein Anzug aus Aufklebern, ein Megafon, ein Schild ohne Text. Er ist eine Werbepause in Menschenform. Ich habe ihn jahrelang weggeklickt. | Ansehen: Dr. Werbepause |
 | W4\_WERB\_MAX\_0470 | Max | Nur der Jingle, keine Bombe. Werbepause steht da und wartet auf seinen Ton. Er sieht ohne Musik sehr klein aus. Trotzdem steht er im Weg. | Benutzen: Podest nach Stumm, vor der Stinkbombe |
+| W4\_WERB\_MAX\_0480 | Max | Nächste Folge in fünf Sekunden. Endlich mal eine ehrliche Drohung. | Ansehen: Autoplay-Countdown |
+| W4\_WERB\_MAX\_0490 | Max | Allein, ohne Team, ohne Umhang? Im Comic gewinnt nur, wer eine Herkunftsgeschichte hat. Erst Held werden, dann werfen. | Stinkbombe auf Werbepause, noch nicht Käsemann |
+| W4\_WERB\_MAX\_0500 | Max | Die Taste liegt unter den Panels. Erst die Geschichte, dann die Beute. | Nehmen: Taste Sendersuchlauf, bevor die Panels richtig liegen |
+| W4\_WERB\_PIX\_0510 | Pixel | Deine Beine sind gefangen. Dein Daumen nicht. Der war schon immer der fleißigste Teil von dir. | nach 0050, ohne Taste Stumm; Hinweis: Umschalten bringt Max hinaus |
 
 ## 15. Senderzentrale: Empfang und Kellerarchiv (Rätsel 12)
 
-Der Sendersuchlauf findet Kanal 999. Im Empfang liest Max den Aufzugscode in den Gedanken der Empfangsdame (Untertitel) und hält die Sicherheitsleute mit Pause an. Code: 1988, Zappmanns Dienstantritt laut Messingschild. Der Weg zum Aufzug führt am Kellerarchiv vorbei.
+Der Sendersuchlauf findet Kanal 999. Im Empfang liest Max den Aufzugscode in den Gedanken der Empfangsdame (Untertitel) und hält die Sicherheitsleute mit Pause an. Code: 1988, Zappmanns Dienstantritt laut Messingschild. Durch die Servicetür neben dem Aufzug geht es ins Kellerarchiv; ohne Archivband lässt Pixel Max nicht nach oben fahren.
 
 | ID | Sprecher | Text | Auslöser |
 | --- | --- | --- | --- |
@@ -787,6 +792,8 @@ Der Sendersuchlauf findet Kanal 999. Im Empfang liest Max den Aufzugscode in den
 | W4\_EMPF\_MAX\_0310 | Max | Ein goldenes Logo ohne Schrift. Die Marke ist so bekannt, dass sie keinen Namen mehr braucht. Oder niemand hat sich einen ausgedacht. | Ansehen: Logo an der Wand |
 | W4\_EMPF\_MAX\_0320 | Max | Eine goldene Aufzugtür. Dahinter fährt es nach oben. Zum Studio. Zum Sofa. Zu allem, was ich eigentlich wollte. Das ist das Problem. | Ansehen: Aufzug |
 | W4\_EMPF\_MAX\_0330 | Max | Eine Servicetür. Dahinter geht es runter. Es ist immer dasselbe: Oben Gold, unten Beton. | Ansehen: Servicetür zum Keller |
+| W4\_EMPF\_PIX\_0340 | Pixel | Halt. Wer seine Vergangenheit in den Keller schreibt, den besucht man nicht mit leeren Pfoten. Erst ins Archiv. | Benutzen: Zahlenfeld oder Aufzug ohne Archivband; nach R7 |
+| W4\_EMPF\_PIX\_0350 | Pixel | Halt. Wir wissen nicht mal, wer der Mann früher war. // Frag deinen Opa. Er hat im Spukhaus eine Lichterkette und zu viel Zeit. | Benutzen: Zahlenfeld oder Aufzug; vor R7; Kaskade |
 
 Kellerarchiv.
 
@@ -851,7 +858,7 @@ Szene. Der Aufzug öffnet sich auf eine Talkshow-Bühne: goldenes Sofa, Applaus-
 | W4\_STUD\_NAR\_0360 | – | Alle Sender laufen gleichzeitig: Gerd verkauft, die Lachkonserve lacht, der Löwe brüllt, die Zombies tanzen, WRRUMM. Die Quote fällt auf null. Zappmann senkt die Arme, setzt sich und legt das Gesicht in die Hände. | Szene: Aufgeben |
 | W4\_STUD\_ZAP\_0370 | Zappmann | Null. Niemand. Nicht mal ich. | leise |
 | W4\_STUD\_MAX\_0380 | Max | Sie können aufstehen. Es ist nicht schwer. Ich hab es auch erst heute gelernt. |  |
-| W4\_STUD\_ZAP\_0390 | Zappmann | Hier. Die Goldene. Sie gehört einem alten Mann, der sie 1977 in meinem Studio hat liegen lassen. Sag ihm … sag ihm, der Backofen ist verziehen. | zieht die Goldene Fernbedienung aus dem Holster, hält sie Max hin |
+| W4\_STUD\_ZAP\_0390 | Zappmann | Hier. Die Goldene. Vor ein paar Wochen ist sie mir aufs Sofa gefallen. Sie gehört einem alten Mann, den ich von früher kenne. Sag ihm … sag ihm, der Backofen ist verziehen. | zieht die Goldene Fernbedienung aus dem Holster, hält sie Max hin |
 | W4\_STUD\_MAX\_0400 | Max | Der Backofen? | nimmt die Fernbedienung |
 | W4\_STUD\_ZAP\_0410 | Zappmann | Lange Geschichte. Frag ihn. | steht langsam auf |
 | W4\_STUD\_PIX\_0420 | Pixel | Ei, Mehl, Batterie, Fernbedienung, Backofen, Vorheizen. // Ich sage es nicht. Ich bin kein Spoiler. Ich bin ein Kater. | Kaskade; Pixel-Andeutung |
@@ -909,7 +916,7 @@ Reaktionen auf Tasten, die in einem Sender nichts lösen. Die lösenden und die 
 | W4\_TAST\_MAX\_0170 | Max | Stumm im Comic. Die WRRUMM-Blase ist leer. Ein stilles WRRUMM. Das ist Kunst. | Stumm in Kapitolis |
 | W4\_TAST\_MAX\_0180 | Max | Untertitel bei Wilma: „Die Jungs. Immer die Jungs. Ich mache alles allein.“ Sie hat Recht. | Untertitel auf Wonder-Wilma |
 | W4\_TAST\_MAX\_0190 | Max | Untertitel beim Fledermann: „Blut im Kopf. Blut im Kopf. Es war so teuer.“ | Untertitel auf Fledermann |
-| W4\_TAST\_MAX\_0200 | Max | Sendersuchlauf außerhalb der Zentrale: Alles flackert, der Kanal mit dem Goldrand blinkt kurz, dann sind wir wieder da, wo wir waren. Er ist gefunden. Er will besucht werden. | Sendersuchlauf, nach dem ersten Fund von Kanal 999 |
+| W4\_TAST\_MAX\_0200 | Max | Sendersuchlauf außerhalb der Zentrale: Alles flackert, der Kanal mit dem Goldrand blinkt kurz. Dann sind wir wieder da, wo wir waren. Er ist gefunden. Er steht jetzt in der Programmzeitschrift. | Sendersuchlauf, nach dem ersten Fund von Kanal 999 |
 | W4\_TAST\_MAX\_0210 | Max | Untertitel bei Gerd im Gespräch über Zappmann: „Nicht über den Keller reden. Nicht über die Puppen reden.“ Welche Puppen? | Untertitel auf Gerd Glück; nach Option 0380 in Abschnitt 3 |
 | W4\_TAST\_MAX\_0220 | Max | Pause im Testbild. Es steht schon alles. Das Testbild ist die Pause. | Pause im Testbild, nach R2 |
 
@@ -969,7 +976,7 @@ Pixel (aus dem Rauschen oder von der Schulter), Flimmer und die Sender kommentie
 | W4\_ZURF\_PIX\_0120 | Pixel | Du stehst neben tanzenden Toten und tust nichts. Das ist entweder Respekt oder Schockstarre. | Friedhof |
 | W4\_ZURF\_GST\_0130 | Geist | Buh? | Keller, aus einer Kiste |
 | W4\_ZURF\_PIX\_0140 | Pixel | Die Tür ist immer noch zu. Sie wird nicht aufgehen, weil du sie anstarrst. Glaub mir, ich starre beruflich. | Keller; vor R6 |
-| W4\_ZURF\_AGE\_0150 | Agent | Haben Sie das gehört? Nein? Ich auch nicht. Genau das ist verdächtig. | Halle |
+| W4\_ZURF\_AGE\_0150 | FBI-Agent | Haben Sie das gehört? Nein? Ich auch nicht. Genau das ist verdächtig. | Halle |
 | W4\_ZURF\_NAR\_0160 | – | Die Lichterkette blinkt einmal kurz. Wie ein Räuspern. | Halle; vor R7 |
 | W4\_ZURF\_SIE\_0170 | Super-Siegfried | Zzz. Katze. Baum. Zzz. | Kapitolis, schwebend |
 | W4\_ZURF\_FLE\_0180 | Fledermann | Ich hänge noch! Falls es jemanden interessiert! Es interessiert niemanden! | Kapitolis |
@@ -983,7 +990,7 @@ Pixel (aus dem Rauschen oder von der Schulter), Flimmer und die Sender kommentie
 
 ## 20. Hinweise (Hilfe-Pfote)
 
-Drei Stufen je Rätselschritt, Pixel spricht aus dem Rauschen. Schritt-IDs nach dem Datenformat im Tab Spielsysteme (W4\_R04\_B usw.); die Hinweis-IDs laufen pro Schritt in Zehnerschritten, Stufe 1 bis 3 als drei aufeinanderfolgende Nummern. Ohne offenen Schritt: W4\_HINT\_PIX\_9990.
+Drei Stufen je Rätselschritt, Pixel spricht aus dem Rauschen. Schritt-IDs nach dem Datenformat in `05-spielsysteme.md` (W4\_R04\_B usw.); die Hinweis-IDs laufen pro Schritt in Zehnerschritten, Stufe 1 bis 3 als drei aufeinanderfolgende Nummern. Nachgetragene Stufen und Schritte haben die Nummern ab 0520 und stehen bei ihrem Schritt. Schritte und Schalter stehen in Rätsel Welt 4 („Rätselschritte für Hinweise und Schalter“). Ohne offenen Schritt: W4\_HINT\_PIX\_9990.
 
 | ID | Sprecher | Text | Auslöser |
 | --- | --- | --- | --- |
@@ -993,9 +1000,9 @@ Drei Stufen je Rätselschritt, Pixel spricht aus dem Rauschen. Schritt-IDs nach 
 | W4\_HINT\_PIX\_0040 | Pixel | Der Mann mit den Zähnen stellt Fragen. Du warst dabei. In allen drei Welten. Ich auch, und ich habe besser aufgepasst. | W4\_R02, Stufe 1 |
 | W4\_HINT\_PIX\_0050 | Pixel | Schwert, Krokodil, Nudeln. Mehr sage ich nicht. Das reicht für jeden, der wach war. | W4\_R02, Stufe 2 |
 | W4\_HINT\_PIX\_0060 | Pixel | Gerhard, das Krokodil, Vier. In der Reihenfolge. Falsch antworten kostet nichts außer Würde. | W4\_R02, Stufe 3 |
-| W4\_HINT\_PIX\_0070 | Pixel | Die Dose geht nur auf, wenn Besuch kommt. Besuch mit Mantel. Kennst du jemanden mit Mantel? | W4\_R03\_A, Stufe 1 |
-| W4\_HINT\_PIX\_0080 | Pixel | Wer mit dir redet, wenn du umschaltest, kommt mit. Flimmer hat das gesagt. Du hast genickt. | W4\_R03\_A, Stufe 2 |
-| W4\_HINT\_PIX\_0090 | Pixel | Rede in der Savanne mit dem Kommissar und schalte mitten im Gespräch in die Küche. Der Rest ist Sitcom. | W4\_R03\_A, Stufe 3 |
+| W4\_HINT\_PIX\_0070 | Pixel | Die Dose geht nur auf, wenn Besuch kommt. Besuch mit Mantel. Kennst du jemanden mit Mantel? | W4\_R03, Stufe 1 |
+| W4\_HINT\_PIX\_0080 | Pixel | Wer mit dir redet, wenn du umschaltest, kommt mit. Flimmer hat das gesagt. Du hast genickt. | W4\_R03, Stufe 2 |
+| W4\_HINT\_PIX\_0090 | Pixel | Rede in der Savanne mit dem Kommissar und schalte mitten im Gespräch in die Küche. Der Rest ist Sitcom. | W4\_R03, Stufe 3 |
 | W4\_HINT\_PIX\_0100 | Pixel | Vier Alibis. Eins davon ist Fernsehen. Fernsehen kann man nachschlagen. Du hast eine Zeitschrift dafür. | W4\_R04\_A, Stufe 1 |
 | W4\_HINT\_PIX\_0110 | Pixel | Die Hyäne sagt Lasagne. Sieh in der Programmzeitschrift nach, was um 20:15 wirklich auf dem Tisch stand. Dann frag die Familie. | W4\_R04\_A, Stufe 2 |
 | W4\_HINT\_PIX\_0120 | Pixel | Es war Fondue, Folge 112. Klick die Folge an, lass dir das von der Mutter bestätigen, und halte der Hyäne die Zeitschrift unter die Nase. Wenn alle anderen Alibis stehen. | W4\_R04\_A, Stufe 3 |
@@ -1007,36 +1014,54 @@ Drei Stufen je Rätselschritt, Pixel spricht aus dem Rauschen. Schritt-IDs nach 
 | W4\_HINT\_PIX\_0180 | Pixel | Wechsel zu mir und benutze das Drehbuch beim Erzähler. Ich stibitze es. Seite 14 ist das Alibi. | W4\_R04\_C, Stufe 3 |
 | W4\_HINT\_PIX\_0190 | Pixel | Der Geier war live im Werbeblock. Frag den, der den Werbeblock macht. Du kennst ihn. Er hat Zähne. | W4\_R04\_D, Stufe 1 |
 | W4\_HINT\_PIX\_0200 | Pixel | Schalte zu Gerd Glück und frag ihn, wer um Viertel nach acht in seinem Studio stand. Er redet gern. Über alles. Besonders über sich. | W4\_R04\_D, Stufe 2 |
+| W4\_HINT\_PIX\_0520 | Pixel | Glücksrad, Frage an Gerd: Wer war gestern um Viertel nach acht hier? // Er sagt: der Geier, live. Dann steht es im Notizbuch. | W4\_R04\_D, Stufe 3 |
 | W4\_HINT\_PIX\_0210 | Pixel | Das Video läuft nur um Mitternacht. Du musst nicht warten. Du musst blättern. | W4\_R05\_A, Stufe 1 |
 | W4\_HINT\_PIX\_0220 | Pixel | Klick in der Programmzeitschrift auf das Mitternachtsvideo. Du bist sofort da. Ich bleibe hier. Zombies tanzen, Katzen nicht. | W4\_R05\_A, Stufe 2 |
+| W4\_HINT\_PIX\_0530 | Pixel | Programmzeitschrift auf, „Mitternachts-TV: Friedhofs-Funk“ anklicken. Die Uhr springt mit, du stehst auf dem Friedhof. | W4\_R05\_A, Stufe 3 |
 | W4\_HINT\_PIX\_0230 | Pixel | Die Zombies tanzen durcheinander. Durcheinander kann man nicht durcheinanderbringen. Erst müssen alle wieder liegen. | W4\_R05\_B, Stufe 1 |
 | W4\_HINT\_PIX\_0240 | Pixel | Spul zurück, bis kurz vor dem Refrain alle in ihren Gräbern liegen. Dann stehen sie gleichzeitig auf. Dann tanz gegen den Takt, und zwar absichtlich schlecht. Das kannst du. | W4\_R05\_B, Stufe 2 |
 | W4\_HINT\_PIX\_0250 | Pixel | Nach zwei Fehlversuchen bietet Flimmer an, die Zombies abzuschalten. Niemand erfährt davon. Außer mir. Und ich erzähle es jedem. | W4\_R05\_B, Stufe 3 |
-| W4\_HINT\_PIX\_0260 | Pixel | Im Grusel geht keine Tür auf. In der Sitcom geht jede Tür auf. Die Tür ist das Problem, nicht das Schloss. | W4\_R06\_A, Stufe 1 |
-| W4\_HINT\_PIX\_0270 | Pixel | Die Küchentür ist zu groß zum Mitnehmen. Aber zwei Bilder nebeneinander hätten einen gemeinsamen Rand. Der Hauptgewinn bei Gerd macht genau das. | W4\_R06\_A, Stufe 2 |
-| W4\_HINT\_PIX\_0280 | Pixel | Hol den Splitscreen-Adapter aus der Bonusrunde, benutze ihn im Keller und schieb die Küchentür über den Bildrand. Dann kommt jemand rein und ruft etwas. Wie immer. | W4\_R06\_A, Stufe 3 |
+| W4\_HINT\_PIX\_0260 | Pixel | Im Grusel geht keine Tür auf. In der Sitcom geht jede Tür auf. Die Tür ist das Problem, nicht das Schloss. | W4\_R06, Stufe 1 |
+| W4\_HINT\_PIX\_0270 | Pixel | Die Küchentür ist zu groß zum Mitnehmen. Aber zwei Bilder nebeneinander hätten einen gemeinsamen Rand. Der Hauptgewinn bei Gerd macht genau das. | W4\_R06, Stufe 2 |
+| W4\_HINT\_PIX\_0280 | Pixel | Hol den Splitscreen-Adapter aus der Bonusrunde, benutze ihn im Keller und schieb die Küchentür über den Bildrand. Dann kommt jemand rein und ruft etwas. Wie immer. | W4\_R06, Stufe 3 |
 | W4\_HINT\_PIX\_0290 | Pixel | Eine Lichterkette mit Buchstaben, die von allein blinkt. Jemand will reden. Rede zurück. Mit Birnen. | W4\_R07, Stufe 1 |
 | W4\_HINT\_PIX\_0300 | Pixel | Benutze die Kette und frag alles, was du fragen kannst. Vor allem nach dem Mann im Sakko. Dein Opa weiß mehr, als er sagt. Das ist seine Lieblingsbeschäftigung. | W4\_R07, Stufe 2 |
+| W4\_HINT\_PIX\_0540 | Pixel | Benutze die Kette und wähl jede Nachricht: Hallo, wer ist Zappmann, woher weißt du das. // Dann wie komme ich heim, alles okay, bis später. Das letzte Wort gehört ihm. | W4\_R07, Stufe 3 |
 | W4\_HINT\_PIX\_0310 | Pixel | Der Agent will Beweise für Kontakt mit der anderen Seite. Du hattest gerade welchen. Über eine Lichterkette. Mit Protokoll. | W4\_R08, Stufe 1 |
 | W4\_HINT\_PIX\_0320 | Pixel | Zeig dem Agenten die Nachrichten deines Opas aus dem Notizbuch. Oder setz die Sonnenbrille aus der Zukunft auf, falls du sie eingepackt hast. Dann bist du Kollege. | W4\_R08, Stufe 2 |
+| W4\_HINT\_PIX\_0550 | Pixel | Zieh das Notizbuch auf den Agenten, die Seite mit Opas Nachrichten. // Er hält das für Außerirdische und gibt dir die Taste Untertitel. | W4\_R08, Stufe 3 |
 | W4\_HINT\_PIX\_0330 | Pixel | Gerd fragt nach Dingen aus anderen Sendern. Du darfst zwischendurch nachsehen. Er wartet. Er redet solange über sich. | W4\_R09, Stufe 1 |
 | W4\_HINT\_PIX\_0340 | Pixel | Fondue steht in der Zeitschrift. Den Namen der Hyäne flüstert der Erzähler. Das Produkt steht auf Werbepauses Podest. Schalte hin, hör zu, komm zurück. | W4\_R09, Stufe 2 |
 | W4\_HINT\_PIX\_0350 | Pixel | Fondue, Fräulein Pokerface, Couch-Magnet 3000. Und dann ist der Hauptgewinn tatsächlich in dieser Sendung. Ich habe es selbst nicht geglaubt. | W4\_R09, Stufe 3 |
 | W4\_HINT\_PIX\_0360 | Pixel | Jeder Held braucht einen Unfall. Dein Unfall braucht einen Käse, der mehr kann als schmelzen. | W4\_R10\_A, Stufe 1 |
 | W4\_HINT\_PIX\_0370 | Pixel | Trag den Käse in den Grusel-Sender, bis er leuchtet, und dann in den Comic, bis er funkelt. Gegenstände passen sich dem Programm an. Ich auch, aber ich gebe es nicht zu. | W4\_R10\_A, Stufe 2 |
+| W4\_HINT\_PIX\_0560 | Pixel | Fondue-Käse aus der Sitcom-Küche. Einmal auf Mitternachts-TV umschalten, dann in den Comic-Kanal. // Erst leuchtet er, dann funkelt er. | W4\_R10\_A, Stufe 3 |
+| W4\_HINT\_PIX\_0570 | Pixel | Ein Held braucht einen Anzug. Wer in dieser Stadt hat zu viele Kostüme? Der, der kopfüber hängt. | W4\_R10\_B, Stufe 1 |
+| W4\_HINT\_PIX\_0580 | Pixel | Lass dir von Wilma erklären, was ein Anführer braucht. // Dann frag den Fledermann nach einem Anzug. Er hat noch einen ersten Entwurf. | W4\_R10\_B, Stufe 2 |
+| W4\_HINT\_PIX\_0590 | Pixel | Hol dir beim Fledermann das Bettlaken und zieh mich drauf. Ich bin das Maskottchen. Auf der Schulter, nicht im Arm. | W4\_R10\_B, Stufe 3 |
 | W4\_HINT\_PIX\_0380 | Pixel | Die Fabrik läuft im Kreis. Rückspulen hält sie in vier Bildern an. Du suchst das mit dem offenen Deckel. Nicht das mit dem Laufband. Frag nicht, woher ich das weiß. | W4\_R10\_C, Stufe 1 |
 | W4\_HINT\_PIX\_0390 | Pixel | Bild drei. Mit Wunderkäse, Laken und mir auf der Schulter. Dann bist du Käsemann. Ich bin das Maskottchen. Wir reden nie wieder darüber. | W4\_R10\_C, Stufe 2 |
+| W4\_HINT\_PIX\_0600 | Pixel | In der Fondue-Fabrik Rückspulen drücken, Bild drei wählen. Wunderkäse und Anzug müssen dabei sein. Und ich. | W4\_R10\_C, Stufe 3 |
+| W4\_HINT\_PIX\_0610 | Pixel | Dr. Werbepause flieht von Sender zu Sender. Aber jede Werbung steht irgendwo im Programm. | W4\_R11\_A, Stufe 1 |
+| W4\_HINT\_PIX\_0620 | Pixel | Such seinen Spot in der Programmzeitschrift. Rechts in den Kästen. Mit Couch. | W4\_R11\_A, Stufe 2 |
+| W4\_HINT\_PIX\_0630 | Pixel | Programmzeitschrift, Kasten „Dr. Werbepause präsentiert den Couch-Magnet 3000“ anklicken. // Schon das zählt für Gerds Bonusrunde. | W4\_R11\_A, Stufe 3 |
 | W4\_HINT\_PIX\_0400 | Pixel | Der Countdown hält dich fest, solange die Musik läuft. Musik hat eine Schwachstelle. Sie braucht Ton. | W4\_R11\_B, Stufe 1 |
 | W4\_HINT\_PIX\_0410 | Pixel | Drück Stumm auf den Countdown. Ohne Jingle ist eine Zahl nur eine Zahl. Dann kannst du dich bewegen. Ob du willst, ist eine andere Frage. | W4\_R11\_B, Stufe 2 |
+| W4\_HINT\_PIX\_0640 | Pixel | Taste Stumm auf den Countdown oder auf ihn. Wenn die Zahl grau wird, bist du frei. | W4\_R11\_B, Stufe 3 |
 | W4\_HINT\_PIX\_0420 | Pixel | Die Banane im Comic lässt ihn rutschen, aber nicht gehen. Sie muss erst schlimmer werden. Dinge werden im Grusel-Sender schlimmer. Alles wird dort schlimmer. | W4\_R11\_C, Stufe 1 |
 | W4\_HINT\_PIX\_0430 | Pixel | Trag die Schale ins Spukhaus, bis sie schwarz ist, dann in den Comic. Dann hat sie eine Zündschnur. Wirf sie auf ihn. Nicht auf mich. | W4\_R11\_C, Stufe 2 |
+| W4\_HINT\_PIX\_0650 | Pixel | Bananenschale: Sitcom, dann Mitternachts-TV, dann Comic. // Als Käsemann die Stinkbombe auf Werbepause ziehen. Er rennt, eine Taste fällt. | W4\_R11\_C, Stufe 3 |
 | W4\_HINT\_PIX\_0440 | Pixel | Die Uhr in der Ecke läuft von Bild zu Bild eine Minute weiter. Der Schurke wird von Bild zu Bild schmutziger. Lies die Bilder wie eine Uhr. | W4\_R11\_D, Stufe 1 |
 | W4\_HINT\_PIX\_0450 | Pixel | Zwölf Uhr: Schurke lacht. Eins: Held springt, Banane liegt. Zwei: Wumm im Bottich. Drei: Schurke im Käse, Held mit Krone. Gedankenblase ganz vorn, Explosion an dritter Stelle. | W4\_R11\_D, Stufe 2 |
+| W4\_HINT\_PIX\_0660 | Pixel | Erst die Gedankenblase, dann die Zackenblase, dann die Explosion, dann die kleine Blase. // Danach liegt unter den Panels deine Taste. | W4\_R11\_D, Stufe 3 |
 | W4\_HINT\_PIX\_0460 | Pixel | Der Chef sendet auf einem Kanal, der in keiner Zeitschrift steht. Versteckte Sender findet man mit der Taste, die Werbepause verloren hat. | W4\_R12\_A, Stufe 1 |
+| W4\_HINT\_PIX\_0670 | Pixel | Drück den Sendersuchlauf. Irgendwo, nur nicht in der Zentrale. Er findet, was sich versteckt. | W4\_R12\_A, Stufe 2 |
+| W4\_HINT\_PIX\_0680 | Pixel | Sendersuchlauf drücken, Kanal 999 rastet ein. // Danach steht er angekreuzt in der Programmzeitschrift, falls du noch mal hinmusst. | W4\_R12\_A, Stufe 3 |
 | W4\_HINT\_PIX\_0470 | Pixel | Die Empfangsdame sagt den Code nicht. Sie denkt ihn. Du hast eine Taste, die Gedanken zeigt. Die Wachen stehen im Weg. Du hast eine Taste, die Dinge anhält. | W4\_R12\_B, Stufe 1 |
 | W4\_HINT\_PIX\_0480 | Pixel | Untertitel auf die Dame: 1988. Pause auf die beiden Schränke, Code tippen, einsteigen. Und nimm vorher das Band aus der Presse, auf dem Puppen draufstehen. | W4\_R12\_B, Stufe 2 |
-| W4\_HINT\_PIX\_0490 | Pixel | Das Sofa ist ein Angebot. Du hast drei Welten lang gelernt, was man mit Angeboten macht, die zu gut klingen. | W4\_R13\_A, Stufe 1 |
-| W4\_HINT\_PIX\_0500 | Pixel | Sag Nein. Zweimal, wenn es sein muss. Dann fängt er an zu senden, und du fängst an zu drücken. Jede Taste hat ihren Moment, und der Moment steht im Bild: Show läuft, er prahlt, Applaus dröhnt, er schweigt, Quote fällt. | W4\_R13\_A, Stufe 2 |
-| W4\_HINT\_PIX\_0510 | Pixel | Pause, Adapter mit Band, Stumm, Untertitel, Sendersuchlauf. In der Reihenfolge. Falsche Tasten kosten nichts, außer dass er sich bedankt. | W4\_R13\_B, Stufe 3 |
+| W4\_HINT\_PIX\_0690 | Pixel | Untertitel auf die Empfangsdame, 1988 ins Zahlenfeld, Pause auf die Sicherheitsleute. // Und vorher das Band aus der Presse im Kellerarchiv. Ohne Band fahre ich nicht mit. | W4\_R12\_B, Stufe 3 |
+| W4\_HINT\_PIX\_0490 | Pixel | Das Sofa ist ein Angebot. Du hast drei Welten lang gelernt, was man mit Angeboten macht, die zu gut klingen. | W4\_R13, Stufe 1 |
+| W4\_HINT\_PIX\_0500 | Pixel | Sag Nein. Zweimal, wenn es sein muss. Dann fängt er an zu senden, und du fängst an zu drücken. Jede Taste hat ihren Moment, und der Moment steht im Bild. Show läuft, er prahlt, Applaus dröhnt, er schweigt, Quote fällt. | W4\_R13, Stufe 2 |
+| W4\_HINT\_PIX\_0510 | Pixel | Pause, Adapter mit Band, Stumm, Untertitel, Sendersuchlauf. In der Reihenfolge. Falsche Tasten kosten nichts, außer dass er sich bedankt. | W4\_R13, Stufe 3 |
 | W4\_HINT\_PIX\_9990 | Pixel | Nichts offen. Da ist eine Fernbedienung. Fernbedienungen sind zum Zappen da. Ich habe gesprochen. | kein offener Schritt |
 | W4\_HINT\_PIX\_9995 | Pixel | Ich denke noch nach. Im Rauschen sieht das aus wie Schnee, ist aber Denken. | Wartezeile, Stufe noch gesperrt |

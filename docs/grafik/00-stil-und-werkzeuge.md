@@ -1,6 +1,6 @@
 # Grafik: Stil und Werkzeuge
 
-Alle Welten teilen einen Pixel-Art-Stil in 320×180 Pixeln mit einer gemeinsamen Palette; jede Welt bekommt nur ihre eigene Farbstimmung. Die Prompts in den Unter-Tabs sind auf Englisch, weil die Generatoren damit zuverlässiger arbeiten.
+Alle Welten teilen einen Pixel-Art-Stil in 320×180 Pixeln mit einer gemeinsamen Palette; jede Welt bekommt nur ihre eigene Farbstimmung. Die Prompts in den Grafik-Dateien der Welten sind auf Englisch, weil die Generatoren damit zuverlässiger arbeiten.
 
 ## Technischer Stil
 
@@ -25,7 +25,7 @@ Alle Welten teilen einen Pixel-Art-Stil in 320×180 Pixeln mit einer gemeinsamen
 | Welt 1 | Saftiges Grün, Gold, Himmelblau | Bilderbuch-Märchen |
 | Welt 2 | Sand, Ocker, Türkis; Marmorweiß; Rot und Purpur nur für die Togen der römischen Touristen | Gleißende Hitze |
 | Welt 3 | Nachtblau, Neon-Magenta, Cyan; Grün für die Code-Sicht; Weiß für das Labor | Regen und Neon |
-| Welt 4 | Je Sender anders | Siehe Tab Welt 4 |
+| Welt 4 | Je Sender anders | Siehe `welt-4.md` |
 
 **Zusatzfarben pro Welt:** Endesga 32 hat kein Neon. Welt 3 bekommt zwei Magenta- und zwei Cyan-Töne dazu, Welt 4 je Sender bis zu zwei eigene Töne. Palettize läuft pro Welt mit der erweiterten Welt-Palette, nicht mit der Basis. Max, Pixel und die weltenübergreifenden Gegenstände bleiben in den 32 Grundfarben, damit sie überall gleich aussehen.
 
@@ -51,11 +51,11 @@ Alle Welten teilen einen Pixel-Art-Stil in 320×180 Pixeln mit einer gemeinsamen
 4. Gegenstände der Szene als Sammelbild erzeugen und ausschneiden.
 5. In Godot einsetzen und mit Max als Platzhalter testen, ob Größen und Laufwege stimmen.
 
-**Text in Bildern:** Generatoren schreiben fast immer fehlerhaft. Schilder, Logo, Programmzeitschrift und Kalenderzahlen deshalb ohne Text erzeugen und die Schrift später von Hand in Aseprite setzen. Alles, was der Spieler lesen muss (Kalender, Zettel, Satzung, Kritzeleien, Steckbrief), bekommt zusätzlich eine Nahansicht in 320×180; die Liste der Nahansichten steht im Tab Spielsysteme.
+**Text in Bildern:** Generatoren schreiben fast immer fehlerhaft. Schilder, Logo, Programmzeitschrift und Kalenderzahlen deshalb ohne Text erzeugen und die Schrift später von Hand in Aseprite setzen. Alles, was der Spieler lesen muss (Kalender, Zettel, Satzung, Kritzeleien, Steckbrief), bekommt zusätzlich eine Nahansicht in 320×180; die Liste der Nahansichten steht je Welt in den Grafik-Dateien (Zeile „Nahansichten“), den Bildschirm beschreibt `05-spielsysteme.md`. Kleine Bildschirme in der Szene (Zapp-O-Mat, Monitorwand, Röhrenfernseher, Empfangsmonitor) bekommen kein eigenes Bild: Beim Ansehen blendet Godot den Ausschnitt doppelt vergrößert und ohne Glättung ein.
 
 ## Prompt-Bausteine
 
-Ein vollständiger Prompt besteht aus drei Teilen: **Baustein** (Technik, von hier) + **Motiv** (aus dem Welt-Tab) + **Farb-Baustein** der Welt. Die Motive in den Welt-Tabs folgen diesen Aufbau-Regeln, damit Retro Diffusion Bildaufbau, Größen und Laufwege trifft.
+Ein vollständiger Prompt besteht aus drei Teilen: **Baustein** (Technik, von hier) + **Motiv** (aus der Grafik-Datei der Welt) + **Farb-Baustein** der Welt. Die Motive in den Grafik-Dateien der Welten folgen diesen Aufbau-Regeln, damit Retro Diffusion Bildaufbau, Größen und Laufwege trifft.
 
 ### Aufbau-Regeln
 
@@ -66,6 +66,8 @@ Ein vollständiger Prompt besteht aus drei Teilen: **Baustein** (Technik, von hi
 | Sammelbild | 8 bis 15 Wörter pro Gegenstand | Raster nennen, Reihenfolge links nach rechts, gleicher Maßstab, Zustandspaare nebeneinander, Form, Material, Farbe |
 | Animation | 20 bis 40 Wörter | Ausgangsbild → Aktion in Phasen → Bildzahl → Schleife oder einmalig → Blickrichtung → was sich nicht bewegt |
 | Effekt | 15 bis 25 Wörter | Form, Farbe, Größe, Bildzahl, über welcher Szene |
+
+**Farbwerte im Prompt:** Hex-Werte (etwa #3a4466) sind nur Orientierung; Retro Diffusion hält sie nicht zuverlässig ein. Verbindlich ist das Umfärben mit Palettize auf die (Welt-)Palette. Die 90-Wort-Grenze darf ein Hintergrund mit sehr vielen Hotspots überschreiten (Dachboden); lässt Retro Diffusion dann Details weg, Variante B nehmen (Neural Pixelate aus dem Konzeptbild).
 
 **Zustände:** Gegenstände und Orte, die sich im Spiel verändern (vorher und nachher, Tag und Nacht), werden immer als Paar im selben Prompt erzeugt, damit sie zusammenpassen.
 
@@ -157,7 +159,7 @@ Max, a lanky 16-year-old boy with a slight slouch, messy dark brown hair (#733e3
 Pixel, a chubby round tomcat about 18 pixels tall when sitting, short legs, light silver-grey fur (#c0cbdc) with three darker blue-grey stripes on his back (#5a6988), white chest and white paws, a very fluffy tail, a notch torn out of his left ear, smug half-closed amber eyes (#feae34), pink nose, a red collar (#e43b44) with a small round silver speaker and a clearly visible two-pixel turquoise light (#2ce8f5), not orange, no tabby markings on the face.
 ```
 
-Als Grundlage für Pixel eignet sich das kostenlose Pet Cat Pack von Luiz Melo (CC0): umfärben, Ohr, Halsband und die zwei Pixel große Leuchte ergänzen.
+Das kostenlose Pet Cat Pack von Luiz Melo (CC0) darf nur als Anschauung für Posen und Laufzyklus neben dem Bild liegen, nicht als Pixelgrundlage: nichts davon übernehmen oder übermalen, sonst bleibt die Silhouette eines weit verbreiteten Asset-Pakets. Max, Pixel und Opa werden nach dem KI-Entwurf in Aseprite Pixel für Pixel von Hand nachgezogen (Produktion, Absprachen).
 
 ### Weltenübergreifende Gegenstände
 
@@ -170,7 +172,7 @@ Diese Gegenstände kommen in mehreren Welten vor. Einmal erzeugen und überall w
 
 ### Animationen von Max und Pixel
 
-Diese Grundanimationen gelten für alle Welten. Weltspezifische Aktionen stehen in den Welt-Tabs.
+Diese Grundanimationen gelten für alle Welten. Weltspezifische Aktionen stehen in den Grafik-Dateien der Welten.
 
 | Figur | Aktion | Bilder | Ablauf | Motiv |
 | --- | --- | --- | --- | --- |
@@ -191,17 +193,17 @@ Diese Grundanimationen gelten für alle Welten. Weltspezifische Aktionen stehen 
 | Pixel | Schnuppern | 4 | einmalig | Pixel stretches his neck forward, nose twitching, sniffs twice, pulls back, facing right (Welt 1 bis 3) |
 | Pixel | Tragen | 8 | Schleife | Pixel walking sprite as input, smug strut with tail held high, a small object held in his mouth, head slightly raised, the object stays fixed in the mouth, facing right (Welt 1 bis 3, Rückkehr 3 und Finale mit der Zelle; nicht in Welt 4) |
 | Pixel | Fauchen | 4 | einmalig | Pixel arches his back, fur bristles, mouth wide open hissing, then settles, facing right |
-| Pixel | Ohrfeige | 4 | einmalig | Pixel jumps up and slaps with one front paw, lands again, smug face, facing right (Welt 3, blaue Pastille aus der Apothekendose mit grünem Kreuz) |
+| Pixel | Ohrfeige | 4 | einmalig | Pixel jumps up and slaps with one front paw, lands again, smug face, facing right (Welt 3, blaue Pastille aus der Apothekendose mit grünem Kreuz). Nur Vorlage: erzeugt wird allein die Fassung mit 6 Bildern in Grafik Welt 3 |
 | Pixel | Vom Schrank fallen | 8 | einmalig | Pixel loses balance on top of a tall cupboard, flails all four legs, falls about 60 pixels, lands flat on the floor, dazed, facing right (Finale, Wohnzimmer) |
 
 ## Regeln
 
-**Parodien:** Keine Namen aus Filmen, Spielen oder Serien in Prompts verwenden. Die Anspielung steckt im Verhalten, im Dialog und in einzelnen Ideen, nicht im Aussehen. Jede Parodiefigur bekommt ein eigenes Design, das sich in mindestens zwei sichtbaren Merkmalen vom Vorbild unterscheidet (Kleidung, Farbe, Frisur, Requisit). Welche Merkmale das sind, steht im Rechtscheck im Tab Konzept. Die Prompts in den Welt-Tabs sind so formuliert. Wenn ein Ergebnis einer bekannten Figur trotzdem zu ähnlich sieht, verwerfen oder deutlich umzeichnen.
+**Parodien:** Keine Namen aus Filmen, Spielen oder Serien in Prompts verwenden. Die Anspielung steckt im Verhalten, im Dialog und in einzelnen Ideen, nicht im Aussehen. Jede Parodiefigur bekommt ein eigenes Design, das sich in mindestens zwei sichtbaren Merkmalen vom Vorbild unterscheidet (Kleidung, Farbe, Frisur, Requisit). Welche Merkmale das sind, steht im Rechtscheck in `01-konzept.md`. Die Prompts in den Grafik-Dateien der Welten sind so formuliert. Wenn ein Ergebnis einer bekannten Figur trotzdem zu ähnlich sieht, verwerfen oder deutlich umzeichnen. Die Prüfung wird bei jeder Parodiefigur im KI-Protokoll in der Spalte „Ähnlichkeitsprüfung ok“ vermerkt.
 
 **Dateinamen:** `welt_art_name_version.png`, zum Beispiel `w1_bg_taverne_v03.png`, `w0_chr_max_walk_v01.png`, `w2_itm_feigen_frisch_v01.png`. W0 steht für Prolog und Finale.
 
 **Objekte nur zum Ansehen:** Jede Szene bekommt zwei bis vier Objekte ohne Rätselfunktion, die nur einen Kommentar von Max oder Pixel auslösen. Sie tragen viele Anspielungen und machen die Welt lebendig. Manche bereiten unauffällig das Finale vor (Fernbedienungen, Kochbuch). Sie gehören in den Hintergrund oder als einzelne Grafik darüber, nicht ins Inventar.
 
-**KI-Protokoll:** Eine einfache Tabelle führen mit Dateiname, Werkzeug, Modell, Prompt und Grad der Nachbearbeitung (keine, wenig, stark). Damit lässt sich die KI-Angabe für Steam später ehrlich ausfüllen, und gute Prompts lassen sich wiederverwenden.
+**KI-Protokoll:** Eine Tabelle mit Datum, Werkzeug und Modell, Prompt, Seed, Datei, Nacharbeit (keine, wenig, stark) und „Ähnlichkeitsprüfung ok“; die Spalten legt `03-produktion.md` (System 2) fest. Damit lässt sich die KI-Angabe für Steam später ehrlich ausfüllen, und gute Prompts lassen sich wiederverwenden.
 
 **Lizenzen:** Fremde Asset-Pakete in derselben Tabelle mit Quelle und Lizenz eintragen, damit die Credits vollständig sind.

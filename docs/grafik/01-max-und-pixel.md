@@ -1,6 +1,6 @@
 # Steckbriefe: Max und Pixel
 
-Max ist ein schlaksiger Teenager in einem zu großen dunkelgrauen Hoodie mit roten Sneakern; Pixel ein runder, silbergrauer Kater mit weißen Pfoten, eingerissenem Ohr und rotem Halsband mit Lautsprecher. Beide müssen auf 56 bzw. 18 Pixel sofort erkennbar sein, also zählen Umriss und zwei, drei Farbakzente mehr als Details.
+Max ist ein schlaksiger Teenager in einem zu großen dunklen schieferblau-grauen Hoodie mit roten Sneakern; Pixel ein runder, silbergrauer Kater mit weißen Pfoten, eingerissenem Ohr und rotem Halsband mit Lautsprecher. Beide müssen auf 56 bzw. 18 Pixel sofort erkennbar sein, also zählen Umriss und zwei, drei Farbakzente mehr als Details.
 
 ## Max
 
@@ -8,13 +8,13 @@ Max ist ein schlaksiger Teenager in einem zu großen dunkelgrauen Hoodie mit rot
 | --- | --- | --- |
 | Alter, Größe | 16 Jahre, 56 Pixel hoch, Kopf etwa 14 Pixel | Etwas größer als nötig wirkt schlaksig; Kopf groß genug für Mimik |
 | Haltung | Leicht vorgebeugt, Schultern hängend, Hände in der Bauchtasche | Der Couch-Potato steckt im Umriss, nicht nur im Text |
-| Haare | Dunkelbraun, wuschelig, eine Strähne hängt über ein Auge | Erkennungszeichen von der Seite; verdeckt halb den Blick, passt zu „maulfaul“ |
+| Haare | Dunkelbraun, wuschelig, zerzauste Strähnen fallen über Stirn und Augen (wie auf dem freigegebenen Konzeptbild) | Erkennungszeichen von der Seite; verdeckt halb den Blick, passt zu „maulfaul“ |
 | Gesicht | Halb geschlossene, müde Augen, schiefes Grinsen, ein paar Sommersprossen | Grundausdruck „gelassen-genervt“ ohne zynisch zu wirken |
-| Oberteil | Übergroßer dunkel-anthrazitfarbener Hoodie, Ärmel über den Händen, ungleich lange Kordeln, kleines Retro-Fernseher-Motiv mit türkisem Bildschirm auf der Brust | Dunkles Grau trennt ihn klar von Pixels hellem Fell, auch wenn der Kater auf seiner Schulter sitzt; der Grundton #3a4466 liegt eine Stufe unter Pixels Streifen (#5a6988), damit beide nicht verschmelzen; das Fernseher-Motiv verbindet ihn mit dem Zapp-O-Mat |
+| Oberteil | Übergroßer dunkler schieferblau-grauer Hoodie (#3a4466), Ärmel über den Händen, ungleich lange Kordeln, kleines Retro-Fernseher-Motiv mit türkisem Bildschirm auf der Brust | Dunkles Grau trennt ihn klar von Pixels hellem Fell, auch wenn der Kater auf seiner Schulter sitzt; der Grundton #3a4466 liegt eine Stufe unter Pixels Streifen (#5a6988), damit beide nicht verschmelzen; das Fernseher-Motiv verbindet ihn mit dem Zapp-O-Mat |
 | Hose | Dunkelblaue Jeans, etwas zu lang, unten aufgeschoppt | Wenig Aufmerksamkeit, solide Basis |
 | Schuhe | Abgetretene rote Sneaker mit weißer Sohle, ein Schnürsenkel offen | Der stärkste Farbakzent: im Gewimmel sofort zu finden; der offene Senkel ist ein stiller Running Gag |
 | Requisiten | Handy in der Bauchtasche, Kopfhörer nur in der Gegenwart | Moderner Teenager ohne zusätzliche Umriss-Unruhe in den Welten |
-| Entwicklung im Bild | Prolog und Welt 1 stark gebeugt; ab Welt 3 aufrechter; im Finale gerade, Hände aus der Tasche | Seine Entwicklung ist sichtbar; kostet nur zwei zusätzliche Stand-Posen |
+| Entwicklung im Bild | Prolog bis Welt 3 gebeugt (Grundpose); ab Rückkehr 3 aufrechter (Prompt „Aufrechte Fassung“ unten); im Finale gerade, Hände aus der Tasche | Seine Entwicklung ist sichtbar; kostet nur zwei zusätzliche Stand-Posen |
 
 **Mimik (Porträt 64×64):** müde (Standard), genervt mit hochgezogener Augenbraue, überrascht, ratlos, echtes Lächeln (selten, nur bei wichtigen Momenten), entschlossen (Finale).
 
@@ -30,7 +30,7 @@ Max ist ein schlaksiger Teenager in einem zu großen dunkelgrauen Hoodie mit rot
 | Sneaker | #e43b44 | #a22633 | #ffffff (Sohle) |
 | Kontur | #262b44 | – | – |
 
-**Referenz-Konzept Max** (Gemini, freigegeben am 6. November 2026, Datei `w0_concept_max.png`): schiefergrauer Hoodie im Konzept, im Spiel auf den dunkleren Grundton #3a4466 gebracht, Hände in der Tasche, leicht gebeugt. Für das Spiel die Seitenansicht spiegeln, damit er nach rechts schaut. Die aufrechte Fassung für das Finale entsteht aus derselben Vorlage. Vor den Animationen den Silhouetten-Test unten durchführen.
+**Referenz-Konzept Max** (Gemini, freigegeben am 6. November 2026, Datei `w0_concept_max.png`): schiefergrauer Hoodie im Konzept, im Spiel auf den dunkleren Grundton #3a4466 gebracht, Hände in der Tasche, leicht gebeugt. Für das Spiel die Seitenansicht spiegeln, damit er nach rechts schaut. Die aufrechte Fassung für das Finale entsteht aus derselben Vorlage. Das fertige Sprite wird in Aseprite Pixel für Pixel von Hand nachgezogen (Produktion, Absprachen). Vor den Animationen den Silhouetten-Test unten durchführen.
 
 ![Konzeptblatt Max](../../concepts/w0_concept_max.png)
 

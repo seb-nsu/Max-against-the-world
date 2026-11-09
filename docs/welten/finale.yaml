@@ -1,0 +1,249 @@
+abschnitt: finale
+name: Zwischenspiele und Finale
+skript_praefix: [ZS1, ZS2, ZS3, FI]
+sonder_codes: [HINT]                 # ZS1_HINT_* und FI_HINT_*: Hilfe-Pfote
+sonder_sprecher: [NAR]               # Regie- und Animationszeilen ohne Sprecher
+
+raeume:
+  - id: dachboden
+    name: Dachboden
+    skript_code: [DACH, RIEG, RUF, RAET, AUFL]   # ZS1 bis ZS3 und Finale
+    groesse: 320x180
+    ausgaenge: [treppenhaus]         # Luke im Finale verriegelt bis zur Auflösung
+    erreichbar_ab: start
+    musik: gegenwart
+    zustaende: [Später Nachmittag, Früher Abend, Abendrot, Nacht Maschine läuft, Nacht Maschine steht]
+
+  - id: treppenhaus
+    name: Treppenhaus
+    skript_code: []                  # nur kurzer Schnitt bei FI_RIEG_OMA_0070, Abspann-Foto 4
+    groesse: 320x180
+    ausgaenge: [dachboden, wohnzimmer]
+    erreichbar_ab: F1d               # Abgang zum Wohnzimmer als Szene nach der Auflösung
+    musik: gegenwart
+    zustaende: [Später Abend]
+
+  - id: wohnzimmer
+    name: Wohnzimmer
+    skript_code: [WOHN, ABSP]        # ABSP: Abspann-Szene am Zapp-O-Mat und Abspann-Fotos
+    groesse: 320x180
+    ausgaenge: [treppenhaus]         # zum Supermarkt nur als Szene (FI_ABSP)
+    erreichbar_ab: F1d
+    musik: gegenwart
+    zustaende: [Geburtstag]
+
+  - id: supermarkt
+    name: Supermarkt-Eingang
+    skript_code: [SUPM]
+    groesse: 320x180
+    ausgaenge: []                    # Endbild, nur die Ladentür (Spielende)
+    erreichbar_ab: F1d               # per Szene aus dem Wohnzimmer
+    musik: gegenwart                 # mit der Schwarzblende setzt das Titelthema ein (FI_SUPM_NAR_0090), danach Abspann
+    zustaende: [Später Abend]
+
+figuren:
+  - id: max
+    name: Max
+    kuerzel: MAX
+    raum: [dachboden, wohnzimmer, supermarkt]
+    groesse_px: 56                   # ab Rückkehr 3 aufrechte Fassung
+    spielbar: true
+
+  - id: pixel
+    name: Pixel
+    kuerzel: PIX
+    raum: [dachboden, wohnzimmer]
+    groesse_px: 18
+    spielbar: true                   # im Finale nötig für Schritt C
+
+  - id: opa
+    name: Opa
+    kuerzel: OPA
+    raum: [dachboden, wohnzimmer]
+    groesse_px: 60
+    spielbar: false
+
+  - id: oma
+    name: Oma                        # Hildegard; vor der Auflösung „Oma (von unten)“
+    kuerzel: OMA
+    raum: [treppenhaus, dachboden, wohnzimmer]
+    groesse_px: 56
+    spielbar: false
+
+  - id: mutter
+    name: Mutter
+    kuerzel: MUT
+    raum: wohnzimmer
+    groesse_px: 58
+    spielbar: false
+
+
+  - id: zeldina
+    name: Zeldina
+    kuerzel: ZEL
+    raum: [dachboden, wohnzimmer]
+    groesse_px: 58                   # Finale-Fassung mit Zauberstab, ohne Karton
+    spielbar: false
+
+  - id: modell_0815
+    name: Modell 08/15
+    kuerzel: HAU
+    raum: [dachboden, wohnzimmer]    # nur mit FREUND_0815
+    groesse_px: 58
+    spielbar: false
+
+  - id: toadi
+    name: Toadi
+    kuerzel: TOA
+    raum: [dachboden, wohnzimmer]
+    groesse_px: 0                    # nur Bildschirm-Einblendung (Kanal 3)
+    spielbar: false
+
+  - id: archimedes
+    name: Archimedes
+    kuerzel: ARC
+    raum: dachboden
+    groesse_px: 0                    # nur Bildschirm-Einblendung; Abspann-Foto aus dem Welt-2-Sprite
+    spielbar: false
+
+  - id: ramses
+    name: Ramses
+    kuerzel: RAM
+    raum: dachboden
+    groesse_px: 0                    # nur Bildschirm-Einblendung; Abspann-Foto aus dem Welt-2-Sprite
+    spielbar: false
+
+  - id: hermes
+    name: Hermes
+    kuerzel: HER
+    raum: dachboden
+    groesse_px: 0                    # nur Bildschirm-Einblendung; Abspann-Foto aus dem Welt-2-Sprite
+    spielbar: false
+
+  - id: kalle
+    name: Kalle
+    kuerzel: KAL
+    raum: dachboden
+    groesse_px: 0                    # nur Bildschirm-Einblendung (Kanal 42, ohne FREUND_0815)
+    spielbar: false
+
+  - id: flimmer
+    name: Flimmer
+    kuerzel: FLI
+    raum: dachboden
+    groesse_px: 0                    # nur Bildschirm-Einblendung (Kanal 999)
+    spielbar: false
+
+  - id: gerd_glueck
+    name: Gerd Glück
+    kuerzel: GER
+    raum: dachboden
+    groesse_px: 0                    # nur Bildschirm-Einblendung (Kanal 999)
+    spielbar: false
+
+  - id: waldemar
+    name: Waldemar
+    kuerzel: WAL
+    raum: wohnzimmer
+    groesse_px: 0                    # singt nur über dem Abspann
+    spielbar: false
+
+gegenstaende:
+  - id: drachenei
+    name: Drachenei
+    herkunft: welt-1                # Welt 1, Rätsel 12
+    zustaende: [drachenei, ei]       # ZS1 auf der Werkbank zum Ei im Karton
+    verwendet_in: []                 # Opa legt es in FI_DACH in die Maschine
+    ohne_verwendung: Opa legt es selbst in die Maschine
+    reist_mit: false
+    nahansicht: false
+
+  - id: pharaonenkorn
+    name: Goldener Sack Pharaonenkorn
+    herkunft: welt-2                # Welt 2, Rätsel 11
+    zustaende: [goldener_sack, mehlsack]   # ZS2, Siegel 405
+    verwendet_in: []
+    ohne_verwendung: Opa legt es selbst in die Maschine
+    reist_mit: false
+    nahansicht: false
+
+  - id: energiezelle
+    name: Ewige Energiezelle
+    herkunft: welt-3                # Welt 3, Rätsel 11
+    zustaende: [ewig, batterie]      # ZS3 zur fingergroßen, orange glühenden AA-Batterie
+    verwendet_in: [F1c]              # Pixel holt sie unter dem Sessel hervor
+    reist_mit: false
+    nahansicht: false
+
+  - id: goldene_fernbedienung
+    name: Goldene Fernbedienung      # nach FI_DACH grau; im Inventar „Fernbedienung“, mit Zelle „Zündkapsel“
+    herkunft: welt-4                # Welt 4, Rätsel 13
+    zustaende: [golden, grau_ohne_zelle, zuendkapsel]
+    verwendet_in: [F1c, F1d]
+    reist_mit: false
+    nahansicht: false
+
+  - id: kochloeffel
+    name: Kochlöffel-Zauberstab
+    herkunft: welt-1                # Welt 1, Rätsel 13; Pflichtfach
+    zustaende: [zauberstab]
+    verwendet_in: [F1b]              # nur ohne FREUND_0815
+    reist_mit: true
+    nahansicht: false
+
+  - id: omas_kekse
+    name: Omas Kekse
+    herkunft: welt-3                # Welt 3, Rätsel 3; eingepackt oder aus der Fundkiste
+    zustaende: [hundekuchen]         # Papiertüte; auf dem Dachboden immer Hundekuchen
+    verwendet_in: [F2]
+    reist_mit: true
+    nahansicht: false
+
+raetsel:
+  - id: F1
+    name: Verriegelt (Luke erkennen)
+    raum: dachboden
+    benoetigt: []
+    ergibt: []                       # danach automatisch der Hilferuf: Zeldina, mit FREUND_0815 Modell 08/15
+    schalter: [LUKE_ERKANNT]
+    optional: false
+
+  - id: F1a
+    name: Der Riegel (Zeldina)
+    raum: dachboden
+    benoetigt: [F1]
+    ergibt: []
+    schalter: [FI_R01_A_GELOEST]
+    optional: true                   # für das Ende nicht zwingend, der Stopp löst die Verriegelung auch
+
+  - id: F1b
+    name: Die Ofentür halten
+    raum: dachboden
+    benoetigt: [F1, kochloeffel]   # Kochlöffel nur ohne FREUND_0815
+    ergibt: []
+    schalter: [FI_R01_B_GELOEST]
+    optional: false
+
+  - id: F1c
+    name: Die Zündkapsel
+    raum: dachboden
+    benoetigt: [F1]
+    ergibt: []                       # Fernbedienung und Zelle unter dem Ohrensessel wieder ins Inventar (Zustand zuendkapsel)
+    schalter: [FI_R01_C_GELOEST]
+    optional: false
+
+  - id: F1d
+    name: Die rote Taste
+    raum: dachboden
+    benoetigt: [F1b, F1c, goldene_fernbedienung]
+    ergibt: []                       # Maschine stoppt, Auflösung, Wohnzimmer
+    schalter: [FI_R01_D_GELOEST]
+    optional: false
+
+  - id: F2
+    name: Hundekuchen zum Geburtstag (Bonus-Gag)
+    raum: dachboden
+    benoetigt: [omas_kekse]
+    ergibt: []
+    schalter: [KEKSE_DABEI]
+    optional: true

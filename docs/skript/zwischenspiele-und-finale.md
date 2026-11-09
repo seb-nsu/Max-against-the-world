@@ -1,6 +1,6 @@
 # Skript Zwischenspiele und Finale
 
-Das Skript der drei Zwischenspiele (Rückkehren auf den Dachboden nach Welt 1, 2 und 3: Werbeblock, Artefakt-Abgabe, Passwort-Versuch, Pixels Notizbuch, Ansehen-Zeilen für den jeweiligen Dachboden-Zustand und Reisetasche packen mit Pixels Kommentaren) sowie des kompletten Finales (Heimkehr, Stufe 1 als Spielphase, Hilferuf, letztes Rätsel mit Hinweisen und Fehlversuchen, Stufe 2, Geburtstag, Abspann-Szene und Abspann): 166 Zeilen Zwischenspiele und 272 Zeilen Finale samt Abspann, zusammen 438. Kurzform wie im Prolog: ID, Sprecher, Text, Regie oder Auslöser; Bedingungen stehen in der letzten Spalte (Schalter FREUND\_0815 für Modell 08/15 als Freund, KEKSE\_DABEI für Omas Kekse, Goblin-Weg A/B, LUKE\_ERKANNT für den Abschluss von Finale Stufe 1). Sprecherkürzel neu: HAU für Modell 08/15, ZEL Zeldina, TOA Toadi, WAL Waldemar, FLI Flimmer, GER Gerd Glück, ARC Archimedes, RAM Ramses, HER Hermes, KAL Kalle. Ersatzzeilen gelten aus dem Prolog-Skript.
+Das Skript der drei Zwischenspiele (Rückkehren auf den Dachboden nach Welt 1, 2 und 3: Werbeblock, Artefakt-Abgabe, Passwort-Versuch, Pixels Notizbuch, Ansehen-Zeilen für den jeweiligen Dachboden-Zustand und Reisetasche packen mit Pixels Kommentaren) sowie des kompletten Finales (Heimkehr, Stufe 1 als Spielphase, Hilferuf, letztes Rätsel mit Hinweisen und Fehlversuchen, Stufe 2, Geburtstag, Abspann-Szene und Abspann): 168 Zeilen Zwischenspiele und 276 Zeilen Finale samt Abspann, zusammen 444. Kurzform wie im Prolog: ID, Sprecher, Text, Regie oder Auslöser; Bedingungen stehen in der letzten Spalte (Schalter FREUND\_0815 für Modell 08/15 als Freund, KEKSE\_DABEI für Omas Kekse: gesetzt, sobald die Kekstüte im Inventar ist, also eingepackt für Welt 4 oder im Finale aus der Fundkiste genommen, Goblin-Weg A/B, LUKE\_ERKANNT für den Abschluss von Finale Stufe 1). Sprecherkürzel neu: HAU für Modell 08/15, ZEL Zeldina, TOA Toadi, WAL Waldemar, FLI Flimmer, GER Gerd Glück, ARC Archimedes, RAM Ramses, HER Hermes, KAL Kalle; dazu die festen Kürzel OMA, MUT und NAR (Erzähler, Sprecher „–“) aus den Spielsystemen. Räume, Gegenstände und Schalter stehen in der [Welt-Tabelle Finale](../welten/finale.yaml), Abläufe, Lösungen und Hinweisstufen in [Rätsel Finale](../raetsel/finale.md). Ersatzzeilen gelten aus dem Prolog-Skript.
 
 ## 1. Zwischenspiel 1: Rückkehr nach Welt 1 (Kanal 3)
 
@@ -48,17 +48,18 @@ Ansehen auf dem Dachboden, Zustand später Nachmittag. Alle Prolog-Zeilen der un
 | ZS1\_DACH\_OPA\_0390 | Opa | Ein Werk. Ein großes, dunkles, warmes Werk. Mehr sage ich nicht, sonst geht es nicht auf. | geheimnisvoll, dann erschrocken über sich selbst |
 | ZS1\_DACH\_MAX\_0400 | Max | „Aufgehen.“ Wie ein Plan. |  |
 | ZS1\_DACH\_PIX\_0410 | Pixel | Wie ein Plan. Sicher. |  |
+| ZS1\_DACH\_MAX\_0420 | Max | Opas Fundkiste. Alles, was nicht in die Tasche passt. Opa wirft nichts weg. Er nennt das Archiv. | Ansehen: Fundkiste; gilt in allen drei Zwischenspielen |
 
-Reisetasche packen für Welt 2. Nahansicht der offenen Tasche: Pflichtfach (Notizbuch, Thunfischdose, Kochlöffel) ist gefüllt, zwei Wahlfächer sind leer. Daneben liegen alle Gegenstände, die Max aus Welt 1 noch hat. Pixel kommentiert jeden beim Berühren; der Kommentar ist kryptisch, aber ehrlich. Was nicht eingepackt wird, legt Opa in die „Fundkiste“ auf dem Dachboden.
+Reisetasche packen für Welt 2. Bildschirm Reisetasche (eigene Überlagerung aus den Spielsystemen, keine der 14 Nahansichten): Pflichtfach (Notizbuch, Thunfischdose, Kochlöffel) ist gefüllt, zwei Wahlfächer sind leer. Das Packen beginnt, sobald Max in der freien Phase den Drehknopf benutzt: Opa hält ihn auf und öffnet die Tasche (0510); nach dem Bestätigen folgen Opas Abschied und der zweite Dreh am Knopf (0660). So läuft es in allen drei Zwischenspielen. Daneben liegen alle Gegenstände, die Max aus Welt 1 noch hat, dazu der Dosenöffner aus dem Prolog, den Opa aufgehoben hat. Pixel kommentiert jeden beim Berühren; der Kommentar ist kryptisch, aber ehrlich. Was nicht eingepackt wird, legt Opa in die „Fundkiste“ auf dem Dachboden.
 
 | ID | Sprecher | Text | Auslöser |
 | --- | --- | --- | --- |
-| ZS1\_DACH\_OPA\_0510 | Opa | Zwei Wahlfächer. Nicht mehr. Die Tasche hat Prinzipien. | öffnet die Tasche, Nahansicht Reisetasche |
+| ZS1\_DACH\_OPA\_0510 | Opa | Zwei Wahlfächer. Nicht mehr. Die Tasche hat Prinzipien. | öffnet die Tasche, Bildschirm Reisetasche |
 | ZS1\_DACH\_PIX\_0520 | Pixel | Der Kochlöffel reist jetzt immer mit. Er hat sich das verdient. // Und er klebt noch. | Berühren: Kochlöffel (Pflichtfach) |
 | ZS1\_DACH\_PIX\_0530 | Pixel | Der Thunfisch bleibt. Das ist kein Gepäck, das ist Religion. | Berühren: Thunfischdose (Pflichtfach) |
 | ZS1\_DACH\_PIX\_0540 | Pixel | Die Socke sortiert alles, was man ihr gibt. Wo es Beamte gibt, gibt es Stapel. | Berühren: Sortierende Socke |
 | ZS1\_DACH\_PIX\_0550 | Pixel | Ein Ziegenfell. Ich habe darin gelebt. Ich spreche nicht darüber. // Wo es heiß ist, braucht das niemand. | Berühren: Ziegenfell-Vorleger |
-| ZS1\_DACH\_PIX\_0560 | Pixel | Moderworts Zeugnis. Eine Fünf in Verwandlung. // Beeindruckt niemanden, außer Müttern. | Berühren: Moderworts Zeugnis |
+| ZS1\_DACH\_PIX\_0560 | Pixel | Moderworts Zeugnis. Ungenügend in Zaubertränke. // Beeindruckt niemanden, außer Müttern. | Berühren: Moderworts Zeugnis |
 | ZS1\_DACH\_PIX\_0570 | Pixel | Der Eimer. Waldemar hat ihn zurückgegeben, Regel 14b. // Am Nil gibt es genug Wasser. Und genug Krokodile. | Berühren: Eimer |
 | ZS1\_DACH\_PIX\_0580 | Pixel | Ein Dosenöffner. Kurbelt. Braucht keinen Strom. // Merk dir das. Irgendwann braucht alles Strom. | Berühren: Dosenöffner |
 | ZS1\_DACH\_PIX\_0590 | Pixel | Der Leuchttrank. Leuchtet. Drüben scheint die Sonne. Rechne selbst. | Berühren: Leuchttrank; nur Goblin-Weg B |
@@ -70,6 +71,12 @@ Reisetasche packen für Welt 2. Nahansicht der offenen Tasche: Pflichtfach (Noti
 | ZS1\_DACH\_OPA\_0650 | Opa | Per Boten. Der kommt zu spät, aber er kommt. Kanal 7, Max! Und wenn du Ramses siehst: Er soll sich entscheiden! | zeigt auf den Drehknopf |
 | ZS1\_DACH\_MAX\_0660 | Max | Kanal 7. | Benutzen: Drehknopf; Wirbel, Übergang Welt 2 |
 | ZS1\_DACH\_PIX\_0670 | Pixel | Ich hasse Zeitreisen. Ich habe das erwähnt. Ich erwähne es gern noch einmal. | hinterher |
+
+Hilfe-Pfote in den Zwischenspielen: Es gibt kein Rätsel, offen ist nur das Packen. Pixel sagt in allen drei Zwischenspielen dieselbe Zeile.
+
+| ID | Sprecher | Text | Auslöser |
+| --- | --- | --- | --- |
+| ZS1\_HINT\_PIX\_0010 | Pixel | Tasche packen, Knopf drehen. Mehr ist hier nicht zu tun. Ich hätte es gern komplizierter. | Hilfe-Pfote in Zwischenspiel 1 bis 3, nichts offen |
 
 ## 2. Zwischenspiel 2: Rückkehr nach Welt 2 (Kanal 7)
 
@@ -126,7 +133,7 @@ Reisetasche packen für Welt 3. Gegenstände aus Welt 1, die Max damals eingepac
 
 | ID | Sprecher | Text | Auslöser |
 | --- | --- | --- | --- |
-| ZS2\_DACH\_OPA\_0510 | Opa | Die Tasche! Zwei Fächer. Was nicht mitkommt, kommt in die Fundkiste. Ich werfe nichts weg. Nie. | öffnet die Tasche, Nahansicht Reisetasche |
+| ZS2\_DACH\_OPA\_0510 | Opa | Die Tasche! Zwei Fächer. Was nicht mitkommt, kommt in die Fundkiste. Ich werfe nichts weg. Nie. | öffnet die Tasche, Bildschirm Reisetasche |
 | ZS2\_DACH\_PIX\_0520 | Pixel | Olivenöl. Für alles, was quietscht. Auch für Blechköpfe. // Wo du hinfährst, quietscht viel. | Berühren: Olivenöl |
 | ZS2\_DACH\_PIX\_0530 | Pixel | Eine geflügelte Sandale. Nur eine. Die andere ist jetzt ein Religionsgegenstand. // Leicht, flattert, hat Eigenschaften. Eigenschaften kann man tauschen. Sagt man. | Berühren: Hermes' geflügelte Sandale |
 | ZS2\_DACH\_PIX\_0540 | Pixel | Der Olivenkranz. Gold, das kein Gold ist. Passt zu allem anderen hier. // Essbar, theoretisch. Ich habe probiert. Nein. | Berühren: Olivenkranz |
@@ -154,7 +161,7 @@ Szene. Werbeblock, dann Ankunft. Abendrot durchs Dachfenster, Opa hat die Lampe 
 | ZS3\_DACH\_PIX\_0020 | Pixel | Dreimal Milch. Das ist keine Werbung mehr. Das ist eine Botschaft. // Jemand will, dass wir etwas kaufen. Ich ahne, wer. | kommt aus dem Bildschirm, sieht Opa an |
 | ZS3\_DACH\_MAX\_0030 | Max | Es regnet nicht mehr. Ich hatte vergessen, wie das ist. | sieht an sich herunter, noch nass |
 | ZS3\_DACH\_OPA\_0040 | Opa | Die Zelle. Die Ewige Energiezelle. Gib sie mir. Langsam. Mit beiden Händen. | kommt mit ausgestreckten Armen, fast andachtsvoll |
-| ZS3\_DACH\_MAX\_0050 | Max | Sie ist warm. Nicht mehr heiß. Lange Geschichte mit Keksen. | reicht sie über |
+| ZS3\_DACH\_MAX\_0050 | Max | Sie ist warm. Nicht mehr heiß. Lange Geschichte mit einer Küchenmaschine. | reicht sie über |
 | ZS3\_DACH\_NAR\_0060 | – | Opa hält die Zelle ins Licht. Glitzer, Plopp. Sie ist jetzt genau so groß wie sein kleiner Finger. | Effekt Verwandlung |
 | ZS3\_DACH\_OPA\_0070 | Opa | Rückverwandlungs… | fängt an |
 | ZS3\_DACH\_MAX\_0080 | Max | …schwund. Ich weiß. |  |
@@ -162,7 +169,7 @@ Szene. Werbeblock, dann Ankunft. Abendrot durchs Dachfenster, Opa hat die Lampe 
 | ZS3\_DACH\_MAX\_0100 | Max | Du legst die ewige Energiequelle der Menschheit zu deinem Fernbedienungsschrott. |  |
 | ZS3\_DACH\_OPA\_0110 | Opa | Dort ist sie am sichersten. Niemand sucht Wertvolles bei Fernbedienungen. Das weiß ich aus Erfahrung. | ausweichend |
 | ZS3\_DACH\_PIX\_0120 | Pixel | Seltsam, sagt Max. Verdächtig, sage ich. // Ich bin der, der recht hat. Statistisch. | zu Max |
-| ZS3\_DACH\_NAR\_0130 | – | Pixel springt in die Kiste, wühlt, taucht mit der Zelle im Maul wieder auf und legt sie auf die Werkbank, genau neben Ei und Mehl. | Werkbank-Ablage Zustand 3, Zelle glüht |
+| ZS3\_DACH\_NAR\_0130 | – | Pixel springt in die Kiste, wühlt, taucht mit der Zelle im Maul wieder auf. Er legt sie auf die Werkbank, genau neben Ei und Mehl. | Werkbank-Ablage Zustand 3, Zelle glüht |
 | ZS3\_DACH\_PIX\_0140 | Pixel | Reliquien gehören auf den Altar. Zu den anderen Reliquien. // Ei. Mehl. Und ein Ding, das in eine Fernbedienung passt. // Ich sage nichts. Ich lege es nur hin. | setzt sich kerzengerade, Schwanz um die Pfoten |
 | ZS3\_DACH\_OPA\_0150 | Opa | Der Kater sortiert um. Wie im Labor. Schön. Toll. | schwitzt |
 | ZS3\_DACH\_MAX\_0160 | Max | Drei von vier. Das Passwort ist „Kuchen123“. Oder? | trocken, aus dem Nichts |
@@ -201,11 +208,11 @@ Reisetasche packen für Welt 4. Neu sind die Dinge aus Welt 3. Omas Kekse liegen
 
 | ID | Sprecher | Text | Auslöser |
 | --- | --- | --- | --- |
-| ZS3\_DACH\_OPA\_0510 | Opa | Letztes Packen. Zwei Fächer. Danach brauchst du die Tasche nie wieder. Hoffe ich. Rechne ich. | öffnet die Tasche, Nahansicht Reisetasche |
+| ZS3\_DACH\_OPA\_0510 | Opa | Letztes Packen. Zwei Fächer. Danach brauchst du die Tasche nie wieder. Hoffe ich. Rechne ich. | öffnet die Tasche, Bildschirm Reisetasche |
 | ZS3\_DACH\_PIX\_0520 | Pixel | Die Sonnenbrille eines Mannes, der nie blinzelt. // Wo du hinfährst, tragen Leute so etwas, um dazuzugehören. Dazugehören spart Zeit. | Berühren: Agent Schmidts Sonnenbrille |
 | ZS3\_DACH\_PIX\_0530 | Pixel | Hundekuchen. In einer Kekstüte. Ich habe sie gesehen, als sie Kekse waren. // Ich werde das nie verwinden. // Alte Damen mögen Knuspriges. Irgendeine alte Dame. Irgendwann. | Berühren: Omas Kekse (Hundekuchen); Mimik entsetzt |
-| ZS3\_DACH\_PIX\_0540 | Pixel | Ein Portalgerät ohne Batterie. Es zeigt eine Sekunde lang Opas Wohnzimmer, wenn man es füttert. // Ich sage nicht, womit. Es steht praktisch daneben. | Berühren: Portalgerät mit leerer Batterie |
-| ZS3\_DACH\_PIX\_0550 | Pixel | Siebenundvierzig Mal Konner, Sahra. Ein Blechkopf hat sie alle besucht. Oder keine. // Papier reist gut. Wertlos, aber leicht. | Berühren: Telefonbuchseite |
+| ZS3\_DACH\_PIX\_0540 | Pixel | Ein Portalgerät ohne Batterie. Es zeigt eine Sekunde lang Opas Wohnzimmer, wenn man es füttert. // Ich sage nicht, womit. Es steht praktisch daneben. | Berühren: Portalgerät |
+| ZS3\_DACH\_PIX\_0550 | Pixel | Siebenundvierzig Mal Konner, Sahra. Ein Blechkopf hat sie alle besucht. Oder keine. // Papier reist gut. Wertlos, aber leicht. | Reserve, kommt nicht vor: Modell 08/15 nimmt die Telefonbuchseite in Welt 3 (R8) mit; ID bleibt vergeben |
 | ZS3\_DACH\_PIX\_0560 | Pixel | Eine Kaffeetasse, die für das Original gehalten wird. Jeder Klon gehorcht ihr. // Im Fernsehen gibt es viele Klone. Ich sage nur: Sitcom-Familien. | Berühren: Kaffeetasse |
 | ZS3\_DACH\_PIX\_0570 | Pixel | Schmidts Akte. Hier Papier, drüben Daten. „Abteilung Fürsorge und Verfolgung.“ // Behörden gibt es überall. Auch im Fernsehen. Besonders da. | Berühren: Schmidts Akte |
 | ZS3\_DACH\_PIX\_0580 | Pixel | Kalles Morse-Tabelle. Miau, Miau, Pause, Miau. // Wo du hinfährst, krabble ich durch das Rauschen. Ich brauche keine Tabelle. Du vielleicht. | Berühren: Morse-Tabelle |
@@ -235,7 +242,7 @@ Szene. Kein Werbeblock: Die Goldene Fernbedienung bricht den Spot nach einer hal
 | FI\_DACH\_NAR\_0080 | – | Opa nimmt das Ei aus dem Karton und legt es feierlich in die linke Fassung. Dann den Mehlsack in die rechte. Die Maschine schluckt beides mit einem Klack. | Fassungen schließen sich |
 | FI\_DACH\_OPA\_0090 | Opa | Erstens: das Drachenei, Modell ganz. Zweitens: das Pharaonenkorn, Modell fein wie Staub. | zählt an den Fingern |
 | FI\_DACH\_OPA\_0100 | Opa | Drittens: die Ewige Energiezelle. Viertens: die Goldene Fernbedienung. Jetzt. | hält die Hand auf |
-| FI\_DACH\_NAR\_0110 | – | Max gibt sie ihm. Opa klappt hinten den Deckel auf, schiebt die Energiezelle hinein, klappt zu. | kein Effekt, nur ein Klick |
+| FI\_DACH\_NAR\_0110 | – | Max gibt sie ihm. Glitzer, ein leises Plopp: In Opas Hand ist sie grau und abgegriffen. // Opa klappt hinten den Deckel auf, schiebt die Zelle von der Werkbank hinein, klappt zu. | Effekt Verwandlung, dann nur ein Klick; Opa hält ab jetzt die graue Fernbedienung |
 | FI\_DACH\_OPA\_0120 | Opa | Die Zündkapsel. Fertig geladen. | hält sie hoch wie ein Schwert |
 | FI\_DACH\_MAX\_0130 | Max | Das ist eine Fernbedienung. |  |
 | FI\_DACH\_OPA\_0140 | Opa | Zündkapsel. Mit Tasten. |  |
@@ -256,7 +263,7 @@ Szene. Kein Werbeblock: Die Goldene Fernbedienung bricht den Spot nach einer hal
 
 ## 5. Finale, Stufe 1: Verriegelt (FI\_RIEG)
 
-Spielphase. Max muss die Luke und die Maschine untersuchen, während Opa seine Sätze brüllt und Pixel nervtös wird. Schalter LUKE\_ERKANNT wird gesetzt, sobald Max die Luke benutzt hat. Erst dann geht es mit dem Hilferuf weiter (Abschnitt 6). Opas drei Weltherrschafts-Sätze kommen in dieser Reihenfolge als Zurufe alle 15 Sekunden, danach in Schleife; jeder Klick auf Opa löst den nächsten aus. Oma ruft währenddessen zweimal von unten.
+Spielphase. Max muss die Luke und die Maschine untersuchen, während Opa seine Sätze brüllt und Pixel nervös wird. Schalter LUKE\_ERKANNT wird gesetzt, sobald Max die Luke benutzt hat. Erst dann geht es mit dem Hilferuf weiter (Abschnitt 6). Opas drei Weltherrschafts-Sätze kommen in dieser Reihenfolge als Zurufe alle 15 Sekunden, danach in Schleife; jeder Klick auf Opa löst den nächsten aus. Oma ruft währenddessen zweimal von unten.
 
 | ID | Sprecher | Text | Auslöser |
 | --- | --- | --- | --- |
@@ -266,7 +273,7 @@ Spielphase. Max muss die Luke und die Maschine untersuchen, während Opa seine S
 | FI\_RIEG\_PIX\_0040 | Pixel | Ich hab ihn immer für harmlos gehalten. Vierzehn Jahre lang. // Vierzehn Jahre. Ich habe auf seinem Schoß geschlafen. | nach Zuruf 1; Mimik entsetzt |
 | FI\_RIEG\_PIX\_0050 | Pixel | „Weich und warm.“ Das ist entweder das Ende der Welt oder etwas, worauf man sich legen kann. // Ich weiß nicht, welches ich mir wünsche. | nach Zuruf 2 |
 | FI\_RIEG\_OMA\_0060 | Oma (von unten) | Konrad? Warum riecht es hier nach verbranntem Zucker? | nach 30 Sekunden |
-| FI\_RIEG\_OMA\_0070 | Oma (von unten) | Ich komme jetzt hoch. Ich zähle nicht bis drei. Ich komme einfach. | nach 60 Sekunden; Oma betritt das Treppenhaus (Animation Treppe steigen, aus dem Off) |
+| FI\_RIEG\_OMA\_0070 | Oma (von unten) | Ich komme jetzt hoch. Ich zähle nicht bis drei. Ich komme einfach. | nach 60 Sekunden; kurzer Schnitt ins Treppenhaus (Abend, Luke oben zu): Oma steigt die Treppe hinauf (Animation Treppe steigen), dann zurück auf den Dachboden; sie wartet ab jetzt unter der Luke |
 | FI\_RIEG\_MAX\_0080 | Max | Die Luke. Ein Eisenriegel, dick wie mein Arm, und eine rote Lampe, die mich auslacht. | Ansehen: Bodenluke |
 | FI\_RIEG\_MAX\_0090 | Max | Verriegelt. Richtig verriegelt. Das ist kein Bug, das ist ein Feature. | Benutzen: Bodenluke; setzt LUKE\_ERKANNT |
 | FI\_RIEG\_PIX\_0100 | Pixel | Ich würde drunter durchpassen. Durch Eisen leider nicht. Ich habe es nie probiert. Ich probiere es nicht. | nach Benutzen: Bodenluke |
@@ -284,10 +291,14 @@ Spielphase. Max muss die Luke und die Maschine untersuchen, während Opa seine S
 | FI\_RIEG\_MAX\_0220 | Max | Der Zapp-O-Mat. Läuft noch. Kanal 999 zeigt ein leeres Studio und ein goldenes Sofa. Nein danke. | Ansehen: Zapp-O-Mat |
 | FI\_RIEG\_PIX\_0230 | Pixel | Der Fernseher ist der einzige Ausgang. Und der einzige Eingang. // Denk mal drüber nach, was durch Eingänge so reinkommt. | nach Ansehen: Zapp-O-Mat; nur mit LUKE\_ERKANNT |
 | FI\_RIEG\_MAX\_0240 | Max | Die Zeit läuft, die Oma kommt, die Luke ist zu. Das ist eine Folge ohne Pause-Taste. | Zuruf Max, nach 45 Sekunden ohne Aktion |
+| FI\_RIEG\_MAX\_0250 | Max | Opas Fundkiste. Ganz oben liegt eine Tüte Hundekuchen. Die aus der Zukunft. | Ansehen: Fundkiste; nur wenn Omas Kekse darin liegen; gilt auch in Abschnitt 6 und 7 |
+| FI\_RIEG\_MAX\_0260 | Max | Die Kekse von der alten Dame, die alles vorher weiß. Vielleicht weiß sie auch, wofür. | Benutzen: Fundkiste; nur wenn Omas Kekse darin liegen; Tüte ins Inventar, setzt KEKSE\_DABEI |
+| FI\_RIEG\_PIX\_0270 | Pixel | Du nimmst die Hundekuchen mit. Jetzt. Wo deine Oma die Treppe hochkommt. // Ich habe nichts gesehen. | nach 0260; Mimik entsetzt |
+| FI\_RIEG\_MAX\_0280 | Max | Opas Fundkiste. Er wirft wirklich nichts weg. Ich auch nicht mehr, wie es aussieht. | Ansehen: Fundkiste; ohne Kekse darin |
 
 ## 6. Finale: Hilferuf über den Zapp-O-Mat (FI\_RUF)
 
-Szene mit vier Drehknopf-Stufen. Nach LUKE\_ERKANNT dreht Max den Knopf einmal durch alle vier Kanäle; der Spieler klickt jeden Kanal selbst an (Reihenfolge frei). Auf jedem Kanal winkt jemand kurz durch den Bildschirm, nur Zeldina (Kanal 3) und, mit Schalter FREUND\_0815, Modell 08/15 (Kanal 42) kommen heraus. Sind beide möglichen Verbündeten da, beginnt Abschnitt 7.
+Szene mit vier Drehknopf-Stufen. Nach LUKE\_ERKANNT dreht Max den Knopf einmal durch alle vier Kanäle; der Spieler klickt jeden Kanal selbst an (Reihenfolge frei). Auf jedem Kanal winkt jemand kurz durch den Bildschirm, nur Zeldina (Kanal 3) und, mit Schalter FREUND\_0815, Modell 08/15 (Kanal 42) kommen heraus. Die Kanalwahl bleibt offen, bis alle vier Kanäle angeklickt sind; dann fasst Zeldina zusammen (0300 oder 0310), und Abschnitt 7 beginnt. Die Gesprächsoptionen 0320 bis 0360 bleiben in Abschnitt 7 wählbar.
 
 | ID | Sprecher | Text | Regie |
 | --- | --- | --- | --- |
@@ -331,7 +342,7 @@ Szene mit vier Drehknopf-Stufen. Nach LUKE\_ERKANNT dreht Max den Knopf einmal d
 
 ## 7. Finale: Das letzte Rätsel (FI\_RAET)
 
-Vier Schritte, die in jeder Reihenfolge begonnen, aber nur in einer beendet werden können. (A) Zeldina hebelt den Riegel der Luke auf; die Luke bleibt trotzdem zu, weil der Teig-Druck sie von innen festhält (Druckmesser). (B) Die Ofentür muss gehalten werden, bevor die Maschine stoppt: Modell 08/15 hält sie (FREUND\_0815), sonst klemmt Max den Kochlöffel aus dem Pflichtfach hinein. (C) Die Zündkapsel: Opa hat sie vor Schreck fallen lassen, die Zelle ist herausgesprungen, beides liegt unter dem Ohrensessel; die Zelle so weit hinten, dass nur Pixel sie holen kann (Figurenwechsel). (D) Die rote Taste: Fernbedienung auf den Empfänger, Opa brüllt, Max drückt. Stoppt Max die Maschine vor (B), platzt der Teig heraus, kein Scheitern, nur ein Gag, und der Druck baut sich wieder auf. Fehlversuche mit eigener Zeile stehen am Ende der Tabelle. Hinweise in Abschnitt 7b.
+Vier Schritte, die in jeder Reihenfolge begonnen, aber nur in einer beendet werden können. (A) Zeldina hebelt den Riegel der Luke auf; die Luke bleibt trotzdem zu, weil der Teig-Druck sie von innen festhält (Druckmesser). (B) Die Ofentür muss gehalten werden, bevor die Maschine stoppt: Modell 08/15 hält sie (FREUND\_0815), sonst klemmt Max den Kochlöffel aus dem Pflichtfach hinein. (C) Die Zündkapsel: Opa hat sie vor Schreck fallen lassen, die Zelle ist herausgesprungen, beides liegt unter dem Ohrensessel; die Zelle so weit hinten, dass nur Pixel sie holen kann (Figurenwechsel). (D) Die rote Taste: Fernbedienung auf den Empfänger, Opa brüllt, Max drückt. Stoppt Max die Maschine vor (B), platzt der Teig heraus, kein Scheitern, nur ein Gag, und der Druck baut sich wieder auf. Das Ende (D) braucht B und C; A ist dafür nicht zwingend, weil beim Stopp auch die Sicherheitsverriegelung zurückfährt, aber Zeldinas Hebeln zeigt, dass der Druck das eigentliche Problem ist. Fehlversuche mit eigener Zeile stehen am Ende der Tabelle. Hinweise in Abschnitt 7b.
 
 | ID | Sprecher | Text | Auslöser |
 | --- | --- | --- | --- |
@@ -434,7 +445,7 @@ Szene. Die Maschine fährt herunter, die Nadel sinkt, Dampf zieht ab. Die Ofent�
 | FI\_AUFL\_MAX\_0170 | Max | Und die Goldene Fernbedienung ist … |  |
 | FI\_AUFL\_OPA\_0180 | Opa | Meine. Die ich seit Wochen suche. Ja. |  |
 | FI\_AUFL\_NAR\_0190 | – | Niemand sagt etwas. Zeldina sieht die Decke an, als prüfe sie Feuchtigkeit. | Pause |
-| FI\_AUFL\_MAX\_0200 | Max | Ich war in vier Welten. Ich habe einen Troll ins Fußbad gestellt, einen Pharao zu einer Entscheidung gebracht, eine KI in den Wahnsinn geredet und einen Fernsehchef vom Sofa geholt. // Für einen Einkaufszettel. |  |
+| FI\_AUFL\_MAX\_0200 | Max | Ich war in vier Welten. Ich habe einen Troll ins Fußbad gestellt, einen Pharao zu einer Entscheidung gebracht … eine KI in den Wahnsinn geredet und einen Fernsehchef vom Sofa geholt. // Für einen Einkaufszettel. |  |
 | FI\_AUFL\_OPA\_0210 | Opa | Für einen Kuchen. Das ist etwas anderes. |  |
 | FI\_AUFL\_MAX\_0220 | Max | Und die Fernbedienung? Du hast mich im Prolog gefragt, ob ich sie gesehen habe. |  |
 | FI\_AUFL\_OPA\_0230 | Opa | Ich war schon mal drin. Im Zapp-O-Mat. Einmal. Zum Testen. // Auf Kanal 999 ist sie mir aus der Tasche gefallen, direkt in Zappmanns Studio. Und ich wollte nicht zugeben, wo sie liegt. Vor dem Kater schon gar nicht. | sieht Pixel nicht an |
@@ -465,7 +476,7 @@ Szene. Die Maschine fährt herunter, die Nadel sinkt, Dampf zieht ab. Die Ofent�
 | FI\_AUFL\_OMA\_0480 | Oma | Endlich mal einer, der putzt. | nur FREUND\_0815 |
 | FI\_AUFL\_OMA\_0490 | Oma | Max. Du stehst gerade. Was ist passiert? | zu Max |
 | FI\_AUFL\_MAX\_0500 | Max | Lange Geschichte, Oma. Vier Staffeln. |  |
-| FI\_AUFL\_MAX\_0510 | Max | Oma. Die sind … von einer alten Dame, die alles vorher weiß. Alles Gute zum Geburtstag. | Omas Kekse (Hundekuchen) auf Oma; nur KEKSE\_DABEI |
+| FI\_AUFL\_MAX\_0510 | Max | Oma. Die sind … von einer alten Dame, die alles vorher weiß. Alles Gute zum Geburtstag. | automatisch nach 0500, nur KEKSE\_DABEI (Tüte im Inventar): Max überreicht die Tüte |
 | FI\_AUFL\_NAR\_0520 | – | Oma nimmt einen Hundekuchen, beißt ab, kaut. Pixel macht sein entsetztes Gesicht. | nur KEKSE\_DABEI; Mimik Pixel entsetzt |
 | FI\_AUFL\_OMA\_0530 | Oma | Knusprig. Wie von Mutti. | nur KEKSE\_DABEI |
 | FI\_AUFL\_PIX\_0540 | Pixel | Ich werde das nie verwinden. Ich sagte es. Jetzt gilt es doppelt. | nur KEKSE\_DABEI |
@@ -502,7 +513,7 @@ Szene mit kurzer freier Phase. Wohnzimmer, Variante Geburtstag: Girlande, Luftba
 | FI\_WOHN\_NAR\_0220 | – | Die Tür geht auf. Max' Mutter kommt herein, Jacke noch an, Schlüssel in der Hand. Sie sieht einen Roboter beim Spülen, eine Prinzessin mit Kuchen, einen Kater auf dem Schrank. Sie atmet einmal durch. | Mutter betritt das Wohnzimmer; Roboter nur FREUND\_0815 |
 | FI\_WOHN\_MUT\_0230 | Mutter | Guten Abend. Alles Gute, Mama. | küsst Oma auf die Wange, sieht sich nicht weiter um |
 | FI\_WOHN\_MUT\_0240 | Mutter | Ich frage nicht. Ich hatte Spätschicht. Ich frage morgen. | zu Max |
-| FI\_WOHN\_NAR\_0250 | – | Sie hebt einen zerknitterten Zettel vom Couchtisch auf, direkt neben der Fernbedienung. | Zettel, Nahansicht optional |
+| FI\_WOHN\_NAR\_0250 | – | Sie hebt einen zerknitterten Zettel vom Couchtisch auf, direkt neben der Fernbedienung. | Zettel als Sprite, keine Nahansicht; die Mutter liest vor |
 | FI\_WOHN\_MUT\_0260 | Mutter | Konrad, das ist deine Einkaufsliste. Du hast nichts davon gekauft, oder? | Animation Liste lesen |
 | FI\_WOHN\_MUT\_0270 | Mutter | Eier. Mehl. Batterien. Fernbedienung finden. // Und Milch. Wo ist die Milch? | liest vor |
 | FI\_WOHN\_NAR\_0280 | – | Stille. Pixel lässt sich vom Schrank in Richtung Sofa fallen. Opa zieht einen zweiten Zettel aus der Strickjacke und hält ihn Max hin. Darauf steht etwas mit vielen Zeichen. | Opa hält das WLAN-Passwort hin |
@@ -522,7 +533,7 @@ Szene mit kurzer freier Phase. Wohnzimmer, Variante Geburtstag: Girlande, Luftba
 
 ## 10. Abspann-Szene und Abspann (FI\_ABSP, FI\_SUPM)
 
-Szene. Auf dem Weg zur Tür kommt Max am Zapp-O-Mat vorbei und dreht aus Gewohnheit am Knopf. Dann der Supermarkt-Eingang in der Dämmerung mit zwei Ansehen-Zeilen und dem letzten Schritt durch die Tür. Danach der Abspann: fünf Geburtstagsfotos mit Bildunterschriften, während Troll Waldemar seine Musical-Nummer singt (Text ist Entwurf; laut Audio-Tab schreibt der Autor den endgültigen Text). Nach dem Abspann ein letzter Satz von Pixel. Foto 4 hat zwei Fassungen nach dem Goblin-Weg.
+Szene. Auf dem Weg zur Tür kommt Max am Zapp-O-Mat vorbei und dreht aus Gewohnheit am Knopf. Dann der Supermarkt-Eingang am späten Abend mit zwei Ansehen-Zeilen und dem letzten Schritt durch die Tür. Danach der Abspann: fünf Geburtstagsfotos mit Bildunterschriften, während Troll Waldemar seine Musical-Nummer singt (Text ist Entwurf; laut `04-audio.md` schreibt der Autor den endgültigen Text). Nach dem Abspann ein letzter Satz von Pixel. Foto 4 hat zwei Fassungen nach dem Goblin-Weg.
 
 | ID | Sprecher | Text | Regie |
 | --- | --- | --- | --- |
@@ -530,16 +541,16 @@ Szene. Auf dem Weg zur Tür kommt Max am Zapp-O-Mat vorbei und dreht aus Gewohnh
 | FI\_ABSP\_TOA\_0020 | Toadi | Tut mir leid, Max, aber deine Milch ist in einem anderen Supermarkt. | auf dem Bildschirm, Pilzhut schief |
 | FI\_ABSP\_MAX\_0030 | Max | Natürlich ist sie das. | schaltet aus, geht |
 | FI\_ABSP\_PIX\_0040 | Pixel | Das ist ein Cliffhanger. Ich hasse Cliffhanger. Ich hasse sie fast so sehr wie Zeitreisen. | vom Teppich, zum Spieler |
-| FI\_SUPM\_NAR\_0050 | – | Schnitt. Supermarkt-Eingang in der Dämmerung. Max steht vor der Glastür, Hände nicht in der Tasche. | Hintergrund Supermarkt |
+| FI\_SUPM\_NAR\_0050 | – | Schnitt. Supermarkt-Eingang am späten Abend. Max steht vor der Glastür, Hände nicht in der Tasche. | Hintergrund Supermarkt |
 | FI\_SUPM\_MAX\_0060 | Max | Ein Zeichen. Ein sehr deutliches Zeichen. | Ansehen: Aufsteller mit Milch-Sonderangebot |
 | FI\_SUPM\_MAX\_0070 | Max | Die letzte Quest. Ganz ohne Drachen. | Ansehen: Milchregal durch die Tür |
 | FI\_SUPM\_MAX\_0080 | Max | Kein Rauschen. Kein Kanal. Nur eine Tür, die von selbst aufgeht. Hab ich auch noch nie gemacht. | Benutzen: Automatische Tür |
 | FI\_SUPM\_NAR\_0090 | – | Die Tür gleitet auf. Max geht hinein. Das Licht aus dem Laden fällt auf den Gehweg. Schwarzblende. | Ende, Titelthema setzt ein, Jingle Welt geschafft |
-| FI\_ABSP\_NAR\_0100 | – | Foto 1: Alle um den Couchtisch, der Kuchen angeschnitten, Oma mit Gabel, Opa mit Mehl im Haar. Unterschrift: „Der Kuchen war keine Lüge.“ | Abspann-Foto 1 |
+| FI\_ABSP\_NAR\_0100 | – | Foto 1: Alle um den Couchtisch, der Kuchen angeschnitten, Oma mit Gabel, Opa mit Mehl im Haar. Im Zapp-O-Mat winken Kalle und Flimmer. Unterschrift: „Der Kuchen war keine Lüge.“ | Abspann-Foto 1 |
 | FI\_ABSP\_NAR\_0110 | – | Foto 2: Zeldina misst mit Moderworts Zauberstab die Wohnzimmerwand aus. Oma hält das andere Ende. Unterschrift: „Der Dachboden wäre frei.“ | Abspann-Foto 2 |
 | FI\_ABSP\_NAR\_0120 | – | Foto 3: Archimedes in Opas Badewanne, Ramses zwischen zwei Kuchenstücken, unentschlossen. Hermes kommt zur Tür herein, zu spät. Unterschrift: „Heureka. Schon wieder.“ | Abspann-Foto 3 |
 | FI\_ABSP\_NAR\_0130 | – | Foto 4: Die Goblins singen im Treppenhaus, Schilder mit Silben in der Hand, Opa dirigiert mit dem Kochlöffel. Unterschrift: „Knuddel-Puddi, hau den Teig.“ | Abspann-Foto 4; nur Goblin-Weg A |
-| FI\_ABSP\_NAR\_0140 | – | Foto 4: Grimmzahn mit Schlüsselbund inspiziert Opas Backofen und beschwert sich bei Modell 08/15 oder, ohne ihn, bei Pixel. Unterschrift: „Hausmeister unter sich.“ | Abspann-Foto 4; nur Goblin-Weg B |
+| FI\_ABSP\_NAR\_0140 | – | Foto 4: Grimmzahn mit Schlüsselbund inspiziert Opas Backofen. Er beschwert sich bei Modell 08/15 oder, ohne ihn, bei Pixel. Unterschrift: „Hausmeister unter sich.“ | Abspann-Foto 4; nur Goblin-Weg B |
 | FI\_ABSP\_NAR\_0150 | – | Foto 5: Max' leerer Platz auf dem Sofa. Pixel liegt darauf, ein Auge offen, und sieht zur Tür. Unterschrift: „Er holt sie.“ | Abspann-Foto 5 |
 | FI\_ABSP\_WAL\_0160 | Waldemar | Ich stand so lang unter der Brücke, hab Regeln gezählt und Ziegen gezählt … // Doch heute, ihr Leute, heut hab ich gewählt: Ich singe! Und niemand fällt ins Wasser! | Musical-Nummer, Strophe (Entwurf); Untertitel |
 | FI\_ABSP\_WAL\_0170 | Waldemar | Ein Ei und ein Mehl und ein Knopf und ein Licht, // vier Welten, ein Kuchen, und Milch gab es nicht! | Refrain (Entwurf) |

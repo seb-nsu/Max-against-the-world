@@ -1,0 +1,632 @@
+abschnitt: welt-4
+name: Kanal 999
+skript_praefix: W4
+
+# Ausgänge: Umschalten gilt als Weg zwischen den Haupträumen der Sender
+# (gluecksrad, sitcom_kueche, savanne, friedhof, kapitolis, werbespot_set, empfang).
+# Werbespot-Set und Empfang erreicht Max per Programmzeitschrift bzw. Sendersuchlauf,
+# Mitternachts-TV zeigt außerhalb von Mitternacht die Pausentafel. Im Studio geht Umschalten nicht.
+
+raeume:
+  - id: testbild
+    name: Testbild
+    skript_code: [TEST]
+    groesse: 320x180
+    ausgaenge: [gluecksrad]            # nach R1 wischt das Bild ins Studio
+    erreichbar_ab: start
+    musik: w4_testbild
+    zustaende: [Balken durcheinander, Balken geordnet, Graustufen]
+  - id: rauschen
+    name: Rauschen zwischen den Sendern
+    skript_code: [RAU]
+    groesse: 320x180
+    ausgaenge: [gluecksrad, sitcom_kueche, savanne, friedhof, kapitolis, empfang]   # nur Pixel, kriecht in die Sender
+    erreichbar_ab: R1
+    musik: w4_testbild
+  - id: gluecksrad
+    name: Glücksrad-Studio
+    skript_code: [GLUE, BONU]
+    groesse: 320x180
+    ausgaenge: [testbild, sitcom_kueche, savanne, friedhof, kapitolis, werbespot_set, empfang]   # Umschalten
+    erreichbar_ab: R1
+    musik: w4_gluecksrad
+  - id: sitcom_kueche
+    name: Sitcom-Küche
+    skript_code: [SIT]
+    groesse: 320x180
+    ausgaenge: [gluecksrad, savanne, friedhof, kapitolis, werbespot_set, empfang]   # Umschalten
+    erreichbar_ab: R2
+    musik: w4_sitcom
+    zustaende: [Keksdose ganz, Scherben am Boden, Küchentür weg]
+  - id: savanne
+    name: Savanne
+    skript_code: [SAV, VERH]
+    groesse: 640x180
+    ausgaenge: [gluecksrad, sitcom_kueche, friedhof, kapitolis, werbespot_set, empfang]   # Umschalten
+    erreichbar_ab: R2
+    musik: w4_savanne
+  - id: friedhof
+    name: Musikvideo-Friedhof
+    skript_code: [FRIE]
+    groesse: 320x180
+    ausgaenge: [spukhaus_keller, gluecksrad, sitcom_kueche, savanne, kapitolis, werbespot_set, empfang]   # Keller zu Fuß nach R5, sonst Umschalten
+    erreichbar_ab: R2                  # nur um Mitternacht über die Programmzeitschrift, sonst Pausentafel
+    musik: w4_mitternacht    # Musikvideo mit Rhythmus-Minispiel
+    zustaende: [Gräber zu mit Händen, Gräber offen]
+  - id: spukhaus_keller
+    name: Spukhaus, Keller
+    skript_code: [KELL]
+    groesse: 320x180
+    ausgaenge: [friedhof, spukhaus_halle]   # Grabplatte zum Friedhof; Sitcom-Tür nach oben ab R6
+    erreichbar_ab: R5
+    musik: w4_spukhaus
+    zustaende: [Tür zu, Sitcom-Tür eingesetzt]
+  - id: spukhaus_halle
+    name: Spukhaus, Halle
+    skript_code: [HALL]
+    groesse: 320x180
+    ausgaenge: [spukhaus_keller]
+    erreichbar_ab: R6
+    musik: w4_spukhaus
+    zustaende: [Lichterkette aus, Lichterkette blinkt]
+  - id: kapitolis
+    name: Kapitolis
+    skript_code: [KAPI]
+    groesse: 320x180
+    ausgaenge: [fondue_fabrik, gluecksrad, sitcom_kueche, savanne, friedhof, werbespot_set, empfang]   # Fabrik zu Fuß, sonst Umschalten
+    erreichbar_ab: R2
+    musik: w4_comic
+    zustaende: [Amboss auf der Straße, Amboss weg]
+  - id: fondue_fabrik
+    name: Fondue-Fabrik
+    skript_code: [FABR]
+    groesse: 320x180
+    ausgaenge: [kapitolis]
+    erreichbar_ab: R2
+    musik: w4_comic
+    zustaende: [Bottich zu, Bottich offen]   # Suchscheinwerfer aus bzw. an
+  - id: werbespot_set
+    name: Werbespot-Set
+    skript_code: [WERB]
+    groesse: 320x180
+    ausgaenge: [gluecksrad, sitcom_kueche, savanne, friedhof, kapitolis, empfang]   # hinein über die Programmzeitschrift
+    erreichbar_ab: R2
+    musik: lied_werbepause   # Dr. Werbepauses Jingle läuft im Spot, bis Stumm ihn abbricht (R11b)
+    zustaende: [Couch-Magnet auf dem Podest, Podest leer]
+  - id: empfang
+    name: Empfang
+    skript_code: [EMPF]
+    groesse: 320x180
+    ausgaenge: [kellerarchiv, zappmanns_studio, gluecksrad, sitcom_kueche, savanne, friedhof, kapitolis, werbespot_set]   # Aufzug nur hinauf (R12); hinaus per Umschalten
+    erreichbar_ab: R11                 # Sendersuchlauf, danach Kanal 999 in der Programmzeitschrift
+    musik: w4_zentrale
+  - id: kellerarchiv
+    name: Kellerarchiv
+    skript_code: [ARCH]
+    groesse: 320x180
+    ausgaenge: [empfang]               # Servicetür
+    erreichbar_ab: R11
+    musik: w4_zentrale
+  - id: zappmanns_studio
+    name: Zappmanns Studio
+    skript_code: [STUD]
+    groesse: 320x180
+    ausgaenge: [empfang]               # Aufzug; zurück erst nach R13, Umschalten gesperrt
+    erreichbar_ab: R12
+    musik: w4_zappmann
+    zustaende: [Quote hoch, Quote eingebrochen]
+# Weitere Bilder ohne begehbaren Raum (Grafik Welt 4): Zappmanns erste Kindersendung (Bild-in-Bild in R13),
+# Max auf der Couch (Albtraum in R13), Opa vor flackernden Lampen (Prolog-Wohnzimmer, R7), Pausentafel Mitternachts-TV.
+
+sonder_codes: [FERN, TAST, PIXM, ZURF, HINT]   # Fernbedienung/Programmzeitschrift, Tasten quer, Pixel auf Mensch, Zurufe, Hinweise
+sonder_sprecher: [NAR]                          # Szenen- und Tonzeilen ohne Sprecher
+
+figuren:
+  - id: max
+    name: Max
+    kuerzel: MAX
+    raum: [testbild, gluecksrad, sitcom_kueche, savanne, friedhof, spukhaus_keller, spukhaus_halle, kapitolis, fondue_fabrik, werbespot_set, empfang, kellerarchiv, zappmanns_studio]
+    groesse_px: 56                     # ab R10 als Käsemann (gleiche Größe)
+    spielbar: true
+  - id: pixel
+    name: Pixel
+    kuerzel: PIX
+    raum: [rauschen, testbild, savanne, werbespot_set, zappmanns_studio]   # meist im Rauschen, kann in jeden Sender fallen
+    groesse_px: 18
+    spielbar: true
+  - id: opa
+    name: Opa                          # Sprecher-Spalte: „Opa (Lichterkette)“
+    kuerzel: OPA
+    raum: spukhaus_halle               # spricht über die Lichterkette; Bild: Prolog-Wohnzimmer
+    groesse_px: 44                     # sitzend, Grafik Prolog und Finale
+    spielbar: false
+  - id: flimmer
+    name: Flimmer
+    kuerzel: FLI
+    raum: [testbild, rauschen]         # spricht in R5 aus der Leitung auf dem Friedhof
+    groesse_px: 16
+    spielbar: false
+  - id: nachrichtensprecher
+    name: Nachrichtensprecher
+    kuerzel: NSP
+    raum: rauschen                     # körperlos, Radio-Moment
+    groesse_px: 0
+    spielbar: false
+  - id: gerd_glueck
+    name: Gerd Glück
+    kuerzel: GER
+    raum: gluecksrad
+    groesse_px: 60
+    spielbar: false
+  - id: troedel_experte
+    name: Trödel-Experte
+    kuerzel: EXP
+    raum: gluecksrad
+    groesse_px: 58
+    spielbar: false
+  - id: sitcom_vater
+    name: Sitcom-Vater
+    kuerzel: VAT
+    raum: [sitcom_kueche, spukhaus_keller]   # nach R6 sitzt er im Keller
+    groesse_px: 58
+    spielbar: false
+  - id: sitcom_mutter
+    name: Sitcom-Mutter
+    kuerzel: SMU
+    raum: sitcom_kueche                # in R6 als Stimme in der Bild-in-Bild-Szene
+    groesse_px: 58
+    spielbar: false
+  - id: sitcom_sohn
+    name: Sitcom-Sohn
+    kuerzel: SOH
+    raum: sitcom_kueche
+    groesse_px: 56
+    spielbar: false
+  - id: kommissar
+    name: Kommissar
+    kuerzel: KOM
+    raum: [savanne, sitcom_kueche]     # in der Küche nur als Gast in R3
+    groesse_px: 58
+    spielbar: false
+  - id: erzaehler
+    name: Erzähler
+    kuerzel: ERZ
+    raum: savanne
+    groesse_px: 58                     # Stehgröße, hockt
+    spielbar: false
+  - id: loewe
+    name: Löwe
+    kuerzel: LOE
+    raum: savanne
+    groesse_px: 60                     # Länge, liegend
+    spielbar: false
+  - id: hyaene
+    name: Hyäne
+    kuerzel: HYA
+    raum: savanne
+    groesse_px: 34
+    spielbar: false
+  - id: gepard
+    name: Gepard
+    kuerzel: GEP
+    raum: savanne
+    groesse_px: 30
+    spielbar: false
+  - id: geier
+    name: Geier
+    kuerzel: GEI
+    raum: savanne
+    groesse_px: 30
+    spielbar: false
+  - id: nashorn
+    name: Nashorn
+    kuerzel: NAS
+    raum: savanne
+    groesse_px: 60                     # Länge
+    spielbar: false
+  - id: flamingos
+    name: Flamingos
+    kuerzel: FLA
+    raum: savanne
+    groesse_px: 24                     # dreimal
+    spielbar: false
+  - id: zombie
+    name: Zombie
+    kuerzel: ZOM
+    raum: friedhof
+    groesse_px: 58                     # sechsmal; im Grab 30
+    spielbar: false
+  - id: geist
+    name: Geist
+    kuerzel: GST
+    raum: spukhaus_keller
+    groesse_px: 24                     # dreimal
+    spielbar: false
+  - id: fbi_agent
+    name: FBI-Agent
+    kuerzel: AGE
+    raum: spukhaus_halle
+    groesse_px: 60
+    spielbar: false
+  - id: super_siegfried
+    name: Super-Siegfried
+    kuerzel: SIE
+    raum: [kapitolis, fondue_fabrik, werbespot_set]
+    groesse_px: 64
+    spielbar: false
+  - id: fledermann
+    name: Fledermann
+    kuerzel: FLE
+    raum: [kapitolis, fondue_fabrik, werbespot_set]
+    groesse_px: 58
+    spielbar: false
+  - id: wonder_wilma
+    name: Wonder-Wilma
+    kuerzel: WIL
+    raum: [kapitolis, fondue_fabrik, werbespot_set]
+    groesse_px: 58
+    spielbar: false
+  - id: fabrikarbeiter
+    name: Fabrikarbeiter
+    kuerzel: null                      # spricht nicht
+    raum: fondue_fabrik
+    groesse_px: 58
+    spielbar: false
+  - id: dr_werbepause
+    name: Dr. Werbepause
+    kuerzel: WER
+    raum: werbespot_set
+    groesse_px: 60
+    spielbar: false
+  - id: empfangsdame
+    name: Empfangsdame
+    kuerzel: EMP
+    raum: empfang
+    groesse_px: 58                     # Stehgröße, sitzt
+    spielbar: false
+  - id: sicherheitsmann
+    name: Sicherheitsmann
+    kuerzel: SIC
+    raum: empfang
+    groesse_px: 64                     # zweimal
+    spielbar: false
+  - id: zappmann
+    name: Zappmann
+    kuerzel: ZAP
+    raum: zappmanns_studio
+    groesse_px: 62
+    spielbar: false
+  - id: junger_zappmann
+    name: Junger Zappmann
+    kuerzel: null                      # nur im Archivband (Bild-in-Bild)
+    raum: zappmanns_studio
+    groesse_px: 56
+    spielbar: false
+  - id: wettkandidat
+    name: Wettkandidat
+    kuerzel: WET
+    raum: zappmanns_studio
+    groesse_px: 56
+    spielbar: false
+
+gegenstaende:
+  - id: billig_fernbedienung
+    name: Billig-Fernbedienung
+    herkunft: R2
+    zustaende: [eine Taste, sechs Tasten]   # Zwischenstände zeigt die Tasten-Leiste; Bild in grafik/00
+    verwendet_in: [R3, R13]            # Trägerin aller Tasten
+    reist_mit: false
+    nahansicht: false
+  - id: taste_umschalten
+    name: Taste Umschalten
+    herkunft: R2                       # sitzt schon auf der Fernbedienung
+    zustaende: [normal]
+    verwendet_in: [R3, R4a, R4d, R9, R10a]   # Sprünge zwischen Sendern
+    reist_mit: false
+    nahansicht: false
+  - id: taste_pause
+    name: Taste Pause
+    herkunft: R3
+    zustaende: [normal]
+    verwendet_in: [R12b, R13]
+    reist_mit: false
+    nahansicht: false
+  - id: taste_rueckspulen
+    name: Taste Rückspulen
+    herkunft: R4
+    zustaende: [normal]
+    verwendet_in: [R5b, R10c]
+    reist_mit: false
+    nahansicht: false
+  - id: taste_stumm
+    name: Taste Stumm
+    herkunft: R6
+    zustaende: [normal]
+    verwendet_in: [R11b, R13]
+    reist_mit: false
+    nahansicht: false
+  - id: taste_untertitel
+    name: Taste Untertitel
+    herkunft: R8
+    zustaende: [normal]
+    verwendet_in: [R12b, R13]
+    reist_mit: false
+    nahansicht: false
+  - id: taste_sendersuchlauf
+    name: Taste Sendersuchlauf
+    herkunft: R11                      # liegt unter den Comic-Panels, nach R11d nehmbar
+    zustaende: [normal]
+    verwendet_in: [R12a, R13]
+    reist_mit: false
+    nahansicht: false
+  - id: splitscreen_adapter
+    name: Splitscreen-Adapter
+    herkunft: R9
+    zustaende: [normal]
+    verwendet_in: [R6, R13]
+    reist_mit: false
+    nahansicht: false
+  - id: programmzeitschrift
+    name: Programmzeitschrift
+    herkunft: R2
+    zustaende: [normal]
+    verwendet_in: [R4a, R4, R5a, R9, R11a]
+    reist_mit: false
+    nahansicht: true                   # eigene Doppelseite, Aufbau in den Spielsystemen
+  - id: bananenschale
+    name: Bananenschale
+    herkunft: sitcom_kueche            # frei vor der Theke
+    zustaende: [frisch, faulig, Stinkbombe]
+    verwendet_in: [R11c]
+    reist_mit: false
+    nahansicht: false
+  - id: fondue_kaese
+    name: Fondue-Käse
+    herkunft: sitcom_kueche            # aus dem Fondue-Topf
+    zustaende: [normal, leuchtend, Wunderkäse]
+    verwendet_in: [R10a, R10c]
+    reist_mit: false
+    nahansicht: false
+  - id: bettlaken
+    name: Bettlaken
+    herkunft: R10b                     # vom Fledermann; mit Pixel kombiniert heißt es Superhelden-Anzug
+    zustaende: [Bettlaken, Superhelden-Anzug]
+    verwendet_in: [R10c]
+    reist_mit: false
+    nahansicht: false
+  - id: drehbuch
+    name: Drehbuch des Erzählers
+    herkunft: erzaehler                # Pixel stibitzt es dem Erzähler
+    zustaende: [normal]
+    verwendet_in: [R4c]
+    reist_mit: false
+    nahansicht: false
+  - id: archivband
+    name: Archivband
+    herkunft: kellerarchiv             # „Zappis Puppenstube, 1977“, nehmbar erst nach R7
+    zustaende: [normal]
+    verwendet_in: [R12b, R13]
+    reist_mit: false
+    nahansicht: false
+  - id: amboss
+    name: Amboss
+    herkunft: kapitolis
+    zustaende: [normal]
+    verwendet_in: []                   # nur Gags
+    ohne_verwendung: nur Gag
+    reist_mit: false
+    nahansicht: false
+  - id: lichtroehre_deluxe
+    name: Lichtröhre Deluxe
+    herkunft: R2                       # Trostpreis
+    zustaende: [normal]
+    verwendet_in: []                   # nur Gags
+    ohne_verwendung: nur Gag
+    reist_mit: false
+    nahansicht: false
+  - id: goldene_fernbedienung
+    name: Goldene Fernbedienung
+    herkunft: R13
+    zustaende: [normal]
+    verwendet_in: []                   # Artefakt, weiter im Finale
+    reist_mit: true
+    nahansicht: false
+
+raetsel:
+  - id: R1
+    name: Raus aus dem Testbild
+    raum: testbild
+    benoetigt: []
+    ergibt: []
+    schalter: [W4_R01_GELOEST]
+    optional: false
+  - id: R2
+    name: Glücksrad-Shopping
+    raum: gluecksrad
+    benoetigt: [R1]
+    ergibt: [billig_fernbedienung, taste_umschalten, programmzeitschrift, lichtroehre_deluxe]
+    schalter: [W4_R02_GELOEST]
+    optional: false
+  - id: R3
+    name: Besuch in der Sitcom
+    raum: sitcom_kueche
+    benoetigt: [R2, billig_fernbedienung, taste_umschalten]   # Kommissar aus der Savanne als Gast
+    ergibt: [taste_pause]
+    schalter: [W4_R03_GELOEST]
+    optional: false
+  - id: R4a
+    name: Das Alibi der Hyäne prüfen
+    raum: sitcom_kueche                # Programmzeitschrift plus Bestätigung der Mutter
+    benoetigt: [R2, programmzeitschrift, taste_umschalten]
+    ergibt: []
+    schalter: [W4_R04_A_GELOEST]
+    optional: false
+  - id: R4b
+    name: Das Alibi des Geparden prüfen
+    raum: savanne
+    benoetigt: [R2]
+    ergibt: []
+    schalter: [W4_R04_B_GELOEST]
+    optional: false
+  - id: R4c
+    name: Das Alibi des Nashorns prüfen
+    raum: savanne
+    benoetigt: [R2, drehbuch]
+    ergibt: []
+    schalter: [W4_R04_C_GELOEST]
+    optional: false
+  - id: R4d
+    name: Das Alibi des Geiers prüfen
+    raum: gluecksrad
+    benoetigt: [R2, taste_umschalten]
+    ergibt: []
+    schalter: [W4_R04_D_GELOEST]
+    optional: false
+  - id: R4
+    name: Tiertort Savanne
+    raum: savanne
+    benoetigt: [R4a, R4b, R4c, R4d, programmzeitschrift]
+    ergibt: [taste_rueckspulen]
+    schalter: [W4_R04_GELOEST]
+    optional: false
+  - id: R5a
+    name: Zur Mitternachtssendung kommen
+    raum: friedhof
+    benoetigt: [programmzeitschrift]
+    ergibt: []
+    schalter: [W4_R05_A_GELOEST]
+    optional: false
+  - id: R5b
+    name: An den Zombies vorbei
+    raum: friedhof
+    benoetigt: [R5a, taste_rueckspulen]
+    ergibt: []
+    schalter: [W4_R05_B_GELOEST]
+    optional: false
+  - id: R5
+    name: Das Zombie-Video
+    raum: friedhof
+    benoetigt: [R5a, R5b]
+    ergibt: []
+    schalter: [W4_R05_GELOEST]
+    optional: false
+  - id: R6
+    name: Die Genre-Tür
+    raum: spukhaus_keller
+    benoetigt: [R5, splitscreen_adapter]   # Küchentür aus der Sitcom per Bild-in-Bild
+    ergibt: [taste_stumm]
+    schalter: [W4_R06_GELOEST]
+    optional: false
+  - id: R7
+    name: Die Lichterkette
+    raum: spukhaus_halle
+    benoetigt: [R6]
+    ergibt: []                         # Notizbuch: Zappmanns erste Sendung, VORHEIZEN
+    schalter: [W4_R07_GELOEST]
+    optional: false
+  - id: R8
+    name: Die Wahrheit ist irgendwo da draußen
+    raum: spukhaus_halle
+    benoetigt: [R6]
+    benoetigt_eins_von: [R7, sonnenbrille]   # Sonnenbrille aus Welt 3 als Abkürzung
+    ergibt: [taste_untertitel]
+    schalter: [W4_R08_GELOEST]
+    optional: false
+  - id: R9
+    name: Der Hauptgewinn
+    raum: gluecksrad
+    benoetigt: [R3, R4, R11a, programmzeitschrift, taste_umschalten]
+    ergibt: [splitscreen_adapter]
+    schalter: [W4_R09_GELOEST]
+    optional: false
+  - id: R10a
+    name: Den Käse zum Wunderkäse machen
+    raum: kapitolis                    # Käse erst auf Mitternachts-TV, dann im Comic-Kanal
+    benoetigt: [fondue_kaese, taste_umschalten]
+    ergibt: []                         # fondue_kaese im Zustand Wunderkäse
+    schalter: [W4_R10_A_GELOEST]
+    optional: false
+  - id: R10b
+    name: Einen Superhelden-Anzug besorgen
+    raum: kapitolis
+    benoetigt: [R2]
+    ergibt: [bettlaken]                # mit Pixel kombiniert: Superhelden-Anzug
+    schalter: [W4_R10_B_GELOEST]
+    optional: false
+  - id: R10c
+    name: Den Unfall in der Fondue-Fabrik erwischen
+    raum: fondue_fabrik
+    benoetigt: [R10a, R10b, fondue_kaese, bettlaken, taste_rueckspulen]
+    ergibt: []
+    schalter: [W4_R10_C_GELOEST]
+    optional: false
+  - id: R10
+    name: Die Entstehung von Käsemann
+    raum: fondue_fabrik
+    benoetigt: [R10a, R10b, R10c]
+    ergibt: []                         # Max ist Käsemann
+    schalter: [W4_R10_GELOEST]
+    optional: false
+  - id: R11a
+    name: Dr. Werbepauses Spot finden
+    raum: werbespot_set
+    benoetigt: [programmzeitschrift]
+    ergibt: []
+    schalter: [W4_R11_A_GELOEST]
+    optional: false
+  - id: R11b
+    name: Den Countdown brechen
+    raum: werbespot_set
+    benoetigt: [R11a, taste_stumm]
+    ergibt: []
+    schalter: [W4_R11_B_GELOEST]
+    optional: false
+  - id: R11c
+    name: Dr. Werbepause vertreiben
+    raum: werbespot_set
+    benoetigt: [R11b, R10, bananenschale]   # Bananenschale als Stinkbombe
+    ergibt: []
+    schalter: [W4_R11_C_GELOEST]
+    optional: false
+  - id: R11d
+    name: Die Comic-Panels ordnen
+    raum: werbespot_set
+    benoetigt: [R11c]
+    ergibt: []
+    schalter: [W4_R11_D_GELOEST]
+    optional: false
+  - id: R11
+    name: Dr. Werbepause
+    raum: werbespot_set
+    benoetigt: [R11a, R11b, R11c, R11d]
+    ergibt: [taste_sendersuchlauf]
+    schalter: [W4_R11_GELOEST]
+    optional: false
+  - id: R12a
+    name: Den versteckten Kanal finden
+    raum: empfang
+    benoetigt: [taste_sendersuchlauf]
+    ergibt: []
+    schalter: [W4_R12_A_GELOEST]
+    optional: false
+  - id: R12b
+    name: Mit dem Aufzug nach oben
+    raum: empfang
+    benoetigt: [R12a, R7, taste_untertitel, taste_pause, archivband]
+    ergibt: []
+    schalter: [W4_R12_B_GELOEST]
+    optional: false
+  - id: R12
+    name: Die Senderzentrale
+    raum: empfang
+    benoetigt: [R12a, R12b]
+    ergibt: []
+    schalter: [W4_R12_GELOEST]
+    optional: false
+  - id: R13
+    name: Intendant Zappmann
+    raum: zappmanns_studio
+    benoetigt: [R7, billig_fernbedienung, taste_pause, splitscreen_adapter, archivband, taste_stumm, taste_untertitel, taste_sendersuchlauf]
+    ergibt: [goldene_fernbedienung]
+    schalter: [W4_R13_GELOEST]
+    optional: false
