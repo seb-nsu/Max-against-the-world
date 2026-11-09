@@ -262,12 +262,9 @@ script = ExtResource("5_unoue")
 
 [node name="HoverText" type="Control" parent="." unique_id=1891106464 groups=["popochiu_gui_component"] instance=ExtResource("5_jeqvj")]
 layout_mode = 1
-anchors_preset = 12
-anchor_top = 1.0
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -19.0
-offset_bottom = -4.0
 grow_horizontal = 2
 grow_vertical = 0
 mouse_filter = 2
@@ -285,6 +282,7 @@ grow_vertical = 2
 mouse_filter = 2
 theme = ExtResource("1_jeul6")
 script = ExtResource("9_s50ci")
+wrap_width = 270.0
 
 [node name="DialogMenu" type="Control" parent="." unique_id=1001808863 groups=["popochiu_gui_component"] instance=ExtResource("7_b83v5")]
 visible = false

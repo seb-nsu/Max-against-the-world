@@ -3,8 +3,9 @@
 Godot 4.7.2 mit Popochiu 2.2.1 (Plugin in `addons/popochiu`, Lizenz dort in `LICENSE`).
 Auflösung 480×270 (vorläufig; Maße zentral in `tools/aufloesung.py`, Wechsel mit
 `python3 tools/aufloesung.py --umrechnen 480x270 640x360`), Pixelgrafik ohne Glättung, ganzzahlig
-skaliert. Die Popochiu-Oberfläche ist noch die alte Pixel-Fassung; die neue mit Nunito in voller
-Auflösung folgt (`docs/05-spielsysteme.md`, Schrift). Stand: Stufe 1
+skaliert. Text (Nunito) wird in voller Bildschirmauflösung gezeichnet (Stretch-Modus
+„canvas_items“ mit Pixel-Einrasten, `docs/05-spielsysteme.md`, Schrift). Bildschirmfotos aus dem
+laufenden Spiel: `tests/bildschirmfoto.gd` (Aufruf im Kopf der Datei, braucht xvfb-run). Stand: Stufe 1
 (Grundgerüst) und Graubox: Prolog und ganz Welt 1 (R1 bis R13, Rätsel 10 über Weg A oder B)
 sind mit Platzhaltergrafik durchspielbar, danach die Ankunft in Zwischenspiel 1 mit der Abgabe
 des Dracheneis. Reisetasche packen und Kanal 7 fehlen noch: der Drehknopf meldet dort „Ende der

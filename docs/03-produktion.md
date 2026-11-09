@@ -25,7 +25,7 @@ Diese Datei sammelt alle Absprachen zu Technik, Grafik und Audio an einer Stelle
 | Thema | Absprache |
 | --- | --- |
 | Version | Godot 4.7.2 (stabil, 18. August 2026) mit Popochiu 2.2.1 (18. Oktober 2026), geprüft am 9. November 2026. Popochiu 2.2 hat Godot 4.7 als Standardziel; Godot 4.8 ist noch Beta und kommt nicht in Frage. Während des Projekts nicht wechseln; nur Fehlerkorrekturen innerhalb von 4.7.x und 2.2.x, jeweils erst in einem eigenen Git-Zweig testen; Popochiu hat zwischen Minor-Versionen das GUI-Vorlagensystem geändert |
-| Pixel-Einstellungen | Viewport 480×270 (Text auf eigener Ebene in voller Auflösung, `05-spielsysteme.md`), Stretch-Modus „viewport“, ganzzahlige Skalierung, Texturfilter „Nearest“; richte ich beim Projektstart ein |
+| Pixel-Einstellungen | Viewport 480×270, Stretch-Modus „canvas_items“ mit Pixel-Einrasten (Text in voller Auflösung, `05-spielsysteme.md`), ganzzahlige Skalierung, Texturfilter „Nearest“; richte ich beim Projektstart ein |
 | Aufbau | Ein Popochiu-Raum pro Szene; Hintergrund, Laufbereich, Hotspots, Props mit Zuständen, Regionen für Größenwechsel |
 | Mechaniken | Figurenwechsel (alle Welten), Zeitfähre (Welt 2), Code-Sicht und Ebenenwechsel (Welt 3), Fernbedienung und Genre-Zustände (Welt 4); alle auf einem gemeinsamen Zustandssystem (Objektzustände per Overlay umschalten, Code-Sicht und Fernbedienung auf derselben Grundlage), gebaut in Stufe 1 |
 | KI-Anbindung | Claude Code auf deinem PC plus Godot-MCP-Server: Coding-Solo (kostenlos) für den Anfang, GDAI MCP (19 $ einmalig) sobald Claude Screenshots braucht |
