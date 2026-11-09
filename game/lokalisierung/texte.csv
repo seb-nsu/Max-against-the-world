@@ -1,5 +1,58 @@
 keys,de,en
 UI_MENU_CONTINUE,Fortsetzen,Continue
+UI_RAUM_WOHNZIMMER,Wohnzimmer,Living room
+UI_RAUM_TREPPENHAUS,Treppenhaus,Stairwell
+UI_RAUM_DACHBODEN,Dachboden,Attic
+UI_OBJ_MAX,Max,Max
+UI_OBJ_PIXEL,Pixel,Pixel
+UI_OBJ_OPA,Opa,Grandpa
+UI_OBJ_FERNSEHER,Fernseher,Television
+UI_OBJ_FAMILIENFOTO,Familienfoto,Family photo
+UI_OBJ_TEETASSE,Teetasse,Teacup
+UI_OBJ_LEERER_PLATZ_AUF_DEM_COUCHTISCH,Leerer Platz auf dem Couchtisch,Empty spot on the coffee table
+UI_OBJ_SOFA,Sofa,Sofa
+UI_OBJ_HUT_AM_HAKEN,Hut am Haken,Hat on the hook
+UI_OBJ_FENSTER,Fenster,Window
+UI_OBJ_TREPPE,Treppe,Stairs
+UI_OBJ_ZAPP_O_MAT,Zapp-O-Mat 3000,Zap-O-Matic 3000
+UI_OBJ_DREHKNOPF,Drehknopf,Channel dial
+UI_OBJ_WERKZEUGKISTE,Werkzeugkiste,Toolbox
+UI_OBJ_WERKBANK,Werkbank,Workbench
+UI_OBJ_KLEIDERSCHRANK,Kleiderschrank,Wardrobe
+UI_OBJ_KALENDER,Kalender,Calendar
+UI_OBJ_OHRENSESSEL,Ohrensessel,Wingback chair
+UI_OBJ_DACHFENSTER,Dachfenster,Skylight
+UI_OBJ_POSTER,Poster,Posters
+UI_OBJ_AUSGESTOPFTER_FISCH,Ausgestopfter Fisch,Stuffed fish
+UI_OBJ_KOCHBUCH,Kochbuch,Cookbook
+UI_OBJ_TOASTER,Toaster,Toaster
+UI_OBJ_PLATTENSPIELER,Plattenspieler,Record player
+UI_OBJ_KISTE_MIT_FERNBEDIENUNGEN,Kiste mit Fernbedienungen,Box of remote controls
+UI_OBJ_OPAS_STAUBSAUGER_PROTOTYP,Opas Staubsauger-Prototyp,Grandpa's vacuum prototype
+UI_OBJ_BODENLUKE,Bodenluke,Floor hatch
+UI_OBJ_THUNFISCHDOSE,Thunfischdose,Tin of tuna
+UI_OBJ_DOSENOEFFNER,Dosenöffner,Can opener
+UI_OBJ_DRAHTKLEIDERBUEGEL,Drahtkleiderbügel,Wire coat hanger
+UI_OBJ_ANTENNE,Antenne,Antenna
+UI_OBJ_REISETASCHE,Opas Reisetasche,Grandpa's travel bag
+UI_OBJ_NOTIZBUCH,Notizbuch,Notebook
+UI_OBJ_OPAS_ZETTEL,Opas Zettel,Grandpa's note
+UI_ZIEL_P1,Der schlafende Kater,The sleeping cat
+UI_ZIEL_P2,Nur Rauschen,Just static
+UI_ZIEL_P3,Der richtige Kanal,The right channel
+UI_PFOTE,Hilfe-Pfote,Help paw
+UI_NOTIZBUCH_ZIELE,Ziele,Goals
+UI_NOTIZBUCH_REGELN,Regeln und Passwort-Teile,Rules and password pieces
+UI_NOTIZBUCH_EINKAUF,Pixels Einkaufsliste,Pixel's shopping list
+UI_NOTIZBUCH_LEER,Gerade ist nichts offen.,Nothing is open right now.
+UI_SEITE_WEITER,Weiter,Next
+UI_SEITE_ZURUECK,Zurück,Back
+UI_SCHLIESSEN,Schließen,Close
+UI_GESPEICHERT,Gespeichert,Saved
+UI_GELADEN,Geladen,Loaded
+UI_KEIN_SPIELSTAND,Kein Spielstand vorhanden,No saved game
+UI_SPEICHERN_GLEICH,Wird nach der Szene gespeichert,Will save after the scene
+UI_PROLOG_ENDE,Ende des Prologs. Weiter geht es in Welt 1.,End of the prologue. To be continued in World 1.
 P0_WOHN_MAX_0010,Ein Balken. Ein einziger Balken.,
 P0_WOHN_MAX_0020,Und der ist auch nur zur Deko da.,
 P0_WOHN_OPA_0030,Maaax! Komm mal rauf! Wissenschaft!,

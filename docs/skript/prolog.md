@@ -20,11 +20,11 @@ Szene. Max liegt auf Opas Sofa, das Handy über dem Gesicht. Im Fernseher läuft
 
 | ID | Sprecher | Text | Auslöser |
 | --- | --- | --- | --- |
-| P0\_WOHN\_MAX\_0110 | Max | Opas Fernseher. Älter als das Internet und genauso langsam. | Fernseher |
-| P0\_WOHN\_MAX\_0120 | Max | Oma guckt auf jedem Foto, als hätte jemand ihren Geburtstag vergessen. | Familienfoto |
-| P0\_WOHN\_MAX\_0130 | Max | Kalter Tee. Opa vergisst ihn jeden Tag. Es ist fast eine Tradition. | Teetasse |
-| P0\_WOHN\_MAX\_0140 | Max | Hier lag früher die Fernbedienung. Jetzt liegt hier ein fernbedienungsförmiger Staubrand. | Leerer Platz auf dem Couchtisch |
-| P0\_WOHN\_MAX\_0150 | Max | Das Sofa. Mein Zuhause. Mein Lebenswerk. | Sofa |
+| P0\_WOHN\_MAX\_0110 | Max | Opas Fernseher. Älter als das Internet und genauso langsam. | Ansehen: Fernseher |
+| P0\_WOHN\_MAX\_0120 | Max | Oma guckt auf jedem Foto, als hätte jemand ihren Geburtstag vergessen. | Ansehen: Familienfoto |
+| P0\_WOHN\_MAX\_0130 | Max | Kalter Tee. Opa vergisst ihn jeden Tag. Es ist fast eine Tradition. | Ansehen: Teetasse |
+| P0\_WOHN\_MAX\_0140 | Max | Hier lag früher die Fernbedienung. Jetzt liegt hier ein fernbedienungsförmiger Staubrand. | Ansehen: Leerer Platz auf dem Couchtisch |
+| P0\_WOHN\_MAX\_0150 | Max | Das Sofa. Mein Zuhause. Mein Lebenswerk. | Ansehen: Sofa |
 
 ## 1b. Treppenhaus: Durchgang
 
@@ -113,7 +113,7 @@ Reden mit Opa und Pixel auf dem Dachboden. Max stellt die Frage, die Antwort fol
 | ID | Sprecher | Text | Auslöser |
 | --- | --- | --- | --- |
 | P0\_DACH\_MAX\_0400 | Max | Der Zapp-O-Mat. Aus. Solange Pixel auf dem Kabel liegt, schaltet Opa ihn nicht ein. | Ansehen: Zapp-O-Mat; vor P1 |
-| P0\_DACH\_MAX\_0410 | Max | Er ist an. Er zeigt nur nichts. Sieht aus wie ein Ladebildschirm, der aufgegeben hat. | Ansehen: Zapp-O-Mat mit Rauschen; nach P1 |
+| P0\_DACH\_MAX\_0410 | Max | Er ist an. Er zeigt nur nichts. Sieht aus wie ein Ladebildschirm, der aufgegeben hat. | Ansehen: Zapp-O-Mat (rauschend); nach P1 |
 | P0\_DACH\_PIX\_0420 | Pixel | Das nennt man Schnee. Früher hat man das stundenlang angesehen, wenn das Programm vorbei war. |  |
 | P0\_DACH\_MAX\_0430 | Max | Wenn das Programm vorbei war? Das Programm war einfach … vorbei? |  |
 | P0\_DACH\_OPA\_0440 | Opa | Die Antenne fehlt! Empfangsorgan, Modell Kleiderbügel. Ich hab sie verliehen. Oder eingebaut. Irgendwo. |  |
@@ -158,24 +158,24 @@ Kurze Szene, führt die Reisetasche ein. Im Prolog gibt es nur das Pflichtfach; 
 
 | ID | Sprecher | Text | Auslöser |
 | --- | --- | --- | --- |
-| P0\_DACH\_MAX\_0910 | Max | Opas erster Versuch einer Unterwasser-Zeitmaschine. Der Fisch hat's nicht geschafft. | Ausgestopfter Fisch |
-| P0\_DACH\_PIX\_0920 | Pixel | Siebzehn Fernbedienungen, und die richtige ist nie dabei. | Kiste mit Fernbedienungen; nach P1 |
-| P0\_DACH\_MAX\_0930 | Max | Eine Pyramide und eine Neonstadt. Opa hat einen sehr breiten Geschmack. Oder Reisepläne. | Poster |
-| P0\_DACH\_MAX\_0940 | Max | Ein Toaster mit Propeller. Fliegendes Frühstück. Nie wieder. | Toaster |
-| P0\_DACH\_PIX\_0945 | Pixel | Wir haben uns geeinigt. Er bleibt aus, ich behalte das andere Ohr. | Opas Staubsauger-Prototyp; nach P1 |
-| P0\_DACH\_PIX\_0950 | Pixel | Ein Eselsohr bei Schokokuchen. Interessant. | Kochbuch; nach P1 |
-| P0\_DACH\_MAX\_0960 | Max | „Schlager für Erfinder, Folge 3“. Es gibt also noch zwei schlimmere. | Plattenspieler |
-| P0\_DACH\_MAX\_0970 | Max | Der Ohrensessel. Gefährlich bequem. Wenn ich mich da reinsetze, komme ich nie wieder raus. | Ohrensessel |
-| P0\_DACH\_MAX\_0980 | Max | Eine Werkbank voller halber Erfindungen. Wie mein Hausaufgaben-Ordner. | Werkbank |
-| P0\_DACH\_MAX\_0990 | Max | Das Dachfenster. Draußen ist Welt. Wird überbewertet. | Dachfenster |
-| P0\_DACH\_MAX\_1000 | Max | Da geht's runter. Zum Sofa. Nein. Konzentration. | Bodenluke, vor P3 |
+| P0\_DACH\_MAX\_0910 | Max | Opas erster Versuch einer Unterwasser-Zeitmaschine. Der Fisch hat's nicht geschafft. | Ansehen: Ausgestopfter Fisch |
+| P0\_DACH\_PIX\_0920 | Pixel | Siebzehn Fernbedienungen, und die richtige ist nie dabei. | Ansehen: Kiste mit Fernbedienungen; nach P1 |
+| P0\_DACH\_MAX\_0930 | Max | Eine Pyramide und eine Neonstadt. Opa hat einen sehr breiten Geschmack. Oder Reisepläne. | Ansehen: Poster |
+| P0\_DACH\_MAX\_0940 | Max | Ein Toaster mit Propeller. Fliegendes Frühstück. Nie wieder. | Ansehen: Toaster |
+| P0\_DACH\_PIX\_0945 | Pixel | Wir haben uns geeinigt. Er bleibt aus, ich behalte das andere Ohr. | Ansehen: Opas Staubsauger-Prototyp; nach P1 |
+| P0\_DACH\_PIX\_0950 | Pixel | Ein Eselsohr bei Schokokuchen. Interessant. | Ansehen: Kochbuch; nach P1 |
+| P0\_DACH\_MAX\_0960 | Max | „Schlager für Erfinder, Folge 3“. Es gibt also noch zwei schlimmere. | Ansehen: Plattenspieler |
+| P0\_DACH\_MAX\_0970 | Max | Der Ohrensessel. Gefährlich bequem. Wenn ich mich da reinsetze, komme ich nie wieder raus. | Ansehen: Ohrensessel |
+| P0\_DACH\_MAX\_0980 | Max | Eine Werkbank voller halber Erfindungen. Wie mein Hausaufgaben-Ordner. | Ansehen: Werkbank |
+| P0\_DACH\_MAX\_0990 | Max | Das Dachfenster. Draußen ist Welt. Wird überbewertet. | Ansehen: Dachfenster |
+| P0\_DACH\_MAX\_1000 | Max | Da geht's runter. Zum Sofa. Nein. Konzentration. | Bodenluke; vor P3 |
 
 ## 8. Fehlversuche mit eigener Zeile
 
 | ID | Sprecher | Text | Auslöser |
 | --- | --- | --- | --- |
 | P0\_DACH\_MAX\_1110 | Max | Pixel will keinen Draht. Pixel will Fisch. Pixel will immer Fisch. | Kleiderbügel auf Pixel |
-| P0\_DACH\_PIX\_1120 | Pixel | Steck mir das nicht in den Fernseher. Ich bin keine Antenne. Ich bin ein Gesamtkunstwerk. | Pixel auf Zapp-O-Mat (Figurenwechsel noch nicht möglich, als Inventar-Versuch; nach P1) |
+| P0\_DACH\_PIX\_1120 | Pixel | Steck mir das nicht in den Fernseher. Ich bin keine Antenne. Ich bin ein Gesamtkunstwerk. | Pixel auf Zapp-O-Mat (Figurenwechsel noch nicht möglich, als Inventar-Versuch); nach P1 |
 | P0\_DACH\_MAX\_1130 | Max | Der Dosenöffner passt nicht in den Fernseher. Hab's geprüft. | Dosenöffner auf Zapp-O-Mat |
 | P0\_DACH\_MAX\_1150 | Max | Erst Strom, dann Empfang. Und für Strom muss der Kater vom Kabel. | Drahtkleiderbügel oder Antenne auf Zapp-O-Mat vor P1 |
 | P0\_DACH\_OPA\_1140 | Opa | Nicht am Knopf drehen, bevor das Bild da ist! Der Werbeblock ist für den Rückweg. // Fünf Sekunden Milchwerbung, dann bist du wieder hier. Keiner weiß, warum. | Drehknopf vor P2 |
