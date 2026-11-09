@@ -66,7 +66,7 @@ ID_RE = re.compile(r"^[a-z0-9_]+$")
 RAETSEL_RE = re.compile(r"^(R|P|F|ZS)\d+[a-z]?$")
 SCHALTER_RE = re.compile(r"^[A-Z0-9_]+$")
 ZEILE_RE = re.compile(r"^([A-Z]+[0-9]?)_([A-Z0-9]+)_([A-Z0-9]+)_(\d{4})$")
-OHNE_ZEHNER = {"HINT", "ERS"}  # Szenen-Codes mit eigenem Nummernschema
+OHNE_ZEHNER = {"HINT", "ERS", "WDH", "PLA"}  # Szenen-Codes mit eigenem Nummernschema
 MAX_ZEICHEN = 120
 # Festgelegte Zahl der Nahansichten im ganzen Spiel (entscheidungen.md)
 NAHANSICHTEN_GESAMT = 14
@@ -359,8 +359,8 @@ def pruefe_skript(ab, d, codes, kuerzel, alle_ids):
                 W(ort, f"Sprecher „{zellen[1]}“ passt nicht zu {kz} = {namen[kz]}")
         if code not in OHNE_ZEHNER:
             n = int(num)
-            # Zweitzeilen beim Ansehen tragen die Nummer der ersten Zeile plus 5
-            zweitzeile = n % 10 == 5 and "zweites Mal" in (zellen[-1] if zellen else "")
+            # Zweitzeilen beim Ansehen: Nummer der ersten Zeile plus 5, bei Kollision die nächste freie
+            zweitzeile = "zweites Mal" in (zellen[-1] if zellen else "")
             if n % 10 and not zweitzeile:
                 W(ort, f"{roh}: Nummer nicht in Zehnerschritten")
             if n <= letzte.get(code, -1):

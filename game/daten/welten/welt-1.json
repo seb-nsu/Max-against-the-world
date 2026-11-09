@@ -4,7 +4,9 @@
  "skript_praefix": "W1",
  "sonder_codes": [
   "WECH",
-  "HINT"
+  "HINT",
+  "INV",
+  "ABS"
  ],
  "sonder_sprecher": [
   "NAR"

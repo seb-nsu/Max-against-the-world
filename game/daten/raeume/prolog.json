@@ -69,6 +69,14 @@
        "blasen": [
         "P0_WOHN_MAX_0110"
        ]
+      },
+      {
+       "zeile": "P0_WOHN_MAX_0115",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_WOHN_MAX_0115"
+       ],
+       "mal": 2
       }
      ]
     },
@@ -93,6 +101,14 @@
        "blasen": [
         "P0_WOHN_MAX_0120"
        ]
+      },
+      {
+       "zeile": "P0_WOHN_MAX_0125",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_WOHN_MAX_0125"
+       ],
+       "mal": 2
       }
      ]
     },
@@ -117,6 +133,14 @@
        "blasen": [
         "P0_WOHN_MAX_0130"
        ]
+      },
+      {
+       "zeile": "P0_WOHN_MAX_0135",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_WOHN_MAX_0135"
+       ],
+       "mal": 2
       }
      ]
     },
@@ -141,6 +165,14 @@
        "blasen": [
         "P0_WOHN_MAX_0140"
        ]
+      },
+      {
+       "zeile": "P0_WOHN_MAX_0145",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_WOHN_MAX_0145"
+       ],
+       "mal": 2
       }
      ]
     },
@@ -165,6 +197,14 @@
        "blasen": [
         "P0_WOHN_MAX_0150"
        ]
+      },
+      {
+       "zeile": "P0_WOHN_MAX_0155",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_WOHN_MAX_0155"
+       ],
+       "mal": 2
       }
      ]
     }
@@ -285,6 +325,14 @@
        "blasen": [
         "P0_TREP_MAX_0010"
        ]
+      },
+      {
+       "zeile": "P0_TREP_MAX_0015",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_TREP_MAX_0015"
+       ],
+       "mal": 2
       }
      ]
     },
@@ -309,6 +357,14 @@
        "blasen": [
         "P0_TREP_MAX_0020"
        ]
+      },
+      {
+       "zeile": "P0_TREP_MAX_0025",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_TREP_MAX_0025"
+       ],
+       "mal": 2
       }
      ]
     },
@@ -333,6 +389,14 @@
        "blasen": [
         "P0_TREP_MAX_0030"
        ]
+      },
+      {
+       "zeile": "P0_TREP_MAX_0035",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_TREP_MAX_0035"
+       ],
+       "mal": 2
       }
      ]
     }
@@ -499,6 +563,14 @@
        "blasen": [
         "P0_DACH_MAX_0240"
        ]
+      },
+      {
+       "zeile": "P0_DACH_MAX_0245",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_DACH_MAX_0245"
+       ],
+       "mal": 2
       }
      ]
     },
@@ -523,6 +595,14 @@
        "blasen": [
         "P0_DACH_MAX_0450"
        ]
+      },
+      {
+       "zeile": "P0_DACH_MAX_0455",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_DACH_MAX_0455"
+       ],
+       "mal": 2
       }
      ]
     },
@@ -579,6 +659,14 @@
        "blasen": [
         "P0_DACH_MAX_0910"
        ]
+      },
+      {
+       "zeile": "P0_DACH_MAX_0915",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_DACH_MAX_0915"
+       ],
+       "mal": 2
       }
      ]
     },
@@ -609,6 +697,20 @@
          "raetsel": "P1"
         }
        ]
+      },
+      {
+       "zeile": "P0_DACH_PIX_0925",
+       "sprecher": "PIX",
+       "blasen": [
+        "P0_DACH_PIX_0925"
+       ],
+       "bedingung": [
+        {
+         "art": "nach",
+         "raetsel": "P1"
+        }
+       ],
+       "mal": 2
       }
      ]
     },
@@ -633,6 +735,14 @@
        "blasen": [
         "P0_DACH_MAX_0930"
        ]
+      },
+      {
+       "zeile": "P0_DACH_MAX_0935",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_DACH_MAX_0935"
+       ],
+       "mal": 2
       }
      ]
     },
@@ -657,6 +767,14 @@
        "blasen": [
         "P0_DACH_MAX_0940"
        ]
+      },
+      {
+       "zeile": "P0_DACH_MAX_0942",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_DACH_MAX_0942"
+       ],
+       "mal": 2
       }
      ]
     },
@@ -687,6 +805,20 @@
          "raetsel": "P1"
         }
        ]
+      },
+      {
+       "zeile": "P0_DACH_PIX_0946",
+       "sprecher": "PIX",
+       "blasen": [
+        "P0_DACH_PIX_0946"
+       ],
+       "bedingung": [
+        {
+         "art": "nach",
+         "raetsel": "P1"
+        }
+       ],
+       "mal": 2
       }
      ]
     },
@@ -717,6 +849,20 @@
          "raetsel": "P1"
         }
        ]
+      },
+      {
+       "zeile": "P0_DACH_PIX_0955",
+       "sprecher": "PIX",
+       "blasen": [
+        "P0_DACH_PIX_0955"
+       ],
+       "bedingung": [
+        {
+         "art": "nach",
+         "raetsel": "P1"
+        }
+       ],
+       "mal": 2
       }
      ]
     },
@@ -741,6 +887,14 @@
        "blasen": [
         "P0_DACH_MAX_0960"
        ]
+      },
+      {
+       "zeile": "P0_DACH_MAX_0965",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_DACH_MAX_0965"
+       ],
+       "mal": 2
       }
      ]
     },
@@ -765,6 +919,14 @@
        "blasen": [
         "P0_DACH_MAX_0970"
        ]
+      },
+      {
+       "zeile": "P0_DACH_MAX_0975",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_DACH_MAX_0975"
+       ],
+       "mal": 2
       }
      ]
     },
@@ -789,6 +951,14 @@
        "blasen": [
         "P0_DACH_MAX_0980"
        ]
+      },
+      {
+       "zeile": "P0_DACH_MAX_0985",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_DACH_MAX_0985"
+       ],
+       "mal": 2
       }
      ]
     },
@@ -813,6 +983,14 @@
        "blasen": [
         "P0_DACH_MAX_0990"
        ]
+      },
+      {
+       "zeile": "P0_DACH_MAX_0995",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_DACH_MAX_0995"
+       ],
+       "mal": 2
       }
      ]
     }
@@ -849,6 +1027,20 @@
        ]
       },
       {
+       "zeile": "P0_DACH_MAX_0405",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_DACH_MAX_0405"
+       ],
+       "bedingung": [
+        {
+         "art": "vor",
+         "raetsel": "P1"
+        }
+       ],
+       "mal": 2
+      },
+      {
        "zeile": "P0_DACH_MAX_0410",
        "sprecher": "MAX",
        "blasen": [
@@ -860,6 +1052,20 @@
          "raetsel": "P1"
         }
        ]
+      },
+      {
+       "zeile": "P0_DACH_MAX_0415",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_DACH_MAX_0415"
+       ],
+       "bedingung": [
+        {
+         "art": "nach",
+         "raetsel": "P1"
+        }
+       ],
+       "mal": 2
       }
      ],
      "nehmen": null,
@@ -974,6 +1180,14 @@
        "blasen": [
         "P0_DACH_MAX_1010"
        ]
+      },
+      {
+       "zeile": "P0_DACH_MAX_1015",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_DACH_MAX_1015"
+       ],
+       "mal": 2
       }
      ],
      "benutzen": [
@@ -1070,6 +1284,15 @@
       "P0_DACH_MAX_0210"
      ],
      "raum": "dachboden"
+    },
+    {
+     "zeile": "P0_DACH_PIX_0215",
+     "sprecher": "PIX",
+     "blasen": [
+      "P0_DACH_PIX_0215"
+     ],
+     "mal": 2,
+     "raum": "dachboden"
     }
    ],
    "pixel_auf": [],
@@ -1143,11 +1366,29 @@
      "zustand": "zu"
     },
     {
+     "zeile": "P0_INV_PIX_0015",
+     "sprecher": "PIX",
+     "blasen": [
+      "P0_INV_PIX_0015"
+     ],
+     "mal": 2,
+     "zustand": "zu"
+    },
+    {
      "zeile": "P0_INV_MAX_0020",
      "sprecher": "MAX",
      "blasen": [
       "P0_INV_MAX_0020"
      ],
+     "zustand": "leer"
+    },
+    {
+     "zeile": "P0_INV_MAX_0025",
+     "sprecher": "MAX",
+     "blasen": [
+      "P0_INV_MAX_0025"
+     ],
+     "mal": 2,
      "zustand": "leer"
     }
    ],
@@ -1172,6 +1413,14 @@
      "blasen": [
       "P0_INV_MAX_0030"
      ]
+    },
+    {
+     "zeile": "P0_INV_MAX_0035",
+     "sprecher": "MAX",
+     "blasen": [
+      "P0_INV_MAX_0035"
+     ],
+     "mal": 2
     }
    ],
    "benutzen": [],
@@ -1201,11 +1450,29 @@
      "zustand": "gerade"
     },
     {
+     "zeile": "P0_INV_MAX_0045",
+     "sprecher": "MAX",
+     "blasen": [
+      "P0_INV_MAX_0045"
+     ],
+     "mal": 2,
+     "zustand": "gerade"
+    },
+    {
      "zeile": "P0_INV_MAX_0050",
      "sprecher": "MAX",
      "blasen": [
       "P0_INV_MAX_0050"
      ],
+     "zustand": "antenne"
+    },
+    {
+     "zeile": "P0_INV_MAX_0055",
+     "sprecher": "MAX",
+     "blasen": [
+      "P0_INV_MAX_0055"
+     ],
+     "mal": 2,
      "zustand": "antenne"
     }
    ],
@@ -1230,6 +1497,14 @@
      "blasen": [
       "P0_INV_MAX_0060"
      ]
+    },
+    {
+     "zeile": "P0_INV_MAX_0065",
+     "sprecher": "MAX",
+     "blasen": [
+      "P0_INV_MAX_0065"
+     ],
+     "mal": 2
     }
    ],
    "benutzen": [],
@@ -1419,6 +1694,16 @@
      "beendet": true,
      "bleibt": false
     }
+   ],
+   "erschoepft": [
+    {
+     "zeile": "P0_ABS_OPA_0010",
+     "sprecher": "OPA"
+    },
+    {
+     "zeile": "P0_ABS_OPA_0020",
+     "sprecher": "OPA"
+    }
    ]
   },
   {
@@ -1546,6 +1831,50 @@
    "SYS_ERS_PIX_0350"
   ]
  },
- "wiederholung": {},
- "plauder": {}
+ "wiederholung": {
+  "MAX": [
+   "SYS_WDH_MAX_0010",
+   "SYS_WDH_MAX_0020",
+   "SYS_WDH_MAX_0030",
+   "SYS_WDH_MAX_0040",
+   "SYS_WDH_MAX_0050",
+   "SYS_WDH_MAX_0060",
+   "SYS_WDH_MAX_0070",
+   "SYS_WDH_MAX_0080",
+   "SYS_WDH_MAX_0090",
+   "SYS_WDH_MAX_0100",
+   "SYS_WDH_MAX_0110",
+   "SYS_WDH_MAX_0120",
+   "SYS_WDH_MAX_0130",
+   "SYS_WDH_MAX_0140",
+   "SYS_WDH_MAX_0150",
+   "SYS_WDH_MAX_0160",
+   "SYS_WDH_MAX_0170",
+   "SYS_WDH_MAX_0180",
+   "SYS_WDH_MAX_0190",
+   "SYS_WDH_MAX_0200"
+  ],
+  "PIX": [
+   "SYS_WDH_PIX_0010",
+   "SYS_WDH_PIX_0020",
+   "SYS_WDH_PIX_0030",
+   "SYS_WDH_PIX_0040",
+   "SYS_WDH_PIX_0050",
+   "SYS_WDH_PIX_0060",
+   "SYS_WDH_PIX_0070",
+   "SYS_WDH_PIX_0080",
+   "SYS_WDH_PIX_0090",
+   "SYS_WDH_PIX_0100"
+  ]
+ },
+ "plauder": {
+  "MAX": [
+   "SYS_PLA_MAX_0010",
+   "SYS_PLA_MAX_0020",
+   "SYS_PLA_MAX_0030",
+   "SYS_PLA_MAX_0040",
+   "SYS_PLA_MAX_0050",
+   "SYS_PLA_MAX_0060"
+  ]
+ }
 }

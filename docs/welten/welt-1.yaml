@@ -3,7 +3,7 @@ name: Schwurbelstein
 skript_praefix: W1
 
 # Szenen-Codes ohne eigenen Raum: WECH (Figurenwechsel, gilt überall), HINT (Hilfe-Pfote)
-sonder_codes: [WECH, HINT]
+sonder_codes: [WECH, HINT, INV, ABS]
 # Sprecher ohne Figur: NAR (Erzähl- und Szenentext, Sprecher „–“ im Skript)
 sonder_sprecher: [NAR]
 # Hilfsschalter und -werte ohne eigenes Rätsel (05-spielsysteme.md, Speichern)
