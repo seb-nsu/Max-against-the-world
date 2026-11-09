@@ -326,7 +326,7 @@ Ansehen und Benutzen in der Savanne.
 
 ## 7. Tiertort Savanne: Die Verhöre (Rätsel 4, Lösung)
 
-Vier Alibis. Gepard und Nashorn prüft Pixel, Geier und Hyäne prüft Max über andere Sender. Jede Bestätigung landet im Notizbuch; mit allen vier Einträgen lässt sich die Hyäne konfrontieren. Die Taste Rückspulen übergibt der Kommissar als Fundsache (Annahme, der Rätsel-Tab nennt keinen Fundort).
+Vier Alibis. Gepard und Nashorn prüft Pixel, Geier und Hyäne prüft Max über andere Sender. Jede Bestätigung landet im Notizbuch; mit allen vier Einträgen lässt sich die Hyäne konfrontieren. Die Taste Rückspulen übergibt der Kommissar als Fundsache.
 
 | ID | Sprecher | Text | Auslöser |
 | --- | --- | --- | --- |
@@ -381,7 +381,7 @@ Vier Alibis. Gepard und Nashorn prüft Pixel, Geier und Hyäne prüft Max über 
 
 ## 8. Mitternachts-TV: Der Musikvideo-Friedhof (Rätsel 5)
 
-Außerhalb von Mitternacht zeigt der Sender eine Pausentafel mit schlafendem Geist (Annahme: der Rätsel-Tab sagt nur, dass das Video um Mitternacht läuft). Über die Programmzeitschrift springt Max direkt in die Mitternachtssendung. Rückspulen bringt die Zombies in die Gräber zurück, das Rhythmus-Minispiel bringt sie aus dem Takt.
+Außerhalb von Mitternacht zeigt der Sender eine Pausentafel mit schlafendem Geist. Über die Programmzeitschrift springt Max direkt in die Mitternachtssendung. Rückspulen bringt die Zombies in die Gräber zurück, das Rhythmus-Minispiel bringt sie aus dem Takt.
 
 | ID | Sprecher | Text | Auslöser |
 | --- | --- | --- | --- |
@@ -428,7 +428,7 @@ Außerhalb von Mitternacht zeigt der Sender eine Pausentafel mit schlafendem Gei
 
 ## 9. Spukhaus, Keller: Die Genre-Tür (Rätsel 6)
 
-Max kommt durch die Grabplatte in den Keller. Die verkettete Tür nach oben bleibt im Grusel-Genre für immer zu. Mit dem Splitscreen-Adapter (Rätsel 9) öffnet sich die feste Bild-in-Bild-Szene: links die Sitcom-Küche, rechts der Keller, Max schiebt die Küchentür über den Bildrand. Die Stumm-Taste lassen die fliehenden Geister fallen (Annahme).
+Max kommt durch die Grabplatte in den Keller. Die verkettete Tür nach oben bleibt im Grusel-Genre für immer zu. Mit dem Splitscreen-Adapter (Rätsel 9) öffnet sich die feste Bild-in-Bild-Szene: links die Sitcom-Küche, rechts der Keller, Max schiebt die Küchentür über den Bildrand. Die Stumm-Taste lassen die fliehenden Geister fallen.
 
 | ID | Sprecher | Text | Auslöser |
 | --- | --- | --- | --- |
@@ -577,7 +577,7 @@ Drei Fragen über andere Sender. Max darf jederzeit umschalten und nachsehen; Ge
 
 ## 12. Comic-Kanal, Kapitolis: Die Helden (Rätsel 10, Vorbereitung)
 
-Szene beim ersten Umschalten. Max bekommt dicke Konturen und Rasterpunkte. Pixel zählt, der Amboss fällt. Die drei Helden brauchen einen Anführer mit Herkunftsgeschichte. Das Bettlaken für den Anzug gibt der Fledermann (Annahme: das Inventar nennt nur „Bettlaken plus Pixel als Maskottchen“).
+Szene beim ersten Umschalten. Max bekommt dicke Konturen und Rasterpunkte. Pixel zählt, der Amboss fällt. Die drei Helden brauchen einen Anführer mit Herkunftsgeschichte. Das Bettlaken für den Anzug gibt der Fledermann.
 
 | ID | Sprecher | Text | Regie |
 | --- | --- | --- | --- |
@@ -696,7 +696,7 @@ In der Fabrik läuft ein Unfall als Schleife. Rückspulen hält an vier festen E
 
 ## 14. Werbespot-Set: Dr. Werbepause (Rätsel 11)
 
-Max findet den Spot in der Programmzeitschrift und schaltet hinein. Dr. Werbepauses Waffe ist der Autoplay-Countdown mit Jingle. Reihenfolge: Jingle stummschalten, Stinkbombe (faule Banane im Comic-Kanal) werfen, vier Comic-Panels ordnen. Die Taste Sendersuchlauf lässt Werbepause auf der Flucht fallen (Annahme). Beim ersten Ansehen des Spots ohne Käsemann zählt der Besuch für Rätsel 9.
+Max findet den Spot in der Programmzeitschrift und schaltet hinein. Dr. Werbepauses Waffe ist der Autoplay-Countdown mit Jingle. Reihenfolge: Jingle stummschalten, Stinkbombe (faule Banane im Comic-Kanal) werfen, vier Comic-Panels ordnen. Die Taste Sendersuchlauf lässt Werbepause auf der Flucht fallen. Beim ersten Ansehen des Spots ohne Käsemann zählt der Besuch für Rätsel 9.
 
 | ID | Sprecher | Text | Auslöser |
 | --- | --- | --- | --- |
@@ -750,7 +750,7 @@ Max findet den Spot in der Programmzeitschrift und schaltet hinein. Dr. Werbepau
 
 ## 15. Senderzentrale: Empfang und Kellerarchiv (Rätsel 12)
 
-Der Sendersuchlauf findet Kanal 999. Im Empfang liest Max den Aufzugscode in den Gedanken der Empfangsdame (Untertitel) und hält die Sicherheitsleute mit Pause an. Code: 1988, Zappmanns Dienstantritt laut Messingschild (Annahme). Der Weg zum Aufzug führt am Kellerarchiv vorbei.
+Der Sendersuchlauf findet Kanal 999. Im Empfang liest Max den Aufzugscode in den Gedanken der Empfangsdame (Untertitel) und hält die Sicherheitsleute mit Pause an. Code: 1988, Zappmanns Dienstantritt laut Messingschild. Der Weg zum Aufzug führt am Kellerarchiv vorbei.
 
 | ID | Sprecher | Text | Auslöser |
 | --- | --- | --- | --- |

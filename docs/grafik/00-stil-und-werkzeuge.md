@@ -148,7 +148,7 @@ Bei jedem Bild von Max oder Pixel wortgleich verwenden.
 **Max** (Baustein FIGUR):
 
 ```text
-Max, a lanky 16-year-old boy with a slight slouch, messy dark brown hair (#733e39) with one strand over his right eye, sleepy half-closed eyes, lopsided smirk, a few freckles, oversized dark slate blue-grey hoodie (#3a4466) with sleeves over his hands, uneven drawstrings and a tiny retro TV with a turquoise screen (#2ce8f5) on the chest, dark blue jeans (#124e89) slightly too long, worn red sneakers (#e43b44) with white soles, one lace untied, hands in his hoodie pocket.
+Max, a lanky 16-year-old boy with a slight slouch, messy dark brown hair (#733e39) with shaggy strands falling over his forehead and eyes, sleepy half-closed eyes, lopsided smirk, a few freckles, oversized dark slate blue-grey hoodie (#3a4466) with sleeves over his hands, uneven drawstrings and a tiny retro TV with a turquoise screen (#2ce8f5) on the chest, dark blue jeans (#124e89) slightly too long, worn red sneakers (#e43b44) with white soles, one lace untied, hands in his hoodie pocket.
 ```
 
 **Pixel** (Baustein FIGUR-KLEIN, etwa 18 Pixel hoch):

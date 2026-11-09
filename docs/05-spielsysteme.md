@@ -209,7 +209,7 @@ Errungenschaften (Steam): 13 Stück, alle aus Zählern und Schaltern, die das Sp
 | Offen wenn | Taverne betreten |
 | Gelöst wenn | Wirt ist im Keller |
 | Zugehörige Objekte | Wirt, Weinkarte, Fondue-Topf |
-| Hinweise | W1\_HINT\_PIX\_0110, \_0120, \_0130 (Texte im Skript) |
+| Hinweise | W1\_HINT\_PIX\_0110, \_0120, \_0130 (Texte im Skript). Schema für alle Welten: W1\_HINT\_PIX\_RRSK, RR Rätselnummer, S Stufe 1 bis 3, K Teilschritt (0 ohne Teilschritte, 1 bis 3 für a bis c); Beispiel R1b = 0112, 0122, 0132 |
 
 ### Hinweise für den Vertical Slice
 

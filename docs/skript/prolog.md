@@ -175,7 +175,7 @@ Kurze Szene, führt die Reisetasche ein. Im Prolog gibt es nur das Pflichtfach; 
 | P0\_DACH\_MAX\_1110 | Max | Pixel will keinen Draht. Pixel will Fisch. Pixel will immer Fisch. | Kleiderbügel auf Pixel |
 | P0\_DACH\_PIX\_1120 | Pixel | Steck mir das nicht in den Fernseher. Ich bin keine Antenne. Ich bin ein Gesamtkunstwerk. | Pixel auf Zapp-O-Mat (Figurenwechsel noch nicht möglich, als Inventar-Versuch; nach P1) |
 | P0\_DACH\_MAX\_1130 | Max | Der Dosenöffner passt nicht in den Fernseher. Hab's geprüft. | Dosenöffner auf Zapp-O-Mat |
-| P0\_DACH\_OPA\_1140 | Opa | Nicht am Knopf drehen, bevor das Bild da ist! Sonst landest du im Werbeblock. // Fünf Sekunden Milchwerbung, und keiner weiß, warum. | Drehknopf vor P2 |
+| P0\_DACH\_OPA\_1140 | Opa | Nicht am Knopf drehen, bevor das Bild da ist! Der Werbeblock ist für den Rückweg. // Fünf Sekunden Milchwerbung, dann bist du wieder hier. Keiner weiß, warum. | Drehknopf vor P2 |
 
 ## 8b. Zurufe
 

@@ -1,4 +1,4 @@
-# Max against the world
+# Couch Quest – Max against the worlds
 
 2D-Point-and-Click-Adventure mit **Max**, einem 16-jährigen Couch-Potato, und **Pixel**, dem sprechenden Kater seines Opas. Über Opas Röhrenfernseher „Zapp-O-Mat 3000“ reisen die beiden durch vier Welten – Fantasy, Antike, Zukunft und eine Fernsehwelt –, um vier legendäre Gegenstände zu holen. Am Ende stellt sich heraus, wofür Opa sie wirklich braucht.
 

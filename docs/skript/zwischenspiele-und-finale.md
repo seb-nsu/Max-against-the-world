@@ -49,7 +49,7 @@ Ansehen auf dem Dachboden, Zustand später Nachmittag. Alle Prolog-Zeilen der un
 | ZS1\_DACH\_MAX\_0400 | Max | „Aufgehen.“ Wie ein Plan. |  |
 | ZS1\_DACH\_PIX\_0410 | Pixel | Wie ein Plan. Sicher. |  |
 
-Reisetasche packen für Welt 2. Nahansicht der offenen Tasche: Pflichtfach (Notizbuch, Thunfischdose, Kochlöffel) ist gefüllt, zwei Wahlfächer sind leer. Daneben liegen alle Gegenstände, die Max aus Welt 1 noch hat. Pixel kommentiert jeden beim Berühren; der Kommentar ist kryptisch, aber ehrlich. Was nicht eingepackt wird, legt Opa in die „Fundkiste“ auf dem Dachboden (Annahme, siehe Abschluss).
+Reisetasche packen für Welt 2. Nahansicht der offenen Tasche: Pflichtfach (Notizbuch, Thunfischdose, Kochlöffel) ist gefüllt, zwei Wahlfächer sind leer. Daneben liegen alle Gegenstände, die Max aus Welt 1 noch hat. Pixel kommentiert jeden beim Berühren; der Kommentar ist kryptisch, aber ehrlich. Was nicht eingepackt wird, legt Opa in die „Fundkiste“ auf dem Dachboden.
 
 | ID | Sprecher | Text | Auslöser |
 | --- | --- | --- | --- |
@@ -197,7 +197,7 @@ Ansehen auf dem Dachboden, Zustand Abendrot mit Lampe.
 | ZS3\_DACH\_MAX\_0470 | Max | Das klingt nach einem Plan mit Stufen. |  |
 | ZS3\_DACH\_PIX\_0480 | Pixel | Mit Stufen. Und einer Ofentür. Ich schweige. Ab jetzt. | sieht weg |
 
-Reisetasche packen für Welt 4. Neu sind die Dinge aus Welt 3. Omas Kekse liegen als Hundekuchen neben der Tasche; Pixel kommentiert sie mit seinem entsetzten Gesicht. Ob Max sie einpackt oder in der Fundkiste lässt, ist egal: Beides reicht für den Bonus-Gag im Finale (Annahme, siehe Abschluss).
+Reisetasche packen für Welt 4. Neu sind die Dinge aus Welt 3. Omas Kekse liegen als Hundekuchen neben der Tasche; Pixel kommentiert sie mit seinem entsetzten Gesicht. Ob Max sie einpackt oder in der Fundkiste lässt, ist egal: Beides reicht für den Bonus-Gag im Finale.
 
 | ID | Sprecher | Text | Auslöser |
 | --- | --- | --- | --- |
@@ -455,7 +455,7 @@ Szene. Die Maschine fährt herunter, die Nadel sinkt, Dampf zieht ab. Die Ofent�
 | FI\_AUFL\_PIX\_0380 | Pixel | Er sagt die Wahrheit. Es riecht nach Kuchen und Reue. Reue riecht wie nasser Hund, nur ehrlicher. |  |
 | FI\_AUFL\_NAR\_0390 | – | Die Luke geht auf. Oma steht in der Öffnung, Handtasche am Arm, und sieht: Rauch, einen Kuchen, eine Prinzessin, einen Kater, ihren Mann. | Oma betritt den Dachboden; mit FREUND\_0815 zusätzlich der Roboter |
 | FI\_AUFL\_OMA\_0400 | Oma | Konrad. | nur das |
-| FI\_AUFL\_OPA\_0410 | Opa | Hildegard. Du bist früh. | Hildegard: Annahme, siehe Abschluss |
+| FI\_AUFL\_OPA\_0410 | Opa | Hildegard. Du bist früh. | Hildegard: festgelegt am 9. November 2026 |
 | FI\_AUFL\_OMA\_0420 | Oma | Die Bahn war pünktlich. Es gibt noch Wunder. | mustert Zeldina |
 | FI\_AUFL\_OMA\_0430 | Oma | Du bist also die Neue. | zu Zeldina |
 | FI\_AUFL\_ZEL\_0440 | Zeldina | Ich suche nur eine Wohnung. |  |
@@ -474,7 +474,7 @@ Szene. Die Maschine fährt herunter, die Nadel sinkt, Dampf zieht ab. Die Ofent�
 
 ## 9. Finale: Wohnzimmer, Geburtstag (FI\_WOHN)
 
-Szene mit kurzer freier Phase. Wohnzimmer, Variante Geburtstag: Girlande, Luftballons, der Kuchen auf dem Couchtisch, Opa hat den Zapp-O-Mat auf dem Rolltisch mit heruntergeschoben („Fernsehen zum Geburtstag, Tradition“; Annahme für die Abspann-Szene). Zeldina und, mit FREUND\_0815, der Roboter sitzen mit am Tisch. Nach dem Anschneiden darf der Spieler kurz alles ansehen; die Mutter kommt, sobald Max mit Oma oder Opa gesprochen hat oder nach 60 Sekunden.
+Szene mit kurzer freier Phase. Wohnzimmer, Variante Geburtstag: Girlande, Luftballons, der Kuchen auf dem Couchtisch, Opa hat den Zapp-O-Mat auf dem Rolltisch mit heruntergeschoben („Fernsehen zum Geburtstag, Tradition“). Zeldina und, mit FREUND\_0815, der Roboter sitzen mit am Tisch. Nach dem Anschneiden darf der Spieler kurz alles ansehen; die Mutter kommt, sobald Max mit Oma oder Opa gesprochen hat oder nach 60 Sekunden.
 
 | ID | Sprecher | Text | Regie |
 | --- | --- | --- | --- |

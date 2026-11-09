@@ -33,7 +33,7 @@ Der Fährmann will einen Obolus. Max hat keinen. Sobek verneigt sich vor Pixel, 
 | W2\_NIL\_PIX\_0240 | Pixel | Ein Teenager. Man sieht es am Augenrollen. Und am Hut. Der Hut ist ein Hilfeschrei. | Ansehen: Sobek, zweites Mal |
 | W2\_NIL\_MAX\_0250 | Max | Ich würde gern mitfahren. | Reden: Fährmann, Einstieg |
 | W2\_NIL\_FAE\_0260 | Fährmann | Ein Obolus. Eine Münze. Unter die Zunge oder in die Hand, mir egal. |  |
-| W2\_NIL\_MAX\_0270 | Max | Ich hab drei Prozent Akku und einen Kaugummi. |  |
+| W2\_NIL\_MAX\_0270 | Max | Ich hab drei Prozent Akku und einen Kaugummi. | Notizbuch: Sphinx-Baustein „stirbt bei drei Prozent“ |
 | W2\_NIL\_FAE\_0280 | Fährmann | Der Fluss nimmt keine Kaugummis. Der Fluss nimmt Münzen. Seit viertausend Jahren. Ohne Preiserhöhung. |  |
 | W2\_NIL\_MAX\_0290 | Max | Wohin fährt die Fähre? | Option Fährmann |
 | W2\_NIL\_FAE\_0300 | Fährmann | Flussabwärts nach Olympia, dann bis Syrakus. Flussaufwärts zurück. Dazwischen liegen Jahre. Wörtlich. |  |

@@ -149,7 +149,7 @@ Krone des Löwen und Alien-Gerät sind keine Inventar-Gegenstände: Die Krone f�
 | --- | --- |
 | Deko Welt 4 (3×3) | 3x3 grid, same scale: a broken old radio with scratches and a bent antenna; a golden vinyl record in a black frame; a stack of cassette tapes with blank labels; a small grey rain cloud above a drum kit; a laugh track machine with a big red button; a cardboard audience cutout of a smiling person; a toaster on a small podium; a mirrored disco ball; a blank cardboard sign hanging on a string |
 
-Suchscheinwerfer, Monitorwand, Mikrofonangel und Wasserturm sind Teil der Hintergründe. Das Umhänge-Schild von Hand beschriften.
+Suchscheinwerfer, Monitorwand, Mikrofonangel und Wasserturm sind Teil der Hintergründe. Kleine Bildschirmmotive (die Monitorwand in Zappmanns Studio, der Röhrenfernseher im Keller, der Monitor am Empfang) sind im Raum nur angedeutet; beim Ansehen blendet Godot eine vergrößerte Fassung ein: den Ausschnitt aus dem Hintergrund, ohne Glättung auf das Doppelte vergrößert und mittig auf 320×180 gesetzt, damit der Spieler erkennt, was läuft. Dafür wird kein eigenes Bild erzeugt. Das Umhänge-Schild von Hand beschriften.
 
 ### Animationen
 
@@ -188,4 +188,5 @@ Suchscheinwerfer, Monitorwand, Mikrofonangel und Wasserturm sind Teil der Hinter
 | Rhythmus-Leiste | `rd_pro__ui_panel` | A neon dance-game bar with four arrow lanes and a glowing hit zone at the bottom, purple and green, no text |
 | Lichterketten-Alphabet | Von Hand | 26 Glühbirnen mit Buchstaben an die Hintergrundwand setzen; Buchstaben nicht per KI |
 | Autoplay-Countdown | rd\_pro\_\_ui\_panel | A glossy TV overlay panel in the lower right corner with a big circular countdown ring and an empty thumbnail slot, no text (Ziffern von Hand) |
+| Pausentafel Mitternachts-TV (außerhalb von Mitternacht) | Baustein HINTERGRUND, Nahansicht 320×180 | Full-screen TV break card in the purple and green palette of the midnight channel: a small round bedsheet ghost asleep on a crescent moon in the center, a tiny nightcap on its head, three floating Z shapes above it, a few stars and a thin wavy frame around the picture, a blank banner across the bottom, no text (Schriftzug von Hand; zeigt der Sender zu jeder Zeit außer Mitternacht, Rätsel 5) |
 | Programmzeitschrift (Bildschirm) | rd\_pro\_\_ui\_panel | Nahansicht 320×180: close-up of an open TV guide magazine lying flat and filling the whole frame as one double page, no page turning. Left page: a narrow time column on the far left and five equal channel columns forming a grid of blank programme cells, each column topped by a small blank tab in its own channel color. Right page: six equal blank boxes in a 2x3 grid, each with a small thumbnail picture and blank lines. Slightly crumpled paper, one dog-eared corner, no text (Zeiten, Sender und die 20:15-Folge von Hand; Aufbau verbindlich im Tab Spielsysteme) |
