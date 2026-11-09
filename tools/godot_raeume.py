@@ -38,6 +38,13 @@ import yaml
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import skript_export  # noqa: E402
+from aufloesung import BREITE, HOEHE, UI_ICON  # noqa: E402
+
+S = HOEHE / 180          # Maße unten sind für 320×180 gedacht und werden mitskaliert
+
+
+def s_(v):
+    return round(v * S)
 
 ROOT = Path(__file__).resolve().parent.parent
 GAME = ROOT / "game"
@@ -181,7 +188,7 @@ def baue(abschnitt):
             "groesse": [breite, hoehe],
             "hintergrund": f"{RES_PLATZHALTER}raum_{r['id']}.png",
             "farbe": lay.get("farbe", "#5a4a3a"),
-            "laufbereich": lay.get("laufbereich", [[0, hoehe - 40], [breite, hoehe - 40], [breite, hoehe], [0, hoehe]]),
+            "laufbereich": lay.get("laufbereich", [[0, hoehe - s_(40)], [breite, hoehe - s_(40)], [breite, hoehe], [0, hoehe]]),
             "marker": lay.get("marker", {}),
             "figuren": [],
             "hotspots": [],
@@ -201,7 +208,7 @@ def baue(abschnitt):
             ausgang = {
                 "id": aid, "script_name": pascal(aid), "ziel": ziel,
                 "name_key": name_key(aid, anzeige or f"Zum {ziel}") if anzeige else f"UI_RAUM_{ziel.upper()}",
-                "rect": a.get("rect", [0, 0, 24, 24]), "gehe": a.get("gehe", [0, 0]),
+                "rect": a.get("rect", [0, 0, UI_ICON, UI_ICON]), "gehe": a.get("gehe", [0, 0]),
                 "erreichbar_ab": str(ziel_raum.get("erreichbar_ab", "start")),
                 "ansehen": [],
             }
@@ -242,7 +249,7 @@ def baue(abschnitt):
         if not lay:
             warnungen.append(f"{raum['id']}: Hotspot {oid} ohne Layout, Platzhalter-Rechteck oben links")
             n = len(raum["hotspots"])
-            lay = {"rect": [4 + (n % 8) * 38, 4 + (n // 8) * 20, 34, 16], "gehe": [160, 160]}
+            lay = {"rect": [s_(4 + (n % 8) * 38), s_(4 + (n // 8) * 20), s_(34), s_(16)], "gehe": [BREITE // 2, s_(160)]}
         o = {"id": oid, "script_name": pascal(oid), "name_key": name_key(oid, anzeige),
              "rect": lay["rect"], "gehe": lay.get("gehe", [0, 0]), "ansehen": []}
         raum["hotspots"].append(o)
@@ -581,7 +588,7 @@ def platzhalter(plan):
         d = ImageDraw.Draw(img)
         poly = [tuple(p) for p in raum["laufbereich"]]
         d.polygon(poly, fill=farbe(raum["farbe"], 0.7))
-        d.text((4, h - 12), f"[{texte.get(raum['name_key'], raum['id'])}]", font=font, fill=(255, 255, 255, 255))
+        d.text((4, h - s_(12)), f"[{texte.get(raum['name_key'], raum['id'])}]", font=font, fill=(255, 255, 255, 255))
         for hs in raum["hotspots"]:
             beschriften(d, hs["rect"], texte.get(hs["name_key"], hs["id"]), farbe(raum["farbe"], 1.35), (38, 43, 68, 255))
         for a in raum["ausgaenge"]:
@@ -613,9 +620,9 @@ def platzhalter(plan):
 
     for f in plan["figuren"]:
         hoehe = f["groesse_px"]
-        breite = 24 if f["id"] == "pixel" else max(16, hoehe // 3)
+        breite = s_(24) if f["id"] == "pixel" else max(s_(16), hoehe // 3)
         if f["id"] == "pixel":
-            hoehe = 12
+            hoehe = s_(12)
         img = Image.new("RGBA", (breite, hoehe), (0, 0, 0, 0))
         d = ImageDraw.Draw(img)
         d.rectangle([0, 0, breite - 1, hoehe - 1], fill=farbe(f["textfarbe"], 0.55), outline=(38, 43, 68, 255))
@@ -626,7 +633,7 @@ def platzhalter(plan):
         dp = ImageDraw.Draw(p)
         dp.rectangle([0, 0, 23, 23], outline=(38, 43, 68, 255))
         dp.text((3, 6), (f["kuerzel"] or "?")[:3], font=font, fill=(255, 255, 255, 255))
-        p.save(PLATZHALTER / f"portraet_{f['id']}.png")
+        p.resize((UI_ICON, UI_ICON), Image.Resampling.NEAREST).save(PLATZHALTER / f"portraet_{f['id']}.png")
 
     for g in plan["gegenstaende"]:
         for zustand, pfad in [(None, g["icon"])] + list(g["icons"].items()):
@@ -637,7 +644,7 @@ def platzhalter(plan):
             d.text((2, 2), kurz, font=font, fill=(255, 255, 255, 255))
             if zustand:
                 d.text((2, 12), slug(zustand)[:3], font=font, fill=(254, 231, 97, 255))
-            img.save(PLATZHALTER / pfad.rsplit("/", 1)[1])
+            img.resize((UI_ICON, UI_ICON), Image.Resampling.NEAREST).save(PLATZHALTER / pfad.rsplit("/", 1)[1])
 
     for n in plan["nahansichten"]:
         img = Image.new("RGBA", (320, 180), (38, 43, 68, 235))
@@ -653,7 +660,7 @@ def platzhalter(plan):
                 d.text((x + 2, y + 2), str(i + 1), font=font, fill=(38, 43, 68, 255))
             d.ellipse([40 + 3 * 34 - 4, 56 + 2 * 24 - 4, 40 + 3 * 34 + 34, 56 + 2 * 24 + 24], outline=(228, 59, 68, 255), width=2)
             d.text((180, 152), "K3 - Schwurbelstein", font=font, fill=(38, 43, 68, 255))
-        img.save(PLATZHALTER / f"nah_{n['id']}.png")
+        img.resize((BREITE, HOEHE), Image.Resampling.NEAREST).save(PLATZHALTER / f"nah_{n['id']}.png")
 
     # UI-Platzhalter: Hilfe-Pfote (normal, leuchtend, ausgegraut)
     for name, f in (("pfote", "#c28569"), ("pfote_leuchtet", "#feae34"), ("pfote_aus", "#5a6988")):
@@ -662,13 +669,13 @@ def platzhalter(plan):
         d.ellipse([5, 9, 19, 22], fill=farbe(f))
         for cx in (5, 10, 15, 20):
             d.ellipse([cx - 3, 2 + (2 if cx in (5, 20) else 0), cx + 1, 7 + (2 if cx in (5, 20) else 0)], fill=farbe(f))
-        img.save(PLATZHALTER / f"ui_{name}.png")
+        img.resize((UI_ICON, UI_ICON), Image.Resampling.NEAREST).save(PLATZHALTER / f"ui_{name}.png")
     # Pixel-Feld ganz links in der Inventarleiste (05-spielsysteme.md, UI)
     img = Image.new("RGBA", (24, 24), farbe(FARBEN["PIX"], 0.55))
     d = ImageDraw.Draw(img)
     d.rectangle([0, 0, 23, 23], outline=(38, 43, 68, 255))
     d.text((2, 6), "PIX", font=font, fill=(255, 255, 255, 255))
-    img.save(PLATZHALTER / "ui_pixel_feld.png")
+    img.resize((UI_ICON, UI_ICON), Image.Resampling.NEAREST).save(PLATZHALTER / "ui_pixel_feld.png")
 
 
 def main():

@@ -35,61 +35,61 @@
    "script_name": "Dorfplatz",
    "name_key": "UI_RAUM_DORFPLATZ",
    "groesse": [
-    640,
-    180
+    960,
+    270
    ],
    "hintergrund": "res://grafik/platzhalter/raum_dorfplatz.png",
    "farbe": "#7d8f4e",
    "laufbereich": [
     [
-     4,
-     140
+     6,
+     210
     ],
     [
-     636,
-     140
+     954,
+     210
     ],
     [
-     636,
-     178
+     954,
+     267
     ],
     [
-     4,
-     178
+     6,
+     267
     ]
    ],
    "marker": {
     "start": [
-     300,
-     160
+     450,
+     240
     ],
     "von_taverne": [
-     40,
-     158
+     60,
+     237
     ],
     "von_schmiede": [
-     548,
-     158
+     822,
+     237
     ],
     "von_zauberstabladen": [
-     214,
-     158
+     321,
+     237
     ],
     "von_klassenzimmer": [
-     270,
-     150
+     405,
+     225
     ],
     "von_trollbruecke": [
-     610,
-     160
+     915,
+     240
     ],
     "ziegen": [
-     590,
-     164
+     885,
+     246
     ],
     "lieferung": [
-     520,
-     162
+     780,
+     243
     ]
    },
    "figuren": [
@@ -97,8 +97,8 @@
      "id": "toadi",
      "script_name": "Toadi",
      "pos": [
-      340,
-      166
+      510,
+      249
      ]
     }
    ],
@@ -108,14 +108,14 @@
      "script_name": "Luftschloss",
      "name_key": "UI_OBJ_LUFTSCHLOSS",
      "rect": [
-      282,
-      4,
-      56,
-      26
+      423,
+      6,
+      84,
+      39
      ],
      "gehe": [
-      310,
-      150
+      465,
+      225
      ],
      "ansehen": [
       {
@@ -158,14 +158,14 @@
      "script_name": "Haeuser",
      "name_key": "UI_OBJ_HAEUSER",
      "rect": [
-      250,
-      30,
-      60,
-      40
+      375,
+      45,
+      90,
+      60
      ],
      "gehe": [
-      280,
-      150
+      420,
+      225
      ],
      "ansehen": [
       {
@@ -190,14 +190,14 @@
      "script_name": "Stall",
      "name_key": "UI_OBJ_STALL",
      "rect": [
-      70,
-      70,
-      50,
-      66
+      105,
+      105,
+      75,
+      99
      ],
      "gehe": [
-      94,
-      152
+      141,
+      228
      ],
      "ansehen": [
       {
@@ -230,14 +230,14 @@
      "script_name": "RingLaden",
      "name_key": "UI_OBJ_RING_LADEN",
      "rect": [
-      128,
-      76,
-      46,
-      60
+      192,
+      114,
+      69,
+      90
      ],
      "gehe": [
-      150,
-      152
+      225,
+      228
      ],
      "ansehen": [
       {
@@ -262,14 +262,14 @@
      "script_name": "Erdfleck",
      "name_key": "UI_OBJ_ERDFLECK",
      "rect": [
-      330,
-      140,
-      28,
-      8
+      495,
+      210,
+      42,
+      12
      ],
      "gehe": [
-      344,
-      158
+      516,
+      237
      ],
      "ansehen": [
       {
@@ -306,14 +306,14 @@
      "script_name": "Brunnen",
      "name_key": "UI_OBJ_BRUNNEN",
      "rect": [
-      370,
-      92,
-      60,
-      48
+      555,
+      138,
+      90,
+      72
      ],
      "gehe": [
-      400,
-      152
+      600,
+      228
      ],
      "ansehen": [
       {
@@ -374,14 +374,14 @@
      "script_name": "Statue",
      "name_key": "UI_OBJ_STATUE",
      "rect": [
-      380,
-      52,
-      40,
-      38
+      570,
+      78,
+      60,
+      57
      ],
      "gehe": [
-      400,
-      152
+      600,
+      228
      ],
      "ansehen": [
       {
@@ -424,14 +424,14 @@
      "script_name": "Dorfbrett",
      "name_key": "UI_OBJ_DORFBRETT",
      "rect": [
-      446,
-      74,
-      54,
-      56
+      669,
+      111,
+      81,
+      84
      ],
      "gehe": [
-      472,
-      152
+      708,
+      228
      ],
      "ansehen": [
       {
@@ -466,14 +466,14 @@
      "script_name": "Eimer",
      "name_key": "UI_OBJ_EIMER",
      "rect": [
-      432,
-      128,
-      12,
-      12
+      648,
+      192,
+      18,
+      18
      ],
      "gehe": [
-      436,
-      154
+      654,
+      231
      ],
      "textur": "res://grafik/platzhalter/prop_eimer.png",
      "gegenstand": "eimer",
@@ -491,14 +491,14 @@
      "script_name": "Bestellzettel",
      "name_key": "UI_OBJ_BESTELLZETTEL",
      "rect": [
-      452,
-      80,
-      14,
-      12
+      678,
+      120,
+      21,
+      18
      ],
      "gehe": [
-      472,
-      152
+      708,
+      228
      ],
      "textur": "res://grafik/platzhalter/prop_bestellzettel.png",
      "gegenstand": "bestellzettel",
@@ -532,14 +532,14 @@
      "script_name": "Steckbrief",
      "name_key": "UI_OBJ_STECKBRIEF",
      "rect": [
-      476,
-      78,
-      20,
-      26
+      714,
+      117,
+      30,
+      39
      ],
      "gehe": [
-      472,
-      152
+      708,
+      228
      ],
      "textur": "res://grafik/platzhalter/prop_steckbrief.png",
      "gegenstand": "steckbrief",
@@ -593,14 +593,14 @@
      "ziel": "taverne",
      "name_key": "UI_OBJ_TAVERNE_VON_AUSSEN",
      "rect": [
-      8,
-      60,
-      52,
-      80
+      12,
+      90,
+      78,
+      120
      ],
      "gehe": [
-      34,
-      152
+      51,
+      228
      ],
      "erreichbar_ab": "start",
      "ansehen": [
@@ -627,14 +627,14 @@
      "ziel": "schmiede",
      "name_key": "UI_OBJ_SCHMIEDE_VON_AUSSEN",
      "rect": [
-      516,
-      64,
-      62,
-      76
+      774,
+      96,
+      93,
+      114
      ],
      "gehe": [
-      546,
-      152
+      819,
+      228
      ],
      "erreichbar_ab": "start",
      "ansehen": [
@@ -661,14 +661,14 @@
      "ziel": "zauberstabladen",
      "name_key": "UI_OBJ_ZAUBERSTAB_LADEN_VON_AUSSEN",
      "rect": [
-      188,
-      66,
-      50,
-      74
+      282,
+      99,
+      75,
+      111
      ],
      "gehe": [
-      212,
-      152
+      318,
+      228
      ],
      "erreichbar_ab": "start",
      "ansehen": [
@@ -695,14 +695,14 @@
      "ziel": "klassenzimmer",
      "name_key": "UI_OBJ_WEG_NACH_HOGGELWARZ",
      "rect": [
-      244,
-      74,
-      34,
-      50
+      366,
+      111,
+      51,
+      75
      ],
      "gehe": [
-      262,
-      146
+      393,
+      219
      ],
      "erreichbar_ab": "start",
      "ansehen": [
@@ -729,14 +729,14 @@
      "ziel": "trollbruecke",
      "name_key": "UI_OBJ_WALDWEG",
      "rect": [
-      602,
-      96,
-      36,
-      44
+      903,
+      144,
+      54,
+      66
      ],
      "gehe": [
-      624,
-      158
+      936,
+      237
      ],
      "erreichbar_ab": "start",
      "ansehen": [
@@ -763,14 +763,14 @@
      "ziel": "luftschloss",
      "name_key": "UI_OBJ_BOHNENRANKE",
      "rect": [
-      326,
-      30,
-      30,
-      110
+      489,
+      45,
+      45,
+      165
      ],
      "gehe": [
-      344,
-      158
+      516,
+      237
      ],
      "erreichbar_ab": "R8",
      "ansehen": [
@@ -864,45 +864,45 @@
    "script_name": "Taverne",
    "name_key": "UI_RAUM_TAVERNE",
    "groesse": [
-    320,
-    180
+    480,
+    270
    ],
    "hintergrund": "res://grafik/platzhalter/raum_taverne.png",
    "farbe": "#6e4a32",
    "laufbereich": [
     [
-     4,
-     140
+     6,
+     210
     ],
     [
-     316,
-     140
+     474,
+     210
     ],
     [
-     316,
-     178
+     474,
+     267
     ],
     [
-     4,
-     178
+     6,
+     267
     ]
    ],
    "marker": {
     "start": [
-     292,
-     160
+     438,
+     240
     ],
     "von_dorfplatz": [
-     292,
-     160
+     438,
+     240
     ],
     "balken": [
-     150,
-     26
+     225,
+     39
     ],
     "keller": [
-     70,
-     140
+     105,
+     210
     ]
    },
    "figuren": [
@@ -910,32 +910,32 @@
      "id": "humbert",
      "script_name": "Humbert",
      "pos": [
-      40,
-      156
+      60,
+      234
      ]
     },
     {
      "id": "gollo",
      "script_name": "Gollo",
      "pos": [
-      174,
-      166
+      261,
+      249
      ]
     },
     {
      "id": "minka",
      "script_name": "Minka",
      "pos": [
-      112,
-      150
+      168,
+      225
      ]
     },
     {
      "id": "huhn",
      "script_name": "Huhn",
      "pos": [
-      150,
-      126
+      225,
+      189
      ]
     }
    ],
@@ -947,12 +947,12 @@
      "rect": [
       0,
       0,
-      320,
-      18
+      480,
+      27
      ],
      "gehe": [
-      160,
-      156
+      240,
+      234
      ],
      "ansehen": [
       {
@@ -969,14 +969,14 @@
      "script_name": "Tresen",
      "name_key": "UI_OBJ_TRESEN",
      "rect": [
-      4,
-      104,
-      86,
-      34
+      6,
+      156,
+      129,
+      51
      ],
      "gehe": [
-      44,
-      152
+      66,
+      228
      ],
      "ansehen": [
       {
@@ -993,14 +993,14 @@
      "script_name": "Fischsuppe",
      "name_key": "UI_OBJ_FISCHSUPPE",
      "rect": [
-      16,
-      96,
-      14,
-      8
+      24,
+      144,
+      21,
+      12
      ],
      "gehe": [
-      30,
-      152
+      45,
+      228
      ],
      "ansehen": [
       {
@@ -1041,14 +1041,14 @@
      "script_name": "FlascheVielsaftLimo",
      "name_key": "UI_OBJ_FLASCHE_VIELSAFT_LIMO",
      "rect": [
-      34,
-      86,
-      8,
-      16
+      51,
+      129,
+      12,
+      24
      ],
      "gehe": [
-      40,
-      152
+      60,
+      228
      ],
      "ansehen": [
       {
@@ -1082,14 +1082,14 @@
      "script_name": "WeinkarteAmTresen",
      "name_key": "UI_OBJ_WEINKARTE_AM_TRESEN",
      "rect": [
-      48,
-      88,
-      16,
-      12
+      72,
+      132,
+      24,
+      18
      ],
      "gehe": [
-      54,
-      152
+      81,
+      228
      ],
      "ansehen": [
       {
@@ -1114,14 +1114,14 @@
      "script_name": "FondueTopf",
      "name_key": "UI_OBJ_FONDUE_TOPF",
      "rect": [
-      90,
-      110,
-      24,
-      26
+      135,
+      165,
+      36,
+      39
      ],
      "gehe": [
-      104,
-      154
+      156,
+      231
      ],
      "ansehen": [
       {
@@ -1196,14 +1196,14 @@
      "script_name": "Kellertuer",
      "name_key": "UI_OBJ_KELLERTUER",
      "rect": [
-      62,
-      54,
-      24,
-      44
+      93,
+      81,
+      36,
+      66
      ],
      "gehe": [
-      74,
-      146
+      111,
+      219
      ],
      "ansehen": [
       {
@@ -1228,14 +1228,14 @@
      "script_name": "SteckbriefPlakatDrache",
      "name_key": "UI_OBJ_STECKBRIEF_PLAKAT_DRACHE",
      "rect": [
-      130,
-      44,
-      28,
-      32
+      195,
+      66,
+      42,
+      48
      ],
      "gehe": [
-      146,
-      150
+      219,
+      225
      ],
      "ansehen": [
       {
@@ -1252,14 +1252,14 @@
      "script_name": "LauteMitMuenzbecher",
      "name_key": "UI_OBJ_LAUTE_MIT_MUENZBECHER",
      "rect": [
-      182,
-      92,
-      20,
-      30
+      273,
+      138,
+      30,
+      45
      ],
      "gehe": [
-      190,
-      152
+      285,
+      228
      ],
      "ansehen": [
       {
@@ -1304,14 +1304,14 @@
      "script_name": "Kamin",
      "name_key": "UI_OBJ_KAMIN",
      "rect": [
-      226,
-      76,
-      52,
-      62
+      339,
+      114,
+      78,
+      93
      ],
      "gehe": [
-      250,
-      152
+      375,
+      228
      ],
      "ansehen": [
       {
@@ -1328,14 +1328,14 @@
      "script_name": "SchwerterSammlung",
      "name_key": "UI_OBJ_SCHWERTER_SAMMLUNG",
      "rect": [
-      226,
-      40,
-      52,
-      22
+      339,
+      60,
+      78,
+      33
      ],
      "gehe": [
-      250,
-      152
+      375,
+      228
      ],
      "ansehen": [
       {
@@ -1378,14 +1378,14 @@
      "script_name": "LeereSchilder",
      "name_key": "UI_OBJ_LEERE_SCHILDER",
      "rect": [
-      226,
-      64,
-      52,
-      10
+      339,
+      96,
+      78,
+      15
      ],
      "gehe": [
-      250,
-      152
+      375,
+      228
      ],
      "ansehen": [
       {
@@ -1404,14 +1404,14 @@
      "script_name": "ZiegenfellVorleger",
      "name_key": "UI_OBJ_ZIEGENFELL_VORLEGER",
      "rect": [
-      222,
-      154,
-      44,
-      12
+      333,
+      231,
+      66,
+      18
      ],
      "gehe": [
-      244,
-      166
+      366,
+      249
      ],
      "textur": "res://grafik/platzhalter/prop_ziegenfell_vorleger.png",
      "gegenstand": "ziegenfell_vorleger",
@@ -1454,14 +1454,14 @@
      "script_name": "Ei",
      "name_key": "UI_OBJ_EI",
      "rect": [
-      146,
-      130,
-      8,
-      6
+      219,
+      195,
+      12,
+      9
      ],
      "gehe": [
-      150,
-      150
+      225,
+      225
      ],
      "textur": "res://grafik/platzhalter/prop_ei.png",
      "gegenstand": "ei",
@@ -1499,14 +1499,14 @@
      "ziel": "dorfplatz",
      "name_key": "UI_RAUM_DORFPLATZ",
      "rect": [
-      298,
-      60,
-      20,
-      80
+      447,
+      90,
+      30,
+      120
      ],
      "gehe": [
-      300,
-      160
+      450,
+      240
      ],
      "erreichbar_ab": "start",
      "ansehen": []
@@ -1548,37 +1548,37 @@
    "script_name": "Schmiede",
    "name_key": "UI_RAUM_SCHMIEDE",
    "groesse": [
-    320,
-    180
+    480,
+    270
    ],
    "hintergrund": "res://grafik/platzhalter/raum_schmiede.png",
    "farbe": "#5d4a42",
    "laufbereich": [
     [
-     4,
-     140
+     6,
+     210
     ],
     [
-     316,
-     140
+     474,
+     210
     ],
     [
-     316,
-     178
+     474,
+     267
     ],
     [
-     4,
-     178
+     6,
+     267
     ]
    ],
    "marker": {
     "start": [
-     290,
-     160
+     435,
+     240
     ],
     "von_dorfplatz": [
-     290,
-     160
+     435,
+     240
     ]
    },
    "figuren": [
@@ -1586,16 +1586,16 @@
      "id": "schmied",
      "script_name": "Schmied",
      "pos": [
-      120,
-      160
+      180,
+      240
      ]
     },
     {
      "id": "schmiede_ziege",
      "script_name": "SchmiedeZiege",
      "pos": [
-      180,
-      166
+      270,
+      249
      ]
     }
    ],
@@ -1605,14 +1605,14 @@
      "script_name": "Esse",
      "name_key": "UI_OBJ_ESSE",
      "rect": [
-      10,
-      70,
-      70,
-      70
+      15,
+      105,
+      105,
+      105
      ],
      "gehe": [
-      60,
-      154
+      90,
+      231
      ],
      "ansehen": [
       {
@@ -1663,14 +1663,14 @@
      "script_name": "Amboss",
      "name_key": "UI_OBJ_AMBOSS",
      "rect": [
-      130,
-      116,
-      40,
-      24
+      195,
+      174,
+      60,
+      36
      ],
      "gehe": [
-      150,
-      154
+      225,
+      231
      ],
      "ansehen": [
       {
@@ -1704,14 +1704,14 @@
      "script_name": "Kochgeschirr",
      "name_key": "UI_OBJ_KOCHGESCHIRR",
      "rect": [
-      206,
-      50,
-      70,
-      56
+      309,
+      75,
+      105,
+      84
      ],
      "gehe": [
-      240,
-      152
+      360,
+      228
      ],
      "ansehen": [
       {
@@ -1746,14 +1746,14 @@
      "script_name": "Krug",
      "name_key": "UI_OBJ_KRUG",
      "rect": [
-      278,
-      70,
-      14,
-      16
+      417,
+      105,
+      21,
+      24
      ],
      "gehe": [
-      276,
-      152
+      414,
+      228
      ],
      "textur": "res://grafik/platzhalter/prop_krug.png",
      "gegenstand": "krug",
@@ -1799,14 +1799,14 @@
      "ziel": "dorfplatz",
      "name_key": "UI_RAUM_DORFPLATZ",
      "rect": [
-      298,
-      40,
-      20,
-      100
+      447,
+      60,
+      30,
+      150
      ],
      "gehe": [
-      304,
-      160
+      456,
+      240
      ],
      "erreichbar_ab": "start",
      "ansehen": []
@@ -1834,37 +1834,37 @@
    "script_name": "Zauberstabladen",
    "name_key": "UI_RAUM_ZAUBERSTABLADEN",
    "groesse": [
-    320,
-    180
+    480,
+    270
    ],
    "hintergrund": "res://grafik/platzhalter/raum_zauberstabladen.png",
    "farbe": "#4f3f5e",
    "laufbereich": [
     [
-     4,
-     140
+     6,
+     210
     ],
     [
-     316,
-     140
+     474,
+     210
     ],
     [
-     316,
-     178
+     474,
+     267
     ],
     [
-     4,
-     178
+     6,
+     267
     ]
    ],
    "marker": {
     "start": [
-     290,
-     160
+     435,
+     240
     ],
     "von_dorfplatz": [
-     290,
-     160
+     435,
+     240
     ]
    },
    "figuren": [
@@ -1872,8 +1872,8 @@
      "id": "stabmacher",
      "script_name": "Stabmacher",
      "pos": [
-      200,
-      150
+      300,
+      225
      ]
     }
    ],
@@ -1883,14 +1883,14 @@
      "script_name": "Fenster",
      "name_key": "UI_OBJ_FENSTER",
      "rect": [
-      20,
-      10,
-      26,
-      26
+      30,
+      15,
+      39,
+      39
      ],
      "gehe": [
-      40,
-      152
+      60,
+      228
      ],
      "ansehen": [
       {
@@ -1915,14 +1915,14 @@
      "script_name": "Regale",
      "name_key": "UI_OBJ_REGALE",
      "rect": [
-      4,
-      40,
-      86,
-      100
+      6,
+      60,
+      129,
+      150
      ],
      "gehe": [
-      50,
-      152
+      75,
+      228
      ],
      "ansehen": [
       {
@@ -1956,14 +1956,14 @@
      "script_name": "Leiter",
      "name_key": "UI_OBJ_LEITER",
      "rect": [
-      92,
-      30,
-      18,
-      110
+      138,
+      45,
+      27,
+      165
      ],
      "gehe": [
-      100,
-      152
+      150,
+      228
      ],
      "ansehen": [
       {
@@ -1988,14 +1988,14 @@
      "script_name": "ThekeMitKissen",
      "name_key": "UI_OBJ_THEKE_MIT_KISSEN",
      "rect": [
-      120,
-      104,
-      84,
-      36
+      180,
+      156,
+      126,
+      54
      ],
      "gehe": [
-      160,
-      154
+      240,
+      231
      ],
      "ansehen": [
       {
@@ -2030,14 +2030,14 @@
      "script_name": "Zahnstocher",
      "name_key": "UI_OBJ_ZAHNSTOCHER",
      "rect": [
-      134,
-      96,
-      12,
-      6
+      201,
+      144,
+      18,
+      9
      ],
      "gehe": [
-      140,
-      154
+      210,
+      231
      ],
      "textur": "res://grafik/platzhalter/prop_zahnstocher.png",
      "gegenstand": null,
@@ -2090,14 +2090,14 @@
      "script_name": "Zollstock",
      "name_key": "UI_OBJ_ZOLLSTOCK",
      "rect": [
-      152,
-      96,
-      18,
-      6
+      228,
+      144,
+      27,
+      9
      ],
      "gehe": [
-      160,
-      154
+      240,
+      231
      ],
      "textur": "res://grafik/platzhalter/prop_zollstock.png",
      "gegenstand": null,
@@ -2141,14 +2141,14 @@
      "script_name": "Kochloeffel",
      "name_key": "UI_OBJ_KOCHLOEFFEL",
      "rect": [
-      176,
-      94,
-      18,
-      8
+      264,
+      141,
+      27,
+      12
      ],
      "gehe": [
-      184,
-      154
+      276,
+      231
      ],
      "textur": "res://grafik/platzhalter/prop_kochloeffel.png",
      "gegenstand": "kochloeffel",
@@ -2239,14 +2239,14 @@
      "ziel": "dorfplatz",
      "name_key": "UI_RAUM_DORFPLATZ",
      "rect": [
-      298,
-      50,
-      20,
-      90
+      447,
+      75,
+      30,
+      135
      ],
      "gehe": [
-      304,
-      160
+      456,
+      240
      ],
      "erreichbar_ab": "start",
      "ansehen": []
@@ -2280,37 +2280,37 @@
    "script_name": "Klassenzimmer",
    "name_key": "UI_RAUM_KLASSENZIMMER",
    "groesse": [
-    320,
-    180
+    480,
+    270
    ],
    "hintergrund": "res://grafik/platzhalter/raum_klassenzimmer.png",
    "farbe": "#5a6988",
    "laufbereich": [
     [
-     4,
-     140
+     6,
+     210
     ],
     [
-     316,
-     140
+     474,
+     210
     ],
     [
-     316,
-     178
+     474,
+     267
     ],
     [
-     4,
-     178
+     6,
+     267
     ]
    ],
    "marker": {
     "start": [
-     30,
-     160
+     45,
+     240
     ],
     "von_dorfplatz": [
-     30,
-     160
+     45,
+     240
     ]
    },
    "figuren": [
@@ -2318,16 +2318,16 @@
      "id": "alwin",
      "script_name": "Alwin",
      "pos": [
-      150,
-      158
+      225,
+      237
      ]
     },
     {
      "id": "toadi",
      "script_name": "Toadi",
      "pos": [
-      16,
-      150
+      24,
+      225
      ]
     }
    ],
@@ -2337,14 +2337,14 @@
      "script_name": "Flasche1",
      "name_key": "UI_OBJ_FLASCHE_1",
      "rect": [
-      212,
-      76,
-      8,
-      16
+      318,
+      114,
+      12,
+      24
      ],
      "gehe": [
-      216,
-      152
+      324,
+      228
      ],
      "ansehen": [
       {
@@ -2362,14 +2362,14 @@
      "script_name": "Flasche2",
      "name_key": "UI_OBJ_FLASCHE_2",
      "rect": [
-      222,
-      70,
-      10,
-      22
+      333,
+      105,
+      15,
+      33
      ],
      "gehe": [
-      226,
-      152
+      339,
+      228
      ],
      "ansehen": [
       {
@@ -2387,14 +2387,14 @@
      "script_name": "Flasche3",
      "name_key": "UI_OBJ_FLASCHE_3",
      "rect": [
-      234,
-      76,
-      8,
-      16
+      351,
+      114,
+      12,
+      24
      ],
      "gehe": [
-      238,
-      152
+      357,
+      228
      ],
      "ansehen": [
       {
@@ -2412,14 +2412,14 @@
      "script_name": "Flasche4",
      "name_key": "UI_OBJ_FLASCHE_4",
      "rect": [
-      244,
-      76,
-      8,
-      16
+      366,
+      114,
+      12,
+      24
      ],
      "gehe": [
-      248,
-      152
+      372,
+      228
      ],
      "ansehen": [
       {
@@ -2437,14 +2437,14 @@
      "script_name": "Flasche5",
      "name_key": "UI_OBJ_FLASCHE_5",
      "rect": [
-      254,
-      70,
-      10,
-      22
+      381,
+      105,
+      15,
+      33
      ],
      "gehe": [
-      258,
-      152
+      387,
+      228
      ],
      "ansehen": [
       {
@@ -2462,14 +2462,14 @@
      "script_name": "Flasche6",
      "name_key": "UI_OBJ_FLASCHE_6",
      "rect": [
-      266,
-      76,
-      8,
-      16
+      399,
+      114,
+      12,
+      24
      ],
      "gehe": [
-      270,
-      152
+      405,
+      228
      ],
      "ansehen": [
       {
@@ -2487,14 +2487,14 @@
      "script_name": "Schulbank",
      "name_key": "UI_OBJ_SCHULBANK",
      "rect": [
-      30,
-      110,
-      60,
-      30
+      45,
+      165,
+      90,
+      45
      ],
      "gehe": [
-      60,
-      154
+      90,
+      231
      ],
      "ansehen": [
       {
@@ -2511,14 +2511,14 @@
      "script_name": "DurchgeloecherteZweiteSocke",
      "name_key": "UI_OBJ_DURCHGELOECHERTE_ZWEITE_SOCKE",
      "rect": [
-      96,
-      116,
-      16,
-      16
+      144,
+      174,
+      24,
+      24
      ],
      "gehe": [
-      104,
-      154
+      156,
+      231
      ],
      "ansehen": [
       {
@@ -2543,14 +2543,14 @@
      "script_name": "Tafel",
      "name_key": "UI_OBJ_TAFEL",
      "rect": [
-      124,
-      30,
-      70,
-      40
+      186,
+      45,
+      105,
+      60
      ],
      "gehe": [
-      160,
-      152
+      240,
+      228
      ],
      "ansehen": [
       {
@@ -2567,14 +2567,14 @@
      "script_name": "Kessel",
      "name_key": "UI_OBJ_KESSEL",
      "rect": [
-      136,
-      100,
-      44,
-      40
+      204,
+      150,
+      66,
+      60
      ],
      "gehe": [
-      158,
-      156
+      237,
+      234
      ],
      "ansehen": [
       {
@@ -2682,14 +2682,14 @@
      "script_name": "Flaschenregal",
      "name_key": "UI_OBJ_FLASCHENREGAL",
      "rect": [
-      210,
-      70,
-      60,
-      30
+      315,
+      105,
+      90,
+      45
      ],
      "gehe": [
-      240,
-      152
+      360,
+      228
      ],
      "ansehen": [
       {
@@ -2714,14 +2714,14 @@
      "script_name": "BesenImSchrank",
      "name_key": "UI_OBJ_BESEN_IM_SCHRANK",
      "rect": [
-      276,
-      44,
-      40,
-      96
+      414,
+      66,
+      60,
+      144
      ],
      "gehe": [
-      290,
-      152
+      435,
+      228
      ],
      "ansehen": [
       {
@@ -2738,14 +2738,14 @@
      "script_name": "Fenster",
      "name_key": "UI_OBJ_FENSTER",
      "rect": [
-      60,
-      10,
-      60,
-      30
+      90,
+      15,
+      90,
+      45
      ],
      "gehe": [
-      90,
-      152
+      135,
+      228
      ],
      "ansehen": [
       {
@@ -2766,14 +2766,14 @@
      "ziel": "dorfplatz",
      "name_key": "UI_RAUM_DORFPLATZ",
      "rect": [
-      2,
-      60,
-      20,
-      80
+      3,
+      90,
+      30,
+      120
      ],
      "gehe": [
-      14,
-      160
+      21,
+      240
      ],
      "erreichbar_ab": "start",
      "ansehen": []
@@ -2801,57 +2801,57 @@
    "script_name": "Trollbruecke",
    "name_key": "UI_RAUM_TROLLBRUECKE",
    "groesse": [
-    320,
-    180
+    480,
+    270
    ],
    "hintergrund": "res://grafik/platzhalter/raum_trollbruecke.png",
    "farbe": "#6a8a4a",
    "laufbereich": [
     [
-     4,
-     140
+     6,
+     210
     ],
     [
-     316,
-     140
+     474,
+     210
     ],
     [
-     316,
-     178
+     474,
+     267
     ],
     [
-     4,
-     178
+     6,
+     267
     ]
    ],
    "marker": {
     "start": [
-     30,
-     160
+     45,
+     240
     ],
     "von_dorfplatz": [
-     30,
-     160
+     45,
+     240
     ],
     "von_zauberwald": [
-     296,
-     160
+     444,
+     240
     ],
     "von_wasserschloss": [
-     250,
-     146
+     375,
+     219
     ],
     "ziegen": [
-     64,
-     166
+     96,
+     249
     ],
     "bruecke_mitte": [
-     160,
-     150
+     240,
+     225
     ],
     "wasser": [
-     200,
-     170
+     300,
+     255
     ]
    },
    "figuren": [
@@ -2859,8 +2859,8 @@
      "id": "waldemar",
      "script_name": "Waldemar",
      "pos": [
-      214,
-      156
+      321,
+      234
      ]
     }
    ],
@@ -2870,14 +2870,14 @@
      "script_name": "Schild",
      "name_key": "UI_OBJ_SCHILD",
      "rect": [
-      50,
-      70,
-      30,
-      40
+      75,
+      105,
+      45,
+      60
      ],
      "gehe": [
-      64,
-      154
+      96,
+      231
      ],
      "ansehen": [
       {
@@ -2910,14 +2910,14 @@
      "script_name": "Bruecke",
      "name_key": "UI_OBJ_BRUECKE",
      "rect": [
-      90,
-      110,
-      140,
-      30
+      135,
+      165,
+      210,
+      45
      ],
      "gehe": [
-      160,
-      150
+      240,
+      225
      ],
      "ansehen": [
       {
@@ -2984,14 +2984,14 @@
      "script_name": "Bach",
      "name_key": "UI_OBJ_BACH",
      "rect": [
-      90,
-      160,
-      140,
-      18
+      135,
+      240,
+      210,
+      27
      ],
      "gehe": [
-      160,
-      152
+      240,
+      228
      ],
      "ansehen": [
       {
@@ -3016,14 +3016,14 @@
      "script_name": "Grammophon",
      "name_key": "UI_OBJ_GRAMMOPHON",
      "rect": [
-      120,
-      140,
-      20,
-      14
+      180,
+      210,
+      30,
+      21
      ],
      "gehe": [
-      130,
-      154
+      195,
+      231
      ],
      "ansehen": [
       {
@@ -3074,14 +3074,14 @@
      "script_name": "Notenblaetter",
      "name_key": "UI_OBJ_NOTENBLAETTER",
      "rect": [
-      146,
-      144,
-      24,
-      10
+      219,
+      216,
+      36,
+      15
      ],
      "gehe": [
-      158,
-      154
+      237,
+      231
      ],
      "ansehen": [
       {
@@ -3106,14 +3106,14 @@
      "script_name": "Wildblumen",
      "name_key": "UI_OBJ_WILDBLUMEN",
      "rect": [
-      4,
-      146,
-      30,
-      14
+      6,
+      219,
+      45,
+      21
      ],
      "gehe": [
-      24,
-      160
+      36,
+      240
      ],
      "ansehen": [
       {
@@ -3142,14 +3142,14 @@
      "ziel": "dorfplatz",
      "name_key": "UI_RAUM_DORFPLATZ",
      "rect": [
-      2,
-      80,
-      18,
-      60
+      3,
+      120,
+      27,
+      90
      ],
      "gehe": [
-      12,
-      160
+      18,
+      240
      ],
      "erreichbar_ab": "start",
      "ansehen": []
@@ -3160,14 +3160,14 @@
      "ziel": "zauberwald",
      "name_key": "UI_OBJ_WALDWEG",
      "rect": [
-      296,
-      70,
-      22,
-      70
+      444,
+      105,
+      33,
+      105
      ],
      "gehe": [
-      304,
-      160
+      456,
+      240
      ],
      "erreichbar_ab": "R4",
      "ansehen": [
@@ -3207,14 +3207,14 @@
      "ziel": "wasserschloss",
      "name_key": "UI_OBJ_WEG_ZUM_WASSERSCHLOSS",
      "rect": [
-      240,
-      70,
-      30,
-      40
+      360,
+      105,
+      45,
+      60
      ],
      "gehe": [
-      252,
-      146
+      378,
+      219
      ],
      "erreichbar_ab": "R4",
      "ansehen": [],
@@ -3257,41 +3257,41 @@
    "script_name": "Wasserschloss",
    "name_key": "UI_RAUM_WASSERSCHLOSS",
    "groesse": [
-    320,
-    180
+    480,
+    270
    ],
    "hintergrund": "res://grafik/platzhalter/raum_wasserschloss.png",
    "farbe": "#4f7a9a",
    "laufbereich": [
     [
-     4,
-     140
+     6,
+     210
     ],
     [
-     316,
-     140
+     474,
+     210
     ],
     [
-     316,
-     178
+     474,
+     267
     ],
     [
-     4,
-     178
+     6,
+     267
     ]
    ],
    "marker": {
     "start": [
-     24,
-     160
+     36,
+     240
     ],
     "von_trollbruecke": [
-     24,
-     160
+     36,
+     240
     ],
     "tor": [
-     170,
-     152
+     255,
+     228
     ]
    },
    "figuren": [
@@ -3299,16 +3299,16 @@
      "id": "schwan",
      "script_name": "Schwan",
      "pos": [
-      270,
-      168
+      405,
+      252
      ]
     },
     {
      "id": "toadi",
      "script_name": "Toadi",
      "pos": [
-      210,
-      160
+      315,
+      240
      ]
     }
    ],
@@ -3318,14 +3318,14 @@
      "script_name": "Schilf",
      "name_key": "UI_OBJ_SCHILF",
      "rect": [
-      20,
-      110,
       30,
-      30
+      165,
+      45,
+      45
      ],
      "gehe": [
-      40,
-      156
+      60,
+      234
      ],
      "ansehen": [
       {
@@ -3350,14 +3350,14 @@
      "script_name": "Ruderboot",
      "name_key": "UI_OBJ_RUDERBOOT",
      "rect": [
-      54,
-      130,
-      40,
-      14
+      81,
+      195,
+      60,
+      21
      ],
      "gehe": [
-      70,
-      156
+      105,
+      234
      ],
      "ansehen": [
       {
@@ -3382,14 +3382,14 @@
      "script_name": "SchildAmTor",
      "name_key": "UI_OBJ_SCHILD_AM_TOR",
      "rect": [
-      160,
-      60,
-      24,
-      16
+      240,
+      90,
+      36,
+      24
      ],
      "gehe": [
-      170,
-      152
+      255,
+      228
      ],
      "ansehen": [
       {
@@ -3414,14 +3414,14 @@
      "script_name": "Umzugskartons",
      "name_key": "UI_OBJ_UMZUGSKARTONS",
      "rect": [
-      190,
-      90,
-      40,
-      40
+      285,
+      135,
+      60,
+      60
      ],
      "gehe": [
-      200,
-      152
+      300,
+      228
      ],
      "ansehen": [
       {
@@ -3472,14 +3472,14 @@
      "script_name": "Teppich",
      "name_key": "UI_OBJ_TEPPICH",
      "rect": [
-      234,
-      116,
-      30,
-      12
+      351,
+      174,
+      45,
+      18
      ],
      "gehe": [
-      240,
-      152
+      360,
+      228
      ],
      "ansehen": [
       {
@@ -3508,14 +3508,14 @@
      "ziel": "trollbruecke",
      "name_key": "UI_RAUM_TROLLBRUECKE",
      "rect": [
-      2,
-      70,
-      16,
-      70
+      3,
+      105,
+      24,
+      105
      ],
      "gehe": [
-      12,
-      160
+      18,
+      240
      ],
      "erreichbar_ab": "start",
      "ansehen": []
@@ -3536,41 +3536,41 @@
    "script_name": "Zauberwald",
    "name_key": "UI_RAUM_ZAUBERWALD",
    "groesse": [
-    320,
-    180
+    480,
+    270
    ],
    "hintergrund": "res://grafik/platzhalter/raum_zauberwald.png",
    "farbe": "#3f5a3a",
    "laufbereich": [
     [
-     4,
-     140
+     6,
+     210
     ],
     [
-     316,
-     140
+     474,
+     210
     ],
     [
-     316,
-     178
+     474,
+     267
     ],
     [
-     4,
-     178
+     6,
+     267
     ]
    ],
    "marker": {
     "start": [
-     24,
-     160
+     36,
+     240
     ],
     "von_trollbruecke": [
-     24,
-     160
+     36,
+     240
     ],
     "von_bergwerk": [
-     292,
-     160
+     438,
+     240
     ]
    },
    "figuren": [
@@ -3578,8 +3578,8 @@
      "id": "rotkaeppchen",
      "script_name": "Rotkaeppchen",
      "pos": [
-      240,
-      160
+      360,
+      240
      ]
     }
    ],
@@ -3589,14 +3589,14 @@
      "script_name": "Riesenpilze",
      "name_key": "UI_OBJ_RIESENPILZE",
      "rect": [
-      20,
-      60,
-      60,
-      70
+      30,
+      90,
+      90,
+      105
      ],
      "gehe": [
-      50,
-      154
+      75,
+      231
      ],
      "ansehen": [
       {
@@ -3621,14 +3621,14 @@
      "script_name": "Leuchtpilze",
      "name_key": "UI_OBJ_LEUCHTPILZE",
      "rect": [
-      30,
-      130,
-      30,
-      10
+      45,
+      195,
+      45,
+      15
      ],
      "gehe": [
-      44,
-      156
+      66,
+      234
      ],
      "ansehen": [
       {
@@ -3653,14 +3653,14 @@
      "script_name": "Niesrosen",
      "name_key": "UI_OBJ_NIESROSEN",
      "rect": [
-      120,
-      110,
-      40,
-      30
+      180,
+      165,
+      60,
+      45
      ],
      "gehe": [
-      140,
-      154
+      210,
+      231
      ],
      "ansehen": [
       {
@@ -3729,14 +3729,14 @@
      "script_name": "KuerbisturmUndGlasschuh",
      "name_key": "UI_OBJ_KUERBISTURM_UND_GLASSCHUH",
      "rect": [
-      150,
-      50,
-      30,
-      60
+      225,
+      75,
+      45,
+      90
      ],
      "gehe": [
-      166,
-      154
+      249,
+      231
      ],
      "ansehen": [
       {
@@ -3778,14 +3778,14 @@
      "script_name": "Gluehwuermchen",
      "name_key": "UI_OBJ_GLUEHWUERMCHEN",
      "rect": [
-      90,
-      10,
-      80,
-      30
+      135,
+      15,
+      120,
+      45
      ],
      "gehe": [
-      130,
-      154
+      195,
+      231
      ],
      "ansehen": [
       {
@@ -3810,14 +3810,14 @@
      "script_name": "Lieferkarren",
      "name_key": "UI_OBJ_LIEFERKARREN",
      "rect": [
-      200,
-      110,
-      40,
-      30
+      300,
+      165,
+      60,
+      45
      ],
      "gehe": [
-      220,
-      154
+      330,
+      231
      ],
      "ansehen": [
       {
@@ -3850,14 +3850,14 @@
      "script_name": "Baeume",
      "name_key": "UI_OBJ_BAEUME",
      "rect": [
-      90,
-      40,
-      50,
-      60
+      135,
+      60,
+      75,
+      90
      ],
      "gehe": [
-      110,
-      154
+      165,
+      231
      ],
      "ansehen": [
       {
@@ -3884,14 +3884,14 @@
      "script_name": "Leuchtpilz",
      "name_key": "UI_OBJ_LEUCHTPILZ",
      "rect": [
-      36,
-      132,
-      8,
-      6
+      54,
+      198,
+      12,
+      9
      ],
      "gehe": [
-      44,
-      156
+      66,
+      234
      ],
      "textur": "res://grafik/platzhalter/prop_leuchtpilz.png",
      "gegenstand": "leuchtpilz",
@@ -3918,14 +3918,14 @@
      "script_name": "Ketchup",
      "name_key": "UI_OBJ_KETCHUP",
      "rect": [
-      250,
-      116,
-      6,
-      12
+      375,
+      174,
+      9,
+      18
      ],
      "gehe": [
-      244,
-      154
+      366,
+      231
      ],
      "textur": "res://grafik/platzhalter/prop_ketchup.png",
      "gegenstand": "ketchup",
@@ -3980,14 +3980,14 @@
      "ziel": "trollbruecke",
      "name_key": "UI_RAUM_TROLLBRUECKE",
      "rect": [
-      2,
-      70,
-      16,
-      70
+      3,
+      105,
+      24,
+      105
      ],
      "gehe": [
-      12,
-      160
+      18,
+      240
      ],
      "erreichbar_ab": "start",
      "ansehen": []
@@ -3998,14 +3998,14 @@
      "ziel": "bergwerk",
      "name_key": "UI_OBJ_STOLLENEINGANG",
      "rect": [
-      270,
-      60,
-      48,
-      80
+      405,
+      90,
+      72,
+      120
      ],
      "gehe": [
-      296,
-      156
+      444,
+      234
      ],
      "erreichbar_ab": "R4",
      "ansehen": [
@@ -4049,37 +4049,37 @@
    "script_name": "Luftschloss",
    "name_key": "UI_RAUM_LUFTSCHLOSS",
    "groesse": [
-    320,
-    180
+    480,
+    270
    ],
    "hintergrund": "res://grafik/platzhalter/raum_luftschloss.png",
    "farbe": "#b9c7e6",
    "laufbereich": [
     [
-     4,
-     140
+     6,
+     210
     ],
     [
-     316,
-     140
+     474,
+     210
     ],
     [
-     316,
-     178
+     474,
+     267
     ],
     [
-     4,
-     178
+     6,
+     267
     ]
    ],
    "marker": {
     "start": [
-     30,
-     160
+     45,
+     240
     ],
     "von_dorfplatz": [
-     30,
-     160
+     45,
+     240
     ]
    },
    "figuren": [
@@ -4087,16 +4087,16 @@
      "id": "maklerin",
      "script_name": "Maklerin",
      "pos": [
-      200,
-      158
+      300,
+      237
      ]
     },
     {
      "id": "zeldina",
      "script_name": "Zeldina",
      "pos": [
-      250,
-      160
+      375,
+      240
      ]
     }
    ],
@@ -4106,14 +4106,14 @@
      "script_name": "Torbogen",
      "name_key": "UI_OBJ_TORBOGEN",
      "rect": [
-      120,
-      40,
+      180,
       60,
-      100
+      90,
+      150
      ],
      "gehe": [
-      150,
-      152
+      225,
+      228
      ],
      "ansehen": [
       {
@@ -4138,14 +4138,14 @@
      "script_name": "Kritzelei",
      "name_key": "UI_OBJ_KRITZELEI",
      "rect": [
-      100,
-      100,
-      16,
-      14
+      150,
+      150,
+      24,
+      21
      ],
      "gehe": [
-      110,
-      154
+      165,
+      231
      ],
      "ansehen": [
       {
@@ -4186,14 +4186,14 @@
      "script_name": "Balkon",
      "name_key": "UI_OBJ_BALKON",
      "rect": [
-      230,
-      40,
-      70,
-      30
+      345,
+      60,
+      105,
+      45
      ],
      "gehe": [
-      270,
-      152
+      405,
+      228
      ],
      "ansehen": [
       {
@@ -4218,14 +4218,14 @@
      "script_name": "Spiegel",
      "name_key": "UI_OBJ_SPIEGEL",
      "rect": [
-      190,
-      70,
-      18,
-      30
+      285,
+      105,
+      27,
+      45
      ],
      "gehe": [
-      200,
-      152
+      300,
+      228
      ],
      "ansehen": [
       {
@@ -4252,13 +4252,13 @@
      "name_key": "UI_OBJ_WOLKEN",
      "rect": [
       0,
-      150,
-      320,
-      30
+      225,
+      480,
+      45
      ],
      "gehe": [
-      160,
-      160
+      240,
+      240
      ],
      "ansehen": [
       {
@@ -4287,14 +4287,14 @@
      "ziel": "dorfplatz",
      "name_key": "UI_OBJ_RANKENENDE",
      "rect": [
-      2,
-      60,
-      26,
-      80
+      3,
+      90,
+      39,
+      120
      ],
      "gehe": [
-      16,
-      160
+      24,
+      240
      ],
      "erreichbar_ab": "start",
      "ansehen": [
@@ -4344,37 +4344,37 @@
    "script_name": "Bergwerk",
    "name_key": "UI_RAUM_BERGWERK",
    "groesse": [
-    320,
-    180
+    480,
+    270
    ],
    "hintergrund": "res://grafik/platzhalter/raum_bergwerk.png",
    "farbe": "#4a3f3a",
    "laufbereich": [
     [
-     4,
-     140
+     6,
+     210
     ],
     [
-     316,
-     140
+     474,
+     210
     ],
     [
-     316,
-     178
+     474,
+     267
     ],
     [
-     4,
-     178
+     6,
+     267
     ]
    ],
    "marker": {
     "start": [
-     26,
-     160
+     39,
+     240
     ],
     "von_zauberwald": [
-     26,
-     160
+     39,
+     240
     ]
    },
    "figuren": [
@@ -4382,24 +4382,24 @@
      "id": "grimmzahn",
      "script_name": "Grimmzahn",
      "pos": [
-      180,
-      160
+      270,
+      240
      ]
     },
     {
      "id": "goblin_1",
      "script_name": "Goblin1",
      "pos": [
-      150,
-      158
+      225,
+      237
      ]
     },
     {
      "id": "goblin_2",
      "script_name": "Goblin2",
      "pos": [
-      214,
-      162
+      321,
+      243
      ]
     }
    ],
@@ -4409,14 +4409,14 @@
      "script_name": "Loren",
      "name_key": "UI_OBJ_LOREN",
      "rect": [
-      24,
-      116,
-      60,
-      24
+      36,
+      174,
+      90,
+      36
      ],
      "gehe": [
-      56,
-      156
+      84,
+      234
      ],
      "ansehen": [
       {
@@ -4450,14 +4450,14 @@
      "script_name": "Streikschilder",
      "name_key": "UI_OBJ_STREIKSCHILDER",
      "rect": [
-      100,
-      70,
-      50,
-      40
+      150,
+      105,
+      75,
+      60
      ],
      "gehe": [
-      124,
-      154
+      186,
+      231
      ],
      "ansehen": [
       {
@@ -4482,14 +4482,14 @@
      "script_name": "Streikposten",
      "name_key": "UI_OBJ_STREIKPOSTEN",
      "rect": [
-      96,
-      150,
-      140,
-      6
+      144,
+      225,
+      210,
+      9
      ],
      "gehe": [
-      120,
-      162
+      180,
+      243
      ],
      "ansehen": [
       {
@@ -4514,14 +4514,14 @@
      "script_name": "Kaffeemaschine",
      "name_key": "UI_OBJ_KAFFEEMASCHINE",
      "rect": [
-      160,
-      110,
-      20,
-      20
+      240,
+      165,
+      30,
+      30
      ],
      "gehe": [
-      168,
-      154
+      252,
+      231
      ],
      "ansehen": [
       {
@@ -4572,14 +4572,14 @@
      "script_name": "Fackeln",
      "name_key": "UI_OBJ_FACKELN",
      "rect": [
-      60,
-      30,
-      140,
-      16
+      90,
+      45,
+      210,
+      24
      ],
      "gehe": [
-      130,
-      154
+      195,
+      231
      ],
      "ansehen": [
       {
@@ -4627,14 +4627,14 @@
      "ziel": "zauberwald",
      "name_key": "UI_RAUM_ZAUBERWALD",
      "rect": [
-      2,
-      60,
-      18,
-      80
+      3,
+      90,
+      27,
+      120
      ],
      "gehe": [
-      12,
-      160
+      18,
+      240
      ],
      "erreichbar_ab": "R4",
      "ansehen": []
@@ -4645,14 +4645,14 @@
      "ziel": "turmkeller",
      "name_key": "UI_OBJ_RUNE_TUER",
      "rect": [
-      270,
-      60,
-      46,
-      80
+      405,
+      90,
+      69,
+      120
      ],
      "gehe": [
-      266,
-      158
+      399,
+      237
      ],
      "erreichbar_ab": "R10",
      "ansehen": [
@@ -4751,45 +4751,45 @@
    "script_name": "Turmkeller",
    "name_key": "UI_RAUM_TURMKELLER",
    "groesse": [
-    320,
-    180
+    480,
+    270
    ],
    "hintergrund": "res://grafik/platzhalter/raum_turmkeller.png",
    "farbe": "#3b2f4a",
    "laufbereich": [
     [
-     4,
-     140
+     6,
+     210
     ],
     [
-     316,
-     140
+     474,
+     210
     ],
     [
-     316,
-     178
+     474,
+     267
     ],
     [
-     4,
-     178
+     6,
+     267
     ]
    ],
    "marker": {
     "start": [
-     26,
-     160
+     39,
+     240
     ],
     "von_bergwerk": [
-     26,
-     160
+     39,
+     240
     ],
     "von_abstellkammer_1": [
-     250,
-     158
+     375,
+     237
     ],
     "von_abstellkammern": [
-     160,
-     150
+     240,
+     225
     ]
    },
    "figuren": [],
@@ -4799,14 +4799,14 @@
      "script_name": "GeradeRoute",
      "name_key": "UI_OBJ_GERADE_ROUTE",
      "rect": [
-      60,
-      160,
-      60,
-      8
+      90,
+      240,
+      90,
+      12
      ],
      "gehe": [
-      80,
-      156
+      120,
+      234
      ],
      "ansehen": [
       {
@@ -4831,14 +4831,14 @@
      "script_name": "ZickzackRoute",
      "name_key": "UI_OBJ_ZICKZACK_ROUTE",
      "rect": [
-      130,
-      162,
-      60,
-      8
+      195,
+      243,
+      90,
+      12
      ],
      "gehe": [
-      150,
-      156
+      225,
+      234
      ],
      "ansehen": [
       {
@@ -4863,14 +4863,14 @@
      "script_name": "SchleifenRoute",
      "name_key": "UI_OBJ_SCHLEIFEN_ROUTE",
      "rect": [
-      200,
-      160,
-      60,
-      8
+      300,
+      240,
+      90,
+      12
      ],
      "gehe": [
-      220,
-      156
+      330,
+      234
      ],
      "ansehen": [
       {
@@ -4895,14 +4895,14 @@
      "script_name": "Kreuzung1",
      "name_key": "UI_OBJ_KREUZUNG_1",
      "rect": [
-      92,
-      168,
-      10,
-      8
+      138,
+      252,
+      15,
+      12
      ],
      "gehe": [
-      96,
-      166
+      144,
+      249
      ],
      "ansehen": [
       {
@@ -4927,14 +4927,14 @@
      "script_name": "Kreuzung2",
      "name_key": "UI_OBJ_KREUZUNG_2",
      "rect": [
-      156,
-      168,
-      10,
-      8
+      234,
+      252,
+      15,
+      12
      ],
      "gehe": [
-      160,
-      166
+      240,
+      249
      ],
      "ansehen": []
     },
@@ -4943,14 +4943,14 @@
      "script_name": "Kreuzung3",
      "name_key": "UI_OBJ_KREUZUNG_3",
      "rect": [
-      224,
-      168,
-      10,
-      8
+      336,
+      252,
+      15,
+      12
      ],
      "gehe": [
-      228,
-      166
+      342,
+      249
      ],
      "ansehen": []
     },
@@ -4959,14 +4959,14 @@
      "script_name": "Besen",
      "name_key": "UI_OBJ_BESEN",
      "rect": [
-      100,
+      150,
+      180,
       120,
-      80,
-      20
+      30
      ],
      "gehe": [
-      140,
-      154
+      210,
+      231
      ],
      "ansehen": [
       {
@@ -5012,14 +5012,14 @@
      "ziel": "bergwerk",
      "name_key": "UI_OBJ_KELLERTREPPE",
      "rect": [
-      2,
-      60,
-      22,
-      80
+      3,
+      90,
+      33,
+      120
      ],
      "gehe": [
-      12,
-      160
+      18,
+      240
      ],
      "erreichbar_ab": "R4",
      "ansehen": [
@@ -5046,14 +5046,14 @@
      "ziel": "abstellkammer_1",
      "name_key": "UI_OBJ_KAMMERTUER",
      "rect": [
-      270,
-      70,
-      30,
-      70
+      405,
+      105,
+      45,
+      105
      ],
      "gehe": [
-      280,
-      156
+      420,
+      234
      ],
      "erreichbar_ab": "R11b",
      "ansehen": [
@@ -5080,14 +5080,14 @@
      "ziel": "abstellkammern",
      "name_key": "UI_OBJ_TREPPE_NACH_OBEN",
      "rect": [
-      146,
-      20,
+      219,
       30,
-      100
+      45,
+      150
      ],
      "gehe": [
-      160,
-      150
+      240,
+      225
      ],
      "erreichbar_ab": "R11b",
      "ansehen": [
@@ -5134,37 +5134,37 @@
    "script_name": "Abstellkammer1",
    "name_key": "UI_RAUM_ABSTELLKAMMER_1",
    "groesse": [
-    320,
-    180
+    480,
+    270
    ],
    "hintergrund": "res://grafik/platzhalter/raum_abstellkammer_1.png",
    "farbe": "#4a3f3a",
    "laufbereich": [
     [
-     4,
-     140
+     6,
+     210
     ],
     [
-     316,
-     140
+     474,
+     210
     ],
     [
-     316,
-     178
+     474,
+     267
     ],
     [
-     4,
-     178
+     6,
+     267
     ]
    ],
    "marker": {
     "start": [
-     290,
-     160
+     435,
+     240
     ],
     "von_turmkeller": [
-     290,
-     160
+     435,
+     240
     ]
    },
    "figuren": [],
@@ -5174,14 +5174,14 @@
      "script_name": "Besen",
      "name_key": "UI_OBJ_BESEN",
      "rect": [
-      80,
-      110,
-      80,
-      30
+      120,
+      165,
+      120,
+      45
      ],
      "gehe": [
-      120,
-      154
+      180,
+      231
      ],
      "ansehen": []
     },
@@ -5190,14 +5190,14 @@
      "script_name": "Kram",
      "name_key": "UI_OBJ_KRAM",
      "rect": [
-      180,
-      80,
-      80,
-      60
+      270,
+      120,
+      120,
+      90
      ],
      "gehe": [
-      220,
-      154
+      330,
+      231
      ],
      "ansehen": []
     }
@@ -5210,14 +5210,14 @@
      "ziel": "turmkeller",
      "name_key": "UI_OBJ_AUSGANG_TURMKELLER",
      "rect": [
-      298,
-      60,
-      20,
-      80
+      447,
+      90,
+      30,
+      120
      ],
      "gehe": [
-      304,
-      160
+      456,
+      240
      ],
      "erreichbar_ab": "R10",
      "ansehen": []
@@ -5230,45 +5230,45 @@
    "script_name": "Abstellkammern",
    "name_key": "UI_RAUM_ABSTELLKAMMERN",
    "groesse": [
-    320,
-    180
+    480,
+    270
    ],
    "hintergrund": "res://grafik/platzhalter/raum_abstellkammern.png",
    "farbe": "#5e4b3a",
    "laufbereich": [
     [
-     4,
-     140
+     6,
+     210
     ],
     [
-     316,
-     140
+     474,
+     210
     ],
     [
-     316,
-     178
+     474,
+     267
     ],
     [
-     4,
-     178
+     6,
+     267
     ]
    ],
    "marker": {
     "start": [
-     30,
-     160
+     45,
+     240
     ],
     "von_turmkeller": [
-     30,
-     160
+     45,
+     240
     ],
     "von_thronsaal": [
-     270,
-     150
+     405,
+     225
     ],
     "abnehmer": [
-     120,
-     162
+     180,
+     243
     ]
    },
    "figuren": [
@@ -5276,8 +5276,8 @@
      "id": "smaugi",
      "script_name": "Smaugi",
      "pos": [
-      180,
-      140
+      270,
+      210
      ]
     }
    ],
@@ -5287,14 +5287,14 @@
      "script_name": "DracheneiNest",
      "name_key": "UI_OBJ_DRACHENEI_NEST",
      "rect": [
-      200,
-      110,
-      20,
-      20
+      300,
+      165,
+      30,
+      30
      ],
      "gehe": [
-      200,
-      156
+      300,
+      234
      ],
      "ansehen": [
       {
@@ -5339,14 +5339,14 @@
      "script_name": "Goldhaufen",
      "name_key": "UI_OBJ_GOLDHAUFEN",
      "rect": [
-      140,
-      100,
-      50,
-      40
+      210,
+      150,
+      75,
+      60
      ],
      "gehe": [
-      160,
-      156
+      240,
+      234
      ],
      "ansehen": [
       {
@@ -5388,14 +5388,14 @@
      "script_name": "Okarina",
      "name_key": "UI_OBJ_OKARINA",
      "rect": [
-      40,
-      120,
-      10,
-      6
+      60,
+      180,
+      15,
+      9
      ],
      "gehe": [
-      46,
-      156
+      69,
+      234
      ],
      "ansehen": [
       {
@@ -5429,14 +5429,14 @@
      "script_name": "SchwertImStein",
      "name_key": "UI_OBJ_SCHWERT_IM_STEIN",
      "rect": [
-      60,
-      96,
-      14,
-      30
+      90,
+      144,
+      21,
+      45
      ],
      "gehe": [
-      66,
-      156
+      99,
+      234
      ],
      "ansehen": [
       {
@@ -5472,14 +5472,14 @@
      "script_name": "DekoKram",
      "name_key": "UI_OBJ_DEKO_KRAM",
      "rect": [
-      84,
-      110,
-      40,
-      30
+      126,
+      165,
+      60,
+      45
      ],
      "gehe": [
-      100,
-      156
+      150,
+      234
      ],
      "ansehen": [
       {
@@ -5504,14 +5504,14 @@
      "script_name": "Stapel",
      "name_key": "UI_OBJ_STAPEL",
      "rect": [
-      84,
-      120,
-      60,
-      20
+      126,
+      180,
+      90,
+      30
      ],
      "gehe": [
-      110,
-      156
+      165,
+      234
      ],
      "ansehen": [
       {
@@ -5552,14 +5552,14 @@
      "script_name": "Kronleuchter",
      "name_key": "UI_OBJ_KRONLEUCHTER",
      "rect": [
-      120,
-      10,
-      30,
-      24
+      180,
+      15,
+      45,
+      36
      ],
      "gehe": [
-      134,
-      154
+      201,
+      231
      ],
      "textur": "res://grafik/platzhalter/prop_kronleuchter.png",
      "gegenstand": "kronleuchter",
@@ -5587,14 +5587,14 @@
      "script_name": "SchwerterBuendel",
      "name_key": "UI_OBJ_SCHWERTER_BUENDEL",
      "rect": [
-      230,
-      120,
-      20,
-      20
+      345,
+      180,
+      30,
+      30
      ],
      "gehe": [
-      236,
-      156
+      354,
+      234
      ],
      "textur": "res://grafik/platzhalter/prop_schwerter_buendel.png",
      "gegenstand": "schwerter_buendel",
@@ -5622,14 +5622,14 @@
      "script_name": "FackelBuendel",
      "name_key": "UI_OBJ_FACKEL_BUENDEL",
      "rect": [
-      254,
-      120,
-      16,
-      20
+      381,
+      180,
+      24,
+      30
      ],
      "gehe": [
-      260,
-      156
+      390,
+      234
      ],
      "textur": "res://grafik/platzhalter/prop_fackel_buendel.png",
      "gegenstand": "fackel_buendel",
@@ -5660,14 +5660,14 @@
      "ziel": "turmkeller",
      "name_key": "UI_OBJ_WENDELTREPPE",
      "rect": [
-      2,
-      60,
-      20,
-      80
+      3,
+      90,
+      30,
+      120
      ],
      "gehe": [
-      12,
-      160
+      18,
+      240
      ],
      "erreichbar_ab": "R10",
      "ansehen": []
@@ -5678,14 +5678,14 @@
      "ziel": "thronsaal",
      "name_key": "UI_OBJ_GEHEIMTUER",
      "rect": [
-      280,
-      40,
-      36,
-      100
+      420,
+      60,
+      54,
+      150
      ],
      "gehe": [
-      290,
-      150
+      435,
+      225
      ],
      "erreichbar_ab": "R12",
      "ansehen": [
@@ -5763,37 +5763,37 @@
    "script_name": "Thronsaal",
    "name_key": "UI_RAUM_THRONSAAL",
    "groesse": [
-    320,
-    180
+    480,
+    270
    ],
    "hintergrund": "res://grafik/platzhalter/raum_thronsaal.png",
    "farbe": "#2e2440",
    "laufbereich": [
     [
-     4,
-     140
+     6,
+     210
     ],
     [
-     316,
-     140
+     474,
+     210
     ],
     [
-     316,
-     178
+     474,
+     267
     ],
     [
-     4,
-     178
+     6,
+     267
     ]
    ],
    "marker": {
     "start": [
-     30,
-     160
+     45,
+     240
     ],
     "von_abstellkammern": [
-     30,
-     160
+     45,
+     240
     ]
    },
    "figuren": [
@@ -5801,8 +5801,8 @@
      "id": "moderwort",
      "script_name": "Moderwort",
      "pos": [
-      200,
-      150
+      300,
+      225
      ]
     }
    ],
@@ -5812,14 +5812,14 @@
      "script_name": "Thron",
      "name_key": "UI_OBJ_THRON",
      "rect": [
-      180,
-      60,
-      60,
-      80
+      270,
+      90,
+      90,
+      120
      ],
      "gehe": [
-      200,
-      156
+      300,
+      234
      ],
      "ansehen": [
       {
@@ -5844,14 +5844,14 @@
      "script_name": "Taschentuchstapel",
      "name_key": "UI_OBJ_TASCHENTUCHSTAPEL",
      "rect": [
-      250,
-      120,
-      24,
-      20
+      375,
+      180,
+      36,
+      30
      ],
      "gehe": [
-      256,
-      156
+      384,
+      234
      ],
      "ansehen": [
       {
@@ -5876,14 +5876,14 @@
      "script_name": "Blumenvasen",
      "name_key": "UI_OBJ_BLUMENVASEN",
      "rect": [
-      90,
-      110,
-      30,
-      30
+      135,
+      165,
+      45,
+      45
      ],
      "gehe": [
-      104,
-      156
+      156,
+      234
      ],
      "ansehen": [
       {
@@ -5908,14 +5908,14 @@
      "script_name": "Lerntagebuch",
      "name_key": "UI_OBJ_LERNTAGEBUCH",
      "rect": [
-      130,
-      126,
-      16,
-      10
+      195,
+      189,
+      24,
+      15
      ],
      "gehe": [
-      136,
-      156
+      204,
+      234
      ],
      "ansehen": [
       {
@@ -5957,14 +5957,14 @@
      "script_name": "Fenster",
      "name_key": "UI_OBJ_FENSTER",
      "rect": [
-      120,
-      10,
-      60,
-      40
+      180,
+      15,
+      90,
+      60
      ],
      "gehe": [
-      150,
-      152
+      225,
+      228
      ],
      "ansehen": [
       {
@@ -5993,14 +5993,14 @@
      "ziel": "abstellkammern",
      "name_key": "UI_OBJ_AUSGANG_ABSTELLKAMMERN",
      "rect": [
-      2,
-      60,
-      20,
-      80
+      3,
+      90,
+      30,
+      120
      ],
      "gehe": [
-      12,
-      160
+      18,
+      240
      ],
      "erreichbar_ab": "R11b",
      "ansehen": []
@@ -6031,7 +6031,7 @@
    "script_name": "Max",
    "kuerzel": "MAX",
    "name_key": "UI_OBJ_MAX",
-   "groesse_px": 56,
+   "groesse_px": 84,
    "spielbar": true,
    "textfarbe": "#ffffff",
    "sprite": "res://grafik/platzhalter/figur_max.png",
@@ -6063,7 +6063,7 @@
    "script_name": "Pixel",
    "kuerzel": "PIX",
    "name_key": "UI_OBJ_PIXEL",
-   "groesse_px": 18,
+   "groesse_px": 27,
    "spielbar": true,
    "textfarbe": "#5fd3c8",
    "sprite": "res://grafik/platzhalter/figur_pixel.png",
@@ -6095,7 +6095,7 @@
    "script_name": "Toadi",
    "kuerzel": "TOA",
    "name_key": "UI_OBJ_TOADI",
-   "groesse_px": 30,
+   "groesse_px": 45,
    "spielbar": false,
    "textfarbe": "#ffffff",
    "sprite": "res://grafik/platzhalter/figur_toadi.png",
@@ -6145,7 +6145,7 @@
    "script_name": "Alwin",
    "kuerzel": "ALW",
    "name_key": "UI_OBJ_ALWIN",
-   "groesse_px": 62,
+   "groesse_px": 93,
    "spielbar": false,
    "textfarbe": "#ffffff",
    "sprite": "res://grafik/platzhalter/figur_alwin.png",
@@ -6182,7 +6182,7 @@
    "script_name": "Zeldina",
    "kuerzel": "ZEL",
    "name_key": "UI_OBJ_ZELDINA",
-   "groesse_px": 58,
+   "groesse_px": 87,
    "spielbar": false,
    "textfarbe": "#ffffff",
    "sprite": "res://grafik/platzhalter/figur_zeldina.png",
@@ -6270,7 +6270,7 @@
    "script_name": "Gollo",
    "kuerzel": "GOL",
    "name_key": "UI_OBJ_GOLLO",
-   "groesse_px": 44,
+   "groesse_px": 66,
    "spielbar": false,
    "textfarbe": "#ffffff",
    "sprite": "res://grafik/platzhalter/figur_gollo.png",
@@ -6307,7 +6307,7 @@
    "script_name": "Humbert",
    "kuerzel": "HUM",
    "name_key": "UI_OBJ_HUMBERT",
-   "groesse_px": 60,
+   "groesse_px": 90,
    "spielbar": false,
    "textfarbe": "#ffffff",
    "sprite": "res://grafik/platzhalter/figur_humbert.png",
@@ -6365,7 +6365,7 @@
    "script_name": "Schmied",
    "kuerzel": "SCH",
    "name_key": "UI_OBJ_SCHMIED",
-   "groesse_px": 60,
+   "groesse_px": 90,
    "spielbar": false,
    "textfarbe": "#ffffff",
    "sprite": "res://grafik/platzhalter/figur_schmied.png",
@@ -6411,7 +6411,7 @@
    "script_name": "Waldemar",
    "kuerzel": "WAL",
    "name_key": "UI_OBJ_WALDEMAR",
-   "groesse_px": 80,
+   "groesse_px": 120,
    "spielbar": false,
    "textfarbe": "#ffffff",
    "sprite": "res://grafik/platzhalter/figur_waldemar.png",
@@ -6467,7 +6467,7 @@
    "script_name": "Stabmacher",
    "kuerzel": "STA",
    "name_key": "UI_OBJ_STABMACHER",
-   "groesse_px": 58,
+   "groesse_px": 87,
    "spielbar": false,
    "textfarbe": "#ffffff",
    "sprite": "res://grafik/platzhalter/figur_stabmacher.png",
@@ -6513,7 +6513,7 @@
    "script_name": "Rotkaeppchen",
    "kuerzel": "ROT",
    "name_key": "UI_OBJ_ROTKAEPPCHEN",
-   "groesse_px": 48,
+   "groesse_px": 72,
    "spielbar": false,
    "textfarbe": "#ffffff",
    "sprite": "res://grafik/platzhalter/figur_rotkaeppchen.png",
@@ -6560,7 +6560,7 @@
    "script_name": "Maklerin",
    "kuerzel": "MAK",
    "name_key": "UI_OBJ_MAKLERIN",
-   "groesse_px": 60,
+   "groesse_px": 90,
    "spielbar": false,
    "textfarbe": "#ffffff",
    "sprite": "res://grafik/platzhalter/figur_maklerin.png",
@@ -6606,7 +6606,7 @@
    "script_name": "Grimmzahn",
    "kuerzel": "GRI",
    "name_key": "UI_OBJ_GRIMMZAHN",
-   "groesse_px": 40,
+   "groesse_px": 60,
    "spielbar": false,
    "textfarbe": "#ffffff",
    "sprite": "res://grafik/platzhalter/figur_grimmzahn.png",
@@ -6709,7 +6709,7 @@
    "script_name": "Goblin1",
    "kuerzel": "GO1",
    "name_key": "UI_OBJ_GOBLIN_1",
-   "groesse_px": 34,
+   "groesse_px": 51,
    "spielbar": false,
    "textfarbe": "#ffffff",
    "sprite": "res://grafik/platzhalter/figur_goblin_1.png",
@@ -6755,7 +6755,7 @@
    "script_name": "Goblin2",
    "kuerzel": "GO2",
    "name_key": "UI_OBJ_GOBLIN_2",
-   "groesse_px": 34,
+   "groesse_px": 51,
    "spielbar": false,
    "textfarbe": "#ffffff",
    "sprite": "res://grafik/platzhalter/figur_goblin_2.png",
@@ -6820,7 +6820,7 @@
    "script_name": "Moderwort",
    "kuerzel": "MOD",
    "name_key": "UI_OBJ_MODERWORT",
-   "groesse_px": 60,
+   "groesse_px": 90,
    "spielbar": false,
    "textfarbe": "#ffffff",
    "sprite": "res://grafik/platzhalter/figur_moderwort.png",
@@ -6934,7 +6934,7 @@
    "script_name": "Smaugi",
    "kuerzel": "SMA",
    "name_key": "UI_OBJ_SMAUGI",
-   "groesse_px": 120,
+   "groesse_px": 180,
    "spielbar": false,
    "textfarbe": "#ffffff",
    "sprite": "res://grafik/platzhalter/figur_smaugi.png",
@@ -6990,7 +6990,7 @@
    "script_name": "Minka",
    "kuerzel": "MIN",
    "name_key": "UI_OBJ_MINKA",
-   "groesse_px": 18,
+   "groesse_px": 27,
    "spielbar": false,
    "textfarbe": "#ffffff",
    "sprite": "res://grafik/platzhalter/figur_minka.png",
@@ -7036,7 +7036,7 @@
    "script_name": "Huhn",
    "kuerzel": "HUH",
    "name_key": "UI_OBJ_HUHN",
-   "groesse_px": 14,
+   "groesse_px": 21,
    "spielbar": false,
    "textfarbe": "#ffffff",
    "sprite": "res://grafik/platzhalter/figur_huhn.png",
@@ -7092,7 +7092,7 @@
    "script_name": "SchmiedeZiege",
    "kuerzel": "ZIE",
    "name_key": "UI_OBJ_SCHMIEDE_ZIEGE",
-   "groesse_px": 28,
+   "groesse_px": 42,
    "spielbar": false,
    "textfarbe": "#ffffff",
    "sprite": "res://grafik/platzhalter/figur_schmiede_ziege.png",
@@ -7169,7 +7169,7 @@
    "script_name": "XxlZiege",
    "kuerzel": "XXL",
    "name_key": "UI_OBJ_XXL_ZIEGE",
-   "groesse_px": 70,
+   "groesse_px": 105,
    "spielbar": false,
    "textfarbe": "#ffffff",
    "sprite": "res://grafik/platzhalter/figur_xxl_ziege.png",
@@ -7208,7 +7208,7 @@
    "script_name": "Schwan",
    "kuerzel": "SWA",
    "name_key": "UI_OBJ_SCHWAN",
-   "groesse_px": 24,
+   "groesse_px": 36,
    "spielbar": false,
    "textfarbe": "#ffffff",
    "sprite": "res://grafik/platzhalter/figur_schwan.png",
@@ -8172,6 +8172,22 @@
         "W1_DORF_TOA_0520"
        ],
        "regie": "hüpft nervös"
+      },
+      {
+       "zeile": "W1_DORF_MAX_0521",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_DORF_MAX_0521"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W1_DORF_TOA_0522",
+       "sprecher": "TOA",
+       "blasen": [
+        "W1_DORF_TOA_0522"
+       ],
+       "regie": "flüstert"
       }
      ],
      "beendet": false,
@@ -8188,6 +8204,22 @@
         "W1_DORF_TOA_0540"
        ],
        "regie": ""
+      },
+      {
+       "zeile": "W1_DORF_MAX_0541",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_DORF_MAX_0541"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W1_DORF_TOA_0542",
+       "sprecher": "TOA",
+       "blasen": [
+        "W1_DORF_TOA_0542"
+       ],
+       "regie": ""
       }
      ],
      "beendet": false,
@@ -8202,6 +8234,22 @@
        "sprecher": "TOA",
        "blasen": [
         "W1_DORF_TOA_0560"
+       ],
+       "regie": "Hinweis R5"
+      },
+      {
+       "zeile": "W1_DORF_MAX_0561",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_DORF_MAX_0561"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W1_DORF_TOA_0562",
+       "sprecher": "TOA",
+       "blasen": [
+        "W1_DORF_TOA_0562"
        ],
        "regie": "Hinweis R5"
       }
@@ -8284,6 +8332,22 @@
         "W1_TAV_HUM_0520"
        ],
        "regie": "stolz"
+      },
+      {
+       "zeile": "W1_TAV_MAX_0521",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_TAV_MAX_0521"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W1_TAV_HUM_0522",
+       "sprecher": "HUM",
+       "blasen": [
+        "W1_TAV_HUM_0522"
+       ],
+       "regie": "Hinweis R1a"
       }
      ],
      "beendet": false,
@@ -8332,6 +8396,22 @@
         "W1_TAV_HUM_0580"
        ],
        "regie": "Hinweis R1b; schaltet Option 0590 frei"
+      },
+      {
+       "zeile": "W1_TAV_MAX_0581",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_TAV_MAX_0581"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W1_TAV_HUM_0582",
+       "sprecher": "HUM",
+       "blasen": [
+        "W1_TAV_HUM_0582"
+       ],
+       "regie": ""
       }
      ],
      "beendet": false,
@@ -8378,6 +8458,22 @@
         "W1_TAV_HUM_0630"
        ],
        "regie": "schüttelt sich"
+      },
+      {
+       "zeile": "W1_TAV_MAX_0631",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_TAV_MAX_0631"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W1_TAV_HUM_0632",
+       "sprecher": "HUM",
+       "blasen": [
+        "W1_TAV_HUM_0632"
+       ],
+       "regie": ""
       }
      ],
      "beendet": false,
@@ -8426,6 +8522,22 @@
         "W1_TAV_GOL_0720"
        ],
        "regie": "drückt das Kästchen an sich"
+      },
+      {
+       "zeile": "W1_TAV_MAX_0721",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_TAV_MAX_0721"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W1_TAV_GOL_0722",
+       "sprecher": "GOL",
+       "blasen": [
+        "W1_TAV_GOL_0722"
+       ],
+       "regie": "flüstert"
       }
      ],
      "beendet": false,
@@ -8522,6 +8634,22 @@
         "W1_SCHM_SCH_0220"
        ],
        "regie": "seufzt"
+      },
+      {
+       "zeile": "W1_SCHM_MAX_0221",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_SCHM_MAX_0221"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W1_SCHM_SCH_0222",
+       "sprecher": "SCH",
+       "blasen": [
+        "W1_SCHM_SCH_0222"
+       ],
+       "regie": ""
       }
      ],
      "beendet": false,
@@ -8635,6 +8763,22 @@
         "W1_STAB_STA_0220_2"
        ],
        "regie": "beugt sich vor"
+      },
+      {
+       "zeile": "W1_STAB_MAX_0221",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_STAB_MAX_0221"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W1_STAB_STA_0222",
+       "sprecher": "STA",
+       "blasen": [
+        "W1_STAB_STA_0222"
+       ],
+       "regie": "tätschelt das Kissen"
       }
      ],
      "beendet": false,
@@ -8682,6 +8826,22 @@
        "sprecher": "STA",
        "blasen": [
         "W1_STAB_STA_0280"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W1_STAB_MAX_0281",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_STAB_MAX_0281"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W1_STAB_STA_0282",
+       "sprecher": "STA",
+       "blasen": [
+        "W1_STAB_STA_0282"
        ],
        "regie": ""
       }
@@ -8748,6 +8908,22 @@
         "W1_HOGG_ALW_0340"
        ],
        "regie": ""
+      },
+      {
+       "zeile": "W1_HOGG_MAX_0341",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_HOGG_MAX_0341"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W1_HOGG_ALW_0342",
+       "sprecher": "ALW",
+       "blasen": [
+        "W1_HOGG_ALW_0342"
+       ],
+       "regie": "Hinweis R6, Teil 1"
       }
      ],
      "beendet": false,
@@ -8804,6 +8980,22 @@
         "W1_HOGG_ALW_0400_2"
        ],
        "regie": "Hinweis auf das Zeugnis"
+      },
+      {
+       "zeile": "W1_HOGG_MAX_0401",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_HOGG_MAX_0401"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W1_HOGG_ALW_0402",
+       "sprecher": "ALW",
+       "blasen": [
+        "W1_HOGG_ALW_0402"
+       ],
+       "regie": "putzt die Brille"
       }
      ],
      "beendet": false,
@@ -8868,6 +9060,22 @@
         "W1_BRUE_WAL_0220"
        ],
        "regie": "tippt aufs Regelbuch"
+      },
+      {
+       "zeile": "W1_BRUE_MAX_0221",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_BRUE_MAX_0221"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W1_BRUE_WAL_0222",
+       "sprecher": "WAL",
+       "blasen": [
+        "W1_BRUE_WAL_0222"
+       ],
+       "regie": "macht sich breit"
       }
      ],
      "beendet": false,
@@ -8902,6 +9110,22 @@
         "W1_BRUE_WAL_0260_2"
        ],
        "regie": "Fliege zittert"
+      },
+      {
+       "zeile": "W1_BRUE_MAX_0261",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_BRUE_MAX_0261"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W1_BRUE_WAL_0262",
+       "sprecher": "WAL",
+       "blasen": [
+        "W1_BRUE_WAL_0262"
+       ],
+       "regie": "flüstert"
       }
      ],
      "beendet": false,
@@ -8994,6 +9218,22 @@
         "W1_WALD_ROT_0220"
        ],
        "regie": "zählt an den Fingern"
+      },
+      {
+       "zeile": "W1_WALD_MAX_0221",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_WALD_MAX_0221"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W1_WALD_ROT_0222",
+       "sprecher": "ROT",
+       "blasen": [
+        "W1_WALD_ROT_0222"
+       ],
+       "regie": "zuckt mit den Schultern"
       }
      ],
      "beendet": false,
@@ -9010,6 +9250,22 @@
         "W1_WALD_ROT_0240"
        ],
        "regie": "gibt den Ketchup frei"
+      },
+      {
+       "zeile": "W1_WALD_MAX_0241",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_WALD_MAX_0241"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W1_WALD_ROT_0242",
+       "sprecher": "ROT",
+       "blasen": [
+        "W1_WALD_ROT_0242"
+       ],
+       "regie": "Hinweis R10"
       }
      ],
      "beendet": false,
@@ -9040,6 +9296,22 @@
        "sprecher": "ROT",
        "blasen": [
         "W1_WALD_ROT_0280"
+       ],
+       "regie": "Hinweis R7"
+      },
+      {
+       "zeile": "W1_WALD_MAX_0281",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_WALD_MAX_0281"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W1_WALD_ROT_0282",
+       "sprecher": "ROT",
+       "blasen": [
+        "W1_WALD_ROT_0282"
        ],
        "regie": "Hinweis R7"
       }
@@ -9219,6 +9491,22 @@
         "W1_LUFT_ZEL_0740"
        ],
        "regie": "Hinweis R12"
+      },
+      {
+       "zeile": "W1_LUFT_MAX_0741",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_LUFT_MAX_0741"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W1_LUFT_ZEL_0742",
+       "sprecher": "ZEL",
+       "blasen": [
+        "W1_LUFT_ZEL_0742"
+       ],
+       "regie": ""
       }
      ],
      "beendet": false,
@@ -9517,6 +9805,22 @@
         "W1_BERG_GRI_0320_2"
        ],
        "regie": "hält die Hand hoch"
+      },
+      {
+       "zeile": "W1_BERG_MAX_0321",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_BERG_MAX_0321"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W1_BERG_GRI_0322",
+       "sprecher": "GRI",
+       "blasen": [
+        "W1_BERG_GRI_0322"
+       ],
+       "regie": "spuckt aus"
       }
      ],
      "beendet": false,
@@ -9661,6 +9965,22 @@
        "blasen": [
         "W1_SMAU_SMA_0340",
         "W1_SMAU_SMA_0340_2"
+       ],
+       "regie": "Hinweis R12"
+      },
+      {
+       "zeile": "W1_SMAU_MAX_0341",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_SMAU_MAX_0341"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W1_SMAU_SMA_0342",
+       "sprecher": "SMA",
+       "blasen": [
+        "W1_SMAU_SMA_0342"
        ],
        "regie": "Hinweis R12"
       }

@@ -7,9 +7,9 @@ script = ExtResource("1_crf4f")
 script_name = "Balkon"
 description = "Balkon"
 cursor = 1
-interaction_polygon = PackedVector2Array(-35, -15, 35, -15, 35, 15, -35, 15)
+interaction_polygon = PackedVector2Array(-53, -23, 53, -23, 53, 23, -53, 23)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=2083120705]
 visible = false
 modulate = Color(1, 0, 1, 1)
-polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+polygon = PackedVector2Array(-18, -18, 18, -18, 18, 18, -18, 18)

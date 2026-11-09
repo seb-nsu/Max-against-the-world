@@ -7,9 +7,9 @@ script = ExtResource("1_pciki")
 script_name = "Thron"
 description = "Thron"
 cursor = 1
-interaction_polygon = PackedVector2Array(-30, -40, 30, -40, 30, 40, -30, 40)
+interaction_polygon = PackedVector2Array(-45, -60, 45, -60, 45, 60, -45, 60)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=745797861]
 visible = false
 modulate = Color(1, 0, 1, 1)
-polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+polygon = PackedVector2Array(-18, -18, 18, -18, 18, 18, -18, 18)

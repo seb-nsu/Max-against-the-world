@@ -14,6 +14,8 @@ extends Node
 signal zeile_gesagt(schluessel: String)
 signal prolog_beendet
 signal figur_gewechselt(neu: PopochiuCharacter)
+## Eine Ersatzzeile kam (Telemetrie: Ersatzzeilen und Fehlklicks je Objekt)
+signal ersatz_gesagt(kuerzel: String, zeile: String)
 
 ## Sprecherkürzel der Welt-Tabellen → Popochiu-Figur
 const KUERZEL := {"MAX": "Max", "PIX": "Pixel", "OPA": "Opa"}
@@ -22,6 +24,7 @@ const ZURUF_NACH := 45.0
 const HUD := preload("res://oberflaeche/hud.tscn")
 const NAHANSICHT := preload("res://oberflaeche/nahansicht.tscn")
 const NOTIZBUCH := preload("res://oberflaeche/notizbuch.tscn")
+const REISETASCHE := preload("res://oberflaeche/reisetasche.tscn")
 
 var testmodus := false
 ## Alle gesagten Sprechblasen-Schlüssel in Reihenfolge (für Tests und Telemetrie)
@@ -36,6 +39,8 @@ var herkunft_raum := ""
 
 ## Vorgegebene Antworten für auswahl() (Tests): Index je Auswahl, der Reihe nach verbraucht
 var vorgabe_auswahl: Array = []
+## Vorgaben für das Packen der Reisetasche (Tests): Gegenstände, die der Reihe nach berührt werden
+var vorgabe_tasche: Array = []
 
 var hud: CanvasLayer
 var _letzte_ersatz := {}
@@ -175,7 +180,7 @@ func _objekt_sagt(kuerzel: String, quelle: PopochiuClickable, text: String) -> v
 		stimme.clickable = false
 		stimme.modulate.a = 0.0
 		stimme.text_color = OBJEKTSTIMME_FARBE
-		stimme.dialog_pos = Vector2(0, -4)
+		stimme.dialog_pos = Vector2(0, -6)
 		_objektstimmen[kuerzel] = stimme
 	var oben := 0.0
 	for p in quelle.interaction_polygon:
@@ -205,7 +210,7 @@ func z(kuerzel: String, zeile: String) -> Callable:
 func _stimme_aus_dem_off(c: PopochiuCharacter, an: bool) -> void:
 	if an:
 		R.current.add_character(c)
-		c.position = Vector2(E.width / 2.0, 70)
+		c.position = Vector2(E.width / 2.0, 105)
 		c.modulate.a = 0.0
 		c.clickable = false
 	else:
@@ -237,6 +242,7 @@ func ersatz(kuerzel := "") -> void:
 	while pool.size() > 1 and wahl == _letzte_ersatz.get(kuerzel, ""):
 		wahl = pool.pick_random()
 	_letzte_ersatz[kuerzel] = wahl
+	ersatz_gesagt.emit(kuerzel, wahl)
 	await sagen(kuerzel, wahl)
 
 
@@ -540,6 +546,30 @@ func notizbuch_oeffnen() -> void:
 	in_szene -= 1
 
 
+## Reisetasche packen (Zwischenspiele): Überlagerung, bis „Fertig gepackt“ gedrückt ist, dann
+## übernimmt CQReisetasche die Auswahl. Mit Vorgaben (Tests) oder im Testmodus werden die
+## Vorgaben ohne Überlagerung der Reihe nach berührt.
+func reisetasche_packen(nr: int) -> void:
+	var t := CQReisetasche.new(nr)
+	in_szene += 1
+	if testmodus or not vorgabe_tasche.is_empty():
+		for sn in vorgabe_tasche:
+			await t.beruehren(sn)
+		vorgabe_tasche.clear()
+	else:
+		G.block()
+		hud.visible = false  # Porträts und Pfote lägen über dem Fenster
+		var n := REISETASCHE.instantiate()
+		add_child(n)
+		n.zeigen(t)
+		await n.geschlossen
+		n.queue_free()
+		hud.visible = true
+		G.unblock()
+	await t.bestaetigen()
+	in_szene -= 1
+
+
 ## Kurze Meldung unten im Bild (Schlüssel aus ui.csv).
 func melden(schluessel: String) -> void:
 	if is_instance_valid(hud):
@@ -604,11 +634,14 @@ func prolog_beenden() -> void:
 
 
 ## Wechsel in einen neuen Abschnitt. Mit reist nur, was die Welt-Tabelle des Ziels als
-## mitgebracht führt (herkunft = früherer Abschnitt), dazu die Reisetasche selbst; der
+## mitgebracht führt (herkunft = früherer Abschnitt), dazu die Reisetasche selbst, das Pflichtfach
+## und die Wahlfächer aus dem letzten Zwischenspiel (Wert TASCHE); der
 ## Dosenöffner bleibt auf dem Dachboden (raetsel/prolog-und-welt-1.md, Was auf dem Dachboden
 ## bleibt). Der erste Raum ist der erste Raum der Welt-Tabelle.
 func welt_beginnen(ab: String) -> void:
 	var mit := ["Reisetasche", PIXEL_FELD]
+	mit.append_array(CQReisetasche.PFLICHT)
+	mit.append_array(Zustand.wert("TASCHE", []))
 	for g in Bauplan.welten.get(ab, {}).get("gegenstaende", []):
 		if g.get("herkunft", "") in Bauplan.welten.keys():
 			mit.append(Bauplan.gegenstand_script_name(g.id))
@@ -641,10 +674,14 @@ func zwischenspiel_beginnen(nr: int) -> void:
 ## Inline-Dialog mit den übersetzten Texten, liefert den Index. Tests geben die Antwort über
 ## vorgabe_auswahl vor.
 func auswahl(texte: Array) -> int:
+	var index := -1
 	if not vorgabe_auswahl.is_empty():
-		return int(vorgabe_auswahl.pop_front())
-	var opt: PopochiuDialogOption = await D.show_inline_dialog(texte.map(func(t): return tr(t)))
-	return int(opt.id) if is_instance_valid(opt) else -1
+		index = int(vorgabe_auswahl.pop_front())
+	else:
+		var opt: PopochiuDialogOption = await D.show_inline_dialog(texte.map(func(t): return tr(t)))
+		index = int(opt.id) if is_instance_valid(opt) else -1
+	Telemetrie.auswahl(str(texte[index]) if index >= 0 and index < texte.size() else "", index)
+	return index
 
 
 ## Ende des gebauten Teils (Graubox-Ausbaustand): Meldung, das Spiel läuft weiter.

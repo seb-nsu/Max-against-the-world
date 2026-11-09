@@ -7,9 +7,9 @@ script = ExtResource("1_qvbxn")
 script_name = "Kellertreppe"
 description = "Kellertreppe"
 cursor = 1
-interaction_polygon = PackedVector2Array(-11, -40, 11, -40, 11, 40, -11, 40)
+interaction_polygon = PackedVector2Array(-17, -60, 17, -60, 17, 60, -17, 60)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1173577546]
 visible = false
 modulate = Color(1, 0, 1, 1)
-polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+polygon = PackedVector2Array(-18, -18, 18, -18, 18, 18, -18, 18)

@@ -7,9 +7,9 @@ script = ExtResource("1_uadk0")
 script_name = "Schilf"
 description = "Schilf"
 cursor = 1
-interaction_polygon = PackedVector2Array(-15, -15, 15, -15, 15, 15, -15, 15)
+interaction_polygon = PackedVector2Array(-23, -23, 23, -23, 23, 23, -23, 23)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=865782856]
 visible = false
 modulate = Color(1, 0, 1, 1)
-polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+polygon = PackedVector2Array(-18, -18, 18, -18, 18, 18, -18, 18)

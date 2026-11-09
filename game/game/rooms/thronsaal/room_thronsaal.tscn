@@ -17,58 +17,58 @@
 [node name="RoomThronsaal" type="Node2D" unique_id=1123926160]
 script = ExtResource("1_47dtf")
 script_name = "Thronsaal"
-width = 320
-height = 180
+width = 480
+height = 270
 
 [node name="WalkableAreas" type="Node2D" parent="." unique_id=1977228103]
 
 [node name="Boden" parent="WalkableAreas" unique_id=974352136 instance=ExtResource("2_ynqpu")]
-interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(4, 140, 316, 140, 316, 178, 4, 178)])
+interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(6, 210, 474, 210, 474, 267, 6, 267)])
 
 [node name="Props" type="Node2D" parent="." unique_id=569534150]
 
 [node name="Background" parent="Props" unique_id=473056377 instance=ExtResource("3_aavy4")]
-position = Vector2(160, 90)
+position = Vector2(240, 135)
 texture = ExtResource("4_lqc0j")
 description = "UI_RAUM_THRONSAAL"
 
 [node name="Hotspots" type="Node2D" parent="." unique_id=220026710]
 
 [node name="Thron" parent="Hotspots" unique_id=122594816 instance=ExtResource("5_1ic08")]
-position = Vector2(210, 100)
+position = Vector2(315, 150)
 description = "UI_OBJ_THRON"
-baseline = 40
-walk_to_point = Vector2(-10, 56)
+baseline = 60
+walk_to_point = Vector2(-15, 84)
 
 [node name="Taschentuchstapel" parent="Hotspots" unique_id=207081006 instance=ExtResource("6_ejnri")]
-position = Vector2(262, 130)
+position = Vector2(393, 195)
 description = "UI_OBJ_TASCHENTUCHSTAPEL"
-baseline = 10
-walk_to_point = Vector2(-6, 26)
+baseline = 15
+walk_to_point = Vector2(-9, 39)
 
 [node name="Blumenvasen" parent="Hotspots" unique_id=1732873763 instance=ExtResource("7_3eyad")]
-position = Vector2(105, 125)
+position = Vector2(158, 188)
 description = "UI_OBJ_BLUMENVASEN"
-baseline = 15
-walk_to_point = Vector2(-1, 31)
+baseline = 23
+walk_to_point = Vector2(-2, 47)
 
 [node name="Lerntagebuch" parent="Hotspots" unique_id=354739942 instance=ExtResource("8_wm0ci")]
-position = Vector2(138, 131)
+position = Vector2(207, 197)
 description = "UI_OBJ_LERNTAGEBUCH"
-baseline = 5
-walk_to_point = Vector2(-2, 25)
+baseline = 8
+walk_to_point = Vector2(-3, 38)
 
 [node name="Fenster" parent="Hotspots" unique_id=1987414595 instance=ExtResource("9_qpfw0")]
-position = Vector2(150, 30)
+position = Vector2(225, 45)
 description = "UI_OBJ_FENSTER"
-baseline = 20
-walk_to_point = Vector2(0, 122)
+baseline = 30
+walk_to_point = Vector2(0, 183)
 
 [node name="AusgangAbstellkammern" parent="Hotspots" unique_id=2006339862 instance=ExtResource("10_a3e6v")]
-position = Vector2(12, 100)
+position = Vector2(18, 150)
 description = "UI_OBJ_AUSGANG_ABSTELLKAMMERN"
-baseline = 40
-walk_to_point = Vector2(0, 60)
+baseline = 60
+walk_to_point = Vector2(0, 90)
 cursor = 9
 
 [node name="Regions" type="Node2D" parent="." unique_id=1948872092]
@@ -76,12 +76,12 @@ cursor = 9
 [node name="Markers" type="Node2D" parent="." unique_id=1906300920]
 
 [node name="Start" parent="Markers" unique_id=1606568816 instance=ExtResource("11_vmowt")]
-position = Vector2(30, 160)
+position = Vector2(45, 240)
 
 [node name="VonAbstellkammern" parent="Markers" unique_id=1586908301 instance=ExtResource("12_ptv2g")]
-position = Vector2(30, 160)
+position = Vector2(45, 240)
 
 [node name="Characters" type="Node2D" parent="." unique_id=419324263]
 
 [node name="CharacterModerwort *" parent="Characters" unique_id=1446034948 instance=ExtResource("13_gvc06")]
-position = Vector2(200, 150)
+position = Vector2(300, 225)

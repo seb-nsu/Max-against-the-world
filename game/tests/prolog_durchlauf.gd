@@ -12,9 +12,15 @@ extends SceneTree
 ## Läuft im Testmodus (Spiel.testmodus): Zeilen werden nur protokolliert, nicht als Sprechblase
 ## gezeigt, Wege werden nicht gelaufen, Nahansicht und Notizbuch öffnen sich nicht. Raumwechsel,
 ## Übergänge, Popochius Speichern/Laden und das Inventar laufen echt.
+##
+## Telemetrie (A9): Der Test schaltet den Testbuild ein, stimmt zu und prüft am Ende die
+## Ereignisse im Protokoll (user://test_telemetrie/<prozess>/<sitzung>.jsonl).
 
 const STARTRAUM := "res://game/rooms/wohnzimmer/room_wohnzimmer.tscn"
 const SLOT := 1
+## Eigene Unterordner je Testlauf (Prozess-ID), damit zwei Läufe gleichzeitig sich nicht die
+## Spielstände und Protokolle löschen
+var telemetrie_ordner := "user://test_telemetrie/%d/" % OS.get_process_id()
 
 var fehler: Array[String] = []
 var _pruefungen := 0
@@ -40,11 +46,13 @@ func _lauf() -> void:
 		node_added.connect(_ueberlagerung_schliessen)
 		# Systemtexte (Sprecher ohne Figur: Brunnen, Spiegel, Geheimtür) warten ebenfalls auf einen Klick.
 		root.get_node("G").system_text_shown.connect(_systemtext_schliessen)
-	CQSaveLoad.ordner = "user://test_saves/"
+	CQSaveLoad.ordner = "user://test_saves/%d/" % OS.get_process_id()
 	_ordner_leeren()
+	_telemetrie_einschalten()
 	change_scene_to_file(STARTRAUM)
 
 	await _durchlauf()
+	_telemetrie_pruefen()
 
 	print("")
 	print("Prüfungen: %d, Fehler: %d" % [_pruefungen, fehler.size()])
@@ -75,6 +83,11 @@ func _durchlauf() -> void:
 	_pruefe(not _spiel().wechsel_moeglich(), "kein Figurenwechsel im Prolog")
 	await _ansehen(_hotspot("Sofa"), "P0_WOHN_MAX_0150")
 	await _rundreise("Wohnzimmer Anfang")
+	# Klick ins Leere (kein Objekt unter dem Zeiger): direkt an die Telemetrie, ohne Laufweg
+	var klick := InputEventMouseButton.new()
+	klick.button_index = MOUSE_BUTTON_LEFT
+	klick.pressed = true
+	_telemetrie()._unhandled_input(klick)
 
 	# --- Treppenhaus, Dachboden ---
 	await _hotspot("AusgangTreppenhaus").on_click()
@@ -133,7 +146,13 @@ func _durchlauf() -> void:
 	await _rundreise("Dachboden, drei Gegenstände")
 	_pruefe(not _raum().get_prop("Dosenoeffner").visible, "Prop Dosenöffner bleibt nach Laden weg")
 
-	# Fehlversuche
+	# Fehlversuche; Dosenöffner auf Poster hat keine eigene Zeile: Ersatzzeile (Fehlklick)
+	var vorher_n: int = _spiel().protokoll.size()
+	_i().active = _item("Dosenoeffner")
+	await _hotspot("Poster").on_item_used(_item("Dosenoeffner"))
+	_i().active = null
+	_pruefe(_spiel().protokoll.slice(vorher_n).any(func(b): return b.begins_with("SYS_ERS_MAX_")),
+		"Dosenöffner auf Poster: Ersatzzeile")
 	await _benutze("Drahtkleiderbuegel", _raum().get_prop("ZappOMat"), "P0_DACH_MAX_1150")
 	await _benutze("Dosenoeffner", _raum().get_prop("ZappOMat"), "P0_DACH_MAX_1130")
 	await _benutze("Thunfischdose", pixel, "P0_DACH_MAX_0270")
@@ -147,7 +166,7 @@ func _durchlauf() -> void:
 	_pruefe(Z.geloest("P1") and Z.ist("P0_P1_GELOEST"), "P1 gelöst (P0_P1_GELOEST)")
 	_pruefe(_gesagt("P0_DACH_PIX_0380") and _gesagt("P0_DACH_MAX_0390"), "P1-Szene vollständig")
 	_pruefe(_item("Thunfischdose").zustand() == "leer", "Thunfischdose leer nach P1")
-	_pruefe(pixel.position == Vector2(70, 126), "Pixel auf der Werkbank")
+	_pruefe(pixel.position == Vector2(105, 189), "Pixel auf der Werkbank")
 	_pruefe(_raum().get_prop("ZappOMat").current_frame == 1, "Zapp-O-Mat rauscht nach P1")
 	_pruefe(H.pfote_aktiv(), "Pfote ab P1 aktiv")
 	_pruefe(Z.status("P2") == "offen", "P2 offen nach P1")
@@ -155,7 +174,7 @@ func _durchlauf() -> void:
 	_pruefe(not opa_d.option_sichtbar("1322") and _dialog("Pixel").option_sichtbar("1390"),
 		"Gesprächsoptionen nach P1 umgeschaltet")
 	await _rundreise("nach P1")
-	_pruefe(pixel.position == Vector2(70, 126), "Pixel bleibt nach Laden auf der Werkbank")
+	_pruefe(pixel.position == Vector2(105, 189), "Pixel bleibt nach Laden auf der Werkbank")
 
 	# Hilfe-Pfote zu P2: Stufe 1, dann Wartezeile + Wiederholung, nach 30 s Stufe 2
 	_protokoll_leeren()
@@ -224,7 +243,7 @@ func _welt_1() -> void:
 
 	# --- Ankunft auf dem Dorfplatz ---
 	await _warte_auf_raum("Dorfplatz")
-	await _warte_bis(func(): return _gesagt("W1_ANK_PIX_0240"), 15.0)
+	await _warte_bis(func(): return _gesagt("W1_ANK_PIX_0240"), 30.0)
 	_pruefe(_gesagt("W1_ANK_TOA_0100"), "Ankunft mit Toadi (W1_ANK 0010–0240)")
 	_pruefe("opas_zettel" in Z.nahansichten, "Opas Zettel als Nahansicht in der Ankunft")
 	_pruefe(Z.abschnitt == "welt-1", "Abschnitt welt-1")
@@ -754,7 +773,7 @@ func _welt_1_r5_bis_r13() -> void:
 
 	# --- Zwischenspiel 1: Dachboden ---
 	await _warte_auf_raum("Dachboden")
-	await _warte_bis(func(): return _gesagt("ZS1_DACH_PIX_0240"), 15.0)
+	await _warte_bis(func(): return _gesagt("ZS1_DACH_PIX_0240"), 45.0)
 	_pruefe(Z.abschnitt == "finale" and int(Z.wert("ZWISCHENSPIEL", 0)) == 1, "Abschnitt finale, Zwischenspiel 1")
 	_pruefe(_gesagt("ZS1_DACH_OPA_0070") and Z.ist("ZS1_EI_ABGEGEBEN")
 		and not _i().is_item_in_inventory("Drachenei"), "ZS1: Opa nimmt das Ei (0010–0240)")
@@ -768,8 +787,46 @@ func _welt_1_r5_bis_r13() -> void:
 	_pruefe(_gesagt("ZS1_HINT_PIX_0010"), "Pfote im Zwischenspiel: ZS1_HINT_PIX_0010")
 	await _rundreise("Zwischenspiel 1")
 	_pruefe(Z.abschnitt == "finale" and not _gesagt("ZS1_DACH_NAR_0010"), "nach Laden: Zwischenspiel, keine zweite Ankunft")
+	print("    Inventar am Ende von Welt 1: ", _c().Max.inventory.keys())
+	# Fundkiste und Gespräch der freien Phase
+	_pruefe(_hotspot("Fundkiste").visible, "Fundkiste sichtbar im Zwischenspiel")
+	await _ansehen(_hotspot("Fundkiste"), "ZS1_DACH_MAX_0420")
+	await _ansehen(_hotspot("Werkbank"), "ZS1_DACH_MAX_0310")
+	var opa_zs = _dialog("Opa")
+	opa_zs.sichtbarkeit_anpassen()
+	_pruefe(opa_zs.option_sichtbar("zs1_0380") and not opa_zs.option_sichtbar("1310"),
+		"Opa im Zwischenspiel: eigene Optionen, keine aus dem Prolog")
+	for o in ["zs1_0380", "zs1_0430", "zs1_0440", "zs1_0450"]:
+		await opa_zs.waehlen(o)
+	_pruefe(_gesagt("ZS1_DACH_PIX_0410") and _gesagt("ZS1_DACH_PIX_0436") and _gesagt("ZS1_DACH_OPA_0446")
+		and _gesagt("ZS1_DACH_PIX_0454"), "Opa-Gespräch Zwischenspiel 1 (0380–0454)")
+	_pruefe(opa_zs.erschoepft(), "Opa-Gespräch erschöpft, nur noch „Ich geh packen“")
+	# Packen: Socke und Zeugnis ein, Zeugnis wieder aus, Dosenöffner ein, drittes Stück abgelehnt
+	var wahl_moeglich: Array = ["Socke", "Zeugnis", "Eimer", "ZiegenfellVorleger"].filter(
+		func(sn): return _i().is_item_in_inventory(sn))
+	_protokoll_leeren()
+	_spiel().vorgabe_tasche = ["Kochloeffel", "Socke", wahl_moeglich[1], wahl_moeglich[1],
+		"Dosenoeffner", wahl_moeglich[2]]
 	await _hotspot("Drehknopf").on_click()
-	_pruefe(_gesagt("UI_WELT_1_ENDE"), "Drehknopf: Ende der Graubox (Packen und Welt 2 folgen)")
+	_pruefe(_gesagt("ZS1_DACH_OPA_0510") and _gesagt("ZS1_DACH_OPA_0514"), "Drehknopf öffnet die Reisetasche (0510–0514)")
+	_pruefe(_gesagt("ZS1_DACH_PIX_0520") and _gesagt("ZS1_DACH_PIX_0540") and _gesagt("ZS1_DACH_PIX_0580"),
+		"Pixel kommentiert beim Berühren (Pflichtfach, Socke, Dosenöffner)")
+	_pruefe(_gesagt("ZS1_DACH_MAX_0610"), "Drittes Wahlstück: 0610")
+	_pruefe(_gesagt("ZS1_DACH_PIX_0620") and _gesagt("ZS1_DACH_OPA_0650") and Z.ist("ZS1_GEPACKT"),
+		"Bestätigt, Opas Abschied (0620–0650)")
+	_pruefe(Z.wert("TASCHE", []) == ["Socke", "Dosenoeffner"], "Wahlfächer: Socke und Dosenöffner")
+	_pruefe(_i().is_item_in_inventory("Socke") and _i().is_item_in_inventory("Dosenoeffner")
+		and not _i().is_item_in_inventory(wahl_moeglich[1]) and not _i().is_item_in_inventory(wahl_moeglich[2])
+		and _i().is_item_in_inventory("Kochloeffel") and _i().is_item_in_inventory("Notizbuch")
+		and _i().is_item_in_inventory("Thunfischdose"), "Inventar nach dem Packen: Pflichtfach und Wahlfächer")
+	_pruefe(wahl_moeglich[1] in Z.wert("FUNDKISTE", []) and not "Dosenoeffner" in Z.wert("FUNDKISTE", []),
+		"Der Rest liegt in der Fundkiste")
+	await _rundreise("Zwischenspiel 1 gepackt")
+	_pruefe(_i().is_item_in_inventory("Dosenoeffner") and Z.wert("TASCHE", []) == ["Socke", "Dosenoeffner"],
+		"nach Laden: Tasche unverändert")
+	await _hotspot("Drehknopf").on_click()
+	_pruefe(_gesagt("ZS1_DACH_MAX_0660") and _gesagt("ZS1_DACH_PIX_0670") and _gesagt("UI_WELT_1_ENDE"),
+		"Zweiter Dreh: Kanal 7 (0660, 0670), Ende des Ausbaustands")
 
 
 func _gehe(ausgang: String, raum: String) -> void:
@@ -837,6 +894,130 @@ func _ordner_leeren() -> void:
 	if d:
 		for f in d.get_files():
 			d.remove(f)
+		DirAccess.remove_absolute(CQSaveLoad.ordner)
+
+
+#endregion
+
+#region Telemetrie #################################################################################
+func _telemetrie():
+	return root.get_node("Telemetrie")
+
+
+## Testbuild an, Zustimmung erst nein, dann ja. Ohne Testbuild oder ohne Zustimmung keine Sitzung.
+func _telemetrie_einschalten() -> void:
+	var tel = _telemetrie()
+	tel.ordner = telemetrie_ordner
+	_telemetrie_leeren()
+	tel.testbuild = false
+	tel.einwilligung_setzen(true)
+	_pruefe(not tel.aktiv(), "Telemetrie: ohne Testbuild keine Sitzung, auch mit Zustimmung")
+	tel.testbuild = true
+	tel.einwilligung_setzen(false)
+	_pruefe(not tel.aktiv() and tel.einwilligung() == 0, "Telemetrie: ohne Zustimmung keine Sitzung")
+	tel.einwilligung_setzen(true)
+	_pruefe(tel.aktiv() and tel.einwilligung() == 1 and FileAccess.file_exists(tel.pfad()),
+		"Telemetrie: Testbuild mit Zustimmung schreibt %s" % tel.pfad())
+
+
+## Liest das Protokoll und prüft die erwarteten Ereignisse.
+func _telemetrie_pruefen() -> void:
+	var tel = _telemetrie()
+	var pfad: String = tel.pfad()
+	var sitzung: String = tel.sitzung
+	tel.sitzung_beenden("test")
+	_pruefe(not tel.aktiv(), "Telemetrie: Sitzung beendet")
+	var ev: Array = []
+	var kaputt := 0
+	for zeile in FileAccess.get_file_as_string(pfad).split("\n", false):
+		var d = JSON.parse_string(zeile)
+		if d is Dictionary:
+			ev.append(d)
+		else:
+			kaputt += 1
+	_pruefe(kaputt == 0 and ev.size() > 100, "Telemetrie: %d Zeilen, alle JSON" % ev.size())
+	if ev.is_empty():
+		return
+	_pruefe(ev[0].ev == "sitzung_start" and ev[0].sitzung == sitzung and pfad.ends_with(sitzung + ".jsonl")
+		and not str(ev[0].tester).is_empty() and ev[0].testmodus == _spiel().testmodus,
+		"Telemetrie: sitzung_start mit Sitzung, Tester-ID und Testmodus")
+	_pruefe(ev.back().ev == "sitzung_ende" and ev.back().grund == "test", "Telemetrie: sitzung_ende zuletzt")
+	_pruefe(ev.all(func(e): return e.has_all(["ev", "t", "spielzeit", "abschnitt", "raum"])),
+		"Telemetrie: Grundfelder in jeder Zeile")
+	var t_ok := true
+	for i in range(1, ev.size()):
+		t_ok = t_ok and float(ev[i].t) >= float(ev[i - 1].t)
+	_pruefe(t_ok, "Telemetrie: Zeit t steigt")
+	var nutzer := OS.get_user_data_dir()
+	_pruefe(not FileAccess.get_file_as_string(pfad).contains(nutzer) and not ev.any(
+		func(e): return e.has("name") or e.has("pfad")), "Telemetrie: keine Pfade oder Namen im Protokoll")
+
+	var hat := func(art: String, felder: Dictionary) -> bool: return _hat(ev, art, felder)
+	for r in ["wohnzimmer", "treppenhaus", "dachboden", "dorfplatz", "taverne", "trollbruecke"]:
+		_pruefe(hat.call("raum_betreten", {raum = r}), "Telemetrie: raum_betreten " + r)
+	_pruefe(ev.any(func(e): return e.ev == "raum_verlassen" and e.raum == "wohnzimmer" and float(e.dauer) >= 0.0),
+		"Telemetrie: raum_verlassen Wohnzimmer mit Dauer")
+	for s in ["P1", "P2", "P3"]:
+		_pruefe(hat.call("schritt_offen", {abschnitt = "prolog", schritt = s}), "Telemetrie: schritt_offen " + s)
+		_pruefe(hat.call("schritt_geloest", {abschnitt = "prolog", schritt = s, sammel = false}),
+			"Telemetrie: schritt_geloest " + s)
+	_pruefe(_index(ev, "schritt_offen", "P2") < _index(ev, "schritt_geloest", "P2"), "Telemetrie: P2 erst offen, dann gelöst")
+	for s in ["R1a", "R1b", "R1c", "R2", "R3", "R4a", "R4b", "R4c"]:
+		_pruefe(hat.call("schritt_offen", {abschnitt = "welt-1", schritt = s})
+			and hat.call("schritt_geloest", {abschnitt = "welt-1", schritt = s}), "Telemetrie: %s offen und gelöst" % s)
+	_pruefe(hat.call("schritt_geloest", {abschnitt = "welt-1", schritt = "R1", sammel = true}),
+		"Telemetrie: Sammelschritt R1 gelöst")
+	_pruefe(hat.call("hinweis", {schritt = "P1", stufe = 1, neu = true, quelle = "gespraech"}),
+		"Telemetrie: Hinweis P1 Stufe 1 über Opa")
+	_pruefe(hat.call("hinweis", {schritt = "P2", stufe = 1, neu = false, wartezeile = true, quelle = "pfote"}),
+		"Telemetrie: Pfote P2 mit Wartezeile")
+	_pruefe(hat.call("hinweis", {schritt = "P2", stufe = 2, neu = true, wartezeile = false}),
+		"Telemetrie: Pfote P2 Stufe 2")
+	_pruefe(ev.any(func(e): return e.ev == "ersatz" and str(e.zeile).begins_with("SYS_ERS_MAX_") and e.sprecher == "MAX"),
+		"Telemetrie: Ersatzzeile")
+	_pruefe(hat.call("fehlklick", {raum = "dachboden", objekt = "poster", aktion = "gegenstand", gegenstand = "dosenoeffner"}),
+		"Telemetrie: Fehlklick Dosenöffner auf Poster")
+	_pruefe(hat.call("klick_leer", {raum = "wohnzimmer", taste = "links"}), "Telemetrie: Klick ins Leere")
+	_pruefe(hat.call("dialog_option", {dialog = "Opa", option = "1322"}), "Telemetrie: Gesprächsoption Opa 1322")
+	_pruefe(ev.any(func(e): return e.ev == "auswahl" and int(e.index) >= 0 and not str(e.option).is_empty()),
+		"Telemetrie: Auswahl ohne Gesprächsfigur")
+	_pruefe(hat.call("speichern", {platz = "manuell_01"}) and ev.any(
+		func(e): return e.ev == "speichern" and str(e.platz).begins_with("auto_")), "Telemetrie: Speichern manuell und auto")
+	_pruefe(hat.call("laden", {platz = "manuell_01"}), "Telemetrie: Laden")
+	# CQ_TELEMETRIE_BEHALTEN=1: Datei bleibt liegen (Beispiel für tools/telemetrie_auswertung.py)
+	if OS.has_environment("CQ_TELEMETRIE_BEHALTEN"):
+		print("Telemetrie-Protokoll: ", ProjectSettings.globalize_path(pfad))
+	else:
+		_telemetrie_leeren()
+
+
+## Gibt es ein Ereignis dieser Art mit genau diesen Feldern?
+func _hat(ev: Array, art: String, felder: Dictionary) -> bool:
+	for e in ev:
+		if e.ev != art:
+			continue
+		var passt := true
+		for k in felder:
+			if not e.has(k) or e[k] != felder[k]:
+				passt = false
+		if passt:
+			return true
+	return false
+
+
+func _index(ev: Array, art: String, schritt: String) -> int:
+	for i in ev.size():
+		if ev[i].ev == art and ev[i].get("schritt") == schritt:
+			return i
+	return 999999
+
+
+func _telemetrie_leeren() -> void:
+	var d := DirAccess.open(telemetrie_ordner)
+	if d:
+		for f in d.get_files():
+			d.remove(f)
+		DirAccess.remove_absolute(telemetrie_ordner)
 
 
 #endregion

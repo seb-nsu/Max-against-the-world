@@ -39,7 +39,9 @@ func _on_double_click() -> void:
 ## Ausgänge: auch Pixel „benutzt“ sie (und bekommt die Tür-Zeile), statt zu schnuppern.
 func on_click() -> void:
 	Hinweise.objekt_beruehrt(objekt_id())
+	Telemetrie.aktion_beginnen(objekt_id(), "benutzen")
 	await _on_click()
+	Telemetrie.aktion_beenden()
 
 
 ## true, wenn die Figur hier hinaus darf. Darf sprechen (await), bevor sie false liefert.

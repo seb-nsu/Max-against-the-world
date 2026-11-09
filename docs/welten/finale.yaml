@@ -7,12 +7,15 @@ sonder_sprecher: [NAR]               # Regie- und Animationszeilen ohne Sprecher
 weitere_schalter:
   - ZWISCHENSPIEL            # Wert: laufendes Zwischenspiel (1 bis 3); fehlt im Finale
   - ZS1_EI_ABGEGEBEN         # Opa hat das Drachenei genommen (ZS1_DACH 0070), Ankunftsszene gespielt
+  - ZS1_GEPACKT              # Reisetasche für Welt 2 gepackt (ZS1_DACH 0620), der nächste Dreh wählt Kanal 7
+  - TASCHE                   # Wert: Gegenstände der zwei Wahlfächer aus dem letzten Packen (reisen in die nächste Welt mit)
+  - FUNDKISTE                # Wert: was in Opas Fundkiste liegt; vor dem ersten Packen nur der Dosenöffner
 
 raeume:
   - id: dachboden
     name: Dachboden
     skript_code: [DACH, RIEG, RUF, RAET, AUFL]   # ZS1 bis ZS3 und Finale
-    groesse: 320x180
+    groesse: 480x270
     ausgaenge: [treppenhaus]         # Luke im Finale verriegelt bis zur Auflösung
     erreichbar_ab: start
     musik: gegenwart
@@ -21,7 +24,7 @@ raeume:
   - id: treppenhaus
     name: Treppenhaus
     skript_code: []                  # nur kurzer Schnitt bei FI_RIEG_OMA_0070, Abspann-Foto 4
-    groesse: 320x180
+    groesse: 480x270
     ausgaenge: [dachboden, wohnzimmer]
     erreichbar_ab: F1d               # Abgang zum Wohnzimmer als Szene nach der Auflösung
     musik: gegenwart
@@ -30,7 +33,7 @@ raeume:
   - id: wohnzimmer
     name: Wohnzimmer
     skript_code: [WOHN, ABSP]        # ABSP: Abspann-Szene am Zapp-O-Mat und Abspann-Fotos
-    groesse: 320x180
+    groesse: 480x270
     ausgaenge: [treppenhaus]         # zum Supermarkt nur als Szene (FI_ABSP)
     erreichbar_ab: F1d
     musik: gegenwart
@@ -39,7 +42,7 @@ raeume:
   - id: supermarkt
     name: Supermarkt-Eingang
     skript_code: [SUPM]
-    groesse: 320x180
+    groesse: 480x270
     ausgaenge: []                    # Endbild, nur die Ladentür (Spielende)
     erreichbar_ab: F1d               # per Szene aus dem Wohnzimmer
     musik: gegenwart                 # mit der Schwarzblende setzt das Titelthema ein (FI_SUPM_NAR_0090), danach Abspann
@@ -50,35 +53,35 @@ figuren:
     name: Max
     kuerzel: MAX
     raum: [dachboden, wohnzimmer, supermarkt]
-    groesse_px: 56                   # ab Rückkehr 3 aufrechte Fassung
+    groesse_px: 84                   # ab Rückkehr 3 aufrechte Fassung
     spielbar: true
 
   - id: pixel
     name: Pixel
     kuerzel: PIX
     raum: [dachboden, wohnzimmer]
-    groesse_px: 18
+    groesse_px: 27
     spielbar: true                   # im Finale nötig für Schritt C
 
   - id: opa
     name: Opa
     kuerzel: OPA
     raum: [dachboden, wohnzimmer]
-    groesse_px: 60
+    groesse_px: 90
     spielbar: false
 
   - id: oma
     name: Oma                        # Hildegard; vor der Auflösung „Oma (von unten)“
     kuerzel: OMA
     raum: [treppenhaus, dachboden, wohnzimmer]
-    groesse_px: 56
+    groesse_px: 84
     spielbar: false
 
   - id: mutter
     name: Mutter
     kuerzel: MUT
     raum: wohnzimmer
-    groesse_px: 58
+    groesse_px: 87
     spielbar: false
 
 
@@ -86,14 +89,14 @@ figuren:
     name: Zeldina
     kuerzel: ZEL
     raum: [dachboden, wohnzimmer]
-    groesse_px: 58                   # Finale-Fassung mit Zauberstab, ohne Karton
+    groesse_px: 87                   # Finale-Fassung mit Zauberstab, ohne Karton
     spielbar: false
 
   - id: modell_0815
     name: Modell 08/15
     kuerzel: HAU
     raum: [dachboden, wohnzimmer]    # nur mit FREUND_0815
-    groesse_px: 58
+    groesse_px: 87
     spielbar: false
 
   - id: toadi

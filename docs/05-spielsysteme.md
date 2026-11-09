@@ -8,7 +8,7 @@ Diese Datei arbeitet die fünf offenen Bausteine aus `03-produktion.md` aus, so 
 
 Jede Zeile des Spiels steht genau einmal in einer Skript-Tabelle pro Welt und hat eine feste ID. Godot liest daraus die Übersetzungsdatei, und dieselbe ID benennt später die Audiodatei. So kosten Übersetzung und Vertonung später kaum Umbauarbeit.
 
-**Zeilen-ID:** `Abschnitt_Szene_Sprecher_Nummer`, zum Beispiel `P0_DACH_MAX_0012` oder `W1_TAV_PIX_0040`. Die Nummern gehen in Zehnerschritten, damit später Zeilen dazwischen passen. Eine ID wird nie neu vergeben, auch wenn ihre Zeile gestrichen wird.
+**Zeilen-ID:** `Abschnitt_Szene_Sprecher_Nummer`, zum Beispiel `P0_DACH_MAX_0012` oder `W1_TAV_PIX_0040`. Neue Zeilen bekommen Nummern in Zehnerschritten, damit später Zeilen dazwischen passen. Eine eingeschobene Zeile nimmt die nächste freie Nummer zwischen ihren Nachbarn (zum Beispiel 0521 und 0522 nach 0520), aber nicht die Nummer plus 5, die für Zweitzeilen reserviert ist. Bestehende Zeilen werden nie umnummeriert, weil Gesprächsoptionen im Spielcode über ihre Nummer angesprochen werden. `tools/pruefen.py` prüft nur, dass die Nummern im Block aufsteigen. Eine ID wird nie neu vergeben, auch wenn ihre Zeile gestrichen wird.
 
 | Teil | Werte |
 | --- | --- |
@@ -83,7 +83,7 @@ Eigennamen-Glossar: Sprechende Namen werden nicht wörtlich übersetzt, sondern 
 
 **Schreibregeln:**
 
-- Höchstens drei Textzeilen pro Sprechblase, also etwa 120 Zeichen; längerer Text wird an Satzgrenzen automatisch auf Folgeblasen derselben ID verteilt. Drei kurze Zeilen lesen sich bei 320×180 besser als zwei lange, weil die Blase schmal bleibt und die Figur nicht verdeckt.
+- Zwei Textzeilen pro Sprechblase sind die Regel, drei die Ausnahme für einen einzelnen langen Satz (bis 120 Zeichen). Längerer Text wird an Satzgrenzen automatisch auf Folgeblasen derselben ID verteilt; zwei Sätze, die je in eine Zeile passen, bekommen je eine Zeile. Zwei Zeilen erfasst man mit einem Blick; gespielt wird vor allem am Laptop und am Rechner.
 - Pixels Kaskaden (eine Pointe, die sich über mehrere Blasen steigert) stehen als eine Zeile mit „//“ als Blasentrenner; der Spieler klickt sich durch, die Vertonung bekommt je Blase eine eigene Datei (siehe `04-audio.md`). Dieselbe feste Trennung darf jede Figur nutzen, wenn eine Satzgrenze den Witz zerstören würde (etwa Ciceros Rede „ohne Punkt ohne Komma“). Ein einzelner Satz ohne „//“ hat höchstens 120 Zeichen (`tools/pruefen.py` warnt).
 - Max spricht kurz, trocken, mit Serien-, Streaming- und Handy-Vergleichen; Pixel lang, hochnäsig, mit Essen und Schlafplätzen (Tabelle „Max' Stimme“ im Konzept).
 - Max erklärt nie die Vorlage, und jede Anspielung funktioniert auch ohne sie. Retro-Witze gehören Pixel oder Opa.
@@ -103,7 +103,13 @@ Als Muster steht das ganze Prolog-Skript in `skript/prolog.md`, einschließlich 
 
 ## Schrift
 
-Empfehlung: **Monogram Extended** für Sprechblasen, Inventar und Menüs, **Pixelify Sans** nur für Titel und große Überschriften. Beide sind kostenlos und kommerziell nutzbar. Ob ß und die deutschen Anführungszeichen enthalten sind, steht auf keiner Seite; das prüft der Test unten vor der Festlegung.
+Festgelegt am 9. November 2026 (Sebastian): **Nunito** (ExtraBold) für Sprechblasen, Objektnamen, Dialogauswahl und Menüs, gesetzt in voller Bildschirmauflösung über dem Pixelbild, wie bei Thimbleweed Park. **Pixelify Sans** bleibt für Titel und große Überschriften. Die Pixelschriften unten waren die erste Wahl; im Mockup nahm Monogram Extended bei 320×180 zu viel Bildfläche ein (drei Zeilen Blase plus vier Zeilen Auswahl), deshalb der Wechsel.
+
+| Schrift | Lizenz | Nennung nötig | Deutsch | Einsatz |
+| --- | --- | --- | --- | --- |
+| [Nunito](https://fontsource.org/fonts/nunito) | OFL 1.1 | Lizenztext muss mitgeliefert werden | Alle Zeichen des Testsatzes vorhanden (geprüft mit fontTools) | Text im Spiel |
+
+Frühere Kandidaten (Pixelschriften in Spielauflösung):
 
 | Schrift | Lizenz | Nennung nötig | Deutsch | Einsatz |
 | --- | --- | --- | --- | --- |
@@ -115,19 +121,21 @@ Empfehlung: **Monogram Extended** für Sprechblasen, Inventar und Menüs, **Pixe
 
 Lizenzen gelesen am 6. November 2026 auf den verlinkten Seiten.
 
-**Größe:** Text wird in der Spielauflösung 320×180 gesetzt, genau wie die Grafik, und mit ihr 6-fach skaliert. Bei einer etwa 7 Pixel hohen Schrift passen rund 40 Zeichen in eine Zeile, wenn die Sprechblase höchstens 240 Pixel breit bleibt; bei drei Zeilen sind das rund 120 Zeichen. Entschieden am 8. November 2026: Text bleibt in Spielauflösung, weil er so zur Pixelgrafik passt. Wird das im Test schlecht lesbar, gibt es eine Option „Große Schrift“, die Text auf einer eigenen Ebene in doppelter Auflösung zeichnet.
+**Größe:** Text liegt auf einer eigenen Ebene in 1920×1080 (bei anderen Bildschirmen mitskaliert), Grafik und Inventarsymbole bleiben in Spielauflösung. Sprechblasen in 46 px, Objektnamen und Dialogauswahl in 39 px; eine Blase ist höchstens 1.080 px breit, das sind rund 50 Zeichen je Zeile. Die Option „Große Schrift“ vergrößert die Textebene um ein Viertel. Ersetzt die Entscheidung vom 8. November 2026 (Text in Spielauflösung).
 
-**Einstellungen in Godot:** Schrift ohne Kantenglättung importieren (Antialiasing aus, Hinting aus, Subpixel aus) und nur in ganzzahligen Vielfachen der Grundgröße verwenden. Sprechblasen bekommen einen dunklen Rand (#262b44 aus Endesga 32), damit Text auf jedem Hintergrund lesbar bleibt. Jede Figur hat eine eigene Textfarbe aus der Palette: Max weiß, Pixel türkis wie seine Halsband-Leuchte, Opa orange.
+**Einstellungen in Godot:** Stretch-Modus „canvas_items“ mit ganzzahliger Skalierung und Pixel-Einrasten (`rendering/2d/snap`): Grafik bleibt scharf in Spielpixeln, Schrift wird in Bildschirmauflösung gezeichnet. Größen stehen in Spielpixeln: Sprechblasen 12 (bei 1080p 48 px), Objektnamen und Dialogauswahl 10 (40 px), Blasen höchstens 270 breit (rund 50 Zeichen je Zeile). Thema `game/gui/resources/gui_theme.tres`; Pixelify Sans für Titel ohne Kantenglättung in ganzzahligen Vielfachen. Bildschirmfotos aus dem laufenden Spiel macht `game/tests/bildschirmfoto.gd`. Text in Sprechblasen und Objektnamen bekommt einen dunklen Rand (#262b44 aus Endesga 32), damit Text auf jedem Hintergrund lesbar bleibt. Jede Figur hat eine eigene Textfarbe aus der Palette: Max weiß, Pixel türkis wie seine Halsband-Leuchte, Opa orange.
 
 **Test vor der Entscheidung:** Diesen Satz in jeder Kandidatin in Godot bei Originalgröße setzen und auf drei Hintergründen ansehen (Dachboden, Zauberwald, Neonstadt):
 
 > „Größer als Ostern.“ Äpfel, Öl, Übermut – Straße, Zapp-O-Mat 3000, 20:15 Uhr… Weißt du’s? Ja! (5 %)
 
+**Ergebnis des Tests (9. November 2026, `tools/schrifttest.py`):** Monogram Extended bei 16 px hat alle Zeichen des Testsatzes, setzt ihn in drei Zeilen und bleibt auf allen drei Hintergründen scharf und lesbar. m5x7 fehlen die deutschen Anführungszeichen, der Halbgeviertstrich und die Auslassungspunkte, der Monogram-Basisdatei zusätzlich Umlaute und ß. Pixelify Sans hat alle Zeichen, wirkt bei 10 px aber unruhig und bleibt für Titel. Im UI-Mockup (`tools/ui_mockup.py`) wirkte der Text trotzdem zu wuchtig; Sebastian hat sich am 9. November 2026 für Nunito in voller Auflösung entschieden (Mockup `tools/ui_mockup_hd.py`).
+
 Die Lizenzdateien aller verwendeten Schriften kommen in den Ordner `licenses/` und in den Abspann.
 
 ## UI
 
-Die Steuerung ist eine Zwei-Klick-Steuerung ohne Verbenleiste: Linksklick tut das Naheliegende, Rechtsklick sieht an. Das passt zu den fünf geplanten Mauszeigern und lässt bei 180 Pixeln Höhe das ganze Bild für die Szene frei. Grundlage ist die Popochiu-Vorlage „Simple Click“, die Claude anpasst.
+Die Steuerung ist eine Zwei-Klick-Steuerung ohne Verbenleiste: Linksklick tut das Naheliegende, Rechtsklick sieht an. Das passt zu den fünf geplanten Mauszeigern und lässt das ganze Bild für die Szene frei. Grundlage ist die Popochiu-Vorlage „Simple Click“, die Claude anpasst.
 
 **Steuerung:**
 
@@ -144,19 +152,19 @@ Die Steuerung ist eine Zwei-Klick-Steuerung ohne Verbenleiste: Linksklick tut da
 | Esc | Überspringt eine Zwischensequenz, sonst Pausemenü |
 | F5 / F9 | Schnellspeichern / Schnellladen |
 
-**Bildschirmaufbau (320×180):**
+**Bildschirmaufbau (480×270, vorläufig; Maße in `tools/aufloesung.py`):**
 
 | Element | Ort | Verhalten |
 | --- | --- | --- |
-| Inventarleiste | Oben, 32 Pixel hoch, acht Plätze für 24×24-Symbole; bei aktivem Max ist der erste Platz das Pixel-Feld (ab P1), bei aktivem Pixel zeigt die Leiste Pixels einen Gegenstand im Maul | Klappt ein, sobald die Maus den oberen Rand verlässt; Pfeile blättern bei mehr als acht Gegenständen |
-| Porträts von Max und Pixel | Oben links, 24×24 | Immer sichtbar; die aktive Figur ist hell, die andere grau |
-| Hilfe-Pfote | Oben rechts, 24×24 | Immer sichtbar; leuchtet sanft, wenn ein neuer Hinweis bereitliegt |
+| Inventarleiste | Oben, 48 Pixel hoch, acht Plätze für 36×36-Symbole; bei aktivem Max ist der erste Platz das Pixel-Feld (ab P1), bei aktivem Pixel zeigt die Leiste Pixels einen Gegenstand im Maul | Klappt ein, sobald die Maus den oberen Rand verlässt, und bleibt in Gesprächen und Zwischensequenzen eingeklappt (nur ein schmaler Griff bleibt sichtbar); Pfeile blättern bei mehr als acht Gegenständen |
+| Porträts von Max und Pixel | Oben links, 36×36 | Immer sichtbar; die aktive Figur ist hell, die andere grau |
+| Hilfe-Pfote | Oben rechts, 36×36 | Immer sichtbar; leuchtet sanft, wenn ein neuer Hinweis bereitliegt |
 | Objektname | Unter dem Zeiger, eine Zeile | Zeigt beim Überfahren den Namen, beim Kombinieren „Thunfischdose mit Pixel“ |
 | Sprechblasen | Über der sprechenden Figur | Rand und Farbe je Figur (siehe Schrift). Sprechende Dinge ohne Figur (Brunnen, Grammophon, Geheimtür, Spiegel) sprechen mit Blase über dem Objekt in ihrer Sprecherfarbe, nie als Systemtext |
 | Dialogauswahl | Unten, bis zu vier Zeilen | Mausrad oder Pfeile bei mehr Optionen; gelesene Optionen werden grau. Dieselbe Auswahl dient für Wahlen ohne Gesprächsfigur (Wünsche am Brunnen, Passwort an der Geheimtür); ein Passwort setzt Max Teil für Teil zusammen, gewählte Teile verschwinden, damit nichts geraten wird |
 | Sonder-Leisten | Je nach Welt | Fernbedienung (Welt 4) und Code-Sicht (Welt 3) erscheinen nur dort, unten rechts; in Gesprächen ist die Fernbedienungs-Leiste ausgegraut, außer im Gespräch mit dem Kommissar (Rätsel Welt 4, Gäste zwischen den Sendern) |
 
-Mockup: Bevor Claude die UI baut, entsteht ein Bild in 320×180 mit allen Elementen aus dieser Tabelle auf dem Dachboden-Hintergrund, mit Inventarleiste, Sprechblase mit drei Zeilen und Dialogauswahl. Sebastian gibt das Bild frei, danach erst Code.
+Mockup: `tools/ui_mockup_hd.py` zeichnet zwei Zustände auf dem Dachboden-Hintergrund, Erkunden (Leiste offen, Zeiger mit Objektname, Blase) und Gespräch (Leiste eingeklappt, Blase mit zwei Zeilen, Dialogauswahl). Schrift Nunito freigegeben am 9. November 2026; Grundauflösung 480×270 vorläufig festgelegt am 9. November 2026; danach baut Claude die UI.
 
 **Bildschirme und Menüs:**
 
@@ -166,9 +174,9 @@ Mockup: Bevor Claude die UI baut, entsteht ein Bild in 320×180 mit allen Elemen
 | Pausemenü (Esc) | Weiterspielen, Speichern, Laden, Optionen, Hauptmenü |
 | Speichern und Laden | Zwölf Plätze mit Vorschaubild, Ort, Welt, Spielzeit und Datum, dazu Autospeicher und Schnellspeicher (siehe Speichern) |
 | Notizbuch | Öffnet sich aus dem Inventar, immer auf Seite 1. Seite 1: aktuelle Ziele, die das Hinweissystem mitpflegt. Seite 2: gesammelte Regeln und Passwort-Teile. Seite 3: Pixels Einkaufsliste als Running Gag, je Welt ein neuer Wunsch (Konzept, Running Gags) |
-| Nahansicht | Überlagerung in 320×180 mit Rahmen und Schließen-Knopf oben rechts; zeigt Objekte, deren Text in der Szene zu klein wäre. Es gibt genau 14 Nahansichten im ganzen Spiel; die Liste gehört den Welt-Tabellen (`welten/*.yaml`: Feld `nahansicht` bei Gegenständen, Liste `nahansichten` für Schilder, Tafeln und Ähnliches), die Grafik-Dateien beschreiben die Bilder (Zeile „Nahansichten“). Das Notizbuch trägt Regeln und Passwort-Teile erst nach dem Öffnen der Nahansicht ein |
+| Nahansicht | Bildschirmfüllende Überlagerung in Spielauflösung (480×270) mit Rahmen und Schließen-Knopf oben rechts; zeigt Objekte, deren Text in der Szene zu klein wäre. Es gibt genau 14 Nahansichten im ganzen Spiel; die Liste gehört den Welt-Tabellen (`welten/*.yaml`: Feld `nahansicht` bei Gegenständen, Liste `nahansichten` für Schilder, Tafeln und Ähnliches), die Grafik-Dateien beschreiben die Bilder (Zeile „Nahansichten“). Das Notizbuch trägt Regeln und Passwort-Teile erst nach dem Öffnen der Nahansicht ein |
 | Programmzeitschrift (Welt 4) | Eigene Überlagerung wie eine Nahansicht, eine aufgeschlagene Doppelseite ohne Blättern: links die Zeitleiste mit fünf Senderspalten, jede Sendung ein klickbares Feld (Klick springt zur Sendezeit); rechts sechs Detailkästen mit Bild und Titel (darunter die 20:15-Folge, das Mitternachtsvideo und Dr. Werbepauses Spot); gefundene Kanäle werden angekreuzt; nach dem Fund steht auch Kanal 999 darin, und ein Klick führt in den Empfang. Dieser Aufbau ist verbindlich für Rätsel Welt 4 und Grafik Welt 4 |
-| Reisetasche | Vor jeder Welt: zwei Wahlfächer, ein Pflichtfach; Pixel kommentiert beim Berühren jedes Gegenstands |
+| Reisetasche | Vor jeder Welt: zwei Wahlfächer, ein Pflichtfach. Überlagerung im oberen Bildteil, damit die Sprechblasen darüber sichtbar bleiben: oben Pflichtfach und Wahlfächer, darunter, was daneben liegt (alles Mitreisefähige aus dem Inventar und der Fundkiste). Klick packt ein oder aus, Rechtsklick fragt Pixel; Pixel kommentiert jeden Gegenstand beim ersten Berühren. „Fertig gepackt“ schließt, der Rest kommt in die Fundkiste |
 | Optionen | Siehe unten |
 
 **Optionen:**

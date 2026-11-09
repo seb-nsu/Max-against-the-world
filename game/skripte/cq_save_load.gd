@@ -69,7 +69,15 @@ func save_game(slot := 1, description := "") -> bool:
 		return false
 	f.store_string(JSON.stringify(datei, "\t"))
 	f.close()
+	_telemetrie("gespeichert", slot)
 	return true
+
+
+# Speichern und Laden im Telemetrie-Protokoll (nur im Testbuild mit Zustimmung).
+static func _telemetrie(art: String, slot: int) -> void:
+	var t := (Engine.get_main_loop() as SceneTree).root.get_node_or_null("Telemetrie")
+	if t:
+		t.call(art, platz_name(slot))
 
 
 # Über den Baum statt über den Autoload-Namen, damit die Klasse auch vor den Autoloads
@@ -82,6 +90,7 @@ func load_game(slot := 1) -> Dictionary:
 	var datei := datei_lesen(slot)
 	if datei.is_empty():
 		return {}
+	_telemetrie("geladen", slot)
 	return daten_anwenden(datei.popochiu)
 
 

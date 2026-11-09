@@ -5,12 +5,12 @@
 
 [node name="CharacterHumbert" type="Area2D" unique_id=153118211]
 script = ExtResource("1_wqh4x")
-walk_speed = 90.0
-dialog_pos = Vector2(0, -64)
+walk_speed = 135.0
+dialog_pos = Vector2(0, -96)
 script_name = "Humbert"
 description = "UI_OBJ_HUMBERT"
 cursor = 8
-interaction_polygon = PackedVector2Array(-10, -60, 10, -60, 10, 0, -10, 0)
+interaction_polygon = PackedVector2Array(-15, -90, 15, -90, 15, 0, -15, 0)
 
 [node name="ScalingPolygon" type="CollisionPolygon2D" parent="." unique_id=1121089920]
 polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
@@ -20,11 +20,11 @@ polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=181263992]
 texture_filter = 1
 texture = ExtResource("2_n4rml")
-offset = Vector2(0, -30)
+offset = Vector2(0, -45)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1981526311]
 visible = false
-polygon = PackedVector2Array(-10, -60, 10, -60, 10, 0, -10, 0)
+polygon = PackedVector2Array(-15, -90, 15, -90, 15, 0, -15, 0)
 
 [node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=1551775061]
 visible = false

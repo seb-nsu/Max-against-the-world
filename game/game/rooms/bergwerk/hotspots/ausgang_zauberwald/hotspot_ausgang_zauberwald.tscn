@@ -7,9 +7,9 @@ script = ExtResource("1_wjvw3")
 script_name = "AusgangZauberwald"
 description = "Ausgang Zauberwald"
 cursor = 1
-interaction_polygon = PackedVector2Array(-9, -40, 9, -40, 9, 40, -9, 40)
+interaction_polygon = PackedVector2Array(-14, -60, 14, -60, 14, 60, -14, 60)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=218801838]
 visible = false
 modulate = Color(1, 0, 1, 1)
-polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+polygon = PackedVector2Array(-18, -18, 18, -18, 18, 18, -18, 18)

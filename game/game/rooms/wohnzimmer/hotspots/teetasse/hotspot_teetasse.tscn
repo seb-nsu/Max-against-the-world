@@ -7,9 +7,9 @@ script = ExtResource("1_7jved")
 script_name = "Teetasse"
 description = "Teetasse"
 cursor = 1
-interaction_polygon = PackedVector2Array(-6, -6, 6, -6, 6, 6, -6, 6)
+interaction_polygon = PackedVector2Array(-9, -9, 9, -9, 9, 9, -9, 9)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1785494239]
 visible = false
 modulate = Color(1, 0, 1, 1)
-polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+polygon = PackedVector2Array(-18, -18, 18, -18, 18, 18, -18, 18)

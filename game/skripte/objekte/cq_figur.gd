@@ -23,7 +23,17 @@ func ansehen() -> String:
 	return await Spiel.ansehen(bauplan().get("ansehen", []), "Figur/" + script_name)
 
 
+func objekt_id() -> String:
+	return bauplan().get("id", script_name.to_snake_case())
+
+
 func on_click() -> void:
+	Telemetrie.aktion_beginnen(objekt_id(), "benutzen")
+	await _klick()
+	Telemetrie.aktion_beenden()
+
+
+func _klick() -> void:
 	# Rätsel, die mehrere Figuren betreffen (Ziegen an der Brücke), regelt der Raum.
 	if C.player != self and is_instance_valid(R.current) and R.current.has_method("figur_benutzt") \
 			and await R.current.call("figur_benutzt", self, null):
@@ -31,10 +41,22 @@ func on_click() -> void:
 	if Spiel.ist_pixel() and C.player != self:
 		await _pixel_auf()
 		return
+	await super.on_click()
+
+
+func on_right_click() -> void:
+	Telemetrie.aktion_beginnen(objekt_id(), "ansehen")
 	await super()
+	Telemetrie.aktion_beenden()
 
 
 func on_item_used(item: PopochiuInventoryItem) -> void:
+	Telemetrie.aktion_beginnen(objekt_id(), "gegenstand", Telemetrie.gegenstand_id(item))
+	await _gegenstand_benutzt(item)
+	Telemetrie.aktion_beenden()
+
+
+func _gegenstand_benutzt(item: PopochiuInventoryItem) -> void:
 	if is_instance_valid(R.current) and R.current.has_method("figur_benutzt") \
 			and await R.current.call("figur_benutzt", self, item):
 		I.active = null
@@ -43,7 +65,7 @@ func on_item_used(item: PopochiuInventoryItem) -> void:
 		I.active = null
 		await _pixel_auf()
 		return
-	await super(item)
+	await super.on_item_used(item)
 
 
 func _on_click() -> void:

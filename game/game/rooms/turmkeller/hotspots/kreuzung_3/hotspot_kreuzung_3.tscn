@@ -7,9 +7,9 @@ script = ExtResource("1_hyqf7")
 script_name = "Kreuzung3"
 description = "Kreuzung 3"
 cursor = 1
-interaction_polygon = PackedVector2Array(-5, -4, 5, -4, 5, 4, -5, 4)
+interaction_polygon = PackedVector2Array(-8, -6, 8, -6, 8, 6, -8, 6)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1173175494]
 visible = false
 modulate = Color(1, 0, 1, 1)
-polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+polygon = PackedVector2Array(-18, -18, 18, -18, 18, 18, -18, 18)

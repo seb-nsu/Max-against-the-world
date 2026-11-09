@@ -7,6 +7,9 @@ extends Node
 
 ## Die Pfote leuchtet, wenn für den gewählten Schritt die nächste Stufe bereitliegt.
 signal leuchten_geaendert(leuchtet: bool)
+## Ein Hinweis wurde angefordert (Telemetrie): Schritt, gezeigte Stufe, ob die Stufe neu ist, ob
+## die Wartezeile kam, Quelle „pfote“ oder „gespraech“ (Opa im Prolog). Schritt "" = nichts offen.
+signal hinweis_gegeben(schritt: String, stufe: int, neu: bool, wartezeile: bool, quelle: String)
 
 ## Wartezeit bis zur Stufe (Sekunden Spielzeit seit dem letzten Hinweis). Offene Entscheidung
 ## in 05-spielsysteme.md: nach dem ersten Test mit Fremden anpassen.
@@ -92,6 +95,7 @@ func naechste_zeilen(schritt: String, mit_wartezeile := true) -> Array:
 				int(Zustand.stufe3_zaehler.get(Zustand.abschnitt, 0)) + 1
 			)
 		Zustand.geaendert.emit("HINWEIS_" + schritt)
+		hinweis_gegeben.emit(schritt, s, true, false, "pfote" if mit_wartezeile else "gespraech")
 		return [_zeile(daten, s)]
 	# Nächste Stufe noch gesperrt: Wartezeile, dann die letzte Stufe noch einmal
 	var out := []
@@ -100,6 +104,7 @@ func naechste_zeilen(schritt: String, mit_wartezeile := true) -> Array:
 		if not warte.is_empty():
 			out.append(warte)
 	out.append(_zeile(daten, s))
+	hinweis_gegeben.emit(schritt, s, false, out.size() > 1, "pfote" if mit_wartezeile else "gespraech")
 	return out
 
 
@@ -110,6 +115,7 @@ func pfote_geklickt() -> void:
 	var schritt := schritt_waehlen()
 	if schritt.is_empty():
 		# Regel 5: „nichts offen“-Zeile (0010 bzw. 9990), falls der Abschnitt eine hat
+		hinweis_gegeben.emit("", 0, false, false, "pfote")
 		var nichts := _nichts_offen_zeile()
 		if not nichts.is_empty():
 			await Spiel.sagen("PIX", nichts)

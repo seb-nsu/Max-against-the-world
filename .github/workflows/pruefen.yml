@@ -38,6 +38,10 @@ jobs:
       - name: Import (erster Import meldet Fehler, bis der Klassen-Cache steht)
         run: ./godot --headless --path game --import || true
       - name: Prolog-Durchlauf (Testmodus)
+        env:
+          CQ_TELEMETRIE_BEHALTEN: "1"
         run: timeout 600 ./godot --headless --path game -s res://tests/prolog_durchlauf.gd
+      - name: Telemetrie-Auswertung (Protokoll aus dem Testmodus)
+        run: python3 tools/telemetrie_auswertung.py ~/.local/share/godot/app_userdata/*/test_telemetrie --mit-tests > /dev/null
       - name: Prolog-Durchlauf (echte Sprechblasen und Wege)
         run: timeout 1200 ./godot --headless --path game -s res://tests/prolog_durchlauf.gd -- --echt

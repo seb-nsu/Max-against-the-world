@@ -7,7 +7,7 @@ script = ExtResource("1_x8ky2")
 script_name = "SchwerterBuendel"
 description = "Schwerter Buendel"
 cursor = 1
-interaction_polygon = PackedVector2Array(-10, -10, 10, -10, 10, 10, -10, 10)
+interaction_polygon = PackedVector2Array(-15, -15, 15, -15, 15, 15, -15, 15)
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=865254657]
 texture_filter = 1
@@ -17,7 +17,7 @@ texture_filter = 1
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1966889711]
 visible = false
 modulate = Color(1, 1, 0, 1)
-polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+polygon = PackedVector2Array(-18, -18, 18, -18, 18, 18, -18, 18)
 
 [node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=1985129600]
 visible = false

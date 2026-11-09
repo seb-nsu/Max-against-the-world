@@ -27,92 +27,92 @@
 [node name="RoomAbstellkammern" type="Node2D" unique_id=854672036]
 script = ExtResource("1_eprp5")
 script_name = "Abstellkammern"
-width = 320
-height = 180
+width = 480
+height = 270
 
 [node name="WalkableAreas" type="Node2D" parent="." unique_id=2123468200]
 
 [node name="Boden" parent="WalkableAreas" unique_id=1577697252 instance=ExtResource("2_43nhc")]
-interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(4, 140, 316, 140, 316, 178, 4, 178)])
+interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(6, 210, 474, 210, 474, 267, 6, 267)])
 
 [node name="Props" type="Node2D" parent="." unique_id=926662758]
 
 [node name="Background" parent="Props" unique_id=662690666 instance=ExtResource("3_u6hpy")]
-position = Vector2(160, 90)
+position = Vector2(240, 135)
 texture = ExtResource("4_m4cdh")
 description = "UI_RAUM_ABSTELLKAMMERN"
 
 [node name="Kronleuchter" parent="Props" unique_id=87142605 instance=ExtResource("5_riibq")]
-position = Vector2(135, 22)
+position = Vector2(203, 33)
 texture = ExtResource("6_gmxmd")
 description = "UI_OBJ_KRONLEUCHTER"
-baseline = 12
-walk_to_point = Vector2(-1, 132)
+baseline = 18
+walk_to_point = Vector2(-2, 198)
 
 [node name="SchwerterBuendel" parent="Props" unique_id=1268535052 instance=ExtResource("7_fgr5r")]
-position = Vector2(240, 130)
+position = Vector2(360, 195)
 texture = ExtResource("8_b6ore")
 description = "UI_OBJ_SCHWERTER_BUENDEL"
-baseline = 10
-walk_to_point = Vector2(-4, 26)
+baseline = 15
+walk_to_point = Vector2(-6, 39)
 
 [node name="FackelBuendel" parent="Props" unique_id=614849226 instance=ExtResource("9_mwppx")]
-position = Vector2(262, 130)
+position = Vector2(393, 195)
 texture = ExtResource("10_ispel")
 description = "UI_OBJ_FACKEL_BUENDEL"
-baseline = 10
-walk_to_point = Vector2(-2, 26)
+baseline = 15
+walk_to_point = Vector2(-3, 39)
 
 [node name="Hotspots" type="Node2D" parent="." unique_id=1309229227]
 
 [node name="DracheneiNest" parent="Hotspots" unique_id=722836785 instance=ExtResource("11_6yr7v")]
-position = Vector2(210, 120)
+position = Vector2(315, 180)
 description = "UI_OBJ_DRACHENEI_NEST"
-baseline = 10
-walk_to_point = Vector2(-10, 36)
+baseline = 15
+walk_to_point = Vector2(-15, 54)
 
 [node name="Goldhaufen" parent="Hotspots" unique_id=891912294 instance=ExtResource("12_4eom3")]
-position = Vector2(165, 120)
+position = Vector2(248, 180)
 description = "UI_OBJ_GOLDHAUFEN"
-baseline = 20
-walk_to_point = Vector2(-5, 36)
+baseline = 30
+walk_to_point = Vector2(-8, 54)
 
 [node name="Okarina" parent="Hotspots" unique_id=821338632 instance=ExtResource("13_e3ve3")]
-position = Vector2(45, 123)
+position = Vector2(68, 185)
 description = "UI_OBJ_OKARINA"
-baseline = 3
-walk_to_point = Vector2(1, 33)
+baseline = 5
+walk_to_point = Vector2(2, 50)
 
 [node name="SchwertImStein" parent="Hotspots" unique_id=405485767 instance=ExtResource("14_mhs3i")]
-position = Vector2(67, 111)
+position = Vector2(101, 167)
 description = "UI_OBJ_SCHWERT_IM_STEIN"
-baseline = 15
-walk_to_point = Vector2(-1, 45)
+baseline = 23
+walk_to_point = Vector2(-2, 68)
 
 [node name="DekoKram" parent="Hotspots" unique_id=621975108 instance=ExtResource("15_ydl2s")]
-position = Vector2(104, 125)
+position = Vector2(156, 188)
 description = "UI_OBJ_DEKO_KRAM"
-baseline = 15
-walk_to_point = Vector2(-4, 31)
+baseline = 23
+walk_to_point = Vector2(-6, 47)
 
 [node name="Stapel" parent="Hotspots" unique_id=1089244585 instance=ExtResource("16_cr6l7")]
-position = Vector2(114, 130)
+position = Vector2(171, 195)
 description = "UI_OBJ_STAPEL"
-baseline = 10
-walk_to_point = Vector2(-4, 26)
+baseline = 15
+walk_to_point = Vector2(-6, 39)
 
 [node name="Wendeltreppe" parent="Hotspots" unique_id=1112628063 instance=ExtResource("17_uhqtc")]
-position = Vector2(12, 100)
+position = Vector2(18, 150)
 description = "UI_OBJ_WENDELTREPPE"
-baseline = 40
-walk_to_point = Vector2(0, 60)
+baseline = 60
+walk_to_point = Vector2(0, 90)
 cursor = 9
 
 [node name="Geheimtuer" parent="Hotspots" unique_id=2112502903 instance=ExtResource("18_gvw8x")]
-position = Vector2(298, 90)
+position = Vector2(447, 135)
 description = "UI_OBJ_GEHEIMTUER"
-baseline = 50
-walk_to_point = Vector2(-8, 60)
+baseline = 75
+walk_to_point = Vector2(-12, 90)
 cursor = 9
 
 [node name="Regions" type="Node2D" parent="." unique_id=1641540041]
@@ -120,18 +120,18 @@ cursor = 9
 [node name="Markers" type="Node2D" parent="." unique_id=1952081546]
 
 [node name="Start" parent="Markers" unique_id=699070164 instance=ExtResource("19_j2fxm")]
-position = Vector2(30, 160)
+position = Vector2(45, 240)
 
 [node name="VonTurmkeller" parent="Markers" unique_id=903831843 instance=ExtResource("20_lblr3")]
-position = Vector2(30, 160)
+position = Vector2(45, 240)
 
 [node name="VonThronsaal" parent="Markers" unique_id=773575743 instance=ExtResource("21_k3hao")]
-position = Vector2(270, 150)
+position = Vector2(405, 225)
 
 [node name="Abnehmer" parent="Markers" unique_id=517010660 instance=ExtResource("22_la0m5")]
-position = Vector2(120, 162)
+position = Vector2(180, 243)
 
 [node name="Characters" type="Node2D" parent="." unique_id=1298740313]
 
 [node name="CharacterSmaugi *" parent="Characters" unique_id=2130994330 instance=ExtResource("23_twi7s")]
-position = Vector2(180, 140)
+position = Vector2(270, 210)

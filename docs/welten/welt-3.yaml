@@ -11,7 +11,7 @@ raeume:
   - id: unterstadt_strasse
     name: Unterstadt, Straße
     skript_code: [ANK, STR, NUD, TEST, SUPP]   # Nudelbude und Deckerts Vordach sind Teil der Straße
-    groesse: 640x180
+    groesse: 960x270
     ausgaenge: [apothekengasse, laboreingang, widerstandsbasis]
     erreichbar_ab: start
     musik: w3_unterstadt
@@ -19,7 +19,7 @@ raeume:
   - id: apothekengasse
     name: Apothekengasse mit Pastillenautomat
     skript_code: [APO, SOFA]   # SOFA: Traum auf Opas Sofa (Prolog-Wohnzimmer mit Filter), Max' Körper bleibt in der Gasse
-    groesse: 320x180
+    groesse: 480x270
     ausgaenge: [unterstadt_strasse]
     erreichbar_ab: R1b
     musik: w3_unterstadt
@@ -27,7 +27,7 @@ raeume:
   - id: widerstandsbasis
     name: Widerstandsbasis
     skript_code: [BAS, PIEP, ENDE]   # ENDE beginnt in der Basis, ab W3_ENDE_NAR_0090 auf der Straße
-    groesse: 640x180
+    groesse: 960x270
     ausgaenge: [unterstadt_strasse, kuehlung, stadtstrasse, testkammer_1]   # stadtstrasse: Ebenenwechsel (Zelle/Terminal); testkammer_1: Kalles Leitung (R9a)
     erreichbar_ab: R3b
     musik: w3_basis
@@ -35,7 +35,7 @@ raeume:
   - id: kuehlung
     name: Kühlung
     skript_code: []   # nur Pixel; seine Zeilen laufen unter BAS
-    groesse: 320x180
+    groesse: 480x270
     ausgaenge: [widerstandsbasis]   # durch den Lüftungsschacht, nur Pixel
     erreichbar_ab: R3b
     musik: w3_basis
@@ -43,7 +43,7 @@ raeume:
   - id: laboreingang
     name: Laboreingang
     skript_code: [EING]
-    groesse: 320x180
+    groesse: 480x270
     ausgaenge: [unterstadt_strasse]
     erreichbar_ab: start
     musik: w3_unterstadt
@@ -52,7 +52,7 @@ raeume:
   - id: stadtstrasse
     name: Stadtstraße
     skript_code: [SIM, TUER]   # Glaseingang des Büroturms liegt auf der Stadtstraße
-    groesse: 640x180
+    groesse: 960x270
     ausgaenge: [kueche_orakel, buero_50, widerstandsbasis]   # widerstandsbasis: Ebenenwechsel über klingelnde Zelle und Terminal
     erreichbar_ab: R3b
     musik: w3_simulation
@@ -60,7 +60,7 @@ raeume:
   - id: kueche_orakel
     name: Küche der Orakel-Oma
     skript_code: [KUCH]
-    groesse: 320x180
+    groesse: 480x270
     ausgaenge: [stadtstrasse]   # Omas Wandtelefon ist zusätzlich ein Ebenenwechsel in die Basis
     erreichbar_ab: R3b
     musik: w3_simulation
@@ -68,7 +68,7 @@ raeume:
   - id: buero_50
     name: Büroturm, 50. Stock
     skript_code: [TURM, TERM]   # TERM: Pixels Teil spielt in der Basis
-    groesse: 320x180
+    groesse: 480x270
     ausgaenge: [stadtstrasse]   # Einbahn: hinein durch den Glaseingang, heraus nur über R7 und das Terminal der Basis
     erreichbar_ab: R5
     musik: w3_simulation
@@ -77,7 +77,7 @@ raeume:
   - id: testkammer_1
     name: Testkammer 1
     skript_code: [KAM1]
-    groesse: 320x180
+    groesse: 480x270
     ausgaenge: [testkammer_2, widerstandsbasis]   # widerstandsbasis: Ebenenwechsel über Kalles Leitung und die Kapsel
     erreichbar_ab: R9a
     musik: w3_labor
@@ -85,7 +85,7 @@ raeume:
   - id: testkammer_2
     name: Testkammer 2
     skript_code: [KAM2]
-    groesse: 320x180
+    groesse: 480x270
     ausgaenge: [testkammer_1, testkammer_3]
     erreichbar_ab: R9b
     musik: w3_labor
@@ -93,7 +93,7 @@ raeume:
   - id: testkammer_3
     name: Testkammer 3
     skript_code: [KAM3]
-    groesse: 320x180
+    groesse: 480x270
     ausgaenge: [testkammer_2, kern]
     erreichbar_ab: R9c
     musik: w3_labor
@@ -101,7 +101,7 @@ raeume:
   - id: kern
     name: Kern von M.U.T.T.I.
     skript_code: [KERN]
-    groesse: 320x180
+    groesse: 480x270
     ausgaenge: [testkammer_3]
     erreichbar_ab: R9d
     musik: w3_kern
@@ -115,55 +115,55 @@ figuren:
     name: Max
     kuerzel: MAX
     raum: [unterstadt_strasse, apothekengasse, widerstandsbasis, laboreingang, stadtstrasse, kueche_orakel, buero_50, testkammer_1, testkammer_2, testkammer_3, kern]
-    groesse_px: 56   # Sonderformen: Max als Ente 30, Max in der Kapsel 70 breit
+    groesse_px: 84   # Sonderformen: Max als Ente 30, Max in der Kapsel 70 breit
     spielbar: true
   - id: pixel
     name: Pixel
     kuerzel: PIX
     raum: [unterstadt_strasse, apothekengasse, widerstandsbasis, kuehlung, laboreingang]   # in Simulation und Labor nur Stimme (Hörer, Wandtelefon, Terminal, Lautsprecher)
-    groesse_px: 18
+    groesse_px: 27
     spielbar: true
   - id: opa
     name: Opa
     kuerzel: OPA
     raum: [widerstandsbasis, testkammer_1]   # Hologramm aus Piepsi (R13); durch das Portal nur im Effekt-Bild (R9b)
-    groesse_px: 24
+    groesse_px: 36
     spielbar: false
   - id: morphaeus
     name: Morphäus
     kuerzel: MOR
     raum: [unterstadt_strasse, apothekengasse]   # nach R2 am Eingang der Apothekengasse
-    groesse_px: 60
+    groesse_px: 90
     spielbar: false
   - id: deckert
     name: Deckert
     kuerzel: DEC
     raum: unterstadt_strasse
-    groesse_px: 60
+    groesse_px: 90
     spielbar: false
   - id: herr_vier
     name: Herr Vier
     kuerzel: VIE
     raum: unterstadt_strasse
-    groesse_px: 56
+    groesse_px: 84
     spielbar: false
   - id: weinender_mann
     name: Weinender Mann
     kuerzel: WEI
     raum: unterstadt_strasse
-    groesse_px: 58   # Stehgröße, im Spiel sitzend
+    groesse_px: 87   # Stehgröße, im Spiel sitzend
     spielbar: false
   - id: frau_regenschirm
     name: Frau mit Regenschirm
     kuerzel: FRA
     raum: unterstadt_strasse
-    groesse_px: 56
+    groesse_px: 84
     spielbar: false
   - id: strassenmusiker
     name: Straßenmusiker
     kuerzel: MUS
     raum: unterstadt_strasse
-    groesse_px: 58
+    groesse_px: 87
     spielbar: false
   - id: pastillenautomat
     name: Pastillenautomat
@@ -175,37 +175,37 @@ figuren:
     name: Kalle
     kuerzel: KAL
     raum: [widerstandsbasis, laboreingang]   # im Büroturm nur als Text auf dem Terminal
-    groesse_px: 58
+    groesse_px: 87
     spielbar: false
   - id: rebellin
     name: Rebellin
     kuerzel: REB
     raum: widerstandsbasis
-    groesse_px: 58
+    groesse_px: 87
     spielbar: false
   - id: rebell
     name: Rebell
     kuerzel: REL
     raum: widerstandsbasis
-    groesse_px: 60
+    groesse_px: 90
     spielbar: false
   - id: piepsi
     name: Piepsi
     kuerzel: PIE
     raum: widerstandsbasis
-    groesse_px: 18
+    groesse_px: 27
     spielbar: false
   - id: hausmeister
     name: Modell 08/15
     kuerzel: HAU
     raum: [laboreingang, widerstandsbasis]   # in der Basis nur in der Schlussszene mit FREUND_0815
-    groesse_px: 58
+    groesse_px: 87
     spielbar: false
   - id: orakel_oma
     name: Orakel-Oma
     kuerzel: ORA
     raum: kueche_orakel   # spricht beim ersten Klopfen von drinnen auf die Stadtstraße
-    groesse_px: 56
+    groesse_px: 84
     spielbar: false
   - id: radio
     name: Radio
@@ -217,13 +217,13 @@ figuren:
     name: Schmidt
     kuerzel: SCH
     raum: [stadtstrasse, buero_50]   # Agent Schmidt
-    groesse_px: 60
+    groesse_px: 90
     spielbar: false
   - id: klon
     name: Klon
     kuerzel: KLO
     raum: buero_50
-    groesse_px: 60
+    groesse_px: 90
     spielbar: false
   - id: tuer
     name: Die Tür
@@ -235,19 +235,19 @@ figuren:
     name: Schwarze Katze
     kuerzel: null   # spricht nicht, nur Kulisse zum Ansehen
     raum: stadtstrasse
-    groesse_px: 14
+    groesse_px: 21
     spielbar: false
   - id: mutti
     name: M.U.T.T.I.
     kuerzel: MUT
     raum: [testkammer_1, testkammer_2, testkammer_3, kern]   # in den Kammern nur aus dem Lautsprecher, im Kern von der Decke
-    groesse_px: 120
+    groesse_px: 180
     spielbar: false
   - id: bernd
     name: Bernd
     kuerzel: BER
     raum: [testkammer_1, testkammer_3]   # Begleitwürfel, kein Inventar-Gegenstand
-    groesse_px: 16
+    groesse_px: 24
     spielbar: false
   - id: portalgeraet_stimme
     name: Portalgerät

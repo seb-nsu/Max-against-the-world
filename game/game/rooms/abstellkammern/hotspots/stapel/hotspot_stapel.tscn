@@ -7,9 +7,9 @@ script = ExtResource("1_e3snw")
 script_name = "Stapel"
 description = "Stapel"
 cursor = 1
-interaction_polygon = PackedVector2Array(-30, -10, 30, -10, 30, 10, -30, 10)
+interaction_polygon = PackedVector2Array(-45, -15, 45, -15, 45, 15, -45, 15)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1387407707]
 visible = false
 modulate = Color(1, 0, 1, 1)
-polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+polygon = PackedVector2Array(-18, -18, 18, -18, 18, 18, -18, 18)

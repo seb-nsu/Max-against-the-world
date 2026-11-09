@@ -7,9 +7,9 @@ script = ExtResource("1_moeoc")
 script_name = "ZickzackRoute"
 description = "Zickzack Route"
 cursor = 1
-interaction_polygon = PackedVector2Array(-30, -4, 30, -4, 30, 4, -30, 4)
+interaction_polygon = PackedVector2Array(-45, -6, 45, -6, 45, 6, -45, 6)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=859058039]
 visible = false
 modulate = Color(1, 0, 1, 1)
-polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+polygon = PackedVector2Array(-18, -18, 18, -18, 18, 18, -18, 18)

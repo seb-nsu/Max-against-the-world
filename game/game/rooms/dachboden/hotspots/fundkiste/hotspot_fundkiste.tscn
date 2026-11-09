@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://dbunxr4fev6x1"]
+
+[ext_resource type="Script" path="res://game/rooms/dachboden/hotspots/fundkiste/hotspot_fundkiste.gd" id="1_jaqfh"]
+
+[node name="Fundkiste" type="Area2D" unique_id=1133812809]
+script = ExtResource("1_jaqfh")
+script_name = "Fundkiste"
+description = "Fundkiste"
+cursor = 1
+interaction_polygon = PackedVector2Array(-15, -13.5, 15, -13.5, 15, 13.5, -15, 13.5)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=561620630]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

@@ -10,28 +10,35 @@ Szene. Fünf Sekunden Werbeblock auf dem Zapp-O-Mat (Milchglas, Kuh, Preisschild
 | --- | --- | --- | --- |
 | ZS1\_DACH\_NAR\_0010 | – | Werbeblock: Milchglas, Kuh, leeres Preisschild, Blitz. Fünf Sekunden, dann Rauschen. | Effekt Werbeblock, Jingle Werbeblock-Spot |
 | ZS1\_DACH\_PIX\_0020 | Pixel | Milch. Fünf Sekunden Milch, und niemand weiß, warum. | kommt aus dem Bildschirm, schüttelt sich |
-| ZS1\_DACH\_MAX\_0030 | Max | Welche Milch? Da war nur Rauschen. | landet auf dem Boden, Ei im Arm |
-| ZS1\_DACH\_PIX\_0040 | Pixel | Ihr Menschen seht nie die Werbung. Nur das Programm. Tragisch. |  |
+| ZS1\_DACH\_MAX\_0030 | Max | Welche Milch? Da war nur Rauschen. Und dann der Boden. Der kam sehr schnell. | landet auf dem Boden, Ei im Arm |
+| ZS1\_DACH\_PIX\_0040 | Pixel | Ihr Menschen seht nie die Werbung, nur das Programm. Das ist euer ganzes Problem. |  |
 | ZS1\_DACH\_OPA\_0050 | Opa | Max! Das Ei! Du hast das Ei! Ist es ganz? Sag, dass es ganz ist! | stürzt heran, Hände zittern |
-| ZS1\_DACH\_MAX\_0060 | Max | Es ist ganz. Ich bin's auch. Falls das jemanden interessiert. |  |
-| ZS1\_DACH\_OPA\_0070 | Opa | Natürlich. Beides. In der Reihenfolge. | nimmt das Ei wie ein Baby |
+| ZS1\_DACH\_MAX\_0060 | Max | Es ist ganz. Ich übrigens auch, falls das jemanden interessiert. Drei Tage Mittelalter, und keiner fragt. |  |
+| ZS1\_DACH\_OPA\_0070 | Opa | Natürlich interessiert mich das! Beides! In der Reihenfolge. | nimmt das Ei wie ein Baby |
+| ZS1\_DACH\_MAX\_0072 | Max | Der Drache hat ein bisschen geweint, als ich's mitgenommen hab. Er trägt jetzt Kopftuch und räumt auf. Lange Geschichte. |  |
+| ZS1\_DACH\_OPA\_0074 | Opa | Drachen weinen immer, das ist die Luftfeuchtigkeit. Erzähl mir alles! Nein, warte. Erst das Ei. | wiegt das Ei |
 | ZS1\_DACH\_OPA\_0080 | Opa | Der Eierkarton! Modell Spezialzwecke, sechsfach gepolstert. | holt einen gewöhnlichen Eierkarton von der Werkbank |
-| ZS1\_DACH\_MAX\_0090 | Max | Das ist ein Eierkarton. |  |
+| ZS1\_DACH\_MAX\_0090 | Max | Opa, das ist ein Eierkarton. Da waren mal Eier drin. Ganz normale. |  |
 | ZS1\_DACH\_OPA\_0100 | Opa | Für Spezialzwecke. Steht drauf. | zeigt auf eine Bleistiftkritzelei: „Spezialzwecke“ |
 | ZS1\_DACH\_NAR\_0110 | – | Opa legt das Ei in den Karton. Glitzer, ein leises Plopp. Das Ei sieht plötzlich sehr nach Ei aus. | Effekt Verwandlung; Werkbank-Ablage Zustand 1 |
-| ZS1\_DACH\_MAX\_0120 | Max | Es war drüben größer. Und goldener. Und hatte Schuppen. |  |
+| ZS1\_DACH\_MAX\_0120 | Max | Komisch. Drüben war es größer. Und goldener. Und es hatte Schuppen, ich schwör's. |  |
 | ZS1\_DACH\_OPA\_0130 | Opa | Rückverwandlungsschwund. Völlig normal. Drüben ist alles größer. Wie im Fernsehen. | schnell, zu schnell |
-| ZS1\_DACH\_PIX\_0140 | Pixel | Ein Drache hat das bewacht. Wie Bio-Freiland. // Ich sage nichts. Ich bin nur ein Kater. // Ein Kater mit Augen. |  |
-| ZS1\_DACH\_MAX\_0150 | Max | Opa. Ein Ding ist da. Ein Viertel vom Passwort wäre jetzt fair. | Hände in der Bauchtasche |
+| ZS1\_DACH\_MAX\_0132 | Max | Rückverwandlungsschwund. Okay. Klingt, als hätte das schon mal jemand gemessen. | glaubt ihm |
+| ZS1\_DACH\_PIX\_0140 | Pixel | Gestern noch Bio-Freiland mit eigenem Drachen. Heute Eierkarton. // Ich sage nichts. Ich bin nur ein Kater. // Ein Kater mit Augen. |  |
+| ZS1\_DACH\_MAX\_0150 | Max | Okay. Ein Ding ist da, drei fehlen noch. Dann wär ein Viertel vom Passwort jetzt nur fair, oder? | Hände in der Bauchtasche |
 | ZS1\_DACH\_OPA\_0160 | Opa | Fair! Weißt du, was fair ist? Der Zapp-O-Mat! Er wählt den Kanal nicht nach Laune, sondern nach Frequenz! | Finger erhoben, Vortragsmodus |
 | ZS1\_DACH\_OPA\_0170 | Opa | 1962 hat man geglaubt, Fernsehen kommt aus der Steckdose. Ich habe bewiesen, dass es auch zurückgeht! // Die Antenne, Modell Kleiderbügel, ist nur das Empfangsorgan. Das Sendeorgan bist du! | Erklären-Animation |
-| ZS1\_DACH\_MAX\_0180 | Max | Das war ein Nein. | zu Pixel |
+| ZS1\_DACH\_MAX\_0180 | Max | Hast du das verstanden? Ich glaub, das war ein Nein. | zu Pixel |
 | ZS1\_DACH\_PIX\_0190 | Pixel | Das war ein Nein mit Fußnoten. Dein Opa ist ein Vortrag auf Beinen. |  |
+| ZS1\_DACH\_MAX\_0192 | Max | Ich hab da drüben einen Dunklen Lord zurück in die Schule geschickt, Opa. Mit einem Kochlöffel. |  |
+| ZS1\_DACH\_OPA\_0194 | Opa | Siehst du! Und das ganz ohne WLAN. Stell dir vor, was du mit WLAN alles nicht geschafft hättest. | strahlt |
 | ZS1\_DACH\_OPA\_0200 | Opa | Vier Dinge, ein Passwort. Ehrenwort eines Wissenschaftlers. Und jetzt: Kanal 7! |  |
+| ZS1\_DACH\_MAX\_0202 | Max | Jetzt sofort? Ich bin gerade erst gelandet. Meine Schuhe sind noch im Mittelalter. |  |
+| ZS1\_DACH\_OPA\_0204 | Opa | Erst wird gepackt, dann gedreht. Dreh am Knopf, wenn du so weit bist, und die Tasche steht bereit. | nickt zum Drehknopf |
 | ZS1\_DACH\_PIX\_0210 | Pixel | Moment. Notizbuch. | springt auf die Werkbank, Pfote aufs Notizbuch |
 | ZS1\_DACH\_PIX\_0220 | Pixel | Ein Ei, weich, zum Frühstück. Das kommt auf meine Liste. // Nicht dieses Ei. Dieses Ei hat eine Vorgeschichte. | Notizbuch Seite 3, Eintrag 1; Jingle Notizbuch |
-| ZS1\_DACH\_MAX\_0230 | Max | Du hast eine Liste? |  |
-| ZS1\_DACH\_PIX\_0240 | Pixel | Jeder braucht eine Liste. Deine ist leer. Meine hat Ziele. |  |
+| ZS1\_DACH\_MAX\_0230 | Max | Du hast die Liste wirklich angefangen. |  |
+| ZS1\_DACH\_PIX\_0240 | Pixel | Jeder braucht eine Liste. Deine ist leer. Meine hat Ziele. // Ziel eins: weich. Ziel zwei: kommt noch. |  |
 
 Ansehen auf dem Dachboden, Zustand später Nachmittag. Alle Prolog-Zeilen der unveränderten Objekte bleiben gültig; hier nur, was sich verändert hat.
 
@@ -50,10 +57,33 @@ Ansehen auf dem Dachboden, Zustand später Nachmittag. Alle Prolog-Zeilen der un
 | ZS1\_DACH\_PIX\_0365 | Pixel | Eine Fernbedienung hat Bissspuren. Die sind nicht von mir. Ich sage das nur, weil gleich jemand fragt. | Ansehen: Kiste mit Fernbedienungen, zweites Mal |
 | ZS1\_DACH\_MAX\_0370 | Max | Der Sessel. Noch bequemer als vorhin. Er hat auf mich gewartet. | Ansehen: Ohrensessel |
 | ZS1\_DACH\_MAX\_0375 | Max | Ich setz mich nicht rein. Wer sich da reinsetzt, wacht in drei Jahren auf und hat einen Bart. | Ansehen: Ohrensessel, zweites Mal |
-| ZS1\_DACH\_MAX\_0380 | Max | Opa, was wird das eigentlich mit den vier Dingen? | Reden: Opa, Option |
+
+Gespräch mit Opa in der freien Phase (Regel wie im Prolog: Max stellt die Frage, gelesene Optionen verschwinden, „Ich geh packen“ bleibt). Die Prolog-Optionen gelten im Zwischenspiel nicht mehr; ist alles gefragt, kommen Opas Abschiedszeilen aus dem Prolog.
+
+| ID | Sprecher | Text | Regie |
+| --- | --- | --- | --- |
+| ZS1\_DACH\_MAX\_0380 | Max | Opa, was wird das eigentlich mit den vier Dingen? | Option Opa |
 | ZS1\_DACH\_OPA\_0390 | Opa | Ein Werk. Ein großes, dunkles, warmes Werk. Mehr sage ich nicht, sonst geht es nicht auf. | geheimnisvoll, dann erschrocken über sich selbst |
 | ZS1\_DACH\_MAX\_0400 | Max | „Aufgehen.“ Wie ein Plan. |  |
-| ZS1\_DACH\_PIX\_0410 | Pixel | Wie ein Plan. Sicher. |  |
+| ZS1\_DACH\_PIX\_0410 | Pixel | Wie ein Plan. Sicher. | schnuppert Richtung Opa |
+| ZS1\_DACH\_MAX\_0430 | Max | Wie lange war ich eigentlich weg? | Option Opa |
+| ZS1\_DACH\_OPA\_0432 | Opa | Eine Folge. Mit Werbung. Drüben läuft die Zeit schneller, der Zapp-O-Mat spult vor. Deshalb merkt deine Mutter nichts. | zufrieden |
+| ZS1\_DACH\_MAX\_0434 | Max | Drüben waren es Tage. Meine Füße wissen das. |  |
+| ZS1\_DACH\_PIX\_0436 | Pixel | Meine auch. Alle vier. |  |
+| ZS1\_DACH\_MAX\_0440 | Max | Was kommt auf Kanal 7? | Option Opa |
+| ZS1\_DACH\_OPA\_0442 | Opa | Die Antike! Pyramiden, Philosophen, Olympia. Und ein Pharao, der sich nicht entscheiden kann. | Finger erhoben |
+| ZS1\_DACH\_MAX\_0444 | Max | Wofür entscheiden? |  |
+| ZS1\_DACH\_OPA\_0446 | Opa | Für irgendwas. Seit Jahren. Da unten wird alles in dreifacher Ausfertigung erledigt. Nimm was mit, das Ordnung schafft. | Hinweis auf die Sortierende Socke |
+| ZS1\_DACH\_MAX\_0450 | Max | Der rote Kreis im Kalender. Da sind keine Tage mehr bis dahin. | Option Opa |
+| ZS1\_DACH\_OPA\_0452 | Opa | Ein Termin. Ein runder. Deshalb ja der Kreis. Völlig logisch. | schaut auf die Werkbank, nicht auf Max |
+| ZS1\_DACH\_PIX\_0454 | Pixel | Er riecht wieder nach Angst. Und nach Kuchen. Zweimal dieselbe Ausrede, das ist schon Tradition. |  |
+| ZS1\_DACH\_MAX\_0460 | Max | Ich geh packen. | Option Opa, beendet das Gespräch |
+| ZS1\_DACH\_OPA\_0462 | Opa | Der Knopf wartet. Die Tasche auch, und die ist strenger als ich. | zeigt zum Drehknopf |
+
+Fundkiste (neu am Kistenstapel, ab Zwischenspiel 1):
+
+| ID | Sprecher | Text | Auslöser |
+| --- | --- | --- | --- |
 | ZS1\_DACH\_MAX\_0420 | Max | Opas Fundkiste. Alles, was nicht in die Tasche passt. Opa wirft nichts weg. Er nennt das Archiv. | Ansehen: Fundkiste; gilt in allen drei Zwischenspielen |
 | ZS1\_DACH\_MAX\_0425 | Max | Ganz unten in der Kiste liegt ein Zauberwürfel. Halb gelöst. Seit 1982. Opa nennt das Langzeitprojekt. | Ansehen: Fundkiste, zweites Mal; gilt in allen drei Zwischenspielen |
 
@@ -62,8 +92,11 @@ Reisetasche packen für Welt 2. Bildschirm Reisetasche (eigene Überlagerung aus
 | ID | Sprecher | Text | Auslöser |
 | --- | --- | --- | --- |
 | ZS1\_DACH\_OPA\_0510 | Opa | Zwei Wahlfächer. Nicht mehr. Die Tasche hat Prinzipien. | öffnet die Tasche, Bildschirm Reisetasche |
+| ZS1\_DACH\_MAX\_0512 | Max | Zwei? Ich hab ein halbes Mittelalter in den Taschen. |  |
+| ZS1\_DACH\_OPA\_0514 | Opa | Der Rest kommt in die Fundkiste. Ich werfe nichts weg. Nie. | klopft auf die Kiste am Kistenstapel |
 | ZS1\_DACH\_PIX\_0520 | Pixel | Der Kochlöffel reist jetzt immer mit. Er hat sich das verdient. // Und er klebt noch. | Berühren: Kochlöffel (Pflichtfach) |
 | ZS1\_DACH\_PIX\_0530 | Pixel | Der Thunfisch bleibt. Das ist kein Gepäck, das ist Religion. | Berühren: Thunfischdose (Pflichtfach) |
+| ZS1\_DACH\_PIX\_0535 | Pixel | Das Notizbuch. Da steht meine Liste drin. Das reist mit, solange ich atme. | Berühren: Notizbuch (Pflichtfach) |
 | ZS1\_DACH\_PIX\_0540 | Pixel | Die Socke sortiert alles, was man ihr gibt. Wo es Beamte gibt, gibt es Stapel. | Berühren: Sortierende Socke |
 | ZS1\_DACH\_PIX\_0550 | Pixel | Ein Ziegenfell. Ich habe darin gelebt. Ich spreche nicht darüber. // Wo es heiß ist, braucht das niemand. | Berühren: Ziegenfell-Vorleger |
 | ZS1\_DACH\_PIX\_0560 | Pixel | Moderworts Zeugnis. Ungenügend in Zaubertränke. // Beeindruckt niemanden, außer Müttern. | Berühren: Moderworts Zeugnis |
@@ -74,10 +107,10 @@ Reisetasche packen für Welt 2. Bildschirm Reisetasche (eigene Überlagerung aus
 | ZS1\_DACH\_MAX\_0610 | Max | Zwei Fächer, zwei Dinge. Wie ein Handy mit zwei Apps. Schmerzhaft. | Beim Versuch, ein drittes einzupacken |
 | ZS1\_DACH\_PIX\_0620 | Pixel | Volle Tasche, leere Pfoten. Ich trage ohnehin nichts. | Bestätigen der Auswahl |
 | ZS1\_DACH\_OPA\_0630 | Opa | Diesmal kein Zettel. Ich hab vorgearbeitet. Drüben wartet die Post auf dich. | schließt die Tasche |
-| ZS1\_DACH\_MAX\_0640 | Max | Du hast mir Post in die Antike geschickt. |  |
+| ZS1\_DACH\_MAX\_0640 | Max | Moment. Du hast mir Post in die Antike geschickt? Wie denn? |  |
 | ZS1\_DACH\_OPA\_0650 | Opa | Per Boten. Der kommt zu spät, aber er kommt. Kanal 7, Max! Und wenn du Ramses siehst: Er soll sich entscheiden! | zeigt auf den Drehknopf |
 | ZS1\_DACH\_MAX\_0660 | Max | Kanal 7. | Benutzen: Drehknopf; Wirbel, Übergang Welt 2 |
-| ZS1\_DACH\_PIX\_0670 | Pixel | Ich hasse Zeitreisen. Ich habe das erwähnt. Ich erwähne es gern noch einmal. | hinterher |
+| ZS1\_DACH\_PIX\_0670 | Pixel | Erst Fernsehreisen, jetzt Zeitreisen. Ich hab's erwähnt. Ich erwähne es auf jedem Kanal. | hinterher |
 
 Hilfe-Pfote in den Zwischenspielen: Es gibt kein Rätsel, offen ist nur das Packen. Pixel sagt in allen drei Zwischenspielen dieselbe Zeile.
 

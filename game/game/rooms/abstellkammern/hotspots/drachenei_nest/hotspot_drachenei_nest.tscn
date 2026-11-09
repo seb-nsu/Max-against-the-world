@@ -7,9 +7,9 @@ script = ExtResource("1_a2f2b")
 script_name = "DracheneiNest"
 description = "Drachenei Nest"
 cursor = 1
-interaction_polygon = PackedVector2Array(-10, -10, 10, -10, 10, 10, -10, 10)
+interaction_polygon = PackedVector2Array(-15, -15, 15, -15, 15, 15, -15, 15)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=578431722]
 visible = false
 modulate = Color(1, 0, 1, 1)
-polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+polygon = PackedVector2Array(-18, -18, 18, -18, 18, 18, -18, 18)

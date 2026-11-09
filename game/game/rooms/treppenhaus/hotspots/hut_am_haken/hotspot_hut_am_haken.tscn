@@ -7,9 +7,9 @@ script = ExtResource("1_sry3d")
 script_name = "HutAmHaken"
 description = "Hut Am Haken"
 cursor = 1
-interaction_polygon = PackedVector2Array(-10, -9, 10, -9, 10, 9, -10, 9)
+interaction_polygon = PackedVector2Array(-15, -14, 15, -14, 15, 14, -15, 14)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1897749652]
 visible = false
 modulate = Color(1, 0, 1, 1)
-polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+polygon = PackedVector2Array(-18, -18, 18, -18, 18, 18, -18, 18)

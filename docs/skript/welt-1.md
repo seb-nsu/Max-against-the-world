@@ -9,28 +9,31 @@ Szene. Der Wirbel spuckt Max auf das Kopfsteinpflaster, Pixel landet auf allen v
 | ID | Sprecher | Text | Regie |
 | --- | --- | --- | --- |
 | W1\_ANK\_MAX\_0010 | Max | Au. | liegt auf dem Rücken, Hoodie über dem Gesicht |
-| W1\_ANK\_PIX\_0020 | Pixel | Ich bin auf den Pfoten gelandet. Natürlich. // Du bist auf dem Gesicht gelandet. Auch natürlich. | sitzt kerzengerade |
-| W1\_ANK\_MAX\_0030 | Max | Wo sind wir? | setzt sich auf, sieht sich um |
-| W1\_ANK\_PIX\_0040 | Pixel | Kanal 3. Riecht nach Stroh, Bier und Leuten, die „Wohlan“ sagen. | schnuppert |
-| W1\_ANK\_MAX\_0050 | Max | Fantasy. Ich hab die Staffel übersprungen. | steht auf, Hände in die Bauchtasche |
-| W1\_ANK\_MAX\_0060 | Max | Opas Zettel. Jetzt darf ich ihn ja lesen. | zieht den Zettel aus der Reisetasche |
+| W1\_ANK\_PIX\_0020 | Pixel | Ich bin auf den Pfoten gelandet. Du auf dem Gesicht. Jeder, wie er kann. | sitzt kerzengerade |
+| W1\_ANK\_MAX\_0030 | Max | Wo sind wir überhaupt? | setzt sich auf, sieht sich um |
+| W1\_ANK\_PIX\_0040 | Pixel | Kanal 3, wenn ich die Fernbedienung richtig gelesen habe. Es riecht nach Stroh, Bier und Leuten, die „Wohlan“ sagen. | schnuppert |
+| W1\_ANK\_MAX\_0050 | Max | Fantasy also. Die Staffel hab ich übersprungen. Zu viele Landkarten am Anfang. | steht auf, Hände in die Bauchtasche |
+| W1\_ANK\_PIX\_0051 | Pixel | Dann hol sie jetzt nach. Und lies Opas Zettel. Er hat gesagt: erst, wenn ihr drüben seid. Wir sind drüben. |  |
+| W1\_ANK\_MAX\_0060 | Max | Stimmt. Jetzt darf ich ihn lesen. | zieht den Zettel aus der Reisetasche |
 | W1\_ANK\_OPA\_0070 | Opa (Zettel, Max liest vor) | „Das Ei muss ganz bleiben. Alles hängt davon ab.“ | Nahansicht Zettel, Opas Handschrift |
-| W1\_ANK\_MAX\_0080 | Max | Alles hängt davon ab. Von einem Ei. Okay. | steckt den Zettel weg |
-| W1\_ANK\_PIX\_0090 | Pixel | Zweimal unterstrichen. Dein Opa unterstreicht nur, wenn er Angst hat. // Oder Hunger. |  |
+| W1\_ANK\_MAX\_0080 | Max | Alles hängt von einem Ei ab. Kein Druck also. | steckt den Zettel weg |
+| W1\_ANK\_PIX\_0090 | Pixel | Er hat es zweimal unterstrichen. Das macht dein Opa nur, wenn er Angst hat. // Oder Hunger. Meistens beides. |  |
 | W1\_ANK\_TOA\_0100 | Toadi (aus dem Off) | Hilfe! Hilfe! Ein Held! Da ist ein Held! | Rennen-Animation von rechts |
 | W1\_ANK\_MAX\_0110 | Max | Wo? | dreht sich um |
-| W1\_ANK\_TOA\_0120 | Toadi | Du! Du siehst aus wie einer! Also fast. Die Haltung ist noch nicht so. | Keuchen-Animation |
-| W1\_ANK\_TOA\_0130 | Toadi | Prinzessin Zeldina wurde entführt! Vom Dunklen Lord! Und auf Burg Brösel ist sie nicht, ich hab nachgesehen! |  |
-| W1\_ANK\_MAX\_0140 | Max | Ich suche ein Ei. Kein Prinzessinnen-Ding. |  |
-| W1\_ANK\_TOA\_0150 | Toadi | Alle suchen hier etwas. Der Dunkle Lord hat alles. Das Ei bestimmt auch. Er wohnt im Dunklen Turm. Da hinten, wo es violett wird. | zeigt nach rechts hinten |
-| W1\_ANK\_PIX\_0160 | Pixel | Ein Turm, der sich Dunkler Turm nennt. Subtil wie ein Napf mit der Aufschrift „Napf“. |  |
-| W1\_ANK\_TOA\_0170 | Toadi | Der Weg geht über die Trollbrücke, durch den Zauberwald, durchs Bergwerk. Ich weiß das, weil ich dreimal umkehren musste. |  |
-| W1\_ANK\_MAX\_0180 | Max | Und wie komm ich an der Brücke vorbei? |  |
-| W1\_ANK\_TOA\_0190 | Toadi | Mit Regeln. Der Troll liebt Regeln. Ich hab keine dabei. Ich hab nur Panik dabei. | sieht zum Luftschloss hoch, seufzt |
-| W1\_ANK\_TOA\_0200 | Toadi | Da oben wäre sie vielleicht. Aber da kommt man nur mit einer Bohnenranke hin. Und wer hat schon eine Bohnenranke. |  |
-| W1\_ANK\_MAX\_0210 | Max | Muss das sein? | an Pixel, leise |
-| W1\_ANK\_PIX\_0220 | Pixel | Du hast beim Einsaugen zugestimmt. Ich war dabei. // Außerdem: erst das Ei, dann das Sofa. Das ist die Reihenfolge. | geht los Richtung Taverne |
-| W1\_ANK\_MAX\_0230 | Max | Du gehst in die Kneipe. | folgt |
+| W1\_ANK\_TOA\_0120 | Toadi | Du! Du siehst aus wie einer! Also fast. An der Haltung arbeiten wir noch. | Keuchen-Animation |
+| W1\_ANK\_MAX\_0121 | Max | Ich hab keine Haltung. Ich hab einen Hoodie. |  |
+| W1\_ANK\_TOA\_0130 | Toadi | Egal! Prinzessin Zeldina ist entführt worden! Vom Dunklen Lord! Auf Burg Brösel ist sie nicht, da hab ich schon nachgesehen! |  |
+| W1\_ANK\_MAX\_0140 | Max | Tut mir leid, ich such ein Ei. Prinzessinnen sind nicht so mein Bereich. |  |
+| W1\_ANK\_TOA\_0150 | Toadi | Ein Ei? Der Dunkle Lord hat alles, was es gibt. Dein Ei bestimmt auch. Er wohnt im Dunklen Turm, da hinten, wo es violett wird. | zeigt nach rechts hinten |
+| W1\_ANK\_PIX\_0160 | Pixel | Ein Turm, der sich Dunkler Turm nennt. So unauffällig wie ein Napf mit der Aufschrift „Napf“. |  |
+| W1\_ANK\_MAX\_0161 | Max | Und wie kommt man da hin? |  |
+| W1\_ANK\_TOA\_0170 | Toadi | Über die Trollbrücke, durch den Zauberwald, dann durchs Bergwerk. Ich weiß das so genau, weil ich dreimal umkehren musste. |  |
+| W1\_ANK\_MAX\_0180 | Max | Und wie komm ich an dem Troll vorbei? |  |
+| W1\_ANK\_TOA\_0190 | Toadi | Mit Regeln. Der Troll liebt Regeln. Ich hatte keine dabei, nur Panik. | sieht zum Luftschloss hoch, seufzt |
+| W1\_ANK\_TOA\_0200 | Toadi | Vielleicht ist sie auch da oben im Luftschloss. Aber da kommt man nur mit einer Bohnenranke hin. Und wer hat schon eine Bohnenranke. |  |
+| W1\_ANK\_MAX\_0210 | Max | Müssen wir da wirklich mitmachen? | an Pixel, leise |
+| W1\_ANK\_PIX\_0220 | Pixel | Du hast beim Einsaugen zugestimmt, ich war dabei. // Und die Reihenfolge ist klar: erst das Ei, dann das Sofa. | geht los Richtung Taverne |
+| W1\_ANK\_MAX\_0230 | Max | Und warum gehst du dann in die Kneipe? | folgt |
 | W1\_ANK\_PIX\_0240 | Pixel | Ich gehe dahin, wo es nach Käse riecht. Dass das die Kneipe ist, ist Zufall. |  |
 
 ## 2. Dorfplatz Unterbrösel: Brunnen, Dorfbrett, Bohnenranke
@@ -53,7 +56,7 @@ Der Dorfplatz ist die Drehscheibe der Welt: Rätsel 3 (Bestellung), 5 (Brunnen) 
 | W1\_DORF\_MAX\_0165 | Max | Unten klein: „Achtung, Wolf im Lieferbereich. Nicht füttern, nicht reden, nicht Oma nennen.“ | Ansehen: Bestellzettel am Dorfbrett, zweites Mal |
 | W1\_DORF\_MAX\_0170 | Max | Ein Bestellzettel. Den nehm ich. Man weiß nie, wann man eine Lieferung braucht. | Nehmen: Bestellzettel |
 | W1\_DORF\_MAX\_0180 | Max | „Gesucht wegen Weltherrschaft. Besondere Kennzeichen: reagiert empfindlich auf Kosenamen.“ | Ansehen: Moderworts Steckbrief am Dorfbrett (keine Nahansicht) |
-| W1\_DORF\_MAX\_0185 | Max | Das Bild auf dem Steckbrief hat keine Nase. Entweder schlecht gemalt oder sehr gut getroffen. | Ansehen: Moderworts Steckbrief am Dorfbrett (keine Nahansicht), zweites Mal |
+| W1\_DORF\_MAX\_0185 | Max | Unter das Bild hat jemand „Gesundheit!“ gekritzelt. Mehrmals. Mit wachsender Verzweiflung. | Ansehen: Moderworts Steckbrief am Dorfbrett (keine Nahansicht), zweites Mal |
 | W1\_DORF\_MAX\_0190 | Max | Da hat jemand eine Schwachstelle im Lebenslauf. | Ansehen Steckbrief, Fortsetzung |
 | W1\_DORF\_PIX\_0200 | Pixel | Kein Gesicht auf dem Bild, nur zwei rote Nasenlöcher. Entweder sehr böse oder sehr schlecht gezeichnet. | Ansehen Steckbrief, Pixel |
 | W1\_DORF\_MAX\_0210 | Max | Den nehm ich mit. Als Lesezeichen. Oder zum Drohen. | Nehmen: Steckbrief |
@@ -100,17 +103,23 @@ Gespräch mit Toadi. Max fragt, Toadi antwortet; gelesene Optionen werden grau. 
 | ID | Sprecher | Text | Regie |
 | --- | --- | --- | --- |
 | W1\_DORF\_MAX\_0510 | Max | Wer ist dieser Dunkle Lord? | Option Toadi |
-| W1\_DORF\_TOA\_0520 | Toadi | Lord Moderwort! Hoggelwarz-Abbrecher, erstes Jahr. Seitdem hasst er alle Zauberer. Und Blumen. Also, er niest bei Blumen. Man sagt, das ist dasselbe. | hüpft nervös |
-| W1\_DORF\_MAX\_0530 | Max | Wo hast du überall nachgesehen? | Option Toadi |
-| W1\_DORF\_TOA\_0540 | Toadi | Burg Brösel, Schloss Steinbeiß, die Villa hinterm Mühlbach. Überall Umzugskartons, nirgends Prinzessin. Sie hinterlässt immer Kartons. Ich halte das für ein Zeichen. |  |
+| W1\_DORF\_TOA\_0520 | Toadi | Lord Moderwort! Er hat Hoggelwarz im ersten Jahr abgebrochen und hasst seitdem alle Zauberer. Und Blumen. | hüpft nervös |
+| W1\_DORF\_MAX\_0521 | Max | Blumen? |  |
+| W1\_DORF\_TOA\_0522 | Toadi | Er niest bei Blumen. Und wenn er niest, gehen Flüche los. Der Bäcker ist seitdem ein Brot. Ein gutes Brot, aber sehr still. | flüstert |
+| W1\_DORF\_MAX\_0530 | Max | Wo hast du schon überall nachgesehen? | Option Toadi |
+| W1\_DORF\_TOA\_0540 | Toadi | Burg Brösel, Schloss Steinbeiß, die Villa hinterm Mühlbach. Überall standen Umzugskartons, nirgends die Prinzessin. |  |
+| W1\_DORF\_MAX\_0541 | Max | Kartons? Wird sie entführt, oder zieht sie um? |  |
+| W1\_DORF\_TOA\_0542 | Toadi | Bei ihr ist das schwer auseinanderzuhalten. Sie hinterlässt immer Kartons. Ich halte das für ein Zeichen. |  |
 | W1\_DORF\_MAX\_0550 | Max | Und das Schloss da oben? | Option Toadi (bleibt) |
-| W1\_DORF\_TOA\_0560 | Toadi | Da kommt man nur mit einer Bohnenranke hin. Bohnen gibt's beim Brunnen. Aber der will Gold. Ich habe nur Pilzgeld, und Pilzgeld nimmt keiner. | Hinweis R5 |
+| W1\_DORF\_TOA\_0560 | Toadi | Da kommt man nur mit einer Bohnenranke hin. Bohnen gibt der Brunnen, aber nur gegen Gold. Ich hab nur Pilzgeld, und das nimmt keiner. | Hinweis R5 |
+| W1\_DORF\_MAX\_0561 | Max | Und wer hat hier Gold? |  |
+| W1\_DORF\_TOA\_0562 | Toadi | Gollo in der Taverne hatte mal welches. Aber Gollo hat vor allem Sorgen. Und einen Ring, über den keiner redet. | Hinweis R5 |
 | W1\_DORF\_MAX\_0570 | Max | Warum rennst du mir eigentlich hinterher? | Option Toadi |
-| W1\_DORF\_TOA\_0580 | Toadi | Ich bin der Diener der Prinzessin! Ist sie weg, diene ich dem, der sie sucht. Steht so in meinem Vertrag. Seite vierzig. |  |
-| W1\_DORF\_MAX\_0590 | Max | Ich such ein Ei. | Antwort auf 0580 |
-| W1\_DORF\_TOA\_0600 | Toadi | Dann diene ich dem Ei. | ernst, salutiert |
+| W1\_DORF\_TOA\_0580 | Toadi | Ich bin der Diener der Prinzessin! Wenn sie weg ist, diene ich dem, der sie sucht. Steht in meinem Vertrag, Seite vierzig. |  |
+| W1\_DORF\_MAX\_0590 | Max | Ich such aber ein Ei. | Antwort auf 0580 |
+| W1\_DORF\_TOA\_0600 | Toadi | Dann diene ich dem Ei. Bis auf Weiteres. | ernst, salutiert |
 | W1\_DORF\_MAX\_0610 | Max | Ich muss weiter. | Option Toadi, beendet das Gespräch |
-| W1\_DORF\_TOA\_0620 | Toadi | Ich warte hier! Oder ich renne! Ich kann beides gleichzeitig! | rennt auf der Stelle |
+| W1\_DORF\_TOA\_0620 | Toadi | Ich warte hier! Oder ich renne dir nach! Ich kann auch beides! | rennt auf der Stelle |
 
 Rätsel 5, der Brunnen der Wünsche. Max wirft die Goldmünze ein, dann stehen drei Wünsche zur Wahl. Der Brunnen spricht mit Hall (Sprecher BRU). Falsche Wünsche gehen schief und geben die Münze zurück.
 
@@ -131,9 +140,9 @@ Rätsel 5, der Brunnen der Wünsche. Max wirft die Goldmünze ein, dann stehen d
 | W1\_DORF\_BRU\_0830 | Brunnen | Bekannte Nebenwirkung. Reklamation anerkannt. Münze zurück. | Münze springt ins Inventar; Pixel wird nach dem Raumwechsel wieder normal |
 | W1\_DORF\_MAX\_0840 | Max | Etwas, das hoch hinaus will. | Option 3, richtig |
 | W1\_DORF\_BRU\_0850 | Brunnen | Etwas, das hoch hinaus will. Gewährt. Nicht zurückgeben, nicht umtauschen. | Blubbern, eine Bohne springt heraus |
-| W1\_DORF\_MAX\_0860 | Max | Eine Bohne. Ich wünsch mir ein Schloss am Himmel und kriege Gemüse. | nimmt die Bohne |
-| W1\_DORF\_PIX\_0870 | Pixel | Hoch hinaus. Sie wächst. Das ist Pflanzenhumor. Pflanzen sind schlecht darin. |  |
-| W1\_DORF\_TOA\_0880 | Toadi | Eine Bohne! Eine echte! Einpflanzen! Gießen! Ich hole … ich habe nichts. Ich hole Panik. | hüpft |
+| W1\_DORF\_MAX\_0860 | Max | Eine Bohne. Ich wünsch mir was Großes und krieg Gemüse. | nimmt die Bohne |
+| W1\_DORF\_PIX\_0870 | Pixel | Hoch hinaus will sie schon. Pflanzen haben nur einen sehr langsamen Humor. |  |
+| W1\_DORF\_TOA\_0880 | Toadi | Eine Bohne! Eine echte! Einpflanzen! Gießen! Ich hole … ich habe nichts zum Holen. Ich hole Luft. | hüpft |
 
 Rätsel 3, zweite Ziege: Max heftet den Bestellzettel ans Dorfbrett, Rotkäppchen liefert eine XXL-Ziege. Die Ziegen folgen Max danach wie eine kleine Herde (Begleiter-Schalter).
 
@@ -181,13 +190,13 @@ Szene beim ersten Betreten. Humbert poliert einen Krug, Gollo kauert in der Ecke
 
 | ID | Sprecher | Text | Regie |
 | --- | --- | --- | --- |
-| W1\_TAV\_HUM\_0010 | Humbert | Willkommen im Pony-Express! Setz dich, trink was, fass Gerhard nicht an. | poliert weiter |
+| W1\_TAV\_HUM\_0010 | Humbert | Willkommen im Pony-Express! Setz dich, trink was. Und fass Gerhard nicht an. | poliert weiter |
 | W1\_TAV\_MAX\_0020 | Max | Wer ist Gerhard? |  |
-| W1\_TAV\_HUM\_0030 | Humbert | Das Schwert über dem Kamin. Das mit dem Glänzen. Er mag keine Fremden. | liebevoller Blick zum Kamin |
+| W1\_TAV\_HUM\_0030 | Humbert | Das Schwert über dem Kamin. Das, was so glänzt. Er mag keine Fremden. | liebevoller Blick zum Kamin |
 | W1\_TAV\_NAR\_0040 | – | Pixel springt in einem Satz auf den Dachbalken. Sein Porträt oben links beginnt zu blinken. | Szene ohne Text |
-| W1\_TAV\_PIX\_0050 | Pixel | Klick mich an. Ich beiße nur manchmal. | von oben, Halsband blinkt |
-| W1\_TAV\_MAX\_0060 | Max | Er sitzt auf einem Balken und gibt Anweisungen. Wie ein Streamer mit Webcam von oben. |  |
-| W1\_TAV\_GOL\_0070 | Gollo | Pssst. Nicht so laut. Der Vulkan hört zu. | aus der Ecke, zischelnd |
+| W1\_TAV\_PIX\_0050 | Pixel | Max. Hier oben. Klick mich an, dann siehst du die Welt mal von oben. Ich beiße nur manchmal. | von oben, Halsband blinkt |
+| W1\_TAV\_MAX\_0060 | Max | Er sitzt auf einem Balken und gibt Anweisungen. Wie ein Streamer, der seine Kamera an die Decke geklebt hat. |  |
+| W1\_TAV\_GOL\_0070 | Gollo | Pssst. Die Katze da oben soll leise sein. Der Vulkan hört zu. | aus der Ecke, zischelnd |
 | W1\_TAV\_PIX\_0080 | Pixel | Endlich. Jemand mit Übersicht am Steuer. Von hier oben sieht man alles. // Vor allem den Käse. | erster Wechsel zu Pixel |
 | W1\_TAV\_MAX\_0090 | Max | Und zurück zu dem, der Taschen hat. | erster Wechsel zurück zu Max |
 
@@ -233,17 +242,23 @@ Gespräch mit Humbert:
 | --- | --- | --- | --- |
 | W1\_TAV\_MAX\_0510 | Max | Was blubbert da? | Option Humbert |
 | W1\_TAV\_HUM\_0520 | Humbert | Mein Käsefondue! Seit dreihundert Jahren in der Familie. Also der Topf. Den Käse wechsle ich alle zwei Wochen. | stolz |
+| W1\_TAV\_MAX\_0521 | Max | Darf ich mal probieren? |  |
+| W1\_TAV\_HUM\_0522 | Humbert | Nicht, solange Minka danebensitzt. Die lässt nicht mal mich ran. Ich rühre mit dem langen Löffel, von hier aus. | Hinweis R1a |
 | W1\_TAV\_MAX\_0530 | Max | Erzähl mir von den Schwertern. | Option Humbert |
 | W1\_TAV\_HUM\_0540 | Humbert | Das ist Gerhard, mein Liebling. Daneben Birgit, Gerhard der Zweite und Klaus-Dieter. Klaus-Dieter rostet aus Prinzip. | zeigt nacheinander |
 | W1\_TAV\_MAX\_0550 | Max | Du nennst Schwerter beim Vornamen. | Antwort auf 0540 |
 | W1\_TAV\_HUM\_0560 | Humbert | Und du nennst dein Handy nicht beim Vornamen? Was bist du für ein Mensch. | ehrlich entsetzt |
 | W1\_TAV\_MAX\_0570 | Max | Habt ihr Wein? | Option Humbert (bleibt) |
 | W1\_TAV\_HUM\_0580 | Humbert | Hauswein, Hauswein rot, Hauswein noch röter. Auf der Karte steht noch der Jahrgang Schicksalsberg. Den hat noch nie jemand bestellt. Liegt ganz hinten im Keller, hinter den Rüben. | Hinweis R1b; schaltet Option 0590 frei |
+| W1\_TAV\_MAX\_0581 | Max | Hinter den Rüben. Klingt nach einem längeren Ausflug. |  |
+| W1\_TAV\_HUM\_0582 | Humbert | Eine halbe Stunde, wenn die Rüben friedlich sind. Sonst länger. |  |
 | W1\_TAV\_MAX\_0590 | Max | Dann nehm ich den Schicksalsberg. | Option Humbert; nach 0580; löst R1b |
 | W1\_TAV\_HUM\_0600 | Humbert | Den Schicksalsberg. Wirklich? Jetzt? … Gut. Das dauert. Fass nichts an. Vor allem nicht Gerhard. | In-den-Keller-Animation |
 | W1\_TAV\_PIX\_0610 | Pixel | Er ist weg. Der Topf ist unbewacht. Also halb. Madame sitzt noch. | nach 0600, wenn Minka noch da ist |
 | W1\_TAV\_MAX\_0620 | Max | Was ist mit der Katze? | Option Humbert |
 | W1\_TAV\_HUM\_0630 | Humbert | Minka? Bewacht den Topf. Seit der Sache mit dem Barden. Der hat den Käse als Haargel benutzt. | schüttelt sich |
+| W1\_TAV\_MAX\_0631 | Max | Als Haargel? |  |
+| W1\_TAV\_HUM\_0632 | Humbert | Er wollte Locken. Er kam zwei Wochen nicht mehr durch die Tür, weil er überall kleben blieb. |  |
 | W1\_TAV\_MAX\_0640 | Max | Nichts weiter. | Option Humbert, beendet das Gespräch |
 | W1\_TAV\_HUM\_0650 | Humbert | Dann trink was. Oder guck Gerhard an. Das machen die meisten. |  |
 
@@ -253,6 +268,8 @@ Gespräch mit Gollo:
 | --- | --- | --- | --- |
 | W1\_TAV\_MAX\_0710 | Max | Was hast du da? | Option Gollo |
 | W1\_TAV\_GOL\_0720 | Gollo | Nichtsss. Ein Kästchen. Ein Ring darin. Mein Ssschätzchen. Mein Ausverkaufsartikel. Niemand will ihn. Nicht mal im Sonderangebot. | drückt das Kästchen an sich |
+| W1\_TAV\_MAX\_0721 | Max | Und warum willst du ihn loswerden? |  |
+| W1\_TAV\_GOL\_0722 | Gollo | Er ist schwer. Nicht in der Hand, im Kopf. Er flüstert. Meistens Preise. | flüstert |
 | W1\_TAV\_MAX\_0730 | Max | Warum wirfst du ihn nicht einfach in den Topf? | Option Gollo (bleibt) |
 | W1\_TAV\_GOL\_0740 | Gollo | Der Vulkan! Ja! Nein! Der Wirt guckt. Die Katze guckt. Und wenn keiner guckt, gucke ich. Ich traue mich nicht. | Hinweis R1a und R1b |
 | W1\_TAV\_MAX\_0750 | Max | Du spielst gern Rätselspiele? | Option Gollo (bleibt) |
@@ -370,6 +387,8 @@ Gespräch mit dem Schmied:
 | --- | --- | --- | --- |
 | W1\_SCHM\_MAX\_0210 | Max | Warum schmiedest du Pfannen? | Option Schmied |
 | W1\_SCHM\_SCH\_0220 | Schmied | Seit die Ziege hier wohnt, frisst sie jede Klinge. Pfannen frisst sie nicht. Also Pfannen. Das ist Marktwirtschaft. | seufzt |
+| W1\_SCHM\_MAX\_0221 | Max | Hast du mal versucht, sie wegzuschicken? |  |
+| W1\_SCHM\_SCH\_0222 | Schmied | Dreimal. Sie kam jedes Mal zurück. Mit einem Schwert im Maul. Mit meinem. |  |
 | W1\_SCHM\_MAX\_0230 | Max | Gehört die Ziege dir? | Option Schmied |
 | W1\_SCHM\_SCH\_0240 | Schmied | Die Ziege gehört niemandem. Sie ist eines Morgens aufgetaucht. Wie Schulden. |  |
 | W1\_SCHM\_MAX\_0250 | Max | Was ist das für ein Schwert in ihrem Maul? | Option Schmied |
@@ -396,6 +415,15 @@ Pixel redet mit der Ziege, und Rätsel 6, Teil 1: die Milch. Melken geht erst, w
 | W1\_SCHM\_MAX\_0490 | Max | Nein. Ich hab geschworen. Und ich halte Schwüre, wenn sie bequem sind. | Krug auf Ziege; nach 0460 |
 | W1\_SCHM\_MAX\_0500 | Max | Ziegen fressen Eisen, keinen Fisch. Das steht fest. Zum Glück. | Thunfischdose auf Ziege |
 | W1\_SCHM\_MAX\_0510 | Max | Pfannen melken geht nicht. Ich hab's geprüft, geistig. | Krug auf Kochgeschirr |
+
+Szene beim ersten Betreten der Schmiede (vor dem Gespräch, einmalig):
+
+| ID | Sprecher | Text | Regie |
+| --- | --- | --- | --- |
+| W1\_SCHM\_SCH\_0710 | Schmied | Kundschaft! Pfannen, Töpfe, Kellen. Schwerter hab ich keine mehr. Frag die Ziege. | Szene, erstes Betreten; hämmert auf eine Pfanne |
+| W1\_SCHM\_MAX\_0720 | Max | Die Ziege hat deine Schwerter? |  |
+| W1\_SCHM\_SCH\_0730 | Schmied | Im Bauch. Frag nicht weiter, sonst werd ich traurig. Ich bin eh schon kurz davor. |  |
+| W1\_SCHM\_ZIE\_0740 | Schmiede-Ziege | Mäh. | kaut zufrieden auf einer Klinge |
 
 Zurufe in der Schmiede (Pixel):
 
@@ -438,12 +466,16 @@ Gespräch mit dem Stabmacher:
 | --- | --- | --- | --- |
 | W1\_STAB\_MAX\_0210 | Max | Ich brauche einen Zauberstab. | Option Stabmacher |
 | W1\_STAB\_STA\_0220 | Stabmacher | Der Stab wählt den Zauberer, junger Mann. Nicht umgekehrt. Ich habe noch drei. // Zahnstocher, Zollstock, Kochlöffel. Der Rest ist ausverkauft, seit die Schule jeden nimmt. | beugt sich vor |
+| W1\_STAB\_MAX\_0221 | Max | Ein Kochlöffel ist doch kein Zauberstab. |  |
+| W1\_STAB\_STA\_0222 | Stabmacher | Das sagst du. Der Löffel hat sich dazu noch nicht geäußert. | tätschelt das Kissen |
 | W1\_STAB\_MAX\_0230 | Max | Wie wählt ein Stab denn? | Option Stabmacher (bleibt) |
 | W1\_STAB\_STA\_0240 | Stabmacher | Mein letzter Stab hat seinen Zauberer gewählt, indem er an ihm kleben blieb. Honigfinger. Drei Tage ließ er nicht los. // Das nenne ich Berufung. | Hinweis R2 |
 | W1\_STAB\_MAX\_0250 | Max | Was ist in den ganzen Schachteln? | Option Stabmacher |
 | W1\_STAB\_STA\_0260 | Stabmacher | Nichts. Aber sie sehen gut aus. Ein Laden braucht Schachteln. Ohne Schachteln ist es ein Flur. |  |
 | W1\_STAB\_MAX\_0270 | Max | Was ist mit der Socke da? | Option Stabmacher |
 | W1\_STAB\_STA\_0280 | Stabmacher | Ein Probestück. Der Sortierhut von Hoggelwarz ist in Rente, die Schule hat kein Geld, ich habe Socken. Das ist der Prototyp. |  |
+| W1\_STAB\_MAX\_0281 | Max | Eine Socke sortiert Schüler? |  |
+| W1\_STAB\_STA\_0282 | Stabmacher | Nach Charakter. Bisher nur nach Farbe. Aber sie lernt jeden Tag dazu. |  |
 | W1\_STAB\_MAX\_0290 | Max | Ich schau mich noch mal um. | Option Stabmacher, beendet das Gespräch |
 | W1\_STAB\_STA\_0300 | Stabmacher | Fass alles an. Nur nicht zu lange. Sonst denkt der Stab, du meinst es ernst. |  |
 
@@ -474,6 +506,15 @@ Lösung und Fehlversuche von Rätsel 2:
 | W1\_STAB\_MAX\_0580 | Max | Hm. Hm. Hmm. Sie denkt nach. Über mich. Das macht sonst keiner. | Benutzen: Socke im Inventar |
 | W1\_STAB\_MAX\_0590 | Max | Schwing. Nichts. Noch nichts. Aber es fühlt sich dramatisch an. | Benutzen: Kochlöffel-Zauberstab ohne Ziel; Schwing-Animation |
 | W1\_STAB\_MAX\_0600 | Max | Nicht hier. Wenn mich ein Löffel wählt, soll der Stabmacher zusehen. Der weint bestimmt. | Käsefondue auf Kochlöffel; außerhalb des Zauberstab-Ladens, R2 bleibt offen |
+
+Szene beim ersten Betreten des Ladens (einmalig):
+
+| ID | Sprecher | Text | Regie |
+| --- | --- | --- | --- |
+| W1\_STAB\_STA\_0710 | Stabmacher | Ein Kunde! Oder ein Verirrter? Bei mir ist das oft dasselbe. | Szene, erstes Betreten; späht über das Monokel |
+| W1\_STAB\_MAX\_0720 | Max | Ich schau mich nur um. |  |
+| W1\_STAB\_STA\_0730 | Stabmacher | Das sagen alle. Dann wählt sie ein Stab, und sie kommen nie wieder los. |  |
+| W1\_STAB\_PIX\_0740 | Pixel | Er redet über Zauberstäbe wie dein Opa über Fernbedienungen. Mit Andacht und ohne Ende. |  |
 
 Zurufe im Zauberstab-Laden (Pixel):
 
@@ -522,12 +563,16 @@ Gespräch mit Alwin (ab Prüfungsbeginn):
 | W1\_HOGG\_ALW\_0320 | Alwin | Den Trank des Leuchtens brauen. Das Rezept: ein Ei, ein Krug Milch, ein Leuchtpilz. Zum Schluss die geheime Zutat aus dem Regal. | liest von der Kelle ab; Rezept bekannt |
 | W1\_HOGG\_MAX\_0330 | Max | Das ist ein Pfannkuchenrezept. | Antwort auf 0320 |
 | W1\_HOGG\_ALW\_0340 | Alwin | Ist es? Ist es nicht? Die Grenzen sind fließend. Wie Teig. |  |
+| W1\_HOGG\_MAX\_0341 | Max | Und was macht aus einem Pfannkuchen einen Leuchttrank? |  |
+| W1\_HOGG\_ALW\_0342 | Alwin | Der Pilz. Ohne Pilz ist es Frühstück, mit Pilz ist es Bildung. Leuchtpilze wachsen im Zauberwald, hinter der Trollbrücke. | Hinweis R6, Teil 1 |
 | W1\_HOGG\_MAX\_0350 | Max | Wo gibt es hier Milch? | Option Alwin (bleibt); nach 0320 |
 | W1\_HOGG\_ALW\_0360 | Alwin | Milch? Milch gibt es im ganzen Reich nicht mehr. Die Milch ist in einem anderen Schloss. // Aber Ziegen. Ziegen haben Milch, sagt man. Ich habe nie nachgesehen. | Hinweis R6, Teil 1 |
 | W1\_HOGG\_MAX\_0370 | Max | Was hat es mit dem Regal auf sich? | Option Alwin (bleibt) |
 | W1\_HOGG\_ALW\_0380 | Alwin | Sechs Flaschen. Die Etiketten hat jemand vertauscht. Vermutlich ich. Mein Zettel sagt dir, welche die richtige ist. In Reimen. Ich war mal Barde. | gibt Alwins Hinweiszettel |
 | W1\_HOGG\_MAX\_0390 | Max | Wer ist eigentlich dieser Moderwort? | Option Alwin |
 | W1\_HOGG\_ALW\_0400 | Alwin | Ein Schüler. Erstes Jahr. Er nieste in Kräuterkunde, alle lachten, er ging. Sehr empfindlich. // Sein Zeugnis liegt noch im Archiv. Nie abgeholt. | Hinweis auf das Zeugnis |
+| W1\_HOGG\_MAX\_0401 | Max | Er ist gegangen, weil alle gelacht haben? |  |
+| W1\_HOGG\_ALW\_0402 | Alwin | Ich habe auch gelacht. Er hat sehr laut geniest. Ich denke oft an ihn, meistens, wenn es blüht. | putzt die Brille |
 | W1\_HOGG\_MAX\_0410 | Max | Was ist mit dem Besen los? | Option Alwin |
 | W1\_HOGG\_ALW\_0420 | Alwin | Verzaubert. Alle Besen hier sind verzaubert. Sie fegen, was sich bewegt. Katzenhaare bewegen sich am schönsten. Frag mich nicht, warum. | Hinweis auf Rätsel 11 |
 | W1\_HOGG\_MAX\_0430 | Max | Bis später. | Option Alwin, beendet das Gespräch |
@@ -631,10 +676,14 @@ Gespräch mit Waldemar:
 | --- | --- | --- | --- |
 | W1\_BRUE\_MAX\_0210 | Max | Lass mich rüber. | Option Waldemar (bleibt) |
 | W1\_BRUE\_WAL\_0220 | Waldemar | Regel eins: Niemand überquert die Brücke, bevor das Märchen abgelaufen ist. Regel zwei: siehe Regel eins. Regel drei: Lies das Schild. | tippt aufs Regelbuch |
+| W1\_BRUE\_MAX\_0221 | Max | Und wenn ich einfach rüberlaufe? |  |
+| W1\_BRUE\_WAL\_0222 | Waldemar | Dann stelle ich mich in den Weg. Sehr höflich, aber sehr breit. | macht sich breit |
 | W1\_BRUE\_MAX\_0230 | Max | Welches Märchen? | Option Waldemar (bleibt) |
 | W1\_BRUE\_WAL\_0240 | Waldemar | Das mit den drei Ziegenböcken. Klein, mittel, groß, jeder sagt seinen Satz, und am Ende gehe ich ins Wasser. // Das ist der Teil, den ich … nun. Ich kann nicht schwimmen. Aber Regel ist Regel. | räuspert sich |
 | W1\_BRUE\_MAX\_0250 | Max | Was läuft da unten? | Option Waldemar |
 | W1\_BRUE\_WAL\_0260 | Waldemar | Nichts! Schlager! Marschmusik! Trollmusik! // … Musicals. Sag es niemandem. Trolle hören keine Musicals. Es steht in keiner Satzung, aber in jedem Blick. | Fliege zittert |
+| W1\_BRUE\_MAX\_0261 | Max | Welches Musical denn? |  |
+| W1\_BRUE\_WAL\_0262 | Waldemar | Alle. Am liebsten das mit der Katze, die auf dem Dach singt. Ich weine jedes Mal. Laut Satzung nur innerlich. | flüstert |
 | W1\_BRUE\_MAX\_0270 | Max | Du kannst wirklich nicht schwimmen? | Option Waldemar (bleibt) |
 | W1\_BRUE\_WAL\_0280 | Waldemar | Ich sinke wie ein Paragraf. Aber die Satzung sagt Wasser, also Wasser. Ich bin Troll, kein Anwalt. Leider. | Hinweis R4c |
 | W1\_BRUE\_MAX\_0290 | Max | Würdest du für mich singen? | Option Waldemar; nach R4, mit Socke, Zauberwald betreten |
@@ -708,7 +757,15 @@ Rätsel 4c, ins Wasser: Waldemar muss laut Paragraf 3 ins Wasser. Der Eimer vom 
 | W1\_BRUE\_MAX\_1045 | Max | Er planscht. Er singt dabei. Leise. Ich glaube, er ist glücklich. Ich geh trotzdem schnell. | Ansehen: Brücke, zweites Mal; nach R4 |
 | W1\_BRUE\_WAL\_1050 | Waldemar | Noch ein Eimer? Paragraf drei ist erfüllt. Mehr Wasser wäre Luxus. Ich nehme ihn trotzdem. Nein. Regel ist Regel. | Eimer mit Wasser auf Waldemar; nach R4 |
 | W1\_BRUE\_WAL\_1060 | Waldemar | Wasser? Jetzt schon? Paragraf eins: Erst das Märchen, dann das Bad. Und keine deiner Ziegen hat bisher einen ganzen Satz gesagt. | Eimer mit Wasser auf Waldemar; vor R4b |
-| W1\_BRUE\_WAL\_1070 | Waldemar | Finger weg von meinem Bach. Paragraf neun: Wasser bleibt, wo es wohnt. Hol dir eigenes. | leerer Eimer auf Bach |
+| W1\_BRUE\_WAL\_1070 | Waldemar | Finger weg von meinem Bach. Paragraf elf: Wasser bleibt, wo es wohnt. Hol dir eigenes. | leerer Eimer auf Bach |
+
+Szene beim ersten Betreten der Troll-Brücke (einmalig):
+
+| ID | Sprecher | Text | Regie |
+| --- | --- | --- | --- |
+| W1\_BRUE\_WAL\_1210 | Waldemar | Halt. Laut Satzung wird hier jeder angehalten. Du bist angehalten. | Szene, erstes Betreten; hebt die Hand |
+| W1\_BRUE\_MAX\_1220 | Max | Ich hab die Brücke noch gar nicht betreten. |  |
+| W1\_BRUE\_WAL\_1230 | Waldemar | Dann bist du vorsorglich angehalten. Das Schild dort erklärt alles. Ich lese es dir nicht vor, ich bin Troll, kein Vorleser. | zeigt auf das Schild; Hinweis R4 |
 
 Zurufe an der Troll-Brücke (Pixel):
 
@@ -796,12 +853,18 @@ Gespräch mit Rotkäppchen:
 | --- | --- | --- | --- |
 | W1\_WALD\_MAX\_0210 | Max | Was lieferst du so? | Option Rotkäppchen |
 | W1\_WALD\_ROT\_0220 | Rotkäppchen | Alles. Kuchen, Wein, Ziegen, Omas. Omas sind am schwersten zu verpacken. | zählt an den Fingern |
+| W1\_WALD\_MAX\_0221 | Max | Omas? |  |
+| W1\_WALD\_ROT\_0222 | Rotkäppchen | Meine. Sie zieht dauernd um, immer tiefer in den Wald. Wegen der Ruhe, sagt sie. | zuckt mit den Schultern |
 | W1\_WALD\_MAX\_0230 | Max | Kann ich eine Flasche Ketchup haben? | Option Rotkäppchen (bleibt) |
 | W1\_WALD\_ROT\_0240 | Rotkäppchen | Der ist für die Goblins. Die bestellen jede Woche Ketchup und nie Pommes. Nimm eine, die merken's nicht. Die zählen in Fackeln. | gibt den Ketchup frei |
+| W1\_WALD\_MAX\_0241 | Max | Die Goblins zählen in Fackeln? |  |
+| W1\_WALD\_ROT\_0242 | Rotkäppchen | Sie haben nur eine. Also zählen sie bis eins, dann ist es dunkel, und sie fangen von vorne an. | Hinweis R10 |
 | W1\_WALD\_MAX\_0250 | Max | Hast du keine Angst vor dem Wolf? | Option Rotkäppchen |
 | W1\_WALD\_ROT\_0260 | Rotkäppchen | Welcher Wolf? Ach, der. Der ist Kunde. Bestellt immer Nachthemden in Oma-Größe. Ich frag nicht. Trinkgeld stimmt. |  |
 | W1\_WALD\_MAX\_0270 | Max | Was ist mit den Rosen? | Option Rotkäppchen (bleibt) |
 | W1\_WALD\_ROT\_0280 | Rotkäppchen | Niesrosen. Gehen nur auf, wenn einer singt. Richtig singt. Ich hab's probiert. Sie sind zugegangen. Fester. | Hinweis R7 |
+| W1\_WALD\_MAX\_0281 | Max | Und wer singt hier richtig? |  |
+| W1\_WALD\_ROT\_0282 | Rotkäppchen | Im Wald? Keiner. Aber an der Brücke summt manchmal jemand. Sehr tief, sehr falsch, sehr schön. | Hinweis R7 |
 | W1\_WALD\_MAX\_0290 | Max | Bis dann. | Option Rotkäppchen, beendet das Gespräch |
 | W1\_WALD\_ROT\_0300 | Rotkäppchen | Bewertung nicht vergessen! Fünf Körbe! |  |
 
@@ -830,6 +893,14 @@ Rätsel 7, die Niesrosen. Fehlversuche, dann Waldemars Musical-Nummer (ausgelös
 | W1\_WALD\_PIX\_0590 | Pixel | Du hast einem Troll einen Auftritt versprochen, den du nicht kontrollierst. Das ist entweder mutig oder Fernsehen. |  |
 | W1\_WALD\_MAX\_0600 | Max | Eine Socke voller Pollen. Wer das anfasst, niest sich die Nase weg. Wer eine hat. | Ansehen: Socke voller Pollen |
 | W1\_WALD\_MAX\_0605 | Max | Ich halte sie am ausgestreckten Arm. Mein Arm juckt schon. Die Socke hat Macht. | Ansehen: Socke voller Pollen, zweites Mal |
+
+Szene beim ersten Betreten des Zauberwalds (einmalig):
+
+| ID | Sprecher | Text | Regie |
+| --- | --- | --- | --- |
+| W1\_WALD\_ROT\_0740 | Rotkäppchen | Lieferung? Nein? Schade. Ich steh hier, bis die Goblins ihren Ketchup abholen. Das kann dauern, die streiken. | Szene, erstes Betreten; lehnt am Karren |
+| W1\_WALD\_MAX\_0750 | Max | Die Goblins streiken? |  |
+| W1\_WALD\_ROT\_0760 | Rotkäppchen | Unten im Bergwerk. Sie wollen Licht und einen Vertrag. Ich will nur meine Kisten loswerden. | Hinweis R10 |
 
 Zurufe im Zauberwald (Pixel):
 
@@ -927,6 +998,8 @@ Gespräch mit Zeldina im Team (überall, wo sie folgt):
 | W1\_LUFT\_ZEL\_0720 | Zeldina | Alle nennen ihn Moderwort. Seine Mutter nicht. Die hatte einen Spitznamen für ihn, vier Teile, furchtbar. // Ich weiß nur, dass er mit „Mo“ anfängt. Es ist das Passwort zu seiner Geheimtür. Er ist ein sehr schlechter Dunkler Lord. | Notizbuch trägt „Mo“ als Anfang ein |
 | W1\_LUFT\_MAX\_0730 | Max | Was willst du mit dem Turm? | Option Zeldina; nach R9 |
 | W1\_LUFT\_ZEL\_0740 | Zeldina | Wohnen. Einziehen. Nie wieder umziehen. Vielleicht einen Kronleuchter. Ich träume groß, aber mit Festpreis. | Hinweis R12 |
+| W1\_LUFT\_MAX\_0741 | Max | Und wenn Moderwort nicht auszieht? |  |
+| W1\_LUFT\_ZEL\_0742 | Zeldina | Dann wohnen wir eben zusammen. Er niest, ich räume auf. Ich hatte schon schlimmere Mitbewohner. |  |
 | W1\_LUFT\_MAX\_0750 | Max | Kennst du die Goblins? | Option Zeldina; nach R9, vor R10 |
 | W1\_LUFT\_ZEL\_0760 | Zeldina | Grimmzahn? Streikt seit Jahren. Will eigentlich nur einen Posten mit Schlüsselbund. Ein Turm bräuchte einen Hausmeister. Nur so ein Gedanke. | Hinweis R10, Weg B |
 | W1\_LUFT\_MAX\_0770 | Max | Gehen wir. | Option Zeldina, beendet das Gespräch |
@@ -984,6 +1057,8 @@ Gespräch mit Grimmzahn:
 | --- | --- | --- | --- |
 | W1\_BERG\_MAX\_0310 | Max | Warum streikt ihr? | Option Grimmzahn |
 | W1\_BERG\_GRI\_0320 | Grimmzahn | Bessere Fackeln! Unsere leuchten wie nasse Kerzen! Weißt du, wie oft ich im Dunkeln den Daumen getroffen habe? // Ich habe keinen mehr! | hält die Hand hoch |
+| W1\_BERG\_MAX\_0321 | Max | Und warum besorgt ihr euch keine besseren? |  |
+| W1\_BERG\_GRI\_0322 | Grimmzahn | Der Herr vom Turm liefert keine. Er sagt, Dunkelheit gehört zum Konzept. Er selbst wohnt ganz oben, wo die Sonne scheint. | spuckt aus |
 | W1\_BERG\_MAX\_0330 | Max | Was wollt ihr genau? | Option Grimmzahn (bleibt) |
 | W1\_BERG\_GRI\_0340 | Grimmzahn | Licht. Und einen Tarifvertrag. Schriftlich. Unterschrieben mit Blut. Wir sind traditionell. | Hinweis R10 A |
 | W1\_BERG\_MAX\_0350 | Max | Blut. | Antwort auf 0340 |
@@ -1139,6 +1214,8 @@ Gespräch mit Smaugi:
 | W1\_SMAU\_SMA\_0320 | Smaugi | Mir. Alles. Jeder Löffel. Ich könnte es brauchen. Irgendwann. Man weiß nie, wann man dreihundert Teekannen braucht. | streichelt eine Teekanne |
 | W1\_SMAU\_MAX\_0330 | Max | Gibst du mir das Ei? | Option Smaugi |
 | W1\_SMAU\_SMA\_0340 | Smaugi | Das Ei? Das EI? Es ist das Einzige hier, das keinen Staub ansetzt. Ich gebe nichts her. // Außer, jemand braucht es wirklich. Wirklich wirklich. | Hinweis R12 |
+| W1\_SMAU\_MAX\_0341 | Max | Und was heißt „wirklich wirklich“? |  |
+| W1\_SMAU\_SMA\_0342 | Smaugi | Wenn mir jemand zeigt, dass mein Kram woanders glücklicher ist als hier. Dann vielleicht. Ganz vielleicht. | Hinweis R12 |
 | W1\_SMAU\_MAX\_0350 | Max | Was ist mit der Tür da oben? | Option Smaugi |
 | W1\_SMAU\_SMA\_0360 | Smaugi | Moderworts Geheimtür. Sie kichert, wenn man falsch rät. Sie kichert viel. Ich halte mir die Ohren zu, aber ich habe nur Krallen dafür. |  |
 | W1\_SMAU\_MAX\_0370 | Max | Warum sammelst du das alles? | Option Smaugi |

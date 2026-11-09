@@ -8,7 +8,7 @@ Diese Datei sammelt alle Absprachen zu Technik, Grafik und Audio an einer Stelle
 | --- | --- | --- |
 | Spielart | 2D-Point-and-Click in Seitenansicht wie eine Bühne, zwei spielbare Figuren (Max und Pixel) | Klassische Adventure-Ansicht, wenig Zeichenarbeit, passt zu KI-Hintergründen |
 | Engine | Godot 4 mit dem Plugin Popochiu | Kostenlos, Popochiu bringt Räume, Hotspots, Inventar, Dialoge und Speichern für Point-and-Click mit |
-| Auflösung | 320×180 Pixel, 6-fach auf 1920×1080 skaliert; breite Räume bis 640×180 | Echte Pixel-Art, passt in die Bildgrößen von Retro Diffusion |
+| Auflösung | 480×270 Pixel, 4-fach auf 1920×1080 skaliert; breite Räume bis 960×270. Vorläufig (9. November 2026), nach den ersten Testszenen noch einmal prüfen; die Zahl steht zentral in `tools/aufloesung.py` | Gespielt wird vor allem am Laptop und Rechner, dort wirkte 320×180 zu grob; glatt skalierbar auf 1080p und 4K, auf 1440p mit schmalem Rand |
 | Palette | Eine gemeinsame 32-Farben-Palette, z. B. Endesga 32 von Lospec | Alle Bilder, auch fremde, werden darauf umgefärbt und passen zusammen |
 | Programmierung | Claude schreibt alle Skripte (GDScript) | Du konzentrierst dich auf Grafik, Laufbereiche und Testen |
 | Grafik | KI-gestützt: Konzeptbilder mit ChatGPT oder Gemini, Spielgrafik mit Retro Diffusion, Nacharbeit in Aseprite | Schnell und einheitlich; Nacharbeit hält die Qualität |
@@ -25,7 +25,7 @@ Diese Datei sammelt alle Absprachen zu Technik, Grafik und Audio an einer Stelle
 | Thema | Absprache |
 | --- | --- |
 | Version | Godot 4.7.2 (stabil, 18. August 2026) mit Popochiu 2.2.1 (18. Oktober 2026), geprüft am 9. November 2026. Popochiu 2.2 hat Godot 4.7 als Standardziel; Godot 4.8 ist noch Beta und kommt nicht in Frage. Während des Projekts nicht wechseln; nur Fehlerkorrekturen innerhalb von 4.7.x und 2.2.x, jeweils erst in einem eigenen Git-Zweig testen; Popochiu hat zwischen Minor-Versionen das GUI-Vorlagensystem geändert |
-| Pixel-Einstellungen | Viewport 320×180, Stretch-Modus „viewport“, ganzzahlige Skalierung, Texturfilter „Nearest“; richte ich beim Projektstart ein |
+| Pixel-Einstellungen | Viewport 480×270, Stretch-Modus „canvas_items“ mit Pixel-Einrasten (Text in voller Auflösung, `05-spielsysteme.md`), ganzzahlige Skalierung, Texturfilter „Nearest“; richte ich beim Projektstart ein |
 | Aufbau | Ein Popochiu-Raum pro Szene; Hintergrund, Laufbereich, Hotspots, Props mit Zuständen, Regionen für Größenwechsel |
 | Mechaniken | Figurenwechsel (alle Welten), Zeitfähre (Welt 2), Code-Sicht und Ebenenwechsel (Welt 3), Fernbedienung und Genre-Zustände (Welt 4); alle auf einem gemeinsamen Zustandssystem (Objektzustände per Overlay umschalten, Code-Sicht und Fernbedienung auf derselben Grundlage), gebaut in Stufe 1 |
 | KI-Anbindung | Claude Code auf deinem PC plus Godot-MCP-Server: Coding-Solo (kostenlos) für den Anfang, GDAI MCP (19 $ einmalig) sobald Claude Screenshots braucht |
@@ -38,10 +38,10 @@ Diese Datei sammelt alle Absprachen zu Technik, Grafik und Audio an einer Stelle
 | Schritt | Werkzeug | Absprache |
 | --- | --- | --- |
 | Konzeptbild | ChatGPT oder Gemini | Baustein KONZEPT voranstellen, 16:9; nur als Vorlage, nie ins Spiel |
-| Hintergründe | Retro Diffusion, Modell `rd_plus__environment` | 320×180 direkt erzeugen oder ein Konzeptbild lokal mit Neural Pixelate umwandeln |
+| Hintergründe | Retro Diffusion, Modell `rd_plus__environment` | Konzeptbild in voller Größe lokal mit Neural Pixelate umwandeln |
 | Figuren | Retro Diffusion Cloud, `rd_pro__default` mit Referenzbild, `rd_plus__character_turnaround` | Erst eine Seitenansicht festlegen, dann als Referenz für alles Weitere |
 | Animationen | Retro Diffusion Cloud, `rd_advanced_animation__walking`, `__idle`, `__custom_action` | Nur auf der Website möglich, nicht in der lokalen Erweiterung |
-| Gegenstände | `rd_plus__item_sheet` oder `rd_pro__inventory_items` | Sammelbilder, dann ausschneiden und auf 24×24 bringen |
+| Gegenstände | `rd_plus__item_sheet` oder `rd_pro__inventory_items` | Sammelbilder, dann ausschneiden und auf 36×36 bringen |
 | Oberfläche | `rd_pro__ui_panel` | Rahmen und Knöpfe; Schrift immer von Hand |
 | Nacharbeit | Aseprite mit der lokalen Retro-Diffusion-Erweiterung | Palette anwenden, Freistellen, Laufbereich frei lassen, Text von Hand setzen |
 
@@ -53,14 +53,14 @@ Diese Datei sammelt alle Absprachen zu Technik, Grafik und Audio an einer Stelle
 
 | Asset | Stückzahl | Werkzeug | Zeit je Stück | Summe |
 | --- | --- | --- | --- | --- |
-| Hintergründe | etwa 80 (59 Räume plus etwa 20 Zustandsvarianten) | Retro Diffusion, Aseprite | 2 bis 4 h | 160 bis 320 h |
-| Figurensprites mit Gehen, Stehen, Sprechen | etwa 105 (Prolog 7, W1 22, W2 26, W3 22, W4 27) | Retro Diffusion Cloud, Aseprite | 2 bis 3 h | 210 bis 315 h |
+| Hintergründe | etwa 80 (59 Räume plus etwa 20 Zustandsvarianten) | Konzeptbild, Neural Pixelate, Aseprite | 3 bis 6 h | 240 bis 480 h |
+| Figurensprites mit Gehen, Stehen, Sprechen | etwa 105 (Prolog 7, W1 22, W2 26, W3 22, W4 27) | Retro Diffusion Cloud, Aseprite | 3 bis 4,5 h | 315 bis 473 h |
 | Sonderanimationen | etwa 60 | rd\_advanced\_animation\_\_custom\_action | 1 h | 60 h |
 | Effekte | etwa 25 | Baustein EFFEKT | 0,5 h | 13 h |
-| Inventar-Icons | etwa 150 | Sammelbilder, Aseprite | 15 Minuten | 38 h |
-| Nahansichten | 14 (Prolog 2, W1 4, W2 3, W3 4, W4 1 Programmzeitschrift; Liste in `welten/*.yaml`) | Baustein HINTERGRUND, Schrift von Hand | 2 h | 28 h |
+| Inventar-Icons | etwa 150 | Sammelbilder, Aseprite | 20 Minuten | 50 h |
+| Nahansichten | 14 (Prolog 2, W1 4, W2 3, W3 4, W4 1 Programmzeitschrift; Liste in `welten/*.yaml`) | Baustein HINTERGRUND, Schrift von Hand | 3 h | 42 h |
 | UI-Panels | etwa 12 | rd\_pro\_\_ui\_panel | 2 h | 24 h |
-| Summe Grafik |  |  |  | rund 600 bis 800 h |
+| Summe Grafik |  |  |  | rund 800 bis 1.150 h (bei 320×180 waren es 600 bis 800 h; die Zeiten je Stück sind für 480×270 um etwa die Hälfte erhöht geschätzt, weil die Nacharbeit mit der Fläche wächst, das Erzeugen aber nicht) |
 
 ## System 3: Audio mit KI
 
@@ -109,7 +109,9 @@ Welche Automatisierung in welche Stufe gehört, steht unter Automatisierung.
 
 **Stand Vertical Slice (9. November 2026):** Welt 1 bis Rätsel 4 ist als Graubox im Stil des Prologs durchspielbar: Das Ende des Prologs führt mit Reisetasche, Notizbuch, Opas Zettel und Thunfischdose auf den Dorfplatz (Ankunft). Gebaut sind neun Räume (Dorfplatz, Taverne, Schmiede, Zauberstab-Laden, Hoggelwarz, Troll-Brücke, Wasserschloss, Zauberwald, Bergwerk), R1a bis R4c mit echtem Figurenwechsel (Minka), Ziegen als Begleiter, Ziegisch-Übersetzung, Pixel-Feld in der Inventarleiste, Ansehen-Wiederholung und erschöpfte Gespräche nach `05-spielsysteme.md`. Rätsel ab R5 bleiben gesperrt (Pfote und Notizbuch schweigen dazu), spätere Räume erscheinen nur als gesperrter Ausgang. Der Headless-Test spielt Prolog und Welt 1 bis R4 in beiden Varianten mit Rundreise nach jedem Schritt, auch mit Pixel als aktiver Figur. Offen: echte Grafik und Audio, der Test mit Fremden, die Lücken G9 bis G18 in `offene-punkte.md`.
 
-**Stand Graubox Welt 1 (9. November 2026):** Ganz Welt 1 ist als Graubox durchspielbar, R5 bis R13 mit den fünf neuen Räumen Luftschloss, Turmkeller, Abstellkammer 1, Smaugis Abstellkammern und Thronsaal. Rätsel 10 geht über Weg A (Leuchttrank, Ketchup-Unterschrift) oder Weg B (Zeldina bietet Grimmzahn den Hausmeister-Posten an, Grimmzahn folgt). Zeldina folgt ab R9. Nach R13 und dem Abschluss landet Max in Zwischenspiel 1 auf dem Dachboden und gibt Opa das Drachenei; Reisetasche, Opas Option und Kanal 7 bleiben gesperrt (Meldung am Drehknopf). Der Headless-Test spielt Prolog, Welt 1 mit beiden Wegen (über einen Zwischenstand vor R10) und die Ankunft in Zwischenspiel 1, mit Rundreise nach jedem Schritt. Die Funde G9 bis G26 sind gegen Spielablauf, Ton und Bedienung geprüft und eingetragen; offen sind noch G17, G18, G21 und G26 (`offene-punkte.md`). Sprechende Dinge (Brunnen, Grammophon, Geheimtür, Spiegel) sprechen mit Blase über dem Objekt, das Passwort entsteht Teil für Teil in der Dialogauswahl. Test: 666 Prüfungen im Testmodus, 665 mit echtem Ablauf, 0 Fehler.
+**Stand Graubox Welt 1 (9. November 2026):** Ganz Welt 1 ist als Graubox durchspielbar, R5 bis R13 mit den fünf neuen Räumen Luftschloss, Turmkeller, Abstellkammer 1, Smaugis Abstellkammern und Thronsaal. Rätsel 10 geht über Weg A (Leuchttrank, Ketchup-Unterschrift) oder Weg B (Zeldina bietet Grimmzahn den Hausmeister-Posten an, Grimmzahn folgt). Zeldina folgt ab R9. Nach R13 und dem Abschluss landet Max in Zwischenspiel 1 auf dem Dachboden und gibt Opa das Drachenei. Zwischenspiel 1 ist ganz gebaut: freie Phase mit Fundkiste und Opas Gesprächsbaum, Reisetasche am Drehknopf, Opas Abschied und Kanal 7; danach endet der Ausbaustand mit einer Meldung, weil Welt 2 noch nicht gebaut ist. Der Headless-Test spielt Prolog, Welt 1 mit beiden Wegen (über einen Zwischenstand vor R10) und Zwischenspiel 1 bis Kanal 7, mit Rundreise nach jedem Schritt. Die Funde G9 bis G26 sind gegen Spielablauf, Ton und Bedienung geprüft und eingetragen; offen sind noch G17, G18 und G21 (`offene-punkte.md`); G26 ist mit dem Bau von Zwischenspiel 1 entschieden. Sprechende Dinge (Brunnen, Grammophon, Geheimtür, Spiegel) sprechen mit Blase über dem Objekt, das Passwort entsteht Teil für Teil in der Dialogauswahl. Test: 666 Prüfungen im Testmodus, 665 mit echtem Ablauf, 0 Fehler.
+
+**Stand Testbuild und Telemetrie (9. November 2026, A9):** Der Testbuild für Linux und Windows entsteht aus `game/export_presets.cfg` (Feature-Tag `cq_testbuild`), lokal oder über den Workflow „Testbuild“ in GitHub Actions (von Hand gestartet, Builds als Artefakte); der lokale Export mit den Vorlagen 4.7.2 lief für beide Plattformen. Im Testbuild fragt das Spiel beim ersten Start, ob es ein anonymes Protokoll schreiben darf; mit Zustimmung schreibt es je Sitzung eine JSON-Lines-Datei (Räume mit Zeit, Rätselschritt offen und gelöst, Hinweisstufen mit Wartezeile, Fehlklicks je Objekt, Ersatzzeilen, Klicks ins Leere, Gesprächsoptionen, Speichern und Laden). Tester öffnen den Ordner über die Einstellungen und schicken die Datei; einen Upload gibt es noch nicht. `tools/telemetrie_auswertung.py` macht daraus einen Bericht je Schritt und Rätsel mit den Zielwerten, `test/beobachtungsbogen.md` ist der Bogen je Tester. Der Headless-Test prüft das Protokoll mit: 710 Prüfungen im Testmodus, 709 mit echtem Ablauf, 0 Fehler. Offen: der Test mit fünf Fremden, ein Blick auf den Build am Bildschirm (Popochiu meldet beim Start Fehler in seinen Editor-Skripten, das Spiel läuft headless trotzdem), Upload und Web-Export (A8).
 
 Bei 10 bis 15 Stunden pro Woche sind das rund drei Jahre, bei 20 Stunden gut zwei. Die Stundenbudgets sind Messlatten, keine Versprechen; die Grafikstunden aus der Zähltabelle stecken darin.
 
@@ -131,7 +133,7 @@ Sechzehn Ideen aus dem Gutachten vom 8. November 2026 (A1 bis A16), mit Nutzen, 
 | A6 | Audio-Pipeline: Skript-CSV → ElevenLabs-API (Stimme je Sprecher, Regie als Stil-Hinweis) → Dateiname = Zeilen-ID → Audacity-Batch (normalisieren, Stille trimmen) → Import | hoch | 2 | mittel (Kosten bei versehentlichem Mehrfachlauf) | Technik in 2 mit 20 Zeilen, Vollvertonung in 5 | Erzeugt nur Zeilen mit Status „final“, für die es noch keine Datei gibt |
 | A7 | GitHub Actions bei jedem Push: Prüfskript, Godot-Export headless, Rätsel-Test, spielbarer Build als Artefakt | hoch | 1 bis 2 | niedrig | 1 | Pflicht, sobald A2 und A3 laufen |
 | A8 | Web-Export (HTML5) für Testspieler per Link, privat auf itch.io | hoch | 0,5 | mittel (SharedArrayBuffer-Header, Audio-Autoplay im Browser, Popochiu im Web-Export erst prüfen) | 2 | Kein Download, kein Installer |
-| A9 | Telemetrie im Testbuild: Zeit je Rätselschritt, Hinweisstufen, Fehlklicks je Hotspot, Ersatzzeilen; Upload als JSON, Auswertung per Skript | hoch | 2 | niedrig (nur anonym und mit Zustimmung im Testbuild) | 2 | Ziel: kein Schritt über 10 Minuten im Median, Stufe 3 bei unter 20 Prozent der Tester |
+| A9 | Telemetrie im Testbuild: Zeit je Rätselschritt, Hinweisstufen, Fehlklicks je Hotspot, Ersatzzeilen; Upload als JSON, Auswertung per Skript | hoch | 2 | niedrig (nur anonym und mit Zustimmung im Testbuild) | 2 | Ziel: kein Schritt über 10 Minuten im Median, Stufe 3 bei unter 20 Prozent der Tester. Gebaut (Stand oben): Protokoll als JSON-Lines-Datei, die Tester selbst schicken; Upload später |
 | A10 | Grafik-Batch: Prompt-Tabelle → Retro-Diffusion-API → Palettize auf die Welt-Palette → Zuschnitt → Dateiname nach Schema → Eintrag ins KI-Protokoll | mittel | 2 bis 3 | mittel (API-Kosten bei Fehlläufen, Nacharbeit bleibt Handarbeit) | 3, sobald der Stil mit dem ersten Sprite-Paar steht | Lohnt für Gegenstände und Deko-Sammelbilder; bei Hintergründen und Figuren nur Protokoll und Palettize automatisieren |
 | A11 | KI-Protokoll automatisch: jedes Werkzeug-Skript (A6, A10) schreibt seine Zeile in eine CSV, Export für das Steam-Formular | hoch | 0,5 | niedrig | 1 | Spalten wie unter System 2; Nacharbeit und Ähnlichkeitsprüfung bleiben Handeinträge |
 | A12 | Englische Fassung: EN-Spalte per Claude aus der CSV mit Kontext (Art, Auslöser, Regie), Längenprüfung in EN, Eigennamen-Glossar (Spielsysteme) | hoch | 1 plus Übersetzungsläufe | mittel (Wortspiele) | Technik früh, Inhalt in 5 | Englische Fassung fest beschlossen; Muttersprachler prüft die Witze |
@@ -147,7 +149,7 @@ Nicht automatisieren: Laufbereiche, Hotspot-Umrisse, Freigabe der Pointen und di
 | Baustein | Was zu tun ist | Wer |
 | --- | --- | --- |
 | Dialog-Skript | Alle Zeilen von Max, Pixel und den Figuren, jede mit fester ID für Übersetzung und Sprachausgabe; dazu Kommentare für „Benutze X mit Y“, die nicht gehen | Claude schreibt, du kürzt |
-| Schrift | Pixel-Schrift mit deutschen Umlauten und offener Lizenz (OFL), z. B. von Google Fonts oder itch.io | du wählst aus |
+| Schrift | Nunito (OFL) für Text im Spiel, Pixelify Sans (OFL) für Titel; festgelegt am 9. November 2026, Lizenzen in `licenses/` (`05-spielsysteme.md`, Schrift) | erledigt |
 | Menüs und UI | Hauptmenü, Speichern und Laden, Optionen (Lautstärke, Textgeschwindigkeit, Untertitel), Hotspot-Anzeige | Popochiu bringt Vorlagen mit, Claude passt sie an |
 | Hinweis-System | Der Pfoten-Hilfeknopf aus dem Prolog: drei Stufen pro Rätsel, vom Wink bis zur Lösung | Claude schreibt die Hinweise |
 | Speichern | Spielstand mit Inventar, Rätsel-Fortschritt und aktueller Figur | Claude skriptet |
