@@ -219,7 +219,7 @@ Ebene: Realität. Morphäus wartet am Gasseneingang, sobald Max ihn kennt. Der A
 
 ### Die Wahl
 
-Szene nach der Diagnose. Zwei Pastillen liegen im Fach. Max nimmt eine. Beide sind spielbar; die blaue führt auf Opas Sofa und zurück.
+Szene nach der Diagnose. Zwei Pastillen liegen im Fach. Die Zeilen 0410 bis 0450 laufen als Zwischensequenz, erst danach sind die Pastillen anklickbar; so hat Max die Kekse immer vor der Wahl. Max nimmt eine. Beide sind spielbar; die blaue führt auf Opas Sofa und zurück.
 
 | ID | Sprecher | Text | Regie |
 | --- | --- | --- | --- |

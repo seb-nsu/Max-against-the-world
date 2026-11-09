@@ -107,7 +107,7 @@ Alle mit ElevenLabs Sound Effects oder aus CC0-Sammlungen. Immer mehrere Variant
 | --- | --- | --- |
 | Vollvertonung | Wirkt wie ein großes Adventure, wichtig für Humor und Timing | Teuer bei Änderungen, viel Arbeit beim Anhören |
 | Nur Zwischenszenen und Hauptfiguren | Ein Viertel der Kosten, Kommentare bleiben Text | Bruch zwischen vertonten und stummen Zeilen |
-| Keine Stimmen, nur „Brabbel“-Laute pro Figur | Billig, charmant, keine KI-Offenlegung für Stimmen. Technik: je Silbe der Zeile ein kurzer Blip, Grundtonhöhe und Tempo je Figur aus der Stimmen-Tabelle (Max tief und langsam, Toadi hoch und schnell); das Grundgerüst sieht den Haken dafür von Anfang an vor | Weniger Witz bei Pointen |
+| Keine Stimmen, nur „Brabbel“-Laute pro Figur | Billig, charmant, keine KI-Offenlegung für Stimmen. Technik: je Silbe der Zeile ein kurzer Blip, zur Laufzeit aus dem angezeigten Text der gewählten Sprache erzeugt (keine fertigen Audiodateien, daher passt die Länge auch in der englischen Fassung), Grundtonhöhe und Tempo je Figur aus der Stimmen-Tabelle (Max tief und langsam, Toadi hoch und schnell); das Grundgerüst sieht den Haken dafür von Anfang an vor | Weniger Witz bei Pointen |
 
 Empfehlung: erst ohne Stimmen entwickeln. Entschieden wird spätestens zu Beginn von Stufe 5 (Produktion, Meilensteine): ab etwa 10.000 Wunschlisten Vollvertonung, darunter Variante 2 mit Brabbel-Lauten für den Rest. Popochiu kann zu jeder Zeile eine Audiodatei abspielen; die Zeilen-IDs plane ich beim Skript von Anfang an mit ein.
 
