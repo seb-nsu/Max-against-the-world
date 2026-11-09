@@ -113,7 +113,7 @@ Rätsel 5, der Brunnen der Wünsche. Max wirft die Goldmünze ein, dann stehen d
 | W1\_DORF\_PIX\_0870 | Pixel | Hoch hinaus. Sie wächst. Das ist Pflanzenhumor. Pflanzen sind schlecht darin. |  |
 | W1\_DORF\_TOA\_0880 | Toadi | Eine Bohne! Eine echte! Einpflanzen! Gießen! Ich hole … ich habe nichts. Ich hole Panik. | hüpft |
 
-Rätsel 3, zweite Ziege: Max heftet den Bestellzettel ans Dorfbrett, Rotkäppchen liefert eine XXL-Ziege. Die Ziegen folgen Max danach wie eine kleine Herde (Begleiter-Schalter, siehe Abschluss).
+Rätsel 3, zweite Ziege: Max heftet den Bestellzettel ans Dorfbrett, Rotkäppchen liefert eine XXL-Ziege. Die Ziegen folgen Max danach wie eine kleine Herde (Begleiter-Schalter).
 
 | ID | Sprecher | Text | Regie |
 | --- | --- | --- | --- |
@@ -315,7 +315,7 @@ Zurufe in der Taverne (Pixel):
 
 ## 4. Schmiede: Die erste Ziege und die Milch
 
-Der Schmied schmiedet nur noch Kochgeschirr, seit die Ziege bei ihm wohnt. Hier gibt es Ziege 1 (Rätsel 3) und später die Ziegenmilch (Rätsel 6, Teil 1). Der Krug für die Milch hängt beim Kochgeschirr (Annahme, siehe Abschluss).
+Der Schmied schmiedet nur noch Kochgeschirr, seit die Ziege bei ihm wohnt. Hier gibt es Ziege 1 (Rätsel 3) und später die Ziegenmilch (Rätsel 6, Teil 1). Der Krug für die Milch hängt beim Kochgeschirr.
 
 | ID | Sprecher | Text | Auslöser |
 | --- | --- | --- | --- |
@@ -937,7 +937,7 @@ Zurufe im Bergwerk (Pixel):
 
 ## 12. Dunkler Turm, Keller und Abstellkammer 1: Die Besen
 
-Rätsel 11, Teil 2. Drei verzauberte Besen fegen feste Routen (gerade, Zickzack, Schleife). Max beobachtet, dann wechselt der Spieler zu Pixel und klickt die drei Kreuzungen im Fliesenmuster an; die Besen jagen den Haaren in die Abstellkammer, Max schließt die Tür.
+Rätsel 11, Teil 2. Drei verzauberte Besen fegen feste Routen (gerade, Zickzack, Schleife). Max beobachtet, dann wechselt der Spieler zu Pixel und klickt die drei Kreuzungen im Fliesenmuster an; die Besen jagen den Haaren in Abstellkammer 1, die erste von Smaugis sechs Kammern, Max schließt die Tür. Danach ist Abstellkammer 1 betretbar (Ansehen-Raum ohne Rätsel, Zeilen 0300 bis 0330): Die Besen fegen dort zufrieden und arbeiten sich Kammer für Kammer nach oben.
 
 | ID | Sprecher | Text | Regie oder Auslöser |
 | --- | --- | --- | --- |
@@ -970,6 +970,10 @@ Rätsel 11, Teil 2. Drei verzauberte Besen fegen feste Routen (gerade, Zickzack,
 | W1\_TURM\_MAX\_0270 | Max | Noch offen. Erst müssen alle drei da drin sein. Sonst kommt einer zurück und fegt mich. | Max benutzt Kammertür, bevor alle Besen drin sind |
 | W1\_TURM\_PIX\_0280 | Pixel | Die Besen fegen. Du schaust. Einer von uns muss sich bewegen, und ich lehne ab. | Zuruf |
 | W1\_TURM\_PIX\_0290 | Pixel | Drei Muster, drei Besen, drei Kreuzungen. Ich sehe ein Muster, und ich hasse Muster. | Zuruf |
+| W1\_TURM\_MAX\_0300 | Max | Abstellkammer 1. Schild: „Eigentum Smaugi, Kammer 1 von 6.“ Sechs Kammern. Für Kram. Respekt. | Betreten: Abstellkammer 1 über die Kammertür im Keller; nach R11 Teil 2 |
+| W1\_TURM\_MAX\_0310 | Max | Die Besen fegen Smaugis Kram zu Stapeln. Mich ignorieren sie. Ich bin kein Kram. Glaub ich. | Ansehen: Besen in Abstellkammer 1 |
+| W1\_TURM\_PIX\_0320 | Pixel | Sie fegen sich nach oben, Kammer für Kammer. Vollbeschäftigung. // Die Goblins wären neidisch. | Ansehen: Besen in Abstellkammer 1, Pixel |
+| W1\_TURM\_MAX\_0330 | Max | Eimer, Fahnen, Lappen. Smaugis Einsteigerkram. Der richtige Kram wartet oben. | Ansehen: Kram in Abstellkammer 1; Ausgang nur zurück in den Keller |
 
 ## 13. Smaugis Abstellkammern: Aufräumen und die Geheimtür
 

@@ -13,18 +13,18 @@ Dieser Tab sammelt alle Absprachen zu Technik, Grafik und Audio an einer Stelle;
 | Programmierung | Claude schreibt alle Skripte (GDScript) | Du konzentrierst dich auf Grafik, Laufbereiche und Testen |
 | Grafik | KI-gestützt: Konzeptbilder mit ChatGPT oder Gemini, Spielgrafik mit Retro Diffusion, Nacharbeit in Aseprite | Schnell und einheitlich; Nacharbeit hält die Qualität |
 | Audio | KI-gestützt: ElevenLabs für Stimmen, Geräusche und Musik, ACE-Step lokal für Musik-Experimente, Audacity für Nacharbeit | Ein Abo deckt fast alles ab, lizenzrechtlich sauberer als Suno |
-| Parodien | Keine geschützten Namen, Logos oder Figurendesigns; bekannte Zitate erlaubt, wenn sie als Anspielung erkennbar sind; Parodienamen nie im Titel, Store-Text, Tags, Trailer oder Screenshots; Rechtscheck der Namen im Tab Konzept | Rechtliche Sicherheit, eigene Witze statt Kopien |
-| KI-Offenlegung | Steam-Formular für KI-Inhalte ausfüllen (Grafik, Musik, Stimmen); jede Erzeugung im KI-Protokoll festhalten | Pflicht auf Steam, Nachweis bei Rückfragen |
+| Parodien | Keine geschützten Namen, Logos oder Figurendesigns; bekannte Zitate erlaubt, wenn sie als Anspielung erkennbar sind; Parodienamen nie im Titel, Store-Text, Tags, Trailer oder Screenshots; Toadi und Zeldina erscheinen in keinem Marketing-Material (auch nicht in Kapselbildern und Social Media), der Abspann-Pilz wird vor dem Trailer-Schnitt geprüft; Rechtscheck der Namen im Tab Konzept | Rechtliche Sicherheit, eigene Witze statt Kopien |
+| KI-Offenlegung | Steam-Formular für KI-Inhalte ausfüllen (Grafik, Musik, Stimmen); jede Erzeugung im KI-Protokoll festhalten; Strategie, Formularangaben und Store-Text unter „KI-Offenlegung“ weiter unten | Pflicht auf Steam, Nachweis bei Rückfragen |
 | Vorgehen | Erst ein Vertical Slice (Prolog und Rätsel 1 bis 4 aus Welt 1: 8 Räume, 13 Figuren, etwa 450 Zeilen), dann die Demo mit ganz Welt 1 für die Steam-Seite, dann Serienproduktion; Stufen unter Meilensteine | Früh testen, ob Rätsel und Witz funktionieren |
 | Veröffentlichung | Ein Spiel mit kostenloser Demo (Prolog und Welt 1) statt verkaufter Episoden; Überarbeitung Nr. 3 ist damit verworfen | Eine Demo sammelt Wunschlisten ohne Bruch; vier Episoden wären vier Veröffentlichungen mit je eigener Steam-Seite |
-| Hauptfiguren | Max, Pixel und Opa entstehen als KI-Entwurf und werden in Aseprite Pixel für Pixel von Hand nachgezogen; alle anderen Figuren KI mit Nacharbeit | Mittelweg zwischen Überarbeitung Nr. 57 und der freigegebenen Pipeline; die drei Figuren sind in jedem Screenshot und tragen die Store-Seite |
-| Umfang | Etwa 8 Stunden Spielzeit, 53 Rätsel, 12 Zwischenspiele (Rückkehren und Packszenen); der Vertical Slice dauert etwa 40 Minuten | Richtwert für Zeitplan, Zeilenbudget und Steam-Seite; 8 bis 12 Minuten je Rätsel sind klassisch |
+| Hauptfiguren | Max, Pixel und Opa entstehen als KI-Entwurf und werden in Aseprite Pixel für Pixel von Hand nachgezogen; alle anderen Figuren KI mit Nacharbeit | Mittelweg zwischen Überarbeitung Nr. 57 und der freigegebenen Pipeline; die drei Figuren sind in jedem Screenshot und tragen die Store-Seite. Für Pixels Posen darf ein freies Katzen-Asset (CC0) nur als Anschauung neben dem Bild liegen; seine Pixel werden nicht übernommen |
+| Umfang | Etwa 8 Stunden Spielzeit, 53 Rätsel, 3 Zwischenspiele (Rückkehren nach Welt 1 bis 3, das Packen ist jeweils eingebaut; laut Skript 166 Zeilen) und ein Finale in acht Abschnitten (rund 270 Zeilen); der Vertical Slice dauert etwa 40 Minuten | Richtwert für Zeitplan, Zeilenbudget und Steam-Seite; 8 bis 12 Minuten je Rätsel sind klassisch |
 
 ## System 1: Godot und Popochiu
 
 | Thema | Absprache |
 | --- | --- |
-| Version | Eine stabile Godot-4-Version und die dazu passende Popochiu-2-Version mit Nummer und Prüfdatum hier eintragen (Stand 8. November 2026 noch offen; Beispielform: „Godot 4.4.1, Popochiu 2.0.x, geprüft am …“) und während des Projekts nicht wechseln; Popochiu hat zwischen Minor-Versionen das GUI-Vorlagensystem geändert |
+| Version | Godot 4.7.2 (stabil, 18. August 2026) mit Popochiu 2.2.1 (18. Oktober 2026), geprüft am 9. November 2026. Popochiu 2.2 hat Godot 4.7 als Standardziel; Godot 4.8 ist noch Beta und kommt nicht in Frage. Während des Projekts nicht wechseln; nur Fehlerkorrekturen innerhalb von 4.7.x und 2.2.x, jeweils erst in einem eigenen Git-Zweig testen; Popochiu hat zwischen Minor-Versionen das GUI-Vorlagensystem geändert |
 | Pixel-Einstellungen | Viewport 320×180, Stretch-Modus „viewport“, ganzzahlige Skalierung, Texturfilter „Nearest“; richte ich beim Projektstart ein |
 | Aufbau | Ein Popochiu-Raum pro Szene; Hintergrund, Laufbereich, Hotspots, Props mit Zuständen, Regionen für Größenwechsel |
 | Mechaniken | Figurenwechsel (alle Welten), Zeitfähre (Welt 2), Code-Sicht und Ebenenwechsel (Welt 3), Fernbedienung und Genre-Zustände (Welt 4); nach Überarbeitung Nr. 23 möglichst auf einem gemeinsamen Zustandssystem |
@@ -47,7 +47,7 @@ Dieser Tab sammelt alle Absprachen zu Technik, Grafik und Audio an einer Stelle;
 
 **Lokal oder Cloud:** Die lokale Retro-Diffusion-Erweiterung für Aseprite kostet einmalig 65 $ (Lite 20 $) und braucht keine Credits. Sie enthält aber nicht das große Standardmodell der Website und keine Animationen. Die Website rechnet mit Credits ab und ist für Figuren und Animationen nötig. Die Bilder darfst du kommerziell nutzen. Deine Radeon 7900 XT: Laut deiner Info läuft die lokale Version inzwischen auch unter Windows auf AMD; auf der Produktseite steht in einem Entwickler-Kommentar noch „nur Linux“. Vor dem Kauf die Demo testen. Empfehlung: Cloud für Figuren und Animationen, lokal für Hintergründe, Umfärben und Freistellen.
 
-**Regeln:** Prompts nach den Bausteinen im Tab Grafik; keine Schrift im Bild erzeugen; jedes Asset auf die gemeinsame Palette bringen; Dateinamen wie `w1_bg_taverne.png`; jede Erzeugung mit Prompt und Datum im KI-Protokoll.
+**Regeln:** Prompts nach den Bausteinen im Tab Grafik; keine Schrift im Bild erzeugen; jedes Asset auf die gemeinsame Palette bringen; Dateinamen wie `w1_bg_taverne.png`; jede Erzeugung mit Prompt und Datum im KI-Protokoll. Das KI-Protokoll hat die Spalten Datum, Werkzeug und Modell, Prompt, Seed, Datei, Nacharbeit und „Ähnlichkeitsprüfung ok“. Die letzte Spalte ist Pflicht bei allen Parodiefiguren und -orten (zum Beispiel Morphäus, Agent Schmidt, Toadi, Zeldina, Hausmeister 08/15): Das Bild neben das Original legen; wirkt es wie eine Kopie statt wie eine Anspielung, neu erzeugen oder von Hand umzeichnen und das im Protokoll vermerken.
 
 **Umfang der Grafik** (gezählt aus den Grafik-Tabs, Stand 8. November 2026; nach jeder Welt neu zählen):
 
@@ -58,7 +58,7 @@ Dieser Tab sammelt alle Absprachen zu Technik, Grafik und Audio an einer Stelle;
 | Sonderanimationen | etwa 60 | rd\_advanced\_animation\_\_custom\_action | 1 h | 60 h |
 | Effekte | etwa 25 | Baustein EFFEKT | 0,5 h | 13 h |
 | Inventar-Icons | etwa 150 | Sammelbilder, Aseprite | 15 Minuten | 38 h |
-| Nahansichten | 11 | Baustein HINTERGRUND, Schrift von Hand | 2 h | 22 h |
+| Nahansichten | 14 (Prolog 2, W1 4, W2 3, W3 4, W4 1 Programmzeitschrift) | Baustein HINTERGRUND, Schrift von Hand | 2 h | 28 h |
 | UI-Panels | etwa 12 | rd\_pro\_\_ui\_panel | 2 h | 24 h |
 | Summe Grafik |  |  |  | rund 600 bis 800 h |
 
@@ -97,13 +97,17 @@ Fünf Stufen mit Dauer, Stundenbudget und einer Regel, wann umgesteuert wird. Na
 
 | Stufe | Dauer | Ergebnis | Stundenbudget | Umsteuern, wenn |
 | --- | --- | --- | --- | --- |
-| 1 Grundgerüst | 4 Wochen | Godot und Popochiu eingerichtet, Git mit LFS, gemeinsames Zustandssystem, Figurenwechsel, Speichern, Nahansicht, Notizbuch, tr() in allen Texten, Dachboden mit Platzhaltergrafik | 60 h | Der Figurenwechsel läuft nach vier Wochen nicht: Popochiu-Version prüfen, dann Hilfe im Popochiu-Discord holen |
-| 2 Vertical Slice | 8 Wochen | Prolog und Welt 1 Rätsel 1 bis 4: 8 Räume, 13 Figuren, etwa 450 Zeilen, Platzhalter erlaubt; fünf Fremde testen mit Telemetrie-Log | 120 h | Tester lösen Rätsel 1 bis 4 mit Hinweisen nicht in 45 Minuten: Hinweise und Hotspots nachbessern, bevor Grafik in Serie geht |
+| 1 Grundgerüst | 4 Wochen | Godot und Popochiu eingerichtet, Git mit LFS, gemeinsames Zustandssystem, Figurenwechsel, Speichern, Nahansicht, Notizbuch, tr() in allen Texten, Dachboden mit Platzhaltergrafik; Prüfskript für die Skript-Tabellen (Zeilenlänge, doppelte IDs, Zehnerschritte, Sprecherliste; A1, A2) und Konsistenz-Check der Rätsel-Tabs (Benötigt und Belohnung, Sackgassen, falsche Verweise; A13) laufen bei jedem Push in GitHub Actions (A7); dazu ein automatischer Speichern/Laden-Test und ein Rundreise-Test (A4): Spielstand an jeder Stelle speichern, laden und vergleichen | 60 h | Der Figurenwechsel läuft nach vier Wochen nicht: Popochiu-Version prüfen, dann Hilfe im Popochiu-Discord holen |
+| 2 Vertical Slice | 8 Wochen | Prolog und Welt 1 Rätsel 1 bis 4: 8 Räume, 13 Figuren, etwa 450 Zeilen, Platzhalter erlaubt; fünf Fremde testen mit Telemetrie-Log; die Hinweis-Datei der Hilfe-Pfote wird automatisch aus Skript und Rätseltabelle erzeugt (A14) | 120 h | Tester lösen Rätsel 1 bis 4 mit Hinweisen nicht in 40 Minuten: Hinweise und Hotspots nachbessern, bevor Grafik in Serie geht |
 | 3 Demo Welt 1 | 6 Monate | Prolog und Welt 1 komplett mit fertiger Grafik und Audio, Zwischenspiel 1, Steam-Seite mit Demo online | 350 h | Mehr als 9 Monate: Zeitplan der Welten 2 bis 4 neu rechnen und Prompt-Vorlagen verbessern |
 | 4 Welten 2 bis 4 | je 5 bis 7 Monate | Eine Welt je Stufe mit Rückkehr, Packszene und Test; Reihenfolge 2, 3, 4 | je 300 h | Eine Welt dauert mehr als 9 Monate: Ablauf prüfen (Automatisierung, Sammelbilder, Wiederverwendung), nicht die Rätselzahl |
 | 5 Finale und Politur | 3 Monate | Finale, Abspann, Übersetzung, Sprachausgabe oder Brabbel, Errungenschaften, Barrierefreiheit, Steam-Einreichung | 180 h | Die Entscheidung Vollvertonung oder Brabbel fällt spätestens am Anfang dieser Stufe |
 
 Bei 10 bis 15 Stunden pro Woche sind das rund drei Jahre, bei 20 Stunden gut zwei. Die Stundenbudgets sind Messlatten, keine Versprechen; die Grafikstunden aus der Zähltabelle stecken darin.
+
+**Puffer und Termin für die Steam-Seite (Schätzung vom 9. November 2026, wird später festgelegt):** Auf jede Stufe kommen 20 Prozent Puffer: Grundgerüst 5 statt 4 Wochen, Vertical Slice 10 statt 8 Wochen, Demo Welt 1 gut 7 statt 6 Monate, Welten 2 bis 4 je 6 bis 8,5 statt 5 bis 7 Monate, Finale und Politur knapp 4 statt 3 Monate. Ohne Puffer ergibt das 27 bis 33 Monate, mit Puffer 32 bis 40 Monate.
+
+Die Steam-Seite geht online, sobald der Vertical Slice bestanden ist und ein fertiges Kapselbild und fünf echte Screenshots aus Welt 1 vorliegen, geschätzt im Monat 7 bis 9 nach Projektstart. Die Demo folgt am Ende von Stufe 3 (etwa Monat 10 bis 11) und zielt auf das nächste Steam Next Fest (Februar, Juni oder Oktober). Beispiel bei Projektstart im Januar 2027: Steam-Seite im Herbst 2027, Demo zum Next Fest im Februar 2028, Veröffentlichung zwischen Herbst 2029 und Frühjahr 2030. Die Seite hätte damit gut zwei Jahre, um Wunschlisten zu sammeln.
 
 ## Was noch fehlt
 
@@ -114,13 +118,55 @@ Bei 10 bis 15 Stunden pro Woche sind das rund drei Jahre, bei 20 Stunden gut zwe
 | Menüs und UI | Hauptmenü, Speichern und Laden, Optionen (Lautstärke, Textgeschwindigkeit, Untertitel), Hotspot-Anzeige | Popochiu bringt Vorlagen mit, Claude passt sie an |
 | Hinweis-System | Der Pfoten-Hilfeknopf aus dem Prolog: drei Stufen pro Rätsel, vom Wink bis zur Lösung | Claude schreibt die Hinweise |
 | Speichern | Spielstand mit Inventar, Rätsel-Fortschritt und aktueller Figur | Claude skriptet |
-| Übersetzung | Englisch verdoppelt den Markt auf Steam; alle Texte ab Tag 1 über tr() und Zeilen-IDs, keine festen Strings im Skript; Eigennamen-Glossar im Tab Spielsysteme | Claude übersetzt, Muttersprachler prüft Witze |
+| Übersetzung | Englisch verdoppelt den Markt auf Steam; alle Texte ab Tag 1 über tr() und Zeilen-IDs, keine festen Strings im Skript; Eigennamen-Glossar im Tab Spielsysteme | Englische Fassung fest beschlossen (9. November 2026); Claude übersetzt aus der Skript-CSV mit Glossar (A12), Muttersprachler prüft Witze |
 | Testen | Ab dem Vertical Slice Fremde spielen lassen. Der Build schreibt ein Telemetrie-Log (Raum, Rätsel, Zeit, Hinweisstufe, Klicks ins Leere); dazu ein Beobachtungsbogen je Tester mit Zielwerten: Rätsel unter 12 Minuten, höchstens eine Hinweisstufe 3 je Welt, jeder Witz mindestens einmal gelacht | du und Testspieler |
 | Steam-Seite | Kapselbilder in mehreren Formaten, 5+ Screenshots, Trailer, Beschreibung, KI-Offenlegung; Seite früh online stellen, um Wunschlisten zu sammeln | du, Claude hilft bei Texten |
-| Rechtliches | Rechtscheck der Namen (Tab Konzept) vor jeder Welt durchgehen; Markencheck des Arbeitstitels in DPMAregister, EUIPO eSearch und der Steam-Suche vor der Steam-Seite, Ergebnis mit Datum hier eintragen (Stand 8. November 2026: noch nicht gemacht); eine Anwaltsstunde für Figurenliste und Titel vor der Veröffentlichung; Lizenznachweise für Schrift, Musik und Geräusche sammeln; Impressum für die Seite. Das Dokument ersetzt keine Rechtsberatung | du |
+| Rechtliches | Rechtscheck der Namen (Tab Konzept) vor jeder Welt durchgehen; Markencheck des Titels „Couch Quest – Max against the worlds“ in DPMAregister, EUIPO eSearch und der Steam-Suche vor der Steam-Seite, Ergebnis mit Datum hier eintragen (Stand 9. November 2026: Websuche erledigt, Registersuche offen. Kein Videospiel namens „Couch Quest“ auf Steam gefunden; der Name ist aber belegt durch eine Live-Gameshow „Couch Quests“ auf Twitch und YouTube, Social-Media-Konten „Couch Quest“ und „Couch Quest Gaming“ sowie einen Möbelhändler in den USA. Die Suche in DPMAregister und EUIPO eSearch nach „Couch Quest“ in den Klassen 9, 28 und 41 fehlt noch); eine Anwaltsstunde für Figurenliste und Titel vor der Veröffentlichung; Lizenznachweise für Schrift, Musik und Geräusche sammeln; Impressum für die Seite. Altersfreigabe: Ziel USK 6 und PEGI 7 über den IARC-Fragebogen auf Steam (Wein in Welt 1 und 2 nur als Bestellung oder Rätselgegenstand, Max trinkt keinen Alkohol, Pastillen statt Pillen in Welt 3, Slapstick ohne Blut); fällt die Einstufung höher aus, ist USK 12 akzeptiert. Das Dokument ersetzt keine Rechtsberatung | du |
 | Versionierung | Git mit GitHub und Git LFS für audio/ und concepts/; wichtig, sobald eine KI Dateien im Projekt ändert, damit jeder Schritt rückgängig gemacht werden kann | einmal einrichten |
 
 **Reihenfolge:** Erst das Grundgerüst, dann der Vertical Slice (Prolog und Welt 1 Rätsel 1 bis 4: 8 Räume, 13 Figuren, etwa 450 Zeilen, Platzhaltergrafik erlaubt), dann testen, dann Grafik und Audio in Serie. Die Stufen stehen unter Meilensteine.
+
+## KI-Offenlegung
+
+Steam fragt im Fragebogen zu den Inhalten zwei Arten ab: vorab erzeugte KI-Inhalte (mit KI erstellt und mit dem Spiel ausgeliefert) und live erzeugte (KI erzeugt während des Spielens Inhalte). Dieses Spiel hat nur vorab erzeugte Inhalte. Strategie: offen und konkret, weder versteckt noch entschuldigend. Der Absatz steht unten in der Store-Beschreibung, die Angaben im Steam-Formular, und der Abspann nennt die Werkzeuge. Der Text wird vor der Steam-Seite an den tatsächlichen Ablauf angepasst.
+
+**Angaben im Steam-Formular (vorab erzeugt):**
+
+- Grafik: Konzeptbilder mit ChatGPT oder Gemini als Vorlage, nie im Spiel. Hintergründe, Figuren, Animationen und Gegenstände mit Retro Diffusion erzeugt und in Aseprite von Hand nachbearbeitet; Max, Pixel und Opa Pixel für Pixel von Hand nachgezogen.
+- Audio: Stimmen, Geräusche und Musik mit ElevenLabs (Voice Design, keine geklonten Stimmen echter Personen) und ACE-Step, Nacharbeit in Audacity; Liedtexte von Hand.
+- Text: Geschichte, Welten, Figuren und Rätsel von Sebastian; Dialoge mit Claude als Schreibpartner entworfen und von Sebastian überarbeitet; englische Fassung mit Claude übersetzt und von einem Muttersprachler geprüft.
+- Code: mit Claude Code geschrieben.
+- Live erzeugt: nein. Das Spiel erzeugt beim Spielen keine Inhalte mit KI.
+- Nachweis: KI-Protokoll mit Prompt, Datum und Ähnlichkeitsprüfung für jedes Asset.
+
+**Store-Text, deutsch (Entwurf):** „Couch Quest ist ein kleines Indie-Projekt, bei dem KI ein Werkzeug ist und nicht der Autor. Geschichte, Figuren und Rätsel stammen von mir. Grafik und Audio sind mit KI-Werkzeugen entstanden (Retro Diffusion, ElevenLabs); jedes Bild ist in Aseprite von Hand nachgearbeitet, und Max, Pixel und Opa sind Pixel für Pixel von Hand gezeichnet. Die Dialoge habe ich mit Claude als Schreibpartner entworfen und selbst überarbeitet, der Code ist mit Claude Code entstanden. Keine Stimme einer echten Person wurde geklont, und das Spiel erzeugt beim Spielen keine Inhalte mit KI.“
+
+**Store-Text, englisch (Entwurf):** „Couch Quest is a small indie project where AI is a tool, not the author. The story, characters and puzzles are mine. Art and audio were made with AI tools (Retro Diffusion, ElevenLabs); every image was reworked by hand in Aseprite, and Max, Pixel and Grandpa were drawn pixel by pixel. I drafted the dialogue with Claude as a writing partner and edited it myself, and the code was written with Claude Code. No real person’s voice was cloned, and the game generates no AI content while you play.“
+
+## Markt
+
+Stand 9. November 2026. Alle Verkaufszahlen sind Schätzungen von Analyse-Seiten (meist nach der Boxleiter-Methode, 20 bis 60 Verkäufe je Steam-Rezension), keine offiziellen Zahlen.
+
+| Vergleichstitel | Was passt | Zahlen |
+| --- | --- | --- |
+| Lucy Dreaming (2022) | Pixel-Art, Comedy, klassisches Point-and-Click, kleines Studio | 18,99 $, rund 280 Rezensionen, Metacritic 87; geschätzt 4.000 bis 6.000 Kopien, 90.000 bis 105.000 $ brutto, rund 30.000 $ netto für das Studio |
+| Sam & Max: Beyond Time and Space (Remaster) | Comedy-Adventure mit Popkultur-Humor | 19,99 $, rund 520 Rezensionen; geschätzt etwa 18.000 Kopien |
+| Frog Detective 3 | kurzes Comedy-Adventure, sehr gute Bewertungen | 4,99 $, rund 1.900 Rezensionen; geschätzt etwa 58.000 Kopien; zeigt, wie weit Humor trägt, ist aber viel kürzer und billiger |
+| Unforeseen Incidents (2018) | deutsches Studio, Publisher Application Systems Heidelberg, englische Fassung | keine öffentlichen Zahlen; Metacritic 80, später auf Switch |
+
+**Richtwerte:** Das mittlere bezahlte Steam-Spiel nimmt in seiner ganzen Laufzeit nur 1.100 bis 3.500 $ brutto ein; Spiele mit mehr als 100 Rezensionen verkaufen meist 3.000 bis 10.000 Kopien. Im ersten Monat verkauft ein Spiel im Mittel etwa 12 Prozent seiner Wunschlisten zum Start (andere Quellen: 15 bis 25 Prozent); gemütliche Point-and-Click-Spiele mit Pixel-Art liegen eher darüber. Der erste Monat bringt 30 bis 50 Prozent des ersten Jahres.
+
+**Preis:** 17,99 € bzw. 17,99 $ zum Start, Demo kostenlos, 10 bis 15 Prozent Startrabatt. Acht Stunden Spielzeit tragen diesen Preis; Lucy Dreaming und Sam & Max liegen bei 19 bis 20 $.
+
+**Zielgruppe:** Adventure-Fans zwischen 25 und 45 mit Erinnerungen an die LucasArts- und Daedalic-Zeit, auf Deutsch und Englisch; dazu Popkultur-Fans, die Parodien mögen, und Steam-Deck-Spieler. Nebenzielgruppe Jugendliche ab 12 (USK-Ziel offen, siehe S8).
+
+**Wunschlisten-Ziel:** 10.000 zum Start, mindestens 7.000. Bei 10.000 Wunschlisten sind 1.200 bis 2.500 Verkäufe im ersten Monat und 3.000 bis 6.000 im ersten Jahr realistisch.
+
+**Rechnung:** 5.000 Kopien zu durchschnittlich 14 $ nach Rabatten ergeben 70.000 $ brutto, nach dem Steam-Anteil von 30 Prozent rund 49.000 $ vor Steuern. Die Kosten von 5.000 bis 9.000 $ sind nach etwa 500 bis 950 Kopien gedeckt.
+
+**Folgen für offene Entscheidungen:** Die englische Fassung lohnt sich klar, weil sie den Markt etwa verdoppelt und nur 300 bis 800 € kostet. Die Vollvertonung lohnt sich ab etwa 10.000 Wunschlisten zu Beginn von Stufe 5; darunter Hauptfiguren vertont und der Rest als Brabbel-Laute.
+
+Quellen: [games-stats.com zu Lucy Dreaming](https://games-stats.com/steam/game/lucy-dreaming/), [steam-revenue-calculator.com](https://steam-revenue-calculator.com/app/1532710/lucy-dreaming), [steamdata.ai Point-and-Click](https://steamdata.ai/best/point-and-click), [Game Oracle: Wishlist to Sales 2025](https://www.game-oracle.com/blog/wishlist-to-sales-2025), [Steam Page Analyzer: Indie Game Revenue](https://www.steampageanalyzer.com/blog/indie-game-revenue-data), [Wikipedia: Unforeseen Incidents](https://en.wikipedia.org/wiki/Unforeseen_Incidents).
 
 ## Brauchst du einen Level-Editor?
 

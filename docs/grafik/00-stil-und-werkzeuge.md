@@ -76,69 +76,69 @@ Ein vollständiger Prompt besteht aus drei Teilen: **Baustein** (Technik, von hi
 **KONZEPT** (ChatGPT oder Gemini, nur als Vorlage):
 
 ```text
-Concept art for a 2D point-and-click adventure game in the style of classic 1990s adventure games, strictly side view like a flat stage, back wall parallel to the picture plane, floor as a flat band in the lower third, humorous and whimsical, warm hand-painted look, 16:9, no text, no logos.
+Concept art for a 2D point-and-click adventure game in the style of classic 1990s adventure games, strictly side view like a flat theater stage, camera at chest height looking straight at the back wall, back wall parallel to the picture plane, no vanishing-point perspective, no top-down or three-quarter view, floor as a flat walkable band across the lower third kept free of objects except at the left and right edges, light from the upper left with soft shadows to the lower right, humorous and whimsical, warm hand-painted look, 16:9, no text, no letters, no logos.
 ```
 
 **HINTERGRUND** (`rd_plus__environment`, 320×180):
 
 ```text
-Pixel art background, 320x180, strictly side view like a flat stage, back wall parallel to the picture plane, walkable floor as a flat band kept clear in the lower third, light from upper left, clean pixel clusters, no anti-aliasing, no characters, all signs, labels and book covers blank.
+Pixel art background, 320x180, strictly side view like a flat stage, camera at eye level, back wall parallel to the picture plane, no vanishing-point perspective, walkable floor as a flat band about 60 pixels high kept clear in the lower third, large objects only against the back wall or at the left and right edges, exits clearly readable, light from upper left with soft shadows to the lower right, clean pixel clusters, no anti-aliasing, no outlines, no characters, all signs, labels and book covers blank.
 ```
 
 **FIGUR** (`rd_pro__default`, Menschen etwa 56 Pixel):
 
 ```text
-Pixel art character sprite, exactly one character, full body, side view, about 56 pixels tall, dark colored outline, expressive cartoon face, transparent background.
+Pixel art character sprite, exactly one character, full body, strict side view facing right unless the motif says left, about 56 pixels tall on a 64x64 canvas unless the motif gives another height, feet on the bottom edge, dark colored outline (not pure black), light from upper left, expressive cartoon face, flat colors without gradients, plain transparent background, no ground shadow.
 ```
 
 **FIGUR-KLEIN** (Tiere und kleine Wesen, 12 bis 30 Pixel; Zahl im Motiv angeben):
 
 ```text
-Pixel art small creature sprite, exactly one creature, full body, side view, dark colored outline, very readable silhouette, transparent background.
+Pixel art small creature sprite, exactly one creature, full body, strict side view facing right unless the motif says left, height in pixels as given in the motif on a 32x32 canvas, dark colored outline (not pure black), light from upper left, very readable silhouette, flat colors, plain transparent background, no ground shadow.
 ```
 
 **FIGUR-GROSS** (große Wesen und Maschinen über 64 Pixel; Zahl im Motiv angeben):
 
 ```text
-Pixel art large character sprite, exactly one character, full body, side view, fills most of the frame, dark colored outline, transparent background.
+Pixel art large character sprite, exactly one character, full body, strict side view facing right unless the motif says left, height in pixels as given in the motif on a canvas up to 128x128, fills most of the frame, dark colored outline (not pure black), light from upper left, flat colors, plain transparent background, no ground shadow.
 ```
 
 **PORTRÄT** (Dialog und Figurenwechsel, 64×64):
 
 ```text
-Pixel art character portrait, head and shoulders, 64x64, three-quarter view facing right, expressive face, dark colored outline, transparent background.
+Pixel art character portrait, head and shoulders, 64x64, three-quarter view facing right, expressive face, same colors as the character's sprite, dark colored outline, light from upper left, plain transparent background, no hands, no text.
 ```
 
 **KARTE** (`rd_plus__topdown_map`, 320×180):
 
 ```text
-Pixel art top-down illustrated travel map, 320x180, simple readable shapes, clearly separated clickable locations, no text.
+Pixel art top-down illustrated travel map, 320x180, seen straight from above, simple readable shapes, clearly separated clickable locations with at least 16 pixels of space between them, light from upper left, no text, no letters, no labels.
 ```
 
 **GEGENSTÄNDE** (`rd_plus__item_sheet`; Raster im Motiv angeben):
 
 ```text
-Pixel art item sheet, items in reading order left to right, each item centered in its own cell at the same scale, about 24x24 pixels each, dark colored outline, transparent background, no text on any item.
+Pixel art item sheet, grid exactly as given in the motif, items in reading order left to right and top to bottom, each item centered in its own cell at the same scale, about 24x24 pixels each, slight front-side view, no overlap between cells, dark colored outline (not pure black), light from upper left, plain transparent background, no text, letters or numbers on any item.
 ```
 
 **EFFEKT** (Bildfolge für Godot):
 
 ```text
-Pixel art visual effect sprite sheet, frames in one horizontal row, transparent background, limited palette, no anti-aliasing.
+Pixel art visual effect sprite sheet, frames in one horizontal row, frame count and frame size as given in the motif, every frame the same size with the effect centered, transparent background, limited palette, no anti-aliasing, no text.
 ```
 
 **ANIMATION** (`rd_advanced_animation__custom_action` mit dem fertigen Standbild als Eingabe; Schema für das Motiv):
 
 ```text
-[Figur] [Aktion in Phasen: Ausholen, Höhepunkt, Ende]. [Bildzahl] frames, [loops / plays once], facing [right/left], [was ruhig bleibt].
+[Ausgangsbild: Figur und Pose]. [Aktion in Phasen: Ausholen, Höhepunkt, Ende]. [Bildzahl] frames, [loops / plays once], facing [right/left], [was ruhig bleibt], same size, colors and outline as the input sprite, feet stay on the same baseline.
 ```
 
 Für Gehen und Stehen reichen `rd_advanced_animation__walking` und `__idle` mit dem Standbild.
 
-**Verbotenes** (Feld für Negativ-Prompt, falls vorhanden):
+**Verbotenes** (Feld für Negativ-Prompt, falls vorhanden; bei Karte und Reisetasche „top-down view“ weglassen, bei Hintergründen „more than one character“ durch „characters, people“ ersetzen. ChatGPT und Gemini haben kein solches Feld, dort stehen die wichtigsten Verbote schon im Baustein):
 
 ```text
-text, letters, numbers, watermark, logo, blur, gradients, photorealism, 3D render, more than one character
+text, letters, numbers, watermark, logo, signature, blur, gradients, anti-aliasing, photorealism, 3D render, isometric view, top-down view, vanishing-point perspective, tilted floor, pure black outlines, drop shadow, cropped feet, more than one character
 ```
 
 ### Steckbriefe der Hauptfiguren
@@ -148,13 +148,13 @@ Bei jedem Bild von Max oder Pixel wortgleich verwenden.
 **Max** (Baustein FIGUR):
 
 ```text
-Max, a lanky 16-year-old boy with messy brown hair falling into his eyes, sleepy half-closed eyes and a lopsided smirk, oversized dark charcoal grey hoodie with a tiny retro TV printed on the chest, dark blue jeans, worn red sneakers, hands often in his hoodie pocket.
+Max, a lanky 16-year-old boy with a slight slouch, messy dark brown hair (#733e39) with shaggy strands falling over his forehead and eyes, sleepy half-closed eyes, lopsided smirk, a few freckles, oversized dark slate blue-grey hoodie (#3a4466) with sleeves over his hands, uneven drawstrings and a tiny retro TV with a turquoise screen (#2ce8f5) on the chest, dark blue jeans (#124e89) slightly too long, worn red sneakers (#e43b44) with white soles, one lace untied, hands in his hoodie pocket.
 ```
 
 **Pixel** (Baustein FIGUR-KLEIN, etwa 18 Pixel hoch):
 
 ```text
-Pixel, a chubby light silver-grey tomcat with white chest and paws about 18 pixels tall, smug half-lidded eyes, a torn left ear, a fluffy grey tail, and a red collar with a small round silver speaker and a clearly visible two-pixel turquoise light on it.
+Pixel, a chubby round tomcat about 18 pixels tall when sitting, short legs, light silver-grey fur (#c0cbdc) with three darker blue-grey stripes on his back (#5a6988), white chest and white paws, a very fluffy tail, a notch torn out of his left ear, smug half-closed amber eyes (#feae34), pink nose, a red collar (#e43b44) with a small round silver speaker and a clearly visible two-pixel turquoise light (#2ce8f5), not orange, no tabby markings on the face.
 ```
 
 Als Grundlage für Pixel eignet sich das kostenlose Pet Cat Pack von Luiz Melo (CC0): umfärben, Ohr, Halsband und die zwei Pixel große Leuchte ergänzen.
@@ -165,8 +165,8 @@ Diese Gegenstände kommen in mehreren Welten vor. Einmal erzeugen und überall w
 
 | Sammelbild | Motiv |
 | --- | --- |
-| Reisegepäck (3×3) | 3x3 grid: a closed tin of tuna with a blue fish drawing on the label; the same tin opened with pink tuna inside; the same tin empty and shiny inside; a wooden cooking spoon with a crust of dried yellow cheese; a red-and-white striped woolen sock; a small clay jar of olive oil with a cork; a single golden sandal with two small white wings; rectangular black sunglasses; a small brown notebook with a pencil tucked in the spine |
-| Fernbedienungen (1×4) | 1x4 grid: a cheap white plastic TV remote with a single red button; the same remote with six round colored buttons; a gleaming golden luxury remote with jewel buttons; a worn grey 1990s TV remote with faded rubber buttons |
+| Reisegepäck (2×5) | 2x5 grid: a closed tin of tuna with a blue fish drawing on a blank label; the same tin opened, lid bent up, pink tuna in brine inside; the same tin empty and shiny inside; a wooden cooking spoon with a crust of dried yellow cheese on its bowl; a red-and-white striped woolen sock; a full-size round clay jug of olive oil with a handle and a cork, oil up to the neck; the same jug less full, a drip running down its side (Welt 2 nach dem Schluck für die Sandalen, so reist er nach Welt 3); a single golden sandal with two small white wings at the heel; rectangular black sunglasses; a small brown notebook with a pencil tucked in the spine |
+| Fernbedienungen (1×5) | 1x5 grid: a cheap white plastic TV remote with a single red button; the same white remote with six round colored buttons; a gleaming golden luxury remote with jewel buttons; a worn grey 1990s TV remote with faded rubber buttons for volume, channel and mute and one red button at the top; the same grey remote seen from the back with the battery lid open and the compartment empty (Finale, Zündkapsel ohne Zelle) |
 
 ### Animationen von Max und Pixel
 
@@ -174,25 +174,25 @@ Diese Grundanimationen gelten für alle Welten. Weltspezifische Aktionen stehen 
 
 | Figur | Aktion | Bilder | Ablauf | Motiv |
 | --- | --- | --- | --- | --- |
-| Max | Gehen | 8 | Schleife | `walking`: slouching relaxed walk, hands in hoodie pocket, head bobbing slightly, facing right |
-| Max | Stehen | 4 | Schleife | `idle`: slow breathing, one blink, weight shifts from one leg to the other, facing right |
+| Max | Gehen | 8 | Schleife | `walking`: standing sprite of Max as input, slouching relaxed walk, hands stay in the hoodie pocket, head bobbing slightly, sneakers on one baseline, facing right |
+| Max | Stehen | 4 | Schleife | `idle`: standing sprite of Max as input, slow breathing, one blink, weight shifts from one leg to the other, hands stay in the hoodie pocket, facing right |
 | Max | Sprechen | 4 | Schleife | Max talking: mouth opens and closes, small open-hand gesture with the right hand, legs and torso stay still, facing right |
 | Max | Aufheben | 6 | einmalig | Max bends down, reaches forward with the right hand, grabs something at floor level, straightens up again, facing right |
 | Max | Benutzen | 6 | einmalig | Max reaches forward at chest height with the right hand, fiddles briefly, pulls the hand back, facing right |
 | Max | Schulterzucken | 4 | einmalig | Max lifts both shoulders and palms, raises eyebrows, lowers them again, facing right |
 | Max | Gähnen | 6 | einmalig | Max stretches arms up, mouth opens wide, eyes close, arms drop back into the hoodie pocket, facing right |
-| Max | Auf dem Sofa | 4 | Schleife | Standbild: Max slumped half lying on a sofa, remote in hand, feet up; Animation: slow blinking, thumb clicking the remote |
-| Max | Vom Sofa aufstehen | 8 | einmalig | Max swings his legs off the sofa, pushes himself up with both hands, stands, stretches, facing right (Finale) |
-| Pixel | Gehen | 8 | Schleife | `walking`: smug strut with tail held high, facing right |
-| Pixel | Stehen | 4 | Schleife | `idle`: sitting, tail tip twitching, one slow blink |
-| Pixel | Schlafen | 4 | Schleife | Pixel curled up asleep, belly rising and falling, ear twitching once |
-| Pixel | Putzen | 6 | Schleife | Pixel sitting, licks his front paw and wipes it over his ear, tail still |
-| Pixel | Springen und Klettern | 6 | einmalig | Pixel crouches, wiggles his rear, leaps up and lands on a ledge above, facing right (Welt 1 bis 3) |
-| Pixel | Schnuppern | 4 | einmalig | Pixel stretches his neck forward, nose twitching, sniffs twice, pulls back (Welt 1 bis 3) |
-| Pixel | Tragen | 8 | Schleife | Variante von Gehen mit einem kleinen Gegenstand im Maul (Welt 1 bis 3, nicht in Welt 4) |
-| Pixel | Fauchen | 4 | einmalig | Pixel arches his back, fur bristles, mouth wide open hissing, then settles |
-| Pixel | Ohrfeige | 4 | einmalig | Pixel jumps up and slaps with one front paw, lands again, smug face (Welt 3, blaue Pille) |
-| Pixel | Vom Schrank fallen | 8 | einmalig | Pixel loses balance on a high shelf, flails all four legs, falls, lands flat on the floor, dazed (Finale) |
+| Max | Auf dem Sofa | 4 | Schleife | Standbild A (Prolog, Welt 3): Max lying flat on a sofa in side view, head on the left armrest, holding his phone above his face with both hands, sneakers on the right armrest; Standbild B (Welt 4): Max slumped half lying on a sofa, remote in hand, feet up, facing right; Animation: slow blinking, thumb tapping the phone or clicking the remote |
+| Max | Vom Sofa aufstehen | 8 | einmalig | Max swings his legs off the sofa, pushes himself up with both hands, stands, stretches, facing right (Prolog: danach Handy in die Bauchtasche; Finale: endet in der aufrechten Pose) |
+| Pixel | Gehen | 8 | Schleife | `walking`: standing sprite of Pixel as input, about 26 pixels long, smug strut with tail held high, collar light stays visible, facing right |
+| Pixel | Stehen | 4 | Schleife | `idle`: sitting sprite of Pixel as input, tail tip twitching, one slow blink, body stays still, facing right |
+| Pixel | Schlafen | 4 | Schleife | Pixel curled up asleep, about 10 pixels high and 24 long, belly rising and falling, torn ear twitching once, facing right |
+| Pixel | Putzen | 6 | Schleife | Pixel sitting, licks his front paw and wipes it over his ear, tail still, facing right |
+| Pixel | Springen und Klettern | 6 | einmalig | Pixel crouches, wiggles his rear, leaps up about 30 pixels and lands on a ledge above, facing right (Prolog und Zwischenspiele auf die Werkbank, Welt 1 bis 3) |
+| Pixel | Schnuppern | 4 | einmalig | Pixel stretches his neck forward, nose twitching, sniffs twice, pulls back, facing right (Welt 1 bis 3) |
+| Pixel | Tragen | 8 | Schleife | Pixel walking sprite as input, smug strut with tail held high, a small object held in his mouth, head slightly raised, the object stays fixed in the mouth, facing right (Welt 1 bis 3, Rückkehr 3 und Finale mit der Zelle; nicht in Welt 4) |
+| Pixel | Fauchen | 4 | einmalig | Pixel arches his back, fur bristles, mouth wide open hissing, then settles, facing right |
+| Pixel | Ohrfeige | 4 | einmalig | Pixel jumps up and slaps with one front paw, lands again, smug face, facing right (Welt 3, blaue Pastille aus der Apothekendose mit grünem Kreuz) |
+| Pixel | Vom Schrank fallen | 8 | einmalig | Pixel loses balance on top of a tall cupboard, flails all four legs, falls about 60 pixels, lands flat on the floor, dazed, facing right (Finale, Wohnzimmer) |
 
 ## Regeln
 

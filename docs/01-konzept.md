@@ -4,7 +4,7 @@ Nov 4, 2026 · @Sebastian
 
 ## Überblick
 
-Ein Point-and-Click-Adventure mit eingestreuten Minispielen: Ein ganz normaler Junge reist durch vier Welten, sammelt vier legendäre Gegenstände und erfährt am Ende, wofür sie wirklich gebraucht werden. Der Humor ist trocken und selbstironisch, wie bei *Simon the Sorcerer*, und Anspielungen sind Bonus, nie Pflicht zum Verständnis.
+Titel: Couch Quest – Max against the worlds (festgelegt am 9. November 2026). Ein Point-and-Click-Adventure mit eingestreuten Minispielen: Ein ganz normaler Junge reist durch vier Welten, sammelt vier legendäre Gegenstände und erfährt am Ende, wofür sie wirklich gebraucht werden. Der Humor ist trocken und selbstironisch, wie bei *Simon the Sorcerer*, und Anspielungen sind Bonus, nie Pflicht zum Verständnis.
 
 | Element | Idee (Arbeitstitel) |
 | --- | --- |
@@ -33,7 +33,7 @@ Max beginnt als Couch-Potato und endet als Junge, der freiwillig die Milch holt.
 | Prolog | Max will nur fernsehen; Opa lockt ihn mit dem neuen WLAN-Passwort auf den Dachboden. Das Passwort gibt es aber erst nach dem vierten Gegenstand; jede Rückkehr beginnt mit Max' Versuch, es Opa vorher zu entlocken. Das ist sein Grund weiterzumachen |
 | Welt 1 | Er hilft Zeldina bei der Wohnungssuche, obwohl es ihn nichts angeht |
 | Welt 2 | Er trainiert zum ersten Mal freiwillig für etwas (Trainings-Szene mit Archimedes nach Rätsel 5) |
-| Welt 3 | Die blaue Pille verspricht bequemes Nichtwissen: ewige Wiederholungen, keine Fragen. Er wählt die rote Pille und das unbequeme Echte |
+| Welt 3 | Die blaue Pastille verspricht bequemes Nichtwissen: ewige Wiederholungen, keine Fragen. Er wählt die rote Pastille und das unbequeme Echte |
 | Welt 4 | Zappmann bietet ihm Ruhm ohne Anstrengung: Max wäre die Show, alle schauen zu, und er müsste nie wieder etwas tun. Max lehnt ab |
 | Finale | Er steht auf und holt die Milch |
 
@@ -57,7 +57,7 @@ Max ist gelassen-genervt, nicht zynisch; der Zyniker ist Pixel. Zusammen funktio
 - Goblin-Streikposten: „Sieht aus wie Montagmorgen, nur grüner.“
 - Die Sphinx: „Hat ein Rätsel im Gesicht und keine Ahnung im Kopf.“
 - Olympisches Stadion: „Sport. Freiwillig. Die spinnen, die Griechen.“
-- Rote und blaue Pille: „Sofa oder Wahrheit. Klingt wie mein Samstag.“
+- Rote und blaue Pastille: „Sofa oder Wahrheit. Klingt wie mein Samstag.“
 - M.U.T.T.I.: „Sie klingt wie die Schulsekretärin, nur mit Laser.“
 - Autoplay-Countdown: „Nächste Folge in fünf Sekunden. Endlich mal eine ehrliche Drohung.“
 - Zappmanns goldenes Sofa: „Verlockend. Genau deshalb nicht.“
@@ -101,11 +101,11 @@ Vor jeder Reise packt Max Opas Reisetasche mit zwei Wahlfächern und einem Pflic
 | Olivenöl | Welt 2 | Welt 3, Hausmeister Modell 08/15 | Ölt seine Gelenke; Modell 08/15 wird ein Freund und hilft im Finale |
 | Hermes' geflügelte Sandale | Welt 2 | Welt 3, Testkammer 3 | Ein zusätzlicher Eigenschafts-Tausch in Testkammer 3 |
 | Agent Schmidts Sonnenbrille | Welt 3 | Welt 4, FBI-Agent | Max wird als Kollege erkannt, Beweis überflüssig (das verunsicherte Original legt sie nach dem Original-Kopie-Tausch in Welt 3, Rätsel 6 ab) |
-| Omas ofenwarme Kekse | Welt 3 | Finale | Bonus-Gag: Oma bekommt zum Geburtstag die Kekse vom Orakel, die auf dem Dachboden Hundekuchen sind (Verwandlungsregel aus Welt 3 gilt in jeder Realität). Oma probiert: „Knusprig. Wie von Mutti.“ |
+| Omas ofenwarme Kekse | Welt 3 | Finale | Bonus-Gag: Oma bekommt zum Geburtstag die Kekse vom Orakel, die auf dem Dachboden Hundekuchen sind (Verwandlungsregel aus Welt 3 gilt in jeder Realität). Oma probiert: „Knusprig. Wie von Mutti.“ Die Tüte hängt am Schalter KEKSE\_DABEI und kann nicht dauerhaft verloren gehen: Weggeben lehnt Max ab, der Tausch am Kern in Welt 3 ändert nur ihre Temperatur, und bleibt sie beim Packen zurück, liegt sie in Opas Fundkiste auf dem Dachboden. Im Finale nimmt Max sie dort mit einem Klick wieder ins Inventar, der Gag bleibt also immer erreichbar. |
 
 ### Zwischenspiele: Die Rückkehren auf den Dachboden
 
-Nach jeder Welt kehrt Max auf den Dachboden zurück. Diese Szenen sind eigene Spielabschnitte mit festem Ablauf, Zeilenbudget und Dachboden-Zustand; sie stehen hier, weil sie zu keiner Welt gehören. Alle Artefakte bleiben bei Opa auf der Werkbank; in die nächste Welt nimmt Max nur Pflichtfach und zwei Wahlfächer mit. Im Zapp-O-Mat vergeht die Zeit anders: Vier Welten dauern auf dem Dachboden zusammen nur einen Nachmittag, was Opa im Prolog ankündigt. Jede Rückkehr beginnt mit einem fünf Sekunden langen Werbeblock auf dem Zapp-O-Mat-Bildschirm, vor dem Opa im Prolog warnt. Der Spot wirbt jedes Mal für Milch, und außer Pixel merkt es niemand. Die Kanäle der Welten: 3 (Welt 1), 7 (Welt 2), 42 (Welt 3), 999 (Welt 4).
+Nach jeder Welt kehrt Max auf den Dachboden zurück. Diese Szenen sind eigene Spielabschnitte mit festem Ablauf, Zeilenbudget und Dachboden-Zustand; sie stehen hier, weil sie zu keiner Welt gehören. Alle Artefakte bleiben bei Opa auf der Werkbank; beim Ablegen werden sie mit Glitzer und einem leisen Plopp zum Alltagsgegenstand, und Opa erklärt das als „Rückverwandlungsschwund“. In die nächste Welt nimmt Max nur Pflichtfach und zwei Wahlfächer mit; was er nicht einpackt, legt Opa in seine „Fundkiste“ auf dem Dachboden („Ich werfe nichts weg. Nie.“), es geht also nichts verloren. Im Zapp-O-Mat vergeht die Zeit anders: Vier Welten dauern auf dem Dachboden zusammen nur einen Nachmittag, was Opa im Prolog ankündigt. Jede Rückkehr beginnt mit einem fünf Sekunden langen Werbeblock auf dem Zapp-O-Mat-Bildschirm, den Opa im Prolog als Rückweg ankündigt. Der Spot wirbt jedes Mal für Milch, und außer Pixel merkt es niemand. Die Kanäle der Welten: 3 (Welt 1), 7 (Welt 2), 42 (Welt 3), 999 (Welt 4).
 
 | Rückkehr | Ablauf | Dachboden-Zustand | Zeilen |
 | --- | --- | --- | --- |
@@ -129,7 +129,7 @@ Max muss das **Drachenei** holen, das ein Dunkler Lord bewacht. Die Welt parodie
 - **Der Zauberwald:** Ein Troll unter der Brücke besteht darauf, dass Märchenregeln eingehalten werden, sonst streikt er (*Simon*-Hommage). Rotkäppchen betreibt einen Lieferdienst.
 - **Der Ringladen „Einer für alles“:** Nur noch ein Schild mit „Ausverkauf“ am Dorfplatz; sein Besitzer Gollo sitzt in der Taverne und will den Ring loswerden, aber niemand nimmt ihn, nicht mal im Sonderangebot.
 - **Das Goblin-Bergwerk:** Die Goblins haben eine Gewerkschaft gegründet und streiken für bessere Fackeln.
-- **Der Dunkle Turm:** Sitz des Endgegners, mit sieben Stockwerken, von denen sechs nur Abstellkammern sind.
+- **Der Dunkle Turm:** Sitz des Endgegners, mit sieben Stockwerken, von denen sechs nur Abstellkammern sind, alle voll mit Smaugis Kram. In die erste, gleich hinter dem Keller, sperrt Max die verzauberten Besen; danach kann er sie betreten und sehen, wie die Besen sich Kammer für Kammer nach oben fegen.
 
 ### Figuren
 
@@ -152,8 +152,8 @@ Max muss das **Drachenei** holen, das ein Dunkler Lord bewacht. Die Welt parodie
 ### Rätsel und Aufgaben
 
 - **Aufnahmeprüfung an Hoggelwarz:** Max muss einen Zauberstab finden. Der Zauberstabmacher hat nur noch einen Zahnstocher, einen Kochlöffel und einen Zollstock.
-- **Die Brücke des Trolls:** Max muss drei Ziegenböcke organisieren, damit das Märchen korrekt abläuft.
-- **Der Ring:** Max hilft Gollo, den Ring in einen Vulkan zu werfen. Der Vulkan ist aber ein Fondue-Topf in der Taverne.
+- **Die Brücke des Trolls:** Max muss drei Ziegenböcke organisieren, damit das Märchen korrekt abläuft. Die Ziegen folgen ihm als kleine Herde zur Brücke, und Troll Waldemar prüft jeden Paragrafen seiner Märchen-Satzung bis Paragraf 14b („Leihgaben sind zurückzugeben“).
+- **Der Ring:** Max hilft Gollo, den Ring in einen Vulkan zu werfen. Der Vulkan ist aber ein Fondue-Topf in der Taverne. Mit dem Ring darin schmeckt das Fondue „nach Macht“, und der versöhnte Wirt Humbert schenkt Max ein Schälchen davon.
 - **Die Goblin-Gewerkschaft:** Erst mit einem Tarifvertrag (unterschrieben mit Blut, Ketchup geht auch) lassen sie Max durch das Bergwerk.
 - **Zaubertrank brauen:** Alwins Pfannkuchenrezept mit Zutaten aus der ganzen Welt, dazu das Flaschen-Logikrätsel mit Pixels lügender Nase.
 
@@ -179,7 +179,7 @@ Max braucht den **Goldenen Sack Pharaonenkorn**. Pharao Ramses der Unentschlosse
 - **Der Palast des Pharaos:** Ramses verliert die Gunst seines Volkes, weil er sich nie entscheiden kann; sein Hofberater ist eine Katze, die Pixel sofort hasst.
 - **Syrakus:** Archimedes' Werkstatt mit Hebeln, Brennspiegeln und einer berühmten Badewanne.
 - **Die Agora von Olympia:** Marktplatz neben dem Stadion. Cicero hält endlose Reden vor einer römischen Touristengruppe, Griechen beschweren sich, was die Römer je für sie getan haben (*Leben des Brian*), und ein Philosoph wohnt in einer Tonne und beschimpft alle.
-- **Olympia:** Stadion, Sandgrube für das Ringen, Zelt der Kampfrichter.
+- **Olympia:** Stadion, Sandgrube für das Ringen, Zelt der Kampfrichter (nur Kulisse: Leonidas meldet den Diskus-Diebstahl, Ramses moderiert), daneben das Startbüro. Dazu in Syrakus der Hafen und der Grabhügel; wie die Orte zusammenhängen, zeigt der Wegeplan im Tab Rätsel Welt 2.
 
 ### Figuren
 
@@ -211,18 +211,18 @@ Nur **Archimedes' Hebel** und das **Rede-Ringen** sind echte Minispiele. Die and
 
 | Nr. | Disziplin | Form | Vorbereitung im Adventure | Ablauf | Pointen |
 | --- | --- | --- | --- | --- | --- |
-| 1 | **Sandalen-Lauf** (Stadionlauf) | Szene | Hermes leiht Max geflügelte Sandalen, die lieber wegfliegen wollen; Olivenöl aus der Palastküche hält die Riemen. | Die Sandalen reißen sich in jedem Fall los. Mit Öl halten sie bis ins Ziel, und Max läuft stolz ein. Ohne Öl fliegen sie gleich am Start davon, und Max rennt barfuß als Letzter, kommt aber weiter. Eine Sandale landet auf der Agora (Rätsel 6). | Der Gegner ruft die ganze Zeit „Marathon!“ und biegt falsch ab; Max wird von einer Schildkröte überholt (Zenons Paradoxon). |
+| 1 | **Sandalen-Lauf** (Stadionlauf) | Szene | Hermes leiht Max im Startbüro geflügelte Sandalen, die lieber wegfliegen wollen; Olivenöl aus der Palastküche hält die Riemen. | Die Sandalen reißen sich in jedem Fall los. Mit Öl halten sie bis ins Ziel, und Max läuft stolz ein. Ohne Öl fliegen sie gleich am Start davon, und Max rennt barfuß als Letzter, kommt aber weiter. Eine Sandale landet auf der Agora (Rätsel 6). | Der Gegner ruft die ganze Zeit „Marathon!“ und biegt falsch ab; Max wird von einer Schildkröte überholt (Zenons Paradoxon). |
 | 2 | **Archimedes' Hebel** (Weitsprung) | Minispiel | Archimedes baut den Wurfhebel erst nach der Kronen-Probe (Rätsel 5). | Max zieht Gegenstände aus dem Inventar als Gegengewichte auf den Hebel und stellt den Winkel ein. Jeder Gegenstand hat ein Gewicht und einen Kommentar von Archimedes. Kein Zeitdruck. | Zu leicht: Sandgrube. Zu schwer: Max landet im Nil oder mitten in Ciceros Rede auf der Agora. |
 | 3 | **Ventilator-Speer** (Speerwurf) | Szene | Die Fächerwedler des Pharaos machen den Wind; bestochen mit frischen Feigen wehen sie gleichmäßig (Rätsel 6). | Mit Bestechung trifft Max den Olivenkranz; ohne sie dreht der Wind, und der Speer landet im Zelt der Kampfrichter. | Der Speer spießt unterwegs Leonidas' Mittagessen auf. |
-| 4 | **Nasen-Diskus** (Diskus) | Szene | Der Diskus ist gestohlen (Rätsel 7). Max holt ihn von Tiro zurück oder wählt Ersatz: Pharaonenteller, Schallplatte oder Wurfscheibe. | Max wählt den Wurfgegenstand, der Wurf läuft automatisch. Der echte Diskus und die Wurfscheibe fliegen am weitesten. | Vorher zeigt eine Gag-Folge seine Probewürfe: Die Sphinx verliert ihre Nase, die Venus von Milo ihre Arme, und ein bestimmter Turm in Pisa neigt sich. |
-| 5 | **Rede-Ringen gegen Cicero** (Ringen) | Minispiel | Max sammelt Konter: Schriftrolle der Sphinx, genervte Griechen auf der Agora, Pixel in der Tonne des Philosophen (Rätsel 8 und 9). | Cicero ringt mit Worten. Jede Beleidigung braucht den passenden Konter; jeder Treffer schiebt Cicero einen Schritt aus der Sandgrube. Kein Zeitdruck. | Bei einem Fehlversuch hält Cicero eine dreistündige Rede im Zeitraffer, während Pixel und das Publikum einschlafen. |
+| 4 | **Nasen-Diskus** (Diskus) | Szene | Der Diskus ist gestohlen (Rätsel 7). Max holt ihn von Tiro zurück oder wählt Ersatz: Pharaonenteller (neben dem Thron), Schallplatte „Schlager für Erfinder, Folge 3“ (von Opa in die Reisetasche geschmuggelt) oder Wurfscheibe (seit dem Schulausflug in Max' Bauchtasche). | Max wählt den Wurfgegenstand, der Wurf läuft automatisch. Der echte Diskus und die Wurfscheibe fliegen am weitesten. | Vorher zeigt eine Gag-Folge seine Probewürfe: Die Sphinx verliert ihre Nase, die Venus von Milo ihre Arme, und ein bestimmter Turm in Pisa neigt sich. |
+| 5 | **Rede-Ringen gegen Cicero** (Ringen) | Minispiel | Max sammelt sieben Konter: drei von der Schriftrolle der Sphinx, zwei von genervten Griechen auf der Agora, zwei von Pixel in der Tonne des Philosophen (Rätsel 8 und 9). | Cicero ringt mit Worten und wirft fünf Beleidigungen. Jede Beleidigung braucht den passenden Konter; jeder Treffer schiebt Cicero einen Schritt aus der Sandgrube. Kein Zeitdruck. | Bei einem Fehlversuch hält Cicero eine dreistündige Rede im Zeitraffer, während Pixel und das Publikum einschlafen. |
 
 ### Rätsel und Aufgaben vor dem Fünfkampf
 
 - **Die Fähre:** Max hat keine Drachmen, aber das Fährkrokodil verneigt sich vor Pixel, der als Katzengott gratis mitfährt.
 - **Trainer finden:** Archimedes trainiert Max erst, wenn er König Hierons Krone als Fälschung entlarvt (Badewannen-Probe: gleich schwere Stücke aus reinem Gold verdrängen gleich viel Wasser).
-- **Cicero bestechen:** Max lässt einen Grabstein meißeln und auf der Zeitfähre um 137 Jahre altern, damit Cicero ihn „entdecken“ kann.
-- **Den Wind kaufen:** Die Fächerwedler des Pharaos wehen nur für frische Feigen gleichmäßig; Max lässt einen Feigensetzling auf der Zeitfähre 25 Jahre reifen.
+- **Cicero bestechen:** Max lässt einen Grabstein meißeln und auf der Zeitfähre um 137 Jahre altern (vom Nil-Delta bis Syrakus; in Olympia ist er nach 112 Jahren erst grau), damit Cicero ihn „entdecken“ kann.
+- **Den Wind kaufen:** Die Fächerwedler des Pharaos wehen nur für frische Feigen gleichmäßig; Max lässt einen Feigensetzling auf der Zeitfähre flussabwärts reifen (von Olympia nach Syrakus 25 Jahre; jede Fahrt flussabwärts macht daraus den Baum mit Früchten).
 
 Alle Rätsel dieser Welt im Detail stehen im Tab Rätsel Welt 2; bei Abweichungen gilt der Rätsel-Tab.
 
@@ -237,15 +237,15 @@ Max braucht die **Ewige Energiezelle** aus dem Kern der KI **M.U.T.T.I.** (Mega-
 **Inspirationen:**
 
 - *Portal*: Eine KI namens GLaDOS lässt die Heldin Testkammern lösen und verspricht Kuchen als Belohnung; „The cake is a lie“ steht als Kritzelei an den Wänden ([Wikipedia](https://en.wikipedia.org/wiki/The_cake_is_a_lie)).
-- *Matrix*: rote und blaue Pille, déjà-vu als Fehler in der Simulation, das Orakel mit Keksen in der Küche ([Wikipedia](<https://en.wikipedia.org/wiki/The_Oracle_(The_Matrix)>), [IMDb](https://m.imdb.com/title/tt0133093/characters/nm0000401)).
+- *Matrix*: rote und blaue Pastille, déjà-vu als Fehler in der Simulation, das Orakel mit Keksen in der Küche ([Wikipedia](<https://en.wikipedia.org/wiki/The_Oracle_(The_Matrix)>), [IMDb](https://m.imdb.com/title/tt0133093/characters/nm0000401)).
 - *Terminator*: Killerroboter aus der Zukunft, „Ich komme wieder“.
 - *Blade Runner*: Neon-Stadt im Dauerregen, Replikanten und der Test, ob jemand ein Mensch ist.
 - Außerdem *WALL-E*, *2001*, *Per Anhalter durch die Galaxis* und *Futurama*.
 
 ### Orte
 
-- **Die Unterstadt:** Verregnete Neonstraßen, Nudelbude, in der jeder nur „Vier“ bestellen darf, und ein Detektiv, der jeden testet.
-- **Die Simulation:** Ein Teil der Stadt ist eine Matrix. Erkennbar daran, dass dieselbe schwarze Katze zweimal vorbeiläuft; sie ist reine Kulisse zum Ansehen, und Pixel würdigt sie keines Blickes. Das Déjà-vu für den Pillenautomaten spielt Pixel selbst (Rätsel 3).
+- **Die Unterstadt:** Verregnete Neonstraßen, Nudelbude, in der jeder nur „Vier“ bestellen darf, ein Detektiv, der jeden testet, und die Apothekengasse mit dem Pastillenautomaten, durch den Max in die Simulation kommt.
+- **Die Simulation:** Ein Teil der Stadt ist eine Matrix. Erkennbar daran, dass dieselbe schwarze Katze zweimal vorbeiläuft; sie ist reine Kulisse zum Ansehen, und Pixel würdigt sie keines Blickes. Das Déjà-vu am Pastillenautomaten, der noch in der echten Unterstadt steht, spielt Pixel selbst (Rätsel 3).
 - **Die Widerstandsbasis:** Ein Hovercraft-Wrack, in dem Rebellen in Ledermantel und Sonnenbrille leben, auch nachts.
 - **Das Testlabor von M.U.T.T.I.:** Weiße Testkammern mit Begleitwürfel und einem Portalgerät, das genau einmal funktioniert: Eine Sekunde lang zeigt es Opas Wohnzimmer, dann ist die Batterie leer.
 - **Der Kern:** Serverraum mit der Energiezelle hinter M.U.T.T.I.s letzter Tür. Keine Wachen: M.U.T.T.I. vertraut ihren Türen und ihrer Logik (Rätsel 10 und 11); Hausmeister Modell 08/15 wischt nicht hier, sondern in der Realität vor der Panzertür zum Laboranschluss (Rätsel 8).
@@ -255,7 +255,7 @@ Max braucht die **Ewige Energiezelle** aus dem Kern der KI **M.U.T.T.I.** (Mega-
 | Figur | Anspielung | Rolle |
 | --- | --- | --- |
 | M.U.T.T.I. | GLaDOS, HAL 9000, Skynet | Endgegnerin; verspricht Kuchen, liefert nie |
-| Morphäus | Morpheus | Bietet Max zwei Pillen an, aber die Farben sind „zurzeit nicht lieferbar“ |
+| Morphäus | Morpheus | Bietet Max zwei Pastillen an, aber die Farben sind „zurzeit nicht lieferbar“ |
 | Die Orakel-Oma | Das Orakel | Backt Kekse und sagt alles voraus, außer den Lottozahlen |
 | Agent Schmidt | Agent Smith | Taucht überall in Kopie auf, ein Klon trägt immer Hausschuhe |
 | Hausmeister Modell 08/15 | Terminator | Hausmeister-Roboter, blechern und übertrieben höflich, mit österreichischer Wortwahl („Servus, Bursche“); will eigentlich nur Ordnung |
@@ -264,8 +264,8 @@ Max braucht die **Ewige Energiezelle** aus dem Kern der KI **M.U.T.T.I.** (Mega-
 
 ### Rätsel und Aufgaben
 
-- **Der Mensch-Test:** Detektiv Deckert stellt Fragen wie „Eine Schildkröte liegt auf dem Rücken, was tust du?“. Max muss „menschlich falsch“ antworten, um durchzukommen.
-- **Pillen besorgen:** Morphäus' Pillen sind in Rot und Blau „zurzeit nicht lieferbar“, er hätte Beige. Am Pillenautomaten täuscht Max ein Déjà-vu vor und muss sich dann selbst zwischen der bequemen blauen und der unbequemen roten Pille entscheiden.
+- **Der Mensch-Test:** Detektiv Deckert stellt Fragen wie „Eine Schildkröte liegt auf dem Rücken, was tust du?“. Max muss „menschlich falsch“ antworten, um durchzukommen. Es sind drei Fragen (Schildkröte, Regen, Suppe); die menschlichen Antworten lernt Max von einem weinenden Mann, einer Frau, die mit ihrem Regenschirm streitet, und einem Straßenmusiker. Wer besteht, bekommt von Deckert einen Stempel auf die Hand.
+- **Pastillen besorgen:** Morphäus' Pastillen sind in Rot und Blau „zurzeit nicht lieferbar“, er hätte Beige. Am Pastillenautomaten täuscht Max ein Déjà-vu vor und muss sich dann selbst zwischen der bequemen blauen und der unbequemen roten Pastille entscheiden. Direkt vor der Wahl gibt ihm Morphäus, der am Gasseneingang wartet, eine Papiertüte mit Omas Keksen; nach der roten Pastille trägt Morphäus Pixel in die Widerstandsbasis.
 - **Kugeln ausweichen:** Ein kurzer Zeitlupen-Gag bei den Agenten-Klonen, in dem Max sich wie in *Matrix* nach hinten biegt und dabei einen Hexenschuss bekommt.
 - **Die Testkammern:** Drei Rätsel mit der Code-Sicht, die M.U.T.T.I. mit Sprüchen wie „Das schaffst du nicht, aber ich glaube an dich“ begleitet.
 - **Hausmeister 08/15 umgehen:** Max gibt Modell 08/15 eine Telefonbuchseite mit 47 Einträgen „Konner, Sahra“. Der Roboter zieht los, sie alle zu besuchen.
@@ -296,8 +296,8 @@ Die Fernsehwelt besteht aus fünf Sendern, die jeweils zwei Formate kombinieren.
 | --- | --- | --- |
 | **Die Küchen-Sitcom** | Sitcom + Kochshow (*Friends*, *Eine schrecklich nette Familie*, *Das perfekte Dinner*) | Eine Familie kocht live, die Lachkonserve reagiert auf alles. Max holt den Kommissar aus der Krimi-Doku als Gast in die Sitcom und löst ein klassisches Missverständnis aus. |
 | **Glücksrad-Shopping** | Gameshow + Teleshopping (*Wer wird Millionär?*, *Glücksrad*, Verkaufssender) | Der Moderator verkauft die Preise gleichzeitig. Max beantwortet Quizfragen über die bisherigen Welten und gewinnt Gegenstände für Rätsel, die Gerd Glück als „nur für kurze Zeit verfügbar“ anpreist; ausverkauft sind sie nie. |
-| **Tiertort Savanne** | Krimi + Naturdoku (*Tatort*, *Columbo*, David Attenborough) | Ein Löwe wurde bestohlen, und ein Kommissar im Trenchcoat ermittelt unter Tieren. Ein Erzähler kommentiert jeden Schritt von Max wie Tierverhalten. Max befragt Verdächtige und löst den Fall. |
-| **Mitternachts-TV** | Musikvideos + Grusel (MTV, *Thriller*, *Stranger Things*, *Akte X*) | Ein 80er-Musikvideo mit tanzenden Zombies wird zum Horrorfilm. Max muss über eine Lichterkette mit der anderen Seite kommunizieren und im Rhythmus-Minispiel die Zombies aus dem Takt bringen. |
+| **Tiertort Savanne** | Krimi + Naturdoku (*Tatort*, *Columbo*, David Attenborough) | Ein Löwe wurde bestohlen, und ein Kommissar im zerknitterten beigen Regenmantel ermittelt unter Tieren. Ein Erzähler kommentiert jeden Schritt von Max wie Tierverhalten. Max befragt Verdächtige und löst den Fall; die Hyäne nennt der Erzähler „Fräulein Pokerface“. Zum Dank übergibt der Kommissar die Taste Rückspulen aus seinem Beweismittelbeutel. |
+| **Mitternachts-TV** | Musikvideos + Grusel (MTV, *Thriller*, *Stranger Things*, *Akte X*) | Ein 80er-Musikvideo mit tanzenden Zombies wird zum Horrorfilm. Max muss über eine Lichterkette mit der anderen Seite kommunizieren und im Rhythmus-Minispiel die Zombies aus dem Takt bringen. Außerhalb von Mitternacht zeigt der Sender eine Pausentafel mit schlafendem Geist; die Halle des Spukhauses erreicht Max erst nach der Bonusrunde im Glücksrad, und die fliehenden Geister lassen dort die Taste Stumm fallen. |
 | **Comic-Kanal** | Superhelden + Zeichentrick (Marvel, DC, *Mystery Men*, *Looney Tunes*) | Max wird zur Zeichentrickfigur, Ambosse fallen vom Himmel, und die drittklassigen Superhelden von Kapitolis brauchen einen Anführer (siehe unten). |
 
 ### Der Superhelden-Kanal
@@ -310,11 +310,11 @@ Die Stadt **Kapitolis** wird von Superhelden beschützt, die alle nur mittelmä�
 | Der Fledermann | Batman | Ein reicher Mann, der wirklich nur als Fledermaus verkleidet ist und kopfüber schläft |
 | Wonder-Wilma | Wonder Woman | Hat ein Lasso der Wahrheit, mit dem alle ihre peinlichsten Geheimnisse verraten |
 
-**Aufgabe:** Max muss sich selbst zum Helden machen. Er braucht einen Anzug (Bettlaken plus Pixel als Maskottchen), einen Namen (Käsemann, nach seinem Sturz in den Käsebottich) und ein Origin-Story-Video. Dann führt er die Helden gegen den Schurken **Dr. Werbepause** an, der jede Szene durch Werbung unterbricht. Der Kampf ist ein Comic-Panel-Rätsel: Max muss die Panels in die richtige Reihenfolge bringen, damit die Helden gewinnen.
+**Aufgabe:** Max muss sich selbst zum Helden machen. Er braucht einen Anzug (Bettlaken, der „erste Entwurf“ des Fledermanns, plus Pixel als Maskottchen), einen Namen (Käsemann, nach seinem Sturz in den Käsebottich) und ein Origin-Story-Video. Dann führt er die Helden gegen den Schurken **Dr. Werbepause** an, der jede Szene durch Werbung unterbricht und den „Couch-Magnet 3000“ verkauft. Auf der Flucht vor der Stinkbombe fällt ihm die Taste Sendersuchlauf aus der Tasche. Der Kampf ist ein Comic-Panel-Rätsel: Max muss die Panels in die richtige Reihenfolge bringen, damit die Helden gewinnen.
 
 ### Endgegner: Intendant Zappmann
 
-Ein übereifriger Fernsehchef in Glitzersakko (nach dem Teufel aus *Stay Tuned* und einem Showmaster). Früher moderierte er eine Kindersendung und wollte selbst nur fernsehen; irgendwann ist er vom Studiosofa nie mehr aufgestanden. Er will Max für immer in seine Sendungen sperren, angeblich wegen der Quote, in Wahrheit, weil er nicht allein auf dem Sofa sitzen will. Max erkennt in ihm, was aus ihm selbst hätte werden können. Max besiegt ihn, indem er alle Sender gleichzeitig laufen lässt. Die Quote bricht ein, weil niemand mehr weiß, was er gucken soll.
+Ein übereifriger Fernsehchef in Glitzersakko (nach dem Teufel aus *Stay Tuned* und einem Showmaster). Früher moderierte er eine Kindersendung und wollte selbst nur fernsehen; irgendwann ist er vom Studiosofa nie mehr aufgestanden. Er will Max für immer in seine Sendungen sperren, angeblich wegen der Quote, in Wahrheit, weil er nicht allein auf dem Sofa sitzen will. Max erkennt in ihm, was aus ihm selbst hätte werden können. Max besiegt ihn, indem er alle Sender gleichzeitig laufen lässt. Die Quote bricht ein, weil niemand mehr weiß, was er gucken soll. Mit der Goldenen Fernbedienung lässt Zappmann Opa ausrichten, „der Backofen ist verziehen“, ein Vorab-Hinweis aufs Finale.
 
 **Gegenstand:** Die **Goldene Fernbedienung**. Sie ist in der Gegenwart die echte, seit Wochen vermisste Fernbedienung, die Opa unbedingt wiederhaben wollte.
 
@@ -326,15 +326,15 @@ Der Twist hat zwei Stufen: Zuerst sieht es aus, als wäre Opa der Bösewicht, da
 
 1. **Heimkehr:** Max kommt mit der Goldenen Fernbedienung auf den Dachboden; Ei, Mehl und Energiezelle liegen seit den Rückkehren auf der Werkbank (siehe Zwischenspiele). Opa legt Ei und Mehl feierlich in eine riesige Maschine. Dann steckt er die Energiezelle in die Fernbedienung, nennt sie „Zündkapsel“ und startet die Maschine damit. Max: „Das ist eine Fernbedienung.“ Opa: „Zündkapsel. Mit Tasten.“ Max weiß also, was er eine Welt lang in der Hand hatte; er weiß nur noch nicht, wessen Fernbedienung es ist.
 2. **Stufe 1, der Schock:** Die Maschine brummt, Lichter flackern, und in diesem Moment klingelt es: Oma ist zu früh da und kommt schon die Treppe herauf. Die Maschine verriegelt wegen Teig-Überdrucks den Dachboden. Opa gerät in Panik und schreit gegen den Lärm an: „Niemand hält mein dunkles Werk auf! Sie darf es nicht erfahren, bevor es vollendet ist!“ Max versteht Weltherrschaft, Opa meint Schokokuchen. Stufe 1 ist eine kurze Spielphase, kein einzelner Satz: Max muss die verriegelte Luke und die Maschine untersuchen (drei Ansehen-Zeilen, eine Benutzen-Zeile), während Opa drei weitere Sätze brüllt: „Die Welt wird weich werden! Weich und warm!“, „Noch zwölf Minuten, dann kennt mich jeder in diesem Haus!“, „Keiner verlässt diesen Dachboden, bis es aufgegangen ist!“ Pixel wird dabei ernsthaft nervös: „Ich hab ihn immer für harmlos gehalten. Vierzehn Jahre lang.“ Erst wenn Max die Luke als verriegelt erkannt hat, geht es mit den Verbündeten weiter.
-3. **Die Verbündeten kommen:** Über den Zapp-O-Mat 3000 ruft Max Hilfe, und für eine lange Rettungsaktion ist keine Zeit, denn Oma steht schon auf der Treppe. Es kommen nur zwei: Prinzessin Zeldina mit Moderworts Zauberstab, und Hausmeister Modell 08/15, aber nur, wenn Max ihn in Welt 3 mit Olivenöl zum Freund gemacht hat. Die anderen winken kurz durch den Bildschirm.
-4. **Das letzte Rätsel:** Zeldina hebelt die Verriegelung mit dem Zauberstab auf, Modell 08/15 hält die Ofentür gegen den Teig-Überdruck. Ohne den Roboter klemmt Max den Kochlöffel aus dem Pflichtfach in die Tür. Die Maschine hört nur auf Opas „Zündkapsel“, und die hat er vor Schreck fallen lassen; dabei ist die Energiezelle herausgesprungen. Max findet beides unter Opas altem Ohrensessel und setzt die Zelle wieder ein. Opa brüllt: „Nicht die rote Taste!“ Max drückt die rote Taste. Sie heißt „Stopp“, wie auf jeder Fernbedienung, und die Maschine hält.
-5. **Stufe 2, die Auflösung:** Die Maschine ist ein selbstgebauter Backofen. Das Drachenei ist ein Ei, das Pharaonenkorn ist Mehl, die Energiezelle ist die Batterie für die Fernbedienung, und die Goldene Fernbedienung ist die Fernbedienung, die Opa seit Wochen sucht. Opa gibt kleinlaut zu, dass er schon einmal im Zapp-O-Mat war: Dabei ist ihm die Fernbedienung nach Kanal 999 gefallen, und für den Notfall hat er in Welt 3 eine Nachricht für Max hinterlassen. Zappmann kennt er aus dessen Kindersendung: Opa war dort der Bastel-Onkel, und in der letzten Folge ist sein Backofen live explodiert. Zappmann durfte danach nie wieder vor die Kamera, und Opa backt seitdem nur noch heimlich. Das ist die „lange Geschichte“ aus der Lichterkette (Welt 4, Rätsel 7). Seine Frage nach der Fernbedienung im Prolog war also gespielt: „Ich wollte nicht zugeben, wo sie liegt. Vor dem Kater schon gar nicht.“ Pixel: „Ich hab’s gewusst. Seit Welt 3.“ Daher auch die alten Reiseposter und die Kiste mit kaputten Fernbedienungen auf dem Dachboden. Dann geht die Luke auf. Oma sieht Rauch, Kuchen, eine Prinzessin und einen Roboter, mustert Zeldina und sagt: „Du bist also die Neue.“ Zeldina: „Ich suche nur eine Wohnung.“ Oma: „Der Dachboden wäre frei.“ Die Verbündeten bleiben zur Feier; das erklärt die Fotos im Abspann.
+3. **Die Verbündeten kommen:** Über den Zapp-O-Mat 3000 ruft Max Hilfe, und für eine lange Rettungsaktion ist keine Zeit, denn Oma steht schon auf der Treppe. Es kommen nur zwei: Prinzessin Zeldina mit Moderworts Zauberstab, und Hausmeister Modell 08/15, aber nur, wenn Max ihn in Welt 3 mit Olivenöl zum Freund gemacht hat. Die anderen winken kurz durch den Bildschirm. Auf Kanal 999 sitzt niemand mehr auf Zappmanns goldenem Sofa, dort liegt nur ein Zettel: „Bin aufgestanden. Z.“
+4. **Das letzte Rätsel:** Zeldina hebelt die Verriegelung mit dem Zauberstab auf, doch die Luke bleibt zu, weil der Teig-Überdruck sie von innen festhält; sie geht erst auf, wenn die Maschine stoppt. Vorher muss die Ofentür gehalten werden: Modell 08/15 hält die Ofentür gegen den Teig-Überdruck. Ohne den Roboter klemmt Max den Kochlöffel aus dem Pflichtfach in die Tür. Die Maschine hört nur auf Opas „Zündkapsel“, und die hat er vor Schreck fallen lassen; dabei ist die Energiezelle herausgesprungen. Max findet die Fernbedienung unter Opas altem Ohrensessel; die Zelle ist bis ganz hinten an die Wand gerollt, wo nur Pixel hinpasst, also holt der Kater sie (Figurenwechsel), und Max setzt sie wieder ein. Opa brüllt: „Nicht die rote Taste!“ Max drückt die rote Taste. Sie heißt „Stopp“, wie auf jeder Fernbedienung, und die Maschine hält. Drückt Max die Taste, bevor die Ofentür gehalten wird, schießt Teig heraus: ein Fehlversuch mit Gag, kein Scheitern, danach baut sich der Druck wieder auf.
+5. **Stufe 2, die Auflösung:** Die Maschine ist ein selbstgebauter Backofen. Das Drachenei ist ein Ei, das Pharaonenkorn ist Mehl, die Energiezelle ist die Batterie für die Fernbedienung, und die Goldene Fernbedienung ist die Fernbedienung, die Opa seit Wochen sucht. Opa gibt kleinlaut zu, dass er schon einmal im Zapp-O-Mat war: Dabei ist ihm die Fernbedienung nach Kanal 999 gefallen, und für den Notfall hat er in Welt 3 eine Nachricht für Max hinterlassen. Zappmann kennt er aus dessen Kindersendung: Opa war dort der Bastel-Onkel, und in der letzten Folge ist sein Backofen live explodiert. Zappmann durfte danach nie wieder vor die Kamera, und Opa backt seitdem nur noch heimlich. Das ist die „lange Geschichte“ aus der Lichterkette (Welt 4, Rätsel 7). Seine Frage nach der Fernbedienung im Prolog war also gespielt: „Ich wollte nicht zugeben, wo sie liegt. Vor dem Kater schon gar nicht.“ Pixel: „Ich hab’s gewusst. Seit Welt 3.“ Daher auch die alten Reiseposter und die Kiste mit kaputten Fernbedienungen auf dem Dachboden. Dann geht die Luke auf. Oma, mit Vornamen Hildegard („Hildegard. Du bist früh.“), sieht Rauch, Kuchen, eine Prinzessin und einen Roboter, mustert Zeldina und sagt: „Du bist also die Neue.“ Zeldina: „Ich suche nur eine Wohnung.“ Oma: „Der Dachboden wäre frei.“ Die Verbündeten bleiben zur Feier; das erklärt die Fotos im Abspann.
 6. **Der eigentliche Grund:** Heute ist Omas Geburtstag. Opa hat ihn vergessen und war zu faul zum Einkaufen. Den „Weltuntergang“, der droht, wenn Oma das merkt, hat er nicht gelogen.
 7. **Ende:** Alle feiern zusammen mit Kuchen. Oma probiert, stutzt und sagt nur: „Kuchen ohne Milch? Konrad.“ Mutter kommt von der Spätschicht herein, sieht Roboter und Prinzessin, atmet einmal durch und hebt Opas Zettel vom Couchtisch auf: „Konrad, das ist deine Einkaufsliste. Du hast nichts davon gekauft, oder?“ Sie liest vor: „Eier, Mehl, Batterien, Fernbedienung finden … und Milch. Wo ist die Milch?“ Pixel will sich schon aufs Sofa fallen lassen, und Opa hält Max endlich den Zettel mit dem WLAN-Passwort hin. Da steht Max auf, ohne den Zettel zu nehmen: „Ich hol sie.“ Pixel fällt vor Schreck vom Schrank.
 
 ### Abspann-Szene
 
-Auf dem Weg zum Supermarkt kommt Max am Zapp-O-Mat vorbei und dreht aus Gewohnheit am Knopf. Toadi erscheint auf dem Bildschirm, den Pilzhut schief: „Tut mir leid, Max, aber deine Milch ist in einem anderen Supermarkt.“ Das öffnet die Tür für eine Fortsetzung. Im Abspann laufen Fotos vom Geburtstag über den Bildschirm, auf denen alle Freunde aus den vier Welten mitfeiern, während Troll Waldemar endlich seine Musical-Nummer singen darf.
+Auf dem Weg zum Supermarkt kommt Max am Zapp-O-Mat vorbei, den Opa für die Feier auf dem Rolltisch ins Wohnzimmer geschoben hat („Fernsehen zum Geburtstag, Tradition“), und dreht aus Gewohnheit am Knopf. Toadi erscheint auf dem Bildschirm, den Pilzhut schief: „Tut mir leid, Max, aber deine Milch ist in einem anderen Supermarkt.“ Das öffnet die Tür für eine Fortsetzung. Im Abspann laufen Fotos vom Geburtstag über den Bildschirm, auf denen alle Freunde aus den vier Welten mitfeiern, während Troll Waldemar endlich seine Musical-Nummer singen darf (Text wie im Tab Skript Zwischenspiele und Finale, Abschnitt 10). Bei Goblin-Weg B zeigt ein Foto zwei Hausmeister unter sich: Grimmzahn mit Schlüsselbund beschwert sich bei Modell 08/15 über Opas Backofen, ohne den Roboter bei Pixel.
 
 ### Was das Finale vorbereitet
 
@@ -364,7 +364,7 @@ Ergebnis einer Online-Recherche, keine Rechtsberatung. § 51a UrhG erlaubt Karik
 | --- | --- | --- | --- |
 | Toadi | Toad (Nintendo) | Eigener Name, eigenständige Rolle als Pilzdiener; der Pilzkopf war dem Vorbild zu nah | Name bleibt. Der Pilzkopf wird ein Pilzhut mit Krempe, blau-weiß (Grafik Welt 1). Kein Auftritt im Marketing |
 | Zeldina | Zelda (Nintendo) | Name angelehnt, Figur eigenständig (Wohnungssuche); der Name wird nicht als Kennzeichen genutzt | Name bleibt. Nicht im Store-Text, nicht im Trailer |
-| „Deine Prinzessin ist in einem anderen Schloss“ | Super Mario Bros. (Nintendo) | Keine eingetragene Marke gefunden; kurzer Satz, in jeder Welt abgewandelt | Bleibt. Wörtlich nur bei Toadi, sonst abgewandelt |
+| „Deine Prinzessin ist in einem anderen Schloss“ | Super Mario Bros. (Nintendo) | Keine eingetragene Marke gefunden; kurzer Satz, in jeder Welt abgewandelt | Bleibt. Kurzes Zitat, als Anspielung erkennbar; wörtlich bei Toadi, in den anderen Welten als Running Gag variiert |
 | Abspann-Pilz | Toad | Ein „Toad-ähnlicher Pilz“ wäre eine Figurenübernahme | Ersetzt durch Toadi selbst |
 | Okarina (Deko) | Ocarina of Time (Nintendo) | Die Okarina ist ein echtes Instrument; nur die Pointe spielt an | Bleibt, einmal im Deko-Sammelbild (Grafik Welt 1) |
 | Albus Grauwald | Dumbledore (Warner, Rowling) | Echter Vorname der Figur | Umbenannt in Alwin Grauwald |
@@ -376,7 +376,9 @@ Ergebnis einer Online-Recherche, keine Rechtsberatung. § 51a UrhG erlaubt Karik
 | Leonidas der Lautstarke | 300 (Warner), historische Figur | Historischer Name frei; das Design war die Filmfigur | Bleibt, Design geändert (Grafik Welt 2) |
 | M.U.T.T.I. | GLaDOS (Valve) | Eigener Name, eigenes Design (Küchenmaschine) | Bleibt |
 | Frisbee | Marke von Wham-O | Markenname als Gattungsbegriff | Ersetzt durch „Wurfscheibe“ |
-| Max against the world, Couch Quest | Arbeitstitel | Markencheck fehlt | Aufgabe im Tab Produktion |
+| Couch Quest – Max against the worlds | Arbeitstitel | Titel festgelegt am 9. November 2026; Websuche ohne Spiel gleichen Namens, Registersuche in DPMA und EUIPO macht Sebastian | Aufgabe im Tab Produktion |
+| Kommissar (Welt 4, Tiertort Savanne) | Columbo (Universal) | Kein Name übernommen; Anspielung nur über Regenmantel und „Nur noch eine Frage“-Haltung | Bleibt. Zwei eigene Merkmale: Glatze mit grauem Haarkranz und dicker grauer Walrossschnurrbart; beiger Regenmantel über braunem Anzug, kurze Zigarre (Grafik Welt 4, mit „Not a likeness of any real actor“) |
+| FBI-Agent (Welt 4) | Akte X (20th Television) | Kein Name übernommen; Anspielung über Genre und Ausrüstung | Bleibt. Eigene Merkmale: roter Bürstenschnitt, Sommersprossen, dunkle Augenringe; langer grauer Trenchcoat, lockere Krawatte, piepsendes Gerät mit grünem Licht (Grafik Welt 4) |
 
 **Quellen:**
 

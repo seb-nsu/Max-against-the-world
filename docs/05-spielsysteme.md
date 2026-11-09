@@ -121,7 +121,7 @@ Die Steuerung ist eine Zwei-Klick-Steuerung ohne Verbenleiste: Linksklick tut da
 | Linksklick auf Hotspot | Benutzen, Nehmen oder Reden, je nach Objekt; der Zeiger zeigt vorher, was passiert |
 | Rechtsklick | Ansehen |
 | Gegenstand im Inventar anklicken, dann Ziel | Kombinieren oder Benutzen mit; Rechtsklick legt ihn zurück |
-| Leertaste (halten) | Zeigt alle Hotspots im Raum als kleine Punkte |
+| Umschalt/Shift (halten) | Zeigt alle Hotspots im Raum als kleine Punkte |
 | Tab oder Klick aufs Porträt | Wechsel zwischen Max und Pixel (ab Welt 1) |
 | Klick während Text | Überspringt die aktuelle Zeile |
 | Esc | Überspringt eine Zwischensequenz, sonst Pausemenü |
@@ -158,13 +158,13 @@ Mockup: Bevor Claude die UI baut, entsteht ein Bild in 320×180 mit allen Elemen
 
 - Lautstärke getrennt für Musik, Geräusche und Stimmen
 - Textgeschwindigkeit und „Text weiter per Klick“ oder automatisch
-- Untertitel an oder aus (sobald es Stimmen gibt)
+- Untertitel an oder aus (sobald es Stimmen gibt); Liedtexte haben immer Untertitel, kursiv mit Notenzeichen, bei den drei Rätsel-Liedern auch dann, wenn Untertitel aus sind (Tab Audio)
 - Sprache Deutsch oder Englisch
 - Große Schrift, Hotspots dauerhaft hervorheben, Bildschirmwackeln aus
 - Vollbild oder Fenster, Fenstergröße in ganzzahligen Stufen
 - Farbenblind-Hilfe: Farbcodes bekommen zusätzlich Symbole (Kreis, Dreieck, Quadrat), siehe Welt 3
 - Flackern reduzieren: ersetzt Lampenflackern und Umschalt-Störungen durch weiche Varianten; ein Epilepsie-Hinweis erscheint beim ersten Start
-- Tastenbelegung änderbar, dazu eine Taste „Text weiter“ (Standard Eingabetaste; Linksklick geht immer). Die Leertaste bleibt frei für die Hotspot-Anzeige
+- Tastenbelegung änderbar, dazu eine Taste „Text weiter“ (Standard Leertaste, Eingabetaste geht auch; Linksklick geht immer). Die Hotspot-Anzeige liegt auf Umschalt/Shift (halten), damit keine Taste doppelt belegt ist
 
 Steam-Tags für Barrierefreiheit, die das Spiel damit erfüllt: Untertitel, anpassbare Textgröße, Farbenblind-Modus, Tastenbelegung anpassbar, Steuerung nur mit der Maus, kein Zeitdruck. Die Liste wird vor der Store-Seite gegen Steams aktuelle Barrierefreiheits-Felder geprüft.
 
@@ -209,7 +209,7 @@ Errungenschaften (Steam): 13 Stück, alle aus Zählern und Schaltern, die das Sp
 | Offen wenn | Taverne betreten |
 | Gelöst wenn | Wirt ist im Keller |
 | Zugehörige Objekte | Wirt, Weinkarte, Fondue-Topf |
-| Hinweise | W1\_HINT\_PIX\_0110, \_0120, \_0130 (Texte im Skript) |
+| Hinweise | W1\_HINT\_PIX\_0110, \_0120, \_0130 (Texte im Skript). Schema für alle Welten: W1\_HINT\_PIX\_RRSK, RR Rätselnummer, S Stufe 1 bis 3, K Teilschritt (0 ohne Teilschritte, 1 bis 3 für a bis c); Beispiel R1b = 0112, 0122, 0132 |
 
 ### Hinweise für den Vertical Slice
 
