@@ -46,9 +46,9 @@ Der Dorfplatz ist die Drehscheibe der Welt: Rätsel 3 (Bestellung), 5 (Brunnen) 
 | W1\_DORF\_MAX\_0150 | Max | Ein Dorfbrett. Das Internet von hier. Alle pinnen, keiner liest. | Ansehen: Dorfbrett |
 | W1\_DORF\_MAX\_0160 | Max | „Rotkäppchens Lieferdienst. Alles, was Oma nicht mehr trägt. In zehn Minuten da oder der Korb ist gratis.“ | Ansehen: Bestellzettel am Dorfbrett |
 | W1\_DORF\_MAX\_0170 | Max | Ein Bestellzettel. Den nehm ich. Man weiß nie, wann man eine Lieferung braucht. | Nehmen: Bestellzettel |
-| W1\_DORF\_MAX\_0180 | Max | „Gesucht wegen Weltherrschaft. Besondere Kennzeichen: reagiert empfindlich auf Kosenamen.“ | Ansehen: Moderworts Steckbrief, öffnet die Nahansicht |
-| W1\_DORF\_MAX\_0190 | Max | Da hat jemand eine Schwachstelle im Lebenslauf. | Nahansicht Steckbrief, zweite Zeile |
-| W1\_DORF\_PIX\_0200 | Pixel | Kein Gesicht auf dem Bild, nur zwei rote Nasenlöcher. Entweder sehr böse oder sehr schlecht gezeichnet. | Nahansicht Steckbrief, Pixel |
+| W1\_DORF\_MAX\_0180 | Max | „Gesucht wegen Weltherrschaft. Besondere Kennzeichen: reagiert empfindlich auf Kosenamen.“ | Ansehen: Moderworts Steckbrief am Dorfbrett (keine Nahansicht) |
+| W1\_DORF\_MAX\_0190 | Max | Da hat jemand eine Schwachstelle im Lebenslauf. | Ansehen Steckbrief, Fortsetzung |
+| W1\_DORF\_PIX\_0200 | Pixel | Kein Gesicht auf dem Bild, nur zwei rote Nasenlöcher. Entweder sehr böse oder sehr schlecht gezeichnet. | Ansehen Steckbrief, Pixel |
 | W1\_DORF\_MAX\_0210 | Max | Den nehm ich mit. Als Lesezeichen. Oder zum Drohen. | Nehmen: Steckbrief |
 | W1\_DORF\_MAX\_0220 | Max | Ein Schloss auf einer Wolke. Da oben ist der Empfang bestimmt auch nicht besser. | Ansehen: Luftschloss am Himmel |
 | W1\_DORF\_PIX\_0230 | Pixel | Hoch oben, sonnenwarm, keine Hunde. Ich will da wohnen. // Und ich hasse Wolken. Das sagt alles. | Ansehen: Luftschloss, Pixel |

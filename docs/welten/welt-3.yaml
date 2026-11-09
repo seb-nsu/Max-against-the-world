@@ -358,6 +358,14 @@ gegenstaende:
     reist_mit: false
     nahansicht: false
 
+nahansichten:                  # Nahansichten, die kein Gegenstand sind
+  - id: kochbuch
+    name: Kochbuch
+    raum: kueche_orakel
+  - id: kritzelei_kammer_2
+    name: Kritzelei
+    raum: testkammer_2
+
 raetsel:
   - id: R1a
     name: Der Mensch-Test, Beobachtungen

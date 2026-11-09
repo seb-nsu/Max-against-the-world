@@ -353,7 +353,7 @@ gegenstaende:
     verwendet_in: []
     ohne_verwendung: Ansehen und Notiz
     reist_mit: false
-    nahansicht: true
+    nahansicht: false          # die Nahansicht gehört zum Prolog (prolog.yaml) und wird dort gezählt
 
   - id: goldmuenze
     name: Goldmünze
@@ -409,7 +409,7 @@ gegenstaende:
     zustaende: [normal]
     verwendet_in: [R9]
     reist_mit: false
-    nahansicht: true
+    nahansicht: false          # normales Ansehen (W1_DORF_MAX_0180–0200), keine Nahansicht
 
   - id: eimer
     name: Eimer
@@ -531,6 +531,14 @@ gegenstaende:
     ohne_verwendung: Artefakt, Opa legt es im Zwischenspiel in die Maschine
     reist_mit: false
     nahansicht: false
+
+nahansichten:                  # Nahansichten, die kein Gegenstand sind
+  - id: maerchen_satzung
+    name: Märchen-Satzung
+    raum: trollbruecke
+  - id: luftschloss_kritzelei
+    name: Kritzelei
+    raum: luftschloss
 
 raetsel:
   - id: R1

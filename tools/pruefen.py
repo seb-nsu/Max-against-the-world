@@ -18,6 +18,8 @@ Geprüft wird:
      Welt-Tabelle in einer Kürzel-Spalte (Warnung), jedes musik eines Raums steht
      in der Musik-Tabelle (Fehler; Raum ohne musik: Warnung), die Rätsel-IDs der
      Lieder-Tabelle gibt es (Fehler).
+  6. Nahansichten: Summe aller nahansicht: true und aller Einträge unter
+     nahansichten: über alle Welt-Tabellen ist NAHANSICHTEN_GESAMT (Fehler).
 
 Fehler (exit 1) müssen behoben werden, Warnungen werden geprüft.
 """
@@ -66,6 +68,8 @@ SCHALTER_RE = re.compile(r"^[A-Z0-9_]+$")
 ZEILE_RE = re.compile(r"^([A-Z]+[0-9]?)_([A-Z0-9]+)_([A-Z0-9]+)_(\d{4})$")
 OHNE_ZEHNER = {"HINT", "ERS"}  # Szenen-Codes mit eigenem Nummernschema
 MAX_ZEICHEN = 120
+# Festgelegte Zahl der Nahansichten im ganzen Spiel (entscheidungen.md)
+NAHANSICHTEN_GESAMT = 14
 
 fehler, warnungen = [], []
 
@@ -522,6 +526,25 @@ def pruefe_audio(alle):
                         F(f"{rel}:{nr}", f"Rätsel {rid} gibt es in welten/{ab}.yaml nicht")
 
 
+def pruefe_nahansichten(alle):
+    summe = 0
+    for ab, d in alle.items():
+        ort = f"welten/{ab}.yaml"
+        raeume = {r.get("id") for r in d["raeume"]}
+        summe += sum(1 for g in d["gegenstaende"] if g.get("nahansicht") is True)
+        for n in als_liste(d.get("nahansichten")):
+            summe += 1
+            for k in ("id", "name", "raum"):
+                if k not in n:
+                    F(ort, f"Nahansicht {n.get('id')}: Feld {k} fehlt")
+            if not ID_RE.match(str(n.get("id"))):
+                F(ort, f"Nahansicht {n.get('id')}: ID-Format ungültig")
+            if n.get("raum") not in raeume:
+                F(ort, f"Nahansicht {n.get('id')}: Raum {n.get('raum')} unbekannt")
+    if summe != NAHANSICHTEN_GESAMT:
+        F("welten/*.yaml", f"{summe} Nahansichten (nahansicht: true plus nahansichten:), festgelegt sind {NAHANSICHTEN_GESAMT}")
+
+
 def main():
     nur_fehler = "--nur-fehler" in sys.argv
     alle = lade_tabellen()
@@ -536,6 +559,7 @@ def main():
         pruefe_skript(ab, d, codes, kuerzel, alle_ids)
         pruefe_namen(ab, d)
     pruefe_audio(alle)
+    pruefe_nahansichten(alle)
     import importlib.util
     spec = importlib.util.spec_from_file_location("diagramme", Path(__file__).with_name("diagramme.py"))
     dia = importlib.util.module_from_spec(spec)

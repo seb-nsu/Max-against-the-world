@@ -102,7 +102,7 @@ Szene, läuft beim ersten Betreten des Nil-Deltas nach der ersten Fährfahrt. He
 | W2\_NIL\_HER\_0970 | Hermes | Ich muss weiter! Termine! Falls ihr nach Olympia wollt: Euer Startpass ist in einem anderen Büro. | rennt los, bleibt stehen |
 | W2\_NIL\_MAX\_0980 | Max | Ich hab noch gar keinen Startpass. |  |
 | W2\_NIL\_HER\_0990 | Hermes | Eben! | weg |
-| W2\_NIL\_MAX\_1000 | Max | Opas Papyrus. „Fein wie Staub.“ Ich lese das lieber nicht als Drohung. Ich lese es lieber gar nicht. | Ansehen: Opas Papyrus im Inventar; öffnet Nahansicht |
+| W2\_NIL\_MAX\_1000 | Max | Opas Papyrus. „Fein wie Staub.“ Ich lese das lieber nicht als Drohung. Ich lese es lieber gar nicht. | Ansehen: Opas Papyrus im Inventar (keine Nahansicht) |
 
 ## 5. Die Zeitfähre und die Flusskarte
 
@@ -809,7 +809,7 @@ Szene. Beginnt, sobald Startpass (3) und Hebel (5) vorhanden sind und Max die St
 
 ## 21. Stadion, Tag 1: Minispiel Archimedes' Hebel
 
-Max legt Gegenstände aus dem Inventar als Gegengewichte in den Korb und stellt den Winkel ein. Jeder Gegenstand hat ein Gewicht und einen Kommentar von Archimedes. Zu leicht: Sandgrube. Zu schwer: Nil oder Ciceros Rede. Nach zwei Fehlversuchen bietet Ramses an, großzügig zu werten. Kein Zeitdruck. Die Kommentarliste deckt alle Gegenstände der Welt ab; Zeilen für Dinge, die Max an Tag 1 noch nicht oder nicht mehr hat (Bildtafel, Grabstein, Feigenbaum), kommen nur vor, wenn er sie hat.
+Max legt Gegenstände aus dem Inventar als Gegengewichte in den Korb und stellt den Winkel ein. Jeder Gegenstand hat ein Gewicht und einen Kommentar von Archimedes. Zu leicht: Sandgrube. Zu schwer: Fluss oder Ciceros Rede. Nach zwei Fehlversuchen bietet Ramses an, großzügig zu werten. Kein Zeitdruck. Jede Kommentarzeile gehört zu einem Gegenstand, den Max an Tag 1 haben kann (Bildtafel, Grabstein und Feigenbaum hat er dann nicht mehr oder noch nicht, deshalb gibt es für sie keine Zeile); Gegenstände ohne eigene Zeile gehen ohne Kommentar in den Korb.
 
 | ID | Sprecher | Text | Auslöser |
 | --- | --- | --- | --- |
@@ -824,19 +824,19 @@ Max legt Gegenstände aus dem Inventar als Gegengewichte in den Korb und stellt 
 | W2\_HEBL\_ARC\_0090 | Archimedes | Eine Wachstafel mit Siegel. Leicht. Aber amtlich. Amtlich ist kein Gewicht. | Startpass in den Korb |
 | W2\_HEBL\_ARC\_0100 | Archimedes | Ein Krug Öl! Gut! Schwer! Rutschig! Nicht kippen, sonst fliegt der Korb statt du. | Olivenöl in den Korb |
 | W2\_HEBL\_ARC\_0110 | Archimedes | Meine Waage. Sie wiegt sich selbst. Das ist philosophisch, aber nicht viel. | Waage in den Korb |
-| W2\_HEBL\_ARC\_0120 | Archimedes | Eine Steintafel mit Bildern. Stein! Endlich etwas, das Masse hat und nichts dagegen. | Bildtafel in den Korb |
+| W2\_HEBL\_ARC\_0120 | Archimedes | Ein Fass mit einem Tintenfisch. Wiegt wenig, spritzt viel. Der Korb wird blau, du fliegst trotzdem nicht. | Tintenfass in den Korb |
 | W2\_HEBL\_ARC\_0130 | Archimedes | Ein voller Krug. Sehr schwer. Was ist drin? Egal. Masse ist Masse. | Traubensaft, Wein oder Essig in den Korb |
 | W2\_HEBL\_ARC\_0140 | Archimedes | Ein goldener Teller. Mittel. Rund. Rund ist gut für nichts auf einem Hebel. | Pharaonenteller in den Korb |
-| W2\_HEBL\_ARC\_0150 | Archimedes | Ein Grabstein. Mein Grabstein. Ich lebe, und er liegt schon in einem Korb. Viel zu schwer. Und geschmacklos. | Grabstein in den Korb |
-| W2\_HEBL\_ARC\_0160 | Archimedes | Ein Baum. Du legst einen Baum in meinen Korb. Schwer, aber die Feigen werden fallen. Auf mich. | Feigenbaum in den Korb |
+| W2\_HEBL\_ARC\_0150 | Archimedes | Ein Brief mit Fettfleck. „Fein wie Staub.“ Dann wiegt er auch so viel. Der Fleck vielleicht ein Gramm. | Opas Papyrus in den Korb |
+| W2\_HEBL\_ARC\_0160 | Archimedes | Mein Messbecher. Leer wiegt er nichts. Voll wiegt er Wasser, und Wasser fliegt allein. Zu leicht. | Messbecher in den Korb |
 | W2\_HEBL\_ARC\_0170 | Archimedes | Mein Spiegel. Bronze. Brauchbar. Aber wenn die Sonne reinfällt, zündest du den Korb an. | Brennspiegel in den Korb |
 | W2\_HEBL\_ARC\_0180 | Archimedes | Eine Socke. Sie wiegt nichts und sortiert dabei meinen Korb. Faszinierend. Nutzlos. | Sortierende Socke in den Korb |
 | W2\_HEBL\_ARC\_0190 | Archimedes | Der Kater! Endlich ein Gewicht mit Charakter. Wie ein Umzugskarton. Ein voller. Genau richtig. | Pixel in den Korb |
 | W2\_HEBL\_PIX\_0200 | Pixel | Ich bin kein Gewicht. Ich bin ein Gott. // Aber wenn es sein muss, dann bin ich ein sehr schweres, sehr beleidigtes Gewicht. // Niemand erwähnt den Umzugskarton je wieder. | nach 0190 |
 | W2\_HEBL\_NAR\_0210 | – | Der Hebel klappt müde hoch. Max rutscht einen Meter und landet in der Sandgrube. | zu leicht |
 | W2\_HEBL\_MAX\_0220 | Max | Sandgrube. Direkt vor dem Hebel. Das war kein Sprung. Das war ein Umfallen mit Anlauf. | zu leicht |
-| W2\_HEBL\_NAR\_0230 | – | Der Hebel schnellt hoch. Max fliegt über die Ränge, über die Olivenbäume, und landet mit einem Platsch im Fluss. Sobek sieht zu. | zu schwer, erste Variante |
-| W2\_HEBL\_MAX\_0240 | Max | Nass. Ich bin im Nil gelandet. Sobek hat gewinkt. Glaub ich. | zu schwer, Variante Nil |
+| W2\_HEBL\_NAR\_0230 | – | Der Hebel schnellt hoch. Max fliegt über die Ränge, über die Olivenbäume, und landet mit einem Platsch im Fluss. Der Fährmann treibt vorbei. | zu schwer, erste Variante |
+| W2\_HEBL\_MAX\_0240 | Max | Nass. Ich bin im Fluss gelandet. Der Fährmann hat gewinkt. Glaub ich. | zu schwer, Variante Fluss |
 | W2\_HEBL\_NAR\_0250 | – | Max fliegt über die Mauer, über den Markt und landet mitten auf dem Rednerpult. Cicero redet weiter. | zu schwer, Variante Agora |
 | W2\_HEBL\_CIC\_0260 | Cicero | … und wie dieser junge Mann, der soeben vom Himmel fiel, beweist. Das Schicksal unterbricht den Redner, aber niemals die Rede. | zu schwer, Variante Agora |
 | W2\_HEBL\_RAM\_0270 | Ramses | Zweimal daneben. Ich könnte großzügig werten. Soll ich? Ich soll. Oder du versuchst es noch mal. Beides. Eins davon. | nach zwei Fehlversuchen |

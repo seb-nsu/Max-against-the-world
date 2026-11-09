@@ -333,14 +333,14 @@ gegenstaende:
     verwendet_in: [R3a]                        # Weg B für das Rundschreiben, mit Tintenfass
     reist_mit: false
     nahansicht: false
-  - id: opas_papyrus                          # nur Gag (Running Gag Opa, Nahansicht)
+  - id: opas_papyrus                          # nur Gag (Running Gag Opa, normales Ansehen)
     name: Opas Papyrus
     herkunft: hermes                           # beim ersten Betreten des Nil-Deltas nach der ersten Fährfahrt
     zustaende: [normal]
     verwendet_in: []
     ohne_verwendung: nur Ansehen
     reist_mit: false
-    nahansicht: true
+    nahansicht: false                          # Max liest ihn vor (W2_NIL_OPA_0940), keine Nahansicht
   - id: bildtafel
     name: Bildtafel
     herkunft: schreiber
@@ -585,6 +585,17 @@ gegenstaende:
     ohne_verwendung: Artefakt, Opa legt es im Zwischenspiel in die Maschine
     reist_mit: false                           # Artefakt: kommt auf Opas Werkbank (Zwischenspiel 2), nicht über die Reisetasche; wie Drachenei und Energiezelle
     nahansicht: false
+
+nahansichten:                                  # Nahansichten, die kein Gegenstand sind
+  - id: hieroglyphen_grammatik
+    name: Hieroglyphen-Grammatik
+    raum: thronsaal
+  - id: faehrtafel
+    name: Fährtafel
+    raum: nil_delta
+  - id: aushang
+    name: Aushang
+    raum: startbuero
 
 raetsel:
   - id: R1

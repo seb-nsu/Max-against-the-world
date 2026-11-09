@@ -48,7 +48,7 @@ Rätsel 1, Ansehen und Benutzen. Als Max sind die Balken bunt und ohne erkennbar
 
 ## 2. Rauschen zwischen den Sendern: Pixel und Flimmer
 
-Das Rauschen ist Pixels Revier. Er kriecht mit Flimmer durch den Schnee, späht in die Sender und berichtet Max; Gegenstände nimmt er nie mit. Hier spricht Pixel auch seine Hinweise (Abschnitt 20). Beim ersten Umschalten erklärt Flimmer die Gäste-Regel. Der Nachrichtensprecher ist der Radio-Moment dieser Welt.
+Das Rauschen ist Pixels Revier. Er kriecht mit Flimmer durch den Schnee, späht in die Sender und berichtet Max; Gegenstände nimmt er nie mit. Hier spricht Pixel auch seine Hinweise (Abschnitt 20). Beim ersten Umschalten erklärt Flimmer die Gäste-Regel samt Ausnahme: Mit kommt nur, wer Spuren folgt, also der Kommissar. Der Nachrichtensprecher ist der Radio-Moment dieser Welt.
 
 | ID | Sprecher | Text | Auslöser |
 | --- | --- | --- | --- |
@@ -56,7 +56,7 @@ Das Rauschen ist Pixels Revier. Er kriecht mit Flimmer durch den Schnee, späht 
 | W4\_RAU\_FLI\_0020 | Flimmer | Willkommen bei mir! Hier ist nie was los, und das ist das Beste daran. Setz dich. Also, schweb. |  |
 | W4\_RAU\_PIX\_0030 | Pixel | Was sind das für Schatten in den Wänden? | Ansehen: Geisterbilder im Rauschen |
 | W4\_RAU\_FLI\_0040 | Flimmer | Die anderen Sender! Man sieht alles, nur unscharf. Wie durch eine Dusche. Ohne Wasser. Also durch nichts. |  |
-| W4\_RAU\_FLI\_0050 | Flimmer | Eine Regel noch, weil du gefragt hättest: Wer gerade mit euch redet, wenn ihr umschaltet, kommt mit. // Das ist kein Fehler. Das ist Dramaturgie. | erstes Umschalten mit der Fernbedienung; Kaskade; auch als Max hörbar |
+| W4\_RAU\_FLI\_0050 | Flimmer | Eine Regel noch, weil du gefragt hättest: Wer gerade mit euch redet, wenn ihr umschaltet, kommt mit. // Theoretisch. Fast alle kleben an ihrer Sendung, bei denen bleibt die Fernbedienung stumm. Nur wer Spuren folgt, folgt auch euch. // Das ist kein Fehler. Das ist Dramaturgie. | erstes Umschalten mit der Fernbedienung; Kaskade; auch als Max hörbar |
 | W4\_RAU\_MAX\_0060 | Max | Also wie eine Telefonkonferenz, aus der man nicht rauskommt. | nach 0050 |
 | W4\_RAU\_PIX\_0070 | Pixel | Der Mann mit den Zähnen verkauft gerade einen Toaster an eine Frau, die keinen will. Beeindruckend. | Spähen: Glücksrad-Shopping |
 | W4\_RAU\_PIX\_0080 | Pixel | Die Familie kocht. Jemand lacht nach jedem Satz. Keiner der Sätze ist lustig. Es ist unheimlich. | Spähen: Küchen-Sitcom |
@@ -1001,7 +1001,7 @@ Drei Stufen je Rätselschritt, Pixel spricht aus dem Rauschen. Schritt-IDs nach 
 | W4\_HINT\_PIX\_0050 | Pixel | Schwert, Krokodil, Nudeln. Mehr sage ich nicht. Das reicht für jeden, der wach war. | W4\_R02, Stufe 2 |
 | W4\_HINT\_PIX\_0060 | Pixel | Gerhard, das Krokodil, Vier. In der Reihenfolge. Falsch antworten kostet nichts außer Würde. | W4\_R02, Stufe 3 |
 | W4\_HINT\_PIX\_0070 | Pixel | Die Dose geht nur auf, wenn Besuch kommt. Besuch mit Mantel. Kennst du jemanden mit Mantel? | W4\_R03, Stufe 1 |
-| W4\_HINT\_PIX\_0080 | Pixel | Wer mit dir redet, wenn du umschaltest, kommt mit. Flimmer hat das gesagt. Du hast genickt. | W4\_R03, Stufe 2 |
+| W4\_HINT\_PIX\_0080 | Pixel | Wer mit dir redet, wenn du umschaltest, kommt mit. Jedenfalls, wer Spuren folgt. Flimmer hat das gesagt. Du hast genickt. | W4\_R03, Stufe 2 |
 | W4\_HINT\_PIX\_0090 | Pixel | Rede in der Savanne mit dem Kommissar und schalte mitten im Gespräch in die Küche. Der Rest ist Sitcom. | W4\_R03, Stufe 3 |
 | W4\_HINT\_PIX\_0100 | Pixel | Vier Alibis. Eins davon ist Fernsehen. Fernsehen kann man nachschlagen. Du hast eine Zeitschrift dafür. | W4\_R04\_A, Stufe 1 |
 | W4\_HINT\_PIX\_0110 | Pixel | Die Hyäne sagt Lasagne. Sieh in der Programmzeitschrift nach, was um 20:15 wirklich auf dem Tisch stand. Dann frag die Familie. | W4\_R04\_A, Stufe 2 |

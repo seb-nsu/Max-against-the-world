@@ -74,7 +74,7 @@ Eigennamen-Glossar: Sprechende Namen werden nicht wörtlich übersetzt, sondern 
 - Ein Fehlversuch darf nie wie eine Belohnung für Raten wirken, aber er soll lustig sein. Naheliegende falsche Kombinationen bekommen eine eigene Zeile.
 - Jede Zeile, die eine Lösung andeutet, steht so im Skript, dass das Hinweissystem darauf aufbauen kann.
 
-**Umfang:** Laut `04-audio.md` etwa 3.000 bis 4.000 Zeilen. Als Budget: Prolog 170, jede Welt 700 bis 850, Zwischenspiele 170, Finale und Abspann 280, Menüs und Systemtexte 150. Die Budgets für Zwischenspiele und Finale sind am 9. November 2026 an die Skript-Entwürfe angeglichen (168 und 276 Zeilen); die Welt-Entwürfe liegen noch darüber (siehe `offene-punkte.md`, P5). Die Pixel-auf-Mensch-Zeilen stecken im Budget der Welten.
+**Umfang:** Laut `04-audio.md` etwa 3.000 bis 4.000 Zeilen. Als Budget: Prolog 170, jede Welt 700 bis 850, Zwischenspiele 170, Finale und Abspann 280, Menüs und Systemtexte 150. Die Ersatzzeilen-Pools (`SYS_ERS_*`, 50 Zeilen) stehen in `skript/prolog.md`, zählen aber zu Menüs und Systemtexten; der Prolog selbst hat 124 Zeilen. Die Budgets für Zwischenspiele und Finale sind am 9. November 2026 an die Skript-Entwürfe angeglichen (168 und 276 Zeilen); die Welt-Entwürfe liegen noch darüber (siehe `offene-punkte.md`, P5). Die Pixel-auf-Mensch-Zeilen stecken im Budget der Welten.
 
 **Ablauf pro Raum:**
 
@@ -149,7 +149,7 @@ Mockup: Bevor Claude die UI baut, entsteht ein Bild in 320×180 mit allen Elemen
 | Pausemenü (Esc) | Weiterspielen, Speichern, Laden, Optionen, Hauptmenü |
 | Speichern und Laden | Zwölf Plätze mit Vorschaubild, Ort, Welt, Spielzeit und Datum, dazu Autospeicher und Schnellspeicher (siehe Speichern) |
 | Notizbuch | Öffnet sich aus dem Inventar, immer auf Seite 1. Seite 1: aktuelle Ziele, die das Hinweissystem mitpflegt. Seite 2: gesammelte Regeln und Passwort-Teile. Seite 3: Pixels Einkaufsliste als Running Gag, je Welt ein neuer Wunsch (Konzept, Running Gags) |
-| Nahansicht | Überlagerung in 320×180 mit Rahmen und Schließen-Knopf oben rechts; zeigt Objekte, deren Text in der Szene zu klein wäre. Die Liste der Objekte steht je Welt in der Grafik-Datei (Zeile „Nahansichten“). Das Notizbuch trägt Regeln und Passwort-Teile erst nach dem Öffnen der Nahansicht ein |
+| Nahansicht | Überlagerung in 320×180 mit Rahmen und Schließen-Knopf oben rechts; zeigt Objekte, deren Text in der Szene zu klein wäre. Es gibt genau 14 Nahansichten im ganzen Spiel; die Liste gehört den Welt-Tabellen (`welten/*.yaml`: Feld `nahansicht` bei Gegenständen, Liste `nahansichten` für Schilder, Tafeln und Ähnliches), die Grafik-Dateien beschreiben die Bilder (Zeile „Nahansichten“). Das Notizbuch trägt Regeln und Passwort-Teile erst nach dem Öffnen der Nahansicht ein |
 | Programmzeitschrift (Welt 4) | Eigene Überlagerung wie eine Nahansicht, eine aufgeschlagene Doppelseite ohne Blättern: links die Zeitleiste mit fünf Senderspalten, jede Sendung ein klickbares Feld (Klick springt zur Sendezeit); rechts sechs Detailkästen mit Bild und Titel (darunter die 20:15-Folge, das Mitternachtsvideo und Dr. Werbepauses Spot); gefundene Kanäle werden angekreuzt; nach dem Fund steht auch Kanal 999 darin, und ein Klick führt in den Empfang. Dieser Aufbau ist verbindlich für Rätsel Welt 4 und Grafik Welt 4 |
 | Reisetasche | Vor jeder Welt: zwei Wahlfächer, ein Pflichtfach; Pixel kommentiert beim Berühren jedes Gegenstands |
 | Optionen | Siehe unten |

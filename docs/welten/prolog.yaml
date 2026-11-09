@@ -102,7 +102,12 @@ gegenstaende:
     zustaende: [normal]
     verwendet_in: []                 # wird erst in Welt 1 gelesen
     reist_mit: true
-    nahansicht: true                 # eine der zwei Prolog-Nahansichten (mit dem Kalender)
+    nahansicht: true                 # eine der zwei Prolog-Nahansichten (mit dem Kalender); gelesen in Welt 1, gezählt nur hier
+
+nahansichten:                        # Nahansichten, die kein Gegenstand sind
+  - id: kalender
+    name: Kalender
+    raum: dachboden
 
 raetsel:
   - id: P1

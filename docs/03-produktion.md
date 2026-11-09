@@ -58,7 +58,7 @@ Diese Datei sammelt alle Absprachen zu Technik, Grafik und Audio an einer Stelle
 | Sonderanimationen | etwa 60 | rd\_advanced\_animation\_\_custom\_action | 1 h | 60 h |
 | Effekte | etwa 25 | Baustein EFFEKT | 0,5 h | 13 h |
 | Inventar-Icons | etwa 150 | Sammelbilder, Aseprite | 15 Minuten | 38 h |
-| Nahansichten | 14 (Prolog 2, W1 4, W2 3, W3 4, W4 1 Programmzeitschrift) | Baustein HINTERGRUND, Schrift von Hand | 2 h | 28 h |
+| Nahansichten | 14 (Prolog 2, W1 4, W2 3, W3 4, W4 1 Programmzeitschrift; Liste in `welten/*.yaml`) | Baustein HINTERGRUND, Schrift von Hand | 2 h | 28 h |
 | UI-Panels | etwa 12 | rd\_pro\_\_ui\_panel | 2 h | 24 h |
 | Summe Grafik |  |  |  | rund 600 bis 800 h |
 

@@ -1,6 +1,6 @@
 # Welt-Tabellen
 
-Je eine Datei pro Spielabschnitt: `prolog.yaml`, `welt-1.yaml` bis `welt-4.yaml`, `finale.yaml` (mit den drei Zwischenspielen). Sie sind der Besitzer aller Fakten zu Räumen, Gegenständen, Figuren und Rätseln (siehe `../00-aufbau.md`). `tools/pruefen.py` prüft sie gegen Rätsel, Skript, Grafik und Audio: Verweise, Lösbarkeit vom Start aus, Zeilen-IDs und Sprecher im Skript, Namen in Rätsel- und Grafik-Datei, Sprecherkürzel und Musik-IDs in `04-audio.md`.
+Je eine Datei pro Spielabschnitt: `prolog.yaml`, `welt-1.yaml` bis `welt-4.yaml`, `finale.yaml` (mit den drei Zwischenspielen). Sie sind der Besitzer aller Fakten zu Räumen, Gegenständen, Figuren und Rätseln (siehe `../00-aufbau.md`). `tools/pruefen.py` prüft sie gegen Rätsel, Skript, Grafik und Audio: Verweise, Lösbarkeit vom Start aus, Zeilen-IDs und Sprecher im Skript, Namen in Rätsel- und Grafik-Datei, Sprecherkürzel und Musik-IDs in `04-audio.md`, dazu die Gesamtzahl der Nahansichten.
 
 ## Format
 
@@ -39,7 +39,12 @@ gegenstaende:
     zustaende: [normal]      # alle Zustände, die eine Grafik brauchen
     verwendet_in: [R1]       # Rätsel-IDs
     reist_mit: false         # true, wenn er in der Reisetasche in andere Abschnitte mitkann
-    nahansicht: false
+    nahansicht: false        # true, wenn der Gegenstand eine eigene Nahansicht hat
+
+nahansichten:                # optional: Nahansichten, die kein Inventar-Gegenstand sind (Schilder, Tafeln, Kalender …)
+  - id: maerchen_satzung
+    name: Märchen-Satzung
+    raum: trollbruecke       # Raum-ID, in dem man sie ansieht
 
 raetsel:
   - id: R1
@@ -64,6 +69,8 @@ Die Felder im Einzelnen, soweit sie nicht selbsterklärend sind:
 | `musik` | Raum | ID des Stücks, das im Raum läuft; die ID steht in der Spalte „ID“ der Musik-Tabelle in `04-audio.md` (oder der Tabelle der gesungenen Stücke, wenn ein Lied im Raum durchläuft). Die Zuordnung Raum → Stück gehört der Welt-Tabelle, Prompt und Beschreibung des Stücks gehören `04-audio.md`. Minispiele und Szenen mit eigenem Stück (etwa Fünfkampf, Mitternachts-TV) stehen in der Audio-Tabelle, nicht beim Raum |
 | `kuerzel` | Figur | Sprecherkürzel; `null` für Figuren, die nie sprechen. Jedes Kürzel steht in `04-audio.md` in einer Kürzel-Spalte (Stimmen oder Nebenstimmen), unter demselben Namen wie hier |
 | `herkunft` | Gegenstand | Raum-, Rätsel- oder Figur-ID; für Gegenstände, die Max aus einem früheren Abschnitt mitbringt, der Name des Abschnitts (`prolog`, `welt-1` …); das Ursprungsrätsel steht im Kommentar |
+| `nahansicht` | Gegenstand | `true`, wenn der Gegenstand eine eigene Nahansicht (Bildschirm 320×180) hat. Ein mitgebrachter Gegenstand zählt nur in dem Abschnitt, dessen Grafik das Bild liefert (Opas Zettel: Prolog), in späteren Tabellen steht `false` mit Kommentar |
+| `nahansichten` | oben | Nahansichten, die kein Inventar-Gegenstand sind, je Eintrag `id`, `name`, `raum`. Zusammen mit allen `nahansicht: true` ist das die einzige Liste der Nahansichten; `tools/pruefen.py` prüft, dass es im ganzen Spiel genau 14 sind (`entscheidungen.md`) |
 | `benoetigt_eins_von` | Rätsel | Alternative Lösungswege: Mindestens eins der genannten Gegenstände oder Rätsel muss da sein; zusätzlich zu `benoetigt` |
 
 Regeln: IDs nur mit Kleinbuchstaben, Ziffern und Unterstrich; Rätsel-IDs wie in den Rätsel-Dateien (R1 … R13, Teilschritte R1a, R1b; Prolog P1 … P3, Finale F1 …). Feste Etappen ohne eigenes Rätsel (etwa die Wettkampftage in Welt 2, R12 und R13) bekommen die nächsten freien Nummern und werden in der Rätsel-Datei unter „Teilschritte und Schalter“ erklärt. Max, Pixel und Opa stehen in jeder Datei, in der sie sprechen, mit den Kürzeln MAX, PIX, OPA.
