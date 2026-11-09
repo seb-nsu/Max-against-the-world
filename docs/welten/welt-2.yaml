@@ -1,0 +1,732 @@
+abschnitt: welt-2
+name: Antikodonien
+skript_praefix: W2
+
+# Szenen-Codes ohne eigenen Raum: Hinweise, Inventar, Zurufe, Fahrt auf der Zeitfähre (Flusskarte)
+sonder_codes: [HINT, INV, ZURU, FAHR]
+sonder_sprecher: [NAR]   # Erzähltext zu Animationen, keine Figur
+
+# Gespeicherte Werte (05-spielsysteme, Speichern: Welt 2). Das Alter von Grabstein und Krügen
+# folgt allein aus dem Steg, an dem Max gerade ist (Tabelle „Zeitrechnung der Fähre“ in raetsel/welt-2.md).
+werte:
+  W2_FAEHRE_STEG: [nil_delta, faehrsteg_olympia, hafen_syrakus]   # Startwert nil_delta
+  W2_FEIGE_ZUSTAND: [setzling, feigenbaum, feigenkern]           # jede Fahrt flussabwärts: Baum, flussaufwärts: Kern
+
+raeume:
+  - id: nil_delta
+    name: Nil-Delta mit Fährsteg
+    skript_code: [NIL]
+    groesse: 320x180
+    ausgaenge: [thronsaal, sphinx, faehrsteg_olympia, hafen_syrakus]   # zwei Fußwege, Fähre (Flusskarte) zu beiden Anlegestellen
+    erreichbar_ab: start
+    musik: w2_aegypten
+    # Anlegestelle Ägypten: Grabstein 0 Jahre (frisch), Krug aus dem Palast Traubensaft, Essigkrug Traubensaft
+  - id: thronsaal
+    name: Thronsaal
+    skript_code: [THRO, HIER, DUEL, AUDI]
+    groesse: 320x180
+    ausgaenge: [nil_delta, palastkueche]
+    erreichbar_ab: start
+    musik: w2_aegypten
+  - id: palastkueche
+    name: Palastküche
+    skript_code: [KUCH]
+    groesse: 320x180
+    ausgaenge: [thronsaal]
+    erreichbar_ab: start
+    musik: w2_aegypten
+  - id: sphinx
+    name: Sphinx
+    skript_code: [SPHX]
+    groesse: 320x180
+    ausgaenge: [nil_delta]
+    erreichbar_ab: start
+    musik: w2_aegypten
+    zustaende: [mit Nase, ohne Nase]          # ohne Nase ab dem Finaltag (Probewürfe)
+  - id: faehrsteg_olympia
+    name: Fährsteg Olympia
+    skript_code: [STOL]
+    groesse: 320x180
+    ausgaenge: [agora, nil_delta, hafen_syrakus]   # Steinweg, Fähre
+    erreichbar_ab: R1
+    musik: w2_olympia
+    # Anlegestelle Olympia: Grabstein 112 Jahre (grau), Krug aus dem Palast Essig, Essigkrug Wein
+  - id: agora
+    name: Agora
+    skript_code: [AGOR, SAND]
+    groesse: 640x180
+    ausgaenge: [faehrsteg_olympia, stadion, startbuero]
+    erreichbar_ab: R1
+    musik: w2_olympia
+    zustaende: [vor Tag 1, Sandale auf der Säule, nach dem Finaltag]   # Sandale bis R6a; ab Finaltag Statue ohne Arme
+  - id: startbuero
+    name: Startbüro
+    skript_code: [BUER]
+    groesse: 320x180
+    ausgaenge: [agora]
+    erreichbar_ab: R1
+    musik: w2_olympia
+  - id: stadion
+    name: Stadion
+    skript_code: [STAD, TAG1, HEBL, DISK, FINA, RING, PARA]   # DISK spielt auch auf der Agora und bei der Sphinx
+    groesse: 320x180
+    ausgaenge: [agora]
+    erreichbar_ab: R1
+    musik: w2_olympia
+    zustaende: [normal, Parade]                # Parade ab Ende des Finaltags, Glockenturm schief
+  - id: hafen_syrakus
+    name: Hafen Syrakus
+    skript_code: [HAFS]
+    groesse: 320x180
+    ausgaenge: [werkstatt, grabhuegel, nil_delta, faehrsteg_olympia]   # Gasse, Pfad, Fähre
+    erreichbar_ab: R1
+    musik: w2_syrakus
+    # Anlegestelle Syrakus: Grabstein 137 Jahre (verwittert), Krug aus dem Palast Essig, Essigkrug Essig
+  - id: werkstatt
+    name: Archimedes' Werkstatt
+    skript_code: [WERK, KRON, TRAI]
+    groesse: 320x180
+    ausgaenge: [hafen_syrakus]
+    erreichbar_ab: R1
+    musik: w2_syrakus
+  - id: grabhuegel
+    name: Grabhügel Syrakus
+    skript_code: [GRAB]                        # W2_GRAB 0010–0090 spielen beim Steinmetz im Nil-Delta
+    groesse: 320x180
+    ausgaenge: [hafen_syrakus]
+    erreichbar_ab: R1
+    musik: w2_syrakus
+    zustaende: [leer, mit verwittertem Grabstein]
+
+figuren:
+  - id: max
+    name: Max
+    kuerzel: MAX
+    raum: [nil_delta, thronsaal, palastkueche, sphinx, faehrsteg_olympia, agora, startbuero, stadion, hafen_syrakus, werkstatt, grabhuegel]
+    groesse_px: 56
+    spielbar: true
+  - id: pixel
+    name: Pixel
+    kuerzel: PIX
+    raum: [nil_delta, thronsaal, palastkueche, sphinx, faehrsteg_olympia, agora, startbuero, stadion, hafen_syrakus, werkstatt, grabhuegel]
+    groesse_px: 18
+    spielbar: true
+  - id: opa
+    name: Opa
+    kuerzel: OPA
+    raum: [nil_delta]
+    groesse_px: 0                              # nur Stimme, Max liest Opas Papyrus vor (Figur 60 px im Prolog)
+    spielbar: false
+  - id: faehrmann
+    name: Fährmann
+    kuerzel: FAE
+    raum: [nil_delta, faehrsteg_olympia, hafen_syrakus]   # fährt mit der Fähre mit
+    groesse_px: 58
+    spielbar: false
+  - id: sobek
+    name: Sobek
+    kuerzel: SOB
+    raum: [nil_delta, thronsaal]
+    groesse_px: 16                             # im Wasser 16 px hoch; an Land 70 px lang
+    spielbar: false
+  - id: steinmetz
+    name: Steinmetz
+    kuerzel: STM
+    raum: [nil_delta]
+    groesse_px: 60
+    spielbar: false
+  - id: hermes
+    name: Hermes
+    kuerzel: HER
+    raum: [nil_delta, startbuero, stadion]
+    groesse_px: 56
+    spielbar: false
+  - id: ramses
+    name: Ramses
+    kuerzel: RAM
+    raum: [thronsaal, stadion]                 # im Stadion nur an den Wettkampftagen und zur Parade
+    groesse_px: 60
+    spielbar: false
+  - id: hofkater
+    name: Hofkater
+    kuerzel: HOF
+    raum: [thronsaal]
+    groesse_px: 20
+    spielbar: false
+  - id: schreiber
+    name: Schreiber
+    kuerzel: SCH
+    raum: [thronsaal]
+    groesse_px: 36                             # sitzend
+    spielbar: false
+  - id: faecherwedler
+    name: Fächerwedler
+    kuerzel: FAW
+    raum: [thronsaal, stadion]                 # zwei Figuren, eine Stimme
+    groesse_px: 56
+    spielbar: false
+  - id: nebet
+    name: Nebet
+    kuerzel: NEB
+    raum: [palastkueche]
+    groesse_px: 52
+    spielbar: false
+  - id: sphinx_figur
+    name: Sphinx
+    kuerzel: SPH
+    raum: [sphinx]
+    groesse_px: 0                              # Teil des Hintergrunds, im Gespräch PORTRÄT
+    spielbar: false
+  - id: archimedes
+    name: Archimedes
+    kuerzel: ARC
+    raum: [werkstatt, stadion, grabhuegel]
+    groesse_px: 54
+    spielbar: false
+  - id: hieron
+    name: Hieron
+    kuerzel: HIE
+    raum: [werkstatt]
+    groesse_px: 62
+    spielbar: false
+  - id: cicero
+    name: Cicero
+    kuerzel: CIC
+    raum: [agora, grabhuegel, stadion]
+    groesse_px: 58
+    spielbar: false
+  - id: tiro
+    name: Tiro
+    kuerzel: TIR
+    raum: [agora]
+    groesse_px: 52
+    spielbar: false
+  - id: grieche
+    name: Grieche
+    kuerzel: GRI
+    raum: [agora]
+    groesse_px: 0                              # Stimme aus der Menge im Hintergrund, kein eigenes Sprite
+    spielbar: false
+  - id: tourist
+    name: Tourist
+    kuerzel: TOU
+    raum: [agora]
+    groesse_px: 58                             # Grafik: Römischer Tourist
+    spielbar: false
+  - id: touristin
+    name: Römische Touristin
+    kuerzel: TOI                               # spricht nicht
+    raum: [agora]
+    groesse_px: 56
+    spielbar: false
+  - id: philosoph
+    name: Philosoph
+    kuerzel: PHI
+    raum: [agora]
+    groesse_px: 40                             # mit Tonne
+    spielbar: false
+  - id: brian
+    name: Brian
+    kuerzel: BRI
+    raum: [agora]
+    groesse_px: 58
+    spielbar: false
+  - id: strassenmusiker
+    name: Straßenmusiker
+    kuerzel: MUS                               # spricht nicht
+    raum: [agora]
+    groesse_px: 56
+    spielbar: false
+  - id: beamter_1
+    name: Beamter 1
+    kuerzel: BE1
+    raum: [startbuero]
+    groesse_px: 44                             # sitzend, stehend 58
+    spielbar: false
+  - id: beamter_2
+    name: Beamter 2
+    kuerzel: BE2
+    raum: [startbuero]
+    groesse_px: 58
+    spielbar: false
+  - id: leonidas
+    name: Leonidas
+    kuerzel: LEO
+    raum: [stadion]
+    groesse_px: 64
+    spielbar: false
+  - id: schildkroete
+    name: Schildkröte
+    kuerzel: SKR                               # spricht nicht
+    raum: [stadion]
+    groesse_px: 12
+    spielbar: false
+  - id: zeremonienmeister
+    name: Zeremonienmeister
+    kuerzel: ZER
+    raum: [stadion]
+    groesse_px: 60
+    spielbar: false
+  - id: aegypter
+    name: Ägypter
+    kuerzel: VOL
+    raum: [stadion]                            # Volk auf den Rängen, Parade
+    groesse_px: 56
+    spielbar: false
+
+gegenstaende:
+  # Wunderdinge und Mitgebrachtes (Max' Taschen, Pflichtfach)
+  - id: handy
+    name: Handy
+    herkunft: max
+    zustaende: [normal]                        # 3 % Akku; Taschenlampe bei der Parade (R11) nur Bonus, dann verbraucht
+    verwendet_in: [R8]                         # Lösungswort für die Sphinx (eins von drei)
+    reist_mit: false
+    nahansicht: false
+  - id: kaugummi
+    name: Kaugummi
+    herkunft: max
+    zustaende: [normal]
+    verwendet_in: [R2b, R8]                    # Wunder im Duell oder „ewiges Brot“ für Nebet (R4), dann verbraucht; Sphinx-Wort
+    reist_mit: false
+    nahansicht: false
+  - id: kugelschreiber
+    name: Kugelschreiber
+    herkunft: max
+    zustaende: [normal]                        # Weg A für das Rundschreiben (R3a), dabei verbraucht
+    verwendet_in: [R3a, R8]                    # R8: Lösungswort für die Sphinx
+    reist_mit: false
+    nahansicht: false
+  - id: thunfischdose
+    name: Thunfischdose
+    herkunft: prolog
+    zustaende: [leer]                          # aus dem Prolog, Pflichtfach
+    verwendet_in: [R2b]                        # Opfergabe, nur vorgezeigt
+    reist_mit: true
+    nahansicht: false
+  - id: socke
+    name: Sortierende Socke
+    herkunft: welt-1
+    zustaende: [leer]                          # aus Welt 1, wenn eingepackt; Pollen sind in W1 R13 verbraucht
+    verwendet_in: [R3a]                        # Weg D: findet das nie abgegebene Rundschreiben
+    reist_mit: true
+    nahansicht: false
+  - id: notizbuch
+    name: Notizbuch
+    herkunft: prolog
+    zustaende: [normal]
+    verwendet_in: []
+    reist_mit: true
+    nahansicht: false
+  - id: kochloeffel
+    name: Kochlöffel-Zauberstab
+    herkunft: welt-1
+    zustaende: [zauberstab]                    # aus Welt 1, Pflichtfach; in Welt 2 nur Hebel-Kommentar
+    verwendet_in: []
+    reist_mit: true
+    nahansicht: false
+  # Ägypten
+  - id: papyrusblatt
+    name: Papyrusblatt
+    herkunft: nil_delta                        # im Schilf
+    zustaende: [leer]
+    verwendet_in: [R3a]                        # Weg B für das Rundschreiben, mit Tintenfass
+    reist_mit: false
+    nahansicht: false
+  - id: opas_papyrus                          # nur Gag (Running Gag Opa, normales Ansehen)
+    name: Opas Papyrus
+    herkunft: hermes                           # beim ersten Betreten des Nil-Deltas nach der ersten Fährfahrt
+    zustaende: [normal]
+    verwendet_in: []
+    ohne_verwendung: nur Ansehen
+    reist_mit: false
+    nahansicht: false                          # Max liest ihn vor (W2_NIL_OPA_0940), keine Nahansicht
+  - id: bildtafel
+    name: Bildtafel
+    herkunft: schreiber
+    zustaende: [normal]                        # der Schreiber behält sie nach R2a
+    verwendet_in: [R2a]
+    reist_mit: false
+    nahansicht: false
+  - id: pharaonenteller
+    name: Pharaonenteller
+    herkunft: thronsaal                        # nehmbar nach der Audienz
+    zustaende: [normal]
+    verwendet_in: [R13]                        # Diskus-Ersatz, bei Leonidas gewählt (R7)
+    reist_mit: false
+    nahansicht: false
+  - id: brot
+    name: Brot
+    herkunft: palastkueche
+    zustaende: [normal]
+    verwendet_in: [R4]
+    reist_mit: false
+    nahansicht: false
+  - id: datteln
+    name: Datteln
+    herkunft: palastkueche
+    zustaende: [normal]
+    verwendet_in: [R4]
+    reist_mit: false
+    nahansicht: false
+  - id: zwiebel
+    name: Zwiebel
+    herkunft: palastkueche
+    zustaende: [normal]
+    verwendet_in: [R4]
+    reist_mit: false
+    nahansicht: false
+  - id: fladen
+    name: Fladen
+    herkunft: palastkueche                     # entsteht aus Brot, Datteln, Zwiebel und Lehmofen
+    zustaende: [mit Datteln, roh, mit Kruste]
+    verwendet_in: [R4]
+    reist_mit: false
+    nahansicht: false
+  - id: olivenoel
+    name: Olivenöl
+    herkunft: R4
+    zustaende: [voll, angebrochen]             # ganzer Krug; angebrochen nach dem Schluck für die Sandalen
+    verwendet_in: []                           # Sandalen ölen vor Tag 1 (freiwillig)
+    reist_mit: true                            # Welt 3, Hausmeister Modell 08/15
+    nahansicht: false
+  - id: traubensaft                           # nur Gag (falsche Fährte für R11b: wird flussabwärts Essig)
+    name: Traubensaft
+    herkunft: palastkueche                     # Alter 0 im Nil-Delta; Name folgt dem Zustand
+    zustaende: [Traubensaft, Wein, Essig]      # Wein nur kurz während der Fahrt nach Olympia
+    verwendet_in: []
+    ohne_verwendung: falsche Fährte
+    reist_mit: false
+    nahansicht: false
+  # Syrakus
+  - id: tintenfass
+    name: Tintenfass
+    herkunft: hafen_syrakus                    # Tintenfisch in den Fischernetzen
+    zustaende: [normal]
+    verwendet_in: [R3a]                        # Weg B für das Rundschreiben, mit Papyrusblatt
+    reist_mit: false
+    nahansicht: false
+  - id: waage
+    name: Waage
+    herkunft: werkstatt
+    zustaende: [normal]
+    verwendet_in: [R5]
+    reist_mit: false
+    nahansicht: false
+  - id: messbecher
+    name: Messbecher
+    herkunft: werkstatt
+    zustaende: [normal]
+    verwendet_in: [R5]
+    reist_mit: false
+    nahansicht: false
+  - id: krone
+    name: Krone
+    herkunft: hieron                           # Hieron nimmt sie nach R5 zurück
+    zustaende: [normal]
+    verwendet_in: [R5]
+    reist_mit: false
+    nahansicht: false
+  - id: goldbarren
+    name: Goldbarren
+    herkunft: hieron                           # Hieron nimmt ihn nach R5 zurück
+    zustaende: [normal]
+    verwendet_in: [R5]
+    reist_mit: false
+    nahansicht: false
+  - id: brennspiegel
+    name: Brennspiegel
+    herkunft: werkstatt
+    zustaende: [normal]
+    verwendet_in: [R2b, R11a]                  # R2b: Wunder statt Kaugummi; wird dabei nicht verbraucht
+    reist_mit: false
+    nahansicht: false
+  - id: essigkrug
+    name: Essigkrug
+    herkunft: werkstatt                        # 120 Jahre alt in Syrakus; Name folgt dem Zustand
+    zustaende: [Essig, Wein, Traubensaft]      # Syrakus Essig, Olympia Wein, Nil-Delta Traubensaft
+    verwendet_in: [R11b]
+    reist_mit: false
+    nahansicht: false
+  - id: entwurf
+    name: Entwurf
+    herkunft: archimedes                       # Kugel im Zylinder, nach Ciceros Forderung, R5 und Tag 1
+    zustaende: [normal]
+    verwendet_in: [R10a]
+    reist_mit: false
+    nahansicht: false
+  - id: grabstein
+    name: Grabstein
+    herkunft: R10a                             # gemeißelt nur im Nil-Delta; Alter hängt am Steg
+    zustaende: [frisch, grau, verwittert]      # Nil-Delta 0, Olympia 112, Syrakus 137 Jahre
+    verwendet_in: [R10b]
+    reist_mit: false
+    nahansicht: false
+  - id: haufen                                # nur Gag
+    name: Zerbröselter Haufen
+    herkunft: steinmetz                        # Bestellung ohne Entwurf, beliebig oft
+    zustaende: [normal]
+    verwendet_in: []
+    ohne_verwendung: nur Gag
+    reist_mit: false
+    nahansicht: false
+  # Olympia
+  - id: leeres_formular
+    name: Leeres Formular
+    herkunft: startbuero                       # Formularberg
+    zustaende: [normal]
+    verwendet_in: [R3a]                        # Weg A für das Rundschreiben, mit Kugelschreiber
+    reist_mit: false
+    nahansicht: false
+  - id: rundschreiben
+    name: Rundschreiben
+    herkunft: R3a                              # Formular + Kugelschreiber, Papyrusblatt + Tintenfass, oder Socke im Formularberg
+    zustaende: [mit Kugelschreiber, mit Tinte, gefunden]
+    verwendet_in: [R3b]
+    reist_mit: false
+    nahansicht: false
+  - id: empfehlungsschreiben
+    name: Empfehlungsschreiben
+    herkunft: R8
+    zustaende: [normal]
+    verwendet_in: [R3b]                        # Weg C für den Startpass statt Rundschreiben
+    reist_mit: false
+    nahansicht: false
+  - id: startpass
+    name: Startpass
+    herkunft: R3b
+    zustaende: [normal]
+    verwendet_in: [R12]
+    reist_mit: false
+    nahansicht: false
+  - id: sandalen
+    name: Geflügelte Sandalen
+    herkunft: R3b                              # Hermes gibt sie gleich nach dem Startpass
+    zustaende: [normal]                        # geölt ohne eigene Grafik; Icon wie die einzelne Sandale
+    verwendet_in: [R12]                        # reißen sich an Tag 1 los
+    reist_mit: false
+    nahansicht: false
+  - id: sandale
+    name: Geflügelte Sandale
+    herkunft: R6a                              # Pixel holt sie von der Adler-Säule
+    zustaende: [normal]
+    verwendet_in: []
+    reist_mit: true                            # Welt 3, Testkammer 3
+    nahansicht: false
+  - id: brians_schild                         # nur Gag (Andenken, Inschrift)
+    name: Brians Schild
+    herkunft: R6a
+    zustaende: [normal]
+    verwendet_in: []
+    ohne_verwendung: nur Gag
+    reist_mit: false
+    nahansicht: false
+  - id: feigensetzling
+    name: Feigensetzling
+    herkunft: R6a                              # Geschenk der Menge
+    zustaende: [Feigensetzling, Feigenbaum, Feigenkern]   # Wert W2_FEIGE_ZUSTAND
+    verwendet_in: [R6b]
+    reist_mit: false
+    nahansicht: false
+  - id: feigen
+    name: Feigen
+    herkunft: hafen_syrakus                    # vom Feigenbaum gepflückt, sobald er nach einer Fahrt flussabwärts trägt
+    zustaende: [normal]                        # ohne Sanduhr, altern nicht mehr
+    verwendet_in: [R6b]
+    reist_mit: false
+    nahansicht: false
+  - id: schallplatte
+    name: Schallplatte
+    herkunft: R12                              # nach Tag 1 in der Reisetasche gefunden
+    zustaende: [normal]
+    verwendet_in: [R13]                        # Diskus-Ersatz, bei Leonidas gewählt (R7)
+    reist_mit: false
+    nahansicht: false
+  - id: wurfscheibe
+    name: Wurfscheibe
+    herkunft: R12                              # nach Tag 1 in der Bauchtasche gefunden
+    zustaende: [normal]
+    verwendet_in: [R13]                        # Diskus-Ersatz, bei Leonidas gewählt (R7)
+    reist_mit: false
+    nahansicht: false
+  - id: diskus
+    name: Diskus
+    herkunft: R7
+    zustaende: [normal]
+    verwendet_in: [R13]                        # oder ein Ersatz (siehe R13, benoetigt_eins_von)
+    reist_mit: false
+    nahansicht: false
+  - id: schriftrolle
+    name: Schriftrolle
+    herkunft: R8                               # „Die sieben Antworten“, Konter 1 bis 3
+    zustaende: [normal]
+    verwendet_in: [R9]
+    reist_mit: false
+    nahansicht: false
+  - id: olivenkranz
+    name: Olivenkranz
+    herkunft: R13
+    zustaende: [normal]
+    verwendet_in: [R11a]
+    reist_mit: false
+    nahansicht: false
+  - id: paraden_plan
+    name: Paraden-Plan
+    herkunft: zeremonienmeister
+    zustaende: [normal]                        # öffnet die Planungstafel
+    verwendet_in: [R11a]
+    reist_mit: false
+    nahansicht: false
+  - id: goldener_sack
+    name: Goldener Sack Pharaonenkorn
+    herkunft: R11b
+    zustaende: [normal]
+    verwendet_in: []
+    ohne_verwendung: Artefakt, Opa legt es im Zwischenspiel in die Maschine
+    reist_mit: false                           # Artefakt: kommt auf Opas Werkbank (Zwischenspiel 2), nicht über die Reisetasche; wie Drachenei und Energiezelle
+    nahansicht: false
+
+nahansichten:                                  # Nahansichten, die kein Gegenstand sind
+  - id: hieroglyphen_grammatik
+    name: Hieroglyphen-Grammatik
+    raum: thronsaal
+  - id: faehrtafel
+    name: Fährtafel
+    raum: nil_delta
+  - id: aushang
+    name: Aushang
+    raum: startbuero
+
+raetsel:
+  - id: R1
+    name: Die Krokodil-Fähre
+    raum: nil_delta
+    benoetigt: []
+    ergibt: []
+    schalter: [W2_R01_GELOEST]
+    optional: false
+  - id: R2a
+    name: Die Hieroglyphen-Botschaft
+    raum: thronsaal
+    benoetigt: [bildtafel]                     # geht auch vor der Fähre
+    ergibt: []
+    schalter: [W2_R02_A_GELOEST]
+    optional: false
+  - id: R2b
+    name: Das Götter-Duell
+    raum: thronsaal
+    benoetigt: [R1, thunfischdose]
+    benoetigt_eins_von: [kaugummi, brennspiegel]   # das Wunder
+    ergibt: []
+    schalter: [W2_R02_B_GELOEST]               # 2a und 2b gelöst: Audienz
+    optional: false
+  - id: R3a
+    name: Das neue Rundschreiben
+    raum: startbuero
+    benoetigt: [R2a, R2b]
+    benoetigt_eins_von: [kugelschreiber, leeres_formular, papyrusblatt, tintenfass, socke]
+    # Paare: Weg A Formular + Kugelschreiber, Weg B Papyrusblatt + Tintenfass, Weg D Socke allein
+    ergibt: [rundschreiben]
+    schalter: [W2_R03_A_GELOEST]
+    optional: true                             # Weg C (Empfehlungsschreiben) braucht kein Rundschreiben
+  - id: R3b
+    name: Der Passierschein
+    raum: startbuero
+    benoetigt: [R2a, R2b]
+    benoetigt_eins_von: [rundschreiben, empfehlungsschreiben]   # Weg A, B, D oder Weg C
+    ergibt: [startpass, sandalen]
+    schalter: [W2_R03_B_GELOEST]
+    optional: false
+  - id: R4
+    name: Das Olivenöl
+    raum: palastkueche
+    benoetigt: [brot, datteln, zwiebel, fladen]   # oder Kaugummi als „ewiges Brot“
+    ergibt: [olivenoel]
+    schalter: [W2_R04_GELOEST]
+    optional: true                             # verbessert nur den Lauf an Tag 1
+  - id: R5
+    name: Archimedes' Krone
+    raum: werkstatt
+    benoetigt: [R1, waage, messbecher, krone, goldbarren]
+    ergibt: []
+    schalter: [W2_R05_GELOEST]                 # danach Trainings-Szene, Wurfhebel ins Stadion
+    optional: false
+  - id: R12
+    name: Wettkampftag 1
+    raum: stadion
+    benoetigt: [R3b, R5, startpass, sandalen]   # Sandalen-Lauf (Szene) und Archimedes' Hebel (Minispiel)
+    ergibt: [schallplatte, wurfscheibe]
+    schalter: [W2_TAG1_GELOEST, W2_LAUF_BESTLEISTUNG, W2_HEBEL_BESTLEISTUNG]
+    optional: false
+  - id: R6a
+    name: Das Zeichen der Sandale
+    raum: agora
+    benoetigt: [R12]
+    ergibt: [sandale, brians_schild, feigensetzling]
+    schalter: [W2_R06_A_GELOEST]
+    optional: true                             # wie 6b freiwillig
+  - id: R6b
+    name: Frische Feigen für die Fächerwedler
+    raum: thronsaal
+    benoetigt: [R6a, feigensetzling, feigen]   # Setzling nach Syrakus fahren, pflücken
+    ergibt: []
+    schalter: [W2_R06_B_GELOEST]               # Wedler bestochen: Speer trifft am Finaltag
+    optional: true                             # nur vor dem Finaltag; ohne Bestechung landet der Speer im Zelt
+  - id: R7
+    name: Der Diskus-Diebstahl
+    raum: stadion
+    benoetigt: [R12]
+    ergibt: [diskus]                           # gelöst auch mit Ersatz
+    schalter: [W2_R07_GELOEST]
+    optional: false
+  - id: R8
+    name: Die Sphinx mit Schreibblockade
+    raum: sphinx
+    benoetigt: []                              # Handy-Bausteine gibt es schon vor der Fähre
+    benoetigt_eins_von: [handy, kaugummi, kugelschreiber]   # Lösungswort; nur gezeigt, nicht verbraucht
+    ergibt: [schriftrolle, empfehlungsschreiben]
+    schalter: [W2_R08_GELOEST]
+    optional: false
+  - id: R9
+    name: Konter sammeln
+    raum: agora
+    benoetigt: [R8, schriftrolle]
+    ergibt: []
+    schalter: [W2_R09_GELOEST]                 # Schriftrolle plus beide Griechen-Konter
+    optional: false
+  - id: R10a
+    name: Ein Grab für Archimedes
+    raum: nil_delta
+    benoetigt: [R5, R12, entwurf]
+    ergibt: [grabstein]
+    schalter: [W2_R10_A_GELOEST]
+    optional: false
+  - id: R10b
+    name: Das Alter des Grabsteins
+    raum: grabhuegel
+    benoetigt: [R10a, grabstein]
+    ergibt: []
+    schalter: [W2_R10_B_GELOEST]               # Cicero tritt an
+    optional: false
+  - id: R13
+    name: Finaltag
+    raum: stadion
+    benoetigt: [R7, R9, R10b]                  # Ventilator-Speer, Nasen-Diskus (Szenen), Rede-Ringen (Minispiel); R6b verbessert den Speer
+    benoetigt_eins_von: [diskus, pharaonenteller, schallplatte, wurfscheibe]   # Wurfgegenstand
+    ergibt: [olivenkranz]
+    schalter: [W2_FINALTAG_GELOEST, W2_SPEER_BESTLEISTUNG, W2_DISKUS_BESTLEISTUNG, W2_RINGEN_BESTLEISTUNG]
+    optional: false
+  - id: R11a
+    name: Die Siegesparade
+    raum: stadion
+    benoetigt: [R13, olivenkranz, paraden_plan, brennspiegel]
+    ergibt: []
+    schalter: [W2_R11_A_GELOEST]
+    optional: false
+  - id: R11b
+    name: Wein für Ramses
+    raum: stadion
+    benoetigt: [R11a, essigkrug]
+    ergibt: [goldener_sack]
+    schalter: [W2_R11_B_GELOEST]
+    optional: false

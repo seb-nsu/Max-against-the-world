@@ -2,7 +2,7 @@
 
 Nov 6, 2026 · @Sebastian
 
-Dieser Tab arbeitet die fünf offenen Bausteine aus dem Tab Produktion aus, so weit, dass Claude das Grundgerüst (Überarbeitung Nr. 4) und den Vertical Slice (Nr. 5) danach direkt in Godot bauen kann. Das komplette Prolog-Skript steht als Muster im Unter-Tab „Skript Prolog“.
+Diese Datei arbeitet die fünf offenen Bausteine aus `03-produktion.md` aus, so weit, dass Claude das Grundgerüst und den Vertical Slice (Produktion, Meilensteine Stufe 1 und 2) danach direkt in Godot bauen kann. Das komplette Prolog-Skript steht als Muster in `skript/prolog.md`.
 
 ## Dialog-Skript
 
@@ -12,9 +12,9 @@ Jede Zeile des Spiels steht genau einmal in einer Skript-Tabelle pro Welt und ha
 
 | Teil | Werte |
 | --- | --- |
-| Abschnitt | P0 Prolog, W1 bis W4, FI Finale, UI Menüs, SYS Systemtexte |
+| Abschnitt | P0 Prolog, W1 bis W4, ZS1 bis ZS3 Zwischenspiele, FI Finale, UI Menüs, SYS Systemtexte |
 | Szene | Drei bis vier Buchstaben pro Raum, etwa DACH, TAV, WALD, TURM |
-| Sprecher | MAX, PIX, OPA, OMA, MUT, NAR (Erzähler); Nebenfiguren mit drei Buchstaben wie GOL, ZEL, TRO |
+| Sprecher | MAX, PIX, OPA, OMA; NAR für Regie- und Animationszeilen ohne Sprecher (nicht vertont); Nebenfiguren mit drei Buchstaben wie GOL, ZEL, WAL, bei Gruppen auch mit Ziffer (GO1, GO2). Die Kürzel gelten je Abschnitt und stehen in den Welt-Tabellen (`welten/*.yaml`); dasselbe Kürzel kann in einem anderen Abschnitt eine andere Figur meinen (MUT ist in Welt 3 M.U.T.T.I., im Finale die Mutter) |
 
 **Spalten der Skript-Tabelle:**
 
@@ -25,7 +25,7 @@ Jede Zeile des Spiels steht genau einmal in einer Skript-Tabelle pro Welt und ha
 | Auslöser | Was die Zeile auslöst | Ansehen: Kalender |
 | Bedingung | Spielzustand, ohne den die Zeile nicht kommt | nach P1 |
 | Sprecher | Wer spricht | MAX |
-| Text DE | Die Zeile | Ein roter Kreis. Entweder Geburtstag oder Zahnarzt. |
+| Text DE | Die Zeile | Ein Kalender. Ein Tag ist dick rot eingekreist. Entweder Geburtstag oder Zahnarzt. |
 | Text EN | Später, von Claude übersetzt | leer |
 | Regie | Ausdruck oder Animation | genervt |
 | Status | Entwurf, gekürzt, final | Entwurf |
@@ -68,22 +68,22 @@ Eigennamen-Glossar: Sprechende Namen werden nicht wörtlich übersetzt, sondern 
 **Schreibregeln:**
 
 - Höchstens drei Textzeilen pro Sprechblase, also etwa 120 Zeichen; längerer Text wird an Satzgrenzen automatisch auf Folgeblasen derselben ID verteilt. Drei kurze Zeilen lesen sich bei 320×180 besser als zwei lange, weil die Blase schmal bleibt und die Figur nicht verdeckt.
-- Pixels Kaskaden (eine Pointe, die sich über mehrere Blasen steigert) stehen als eine Zeile mit „//“ als Blasentrenner; der Spieler klickt sich durch, die Vertonung bekommt je Blase eine eigene Datei (siehe Audio).
+- Pixels Kaskaden (eine Pointe, die sich über mehrere Blasen steigert) stehen als eine Zeile mit „//“ als Blasentrenner; der Spieler klickt sich durch, die Vertonung bekommt je Blase eine eigene Datei (siehe `04-audio.md`). Dieselbe feste Trennung darf jede Figur nutzen, wenn eine Satzgrenze den Witz zerstören würde (etwa Ciceros Rede „ohne Punkt ohne Komma“). Ein einzelner Satz ohne „//“ hat höchstens 120 Zeichen (`tools/pruefen.py` warnt).
 - Max spricht kurz, trocken, mit Serien-, Streaming- und Handy-Vergleichen; Pixel lang, hochnäsig, mit Essen und Schlafplätzen (Tabelle „Max' Stimme“ im Konzept).
 - Max erklärt nie die Vorlage, und jede Anspielung funktioniert auch ohne sie. Retro-Witze gehören Pixel oder Opa.
 - Ein Fehlversuch darf nie wie eine Belohnung für Raten wirken, aber er soll lustig sein. Naheliegende falsche Kombinationen bekommen eine eigene Zeile.
 - Jede Zeile, die eine Lösung andeutet, steht so im Skript, dass das Hinweissystem darauf aufbauen kann.
 
-**Umfang:** Laut Audio-Tab etwa 3.000 bis 4.000 Zeilen. Als Budget: Prolog 170, jede Welt 700 bis 850, Zwischenspiele 160, Finale und Abspann 200, Menüs und Systemtexte 150. Die Pixel-auf-Mensch-Zeilen stecken im Budget der Welten.
+**Umfang:** Laut `04-audio.md` etwa 3.000 bis 4.000 Zeilen. Als Budget: Prolog 170, jede Welt 700 bis 850, Zwischenspiele 170, Finale und Abspann 280, Menüs und Systemtexte 150. Die Ersatzzeilen-Pools (`SYS_ERS_*`, 50 Zeilen) stehen in `skript/prolog.md`, zählen aber zu Menüs und Systemtexten; der Prolog selbst hat 124 Zeilen. Die Budgets für Zwischenspiele und Finale sind am 9. November 2026 an die Skript-Entwürfe angeglichen (168 und 276 Zeilen); die Welt-Entwürfe liegen noch darüber (siehe `offene-punkte.md`, P5). Die Pixel-auf-Mensch-Zeilen stecken im Budget der Welten.
 
 **Ablauf pro Raum:**
 
 1. Claude legt aus den Rätseltabellen die Szenen- und Pflichtzeilen an.
-2. Claude ergänzt Ansehen-, Benutzen- und Kombinieren-Zeilen für alle Hotspots aus dem Grafik-Tab.
+2. Claude ergänzt Ansehen-, Benutzen- und Kombinieren-Zeilen für alle Hotspots aus der Grafik-Datei der Welt.
 3. Du kürzt und markierst Lieblingszeilen; nur was du freigibst, wird final.
 4. Der Raum wird mit Platzhaltergrafik gespielt; Zeilen, die beim Spielen nicht zünden, fliegen raus.
 
-Als Muster steht das ganze Prolog-Skript im Unter-Tab „Skript Prolog“, einschließlich der Gesprächsbäume von Opa und Pixel, der Zurufe und der Ersatzzeilen-Pools.
+Als Muster steht das ganze Prolog-Skript in `skript/prolog.md`, einschließlich der Gesprächsbäume von Opa und Pixel, der Zurufe und der Ersatzzeilen-Pools.
 
 ## Schrift
 
@@ -123,7 +123,7 @@ Die Steuerung ist eine Zwei-Klick-Steuerung ohne Verbenleiste: Linksklick tut da
 | Gegenstand im Inventar anklicken, dann Ziel | Kombinieren oder Benutzen mit; Rechtsklick legt ihn zurück |
 | Umschalt/Shift (halten) | Zeigt alle Hotspots im Raum als kleine Punkte |
 | Tab oder Klick aufs Porträt | Wechsel zwischen Max und Pixel (ab Welt 1) |
-| Klick während Text | Überspringt die aktuelle Zeile |
+| Linksklick, Leertaste oder Eingabetaste während Text | Text weiter: überspringt die aktuelle Zeile (Tasten in den Optionen umlegbar) |
 | Esc | Überspringt eine Zwischensequenz, sonst Pausemenü |
 | F5 / F9 | Schnellspeichern / Schnellladen |
 
@@ -137,7 +137,7 @@ Die Steuerung ist eine Zwei-Klick-Steuerung ohne Verbenleiste: Linksklick tut da
 | Objektname | Unter dem Zeiger, eine Zeile | Zeigt beim Überfahren den Namen, beim Kombinieren „Thunfischdose mit Pixel“ |
 | Sprechblasen | Über der sprechenden Figur | Rand und Farbe je Figur (siehe Schrift) |
 | Dialogauswahl | Unten, bis zu vier Zeilen | Mausrad oder Pfeile bei mehr Optionen; gelesene Optionen werden grau |
-| Sonder-Leisten | Je nach Welt | Fernbedienung (Welt 4) und Code-Sicht (Welt 3) erscheinen nur dort, unten rechts |
+| Sonder-Leisten | Je nach Welt | Fernbedienung (Welt 4) und Code-Sicht (Welt 3) erscheinen nur dort, unten rechts; in Gesprächen ist die Fernbedienungs-Leiste ausgegraut, außer im Gespräch mit dem Kommissar (Rätsel Welt 4, Gäste zwischen den Sendern) |
 
 Mockup: Bevor Claude die UI baut, entsteht ein Bild in 320×180 mit allen Elementen aus dieser Tabelle auf dem Dachboden-Hintergrund, mit Inventarleiste, Sprechblase mit drei Zeilen und Dialogauswahl. Sebastian gibt das Bild frei, danach erst Code.
 
@@ -149,8 +149,8 @@ Mockup: Bevor Claude die UI baut, entsteht ein Bild in 320×180 mit allen Elemen
 | Pausemenü (Esc) | Weiterspielen, Speichern, Laden, Optionen, Hauptmenü |
 | Speichern und Laden | Zwölf Plätze mit Vorschaubild, Ort, Welt, Spielzeit und Datum, dazu Autospeicher und Schnellspeicher (siehe Speichern) |
 | Notizbuch | Öffnet sich aus dem Inventar, immer auf Seite 1. Seite 1: aktuelle Ziele, die das Hinweissystem mitpflegt. Seite 2: gesammelte Regeln und Passwort-Teile. Seite 3: Pixels Einkaufsliste als Running Gag, je Welt ein neuer Wunsch (Konzept, Running Gags) |
-| Nahansicht | Überlagerung in 320×180 mit Rahmen und Schließen-Knopf oben rechts; zeigt Objekte, deren Text in der Szene zu klein wäre. Die Liste der Objekte steht je Welt im Grafik-Tab (Zeile „Nahansichten“). Das Notizbuch trägt Regeln und Passwort-Teile erst nach dem Öffnen der Nahansicht ein |
-| Programmzeitschrift (Welt 4) | Eigene Überlagerung wie eine Nahansicht, eine aufgeschlagene Doppelseite ohne Blättern: links die Zeitleiste mit fünf Senderspalten, jede Sendung ein klickbares Feld (Klick springt zur Sendezeit); rechts sechs Detailkästen mit Bild und Titel (darunter die 20:15-Folge, das Mitternachtsvideo und Dr. Werbepauses Spot); gefundene Kanäle werden angekreuzt. Dieser Aufbau ist verbindlich für Rätsel Welt 4 und Grafik Welt 4 |
+| Nahansicht | Überlagerung in 320×180 mit Rahmen und Schließen-Knopf oben rechts; zeigt Objekte, deren Text in der Szene zu klein wäre. Es gibt genau 14 Nahansichten im ganzen Spiel; die Liste gehört den Welt-Tabellen (`welten/*.yaml`: Feld `nahansicht` bei Gegenständen, Liste `nahansichten` für Schilder, Tafeln und Ähnliches), die Grafik-Dateien beschreiben die Bilder (Zeile „Nahansichten“). Das Notizbuch trägt Regeln und Passwort-Teile erst nach dem Öffnen der Nahansicht ein |
+| Programmzeitschrift (Welt 4) | Eigene Überlagerung wie eine Nahansicht, eine aufgeschlagene Doppelseite ohne Blättern: links die Zeitleiste mit fünf Senderspalten, jede Sendung ein klickbares Feld (Klick springt zur Sendezeit); rechts sechs Detailkästen mit Bild und Titel (darunter die 20:15-Folge, das Mitternachtsvideo und Dr. Werbepauses Spot); gefundene Kanäle werden angekreuzt; nach dem Fund steht auch Kanal 999 darin, und ein Klick führt in den Empfang. Dieser Aufbau ist verbindlich für Rätsel Welt 4 und Grafik Welt 4 |
 | Reisetasche | Vor jeder Welt: zwei Wahlfächer, ein Pflichtfach; Pixel kommentiert beim Berühren jedes Gegenstands |
 | Optionen | Siehe unten |
 
@@ -158,7 +158,7 @@ Mockup: Bevor Claude die UI baut, entsteht ein Bild in 320×180 mit allen Elemen
 
 - Lautstärke getrennt für Musik, Geräusche und Stimmen
 - Textgeschwindigkeit und „Text weiter per Klick“ oder automatisch
-- Untertitel an oder aus (sobald es Stimmen gibt); Liedtexte haben immer Untertitel, kursiv mit Notenzeichen, bei den drei Rätsel-Liedern auch dann, wenn Untertitel aus sind (Tab Audio)
+- Untertitel an oder aus (sobald es Stimmen gibt); Liedtexte haben immer Untertitel, kursiv mit Notenzeichen, bei den drei Rätsel-Liedern auch dann, wenn Untertitel aus sind (`04-audio.md`)
 - Sprache Deutsch oder Englisch
 - Große Schrift, Hotspots dauerhaft hervorheben, Bildschirmwackeln aus
 - Vollbild oder Fenster, Fenstergröße in ganzzahligen Stufen
@@ -172,18 +172,21 @@ Steam-Tags für Barrierefreiheit, die das Spiel damit erfüllt: Untertitel, anpa
 
 ## Hinweissystem
 
-Die Hilfe-Pfote gibt zu jedem offenen Rätselschritt drei Hinweise, vom Stups bis zur Lösung, wie im Tab „Rätsel Welt 1“ beschrieben. Neu festgelegt ist hier, *welchen* Schritt Pixel wählt, wie lange er wartet und wie die Hinweise gespeichert werden. Das Notizbuch nutzt dieselben Daten für die Zielliste.
+Die Hilfe-Pfote gibt zu jedem offenen Rätselschritt drei Hinweise, vom Stups bis zur Lösung, wie in `raetsel/prolog-und-welt-1.md` beschrieben. Neu festgelegt ist hier, *welchen* Schritt Pixel wählt, wie lange er wartet und wie die Hinweise gespeichert werden. Das Notizbuch nutzt dieselben Daten für die Zielliste.
 
 **Welcher Schritt drankommt:**
 
 1. Jedes Rätsel ist in Schritte geteilt, so wie in den Rätseltabellen (a), (b), (c). Ein Schritt ist gesperrt, offen oder gelöst; offen ist er, sobald seine Voraussetzungen erfüllt sind.
-2. Pixel nimmt den offenen Schritt, mit dessen Hotspots oder Gegenständen der Spieler zuletzt etwas gemacht hat.
-3. Gibt es keinen solchen, nimmt er den offenen Schritt mit der kleinsten Rätselnummer.
-4. Ist nichts offen, sagt Pixel, wohin es weitergeht („Da ist ein Ausgang. Ausgänge sind zum Benutzen da.“).
+2. Hat der Spieler im Notizbuch auf Seite 1 ein Ziel angeklickt, nimmt Pixel diesen Schritt, solange er offen ist.
+3. Sonst nimmt er den offenen Schritt, mit dessen Hotspots oder Gegenständen der Spieler zuletzt etwas gemacht hat.
+4. Gibt es keinen solchen, nimmt er den offenen Schritt mit der kleinsten Rätselnummer.
+5. Ist nichts offen, sagt Pixel, wohin es weitergeht („Da ist ein Ausgang. Ausgänge sind zum Benutzen da.“).
 
 **Stufen und Wartezeit:** Jeder Schritt merkt sich seine erreichte Stufe, auch über Speichern hinweg. Ein erneuter Klick wiederholt den letzten Hinweis. Die nächste Stufe gibt es erst nach 30 Sekunden (Stufe 2) bzw. 60 Sekunden (Stufe 3) seit dem letzten Hinweis; vorher sagt Pixel eine Wartezeile („Ich denke noch nach. Das sieht aus wie Schlafen, ist es aber nicht.“). Die Pfote leuchtet sanft, sobald die nächste Stufe bereitliegt.
 
-**Wer hilft wann:** Im Prolog schläft Pixel bis P1, also gibt Opa die Hinweise zu P1 über Reden; die Pfote ist bis dahin ausgegraut. In Welt 3 hängt der Weg von der Ebene ab: In der Realität steht Pixel neben Max und spricht normal; in der Simulation spricht er aus dem Hörer des Wandtelefons (in der Spielwelt tippt er dafür Miau-Morse ins Terminal, und Kalle übersetzt); im Labor aus dem Lautsprecher. In Welt 4 meldet er sich aus dem Rauschen. Die Pfote funktioniert also überall, nur ihr Ausgabeweg wechselt.
+**Wer hilft wann:** Im Prolog schläft Pixel bis P1, also gibt Opa die Hinweise zu P1 über Reden; die Pfote ist bis dahin ausgegraut. In den Zwischenspielen ist kein Schritt offen; die Pfote sagt dort nur ZS1\_HINT\_PIX\_0010. In Welt 3 hängt der Weg von der Ebene ab: In der Realität steht Pixel neben Max und spricht normal. In der Simulation hört Max ihn, sobald Kabel-Kalle ihn beim ersten Aufwachen „auf die Leitung“ gelegt hat, aus dem Hörer der nächsten Telefonzelle oder aus Omas Wandtelefon; vorher und im Büroturm (Rätsel 7) gibt es nur das Terminal mit Miau-Morse, das Kalle übersetzt. Im Labor spricht Pixel aus M.U.T.T.I.s Lautsprecher, den Kalle angezapft hat. In Welt 4 meldet er sich aus dem Rauschen. Die Pfote funktioniert also überall, nur ihr Ausgabeweg wechselt.
+
+**Nachsicht bei Minispielen:** Kein Minispiel kann den Spieler aufhalten. Nach zwei Fehlversuchen bietet eine Figur an, das Minispiel als bestanden zu werten (Welt 2: Ramses wertet „großzügig“, Welt 4: Flimmer schaltet die Zombies ab). Wer annimmt, kommt weiter; nur Errungenschaften, die eine Bestleistung verlangen, entfallen. Wer ablehnt, spielt weiter. Die Minispiele sind Archimedes' Hebel und das Rede-Ringen (Welt 2) und das Zombie-Video (Welt 4); Wortlaut und Ablauf stehen in den Rätsel-Dateien.
 
 **Zählung:** Pro Welt wird gezählt, wie oft Stufe 3 genutzt wurde. Bei null gibt Pixel am Ende der Welt widerwillig zu, beeindruckt zu sein. Für eine Steam-Errungenschaft reicht derselbe Zähler.
 
@@ -192,7 +195,7 @@ Errungenschaften (Steam): 13 Stück, alle aus Zählern und Schaltern, die das Sp
 - Ohne Pfote, Welt 1 bis 4 (vier Stück): keine Stufe 3 in der jeweiligen Welt
 - Empfang: Prolog beendet, der Fernseher läuft
 - Ziegenflüsterer: alle drei Ziegen über die Brücke
-- Fünfkampf: alle fünf Disziplinen in Welt 2 gewonnen
+- Fünfkampf: alle fünf Disziplinen in Welt 2 mit Bestleistung (Definition in `raetsel/welt-2.md`)
 - Déjà-vu: Simulation in Welt 3 zum dritten Mal betreten
 - Freund 08/15: Modell 08/15 als Freund gewonnen
 - Zapp-Meister: alle Kanäle der Programmzeitschrift gefunden
@@ -209,22 +212,31 @@ Errungenschaften (Steam): 13 Stück, alle aus Zählern und Schaltern, die das Sp
 | Offen wenn | Taverne betreten |
 | Gelöst wenn | Wirt ist im Keller |
 | Zugehörige Objekte | Wirt, Weinkarte, Fondue-Topf |
-| Hinweise | W1\_HINT\_PIX\_0110, \_0120, \_0130 (Texte im Skript). Schema für alle Welten: W1\_HINT\_PIX\_RRSK, RR Rätselnummer, S Stufe 1 bis 3, K Teilschritt (0 ohne Teilschritte, 1 bis 3 für a bis c); Beispiel R1b = 0112, 0122, 0132 |
+| Hinweise | W1\_HINT\_PIX\_0112, \_0122, \_0132 (Texte im Skript; Schema siehe unten) |
+
+**Hinweis-IDs, Regel für alle Abschnitte:** Hinweiszeilen heißen `<Abschnitt>_HINT_PIX_<Nummer>` (im Prolog Opas P1-Hinweise ausgenommen, sie stehen im Gesprächsbaum als P0\_DACH\_OPA\_1324, 1326, 1328). Jede Nummer ist im Abschnitt eindeutig, jede Hinweiszeile nennt im Auslöser ihren Schritt und ihre Stufe (etwa „R1c, Stufe 3“), und die Zuordnung Schritt → Zeilen steht nur im Skript. Die Nummer selbst trägt keine Bedeutung, auf die sich Code oder andere Dateien verlassen; die Hinweis-Datei (A14) liest Schritt und Stufe aus dem Auslöser. Reservierte Nummern: 0010 bzw. 9990 „nichts offen“, 9995 Wartezeile. Die Skripte nutzen diese Schemata, und sie werden nicht umnummeriert:
+
+| Abschnitt | Schema | Beispiel |
+| --- | --- | --- |
+| Prolog, Welt 1, Welt 2 | RRSK: RR Rätselnummer, S Stufe 1 bis 3, K Teilschritt (0 ohne Teilschritte, 1 bis 3 für a bis c bzw. Teil 1 und 2) | W1 R1b = 0112, 0122, 0132 |
+| Welt 3 | RR plus Zehnerschritte: je Rätsel ein Hunderterblock, je Teilschritt drei aufeinanderfolgende Zehner (Stufe 1 bis 3); R9 belegt 09xx und 10xx, darum R10 = 11xx bis R13 = 14xx | R1b = 0140, 0150, 0160 |
+| Welt 4 | fortlaufend in Zehnerschritten, Schritt für Schritt in Rätselfolge, Stufe 1 bis 3 als drei aufeinanderfolgende Nummern; nachgetragene Stufen und Schritte ab 0520, sie stehen bei ihrem Schritt | W4\_R01 = 0010, 0020, 0030 |
+| Zwischenspiele und Finale | fortlaufend in Zehnerschritten (FI Schritt 0 bis D) | FI Schritt 0 = 0010, 0020, 0030 |
 
 ### Hinweise für den Vertical Slice
 
-Alle Hinweise für Prolog und Welt 1, Rätsel 1 bis 4, als Grundlage für den ersten Test. Die IDs folgen dem Schema des Skripts.
+Alle Hinweise für Prolog und Welt 1, Rätsel 1 bis 4, als Grundlage für den ersten Test. Wortlaut und IDs stehen im Skript (`skript/prolog.md`, Gesprächsbaum Opa; `skript/welt-1.md`, Abschnitt Hinweise); bei einer Abweichung gilt das Skript.
 
 | Schritt | Stufe 1: Stups | Stufe 2: Hinweis | Stufe 3: Lösung |
 | --- | --- | --- | --- |
-| P1 Pixel wecken (Opa) | „Der Kater wacht nur für zwei Dinge auf: Gewitter und Fisch.“ | „In meiner Werkzeugkiste liegt Notproviant. Für Katzen. Und für mich.“ | „Mach die Thunfischdose mit dem Dosenöffner auf. Dann ist er sofort da.“ |
-| P2 Antenne | „Ein Fernseher ohne Antenne ist wie ein Napf ohne Futter. Sinnlos.“ | „Im Schrank hängt allerlei Draht. Opa nennt das Garderobe.“ | „Nimm den Kleiderbügel aus dem Schrank und steck ihn oben auf den Fernseher. Ich habe Pfoten, ich mach das nicht.“ |
-| P3 Kanal | „Dein Opa schreibt sich alles irgendwohin. Meistens an die Wand.“ | „Sieh dir den Kalender genauer an. Nicht nur den roten Kreis.“ | „Auf dem Kalender steht die Kanalnummer. Stell sie am Drehknopf ein.“ |
+| P1 Pixel wecken (Opa) | „Mit Argumenten. Er versteht genau eins, und das liegt in meiner Werkzeugkiste. // Zwischen Schraubenzieher und Draht.“ (P0\_DACH\_OPA\_1324) | „Und die Dose ist zu. Da hilft kein Reden. Da hilft Kurbeln.“ (P0\_DACH\_OPA\_1326) | „Mach die Thunfischdose mit dem Dosenöffner auf. Dann ist er sofort da.“ (P0\_DACH\_OPA\_1328) |
+| P2 Antenne | „Ein Fernseher ohne Antenne ist wie ein Napf ohne Futter. Sinnlos.“ (P0\_HINT\_PIX\_0210) | „Im Schrank hängt allerlei Draht. Opa nennt das Garderobe.“ (0220) | „Nimm den Kleiderbügel aus dem Schrank und steck ihn oben auf den Fernseher. Ich habe Pfoten, ich mach das nicht.“ (0230) |
+| P3 Kanal | „Dein Opa schreibt sich alles irgendwohin. Meistens an die Wand.“ (P0\_HINT\_PIX\_0310) | „Sieh dir den Kalender genauer an. Nicht nur den roten Kreis.“ (0320) | „Auf dem Kalender steht die Kanalnummer. Stell sie am Drehknopf ein.“ (0330) |
 | R1a Minka | „Die Wirtskatze lässt dich nicht an den Topf. Sie braucht Ablenkung. Charmante Ablenkung.“ | „Ich könnte mit Minka reden. Wechsel zu mir, falls du dich traust.“ | „Wechsel zu mir und sprich mit Minka. Ich locke sie raus. Mein Charme ist eine Naturgewalt.“ |
 | R1b Wirt | „Der Wirt klebt am Topf wie ich an der Heizung. Er braucht einen Grund zu gehen.“ | „Schau auf die Weinkarte. Etwas, das ganz hinten im Keller liegt.“ | „Bestell den Jahrgang Schicksalsberg. Den holt er aus dem Keller, und das dauert.“ |
-| R1c Gollo | „Gollo traut sich nicht. Er will vorher spielen. Rätselspiele, natürlich.“ | „Er verliert nur bei einer Frage, die nur du beantworten kannst.“ | „Frag ihn, was du in der Tasche hast. Die Thunfischdose. Da kommt er nie drauf.“ |
+| R1c Gollo | „Gollo traut sich nicht. Er will vorher spielen. Rätselspiele, natürlich.“ | „Er verliert nur bei einer Frage, die nur du beantworten kannst.“ | „Zieh die Thunfischdose auf Gollo. Dann fragst du ihn, was in deiner Tasche ist. Da kommt er nie drauf.“ |
 | R2 Zauberstab | „Der Stabmacher sagt, der Stab wählt den Zauberer. Klingt, als bräuchte der Stab einen Grund, an dir zu kleben.“ | „In der Taverne gibt's etwas Klebriges.“ | „Schmier Käse auf den Löffel. Ich bin ein Kater, kein Lösungsbuch.“ |
-| R3 Ziegen | „Der Troll will drei Ziegen. Wir haben null. Schlechter Start.“ | „Eine Ziege frisst gerade beim Schmied, eine zweite kann man am Dorfbrett bestellen. Die dritte … bitte nicht.“ | „Hol die Schmiede-Ziege, bestell die zweite mit dem Zettel am Dorfbrett und gib mir den Ziegenfell-Vorleger aus der Taverne. Ich hasse alles daran.“ |
+| R3 Ziegen | „Der Troll will drei Ziegen. Wir haben null. Schlechter Start.“ | „Eine Ziege frisst gerade beim Schmied, eine zweite kann man am Dorfbrett bestellen. Die dritte … bitte nicht.“ | „Hol die Schmiede-Ziege. Bestell die zweite mit dem Zettel am Dorfbrett und gib mir den Ziegenfell-Vorleger aus der Taverne. Ich hasse alles daran.“ |
 | R4a Reihenfolge | „Der Troll ist ein Paragrafenreiter. Lies das Brückenschild.“ | „Im Märchen läuft immer erst die Kleine, dann die Mittlere, dann die Große.“ | „Schick die Ziegen klein, mittel, groß über die Brücke. Ich bin die Kleine. Sag's niemandem.“ |
 | R4b Ziegisch | „Die Ziegen müssen ihren Text sagen. Sie sprechen nur Ziegisch. Ich übrigens fließend.“ | „Lies den Text aus der Satzung vor, ich übersetze. Meistens richtig.“ | „Lies die Satzung vor, dann wechsel zu mir und rede mit den Ziegen. Beim zweiten Mal übersetze ich ordentlich.“ |
 | R4c Ins Wasser | „Laut Satzung muss der Troll ins Wasser. Er kann nicht schwimmen. Lies genau, was da steht.“ | „Da steht ‚Wasser‘, nicht ‚Fluss‘. Wasser gibt es auch woanders.“ | „Hol mit dem Eimer Wasser aus dem Brunnen und stell es dem Troll hin. Fußbad. Regel erfüllt.“ |
@@ -252,9 +264,10 @@ Während einer Zwischensequenz, eines Gesprächs oder eines Minispiels merkt sic
 | Rätsel | Zustand jedes Rätselschritts (gesperrt, offen, gelöst) als benannte Schalter wie `W1_R04_C_GELOEST` |
 | Hinweise | Erreichte Stufe pro Schritt, Zeit des letzten Hinweises, Zähler der Stufe-3-Hinweise pro Welt |
 | Dialoge | Bereits gewählte Optionen (werden grau angezeigt) |
-| Entscheidungen mit Folgen | Goblin-Weg A oder B, Zeldina folgt (ab Welt 1 Rätsel 9), Modell 08/15 als Freund, Ziegen-Melk-Schwur, verbrauchte Wunderdinge, Ergebnisse der fünf Disziplinen |
-| Welt 2 | Alter jedes Gegenstands auf der Zeitfähre, Standort der Fähre |
-| Welt 3 | Aktuelle Ebene (Simulation oder Realität), getauschte Eigenschaften pro Raum (Verlassen setzt zurück; nur „gelöst“ bleibt), Zustand von Fenster, Strom und Kabeln |
+| Begleiter | Wer Max gerade folgt, als Schalter: Ziegenherde (Welt 1 bis Rätsel 4), Zeldina (ab Welt 1 Rätsel 9), Grimmzahn (Goblin-Weg B), Gäste zwischen den Sendern (Welt 4) |
+| Entscheidungen mit Folgen | Goblin-Weg A oder B, Modell 08/15 als Freund, Ziegen-Melk-Schwur, verbrauchte Wunderdinge, Ergebnisse der fünf Disziplinen (`W2_…_BESTLEISTUNG`) |
+| Welt 2 | Standort der Fähre (`W2_FAEHRE_STEG`) und Zustand der Feigenpflanze (`W2_FEIGE_ZUSTAND`); das Alter von Grabstein und Krügen folgt aus dem Standort und wird nicht gespeichert |
+| Welt 3 | Aktuelle Ebene (Simulation oder Realität), je Code-Sicht-Raum nur „gelöst ja/nein“ (Tausche werden nicht gespeichert, Verlassen setzt sie zurück), Zustand von Fenster, Strom und Kabeln |
 | Welt 4 | Gefundene Tasten, aktueller Sender, Uhrzeit, welche Gäste in welchem Sender sind, Genre-Form getragener Gegenstände |
 
 **Dateien:** Jeder Platz ist eine JSON-Datei mit Vorschaubild im Benutzerordner (`user://saves/`). Optionen liegen getrennt in `user://settings.cfg`, damit sie für alle Spielstände gelten. Jede Datei trägt eine Versionsnummer; ändert sich der Aufbau, übersetzt eine kleine Umwandlung alte Spielstände, damit Tester nicht neu anfangen müssen. Steam Cloud synchronisiert später einfach den Ordner `saves`.
@@ -271,4 +284,4 @@ Während einer Zwischensequenz, eines Gesprächs oder eines Minispiels merkt sic
 - [x] Text in Spielauflösung lassen oder gleich die Ebene in doppelter Auflösung bauen: entschieden am 8. November 2026, Text bleibt in Spielauflösung; die Ebene in doppelter Auflösung kommt nur als Option „Große Schrift“.
 - [ ] Wartezeiten der Hinweise (30 und 60 Sekunden) nach dem ersten Test mit Fremden anpassen
 - [ ] Zwei-Klick-Steuerung bestätigen oder doch eine Verbenleiste
-- [ ] Prüfen, ob das gemeinsame Zustandssystem (Überarbeitung Nr. 23) dieselben Schalter wie Speichern und Hinweise nutzt; das wäre die einfachste Lösung
+- [ ] Prüfen, ob das gemeinsame Zustandssystem für Code-Sicht und Fernbedienung (Produktion, System 1) dieselben Schalter wie Speichern und Hinweise nutzt; das wäre die einfachste Lösung

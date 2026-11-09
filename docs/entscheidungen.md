@@ -1,0 +1,230 @@
+# Entscheidungen
+
+Kurzfassung aller Entscheidungen, die heute gelten, mit Begründung, Datum und der Datei, in der sie umgesetzt sind. Überholte Fassungen stehen nicht hier, sondern in der Git-Historie (bis 9. November 2026 in `docs/02-ueberarbeitung.md` und `docs/reviews/`). Bei einem Widerspruch gilt die genannte Besitzer-Datei; Offenes steht in `offene-punkte.md`.
+
+Abkürzungen: W1 bis W4 = Welt 1 bis 4, R = Rätsel. „Nov. 2026“ heißt: in den Quellen ohne genaues Datum (Runde 1 und 2 der Überarbeitung, 4. bis 6. November 2026).
+
+## Titel, Recht und Markt
+
+| Entscheidung | Warum | Datum | Umgesetzt in |
+| --- | --- | --- | --- |
+| Titel: „Couch Quest – Max against the worlds“. | Websuche ohne Spiel gleichen Namens; Registersuche folgt | 9. Nov. 2026 | `01-konzept.md` (Überblick, Rechtscheck), `03-produktion.md` |
+| Parodienamen bleiben im Spiel, nie in Titel, Store-Text, Tags, Trailer oder ersten Screenshots. | Markenrecht greift bei kennzeichenmäßiger Nutzung | 8. Nov. 2026 | `01-konzept.md` (Rechtscheck), `03-produktion.md` (Parodien) |
+| Jede Parodiefigur unterscheidet sich in mindestens zwei sichtbaren Merkmalen vom Vorbild; keine Vorbild-Namen in Prompts. | Parodie verlangt wahrnehmbare Unterschiede | 8. Nov. 2026 | `grafik/00-stil-und-werkzeuge.md` (Regeln), `01-konzept.md` |
+| Umbenannt: Albus → Alwin Grauwald, Hoggelwarts → Hoggelwarz, „Sahra Connor“ → Telefonbuch mit 47 Einträgen „Konner, Sahra“, Frisbee → Wurfscheibe, T-800 → Hausmeister Modell 08/15, Tatort → Tiertort; Toadi und Zeldina bleiben. | Namen zu nah an Marken oder echten Figurennamen | 8. Nov. 2026 (Tiertort, 08/15: Nov. 2026) | `01-konzept.md` (Rechtscheck) |
+| Toadi trägt einen Pilzhut mit Krempe statt Pilzkopf; der Abspann zeigt Toadi selbst statt eines Toad-ähnlichen Pilzes. | Abstand zu Nintendos Figur | 8. Nov. 2026 | `01-konzept.md` (Rechtscheck, Abspann), `grafik/welt-1.md` |
+| Toadi und Zeldina erscheinen in keinem Marketing-Material (Trailer, Store-Text, Kapselbilder, Social Media). | Größtes Parodie-Risiko liegt bei Nintendo | 9. Nov. 2026 | `03-produktion.md` (Parodien) |
+| Bekannte Zitate sind erlaubt, wenn sie als Anspielung erkennbar sind; kurz, nie im Titel oder Marketing. Die frühere Regel „nur abgewandelt“ ist gestrichen. | Wunsch Sebastian; wörtliche Zitate (z. B. „Was haben die Römer je für uns getan“) bleiben bewusst | 8. Nov. 2026 | `01-konzept.md` (Hinweise zu Anspielungen), `03-produktion.md` |
+| „Deine Prinzessin ist in einem anderen Schloss“: wörtlich nur bei Toadi, in den anderen Welten als Running Gag variiert. | Rechtscheck-Zeile an die neue Zitatregel angepasst | 9. Nov. 2026 | `01-konzept.md` (Rechtscheck, Running Gags) |
+| Kommissar (Welt 4) und FBI-Agent tragen eigene Merkmale und den Prompt-Zusatz „Not a likeness of any real actor“. | Zu nah an realen Darstellern | 9. Nov. 2026 | `01-konzept.md` (Rechtscheck), `grafik/welt-4.md` |
+| Vor der Veröffentlichung schaut ein Anwalt eine Stunde auf Figurenliste und Titel (200 bis 350 €). | Online-Recherche ersetzt keine Rechtsberatung | 9. Nov. 2026 (bestätigt) | `03-produktion.md` (Rechtliches, Kosten) |
+| Altersfreigabe: Ziel USK 6 und PEGI 7 über den IARC-Fragebogen; USK 12 ist akzeptiert. Pillen heißen Pastillen (Apothekendose mit grünem Kreuz), Max trinkt keinen Alkohol. | Familienfreundliche Zielgruppe; „Drogen“ ist ein eigener PEGI-Deskriptor | 9. Nov. 2026 | `03-produktion.md` (Rechtliches), `raetsel/welt-3.md`, `grafik/welt-3.md` |
+| Gewerbe und Steuer werden vor der Steam-Seite geklärt (Gewerbeanmeldung, Steuernummer, Steuerberater-Erstgespräch). | Pflicht für Verkäufe auf Steam in Deutschland | 9. Nov. 2026 (bestätigt) | `03-produktion.md` (Rechtliches) |
+| KI-Offenlegung offen und konkret: Steam-Formular, Absatz im Store-Text (DE und EN), Werkzeuge im Abspann; nur vorab erzeugte Inhalte. | KI-kritische Spieler; Steam verlangt die Angabe | 9. Nov. 2026 | `03-produktion.md` (KI-Offenlegung) |
+| Max, Pixel und Opa entstehen als KI-Entwurf und werden in Aseprite Pixel für Pixel von Hand nachgezogen; alle anderen Figuren KI mit Nacharbeit. | Die drei tragen jeden Screenshot und die Store-Seite | 8. Nov. 2026 | `03-produktion.md` (Absprachen), `grafik/01-max-und-pixel.md` |
+| KI-Protokoll mit Spalte „Ähnlichkeitsprüfung ok“, Pflicht bei allen Parodiefiguren und -orten. | Valve verlangt die Zusicherung, dass KI-Inhalte keine Rechte verletzen | 9. Nov. 2026 | `03-produktion.md` (System 2), `grafik/00-stil-und-werkzeuge.md` |
+| Ein freies Katzen-Asset (CC0) dient für Pixel nur als Anschauung für Posen, nie als Pixelgrundlage. | Sonst bleibt die Silhouette eines weit verbreiteten Pakets | 9. Nov. 2026 | `03-produktion.md`, `grafik/00-stil-und-werkzeuge.md` |
+| Veröffentlichung als ein Spiel mit kostenloser Demo (Prolog und Welt 1) zum Steam Next Fest; keine verkaufte Episode 1. | Eine Demo sammelt Wunschlisten ohne vier getrennte Veröffentlichungen | 8. Nov. 2026 | `03-produktion.md` (Absprachen) |
+| Preis 17,99 € bzw. $, Demo kostenlos, 10 bis 15 Prozent Startrabatt; Wunschlisten-Ziel 10.000 zum Start. | Vergleichstitel, acht Stunden Spielzeit | 9. Nov. 2026 | `03-produktion.md` (Markt) |
+| Englische Fassung kommt auf jeden Fall (Claude übersetzt aus der CSV mit Glossar, ein Muttersprachler prüft). | Verdoppelt etwa den Markt bei 300 bis 800 € Kosten | 9. Nov. 2026 | `03-produktion.md` (Übersetzung, Markt), `05-spielsysteme.md` (Glossar) |
+| Eigennamen bekommen eine englische Entsprechung mit demselben Witz (Glossar, z. B. Tiertort → Paw and Order); Type 405 bleibt. | Wortspiele lassen sich nicht wörtlich übersetzen | 8. Nov. 2026 | `05-spielsysteme.md` (Eigennamen-Glossar) |
+
+## Ablauf, Umfang und Produktion
+
+| Entscheidung | Warum | Datum | Umgesetzt in |
+| --- | --- | --- | --- |
+| Vier Welten bleiben, Reihenfolge Fantasy, Antike, Zukunft, Fernsehen. | Jede Welt führt eine schwierigere Mechanik ein | Nov. 2026 | `01-konzept.md` (Reihenfolge der Welten) |
+| Umfang: etwa 8 Stunden, 53 Rätsel, 3 Zwischenspiele (Packen eingebaut) und ein Finale in acht Abschnitten. | Richtwert für Zeitplan und Zeilenbudget | 8./9. Nov. 2026 | `03-produktion.md` (Absprachen) |
+| Erst Grundgerüst (Laufen, Klick-Interface, Inventar, Dialoge, Figurenwechsel, Speichern, Hilfe-Pfote), dann Inhalt. | Ohne stabiles Fundament wird jeder Raum teuer | Nov. 2026 | `03-produktion.md` (Meilensteine, Stufe 1) |
+| Vertical Slice: Prolog plus W1 Rätsel 1 bis 4, 8 Räume, 13 Figuren, etwa 450 Zeilen, 40 Minuten, mit fremden Testern; nicht gekürzt. | Früh testen, ob Rätsel und Witz tragen | 8./9. Nov. 2026 | `03-produktion.md` (Stufe 2) |
+| Fünf Stufen mit Dauer und Stundenbudget; umgesteuert wird am Ablauf (Automatisierung, Wiederverwendung), nie an der Rätselzahl. Kein Kürzungskriterium je Stufe. | Der Umfang bleibt fest | 8. Nov. 2026, S1 geschlossen 9. Nov. 2026 | `03-produktion.md` (Meilensteine) |
+| 20 Prozent Puffer je Stufe (32 bis 40 Monate); Steam-Seite nach bestandenem Slice, Demo zum folgenden Next Fest. Feste Termine erst mit dem Startdatum. | Realistische Termine, Wunschlisten früh sammeln | 9. Nov. 2026 | `03-produktion.md` (Puffer und Termin) |
+| Kosten über die Laufzeit 5.000 bis 9.000 $; Claude-Abo ist der größte Posten; ElevenLabs etwa 3 Monate Pro (rund 300 $). | Vollständige Kostentabelle | 8. Nov. 2026 | `03-produktion.md` (Kosten), `04-audio.md` |
+| Grafik-Umfang per Zähltabelle, rund 600 bis 800 Stunden; 14 Nahansichten; nach jeder Welt neu zählen. | Größter Zeitposten | 8./9. Nov. 2026 | `03-produktion.md` (Umfang der Grafik) |
+| Genau 14 Nahansichten im ganzen Spiel (Prolog 2, W1 4, W2 3, W3 4, W4 1); die Liste gehört den Welt-Tabellen (`nahansicht` bei Gegenständen, `nahansichten` für Schilder und Tafeln), `tools/pruefen.py` zählt nach. Moderworts Steckbrief (W1) und Opas Papyrus (W2) sind normales Ansehen mit vorgelesenem Text; Opas Zettel zählt nur im Prolog. | Grafik-Budget; die beiden Texte braucht kein Rätsel und Max liest sie vollständig vor | 9. Nov. 2026 | `welten/*.yaml`, `grafik/*`, `05-spielsysteme.md` |
+| Godot 4.7.2 mit Popochiu 2.2.1, während des Projekts kein Wechsel, nur Fehlerkorrekturen in eigenem Git-Zweig. | Versionswechsel mitten im Projekt kostet Tage | 9. Nov. 2026 | `03-produktion.md` (System 1) |
+| Code-Sicht (W3) und Fernbedienung (W4) laufen auf einem gemeinsamen Zustandssystem, gebaut in Stufe 1. | Spart doppelte Technik | 8. Nov. 2026 | `03-produktion.md` (System 1, Stufe 1) |
+| Git mit GitHub und Git LFS für `audio/` und `concepts/` ab Tag 1. | Jeder KI-Schritt bleibt umkehrbar | 8. Nov. 2026 | `03-produktion.md` |
+| Alle Texte ab Tag 1 über `tr()` und Zeilen-IDs; im Grundgerüst als Erstes geprüft. | Übersetzung und Vertonung ohne Umbau | 8. Nov. 2026 | `03-produktion.md` (Stufe 1), `05-spielsysteme.md` |
+| Testen mit Telemetrie-Log und Beobachtungsbogen (Rätsel unter 12 Minuten, höchstens eine Stufe 3 je Welt). | Zahlen statt Vermutungen | 8. Nov. 2026 | `03-produktion.md` (Testen) |
+| Automatisierung A1 bis A16 gehört zur Produktion und ist den Stufen zugeordnet; A1, A2, A4, A7, A11, A13 in Stufe 1, A14 in Stufe 2. A10 ist eine echte Automatisierung (Grafik-Batch), sinnvoll nach dem ersten Sprite-Paar. | Sicherheitsnetz vor dem ersten Inhalt | 9. Nov. 2026 | `03-produktion.md` (Automatisierung, Meilensteine) |
+| Die Dokumente prüft `tools/pruefen.py` vor jedem Commit (Welt-Tabellen, Lösbarkeit, Skript-IDs, Sprecher, Zeilenlänge). | Widersprüche zwischen Dateien früh finden | 9. Nov. 2026 | `00-aufbau.md`, `03-produktion.md` (Automatisierung) |
+| Das Repo ist die Hauptfassung; jede Information hat genau einen Besitzer. | Eine Quelle der Wahrheit | 9. Nov. 2026 | `00-aufbau.md` |
+| Vollvertonung oder Brabbel-Laute wird spätestens zu Beginn von Stufe 5 entschieden: ab etwa 10.000 Wunschlisten Vollvertonung. | Kosten gegen erwartete Einnahmen | 9. Nov. 2026 | `03-produktion.md` (Markt, System 3), `04-audio.md` |
+| Zeilenbudget: Zwischenspiele 170, Finale und Abspann 280 (an die Skript-Entwürfe mit 168 und 276 Zeilen angeglichen); die Welten bleiben bei 700 bis 850, ihre Entwürfe liegen noch darüber (offen als P5). | Budget und Skript widersprachen sich | 9. Nov. 2026 | `05-spielsysteme.md` (Umfang), `03-produktion.md` (Absprachen) |
+
+## Steuerung, UI und Spielsysteme
+
+| Entscheidung | Warum | Datum | Umgesetzt in |
+| --- | --- | --- | --- |
+| Zwei-Klick-Steuerung ohne Verbenleiste (links tun, rechts ansehen), Grundlage Popochiu „Simple Click“. | Ganzes Bild bleibt frei; Bestätigung nach dem Test offen | 6. Nov. 2026 | `05-spielsysteme.md` (UI) |
+| Hotspot-Anzeige auf Umschalt/Shift (halten); „Text weiter“ auf Leertaste, Eingabetaste und Linksklick. | Leertaste war doppelt belegt; Antwort Sebastian | 9. Nov. 2026 | `05-spielsysteme.md` (Steuerung, Optionen) |
+| Höchstens drei Zeilen je Sprechblase (rund 120 Zeichen), längerer Text wird an Satzgrenzen auf Folgeblasen derselben ID verteilt; keine Zeile wurde dafür gekürzt. | Schmale Blasen verdecken die Figur nicht | 8. Nov. 2026 | `05-spielsysteme.md` (Schreibregeln, Schrift) |
+| Text bleibt in Spielauflösung; „Große Schrift“ als Option in doppelter Auflösung. | Passt zur Pixelgrafik | 8. Nov. 2026 | `05-spielsysteme.md` (Schrift) |
+| Pixels Kaskaden stehen als eine Zeile mit „//“; die Vertonung bekommt je Blase eine Datei. | Pointe über mehrere Blasen, eine ID | 8. Nov. 2026 | `05-spielsysteme.md`, `04-audio.md` |
+| Skript-Tabellen im Dokument in Kurzform (ID, Sprecher, Text, Regie oder Auslöser; Bedingung nach Semikolon), volle zehn Spalten erst beim Export. | Lesbar im Dokument, vollständig für Godot | 8. Nov. 2026 | `05-spielsysteme.md` (Dialog-Skript) |
+| Max erklärt nie die Vorlage; Retro-Pointen gehören Pixel oder Opa; Max bekommt Streaming-, Autoplay- und Handy-Humor. | Max ist 16 | Nov. 2026 | `01-konzept.md` (Max' Stimme), `05-spielsysteme.md` |
+| Hinweis-IDs mit Teilschritt: W1\_HINT\_PIX\_RRSK für alle Welten. | Rätsel mit (a) bis (c) brauchen eigene Hinweise | 9. Nov. 2026 | `05-spielsysteme.md` (Datenformat) |
+| Hilfe-Pfote: drei Stufen je Schritt, 30 und 60 Sekunden Wartezeit; ein im Notizbuch angeklicktes Ziel setzt Pixels Fokus. | Hilfe ohne Raten; Werte nach dem Test anpassen | 8. Nov. 2026 | `05-spielsysteme.md` (Hinweissystem) |
+| Prolog: Bis P1 gibt Opa die Hinweise über den Gesprächsbaum, die Pfote ist ausgegraut. | Pixel schläft bis P1 | 8. Nov. 2026 | `05-spielsysteme.md`, `skript/prolog.md` |
+| Welt 3: In der Realität spricht Pixel normal, in der Simulation über die Leitung (Zellen-Hörer, Omas Wandtelefon), im Labor aus M.U.T.T.I.s Lautsprecher; Miau-Morse nur am Terminal. | Einfacher, gleiche Pfote überall | 8./9. Nov. 2026 | `05-spielsysteme.md` (Wer hilft wann), `raetsel/welt-3.md` |
+| Nahansicht als eigener Bildschirm (320×180 mit Schließen-Knopf); Notizbuch-Einträge erst nach dem Öffnen der Nahansicht. | Lesbares wäre in der Szene zu klein | 8. Nov. 2026 | `05-spielsysteme.md`, `grafik/*` (Zeile Nahansichten) |
+| Programmzeitschrift: eine Doppelseite ohne Blättern, links Zeitleiste mit fünf Senderspalten, rechts sechs Detailkästen; Klick springt zur Sendezeit. | Drei Dateien hatten drei Layouts | 8. Nov. 2026 | `05-spielsysteme.md` (Bildschirme), `raetsel/welt-4.md`, `grafik/welt-4.md` |
+| Speichern: Minispiele zählen wie Zwischensequenzen (Wunsch merken, danach speichern); Begleiter als Schalter; Code-Sicht-Räume speichern nur „gelöst“. | Kein Soft-Lock, wenig Zustand | 8. Nov. 2026 | `05-spielsysteme.md` (Speichern) |
+| Barrierefreiheit: Farbenblind-Hilfe mit Symbolen, „Flackern reduzieren“ mit Epilepsie-Hinweis, Untertitel, Tastenbelegung; Zielliste der Steam-Tags. | Steam fragt das ab; kein Rätsel hängt nur an Farbe oder Ton | 8. Nov. 2026 | `05-spielsysteme.md` (Optionen) |
+| 13 Steam-Errungenschaften, alle aus ohnehin gespeicherten Schaltern, keine mit Zeitdruck. | Früh festlegen, damit die Schalter existieren | 8. Nov. 2026 | `05-spielsysteme.md` (Errungenschaften) |
+| Liedtexte haben immer Untertitel (kursiv mit Notenzeichen, eigene Zeilen-IDs); bei den drei Rätsel-Liedern auch bei ausgeschalteten Untertiteln. | Kein Rätsel hängt an einer verschluckten Silbe | 9. Nov. 2026 | `04-audio.md`, `05-spielsysteme.md` |
+| Zeilenarten „Pixel auf Mensch“ (40 bis 60 Zeilen je Welt) und Zwischenspiele im Budget. | Fehlten bisher im Zeilenbudget | 8. Nov. 2026 | `05-spielsysteme.md` (Zeilenarten, Umfang) |
+| UI-Mockup in 320×180 vor dem UI-Code; Sebastian gibt es frei. | Platzprobleme vor dem Programmieren sehen | 8. Nov. 2026 | `05-spielsysteme.md` (Bildschirmaufbau) |
+| Hinweis-IDs: eine Regel für alle Abschnitte (Nummer eindeutig, Schritt und Stufe im Auslöser); die Skripte behalten ihre Schemata (RRSK in Prolog, W1, W2; eigene Zählung in W3, W4, Finale) und werden nicht umnummeriert. | Das RRSK-Schema passte nicht zu W3 und W4; Umnummerieren hätte nichts gewonnen | 9. Nov. 2026 | `05-spielsysteme.md` (Hinweissystem, Datenformat) |
+| Nachsicht bei Minispielen: Nach zwei Fehlversuchen bietet eine Figur an, das Minispiel als bestanden zu werten; nur Bestleistungs-Errungenschaften entfallen. | Regel stand nur im Konzept, gilt aber für alle Minispiele | 9. Nov. 2026 | `05-spielsysteme.md` (Hinweissystem), `raetsel/welt-2.md`, `raetsel/welt-4.md` |
+| „//“ als feste Blasentrennung darf jede Figur nutzen; ein einzelner Satz hat höchstens 120 Zeichen. | Lange Sätze passten in keine Blase | 9. Nov. 2026 | `05-spielsysteme.md` (Schreibregeln) |
+
+## Geschichte, Figuren und Finale
+
+| Entscheidung | Warum | Datum | Umgesetzt in |
+| --- | --- | --- | --- |
+| Der Twist entsteht aus einem Missverständnis: Die Backmaschine verriegelt wegen Teig-Überdrucks, Opa brüllt Backsätze, die nach Weltherrschaft klingen. | Opas „böser“ Auftritt braucht einen Grund | Nov. 2026 | `01-konzept.md` (Finale) |
+| Max entwickelt sich vom Couch-Potato zum Jungen, der freiwillig die Milch holt; je Welt ein Moment gegen die Bequemlichkeit; im Bild ab Rückkehr 3 aufrechter. | Max braucht einen Bogen | Nov. 2026 | `01-konzept.md` (Max' Entwicklung), `grafik/01-max-und-pixel.md` |
+| Max' Motivation: Opa rückt das WLAN-Passwort erst nach dem vierten Gegenstand heraus. | Grund weiterzumachen | Nov. 2026 | `01-konzept.md` |
+| Sofa-Versuchungen unterscheiden: blaue Pastille = bequemes Nichtwissen, Zappmann = gesehen werden ohne etwas zu tun. | Sonst doppelt | Nov. 2026 | `01-konzept.md` |
+| Jede Welt hat mindestens zwei eigene Figuren, die kein Zitat sind. | Weniger Abhängigkeit von Vorlagen | Nov. 2026 | `01-konzept.md` (Eigene Figuren) |
+| Bürokratie: nur drei Formular-Gags (Goblin-Gewerkschaft, Passierschein, Maklerin); Hausmeister-Posten, Zeremonienmeister und Empfangsdame bleiben, weil sie keine Formular-Gags sind. | Wiederholung abbauen | Nov. 2026 | `raetsel/*` |
+| Running Gags: Prinzessin-Satz und Radio-Moment in jeder Welt; Opa meldet sich je Welt mit einem Backsatz, der nach Weltherrschaft klingt; Pixels Essenswünsche ergeben die Einkaufsliste. | Bereiten die Gegenwart-Pointe vor | Nov. 2026, 8. Nov. 2026 | `01-konzept.md` (Running Gags) |
+| Opa gibt allem Erfinder-Bezeichnungen („der Kater, Modell Pixel, Baujahr unbekannt“). | Sprachmarotte für Skript und Voice Design | 8. Nov. 2026 | `01-konzept.md` (Überblick), `skript/prolog.md` |
+| Zwischenspiele: drei Rückkehren auf den Dachboden mit festem Ablauf; Werbeblock (Milchwerbung) als Rückweg, von Opa im Prolog angekündigt; Kanäle 3, 7, 42, 999; Licht wandert vom Nachmittag zum Abend. | Rückkehr-Szenen fehlten | 8./9. Nov. 2026 | `01-konzept.md` (Zwischenspiele), `grafik/02-prolog-und-finale.md` |
+| Artefakte bleiben bei Opa auf der Werkbank und werden beim Ablegen zum Alltagsgegenstand („Rückverwandlungsschwund“); die Energiezelle legt Pixel orange glühend dazu („Reliquien gehören auf den Altar.“). | Ein Ort, eine Farbe | 8./9. Nov. 2026 | `01-konzept.md`, `grafik/02-prolog-und-finale.md` |
+| Nicht Eingepacktes landet in Opas Fundkiste; nichts geht verloren. | Keine Sackgassen | 9. Nov. 2026 | `01-konzept.md`, `grafik/02-prolog-und-finale.md` |
+| Finale: Die Goldene Fernbedienung bleibt eine Fernbedienung; Opa nennt sie „Zündkapsel“, erst Omas Reaktion zeigt, dass es seine verlegte ist. Zelle in die Fernbedienung, rote Taste = Stopp; Maschine mit zwei Fassungen (Ei, Mehl). | Logik ohne neuen Gegenstand | 8. Nov. 2026 | `01-konzept.md` (Finale), `grafik/02-prolog-und-finale.md` |
+| Finale Stufe 1 ist eine Spielphase (Luke und Maschine untersuchen, Opa brüllt, Pixel wird nervös); Luke geht erst beim Stopp auf; die Zelle holt Pixel unter dem Sessel (Figurenwechsel). | Spielbares Finale | 8./9. Nov. 2026 | `01-konzept.md` (Finale) |
+| Verbündete im Finale: Zeldina und Modell 08/15 (nur, wenn Max ihn in W3 mit Olivenöl befreundet hat); sonst hält der Kochlöffel die Ofentür. Oma sieht sie: „Du bist also die Neue.“ | Weniger Figuren, Belohnung für das Öl | Nov. 2026, 8. Nov. 2026 | `01-konzept.md` (Finale) |
+| Opa und Zappmann: Opa war Bastel-Onkel in Zappmanns Kindersendung, ein Backofen explodierte live, Opa backt seitdem heimlich. Porträt „Intendant seit 1988. Davor: siehe Kellerarchiv.“ | „Lange Geschichte“ war offen | 8. Nov. 2026 | `01-konzept.md` (Finale), `raetsel/welt-4.md` |
+| Zappmann ist ein ehemaliges Kind wie Max, das nie mehr aufgestanden ist; nach W4 steht auf Kanal 999 ein leeres Sofa mit Zettel „Bin aufgestanden. Z.“ | Spiegel für Max | Nov. 2026, 9. Nov. 2026 | `01-konzept.md` |
+| Oma heißt Hildegard und sagt den Satz, der die Milch nötig macht: „Kuchen ohne Milch? Konrad.“ Die Mutter findet Opas Liste. | Oma braucht eine Stimme; Pointe schließen | Nov. 2026, 9. Nov. 2026 | `01-konzept.md` (Finale) |
+| Dramatische Ironie: Type 405 (Pharaonensiegel, Pixel: „Vierhundertfünf. Klingt nach einer Backzahl.“) und AA-Batterie deuten den Backofen an; Max bleibt ahnungslos. | Aufmerksame Spieler ahnen mit | Nov. 2026, 8. Nov. 2026 | `01-konzept.md` (Was das Finale vorbereitet) |
+| Opas frühere Reisen erklären Hologramm, Goldene Fernbedienung und Dachboden-Poster. | Fäden schließen | Nov. 2026 | `01-konzept.md` |
+| Opas Frage nach der Fernbedienung im Prolog ist gespielt; im Finale: „Ich wollte nicht zugeben, wo sie liegt.“ | Auflösung als Gag | 8. Nov. 2026 | `01-konzept.md`, `skript/zwischenspiele-und-finale.md` |
+| Abspann: fünf Fotos (Foto vier in zwei Fassungen je Goblin-Weg); Opa hat den Zapp-O-Mat ins Wohnzimmer geschoben. | Verbündete bleiben zur Feier | 8./9. Nov. 2026 | `01-konzept.md` (Abspann), `grafik/02-prolog-und-finale.md` |
+| Zeitregel: Vier Welten dauern auf dem Dachboden nur einen Nachmittag. | Familienfest am selben Abend | 8. Nov. 2026 | `01-konzept.md` (Zwischenspiele) |
+| Finale: Schritt A (Zeldina hebelt den Riegel) ist für das Ende nicht zwingend; die rote Taste (D) braucht nur B (Ofentür halten) und C (Zündkapsel). | So war es im Skript angelegt; kein Rätsel wird dadurch schwerer | 9. Nov. 2026 | `raetsel/finale.md`, `welten/finale.yaml`, `skript/zwischenspiele-und-finale.md` |
+
+## Gegenstände zwischen den Welten
+
+| Entscheidung | Warum | Datum | Umgesetzt in |
+| --- | --- | --- | --- |
+| Reisetasche: zwei Wahlfächer plus Pflichtfach (Notizbuch, Thunfischdose, ab W1 Kochlöffel); Pixel kommentiert jeden Gegenstand kryptisch; nichts davon ist Pflicht für eine Lösung. | Niemand bleibt stecken, niemand wählt blind | Nov. 2026 | `01-konzept.md` (Gegenstände zwischen den Welten), `05-spielsysteme.md` |
+| Kochlöffel: Moderwort gibt ihn nach R13 beschämt zurück, er reist immer mit und ist der dritte Weg im Finale. | Sackgasse im Finale verhindern | Nov. 2026 | `01-konzept.md`, `raetsel/prolog-und-welt-1.md` |
+| Olivenöl ist ein ganzer Krug: Hermes' Sandalen brauchen einen Schluck, der Rest reist nach W3 zu Modell 08/15. | Verbrauch und Mitnahme widersprachen sich | 8. Nov. 2026 | `01-konzept.md`, `raetsel/welt-2.md`, `grafik/00-stil-und-werkzeuge.md` |
+| Omas Kekse: in der Realität Hundekuchen (Verwandlungsregel gilt in jeder Realität); Oma isst sie trotzdem („Knusprig. Wie von Mutti.“). Die Tüte kann nicht verloren gehen (Schalter KEKSE\_DABEI, sonst Fundkiste). | Besserer Gag; Bonus immer erreichbar | 8./9. Nov. 2026 | `01-konzept.md`, `raetsel/welt-3.md` |
+| Die Thunfischdose wird in W2 nur vorgezeigt („Der Gott behält seine Opfergabe. Göttliches Vorrecht.“). | Sie reist immer mit | 8. Nov. 2026 | `raetsel/welt-2.md` |
+| Wunderdinge werden nicht zurückgesetzt; die Regel gegen Sackgassen reicht. | Weniger Mechanik | 8. Nov. 2026 | `raetsel/welt-2.md` |
+| Sonnenbrille: Das verunsicherte Original legt sie nach dem Original-Kopie-Tausch ab. | Fundort fehlte | Nov. 2026 | `01-konzept.md`, `raetsel/welt-3.md` |
+| Artefakte (Drachenei, Goldener Sack Pharaonenkorn, Ewige Energiezelle) reisen nicht über die Reisetasche (`reist_mit: false`), sondern landen in der Rückkehr auf Opas Werkbank; nur die Goldene Fernbedienung trägt Max direkt ins Finale. Der Kochlöffel heißt bis W1 R2 „Kochlöffel“, danach „Kochlöffel-Zauberstab“. | Welt-Tabellen waren uneinheitlich | 9. Nov. 2026 | `welten/*.yaml`, `raetsel/prolog-und-welt-1.md` |
+
+## Grafik und Aussehen
+
+| Entscheidung | Warum | Datum | Umgesetzt in |
+| --- | --- | --- | --- |
+| Perspektive streng seitlich wie eine Bühne; Baustein KONZEPT und HINTERGRUND fordern das ausdrücklich; der Dachboden bekommt ein neues Konzeptbild. | Konzeptbild hatte falsche Perspektive | 8./9. Nov. 2026 | `grafik/00-stil-und-werkzeuge.md`, `grafik/02-prolog-und-finale.md` |
+| Alle rund 380 Prompts sind nach festen Aufbau-Regeln geschrieben (Größe, Blickrichtung rechts, Farbe je Teil, Zustände als Paar, Abgrenzung „no …“). | Retro Diffusion trifft Aufbau und Größen | 9. Nov. 2026 | `grafik/00-stil-und-werkzeuge.md` und alle `grafik/*` |
+| Hex-Werte in Prompts sind nur Orientierung, verbindlich ist Palettize auf die (Welt-)Palette. | Retro Diffusion hält Hex-Farben nicht zuverlässig ein | 9. Nov. 2026 | `grafik/00-stil-und-werkzeuge.md` (Aufbau-Regeln) |
+| Pro Welt bis zu acht Zusatzfarben (W3 zwei Magenta, zwei Cyan; W4 je Sender bis zu zwei); Max, Pixel und weltenübergreifende Gegenstände bleiben in den 32 Grundfarben. | Endesga 32 hat kein Neon | 8. Nov. 2026 | `grafik/00-stil-und-werkzeuge.md` |
+| Max: Hoodie #3a4466 (Schatten #262b44, Licht #5a6988); zerzauste Strähnen über Stirn und Augen wie auf dem Konzeptbild. | Abstand zu Pixels Streifen; im Sinne des freigegebenen Bildes | 8. und 9. Nov. 2026 | `grafik/01-max-und-pixel.md`, `grafik/00-stil-und-werkzeuge.md` |
+| Pixels Halsband-Leuchte ist zwei Pixel Türkis und blinkt beim Sprechen. | Ersetzt die Mund-Animation | 8. Nov. 2026 | `grafik/01-max-und-pixel.md` |
+| Erwachsene 56 bis 64 Pixel; Oma, Orakel-Oma und Herr Vier 56 Pixel. | Einheitliche Größenregel | 9. Nov. 2026 | `grafik/00-stil-und-werkzeuge.md`, `welten/*.yaml` |
+| Bestätigte Farben: Alwin senfgelb, Zeldinas Umhang rostorange, Hieron blau, Hofkater sandfarben mit dunklen Ohren und türkis-goldenem Halsband; die schwarze Katze in W3 bleibt schwarz und reine Kulisse. | Abstand zu Vorbildern, Katzen unterscheidbar | 8./9. Nov. 2026 | `grafik/welt-1.md` bis `grafik/welt-3.md` |
+| Parodiefiguren mit zwei getauschten Merkmalen: Morphäus (rothaarig, Strickjacke, Lesebrille), Schmidt (Cordanzug, Fliege), Leonidas (Trainingsanzug, Pfeife). | Zu nah am Film | 8. Nov. 2026 | `grafik/welt-2.md`, `grafik/welt-3.md` |
+| Räume bis 640×180 aus zwei Hälften (u. a. Dorfplatz, Agora). | Alle Ausgänge passen ins Bild | 9. Nov. 2026 | `grafik/welt-*`, `welten/*.yaml` |
+| Text in Bildern immer von Hand; alles, was der Spieler für Rätsel oder Notizbuch lesen muss, bekommt eine Nahansicht (kurze vorgelesene Texte nicht); kleine Bildschirme werden beim Ansehen doppelt vergrößert eingeblendet. | Generatoren schreiben fehlerhaft | 8./9. Nov. 2026 | `grafik/00-stil-und-werkzeuge.md` |
+| Pixels Ohrfeige wird nur einmal erzeugt (Fassung in Grafik Welt 3). | Keine doppelte Generierung | 9. Nov. 2026 | `grafik/00-stil-und-werkzeuge.md`, `grafik/welt-3.md` |
+
+## Audio
+
+| Entscheidung | Warum | Datum | Umgesetzt in |
+| --- | --- | --- | --- |
+| ElevenLabs für Stimmen, Geräusche und Musik, ACE-Step (Apache-2.0) lokal für Musik-Experimente, kein Suno; Stimmen nur per Voice Design. | Lizenzlage, keine geklonten Stimmen | Nov. 2026, 8. Nov. 2026 | `04-audio.md` |
+| Jede sprechende Figur hat einen Stimm-Prompt (u. a. Oma, Mutter, Kalle, Flimmer, Nebet, Tiro, Brian); Sobek nur mit Lauten; Modell 08/15 ohne Akzent-Anweisung, der Wiener Ton kommt aus den Worten. | ElevenLabs kann Akzente nicht verlässlich | 8. Nov. 2026 | `04-audio.md` (Stimmen) |
+| Leitmotiv: jedes Welt-Stück bekommt den Motiv-Satz im Prompt. | ElevenLabs kennt keine Melodie-Referenz | 8. Nov. 2026 | `04-audio.md` |
+| Eigene Stücke u. a. für Zauberwald, Luftschloss, Goblin-Bergwerk, Widerstandsbasis, Spukhaus, Senderzentrale-Empfang und den Werbeblock-Spot. | Kein Raum ohne Musik | 8. Nov. 2026 | `04-audio.md` (Musik) |
+| Drei gesungene Stücke mit Rätselfunktion (Goblin-Lied, Waldemars Musical, Werbejingle); beim Goblin-Lied zeigen die Goblins die Reihenfolge zusätzlich mit Schildern. | Rätsel bleibt fair | Nov. 2026, 8. Nov. 2026 | `04-audio.md` |
+| Brabbel-Technik: je Silbe ein Blip, Tonhöhe und Tempo je Figur; der Haken dafür steckt im Grundgerüst. | Billige Alternative zur Vollvertonung | 8. Nov. 2026 | `04-audio.md` (Sprachausgabe) |
+| Welcher Raum welche Musik spielt, steht in der Welt-Tabelle (`musik: <ID>`); `04-audio.md` besitzt nur ID, Beschreibung und Prompt. Stimmen-Tabelle mit Sprecherkürzeln, alle übrigen Figuren als Nebenstimmen (Variante, Laute oder Brabbel). | Eine Quelle der Wahrheit; `tools/pruefen.py` prüft beides | 9. Nov. 2026 | `04-audio.md`, `welten/*.yaml`, `welten/README.md` |
+
+## Welt 1: Schwurbelstein
+
+| Entscheidung | Warum | Datum | Umgesetzt in |
+| --- | --- | --- | --- |
+| Flaschenrätsel (R6) mittel mit drei Regeln und genau einer Lösung; Pixels lügende Fischnase wird vorher an Humberts Fischsuppe vorgeführt. | Engpass und Fairness | Nov. 2026, 8. Nov. 2026 | `raetsel/prolog-und-welt-1.md` |
+| Milch: Die Ziegenmilch geht komplett in den Trank, Max schwört, diese Ziege nie wieder zu melken; Milch nur mit dem Krug aus der Schmiede, erst nach Alwins Rezept. | Sonst wirkt „Wo ist die Milch?“ am Ende unlogisch | Nov. 2026, 9. Nov. 2026 | `raetsel/prolog-und-welt-1.md` |
+| Luftschloss ist von Anfang an sichtbar; Brunnen-Wunsch als Auswahl aus drei Wünschen. | Unfaire Stellen fair machen | Nov. 2026 | `raetsel/prolog-und-welt-1.md` |
+| Minka als eigener leichter Teil (a) von R1; Pixel stellt sich beim ersten Betreten der Taverne vor („Klick mich an. Ich beiße nur manchmal.“); Gollo fragt erst, wenn die Thunfischdose auf ihn gezogen wird. | Figurenwechsel lernen, Logik klar | 8. Nov. 2026 | `raetsel/prolog-und-welt-1.md` |
+| Smaugi kommt vor Moderwort (R12 und R13 getauscht); Aufräumen ist ein Rätsel, kein Minispiel. | Kein Rätsel nach dem Höhepunkt | Nov. 2026 | `raetsel/prolog-und-welt-1.md` |
+| Hoggelwarz ist Pflicht: Moderworts Zeugnis gibt es nur nach bestandener Prüfung. | Weg B machte die Schule optional | Nov. 2026 | `raetsel/prolog-und-welt-1.md` |
+| Besen-Wachen sind ein Beobachtungsrätsel ohne Timing und ohne Tod (sie fegen Max zur Treppe zurück); Übungsbesen als Katzenhaar-Hinweis; drei Boden-Hotspots. | Timing entfernen | Nov. 2026, 8. Nov. 2026 | `raetsel/prolog-und-welt-1.md` |
+| Dunkler Turm: Rune-Tür im Bergwerk als Kellereingang (nach R10), Geheimtür im obersten Kammer-Stockwerk, Thronsaal in Stockwerk 7; Abstellkammer 1 ist ein betretbarer Raum ohne Rätsel, in dem die Besen Smaugis Kram fegen. | Ortsnetz und Grafik widersprachen sich | 8. und 9. Nov. 2026 | `raetsel/prolog-und-welt-1.md`, `grafik/welt-1.md`, `welten/welt-1.yaml` |
+| Maklerin-Rätsel (R9): Moderworts Steckbrief dient als Exposé für den Dunklen Turm; Zeldina folgt danach sichtbar. | Rätsel ohne Lösung | 8. Nov. 2026 | `raetsel/prolog-und-welt-1.md` |
+| Waldemar gibt den Eimer nach dem Fußbad zurück („Regel 14b“); Wasserschloss als kurze Gag-Szene. | Eimer-Sackgasse | Nov. 2026, 8. Nov. 2026 | `raetsel/prolog-und-welt-1.md` |
+| Schmied schmiedet nur Kochgeschirr; die Namensschilder hängen an Humberts Schwertsammlung in der Taverne; Okarina nur als Deko-Sprite, das letzte Schwert bleibt. | Zwei Schwert-Namensgeber im Dorf | 8. Nov. 2026 | `01-konzept.md`, `grafik/welt-1.md` |
+| Ziegen folgen als Herde, Grimmzahn folgt bei Weg B in den Turm; Pixels Brunnen-Nebenwirkung endet beim Raumwechsel. | Skript-Annahmen bestätigt | 9. Nov. 2026 | `raetsel/prolog-und-welt-1.md` |
+| Sechs von 13 Rätseln sind mittel oder schwer. | Ehrliche Schwierigkeitskurve | 8. Nov. 2026 | `raetsel/prolog-und-welt-1.md` |
+| Thronsaal erst nach R11 Teil 1 und R12: Max lässt die Tür vor Smaugis Aufräumen links liegen (Sperrzeile W1\_SMAU\_MAX\_0820). | Moderworts Szene setzt das Ei voraus | 9. Nov. 2026 | `raetsel/prolog-und-welt-1.md`, `skript/welt-1.md` |
+
+## Welt 2: Antikodonien
+
+| Entscheidung | Warum | Datum | Umgesetzt in |
+| --- | --- | --- | --- |
+| Fünfkampf an zwei Wettkampftagen; echte Minispiele sind nur Hebel und Rede-Ringen (dazu Rhythmus in W4), der Rest sind Zwischensequenzen nach gelöster Vorbereitung; Fünfkampf-Regel 2 (großzügig werten nach zwei Fehlversuchen) gilt für alle Minispiele. | Weniger Minispiele, keine Frustration | Nov. 2026, 8. Nov. 2026 | `raetsel/welt-2.md`, `01-konzept.md` |
+| Zeitfähre: Nur Dinge mit Sanduhr-Symbol altern; Tafel am Steg erklärt die Regel; Alter hängt nur von der Anlegestelle ab, Umwege schaden nie; Fähre wartet, wo Max ausstieg. | Regel ohne Löcher | 8. und 9. Nov. 2026 | `raetsel/welt-2.md` |
+| Wegeplan mit 11 Räumen an 3 Anlegestellen, keine Sackgassen; Palast und Sphinx sind zu Fuß von Anfang an erreichbar, frühes Lösen ist erlaubt. | Ortsnetz fehlte | 9. Nov. 2026 | `raetsel/welt-2.md`, `welten/welt-2.yaml` |
+| Grabstein: 137 Jahre („nicht ein Jahr jünger“), eigener grauer Zustand nach 112 Jahren in Olympia; Zerbröseln nur als Gag ohne Archimedes' Entwurf. | Zustände passten nicht zur Rechnung | 8. und 9. Nov. 2026 | `raetsel/welt-2.md`, `grafik/welt-2.md` |
+| Rätsel 10 (Grab für Archimedes): Felsblock und Meißeln in Olympia oder Syrakus gestrichen; gemeißelt wird nur im Nil-Delta, ein Steinmetz, eine Route (Nil-Delta → Syrakus, 112 + 25 Jahre). Stufe deshalb mittel statt schwer; Welt 2 hat drei schwere Rätsel (3, 7, 8). | Früher gab es Steine aus Olympia oder Syrakus mit falschem Alter und einen Stein, der flussaufwärts zum ungemeißelten Felsblock zurückfiel; das waren Rückschritte ohne Nutzen. Jetzt hängt das Alter nur an der Anlegestelle, die Rechnung bleibt der Kern, die Lösung ist direkter | 9. Nov. 2026 | `raetsel/welt-2.md`, `welten/welt-2.yaml` |
+| Hieroglyphen: Zielsatz „Diener der Katze bittet Pharao um Gehör“, Grammatik als Inschrift; Kacheln mit Ohr und Mund. | Rätsel war so unlösbar | 8. Nov. 2026 | `raetsel/welt-2.md`, `grafik/welt-2.md` |
+| Sphinx mit drei festen Lösungswörtern, je drei Hinweisen und neun Bausteinen mit Fundorten. | Unfaire Stelle | Nov. 2026, 9. Nov. 2026 | `raetsel/welt-2.md` |
+| Rede-Ringen: fünf Schrittlinien, sieben Konter (Sphinx 3, Griechen 2, Tonne 2), Konter verbrauchen sich nie, nach zwei Fehlern großzügige Wertung. | Minispiel war ohne Zahl | 9. Nov. 2026 | `raetsel/welt-2.md`, `grafik/welt-2.md` |
+| Diskus-Dieb (R7): kein Kampfrichter, Leonidas meldet, Ramses moderiert; Ersatz mit Fundorten. | Skript-Annahmen bestätigt | 9. Nov. 2026 | `raetsel/welt-2.md` |
+| Passierschein: zweiter Weg zu Tag 1; die Socke findet ein nie abgegebenes Rundschreiben (rotes Wachssiegel). | Engpass auflösen | Nov. 2026, 9. Nov. 2026 | `raetsel/welt-2.md`, `grafik/welt-2.md` |
+| Siegesparade bleibt ein mittleres Rätsel nach dem Höhepunkt. | Sonst müsste ein anderes Rätsel schwerer werden | Nov. 2026 | `raetsel/welt-2.md` |
+| Katzengott: Hofkater des Pharaos als Rivale von Pixel; Trainings-Szene mit Archimedes nach R5; Brian nimmt Max das Messias-Schild ab. | Mehr Pixel, Entwicklung von Max | Nov. 2026 | `raetsel/welt-2.md`, `01-konzept.md` |
+| Rätsel 6 (Sandale und Feigen für die Fächerwedler) ist freiwillig wie Rätsel 4: Es verbessert nur den Speerwurf, ohne Bestechung landet der Speer im Kampfrichterzelt. Der Finaltag braucht 7, 9 und 10. | Skript und Konzept hatten den Weg ohne Bestechung schon | 9. Nov. 2026 | `raetsel/welt-2.md`, `welten/welt-2.yaml` |
+| Hermes gibt die Sandalen automatisch, sobald Max den Startpass hat. | Sonst Sackgasse an Tag 1 | 9. Nov. 2026 | `raetsel/welt-2.md`, `skript/welt-2.md` |
+
+## Welt 3: Neo-Neustadt 2099
+
+| Entscheidung | Warum | Datum | Umgesetzt in |
+| --- | --- | --- | --- |
+| Keine Portale; die Testkammern nutzen nur die Code-Sicht, ohne Schwung-Physik. | Spart viel Programmierarbeit | Nov. 2026 | `raetsel/welt-3.md` |
+| Das Labor ist eine tiefere Ebene derselben Simulation, keine zweite Kapsel; M.U.T.T.I. betreibt die Simulation, Schmidt ist ihr Außendienst. | Fenster-Weg in R11 stimmt wieder | Nov. 2026, 8. Nov. 2026 | `raetsel/welt-3.md`, `01-konzept.md` |
+| Code-Sicht: Tausch-Budgets je Raum, ein Tausch gilt nur im Raum, Verlassen setzt zurück, gespeichert wird nur „gelöst“; Kammer 3 hat genau eine Lösung. | Soft-Lock verhindern | 8. und 9. Nov. 2026 | `raetsel/welt-3.md`, `05-spielsysteme.md` |
+| Feste Ankunftsorte, Zellenpaare, Ebenenplan; der Pastillenautomat steht in der echten Apothekengasse (Realität). | Raumwechsel waren nicht skriptbar | 8. und 9. Nov. 2026 | `raetsel/welt-3.md`, `welten/welt-3.yaml` |
+| Rätsel 7 farbenblind-sicher: Kabel mit Kreis, Dreieck, Quadrat, Buchsen mit Farbe und Symbol. | Barrierefreiheit | 8./9. Nov. 2026 | `raetsel/welt-3.md`, `grafik/welt-3.md` |
+| Schwere Rätsel 6, 7, 9 und 10 nicht direkt hintereinander; Regel 1 wird nur einmal vergeben. | Tempo, Eindeutigkeit | Nov. 2026 | `raetsel/welt-3.md` |
+| M.U.T.T.I.-Dialog (R10) mit begründeter Reihenfolge; das Kochbuch ist die Bedienungsanleitung der Küchenmaschine. | Logik statt Permutation | 8. Nov. 2026 | `raetsel/welt-3.md` |
+| Star Wars auf Piepsi, Hologramm, Gedankentrick und Kessel-Lauf gekürzt; Matrix-Verweise gekürzt. | Welt 3 war übersättigt | Nov. 2026 | `raetsel/welt-3.md` |
+| Mensch-Test mit drei Fragen und Stempel; Morphäus gibt die Kekse vor der Pastillenwahl und trägt Pixel in die Basis. | Skript-Annahmen bestätigt | 9. Nov. 2026 | `raetsel/welt-3.md`, `01-konzept.md` |
+| Hausmeister 08/15 wischt in der Realität vor der Panzertür; Rätseltitel „Der Hausmeister Modell 08/15“. | Ort und Markenbegriff | 8. Nov. 2026 | `01-konzept.md`, `raetsel/welt-3.md` |
+| Hexenschuss-Gag als Mini-Gag bei Agent Schmidt; Lieferengpass-Gag „Rot und Blau sind aus. Ich hätte Beige.“ | Konzept und Rätsel angleichen | Nov. 2026, 8. Nov. 2026 | `01-konzept.md`, `raetsel/welt-3.md` |
+
+## Welt 4: Kanal 999
+
+| Entscheidung | Warum | Datum | Umgesetzt in |
+| --- | --- | --- | --- |
+| Sendeuhr: nur Alibi (20:15) und Zombie-Video (Mitternacht) sind zeitgebunden; die Programmzeitschrift springt per Klick zur Sendezeit. | Weniger Warten | Nov. 2026 | `raetsel/welt-4.md` |
+| Kein Timing: kein Quiz-Timer beim Glücksrad; Rückspulen hält an vier festen Einzelbildern. | Timing-Verbot | Nov. 2026, 8. Nov. 2026 | `raetsel/welt-4.md` |
+| Bild-in-Bild als geskriptete Szene statt freier Taste. | Spart doppelte Szenendarstellung | Nov. 2026 | `raetsel/welt-4.md` |
+| Drei Superhelden (Super-Siegfried, Fledermann, Wonder-Wilma) plus Käsemann. | Von sieben auf drei | Nov. 2026 | `01-konzept.md`, `grafik/welt-4.md` |
+| Pixel kriecht durch das Rauschen zwischen den Kanälen und verhandelt in Tiertort Savanne mit den Großkatzen. | Pixel in Welt 4 einbinden | Nov. 2026 | `raetsel/welt-4.md` |
+| Gäste zwischen den Sendern: Wer gerade mit Max spricht, kommt beim Umschalten mit, aber nur, wer nicht an seiner Sendung klebt; das ist allein der Kommissar („Nur wer Spuren folgt, folgt auch euch“). Flimmer sagt Regel und Ausnahme beim ersten Umschalten; in allen anderen Gesprächen ist die Fernbedienungs-Leiste ausgegraut. Gestrichen: weitere Gäste, etwa die Sitcom-Familie im Urlaub in der Savanne. | Eine Zeile Code, ein Satz Tutorial; der Spieler hört die Einschränkung, bevor er sie erlebt; freie Gäste für jede Figur hätten Sackgassen (Figur sitzt im falschen Sender fest) und viele Zustände und Zeilen erzeugt, ohne ein Rätsel zu tragen | 8. Nov. 2026, 9. Nov. 2026 | `raetsel/welt-4.md`, `skript/welt-4.md`, `05-spielsysteme.md` |
+| Spukhaus: Friedhof → Keller (R5) → Genre-Tür (R6) → Halle mit Lichterkette (R7); Halle erst nach der Bonusrunde. | Tür widersprach sich | 8. und 9. Nov. 2026 | `raetsel/welt-4.md`, `grafik/welt-4.md` |
+| Zombie-Video (R5): Das Minispiel ist der Weg, Rückspulen die Vorbereitung. | Entscheidung zwischen zwei Wegen | 8. Nov. 2026 | `raetsel/welt-4.md` |
+| Zappmann (R13): erst das Sofa ablehnen, dann hat jede Taste einen sichtbaren Grund; Archivband aus dem Keller. | Rätsel ohne Lösung | 8. Nov. 2026 | `raetsel/welt-4.md` |
+| Comic-Panels (R11): vier Panels mit drei Hinweisebenen; Alibi über Fondue statt Lasagne; R9 braucht Dr. Werbepauses gesehenen Spot. | Eindeutige Lösung | 8. Nov. 2026 | `raetsel/welt-4.md` |
+| Tasten-Fundorte, Aufzugscode 1988, „Fräulein Pokerface“, „Couch-Magnet 3000“, Bettlaken als „erster Entwurf“ des Fledermanns. | Skript-Annahmen bestätigt | 9. Nov. 2026 | `raetsel/welt-4.md`, `01-konzept.md` |
+| Sitcom-Kochidee durch den Kommissar-Besuch ersetzt; deutsche TV-Formate, Autoplay-Countdown als Waffe von Dr. Werbepause. | Konzept angleichen, fehlende Anspielungen | Nov. 2026 | `01-konzept.md`, `raetsel/welt-4.md` |
+| Sackgassen geschlossen: Ohne Archivband lässt Pixel Max nicht in den Aufzug zum Studio (R12 braucht R7); Umschalten ist nur im Studio gesperrt, nach dem Fund steht Kanal 999 in der Programmzeitschrift; der Kommissar kehrt nach R3 beim nächsten Umschalten von selbst in die Savanne zurück; Stinkbombe und Panels gehen erst als Käsemann bzw. in fester Folge (Sperrzeilen zu R11). | Sonst unlösbare Spielstände | 9. Nov. 2026 | `raetsel/welt-4.md`, `skript/welt-4.md`, `welten/welt-4.yaml` |
+
+## Was bewusst bleibt
+
+| Entscheidung | Warum | Datum | Umgesetzt in |
+| --- | --- | --- | --- |
+| Unverändert bleiben: Einkaufslisten-Pointe mit allen Hinweisen, Pixel als zweite Figur mit Hilfesystem, Zeitfähre, Zeldinas Wohnungssuche, Code-Sicht mit Original-Kopie-Tausch, M.U.T.T.I. als Küchenmaschine, Sitcom-Tür im Spukhaus, die Hyäne, die nie lacht. | Stärken laut beiden Gutachten | Nov. 2026 | `01-konzept.md`, `raetsel/*` |
+| Wörtliche Zitate und Max-Zeilen aus Gutachten-Nr. 123 und 124 bleiben wie geschrieben. | Entscheidung Sebastian; mit der neuen Zitatregel konform | 8. Nov. 2026 | `skript/*`, `raetsel/*` |

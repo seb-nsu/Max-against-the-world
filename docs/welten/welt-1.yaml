@@ -1,0 +1,742 @@
+abschnitt: welt-1
+name: Schwurbelstein
+skript_praefix: W1
+
+# Szenen-Codes ohne eigenen Raum: WECH (Figurenwechsel, gilt überall), HINT (Hilfe-Pfote)
+sonder_codes: [WECH, HINT]
+# Sprecher ohne Figur: NAR (Erzähl- und Szenentext, Sprecher „–“ im Skript)
+sonder_sprecher: [NAR]
+
+raeume:
+  - id: dorfplatz
+    name: Dorfplatz Unterbrösel
+    skript_code: [ANK, DORF]   # ANK = Ankunftsszene auf dem Dorfplatz
+    groesse: 640x180
+    ausgaenge: [taverne, schmiede, zauberstabladen, klassenzimmer, trollbruecke, luftschloss]
+    erreichbar_ab: start
+    musik: w1_dorf
+    zustaende: [vor_R8, nach_R8]   # Bohnenranke als eigenes Sprite
+
+  - id: taverne
+    name: Taverne „Zum tänzelnden Pony-Express“
+    skript_code: [TAV]
+    groesse: 320x180
+    ausgaenge: [dorfplatz]
+    erreichbar_ab: start
+    musik: w1_taverne
+
+  - id: schmiede
+    name: Schmiede
+    skript_code: [SCHM]
+    groesse: 320x180
+    ausgaenge: [dorfplatz]
+    erreichbar_ab: start
+    musik: w1_dorf
+
+  - id: zauberstabladen
+    name: Zauberstab-Laden
+    skript_code: [STAB]
+    groesse: 320x180
+    ausgaenge: [dorfplatz]
+    erreichbar_ab: start
+    musik: w1_dorf
+
+  - id: klassenzimmer
+    name: Hoggelwarz, Klassenzimmer
+    skript_code: [HOGG]
+    groesse: 320x180
+    ausgaenge: [dorfplatz]
+    erreichbar_ab: start       # Prüfung erst mit Kochlöffel-Zauberstab (R2)
+    musik: w1_schule
+
+  - id: trollbruecke
+    name: Troll-Brücke
+    skript_code: [BRUE]
+    groesse: 320x180
+    ausgaenge: [dorfplatz, zauberwald, wasserschloss]
+    erreichbar_ab: start
+    musik: w1_dorf
+
+  - id: wasserschloss
+    name: Wasserschloss
+    skript_code: [WASS]
+    groesse: 320x180
+    ausgaenge: [trollbruecke]
+    erreichbar_ab: R4          # Gag-Szene ohne Rätsel
+    musik: w1_dorf
+
+  - id: zauberwald
+    name: Zauberwald
+    skript_code: [WALD]
+    groesse: 320x180
+    ausgaenge: [trollbruecke, bergwerk]
+    erreichbar_ab: R4
+    musik: w1_wald
+    zustaende: [niesrosen_zu, niesrosen_offen]   # Niesrosen als eigenes Sprite
+
+  - id: luftschloss
+    name: Luftschloss
+    skript_code: [LUFT]
+    groesse: 320x180
+    ausgaenge: [dorfplatz]     # über die Bohnenranke
+    erreichbar_ab: R8
+    musik: w1_luftschloss
+
+  - id: bergwerk
+    name: Goblin-Bergwerk
+    skript_code: [BERG]
+    groesse: 320x180
+    ausgaenge: [zauberwald, turmkeller]
+    erreichbar_ab: R4          # Streikposten frei betretbar; Rune-Tür erst nach R10
+    musik: w1_bergwerk
+    zustaende: [rune_tuer_zu, rune_tuer_offen]
+
+  - id: turmkeller
+    name: Dunkler Turm, Keller
+    skript_code: [TURM]
+    groesse: 320x180
+    ausgaenge: [bergwerk, abstellkammer_1, abstellkammern]   # Kammertür und Wendeltreppe erst nach R11b
+    erreichbar_ab: R10
+    musik: w1_turm
+    zustaende: [vor_R11b, nach_R11b]   # Kammertür offen mit Besen / Tür zu ohne Besen
+
+  - id: abstellkammer_1
+    name: Abstellkammer 1
+    skript_code: []            # Zeilen W1_TURM_*_0300 bis 0330 laufen unter dem Code TURM des Turmkellers
+    groesse: 320x180
+    ausgaenge: [turmkeller]
+    erreichbar_ab: R11b        # Ansehen-Raum ohne Rätsel
+    musik: w1_turm
+
+  - id: abstellkammern
+    name: Smaugis Abstellkammern
+    skript_code: [SMAU]        # oberste Kammer, Ebene 6; Kammern 2 bis 5 sind kein Raum
+    groesse: 320x180
+    ausgaenge: [turmkeller, thronsaal]   # Geheimtür: offen nach R11a, durchgehen nach R12
+    erreichbar_ab: R11b
+    musik: w1_turm
+    zustaende: [voll, aufgeraeumt]       # aufgeräumt nach R12
+
+  - id: thronsaal
+    name: Thronsaal
+    skript_code: [THRO]
+    groesse: 320x180
+    ausgaenge: [abstellkammern]
+    erreichbar_ab: R12         # zusätzlich R11a (Geheimtür)
+    musik: w1_turm
+
+figuren:
+  - id: max
+    name: Max
+    kuerzel: MAX
+    raum: [dorfplatz, taverne, schmiede, zauberstabladen, klassenzimmer, trollbruecke, wasserschloss, zauberwald, luftschloss, bergwerk, turmkeller, abstellkammer_1, abstellkammern, thronsaal]
+    groesse_px: 56             # Variante „Max als Pilz“ in grafik/welt-1.md
+    spielbar: true
+
+  - id: pixel
+    name: Pixel
+    kuerzel: PIX
+    raum: [dorfplatz, taverne, schmiede, zauberstabladen, klassenzimmer, trollbruecke, wasserschloss, zauberwald, luftschloss, bergwerk, turmkeller, abstellkammer_1, abstellkammern, thronsaal]
+    groesse_px: 18             # sitzend; Variante „Pixel als Ziege“ 20 px; spielbar ab R1a
+    spielbar: true
+
+  - id: opa
+    name: Opa
+    kuerzel: OPA
+    raum: []                   # nur Opas Zettel, W1_ANK_OPA_0070
+    groesse_px: 60             # Grafik in grafik/02-prolog-und-finale.md
+    spielbar: false
+
+  - id: toadi
+    name: Toadi
+    kuerzel: TOA
+    raum: [dorfplatz, klassenzimmer, wasserschloss, zauberwald, luftschloss, thronsaal]
+    groesse_px: 30
+    spielbar: false
+
+  - id: alwin
+    name: Alwin
+    kuerzel: ALW
+    raum: klassenzimmer
+    groesse_px: 62
+    spielbar: false
+
+  - id: zeldina
+    name: Zeldina
+    kuerzel: ZEL
+    raum: [luftschloss, bergwerk, turmkeller, abstellkammern, thronsaal]   # ab R9 Begleiterin überall
+    groesse_px: 58
+    spielbar: false
+
+  - id: gollo
+    name: Gollo
+    kuerzel: GOL
+    raum: taverne
+    groesse_px: 44
+    spielbar: false
+
+  - id: humbert
+    name: Humbert
+    kuerzel: HUM
+    raum: [taverne, abstellkammern]
+    groesse_px: 60
+    spielbar: false
+
+  - id: schmied
+    name: Schmied
+    kuerzel: SCH
+    raum: schmiede
+    groesse_px: 60
+    spielbar: false
+
+  - id: waldemar
+    name: Waldemar
+    kuerzel: WAL
+    raum: [trollbruecke, zauberwald]   # Zauberwald nur für R7
+    groesse_px: 80
+    spielbar: false
+
+  - id: stabmacher
+    name: Stabmacher
+    kuerzel: STA
+    raum: zauberstabladen
+    groesse_px: 58
+    spielbar: false
+
+  - id: rotkaeppchen
+    name: Rotkäppchen
+    kuerzel: ROT
+    raum: [zauberwald, dorfplatz]      # Dorfplatz nur bei der Lieferung (R3)
+    groesse_px: 48
+    spielbar: false
+
+  - id: maklerin
+    name: Maklerin
+    kuerzel: MAK
+    raum: luftschloss
+    groesse_px: 60
+    spielbar: false
+
+  - id: grimmzahn
+    name: Grimmzahn
+    kuerzel: GRI
+    raum: [bergwerk, turmkeller, abstellkammern]   # Turmkeller nur bei Weg B
+    groesse_px: 40
+    spielbar: false
+
+  - id: goblin_1
+    name: Goblin 1
+    kuerzel: GO1
+    raum: bergwerk
+    groesse_px: 34
+    spielbar: false
+
+  - id: goblin_2
+    name: Goblin 2
+    kuerzel: GO2
+    raum: bergwerk
+    groesse_px: 34
+    spielbar: false
+
+  - id: moderwort
+    name: Moderwort
+    kuerzel: MOD
+    raum: thronsaal
+    groesse_px: 60
+    spielbar: false
+
+  - id: smaugi
+    name: Smaugi
+    kuerzel: SMA
+    raum: abstellkammern
+    groesse_px: 120            # sitzend
+    spielbar: false
+
+  - id: minka
+    name: Minka
+    kuerzel: MIN
+    raum: taverne
+    groesse_px: 18
+    spielbar: false
+
+  - id: huhn
+    name: Huhn
+    kuerzel: HUH
+    raum: taverne
+    groesse_px: 14
+    spielbar: false
+
+  - id: schmiede_ziege
+    name: Schmiede-Ziege
+    kuerzel: ZIE
+    raum: [schmiede, dorfplatz, trollbruecke]   # folgt Max von R3 bis R4, danach wieder Schmiede
+    groesse_px: 28
+    spielbar: false
+
+  - id: xxl_ziege
+    name: XXL-Ziege
+    kuerzel: XXL
+    raum: [dorfplatz, trollbruecke]             # nach R4 grasend an der Brücke
+    groesse_px: 70
+    spielbar: false
+
+  - id: schwan
+    name: Schwan
+    kuerzel: SWA
+    raum: wasserschloss
+    groesse_px: 24
+    spielbar: false
+
+  - id: brunnen
+    name: Brunnen
+    kuerzel: BRU
+    raum: dorfplatz
+    groesse_px: 0              # Teil des Hintergrunds
+    spielbar: false
+
+  - id: grammophon
+    name: Grammophon
+    kuerzel: GRA
+    raum: trollbruecke
+    groesse_px: 0              # Deko-Sprite, keine Figurengrafik
+    spielbar: false
+
+  - id: spiegel
+    name: Spiegel
+    kuerzel: SPI
+    raum: luftschloss
+    groesse_px: 0              # Teil des Hintergrunds
+    spielbar: false
+
+  - id: geheimtuer
+    name: Geheimtür
+    kuerzel: TUE
+    raum: abstellkammern
+    groesse_px: 0              # Teil des Hintergrunds, offen als Sprite-Wechsel
+    spielbar: false
+
+  - id: zauberbesen
+    name: Zauberbesen
+    kuerzel: null              # spricht nicht; drei Stück
+    raum: [turmkeller, abstellkammer_1, abstellkammern]
+    groesse_px: 30
+    spielbar: false
+
+  - id: uebungsbesen
+    name: Übungsbesen
+    kuerzel: null              # spricht nicht
+    raum: klassenzimmer
+    groesse_px: 22
+    spielbar: false
+
+gegenstaende:
+  - id: thunfischdose
+    name: Thunfischdose
+    herkunft: prolog           # aus dem Prolog, Pflichtfach; Zustände besitzt prolog.yaml
+    zustaende: [offen]
+    verwendet_in: [R1c]
+    reist_mit: true
+    nahansicht: false
+
+  - id: notizbuch
+    name: Notizbuch
+    herkunft: prolog           # Pflichtfach
+    zustaende: [normal]
+    verwendet_in: [R4a, R6b, R11a]   # Satzung, Flaschenregeln, Passwort-Teile
+    reist_mit: true
+    nahansicht: false
+
+  - id: opas_zettel
+    name: Opas Zettel
+    herkunft: prolog           # von Opa in der Reisetasche, gelesen in W1_ANK_*
+    zustaende: [normal]
+    verwendet_in: []
+    ohne_verwendung: Ansehen und Notiz
+    reist_mit: false
+    nahansicht: false          # die Nahansicht gehört zum Prolog (prolog.yaml) und wird dort gezählt
+
+  - id: goldmuenze
+    name: Goldmünze
+    herkunft: R1c              # von Gollo
+    zustaende: [normal]
+    verwendet_in: [R5]
+    reist_mit: false
+    nahansicht: false
+
+  - id: kaesefondue
+    name: Käsefondue
+    herkunft: R1c              # von Humbert
+    zustaende: [normal]
+    verwendet_in: [R2]
+    reist_mit: false
+    nahansicht: false
+
+  - id: kochloeffel
+    name: Kochlöffel           # Inventarname bis R2; ab R2 (Zustand zauberstab) „Kochlöffel-Zauberstab“, so in welt-2.yaml und finale.yaml
+    herkunft: zauberstabladen
+    zustaende: [ohne_kaese, zauberstab]
+    verwendet_in: [R2, R6a, R13]   # R6a: Alwin beginnt die Prüfung nur damit
+    reist_mit: true            # Pflichtfach ab Rückkehr 1
+    nahansicht: false
+
+  - id: socke
+    name: Sortierende Socke    # nach R7 „Socke voller Pollen“
+    herkunft: R2               # vom Stabmacher
+    zustaende: [leer, voller_pollen]
+    verwendet_in: [R7, R13]
+    reist_mit: true
+    nahansicht: false
+
+  - id: ziegenfell_vorleger
+    name: Ziegenfell-Vorleger
+    herkunft: taverne
+    zustaende: [normal]        # auf Pixel: Figur-Variante „Pixel als Ziege“
+    verwendet_in: [R3, R4a]
+    reist_mit: true
+    nahansicht: false
+
+  - id: bestellzettel
+    name: Bestellzettel
+    herkunft: dorfplatz        # am Dorfbrett
+    zustaende: [normal]
+    verwendet_in: [R3]
+    reist_mit: false
+    nahansicht: false
+
+  - id: steckbrief
+    name: Moderworts Steckbrief
+    herkunft: dorfplatz        # am Dorfbrett
+    zustaende: [normal]
+    verwendet_in: [R9]
+    reist_mit: false
+    nahansicht: false          # normales Ansehen (W1_DORF_MAX_0180–0200), keine Nahansicht
+
+  - id: eimer
+    name: Eimer
+    herkunft: dorfplatz        # am Brunnen
+    zustaende: [leer, mit_wasser]
+    verwendet_in: [R4c, R8]
+    reist_mit: true
+    nahansicht: false
+
+  - id: krug
+    name: Krug                 # gefüllt „Ziegenmilch“
+    herkunft: schmiede
+    zustaende: [leer, mit_ziegenmilch]
+    verwendet_in: [R6a]
+    reist_mit: false
+    nahansicht: false
+
+  - id: ei
+    name: Ei
+    herkunft: huhn
+    zustaende: [normal]        # weißes Hühnerei, Icon aus grafik/02-prolog-und-finale.md
+    verwendet_in: [R6a]
+    reist_mit: false
+    nahansicht: false
+
+  - id: leuchtpilz
+    name: Leuchtpilz
+    herkunft: zauberwald
+    zustaende: [normal]
+    verwendet_in: [R6a]
+    reist_mit: false
+    nahansicht: false
+
+  - id: hinweiszettel
+    name: Alwins Hinweiszettel
+    herkunft: alwin
+    zustaende: [normal]
+    verwendet_in: [R6b]
+    reist_mit: false
+    nahansicht: true
+
+  - id: flasche
+    name: Fläschchen           # eins der sechs; richtig ist Flasche 3
+    herkunft: klassenzimmer
+    zustaende: [klein, gross]  # Flaschen 2 und 5 groß
+    verwendet_in: [R6b]
+    reist_mit: false
+    nahansicht: false
+
+  - id: leuchttrank
+    name: Leuchttrank
+    herkunft: R6b
+    zustaende: [normal]
+    verwendet_in: [R10a]
+    reist_mit: true            # einpackbar, wenn nach Weg B übrig
+    nahansicht: false
+
+  - id: zeugnis
+    name: Moderworts Zeugnis
+    herkunft: R6b
+    zustaende: [normal]
+    verwendet_in: [R11a]
+    reist_mit: true
+    nahansicht: true
+
+  - id: zauberbohne
+    name: Zauberbohne
+    herkunft: R5
+    zustaende: [normal]
+    verwendet_in: [R8]
+    reist_mit: false
+    nahansicht: false
+
+  - id: ketchup
+    name: Ketchup
+    herkunft: zauberwald       # am Lieferkarren, nach Rotkäppchens Erlaubnis
+    zustaende: [normal]
+    verwendet_in: [R10a]
+    reist_mit: true            # einpackbar, wenn nach Weg B übrig
+    nahansicht: false
+
+  - id: tarifvertrag
+    name: Tarifvertrag
+    herkunft: grimmzahn        # nur Weg A
+    zustaende: [leer, unterschrieben]
+    verwendet_in: [R10a]
+    reist_mit: false
+    nahansicht: false
+
+  - id: schwerter_buendel
+    name: Schwerter-Bündel
+    herkunft: abstellkammern
+    zustaende: [normal]
+    verwendet_in: [R12]
+    reist_mit: false
+    nahansicht: false
+
+  - id: fackel_buendel
+    name: Fackel-Bündel
+    herkunft: abstellkammern
+    zustaende: [normal]
+    verwendet_in: [R12]
+    reist_mit: false
+    nahansicht: false
+
+  - id: kronleuchter
+    name: Kronleuchter
+    herkunft: abstellkammern
+    zustaende: [normal]
+    verwendet_in: [R12]
+    reist_mit: false
+    nahansicht: false
+
+  - id: drachenei
+    name: Drachenei
+    herkunft: R12
+    zustaende: [normal]        # golden, geschuppt; auf dem Dachboden weißes Ei
+    verwendet_in: []           # Ziel der Welt, Abgabe in Zwischenspiel 1
+    ohne_verwendung: Artefakt, Opa legt es im Zwischenspiel in die Maschine
+    reist_mit: false
+    nahansicht: false
+
+nahansichten:                  # Nahansichten, die kein Gegenstand sind
+  - id: maerchen_satzung
+    name: Märchen-Satzung
+    raum: trollbruecke
+  - id: luftschloss_kritzelei
+    name: Kritzelei
+    raum: luftschloss
+
+raetsel:
+  - id: R1
+    name: Der Taverne-Coup
+    raum: taverne
+    benoetigt: [R1a, R1b, R1c]
+    ergibt: []
+    schalter: []               # gelöst, wenn alle Teilschritte gelöst sind
+    optional: false
+
+  - id: R1a
+    name: Minka
+    raum: taverne
+    benoetigt: []
+    ergibt: []
+    schalter: [W1_R01_A_GELOEST]   # schaltet den Figurenwechsel frei
+    optional: false
+
+  - id: R1b
+    name: Jahrgang Schicksalsberg
+    raum: taverne
+    benoetigt: []
+    ergibt: []
+    schalter: [W1_R01_B_GELOEST]
+    optional: false
+
+  - id: R1c
+    name: Das Rätselspiel
+    raum: taverne
+    benoetigt: [R1a, R1b, thunfischdose]
+    ergibt: [goldmuenze, kaesefondue]
+    schalter: [W1_R01_C_GELOEST]
+    optional: false
+
+  - id: R2
+    name: Der Zauberstab wählt den Zauberer
+    raum: zauberstabladen
+    benoetigt: [kochloeffel, kaesefondue]
+    ergibt: [socke]            # Kochlöffel wird zum Kochlöffel-Zauberstab
+    schalter: [W1_R02_GELOEST]
+    optional: false
+
+  - id: R3
+    name: Drei Ziegenböcke
+    raum: trollbruecke         # Ziegen aus Schmiede und Dorfplatz, Fell auf Pixel an der Brücke
+    benoetigt: [bestellzettel, ziegenfell_vorleger]
+    ergibt: []
+    schalter: [W1_R03_GELOEST, W1_ZIEGEN_FOLGEN]   # Begleiter-Schalter endet mit R4
+    optional: false
+
+  - id: R4
+    name: Das Märchen an der Troll-Brücke
+    raum: trollbruecke
+    benoetigt: [R4a, R4b, R4c]
+    ergibt: []
+    schalter: []               # gelöst, wenn alle Teilschritte gelöst sind
+    optional: false
+
+  - id: R4a
+    name: Die Reihenfolge
+    raum: trollbruecke
+    benoetigt: [R3, ziegenfell_vorleger]   # Pixel steht im Fell als kleinste Ziege
+    ergibt: []
+    schalter: [W1_R04_A_GELOEST]
+    optional: false
+
+  - id: R4b
+    name: Ziegisch
+    raum: trollbruecke
+    benoetigt: [R3]            # Sätze fallen, während die Ziegen in Reihenfolge auf der Brücke stehen
+    ergibt: []
+    schalter: [W1_R04_B_GELOEST]
+    optional: false
+
+  - id: R4c
+    name: Ins Wasser
+    raum: trollbruecke
+    benoetigt: [R4a, R4b, eimer]   # Eimer mit Wasser
+    ergibt: []                 # Eimer kommt leer zurück
+    schalter: [W1_R04_C_GELOEST]
+    optional: false
+
+  - id: R5
+    name: Der Brunnen der Wünsche
+    raum: dorfplatz
+    benoetigt: [goldmuenze]
+    ergibt: [zauberbohne]
+    schalter: [W1_R05_GELOEST]
+    optional: false
+
+  - id: R6
+    name: Die sechs Flaschen
+    raum: klassenzimmer
+    benoetigt: [R6a, R6b]
+    ergibt: []
+    schalter: []               # gelöst, wenn alle Teilschritte gelöst sind
+    optional: false
+
+  - id: R6a
+    name: Die Zutaten
+    raum: klassenzimmer
+    benoetigt: [R2, R4, kochloeffel, ei, krug, leuchtpilz]   # R4 für den Leuchtpilz im Zauberwald
+    ergibt: []
+    schalter: [W1_R06_A_GELOEST, W1_REZEPT_BEKANNT, W1_MELK_SCHWUR]   # Rezept bei W1_HOGG_ALW_0320, Schwur bei W1_SCHM_MAX_0460
+    optional: false
+
+  - id: R6b
+    name: Die Flaschenwahl
+    raum: klassenzimmer
+    benoetigt: [R6a, hinweiszettel, flasche]
+    ergibt: [leuchttrank, zeugnis]
+    schalter: [W1_R06_B_GELOEST]
+    optional: false
+
+  - id: R7
+    name: Die Niesrosen
+    raum: zauberwald
+    benoetigt: [R4, socke]
+    ergibt: []                 # Socke wird zu „Socke voller Pollen“
+    schalter: [W1_R07_GELOEST, W1_WALDEMAR_ABSPANN]
+    optional: false
+
+  - id: R8
+    name: Die Bohnenranke
+    raum: dorfplatz
+    benoetigt: [zauberbohne, eimer]   # Eimer mit Wasser
+    ergibt: []
+    schalter: [W1_R08_GELOEST]
+    optional: false
+
+  - id: R9
+    name: Prinzessin Zeldina
+    raum: luftschloss
+    benoetigt: [R8, steckbrief]
+    ergibt: []
+    schalter: [W1_R09_GELOEST, W1_ZELDINA_FOLGT]
+    optional: false
+
+  - id: R10
+    name: Die Goblin-Frage
+    raum: bergwerk
+    benoetigt: []              # R10a ODER R10b; danach Arbeitslied und offene Rune-Tür
+    ergibt: []
+    schalter: []               # gelöst mit W1_R10_A_GELOEST oder W1_R10_B_GELOEST
+    optional: false
+
+  - id: R10a
+    name: Weg A, Tarifvertrag
+    raum: bergwerk
+    benoetigt: [leuchttrank, ketchup, tarifvertrag]   # Grimmzahn gibt den leeren Vertrag, Max unterschreibt
+    ergibt: []
+    schalter: [W1_R10_A_GELOEST]   # = Goblin-Weg A
+    optional: true
+
+  - id: R10b
+    name: Weg B, Karriere
+    raum: bergwerk
+    benoetigt: [R9]
+    ergibt: []
+    schalter: [W1_R10_B_GELOEST, W1_GRIMMZAHN_FOLGT]   # = Goblin-Weg B
+    optional: true
+
+  - id: R11
+    name: Der Dunkle Turm
+    raum: turmkeller
+    benoetigt: [R11a, R11b]
+    ergibt: []
+    schalter: []               # gelöst, wenn alle Teilschritte gelöst sind
+    optional: false
+
+  - id: R11a
+    name: Das Passwort
+    raum: abstellkammern
+    benoetigt: [R11b, zeugnis, R8, R9, R10, notizbuch]   # R8: Kritzelei im Luftschloss
+    ergibt: []
+    schalter: [W1_R11_A_GELOEST]
+    optional: false
+
+  - id: R11b
+    name: Die Besen
+    raum: turmkeller
+    benoetigt: [R10]
+    ergibt: []
+    schalter: [W1_R11_B_GELOEST]
+    optional: false
+
+  - id: R12
+    name: Smaugi räumt auf
+    raum: abstellkammern
+    benoetigt: [R11b, R9, R10, schwerter_buendel, fackel_buendel, kronleuchter]
+    ergibt: [drachenei]
+    schalter: [W1_R12_GELOEST]
+    optional: false
+
+  - id: R13
+    name: Lord Moderwort
+    raum: thronsaal
+    benoetigt: [R11a, R12, R7, R9, socke, kochloeffel]
+    ergibt: []                 # Kochlöffel kommt zurück
+    schalter: [W1_R13_GELOEST]
+    optional: false
