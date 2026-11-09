@@ -1,0 +1,74 @@
+# Platzhalter-Layout Prolog für die Graubox (tools/godot_raeume.py).
+#
+# Nur Startwerte: Der Godot-Bau (addons/couch_quest_bau) setzt Rechtecke, Laufbereich und
+# Positionen ausschließlich beim ersten Anlegen eines Objekts. Danach gehören Umrisse und
+# Positionen der Szene in Godot und werden dort von Hand nachgezogen (03-produktion.md,
+# Arbeitsteilung). Grundlage für die Lage: grafik/02-prolog-und-finale.md (Motiv-Spalte).
+#
+# Koordinaten in Spielpixeln (320×180), Rechteck = [x, y, breite, hoehe],
+# gehe = Punkt, zu dem die Figur vor der Aktion läuft.
+# Schlüssel der Hotspots = Objekt-ID, die godot_raeume.py aus dem Auslöser des Skripts
+# ableitet („Ansehen: Ausgestopfter Fisch“ → ausgestopfter_fisch).
+
+wohnzimmer:
+  farbe: "#6b4f3f"
+  laufbereich: [[4, 138], [316, 138], [316, 178], [4, 178]]
+  marker:
+    start: [70, 150]              # Max liegt auf dem Sofa (Szene 1)
+    von_treppenhaus: [292, 158]
+  hotspots:
+    sofa: {rect: [32, 96, 92, 46], gehe: [80, 150]}
+    leerer_platz_auf_dem_couchtisch: {rect: [168, 120, 22, 10], gehe: [175, 150]}
+    teetasse: {rect: [148, 116, 12, 12], gehe: [150, 150]}
+    fernseher: {rect: [218, 78, 52, 62], gehe: [240, 150]}
+    familienfoto: {rect: [128, 34, 44, 34], gehe: [150, 150]}
+  ausgaenge:
+    treppenhaus: {rect: [292, 40, 26, 98], gehe: [300, 158]}
+
+treppenhaus:
+  farbe: "#584536"
+  laufbereich: [[4, 150], [120, 150], [296, 46], [316, 46], [316, 60], [140, 178], [4, 178]]
+  marker:
+    start: [60, 164]
+    von_wohnzimmer: [40, 164]
+    von_dachboden: [292, 54]
+  hotspots:
+    hut_am_haken: {rect: [40, 54, 20, 18], gehe: [52, 160]}
+    fenster: {rect: [140, 34, 34, 44], gehe: [150, 110]}
+    treppe: {rect: [120, 60, 140, 90], gehe: [170, 120]}
+  ausgaenge:
+    wohnzimmer: {rect: [2, 44, 30, 106], gehe: [20, 164]}
+    dachboden: {rect: [270, 0, 48, 40], gehe: [298, 52]}
+
+dachboden:
+  farbe: "#7a5c43"
+  laufbereich: [[4, 146], [316, 146], [316, 178], [4, 178]]
+  marker:
+    start: [250, 166]
+    von_treppenhaus: [250, 166]   # durch die Bodenluke vorne rechts
+    fernseher: [160, 158]         # vor dem Zapp-O-Mat
+  figuren:
+    pixel: [104, 152]             # schläft auf dem Verlängerungskabel
+    opa: [206, 160]
+  props:
+    zapp_o_mat: {rect: [130, 82, 48, 62], gehe: [154, 158], item: null}
+    thunfischdose: {rect: [62, 132, 10, 8], gehe: [70, 158]}
+    dosenoeffner: {rect: [76, 132, 10, 8], gehe: [80, 158]}
+    drahtkleiderbuegel: {rect: [282, 66, 22, 10], gehe: [282, 160]}
+  hotspots:
+    drehknopf: {rect: [180, 96, 12, 14], gehe: [176, 158], name: Drehknopf}
+    werkzeugkiste: {rect: [56, 128, 36, 18], gehe: [74, 158]}
+    werkbank: {rect: [30, 92, 80, 34], gehe: [70, 158]}
+    kleiderschrank: {rect: [270, 40, 46, 104], gehe: [280, 160]}
+    kalender: {rect: [214, 48, 30, 30], gehe: [228, 160]}
+    ohrensessel: {rect: [208, 96, 48, 46], gehe: [232, 160]}
+    dachfenster: {rect: [40, 18, 30, 26], gehe: [60, 158]}
+    poster: {rect: [88, 30, 30, 34], gehe: [100, 158]}
+    ausgestopfter_fisch: {rect: [184, 40, 26, 14], gehe: [196, 158]}
+    kochbuch: {rect: [34, 64, 14, 12], gehe: [50, 158]}
+    toaster: {rect: [52, 80, 14, 12], gehe: [58, 158]}
+    plattenspieler: {rect: [2, 98, 26, 16], gehe: [20, 158]}
+    kiste_mit_fernbedienungen: {rect: [2, 118, 26, 24], gehe: [20, 158]}
+    opas_staubsauger_prototyp: {rect: [196, 118, 12, 26], gehe: [200, 160]}
+  ausgaenge:
+    treppenhaus: {rect: [232, 160, 40, 18], gehe: [250, 166], name: Bodenluke, id: bodenluke}
