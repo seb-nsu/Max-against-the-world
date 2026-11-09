@@ -57,7 +57,7 @@ Was nicht mitreist: Die Pastillen werden sofort geschluckt, der Farbcode-Zettel 
 
 **Wie der Spieler die Regel lernt:** Die Verwandlung wird in drei Schritten eingeführt, bevor ein Rätsel sie braucht.
 
-1. **Erleben:** Beim Pastillenautomaten steckt Morphäus, der nach Rätsel 2 am Gasseneingang wartet, Max direkt vor der Pastillenwahl eine Papiertüte Kekse zu, „eine Probe von einer alten Dame, die alles vorher weiß“. So hat Max beim ersten Sprung durch eine Telefonzelle in jedem Fall Omas Kekse dabei, egal ob er die Orakel-Oma (4) schon besucht hat. In der Realität greift er in die Tasche und hat Hundekuchen in der Hand. Pixel ist entsetzt, Max ratlos.
+1. **Erleben:** Beim Pastillenautomaten steckt Morphäus, der nach Rätsel 2 am Gasseneingang wartet, Max direkt vor der Pastillenwahl eine Papiertüte Kekse zu (Zwischensequenz; die Pastillen sind erst danach anklickbar), „eine Probe von einer alten Dame, die alles vorher weiß“. So hat Max beim ersten Sprung durch eine Telefonzelle in jedem Fall Omas Kekse dabei, egal ob er die Orakel-Oma (4) schon besucht hat. In der Realität greift er in die Tasche und hat Hundekuchen in der Hand. Pixel ist entsetzt, Max ratlos.
 2. **Erklären:** Kabel-Kalle lacht und erklärt die Regel im Widerstand in zwei Sätzen: „Die Simulation übersetzt alles. Was du mitnimmst, kommt als das an, was es auf der anderen Seite wäre.“ Danach steht die Regel in Max' Notizbuch.
 3. **Ausprobieren:** Max springt zurück, und aus dem Hundekuchen werden wieder Kekse. Ab jetzt kommentiert Max jede Verwandlung beim Ansehen im Inventar, etwa: „In der Matrix eine Rezeptkarte. Hier ein Glückskeks. Logisch. Irgendwie.“
 
