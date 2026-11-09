@@ -58,7 +58,23 @@ Alle sechzehn Ideen sind in `03-produktion.md` (Abschnitt Automatisierung) mit N
 | A10 | Grafik-Batch: Prompt-Tabelle, Retro-Diffusion-API, Palettize, Zuschnitt, Protokoll | 3, nach S16 |
 | A11 | KI-Protokoll automatisch als CSV | 1 |
 | A12 | Englische Fassung per Claude aus der CSV mit Glossar | Technik früh, Inhalt 5 |
-| A13 | Konsistenz-Check der Dokumente (läuft als `tools/pruefen.py`; offen nur die Einbindung in A7) | 1 |
-| A14 | Hinweis-Datei aus Skript und Rätseltabelle erzeugen | 2 |
+| A13 | Konsistenz-Check der Dokumente (läuft als `tools/pruefen.py`, in A7 eingebunden) | erledigt |
+| A14 | Hinweis-Datei aus Skript und Rätseltabelle erzeugen (läuft als `tools/spieldaten.py`) | erledigt |
 | A15 | Playtest-Auswertung per Claude | 3 |
 | A16 | Screenshot-Regressionstest headless | 4 |
+
+## Funde aus der Prolog-Graubox (9. November 2026)
+
+Beim Bau der Graubox fielen Lücken in den Regeln auf. Die Graubox setzt sie vorläufig wie angegeben um; entschieden und in die Besitzer-Datei eingetragen werden sie spätestens beim Vertical Slice.
+
+| Nr. | Was offen ist | Vorläufige Umsetzung | Besitzer-Datei |
+| --- | --- | --- | --- |
+| G1 | Kein ID-Schema für Objekt-, Raum- und Zielnamen in der UI | `UI_OBJ_*`, `UI_RAUM_*`, `UI_ZIEL_<Rätsel>` in `uebersetzung/ui.csv` | `05-spielsysteme.md` |
+| G2 | Prolog hat keine Hinweiszeile „nichts offen“ | Pfote bleibt nach P3 stumm | `skript/prolog.md` |
+| G3 | Gegenstände ohne eigene Ansehen-Zeile | Nehmen-Zeile bzw. Ersatzzeile | `skript/prolog.md` |
+| G4 | Bedienung „Pixel als Gegenstand benutzen“ und „Gegenstand im Inventar benutzen“ fehlt | Klick aufs Porträt macht Pixel zum Gegenstand; ausgewählten Gegenstand auf sich selbst klicken | `05-spielsysteme.md` |
+| G5 | Bodenluke vor P3 (Zeile 1000): Ansehen oder Benutzen? | beides | `skript/prolog.md` |
+| G6 | Option „Opa, nach Kalender“ (0640) fehlt im Gesprächsbaum | ergänzt, sichtbar nach Nahansicht Kalender bis P3 | `skript/prolog.md` |
+| G7 | Regel für Hilfsschalter außerhalb der Welt-Tabelle (z. B. `P0_SCHNEE_GESEHEN`) | Präfix des Abschnitts, nur im Code | `05-spielsysteme.md`, `welten/README.md` |
+| G8 | Reisen Thunfischdose (leer) und Dosenöffner nach dem Prolog mit? | wie Tabelle: beide `reist_mit: true` | `welten/prolog.yaml` |
+

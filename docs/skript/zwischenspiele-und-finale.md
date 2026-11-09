@@ -396,7 +396,7 @@ Vier Schritte, die in jeder Reihenfolge begonnen, aber nur in einer beendet werd
 
 ## 7b. Finale: Hinweise der Hilfe-Pfote (FI\_HINT)
 
-Drei Stufen je Schritt nach dem Hinweissystem (Spielsysteme). Schritt 0 ist die Luke in Stufe 1, Schritte A bis D gehören zu Abschnitt 7. Pixel spricht hier normal, er steht neben Max. Datei hints\_fi.tres: FI\_R01\_0 bis FI\_R01\_D.
+Drei Stufen je Schritt nach dem Hinweissystem (Spielsysteme). Schritt 0 ist die Luke in Stufe 1, Schritte A bis D gehören zu Abschnitt 7. Pixel spricht hier normal, er steht neben Max. Datei game/daten/hinweise/finale.json: FI\_R01\_0 bis FI\_R01\_D.
 
 | ID | Sprecher | Text | Auslöser |
 | --- | --- | --- | --- |

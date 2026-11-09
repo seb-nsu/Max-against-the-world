@@ -193,7 +193,7 @@ Pixel und Opa kommentieren ungefragt, wenn der Spieler 45 Sekunden nichts tut. Z
 
 ## 8c. Hinweise der Hilfe-Pfote (P0\_HINT)
 
-Ab P1 gibt Pixel die Hinweise über die Pfote (P1 selbst über Opa, Abschnitt 2b). Schema wie in Welt 1: P0\_HINT\_PIX\_RRSK, RR Rätselnummer, S Stufe, K Teilschritt (0). Datei hints\_p0.tres.
+Ab P1 gibt Pixel die Hinweise über die Pfote (P1 selbst über Opa, Abschnitt 2b). Schema wie in Welt 1: P0\_HINT\_PIX\_RRSK, RR Rätselnummer, S Stufe, K Teilschritt (0). Datei game/daten/hinweise/prolog.json.
 
 | ID | Sprecher | Text | Auslöser |
 | --- | --- | --- | --- |

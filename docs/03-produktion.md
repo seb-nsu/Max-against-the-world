@@ -132,7 +132,7 @@ Sechzehn Ideen aus dem Gutachten vom 8. November 2026 (A1 bis A16), mit Nutzen, 
 | A11 | KI-Protokoll automatisch: jedes Werkzeug-Skript (A6, A10) schreibt seine Zeile in eine CSV, Export für das Steam-Formular | hoch | 0,5 | niedrig | 1 | Spalten wie unter System 2; Nacharbeit und Ähnlichkeitsprüfung bleiben Handeinträge |
 | A12 | Englische Fassung: EN-Spalte per Claude aus der CSV mit Kontext (Art, Auslöser, Regie), Längenprüfung in EN, Eigennamen-Glossar (Spielsysteme) | hoch | 1 plus Übersetzungsläufe | mittel (Wortspiele) | Technik früh, Inhalt in 5 | Englische Fassung fest beschlossen; Muttersprachler prüft die Witze |
 | A13 | Konsistenz-Check der Dokumente: Abhängigkeiten, Sackgassen, Verweise | mittel | 1 | niedrig | 1 | Läuft als `tools/pruefen.py` (siehe oben) |
-| A14 | Hinweis-Datei (`hints_wX.tres`) aus Skript und Rätseltabelle erzeugen statt von Hand pflegen | mittel | 1 | niedrig | 2 | Hält Hinweise, Notizbuch-Ziele und Schalter gleich |
+| A14 | Hinweis-Datei (`game/daten/hinweise/<abschnitt>.json`, erzeugt von `tools/spieldaten.py`) aus Skript und Rätseltabelle erzeugen statt von Hand pflegen | mittel | 1 | niedrig | 2 | Hält Hinweise, Notizbuch-Ziele und Schalter gleich |
 | A15 | Playtest-Auswertung per Claude: Telemetrie-JSON plus Beobachtungsbogen → Bericht je Rätsel mit Vorschlag | mittel | 0,5 | niedrig | 3 | Erst sinnvoll, wenn A9 Daten liefert |
 | A16 | Screenshot-Regressionstest: Headless-Build rendert jeden Raum mit Max an fester Position und vergleicht mit einer Referenz (Laufbereich, Größe, Palette) | niedrig bis mittel | 1 | niedrig | 4 | Erst mit mehreren Agenten (A5) nötig |
 
