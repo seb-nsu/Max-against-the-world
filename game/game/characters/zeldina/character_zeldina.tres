@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://b36xoxb6mrfhu"]
+
+[ext_resource type="Script" path="res://game/characters/zeldina/character_zeldina_state.gd" id="1_8ol21"]
+
+[resource]
+resource_name = "Zeldina"
+script = ExtResource("1_8ol21")
+script_name = "Zeldina"
+scene = "res://game/characters/zeldina/character_zeldina.tscn"

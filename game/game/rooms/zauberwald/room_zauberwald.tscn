@@ -1,16 +1,19 @@
 [gd_scene format=3 uid="uid://by8fib73bpswq"]
 
-[ext_resource type="Script" path="res://game/rooms/zauberwald/room_zauberwald.gd" id="1_s28kt"]
+[ext_resource type="Script" uid="uid://dthwmitq7tjbk" path="res://game/rooms/zauberwald/room_zauberwald.gd" id="1_s28kt"]
 [ext_resource type="PackedScene" uid="uid://mfr8gl88tmjo" path="res://game/rooms/zauberwald/walkable_areas/boden/walkable_area_boden.tscn" id="2_6aehq"]
 [ext_resource type="PackedScene" uid="uid://bnj7o4osxmt8u" path="res://game/rooms/zauberwald/props/background/prop_background.tscn" id="3_ywgqv"]
 [ext_resource type="Texture2D" uid="uid://c0cqc3wi5wicy" path="res://grafik/platzhalter/raum_zauberwald.png" id="4_psgbp"]
 [ext_resource type="PackedScene" uid="uid://cl1aaoa6ta47q" path="res://game/rooms/zauberwald/hotspots/riesenpilze/hotspot_riesenpilze.tscn" id="5_0vtfd"]
+[ext_resource type="PackedScene" uid="uid://x228j5q87xfj" path="res://game/rooms/zauberwald/props/leuchtpilz/prop_leuchtpilz.tscn" id="5_4eibb"]
 [ext_resource type="PackedScene" uid="uid://drlul06uhpfsg" path="res://game/rooms/zauberwald/hotspots/leuchtpilze/hotspot_leuchtpilze.tscn" id="6_4eibb"]
+[ext_resource type="Texture2D" uid="uid://bbhv20oof02ek" path="res://grafik/platzhalter/prop_leuchtpilz.png" id="6_ephey"]
+[ext_resource type="PackedScene" uid="uid://ddbw07841f1gr" path="res://game/rooms/zauberwald/props/ketchup/prop_ketchup.tscn" id="7_1qs3w"]
 [ext_resource type="PackedScene" uid="uid://bp6jnfx4tsrbn" path="res://game/rooms/zauberwald/hotspots/niesrosen/hotspot_niesrosen.tscn" id="7_ephey"]
 [ext_resource type="PackedScene" uid="uid://chp0ldddlchcj" path="res://game/rooms/zauberwald/hotspots/kuerbisturm_und_glasschuh/hotspot_kuerbisturm_und_glasschuh.tscn" id="8_1qs3w"]
+[ext_resource type="Texture2D" uid="uid://cs4cqn5hdch0h" path="res://grafik/platzhalter/prop_ketchup.png" id="8_xpnqd"]
 [ext_resource type="PackedScene" uid="uid://c3t4tnm015igw" path="res://game/rooms/zauberwald/hotspots/gluehwuermchen/hotspot_gluehwuermchen.tscn" id="9_xpnqd"]
 [ext_resource type="PackedScene" uid="uid://dmy121s41x6hf" path="res://game/rooms/zauberwald/hotspots/lieferkarren/hotspot_lieferkarren.tscn" id="10_sd1o6"]
-[ext_resource type="PackedScene" uid="uid://dkvn0whjbv3ss" path="res://game/rooms/zauberwald/hotspots/ketchup_am_karren/hotspot_ketchup_am_karren.tscn" id="11_cfwd8"]
 [ext_resource type="PackedScene" uid="uid://be4esqdugvem8" path="res://game/rooms/zauberwald/hotspots/baeume/hotspot_baeume.tscn" id="12_iwu1b"]
 [ext_resource type="PackedScene" uid="uid://de5k3fotmrvdc" path="res://game/rooms/zauberwald/hotspots/ausgang_trollbruecke/hotspot_ausgang_trollbruecke.tscn" id="13_fnfak"]
 [ext_resource type="PackedScene" uid="uid://bki1h8u4lkcn7" path="res://game/rooms/zauberwald/hotspots/stolleneingang/hotspot_stolleneingang.tscn" id="14_m7jyd"]
@@ -28,7 +31,6 @@ height = 180
 [node name="WalkableAreas" type="Node2D" parent="." unique_id=848392733]
 
 [node name="Boden" parent="WalkableAreas" unique_id=62137990 instance=ExtResource("2_6aehq")]
-interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(4, 140, 316, 140, 316, 178, 4, 178)])
 
 [node name="Props" type="Node2D" parent="." unique_id=1605330966]
 
@@ -36,6 +38,20 @@ interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(4, 140, 316,
 position = Vector2(160, 90)
 texture = ExtResource("4_psgbp")
 description = "UI_RAUM_ZAUBERWALD"
+
+[node name="Leuchtpilz" parent="Props" unique_id=851967665 instance=ExtResource("5_4eibb")]
+position = Vector2(40, 135)
+texture = ExtResource("6_ephey")
+description = "UI_OBJ_LEUCHTPILZ"
+baseline = 3
+walk_to_point = Vector2(4, 21)
+
+[node name="Ketchup" parent="Props" unique_id=34018036 instance=ExtResource("7_1qs3w")]
+position = Vector2(253, 122)
+texture = ExtResource("8_xpnqd")
+description = "UI_OBJ_KETCHUP"
+baseline = 6
+walk_to_point = Vector2(-9, 32)
 
 [node name="Hotspots" type="Node2D" parent="." unique_id=1059338685]
 
@@ -74,12 +90,6 @@ position = Vector2(220, 125)
 description = "UI_OBJ_LIEFERKARREN"
 baseline = 15
 walk_to_point = Vector2(0, 29)
-
-[node name="KetchupAmKarren" parent="Hotspots" unique_id=405937298 instance=ExtResource("11_cfwd8")]
-position = Vector2(244, 123)
-description = "UI_OBJ_KETCHUP_AM_KARREN"
-baseline = 7
-walk_to_point = Vector2(-8, 31)
 
 [node name="Baeume" parent="Hotspots" unique_id=829765896 instance=ExtResource("12_iwu1b")]
 position = Vector2(115, 70)

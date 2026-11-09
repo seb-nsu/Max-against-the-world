@@ -66,6 +66,8 @@ flowchart TD
   R2 -->|"Sortierende Socke"| R7
   R5 -->|"Zauberbohne"| R8
   R8 --> R9
+  R10a -.-> R10
+  R10b -.-> R10
   R6b -->|"Leuchttrank"| R10a
   R9 --> R10b
   R11a --> R11

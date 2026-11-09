@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bis5xv17shpn2"]
 
-[ext_resource type="Script" path="res://game/rooms/klassenzimmer/room_klassenzimmer.gd" id="1_ogxph"]
+[ext_resource type="Script" uid="uid://bb4i4ocicuarh" path="res://game/rooms/klassenzimmer/room_klassenzimmer.gd" id="1_ogxph"]
 [ext_resource type="PackedScene" uid="uid://ot5ssb0y4qdw" path="res://game/rooms/klassenzimmer/walkable_areas/boden/walkable_area_boden.tscn" id="2_ir30o"]
 [ext_resource type="PackedScene" uid="uid://g76jji813rjm" path="res://game/rooms/klassenzimmer/props/background/prop_background.tscn" id="3_1nkpi"]
 [ext_resource type="Texture2D" uid="uid://bbleegkg3jj11" path="res://grafik/platzhalter/raum_klassenzimmer.png" id="4_miybi"]
@@ -12,10 +12,16 @@
 [ext_resource type="PackedScene" uid="uid://djncq3208aydk" path="res://game/rooms/klassenzimmer/hotspots/besen_im_schrank/hotspot_besen_im_schrank.tscn" id="10_whayx"]
 [ext_resource type="PackedScene" uid="uid://t8jiyguw2wl4" path="res://game/rooms/klassenzimmer/hotspots/fenster/hotspot_fenster.tscn" id="11_eaurd"]
 [ext_resource type="PackedScene" uid="uid://i686yl1h2h3b" path="res://game/rooms/klassenzimmer/hotspots/ausgang_dorfplatz/hotspot_ausgang_dorfplatz.tscn" id="12_vuw6j"]
+[ext_resource type="PackedScene" uid="uid://sb7p1aictw22" path="res://game/rooms/klassenzimmer/hotspots/flasche_1/hotspot_flasche_1.tscn" id="13_7txcd"]
 [ext_resource type="PackedScene" uid="uid://cse5uamorkfc6" path="res://game/rooms/klassenzimmer/markers/start/marker_start.tscn" id="13_jkdk0"]
 [ext_resource type="PackedScene" uid="uid://cbsp03i3xt1i" path="res://game/rooms/klassenzimmer/markers/von_dorfplatz/marker_von_dorfplatz.tscn" id="14_k7s42"]
+[ext_resource type="PackedScene" uid="uid://dutr8pqm5lvxt" path="res://game/rooms/klassenzimmer/hotspots/flasche_2/hotspot_flasche_2.tscn" id="14_spsnj"]
 [ext_resource type="PackedScene" uid="uid://b6qkvihudac2p" path="res://game/characters/alwin/character_alwin.tscn" id="15_ti30s"]
+[ext_resource type="PackedScene" uid="uid://cpeme56bi2s54" path="res://game/rooms/klassenzimmer/hotspots/flasche_3/hotspot_flasche_3.tscn" id="15_whayx"]
+[ext_resource type="PackedScene" uid="uid://c2vpg0spps8e5" path="res://game/rooms/klassenzimmer/hotspots/flasche_4/hotspot_flasche_4.tscn" id="16_eaurd"]
 [ext_resource type="PackedScene" uid="uid://cpjd1c4lcm6c6" path="res://game/characters/toadi/character_toadi.tscn" id="16_skdtx"]
+[ext_resource type="PackedScene" uid="uid://duo4rmr7b3dbd" path="res://game/rooms/klassenzimmer/hotspots/flasche_5/hotspot_flasche_5.tscn" id="17_vuw6j"]
+[ext_resource type="PackedScene" uid="uid://bxctiketlbt7v" path="res://game/rooms/klassenzimmer/hotspots/flasche_6/hotspot_flasche_6.tscn" id="18_jkdk0"]
 
 [node name="RoomKlassenzimmer" type="Node2D" unique_id=351789778]
 script = ExtResource("1_ogxph")
@@ -26,7 +32,6 @@ height = 180
 [node name="WalkableAreas" type="Node2D" parent="." unique_id=886921526]
 
 [node name="Boden" parent="WalkableAreas" unique_id=396300271 instance=ExtResource("2_ir30o")]
-interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(4, 140, 316, 140, 316, 178, 4, 178)])
 
 [node name="Props" type="Node2D" parent="." unique_id=861852232]
 
@@ -85,6 +90,42 @@ description = "UI_RAUM_DORFPLATZ"
 baseline = 40
 walk_to_point = Vector2(2, 60)
 cursor = 9
+
+[node name="Flasche1" parent="Hotspots" unique_id=1792382325 instance=ExtResource("13_7txcd")]
+position = Vector2(216, 84)
+description = "UI_OBJ_FLASCHE_1"
+baseline = 8
+walk_to_point = Vector2(0, 68)
+
+[node name="Flasche2" parent="Hotspots" unique_id=297606360 instance=ExtResource("14_spsnj")]
+position = Vector2(227, 81)
+description = "UI_OBJ_FLASCHE_2"
+baseline = 11
+walk_to_point = Vector2(-1, 71)
+
+[node name="Flasche3" parent="Hotspots" unique_id=1871642279 instance=ExtResource("15_whayx")]
+position = Vector2(238, 84)
+description = "UI_OBJ_FLASCHE_3"
+baseline = 8
+walk_to_point = Vector2(0, 68)
+
+[node name="Flasche4" parent="Hotspots" unique_id=872663849 instance=ExtResource("16_eaurd")]
+position = Vector2(248, 84)
+description = "UI_OBJ_FLASCHE_4"
+baseline = 8
+walk_to_point = Vector2(0, 68)
+
+[node name="Flasche5" parent="Hotspots" unique_id=1644012170 instance=ExtResource("17_vuw6j")]
+position = Vector2(259, 81)
+description = "UI_OBJ_FLASCHE_5"
+baseline = 11
+walk_to_point = Vector2(-1, 71)
+
+[node name="Flasche6" parent="Hotspots" unique_id=343824248 instance=ExtResource("18_jkdk0")]
+position = Vector2(270, 84)
+description = "UI_OBJ_FLASCHE_6"
+baseline = 8
+walk_to_point = Vector2(0, 68)
 
 [node name="Regions" type="Node2D" parent="." unique_id=703247222]
 

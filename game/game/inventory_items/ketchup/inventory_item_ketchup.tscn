@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://dqyl7sagou7wo"]
+
+[ext_resource type="Script" path="res://game/inventory_items/ketchup/inventory_item_ketchup.gd" id="1_eqgbq"]
+[ext_resource type="Texture2D" uid="uid://ffo7cyqe5qlj" path="res://grafik/platzhalter/gegenstand_ketchup.png" id="1_ukm32"]
+
+[node name="ItemKetchup" type="TextureRect" unique_id=1390477301]
+texture_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 4
+mouse_filter = 0
+texture = ExtResource("1_ukm32")
+stretch_mode = 5
+script = ExtResource("1_eqgbq")
+script_name = "Ketchup"
+description = "UI_OBJ_KETCHUP"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=160738081]

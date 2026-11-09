@@ -1,7 +1,8 @@
 {
  "abschnitt": "welt-1",
  "sonderzeilen": {
-  "nichts_offen": "W1_HINT_PIX_0010"
+  "nichts_offen": "W1_HINT_PIX_0010",
+  "wartezeile": "W1_HINT_PIX_9995"
  },
  "schritte": [
   {
@@ -504,7 +505,10 @@
    "ziel": "Die Goblin-Frage",
    "raum": "bergwerk",
    "offen_wenn": [],
-   "offen_wenn_eins_von": [],
+   "offen_wenn_eins_von": [
+    "R10a",
+    "R10b"
+   ],
    "geloest_schalter": [],
    "objekte": [],
    "optional": false,

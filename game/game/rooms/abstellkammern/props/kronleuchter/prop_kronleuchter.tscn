@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://c6p7ee7n0a411"]
+
+[ext_resource type="Script" path="res://game/rooms/abstellkammern/props/kronleuchter/prop_kronleuchter.gd" id="1_xfipp"]
+
+[node name="Kronleuchter" type="Area2D" unique_id=87142605]
+script = ExtResource("1_xfipp")
+script_name = "Kronleuchter"
+description = "Kronleuchter"
+cursor = 1
+interaction_polygon = PackedVector2Array(-15, -12, 15, -12, 15, 12, -15, 12)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1052065862]
+texture_filter = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1604797603]
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=799692266]
+visible = false
+modulate = Color(1, 1, 0, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+
+[node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=259972171]
+visible = false
+affect_navigation_mesh = true
+carve_navigation_mesh = true

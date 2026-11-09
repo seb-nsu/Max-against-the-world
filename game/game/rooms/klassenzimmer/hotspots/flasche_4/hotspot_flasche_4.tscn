@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://c2vpg0spps8e5"]
+
+[ext_resource type="Script" path="res://game/rooms/klassenzimmer/hotspots/flasche_4/hotspot_flasche_4.gd" id="1_8gn5m"]
+
+[node name="Flasche4" type="Area2D" unique_id=872663849]
+script = ExtResource("1_8gn5m")
+script_name = "Flasche4"
+description = "Flasche 4"
+cursor = 1
+interaction_polygon = PackedVector2Array(-4, -8, 4, -8, 4, 8, -4, 8)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=134609315]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

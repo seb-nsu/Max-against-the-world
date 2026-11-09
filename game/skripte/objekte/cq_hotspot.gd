@@ -25,7 +25,10 @@ func objekt_id() -> String:
 ## Die Ansehen-Zeile sagen; liefert die gesagte Zeilen-ID ("" bei Ersatzzeile).
 func ansehen() -> String:
 	Hinweise.objekt_beruehrt(objekt_id())
-	return await Spiel.ansehen(bauplan().get("ansehen", []), "%s/%s" % [room.script_name if is_instance_valid(room) else "", script_name])
+	var eintraege: Array = bauplan().get("ansehen", [])
+	if room is CQRaum:
+		eintraege = eintraege + room.ansehen_zusatz(objekt_id())
+	return await Spiel.ansehen(eintraege, "%s/%s" % [room.script_name if is_instance_valid(room) else "", script_name])
 
 
 func on_click() -> void:

@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://cgwwnrjfd1yq"]
+
+[ext_resource type="Script" path="res://game/inventory_items/leuchttrank/inventory_item_leuchttrank_state.gd" id="1_lr86h"]
+
+[resource]
+resource_name = "Leuchttrank"
+script = ExtResource("1_lr86h")
+script_name = "Leuchttrank"
+scene = "res://game/inventory_items/leuchttrank/inventory_item_leuchttrank.tscn"

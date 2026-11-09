@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://qk5fbl3dbb4h"]
+
+[ext_resource type="Script" path="res://game/rooms/thronsaal/hotspots/ausgang_abstellkammern/hotspot_ausgang_abstellkammern.gd" id="1_2u776"]
+
+[node name="AusgangAbstellkammern" type="Area2D" unique_id=2006339862]
+script = ExtResource("1_2u776")
+script_name = "AusgangAbstellkammern"
+description = "Ausgang Abstellkammern"
+cursor = 1
+interaction_polygon = PackedVector2Array(-10, -40, 10, -40, 10, 40, -10, 40)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1106851961]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://bnka0bbrhk68x"]
+
+[ext_resource type="Texture2D" uid="uid://cni41i4llxe4s" path="res://grafik/platzhalter/gegenstand_fackel_buendel.png" id="1_1e527"]
+[ext_resource type="Script" path="res://game/inventory_items/fackel_buendel/inventory_item_fackel_buendel.gd" id="1_beeqg"]
+
+[node name="ItemFackelBuendel" type="TextureRect" unique_id=2108778596]
+texture_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 4
+mouse_filter = 0
+texture = ExtResource("1_1e527")
+stretch_mode = 5
+script = ExtResource("1_beeqg")
+script_name = "FackelBuendel"
+description = "UI_OBJ_FACKEL_BUENDEL"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=632277369]

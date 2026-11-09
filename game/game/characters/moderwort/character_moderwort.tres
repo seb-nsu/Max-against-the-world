@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://efq6i4tvworf"]
+
+[ext_resource type="Script" path="res://game/characters/moderwort/character_moderwort_state.gd" id="1_3cxc4"]
+
+[resource]
+resource_name = "Moderwort"
+script = ExtResource("1_3cxc4")
+script_name = "Moderwort"
+scene = "res://game/characters/moderwort/character_moderwort.tscn"

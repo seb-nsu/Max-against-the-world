@@ -96,7 +96,12 @@ func laden(slot: int) -> bool:
 	if saveload.datei_lesen(slot).is_empty():
 		Spiel.melden("UI_KEIN_SPIELSTAND")
 		return false
+	# Popochiu leert vor dem Laden alle Inventare Stück für Stück, und die Inventarleiste
+	# wartet bei jedem Gegenstand eine Sekunde (Ausblenden). Beim Laden ohne Animation.
+	var vorher: bool = I.is_restoring
+	I.is_restoring = true
 	await E.load_game(slot)
+	I.is_restoring = vorher
 	geladen.emit(slot)
 	return true
 

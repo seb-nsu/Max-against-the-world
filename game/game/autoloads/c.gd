@@ -21,6 +21,10 @@ const PCHuhn := preload("res://game/characters/huhn/character_huhn.gd")
 const PCSchmiedeZiege := preload("res://game/characters/schmiede_ziege/character_schmiede_ziege.gd")
 const PCXxlZiege := preload("res://game/characters/xxl_ziege/character_xxl_ziege.gd")
 const PCSchwan := preload("res://game/characters/schwan/character_schwan.gd")
+const PCZeldina := preload("res://game/characters/zeldina/character_zeldina.gd")
+const PCMaklerin := preload("res://game/characters/maklerin/character_maklerin.gd")
+const PCModerwort := preload("res://game/characters/moderwort/character_moderwort.gd")
+const PCSmaugi := preload("res://game/characters/smaugi/character_smaugi.gd")
 # ---- classes
 
 # nodes ----
@@ -43,6 +47,10 @@ var Huhn: PCHuhn : get = get_Huhn
 var SchmiedeZiege: PCSchmiedeZiege : get = get_SchmiedeZiege
 var XxlZiege: PCXxlZiege : get = get_XxlZiege
 var Schwan: PCSchwan : get = get_Schwan
+var Zeldina: PCZeldina : get = get_Zeldina
+var Maklerin: PCMaklerin : get = get_Maklerin
+var Moderwort: PCModerwort : get = get_Moderwort
+var Smaugi: PCSmaugi : get = get_Smaugi
 # ---- nodes
 
 # functions ----
@@ -65,5 +73,9 @@ func get_Huhn() -> PCHuhn: return get_runtime_character("Huhn")
 func get_SchmiedeZiege() -> PCSchmiedeZiege: return get_runtime_character("SchmiedeZiege")
 func get_XxlZiege() -> PCXxlZiege: return get_runtime_character("XxlZiege")
 func get_Schwan() -> PCSchwan: return get_runtime_character("Schwan")
+func get_Zeldina() -> PCZeldina: return get_runtime_character("Zeldina")
+func get_Maklerin() -> PCMaklerin: return get_runtime_character("Maklerin")
+func get_Moderwort() -> PCModerwort: return get_runtime_character("Moderwort")
+func get_Smaugi() -> PCSmaugi: return get_runtime_character("Smaugi")
 # ---- functions
 

@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://b6f4xyq50g5ng"]
+
+[ext_resource type="Script" path="res://game/rooms/luftschloss/hotspots/torbogen/hotspot_torbogen.gd" id="1_gm553"]
+
+[node name="Torbogen" type="Area2D" unique_id=1695737384]
+script = ExtResource("1_gm553")
+script_name = "Torbogen"
+description = "Torbogen"
+cursor = 1
+interaction_polygon = PackedVector2Array(-30, -50, 30, -50, 30, 50, -30, 50)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1048775918]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

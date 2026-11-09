@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://juwoqxp2nuoy"]
+
+[ext_resource type="Texture2D" uid="uid://b7po5pwndljvd" path="res://grafik/platzhalter/gegenstand_leuchttrank.png" id="1_4bdoi"]
+[ext_resource type="Script" path="res://game/inventory_items/leuchttrank/inventory_item_leuchttrank.gd" id="1_pswaj"]
+
+[node name="ItemLeuchttrank" type="TextureRect" unique_id=2026192884]
+texture_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 4
+mouse_filter = 0
+texture = ExtResource("1_4bdoi")
+stretch_mode = 5
+script = ExtResource("1_pswaj")
+script_name = "Leuchttrank"
+description = "UI_OBJ_LEUCHTTRANK"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1246873023]

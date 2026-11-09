@@ -704,6 +704,7 @@ Rätsel 4c, ins Wasser: Waldemar muss laut Paragraf 3 ins Wasser. Der Eimer vom 
 | W1\_BRUE\_MAX\_1040 | Max | Der Troll badet. Die Brücke ist frei. Ich geh einfach rüber. Wie ein normaler Mensch. | Ansehen: Brücke; nach R4 |
 | W1\_BRUE\_MAX\_1045 | Max | Er planscht. Er singt dabei. Leise. Ich glaube, er ist glücklich. Ich geh trotzdem schnell. | Ansehen: Brücke, zweites Mal; nach R4 |
 | W1\_BRUE\_WAL\_1050 | Waldemar | Noch ein Eimer? Paragraf drei ist erfüllt. Mehr Wasser wäre Luxus. Ich nehme ihn trotzdem. Nein. Regel ist Regel. | Eimer mit Wasser auf Waldemar; nach R4 |
+| W1\_BRUE\_WAL\_1060 | Waldemar | Wasser? Jetzt schon? Paragraf eins: Erst das Märchen, dann das Bad. Und keine deiner Ziegen hat bisher einen ganzen Satz gesagt. | Eimer mit Wasser auf Waldemar; vor R4b |
 
 Zurufe an der Troll-Brücke (Pixel):
 
@@ -1412,3 +1413,4 @@ Drei Stufen je Rätselschritt. Die Texte zu Rätsel 1 bis 4 sind die Slice-Hinwe
 | W1\_HINT\_PIX\_1320 | Pixel | Socke auf, er niest, der Stab fliegt. Dann braucht er Ersatz. Du hast einen Löffel, der mal Käse war. | R13, Stufe 2 |
 | W1\_HINT\_PIX\_1330 | Pixel | Socke auf Moderwort, Kochlöffel auf Moderwort, dann sprich ihn mit dem Spitznamen an. Und sieh dabei nicht mich an. | R13, Stufe 3 |
 | W1\_HINT\_PIX\_0010 | Pixel | Nichts offen. Geh irgendwohin, wo du noch nicht warst. Oder wo es etwas zu essen gibt. Beides zählt. | kein offener Schritt in Welt 1 |
+| W1\_HINT\_PIX\_9995 | Pixel | Ich überlege noch. Hier hat sogar das Nachdenken eine Satzung. Paragraf eins: nicht drängeln. | Wartezeile, nächste Stufe noch gesperrt |

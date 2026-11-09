@@ -7,9 +7,13 @@ extends CQHotspot
 
 func _on_click() -> void:
 	await Spiel.hingehen(self)
-	if not Zustand.geloest("P2"):
+	if room.call("zwischenspiel") > 0:
+		# Zwischenspiel: Packen und Kanal 7 sind noch nicht gebaut (Graubox-Ende)
+		Spiel.ausbau_ende("UI_WELT_1_ENDE")
+		return
+	if not Zustand.geloest("P2", "prolog"):
 		await Spiel.sagen("OPA", "P0_DACH_OPA_1140")
-	elif Zustand.geloest("P3"):
+	elif Zustand.geloest("P3", "prolog"):
 		await Spiel.ersatz()
 	elif not "kalender" in Zustand.nahansichten:
 		# Max kennt die Nummer noch nicht: Testbild Kanal 4

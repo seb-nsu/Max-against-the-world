@@ -1,8 +1,9 @@
 {
  "abschnitt": "finale",
  "sonderzeilen": {
-  "nichts_offen": "FI_HINT_PIX_0190",
-  "wartezeile": "FI_HINT_PIX_0180"
+  "zwischenspiel": "ZS1_HINT_PIX_0010",
+  "wartezeile": "FI_HINT_PIX_0180",
+  "nichts_offen": "FI_HINT_PIX_0190"
  },
  "schritte": [
   {

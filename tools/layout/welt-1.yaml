@@ -20,7 +20,7 @@
 #   ausgaenge.<ziel>.gesperrt   Zeile beim Klick, solange das Ziel nicht erreichbar ist
 #   ausgaenge.<ziel>.versteckt  Ausgang unsichtbar, solange das Ziel nicht erreichbar ist
 
-_ausbau: [R1, R1a, R1b, R1c, R2, R3, R4, R4a, R4b, R4c]
+_ausbau: [R1, R1a, R1b, R1c, R2, R3, R4, R4a, R4b, R4c, R5, R6, R6a, R6b, R7, R8, R9, R10, R10a, R10b, R11, R11a, R11b, R12, R13]
 _alias:
   kochloeffel_zauberstab: kochloeffel@zauberstab
   socke: socke
@@ -31,8 +31,13 @@ _alias:
   eimer_mit_wasser: eimer@mit_wasser
   leerer_eimer: eimer@leer
   eimer_leer: eimer@leer
+  fischoel: flasche
+  flaeschchen: flasche
+  socke_voller_pollen: socke@voller_pollen
+  schwerter: schwerter_buendel
+  fackeln: fackel_buendel
 _tiere: [minka, huhn, schmiede_ziege, xxl_ziege, schwan]
-_figuren: [schmiede_ziege, xxl_ziege, rotkaeppchen]
+_figuren: [schmiede_ziege, xxl_ziege, rotkaeppchen, zeldina, grimmzahn, toadi, waldemar, humbert]
 
 dorfplatz:
   farbe: "#7d8f4e"
@@ -173,8 +178,13 @@ klassenzimmer:
     toadi: [16, 150]
   alias:
     zweite_socke: durchgeloecherte_zweite_socke
-  ohne: [flasche_1, flasche_2, flasche_3, flasche_4, flasche_5, flasche_6]
   hotspots:
+    flasche_1: {rect: [212, 76, 8, 16], gehe: [216, 152], name: Flasche 1}
+    flasche_2: {rect: [222, 70, 10, 22], gehe: [226, 152], name: Flasche 2}
+    flasche_3: {rect: [234, 76, 8, 16], gehe: [238, 152], name: Flasche 3}
+    flasche_4: {rect: [244, 76, 8, 16], gehe: [248, 152], name: Flasche 4}
+    flasche_5: {rect: [254, 70, 10, 22], gehe: [258, 152], name: Flasche 5}
+    flasche_6: {rect: [266, 76, 8, 16], gehe: [270, 152], name: Flasche 6}
     schulbank: {rect: [30, 110, 60, 30], gehe: [60, 154], name: Schulbänke}
     durchgeloecherte_zweite_socke: {rect: [96, 116, 16, 16], gehe: [104, 154], name: Socke}
     tafel: {rect: [124, 30, 70, 40], gehe: [160, 152], name: Tafel}
@@ -244,9 +254,8 @@ zauberwald:
     rotkaeppchen: [240, 160]
   alias:
     glasschuh: kuerbisturm_und_glasschuh
-    ketchup: ketchup_am_karren
+    ketchup_am_karren: ketchup
     niesrosen_geschlossen: niesrosen
-  ohne: [leuchtpilz, ketchup]   # Rätsel 6 und 10: nur Ansehen
   hotspots:
     riesenpilze: {rect: [20, 60, 60, 70], gehe: [50, 154], name: Riesenpilze}
     leuchtpilze: {rect: [30, 130, 30, 10], gehe: [44, 156], name: Leuchtpilze}
@@ -254,8 +263,10 @@ zauberwald:
     kuerbisturm_und_glasschuh: {rect: [150, 50, 30, 60], gehe: [166, 154], name: Kürbisturm}
     gluehwuermchen: {rect: [90, 10, 80, 30], gehe: [130, 154], name: Glühwürmchen}
     lieferkarren: {rect: [200, 110, 40, 30], gehe: [220, 154], name: Lieferkarren}
-    ketchup_am_karren: {rect: [240, 116, 8, 14], gehe: [236, 154], name: Ketchup}
     baeume: {rect: [90, 40, 50, 60], gehe: [110, 154], name: Bäume}
+  props:
+    leuchtpilz: {rect: [36, 132, 8, 6], gehe: [44, 156]}
+    ketchup: {rect: [250, 116, 6, 12], gehe: [244, 154]}
   ausgaenge:
     trollbruecke: {rect: [2, 70, 16, 70], gehe: [12, 160], id: ausgang_trollbruecke}
     bergwerk: {rect: [270, 60, 48, 80], gehe: [296, 156], id: stolleneingang, name: Stolleneingang}
@@ -283,3 +294,116 @@ bergwerk:
   ausgaenge:
     zauberwald: {rect: [2, 60, 18, 80], gehe: [12, 160], id: ausgang_zauberwald}
     turmkeller: {rect: [270, 60, 46, 80], gehe: [266, 158], id: rune_tuer, name: Rune-Tür, gesperrt: W1_BERG_MAX_0170}
+
+luftschloss:
+  farbe: "#b9c7e6"
+  laufbereich: [[4, 140], [316, 140], [316, 178], [4, 178]]
+  marker:
+    start: [30, 160]
+    von_dorfplatz: [30, 160]
+  figuren:
+    maklerin: [200, 158]
+    zeldina: [250, 160]
+  alias:
+    kritzelei_neben_dem_torbogen: kritzelei
+    nahansicht_kritzelei: kritzelei
+    oder_benutzen_spiegel: spiegel
+  hotspots:
+    torbogen: {rect: [120, 40, 60, 100], gehe: [150, 152], name: Torbogen}
+    kritzelei: {rect: [100, 100, 16, 14], gehe: [110, 154], name: Kritzelei}
+    balkon: {rect: [230, 40, 70, 30], gehe: [270, 152], name: Balkon}
+    spiegel: {rect: [190, 70, 18, 30], gehe: [200, 152], name: Spiegel}
+    wolken: {rect: [0, 150, 320, 30], gehe: [160, 160], name: Wolken}
+  ausgaenge:
+    dorfplatz: {rect: [2, 60, 26, 80], gehe: [16, 160], id: rankenende, name: Rankenende}
+
+turmkeller:
+  farbe: "#3b2f4a"
+  laufbereich: [[4, 140], [316, 140], [316, 178], [4, 178]]
+  marker:
+    start: [26, 160]
+    von_bergwerk: [26, 160]
+    von_abstellkammer_1: [250, 158]
+    von_abstellkammern: [160, 150]
+  alias:
+    kreuzung: kreuzung_1
+    treppe: treppe_nach_oben
+  ohne: [besen_in_abstellkammer_1, kram_in_abstellkammer_1]   # Zeilen der Abstellkammer 1 (Raumskript)
+  hotspots:
+    gerade_route: {rect: [60, 160, 60, 8], gehe: [80, 156], name: Gerade Route}
+    zickzack_route: {rect: [130, 162, 60, 8], gehe: [150, 156], name: Zickzack-Route}
+    schleifen_route: {rect: [200, 160, 60, 8], gehe: [220, 156], name: Schleifen-Route}
+    kreuzung_1: {rect: [92, 168, 10, 8], gehe: [96, 166], name: Kreuzung}
+    kreuzung_2: {rect: [156, 168, 10, 8], gehe: [160, 166], name: Kreuzung}
+    kreuzung_3: {rect: [224, 168, 10, 8], gehe: [228, 166], name: Kreuzung}
+    besen: {rect: [100, 120, 80, 20], gehe: [140, 154], name: Besen}
+  ausgaenge:
+    bergwerk: {rect: [2, 60, 22, 80], gehe: [12, 160], id: kellertreppe, name: Kellertreppe}
+    abstellkammer_1: {rect: [270, 70, 30, 70], gehe: [280, 156], id: kammertuer, name: Kammertür}
+    abstellkammern: {rect: [146, 20, 30, 100], gehe: [160, 150], id: treppe_nach_oben, name: Wendeltreppe, gesperrt: W1_TURM_MAX_0110}
+
+abstellkammer_1:
+  farbe: "#4a3f3a"
+  laufbereich: [[4, 140], [316, 140], [316, 178], [4, 178]]
+  marker:
+    start: [290, 160]
+    von_turmkeller: [290, 160]
+  alias:
+    besen_in_abstellkammer_1: besen
+    kram_in_abstellkammer_1: kram
+  hotspots:
+    besen: {rect: [80, 110, 80, 30], gehe: [120, 154], name: Besen}
+    kram: {rect: [180, 80, 80, 60], gehe: [220, 154], name: Kram}
+  ausgaenge:
+    turmkeller: {rect: [298, 60, 20, 80], gehe: [304, 160], id: ausgang_turmkeller, name: Keller}
+
+abstellkammern:
+  farbe: "#5e4b3a"
+  laufbereich: [[4, 140], [316, 140], [316, 178], [4, 178]]
+  marker:
+    start: [30, 160]
+    von_turmkeller: [30, 160]
+    von_thronsaal: [270, 150]
+    abnehmer: [120, 162]
+  figuren:
+    smaugi: [180, 140]
+  alias:
+    drachenei_im_nest: drachenei_nest
+    drachenei: drachenei_nest
+    schwerter_buendel: schwerter_buendel
+    haufen: goldhaufen
+    offene_geheimtuer: geheimtuer
+  hotspots:
+    drachenei_nest: {rect: [200, 110, 20, 20], gehe: [200, 156], name: Drachenei}
+    goldhaufen: {rect: [140, 100, 50, 40], gehe: [160, 156], name: Goldhaufen}
+    okarina: {rect: [40, 120, 10, 6], gehe: [46, 156], name: Okarina}
+    schwert_im_stein: {rect: [60, 96, 14, 30], gehe: [66, 156], name: Schwert im Stein}
+    deko_kram: {rect: [84, 110, 40, 30], gehe: [100, 156], name: Kram}
+    stapel: {rect: [84, 120, 60, 20], gehe: [110, 156], name: Stapel}
+  props:
+    kronleuchter: {rect: [120, 10, 30, 24], gehe: [134, 154]}
+    schwerter_buendel: {rect: [230, 120, 20, 20], gehe: [236, 156]}
+    fackel_buendel: {rect: [254, 120, 16, 20], gehe: [260, 156]}
+  ausgaenge:
+    turmkeller: {rect: [2, 60, 20, 80], gehe: [12, 160], id: wendeltreppe, name: Wendeltreppe}
+    thronsaal: {rect: [280, 40, 36, 100], gehe: [290, 150], id: geheimtuer, name: Geheimtür}
+
+thronsaal:
+  farbe: "#2e2440"
+  laufbereich: [[4, 140], [316, 140], [316, 178], [4, 178]]
+  marker:
+    start: [30, 160]
+    von_abstellkammern: [30, 160]
+  figuren:
+    moderwort: [200, 150]
+  alias:
+    moderworts_lerntagebuch: lerntagebuch
+  ohne: [oder_reden_zeldina]   # Zeldina nach R13 (W1_THRO_ZEL_0620): Figurenskript
+  hotspots:
+    thron: {rect: [180, 60, 60, 80], gehe: [200, 156], name: Thron}
+    taschentuchstapel: {rect: [250, 120, 24, 20], gehe: [256, 156], name: Taschentücher}
+    blumenvasen: {rect: [90, 110, 30, 30], gehe: [104, 156], name: Blumen}
+    lerntagebuch: {rect: [130, 126, 16, 10], gehe: [136, 156], name: Lerntagebuch}
+    fenster: {rect: [120, 10, 60, 40], gehe: [150, 152], name: Fenster}
+  ausgaenge:
+    abstellkammern: {rect: [2, 60, 20, 80], gehe: [12, 160], id: ausgang_abstellkammern, name: Abstellkammern}

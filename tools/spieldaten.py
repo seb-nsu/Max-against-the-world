@@ -71,7 +71,8 @@ def hinweise_lesen(ab, raetsel_ids):
         zid, ausl = zellen[0].replace("\\_", "_"), zellen[-1]
         stufe = re.search(r"Stufe (\d)", ausl)
         if not stufe:
-            art = "wartezeile" if "Warte" in ausl else "nichts_offen"
+            # „Hilfe-Pfote in Zwischenspiel 1 bis 3“ (ZS1_HINT_PIX_0010) gilt nur in den Zwischenspielen
+            art = "wartezeile" if "Warte" in ausl else "zwischenspiel" if "Zwischenspiel" in ausl else "nichts_offen"
             sonder[art] = zid
             continue
         bedingung = ausl.split(";", 1)[1].strip().replace("\\_", "_") if ";" in ausl else ""

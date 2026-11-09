@@ -29,14 +29,35 @@ func _on_click() -> void:
 	await super()
 
 
-## Melken gehört zu Rätsel 6 (nicht im Vertical Slice): Max hat „nicht mal einen Grund“ (0430).
+## Krug: Melken (Rätsel 6a), Thunfischdose: 0500.
 func _on_item_used(item: PopochiuInventoryItem) -> void:
 	match item.script_name:
 		"Krug":
 			await Spiel.hingehen(self)
-			await Spiel.sagen("MAX", "W1_SCHM_MAX_0430")
+			await melken()
 		"Thunfischdose":
 			await Spiel.hingehen(self)
 			await Spiel.sagen("MAX", "W1_SCHM_MAX_0500")
 		_:
 			await super(item)
+
+
+## Melken erst nach Alwins Rezept (0430 vorher), einmal und nie wieder (0440–0480, dann 0490).
+func melken() -> void:
+	if not Zustand.ist("W1_REZEPT_BEKANNT"):
+		await Spiel.sagen("MAX", "W1_SCHM_MAX_0430")
+		return
+	if Zustand.ist("W1_MELK_SCHWUR"):
+		await Spiel.sagen("MAX", "W1_SCHM_MAX_0490")
+		return
+	var schritte := [
+		Spiel.z("MAX", "W1_SCHM_MAX_0440"),
+		Spiel.z("ZIE", "W1_SCHM_ZIE_0450"),
+		Zustand.setze.bind("W1_MELK_SCHWUR", true),
+		Spiel.z("MAX", "W1_SCHM_MAX_0460"),
+		Spiel.z("PIX", "W1_SCHM_PIX_0470"),
+	]
+	if is_instance_valid(room) and room.has_character("Schmied"):
+		schritte.append(Spiel.z("SCH", "W1_SCHM_SCH_0480"))
+	await Spiel.szene(schritte)
+	Zustand.setze("W1_MELK_SCHWUR")

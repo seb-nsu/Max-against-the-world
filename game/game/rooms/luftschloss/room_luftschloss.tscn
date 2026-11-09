@@ -1,0 +1,91 @@
+[gd_scene format=3 uid="uid://cop0s605pkhn"]
+
+[ext_resource type="Script" path="res://game/rooms/luftschloss/room_luftschloss.gd" id="1_xunc5"]
+[ext_resource type="PackedScene" uid="uid://k02dw5iwownk" path="res://game/rooms/luftschloss/walkable_areas/boden/walkable_area_boden.tscn" id="2_16xyd"]
+[ext_resource type="PackedScene" uid="uid://cq4c28nc5xx57" path="res://game/rooms/luftschloss/props/background/prop_background.tscn" id="3_dsq2i"]
+[ext_resource type="Texture2D" uid="uid://bvds3oyl8qc4w" path="res://grafik/platzhalter/raum_luftschloss.png" id="4_kfwac"]
+[ext_resource type="PackedScene" uid="uid://b6f4xyq50g5ng" path="res://game/rooms/luftschloss/hotspots/torbogen/hotspot_torbogen.tscn" id="5_usesu"]
+[ext_resource type="PackedScene" uid="uid://bo0aet48f5s3a" path="res://game/rooms/luftschloss/hotspots/kritzelei/hotspot_kritzelei.tscn" id="6_7tsgd"]
+[ext_resource type="PackedScene" uid="uid://cfa6g1875ci5l" path="res://game/rooms/luftschloss/hotspots/balkon/hotspot_balkon.tscn" id="7_s0r72"]
+[ext_resource type="PackedScene" uid="uid://bdy0ftq5itlw6" path="res://game/rooms/luftschloss/hotspots/spiegel/hotspot_spiegel.tscn" id="8_hiy3h"]
+[ext_resource type="PackedScene" uid="uid://vh63e332ru7" path="res://game/rooms/luftschloss/hotspots/wolken/hotspot_wolken.tscn" id="9_7sb2h"]
+[ext_resource type="PackedScene" uid="uid://dr6af3a05aotl" path="res://game/rooms/luftschloss/hotspots/rankenende/hotspot_rankenende.tscn" id="10_01vjo"]
+[ext_resource type="PackedScene" uid="uid://dkmmin6265r4q" path="res://game/rooms/luftschloss/markers/start/marker_start.tscn" id="11_ksvbp"]
+[ext_resource type="PackedScene" uid="uid://c5csyny7juvow" path="res://game/rooms/luftschloss/markers/von_dorfplatz/marker_von_dorfplatz.tscn" id="12_4h3ug"]
+[ext_resource type="PackedScene" uid="uid://d37axhtmcrwba" path="res://game/characters/maklerin/character_maklerin.tscn" id="13_0t1u5"]
+[ext_resource type="PackedScene" uid="uid://bmca5d1um7tyn" path="res://game/characters/zeldina/character_zeldina.tscn" id="14_kakob"]
+
+[node name="RoomLuftschloss" type="Node2D" unique_id=1663741580]
+script = ExtResource("1_xunc5")
+script_name = "Luftschloss"
+width = 320
+height = 180
+
+[node name="WalkableAreas" type="Node2D" parent="." unique_id=593840019]
+
+[node name="Boden" parent="WalkableAreas" unique_id=2009631470 instance=ExtResource("2_16xyd")]
+interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(4, 140, 316, 140, 316, 178, 4, 178)])
+
+[node name="Props" type="Node2D" parent="." unique_id=936847272]
+
+[node name="Background" parent="Props" unique_id=1720107696 instance=ExtResource("3_dsq2i")]
+position = Vector2(160, 90)
+texture = ExtResource("4_kfwac")
+description = "UI_RAUM_LUFTSCHLOSS"
+
+[node name="Hotspots" type="Node2D" parent="." unique_id=1002625825]
+
+[node name="Torbogen" parent="Hotspots" unique_id=1695737384 instance=ExtResource("5_usesu")]
+position = Vector2(150, 90)
+description = "UI_OBJ_TORBOGEN"
+baseline = 50
+walk_to_point = Vector2(0, 62)
+
+[node name="Kritzelei" parent="Hotspots" unique_id=682647091 instance=ExtResource("6_7tsgd")]
+position = Vector2(108, 107)
+description = "UI_OBJ_KRITZELEI"
+baseline = 7
+walk_to_point = Vector2(2, 47)
+
+[node name="Balkon" parent="Hotspots" unique_id=1822591173 instance=ExtResource("7_s0r72")]
+position = Vector2(265, 55)
+description = "UI_OBJ_BALKON"
+baseline = 15
+walk_to_point = Vector2(5, 97)
+
+[node name="Spiegel" parent="Hotspots" unique_id=1977706884 instance=ExtResource("8_hiy3h")]
+position = Vector2(199, 85)
+description = "UI_OBJ_SPIEGEL"
+baseline = 15
+walk_to_point = Vector2(1, 67)
+
+[node name="Wolken" parent="Hotspots" unique_id=125878728 instance=ExtResource("9_7sb2h")]
+position = Vector2(160, 165)
+description = "UI_OBJ_WOLKEN"
+baseline = 15
+walk_to_point = Vector2(0, -5)
+
+[node name="Rankenende" parent="Hotspots" unique_id=1262073671 instance=ExtResource("10_01vjo")]
+position = Vector2(15, 100)
+description = "UI_OBJ_RANKENENDE"
+baseline = 40
+walk_to_point = Vector2(1, 60)
+cursor = 9
+
+[node name="Regions" type="Node2D" parent="." unique_id=1274810974]
+
+[node name="Markers" type="Node2D" parent="." unique_id=182767767]
+
+[node name="Start" parent="Markers" unique_id=217888118 instance=ExtResource("11_ksvbp")]
+position = Vector2(30, 160)
+
+[node name="VonDorfplatz" parent="Markers" unique_id=1910669962 instance=ExtResource("12_4h3ug")]
+position = Vector2(30, 160)
+
+[node name="Characters" type="Node2D" parent="." unique_id=2064000160]
+
+[node name="CharacterMaklerin *" parent="Characters" unique_id=94772486 instance=ExtResource("13_0t1u5")]
+position = Vector2(200, 158)
+
+[node name="CharacterZeldina *" parent="Characters" unique_id=1373959384 instance=ExtResource("14_kakob")]
+position = Vector2(250, 160)

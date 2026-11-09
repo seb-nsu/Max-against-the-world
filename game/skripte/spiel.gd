@@ -34,6 +34,9 @@ const PIXEL_FELD := "PixelFeld"
 ## Raum, aus dem die Figur gerade kommt (für den Ankunfts-Marker „Von<Raum>“)
 var herkunft_raum := ""
 
+## Vorgegebene Antworten für auswahl() (Tests): Index je Auswahl, der Reihe nach verbraucht
+var vorgabe_auswahl: Array = []
+
 var hud: CanvasLayer
 var _letzte_ersatz := {}
 var _letzter_zuruf := ""
@@ -316,7 +319,9 @@ func nehmen(prop: PopochiuProp, daten: Dictionary) -> void:
 ## Gegenstand in Max' Inventar legen (auch wenn gerade Pixel spielt).
 func geben(sn: String) -> void:
 	if not I.is_item_in_inventory(sn, C.Max):
+		var leise := _leise_an()
 		await I.add_item(I.get_item_instance(sn), 1, C.Max)
+		I.is_restoring = leise
 
 
 ## Gegenstand aus Max' Inventar nehmen.
@@ -324,7 +329,18 @@ func abgeben(sn: String) -> void:
 	if I.is_item_in_inventory(sn, C.Max):
 		if I.active and I.active.script_name == sn:
 			I.active = null
+		var leise := _leise_an()
 		await I.remove_item(I.get_item_instance(sn), 0, C.Max)
+		I.is_restoring = leise
+
+
+## Im Testmodus ohne die Wartezeiten der Inventarleiste (2,5 s beim Hinzufügen, 1 s beim
+## Entfernen): Popochius Schalter is_restoring. Liefert den alten Wert zum Zurücksetzen.
+func _leise_an() -> bool:
+	var vorher: bool = I.is_restoring
+	if testmodus:
+		I.is_restoring = true
+	return vorher
 
 
 ## Raumwechsel über einen Ausgang. Die Ankunft steht im Marker „Von<Herkunft>“.
@@ -499,6 +515,12 @@ func _bedingung_text_ok(text: String) -> bool:
 			return "kalender" in Zustand.nahansichten
 		"solange Toadi im Raum ist":
 			return is_instance_valid(R.current) and R.current.has_character("Toadi")
+		"Zauberwald betreten":
+			return Zustand.war_in("zauberwald")
+		"nur mit Zeldina im Team":
+			return Zustand.ist("W1_ZELDINA_FOLGT")
+		"Feilschen", "Haustier", "richtig":
+			return true  # Beschreibung der Option, keine Bedingung (Maklerin, LUFT 0410–0470)
 		"wenn Ziegen dabei sind":
 			return is_instance_valid(R.current) and (
 				R.current.has_character("SchmiedeZiege") or R.current.has_character("XxlZiege")
@@ -542,7 +564,33 @@ func welt_beginnen(ab: String) -> void:
 	await R.goto_room(Bauplan.raum_script_name(erster.get("id", "")))
 
 
-## Ende des gebauten Teils (Vertical Slice): Meldung, das Spiel läuft weiter.
+## Zwischenspiel nach einer Welt (skript/zwischenspiele-und-finale.md): zurück auf den
+## Dachboden, Abschnitt „finale“ (der Dachboden gehört dort zur Welt-Tabelle), Wert
+## ZWISCHENSPIEL = nr. Anders als welt_beginnen() bleibt das Inventar, wie es ist: Opa nimmt
+## das Mitbringsel in der Ankunftsszene, das Packen der Reisetasche entscheidet später.
+func zwischenspiel_beginnen(nr: int) -> void:
+	if not testmodus:
+		await T.play_transition("tunnel", 1.5, T.PLAY_MODE.IN)
+	I.active = null
+	if is_instance_valid(C.Max) and C.player != C.Max:
+		C.player = C.Max
+	Zustand.abschnitt = "finale"
+	Zustand.setze_wert("ZWISCHENSPIEL", nr)
+	herkunft_raum = ""
+	await R.goto_room(Bauplan.raum_script_name("dachboden"))
+
+
+## Auswahl ohne Gesprächsfigur (Wünsche am Brunnen, Passwort an der Geheimtür): Popochius
+## Inline-Dialog mit den übersetzten Texten, liefert den Index. Tests geben die Antwort über
+## vorgabe_auswahl vor.
+func auswahl(texte: Array) -> int:
+	if not vorgabe_auswahl.is_empty():
+		return int(vorgabe_auswahl.pop_front())
+	var opt: PopochiuDialogOption = await D.show_inline_dialog(texte.map(func(t): return tr(t)))
+	return int(opt.id) if is_instance_valid(opt) else -1
+
+
+## Ende des gebauten Teils (Graubox-Ausbaustand): Meldung, das Spiel läuft weiter.
 func ausbau_ende(schluessel: String) -> void:
 	protokoll.append(schluessel)  # für den Test sichtbar
 	if is_instance_valid(hud) and not testmodus:

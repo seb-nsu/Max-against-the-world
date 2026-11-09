@@ -7,16 +7,17 @@ const Data := preload('character_alwin_state.gd')
 var state: Data = load("res://game/characters/alwin/character_alwin.tres")
 
 
-## Die Aufnahmeprüfung (Rätsel 6) gehört nicht zum Vertical Slice: Alwin prüft nur den Stab.
+## Vor dem Kochlöffel-Zauberstab prüft Alwin nur den Stab (0060), danach das Gespräch.
 func _on_click() -> void:
-	await Spiel.hingehen(self)
-	await stab_pruefen()
+	if not Zustand.geloest("R2"):
+		await Spiel.hingehen(self)
+		await stab_pruefen()
+		return
+	await super()
 
 
-## Ohne Kochlöffel-Zauberstab 0060, mit ihm 0070 und die Meldung „Ende des Vertical Slice“.
 func stab_pruefen() -> void:
 	if Zustand.geloest("R2"):
 		await Spiel.sagen("ALW", "W1_HOGG_ALW_0070")
-		Spiel.ausbau_ende("UI_WELT_1_ENDE")
 	else:
 		await Spiel.sagen("ALW", "W1_HOGG_ALW_0060")

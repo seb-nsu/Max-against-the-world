@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://nw34g3tl16vg"]
+
+[ext_resource type="Script" path="res://game/rooms/turmkeller/hotspots/kreuzung_2/hotspot_kreuzung_2.gd" id="1_ky38o"]
+
+[node name="Kreuzung2" type="Area2D" unique_id=1520187438]
+script = ExtResource("1_ky38o")
+script_name = "Kreuzung2"
+description = "Kreuzung 2"
+cursor = 1
+interaction_polygon = PackedVector2Array(-5, -4, 5, -4, 5, 4, -5, 4)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=341220845]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

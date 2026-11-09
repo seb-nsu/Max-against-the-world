@@ -138,11 +138,13 @@ func _schritt(schritt: String) -> Dictionary:
 
 
 func _nichts_offen_zeile() -> String:
+	if Zustand.abschnitt == "finale" and int(Zustand.wert("ZWISCHENSPIEL", 0)) > 0:
+		return _sonderzeile("zwischenspiel")  # ZS1_HINT_PIX_0010: Tasche packen, Knopf drehen
 	return _sonderzeile("nichts_offen")
 
 
 ## Sonderzeile der Hinweis-Datei (nichts_offen, wartezeile). Fehlt sie im Abschnitt, gilt die
-## des Prologs (Welt 1 hat keine eigene Wartezeile, siehe offene-punkte.md).
+## des Prologs (Welt 1 hat seit G9 eine eigene, W1_HINT_PIX_9995).
 func _sonderzeile(art: String) -> String:
 	var z: String = Bauplan.hinweise.get(Zustand.abschnitt, {}).get("sonderzeilen", {}).get(art, "")
 	if z.is_empty():

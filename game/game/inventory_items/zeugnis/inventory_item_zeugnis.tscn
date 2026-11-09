@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://cmrk5gya3vu4m"]
+
+[ext_resource type="Script" path="res://game/inventory_items/zeugnis/inventory_item_zeugnis.gd" id="1_5gt5j"]
+[ext_resource type="Texture2D" uid="uid://sfk461ijqwnl" path="res://grafik/platzhalter/gegenstand_zeugnis.png" id="1_o5q21"]
+
+[node name="ItemZeugnis" type="TextureRect" unique_id=819241847]
+texture_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 4
+mouse_filter = 0
+texture = ExtResource("1_o5q21")
+stretch_mode = 5
+script = ExtResource("1_5gt5j")
+script_name = "Zeugnis"
+description = "UI_OBJ_ZEUGNIS"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1142666000]

@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://ecten13nqt8d"]
+
+[ext_resource type="Script" path="res://game/rooms/turmkeller/hotspots/schleifen_route/hotspot_schleifen_route.gd" id="1_2f52m"]
+
+[node name="SchleifenRoute" type="Area2D" unique_id=632107085]
+script = ExtResource("1_2f52m")
+script_name = "SchleifenRoute"
+description = "Schleifen Route"
+cursor = 1
+interaction_polygon = PackedVector2Array(-30, -4, 30, -4, 30, 4, -30, 4)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1067671021]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

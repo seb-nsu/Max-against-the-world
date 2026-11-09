@@ -1,7 +1,8 @@
 extends SceneTree
-## Headless-Test: spielt den Lösungspfad des Prologs (P1–P3) und danach Welt 1 bis Rätsel 4
-## (Vertical Slice) durch und prüft nach jedem Schritt Schalter, Rätselstatus, Hinweise und
-## eine Speichern/Laden-Rundreise, auch mit Pixel als aktiver Figur.
+## Headless-Test: spielt den Lösungspfad des Prologs (P1–P3), danach Welt 1 (R1–R13, Rätsel 10
+## über Weg A und Weg B) bis zur Ankunft in Zwischenspiel 1 durch und prüft nach jedem Schritt
+## Schalter, Rätselstatus, Hinweise und eine Speichern/Laden-Rundreise, auch mit Pixel als
+## aktiver Figur.
 ##
 ## Aufruf (aus dem Ordner game/):
 ##   godot --headless --path . -s res://tests/prolog_durchlauf.gd
@@ -37,6 +38,8 @@ func _lauf() -> void:
 		Engine.time_scale = float(OS.get_environment("CQ_ZEITFAKTOR")) if OS.has_environment("CQ_ZEITFAKTOR") else 10.0
 		# Nahansicht und Notizbuch warten auf einen Klick: der Test schließt sie nach kurzer Zeit.
 		node_added.connect(_ueberlagerung_schliessen)
+		# Systemtexte (Sprecher ohne Figur: Brunnen, Spiegel, Geheimtür) warten ebenfalls auf einen Klick.
+		root.get_node("G").system_text_shown.connect(_systemtext_schliessen)
 	CQSaveLoad.ordner = "user://test_saves/"
 	_ordner_leeren()
 	change_scene_to_file(STARTRAUM)
@@ -213,7 +216,7 @@ func _durchlauf() -> void:
 
 #endregion
 
-#region Welt 1 (Vertical Slice R1–R4) ##############################################################
+#region Welt 1 (R1–R13) und Zwischenspiel 1 ######################################################
 func _welt_1() -> void:
 	var Z = _zustand()
 	var H = _hinweise()
@@ -231,7 +234,7 @@ func _welt_1() -> void:
 		_pruefe(not _i().is_item_in_inventory(sn, _c().Max), "bleibt auf dem Dachboden: " + sn)
 	_pruefe(not S.wechsel_moeglich(), "Wechsel erst ab der Taverne")
 	_pruefe(Z.status("R1a") == "gesperrt", "R1a gesperrt vor der Taverne")
-	_pruefe(Z.status("R5") == "gesperrt" and Z.status("R8") == "gesperrt", "R5 und R8 gesperrt (nicht gebaut)")
+	_pruefe(Z.status("R5") == "gesperrt" and Z.status("R8") == "gesperrt", "R5 und R8 gesperrt (Voraussetzungen fehlen)")
 	await _ansehen_item("Thunfischdose", "P0_INV_MAX_0020")
 	await _rundreise("W1 Ankunft")
 
@@ -392,10 +395,7 @@ func _welt_1() -> void:
 	_pruefe(not Z.ist("W1_PIXEL_IM_FELL") and not Z.ist("W1_ZIEGEN_FOLGEN"), "Fell ab, Begleiter-Schalter aus")
 	_pruefe(not _raum().has_character("SchmiedeZiege") and _raum().has_character("XxlZiege"),
 		"Schmiede-Ziege geht heim, XXL-Ziege bleibt an der Brücke")
-	_pruefe(Z.offene_schritte().is_empty(), "keine offenen Schritte (R5 ff. gesperrt)")
-	_protokoll_leeren()
-	await H.pfote_geklickt()
-	_pruefe(_gesagt("W1_HINT_PIX_0010"), "Pfote: nichts offen (W1_HINT_PIX_0010), kein Verweis auf R5 ff.")
+	_pruefe(H.schritt_waehlen() == "R5", "nach R4: Pfote wählt R5 (Goldmünze, Dorfplatz)")
 	await _rundreise("nach R4")
 
 	# --- Was hinter der Brücke liegt ---
@@ -404,22 +404,335 @@ func _welt_1() -> void:
 	_pruefe(_gesagt("W1_WASS_TOA_0020"), "Wasserschloss-Szene")
 	await _gehe("AusgangTrollbruecke", "Trollbruecke")
 	await _gehe("Waldweg", "Zauberwald")
-	await _c().get_character("Rotkaeppchen").on_click()
-	_pruefe(_gesagt("UI_WELT_1_ENDE"), "Rotkäppchen: Ende des Vertical Slice")
+	await _welt_1_r5_bis_r13()
+
+
+## Welt 1 ab Rätsel 5: Zauberwald, Brunnen, Bohne, Hoggelwarz, Luftschloss, Bergwerk (Weg A und
+## Weg B über einen Zwischenstand), Turm, Smaugi, Moderwort, dann Zwischenspiel 1.
+func _welt_1_r5_bis_r13() -> void:
+	var Z = _zustand()
+	var H = _hinweise()
+	var S = _spiel()
+
+	# --- Zauberwald: Ketchup, Leuchtpilz, Rosen zu ---
+	await _ansehen(_raum().get_prop("Ketchup"), "W1_WALD_MAX_0090")
+	await _raum().get_prop("Ketchup").on_click()
+	_pruefe(not _i().is_item_in_inventory("Ketchup"), "Ketchup erst nach Rotkäppchens Erlaubnis")
+	var rot_d = _dialog("Rotkaeppchen")
+	await rot_d.waehlen("0230")
+	_pruefe(Z.ist("W1_KETCHUP_FREI") and _gesagt("W1_WALD_ROT_0240"), "Rotkäppchen erlaubt den Ketchup (0230/0240)")
+	await _nehmen("Ketchup", "W1_WALD_MAX_0110")
+	await _nehmen("Leuchtpilz", "W1_WALD_MAX_0030")
+	await _benutze("Socke", _hotspot("Niesrosen"), "W1_WALD_MAX_0410")
+	await _hotspot("Niesrosen").on_click()
+	_pruefe(_gesagt("W1_WALD_MAX_0420") and _gesagt("W1_WALD_PIX_0430"), "Max singt, Rosen bleiben zu")
+	_pruefe(Z.status("R7") == "offen", "R7 offen")
+	await _rundreise("Zauberwald")
+
+	# --- Bergwerk vor Rätsel 10 ---
 	await _gehe("Stolleneingang", "Bergwerk")
 	await _warte_bis(func(): return _gesagt("W1_BERG_GRI_0010"), 10.0)
 	_pruefe(_gesagt("W1_BERG_GRI_0010"), "Bergwerk: Streik")
 	await _hotspot("RuneTuer").on_click()
-	_pruefe(_gesagt("W1_BERG_MAX_0170") and _raum_name() == "Bergwerk", "Rune-Tür bleibt zu")
-	await _rundreise("Bergwerk")
+	_pruefe(_gesagt("W1_BERG_MAX_0170") and _raum_name() == "Bergwerk", "Rune-Tür zu vor R10")
+	await _benutze("Ketchup", _c().get_character("Grimmzahn"), "W1_BERG_GRI_0560")
+	_pruefe(not _dialog("Grimmzahn").option_sichtbar("0390"), "Weg B (0390) erst mit Zeldina")
 
-	# --- Hoggelwarz: Alwin prüft den Stab ---
+	# --- Rätsel 7: Waldemar singt im Zauberwald ---
 	await _gehe("AusgangZauberwald", "Zauberwald")
 	await _gehe("AusgangTrollbruecke", "Trollbruecke")
+	var wal_d = _dialog("Waldemar")
+	_pruefe(wal_d.option_sichtbar("0290"), "Waldemar-Option 0290 (nach R4, mit Socke, Wald betreten)")
+	var weiter: bool = await wal_d.waehlen("0290")
+	_pruefe(not weiter and Z.ist("W1_WALDEMAR_SINGT") and _gesagt("W1_BRUE_WAL_0300"), "Waldemar geht in den Wald")
+	await _gehe("Waldweg", "Zauberwald")
+	await _warte_bis(func(): return _gesagt("W1_WALD_PIX_0590"), 15.0)
+	_pruefe(Z.geloest("R7") and Z.ist("W1_WALDEMAR_ABSPANN"), "R7 gelöst (0460–0590), Abspann versprochen")
+	_pruefe(_item("Socke").zustand() == "voller_pollen", "Socke voller Pollen")
+	await _warte_bis(func(): return not _raum().has_character("Waldemar"), 5.0)
+	_pruefe(not _raum().has_character("Waldemar"), "Waldemar wieder an der Brücke")
+	await _ansehen_item("Socke", "W1_WALD_MAX_0600")
+	await _rundreise("nach R7")
+
+	# --- Dorfplatz: Rätsel 5, Brunnen ---
+	await _gehe("AusgangTrollbruecke", "Trollbruecke")
+	await _gehe("AusgangDorfplatz", "Dorfplatz")
+	await _nehmen("Steckbrief", "W1_DORF_MAX_0210")
+	await _hotspot("Brunnen").on_click()
+	_pruefe(_gesagt("W1_DORF_BRU_0710"), "Brunnen ohne Münze: 0710")
+	S.vorgabe_auswahl = [0]
+	await _benutze("Goldmuenze", _hotspot("Brunnen"), "W1_DORF_BRU_0780")
+	_pruefe(_i().is_item_in_inventory("Goldmuenze") and not Z.geloest("R5"), "Wunsch Pizza: Münze zurück")
+	S.vorgabe_auswahl = [1]
+	await _benutze("Goldmuenze", _hotspot("Brunnen"), "W1_DORF_BRU_0830")
+	await _rundreise("R5 halb")
+	S.vorgabe_auswahl = [2]
+	await _benutze("Goldmuenze", _hotspot("Brunnen"), "W1_DORF_BRU_0850")
+	_pruefe(Z.geloest("R5") and _i().is_item_in_inventory("Zauberbohne")
+		and not _i().is_item_in_inventory("Goldmuenze"), "R5 gelöst: Zauberbohne statt Münze")
+	await _benutze("Zauberbohne", _hotspot("Brunnen"), "W1_DORF_MAX_1130")
+	await _rundreise("nach R5")
+
+	# --- Rätsel 8: Bohnenranke ---
+	_pruefe(not _hotspot("Bohnenranke").visible, "Bohnenranke unsichtbar vor R8")
+	await _benutze("Zauberbohne", _hotspot("Erdfleck"), "W1_DORF_MAX_1110")
+	_pruefe(Z.ist("W1_BOHNE_GEPFLANZT") and not _i().is_item_in_inventory("Zauberbohne"), "Bohne gepflanzt")
+	await _hotspot("Erdfleck").on_click()
+	_pruefe(_gesagt("W1_DORF_PIX_1120"), "gepflanzte Bohne ohne Wasser: 1120")
+	await _benutze("Eimer", _hotspot("Erdfleck"), "W1_DORF_MAX_1210")
+	await _benutze("Eimer", _hotspot("Brunnen"), "W1_DORF_MAX_0360")
+	await _benutze("Eimer", _hotspot("Erdfleck"), "W1_DORF_MAX_1140")
+	_pruefe(Z.geloest("R8") and _gesagt("W1_DORF_TOA_1200"), "R8 gelöst (1140–1200)")
+	_pruefe(_hotspot("Bohnenranke").visible and _item("Eimer").zustand() == "leer", "Ranke sichtbar, Eimer leer")
+	await _rundreise("nach R8")
+	_pruefe(_hotspot("Bohnenranke").visible, "Ranke nach Laden sichtbar")
+
+	# --- Rätsel 6a: Ei, Krug, Rezept ---
+	await _gehe("TaverneVonAussen", "Taverne")
+	await _nehmen("Ei", "W1_TAV_MAX_1430")
+	await _gehe("AusgangDorfplatz", "Dorfplatz")
+	await _gehe("SchmiedeVonAussen", "Schmiede")
+	await _nehmen("Krug", "W1_SCHM_MAX_0090")
+	_pruefe(_raum().has_character("SchmiedeZiege"), "Schmiede-Ziege wieder in der Schmiede")
+	await _benutze("Krug", _c().get_character("SchmiedeZiege"), "W1_SCHM_MAX_0430")
+	_pruefe(_item("Krug").zustand() == "leer", "kein Melken ohne Rezept")
 	await _gehe("AusgangDorfplatz", "Dorfplatz")
 	await _gehe("WegNachHoggelwarz", "Klassenzimmer")
 	await _warte_bis(func(): return _gesagt("W1_HOGG_ALW_0070"), 10.0)
-	_pruefe(_gesagt("W1_HOGG_ALW_0070"), "Alwin: Kochlöffel (0070)")
+	_pruefe(_gesagt("W1_HOGG_ALW_0070") and not _gesagt("UI_WELT_1_ENDE"), "Alwin: Kochlöffel (0070), kein Graubox-Ende")
+	_pruefe(Z.status("R6a") == "offen", "R6a offen")
+	var alw_d = _dialog("Alwin")
+	_pruefe(not alw_d.option_sichtbar("0350"), "Milch-Frage erst nach dem Rezept")
+	await alw_d.waehlen("0310")
+	_pruefe(Z.ist("W1_REZEPT_BEKANNT") and alw_d.option_sichtbar("0350"), "Rezept bekannt (0320)")
+	await alw_d.waehlen("0370")
+	_pruefe(_i().is_item_in_inventory("Hinweiszettel"), "Alwins Hinweiszettel (0380)")
+	await _ansehen_item("Hinweiszettel", "W1_HOGG_ALW_0610")
+	_pruefe("hinweiszettel" in Z.nahansichten and _gesagt("W1_HOGG_MAX_0630"), "Hinweiszettel als Nahansicht")
+	await _hotspot("Flasche4").on_click()
+	_pruefe(_i().is_item_in_inventory("Flasche") and int(Z.wert("W1_FLASCHE", 0)) == 4, "Flasche 4 genommen")
+	await _benutze("Flasche", _hotspot("Kessel"), "W1_HOGG_MAX_0590")
+	await _benutze("Ei", _hotspot("Kessel"), "W1_HOGG_MAX_0510")
+	await _benutze("Leuchtpilz", _hotspot("Kessel"), "W1_HOGG_MAX_0540")
+	await _benutze("Thunfischdose", _hotspot("Kessel"), "W1_HOGG_ALW_0550")
+	_pruefe(Z.ist("W1_KESSEL_EI") and Z.ist("W1_KESSEL_PILZ") and not Z.geloest("R6a"), "zwei Zutaten im Kessel")
+	await _rundreise("R6a halb")
+
+	# Melken in der Schmiede
+	await _gehe("AusgangDorfplatz", "Dorfplatz")
+	await _gehe("SchmiedeVonAussen", "Schmiede")
+	await _benutze("Krug", _c().get_character("SchmiedeZiege"), "W1_SCHM_MAX_0460")
+	_pruefe(Z.ist("W1_MELK_SCHWUR") and _gesagt("W1_SCHM_SCH_0480") and _item("Krug").zustand() == "mit_ziegenmilch",
+		"Ziege gemolken (0440–0480), Krug mit Ziegenmilch")
+	await _benutze("Krug", _c().get_character("SchmiedeZiege"), "W1_SCHM_MAX_0490")
+	await _ansehen_item("Krug", "W1_INV_MAX_0090")
+	await _gehe("AusgangDorfplatz", "Dorfplatz")
+	await _gehe("WegNachHoggelwarz", "Klassenzimmer")
+	await _benutze("Krug", _hotspot("Kessel"), "W1_HOGG_MAX_0520")
+	_pruefe(Z.geloest("R6a") and _gesagt("W1_HOGG_ALW_0580"), "R6a gelöst (0580)")
+	_pruefe(Z.status("R6b") == "offen", "R6b offen")
+
+	# Rätsel 6b: Pixel schnuppert, falsche Flasche, richtige Flasche
+	_pruefe(S.figur_wechseln() and S.ist_pixel(), "Wechsel zu Pixel im Klassenzimmer")
+	await _ansehen(_hotspot("Flasche3"), "W1_HOGG_PIX_0660")
+	await _hotspot("Flasche5").on_click()
+	_pruefe(_gesagt("W1_HOGG_PIX_0680"), "Pixel schnuppert Flasche 5 (0680)")
+	await _ansehen(_hotspot("Flasche1"), "W1_HOGG_PIX_0700")
+	_pruefe(int(Z.wert("W1_SCHNUPPER", 0)) == 2, "zwei Schnupperversuche")
+	await _rundreise("R6b, Pixel aktiv")
+	_pruefe(S.figur_wechseln() and not S.ist_pixel(), "Wechsel zurück zu Max")
+	await _benutze("Flasche", _hotspot("Kessel"), "W1_HOGG_PIX_0760")
+	_pruefe(_gesagt("W1_HOGG_TOA_0730") and not _i().is_item_in_inventory("Flasche")
+		and int(Z.wert("W1_FLASCHE", 0)) == 0, "falsche Flasche 4: Pilz (0710–0760), Flasche zurück")
+	await _hotspot("Flasche3").on_click()
+	await _benutze("Flasche", _hotspot("Kessel"), "W1_HOGG_MAX_0770")
+	_pruefe(Z.geloest("R6b") and Z.geloest("R6") and _gesagt("W1_HOGG_ALW_0850"), "R6 gelöst (0770–0850)")
+	for sn in ["Leuchttrank", "Zeugnis"]:
+		_pruefe(_i().is_item_in_inventory(sn), "Belohnung R6: " + sn)
+	_pruefe("zeugnis" in Z.nahansichten, "Zeugnis als Nahansicht (Mo-Knuddel)")
+	_pruefe(not _i().is_item_in_inventory("Flasche"), "Flasche im Trank aufgegangen")
+	await _ansehen_item("Leuchttrank", "W1_HOGG_MAX_0870")
+	await _rundreise("nach R6")
+
+	# --- Rätsel 9: Luftschloss ---
+	await _gehe("AusgangDorfplatz", "Dorfplatz")
+	await _gehe("Bohnenranke", "Luftschloss")
+	await _warte_bis(func(): return _gesagt("W1_LUFT_MAK_0030"), 10.0)
+	_pruefe(_gesagt("W1_LUFT_MAX_0010"), "Luftschloss: Ankunft (0010–0030)")
+	await _ansehen(_hotspot("Kritzelei"), "W1_LUFT_MAX_0060")
+	_pruefe("luftschloss_kritzelei" in Z.nahansichten, "Kritzelei als Nahansicht (…-Bärchen)")
+	var mak: PopochiuCharacter = _c().get_character("Maklerin")
+	_protokoll_leeren()
+	await mak.on_click()
+	_pruefe(_gesagt("W1_LUFT_MAK_0030") and not Z.ist("W1_MAKLERIN_FREI"), "Maklerin vor dem Entwicklungsmoment")
+	var zel_d = _dialog("Zeldina")
+	_pruefe(not zel_d.option_sichtbar("0710"), "Team-Fragen erst nach R9")
+	await zel_d.waehlen("0280")
+	_pruefe(Z.ist("W1_MAKLERIN_FREI") and _gesagt("W1_LUFT_MAX_0310"), "Entwicklungsmoment (0310)")
+	var mak_d = _dialog("Maklerin")
+	weiter = await mak_d.waehlen("0410")
+	_pruefe(not weiter and _gesagt("W1_LUFT_ZEL_0430"), "Feilschen: falsch, Gespräch endet")
+	await _rundreise("R9 halb")
+	_pruefe(mak_d.option_sichtbar("0470"), "Exposé-Option mit Steckbrief")
+	await mak_d.waehlen("0470")
+	_pruefe(Z.geloest("R9") and Z.ist("W1_ZELDINA_FOLGT") and _gesagt("W1_LUFT_TOA_0640"), "R9 gelöst (0480–0640)")
+	_pruefe(not _raum().has_character("Maklerin"), "Maklerin weg")
+	_pruefe(zel_d.option_sichtbar("0710") and not zel_d.option_sichtbar("0210"), "Zeldina: Team-Fragen")
+	await zel_d.waehlen("0710")
+	_pruefe(Z.ist("W1_PASSWORT_MO"), "Passwort-Anfang Mo (0720)")
+	await _rundreise("nach R9")
+	await _gehe("Rankenende", "Dorfplatz")
+	_pruefe(_raum().has_character("Zeldina"), "Zeldina folgt auf den Dorfplatz")
+
+	# --- Rätsel 10: Bergwerk, Weg A und Weg B ---
+	await _gehe("Waldweg", "Trollbruecke")
+	await _gehe("Waldweg", "Zauberwald")
+	await _gehe("Stolleneingang", "Bergwerk")
+	_pruefe(_raum().has_character("Zeldina"), "Zeldina folgt ins Bergwerk")
+	_pruefe(Z.status("R10a") == "offen" and Z.status("R10b") == "offen", "R10a und R10b offen")
+	_pruefe(Z.status("R10") != "geloest", "R10 noch nicht gelöst")
+	var st = root.get_node("Spielstand")
+	await _warte_bis(func(): return not st.beschaeftigt(), 10.0)
+	_pruefe(st.speichern(2, "Test vor R10"), "Zwischenstand vor R10 gespeichert")
+
+	# Weg A: Leuchttrank, Tarifvertrag, Ketchup
+	await _benutze("Leuchttrank", _hotspot("Fackeln"), "W1_BERG_MAX_0510")
+	_pruefe(_i().is_item_in_inventory("Tarifvertrag") and not _i().is_item_in_inventory("Leuchttrank"),
+		"Weg A: Tarifvertrag statt Leuchttrank (0510–0550)")
+	await _ansehen_item("Tarifvertrag", "W1_INV_MAX_0160")
+	await _item("Tarifvertrag").on_item_used(_item("Ketchup"))
+	_pruefe(Z.geloest("R10a") and Z.geloest("R10") and not Z.geloest("R10b"), "R10 über Weg A gelöst")
+	_pruefe(_gesagt("W1_BERG_GO1_0620") and _gesagt("W1_BERG_PIX_0660") and _gesagt("W1_BERG_ZEL_0700"),
+		"Arbeitslied mit Mo-Knuddel (0660) und Zeldina (0700)")
+	_pruefe(_item("Tarifvertrag").zustand() == "unterschrieben", "Tarifvertrag unterschrieben")
+	_pruefe(not Z.ist("W1_GRIMMZAHN_FOLGT"), "Weg A: Grimmzahn folgt nicht")
+	await _rundreise("nach R10, Weg A")
+
+	# Zurück zum Zwischenstand, Weg B: Zeldina bietet Grimmzahn den Hausmeister-Posten an
+	await st.laden(2)
+	await _warte_bis(func(): return not _e().in_room, 3.0)
+	await _warte_bis(func(): return _e().in_room and _e().loaded_game.is_empty(), 10.0)
+	for i in 5:
+		await process_frame
+	_pruefe(not Z.geloest("R10") and _i().is_item_in_inventory("Leuchttrank"), "Zwischenstand geladen: vor R10")
+	var gri_d = _dialog("Grimmzahn")
+	_pruefe(gri_d.option_sichtbar("0390"), "Weg B (0390) mit Zeldina im Team")
+	_protokoll_leeren()
+	weiter = await gri_d.waehlen("0390")
+	_pruefe(not weiter and Z.geloest("R10b") and Z.geloest("R10") and not Z.geloest("R10a"), "R10 über Weg B gelöst")
+	_pruefe(Z.ist("W1_GRIMMZAHN_FOLGT") and _gesagt("W1_BERG_GRI_0680"), "Grimmzahn folgt, Lied, Rune-Tür offen")
+	await _rundreise("nach R10, Weg B")
+
+	# --- Rätsel 11b: Turmkeller ---
+	await _gehe("RuneTuer", "Turmkeller")
+	await _warte_bis(func(): return _gesagt("W1_TURM_GRI_0040"), 10.0)
+	_pruefe(_gesagt("W1_TURM_ZEL_0030") and _gesagt("W1_TURM_GRI_0040"), "Turm: Ankunft mit Zeldina und Grimmzahn")
+	_pruefe(_raum().has_character("Grimmzahn") and _raum().has_character("Zeldina"), "beide folgen in den Turm")
+	await _hotspot("TreppeNachOben").on_click()
+	_pruefe(_gesagt("W1_TURM_MAX_0110") and _raum_name() == "Turmkeller", "Treppe gesperrt vor R11b")
+	await _hotspot("Kammertuer").on_click()
+	_pruefe(_gesagt("W1_TURM_MAX_0270"), "Kammertür vor den Besen: 0270")
+	await _hotspot("Kreuzung1").on_click()
+	_pruefe(_gesagt("W1_TURM_MAX_0140"), "Max auf der Kreuzung: 0140")
+	await _hotspot("Besen").on_click()
+	_pruefe(_gesagt("W1_TURM_NAR_0160") and _gesagt("W1_TURM_PIX_0170"), "Besen fegt Max (0160/0170)")
+	_pruefe(S.figur_wechseln() and S.ist_pixel(), "Wechsel zu Pixel im Turm")
+	await _hotspot("GeradeRoute").on_click()
+	_pruefe(_gesagt("W1_TURM_PIX_0190"), "Pixel außerhalb der Kreuzungen: 0190")
+	await _hotspot("Kreuzung1").on_click()
+	_pruefe(_gesagt("W1_TURM_PIX_0200") and Z.ist("W1_KREUZUNG_1"), "erste Spur (0200)")
+	await _rundreise("R11b halb, Pixel aktiv")
+	await _hotspot("Kreuzung3").on_click()
+	await _hotspot("Kreuzung2").on_click()
+	_pruefe(_gesagt("W1_TURM_PIX_0210") and _gesagt("W1_TURM_PIX_0220"), "zweite und dritte Spur")
+	await _hotspot("Kammertuer").on_click()
+	_pruefe(_gesagt("W1_TURM_PIX_0230") and not Z.geloest("R11b"), "Pixel an der Kammertür: 0230")
+	_pruefe(S.figur_wechseln() and not S.ist_pixel(), "Wechsel zurück zu Max")
+	await _hotspot("Kammertuer").on_click()
+	_pruefe(Z.geloest("R11b") and _gesagt("W1_TURM_ZEL_0260") and not _hotspot("Besen").visible,
+		"R11b gelöst (0240–0260), Besen weg")
+	await _rundreise("nach R11b")
+	await _gehe("Kammertuer", "Abstellkammer1")
+	await _warte_bis(func(): return _gesagt("W1_TURM_MAX_0300"), 10.0)
+	_pruefe(_gesagt("W1_TURM_MAX_0300"), "Abstellkammer 1 (0300)")
+	await _ansehen(_hotspot("Besen"), "W1_TURM_MAX_0310")
+	await _ansehen(_hotspot("Kram"), "W1_TURM_MAX_0330")
+	await _gehe("AusgangTurmkeller", "Turmkeller")
+
+	# --- Rätsel 11a und 12: Smaugis Abstellkammern ---
+	await _gehe("TreppeNachOben", "Abstellkammern")
+	await _warte_bis(func(): return _gesagt("W1_SMAU_GRI_0060"), 10.0)
+	_pruefe(_gesagt("W1_SMAU_HUM_0040") and _gesagt("W1_SMAU_GRI_0060"), "Smaugi: Ankunft (0010–0060, Weg B)")
+	for sn in ["Humbert", "Grimmzahn", "Zeldina", "Smaugi"]:
+		_pruefe(_raum().has_character(sn), "in den Abstellkammern: " + sn)
+	_pruefe(_raum().call("passwort_teile") == 4, "vier Passwort-Teile (Mo, Zeugnis, Lied, Kritzelei)")
+	S.vorgabe_auswahl = [0]
+	await _hotspot("Geheimtuer").on_click()
+	_pruefe(_gesagt("W1_SMAU_TUE_0710"), "Geheimtür fragt (0710)")
+	_pruefe(_gesagt("W1_SMAU_TUE_0730") and _gesagt("W1_SMAU_MAX_0740"), "falsche Reihenfolge (0730/0740)")
+	S.vorgabe_auswahl = [1]
+	await _hotspot("Geheimtuer").on_click()
+	_pruefe(_gesagt("W1_SMAU_TUE_0750") and not Z.geloest("R11a"), "zweite falsche Reihenfolge (0750)")
+	S.vorgabe_auswahl = [2]
+	await _hotspot("Geheimtuer").on_click()
+	_pruefe(Z.geloest("R11a") and Z.geloest("R11") and _gesagt("W1_SMAU_TUE_0770"), "R11a gelöst (0760–0790)")
+	await _hotspot("Geheimtuer").on_click()
+	_pruefe(_gesagt("W1_SMAU_MAX_0820") and _raum_name() == "Abstellkammern", "Erst das Ei (0820)")
+	await _rundreise("nach R11a")
+	_protokoll_leeren()
+	await _raum().get_prop("SchwerterBuendel").on_click()
+	_pruefe(_gesagt("W1_SMAU_SMA_0510") and _i().is_item_in_inventory("SchwerterBuendel"), "Schwerter genommen (0510/0520)")
+	await _raum().get_prop("FackelBuendel").on_click()
+	await _raum().get_prop("Kronleuchter").on_click()
+	await _benutze("SchwerterBuendel", _c().get_character("Grimmzahn"), "W1_SMAU_GRI_0650")
+	_pruefe(_i().is_item_in_inventory("SchwerterBuendel"), "falscher Abnehmer: Schwerter bleiben")
+	await _benutze("SchwerterBuendel", _c().get_character("Humbert"), "W1_SMAU_HUM_0530")
+	await _benutze("FackelBuendel", _c().get_character("Grimmzahn"), "W1_SMAU_GRI_0550")
+	await _rundreise("R12 halb")
+	_pruefe(not _raum().get_prop("SchwerterBuendel").visible, "verschenkter Kram bleibt weg")
+	await _benutze("Kronleuchter", _c().get_character("Zeldina"), "W1_SMAU_ZEL_0580")
+	_pruefe(Z.geloest("R12") and _i().is_item_in_inventory("Drachenei") and _gesagt("W1_SMAU_PIX_0640"),
+		"R12 gelöst: Drachenei (0610–0640)")
+	await _ansehen_item("Drachenei", "W1_INV_MAX_0170")
+	await _rundreise("nach R12")
+
+	# --- Rätsel 13: Thronsaal ---
+	await _gehe("Geheimtuer", "Thronsaal")
+	await _warte_bis(func(): return _gesagt("W1_THRO_MAX_0060"), 10.0)
+	_pruefe(_gesagt("W1_THRO_ZEL_0040"), "Thronsaal: Ankunft (0010–0060)")
+	var mod: PopochiuCharacter = _c().get_character("Moderwort")
+	await _benutze("Kochloeffel", mod, "W1_THRO_MOD_0210")
+	await _benutze("Socke", mod, "W1_THRO_MOD_0250")
+	_pruefe(Z.ist("W1_MOD_GENIEST"), "Moderwort niest (0240–0270)")
+	await _rundreise("R13 halb")
+	await _benutze("Kochloeffel", mod, "W1_THRO_MOD_0290")
+	_pruefe(Z.ist("W1_MOD_KAESE") and not _i().is_item_in_inventory("Kochloeffel"), "Käse-Flüche (0280–0340)")
+	_protokoll_leeren()
+	await mod.on_click()
+	_pruefe(Z.geloest("R13") and _gesagt("W1_THRO_MOD_0410") and _i().is_item_in_inventory("Kochloeffel"),
+		"R13 gelöst (0350–0420), Kochlöffel zurück")
+	var ohne_pfote: bool = int(Z.stufe3_zaehler.get("welt-1", 0)) == 0
+	_pruefe(_gesagt("W1_THRO_PIX_0560" if ohne_pfote else "W1_THRO_PIX_0570") and _gesagt("W1_THRO_PIX_0610"),
+		"Abschluss (0510–0610, Stufe-3-Zähler entscheidet 0560/0570)")
+
+	# --- Zwischenspiel 1: Dachboden ---
+	await _warte_auf_raum("Dachboden")
+	await _warte_bis(func(): return _gesagt("ZS1_DACH_PIX_0240"), 15.0)
+	_pruefe(Z.abschnitt == "finale" and int(Z.wert("ZWISCHENSPIEL", 0)) == 1, "Abschnitt finale, Zwischenspiel 1")
+	_pruefe(_gesagt("ZS1_DACH_OPA_0070") and Z.ist("ZS1_EI_ABGEGEBEN")
+		and not _i().is_item_in_inventory("Drachenei"), "ZS1: Opa nimmt das Ei (0010–0240)")
+	_pruefe(_i().is_item_in_inventory("Kochloeffel") and _i().is_item_in_inventory("Thunfischdose"),
+		"Inventar bleibt im Zwischenspiel")
+	_pruefe(_c().player.script_name == "Max", "Max ist aktiv")
+	await _ansehen(_hotspot("Dachfenster"), "ZS1_DACH_MAX_0330")
+	await _ansehen(_hotspot("Dachfenster"), "ZS1_DACH_MAX_0335")
+	_protokoll_leeren()
+	await H.pfote_geklickt()
+	_pruefe(_gesagt("ZS1_HINT_PIX_0010"), "Pfote im Zwischenspiel: ZS1_HINT_PIX_0010")
+	await _rundreise("Zwischenspiel 1")
+	_pruefe(Z.abschnitt == "finale" and not _gesagt("ZS1_DACH_NAR_0010"), "nach Laden: Zwischenspiel, keine zweite Ankunft")
+	await _hotspot("Drehknopf").on_click()
+	_pruefe(_gesagt("UI_WELT_1_ENDE"), "Drehknopf: Ende der Graubox (Packen und Welt 2 folgen)")
 
 
 func _gehe(ausgang: String, raum: String) -> void:
@@ -492,6 +805,15 @@ func _ordner_leeren() -> void:
 #endregion
 
 #region Hilfen
+func _systemtext_schliessen(_text: String) -> void:
+	await create_timer(0.5).timeout
+	var st := root.find_child("SystemText", true, false)
+	if st and st.has_method("close") and st.visible:
+		st.close()
+	else:
+		root.get_node("G").system_text_hidden.emit()
+
+
 func _ueberlagerung_schliessen(n: Node) -> void:
 	if n.has_signal("geschlossen") and n.has_method("schliessen"):
 		await create_timer(0.5).timeout

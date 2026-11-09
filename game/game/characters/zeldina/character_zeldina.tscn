@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://bmca5d1um7tyn"]
+
+[ext_resource type="Script" path="res://game/characters/zeldina/character_zeldina.gd" id="1_ytlwp"]
+[ext_resource type="Texture2D" uid="uid://dm6mxauik1oov" path="res://grafik/platzhalter/figur_zeldina.png" id="2_1ciup"]
+
+[node name="CharacterZeldina" type="Area2D" unique_id=1373959384]
+script = ExtResource("1_ytlwp")
+walk_speed = 90.0
+dialog_pos = Vector2(0, -62)
+script_name = "Zeldina"
+description = "UI_OBJ_ZELDINA"
+cursor = 8
+interaction_polygon = PackedVector2Array(-9.5, -58, 9.5, -58, 9.5, 0, -9.5, 0)
+
+[node name="ScalingPolygon" type="CollisionPolygon2D" parent="." unique_id=2145591165]
+polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=668063236]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2066164822]
+texture_filter = 1
+texture = ExtResource("2_1ciup")
+offset = Vector2(0, -29)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1468049813]
+visible = false
+polygon = PackedVector2Array(-9.5, -58, 9.5, -58, 9.5, 0, -9.5, 0)
+
+[node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=605021325]
+visible = false
+affect_navigation_mesh = true
+carve_navigation_mesh = true

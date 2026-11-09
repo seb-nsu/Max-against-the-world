@@ -1,0 +1,62 @@
+[gd_scene format=3 uid="uid://dawc6hw58cp65"]
+
+[ext_resource type="Script" path="res://game/rooms/abstellkammer_1/room_abstellkammer_1.gd" id="1_e8440"]
+[ext_resource type="PackedScene" uid="uid://v2wfs4hjw7p8" path="res://game/rooms/abstellkammer_1/walkable_areas/boden/walkable_area_boden.tscn" id="2_dsx3a"]
+[ext_resource type="PackedScene" uid="uid://snya2jmkrabi" path="res://game/rooms/abstellkammer_1/props/background/prop_background.tscn" id="3_b1qcm"]
+[ext_resource type="Texture2D" uid="uid://cvk84cqbbjtxm" path="res://grafik/platzhalter/raum_abstellkammer_1.png" id="4_wfjvj"]
+[ext_resource type="PackedScene" uid="uid://61170nll5pea" path="res://game/rooms/abstellkammer_1/hotspots/besen/hotspot_besen.tscn" id="5_7tyfc"]
+[ext_resource type="PackedScene" uid="uid://ka4xsgid2gtr" path="res://game/rooms/abstellkammer_1/hotspots/kram/hotspot_kram.tscn" id="6_um4y5"]
+[ext_resource type="PackedScene" uid="uid://mmg8ssxff1ol" path="res://game/rooms/abstellkammer_1/hotspots/ausgang_turmkeller/hotspot_ausgang_turmkeller.tscn" id="7_hhdou"]
+[ext_resource type="PackedScene" uid="uid://bmqkln58gs77b" path="res://game/rooms/abstellkammer_1/markers/start/marker_start.tscn" id="8_cyjct"]
+[ext_resource type="PackedScene" uid="uid://brtsh546ylyv1" path="res://game/rooms/abstellkammer_1/markers/von_turmkeller/marker_von_turmkeller.tscn" id="9_wklpe"]
+
+[node name="RoomAbstellkammer1" type="Node2D" unique_id=434518868]
+script = ExtResource("1_e8440")
+script_name = "Abstellkammer1"
+width = 320
+height = 180
+
+[node name="WalkableAreas" type="Node2D" parent="." unique_id=463854798]
+
+[node name="Boden" parent="WalkableAreas" unique_id=937279921 instance=ExtResource("2_dsx3a")]
+interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(4, 140, 316, 140, 316, 178, 4, 178)])
+
+[node name="Props" type="Node2D" parent="." unique_id=971607405]
+
+[node name="Background" parent="Props" unique_id=768599641 instance=ExtResource("3_b1qcm")]
+position = Vector2(160, 90)
+texture = ExtResource("4_wfjvj")
+description = "UI_RAUM_ABSTELLKAMMER_1"
+
+[node name="Hotspots" type="Node2D" parent="." unique_id=812886177]
+
+[node name="Besen" parent="Hotspots" unique_id=749648026 instance=ExtResource("5_7tyfc")]
+position = Vector2(120, 125)
+description = "UI_OBJ_BESEN"
+baseline = 15
+walk_to_point = Vector2(0, 29)
+
+[node name="Kram" parent="Hotspots" unique_id=449695085 instance=ExtResource("6_um4y5")]
+position = Vector2(220, 110)
+description = "UI_OBJ_KRAM"
+baseline = 30
+walk_to_point = Vector2(0, 44)
+
+[node name="AusgangTurmkeller" parent="Hotspots" unique_id=1395413342 instance=ExtResource("7_hhdou")]
+position = Vector2(308, 100)
+description = "UI_OBJ_AUSGANG_TURMKELLER"
+baseline = 40
+walk_to_point = Vector2(-4, 60)
+cursor = 9
+
+[node name="Regions" type="Node2D" parent="." unique_id=607727179]
+
+[node name="Markers" type="Node2D" parent="." unique_id=840526272]
+
+[node name="Start" parent="Markers" unique_id=1640586378 instance=ExtResource("8_cyjct")]
+position = Vector2(290, 160)
+
+[node name="VonTurmkeller" parent="Markers" unique_id=658211824 instance=ExtResource("9_wklpe")]
+position = Vector2(290, 160)
+
+[node name="Characters" type="Node2D" parent="." unique_id=305500932]

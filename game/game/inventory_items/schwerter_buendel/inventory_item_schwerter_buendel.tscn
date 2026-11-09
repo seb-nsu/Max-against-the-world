@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://cc5x1ukq6h13e"]
+
+[ext_resource type="Texture2D" uid="uid://owlograj2kbv" path="res://grafik/platzhalter/gegenstand_schwerter_buendel.png" id="1_k8amn"]
+[ext_resource type="Script" path="res://game/inventory_items/schwerter_buendel/inventory_item_schwerter_buendel.gd" id="1_qj13v"]
+
+[node name="ItemSchwerterBuendel" type="TextureRect" unique_id=1071648526]
+texture_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 4
+mouse_filter = 0
+texture = ExtResource("1_k8amn")
+stretch_mode = 5
+script = ExtResource("1_qj13v")
+script_name = "SchwerterBuendel"
+description = "UI_OBJ_SCHWERTER_BUENDEL"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1910236794]

@@ -1,15 +1,19 @@
 extends RefCounted
-## Regeln von Welt 1, die mehrere Räume betreffen (raetsel/prolog-und-welt-1.md, Rätsel 3 und 4):
-## die Ziegen als Begleiter und Pixel im Ziegenfell. CQRaum ruft figuren_anwenden() nach jedem
-## Betreten und Laden auf; alles folgt aus Schaltern, nichts davon wird eigens gespeichert.
-##
-## Schmiede-Ziege: in der Schmiede, folgt Max nach „Kann ich die Ziege haben?“ (W1_ZIEGE_FOLGT)
-## bis R4c, danach wieder in der Schmiede. XXL-Ziege: erst nach der Lieferung (W1_XXL_GELIEFERT),
-## folgt Max bis R4c, danach grast sie an der Troll-Brücke.
+## Regeln von Welt 1, die mehrere Räume betreffen (aufgerufen von CQRaum._zustand_anwenden):
+## - Begleiter: Schmiede-Ziege (W1_ZIEGE_FOLGT) und XXL-Ziege (W1_XXL_GELIEFERT) folgen Max bis
+##   Rätsel 4; danach steht die Schmiede-Ziege in der Schmiede, die XXL-Ziege an der Brücke.
+##   Zeldina folgt ab Rätsel 9 (W1_ZELDINA_FOLGT), Grimmzahn auf Goblin-Weg B ab Rätsel 10b
+##   (W1_GRIMMZAHN_FOLGT) bis Rätsel 12.
+## - Smaugis Abstellkammern: nach Rätsel 11b stehen dort die drei Abnehmer Humbert, Grimmzahn
+##   und Zeldina (Ankunftsszene W1_SMAU 0040–0070).
+## - Pixel im Ziegenfell (W1_PIXEL_IM_FELL) bekommt eine Fellfarbe statt eigener Grafik.
 
 const ZIEGE := "SchmiedeZiege"
 const XXL := "XxlZiege"
-## Platzhalter für „Pixel als Ziege“ (Figur-Variante, Grafik folgt): Pixel wird bräunlich.
+const ZELDINA := "Zeldina"
+const GRIMMZAHN := "Grimmzahn"
+const HUMBERT := "Humbert"
+const ABNEHMER := [HUMBERT, GRIMMZAHN, ZELDINA]
 const FELL_FARBE := Color(0.85, 0.72, 0.5)
 
 
@@ -21,34 +25,59 @@ static func xxl_folgt() -> bool:
 	return Zustand.ist("W1_XXL_GELIEFERT") and not Zustand.geloest("R4c")
 
 
-## Raum, in dem die Ziege steht, wenn sie nicht folgt ("" = nirgends).
-static func heimat(sn: String) -> String:
-	if sn == ZIEGE:
-		return "Schmiede"
-	if sn == XXL and Zustand.geloest("R4c"):
-		return "Trollbruecke"
-	return ""
+static func folgt(sn: String) -> bool:
+	match sn:
+		ZIEGE:
+			return ziege_folgt()
+		XXL:
+			return xxl_folgt()
+		ZELDINA:
+			return Zustand.ist("W1_ZELDINA_FOLGT")
+		GRIMMZAHN:
+			return Zustand.ist("W1_GRIMMZAHN_FOLGT") and not Zustand.geloest("R12")
+	return false
+
+
+## Räume, in denen die Figur steht, wenn sie nicht folgt.
+static func heimat(sn: String) -> Array:
+	var abnehmer := ["Abstellkammern"] if Zustand.geloest("R11b") else []
+	match sn:
+		ZIEGE:
+			return ["Schmiede"]
+		XXL:
+			return ["Trollbruecke"] if Zustand.geloest("R4c") else []
+		ZELDINA:
+			return ["Luftschloss"] if not Zustand.geloest("R9") else abnehmer
+		GRIMMZAHN:
+			return ["Bergwerk"] + abnehmer
+		HUMBERT:
+			return ["Taverne"] + abnehmer
+	return []
 
 
 static func figuren_anwenden(raum: PopochiuRoom) -> void:
 	var i := 0
-	for sn in [ZIEGE, XXL]:
-		var folgt: bool = ziege_folgt() if sn == ZIEGE else xxl_folgt()
-		var da := folgt or raum.script_name == heimat(sn)
+	for sn in [ZIEGE, XXL, ZELDINA, GRIMMZAHN, HUMBERT]:
+		var f := folgt(sn)
+		var da: bool = f or raum.script_name in heimat(sn)
+		if sn == HUMBERT and raum.script_name == "Taverne":
+			continue  # in der Taverne entscheidet der Raum (Keller, R1b)
+		var pos := _platz(raum, i, sn)
 		if da and not raum.has_character(sn):
-			Spiel.figur_hier(sn, true, _platz(raum, i))
-		elif da and folgt:
-			C.get_character(sn).position = _platz(raum, i)
+			Spiel.figur_hier(sn, true, pos)
+		elif da and (f or (sn in ABNEHMER and raum.has_marker("Abnehmer"))):
+			C.get_character(sn).position = pos
 		elif not da:
 			Spiel.figur_hier(sn, false)
-		if folgt:
+		if f:
 			i += 1
 	if is_instance_valid(C.Pixel):
 		C.Pixel.modulate = FELL_FARBE if Zustand.ist("W1_PIXEL_IM_FELL") else Color.WHITE
 
 
-## Wo eine folgende Ziege steht: an der Brücke am Marker „Ziegen“, sonst hinter Max.
-static func _platz(raum: PopochiuRoom, i: int) -> Vector2:
+static func _platz(raum: PopochiuRoom, i: int, sn := "") -> Vector2:
+	if sn in ABNEHMER and raum.has_method("has_marker") and raum.has_marker("Abnehmer"):
+		return raum.get_marker_position("Abnehmer") + Vector2(36 * ABNEHMER.find(sn), 0)
 	if raum.has_method("has_marker") and raum.has_marker("Ziegen"):
 		return raum.get_marker_position("Ziegen") + Vector2(24 * i, 0)
 	var basis: Vector2 = C.Max.position if is_instance_valid(C.Max) else Vector2(160, 160)

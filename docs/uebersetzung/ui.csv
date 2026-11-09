@@ -169,4 +169,77 @@ UI_ZIEL_W1_R3,Drei Ziegenböcke finden,Find three billy goats
 UI_ZIEL_W1_R4A,Die Ziegen in der richtigen Reihenfolge,The goats in the right order
 UI_ZIEL_W1_R4B,Die Ziegen ihre Sätze sagen lassen,Make the goats say their lines
 UI_ZIEL_W1_R4C,Den Troll ins Wasser bringen,Get the troll into the water
-UI_WELT_1_ENDE,Ende des Vertical Slice. Rätsel 5 bis 13 folgen.,End of the vertical slice. Puzzles 5 to 13 to follow.
+UI_WELT_1_ENDE,Ende der Graubox. Welt 2 folgt.,End of the greybox. World 2 to follow.
+UI_RAUM_ABSTELLKAMMER_1,Abstellkammer 1,Storeroom 1
+UI_RAUM_ABSTELLKAMMERN,Smaugis Abstellkammern,Smaugi's storerooms
+UI_RAUM_THRONSAAL,Thronsaal,Throne room
+UI_OBJ_AUSGANG_ABSTELLKAMMERN,Abstellkammern,Storerooms
+UI_OBJ_AUSGANG_TURMKELLER,Keller,Cellar
+UI_OBJ_BALKON,Balkon,Balcony
+UI_OBJ_BESEN,Besen,Brooms
+UI_OBJ_BLUMENVASEN,Blumen,Flowers
+UI_OBJ_DEKO_KRAM,Kram,Junk
+UI_OBJ_DRACHENEI,Drachenei,Dragon egg
+UI_OBJ_DRACHENEI_NEST,Drachenei,Dragon egg
+UI_OBJ_FACKEL_BUENDEL,Fackel-Bündel,Bundle of torches
+UI_OBJ_FLASCHE,Fläschchen,Little bottle
+UI_OBJ_FLASCHE_1,Flasche 1,Bottle 1
+UI_OBJ_FLASCHE_2,Flasche 2,Bottle 2
+UI_OBJ_FLASCHE_3,Flasche 3,Bottle 3
+UI_OBJ_FLASCHE_4,Flasche 4,Bottle 4
+UI_OBJ_FLASCHE_5,Flasche 5,Bottle 5
+UI_OBJ_FLASCHE_6,Flasche 6,Bottle 6
+UI_OBJ_GEHEIMTUER,Geheimtür,Secret door
+UI_OBJ_GERADE_ROUTE,Gerade Route,Straight route
+UI_OBJ_GOLDHAUFEN,Goldhaufen,Pile of gold
+UI_OBJ_HINWEISZETTEL,Alwins Hinweiszettel,Alwin's note
+UI_OBJ_KAMMERTUER,Kammertür,Storeroom door
+UI_OBJ_KELLERTREPPE,Kellertreppe,Cellar stairs
+UI_OBJ_KETCHUP,Ketchup,Ketchup
+UI_OBJ_KRAM,Kram,Junk
+UI_OBJ_KREUZUNG_1,Kreuzung,Crossing
+UI_OBJ_KREUZUNG_2,Kreuzung,Crossing
+UI_OBJ_KREUZUNG_3,Kreuzung,Crossing
+UI_OBJ_KRITZELEI,Kritzelei,Scribble
+UI_OBJ_KRONLEUCHTER,Kronleuchter,Chandelier
+UI_OBJ_LERNTAGEBUCH,Lerntagebuch,Study diary
+UI_OBJ_LEUCHTPILZ,Leuchtpilz,Glowing mushroom
+UI_OBJ_LEUCHTTRANK,Leuchttrank,Glowing potion
+UI_OBJ_LUFTSCHLOSS_KRITZELEI,Kritzelei,Scribble
+UI_OBJ_MAKLERIN,Maklerin,Estate agent
+UI_OBJ_MODERWORT,Moderwort,Moderwort
+UI_OBJ_OKARINA,Okarina,Ocarina
+UI_OBJ_RANKENENDE,Rankenende,End of the beanstalk
+UI_OBJ_SCHLEIFEN_ROUTE,Schleifen-Route,Loop route
+UI_OBJ_SCHWERTER_BUENDEL,Schwerter-Bündel,Bundle of swords
+UI_OBJ_SCHWERT_IM_STEIN,Schwert im Stein,Sword in the stone
+UI_OBJ_SMAUGI,Smaugi,Smaugi
+UI_OBJ_SPIEGEL,Spiegel,Mirror
+UI_OBJ_STAPEL,Stapel,Stacks
+UI_OBJ_TARIFVERTRAG,Tarifvertrag,Collective agreement
+UI_OBJ_TASCHENTUCHSTAPEL,Taschentücher,Tissues
+UI_OBJ_THRON,Thron,Throne
+UI_OBJ_TORBOGEN,Torbogen,Archway
+UI_OBJ_TREPPE_NACH_OBEN,Wendeltreppe,Spiral staircase
+UI_OBJ_WENDELTREPPE,Wendeltreppe,Spiral staircase
+UI_OBJ_WOLKEN,Wolken,Clouds
+UI_OBJ_ZAUBERBOHNE,Zauberbohne,Magic bean
+UI_OBJ_ZELDINA,Zeldina,Zeldina
+UI_OBJ_ZEUGNIS,Moderworts Zeugnis,Moderwort's school report
+UI_OBJ_ZICKZACK_ROUTE,Zickzack-Route,Zigzag route
+UI_ZIEL_W1_R5,Einen Wunsch beim Brunnen frei haben,Get a wish from the well
+UI_ZIEL_W1_R6A,Die Zutaten für Alwins Trank,The ingredients for Alwin's potion
+UI_ZIEL_W1_R6B,Die richtige Flasche finden,Find the right bottle
+UI_ZIEL_W1_R7,Die Niesrosen öffnen,Open the sneeze roses
+UI_ZIEL_W1_R8,Die Bohne zum Wachsen bringen,Make the bean grow
+UI_ZIEL_W1_R9,Zeldina die Wohnung retten,Save Zeldina's flat
+UI_ZIEL_W1_R10,Durch das Bergwerk kommen,Get through the mine
+UI_ZIEL_W1_R10A,Den Goblins Licht und Unterschrift bringen,Bring the goblins light and a signature
+UI_ZIEL_W1_R10B,Grimmzahn einen Posten anbieten,Offer Grimmzahn a job
+UI_ZIEL_W1_R11A,Das Passwort der Geheimtür,The secret door's password
+UI_ZIEL_W1_R11B,Die Besen loswerden,Get rid of the brooms
+UI_ZIEL_W1_R12,Smaugi das Ei abschwatzen,Talk Smaugi out of the egg
+UI_ZIEL_W1_R13,Lord Moderwort besiegen,Defeat Lord Moderwort
+UI_PASSWORT_W1_1,Puddi-Bärchen-Mo-Knuddel,Puddi-Bärchen-Mo-Knuddel
+UI_PASSWORT_W1_2,Knuddel-Mo-Bärchen-Puddi,Knuddel-Mo-Bärchen-Puddi
+UI_PASSWORT_W1_3,Mo-Knuddel-Puddi-Bärchen,Mo-Knuddel-Puddi-Bärchen

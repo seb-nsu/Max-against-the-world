@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://cuxko1vegh713"]
+
+[ext_resource type="Script" path="res://game/rooms/turmkeller/hotspots/treppe_nach_oben/hotspot_treppe_nach_oben.gd" id="1_oyg3m"]
+
+[node name="TreppeNachOben" type="Area2D" unique_id=2000200409]
+script = ExtResource("1_oyg3m")
+script_name = "TreppeNachOben"
+description = "Treppe Nach Oben"
+cursor = 1
+interaction_polygon = PackedVector2Array(-15, -50, 15, -50, 15, 50, -15, 50)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=872185902]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

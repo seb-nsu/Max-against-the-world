@@ -210,7 +210,12 @@ func _on_tween_finished() -> void:
 
 
 func show_item(item: PopochiuInventoryItem) -> void:
-	box.add_child(item)
+	# Couch Quest: Nach Laden mit Pixel aktiv und dem Wechsel zurück zu Max hing ein
+	# Gegenstand (Flasche, R6b) schon in der Leiste, add_child meldete einen Fehler.
+	if item.get_parent() != box:
+		if item.get_parent():
+			item.get_parent().remove_child(item)
+		box.add_child(item)
 	# Couch Quest: Das Pixel-Feld steht immer ganz links (05-spielsysteme.md, Steuerung).
 	if item.script_name == "PixelFeld":
 		box.move_child(item, 0)

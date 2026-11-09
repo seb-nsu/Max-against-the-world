@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://c3dk00qjmyeyl"]
+
+[ext_resource type="Script" path="res://game/rooms/abstellkammern/hotspots/schwert_im_stein/hotspot_schwert_im_stein.gd" id="1_pyi78"]
+
+[node name="SchwertImStein" type="Area2D" unique_id=405485767]
+script = ExtResource("1_pyi78")
+script_name = "SchwertImStein"
+description = "Schwert Im Stein"
+cursor = 1
+interaction_polygon = PackedVector2Array(-7, -15, 7, -15, 7, 15, -7, 15)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=38140235]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

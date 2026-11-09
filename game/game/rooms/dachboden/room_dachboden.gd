@@ -32,6 +32,14 @@ func _on_zustand_geaendert(_name: String) -> void:
 
 func _raum_betreten(erster_besuch: bool) -> void:
 	_erster_besuch = erster_besuch
+	if zwischenspiel() > 0 and has_marker("Fernseher"):
+		C.player.position = get_marker_position("Fernseher")  # aus dem Bildschirm gepurzelt
+		partner_aufstellen(true)
+
+
+## Laufendes Zwischenspiel (1 bis 3), 0 im Prolog und im Finale.
+func zwischenspiel() -> int:
+	return int(Zustand.wert("ZWISCHENSPIEL", 0)) if Zustand.abschnitt == "finale" else 0
 
 
 ## Bild des Zapp-O-Mat und Pixels Platz folgen aus P1–P3 (nie gespeichert).
@@ -40,22 +48,25 @@ func _zustand_anwenden() -> void:
 	var zapp := get_prop("ZappOMat")
 	if is_instance_valid(zapp) and not _p2_laeuft:
 		zapp.current_frame = bild()
-	if is_instance_valid(C.Pixel) and has_character("Pixel"):
-		C.Pixel.position = PIXEL_WERKBANK if Zustand.geloest("P1") else PIXEL_KABEL
+	if is_instance_valid(C.Pixel) and has_character("Pixel") and zwischenspiel() == 0:
+		C.Pixel.position = PIXEL_WERKBANK if Zustand.geloest("P1", "prolog") else PIXEL_KABEL
 
 
 func bild() -> int:
-	if Zustand.geloest("P3"):
+	if Zustand.geloest("P3", "prolog"):
 		return Bild.WIRBEL
-	if Zustand.geloest("P2"):
+	if Zustand.geloest("P2", "prolog"):
 		return Bild.BUNT
-	if Zustand.geloest("P1"):
+	if Zustand.geloest("P1", "prolog"):
 		return Bild.SCHNEE
 	return Bild.AUS
 
 
 ## Szene beim ersten Betreten: Opas Auftrag (skript/prolog.md, Abschnitt 2)
 func _nach_uebergang() -> void:
+	if zwischenspiel() == 1 and not Zustand.ist("ZS1_EI_ABGEGEBEN"):
+		await zs1_ankunft()
+		return
 	if not _erster_besuch:
 		return
 	_erster_besuch = false
@@ -81,7 +92,9 @@ func _nach_uebergang() -> void:
 
 ## Geladener Stand nach dem Ende des Prologs: wieder den Abschluss zeigen.
 func _nach_laden() -> void:
-	if Zustand.geloest("P3"):
+	if zwischenspiel() == 1 and not Zustand.ist("ZS1_EI_ABGEGEBEN"):
+		await zs1_ankunft()
+	elif Zustand.abschnitt == "prolog" and Zustand.geloest("P3"):
 		await Spiel.prolog_beenden()
 
 
@@ -170,6 +183,74 @@ func p3_loesen() -> void:
 func _bekommen(sn: String) -> void:
 	if not I.is_item_in_inventory(sn):
 		await I.get_item_instance(sn).add()
+
+
+#endregion
+
+
+#region Zwischenspiel 1 ############################################################################
+## Ankunft mit dem Drachenei (skript/zwischenspiele-und-finale.md, Abschnitt 1, 0010–0240).
+## Opa nimmt das Ei bei 0070; im Eierkarton wird es ein weißes Ei (0110).
+func zs1_ankunft() -> void:
+	await Spiel.szene([
+		Spiel.z("NAR", "ZS1_DACH_NAR_0010"),
+		Spiel.z("PIX", "ZS1_DACH_PIX_0020"),
+		Spiel.z("MAX", "ZS1_DACH_MAX_0030"),
+		Spiel.z("PIX", "ZS1_DACH_PIX_0040"),
+		Spiel.z("OPA", "ZS1_DACH_OPA_0050"),
+		Spiel.z("MAX", "ZS1_DACH_MAX_0060"),
+		Spiel.z("OPA", "ZS1_DACH_OPA_0070"),
+		_ei_abgeben,
+		Spiel.z("OPA", "ZS1_DACH_OPA_0080"),
+		Spiel.z("MAX", "ZS1_DACH_MAX_0090"),
+		Spiel.z("OPA", "ZS1_DACH_OPA_0100"),
+		Spiel.z("NAR", "ZS1_DACH_NAR_0110"),
+		Spiel.z("MAX", "ZS1_DACH_MAX_0120"),
+		Spiel.z("OPA", "ZS1_DACH_OPA_0130"),
+		Spiel.z("PIX", "ZS1_DACH_PIX_0140"),
+		Spiel.z("MAX", "ZS1_DACH_MAX_0150"),
+		Spiel.z("OPA", "ZS1_DACH_OPA_0160"),
+		Spiel.z("OPA", "ZS1_DACH_OPA_0170"),
+		Spiel.z("MAX", "ZS1_DACH_MAX_0180"),
+		Spiel.z("PIX", "ZS1_DACH_PIX_0190"),
+		Spiel.z("OPA", "ZS1_DACH_OPA_0200"),
+		Spiel.z("PIX", "ZS1_DACH_PIX_0210"),
+		Spiel.z("PIX", "ZS1_DACH_PIX_0220"),
+		Spiel.z("MAX", "ZS1_DACH_MAX_0230"),
+		Spiel.z("PIX", "ZS1_DACH_PIX_0240"),
+	])
+	await _ei_abgeben()  # falls übersprungen
+	Spielstand.autospeichern()
+
+
+func _ei_abgeben() -> void:
+	await Spiel.abgeben("Drachenei")
+	Zustand.setze("ZS1_EI_ABGEGEBEN")
+
+
+## Ansehen im Zwischenspiel 1 (0310–0375): nur, was sich verändert hat; sonst gelten die
+## Prolog-Zeilen. Die Werkbank-Ablage mit dem Ei ist in der Graubox die Werkbank; die Fundkiste
+## (0420/0425) hat noch keinen Hotspot.
+const ZS1_ANSEHEN := {
+	werkbank = [["MAX", "ZS1_DACH_MAX_0310", 1], ["MAX", "ZS1_DACH_MAX_0315", 2, "ZS1_DACH_PIX_0320"]],
+	dachfenster = [["MAX", "ZS1_DACH_MAX_0330", 1], ["MAX", "ZS1_DACH_MAX_0335", 2]],
+	kalender = [["MAX", "ZS1_DACH_MAX_0340", 1], ["MAX", "ZS1_DACH_MAX_0345", 2]],
+	zapp_o_mat = [["MAX", "ZS1_DACH_MAX_0350", 1], ["PIX", "ZS1_DACH_PIX_0355", 2]],
+	kiste_mit_fernbedienungen = [["PIX", "ZS1_DACH_PIX_0360", 1], ["PIX", "ZS1_DACH_PIX_0365", 2]],
+	ohrensessel = [["MAX", "ZS1_DACH_MAX_0370", 1], ["MAX", "ZS1_DACH_MAX_0375", 2]],
+}
+
+
+func ansehen_zusatz(objekt: String) -> Array:
+	if zwischenspiel() != 1 or not ZS1_ANSEHEN.has(objekt):
+		return []
+	var out := []
+	for z in ZS1_ANSEHEN[objekt]:
+		var e := {sprecher = z[0], zeile = z[1], mal = z[2]}
+		if z.size() > 3:
+			e.folge = [{sprecher = "PIX", zeile = z[3]}]
+		out.append(e)
+	return out
 
 
 #endregion

@@ -23,8 +23,10 @@ func raum_id() -> String:
 
 
 func _on_room_entered() -> void:
+	# Der Raum bestimmt den Abschnitt, außer er gehört auch zum aktuellen (Dachboden im
+	# Zwischenspiel: Bauplan aus dem Prolog, Welt-Tabelle „finale“).
 	var ab := Bauplan.raum_abschnitt(script_name)
-	if not ab.is_empty():
+	if not ab.is_empty() and not _im_abschnitt(Zustand.abschnitt):
 		Zustand.abschnitt = ab
 	var erster_besuch := not Zustand.war_in(raum_id())
 	Zustand.besuche(raum_id())
@@ -52,6 +54,17 @@ func _on_restore_from_savegame() -> void:
 	_zustand_anwenden()
 	Spiel.pixel_feld_pruefen()
 	await _nach_laden()
+
+
+func _im_abschnitt(ab: String) -> bool:
+	return Bauplan.welten.get(ab, {}).get("raeume", []).any(func(r): return r.id == raum_id())
+
+
+## Zusätzliche Ansehen-Zeilen eines Objekts (Zwischenspiel auf dem Dachboden); Räume
+## überschreiben das. Die Einträge haben die Form des Bauplans ({zeile, sprecher, mal …}) und
+## gewinnen bei gleichem „mal“ gegen die Zeilen des Bauplans.
+func ansehen_zusatz(_objekt: String) -> Array:
+	return []
 
 
 func has_marker(name: String) -> bool:

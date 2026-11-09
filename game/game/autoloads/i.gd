@@ -18,6 +18,18 @@ const PIISteckbrief := preload("res://game/inventory_items/steckbrief/inventory_
 const PIIEimer := preload("res://game/inventory_items/eimer/inventory_item_eimer.gd")
 const PIIKrug := preload("res://game/inventory_items/krug/inventory_item_krug.gd")
 const PIIPixelFeld := preload("res://game/inventory_items/pixel_feld/inventory_item_pixel_feld.gd")
+const PIILeuchtpilz := preload("res://game/inventory_items/leuchtpilz/inventory_item_leuchtpilz.gd")
+const PIIHinweiszettel := preload("res://game/inventory_items/hinweiszettel/inventory_item_hinweiszettel.gd")
+const PIIFlasche := preload("res://game/inventory_items/flasche/inventory_item_flasche.gd")
+const PIILeuchttrank := preload("res://game/inventory_items/leuchttrank/inventory_item_leuchttrank.gd")
+const PIIZeugnis := preload("res://game/inventory_items/zeugnis/inventory_item_zeugnis.gd")
+const PIIZauberbohne := preload("res://game/inventory_items/zauberbohne/inventory_item_zauberbohne.gd")
+const PIIKetchup := preload("res://game/inventory_items/ketchup/inventory_item_ketchup.gd")
+const PIITarifvertrag := preload("res://game/inventory_items/tarifvertrag/inventory_item_tarifvertrag.gd")
+const PIISchwerterBuendel := preload("res://game/inventory_items/schwerter_buendel/inventory_item_schwerter_buendel.gd")
+const PIIFackelBuendel := preload("res://game/inventory_items/fackel_buendel/inventory_item_fackel_buendel.gd")
+const PIIKronleuchter := preload("res://game/inventory_items/kronleuchter/inventory_item_kronleuchter.gd")
+const PIIDrachenei := preload("res://game/inventory_items/drachenei/inventory_item_drachenei.gd")
 # ---- classes
 
 # nodes ----
@@ -37,6 +49,18 @@ var Steckbrief: PIISteckbrief : get = get_Steckbrief
 var Eimer: PIIEimer : get = get_Eimer
 var Krug: PIIKrug : get = get_Krug
 var PixelFeld: PIIPixelFeld : get = get_PixelFeld
+var Leuchtpilz: PIILeuchtpilz : get = get_Leuchtpilz
+var Hinweiszettel: PIIHinweiszettel : get = get_Hinweiszettel
+var Flasche: PIIFlasche : get = get_Flasche
+var Leuchttrank: PIILeuchttrank : get = get_Leuchttrank
+var Zeugnis: PIIZeugnis : get = get_Zeugnis
+var Zauberbohne: PIIZauberbohne : get = get_Zauberbohne
+var Ketchup: PIIKetchup : get = get_Ketchup
+var Tarifvertrag: PIITarifvertrag : get = get_Tarifvertrag
+var SchwerterBuendel: PIISchwerterBuendel : get = get_SchwerterBuendel
+var FackelBuendel: PIIFackelBuendel : get = get_FackelBuendel
+var Kronleuchter: PIIKronleuchter : get = get_Kronleuchter
+var Drachenei: PIIDrachenei : get = get_Drachenei
 # ---- nodes
 
 # functions ----
@@ -56,5 +80,17 @@ func get_Steckbrief() -> PIISteckbrief: return get_item_instance("Steckbrief")
 func get_Eimer() -> PIIEimer: return get_item_instance("Eimer")
 func get_Krug() -> PIIKrug: return get_item_instance("Krug")
 func get_PixelFeld() -> PIIPixelFeld: return get_item_instance("PixelFeld")
+func get_Leuchtpilz() -> PIILeuchtpilz: return get_item_instance("Leuchtpilz")
+func get_Hinweiszettel() -> PIIHinweiszettel: return get_item_instance("Hinweiszettel")
+func get_Flasche() -> PIIFlasche: return get_item_instance("Flasche")
+func get_Leuchttrank() -> PIILeuchttrank: return get_item_instance("Leuchttrank")
+func get_Zeugnis() -> PIIZeugnis: return get_item_instance("Zeugnis")
+func get_Zauberbohne() -> PIIZauberbohne: return get_item_instance("Zauberbohne")
+func get_Ketchup() -> PIIKetchup: return get_item_instance("Ketchup")
+func get_Tarifvertrag() -> PIITarifvertrag: return get_item_instance("Tarifvertrag")
+func get_SchwerterBuendel() -> PIISchwerterBuendel: return get_item_instance("SchwerterBuendel")
+func get_FackelBuendel() -> PIIFackelBuendel: return get_item_instance("FackelBuendel")
+func get_Kronleuchter() -> PIIKronleuchter: return get_item_instance("Kronleuchter")
+func get_Drachenei() -> PIIDrachenei: return get_item_instance("Drachenei")
 # ---- functions
 

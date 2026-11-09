@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://0avbiq07vgco"]
+
+[ext_resource type="Texture2D" uid="uid://xyg8pwqmfuqm" path="res://grafik/platzhalter/gegenstand_hinweiszettel.png" id="1_lthkc"]
+[ext_resource type="Script" path="res://game/inventory_items/hinweiszettel/inventory_item_hinweiszettel.gd" id="1_p5i3w"]
+
+[node name="ItemHinweiszettel" type="TextureRect" unique_id=357228918]
+texture_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 4
+mouse_filter = 0
+texture = ExtResource("1_lthkc")
+stretch_mode = 5
+script = ExtResource("1_p5i3w")
+script_name = "Hinweiszettel"
+description = "UI_OBJ_HINWEISZETTEL"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=865457398]

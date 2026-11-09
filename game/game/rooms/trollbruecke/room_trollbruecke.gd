@@ -165,7 +165,7 @@ func _eimer_auf_waldemar() -> void:
 		await Spiel.sagen("WAL", "W1_BRUE_WAL_1050")
 		return
 	if not Zustand.geloest("R4b"):
-		await Spiel.ersatz()
+		await Spiel.sagen("WAL", "W1_BRUE_WAL_1060")  # offene-punkte.md G12
 		return
 	await Spiel.szene([
 		Spiel.z("MAX", "W1_BRUE_MAX_0950"),

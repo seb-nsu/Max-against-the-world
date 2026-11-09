@@ -7,7 +7,4 @@ const Data := preload('character_rotkaeppchen_state.gd')
 var state: Data = load("res://game/characters/rotkaeppchen/character_rotkaeppchen.tres")
 
 
-## Das Gespräch gehört zu Rätseln nach dem Vertical Slice (ab R5): nur die Meldung.
-func _on_click() -> void:
-	await Spiel.hingehen(self)
-	Spiel.ausbau_ende("UI_WELT_1_ENDE")
+# Reden: Gespräch aus dem Bauplan (Ketchup-Erlaubnis bei 0230/0240, dialog_rotkaeppchen.gd).

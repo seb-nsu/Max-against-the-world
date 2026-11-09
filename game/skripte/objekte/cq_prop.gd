@@ -24,6 +24,8 @@ func ansehen() -> String:
 	if eintraege.is_empty() and bauplan().get("nehmen"):
 		# Kein eigenes Ansehen im Skript: die Nehmen-Zeile beschreibt das Ding.
 		eintraege = [bauplan().nehmen]
+	if room is CQRaum:
+		eintraege = eintraege + room.ansehen_zusatz(objekt_id())
 	return await Spiel.ansehen(eintraege, "%s/%s" % [room.script_name if is_instance_valid(room) else "", script_name])
 
 

@@ -3,6 +3,10 @@ name: Zwischenspiele und Finale
 skript_praefix: [ZS1, ZS2, ZS3, FI]
 sonder_codes: [HINT, INV]            # INV: Inventar ansehen; ZS1_HINT_* und FI_HINT_*: Hilfe-Pfote
 sonder_sprecher: [NAR]               # Regie- und Animationszeilen ohne Sprecher
+# Hilfsschalter und -werte ohne eigenes Rätsel (05-spielsysteme.md, Speichern)
+weitere_schalter:
+  - ZWISCHENSPIEL            # Wert: laufendes Zwischenspiel (1 bis 3); fehlt im Finale
+  - ZS1_EI_ABGEGEBEN         # Opa hat das Drachenei genommen (ZS1_DACH 0070), Ankunftsszene gespielt
 
 raeume:
   - id: dachboden

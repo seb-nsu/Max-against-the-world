@@ -2,9 +2,10 @@
 
 Godot 4.7.2 mit Popochiu 2.2.1 (Plugin in `addons/popochiu`, Lizenz dort in `LICENSE`).
 Auflösung 320×180, Pixelgrafik ohne Glättung, ganzzahlig skaliert. Stand: Stufe 1
-(Grundgerüst) und Vertical Slice als Graubox: Prolog und Welt 1 bis Rätsel 4 sind mit
-Platzhaltergrafik durchspielbar. Räume hinter R4 (Luftschloss, Turm) erscheinen nur als
-gesperrter Ausgang; Gespräche zu Rätseln ab R5 melden „Ende des Vertical Slice“.
+(Grundgerüst) und Graubox: Prolog und ganz Welt 1 (R1 bis R13, Rätsel 10 über Weg A oder B)
+sind mit Platzhaltergrafik durchspielbar, danach die Ankunft in Zwischenspiel 1 mit der Abgabe
+des Dracheneis. Reisetasche packen und Kanal 7 fehlen noch: der Drehknopf meldet dort „Ende der
+Graubox“.
 
 ## Öffnen und spielen
 
@@ -65,14 +66,31 @@ godot --headless --editor --path game -- --cq-bauen   # Godot-Bau: fehlende Popo
   `game/rooms/taverne/room_taverne.gd` (R1), `game/inventory_items/kochloeffel/` (R2),
   `game/rooms/dorfplatz/room_dorfplatz.gd` (Lieferung der XXL-Ziege),
   `game/rooms/trollbruecke/room_trollbruecke.gd` (R3, R4: `figur_benutzt()` für Rätsel mit
-  mehreren Figuren). Regeln über mehrere Räume (Ziegen als Begleiter, Pixel im Fell) stehen in
-  `skripte/welt_1.gd`; `CQRaum` ruft sie nach jedem Betreten und Laden auf.
+  mehreren Figuren), `game/rooms/dorfplatz/hotspots/brunnen/` und `erdfleck/` (R5, R8),
+  `game/rooms/klassenzimmer/hotspots/kessel/` und `flasche_im_regal.gd` (R6),
+  `game/rooms/zauberwald/room_zauberwald.gd` (R7), `game/dialogs/maklerin/` (R9),
+  `game/rooms/bergwerk/room_bergwerk.gd` (R10, Arbeitslied), `game/rooms/turmkeller/` (R11b),
+  `game/rooms/abstellkammern/room_abstellkammern.gd` (R11a, R12),
+  `game/rooms/thronsaal/room_thronsaal.gd` (R13, Abschluss) und für Zwischenspiel 1 wieder
+  `room_dachboden.gd`. Regeln über mehrere Räume (Ziegen, Zeldina und Grimmzahn als
+  Begleiter, die Abnehmer in Smaugis Kammer, Pixel im Fell) stehen in `skripte/welt_1.gd`;
+  `CQRaum` ruft sie nach jedem Betreten und Laden auf.
+- **Auswahl ohne Gesprächsfigur** (Wünsche am Brunnen, Passwort an der Geheimtür):
+  `Spiel.auswahl(texte)` zeigt Popochius Inline-Auswahl; Tests geben die Antwort über
+  `Spiel.vorgabe_auswahl` vor.
+- **Zwischenspiele** laufen auf dem Dachboden des Prologs mit dem Abschnitt `finale` (der
+  Dachboden steht auch in dessen Welt-Tabelle) und dem Wert `ZWISCHENSPIEL`
+  (`Spiel.zwischenspiel_beginnen(nr)`; das Inventar bleibt). Ein Raum, der zum aktuellen
+  Abschnitt gehört, setzt den Abschnitt beim Betreten nicht zurück. Rätsel-IDs aus anderen
+  Abschnitten („nach P3“) findet `Zustand` über alle Welt-Tabellen. Was sich im Zwischenspiel
+  am Dachboden ändert, liefert `ansehen_zusatz()` des Raums zusätzlich zum Bauplan.
 
 Das Layout (`tools/layout/<abschnitt>.yaml`) legt fest, welche Räume gebaut werden. Schlüssel
 neben den Räumen: `_ausbau` (gebaute Rätsel; die übrigen gelten als gesperrt, Pfote und
 Notizbuch schweigen dazu), `_alias` (Skriptname → Objekt), `_tiere` (Max versteht nur Miau),
-`_figuren` (Figuren ohne festen Raum). Je Raum: `alias`, `ohne` (Props, die erst später kommen);
-je Ausgang: `gesperrt` (Zeile), `versteckt`, `erreichbar_ab`.
+`_figuren` (Figuren ohne festen Raum). Je Raum: `alias`, `ohne` (Objekte, deren Zeilen der
+Generator überspringen soll), `hotspots`, `props` (`item: null` für Props ohne Gegenstand),
+`marker`, `figuren`; je Ausgang: `gesperrt` (Zeile), `versteckt`, `erreichbar_ab`.
 
 Basisklassen in `skripte/objekte/`: `CQRaum`, `CQHotspot`, `CQAusgang`, `CQProp`, `CQFigur`,
 `CQGegenstand`, `CQDialog`. Sie liefern das Standardverhalten (Ansehen aus dem Bauplan,
@@ -116,8 +134,8 @@ Bild gilt, leitet `room_dachboden.gd` aus P1 bis P3 ab.
 ```
 cd game
 godot --headless --path . --import                                   # einmal nach dem Klonen
-godot --headless --path . -s res://tests/prolog_durchlauf.gd          # Testmodus, knapp 1 Minute
-godot --headless --path . -s res://tests/prolog_durchlauf.gd -- --echt   # echte Sprechblasen, 1,5 Minuten
+godot --headless --path . -s res://tests/prolog_durchlauf.gd          # Testmodus, gut 3 Minuten
+godot --headless --path . -s res://tests/prolog_durchlauf.gd -- --echt   # echte Sprechblasen, gut 9 Minuten
 ```
 
 Der allererste Import nach dem Klonen meldet rund 60 Fehler (Autoloads und Übersetzungen, die erst beim Import entstehen). Das ist normal: Ein zweiter Import und das Öffnen im Editor laufen fehlerfrei. Im Editor genügt es, das Projekt einmal zu öffnen und, falls Godot fragt, neu zu laden.
@@ -142,7 +160,7 @@ beide Varianten laufen.
 
 ## Änderungen an Popochiu
 
-Das Addon `addons/popochiu` ist unverändert. Zwei Probleme von Popochiu 2.2.1 sind in der
+Das Addon `addons/popochiu` ist unverändert. Drei Probleme von Popochiu 2.2.1 sind in der
 Projektkopie der Inventarleiste behoben (`game/gui/components/simple_click_bar/simple_click_bar.gd`,
 Stellen mit „Couch Quest:“ markiert):
 
@@ -151,5 +169,9 @@ Stellen mit „Couch Quest:“ markiert):
   meldet die Leiste in dem Fall sofort „fertig“.
 - Beim Laden leert Popochiu die Inventare aller Figuren. War Pixel aktiv, hingen Max' Gegenstände
   nicht in der Leiste, und `remove_child` meldete Fehler. Jetzt wird nur entfernt, was dort hängt.
+
+- Nach dem Laden mit Pixel als aktiver Figur und dem Wechsel zurück zu Max hing ein Gegenstand
+  schon in der Leiste, und `add_child` meldete einen Fehler. Jetzt hängt `show_item` nur um,
+  was noch nicht dort hängt.
 
 Dazu hält die Leiste das Pixel-Feld ganz links.

@@ -1,0 +1,87 @@
+[gd_scene format=3 uid="uid://e6sypqrhxtgy"]
+
+[ext_resource type="Script" path="res://game/rooms/thronsaal/room_thronsaal.gd" id="1_47dtf"]
+[ext_resource type="PackedScene" uid="uid://br608wsujnnt0" path="res://game/rooms/thronsaal/walkable_areas/boden/walkable_area_boden.tscn" id="2_ynqpu"]
+[ext_resource type="PackedScene" uid="uid://x1ln5phofli8" path="res://game/rooms/thronsaal/props/background/prop_background.tscn" id="3_aavy4"]
+[ext_resource type="Texture2D" uid="uid://btw0e3khhxvay" path="res://grafik/platzhalter/raum_thronsaal.png" id="4_lqc0j"]
+[ext_resource type="PackedScene" uid="uid://cukbcexdywegr" path="res://game/rooms/thronsaal/hotspots/thron/hotspot_thron.tscn" id="5_1ic08"]
+[ext_resource type="PackedScene" uid="uid://bsgxfgjwjkhje" path="res://game/rooms/thronsaal/hotspots/taschentuchstapel/hotspot_taschentuchstapel.tscn" id="6_ejnri"]
+[ext_resource type="PackedScene" uid="uid://c6hlkhrkhcpvi" path="res://game/rooms/thronsaal/hotspots/blumenvasen/hotspot_blumenvasen.tscn" id="7_3eyad"]
+[ext_resource type="PackedScene" uid="uid://cwtg4y5wmlxp3" path="res://game/rooms/thronsaal/hotspots/lerntagebuch/hotspot_lerntagebuch.tscn" id="8_wm0ci"]
+[ext_resource type="PackedScene" uid="uid://cqwdtkpk1sjtr" path="res://game/rooms/thronsaal/hotspots/fenster/hotspot_fenster.tscn" id="9_qpfw0"]
+[ext_resource type="PackedScene" uid="uid://qk5fbl3dbb4h" path="res://game/rooms/thronsaal/hotspots/ausgang_abstellkammern/hotspot_ausgang_abstellkammern.tscn" id="10_a3e6v"]
+[ext_resource type="PackedScene" uid="uid://ccrg01vce4kp0" path="res://game/rooms/thronsaal/markers/start/marker_start.tscn" id="11_vmowt"]
+[ext_resource type="PackedScene" uid="uid://bqvphhn1irsfj" path="res://game/rooms/thronsaal/markers/von_abstellkammern/marker_von_abstellkammern.tscn" id="12_ptv2g"]
+[ext_resource type="PackedScene" uid="uid://telrvt7431lh" path="res://game/characters/moderwort/character_moderwort.tscn" id="13_gvc06"]
+
+[node name="RoomThronsaal" type="Node2D" unique_id=1123926160]
+script = ExtResource("1_47dtf")
+script_name = "Thronsaal"
+width = 320
+height = 180
+
+[node name="WalkableAreas" type="Node2D" parent="." unique_id=1977228103]
+
+[node name="Boden" parent="WalkableAreas" unique_id=974352136 instance=ExtResource("2_ynqpu")]
+interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(4, 140, 316, 140, 316, 178, 4, 178)])
+
+[node name="Props" type="Node2D" parent="." unique_id=569534150]
+
+[node name="Background" parent="Props" unique_id=473056377 instance=ExtResource("3_aavy4")]
+position = Vector2(160, 90)
+texture = ExtResource("4_lqc0j")
+description = "UI_RAUM_THRONSAAL"
+
+[node name="Hotspots" type="Node2D" parent="." unique_id=220026710]
+
+[node name="Thron" parent="Hotspots" unique_id=122594816 instance=ExtResource("5_1ic08")]
+position = Vector2(210, 100)
+description = "UI_OBJ_THRON"
+baseline = 40
+walk_to_point = Vector2(-10, 56)
+
+[node name="Taschentuchstapel" parent="Hotspots" unique_id=207081006 instance=ExtResource("6_ejnri")]
+position = Vector2(262, 130)
+description = "UI_OBJ_TASCHENTUCHSTAPEL"
+baseline = 10
+walk_to_point = Vector2(-6, 26)
+
+[node name="Blumenvasen" parent="Hotspots" unique_id=1732873763 instance=ExtResource("7_3eyad")]
+position = Vector2(105, 125)
+description = "UI_OBJ_BLUMENVASEN"
+baseline = 15
+walk_to_point = Vector2(-1, 31)
+
+[node name="Lerntagebuch" parent="Hotspots" unique_id=354739942 instance=ExtResource("8_wm0ci")]
+position = Vector2(138, 131)
+description = "UI_OBJ_LERNTAGEBUCH"
+baseline = 5
+walk_to_point = Vector2(-2, 25)
+
+[node name="Fenster" parent="Hotspots" unique_id=1987414595 instance=ExtResource("9_qpfw0")]
+position = Vector2(150, 30)
+description = "UI_OBJ_FENSTER"
+baseline = 20
+walk_to_point = Vector2(0, 122)
+
+[node name="AusgangAbstellkammern" parent="Hotspots" unique_id=2006339862 instance=ExtResource("10_a3e6v")]
+position = Vector2(12, 100)
+description = "UI_OBJ_AUSGANG_ABSTELLKAMMERN"
+baseline = 40
+walk_to_point = Vector2(0, 60)
+cursor = 9
+
+[node name="Regions" type="Node2D" parent="." unique_id=1948872092]
+
+[node name="Markers" type="Node2D" parent="." unique_id=1906300920]
+
+[node name="Start" parent="Markers" unique_id=1606568816 instance=ExtResource("11_vmowt")]
+position = Vector2(30, 160)
+
+[node name="VonAbstellkammern" parent="Markers" unique_id=1586908301 instance=ExtResource("12_ptv2g")]
+position = Vector2(30, 160)
+
+[node name="Characters" type="Node2D" parent="." unique_id=419324263]
+
+[node name="CharacterModerwort *" parent="Characters" unique_id=1446034948 instance=ExtResource("13_gvc06")]
+position = Vector2(200, 150)

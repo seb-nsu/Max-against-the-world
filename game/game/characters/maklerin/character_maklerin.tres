@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://i0ec3fqf0te5"]
+
+[ext_resource type="Script" path="res://game/characters/maklerin/character_maklerin_state.gd" id="1_jjrn6"]
+
+[resource]
+resource_name = "Maklerin"
+script = ExtResource("1_jjrn6")
+script_name = "Maklerin"
+scene = "res://game/characters/maklerin/character_maklerin.tscn"

@@ -91,10 +91,19 @@ func nahansicht_gesehen(id: String) -> void:
 #endregion
 
 #region Rätsel #####################################################################################
+## Ohne ausdrücklichen Abschnitt gilt der aktuelle; fehlt das Rätsel dort, wird in den übrigen
+## Abschnitten gesucht (Prolog-Zeilen „nach P3“ auf dem Dachboden im Zwischenspiel).
 func raetsel(id: String, ab := "") -> Dictionary:
 	for r in Bauplan.welten.get(ab if ab else abschnitt, {}).get("raetsel", []):
 		if r.id == id:
 			return r
+	if ab.is_empty():
+		for anderer in Bauplan.welten:
+			if anderer == abschnitt:
+				continue
+			for r in Bauplan.welten[anderer].get("raetsel", []):
+				if r.id == id:
+					return r
 	return {}
 
 
@@ -122,6 +131,9 @@ func geloest(id: String, ab := "") -> bool:
 		return false
 	var eigene: Array = r.schalter.filter(func(s): return str(s).ends_with("_GELOEST"))
 	if eigene.is_empty():
+		var wege: Array = r.get("benoetigt_eins_von", []).filter(func(b): return not raetsel(b, ab).is_empty())
+		if not wege.is_empty():
+			return wege.any(func(b): return geloest(b, ab))  # R10: Weg A oder Weg B
 		var teile: Array = r.get("benoetigt", []).filter(func(b): return not raetsel(b, ab).is_empty())
 		if teile.is_empty():
 			return false
