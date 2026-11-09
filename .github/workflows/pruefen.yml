@@ -21,3 +21,23 @@ jobs:
         run: python3 tools/skript_export.py --pruefen
       - name: Spieldaten aktuell
         run: python3 tools/spieldaten.py --pruefen
+      - name: Godot-Bauplan aktuell
+        run: python3 tools/godot_raeume.py --pruefen
+
+  godot:
+    runs-on: ubuntu-latest
+    env:
+      GODOT_VERSION: "4.7.2"
+    steps:
+      - uses: actions/checkout@v4
+      - name: Godot laden
+        run: |
+          curl -sSL -o godot.zip "https://github.com/godotengine/godot/releases/download/${GODOT_VERSION}-stable/Godot_v${GODOT_VERSION}-stable_linux.x86_64.zip"
+          unzip -q godot.zip
+          mv "Godot_v${GODOT_VERSION}-stable_linux.x86_64" godot
+      - name: Import (erster Import meldet Fehler, bis der Klassen-Cache steht)
+        run: ./godot --headless --path game --import || true
+      - name: Prolog-Durchlauf (Testmodus)
+        run: timeout 300 ./godot --headless --path game -s res://tests/prolog_durchlauf.gd
+      - name: Prolog-Durchlauf (echte Sprechblasen und Wege)
+        run: timeout 600 ./godot --headless --path game -s res://tests/prolog_durchlauf.gd -- --echt
