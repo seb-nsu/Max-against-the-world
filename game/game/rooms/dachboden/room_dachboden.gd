@@ -103,6 +103,7 @@ func _nach_uebergang() -> void:
 		Spiel.z("OPA", "P0_DACH_OPA_0060"),
 		Spiel.z("OPA", "P0_DACH_OPA_0070"),
 		Spiel.z("OPA", "P0_DACH_OPA_0080"),
+		Spiel.z("MAX", "P0_DACH_MAX_0085"),
 		Spiel.z("OPA", "P0_DACH_OPA_0090"),
 		Spiel.z("MAX", "P0_DACH_MAX_0100"),
 		Spiel.z("OPA", "P0_DACH_OPA_0110"),
@@ -110,6 +111,7 @@ func _nach_uebergang() -> void:
 		Spiel.z("OPA", "P0_DACH_OPA_0130"),
 		Spiel.z("OPA", "P0_DACH_OPA_0140"),
 		Spiel.z("MAX", "P0_DACH_MAX_0150"),
+		Spiel.z("OPA", "P0_DACH_OPA_0155"),
 		Spiel.z("OPA", "P0_DACH_OPA_0160"),
 	])
 

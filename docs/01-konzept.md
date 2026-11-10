@@ -54,6 +54,16 @@ Max ist gelassen-genervt, nicht zynisch; der Zyniker ist Pixel. Zusammen funktio
 
 **Entwicklung des Tonfalls:** In Welt 1 klingt Max vor allem genervt („Muss das sein?“). Ab Welt 2 wird er neugierig, in Welt 3 nachdenklich, und in Welt 4 kommentiert er das Fernsehen, das er früher nur konsumiert hat. Am Ende sagt er zum ersten Mal ohne Murren: „Ich hol sie.“ Regel für alle Ansehen-Zeilen: Max erklärt nie die Vorlage, und jede Zeile muss auch ohne sie funktionieren. Retro-Medien wie Testbild, Kassetten oder Sendeschluss kennt er mit 16 nicht; diese Pointen gehören Pixel oder Opa.
 
+**Dialogregeln (Humor-Durchgang 10. November 2026, nach dem ersten Anspielen):**
+
+- Gesprochen, nicht gedichtet: ganze Sätze mit „weil“, „aber“, „und dann“, wie man wirklich redet. Keine Reihen aus Ein- und Zwei-Wort-Sätzen („Ein Balken. Ein einziger. Deko.“); ein kurzer Satz ist die Pointe, nicht das Muster.
+- Die Vergleichsformel „Wie X, nur Y“ höchstens einmal pro Raum, und „wie“-Vergleiche überhaupt sparsam. Lieber eine genaue Beobachtung als ein Vergleich.
+- Gespräche sind Wechsel: Max reagiert auf das, was gerade gesagt wurde, fragt nach, widerspricht; Szenen bekommen ein, zwei Zeilen Hin und Her mehr statt einer Pointe pro Figur.
+- Pixel holt aus: lange, gestelzte Sätze mit Nebensätzen und Einschüben („wenn ich das anmerken darf“, „junger Mann“), Abschweifungen über sich, Essen, Schlafplätze und seine Vorfahren, gern als Kaskade über zwei, drei Blasen. Kurz wird er nur für einen Effekt („Wer. Hat. Mich. Geweckt.“).
+- Max bleibt trocken und spricht Umgangssprache („ich hab“, „ehrlich gesagt“), aber erzählt einen Gedanken zu Ende, statt nur Stichworte zu setzen. Ersatz- und Wiederholungszeilen dürfen kurz bleiben, weil sie oft kommen.
+- Anspielungen sind ein Augenzwinkern, kein Zitat: Max nennt nie den Titel der Vorlage, und kein Witz hängt allein daran, dass man sie kennt.
+- Hinweise der Hilfe-Pfote dürfen in Pixels Ton verpackt sein, Stufe 3 sagt die Lösung aber immer eindeutig.
+
 **Beispielsätze für „Ansehen“:**
 
 - Drachenei: „Größer als Ostern. Kleiner als mein Problem.“

@@ -35,6 +35,8 @@ func _nach_uebergang() -> void:
 		Spiel.z("MAX", "P0_WOHN_MAX_0020"),
 		Spiel.z("OPA", "P0_WOHN_OPA_0030"),
 		Spiel.z("MAX", "P0_WOHN_MAX_0040"),
+		Spiel.z("OPA", "P0_WOHN_OPA_0042"),
+		Spiel.z("MAX", "P0_WOHN_MAX_0044"),
 		Spiel.z("OPA", "P0_WOHN_OPA_0050"),
 		Spiel.z("MAX", "P0_WOHN_MAX_0060"),
 		Spiel.z("MAX", "P0_WOHN_MAX_0070"),
