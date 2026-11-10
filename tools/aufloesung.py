@@ -20,10 +20,10 @@ import sys
 from fractions import Fraction
 from pathlib import Path
 
-BREITE, HOEHE = 480, 270
-UI_LEISTE = 48          # Höhe der Inventarleiste oben
-UI_ICON = 36            # Inventar-Icons, Porträts, Hilfe-Pfote (quadratisch)
-UI_ZEIGER = 24          # Mauszeiger (quadratisch)
+BREITE, HOEHE = 640, 360
+UI_LEISTE = 64          # Höhe der Inventarleiste oben
+UI_ICON = 48            # Inventar-Icons, Porträts, Hilfe-Pfote (quadratisch)
+UI_ZEIGER = 32          # Mauszeiger (quadratisch)
 
 WURZEL = Path(__file__).resolve().parent.parent
 GAME = WURZEL / "game"

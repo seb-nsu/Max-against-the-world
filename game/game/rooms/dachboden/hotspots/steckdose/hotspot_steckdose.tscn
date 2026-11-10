@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://242nenwfhtxb"]
+
+[ext_resource type="Script" path="res://game/rooms/dachboden/hotspots/steckdose/hotspot_steckdose.gd" id="1_32s7q"]
+
+[node name="Steckdose" type="Area2D" unique_id=587515452]
+script = ExtResource("1_32s7q")
+script_name = "Steckdose"
+description = "Steckdose"
+cursor = 1
+interaction_polygon = PackedVector2Array(-11, -11, 11, -11, 11, 11, -11, 11)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1904130010]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

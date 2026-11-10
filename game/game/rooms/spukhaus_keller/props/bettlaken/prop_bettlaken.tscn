@@ -7,7 +7,7 @@ script = ExtResource("1_cluqj")
 script_name = "Bettlaken"
 description = "Bettlaken"
 cursor = 1
-interaction_polygon = PackedVector2Array(-7.5, -6, 7.5, -6, 7.5, 6, -7.5, 6)
+interaction_polygon = PackedVector2Array(-10.0, -8, 10.0, -8, 10.0, 8, -10.0, 8)
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=106952544]
 texture_filter = 1
@@ -17,7 +17,7 @@ texture_filter = 1
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1569379455]
 visible = false
 modulate = Color(1, 1, 0, 1)
-polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+polygon = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 
 [node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=1247907305]
 visible = false

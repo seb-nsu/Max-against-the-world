@@ -7,9 +7,9 @@ script = ExtResource("1_8dj4s")
 script_name = "Plakat"
 description = "Plakat"
 cursor = 1
-interaction_polygon = PackedVector2Array(-27, -24, 27, -24, 27, 24, -27, 24)
+interaction_polygon = PackedVector2Array(-36, -32, 36, -32, 36, 32, -36, 32)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1955297164]
 visible = false
 modulate = Color(1, 0, 1, 1)
-polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+polygon = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)

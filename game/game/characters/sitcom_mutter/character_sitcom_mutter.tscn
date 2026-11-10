@@ -5,12 +5,12 @@
 
 [node name="CharacterSitcomMutter" type="Area2D" unique_id=424208824]
 script = ExtResource("1_4from")
-walk_speed = 90.0
-dialog_pos = Vector2(0, -113)
+walk_speed = 120.0
+dialog_pos = Vector2(0, -200)
 script_name = "SitcomMutter"
 description = "UI_OBJ_SITCOM_MUTTER"
 cursor = 8
-interaction_polygon = PackedVector2Array(-18, -109, 18, -109, 18, 0, -18, 0)
+interaction_polygon = PackedVector2Array(-24.5, -196, 24.5, -196, 24.5, 0, -24.5, 0)
 
 [node name="ScalingPolygon" type="CollisionPolygon2D" parent="." unique_id=1553809586]
 polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
@@ -20,11 +20,11 @@ polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=235468836]
 texture_filter = 1
 texture = ExtResource("2_tssc5")
-offset = Vector2(0, -54.5)
+offset = Vector2(0, -98)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1736042377]
 visible = false
-polygon = PackedVector2Array(-18, -109, 18, -109, 18, 0, -18, 0)
+polygon = PackedVector2Array(-24.5, -196, 24.5, -196, 24.5, 0, -24.5, 0)
 
 [node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=221260784]
 visible = false

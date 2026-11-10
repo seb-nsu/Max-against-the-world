@@ -5,7 +5,7 @@
 
 [node name="CharacterPortalgeraetStimme" type="Area2D" unique_id=1291778746]
 script = ExtResource("1_i8q5a")
-walk_speed = 90.0
+walk_speed = 120.0
 dialog_pos = Vector2(0, -64)
 script_name = "PortalgeraetStimme"
 description = "UI_OBJ_PORTALGERAET_STIMME"

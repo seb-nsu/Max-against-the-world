@@ -7,9 +7,9 @@ script = ExtResource("1_48k7v")
 script_name = "Gluehwuermchen"
 description = "Gluehwuermchen"
 cursor = 1
-interaction_polygon = PackedVector2Array(-60, -23, 60, -23, 60, 23, -60, 23)
+interaction_polygon = PackedVector2Array(-80, -31, 80, -31, 80, 31, -80, 31)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=126213309]
 visible = false
 modulate = Color(1, 0, 1, 1)
-polygon = PackedVector2Array(-18, -18, 18, -18, 18, 18, -18, 18)
+polygon = PackedVector2Array(-24, -24, 24, -24, 24, 24, -24, 24)

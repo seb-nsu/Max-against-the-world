@@ -13,65 +13,65 @@
    "script_name": "Wohnzimmer",
    "name_key": "UI_RAUM_WOHNZIMMER",
    "groesse": [
-    480,
-    270
+    640,
+    360
    ],
    "hintergrund": "res://grafik/hintergruende/w0_bg_wohnzimmer_v01.png",
    "farbe": "#6b4f3f",
    "laufbereich": [
     [
-     6,
-     268
+     8,
+     357
     ],
     [
-     6,
-     252
+     8,
+     336
     ],
     [
-     70,
-     240
+     93,
+     320
     ],
     [
-     195,
-     220
-    ],
-    [
-     300,
-     220
-    ],
-    [
-     302,
-     182
-    ],
-    [
-     330,
-     176
+     260,
+     293
     ],
     [
      400,
-     180
+     293
     ],
     [
-     420,
-     194
+     403,
+     243
     ],
     [
-     476,
-     200
+     440,
+     235
     ],
     [
-     476,
-     268
+     533,
+     240
+    ],
+    [
+     560,
+     259
+    ],
+    [
+     635,
+     267
+    ],
+    [
+     635,
+     357
     ]
    ],
    "marker": {
     "start": [
-     140,
-     230
+     187,
+     307
     ],
     "von_treppenhaus": [
-     440,
-     222
+     587,
+     296
     ]
    },
    "tiefe": 0.85,
@@ -82,14 +82,14 @@
      "script_name": "Kuchen",
      "name_key": "UI_OBJ_KUCHEN",
      "rect": [
-      254,
-      136,
-      32,
-      30
+      339,
+      181,
+      43,
+      40
      ],
      "gehe": [
-      272,
-      228
+      363,
+      304
      ],
      "ansehen": [],
      "versteckt": true
@@ -99,14 +99,14 @@
      "script_name": "Girlande",
      "name_key": "UI_OBJ_GIRLANDE",
      "rect": [
-      100,
-      8,
-      280,
-      20
+      133,
+      11,
+      373,
+      27
      ],
      "gehe": [
-      240,
-      228
+      320,
+      304
      ],
      "ansehen": [],
      "versteckt": true
@@ -116,14 +116,14 @@
      "script_name": "Geschenke",
      "name_key": "UI_OBJ_GESCHENKE",
      "rect": [
-      300,
-      196,
-      26,
-      22
+      400,
+      261,
+      35,
+      29
      ],
      "gehe": [
-      312,
-      230
+      416,
+      307
      ],
      "ansehen": [],
      "versteckt": true
@@ -133,14 +133,14 @@
      "script_name": "Fernseher",
      "name_key": "UI_OBJ_FERNSEHER",
      "rect": [
-      328,
-      90,
-      72,
-      82
+      437,
+      120,
+      96,
+      109
      ],
      "gehe": [
-      362,
-      190
+      483,
+      253
      ],
      "ansehen": [
       {
@@ -158,6 +158,23 @@
        ],
        "mal": 2
       }
+     ],
+     "benutzen": [
+      {
+       "zeile": "P0_WOHN_MAX_0170",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_WOHN_MAX_0170"
+       ]
+      },
+      {
+       "zeile": "P0_WOHN_MAX_0175",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_WOHN_MAX_0175"
+       ],
+       "mal": 2
+      }
      ]
     },
     {
@@ -165,14 +182,14 @@
      "script_name": "Familienfoto",
      "name_key": "UI_OBJ_FAMILIENFOTO",
      "rect": [
-      205,
-      40,
-      100,
-      68
+      273,
+      53,
+      133,
+      91
      ],
      "gehe": [
-      255,
-      225
+      340,
+      300
      ],
      "ansehen": [
       {
@@ -190,6 +207,23 @@
        ],
        "mal": 2
       }
+     ],
+     "benutzen": [
+      {
+       "zeile": "P0_WOHN_MAX_0190",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_WOHN_MAX_0190"
+       ]
+      },
+      {
+       "zeile": "P0_WOHN_MAX_0195",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_WOHN_MAX_0195"
+       ],
+       "mal": 2
+      }
      ]
     },
     {
@@ -197,14 +231,14 @@
      "script_name": "Teetasse",
      "name_key": "UI_OBJ_TEETASSE",
      "rect": [
-      226,
-      156,
-      16,
-      14
+      301,
+      208,
+      21,
+      19
      ],
      "gehe": [
-      236,
-      228
+      315,
+      304
      ],
      "ansehen": [
       {
@@ -222,6 +256,23 @@
        ],
        "mal": 2
       }
+     ],
+     "benutzen": [
+      {
+       "zeile": "P0_WOHN_MAX_0180",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_WOHN_MAX_0180"
+       ]
+      },
+      {
+       "zeile": "P0_WOHN_MAX_0185",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_WOHN_MAX_0185"
+       ],
+       "mal": 2
+      }
      ]
     },
     {
@@ -229,14 +280,14 @@
      "script_name": "LeererPlatzAufDemCouchtisch",
      "name_key": "UI_OBJ_LEERER_PLATZ_AUF_DEM_COUCHTISCH",
      "rect": [
-      256,
-      160,
-      28,
-      11
+      341,
+      213,
+      37,
+      15
      ],
      "gehe": [
-      272,
-      228
+      363,
+      304
      ],
      "ansehen": [
       {
@@ -254,6 +305,23 @@
        ],
        "mal": 2
       }
+     ],
+     "benutzen": [
+      {
+       "zeile": "P0_WOHN_MAX_0200",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_WOHN_MAX_0200"
+       ]
+      },
+      {
+       "zeile": "P0_WOHN_MAX_0205",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_WOHN_MAX_0205"
+       ],
+       "mal": 2
+      }
      ]
     },
     {
@@ -261,14 +329,14 @@
      "script_name": "Sofa",
      "name_key": "UI_OBJ_SOFA",
      "rect": [
-      82,
-      100,
-      113,
-      115
+      109,
+      133,
+      151,
+      153
      ],
      "gehe": [
-      140,
-      230
+      187,
+      307
      ],
      "ansehen": [
       {
@@ -286,6 +354,170 @@
        ],
        "mal": 2
       }
+     ],
+     "benutzen": [
+      {
+       "zeile": "P0_WOHN_MAX_0160",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_WOHN_MAX_0160"
+       ]
+      },
+      {
+       "zeile": "P0_WOHN_MAX_0165",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_WOHN_MAX_0165"
+       ],
+       "mal": 2
+      }
+     ]
+    },
+    {
+     "id": "schrank",
+     "script_name": "Schrank",
+     "name_key": "UI_OBJ_SCHRANK",
+     "rect": [
+      0,
+      10,
+      110,
+      275
+     ],
+     "gehe": [
+      90,
+      320
+     ],
+     "ansehen": [
+      {
+       "zeile": "P0_WOHN_MAX_0310",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_WOHN_MAX_0310"
+       ]
+      },
+      {
+       "zeile": "P0_WOHN_MAX_0315",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_WOHN_MAX_0315"
+       ],
+       "mal": 2
+      }
+     ],
+     "benutzen": [
+      {
+       "zeile": "P0_WOHN_MAX_0320",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_WOHN_MAX_0320"
+       ]
+      },
+      {
+       "zeile": "P0_WOHN_MAX_0325",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_WOHN_MAX_0325"
+       ],
+       "mal": 2
+      }
+     ]
+    },
+    {
+     "id": "stehlampe",
+     "script_name": "Stehlampe",
+     "name_key": "UI_OBJ_STEHLAMPE",
+     "rect": [
+      215,
+      65,
+      48,
+      105
+     ],
+     "gehe": [
+      240,
+      300
+     ],
+     "ansehen": [
+      {
+       "zeile": "P0_WOHN_MAX_0330",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_WOHN_MAX_0330"
+       ]
+      },
+      {
+       "zeile": "P0_WOHN_MAX_0335",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_WOHN_MAX_0335"
+       ],
+       "mal": 2
+      }
+     ],
+     "benutzen": [
+      {
+       "zeile": "P0_WOHN_MAX_0340",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_WOHN_MAX_0340"
+       ]
+      },
+      {
+       "zeile": "P0_WOHN_MAX_0345",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_WOHN_MAX_0345"
+       ],
+       "mal": 2
+      }
+     ]
+    },
+    {
+     "id": "zeitung",
+     "script_name": "Zeitung",
+     "name_key": "UI_OBJ_ZEITUNG",
+     "rect": [
+      292,
+      190,
+      60,
+      18
+     ],
+     "gehe": [
+      330,
+      300
+     ],
+     "ansehen": [
+      {
+       "zeile": "P0_WOHN_MAX_0350",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_WOHN_MAX_0350"
+       ]
+      },
+      {
+       "zeile": "P0_WOHN_MAX_0355",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_WOHN_MAX_0355"
+       ],
+       "mal": 2
+      }
+     ],
+     "benutzen": [
+      {
+       "zeile": "P0_WOHN_MAX_0360",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_WOHN_MAX_0360"
+       ]
+      },
+      {
+       "zeile": "P0_WOHN_MAX_0365",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_WOHN_MAX_0365"
+       ],
+       "mal": 2
+      }
      ]
     }
    ],
@@ -297,14 +529,14 @@
      "ziel": "treppenhaus",
      "name_key": "UI_RAUM_TREPPENHAUS",
      "rect": [
-      416,
-      25,
-      56,
-      168
+      555,
+      33,
+      75,
+      224
      ],
      "gehe": [
-      444,
-      214
+      592,
+      285
      ],
      "erreichbar_ab": "start",
      "ansehen": []
@@ -333,99 +565,144 @@
    "script_name": "Treppenhaus",
    "name_key": "UI_RAUM_TREPPENHAUS",
    "groesse": [
-    480,
-    270
+    640,
+    360
    ],
    "hintergrund": "res://grafik/hintergruende/w0_bg_treppenhaus_v01.png",
    "farbe": "#584536",
    "laufbereich": [
     [
-     6,
-     268
+     8,
+     357
     ],
     [
-     6,
-     232
+     8,
+     309
     ],
     [
-     60,
-     224
+     80,
+     299
     ],
     [
-     68,
-     208
+     91,
+     277
     ],
     [
-     180,
-     208
+     250,
+     277
     ],
     [
-     204,
-     210
-    ],
-    [
-     224,
-     196
-    ],
-    [
-     395,
-     64
-    ],
-    [
-     410,
-     64
-    ],
-    [
-     408,
-     73
-    ],
-    [
-     236,
-     206
-    ],
-    [
-     248,
-     228
-    ],
-    [
-     300,
+     262,
      262
     ],
     [
-     320,
-     268
+     560,
+     73
+    ],
+    [
+     580,
+     73
+    ],
+    [
+     578,
+     86
+    ],
+    [
+     290,
+     280
+    ],
+    [
+     300,
+     300
+    ],
+    [
+     400,
+     349
+    ],
+    [
+     427,
+     357
     ]
    ],
    "marker": {
     "start": [
-     130,
-     240
+     173,
+     320
     ],
     "von_wohnzimmer": [
-     50,
-     242
+     67,
+     323
     ],
     "von_dachboden": [
-     370,
-     92
+     540,
+     98
     ]
    },
    "tiefe": 0.85,
    "figuren": [],
    "hotspots": [
     {
+     "id": "maentel",
+     "script_name": "Maentel",
+     "name_key": "UI_OBJ_MAENTEL",
+     "rect": [
+      123,
+      130,
+      48,
+      160
+     ],
+     "gehe": [
+      150,
+      300
+     ],
+     "ansehen": [
+      {
+       "zeile": "P0_TREP_MAX_0130",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_TREP_MAX_0130"
+       ]
+      },
+      {
+       "zeile": "P0_TREP_MAX_0135",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_TREP_MAX_0135"
+       ],
+       "mal": 2
+      }
+     ],
+     "benutzen": [
+      {
+       "zeile": "P0_TREP_MAX_0140",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_TREP_MAX_0140"
+       ]
+      },
+      {
+       "zeile": "P0_TREP_MAX_0145",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_TREP_MAX_0145"
+       ],
+       "mal": 2
+      }
+     ]
+    },
+    {
      "id": "hut_am_haken",
      "script_name": "HutAmHaken",
      "name_key": "UI_OBJ_HUT_AM_HAKEN",
      "rect": [
-      128,
-      84,
-      20,
-      24
+      171,
+      112,
+      27,
+      32
      ],
      "gehe": [
-      140,
-      222
+      187,
+      296
      ],
      "ansehen": [
       {
@@ -443,6 +720,23 @@
        ],
        "mal": 2
       }
+     ],
+     "benutzen": [
+      {
+       "zeile": "P0_TREP_MAX_0040",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_TREP_MAX_0040"
+       ]
+      },
+      {
+       "zeile": "P0_TREP_MAX_0045",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_TREP_MAX_0045"
+       ],
+       "mal": 2
+      }
      ]
     },
     {
@@ -450,14 +744,14 @@
      "script_name": "Fenster",
      "name_key": "UI_OBJ_FENSTER",
      "rect": [
-      216,
-      55,
-      40,
-      60
+      288,
+      73,
+      53,
+      80
      ],
      "gehe": [
-      205,
-      224
+      273,
+      299
      ],
      "ansehen": [
       {
@@ -475,6 +769,23 @@
        ],
        "mal": 2
       }
+     ],
+     "benutzen": [
+      {
+       "zeile": "P0_TREP_MAX_0050",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_TREP_MAX_0050"
+       ]
+      },
+      {
+       "zeile": "P0_TREP_MAX_0055",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_TREP_MAX_0055"
+       ],
+       "mal": 2
+      }
      ]
     },
     {
@@ -482,14 +793,14 @@
      "script_name": "Treppe",
      "name_key": "UI_OBJ_TREPPE",
      "rect": [
-      200,
+      341,
       40,
-      220,
-      175
+      239,
+      150
      ],
      "gehe": [
-      215,
-      224
+      270,
+      282
      ],
      "ansehen": [
       {
@@ -507,6 +818,170 @@
        ],
        "mal": 2
       }
+     ],
+     "benutzen": [
+      {
+       "zeile": "P0_TREP_MAX_0060",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_TREP_MAX_0060"
+       ]
+      },
+      {
+       "zeile": "P0_TREP_MAX_0065",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_TREP_MAX_0065"
+       ],
+       "mal": 2
+      }
+     ]
+    },
+    {
+     "id": "regenschirm",
+     "script_name": "Regenschirm",
+     "name_key": "UI_OBJ_REGENSCHIRM",
+     "rect": [
+      93,
+      207,
+      27,
+      83
+     ],
+     "gehe": [
+      110,
+      300
+     ],
+     "ansehen": [
+      {
+       "zeile": "P0_TREP_MAX_0110",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_TREP_MAX_0110"
+       ]
+      },
+      {
+       "zeile": "P0_TREP_MAX_0115",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_TREP_MAX_0115"
+       ],
+       "mal": 2
+      }
+     ],
+     "benutzen": [
+      {
+       "zeile": "P0_TREP_MAX_0120",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_TREP_MAX_0120"
+       ]
+      },
+      {
+       "zeile": "P0_TREP_MAX_0125",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_TREP_MAX_0125"
+       ],
+       "mal": 2
+      }
+     ]
+    },
+    {
+     "id": "deckenlampe",
+     "script_name": "Deckenlampe",
+     "name_key": "UI_OBJ_DECKENLAMPE",
+     "rect": [
+      198,
+      10,
+      52,
+      26
+     ],
+     "gehe": [
+      220,
+      300
+     ],
+     "ansehen": [
+      {
+       "zeile": "P0_TREP_MAX_0150",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_TREP_MAX_0150"
+       ]
+      },
+      {
+       "zeile": "P0_TREP_MAX_0155",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_TREP_MAX_0155"
+       ],
+       "mal": 2
+      }
+     ],
+     "benutzen": [
+      {
+       "zeile": "P0_TREP_MAX_0160",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_TREP_MAX_0160"
+       ]
+      },
+      {
+       "zeile": "P0_TREP_MAX_0165",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_TREP_MAX_0165"
+       ],
+       "mal": 2
+      }
+     ]
+    },
+    {
+     "id": "kisten",
+     "script_name": "Kisten",
+     "name_key": "UI_OBJ_KISTEN",
+     "rect": [
+      400,
+      190,
+      240,
+      160
+     ],
+     "gehe": [
+      330,
+      320
+     ],
+     "ansehen": [
+      {
+       "zeile": "P0_TREP_MAX_0170",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_TREP_MAX_0170"
+       ]
+      },
+      {
+       "zeile": "P0_TREP_MAX_0175",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_TREP_MAX_0175"
+       ],
+       "mal": 2
+      }
+     ],
+     "benutzen": [
+      {
+       "zeile": "P0_TREP_MAX_0180",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_TREP_MAX_0180"
+       ]
+      },
+      {
+       "zeile": "P0_TREP_MAX_0185",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_TREP_MAX_0185"
+       ],
+       "mal": 2
+      }
      ]
     }
    ],
@@ -518,14 +993,14 @@
      "ziel": "wohnzimmer",
      "name_key": "UI_RAUM_WOHNZIMMER",
      "rect": [
-      5,
-      40,
-      55,
-      185
+      7,
+      53,
+      73,
+      247
      ],
      "gehe": [
-      40,
-      240
+      53,
+      320
      ],
      "erreichbar_ab": "start",
      "ansehen": []
@@ -536,14 +1011,14 @@
      "ziel": "dachboden",
      "name_key": "UI_RAUM_DACHBODEN",
      "rect": [
-      300,
+      400,
       0,
-      170,
-      34
+      227,
+      45
      ],
      "gehe": [
-      402,
-      68
+      556,
+      85
      ],
      "erreichbar_ab": "start",
      "ansehen": []
@@ -556,65 +1031,65 @@
    "script_name": "Dachboden",
    "name_key": "UI_RAUM_DACHBODEN",
    "groesse": [
-    480,
-    270
+    640,
+    360
    ],
    "hintergrund": "res://grafik/hintergruende/w0_bg_dachboden_v01.png",
    "farbe": "#7a5c43",
    "laufbereich": [
     [
-     64,
-     268
+     85,
+     357
     ],
     [
-     64,
-     190
+     85,
+     253
     ],
     [
-     185,
-     184
+     247,
+     245
     ],
     [
-     190,
-     170
+     253,
+     227
     ],
     [
-     300,
-     170
+     400,
+     227
     ],
     [
-     304,
-     180
+     405,
+     240
     ],
     [
-     360,
-     182
+     480,
+     243
     ],
     [
-     418,
-     202
+     557,
+     269
     ],
     [
-     476,
-     204
+     635,
+     272
     ],
     [
-     476,
-     268
+     635,
+     357
     ]
    ],
    "marker": {
     "start": [
-     395,
-     236
+     527,
+     315
     ],
     "von_treppenhaus": [
-     395,
-     236
+     527,
+     315
     ],
     "fernseher": [
-     274,
-     182
+     365,
+     243
     ]
    },
    "tiefe": 0.85,
@@ -623,16 +1098,16 @@
      "id": "pixel",
      "script_name": "Pixel",
      "pos": [
-      235,
-      178
+      313,
+      237
      ]
     },
     {
      "id": "opa",
      "script_name": "Opa",
      "pos": [
-      300,
-      215
+      400,
+      287
      ]
     }
    ],
@@ -642,14 +1117,14 @@
      "script_name": "Drehknopf",
      "name_key": "UI_OBJ_DREHKNOPF",
      "rect": [
-      228,
-      118,
-      14,
-      16
+      304,
+      157,
+      19,
+      21
      ],
      "gehe": [
-      240,
-      182
+      320,
+      243
      ],
      "ansehen": [],
      "benutzen": [
@@ -681,14 +1156,14 @@
      "script_name": "Fundkiste",
      "name_key": "UI_OBJ_FUNDKISTE",
      "rect": [
-      122,
-      158,
-      42,
-      27
+      163,
+      211,
+      56,
+      36
      ],
      "gehe": [
-      143,
-      194
+      191,
+      259
      ],
      "ansehen": []
     },
@@ -697,14 +1172,14 @@
      "script_name": "Maschine",
      "name_key": "UI_OBJ_MASCHINE",
      "rect": [
-      244,
-      78,
-      60,
-      90
+      325,
+      104,
+      80,
+      120
      ],
      "gehe": [
-      274,
-      182
+      365,
+      243
      ],
      "ansehen": []
     },
@@ -713,14 +1188,14 @@
      "script_name": "Ofentuer",
      "name_key": "UI_OBJ_OFENTUER",
      "rect": [
-      256,
-      132,
-      33,
-      30
+      341,
+      176,
+      44,
+      40
      ],
      "gehe": [
-      272,
-      182
+      363,
+      243
      ],
      "ansehen": []
     },
@@ -729,14 +1204,14 @@
      "script_name": "Druckmesser",
      "name_key": "UI_OBJ_DRUCKMESSER",
      "rect": [
-      226,
-      96,
-      16,
-      16
+      301,
+      128,
+      21,
+      21
      ],
      "gehe": [
-      250,
-      182
+      333,
+      243
      ],
      "ansehen": []
     },
@@ -745,14 +1220,14 @@
      "script_name": "Fassungen",
      "name_key": "UI_OBJ_FASSUNGEN",
      "rect": [
-      244,
-      62,
-      60,
-      14
+      325,
+      83,
+      80,
+      19
      ],
      "gehe": [
-      274,
-      182
+      365,
+      243
      ],
      "ansehen": []
     },
@@ -761,14 +1236,14 @@
      "script_name": "Empfaenger",
      "name_key": "UI_OBJ_EMPFAENGER",
      "rect": [
-      262,
-      44,
-      30,
-      16
+      349,
+      59,
+      40,
+      21
      ],
      "gehe": [
-      276,
-      182
+      368,
+      243
      ],
      "ansehen": []
     },
@@ -777,14 +1252,14 @@
      "script_name": "Lampe",
      "name_key": "UI_OBJ_LAMPE",
      "rect": [
-      222,
-      30,
-      36,
-      14
+      296,
+      40,
+      48,
+      19
      ],
      "gehe": [
-      240,
-      182
+      320,
+      243
      ],
      "ansehen": []
     },
@@ -793,14 +1268,14 @@
      "script_name": "Werkzeugkiste",
      "name_key": "UI_OBJ_WERKZEUGKISTE",
      "rect": [
-      76,
-      150,
-      40,
-      32
+      101,
+      200,
+      53,
+      43
      ],
      "gehe": [
-      96,
-      194
+      128,
+      259
      ],
      "ansehen": [
       {
@@ -818,6 +1293,23 @@
        ],
        "mal": 2
       }
+     ],
+     "benutzen": [
+      {
+       "zeile": "P0_DACH_MAX_1610",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_DACH_MAX_1610"
+       ]
+      },
+      {
+       "zeile": "P0_DACH_MAX_1615",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_DACH_MAX_1615"
+       ],
+       "mal": 2
+      }
      ]
     },
     {
@@ -825,14 +1317,14 @@
      "script_name": "Kleiderschrank",
      "name_key": "UI_OBJ_KLEIDERSCHRANK",
      "rect": [
-      410,
-      80,
-      70,
-      118
+      547,
+      107,
+      93,
+      157
      ],
      "gehe": [
-      440,
-      214
+      587,
+      285
      ],
      "ansehen": [
       {
@@ -850,6 +1342,23 @@
        ],
        "mal": 2
       }
+     ],
+     "benutzen": [
+      {
+       "zeile": "P0_DACH_MAX_1620",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_DACH_MAX_1620"
+       ]
+      },
+      {
+       "zeile": "P0_DACH_MAX_1625",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_DACH_MAX_1625"
+       ],
+       "mal": 2
+      }
      ]
     },
     {
@@ -857,14 +1366,14 @@
      "script_name": "Kalender",
      "name_key": "UI_OBJ_KALENDER",
      "rect": [
-      310,
-      66,
-      30,
-      36
+      413,
+      88,
+      40,
+      48
      ],
      "gehe": [
-      325,
-      186
+      433,
+      248
      ],
      "ansehen": [
       {
@@ -882,6 +1391,23 @@
        ],
        "mal": 2
       }
+     ],
+     "benutzen": [
+      {
+       "zeile": "P0_DACH_MAX_1630",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_DACH_MAX_1630"
+       ]
+      },
+      {
+       "zeile": "P0_DACH_MAX_1635",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_DACH_MAX_1635"
+       ],
+       "mal": 2
+      }
      ]
     },
     {
@@ -889,14 +1415,14 @@
      "script_name": "AusgestopfterFisch",
      "name_key": "UI_OBJ_AUSGESTOPFTER_FISCH",
      "rect": [
-      268,
-      60,
-      36,
-      20
+      357,
+      80,
+      48,
+      27
      ],
      "gehe": [
-      286,
-      180
+      381,
+      240
      ],
      "ansehen": [
       {
@@ -914,6 +1440,23 @@
        ],
        "mal": 2
       }
+     ],
+     "benutzen": [
+      {
+       "zeile": "P0_DACH_MAX_1640",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_DACH_MAX_1640"
+       ]
+      },
+      {
+       "zeile": "P0_DACH_MAX_1645",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_DACH_MAX_1645"
+       ],
+       "mal": 2
+      }
      ]
     },
     {
@@ -922,13 +1465,13 @@
      "name_key": "UI_OBJ_KISTE_MIT_FERNBEDIENUNGEN",
      "rect": [
       0,
-      165,
-      62,
-      70
+      220,
+      83,
+      93
      ],
      "gehe": [
-      76,
-      215
+      101,
+      287
      ],
      "ansehen": [
       {
@@ -958,6 +1501,23 @@
        ],
        "mal": 2
       }
+     ],
+     "benutzen": [
+      {
+       "zeile": "P0_DACH_MAX_1650",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_DACH_MAX_1650"
+       ]
+      },
+      {
+       "zeile": "P0_DACH_MAX_1655",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_DACH_MAX_1655"
+       ],
+       "mal": 2
+      }
      ]
     },
     {
@@ -965,14 +1525,14 @@
      "script_name": "Poster",
      "name_key": "UI_OBJ_POSTER",
      "rect": [
-      199,
-      48,
-      44,
-      62
+      265,
+      64,
+      59,
+      83
      ],
      "gehe": [
-      221,
-      180
+      295,
+      240
      ],
      "ansehen": [
       {
@@ -990,6 +1550,23 @@
        ],
        "mal": 2
       }
+     ],
+     "benutzen": [
+      {
+       "zeile": "P0_DACH_MAX_1660",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_DACH_MAX_1660"
+       ]
+      },
+      {
+       "zeile": "P0_DACH_MAX_1665",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_DACH_MAX_1665"
+       ],
+       "mal": 2
+      }
      ]
     },
     {
@@ -997,14 +1574,14 @@
      "script_name": "Toaster",
      "name_key": "UI_OBJ_TOASTER",
      "rect": [
-      124,
-      76,
-      24,
-      20
+      165,
+      101,
+      32,
+      27
      ],
      "gehe": [
-      136,
-      188
+      181,
+      251
      ],
      "ansehen": [
       {
@@ -1022,6 +1599,23 @@
        ],
        "mal": 2
       }
+     ],
+     "benutzen": [
+      {
+       "zeile": "P0_DACH_MAX_1670",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_DACH_MAX_1670"
+       ]
+      },
+      {
+       "zeile": "P0_DACH_MAX_1675",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_DACH_MAX_1675"
+       ],
+       "mal": 2
+      }
      ]
     },
     {
@@ -1029,14 +1623,14 @@
      "script_name": "OpasStaubsaugerPrototyp",
      "name_key": "UI_OBJ_OPAS_STAUBSAUGER_PROTOTYP",
      "rect": [
-      362,
-      105,
-      48,
-      90
+      483,
+      140,
+      64,
+      120
      ],
      "gehe": [
-      386,
-      206
+      515,
+      275
      ],
      "ansehen": [
       {
@@ -1066,6 +1660,23 @@
        ],
        "mal": 2
       }
+     ],
+     "benutzen": [
+      {
+       "zeile": "P0_DACH_MAX_1680",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_DACH_MAX_1680"
+       ]
+      },
+      {
+       "zeile": "P0_DACH_MAX_1685",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_DACH_MAX_1685"
+       ],
+       "mal": 2
+      }
      ]
     },
     {
@@ -1073,14 +1684,14 @@
      "script_name": "Kochbuch",
      "name_key": "UI_OBJ_KOCHBUCH",
      "rect": [
-      160,
-      68,
-      18,
-      28
+      213,
+      91,
+      24,
+      37
      ],
      "gehe": [
-      168,
-      188
+      224,
+      251
      ],
      "ansehen": [
       {
@@ -1110,6 +1721,23 @@
        ],
        "mal": 2
       }
+     ],
+     "benutzen": [
+      {
+       "zeile": "P0_DACH_MAX_1690",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_DACH_MAX_1690"
+       ]
+      },
+      {
+       "zeile": "P0_DACH_MAX_1695",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_DACH_MAX_1695"
+       ],
+       "mal": 2
+      }
      ]
     },
     {
@@ -1117,14 +1745,14 @@
      "script_name": "Plattenspieler",
      "name_key": "UI_OBJ_PLATTENSPIELER",
      "rect": [
-      82,
-      72,
-      36,
-      24
+      109,
+      96,
+      48,
+      32
      ],
      "gehe": [
-      100,
-      190
+      133,
+      253
      ],
      "ansehen": [
       {
@@ -1142,6 +1770,23 @@
        ],
        "mal": 2
       }
+     ],
+     "benutzen": [
+      {
+       "zeile": "P0_DACH_MAX_1700",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_DACH_MAX_1700"
+       ]
+      },
+      {
+       "zeile": "P0_DACH_MAX_1705",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_DACH_MAX_1705"
+       ],
+       "mal": 2
+      }
      ]
     },
     {
@@ -1149,14 +1794,14 @@
      "script_name": "Ohrensessel",
      "name_key": "UI_OBJ_OHRENSESSEL",
      "rect": [
-      300,
-      105,
-      60,
-      72
+      400,
+      140,
+      80,
+      96
      ],
      "gehe": [
-      330,
-      190
+      440,
+      253
      ],
      "ansehen": [
       {
@@ -1174,6 +1819,23 @@
        ],
        "mal": 2
       }
+     ],
+     "benutzen": [
+      {
+       "zeile": "P0_DACH_MAX_1710",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_DACH_MAX_1710"
+       ]
+      },
+      {
+       "zeile": "P0_DACH_MAX_1715",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_DACH_MAX_1715"
+       ],
+       "mal": 2
+      }
      ]
     },
     {
@@ -1181,14 +1843,14 @@
      "script_name": "Werkbank",
      "name_key": "UI_OBJ_WERKBANK",
      "rect": [
-      55,
-      100,
-      130,
-      40
+      73,
+      133,
+      173,
+      53
      ],
      "gehe": [
-      120,
-      190
+      160,
+      253
      ],
      "ansehen": [
       {
@@ -1206,6 +1868,23 @@
        ],
        "mal": 2
       }
+     ],
+     "benutzen": [
+      {
+       "zeile": "P0_DACH_MAX_1720",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_DACH_MAX_1720"
+       ]
+      },
+      {
+       "zeile": "P0_DACH_MAX_1725",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_DACH_MAX_1725"
+       ],
+       "mal": 2
+      }
      ]
     },
     {
@@ -1213,14 +1892,14 @@
      "script_name": "Dachfenster",
      "name_key": "UI_OBJ_DACHFENSTER",
      "rect": [
+      80,
+      7,
       60,
-      5,
-      45,
-      32
+      43
      ],
      "gehe": [
-      95,
-      192
+      127,
+      256
      ],
      "ansehen": [
       {
@@ -1238,6 +1917,121 @@
        ],
        "mal": 2
       }
+     ],
+     "benutzen": [
+      {
+       "zeile": "P0_DACH_MAX_1730",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_DACH_MAX_1730"
+       ]
+      },
+      {
+       "zeile": "P0_DACH_MAX_1735",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_DACH_MAX_1735"
+       ],
+       "mal": 2
+      }
+     ]
+    },
+    {
+     "id": "umzugskartons",
+     "script_name": "Umzugskartons",
+     "name_key": "UI_OBJ_UMZUGSKARTONS",
+     "rect": [
+      0,
+      135,
+      65,
+      85
+     ],
+     "gehe": [
+      95,
+      262
+     ],
+     "ansehen": [
+      {
+       "zeile": "P0_DACH_MAX_1810",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_DACH_MAX_1810"
+       ]
+      },
+      {
+       "zeile": "P0_DACH_MAX_1815",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_DACH_MAX_1815"
+       ],
+       "mal": 2
+      }
+     ],
+     "benutzen": [
+      {
+       "zeile": "P0_DACH_MAX_1820",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_DACH_MAX_1820"
+       ]
+      },
+      {
+       "zeile": "P0_DACH_MAX_1825",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_DACH_MAX_1825"
+       ],
+       "mal": 2
+      }
+     ]
+    },
+    {
+     "id": "steckdose",
+     "script_name": "Steckdose",
+     "name_key": "UI_OBJ_STECKDOSE",
+     "rect": [
+      258,
+      188,
+      22,
+      22
+     ],
+     "gehe": [
+      270,
+      235
+     ],
+     "ansehen": [
+      {
+       "zeile": "P0_DACH_MAX_1830",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_DACH_MAX_1830"
+       ]
+      },
+      {
+       "zeile": "P0_DACH_MAX_1835",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_DACH_MAX_1835"
+       ],
+       "mal": 2
+      }
+     ],
+     "benutzen": [
+      {
+       "zeile": "P0_DACH_MAX_1840",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_DACH_MAX_1840"
+       ]
+      },
+      {
+       "zeile": "P0_DACH_MAX_1845",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_DACH_MAX_1845"
+       ],
+       "mal": 2
+      }
      ]
     }
    ],
@@ -1247,14 +2041,14 @@
      "script_name": "ZappOMat",
      "name_key": "UI_OBJ_ZAPP_O_MAT",
      "rect": [
-      244,
-      82,
-      60,
-      86
+      325,
+      109,
+      80,
+      115
      ],
      "gehe": [
-      274,
-      182
+      365,
+      243
      ],
      "textur": "res://grafik/platzhalter/prop_zapp_o_mat.png",
      "gegenstand": null,
@@ -1315,6 +2109,62 @@
       }
      ],
      "nehmen": null,
+     "benutzen": [
+      {
+       "zeile": "P0_DACH_MAX_1740",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_DACH_MAX_1740"
+       ],
+       "bedingung": [
+        {
+         "art": "vor",
+         "raetsel": "P1"
+        }
+       ]
+      },
+      {
+       "zeile": "P0_DACH_MAX_1745",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_DACH_MAX_1745"
+       ],
+       "bedingung": [
+        {
+         "art": "vor",
+         "raetsel": "P1"
+        }
+       ],
+       "mal": 2
+      },
+      {
+       "zeile": "P0_DACH_MAX_1750",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_DACH_MAX_1750"
+       ],
+       "bedingung": [
+        {
+         "art": "nach",
+         "raetsel": "P1"
+        }
+       ]
+      },
+      {
+       "zeile": "P0_DACH_MAX_1755",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_DACH_MAX_1755"
+       ],
+       "bedingung": [
+        {
+         "art": "nach",
+         "raetsel": "P1"
+        }
+       ],
+       "mal": 2
+      }
+     ],
      "gegenstand_auf": [
       {
        "zeile": "P0_DACH_MAX_1130",
@@ -1331,14 +2181,14 @@
      "script_name": "Thunfischdose",
      "name_key": "UI_OBJ_THUNFISCHDOSE",
      "rect": [
-      120,
-      186,
-      15,
-      12
+      160,
+      248,
+      20,
+      16
      ],
      "gehe": [
-      128,
-      200
+      171,
+      267
      ],
      "textur": "res://grafik/platzhalter/prop_thunfischdose.png",
      "gegenstand": "thunfischdose",
@@ -1356,14 +2206,14 @@
      "script_name": "Dosenoeffner",
      "name_key": "UI_OBJ_DOSENOEFFNER",
      "rect": [
-      140,
-      186,
-      15,
-      12
+      187,
+      248,
+      20,
+      16
      ],
      "gehe": [
-      146,
-      200
+      195,
+      267
      ],
      "textur": "res://grafik/platzhalter/prop_dosenoeffner.png",
      "gegenstand": "dosenoeffner",
@@ -1381,14 +2231,14 @@
      "script_name": "Drahtkleiderbuegel",
      "name_key": "UI_OBJ_DRAHTKLEIDERBUEGEL",
      "rect": [
-      440,
-      94,
-      20,
-      14
+      587,
+      125,
+      27,
+      19
      ],
      "gehe": [
-      440,
-      214
+      587,
+      285
      ],
      "textur": "res://grafik/platzhalter/prop_drahtkleiderbuegel.png",
      "gegenstand": "drahtkleiderbuegel",
@@ -1409,14 +2259,14 @@
      "ziel": "treppenhaus",
      "name_key": "UI_OBJ_BODENLUKE",
      "rect": [
-      335,
-      204,
-      125,
-      40
+      447,
+      272,
+      167,
+      53
      ],
      "gehe": [
-      395,
-      230
+      527,
+      307
      ],
      "erreichbar_ab": "start",
      "ansehen": [
@@ -1449,6 +2299,20 @@
          "raetsel": "P3"
         }
        ]
+      },
+      {
+       "zeile": "P0_DACH_MAX_1005",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_DACH_MAX_1005"
+       ],
+       "bedingung": [
+        {
+         "art": "vor",
+         "raetsel": "P3"
+        }
+       ],
+       "mal": 2
       }
      ]
     }
@@ -1493,7 +2357,7 @@
    "script_name": "Max",
    "kuerzel": "MAX",
    "name_key": "UI_OBJ_MAX",
-   "groesse_px": 105,
+   "groesse_px": 189,
    "spielbar": true,
    "textfarbe": "#ffffff",
    "sprite": "res://grafik/platzhalter/figur_max.png",
@@ -1514,7 +2378,7 @@
    "script_name": "Pixel",
    "kuerzel": "PIX",
    "name_key": "UI_OBJ_PIXEL",
-   "groesse_px": 34,
+   "groesse_px": 61,
    "spielbar": false,
    "textfarbe": "#5fd3c8",
    "sprite": "res://grafik/platzhalter/figur_pixel.png",
@@ -1529,6 +2393,41 @@
      "blasen": [
       "P0_DACH_MAX_0210"
      ],
+     "bedingung": [
+      {
+       "art": "vor",
+       "raetsel": "P1"
+      }
+     ],
+     "raum": "dachboden"
+    },
+    {
+     "zeile": "P0_DACH_MAX_0212",
+     "sprecher": "MAX",
+     "blasen": [
+      "P0_DACH_MAX_0212"
+     ],
+     "bedingung": [
+      {
+       "art": "nach",
+       "raetsel": "P1"
+      }
+     ],
+     "raum": "dachboden"
+    },
+    {
+     "zeile": "P0_DACH_MAX_0213",
+     "sprecher": "MAX",
+     "blasen": [
+      "P0_DACH_MAX_0213"
+     ],
+     "bedingung": [
+      {
+       "art": "vor",
+       "raetsel": "P1"
+      }
+     ],
+     "mal": 2,
      "raum": "dachboden"
     },
     {
@@ -1536,6 +2435,12 @@
      "sprecher": "PIX",
      "blasen": [
       "P0_DACH_PIX_0215"
+     ],
+     "bedingung": [
+      {
+       "art": "nach",
+       "raetsel": "P1"
+      }
      ],
      "mal": 2,
      "raum": "dachboden"
@@ -1570,7 +2475,7 @@
    "script_name": "Opa",
    "kuerzel": "OPA",
    "name_key": "UI_OBJ_OPA",
-   "groesse_px": 112,
+   "groesse_px": 201,
    "spielbar": false,
    "textfarbe": "#f5a04a",
    "sprite": "res://grafik/platzhalter/figur_opa.png",

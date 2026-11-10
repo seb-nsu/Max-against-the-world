@@ -7,9 +7,9 @@ script = ExtResource("1_5wj48")
 script_name = "Heuhaufen"
 description = "Heuhaufen"
 cursor = 1
-interaction_polygon = PackedVector2Array(-33, -12, 33, -12, 33, 12, -33, 12)
+interaction_polygon = PackedVector2Array(-44, -16, 44, -16, 44, 16, -44, 16)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1810961255]
 visible = false
 modulate = Color(1, 0, 1, 1)
-polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+polygon = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)

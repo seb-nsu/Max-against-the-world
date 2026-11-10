@@ -9,7 +9,7 @@ script = ExtResource("1_02l5u")
 script_name = "Background"
 description = "Background"
 clickable = false
-baseline = -135
+baseline = -180
 cursor = 1
 interaction_polygon = PackedVector2Array()
 
@@ -21,7 +21,7 @@ texture_filter = 1
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1807519586]
 visible = false
 modulate = Color(1, 1, 0, 1)
-polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+polygon = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 
 [node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=2003159747]
 visible = false

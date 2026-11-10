@@ -5,12 +5,12 @@
 
 [node name="CharacterFabrikarbeiter" type="Area2D" unique_id=1254480709]
 script = ExtResource("1_bnhqd")
-walk_speed = 90.0
-dialog_pos = Vector2(0, -113)
+walk_speed = 120.0
+dialog_pos = Vector2(0, -200)
 script_name = "Fabrikarbeiter"
 description = "UI_OBJ_FABRIKARBEITER"
 cursor = 8
-interaction_polygon = PackedVector2Array(-18, -109, 18, -109, 18, 0, -18, 0)
+interaction_polygon = PackedVector2Array(-24.5, -196, 24.5, -196, 24.5, 0, -24.5, 0)
 
 [node name="ScalingPolygon" type="CollisionPolygon2D" parent="." unique_id=2045604330]
 polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
@@ -20,11 +20,11 @@ polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2145625489]
 texture_filter = 1
 texture = ExtResource("2_cl634")
-offset = Vector2(0, -54.5)
+offset = Vector2(0, -98)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=859162020]
 visible = false
-polygon = PackedVector2Array(-18, -109, 18, -109, 18, 0, -18, 0)
+polygon = PackedVector2Array(-24.5, -196, 24.5, -196, 24.5, 0, -24.5, 0)
 
 [node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=1931542790]
 visible = false

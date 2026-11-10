@@ -5,12 +5,12 @@
 
 [node name="CharacterSchwarzeKatze" type="Area2D" unique_id=743428821]
 script = ExtResource("1_0vmc5")
-walk_speed = 90.0
-dialog_pos = Vector2(0, -30)
+walk_speed = 120.0
+dialog_pos = Vector2(0, -51)
 script_name = "SchwarzeKatze"
 description = "UI_OBJ_SCHWARZE_KATZE"
 cursor = 8
-interaction_polygon = PackedVector2Array(-15, -26, 15, -26, 15, 0, -15, 0)
+interaction_polygon = PackedVector2Array(-20, -47, 20, -47, 20, 0, -20, 0)
 
 [node name="ScalingPolygon" type="CollisionPolygon2D" parent="." unique_id=199532544]
 polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
@@ -20,11 +20,11 @@ polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1582666797]
 texture_filter = 1
 texture = ExtResource("2_drqgl")
-offset = Vector2(0, -13)
+offset = Vector2(0, -23.5)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=664701387]
 visible = false
-polygon = PackedVector2Array(-15, -26, 15, -26, 15, 0, -15, 0)
+polygon = PackedVector2Array(-20, -47, 20, -47, 20, 0, -20, 0)
 
 [node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=1601348483]
 visible = false

@@ -30,16 +30,16 @@ func _ready() -> void:
 	_punkte.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	wurzel.add_child(_punkte)
 
-	_max = _knopf(wurzel, "portraet_max.png", Vector2(3, 3), "UI_OBJ_MAX")
-	_pixel = _knopf(wurzel, "portraet_pixel.png", Vector2(42, 3), "UI_OBJ_PIXEL")
-	_pfote = _knopf(wurzel, "ui_pfote.png", Vector2(441, 3), "UI_PFOTE")
+	_max = _knopf(wurzel, "portraet_max.png", Vector2(4, 4), "UI_OBJ_MAX")
+	_pixel = _knopf(wurzel, "portraet_pixel.png", Vector2(56, 4), "UI_OBJ_PIXEL")
+	_pfote = _knopf(wurzel, "ui_pfote.png", Vector2(588, 4), "UI_PFOTE")
 	_max.pressed.connect(func(): if C.player != C.Max: Spiel.figur_wechseln())
 	_pixel.pressed.connect(Spiel.pixel_portraet_geklickt)
 	_pfote.pressed.connect(_pfote_geklickt)
 
 	_meldung = Label.new()
-	_meldung.position = Vector2(0, 246)
-	_meldung.size = Vector2(480, 21)
+	_meldung.position = Vector2(0, 328)
+	_meldung.size = Vector2(640, 28)
 	_meldung.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	_meldung.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	_meldung.visible = false
@@ -144,7 +144,7 @@ class _HotspotPunkte extends Control:
 				if namen and schrift and not c.description.is_empty():
 					var text := tr(c.description)
 					var breite := schrift.get_string_size(text, HORIZONTAL_ALIGNMENT_LEFT, -1, groesse).x
-					var ort := Vector2(clampf(p.x - breite / 2.0, 1.0, size.x - breite - 1.0), p.y - 4.0)
+					var ort := Vector2(clampf(p.x - breite / 2.0, 1.0, size.x - breite - 1.0), p.y - 5.0)
 					draw_string_outline(schrift, ort, text, HORIZONTAL_ALIGNMENT_LEFT, -1, groesse, 3,
 						Color(0.09, 0.08, 0.15))
 					draw_string(schrift, ort, text, HORIZONTAL_ALIGNMENT_LEFT, -1, groesse,

@@ -17,41 +17,41 @@
 [node name="RoomTestkammer3" type="Node2D" unique_id=166262795]
 script = ExtResource("1_s3p8m")
 script_name = "Testkammer3"
-width = 480
-height = 270
+width = 640
+height = 360
 
 [node name="WalkableAreas" type="Node2D" parent="." unique_id=1284088585]
 
 [node name="Boden" parent="WalkableAreas" unique_id=94503712 instance=ExtResource("2_6iv4e")]
-interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(6, 210, 474, 210, 474, 267, 6, 267)])
+interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(8, 280, 632, 280, 632, 356, 8, 356)])
 
 [node name="Props" type="Node2D" parent="." unique_id=174080766]
 
 [node name="Background" parent="Props" unique_id=1525132495 instance=ExtResource("3_k3dvu")]
-position = Vector2(240, 135)
+position = Vector2(320, 180)
 texture = ExtResource("4_18mt5")
 description = "UI_RAUM_TESTKAMMER_3"
 
 [node name="Hotspots" type="Node2D" parent="." unique_id=1335762777]
 
 [node name="Lautsprecher" parent="Hotspots" unique_id=21852730 instance=ExtResource("5_08753")]
-position = Vector2(240, 54)
+position = Vector2(320, 72)
 description = "UI_OBJ_LAUTSPRECHER"
-baseline = 24
-walk_to_point = Vector2(0, 181)
+baseline = 32
+walk_to_point = Vector2(0, 241)
 
 [node name="AusgangTestkammer2" parent="Hotspots" unique_id=1769844564 instance=ExtResource("6_yjgdk")]
-position = Vector2(19.5, 157.5)
+position = Vector2(26.0, 210.0)
 description = "UI_RAUM_TESTKAMMER_2"
-baseline = 52
-walk_to_point = Vector2(16.5, 82.5)
+baseline = 69
+walk_to_point = Vector2(22.0, 110.0)
 cursor = 9
 
 [node name="AusgangKern" parent="Hotspots" unique_id=1262942552 instance=ExtResource("7_ipgvv")]
-position = Vector2(460.5, 157.5)
+position = Vector2(614.0, 210.0)
 description = "UI_RAUM_KERN"
-baseline = 52
-walk_to_point = Vector2(-16.5, 82.5)
+baseline = 69
+walk_to_point = Vector2(-22.0, 110.0)
 cursor = 9
 
 [node name="Regions" type="Node2D" parent="." unique_id=710141081]
@@ -59,21 +59,21 @@ cursor = 9
 [node name="Markers" type="Node2D" parent="." unique_id=838827215]
 
 [node name="Start" parent="Markers" unique_id=1908889921 instance=ExtResource("8_pnfsm")]
-position = Vector2(240, 240)
+position = Vector2(320, 320)
 
 [node name="VonTestkammer2" parent="Markers" unique_id=1768377504 instance=ExtResource("9_fao46")]
-position = Vector2(36, 240)
+position = Vector2(48, 320)
 
 [node name="VonKern" parent="Markers" unique_id=950491300 instance=ExtResource("10_ne4ri")]
-position = Vector2(444, 240)
+position = Vector2(592, 320)
 
 [node name="Characters" type="Node2D" parent="." unique_id=936763417]
 
 [node name="CharacterTuer *" parent="Characters" unique_id=1898839801 instance=ExtResource("11_utu7w")]
-position = Vector2(120, 232)
+position = Vector2(160, 309)
 
 [node name="CharacterMutti *" parent="Characters" unique_id=609514072 instance=ExtResource("12_npdm8")]
-position = Vector2(240, 232)
+position = Vector2(320, 309)
 
 [node name="CharacterBernd *" parent="Characters" unique_id=601399039 instance=ExtResource("13_cd7rv")]
-position = Vector2(360, 232)
+position = Vector2(480, 309)

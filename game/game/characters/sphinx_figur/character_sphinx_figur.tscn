@@ -5,7 +5,7 @@
 
 [node name="CharacterSphinxFigur" type="Area2D" unique_id=494662940]
 script = ExtResource("1_u6dr0")
-walk_speed = 90.0
+walk_speed = 120.0
 dialog_pos = Vector2(0, -64)
 script_name = "SphinxFigur"
 description = "UI_OBJ_SPHINX_FIGUR"

@@ -40,7 +40,7 @@ func _nach_laden() -> void:
 
 
 func r7_szene() -> void:
-	Spiel.figur_hier("Waldemar", true, Vector2(300, 225))
+	Spiel.figur_hier("Waldemar", true, Vector2(400, 300))
 	await Spiel.szene([
 		Spiel.z("WAL", "W1_WALD_WAL_0460"),
 		Spiel.z("MAX", "W1_WALD_MAX_0470"),

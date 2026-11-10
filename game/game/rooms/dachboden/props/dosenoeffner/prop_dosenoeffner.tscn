@@ -7,7 +7,7 @@ script = ExtResource("1_sr53v")
 script_name = "Dosenoeffner"
 description = "Dosenoeffner"
 cursor = 1
-interaction_polygon = PackedVector2Array(-8, -6, 8, -6, 8, 6, -8, 6)
+interaction_polygon = PackedVector2Array(-11, -8, 11, -8, 11, 8, -11, 8)
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1697230477]
 texture_filter = 1
@@ -17,7 +17,7 @@ texture_filter = 1
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=508420334]
 visible = false
 modulate = Color(1, 1, 0, 1)
-polygon = PackedVector2Array(-18, -18, 18, -18, 18, 18, -18, 18)
+polygon = PackedVector2Array(-24, -24, 24, -24, 24, 24, -24, 24)
 
 [node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=1850327232]
 visible = false

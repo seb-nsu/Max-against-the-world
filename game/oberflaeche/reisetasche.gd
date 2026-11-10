@@ -7,8 +7,8 @@ extends CanvasLayer
 signal geschlossen
 
 const THEMA := "res://game/gui/resources/gui_theme.tres"
-const FELD := 40
-const ABSTAND := 42
+const FELD := 53
+const ABSTAND := 56
 const GELB := Color("fee761")
 const RAND := Color("3a4466")
 const RAND_AKTIV := Color("2ce8f5")
@@ -33,8 +33,8 @@ func zeigen(t: CQReisetasche) -> void:
 	sperre.mouse_filter = Control.MOUSE_FILTER_STOP
 	add_child(sperre)
 	_panel = Panel.new()
-	_panel.position = Vector2(54, 6)
-	_panel.size = Vector2(372, 156)
+	_panel.position = Vector2(72, 8)
+	_panel.size = Vector2(496, 208)
 	if ResourceLoader.exists(THEMA):
 		_panel.theme = load(THEMA)
 	var grund := StyleBoxFlat.new()
@@ -43,19 +43,19 @@ func zeigen(t: CQReisetasche) -> void:
 	grund.set_border_width_all(2)
 	_panel.add_theme_stylebox_override("panel", grund)
 	add_child(_panel)
-	_label(tr("UI_TASCHE_TITEL"), Vector2(12, 3), 12)
-	var hilfe := _label(tr("UI_TASCHE_HILFE"), Vector2(120, 6), 8)
+	_label(tr("UI_TASCHE_TITEL"), Vector2(16, 4), 12)
+	var hilfe := _label(tr("UI_TASCHE_HILFE"), Vector2(160, 8), 8)
 	hilfe.modulate = Color(1, 1, 1, 0.7)
-	_label(tr("UI_TASCHE_PFLICHT"), Vector2(12, 24), 8)
-	_label(tr("UI_TASCHE_WAHL"), Vector2(150, 24), 8)
-	_label(tr("UI_TASCHE_AUSLAGE"), Vector2(12, 84), 8)
-	_name = _label("", Vector2(12, 138), 10)
+	_label(tr("UI_TASCHE_PFLICHT"), Vector2(16, 32), 8)
+	_label(tr("UI_TASCHE_WAHL"), Vector2(200, 32), 8)
+	_label(tr("UI_TASCHE_AUSLAGE"), Vector2(16, 112), 8)
+	_name = _label("", Vector2(16, 184), 10)
 	_name.modulate = GELB
 	var fertig := Button.new()
 	fertig.text = tr("UI_TASCHE_FERTIG")
-	fertig.position = Vector2(234, 42)
-	fertig.size = Vector2(102, 30)
-	fertig.add_theme_font_size_override("font_size", 10)
+	fertig.position = Vector2(312, 56)
+	fertig.size = Vector2(136, 40)
+	fertig.add_theme_font_size_override("font_size", Einstellungen.schrift(10))
 	var knopf := StyleBoxFlat.new()
 	knopf.bg_color = Color("3a4466")
 	knopf.border_color = GELB
@@ -74,7 +74,7 @@ func _label(text: String, pos: Vector2, groesse: int) -> Label:
 	var l := Label.new()
 	l.text = text
 	l.position = pos
-	l.add_theme_font_size_override("font_size", groesse)
+	l.add_theme_font_size_override("font_size", Einstellungen.schrift(groesse))
 	l.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	_panel.add_child(l)
 	return l
@@ -85,12 +85,12 @@ func _aufbauen() -> void:
 		f.queue_free()
 	_felder.clear()
 	for i in CQReisetasche.PFLICHT.size():
-		_feld(CQReisetasche.PFLICHT[i], Vector2(12 + i * ABSTAND, 38), false)
+		_feld(CQReisetasche.PFLICHT[i], Vector2(16 + i * ABSTAND, 51), false)
 	for i in CQReisetasche.WAHLFAECHER:
 		var sn: String = tasche.wahl[i] if i < tasche.wahl.size() else ""
-		_feld(sn, Vector2(150 + i * ABSTAND, 38), true)
+		_feld(sn, Vector2(200 + i * ABSTAND, 51), true)
 	for i in tasche.auslage.size():
-		_feld(tasche.auslage[i], Vector2(12 + (i % 8) * ABSTAND, 98), false)
+		_feld(tasche.auslage[i], Vector2(16 + (i % 8) * ABSTAND, 131), false)
 
 
 func _feld(sn: String, pos: Vector2, wahlfach: bool) -> void:
@@ -113,8 +113,8 @@ func _feld(sn: String, pos: Vector2, wahlfach: bool) -> void:
 		bild.texture = item.texture
 	bild.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
 	bild.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
-	bild.position = Vector2(2, 2)
-	bild.size = Vector2(FELD - 4, FELD - 4)
+	bild.position = Vector2(3, 3)
+	bild.size = Vector2(FELD - 5, FELD - 5)
 	bild.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	f.add_child(bild)
 	f.mouse_filter = Control.MOUSE_FILTER_STOP

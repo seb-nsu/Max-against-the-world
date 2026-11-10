@@ -137,8 +137,8 @@ func frage_zeigen() -> void:
 		wurzel.theme = load(THEMA)
 	_frage.add_child(wurzel)
 	var spalte := VBoxContainer.new()
-	spalte.position = Vector2(24, 21)
-	spalte.size = Vector2(432, 228)
+	spalte.position = Vector2(32, 28)
+	spalte.size = Vector2(576, 304)
 	spalte.add_theme_constant_override("separation", 6)
 	wurzel.add_child(spalte)
 	var titel := Label.new()
@@ -148,7 +148,7 @@ func frage_zeigen() -> void:
 	var text := Label.new()
 	text.text = tr("UI_TELEMETRIE_FRAGE")
 	text.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
-	text.custom_minimum_size = Vector2(432, 0)
+	text.custom_minimum_size = Vector2(576, 0)
 	text.size_flags_vertical = Control.SIZE_EXPAND_FILL
 	spalte.add_child(text)
 	var knoepfe := HBoxContainer.new()

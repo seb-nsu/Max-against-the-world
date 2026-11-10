@@ -28,76 +28,76 @@
 [node name="RoomStadion" type="Node2D" unique_id=28280966]
 script = ExtResource("1_5sspt")
 script_name = "Stadion"
-width = 480
-height = 270
+width = 640
+height = 360
 
 [node name="WalkableAreas" type="Node2D" parent="." unique_id=707360395]
 
 [node name="Boden" parent="WalkableAreas" unique_id=482142947 instance=ExtResource("2_a12rk")]
-interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(6, 210, 474, 210, 474, 267, 6, 267)])
+interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(8, 280, 632, 280, 632, 356, 8, 356)])
 
 [node name="Props" type="Node2D" parent="." unique_id=421494228]
 
 [node name="Background" parent="Props" unique_id=1710284010 instance=ExtResource("3_ixigb")]
-position = Vector2(240, 135)
+position = Vector2(320, 180)
 texture = ExtResource("4_tpcia")
 description = "UI_RAUM_STADION"
 
 [node name="Hotspots" type="Node2D" parent="." unique_id=1910512851]
 
 [node name="Laufbahn" parent="Hotspots" unique_id=1282474215 instance=ExtResource("5_82gfv")]
-position = Vector2(240, 231)
+position = Vector2(320, 308)
 description = "UI_OBJ_LAUFBAHN"
-baseline = 9
-walk_to_point = Vector2(0, 18)
+baseline = 12
+walk_to_point = Vector2(0, 24)
 
 [node name="Sandgrube" parent="Hotspots" unique_id=1618560048 instance=ExtResource("6_omuwg")]
-position = Vector2(141, 198)
+position = Vector2(188, 264)
 description = "UI_OBJ_SANDGRUBE"
-baseline = 12
-walk_to_point = Vector2(0, 36)
+baseline = 16
+walk_to_point = Vector2(0, 48)
 
 [node name="Kampfrichterzelt" parent="Hotspots" unique_id=1010759944 instance=ExtResource("7_h825q")]
-position = Vector2(240, 171)
+position = Vector2(320, 228)
 description = "UI_OBJ_KAMPFRICHTERZELT"
-baseline = 24
-walk_to_point = Vector2(0, 60)
+baseline = 32
+walk_to_point = Vector2(0, 80)
 
 [node name="Zuschauerraenge" parent="Hotspots" unique_id=889203043 instance=ExtResource("8_kyju0")]
-position = Vector2(240, 84)
+position = Vector2(320, 112)
 description = "UI_OBJ_ZUSCHAUERRAENGE"
-baseline = 24
-walk_to_point = Vector2(0, 147)
+baseline = 32
+walk_to_point = Vector2(0, 196)
 
 [node name="Glockenturm" parent="Hotspots" unique_id=638813179 instance=ExtResource("9_72cca")]
-position = Vector2(432, 31.5)
+position = Vector2(576, 42.0)
 description = "UI_OBJ_GLOCKENTURM"
-baseline = 25
-walk_to_point = Vector2(-12, 199.5)
+baseline = 33
+walk_to_point = Vector2(-16, 266.0)
 
 [node name="Siegerliste" parent="Hotspots" unique_id=731268277 instance=ExtResource("10_xlriu")]
-position = Vector2(318, 157.5)
+position = Vector2(424, 210.0)
 description = "UI_OBJ_SIEGERLISTE"
-baseline = 22
-walk_to_point = Vector2(0, 73.5)
+baseline = 29
+walk_to_point = Vector2(0, 98.0)
 
 [node name="Startlinie" parent="Hotspots" unique_id=776175796 instance=ExtResource("11_ekowx")]
-position = Vector2(400.5, 252)
+position = Vector2(534.0, 336)
 description = "UI_OBJ_STARTLINIE"
-baseline = 12
-walk_to_point = Vector2(-1.5, 0)
+baseline = 16
+walk_to_point = Vector2(-2.0, 0)
 
 [node name="Wurfhebel" parent="Hotspots" unique_id=2002672959 instance=ExtResource("12_xpgu3")]
-position = Vector2(63, 180)
+position = Vector2(84, 240)
 description = "UI_OBJ_WURFHEBEL"
-baseline = 30
-walk_to_point = Vector2(3, 54)
+baseline = 40
+walk_to_point = Vector2(4, 72)
 
 [node name="AusgangAgora" parent="Hotspots" unique_id=353297913 instance=ExtResource("13_rie0b")]
-position = Vector2(463.5, 157.5)
+position = Vector2(618.0, 210.0)
 description = "UI_OBJ_AUSGANG_AGORA"
-baseline = 52
-walk_to_point = Vector2(-4.5, 82.5)
+baseline = 69
+walk_to_point = Vector2(-6.0, 110.0)
 cursor = 9
 
 [node name="Regions" type="Node2D" parent="." unique_id=1731627739]
@@ -105,36 +105,36 @@ cursor = 9
 [node name="Markers" type="Node2D" parent="." unique_id=566393897]
 
 [node name="Start" parent="Markers" unique_id=2100545164 instance=ExtResource("14_t6v7c")]
-position = Vector2(444, 240)
+position = Vector2(592, 320)
 
 [node name="VonAgora" parent="Markers" unique_id=1338887414 instance=ExtResource("15_yeq08")]
-position = Vector2(444, 240)
+position = Vector2(592, 320)
 
 [node name="Ramses" parent="Markers" unique_id=1278222484 instance=ExtResource("16_sib87")]
-position = Vector2(240, 99)
+position = Vector2(320, 132)
 
 [node name="Wedler" parent="Markers" unique_id=931534433 instance=ExtResource("17_0568d")]
-position = Vector2(282, 99)
+position = Vector2(376, 132)
 
 [node name="Archimedes" parent="Markers" unique_id=1185281788 instance=ExtResource("18_qdwbs")]
-position = Vector2(96, 228)
+position = Vector2(128, 304)
 
 [node name="Hermes" parent="Markers" unique_id=683299800 instance=ExtResource("19_0si1o")]
-position = Vector2(345, 240)
+position = Vector2(460, 320)
 
 [node name="Cicero" parent="Markers" unique_id=249143024 instance=ExtResource("20_avckm")]
-position = Vector2(165, 228)
+position = Vector2(220, 304)
 
 [node name="Zeremonienmeister" parent="Markers" unique_id=1979263688 instance=ExtResource("21_nthgn")]
-position = Vector2(390, 228)
+position = Vector2(520, 304)
 
 [node name="Aegypter" parent="Markers" unique_id=147604749 instance=ExtResource("22_fbtic")]
-position = Vector2(180, 99)
+position = Vector2(240, 132)
 
 [node name="Characters" type="Node2D" parent="." unique_id=657065468]
 
 [node name="CharacterLeonidas *" parent="Characters" unique_id=2063397062 instance=ExtResource("23_ir0p1")]
-position = Vector2(300, 237)
+position = Vector2(400, 316)
 
 [node name="CharacterSchildkroete *" parent="Characters" unique_id=45998621 instance=ExtResource("24_mvyhm")]
-position = Vector2(354, 252)
+position = Vector2(472, 336)

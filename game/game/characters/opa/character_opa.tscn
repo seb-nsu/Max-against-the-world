@@ -6,12 +6,12 @@
 [node name="CharacterOpa" type="Area2D" unique_id=792275399]
 script = ExtResource("1_nd1up")
 text_color = Color(0.9607843, 0.627451, 0.2901961, 1)
-walk_speed = 135.0
-dialog_pos = Vector2(0, -86)
+walk_speed = 180.0
+dialog_pos = Vector2(0, -205)
 script_name = "Opa"
 description = "UI_OBJ_OPA"
 cursor = 8
-interaction_polygon = PackedVector2Array(-15, -82, 15, -82, 15, 0, -15, 0)
+interaction_polygon = PackedVector2Array(-25, -201, 25, -201, 25, 0, -25, 0)
 
 [node name="ScalingPolygon" type="CollisionPolygon2D" parent="." unique_id=795156284]
 polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
@@ -21,11 +21,11 @@ polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=624747451]
 texture_filter = 1
 texture = ExtResource("2_6spcm")
-offset = Vector2(0, -41)
+offset = Vector2(0, -100.5)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=166052784]
 visible = false
-polygon = PackedVector2Array(-15, -82, 15, -82, 15, 0, -15, 0)
+polygon = PackedVector2Array(-25, -201, 25, -201, 25, 0, -25, 0)
 
 [node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=1496748265]
 visible = false

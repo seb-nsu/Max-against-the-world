@@ -7,9 +7,9 @@ script = ExtResource("1_gabg1")
 script_name = "ZauberstabLadenVonAussen"
 description = "Zauberstab Laden Von Aussen"
 cursor = 1
-interaction_polygon = PackedVector2Array(-38, -56, 38, -56, 38, 56, -38, 56)
+interaction_polygon = PackedVector2Array(-51, -75, 51, -75, 51, 75, -51, 75)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=2105602977]
 visible = false
 modulate = Color(1, 0, 1, 1)
-polygon = PackedVector2Array(-18, -18, 18, -18, 18, 18, -18, 18)
+polygon = PackedVector2Array(-24, -24, 24, -24, 24, 24, -24, 24)

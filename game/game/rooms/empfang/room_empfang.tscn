@@ -28,77 +28,77 @@
 [node name="RoomEmpfang" type="Node2D" unique_id=1599392852]
 script = ExtResource("1_vpmoe")
 script_name = "Empfang"
-width = 480
-height = 270
+width = 640
+height = 360
 
 [node name="WalkableAreas" type="Node2D" parent="." unique_id=1828194643]
 
 [node name="Boden" parent="WalkableAreas" unique_id=2078856344 instance=ExtResource("2_0rc2h")]
-interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(6, 210, 474, 210, 474, 267, 6, 267)])
+interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(8, 280, 632, 280, 632, 356, 8, 356)])
 
 [node name="Props" type="Node2D" parent="." unique_id=769992415]
 
 [node name="Background" parent="Props" unique_id=997040601 instance=ExtResource("3_dxvny")]
-position = Vector2(240, 135)
+position = Vector2(320, 180)
 texture = ExtResource("4_qnkyr")
 description = "UI_RAUM_EMPFANG"
 
 [node name="Hotspots" type="Node2D" parent="." unique_id=1093954874]
 
 [node name="ZahlenfeldMitCode" parent="Hotspots" unique_id=2089622886 instance=ExtResource("5_kyfo4")]
-position = Vector2(73, 54)
+position = Vector2(97, 72)
 description = "UI_OBJ_ZAHLENFELD_MIT_CODE"
-baseline = 24
-walk_to_point = Vector2(0, 181)
+baseline = 32
+walk_to_point = Vector2(0, 241)
 
 [node name="Portraet" parent="Hotspots" unique_id=1002341581 instance=ExtResource("6_yxuln")]
-position = Vector2(139, 54)
+position = Vector2(185, 72)
 description = "UI_OBJ_PORTRAET"
-baseline = 24
-walk_to_point = Vector2(0, 181)
+baseline = 32
+walk_to_point = Vector2(0, 241)
 
 [node name="KaputtesRadio" parent="Hotspots" unique_id=355196933 instance=ExtResource("7_vod7b")]
-position = Vector2(205, 54)
+position = Vector2(273, 72)
 description = "UI_OBJ_KAPUTTES_RADIO"
-baseline = 24
-walk_to_point = Vector2(0, 181)
+baseline = 32
+walk_to_point = Vector2(0, 241)
 
 [node name="WandMitGoldenenSchallplatten" parent="Hotspots" unique_id=1052584948 instance=ExtResource("8_lf083")]
-position = Vector2(271, 54)
+position = Vector2(361, 72)
 description = "UI_OBJ_WAND_MIT_GOLDENEN_SCHALLPLATTEN"
-baseline = 24
-walk_to_point = Vector2(0, 181)
+baseline = 32
+walk_to_point = Vector2(0, 241)
 
 [node name="Empfangstresen" parent="Hotspots" unique_id=827793523 instance=ExtResource("9_3u2xo")]
-position = Vector2(337, 54)
+position = Vector2(449, 72)
 description = "UI_OBJ_EMPFANGSTRESEN"
-baseline = 24
-walk_to_point = Vector2(0, 181)
+baseline = 32
+walk_to_point = Vector2(0, 241)
 
 [node name="Samtkordeln" parent="Hotspots" unique_id=1074753734 instance=ExtResource("10_w28f6")]
-position = Vector2(403, 54)
+position = Vector2(537, 72)
 description = "UI_OBJ_SAMTKORDELN"
-baseline = 24
-walk_to_point = Vector2(0, 181)
+baseline = 32
+walk_to_point = Vector2(0, 241)
 
 [node name="LogoAnDerWand" parent="Hotspots" unique_id=709802914 instance=ExtResource("11_m16ex")]
-position = Vector2(73, 114)
+position = Vector2(97, 152)
 description = "UI_OBJ_LOGO_AN_DER_WAND"
-baseline = 24
-walk_to_point = Vector2(0, 121)
+baseline = 32
+walk_to_point = Vector2(0, 161)
 
 [node name="AusgangKellerarchiv" parent="Hotspots" unique_id=1613495537 instance=ExtResource("12_qwbla")]
-position = Vector2(19.5, 157.5)
+position = Vector2(26.0, 210.0)
 description = "UI_RAUM_KELLERARCHIV"
-baseline = 52
-walk_to_point = Vector2(16.5, 82.5)
+baseline = 69
+walk_to_point = Vector2(22.0, 110.0)
 cursor = 9
 
 [node name="AusgangZappmannsStudio" parent="Hotspots" unique_id=1546269288 instance=ExtResource("13_8ajok")]
-position = Vector2(460.5, 157.5)
+position = Vector2(614.0, 210.0)
 description = "UI_RAUM_ZAPPMANNS_STUDIO"
-baseline = 52
-walk_to_point = Vector2(-16.5, 82.5)
+baseline = 69
+walk_to_point = Vector2(-22.0, 110.0)
 cursor = 9
 
 [node name="Regions" type="Node2D" parent="." unique_id=160975585]
@@ -106,36 +106,36 @@ cursor = 9
 [node name="Markers" type="Node2D" parent="." unique_id=2108764619]
 
 [node name="Start" parent="Markers" unique_id=2116175619 instance=ExtResource("14_pjcpa")]
-position = Vector2(240, 240)
+position = Vector2(320, 320)
 
 [node name="VonKellerarchiv" parent="Markers" unique_id=2056142330 instance=ExtResource("15_6ogbb")]
-position = Vector2(36, 240)
+position = Vector2(48, 320)
 
 [node name="VonZappmannsStudio" parent="Markers" unique_id=1350248523 instance=ExtResource("16_kxpaq")]
-position = Vector2(444, 240)
+position = Vector2(592, 320)
 
 [node name="VonGluecksrad" parent="Markers" unique_id=2133576450 instance=ExtResource("17_tir5s")]
-position = Vector2(240, 240)
+position = Vector2(320, 320)
 
 [node name="VonSitcomKueche" parent="Markers" unique_id=98115762 instance=ExtResource("18_apx4g")]
-position = Vector2(240, 240)
+position = Vector2(320, 320)
 
 [node name="VonSavanne" parent="Markers" unique_id=915966516 instance=ExtResource("19_s3i63")]
-position = Vector2(240, 240)
+position = Vector2(320, 320)
 
 [node name="VonFriedhof" parent="Markers" unique_id=227959159 instance=ExtResource("20_40h06")]
-position = Vector2(240, 240)
+position = Vector2(320, 320)
 
 [node name="VonKapitolis" parent="Markers" unique_id=116148017 instance=ExtResource("21_u1lqx")]
-position = Vector2(240, 240)
+position = Vector2(320, 320)
 
 [node name="VonWerbespotSet" parent="Markers" unique_id=1939524877 instance=ExtResource("22_urttk")]
-position = Vector2(240, 240)
+position = Vector2(320, 320)
 
 [node name="Characters" type="Node2D" parent="." unique_id=13842949]
 
 [node name="CharacterEmpfangsdame *" parent="Characters" unique_id=87528157 instance=ExtResource("23_ghphk")]
-position = Vector2(150, 232)
+position = Vector2(200, 309)
 
 [node name="CharacterSicherheitsmann *" parent="Characters" unique_id=1306300928 instance=ExtResource("24_ske75")]
-position = Vector2(330, 232)
+position = Vector2(440, 309)

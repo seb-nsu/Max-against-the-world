@@ -7,9 +7,9 @@ script = ExtResource("1_potpl")
 script_name = "KnoblauchUndKraeuter"
 description = "Knoblauch Und Kraeuter"
 cursor = 1
-interaction_polygon = PackedVector2Array(-60, -15, 60, -15, 60, 15, -60, 15)
+interaction_polygon = PackedVector2Array(-80, -20, 80, -20, 80, 20, -80, 20)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1118037025]
 visible = false
 modulate = Color(1, 0, 1, 1)
-polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+polygon = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)

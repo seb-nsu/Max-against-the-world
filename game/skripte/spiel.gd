@@ -242,7 +242,7 @@ func _objekt_sagt(kuerzel: String, quelle: PopochiuClickable, text: String) -> v
 		stimme.clickable = false
 		stimme.modulate.a = 0.0
 		stimme.text_color = OBJEKTSTIMME_FARBE
-		stimme.dialog_pos = Vector2(0, -6)
+		stimme.dialog_pos = Vector2(0, -8)
 		_objektstimmen[kuerzel] = stimme
 	var oben := 0.0
 	for p in quelle.interaction_polygon:
@@ -272,7 +272,7 @@ func z(kuerzel: String, zeile: String) -> Callable:
 func _stimme_aus_dem_off(c: PopochiuCharacter, an: bool) -> void:
 	if an:
 		R.current.add_character(c)
-		c.position = Vector2(E.width / 2.0, 105)
+		c.position = Vector2(E.width / 2.0, 140)
 		c.modulate.a = 0.0
 		c.clickable = false
 	else:
@@ -427,6 +427,36 @@ func ansehen(eintraege: Array, schluessel: String, zustand := "") -> String:
 		return e.zeile
 	await sagen(kz, wahl)
 	return wahl
+
+
+## Benutzen (Linksklick) aus dem Bauplan: die erste passende Zeile. Gibt es „zweites Mal“-Zeilen
+## (mal 2, 3 …), kommen sie beim 2., 3. … Klick der Reihe nach; danach eine davon zufällig, nie
+## zweimal dieselbe hintereinander. Gezählt wird je Objekt und erster Zeile (gespeichert).
+## Liefert false, wenn keine Zeile passt (dann Ersatzzeile beim Aufrufer).
+func benutzen(eintraege: Array, schluessel: String) -> bool:
+	var passend := eintraege.filter(func(e): return eintrag_passt(e))
+	if passend.is_empty():
+		return false
+	var kette := []
+	for m in range(1, 10):
+		var e_m: Array = passend.filter(func(e): return int(e.get("mal", 1)) == m)
+		if e_m.is_empty():
+			break
+		kette.append(e_m[0])
+	if kette.size() < 2:
+		await sagen_eintrag(passend[0])
+		return true
+	var n := Zustand.ansehen_zaehlen("benutzen|%s|%s" % [schluessel, kette[0].zeile])
+	var e: Dictionary
+	if n <= kette.size():
+		e = kette[n - 1]
+	else:
+		var merk := "BEN_" + schluessel
+		var auswahl := kette.filter(func(k): return k.zeile != _letzte_ersatz.get(merk, ""))
+		e = auswahl.pick_random()
+	_letzte_ersatz["BEN_" + schluessel] = e.zeile
+	await sagen_eintrag(e)
+	return true
 
 
 ## Zufällige Zeile aus einem Pool, nie zweimal dieselbe hintereinander (je Merkname).

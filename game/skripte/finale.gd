@@ -210,7 +210,7 @@ func _figuren_anwenden(raum: CQRaum) -> void:
 			continue
 		var pos := Vector2.INF
 		if plan[sn] and not raum.has_character(sn):
-			pos = raum.get_marker_position(sn) if raum.has_marker(sn) else Vector2(140 + 40 * plan.keys().find(sn), 230)
+			pos = raum.get_marker_position(sn) if raum.has_marker(sn) else Vector2(187 + 53 * plan.keys().find(sn), 307)
 		Spiel.figur_hier(sn, plan[sn], pos)
 #endregion
 

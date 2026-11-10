@@ -10,20 +10,20 @@ _figuren: [oma, mutter, modell_0815]
 supermarkt:
   farbe: '#6a7a8a'
   laufbereich:
-  - [6, 210]
-  - [474, 210]
-  - [474, 267]
-  - [6, 267]
+  - [8, 280]
+  - [632, 280]
+  - [632, 356]
+  - [8, 356]
   marker:
-    start: [120, 240]
+    start: [160, 320]
   hotspots:
     aufsteller_mit_milch_sonderangebot:
-      rect: [40, 120, 60, 80]
-      gehe: [70, 235]
+      rect: [53, 160, 80, 107]
+      gehe: [93, 313]
     milchregal_durch_die_tuer:
-      rect: [200, 60, 80, 120]
-      gehe: [240, 235]
+      rect: [267, 80, 107, 160]
+      gehe: [320, 313]
     automatische_tuer:
-      rect: [300, 50, 100, 160]
-      gehe: [350, 235]
+      rect: [400, 67, 133, 213]
+      gehe: [467, 313]
       name: Automatische Tür

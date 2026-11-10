@@ -5,12 +5,12 @@
 
 [node name="CharacterSobek" type="Area2D" unique_id=1702667434]
 script = ExtResource("1_qmj0b")
-walk_speed = 90.0
-dialog_pos = Vector2(0, -34)
+walk_speed = 120.0
+dialog_pos = Vector2(0, -58)
 script_name = "Sobek"
 description = "UI_OBJ_SOBEK"
 cursor = 8
-interaction_polygon = PackedVector2Array(-15, -30, 15, -30, 15, 0, -15, 0)
+interaction_polygon = PackedVector2Array(-20, -54, 20, -54, 20, 0, -20, 0)
 
 [node name="ScalingPolygon" type="CollisionPolygon2D" parent="." unique_id=1873230515]
 polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
@@ -20,11 +20,11 @@ polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1505755998]
 texture_filter = 1
 texture = ExtResource("2_fen6s")
-offset = Vector2(0, -15)
+offset = Vector2(0, -27)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=155076511]
 visible = false
-polygon = PackedVector2Array(-15, -30, 15, -30, 15, 0, -15, 0)
+polygon = PackedVector2Array(-20, -54, 20, -54, 20, 0, -20, 0)
 
 [node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=1349924829]
 visible = false

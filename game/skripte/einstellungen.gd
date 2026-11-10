@@ -164,16 +164,26 @@ func _fenster_anwenden() -> void:
 				int(ProjectSettings.get_setting("display/window/size/viewport_width")),
 				int(ProjectSettings.get_setting("display/window/size/viewport_height")))
 			var groesse := basis * int(wert("fenster_stufe"))
-			var bildschirm := DisplayServer.screen_get_usable_rect().size
-			while groesse.x > bildschirm.x and groesse.x > basis.x:
+			if Engine.is_embedded_in_editor():
+				return  # im Spiel-Reiter des Editors bestimmt der Editor die Größe
+			# Nutzbare Fläche ohne Taskleiste, dazu Platz für die Titelleiste: 1920×1080 passt als
+			# Fenster nicht auf einen Full-HD-Bildschirm, dann eine Stufe kleiner (1280×720)
+			var flaeche := DisplayServer.screen_get_usable_rect()
+			var platz := flaeche.size - Vector2i(0, 40)
+			while (groesse.x > platz.x or groesse.y > platz.y) and groesse.x > basis.x:
 				groesse -= basis
 			DisplayServer.window_set_size(groesse)
-			DisplayServer.window_set_position((bildschirm - groesse) / 2)
+			DisplayServer.window_set_position(flaeche.position + (flaeche.size - groesse) / 2)
 
 
 ## Schriftgröße in logischen Einheiten (×4 bei 1080p), mit „Große Schrift“ um ein Viertel größer.
+## Schriftgrößen im Code sind für 480×270 angegeben; bei 640×360 wachsen sie mit, damit Text auf dem
+## Bildschirm gleich groß bleibt (tools/aufloesung.py, Entscheidung 10. November 2026).
+static var _aufloesung := float(ProjectSettings.get_setting("display/window/size/viewport_height", 270)) / 270.0
+
+
 func schrift(groesse: int) -> int:
-	return roundi(groesse * (GROSS_FAKTOR if wert("grosse_schrift") else 1.0))
+	return roundi(groesse * _aufloesung * (GROSS_FAKTOR if wert("grosse_schrift") else 1.0))
 
 
 const THEMA := "res://game/gui/resources/gui_theme.tres"

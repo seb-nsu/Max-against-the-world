@@ -685,6 +685,19 @@ def baue(abschnitt):
 
 
 # ---- Platzhaltergrafik ---------------------------------------------------------------------------
+def stehend_px(fid, px):
+    """Ein Platzhalter je Figur für alle Abschnitte: die größte Angabe (stehend), nicht die zuletzt
+    gelesene (Opa sitzt in Welt 4 und wäre sonst überall klein)."""
+    if not STEHEND:
+        for p in sorted((ROOT / "docs/welten").glob("*.yaml")):
+            for g in (yaml.safe_load(p.read_text(encoding="utf-8")) or {}).get("figuren", []) or []:
+                STEHEND[g["id"]] = max(STEHEND.get(g["id"], 0), int(g.get("groesse_px") or 0))
+    return STEHEND.get(fid, px) or px
+
+
+STEHEND = {}
+
+
 def platzhalter(plan):
     from PIL import Image, ImageDraw, ImageFont
 
@@ -747,16 +760,16 @@ def platzhalter(plan):
             img.save(PLATZHALTER / f"prop_{p['id']}.png")
 
     for f in plan["figuren"]:
-        hoehe = f["groesse_px"]
+        hoehe = f["groesse_px"] and stehend_px(f["id"], f["groesse_px"])
         if not hoehe:
             # Nur Stimme in diesem Abschnitt (Opa in Welt 2, Grieche, Sphinx): ein vorhandenes Bild
             # aus einem anderen Abschnitt bleibt, sonst ein kleiner Platzhalter
             if (PLATZHALTER / f"figur_{f['id']}.png").exists():
                 continue
             hoehe = s_(40)
-        breite = s_(30) if f["id"] == "pixel" else max(s_(20), hoehe // 3)
+        breite = round(s_(30) * 1.35) if f["id"] == "pixel" else max(s_(20), hoehe // 4)
         if f["id"] == "pixel":
-            hoehe = s_(15)
+            hoehe = round(s_(15) * 1.35)  # schlafend; Figuren seit 10. November 2026 um 35 Prozent größer
         img = Image.new("RGBA", (breite, hoehe), (0, 0, 0, 0))
         d = ImageDraw.Draw(img)
         d.rectangle([0, 0, breite - 1, hoehe - 1], fill=farbe(f["textfarbe"], 0.55), outline=(38, 43, 68, 255))

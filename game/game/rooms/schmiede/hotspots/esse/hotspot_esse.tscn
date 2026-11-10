@@ -7,9 +7,9 @@ script = ExtResource("1_jcilj")
 script_name = "Esse"
 description = "Esse"
 cursor = 1
-interaction_polygon = PackedVector2Array(-53, -53, 53, -53, 53, 53, -53, 53)
+interaction_polygon = PackedVector2Array(-71, -71, 71, -71, 71, 71, -71, 71)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=2051221098]
 visible = false
 modulate = Color(1, 0, 1, 1)
-polygon = PackedVector2Array(-18, -18, 18, -18, 18, 18, -18, 18)
+polygon = PackedVector2Array(-24, -24, 24, -24, 24, 24, -24, 24)

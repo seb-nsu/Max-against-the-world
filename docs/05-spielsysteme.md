@@ -170,19 +170,19 @@ Die Steuerung ist eine Zwei-Klick-Steuerung ohne Verbenleiste: Linksklick tut da
 | Esc | Überspringt eine Zwischensequenz, sonst Pausemenü |
 | F5 / F9 | Schnellspeichern / Schnellladen |
 
-**Bildschirmaufbau (480×270, vorläufig; Maße in `tools/aufloesung.py`):**
+**Bildschirmaufbau (640×360; Maße in `tools/aufloesung.py`):**
 
 | Element | Ort | Verhalten |
 | --- | --- | --- |
-| Inventarleiste | Oben, 48 Pixel hoch, acht Plätze für 36×36-Symbole; bei aktivem Max ist der erste Platz das Pixel-Feld (ab P1), bei aktivem Pixel zeigt die Leiste Pixels einen Gegenstand im Maul | Klappt ein, sobald die Maus den oberen Rand verlässt, und bleibt in Gesprächen und Zwischensequenzen eingeklappt (nur ein schmaler Griff bleibt sichtbar); Pfeile blättern bei mehr als acht Gegenständen |
-| Porträts von Max und Pixel | Oben links, 36×36 | Immer sichtbar; die aktive Figur ist hell, die andere grau |
-| Hilfe-Pfote | Oben rechts, 36×36 | Immer sichtbar; leuchtet sanft, wenn ein neuer Hinweis bereitliegt |
+| Inventarleiste | Oben, 64 Pixel hoch, acht Plätze für 48×48-Symbole; bei aktivem Max ist der erste Platz das Pixel-Feld (ab P1), bei aktivem Pixel zeigt die Leiste Pixels einen Gegenstand im Maul | Klappt ein, sobald die Maus den oberen Rand verlässt, und bleibt in Gesprächen und Zwischensequenzen eingeklappt (nur ein schmaler Griff bleibt sichtbar); Pfeile blättern bei mehr als acht Gegenständen |
+| Porträts von Max und Pixel | Oben links, 48×48 | Immer sichtbar; die aktive Figur ist hell, die andere grau |
+| Hilfe-Pfote | Oben rechts, 48×48 | Immer sichtbar; leuchtet sanft, wenn ein neuer Hinweis bereitliegt |
 | Objektname | Unter dem Zeiger, eine Zeile | Zeigt beim Überfahren den Namen, beim Kombinieren „Thunfischdose mit Pixel“ |
 | Sprechblasen | Über der sprechenden Figur | Rand und Farbe je Figur (siehe Schrift). Sprechende Dinge ohne Figur (Brunnen, Grammophon, Geheimtür, Spiegel) sprechen mit Blase über dem Objekt in ihrer Sprecherfarbe, nie als Systemtext |
 | Dialogauswahl | Unten, bis zu vier Zeilen | Mausrad oder Pfeile bei mehr Optionen; gelesene Optionen werden grau. Dieselbe Auswahl dient für Wahlen ohne Gesprächsfigur (Wünsche am Brunnen, Passwort an der Geheimtür); ein Passwort setzt Max Teil für Teil zusammen, gewählte Teile verschwinden, damit nichts geraten wird |
 | Sonder-Leisten | Je nach Welt | Fernbedienung (Welt 4) und Code-Sicht (Welt 3) erscheinen nur dort, unten rechts; in Gesprächen ist die Fernbedienungs-Leiste ausgegraut, außer im Gespräch mit dem Kommissar (Rätsel Welt 4, Gäste zwischen den Sendern) |
 
-Mockup: `tools/ui_mockup_hd.py` zeichnet zwei Zustände auf dem Dachboden-Hintergrund, Erkunden (Leiste offen, Zeiger mit Objektname, Blase) und Gespräch (Leiste eingeklappt, Blase mit zwei Zeilen, Dialogauswahl). Schrift Nunito freigegeben am 9. November 2026; Grundauflösung 480×270 vorläufig festgelegt am 9. November 2026; danach baut Claude die UI.
+Mockup: `tools/ui_mockup_hd.py` zeichnet zwei Zustände auf dem Dachboden-Hintergrund, Erkunden (Leiste offen, Zeiger mit Objektname, Blase) und Gespräch (Leiste eingeklappt, Blase mit zwei Zeilen, Dialogauswahl). Schrift Nunito freigegeben am 9. November 2026; Grundauflösung 640×360 festgelegt am 10. November 2026 (vorher 480×270); danach baut Claude die UI.
 
 **Bildschirme und Menüs:**
 
@@ -192,7 +192,7 @@ Mockup: `tools/ui_mockup_hd.py` zeichnet zwei Zustände auf dem Dachboden-Hinter
 | Pausemenü (Esc) | Weiterspielen, Speichern, Laden, Optionen, Hauptmenü. Öffnet nur, wenn nichts läuft (in Zwischensequenzen und Gesprächen überspringt Esc), und hält das Spiel an. „Hauptmenü“ fragt mit einem zweiten Klick nach, weil Ungespeichertes verloren geht; das Spiel startet dafür neu, damit kein Zustand der alten Sitzung übrig bleibt |
 | Speichern und Laden | Zwölf Plätze mit Vorschaubild, Ort, Welt, Spielzeit und Datum, dazu Autospeicher und Schnellspeicher (siehe Speichern) |
 | Notizbuch | Öffnet sich aus dem Inventar, immer auf Seite 1. Seite 1: aktuelle Ziele, die das Hinweissystem mitpflegt. Seite 2: gesammelte Regeln und Passwort-Teile. Seite 3: Pixels Einkaufsliste als Running Gag, je Welt ein neuer Wunsch (Konzept, Running Gags) |
-| Nahansicht | Bildschirmfüllende Überlagerung in Spielauflösung (480×270) mit Rahmen und Schließen-Knopf oben rechts; zeigt Objekte, deren Text in der Szene zu klein wäre. Es gibt genau 14 Nahansichten im ganzen Spiel; die Liste gehört den Welt-Tabellen (`welten/*.yaml`: Feld `nahansicht` bei Gegenständen, Liste `nahansichten` für Schilder, Tafeln und Ähnliches), die Grafik-Dateien beschreiben die Bilder (Zeile „Nahansichten“). Das Notizbuch trägt Regeln und Passwort-Teile erst nach dem Öffnen der Nahansicht ein |
+| Nahansicht | Bildschirmfüllende Überlagerung in Spielauflösung (640×360) mit Rahmen und Schließen-Knopf oben rechts; zeigt Objekte, deren Text in der Szene zu klein wäre. Es gibt genau 14 Nahansichten im ganzen Spiel; die Liste gehört den Welt-Tabellen (`welten/*.yaml`: Feld `nahansicht` bei Gegenständen, Liste `nahansichten` für Schilder, Tafeln und Ähnliches), die Grafik-Dateien beschreiben die Bilder (Zeile „Nahansichten“). Das Notizbuch trägt Regeln und Passwort-Teile erst nach dem Öffnen der Nahansicht ein |
 | Programmzeitschrift (Welt 4) | Eigene Überlagerung wie eine Nahansicht, eine aufgeschlagene Doppelseite ohne Blättern: links die Zeitleiste mit fünf Senderspalten, jede Sendung ein klickbares Feld (Klick springt zur Sendezeit); rechts sechs Detailkästen mit Bild und Titel (darunter die 20:15-Folge, das Mitternachtsvideo und Dr. Werbepauses Spot); gefundene Kanäle werden angekreuzt; nach dem Fund steht auch Kanal 999 darin, und ein Klick führt in den Empfang. Dieser Aufbau ist verbindlich für Rätsel Welt 4 und Grafik Welt 4 |
 | Reisetasche | Vor jeder Welt: zwei Wahlfächer, ein Pflichtfach. Überlagerung im oberen Bildteil, damit die Sprechblasen darüber sichtbar bleiben: oben Pflichtfach und Wahlfächer, darunter, was daneben liegt (alles Mitreisefähige aus dem Inventar und der Fundkiste). Klick packt ein oder aus, Rechtsklick fragt Pixel; Pixel kommentiert jeden Gegenstand beim ersten Berühren. „Fertig gepackt“ schließt, der Rest kommt in die Fundkiste |
 | Optionen | Siehe unten |

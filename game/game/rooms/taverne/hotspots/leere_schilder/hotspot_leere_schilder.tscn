@@ -7,9 +7,9 @@ script = ExtResource("1_qeow6")
 script_name = "LeereSchilder"
 description = "Leere Schilder"
 cursor = 1
-interaction_polygon = PackedVector2Array(-39, -8, 39, -8, 39, 8, -39, 8)
+interaction_polygon = PackedVector2Array(-52, -11, 52, -11, 52, 11, -52, 11)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1540897722]
 visible = false
 modulate = Color(1, 0, 1, 1)
-polygon = PackedVector2Array(-18, -18, 18, -18, 18, 18, -18, 18)
+polygon = PackedVector2Array(-24, -24, 24, -24, 24, 24, -24, 24)

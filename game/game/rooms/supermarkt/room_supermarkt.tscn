@@ -12,46 +12,46 @@
 [node name="RoomSupermarkt" type="Node2D" unique_id=229868025]
 script = ExtResource("1_lgnfu")
 script_name = "Supermarkt"
-width = 480
-height = 270
+width = 640
+height = 360
 
 [node name="WalkableAreas" type="Node2D" parent="." unique_id=92515742]
 
 [node name="Boden" parent="WalkableAreas" unique_id=489343030 instance=ExtResource("2_j0h18")]
-interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(6, 210, 474, 210, 474, 267, 6, 267)])
+interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(8, 280, 632, 280, 632, 356, 8, 356)])
 
 [node name="Props" type="Node2D" parent="." unique_id=1548693926]
 
 [node name="Background" parent="Props" unique_id=977164050 instance=ExtResource("3_4608l")]
-position = Vector2(240, 135)
+position = Vector2(320, 180)
 texture = ExtResource("4_ovyxt")
 description = "UI_RAUM_SUPERMARKT"
 
 [node name="Hotspots" type="Node2D" parent="." unique_id=204685808]
 
 [node name="AutomatischeTuer" parent="Hotspots" unique_id=1244446895 instance=ExtResource("5_gvpd4")]
-position = Vector2(350, 130)
+position = Vector2(467, 173)
 description = "UI_OBJ_AUTOMATISCHE_TUER"
-baseline = 80
-walk_to_point = Vector2(0, 105)
+baseline = 107
+walk_to_point = Vector2(0, 140)
 
 [node name="AufstellerMitMilchSonderangebot" parent="Hotspots" unique_id=146912656 instance=ExtResource("6_cesfg")]
-position = Vector2(70, 160)
+position = Vector2(93, 213)
 description = "UI_OBJ_AUFSTELLER_MIT_MILCH_SONDERANGEBOT"
-baseline = 40
-walk_to_point = Vector2(0, 75)
+baseline = 53
+walk_to_point = Vector2(0, 100)
 
 [node name="MilchregalDurchDieTuer" parent="Hotspots" unique_id=259402121 instance=ExtResource("7_6yna1")]
-position = Vector2(240, 120)
+position = Vector2(320, 160)
 description = "UI_OBJ_MILCHREGAL_DURCH_DIE_TUER"
-baseline = 60
-walk_to_point = Vector2(0, 115)
+baseline = 80
+walk_to_point = Vector2(0, 153)
 
 [node name="Regions" type="Node2D" parent="." unique_id=24390593]
 
 [node name="Markers" type="Node2D" parent="." unique_id=1781375581]
 
 [node name="Start" parent="Markers" unique_id=1313819993 instance=ExtResource("8_r7nda")]
-position = Vector2(120, 240)
+position = Vector2(160, 320)
 
 [node name="Characters" type="Node2D" parent="." unique_id=230384806]

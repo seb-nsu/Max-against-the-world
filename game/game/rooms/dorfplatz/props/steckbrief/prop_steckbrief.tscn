@@ -7,7 +7,7 @@ script = ExtResource("1_vh4on")
 script_name = "Steckbrief"
 description = "Steckbrief"
 cursor = 1
-interaction_polygon = PackedVector2Array(-15, -20, 15, -20, 15, 20, -15, 20)
+interaction_polygon = PackedVector2Array(-20, -27, 20, -27, 20, 27, -20, 27)
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=586762576]
 texture_filter = 1
@@ -17,7 +17,7 @@ texture_filter = 1
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1243409819]
 visible = false
 modulate = Color(1, 1, 0, 1)
-polygon = PackedVector2Array(-18, -18, 18, -18, 18, 18, -18, 18)
+polygon = PackedVector2Array(-24, -24, 24, -24, 24, 24, -24, 24)
 
 [node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=2031343338]
 visible = false

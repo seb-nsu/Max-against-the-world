@@ -7,7 +7,7 @@ script = ExtResource("1_q1wl0")
 script_name = "Papyrusblatt"
 description = "Papyrusblatt"
 cursor = 1
-interaction_polygon = PackedVector2Array(-7.5, -6, 7.5, -6, 7.5, 6, -7.5, 6)
+interaction_polygon = PackedVector2Array(-10.0, -8, 10.0, -8, 10.0, 8, -10.0, 8)
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=123144562]
 texture_filter = 1
@@ -17,7 +17,7 @@ texture_filter = 1
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1918274532]
 visible = false
 modulate = Color(1, 1, 0, 1)
-polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+polygon = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 
 [node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=1247932297]
 visible = false

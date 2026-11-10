@@ -7,9 +7,9 @@ script = ExtResource("1_m2ts6")
 script_name = "Inschrift"
 description = "Inschrift"
 cursor = 1
-interaction_polygon = PackedVector2Array(-19.5, -27, 19.5, -27, 19.5, 27, -19.5, 27)
+interaction_polygon = PackedVector2Array(-26.0, -36, 26.0, -36, 26.0, 36, -26.0, 36)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1357267520]
 visible = false
 modulate = Color(1, 0, 1, 1)
-polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+polygon = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)

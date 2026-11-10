@@ -42,7 +42,7 @@ func _lauf() -> void:
 	# Leiste aufklappen: Maus an den oberen Rand, Objektname unter dem Zeiger
 	Input.warp_mouse(Vector2(960, 20))
 	var bewegung := InputEventMouseMotion.new()
-	bewegung.position = Vector2(240, 5)
+	bewegung.position = Vector2(320, 7)
 	bewegung.global_position = bewegung.position
 	Input.parse_input_event(bewegung)
 	await _warte(1.0)

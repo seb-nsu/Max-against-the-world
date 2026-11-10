@@ -8,7 +8,7 @@ Diese Datei sammelt alle Absprachen zu Technik, Grafik und Audio an einer Stelle
 | --- | --- | --- |
 | Spielart | 2D-Point-and-Click, Räume frontal mit leichter Tiefe (Figuren werden nach hinten kleiner), zwei spielbare Figuren (Max und Pixel) | Klassische Adventure-Ansicht, wenig Zeichenarbeit, passt zu KI-Hintergründen |
 | Engine | Godot 4 mit dem Plugin Popochiu | Kostenlos, Popochiu bringt Räume, Hotspots, Inventar, Dialoge und Speichern für Point-and-Click mit |
-| Auflösung | 480×270 Pixel, 4-fach auf 1920×1080 skaliert; breite Räume bis 960×270. Vorläufig (9. November 2026), nach den ersten Testszenen noch einmal prüfen; die Zahl steht zentral in `tools/aufloesung.py` | Gespielt wird vor allem am Laptop und Rechner, dort wirkte 320×180 zu grob; glatt skalierbar auf 1080p und 4K, auf 1440p mit schmalem Rand |
+| Auflösung | 640×360 Pixel, ganzzahlig skaliert: 3-fach auf 1920×1080, 4-fach auf 2560×1440, 6-fach auf 3840×2160; breite Räume bis 1280×360. Festgelegt am 10. November 2026 nach dem ersten Anspielen (vorher 480×270, das in WQHD nicht ganzzahlig aufgeht); die Zahl steht zentral in `tools/aufloesung.py` | Gespielt wird vor allem am Laptop und Rechner; 640×360 skaliert glatt auf Full HD, WQHD und 4K und zeigt mehr Details |
 | Palette | Eine gemeinsame 32-Farben-Palette, z. B. Endesga 32 von Lospec | Alle Bilder, auch fremde, werden darauf umgefärbt und passen zusammen |
 | Programmierung | Claude schreibt alle Skripte (GDScript) | Du konzentrierst dich auf Grafik, Laufbereiche und Testen |
 | Grafik | KI-gestützt: Konzeptbilder mit ChatGPT oder Gemini, Spielgrafik mit Retro Diffusion, Nacharbeit in Aseprite | Schnell und einheitlich; Nacharbeit hält die Qualität |
@@ -25,7 +25,7 @@ Diese Datei sammelt alle Absprachen zu Technik, Grafik und Audio an einer Stelle
 | Thema | Absprache |
 | --- | --- |
 | Version | Godot 4.7.2 (stabil, 18. August 2026) mit Popochiu 2.2.1 (18. Oktober 2026), geprüft am 9. November 2026. Popochiu 2.2 hat Godot 4.7 als Standardziel; Godot 4.8 ist noch Beta und kommt nicht in Frage. Während des Projekts nicht wechseln; nur Fehlerkorrekturen innerhalb von 4.7.x und 2.2.x, jeweils erst in einem eigenen Git-Zweig testen; Popochiu hat zwischen Minor-Versionen das GUI-Vorlagensystem geändert |
-| Pixel-Einstellungen | Viewport 480×270, Stretch-Modus „canvas_items“ mit Pixel-Einrasten (Text in voller Auflösung, `05-spielsysteme.md`), ganzzahlige Skalierung, Texturfilter „Nearest“; richte ich beim Projektstart ein |
+| Pixel-Einstellungen | Viewport 640×360, Stretch-Modus „canvas_items“ mit Pixel-Einrasten (Text in voller Auflösung, `05-spielsysteme.md`), ganzzahlige Skalierung, Texturfilter „Nearest“; richte ich beim Projektstart ein |
 | Aufbau | Ein Popochiu-Raum pro Szene; Hintergrund, Laufbereich, Hotspots, Props mit Zuständen, Regionen für Größenwechsel |
 | Mechaniken | Figurenwechsel (alle Welten), Zeitfähre (Welt 2), Code-Sicht und Ebenenwechsel (Welt 3), Fernbedienung und Genre-Zustände (Welt 4); alle auf einem gemeinsamen Zustandssystem (Objektzustände per Overlay umschalten, Code-Sicht und Fernbedienung auf derselben Grundlage), gebaut in Stufe 1 |
 | KI-Anbindung | Claude Code auf deinem PC plus Godot-MCP-Server: Coding-Solo (kostenlos) für den Anfang, GDAI MCP (19 $ einmalig) sobald Claude Screenshots braucht |
@@ -53,7 +53,7 @@ Diese Datei sammelt alle Absprachen zu Technik, Grafik und Audio an einer Stelle
 
 | Asset | Stückzahl | Werkzeug | Zeit je Stück | Summe |
 | --- | --- | --- | --- | --- |
-| Hintergründe | etwa 80 (59 Räume plus etwa 20 Zustandsvarianten) | Konzeptbild, Neural Pixelate, Aseprite | 3 bis 6 h | 240 bis 480 h |
+| Hintergründe | etwa 80 (59 Räume plus etwa 20 Zustandsvarianten) | Konzeptbild, `tools/pixelieren.py`, Aseprite | 3 bis 6 h | 240 bis 480 h |
 | Figurensprites mit Gehen, Stehen, Sprechen | etwa 105 (Prolog 7, W1 22, W2 26, W3 22, W4 27) | Retro Diffusion Cloud, Aseprite | 3 bis 4,5 h | 315 bis 473 h |
 | Sonderanimationen | etwa 60 | rd\_advanced\_animation\_\_custom\_action | 1 h | 60 h |
 | Effekte | etwa 25 | Baustein EFFEKT | 0,5 h | 13 h |

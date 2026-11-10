@@ -7,9 +7,9 @@ script = ExtResource("1_khfuy")
 script_name = "Taschentuchstapel"
 description = "Taschentuchstapel"
 cursor = 1
-interaction_polygon = PackedVector2Array(-18, -15, 18, -15, 18, 15, -18, 15)
+interaction_polygon = PackedVector2Array(-24, -20, 24, -20, 24, 20, -24, 20)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1656814283]
 visible = false
 modulate = Color(1, 0, 1, 1)
-polygon = PackedVector2Array(-18, -18, 18, -18, 18, 18, -18, 18)
+polygon = PackedVector2Array(-24, -24, 24, -24, 24, 24, -24, 24)

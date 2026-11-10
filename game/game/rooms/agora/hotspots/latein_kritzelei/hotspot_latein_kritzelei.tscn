@@ -7,9 +7,9 @@ script = ExtResource("1_wl60d")
 script_name = "LateinKritzelei"
 description = "Latein Kritzelei"
 cursor = 1
-interaction_polygon = PackedVector2Array(-24, -12, 24, -12, 24, 12, -24, 12)
+interaction_polygon = PackedVector2Array(-32, -16, 32, -16, 32, 16, -32, 16)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1345713488]
 visible = false
 modulate = Color(1, 0, 1, 1)
-polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+polygon = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)

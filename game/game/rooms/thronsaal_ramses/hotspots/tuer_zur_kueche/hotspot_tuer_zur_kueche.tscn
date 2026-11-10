@@ -7,9 +7,9 @@ script = ExtResource("1_a6vne")
 script_name = "TuerZurKueche"
 description = "Tuer Zur Kueche"
 cursor = 1
-interaction_polygon = PackedVector2Array(-19.5, -52.5, 19.5, -52.5, 19.5, 52.5, -19.5, 52.5)
+interaction_polygon = PackedVector2Array(-26.0, -70.0, 26.0, -70.0, 26.0, 70.0, -26.0, 70.0)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1784536728]
 visible = false
 modulate = Color(1, 0, 1, 1)
-polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+polygon = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)

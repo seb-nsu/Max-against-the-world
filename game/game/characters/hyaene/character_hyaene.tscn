@@ -5,12 +5,12 @@
 
 [node name="CharacterHyaene" type="Area2D" unique_id=1076889052]
 script = ExtResource("1_qmayo")
-walk_speed = 90.0
-dialog_pos = Vector2(0, -68)
+walk_speed = 120.0
+dialog_pos = Vector2(0, -119)
 script_name = "Hyaene"
 description = "UI_OBJ_HYAENE"
 cursor = 8
-interaction_polygon = PackedVector2Array(-15, -64, 15, -64, 15, 0, -15, 0)
+interaction_polygon = PackedVector2Array(-20, -115, 20, -115, 20, 0, -20, 0)
 
 [node name="ScalingPolygon" type="CollisionPolygon2D" parent="." unique_id=1331705863]
 polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
@@ -20,11 +20,11 @@ polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=733447681]
 texture_filter = 1
 texture = ExtResource("2_gp3wc")
-offset = Vector2(0, -32)
+offset = Vector2(0, -57.5)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1023451509]
 visible = false
-polygon = PackedVector2Array(-15, -64, 15, -64, 15, 0, -15, 0)
+polygon = PackedVector2Array(-20, -115, 20, -115, 20, 0, -20, 0)
 
 [node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=1723571853]
 visible = false

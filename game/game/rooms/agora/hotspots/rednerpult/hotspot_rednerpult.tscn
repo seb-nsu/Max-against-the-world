@@ -7,9 +7,9 @@ script = ExtResource("1_idmh4")
 script_name = "Rednerpult"
 description = "Rednerpult"
 cursor = 1
-interaction_polygon = PackedVector2Array(-24, -22.5, 24, -22.5, 24, 22.5, -24, 22.5)
+interaction_polygon = PackedVector2Array(-32, -30.0, 32, -30.0, 32, 30.0, -32, 30.0)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=648745765]
 visible = false
 modulate = Color(1, 0, 1, 1)
-polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+polygon = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)

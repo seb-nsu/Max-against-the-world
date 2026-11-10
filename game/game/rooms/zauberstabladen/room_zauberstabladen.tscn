@@ -22,73 +22,73 @@
 [node name="RoomZauberstabladen" type="Node2D" unique_id=768821353]
 script = ExtResource("1_506xx")
 script_name = "Zauberstabladen"
-width = 480
-height = 270
+width = 640
+height = 360
 
 [node name="WalkableAreas" type="Node2D" parent="." unique_id=724217345]
 
 [node name="Boden" parent="WalkableAreas" unique_id=1105084774 instance=ExtResource("2_7qgrv")]
-interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(6, 210, 474, 210, 474, 267, 6, 267)])
+interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(8, 280, 632, 280, 632, 356, 8, 356)])
 
 [node name="Props" type="Node2D" parent="." unique_id=595822843]
 
 [node name="Background" parent="Props" unique_id=1553621176 instance=ExtResource("3_p04kq")]
-position = Vector2(240, 135)
+position = Vector2(320, 180)
 texture = ExtResource("4_8ng0a")
 description = "UI_RAUM_ZAUBERSTABLADEN"
 
 [node name="Zahnstocher" parent="Props" unique_id=454319026 instance=ExtResource("5_plpgb")]
-position = Vector2(210, 149)
+position = Vector2(280, 199)
 texture = ExtResource("6_xo7ie")
 description = "UI_OBJ_ZAHNSTOCHER"
-baseline = 5
-walk_to_point = Vector2(0, 83)
+baseline = 7
+walk_to_point = Vector2(0, 111)
 
 [node name="Zollstock" parent="Props" unique_id=1917324114 instance=ExtResource("7_g6uus")]
-position = Vector2(242, 149)
+position = Vector2(323, 199)
 texture = ExtResource("8_tanh3")
 description = "UI_OBJ_ZOLLSTOCK"
-baseline = 5
-walk_to_point = Vector2(-2, 83)
+baseline = 7
+walk_to_point = Vector2(-3, 111)
 
 [node name="Kochloeffel" parent="Props" unique_id=1816490374 instance=ExtResource("9_t4c2g")]
-position = Vector2(278, 147)
+position = Vector2(371, 196)
 texture = ExtResource("10_rdb3f")
 description = "UI_OBJ_KOCHLOEFFEL"
-baseline = 6
-walk_to_point = Vector2(-2, 84)
+baseline = 8
+walk_to_point = Vector2(-3, 112)
 
 [node name="Hotspots" type="Node2D" parent="." unique_id=599736138]
 
 [node name="Fenster" parent="Hotspots" unique_id=187225104 instance=ExtResource("11_ww8n5")]
-position = Vector2(50, 35)
+position = Vector2(67, 47)
 description = "UI_OBJ_FENSTER"
-baseline = 20
-walk_to_point = Vector2(11, 194)
+baseline = 27
+walk_to_point = Vector2(15, 259)
 
 [node name="Regale" parent="Hotspots" unique_id=1436729353 instance=ExtResource("12_glgyb")]
-position = Vector2(71, 135)
+position = Vector2(95, 180)
 description = "UI_OBJ_REGALE"
-baseline = 75
-walk_to_point = Vector2(5, 93)
+baseline = 100
+walk_to_point = Vector2(7, 124)
 
 [node name="Leiter" parent="Hotspots" unique_id=361216923 instance=ExtResource("13_g71jh")]
-position = Vector2(152, 128)
+position = Vector2(203, 171)
 description = "UI_OBJ_LEITER"
-baseline = 83
-walk_to_point = Vector2(-2, 101)
+baseline = 111
+walk_to_point = Vector2(-3, 135)
 
 [node name="ThekeMitKissen" parent="Hotspots" unique_id=127725189 instance=ExtResource("14_vr4q8")]
-position = Vector2(243, 183)
+position = Vector2(324, 244)
 description = "UI_OBJ_THEKE_MIT_KISSEN"
-baseline = 27
-walk_to_point = Vector2(-3, 48)
+baseline = 36
+walk_to_point = Vector2(-4, 64)
 
 [node name="AusgangDorfplatz" parent="Hotspots" unique_id=1735127126 instance=ExtResource("15_vwtng")]
-position = Vector2(462, 143)
+position = Vector2(616, 191)
 description = "UI_RAUM_DORFPLATZ"
-baseline = 68
-walk_to_point = Vector2(-6, 98)
+baseline = 91
+walk_to_point = Vector2(-8, 131)
 cursor = 9
 
 [node name="Regions" type="Node2D" parent="." unique_id=1697650294]
@@ -96,12 +96,12 @@ cursor = 9
 [node name="Markers" type="Node2D" parent="." unique_id=1589085662]
 
 [node name="Start" parent="Markers" unique_id=1155979551 instance=ExtResource("16_g2tp1")]
-position = Vector2(435, 240)
+position = Vector2(580, 320)
 
 [node name="VonDorfplatz" parent="Markers" unique_id=1592480946 instance=ExtResource("17_0qyp1")]
-position = Vector2(435, 240)
+position = Vector2(580, 320)
 
 [node name="Characters" type="Node2D" parent="." unique_id=1346404000]
 
 [node name="CharacterStabmacher *" parent="Characters" unique_id=1873666243 instance=ExtResource("18_4s3xc")]
-position = Vector2(300, 225)
+position = Vector2(400, 300)

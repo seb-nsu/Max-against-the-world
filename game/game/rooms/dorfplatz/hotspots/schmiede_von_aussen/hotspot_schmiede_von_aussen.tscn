@@ -7,9 +7,9 @@ script = ExtResource("1_pitub")
 script_name = "SchmiedeVonAussen"
 description = "Schmiede Von Aussen"
 cursor = 1
-interaction_polygon = PackedVector2Array(-47, -57, 47, -57, 47, 57, -47, 57)
+interaction_polygon = PackedVector2Array(-63, -76, 63, -76, 63, 76, -63, 76)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=443646166]
 visible = false
 modulate = Color(1, 0, 1, 1)
-polygon = PackedVector2Array(-18, -18, 18, -18, 18, 18, -18, 18)
+polygon = PackedVector2Array(-24, -24, 24, -24, 24, 24, -24, 24)

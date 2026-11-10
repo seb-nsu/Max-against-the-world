@@ -38,37 +38,37 @@
    "script_name": "Testbild",
    "name_key": "UI_RAUM_TESTBILD",
    "groesse": [
-    480,
-    270
+    640,
+    360
    ],
    "hintergrund": "res://grafik/platzhalter/raum_testbild.png",
    "farbe": "#9a9a9a",
    "laufbereich": [
     [
-     6,
-     210
+     8,
+     280
     ],
     [
-     474,
-     210
+     632,
+     280
     ],
     [
-     474,
-     267
+     632,
+     356
     ],
     [
-     6,
-     267
+     8,
+     356
     ]
    ],
    "marker": {
     "start": [
-     240,
-     240
+     320,
+     320
     ],
     "von_gluecksrad": [
-     36,
-     240
+     48,
+     320
     ]
    },
    "figuren": [
@@ -76,8 +76,8 @@
      "id": "flimmer",
      "script_name": "Flimmer",
      "pos": [
-      240,
-      232
+      320,
+      309
      ]
     }
    ],
@@ -87,14 +87,14 @@
      "script_name": "Balken",
      "name_key": "UI_OBJ_BALKEN",
      "rect": [
-      44,
-      30,
-      125,
-      48
+      59,
+      40,
+      167,
+      64
      ],
      "gehe": [
-      106,
-      235
+      141,
+      313
      ],
      "ansehen": [
       {
@@ -175,14 +175,14 @@
      "script_name": "Testkreis",
      "name_key": "UI_OBJ_TESTKREIS",
      "rect": [
-      177,
-      30,
-      125,
-      48
+      236,
+      40,
+      167,
+      64
      ],
      "gehe": [
-      239,
-      235
+      319,
+      313
      ],
      "ansehen": [
       {
@@ -207,14 +207,14 @@
      "script_name": "RauschenAmRand",
      "name_key": "UI_OBJ_RAUSCHEN_AM_RAND",
      "rect": [
-      310,
-      30,
-      125,
-      48
+      413,
+      40,
+      167,
+      64
      ],
      "gehe": [
-      372,
-      235
+      496,
+      313
      ],
      "ansehen": [
       {
@@ -243,14 +243,14 @@
      "ziel": "gluecksrad",
      "name_key": "UI_RAUM_GLUECKSRAD",
      "rect": [
-      6,
-      105,
-      27,
-      105
+      8,
+      140,
+      36,
+      140
      ],
      "gehe": [
-      36,
-      240
+      48,
+      320
      ],
      "erreichbar_ab": "R1",
      "ansehen": []
@@ -278,57 +278,57 @@
    "script_name": "Rauschen",
    "name_key": "UI_RAUM_RAUSCHEN",
    "groesse": [
-    480,
-    270
+    640,
+    360
    ],
    "hintergrund": "res://grafik/platzhalter/raum_rauschen.png",
    "farbe": "#5a5a5a",
    "laufbereich": [
     [
-     6,
-     210
+     8,
+     280
     ],
     [
-     474,
-     210
+     632,
+     280
     ],
     [
-     474,
-     267
+     632,
+     356
     ],
     [
-     6,
-     267
+     8,
+     356
     ]
    ],
    "marker": {
     "start": [
-     240,
-     240
+     320,
+     320
     ],
     "von_gluecksrad": [
-     240,
-     240
+     320,
+     320
     ],
     "von_sitcom_kueche": [
-     240,
-     240
+     320,
+     320
     ],
     "von_savanne": [
-     240,
-     240
+     320,
+     320
     ],
     "von_friedhof": [
-     240,
-     240
+     320,
+     320
     ],
     "von_kapitolis": [
-     240,
-     240
+     320,
+     320
     ],
     "von_empfang": [
-     240,
-     240
+     320,
+     320
     ]
    },
    "figuren": [
@@ -336,16 +336,16 @@
      "id": "flimmer",
      "script_name": "Flimmer",
      "pos": [
-      150,
-      232
+      200,
+      309
      ]
     },
     {
      "id": "nachrichtensprecher",
      "script_name": "Nachrichtensprecher",
      "pos": [
-      330,
-      232
+      440,
+      309
      ]
     }
    ],
@@ -355,14 +355,14 @@
      "script_name": "GeisterbilderImRauschen",
      "name_key": "UI_OBJ_GEISTERBILDER_IM_RAUSCHEN",
      "rect": [
-      44,
-      30,
-      192,
-      48
+      59,
+      40,
+      256,
+      64
      ],
      "gehe": [
-      140,
-      235
+      187,
+      313
      ],
      "ansehen": [
       {
@@ -387,14 +387,14 @@
      "script_name": "Kriechweg",
      "name_key": "UI_OBJ_KRIECHWEG",
      "rect": [
-      244,
-      30,
-      192,
-      48
+      325,
+      40,
+      256,
+      64
      ],
      "gehe": [
-      340,
-      235
+      453,
+      313
      ],
      "ansehen": [
       {
@@ -424,61 +424,61 @@
    "script_name": "Gluecksrad",
    "name_key": "UI_RAUM_GLUECKSRAD",
    "groesse": [
-    480,
-    270
+    640,
+    360
    ],
    "hintergrund": "res://grafik/platzhalter/raum_gluecksrad.png",
    "farbe": "#c06aa0",
    "laufbereich": [
     [
-     6,
-     210
+     8,
+     280
     ],
     [
-     474,
-     210
+     632,
+     280
     ],
     [
-     474,
-     267
+     632,
+     356
     ],
     [
-     6,
-     267
+     8,
+     356
     ]
    ],
    "marker": {
     "start": [
-     240,
-     240
+     320,
+     320
     ],
     "von_testbild": [
-     36,
-     240
+     48,
+     320
     ],
     "von_sitcom_kueche": [
-     240,
-     240
+     320,
+     320
     ],
     "von_savanne": [
-     240,
-     240
+     320,
+     320
     ],
     "von_friedhof": [
-     240,
-     240
+     320,
+     320
     ],
     "von_kapitolis": [
-     240,
-     240
+     320,
+     320
     ],
     "von_werbespot_set": [
-     240,
-     240
+     320,
+     320
     ],
     "von_empfang": [
-     240,
-     240
+     320,
+     320
     ]
    },
    "figuren": [
@@ -486,16 +486,16 @@
      "id": "gerd_glueck",
      "script_name": "GerdGlueck",
      "pos": [
-      150,
-      232
+      200,
+      309
      ]
     },
     {
      "id": "troedel_experte",
      "script_name": "TroedelExperte",
      "pos": [
-      330,
-      232
+      440,
+      309
      ]
     }
    ],
@@ -505,14 +505,14 @@
      "script_name": "Gluecksrad",
      "name_key": "UI_OBJ_GLUECKSRAD",
      "rect": [
-      44,
-      30,
-      58,
-      48
+      59,
+      40,
+      77,
+      64
      ],
      "gehe": [
-      73,
-      235
+      97,
+      313
      ],
      "ansehen": [
       {
@@ -546,14 +546,14 @@
      "script_name": "Moderationspult",
      "name_key": "UI_OBJ_MODERATIONSPULT",
      "rect": [
-      110,
-      30,
-      58,
-      48
+      147,
+      40,
+      77,
+      64
      ],
      "gehe": [
-      139,
-      235
+      185,
+      313
      ],
      "ansehen": [
       {
@@ -578,14 +578,14 @@
      "script_name": "GestapeltePreise",
      "name_key": "UI_OBJ_GESTAPELTE_PREISE",
      "rect": [
-      176,
-      30,
-      58,
-      48
+      235,
+      40,
+      77,
+      64
      ],
      "gehe": [
-      205,
-      235
+      273,
+      313
      ],
      "ansehen": [
       {
@@ -618,14 +618,14 @@
      "script_name": "TelefonLeuchtschrift",
      "name_key": "UI_OBJ_TELEFON_LEUCHTSCHRIFT",
      "rect": [
-      242,
-      30,
-      58,
-      48
+      323,
+      40,
+      77,
+      64
      ],
      "gehe": [
-      271,
-      235
+      361,
+      313
      ],
      "ansehen": [
       {
@@ -650,14 +650,14 @@
      "script_name": "Publikum",
      "name_key": "UI_OBJ_PUBLIKUM",
      "rect": [
-      308,
-      30,
-      58,
-      48
+      411,
+      40,
+      77,
+      64
      ],
      "gehe": [
-      337,
-      235
+      449,
+      313
      ],
      "ansehen": [
       {
@@ -682,14 +682,14 @@
      "script_name": "Lichtroehre",
      "name_key": "UI_OBJ_LICHTROEHRE",
      "rect": [
-      374,
-      30,
-      58,
-      48
+      499,
+      40,
+      77,
+      64
      ],
      "gehe": [
-      403,
-      235
+      537,
+      313
      ],
      "ansehen": [],
      "benutzen": [
@@ -707,14 +707,14 @@
      "script_name": "Kandidatenpodest",
      "name_key": "UI_OBJ_KANDIDATENPODEST",
      "rect": [
-      44,
-      90,
-      58,
-      48
+      59,
+      120,
+      77,
+      64
      ],
      "gehe": [
-      73,
-      235
+      97,
+      313
      ],
      "ansehen": [
       {
@@ -739,14 +739,14 @@
      "script_name": "Gluehbirnenreihen",
      "name_key": "UI_OBJ_GLUEHBIRNENREIHEN",
      "rect": [
-      110,
-      90,
-      58,
-      48
+      147,
+      120,
+      77,
+      64
      ],
      "gehe": [
-      139,
-      235
+      185,
+      313
      ],
      "ansehen": [
       {
@@ -775,14 +775,14 @@
      "ziel": "testbild",
      "name_key": "UI_RAUM_TESTBILD",
      "rect": [
-      6,
-      105,
-      27,
-      105
+      8,
+      140,
+      36,
+      140
      ],
      "gehe": [
-      36,
-      240
+      48,
+      320
      ],
      "erreichbar_ab": "start",
      "ansehen": []
@@ -810,57 +810,57 @@
    "script_name": "SitcomKueche",
    "name_key": "UI_RAUM_SITCOM_KUECHE",
    "groesse": [
-    480,
-    270
+    640,
+    360
    ],
    "hintergrund": "res://grafik/platzhalter/raum_sitcom_kueche.png",
    "farbe": "#d8b070",
    "laufbereich": [
     [
-     6,
-     210
+     8,
+     280
     ],
     [
-     474,
-     210
+     632,
+     280
     ],
     [
-     474,
-     267
+     632,
+     356
     ],
     [
-     6,
-     267
+     8,
+     356
     ]
    ],
    "marker": {
     "start": [
-     240,
-     240
+     320,
+     320
     ],
     "von_gluecksrad": [
-     240,
-     240
+     320,
+     320
     ],
     "von_savanne": [
-     240,
-     240
+     320,
+     320
     ],
     "von_friedhof": [
-     240,
-     240
+     320,
+     320
     ],
     "von_kapitolis": [
-     240,
-     240
+     320,
+     320
     ],
     "von_werbespot_set": [
-     240,
-     240
+     320,
+     320
     ],
     "von_empfang": [
-     240,
-     240
+     320,
+     320
     ]
    },
    "figuren": [
@@ -868,32 +868,32 @@
      "id": "sitcom_vater",
      "script_name": "SitcomVater",
      "pos": [
-      105,
-      232
+      140,
+      309
      ]
     },
     {
      "id": "sitcom_mutter",
      "script_name": "SitcomMutter",
      "pos": [
-      195,
-      232
+      260,
+      309
      ]
     },
     {
      "id": "sitcom_sohn",
      "script_name": "SitcomSohn",
      "pos": [
-      285,
-      232
+      380,
+      309
      ]
     },
     {
      "id": "kommissar",
      "script_name": "Kommissar",
      "pos": [
-      375,
-      232
+      500,
+      309
      ]
     }
    ],
@@ -903,14 +903,14 @@
      "script_name": "LachkonservenMaschine",
      "name_key": "UI_OBJ_LACHKONSERVEN_MASCHINE",
      "rect": [
-      44,
-      30,
-      58,
-      48
+      59,
+      40,
+      77,
+      64
      ],
      "gehe": [
-      73,
-      235
+      97,
+      313
      ],
      "ansehen": [
       {
@@ -944,14 +944,14 @@
      "script_name": "PappePublikum",
      "name_key": "UI_OBJ_PAPPE_PUBLIKUM",
      "rect": [
-      110,
-      30,
-      58,
-      48
+      147,
+      40,
+      77,
+      64
      ],
      "gehe": [
-      139,
-      235
+      185,
+      313
      ],
      "ansehen": [
       {
@@ -976,14 +976,14 @@
      "script_name": "Keksdose",
      "name_key": "UI_OBJ_KEKSDOSE",
      "rect": [
-      176,
-      30,
-      58,
-      48
+      235,
+      40,
+      77,
+      64
      ],
      "gehe": [
-      205,
-      235
+      273,
+      313
      ],
      "ansehen": [
       {
@@ -1027,14 +1027,14 @@
      "script_name": "Kuechentuer",
      "name_key": "UI_OBJ_KUECHENTUER",
      "rect": [
-      242,
-      30,
-      58,
-      48
+      323,
+      40,
+      77,
+      64
      ],
      "gehe": [
-      271,
-      235
+      361,
+      313
      ],
      "ansehen": [
       {
@@ -1059,14 +1059,14 @@
      "script_name": "Durchreiche",
      "name_key": "UI_OBJ_DURCHREICHE",
      "rect": [
-      308,
-      30,
-      58,
-      48
+      411,
+      40,
+      77,
+      64
      ],
      "gehe": [
-      337,
-      235
+      449,
+      313
      ],
      "ansehen": [
       {
@@ -1091,14 +1091,14 @@
      "script_name": "FondueTopf",
      "name_key": "UI_OBJ_FONDUE_TOPF",
      "rect": [
-      374,
-      30,
-      58,
-      48
+      499,
+      40,
+      77,
+      64
      ],
      "gehe": [
-      403,
-      235
+      537,
+      313
      ],
      "ansehen": [
       {
@@ -1123,14 +1123,14 @@
      "script_name": "StudiolichtUndSetRand",
      "name_key": "UI_OBJ_STUDIOLICHT_UND_SET_RAND",
      "rect": [
-      44,
-      90,
-      58,
-      48
+      59,
+      120,
+      77,
+      64
      ],
      "gehe": [
-      73,
-      235
+      97,
+      313
      ],
      "ansehen": [
       {
@@ -1155,14 +1155,14 @@
      "script_name": "Skateboard",
      "name_key": "UI_OBJ_SKATEBOARD",
      "rect": [
-      110,
-      90,
-      58,
-      48
+      147,
+      120,
+      77,
+      64
      ],
      "gehe": [
-      139,
-      235
+      185,
+      313
      ],
      "ansehen": [
       {
@@ -1187,14 +1187,14 @@
      "script_name": "ScherbenDerKeksdose",
      "name_key": "UI_OBJ_SCHERBEN_DER_KEKSDOSE",
      "rect": [
-      176,
-      90,
-      58,
-      48
+      235,
+      120,
+      77,
+      64
      ],
      "gehe": [
-      205,
-      235
+      273,
+      313
      ],
      "ansehen": [
       {
@@ -1243,14 +1243,14 @@
      "script_name": "FondueKaese",
      "name_key": "UI_OBJ_FONDUE_KAESE",
      "rect": [
-      100,
-      195,
-      15,
-      12
+      133,
+      260,
+      20,
+      16
      ],
      "gehe": [
-      107,
-      235
+      143,
+      313
      ],
      "textur": "res://grafik/platzhalter/prop_fondue_kaese.png",
      "gegenstand": "fondue_kaese",
@@ -1268,14 +1268,14 @@
      "script_name": "Bananenschale",
      "name_key": "UI_OBJ_BANANENSCHALE",
      "rect": [
-      160,
-      195,
-      15,
-      12
+      213,
+      260,
+      20,
+      16
      ],
      "gehe": [
-      167,
-      235
+      223,
+      313
      ],
      "textur": "res://grafik/platzhalter/prop_bananenschale.png",
      "gegenstand": "bananenschale",
@@ -1351,57 +1351,57 @@
    "script_name": "Savanne",
    "name_key": "UI_RAUM_SAVANNE",
    "groesse": [
-    960,
-    270
+    1280,
+    360
    ],
    "hintergrund": "res://grafik/platzhalter/raum_savanne.png",
    "farbe": "#c8a050",
    "laufbereich": [
     [
-     6,
-     210
+     8,
+     280
     ],
     [
-     954,
-     210
+     1272,
+     280
     ],
     [
-     954,
-     267
+     1272,
+     356
     ],
     [
-     6,
-     267
+     8,
+     356
     ]
    ],
    "marker": {
     "start": [
-     480,
-     240
+     640,
+     320
     ],
     "von_gluecksrad": [
-     480,
-     240
+     640,
+     320
     ],
     "von_sitcom_kueche": [
-     480,
-     240
+     640,
+     320
     ],
     "von_friedhof": [
-     480,
-     240
+     640,
+     320
     ],
     "von_kapitolis": [
-     480,
-     240
+     640,
+     320
     ],
     "von_werbespot_set": [
-     480,
-     240
+     640,
+     320
     ],
     "von_empfang": [
-     480,
-     240
+     640,
+     320
     ]
    },
    "figuren": [
@@ -1409,64 +1409,64 @@
      "id": "kommissar",
      "script_name": "Kommissar",
      "pos": [
-      112,
-      232
+      149,
+      309
      ]
     },
     {
      "id": "erzaehler",
      "script_name": "Erzaehler",
      "pos": [
-      217,
-      232
+      289,
+      309
      ]
     },
     {
      "id": "loewe",
      "script_name": "Loewe",
      "pos": [
-      322,
-      232
+      429,
+      309
      ]
     },
     {
      "id": "hyaene",
      "script_name": "Hyaene",
      "pos": [
-      427,
-      232
+      569,
+      309
      ]
     },
     {
      "id": "gepard",
      "script_name": "Gepard",
      "pos": [
-      532,
-      232
+      709,
+      309
      ]
     },
     {
      "id": "geier",
      "script_name": "Geier",
      "pos": [
-      637,
-      232
+      849,
+      309
      ]
     },
     {
      "id": "nashorn",
      "script_name": "Nashorn",
      "pos": [
-      742,
-      232
+      989,
+      309
      ]
     },
     {
      "id": "flamingos",
      "script_name": "Flamingos",
      "pos": [
-      847,
-      232
+      1129,
+      309
      ]
     }
    ],
@@ -1476,14 +1476,14 @@
      "script_name": "Felsenthron",
      "name_key": "UI_OBJ_FELSENTHRON",
      "rect": [
-      44,
-      30,
-      80,
-      48
+      59,
+      40,
+      107,
+      64
      ],
      "gehe": [
-      84,
-      235
+      112,
+      313
      ],
      "ansehen": [
       {
@@ -1516,14 +1516,14 @@
      "script_name": "Mikrofonangel",
      "name_key": "UI_OBJ_MIKROFONANGEL",
      "rect": [
-      132,
-      30,
-      80,
-      48
+      176,
+      40,
+      107,
+      64
      ],
      "gehe": [
-      172,
-      235
+      229,
+      313
      ],
      "ansehen": [
       {
@@ -1548,14 +1548,14 @@
      "script_name": "Absperrband",
      "name_key": "UI_OBJ_ABSPERRBAND",
      "rect": [
-      220,
-      30,
-      80,
-      48
+      293,
+      40,
+      107,
+      64
      ],
      "gehe": [
-      260,
-      235
+      347,
+      313
      ],
      "ansehen": [
       {
@@ -1589,14 +1589,14 @@
      "script_name": "Wasserloch",
      "name_key": "UI_OBJ_WASSERLOCH",
      "rect": [
-      308,
-      30,
-      80,
-      48
+      411,
+      40,
+      107,
+      64
      ],
      "gehe": [
-      348,
-      235
+      464,
+      313
      ],
      "ansehen": [
       {
@@ -1647,14 +1647,14 @@
      "script_name": "SonnenplatzAmFelsen",
      "name_key": "UI_OBJ_SONNENPLATZ_AM_FELSEN",
      "rect": [
-      396,
-      30,
-      80,
-      48
+      528,
+      40,
+      107,
+      64
      ],
      "gehe": [
-      436,
-      235
+      581,
+      313
      ],
      "ansehen": [],
      "benutzen": [
@@ -1688,14 +1688,14 @@
      "script_name": "Akazien",
      "name_key": "UI_OBJ_AKAZIEN",
      "rect": [
-      484,
-      30,
-      80,
-      48
+      645,
+      40,
+      107,
+      64
      ],
      "gehe": [
-      524,
-      235
+      699,
+      313
      ],
      "ansehen": [
       {
@@ -1720,14 +1720,14 @@
      "script_name": "Regenwolke",
      "name_key": "UI_OBJ_REGENWOLKE",
      "rect": [
-      572,
-      30,
-      80,
-      48
+      763,
+      40,
+      107,
+      64
      ],
      "gehe": [
-      612,
-      235
+      816,
+      313
      ],
      "ansehen": [
       {
@@ -1760,14 +1760,14 @@
      "script_name": "Kiste",
      "name_key": "UI_OBJ_KISTE",
      "rect": [
-      660,
-      30,
-      80,
-      48
+      880,
+      40,
+      107,
+      64
      ],
      "gehe": [
-      700,
-      235
+      933,
+      313
      ],
      "ansehen": [
       {
@@ -1810,14 +1810,14 @@
      "script_name": "Himmel",
      "name_key": "UI_OBJ_HIMMEL",
      "rect": [
-      748,
-      30,
-      80,
-      48
+      997,
+      40,
+      107,
+      64
      ],
      "gehe": [
-      788,
-      235
+      1051,
+      313
      ],
      "ansehen": [
       {
@@ -1842,14 +1842,14 @@
      "script_name": "LichtroehreInDerSavanne",
      "name_key": "UI_OBJ_LICHTROEHRE_IN_DER_SAVANNE",
      "rect": [
-      836,
-      30,
-      80,
-      48
+      1115,
+      40,
+      107,
+      64
      ],
      "gehe": [
-      876,
-      235
+      1168,
+      313
      ],
      "ansehen": [],
      "benutzen": [
@@ -1869,14 +1869,14 @@
      "script_name": "Drehbuch",
      "name_key": "UI_OBJ_DREHBUCH",
      "rect": [
-      100,
-      195,
-      15,
-      12
+      133,
+      260,
+      20,
+      16
      ],
      "gehe": [
-      107,
-      235
+      143,
+      313
      ],
      "textur": "res://grafik/platzhalter/prop_drehbuch.png",
      "gegenstand": "drehbuch",
@@ -1945,61 +1945,61 @@
    "script_name": "Friedhof",
    "name_key": "UI_RAUM_FRIEDHOF",
    "groesse": [
-    480,
-    270
+    640,
+    360
    ],
    "hintergrund": "res://grafik/platzhalter/raum_friedhof.png",
    "farbe": "#3a2a50",
    "laufbereich": [
     [
-     6,
-     210
+     8,
+     280
     ],
     [
-     474,
-     210
+     632,
+     280
     ],
     [
-     474,
-     267
+     632,
+     356
     ],
     [
-     6,
-     267
+     8,
+     356
     ]
    ],
    "marker": {
     "start": [
-     240,
-     240
+     320,
+     320
     ],
     "von_spukhaus_keller": [
-     36,
-     240
+     48,
+     320
     ],
     "von_gluecksrad": [
-     240,
-     240
+     320,
+     320
     ],
     "von_sitcom_kueche": [
-     240,
-     240
+     320,
+     320
     ],
     "von_savanne": [
-     240,
-     240
+     320,
+     320
     ],
     "von_kapitolis": [
-     240,
-     240
+     320,
+     320
     ],
     "von_werbespot_set": [
-     240,
-     240
+     320,
+     320
     ],
     "von_empfang": [
-     240,
-     240
+     320,
+     320
     ]
    },
    "figuren": [
@@ -2007,8 +2007,8 @@
      "id": "zombie",
      "script_name": "Zombie",
      "pos": [
-      240,
-      232
+      320,
+      309
      ]
     }
    ],
@@ -2018,14 +2018,14 @@
      "script_name": "Zombies",
      "name_key": "UI_OBJ_ZOMBIES",
      "rect": [
-      44,
-      30,
-      58,
-      48
+      59,
+      40,
+      77,
+      64
      ],
      "gehe": [
-      73,
-      235
+      97,
+      313
      ],
      "ansehen": [
       {
@@ -2050,14 +2050,14 @@
      "script_name": "Leuchtfliesen",
      "name_key": "UI_OBJ_LEUCHTFLIESEN",
      "rect": [
-      110,
-      30,
-      58,
-      48
+      147,
+      40,
+      77,
+      64
      ],
      "gehe": [
-      139,
-      235
+      185,
+      313
      ],
      "ansehen": [
       {
@@ -2082,14 +2082,14 @@
      "script_name": "Graeber",
      "name_key": "UI_OBJ_GRAEBER",
      "rect": [
-      176,
-      30,
-      58,
-      48
+      235,
+      40,
+      77,
+      64
      ],
      "gehe": [
-      205,
-      235
+      273,
+      313
      ],
      "ansehen": [
       {
@@ -2131,14 +2131,14 @@
      "script_name": "Discokugel",
      "name_key": "UI_OBJ_DISCOKUGEL",
      "rect": [
-      242,
-      30,
-      58,
-      48
+      323,
+      40,
+      77,
+      64
      ],
      "gehe": [
-      271,
-      235
+      361,
+      313
      ],
      "ansehen": [
       {
@@ -2171,14 +2171,14 @@
      "script_name": "Mond",
      "name_key": "UI_OBJ_MOND",
      "rect": [
-      308,
-      30,
-      58,
-      48
+      411,
+      40,
+      77,
+      64
      ],
      "gehe": [
-      337,
-      235
+      449,
+      313
      ],
      "ansehen": [
       {
@@ -2203,14 +2203,14 @@
      "script_name": "Nebel",
      "name_key": "UI_OBJ_NEBEL",
      "rect": [
-      374,
-      30,
-      58,
-      48
+      499,
+      40,
+      77,
+      64
      ],
      "gehe": [
-      403,
-      235
+      537,
+      313
      ],
      "ansehen": [
       {
@@ -2235,14 +2235,14 @@
      "script_name": "Scheinwerfer",
      "name_key": "UI_OBJ_SCHEINWERFER",
      "rect": [
-      44,
-      90,
-      58,
-      48
+      59,
+      120,
+      77,
+      64
      ],
      "gehe": [
-      73,
-      235
+      97,
+      313
      ],
      "ansehen": [
       {
@@ -2267,14 +2267,14 @@
      "script_name": "BananenschaleAufMitternachtsTv",
      "name_key": "UI_OBJ_BANANENSCHALE_AUF_MITTERNACHTS_TV",
      "rect": [
-      110,
-      90,
-      58,
-      48
+      147,
+      120,
+      77,
+      64
      ],
      "gehe": [
-      139,
-      235
+      185,
+      313
      ],
      "ansehen": [
       {
@@ -2299,14 +2299,14 @@
      "script_name": "FondueKaeseAufMitternachtsTv",
      "name_key": "UI_OBJ_FONDUE_KAESE_AUF_MITTERNACHTS_TV",
      "rect": [
-      176,
-      90,
-      58,
-      48
+      235,
+      120,
+      77,
+      64
      ],
      "gehe": [
-      205,
-      235
+      273,
+      313
      ],
      "ansehen": [
       {
@@ -2335,14 +2335,14 @@
      "ziel": "spukhaus_keller",
      "name_key": "UI_RAUM_SPUKHAUS_KELLER",
      "rect": [
-      6,
-      105,
-      27,
-      105
+      8,
+      140,
+      36,
+      140
      ],
      "gehe": [
-      36,
-      240
+      48,
+      320
      ],
      "erreichbar_ab": "R5",
      "ansehen": [
@@ -2394,41 +2394,41 @@
    "script_name": "SpukhausKeller",
    "name_key": "UI_RAUM_SPUKHAUS_KELLER",
    "groesse": [
-    480,
-    270
+    640,
+    360
    ],
    "hintergrund": "res://grafik/platzhalter/raum_spukhaus_keller.png",
    "farbe": "#30302a",
    "laufbereich": [
     [
-     6,
-     210
+     8,
+     280
     ],
     [
-     474,
-     210
+     632,
+     280
     ],
     [
-     474,
-     267
+     632,
+     356
     ],
     [
-     6,
-     267
+     8,
+     356
     ]
    ],
    "marker": {
     "start": [
-     240,
-     240
+     320,
+     320
     ],
     "von_friedhof": [
-     36,
-     240
+     48,
+     320
     ],
     "von_spukhaus_halle": [
-     444,
-     240
+     592,
+     320
     ]
    },
    "figuren": [
@@ -2436,16 +2436,16 @@
      "id": "sitcom_vater",
      "script_name": "SitcomVater",
      "pos": [
-      150,
-      232
+      200,
+      309
      ]
     },
     {
      "id": "geist",
      "script_name": "Geist",
      "pos": [
-      330,
-      232
+      440,
+      309
      ]
     }
    ],
@@ -2455,14 +2455,14 @@
      "script_name": "Roehrenfernseher",
      "name_key": "UI_OBJ_ROEHRENFERNSEHER",
      "rect": [
-      44,
-      30,
-      58,
-      48
+      59,
+      40,
+      77,
+      64
      ],
      "gehe": [
-      73,
-      235
+      97,
+      313
      ],
      "ansehen": [
       {
@@ -2514,14 +2514,14 @@
      "script_name": "Kassetten",
      "name_key": "UI_OBJ_KASSETTEN",
      "rect": [
-      110,
-      30,
-      58,
-      48
+      147,
+      40,
+      77,
+      64
      ],
      "gehe": [
-      139,
-      235
+      185,
+      313
      ],
      "ansehen": [
       {
@@ -2554,14 +2554,14 @@
      "script_name": "Geruempel",
      "name_key": "UI_OBJ_GERUEMPEL",
      "rect": [
-      176,
-      30,
-      58,
-      48
+      235,
+      40,
+      77,
+      64
      ],
      "gehe": [
-      205,
-      235
+      273,
+      313
      ],
      "ansehen": [
       {
@@ -2595,14 +2595,14 @@
      "script_name": "Gluehbirne",
      "name_key": "UI_OBJ_GLUEHBIRNE",
      "rect": [
-      242,
-      30,
-      58,
-      48
+      323,
+      40,
+      77,
+      64
      ],
      "gehe": [
-      271,
-      235
+      361,
+      313
      ],
      "ansehen": [
       {
@@ -2627,14 +2627,14 @@
      "script_name": "Kellerfenster",
      "name_key": "UI_OBJ_KELLERFENSTER",
      "rect": [
-      308,
-      30,
-      58,
-      48
+      411,
+      40,
+      77,
+      64
      ],
      "gehe": [
-      337,
-      235
+      449,
+      313
      ],
      "ansehen": [
       {
@@ -2659,14 +2659,14 @@
      "script_name": "VerketteteTuer",
      "name_key": "UI_OBJ_VERKETTETE_TUER",
      "rect": [
-      374,
-      30,
-      58,
-      48
+      499,
+      40,
+      77,
+      64
      ],
      "gehe": [
-      403,
-      235
+      537,
+      313
      ],
      "ansehen": [
       {
@@ -2720,14 +2720,14 @@
      "script_name": "Geister",
      "name_key": "UI_OBJ_GEISTER",
      "rect": [
-      44,
-      90,
-      58,
-      48
+      59,
+      120,
+      77,
+      64
      ],
      "gehe": [
-      73,
-      235
+      97,
+      313
      ],
      "ansehen": [
       {
@@ -2752,14 +2752,14 @@
      "script_name": "Ketten",
      "name_key": "UI_OBJ_KETTEN",
      "rect": [
-      110,
-      90,
-      58,
-      48
+      147,
+      120,
+      77,
+      64
      ],
      "gehe": [
-      139,
-      235
+      185,
+      313
      ],
      "ansehen": [],
      "benutzen": [
@@ -2777,14 +2777,14 @@
      "script_name": "BananenschaleImKeller",
      "name_key": "UI_OBJ_BANANENSCHALE_IM_KELLER",
      "rect": [
-      176,
-      90,
-      58,
-      48
+      235,
+      120,
+      77,
+      64
      ],
      "gehe": [
-      205,
-      235
+      273,
+      313
      ],
      "ansehen": [
       {
@@ -2811,14 +2811,14 @@
      "script_name": "TasteStumm",
      "name_key": "UI_OBJ_TASTE_STUMM",
      "rect": [
-      100,
-      195,
-      15,
-      12
+      133,
+      260,
+      20,
+      16
      ],
      "gehe": [
-      107,
-      235
+      143,
+      313
      ],
      "textur": "res://grafik/platzhalter/prop_taste_stumm.png",
      "gegenstand": "taste_stumm",
@@ -2845,14 +2845,14 @@
      "script_name": "Bettlaken",
      "name_key": "UI_OBJ_BETTLAKEN",
      "rect": [
-      160,
-      195,
-      15,
-      12
+      213,
+      260,
+      20,
+      16
      ],
      "gehe": [
-      167,
-      235
+      223,
+      313
      ],
      "textur": "res://grafik/platzhalter/prop_bettlaken.png",
      "gegenstand": "bettlaken",
@@ -2873,14 +2873,14 @@
      "ziel": "friedhof",
      "name_key": "UI_RAUM_FRIEDHOF",
      "rect": [
-      6,
-      105,
-      27,
-      105
+      8,
+      140,
+      36,
+      140
      ],
      "gehe": [
-      36,
-      240
+      48,
+      320
      ],
      "erreichbar_ab": "R2",
      "ansehen": [
@@ -2907,14 +2907,14 @@
      "ziel": "spukhaus_halle",
      "name_key": "UI_RAUM_SPUKHAUS_HALLE",
      "rect": [
-      447,
-      105,
-      27,
-      105
+      596,
+      140,
+      36,
+      140
      ],
      "gehe": [
-      444,
-      240
+      592,
+      320
      ],
      "erreichbar_ab": "R6",
      "ansehen": [],
@@ -2958,37 +2958,37 @@
    "script_name": "SpukhausHalle",
    "name_key": "UI_RAUM_SPUKHAUS_HALLE",
    "groesse": [
-    480,
-    270
+    640,
+    360
    ],
    "hintergrund": "res://grafik/platzhalter/raum_spukhaus_halle.png",
    "farbe": "#403848",
    "laufbereich": [
     [
-     6,
-     210
+     8,
+     280
     ],
     [
-     474,
-     210
+     632,
+     280
     ],
     [
-     474,
-     267
+     632,
+     356
     ],
     [
-     6,
-     267
+     8,
+     356
     ]
    ],
    "marker": {
     "start": [
-     240,
-     240
+     320,
+     320
     ],
     "von_spukhaus_keller": [
-     36,
-     240
+     48,
+     320
     ]
    },
    "figuren": [
@@ -2996,16 +2996,16 @@
      "id": "opa",
      "script_name": "Opa",
      "pos": [
-      150,
-      232
+      200,
+      309
      ]
     },
     {
      "id": "fbi_agent",
      "script_name": "FbiAgent",
      "pos": [
-      330,
-      232
+      440,
+      309
      ]
     }
    ],
@@ -3015,14 +3015,14 @@
      "script_name": "Lichterkette",
      "name_key": "UI_OBJ_LICHTERKETTE",
      "rect": [
-      44,
-      30,
-      92,
-      48
+      59,
+      40,
+      123,
+      64
      ],
      "gehe": [
-      90,
-      235
+      120,
+      313
      ],
      "ansehen": [
       {
@@ -3063,14 +3063,14 @@
      "script_name": "Treppe",
      "name_key": "UI_OBJ_TREPPE",
      "rect": [
-      144,
-      30,
-      92,
-      48
+      192,
+      40,
+      123,
+      64
      ],
      "gehe": [
-      190,
-      235
+      253,
+      313
      ],
      "ansehen": [
       {
@@ -3104,14 +3104,14 @@
      "script_name": "Tapete",
      "name_key": "UI_OBJ_TAPETE",
      "rect": [
-      244,
-      30,
-      92,
-      48
+      325,
+      40,
+      123,
+      64
      ],
      "gehe": [
-      290,
-      235
+      387,
+      313
      ],
      "ansehen": [
       {
@@ -3136,14 +3136,14 @@
      "script_name": "NebelInDerHalle",
      "name_key": "UI_OBJ_NEBEL_IN_DER_HALLE",
      "rect": [
-      344,
-      30,
-      92,
-      48
+      459,
+      40,
+      123,
+      64
      ],
      "gehe": [
-      390,
-      235
+      520,
+      313
      ],
      "ansehen": [
       {
@@ -3172,14 +3172,14 @@
      "ziel": "spukhaus_keller",
      "name_key": "UI_RAUM_SPUKHAUS_KELLER",
      "rect": [
-      6,
-      105,
-      27,
-      105
+      8,
+      140,
+      36,
+      140
      ],
      "gehe": [
-      36,
-      240
+      48,
+      320
      ],
      "erreichbar_ab": "R5",
      "ansehen": [
@@ -3229,61 +3229,61 @@
    "script_name": "Kapitolis",
    "name_key": "UI_RAUM_KAPITOLIS",
    "groesse": [
-    480,
-    270
+    640,
+    360
    ],
    "hintergrund": "res://grafik/platzhalter/raum_kapitolis.png",
    "farbe": "#5a7ad0",
    "laufbereich": [
     [
-     6,
-     210
+     8,
+     280
     ],
     [
-     474,
-     210
+     632,
+     280
     ],
     [
-     474,
-     267
+     632,
+     356
     ],
     [
-     6,
-     267
+     8,
+     356
     ]
    ],
    "marker": {
     "start": [
-     240,
-     240
+     320,
+     320
     ],
     "von_fondue_fabrik": [
-     36,
-     240
+     48,
+     320
     ],
     "von_gluecksrad": [
-     240,
-     240
+     320,
+     320
     ],
     "von_sitcom_kueche": [
-     240,
-     240
+     320,
+     320
     ],
     "von_savanne": [
-     240,
-     240
+     320,
+     320
     ],
     "von_friedhof": [
-     240,
-     240
+     320,
+     320
     ],
     "von_werbespot_set": [
-     240,
-     240
+     320,
+     320
     ],
     "von_empfang": [
-     240,
-     240
+     320,
+     320
     ]
    },
    "figuren": [
@@ -3291,24 +3291,24 @@
      "id": "super_siegfried",
      "script_name": "SuperSiegfried",
      "pos": [
-      120,
-      232
+      160,
+      309
      ]
     },
     {
      "id": "fledermann",
      "script_name": "Fledermann",
      "pos": [
-      240,
-      232
+      320,
+      309
      ]
     },
     {
      "id": "wonder_wilma",
      "script_name": "WonderWilma",
      "pos": [
-      360,
-      232
+      480,
+      309
      ]
     }
    ],
@@ -3318,14 +3318,14 @@
      "script_name": "UmhaengeSchildNichtDerFledermann",
      "name_key": "UI_OBJ_UMHAENGE_SCHILD_NICHT_DER_FLEDERMANN",
      "rect": [
-      44,
-      30,
-      58,
-      48
+      59,
+      40,
+      77,
+      64
      ],
      "gehe": [
-      73,
-      235
+      97,
+      313
      ],
      "ansehen": [
       {
@@ -3350,14 +3350,14 @@
      "script_name": "WasserturmMitSpinnennetz",
      "name_key": "UI_OBJ_WASSERTURM_MIT_SPINNENNETZ",
      "rect": [
-      110,
-      30,
-      58,
-      48
+      147,
+      40,
+      77,
+      64
      ],
      "gehe": [
-      139,
-      235
+      185,
+      313
      ],
      "ansehen": [
       {
@@ -3382,14 +3382,14 @@
      "script_name": "Wolkenkratzer",
      "name_key": "UI_OBJ_WOLKENKRATZER",
      "rect": [
-      176,
-      30,
-      58,
-      48
+      235,
+      40,
+      77,
+      64
      ],
      "gehe": [
-      205,
-      235
+      273,
+      313
      ],
      "ansehen": [
       {
@@ -3414,14 +3414,14 @@
      "script_name": "SprechblasenSchilder",
      "name_key": "UI_OBJ_SPRECHBLASEN_SCHILDER",
      "rect": [
-      242,
-      30,
-      58,
-      48
+      323,
+      40,
+      77,
+      64
      ],
      "gehe": [
-      271,
-      235
+      361,
+      313
      ],
      "ansehen": [
       {
@@ -3446,14 +3446,14 @@
      "script_name": "Kiosk",
      "name_key": "UI_OBJ_KIOSK",
      "rect": [
-      308,
-      30,
-      58,
-      48
+      411,
+      40,
+      77,
+      64
      ],
      "gehe": [
-      337,
-      235
+      449,
+      313
      ],
      "ansehen": [
       {
@@ -3478,14 +3478,14 @@
      "script_name": "Laterne",
      "name_key": "UI_OBJ_LATERNE",
      "rect": [
-      374,
-      30,
-      58,
-      48
+      499,
+      40,
+      77,
+      64
      ],
      "gehe": [
-      403,
-      235
+      537,
+      313
      ],
      "ansehen": [
       {
@@ -3510,14 +3510,14 @@
      "script_name": "LichtroehreImComicKanal",
      "name_key": "UI_OBJ_LICHTROEHRE_IM_COMIC_KANAL",
      "rect": [
-      44,
-      90,
-      58,
-      48
+      59,
+      120,
+      77,
+      64
      ],
      "gehe": [
-      73,
-      235
+      97,
+      313
      ],
      "ansehen": [],
      "benutzen": [
@@ -3545,14 +3545,14 @@
      "script_name": "BananenschaleImComicKanal",
      "name_key": "UI_OBJ_BANANENSCHALE_IM_COMIC_KANAL",
      "rect": [
-      110,
-      90,
-      58,
-      48
+      147,
+      120,
+      77,
+      64
      ],
      "gehe": [
-      139,
-      235
+      185,
+      313
      ],
      "ansehen": [
       {
@@ -3594,14 +3594,14 @@
      "script_name": "FondueKaeseImComicKanal",
      "name_key": "UI_OBJ_FONDUE_KAESE_IM_COMIC_KANAL",
      "rect": [
-      176,
-      90,
-      58,
-      48
+      235,
+      120,
+      77,
+      64
      ],
      "gehe": [
-      205,
-      235
+      273,
+      313
      ],
      "ansehen": [
       {
@@ -3643,14 +3643,14 @@
      "script_name": "Amboss",
      "name_key": "UI_OBJ_AMBOSS",
      "rect": [
-      100,
-      195,
-      15,
-      12
+      133,
+      260,
+      20,
+      16
      ],
      "gehe": [
-      107,
-      235
+      143,
+      313
      ],
      "textur": "res://grafik/platzhalter/prop_amboss.png",
      "gegenstand": "amboss",
@@ -3684,14 +3684,14 @@
      "script_name": "Bettlaken",
      "name_key": "UI_OBJ_BETTLAKEN",
      "rect": [
-      160,
-      195,
-      15,
-      12
+      213,
+      260,
+      20,
+      16
      ],
      "gehe": [
-      167,
-      235
+      223,
+      313
      ],
      "textur": "res://grafik/platzhalter/prop_bettlaken.png",
      "gegenstand": "bettlaken",
@@ -3712,14 +3712,14 @@
      "ziel": "fondue_fabrik",
      "name_key": "UI_RAUM_FONDUE_FABRIK",
      "rect": [
-      6,
-      105,
-      27,
-      105
+      8,
+      140,
+      36,
+      140
      ],
      "gehe": [
-      36,
-      240
+      48,
+      320
      ],
      "erreichbar_ab": "R2",
      "ansehen": []
@@ -3754,37 +3754,37 @@
    "script_name": "FondueFabrik",
    "name_key": "UI_RAUM_FONDUE_FABRIK",
    "groesse": [
-    480,
-    270
+    640,
+    360
    ],
    "hintergrund": "res://grafik/platzhalter/raum_fondue_fabrik.png",
    "farbe": "#d8c040",
    "laufbereich": [
     [
-     6,
-     210
+     8,
+     280
     ],
     [
-     474,
-     210
+     632,
+     280
     ],
     [
-     474,
-     267
+     632,
+     356
     ],
     [
-     6,
-     267
+     8,
+     356
     ]
    ],
    "marker": {
     "start": [
-     240,
-     240
+     320,
+     320
     ],
     "von_kapitolis": [
-     36,
-     240
+     48,
+     320
     ]
    },
    "figuren": [
@@ -3792,32 +3792,32 @@
      "id": "super_siegfried",
      "script_name": "SuperSiegfried",
      "pos": [
-      105,
-      232
+      140,
+      309
      ]
     },
     {
      "id": "fledermann",
      "script_name": "Fledermann",
      "pos": [
-      195,
-      232
+      260,
+      309
      ]
     },
     {
      "id": "wonder_wilma",
      "script_name": "WonderWilma",
      "pos": [
-      285,
-      232
+      380,
+      309
      ]
     },
     {
      "id": "fabrikarbeiter",
      "script_name": "Fabrikarbeiter",
      "pos": [
-      375,
-      232
+      500,
+      309
      ]
     }
    ],
@@ -3827,14 +3827,14 @@
      "script_name": "Suchscheinwerfer",
      "name_key": "UI_OBJ_SUCHSCHEINWERFER",
      "rect": [
-      44,
-      30,
-      58,
-      48
+      59,
+      40,
+      77,
+      64
      ],
      "gehe": [
-      73,
-      235
+      97,
+      313
      ],
      "ansehen": [
       {
@@ -3876,14 +3876,14 @@
      "script_name": "Bottiche",
      "name_key": "UI_OBJ_BOTTICHE",
      "rect": [
-      110,
-      30,
-      58,
-      48
+      147,
+      40,
+      77,
+      64
      ],
      "gehe": [
-      139,
-      235
+      185,
+      313
      ],
      "ansehen": [
       {
@@ -3927,14 +3927,14 @@
      "script_name": "Laufsteg",
      "name_key": "UI_OBJ_LAUFSTEG",
      "rect": [
-      176,
-      30,
-      58,
-      48
+      235,
+      40,
+      77,
+      64
      ],
      "gehe": [
-      205,
-      235
+      273,
+      313
      ],
      "ansehen": [
       {
@@ -3959,14 +3959,14 @@
      "script_name": "Laufband",
      "name_key": "UI_OBJ_LAUFBAND",
      "rect": [
-      242,
-      30,
-      58,
-      48
+      323,
+      40,
+      77,
+      64
      ],
      "gehe": [
-      271,
-      235
+      361,
+      313
      ],
      "ansehen": [
       {
@@ -3991,14 +3991,14 @@
      "script_name": "Warnschilder",
      "name_key": "UI_OBJ_WARNSCHILDER",
      "rect": [
-      308,
-      30,
-      58,
-      48
+      411,
+      40,
+      77,
+      64
      ],
      "gehe": [
-      337,
-      235
+      449,
+      313
      ],
      "ansehen": [
       {
@@ -4023,14 +4023,14 @@
      "script_name": "Hebel",
      "name_key": "UI_OBJ_HEBEL",
      "rect": [
-      374,
-      30,
-      58,
-      48
+      499,
+      40,
+      77,
+      64
      ],
      "gehe": [
-      403,
-      235
+      537,
+      313
      ],
      "ansehen": [
       {
@@ -4064,14 +4064,14 @@
      "script_name": "Einzelbild1",
      "name_key": "UI_OBJ_EINZELBILD_1",
      "rect": [
-      44,
-      90,
-      58,
-      48
+      59,
+      120,
+      77,
+      64
      ],
      "gehe": [
-      73,
-      235
+      97,
+      313
      ],
      "ansehen": [
       {
@@ -4096,14 +4096,14 @@
      "script_name": "Einzelbild2",
      "name_key": "UI_OBJ_EINZELBILD_2",
      "rect": [
-      110,
-      90,
-      58,
-      48
+      147,
+      120,
+      77,
+      64
      ],
      "gehe": [
-      139,
-      235
+      185,
+      313
      ],
      "ansehen": [
       {
@@ -4128,14 +4128,14 @@
      "script_name": "Einzelbild3",
      "name_key": "UI_OBJ_EINZELBILD_3",
      "rect": [
-      176,
-      90,
-      58,
-      48
+      235,
+      120,
+      77,
+      64
      ],
      "gehe": [
-      205,
-      235
+      273,
+      313
      ],
      "ansehen": [
       {
@@ -4160,14 +4160,14 @@
      "script_name": "Einzelbild4",
      "name_key": "UI_OBJ_EINZELBILD_4",
      "rect": [
-      242,
-      90,
-      58,
-      48
+      323,
+      120,
+      77,
+      64
      ],
      "gehe": [
-      271,
-      235
+      361,
+      313
      ],
      "ansehen": [
       {
@@ -4192,14 +4192,14 @@
      "script_name": "NormalerKaeseInDerFabrik",
      "name_key": "UI_OBJ_NORMALER_KAESE_IN_DER_FABRIK",
      "rect": [
-      308,
-      90,
-      58,
-      48
+      411,
+      120,
+      77,
+      64
      ],
      "gehe": [
-      337,
-      235
+      449,
+      313
      ],
      "ansehen": [
       {
@@ -4228,14 +4228,14 @@
      "ziel": "kapitolis",
      "name_key": "UI_RAUM_KAPITOLIS",
      "rect": [
-      6,
-      105,
-      27,
-      105
+      8,
+      140,
+      36,
+      140
      ],
      "gehe": [
-      36,
-      240
+      48,
+      320
      ],
      "erreichbar_ab": "R2",
      "ansehen": []
@@ -4256,57 +4256,57 @@
    "script_name": "WerbespotSet",
    "name_key": "UI_RAUM_WERBESPOT_SET",
    "groesse": [
-    480,
-    270
+    640,
+    360
    ],
    "hintergrund": "res://grafik/platzhalter/raum_werbespot_set.png",
    "farbe": "#e0e0f0",
    "laufbereich": [
     [
-     6,
-     210
+     8,
+     280
     ],
     [
-     474,
-     210
+     632,
+     280
     ],
     [
-     474,
-     267
+     632,
+     356
     ],
     [
-     6,
-     267
+     8,
+     356
     ]
    ],
    "marker": {
     "start": [
-     240,
-     240
+     320,
+     320
     ],
     "von_gluecksrad": [
-     240,
-     240
+     320,
+     320
     ],
     "von_sitcom_kueche": [
-     240,
-     240
+     320,
+     320
     ],
     "von_savanne": [
-     240,
-     240
+     320,
+     320
     ],
     "von_friedhof": [
-     240,
-     240
+     320,
+     320
     ],
     "von_kapitolis": [
-     240,
-     240
+     320,
+     320
     ],
     "von_empfang": [
-     240,
-     240
+     320,
+     320
     ]
    },
    "figuren": [
@@ -4314,32 +4314,32 @@
      "id": "super_siegfried",
      "script_name": "SuperSiegfried",
      "pos": [
-      105,
-      232
+      140,
+      309
      ]
     },
     {
      "id": "fledermann",
      "script_name": "Fledermann",
      "pos": [
-      195,
-      232
+      260,
+      309
      ]
     },
     {
      "id": "wonder_wilma",
      "script_name": "WonderWilma",
      "pos": [
-      285,
-      232
+      380,
+      309
      ]
     },
     {
      "id": "dr_werbepause",
      "script_name": "DrWerbepause",
      "pos": [
-      375,
-      232
+      500,
+      309
      ]
     }
    ],
@@ -4349,14 +4349,14 @@
      "script_name": "Werbepause",
      "name_key": "UI_OBJ_WERBEPAUSE",
      "rect": [
-      44,
-      30,
-      58,
-      48
+      59,
+      40,
+      77,
+      64
      ],
      "gehe": [
-      73,
-      235
+      97,
+      313
      ],
      "ansehen": [],
      "gegenstand_auf": [
@@ -4384,14 +4384,14 @@
      "script_name": "ComicPanels",
      "name_key": "UI_OBJ_COMIC_PANELS",
      "rect": [
-      110,
-      30,
-      58,
-      48
+      147,
+      40,
+      77,
+      64
      ],
      "gehe": [
-      139,
-      235
+      185,
+      313
      ],
      "ansehen": [
       {
@@ -4416,14 +4416,14 @@
      "script_name": "PanelSchurkeLacht",
      "name_key": "UI_OBJ_PANEL_SCHURKE_LACHT",
      "rect": [
-      176,
-      30,
-      58,
-      48
+      235,
+      40,
+      77,
+      64
      ],
      "gehe": [
-      205,
-      235
+      273,
+      313
      ],
      "ansehen": [
       {
@@ -4448,14 +4448,14 @@
      "script_name": "PanelHeldSpringt",
      "name_key": "UI_OBJ_PANEL_HELD_SPRINGT",
      "rect": [
-      242,
-      30,
-      58,
-      48
+      323,
+      40,
+      77,
+      64
      ],
      "gehe": [
-      271,
-      235
+      361,
+      313
      ],
      "ansehen": [
       {
@@ -4480,14 +4480,14 @@
      "script_name": "PanelExplosion",
      "name_key": "UI_OBJ_PANEL_EXPLOSION",
      "rect": [
-      308,
-      30,
-      58,
-      48
+      411,
+      40,
+      77,
+      64
      ],
      "gehe": [
-      337,
-      235
+      449,
+      313
      ],
      "ansehen": [
       {
@@ -4512,14 +4512,14 @@
      "script_name": "PanelSchurkeImKaese",
      "name_key": "UI_OBJ_PANEL_SCHURKE_IM_KAESE",
      "rect": [
-      374,
-      30,
-      58,
-      48
+      499,
+      40,
+      77,
+      64
      ],
      "gehe": [
-      403,
-      235
+      537,
+      313
      ],
      "ansehen": [
       {
@@ -4544,14 +4544,14 @@
      "script_name": "Produktpodest",
      "name_key": "UI_OBJ_PRODUKTPODEST",
      "rect": [
-      44,
-      90,
-      58,
-      48
+      59,
+      120,
+      77,
+      64
      ],
      "gehe": [
-      73,
-      235
+      97,
+      313
      ],
      "ansehen": [
       {
@@ -4585,14 +4585,14 @@
      "script_name": "Kamera",
      "name_key": "UI_OBJ_KAMERA",
      "rect": [
-      110,
-      90,
-      58,
-      48
+      147,
+      120,
+      77,
+      64
      ],
      "gehe": [
-      139,
-      235
+      185,
+      313
      ],
      "ansehen": [
       {
@@ -4617,14 +4617,14 @@
      "script_name": "Regiestuhl",
      "name_key": "UI_OBJ_REGIESTUHL",
      "rect": [
-      176,
-      90,
-      58,
-      48
+      235,
+      120,
+      77,
+      64
      ],
      "gehe": [
-      205,
-      235
+      273,
+      313
      ],
      "ansehen": [
       {
@@ -4649,14 +4649,14 @@
      "script_name": "Plastikpalme",
      "name_key": "UI_OBJ_PLASTIKPALME",
      "rect": [
-      242,
-      90,
-      58,
-      48
+      323,
+      120,
+      77,
+      64
      ],
      "gehe": [
-      271,
-      235
+      361,
+      313
      ],
      "ansehen": [
       {
@@ -4681,14 +4681,14 @@
      "script_name": "Klappe",
      "name_key": "UI_OBJ_KLAPPE",
      "rect": [
-      308,
-      90,
-      58,
-      48
+      411,
+      120,
+      77,
+      64
      ],
      "gehe": [
-      337,
-      235
+      449,
+      313
      ],
      "ansehen": [
       {
@@ -4713,14 +4713,14 @@
      "script_name": "Hintergrund",
      "name_key": "UI_OBJ_HINTERGRUND",
      "rect": [
-      374,
-      90,
-      58,
-      48
+      499,
+      120,
+      77,
+      64
      ],
      "gehe": [
-      403,
-      235
+      537,
+      313
      ],
      "ansehen": [
       {
@@ -4745,14 +4745,14 @@
      "script_name": "AutoplayCountdown",
      "name_key": "UI_OBJ_AUTOPLAY_COUNTDOWN",
      "rect": [
-      44,
-      150,
-      58,
-      48
+      59,
+      200,
+      77,
+      64
      ],
      "gehe": [
-      73,
-      235
+      97,
+      313
      ],
      "ansehen": [
       {
@@ -4779,14 +4779,14 @@
      "script_name": "TasteSendersuchlauf",
      "name_key": "UI_OBJ_TASTE_SENDERSUCHLAUF",
      "rect": [
-      100,
-      195,
-      15,
-      12
+      133,
+      260,
+      20,
+      16
      ],
      "gehe": [
-      107,
-      235
+      143,
+      313
      ],
      "textur": "res://grafik/platzhalter/prop_taste_sendersuchlauf.png",
      "gegenstand": "taste_sendersuchlauf",
@@ -4817,65 +4817,65 @@
    "script_name": "Empfang",
    "name_key": "UI_RAUM_EMPFANG",
    "groesse": [
-    480,
-    270
+    640,
+    360
    ],
    "hintergrund": "res://grafik/platzhalter/raum_empfang.png",
    "farbe": "#8a6a40",
    "laufbereich": [
     [
-     6,
-     210
+     8,
+     280
     ],
     [
-     474,
-     210
+     632,
+     280
     ],
     [
-     474,
-     267
+     632,
+     356
     ],
     [
-     6,
-     267
+     8,
+     356
     ]
    ],
    "marker": {
     "start": [
-     240,
-     240
+     320,
+     320
     ],
     "von_kellerarchiv": [
-     36,
-     240
+     48,
+     320
     ],
     "von_zappmanns_studio": [
-     444,
-     240
+     592,
+     320
     ],
     "von_gluecksrad": [
-     240,
-     240
+     320,
+     320
     ],
     "von_sitcom_kueche": [
-     240,
-     240
+     320,
+     320
     ],
     "von_savanne": [
-     240,
-     240
+     320,
+     320
     ],
     "von_friedhof": [
-     240,
-     240
+     320,
+     320
     ],
     "von_kapitolis": [
-     240,
-     240
+     320,
+     320
     ],
     "von_werbespot_set": [
-     240,
-     240
+     320,
+     320
     ]
    },
    "figuren": [
@@ -4883,16 +4883,16 @@
      "id": "empfangsdame",
      "script_name": "Empfangsdame",
      "pos": [
-      150,
-      232
+      200,
+      309
      ]
     },
     {
      "id": "sicherheitsmann",
      "script_name": "Sicherheitsmann",
      "pos": [
-      330,
-      232
+      440,
+      309
      ]
     }
    ],
@@ -4902,14 +4902,14 @@
      "script_name": "ZahlenfeldMitCode",
      "name_key": "UI_OBJ_ZAHLENFELD_MIT_CODE",
      "rect": [
-      44,
-      30,
-      58,
-      48
+      59,
+      40,
+      77,
+      64
      ],
      "gehe": [
-      73,
-      235
+      97,
+      313
      ],
      "ansehen": [],
      "benutzen": [
@@ -4955,14 +4955,14 @@
      "script_name": "Portraet",
      "name_key": "UI_OBJ_PORTRAET",
      "rect": [
-      110,
-      30,
-      58,
-      48
+      147,
+      40,
+      77,
+      64
      ],
      "gehe": [
-      139,
-      235
+      185,
+      313
      ],
      "ansehen": [
       {
@@ -4998,14 +4998,14 @@
      "script_name": "KaputtesRadio",
      "name_key": "UI_OBJ_KAPUTTES_RADIO",
      "rect": [
-      176,
-      30,
-      58,
-      48
+      235,
+      40,
+      77,
+      64
      ],
      "gehe": [
-      205,
-      235
+      273,
+      313
      ],
      "ansehen": [
       {
@@ -5030,14 +5030,14 @@
      "script_name": "WandMitGoldenenSchallplatten",
      "name_key": "UI_OBJ_WAND_MIT_GOLDENEN_SCHALLPLATTEN",
      "rect": [
-      242,
-      30,
-      58,
-      48
+      323,
+      40,
+      77,
+      64
      ],
      "gehe": [
-      271,
-      235
+      361,
+      313
      ],
      "ansehen": [
       {
@@ -5062,14 +5062,14 @@
      "script_name": "Empfangstresen",
      "name_key": "UI_OBJ_EMPFANGSTRESEN",
      "rect": [
-      308,
-      30,
-      58,
-      48
+      411,
+      40,
+      77,
+      64
      ],
      "gehe": [
-      337,
-      235
+      449,
+      313
      ],
      "ansehen": [
       {
@@ -5094,14 +5094,14 @@
      "script_name": "Samtkordeln",
      "name_key": "UI_OBJ_SAMTKORDELN",
      "rect": [
-      374,
-      30,
-      58,
-      48
+      499,
+      40,
+      77,
+      64
      ],
      "gehe": [
-      403,
-      235
+      537,
+      313
      ],
      "ansehen": [
       {
@@ -5126,14 +5126,14 @@
      "script_name": "LogoAnDerWand",
      "name_key": "UI_OBJ_LOGO_AN_DER_WAND",
      "rect": [
-      44,
-      90,
-      58,
-      48
+      59,
+      120,
+      77,
+      64
      ],
      "gehe": [
-      73,
-      235
+      97,
+      313
      ],
      "ansehen": [
       {
@@ -5162,14 +5162,14 @@
      "ziel": "kellerarchiv",
      "name_key": "UI_RAUM_KELLERARCHIV",
      "rect": [
-      6,
-      105,
-      27,
-      105
+      8,
+      140,
+      36,
+      140
      ],
      "gehe": [
-      36,
-      240
+      48,
+      320
      ],
      "erreichbar_ab": "R11",
      "ansehen": [
@@ -5196,14 +5196,14 @@
      "ziel": "zappmanns_studio",
      "name_key": "UI_RAUM_ZAPPMANNS_STUDIO",
      "rect": [
-      447,
-      105,
-      27,
-      105
+      596,
+      140,
+      36,
+      140
      ],
      "gehe": [
-      444,
-      240
+      592,
+      320
      ],
      "erreichbar_ab": "R12",
      "ansehen": [
@@ -5240,37 +5240,37 @@
    "script_name": "Kellerarchiv",
    "name_key": "UI_RAUM_KELLERARCHIV",
    "groesse": [
-    480,
-    270
+    640,
+    360
    ],
    "hintergrund": "res://grafik/platzhalter/raum_kellerarchiv.png",
    "farbe": "#404040",
    "laufbereich": [
     [
-     6,
-     210
+     8,
+     280
     ],
     [
-     474,
-     210
+     632,
+     280
     ],
     [
-     474,
-     267
+     632,
+     356
     ],
     [
-     6,
-     267
+     8,
+     356
     ]
    ],
    "marker": {
     "start": [
-     240,
-     240
+     320,
+     320
     ],
     "von_empfang": [
-     36,
-     240
+     48,
+     320
     ]
    },
    "figuren": [],
@@ -5280,14 +5280,14 @@
      "script_name": "Auge",
      "name_key": "UI_OBJ_AUGE",
      "rect": [
-      44,
-      30,
-      72,
-      48
+      59,
+      40,
+      96,
+      64
      ],
      "gehe": [
-      80,
-      235
+      107,
+      313
      ],
      "ansehen": [
       {
@@ -5329,14 +5329,14 @@
      "script_name": "Regale",
      "name_key": "UI_OBJ_REGALE",
      "rect": [
-      124,
-      30,
-      72,
-      48
+      165,
+      40,
+      96,
+      64
      ],
      "gehe": [
-      160,
-      235
+      213,
+      313
      ],
      "ansehen": [
       {
@@ -5361,14 +5361,14 @@
      "script_name": "Neonroehre",
      "name_key": "UI_OBJ_NEONROEHRE",
      "rect": [
-      204,
-      30,
-      72,
-      48
+      272,
+      40,
+      96,
+      64
      ],
      "gehe": [
-      240,
-      235
+      320,
+      313
      ],
      "ansehen": [
       {
@@ -5393,14 +5393,14 @@
      "script_name": "Muellpresse",
      "name_key": "UI_OBJ_MUELLPRESSE",
      "rect": [
-      284,
-      30,
-      72,
-      48
+      379,
+      40,
+      96,
+      64
      ],
      "gehe": [
-      320,
-      235
+      427,
+      313
      ],
      "ansehen": [
       {
@@ -5435,14 +5435,14 @@
      "script_name": "BandInDerPresse",
      "name_key": "UI_OBJ_BAND_IN_DER_PRESSE",
      "rect": [
-      364,
-      30,
-      72,
-      48
+      485,
+      40,
+      96,
+      64
      ],
      "gehe": [
-      400,
-      235
+      533,
+      313
      ],
      "ansehen": [
       {
@@ -5508,14 +5508,14 @@
      "script_name": "Archivband",
      "name_key": "UI_OBJ_ARCHIVBAND",
      "rect": [
-      100,
-      195,
-      15,
-      12
+      133,
+      260,
+      20,
+      16
      ],
      "gehe": [
-      107,
-      235
+      143,
+      313
      ],
      "textur": "res://grafik/platzhalter/prop_archivband.png",
      "gegenstand": "archivband",
@@ -5542,14 +5542,14 @@
      "ziel": "empfang",
      "name_key": "UI_RAUM_EMPFANG",
      "rect": [
-      6,
-      105,
-      27,
-      105
+      8,
+      140,
+      36,
+      140
      ],
      "gehe": [
-      36,
-      240
+      48,
+      320
      ],
      "erreichbar_ab": "R11",
      "ansehen": []
@@ -5570,37 +5570,37 @@
    "script_name": "ZappmannsStudio",
    "name_key": "UI_RAUM_ZAPPMANNS_STUDIO",
    "groesse": [
-    480,
-    270
+    640,
+    360
    ],
    "hintergrund": "res://grafik/platzhalter/raum_zappmanns_studio.png",
    "farbe": "#c0a030",
    "laufbereich": [
     [
-     6,
-     210
+     8,
+     280
     ],
     [
-     474,
-     210
+     632,
+     280
     ],
     [
-     474,
-     267
+     632,
+     356
     ],
     [
-     6,
-     267
+     8,
+     356
     ]
    ],
    "marker": {
     "start": [
-     240,
-     240
+     320,
+     320
     ],
     "von_empfang": [
-     36,
-     240
+     48,
+     320
     ]
    },
    "figuren": [
@@ -5608,24 +5608,24 @@
      "id": "zappmann",
      "script_name": "Zappmann",
      "pos": [
-      120,
-      232
+      160,
+      309
      ]
     },
     {
      "id": "junger_zappmann",
      "script_name": "JungerZappmann",
      "pos": [
-      240,
-      232
+      320,
+      309
      ]
     },
     {
      "id": "wettkandidat",
      "script_name": "Wettkandidat",
      "pos": [
-      360,
-      232
+      480,
+      309
      ]
     }
    ],
@@ -5635,14 +5635,14 @@
      "script_name": "GoldenesSofa",
      "name_key": "UI_OBJ_GOLDENES_SOFA",
      "rect": [
-      44,
-      30,
-      58,
-      48
+      59,
+      40,
+      77,
+      64
      ],
      "gehe": [
-      73,
-      235
+      97,
+      313
      ],
      "ansehen": [
       {
@@ -5667,14 +5667,14 @@
      "script_name": "Moderationspult",
      "name_key": "UI_OBJ_MODERATIONSPULT",
      "rect": [
-      110,
-      30,
-      58,
-      48
+      147,
+      40,
+      77,
+      64
      ],
      "gehe": [
-      139,
-      235
+      185,
+      313
      ],
      "ansehen": [
       {
@@ -5699,14 +5699,14 @@
      "script_name": "Monitorwand",
      "name_key": "UI_OBJ_MONITORWAND",
      "rect": [
-      176,
-      30,
-      58,
-      48
+      235,
+      40,
+      77,
+      64
      ],
      "gehe": [
-      205,
-      235
+      273,
+      313
      ],
      "ansehen": [
       {
@@ -5731,14 +5731,14 @@
      "script_name": "ApplausSchild",
      "name_key": "UI_OBJ_APPLAUS_SCHILD",
      "rect": [
-      242,
-      30,
-      58,
-      48
+      323,
+      40,
+      77,
+      64
      ],
      "gehe": [
-      271,
-      235
+      361,
+      313
      ],
      "ansehen": [
       {
@@ -5763,14 +5763,14 @@
      "script_name": "Quotenanzeige",
      "name_key": "UI_OBJ_QUOTENANZEIGE",
      "rect": [
-      308,
-      30,
-      58,
-      48
+      411,
+      40,
+      77,
+      64
      ],
      "gehe": [
-      337,
-      235
+      449,
+      313
      ],
      "ansehen": [
       {
@@ -5795,14 +5795,14 @@
      "script_name": "DrehbuchInDerSenderzentrale",
      "name_key": "UI_OBJ_DREHBUCH_IN_DER_SENDERZENTRALE",
      "rect": [
-      374,
-      30,
-      58,
-      48
+      499,
+      40,
+      77,
+      64
      ],
      "gehe": [
-      403,
-      235
+      537,
+      313
      ],
      "ansehen": [
       {
@@ -5831,14 +5831,14 @@
      "ziel": "empfang",
      "name_key": "UI_RAUM_EMPFANG",
      "rect": [
-      6,
-      105,
-      27,
-      105
+      8,
+      140,
+      36,
+      140
      ],
      "gehe": [
-      36,
-      240
+      48,
+      320
      ],
      "erreichbar_ab": "R11",
      "ansehen": [
@@ -5884,7 +5884,7 @@
    "script_name": "Max",
    "kuerzel": "MAX",
    "name_key": "UI_OBJ_MAX",
-   "groesse_px": 105,
+   "groesse_px": 189,
    "spielbar": true,
    "textfarbe": "#ffffff",
    "sprite": "res://grafik/platzhalter/figur_max.png",
@@ -5915,7 +5915,7 @@
    "script_name": "Pixel",
    "kuerzel": "PIX",
    "name_key": "UI_OBJ_PIXEL",
-   "groesse_px": 34,
+   "groesse_px": 61,
    "spielbar": true,
    "textfarbe": "#5fd3c8",
    "sprite": "res://grafik/platzhalter/figur_pixel.png",
@@ -5938,7 +5938,7 @@
    "script_name": "Opa",
    "kuerzel": "OPA",
    "name_key": "UI_OBJ_OPA",
-   "groesse_px": 82,
+   "groesse_px": 147,
    "spielbar": false,
    "textfarbe": "#f5a04a",
    "sprite": "res://grafik/platzhalter/figur_opa.png",
@@ -5957,7 +5957,7 @@
    "script_name": "Flimmer",
    "kuerzel": "FLI",
    "name_key": "UI_OBJ_FLIMMER",
-   "groesse_px": 30,
+   "groesse_px": 54,
    "spielbar": false,
    "textfarbe": "#ffffff",
    "sprite": "res://grafik/platzhalter/figur_flimmer.png",
@@ -6031,7 +6031,7 @@
    "script_name": "GerdGlueck",
    "kuerzel": "GER",
    "name_key": "UI_OBJ_GERD_GLUECK",
-   "groesse_px": 112,
+   "groesse_px": 201,
    "spielbar": false,
    "textfarbe": "#ffffff",
    "sprite": "res://grafik/platzhalter/figur_gerd_glueck.png",
@@ -6068,7 +6068,7 @@
    "script_name": "TroedelExperte",
    "kuerzel": "EXP",
    "name_key": "UI_OBJ_TROEDEL_EXPERTE",
-   "groesse_px": 109,
+   "groesse_px": 196,
    "spielbar": false,
    "textfarbe": "#ffffff",
    "sprite": "res://grafik/platzhalter/figur_troedel_experte.png",
@@ -6105,7 +6105,7 @@
    "script_name": "SitcomVater",
    "kuerzel": "VAT",
    "name_key": "UI_OBJ_SITCOM_VATER",
-   "groesse_px": 109,
+   "groesse_px": 196,
    "spielbar": false,
    "textfarbe": "#ffffff",
    "sprite": "res://grafik/platzhalter/figur_sitcom_vater.png",
@@ -6160,7 +6160,7 @@
    "script_name": "SitcomMutter",
    "kuerzel": "SMU",
    "name_key": "UI_OBJ_SITCOM_MUTTER",
-   "groesse_px": 109,
+   "groesse_px": 196,
    "spielbar": false,
    "textfarbe": "#ffffff",
    "sprite": "res://grafik/platzhalter/figur_sitcom_mutter.png",
@@ -6197,7 +6197,7 @@
    "script_name": "SitcomSohn",
    "kuerzel": "SOH",
    "name_key": "UI_OBJ_SITCOM_SOHN",
-   "groesse_px": 105,
+   "groesse_px": 189,
    "spielbar": false,
    "textfarbe": "#ffffff",
    "sprite": "res://grafik/platzhalter/figur_sitcom_sohn.png",
@@ -6234,7 +6234,7 @@
    "script_name": "Kommissar",
    "kuerzel": "KOM",
    "name_key": "UI_OBJ_KOMMISSAR",
-   "groesse_px": 109,
+   "groesse_px": 196,
    "spielbar": false,
    "textfarbe": "#ffffff",
    "sprite": "res://grafik/platzhalter/figur_kommissar.png",
@@ -6282,7 +6282,7 @@
    "script_name": "Erzaehler",
    "kuerzel": "ERZ",
    "name_key": "UI_OBJ_ERZAEHLER",
-   "groesse_px": 109,
+   "groesse_px": 196,
    "spielbar": false,
    "textfarbe": "#ffffff",
    "sprite": "res://grafik/platzhalter/figur_erzaehler.png",
@@ -6319,7 +6319,7 @@
    "script_name": "Loewe",
    "kuerzel": "LOE",
    "name_key": "UI_OBJ_LOEWE",
-   "groesse_px": 112,
+   "groesse_px": 201,
    "spielbar": false,
    "textfarbe": "#ffffff",
    "sprite": "res://grafik/platzhalter/figur_loewe.png",
@@ -6356,7 +6356,7 @@
    "script_name": "Hyaene",
    "kuerzel": "HYA",
    "name_key": "UI_OBJ_HYAENE",
-   "groesse_px": 64,
+   "groesse_px": 115,
    "spielbar": false,
    "textfarbe": "#ffffff",
    "sprite": "res://grafik/platzhalter/figur_hyaene.png",
@@ -6393,7 +6393,7 @@
    "script_name": "Gepard",
    "kuerzel": "GEP",
    "name_key": "UI_OBJ_GEPARD",
-   "groesse_px": 56,
+   "groesse_px": 101,
    "spielbar": false,
    "textfarbe": "#ffffff",
    "sprite": "res://grafik/platzhalter/figur_gepard.png",
@@ -6430,7 +6430,7 @@
    "script_name": "Geier",
    "kuerzel": "GEI",
    "name_key": "UI_OBJ_GEIER",
-   "groesse_px": 56,
+   "groesse_px": 101,
    "spielbar": false,
    "textfarbe": "#ffffff",
    "sprite": "res://grafik/platzhalter/figur_geier.png",
@@ -6467,7 +6467,7 @@
    "script_name": "Nashorn",
    "kuerzel": "NAS",
    "name_key": "UI_OBJ_NASHORN",
-   "groesse_px": 112,
+   "groesse_px": 201,
    "spielbar": false,
    "textfarbe": "#ffffff",
    "sprite": "res://grafik/platzhalter/figur_nashorn.png",
@@ -6504,7 +6504,7 @@
    "script_name": "Flamingos",
    "kuerzel": "FLA",
    "name_key": "UI_OBJ_FLAMINGOS",
-   "groesse_px": 45,
+   "groesse_px": 81,
    "spielbar": false,
    "textfarbe": "#ffffff",
    "sprite": "res://grafik/platzhalter/figur_flamingos.png",
@@ -6541,7 +6541,7 @@
    "script_name": "Zombie",
    "kuerzel": "ZOM",
    "name_key": "UI_OBJ_ZOMBIE",
-   "groesse_px": 109,
+   "groesse_px": 196,
    "spielbar": false,
    "textfarbe": "#ffffff",
    "sprite": "res://grafik/platzhalter/figur_zombie.png",
@@ -6560,7 +6560,7 @@
    "script_name": "Geist",
    "kuerzel": "GST",
    "name_key": "UI_OBJ_GEIST",
-   "groesse_px": 45,
+   "groesse_px": 81,
    "spielbar": false,
    "textfarbe": "#ffffff",
    "sprite": "res://grafik/platzhalter/figur_geist.png",
@@ -6579,7 +6579,7 @@
    "script_name": "FbiAgent",
    "kuerzel": "AGE",
    "name_key": "UI_OBJ_FBI_AGENT",
-   "groesse_px": 112,
+   "groesse_px": 201,
    "spielbar": false,
    "textfarbe": "#ffffff",
    "sprite": "res://grafik/platzhalter/figur_fbi_agent.png",
@@ -6616,7 +6616,7 @@
    "script_name": "SuperSiegfried",
    "kuerzel": "SIE",
    "name_key": "UI_OBJ_SUPER_SIEGFRIED",
-   "groesse_px": 120,
+   "groesse_px": 216,
    "spielbar": false,
    "textfarbe": "#ffffff",
    "sprite": "res://grafik/platzhalter/figur_super_siegfried.png",
@@ -6637,7 +6637,7 @@
    "script_name": "Fledermann",
    "kuerzel": "FLE",
    "name_key": "UI_OBJ_FLEDERMANN",
-   "groesse_px": 109,
+   "groesse_px": 196,
    "spielbar": false,
    "textfarbe": "#ffffff",
    "sprite": "res://grafik/platzhalter/figur_fledermann.png",
@@ -6658,7 +6658,7 @@
    "script_name": "WonderWilma",
    "kuerzel": "WIL",
    "name_key": "UI_OBJ_WONDER_WILMA",
-   "groesse_px": 109,
+   "groesse_px": 196,
    "spielbar": false,
    "textfarbe": "#ffffff",
    "sprite": "res://grafik/platzhalter/figur_wonder_wilma.png",
@@ -6679,7 +6679,7 @@
    "script_name": "Fabrikarbeiter",
    "kuerzel": null,
    "name_key": "UI_OBJ_FABRIKARBEITER",
-   "groesse_px": 109,
+   "groesse_px": 196,
    "spielbar": false,
    "textfarbe": "#ffffff",
    "sprite": "res://grafik/platzhalter/figur_fabrikarbeiter.png",
@@ -6698,7 +6698,7 @@
    "script_name": "DrWerbepause",
    "kuerzel": "WER",
    "name_key": "UI_OBJ_DR_WERBEPAUSE",
-   "groesse_px": 112,
+   "groesse_px": 201,
    "spielbar": false,
    "textfarbe": "#ffffff",
    "sprite": "res://grafik/platzhalter/figur_dr_werbepause.png",
@@ -6735,7 +6735,7 @@
    "script_name": "Empfangsdame",
    "kuerzel": "EMP",
    "name_key": "UI_OBJ_EMPFANGSDAME",
-   "groesse_px": 109,
+   "groesse_px": 196,
    "spielbar": false,
    "textfarbe": "#ffffff",
    "sprite": "res://grafik/platzhalter/figur_empfangsdame.png",
@@ -6754,7 +6754,7 @@
    "script_name": "Sicherheitsmann",
    "kuerzel": "SIC",
    "name_key": "UI_OBJ_SICHERHEITSMANN",
-   "groesse_px": 120,
+   "groesse_px": 216,
    "spielbar": false,
    "textfarbe": "#ffffff",
    "sprite": "res://grafik/platzhalter/figur_sicherheitsmann.png",
@@ -6773,7 +6773,7 @@
    "script_name": "Zappmann",
    "kuerzel": "ZAP",
    "name_key": "UI_OBJ_ZAPPMANN",
-   "groesse_px": 116,
+   "groesse_px": 209,
    "spielbar": false,
    "textfarbe": "#ffffff",
    "sprite": "res://grafik/platzhalter/figur_zappmann.png",
@@ -6820,7 +6820,7 @@
    "script_name": "JungerZappmann",
    "kuerzel": null,
    "name_key": "UI_OBJ_JUNGER_ZAPPMANN",
-   "groesse_px": 105,
+   "groesse_px": 189,
    "spielbar": false,
    "textfarbe": "#ffffff",
    "sprite": "res://grafik/platzhalter/figur_junger_zappmann.png",
@@ -6839,7 +6839,7 @@
    "script_name": "Wettkandidat",
    "kuerzel": "WET",
    "name_key": "UI_OBJ_WETTKANDIDAT",
-   "groesse_px": 105,
+   "groesse_px": 189,
    "spielbar": false,
    "textfarbe": "#ffffff",
    "sprite": "res://grafik/platzhalter/figur_wettkandidat.png",

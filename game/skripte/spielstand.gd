@@ -18,7 +18,7 @@ var _ausstehend := -1
 ## Vorschaubild für das nächste Speichern; das Pausemenü merkt es sich beim Öffnen, damit das
 ## Menü selbst nicht im Bild ist. Ohne gemerktes Bild wird der Bildschirm direkt aufgenommen.
 var vorschau: Image
-const VORSCHAU_GROESSE := Vector2i(96, 54)
+const VORSCHAU_GROESSE := Vector2i(128, 72)
 
 
 func _ready() -> void:

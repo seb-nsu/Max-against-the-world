@@ -5,12 +5,12 @@
 
 [node name="CharacterBeamter1" type="Area2D" unique_id=2041205311]
 script = ExtResource("1_o0pdt")
-walk_speed = 90.0
-dialog_pos = Vector2(0, -86)
+walk_speed = 120.0
+dialog_pos = Vector2(0, -151)
 script_name = "Beamter1"
 description = "UI_OBJ_BEAMTER_1"
 cursor = 8
-interaction_polygon = PackedVector2Array(-15, -82, 15, -82, 15, 0, -15, 0)
+interaction_polygon = PackedVector2Array(-20, -147, 20, -147, 20, 0, -20, 0)
 
 [node name="ScalingPolygon" type="CollisionPolygon2D" parent="." unique_id=1525286783]
 polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
@@ -20,11 +20,11 @@ polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=170057462]
 texture_filter = 1
 texture = ExtResource("2_0bb5i")
-offset = Vector2(0, -41)
+offset = Vector2(0, -73.5)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=418638534]
 visible = false
-polygon = PackedVector2Array(-15, -82, 15, -82, 15, 0, -15, 0)
+polygon = PackedVector2Array(-20, -147, 20, -147, 20, 0, -20, 0)
 
 [node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=1556607117]
 visible = false

@@ -30,7 +30,7 @@ raeume:
   - id: dachboden
     name: Dachboden
     skript_code: [DACH, RIEG, RUF, RAET, AUFL]   # ZS1 bis ZS3 und Finale
-    groesse: 480x270
+    groesse: 640x360
     ausgaenge: [treppenhaus]         # Luke im Finale verriegelt bis zur Auflösung
     erreichbar_ab: start
     musik: gegenwart
@@ -39,7 +39,7 @@ raeume:
   - id: treppenhaus
     name: Treppenhaus
     skript_code: []                  # nur kurzer Schnitt bei FI_RIEG_OMA_0070, Abspann-Foto 4
-    groesse: 480x270
+    groesse: 640x360
     ausgaenge: [dachboden, wohnzimmer]
     erreichbar_ab: F1d               # Abgang zum Wohnzimmer als Szene nach der Auflösung
     musik: gegenwart
@@ -48,7 +48,7 @@ raeume:
   - id: wohnzimmer
     name: Wohnzimmer
     skript_code: [WOHN, ABSP]        # ABSP: Abspann-Szene am Zapp-O-Mat und Abspann-Fotos
-    groesse: 480x270
+    groesse: 640x360
     ausgaenge: [treppenhaus]         # zum Supermarkt nur als Szene (FI_ABSP)
     erreichbar_ab: F1d
     musik: gegenwart
@@ -57,7 +57,7 @@ raeume:
   - id: supermarkt
     name: Supermarkt-Eingang
     skript_code: [SUPM]
-    groesse: 480x270
+    groesse: 640x360
     ausgaenge: []                    # Endbild, nur die Ladentür (Spielende)
     erreichbar_ab: F1d               # per Szene aus dem Wohnzimmer
     musik: gegenwart                 # mit der Schwarzblende setzt das Titelthema ein (FI_SUPM_NAR_0090), danach Abspann
@@ -68,35 +68,35 @@ figuren:
     name: Max
     kuerzel: MAX
     raum: [dachboden, wohnzimmer, supermarkt]
-    groesse_px: 105                   # ab Rückkehr 3 aufrechte Fassung
+    groesse_px: 189                   # ab Rückkehr 3 aufrechte Fassung
     spielbar: true
 
   - id: pixel
     name: Pixel
     kuerzel: PIX
     raum: [dachboden, wohnzimmer]
-    groesse_px: 34
+    groesse_px: 61
     spielbar: true                   # im Finale nötig für Schritt C
 
   - id: opa
     name: Opa
     kuerzel: OPA
     raum: [dachboden, wohnzimmer]
-    groesse_px: 112
+    groesse_px: 201
     spielbar: false
 
   - id: oma
     name: Oma                        # Hildegard; vor der Auflösung „Oma (von unten)“
     kuerzel: OMA
     raum: [treppenhaus, dachboden, wohnzimmer]
-    groesse_px: 105
+    groesse_px: 189
     spielbar: false
 
   - id: mutter
     name: Mutter
     kuerzel: MUT
     raum: wohnzimmer
-    groesse_px: 109
+    groesse_px: 196
     spielbar: false
 
 
@@ -104,14 +104,14 @@ figuren:
     name: Zeldina
     kuerzel: ZEL
     raum: [dachboden, wohnzimmer]
-    groesse_px: 109                   # Finale-Fassung mit Zauberstab, ohne Karton
+    groesse_px: 196                   # Finale-Fassung mit Zauberstab, ohne Karton
     spielbar: false
 
   - id: modell_0815
     name: Modell 08/15
     kuerzel: HAU
     raum: [dachboden, wohnzimmer]    # nur mit FREUND_0815
-    groesse_px: 109
+    groesse_px: 196
     spielbar: false
 
   - id: toadi

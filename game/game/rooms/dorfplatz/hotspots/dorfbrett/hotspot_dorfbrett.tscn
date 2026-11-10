@@ -7,9 +7,9 @@ script = ExtResource("1_o6uy8")
 script_name = "Dorfbrett"
 description = "Dorfbrett"
 cursor = 1
-interaction_polygon = PackedVector2Array(-41, -42, 41, -42, 41, 42, -41, 42)
+interaction_polygon = PackedVector2Array(-55, -56, 55, -56, 55, 56, -55, 56)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=114645989]
 visible = false
 modulate = Color(1, 0, 1, 1)
-polygon = PackedVector2Array(-18, -18, 18, -18, 18, 18, -18, 18)
+polygon = PackedVector2Array(-24, -24, 24, -24, 24, 24, -24, 24)

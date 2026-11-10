@@ -7,9 +7,9 @@ script = ExtResource("1_a2oj5")
 script_name = "Geheimtuer"
 description = "Geheimtuer"
 cursor = 1
-interaction_polygon = PackedVector2Array(-27, -75, 27, -75, 27, 75, -27, 75)
+interaction_polygon = PackedVector2Array(-36, -100, 36, -100, 36, 100, -36, 100)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=411695646]
 visible = false
 modulate = Color(1, 0, 1, 1)
-polygon = PackedVector2Array(-18, -18, 18, -18, 18, 18, -18, 18)
+polygon = PackedVector2Array(-24, -24, 24, -24, 24, 24, -24, 24)

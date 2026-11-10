@@ -46,7 +46,7 @@ func _zustand_anwenden() -> void:
 		n = 0
 	for i in n:
 		if has_character(REIHE[i]):
-			C.get_character(REIHE[i]).position = get_marker_position("BrueckeMitte") + Vector2(-36 + 36 * i, 0)
+			C.get_character(REIHE[i]).position = get_marker_position("BrueckeMitte") + Vector2(-48 + 48 * i, 0)
 	if not Zustand.geloest("R3") and Zustand.ist("W1_PIXEL_IM_FELL") \
 			and has_character("SchmiedeZiege") and has_character("XxlZiege"):
 		Zustand.loese("R3")

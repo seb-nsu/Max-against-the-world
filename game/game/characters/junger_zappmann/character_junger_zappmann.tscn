@@ -5,12 +5,12 @@
 
 [node name="CharacterJungerZappmann" type="Area2D" unique_id=1700402541]
 script = ExtResource("1_aewwi")
-walk_speed = 90.0
-dialog_pos = Vector2(0, -109)
+walk_speed = 120.0
+dialog_pos = Vector2(0, -193)
 script_name = "JungerZappmann"
 description = "UI_OBJ_JUNGER_ZAPPMANN"
 cursor = 8
-interaction_polygon = PackedVector2Array(-17.5, -105, 17.5, -105, 17.5, 0, -17.5, 0)
+interaction_polygon = PackedVector2Array(-23.5, -189, 23.5, -189, 23.5, 0, -23.5, 0)
 
 [node name="ScalingPolygon" type="CollisionPolygon2D" parent="." unique_id=1277467443]
 polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
@@ -20,11 +20,11 @@ polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=193073391]
 texture_filter = 1
 texture = ExtResource("2_s2m2i")
-offset = Vector2(0, -52.5)
+offset = Vector2(0, -94.5)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1610300276]
 visible = false
-polygon = PackedVector2Array(-17.5, -105, 17.5, -105, 17.5, 0, -17.5, 0)
+polygon = PackedVector2Array(-23.5, -189, 23.5, -189, 23.5, 0, -23.5, 0)
 
 [node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=392478501]
 visible = false

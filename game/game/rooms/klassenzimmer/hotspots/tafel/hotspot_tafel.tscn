@@ -7,9 +7,9 @@ script = ExtResource("1_oc3go")
 script_name = "Tafel"
 description = "Tafel"
 cursor = 1
-interaction_polygon = PackedVector2Array(-53, -30, 53, -30, 53, 30, -53, 30)
+interaction_polygon = PackedVector2Array(-71, -40, 71, -40, 71, 40, -71, 40)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1025908930]
 visible = false
 modulate = Color(1, 0, 1, 1)
-polygon = PackedVector2Array(-18, -18, 18, -18, 18, 18, -18, 18)
+polygon = PackedVector2Array(-24, -24, 24, -24, 24, 24, -24, 24)

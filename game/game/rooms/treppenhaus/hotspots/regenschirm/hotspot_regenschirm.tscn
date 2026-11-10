@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://c6mame6t30r2k"]
+
+[ext_resource type="Script" path="res://game/rooms/treppenhaus/hotspots/regenschirm/hotspot_regenschirm.gd" id="1_l5d52"]
+
+[node name="Regenschirm" type="Area2D" unique_id=340839539]
+script = ExtResource("1_l5d52")
+script_name = "Regenschirm"
+description = "Regenschirm"
+cursor = 1
+interaction_polygon = PackedVector2Array(-13.5, -41.5, 13.5, -41.5, 13.5, 41.5, -13.5, 41.5)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=9834647]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://caymi67qp5qa5"]
+
+[ext_resource type="Script" path="res://game/rooms/wohnzimmer/hotspots/stehlampe/hotspot_stehlampe.gd" id="1_p44fv"]
+
+[node name="Stehlampe" type="Area2D" unique_id=1248078976]
+script = ExtResource("1_p44fv")
+script_name = "Stehlampe"
+description = "Stehlampe"
+cursor = 1
+interaction_polygon = PackedVector2Array(-24, -52.5, 24, -52.5, 24, 52.5, -24, 52.5)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1783981190]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

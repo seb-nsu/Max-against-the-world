@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://c2t7jwt6hfjuj"]
+
+[ext_resource type="Script" path="res://game/rooms/wohnzimmer/hotspots/schrank/hotspot_schrank.gd" id="1_1giut"]
+
+[node name="Schrank" type="Area2D" unique_id=837193103]
+script = ExtResource("1_1giut")
+script_name = "Schrank"
+description = "Schrank"
+cursor = 1
+interaction_polygon = PackedVector2Array(-55, -137.5, 55, -137.5, 55, 137.5, -55, 137.5)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=991232107]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

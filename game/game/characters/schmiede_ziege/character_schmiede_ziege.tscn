@@ -5,12 +5,12 @@
 
 [node name="CharacterSchmiedeZiege" type="Area2D" unique_id=1898849327]
 script = ExtResource("1_oo3ut")
-walk_speed = 135.0
-dialog_pos = Vector2(0, -56)
+walk_speed = 180.0
+dialog_pos = Vector2(0, -97)
 script_name = "SchmiedeZiege"
 description = "UI_OBJ_SCHMIEDE_ZIEGE"
 cursor = 8
-interaction_polygon = PackedVector2Array(-15, -52, 15, -52, 15, 0, -15, 0)
+interaction_polygon = PackedVector2Array(-20, -93, 20, -93, 20, 0, -20, 0)
 
 [node name="ScalingPolygon" type="CollisionPolygon2D" parent="." unique_id=260048855]
 polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
@@ -20,11 +20,11 @@ polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1904902326]
 texture_filter = 1
 texture = ExtResource("2_e46b8")
-offset = Vector2(0, -26)
+offset = Vector2(0, -46.5)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=2140435289]
 visible = false
-polygon = PackedVector2Array(-15, -52, 15, -52, 15, 0, -15, 0)
+polygon = PackedVector2Array(-20, -93, 20, -93, 20, 0, -20, 0)
 
 [node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=947721297]
 visible = false

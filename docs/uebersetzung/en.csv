@@ -357,6 +357,8 @@ P0_DACH_MAX_0100,Sounds like a season with too many episodes.
 P0_DACH_MAX_0120,How about one piece of the password per thing?
 P0_DACH_MAX_0150,No.
 P0_DACH_MAX_0210,Pixel is lying on the power cable. He picked the warmest spot in the house. Respect.
+P0_DACH_MAX_0212,"Pixel is sitting on the workbench, digesting. With dignity."
+P0_DACH_MAX_0213,He's purring in his sleep. Or growling. With Pixel they sound the same.
 P0_DACH_MAX_0220,He weighs as much as a moving box. A full one.
 P0_DACH_MAX_0240,"Grandpa's toolbox. Screwdriver, wire, tuna. The usual filing system."
 P0_DACH_MAX_0245,"Under the wire there's a note: ""Tools for emergencies. And for Pixel."" I think that's the same thing."
@@ -370,7 +372,7 @@ P0_DACH_MAX_0390,"A cat with a help function. Like a chatbot, only hairier."
 P0_DACH_MAX_0400,"The Zap-O-Matic. Off. As long as Pixel's on the cable, Grandpa won't switch it on."
 P0_DACH_MAX_0405,The screen is black. I can see my reflection. It looks just as bored as I am.
 P0_DACH_MAX_0410,It's on. It just isn't showing anything. Looks like a loading screen that gave up.
-P0_DACH_MAX_0415,Snow on every channel. The oldest weather in the world. Pixel says it used to be the late-night programme.
+P0_DACH_MAX_0415,"No aerial, just snow. ""Model coat hanger"", Grandpa says. I hope he meant that figuratively."
 P0_DACH_MAX_0430,When the programmes were over? TV just … ended?
 P0_DACH_MAX_0450,"Grandpa's wardrobe. Three cardigans, all brown, all with tools in the pockets."
 P0_DACH_MAX_0455,Right at the back there's a fourth cardigan. Green. He only wears it on special occasions. He hasn't found one yet.
@@ -384,23 +386,24 @@ P0_DACH_MAX_0680,"Channel 4. Looks like channel 3, only more boring."
 P0_DACH_MAX_0840,"A note. Grandpa, that's like a spoiler you're not allowed to read."
 P0_DACH_MAX_0842,I hold it up to the light. All I see is Grandpa's thumbprint. I'd have recognised that anyway.
 P0_DACH_MAX_0870,Did I just agree to this? I don't think I agreed to this –
-P0_DACH_MAX_0910,Grandpa's first attempt at an underwater time machine. The fish didn't make it.
-P0_DACH_MAX_0915,It has a snorkel. The fish. Grandpa really thought of everything. Except air.
+P0_DACH_MAX_0910,"A stuffed fish. The sign says: ""Test pilot""."
+P0_DACH_MAX_0915,It's wearing a tiny snorkel. Grandpa thought of everything. Except the fish.
 P0_DACH_MAX_0930,A pyramid and a neon city. Grandpa has very broad taste. Or travel plans.
-P0_DACH_MAX_0935,Grandpa drew crosses in the corner of the poster. Like destinations. Or shopping stops.
+P0_DACH_MAX_0935,"Grandpa wrote in the margin: ""Sunscreen. Tuna. Max?"" I'm on a packing list."
 P0_DACH_MAX_0940,A toaster with a propeller. Flying breakfast. Never again.
-P0_DACH_MAX_0942,There's still a crumb stuck to the propeller. It flew. I don't know how far. I don't want to know.
+P0_DACH_MAX_0942,There's a crumb stuck to the propeller. The toaster survived the flight. The toast didn't.
 P0_DACH_MAX_0960,"""Hits for Inventors, Volume 3"". So there are two worse ones."
 P0_DACH_MAX_0965,"Grandpa ticked a song on the sleeve: ""My Heart Is a Soldering Iron."" I'm scared of the melody."
 P0_DACH_MAX_0970,"The wingback chair. Dangerously comfy. If I sit in that, I'll never get out again."
-P0_DACH_MAX_0975,I just look at it and my legs already feel heavy. That chair has its own gravity. Like a black hole with cushions.
+P0_DACH_MAX_0975,There's something black with buttons in the crack. The remote? No. A glasses case.
 P0_DACH_MAX_0980,A workbench full of half-finished inventions. Like my homework folder.
 P0_DACH_MAX_0985,Half a toothbrush with a motor. Half an umbrella with a lamp. Grandpa only ever invents the first half.
 P0_DACH_MAX_0990,The skylight. Outside is the world. Overrated.
 P0_DACH_MAX_0995,"A pigeon is sitting on the glass, looking in. It thinks we're weird too."
 P0_DACH_MAX_1000,That's the way down. To the sofa. No. Focus.
+P0_DACH_MAX_1005,I already knelt down by the hatch. Then I thought about the password. I'm staying.
 P0_DACH_MAX_1010,"The floor hatch. The sofa's down there. I can't see it, but I can feel it."
-P0_DACH_MAX_1015,I can hear the sofa calling from downstairs. It's saying my name. It sounds very cosy.
+P0_DACH_MAX_1015,I listened down the hatch for a second. The sofa is silent. It's sulking because I left.
 P0_DACH_MAX_1110,Pixel doesn't want wire. Pixel wants fish. Pixel always wants fish.
 P0_DACH_MAX_1130,The can opener doesn't fit in the TV. I checked.
 P0_DACH_MAX_1150,"Power first, then reception. And for power, the cat has to get off the cable."
@@ -416,6 +419,44 @@ P0_DACH_MAX_1430,Go back to sleep.
 P0_DACH_MAX_1450,And what if the commercial break doesn't come?
 P0_DACH_MAX_1470,Thanks. I think.
 P0_DACH_MAX_1490,Which one flies?
+P0_DACH_MAX_1610,I'm not rummaging in Grandpa's tools. Something in there definitely bites.
+P0_DACH_MAX_1615,I lifted the lid. A tape measure snapped at me. I'm closing it again.
+P0_DACH_MAX_1620,I'm not wearing one of Grandpa's cardigans. I still have a reputation. A small one.
+P0_DACH_MAX_1625,I touched the green cardigan. It's softer than expected. I'm not telling anyone.
+P0_DACH_MAX_1630,I'm not turning the page. I don't want to know what Grandpa has planned for December.
+P0_DACH_MAX_1635,"Okay, I flipped ahead. December just says ""Pixel: salmon"". Good planning."
+P0_DACH_MAX_1640,I'm not touching it. It looks so reproachful.
+P0_DACH_MAX_1645,I did poke it. The snorkel fell off. I quickly put it back on.
+P0_DACH_MAX_1650,I press buttons on all of them. Somewhere a garage door opens. We don't have a garage.
+P0_DACH_MAX_1655,I pressed again. Across the street a light goes out. I'm not pressing anymore.
+P0_DACH_MAX_1660,"I'll leave it up. Grandpa made the crosses, not me."
+P0_DACH_MAX_1665,I pressed the corner back on. My biggest contribution to saving the world so far.
+P0_DACH_MAX_1670,I'm not putting bread in. I don't want to be the reason it takes off.
+P0_DACH_MAX_1675,I only touched the lever. The propeller turns once. It saw me.
+P0_DACH_MAX_1680,I'm not switching it on. Pixel would never forgive me.
+P0_DACH_MAX_1685,I looked at the switch. It looked back. I'm leaving it alone.
+P0_DACH_MAX_1690,I don't cook. I order. That's an art too.
+P0_DACH_MAX_1695,I did look inside. The chocolate cake page is covered in grease stains. And little hearts.
+P0_DACH_MAX_1700,"I'm not putting it on. ""Schlager for Inventors"" is warning enough."
+P0_DACH_MAX_1705,I touched the needle. One note came out. A single one. It was already too much.
+P0_DACH_MAX_1710,I'm not sitting in it. I know my weaknesses. It's one of them.
+P0_DACH_MAX_1715,I sat on the armrest. Just the armrest. The chair still pulls. I'd rather stand.
+P0_DACH_MAX_1720,"I'm not finishing anything. That's Grandpa's principle, and I respect it."
+P0_DACH_MAX_1725,I tightened a screw. Something at the back falls over. Coincidence. Definitely.
+P0_DACH_MAX_1730,I can't reach it. And outside is just weather anyway.
+P0_DACH_MAX_1735,On tiptoe I can see a bit of sky. No bars. So no Wi-Fi there either.
+P0_DACH_MAX_1740,No power. Pixel is lying on the cable keeping it warm. With his entire weight.
+P0_DACH_MAX_1745,I knocked on the casing. Pixel opened one eye. And closed it again. He wins.
+P0_DACH_MAX_1750,I knock on it. Grandpa says that helps. It doesn't.
+P0_DACH_MAX_1755,Knocked again. Grandpa calls it old-school TV repair. Pixel calls it violence.
+P0_DACH_MAX_1810,"Boxes up to the roof. They all say ""Later""."
+P0_DACH_MAX_1815,"The bottom one says ""Later, really"". It's from 1979."
+P0_DACH_MAX_1820,I'm not tidying up. I'm a guest. Guests don't tidy. That's the law.
+P0_DACH_MAX_1825,I lifted one. It was empty. Grandpa keeps empty boxes. For boxes.
+P0_DACH_MAX_1830,"A socket. The whole Zap-O-Matic hangs on it. And, indirectly, saving the world."
+P0_DACH_MAX_1835,"Next to it Grandpa wrote: ""230 volts. Do not lick."" I'm not asking who that's for."
+P0_DACH_MAX_1840,I'm not plugging anything in or out. I respect electricity. And Grandpa.
+P0_DACH_MAX_1845,I hold my hand in front of it. It tingles. Or I'm imagining it. Either is enough for me.
 P0_DACH_NAR_0290,Pixel lifts his nose. One eye opens. Then the other.
 P0_DACH_OPA_0010,Max! Finally! Humanity stands at the abyss!
 P0_DACH_OPA_0030,Passwords are for people with a future. We might not have one anymore.
@@ -470,9 +511,9 @@ P0_DACH_PIX_0850_3,I think I hate TV travel most of all.
 P0_DACH_PIX_0880,Miiiaaaow!
 P0_DACH_PIX_0920,"Seventeen remotes, and the right one is never among them."
 P0_DACH_PIX_0925,I counted again. Still seventeen. One is missing. I know which. I'm not telling. I'm not your search engine.
-P0_DACH_PIX_0945,"We've come to an agreement. It stays off, I keep my other ear."
+P0_DACH_PIX_0945,"Grandpa's vacuum cleaner. It once sucked up my ear. Since then the rule is: it stays off, I stay away."
 P0_DACH_PIX_0946,It blinked. With its switch. I saw it. We don't talk about it.
-P0_DACH_PIX_0950,A dog-ear at chocolate cake. Interesting.
+P0_DACH_PIX_0950,A dog-ear at chocolate cake. A cat remembers things like that. A grandpa apparently doesn't.
 P0_DACH_PIX_0955,"Next to the chocolate cake: a date and a heart. In pencil. And very small: ""Don't forget again."""
 P0_DACH_PIX_1120,Don't stick me in the TV. I'm not an antenna. I'm a total work of art.
 P0_DACH_PIX_1230,I'd help. But I'm so nicely settled right now.
@@ -503,27 +544,71 @@ P0_INV_MAX_0055,"If I hold it up, maybe I'll pick up radio. Or aliens. Or Grandp
 P0_INV_MAX_0060,"Grandpa's travel bag. Smells of leather, adventure and a little bit of tuna."
 P0_INV_MAX_0065,"There's a note stuck inside: ""Max. Don't lose."" I don't know if it means the bag or me."
 P0_INV_PIX_0015,I can smell it through the tin. I can smell it through your bag. I can smell it through time.
-P0_TREP_MAX_0010,"Grandpa's hat. He never wears it, but it's always hanging here. Like a guard."
-P0_TREP_MAX_0015,"There's a feather in the hatband. From a pheasant or a pillow. With Grandpa, either is possible."
-P0_TREP_MAX_0020,"Afternoon outside, 1987 inside."
-P0_TREP_MAX_0025,"There's a cactus on the windowsill. It has survived Grandpa. Well, it's still alive. So is Grandpa."
+P0_TREP_MAX_0010,"Grandpa's hat. There's a feather in the band. Pheasant or pillow. With Grandpa, either is possible."
+P0_TREP_MAX_0015,"It smells of solder and peppermint. So, exactly like Grandpa."
+P0_TREP_MAX_0020,"Outside it's getting dark, inside it's 1987."
+P0_TREP_MAX_0025,There used to be a cactus on the windowsill. Grandpa watered it every day. That was the problem.
 P0_TREP_MAX_0030,Every step creaks in a different key. Grandpa calls it the alarm system.
-P0_TREP_MAX_0035,The seventh step creaks in a minor key. Anyone who steps on it instantly sounds sad.
+P0_TREP_MAX_0035,The seventh step creaks in a minor key. I always step over it. Without Wi-Fi I'm sad enough.
+P0_TREP_MAX_0040,I'm not putting it on. Next thing I know I'll be taking over Grandpa's hobbies.
+P0_TREP_MAX_0045,"Okay, I tried it on for a second. It slides over my eyes. Grandpa has a big head. Full of ideas."
+P0_TREP_MAX_0050,Shut. Since 1987. Grandpa says otherwise the present gets in.
+P0_TREP_MAX_0055,I rattled the handle. It rattled back. The window stays shut.
+P0_TREP_MAX_0060,First step. Creaks in a major key. The house knows I'm coming.
+P0_TREP_MAX_0065,"Second step. Creaks in F sharp. I'm not musical, but that sounds wrong."
+P0_TREP_MAX_0110,An umbrella. It's been leaning here as long as I can remember. It's never been outside.
+P0_TREP_MAX_0115,"There's a tag on the handle: ""Prototype 2. Do not open."" With Grandpa that's not a request. It's a warning."
+P0_TREP_MAX_0120,I'm not opening it. Indoors that's bad luck. At Grandpa's it might also be a propeller.
+P0_TREP_MAX_0125,"Fine, just a little. It whirs. I close it straight away. We're not talking about this."
+P0_TREP_MAX_0130,"Grandpa's coats. One for rain, one for sun, one for ""you never know""."
+P0_TREP_MAX_0135,Every coat pocket has a screwdriver in it. Grandpa never leaves the house unarmed.
+P0_TREP_MAX_0140,I'm not putting one on. They're for people who go outside voluntarily.
+P0_TREP_MAX_0145,I reached into a pocket. A sweet. From 1987. I put it back. It lives here.
+P0_TREP_MAX_0150,A ceiling lamp. Three dead flies inside. Displayed like in a museum.
+P0_TREP_MAX_0155,I counted again. Four flies. One is new. The lamp is collecting.
+P0_TREP_MAX_0160,I can't reach it. And I don't want to disturb the flies.
+P0_TREP_MAX_0165,"I'll jump anyway. No. I'm a sofa person, not a jumping person."
+P0_TREP_MAX_0170,"Crates under the stairs. One says ""Inventions, finished"". It's empty."
+P0_TREP_MAX_0175,"The biggest one says ""Inventions, half"". The lid won't close anymore."
+P0_TREP_MAX_0180,I'm not opening any. Whatever Grandpa puts under the stairs wants to stay there.
+P0_TREP_MAX_0185,"I nudged one. Something inside said ""Hello"". I'm just going to keep walking."
 P0_WOHN_MAX_0010,One bar. One single bar.
 P0_WOHN_MAX_0020,And that one's just for decoration.
 P0_WOHN_MAX_0040,Science doesn't have Wi-Fi.
 P0_WOHN_MAX_0060,…
 P0_WOHN_MAX_0070,Okay. That's not fair.
-P0_WOHN_MAX_0110,Grandpa's TV. Older than the internet and just as slow.
-P0_WOHN_MAX_0115,"It has a knob for ""colour"". Like that's optional. Grandpa keeps it at half. For atmosphere."
-P0_WOHN_MAX_0120,Grandma looks like someone forgot her birthday in every single photo.
-P0_WOHN_MAX_0125,In one photo Grandpa is holding up a cake. It's burnt. Grandma's laughing anyway. That must be love.
-P0_WOHN_MAX_0130,Cold tea. Grandpa forgets it every day. It's practically a tradition.
-P0_WOHN_MAX_0135,There's a biscuit in the tea. It sank a long time ago. Nobody saved it.
-P0_WOHN_MAX_0140,The remote used to live here. Now there's a remote-shaped ring of dust.
-P0_WOHN_MAX_0145,I put my hand in the dust ring. Doesn't fit. The remote had broader shoulders.
+P0_WOHN_MAX_0110,"Grandpa's TV. It has a knob for ""Colour"". As if that were optional."
+P0_WOHN_MAX_0115,"Grandpa turned ""Colour"" down to half. For atmosphere."
+P0_WOHN_MAX_0120,Grandpa's holding up a cake. It's burnt. Grandma's laughing anyway. That must be love.
+P0_WOHN_MAX_0125,In every other photo Grandma looks like someone forgot something. My money's on Grandpa.
+P0_WOHN_MAX_0130,Cold tea. Grandpa makes one every day and forgets it every day.
+P0_WOHN_MAX_0135,There's a biscuit at the bottom of the cup. Lost while dunking. We remember him.
+P0_WOHN_MAX_0140,A clean rectangle in the dust. This is where Grandpa's remote used to be.
+P0_WOHN_MAX_0145,Exactly its outline. Like a crime scene. Just without the chalk.
 P0_WOHN_MAX_0150,The sofa. My home. My life's work.
-P0_WOHN_MAX_0155,There's a dent in my exact shape. The sofa misses me. I haven't even left yet.
+P0_WOHN_MAX_0155,There's a dent in my shape. The sofa misses me already. I'm standing right next to it.
+P0_WOHN_MAX_0160,"Not lying down. If I lie down now, I won't get up until next year."
+P0_WOHN_MAX_0165,Just sit down for a sec. No. Everyone says that. And then it's Tuesday.
+P0_WOHN_MAX_0170,"I press ""On"". It hums, thinks for a moment and switches off again. I know the feeling."
+P0_WOHN_MAX_0175,"""On"" again. It hums louder. I think it's trying to tell me something. Something like ""No""."
+P0_WOHN_MAX_0180,I don't drink cold tea. I have principles. Two.
+P0_WOHN_MAX_0185,I only sniffed it. Cold tea smells like Monday.
+P0_WOHN_MAX_0190,I'll leave it. Grandma knows when a picture's crooked. Even from somewhere else.
+P0_WOHN_MAX_0195,I straighten it. Now all the others are crooked. I'll stop.
+P0_WOHN_MAX_0200,I'm not wiping that dust away. It's evidence.
+P0_WOHN_MAX_0205,I blew on it. Now the crime scene is gone. And I'm the prime suspect.
+P0_WOHN_MAX_0310,Grandpa's cupboard. It creaks if you just look at it. Like the stairs. Like Grandpa.
+P0_WOHN_MAX_0315,The key's in the lock. Grandpa never locks it. He says burglars have no taste.
+P0_WOHN_MAX_0320,"I'm not opening it. At Grandpa's, something always falls out."
+P0_WOHN_MAX_0325,"Okay, just a crack. An ironing board leans towards me. I close it very slowly."
+P0_WOHN_MAX_0330,A floor lamp with fringes. It gives exactly enough light to see the dust.
+P0_WOHN_MAX_0335,"There's a note on the base: ""Don't switch off. Loose connection."" Since when, it doesn't say."
+P0_WOHN_MAX_0340,"I'll leave it on. If I switch it off, it might never come back on."
+P0_WOHN_MAX_0345,I did wiggle it a bit. Now it's flickering in a huff. I'm not touching anything else.
+P0_WOHN_MAX_0350,Grandpa's newspaper. He does the crossword in pen. Even the wrong answers.
+P0_WOHN_MAX_0355,"""Device with a screen, nine letters"": Grandpa wrote ""ZAPOMATIC"". Then drew an extra box."
+P0_WOHN_MAX_0360,I don't read newspapers. They don't have a comment section.
+P0_WOHN_MAX_0365,"Three down: ""Wireless network, four letters"". Grandpa wrote ""NOPE""."
 P0_WOHN_MAX_1220,"Without Wi-Fi, time passes more slowly. That's physics. I think."
 P0_WOHN_OPA_0030,Maaax! Come up here! Science!
 P0_WOHN_OPA_0050,The new Wi-Fi password is up here!
@@ -532,9 +617,9 @@ SYS_ERS_MAX_0010,No.
 SYS_ERS_MAX_0020,That wouldn't even make sense in a TV show.
 SYS_ERS_MAX_0030,Doesn't work. Like my motivation.
 SYS_ERS_MAX_0040,I could. But why.
-SYS_ERS_MAX_0050,"Nice try, Max. Actually, no."
-SYS_ERS_MAX_0060,Better not. For the comments section.
-SYS_ERS_MAX_0070,"That's an idea. Not a good one, but an idea."
+SYS_ERS_MAX_0050,I thought about it for a second. That was enough.
+SYS_ERS_MAX_0060,I'd rather not. I have a feeling about this. A bad one.
+SYS_ERS_MAX_0070,Sounds like an idea. Feels like a mistake.
 SYS_ERS_MAX_0080,I saw that in a show once. It went wrong.
 SYS_ERS_MAX_0090,"There's probably an app for that. Not here, though."
 SYS_ERS_MAX_0100,I'd rather not download that.
@@ -544,13 +629,13 @@ SYS_ERS_MAX_0130,Grandpa would say: that used to work. Everything used to work.
 SYS_ERS_MAX_0140,Buffering. So: no.
 SYS_ERS_MAX_0150,I can feel my battery draining. Emotionally.
 SYS_ERS_MAX_0160,Not even with a cheat code.
-SYS_ERS_MAX_0170,Those don't go together. Like Pixel and manners.
+SYS_ERS_MAX_0170,Doesn't work. Like Grandpa's Wi-Fi.
 SYS_ERS_MAX_0180,I'll skip that. Like the intro.
 SYS_ERS_MAX_0190,I haven't had enough sleep for that.
 SYS_ERS_MAX_0200,That's not in any walkthrough. For good reason.
 SYS_ERS_MAX_0210,Hm. No. Hm.
 SYS_ERS_MAX_0220,That would be an episode nobody watches twice.
-SYS_ERS_MAX_0230,I'll keep my hands off that. At least one of them.
+SYS_ERS_MAX_0230,I'm keeping my hands off. All ten fingers.
 SYS_ERS_MAX_0240,My phone would have known. Would have.
 SYS_ERS_MAX_0250,"Almost. So, not at all."
 SYS_ERS_PIX_0110,"Interesting. No, wait. Not really."

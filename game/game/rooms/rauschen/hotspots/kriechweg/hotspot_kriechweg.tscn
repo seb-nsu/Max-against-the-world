@@ -7,9 +7,9 @@ script = ExtResource("1_p5vjb")
 script_name = "Kriechweg"
 description = "Kriechweg"
 cursor = 1
-interaction_polygon = PackedVector2Array(-96, -24, 96, -24, 96, 24, -96, 24)
+interaction_polygon = PackedVector2Array(-128, -32, 128, -32, 128, 32, -128, 32)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=930754978]
 visible = false
 modulate = Color(1, 0, 1, 1)
-polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+polygon = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)

@@ -30,110 +30,110 @@
 [node name="RoomWerkstatt" type="Node2D" unique_id=1792293231]
 script = ExtResource("1_1l0uq")
 script_name = "Werkstatt"
-width = 480
-height = 270
+width = 640
+height = 360
 
 [node name="WalkableAreas" type="Node2D" parent="." unique_id=204278127]
 
 [node name="Boden" parent="WalkableAreas" unique_id=1375847116 instance=ExtResource("2_lybr3")]
-interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(6, 210, 474, 210, 474, 267, 6, 267)])
+interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(8, 280, 632, 280, 632, 356, 8, 356)])
 
 [node name="Props" type="Node2D" parent="." unique_id=255660081]
 
 [node name="Background" parent="Props" unique_id=726181656 instance=ExtResource("3_d8xvw")]
-position = Vector2(240, 135)
+position = Vector2(320, 180)
 texture = ExtResource("4_5y4jy")
 description = "UI_RAUM_WERKSTATT"
 
 [node name="Brennspiegel" parent="Props" unique_id=1862823133 instance=ExtResource("5_gnr0d")]
-position = Vector2(415.5, 120)
+position = Vector2(554.0, 160)
 texture = ExtResource("6_rmc1g")
 description = "UI_OBJ_BRENNSPIEGEL"
-baseline = 12
-walk_to_point = Vector2(-1.5, 114)
+baseline = 16
+walk_to_point = Vector2(-2.0, 152)
 
 [node name="Waage" parent="Props" unique_id=1483313158 instance=ExtResource("7_ejpor")]
-position = Vector2(205.5, 148.5)
+position = Vector2(274.0, 198.0)
 texture = ExtResource("8_g86w8")
 description = "UI_OBJ_WAAGE"
-baseline = 7
-walk_to_point = Vector2(-1.5, 85.5)
+baseline = 9
+walk_to_point = Vector2(-2.0, 114.0)
 
 [node name="Messbecher" parent="Props" unique_id=1260863264 instance=ExtResource("9_l52y8")]
-position = Vector2(225, 150)
+position = Vector2(300, 200)
 texture = ExtResource("10_vuh5p")
 description = "UI_OBJ_MESSBECHER"
-baseline = 6
-walk_to_point = Vector2(0, 84)
+baseline = 8
+walk_to_point = Vector2(0, 112)
 
 [node name="Essigkrug" parent="Props" unique_id=1885147702 instance=ExtResource("11_cyfj3")]
-position = Vector2(420, 195)
+position = Vector2(560, 260)
 texture = ExtResource("12_vcl5c")
 description = "UI_OBJ_ESSIGKRUG"
-baseline = 15
-walk_to_point = Vector2(-6, 39)
+baseline = 20
+walk_to_point = Vector2(-8, 52)
 
 [node name="Hotspots" type="Node2D" parent="." unique_id=439770298]
 
 [node name="Badewanne" parent="Hotspots" unique_id=572086028 instance=ExtResource("13_o702s")]
-position = Vector2(78, 192)
+position = Vector2(104, 256)
 description = "UI_OBJ_BADEWANNE"
-baseline = 18
-walk_to_point = Vector2(0, 42)
+baseline = 24
+walk_to_point = Vector2(0, 56)
 
 [node name="Werkbank" parent="Hotspots" unique_id=482899012 instance=ExtResource("14_hxhnq")]
-position = Vector2(186, 183)
+position = Vector2(248, 244)
 description = "UI_OBJ_WERKBANK"
-baseline = 27
-walk_to_point = Vector2(0, 51)
+baseline = 36
+walk_to_point = Vector2(0, 68)
 
 [node name="Wurfhebel" parent="Hotspots" unique_id=93175918 instance=ExtResource("15_1150g")]
-position = Vector2(370.5, 175.5)
+position = Vector2(494.0, 234.0)
 description = "UI_OBJ_WURFHEBEL"
-baseline = 34
-walk_to_point = Vector2(-1.5, 58.5)
+baseline = 45
+walk_to_point = Vector2(-2.0, 78.0)
 
 [node name="Wasserorgel" parent="Hotspots" unique_id=48456285 instance=ExtResource("16_46mt1")]
-position = Vector2(69, 112.5)
+position = Vector2(92, 150.0)
 description = "UI_OBJ_WASSERORGEL"
-baseline = 40
-walk_to_point = Vector2(0, 121.5)
+baseline = 53
+walk_to_point = Vector2(0, 162.0)
 
 [node name="BauplanDampfmaschine" parent="Hotspots" unique_id=321512282 instance=ExtResource("17_hy4ik")]
-position = Vector2(139.5, 69)
+position = Vector2(186.0, 92)
 description = "UI_OBJ_BAUPLAN_DAMPFMASCHINE"
-baseline = 18
-walk_to_point = Vector2(-1.5, 162)
+baseline = 24
+walk_to_point = Vector2(-2.0, 216)
 
 [node name="ModellSchieferTurm" parent="Hotspots" unique_id=494153468 instance=ExtResource("18_w0ljt")]
-position = Vector2(175.5, 142.5)
+position = Vector2(234.0, 190.0)
 description = "UI_OBJ_MODELL_SCHIEFER_TURM"
-baseline = 13
-walk_to_point = Vector2(-1.5, 91.5)
+baseline = 17
+walk_to_point = Vector2(-2.0, 122.0)
 
 [node name="SkizzeKugelUndZylinder" parent="Hotspots" unique_id=1359166416 instance=ExtResource("19_7mv0j")]
-position = Vector2(196.5, 69)
+position = Vector2(262.0, 92)
 description = "UI_OBJ_SKIZZE_KUGEL_UND_ZYLINDER"
-baseline = 18
-walk_to_point = Vector2(-1.5, 162)
+baseline = 24
+walk_to_point = Vector2(-2.0, 216)
 
 [node name="Fenster" parent="Hotspots" unique_id=899874604 instance=ExtResource("20_syngy")]
-position = Vector2(303, 57)
+position = Vector2(404, 76)
 description = "UI_OBJ_FENSTER"
-baseline = 27
-walk_to_point = Vector2(0, 174)
+baseline = 36
+walk_to_point = Vector2(0, 232)
 
 [node name="Zahnraeder" parent="Hotspots" unique_id=1086081747 instance=ExtResource("21_fb74l")]
-position = Vector2(249, 120)
+position = Vector2(332, 160)
 description = "UI_OBJ_ZAHNRAEDER"
-baseline = 21
-walk_to_point = Vector2(0, 111)
+baseline = 28
+walk_to_point = Vector2(0, 148)
 
 [node name="AusgangHafen" parent="Hotspots" unique_id=2076176267 instance=ExtResource("22_gw4fb")]
-position = Vector2(463.5, 157.5)
+position = Vector2(618.0, 210.0)
 description = "UI_OBJ_AUSGANG_HAFEN"
-baseline = 52
-walk_to_point = Vector2(-7.5, 82.5)
+baseline = 69
+walk_to_point = Vector2(-10.0, 110.0)
 cursor = 9
 
 [node name="Regions" type="Node2D" parent="." unique_id=557667762]
@@ -141,15 +141,15 @@ cursor = 9
 [node name="Markers" type="Node2D" parent="." unique_id=1984845252]
 
 [node name="Start" parent="Markers" unique_id=871548643 instance=ExtResource("23_bjml8")]
-position = Vector2(444, 240)
+position = Vector2(592, 320)
 
 [node name="VonHafenSyrakus" parent="Markers" unique_id=758655716 instance=ExtResource("24_t4djd")]
-position = Vector2(444, 240)
+position = Vector2(592, 320)
 
 [node name="Characters" type="Node2D" parent="." unique_id=911311707]
 
 [node name="CharacterArchimedes *" parent="Characters" unique_id=1777843719 instance=ExtResource("25_sxx04")]
-position = Vector2(210, 234)
+position = Vector2(280, 312)
 
 [node name="CharacterHieron *" parent="Characters" unique_id=1474137787 instance=ExtResource("26_ufmie")]
-position = Vector2(300, 234)
+position = Vector2(400, 312)

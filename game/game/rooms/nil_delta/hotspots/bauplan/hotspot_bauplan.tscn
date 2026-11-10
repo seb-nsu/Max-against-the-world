@@ -7,9 +7,9 @@ script = ExtResource("1_ro0pw")
 script_name = "Bauplan"
 description = "Bauplan"
 cursor = 1
-interaction_polygon = PackedVector2Array(-15, -12, 15, -12, 15, 12, -15, 12)
+interaction_polygon = PackedVector2Array(-20, -16, 20, -16, 20, 16, -20, 16)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=613634097]
 visible = false
 modulate = Color(1, 0, 1, 1)
-polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+polygon = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)

@@ -7,9 +7,9 @@ script = ExtResource("1_pji5o")
 script_name = "Schreibpult"
 description = "Schreibpult"
 cursor = 1
-interaction_polygon = PackedVector2Array(-39, -27, 39, -27, 39, 27, -39, 27)
+interaction_polygon = PackedVector2Array(-52, -36, 52, -36, 52, 36, -52, 36)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=372123271]
 visible = false
 modulate = Color(1, 0, 1, 1)
-polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+polygon = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)

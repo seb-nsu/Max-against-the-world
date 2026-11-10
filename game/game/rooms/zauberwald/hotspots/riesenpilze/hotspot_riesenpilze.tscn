@@ -7,9 +7,9 @@ script = ExtResource("1_r6bc0")
 script_name = "Riesenpilze"
 description = "Riesenpilze"
 cursor = 1
-interaction_polygon = PackedVector2Array(-45, -53, 45, -53, 45, 53, -45, 53)
+interaction_polygon = PackedVector2Array(-60, -71, 60, -71, 60, 71, -60, 71)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=32151824]
 visible = false
 modulate = Color(1, 0, 1, 1)
-polygon = PackedVector2Array(-18, -18, 18, -18, 18, 18, -18, 18)
+polygon = PackedVector2Array(-24, -24, 24, -24, 24, 24, -24, 24)

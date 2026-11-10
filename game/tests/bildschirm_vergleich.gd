@@ -6,7 +6,7 @@ extends SceneTree
 ##
 ## Aufruf (aus dem Ordner game/, unter Linux ohne Bildschirm mit xvfb-run):
 ##   xvfb-run -s "-screen 0 1280x720x24" godot --path . --rendering-driver opengl3 \
-##       --resolution 480x270 -s res://tests/bildschirm_vergleich.gd -- [--aktualisieren] [AUSGABE]
+##       --resolution 640x360 -s res://tests/bildschirm_vergleich.gd -- [--aktualisieren] [AUSGABE]
 ## --aktualisieren schreibt die Referenzen neu (nach gewollten Grafikänderungen), sonst wird
 ## verglichen. Ausgabe: Standard user://bildschirm/.
 ##
@@ -16,8 +16,8 @@ extends SceneTree
 
 const STARTRAUM := "res://game/rooms/wohnzimmer/room_wohnzimmer.tscn"
 const ABSCHNITTE := ["prolog", "welt-1", "welt-2", "welt-3", "welt-4", "finale"]
-const BREITE := 480
-const HOEHE := 270
+const BREITE := 640
+const HOEHE := 360
 const KANAL := 24.0 / 255.0
 const ANTEIL := 0.005
 

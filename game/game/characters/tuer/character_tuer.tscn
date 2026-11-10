@@ -5,7 +5,7 @@
 
 [node name="CharacterTuer" type="Area2D" unique_id=1898839801]
 script = ExtResource("1_g42dk")
-walk_speed = 90.0
+walk_speed = 120.0
 dialog_pos = Vector2(0, -64)
 script_name = "Tuer"
 description = "UI_OBJ_TUER"

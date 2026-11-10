@@ -7,9 +7,9 @@ script = ExtResource("1_vlrci")
 script_name = "Niesrosen"
 description = "Niesrosen"
 cursor = 1
-interaction_polygon = PackedVector2Array(-30, -23, 30, -23, 30, 23, -30, 23)
+interaction_polygon = PackedVector2Array(-40, -31, 40, -31, 40, 31, -40, 31)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=643987389]
 visible = false
 modulate = Color(1, 0, 1, 1)
-polygon = PackedVector2Array(-18, -18, 18, -18, 18, 18, -18, 18)
+polygon = PackedVector2Array(-24, -24, 24, -24, 24, 24, -24, 24)

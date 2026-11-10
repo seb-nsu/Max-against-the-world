@@ -5,12 +5,12 @@
 
 [node name="CharacterZappmann" type="Area2D" unique_id=1013794678]
 script = ExtResource("1_gfvnb")
-walk_speed = 90.0
-dialog_pos = Vector2(0, -120)
+walk_speed = 120.0
+dialog_pos = Vector2(0, -213)
 script_name = "Zappmann"
 description = "UI_OBJ_ZAPPMANN"
 cursor = 8
-interaction_polygon = PackedVector2Array(-19, -116, 19, -116, 19, 0, -19, 0)
+interaction_polygon = PackedVector2Array(-26, -209, 26, -209, 26, 0, -26, 0)
 
 [node name="ScalingPolygon" type="CollisionPolygon2D" parent="." unique_id=1547098238]
 polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
@@ -20,11 +20,11 @@ polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=214909949]
 texture_filter = 1
 texture = ExtResource("2_2x5s1")
-offset = Vector2(0, -58)
+offset = Vector2(0, -104.5)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=2036345597]
 visible = false
-polygon = PackedVector2Array(-19, -116, 19, -116, 19, 0, -19, 0)
+polygon = PackedVector2Array(-26, -209, 26, -209, 26, 0, -26, 0)
 
 [node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=1534726231]
 visible = false

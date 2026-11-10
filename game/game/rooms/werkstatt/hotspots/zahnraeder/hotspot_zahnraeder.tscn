@@ -7,9 +7,9 @@ script = ExtResource("1_8fbp4")
 script_name = "Zahnraeder"
 description = "Zahnraeder"
 cursor = 1
-interaction_polygon = PackedVector2Array(-21, -21, 21, -21, 21, 21, -21, 21)
+interaction_polygon = PackedVector2Array(-28, -28, 28, -28, 28, 28, -28, 28)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=453981547]
 visible = false
 modulate = Color(1, 0, 1, 1)
-polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+polygon = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
