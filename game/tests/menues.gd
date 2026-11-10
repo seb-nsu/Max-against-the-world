@@ -8,6 +8,10 @@ extends SceneTree
 ##   Wohnzimmer und blendet HUD und Popochiu-Oberfläche wieder ein
 ## - Pausemenü: öffnet nur, wenn nichts läuft, hält das Spiel an, Speichern zeigt zwölf Plätze,
 ##   Speichern und Fortsetzen aus dem Hauptmenü über den neuesten Platz
+## - Errungenschaften: Bedingungen aus Schaltern, Werten, Hilfe-Pfote und Nahansichten, Datei
+##   über alle Spielstände, Liste im Hauptmenü
+## - Controller: Tasten in der InputMap (auch nach dem Zurücksetzen), Zeiger springt zu
+##   Hotspots, B sieht einen Hotspot an, Optionen-Reiter mit LB/RB
 ##
 ## Aufruf (aus dem Ordner game/):
 ##   godot --headless --path . -s res://tests/menues.gd
@@ -54,12 +58,17 @@ func _lauf() -> void:
 	var einst = root.get_node("Einstellungen")
 	einst.datei = _ordner + "settings.cfg"
 	einst.laden()
+	var erg = root.get_node("Errungenschaften")
+	erg.datei = _ordner + "errungenschaften.cfg"
+	erg.laden()
 
 	_einstellungen(einst)
 	_klang(root.get_node("Klang"))
 	await _hauptmenue(spiel, einst)
 	await _pausemenue(spiel)
 	await _fortsetzen(spiel)
+	await _controller(spiel)
+	await _errungenschaften(erg)
 
 	print("")
 	print("Prüfungen: %d, Fehler: %d" % [_pruefungen, fehler.size()])
@@ -91,6 +100,9 @@ func _einstellungen(einst) -> void:
 	pruefe(einst.wert("musik") == 70 and einst.schrift(10) == 10, "Zurücksetzen")
 	pruefe(einst.taste("cq_figur_wechseln") == KEY_TAB, "Zurücksetzen: Tab wieder Figur wechseln")
 	pruefe(einst.taste("cq_pause") == KEY_ESCAPE, "Pause auf Esc")
+	pruefe(InputMap.has_action("cq_reiter_vor") and _pad_taste("cq_pause", JOY_BUTTON_START)
+		and _pad_taste("cq_figur_wechseln", JOY_BUTTON_LEFT_SHOULDER),
+		"Controller-Tasten auch nach dem Zurücksetzen")
 
 
 func _klang(klang) -> void:
@@ -120,16 +132,32 @@ func _hauptmenue(spiel, einst) -> void:
 	pruefe(not spiel.hud.visible, "HUD im Menü aus")
 	menue._hinweis_schliessen()
 	pruefe(not menue.hinweis_offen() and not einst.erster_start(), "Hinweis bestätigt")
-	pruefe(menue._knoepfe.size() == 5, "fünf Kanäle")
+	pruefe(menue._knoepfe.size() == 6, "sechs Kanäle")
 	pruefe(menue._knoepfe[0].disabled, "Fortsetzen ohne Spielstand aus")
 	pruefe(menue._kanal == 1, "ohne Spielstand steht Kanal 2 (Neues Spiel)")
 	menue._ausloesen(3)
 	await _warten()
 	var opt = menue.unter_offen()
 	pruefe(opt != null and opt._reiter.get_tab_count() == 5, "Optionen mit fünf Reitern")
+	var rb := InputEventAction.new()
+	rb.action = "cq_reiter_vor"
+	rb.pressed = true
+	opt._unhandled_input(rb)
+	pruefe(opt._reiter.current_tab == 1, "RB: nächster Reiter")
+	rb.action = "cq_reiter_zurueck"
+	opt._unhandled_input(rb)
+	opt._unhandled_input(rb)
+	pruefe(opt._reiter.current_tab == 4, "LB: zurück, vom ersten zum letzten Reiter")
 	opt.zurueck.emit()
 	await _warten()
 	pruefe(menue.unter_offen() == null and menue._haupt.visible, "Optionen geschlossen")
+	menue._ausloesen(4)
+	await _warten()
+	var liste = menue.unter_offen()
+	pruefe(liste != null and liste.zeilen().size() == 13, "Errungenschaften: 13 Zeilen")
+	liste.zurueck.emit()
+	await _warten()
+	pruefe(menue.unter_offen() == null and menue._haupt.visible, "Errungenschaften geschlossen")
 	menue._ausloesen(2)
 	await _warten()
 	var plaetze = menue.unter_offen()
@@ -199,6 +227,97 @@ func _fortsetzen(spiel) -> void:
 	pruefe(await _warten_bis(func(): return geladen[0] == 2, 20.0), "Startraum lädt Platz 2")
 	pruefe(spiel.start_platz == -1, "Startplatz verbraucht")
 	pruefe(await _warten_bis(func(): return _im_raum("Wohnzimmer"), 20.0), "nach dem Laden im Wohnzimmer")
+
+
+func _controller(spiel) -> void:
+	print("Controller")
+	var pad = root.get_node("Controller")
+	var a := InputEventJoypadButton.new()
+	a.button_index = JOY_BUTTON_DPAD_LEFT
+	a.pressed = true
+	Input.parse_input_event(a)
+	await _warten(3)
+	pruefe(pad.aktiv, "Controller-Taste schaltet auf Controller")
+	var punkte: Array = pad.hotspot_punkte()
+	pruefe(punkte.size() > 0, "Hotspots im Wohnzimmer als Ziele")
+	pad.zeiger_setzen(Vector2(0, 160))
+	await _warten()
+	pad.springen(Vector2.RIGHT)
+	pruefe(pad.zeiger.x > 0 and pad.zeiger in pad.ziele_sammeln(), "Steuerkreuz springt zum nächsten Ziel")
+	# B auf einem Hotspot: ansehen wie mit Rechtsklick
+	await _warten_bis(func(): return not root.get_node("Spielstand").beschaeftigt() \
+		and not root.get_node("G").is_blocked, 20.0)
+	var vorher: int = spiel.protokoll.size()
+	var mitte := punkte.filter(func(q): return q.y > 60 and q.y < 230)
+	var ziel: Vector2 = mitte[0] if not mitte.is_empty() else punkte[0]
+	pad.zeiger_setzen(ziel)
+	await _warten(4)
+	await physics_frame
+	await physics_frame
+	pad._klick(MOUSE_BUTTON_RIGHT, true)
+	pad._klick(MOUSE_BUTTON_RIGHT, false)
+	pruefe(await _warten_bis(func(): return spiel.protokoll.size() > vorher, 10.0),
+		"B sieht den Hotspot unter dem Zeiger an")
+	await _warten_bis(func(): return not root.get_node("E").playing_queue, 10.0)
+	var maus := InputEventMouseMotion.new()
+	maus.position = ziel + Vector2(40, 0)
+	Input.parse_input_event(maus)
+	await _warten(3)
+	pruefe(not pad.aktiv, "Mausbewegung schaltet zurück auf Maus")
+
+
+func _errungenschaften(erg) -> void:
+	print("Errungenschaften")
+	var zustand = root.get_node("Zustand")
+	var gesichert: Dictionary = zustand.speichern()
+	erg.zuruecksetzen()
+	pruefe(erg.anzahl_frei() == 0, "keine Errungenschaft am Anfang")
+	var gemeldet := []
+	erg.freigeschaltet.connect(func(id): gemeldet.append(id))
+	zustand.setze("P0_P3_GELOEST")
+	await _warten()
+	pruefe(erg.ist_frei("EMPFANG") and gemeldet == ["EMPFANG"], "Empfang nach P3")
+	zustand.stufe3_zaehler["welt-1"] = 1
+	zustand.setze_wert("ZWISCHENSPIEL", 1)
+	await _warten()
+	pruefe(not erg.ist_frei("OHNE_PFOTE_1"), "Ohne Pfote nicht mit Stufe 3")
+	zustand.stufe3_zaehler.clear()
+	zustand.setze_wert("ZWISCHENSPIEL", 2)
+	await _warten()
+	pruefe(erg.ist_frei("OHNE_PFOTE_1") and erg.ist_frei("OHNE_PFOTE_2")
+		and not erg.ist_frei("OHNE_PFOTE_3"), "Ohne Pfote für Welt 1 und 2")
+	for s in ["W2_LAUF_BESTLEISTUNG", "W2_HEBEL_BESTLEISTUNG", "W2_SPEER_BESTLEISTUNG", "W2_DISKUS_BESTLEISTUNG"]:
+		zustand.setze(s)
+	await _warten()
+	pruefe(not erg.ist_frei("FUENFKAMPF"), "Fünfkampf nicht mit vier Bestleistungen")
+	zustand.setze("W2_RINGEN_BESTLEISTUNG")
+	zustand.setze_wert("W3_SIMULATION_BESUCHE", 3)
+	await _warten()
+	pruefe(erg.ist_frei("FUENFKAMPF") and erg.ist_frei("DEJA_VU"), "Fünfkampf und Déjà-vu")
+	var alle: Array = erg.alle_nahansichten()
+	pruefe(alle.size() == 14, "14 Nahansichten im Spiel")
+	for n in alle.slice(1):
+		zustand.nahansicht_gesehen(n)
+	await _warten()
+	pruefe(not erg.ist_frei("NEUGIER"), "Neugier fehlt mit 13 von 14")
+	zustand.nahansicht_gesehen(alle[0])
+	await _warten()
+	pruefe(erg.ist_frei("NEUGIER"), "Neugier mit allen Nahansichten")
+	# Freigeschaltet bleibt, auch mit einem anderen Spielstand
+	zustand.laden(gesichert)
+	await _warten()
+	erg.laden()
+	pruefe(erg.ist_frei("EMPFANG") and erg.ist_frei("NEUGIER") and erg.anzahl_frei() == 6,
+		"Errungenschaften bleiben über Spielstände (Datei)")
+	erg.freischalten("GIBT_ES_NICHT")
+	pruefe(erg.anzahl_frei() == 6, "unbekannte ID wird ignoriert")
+
+
+func _pad_taste(aktion: String, knopf: JoyButton) -> bool:
+	for e in InputMap.action_get_events(aktion):
+		if e is InputEventJoypadButton and e.button_index == knopf:
+			return true
+	return false
 
 
 func _im_raum(sn: String) -> bool:

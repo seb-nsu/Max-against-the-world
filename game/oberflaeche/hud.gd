@@ -2,7 +2,7 @@ extends CanvasLayer
 ## Leiste über dem Spiel (05-spielsysteme.md, Bildschirmaufbau), Graubox-Fassung:
 ## Porträts von Max und Pixel oben links (aktive Figur hell, andere grau), Hilfe-Pfote oben
 ## rechts (ausgegraut, normal, leuchtend), Meldungen unten, Hotspot-Punkte bei gehaltener
-## Umschalttaste. Die endgültige Oberfläche entsteht nach dem freigegebenen Mockup.
+## Umschalttaste (Controller: X oder linker Trigger), auf Wunsch mit Namen (Barrierefreiheit). Die endgültige Oberfläche entsteht nach dem freigegebenen Mockup.
 
 const PLATZHALTER := "res://grafik/platzhalter/"
 const THEMA := "res://game/gui/resources/gui_theme.tres"
@@ -100,6 +100,12 @@ func ende_zeigen(text: String) -> void:
 	_ende.visible = true
 
 
+## Hilfe-Pfote ohne Maus (Controller: Y)
+func pfote_druecken() -> void:
+	if not _pfote.disabled and visible:
+		_pfote_geklickt()
+
+
 func _pfote_geklickt() -> void:
 	if Spiel.in_szene > 0 or E.playing_queue:
 		return
@@ -112,20 +118,34 @@ func _knopf(eltern: Control, bild: String, pos: Vector2, name_key: String) -> Te
 	k.texture_normal = load(PLATZHALTER + bild)
 	k.position = pos
 	k.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
+	k.focus_mode = Control.FOCUS_NONE  # Fokus gehört den Menüs (Controller)
 	k.mouse_entered.connect(func(): G.show_hover_text(name_key))
 	k.mouse_exited.connect(func(): G.show_hover_text())
 	eltern.add_child(k)
 	return k
 
 
-## Kleine Punkte auf allen anklickbaren Objekten des Raums (Umschalttaste halten).
+## Kleine Punkte auf allen anklickbaren Objekten des Raums (Umschalttaste halten), mitten auf
+## der Klickfläche, dort wo auch der Controller-Zeiger einrastet. Mit „Hotspot-Namen zeigen“
+## steht der Name darüber.
 class _HotspotPunkte extends Control:
 	func _draw() -> void:
 		if not is_instance_valid(R.current):
 			return
 		var xf := get_viewport().get_canvas_transform()
+		var namen: bool = Einstellungen.wert("hotspot_namen")
+		var schrift := get_theme_default_font()
+		var groesse := Einstellungen.schrift(7)
 		for c in get_tree().get_nodes_in_group("PopochiuClickable"):
-			if c is PopochiuClickable and c.visible and c.clickable and c != C.player:
-				var p: Vector2 = xf * (c.global_position + c.interaction_polygon_position)
+			if c is PopochiuClickable and c.is_visible_in_tree() and c.clickable and c != C.player:
+				var p: Vector2 = xf * Controller.punkt(c)
 				draw_circle(p, 2.5, Color(0.15, 0.17, 0.27))
 				draw_circle(p, 1.5, Color(0.99, 0.9, 0.38))
+				if namen and schrift and not c.description.is_empty():
+					var text := tr(c.description)
+					var breite := schrift.get_string_size(text, HORIZONTAL_ALIGNMENT_LEFT, -1, groesse).x
+					var ort := Vector2(clampf(p.x - breite / 2.0, 1.0, size.x - breite - 1.0), p.y - 4.0)
+					draw_string_outline(schrift, ort, text, HORIZONTAL_ALIGNMENT_LEFT, -1, groesse, 3,
+						Color(0.09, 0.08, 0.15))
+					draw_string(schrift, ort, text, HORIZONTAL_ALIGNMENT_LEFT, -1, groesse,
+						Color(0.99, 0.9, 0.38))

@@ -278,6 +278,36 @@ UI_KANAL_NEUES_SPIEL,"Kein WLAN, ein Dachboden und ein Opa mit einer Erfindung."
 UI_KANAL_LADEN,Einen gespeicherten Spielstand wählen.,Pick a saved game.
 UI_KANAL_OPTIONEN,"Ton, Bild, Tasten und Barrierefreiheit.","Sound, display, keys and accessibility."
 UI_KANAL_BEENDEN,Fernseher aus. Bis bald!,TV off. See you soon!
+UI_MENUE_ERRUNGENSCHAFTEN,Errungenschaften,Achievements
+UI_KANAL_ERRUNGENSCHAFTEN,"Was du schon geschafft hast, und was noch fehlt.","What you have done so far, and what is still missing."
+UI_ERRUNGENSCHAFTEN_ZAHL,%d von %d,%d of %d
+UI_ERRUNGENSCHAFT_FREI,Errungenschaft: %s,Achievement: %s
+UI_ERR_EMPFANG,Empfang,Reception
+UI_ERR_EMPFANG_TEXT,"Den Prolog beendet, der Fernseher läuft.","Finished the prologue, the TV is on."
+UI_ERR_ZIEGENFLUESTERER,Ziegenflüsterer,Goat Whisperer
+UI_ERR_ZIEGENFLUESTERER_TEXT,Alle drei Ziegen über die Brücke gebracht.,Got all three goats across the bridge.
+UI_ERR_OHNE_PFOTE_1,"Ohne Pfote: Welt 1","No Paw: World 1"
+UI_ERR_OHNE_PFOTE_1_TEXT,Welt 1 ohne Lösungs-Hinweis der Hilfe-Pfote geschafft.,Finished World 1 without a solution hint from the help paw.
+UI_ERR_FUENFKAMPF,Fünfkampf,Pentathlon
+UI_ERR_FUENFKAMPF_TEXT,Alle fünf Disziplinen in Welt 2 mit Bestleistung.,All five events in World 2 with a personal best.
+UI_ERR_OHNE_PFOTE_2,"Ohne Pfote: Welt 2","No Paw: World 2"
+UI_ERR_OHNE_PFOTE_2_TEXT,Welt 2 ohne Lösungs-Hinweis der Hilfe-Pfote geschafft.,Finished World 2 without a solution hint from the help paw.
+UI_ERR_DEJA_VU,Déjà-vu,Déjà Vu
+UI_ERR_DEJA_VU_TEXT,Die Simulation in Welt 3 zum dritten Mal betreten.,Entered the simulation in World 3 for the third time.
+UI_ERR_FREUND_0815,Freund 08/15,Friend 08/15
+UI_ERR_FREUND_0815_TEXT,Modell 08/15 als Freund gewonnen.,Made a friend of Model 08/15.
+UI_ERR_OHNE_PFOTE_3,"Ohne Pfote: Welt 3","No Paw: World 3"
+UI_ERR_OHNE_PFOTE_3_TEXT,Welt 3 ohne Lösungs-Hinweis der Hilfe-Pfote geschafft.,Finished World 3 without a solution hint from the help paw.
+UI_ERR_ZAPP_MEISTER,Zapp-Meister,Zap Master
+UI_ERR_ZAPP_MEISTER_TEXT,Alle Kanäle der Programmzeitschrift gefunden.,Found every channel in the TV guide.
+UI_ERR_OHNE_PFOTE_4,"Ohne Pfote: Welt 4","No Paw: World 4"
+UI_ERR_OHNE_PFOTE_4_TEXT,Welt 4 ohne Lösungs-Hinweis der Hilfe-Pfote geschafft.,Finished World 4 without a solution hint from the help paw.
+UI_ERR_EINKAUFSLISTE,Einkaufsliste komplett,Shopping List Complete
+UI_ERR_EINKAUFSLISTE_TEXT,Alle Wünsche von Pixel stehen im Notizbuch.,All of Pixel's wishes are in the notebook.
+UI_ERR_NEUGIER,Neugier,Curiosity
+UI_ERR_NEUGIER_TEXT,Jede Nahansicht im Spiel geöffnet.,Opened every close-up in the game.
+UI_ERR_WELT_GERETTET,Welt gerettet,World Saved
+UI_ERR_WELT_GERETTET_TEXT,Das Finale gesehen.,Watched the finale.
 UI_EPILEPSIE_TITEL,Bevor es losgeht,Before you start
 UI_EPILEPSIE,"Bei sehr wenigen Menschen können blinkende Lichter oder schnelle Bildwechsel epileptische Anfälle auslösen, auch ohne dass sie vorher davon wussten. Wenn dir beim Spielen schwindelig wird oder du Zuckungen bemerkst, hör sofort auf. In den Optionen unter Barrierefreiheit kannst du Flackern und Bildschirmwackeln abschalten.","In a very small number of people, flashing lights or rapid image changes can trigger epileptic seizures, even if they have never had one before. If you feel dizzy or notice twitching while playing, stop right away. Under Options › Accessibility you can turn off flicker and screen shake."
 UI_VERSTANDEN,Verstanden,Got it
@@ -317,11 +347,18 @@ UI_OPT_UNTERTITEL,Untertitel,Subtitles
 UI_OPT_BRABBEL,Brabbel-Laute (Probe),Babble voices (trial)
 UI_OPT_GROSSE_SCHRIFT,Große Schrift,Large text
 UI_OPT_HOTSPOTS_DAUERHAFT,Hotspots immer zeigen,Always show hotspots
+UI_OPT_HOTSPOT_NAMEN,Namen zu den Hotspots zeigen,Show hotspot names
 UI_OPT_WACKELN_AUS,Bildschirmwackeln aus,Screen shake off
 UI_OPT_FLACKERN_REDUZIEREN,Flackern reduzieren,Reduce flicker
 UI_OPT_FARBENBLIND,Farbenblind-Hilfe,Colour-blind aid
 UI_OPT_TASTE_DRUECKEN,Taste drücken …,Press a key …
 UI_OPT_MAUS_GEHT_IMMER,Mit der Maus geht alles auch ohne Tasten.,Everything also works with the mouse alone.
+UI_OPT_CONTROLLER,Controller:,Controller:
+UI_PAD_A,"benutzen, gehen, reden","use, walk, talk"
+UI_PAD_B,"ansehen, zurück","look, back"
+UI_PAD_RB,Inventar,Inventory
+UI_PAD_STICK,Zeiger,Pointer
+UI_PAD_KREUZ,nächster Hotspot,next hotspot
 UI_OPT_ZURUECKSETZEN,Standard,Defaults
 UI_TASTE_TEXT_WEITER,Text weiter,Advance text
 UI_TASTE_FIGUR_WECHSELN,Figur wechseln,Switch character

@@ -146,7 +146,7 @@ Die Steuerung ist eine Zwei-Klick-Steuerung ohne Verbenleiste: Linksklick tut da
 | Rechtsklick | Ansehen |
 | Gegenstand im Inventar anklicken, dann Ziel | Kombinieren oder Benutzen mit; Rechtsklick legt ihn zurück. Den ausgewählten Gegenstand auf sich selbst anwenden darf eine eigene Zeile haben, aber kein Rätsel hängt davon ab |
 | Pixel-Feld ganz links in der Inventarleiste | Solange Max aktiv und Pixel wach ist, verhält sich Pixel wie ein Gegenstand: auswählen und auf ein Objekt oder eine Figur anwenden („Pixel auf Mensch“, Schnuppern auf Gegenständen) |
-| Umschalt/Shift (halten) | Zeigt alle Hotspots im Raum als kleine Punkte |
+| Umschalt/Shift (halten) | Zeigt alle Hotspots im Raum als kleine Punkte, mit Namen (in den Optionen abschaltbar) |
 | Tab oder Klick aufs Porträt | Wechsel zwischen Max und Pixel (ab Welt 1); im Prolog ohne Wirkung |
 | Linksklick, Leertaste oder Eingabetaste während Text | Text weiter: überspringt die aktuelle Zeile (Tasten in den Optionen umlegbar) |
 | Esc | Überspringt eine Zwischensequenz, sonst Pausemenü |
@@ -170,7 +170,7 @@ Mockup: `tools/ui_mockup_hd.py` zeichnet zwei Zustände auf dem Dachboden-Hinter
 
 | Bildschirm | Inhalt |
 | --- | --- |
-| Hauptmenü | Startszene des Spiels (`game/oberflaeche/hauptmenue.gd`). Titelbild mit Zapp-O-Mat; Fortsetzen (lädt den neuesten Stand, ohne Spielstand ausgegraut), Neues Spiel, Laden, Optionen, Beenden. Die Menüpunkte sind Fernsehkanäle 1 bis 5, der Bildschirm zeigt den gewählten Kanal (bei Fortsetzen Ort, Spielzeit und Datum), der Drehknopf dreht mit; Zifferntasten schalten direkt. Beim allerersten Start kommt vorher der Epilepsie-Hinweis |
+| Hauptmenü | Startszene des Spiels (`game/oberflaeche/hauptmenue.gd`). Titelbild mit Zapp-O-Mat; Fortsetzen (lädt den neuesten Stand, ohne Spielstand ausgegraut), Neues Spiel, Laden, Optionen, Errungenschaften, Beenden. Die Menüpunkte sind Fernsehkanäle 1 bis 6, der Bildschirm zeigt den gewählten Kanal (bei Fortsetzen Ort, Spielzeit und Datum), der Drehknopf dreht mit; Zifferntasten schalten direkt. Beim allerersten Start kommt vorher der Epilepsie-Hinweis |
 | Pausemenü (Esc) | Weiterspielen, Speichern, Laden, Optionen, Hauptmenü. Öffnet nur, wenn nichts läuft (in Zwischensequenzen und Gesprächen überspringt Esc), und hält das Spiel an. „Hauptmenü“ fragt mit einem zweiten Klick nach, weil Ungespeichertes verloren geht; das Spiel startet dafür neu, damit kein Zustand der alten Sitzung übrig bleibt |
 | Speichern und Laden | Zwölf Plätze mit Vorschaubild, Ort, Welt, Spielzeit und Datum, dazu Autospeicher und Schnellspeicher (siehe Speichern) |
 | Notizbuch | Öffnet sich aus dem Inventar, immer auf Seite 1. Seite 1: aktuelle Ziele, die das Hinweissystem mitpflegt. Seite 2: gesammelte Regeln und Passwort-Teile. Seite 3: Pixels Einkaufsliste als Running Gag, je Welt ein neuer Wunsch (Konzept, Running Gags) |
@@ -186,14 +186,28 @@ Mockup: `tools/ui_mockup_hd.py` zeichnet zwei Zustände auf dem Dachboden-Hinter
 | Audio | Gesamtlautstärke, Musik, Geräusche, Stimmen (je 0 bis 100, eigener Audio-Bus); stumm, solange das Fenster im Hintergrund ist |
 | Anzeige | Fenster, Vollbild oder randloses Fenster; Fenstergröße in ganzzahligen Stufen (960×540, 1440×810, 1920×1080); VSync; Bildrate 30, 60, 120 oder unbegrenzt |
 | Spiel | Sprache Deutsch oder Englisch; Textgeschwindigkeit (langsam, normal, schnell, sofort); Text weiter per Klick oder automatisch; Untertitel an oder aus (sobald es Stimmen gibt; Liedtexte haben immer Untertitel, kursiv mit Notenzeichen, bei den drei Rätsel-Liedern auch dann, wenn Untertitel aus sind, `04-audio.md`); Brabbel-Laute als Probe, bis die Entscheidung über die Sprachausgabe fällt |
-| Steuerung | Tastenbelegung für Text weiter (Standard Leertaste, Eingabetaste geht auch; Linksklick geht immer), Figur wechseln (Tab), Hotspots zeigen (Umschalt/Shift halten, damit keine Taste doppelt belegt ist), Pausemenü (Esc), Schnellspeichern (F5), Schnellladen (F9). Mit der Maus geht alles auch ohne Tasten |
-| Barrierefreiheit | Große Schrift (ein Viertel größer); Hotspots dauerhaft zeigen; Bildschirmwackeln aus; Flackern reduzieren (ersetzt Lampenflackern und Umschalt-Störungen durch weiche Varianten; ein Epilepsie-Hinweis erscheint beim ersten Start); Farbenblind-Hilfe (Farbcodes bekommen zusätzlich Symbole: Kreis, Dreieck, Quadrat, siehe Welt 3) |
+| Steuerung | Tastenbelegung für Text weiter (Standard Leertaste, Eingabetaste geht auch; Linksklick geht immer), Figur wechseln (Tab), Hotspots zeigen (Umschalt/Shift halten, damit keine Taste doppelt belegt ist), Pausemenü (Esc), Schnellspeichern (F5), Schnellladen (F9). Mit der Maus geht alles auch ohne Tasten. Darunter steht die Controller-Belegung (siehe Controller und Steam Deck) |
+| Barrierefreiheit | Große Schrift (ein Viertel größer); Hotspots dauerhaft zeigen; Namen zu den Hotspots zeigen (Standard an: wer die Hotspots zeigt, sieht auch, was sie sind); Bildschirmwackeln aus; Flackern reduzieren (ersetzt Lampenflackern und Umschalt-Störungen durch weiche Varianten; ein Epilepsie-Hinweis erscheint beim ersten Start); Farbenblind-Hilfe (Farbcodes bekommen zusätzlich Symbole: Kreis, Dreieck, Quadrat, siehe Welt 3) |
 
-Wackeln, Flackern und Farbenblind-Hilfe sind als Schalter da; sie wirken, sobald die Effekte mit der Grafik kommen.
+Wackeln, Flackern und Farbenblind-Hilfe sind als Schalter da. Jeder Effekt geht über `game/skripte/effekte.gd` (`CQEffekte.wackeln()`, `flackern_erlaubt()`, `weich_blinken()`, `farbsymbol()`), damit die Schalter überall gleich wirken, sobald die Effekte mit der Grafik kommen; wer einen Effekt baut, ruft diese Funktionen statt der Kamera oder eigener Zufallswerte.
 
-Steam-Tags für Barrierefreiheit, die das Spiel damit erfüllt: Untertitel, anpassbare Textgröße, Farbenblind-Modus, Tastenbelegung anpassbar, Steuerung nur mit der Maus, kein Zeitdruck. Die Liste wird vor der Store-Seite gegen Steams aktuelle Barrierefreiheits-Felder geprüft.
+Steam-Tags für Barrierefreiheit, die das Spiel damit erfüllt: Untertitel, anpassbare Textgröße, Farbenblind-Modus, Tastenbelegung anpassbar, Steuerung nur mit der Maus, volle Controller-Unterstützung, kein Zeitdruck. Die Liste wird vor der Store-Seite gegen Steams aktuelle Barrierefreiheits-Felder geprüft.
 
-**Später für Steam Deck und Controller:** Der Stick bewegt einen Zeiger, der an Hotspots einrastet; A wie Linksklick, B wie Rechtsklick, Schultertasten wechseln Figur und Inventar. Das plant Claude im Grundgerüst mit ein, baut es aber erst nach dem Vertical Slice.
+**Controller und Steam Deck** (`game/skripte/controller.gd`, Autoload „Controller“): Das ganze Spiel geht mit dem Gamepad, ohne Maus und Tastatur.
+
+| Taste | Im Spiel | In Menüs |
+| --- | --- | --- |
+| Linker Stick | Zeiger bewegen; über Hotspots wird er langsamer, beim Loslassen rastet er auf dem nächsten Hotspot ein (18 Pixel Umkreis) | Auswahl |
+| Steuerkreuz | Sprung zum nächsten Hotspot in der Richtung (auch Inventar, Porträts, Pfote, Knöpfe in Überlagerungen; bei offener Dialogauswahl nur deren Zeilen) | Auswahl, links/rechts verstellt Regler |
+| A | wie Linksklick: benutzen, gehen, reden, Text weiter | bestätigen |
+| B | wie Rechtsklick: ansehen, Gegenstand ablegen; schließt Notizbuch und Nahansicht | zurück |
+| X oder linker Trigger halten | Hotspots zeigen | – |
+| Y | Hilfe-Pfote | – |
+| LB | Figur wechseln | Reiter zurück (Optionen) |
+| RB | Zeiger in die Inventarleiste und wieder zurück | Reiter vor (Optionen) |
+| Start | Pausemenü, Zwischensequenz überspringen | schließt das Pausemenü |
+
+Der Zeiger ist die Maus: Er wird mit `warp_mouse` bewegt, A und B gehen als Mausklicks an den Viewport. So gilt für Popochiu, Inventar, Gespräche und Überlagerungen dieselbe Logik wie mit der Maus; eine echte Mausbewegung schaltet sofort zurück. Menüs mit Fokus (Haupt- und Pausemenü, Optionen, Spielstände, Errungenschaften) laufen über Godots `ui_*`-Aktionen. Die Tasten werden zur Laufzeit in die InputMap ergänzt, auch nach „Zurücksetzen“ in den Optionen; der Reiter Steuerung zeigt die Belegung. Offen für später: Steam-Input-Glyphen statt der Buchstaben, eigene Belegung der Controller-Tasten.
 
 ## Hinweissystem
 
@@ -215,18 +229,22 @@ Die Hilfe-Pfote gibt zu jedem offenen Rätselschritt drei Hinweise, vom Stups bi
 
 **Zählung:** Pro Welt wird gezählt, wie oft Stufe 3 genutzt wurde. Bei null gibt Pixel am Ende der Welt widerwillig zu, beeindruckt zu sein. Für eine Steam-Errungenschaft reicht derselbe Zähler.
 
-Errungenschaften (Steam): 13 Stück, alle aus Zählern und Schaltern, die das Spiel ohnehin speichert. Keine verlangt Zeitdruck oder Raten.
+Errungenschaften (Steam): 13 Stück, alle aus Zählern und Schaltern, die das Spiel ohnehin speichert. Keine verlangt Zeitdruck oder Raten. Gebaut in `game/skripte/errungenschaften.gd` (Autoload „Errungenschaften“): Nach jeder Änderung im Zustand werden alle Bedingungen geprüft. Freigeschaltet bleibt freigeschaltet, über alle Spielstände hinweg (`user://errungenschaften.cfg`); ist GodotSteam eingebunden, geht jede neue Errungenschaft unter ihrer ID auch an Steam, und beim Start wird nachgemeldet, was offline freigeschaltet wurde. Ohne Steam zeigt die Leiste unten eine Meldung. Das Hauptmenü listet alle auf (Kanal 5). Die ID ist der API-Name in Steamworks; Name und Beschreibung stehen in `uebersetzung/ui.csv` (UI\_ERR\_<ID>, UI\_ERR\_<ID>\_TEXT).
 
-- Ohne Pfote, Welt 1 bis 4 (vier Stück): keine Stufe 3 in der jeweiligen Welt
-- Empfang: Prolog beendet, der Fernseher läuft
-- Ziegenflüsterer: alle drei Ziegen über die Brücke
-- Fünfkampf: alle fünf Disziplinen in Welt 2 mit Bestleistung (Definition in `raetsel/welt-2.md`)
-- Déjà-vu: Simulation in Welt 3 zum dritten Mal betreten
-- Freund 08/15: Modell 08/15 als Freund gewonnen
-- Zapp-Meister: alle Kanäle der Programmzeitschrift gefunden
-- Einkaufsliste komplett: alle Wünsche Pixels im Notizbuch
-- Welt gerettet: Finale gesehen
-- Neugier: alle Nahansichten des Spiels geöffnet
+| ID | Name | Bedingung im Spiel |
+| --- | --- | --- |
+| EMPFANG | Empfang | Prolog beendet, der Fernseher läuft: P0\_P3\_GELOEST |
+| ZIEGENFLUESTERER | Ziegenflüsterer | alle drei Ziegen über die Brücke: Rätsel R4 in Welt 1 gelöst |
+| OHNE\_PFOTE\_1 bis \_4 | Ohne Pfote: Welt 1 bis 4 | Welt beendet und dort keine Stufe 3 (Zähler `stufe3_zaehler`). Beendet heißt: Welt 1 bis 3, sobald das Zwischenspiel danach beginnt (Wert ZWISCHENSPIEL ≥ Nummer); Welt 4 mit Rätsel R13 |
+| FUENFKAMPF | Fünfkampf | alle fünf Disziplinen in Welt 2 mit Bestleistung (Definition in `raetsel/welt-2.md`): W2\_LAUF\_, \_HEBEL\_, \_SPEER\_, \_DISKUS\_, \_RINGEN\_BESTLEISTUNG |
+| DEJA\_VU | Déjà-vu | Simulation in Welt 3 zum dritten Mal betreten: Wert W3\_SIMULATION\_BESUCHE ≥ 3 |
+| FREUND\_0815 | Freund 08/15 | Modell 08/15 als Freund gewonnen: FREUND\_0815 |
+| ZAPP\_MEISTER | Zapp-Meister | alle Kanäle der Programmzeitschrift gefunden: W4\_ALLE\_KANAELE |
+| EINKAUFSLISTE | Einkaufsliste komplett | alle Wünsche Pixels im Notizbuch: Wert EINKAUFSLISTE ≥ 4 |
+| NEUGIER | Neugier | alle 14 Nahansichten des Spiels geöffnet (Welt-Tabellen) |
+| WELT\_GERETTET | Welt gerettet | Finale gesehen: FI\_ENDE\_GESEHEN |
+
+Vier Namen gibt es in den Welt-Tabellen noch nicht; wer die Welt baut, legt sie unter `weitere_schalter` an und setzt sie: W3\_SIMULATION\_BESUCHE (Welt 3, zählt jedes Betreten der Simulation), W4\_ALLE\_KANAELE (Welt 4), EINKAUFSLISTE (Finale-Tabelle, Zahl der Wünsche auf Seite 3) und FI\_ENDE\_GESEHEN (Finale, nach dem Abspann). Wo eine Bedingung nicht als Schalter passt, schaltet `Errungenschaften.freischalten("ID")` direkt frei.
 
 **Datenformat:** Eine Datei pro Abschnitt, `game/daten/hinweise/<abschnitt>.json`, erzeugt von `tools/spieldaten.py` aus Welt-Tabelle und Skript (nie von Hand bearbeiten), mit einem Eintrag pro Schritt:
 
