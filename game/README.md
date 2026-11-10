@@ -55,6 +55,7 @@ python3 tools/skript_export.py          # docs/skript + ui.csv → lokalisierung
 python3 tools/spieldaten.py             # Welt-Tabellen, Hinweise → daten/welten, daten/hinweise
 python3 tools/godot_raeume.py           # + tools/layout/<abschnitt>.yaml → daten/raeume/*.json, Platzhalter
 python3 tools/layout_skizzen.py         # Layout-Skizzen mit Tiefe für die Konzeptbilder → docs/grafik/skizzen/
+python3 tools/prompts_zusammensetzen.py # fertige Konzeptbild-Prompts je Raum → docs/grafik/fertige-prompts/
 godot --headless --editor --path game -- --cq-bauen   # Godot-Bau: fehlende Popochiu-Objekte anlegen
 ```
 

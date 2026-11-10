@@ -34,6 +34,8 @@ jobs:
         run: python3 tools/audio_liste.py --pruefen
       - name: Jede Skriptzeile kommt im Spiel vor
         run: python3 tools/abdeckung.py --pruefen
+      - name: Fertige Prompts aktuell
+        run: python3 tools/prompts_zusammensetzen.py --pruefen
 
   godot:
     runs-on: ubuntu-latest
