@@ -1,16 +1,16 @@
 [gd_scene format=3 uid="uid://b1c52d20fbnb4"]
 
-[ext_resource type="Script" path="res://game/characters/brian/character_brian.gd" id="1_tdyvs"]
+[ext_resource type="Script" uid="uid://dvyxiofd7v4nf" path="res://game/characters/brian/character_brian.gd" id="1_tdyvs"]
 [ext_resource type="Texture2D" uid="uid://nt2wiy5w3la4" path="res://grafik/platzhalter/figur_brian.png" id="2_cm4vk"]
 
 [node name="CharacterBrian" type="Area2D" unique_id=1249299369]
 script = ExtResource("1_tdyvs")
 walk_speed = 90.0
-dialog_pos = Vector2(0, -91)
+dialog_pos = Vector2(0, -113)
 script_name = "Brian"
 description = "UI_OBJ_BRIAN"
 cursor = 8
-interaction_polygon = PackedVector2Array(-14.5, -87, 14.5, -87, 14.5, 0, -14.5, 0)
+interaction_polygon = PackedVector2Array(-18, -109, 18, -109, 18, 0, -18, 0)
 
 [node name="ScalingPolygon" type="CollisionPolygon2D" parent="." unique_id=637929522]
 polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
@@ -20,11 +20,11 @@ polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1347292347]
 texture_filter = 1
 texture = ExtResource("2_cm4vk")
-offset = Vector2(0, -43.5)
+offset = Vector2(0, -54.5)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=33352085]
 visible = false
-polygon = PackedVector2Array(-14.5, -87, 14.5, -87, 14.5, 0, -14.5, 0)
+polygon = PackedVector2Array(-18, -109, 18, -109, 18, 0, -18, 0)
 
 [node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=913979855]
 visible = false

@@ -1,16 +1,16 @@
 [gd_scene format=3 uid="uid://ca1k3f30fff3h"]
 
-[ext_resource type="Script" path="res://game/characters/dr_werbepause/character_dr_werbepause.gd" id="1_xibor"]
+[ext_resource type="Script" uid="uid://dhvy50kqsw2ri" path="res://game/characters/dr_werbepause/character_dr_werbepause.gd" id="1_xibor"]
 [ext_resource type="Texture2D" uid="uid://bl35g0w70ekg5" path="res://grafik/platzhalter/figur_dr_werbepause.png" id="2_w7ir3"]
 
 [node name="CharacterDrWerbepause" type="Area2D" unique_id=2081413659]
 script = ExtResource("1_xibor")
 walk_speed = 90.0
-dialog_pos = Vector2(0, -94)
+dialog_pos = Vector2(0, -116)
 script_name = "DrWerbepause"
 description = "UI_OBJ_DR_WERBEPAUSE"
 cursor = 8
-interaction_polygon = PackedVector2Array(-15, -90, 15, -90, 15, 0, -15, 0)
+interaction_polygon = PackedVector2Array(-18.5, -112, 18.5, -112, 18.5, 0, -18.5, 0)
 
 [node name="ScalingPolygon" type="CollisionPolygon2D" parent="." unique_id=422417181]
 polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
@@ -20,11 +20,11 @@ polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=152931598]
 texture_filter = 1
 texture = ExtResource("2_w7ir3")
-offset = Vector2(0, -45)
+offset = Vector2(0, -56)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=147451283]
 visible = false
-polygon = PackedVector2Array(-15, -90, 15, -90, 15, 0, -15, 0)
+polygon = PackedVector2Array(-18.5, -112, 18.5, -112, 18.5, 0, -18.5, 0)
 
 [node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=1127991993]
 visible = false

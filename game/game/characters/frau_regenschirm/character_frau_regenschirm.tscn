@@ -1,16 +1,16 @@
 [gd_scene format=3 uid="uid://c50i12f3nkdtd"]
 
-[ext_resource type="Script" path="res://game/characters/frau_regenschirm/character_frau_regenschirm.gd" id="1_6xney"]
+[ext_resource type="Script" uid="uid://bfp7ltqfkbmct" path="res://game/characters/frau_regenschirm/character_frau_regenschirm.gd" id="1_6xney"]
 [ext_resource type="Texture2D" uid="uid://cdr1jbidrlabu" path="res://grafik/platzhalter/figur_frau_regenschirm.png" id="2_ecwfa"]
 
 [node name="CharacterFrauRegenschirm" type="Area2D" unique_id=629299622]
 script = ExtResource("1_6xney")
 walk_speed = 90.0
-dialog_pos = Vector2(0, -88)
+dialog_pos = Vector2(0, -109)
 script_name = "FrauRegenschirm"
 description = "UI_OBJ_FRAU_REGENSCHIRM"
 cursor = 8
-interaction_polygon = PackedVector2Array(-14, -84, 14, -84, 14, 0, -14, 0)
+interaction_polygon = PackedVector2Array(-17.5, -105, 17.5, -105, 17.5, 0, -17.5, 0)
 
 [node name="ScalingPolygon" type="CollisionPolygon2D" parent="." unique_id=1918086353]
 polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
@@ -20,11 +20,11 @@ polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1382902270]
 texture_filter = 1
 texture = ExtResource("2_ecwfa")
-offset = Vector2(0, -42)
+offset = Vector2(0, -52.5)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=806309829]
 visible = false
-polygon = PackedVector2Array(-14, -84, 14, -84, 14, 0, -14, 0)
+polygon = PackedVector2Array(-17.5, -105, 17.5, -105, 17.5, 0, -17.5, 0)
 
 [node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=1120301023]
 visible = false

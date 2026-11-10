@@ -1,16 +1,16 @@
 [gd_scene format=3 uid="uid://pnveskiecrqi"]
 
-[ext_resource type="Script" path="res://game/characters/smaugi/character_smaugi.gd" id="1_ex6vp"]
+[ext_resource type="Script" uid="uid://cl5dwufaj5re6" path="res://game/characters/smaugi/character_smaugi.gd" id="1_ex6vp"]
 [ext_resource type="Texture2D" uid="uid://y4p8tnb3b1r" path="res://grafik/platzhalter/figur_smaugi.png" id="2_5oqpq"]
 
 [node name="CharacterSmaugi" type="Area2D" unique_id=2130994330]
 script = ExtResource("1_ex6vp")
 walk_speed = 135.0
-dialog_pos = Vector2(0, -186)
+dialog_pos = Vector2(0, -229)
 script_name = "Smaugi"
 description = "UI_OBJ_SMAUGI"
 cursor = 8
-interaction_polygon = PackedVector2Array(-30, -180, 30, -180, 30, 0, -30, 0)
+interaction_polygon = PackedVector2Array(-37.5, -225, 37.5, -225, 37.5, 0, -37.5, 0)
 
 [node name="ScalingPolygon" type="CollisionPolygon2D" parent="." unique_id=1686115364]
 polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
@@ -20,11 +20,11 @@ polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1889556893]
 texture_filter = 1
 texture = ExtResource("2_5oqpq")
-offset = Vector2(0, -90)
+offset = Vector2(0, -112.5)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=807540457]
 visible = false
-polygon = PackedVector2Array(-30, -180, 30, -180, 30, 0, -30, 0)
+polygon = PackedVector2Array(-37.5, -225, 37.5, -225, 37.5, 0, -37.5, 0)
 
 [node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=1933799109]
 visible = false

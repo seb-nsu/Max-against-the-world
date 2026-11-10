@@ -115,55 +115,55 @@ figuren:
     name: Max
     kuerzel: MAX
     raum: [unterstadt_strasse, apothekengasse, widerstandsbasis, laboreingang, stadtstrasse, kueche_orakel, buero_50, testkammer_1, testkammer_2, testkammer_3, kern]
-    groesse_px: 84   # Sonderformen: Max als Ente 30, Max in der Kapsel 70 breit
+    groesse_px: 105   # Sonderformen: Max als Ente 30, Max in der Kapsel 70 breit
     spielbar: true
   - id: pixel
     name: Pixel
     kuerzel: PIX
     raum: [unterstadt_strasse, apothekengasse, widerstandsbasis, kuehlung, laboreingang]   # in Simulation und Labor nur Stimme (Hörer, Wandtelefon, Terminal, Lautsprecher)
-    groesse_px: 27
+    groesse_px: 34
     spielbar: true
   - id: opa
     name: Opa
     kuerzel: OPA
     raum: [widerstandsbasis, testkammer_1]   # Hologramm aus Piepsi (R13); durch das Portal nur im Effekt-Bild (R9b)
-    groesse_px: 36
+    groesse_px: 45
     spielbar: false
   - id: morphaeus
     name: Morphäus
     kuerzel: MOR
     raum: [unterstadt_strasse, apothekengasse]   # nach R2 am Eingang der Apothekengasse
-    groesse_px: 90
+    groesse_px: 112
     spielbar: false
   - id: deckert
     name: Deckert
     kuerzel: DEC
     raum: unterstadt_strasse
-    groesse_px: 90
+    groesse_px: 112
     spielbar: false
   - id: herr_vier
     name: Herr Vier
     kuerzel: VIE
     raum: unterstadt_strasse
-    groesse_px: 84
+    groesse_px: 105
     spielbar: false
   - id: weinender_mann
     name: Weinender Mann
     kuerzel: WEI
     raum: unterstadt_strasse
-    groesse_px: 87   # Stehgröße, im Spiel sitzend
+    groesse_px: 109   # Stehgröße, im Spiel sitzend
     spielbar: false
   - id: frau_regenschirm
     name: Frau mit Regenschirm
     kuerzel: FRA
     raum: unterstadt_strasse
-    groesse_px: 84
+    groesse_px: 105
     spielbar: false
   - id: strassenmusiker
     name: Straßenmusiker
     kuerzel: MUS
     raum: unterstadt_strasse
-    groesse_px: 87
+    groesse_px: 109
     spielbar: false
   - id: pastillenautomat
     name: Pastillenautomat
@@ -175,37 +175,37 @@ figuren:
     name: Kalle
     kuerzel: KAL
     raum: [widerstandsbasis, laboreingang]   # im Büroturm nur als Text auf dem Terminal
-    groesse_px: 87
+    groesse_px: 109
     spielbar: false
   - id: rebellin
     name: Rebellin
     kuerzel: REB
     raum: widerstandsbasis
-    groesse_px: 87
+    groesse_px: 109
     spielbar: false
   - id: rebell
     name: Rebell
     kuerzel: REL
     raum: widerstandsbasis
-    groesse_px: 90
+    groesse_px: 112
     spielbar: false
   - id: piepsi
     name: Piepsi
     kuerzel: PIE
     raum: widerstandsbasis
-    groesse_px: 27
+    groesse_px: 34
     spielbar: false
   - id: hausmeister
     name: Modell 08/15
     kuerzel: HAU
     raum: [laboreingang, widerstandsbasis]   # in der Basis nur in der Schlussszene mit FREUND_0815
-    groesse_px: 87
+    groesse_px: 109
     spielbar: false
   - id: orakel_oma
     name: Orakel-Oma
     kuerzel: ORA
     raum: kueche_orakel   # spricht beim ersten Klopfen von drinnen auf die Stadtstraße
-    groesse_px: 84
+    groesse_px: 105
     spielbar: false
   - id: radio
     name: Radio
@@ -217,13 +217,13 @@ figuren:
     name: Schmidt
     kuerzel: SCH
     raum: [stadtstrasse, buero_50]   # Agent Schmidt
-    groesse_px: 90
+    groesse_px: 112
     spielbar: false
   - id: klon
     name: Klon
     kuerzel: KLO
     raum: buero_50
-    groesse_px: 90
+    groesse_px: 112
     spielbar: false
   - id: tuer
     name: Die Tür
@@ -235,19 +235,19 @@ figuren:
     name: Schwarze Katze
     kuerzel: null   # spricht nicht, nur Kulisse zum Ansehen
     raum: stadtstrasse
-    groesse_px: 21
+    groesse_px: 26
     spielbar: false
   - id: mutti
     name: M.U.T.T.I.
     kuerzel: MUT
     raum: [testkammer_1, testkammer_2, testkammer_3, kern]   # in den Kammern nur aus dem Lautsprecher, im Kern von der Decke
-    groesse_px: 180
+    groesse_px: 225
     spielbar: false
   - id: bernd
     name: Bernd
     kuerzel: BER
     raum: [testkammer_1, testkammer_3]   # Begleitwürfel, kein Inventar-Gegenstand
-    groesse_px: 24
+    groesse_px: 30
     spielbar: false
   - id: portalgeraet_stimme
     name: Portalgerät

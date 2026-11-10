@@ -1,17 +1,19 @@
 [gd_scene format=3 uid="uid://ccgxu2roftehc"]
 
-[ext_resource type="Script" path="res://game/rooms/dachboden/walkable_areas/boden/walkable_area_boden.gd" id="1_oypus"]
+[ext_resource type="Script" uid="uid://dlud8qiupqkj2" path="res://game/rooms/dachboden/walkable_areas/boden/walkable_area_boden.gd" id="1_oypus"]
 
-[sub_resource type="NavigationPolygon" id="NavigationPolygon_tb7ev"]
-outlines = Array[PackedVector2Array]([PackedVector2Array(4, 146, 316, 146, 316, 178, 4, 178)])
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_oypus"]
+vertices = PackedVector2Array(476, 204, 476, 268, 64, 268, 418, 202, 304, 180, 360, 182, 64, 190, 185, 184, 190, 170, 300, 170)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(4, 5, 3, 2, 6, 7), PackedInt32Array(4, 7, 8, 9)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(64, 268, 64, 190, 185, 184, 190, 170, 300, 170, 304, 180, 360, 182, 418, 202, 476, 204, 476, 268)])
 agent_radius = 0.0
 
 [node name="Boden" type="Node2D" unique_id=1447233398]
 script = ExtResource("1_oypus")
 script_name = "Boden"
 description = "Boden"
-interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(6, 219, 474, 219, 474, 267, 6, 267)])
+interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(64, 268, 64, 190, 185, 184, 190, 170, 300, 170, 304, 180, 360, 182, 418, 202, 476, 204, 476, 268)])
 
 [node name="Perimeter" type="NavigationRegion2D" parent="." unique_id=1814532175]
 modulate = Color(0, 1, 0, 1)
-navigation_polygon = SubResource("NavigationPolygon_tb7ev")
+navigation_polygon = SubResource("NavigationPolygon_oypus")

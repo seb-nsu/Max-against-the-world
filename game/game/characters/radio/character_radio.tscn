@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cwrw6it8n7jen"]
 
-[ext_resource type="Script" path="res://game/characters/radio/character_radio.gd" id="1_8b2ml"]
+[ext_resource type="Script" uid="uid://bg6lv7fxkluo6" path="res://game/characters/radio/character_radio.gd" id="1_8b2ml"]
 [ext_resource type="Texture2D" uid="uid://b4hc1lvags0oy" path="res://grafik/platzhalter/figur_radio.png" id="2_m7hq6"]
 
 [node name="CharacterRadio" type="Area2D" unique_id=120766654]

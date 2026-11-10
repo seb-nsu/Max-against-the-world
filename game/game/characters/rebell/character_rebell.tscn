@@ -1,16 +1,16 @@
 [gd_scene format=3 uid="uid://ceb6fo834040g"]
 
-[ext_resource type="Script" path="res://game/characters/rebell/character_rebell.gd" id="1_ctbpl"]
+[ext_resource type="Script" uid="uid://cbkfd46tjc6y3" path="res://game/characters/rebell/character_rebell.gd" id="1_ctbpl"]
 [ext_resource type="Texture2D" uid="uid://dagj6v8tdmt51" path="res://grafik/platzhalter/figur_rebell.png" id="2_4nlce"]
 
 [node name="CharacterRebell" type="Area2D" unique_id=297080466]
 script = ExtResource("1_ctbpl")
 walk_speed = 90.0
-dialog_pos = Vector2(0, -94)
+dialog_pos = Vector2(0, -116)
 script_name = "Rebell"
 description = "UI_OBJ_REBELL"
 cursor = 8
-interaction_polygon = PackedVector2Array(-15, -90, 15, -90, 15, 0, -15, 0)
+interaction_polygon = PackedVector2Array(-18.5, -112, 18.5, -112, 18.5, 0, -18.5, 0)
 
 [node name="ScalingPolygon" type="CollisionPolygon2D" parent="." unique_id=1071838954]
 polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
@@ -20,11 +20,11 @@ polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1375671107]
 texture_filter = 1
 texture = ExtResource("2_4nlce")
-offset = Vector2(0, -45)
+offset = Vector2(0, -56)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=86410140]
 visible = false
-polygon = PackedVector2Array(-15, -90, 15, -90, 15, 0, -15, 0)
+polygon = PackedVector2Array(-18.5, -112, 18.5, -112, 18.5, 0, -18.5, 0)
 
 [node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=996628336]
 visible = false

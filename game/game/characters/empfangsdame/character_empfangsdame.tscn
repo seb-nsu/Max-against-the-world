@@ -1,16 +1,16 @@
 [gd_scene format=3 uid="uid://7ss7hyuv86gg"]
 
-[ext_resource type="Script" path="res://game/characters/empfangsdame/character_empfangsdame.gd" id="1_ro14a"]
+[ext_resource type="Script" uid="uid://ck10xvq23qjwe" path="res://game/characters/empfangsdame/character_empfangsdame.gd" id="1_ro14a"]
 [ext_resource type="Texture2D" uid="uid://ccptitro35or4" path="res://grafik/platzhalter/figur_empfangsdame.png" id="2_7mgl5"]
 
 [node name="CharacterEmpfangsdame" type="Area2D" unique_id=87528157]
 script = ExtResource("1_ro14a")
 walk_speed = 90.0
-dialog_pos = Vector2(0, -91)
+dialog_pos = Vector2(0, -113)
 script_name = "Empfangsdame"
 description = "UI_OBJ_EMPFANGSDAME"
 cursor = 8
-interaction_polygon = PackedVector2Array(-14.5, -87, 14.5, -87, 14.5, 0, -14.5, 0)
+interaction_polygon = PackedVector2Array(-18, -109, 18, -109, 18, 0, -18, 0)
 
 [node name="ScalingPolygon" type="CollisionPolygon2D" parent="." unique_id=1874704401]
 polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
@@ -20,11 +20,11 @@ polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=430519201]
 texture_filter = 1
 texture = ExtResource("2_7mgl5")
-offset = Vector2(0, -43.5)
+offset = Vector2(0, -54.5)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=621464678]
 visible = false
-polygon = PackedVector2Array(-14.5, -87, 14.5, -87, 14.5, 0, -14.5, 0)
+polygon = PackedVector2Array(-18, -109, 18, -109, 18, 0, -18, 0)
 
 [node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=2032245970]
 visible = false

@@ -55,6 +55,7 @@ python3 tools/skript_export.py          # docs/skript + ui.csv → lokalisierung
 python3 tools/spieldaten.py             # Welt-Tabellen, Hinweise → daten/welten, daten/hinweise
 python3 tools/godot_raeume.py           # + tools/layout/<abschnitt>.yaml → daten/raeume/*.json, Platzhalter
 python3 tools/layout_skizzen.py         # Layout-Skizzen mit Tiefe für die Konzeptbilder → docs/grafik/skizzen/
+python3 tools/prompts_zusammensetzen.py # fertige Konzeptbild-Prompts je Raum → docs/grafik/fertige-prompts/
 godot --headless --editor --path game -- --cq-bauen   # Godot-Bau: fehlende Popochiu-Objekte anlegen
 ```
 
@@ -201,11 +202,21 @@ echte Grafik:
    `platzhalter/`).
 2. Im Editor die Textur des Props bzw. der Figur austauschen. Hintergründe sind das Prop
    `Background` jedes Raums.
-3. Hotspot-Umrisse, Laufbereich und Marker an das neue Bild anpassen (Popochiu-Werkzeuge im
-   Editor). Hat der Boden im Bild Tiefe (Raumansicht „Mittelweg“, Entscheidung 10. November
-   2026), im Layout des Raums `tiefe: 0.8` eintragen und `laufbereich` auf den Boden im Bild
+3. Hotspot-Umrisse, Laufbereich und Marker an das neue Bild anpassen: entweder mit den
+   Popochiu-Werkzeugen im Editor oder über das Layout. Für das Layout im Raum-Eintrag von
+   `tools/layout/<abschnitt>.yaml` `hintergrund: res://grafik/hintergruende/<datei>.png` setzen,
+   Rechtecke, Laufziele, Laufbereich, Marker und Figurenplätze aus dem Bild eintragen, dann
+   `python3 tools/godot_raeume.py` und
+   `godot --headless --editor --path game -- --cq-bauen --cq-layout=<raum_id>`. Diese Option
+   überschreibt für die genannten Räume Lage und Umriss aller Objekte in der Szene (Ausnahme von
+   der Regel „nur anlegen“); Skripte bleiben unberührt. Feste Positionen im Raumskript (etwa
+   Pixels Plätze in `room_dachboden.gd`) von Hand nachziehen. Ändern sich Figurengrößen (`groesse_px` in den
+   Welt-Tabellen), passt `--cq-bauen --cq-figuren-groesse` Sprite, Fußpunkt, Klickfläche und
+   Sprechblasenhöhe aller Figuren an die neuen Texturen an. Erster Raum so: Dachboden,
+   10. November 2026. Hat der Boden im Bild Tiefe (Raumansicht „Mittelweg“, Entscheidung 10. November
+   2026), im Layout des Raums `tiefe: 0.85` eintragen und `laufbereich` auf den Boden im Bild
    setzen, dann `tools/godot_raeume.py` laufen lassen: `CQRaum.tiefe_anwenden()` verkleinert die
-   Figuren von 100 Prozent am unteren Rand des Laufbereichs auf 80 Prozent an seiner Hinterkante.
+   Figuren von 100 Prozent am unteren Rand des Laufbereichs auf 85 Prozent an seiner Hinterkante.
    Räume mit Treppe oder senkrechtem Laufweg (Treppenhaus) bekommen keinen Eintrag.
    Mit Tiefe kann eine Figur vor oder hinter Möbeln stehen, die auf dem Boden stehen: Solche
    Teile aus dem Hintergrund als eigenes Prop ausschneiden und ihre Baseline auf den Fußpunkt

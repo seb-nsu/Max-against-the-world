@@ -1,16 +1,16 @@
 [gd_scene format=3 uid="uid://c4eosltaib4hb"]
 
-[ext_resource type="Script" path="res://game/characters/zombie/character_zombie.gd" id="1_kpd1b"]
+[ext_resource type="Script" uid="uid://bcdafi60hq05r" path="res://game/characters/zombie/character_zombie.gd" id="1_kpd1b"]
 [ext_resource type="Texture2D" uid="uid://dgf0goob4nuld" path="res://grafik/platzhalter/figur_zombie.png" id="2_80g1n"]
 
 [node name="CharacterZombie" type="Area2D" unique_id=1417922835]
 script = ExtResource("1_kpd1b")
 walk_speed = 90.0
-dialog_pos = Vector2(0, -91)
+dialog_pos = Vector2(0, -113)
 script_name = "Zombie"
 description = "UI_OBJ_ZOMBIE"
 cursor = 8
-interaction_polygon = PackedVector2Array(-14.5, -87, 14.5, -87, 14.5, 0, -14.5, 0)
+interaction_polygon = PackedVector2Array(-18, -109, 18, -109, 18, 0, -18, 0)
 
 [node name="ScalingPolygon" type="CollisionPolygon2D" parent="." unique_id=92007735]
 polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
@@ -20,11 +20,11 @@ polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=440807263]
 texture_filter = 1
 texture = ExtResource("2_80g1n")
-offset = Vector2(0, -43.5)
+offset = Vector2(0, -54.5)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=939239065]
 visible = false
-polygon = PackedVector2Array(-14.5, -87, 14.5, -87, 14.5, 0, -14.5, 0)
+polygon = PackedVector2Array(-18, -109, 18, -109, 18, 0, -18, 0)
 
 [node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=651392143]
 visible = false

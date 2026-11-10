@@ -41,21 +41,21 @@ figuren:
     name: Max
     kuerzel: MAX
     raum: [wohnzimmer, treppenhaus, dachboden]
-    groesse_px: 84
+    groesse_px: 105
     spielbar: true
 
   - id: pixel
     name: Pixel
     kuerzel: PIX
     raum: dachboden
-    groesse_px: 27                   # schlafend 10 hoch, 24 lang
+    groesse_px: 34                   # schlafend 10 hoch, 24 lang
     spielbar: false                  # Figurenwechsel erst ab Welt 1
 
   - id: opa
     name: Opa                        # im Wohnzimmer als „Opa (von oben)“
     kuerzel: OPA
     raum: dachboden
-    groesse_px: 90
+    groesse_px: 112
     spielbar: false
 
 

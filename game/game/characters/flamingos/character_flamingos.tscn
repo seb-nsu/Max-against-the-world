@@ -1,16 +1,16 @@
 [gd_scene format=3 uid="uid://cfwrf530lxy71"]
 
-[ext_resource type="Script" path="res://game/characters/flamingos/character_flamingos.gd" id="1_80oq3"]
+[ext_resource type="Script" uid="uid://btk6bkhrod3os" path="res://game/characters/flamingos/character_flamingos.gd" id="1_80oq3"]
 [ext_resource type="Texture2D" uid="uid://fv8vurtlfhoi" path="res://grafik/platzhalter/figur_flamingos.png" id="2_ekn1r"]
 
 [node name="CharacterFlamingos" type="Area2D" unique_id=1245925696]
 script = ExtResource("1_80oq3")
 walk_speed = 90.0
-dialog_pos = Vector2(0, -40)
+dialog_pos = Vector2(0, -49)
 script_name = "Flamingos"
 description = "UI_OBJ_FLAMINGOS"
 cursor = 8
-interaction_polygon = PackedVector2Array(-12, -36, 12, -36, 12, 0, -12, 0)
+interaction_polygon = PackedVector2Array(-15, -45, 15, -45, 15, 0, -15, 0)
 
 [node name="ScalingPolygon" type="CollisionPolygon2D" parent="." unique_id=219273991]
 polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
@@ -20,11 +20,11 @@ polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1076803236]
 texture_filter = 1
 texture = ExtResource("2_ekn1r")
-offset = Vector2(0, -18)
+offset = Vector2(0, -22.5)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1620453322]
 visible = false
-polygon = PackedVector2Array(-12, -36, 12, -36, 12, 0, -12, 0)
+polygon = PackedVector2Array(-15, -45, 15, -45, 15, 0, -15, 0)
 
 [node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=180802668]
 visible = false

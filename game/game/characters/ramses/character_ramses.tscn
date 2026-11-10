@@ -1,16 +1,16 @@
 [gd_scene format=3 uid="uid://clih1ayja27k3"]
 
-[ext_resource type="Script" path="res://game/characters/ramses/character_ramses.gd" id="1_garhf"]
+[ext_resource type="Script" uid="uid://dbs3hnq5757vp" path="res://game/characters/ramses/character_ramses.gd" id="1_garhf"]
 [ext_resource type="Texture2D" uid="uid://c88bn0i274164" path="res://grafik/platzhalter/figur_ramses.png" id="2_vp2en"]
 
 [node name="CharacterRamses" type="Area2D" unique_id=537020594]
 script = ExtResource("1_garhf")
 walk_speed = 90.0
-dialog_pos = Vector2(0, -94)
+dialog_pos = Vector2(0, -116)
 script_name = "Ramses"
 description = "UI_OBJ_RAMSES"
 cursor = 8
-interaction_polygon = PackedVector2Array(-15, -90, 15, -90, 15, 0, -15, 0)
+interaction_polygon = PackedVector2Array(-18.5, -112, 18.5, -112, 18.5, 0, -18.5, 0)
 
 [node name="ScalingPolygon" type="CollisionPolygon2D" parent="." unique_id=2144796197]
 polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
@@ -20,11 +20,11 @@ polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1507139598]
 texture_filter = 1
 texture = ExtResource("2_vp2en")
-offset = Vector2(0, -45)
+offset = Vector2(0, -56)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1423648073]
 visible = false
-polygon = PackedVector2Array(-15, -90, 15, -90, 15, 0, -15, 0)
+polygon = PackedVector2Array(-18.5, -112, 18.5, -112, 18.5, 0, -18.5, 0)
 
 [node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=382188828]
 visible = false

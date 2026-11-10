@@ -1,16 +1,16 @@
 [gd_scene format=3 uid="uid://d37axhtmcrwba"]
 
-[ext_resource type="Script" path="res://game/characters/maklerin/character_maklerin.gd" id="1_q0jry"]
+[ext_resource type="Script" uid="uid://dap8ykvmwa32u" path="res://game/characters/maklerin/character_maklerin.gd" id="1_q0jry"]
 [ext_resource type="Texture2D" uid="uid://dixrpydyd0b4f" path="res://grafik/platzhalter/figur_maklerin.png" id="2_pdgof"]
 
 [node name="CharacterMaklerin" type="Area2D" unique_id=94772486]
 script = ExtResource("1_q0jry")
 walk_speed = 135.0
-dialog_pos = Vector2(0, -96)
+dialog_pos = Vector2(0, -116)
 script_name = "Maklerin"
 description = "UI_OBJ_MAKLERIN"
 cursor = 8
-interaction_polygon = PackedVector2Array(-15, -90, 15, -90, 15, 0, -15, 0)
+interaction_polygon = PackedVector2Array(-18.5, -112, 18.5, -112, 18.5, 0, -18.5, 0)
 
 [node name="ScalingPolygon" type="CollisionPolygon2D" parent="." unique_id=2063769489]
 polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
@@ -20,11 +20,11 @@ polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=18594162]
 texture_filter = 1
 texture = ExtResource("2_pdgof")
-offset = Vector2(0, -45)
+offset = Vector2(0, -56)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1288420137]
 visible = false
-polygon = PackedVector2Array(-15, -90, 15, -90, 15, 0, -15, 0)
+polygon = PackedVector2Array(-18.5, -112, 18.5, -112, 18.5, 0, -18.5, 0)
 
 [node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=183376575]
 visible = false

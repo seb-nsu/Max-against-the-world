@@ -1,16 +1,16 @@
 [gd_scene format=3 uid="uid://b324216e0pwpi"]
 
-[ext_resource type="Script" path="res://game/characters/herr_vier/character_herr_vier.gd" id="1_0nr2n"]
+[ext_resource type="Script" uid="uid://dnb6kic51ycwo" path="res://game/characters/herr_vier/character_herr_vier.gd" id="1_0nr2n"]
 [ext_resource type="Texture2D" uid="uid://yxfsk0l57v5q" path="res://grafik/platzhalter/figur_herr_vier.png" id="2_gmxlr"]
 
 [node name="CharacterHerrVier" type="Area2D" unique_id=1125115703]
 script = ExtResource("1_0nr2n")
 walk_speed = 90.0
-dialog_pos = Vector2(0, -88)
+dialog_pos = Vector2(0, -109)
 script_name = "HerrVier"
 description = "UI_OBJ_HERR_VIER"
 cursor = 8
-interaction_polygon = PackedVector2Array(-14, -84, 14, -84, 14, 0, -14, 0)
+interaction_polygon = PackedVector2Array(-17.5, -105, 17.5, -105, 17.5, 0, -17.5, 0)
 
 [node name="ScalingPolygon" type="CollisionPolygon2D" parent="." unique_id=1657934736]
 polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
@@ -20,11 +20,11 @@ polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=413941790]
 texture_filter = 1
 texture = ExtResource("2_gmxlr")
-offset = Vector2(0, -42)
+offset = Vector2(0, -52.5)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1949478321]
 visible = false
-polygon = PackedVector2Array(-14, -84, 14, -84, 14, 0, -14, 0)
+polygon = PackedVector2Array(-17.5, -105, 17.5, -105, 17.5, 0, -17.5, 0)
 
 [node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=1452008743]
 visible = false

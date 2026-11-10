@@ -1,16 +1,16 @@
 [gd_scene format=3 uid="uid://pgritmjhncry"]
 
-[ext_resource type="Script" path="res://game/characters/hofkater/character_hofkater.gd" id="1_1s10n"]
+[ext_resource type="Script" uid="uid://drxq8gwkwbdn2" path="res://game/characters/hofkater/character_hofkater.gd" id="1_1s10n"]
 [ext_resource type="Texture2D" uid="uid://bsfakr6bq7h1o" path="res://grafik/platzhalter/figur_hofkater.png" id="2_c0h4q"]
 
 [node name="CharacterHofkater" type="Area2D" unique_id=1361457797]
 script = ExtResource("1_1s10n")
 walk_speed = 90.0
-dialog_pos = Vector2(0, -34)
+dialog_pos = Vector2(0, -42)
 script_name = "Hofkater"
 description = "UI_OBJ_HOFKATER"
 cursor = 8
-interaction_polygon = PackedVector2Array(-12, -30, 12, -30, 12, 0, -12, 0)
+interaction_polygon = PackedVector2Array(-15, -38, 15, -38, 15, 0, -15, 0)
 
 [node name="ScalingPolygon" type="CollisionPolygon2D" parent="." unique_id=2086713005]
 polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
@@ -20,11 +20,11 @@ polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1599510223]
 texture_filter = 1
 texture = ExtResource("2_c0h4q")
-offset = Vector2(0, -15)
+offset = Vector2(0, -19)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=2014318490]
 visible = false
-polygon = PackedVector2Array(-12, -30, 12, -30, 12, 0, -12, 0)
+polygon = PackedVector2Array(-15, -38, 15, -38, 15, 0, -15, 0)
 
 [node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=1443851505]
 visible = false

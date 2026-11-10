@@ -68,35 +68,35 @@ figuren:
     name: Max
     kuerzel: MAX
     raum: [dachboden, wohnzimmer, supermarkt]
-    groesse_px: 84                   # ab Rückkehr 3 aufrechte Fassung
+    groesse_px: 105                   # ab Rückkehr 3 aufrechte Fassung
     spielbar: true
 
   - id: pixel
     name: Pixel
     kuerzel: PIX
     raum: [dachboden, wohnzimmer]
-    groesse_px: 27
+    groesse_px: 34
     spielbar: true                   # im Finale nötig für Schritt C
 
   - id: opa
     name: Opa
     kuerzel: OPA
     raum: [dachboden, wohnzimmer]
-    groesse_px: 90
+    groesse_px: 112
     spielbar: false
 
   - id: oma
     name: Oma                        # Hildegard; vor der Auflösung „Oma (von unten)“
     kuerzel: OMA
     raum: [treppenhaus, dachboden, wohnzimmer]
-    groesse_px: 84
+    groesse_px: 105
     spielbar: false
 
   - id: mutter
     name: Mutter
     kuerzel: MUT
     raum: wohnzimmer
-    groesse_px: 87
+    groesse_px: 109
     spielbar: false
 
 
@@ -104,14 +104,14 @@ figuren:
     name: Zeldina
     kuerzel: ZEL
     raum: [dachboden, wohnzimmer]
-    groesse_px: 87                   # Finale-Fassung mit Zauberstab, ohne Karton
+    groesse_px: 109                   # Finale-Fassung mit Zauberstab, ohne Karton
     spielbar: false
 
   - id: modell_0815
     name: Modell 08/15
     kuerzel: HAU
     raum: [dachboden, wohnzimmer]    # nur mit FREUND_0815
-    groesse_px: 87
+    groesse_px: 109
     spielbar: false
 
   - id: toadi

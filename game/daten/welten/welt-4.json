@@ -304,7 +304,7 @@
     "kellerarchiv",
     "zappmanns_studio"
    ],
-   "groesse_px": 84,
+   "groesse_px": 105,
    "spielbar": true
   },
   {
@@ -318,7 +318,7 @@
     "werbespot_set",
     "zappmanns_studio"
    ],
-   "groesse_px": 27,
+   "groesse_px": 34,
    "spielbar": true
   },
   {
@@ -326,7 +326,7 @@
    "name": "Opa",
    "kuerzel": "OPA",
    "raum": "spukhaus_halle",
-   "groesse_px": 66,
+   "groesse_px": 82,
    "spielbar": false
   },
   {
@@ -337,7 +337,7 @@
     "testbild",
     "rauschen"
    ],
-   "groesse_px": 24,
+   "groesse_px": 30,
    "spielbar": false
   },
   {
@@ -353,7 +353,7 @@
    "name": "Gerd Glück",
    "kuerzel": "GER",
    "raum": "gluecksrad",
-   "groesse_px": 90,
+   "groesse_px": 112,
    "spielbar": false
   },
   {
@@ -361,7 +361,7 @@
    "name": "Trödel-Experte",
    "kuerzel": "EXP",
    "raum": "gluecksrad",
-   "groesse_px": 87,
+   "groesse_px": 109,
    "spielbar": false
   },
   {
@@ -372,7 +372,7 @@
     "sitcom_kueche",
     "spukhaus_keller"
    ],
-   "groesse_px": 87,
+   "groesse_px": 109,
    "spielbar": false
   },
   {
@@ -380,7 +380,7 @@
    "name": "Sitcom-Mutter",
    "kuerzel": "SMU",
    "raum": "sitcom_kueche",
-   "groesse_px": 87,
+   "groesse_px": 109,
    "spielbar": false
   },
   {
@@ -388,7 +388,7 @@
    "name": "Sitcom-Sohn",
    "kuerzel": "SOH",
    "raum": "sitcom_kueche",
-   "groesse_px": 84,
+   "groesse_px": 105,
    "spielbar": false
   },
   {
@@ -399,7 +399,7 @@
     "savanne",
     "sitcom_kueche"
    ],
-   "groesse_px": 87,
+   "groesse_px": 109,
    "spielbar": false
   },
   {
@@ -407,7 +407,7 @@
    "name": "Erzähler",
    "kuerzel": "ERZ",
    "raum": "savanne",
-   "groesse_px": 87,
+   "groesse_px": 109,
    "spielbar": false
   },
   {
@@ -415,7 +415,7 @@
    "name": "Löwe",
    "kuerzel": "LOE",
    "raum": "savanne",
-   "groesse_px": 90,
+   "groesse_px": 112,
    "spielbar": false
   },
   {
@@ -423,7 +423,7 @@
    "name": "Hyäne",
    "kuerzel": "HYA",
    "raum": "savanne",
-   "groesse_px": 51,
+   "groesse_px": 64,
    "spielbar": false
   },
   {
@@ -431,7 +431,7 @@
    "name": "Gepard",
    "kuerzel": "GEP",
    "raum": "savanne",
-   "groesse_px": 45,
+   "groesse_px": 56,
    "spielbar": false
   },
   {
@@ -439,7 +439,7 @@
    "name": "Geier",
    "kuerzel": "GEI",
    "raum": "savanne",
-   "groesse_px": 45,
+   "groesse_px": 56,
    "spielbar": false
   },
   {
@@ -447,7 +447,7 @@
    "name": "Nashorn",
    "kuerzel": "NAS",
    "raum": "savanne",
-   "groesse_px": 90,
+   "groesse_px": 112,
    "spielbar": false
   },
   {
@@ -455,7 +455,7 @@
    "name": "Flamingos",
    "kuerzel": "FLA",
    "raum": "savanne",
-   "groesse_px": 36,
+   "groesse_px": 45,
    "spielbar": false
   },
   {
@@ -463,7 +463,7 @@
    "name": "Zombie",
    "kuerzel": "ZOM",
    "raum": "friedhof",
-   "groesse_px": 87,
+   "groesse_px": 109,
    "spielbar": false
   },
   {
@@ -471,7 +471,7 @@
    "name": "Geist",
    "kuerzel": "GST",
    "raum": "spukhaus_keller",
-   "groesse_px": 36,
+   "groesse_px": 45,
    "spielbar": false
   },
   {
@@ -479,7 +479,7 @@
    "name": "FBI-Agent",
    "kuerzel": "AGE",
    "raum": "spukhaus_halle",
-   "groesse_px": 90,
+   "groesse_px": 112,
    "spielbar": false
   },
   {
@@ -491,7 +491,7 @@
     "fondue_fabrik",
     "werbespot_set"
    ],
-   "groesse_px": 96,
+   "groesse_px": 120,
    "spielbar": false
   },
   {
@@ -503,7 +503,7 @@
     "fondue_fabrik",
     "werbespot_set"
    ],
-   "groesse_px": 87,
+   "groesse_px": 109,
    "spielbar": false
   },
   {
@@ -515,7 +515,7 @@
     "fondue_fabrik",
     "werbespot_set"
    ],
-   "groesse_px": 87,
+   "groesse_px": 109,
    "spielbar": false
   },
   {
@@ -523,7 +523,7 @@
    "name": "Fabrikarbeiter",
    "kuerzel": null,
    "raum": "fondue_fabrik",
-   "groesse_px": 87,
+   "groesse_px": 109,
    "spielbar": false
   },
   {
@@ -531,7 +531,7 @@
    "name": "Dr. Werbepause",
    "kuerzel": "WER",
    "raum": "werbespot_set",
-   "groesse_px": 90,
+   "groesse_px": 112,
    "spielbar": false
   },
   {
@@ -539,7 +539,7 @@
    "name": "Empfangsdame",
    "kuerzel": "EMP",
    "raum": "empfang",
-   "groesse_px": 87,
+   "groesse_px": 109,
    "spielbar": false
   },
   {
@@ -547,7 +547,7 @@
    "name": "Sicherheitsmann",
    "kuerzel": "SIC",
    "raum": "empfang",
-   "groesse_px": 96,
+   "groesse_px": 120,
    "spielbar": false
   },
   {
@@ -555,7 +555,7 @@
    "name": "Zappmann",
    "kuerzel": "ZAP",
    "raum": "zappmanns_studio",
-   "groesse_px": 93,
+   "groesse_px": 116,
    "spielbar": false
   },
   {
@@ -563,7 +563,7 @@
    "name": "Junger Zappmann",
    "kuerzel": null,
    "raum": "zappmanns_studio",
-   "groesse_px": 84,
+   "groesse_px": 105,
    "spielbar": false
   },
   {
@@ -571,7 +571,7 @@
    "name": "Wettkandidat",
    "kuerzel": "WET",
    "raum": "zappmanns_studio",
-   "groesse_px": 84,
+   "groesse_px": 105,
    "spielbar": false
   }
  ],

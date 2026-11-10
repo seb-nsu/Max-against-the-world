@@ -1,16 +1,16 @@
 [gd_scene format=3 uid="uid://b2ch04qvg248x"]
 
-[ext_resource type="Script" path="res://game/characters/sitcom_sohn/character_sitcom_sohn.gd" id="1_3452r"]
+[ext_resource type="Script" uid="uid://dch4awgk100jo" path="res://game/characters/sitcom_sohn/character_sitcom_sohn.gd" id="1_3452r"]
 [ext_resource type="Texture2D" uid="uid://dj8dustpdi874" path="res://grafik/platzhalter/figur_sitcom_sohn.png" id="2_pyj7y"]
 
 [node name="CharacterSitcomSohn" type="Area2D" unique_id=68141443]
 script = ExtResource("1_3452r")
 walk_speed = 90.0
-dialog_pos = Vector2(0, -88)
+dialog_pos = Vector2(0, -109)
 script_name = "SitcomSohn"
 description = "UI_OBJ_SITCOM_SOHN"
 cursor = 8
-interaction_polygon = PackedVector2Array(-14, -84, 14, -84, 14, 0, -14, 0)
+interaction_polygon = PackedVector2Array(-17.5, -105, 17.5, -105, 17.5, 0, -17.5, 0)
 
 [node name="ScalingPolygon" type="CollisionPolygon2D" parent="." unique_id=1400582165]
 polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
@@ -20,11 +20,11 @@ polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=178968155]
 texture_filter = 1
 texture = ExtResource("2_pyj7y")
-offset = Vector2(0, -42)
+offset = Vector2(0, -52.5)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=119418624]
 visible = false
-polygon = PackedVector2Array(-14, -84, 14, -84, 14, 0, -14, 0)
+polygon = PackedVector2Array(-17.5, -105, 17.5, -105, 17.5, 0, -17.5, 0)
 
 [node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=852738631]
 visible = false

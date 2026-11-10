@@ -1,16 +1,16 @@
 [gd_scene format=3 uid="uid://telrvt7431lh"]
 
-[ext_resource type="Script" path="res://game/characters/moderwort/character_moderwort.gd" id="1_3xhog"]
+[ext_resource type="Script" uid="uid://drthg4ij2hv7l" path="res://game/characters/moderwort/character_moderwort.gd" id="1_3xhog"]
 [ext_resource type="Texture2D" uid="uid://ci1hasst2n7c7" path="res://grafik/platzhalter/figur_moderwort.png" id="2_cd75v"]
 
 [node name="CharacterModerwort" type="Area2D" unique_id=1446034948]
 script = ExtResource("1_3xhog")
 walk_speed = 135.0
-dialog_pos = Vector2(0, -96)
+dialog_pos = Vector2(0, -116)
 script_name = "Moderwort"
 description = "UI_OBJ_MODERWORT"
 cursor = 8
-interaction_polygon = PackedVector2Array(-15, -90, 15, -90, 15, 0, -15, 0)
+interaction_polygon = PackedVector2Array(-18.5, -112, 18.5, -112, 18.5, 0, -18.5, 0)
 
 [node name="ScalingPolygon" type="CollisionPolygon2D" parent="." unique_id=885731827]
 polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
@@ -20,11 +20,11 @@ polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1803807893]
 texture_filter = 1
 texture = ExtResource("2_cd75v")
-offset = Vector2(0, -45)
+offset = Vector2(0, -56)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1177023598]
 visible = false
-polygon = PackedVector2Array(-15, -90, 15, -90, 15, 0, -15, 0)
+polygon = PackedVector2Array(-18.5, -112, 18.5, -112, 18.5, 0, -18.5, 0)
 
 [node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=308947908]
 visible = false

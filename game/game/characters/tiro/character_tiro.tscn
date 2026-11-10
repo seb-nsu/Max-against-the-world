@@ -1,16 +1,16 @@
 [gd_scene format=3 uid="uid://bjfgiw5ffl628"]
 
-[ext_resource type="Script" path="res://game/characters/tiro/character_tiro.gd" id="1_lixls"]
+[ext_resource type="Script" uid="uid://dknpga57r762b" path="res://game/characters/tiro/character_tiro.gd" id="1_lixls"]
 [ext_resource type="Texture2D" uid="uid://bt54icjyfkxc6" path="res://grafik/platzhalter/figur_tiro.png" id="2_nylov"]
 
 [node name="CharacterTiro" type="Area2D" unique_id=815292910]
 script = ExtResource("1_lixls")
 walk_speed = 90.0
-dialog_pos = Vector2(0, -82)
+dialog_pos = Vector2(0, -102)
 script_name = "Tiro"
 description = "UI_OBJ_TIRO"
 cursor = 8
-interaction_polygon = PackedVector2Array(-13, -78, 13, -78, 13, 0, -13, 0)
+interaction_polygon = PackedVector2Array(-16, -98, 16, -98, 16, 0, -16, 0)
 
 [node name="ScalingPolygon" type="CollisionPolygon2D" parent="." unique_id=834503222]
 polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
@@ -20,11 +20,11 @@ polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1959764002]
 texture_filter = 1
 texture = ExtResource("2_nylov")
-offset = Vector2(0, -39)
+offset = Vector2(0, -49)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=2052487140]
 visible = false
-polygon = PackedVector2Array(-13, -78, 13, -78, 13, 0, -13, 0)
+polygon = PackedVector2Array(-16, -98, 16, -98, 16, 0, -16, 0)
 
 [node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=1051193644]
 visible = false
