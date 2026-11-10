@@ -68,10 +68,9 @@ func _on_click() -> void:
 
 ## Benutzen-Zeile aus dem Bauplan, sonst Ersatzzeile.
 func benutzen_standard() -> void:
-	for e in bauplan().get("benutzen", []):
-		if Spiel.eintrag_passt(e):
-			await Spiel.sagen_eintrag(e)
-			return
+	var schluessel := "%s/%s" % [room.script_name if is_instance_valid(room) else "", script_name]
+	if await Spiel.benutzen(bauplan().get("benutzen", []), schluessel):
+		return
 	await Spiel.ersatz()
 
 

@@ -28,6 +28,10 @@ wohnzimmer:
     teetasse: {rect: [301, 208, 21, 19], gehe: [315, 304]}
     fernseher: {rect: [437, 120, 96, 109], gehe: [483, 253]}
     familienfoto: {rect: [273, 53, 133, 91], gehe: [340, 300]}
+    # Weitere Dinge (Gag-Überarbeitung, 10. November 2026): Lage grob aus dem Bild, in Godot nachziehen
+    schrank: {rect: [0, 10, 110, 275], gehe: [90, 320]}
+    stehlampe: {rect: [215, 65, 48, 105], gehe: [240, 300]}
+    zeitung: {rect: [292, 190, 60, 18], gehe: [330, 300]}
     # Finale (skripte/finale.gd): nur im Finale sichtbar; versteckt = nicht ins Platzhalterbild malen (verriete den Kuchen)
     kuchen: {rect: [339, 181, 43, 40], gehe: [363, 304], name: Kuchen, versteckt: true}
     girlande: {rect: [133, 11, 373, 27], gehe: [320, 304], name: Girlande, versteckt: true}
@@ -48,6 +52,10 @@ treppenhaus:
     von_dachboden: [493, 123]       # oben auf der Treppe unter der Luke
   hotspots:
     hut_am_haken: {rect: [171, 112, 27, 32], gehe: [187, 296]}   # Hut ist ins Bild gemalt
+    regenschirm: {rect: [93, 207, 27, 83], gehe: [110, 300]}
+    maentel: {rect: [123, 130, 48, 160], gehe: [150, 300], name: Mäntel}
+    deckenlampe: {rect: [198, 10, 52, 26], gehe: [220, 300]}
+    kisten: {rect: [430, 180, 210, 170], gehe: [330, 320]}   # Kisten unter der Treppe
     fenster: {rect: [288, 73, 53, 80], gehe: [273, 299]}
     treppe: {rect: [267, 53, 293, 233], gehe: [287, 299]}
   ausgaenge:
@@ -87,6 +95,8 @@ dachboden:
     toaster: {rect: [165, 101, 32, 27], gehe: [181, 251]}
     plattenspieler: {rect: [109, 96, 48, 32], gehe: [133, 253]}
     kiste_mit_fernbedienungen: {rect: [0, 220, 83, 93], gehe: [101, 287]}
+    umzugskartons: {rect: [0, 135, 65, 85], gehe: [95, 262]}
+    steckdose: {rect: [258, 188, 22, 22], gehe: [270, 235]}
     opas_staubsauger_prototyp: {rect: [483, 140, 64, 120], gehe: [515, 275]}
     fundkiste: {rect: [163, 211, 56, 36], gehe: [191, 259], name: Fundkiste}   # erst ab Zwischenspiel 1 sichtbar
     # Finale (skripte/finale.gd): Opas Maschine an der Stelle des Zapp-O-Mat, nur im Finale sichtbar

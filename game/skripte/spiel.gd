@@ -429,6 +429,36 @@ func ansehen(eintraege: Array, schluessel: String, zustand := "") -> String:
 	return wahl
 
 
+## Benutzen (Linksklick) aus dem Bauplan: die erste passende Zeile. Gibt es „zweites Mal“-Zeilen
+## (mal 2, 3 …), kommen sie beim 2., 3. … Klick der Reihe nach; danach eine davon zufällig, nie
+## zweimal dieselbe hintereinander. Gezählt wird je Objekt und erster Zeile (gespeichert).
+## Liefert false, wenn keine Zeile passt (dann Ersatzzeile beim Aufrufer).
+func benutzen(eintraege: Array, schluessel: String) -> bool:
+	var passend := eintraege.filter(func(e): return eintrag_passt(e))
+	if passend.is_empty():
+		return false
+	var kette := []
+	for m in range(1, 10):
+		var e_m: Array = passend.filter(func(e): return int(e.get("mal", 1)) == m)
+		if e_m.is_empty():
+			break
+		kette.append(e_m[0])
+	if kette.size() < 2:
+		await sagen_eintrag(passend[0])
+		return true
+	var n := Zustand.ansehen_zaehlen("benutzen|%s|%s" % [schluessel, kette[0].zeile])
+	var e: Dictionary
+	if n <= kette.size():
+		e = kette[n - 1]
+	else:
+		var merk := "BEN_" + schluessel
+		var auswahl := kette.filter(func(k): return k.zeile != _letzte_ersatz.get(merk, ""))
+		e = auswahl.pick_random()
+	_letzte_ersatz["BEN_" + schluessel] = e.zeile
+	await sagen_eintrag(e)
+	return true
+
+
 ## Zufällige Zeile aus einem Pool, nie zweimal dieselbe hintereinander (je Merkname).
 func pool_zeile(pool: Array, merk: String) -> String:
 	if pool.is_empty():

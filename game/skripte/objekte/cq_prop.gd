@@ -65,10 +65,9 @@ func _on_click() -> void:
 		await Spiel.nehmen(self, d)
 		return
 	await Spiel.hingehen(self)
-	for e in d.get("benutzen", []):
-		if Spiel.eintrag_passt(e):
-			await Spiel.sagen_eintrag(e)
-			return
+	var schluessel := "%s/%s" % [room.script_name if is_instance_valid(room) else "", script_name]
+	if await Spiel.benutzen(d.get("benutzen", []), schluessel):
+		return
 	await Spiel.ersatz()
 
 

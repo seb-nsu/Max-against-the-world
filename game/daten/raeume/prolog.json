@@ -166,6 +166,14 @@
        "blasen": [
         "P0_WOHN_MAX_0170"
        ]
+      },
+      {
+       "zeile": "P0_WOHN_MAX_0175",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_WOHN_MAX_0175"
+       ],
+       "mal": 2
       }
      ]
     },
@@ -207,6 +215,14 @@
        "blasen": [
         "P0_WOHN_MAX_0190"
        ]
+      },
+      {
+       "zeile": "P0_WOHN_MAX_0195",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_WOHN_MAX_0195"
+       ],
+       "mal": 2
       }
      ]
     },
@@ -248,6 +264,14 @@
        "blasen": [
         "P0_WOHN_MAX_0180"
        ]
+      },
+      {
+       "zeile": "P0_WOHN_MAX_0185",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_WOHN_MAX_0185"
+       ],
+       "mal": 2
       }
      ]
     },
@@ -289,6 +313,14 @@
        "blasen": [
         "P0_WOHN_MAX_0200"
        ]
+      },
+      {
+       "zeile": "P0_WOHN_MAX_0205",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_WOHN_MAX_0205"
+       ],
+       "mal": 2
       }
      ]
     },
@@ -330,6 +362,161 @@
        "blasen": [
         "P0_WOHN_MAX_0160"
        ]
+      },
+      {
+       "zeile": "P0_WOHN_MAX_0165",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_WOHN_MAX_0165"
+       ],
+       "mal": 2
+      }
+     ]
+    },
+    {
+     "id": "schrank",
+     "script_name": "Schrank",
+     "name_key": "UI_OBJ_SCHRANK",
+     "rect": [
+      0,
+      10,
+      110,
+      275
+     ],
+     "gehe": [
+      90,
+      320
+     ],
+     "ansehen": [
+      {
+       "zeile": "P0_WOHN_MAX_0310",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_WOHN_MAX_0310"
+       ]
+      },
+      {
+       "zeile": "P0_WOHN_MAX_0315",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_WOHN_MAX_0315"
+       ],
+       "mal": 2
+      }
+     ],
+     "benutzen": [
+      {
+       "zeile": "P0_WOHN_MAX_0320",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_WOHN_MAX_0320"
+       ]
+      },
+      {
+       "zeile": "P0_WOHN_MAX_0325",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_WOHN_MAX_0325"
+       ],
+       "mal": 2
+      }
+     ]
+    },
+    {
+     "id": "stehlampe",
+     "script_name": "Stehlampe",
+     "name_key": "UI_OBJ_STEHLAMPE",
+     "rect": [
+      215,
+      65,
+      48,
+      105
+     ],
+     "gehe": [
+      240,
+      300
+     ],
+     "ansehen": [
+      {
+       "zeile": "P0_WOHN_MAX_0330",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_WOHN_MAX_0330"
+       ]
+      },
+      {
+       "zeile": "P0_WOHN_MAX_0335",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_WOHN_MAX_0335"
+       ],
+       "mal": 2
+      }
+     ],
+     "benutzen": [
+      {
+       "zeile": "P0_WOHN_MAX_0340",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_WOHN_MAX_0340"
+       ]
+      },
+      {
+       "zeile": "P0_WOHN_MAX_0345",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_WOHN_MAX_0345"
+       ],
+       "mal": 2
+      }
+     ]
+    },
+    {
+     "id": "zeitung",
+     "script_name": "Zeitung",
+     "name_key": "UI_OBJ_ZEITUNG",
+     "rect": [
+      292,
+      190,
+      60,
+      18
+     ],
+     "gehe": [
+      330,
+      300
+     ],
+     "ansehen": [
+      {
+       "zeile": "P0_WOHN_MAX_0350",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_WOHN_MAX_0350"
+       ]
+      },
+      {
+       "zeile": "P0_WOHN_MAX_0355",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_WOHN_MAX_0355"
+       ],
+       "mal": 2
+      }
+     ],
+     "benutzen": [
+      {
+       "zeile": "P0_WOHN_MAX_0360",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_WOHN_MAX_0360"
+       ]
+      },
+      {
+       "zeile": "P0_WOHN_MAX_0365",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_WOHN_MAX_0365"
+       ],
+       "mal": 2
       }
      ]
     }
@@ -459,6 +646,55 @@
    "figuren": [],
    "hotspots": [
     {
+     "id": "maentel",
+     "script_name": "Maentel",
+     "name_key": "UI_OBJ_MAENTEL",
+     "rect": [
+      123,
+      130,
+      48,
+      160
+     ],
+     "gehe": [
+      150,
+      300
+     ],
+     "ansehen": [
+      {
+       "zeile": "P0_TREP_MAX_0130",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_TREP_MAX_0130"
+       ]
+      },
+      {
+       "zeile": "P0_TREP_MAX_0135",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_TREP_MAX_0135"
+       ],
+       "mal": 2
+      }
+     ],
+     "benutzen": [
+      {
+       "zeile": "P0_TREP_MAX_0140",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_TREP_MAX_0140"
+       ]
+      },
+      {
+       "zeile": "P0_TREP_MAX_0145",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_TREP_MAX_0145"
+       ],
+       "mal": 2
+      }
+     ]
+    },
+    {
      "id": "hut_am_haken",
      "script_name": "HutAmHaken",
      "name_key": "UI_OBJ_HUT_AM_HAKEN",
@@ -496,6 +732,14 @@
        "blasen": [
         "P0_TREP_MAX_0040"
        ]
+      },
+      {
+       "zeile": "P0_TREP_MAX_0045",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_TREP_MAX_0045"
+       ],
+       "mal": 2
       }
      ]
     },
@@ -537,6 +781,14 @@
        "blasen": [
         "P0_TREP_MAX_0050"
        ]
+      },
+      {
+       "zeile": "P0_TREP_MAX_0055",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_TREP_MAX_0055"
+       ],
+       "mal": 2
       }
      ]
     },
@@ -578,6 +830,161 @@
        "blasen": [
         "P0_TREP_MAX_0060"
        ]
+      },
+      {
+       "zeile": "P0_TREP_MAX_0065",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_TREP_MAX_0065"
+       ],
+       "mal": 2
+      }
+     ]
+    },
+    {
+     "id": "regenschirm",
+     "script_name": "Regenschirm",
+     "name_key": "UI_OBJ_REGENSCHIRM",
+     "rect": [
+      93,
+      207,
+      27,
+      83
+     ],
+     "gehe": [
+      110,
+      300
+     ],
+     "ansehen": [
+      {
+       "zeile": "P0_TREP_MAX_0110",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_TREP_MAX_0110"
+       ]
+      },
+      {
+       "zeile": "P0_TREP_MAX_0115",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_TREP_MAX_0115"
+       ],
+       "mal": 2
+      }
+     ],
+     "benutzen": [
+      {
+       "zeile": "P0_TREP_MAX_0120",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_TREP_MAX_0120"
+       ]
+      },
+      {
+       "zeile": "P0_TREP_MAX_0125",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_TREP_MAX_0125"
+       ],
+       "mal": 2
+      }
+     ]
+    },
+    {
+     "id": "deckenlampe",
+     "script_name": "Deckenlampe",
+     "name_key": "UI_OBJ_DECKENLAMPE",
+     "rect": [
+      198,
+      10,
+      52,
+      26
+     ],
+     "gehe": [
+      220,
+      300
+     ],
+     "ansehen": [
+      {
+       "zeile": "P0_TREP_MAX_0150",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_TREP_MAX_0150"
+       ]
+      },
+      {
+       "zeile": "P0_TREP_MAX_0155",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_TREP_MAX_0155"
+       ],
+       "mal": 2
+      }
+     ],
+     "benutzen": [
+      {
+       "zeile": "P0_TREP_MAX_0160",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_TREP_MAX_0160"
+       ]
+      },
+      {
+       "zeile": "P0_TREP_MAX_0165",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_TREP_MAX_0165"
+       ],
+       "mal": 2
+      }
+     ]
+    },
+    {
+     "id": "kisten",
+     "script_name": "Kisten",
+     "name_key": "UI_OBJ_KISTEN",
+     "rect": [
+      430,
+      180,
+      210,
+      170
+     ],
+     "gehe": [
+      330,
+      320
+     ],
+     "ansehen": [
+      {
+       "zeile": "P0_TREP_MAX_0170",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_TREP_MAX_0170"
+       ]
+      },
+      {
+       "zeile": "P0_TREP_MAX_0175",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_TREP_MAX_0175"
+       ],
+       "mal": 2
+      }
+     ],
+     "benutzen": [
+      {
+       "zeile": "P0_TREP_MAX_0180",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_TREP_MAX_0180"
+       ]
+      },
+      {
+       "zeile": "P0_TREP_MAX_0185",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_TREP_MAX_0185"
+       ],
+       "mal": 2
       }
      ]
     }
@@ -898,6 +1305,14 @@
        "blasen": [
         "P0_DACH_MAX_1610"
        ]
+      },
+      {
+       "zeile": "P0_DACH_MAX_1615",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_DACH_MAX_1615"
+       ],
+       "mal": 2
       }
      ]
     },
@@ -939,6 +1354,14 @@
        "blasen": [
         "P0_DACH_MAX_1620"
        ]
+      },
+      {
+       "zeile": "P0_DACH_MAX_1625",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_DACH_MAX_1625"
+       ],
+       "mal": 2
       }
      ]
     },
@@ -980,6 +1403,14 @@
        "blasen": [
         "P0_DACH_MAX_1630"
        ]
+      },
+      {
+       "zeile": "P0_DACH_MAX_1635",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_DACH_MAX_1635"
+       ],
+       "mal": 2
       }
      ]
     },
@@ -1021,6 +1452,14 @@
        "blasen": [
         "P0_DACH_MAX_1640"
        ]
+      },
+      {
+       "zeile": "P0_DACH_MAX_1645",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_DACH_MAX_1645"
+       ],
+       "mal": 2
       }
      ]
     },
@@ -1074,6 +1513,14 @@
        "blasen": [
         "P0_DACH_MAX_1650"
        ]
+      },
+      {
+       "zeile": "P0_DACH_MAX_1655",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_DACH_MAX_1655"
+       ],
+       "mal": 2
       }
      ]
     },
@@ -1115,6 +1562,14 @@
        "blasen": [
         "P0_DACH_MAX_1660"
        ]
+      },
+      {
+       "zeile": "P0_DACH_MAX_1665",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_DACH_MAX_1665"
+       ],
+       "mal": 2
       }
      ]
     },
@@ -1156,6 +1611,14 @@
        "blasen": [
         "P0_DACH_MAX_1670"
        ]
+      },
+      {
+       "zeile": "P0_DACH_MAX_1675",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_DACH_MAX_1675"
+       ],
+       "mal": 2
       }
      ]
     },
@@ -1209,6 +1672,14 @@
        "blasen": [
         "P0_DACH_MAX_1680"
        ]
+      },
+      {
+       "zeile": "P0_DACH_MAX_1685",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_DACH_MAX_1685"
+       ],
+       "mal": 2
       }
      ]
     },
@@ -1262,6 +1733,14 @@
        "blasen": [
         "P0_DACH_MAX_1690"
        ]
+      },
+      {
+       "zeile": "P0_DACH_MAX_1695",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_DACH_MAX_1695"
+       ],
+       "mal": 2
       }
      ]
     },
@@ -1303,6 +1782,14 @@
        "blasen": [
         "P0_DACH_MAX_1700"
        ]
+      },
+      {
+       "zeile": "P0_DACH_MAX_1705",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_DACH_MAX_1705"
+       ],
+       "mal": 2
       }
      ]
     },
@@ -1344,6 +1831,14 @@
        "blasen": [
         "P0_DACH_MAX_1710"
        ]
+      },
+      {
+       "zeile": "P0_DACH_MAX_1715",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_DACH_MAX_1715"
+       ],
+       "mal": 2
       }
      ]
     },
@@ -1385,6 +1880,14 @@
        "blasen": [
         "P0_DACH_MAX_1720"
        ]
+      },
+      {
+       "zeile": "P0_DACH_MAX_1725",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_DACH_MAX_1725"
+       ],
+       "mal": 2
       }
      ]
     },
@@ -1426,6 +1929,112 @@
        "blasen": [
         "P0_DACH_MAX_1730"
        ]
+      },
+      {
+       "zeile": "P0_DACH_MAX_1735",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_DACH_MAX_1735"
+       ],
+       "mal": 2
+      }
+     ]
+    },
+    {
+     "id": "umzugskartons",
+     "script_name": "Umzugskartons",
+     "name_key": "UI_OBJ_UMZUGSKARTONS",
+     "rect": [
+      0,
+      135,
+      65,
+      85
+     ],
+     "gehe": [
+      95,
+      262
+     ],
+     "ansehen": [
+      {
+       "zeile": "P0_DACH_MAX_1810",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_DACH_MAX_1810"
+       ]
+      },
+      {
+       "zeile": "P0_DACH_MAX_1815",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_DACH_MAX_1815"
+       ],
+       "mal": 2
+      }
+     ],
+     "benutzen": [
+      {
+       "zeile": "P0_DACH_MAX_1820",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_DACH_MAX_1820"
+       ]
+      },
+      {
+       "zeile": "P0_DACH_MAX_1825",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_DACH_MAX_1825"
+       ],
+       "mal": 2
+      }
+     ]
+    },
+    {
+     "id": "steckdose",
+     "script_name": "Steckdose",
+     "name_key": "UI_OBJ_STECKDOSE",
+     "rect": [
+      258,
+      188,
+      22,
+      22
+     ],
+     "gehe": [
+      270,
+      235
+     ],
+     "ansehen": [
+      {
+       "zeile": "P0_DACH_MAX_1830",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_DACH_MAX_1830"
+       ]
+      },
+      {
+       "zeile": "P0_DACH_MAX_1835",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_DACH_MAX_1835"
+       ],
+       "mal": 2
+      }
+     ],
+     "benutzen": [
+      {
+       "zeile": "P0_DACH_MAX_1840",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_DACH_MAX_1840"
+       ]
+      },
+      {
+       "zeile": "P0_DACH_MAX_1845",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_DACH_MAX_1845"
+       ],
+       "mal": 2
       }
      ]
     }
@@ -1519,6 +2128,20 @@
        ]
       },
       {
+       "zeile": "P0_DACH_MAX_1745",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_DACH_MAX_1745"
+       ],
+       "bedingung": [
+        {
+         "art": "vor",
+         "raetsel": "P1"
+        }
+       ],
+       "mal": 2
+      },
+      {
        "zeile": "P0_DACH_MAX_1750",
        "sprecher": "MAX",
        "blasen": [
@@ -1530,6 +2153,20 @@
          "raetsel": "P1"
         }
        ]
+      },
+      {
+       "zeile": "P0_DACH_MAX_1755",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_DACH_MAX_1755"
+       ],
+       "bedingung": [
+        {
+         "art": "nach",
+         "raetsel": "P1"
+        }
+       ],
+       "mal": 2
       }
      ],
      "gegenstand_auf": [
@@ -1666,6 +2303,20 @@
          "raetsel": "P3"
         }
        ]
+      },
+      {
+       "zeile": "P0_DACH_MAX_1005",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_DACH_MAX_1005"
+       ],
+       "bedingung": [
+        {
+         "art": "vor",
+         "raetsel": "P3"
+        }
+       ],
+       "mal": 2
       }
      ]
     }
