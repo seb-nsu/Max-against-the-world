@@ -1,6 +1,6 @@
 # Grafik: Stil und Werkzeuge
 
-Alle Welten teilen einen Pixel-Art-Stil in 480×270 Pixeln mit einer gemeinsamen Palette; jede Welt bekommt nur ihre eigene Farbstimmung. Die Prompts in den Grafik-Dateien der Welten sind auf Englisch, weil die Generatoren damit zuverlässiger arbeiten.
+Alle Welten teilen einen Pixel-Art-Stil in 480×270 Pixeln. Figuren und Gegenstände nutzen eine gemeinsame Palette, Hintergründe je 32 eigene Farben; jede Welt bekommt ihre eigene Farbstimmung. Die Prompts in den Grafik-Dateien der Welten sind auf Englisch, weil die Generatoren damit zuverlässiger arbeiten.
 
 ## Technischer Stil
 
@@ -8,16 +8,16 @@ Alle Welten teilen einen Pixel-Art-Stil in 480×270 Pixeln mit einer gemeinsamen
 | --- | --- | --- |
 | Auflösung | 480×270 Pixel, im Spiel 4-fach auf 1920×1080 skaliert (vorläufig festgelegt am 9. November 2026, nach den ersten Testszenen noch einmal prüfen; die Zahl steht zentral in `tools/aufloesung.py`) | Am Laptop und Rechner wirkte 320×180 zu grob; 480×270 bringt deutlich mehr Details bei etwa 2,25-facher Fläche und skaliert glatt auf 1080p und 4K |
 | Hintergründe | 480×270; größere Räume bis 960×270. Retro Diffusion erzeugt höchstens 384 Pixel Kantenlänge, darum entsteht ein Hintergrund aus einem Konzeptbild in voller Größe, das lokal mit Neural Pixelate umgewandelt wird; Ersatzweg sind zwei Hälften zu 240×270 (breite Räume vier Viertel) | Breite Räume scrollen seitlich; das Konzeptbild dient zugleich zum Gegenprüfen |
-| Figuren | Max etwa 84 Pixel hoch, Erwachsene 84 bis 96, Pixel etwa 27 | Gut lesbare Mimik, genug Platz im Raum |
+| Figuren | Max etwa 84 Pixel hoch, Erwachsene 84 bis 96, Pixel etwa 27 | Gut lesbare Mimik, genug Platz im Raum. Die Möbel im Hintergrund richten sich danach: Türen und hohe Schränke an der Rückwand etwa 80 Pixel, Sessel etwa 40, Tische etwa 35 (Test Dachboden 10. November 2026: ohne diese Vorgabe zeichnet die KI den Raum anderthalbmal zu groß, Max wäre kleiner als der Sessel) |
 | Inventar-Icons | 36×36 Pixel | Einheitliche Inventarleiste |
 | Mauszeiger | 24×24 Pixel |  |
-| Palette | Eine gemeinsame Palette mit 32 Farben, zum Beispiel „Endesga 32“ von Lospec | Alle Assets werden darauf umgefärbt; so passen auch fremde Pakete |
+| Palette | Figuren, Gegenstände, Icons und Oberfläche: gemeinsame Palette „Endesga 32“ von Lospec (Welt-Zusatzfarben siehe unten). Hintergründe: je Raum 32 eigene Farben, beim Umwandeln in Retro Diffusion mit „Reduce colors“, 32 Farben, „Balanced“, Dithering None (Entscheidung 10. November 2026) | Endesga 32 hat zu wenige staubige Mitteltöne für die gemalten Konzeptbilder (Test Dachboden: grüner Sessel wurde braun, alles rotstichig). Einheitlich bleibt das Spiel über den gemeinsamen Konzept-Stil; Figuren in den Grundfarben heben sich ab |
 | Perspektive | Mittelweg mit leichter Tiefe (Entscheidung 10. November 2026): Rückwand frontal, sanfte Ein-Punkt-Perspektive mit Fluchtpunkt in der Bildmitte auf etwa 40 Prozent der Höhe, Seitenwände höchstens als schmale schräge Streifen am Rand; begehbarer Boden etwa 90 bis 120 Pixel hoch im unteren Drittel bis zur unteren Hälfte. Figuren-Sprites bleiben streng seitlich | Wie die klassischen Adventures der 1990er: Figuren laufen auch nach hinten und werden dort auf etwa 80 Prozent kleiner (Feld `tiefe: 0.8` im Raum-Layout), Laufwege bleiben lesbar |
 | Licht | Von oben links, weiche Schatten nach rechts unten | Einheitlich über alle Szenen |
 | Konturen | Figuren und Gegenstände mit dunkler, farbiger Kontur (nicht reines Schwarz); Hintergründe ohne Kontur | Figuren heben sich vom Hintergrund ab |
 | Kantenglättung | Keine; saubere Pixelgruppen ohne Farbverläufe | Echte Pixel-Art |
 
-**Farbstimmung pro Welt** (alle aus derselben Palette):
+**Farbstimmung pro Welt:**
 
 | Bereich | Hauptfarben | Stimmung |
 | --- | --- | --- |
@@ -27,7 +27,7 @@ Alle Welten teilen einen Pixel-Art-Stil in 480×270 Pixeln mit einer gemeinsamen
 | Welt 3 | Nachtblau, Neon-Magenta, Cyan; Grün für die Code-Sicht; Weiß für das Labor | Regen und Neon |
 | Welt 4 | Je Sender anders | Siehe `welt-4.md` |
 
-**Zusatzfarben pro Welt:** Endesga 32 hat kein Neon. Welt 3 bekommt zwei Magenta- und zwei Cyan-Töne dazu, Welt 4 je Sender bis zu zwei eigene Töne. Palettize läuft pro Welt mit der erweiterten Welt-Palette, nicht mit der Basis. Max, Pixel und die weltenübergreifenden Gegenstände bleiben in den 32 Grundfarben, damit sie überall gleich aussehen.
+**Zusatzfarben pro Welt:** Endesga 32 hat kein Neon. Welt 3 bekommt zwei Magenta- und zwei Cyan-Töne dazu, Welt 4 je Sender bis zu zwei eigene Töne. Palettize läuft für Figuren und Gegenstände pro Welt mit der erweiterten Welt-Palette, nicht mit der Basis; Hintergründe haben ihre eigenen 32 Farben. Max, Pixel und die weltenübergreifenden Gegenstände bleiben in den 32 Grundfarben, damit sie überall gleich aussehen.
 
 ## Werkzeuge und Ablauf
 
@@ -47,7 +47,7 @@ Alle Welten teilen einen Pixel-Art-Stil in 480×270 Pixeln mit einer gemeinsamen
 
 1. Konzeptbild mit ChatGPT oder Gemini, bis Aufbau und Stimmung passen. Die Layout-Skizze des Raums (`grafik/skizzen/<abschnitt>/<raum>.png`, verlinkt in jeder Grafik-Datei unter „Szenen“) als Bild mitgeben und hinter den Prompt schreiben: „Use the attached sketch only for the position and size of objects and exits, not for style, colors or text. Leave the orange marked spots empty.“ Blaue Kästen gehören ins Bild, orange gestrichelte sind eigene Sprites, grüne Ausgänge, die grauen Umrisse zeigen Max' Größe vorn und hinten. Die Skizzen erzeugt `tools/layout_skizzen.py` aus den Raum-Layouts neu.
 2. Hintergrund in 480×270 erzeugen oder umwandeln: Standard ist das fertige Konzeptbild mit Neural Pixelate (behält die Anordnung), Retro Diffusion mit dem Prompt nur als Ersatzweg.
-3. In Aseprite: Palette anwenden, Perspektive prüfen, Laufbereich frei lassen, störende Details entfernen.
+3. In Aseprite: Perspektive prüfen, Laufbereich frei lassen, störende Details und Schrift entfernen, Sprites (Gegenstände, die man nimmt) aus dem Bild malen. Die 32 Farben kommen schon aus dem Umwandeln; neue Pixel nur mit Farben aus dem Bild setzen.
 4. Gegenstände der Szene als Sammelbild erzeugen und ausschneiden.
 5. In Godot einsetzen und mit Max als Platzhalter testen, ob Größen und Laufwege stimmen. Bei Boden mit Tiefe im Layout `tiefe: 0.8` eintragen (Ablauf in `game/README.md`, Abschnitt „Grafik ersetzen“).
 
@@ -67,7 +67,7 @@ Ein vollständiger Prompt besteht aus drei Teilen: **Baustein** (Technik, von hi
 | Animation | 20 bis 40 Wörter | Ausgangsbild → Aktion in Phasen → Bildzahl → Schleife oder einmalig → Blickrichtung → was sich nicht bewegt |
 | Effekt | 15 bis 25 Wörter | Form, Farbe, Größe, Bildzahl, über welcher Szene |
 
-**Farbwerte im Prompt:** Hex-Werte (etwa #3a4466) sind nur Orientierung; Retro Diffusion hält sie nicht zuverlässig ein. Verbindlich ist das Umfärben mit Palettize auf die (Welt-)Palette. Die 90-Wort-Grenze darf ein Hintergrund mit sehr vielen Hotspots überschreiten (Dachboden); lässt Retro Diffusion dann Details weg, Variante B nehmen (Neural Pixelate aus dem Konzeptbild).
+**Farbwerte im Prompt:** Hex-Werte (etwa #3a4466) sind nur Orientierung; Retro Diffusion hält sie nicht zuverlässig ein. Verbindlich ist das Umfärben mit Palettize auf die (Welt-)Palette, bei Hintergründen die Reduktion auf 32 eigene Farben. Die 90-Wort-Grenze darf ein Hintergrund mit sehr vielen Hotspots überschreiten (Dachboden); lässt Retro Diffusion dann Details weg, Variante B nehmen (Neural Pixelate aus dem Konzeptbild).
 
 **Zustände:** Gegenstände und Orte, die sich im Spiel verändern (vorher und nachher, Tag und Nacht), werden immer als Paar im selben Prompt erzeugt, damit sie zusammenpassen.
 
@@ -78,13 +78,13 @@ Ein vollständiger Prompt besteht aus drei Teilen: **Baustein** (Technik, von hi
 **KONZEPT** (ChatGPT oder Gemini, nur als Vorlage):
 
 ```text
-Concept art for a 2D point-and-click adventure game in the style of classic 1990s adventure games, front view of the room with gentle one-point perspective, camera at the eye level of a standing person looking straight at the back wall, back wall parallel to the picture plane, vanishing point in the center at about 40 percent of the image height, side walls at most as narrow angled strips at the image edges, open walkable floor with gentle depth across the lower third to half of the image kept free of objects except at the left and right edges, no top-down, bird's-eye or strong three-quarter view, no fisheye, light from the upper left with soft shadows to the lower right, humorous and whimsical, warm hand-painted look, 16:9, no text, no letters, no logos.
+Concept art for a 2D point-and-click adventure game in the style of classic 1990s adventure games, front view of the room with gentle one-point perspective, camera at the eye level of a standing person looking straight at the back wall, back wall parallel to the picture plane, vanishing point in the center at about 40 percent of the image height, side walls at most as narrow angled strips at the image edges, open walkable floor with gentle depth across the lower third to half of the image kept free of objects except at the left and right edges, wide shot from further back so the room feels spacious: a standing adult at the front edge would be about one third of the image height, so doors and tall cupboards reach only about 30 percent of the image height, chairs about 15 percent and tables about 13 percent, no top-down, bird's-eye or strong three-quarter view, no fisheye, light from the upper left with soft shadows to the lower right, humorous and whimsical, warm hand-painted look, 16:9, no text, no letters, no logos.
 ```
 
 **HINTERGRUND** (`rd_plus__environment`, 480×270):
 
 ```text
-Pixel art background, 480x270, front view with gentle one-point perspective, camera at eye level, back wall parallel to the picture plane, vanishing point in the center, side walls only as narrow angled strips at the edges, open walkable floor with gentle depth about 90 to 120 pixels high kept clear in the lower part, large objects only against the back wall or at the left and right edges, exits clearly readable, light from upper left with soft shadows to the lower right, clean pixel clusters, no anti-aliasing, no outlines, no characters, all signs, labels and book covers blank.
+Pixel art background, 480x270, front view with gentle one-point perspective, camera at eye level, back wall parallel to the picture plane, vanishing point in the center, side walls only as narrow angled strips at the edges, open walkable floor with gentle depth about 90 to 120 pixels high kept clear in the lower part, wide shot with small furniture: doors and tall cupboards about 80 pixels high, chairs about 40, tables about 35, large objects only against the back wall or at the left and right edges, exits clearly readable, light from upper left with soft shadows to the lower right, clean pixel clusters, no anti-aliasing, no outlines, no characters, all signs, labels and book covers blank.
 ```
 
 **FIGUR** (`rd_pro__default`, Menschen etwa 84 Pixel):

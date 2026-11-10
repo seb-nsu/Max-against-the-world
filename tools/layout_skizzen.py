@@ -7,7 +7,7 @@ beschriftete Kästen an ihrem Platz. Die Skizze geht beim Konzeptbild (ChatGPT o
 Vorlage für die Anordnung mit, siehe docs/grafik/00-stil-und-werkzeuge.md.
 
 Umrechnung aus dem flachen Platzhalter-Layout: Alles oberhalb des Laufbereichs ist Rückwand und
-wird auf die Wand gestaucht (Fluchtpunkt auf 40 Prozent der Höhe, Rückwand 80 Prozent breit),
+wird auf 60 Prozent verkleinert auf die Wand gesetzt (Fluchtpunkt auf 40 Prozent der Höhe, Rückwand 80 Prozent breit),
 der Laufbereich wird zum Boden mit Tiefe im unteren Bildteil. Räume, deren Laufbereich kein
 waagrechtes Band ist (Treppen, Kletterwege), bleiben flach und sind als Sonderfall beschriftet.
 
@@ -36,6 +36,7 @@ FLUCHT_Y = 0.40            # Fluchtpunkt auf 40 Prozent der Bildhöhe
 BODEN_OBEN = 160           # Hinterkante des Bodens in Spielpixeln (Boden 110 Pixel hoch)
 WAND_RAND = 0.10           # Seitenstreifen je 10 Prozent der Breite
 MAX_HOEHE = 84
+WAND_MASS = 0.6          # Möbel an der Rückwand: Schrank etwa 80 bis 95 Pixel, Sessel etwa 40
 TIEFE = 0.8
 
 FARBEN = {
@@ -73,7 +74,8 @@ class Umrechnung:
         if not self.band:
             return y
         if wand or y <= self.y0:
-            return min(y, self.y0) * BODEN_OBEN / self.y0
+            # Rückwand: Unterkante bleibt auf der Wandlinie, Höhen auf WAND_MASS verkleinert
+            return BODEN_OBEN - (self.y0 - min(y, self.y0)) * WAND_MASS
         return BODEN_OBEN + (y - self.y0) * (self.h - BODEN_OBEN) / (self.h - self.y0)
 
     def x(self, x, wand):
