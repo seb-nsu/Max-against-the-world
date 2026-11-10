@@ -47,6 +47,55 @@ Alle mit dem Baustein HINTERGRUND.
 | Treppenhaus | Nachmittag (Prolog) und später Abend (Finale, Abspann-Foto 4); nur Fenster und Licht wechseln; beide als Paar im selben Prompt; im Finale liegt über der Lukenöffnung oben die geschlossene Klappe als Sprite | Treppe nach oben, offene Luke oben rechts, Fenster, freier Haken für Opas Propellerhut (Deko-Sprite), Tür links hinunter zum Wohnzimmer | Narrow wooden staircase in an old house on an afternoon, seen strictly from the side like a stage. The stairs rise from a small landing at the lower left to an open attic hatch at the top right, steps drawn as an even sawtooth line. Left edge: a doorway down to the living room, coats and an umbrella on wall hooks with one free hook. Center wall: a small window with pale afternoon light. Walkable: the landing in the lower left and the stair line. Creaky dark wooden steps, faded striped wallpaper. Second image, same framing: late evening, dark blue window with a few stars, warm light from a small ceiling lamp |
 | Supermarkt | Später Abend | Automatische Tür in der Mitte, Milchregal durch die Tür, Platz links der Tür für den Aufsteller mit Milch-Sonderangebot (Deko-Sprite) | Front of a small neighborhood supermarket late in the evening, shopfront seen straight on and parallel to the picture plane, the sidewalk as open floor with gentle depth in the lower third. Left: a row of red shopping carts. Center: automatic glass sliding doors, behind them a brightly lit aisle leading to a glowing milk fridge at the back. Right: a bicycle rack and a flower stand with buckets of tulips. Free sidewalk space left of the door for a store display. Blank sign above the door. Dark blue night sky with a few stars above the roof, a street lamp, warm light spilling out onto the sidewalk |
 
+**Stimmungen per Gemini Bild-zu-Bild:** Für jede Lichtstimmung und Variante das genannte Bild in Gemini hochladen (das große Original, nicht die 640er Pixel-Fassung) und den Prompt dazu schicken. Danach wie beim Grundbild mit `python3 tools/pixelieren.py original.png game/grafik/hintergruende/<Datei>` umwandeln. Bei einem Fehler im selben Chat mit einem kurzen Satz nachbessern lassen (etwa „Keep the armchair exactly where it was.“). Prüfen: Alles steht noch an derselben Stelle, sonst passen die Klickflächen nicht mehr. Die gerechneten Dachboden-Stimmungen aus `tools/stimmung.py` werden dabei einfach überschrieben.
+
+*Dachboden, Rückkehr 1 (später Nachmittag)*: Originalbild Dachboden hochladen, Ergebnis als `w0_bg_dachboden_rueckkehr1_v01.png`
+
+```text
+Edit this image. Keep the exact same room: same camera position, framing, perspective and crop, every piece of furniture and every object in exactly the same place, size and shape, same painted style and level of detail. Do not add, remove, move or resize anything unless told below. No people, no animals, no text. Change only the following: late afternoon. The sun is still fairly high, the sunbeam through the small roof window is a little longer and a warmer golden yellow than before, dust glitters in it. The whole attic is slightly warmer and a touch darker, shadows soft and brownish. The bulb lamp stays switched off.
+```
+
+*Dachboden, Rückkehr 2 (früher Abend)*: Originalbild Dachboden hochladen, Ergebnis als `w0_bg_dachboden_rueckkehr2_v01.png`
+
+```text
+Edit this image. Keep the exact same room: same camera position, framing, perspective and crop, every piece of furniture and every object in exactly the same place, size and shape, same painted style and level of detail. Do not add, remove, move or resize anything unless told below. No people, no animals, no text. Change only the following: early evening. A low warm orange sun, the sunbeam through the roof window falls flatter and reaches further across the floor. The room is clearly darker, corners and the area under the roof slopes sink into cool blue-grey shadow, so the warm beam stands out. Greens and reds keep their colour, nothing turns pink. The bulb lamp stays switched off.
+```
+
+*Dachboden, Rückkehr 3 (Abendrot, Lampe an)*: Originalbild Dachboden hochladen, Ergebnis als `w0_bg_dachboden_rueckkehr3_v01.png`
+
+```text
+Edit this image. Keep the exact same room: same camera position, framing, perspective and crop, every piece of furniture and every object in exactly the same place, size and shape, same painted style and level of detail. Do not add, remove, move or resize anything unless told below. No people, no animals, no text. Change only the following: dusk. The roof window shows a deep orange sky fading to violet, only a faint last reddish beam reaches the floor. The bare bulb lamp hanging from the ridge beam is switched on: a warm yellow bulb and a soft cone of yellow light on the back wall, the poster, the calendar and the floor below it, fading out towards the edges. The rest of the attic lies in dim blue-brown shadow. No pink or magenta cast.
+```
+
+*Dachboden, Finale (Nacht, Maschine läuft)*: Originalbild Dachboden hochladen, Ergebnis als `w0_bg_dachboden_finale_v01.png`
+
+```text
+Edit this image. Keep the exact same room: same camera position, framing, perspective and crop, every piece of furniture and every object in exactly the same place, size and shape, same painted style and level of detail. Do not add, remove, move or resize anything unless told below. No people, no animals, no text. Change only the following: night. The roof window shows a dark blue night sky with a full moon and a cold pale blue moonbeam. The bulb lamp is switched on with warm yellow light. Add one new object: in the center of the floor in front of the back wall, a huge homemade baking machine of copper pipes and riveted metal, about half the image height, with two round empty sockets side by side at chest height (left for an egg, right for flour), a small antenna dish on top, a pressure gauge with the needle in the red, rows of small glowing lamps, and a small oven door with a round window at hip height showing rising chocolate dough. Steam curls upward from it and it casts a strong orange glow. The floor hatch at the front right is closed by a heavy iron bolt with a small red lamp. Keep the floor in front of the machine free.
+```
+
+*Dachboden, Finale (Maschine steht)*: Bild „Dachboden, Finale (Nacht, Maschine läuft)“ hochladen, Ergebnis als `w0_bg_dachboden_finale2_v01.png`
+
+```text
+Edit this image. Keep the exact same room: same camera position, framing, perspective and crop, every piece of furniture and every object in exactly the same place, size and shape, same painted style and level of detail. Do not add, remove, move or resize anything unless told below. No people, no animals, no text. Change only the following: the baking machine is switched off: lamps dark, pressure gauge needle in the green, no orange glow, only a last thin wisp of steam. Its oven door is swung open and shows a lopsided chocolate cake. The iron bolt on the floor hatch is pulled back and its red lamp is off. Night, moon and bulb lamp stay the same.
+```
+
+*Wohnzimmer, Abend (Welt 4)*: Originalbild Wohnzimmer hochladen, Ergebnis als `w0_bg_wohnzimmer_abend_v01.png`
+
+```text
+Edit this image. Keep the exact same room: same camera position, framing, perspective and crop, every piece of furniture and every object in exactly the same place, size and shape, same painted style and level of detail. Do not add, remove, move or resize anything unless told below. No people, no animals, no text. Change only the following: evening. Outside it is dark, the room is lit only by the standing lamp with the yellow fabric shade, which is switched on and casts a warm, slightly dim pool of light around it, plus a string of small warm fairy lights hanging in loose loops along the top of the back wall. Corners in soft dark brown shadow, the television screen stays dark. No pink or magenta cast.
+```
+
+*Wohnzimmer, Geburtstag (Finale)*: Bild „Wohnzimmer, Abend“ hochladen, Ergebnis als `w0_bg_wohnzimmer_geburtstag_v01.png`
+
+```text
+Edit this image. Keep the exact same room: same camera position, framing, perspective and crop, every piece of furniture and every object in exactly the same place, size and shape, same painted style and level of detail. Do not add, remove, move or resize anything unless told below. No people, no animals, no text. Change only the following: the room is decorated for a birthday party: colorful paper garlands pinned across the back wall, a few balloons tied to the sofa armrest, a lopsided steaming chocolate birthday cake with lit candles on the coffee table, a small pile of wrapped presents next to it, some confetti on the carpet. Keep the spot with the dust outline on the coffee table visible, and keep free floor space beside the television for a second TV on a wheeled cart. Warm golden lamp light.
+```
+
+*Treppenhaus, später Abend (Finale)*: Originalbild Treppenhaus hochladen, Ergebnis als `w0_bg_treppenhaus_abend_v01.png`
+
+```text
+Edit this image. Keep the exact same room: same camera position, framing, perspective and crop, every piece of furniture and every object in exactly the same place, size and shape, same painted style and level of detail. Do not add, remove, move or resize anything unless told below. No people, no animals, no text. Change only the following: late evening. The small window shows a dark blue night sky with a few stars, no daylight comes in. The round ceiling lamp is switched on and gives warm yellow light, brightest on the ceiling, the coats and the lower steps; the area under the stairs and the open attic hatch at the top lie in deep shadow. No pink or magenta cast.
+```
 **Dachboden neu erzeugen:** Das freigegebene Konzeptbild `concepts/w0_concept_dachboden.png` passt nicht zur Raumansicht (Mittelweg mit leichter Tiefe, Entscheidung 10. November 2026) und wird ersetzt. Zuerst das Konzeptbild mit dem ersten Prompt in ChatGPT oder Gemini erzeugen, dann den Hintergrund mit dem zweiten Prompt in Retro Diffusion (`rd_plus__environment`, 640×360) oder das neue Konzeptbild mit Neural Pixelate auf genau 640×360 umwandeln. Beide Prompts sind vollständig, Baustein und Farb-Baustein stehen schon drin. Fernseher, Pixel und die Deko-Objekte sind eigene Sprites; das Konzeptbild zeigt sie nur zur Orientierung, der Hintergrund lässt ihre Plätze frei. Beim Prüfen auf vier Dinge achten: Die Rückwand steht frontal, der Boden ist als freie Fläche mit sanfter Tiefe gut erkennbar (etwa 120 bis 160 Pixel hoch), in der Bildmitte steht kein Fernseher, und die Möbel sind klein genug (Schrank etwa 180 Pixel, Sessel etwa 90 Pixel nach dem Umwandeln; Max ist 189 Pixel groß). Das Motiv ist länger als die 90 Wörter der Aufbau-Regel, weil der Dachboden als Knotenpunkt zwölf Hotspots trägt.
 
 ```text
