@@ -206,6 +206,9 @@ echte Grafik:
    setzen, dann `tools/godot_raeume.py` laufen lassen: `CQRaum.tiefe_anwenden()` verkleinert die
    Figuren von 100 Prozent am unteren Rand des Laufbereichs auf 80 Prozent an seiner Hinterkante.
    Räume mit Treppe oder senkrechtem Laufweg (Treppenhaus) bekommen keinen Eintrag.
+   Mit Tiefe kann eine Figur vor oder hinter Möbeln stehen, die auf dem Boden stehen: Solche
+   Teile aus dem Hintergrund als eigenes Prop ausschneiden und ihre Baseline auf den Fußpunkt
+   setzen, dann sortiert Popochiu die Figuren richtig davor oder dahinter.
 4. Gegenstands-Icons: die Pfade stehen im Bauplan (`icons` je Zustand); dafür in
    `tools/godot_raeume.py` den Pfad ändern oder im Gegenstandsskript `aussehen_anpassen()`
    überschreiben.
