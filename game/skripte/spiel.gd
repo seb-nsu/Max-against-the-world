@@ -728,6 +728,13 @@ func _bedingung_text_ok(text: String) -> bool:
 			return is_instance_valid(R.current) and R.current.has_character("Toadi")
 		"Zauberwald betreten":
 			return Zustand.war_in("zauberwald")
+		"Pixel auf dem Balken":
+			# Taverne: Pixel sitzt auf dem Dachbalken, solange Max spielt (G17)
+			return (
+				is_instance_valid(R.current) and R.current.script_name == "Taverne"
+				and R.current.has_character("Pixel") and C.player != C.Pixel
+				and C.Pixel.position.distance_to(R.current.get_marker_position("Balken")) < 4.0
+			)
 		"nur mit Zeldina im Team":
 			return Zustand.ist("W1_ZELDINA_FOLGT")
 		"Feilschen", "Haustier", "richtig":

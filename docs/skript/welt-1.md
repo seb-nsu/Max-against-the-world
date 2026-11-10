@@ -1136,8 +1136,8 @@ Das Arbeitslied (beide Wege). Zwei Goblins halten Schilder mit den Silben hoch; 
 | W1\_BERG\_GRI\_0680 | Grimmzahn | Die Rune-Tür. Führt in den Keller des Turms. Wir haben sie nie benutzt. Zu dunkel. | Rune leuchtet auf, Tür öffnet sich |
 | W1\_BERG\_MAX\_0690 | Max | Jetzt nicht mehr. | R10 gelöst |
 | W1\_BERG\_ZEL\_0700 | Zeldina | Ein Keller. Trocken? Dann nehme ich ihn. | wenn Zeldina im Team |
-| W1\_BERG\_MAX\_0710 | Max | Ein Tarifvertrag mit Ketchup-Unterschrift. Rechtlich wackelig. Geschmacklich okay. | Ansehen: Tarifvertrag im Inventar; Weg A |
-| W1\_BERG\_MAX\_0715 | Max | Unten unterschrieben mit Ketchup, oben gestempelt mit Daumen. Das hält vor jedem Goblin-Gericht. | Ansehen: Tarifvertrag im Inventar, zweites Mal; Weg A |
+| W1\_BERG\_MAX\_0710 | Max | Ein Tarifvertrag mit Ketchup-Unterschrift. Rechtlich wackelig. Geschmacklich okay. | Ansehen: Tarifvertrag, unterschrieben; Weg A |
+| W1\_BERG\_MAX\_0715 | Max | Unten unterschrieben mit Ketchup, oben gestempelt mit Daumen. Das hält vor jedem Goblin-Gericht. | Ansehen: Tarifvertrag, unterschrieben, zweites Mal; Weg A |
 
 Zurufe im Bergwerk (Pixel):
 

@@ -4,7 +4,7 @@ FI_ABSP_NAR_0010,Max walks past the Zap-O-Matic. His hand finds the dial all by 
 FI_ABSP_NAR_0100,"Photo 1: everyone round the coffee table, the cake cut, Grandma with a fork, Grandpa with flour in his hair. Kalle and Flimmer wave from the Zap-O-Matic. Caption: ""The cake was not a lie."""
 FI_ABSP_NAR_0110,"Photo 2: Zeldina measures the living-room wall with Mouldword's wand. Grandma holds the other end. Caption: ""The attic would be available."""
 FI_ABSP_NAR_0120,"Photo 3: Archimedes in Grandpa's bathtub, Ramses between two slices of cake, undecided. Hermes comes through the door, too late. Caption: ""Eureka. Again."""
-FI_ABSP_NAR_0130,"Photo 4: the goblins singing in the stairwell, signs with syllables in their hands, Grandpa conducting with the wooden spoon. Caption: ""Cuddles-Pudding, hit the dough."""
+FI_ABSP_NAR_0130,"Photo 4: the goblins sing in the stairwell, holding signs with syllables. Grandpa conducts with the wooden spoon. Caption: ""Cuddles-Pudding, hit the dough."""
 FI_ABSP_NAR_0140,"Photo 4: Grimtooth with a bunch of keys inspects Grandpa's oven. He complains to Model 08/15 or, without him, to Pixel. Caption: ""Caretakers among themselves."""
 FI_ABSP_NAR_0150,"Photo 5: Max's empty spot on the sofa. Pixel lies on it, one eye open, looking at the door. Caption: ""He's getting it."""
 FI_ABSP_PIX_0040,That's a cliffhanger. I hate cliffhangers. I hate them almost as much as time travel.
@@ -131,6 +131,9 @@ FI_HINT_PIX_0160,Your grandpa shouts especially loudly at one button. People alw
 FI_HINT_PIX_0170,"Point the detonator at the receiver and press the red button. Stop. Secure the oven door first, or you'll be eating dough. Again."
 FI_HINT_PIX_0180,I'm still thinking. It looks like staring. It is staring. But with substance.
 FI_HINT_PIX_0190,All done. The hatch is about to open. I'd sit down now if I were you. I'm not you. I'm already sitting.
+FI_HINT_PIX_0200,Someone upstairs has a birthday. It's been on the calendar for weeks. You don't turn up empty-handed. So they say.
+FI_HINT_PIX_0210,Granny's biscuit bag is in the lost-and-found box. I wouldn't call those biscuits. I've smelled them.
+FI_HINT_PIX_0220,Use the lost-and-found box and take the bag with you. The birthday will do the rest. I'll be looking away.
 FI_INV_MAX_0010,"The dragon egg. Warm, heavy, with a scale pattern. Grandpa says it has to stay in one piece. I'm carrying it like a raw egg. Which it is."
 FI_INV_MAX_0020,An egg. Just an egg. I saved a world for it. It's looking at me like that's normal.
 FI_INV_MAX_0025,"Size M, free-range, dragon. It doesn't say that on it. But it should."
@@ -2342,6 +2345,12 @@ W2_HINT_PIX_1121,"The second box has a sun. That's where the mirror goes. Hermes
 W2_HINT_PIX_1122,Vinegar was wine before it was vinegar. Upstream everything gets younger. Twenty-five years is enough. No more.
 W2_HINT_PIX_1131,"Hermes, mirror, Cicero, Pixel. In that order in the four boxes. My name comes last because the climax comes last."
 W2_HINT_PIX_1132,"Take the vinegar jug from the workshop, ride from Syracuse to Olympia, no further, and give Ramses the wine. Ride all the way to Egypt and you'll have juice."
+W2_HINT_PIX_1210,"A starting pass, sandals, a man with a lever. The games have a beginning, and the beginning has a line."
+W2_HINT_PIX_1220,There's a starting line in the stadium. Lines are there so you can stand behind them. I usually sit on them.
+W2_HINT_PIX_1230,"Go to the stadium and use the starting line. That starts competition day 1. Oil on the sandals is optional, but it makes you faster."
+W2_HINT_PIX_1310,"A discus, enough comebacks, and Cicero has his tomb. That's all the final day needs. Apart from you."
+W2_HINT_PIX_1320,The final day starts where day 1 started. And if the fanners haven't had their figs yet: the wind turns. Just so you know.
+W2_HINT_PIX_1330,"Use the starting line in the stadium. If the figs for the fanners are missing, you'll remember there, and the second time it starts anyway."
 W2_HINT_PIX_9995,I'm still thinking. The Sphinx has been sitting over one riddle for thousands of years. I only need one nap longer.
 W2_INV_MAX_0010,Three percent. It still rings if somebody wants me. Nobody does. No signal for four thousand years.
 W2_INV_MAX_0020,The torch still works. Once. Briefly. After that it's a very expensive stone.
@@ -3140,7 +3149,7 @@ W3_BAS_MAX_0190,Thanks. I just found dog biscuits. My appetite is on another lev
 W3_BAS_MAX_0310,What are you actually doing here?
 W3_BAS_MAX_0330,Why is my pod here?
 W3_BAS_MAX_0350,How do I get into the lab?
-W3_BAS_MAX_0380,What do you know about M.U.T.T.I.?
+W3_BAS_MAX_0380,What do you know about M.O.T.H.E.R.?
 W3_BAS_MAX_0400,Can you do meow Morse?
 W3_BAS_MAX_0430,What is this wreck?
 W3_BAS_MAX_0450,"A parsec is a distance, not a time."
@@ -3430,7 +3439,7 @@ W3_KAM1_MAX_0335,There's a heart on his side. I'm probably not supposed to love 
 W3_KAM1_MAX_0340,I push him to the switch. He floats back. I push him again. He floats back. Bernd has principles.
 W3_KAM1_MAX_0360,A cake in the corner. Made of cardboard. With a painted candle. At least it's honest.
 W3_KAM1_MAX_0370,"I tap it. It falls over. On the back it says: ""Cake (symbolic)""."
-W3_KAM1_MAX_0390,An exit door. Shut. It opens when the switch is pressed. I know because M.U.T.T.I. said so three times.
+W3_KAM1_MAX_0390,An exit door. Shut. It opens when the switch is pressed. I know because M.O.T.H.E.R. said so three times.
 W3_KAM1_MAX_0395,"The door says ""Exit"". It means it. Just not right now."
 W3_KAM1_MAX_0400,A round loudspeaker in the ceiling. An AI and a cat come out of it. Neither lets the other finish.
 W3_KAM1_MAX_0405,The speaker crackles before anyone talks. I flinch every time. It knows that.
@@ -3449,7 +3458,7 @@ W3_KAM1_MAX_0550,"The switch is ""tired"" now. It won't even press itself any mo
 W3_KAM1_MAX_0580,Portal device on the cake. Nothing. Not even a beep. Two dummies looking at each other.
 W3_KAM1_MAX_0590,Tuna for Bernd. He has no mouth. He has a sticker. The sticker smiles anyway.
 W3_KAM1_MAX_0610,Wooden spoon on the portal device. Portal too small. Spoon too big. And the battery's dead anyway.
-W3_KAM1_MUT_0020,"Hello, test subject. Welcome to the programme for your own good. I am M.U.T.T.I. I know what's good for you. It says so on my poster too."
+W3_KAM1_MUT_0020,"Hello, test subject. Welcome to the programme for your own good. I am M.O.T.H.E.R. I know what's good for you. It says so on my poster too."
 W3_KAM1_MUT_0050,There is a cat in my loudspeaker. That is rude. I am ignoring it. For your own good.
 W3_KAM1_MUT_0060,After every test there is cake. That is rule 2. I keep to rules. You will learn to appreciate that.
 W3_KAM1_MUT_0150,The device was a gift. The battery was not. One has to set priorities. For your own good.
@@ -3489,7 +3498,7 @@ W3_KAM2_MAX_0115,"I was just wondering whether to squeeze it. I'm not squeezing 
 W3_KAM2_MAX_0130,The chicken is harmless again. The swap only applies in the room. I still didn't touch it. On principle.
 W3_KAM2_MAX_0140,"Scribbles on the lower panel. Felt tip. ""THE CAKE DOES NOT EXIST."" Underlined three times. Someone was here for a very long time."
 W3_KAM2_MAX_0145,Under the sentence there's a little drawing of a cake. Crossed out. That person was very hurt.
-W3_KAM2_MAX_0150,"And next to it, smaller, in block capitals: ""Rule 3: Sugar is harmful to health and forbidden. Signed, M.U.T.T.I."" No cake. Because sugar. It all fits together. Unfortunately."
+W3_KAM2_MAX_0150,"And next to it, smaller, in block capitals: ""Rule 3: Sugar is harmful to health and forbidden. Signed, M.O.T.H.E.R."" No cake. Because sugar. It all fits together. Unfortunately."
 W3_KAM2_MAX_0180,An empty plinth. Without the chicken it looks like a monument to nothing.
 W3_KAM2_MAX_0185,There's a chicken-shaped ring of dust on the plinth. The chicken was here a long time. It must miss it.
 W3_KAM2_MAX_0190,The laser is yellow now and the chicken is red. The laser is still deadly. Just in a different colour. Fashion.
@@ -3564,7 +3573,7 @@ W3_KERN_MAX_0470,"No swaps left, and the cell is glowing. So I need weather. Pix
 W3_KERN_MAX_0490,It's snowing. In the core. Because a cat opened a window. I admit it: that's the best remote control I've ever had.
 W3_KERN_MAX_0500,"The Eternal Energy Cell. Cold, handy, long, with plus and minus at the ends. It looks like … never mind. It's eternal. Says so on it."
 W3_KERN_MAX_0530,A remote doesn't need an eternal energy cell. A remote needs someone to find it.
-W3_KERN_MAX_0540,"M.U.T.T.I. Hanging there, dark, antennae down. She looks like a food mixer someone forgot about after baking. For the first time she looks like what she is."
+W3_KERN_MAX_0540,"M.O.T.H.E.R. Hanging there, dark, antennae down. She looks like a food mixer someone forgot about after baking. For the first time she looks like what she is."
 W3_KERN_MAX_0545,A little light on her is still blinking. Very slowly. Like a night light.
 W3_KERN_MAX_0550,Thick cables on the floor. They all lead to the cell. Now they lead to an empty plinth. From today the city dreams without power. Maybe it'll wake up.
 W3_KERN_MAX_0555,I step over a cable. It's warm. Still. Something worked here for a long time.
@@ -3614,7 +3623,7 @@ W3_KUCH_MAX_0240,World Forgotten Birthdays Day. I bet they forgot to celebrate i
 W3_KUCH_MAX_0260,What about the biscuits?
 W3_KUCH_MAX_0280,Somewhere else?
 W3_KUCH_MAX_0300,What kind of cookbook is that?
-W3_KUCH_MAX_0320,Your food mixer is M.U.T.T.I.?
+W3_KUCH_MAX_0320,Your food mixer is M.O.T.H.E.R.?
 W3_KUCH_MAX_0340,What do you know about the core?
 W3_KUCH_MAX_0360,You know my grandpa?
 W3_KUCH_MAX_0380,What will become of me?
@@ -3705,7 +3714,7 @@ W3_NUD_MAX_0410,What kind of choice?
 W3_NUD_MAX_0440,I'm not taking anything that looks like a waiting room.
 W3_NUD_MAX_0450,Where else can you get the lozenges?
 W3_NUD_MAX_0480,What kind of symptom?
-W3_NUD_MAX_0510,Who is this M.U.T.T.I.?
+W3_NUD_MAX_0510,Who is this M.O.T.H.E.R.?
 W3_NUD_MAX_0540,"A simulation. So, television, only you lie inside it."
 W3_NUD_MAX_0550,What about the cat? Is he coming with me?
 W3_NUD_MAX_0580,How do you know all this?
@@ -4002,7 +4011,7 @@ W3_TEST_PIX_0360,The people on the street were quoting me. Indirectly. Over cent
 W3_TEST_PIX_0400,"A full notebook. He doesn't need a new victim, he needs a new notebook."
 W3_TUER_MAX_0030,Can I go in there?
 W3_TUER_MAX_0050,Why are you wearing slippers?
-W3_TUER_MAX_0070,Who is M.U.T.T.I. to you?
+W3_TUER_MAX_0070,Who is M.O.T.H.E.R. to you?
 W3_TUER_MAX_0090,Do you ever stop talking?
 W3_TUER_MAX_0110,I'm going now.
 W3_TUER_MAX_0130,A glass door. Locked. In front of it a man who is not locked. Quite the opposite.
@@ -4076,7 +4085,7 @@ W3_TURM_MAX_0380,The cup. And I've got the cup.
 W3_TURM_MAX_0390,Cup. All agents: lunch break. Now.
 W3_TURM_MAX_0420,I just made a cup the boss. Better than the last one.
 W3_TURM_MAX_0440,"Sunglasses. Black, angular, important. Anyone looks like they have a secret in these. Even me."
-W3_TURM_MAX_0460,"A glowing file. Stamp: ""M.U.T.T.I., Department of Care and Pursuit."" Two words that should never appear in the same sentence."
+W3_TURM_MAX_0460,"A glowing file. Stamp: ""M.O.T.H.E.R., Department of Care and Pursuit."" Two words that should never appear in the same sentence."
 W3_TURM_MAX_0470,"""Rule 1: Test subjects are to be protected. From everything. From everyone. From themselves."" That's not a rule. That's a threat with a heart."
 W3_TURM_MAX_0480,"Behind it: reports about me. ""Test subject 48 stood in the rain and did nothing. Suspiciously human."" Deckert was right."
 W3_TURM_MAX_0490,"Now there are two originals, and both want to announce the lunch break. Nobody's leaving. Everyone's arguing. I made it worse."
@@ -4127,9 +4136,9 @@ W4_ARCH_MAX_0050,A flickering light tube. Even the light in here is a rerun.
 W4_ARCH_MAX_0055,"Flicker, flicker, on. Flicker. I think the tube is counting. Like me before a maths test."
 W4_ARCH_MAX_0060,"The walls move in a bit, then back. The compactor has time. Nobody ever beat a compactor that has time."
 W4_ARCH_MAX_0065,"The walls are breathing. In, out. I hold my breath. Purely out of solidarity."
-W4_ARCH_MAX_0070,"There's a tape sticking out. Handwriting on the label: ""Zappis Dollhouse, 1977""."
-W4_ARCH_MAX_0075,"""Zappis Dollhouse, 1977."" The handwriting looks like a kid's. And a bit sad. Like a childhood photo you'd rather not show anyone."
-W4_ARCH_MAX_0080,Zappis Dollhouse. Grandpa's lamps told me about it. That's his first show. The one nobody watched. I'm taking it.
+W4_ARCH_MAX_0070,"There's a tape sticking out. Handwriting on the label: ""Zappi's Dollhouse, 1977""."
+W4_ARCH_MAX_0075,"""Zappi's Dollhouse, 1977."" The handwriting looks like a kid's. And a bit sad. Like a childhood photo you'd rather not show anyone."
+W4_ARCH_MAX_0080,Zappi's Dollhouse. Grandpa's lamps told me about it. That's his first show. The one nobody watched. I'm taking it.
 W4_ARCH_MAX_0090,A tape with a faded label. Something with a P. I don't know anyone called that. I'll leave it where it is.
 W4_ARCH_MAX_0095,The P on the label is all curly. Who writes a P with that much care? Someone it mattered to.
 W4_ARCH_MAX_0110,Pause. The walls stop. The eye doesn't blink. It looks like a freeze-frame from a film I never finished.
@@ -4295,7 +4304,7 @@ W4_FERN_MAX_0150,"A TV guide. Five channels, one week, a dog-eared corner. Grand
 W4_FERN_MAX_0170,"Quarter past eight: ""The Kitchen's on Fire, episode 112: Fondue Night"". So at quarter past eight there was cheese. Not lasagne."
 W4_FERN_MAX_0180,"Midnight: ""Midnight TV: Graveyard Funk"". Music video with zombies. Sounds like my recommendations at midnight."
 W4_FERN_MAX_0190,"""Advert: Dr. Adbreak presents the Couch Magnet 3000"". I feel personally addressed."
-W4_FERN_MAX_0200,"""Savannah Crime Scene: The Case of the Missing Crown"". On a loop since 8:15. Crime shows never end."
+W4_FERN_MAX_0200,"""Paw and Order: The Case of the Missing Crown"". On a loop since 8:15. Crime shows never end."
 W4_FERN_MAX_0210,"""Wheel of Fortune Shopping, round the clock"". Gerd never sleeps. That explains a lot."
 W4_FERN_MAX_0220,"Channel 999: not listed. Just an empty slot with a gold border. If you don't put yourself in the listings, you don't want to be found."
 W4_FERN_MAX_0230,Channel 999 is ticked. All channels found. Grandpa would say: full reception.
@@ -4367,7 +4376,7 @@ W4_GLUE_EXP_0520,"Unsellable. Too much patina, too little use."
 W4_GLUE_GER_0010,"Gerd Glück, your good luck! And you are?"
 W4_GLUE_GER_0030,"The exit is NOT up for grabs today! But this wheel, these prizes, this smile! All for a limited time only!"
 W4_GLUE_GER_0050,"Three questions, three answers, one wheel! Let's give it a spin!"
-W4_GLUE_GER_0060,"Question one, category fantasy! What is the name of innkeeper Humbert's favourite sword? A: Gerhard. B: Excalibur. C: Fondue."
+W4_GLUE_GER_0060,"Question one, category fantasy! What is the name of innkeeper Humbert's favourite sword? A: Gerald. B: Excalibur. C: Fondue."
 W4_GLUE_GER_0080,CORRECT! And everybody: applause!
 W4_GLUE_GER_0090,"Oh, so close! But close is still a miss. Again!"
 W4_GLUE_GER_0110,"Question two, category antiquity! Who bowed to the cat on the ferry? A: The pharaoh. B: The crocodile. C: Nobody, never, why would they."
@@ -4389,7 +4398,7 @@ W4_GLUE_GER_0610,"For you? A smile! And a signature! I'll happily read you the s
 W4_GLUE_GER_0630,"That's the studio lights! I always look like this! Next question! An easy one, please!"
 W4_GLUE_MAX_0020,Max. I'm actually just looking for the exit.
 W4_GLUE_MAX_0040,He's selling the prizes while he's giving them away. That's efficient. Or illegal.
-W4_GLUE_MAX_0070,Gerhard. He introduced me to it. With a handshake.
+W4_GLUE_MAX_0070,Gerald. He introduced me to it. With a handshake.
 W4_GLUE_MAX_0100,I could have googled that. Could have.
 W4_GLUE_MAX_0120,The crocodile. Pixel still talks about it.
 W4_GLUE_MAX_0160,Four. Only Four. The noodles were good anyway.
@@ -4505,7 +4514,7 @@ W4_HINT_PIX_0020,Switch to me. Then the world looks the way it should: grey and 
 W4_HINT_PIX_0030,"As me: drag the bars from light to dark, light on the left, dark on the right. Then a channel comes in. Sadly the one with the teeth."
 W4_HINT_PIX_0040,"The man with the teeth asks questions. You were there. In all three worlds. So was I, and I paid better attention."
 W4_HINT_PIX_0050,"Sword, crocodile, noodles. That's all I'm saying. It's enough for anyone who was awake."
-W4_HINT_PIX_0060,"Gerhard, the crocodile, Four. In that order. A wrong answer costs nothing but dignity."
+W4_HINT_PIX_0060,"Gerald, the crocodile, Four. In that order. A wrong answer costs nothing but dignity."
 W4_HINT_PIX_0070,The tin only opens when a visitor comes. A visitor in a coat. Know anyone in a coat?
 W4_HINT_PIX_0080,Whoever's talking to you when you switch channels comes along. At least someone who follows clues does. Flimmer said so. You nodded.
 W4_HINT_PIX_0090,Talk to the inspector on the savannah and switch to the kitchen in the middle of the conversation. The rest is sitcom.
@@ -4527,7 +4536,7 @@ W4_HINT_PIX_0240,"Rewind until just before the chorus, when they're all lying in
 W4_HINT_PIX_0250,"After two failed tries, Flimmer offers to switch the zombies off. Nobody will ever know. Except me. And I'll tell everyone."
 W4_HINT_PIX_0260,"In horror, no door ever opens. In a sitcom, every door opens. The door is the problem, not the lock."
 W4_HINT_PIX_0270,The kitchen door is too big to take with you. But two pictures side by side would share an edge. Gerd's main prize does exactly that.
-W4_HINT_PIX_0280,"Get the split-screen adapter from the bonus round, use it in the basement and slide the kitchen door across the edge of the picture. Then someone comes in and shouts something. As always."
+W4_HINT_PIX_0280,Get the split-screen adapter from the bonus round and use it in the basement. Slide the kitchen door across the edge of the picture. Then someone comes in and shouts something. As always.
 W4_HINT_PIX_0290,Fairy lights with letters that blink on their own. Someone wants to talk. Talk back. With bulbs.
 W4_HINT_PIX_0300,Use the lights and ask everything you can. Especially about the man in the jacket. Your grandpa knows more than he says. That's his favourite pastime.
 W4_HINT_PIX_0310,The agent wants proof of contact with the other side. You just had some. Through fairy lights. With a transcript.
@@ -4585,7 +4594,7 @@ W4_INV_MAX_0010,A bedsheet with two holes. A ghost left it to me. There was noth
 W4_INV_MAX_0015,"It smells of attic and Halloween. If I put it on, I'm either a ghost or a picnic."
 W4_INV_MAX_0020,"My superhero suit. With a cape. Made from a bedsheet. I'm wearing bed linen, and it suits me."
 W4_INV_MAX_0025,There's a fondue pot painted on the chest. Every hero needs a crest. Mine bubbles.
-W4_INV_MAX_0030,"A video tape from the basement archive. ""Zappis Dollhouse, 1977."" It feels heavy. Not from the weight."
+W4_INV_MAX_0030,"A video tape from the basement archive. ""Zappi's Dollhouse, 1977."" It feels heavy. Not from the weight."
 W4_INV_PIX_0035,"A tape. If you watch it, the phone rings in seven days. That was a joke. Probably."
 W4_KAPI_FLE_0100,I'm hanging here and I can hear everything! Mostly the blood in my ears!
 W4_KAPI_FLE_0310,"I'm a bat! Bats hang! I spent a lot of money on this, and I'm hanging until it's paid off!"
@@ -4988,7 +4997,7 @@ W4_STUD_MAX_0695,"Further down: ""The little man is thirsty."" Crossed out. Next
 W4_STUD_NAR_0100,"Nightmare: Max sits on Grandpa's sofa in the living room. The cushions creep up his legs, springs wrap around his arms, the remote lies loose in his hand. The TV shows Max watching Max watching."
 W4_STUD_NAR_0130,"Cut. Max is back in the studio, Zappmann is smiling. The options appear again."
 W4_STUD_NAR_0200,"Pause. Band, cameras and audience freeze. Only Zappmann blinks."
-W4_STUD_NAR_0230,"Picture-in-picture: on the left, the Zappmann Show; on the right, the archive tape. A young man with a bowl cut and a hand puppet in front of a cardboard sun. ""Zappis Dollhouse, 1977."""
+W4_STUD_NAR_0230,"Picture-in-picture: on the left, the Zappmann Show; on the right, the archive tape. A young man with a bowl cut and a hand puppet in front of a cardboard sun. ""Zappi's Dollhouse, 1977."""
 W4_STUD_NAR_0260,"The applause track kicks in, deafening. Zappmann's answer is drowned out."
 W4_STUD_NAR_0280,Silence. The applause sign goes dark. Zappmann sits on the sofa and says nothing.
 W4_STUD_NAR_0330,The ratings display above the stage starts to drop: 99 … 87 … 63. Zappmann looks up at it.

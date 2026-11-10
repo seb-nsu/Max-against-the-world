@@ -478,7 +478,11 @@ def baue(abschnitt):
                 treffer[0]["nehmen"] = eintrag
             wurzel[z["id"]] = eintrag
             continue
-        ablegen(art, ziel, zeile(z, mal, pixel), raum)
+        # „Ansehen: Tarifvertrag, unterschrieben“: Zustand eines Gegenstands nach dem Komma (G21)
+        zst = None
+        if ziel[0] == "gegenstand" and "@" not in ziel[1]:
+            zst = next((t for t in teile[1:] if t in gegenstaende.get(ziel[1], {}).get("zustaende", [])), None)
+        ablegen(art, ziel, zeile(z, mal, pixel), raum, zst)
 
     # ---- Figuren und Gegenstände -------------------------------------------------------------
     in_raeumen = {f["id"] for r in raeume for f in r["figuren"]} | set(layout.get("_figuren") or [])

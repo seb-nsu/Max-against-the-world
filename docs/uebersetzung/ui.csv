@@ -109,7 +109,7 @@ UI_OBJ_DORFBRETT,Dorfbrett,Notice board
 UI_OBJ_DACHBALKEN,Dachbalken,Ceiling beams
 UI_OBJ_TRESEN,Tresen,Bar
 UI_OBJ_FISCHSUPPE,Fischsuppe,Fish soup
-UI_OBJ_FLASCHE_VIELSAFT_LIMO,Vielsaft-Limo,Polyjuice lemonade
+UI_OBJ_FLASCHE_VIELSAFT_LIMO,Vielsaft-Limo,Polyjuicy Lemonade
 UI_OBJ_WEINKARTE_AM_TRESEN,Weinkarte,Wine list
 UI_OBJ_FONDUE_TOPF,Fondue-Topf,Fondue pot
 UI_OBJ_KELLERTUER,Kellertür,Cellar door
@@ -575,7 +575,7 @@ UI_RAUM_BUERO_50,"Büroturm, 50. Stock","Office tower, 50th floor"
 UI_RAUM_TESTKAMMER_1,Testkammer 1,Test chamber 1
 UI_RAUM_TESTKAMMER_2,Testkammer 2,Test chamber 2
 UI_RAUM_TESTKAMMER_3,Testkammer 3,Test chamber 3
-UI_RAUM_KERN,Kern von M.U.T.T.I.,Core of M.U.T.T.I.
+UI_RAUM_KERN,Kern von M.U.T.T.I.,Core of M.O.T.H.E.R.
 UI_OBJ_AUTO,Auto,Car
 UI_OBJ_AUTOMAT,Automat,Vending machine
 UI_OBJ_AUTOS,Autos,Cars
@@ -625,7 +625,7 @@ UI_OBJ_LUEFTUNGSSCHACHT,Lüftungsschacht,Ventilation shaft
 UI_OBJ_MAX_KAPSEL,Max' Kapsel,Max's pod
 UI_OBJ_MORPHAEUS,Morphäus,Morphaeus
 UI_OBJ_MORSE_TABELLE,Morse-Tabelle,Morse table
-UI_OBJ_MUTTI,M.U.T.T.I.,M.U.T.T.I.
+UI_OBJ_MUTTI,M.U.T.T.I.,M.O.T.H.E.R.
 UI_OBJ_NEON_PIZZA_PLAKAT,Neon-Pizza-Plakat,Neon pizza poster
 UI_OBJ_NUDELBUDE,Nudelbude,Noodle stand
 UI_OBJ_OFEN,Ofen,Oven
@@ -875,7 +875,7 @@ UI_W4_ZS_2015,"20:15 – Küchen-Sitcom, Folge 112","8:15 pm – Kitchen sitcom,
 UI_W4_ZS_MITTERNACHT,Mitternachts-TV: Friedhofs-Funk,Midnight TV: Graveyard Funk
 UI_W4_FLIMMER_HUNGER,Gibt es hier was zu essen?,Is there anything to eat here?
 UI_W4_ZS_WERBESPOT,Dr. Werbepause präsentiert den Couch-Magnet 3000,Dr. Adbreak presents the Couch Magnet 3000
-UI_W4_ZS_TIERTORT,Tiertort Savanne,Savannah Crime Scene
+UI_W4_ZS_TIERTORT,Tiertort Savanne,Paw and Order: Savannah
 UI_W4_ZS_GLUECKSRAD,Glücksrad-Shopping,Wheel of Fortune Shopping
 UI_W4_ZS_LEER,(leeres Feld),(empty slot)
 UI_W4_ZS_KANAL_999,Kanal 999: Senderzentrale,Channel 999: Network headquarters
@@ -914,3 +914,9 @@ UI_FI_TASTE_ROT,Rote Taste,Red button
 UI_FI_ZELDINA_OFEN,Kannst du die Ofentür aufhebeln?,Can you pry the oven door open?
 UI_FI_ROBOTER_LUKE,Kannst du die Luke öffnen?,Can you open the hatch?
 UI_OBJ_PORTALGERAET,Portalgerät,Portal device
+UI_WELTNAME_PROLOG,Opas Dachboden,Grandpa's attic
+UI_WELTNAME_WELT_1,Schwurbelstein,Waffleton
+UI_WELTNAME_WELT_2,Antikodonien,Antikodonien
+UI_WELTNAME_WELT_3,Neo-Neustadt 2099,Neo-Neustadt 2099
+UI_WELTNAME_WELT_4,Kanal 999,Channel 999
+UI_WELTNAME_FINALE,Zwischenspiele und Finale,Interludes and finale

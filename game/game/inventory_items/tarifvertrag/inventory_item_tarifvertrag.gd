@@ -20,11 +20,3 @@ func _kombinieren(item: PopochiuInventoryItem) -> bool:
 		return true
 	return false
 
-
-## BERG 0710/0715 stehen seit der Regie-Tabellen-Korrektur im Bauplan, aber ohne Zustand
-## (Skript: „Ansehen: Tarifvertrag“ statt „…, unterschrieben“). Sie gelten nur unterschrieben.
-func _ansehen() -> void:
-	var leer := zustand() == "leer"
-	var eintraege: Array = bauplan().get("ansehen", []).filter(
-		func(e): return (e.get("zustand", "") == "leer") == leer)
-	await Spiel.ansehen(eintraege, "Gegenstand/" + script_name, zustand())

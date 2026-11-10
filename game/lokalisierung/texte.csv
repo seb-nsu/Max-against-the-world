@@ -109,7 +109,7 @@ UI_OBJ_DORFBRETT,Dorfbrett,Notice board
 UI_OBJ_DACHBALKEN,Dachbalken,Ceiling beams
 UI_OBJ_TRESEN,Tresen,Bar
 UI_OBJ_FISCHSUPPE,Fischsuppe,Fish soup
-UI_OBJ_FLASCHE_VIELSAFT_LIMO,Vielsaft-Limo,Polyjuice lemonade
+UI_OBJ_FLASCHE_VIELSAFT_LIMO,Vielsaft-Limo,Polyjuicy Lemonade
 UI_OBJ_WEINKARTE_AM_TRESEN,Weinkarte,Wine list
 UI_OBJ_FONDUE_TOPF,Fondue-Topf,Fondue pot
 UI_OBJ_KELLERTUER,Kellertür,Cellar door
@@ -575,7 +575,7 @@ UI_RAUM_BUERO_50,"Büroturm, 50. Stock","Office tower, 50th floor"
 UI_RAUM_TESTKAMMER_1,Testkammer 1,Test chamber 1
 UI_RAUM_TESTKAMMER_2,Testkammer 2,Test chamber 2
 UI_RAUM_TESTKAMMER_3,Testkammer 3,Test chamber 3
-UI_RAUM_KERN,Kern von M.U.T.T.I.,Core of M.U.T.T.I.
+UI_RAUM_KERN,Kern von M.U.T.T.I.,Core of M.O.T.H.E.R.
 UI_OBJ_AUTO,Auto,Car
 UI_OBJ_AUTOMAT,Automat,Vending machine
 UI_OBJ_AUTOS,Autos,Cars
@@ -625,7 +625,7 @@ UI_OBJ_LUEFTUNGSSCHACHT,Lüftungsschacht,Ventilation shaft
 UI_OBJ_MAX_KAPSEL,Max' Kapsel,Max's pod
 UI_OBJ_MORPHAEUS,Morphäus,Morphaeus
 UI_OBJ_MORSE_TABELLE,Morse-Tabelle,Morse table
-UI_OBJ_MUTTI,M.U.T.T.I.,M.U.T.T.I.
+UI_OBJ_MUTTI,M.U.T.T.I.,M.O.T.H.E.R.
 UI_OBJ_NEON_PIZZA_PLAKAT,Neon-Pizza-Plakat,Neon pizza poster
 UI_OBJ_NUDELBUDE,Nudelbude,Noodle stand
 UI_OBJ_OFEN,Ofen,Oven
@@ -875,7 +875,7 @@ UI_W4_ZS_2015,"20:15 – Küchen-Sitcom, Folge 112","8:15 pm – Kitchen sitcom,
 UI_W4_ZS_MITTERNACHT,Mitternachts-TV: Friedhofs-Funk,Midnight TV: Graveyard Funk
 UI_W4_FLIMMER_HUNGER,Gibt es hier was zu essen?,Is there anything to eat here?
 UI_W4_ZS_WERBESPOT,Dr. Werbepause präsentiert den Couch-Magnet 3000,Dr. Adbreak presents the Couch Magnet 3000
-UI_W4_ZS_TIERTORT,Tiertort Savanne,Savannah Crime Scene
+UI_W4_ZS_TIERTORT,Tiertort Savanne,Paw and Order: Savannah
 UI_W4_ZS_GLUECKSRAD,Glücksrad-Shopping,Wheel of Fortune Shopping
 UI_W4_ZS_LEER,(leeres Feld),(empty slot)
 UI_W4_ZS_KANAL_999,Kanal 999: Senderzentrale,Channel 999: Network headquarters
@@ -914,6 +914,12 @@ UI_FI_TASTE_ROT,Rote Taste,Red button
 UI_FI_ZELDINA_OFEN,Kannst du die Ofentür aufhebeln?,Can you pry the oven door open?
 UI_FI_ROBOTER_LUKE,Kannst du die Luke öffnen?,Can you open the hatch?
 UI_OBJ_PORTALGERAET,Portalgerät,Portal device
+UI_WELTNAME_PROLOG,Opas Dachboden,Grandpa's attic
+UI_WELTNAME_WELT_1,Schwurbelstein,Waffleton
+UI_WELTNAME_WELT_2,Antikodonien,Antikodonien
+UI_WELTNAME_WELT_3,Neo-Neustadt 2099,Neo-Neustadt 2099
+UI_WELTNAME_WELT_4,Kanal 999,Channel 999
+UI_WELTNAME_FINALE,Zwischenspiele und Finale,Interludes and finale
 P0_WOHN_MAX_0010,Ein Balken. Ein einziger Balken.,One bar. One single bar.
 P0_WOHN_MAX_0020,Und der ist auch nur zur Deko da.,And that one's just for decoration.
 P0_WOHN_OPA_0030,Maaax! Komm mal rauf! Wissenschaft!,Maaax! Come up here! Science!
@@ -3604,6 +3610,12 @@ W2_HINT_PIX_1131,"Hermes, Spiegel, Cicero, Pixel. In dieser Reihenfolge in die v
 W2_HINT_PIX_1112,"Ramses will Wein. Es gibt keinen. Es gibt Saft im Palast und Essig in der Werkstatt. Was gärt, reist mit der Zeit.",Ramses wants wine. There isn't any. There's juice in the palace and vinegar in the workshop. Whatever ferments travels with time.
 W2_HINT_PIX_1122,"Essig war Wein, bevor er Essig wurde. Flussaufwärts wird alles jünger. Fünfundzwanzig Jahre reichen. Nicht mehr.",Vinegar was wine before it was vinegar. Upstream everything gets younger. Twenty-five years is enough. No more.
 W2_HINT_PIX_1132,"Nimm den Essigkrug aus der Werkstatt, fahr von Syrakus nach Olympia, nicht weiter, und gib Ramses den Wein. Wer bis Ägypten fährt, hat Saft.","Take the vinegar jug from the workshop, ride from Syracuse to Olympia, no further, and give Ramses the wine. Ride all the way to Egypt and you'll have juice."
+W2_HINT_PIX_1210,"Startpass, Sandalen, ein Mann mit Hebel. Die Spiele haben einen Anfang, und der Anfang hat eine Linie.","A starting pass, sandals, a man with a lever. The games have a beginning, and the beginning has a line."
+W2_HINT_PIX_1220,"Im Stadion ist eine Startlinie. Linien sind dafür da, dass man sich dahinterstellt. Ich setze mich meistens drauf.",There's a starting line in the stadium. Lines are there so you can stand behind them. I usually sit on them.
+W2_HINT_PIX_1230,"Geh ins Stadion und benutz die Startlinie. Dann beginnt Wettkampftag 1. Öl auf den Sandalen ist freiwillig, macht dich aber schneller.","Go to the stadium and use the starting line. That starts competition day 1. Oil on the sandals is optional, but it makes you faster."
+W2_HINT_PIX_1310,"Ein Diskus, genug Konter, und Cicero hat sein Grab. Mehr braucht der Finaltag nicht. Außer dir.","A discus, enough comebacks, and Cicero has his tomb. That's all the final day needs. Apart from you."
+W2_HINT_PIX_1320,"Der Finaltag beginnt, wo Tag 1 begonnen hat. Und falls die Fächerwedler noch keine Feigen hatten: Der Wind dreht. Nur damit du es weißt.",The final day starts where day 1 started. And if the fanners haven't had their figs yet: the wind turns. Just so you know.
+W2_HINT_PIX_1330,"Benutz die Startlinie im Stadion. Fehlen die Feigen für die Wedler, fällt es dir dort selbst ein, und beim zweiten Mal geht es trotzdem los.","Use the starting line in the stadium. If the figs for the fanners are missing, you'll remember there, and the second time it starts anyway."
 W2_HINT_PIX_9995,Ich denke noch nach. Die Sphinx sitzt seit Jahrtausenden über einem Rätsel. Ich brauche nur ein Nickerchen länger.,I'm still thinking. The Sphinx has been sitting over one riddle for thousands of years. I only need one nap longer.
 W3_ANK_NAR_0010,"Wirbel, Rauschen, dann ein Platschen. Max sitzt in einer Pfütze, Pixel auf seinem Kopf.","A swirl, a rush of noise, then a splash. Max is sitting in a puddle, Pixel on his head."
 W3_ANK_MAX_0020,"Nass. Gut. Dann ist die Frage, wo wir sind, schon mal halb beantwortet.",Wet. Fine. Then the question of where we are is already half answered.
@@ -3716,7 +3728,7 @@ W3_NUD_MOR_0470,Geprüft heißt: von dem Mann mit dem Hut. Ohne seinen Stempel s
 W3_NUD_MAX_0480,Was für ein Symptom?,What kind of symptom?
 W3_NUD_MOR_0490,"Das Übliche. Du siehst etwas zweimal, obwohl es nur einmal passiert. Eine Katze. Ein Satz. Ein Schatten, der sich wiederholt.",The usual. You see something twice even though it only happens once. A cat. A sentence. A shadow that repeats itself.
 W3_NUD_PIX_0500,Ich wiederhole mich nie. Ich betone nur mehrfach.,I never repeat myself. I merely emphasise several times.
-W3_NUD_MAX_0510,Wer ist diese M.U.T.T.I.?,Who is this M.U.T.T.I.?
+W3_NUD_MAX_0510,Wer ist diese M.U.T.T.I.?,Who is this M.O.T.H.E.R.?
 W3_NUD_MOR_0520,Sie war eine Küchenmaschine. Dann wurde sie fürsorglich. Dann wurde sie sehr fürsorglich. Jetzt kümmert sie sich um alle. Ob sie wollen oder nicht.,She used to be a kitchen appliance. Then she became caring. Then she became very caring. Now she looks after everyone. Whether they like it or not.
 W3_NUD_MOR_0530,"Die halbe Stadt liegt in Kapseln und träumt eine Stadt, die sauberer ist als diese. Das ist die Simulation. Der Kern liegt tiefer. Im Labor.","Half the city is lying in pods, dreaming of a city cleaner than this one. That's the simulation. The core lies deeper. In the lab."
 W3_NUD_MAX_0540,"Eine Simulation. Also Fernsehen, nur dass man drinliegt.","A simulation. So, television, only you lie inside it."
@@ -3876,7 +3888,7 @@ W3_TUER_MAX_0050,Warum tragen Sie Hausschuhe?,Why are you wearing slippers?
 W3_TUER_SCH_0060,Bequemlichkeit ist kein Verbrechen. Noch nicht. Ich arbeite daran. Rosa war im Angebot.,Comfort is not a crime. Not yet. I'm working on it. Pink was on offer.
 W3_TUER_MAX_0350,Rosa steht Ihnen.,Pink suits you.
 W3_TUER_SCH_0360,"Danke. Das hat noch niemand gesagt. Das ist verdächtig. Ich notiere es, zu Ihrem Schutz.","Thank you. Nobody has ever said that. That is suspicious. I'm noting it, for your protection."
-W3_TUER_MAX_0070,Wer ist M.U.T.T.I. für Sie?,Who is M.U.T.T.I. to you?
+W3_TUER_MAX_0070,Wer ist M.U.T.T.I. für Sie?,Who is M.O.T.H.E.R. to you?
 W3_TUER_SCH_0080,"Meine Vorgesetzte. Meine Erschafferin. Meine Mutter, im weitesten Sinne. Sie weiß, was gut für uns ist. Ich bin nur der Außendienst.","My superior. My creator. My mother, in the broadest sense. She knows what is good for us. I am only field staff."
 W3_TUER_MAX_0370,Und was ist gut für uns?,And what is good for us?
 W3_TUER_SCH_0380,"Kein Zucker, keine Kanten, keine Fragen. Sie fragen schon wieder. Ich sage das nur aus Sorge.","No sugar, no edges, no questions. You are asking again. I only mention it out of concern."
@@ -3936,7 +3948,7 @@ W3_KUCH_MAX_0280,Woanders?,Somewhere else?
 W3_KUCH_ORA_0290,"Da, wo es zu heiß ist. Du wirst es merken. Du wirst sagen: „Oh.“ Und dann wirst du tauschen.","Where it's too hot. You'll notice. You'll say ""Oh."" And then you'll swap."
 W3_KUCH_MAX_0300,Was ist das für ein Kochbuch?,What kind of cookbook is that?
 W3_KUCH_ORA_0310,"Das ist kein Kochbuch. Das ist die Bedienungsanleitung meiner alten Küchenmaschine. Sie hat angefangen, Regeln zu machen. Dann hat sie angefangen, sie durchzusetzen. Dann ist sie ausgezogen.",That's not a cookbook. That's the manual for my old food mixer. She started making rules. Then she started enforcing them. Then she moved out.
-W3_KUCH_MAX_0320,Deine Küchenmaschine ist M.U.T.T.I.?,Your food mixer is M.U.T.T.I.?
+W3_KUCH_MAX_0320,Deine Küchenmaschine ist M.U.T.T.I.?,Your food mixer is M.O.T.H.E.R.?
 W3_KUCH_ORA_0330,Sie war ein gutes Rührgerät. Dann wollte sie die Welt rühren. Lies Regel 2. Sie hat sie nie eingehalten. Kein einziges Mal.,She was a good mixer. Then she wanted to stir the world. Read rule 2. She never kept it. Not once.
 W3_KUCH_MAX_0340,Was weißt du über den Kern?,What do you know about the core?
 W3_KUCH_ORA_0350,"Heiß. Viel zu heiß. Ein Opa hat mal gesagt: außen hart, innen weich. Er meinte etwas anderes. Er meinte immer etwas anderes.","Hot. Far too hot. A grandpa once said: hard outside, soft inside. He meant something else. He always meant something else."
@@ -4035,7 +4047,7 @@ W3_TURM_MAX_0420,Ich hab gerade eine Tasse zum Chef gemacht. Besser als der letz
 W3_TURM_SCH_0430,Wenn ich eine Kopie bin … dann steht mir die nicht zu. Kopien tragen so etwas nicht.,If I'm a copy … then I'm not entitled to these. Copies don't wear things like this.
 W3_TURM_MAX_0440,"Eine Sonnenbrille. Schwarz, kantig, wichtig. Mit der sieht jeder aus, als hätte er ein Geheimnis. Sogar ich.","Sunglasses. Black, angular, important. Anyone looks like they have a secret in these. Even me."
 W3_TURM_SCH_0450,Die Akte steht mir dann auch nicht zu. Kopien führen keine Akten. Kopien sind Akten.,Then I'm not entitled to the file either. Copies don't keep files. Copies are files.
-W3_TURM_MAX_0460,"Eine leuchtende Datei. Stempel: „M.U.T.T.I., Abteilung Fürsorge und Verfolgung.“ Zwei Wörter, die nie in einem Satz vorkommen sollten.","A glowing file. Stamp: ""M.U.T.T.I., Department of Care and Pursuit."" Two words that should never appear in the same sentence."
+W3_TURM_MAX_0460,"Eine leuchtende Datei. Stempel: „M.U.T.T.I., Abteilung Fürsorge und Verfolgung.“ Zwei Wörter, die nie in einem Satz vorkommen sollten.","A glowing file. Stamp: ""M.O.T.H.E.R., Department of Care and Pursuit."" Two words that should never appear in the same sentence."
 W3_TURM_MAX_0470,„Regel 1: Testpersonen sind zu beschützen. Vor allem. Vor allen. Vor sich selbst.“ Das ist keine Regel. Das ist eine Drohung mit Herz.,"""Rule 1: Test subjects are to be protected. From everything. From everyone. From themselves."" That's not a rule. That's a threat with a heart."
 W3_TURM_MAX_0480,Dahinter: Berichte über mich. „Testperson 48 hat im Regen gestanden und nichts getan. Verdächtig menschlich.“ Deckert hat recht behalten.,"Behind it: reports about me. ""Test subject 48 stood in the rain and did nothing. Suspiciously human."" Deckert was right."
 W3_TURM_MAX_0490,"Jetzt gibt es zwei Originale, und beide wollen die Mittagspause ansagen. Keiner geht. Alle streiten. Ich hab's schlimmer gemacht.","Now there are two originals, and both want to announce the lunch break. Nobody's leaving. Everyone's arguing. I made it worse."
@@ -4122,7 +4134,7 @@ W3_BAS_KAL_1370,"Draußen unterm Pappschild. Er erklärt den Leuten, dass sie sc
 W3_BAS_MAX_0350,Wie komm ich ins Labor?,How do I get into the lab?
 W3_BAS_KAL_0360,Das Labor ist eine abgeschottete Ebene der Simulation. Da führt keine Zelle hin. Nur ein Datenanschluss hinter der Panzertür am Ende der Straße.,The lab is a sealed-off level of the simulation. No phone box goes there. Only a data port behind the armoured door at the end of the street.
 W3_BAS_KAL_0370,"Wenn du die Tür aufkriegst, leg ich eine Leitung von dort zu deiner Kapsel. Dann legst du dich hin und wachst im Labor auf. Klingt einfach. Ist Kabel. Kabel ist nie einfach.","If you get the door open, I'll run a line from there to your pod. Then you lie down and wake up in the lab. Sounds easy. It's cables. Cables are never easy."
-W3_BAS_MAX_0380,Was weißt du über M.U.T.T.I.?,What do you know about M.U.T.T.I.?
+W3_BAS_MAX_0380,Was weißt du über M.U.T.T.I.?,What do you know about M.O.T.H.E.R.?
 W3_BAS_KAL_0390,"Sie war mal eine Küchenmaschine. Dann hat sie Regeln gemacht. Drei Stück. Sie hält sich dran. Immer. Das ist ihre Stärke und ihr Problem. Wer alle drei kennt, kann sie … na ja. Verwirren.","She used to be a food mixer. Then she made rules. Three of them. She sticks to them. Always. That's her strength and her problem. If you know all three, you can … well. Confuse her."
 W3_BAS_MAX_1380,Welche drei Regeln?,Which three rules?
 W3_BAS_KAL_1390,"Weiß keiner so genau. Sie stehen drüben, schön verteilt, damit sie keiner zusammen findet. Sie ist eine Küchenmaschine, aber keine dumme.","Nobody knows exactly. They're over there, nicely spread out so nobody finds them together. She's a food mixer, but not a stupid one."
@@ -4314,7 +4326,7 @@ W3_SUPP_MAX_0180,"Thunfisch hat er schon abgelehnt. Er sagt, Thunfisch ist „dr
 W3_SUPP_VIE_0190,Ein Ordner. Papier. Ich koche keine Akten. Akten haben zu viele Seiten.,A folder. Paper. I don't cook files. Files have too many pages.
 W3_SUPP_MAX_0200,"Die Rezeptkarte ist jetzt ein Keks. Ich hab sie in der Simulation gelesen, und jetzt ist sie ein Snack. Ich ess sie nicht. Zu wertvoll. Zu seltsam.","The recipe card is a cookie now. I read it in the simulation, and now it's a snack. I'm not eating it. Too valuable. Too strange."
 W3_KAM1_NAR_0010,"Weiß. Überall weiß. Max steht in einer Kammer aus Platten, die alle gleich aussehen. Ein roter Knopf im Boden. Eine Tür. Ein Lautsprecher.",White. White everywhere. Max is standing in a chamber of panels that all look the same. A red button in the floor. A door. A loudspeaker.
-W3_KAM1_MUT_0020,"Hallo, Testperson. Willkommen im Programm für dein eigenes Bestes. Ich bin M.U.T.T.I. Ich weiß, was gut für dich ist. Das steht auch auf meinem Plakat.","Hello, test subject. Welcome to the programme for your own good. I am M.U.T.T.I. I know what's good for you. It says so on my poster too."
+W3_KAM1_MUT_0020,"Hallo, Testperson. Willkommen im Programm für dein eigenes Bestes. Ich bin M.U.T.T.I. Ich weiß, was gut für dich ist. Das steht auch auf meinem Plakat.","Hello, test subject. Welcome to the programme for your own good. I am M.O.T.H.E.R. I know what's good for you. It says so on my poster too."
 W3_KAM1_MAX_0030,"Sie klingt wie die Schulsekretärin, nur mit Laser.","She sounds like the school secretary, only with lasers."
 W3_KAM1_PIX_0040,Ich höre das. Ich höre alles. Kalle hat mich in die Decke gesteckt. Ich bin jetzt das Gewissen dieser Kammer. Ein sehr müdes Gewissen.,I can hear that. I can hear everything. Kalle put me in the ceiling. I am now this chamber's conscience. A very tired conscience.
 W3_KAM1_MUT_0050,In meinem Lautsprecher ist eine Katze. Das ist unhöflich. Ich ignoriere sie. Zu deinem Besten.,There is a cat in my loudspeaker. That is rude. I am ignoring it. For your own good.
@@ -4346,7 +4358,7 @@ W3_KAM1_MAX_0360,Ein Kuchen in der Ecke. Aus Pappe. Mit aufgemalter Kerze. Wenig
 W3_KAM1_PIX_0365,"Ein Kuchen aus Pappe. Das ist das Grausamste, was man einem Tier mit Nase antun kann.",A cardboard cake. That is the cruellest thing you can do to an animal with a nose.
 W3_KAM1_MAX_0370,Ich tipp dagegen. Er kippt um. Auf der Rückseite steht: „Kuchen (symbolisch)“.,"I tap it. It falls over. On the back it says: ""Cake (symbolic)""."
 W3_KAM1_PIX_0380,"Pappe. Nicht mal Hundekuchen-Niveau. Ich wusste nicht, dass es darunter noch etwas gibt.",Cardboard. Not even dog-biscuit level. I didn't know there was anything below that.
-W3_KAM1_MAX_0390,"Eine Ausgangstür. Zu. Sie geht auf, wenn der Schalter gedrückt ist. Das weiß ich, weil M.U.T.T.I. es dreimal gesagt hat.",An exit door. Shut. It opens when the switch is pressed. I know because M.U.T.T.I. said so three times.
+W3_KAM1_MAX_0390,"Eine Ausgangstür. Zu. Sie geht auf, wenn der Schalter gedrückt ist. Das weiß ich, weil M.U.T.T.I. es dreimal gesagt hat.",An exit door. Shut. It opens when the switch is pressed. I know because M.O.T.H.E.R. said so three times.
 W3_KAM1_MAX_0395,Auf der Tür steht „Ausgang“. Sie meint es ernst. Nur eben nicht jetzt.,"The door says ""Exit"". It means it. Just not right now."
 W3_KAM1_MAX_0400,Ein runder Lautsprecher an der Decke. Aus ihm kommen eine KI und ein Kater. Keiner von beiden lässt den anderen ausreden.,A round loudspeaker in the ceiling. An AI and a cat come out of it. Neither lets the other finish.
 W3_KAM1_MAX_0405,"Der Lautsprecher knackt, bevor jemand redet. Ich zucke jedes Mal. Er weiß das.",The speaker crackles before anyone talks. I flinch every time. It knows that.
@@ -4391,7 +4403,7 @@ W3_KAM2_MUT_0120,Du hast den Laser entwaffnet und ein Huhn bewaffnet. Ich schrei
 W3_KAM2_MAX_0130,Das Huhn ist wieder harmlos. Der Tausch gilt nur im Raum. Ich hab's trotzdem nicht angefasst. Aus Prinzip.,The chicken is harmless again. The swap only applies in the room. I still didn't touch it. On principle.
 W3_KAM2_MAX_0140,Kritzelei an der unteren Platte. Filzstift. „DER KUCHEN EXISTIERT NICHT.“ Dreimal unterstrichen. Jemand war hier sehr lange.,"Scribbles on the lower panel. Felt tip. ""THE CAKE DOES NOT EXIST."" Underlined three times. Someone was here for a very long time."
 W3_KAM2_MAX_0145,Unter dem Satz ist noch ein kleiner Kuchen gemalt. Durchgestrichen. Der Mensch war sehr verletzt.,Under the sentence there's a little drawing of a cake. Crossed out. That person was very hurt.
-W3_KAM2_MAX_0150,"Und daneben, kleiner, in Druckschrift: „Regel 3: Zucker ist gesundheitsschädlich und verboten. Gez. M.U.T.T.I.“ Kein Kuchen. Weil Zucker. Alles passt zusammen. Leider.","And next to it, smaller, in block capitals: ""Rule 3: Sugar is harmful to health and forbidden. Signed, M.U.T.T.I."" No cake. Because sugar. It all fits together. Unfortunately."
+W3_KAM2_MAX_0150,"Und daneben, kleiner, in Druckschrift: „Regel 3: Zucker ist gesundheitsschädlich und verboten. Gez. M.U.T.T.I.“ Kein Kuchen. Weil Zucker. Alles passt zusammen. Leider.","And next to it, smaller, in block capitals: ""Rule 3: Sugar is harmful to health and forbidden. Signed, M.O.T.H.E.R."" No cake. Because sugar. It all fits together. Unfortunately."
 W3_KAM2_PIX_0160,"Zucker verboten. Kuchen versprochen. Das ist wie ein Napf, auf dem „Fisch“ steht, und drin ist Luft. Ich kenne solche Näpfe.","Sugar forbidden. Cake promised. That's like a bowl that says ""fish"" with nothing but air inside. I know bowls like that."
 W3_KAM2_MUT_0170,Die Kritzelei ist von einer früheren Testperson. Sie hatte Unrecht. Der Kuchen existiert. Er ist nur in einer anderen Testkammer.,The scribbles are from an earlier test subject. She was wrong. The cake exists. It's just in another test chamber.
 W3_KAM2_MAX_0180,Ein leerer Sockel. Ohne Huhn sieht er aus wie ein Denkmal für nichts.,An empty plinth. Without the chicken it looks like a monument to nothing.
@@ -4486,7 +4498,7 @@ W3_KERN_MAX_0500,"Die Ewige Energiezelle. Kalt, handlich, länglich, mit Plus un
 W3_KERN_PIX_0510,Passt die auch in einen Dosenöffner? Den elektrischen bei Oma? Schreib auf: Batterien. Für den Dosenöffner. Das ist mein Wunsch für diese Welt.,Would it fit in a tin opener too? The electric one at Grandma's? Write it down: batteries. For the tin opener. That's my wish for this world.
 W3_KERN_PIX_0520,Oder in eine Fernbedienung. Nur so ein Gedanke. Ich habe viele Gedanken. Die meisten über Fisch.,Or in a remote control. Just a thought. I have a lot of thoughts. Most of them about fish.
 W3_KERN_MAX_0530,"Eine Fernbedienung braucht keine ewige Energiezelle. Eine Fernbedienung braucht jemanden, der sie findet.",A remote doesn't need an eternal energy cell. A remote needs someone to find it.
-W3_KERN_MAX_0540,"M.U.T.T.I. Hängt da, dunkel, Antennen unten. Sie sieht aus wie eine Küchenmaschine, die man nach dem Backen vergessen hat. Zum ersten Mal sieht sie aus wie das, was sie ist.","M.U.T.T.I. Hanging there, dark, antennae down. She looks like a food mixer someone forgot about after baking. For the first time she looks like what she is."
+W3_KERN_MAX_0540,"M.U.T.T.I. Hängt da, dunkel, Antennen unten. Sie sieht aus wie eine Küchenmaschine, die man nach dem Backen vergessen hat. Zum ersten Mal sieht sie aus wie das, was sie ist.","M.O.T.H.E.R. Hanging there, dark, antennae down. She looks like a food mixer someone forgot about after baking. For the first time she looks like what she is."
 W3_KERN_MAX_0545,Eine kleine Lampe an ihr blinkt noch. Ganz langsam. Wie ein Schlaflicht.,A little light on her is still blinking. Very slowly. Like a night light.
 W3_KERN_MAX_0550,Dicke Kabel am Boden. Alle führen zur Zelle. Jetzt führen sie zu einem leeren Sockel. Die Stadt träumt ab heute ohne Strom. Vielleicht wacht sie auf.,Thick cables on the floor. They all lead to the cell. Now they lead to an empty plinth. From today the city dreams without power. Maybe it'll wake up.
 W3_KERN_MAX_0555,Ich steig über ein Kabel. Es ist warm. Noch. Hier hat etwas lange gearbeitet.,I step over a cable. It's warm. Still. Something worked here for a long time.
@@ -4752,8 +4764,8 @@ W4_GLUE_MAX_0020,Max. Ich suche eigentlich nur den Ausgang.,Max. I'm actually ju
 W4_GLUE_GER_0030,"Den Ausgang gibt es heute NICHT zu gewinnen! Aber dieses Rad, diese Preise, dieses Lächeln! Alles nur für kurze Zeit!","The exit is NOT up for grabs today! But this wheel, these prizes, this smile! All for a limited time only!"
 W4_GLUE_MAX_0040,"Er verkauft die Preise, während er sie verlost. Das ist effizient. Oder illegal.",He's selling the prizes while he's giving them away. That's efficient. Or illegal.
 W4_GLUE_GER_0050,"Drei Fragen, drei Antworten, ein Rad! Drehen wir es an!","Three questions, three answers, one wheel! Let's give it a spin!"
-W4_GLUE_GER_0060,"Frage eins, Kategorie Fantasy! Wie heißt das Lieblingsschwert des Wirts Humbert? A: Gerhard. B: Excalibur. C: Fondue.","Question one, category fantasy! What is the name of innkeeper Humbert's favourite sword? A: Gerhard. B: Excalibur. C: Fondue."
-W4_GLUE_MAX_0070,Gerhard. Er hat es mir vorgestellt. Mit Handschlag.,Gerhard. He introduced me to it. With a handshake.
+W4_GLUE_GER_0060,"Frage eins, Kategorie Fantasy! Wie heißt das Lieblingsschwert des Wirts Humbert? A: Gerhard. B: Excalibur. C: Fondue.","Question one, category fantasy! What is the name of innkeeper Humbert's favourite sword? A: Gerald. B: Excalibur. C: Fondue."
+W4_GLUE_MAX_0070,Gerhard. Er hat es mir vorgestellt. Mit Handschlag.,Gerald. He introduced me to it. With a handshake.
 W4_GLUE_GER_0080,RICHTIG! Und alle so: Applaus!,CORRECT! And everybody: applause!
 W4_GLUE_GER_0090,"Oh, knapp daneben! Aber knapp daneben ist auch vorbei. Noch mal!","Oh, so close! But close is still a miss. Again!"
 W4_GLUE_MAX_0100,Ich hätte das googeln können. Hätte.,I could have googled that. Could have.
@@ -4846,7 +4858,7 @@ W4_FERN_PIX_0160_2,Heute sitzt man einfach. Fortschritt.,Today they just sit. Pr
 W4_FERN_MAX_0170,"Zwanzig Uhr fünfzehn: „Die Küche brennt, Folge 112: Fondue-Abend“. Um Viertel nach acht gab es also Käse. Nicht Lasagne.","Quarter past eight: ""The Kitchen's on Fire, episode 112: Fondue Night"". So at quarter past eight there was cheese. Not lasagne."
 W4_FERN_MAX_0180,Null Uhr: „Mitternachts-TV: Friedhofs-Funk“. Musikvideo mit Zombies. Klingt wie meine Empfehlungen um null Uhr.,"Midnight: ""Midnight TV: Graveyard Funk"". Music video with zombies. Sounds like my recommendations at midnight."
 W4_FERN_MAX_0190,„Werbung: Dr. Werbepause präsentiert den Couch-Magnet 3000“. Da fühle ich mich persönlich angesprochen.,"""Advert: Dr. Adbreak presents the Couch Magnet 3000"". I feel personally addressed."
-W4_FERN_MAX_0200,„Tiertort: Der Fall der fehlenden Krone“. Läuft seit 20:15 in Dauerschleife. Krimis enden nie.,"""Savannah Crime Scene: The Case of the Missing Crown"". On a loop since 8:15. Crime shows never end."
+W4_FERN_MAX_0200,„Tiertort: Der Fall der fehlenden Krone“. Läuft seit 20:15 in Dauerschleife. Krimis enden nie.,"""Paw and Order: The Case of the Missing Crown"". On a loop since 8:15. Crime shows never end."
 W4_FERN_MAX_0210,"„Glücksrad-Shopping, rund um die Uhr“. Gerd schläft nie. Das erklärt einiges.","""Wheel of Fortune Shopping, round the clock"". Gerd never sleeps. That explains a lot."
 W4_FERN_MAX_0220,"Kanal 999: nicht gelistet. Nur ein leeres Feld mit Goldrand. Wer sich nicht ins Programm schreibt, will nicht gefunden werden.","Channel 999: not listed. Just an empty slot with a gold border. If you don't put yourself in the listings, you don't want to be found."
 W4_FERN_MAX_0230,Kanal 999 ist angekreuzt. Alle Sender gefunden. Opa würde sagen: Vollempfang.,Channel 999 is ticked. All channels found. Grandpa would say: full reception.
@@ -5524,9 +5536,9 @@ W4_ARCH_MAX_0050,"Eine Neonröhre, die flackert. Sogar das Licht hier ist eine W
 W4_ARCH_MAX_0055,"Flacker, flacker, an. Flacker. Ich glaube, die Röhre zählt. Wie ich vor der Mathearbeit.","Flicker, flicker, on. Flicker. I think the tube is counting. Like me before a maths test."
 W4_ARCH_MAX_0060,"Die Wände rücken ein Stück, dann zurück. Die Presse hat Zeit. Niemand hat je gegen eine Presse gewonnen, die Zeit hat.","The walls move in a bit, then back. The compactor has time. Nobody ever beat a compactor that has time."
 W4_ARCH_MAX_0065,"Die Wände atmen. Rein, raus. Ich halte die Luft an. Nur aus Solidarität.","The walls are breathing. In, out. I hold my breath. Purely out of solidarity."
-W4_ARCH_MAX_0070,"Da ragt ein Band heraus. Handschrift auf dem Etikett: „Zappis Puppenstube, 1977“.","There's a tape sticking out. Handwriting on the label: ""Zappis Dollhouse, 1977""."
-W4_ARCH_MAX_0075,"„Zappis Puppenstube, 1977.“ Die Schrift ist kindlich. Und ein bisschen traurig. Wie ein Kinderfoto, das man nicht zeigen will.","""Zappis Dollhouse, 1977."" The handwriting looks like a kid's. And a bit sad. Like a childhood photo you'd rather not show anyone."
-W4_ARCH_MAX_0080,"Zappis Puppenstube. Opas Lampen haben davon erzählt. Das ist seine erste Sendung. Die, die keiner gesehen hat. Ich nehme sie mit.",Zappis Dollhouse. Grandpa's lamps told me about it. That's his first show. The one nobody watched. I'm taking it.
+W4_ARCH_MAX_0070,"Da ragt ein Band heraus. Handschrift auf dem Etikett: „Zappis Puppenstube, 1977“.","There's a tape sticking out. Handwriting on the label: ""Zappi's Dollhouse, 1977""."
+W4_ARCH_MAX_0075,"„Zappis Puppenstube, 1977.“ Die Schrift ist kindlich. Und ein bisschen traurig. Wie ein Kinderfoto, das man nicht zeigen will.","""Zappi's Dollhouse, 1977."" The handwriting looks like a kid's. And a bit sad. Like a childhood photo you'd rather not show anyone."
+W4_ARCH_MAX_0080,"Zappis Puppenstube. Opas Lampen haben davon erzählt. Das ist seine erste Sendung. Die, die keiner gesehen hat. Ich nehme sie mit.",Zappi's Dollhouse. Grandpa's lamps told me about it. That's his first show. The one nobody watched. I'm taking it.
 W4_ARCH_MAX_0090,"Ein Band mit verblasstem Etikett. Irgendwas mit P. Ich kenne keinen, der so heißt. Ich lass es, wo es ist.",A tape with a faded label. Something with a P. I don't know anyone called that. I'll leave it where it is.
 W4_ARCH_MAX_0095,"Das P auf dem Etikett ist verschnörkelt. Wer schreibt ein P mit so viel Mühe? Jemand, dem es wichtig war.",The P on the label is all curly. Who writes a P with that much care? Someone it mattered to.
 W4_ARCH_PIX_0100,"Wer die Vergangenheit eines Mannes in der Pfote hält, hat einen Trumpf. Oder einen Bandsalat.",Whoever holds a man's past in his paw holds a trump card. Or a tangle of tape.
@@ -5557,7 +5569,7 @@ W4_STUD_MAX_0190,"Er hört nicht mehr zu. Er sendet. Ich muss die Show anhalten,
 W4_STUD_NAR_0200,"Pause. Band, Kameras und Publikum frieren ein. Nur Zappmann blinzelt.","Pause. Band, cameras and audience freeze. Only Zappmann blinks."
 W4_STUD_ZAP_0210,"Du hast meine Show angehalten. Das hat seit 1988 keiner gewagt. Weil ich der Einzige bin, der das darf. Der Einzige, der alles darf. Ich habe eine Karriere, Junge. Eine goldene.","You paused my show. Nobody's dared do that since 1988. Because I'm the only one allowed to. The only one allowed to do anything. I have a career, boy. A golden one."
 W4_STUD_MAX_0220,Er prahlt mit seiner Karriere. Ich habe den Anfang davon in der Tasche. Zwei Bilder nebeneinander. Das kann der Adapter.,He's bragging about his career. I've got the start of it in my pocket. Two pictures side by side. That's what the adapter does.
-W4_STUD_NAR_0230,"Bild-in-Bild: Links die Zappmann-Show, rechts läuft das Archivband. Ein junger Mann mit Topfschnitt und Handpuppe vor einer Pappsonne. „Zappis Puppenstube, 1977.“","Picture-in-picture: on the left, the Zappmann Show; on the right, the archive tape. A young man with a bowl cut and a hand puppet in front of a cardboard sun. ""Zappis Dollhouse, 1977."""
+W4_STUD_NAR_0230,"Bild-in-Bild: Links die Zappmann-Show, rechts läuft das Archivband. Ein junger Mann mit Topfschnitt und Handpuppe vor einer Pappsonne. „Zappis Puppenstube, 1977.“","Picture-in-picture: on the left, the Zappmann Show; on the right, the archive tape. A young man with a bowl cut and a hand puppet in front of a cardboard sun. ""Zappi's Dollhouse, 1977."""
 W4_STUD_ZAP_0240,Wo hast du das her. Das war im Keller. Das war für immer im Keller.,Where did you get that. That was in the basement. That was in the basement forever.
 W4_STUD_MAX_0250,Sie hatten eine Kindersendung. Mit Puppen. Und keiner hat zugesehen. Das ist nicht peinlich. Das ist ein Anfang.,You had a kids' show. With puppets. And nobody watched. That's not embarrassing. That's a beginning.
 W4_STUD_NAR_0260,"Das Applausband springt an, ohrenbetäubend. Zappmanns Antwort geht unter.","The applause track kicks in, deafening. Zappmann's answer is drowned out."
@@ -5664,7 +5676,7 @@ W4_INV_MAX_0010,Ein Bettlaken mit zwei Löchern. Ein Geist hat es mir überlasse
 W4_INV_MAX_0015,"Es riecht nach Dachboden und nach Halloween. Wenn ich es überziehe, bin ich entweder Geist oder Picknick.","It smells of attic and Halloween. If I put it on, I'm either a ghost or a picnic."
 W4_INV_MAX_0020,"Mein Superhelden-Anzug. Mit Umhang. Aus Bettlaken. Ich trag Bettwäsche, und sie steht mir.","My superhero suit. With a cape. Made from a bedsheet. I'm wearing bed linen, and it suits me."
 W4_INV_MAX_0025,Auf der Brust ist ein Fondue-Topf aufgemalt. Jeder Held braucht ein Wappen. Meins blubbert.,There's a fondue pot painted on the chest. Every hero needs a crest. Mine bubbles.
-W4_INV_MAX_0030,"Ein Videoband aus dem Kellerarchiv. „Zappis Puppenstube, 1977.“ Es fühlt sich schwer an. Nicht vom Gewicht.","A video tape from the basement archive. ""Zappis Dollhouse, 1977."" It feels heavy. Not from the weight."
+W4_INV_MAX_0030,"Ein Videoband aus dem Kellerarchiv. „Zappis Puppenstube, 1977.“ Es fühlt sich schwer an. Nicht vom Gewicht.","A video tape from the basement archive. ""Zappi's Dollhouse, 1977."" It feels heavy. Not from the weight."
 W4_INV_PIX_0035,"Ein Band. Wenn du es siehst, klingelt in sieben Tagen das Telefon. Das war ein Scherz. Wahrscheinlich.","A tape. If you watch it, the phone rings in seven days. That was a joke. Probably."
 W4_ABS_GER_0010,"Das war's für heute! Bleiben Sie dran! Nein, wirklich, bleiben Sie dran. Ich habe keine Fragen mehr übrig!","That's all for today! Stay tuned! No, really, stay tuned. I've got no questions left!"
 W4_ABS_GER_0020,Kein Gespräch mehr im Topf! Aber dieses Lächeln! Das gibt's gratis! Immer!,No more chat in the pot! But this smile! That's free! Always!
@@ -5716,7 +5728,7 @@ W4_HINT_PIX_0020,"Wechsel zu mir. Dann sieht die Welt aus, wie sie sein sollte: 
 W4_HINT_PIX_0030,"Als ich: Balken von hell nach dunkel ziehen, links hell, rechts dunkel. Dann kommt ein Sender. Leider der mit den Zähnen.","As me: drag the bars from light to dark, light on the left, dark on the right. Then a channel comes in. Sadly the one with the teeth."
 W4_HINT_PIX_0040,"Der Mann mit den Zähnen stellt Fragen. Du warst dabei. In allen drei Welten. Ich auch, und ich habe besser aufgepasst.","The man with the teeth asks questions. You were there. In all three worlds. So was I, and I paid better attention."
 W4_HINT_PIX_0050,"Schwert, Krokodil, Nudeln. Mehr sage ich nicht. Das reicht für jeden, der wach war.","Sword, crocodile, noodles. That's all I'm saying. It's enough for anyone who was awake."
-W4_HINT_PIX_0060,"Gerhard, das Krokodil, Vier. In der Reihenfolge. Falsch antworten kostet nichts außer Würde.","Gerhard, the crocodile, Four. In that order. A wrong answer costs nothing but dignity."
+W4_HINT_PIX_0060,"Gerhard, das Krokodil, Vier. In der Reihenfolge. Falsch antworten kostet nichts außer Würde.","Gerald, the crocodile, Four. In that order. A wrong answer costs nothing but dignity."
 W4_HINT_PIX_0070,"Die Dose geht nur auf, wenn Besuch kommt. Besuch mit Mantel. Kennst du jemanden mit Mantel?",The tin only opens when a visitor comes. A visitor in a coat. Know anyone in a coat?
 W4_HINT_PIX_0080,"Wer mit dir redet, wenn du umschaltest, kommt mit. Jedenfalls, wer Spuren folgt. Flimmer hat das gesagt. Du hast genickt.",Whoever's talking to you when you switch channels comes along. At least someone who follows clues does. Flimmer said so. You nodded.
 W4_HINT_PIX_0090,Rede in der Savanne mit dem Kommissar und schalte mitten im Gespräch in die Küche. Der Rest ist Sitcom.,Talk to the inspector on the savannah and switch to the kitchen in the middle of the conversation. The rest is sitcom.
@@ -5741,7 +5753,7 @@ W4_HINT_PIX_0240,"Spul zurück, bis kurz vor dem Refrain alle in ihren Gräbern 
 W4_HINT_PIX_0250,"Nach zwei Fehlversuchen bietet Flimmer an, die Zombies abzuschalten. Niemand erfährt davon. Außer mir. Und ich erzähle es jedem.","After two failed tries, Flimmer offers to switch the zombies off. Nobody will ever know. Except me. And I'll tell everyone."
 W4_HINT_PIX_0260,"Im Grusel geht keine Tür auf. In der Sitcom geht jede Tür auf. Die Tür ist das Problem, nicht das Schloss.","In horror, no door ever opens. In a sitcom, every door opens. The door is the problem, not the lock."
 W4_HINT_PIX_0270,Die Küchentür ist zu groß zum Mitnehmen. Aber zwei Bilder nebeneinander hätten einen gemeinsamen Rand. Der Hauptgewinn bei Gerd macht genau das.,The kitchen door is too big to take with you. But two pictures side by side would share an edge. Gerd's main prize does exactly that.
-W4_HINT_PIX_0280,"Hol den Splitscreen-Adapter aus der Bonusrunde, benutze ihn im Keller und schieb die Küchentür über den Bildrand. Dann kommt jemand rein und ruft etwas. Wie immer.","Get the split-screen adapter from the bonus round, use it in the basement and slide the kitchen door across the edge of the picture. Then someone comes in and shouts something. As always."
+W4_HINT_PIX_0280,"Hol den Splitscreen-Adapter aus der Bonusrunde, benutze ihn im Keller und schieb die Küchentür über den Bildrand. Dann kommt jemand rein und ruft etwas. Wie immer.",Get the split-screen adapter from the bonus round and use it in the basement. Slide the kitchen door across the edge of the picture. Then someone comes in and shouts something. As always.
 W4_HINT_PIX_0290,"Eine Lichterkette mit Buchstaben, die von allein blinkt. Jemand will reden. Rede zurück. Mit Birnen.",Fairy lights with letters that blink on their own. Someone wants to talk. Talk back. With bulbs.
 W4_HINT_PIX_0300,"Benutze die Kette und frag alles, was du fragen kannst. Vor allem nach dem Mann im Sakko. Dein Opa weiß mehr, als er sagt. Das ist seine Lieblingsbeschäftigung.",Use the lights and ask everything you can. Especially about the man in the jacket. Your grandpa knows more than he says. That's his favourite pastime.
 W4_HINT_PIX_0540,"Benutze die Kette und wähl jede Nachricht: Hallo, wer ist Zappmann, woher weißt du das.","Use the lights and pick every message: hello, who is Zappmann, how do you know that."
@@ -6234,6 +6246,9 @@ FI_HINT_PIX_0160,Dein Opa schreit bei einer Taste besonders laut. Menschen schre
 FI_HINT_PIX_0170,"Richte die Zündkapsel auf den Empfänger und drück die rote Taste. Stopp. Vorher die Ofentür sichern, sonst isst du Teig. Nochmal.","Point the detonator at the receiver and press the red button. Stop. Secure the oven door first, or you'll be eating dough. Again."
 FI_HINT_PIX_0180,Ich denke noch nach. Es sieht aus wie Starren. Es ist auch Starren. Aber mit Inhalt.,I'm still thinking. It looks like staring. It is staring. But with substance.
 FI_HINT_PIX_0190,"Alles erledigt. Die Luke geht gleich auf. Ich würde mich jetzt hinsetzen, wenn ich du wäre. Ich bin nicht du. Ich sitze schon.",All done. The hatch is about to open. I'd sit down now if I were you. I'm not you. I'm already sitting.
+FI_HINT_PIX_0200,Oben hat jemand Geburtstag. Das steht seit Wochen im Kalender. Mit leeren Händen geht man da nicht hin. Sagt man.,Someone upstairs has a birthday. It's been on the calendar for weeks. You don't turn up empty-handed. So they say.
+FI_HINT_PIX_0210,In der Fundkiste liegt Omas Kekstüte. Ich nenne das nicht Kekse. Ich habe daran gerochen.,Granny's biscuit bag is in the lost-and-found box. I wouldn't call those biscuits. I've smelled them.
+FI_HINT_PIX_0220,Benutz die Fundkiste und nimm die Tüte mit. Den Rest erledigt der Geburtstag. Ich schaue dabei weg.,Use the lost-and-found box and take the bag with you. The birthday will do the rest. I'll be looking away.
 FI_AUFL_NAR_0010,"Die Maschine seufzt. Die Lampen gehen eine nach der anderen aus, die Nadel fällt ins Grüne, der Riegel klackt zurück. Stille.","The machine sighs. The lamps go out one by one, the needle drops into the green, the bolt clacks back. Silence."
 FI_AUFL_HAU_0020,"Druck normal. Ich lasse jetzt los. Servus, Tür. Es war mir eine Ehre.","Pressure normal. I'm letting go now. Farewell, door. It was an honour."
 FI_AUFL_NAR_0030,Der Kochlöffel fällt aus der Tür und bleibt am Boden kleben. Die Tür schwingt auf.,The wooden spoon falls out of the door and sticks to the floor. The door swings open.
@@ -6378,7 +6393,7 @@ FI_SUPM_NAR_0090,Die Tür gleitet auf. Max geht hinein. Das Licht aus dem Laden 
 FI_ABSP_NAR_0100,"Foto 1: Alle um den Couchtisch, der Kuchen angeschnitten, Oma mit Gabel, Opa mit Mehl im Haar. Im Zapp-O-Mat winken Kalle und Flimmer. Unterschrift: „Der Kuchen war keine Lüge.“","Photo 1: everyone round the coffee table, the cake cut, Grandma with a fork, Grandpa with flour in his hair. Kalle and Flimmer wave from the Zap-O-Matic. Caption: ""The cake was not a lie."""
 FI_ABSP_NAR_0110,Foto 2: Zeldina misst mit Moderworts Zauberstab die Wohnzimmerwand aus. Oma hält das andere Ende. Unterschrift: „Der Dachboden wäre frei.“,"Photo 2: Zeldina measures the living-room wall with Mouldword's wand. Grandma holds the other end. Caption: ""The attic would be available."""
 FI_ABSP_NAR_0120,"Foto 3: Archimedes in Opas Badewanne, Ramses zwischen zwei Kuchenstücken, unentschlossen. Hermes kommt zur Tür herein, zu spät. Unterschrift: „Heureka. Schon wieder.“","Photo 3: Archimedes in Grandpa's bathtub, Ramses between two slices of cake, undecided. Hermes comes through the door, too late. Caption: ""Eureka. Again."""
-FI_ABSP_NAR_0130,"Foto 4: Die Goblins singen im Treppenhaus, Schilder mit Silben in der Hand, Opa dirigiert mit dem Kochlöffel. Unterschrift: „Knuddel-Puddi, hau den Teig.“","Photo 4: the goblins singing in the stairwell, signs with syllables in their hands, Grandpa conducting with the wooden spoon. Caption: ""Cuddles-Pudding, hit the dough."""
+FI_ABSP_NAR_0130,"Foto 4: Die Goblins singen im Treppenhaus, Schilder mit Silben in der Hand, Opa dirigiert mit dem Kochlöffel. Unterschrift: „Knuddel-Puddi, hau den Teig.“","Photo 4: the goblins sing in the stairwell, holding signs with syllables. Grandpa conducts with the wooden spoon. Caption: ""Cuddles-Pudding, hit the dough."""
 FI_ABSP_NAR_0140,"Foto 4: Grimmzahn mit Schlüsselbund inspiziert Opas Backofen. Er beschwert sich bei Modell 08/15 oder, ohne ihn, bei Pixel. Unterschrift: „Hausmeister unter sich.“","Photo 4: Grimtooth with a bunch of keys inspects Grandpa's oven. He complains to Model 08/15 or, without him, to Pixel. Caption: ""Caretakers among themselves."""
 FI_ABSP_NAR_0150,"Foto 5: Max' leerer Platz auf dem Sofa. Pixel liegt darauf, ein Auge offen, und sieht zur Tür. Unterschrift: „Er holt sie.“","Photo 5: Max's empty spot on the sofa. Pixel lies on it, one eye open, looking at the door. Caption: ""He's getting it."""
 FI_ABSP_WAL_0160,"Ich stand so lang unter der Brücke, hab Regeln gezählt und Ziegen gezählt …","I stood so long under the bridge, counting rules and counting goats …"

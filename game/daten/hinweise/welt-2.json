@@ -272,7 +272,20 @@
    ],
    "optional": false,
    "sammelschritt": false,
-   "hinweise": []
+   "hinweise": [
+    {
+     "stufe": 1,
+     "zeile": "W2_HINT_PIX_1210"
+    },
+    {
+     "stufe": 2,
+     "zeile": "W2_HINT_PIX_1220"
+    },
+    {
+     "stufe": 3,
+     "zeile": "W2_HINT_PIX_1230"
+    }
+   ]
   },
   {
    "schritt": "R6a",
@@ -524,7 +537,20 @@
    ],
    "optional": false,
    "sammelschritt": false,
-   "hinweise": []
+   "hinweise": [
+    {
+     "stufe": 1,
+     "zeile": "W2_HINT_PIX_1310"
+    },
+    {
+     "stufe": 2,
+     "zeile": "W2_HINT_PIX_1320"
+    },
+    {
+     "stufe": 3,
+     "zeile": "W2_HINT_PIX_1330"
+    }
+   ]
   },
   {
    "schritt": "R11a",

@@ -219,6 +219,8 @@ func nach_uebergang_dachboden(_raum, _x) -> bool:
 	if Zustand.ist("FI_HEIMKEHR"):
 		return false
 	Zustand.setze("FI_HEIMKEHR")
+	if _hat("omas_kekse"):
+		Zustand.setze("FI_R02_GELOEST")  # Kekse für Welt 4 eingepackt: der Bonus-Gag ist schon sicher
 	var schritte := []
 	for z in HEIMKEHR:
 		schritte.append(_fernbedienung_abgeben if z == "@fernbedienung" else z)

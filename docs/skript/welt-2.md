@@ -1346,7 +1346,7 @@ Pixel kommentiert ungefragt, wenn der Spieler 45 Sekunden nichts tut. Zufällig 
 
 ## 29. Hinweise
 
-Drei Stufen je Rätselschritt für die Hilfe-Pfote, Wartezeiten laut Spielsysteme. Die Schritte heißen W2\_R01 bis W2\_R11, mit Buchstaben für Teilschritte (Liste in `raetsel/welt-2.md`, Teilschritte und Schalter). Die IDs folgen dem Schema W2\_HINT\_PIX\_RRSK aus den Spielsystemen: RR Rätselnummer, S Stufe, K Teilschritt (0 ohne, 1 für a, 2 für b). Die Wettkampftage (R12, R13) haben keine Hinweise.
+Drei Stufen je Rätselschritt für die Hilfe-Pfote, Wartezeiten laut Spielsysteme. Die Schritte heißen W2\_R01 bis W2\_R11, mit Buchstaben für Teilschritte (Liste in `raetsel/welt-2.md`, Teilschritte und Schalter). Die IDs folgen dem Schema W2\_HINT\_PIX\_RRSK aus den Spielsystemen: RR Rätselnummer, S Stufe, K Teilschritt (0 ohne, 1 für a, 2 für b). Die Wettkampftage (R12, R13) haben je drei kurze Hinweise, die nur zur Startlinie führen (W2\_HINT\_PIX\_1210 bis 1330).
 
 | ID | Sprecher | Text | Auslöser |
 | --- | --- | --- | --- |
@@ -1398,4 +1398,10 @@ Drei Stufen je Rätselschritt für die Hilfe-Pfote, Wartezeiten laut Spielsystem
 | W2\_HINT\_PIX\_1112 | Pixel | Ramses will Wein. Es gibt keinen. Es gibt Saft im Palast und Essig in der Werkstatt. Was gärt, reist mit der Zeit. | R11b, Stufe 1 |
 | W2\_HINT\_PIX\_1122 | Pixel | Essig war Wein, bevor er Essig wurde. Flussaufwärts wird alles jünger. Fünfundzwanzig Jahre reichen. Nicht mehr. | R11b, Stufe 2 |
 | W2\_HINT\_PIX\_1132 | Pixel | Nimm den Essigkrug aus der Werkstatt, fahr von Syrakus nach Olympia, nicht weiter, und gib Ramses den Wein. Wer bis Ägypten fährt, hat Saft. | R11b, Stufe 3 |
+| W2\_HINT\_PIX\_1210 | Pixel | Startpass, Sandalen, ein Mann mit Hebel. Die Spiele haben einen Anfang, und der Anfang hat eine Linie. | R12, Stufe 1 |
+| W2\_HINT\_PIX\_1220 | Pixel | Im Stadion ist eine Startlinie. Linien sind dafür da, dass man sich dahinterstellt. Ich setze mich meistens drauf. | R12, Stufe 2 |
+| W2\_HINT\_PIX\_1230 | Pixel | Geh ins Stadion und benutz die Startlinie. Dann beginnt Wettkampftag 1. Öl auf den Sandalen ist freiwillig, macht dich aber schneller. | R12, Stufe 3 |
+| W2\_HINT\_PIX\_1310 | Pixel | Ein Diskus, genug Konter, und Cicero hat sein Grab. Mehr braucht der Finaltag nicht. Außer dir. | R13, Stufe 1 |
+| W2\_HINT\_PIX\_1320 | Pixel | Der Finaltag beginnt, wo Tag 1 begonnen hat. Und falls die Fächerwedler noch keine Feigen hatten: Der Wind dreht. Nur damit du es weißt. | R13, Stufe 2 |
+| W2\_HINT\_PIX\_1330 | Pixel | Benutz die Startlinie im Stadion. Fehlen die Feigen für die Wedler, fällt es dir dort selbst ein, und beim zweiten Mal geht es trotzdem los. | R13, Stufe 3 |
 | W2\_HINT\_PIX\_9995 | Pixel | Ich denke noch nach. Die Sphinx sitzt seit Jahrtausenden über einem Rätsel. Ich brauche nur ein Nickerchen länger. | Wartezeile, nächste Stufe noch gesperrt |

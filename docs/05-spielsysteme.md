@@ -49,8 +49,8 @@ Eigennamen-Glossar: Sprechende Namen werden nicht wörtlich übersetzt, sondern 
 | Deutsch | Englisch | Hinweis |
 | --- | --- | --- |
 | Type 405 | Type 405 | bleibt, Fehlercode-Witz funktioniert in beiden Sprachen |
-| Herr Vier | Mr. Four | Zahl bleibt, Anrede wechselt |
-| Tiertort | Paw and Order | Serienparodie, andere Vorlage mit gleichem Effekt |
+| Herr Vier | Mr Four | Zahl bleibt, Anrede wechselt (britisch ohne Punkt, wie im ganzen Text) |
+| Tiertort (Savanne) | Paw and Order (Savannah) | Serienparodie, andere Vorlage mit gleichem Effekt |
 | Schwurbelstein | Waffleton | Klang eines Ortsnamens plus Geschwafel |
 | Unterbrösel | Lower Crumbly | englisches Dorfnamensmuster |
 | Hoggelwarz | Hogwartle | erkennbar, aber verfremdet |
@@ -73,6 +73,7 @@ Eigennamen-Glossar: Sprechende Namen werden nicht wörtlich übersetzt, sondern 
 | Kuchen123 | Cake123 | Max' Passwort-Raten im Zwischenspiel 3 |
 | „Servus“ (Modell 08/15) | „Greetings“ | der Roboter grüßt alles, auch Türen |
 | Zappis Puppenstube | Zappi's Dollhouse | Opas Kindersendung von 1977 |
+| Opas Dachboden, Schwurbelstein, Antikodonien, Neo-Neustadt 2099, Kanal 999 (Weltnamen) | Grandpa's attic, Waffleton, Antikodonien, Neo-Neustadt 2099, Channel 999 | Weltnamen in Spielständen und auf dem Drehknopf; Antikodonien und Neo-Neustadt bleiben |
 
 Stand der englischen Fassung (10. November 2026): alle Skriptzeilen (Prolog, Welt 1 bis 4, die drei Zwischenspiele, das Finale), die Systemzeilen und alle Menütexte sind übersetzt. Kommt eine neue deutsche Zeile ohne englische dazu, zeigt das Spiel dort die deutsche (Rückfallsprache `de`). Ablauf: `python3 tools/en_eintragen.py --offen W2` gibt die offenen Zeilen mit Sprecher, Auslöser und Regie aus, Claude übersetzt sie als `ID | Text` in eine Datei, `python3 tools/en_eintragen.py DATEI` trägt sie nach `uebersetzung/en.csv` ein (Kaskaden müssen dieselbe Zahl Blasen haben, sonst wird die Zeile abgelehnt), danach `python3 tools/skript_export.py`. Ein Muttersprachler prüft die Witze vor dem Release.
 

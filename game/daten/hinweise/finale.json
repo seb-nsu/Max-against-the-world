@@ -184,7 +184,20 @@
    ],
    "optional": true,
    "sammelschritt": false,
-   "hinweise": []
+   "hinweise": [
+    {
+     "stufe": 1,
+     "zeile": "FI_HINT_PIX_0200"
+    },
+    {
+     "stufe": 2,
+     "zeile": "FI_HINT_PIX_0210"
+    },
+    {
+     "stufe": 3,
+     "zeile": "FI_HINT_PIX_0220"
+    }
+   ]
   }
  ]
 }

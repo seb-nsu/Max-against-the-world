@@ -469,7 +469,7 @@ Vier Schritte, die in jeder Reihenfolge begonnen, aber nur in einer beendet werd
 
 ## 7b. Finale: Hinweise der Hilfe-Pfote (FI\_HINT)
 
-Drei Stufen je Schritt nach dem Hinweissystem (Spielsysteme). Schritt 0 ist die Luke in Stufe 1, Schritte A bis D gehören zu Abschnitt 7. Pixel spricht hier normal, er steht neben Max. Datei game/daten/hinweise/finale.json: FI\_R01\_0 bis FI\_R01\_D.
+Drei Stufen je Schritt nach dem Hinweissystem (Spielsysteme). Schritt 0 ist die Luke in Stufe 1, Schritte A bis D gehören zu Abschnitt 7. Pixel spricht hier normal, er steht neben Max. Datei game/daten/hinweise/finale.json: FI\_R01\_0 bis FI\_R01\_D. Der Bonus-Gag mit Omas Keksen (F2) hat drei eigene Stufen (0200 bis 0220); er ist gelöst, sobald Max die Tüte aus der Fundkiste nimmt oder sie schon aus Welt 3 mitbringt.
 
 | ID | Sprecher | Text | Auslöser |
 | --- | --- | --- | --- |
@@ -492,6 +492,9 @@ Drei Stufen je Schritt nach dem Hinweissystem (Spielsysteme). Schritt 0 ist die 
 | FI\_HINT\_PIX\_0170 | Pixel | Richte die Zündkapsel auf den Empfänger und drück die rote Taste. Stopp. Vorher die Ofentür sichern, sonst isst du Teig. Nochmal. | Schritt D, Stufe 3 |
 | FI\_HINT\_PIX\_0180 | Pixel | Ich denke noch nach. Es sieht aus wie Starren. Es ist auch Starren. Aber mit Inhalt. | Wartezeile Finale, vor der nächsten Stufe |
 | FI\_HINT\_PIX\_0190 | Pixel | Alles erledigt. Die Luke geht gleich auf. Ich würde mich jetzt hinsetzen, wenn ich du wäre. Ich bin nicht du. Ich sitze schon. | nichts offen, nach Schritt D |
+| FI\_HINT\_PIX\_0200 | Pixel | Oben hat jemand Geburtstag. Das steht seit Wochen im Kalender. Mit leeren Händen geht man da nicht hin. Sagt man. | Bonus Kekse, Stufe 1 |
+| FI\_HINT\_PIX\_0210 | Pixel | In der Fundkiste liegt Omas Kekstüte. Ich nenne das nicht Kekse. Ich habe daran gerochen. | Bonus Kekse, Stufe 2 |
+| FI\_HINT\_PIX\_0220 | Pixel | Benutz die Fundkiste und nimm die Tüte mit. Den Rest erledigt der Geburtstag. Ich schaue dabei weg. | Bonus Kekse, Stufe 3 |
 
 ## 8. Finale, Stufe 2: Die Auflösung (FI\_AUFL)
 

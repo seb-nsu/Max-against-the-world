@@ -4,7 +4,7 @@ extends SceneTree
 ##
 ## Aufruf (aus dem Ordner game/, unter Linux ohne Bildschirm mit xvfb-run):
 ##   xvfb-run -s "-screen 0 1920x1080x24" godot --path . --rendering-driver opengl3 \
-##       --resolution 1920x1080 -s res://tests/bildschirmfoto_menues.gd -- ZIELORDNER
+##       --resolution 1920x1080 -s res://tests/bildschirmfoto_menues.gd -- ZIELORDNER [--sprache=en]
 
 const HAUPTMENUE := "res://oberflaeche/hauptmenue.tscn"
 var ziel := "user://fotos/"
@@ -16,9 +16,12 @@ func _initialize() -> void:
 
 func _lauf() -> void:
 	await process_frame
-	var args := OS.get_cmdline_user_args()
-	if not args.is_empty():
-		ziel = args[0].trim_suffix("/") + "/"
+	var sprache := ""
+	for a in OS.get_cmdline_user_args():
+		if a.begins_with("--sprache="):
+			sprache = a.trim_prefix("--sprache=")  # z. B. --sprache=en für die englische Fassung
+		else:
+			ziel = a.trim_suffix("/") + "/"
 	DirAccess.make_dir_recursive_absolute(ziel)
 	var ordner := "user://foto_menues/"
 	DirAccess.make_dir_recursive_absolute(ordner)
@@ -27,6 +30,9 @@ func _lauf() -> void:
 	einst.datei = ordner + "settings.cfg"
 	DirAccess.remove_absolute(einst.datei)
 	einst.laden()
+	if sprache:
+		einst.setze("sprache", sprache)
+		einst._erster_start = true  # setze() speichert; der Epilepsie-Hinweis soll trotzdem kommen
 	var spiel = root.get_node("Spiel")
 	spiel.testmodus = true
 
@@ -41,7 +47,7 @@ func _lauf() -> void:
 	await _warte(0.5)
 	var opt = menue.unter_offen()
 	await _foto("menue_3_optionen_audio")
-	for i in [1, 3, 4]:
+	for i in [1, 2, 3, 4]:
 		opt._reiter.current_tab = i
 		await _warte(0.3)
 		await _foto("menue_%d_optionen_%s" % [3 + i, ["audio", "anzeige", "spiel", "steuerung", "barrierefrei"][i]])

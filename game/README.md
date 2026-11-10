@@ -219,6 +219,23 @@ godot --headless --path . -s res://tests/prolog_durchlauf.gd -- --echt   # echte
 godot --headless --path . -s res://tests/menues.gd                    # Menüs, Optionen, Audio-Gerüst, unter 1 Minute
 ```
 
+**Screenshot-Regressionstest (A16):** `tests/bildschirm_vergleich.gd` betritt jeden gebauten Raum
+aller Abschnitte, fotografiert ihn ohne Oberfläche und vergleicht mit `tests/bildschirm/referenz/`
+im Repo-Wurzelordner (Toleranz: höchstens 0,5 Prozent abweichende Pixel). Braucht einen Bildschirm,
+unter Linux xvfb-run; gut 3 Minuten. Abweichungen landen als Dreierbild (Referenz, jetzt, Maske)
+im Ausgabeordner, dazu je Abschnitt eine Übersicht aller Räume. Nach gewollten Grafikänderungen
+(neue Platzhalter, echte Hintergründe, geänderte Layouts) die Referenzen neu schreiben und die
+Übersicht einmal mit dem Auge prüfen:
+
+```
+xvfb-run -a -s "-screen 0 1280x720x24" godot --path . --rendering-driver opengl3 --resolution 480x270 \
+    -s res://tests/bildschirm_vergleich.gd -- [--aktualisieren] [AUSGABEORDNER]
+```
+
+Läuft in GitHub Actions als eigener Job „bildschirm“; Abweichungen und Übersichten gibt es dort als
+Artefakt. Die Bildschirmfotos der Oberfläche (`bildschirmfoto.gd`, `bildschirmfoto_menues.gd`)
+nehmen `--sprache=en` für die englische Fassung.
+
 Der allererste Import nach dem Klonen meldet rund 60 Fehler (Autoloads und Übersetzungen, die erst beim Import entstehen). Das ist normal: Ein zweiter Import und das Öffnen im Editor laufen fehlerfrei. Im Editor genügt es, das Projekt einmal zu öffnen und, falls Godot fragt, neu zu laden.
 
 Der Test spielt den Lösungspfad P1 bis P3 und danach Welt 1 bis R4 (Taverne, Zauberstab-Laden,

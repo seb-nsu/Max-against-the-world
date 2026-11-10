@@ -3,9 +3,9 @@ extends SceneTree
 ##
 ## Aufruf (aus dem Ordner game/, unter Linux ohne Bildschirm mit xvfb-run):
 ##   xvfb-run -s "-screen 0 1920x1080x24" godot --path . --rendering-driver opengl3 \
-##       --resolution 1920x1080 -s res://tests/bildschirmfoto.gd -- ZIELORDNER
+##       --resolution 1920x1080 -s res://tests/bildschirmfoto.gd -- ZIELORDNER [--sprache=en]
 ## Schreibt foto_1_sprechblase.png, foto_2_leiste.png, foto_3_gespraech.png und
-## foto_4_reisetasche.png (Zwischenspiel 1, Reisetasche mit Pixels Kommentar).
+## foto_4_reisetasche.png (Zwischenspiel 1, Reisetasche mit Pixels Kommentar) und foto_5_notizbuch.png.
 
 const STARTRAUM := "res://game/rooms/wohnzimmer/room_wohnzimmer.tscn"
 var ziel := "user://fotos/"
@@ -17,9 +17,11 @@ func _initialize() -> void:
 
 func _lauf() -> void:
 	await process_frame
-	var args := OS.get_cmdline_user_args()
-	if not args.is_empty():
-		ziel = args[0].trim_suffix("/") + "/"
+	for a in OS.get_cmdline_user_args():
+		if a.begins_with("--sprache="):
+			TranslationServer.set_locale(a.trim_prefix("--sprache="))  # z. B. --sprache=en
+		else:
+			ziel = a.trim_suffix("/") + "/"
 	DirAccess.make_dir_recursive_absolute(ziel)
 	root.get_node("E").settings.auto_continue_text = false
 	CQSaveLoad.ordner = "user://foto_saves/"
@@ -56,6 +58,14 @@ func _lauf() -> void:
 	if dialog:
 		dialog.stop()
 	await _warte(1.0)
+	# Notizbuch (Ziele und Seiten, nach dem Intro)
+	var sp = root.get_node("Spiel")
+	sp.notizbuch_oeffnen()
+	await _warte(1.0)
+	await _foto("foto_5_notizbuch")
+	if sp.has_node("Notizbuch"):
+		sp.get_node("Notizbuch").queue_free()
+	await _warte(0.5)
 	# Reisetasche im Zwischenspiel 1: Dachboden, ein paar Gegenstände aus Welt 1
 	var zustand = root.get_node("Zustand")
 	zustand.abschnitt = "finale"

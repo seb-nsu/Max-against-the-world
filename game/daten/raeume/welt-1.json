@@ -8013,7 +8013,8 @@
      "sprecher": "MAX",
      "blasen": [
       "W1_BERG_MAX_0710"
-     ]
+     ],
+     "zustand": "unterschrieben"
     },
     {
      "zeile": "W1_BERG_MAX_0715",
@@ -8021,7 +8022,8 @@
      "blasen": [
       "W1_BERG_MAX_0715"
      ],
-     "mal": 2
+     "mal": 2,
+     "zustand": "unterschrieben"
     },
     {
      "zeile": "W1_INV_MAX_0160",

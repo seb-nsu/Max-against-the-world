@@ -161,7 +161,7 @@ Pflicht sind damit die drei Konter der Schriftrolle und die zwei der Griechen; d
 
 ## Teilschritte und Schalter
 
-Die Schritte heißen wie in der Welt-Tabelle und im Hinweissystem; jeder Schritt hat den Schalter `W2_Rnn(_X)_GELOEST` (Schema in 05-spielsysteme, Speichern). Die zwei Wettkampftage laufen dort als eigene Schritte R12 und R13 mit, damit Welt-Tabelle, Notizbuch und Speichern sie wie Rätsel behandeln; sie zählen nicht zu den 11 Rätseln und haben keine Hinweisstufen. Sie beginnen, sobald ihre Voraussetzungen erfüllt sind; Tag 1, wenn Max dann die Startlinie im Stadion benutzt.
+Die Schritte heißen wie in der Welt-Tabelle und im Hinweissystem; jeder Schritt hat den Schalter `W2_Rnn(_X)_GELOEST` (Schema in 05-spielsysteme, Speichern). Die zwei Wettkampftage laufen dort als eigene Schritte R12 und R13 mit, damit Welt-Tabelle, Notizbuch und Speichern sie wie Rätsel behandeln; sie zählen nicht zu den 11 Rätseln; ihre drei Hinweisstufen führen nur zur Startlinie. Sie beginnen, sobald ihre Voraussetzungen erfüllt sind; Tag 1, wenn Max dann die Startlinie im Stadion benutzt.
 
 | Schritt | Inhalt | Schalter |
 | --- | --- | --- |

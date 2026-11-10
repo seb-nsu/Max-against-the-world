@@ -68,3 +68,30 @@ jobs:
         run: python3 tools/telemetrie_auswertung.py ~/.local/share/godot/app_userdata/*/test_telemetrie --mit-tests > /dev/null
       - name: Prolog-Durchlauf (echte Sprechblasen und Wege)
         run: timeout 1200 ./godot --headless --path game -s res://tests/prolog_durchlauf.gd -- --echt
+
+  bildschirm:
+    # Screenshot-Regressionstest (A16): jeder Raum gegen tests/bildschirm/referenz/
+    runs-on: ubuntu-latest
+    env:
+      GODOT_VERSION: "4.7.2"
+    steps:
+      - uses: actions/checkout@v4
+      - name: Godot laden, Xvfb und Mesa
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq xvfb libgl1-mesa-dri > /dev/null
+          curl -sSL -o godot.zip "https://github.com/godotengine/godot/releases/download/${GODOT_VERSION}-stable/Godot_v${GODOT_VERSION}-stable_linux.x86_64.zip"
+          unzip -q godot.zip
+          mv "Godot_v${GODOT_VERSION}-stable_linux.x86_64" godot
+      - name: Import (erster Import meldet Fehler, bis der Klassen-Cache steht)
+        run: ./godot --headless --path game --import || true
+      - name: Alle Räume gegen die Referenzbilder
+        run: |
+          timeout 900 xvfb-run -a -s "-screen 0 1280x720x24" ./godot --path game --rendering-driver opengl3 \
+            --resolution 480x270 -s res://tests/bildschirm_vergleich.gd -- "$PWD/bildschirm"
+      - name: Abweichungen und Übersicht hochladen
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: bildschirm
+          path: bildschirm/
+          if-no-files-found: ignore
