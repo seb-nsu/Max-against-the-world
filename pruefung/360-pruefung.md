@@ -4,8 +4,8 @@
 >
 > - Geprüfter Stand: `main` bei Commit `6fe02fd` (enthält den Humor-Durchgang aus Pull Request 14).
 > - Arbeitszweig: `claude/project-thread-769z6c`.
-> - **Erledigt:** Dateiliste aufgenommen. Vollständig gelesen: `docs/00-aufbau.md`, `docs/01-konzept.md`, `docs/entscheidungen.md`, `docs/05-spielsysteme.md`, `docs/skript/prolog.md`. Rohfunde dazu stehen im Abschnitt „Arbeitsnotizen“ ganz unten.
-> - **Als Nächstes lesen:** `docs/skript/welt-1.md` bis `welt-4.md`, `docs/skript/zwischenspiele-und-finale.md`, `docs/raetsel/*`, `docs/welten/*`, `docs/grafik/*`, `docs/04-audio.md`, `docs/03-produktion.md`, `docs/offene-punkte.md`, `docs/uebersetzung/ui.csv`, dann die Bilder, dann der Spielcode (`game/skripte`, `game/oberflaeche`, `game/tests`, `tools`).
+> - **Erledigt:** Dateiliste aufgenommen. Vollständig gelesen: `docs/00-aufbau.md`, `docs/01-konzept.md`, `docs/entscheidungen.md`, `docs/05-spielsysteme.md`, `docs/skript/prolog.md`, `docs/skript/welt-1.md`. Rohfunde dazu stehen im Abschnitt „Arbeitsnotizen“ ganz unten.
+> - **Als Nächstes lesen:** `docs/skript/welt-2.md` bis `welt-4.md`, `docs/skript/zwischenspiele-und-finale.md`, `docs/raetsel/*`, `docs/welten/*`, `docs/grafik/*`, `docs/04-audio.md`, `docs/03-produktion.md`, `docs/offene-punkte.md`, `docs/uebersetzung/ui.csv`, dann die Bilder, dann der Spielcode (`game/skripte`, `game/oberflaeche`, `game/tests`, `tools`).
 > - **Auftrag erweitert (Sebastian, 10. November, 22:03 Uhr):** Der Spielcode im Repository wird mitgeprüft.
 > - **Noch offen:** Story-Bibel, Abschnitte A bis N, Codeprüfung, Gesamtbild, Korrekturen, Fundliste, Zusammenfassung.
 
@@ -153,3 +153,31 @@ Funde:
 - **Glatte Schlusssätze:** Viele Max-Zeilen enden mit einem angehängten Kurzsatz als Pointe („Ruhe in Frieden, Keks.“, „Die Lampe sammelt.“, „Er gewinnt.“, „Ich lass das ab sofort.“, „Ich fass hier nichts mehr an.“, „Wir reden nie wieder darüber.“). Gleiche Satzmelodie über ganze Räume.
 - Kopfzeile Z.3: „rund 180 Zeilen“; `05-spielsysteme.md` Z.111 sagt „165 Zeilen“, Budget 170. Nachzählen.
 - P0_DACH_PIX_0340 „Der redet seit Jahren“ – Max kennt den Kater seit Jahren und hat es nie bemerkt, Opa „schaltet den Lautsprecher ein“. Kleiner Wackler, als Gag vertretbar.
+
+### Aus `docs/skript/welt-1.md`
+
+Stärken (bleiben): Humberts Keller-Pointe „Dreihundert Jahre lang ein Etikett.“ und „Das schmeckt nach Macht. Und nach Gruyère.“ (W1_TAV_HUM_1250/1270); Gollo verliert gern („Ich liebe es. Ich habe verloren. Endlich.“, 1210); „Das ist kein Blick. Das ist mein Gesicht.“ (W1_LUFT_PIX_0460); Zeldinas Logik „Dunkle Lords tragen Kisten umsonst“ (0260); „Vermittelt.“ (0550); „Das ist Finden mit Anlauf.“ (0640); Waldemar durchgehend („Die Versammlung bin ich. Ich bin nie beschlussfähig.“, W1_BRUE_WAL_1270; „Gefühle sind vorher anzumelden“, 0266); Ziegisch-Dialekte (0700–0810); Smaugi „Seit die Besen da sind, finde ich alles. Das ist noch schlimmer.“ (W1_SMAU_SMA_0030); Tür sagt „Mama?“ (0770); „Damit kann ich nur Käse.“ – „Ich auch. Aber ich hab Übung.“ (W1_THRO 0410/0420); „Wer im Wald einfach was nimmt, kriegt am Ende eine Moral.“ (W1_WALD_MAX_0730); Max’ Moment „Ja. … Trotzdem.“ (W1_LUFT_MAX_0310). Das Passwort-Rätsel (vier Fundorte, Reihenfolge ableitbar) und das Flaschenrätsel (genau eine Lösung, nachgerechnet) sind fair.
+
+Funde:
+
+- **Falscher Sprecher (Tippfehler):** Z.400 und Z.404, W1_SCHM_SCH_0760 und _0780: Sprecherspalte „Schreiber“ statt „Schmied“. Direkt korrigierbar.
+- **Doppelte Frage im selben Gespräch:** Schmied, W1_SCHM_MAX_0221/0222 („Hast du mal versucht, sie wegzuschicken?“ – „Dreimal.“) und 0750/0760 („Und warum jagst du sie nicht weg?“ – „Hab ich versucht.“). Der Nachsatz aus dem Humor-Durchgang wiederholt die vorhandene Rückfrage.
+- **Entscheidung rückgängig gemacht:** W1_SCHM_SCH_0780 („Jedes Schwert hat einen Namen. Ingrid, Helga, Kurt.“) und die Namensschilder am Kochgeschirr (0040/0045). `entscheidungen.md` Z.188 hatte „zwei Schwert-Namensgeber im Dorf“ ausdrücklich abgeschafft. Dazu fragt Max zweimal fast wortgleich „Du nennst deine Schwerter beim Vornamen?“ (W1_TAV_MAX_0550) / „Du hast deinen Schwertern Namen gegeben?“ (W1_SCHM_MAX_0770).
+- **Widerspruch Rotkäppchens Oma:** W1_WALD_ROT_0222 („Sie zieht dauernd um, immer tiefer in den Wald“) gegen W1_WALD_ROT_0780 („Ist in Rente. Wohnt auf Mallorca.“) und W1_ABS_ROT_0180 („Oma wartet“).
+- **Widerspruch Zeldina:** W1_LUFT_ZEL_0840 („Der Drache war der Vermieter. Der Turm war zu teuer.“). Später will sie genau diesen Turm, Smaugi ist dort Untermieter mit Kram, und der Turm gehört Moderwort.
+- **Gollo, Abschiedszeilen:** W1_ABS_GOL_0220 („Unser Gold ist weg … Nur das Ssschätzchen bleibt. Niemand will es.“) stimmt in keinem Zustand: Vor Rätsel 1 hat er die Münze noch, nach Rätsel 1 ist der Ring weg. Außerdem spricht Gollo nur hier in „wir/unser“, sonst immer „ich“.
+- **Anrede:** Maklerin und Stabmacher duzen Max im Gespräch, siezen ihn aber in den Abschiedszeilen (W1_ABS_MAK_0230/0240, W1_ABS_STA_0120).
+- **Kleiner Sachfehler:** W1_ANK_PIX_0040 „wenn ich die Fernbedienung richtig gelesen habe“ – der Zapp-O-Mat hat einen Drehknopf, die Fernbedienung ist ja gerade weg.
+- **Paragrafen:** W1_BRUE_WAL_1060 nennt „Paragraf eins: Erst das Märchen, dann das Bad“, auf dem Schild ist Paragraf 1 die Reihenfolge der Ziegen (0040) und so zitiert ihn Waldemar auch in 0480. Außerdem „Paragraf 14b“ (0060) gegen „Regel 14b“ (1000).
+- **Pointe vorweggenommen:** W1_HOGG_ALW_0360 „Die Milch ist in einem anderen Schloss.“ Der Satz mit der Milch ist laut Konzept die Schlusspointe im Abspann (Toadi: „deine Milch ist in einem anderen Supermarkt“). In Welt 1 fällt der Schloss-Satz insgesamt sechsmal (Toadi 4×, Toadis Abschied, Alwin).
+- **Wörtliches Tolkien-Zitat:** W1_TAV_GOL_0760 „Was hat Wurzeln, die keiner sieht, und ist höher als Bäume?“ ist fast wörtlich das Rätsel aus „Der Hobbit“, dazu „Was hab ich in meiner Tasche?“ (1120). Rechtlich heikler als ein Name, weil es Text des Originals ist. Eigenes Rätsel schreiben.
+- **Wörtliche Markenbegriffe:** „Gleis neundreiviertel“ (W1_DORF_MAX_0295), „Vielsaft“ (deutscher Originalbegriff, W1_TAV_MAX_0290), „Schicksalsberg“ (deutscher Originalbegriff). Im Rechtscheck stehen Vielsaft und Schicksalsberg als „bleiben“, Gleis 9¾ fehlt dort.
+- **Namensgleichheit:** Das Huhn heißt Hilde (W1_TAV_PIX_1470), die Oma heißt Hildegard. Vermutlich Zufall; entweder umbenennen oder im Finale als Gag nutzen.
+- **Motivation Bosskampf:** Nach Rätsel 12 hat Max das Ei, das Ziel der Welt. Warum er noch in den Thronsaal geht, steht nur in zwei Zeilen (W1_THRO_MAX_0020 „Das hab ich aber schon.“, ZEL_0040 „Wegen der Wohnung.“). Vorschlag: gleich nach der Ei-Übergabe (W1_SMAU_MAX_0630) eine Zeile, in der Max sich entscheidet, Zeldina noch zu helfen. Das wäre zugleich sein Entwicklungsmoment mit mehr Gewicht.
+- **Rätsel 9 (Maklerin):** Der Steckbrief als „Exposé“ ist die schwächste Logik der Welt. Auf dem Steckbrief steht nichts vom Turm. Ohne Steckbrief im Inventar erscheint die richtige Option gar nicht. Fair wird es erst durch Hinweis Stufe 2. Vorschlag: Steckbrief nennt „Wohnhaft: Dunkler Turm, 7 Stockwerke“.
+- **Alwins Reim (W1_HOGG_ALW_0620):** Strophe 2 reimt sich kaum („Trank / Rand“, letzte Zeile ohne Reim), obwohl Alwin „in Reimen“ ankündigt. Entweder als Gag markieren (Alwin: „Die letzte Zeile reimt sich nicht. Ich war müde.“) oder sauber reimen.
+- **Zweitzeilen fehlen:** In Taverne (W1_TAV_MAX_0110–0360), Klassenzimmer (W1_HOGG_MAX_0110–0210) haben die Ansehen-Zeilen keine „zweites Mal“-Fassung, in allen anderen Räumen schon. Mit `tools/pruefen.py` nachzählen.
+- **Verwaister Gegenstand?** „Fläschchen, klein/gross“ (W1_INV_MAX_0130–0145) kommt im Raum-Skript von Welt 1 nicht vor. Gegen `welten/welt-1.yaml` prüfen.
+- **Wiederholte Bausteine:** „Montag“ als Vergleich (P0_WOHN_MAX_0185, W1_HOGG_MAX_0160, W1_BERG_MAX_0020); „seit ich/sie denken kann“ (jetzt viermal); Pixel-Kaskaden enden sehr oft auf dieselbe Wendung („Ich spreche da aus Erfahrung“, „junger Mann“, „und zwar“). Häufigkeiten am Ende per Suche belegen.
+- Kopfzeile Z.3: „rund 870 Zeilen in 16 Abschnitten“ – veraltet (laut `05-spielsysteme.md` über 1.000).
+- Sprecherspalte uneinheitlich: „Alwin“ / „Alwin Grauwald“, „Goblin 1 und 2“ unter der ID GO1.
