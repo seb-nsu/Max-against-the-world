@@ -25,7 +25,9 @@ Zusatzreaktion, kein Rätsel hängt daran). Ganz links in der Inventarleiste lie
 wach ist, das Pixel-Feld: wie ein Gegenstand auf ein Ziel ziehen, dann schnuppert oder redet
 Pixel dort. Klick aufs Pixel-Porträt oder Tab wechselt die Figur (ab der Taverne in Welt 1).
 Shift zeigt die Hotspots, F5 und F9 sind Schnellspeichern und -laden, N öffnet im Debug-Build
-das Notizbuch.
+das Notizbuch. Mit Gamepad oder Steam Deck: Stick bewegt den Zeiger, Steuerkreuz springt zum
+nächsten Hotspot, A benutzt, B sieht an, X zeigt die Hotspots, Y ist die Hilfe-Pfote, LB wechselt
+die Figur, RB springt ins Inventar, Start öffnet das Pausemenü (`skripte/controller.gd`).
 
 ## Ordner
 

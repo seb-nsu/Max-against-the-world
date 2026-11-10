@@ -7,8 +7,8 @@ extends Node
 ## - Anzeige: Fenstermodus, Fenstergröße in ganzzahligen Stufen, VSync, Bildrate
 ## - Spiel: Sprache, Textgeschwindigkeit, Text weiter per Klick oder automatisch, Untertitel
 ## - Steuerung: Tastenbelegung (eigene Aktionen, siehe BELEGBAR)
-## - Barrierefreiheit: große Schrift, Hotspots dauerhaft zeigen, Bildschirmwackeln aus,
-##   Flackern reduzieren, Farbenblind-Hilfe
+## - Barrierefreiheit: große Schrift, Hotspots dauerhaft zeigen, Hotspot-Namen zeigen,
+##   Bildschirmwackeln aus, Flackern reduzieren, Farbenblind-Hilfe (Wirkung: skripte/effekte.gd)
 ##
 ## Andere Teile lesen die Werte über wert(); geändert() meldet jede Änderung.
 
@@ -34,7 +34,7 @@ const STANDARD := {
 	gesamt = 80, musik = 70, geraeusche = 80, stimmen = 90, stumm_im_hintergrund = true,
 	fenstermodus = "fenster", fenster_stufe = 3, vsync = true, bildrate = 60,
 	sprache = "de", text_tempo = "normal", text_auto = false, untertitel = true,
-	grosse_schrift = false, hotspots_dauerhaft = false, wackeln_aus = false,
+	grosse_schrift = false, hotspots_dauerhaft = false, hotspot_namen = true, wackeln_aus = false,
 	flackern_reduzieren = false, farbenblind = false,
 	brabbel = false,  # Probe für P4 (Brabbel-Laute), bis zur Entscheidung aus
 }
