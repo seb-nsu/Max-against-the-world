@@ -9,8 +9,8 @@ signal geladen_werden(slot: int)
 signal gespeichert(slot: int)
 
 const S := preload("res://oberflaeche/menue_stil.gd")
-const KACHEL := Vector2(136, 38)
-const BILD := Vector2(48, 27)
+const KACHEL := Vector2(181, 51)
+const BILD := Vector2(64, 36)
 
 var modus := "laden"   # oder "speichern"
 var _hinweis: Label
@@ -26,24 +26,24 @@ func _ready() -> void:
 func _aufbauen() -> void:
 	for k in get_children():
 		k.queue_free()
-	var p := S.panel(Vector2(12, 6), Vector2(456, 258))
+	var p := S.panel(Vector2(16, 8), Vector2(608, 344))
 	add_child(p)
 	var titel := S.label(tr("UI_MENUE_SPEICHERN" if modus == "speichern" else "UI_MENUE_LADEN"), 12)
-	titel.position = Vector2(10, 3)
+	titel.position = Vector2(13, 4)
 	p.add_child(titel)
 	var plaetze: Array = range(1, CQSaveLoad.MANUELL_ANZAHL + 1)
 	if modus == "laden":
 		plaetze.append(CQSaveLoad.SCHNELL)
 		plaetze.append_array(CQSaveLoad.AUTO)
 	for i in plaetze.size():
-		var pos := Vector2(10 + (i % 3) * (KACHEL.x + 10), 24 + (i / 3) * (KACHEL.y + 3))
+		var pos := Vector2(13 + (i % 3) * (KACHEL.x + 13), 32 + (i / 3) * (KACHEL.y + 4))
 		p.add_child(_kachel(plaetze[i], pos))
 	_hinweis = S.label("", 8, S.GELB)
-	_hinweis.position = Vector2(10, 236)
+	_hinweis.position = Vector2(13, 315)
 	p.add_child(_hinweis)
 	var zu := S.knopf(tr("UI_MENUE_ZURUECK"))
-	zu.position = Vector2(372, 232)
-	zu.custom_minimum_size = Vector2(72, 0)
+	zu.position = Vector2(496, 309)
+	zu.custom_minimum_size = Vector2(96, 0)
 	zu.pressed.connect(func(): zurueck.emit())
 	p.add_child(zu)
 	zu.grab_focus.call_deferred()
@@ -62,7 +62,7 @@ func _kachel(slot: int, pos: Vector2) -> Control:
 	k.disabled = modus == "laden" and kopf.is_empty()
 	k.pressed.connect(_gewaehlt_von.bind(slot, not kopf.is_empty()))
 	var bild := TextureRect.new()
-	bild.position = Vector2(3, 5)
+	bild.position = Vector2(4, 7)
 	bild.size = BILD
 	bild.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
 	bild.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
@@ -79,8 +79,8 @@ func _kachel(slot: int, pos: Vector2) -> Control:
 		k.add_child(leer)
 	k.add_child(bild)
 	var zeilen := VBoxContainer.new()
-	zeilen.position = Vector2(55, 2)
-	zeilen.size = Vector2(KACHEL.x - 58, KACHEL.y - 4)
+	zeilen.position = Vector2(73, 3)
+	zeilen.size = Vector2(KACHEL.x - 77, KACHEL.y - 5)
 	zeilen.add_theme_constant_override("separation", -2)
 	zeilen.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	k.add_child(zeilen)
@@ -94,7 +94,7 @@ func _kachel(slot: int, pos: Vector2) -> Control:
 	for l in zeilen.get_children():
 		(l as Label).clip_text = true
 		(l as Label).text_overrun_behavior = TextServer.OVERRUN_TRIM_ELLIPSIS  # zu lang: „…“ statt abgeschnitten
-		(l as Label).custom_minimum_size.x = KACHEL.x - 58
+		(l as Label).custom_minimum_size.x = KACHEL.x - 77
 	return k
 
 

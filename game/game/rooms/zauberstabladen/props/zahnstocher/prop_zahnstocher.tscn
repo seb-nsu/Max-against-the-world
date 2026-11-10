@@ -7,7 +7,7 @@ script = ExtResource("1_w20eo")
 script_name = "Zahnstocher"
 description = "Zahnstocher"
 cursor = 1
-interaction_polygon = PackedVector2Array(-9, -5, 9, -5, 9, 5, -9, 5)
+interaction_polygon = PackedVector2Array(-12, -7, 12, -7, 12, 7, -12, 7)
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1777541399]
 texture_filter = 1
@@ -17,7 +17,7 @@ texture_filter = 1
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1736519133]
 visible = false
 modulate = Color(1, 1, 0, 1)
-polygon = PackedVector2Array(-18, -18, 18, -18, 18, 18, -18, 18)
+polygon = PackedVector2Array(-24, -24, 24, -24, 24, 24, -24, 24)
 
 [node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=212188540]
 visible = false

@@ -7,9 +7,9 @@ script = ExtResource("1_8l4kc")
 script_name = "Sandgrube"
 description = "Sandgrube"
 cursor = 1
-interaction_polygon = PackedVector2Array(-45, -12, 45, -12, 45, 12, -45, 12)
+interaction_polygon = PackedVector2Array(-60, -16, 60, -16, 60, 16, -60, 16)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=756743643]
 visible = false
 modulate = Color(1, 0, 1, 1)
-polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+polygon = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)

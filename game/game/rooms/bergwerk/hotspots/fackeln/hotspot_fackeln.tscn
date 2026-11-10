@@ -7,9 +7,9 @@ script = ExtResource("1_p8f3x")
 script_name = "Fackeln"
 description = "Fackeln"
 cursor = 1
-interaction_polygon = PackedVector2Array(-105, -12, 105, -12, 105, 12, -105, 12)
+interaction_polygon = PackedVector2Array(-140, -16, 140, -16, 140, 16, -140, 16)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1765470180]
 visible = false
 modulate = Color(1, 0, 1, 1)
-polygon = PackedVector2Array(-18, -18, 18, -18, 18, 18, -18, 18)
+polygon = PackedVector2Array(-24, -24, 24, -24, 24, 24, -24, 24)

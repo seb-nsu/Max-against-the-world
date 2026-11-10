@@ -5,12 +5,12 @@
 
 [node name="CharacterBernd" type="Area2D" unique_id=601399039]
 script = ExtResource("1_jgjyj")
-walk_speed = 90.0
-dialog_pos = Vector2(0, -34)
+walk_speed = 120.0
+dialog_pos = Vector2(0, -44)
 script_name = "Bernd"
 description = "UI_OBJ_BERND"
 cursor = 8
-interaction_polygon = PackedVector2Array(-15, -30, 15, -30, 15, 0, -15, 0)
+interaction_polygon = PackedVector2Array(-20, -40, 20, -40, 20, 0, -20, 0)
 
 [node name="ScalingPolygon" type="CollisionPolygon2D" parent="." unique_id=1069713373]
 polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
@@ -20,11 +20,11 @@ polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1096986544]
 texture_filter = 1
 texture = ExtResource("2_4ocpc")
-offset = Vector2(0, -15)
+offset = Vector2(0, -20)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1402284783]
 visible = false
-polygon = PackedVector2Array(-15, -30, 15, -30, 15, 0, -15, 0)
+polygon = PackedVector2Array(-20, -40, 20, -40, 20, 0, -20, 0)
 
 [node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=1007640105]
 visible = false

@@ -21,65 +21,65 @@
 [node name="RoomStartbuero" type="Node2D" unique_id=1957313935]
 script = ExtResource("1_aak36")
 script_name = "Startbuero"
-width = 480
-height = 270
+width = 640
+height = 360
 
 [node name="WalkableAreas" type="Node2D" parent="." unique_id=1453117011]
 
 [node name="Boden" parent="WalkableAreas" unique_id=928897949 instance=ExtResource("2_xdb8w")]
-interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(6, 210, 474, 210, 474, 267, 6, 267)])
+interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(8, 280, 632, 280, 632, 356, 8, 356)])
 
 [node name="Props" type="Node2D" parent="." unique_id=1913896347]
 
 [node name="Background" parent="Props" unique_id=859640552 instance=ExtResource("3_sf3qo")]
-position = Vector2(240, 135)
+position = Vector2(320, 180)
 texture = ExtResource("4_jgkfi")
 description = "UI_RAUM_STARTBUERO"
 
 [node name="LeeresFormular" parent="Props" unique_id=785344981 instance=ExtResource("5_vby5e")]
-position = Vector2(441, 201)
+position = Vector2(588, 268)
 texture = ExtResource("6_o2mi4")
 description = "UI_OBJ_LEERES_FORMULAR"
-baseline = 6
-walk_to_point = Vector2(-15, 33)
+baseline = 8
+walk_to_point = Vector2(-20, 44)
 
 [node name="Hotspots" type="Node2D" parent="." unique_id=384546131]
 
 [node name="Formularberg" parent="Hotspots" unique_id=171233633 instance=ExtResource("7_y81pa")]
-position = Vector2(433.5, 142.5)
+position = Vector2(578.0, 190.0)
 description = "UI_OBJ_FORMULARBERG"
-baseline = 67
-walk_to_point = Vector2(-7.5, 91.5)
+baseline = 89
+walk_to_point = Vector2(-10.0, 122.0)
 
 [node name="Wachstafeln" parent="Hotspots" unique_id=536905660 instance=ExtResource("8_q2woo")]
-position = Vector2(267, 136.5)
+position = Vector2(356, 182.0)
 description = "UI_OBJ_WACHSTAFELN"
-baseline = 16
-walk_to_point = Vector2(0, 94.5)
+baseline = 21
+walk_to_point = Vector2(0, 126.0)
 
 [node name="Aushang" parent="Hotspots" unique_id=238001049 instance=ExtResource("9_uywqi")]
-position = Vector2(99, 100.5)
+position = Vector2(132, 134.0)
 description = "UI_OBJ_AUSHANG"
-baseline = 19
-walk_to_point = Vector2(0, 130.5)
+baseline = 25
+walk_to_point = Vector2(0, 174.0)
 
 [node name="BankMitWartenden" parent="Hotspots" unique_id=1852007221 instance=ExtResource("10_0xlwb")]
-position = Vector2(108, 198)
+position = Vector2(144, 264)
 description = "UI_OBJ_BANK_MIT_WARTENDEN"
-baseline = 12
-walk_to_point = Vector2(0, 39)
+baseline = 16
+walk_to_point = Vector2(0, 52)
 
 [node name="Staub" parent="Hotspots" unique_id=719346731 instance=ExtResource("11_e2ylo")]
-position = Vector2(240, 45)
+position = Vector2(320, 60)
 description = "UI_OBJ_STAUB"
-baseline = 30
-walk_to_point = Vector2(0, 186)
+baseline = 40
+walk_to_point = Vector2(0, 248)
 
 [node name="AusgangAgora" parent="Hotspots" unique_id=1507366225 instance=ExtResource("12_2u6ws")]
-position = Vector2(16.5, 157.5)
+position = Vector2(22.0, 210.0)
 description = "UI_OBJ_AUSGANG_AGORA"
-baseline = 52
-walk_to_point = Vector2(1.5, 82.5)
+baseline = 69
+walk_to_point = Vector2(2.0, 110.0)
 cursor = 9
 
 [node name="Regions" type="Node2D" parent="." unique_id=416542957]
@@ -87,18 +87,18 @@ cursor = 9
 [node name="Markers" type="Node2D" parent="." unique_id=1378889331]
 
 [node name="Start" parent="Markers" unique_id=839166363 instance=ExtResource("13_328ra")]
-position = Vector2(36, 240)
+position = Vector2(48, 320)
 
 [node name="VonAgora" parent="Markers" unique_id=171906488 instance=ExtResource("14_sf12i")]
-position = Vector2(36, 240)
+position = Vector2(48, 320)
 
 [node name="Hermes" parent="Markers" unique_id=2007602076 instance=ExtResource("15_tq5c6")]
-position = Vector2(150, 240)
+position = Vector2(200, 320)
 
 [node name="Characters" type="Node2D" parent="." unique_id=944106064]
 
 [node name="CharacterBeamter1 *" parent="Characters" unique_id=2041205311 instance=ExtResource("16_8eea5")]
-position = Vector2(195, 210)
+position = Vector2(260, 280)
 
 [node name="CharacterBeamter2 *" parent="Characters" unique_id=426036606 instance=ExtResource("17_nf00k")]
-position = Vector2(330, 210)
+position = Vector2(440, 280)

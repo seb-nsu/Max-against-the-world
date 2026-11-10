@@ -7,9 +7,9 @@ script = ExtResource("1_3jv11")
 script_name = "Streikposten"
 description = "Streikposten"
 cursor = 1
-interaction_polygon = PackedVector2Array(-105, -5, 105, -5, 105, 5, -105, 5)
+interaction_polygon = PackedVector2Array(-140, -7, 140, -7, 140, 7, -140, 7)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1395555891]
 visible = false
 modulate = Color(1, 0, 1, 1)
-polygon = PackedVector2Array(-18, -18, 18, -18, 18, 18, -18, 18)
+polygon = PackedVector2Array(-24, -24, 24, -24, 24, 24, -24, 24)

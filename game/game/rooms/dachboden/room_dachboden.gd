@@ -11,8 +11,8 @@ var state: Data = load("res://game/rooms/dachboden/room_dachboden.tres")
 ## Zapp-O-Mat-Bilder (Platzhalter-Sheet aus tools/godot_raeume.py)
 enum Bild { AUS, SCHNEE, ANTENNE, BUNT, WIRBEL }
 ## Pixel nach P1: auf der Werkbank (skript/prolog.md, 0360)
-const PIXEL_WERKBANK := Vector2(120, 135)
-const PIXEL_KABEL := Vector2(235, 178)
+const PIXEL_WERKBANK := Vector2(160, 180)
+const PIXEL_KABEL := Vector2(313, 237)
 
 var _erster_besuch := false
 ## Während der P2-Szene zeigt der Zapp-O-Mat kurz die Antenne

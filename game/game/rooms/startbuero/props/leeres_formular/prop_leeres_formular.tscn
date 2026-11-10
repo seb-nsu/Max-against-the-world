@@ -7,7 +7,7 @@ script = ExtResource("1_6r8tk")
 script_name = "LeeresFormular"
 description = "Leeres Formular"
 cursor = 1
-interaction_polygon = PackedVector2Array(-9, -6, 9, -6, 9, 6, -9, 6)
+interaction_polygon = PackedVector2Array(-12, -8, 12, -8, 12, 8, -12, 8)
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=57835099]
 texture_filter = 1
@@ -17,7 +17,7 @@ texture_filter = 1
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1687842175]
 visible = false
 modulate = Color(1, 1, 0, 1)
-polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+polygon = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 
 [node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=55535000]
 visible = false

@@ -5,12 +5,12 @@
 
 [node name="CharacterAegypter" type="Area2D" unique_id=560154239]
 script = ExtResource("1_1mu5t")
-walk_speed = 90.0
-dialog_pos = Vector2(0, -109)
+walk_speed = 120.0
+dialog_pos = Vector2(0, -144)
 script_name = "Aegypter"
 description = "UI_OBJ_AEGYPTER"
 cursor = 8
-interaction_polygon = PackedVector2Array(-17.5, -105, 17.5, -105, 17.5, 0, -17.5, 0)
+interaction_polygon = PackedVector2Array(-23, -140, 23, -140, 23, 0, -23, 0)
 
 [node name="ScalingPolygon" type="CollisionPolygon2D" parent="." unique_id=2089345055]
 polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
@@ -20,11 +20,11 @@ polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=995965091]
 texture_filter = 1
 texture = ExtResource("2_635r0")
-offset = Vector2(0, -52.5)
+offset = Vector2(0, -70)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1408582490]
 visible = false
-polygon = PackedVector2Array(-17.5, -105, 17.5, -105, 17.5, 0, -17.5, 0)
+polygon = PackedVector2Array(-23, -140, 23, -140, 23, 0, -23, 0)
 
 [node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=835638930]
 visible = false

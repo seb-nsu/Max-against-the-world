@@ -7,9 +7,9 @@ script = ExtResource("1_8fau2")
 script_name = "Akazien"
 description = "Akazien"
 cursor = 1
-interaction_polygon = PackedVector2Array(-40, -24, 40, -24, 40, 24, -40, 24)
+interaction_polygon = PackedVector2Array(-53, -32, 53, -32, 53, 32, -53, 32)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=2040829673]
 visible = false
 modulate = Color(1, 0, 1, 1)
-polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+polygon = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)

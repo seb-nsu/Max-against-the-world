@@ -50,7 +50,7 @@
     "ANK",
     "DORF"
    ],
-   "groesse": "960x270",
+   "groesse": "1280x360",
    "ausgaenge": [
     "taverne",
     "schmiede",
@@ -72,7 +72,7 @@
    "skript_code": [
     "TAV"
    ],
-   "groesse": "480x270",
+   "groesse": "640x360",
    "ausgaenge": [
     "dorfplatz"
    ],
@@ -85,7 +85,7 @@
    "skript_code": [
     "SCHM"
    ],
-   "groesse": "480x270",
+   "groesse": "640x360",
    "ausgaenge": [
     "dorfplatz"
    ],
@@ -98,7 +98,7 @@
    "skript_code": [
     "STAB"
    ],
-   "groesse": "480x270",
+   "groesse": "640x360",
    "ausgaenge": [
     "dorfplatz"
    ],
@@ -111,7 +111,7 @@
    "skript_code": [
     "HOGG"
    ],
-   "groesse": "480x270",
+   "groesse": "640x360",
    "ausgaenge": [
     "dorfplatz"
    ],
@@ -124,7 +124,7 @@
    "skript_code": [
     "BRUE"
    ],
-   "groesse": "480x270",
+   "groesse": "640x360",
    "ausgaenge": [
     "dorfplatz",
     "zauberwald",
@@ -139,7 +139,7 @@
    "skript_code": [
     "WASS"
    ],
-   "groesse": "480x270",
+   "groesse": "640x360",
    "ausgaenge": [
     "trollbruecke"
    ],
@@ -152,7 +152,7 @@
    "skript_code": [
     "WALD"
    ],
-   "groesse": "480x270",
+   "groesse": "640x360",
    "ausgaenge": [
     "trollbruecke",
     "bergwerk"
@@ -170,7 +170,7 @@
    "skript_code": [
     "LUFT"
    ],
-   "groesse": "480x270",
+   "groesse": "640x360",
    "ausgaenge": [
     "dorfplatz"
    ],
@@ -183,7 +183,7 @@
    "skript_code": [
     "BERG"
    ],
-   "groesse": "480x270",
+   "groesse": "640x360",
    "ausgaenge": [
     "zauberwald",
     "turmkeller"
@@ -201,7 +201,7 @@
    "skript_code": [
     "TURM"
    ],
-   "groesse": "480x270",
+   "groesse": "640x360",
    "ausgaenge": [
     "bergwerk",
     "abstellkammer_1",
@@ -218,7 +218,7 @@
    "id": "abstellkammer_1",
    "name": "Abstellkammer 1",
    "skript_code": [],
-   "groesse": "480x270",
+   "groesse": "640x360",
    "ausgaenge": [
     "turmkeller"
    ],
@@ -231,7 +231,7 @@
    "skript_code": [
     "SMAU"
    ],
-   "groesse": "480x270",
+   "groesse": "640x360",
    "ausgaenge": [
     "turmkeller",
     "thronsaal"
@@ -249,7 +249,7 @@
    "skript_code": [
     "THRO"
    ],
-   "groesse": "480x270",
+   "groesse": "640x360",
    "ausgaenge": [
     "abstellkammern"
    ],
@@ -278,7 +278,7 @@
     "abstellkammern",
     "thronsaal"
    ],
-   "groesse_px": 105,
+   "groesse_px": 140,
    "spielbar": true
   },
   {
@@ -301,7 +301,7 @@
     "abstellkammern",
     "thronsaal"
    ],
-   "groesse_px": 34,
+   "groesse_px": 45,
    "spielbar": true
   },
   {
@@ -309,7 +309,7 @@
    "name": "Opa",
    "kuerzel": "OPA",
    "raum": [],
-   "groesse_px": 112,
+   "groesse_px": 149,
    "spielbar": false
   },
   {
@@ -324,7 +324,7 @@
     "luftschloss",
     "thronsaal"
    ],
-   "groesse_px": 56,
+   "groesse_px": 75,
    "spielbar": false
   },
   {
@@ -332,7 +332,7 @@
    "name": "Alwin",
    "kuerzel": "ALW",
    "raum": "klassenzimmer",
-   "groesse_px": 116,
+   "groesse_px": 155,
    "spielbar": false
   },
   {
@@ -346,7 +346,7 @@
     "abstellkammern",
     "thronsaal"
    ],
-   "groesse_px": 109,
+   "groesse_px": 145,
    "spielbar": false
   },
   {
@@ -354,7 +354,7 @@
    "name": "Gollo",
    "kuerzel": "GOL",
    "raum": "taverne",
-   "groesse_px": 82,
+   "groesse_px": 109,
    "spielbar": false
   },
   {
@@ -365,7 +365,7 @@
     "taverne",
     "abstellkammern"
    ],
-   "groesse_px": 112,
+   "groesse_px": 149,
    "spielbar": false
   },
   {
@@ -373,7 +373,7 @@
    "name": "Schmied",
    "kuerzel": "SCH",
    "raum": "schmiede",
-   "groesse_px": 112,
+   "groesse_px": 149,
    "spielbar": false
   },
   {
@@ -384,7 +384,7 @@
     "trollbruecke",
     "zauberwald"
    ],
-   "groesse_px": 150,
+   "groesse_px": 200,
    "spielbar": false
   },
   {
@@ -392,7 +392,7 @@
    "name": "Stabmacher",
    "kuerzel": "STA",
    "raum": "zauberstabladen",
-   "groesse_px": 109,
+   "groesse_px": 145,
    "spielbar": false
   },
   {
@@ -403,7 +403,7 @@
     "zauberwald",
     "dorfplatz"
    ],
-   "groesse_px": 90,
+   "groesse_px": 120,
    "spielbar": false
   },
   {
@@ -411,7 +411,7 @@
    "name": "Maklerin",
    "kuerzel": "MAK",
    "raum": "luftschloss",
-   "groesse_px": 112,
+   "groesse_px": 149,
    "spielbar": false
   },
   {
@@ -423,7 +423,7 @@
     "turmkeller",
     "abstellkammern"
    ],
-   "groesse_px": 75,
+   "groesse_px": 100,
    "spielbar": false
   },
   {
@@ -431,7 +431,7 @@
    "name": "Goblin 1",
    "kuerzel": "GO1",
    "raum": "bergwerk",
-   "groesse_px": 64,
+   "groesse_px": 85,
    "spielbar": false
   },
   {
@@ -439,7 +439,7 @@
    "name": "Goblin 2",
    "kuerzel": "GO2",
    "raum": "bergwerk",
-   "groesse_px": 64,
+   "groesse_px": 85,
    "spielbar": false
   },
   {
@@ -447,7 +447,7 @@
    "name": "Moderwort",
    "kuerzel": "MOD",
    "raum": "thronsaal",
-   "groesse_px": 112,
+   "groesse_px": 149,
    "spielbar": false
   },
   {
@@ -455,7 +455,7 @@
    "name": "Smaugi",
    "kuerzel": "SMA",
    "raum": "abstellkammern",
-   "groesse_px": 225,
+   "groesse_px": 300,
    "spielbar": false
   },
   {
@@ -463,7 +463,7 @@
    "name": "Minka",
    "kuerzel": "MIN",
    "raum": "taverne",
-   "groesse_px": 34,
+   "groesse_px": 45,
    "spielbar": false
   },
   {
@@ -471,7 +471,7 @@
    "name": "Huhn",
    "kuerzel": "HUH",
    "raum": "taverne",
-   "groesse_px": 26,
+   "groesse_px": 35,
    "spielbar": false
   },
   {
@@ -483,7 +483,7 @@
     "dorfplatz",
     "trollbruecke"
    ],
-   "groesse_px": 52,
+   "groesse_px": 69,
    "spielbar": false
   },
   {
@@ -494,7 +494,7 @@
     "dorfplatz",
     "trollbruecke"
    ],
-   "groesse_px": 131,
+   "groesse_px": 175,
    "spielbar": false
   },
   {
@@ -502,7 +502,7 @@
    "name": "Schwan",
    "kuerzel": "SWA",
    "raum": "wasserschloss",
-   "groesse_px": 45,
+   "groesse_px": 60,
    "spielbar": false
   },
   {
@@ -546,7 +546,7 @@
     "abstellkammer_1",
     "abstellkammern"
    ],
-   "groesse_px": 56,
+   "groesse_px": 75,
    "spielbar": false
   },
   {
@@ -554,7 +554,7 @@
    "name": "Übungsbesen",
    "kuerzel": null,
    "raum": "klassenzimmer",
-   "groesse_px": 41,
+   "groesse_px": 55,
    "spielbar": false
   }
  ],

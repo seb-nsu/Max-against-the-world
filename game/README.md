@@ -1,8 +1,8 @@
 # Couch Quest – Godot-Projekt
 
 Godot 4.7.2 mit Popochiu 2.2.1 (Plugin in `addons/popochiu`, Lizenz dort in `LICENSE`).
-Auflösung 480×270 (vorläufig; Maße zentral in `tools/aufloesung.py`, Wechsel mit
-`python3 tools/aufloesung.py --umrechnen 480x270 640x360`), Pixelgrafik ohne Glättung, ganzzahlig
+Auflösung 640×360 (seit 10. November 2026, vorher 480×270; Maße zentral in `tools/aufloesung.py`,
+Wechsel mit `python3 tools/aufloesung.py --umrechnen ALT NEU`), Pixelgrafik ohne Glättung, ganzzahlig
 skaliert. Text (Nunito) wird in voller Bildschirmauflösung gezeichnet (Stretch-Modus
 „canvas_items“ mit Pixel-Einrasten, `docs/05-spielsysteme.md`, Schrift). Bildschirmfotos aus dem
 laufenden Spiel: `tests/bildschirmfoto.gd` und `tests/bildschirmfoto_menues.gd` (Aufruf im Kopf der Datei, braucht xvfb-run). Stand: Stufe 1
@@ -247,7 +247,7 @@ im Ausgabeordner, dazu je Abschnitt eine Übersicht aller Räume. Nach gewollten
 Übersicht einmal mit dem Auge prüfen:
 
 ```
-xvfb-run -a -s "-screen 0 1280x720x24" godot --path . --rendering-driver opengl3 --resolution 480x270 \
+xvfb-run -a -s "-screen 0 1280x720x24" godot --path . --rendering-driver opengl3 --resolution 640x360 \
     -s res://tests/bildschirm_vergleich.gd -- [--aktualisieren] [AUSGABEORDNER]
 ```
 

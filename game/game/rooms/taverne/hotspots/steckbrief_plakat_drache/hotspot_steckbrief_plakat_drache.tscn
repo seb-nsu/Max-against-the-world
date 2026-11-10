@@ -7,9 +7,9 @@ script = ExtResource("1_vxlc5")
 script_name = "SteckbriefPlakatDrache"
 description = "Steckbrief Plakat Drache"
 cursor = 1
-interaction_polygon = PackedVector2Array(-21, -24, 21, -24, 21, 24, -21, 24)
+interaction_polygon = PackedVector2Array(-28, -32, 28, -32, 28, 32, -28, 32)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=2059666507]
 visible = false
 modulate = Color(1, 0, 1, 1)
-polygon = PackedVector2Array(-18, -18, 18, -18, 18, 18, -18, 18)
+polygon = PackedVector2Array(-24, -24, 24, -24, 24, 24, -24, 24)

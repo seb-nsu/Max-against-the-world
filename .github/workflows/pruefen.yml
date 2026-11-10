@@ -89,7 +89,7 @@ jobs:
       - name: Alle Räume gegen die Referenzbilder
         run: |
           timeout 900 xvfb-run -a -s "-screen 0 1280x720x24" ./godot --path game --rendering-driver opengl3 \
-            --resolution 480x270 -s res://tests/bildschirm_vergleich.gd -- "$PWD/bildschirm"
+            --resolution 640x360 -s res://tests/bildschirm_vergleich.gd -- "$PWD/bildschirm"
       - name: Abweichungen und Übersicht hochladen
         if: always()
         uses: actions/upload-artifact@v4

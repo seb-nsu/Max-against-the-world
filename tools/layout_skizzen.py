@@ -31,11 +31,11 @@ WURZEL = Path(__file__).resolve().parent.parent
 DATEN = WURZEL / "game/daten/raeume"
 LAYOUT = WURZEL / "tools/layout"
 ABSCHNITTE = ["prolog", "welt-1", "welt-2", "welt-3", "welt-4", "finale"]
-SK = 3                     # Zeichenmaßstab: 480×270 wird als 1440×810 gezeichnet (lesbare Schrift)
+SK = 3                     # Zeichenmaßstab: 640×360 wird als 1920×1080 gezeichnet (lesbare Schrift)
 FLUCHT_Y = 0.40            # Fluchtpunkt auf 40 Prozent der Bildhöhe
-BODEN_OBEN = 160           # Hinterkante des Bodens in Spielpixeln (Boden 110 Pixel hoch)
+BODEN_OBEN = 213           # Hinterkante des Bodens in Spielpixeln (Boden 147 Pixel hoch)
 WAND_RAND = 0.10           # Seitenstreifen je 10 Prozent der Breite
-MAX_HOEHE = 105
+MAX_HOEHE = 140
 WAND_MASS = 0.75         # Möbel an der Rückwand: Schrank etwa 100 bis 115 Pixel, Sessel etwa 50
 TIEFE = 0.85
 
@@ -173,7 +173,7 @@ def zeichne(raum, texte, layout):
     if u.band:
         for x, y in ((u.w * 0.06 + 10, u.h - 4), (u.w * 0.5, BODEN_OBEN + 2)):
             m = u.massstab(y)
-            hh, bb = MAX_HOEHE * m, 35 * m
+            hh, bb = MAX_HOEHE * m, 47 * m
             gestrichelt(d, [(x - bb / 2) * SK, (y - hh) * SK, (x + bb / 2) * SK, y * SK], FARBEN["max"], 2)
         beschriften(d, [(u.w * 0.06 + 10) * SK, (u.h - MAX_HOEHE - 4) * SK, (u.w * 0.06 + 10) * SK, (u.h - MAX_HOEHE - 4) * SK],
                     f"Max {MAX_HOEHE} px", FARBEN["max"], f_klein)
@@ -196,7 +196,7 @@ def zeichne(raum, texte, layout):
         beschriften(d, b, "EXIT " + texte.get(a["name_key"], a["ziel"]), FARBEN["ausgang"], f_klein)
     for fg in raum.get("figuren", []):
         x, y = u.punkt(fg["pos"])
-        hh = (34 if fg["id"] == "pixel" else MAX_HOEHE) * u.massstab(y)
+        hh = (45 if fg["id"] == "pixel" else MAX_HOEHE) * u.massstab(y)
         bb = (49 if fg["id"] == "pixel" else 37) * u.massstab(y)
         b = [(x - bb / 2) * SK, (y - hh) * SK, (x + bb / 2) * SK, y * SK]
         gestrichelt(d, b, FARBEN["figur"], 2)

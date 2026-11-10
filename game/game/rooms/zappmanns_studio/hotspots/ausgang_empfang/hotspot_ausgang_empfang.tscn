@@ -7,9 +7,9 @@ script = ExtResource("1_sxjjj")
 script_name = "AusgangEmpfang"
 description = "Ausgang Empfang"
 cursor = 1
-interaction_polygon = PackedVector2Array(-13.5, -52.5, 13.5, -52.5, 13.5, 52.5, -13.5, 52.5)
+interaction_polygon = PackedVector2Array(-18.0, -70.0, 18.0, -70.0, 18.0, 70.0, -18.0, 70.0)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=936549130]
 visible = false
 modulate = Color(1, 0, 1, 1)
-polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+polygon = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)

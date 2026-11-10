@@ -7,9 +7,9 @@ script = ExtResource("1_kuc2y")
 script_name = "AlteGrabsteine"
 description = "Alte Grabsteine"
 cursor = 1
-interaction_polygon = PackedVector2Array(-45, -30, 45, -30, 45, 30, -45, 30)
+interaction_polygon = PackedVector2Array(-60, -40, 60, -40, 60, 40, -60, 40)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=731187880]
 visible = false
 modulate = Color(1, 0, 1, 1)
-polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+polygon = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)

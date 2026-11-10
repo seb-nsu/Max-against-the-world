@@ -7,9 +7,9 @@ script = ExtResource("1_fm6xc")
 script_name = "RauschenAmRand"
 description = "Rauschen Am Rand"
 cursor = 1
-interaction_polygon = PackedVector2Array(-62.5, -24, 62.5, -24, 62.5, 24, -62.5, 24)
+interaction_polygon = PackedVector2Array(-83.3333, -32, 83.3333, -32, 83.3333, 32, -83.3333, 32)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1604126452]
 visible = false
 modulate = Color(1, 0, 1, 1)
-polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+polygon = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)

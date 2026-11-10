@@ -26,8 +26,8 @@ func zeigen(daten: Dictionary) -> void:
 	var zu := Button.new()
 	zu.text = "X"
 	zu.tooltip_text = tr("UI_SCHLIESSEN")
-	zu.position = Vector2(450, 3)
-	zu.size = Vector2(27, 21)
+	zu.position = Vector2(600, 4)
+	zu.size = Vector2(36, 28)
 	zu.pressed.connect(schliessen)
 	if ResourceLoader.exists(HUD_THEMA):
 		zu.theme = load(HUD_THEMA)

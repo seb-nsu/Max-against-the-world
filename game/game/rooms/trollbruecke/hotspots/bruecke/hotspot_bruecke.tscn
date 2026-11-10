@@ -7,9 +7,9 @@ script = ExtResource("1_oh0yc")
 script_name = "Bruecke"
 description = "Bruecke"
 cursor = 1
-interaction_polygon = PackedVector2Array(-105, -23, 105, -23, 105, 23, -105, 23)
+interaction_polygon = PackedVector2Array(-140, -31, 140, -31, 140, 31, -140, 31)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=785510853]
 visible = false
 modulate = Color(1, 0, 1, 1)
-polygon = PackedVector2Array(-18, -18, 18, -18, 18, 18, -18, 18)
+polygon = PackedVector2Array(-24, -24, 24, -24, 24, 24, -24, 24)

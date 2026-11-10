@@ -7,9 +7,9 @@ script = ExtResource("1_dc6dh")
 script_name = "Terminal"
 description = "Terminal"
 cursor = 1
-interaction_polygon = PackedVector2Array(-27, -24, 27, -24, 27, 24, -27, 24)
+interaction_polygon = PackedVector2Array(-36, -32, 36, -32, 36, 32, -36, 32)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=901222852]
 visible = false
 modulate = Color(1, 0, 1, 1)
-polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+polygon = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)

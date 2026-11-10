@@ -7,9 +7,9 @@ script = ExtResource("1_osdjn")
 script_name = "Girlande"
 description = "Girlande"
 cursor = 1
-interaction_polygon = PackedVector2Array(-120, -9, 120, -9, 120, 9, -120, 9)
+interaction_polygon = PackedVector2Array(-160, -12, 160, -12, 160, 12, -160, 12)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1925531015]
 visible = false
 modulate = Color(1, 0, 1, 1)
-polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+polygon = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)

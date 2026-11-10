@@ -7,9 +7,9 @@ script = ExtResource("1_agqbs")
 script_name = "Amboss"
 description = "Amboss"
 cursor = 1
-interaction_polygon = PackedVector2Array(-30, -18, 30, -18, 30, 18, -30, 18)
+interaction_polygon = PackedVector2Array(-40, -24, 40, -24, 40, 24, -40, 24)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1714440942]
 visible = false
 modulate = Color(1, 0, 1, 1)
-polygon = PackedVector2Array(-18, -18, 18, -18, 18, 18, -18, 18)
+polygon = PackedVector2Array(-24, -24, 24, -24, 24, 24, -24, 24)

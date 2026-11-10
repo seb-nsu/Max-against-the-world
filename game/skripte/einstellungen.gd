@@ -172,8 +172,13 @@ func _fenster_anwenden() -> void:
 
 
 ## Schriftgröße in logischen Einheiten (×4 bei 1080p), mit „Große Schrift“ um ein Viertel größer.
+## Schriftgrößen im Code sind für 480×270 angegeben; bei 640×360 wachsen sie mit, damit Text auf dem
+## Bildschirm gleich groß bleibt (tools/aufloesung.py, Entscheidung 10. November 2026).
+static var _aufloesung := float(ProjectSettings.get_setting("display/window/size/viewport_height", 270)) / 270.0
+
+
 func schrift(groesse: int) -> int:
-	return roundi(groesse * (GROSS_FAKTOR if wert("grosse_schrift") else 1.0))
+	return roundi(groesse * _aufloesung * (GROSS_FAKTOR if wert("grosse_schrift") else 1.0))
 
 
 const THEMA := "res://game/gui/resources/gui_theme.tres"

@@ -18,58 +18,58 @@
 [node name="RoomGrabhuegel" type="Node2D" unique_id=1767581427]
 script = ExtResource("1_aiwc3")
 script_name = "Grabhuegel"
-width = 480
-height = 270
+width = 640
+height = 360
 
 [node name="WalkableAreas" type="Node2D" parent="." unique_id=1747749364]
 
 [node name="Boden" parent="WalkableAreas" unique_id=556068884 instance=ExtResource("2_y7n83")]
-interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(6, 210, 474, 210, 474, 267, 6, 267)])
+interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(8, 280, 632, 280, 632, 356, 8, 356)])
 
 [node name="Props" type="Node2D" parent="." unique_id=1866295351]
 
 [node name="Background" parent="Props" unique_id=1507757457 instance=ExtResource("3_xx5d2")]
-position = Vector2(240, 135)
+position = Vector2(320, 180)
 texture = ExtResource("4_o63uf")
 description = "UI_RAUM_GRABHUEGEL"
 
 [node name="Hotspots" type="Node2D" parent="." unique_id=91654157]
 
 [node name="Sockel" parent="Hotspots" unique_id=418209288 instance=ExtResource("5_v3arj")]
-position = Vector2(235.5, 189)
+position = Vector2(314.0, 252)
 description = "UI_OBJ_SOCKEL"
-baseline = 21
-walk_to_point = Vector2(-1.5, 45)
+baseline = 28
+walk_to_point = Vector2(-2.0, 60)
 
 [node name="Brombeeren" parent="Hotspots" unique_id=380019194 instance=ExtResource("6_0rbe7")]
-position = Vector2(105, 184.5)
+position = Vector2(140, 246.0)
 description = "UI_OBJ_BROMBEEREN"
-baseline = 25
-walk_to_point = Vector2(0, 49.5)
+baseline = 33
+walk_to_point = Vector2(0, 66.0)
 
 [node name="AlteGrabsteine" parent="Hotspots" unique_id=1572783537 instance=ExtResource("7_7bwq8")]
-position = Vector2(345, 180)
+position = Vector2(460, 240)
 description = "UI_OBJ_ALTE_GRABSTEINE"
-baseline = 30
-walk_to_point = Vector2(0, 54)
+baseline = 40
+walk_to_point = Vector2(0, 72)
 
 [node name="Zypressen" parent="Hotspots" unique_id=176666706 instance=ExtResource("8_abm57")]
-position = Vector2(435, 105)
+position = Vector2(580, 140)
 description = "UI_OBJ_ZYPRESSEN"
-baseline = 75
-walk_to_point = Vector2(0, 126)
+baseline = 100
+walk_to_point = Vector2(0, 168)
 
 [node name="Zikaden" parent="Hotspots" unique_id=577836215 instance=ExtResource("9_7amv4")]
-position = Vector2(225, 49.5)
+position = Vector2(300, 66.0)
 description = "UI_OBJ_ZIKADEN"
-baseline = 19
-walk_to_point = Vector2(0, 181.5)
+baseline = 25
+walk_to_point = Vector2(0, 242.0)
 
 [node name="AusgangHafen" parent="Hotspots" unique_id=1108643200 instance=ExtResource("10_q4bo0")]
-position = Vector2(16.5, 157.5)
+position = Vector2(22.0, 210.0)
 description = "UI_OBJ_AUSGANG_HAFEN"
-baseline = 52
-walk_to_point = Vector2(1.5, 82.5)
+baseline = 69
+walk_to_point = Vector2(2.0, 110.0)
 cursor = 9
 
 [node name="Regions" type="Node2D" parent="." unique_id=1474702681]
@@ -77,15 +77,15 @@ cursor = 9
 [node name="Markers" type="Node2D" parent="." unique_id=2077149812]
 
 [node name="Start" parent="Markers" unique_id=1144732237 instance=ExtResource("11_6sras")]
-position = Vector2(36, 240)
+position = Vector2(48, 320)
 
 [node name="VonHafenSyrakus" parent="Markers" unique_id=167640053 instance=ExtResource("12_wlnng")]
-position = Vector2(36, 240)
+position = Vector2(48, 320)
 
 [node name="Archimedes" parent="Markers" unique_id=1801309172 instance=ExtResource("13_pymi7")]
-position = Vector2(390, 234)
+position = Vector2(520, 312)
 
 [node name="Cicero" parent="Markers" unique_id=573686420 instance=ExtResource("14_47u1n")]
-position = Vector2(300, 234)
+position = Vector2(400, 312)
 
 [node name="Characters" type="Node2D" parent="." unique_id=716172238]

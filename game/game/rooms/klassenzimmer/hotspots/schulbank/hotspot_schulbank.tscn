@@ -7,9 +7,9 @@ script = ExtResource("1_wud8c")
 script_name = "Schulbank"
 description = "Schulbank"
 cursor = 1
-interaction_polygon = PackedVector2Array(-45, -23, 45, -23, 45, 23, -45, 23)
+interaction_polygon = PackedVector2Array(-60, -31, 60, -31, 60, 31, -60, 31)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1611094582]
 visible = false
 modulate = Color(1, 0, 1, 1)
-polygon = PackedVector2Array(-18, -18, 18, -18, 18, 18, -18, 18)
+polygon = PackedVector2Array(-24, -24, 24, -24, 24, 24, -24, 24)

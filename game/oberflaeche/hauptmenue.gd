@@ -21,7 +21,7 @@ const KANAELE := [
 	["UI_MENUE_ERRUNGENSCHAFTEN", "UI_KANAL_ERRUNGENSCHAFTEN"],
 	["UI_MENUE_BEENDEN", "UI_KANAL_BEENDEN"],
 ]
-const BILDSCHIRM := Rect2(40, 84, 184, 120)
+const BILDSCHIRM := Rect2(53, 112, 245, 160)
 
 var _haupt: Control
 var _unter: Control
@@ -76,21 +76,21 @@ func _aufbauen() -> void:
 	add_child(_haupt)
 
 	var titel := S.label(tr("UI_SPIELTITEL"), 24, S.GELB)
-	titel.position = Vector2(0, 14)
-	titel.size = Vector2(480, 32)
+	titel.position = Vector2(0, 19)
+	titel.size = Vector2(640, 43)
 	titel.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	_haupt.add_child(titel)
 	var unter := S.label(tr("UI_SPIELUNTERTITEL"), 10, S.ORANGE)
-	unter.position = Vector2(0, 46)
-	unter.size = Vector2(480, 14)
+	unter.position = Vector2(0, 61)
+	unter.size = Vector2(640, 19)
 	unter.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	_haupt.add_child(unter)
 
 	_fernseher()
 
 	var liste := VBoxContainer.new()
-	liste.position = Vector2(286, 92)
-	liste.size = Vector2(150, 140)
+	liste.position = Vector2(381, 123)
+	liste.size = Vector2(200, 187)
 	liste.add_theme_constant_override("separation", 4)
 	_haupt.add_child(liste)
 	for i in KANAELE.size():
@@ -104,15 +104,15 @@ func _aufbauen() -> void:
 	_knoepfe[0].disabled = _neuester < 0
 
 	var version := S.label(str(ProjectSettings.get_setting("application/config/version", "")), 7, S.GRAU)
-	version.position = Vector2(440, 256)
+	version.position = Vector2(587, 341)
 	_haupt.add_child(version)
 
 
 ## Platzhalter-Fernseher: Gehäuse, Bildschirm mit Kanalnummer und Rauschen, Drehknopf.
 func _fernseher() -> void:
 	var gehaeuse := Panel.new()
-	gehaeuse.position = BILDSCHIRM.position - Vector2(14, 12)
-	gehaeuse.size = BILDSCHIRM.size + Vector2(52, 24)
+	gehaeuse.position = BILDSCHIRM.position - Vector2(19, 16)
+	gehaeuse.size = BILDSCHIRM.size + Vector2(69, 32)
 	gehaeuse.add_theme_stylebox_override("panel", S.flaeche(Color("733e39"), Color("3e2731"), 3))
 	gehaeuse.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	_haupt.add_child(gehaeuse)
@@ -129,32 +129,32 @@ func _fernseher() -> void:
 	_rauschen.draw.connect(_rauschen_zeichnen)
 	schirm.add_child(_rauschen)
 	_kanal_nr = S.label("", 10, S.GELB)
-	_kanal_nr.position = Vector2(8, 4)
+	_kanal_nr.position = Vector2(11, 5)
 	schirm.add_child(_kanal_nr)
 	_kanal_text = S.label("", 14)
-	_kanal_text.position = Vector2(0, 40)
-	_kanal_text.size = Vector2(BILDSCHIRM.size.x, 20)
+	_kanal_text.position = Vector2(0, 53)
+	_kanal_text.size = Vector2(BILDSCHIRM.size.x, 27)
 	_kanal_text.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	schirm.add_child(_kanal_text)
 	_kanal_info = S.label("", 8, S.GRAU)
-	_kanal_info.position = Vector2(8, 66)
-	_kanal_info.size = Vector2(BILDSCHIRM.size.x - 16, 44)
+	_kanal_info.position = Vector2(11, 88)
+	_kanal_info.size = Vector2(BILDSCHIRM.size.x - 21, 59)
 	_kanal_info.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	_kanal_info.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	schirm.add_child(_kanal_info)
 	_knopf_dreh = Control.new()
-	_knopf_dreh.position = Vector2(BILDSCHIRM.end.x + 19, BILDSCHIRM.position.y + 26)
+	_knopf_dreh.position = Vector2(BILDSCHIRM.end.x + 25, BILDSCHIRM.position.y + 35)
 	_knopf_dreh.size = Vector2(1, 1)
 	_knopf_dreh.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	_knopf_dreh.draw.connect(func():
 		_knopf_dreh.draw_circle(Vector2.ZERO, 10, Color("3e2731"))
 		_knopf_dreh.draw_circle(Vector2.ZERO, 8, Color("c28569"))
-		_knopf_dreh.draw_line(Vector2.ZERO, Vector2(0, -8), Color("3e2731"), 2))
+		_knopf_dreh.draw_line(Vector2.ZERO, Vector2(0, -11), Color("3e2731"), 2))
 	_haupt.add_child(_knopf_dreh)
-	for y in [80, 98]:
+	for y in [107, 131]:
 		var punkt := ColorRect.new()
-		punkt.position = Vector2(BILDSCHIRM.end.x + 15, BILDSCHIRM.position.y + y)
-		punkt.size = Vector2(8, 4)
+		punkt.position = Vector2(BILDSCHIRM.end.x + 20, BILDSCHIRM.position.y + y)
+		punkt.size = Vector2(11, 5)
 		punkt.color = Color("3e2731")
 		punkt.mouse_filter = Control.MOUSE_FILTER_IGNORE
 		_haupt.add_child(punkt)
@@ -252,19 +252,19 @@ func _epilepsie_hinweis() -> void:
 	_hinweis = Control.new()
 	_hinweis.set_anchors_preset(Control.PRESET_FULL_RECT)
 	add_child(_hinweis)
-	var p := S.panel(Vector2(60, 50), Vector2(360, 170))
+	var p := S.panel(Vector2(80, 67), Vector2(480, 227))
 	_hinweis.add_child(p)
 	var titel := S.label(tr("UI_EPILEPSIE_TITEL"), 12, S.GELB)
-	titel.position = Vector2(12, 6)
+	titel.position = Vector2(16, 8)
 	p.add_child(titel)
 	var text := S.label(tr("UI_EPILEPSIE"), 9)
-	text.position = Vector2(12, 30)
-	text.custom_minimum_size = Vector2(336, 0)
+	text.position = Vector2(16, 40)
+	text.custom_minimum_size = Vector2(448, 0)
 	text.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	p.add_child(text)
 	var ok := S.knopf(tr("UI_VERSTANDEN"))
-	ok.position = Vector2(256, 136)
-	ok.custom_minimum_size = Vector2(92, 0)
+	ok.position = Vector2(341, 181)
+	ok.custom_minimum_size = Vector2(123, 0)
 	ok.pressed.connect(_hinweis_schliessen)
 	p.add_child(ok)
 	ok.grab_focus.call_deferred()

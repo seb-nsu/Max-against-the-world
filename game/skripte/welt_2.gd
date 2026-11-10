@@ -340,7 +340,7 @@ func _figuren_anwenden(raum: CQRaum) -> void:
 		Spiel.figur_hier(sn, plan[sn], pos)
 	# Sobek kriecht Pixel hinterher (2b, Gefolge)
 	if sobek_folgt() and raum.has_character("Sobek") and is_instance_valid(C.Pixel) and C.Pixel.is_inside_tree():
-		C.get_character("Sobek").position = C.Pixel.position + Vector2(-34, 4)
+		C.get_character("Sobek").position = C.Pixel.position + Vector2(-45, 5)
 
 
 #endregion

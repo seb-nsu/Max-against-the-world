@@ -5,12 +5,12 @@
 
 [node name="CharacterRebellin" type="Area2D" unique_id=879585417]
 script = ExtResource("1_3lfgq")
-walk_speed = 90.0
-dialog_pos = Vector2(0, -113)
+walk_speed = 120.0
+dialog_pos = Vector2(0, -149)
 script_name = "Rebellin"
 description = "UI_OBJ_REBELLIN"
 cursor = 8
-interaction_polygon = PackedVector2Array(-18, -109, 18, -109, 18, 0, -18, 0)
+interaction_polygon = PackedVector2Array(-24, -145, 24, -145, 24, 0, -24, 0)
 
 [node name="ScalingPolygon" type="CollisionPolygon2D" parent="." unique_id=1100103708]
 polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
@@ -20,11 +20,11 @@ polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2033951356]
 texture_filter = 1
 texture = ExtResource("2_1u2lr")
-offset = Vector2(0, -54.5)
+offset = Vector2(0, -72.5)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1269270227]
 visible = false
-polygon = PackedVector2Array(-18, -109, 18, -109, 18, 0, -18, 0)
+polygon = PackedVector2Array(-24, -145, 24, -145, 24, 0, -24, 0)
 
 [node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=2047451820]
 visible = false

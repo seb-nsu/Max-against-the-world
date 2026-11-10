@@ -7,9 +7,9 @@ script = ExtResource("1_2itve")
 script_name = "Kampfrichterzelt"
 description = "Kampfrichterzelt"
 cursor = 1
-interaction_polygon = PackedVector2Array(-30, -24, 30, -24, 30, 24, -30, 24)
+interaction_polygon = PackedVector2Array(-40, -32, 40, -32, 40, 32, -40, 32)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1352513982]
 visible = false
 modulate = Color(1, 0, 1, 1)
-polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+polygon = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)

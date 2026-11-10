@@ -7,9 +7,9 @@ script = ExtResource("1_1krto")
 script_name = "Wachstafeln"
 description = "Wachstafeln"
 cursor = 1
-interaction_polygon = PackedVector2Array(-21, -16.5, 21, -16.5, 21, 16.5, -21, 16.5)
+interaction_polygon = PackedVector2Array(-28, -22.0, 28, -22.0, 28, 22.0, -28, 22.0)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1266273740]
 visible = false
 modulate = Color(1, 0, 1, 1)
-polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+polygon = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)

@@ -27,20 +27,20 @@ const BELEGUNG := {
 }
 ## Achsen (Trigger), die wie ein Knopf wirken
 const ACHSEN := {"cq_hotspots_zeigen": [JOY_AXIS_TRIGGER_LEFT]}
-## Zeiger: Pixel je Sekunde bei vollem Ausschlag (Grundauflösung 480×270)
-const TEMPO := 190.0
+## Zeiger: Pixel je Sekunde bei vollem Ausschlag (Grundauflösung 640×360)
+const TEMPO := 253.0
 ## Über einem Hotspot so viel langsamer
 const BREMSE := 0.45
 ## Einrasten im Umkreis (Pixel)
-const MAGNET := 18.0
+const MAGNET := 24.0
 const TOTZONE := 0.2
 ## Inventarleiste oben (05-spielsysteme.md, Bildschirmaufbau)
-const LEISTE_HOEHE := 48.0
+const LEISTE_HOEHE := 64.0
 
 ## Controller zuletzt benutzt (sonst Maus und Tastatur)
 var aktiv := false
 ## Zeigerposition in Viewport-Koordinaten
-var zeiger := Vector2(240, 160)
+var zeiger := Vector2(320, 213)
 
 ## Gerätenummer der eigenen Mausereignisse (eine echte Maus hat 0)
 const GERAET := 99
@@ -226,11 +226,11 @@ func inventar_umschalten() -> void:
 	_ziele_alter = INF
 	if zeiger.y > LEISTE_HOEHE:
 		_vor_inventar = zeiger
-		var oben := ziele().filter(func(z): return z.y < LEISTE_HOEHE and z.x > 80 and z.x < 430)
+		var oben := ziele().filter(func(z): return z.y < LEISTE_HOEHE and z.x > 107 and z.x < 573)
 		oben.sort_custom(func(a, b): return a.x < b.x)
-		zeiger_setzen(oben[0] if not oben.is_empty() else Vector2(120, LEISTE_HOEHE / 2))
+		zeiger_setzen(oben[0] if not oben.is_empty() else Vector2(160, LEISTE_HOEHE / 2))
 	else:
-		zeiger_setzen(_vor_inventar if _vor_inventar.x >= 0 else Vector2(240, 160))
+		zeiger_setzen(_vor_inventar if _vor_inventar.x >= 0 else Vector2(320, 213))
 
 
 func naechstes_ziel(pos: Vector2, umkreis: float) -> Vector2:

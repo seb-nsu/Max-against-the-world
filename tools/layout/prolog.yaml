@@ -18,22 +18,22 @@ wohnzimmer:
   # übernommen mit --cq-layout=wohnzimmer. Hinter dem Couchtisch ist kein Laufbereich (Tisch gehört zum Bild).
   hintergrund: res://grafik/hintergruende/w0_bg_wohnzimmer_v01.png
   tiefe: 0.85
-  laufbereich: [[6, 268], [6, 252], [70, 240], [195, 220], [300, 220], [302, 182], [330, 176], [400, 180], [420, 194], [476, 200], [476, 268]]
+  laufbereich: [[8, 357], [8, 336], [93, 320], [260, 293], [400, 293], [403, 243], [440, 235], [533, 240], [560, 259], [635, 267], [635, 357]]
   marker:
-    start: [140, 230]              # Max vor dem Sofa (Szene 1)
-    von_treppenhaus: [440, 222]    # durch die Tür rechts
+    start: [187, 307]              # Max vor dem Sofa (Szene 1)
+    von_treppenhaus: [587, 296]    # durch die Tür rechts
   hotspots:
-    sofa: {rect: [82, 100, 113, 115], gehe: [140, 230]}
-    leerer_platz_auf_dem_couchtisch: {rect: [256, 160, 28, 11], gehe: [272, 228]}
-    teetasse: {rect: [226, 156, 16, 14], gehe: [236, 228]}
-    fernseher: {rect: [328, 90, 72, 82], gehe: [362, 190]}
-    familienfoto: {rect: [205, 40, 100, 68], gehe: [255, 225]}
+    sofa: {rect: [109, 133, 151, 153], gehe: [187, 307]}
+    leerer_platz_auf_dem_couchtisch: {rect: [341, 213, 37, 15], gehe: [363, 304]}
+    teetasse: {rect: [301, 208, 21, 19], gehe: [315, 304]}
+    fernseher: {rect: [437, 120, 96, 109], gehe: [483, 253]}
+    familienfoto: {rect: [273, 53, 133, 91], gehe: [340, 300]}
     # Finale (skripte/finale.gd): nur im Finale sichtbar; versteckt = nicht ins Platzhalterbild malen (verriete den Kuchen)
-    kuchen: {rect: [254, 136, 32, 30], gehe: [272, 228], name: Kuchen, versteckt: true}
-    girlande: {rect: [100, 8, 280, 20], gehe: [240, 228], name: Girlande, versteckt: true}
-    geschenke: {rect: [300, 196, 26, 22], gehe: [312, 230], name: Geschenke, versteckt: true}
+    kuchen: {rect: [339, 181, 43, 40], gehe: [363, 304], name: Kuchen, versteckt: true}
+    girlande: {rect: [133, 11, 373, 27], gehe: [320, 304], name: Girlande, versteckt: true}
+    geschenke: {rect: [400, 261, 35, 29], gehe: [416, 307], name: Geschenke, versteckt: true}
   ausgaenge:
-    treppenhaus: {rect: [416, 25, 56, 168], gehe: [444, 214]}
+    treppenhaus: {rect: [555, 33, 75, 224], gehe: [592, 285]}
 
 treppenhaus:
   farbe: "#584536"
@@ -41,18 +41,18 @@ treppenhaus:
   # --cq-layout=treppenhaus. Laufbereich: Flur vorne plus schmales Band über die Stufen nach oben rechts.
   hintergrund: res://grafik/hintergruende/w0_bg_treppenhaus_v01.png
   tiefe: 0.85
-  laufbereich: [[6, 268], [6, 232], [60, 224], [68, 208], [180, 208], [204, 210], [224, 196], [395, 64], [410, 64], [408, 73], [236, 206], [248, 228], [300, 262], [320, 268]]
+  laufbereich: [[8, 357], [8, 309], [80, 299], [91, 277], [240, 277], [272, 280], [299, 261], [527, 85], [547, 85], [544, 97], [315, 275], [331, 304], [400, 349], [427, 357]]
   marker:
-    start: [130, 240]
-    von_wohnzimmer: [50, 242]      # aus der Tür links
-    von_dachboden: [370, 92]       # oben auf der Treppe unter der Luke
+    start: [173, 320]
+    von_wohnzimmer: [67, 323]      # aus der Tür links
+    von_dachboden: [493, 123]       # oben auf der Treppe unter der Luke
   hotspots:
-    hut_am_haken: {rect: [128, 84, 20, 24], gehe: [140, 222]}   # Hut ist ins Bild gemalt
-    fenster: {rect: [216, 55, 40, 60], gehe: [205, 224]}
-    treppe: {rect: [200, 40, 220, 175], gehe: [215, 224]}
+    hut_am_haken: {rect: [171, 112, 27, 32], gehe: [187, 296]}   # Hut ist ins Bild gemalt
+    fenster: {rect: [288, 73, 53, 80], gehe: [273, 299]}
+    treppe: {rect: [267, 53, 293, 233], gehe: [287, 299]}
   ausgaenge:
-    wohnzimmer: {rect: [5, 40, 55, 185], gehe: [40, 240]}
-    dachboden: {rect: [300, 0, 170, 34], gehe: [402, 68]}
+    wohnzimmer: {rect: [7, 53, 73, 247], gehe: [53, 320]}
+    dachboden: {rect: [400, 0, 227, 45], gehe: [536, 91]}
 
 dachboden:
   farbe: "#7a5c43"
@@ -60,41 +60,41 @@ dachboden:
   # Koordinaten aus dem Bild genommen; übernommen mit --cq-layout=dachboden (game/README.md).
   hintergrund: res://grafik/hintergruende/w0_bg_dachboden_v01.png
   tiefe: 0.85
-  laufbereich: [[64, 268], [64, 190], [185, 184], [190, 170], [300, 170], [304, 180], [360, 182], [418, 202], [476, 204], [476, 268]]
+  laufbereich: [[85, 357], [85, 253], [247, 245], [253, 227], [400, 227], [405, 240], [480, 243], [557, 269], [635, 272], [635, 357]]
   marker:
-    start: [395, 236]
-    von_treppenhaus: [395, 236]   # durch die Bodenluke vorne rechts
-    fernseher: [274, 182]         # vor dem Zapp-O-Mat
+    start: [527, 315]
+    von_treppenhaus: [527, 315]   # durch die Bodenluke vorne rechts
+    fernseher: [365, 243]         # vor dem Zapp-O-Mat
   figuren:
-    pixel: [235, 178]             # schläft auf dem Verlängerungskabel
-    opa: [300, 215]
+    pixel: [313, 237]             # schläft auf dem Verlängerungskabel
+    opa: [400, 287]
   props:
-    zapp_o_mat: {rect: [244, 82, 60, 86], gehe: [274, 182], item: null}
-    thunfischdose: {rect: [120, 186, 15, 12], gehe: [128, 200]}
-    dosenoeffner: {rect: [140, 186, 15, 12], gehe: [146, 200]}
-    drahtkleiderbuegel: {rect: [440, 94, 20, 14], gehe: [440, 214]}
+    zapp_o_mat: {rect: [325, 109, 80, 115], gehe: [365, 243], item: null}
+    thunfischdose: {rect: [160, 248, 20, 16], gehe: [171, 267]}
+    dosenoeffner: {rect: [187, 248, 20, 16], gehe: [195, 267]}
+    drahtkleiderbuegel: {rect: [587, 125, 27, 19], gehe: [587, 285]}
   hotspots:
-    drehknopf: {rect: [228, 118, 14, 16], gehe: [240, 182], name: Drehknopf}
-    werkzeugkiste: {rect: [76, 150, 40, 32], gehe: [96, 194]}
-    werkbank: {rect: [55, 100, 130, 40], gehe: [120, 190]}
-    kleiderschrank: {rect: [410, 80, 70, 118], gehe: [440, 214]}
-    kalender: {rect: [310, 66, 30, 36], gehe: [325, 186]}
-    ohrensessel: {rect: [300, 105, 60, 72], gehe: [330, 190]}
-    dachfenster: {rect: [60, 5, 45, 32], gehe: [95, 192]}
-    poster: {rect: [199, 48, 44, 62], gehe: [221, 180]}
-    ausgestopfter_fisch: {rect: [268, 60, 36, 20], gehe: [286, 180]}
-    kochbuch: {rect: [160, 68, 18, 28], gehe: [168, 188]}
-    toaster: {rect: [124, 76, 24, 20], gehe: [136, 188]}
-    plattenspieler: {rect: [82, 72, 36, 24], gehe: [100, 190]}
-    kiste_mit_fernbedienungen: {rect: [0, 165, 62, 70], gehe: [76, 215]}
-    opas_staubsauger_prototyp: {rect: [362, 105, 48, 90], gehe: [386, 206]}
-    fundkiste: {rect: [122, 158, 42, 27], gehe: [143, 194], name: Fundkiste}   # erst ab Zwischenspiel 1 sichtbar
+    drehknopf: {rect: [304, 157, 19, 21], gehe: [320, 243], name: Drehknopf}
+    werkzeugkiste: {rect: [101, 200, 53, 43], gehe: [128, 259]}
+    werkbank: {rect: [73, 133, 173, 53], gehe: [160, 253]}
+    kleiderschrank: {rect: [547, 107, 93, 157], gehe: [587, 285]}
+    kalender: {rect: [413, 88, 40, 48], gehe: [433, 248]}
+    ohrensessel: {rect: [400, 140, 80, 96], gehe: [440, 253]}
+    dachfenster: {rect: [80, 7, 60, 43], gehe: [127, 256]}
+    poster: {rect: [265, 64, 59, 83], gehe: [295, 240]}
+    ausgestopfter_fisch: {rect: [357, 80, 48, 27], gehe: [381, 240]}
+    kochbuch: {rect: [213, 91, 24, 37], gehe: [224, 251]}
+    toaster: {rect: [165, 101, 32, 27], gehe: [181, 251]}
+    plattenspieler: {rect: [109, 96, 48, 32], gehe: [133, 253]}
+    kiste_mit_fernbedienungen: {rect: [0, 220, 83, 93], gehe: [101, 287]}
+    opas_staubsauger_prototyp: {rect: [483, 140, 64, 120], gehe: [515, 275]}
+    fundkiste: {rect: [163, 211, 56, 36], gehe: [191, 259], name: Fundkiste}   # erst ab Zwischenspiel 1 sichtbar
     # Finale (skripte/finale.gd): Opas Maschine an der Stelle des Zapp-O-Mat, nur im Finale sichtbar
-    maschine: {rect: [244, 78, 60, 90], gehe: [274, 182], name: Maschine, skizze: spaeter}
-    ofentuer: {rect: [256, 132, 33, 30], gehe: [272, 182], name: Ofentür, skizze: spaeter}
-    druckmesser: {rect: [226, 96, 16, 16], gehe: [250, 182], name: Druckmesser, skizze: spaeter}
-    fassungen: {rect: [244, 62, 60, 14], gehe: [274, 182], name: Fassungen, skizze: spaeter}
-    empfaenger: {rect: [262, 44, 30, 16], gehe: [276, 182], name: Empfänger, skizze: spaeter}
-    lampe: {rect: [222, 30, 36, 14], gehe: [240, 182], name: Lampe}   # Opas Arbeitslampe, ab Zwischenspiel 3 an
+    maschine: {rect: [325, 104, 80, 120], gehe: [365, 243], name: Maschine, skizze: spaeter}
+    ofentuer: {rect: [341, 176, 44, 40], gehe: [363, 243], name: Ofentür, skizze: spaeter}
+    druckmesser: {rect: [301, 128, 21, 21], gehe: [333, 243], name: Druckmesser, skizze: spaeter}
+    fassungen: {rect: [325, 83, 80, 19], gehe: [365, 243], name: Fassungen, skizze: spaeter}
+    empfaenger: {rect: [349, 59, 40, 21], gehe: [368, 243], name: Empfänger, skizze: spaeter}
+    lampe: {rect: [296, 40, 48, 19], gehe: [320, 243], name: Lampe}   # Opas Arbeitslampe, ab Zwischenspiel 3 an
   ausgaenge:
-    treppenhaus: {rect: [335, 204, 125, 40], gehe: [395, 230], name: Bodenluke, id: bodenluke}
+    treppenhaus: {rect: [447, 272, 167, 53], gehe: [527, 307], name: Bodenluke, id: bodenluke}

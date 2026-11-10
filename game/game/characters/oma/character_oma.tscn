@@ -5,12 +5,12 @@
 
 [node name="CharacterOma" type="Area2D" unique_id=1802984122]
 script = ExtResource("1_wfqwa")
-walk_speed = 90.0
-dialog_pos = Vector2(0, -109)
+walk_speed = 120.0
+dialog_pos = Vector2(0, -144)
 script_name = "Oma"
 description = "UI_OBJ_OMA"
 cursor = 8
-interaction_polygon = PackedVector2Array(-17.5, -105, 17.5, -105, 17.5, 0, -17.5, 0)
+interaction_polygon = PackedVector2Array(-23, -140, 23, -140, 23, 0, -23, 0)
 
 [node name="ScalingPolygon" type="CollisionPolygon2D" parent="." unique_id=725935375]
 polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
@@ -20,11 +20,11 @@ polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1653269077]
 texture_filter = 1
 texture = ExtResource("2_iix5k")
-offset = Vector2(0, -52.5)
+offset = Vector2(0, -70)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1890742624]
 visible = false
-polygon = PackedVector2Array(-17.5, -105, 17.5, -105, 17.5, 0, -17.5, 0)
+polygon = PackedVector2Array(-23, -140, 23, -140, 23, 0, -23, 0)
 
 [node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=1431966188]
 visible = false

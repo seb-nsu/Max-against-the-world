@@ -7,9 +7,9 @@ script = ExtResource("1_2fqni")
 script_name = "Neonroehre"
 description = "Neonroehre"
 cursor = 1
-interaction_polygon = PackedVector2Array(-36, -24, 36, -24, 36, 24, -36, 24)
+interaction_polygon = PackedVector2Array(-48, -32, 48, -32, 48, 32, -48, 32)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=735581882]
 visible = false
 modulate = Color(1, 0, 1, 1)
-polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+polygon = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)

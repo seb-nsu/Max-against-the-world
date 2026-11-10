@@ -7,7 +7,7 @@ script = ExtResource("1_lesbk")
 script_name = "Waage"
 description = "Waage"
 cursor = 1
-interaction_polygon = PackedVector2Array(-10.5, -7.5, 10.5, -7.5, 10.5, 7.5, -10.5, 7.5)
+interaction_polygon = PackedVector2Array(-14.0, -10.0, 14.0, -10.0, 14.0, 10.0, -14.0, 10.0)
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=435389818]
 texture_filter = 1
@@ -17,7 +17,7 @@ texture_filter = 1
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1608856014]
 visible = false
 modulate = Color(1, 1, 0, 1)
-polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+polygon = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 
 [node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=1777997663]
 visible = false

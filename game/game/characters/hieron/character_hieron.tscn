@@ -5,12 +5,12 @@
 
 [node name="CharacterHieron" type="Area2D" unique_id=1474137787]
 script = ExtResource("1_yqyoo")
-walk_speed = 90.0
-dialog_pos = Vector2(0, -120)
+walk_speed = 120.0
+dialog_pos = Vector2(0, -159)
 script_name = "Hieron"
 description = "UI_OBJ_HIERON"
 cursor = 8
-interaction_polygon = PackedVector2Array(-19, -116, 19, -116, 19, 0, -19, 0)
+interaction_polygon = PackedVector2Array(-25.5, -155, 25.5, -155, 25.5, 0, -25.5, 0)
 
 [node name="ScalingPolygon" type="CollisionPolygon2D" parent="." unique_id=902533384]
 polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
@@ -20,11 +20,11 @@ polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1084185691]
 texture_filter = 1
 texture = ExtResource("2_dx73t")
-offset = Vector2(0, -58)
+offset = Vector2(0, -77.5)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=267491919]
 visible = false
-polygon = PackedVector2Array(-19, -116, 19, -116, 19, 0, -19, 0)
+polygon = PackedVector2Array(-25.5, -155, 25.5, -155, 25.5, 0, -25.5, 0)
 
 [node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=1456283035]
 visible = false

@@ -7,9 +7,9 @@ script = ExtResource("1_x7g0x")
 script_name = "Glockenturm"
 description = "Glockenturm"
 cursor = 1
-interaction_polygon = PackedVector2Array(-12, -25.5, 12, -25.5, 12, 25.5, -12, 25.5)
+interaction_polygon = PackedVector2Array(-16, -34.0, 16, -34.0, 16, 34.0, -16, 34.0)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1158041995]
 visible = false
 modulate = Color(1, 0, 1, 1)
-polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+polygon = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)

@@ -5,12 +5,12 @@
 
 [node name="CharacterSchmidt" type="Area2D" unique_id=1029591084]
 script = ExtResource("1_qpex0")
-walk_speed = 90.0
-dialog_pos = Vector2(0, -116)
+walk_speed = 120.0
+dialog_pos = Vector2(0, -153)
 script_name = "Schmidt"
 description = "UI_OBJ_SCHMIDT"
 cursor = 8
-interaction_polygon = PackedVector2Array(-18.5, -112, 18.5, -112, 18.5, 0, -18.5, 0)
+interaction_polygon = PackedVector2Array(-24.5, -149, 24.5, -149, 24.5, 0, -24.5, 0)
 
 [node name="ScalingPolygon" type="CollisionPolygon2D" parent="." unique_id=734352340]
 polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
@@ -20,11 +20,11 @@ polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1864020466]
 texture_filter = 1
 texture = ExtResource("2_ef7xy")
-offset = Vector2(0, -56)
+offset = Vector2(0, -74.5)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=107783788]
 visible = false
-polygon = PackedVector2Array(-18.5, -112, 18.5, -112, 18.5, 0, -18.5, 0)
+polygon = PackedVector2Array(-24.5, -149, 24.5, -149, 24.5, 0, -24.5, 0)
 
 [node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=1705987870]
 visible = false

@@ -7,7 +7,7 @@ script = ExtResource("1_xfipp")
 script_name = "Kronleuchter"
 description = "Kronleuchter"
 cursor = 1
-interaction_polygon = PackedVector2Array(-23, -18, 23, -18, 23, 18, -23, 18)
+interaction_polygon = PackedVector2Array(-31, -24, 31, -24, 31, 24, -31, 24)
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1052065862]
 texture_filter = 1
@@ -17,7 +17,7 @@ texture_filter = 1
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=799692266]
 visible = false
 modulate = Color(1, 1, 0, 1)
-polygon = PackedVector2Array(-18, -18, 18, -18, 18, 18, -18, 18)
+polygon = PackedVector2Array(-24, -24, 24, -24, 24, 24, -24, 24)
 
 [node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=259972171]
 visible = false

@@ -7,9 +7,9 @@ script = ExtResource("1_c3ww3")
 script_name = "OpasStaubsaugerPrototyp"
 description = "Opas Staubsauger Prototyp"
 cursor = 1
-interaction_polygon = PackedVector2Array(-9, -20, 9, -20, 9, 20, -9, 20)
+interaction_polygon = PackedVector2Array(-12, -27, 12, -27, 12, 27, -12, 27)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=405231009]
 visible = false
 modulate = Color(1, 0, 1, 1)
-polygon = PackedVector2Array(-18, -18, 18, -18, 18, 18, -18, 18)
+polygon = PackedVector2Array(-24, -24, 24, -24, 24, 24, -24, 24)

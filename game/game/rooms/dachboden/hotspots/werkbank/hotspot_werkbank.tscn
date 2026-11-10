@@ -7,9 +7,9 @@ script = ExtResource("1_ymwpy")
 script_name = "Werkbank"
 description = "Werkbank"
 cursor = 1
-interaction_polygon = PackedVector2Array(-60, -26, 60, -26, 60, 26, -60, 26)
+interaction_polygon = PackedVector2Array(-80, -35, 80, -35, 80, 35, -80, 35)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1597554944]
 visible = false
 modulate = Color(1, 0, 1, 1)
-polygon = PackedVector2Array(-18, -18, 18, -18, 18, 18, -18, 18)
+polygon = PackedVector2Array(-24, -24, 24, -24, 24, 24, -24, 24)

@@ -7,9 +7,9 @@ script = ExtResource("1_jp2nd")
 script_name = "AusgangDorfplatz"
 description = "Ausgang Dorfplatz"
 cursor = 1
-interaction_polygon = PackedVector2Array(-14, -45, 14, -45, 14, 45, -14, 45)
+interaction_polygon = PackedVector2Array(-19, -60, 19, -60, 19, 60, -19, 60)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=42023586]
 visible = false
 modulate = Color(1, 0, 1, 1)
-polygon = PackedVector2Array(-18, -18, 18, -18, 18, 18, -18, 18)
+polygon = PackedVector2Array(-24, -24, 24, -24, 24, 24, -24, 24)

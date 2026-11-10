@@ -7,9 +7,9 @@ script = ExtResource("1_awfhj")
 script_name = "Fassungen"
 description = "Fassungen"
 cursor = 1
-interaction_polygon = PackedVector2Array(-30, -7.5, 30, -7.5, 30, 7.5, -30, 7.5)
+interaction_polygon = PackedVector2Array(-40, -10.0, 40, -10.0, 40, 10.0, -40, 10.0)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=959388113]
 visible = false
 modulate = Color(1, 0, 1, 1)
-polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+polygon = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)

@@ -7,9 +7,9 @@ script = ExtResource("1_hfjwg")
 script_name = "Brombeeren"
 description = "Brombeeren"
 cursor = 1
-interaction_polygon = PackedVector2Array(-45, -25.5, 45, -25.5, 45, 25.5, -45, 25.5)
+interaction_polygon = PackedVector2Array(-60, -34.0, 60, -34.0, 60, 34.0, -60, 34.0)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1012013350]
 visible = false
 modulate = Color(1, 0, 1, 1)
-polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+polygon = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)

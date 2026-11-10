@@ -5,12 +5,12 @@
 
 [node name="CharacterGepard" type="Area2D" unique_id=1193641110]
 script = ExtResource("1_si2fw")
-walk_speed = 90.0
-dialog_pos = Vector2(0, -60)
+walk_speed = 120.0
+dialog_pos = Vector2(0, -79)
 script_name = "Gepard"
 description = "UI_OBJ_GEPARD"
 cursor = 8
-interaction_polygon = PackedVector2Array(-15, -56, 15, -56, 15, 0, -15, 0)
+interaction_polygon = PackedVector2Array(-20, -75, 20, -75, 20, 0, -20, 0)
 
 [node name="ScalingPolygon" type="CollisionPolygon2D" parent="." unique_id=1892840881]
 polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
@@ -20,11 +20,11 @@ polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1557882176]
 texture_filter = 1
 texture = ExtResource("2_ifo45")
-offset = Vector2(0, -28)
+offset = Vector2(0, -37.5)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=237756267]
 visible = false
-polygon = PackedVector2Array(-15, -56, 15, -56, 15, 0, -15, 0)
+polygon = PackedVector2Array(-20, -75, 20, -75, 20, 0, -20, 0)
 
 [node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=1354202239]
 visible = false

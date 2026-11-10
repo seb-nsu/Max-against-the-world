@@ -7,9 +7,9 @@ script = ExtResource("1_yw2gy")
 script_name = "SchildAmTor"
 description = "Schild Am Tor"
 cursor = 1
-interaction_polygon = PackedVector2Array(-18, -12, 18, -12, 18, 12, -18, 12)
+interaction_polygon = PackedVector2Array(-24, -16, 24, -16, 24, 16, -24, 16)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=959951088]
 visible = false
 modulate = Color(1, 0, 1, 1)
-polygon = PackedVector2Array(-18, -18, 18, -18, 18, 18, -18, 18)
+polygon = PackedVector2Array(-24, -24, 24, -24, 24, 24, -24, 24)

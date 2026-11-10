@@ -5,12 +5,12 @@
 
 [node name="CharacterFaehrmann" type="Area2D" unique_id=938438789]
 script = ExtResource("1_yj8c0")
-walk_speed = 90.0
-dialog_pos = Vector2(0, -113)
+walk_speed = 120.0
+dialog_pos = Vector2(0, -149)
 script_name = "Faehrmann"
 description = "UI_OBJ_FAEHRMANN"
 cursor = 8
-interaction_polygon = PackedVector2Array(-18, -109, 18, -109, 18, 0, -18, 0)
+interaction_polygon = PackedVector2Array(-24, -145, 24, -145, 24, 0, -24, 0)
 
 [node name="ScalingPolygon" type="CollisionPolygon2D" parent="." unique_id=594956423]
 polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
@@ -20,11 +20,11 @@ polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1460272473]
 texture_filter = 1
 texture = ExtResource("2_c0vih")
-offset = Vector2(0, -54.5)
+offset = Vector2(0, -72.5)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1221949519]
 visible = false
-polygon = PackedVector2Array(-18, -109, 18, -109, 18, 0, -18, 0)
+polygon = PackedVector2Array(-24, -145, 24, -145, 24, 0, -24, 0)
 
 [node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=1100345995]
 visible = false

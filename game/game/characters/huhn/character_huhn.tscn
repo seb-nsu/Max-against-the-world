@@ -5,12 +5,12 @@
 
 [node name="CharacterHuhn" type="Area2D" unique_id=800413214]
 script = ExtResource("1_kvuel")
-walk_speed = 135.0
-dialog_pos = Vector2(0, -30)
+walk_speed = 180.0
+dialog_pos = Vector2(0, -39)
 script_name = "Huhn"
 description = "UI_OBJ_HUHN"
 cursor = 8
-interaction_polygon = PackedVector2Array(-15, -26, 15, -26, 15, 0, -15, 0)
+interaction_polygon = PackedVector2Array(-20, -35, 20, -35, 20, 0, -20, 0)
 
 [node name="ScalingPolygon" type="CollisionPolygon2D" parent="." unique_id=757031882]
 polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
@@ -20,11 +20,11 @@ polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1954054823]
 texture_filter = 1
 texture = ExtResource("2_dcav0")
-offset = Vector2(0, -13)
+offset = Vector2(0, -17.5)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1456734260]
 visible = false
-polygon = PackedVector2Array(-15, -26, 15, -26, 15, 0, -15, 0)
+polygon = PackedVector2Array(-20, -35, 20, -35, 20, 0, -20, 0)
 
 [node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=1098092226]
 visible = false

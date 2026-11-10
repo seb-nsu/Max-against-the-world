@@ -28,49 +28,49 @@
    "script_name": "NilDelta",
    "name_key": "UI_RAUM_NIL_DELTA",
    "groesse": [
-    480,
-    270
+    640,
+    360
    ],
    "hintergrund": "res://grafik/platzhalter/raum_nil_delta.png",
    "farbe": "#c9a96e",
    "laufbereich": [
     [
-     6,
-     210
+     8,
+     280
     ],
     [
-     474,
-     210
+     632,
+     280
     ],
     [
-     474,
-     267
+     632,
+     356
     ],
     [
-     6,
-     267
+     8,
+     356
     ]
    ],
    "marker": {
     "start": [
-     150,
-     240
+     200,
+     320
     ],
     "von_thronsaal_ramses": [
-     444,
-     240
+     592,
+     320
     ],
     "von_sphinx": [
-     390,
-     222
+     520,
+     296
     ],
     "von_faehre": [
-     60,
-     237
+     80,
+     316
     ],
     "hermes": [
-     300,
-     240
+     400,
+     320
     ]
    },
    "figuren": [
@@ -78,24 +78,24 @@
      "id": "faehrmann",
      "script_name": "Faehrmann",
      "pos": [
-      72,
-      228
+      96,
+      304
      ]
     },
     {
      "id": "sobek",
      "script_name": "Sobek",
      "pos": [
-      33,
-      255
+      44,
+      340
      ]
     },
     {
      "id": "steinmetz",
      "script_name": "Steinmetz",
      "pos": [
-      330,
-      228
+      440,
+      304
      ]
     }
    ],
@@ -105,14 +105,14 @@
      "script_name": "Faehre",
      "name_key": "UI_OBJ_FAEHRE",
      "rect": [
-      6,
-      195,
-      96,
-      30
+      8,
+      260,
+      128,
+      40
      ],
      "gehe": [
-      84,
-      237
+      112,
+      316
      ],
      "ansehen": [
       {
@@ -155,14 +155,14 @@
      "script_name": "Faehrtafel",
      "name_key": "UI_OBJ_FAEHRTAFEL",
      "rect": [
-      111,
-      150,
-      30,
-      30
+      148,
+      200,
+      40,
+      40
      ],
      "gehe": [
-      126,
-      231
+      168,
+      308
      ],
      "ansehen": [
       {
@@ -187,14 +187,14 @@
      "script_name": "Sanduhr",
      "name_key": "UI_OBJ_SANDUHR",
      "rect": [
-      150,
-      141,
-      24,
-      51
+      200,
+      188,
+      32,
+      68
      ],
      "gehe": [
-      162,
-      231
+      216,
+      308
      ],
      "ansehen": [
       {
@@ -219,14 +219,14 @@
      "script_name": "Schilf",
      "name_key": "UI_OBJ_SCHILF",
      "rect": [
-      180,
-      168,
-      54,
-      42
+      240,
+      224,
+      72,
+      56
      ],
      "gehe": [
-      207,
-      231
+      276,
+      308
      ],
      "ansehen": [
       {
@@ -251,14 +251,14 @@
      "script_name": "WeizenfeldMitHandabdruck",
      "name_key": "UI_OBJ_WEIZENFELD_MIT_HANDABDRUCK",
      "rect": [
-      240,
-      165,
-      72,
-      45
+      320,
+      220,
+      96,
+      60
      ],
      "gehe": [
-      276,
-      231
+      368,
+      308
      ],
      "ansehen": [
       {
@@ -292,14 +292,14 @@
      "script_name": "VerkehrtePyramide",
      "name_key": "UI_OBJ_VERKEHRTE_PYRAMIDE",
      "rect": [
-      255,
-      21,
-      105,
-      105
+      340,
+      28,
+      140,
+      140
      ],
      "gehe": [
-      306,
-      228
+      408,
+      304
      ],
      "ansehen": [
       {
@@ -324,14 +324,14 @@
      "script_name": "Bauplan",
      "name_key": "UI_OBJ_BAUPLAN",
      "rect": [
-      345,
-      168,
-      30,
-      24
+      460,
+      224,
+      40,
+      32
      ],
      "gehe": [
-      354,
-      231
+      472,
+      308
      ],
      "ansehen": [
       {
@@ -358,14 +358,14 @@
      "script_name": "Papyrusblatt",
      "name_key": "UI_OBJ_PAPYRUSBLATT",
      "rect": [
-      204,
-      195,
-      15,
-      12
+      272,
+      260,
+      20,
+      16
      ],
      "gehe": [
-      207,
-      231
+      276,
+      308
      ],
      "textur": "res://grafik/platzhalter/prop_papyrusblatt.png",
      "gegenstand": "papyrusblatt",
@@ -386,14 +386,14 @@
      "ziel": "thronsaal_ramses",
      "name_key": "UI_OBJ_SANDWEG",
      "rect": [
-      450,
-      105,
-      27,
-      105
+      600,
+      140,
+      36,
+      140
      ],
      "gehe": [
-      456,
-      240
+      608,
+      320
      ],
      "erreichbar_ab": "start",
      "ansehen": [
@@ -420,14 +420,14 @@
      "ziel": "sphinx",
      "name_key": "UI_OBJ_DUENENPFAD",
      "rect": [
-      375,
-      120,
-      54,
-      42
+      500,
+      160,
+      72,
+      56
      ],
      "gehe": [
-      399,
-      222
+      532,
+      296
      ],
      "erreichbar_ab": "start",
      "ansehen": []
@@ -462,49 +462,49 @@
    "script_name": "ThronsaalRamses",
    "name_key": "UI_RAUM_THRONSAAL_RAMSES",
    "groesse": [
-    480,
-    270
+    640,
+    360
    ],
    "hintergrund": "res://grafik/platzhalter/raum_thronsaal_ramses.png",
    "farbe": "#b98b3e",
    "laufbereich": [
     [
-     6,
-     210
+     8,
+     280
     ],
     [
-     474,
-     210
+     632,
+     280
     ],
     [
-     474,
-     267
+     632,
+     356
     ],
     [
-     6,
-     267
+     8,
+     356
     ]
    ],
    "marker": {
     "start": [
-     36,
-     240
+     48,
+     320
     ],
     "von_nil_delta": [
-     36,
-     240
+     48,
+     320
     ],
     "von_palastkueche": [
-     444,
-     240
+     592,
+     320
     ],
     "sobek": [
-     150,
-     252
+     200,
+     336
     ],
     "kissen": [
-     270,
-     228
+     360,
+     304
     ]
    },
    "figuren": [
@@ -512,32 +512,32 @@
      "id": "schreiber",
      "script_name": "Schreiber",
      "pos": [
-      84,
-      228
+      112,
+      304
      ]
     },
     {
      "id": "ramses",
      "script_name": "Ramses",
      "pos": [
-      300,
-      186
+      400,
+      248
      ]
     },
     {
      "id": "hofkater",
      "script_name": "Hofkater",
      "pos": [
-      270,
-      222
+      360,
+      296
      ]
     },
     {
      "id": "faecherwedler",
      "script_name": "Faecherwedler",
      "pos": [
-      354,
-      228
+      472,
+      304
      ]
     }
    ],
@@ -547,14 +547,14 @@
      "script_name": "Thron",
      "name_key": "UI_OBJ_THRON",
      "rect": [
-      264,
-      117,
-      72,
-      93
+      352,
+      156,
+      96,
+      124
      ],
      "gehe": [
-      300,
-      234
+      400,
+      312
      ],
      "ansehen": [
       {
@@ -579,14 +579,14 @@
      "script_name": "Schreiberpult",
      "name_key": "UI_OBJ_SCHREIBERPULT",
      "rect": [
-      57,
-      177,
-      45,
-      33
+      76,
+      236,
+      60,
+      44
      ],
      "gehe": [
-      84,
-      234
+      112,
+      312
      ],
      "ansehen": [
       {
@@ -611,14 +611,14 @@
      "script_name": "Sarkophag",
      "name_key": "UI_OBJ_SARKOPHAG",
      "rect": [
-      12,
-      96,
-      36,
-      108
+      16,
+      128,
+      48,
+      144
      ],
      "gehe": [
-      36,
-      234
+      48,
+      312
      ],
      "ansehen": [
       {
@@ -643,14 +643,14 @@
      "script_name": "MumifizierteKatze",
      "name_key": "UI_OBJ_MUMIFIZIERTE_KATZE",
      "rect": [
-      114,
-      120,
-      24,
-      42
+      152,
+      160,
+      32,
+      56
      ],
      "gehe": [
-      126,
-      231
+      168,
+      308
      ],
      "ansehen": [
       {
@@ -677,14 +677,14 @@
      "script_name": "Wandfries",
      "name_key": "UI_OBJ_WANDFRIES",
      "rect": [
-      60,
-      24,
-      330,
-      27
+      80,
+      32,
+      440,
+      36
      ],
      "gehe": [
-      240,
-      231
+      320,
+      308
      ],
      "ansehen": [
       {
@@ -716,14 +716,14 @@
      "script_name": "Saeulen",
      "name_key": "UI_OBJ_SAEULEN",
      "rect": [
-      150,
-      60,
-      33,
-      150
+      200,
+      80,
+      44,
+      200
      ],
      "gehe": [
-      168,
-      231
+      224,
+      308
      ],
      "ansehen": [
       {
@@ -748,14 +748,14 @@
      "script_name": "Inschrift",
      "name_key": "UI_OBJ_INSCHRIFT",
      "rect": [
-      195,
-      93,
-      39,
-      54
+      260,
+      124,
+      52,
+      72
      ],
      "gehe": [
-      213,
-      231
+      284,
+      308
      ],
      "ansehen": [
       {
@@ -794,14 +794,14 @@
      "script_name": "Opferschale",
      "name_key": "UI_OBJ_OPFERSCHALE",
      "rect": [
-      237,
-      204,
-      21,
-      9
+      316,
+      272,
+      28,
+      12
      ],
      "gehe": [
-      246,
-      237
+      328,
+      316
      ],
      "ansehen": [
       {
@@ -826,14 +826,14 @@
      "script_name": "Fackeln",
      "name_key": "UI_OBJ_FACKELN",
      "rect": [
-      384,
-      60,
-      36,
-      36
+      512,
+      80,
+      48,
+      48
      ],
      "gehe": [
-      402,
-      231
+      536,
+      308
      ],
      "ansehen": [
       {
@@ -860,14 +860,14 @@
      "script_name": "Pharaonenteller",
      "name_key": "UI_OBJ_PHARAONENTELLER",
      "rect": [
-      342,
-      189,
-      18,
-      9
+      456,
+      252,
+      24,
+      12
      ],
      "gehe": [
-      348,
-      234
+      464,
+      312
      ],
      "textur": "res://grafik/platzhalter/prop_pharaonenteller.png",
      "gegenstand": "pharaonenteller",
@@ -912,14 +912,14 @@
      "ziel": "nil_delta",
      "name_key": "UI_OBJ_AUSGANG_NIL_DELTA",
      "rect": [
-      3,
-      120,
-      6,
-      90
+      4,
+      160,
+      8,
+      120
      ],
      "gehe": [
-      18,
-      240
+      24,
+      320
      ],
      "erreichbar_ab": "start",
      "ansehen": []
@@ -930,14 +930,14 @@
      "ziel": "palastkueche",
      "name_key": "UI_OBJ_TUER_ZUR_KUECHE",
      "rect": [
-      438,
-      105,
-      39,
-      105
+      584,
+      140,
+      52,
+      140
      ],
      "gehe": [
-      450,
-      237
+      600,
+      316
      ],
      "erreichbar_ab": "start",
      "ansehen": [
@@ -981,37 +981,37 @@
    "script_name": "Palastkueche",
    "name_key": "UI_RAUM_PALASTKUECHE",
    "groesse": [
-    480,
-    270
+    640,
+    360
    ],
    "hintergrund": "res://grafik/platzhalter/raum_palastkueche.png",
    "farbe": "#9c6b45",
    "laufbereich": [
     [
-     6,
-     210
+     8,
+     280
     ],
     [
-     474,
-     210
+     632,
+     280
     ],
     [
-     474,
-     267
+     632,
+     356
     ],
     [
-     6,
-     267
+     8,
+     356
     ]
    ],
    "marker": {
     "start": [
-     36,
-     240
+     48,
+     320
     ],
     "von_thronsaal_ramses": [
-     36,
-     240
+     48,
+     320
     ]
    },
    "figuren": [
@@ -1019,8 +1019,8 @@
      "id": "nebet",
      "script_name": "Nebet",
      "pos": [
-      240,
-      234
+      320,
+      312
      ]
     }
    ],
@@ -1030,14 +1030,14 @@
      "script_name": "Lehmoefen",
      "name_key": "UI_OBJ_LEHMOEFEN",
      "rect": [
-      60,
-      135,
-      84,
-      75
+      80,
+      180,
+      112,
+      100
      ],
      "gehe": [
-      102,
-      234
+      136,
+      312
      ],
      "ansehen": [
       {
@@ -1088,14 +1088,14 @@
      "script_name": "Schneidetisch",
      "name_key": "UI_OBJ_SCHNEIDETISCH",
      "rect": [
-      165,
-      168,
-      75,
-      42
+      220,
+      224,
+      100,
+      56
      ],
      "gehe": [
-      204,
-      234
+      272,
+      312
      ],
      "ansehen": [
       {
@@ -1120,14 +1120,14 @@
      "script_name": "Oelkruege",
      "name_key": "UI_OBJ_OELKRUEGE",
      "rect": [
-      282,
-      141,
-      60,
-      69
+      376,
+      188,
+      80,
+      92
      ],
      "gehe": [
-      312,
-      234
+      416,
+      312
      ],
      "ansehen": [
       {
@@ -1152,14 +1152,14 @@
      "script_name": "LeereAmphoren",
      "name_key": "UI_OBJ_LEERE_AMPHOREN",
      "rect": [
-      354,
-      159,
-      48,
-      51
+      472,
+      212,
+      64,
+      68
      ],
      "gehe": [
-      378,
-      234
+      504,
+      312
      ],
      "ansehen": [
       {
@@ -1184,14 +1184,14 @@
      "script_name": "KnoblauchUndKraeuter",
      "name_key": "UI_OBJ_KNOBLAUCH_UND_KRAEUTER",
      "rect": [
-      120,
-      15,
-      120,
-      30
+      160,
+      20,
+      160,
+      40
      ],
      "gehe": [
-      180,
-      234
+      240,
+      312
      ],
      "ansehen": [
       {
@@ -1216,14 +1216,14 @@
      "script_name": "TraubensaftAmphore",
      "name_key": "UI_OBJ_TRAUBENSAFT_AMPHORE",
      "rect": [
-      414,
-      150,
-      30,
-      60
+      552,
+      200,
+      40,
+      80
      ],
      "gehe": [
-      429,
-      234
+      572,
+      312
      ],
      "ansehen": [
       {
@@ -1248,14 +1248,14 @@
      "script_name": "Dampf",
      "name_key": "UI_OBJ_DAMPF",
      "rect": [
-      60,
-      75,
-      84,
-      54
+      80,
+      100,
+      112,
+      72
      ],
      "gehe": [
-      102,
-      234
+      136,
+      312
      ],
      "ansehen": [
       {
@@ -1282,14 +1282,14 @@
      "script_name": "Brot",
      "name_key": "UI_OBJ_BROT",
      "rect": [
-      171,
-      159,
-      18,
-      9
+      228,
+      212,
+      24,
+      12
      ],
      "gehe": [
-      180,
-      234
+      240,
+      312
      ],
      "textur": "res://grafik/platzhalter/prop_brot.png",
      "gegenstand": "brot",
@@ -1307,14 +1307,14 @@
      "script_name": "Datteln",
      "name_key": "UI_OBJ_DATTELN",
      "rect": [
-      195,
-      159,
-      15,
-      9
+      260,
+      212,
+      20,
+      12
      ],
      "gehe": [
-      204,
-      234
+      272,
+      312
      ],
      "textur": "res://grafik/platzhalter/prop_datteln.png",
      "gegenstand": "datteln",
@@ -1332,14 +1332,14 @@
      "script_name": "Zwiebel",
      "name_key": "UI_OBJ_ZWIEBEL",
      "rect": [
-      216,
-      159,
-      12,
-      9
+      288,
+      212,
+      16,
+      12
      ],
      "gehe": [
-      222,
-      234
+      296,
+      312
      ],
      "textur": "res://grafik/platzhalter/prop_zwiebel.png",
      "gegenstand": "zwiebel",
@@ -1357,14 +1357,14 @@
      "script_name": "Traubensaft",
      "name_key": "UI_OBJ_TRAUBENSAFT",
      "rect": [
-      420,
-      192,
-      15,
-      18
+      560,
+      256,
+      20,
+      24
      ],
      "gehe": [
-      429,
-      234
+      572,
+      312
      ],
      "textur": "res://grafik/platzhalter/prop_traubensaft.png",
      "gegenstand": "traubensaft",
@@ -1395,14 +1395,14 @@
      "ziel": "thronsaal_ramses",
      "name_key": "UI_OBJ_AUSGANG_THRONSAAL",
      "rect": [
-      3,
-      105,
-      27,
-      105
+      4,
+      140,
+      36,
+      140
      ],
      "gehe": [
-      18,
-      240
+      24,
+      320
      ],
      "erreichbar_ab": "start",
      "ansehen": []
@@ -1430,37 +1430,37 @@
    "script_name": "Sphinx",
    "name_key": "UI_RAUM_SPHINX",
    "groesse": [
-    480,
-    270
+    640,
+    360
    ],
    "hintergrund": "res://grafik/platzhalter/raum_sphinx.png",
    "farbe": "#d8b878",
    "laufbereich": [
     [
-     6,
-     210
+     8,
+     280
     ],
     [
-     474,
-     210
+     632,
+     280
     ],
     [
-     474,
-     267
+     632,
+     356
     ],
     [
-     6,
-     267
+     8,
+     356
     ]
    ],
    "marker": {
     "start": [
-     36,
-     240
+     48,
+     320
     ],
     "von_nil_delta": [
-     36,
-     240
+     48,
+     320
     ]
    },
    "figuren": [
@@ -1468,8 +1468,8 @@
      "id": "sphinx_figur",
      "script_name": "SphinxFigur",
      "pos": [
-      330,
-      207
+      440,
+      276
      ]
     }
    ],
@@ -1479,14 +1479,14 @@
      "script_name": "Schreibpult",
      "name_key": "UI_OBJ_SCHREIBPULT",
      "rect": [
-      126,
-      156,
-      78,
-      54
+      168,
+      208,
+      104,
+      72
      ],
      "gehe": [
-      165,
-      234
+      220,
+      312
      ],
      "ansehen": [
       {
@@ -1511,14 +1511,14 @@
      "script_name": "ZerknuelltePapyri",
      "name_key": "UI_OBJ_ZERKNUELLTE_PAPYRI",
      "rect": [
-      207,
-      195,
-      45,
-      15
+      276,
+      260,
+      60,
+      20
      ],
      "gehe": [
-      228,
-      234
+      304,
+      312
      ],
      "ansehen": [
       {
@@ -1543,14 +1543,14 @@
      "script_name": "Notizblock",
      "name_key": "UI_OBJ_NOTIZBLOCK",
      "rect": [
-      150,
-      147,
-      24,
-      9
+      200,
+      196,
+      32,
+      12
      ],
      "gehe": [
-      162,
-      234
+      216,
+      312
      ],
      "ansehen": [
       {
@@ -1575,14 +1575,14 @@
      "script_name": "Fussspuren",
      "name_key": "UI_OBJ_FUSSSPUREN",
      "rect": [
-      60,
-      240,
-      90,
-      15
+      80,
+      320,
+      120,
+      20
      ],
      "gehe": [
-      105,
-      234
+      140,
+      312
      ],
      "ansehen": [
       {
@@ -1607,14 +1607,14 @@
      "script_name": "Steinkugel",
      "name_key": "UI_OBJ_STEINKUGEL",
      "rect": [
-      126,
-      84,
-      54,
-      54
+      168,
+      112,
+      72,
+      72
      ],
      "gehe": [
-      150,
-      234
+      200,
+      312
      ],
      "ansehen": [
       {
@@ -1665,14 +1665,14 @@
      "script_name": "Nase",
      "name_key": "UI_OBJ_NASE",
      "rect": [
-      372,
-      96,
-      21,
-      24
+      496,
+      128,
+      28,
+      32
      ],
      "gehe": [
-      381,
-      234
+      508,
+      312
      ],
      "ansehen": [
       {
@@ -1725,14 +1725,14 @@
      "ziel": "nil_delta",
      "name_key": "UI_OBJ_AUSGANG_NIL_DELTA",
      "rect": [
-      3,
-      105,
-      27,
-      105
+      4,
+      140,
+      36,
+      140
      ],
      "gehe": [
-      18,
-      240
+      24,
+      320
      ],
      "erreichbar_ab": "start",
      "ansehen": []
@@ -1760,41 +1760,41 @@
    "script_name": "FaehrstegOlympia",
    "name_key": "UI_RAUM_FAEHRSTEG_OLYMPIA",
    "groesse": [
-    480,
-    270
+    640,
+    360
    ],
    "hintergrund": "res://grafik/platzhalter/raum_faehrsteg_olympia.png",
    "farbe": "#8fae7a",
    "laufbereich": [
     [
-     6,
-     210
+     8,
+     280
     ],
     [
-     474,
-     210
+     632,
+     280
     ],
     [
-     474,
-     267
+     632,
+     356
     ],
     [
-     6,
-     267
+     8,
+     356
     ]
    ],
    "marker": {
     "start": [
-     90,
-     237
+     120,
+     316
     ],
     "von_faehre": [
-     90,
-     237
+     120,
+     316
     ],
     "von_agora": [
-     444,
-     240
+     592,
+     320
     ]
    },
    "figuren": [
@@ -1802,8 +1802,8 @@
      "id": "faehrmann",
      "script_name": "Faehrmann",
      "pos": [
-      60,
-      228
+      80,
+      304
      ]
     }
    ],
@@ -1813,14 +1813,14 @@
      "script_name": "Faehre",
      "name_key": "UI_OBJ_FAEHRE",
      "rect": [
-      6,
-      195,
-      96,
-      30
+      8,
+      260,
+      128,
+      40
      ],
      "gehe": [
-      84,
-      237
+      112,
+      316
      ],
      "ansehen": []
     },
@@ -1829,14 +1829,14 @@
      "script_name": "Olivenbaeume",
      "name_key": "UI_OBJ_OLIVENBAEUME",
      "rect": [
-      150,
-      54,
-      135,
-      120
+      200,
+      72,
+      180,
+      160
      ],
      "gehe": [
-      216,
-      231
+      288,
+      308
      ],
      "ansehen": [
       {
@@ -1861,14 +1861,14 @@
      "script_name": "Fischerboot",
      "name_key": "UI_OBJ_FISCHERBOOT",
      "rect": [
-      294,
-      186,
-      66,
-      24
+      392,
+      248,
+      88,
+      32
      ],
      "gehe": [
-      327,
-      234
+      436,
+      312
      ],
      "ansehen": [
       {
@@ -1893,14 +1893,14 @@
      "script_name": "SanduhrOlympia",
      "name_key": "UI_OBJ_SANDUHR_OLYMPIA",
      "rect": [
-      114,
-      141,
-      24,
-      51
+      152,
+      188,
+      32,
+      68
      ],
      "gehe": [
-      126,
-      231
+      168,
+      308
      ],
      "ansehen": [
       {
@@ -1925,14 +1925,14 @@
      "script_name": "TafelOlympia",
      "name_key": "UI_OBJ_TAFEL_OLYMPIA",
      "rect": [
-      144,
-      168,
-      27,
-      27
+      192,
+      224,
+      36,
+      36
      ],
      "gehe": [
-      156,
-      231
+      208,
+      308
      ],
      "ansehen": [
       {
@@ -1961,14 +1961,14 @@
      "ziel": "agora",
      "name_key": "UI_OBJ_WEG_ZUR_AGORA",
      "rect": [
-      438,
-      90,
-      39,
-      120
+      584,
+      120,
+      52,
+      160
      ],
      "gehe": [
-      450,
-      240
+      600,
+      320
      ],
      "erreichbar_ab": "R1",
      "ansehen": [
@@ -2012,49 +2012,49 @@
    "script_name": "Agora",
    "name_key": "UI_RAUM_AGORA",
    "groesse": [
-    960,
-    270
+    1280,
+    360
    ],
    "hintergrund": "res://grafik/platzhalter/raum_agora.png",
    "farbe": "#c8c0a8",
    "laufbereich": [
     [
-     6,
-     210
+     8,
+     280
     ],
     [
-     954,
-     210
+     1272,
+     280
     ],
     [
-     954,
-     267
+     1272,
+     356
     ],
     [
-     6,
-     267
+     8,
+     356
     ]
    ],
    "marker": {
     "start": [
-     900,
-     240
+     1200,
+     320
     ],
     "von_faehrsteg_olympia": [
-     915,
-     240
+     1220,
+     320
     ],
     "von_stadion": [
-     45,
-     240
+     60,
+     320
     ],
     "von_startbuero": [
-     318,
-     228
+     424,
+     304
     ],
     "abwurf": [
-     600,
-     240
+     800,
+     320
     ]
    },
    "figuren": [
@@ -2062,56 +2062,56 @@
      "id": "cicero",
      "script_name": "Cicero",
      "pos": [
-      480,
-      222
+      640,
+      296
      ]
     },
     {
      "id": "tiro",
      "script_name": "Tiro",
      "pos": [
-      534,
-      234
+      712,
+      312
      ]
     },
     {
      "id": "tourist",
      "script_name": "Tourist",
      "pos": [
-      705,
-      240
+      940,
+      320
      ]
     },
     {
      "id": "touristin",
      "script_name": "Touristin",
      "pos": [
-      750,
-      240
+      1000,
+      320
      ]
     },
     {
      "id": "philosoph",
      "script_name": "Philosoph",
      "pos": [
-      210,
-      237
+      280,
+      316
      ]
     },
     {
      "id": "brian",
      "script_name": "Brian",
      "pos": [
-      810,
-      237
+      1080,
+      316
      ]
     },
     {
      "id": "strassenmusiker",
      "script_name": "Strassenmusiker",
      "pos": [
-      870,
-      234
+      1160,
+      312
      ]
     }
    ],
@@ -2121,14 +2121,14 @@
      "script_name": "Saeulenhalle",
      "name_key": "UI_OBJ_SAEULENHALLE",
      "rect": [
-      255,
-      60,
-      150,
-      120
+      340,
+      80,
+      200,
+      160
      ],
      "gehe": [
-      330,
-      228
+      440,
+      304
      ],
      "ansehen": [
       {
@@ -2153,14 +2153,14 @@
      "script_name": "HoheSaeuleMitAdler",
      "name_key": "UI_OBJ_HOHE_SAEULE_MIT_ADLER",
      "rect": [
-      600,
-      15,
-      30,
-      180
+      800,
+      20,
+      40,
+      240
      ],
      "gehe": [
-      615,
-      231
+      820,
+      308
      ],
      "ansehen": [
       {
@@ -2194,14 +2194,14 @@
      "script_name": "SandaleAufDerSaeule",
      "name_key": "UI_OBJ_SANDALE_AUF_DER_SAEULE",
      "rect": [
-      597,
-      6,
-      36,
-      15
+      796,
+      8,
+      48,
+      20
      ],
      "gehe": [
-      615,
-      231
+      820,
+      308
      ],
      "ansehen": [
       {
@@ -2226,14 +2226,14 @@
      "script_name": "Heuhaufen",
      "name_key": "UI_OBJ_HEUHAUFEN",
      "rect": [
-      582,
-      186,
-      66,
-      24
+      776,
+      248,
+      88,
+      32
      ],
      "gehe": [
-      615,
-      237
+      820,
+      316
      ],
      "ansehen": [
       {
@@ -2267,14 +2267,14 @@
      "script_name": "Venusstatue",
      "name_key": "UI_OBJ_VENUSSTATUE",
      "rect": [
-      96,
-      96,
-      36,
-      108
+      128,
+      128,
+      48,
+      144
      ],
      "gehe": [
-      114,
-      231
+      152,
+      308
      ],
      "ansehen": [
       {
@@ -2314,14 +2314,14 @@
      "script_name": "Rednerpult",
      "name_key": "UI_OBJ_REDNERPULT",
      "rect": [
-      456,
-      165,
-      48,
-      45
+      608,
+      220,
+      64,
+      60
      ],
      "gehe": [
-      480,
-      237
+      640,
+      316
      ],
      "ansehen": [
       {
@@ -2346,14 +2346,14 @@
      "script_name": "Marktstaende",
      "name_key": "UI_OBJ_MARKTSTAENDE",
      "rect": [
-      660,
-      120,
-      150,
-      75
+      880,
+      160,
+      200,
+      100
      ],
      "gehe": [
-      735,
-      231
+      980,
+      308
      ],
      "ansehen": [
       {
@@ -2378,14 +2378,14 @@
      "script_name": "Tonne",
      "name_key": "UI_OBJ_TONNE",
      "rect": [
-      180,
-      186,
-      54,
-      36
+      240,
+      248,
+      72,
+      48
      ],
      "gehe": [
-      207,
-      240
+      276,
+      320
      ],
      "ansehen": [
       {
@@ -2429,14 +2429,14 @@
      "script_name": "Menge",
      "name_key": "UI_OBJ_MENGE",
      "rect": [
-      420,
-      120,
-      150,
-      42
+      560,
+      160,
+      200,
+      56
      ],
      "gehe": [
-      495,
-      231
+      660,
+      308
      ],
      "ansehen": [
       {
@@ -2461,14 +2461,14 @@
      "script_name": "LateinKritzelei",
      "name_key": "UI_OBJ_LATEIN_KRITZELEI",
      "rect": [
-      834,
-      129,
-      48,
-      24
+      1112,
+      172,
+      64,
+      32
      ],
      "gehe": [
-      858,
-      231
+      1144,
+      308
      ],
      "ansehen": [
       {
@@ -2497,14 +2497,14 @@
      "ziel": "faehrsteg_olympia",
      "name_key": "UI_OBJ_WEG_ZUM_FAEHRSTEG",
      "rect": [
-      930,
-      90,
-      27,
-      120
+      1240,
+      120,
+      36,
+      160
      ],
      "gehe": [
-      942,
-      240
+      1256,
+      320
      ],
      "erreichbar_ab": "R1",
      "ansehen": []
@@ -2515,14 +2515,14 @@
      "ziel": "stadion",
      "name_key": "UI_OBJ_BOGEN_ZUM_STADION",
      "rect": [
-      3,
-      75,
-      45,
-      135
+      4,
+      100,
+      60,
+      180
      ],
      "gehe": [
-      24,
-      240
+      32,
+      320
      ],
      "erreichbar_ab": "R1",
      "ansehen": []
@@ -2533,14 +2533,14 @@
      "ziel": "startbuero",
      "name_key": "UI_OBJ_TUER_ZUM_STARTBUERO",
      "rect": [
-      297,
-      135,
-      39,
-      75
+      396,
+      180,
+      52,
+      100
      ],
      "gehe": [
-      318,
-      228
+      424,
+      304
      ],
      "erreichbar_ab": "R1",
      "ansehen": []
@@ -2568,41 +2568,41 @@
    "script_name": "Startbuero",
    "name_key": "UI_RAUM_STARTBUERO",
    "groesse": [
-    480,
-    270
+    640,
+    360
    ],
    "hintergrund": "res://grafik/platzhalter/raum_startbuero.png",
    "farbe": "#a89a7c",
    "laufbereich": [
     [
-     6,
-     210
+     8,
+     280
     ],
     [
-     474,
-     210
+     632,
+     280
     ],
     [
-     474,
-     267
+     632,
+     356
     ],
     [
-     6,
-     267
+     8,
+     356
     ]
    ],
    "marker": {
     "start": [
-     36,
-     240
+     48,
+     320
     ],
     "von_agora": [
-     36,
-     240
+     48,
+     320
     ],
     "hermes": [
-     150,
-     240
+     200,
+     320
     ]
    },
    "figuren": [
@@ -2610,16 +2610,16 @@
      "id": "beamter_1",
      "script_name": "Beamter1",
      "pos": [
-      195,
-      210
+      260,
+      280
      ]
     },
     {
      "id": "beamter_2",
      "script_name": "Beamter2",
      "pos": [
-      330,
-      210
+      440,
+      280
      ]
     }
    ],
@@ -2629,14 +2629,14 @@
      "script_name": "Formularberg",
      "name_key": "UI_OBJ_FORMULARBERG",
      "rect": [
-      396,
-      75,
-      75,
-      135
+      528,
+      100,
+      100,
+      180
      ],
      "gehe": [
-      426,
-      234
+      568,
+      312
      ],
      "ansehen": [
       {
@@ -2671,14 +2671,14 @@
      "script_name": "Wachstafeln",
      "name_key": "UI_OBJ_WACHSTAFELN",
      "rect": [
-      246,
-      120,
-      42,
-      33
+      328,
+      160,
+      56,
+      44
      ],
      "gehe": [
-      267,
-      231
+      356,
+      308
      ],
      "ansehen": [
       {
@@ -2703,14 +2703,14 @@
      "script_name": "Aushang",
      "name_key": "UI_OBJ_AUSHANG",
      "rect": [
-      84,
-      81,
-      30,
-      39
+      112,
+      108,
+      40,
+      52
      ],
      "gehe": [
-      99,
-      231
+      132,
+      308
      ],
      "ansehen": [
       {
@@ -2735,14 +2735,14 @@
      "script_name": "BankMitWartenden",
      "name_key": "UI_OBJ_BANK_MIT_WARTENDEN",
      "rect": [
-      63,
-      186,
-      90,
-      24
+      84,
+      248,
+      120,
+      32
      ],
      "gehe": [
-      108,
-      237
+      144,
+      316
      ],
      "ansehen": [
       {
@@ -2767,14 +2767,14 @@
      "script_name": "Staub",
      "name_key": "UI_OBJ_STAUB",
      "rect": [
-      150,
-      15,
-      180,
-      60
+      200,
+      20,
+      240,
+      80
      ],
      "gehe": [
-      240,
-      231
+      320,
+      308
      ],
      "ansehen": [
       {
@@ -2801,14 +2801,14 @@
      "script_name": "LeeresFormular",
      "name_key": "UI_OBJ_LEERES_FORMULAR",
      "rect": [
-      432,
-      195,
-      18,
-      12
+      576,
+      260,
+      24,
+      16
      ],
      "gehe": [
-      426,
-      234
+      568,
+      312
      ],
      "textur": "res://grafik/platzhalter/prop_leeres_formular.png",
      "gegenstand": "leeres_formular",
@@ -2839,14 +2839,14 @@
      "ziel": "agora",
      "name_key": "UI_OBJ_AUSGANG_AGORA",
      "rect": [
-      3,
-      105,
-      27,
-      105
+      4,
+      140,
+      36,
+      140
      ],
      "gehe": [
-      18,
-      240
+      24,
+      320
      ],
      "erreichbar_ab": "R1",
      "ansehen": []
@@ -2874,65 +2874,65 @@
    "script_name": "Stadion",
    "name_key": "UI_RAUM_STADION",
    "groesse": [
-    480,
-    270
+    640,
+    360
    ],
    "hintergrund": "res://grafik/platzhalter/raum_stadion.png",
    "farbe": "#d6b46a",
    "laufbereich": [
     [
-     6,
-     210
+     8,
+     280
     ],
     [
-     474,
-     210
+     632,
+     280
     ],
     [
-     474,
-     267
+     632,
+     356
     ],
     [
-     6,
-     267
+     8,
+     356
     ]
    ],
    "marker": {
     "start": [
-     444,
-     240
+     592,
+     320
     ],
     "von_agora": [
-     444,
-     240
+     592,
+     320
     ],
     "ramses": [
-     240,
-     99
+     320,
+     132
     ],
     "wedler": [
-     282,
-     99
+     376,
+     132
     ],
     "archimedes": [
-     96,
-     228
+     128,
+     304
     ],
     "hermes": [
-     345,
-     240
+     460,
+     320
     ],
     "cicero": [
-     165,
-     228
+     220,
+     304
     ],
     "zeremonienmeister": [
-     390,
-     228
+     520,
+     304
     ],
     "aegypter": [
-     180,
-     99
+     240,
+     132
     ]
    },
    "figuren": [
@@ -2940,16 +2940,16 @@
      "id": "leonidas",
      "script_name": "Leonidas",
      "pos": [
-      300,
-      237
+      400,
+      316
      ]
     },
     {
      "id": "schildkroete",
      "script_name": "Schildkroete",
      "pos": [
-      354,
-      252
+      472,
+      336
      ]
     }
    ],
@@ -2959,14 +2959,14 @@
      "script_name": "Laufbahn",
      "name_key": "UI_OBJ_LAUFBAHN",
      "rect": [
-      30,
-      222,
-      420,
-      18
+      40,
+      296,
+      560,
+      24
      ],
      "gehe": [
-      240,
-      249
+      320,
+      332
      ],
      "ansehen": [
       {
@@ -2991,14 +2991,14 @@
      "script_name": "Sandgrube",
      "name_key": "UI_OBJ_SANDGRUBE",
      "rect": [
-      96,
-      186,
-      90,
-      24
+      128,
+      248,
+      120,
+      32
      ],
      "gehe": [
-      141,
-      234
+      188,
+      312
      ],
      "ansehen": [
       {
@@ -3023,14 +3023,14 @@
      "script_name": "Kampfrichterzelt",
      "name_key": "UI_OBJ_KAMPFRICHTERZELT",
      "rect": [
-      210,
-      147,
-      60,
-      48
+      280,
+      196,
+      80,
+      64
      ],
      "gehe": [
-      240,
-      231
+      320,
+      308
      ],
      "ansehen": [
       {
@@ -3056,13 +3056,13 @@
      "name_key": "UI_OBJ_ZUSCHAUERRAENGE",
      "rect": [
       0,
-      60,
-      480,
-      48
+      80,
+      640,
+      64
      ],
      "gehe": [
-      240,
-      231
+      320,
+      308
      ],
      "ansehen": [
       {
@@ -3087,14 +3087,14 @@
      "script_name": "Glockenturm",
      "name_key": "UI_OBJ_GLOCKENTURM",
      "rect": [
-      420,
-      6,
-      24,
-      51
+      560,
+      8,
+      32,
+      68
      ],
      "gehe": [
-      420,
-      231
+      560,
+      308
      ],
      "ansehen": [
       {
@@ -3134,14 +3134,14 @@
      "script_name": "Siegerliste",
      "name_key": "UI_OBJ_SIEGERLISTE",
      "rect": [
-      300,
-      135,
-      36,
-      45
+      400,
+      180,
+      48,
+      60
      ],
      "gehe": [
-      318,
-      231
+      424,
+      308
      ],
      "ansehen": [
       {
@@ -3166,14 +3166,14 @@
      "script_name": "Startlinie",
      "name_key": "UI_OBJ_STARTLINIE",
      "rect": [
-      396,
-      240,
-      9,
-      24
+      528,
+      320,
+      12,
+      32
      ],
      "gehe": [
-      399,
-      252
+      532,
+      336
      ],
      "ansehen": [
       {
@@ -3229,14 +3229,14 @@
      "script_name": "Wurfhebel",
      "name_key": "UI_OBJ_WURFHEBEL",
      "rect": [
-      36,
-      150,
-      54,
-      60
+      48,
+      200,
+      72,
+      80
      ],
      "gehe": [
-      66,
-      234
+      88,
+      312
      ],
      "ansehen": [
       {
@@ -3267,14 +3267,14 @@
      "ziel": "agora",
      "name_key": "UI_OBJ_AUSGANG_AGORA",
      "rect": [
-      450,
-      105,
-      27,
-      105
+      600,
+      140,
+      36,
+      140
      ],
      "gehe": [
-      459,
-      240
+      612,
+      320
      ],
      "erreichbar_ab": "R1",
      "ansehen": []
@@ -3309,45 +3309,45 @@
    "script_name": "HafenSyrakus",
    "name_key": "UI_RAUM_HAFEN_SYRAKUS",
    "groesse": [
-    480,
-    270
+    640,
+    360
    ],
    "hintergrund": "res://grafik/platzhalter/raum_hafen_syrakus.png",
    "farbe": "#6f98b0",
    "laufbereich": [
     [
-     6,
-     210
+     8,
+     280
     ],
     [
-     474,
-     210
+     632,
+     280
     ],
     [
-     474,
-     267
+     632,
+     356
     ],
     [
-     6,
-     267
+     8,
+     356
     ]
    ],
    "marker": {
     "start": [
-     90,
-     237
+     120,
+     316
     ],
     "von_faehre": [
-     90,
-     237
+     120,
+     316
     ],
     "von_werkstatt": [
-     444,
-     240
+     592,
+     320
     ],
     "von_grabhuegel": [
-     282,
-     222
+     376,
+     296
     ]
    },
    "figuren": [
@@ -3355,8 +3355,8 @@
      "id": "faehrmann",
      "script_name": "Faehrmann",
      "pos": [
-      60,
-      228
+      80,
+      304
      ]
     }
    ],
@@ -3366,14 +3366,14 @@
      "script_name": "Faehre",
      "name_key": "UI_OBJ_FAEHRE",
      "rect": [
-      6,
-      195,
-      96,
-      30
+      8,
+      260,
+      128,
+      40
      ],
      "gehe": [
-      84,
-      237
+      112,
+      316
      ],
      "ansehen": []
     },
@@ -3383,13 +3383,13 @@
      "name_key": "UI_OBJ_MEER",
      "rect": [
       0,
-      90,
-      150,
-      60
+      120,
+      200,
+      80
      ],
      "gehe": [
-      90,
-      231
+      120,
+      308
      ],
      "ansehen": [
       {
@@ -3414,14 +3414,14 @@
      "script_name": "Fischernetze",
      "name_key": "UI_OBJ_FISCHERNETZE",
      "rect": [
-      165,
-      165,
-      66,
-      45
+      220,
+      220,
+      88,
+      60
      ],
      "gehe": [
-      198,
-      234
+      264,
+      312
      ],
      "ansehen": [
       {
@@ -3446,14 +3446,14 @@
      "script_name": "AmphorenAmKai",
      "name_key": "UI_OBJ_AMPHOREN_AM_KAI",
      "rect": [
-      330,
-      168,
-      54,
-      42
+      440,
+      224,
+      72,
+      56
      ],
      "gehe": [
-      357,
-      234
+      476,
+      312
      ],
      "ansehen": [
       {
@@ -3478,14 +3478,14 @@
      "script_name": "SanduhrSyrakus",
      "name_key": "UI_OBJ_SANDUHR_SYRAKUS",
      "rect": [
-      117,
-      141,
-      24,
-      51
+      156,
+      188,
+      32,
+      68
      ],
      "gehe": [
-      129,
-      231
+      172,
+      308
      ],
      "ansehen": [
       {
@@ -3512,14 +3512,14 @@
      "script_name": "Tintenfass",
      "name_key": "UI_OBJ_TINTENFASS",
      "rect": [
-      189,
-      186,
-      15,
-      15
+      252,
+      248,
+      20,
+      20
      ],
      "gehe": [
-      198,
-      234
+      264,
+      312
      ],
      "textur": "res://grafik/platzhalter/prop_tintenfass.png",
      "gegenstand": "tintenfass",
@@ -3550,14 +3550,14 @@
      "ziel": "werkstatt",
      "name_key": "UI_OBJ_GASSE_ZUR_WERKSTATT",
      "rect": [
-      420,
-      90,
-      57,
-      120
+      560,
+      120,
+      76,
+      160
      ],
      "gehe": [
-      450,
-      240
+      600,
+      320
      ],
      "erreichbar_ab": "R1",
      "ansehen": [
@@ -3584,14 +3584,14 @@
      "ziel": "grabhuegel",
      "name_key": "UI_OBJ_PFAD_ZUM_GRABHUEGEL",
      "rect": [
-      255,
-      75,
-      54,
-      60
+      340,
+      100,
+      72,
+      80
      ],
      "gehe": [
-      282,
-      222
+      376,
+      296
      ],
      "erreichbar_ab": "R1",
      "ansehen": []
@@ -3619,37 +3619,37 @@
    "script_name": "Werkstatt",
    "name_key": "UI_RAUM_WERKSTATT",
    "groesse": [
-    480,
-    270
+    640,
+    360
    ],
    "hintergrund": "res://grafik/platzhalter/raum_werkstatt.png",
    "farbe": "#8a7a62",
    "laufbereich": [
     [
-     6,
-     210
+     8,
+     280
     ],
     [
-     474,
-     210
+     632,
+     280
     ],
     [
-     474,
-     267
+     632,
+     356
     ],
     [
-     6,
-     267
+     8,
+     356
     ]
    ],
    "marker": {
     "start": [
-     444,
-     240
+     592,
+     320
     ],
     "von_hafen_syrakus": [
-     444,
-     240
+     592,
+     320
     ]
    },
    "figuren": [
@@ -3657,16 +3657,16 @@
      "id": "archimedes",
      "script_name": "Archimedes",
      "pos": [
-      210,
-      234
+      280,
+      312
      ]
     },
     {
      "id": "hieron",
      "script_name": "Hieron",
      "pos": [
-      300,
-      234
+      400,
+      312
      ]
     }
    ],
@@ -3676,14 +3676,14 @@
      "script_name": "Badewanne",
      "name_key": "UI_OBJ_BADEWANNE",
      "rect": [
-      36,
-      174,
-      84,
-      36
+      48,
+      232,
+      112,
+      48
      ],
      "gehe": [
-      78,
-      234
+      104,
+      312
      ],
      "ansehen": [
       {
@@ -3725,14 +3725,14 @@
      "script_name": "Werkbank",
      "name_key": "UI_OBJ_WERKBANK",
      "rect": [
-      138,
-      156,
-      96,
-      54
+      184,
+      208,
+      128,
+      72
      ],
      "gehe": [
-      186,
-      234
+      248,
+      312
      ],
      "ansehen": [
       {
@@ -3757,14 +3757,14 @@
      "script_name": "Wurfhebel",
      "name_key": "UI_OBJ_WURFHEBEL",
      "rect": [
-      345,
-      141,
-      51,
-      69
+      460,
+      188,
+      68,
+      92
      ],
      "gehe": [
-      369,
-      234
+      492,
+      312
      ],
      "ansehen": [
       {
@@ -3789,14 +3789,14 @@
      "script_name": "Wasserorgel",
      "name_key": "UI_OBJ_WASSERORGEL",
      "rect": [
-      36,
-      72,
-      66,
-      81
+      48,
+      96,
+      88,
+      108
      ],
      "gehe": [
-      69,
-      234
+      92,
+      312
      ],
      "ansehen": [
       {
@@ -3853,14 +3853,14 @@
      "script_name": "BauplanDampfmaschine",
      "name_key": "UI_OBJ_BAUPLAN_DAMPFMASCHINE",
      "rect": [
-      117,
-      51,
-      45,
-      36
+      156,
+      68,
+      60,
+      48
      ],
      "gehe": [
-      138,
-      231
+      184,
+      308
      ],
      "ansehen": [
       {
@@ -3885,14 +3885,14 @@
      "script_name": "ModellSchieferTurm",
      "name_key": "UI_OBJ_MODELL_SCHIEFER_TURM",
      "rect": [
-      168,
-      129,
-      15,
-      27
+      224,
+      172,
+      20,
+      36
      ],
      "gehe": [
-      174,
-      234
+      232,
+      312
      ],
      "ansehen": [
       {
@@ -3917,14 +3917,14 @@
      "script_name": "SkizzeKugelUndZylinder",
      "name_key": "UI_OBJ_SKIZZE_KUGEL_UND_ZYLINDER",
      "rect": [
-      174,
-      51,
-      45,
-      36
+      232,
+      68,
+      60,
+      48
      ],
      "gehe": [
-      195,
-      231
+      260,
+      308
      ],
      "ansehen": [
       {
@@ -3958,14 +3958,14 @@
      "script_name": "Fenster",
      "name_key": "UI_OBJ_FENSTER",
      "rect": [
-      261,
-      30,
-      84,
-      54
+      348,
+      40,
+      112,
+      72
      ],
      "gehe": [
-      303,
-      231
+      404,
+      308
      ],
      "ansehen": [
       {
@@ -3990,14 +3990,14 @@
      "script_name": "Zahnraeder",
      "name_key": "UI_OBJ_ZAHNRAEDER",
      "rect": [
-      228,
-      99,
-      42,
-      42
+      304,
+      132,
+      56,
+      56
      ],
      "gehe": [
-      249,
-      231
+      332,
+      308
      ],
      "ansehen": [
       {
@@ -4024,14 +4024,14 @@
      "script_name": "Brennspiegel",
      "name_key": "UI_OBJ_BRENNSPIEGEL",
      "rect": [
-      405,
-      108,
-      21,
-      24
+      540,
+      144,
+      28,
+      32
      ],
      "gehe": [
-      414,
-      234
+      552,
+      312
      ],
      "textur": "res://grafik/platzhalter/prop_brennspiegel.png",
      "gegenstand": "brennspiegel",
@@ -4074,14 +4074,14 @@
      "script_name": "Waage",
      "name_key": "UI_OBJ_WAAGE",
      "rect": [
-      195,
-      141,
-      21,
-      15
+      260,
+      188,
+      28,
+      20
      ],
      "gehe": [
-      204,
-      234
+      272,
+      312
      ],
      "textur": "res://grafik/platzhalter/prop_waage.png",
      "gegenstand": "waage",
@@ -4150,14 +4150,14 @@
      "script_name": "Messbecher",
      "name_key": "UI_OBJ_MESSBECHER",
      "rect": [
-      219,
-      144,
-      12,
-      12
+      292,
+      192,
+      16,
+      16
      ],
      "gehe": [
-      225,
-      234
+      300,
+      312
      ],
      "textur": "res://grafik/platzhalter/prop_messbecher.png",
      "gegenstand": "messbecher",
@@ -4191,14 +4191,14 @@
      "script_name": "Essigkrug",
      "name_key": "UI_OBJ_ESSIGKRUG",
      "rect": [
-      408,
-      180,
-      24,
-      30
+      544,
+      240,
+      32,
+      40
      ],
      "gehe": [
-      414,
-      234
+      552,
+      312
      ],
      "textur": "res://grafik/platzhalter/prop_essigkrug.png",
      "gegenstand": "essigkrug",
@@ -4245,14 +4245,14 @@
      "ziel": "hafen_syrakus",
      "name_key": "UI_OBJ_AUSGANG_HAFEN",
      "rect": [
-      450,
-      105,
-      27,
-      105
+      600,
+      140,
+      36,
+      140
      ],
      "gehe": [
-      456,
-      240
+      608,
+      320
      ],
      "erreichbar_ab": "R1",
      "ansehen": []
@@ -4280,45 +4280,45 @@
    "script_name": "Grabhuegel",
    "name_key": "UI_RAUM_GRABHUEGEL",
    "groesse": [
-    480,
-    270
+    640,
+    360
    ],
    "hintergrund": "res://grafik/platzhalter/raum_grabhuegel.png",
    "farbe": "#7a8a5a",
    "laufbereich": [
     [
-     6,
-     210
+     8,
+     280
     ],
     [
-     474,
-     210
+     632,
+     280
     ],
     [
-     474,
-     267
+     632,
+     356
     ],
     [
-     6,
-     267
+     8,
+     356
     ]
    ],
    "marker": {
     "start": [
-     36,
-     240
+     48,
+     320
     ],
     "von_hafen_syrakus": [
-     36,
-     240
+     48,
+     320
     ],
     "archimedes": [
-     390,
-     234
+     520,
+     312
     ],
     "cicero": [
-     300,
-     234
+     400,
+     312
     ]
    },
    "figuren": [],
@@ -4328,14 +4328,14 @@
      "script_name": "Sockel",
      "name_key": "UI_OBJ_SOCKEL",
      "rect": [
-      210,
-      168,
-      51,
-      42
+      280,
+      224,
+      68,
+      56
      ],
      "gehe": [
-      234,
-      234
+      312,
+      312
      ],
      "ansehen": [
       {
@@ -4411,14 +4411,14 @@
      "script_name": "Brombeeren",
      "name_key": "UI_OBJ_BROMBEEREN",
      "rect": [
-      60,
-      159,
-      90,
-      51
+      80,
+      212,
+      120,
+      68
      ],
      "gehe": [
-      105,
-      234
+      140,
+      312
      ],
      "ansehen": [
       {
@@ -4443,14 +4443,14 @@
      "script_name": "AlteGrabsteine",
      "name_key": "UI_OBJ_ALTE_GRABSTEINE",
      "rect": [
-      300,
-      150,
-      90,
-      60
+      400,
+      200,
+      120,
+      80
      ],
      "gehe": [
-      345,
-      234
+      460,
+      312
      ],
      "ansehen": [
       {
@@ -4475,14 +4475,14 @@
      "script_name": "Zypressen",
      "name_key": "UI_OBJ_ZYPRESSEN",
      "rect": [
-      405,
-      30,
-      60,
-      150
+      540,
+      40,
+      80,
+      200
      ],
      "gehe": [
-      435,
-      231
+      580,
+      308
      ],
      "ansehen": [
       {
@@ -4507,14 +4507,14 @@
      "script_name": "Zikaden",
      "name_key": "UI_OBJ_ZIKADEN",
      "rect": [
-      150,
-      30,
-      150,
-      39
+      200,
+      40,
+      200,
+      52
      ],
      "gehe": [
-      225,
-      231
+      300,
+      308
      ],
      "ansehen": [
       {
@@ -4543,14 +4543,14 @@
      "ziel": "hafen_syrakus",
      "name_key": "UI_OBJ_AUSGANG_HAFEN",
      "rect": [
-      3,
-      105,
-      27,
-      105
+      4,
+      140,
+      36,
+      140
      ],
      "gehe": [
-      18,
-      240
+      24,
+      320
      ],
      "erreichbar_ab": "R1",
      "ansehen": []
@@ -4573,7 +4573,7 @@
    "script_name": "Max",
    "kuerzel": "MAX",
    "name_key": "UI_OBJ_MAX",
-   "groesse_px": 105,
+   "groesse_px": 140,
    "spielbar": true,
    "textfarbe": "#ffffff",
    "sprite": "res://grafik/platzhalter/figur_max.png",
@@ -4621,7 +4621,7 @@
    "script_name": "Pixel",
    "kuerzel": "PIX",
    "name_key": "UI_OBJ_PIXEL",
-   "groesse_px": 34,
+   "groesse_px": 45,
    "spielbar": true,
    "textfarbe": "#5fd3c8",
    "sprite": "res://grafik/platzhalter/figur_pixel.png",
@@ -4688,7 +4688,7 @@
    "script_name": "Faehrmann",
    "kuerzel": "FAE",
    "name_key": "UI_OBJ_FAEHRMANN",
-   "groesse_px": 109,
+   "groesse_px": 145,
    "spielbar": false,
    "textfarbe": "#ffffff",
    "sprite": "res://grafik/platzhalter/figur_faehrmann.png",
@@ -4764,7 +4764,7 @@
    "script_name": "Sobek",
    "kuerzel": "SOB",
    "name_key": "UI_OBJ_SOBEK",
-   "groesse_px": 30,
+   "groesse_px": 40,
    "spielbar": false,
    "textfarbe": "#ffffff",
    "sprite": "res://grafik/platzhalter/figur_sobek.png",
@@ -4812,7 +4812,7 @@
    "script_name": "Steinmetz",
    "kuerzel": "STM",
    "name_key": "UI_OBJ_STEINMETZ",
-   "groesse_px": 112,
+   "groesse_px": 149,
    "spielbar": false,
    "textfarbe": "#ffffff",
    "sprite": "res://grafik/platzhalter/figur_steinmetz.png",
@@ -4859,7 +4859,7 @@
    "script_name": "Hermes",
    "kuerzel": "HER",
    "name_key": "UI_OBJ_HERMES",
-   "groesse_px": 105,
+   "groesse_px": 140,
    "spielbar": false,
    "textfarbe": "#ffffff",
    "sprite": "res://grafik/platzhalter/figur_hermes.png",
@@ -4880,7 +4880,7 @@
    "script_name": "Ramses",
    "kuerzel": "RAM",
    "name_key": "UI_OBJ_RAMSES",
-   "groesse_px": 112,
+   "groesse_px": 149,
    "spielbar": false,
    "textfarbe": "#ffffff",
    "sprite": "res://grafik/platzhalter/figur_ramses.png",
@@ -4983,7 +4983,7 @@
    "script_name": "Hofkater",
    "kuerzel": "HOF",
    "name_key": "UI_OBJ_HOFKATER",
-   "groesse_px": 38,
+   "groesse_px": 51,
    "spielbar": false,
    "textfarbe": "#ffffff",
    "sprite": "res://grafik/platzhalter/figur_hofkater.png",
@@ -5022,7 +5022,7 @@
    "script_name": "Schreiber",
    "kuerzel": "SCH",
    "name_key": "UI_OBJ_SCHREIBER",
-   "groesse_px": 68,
+   "groesse_px": 91,
    "spielbar": false,
    "textfarbe": "#ffffff",
    "sprite": "res://grafik/platzhalter/figur_schreiber.png",
@@ -5059,7 +5059,7 @@
    "script_name": "Faecherwedler",
    "kuerzel": "FAW",
    "name_key": "UI_OBJ_FAECHERWEDLER",
-   "groesse_px": 105,
+   "groesse_px": 140,
    "spielbar": false,
    "textfarbe": "#ffffff",
    "sprite": "res://grafik/platzhalter/figur_faecherwedler.png",
@@ -5151,7 +5151,7 @@
    "script_name": "Nebet",
    "kuerzel": "NEB",
    "name_key": "UI_OBJ_NEBET",
-   "groesse_px": 98,
+   "groesse_px": 131,
    "spielbar": false,
    "textfarbe": "#ffffff",
    "sprite": "res://grafik/platzhalter/figur_nebet.png",
@@ -5282,7 +5282,7 @@
    "script_name": "Archimedes",
    "kuerzel": "ARC",
    "name_key": "UI_OBJ_ARCHIMEDES",
-   "groesse_px": 101,
+   "groesse_px": 135,
    "spielbar": false,
    "textfarbe": "#ffffff",
    "sprite": "res://grafik/platzhalter/figur_archimedes.png",
@@ -5321,7 +5321,7 @@
    "script_name": "Hieron",
    "kuerzel": "HIE",
    "name_key": "UI_OBJ_HIERON",
-   "groesse_px": 116,
+   "groesse_px": 155,
    "spielbar": false,
    "textfarbe": "#ffffff",
    "sprite": "res://grafik/platzhalter/figur_hieron.png",
@@ -5368,7 +5368,7 @@
    "script_name": "Cicero",
    "kuerzel": "CIC",
    "name_key": "UI_OBJ_CICERO",
-   "groesse_px": 109,
+   "groesse_px": 145,
    "spielbar": false,
    "textfarbe": "#ffffff",
    "sprite": "res://grafik/platzhalter/figur_cicero.png",
@@ -5417,7 +5417,7 @@
    "script_name": "Tiro",
    "kuerzel": "TIR",
    "name_key": "UI_OBJ_TIRO",
-   "groesse_px": 98,
+   "groesse_px": 131,
    "spielbar": false,
    "textfarbe": "#ffffff",
    "sprite": "res://grafik/platzhalter/figur_tiro.png",
@@ -5483,7 +5483,7 @@
    "script_name": "Tourist",
    "kuerzel": "TOU",
    "name_key": "UI_OBJ_TOURIST",
-   "groesse_px": 109,
+   "groesse_px": 145,
    "spielbar": false,
    "textfarbe": "#ffffff",
    "sprite": "res://grafik/platzhalter/figur_tourist.png",
@@ -5520,7 +5520,7 @@
    "script_name": "Touristin",
    "kuerzel": "TOI",
    "name_key": "UI_OBJ_TOURISTIN",
-   "groesse_px": 105,
+   "groesse_px": 140,
    "spielbar": false,
    "textfarbe": "#ffffff",
    "sprite": "res://grafik/platzhalter/figur_touristin.png",
@@ -5557,7 +5557,7 @@
    "script_name": "Philosoph",
    "kuerzel": "PHI",
    "name_key": "UI_OBJ_PHILOSOPH",
-   "groesse_px": 75,
+   "groesse_px": 100,
    "spielbar": false,
    "textfarbe": "#ffffff",
    "sprite": "res://grafik/platzhalter/figur_philosoph.png",
@@ -5576,7 +5576,7 @@
    "script_name": "Brian",
    "kuerzel": "BRI",
    "name_key": "UI_OBJ_BRIAN",
-   "groesse_px": 109,
+   "groesse_px": 145,
    "spielbar": false,
    "textfarbe": "#ffffff",
    "sprite": "res://grafik/platzhalter/figur_brian.png",
@@ -5613,7 +5613,7 @@
    "script_name": "Strassenmusiker",
    "kuerzel": "MUS",
    "name_key": "UI_OBJ_STRASSENMUSIKER",
-   "groesse_px": 105,
+   "groesse_px": 140,
    "spielbar": false,
    "textfarbe": "#ffffff",
    "sprite": "res://grafik/platzhalter/figur_strassenmusiker.png",
@@ -5660,7 +5660,7 @@
    "script_name": "Beamter1",
    "kuerzel": "BE1",
    "name_key": "UI_OBJ_BEAMTER_1",
-   "groesse_px": 82,
+   "groesse_px": 109,
    "spielbar": false,
    "textfarbe": "#ffffff",
    "sprite": "res://grafik/platzhalter/figur_beamter_1.png",
@@ -5725,7 +5725,7 @@
    "script_name": "Beamter2",
    "kuerzel": "BE2",
    "name_key": "UI_OBJ_BEAMTER_2",
-   "groesse_px": 109,
+   "groesse_px": 145,
    "spielbar": false,
    "textfarbe": "#ffffff",
    "sprite": "res://grafik/platzhalter/figur_beamter_2.png",
@@ -5809,7 +5809,7 @@
    "script_name": "Leonidas",
    "kuerzel": "LEO",
    "name_key": "UI_OBJ_LEONIDAS",
-   "groesse_px": 120,
+   "groesse_px": 160,
    "spielbar": false,
    "textfarbe": "#ffffff",
    "sprite": "res://grafik/platzhalter/figur_leonidas.png",
@@ -5846,7 +5846,7 @@
    "script_name": "Schildkroete",
    "kuerzel": "SKR",
    "name_key": "UI_OBJ_SCHILDKROETE",
-   "groesse_px": 22,
+   "groesse_px": 29,
    "spielbar": false,
    "textfarbe": "#ffffff",
    "sprite": "res://grafik/platzhalter/figur_schildkroete.png",
@@ -5883,7 +5883,7 @@
    "script_name": "Zeremonienmeister",
    "kuerzel": "ZER",
    "name_key": "UI_OBJ_ZEREMONIENMEISTER",
-   "groesse_px": 112,
+   "groesse_px": 149,
    "spielbar": false,
    "textfarbe": "#ffffff",
    "sprite": "res://grafik/platzhalter/figur_zeremonienmeister.png",
@@ -5902,7 +5902,7 @@
    "script_name": "Aegypter",
    "kuerzel": "VOL",
    "name_key": "UI_OBJ_AEGYPTER",
-   "groesse_px": 105,
+   "groesse_px": 140,
    "spielbar": false,
    "textfarbe": "#ffffff",
    "sprite": "res://grafik/platzhalter/figur_aegypter.png",

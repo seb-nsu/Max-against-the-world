@@ -7,9 +7,9 @@ script = ExtResource("1_e88nu")
 script_name = "Absperrband"
 description = "Absperrband"
 cursor = 1
-interaction_polygon = PackedVector2Array(-40, -24, 40, -24, 40, 24, -40, 24)
+interaction_polygon = PackedVector2Array(-53, -32, 53, -32, 53, 32, -53, 32)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1042950893]
 visible = false
 modulate = Color(1, 0, 1, 1)
-polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+polygon = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)

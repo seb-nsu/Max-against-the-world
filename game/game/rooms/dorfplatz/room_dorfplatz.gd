@@ -76,7 +76,7 @@ func _lieferung(an: bool) -> void:
 	var pos := get_marker_position("Lieferung")
 	if an:
 		Spiel.figur_hier("Rotkaeppchen", true, pos)
-		Spiel.figur_hier("XxlZiege", true, pos + Vector2(36, 3))
+		Spiel.figur_hier("XxlZiege", true, pos + Vector2(48, 4))
 		Zustand.setze("W1_XXL_GELIEFERT")  # ab jetzt folgt sie (skripte/welt_1.gd)
 	else:
 		Spiel.figur_hier("Rotkaeppchen", false)

@@ -7,9 +7,9 @@ script = ExtResource("1_j0cbo")
 script_name = "Okarina"
 description = "Okarina"
 cursor = 1
-interaction_polygon = PackedVector2Array(-8, -5, 8, -5, 8, 5, -8, 5)
+interaction_polygon = PackedVector2Array(-11, -7, 11, -7, 11, 7, -11, 7)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1450544396]
 visible = false
 modulate = Color(1, 0, 1, 1)
-polygon = PackedVector2Array(-18, -18, 18, -18, 18, 18, -18, 18)
+polygon = PackedVector2Array(-24, -24, 24, -24, 24, 24, -24, 24)

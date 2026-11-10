@@ -7,9 +7,9 @@ script = ExtResource("1_70n8y")
 script_name = "Zypressen"
 description = "Zypressen"
 cursor = 1
-interaction_polygon = PackedVector2Array(-30, -75, 30, -75, 30, 75, -30, 75)
+interaction_polygon = PackedVector2Array(-40, -100, 40, -100, 40, 100, -40, 100)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=288550455]
 visible = false
 modulate = Color(1, 0, 1, 1)
-polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+polygon = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)

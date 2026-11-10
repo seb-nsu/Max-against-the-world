@@ -7,9 +7,9 @@ script = ExtResource("1_l150k")
 script_name = "ModellSchieferTurm"
 description = "Modell Schiefer Turm"
 cursor = 1
-interaction_polygon = PackedVector2Array(-7.5, -13.5, 7.5, -13.5, 7.5, 13.5, -7.5, 13.5)
+interaction_polygon = PackedVector2Array(-10.0, -18.0, 10.0, -18.0, 10.0, 18.0, -10.0, 18.0)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1345371568]
 visible = false
 modulate = Color(1, 0, 1, 1)
-polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+polygon = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)

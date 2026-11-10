@@ -7,7 +7,7 @@ script = ExtResource("1_bi7l1")
 script_name = "Messbecher"
 description = "Messbecher"
 cursor = 1
-interaction_polygon = PackedVector2Array(-6, -6, 6, -6, 6, 6, -6, 6)
+interaction_polygon = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=209868229]
 texture_filter = 1
@@ -17,7 +17,7 @@ texture_filter = 1
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=806888139]
 visible = false
 modulate = Color(1, 1, 0, 1)
-polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+polygon = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 
 [node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=1981557212]
 visible = false

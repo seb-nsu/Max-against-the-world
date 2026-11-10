@@ -23,64 +23,64 @@
 [node name="RoomTestkammer1" type="Node2D" unique_id=125912080]
 script = ExtResource("1_etov5")
 script_name = "Testkammer1"
-width = 480
-height = 270
+width = 640
+height = 360
 
 [node name="WalkableAreas" type="Node2D" parent="." unique_id=1481018152]
 
 [node name="Boden" parent="WalkableAreas" unique_id=229542532 instance=ExtResource("2_jppsw")]
-interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(6, 210, 474, 210, 474, 267, 6, 267)])
+interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(8, 280, 632, 280, 632, 356, 8, 356)])
 
 [node name="Props" type="Node2D" parent="." unique_id=1350383063]
 
 [node name="Background" parent="Props" unique_id=1294302260 instance=ExtResource("3_ay4js")]
-position = Vector2(240, 135)
+position = Vector2(320, 180)
 texture = ExtResource("4_jugc3")
 description = "UI_RAUM_TESTKAMMER_1"
 
 [node name="Hotspots" type="Node2D" parent="." unique_id=1896319609]
 
 [node name="PortalgeraetInDerHalterung" parent="Hotspots" unique_id=2034080122 instance=ExtResource("5_sa6t0")]
-position = Vector2(73, 54)
+position = Vector2(97, 72)
 description = "UI_OBJ_PORTALGERAET_IN_DER_HALTERUNG"
-baseline = 24
-walk_to_point = Vector2(0, 181)
+baseline = 32
+walk_to_point = Vector2(0, 241)
 
 [node name="Bodenschalter" parent="Hotspots" unique_id=194844835 instance=ExtResource("6_utl7p")]
-position = Vector2(139, 54)
+position = Vector2(185, 72)
 description = "UI_OBJ_BODENSCHALTER"
-baseline = 24
-walk_to_point = Vector2(0, 181)
+baseline = 32
+walk_to_point = Vector2(0, 241)
 
 [node name="Pappkuchen" parent="Hotspots" unique_id=1410948066 instance=ExtResource("7_4nwbm")]
-position = Vector2(271, 54)
+position = Vector2(361, 72)
 description = "UI_OBJ_PAPPKUCHEN"
-baseline = 24
-walk_to_point = Vector2(0, 181)
+baseline = 32
+walk_to_point = Vector2(0, 241)
 
 [node name="Lautsprecher" parent="Hotspots" unique_id=774588452 instance=ExtResource("8_4tqys")]
-position = Vector2(337, 54)
+position = Vector2(449, 72)
 description = "UI_OBJ_LAUTSPRECHER"
-baseline = 24
-walk_to_point = Vector2(0, 181)
+baseline = 32
+walk_to_point = Vector2(0, 241)
 
 [node name="Wandplatten" parent="Hotspots" unique_id=789306099 instance=ExtResource("9_paqre")]
-position = Vector2(403, 54)
+position = Vector2(537, 72)
 description = "UI_OBJ_WANDPLATTEN"
-baseline = 24
-walk_to_point = Vector2(0, 181)
+baseline = 32
+walk_to_point = Vector2(0, 241)
 
 [node name="Halterung" parent="Hotspots" unique_id=936787892 instance=ExtResource("10_s65sl")]
-position = Vector2(73, 114)
+position = Vector2(97, 152)
 description = "UI_OBJ_HALTERUNG"
-baseline = 24
-walk_to_point = Vector2(0, 121)
+baseline = 32
+walk_to_point = Vector2(0, 161)
 
 [node name="AusgangTestkammer2" parent="Hotspots" unique_id=2047031355 instance=ExtResource("11_epxvq")]
-position = Vector2(19.5, 157.5)
+position = Vector2(26.0, 210.0)
 description = "UI_RAUM_TESTKAMMER_2"
-baseline = 52
-walk_to_point = Vector2(16.5, 82.5)
+baseline = 69
+walk_to_point = Vector2(22.0, 110.0)
 cursor = 9
 
 [node name="Regions" type="Node2D" parent="." unique_id=2006777153]
@@ -88,27 +88,27 @@ cursor = 9
 [node name="Markers" type="Node2D" parent="." unique_id=1602902413]
 
 [node name="Start" parent="Markers" unique_id=585537316 instance=ExtResource("12_nhu8e")]
-position = Vector2(240, 240)
+position = Vector2(320, 320)
 
 [node name="VonTestkammer2" parent="Markers" unique_id=733603176 instance=ExtResource("13_igcnp")]
-position = Vector2(36, 240)
+position = Vector2(48, 320)
 
 [node name="VonWiderstandsbasis" parent="Markers" unique_id=679654732 instance=ExtResource("14_hqhrg")]
-position = Vector2(240, 240)
+position = Vector2(320, 320)
 
 [node name="VonKapsel" parent="Markers" unique_id=444235469 instance=ExtResource("15_h7r7n")]
-position = Vector2(240, 240)
+position = Vector2(320, 320)
 
 [node name="Characters" type="Node2D" parent="." unique_id=1577209283]
 
 [node name="CharacterOpa *" parent="Characters" unique_id=792275399 instance=ExtResource("16_vrayv")]
-position = Vector2(105, 232)
+position = Vector2(140, 309)
 
 [node name="CharacterMutti *" parent="Characters" unique_id=609514072 instance=ExtResource("17_tgoh7")]
-position = Vector2(195, 232)
+position = Vector2(260, 309)
 
 [node name="CharacterBernd *" parent="Characters" unique_id=601399039 instance=ExtResource("18_dtrvr")]
-position = Vector2(285, 232)
+position = Vector2(380, 309)
 
 [node name="CharacterPortalgeraetStimme *" parent="Characters" unique_id=1291778746 instance=ExtResource("19_awb3b")]
-position = Vector2(375, 232)
+position = Vector2(500, 309)

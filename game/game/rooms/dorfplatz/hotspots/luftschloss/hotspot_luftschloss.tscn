@@ -7,9 +7,9 @@ script = ExtResource("1_o4oh3")
 script_name = "Luftschloss"
 description = "Luftschloss"
 cursor = 1
-interaction_polygon = PackedVector2Array(-42, -20, 42, -20, 42, 20, -42, 20)
+interaction_polygon = PackedVector2Array(-56, -27, 56, -27, 56, 27, -56, 27)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1801459123]
 visible = false
 modulate = Color(1, 0, 1, 1)
-polygon = PackedVector2Array(-18, -18, 18, -18, 18, 18, -18, 18)
+polygon = PackedVector2Array(-24, -24, 24, -24, 24, 24, -24, 24)

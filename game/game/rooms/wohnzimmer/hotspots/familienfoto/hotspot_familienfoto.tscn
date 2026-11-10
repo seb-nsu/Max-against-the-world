@@ -7,9 +7,9 @@ script = ExtResource("1_wcxa4")
 script_name = "Familienfoto"
 description = "Familienfoto"
 cursor = 1
-interaction_polygon = PackedVector2Array(-33, -26, 33, -26, 33, 26, -33, 26)
+interaction_polygon = PackedVector2Array(-44, -35, 44, -35, 44, 35, -44, 35)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=103442678]
 visible = false
 modulate = Color(1, 0, 1, 1)
-polygon = PackedVector2Array(-18, -18, 18, -18, 18, 18, -18, 18)
+polygon = PackedVector2Array(-24, -24, 24, -24, 24, 24, -24, 24)

@@ -7,9 +7,9 @@ script = ExtResource("1_14xdl")
 script_name = "SandaleAufDerSaeule"
 description = "Sandale Auf Der Saeule"
 cursor = 1
-interaction_polygon = PackedVector2Array(-18, -7.5, 18, -7.5, 18, 7.5, -18, 7.5)
+interaction_polygon = PackedVector2Array(-24, -10.0, 24, -10.0, 24, 10.0, -24, 10.0)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=692550952]
 visible = false
 modulate = Color(1, 0, 1, 1)
-polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+polygon = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)

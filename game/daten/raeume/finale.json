@@ -16,33 +16,33 @@
    "script_name": "Supermarkt",
    "name_key": "UI_RAUM_SUPERMARKT",
    "groesse": [
-    480,
-    270
+    640,
+    360
    ],
    "hintergrund": "res://grafik/platzhalter/raum_supermarkt.png",
    "farbe": "#6a7a8a",
    "laufbereich": [
     [
-     6,
-     210
+     8,
+     280
     ],
     [
-     474,
-     210
+     632,
+     280
     ],
     [
-     474,
-     267
+     632,
+     356
     ],
     [
-     6,
-     267
+     8,
+     356
     ]
    ],
    "marker": {
     "start": [
-     120,
-     240
+     160,
+     320
     ]
    },
    "figuren": [],
@@ -52,14 +52,14 @@
      "script_name": "AutomatischeTuer",
      "name_key": "UI_OBJ_AUTOMATISCHE_TUER",
      "rect": [
-      300,
-      50,
-      100,
-      160
+      400,
+      67,
+      133,
+      213
      ],
      "gehe": [
-      350,
-      235
+      467,
+      313
      ],
      "ansehen": []
     },
@@ -68,14 +68,14 @@
      "script_name": "AufstellerMitMilchSonderangebot",
      "name_key": "UI_OBJ_AUFSTELLER_MIT_MILCH_SONDERANGEBOT",
      "rect": [
-      40,
-      120,
-      60,
-      80
+      53,
+      160,
+      80,
+      107
      ],
      "gehe": [
-      70,
-      235
+      93,
+      313
      ],
      "ansehen": [
       {
@@ -100,14 +100,14 @@
      "script_name": "MilchregalDurchDieTuer",
      "name_key": "UI_OBJ_MILCHREGAL_DURCH_DIE_TUER",
      "rect": [
-      200,
-      60,
+      267,
       80,
-      120
+      107,
+      160
      ],
      "gehe": [
-      240,
-      235
+      320,
+      313
      ],
      "ansehen": [
       {
@@ -139,7 +139,7 @@
    "script_name": "Max",
    "kuerzel": "MAX",
    "name_key": "UI_OBJ_MAX",
-   "groesse_px": 105,
+   "groesse_px": 140,
    "spielbar": true,
    "textfarbe": "#ffffff",
    "sprite": "res://grafik/platzhalter/figur_max.png",
@@ -160,7 +160,7 @@
    "script_name": "Pixel",
    "kuerzel": "PIX",
    "name_key": "UI_OBJ_PIXEL",
-   "groesse_px": 34,
+   "groesse_px": 45,
    "spielbar": true,
    "textfarbe": "#5fd3c8",
    "sprite": "res://grafik/platzhalter/figur_pixel.png",
@@ -180,7 +180,7 @@
    "script_name": "Oma",
    "kuerzel": "OMA",
    "name_key": "UI_OBJ_OMA",
-   "groesse_px": 105,
+   "groesse_px": 140,
    "spielbar": false,
    "textfarbe": "#ffffff",
    "sprite": "res://grafik/platzhalter/figur_oma.png",
@@ -201,7 +201,7 @@
    "script_name": "Mutter",
    "kuerzel": "MUT",
    "name_key": "UI_OBJ_MUTTER",
-   "groesse_px": 109,
+   "groesse_px": 145,
    "spielbar": false,
    "textfarbe": "#ffffff",
    "sprite": "res://grafik/platzhalter/figur_mutter.png",
@@ -220,7 +220,7 @@
    "script_name": "Modell0815",
    "kuerzel": "HAU",
    "name_key": "UI_OBJ_MODELL_0815",
-   "groesse_px": 109,
+   "groesse_px": 145,
    "spielbar": false,
    "textfarbe": "#ffffff",
    "sprite": "res://grafik/platzhalter/figur_modell_0815.png",

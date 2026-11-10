@@ -242,7 +242,7 @@ func _objekt_sagt(kuerzel: String, quelle: PopochiuClickable, text: String) -> v
 		stimme.clickable = false
 		stimme.modulate.a = 0.0
 		stimme.text_color = OBJEKTSTIMME_FARBE
-		stimme.dialog_pos = Vector2(0, -6)
+		stimme.dialog_pos = Vector2(0, -8)
 		_objektstimmen[kuerzel] = stimme
 	var oben := 0.0
 	for p in quelle.interaction_polygon:
@@ -272,7 +272,7 @@ func z(kuerzel: String, zeile: String) -> Callable:
 func _stimme_aus_dem_off(c: PopochiuCharacter, an: bool) -> void:
 	if an:
 		R.current.add_character(c)
-		c.position = Vector2(E.width / 2.0, 105)
+		c.position = Vector2(E.width / 2.0, 140)
 		c.modulate.a = 0.0
 		c.clickable = false
 	else:

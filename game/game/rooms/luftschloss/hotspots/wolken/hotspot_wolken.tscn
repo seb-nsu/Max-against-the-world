@@ -7,9 +7,9 @@ script = ExtResource("1_568nu")
 script_name = "Wolken"
 description = "Wolken"
 cursor = 1
-interaction_polygon = PackedVector2Array(-240, -23, 240, -23, 240, 23, -240, 23)
+interaction_polygon = PackedVector2Array(-320, -31, 320, -31, 320, 31, -320, 31)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1560865246]
 visible = false
 modulate = Color(1, 0, 1, 1)
-polygon = PackedVector2Array(-18, -18, 18, -18, 18, 18, -18, 18)
+polygon = PackedVector2Array(-24, -24, 24, -24, 24, 24, -24, 24)

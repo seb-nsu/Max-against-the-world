@@ -7,7 +7,7 @@ script = ExtResource("1_6f8n3")
 script_name = "Pharaonenteller"
 description = "Pharaonenteller"
 cursor = 1
-interaction_polygon = PackedVector2Array(-9, -4.5, 9, -4.5, 9, 4.5, -9, 4.5)
+interaction_polygon = PackedVector2Array(-12, -6.0, 12, -6.0, 12, 6.0, -12, 6.0)
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=251733244]
 texture_filter = 1
@@ -17,7 +17,7 @@ texture_filter = 1
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1016721542]
 visible = false
 modulate = Color(1, 1, 0, 1)
-polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+polygon = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 
 [node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=1433615377]
 visible = false

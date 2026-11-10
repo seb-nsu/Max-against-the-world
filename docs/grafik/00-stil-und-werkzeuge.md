@@ -1,18 +1,18 @@
 # Grafik: Stil und Werkzeuge
 
-Alle Welten teilen einen Pixel-Art-Stil in 480×270 Pixeln. Figuren und Gegenstände nutzen eine gemeinsame Palette, Hintergründe je 32 eigene Farben; jede Welt bekommt ihre eigene Farbstimmung. Die Prompts in den Grafik-Dateien der Welten sind auf Englisch, weil die Generatoren damit zuverlässiger arbeiten.
+Alle Welten teilen einen Pixel-Art-Stil in 640×360 Pixeln. Figuren und Gegenstände nutzen eine gemeinsame Palette, Hintergründe je 32 eigene Farben; jede Welt bekommt ihre eigene Farbstimmung. Die Prompts in den Grafik-Dateien der Welten sind auf Englisch, weil die Generatoren damit zuverlässiger arbeiten.
 
 ## Technischer Stil
 
 | Eigenschaft | Festlegung | Warum |
 | --- | --- | --- |
-| Auflösung | 480×270 Pixel, im Spiel 4-fach auf 1920×1080 skaliert (vorläufig festgelegt am 9. November 2026, nach den ersten Testszenen noch einmal prüfen; die Zahl steht zentral in `tools/aufloesung.py`) | Am Laptop und Rechner wirkte 320×180 zu grob; 480×270 bringt deutlich mehr Details bei etwa 2,25-facher Fläche und skaliert glatt auf 1080p und 4K |
-| Hintergründe | 480×270; größere Räume bis 960×270. Retro Diffusion erzeugt höchstens 384 Pixel Kantenlänge, darum entsteht ein Hintergrund aus einem Konzeptbild in voller Größe, das lokal mit Neural Pixelate umgewandelt wird; Ersatzweg sind zwei Hälften zu 240×270 (breite Räume vier Viertel) | Breite Räume scrollen seitlich; das Konzeptbild dient zugleich zum Gegenprüfen |
-| Figuren | Max etwa 105 Pixel hoch, Erwachsene 105 bis 120, Pixel etwa 34 (Entscheidung 10. November 2026, vorher 84) | Gut lesbare Mimik, genug Platz im Raum. Die Möbel im Hintergrund richten sich danach: Türen und hohe Schränke an der Rückwand etwa 100 Pixel, Sessel etwa 50, Tische etwa 45 (Test Dachboden 10. November 2026: ohne diese Vorgabe zeichnet die KI den Raum anderthalbmal zu groß, Max wäre kleiner als der Sessel; beim zweiten Versuch wirkten 84 Pixel hohe Figuren noch zu klein, deshalb wurden die Figuren auf 105 Pixel vergrößert) |
-| Inventar-Icons | 36×36 Pixel | Einheitliche Inventarleiste |
-| Mauszeiger | 24×24 Pixel |  |
+| Auflösung | 640×360 Pixel, im Spiel ganzzahlig skaliert: 3-fach auf 1920×1080 (Full HD), 4-fach auf 2560×1440 (WQHD), 6-fach auf 3840×2160 (4K) (Sebastian, 10. November 2026, nach dem ersten Anspielen; vorher 480×270; die Zahl steht zentral in `tools/aufloesung.py`) | 480×270 geht in WQHD nicht ganzzahlig auf; 640×360 bringt mehr Details (Max 140 statt 105 Pixel) und passt glatt auf alle üblichen Bildschirme |
+| Hintergründe | 640×360; größere Räume bis 1280×360. Aus einem Konzeptbild in voller Größe, umgewandelt mit `tools/pixelieren.py` (ohne Größengrenze); Retro Diffusion schafft kostenlos höchstens 512 Pixel Kantenlänge und ist nur noch Ersatzweg in zwei Hälften zu 320×360 | Breite Räume scrollen seitlich; das Konzeptbild dient zugleich zum Gegenprüfen |
+| Figuren | Max etwa 140 Pixel hoch, Erwachsene 140 bis 160, Pixel etwa 45 (Entscheidung 10. November 2026, vorher 84) | Gut lesbare Mimik, genug Platz im Raum. Die Möbel im Hintergrund richten sich danach: Türen und hohe Schränke an der Rückwand etwa 133 Pixel, Sessel etwa 67, Tische etwa 60 (Test Dachboden 10. November 2026: ohne diese Vorgabe zeichnet die KI den Raum anderthalbmal zu groß, Max wäre kleiner als der Sessel; beim zweiten Versuch wirkten 84 Pixel hohe Figuren (damals bei 480×270) noch zu klein, deshalb wurden die Figuren auf 140 Pixel vergrößert) |
+| Inventar-Icons | 48×48 Pixel | Einheitliche Inventarleiste |
+| Mauszeiger | 32×32 Pixel |  |
 | Palette | Figuren, Gegenstände, Icons und Oberfläche: gemeinsame Palette „Endesga 32“ von Lospec (Welt-Zusatzfarben siehe unten). Hintergründe: je Raum 32 eigene Farben, beim Umwandeln in Retro Diffusion mit „Reduce colors“, 32 Farben, „Balanced“, Dithering None (Entscheidung 10. November 2026) | Endesga 32 hat zu wenige staubige Mitteltöne für die gemalten Konzeptbilder (Test Dachboden: grüner Sessel wurde braun, alles rotstichig). Einheitlich bleibt das Spiel über den gemeinsamen Konzept-Stil; Figuren in den Grundfarben heben sich ab |
-| Perspektive | Mittelweg mit leichter Tiefe (Entscheidung 10. November 2026): Rückwand frontal, sanfte Ein-Punkt-Perspektive mit Fluchtpunkt in der Bildmitte auf etwa 40 Prozent der Höhe, Seitenwände höchstens als schmale schräge Streifen am Rand; begehbarer Boden etwa 90 bis 120 Pixel hoch im unteren Drittel bis zur unteren Hälfte. Figuren-Sprites bleiben streng seitlich | Wie die klassischen Adventures der 1990er: Figuren laufen auch nach hinten und werden dort auf etwa 85 Prozent kleiner (Feld `tiefe: 0.85` im Raum-Layout), Laufwege bleiben lesbar |
+| Perspektive | Mittelweg mit leichter Tiefe (Entscheidung 10. November 2026): Rückwand frontal, sanfte Ein-Punkt-Perspektive mit Fluchtpunkt in der Bildmitte auf etwa 40 Prozent der Höhe, Seitenwände höchstens als schmale schräge Streifen am Rand; begehbarer Boden etwa 120 bis 160 Pixel hoch im unteren Drittel bis zur unteren Hälfte. Figuren-Sprites bleiben streng seitlich | Wie die klassischen Adventures der 1990er: Figuren laufen auch nach hinten und werden dort auf etwa 85 Prozent kleiner (Feld `tiefe: 0.85` im Raum-Layout), Laufwege bleiben lesbar |
 | Licht | Von oben links, weiche Schatten nach rechts unten | Einheitlich über alle Szenen |
 | Konturen | Figuren und Gegenstände mit dunkler, farbiger Kontur (nicht reines Schwarz); Hintergründe ohne Kontur | Figuren heben sich vom Hintergrund ab |
 | Kantenglättung | Keine; saubere Pixelgruppen ohne Farbverläufe | Echte Pixel-Art |
@@ -34,10 +34,10 @@ Alle Welten teilen einen Pixel-Art-Stil in 480×270 Pixeln. Figuren und Gegenst�
 | Asset | Werkzeug | Modell oder Stil | Ablauf |
 | --- | --- | --- | --- |
 | Konzeptbilder | ChatGPT oder Gemini | – | Baustein „KONZEPT“ voranstellen, 16:9 erzeugen. Nur als Vorlage, nicht ins Spiel |
-| Hintergründe | Retro Diffusion Cloud oder lokal | `rd_plus__environment`, 480×270 | Standard (Sebastian, 9. November 2026): erst ein Konzeptbild (Baustein KONZEPT, wie beim Dachboden) zum Gegenprüfen, dann lokal mit „Neural Pixelate“ auf 480×270 umwandeln. Ersatzweg: in zwei Hälften zu 240×270 erzeugen (Retro Diffusion kann höchstens 384 Pixel Kantenlänge; Satzteil LEFT HALF oder RIGHT HALF wie beim Dorfplatz, breite Räume in vier Vierteln) und in Aseprite zusammensetzen. Danach in Aseprite Perspektive und Laufbereich korrigieren |
+| Hintergründe | Gemini, dann `tools/pixelieren.py` | 640×360 | Standard (Sebastian, 10. November 2026): erst ein Konzeptbild (Baustein KONZEPT) zum Gegenprüfen, dann mit `tools/pixelieren.py` auf 640×360 und 32 Farben umwandeln (das Gemini-Original reicht, Claude kann das übernehmen). Ersatzweg: Neural Pixelate (Retro Diffusion) in zwei Hälften zu 320×360 und danach gemeinsam auf 32 Farben bringen. Danach in Aseprite Perspektive und Laufbereich korrigieren |
 | Figuren | Retro Diffusion Cloud | `rd_pro__default` mit Referenzbildern, `rd_plus__character_turnaround` | Erst eine Ansicht von der Seite festlegen, dann als Referenz für alle weiteren Bilder nutzen |
 | Animationen | Retro Diffusion Cloud | `rd_advanced_animation__walking`, `__idle`, `__custom_action` | Aus einem fertigen Standbild der Figur erzeugen, danach in Aseprite nacharbeiten |
-| Gegenstände | Retro Diffusion Cloud oder lokal | `rd_plus__item_sheet` oder `rd_pro__inventory_items` | Mehrere Gegenstände pro Bild, dann ausschneiden und auf 36×36 bringen |
+| Gegenstände | Retro Diffusion Cloud oder lokal | `rd_plus__item_sheet` oder `rd_pro__inventory_items` | Mehrere Gegenstände pro Bild, dann ausschneiden und auf 48×48 bringen |
 | Benutzeroberfläche | Retro Diffusion Cloud | `rd_pro__ui_panel` | Rahmen und Knöpfe; Schrift immer von Hand |
 | Umfärben, Freistellen | Retro Diffusion lokal | Palettize, Background Removal | Jedes fertige Asset einmal auf die gemeinsame Palette bringen |
 
@@ -46,13 +46,13 @@ Alle Welten teilen einen Pixel-Art-Stil in 480×270 Pixeln. Figuren und Gegenst�
 **Ablauf pro Szene:**
 
 1. Konzeptbild mit ChatGPT oder Gemini, bis Aufbau und Stimmung passen. Fertig zusammengesetzte Prompts (Baustein, Motiv, Farb-Baustein, Skizzen-Satz) je Raum stehen in `grafik/fertige-prompts/` und werden mit `tools/prompts_zusammensetzen.py` aus den Grafik-Dateien erzeugt. Die Layout-Skizze des Raums (`grafik/skizzen/<abschnitt>/<raum>.png`, verlinkt in jeder Grafik-Datei unter „Szenen“) als Bild mitgeben und hinter den Prompt schreiben: „Use the attached sketch only for the position and size of objects and exits, not for style, colors or text. Leave the orange marked spots empty.“ Blaue Kästen gehören ins Bild, orange gestrichelte sind eigene Sprites, grüne Ausgänge, die grauen Umrisse zeigen Max' Größe vorn und hinten. Die Skizzen erzeugt `tools/layout_skizzen.py` aus den Raum-Layouts neu.
-2. Prüfen und im selben Gemini-Chat nachbessern lassen statt neu zu erzeugen, je Fehler ein kurzer Satz (etwa „Make the wardrobe about 25 percent smaller.“). Prüfliste: Rückwand frontal, Boden frei und gut lesbar, Möbel klein genug (Max als Maßstab: Schrank etwa 100, Sessel etwa 50 Pixel nach dem Umwandeln), alle Hinweis-Motive wie beschrieben (Poster, Kalender), keine Schrift, keine Gegenstände, die eigene Sprites sind, keine Gesichter an Geräten.
-3. Umwandeln mit Neural Pixelate (Retro Diffusion) mit diesen Einstellungen: vorher auf genau 16:9 zuschneiden (etwa 1984×1116); Width 480, Height 270; Downscaler „Contrast-aware“ (bei unruhigem Ergebnis K-Centroid vergleichen); Outline keep 0 oder 1; Reduce colors an, 32 Farben, „Balanced“; Dithering None; Remove stray pixels an. Ergebnis muss genau 480×270 Pixel und höchstens 32 Farben haben. Retro Diffusion mit dem Prompt ist nur der Ersatzweg.
+2. Prüfen und im selben Gemini-Chat nachbessern lassen statt neu zu erzeugen, je Fehler ein kurzer Satz (etwa „Make the wardrobe about 25 percent smaller.“). Prüfliste: Rückwand frontal, Boden frei und gut lesbar, Möbel klein genug (Max als Maßstab: Schrank etwa 133, Sessel etwa 67 Pixel nach dem Umwandeln), alle Hinweis-Motive wie beschrieben (Poster, Kalender), keine Schrift, keine Gegenstände, die eigene Sprites sind, keine Gesichter an Geräten.
+3. Umwandeln: `python3 tools/pixelieren.py original.jpg w0_bg_raum_v01.png 640 360` (schneidet auf 16:9 zu, verkleinert kontrastbewusst nach dem k-Centroid-Verfahren, 32 eigene Farben, entfernt Streupixel). Einfacher: das Gemini-Original an Claude schicken. Ergebnis muss genau 640×360 Pixel und höchstens 32 Farben haben. Ersatzweg Retro Diffusion (Neural Pixelate, kostenlos höchstens 512 Pixel): in zwei Hälften zu 320×360 umwandeln, Reduce colors aus, danach gemeinsam auf 32 Farben bringen.
 4. In Aseprite: Perspektive prüfen, Laufbereich frei lassen, störende Details und Schrift entfernen, Sprites (Gegenstände, die man nimmt) aus dem Bild malen. Die 32 Farben kommen schon aus dem Umwandeln; neue Pixel nur mit Farben aus dem Bild setzen.
 5. Gegenstände der Szene als Sammelbild erzeugen und ausschneiden.
 6. In Godot einsetzen und mit Max als Platzhalter testen, ob Größen und Laufwege stimmen. Bei Boden mit Tiefe im Layout `tiefe: 0.85` eintragen (Ablauf in `game/README.md`, Abschnitt „Grafik ersetzen“).
 
-**Text in Bildern:** Generatoren schreiben fast immer fehlerhaft. Schilder, Logo, Programmzeitschrift und Kalenderzahlen deshalb ohne Text erzeugen und die Schrift später von Hand in Aseprite setzen. Was der Spieler für ein Rätsel oder das Notizbuch lesen muss (Kalender, Satzung, Kritzeleien, Hinweiszettel, Tafeln), bekommt zusätzlich eine Nahansicht in 480×270; kurze Texte, die Max beim Ansehen vorliest (etwa Steckbrief, Opas Papyrus), bleiben normales Ansehen. Es sind genau 14 Nahansichten; welche, steht in den Welt-Tabellen (`welten/*.yaml`), die Bilder beschreiben die Grafik-Dateien (Zeile „Nahansichten“), den Bildschirm `05-spielsysteme.md`. Kleine Bildschirme in der Szene (Zapp-O-Mat, Monitorwand, Röhrenfernseher, Empfangsmonitor) bekommen kein eigenes Bild: Beim Ansehen blendet Godot den Ausschnitt doppelt vergrößert und ohne Glättung ein.
+**Text in Bildern:** Generatoren schreiben fast immer fehlerhaft. Schilder, Logo, Programmzeitschrift und Kalenderzahlen deshalb ohne Text erzeugen und die Schrift später von Hand in Aseprite setzen. Was der Spieler für ein Rätsel oder das Notizbuch lesen muss (Kalender, Satzung, Kritzeleien, Hinweiszettel, Tafeln), bekommt zusätzlich eine Nahansicht in 640×360; kurze Texte, die Max beim Ansehen vorliest (etwa Steckbrief, Opas Papyrus), bleiben normales Ansehen. Es sind genau 14 Nahansichten; welche, steht in den Welt-Tabellen (`welten/*.yaml`), die Bilder beschreiben die Grafik-Dateien (Zeile „Nahansichten“), den Bildschirm `05-spielsysteme.md`. Kleine Bildschirme in der Szene (Zapp-O-Mat, Monitorwand, Röhrenfernseher, Empfangsmonitor) bekommen kein eigenes Bild: Beim Ansehen blendet Godot den Ausschnitt doppelt vergrößert und ohne Glättung ein.
 
 ## Prompt-Bausteine
 
@@ -82,46 +82,46 @@ Ein vollständiger Prompt besteht aus drei Teilen: **Baustein** (Technik, von hi
 Concept art for a 2D point-and-click adventure game in the style of classic 1990s adventure games, front view of the room with gentle one-point perspective, camera at the eye level of a standing person looking straight at the back wall, back wall parallel to the picture plane, vanishing point in the center at about 40 percent of the image height, side walls at most as narrow angled strips at the image edges, open walkable floor with gentle depth across the lower third to half of the image kept free of objects except at the left and right edges, wide shot from further back so the room feels spacious: a standing adult at the front edge would be about 40 percent of the image height, so doors and tall cupboards reach only about 37 percent of the image height, chairs about 18 percent and tables about 17 percent, no top-down, bird's-eye or strong three-quarter view, no fisheye, every object drawn exactly as described and nothing added, no faces or robot features on objects, small loose objects that can be picked up left out, book spines, calendars, posters and labels without any letters or numbers, light from the upper left with soft shadows to the lower right, humorous and whimsical, warm hand-painted look, 16:9, no text, no letters, no logos.
 ```
 
-**HINTERGRUND** (`rd_plus__environment`, 480×270):
+**HINTERGRUND** (`rd_plus__environment`, 640×360):
 
 ```text
-Pixel art background, 480x270, front view with gentle one-point perspective, camera at eye level, back wall parallel to the picture plane, vanishing point in the center, side walls only as narrow angled strips at the edges, open walkable floor with gentle depth about 90 to 120 pixels high kept clear in the lower part, wide shot with small furniture: doors and tall cupboards about 100 pixels high, chairs about 50, tables about 45, objects exactly as described, no faces on objects, no loose pickable items, no letters or numbers anywhere, large objects only against the back wall or at the left and right edges, exits clearly readable, light from upper left with soft shadows to the lower right, clean pixel clusters, no anti-aliasing, no outlines, no characters, all signs, labels and book covers blank.
+Pixel art background, 640x360, front view with gentle one-point perspective, camera at eye level, back wall parallel to the picture plane, vanishing point in the center, side walls only as narrow angled strips at the edges, open walkable floor with gentle depth about 120 to 160 pixels high kept clear in the lower part, wide shot with small furniture: doors and tall cupboards about 133 pixels high, chairs about 67, tables about 60, objects exactly as described, no faces on objects, no loose pickable items, no letters or numbers anywhere, large objects only against the back wall or at the left and right edges, exits clearly readable, light from upper left with soft shadows to the lower right, clean pixel clusters, no anti-aliasing, no outlines, no characters, all signs, labels and book covers blank.
 ```
 
-**FIGUR** (`rd_pro__default`, Menschen etwa 105 Pixel):
+**FIGUR** (`rd_pro__default`, Menschen etwa 140 Pixel):
 
 ```text
-Pixel art character sprite, exactly one character, full body, strict side view facing right unless the motif says left, about 105 pixels tall on a 128x128 canvas unless the motif gives another height, feet on the bottom edge, dark colored outline (not pure black), light from upper left, expressive cartoon face, flat colors without gradients, plain transparent background, no ground shadow.
+Pixel art character sprite, exactly one character, full body, strict side view facing right unless the motif says left, about 140 pixels tall on a 192x192 canvas unless the motif gives another height, feet on the bottom edge, dark colored outline (not pure black), light from upper left, expressive cartoon face, flat colors without gradients, plain transparent background, no ground shadow.
 ```
 
-**FIGUR-KLEIN** (Tiere und kleine Wesen, 22 bis 56 Pixel; Zahl im Motiv angeben):
+**FIGUR-KLEIN** (Tiere und kleine Wesen, 29 bis 75 Pixel; Zahl im Motiv angeben):
 
 ```text
-Pixel art small creature sprite, exactly one creature, full body, strict side view facing right unless the motif says left, height in pixels as given in the motif on a 64x64 canvas, dark colored outline (not pure black), light from upper left, very readable silhouette, flat colors, plain transparent background, no ground shadow.
+Pixel art small creature sprite, exactly one creature, full body, strict side view facing right unless the motif says left, height in pixels as given in the motif on a 96x96 canvas, dark colored outline (not pure black), light from upper left, very readable silhouette, flat colors, plain transparent background, no ground shadow.
 ```
 
-**FIGUR-GROSS** (große Wesen und Maschinen über 120 Pixel; Zahl im Motiv angeben):
+**FIGUR-GROSS** (große Wesen und Maschinen über 160 Pixel; Zahl im Motiv angeben):
 
 ```text
-Pixel art large character sprite, exactly one character, full body, strict side view facing right unless the motif says left, height in pixels as given in the motif on a canvas up to 256x256, fills most of the frame, dark colored outline (not pure black), light from upper left, flat colors, plain transparent background, no ground shadow.
+Pixel art large character sprite, exactly one character, full body, strict side view facing right unless the motif says left, height in pixels as given in the motif on a canvas up to 352x352, fills most of the frame, dark colored outline (not pure black), light from upper left, flat colors, plain transparent background, no ground shadow.
 ```
 
-**PORTRÄT** (Dialog und Figurenwechsel, 96×96):
+**PORTRÄT** (Dialog und Figurenwechsel, 128×128):
 
 ```text
-Pixel art character portrait, head and shoulders, 96x96, three-quarter view facing right, expressive face, same colors as the character's sprite, dark colored outline, light from upper left, plain transparent background, no hands, no text.
+Pixel art character portrait, head and shoulders, 128x128, three-quarter view facing right, expressive face, same colors as the character's sprite, dark colored outline, light from upper left, plain transparent background, no hands, no text.
 ```
 
-**KARTE** (`rd_plus__topdown_map`, 480×270):
+**KARTE** (`rd_plus__topdown_map`, 640×360):
 
 ```text
-Pixel art top-down illustrated travel map, 480x270, seen straight from above, simple readable shapes, clearly separated clickable locations with at least 24 pixels of space between them, light from upper left, no text, no letters, no labels.
+Pixel art top-down illustrated travel map, 640x360, seen straight from above, simple readable shapes, clearly separated clickable locations with at least 32 pixels of space between them, light from upper left, no text, no letters, no labels.
 ```
 
 **GEGENSTÄNDE** (`rd_plus__item_sheet`; Raster im Motiv angeben):
 
 ```text
-Pixel art item sheet, grid exactly as given in the motif, items in reading order left to right and top to bottom, each item centered in its own cell at the same scale, about 36x36 pixels each, slight front-side view, no overlap between cells, dark colored outline (not pure black), light from upper left, plain transparent background, no text, letters or numbers on any item.
+Pixel art item sheet, grid exactly as given in the motif, items in reading order left to right and top to bottom, each item centered in its own cell at the same scale, about 48x48 pixels each, slight front-side view, no overlap between cells, dark colored outline (not pure black), light from upper left, plain transparent background, no text, letters or numbers on any item.
 ```
 
 **EFFEKT** (Bildfolge für Godot):
@@ -154,10 +154,10 @@ Bei jedem Bild von Max oder Pixel wortgleich verwenden.
 Max, a lanky 16-year-old boy with a slight slouch, messy dark brown hair (#733e39) with shaggy strands falling over his forehead and eyes, sleepy half-closed eyes, lopsided smirk, a few freckles, oversized dark slate blue-grey hoodie (#3a4466) with sleeves over his hands, uneven drawstrings and a tiny retro TV with a turquoise screen (#2ce8f5) on the chest, dark blue jeans (#124e89) slightly too long, worn red sneakers (#e43b44) with white soles, one lace untied, hands in his hoodie pocket.
 ```
 
-**Pixel** (Baustein FIGUR-KLEIN, etwa 34 Pixel hoch):
+**Pixel** (Baustein FIGUR-KLEIN, etwa 45 Pixel hoch):
 
 ```text
-Pixel, a chubby round tomcat about 34 pixels tall when sitting, short legs, light silver-grey fur (#c0cbdc) with three darker blue-grey stripes on his back (#5a6988), white chest and white paws, a very fluffy tail, a notch torn out of his left ear, smug half-closed amber eyes (#feae34), pink nose, a red collar (#e43b44) with a small round silver speaker and a clearly visible two-pixel turquoise light (#2ce8f5), not orange, no tabby markings on the face.
+Pixel, a chubby round tomcat about 45 pixels tall when sitting, short legs, light silver-grey fur (#c0cbdc) with three darker blue-grey stripes on his back (#5a6988), white chest and white paws, a very fluffy tail, a notch torn out of his left ear, smug half-closed amber eyes (#feae34), pink nose, a red collar (#e43b44) with a small round silver speaker and a clearly visible two-pixel turquoise light (#2ce8f5), not orange, no tabby markings on the face.
 ```
 
 Das kostenlose Pet Cat Pack von Luiz Melo (CC0) darf nur als Anschauung für Posen und Laufzyklus neben dem Bild liegen, nicht als Pixelgrundlage: nichts davon übernehmen oder übermalen, sonst bleibt die Silhouette eines weit verbreiteten Asset-Pakets. Max, Pixel und Opa werden nach dem KI-Entwurf in Aseprite Pixel für Pixel von Hand nachgezogen (Produktion, Absprachen).
@@ -187,17 +187,17 @@ Diese Grundanimationen gelten für alle Welten. Weltspezifische Aktionen stehen 
 | Max | Gähnen | 6 | einmalig | Max stretches arms up, mouth opens wide, eyes close, arms drop back into the hoodie pocket, facing right |
 | Max | Auf dem Sofa | 4 | Schleife | Standbild A (Prolog, Welt 3): Max lying flat on a sofa in side view, head on the left armrest, holding his phone above his face with both hands, sneakers on the right armrest; Standbild B (Welt 4): Max slumped half lying on a sofa, remote in hand, feet up, facing right; Animation: slow blinking, thumb tapping the phone or clicking the remote |
 | Max | Vom Sofa aufstehen | 8 | einmalig | Max swings his legs off the sofa, pushes himself up with both hands, stands, stretches, facing right (Prolog: danach Handy in die Bauchtasche; Finale: endet in der aufrechten Pose) |
-| Pixel | Gehen | 8 | Schleife | `walking`: standing sprite of Pixel as input, about 49 pixels long, smug strut with tail held high, collar light stays visible, facing right |
+| Pixel | Gehen | 8 | Schleife | `walking`: standing sprite of Pixel as input, about 65 pixels long, smug strut with tail held high, collar light stays visible, facing right |
 | Pixel | Gehen nach vorn und nach hinten | je 6 | Schleife | Wie bei Max (`walk_d`, `walk_u`), nachrangig: Pixel ist klein, der seitliche Gang fällt beim Laufen in die Tiefe kaum auf. `walking`: front view of Pixel trotting toward the viewer, round face and white chest, collar light visible; second animation: back view trotting away, fluffy tail held high |
 | Pixel | Stehen | 4 | Schleife | `idle`: sitting sprite of Pixel as input, tail tip twitching, one slow blink, body stays still, facing right |
-| Pixel | Schlafen | 4 | Schleife | Pixel curled up asleep, about 19 pixels high and 36 long, belly rising and falling, torn ear twitching once, facing right |
+| Pixel | Schlafen | 4 | Schleife | Pixel curled up asleep, about 25 pixels high and 48 long, belly rising and falling, torn ear twitching once, facing right |
 | Pixel | Putzen | 6 | Schleife | Pixel sitting, licks his front paw and wipes it over his ear, tail still, facing right |
-| Pixel | Springen und Klettern | 6 | einmalig | Pixel crouches, wiggles his rear, leaps up about 56 pixels and lands on a ledge above, facing right (Prolog und Zwischenspiele auf die Werkbank, Welt 1 bis 3) |
+| Pixel | Springen und Klettern | 6 | einmalig | Pixel crouches, wiggles his rear, leaps up about 75 pixels and lands on a ledge above, facing right (Prolog und Zwischenspiele auf die Werkbank, Welt 1 bis 3) |
 | Pixel | Schnuppern | 4 | einmalig | Pixel stretches his neck forward, nose twitching, sniffs twice, pulls back, facing right (Welt 1 bis 3) |
 | Pixel | Tragen | 8 | Schleife | Pixel walking sprite as input, smug strut with tail held high, a small object held in his mouth, head slightly raised, the object stays fixed in the mouth, facing right (Welt 1 bis 3, Rückkehr 3 und Finale mit der Zelle; nicht in Welt 4) |
 | Pixel | Fauchen | 4 | einmalig | Pixel arches his back, fur bristles, mouth wide open hissing, then settles, facing right |
 | Pixel | Ohrfeige | 4 | einmalig | Pixel jumps up and slaps with one front paw, lands again, smug face, facing right (Welt 3, blaue Pastille aus der Apothekendose mit grünem Kreuz). Nur Vorlage: erzeugt wird allein die Fassung mit 6 Bildern in Grafik Welt 3 |
-| Pixel | Vom Schrank fallen | 8 | einmalig | Pixel loses balance on top of a tall cupboard, flails all four legs, falls about 112 pixels, lands flat on the floor, dazed, facing right (Finale, Wohnzimmer) |
+| Pixel | Vom Schrank fallen | 8 | einmalig | Pixel loses balance on top of a tall cupboard, flails all four legs, falls about 149 pixels, lands flat on the floor, dazed, facing right (Finale, Wohnzimmer) |
 
 ## Regeln
 

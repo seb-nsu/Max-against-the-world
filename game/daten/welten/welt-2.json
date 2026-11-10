@@ -59,7 +59,7 @@
    "skript_code": [
     "NIL"
    ],
-   "groesse": "480x270",
+   "groesse": "640x360",
    "ausgaenge": [
     "thronsaal_ramses",
     "sphinx",
@@ -78,7 +78,7 @@
     "DUEL",
     "AUDI"
    ],
-   "groesse": "480x270",
+   "groesse": "640x360",
    "ausgaenge": [
     "nil_delta",
     "palastkueche"
@@ -92,7 +92,7 @@
    "skript_code": [
     "KUCH"
    ],
-   "groesse": "480x270",
+   "groesse": "640x360",
    "ausgaenge": [
     "thronsaal_ramses"
    ],
@@ -105,7 +105,7 @@
    "skript_code": [
     "SPHX"
    ],
-   "groesse": "480x270",
+   "groesse": "640x360",
    "ausgaenge": [
     "nil_delta"
    ],
@@ -122,7 +122,7 @@
    "skript_code": [
     "STOL"
    ],
-   "groesse": "480x270",
+   "groesse": "640x360",
    "ausgaenge": [
     "agora",
     "nil_delta",
@@ -138,7 +138,7 @@
     "AGOR",
     "SAND"
    ],
-   "groesse": "960x270",
+   "groesse": "1280x360",
    "ausgaenge": [
     "faehrsteg_olympia",
     "stadion",
@@ -158,7 +158,7 @@
    "skript_code": [
     "BUER"
    ],
-   "groesse": "480x270",
+   "groesse": "640x360",
    "ausgaenge": [
     "agora"
    ],
@@ -177,7 +177,7 @@
     "RING",
     "PARA"
    ],
-   "groesse": "480x270",
+   "groesse": "640x360",
    "ausgaenge": [
     "agora"
    ],
@@ -194,7 +194,7 @@
    "skript_code": [
     "HAFS"
    ],
-   "groesse": "480x270",
+   "groesse": "640x360",
    "ausgaenge": [
     "werkstatt",
     "grabhuegel",
@@ -212,7 +212,7 @@
     "KRON",
     "TRAI"
    ],
-   "groesse": "480x270",
+   "groesse": "640x360",
    "ausgaenge": [
     "hafen_syrakus"
    ],
@@ -225,7 +225,7 @@
    "skript_code": [
     "GRAB"
    ],
-   "groesse": "480x270",
+   "groesse": "640x360",
    "ausgaenge": [
     "hafen_syrakus"
    ],
@@ -255,7 +255,7 @@
     "werkstatt",
     "grabhuegel"
    ],
-   "groesse_px": 105,
+   "groesse_px": 140,
    "spielbar": true
   },
   {
@@ -275,7 +275,7 @@
     "werkstatt",
     "grabhuegel"
    ],
-   "groesse_px": 34,
+   "groesse_px": 45,
    "spielbar": true
   },
   {
@@ -297,7 +297,7 @@
     "faehrsteg_olympia",
     "hafen_syrakus"
    ],
-   "groesse_px": 109,
+   "groesse_px": 145,
    "spielbar": false
   },
   {
@@ -308,7 +308,7 @@
     "nil_delta",
     "thronsaal_ramses"
    ],
-   "groesse_px": 30,
+   "groesse_px": 40,
    "spielbar": false
   },
   {
@@ -318,7 +318,7 @@
    "raum": [
     "nil_delta"
    ],
-   "groesse_px": 112,
+   "groesse_px": 149,
    "spielbar": false
   },
   {
@@ -330,7 +330,7 @@
     "startbuero",
     "stadion"
    ],
-   "groesse_px": 105,
+   "groesse_px": 140,
    "spielbar": false
   },
   {
@@ -341,7 +341,7 @@
     "thronsaal_ramses",
     "stadion"
    ],
-   "groesse_px": 112,
+   "groesse_px": 149,
    "spielbar": false
   },
   {
@@ -351,7 +351,7 @@
    "raum": [
     "thronsaal_ramses"
    ],
-   "groesse_px": 38,
+   "groesse_px": 51,
    "spielbar": false
   },
   {
@@ -361,7 +361,7 @@
    "raum": [
     "thronsaal_ramses"
    ],
-   "groesse_px": 68,
+   "groesse_px": 91,
    "spielbar": false
   },
   {
@@ -372,7 +372,7 @@
     "thronsaal_ramses",
     "stadion"
    ],
-   "groesse_px": 105,
+   "groesse_px": 140,
    "spielbar": false
   },
   {
@@ -382,7 +382,7 @@
    "raum": [
     "palastkueche"
    ],
-   "groesse_px": 98,
+   "groesse_px": 131,
    "spielbar": false
   },
   {
@@ -404,7 +404,7 @@
     "stadion",
     "grabhuegel"
    ],
-   "groesse_px": 101,
+   "groesse_px": 135,
    "spielbar": false
   },
   {
@@ -414,7 +414,7 @@
    "raum": [
     "werkstatt"
    ],
-   "groesse_px": 116,
+   "groesse_px": 155,
    "spielbar": false
   },
   {
@@ -426,7 +426,7 @@
     "grabhuegel",
     "stadion"
    ],
-   "groesse_px": 109,
+   "groesse_px": 145,
    "spielbar": false
   },
   {
@@ -436,7 +436,7 @@
    "raum": [
     "agora"
    ],
-   "groesse_px": 98,
+   "groesse_px": 131,
    "spielbar": false
   },
   {
@@ -456,7 +456,7 @@
    "raum": [
     "agora"
    ],
-   "groesse_px": 109,
+   "groesse_px": 145,
    "spielbar": false
   },
   {
@@ -466,7 +466,7 @@
    "raum": [
     "agora"
    ],
-   "groesse_px": 105,
+   "groesse_px": 140,
    "spielbar": false
   },
   {
@@ -476,7 +476,7 @@
    "raum": [
     "agora"
    ],
-   "groesse_px": 75,
+   "groesse_px": 100,
    "spielbar": false
   },
   {
@@ -486,7 +486,7 @@
    "raum": [
     "agora"
    ],
-   "groesse_px": 109,
+   "groesse_px": 145,
    "spielbar": false
   },
   {
@@ -496,7 +496,7 @@
    "raum": [
     "agora"
    ],
-   "groesse_px": 105,
+   "groesse_px": 140,
    "spielbar": false
   },
   {
@@ -506,7 +506,7 @@
    "raum": [
     "startbuero"
    ],
-   "groesse_px": 82,
+   "groesse_px": 109,
    "spielbar": false
   },
   {
@@ -516,7 +516,7 @@
    "raum": [
     "startbuero"
    ],
-   "groesse_px": 109,
+   "groesse_px": 145,
    "spielbar": false
   },
   {
@@ -526,7 +526,7 @@
    "raum": [
     "stadion"
    ],
-   "groesse_px": 120,
+   "groesse_px": 160,
    "spielbar": false
   },
   {
@@ -536,7 +536,7 @@
    "raum": [
     "stadion"
    ],
-   "groesse_px": 22,
+   "groesse_px": 29,
    "spielbar": false
   },
   {
@@ -546,7 +546,7 @@
    "raum": [
     "stadion"
    ],
-   "groesse_px": 112,
+   "groesse_px": 149,
    "spielbar": false
   },
   {
@@ -556,7 +556,7 @@
    "raum": [
     "stadion"
    ],
-   "groesse_px": 105,
+   "groesse_px": 140,
    "spielbar": false
   }
  ],

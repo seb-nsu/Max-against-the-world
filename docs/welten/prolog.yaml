@@ -12,7 +12,7 @@ raeume:
   - id: wohnzimmer
     name: Wohnzimmer
     skript_code: [WOHN]
-    groesse: 480x270
+    groesse: 640x360
     ausgaenge: [treppenhaus]
     erreichbar_ab: start
     musik: gegenwart
@@ -21,7 +21,7 @@ raeume:
   - id: treppenhaus
     name: Treppenhaus
     skript_code: [TREP]
-    groesse: 480x270
+    groesse: 640x360
     ausgaenge: [wohnzimmer, dachboden]
     erreichbar_ab: start
     musik: gegenwart
@@ -30,7 +30,7 @@ raeume:
   - id: dachboden
     name: Dachboden
     skript_code: [DACH]
-    groesse: 480x270
+    groesse: 640x360
     ausgaenge: [treppenhaus]         # Rückweg durch die Bodenluke verweigert Max (P0_DACH_MAX_1000)
     erreichbar_ab: start
     musik: gegenwart
@@ -41,21 +41,21 @@ figuren:
     name: Max
     kuerzel: MAX
     raum: [wohnzimmer, treppenhaus, dachboden]
-    groesse_px: 105
+    groesse_px: 140
     spielbar: true
 
   - id: pixel
     name: Pixel
     kuerzel: PIX
     raum: dachboden
-    groesse_px: 34                   # schlafend 10 hoch, 24 lang
+    groesse_px: 45                   # schlafend 10 hoch, 24 lang
     spielbar: false                  # Figurenwechsel erst ab Welt 1
 
   - id: opa
     name: Opa                        # im Wohnzimmer als „Opa (von oben)“
     kuerzel: OPA
     raum: dachboden
-    groesse_px: 112
+    groesse_px: 149
     spielbar: false
 
 

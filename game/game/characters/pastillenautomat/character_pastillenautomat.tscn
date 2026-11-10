@@ -5,7 +5,7 @@
 
 [node name="CharacterPastillenautomat" type="Area2D" unique_id=430336523]
 script = ExtResource("1_dbvsl")
-walk_speed = 90.0
+walk_speed = 120.0
 dialog_pos = Vector2(0, -64)
 script_name = "Pastillenautomat"
 description = "UI_OBJ_PASTILLENAUTOMAT"

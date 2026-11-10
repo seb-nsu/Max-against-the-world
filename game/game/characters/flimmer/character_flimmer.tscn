@@ -5,12 +5,12 @@
 
 [node name="CharacterFlimmer" type="Area2D" unique_id=1629242648]
 script = ExtResource("1_pbjyf")
-walk_speed = 90.0
-dialog_pos = Vector2(0, -34)
+walk_speed = 120.0
+dialog_pos = Vector2(0, -44)
 script_name = "Flimmer"
 description = "UI_OBJ_FLIMMER"
 cursor = 8
-interaction_polygon = PackedVector2Array(-15, -30, 15, -30, 15, 0, -15, 0)
+interaction_polygon = PackedVector2Array(-20, -40, 20, -40, 20, 0, -20, 0)
 
 [node name="ScalingPolygon" type="CollisionPolygon2D" parent="." unique_id=1564020692]
 polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
@@ -20,11 +20,11 @@ polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1331844133]
 texture_filter = 1
 texture = ExtResource("2_rjnuk")
-offset = Vector2(0, -15)
+offset = Vector2(0, -20)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=278032345]
 visible = false
-polygon = PackedVector2Array(-15, -30, 15, -30, 15, 0, -15, 0)
+polygon = PackedVector2Array(-20, -40, 20, -40, 20, 0, -20, 0)
 
 [node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=219600835]
 visible = false

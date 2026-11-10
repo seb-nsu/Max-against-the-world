@@ -7,9 +7,9 @@ script = ExtResource("1_alajd")
 script_name = "Lautsprecher"
 description = "Lautsprecher"
 cursor = 1
-interaction_polygon = PackedVector2Array(-196, -24, 196, -24, 196, 24, -196, 24)
+interaction_polygon = PackedVector2Array(-261, -32, 261, -32, 261, 32, -261, 32)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1991830416]
 visible = false
 modulate = Color(1, 0, 1, 1)
-polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+polygon = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)

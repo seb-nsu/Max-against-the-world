@@ -7,7 +7,7 @@ script = ExtResource("1_s4ewj")
 script_name = "Energiezelle"
 description = "Energiezelle"
 cursor = 1
-interaction_polygon = PackedVector2Array(-7.5, -6, 7.5, -6, 7.5, 6, -7.5, 6)
+interaction_polygon = PackedVector2Array(-10.0, -8, 10.0, -8, 10.0, 8, -10.0, 8)
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1062635427]
 texture_filter = 1
@@ -17,7 +17,7 @@ texture_filter = 1
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1903883635]
 visible = false
 modulate = Color(1, 1, 0, 1)
-polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+polygon = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 
 [node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=243460419]
 visible = false

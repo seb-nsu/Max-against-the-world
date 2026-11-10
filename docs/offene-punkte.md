@@ -12,7 +12,6 @@ Stand 10. November 2026. Kennungen: S = zurückgestellte Punkte aus Gutachten 4,
 | S7 | Gewerbe und Steuer | Sebastian, vor der Steam-Seite: Gewerbe anmelden, Steuernummer, Steuerberater-Erstgespräch (Kleinunternehmerregelung, Steam-Steuerinterview) | `03-produktion.md` (Rechtliches) |
 | S10 | Registersuche zum Titel „Couch Quest“ in DPMAregister und EUIPO eSearch (Klassen 9, 28, 41) | Sebastian sucht und schickt das Ergebnis; danach mit Datum eintragen | `03-produktion.md` (Rechtliches), `01-konzept.md` (Rechtscheck) |
 | P1 | Anwaltsstunde für Figurenliste und Titel | Sebastian, vor der Veröffentlichung (Budget 200 bis 350 €) | `03-produktion.md` (Rechtliches, Kosten) |
-| P2 | Grundauflösung 480×270 nach den ersten Testszenen noch einmal prüfen (Alternative 640×360) | Sebastian; ein Wechsel ist `python3 tools/aufloesung.py --umrechnen 480x270 640x360`, danach Platzhalter, Prüfung und Tests | `03-produktion.md` (Auflösung), `tools/aufloesung.py` |
 | P3 | Zwei-Klick-Steuerung bestätigen oder doch eine Verbenleiste | Sebastian nach dem ersten Test | `05-spielsysteme.md` (UI) |
 | P4 | Vollvertonung oder Brabbel-Laute | Sebastian, spätestens zu Beginn von Stufe 5 (ab etwa 10.000 Wunschlisten Vollvertonung) | `03-produktion.md`, `04-audio.md` |
 

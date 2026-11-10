@@ -5,12 +5,12 @@
 
 [node name="CharacterWaldemar" type="Area2D" unique_id=584786914]
 script = ExtResource("1_frc20")
-walk_speed = 135.0
-dialog_pos = Vector2(0, -154)
+walk_speed = 180.0
+dialog_pos = Vector2(0, -204)
 script_name = "Waldemar"
 description = "UI_OBJ_WALDEMAR"
 cursor = 8
-interaction_polygon = PackedVector2Array(-25, -150, 25, -150, 25, 0, -25, 0)
+interaction_polygon = PackedVector2Array(-33, -200, 33, -200, 33, 0, -33, 0)
 
 [node name="ScalingPolygon" type="CollisionPolygon2D" parent="." unique_id=1587616776]
 polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
@@ -20,11 +20,11 @@ polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1399008767]
 texture_filter = 1
 texture = ExtResource("2_qm7lu")
-offset = Vector2(0, -75)
+offset = Vector2(0, -100)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1729911689]
 visible = false
-polygon = PackedVector2Array(-25, -150, 25, -150, 25, 0, -25, 0)
+polygon = PackedVector2Array(-33, -200, 33, -200, 33, 0, -33, 0)
 
 [node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=1523521539]
 visible = false

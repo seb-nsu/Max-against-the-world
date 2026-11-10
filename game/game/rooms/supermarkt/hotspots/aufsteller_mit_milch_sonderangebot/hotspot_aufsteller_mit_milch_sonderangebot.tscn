@@ -7,9 +7,9 @@ script = ExtResource("1_5cqm3")
 script_name = "AufstellerMitMilchSonderangebot"
 description = "Aufsteller Mit Milch Sonderangebot"
 cursor = 1
-interaction_polygon = PackedVector2Array(-30, -40, 30, -40, 30, 40, -30, 40)
+interaction_polygon = PackedVector2Array(-40, -53, 40, -53, 40, 53, -40, 53)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=83536181]
 visible = false
 modulate = Color(1, 0, 1, 1)
-polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+polygon = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)

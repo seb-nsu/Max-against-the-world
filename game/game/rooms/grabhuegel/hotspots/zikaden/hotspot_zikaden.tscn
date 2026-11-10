@@ -7,9 +7,9 @@ script = ExtResource("1_tfhb8")
 script_name = "Zikaden"
 description = "Zikaden"
 cursor = 1
-interaction_polygon = PackedVector2Array(-75, -19.5, 75, -19.5, 75, 19.5, -75, 19.5)
+interaction_polygon = PackedVector2Array(-100, -26.0, 100, -26.0, 100, 26.0, -100, 26.0)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1253287885]
 visible = false
 modulate = Color(1, 0, 1, 1)
-polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+polygon = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)

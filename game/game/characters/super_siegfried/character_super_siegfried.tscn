@@ -5,12 +5,12 @@
 
 [node name="CharacterSuperSiegfried" type="Area2D" unique_id=2002910130]
 script = ExtResource("1_1x0rm")
-walk_speed = 90.0
-dialog_pos = Vector2(0, -124)
+walk_speed = 120.0
+dialog_pos = Vector2(0, -164)
 script_name = "SuperSiegfried"
 description = "UI_OBJ_SUPER_SIEGFRIED"
 cursor = 8
-interaction_polygon = PackedVector2Array(-20, -120, 20, -120, 20, 0, -20, 0)
+interaction_polygon = PackedVector2Array(-26.5, -160, 26.5, -160, 26.5, 0, -26.5, 0)
 
 [node name="ScalingPolygon" type="CollisionPolygon2D" parent="." unique_id=956947115]
 polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
@@ -20,11 +20,11 @@ polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1097235129]
 texture_filter = 1
 texture = ExtResource("2_uv0gf")
-offset = Vector2(0, -60)
+offset = Vector2(0, -80)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=3009670]
 visible = false
-polygon = PackedVector2Array(-20, -120, 20, -120, 20, 0, -20, 0)
+polygon = PackedVector2Array(-26.5, -160, 26.5, -160, 26.5, 0, -26.5, 0)
 
 [node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=1134582256]
 visible = false
