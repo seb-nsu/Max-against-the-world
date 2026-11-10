@@ -351,7 +351,7 @@ func nach_uebergang_nil_delta(_raum, _x) -> bool:
 		Zustand.setze("W2_WECHSEL_FREI")
 		await _szene(["W2_NIL_MAX_0010", "W2_NIL_PIX_0020", "W2_NIL_MAX_0030", "W2_NIL_PIX_0040",
 			"W2_NIL_MAX_0050", "W2_NIL_PIX_0060", "W2_NIL_MAX_0070", "W2_NIL_PIX_0080",
-			"W2_NIL_MAX_0090", "W2_NIL_PIX_0100", "W2_NIL_NAR_0110", "W2_NIL_PIX_0120"])
+			"W2_NIL_MAX_0090", "W2_NIL_PIX_0100", "W2_NIL_MAX_0105", "W2_NIL_NAR_0110", "W2_NIL_PIX_0120"])
 		return true
 	# Hermes bringt Opas Papyrus beim ersten Betreten nach der ersten Fährfahrt
 	if int(Zustand.wert("W2_FAHRTEN", 0)) > 0 and _einmal("W2_OPAS_PAPYRUS"):
@@ -764,7 +764,7 @@ func _audienz() -> void:
 		return
 	await _szene(["W2_AUDI_RAM_0010", "W2_AUDI_MAX_0020", "W2_AUDI_RAM_0030", "W2_AUDI_PIX_0040",
 		"W2_AUDI_RAM_0050", "W2_AUDI_MAX_0060", "W2_AUDI_RAM_0070", "W2_AUDI_MAX_0080",
-		"W2_AUDI_PIX_0090", "W2_AUDI_RAM_0100", "W2_AUDI_MAX_0110"])
+		"W2_AUDI_PIX_0090", "W2_AUDI_MAX_0095", "W2_AUDI_RAM_0100", "W2_AUDI_MAX_0110"])
 	Zustand.setze("W2_AUDIENZ")
 
 
@@ -1498,7 +1498,7 @@ func gegenstand_sockel(_obj, iid) -> bool:
 				var m: String = sn
 				Spiel.figur_hier(sn, true, raum.get_marker_position(m) if raum.has_marker(m) else Vector2.INF)
 			await _szene(["W2_GRAB_MAX_0160", "W2_GRAB_CIC_0170", "W2_GRAB_ARC_0180", "W2_GRAB_CIC_0190",
-				"W2_GRAB_PIX_0200", "W2_GRAB_ARC_0210"])
+				"W2_GRAB_PIX_0200", "W2_GRAB_ARC_0210", "W2_GRAB_MAX_0215"])
 			await _abgeben("grabstein")
 			Zustand.loese("R10b")
 			for sn in ["Cicero", "Archimedes"]:

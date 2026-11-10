@@ -134,7 +134,7 @@ const PIXEL_AUF := {"gerd_glueck": "W4_PIXM_PIX_0010", "sitcom_vater": "W4_PIXM_
 const ERSTES_BETRETEN := {
 	"sitcom_kueche": ["W4_SIT_SMU_0010", "W4_SIT_VAT_0020", "W4_SIT_MAX_0030", "W4_SIT_SOH_0040",
 		"W4_SIT_SMU_0050", "W4_SIT_MAX_0060", "W4_SIT_VAT_0070", "W4_SIT_MAX_0080", "W4_SIT_PIX_0090"],
-	"savanne": ["W4_SAV_ERZ_0010", "W4_SAV_MAX_0020", "W4_SAV_ERZ_0030", "W4_SAV_MAX_0040", "W4_SAV_KOM_0050",
+	"savanne": ["W4_SAV_ERZ_0010", "W4_SAV_MAX_0020", "W4_SAV_ERZ_0030", "W4_SAV_MAX_0040", "W4_SAV_ERZ_0045", "W4_SAV_KOM_0050",
 		"W4_SAV_LOE_0060", "W4_SAV_KOM_0070", "W4_SAV_MAX_0080", "W4_SAV_KOM_0090", "W4_SAV_PIX_0100"],
 	"spukhaus_keller": ["W4_KELL_MAX_0010", "W4_KELL_GST_0020", "W4_KELL_MAX_0030"],
 	"spukhaus_halle": ["W4_HALL_MAX_0010", "W4_HALL_PIX_0020"],
@@ -142,7 +142,7 @@ const ERSTES_BETRETEN := {
 		"W4_KAPI_NAR_0050", "W4_KAPI_MAX_0060", "W4_KAPI_PIX_0070", "W4_KAPI_MAX_0080", "W4_KAPI_SIE_0090",
 		"W4_KAPI_FLE_0100", "W4_KAPI_WIL_0110", "W4_KAPI_MAX_0120", "W4_KAPI_WIL_0130"],
 	"fondue_fabrik": ["W4_FABR_MAX_0010", "W4_FABR_NAR_0020", "W4_FABR_MAX_0030"],
-	"empfang": ["W4_EMPF_MAX_0020", "W4_EMPF_PIX_0030", "W4_EMPF_EMP_0040", "W4_EMPF_MAX_0050", "W4_EMPF_EMP_0060"],
+	"empfang": ["W4_EMPF_MAX_0020", "W4_EMPF_PIX_0030", "W4_EMPF_EMP_0040", "W4_EMPF_MAX_0050", "W4_EMPF_EMP_0060", "W4_EMPF_MAX_0065"],
 	"kellerarchiv": ["W4_ARCH_MAX_0010"],
 	"zappmanns_studio": ["W4_STUD_ZAP_0010", "W4_STUD_MAX_0020", "W4_STUD_ZAP_0030"],
 }
@@ -420,7 +420,7 @@ func nach_uebergang_testbild(_raum, _x) -> bool:
 	if _einmal("W4_ANKUNFT"):
 		Zustand.setze("W4_WECHSEL_FREI")
 		await _szene(["W4_TEST_MAX_0010", "W4_TEST_PIX_0020", "W4_TEST_MAX_0030", "W4_TEST_PIX_0040",
-			"W4_TEST_MAX_0050", "W4_TEST_FLI_0060", "W4_TEST_MAX_0070", "W4_TEST_FLI_0080", "W4_TEST_PIX_0090",
+			"W4_TEST_MAX_0050", "W4_TEST_FLI_0060", "W4_TEST_MAX_0070", "W4_TEST_FLI_0075", "W4_TEST_FLI_0080", "W4_TEST_PIX_0090",
 			"W4_TEST_FLI_0100", "W4_TEST_MAX_0110", "W4_TEST_FLI_0120", "W4_TEST_MAX_0130", "W4_TEST_PIX_0140"])
 		return true
 	return false
@@ -809,7 +809,7 @@ func _bonus_pause() -> void:
 
 
 func _quiz_r2() -> void:
-	await _szene(["W4_GLUE_GER_0010", "W4_GLUE_MAX_0020", "W4_GLUE_GER_0030", "W4_GLUE_MAX_0040", "W4_GLUE_GER_0050"])
+	await _szene(["W4_GLUE_GER_0010", "W4_GLUE_MAX_0020", "W4_GLUE_GER_0030", "W4_GLUE_MAX_0040", "W4_GLUE_GER_0045", "W4_GLUE_GER_0050"])
 	await _fragen(QUIZ)
 	await _szene(["W4_GLUE_GER_0180", "W4_GLUE_MAX_0190", _geben.bind("billig_fernbedienung"),
 		_geben.bind("taste_umschalten"), "W4_GLUE_GER_0200", "W4_GLUE_MAX_0210", "W4_GLUE_GER_0220",
@@ -1402,7 +1402,7 @@ func pixel_flimmer(_obj, _x) -> bool:
 		var w := await Spiel.auswahl(optionen)
 		match w:
 			0:
-				await _szene(["W4_RAU_FLI_0230", "W4_RAU_PIX_0240", "W4_RAU_FLI_0250"])
+				await _szene(["W4_RAU_FLI_0230", "W4_RAU_PIX_0240", "W4_RAU_FLI_0250", "W4_RAU_PIX_0255"])
 			1:
 				await _szene(["W4_RAU_PIX_0260", "W4_RAU_FLI_0270", "W4_RAU_PIX_0280"])
 			2:

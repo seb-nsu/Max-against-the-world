@@ -125,7 +125,8 @@
        "zeile": "W4_TEST_PIX_0225",
        "sprecher": "PIX",
        "blasen": [
-        "W4_TEST_PIX_0225"
+        "W4_TEST_PIX_0225",
+        "W4_TEST_PIX_0225_2"
        ],
        "bedingung_text": "als Pixel, Kaskade",
        "mal": 2
@@ -196,7 +197,8 @@
        "zeile": "W4_TEST_PIX_0240",
        "sprecher": "PIX",
        "blasen": [
-        "W4_TEST_PIX_0240"
+        "W4_TEST_PIX_0240",
+        "W4_TEST_PIX_0240_2"
        ],
        "bedingung_text": "zweites Mal"
       }
@@ -261,7 +263,8 @@
      "zeile": "W4_ZURF_PIX_0010",
      "sprecher": "PIX",
      "blasen": [
-      "W4_ZURF_PIX_0010"
+      "W4_ZURF_PIX_0010",
+      "W4_ZURF_PIX_0010_2"
      ]
     },
     {
@@ -376,7 +379,8 @@
        "zeile": "W4_RAU_PIX_0035",
        "sprecher": "PIX",
        "blasen": [
-        "W4_RAU_PIX_0035"
+        "W4_RAU_PIX_0035",
+        "W4_RAU_PIX_0035_2"
        ],
        "mal": 2
       }
@@ -401,14 +405,16 @@
        "zeile": "W4_RAU_PIX_0330",
        "sprecher": "PIX",
        "blasen": [
-        "W4_RAU_PIX_0330"
+        "W4_RAU_PIX_0330",
+        "W4_RAU_PIX_0330_2"
        ]
       },
       {
        "zeile": "W4_RAU_PIX_0335",
        "sprecher": "PIX",
        "blasen": [
-        "W4_RAU_PIX_0335"
+        "W4_RAU_PIX_0335",
+        "W4_RAU_PIX_0335_2"
        ],
        "mal": 2
       }
@@ -607,7 +613,8 @@
        "zeile": "W4_GLUE_PIX_0460",
        "sprecher": "PIX",
        "blasen": [
-        "W4_GLUE_PIX_0460"
+        "W4_GLUE_PIX_0460",
+        "W4_GLUE_PIX_0460_2"
        ],
        "mal": 2
       }
@@ -800,7 +807,8 @@
      "zeile": "W4_ZURF_PIX_0040",
      "sprecher": "PIX",
      "blasen": [
-      "W4_ZURF_PIX_0040"
+      "W4_ZURF_PIX_0040",
+      "W4_ZURF_PIX_0040_2"
      ]
     }
    ]
@@ -958,7 +966,8 @@
        "zeile": "W4_SIT_PIX_0130",
        "sprecher": "PIX",
        "blasen": [
-        "W4_SIT_PIX_0130"
+        "W4_SIT_PIX_0130",
+        "W4_SIT_PIX_0130_2"
        ]
       },
       {
@@ -1112,7 +1121,8 @@
        "zeile": "W4_SIT_PIX_0215",
        "sprecher": "PIX",
        "blasen": [
-        "W4_SIT_PIX_0215"
+        "W4_SIT_PIX_0215",
+        "W4_SIT_PIX_0215_2"
        ],
        "mal": 2
       }
@@ -1328,7 +1338,8 @@
      "zeile": "W4_ZURF_PIX_0060",
      "sprecher": "PIX",
      "blasen": [
-      "W4_ZURF_PIX_0060"
+      "W4_ZURF_PIX_0060",
+      "W4_ZURF_PIX_0060_2"
      ]
     },
     {
@@ -1749,7 +1760,8 @@
        "zeile": "W4_SAV_PIX_0270",
        "sprecher": "PIX",
        "blasen": [
-        "W4_SAV_PIX_0270"
+        "W4_SAV_PIX_0270",
+        "W4_SAV_PIX_0270_2"
        ],
        "mal": 2
       }
@@ -1909,7 +1921,8 @@
        "zeile": "W4_VERH_PIX_0200",
        "sprecher": "PIX",
        "blasen": [
-        "W4_VERH_PIX_0200"
+        "W4_VERH_PIX_0200",
+        "W4_VERH_PIX_0200_2"
        ]
       }
      ]
@@ -2145,14 +2158,16 @@
        "zeile": "W4_FRIE_PIX_0140",
        "sprecher": "PIX",
        "blasen": [
-        "W4_FRIE_PIX_0140"
+        "W4_FRIE_PIX_0140",
+        "W4_FRIE_PIX_0140_2"
        ]
       },
       {
        "zeile": "W4_FRIE_PIX_0145",
        "sprecher": "PIX",
        "blasen": [
-        "W4_FRIE_PIX_0145"
+        "W4_FRIE_PIX_0145",
+        "W4_FRIE_PIX_0145_2"
        ],
        "mal": 2
       },
@@ -2313,14 +2328,16 @@
        "zeile": "W4_FRIE_PIX_0400",
        "sprecher": "PIX",
        "blasen": [
-        "W4_FRIE_PIX_0400"
+        "W4_FRIE_PIX_0400",
+        "W4_FRIE_PIX_0400_2"
        ]
       },
       {
        "zeile": "W4_FRIE_PIX_0405",
        "sprecher": "PIX",
        "blasen": [
-        "W4_FRIE_PIX_0405"
+        "W4_FRIE_PIX_0405",
+        "W4_FRIE_PIX_0405_2"
        ],
        "mal": 2
       }
@@ -2384,7 +2401,8 @@
      "zeile": "W4_ZURF_PIX_0120",
      "sprecher": "PIX",
      "blasen": [
-      "W4_ZURF_PIX_0120"
+      "W4_ZURF_PIX_0120",
+      "W4_ZURF_PIX_0120_2"
      ]
     }
    ]
@@ -2484,7 +2502,8 @@
        "zeile": "W4_KELL_PIX_0050",
        "sprecher": "PIX",
        "blasen": [
-        "W4_KELL_PIX_0050"
+        "W4_KELL_PIX_0050",
+        "W4_KELL_PIX_0050_2"
        ],
        "mal": 2
       }
@@ -2528,14 +2547,16 @@
        "zeile": "W4_KELL_PIX_0070",
        "sprecher": "PIX",
        "blasen": [
-        "W4_KELL_PIX_0070"
+        "W4_KELL_PIX_0070",
+        "W4_KELL_PIX_0070_2"
        ]
       },
       {
        "zeile": "W4_KELL_PIX_0075",
        "sprecher": "PIX",
        "blasen": [
-        "W4_KELL_PIX_0075"
+        "W4_KELL_PIX_0075",
+        "W4_KELL_PIX_0075_2"
        ],
        "mal": 2
       },
@@ -2698,7 +2719,8 @@
        "sprecher": "PIX",
        "blasen": [
         "W4_KELL_PIX_0160",
-        "W4_KELL_PIX_0160_2"
+        "W4_KELL_PIX_0160_2",
+        "W4_KELL_PIX_0160_3"
        ],
        "bedingung_text": "Kaskade",
        "mal": 2
@@ -2834,7 +2856,8 @@
         "zeile": "W4_KELL_PIX_0350",
         "sprecher": "PIX",
         "blasen": [
-         "W4_KELL_PIX_0350"
+         "W4_KELL_PIX_0350",
+         "W4_KELL_PIX_0350_2"
         ]
        }
       ]
@@ -3364,14 +3387,16 @@
        "zeile": "W4_KAPI_PIX_0510",
        "sprecher": "PIX",
        "blasen": [
-        "W4_KAPI_PIX_0510"
+        "W4_KAPI_PIX_0510",
+        "W4_KAPI_PIX_0510_2"
        ]
       },
       {
        "zeile": "W4_KAPI_PIX_0515",
        "sprecher": "PIX",
        "blasen": [
-        "W4_KAPI_PIX_0515"
+        "W4_KAPI_PIX_0515",
+        "W4_KAPI_PIX_0515_2"
        ],
        "mal": 2
       }
@@ -3744,7 +3769,8 @@
      "zeile": "W4_ZURF_PIX_0190",
      "sprecher": "PIX",
      "blasen": [
-      "W4_ZURF_PIX_0190"
+      "W4_ZURF_PIX_0190",
+      "W4_ZURF_PIX_0190_2"
      ]
     }
    ]
@@ -3841,14 +3867,16 @@
        "zeile": "W4_FABR_PIX_0040",
        "sprecher": "PIX",
        "blasen": [
-        "W4_FABR_PIX_0040"
+        "W4_FABR_PIX_0040",
+        "W4_FABR_PIX_0040_2"
        ]
       },
       {
        "zeile": "W4_FABR_PIX_0045",
        "sprecher": "PIX",
        "blasen": [
-        "W4_FABR_PIX_0045"
+        "W4_FABR_PIX_0045",
+        "W4_FABR_PIX_0045_2"
        ],
        "mal": 2
       },
@@ -4206,14 +4234,16 @@
        "zeile": "W4_FABR_PIX_0380",
        "sprecher": "PIX",
        "blasen": [
-        "W4_FABR_PIX_0380"
+        "W4_FABR_PIX_0380",
+        "W4_FABR_PIX_0380_2"
        ]
       },
       {
        "zeile": "W4_FABR_PIX_0385",
        "sprecher": "PIX",
        "blasen": [
-        "W4_FABR_PIX_0385"
+        "W4_FABR_PIX_0385",
+        "W4_FABR_PIX_0385_2"
        ],
        "mal": 2
       }
@@ -4924,7 +4954,8 @@
        "zeile": "W4_EMPF_PIX_0340",
        "sprecher": "PIX",
        "blasen": [
-        "W4_EMPF_PIX_0340"
+        "W4_EMPF_PIX_0340",
+        "W4_EMPF_PIX_0340_2"
        ],
        "bedingung": [
         {
@@ -4977,7 +5008,8 @@
          "zeile": "W4_EMPF_PIX_0260",
          "sprecher": "PIX",
          "blasen": [
-          "W4_EMPF_PIX_0260"
+          "W4_EMPF_PIX_0260",
+          "W4_EMPF_PIX_0260_2"
          ]
         }
        ]
@@ -5044,14 +5076,16 @@
        "zeile": "W4_EMPF_PIX_0280",
        "sprecher": "PIX",
        "blasen": [
-        "W4_EMPF_PIX_0280"
+        "W4_EMPF_PIX_0280",
+        "W4_EMPF_PIX_0280_2"
        ]
       },
       {
        "zeile": "W4_EMPF_PIX_0285",
        "sprecher": "PIX",
        "blasen": [
-        "W4_EMPF_PIX_0285"
+        "W4_EMPF_PIX_0285",
+        "W4_EMPF_PIX_0285_2"
        ],
        "mal": 2
       }
@@ -5294,14 +5328,16 @@
        "zeile": "W4_ARCH_PIX_0020",
        "sprecher": "PIX",
        "blasen": [
-        "W4_ARCH_PIX_0020"
+        "W4_ARCH_PIX_0020",
+        "W4_ARCH_PIX_0020_2"
        ]
       },
       {
        "zeile": "W4_ARCH_PIX_0025",
        "sprecher": "PIX",
        "blasen": [
-        "W4_ARCH_PIX_0025"
+        "W4_ARCH_PIX_0025",
+        "W4_ARCH_PIX_0025_2"
        ],
        "mal": 2
       },
@@ -5560,7 +5596,8 @@
      "zeile": "W4_ZURF_PIX_0230",
      "sprecher": "PIX",
      "blasen": [
-      "W4_ZURF_PIX_0230"
+      "W4_ZURF_PIX_0230",
+      "W4_ZURF_PIX_0230_2"
      ]
     }
    ]
@@ -5713,7 +5750,8 @@
        "zeile": "W4_STUD_PIX_0600",
        "sprecher": "PIX",
        "blasen": [
-        "W4_STUD_PIX_0600"
+        "W4_STUD_PIX_0600",
+        "W4_STUD_PIX_0600_2"
        ]
       },
       {
@@ -5872,7 +5910,8 @@
      "zeile": "W4_ZURF_PIX_0250",
      "sprecher": "PIX",
      "blasen": [
-      "W4_ZURF_PIX_0250"
+      "W4_ZURF_PIX_0250",
+      "W4_ZURF_PIX_0250_2"
      ]
     }
    ]
@@ -5996,7 +6035,8 @@
      "zeile": "W4_RAU_PIX_0225",
      "sprecher": "PIX",
      "blasen": [
-      "W4_RAU_PIX_0225"
+      "W4_RAU_PIX_0225",
+      "W4_RAU_PIX_0225_2"
      ],
      "mal": 2,
      "raum": "rauschen"
@@ -6488,7 +6528,9 @@
      "zeile": "W4_SAV_PIX_0385",
      "sprecher": "PIX",
      "blasen": [
-      "W4_SAV_PIX_0385"
+      "W4_SAV_PIX_0385",
+      "W4_SAV_PIX_0385_2",
+      "W4_SAV_PIX_0385_3"
      ],
      "mal": 2,
      "raum": "savanne"
@@ -7052,7 +7094,8 @@
      "zeile": "W4_SIT_PIX_0230",
      "sprecher": "PIX",
      "blasen": [
-      "W4_SIT_PIX_0230"
+      "W4_SIT_PIX_0230",
+      "W4_SIT_PIX_0230_2"
      ],
      "bedingung_text": "Pixel"
     }
@@ -7167,7 +7210,8 @@
      "zeile": "W4_INV_PIX_0035",
      "sprecher": "PIX",
      "blasen": [
-      "W4_INV_PIX_0035"
+      "W4_INV_PIX_0035",
+      "W4_INV_PIX_0035_2"
      ],
      "mal": 2
     }
@@ -7191,7 +7235,8 @@
      "zeile": "W4_KAPI_PIX_0580",
      "sprecher": "PIX",
      "blasen": [
-      "W4_KAPI_PIX_0580"
+      "W4_KAPI_PIX_0580",
+      "W4_KAPI_PIX_0580_2"
      ],
      "bedingung_text": "Pixel"
     },
@@ -7199,7 +7244,8 @@
      "zeile": "W4_KAPI_PIX_0585",
      "sprecher": "PIX",
      "blasen": [
-      "W4_KAPI_PIX_0585"
+      "W4_KAPI_PIX_0585",
+      "W4_KAPI_PIX_0585_2"
      ],
      "bedingung_text": "Pixel",
      "mal": 2
@@ -8030,6 +8076,14 @@
         "W4_KAPI_SIE_0240"
        ],
        "regie": "schwebt einen Meter zurück"
+      },
+      {
+       "zeile": "W4_KAPI_MAX_0245",
+       "sprecher": "MAX",
+       "blasen": [
+        "W4_KAPI_MAX_0245"
+       ],
+       "regie": ""
       }
      ],
      "beendet": false,
@@ -8051,7 +8105,8 @@
        "zeile": "W4_KAPI_PIX_0270",
        "sprecher": "PIX",
        "blasen": [
-        "W4_KAPI_PIX_0270"
+        "W4_KAPI_PIX_0270",
+        "W4_KAPI_PIX_0270_2"
        ],
        "regie": "nach 0260"
       }
@@ -8265,7 +8320,8 @@
        "zeile": "W4_KAPI_PIX_0430",
        "sprecher": "PIX",
        "blasen": [
-        "W4_KAPI_PIX_0430"
+        "W4_KAPI_PIX_0430",
+        "W4_KAPI_PIX_0430_2"
        ],
        "regie": "nach 0420"
       }
