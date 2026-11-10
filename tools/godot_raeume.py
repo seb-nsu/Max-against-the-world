@@ -572,7 +572,7 @@ def baue(abschnitt):
                 aktuelle["bedingung_text"] = text
             d = dialoge.setdefault(fig, {"id": fig, "script_name": pascal(fig), "optionen": []})
             d["optionen"].append(aktuelle)
-            if "öffnet" in rest or "startet" in rest:
+            if "öffnet" in rest or "startet" in rest or z["id"] in (layout.get("_startet") or []):
                 # „öffnet die Rätsel-Auswahl“: Folgezeilen spielt die Rätsel-Logik der Welt
                 aktuelle["oeffnet"] = True
                 aktuelle = None
@@ -600,6 +600,8 @@ def baue(abschnitt):
                 continue
             aktuelle["antworten"].append({"zeile": z["id"], "sprecher": z["sprecher"],
                                           "blasen": blasen(z["id"], texte), "regie": z["regie"] or z["ausloeser"]})
+            if z["id"] in (layout.get("_antwort_ende") or []):
+                aktuelle = None   # danach folgen Rätselzeilen ohne erkennbaren Auslöser
 
     # ---- Ersatzpool ---------------------------------------------------------------------------
     ersatz, wiederholung, plauder = {}, {}, {}
