@@ -675,6 +675,163 @@ UI_W3_ZIEL_LABOR,Ins Labor,Into the lab
 UI_W3_BUCHSE_ROT,Buchse Rot (Kreis),Red socket (circle)
 UI_W3_BUCHSE_GRUEN,Buchse Grün (Dreieck),Green socket (triangle)
 UI_W3_BUCHSE_GELB,Buchse Gelb (Quadrat),Yellow socket (square)
+UI_RAUM_TESTBILD,Testbild,Test card
+UI_RAUM_RAUSCHEN,Rauschen zwischen den Sendern,Static between channels
+UI_RAUM_GLUECKSRAD,Glücksrad-Studio,Wheel of fortune studio
+UI_RAUM_SITCOM_KUECHE,Sitcom-Küche,Sitcom kitchen
+UI_RAUM_SAVANNE,Savanne,Savannah
+UI_RAUM_FRIEDHOF,Musikvideo-Friedhof,Music video graveyard
+UI_RAUM_SPUKHAUS_KELLER,"Spukhaus, Keller","Haunted house, cellar"
+UI_RAUM_SPUKHAUS_HALLE,"Spukhaus, Halle","Haunted house, hall"
+UI_RAUM_KAPITOLIS,Kapitolis,Kapitolis
+UI_RAUM_FONDUE_FABRIK,Fondue-Fabrik,Fondue factory
+UI_RAUM_WERBESPOT_SET,Werbespot-Set,Commercial set
+UI_RAUM_EMPFANG,Empfang,Reception
+UI_RAUM_KELLERARCHIV,Kellerarchiv,Basement archive
+UI_RAUM_ZAPPMANNS_STUDIO,Zappmanns Studio,Zappmann's studio
+UI_OBJ_ABSPERRBAND,Absperrband,Barrier tape
+UI_OBJ_AKAZIEN,Akazien,Acacias
+UI_OBJ_APPLAUS_SCHILD,Applaus-Schild,Applause sign
+UI_OBJ_ARCHIVBAND,Archivband,Archive tape
+UI_OBJ_AUGE,Auge auf dem Stiel,Eye on a stalk
+UI_OBJ_AUTOPLAY_COUNTDOWN,Autoplay-Countdown,Autoplay countdown
+UI_OBJ_BALKEN,Balken,Bars
+UI_OBJ_BANANENSCHALE,Bananenschale,Banana peel
+UI_OBJ_BANANENSCHALE_AUF_MITTERNACHTS_TV,Bananenschale auf Mitternachts-TV,Banana peel on Midnight TV
+UI_OBJ_BANANENSCHALE_IM_COMIC_KANAL,frische Bananenschale im Comic-Kanal,Fresh banana peel on the comic channel
+UI_OBJ_BANANENSCHALE_IM_KELLER,Bananenschale im Keller,Banana peel in the cellar
+UI_OBJ_BAND_IN_DER_PRESSE,Band in der Presse,Tape in the press
+UI_OBJ_BETTLAKEN,Bettlaken,Bed sheet
+UI_OBJ_BILLIG_FERNBEDIENUNG,Billig-Fernbedienung,Cheap remote
+UI_OBJ_BOTTICHE,Bottiche,Vats
+UI_OBJ_COMIC_PANELS,Comic-Panels,Comic panels
+UI_OBJ_DISCOKUGEL,Discokugel im toten Baum,Disco ball in the dead tree
+UI_OBJ_DREHBUCH,Drehbuch des Erzählers,Narrator's script
+UI_OBJ_DREHBUCH_IN_DER_SENDERZENTRALE,Drehbuch in der Senderzentrale,Script at the broadcasting centre
+UI_OBJ_DR_WERBEPAUSE,Dr. Werbepause,Dr. Adbreak
+UI_OBJ_DURCHREICHE,Durchreiche,Serving hatch
+UI_OBJ_EINZELBILD_1,Einzelbild 1,Frame 1
+UI_OBJ_EINZELBILD_2,Einzelbild 2,Frame 2
+UI_OBJ_EINZELBILD_3,Einzelbild 3,Frame 3
+UI_OBJ_EINZELBILD_4,Einzelbild 4,Frame 4
+UI_OBJ_EMPFANGSDAME,Empfangsdame,Receptionist
+UI_OBJ_EMPFANGSTRESEN,Empfangstresen,Reception desk
+UI_OBJ_ERZAEHLER,Erzähler,Narrator
+UI_OBJ_FABRIKARBEITER,Fabrikarbeiter,Factory worker
+UI_OBJ_FBI_AGENT,FBI-Agent,FBI agent
+UI_OBJ_FELSENTHRON,Felsenthron,Rock throne
+UI_OBJ_FLAMINGOS,Flamingos,Flamingos
+UI_OBJ_FLEDERMANN,Fledermann,Fledermann
+UI_OBJ_FLIMMER,Flimmer,Flimmer
+UI_OBJ_FONDUE_KAESE,Fondue-Käse,Fondue cheese
+UI_OBJ_FONDUE_KAESE_AUF_MITTERNACHTS_TV,Fondue-Käse auf Mitternachts-TV,Fondue cheese on Midnight TV
+UI_OBJ_FONDUE_KAESE_IM_COMIC_KANAL,Fondue-Käse im Comic-Kanal,Fondue cheese on the comic channel
+UI_OBJ_GEIER,Geier,Vulture
+UI_OBJ_GEIST,Geist,Ghost
+UI_OBJ_GEISTER,Geister,Ghosts
+UI_OBJ_GEISTERBILDER_IM_RAUSCHEN,Geisterbilder im Rauschen,Ghost images in the static
+UI_OBJ_GEPARD,Gepard,Cheetah
+UI_OBJ_GERD_GLUECK,Gerd Glück,Gerd Glück
+UI_OBJ_GERUEMPEL,Gerümpel unter Laken,Junk under sheets
+UI_OBJ_GESTAPELTE_PREISE,Gestapelte Preise,Stacked prizes
+UI_OBJ_GLUECKSRAD,Glücksrad,Wheel of fortune
+UI_OBJ_GLUEHBIRNE,Glühbirne,Light bulb
+UI_OBJ_GLUEHBIRNENREIHEN,Glühbirnenreihen,Rows of bulbs
+UI_OBJ_GOLDENES_SOFA,goldenes Sofa,Golden sofa
+UI_OBJ_GOLDENE_FERNBEDIENUNG,Goldene Fernbedienung,Golden remote
+UI_OBJ_GRAEBER,Gräber,Graves
+UI_OBJ_HEBEL,Hebel,Lever
+UI_OBJ_HINTERGRUND,Hintergrund,Backdrop
+UI_OBJ_HYAENE,Hyäne,Hyena
+UI_OBJ_JUNGER_ZAPPMANN,Junger Zappmann,Young Zappmann
+UI_OBJ_KAMERA,Kamera,Camera
+UI_OBJ_KANDIDATENPODEST,Kandidatenpodest,Contestant's podium
+UI_OBJ_KAPUTTES_RADIO,Kaputtes Radio,Broken radio
+UI_OBJ_KASSETTEN,Kassetten-Sammlung,Cassette collection
+UI_OBJ_KEKSDOSE,Keksdose,Biscuit tin
+UI_OBJ_KELLERFENSTER,Kellerfenster,Cellar window
+UI_OBJ_KETTEN,Ketten,Chains
+UI_OBJ_KIOSK,Kiosk,Kiosk
+UI_OBJ_KISTE,Kiste mit Krabbeltieren,Box of creepy-crawlies
+UI_OBJ_KLAPPE,Klappe,Clapperboard
+UI_OBJ_KOMMISSAR,Kommissar,Inspector
+UI_OBJ_KRIECHWEG,Kriechweg,Crawl path
+UI_OBJ_KUECHENTUER,Küchentür,Kitchen door
+UI_OBJ_LACHKONSERVEN_MASCHINE,Lachkonserven-Maschine,Laugh track machine
+UI_OBJ_LATERNE,Laterne,Street lamp
+UI_OBJ_LAUFBAND,Laufband,Conveyor belt
+UI_OBJ_LAUFSTEG,Laufsteg,Catwalk
+UI_OBJ_LEUCHTFLIESEN,Leuchtfliesen,Light-up tiles
+UI_OBJ_LICHTERKETTE,Lichterkette,String lights
+UI_OBJ_LICHTROEHRE,Lichtröhre,Light tube
+UI_OBJ_LICHTROEHRE_DELUXE,Lichtröhre Deluxe,Light tube deluxe
+UI_OBJ_LICHTROEHRE_IM_COMIC_KANAL,Lichtröhre im Comic-Kanal,Light tube on the comic channel
+UI_OBJ_LICHTROEHRE_IN_DER_SAVANNE,Lichtröhre in der Savanne,Light tube in the savannah
+UI_OBJ_LOEWE,Löwe,Lion
+UI_OBJ_LOGO_AN_DER_WAND,Logo an der Wand,Logo on the wall
+UI_OBJ_MIKROFONANGEL,Mikrofonangel,Boom mic
+UI_OBJ_MODERATIONSPULT,Moderationspult,Host's desk
+UI_OBJ_MOND,Mond,Moon
+UI_OBJ_MONITORWAND,Monitorwand,Monitor wall
+UI_OBJ_MUELLPRESSE,Müllpresse,Trash compactor
+UI_OBJ_NACHRICHTENSPRECHER,Nachrichtensprecher,Newsreader
+UI_OBJ_NASHORN,Nashorn,Rhino
+UI_OBJ_NEBEL,Nebel,Fog
+UI_OBJ_NEBEL_IN_DER_HALLE,Nebel in der Halle,Fog in the hall
+UI_OBJ_NEONROEHRE,Neonröhre,Neon tube
+UI_OBJ_NORMALER_KAESE_IN_DER_FABRIK,normaler Käse in der Fabrik,Ordinary cheese in the factory
+UI_OBJ_PANEL_EXPLOSION,Panel Explosion,Panel: explosion
+UI_OBJ_PANEL_HELD_SPRINGT,Panel Held springt,Panel: hero jumps
+UI_OBJ_PANEL_SCHURKE_IM_KAESE,Panel Schurke im Käse,Panel: villain in the cheese
+UI_OBJ_PANEL_SCHURKE_LACHT,Panel Schurke lacht,Panel: villain laughs
+UI_OBJ_PAPPE_PUBLIKUM,Pappe-Publikum,Cardboard audience
+UI_OBJ_PLASTIKPALME,Plastikpalme,Plastic palm
+UI_OBJ_PORTRAET,Porträt,Portrait
+UI_OBJ_PRODUKTPODEST,Produktpodest,Product pedestal
+UI_OBJ_PROGRAMMZEITSCHRIFT,Programmzeitschrift,TV guide
+UI_OBJ_PUBLIKUM,Publikum,Audience
+UI_OBJ_QUOTENANZEIGE,Quotenanzeige,Ratings display
+UI_OBJ_RAUSCHEN_AM_RAND,Rauschen am Rand,Static at the edge
+UI_OBJ_REGENWOLKE,Regenwolke über dem Schlagzeug,Rain cloud over the drum kit
+UI_OBJ_REGIESTUHL,Regiestuhl,Director's chair
+UI_OBJ_ROEHRENFERNSEHER,Röhrenfernseher mit Rauschen,CRT TV with static
+UI_OBJ_SAMTKORDELN,Samtkordeln,Velvet ropes
+UI_OBJ_SCHEINWERFER,Scheinwerfer,Spotlight
+UI_OBJ_SCHERBEN_DER_KEKSDOSE,Scherben der Keksdose,Shards of the biscuit tin
+UI_OBJ_SICHERHEITSMANN,Sicherheitsmann,Security man
+UI_OBJ_SITCOM_MUTTER,Sitcom-Mutter,Sitcom mum
+UI_OBJ_SITCOM_SOHN,Sitcom-Sohn,Sitcom son
+UI_OBJ_SITCOM_VATER,Sitcom-Vater,Sitcom dad
+UI_OBJ_SKATEBOARD,Skateboard,Skateboard
+UI_OBJ_SONNENPLATZ_AM_FELSEN,Sonnenplatz am Felsen,Sunny spot on the rock
+UI_OBJ_SPLITSCREEN_ADAPTER,Splitscreen-Adapter,Split-screen adapter
+UI_OBJ_SPRECHBLASEN_SCHILDER,Sprechblasen-Schilder,Speech-bubble signs
+UI_OBJ_STUDIOLICHT_UND_SET_RAND,Studiolicht und Set-Rand,Studio lights and set edge
+UI_OBJ_SUCHSCHEINWERFER,Käse-Suchscheinwerfer am Himmel,Cheese searchlight in the sky
+UI_OBJ_SUPER_SIEGFRIED,Super-Siegfried,Super-Siegfried
+UI_OBJ_TASTE_PAUSE,Taste Pause,Pause button
+UI_OBJ_TASTE_RUECKSPULEN,Taste Rückspulen,Rewind button
+UI_OBJ_TASTE_SENDERSUCHLAUF,Taste Sendersuchlauf,Channel search button
+UI_OBJ_TASTE_STUMM,Taste Stumm,Mute button
+UI_OBJ_TASTE_UMSCHALTEN,Taste Umschalten,Channel button
+UI_OBJ_TASTE_UNTERTITEL,Taste Untertitel,Subtitles button
+UI_OBJ_TELEFON_LEUCHTSCHRIFT,Telefon-Leuchtschrift,Neon phone sign
+UI_OBJ_TESTKREIS,Testkreis,Test circle
+UI_OBJ_TROEDEL_EXPERTE,Trödel-Experte,Antiques expert
+UI_OBJ_UMHAENGE_SCHILD_NICHT_DER_FLEDERMANN,Umhänge-Schild „Nicht der Fledermann“,"Sign ""Not the Fledermann"""
+UI_OBJ_VERKETTETE_TUER,verkettete Tür,Chained door
+UI_OBJ_WAND_MIT_GOLDENEN_SCHALLPLATTEN,Wand mit goldenen Schallplatten,Wall of gold records
+UI_OBJ_WARNSCHILDER,Warnschilder,Warning signs
+UI_OBJ_WASSERLOCH,Wasserloch,Watering hole
+UI_OBJ_WASSERTURM_MIT_SPINNENNETZ,Wasserturm mit Spinnennetz,Water tower with cobweb
+UI_OBJ_WERBEPAUSE,Werbepause,Ad break
+UI_OBJ_WETTKANDIDAT,Wettkandidat,Rival contestant
+UI_OBJ_WOLKENKRATZER,Wolkenkratzer,Skyscrapers
+UI_OBJ_WONDER_WILMA,Wonder-Wilma,Wonder-Wilma
+UI_OBJ_ZAHLENFELD_MIT_CODE,Zahlenfeld mit Code,Keypad
+UI_OBJ_ZAPPMANN,Zappmann,Zappmann
+UI_OBJ_ZOMBIE,Zombie,Zombie
+UI_OBJ_ZOMBIES,Zombies,Zombies
 P0_WOHN_MAX_0010,Ein Balken. Ein einziger Balken.,
 P0_WOHN_MAX_0020,Und der ist auch nur zur Deko da.,
 P0_WOHN_OPA_0030,Maaax! Komm mal rauf! Wissenschaft!,

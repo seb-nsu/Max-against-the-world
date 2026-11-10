@@ -421,7 +421,7 @@ def baue(abschnitt):
                 ziel = aufloesen(raum, teil)
                 ablegen("kombinieren" if ziel[0] == "gegenstand" else "gegenstand_auf", ziel, dict(eintrag), raum)
             continue
-        elif ":" not in a and (z["block"].startswith("Ansehen") or pixel):
+        elif ":" not in a and not a.startswith("Option") and (z["block"].startswith("Ansehen") or pixel):
             name, art = teile[0], "ansehen"
         else:
             continue
@@ -641,6 +641,9 @@ def platzhalter(plan):
     PLATZHALTER.mkdir(parents=True, exist_ok=True)
     font = ImageFont.load_default_imagefont()
     texte = texte_schluessel()
+    # Die eingebaute Pixelschrift kennt nur Latin-1 (deutsche Anführungszeichen ersetzen)
+    texte = {k: str(v).replace("„", '"').replace("“", '"').encode("latin-1", "replace").decode("latin-1")
+             for k, v in texte.items()}
 
     def farbe(hexwert, faktor=1.0):
         h = hexwert.lstrip("#")
