@@ -345,6 +345,7 @@
    "benoetigt": [],
    "ergibt": [],
    "schalter": [
+    "FI_R01_GELOEST",
     "LUKE_ERKANNT"
    ],
    "optional": false
@@ -413,6 +414,7 @@
    ],
    "ergibt": [],
    "schalter": [
+    "FI_R02_GELOEST",
     "KEKSE_DABEI"
    ],
    "optional": true

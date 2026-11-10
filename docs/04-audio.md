@@ -30,12 +30,12 @@ Das Audio-Gerüst steht (`game/skripte/klang.gd`, Autoload „Klang“): Jede St
 | --- | --- | --- | --- |
 | Musik | `audio/musik/<id>.ogg` | `titel`, `zappomat`, `werbeblock` und die Raum-Stücke | Raum-Stücke aus der Welt-Tabelle (`musik: <ID>`); wechselt mit einer Sekunde Überblendung, dasselbe Stück läuft weiter |
 | Jingles | `audio/jingles/<id>.ogg` | `aufgehoben`, `geloest`, `welt_geschafft`, `falsch`, `lachkonserve`, `gluecksrad` | Gegenstand bekommen, Rätselschritt gelöst, Welt geschafft, Ersatzzeile |
-| Geräusche | `audio/geraeusche/<id>.ogg` | `ui_klick`, `inventar`, `seite`, `kombinieren`, `fehler`, `wechsel`, `hinweis`, `speichern`, `nahansicht`, `notiz`, `zappomat_sog`, `werbeblock_start` | Bedienung und Spielsysteme (Tabelle Geräusche) |
+| Geräusche | `audio/geraeusche/<id>.ogg` | `ui_klick`, `inventar`, `seite`, `kombinieren`, `fehler`, `wechsel`, `hinweis`, `speichern`, `nahansicht`, `notiz`, `zappomat_sog`, `werbeblock_start`, `umschalten` (Fernbedienung), `gong` (Welt 4, Rauschen um acht) | Bedienung und Spielsysteme (Tabelle Geräusche) |
 | Stimmen | `audio/stimmen/<sprache>/<ZEILEN_ID>.ogg` | Zeilen-ID der Sprechblase, Kaskaden mit `_2`, `_3` | `export/audio-zeilen.csv` aus `tools/skript_export.py`; NAR bleibt stumm |
 
 `.wav` und `.mp3` gehen auch. `python3 tools/audio_liste.py` schreibt `export/audio-stand.csv` (welche ID gebraucht wird, wo, und ob die Datei schon da ist); mit `--pruefen` meldet es Dateien, deren Name zu keiner ID passt (läuft in GitHub Actions). Lautstärken kommen aus den Optionen über die Busse Musik, Geraeusche und Stimmen.
 
-**Brabbel als Probe:** Die Option „Brabbel-Laute (Probe)“ erzeugt ohne Stimmdatei je Silbe einen kurzen Ton, Tonhöhe und Tempo je Figur (Max, Pixel, Opa, Toadi, sonst ein Standardton). Das ist nur zum Ausprobieren für die Entscheidung über die Sprachausgabe gedacht und steht standardmäßig aus.
+**Brabbel-Laute und Platzhalter-Töne (bis die echten Dateien da sind):** Ohne Stimmdatei brabbelt jede Figur: je Silbe des angezeigten Textes ein kurzer Ton, Tonhöhe und Tempo je Figur aus `game/skripte/klang.gd` (rund 30 Hauptfiguren eingestellt, alle übrigen bekommen Werte aus ihrem Kürzel, damit jede anders klingt; Erzähler, Toilette, Schrank und Berater bleiben stumm). Fehlt eine Datei für ein Geräusch oder einen Jingle, erzeugt `game/skripte/platzhalter_klang.gd` einen kurzen Ton aus Sinus, Rechteck, Rauschen oder Glocke (eigenes Rezept für jede ID der Tabelle oben, unbekannte IDs bekommen einen Ton, dessen Höhe aus der ID folgt). Beides steht in den Optionen („Brabbel-Laute“, „Platzhalter-Töne“) und ist standardmäßig an; eine echte Datei hat immer Vorrang. Im Headless-Test bleibt beides aus. Die Entscheidung über die Sprachausgabe (Tabelle unten) bleibt offen; Brabbel ist bis dahin der Platzhalter.
 
 ## Prompt-Regeln
 
@@ -110,7 +110,7 @@ Alle mit ElevenLabs Sound Effects oder aus CC0-Sammlungen. Immer mehrere Variant
 | Welt 1 | magic wand sparkle; potion bottle uncorked; goat bleat comical; chicken cluck; anvil hammer strike; tavern crowd murmur loop; frog croak |
 | Welt 2 | sand footsteps; crocodile splash; hourglass sand trickling; stone grinding; bronze discus whoosh; crowd cheering in a stadium; bathtub splash |
 | Welt 3 | heavy rain on neon street loop; phone booth ringing old-fashioned; hydraulic blast door opening; computer terminal beeps; laser barrier hum; rubber chicken squeak; digital glitch; small robot beeping and whistling in fast rude tones (Piepsi, 6–8 Varianten); hologram flicker hum with crackle |
-| Welt 4 | TV static loop; tape rewind squeal; pause click with a tape stop; game show wheel ticking slowing down; studio audience laughter; zombie groan; comic punch impact; fluorescent tube buzzing and swooshing when swung; rusty trash compactor walls grinding with crunching video tapes |
+| Welt 4 | TV static loop; tape rewind squeal; pause click with a tape stop; game show wheel ticking slowing down; studio audience laughter; zombie groan; comic punch impact; fluorescent tube buzzing and swooshing when swung; rusty trash compactor walls grinding with crunching video tapes; deep evening news gong echoing through TV static, 3 seconds (`gong`) |
 
 ## Sprachausgabe
 

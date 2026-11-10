@@ -129,6 +129,15 @@
         "W2_NIL_PIX_0215"
        ],
        "mal": 2
+      },
+      {
+       "zeile": "W2_NIL_MAX_0400",
+       "sprecher": "MAX",
+       "blasen": [
+        "W2_NIL_MAX_0400"
+       ],
+       "bedingung_text": "Spielfigur Pixel betritt die Fähre",
+       "figur": "PIX"
       }
      ],
      "benutzen": [
@@ -424,7 +433,29 @@
      "ansehen": []
     }
    ],
-   "zurufe": []
+   "zurufe": [
+    {
+     "zeile": "W2_ZURU_PIX_0010",
+     "sprecher": "PIX",
+     "blasen": [
+      "W2_ZURU_PIX_0010"
+     ]
+    },
+    {
+     "zeile": "W2_ZURU_PIX_0020",
+     "sprecher": "PIX",
+     "blasen": [
+      "W2_ZURU_PIX_0020"
+     ]
+    },
+    {
+     "zeile": "W2_ZURU_PIX_0100",
+     "sprecher": "PIX",
+     "blasen": [
+      "W2_ZURU_PIX_0100"
+     ]
+    }
+   ]
   },
   {
    "id": "thronsaal_ramses",
@@ -928,7 +959,22 @@
      ]
     }
    ],
-   "zurufe": []
+   "zurufe": [
+    {
+     "zeile": "W2_ZURU_PIX_0030",
+     "sprecher": "PIX",
+     "blasen": [
+      "W2_ZURU_PIX_0030"
+     ]
+    },
+    {
+     "zeile": "W2_ZURU_PIX_0100",
+     "sprecher": "PIX",
+     "blasen": [
+      "W2_ZURU_PIX_0100"
+     ]
+    }
+   ]
   },
   {
    "id": "palastkueche",
@@ -1008,6 +1054,14 @@
         "W2_KUCH_MAX_0035"
        ],
        "mal": 2
+      },
+      {
+       "zeile": "W2_KUCH_PIX_0480",
+       "sprecher": "PIX",
+       "blasen": [
+        "W2_KUCH_PIX_0480"
+       ],
+       "figur": "PIX"
       }
      ],
      "gegenstand_auf": [
@@ -1321,7 +1375,16 @@
       "blasen": [
        "W2_KUCH_MAX_0110"
       ],
-      "bedingung_text": "Sanduhr-Symbol im Inventar"
+      "bedingung_text": "Sanduhr-Symbol im Inventar",
+      "folge": [
+       {
+        "zeile": "W2_KUCH_NEB_0120",
+        "sprecher": "NEB",
+        "blasen": [
+         "W2_KUCH_NEB_0120"
+        ]
+       }
+      ]
      }
     }
    ],
@@ -1345,7 +1408,22 @@
      "ansehen": []
     }
    ],
-   "zurufe": []
+   "zurufe": [
+    {
+     "zeile": "W2_ZURU_PIX_0040",
+     "sprecher": "PIX",
+     "blasen": [
+      "W2_ZURU_PIX_0040"
+     ]
+    },
+    {
+     "zeile": "W2_ZURU_PIX_0100",
+     "sprecher": "PIX",
+     "blasen": [
+      "W2_ZURU_PIX_0100"
+     ]
+    }
+   ]
   },
   {
    "id": "sphinx",
@@ -1660,7 +1738,22 @@
      "ansehen": []
     }
    ],
-   "zurufe": []
+   "zurufe": [
+    {
+     "zeile": "W2_ZURU_PIX_0050",
+     "sprecher": "PIX",
+     "blasen": [
+      "W2_ZURU_PIX_0050"
+     ]
+    },
+    {
+     "zeile": "W2_ZURU_PIX_0100",
+     "sprecher": "PIX",
+     "blasen": [
+      "W2_ZURU_PIX_0100"
+     ]
+    }
+   ]
   },
   {
    "id": "faehrsteg_olympia",
@@ -1897,7 +1990,22 @@
      ]
     }
    ],
-   "zurufe": []
+   "zurufe": [
+    {
+     "zeile": "W2_ZURU_PIX_0010",
+     "sprecher": "PIX",
+     "blasen": [
+      "W2_ZURU_PIX_0010"
+     ]
+    },
+    {
+     "zeile": "W2_ZURU_PIX_0100",
+     "sprecher": "PIX",
+     "blasen": [
+      "W2_ZURU_PIX_0100"
+     ]
+    }
+   ]
   },
   {
    "id": "agora",
@@ -2438,7 +2546,22 @@
      "ansehen": []
     }
    ],
-   "zurufe": []
+   "zurufe": [
+    {
+     "zeile": "W2_ZURU_PIX_0080",
+     "sprecher": "PIX",
+     "blasen": [
+      "W2_ZURU_PIX_0080"
+     ]
+    },
+    {
+     "zeile": "W2_ZURU_PIX_0100",
+     "sprecher": "PIX",
+     "blasen": [
+      "W2_ZURU_PIX_0100"
+     ]
+    }
+   ]
   },
   {
    "id": "startbuero",
@@ -2729,7 +2852,22 @@
      "ansehen": []
     }
    ],
-   "zurufe": []
+   "zurufe": [
+    {
+     "zeile": "W2_ZURU_PIX_0070",
+     "sprecher": "PIX",
+     "blasen": [
+      "W2_ZURU_PIX_0070"
+     ]
+    },
+    {
+     "zeile": "W2_ZURU_PIX_0100",
+     "sprecher": "PIX",
+     "blasen": [
+      "W2_ZURU_PIX_0100"
+     ]
+    }
+   ]
   },
   {
    "id": "stadion",
@@ -3142,7 +3280,29 @@
      "ansehen": []
     }
    ],
-   "zurufe": []
+   "zurufe": [
+    {
+     "zeile": "W2_STAD_PIX_0240",
+     "sprecher": "PIX",
+     "blasen": [
+      "W2_STAD_PIX_0240"
+     ]
+    },
+    {
+     "zeile": "W2_ZURU_PIX_0090",
+     "sprecher": "PIX",
+     "blasen": [
+      "W2_ZURU_PIX_0090"
+     ]
+    },
+    {
+     "zeile": "W2_ZURU_PIX_0100",
+     "sprecher": "PIX",
+     "blasen": [
+      "W2_ZURU_PIX_0100"
+     ]
+    }
+   ]
   },
   {
    "id": "hafen_syrakus",
@@ -3365,10 +3525,20 @@
      "gegenstand": "tintenfass",
      "ansehen": [],
      "nehmen": {
-      "zeile": "W2_HAFS_PIX_0050",
-      "sprecher": "PIX",
+      "zeile": "W2_HAFS_MAX_0040",
+      "sprecher": "MAX",
       "blasen": [
-       "W2_HAFS_PIX_0050"
+       "W2_HAFS_MAX_0040"
+      ],
+      "bedingung_text": "wird „Tintenfass“ im Inventar",
+      "folge": [
+       {
+        "zeile": "W2_HAFS_PIX_0050",
+        "sprecher": "PIX",
+        "blasen": [
+         "W2_HAFS_PIX_0050"
+        ]
+       }
       ]
      }
     }
@@ -3433,6 +3603,13 @@
      "sprecher": "PIX",
      "blasen": [
       "W2_HAFS_PIX_0090"
+     ]
+    },
+    {
+     "zeile": "W2_ZURU_PIX_0100",
+     "sprecher": "PIX",
+     "blasen": [
+      "W2_ZURU_PIX_0100"
      ]
     }
    ]
@@ -3523,6 +3700,23 @@
         "W2_WERK_PIX_0055"
        ],
        "mal": 2
+      },
+      {
+       "zeile": "W2_KRON_MAX_0210",
+       "sprecher": "MAX",
+       "blasen": [
+        "W2_KRON_MAX_0210"
+       ],
+       "figur": "PIX",
+       "folge": [
+        {
+         "zeile": "W2_KRON_PIX_0220",
+         "sprecher": "PIX",
+         "blasen": [
+          "W2_KRON_PIX_0220"
+         ]
+        }
+       ]
       }
      ]
     },
@@ -3619,6 +3813,38 @@
         "W2_WERK_MAX_0185"
        ],
        "mal": 2
+      }
+     ],
+     "benutzen": [
+      {
+       "zeile": "W2_WERK_ARC_0190",
+       "sprecher": "ARC",
+       "blasen": [
+        "W2_WERK_ARC_0190"
+       ],
+       "folge": [
+        {
+         "zeile": "W2_WERK_ARC_0200",
+         "sprecher": "ARC",
+         "blasen": [
+          "W2_WERK_ARC_0200"
+         ]
+        },
+        {
+         "zeile": "W2_WERK_MAX_0210",
+         "sprecher": "MAX",
+         "blasen": [
+          "W2_WERK_MAX_0210"
+         ]
+        },
+        {
+         "zeile": "W2_WERK_PIX_0220",
+         "sprecher": "PIX",
+         "blasen": [
+          "W2_WERK_PIX_0220"
+         ]
+        }
+       ]
       }
      ]
     },
@@ -4032,7 +4258,22 @@
      "ansehen": []
     }
    ],
-   "zurufe": []
+   "zurufe": [
+    {
+     "zeile": "W2_ZURU_PIX_0060",
+     "sprecher": "PIX",
+     "blasen": [
+      "W2_ZURU_PIX_0060"
+     ]
+    },
+    {
+     "zeile": "W2_ZURU_PIX_0100",
+     "sprecher": "PIX",
+     "blasen": [
+      "W2_ZURU_PIX_0100"
+     ]
+    }
+   ]
   },
   {
    "id": "grabhuegel",
@@ -4128,6 +4369,14 @@
         "W2_GRAB_MAX_0135"
        ],
        "mal": 2
+      },
+      {
+       "zeile": "W2_GRAB_MAX_0260",
+       "sprecher": "MAX",
+       "blasen": [
+        "W2_GRAB_MAX_0260"
+       ],
+       "figur": "PIX"
       }
      ],
      "gegenstand_auf": [
@@ -4307,7 +4556,15 @@
      "ansehen": []
     }
    ],
-   "zurufe": []
+   "zurufe": [
+    {
+     "zeile": "W2_ZURU_PIX_0100",
+     "sprecher": "PIX",
+     "blasen": [
+      "W2_ZURU_PIX_0100"
+     ]
+    }
+   ]
   }
  ],
  "figuren": [
@@ -4488,7 +4745,16 @@
       "W2_NIL_FAE_0490"
      ],
      "gegenstand": "thunfischdose",
-     "raum": "nil_delta"
+     "raum": "nil_delta",
+     "folge": [
+      {
+       "zeile": "W2_NIL_PIX_0500",
+       "sprecher": "PIX",
+       "blasen": [
+        "W2_NIL_PIX_0500"
+       ]
+      }
+     ]
     }
    ],
    "benutzen": []
@@ -5893,6 +6159,14 @@
       "W2_HIER_MAX_0035"
      ],
      "mal": 2
+    },
+    {
+     "zeile": "W2_HIER_MAX_0300",
+     "sprecher": "MAX",
+     "blasen": [
+      "W2_HIER_MAX_0300"
+     ],
+     "figur": "PIX"
     }
    ],
    "benutzen": [],
@@ -7231,6 +7505,22 @@
         "W2_NIL_FAE_0300"
        ],
        "regie": ""
+      },
+      {
+       "zeile": "W2_NIL_MAX_1010",
+       "sprecher": "MAX",
+       "blasen": [
+        "W2_NIL_MAX_1010"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W2_NIL_FAE_1020",
+       "sprecher": "FAE",
+       "blasen": [
+        "W2_NIL_FAE_1020"
+       ],
+       "regie": ""
       }
      ],
      "beendet": false,
@@ -7269,6 +7559,30 @@
        "sprecher": "FAE",
        "blasen": [
         "W2_NIL_FAE_0350"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W2_NIL_MAX_1030",
+       "sprecher": "MAX",
+       "blasen": [
+        "W2_NIL_MAX_1030"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W2_NIL_FAE_1040",
+       "sprecher": "FAE",
+       "blasen": [
+        "W2_NIL_FAE_1040"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W2_NIL_PIX_1050",
+       "sprecher": "PIX",
+       "blasen": [
+        "W2_NIL_PIX_1050"
        ],
        "regie": ""
       }
@@ -7352,6 +7666,22 @@
         "W2_NIL_STM_0790"
        ],
        "regie": ""
+      },
+      {
+       "zeile": "W2_NIL_MAX_1060",
+       "sprecher": "MAX",
+       "blasen": [
+        "W2_NIL_MAX_1060"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W2_NIL_PIX_1070",
+       "sprecher": "PIX",
+       "blasen": [
+        "W2_NIL_PIX_1070"
+       ],
+       "regie": ""
       }
      ],
      "beendet": false,
@@ -7368,6 +7698,22 @@
         "W2_NIL_STM_0810"
        ],
        "regie": "Hinweis Rätsel 10"
+      },
+      {
+       "zeile": "W2_NIL_MAX_1080",
+       "sprecher": "MAX",
+       "blasen": [
+        "W2_NIL_MAX_1080"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W2_NIL_STM_1090",
+       "sprecher": "STM",
+       "blasen": [
+        "W2_NIL_STM_1090"
+       ],
+       "regie": ""
       }
      ],
      "beendet": false,
@@ -7449,6 +7795,22 @@
         "W2_HIER_SCH_0050"
        ],
        "regie": "Hinweis auf die Inschrift"
+      },
+      {
+       "zeile": "W2_HIER_MAX_0310",
+       "sprecher": "MAX",
+       "blasen": [
+        "W2_HIER_MAX_0310"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W2_HIER_SCH_0320",
+       "sprecher": "SCH",
+       "blasen": [
+        "W2_HIER_SCH_0320"
+       ],
+       "regie": ""
       }
      ],
      "beendet": false,
@@ -7465,6 +7827,22 @@
         "W2_HIER_SCH_0070"
        ],
        "regie": ""
+      },
+      {
+       "zeile": "W2_HIER_MAX_0330",
+       "sprecher": "MAX",
+       "blasen": [
+        "W2_HIER_MAX_0330"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W2_HIER_SCH_0340",
+       "sprecher": "SCH",
+       "blasen": [
+        "W2_HIER_SCH_0340"
+       ],
+       "regie": ""
       }
      ],
      "beendet": false,
@@ -7479,6 +7857,22 @@
        "sprecher": "SCH",
        "blasen": [
         "W2_HIER_SCH_0090"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W2_HIER_PIX_0350",
+       "sprecher": "PIX",
+       "blasen": [
+        "W2_HIER_PIX_0350"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W2_HIER_SCH_0360",
+       "sprecher": "SCH",
+       "blasen": [
+        "W2_HIER_SCH_0360"
        ],
        "regie": ""
       }
@@ -7548,6 +7942,22 @@
         "W2_AUDI_RAM_0220"
        ],
        "regie": ""
+      },
+      {
+       "zeile": "W2_AUDI_MAX_0360",
+       "sprecher": "MAX",
+       "blasen": [
+        "W2_AUDI_MAX_0360"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W2_AUDI_RAM_0370",
+       "sprecher": "RAM",
+       "blasen": [
+        "W2_AUDI_RAM_0370"
+       ],
+       "regie": ""
       }
      ],
      "beendet": false,
@@ -7588,6 +7998,22 @@
         "W2_AUDI_RAM_0270"
        ],
        "regie": ""
+      },
+      {
+       "zeile": "W2_AUDI_MAX_0380",
+       "sprecher": "MAX",
+       "blasen": [
+        "W2_AUDI_MAX_0380"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W2_AUDI_RAM_0390",
+       "sprecher": "RAM",
+       "blasen": [
+        "W2_AUDI_RAM_0390"
+       ],
+       "regie": ""
       }
      ],
      "beendet": false,
@@ -7604,6 +8030,22 @@
         "W2_AUDI_RAM_0290"
        ],
        "regie": "führt die Nachsicht-Regel ein"
+      },
+      {
+       "zeile": "W2_AUDI_PIX_0400",
+       "sprecher": "PIX",
+       "blasen": [
+        "W2_AUDI_PIX_0400"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W2_AUDI_RAM_0410",
+       "sprecher": "RAM",
+       "blasen": [
+        "W2_AUDI_RAM_0410"
+       ],
+       "regie": ""
       }
      ],
      "beendet": false,
@@ -7618,6 +8060,22 @@
        "sprecher": "RAM",
        "blasen": [
         "W2_AUDI_RAM_0310"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W2_AUDI_MAX_0420",
+       "sprecher": "MAX",
+       "blasen": [
+        "W2_AUDI_MAX_0420"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W2_AUDI_RAM_0430",
+       "sprecher": "RAM",
+       "blasen": [
+        "W2_AUDI_RAM_0430"
        ],
        "regie": ""
       }
@@ -7668,6 +8126,22 @@
         "W2_KUCH_NEB_0170"
        ],
        "regie": ""
+      },
+      {
+       "zeile": "W2_KUCH_MAX_0490",
+       "sprecher": "MAX",
+       "blasen": [
+        "W2_KUCH_MAX_0490"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W2_KUCH_NEB_0500",
+       "sprecher": "NEB",
+       "blasen": [
+        "W2_KUCH_NEB_0500"
+       ],
+       "regie": ""
       }
      ],
      "beendet": false,
@@ -7708,6 +8182,22 @@
         "W2_KUCH_NEB_0220"
        ],
        "regie": "Hinweis Rätsel 6"
+      },
+      {
+       "zeile": "W2_KUCH_MAX_0510",
+       "sprecher": "MAX",
+       "blasen": [
+        "W2_KUCH_MAX_0510"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W2_KUCH_NEB_0520",
+       "sprecher": "NEB",
+       "blasen": [
+        "W2_KUCH_NEB_0520"
+       ],
+       "regie": ""
       }
      ],
      "beendet": false,
@@ -7724,6 +8214,22 @@
         "W2_KUCH_NEB_0240"
        ],
        "regie": "Hinweis Weg B"
+      },
+      {
+       "zeile": "W2_KUCH_MAX_0530",
+       "sprecher": "MAX",
+       "blasen": [
+        "W2_KUCH_MAX_0530"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W2_KUCH_PIX_0540",
+       "sprecher": "PIX",
+       "blasen": [
+        "W2_KUCH_PIX_0540"
+       ],
+       "regie": ""
       }
      ],
      "beendet": false,
@@ -7791,6 +8297,22 @@
         "W2_SPHX_SPH_0160"
        ],
        "regie": ""
+      },
+      {
+       "zeile": "W2_SPHX_MAX_0590",
+       "sprecher": "MAX",
+       "blasen": [
+        "W2_SPHX_MAX_0590"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W2_SPHX_SPH_0600",
+       "sprecher": "SPH",
+       "blasen": [
+        "W2_SPHX_SPH_0600"
+       ],
+       "regie": ""
       }
      ],
      "beendet": false,
@@ -7805,6 +8327,22 @@
        "sprecher": "SPH",
        "blasen": [
         "W2_SPHX_SPH_0180"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W2_SPHX_PIX_0610",
+       "sprecher": "PIX",
+       "blasen": [
+        "W2_SPHX_PIX_0610"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W2_SPHX_MAX_0620",
+       "sprecher": "MAX",
+       "blasen": [
+        "W2_SPHX_MAX_0620"
        ],
        "regie": ""
       }
@@ -7823,6 +8361,22 @@
         "W2_SPHX_SPH_0200"
        ],
        "regie": ""
+      },
+      {
+       "zeile": "W2_SPHX_MAX_0630",
+       "sprecher": "MAX",
+       "blasen": [
+        "W2_SPHX_MAX_0630"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W2_SPHX_SPH_0640",
+       "sprecher": "SPH",
+       "blasen": [
+        "W2_SPHX_SPH_0640"
+       ],
+       "regie": ""
       }
      ],
      "beendet": false,
@@ -7839,6 +8393,22 @@
         "W2_SPHX_SPH_0220"
        ],
        "regie": "gibt Empfehlungsschreiben"
+      },
+      {
+       "zeile": "W2_SPHX_MAX_0650",
+       "sprecher": "MAX",
+       "blasen": [
+        "W2_SPHX_MAX_0650"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W2_SPHX_SPH_0660",
+       "sprecher": "SPH",
+       "blasen": [
+        "W2_SPHX_SPH_0660"
+       ],
+       "regie": ""
       }
      ],
      "beendet": false,
@@ -7920,6 +8490,22 @@
         "W2_WERK_ARC_0340"
        ],
        "regie": ""
+      },
+      {
+       "zeile": "W2_WERK_MAX_0530",
+       "sprecher": "MAX",
+       "blasen": [
+        "W2_WERK_MAX_0530"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W2_WERK_ARC_0540",
+       "sprecher": "ARC",
+       "blasen": [
+        "W2_WERK_ARC_0540"
+       ],
+       "regie": ""
       }
      ],
      "beendet": false,
@@ -7936,6 +8522,22 @@
         "W2_WERK_ARC_0360"
        ],
        "regie": "Hinweis Rätsel 5"
+      },
+      {
+       "zeile": "W2_WERK_PIX_0550",
+       "sprecher": "PIX",
+       "blasen": [
+        "W2_WERK_PIX_0550"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W2_WERK_ARC_0560",
+       "sprecher": "ARC",
+       "blasen": [
+        "W2_WERK_ARC_0560"
+       ],
+       "regie": ""
       }
      ],
      "beendet": false,
@@ -7952,6 +8554,22 @@
         "W2_WERK_ARC_0380"
        ],
        "regie": "Hinweis Rätsel 5, Stufe 2"
+      },
+      {
+       "zeile": "W2_WERK_MAX_0570",
+       "sprecher": "MAX",
+       "blasen": [
+        "W2_WERK_MAX_0570"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W2_WERK_ARC_0580",
+       "sprecher": "ARC",
+       "blasen": [
+        "W2_WERK_ARC_0580"
+       ],
+       "regie": ""
       }
      ],
      "beendet": false,
@@ -7968,6 +8586,22 @@
         "W2_WERK_ARC_0400"
        ],
        "regie": "Hinweis auf den Radio-Moment"
+      },
+      {
+       "zeile": "W2_WERK_MAX_0590",
+       "sprecher": "MAX",
+       "blasen": [
+        "W2_WERK_MAX_0590"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W2_WERK_ARC_0600",
+       "sprecher": "ARC",
+       "blasen": [
+        "W2_WERK_ARC_0600"
+       ],
+       "regie": ""
       }
      ],
      "beendet": false,
@@ -8060,6 +8694,22 @@
         "W2_WERK_HIE_0480"
        ],
        "regie": "gibt Krone und Goldbarren"
+      },
+      {
+       "zeile": "W2_WERK_MAX_0610",
+       "sprecher": "MAX",
+       "blasen": [
+        "W2_WERK_MAX_0610"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W2_WERK_HIE_0620",
+       "sprecher": "HIE",
+       "blasen": [
+        "W2_WERK_HIE_0620"
+       ],
+       "regie": ""
       }
      ],
      "beendet": false,
@@ -8074,6 +8724,22 @@
        "sprecher": "HIE",
        "blasen": [
         "W2_WERK_HIE_0500"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W2_WERK_MAX_0630",
+       "sprecher": "MAX",
+       "blasen": [
+        "W2_WERK_MAX_0630"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W2_WERK_HIE_0640",
+       "sprecher": "HIE",
+       "blasen": [
+        "W2_WERK_HIE_0640"
        ],
        "regie": ""
       }
@@ -8143,6 +8809,22 @@
         "W2_BUER_BE1_0180"
        ],
        "regie": ""
+      },
+      {
+       "zeile": "W2_BUER_MAX_0660",
+       "sprecher": "MAX",
+       "blasen": [
+        "W2_BUER_MAX_0660"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W2_BUER_BE1_0670",
+       "sprecher": "BE1",
+       "blasen": [
+        "W2_BUER_BE1_0670"
+       ],
+       "regie": ""
       }
      ],
      "beendet": false,
@@ -8159,6 +8841,22 @@
         "W2_BUER_BE1_0200"
        ],
        "regie": "Hinweis Rätsel 3"
+      },
+      {
+       "zeile": "W2_BUER_PIX_0680",
+       "sprecher": "PIX",
+       "blasen": [
+        "W2_BUER_PIX_0680"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W2_BUER_BE1_0690",
+       "sprecher": "BE1",
+       "blasen": [
+        "W2_BUER_BE1_0690"
+       ],
+       "regie": ""
       }
      ],
      "beendet": false,
@@ -8240,6 +8938,22 @@
         "W2_BUER_BE2_0280"
        ],
        "regie": ""
+      },
+      {
+       "zeile": "W2_BUER_MAX_0700",
+       "sprecher": "MAX",
+       "blasen": [
+        "W2_BUER_MAX_0700"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W2_BUER_BE2_0710",
+       "sprecher": "BE2",
+       "blasen": [
+        "W2_BUER_BE2_0710"
+       ],
+       "regie": ""
       }
      ],
      "beendet": false,
@@ -8256,6 +8970,22 @@
         "W2_BUER_BE2_0300"
        ],
        "regie": "Hinweis Rätsel 3"
+      },
+      {
+       "zeile": "W2_BUER_MAX_0720",
+       "sprecher": "MAX",
+       "blasen": [
+        "W2_BUER_MAX_0720"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W2_BUER_BE2_0730",
+       "sprecher": "BE2",
+       "blasen": [
+        "W2_BUER_BE2_0730"
+       ],
+       "regie": ""
       }
      ],
      "beendet": false,
@@ -8369,6 +9099,22 @@
         "W2_AGOR_CIC_0260"
        ],
        "regie": "Notizbuch: „137 Jahre“"
+      },
+      {
+       "zeile": "W2_AGOR_MAX_0600",
+       "sprecher": "MAX",
+       "blasen": [
+        "W2_AGOR_MAX_0600"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W2_AGOR_CIC_0610",
+       "sprecher": "CIC",
+       "blasen": [
+        "W2_AGOR_CIC_0610"
+       ],
+       "regie": ""
       }
      ],
      "beendet": false,
@@ -8410,6 +9156,22 @@
         "W2_AGOR_CIC_0310"
        ],
        "regie": "Hinweis Rätsel 10"
+      },
+      {
+       "zeile": "W2_AGOR_MAX_0620",
+       "sprecher": "MAX",
+       "blasen": [
+        "W2_AGOR_MAX_0620"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W2_AGOR_CIC_0630",
+       "sprecher": "CIC",
+       "blasen": [
+        "W2_AGOR_CIC_0630"
+       ],
+       "regie": ""
       }
      ],
      "beendet": false,
@@ -8424,6 +9186,14 @@
        "sprecher": "CIC",
        "blasen": [
         "W2_AGOR_CIC_0330"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W2_AGOR_PIX_0640",
+       "sprecher": "PIX",
+       "blasen": [
+        "W2_AGOR_PIX_0640"
        ],
        "regie": ""
       }
@@ -8493,6 +9263,22 @@
         "W2_AGOR_GRI_0420"
        ],
        "regie": ""
+      },
+      {
+       "zeile": "W2_AGOR_MAX_0650",
+       "sprecher": "MAX",
+       "blasen": [
+        "W2_AGOR_MAX_0650"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W2_AGOR_GRI_0660",
+       "sprecher": "GRI",
+       "blasen": [
+        "W2_AGOR_GRI_0660"
+       ],
+       "regie": ""
       }
      ],
      "beendet": false,
@@ -8557,6 +9343,22 @@
         "W2_SAND_BRI_0080"
        ],
        "regie": ""
+      },
+      {
+       "zeile": "W2_SAND_MAX_0400",
+       "sprecher": "MAX",
+       "blasen": [
+        "W2_SAND_MAX_0400"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W2_SAND_BRI_0410",
+       "sprecher": "BRI",
+       "blasen": [
+        "W2_SAND_BRI_0410"
+       ],
+       "regie": ""
       }
      ],
      "beendet": false,
@@ -8573,6 +9375,22 @@
         "W2_SAND_BRI_0100"
        ],
        "regie": "Hinweis Rätsel 6"
+      },
+      {
+       "zeile": "W2_SAND_MAX_0420",
+       "sprecher": "MAX",
+       "blasen": [
+        "W2_SAND_MAX_0420"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W2_SAND_BRI_0430",
+       "sprecher": "BRI",
+       "blasen": [
+        "W2_SAND_BRI_0430"
+       ],
+       "regie": ""
       }
      ],
      "beendet": false,
@@ -8634,6 +9452,22 @@
         "W2_STAD_LEO_0170"
        ],
        "regie": ""
+      },
+      {
+       "zeile": "W2_STAD_PIX_0320",
+       "sprecher": "PIX",
+       "blasen": [
+        "W2_STAD_PIX_0320"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W2_STAD_LEO_0330",
+       "sprecher": "LEO",
+       "blasen": [
+        "W2_STAD_LEO_0330"
+       ],
+       "regie": ""
       }
      ],
      "beendet": false,
@@ -8648,6 +9482,22 @@
        "sprecher": "LEO",
        "blasen": [
         "W2_STAD_LEO_0190"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W2_STAD_MAX_0340",
+       "sprecher": "MAX",
+       "blasen": [
+        "W2_STAD_MAX_0340"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W2_STAD_LEO_0350",
+       "sprecher": "LEO",
+       "blasen": [
+        "W2_STAD_LEO_0350"
        ],
        "regie": ""
       }
@@ -8666,6 +9516,22 @@
         "W2_STAD_LEO_0210"
        ],
        "regie": "Vorbereitung Speer-Pointe"
+      },
+      {
+       "zeile": "W2_STAD_MAX_0360",
+       "sprecher": "MAX",
+       "blasen": [
+        "W2_STAD_MAX_0360"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W2_STAD_LEO_0370",
+       "sprecher": "LEO",
+       "blasen": [
+        "W2_STAD_LEO_0370"
+       ],
+       "regie": ""
       }
      ],
      "beendet": false,

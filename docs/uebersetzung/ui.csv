@@ -53,11 +53,11 @@ UI_GELADEN,Geladen,Loaded
 UI_KEIN_SPIELSTAND,Kein Spielstand vorhanden,No saved game
 UI_SPEICHERN_GLEICH,Wird nach der Szene gespeichert,Will save after the scene
 UI_PROLOG_ENDE,Ende des Prologs. Weiter geht es in Welt 1.,End of the prologue. To be continued in World 1.
-UI_RAUM_DORFPLATZ,Dorfplatz Unterbrösel,Underbrösel village square
+UI_RAUM_DORFPLATZ,Dorfplatz Unterbrösel,Lower Crumbly village square
 UI_RAUM_TAVERNE,Taverne,Tavern
 UI_RAUM_SCHMIEDE,Schmiede,Smithy
 UI_RAUM_ZAUBERSTABLADEN,Zauberstab-Laden,Wand shop
-UI_RAUM_KLASSENZIMMER,Hoggelwarz,Hoggelwarz
+UI_RAUM_KLASSENZIMMER,Hoggelwarz,Hogwartle
 UI_RAUM_TROLLBRUECKE,Troll-Brücke,Troll bridge
 UI_RAUM_WASSERSCHLOSS,Wasserschloss,Moated castle
 UI_RAUM_ZAUBERWALD,Zauberwald,Enchanted forest
@@ -87,7 +87,7 @@ UI_OBJ_KOCHLOEFFEL_ZAUBERSTAB,Kochlöffel-Zauberstab,Spoon wand
 UI_OBJ_SOCKE,Sortierende Socke,Sorting sock
 UI_OBJ_ZIEGENFELL_VORLEGER,Ziegenfell-Vorleger,Goatskin rug
 UI_OBJ_BESTELLZETTEL,Bestellzettel,Order form
-UI_OBJ_STECKBRIEF,Moderworts Steckbrief,Moderwort's wanted poster
+UI_OBJ_STECKBRIEF,Moderworts Steckbrief,Mouldword's wanted poster
 UI_OBJ_EIMER,Eimer,Bucket
 UI_OBJ_EIMER_MIT_WASSER,Eimer mit Wasser,Bucket of water
 UI_OBJ_KRUG,Krug,Jug
@@ -95,7 +95,7 @@ UI_OBJ_EI,Ei,Egg
 UI_OBJ_TAVERNE_VON_AUSSEN,Taverne,Tavern
 UI_OBJ_SCHMIEDE_VON_AUSSEN,Schmiede,Smithy
 UI_OBJ_ZAUBERSTAB_LADEN_VON_AUSSEN,Zauberstab-Laden,Wand shop
-UI_OBJ_WEG_NACH_HOGGELWARZ,Weg nach Hoggelwarz,Path to Hoggelwarz
+UI_OBJ_WEG_NACH_HOGGELWARZ,Weg nach Hoggelwarz,Path to Hogwartle
 UI_OBJ_WALDWEG,Waldweg,Forest path
 UI_OBJ_BOHNENRANKE,Bohnenranke,Beanstalk
 UI_OBJ_LUFTSCHLOSS,Luftschloss,Castle in the air
@@ -207,7 +207,7 @@ UI_OBJ_LEUCHTPILZ,Leuchtpilz,Glowing mushroom
 UI_OBJ_LEUCHTTRANK,Leuchttrank,Glowing potion
 UI_OBJ_LUFTSCHLOSS_KRITZELEI,Kritzelei,Scribble
 UI_OBJ_MAKLERIN,Maklerin,Estate agent
-UI_OBJ_MODERWORT,Moderwort,Moderwort
+UI_OBJ_MODERWORT,Moderwort,Mouldword
 UI_OBJ_OKARINA,Okarina,Ocarina
 UI_OBJ_RANKENENDE,Rankenende,End of the beanstalk
 UI_OBJ_SCHLEIFEN_ROUTE,Schleifen-Route,Loop route
@@ -225,7 +225,7 @@ UI_OBJ_WENDELTREPPE,Wendeltreppe,Spiral staircase
 UI_OBJ_WOLKEN,Wolken,Clouds
 UI_OBJ_ZAUBERBOHNE,Zauberbohne,Magic bean
 UI_OBJ_ZELDINA,Zeldina,Zeldina
-UI_OBJ_ZEUGNIS,Moderworts Zeugnis,Moderwort's school report
+UI_OBJ_ZEUGNIS,Moderworts Zeugnis,Mouldword's school report
 UI_OBJ_ZICKZACK_ROUTE,Zickzack-Route,Zigzag route
 UI_ZIEL_W1_R5,Einen Wunsch beim Brunnen frei haben,Get a wish from the well
 UI_ZIEL_W1_R6A,Die Zutaten für Alwins Trank,The ingredients for Alwin's potion
@@ -235,15 +235,15 @@ UI_ZIEL_W1_R8,Die Bohne zum Wachsen bringen,Make the bean grow
 UI_ZIEL_W1_R9,Zeldina die Wohnung retten,Save Zeldina's flat
 UI_ZIEL_W1_R10,Durch das Bergwerk kommen,Get through the mine
 UI_ZIEL_W1_R10A,Den Goblins Licht und Unterschrift bringen,Bring the goblins light and a signature
-UI_ZIEL_W1_R10B,Grimmzahn einen Posten anbieten,Offer Grimmzahn a job
+UI_ZIEL_W1_R10B,Grimmzahn einen Posten anbieten,Offer Grimtooth a job
 UI_ZIEL_W1_R11A,Das Passwort der Geheimtür,The secret door's password
 UI_ZIEL_W1_R11B,Die Besen loswerden,Get rid of the brooms
 UI_ZIEL_W1_R12,Smaugi das Ei abschwatzen,Talk Smaugi out of the egg
-UI_ZIEL_W1_R13,Lord Moderwort besiegen,Defeat Lord Moderwort
+UI_ZIEL_W1_R13,Lord Moderwort besiegen,Defeat Lord Mouldword
 UI_PASSWORT_TEIL_MO,Mo,Mo
-UI_PASSWORT_TEIL_KNUDDEL,Knuddel,Knuddel
-UI_PASSWORT_TEIL_PUDDI,Puddi,Puddi
-UI_PASSWORT_TEIL_BAERCHEN,Bärchen,Bärchen
+UI_PASSWORT_TEIL_KNUDDEL,Knuddel,Cuddles
+UI_PASSWORT_TEIL_PUDDI,Puddi,Pudding
+UI_PASSWORT_TEIL_BAERCHEN,Bärchen,Teddy
 UI_TELEMETRIE_TITEL,Testversion: Darf das Spiel mitschreiben?,Test build: may the game keep a log?
 UI_TELEMETRIE_FRAGE,"Das Spiel kann ein anonymes Protokoll schreiben: welche Räume, wie lange je Rätsel, welche Hinweise, welche Klicks ins Leere. Keine Namen, nichts über dich. Die Datei bleibt auf deinem Rechner, bis du sie selbst schickst. Ändern geht jederzeit in den Einstellungen.","The game can keep an anonymous log: which rooms, how long each puzzle takes, which hints, which clicks hit nothing. No names, nothing about you. The file stays on your computer until you send it yourself. You can change this any time in the settings."
 UI_TELEMETRIE_JA,"Ja, mitschreiben","Yes, keep a log"
@@ -252,6 +252,7 @@ UI_TELEMETRIE_DANKE,Danke! Das Protokoll läuft.,Thanks! The log is running.
 UI_TELEMETRIE_AUS,Kein Protokoll. Viel Spaß!,No log. Have fun!
 UI_TELEMETRIE_SCHALTER,Telemetrie,Telemetry
 UI_TELEMETRIE_ORDNER,Telemetrie-Ordner öffnen,Open telemetry folder
+UI_TELEMETRIE_HERUNTERLADEN,Telemetrie herunterladen,Download telemetry
 UI_OBJ_FUNDKISTE,Fundkiste,Lost-and-found box
 UI_TASCHE_TITEL,Reisetasche,Travel bag
 UI_TASCHE_PFLICHT,Pflichtfach,Always packed
@@ -286,21 +287,21 @@ UI_ERR_EMPFANG,Empfang,Reception
 UI_ERR_EMPFANG_TEXT,"Den Prolog beendet, der Fernseher läuft.","Finished the prologue, the TV is on."
 UI_ERR_ZIEGENFLUESTERER,Ziegenflüsterer,Goat Whisperer
 UI_ERR_ZIEGENFLUESTERER_TEXT,Alle drei Ziegen über die Brücke gebracht.,Got all three goats across the bridge.
-UI_ERR_OHNE_PFOTE_1,"Ohne Pfote: Welt 1","No Paw: World 1"
+UI_ERR_OHNE_PFOTE_1,Ohne Pfote: Welt 1,No Paw: World 1
 UI_ERR_OHNE_PFOTE_1_TEXT,Welt 1 ohne Lösungs-Hinweis der Hilfe-Pfote geschafft.,Finished World 1 without a solution hint from the help paw.
 UI_ERR_FUENFKAMPF,Fünfkampf,Pentathlon
 UI_ERR_FUENFKAMPF_TEXT,Alle fünf Disziplinen in Welt 2 mit Bestleistung.,All five events in World 2 with a personal best.
-UI_ERR_OHNE_PFOTE_2,"Ohne Pfote: Welt 2","No Paw: World 2"
+UI_ERR_OHNE_PFOTE_2,Ohne Pfote: Welt 2,No Paw: World 2
 UI_ERR_OHNE_PFOTE_2_TEXT,Welt 2 ohne Lösungs-Hinweis der Hilfe-Pfote geschafft.,Finished World 2 without a solution hint from the help paw.
 UI_ERR_DEJA_VU,Déjà-vu,Déjà Vu
 UI_ERR_DEJA_VU_TEXT,Die Simulation in Welt 3 zum dritten Mal betreten.,Entered the simulation in World 3 for the third time.
 UI_ERR_FREUND_0815,Freund 08/15,Friend 08/15
 UI_ERR_FREUND_0815_TEXT,Modell 08/15 als Freund gewonnen.,Made a friend of Model 08/15.
-UI_ERR_OHNE_PFOTE_3,"Ohne Pfote: Welt 3","No Paw: World 3"
+UI_ERR_OHNE_PFOTE_3,Ohne Pfote: Welt 3,No Paw: World 3
 UI_ERR_OHNE_PFOTE_3_TEXT,Welt 3 ohne Lösungs-Hinweis der Hilfe-Pfote geschafft.,Finished World 3 without a solution hint from the help paw.
 UI_ERR_ZAPP_MEISTER,Zapp-Meister,Zap Master
 UI_ERR_ZAPP_MEISTER_TEXT,Alle Kanäle der Programmzeitschrift gefunden.,Found every channel in the TV guide.
-UI_ERR_OHNE_PFOTE_4,"Ohne Pfote: Welt 4","No Paw: World 4"
+UI_ERR_OHNE_PFOTE_4,Ohne Pfote: Welt 4,No Paw: World 4
 UI_ERR_OHNE_PFOTE_4_TEXT,Welt 4 ohne Lösungs-Hinweis der Hilfe-Pfote geschafft.,Finished World 4 without a solution hint from the help paw.
 UI_ERR_EINKAUFSLISTE,Einkaufsliste komplett,Shopping List Complete
 UI_ERR_EINKAUFSLISTE_TEXT,Alle Wünsche von Pixel stehen im Notizbuch.,All of Pixel's wishes are in the notebook.
@@ -344,7 +345,8 @@ UI_OPT_TEXT_WEITER,Text weiter,Advance text
 UI_OPT_PER_KLICK,per Klick,on click
 UI_OPT_AUTOMATISCH,automatisch,automatically
 UI_OPT_UNTERTITEL,Untertitel,Subtitles
-UI_OPT_BRABBEL,Brabbel-Laute (Probe),Babble voices (trial)
+UI_OPT_BRABBEL,Brabbel-Laute,Babble voices
+UI_OPT_PLATZHALTER_KLANG,Platzhalter-Töne,Placeholder sounds
 UI_OPT_GROSSE_SCHRIFT,Große Schrift,Large text
 UI_OPT_HOTSPOTS_DAUERHAFT,Hotspots immer zeigen,Always show hotspots
 UI_OPT_HOTSPOT_NAMEN,Namen zu den Hotspots zeigen,Show hotspot names
@@ -543,14 +545,14 @@ UI_W2_KACHEL_WASSER,Wasser,Water
 UI_W2_KACHEL_SCHLANGE,Schlange,Snake
 UI_W2_KACHEL_LOTUS,Lotusblume,Lotus flower
 UI_W2_KACHEL_FEDER,Feder,Feather
-UI_W2_BAUSTEIN_KLINGELT,„Es klingelt, wenn jemand dich will“,"""It rings when someone wants you"""
-UI_W2_BAUSTEIN_LEUCHTET,„Es leuchtet im Dunkeln, aber nur kurz“,"""It glows in the dark, but only briefly"""
+UI_W2_BAUSTEIN_KLINGELT,"„Es klingelt, wenn jemand dich will“","""It rings when someone wants you"""
+UI_W2_BAUSTEIN_LEUCHTET,"„Es leuchtet im Dunkeln, aber nur kurz“","""It glows in the dark, but only briefly"""
 UI_W2_BAUSTEIN_STIRBT,„Es stirbt bei drei Prozent“,"""It dies at three percent"""
 UI_W2_BAUSTEIN_NIE_ALLE,„Es wird nie alle“,"""It never runs out"""
 UI_W2_BAUSTEIN_KLEBT,„Es klebt unter jedem Tisch“,"""It sticks under every table"""
 UI_W2_BAUSTEIN_SONNE,„Man kann daraus eine Sonne machen“,"""You can make a sun out of it"""
 UI_W2_BAUSTEIN_SCHREIBT,„Es schreibt ohne Tintenfass“,"""It writes without an inkwell"""
-UI_W2_BAUSTEIN_KLICKT,„Es klickt, wenn man nervös ist“,"""It clicks when you are nervous"""
+UI_W2_BAUSTEIN_KLICKT,"„Es klickt, wenn man nervös ist“","""It clicks when you're nervous"""
 UI_W2_BAUSTEIN_BLAU,„Es ist blau und hat trotzdem keine Laune“,"""It is blue and still not moody"""
 UI_W2_ANKLAGEN,Du warst es!,It was you!
 UI_W2_HEBEL_ZIEHEN,Abspringen!,Launch!
@@ -871,6 +873,7 @@ UI_OBJ_ZOMBIE,Zombie,Zombie
 UI_OBJ_ZOMBIES,Zombies,Zombies
 UI_W4_ZS_2015,"20:15 – Küchen-Sitcom, Folge 112","8:15 pm – Kitchen sitcom, episode 112"
 UI_W4_ZS_MITTERNACHT,Mitternachts-TV: Friedhofs-Funk,Midnight TV: Graveyard Funk
+UI_W4_FLIMMER_HUNGER,Gibt es hier was zu essen?,Is there anything to eat here?
 UI_W4_ZS_WERBESPOT,Dr. Werbepause präsentiert den Couch-Magnet 3000,Dr. Adbreak presents the Couch Magnet 3000
 UI_W4_ZS_TIERTORT,Tiertort Savanne,Savannah Crime Scene
 UI_W4_ZS_GLUECKSRAD,Glücksrad-Shopping,Wheel of Fortune Shopping
@@ -897,9 +900,10 @@ UI_OBJ_MASCHINE,Maschine,Machine
 UI_OBJ_OFENTUER,Ofentür,Oven door
 UI_OBJ_DRUCKMESSER,Druckmesser,Pressure gauge
 UI_OBJ_FASSUNGEN,Fassungen,Sockets
+UI_OBJ_LAMPE,Lampe,Lamp
 UI_OBJ_EMPFAENGER,Empfänger,Receiver
 UI_OBJ_AUTOMATISCHE_TUER,Automatische Tür,Automatic door
-UI_FI_KANAL_3,Kanal 3 – Schwurbelstein,Channel 3 – Schwurbelstein
+UI_FI_KANAL_3,Kanal 3 – Schwurbelstein,Channel 3 – Waffleton
 UI_FI_KANAL_7,Kanal 7 – Antikodonien,Channel 7 – Antikodonien
 UI_FI_KANAL_42,Kanal 42 – Neo-Neustadt 2099,Channel 42 – Neo-Neustadt 2099
 UI_FI_KANAL_999,Kanal 999,Channel 999
@@ -907,3 +911,6 @@ UI_FI_TASTE_LAUTER,Lauter,Volume up
 UI_FI_TASTE_PROGRAMM,Programm,Channel
 UI_FI_TASTE_STUMM,Stumm,Mute
 UI_FI_TASTE_ROT,Rote Taste,Red button
+UI_FI_ZELDINA_OFEN,Kannst du die Ofentür aufhebeln?,Can you pry the oven door open?
+UI_FI_ROBOTER_LUKE,Kannst du die Luke öffnen?,Can you open the hatch?
+UI_OBJ_PORTALGERAET,Portalgerät,Portal device

@@ -227,7 +227,7 @@ raetsel:
     raum: dachboden
     benoetigt: []
     ergibt: []                       # danach automatisch der Hilferuf: Zeldina, mit FREUND_0815 Modell 08/15
-    schalter: [LUKE_ERKANNT]
+    schalter: [FI_R01_GELOEST, LUKE_ERKANNT]
     optional: false
 
   - id: F1a
@@ -267,5 +267,5 @@ raetsel:
     raum: dachboden
     benoetigt: [omas_kekse]
     ergibt: []
-    schalter: [KEKSE_DABEI]
+    schalter: [FI_R02_GELOEST, KEKSE_DABEI]
     optional: true

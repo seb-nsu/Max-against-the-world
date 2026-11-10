@@ -42,6 +42,16 @@ const TASTEN := ["UI_FI_TASTE_LAUTER", "UI_FI_TASTE_PROGRAMM", "UI_FI_TASTE_STUM
 const TASTE_FEHL := [["FI_RAET_NAR_0290", "FI_RAET_OPA_0300"], ["FI_RAET_NAR_0310", "FI_RAET_PIX_0320"],
 	["FI_RAET_NAR_0330", "FI_RAET_PIX_0340"]]
 
+## Auflösung (skript/zwischenspiele-und-finale.md, Abschnitt 6): Maschine, Geständnis, Grund
+const AUFLOESUNG := ["FI_AUFL_NAR_0040", "FI_AUFL_MAX_0050", "FI_AUFL_PIX_0060", "FI_AUFL_MAX_0070",
+	"FI_AUFL_PIX_0080", "FI_AUFL_MAX_0090", "FI_AUFL_OPA_0100", "FI_AUFL_MAX_0110", "FI_AUFL_OPA_0120",
+	"FI_AUFL_MAX_0130", "FI_AUFL_OPA_0140", "FI_AUFL_MAX_0150", "FI_AUFL_OPA_0160", "FI_AUFL_MAX_0170",
+	"FI_AUFL_OPA_0180", "FI_AUFL_NAR_0190", "FI_AUFL_MAX_0200", "FI_AUFL_OPA_0210", "FI_AUFL_MAX_0220",
+	"FI_AUFL_OPA_0230", "FI_AUFL_PIX_0240", "FI_AUFL_MAX_0250", "FI_AUFL_PIX_0260", "FI_AUFL_MAX_0270",
+	"FI_AUFL_OPA_0280", "FI_AUFL_OPA_0290", "FI_AUFL_MAX_0300", "FI_AUFL_PIX_0310", "FI_AUFL_MAX_0320",
+	"FI_AUFL_OPA_0330", "FI_AUFL_MAX_0340", "FI_AUFL_OPA_0350", "FI_AUFL_MAX_0360", "FI_AUFL_OPA_0370",
+	"FI_AUFL_PIX_0380"]
+
 const FINALE_OBJEKTE := ["maschine", "ofentuer", "druckmesser", "fassungen", "empfaenger"]
 
 ## Ansehen im Finale: Objekt → [erste Zeile, zweite Zeile]
@@ -177,6 +187,9 @@ func _g(id: String) -> bool:
 
 func _ansehen(oid: String) -> void:
 	var n := _angesehen(oid)
+	if oid == "ofentuer" and n == 3:
+		await _sag("FI_RIEG_PIX_0130")  # beim dritten Blick schnuppert Pixel: kein Schwefel
+		return
 	await _sag(ANSEHEN[oid][1 if n > 1 else 0])
 	if oid == "zapp_o_mat" and Zustand.ist("LUKE_ERKANNT") and not Zustand.ist("FI_HILFERUF"):
 		await _sag("FI_RIEG_PIX_0230")
@@ -356,12 +369,12 @@ func benutzen_zeldina(_obj, _x) -> bool:
 	if _raum_id() != "dachboden":
 		return false
 	var fragen := ["FI_RUF_MAX_0320", "FI_RUF_MAX_0340", "FI_RAET_MAX_0090" if _g("F1a") else "FI_RAET_MAX_0010",
-		"UI_MENUE_ZURUECK"]
+		"UI_FI_ZELDINA_OFEN", "UI_MENUE_ZURUECK"]
 	match await Spiel.auswahl(fragen):
 		0:
-			await _szene(["FI_RUF_MAX_0320", "FI_RUF_ZEL_0330"])
+			await _szene(["FI_RUF_MAX_0320", "FI_RUF_ZEL_0330", "FI_RUF_MAX_0380", "FI_RUF_ZEL_0390"])
 		1:
-			await _szene(["FI_RUF_MAX_0340", "FI_RUF_ZEL_0350"])
+			await _szene(["FI_RUF_MAX_0340", "FI_RUF_ZEL_0350", "FI_RUF_MAX_0400", "FI_RUF_ZEL_0410"])
 		2:
 			if _g("F1a"):
 				await _szene(["FI_RAET_MAX_0090", "FI_RAET_ZEL_0100"])
@@ -369,6 +382,8 @@ func benutzen_zeldina(_obj, _x) -> bool:
 				await _szene(["FI_RAET_MAX_0010", "FI_RAET_ZEL_0020", "FI_RAET_NAR_0030", "FI_RAET_ZEL_0040",
 					"FI_RAET_MAX_0050", "FI_RAET_PIX_0060", "FI_RAET_MAX_0070", "FI_RAET_OPA_0080"])
 				Zustand.loese("F1a")
+		3:
+			await _szene(["FI_RAET_ZEL_0400", "FI_RAET_MAX_0390"])
 	return true
 
 
@@ -376,7 +391,7 @@ func benutzen_zeldina(_obj, _x) -> bool:
 func benutzen_modell_0815(_obj, _x) -> bool:
 	if _raum_id() != "dachboden":
 		return false
-	var fragen := ["FI_RUF_MAX_0360", "FI_RAET_MAX_0110", "UI_MENUE_ZURUECK"]
+	var fragen := ["FI_RUF_MAX_0360", "FI_RAET_MAX_0110", "UI_FI_ROBOTER_LUKE", "UI_MENUE_ZURUECK"]
 	match await Spiel.auswahl(fragen):
 		0:
 			await _szene(["FI_RUF_MAX_0360", "FI_RUF_HAU_0370"])
@@ -386,6 +401,8 @@ func benutzen_modell_0815(_obj, _x) -> bool:
 			else:
 				await _szene(["FI_RAET_MAX_0110", "FI_RAET_HAU_0120", "FI_RAET_PIX_0130"])
 				Zustand.loese("F1b")
+		2:
+			await _sag("FI_RAET_HAU_0410")
 	return true
 
 
@@ -477,8 +494,18 @@ func kombi_energiezelle_goldene_fernbedienung() -> bool:
 
 func ansehen_inventar_goldene_fernbedienung(_obj, _x) -> bool:
 	if Zustand.wert("FI_FERNBEDIENUNG", "") != "zuendkapsel":
-		return false
+		await _sag("FI_INV_MAX_0075" if _angesehen("fernbedienung_grau") > 1 else "FI_INV_MAX_0070")
+		return true
 	await _sag("FI_RAET_MAX_0245" if _angesehen("zuendkapsel") > 1 else "FI_RAET_MAX_0240")
+	return true
+
+
+## Die Energiezelle im Finale: vor der Auflösung ewig, danach eine Batterie.
+func ansehen_inventar_energiezelle(_obj, _x) -> bool:
+	if Zustand.ist("FI_WOHN_ANKUNFT"):  # nach der Auflösung
+		await _sag("FI_INV_MAX_0065" if _angesehen("zelle_batterie") > 1 else "FI_INV_MAX_0060")
+	else:
+		await _sag("FI_INV_MAX_0055" if _angesehen("zelle_ewig") > 1 else "FI_INV_MAX_0050")
 	return true
 
 
@@ -522,10 +549,7 @@ func _aufloesung() -> void:
 	var robo := Zustand.ist("FREUND_0815")
 	var kekse := _hat("omas_kekse")
 	var z := ["FI_AUFL_NAR_0010", "FI_AUFL_HAU_0020" if robo else "FI_AUFL_NAR_0030"]
-	for n in range(40, 390, 10):
-		var id := _zeile_mit_nummer("FI_AUFL_", n)
-		if not id.is_empty():
-			z.append(id)
+	z.append_array(AUFLOESUNG)
 	z.append_array(["FI_AUFL_NAR_0390", "FI_AUFL_OMA_0400", "FI_AUFL_OPA_0410", "FI_AUFL_OMA_0420",
 		"FI_AUFL_OMA_0430", "FI_AUFL_ZEL_0440", "FI_AUFL_OMA_0450"])
 	if robo:
@@ -543,15 +567,6 @@ func _aufloesung() -> void:
 	await R.goto_room(Bauplan.raum_script_name("wohnzimmer"))
 
 
-## Zeilen-ID einer Szene nach ihrer Nummer (Sprecher unbekannt): FI_AUFL_ + Sprecher + Nummer.
-func _zeile_mit_nummer(praefix: String, n: int) -> String:
-	for k in ["MAX", "OPA", "PIX", "NAR", "OMA", "ZEL", "HAU"]:
-		var id := "%s%s_%04d" % [praefix, k, n]
-		if tr(id) != id:
-			return id
-	return ""
-
-
 func nach_uebergang_wohnzimmer(_raum, _x) -> bool:
 	if Zustand.ist("FI_WOHN_ANKUNFT"):
 		return false
@@ -564,7 +579,7 @@ func nach_uebergang_wohnzimmer(_raum, _x) -> bool:
 func benutzen_oma(_obj, _x) -> bool:
 	if _raum_id() != "wohnzimmer":
 		return false
-	await _szene(["FI_WOHN_MAX_0180", "FI_WOHN_OMA_0190"])
+	await _szene(["FI_WOHN_MAX_0180", "FI_WOHN_OMA_0190", "FI_WOHN_PIX_0420", "FI_WOHN_OMA_0430"])
 	await _mutter_kommt()
 	return true
 

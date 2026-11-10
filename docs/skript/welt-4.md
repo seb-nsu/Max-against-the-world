@@ -134,13 +134,19 @@ Gespräch mit Gerd Glück (nach R2, außerhalb der Bonusrunde) und Ansehen im St
 | --- | --- | --- | --- |
 | W4\_GLUE\_MAX\_0310 | Max | Was gibt es in der Bonusrunde? | Option Gerd; vor R9 |
 | W4\_GLUE\_GER\_0320 | Gerd Glück | Den Hauptgewinn! Ein Gerät, das zwei Sender gleichzeitig zeigt! Für Menschen, die sich nicht entscheiden können! Also alle! |  |
+| W4\_GLUE\_MAX\_0580 | Max | Und was muss ich dafür tun? |  |
+| W4\_GLUE\_GER\_0590 | Gerd Glück | Fragen beantworten! Über die anderen Sender! Wer viel fernsieht, gewinnt! Endlich zahlt sich das aus! |  |
 | W4\_GLUE\_MAX\_0330 | Max | Wer war gestern um Viertel nach acht hier? | Option Gerd (bleibt); während R4 offen |
 | W4\_GLUE\_GER\_0340 | Gerd Glück | Der Geier! Live! Er warb für Geier-Gold-Hautcreme, und die Kopfhaut glänzte bis in die letzte Reihe! Ich war fast neidisch. Fast! | Alibi Geier bestätigt, ins Notizbuch |
 | W4\_GLUE\_MAX\_0350 | Max | Ein Geier mit Werbevertrag. Und ich bekomme nicht mal Follower. | nach 0340 |
 | W4\_GLUE\_MAX\_0360 | Max | Was kostet das Preisschild an Ihrem Ärmel? | Option Gerd |
 | W4\_GLUE\_GER\_0370 | Gerd Glück | Unbezahlbar! Darum steht nichts drauf! Aber ich wäre verhandelbar. Ich bin immer verhandelbar. Das ist mein Charme! |  |
+| W4\_GLUE\_MAX\_0600 | Max | Und was würden Sie kosten? |  |
+| W4\_GLUE\_GER\_0610 | Gerd Glück | Für Sie? Ein Lächeln! Und eine Unterschrift! Das Kleingedruckte lese ich Ihnen gern vor, es dauert nur drei Folgen! |  |
 | W4\_GLUE\_MAX\_0380 | Max | Kennen Sie Zappmann? | Option Gerd |
 | W4\_GLUE\_GER\_0390 | Gerd Glück | Der Intendant! Mein Chef! Mein Vorbild! Mein … ist die Kamera an? Ich kenne ihn kaum. Netter Mann. Sitzt viel. | Lächeln friert ein |
+| W4\_GLUE\_MAX\_0620 | Max | Sie wirken nervös. |  |
+| W4\_GLUE\_GER\_0630 | Gerd Glück | Das ist das Studiolicht! Ich wirke immer so! Nächste Frage! Bitte eine leichte! |  |
 | W4\_GLUE\_MAX\_0400 | Max | Ich geh dann mal zappen. | Option Gerd, beendet das Gespräch |
 | W4\_GLUE\_GER\_0410 | Gerd Glück | Zappen Sie nicht weg! Oder doch! Hauptsache, Sie kommen zurück! |  |
 | W4\_GLUE\_MAX\_0420 | Max | Das Glücksrad. Zwölf Felder, und keins davon heißt Ausgang. | Ansehen: Glücksrad |
@@ -270,17 +276,28 @@ Ansehen, Benutzen und Gespräche in der Küche.
 | W4\_SIT\_VAT\_0340 | Sitcom-Vater | Lasagne gab es in Folge 87. Da ist der Ofen explodiert. Wir reden nicht über Folge 87. | LAC, Applaus |
 | W4\_SIT\_MAX\_0350 | Max | Hat jemand von euch gestern Abend gelacht? | Option Mutter (bleibt); während R4 offen |
 | W4\_SIT\_SMU\_0360 | Sitcom-Mutter | Alle lachen. Immer. Außer der gefleckten Dame in Reihe drei. Die saß da wie beim Zahnarzt. | LAC |
+| W4\_SIT\_MAX\_0670 | Max | Gefleckt und ernst. Ich glaube, die kenne ich. |  |
 | W4\_SIT\_MAX\_0370 | Max | Warum ist die Tür so laut? | Option Mutter |
 | W4\_SIT\_SMU\_0380 | Sitcom-Mutter | Damit die Leute wissen, dass jemand kommt. Sonst müssten sie zuhören. | LAC |
+| W4\_SIT\_MAX\_0680 | Max | Und wenn gar keiner kommt? |  |
+| W4\_SIT\_SMU\_0690 | Sitcom-Mutter | Dann knallt sie trotzdem. Das Publikum soll nicht denken, wir wären allein. |  |
 | W4\_SIT\_MAX\_0390 | Max | Was ist in der Dose? | Option Vater |
 | W4\_SIT\_VAT\_0400 | Sitcom-Vater | Kekse. Und Dinge, die ich vor meiner Frau verstecke. Also Kekse. | LAC |
+| W4\_SIT\_MAX\_0700 | Max | Und warum verstecken Sie die Kekse? |  |
+| W4\_SIT\_VAT\_0710 | Sitcom-Vater | Für den Notfall. Der Notfall ist, wenn mich jemand beim Verstecken erwischt. |  |
 | W4\_SIT\_MAX\_0410 | Max | Erwarten Sie Besuch? | Option Vater (bleibt) |
 | W4\_SIT\_VAT\_0420 | Sitcom-Vater | Mein neuer Chef wollte mal vorbeischauen. Irgendwann. Ich habe ihn nie gesehen. Ich weiß nur: Er trägt Mantel. | Hinweis R3; LAC |
+| W4\_SIT\_MAX\_0720 | Max | Mantel. Merk ich mir. |  |
+| W4\_SIT\_VAT\_0730 | Sitcom-Vater | Wenn du ihn triffst, sag ihm, er soll klingeln. Unsere Tür ist laut genug. |  |
 | W4\_SIT\_MAX\_0430 | Max | Was kann man hier essen? | Option Sohn |
 | W4\_SIT\_SOH\_0440 | Sitcom-Sohn | Fondue. Seit 112 Folgen. Ich träume von Pizza. Mein Vertrag verbietet Pizza. | LAC |
+| W4\_SIT\_MAX\_0740 | Max | Was hat dein Vertrag gegen Pizza? |  |
+| W4\_SIT\_SOH\_0750 | Sitcom-Sohn | Der Sender hat einen Käse-Sponsor. Pizza hat zu wenig Käse, sagt der Vertrag. Ich habe nachgezählt. Er hat recht. |  |
 | W4\_SIT\_MAX\_0450 | Max | Wo führt die Tür hin? | Option Sohn |
 | W4\_SIT\_SOH\_0460 | Sitcom-Sohn | Nirgendwohin. Dahinter ist Wand. Man geht raus, wartet und kommt wieder rein. Das ist Schauspiel. | LAC |
-| W4\_SIT\_MAX\_0470 | Max | Ich muss weiter. | Option, beendet jedes Gespräch |
+| W4\_SIT\_MAX\_0760 | Max | Klingt anstrengend. |  |
+| W4\_SIT\_SOH\_0770 | Sitcom-Sohn | In Folge 80 bin ich einfach draußen geblieben. Keiner hat es gemerkt. Das war meine beste Folge. |  |
+| W4\_SIT\_MAX\_0470 | Max | Ich muss weiter. | Option Mutter, beendet das Gespräch |
 | W4\_SIT\_SMU\_0480 | Sitcom-Mutter | Dann nimm wenigstens Käse mit. Alle nehmen Käse mit. | LAC |
 
 Rätsel 3: Max schaltet aus der Savanne um, während der Kommissar mit ihm spricht; der Kommissar kommt mit.
@@ -341,10 +358,10 @@ Ansehen und Benutzen in der Savanne.
 | W4\_SAV\_MAX\_0185 | Max | Die Flamingos tauchen kurz die Schnäbel ins Wasser. Gleichzeitig. Synchronklatsch. | Ansehen: Wasserloch, zweites Mal |
 | W4\_SAV\_MAX\_0190 | Max | Ich trinke. Es schmeckt nach Flamingo. | Benutzen: Wasserloch |
 | W4\_SAV\_ERZ\_0200 | Erzähler | Das Männchen trinkt. Es trinkt, wo gestern um Viertel nach acht der Gepard döste. Die Flamingos haben alles gesehen. Sie sehen immer alles. | nach 0190; Hinweis R4b, ins Notizbuch |
-| W4\_SAV\_MAX\_0210 | Max | Er kommentiert, wie ich trinke. Als Nächstes bewertet er meinen Gang. |  |
+| W4\_SAV\_MAX\_0210 | Max | Er kommentiert, wie ich trinke. Als Nächstes bewertet er meinen Gang. | nach 0200 |
 | W4\_SAV\_MAX\_0220 | Max | Ich leg mich kurz in die Sonne. Nicht aus Faulheit. Aus Recherche. | Benutzen: Sonnenplatz am Felsen |
 | W4\_SAV\_ERZ\_0230 | Erzähler | Das Männchen ruht. Wie das Nashorn am anderen Ende der Savanne. Dieses schlief gestern den ganzen Abend, wie es in meinem Drehbuch steht. Seite 14. | nach 0220; Hinweis R4c |
-| W4\_SAV\_MAX\_0240 | Max | Er hat ein Drehbuch. Der Erzähler einer Naturdoku hat ein Drehbuch. Nichts hier ist echt. Nicht mal die Natur. |  |
+| W4\_SAV\_MAX\_0240 | Max | Er hat ein Drehbuch. Der Erzähler einer Naturdoku hat ein Drehbuch. Nichts hier ist echt. Nicht mal die Natur. | nach 0230 |
 | W4\_SAV\_MAX\_0250 | Max | Akazien. Flach wie Tische. Die Giraffen haben hier den besseren Platz, aber keine Giraffe ist da. Budget. | Ansehen: Akazien |
 | W4\_SAV\_MAX\_0255 | Max | Auf einer Akazie hängt ein Schild: „Giraffe ab 20 Uhr“. Ich glaube, die kommt nicht mehr. | Ansehen: Akazien, zweites Mal |
 | W4\_SAV\_MAX\_0260 | Max | Es regnet auf das Schlagzeug. Irgendwer hat das bestimmt so gewollt. | Ansehen: Regenwolke über dem Schlagzeug |
@@ -388,10 +405,16 @@ Vier Alibis. Gepard und Nashorn prüft Pixel, Geier und Hyäne prüft Max über 
 | --- | --- | --- | --- |
 | W4\_VERH\_MAX\_0010 | Max | Wer sind die Verdächtigen? | Option Kommissar (bleibt) |
 | W4\_VERH\_KOM\_0020 | Kommissar | Gepard: lag angeblich am Wasserloch. Geier: angeblich live im Werbeblock. Nashorn: hat angeblich geschlafen. Hyäne: hat angeblich ferngesehen. Angeblich. Mein Lieblingswort. | ins Notizbuch |
+| W4\_VERH\_MAX\_0490 | Max | Klingt, als hätte jeder ein Alibi. |  |
+| W4\_VERH\_KOM\_0500 | Kommissar | Jeder hat eins. Darum sind alle verdächtig. Nur wer keins hat, hat nichts zu verbergen. So steht es in meinem Notizblock. |  |
 | W4\_VERH\_MAX\_0030 | Max | Was hat die Hyäne genau gesagt? | Option Kommissar (bleibt) |
 | W4\_VERH\_KOM\_0040 | Kommissar | Sie habe um 20:15 gesehen, wie die Sitcom-Familie Lasagne kocht. Ich habe keine Ahnung, was die Familie kocht. Ich koche nicht. Ich ermittle. | Hinweis R4a |
+| W4\_VERH\_MAX\_0510 | Max | Dann frag ich mal in der Sitcom nach, was die gekocht haben. |  |
+| W4\_VERH\_KOM\_0520 | Kommissar | Tu das. Ich gehe nicht in Sitcoms. Dort lacht man über mich, und keiner sagt mir, warum. |  |
 | W4\_VERH\_MAX\_0050 | Max | Wo war der Geier? | Option Kommissar (bleibt) |
 | W4\_VERH\_KOM\_0060 | Kommissar | Im Werbeblock. Live. Bei einem Mann mit sehr vielen Zähnen. Ich war noch nicht dort. Ich traue Leuten mit so vielen Zähnen nicht. | Hinweis R4d |
+| W4\_VERH\_MAX\_0530 | Max | Der mit den Zähnen ist Gerd Glück. |  |
+| W4\_VERH\_KOM\_0540 | Kommissar | Ich nenne keine Namen. Ich traue keinem. Aber ja. |  |
 | W4\_VERH\_MAX\_0070 | Max | Und der Gepard? | Option Kommissar (bleibt) |
 | W4\_VERH\_KOM\_0080 | Kommissar | Rennt weg, sobald ich näher komme. Immer. Ich bin nicht gebaut fürs Rennen. Ich bin gebaut fürs Stehen und Fragen. |  |
 | W4\_VERH\_ERZ\_0090 | Erzähler | Der Gepard erreicht in drei Sekunden hundert Stundenkilometer. Nach zwanzig Sekunden ist er erschöpft und braucht eine Pause. Eine lange. | nach 0080 oder beim ersten Nähern an den Gepard; Hinweis R4b |
@@ -604,10 +627,16 @@ In der Halle hängt die Lichterkette mit Buchstaben; auf der anderen Seite sitzt
 | W4\_HALL\_AGE\_0350 | FBI-Agent | Das sagen sie alle. Die Wahrheit ist irgendwo da draußen. Und ich habe sie noch nie gefunden. Zeigen Sie mir einen Beweis, und ich glaube Ihnen alles. | Hinweis R8 |
 | W4\_HALL\_MAX\_0360 | Max | Ein Beweis wofür? | Option Agent |
 | W4\_HALL\_AGE\_0370 | FBI-Agent | Für sie. Für die anderen. Für die Stimmen von drüben. Ich suche seit Jahren Kontakt mit der anderen Seite. |  |
+| W4\_HALL\_MAX\_0550 | Max | Und was würde Sie überzeugen? |  |
+| W4\_HALL\_AGE\_0560 | FBI-Agent | Eine Nachricht von drüben. Mit Inhalt. Die letzte, die ich empfangen habe, war ein Pizzadienst. |  |
 | W4\_HALL\_MAX\_0380 | Max | Was piept da? | Option Agent |
 | W4\_HALL\_AGE\_0390 | FBI-Agent | Mein Detektor. Er piept bei allem. Bei Mikrowellen, bei Katzen, bei meiner Kollegin. Die Kollegin glaubt mir auch nicht. |  |
+| W4\_HALL\_MAX\_0570 | Max | Piept er bei mir auch? |  |
+| W4\_HALL\_AGE\_0580 | FBI-Agent | Seit Sie reingekommen sind. Das beweist nichts. Er piept auch bei mir. |  |
 | W4\_HALL\_MAX\_0400 | Max | Glauben Sie an Geister? | Option Agent |
 | W4\_HALL\_AGE\_0410 | FBI-Agent | Geister sind ein Schwindel. Außerirdische sind real. Ich habe Prinzipien. |  |
+| W4\_HALL\_MAX\_0590 | Max | Und die Lichterkette da? Die blinkt doch ziemlich gezielt. |  |
+| W4\_HALL\_AGE\_0600 | FBI-Agent | Lichter blinken. Das ist Physik, kein Kontakt. Ich habe stundenlang draufgestarrt. Es war sehr schön, aber es war Physik. |  |
 | W4\_HALL\_MAX\_0420 | Max | Ich hab hier Kontakt mit der anderen Seite. Über eine Lichterkette. Mit Protokoll. | Notizbuch (Opas Nachrichten) auf FBI-Agent; nach R7 |
 | W4\_HALL\_AGE\_0430 | FBI-Agent | Buchstaben. Über Lampen. Aus einer anderen Dimension. „VORHEIZEN“. Das ist ein Code. Das ist DER Code. Ich wusste es. | liest, Taschenlampe zittert |
 | W4\_HALL\_MAX\_0440 | Max | Das ist mein Opa. |  |
@@ -694,10 +723,16 @@ Gespräche und Ansehen in Kapitolis.
 | W4\_KAPI\_PIX\_0270 | Pixel | Ich war nie auf einem Baum. Ich warte, bis der Baum zu mir kommt. | nach 0260 |
 | W4\_KAPI\_MAX\_0280 | Max | Wo ist euer großer Star? | Option Siegfried |
 | W4\_KAPI\_SIE\_0290 | Super-Siegfried | Dreht einen Film. Über sich. Seit drei Jahren. Wir sind das, was übrig ist. Die Staffel ohne Hauptdarsteller. |  |
+| W4\_KAPI\_MAX\_0670 | Max | Und was machst du so? |  |
+| W4\_KAPI\_SIE\_0680 | Super-Siegfried | Ich kann fliegen. Ich mache es nur ungern. Oben zieht es. |  |
 | W4\_KAPI\_MAX\_0300 | Max | Warum hängen Sie da oben? | Option Fledermann |
 | W4\_KAPI\_FLE\_0310 | Fledermann | Ich bin eine Fledermaus! Fledermause hängen! Ich habe dafür sehr viel Geld ausgegeben, und ich hänge, bis es sich gelohnt hat! |  |
+| W4\_KAPI\_MAX\_0690 | Max | Und wann hat es sich gelohnt? |  |
+| W4\_KAPI\_FLE\_0700 | Fledermann | In zwei Jahren! Dann bin ich bei null! Ab da hänge ich aus Spaß! |  |
 | W4\_KAPI\_MAX\_0320 | Max | Was können Sie? | Option Fledermann |
 | W4\_KAPI\_FLE\_0330 | Fledermann | Ich habe Geld, einen Butler und siebenundvierzig Regenschirme. Zusammengenäht. Das ist eine Superkraft, wenn man reich genug ist. |  |
+| W4\_KAPI\_MAX\_0710 | Max | Und der Butler? |  |
+| W4\_KAPI\_FLE\_0720 | Fledermann | Hat gekündigt! Er wollte auch mal hängen! Ich habe ihm gesagt, das ist mein Ding! |  |
 | W4\_KAPI\_MAX\_0340 | Max | Ich brauche einen Anzug. | Option Fledermann; nach 0130 |
 | W4\_KAPI\_FLE\_0350 | Fledermann | Mein erster Entwurf! Ein Bettlaken! Ich habe es nie getragen, es hatte zu wenig Schirme. Nimm es. Es ist gewaschen. Vermutlich. | wirft das Laken herunter |
 | W4\_KAPI\_MAX\_0360 | Max | Ein Bettlaken. Ich trage jetzt ein Bettlaken. Mein Image war nie gut, aber es war wenigstens meins. | Nehmen: Bettlaken |
@@ -710,9 +745,13 @@ Gespräche und Ansehen in Kapitolis.
 | W4\_KAPI\_PIX\_0430 | Pixel | Das wusste ich. Ich lag daneben. | nach 0420 |
 | W4\_KAPI\_MAX\_0440 | Max | Wie werde ich ein Held? | Option Wilma (bleibt) |
 | W4\_KAPI\_WIL\_0450 | Wonder-Wilma | Durch einen Unfall. Alle großen Helden hatten einen. Spinne, Blitz, Chemikalie. Such dir eine Fabrik, die Dinge umkippt. Da hinten ist eine. | Hinweis R10c |
+| W4\_KAPI\_MAX\_0730 | Max | Und welcher Unfall war deiner? |  |
+| W4\_KAPI\_WIL\_0740 | Wonder-Wilma | Ich bin in ein Comic-Heft gefallen. Mit Anlauf. Seitdem habe ich Umrandungen. |  |
 | W4\_KAPI\_MAX\_0460 | Max | Wer ist Dr. Werbepause? | Option Wilma |
 | W4\_KAPI\_WIL\_0470 | Wonder-Wilma | Unser Schurke. Er unterbricht jede Szene mit Werbung. Mitten im Kampf: Zahnpasta. Mitten in der Rettung: Matratzen. Wir kommen nie zum Ende. |  |
-| W4\_KAPI\_MAX\_0480 | Max | Ich sehe mich mal um. | Option, beendet jedes Gespräch |
+| W4\_KAPI\_MAX\_0750 | Max | Und wo steckt er jetzt? |  |
+| W4\_KAPI\_WIL\_0760 | Wonder-Wilma | Im Werbespot-Set, glaube ich. Er dreht einen Spot über sich selbst. Er ist sein bester Kunde. |  |
+| W4\_KAPI\_MAX\_0480 | Max | Ich sehe mich mal um. | Option Siegfried, beendet das Gespräch |
 | W4\_KAPI\_SIE\_0490 | Super-Siegfried | Mach das. Ich schlaf hier kurz. Im Schweben. |  |
 | W4\_KAPI\_MAX\_0500 | Max | Also definitiv der Fledermann. | Ansehen: Umhänge-Schild „Nicht der Fledermann“ |
 | W4\_KAPI\_MAX\_0505 | Max | Auf der Rückseite steht klein: „Wirklich nicht.“ Er gibt sich viel Mühe, jemand anders zu sein. | Ansehen: Umhänge-Schild „Nicht der Fledermann“, zweites Mal |
@@ -871,7 +910,7 @@ Max findet den Spot in der Programmzeitschrift und schaltet hinein. Dr. Werbepau
 | W4\_WERB\_MAX\_0480 | Max | Nächste Folge in fünf Sekunden. Endlich mal eine ehrliche Drohung. | Ansehen: Autoplay-Countdown |
 | W4\_WERB\_MAX\_0485 | Max | Vier. Drei. Ich drücke nichts. Zwei. Ich bin stark. Eins. Ich bin sehr stark. Glaube ich. | Ansehen: Autoplay-Countdown, zweites Mal |
 | W4\_WERB\_MAX\_0490 | Max | Allein, ohne Team, ohne Umhang? Im Comic gewinnt nur, wer eine Herkunftsgeschichte hat. Erst Held werden, dann werfen. | Stinkbombe auf Werbepause, noch nicht Käsemann |
-| W4\_WERB\_MAX\_0500 | Max | Die Taste liegt unter den Panels. Erst die Geschichte, dann die Beute. | Nehmen: Taste Sendersuchlauf, bevor die Panels richtig liegen |
+| W4\_WERB\_MAX\_0500 | Max | Die Taste liegt unter den Panels. Erst die Geschichte, dann die Beute. | Taste Sendersuchlauf nehmen, bevor die Panels richtig liegen (Rätselcode) |
 | W4\_WERB\_PIX\_0510 | Pixel | Deine Beine sind gefangen. Dein Daumen nicht. Der war schon immer der fleißigste Teil von dir. | nach 0050, ohne Taste Stumm; Hinweis: Umschalten bringt Max hinaus |
 
 ## 15. Senderzentrale: Empfang und Kellerarchiv (Rätsel 12)
@@ -888,11 +927,15 @@ Der Sendersuchlauf findet Kanal 999. Im Empfang liest Max den Aufzugscode in den
 | W4\_EMPF\_EMP\_0060 | Empfangsdame | Das haben alle. Setzen Sie sich. Der Intendant empfängt niemanden. Er sendet nur. |  |
 | W4\_EMPF\_MAX\_0070 | Max | Wie komme ich nach oben? | Option Empfangsdame (bleibt) |
 | W4\_EMPF\_EMP\_0080 | Empfangsdame | Mit dem Aufzug. Mit dem Code. Den ich nicht sage. Den ich auch nicht aufschreibe. Den ich nur denke. | Hinweis R12b |
+| W4\_EMPF\_MAX\_0360 | Max | Und wenn ich ganz nett frage? |  |
+| W4\_EMPF\_EMP\_0370 | Empfangsdame | Dann denke ich ihn lauter. Das hilft Ihnen auch nicht. |  |
 | W4\_EMPF\_MAX\_0090 | Max | Wer sind die zwei Herren? | Option Empfangsdame |
 | W4\_EMPF\_EMP\_0100 | Empfangsdame | Sicherheit. Sie stehen da. Das ist ihr Job. Sie sind sehr gut darin. |  |
+| W4\_EMPF\_MAX\_0380 | Max | Reden die auch mal? |  |
+| W4\_EMPF\_EMP\_0390 | Empfangsdame | Einmal im Jahr, auf der Weihnachtsfeier. Dann sagen sie „Frohes Fest“. Gleichzeitig. |  |
 | W4\_EMPF\_MAX\_0110 | Max | Arbeiten Sie gern hier? | Option Empfangsdame |
 | W4\_EMPF\_EMP\_0120 | Empfangsdame | Ich sitze. Ich kaue. Ich warte auf den Feierabend. Der Feierabend wartet auf den Sendeschluss. Den gibt es nicht mehr. |  |
-| W4\_EMPF\_MAX\_0130 | Max | Dann warte ich auch. | Option, beendet das Gespräch |
+| W4\_EMPF\_MAX\_0130 | Max | Dann warte ich auch. | Option Empfangsdame, beendet das Gespräch |
 | W4\_EMPF\_EMP\_0140 | Empfangsdame | Tun Sie das. Alle tun das. |  |
 | W4\_EMPF\_MAX\_0150 | Max | Untertitel: „Kaugummi ist alt. Code ist 1988. Wie immer. Wie sein Dienstantritt. Der Mann wechselt nie etwas. Nicht mal die Zahl.“ | Untertitel auf Empfangsdame; Code ins Notizbuch |
 | W4\_EMPF\_MAX\_0160 | Max | 1988. Sie hat es gedacht, ich habe es gelesen. Das ist entweder Spionage oder Social Media. |  |
@@ -1150,7 +1193,7 @@ Pixel (aus dem Rauschen oder von der Schulter), Flimmer und die Sender kommentie
 | W4\_ZURF\_FLI\_0020 | Flimmer | Noch da? Ich frage nur. Ich frage das alle. Keiner antwortet. | Testbild, Rauschen |
 | W4\_ZURF\_GER\_0030 | Gerd Glück | Nicht wegzappen! Oder doch! Aber mit Gefühl! | Glücksrad-Studio |
 | W4\_ZURF\_PIX\_0040 | Pixel | Er lächelt seit vier Minuten in dieselbe Richtung. Entweder Profi oder eingefroren. | Glücksrad-Studio |
-| W4\_ZURF\_NAR\_0050 | – | Die Lachkonserve lacht. Niemand hat etwas gesagt. | Sitcom; Ton |
+| W4\_ZURF\_NAR\_0050 | – | Die Lachkonserve lacht. Niemand hat etwas gesagt. | Sitcom, als Ton |
 | W4\_ZURF\_PIX\_0060 | Pixel | Das Band hat gerade über nichts gelacht. Vielleicht über dich. Das wäre etwas. | Sitcom, nach 0050 |
 | W4\_ZURF\_VAT\_0070 | Sitcom-Vater | Ist das der Chef? Nein? Dann bleibt die Dose zu. | Sitcom; vor R3 |
 | W4\_ZURF\_ERZ\_0080 | Erzähler | Das Männchen verharrt. Es wartet auf Beute. Oder auf WLAN. Die Forschung ist sich nicht einig. | Savanne |
@@ -1158,19 +1201,19 @@ Pixel (aus dem Rauschen oder von der Schulter), Flimmer und die Sender kommentie
 | W4\_ZURF\_PIX\_0100 | Pixel | Die Flamingos reden über deine Schuhe. Nicht gut. | Savanne |
 | W4\_ZURF\_ZOM\_0110 | Zombie | Uuh. Uh-uh. Uuh. | Friedhof, im Takt |
 | W4\_ZURF\_PIX\_0120 | Pixel | Du stehst neben tanzenden Toten und tust nichts. Das ist entweder Respekt oder Schockstarre. | Friedhof |
-| W4\_ZURF\_GST\_0130 | Geist | Buh? | Keller, aus einer Kiste |
-| W4\_ZURF\_PIX\_0140 | Pixel | Die Tür ist immer noch zu. Sie wird nicht aufgehen, weil du sie anstarrst. Glaub mir, ich starre beruflich. | Keller; vor R6 |
-| W4\_ZURF\_AGE\_0150 | FBI-Agent | Haben Sie das gehört? Nein? Ich auch nicht. Genau das ist verdächtig. | Halle |
-| W4\_ZURF\_NAR\_0160 | – | Die Lichterkette blinkt einmal kurz. Wie ein Räuspern. | Halle; vor R7 |
+| W4\_ZURF\_GST\_0130 | Geist | Buh? | Spukhaus-Keller, aus einer Kiste |
+| W4\_ZURF\_PIX\_0140 | Pixel | Die Tür ist immer noch zu. Sie wird nicht aufgehen, weil du sie anstarrst. Glaub mir, ich starre beruflich. | Spukhaus-Keller; vor R6 |
+| W4\_ZURF\_AGE\_0150 | FBI-Agent | Haben Sie das gehört? Nein? Ich auch nicht. Genau das ist verdächtig. | Spukhaus-Halle |
+| W4\_ZURF\_NAR\_0160 | – | Die Lichterkette blinkt einmal kurz. Wie ein Räuspern. | Spukhaus-Halle; vor R7 |
 | W4\_ZURF\_SIE\_0170 | Super-Siegfried | Zzz. Katze. Baum. Zzz. | Kapitolis, schwebend |
 | W4\_ZURF\_FLE\_0180 | Fledermann | Ich hänge noch! Falls es jemanden interessiert! Es interessiert niemanden! | Kapitolis |
 | W4\_ZURF\_PIX\_0190 | Pixel | Der Amboss liegt da und wartet auf eine zweite Chance. Ich gebe ihm keine. | Kapitolis, Amboss nicht aufgehoben |
-| W4\_ZURF\_NAR\_0200 | – | Der Unfall passiert. Wieder. Niemand ist überrascht. | Fabrik |
+| W4\_ZURF\_NAR\_0200 | – | Der Unfall passiert. Wieder. Niemand ist überrascht. | Fondue-Fabrik |
 | W4\_ZURF\_WER\_0210 | Dr. Werbepause | Noch da? Dann KAUFEN Sie wenigstens etwas! | Werbespot-Set, vor der Flucht |
 | W4\_ZURF\_EMP\_0220 | Empfangsdame | Sie können sich auch setzen. Es ändert nichts, aber es sitzt sich. | Empfang |
 | W4\_ZURF\_PIX\_0230 | Pixel | Das Auge in der Presse hat gerade geblinzelt. Zweimal. Ich glaube, das heißt: Beeil dich. | Kellerarchiv |
-| W4\_ZURF\_ZAP\_0240 | Zappmann | Das Sofa wird nicht kälter, Max. Ich auch nicht. | Studio, vor dem Kampf |
-| W4\_ZURF\_PIX\_0250 | Pixel | Du stehst. Das ist schon mehr, als er je getan hat. Weiter so. Und jetzt drück was. | Studio, im Kampf |
+| W4\_ZURF\_ZAP\_0240 | Zappmann | Das Sofa wird nicht kälter, Max. Ich auch nicht. | Zappmanns Studio, vor dem Kampf |
+| W4\_ZURF\_PIX\_0250 | Pixel | Du stehst. Das ist schon mehr, als er je getan hat. Weiter so. Und jetzt drück was. | Zappmanns Studio, im Kampf |
 
 ## 20. Hinweise (Hilfe-Pfote)
 

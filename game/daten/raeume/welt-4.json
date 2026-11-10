@@ -256,7 +256,22 @@
      "ansehen": []
     }
    ],
-   "zurufe": []
+   "zurufe": [
+    {
+     "zeile": "W4_ZURF_PIX_0010",
+     "sprecher": "PIX",
+     "blasen": [
+      "W4_ZURF_PIX_0010"
+     ]
+    },
+    {
+     "zeile": "W4_ZURF_FLI_0020",
+     "sprecher": "FLI",
+     "blasen": [
+      "W4_ZURF_FLI_0020"
+     ]
+    }
+   ]
   },
   {
    "id": "rauschen",
@@ -773,7 +788,22 @@
      "ansehen": []
     }
    ],
-   "zurufe": []
+   "zurufe": [
+    {
+     "zeile": "W4_ZURF_GER_0030",
+     "sprecher": "GER",
+     "blasen": [
+      "W4_ZURF_GER_0030"
+     ]
+    },
+    {
+     "zeile": "W4_ZURF_PIX_0040",
+     "sprecher": "PIX",
+     "blasen": [
+      "W4_ZURF_PIX_0040"
+     ]
+    }
+   ]
   },
   {
    "id": "sitcom_kueche",
@@ -1286,7 +1316,35 @@
     }
    ],
    "ausgaenge": [],
-   "zurufe": []
+   "zurufe": [
+    {
+     "zeile": "W4_ZURF_NAR_0050",
+     "sprecher": "NAR",
+     "blasen": [
+      "W4_ZURF_NAR_0050"
+     ]
+    },
+    {
+     "zeile": "W4_ZURF_PIX_0060",
+     "sprecher": "PIX",
+     "blasen": [
+      "W4_ZURF_PIX_0060"
+     ]
+    },
+    {
+     "zeile": "W4_ZURF_VAT_0070",
+     "sprecher": "VAT",
+     "blasen": [
+      "W4_ZURF_VAT_0070"
+     ],
+     "bedingung": [
+      {
+       "art": "vor",
+       "raetsel": "R3"
+      }
+     ]
+    }
+   ]
   },
   {
    "id": "savanne",
@@ -1442,6 +1500,14 @@
         "W4_SAV_MAX_0115"
        ],
        "mal": 2
+      },
+      {
+       "zeile": "W4_VERH_MAX_0460",
+       "sprecher": "MAX",
+       "blasen": [
+        "W4_VERH_MAX_0460"
+       ],
+       "figur": "PIX"
       }
      ]
     },
@@ -1564,6 +1630,13 @@
           "W4_SAV_ERZ_0200"
          ],
          "bedingung_text": "ins Notizbuch"
+        },
+        {
+         "zeile": "W4_SAV_MAX_0210",
+         "sprecher": "MAX",
+         "blasen": [
+          "W4_SAV_MAX_0210"
+         ]
         }
        ]
       }
@@ -1597,6 +1670,13 @@
          "sprecher": "ERZ",
          "blasen": [
           "W4_SAV_ERZ_0230"
+         ]
+        },
+        {
+         "zeile": "W4_SAV_MAX_0240",
+         "sprecher": "MAX",
+         "blasen": [
+          "W4_SAV_MAX_0240"
          ]
         }
        ]
@@ -1836,7 +1916,29 @@
     }
    ],
    "ausgaenge": [],
-   "zurufe": []
+   "zurufe": [
+    {
+     "zeile": "W4_ZURF_ERZ_0080",
+     "sprecher": "ERZ",
+     "blasen": [
+      "W4_ZURF_ERZ_0080"
+     ]
+    },
+    {
+     "zeile": "W4_ZURF_KOM_0090",
+     "sprecher": "KOM",
+     "blasen": [
+      "W4_ZURF_KOM_0090"
+     ]
+    },
+    {
+     "zeile": "W4_ZURF_PIX_0100",
+     "sprecher": "PIX",
+     "blasen": [
+      "W4_ZURF_PIX_0100"
+     ]
+    }
+   ]
   },
   {
    "id": "friedhof",
@@ -2270,7 +2372,22 @@
      ]
     }
    ],
-   "zurufe": []
+   "zurufe": [
+    {
+     "zeile": "W4_ZURF_ZOM_0110",
+     "sprecher": "ZOM",
+     "blasen": [
+      "W4_ZURF_ZOM_0110"
+     ]
+    },
+    {
+     "zeile": "W4_ZURF_PIX_0120",
+     "sprecher": "PIX",
+     "blasen": [
+      "W4_ZURF_PIX_0120"
+     ]
+    }
+   ]
   },
   {
    "id": "spukhaus_keller",
@@ -2813,7 +2930,28 @@
      ]
     }
    ],
-   "zurufe": []
+   "zurufe": [
+    {
+     "zeile": "W4_ZURF_GST_0130",
+     "sprecher": "GST",
+     "blasen": [
+      "W4_ZURF_GST_0130"
+     ]
+    },
+    {
+     "zeile": "W4_ZURF_PIX_0140",
+     "sprecher": "PIX",
+     "blasen": [
+      "W4_ZURF_PIX_0140"
+     ],
+     "bedingung": [
+      {
+       "art": "vor",
+       "raetsel": "R6"
+      }
+     ]
+    }
+   ]
   },
   {
    "id": "spukhaus_halle",
@@ -3063,7 +3201,28 @@
      ]
     }
    ],
-   "zurufe": []
+   "zurufe": [
+    {
+     "zeile": "W4_ZURF_AGE_0150",
+     "sprecher": "AGE",
+     "blasen": [
+      "W4_ZURF_AGE_0150"
+     ]
+    },
+    {
+     "zeile": "W4_ZURF_NAR_0160",
+     "sprecher": "NAR",
+     "blasen": [
+      "W4_ZURF_NAR_0160"
+     ],
+     "bedingung": [
+      {
+       "art": "vor",
+       "raetsel": "R7"
+      }
+     ]
+    }
+   ]
   },
   {
    "id": "kapitolis",
@@ -3566,7 +3725,29 @@
      "ansehen": []
     }
    ],
-   "zurufe": []
+   "zurufe": [
+    {
+     "zeile": "W4_ZURF_SIE_0170",
+     "sprecher": "SIE",
+     "blasen": [
+      "W4_ZURF_SIE_0170"
+     ]
+    },
+    {
+     "zeile": "W4_ZURF_FLE_0180",
+     "sprecher": "FLE",
+     "blasen": [
+      "W4_ZURF_FLE_0180"
+     ]
+    },
+    {
+     "zeile": "W4_ZURF_PIX_0190",
+     "sprecher": "PIX",
+     "blasen": [
+      "W4_ZURF_PIX_0190"
+     ]
+    }
+   ]
   },
   {
    "id": "fondue_fabrik",
@@ -4060,7 +4241,15 @@
      "ansehen": []
     }
    ],
-   "zurufe": []
+   "zurufe": [
+    {
+     "zeile": "W4_ZURF_NAR_0200",
+     "sprecher": "NAR",
+     "blasen": [
+      "W4_ZURF_NAR_0200"
+     ]
+    }
+   ]
   },
   {
    "id": "werbespot_set",
@@ -4603,16 +4792,25 @@
      "gegenstand": "taste_sendersuchlauf",
      "ansehen": [],
      "nehmen": {
-      "zeile": "W4_WERB_MAX_0500",
+      "zeile": "W4_WERB_MAX_0220",
       "sprecher": "MAX",
       "blasen": [
-       "W4_WERB_MAX_0500"
-      ]
+       "W4_WERB_MAX_0220"
+      ],
+      "bedingung_text": "nach 0360 (lag unter den Panels)"
      }
     }
    ],
    "ausgaenge": [],
-   "zurufe": []
+   "zurufe": [
+    {
+     "zeile": "W4_ZURF_WER_0210",
+     "sprecher": "WER",
+     "blasen": [
+      "W4_ZURF_WER_0210"
+     ]
+    }
+   ]
   },
   {
    "id": "empfang",
@@ -5027,7 +5225,15 @@
      ]
     }
    ],
-   "zurufe": []
+   "zurufe": [
+    {
+     "zeile": "W4_ZURF_EMP_0220",
+     "sprecher": "EMP",
+     "blasen": [
+      "W4_ZURF_EMP_0220"
+     ]
+    }
+   ]
   },
   {
    "id": "kellerarchiv",
@@ -5349,7 +5555,15 @@
      "ansehen": []
     }
    ],
-   "zurufe": []
+   "zurufe": [
+    {
+     "zeile": "W4_ZURF_PIX_0230",
+     "sprecher": "PIX",
+     "blasen": [
+      "W4_ZURF_PIX_0230"
+     ]
+    }
+   ]
   },
   {
    "id": "zappmanns_studio",
@@ -5646,7 +5860,22 @@
      ]
     }
    ],
-   "zurufe": []
+   "zurufe": [
+    {
+     "zeile": "W4_ZURF_ZAP_0240",
+     "sprecher": "ZAP",
+     "blasen": [
+      "W4_ZURF_ZAP_0240"
+     ]
+    },
+    {
+     "zeile": "W4_ZURF_PIX_0250",
+     "sprecher": "PIX",
+     "blasen": [
+      "W4_ZURF_PIX_0250"
+     ]
+    }
+   ]
   }
  ],
  "figuren": [
@@ -7066,6 +7295,22 @@
         "W4_GLUE_GER_0320"
        ],
        "regie": ""
+      },
+      {
+       "zeile": "W4_GLUE_MAX_0580",
+       "sprecher": "MAX",
+       "blasen": [
+        "W4_GLUE_MAX_0580"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W4_GLUE_GER_0590",
+       "sprecher": "GER",
+       "blasen": [
+        "W4_GLUE_GER_0590"
+       ],
+       "regie": ""
       }
      ],
      "beendet": false,
@@ -7113,6 +7358,22 @@
         "W4_GLUE_GER_0370"
        ],
        "regie": ""
+      },
+      {
+       "zeile": "W4_GLUE_MAX_0600",
+       "sprecher": "MAX",
+       "blasen": [
+        "W4_GLUE_MAX_0600"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W4_GLUE_GER_0610",
+       "sprecher": "GER",
+       "blasen": [
+        "W4_GLUE_GER_0610"
+       ],
+       "regie": ""
       }
      ],
      "beendet": false,
@@ -7129,6 +7390,22 @@
         "W4_GLUE_GER_0390"
        ],
        "regie": "Lächeln friert ein"
+      },
+      {
+       "zeile": "W4_GLUE_MAX_0620",
+       "sprecher": "MAX",
+       "blasen": [
+        "W4_GLUE_MAX_0620"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W4_GLUE_GER_0630",
+       "sprecher": "GER",
+       "blasen": [
+        "W4_GLUE_GER_0630"
+       ],
+       "regie": ""
       }
      ],
      "beendet": false,
@@ -7211,6 +7488,14 @@
         "W4_SIT_SMU_0360"
        ],
        "regie": "LAC"
+      },
+      {
+       "zeile": "W4_SIT_MAX_0670",
+       "sprecher": "MAX",
+       "blasen": [
+        "W4_SIT_MAX_0670"
+       ],
+       "regie": ""
       }
      ],
      "beendet": false,
@@ -7228,9 +7513,41 @@
         "W4_SIT_SMU_0380"
        ],
        "regie": "LAC"
+      },
+      {
+       "zeile": "W4_SIT_MAX_0680",
+       "sprecher": "MAX",
+       "blasen": [
+        "W4_SIT_MAX_0680"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W4_SIT_SMU_0690",
+       "sprecher": "SMU",
+       "blasen": [
+        "W4_SIT_SMU_0690"
+       ],
+       "regie": ""
       }
      ],
      "beendet": false,
+     "bleibt": false
+    },
+    {
+     "id": "0470",
+     "frage": "W4_SIT_MAX_0470",
+     "antworten": [
+      {
+       "zeile": "W4_SIT_SMU_0480",
+       "sprecher": "SMU",
+       "blasen": [
+        "W4_SIT_SMU_0480"
+       ],
+       "regie": "LAC"
+      }
+     ],
+     "beendet": true,
      "bleibt": false
     }
    ],
@@ -7260,6 +7577,22 @@
         "W4_SIT_VAT_0400"
        ],
        "regie": "LAC"
+      },
+      {
+       "zeile": "W4_SIT_MAX_0700",
+       "sprecher": "MAX",
+       "blasen": [
+        "W4_SIT_MAX_0700"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W4_SIT_VAT_0710",
+       "sprecher": "VAT",
+       "blasen": [
+        "W4_SIT_VAT_0710"
+       ],
+       "regie": ""
       }
      ],
      "beendet": false,
@@ -7276,6 +7609,22 @@
         "W4_SIT_VAT_0420"
        ],
        "regie": "Hinweis R3"
+      },
+      {
+       "zeile": "W4_SIT_MAX_0720",
+       "sprecher": "MAX",
+       "blasen": [
+        "W4_SIT_MAX_0720"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W4_SIT_VAT_0730",
+       "sprecher": "VAT",
+       "blasen": [
+        "W4_SIT_VAT_0730"
+       ],
+       "regie": ""
       }
      ],
      "beendet": false,
@@ -7308,6 +7657,22 @@
         "W4_SIT_SOH_0440"
        ],
        "regie": "LAC"
+      },
+      {
+       "zeile": "W4_SIT_MAX_0740",
+       "sprecher": "MAX",
+       "blasen": [
+        "W4_SIT_MAX_0740"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W4_SIT_SOH_0750",
+       "sprecher": "SOH",
+       "blasen": [
+        "W4_SIT_SOH_0750"
+       ],
+       "regie": ""
       }
      ],
      "beendet": false,
@@ -7324,6 +7689,22 @@
         "W4_SIT_SOH_0460"
        ],
        "regie": "LAC"
+      },
+      {
+       "zeile": "W4_SIT_MAX_0760",
+       "sprecher": "MAX",
+       "blasen": [
+        "W4_SIT_MAX_0760"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W4_SIT_SOH_0770",
+       "sprecher": "SOH",
+       "blasen": [
+        "W4_SIT_SOH_0770"
+       ],
+       "regie": ""
       }
      ],
      "beendet": false,
@@ -7356,6 +7737,22 @@
         "W4_VERH_KOM_0020"
        ],
        "regie": "ins Notizbuch"
+      },
+      {
+       "zeile": "W4_VERH_MAX_0490",
+       "sprecher": "MAX",
+       "blasen": [
+        "W4_VERH_MAX_0490"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W4_VERH_KOM_0500",
+       "sprecher": "KOM",
+       "blasen": [
+        "W4_VERH_KOM_0500"
+       ],
+       "regie": ""
       }
      ],
      "beendet": false,
@@ -7372,6 +7769,22 @@
         "W4_VERH_KOM_0040"
        ],
        "regie": "Hinweis R4a"
+      },
+      {
+       "zeile": "W4_VERH_MAX_0510",
+       "sprecher": "MAX",
+       "blasen": [
+        "W4_VERH_MAX_0510"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W4_VERH_KOM_0520",
+       "sprecher": "KOM",
+       "blasen": [
+        "W4_VERH_KOM_0520"
+       ],
+       "regie": ""
       }
      ],
      "beendet": false,
@@ -7388,6 +7801,22 @@
         "W4_VERH_KOM_0060"
        ],
        "regie": "Hinweis R4d"
+      },
+      {
+       "zeile": "W4_VERH_MAX_0530",
+       "sprecher": "MAX",
+       "blasen": [
+        "W4_VERH_MAX_0530"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W4_VERH_KOM_0540",
+       "sprecher": "KOM",
+       "blasen": [
+        "W4_VERH_KOM_0540"
+       ],
+       "regie": ""
       }
      ],
      "beendet": false,
@@ -7460,6 +7889,22 @@
         "W4_HALL_AGE_0370"
        ],
        "regie": ""
+      },
+      {
+       "zeile": "W4_HALL_MAX_0550",
+       "sprecher": "MAX",
+       "blasen": [
+        "W4_HALL_MAX_0550"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W4_HALL_AGE_0560",
+       "sprecher": "AGE",
+       "blasen": [
+        "W4_HALL_AGE_0560"
+       ],
+       "regie": ""
       }
      ],
      "beendet": false,
@@ -7476,6 +7921,22 @@
         "W4_HALL_AGE_0390"
        ],
        "regie": ""
+      },
+      {
+       "zeile": "W4_HALL_MAX_0570",
+       "sprecher": "MAX",
+       "blasen": [
+        "W4_HALL_MAX_0570"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W4_HALL_AGE_0580",
+       "sprecher": "AGE",
+       "blasen": [
+        "W4_HALL_AGE_0580"
+       ],
+       "regie": ""
       }
      ],
      "beendet": false,
@@ -7490,6 +7951,22 @@
        "sprecher": "AGE",
        "blasen": [
         "W4_HALL_AGE_0410"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W4_HALL_MAX_0590",
+       "sprecher": "MAX",
+       "blasen": [
+        "W4_HALL_MAX_0590"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W4_HALL_AGE_0600",
+       "sprecher": "AGE",
+       "blasen": [
+        "W4_HALL_AGE_0600"
        ],
        "regie": ""
       }
@@ -7593,9 +8070,41 @@
         "W4_KAPI_SIE_0290"
        ],
        "regie": ""
+      },
+      {
+       "zeile": "W4_KAPI_MAX_0670",
+       "sprecher": "MAX",
+       "blasen": [
+        "W4_KAPI_MAX_0670"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W4_KAPI_SIE_0680",
+       "sprecher": "SIE",
+       "blasen": [
+        "W4_KAPI_SIE_0680"
+       ],
+       "regie": ""
       }
      ],
      "beendet": false,
+     "bleibt": false
+    },
+    {
+     "id": "0480",
+     "frage": "W4_KAPI_MAX_0480",
+     "antworten": [
+      {
+       "zeile": "W4_KAPI_SIE_0490",
+       "sprecher": "SIE",
+       "blasen": [
+        "W4_KAPI_SIE_0490"
+       ],
+       "regie": ""
+      }
+     ],
+     "beendet": true,
      "bleibt": false
     }
    ],
@@ -7625,6 +8134,22 @@
         "W4_KAPI_FLE_0310"
        ],
        "regie": ""
+      },
+      {
+       "zeile": "W4_KAPI_MAX_0690",
+       "sprecher": "MAX",
+       "blasen": [
+        "W4_KAPI_MAX_0690"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W4_KAPI_FLE_0700",
+       "sprecher": "FLE",
+       "blasen": [
+        "W4_KAPI_FLE_0700"
+       ],
+       "regie": ""
       }
      ],
      "beendet": false,
@@ -7639,6 +8164,22 @@
        "sprecher": "FLE",
        "blasen": [
         "W4_KAPI_FLE_0330"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W4_KAPI_MAX_0710",
+       "sprecher": "MAX",
+       "blasen": [
+        "W4_KAPI_MAX_0710"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W4_KAPI_FLE_0720",
+       "sprecher": "FLE",
+       "blasen": [
+        "W4_KAPI_FLE_0720"
        ],
        "regie": ""
       }
@@ -7743,6 +8284,22 @@
         "W4_KAPI_WIL_0450"
        ],
        "regie": "Hinweis R10c"
+      },
+      {
+       "zeile": "W4_KAPI_MAX_0730",
+       "sprecher": "MAX",
+       "blasen": [
+        "W4_KAPI_MAX_0730"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W4_KAPI_WIL_0740",
+       "sprecher": "WIL",
+       "blasen": [
+        "W4_KAPI_WIL_0740"
+       ],
+       "regie": ""
       }
      ],
      "beendet": false,
@@ -7757,6 +8314,22 @@
        "sprecher": "WIL",
        "blasen": [
         "W4_KAPI_WIL_0470"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W4_KAPI_MAX_0750",
+       "sprecher": "MAX",
+       "blasen": [
+        "W4_KAPI_MAX_0750"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W4_KAPI_WIL_0760",
+       "sprecher": "WIL",
+       "blasen": [
+        "W4_KAPI_WIL_0760"
        ],
        "regie": ""
       }
@@ -7791,6 +8364,22 @@
         "W4_EMPF_EMP_0080"
        ],
        "regie": "Hinweis R12b"
+      },
+      {
+       "zeile": "W4_EMPF_MAX_0360",
+       "sprecher": "MAX",
+       "blasen": [
+        "W4_EMPF_MAX_0360"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W4_EMPF_EMP_0370",
+       "sprecher": "EMP",
+       "blasen": [
+        "W4_EMPF_EMP_0370"
+       ],
+       "regie": ""
       }
      ],
      "beendet": false,
@@ -7805,6 +8394,22 @@
        "sprecher": "EMP",
        "blasen": [
         "W4_EMPF_EMP_0100"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W4_EMPF_MAX_0380",
+       "sprecher": "MAX",
+       "blasen": [
+        "W4_EMPF_MAX_0380"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W4_EMPF_EMP_0390",
+       "sprecher": "EMP",
+       "blasen": [
+        "W4_EMPF_EMP_0390"
        ],
        "regie": ""
       }
@@ -7826,6 +8431,22 @@
       }
      ],
      "beendet": false,
+     "bleibt": false
+    },
+    {
+     "id": "0130",
+     "frage": "W4_EMPF_MAX_0130",
+     "antworten": [
+      {
+       "zeile": "W4_EMPF_EMP_0140",
+       "sprecher": "EMP",
+       "blasen": [
+        "W4_EMPF_EMP_0140"
+       ],
+       "regie": ""
+      }
+     ],
+     "beendet": true,
      "bleibt": false
     }
    ],

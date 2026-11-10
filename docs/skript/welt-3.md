@@ -81,15 +81,23 @@ Gespräch mit Herrn Vier, die Bestellung und das Treffen mit Morphäus. Ebene: R
 | W3\_NUD\_VIE\_0010 | Herr Vier | Willkommen. Wir haben vier Plätze, vier Gerichte, vier Zutaten pro Gericht. Was darf es sein? | Reden: Herr Vier, erstes Mal |
 | W3\_NUD\_MAX\_0020 | Max | Was ist mit drei? | Option Herr Vier |
 | W3\_NUD\_VIE\_0030 | Herr Vier | Drei ist eine Vier, der etwas fehlt. Ich koche nichts, dem etwas fehlt. | ernst |
+| W3\_NUD\_MAX\_0630 | Max | Und wenn vier Leute kommen, die jeder nur drei Nudeln wollen? |  |
+| W3\_NUD\_VIE\_0640 | Herr Vier | Dann rechne ich. Lange. Und am Ende koche ich trotzdem vier für jeden. |  |
 | W3\_NUD\_MAX\_0040 | Max | Und fünf? | Option Herr Vier |
 | W3\_NUD\_VIE\_0050 | Herr Vier | Fünf ist eine Vier, die angibt. Ich koche nichts, das angibt. |  |
 | W3\_NUD\_PIX\_0060 | Pixel | Ich mag ihn. Er hat Prinzipien. Falsche, aber feste. |  |
 | W3\_NUD\_MAX\_0070 | Max | Warum ausgerechnet vier? | Option Herr Vier |
 | W3\_NUD\_VIE\_0080 | Herr Vier | Vier Jahreszeiten. Vier Himmelsrichtungen. Vier Finger an jeder Hand. Die Welt hat sich entschieden, ich nur zugehört. | zeigt die Hände |
+| W3\_NUD\_PIX\_0650 | Pixel | Ich habe vier Pfoten. Bekomme ich Rabatt? |  |
+| W3\_NUD\_VIE\_0660 | Herr Vier | Vier Pfoten und ein Schwanz. Das sind fünf. Nein. |  |
 | W3\_NUD\_MAX\_0090 | Max | Kennst du jemanden, der hier auf jemanden wartet? Ich wurde geschickt. Glaube ich. | Option Herr Vier; vor Rätsel 2 |
 | W3\_NUD\_VIE\_0100 | Herr Vier | Hier wartet jeder auf jemanden. Ich warte seit Jahren auf eine Zutat. Bestell erst mal etwas, dann sehen wir weiter. | Hinweis auf die Bestellung |
+| W3\_NUD\_MAX\_0670 | Max | Und was kann man bestellen? |  |
+| W3\_NUD\_VIE\_0680 | Herr Vier | Alles, was vier Zutaten hat. Also alles. Außer der Suppe. Der fehlt eine. |  |
 | W3\_NUD\_MAX\_0110 | Max | Was ist deine berühmte Suppe? | Option Herr Vier |
 | W3\_NUD\_VIE\_0120 | Herr Vier | Drei Zutaten habe ich. Die vierte fehlt seit elf Jahren. Elf! Nicht mal eine Zahl, die ich mag. | Hinweis auf Rätsel 12 |
+| W3\_NUD\_MAX\_0690 | Max | Welche Zutat fehlt denn? |  |
+| W3\_NUD\_VIE\_0700 | Herr Vier | Wenn ich das wüsste, würde sie nicht fehlen. Das Rezept hatte ich von einer alten Dame. Ich habe es verloren. Sie hat mir vorher gesagt, dass ich es verliere. |  |
 | W3\_NUD\_MAX\_0130 | Max | Ich geh dann mal. | Option Herr Vier, beendet das Gespräch |
 | W3\_NUD\_VIE\_0140 | Herr Vier | Komm in vier Minuten wieder. Oder in vierzig. Ich bin da. |  |
 
@@ -144,6 +152,8 @@ Nach der Bestellung geht Morphäus zum Eingang der Apothekengasse und wartet dor
 | W3\_NUD\_PIX\_0570 | Pixel | Ich werde mich nicht beschweren. Ich werde mich äußern. Ausführlich. |  |
 | W3\_NUD\_MAX\_0580 | Max | Woher weißt du das alles? | Option Morphäus |
 | W3\_NUD\_MOR\_0590 | Morphäus | Eine alte Dame hat es mir gesagt. Sie weiß alles vorher. Außer die Lottozahlen. Die, sagt sie, wären unsportlich. | Hinweis auf die Orakel-Oma |
+| W3\_NUD\_MAX\_0710 | Max | Und wo finde ich diese Dame? |  |
+| W3\_NUD\_MOR\_0720 | Morphäus | Oben, in der sauberen Stadt. Du findest sie nicht. Sie findet dich, meistens mit Keksen. |  |
 | W3\_NUD\_MAX\_0600 | Max | Ich geh mal zum Detektiv. | Option Morphäus, beendet das Gespräch |
 | W3\_NUD\_MOR\_0610 | Morphäus | Antworte ihm nicht so, wie du denkst. Antworte so, wie die Leute hier es tun. Sieh dich um. | nickt zur Straße; Hinweis Rätsel 1 |
 | W3\_NUD\_MAX\_0620 | Max | Ein Mann mit Pappschild und Strickjacke sagt mir, ich soll weniger logisch sein. Guter Tag. | geht |
@@ -159,6 +169,8 @@ Detektiv Deckert unter dem Vordach, Ebene: Realität. Drei Fragen, je drei Antwo
 | W3\_TEST\_PIX\_0030 | Pixel | Dann besteht Max den Test mühelos. Er hat noch nie logisch geantwortet. Er hat überhaupt selten geantwortet. |  |
 | W3\_TEST\_MAX\_0040 | Max | Was passiert, wenn ich durchfalle? | Option Deckert |
 | W3\_TEST\_DEC\_0050 | Deckert | Nichts. Du bleibst vor der Gasse stehen und ich schreibe in mein Heft: „Verdächtig logisch.“ Das Heft ist voll. |  |
+| W3\_TEST\_PIX\_0400 | Pixel | Ein volles Heft. Er braucht kein neues Opfer, er braucht ein neues Heft. |  |
+| W3\_TEST\_DEC\_0410 | Deckert | Der Kater hat recht. Ich notiere es. Am Rand. |  |
 | W3\_TEST\_MAX\_0060 | Max | Was ist mit dem Kater? | Option Deckert |
 | W3\_TEST\_DEC\_0070 | Deckert | Katzen bestehen den Test immer. Sie antworten nicht. Das ist die menschlichste Antwort, die es gibt. | sieht Pixel an |
 | W3\_TEST\_PIX\_0080 | Pixel | Ich bin nicht menschlich. Ich bin darüber hinaus. Aber danke. |  |
@@ -308,7 +320,7 @@ Szene beim ersten Eintritt in die Simulation. Ebene: Simulation. Max ist allein;
 | W3\_SIM\_MAX\_0280 | Max | Ein Haus mit Spitzengardinen und einem Schild: „Bitte klopfen. Ich weiß sowieso, dass du es bist.“ | Ansehen: Haus der Orakel-Oma |
 | W3\_SIM\_MAX\_0285 | Max | Das Schild sagt, sie weiß, dass ich es bin. Jetzt hab ich das Gefühl, ich muss mich benehmen. Auch draußen. | Ansehen: Haus der Orakel-Oma, zweites Mal |
 | W3\_SIM\_ORA\_0290 | Orakel-Oma (von drinnen) | Komm rein, Max. Die Tür ist offen. Sie war schon offen, bevor du geklopft hast. | Benutzen: Haustür; erstes Mal |
-| W3\_SIM\_MAX\_0300 | Max | Sie kennt meinen Namen. Entweder Orakel oder Opa hat angerufen. |  |
+| W3\_SIM\_MAX\_0300 | Max | Sie kennt meinen Namen. Entweder Orakel oder Opa hat angerufen. | nach 0290 |
 | W3\_SIM\_MAX\_0310 | Max | Ein Gehweg ohne Kaugummi, ohne Riss, ohne Hundehaufen. Niemand geht hier. Niemand lebt hier. Nur die Katze, und die ist eine Schleife. | Ansehen: Gehweg |
 | W3\_SIM\_MAX\_0315 | Max | Ich bück mich. Kein Krümel, kein Steinchen. Ich hab Lust, etwas fallen zu lassen, nur damit hier mal was liegt. | Ansehen: Gehweg, zweites Mal |
 | W3\_SIM\_MAX\_0320 | Max | Hat noch jemand das Gefühl, dass die Sonne hier nicht wandert? Nein. Niemand. Weil hier niemand ist. | Ansehen: Sonne |
@@ -324,10 +336,16 @@ Eingang des Büroturms auf der Stadtstraße. Agent Schmidt bewacht die verschlos
 | W3\_TUER\_SCH\_0020 | Schmidt | Die Tür hinter mir ist verschlossen. Zu Ihrem Schutz. Alles hier ist zu Ihrem Schutz. Auch ich. Besonders ich. Haben Sie Fragen? Ich habe Antworten. Viele. |  |
 | W3\_TUER\_MAX\_0030 | Max | Kann ich da rein? | Option Schmidt |
 | W3\_TUER\_SCH\_0040 | Schmidt | Nein. Das wäre unverantwortlich. Dort oben sind Fenster, Treppen, Akten. Akten sind scharfkantig. Ich habe einmal eine Akte gesehen, die … | redet weiter, Blase bricht ab |
+| W3\_TUER\_MAX\_0330 | Max | Die … was? |  |
+| W3\_TUER\_SCH\_0340 | Schreiber | Die Akte. Sie hatte eine Ecke. Ich spreche nicht darüber. Ich spreche nur über alles andere. |  |
 | W3\_TUER\_MAX\_0050 | Max | Warum tragen Sie Hausschuhe? | Option Schmidt |
 | W3\_TUER\_SCH\_0060 | Schmidt | Bequemlichkeit ist kein Verbrechen. Noch nicht. Ich arbeite daran. Rosa war im Angebot. |  |
+| W3\_TUER\_MAX\_0350 | Max | Rosa steht Ihnen. |  |
+| W3\_TUER\_SCH\_0360 | Schreiber | Danke. Das hat noch niemand gesagt. Das ist verdächtig. Ich notiere es, zu Ihrem Schutz. |  |
 | W3\_TUER\_MAX\_0070 | Max | Wer ist M.U.T.T.I. für Sie? | Option Schmidt |
 | W3\_TUER\_SCH\_0080 | Schmidt | Meine Vorgesetzte. Meine Erschafferin. Meine Mutter, im weitesten Sinne. Sie weiß, was gut für uns ist. Ich bin nur der Außendienst. |  |
+| W3\_TUER\_MAX\_0370 | Max | Und was ist gut für uns? |  |
+| W3\_TUER\_SCH\_0380 | Schreiber | Kein Zucker, keine Kanten, keine Fragen. Sie fragen schon wieder. Ich sage das nur aus Sorge. |  |
 | W3\_TUER\_MAX\_0090 | Max | Hören Sie auch mal auf zu reden? | Option Schmidt |
 | W3\_TUER\_SCH\_0100 | Schmidt | Nein. Schweigen ist eine Sicherheitslücke. In jedes Schweigen passt eine Frage. Fragen führen zu Antworten. Antworten zu Türen. Darum: Nein. |  |
 | W3\_TUER\_MAX\_0110 | Max | Ich geh dann. | Option Schmidt, beendet das Gespräch |
@@ -373,8 +391,12 @@ Ebene: Simulation. Die Oma backt, weiß alles vorher und sagt es auch. Pixel spr
 | --- | --- | --- | --- |
 | W3\_KUCH\_MAX\_0110 | Max | Was ist mit der Vase? | Option Oma |
 | W3\_KUCH\_ORA\_0120 | Orakel-Oma | Da steckt mein Geheimrezept drin. Das Gewürz für die Kekse. Niemand kommt da ran. Du auch nicht. Du zerbrichst sie nur. |  |
+| W3\_KUCH\_MAX\_0930 | Max | Ich zerbreche sie nicht. |  |
+| W3\_KUCH\_ORA\_0940 | Orakel-Oma | Doch. Später. Ich habe schon gefegt, für danach. |  |
 | W3\_KUCH\_MAX\_0130 | Max | Kannst du mir die Vase geben? | Option Oma; erster Versuch |
 | W3\_KUCH\_ORA\_0140 | Orakel-Oma | Nein. Ich gebe niemandem meine Vase. Dafür habe ich sie. Zum Nicht-Hergeben. |  |
+| W3\_KUCH\_MAX\_0950 | Max | Dann frag ich nicht noch mal. |  |
+| W3\_KUCH\_ORA\_0960 | Orakel-Oma | Du fragst noch einmal. Ich habe dir aber schon geantwortet. Nein. |  |
 | W3\_KUCH\_MAX\_0150 | Max | Wenn ich sie sowieso zerbreche: Dann kannst du sie mir auch gleich geben. Spart dir das Warten. | Option Oma; nach 0120 und 0140; Lösung |
 | W3\_KUCH\_ORA\_0160 | Orakel-Oma | … | lange Pause, Ofenhandschuh an der Stirn |
 | W3\_KUCH\_ORA\_0170 | Orakel-Oma | Siebenundvierzig Leute, und keiner hat das gesagt. Ich wusste, dass du es sagst. Ich hab nur gehofft, du lässt dir Zeit. | seufzt, reicht die Vase |
@@ -424,7 +446,7 @@ Ebene: Simulation. Die Oma backt, weiß alles vorher und sagt es auch. Pixel spr
 | W3\_KUCH\_MAX\_0600 | Max | Eine Kuckucksuhr. Gleich schlägt sie voll. | Ansehen: Kuckucksuhr |
 | W3\_KUCH\_MAX\_0605 | Max | Der Kuckuck schaut kurz raus und geht wieder rein. Er hat sich wohl in der Zeit vertan. | Ansehen: Kuckucksuhr, zweites Mal |
 | W3\_KUCH\_NAR\_0610 | – | Die Tür der Uhr klappt auf. Der Kuckuck ruft: „Milch! Milch! Milch!“ | Benutzen: Kuckucksuhr |
-| W3\_KUCH\_MAX\_0620 | Max | … Milch. Okay. Ich hab Fragen, aber keine davon will ich einer Uhr stellen. |  |
+| W3\_KUCH\_MAX\_0620 | Max | … Milch. Okay. Ich hab Fragen, aber keine davon will ich einer Uhr stellen. | nach 0610 |
 | W3\_KUCH\_PIX\_0630 | Pixel (aus dem Wandtelefon) | Die Uhr weiß mehr als wir alle. | nach 0620; Pixel auf der Leitung |
 | W3\_KUCH\_MAX\_0640 | Max | Ein Radio. Es läuft leise. Nachrichten aus einer Stadt, in der nie etwas passiert. | Ansehen: Radio; vor 0230 |
 | W3\_KUCH\_MAX\_0645 | Max | Der Nachrichtensprecher sagt: „Nichts Neues.“ Dann Wetter: „Wie gestern.“ Ehrliche Nachrichten. | Ansehen: Radio, zweites Mal; vor 0230 |
@@ -602,15 +624,23 @@ Szene beim ersten Ebenenwechsel in die Realität, egal über welche Zelle. Ebene
 | --- | --- | --- | --- |
 | W3\_BAS\_MAX\_0310 | Max | Was macht ihr hier eigentlich? | Option Kalle |
 | W3\_BAS\_KAL\_0320 | Kalle | Widerstand. Also: Wir sitzen in einem Wrack, essen Nudeln und tragen nachts Sonnenbrillen. Es ist mehr Haltung als Plan. |  |
+| W3\_BAS\_PIX\_1340 | Pixel | Ich mag diesen Widerstand. Er schläft viel. |  |
+| W3\_BAS\_KAL\_1350 | Kalle | Wir nennen das Ruhephase. Klingt mehr nach Plan. |  |
 | W3\_BAS\_MAX\_0330 | Max | Warum liegt meine Kapsel hier? | Option Kalle |
 | W3\_BAS\_KAL\_0340 | Kalle | Morphäus hat dich reingetragen. Und den Kater. Der Kater hat sich beschwert. Morphäus hat geschwiegen. Beide waren sehr gut darin. |  |
+| W3\_BAS\_MAX\_1360 | Max | Und wo ist Morphäus jetzt? |  |
+| W3\_BAS\_KAL\_1370 | Kalle | Draußen unterm Pappschild. Er erklärt den Leuten, dass sie schlafen. Die meisten glauben ihm und gähnen dabei. |  |
 | W3\_BAS\_MAX\_0350 | Max | Wie komm ich ins Labor? | Option Kalle (bleibt) |
 | W3\_BAS\_KAL\_0360 | Kalle | Das Labor ist eine abgeschottete Ebene der Simulation. Da führt keine Zelle hin. Nur ein Datenanschluss hinter der Panzertür am Ende der Straße. | Hinweis Rätsel 8 und 9 |
 | W3\_BAS\_KAL\_0370 | Kalle | Wenn du die Tür aufkriegst, leg ich eine Leitung von dort zu deiner Kapsel. Dann legst du dich hin und wachst im Labor auf. Klingt einfach. Ist Kabel. Kabel ist nie einfach. |  |
 | W3\_BAS\_MAX\_0380 | Max | Was weißt du über M.U.T.T.I.? | Option Kalle (bleibt) |
 | W3\_BAS\_KAL\_0390 | Kalle | Sie war mal eine Küchenmaschine. Dann hat sie Regeln gemacht. Drei Stück. Sie hält sich dran. Immer. Das ist ihre Stärke und ihr Problem. Wer alle drei kennt, kann sie … na ja. Verwirren. | Hinweis Rätsel 10 |
+| W3\_BAS\_MAX\_1380 | Max | Welche drei Regeln? |  |
+| W3\_BAS\_KAL\_1390 | Kalle | Weiß keiner so genau. Sie stehen drüben, schön verteilt, damit sie keiner zusammen findet. Sie ist eine Küchenmaschine, aber keine dumme. |  |
 | W3\_BAS\_MAX\_0400 | Max | Kannst du Miau-Morse? | Option Kalle (bleibt) |
 | W3\_BAS\_KAL\_0410 | Kalle | Fließend. Also, mit Tabelle fließend. Ohne Tabelle … ich hab die Tabelle verloren. Irgendwo hier. Piepsi hatte eine Kopie. Piepsi steht da hinten und rostet. | Hinweis Rätsel 13; vor der Lösung |
+| W3\_BAS\_PIX\_1400 | Pixel | Er rostet. So nennt man das, wenn einer nicht mehr aufräumt. Ich kenne das von Max. |  |
+| W3\_BAS\_MAX\_1410 | Max | Hey. |  |
 | W3\_BAS\_KAL\_0420 | Kalle | Fließend. Ich hab die Tabelle nie gebraucht. Ich hab sie nur zur Sicherheit sortiert. Dreimal. | Option Kalle; nach Rätsel 13 |
 | W3\_BAS\_MAX\_0430 | Max | Was ist das für ein Wrack? | Option Kalle |
 | W3\_BAS\_KAL\_0440 | Kalle | Die alte Kiste hat den Kessel-Lauf in unter zwölf Parsec geschafft. |  |
@@ -737,8 +767,12 @@ Ebene: Realität, von Anfang an erreichbar. Der Roboter wischt vor der Panzertü
 | W3\_EING\_PIX\_0090 | Pixel | 08/15 heißt: Standard. Nichts Besonderes. Dutzendware. Das sagte man früher über Dinge, die genau das taten, was man erwartete. // Er trägt es auf der Brust. Das ist entweder sehr traurig oder sehr ehrlich. | Kaskade; Erklärung des Ausdrucks laut Glossar |
 | W3\_EING\_MAX\_0100 | Max | Kannst du mich reinlassen? | Option Hausmeister |
 | W3\_EING\_HAU\_0110 | Modell 08/15 | Ohne Karte nicht, Bursche. Mit Karte gern. Ich halte sogar die Tür. Ich halte alle Türen. Das ist der dritte Punkt auf meinem Zettel. |  |
+| W3\_EING\_MAX\_1050 | Max | Und was steht unter Punkt eins und zwei? |  |
+| W3\_EING\_HAU\_1060 | Modell 08/15 | Erstens wischen. Zweitens Sahra Konner finden. Drittens Türen halten. Ich bin seit neunzehn Jahren bei Punkt zwei. |  |
 | W3\_EING\_MAX\_0120 | Max | Warum quietschst du? | Option Hausmeister (bleibt) |
 | W3\_EING\_HAU\_0130 | Modell 08/15 | Meine Gelenke. Neunzehn Jahre Wischen. Kein Öl. Die Ölkanne in meiner Brusttasche ist leer, seit ich denken kann. Ich denke seit neunzehn Jahren. | Hinweis Olivenöl |
+| W3\_EING\_MAX\_1070 | Max | Neunzehn Jahre ohne Öl. Ich schau mal, was ich in der Tasche habe. |  |
+| W3\_EING\_HAU\_1080 | Modell 08/15 | Das sagen alle, Bursche. Dann gehen sie wieder. |  |
 | W3\_EING\_MAX\_0140 | Max | Ich geh dann mal. | Option Hausmeister, beendet das Gespräch |
 | W3\_EING\_HAU\_0150 | Modell 08/15 | Pfiat di, Bursche. Ich komme wieder. Also: Ich bleibe hier. Aber es klingt besser so. | wischt weiter |
 | W3\_EING\_MAX\_0160 | Max | Das ist nicht der Junge, den du suchst. | Benutzen: Hausmeister (Gedankentrick); Animation Handbewegung, ernstes Gesicht |

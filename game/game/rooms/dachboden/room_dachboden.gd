@@ -51,6 +51,9 @@ func _zustand_anwenden() -> void:
 	var fundkiste := get_hotspot("Fundkiste")
 	if is_instance_valid(fundkiste):
 		fundkiste.visible = zwischenspiel() > 0 or Zustand.ist("FINALE")  # Opas Archiv gibt es erst ab der ersten Rückkehr
+	var lampe := get_hotspot("Lampe")
+	if is_instance_valid(lampe):
+		lampe.visible = zwischenspiel() >= 3 or Zustand.ist("FINALE")  # Opa knipst sie in Zwischenspiel 3 an
 	for sn in ["Maschine", "Ofentuer", "Druckmesser", "Fassungen", "Empfaenger"]:
 		var h := get_hotspot(sn)  # Opas Maschine: nur im Finale (skripte/finale.gd)
 		if is_instance_valid(h):
@@ -292,6 +295,8 @@ const ZS1_ANSEHEN := {
 
 func ansehen_zusatz(objekt: String) -> Array:
 	var tabelle: Dictionary = {1: ZS1_ANSEHEN, 2: ZS2_ANSEHEN, 3: ZS3_ANSEHEN}.get(zwischenspiel(), {})
+	if zwischenspiel() == 3 and objekt == "zapp_o_mat":
+		tabelle = {zapp_o_mat = ZS3_ZAPP_FREUND if Zustand.ist("FREUND_0815") else ZS3_ZAPP_OHNE}
 	if not tabelle.has(objekt):
 		return []
 	var out := []
@@ -336,7 +341,8 @@ const ZS_DREHKNOPF := {
 		welt = "welt-4", ende = "UI_WELT_3_ENDE"},
 }
 const ZS2_ANSEHEN := {
-	werkbank = [["MAX", "ZS2_DACH_MAX_0380", 1], ["PIX", "ZS2_DACH_PIX_0385", 2]],
+	werkbank = [["MAX", "ZS2_DACH_MAX_0380", 1], ["PIX", "ZS2_DACH_PIX_0385", 2], ["MAX", "ZS2_DACH_MAX_0310", 3],
+		["MAX", "ZS2_DACH_MAX_0315", 4, "ZS2_DACH_PIX_0320"]],
 	kalender = [["MAX", "ZS2_DACH_MAX_0330", 1], ["MAX", "ZS2_DACH_MAX_0335", 2]],
 	dachfenster = [["MAX", "ZS2_DACH_MAX_0360", 1], ["MAX", "ZS2_DACH_MAX_0365", 2]],
 	zapp_o_mat = [["MAX", "ZS2_DACH_MAX_0370", 1], ["MAX", "ZS2_DACH_MAX_0375", 2]],
@@ -350,7 +356,11 @@ const ZS3_ANSEHEN := {
 	kalender = [["MAX", "ZS3_DACH_MAX_0360", 1], ["MAX", "ZS3_DACH_MAX_0365", 2]],
 	ohrensessel = [["MAX", "ZS3_DACH_MAX_0420", 1], ["MAX", "ZS3_DACH_MAX_0425", 2]],
 	kochbuch = [["MAX", "ZS3_DACH_MAX_0430", 1], ["MAX", "ZS3_DACH_MAX_0435", 2, "ZS3_DACH_PIX_0440"]],
+	lampe = [["MAX", "ZS3_DACH_MAX_0410", 1], ["PIX", "ZS3_DACH_PIX_0415", 2]],
 }
+## Zapp-O-Mat in Zwischenspiel 3: Kanal 42 zeigt Modell 08/15, je nachdem, ob Max ihm geholfen hat
+const ZS3_ZAPP_FREUND := [["MAX", "ZS3_DACH_MAX_0390", 1], ["MAX", "ZS3_DACH_MAX_0395", 2]]
+const ZS3_ZAPP_OHNE := [["MAX", "ZS3_DACH_MAX_0400", 1], ["MAX", "ZS3_DACH_MAX_0405", 2]]
 
 
 func angekommen(nr: int) -> bool:

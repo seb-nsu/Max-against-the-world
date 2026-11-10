@@ -635,6 +635,8 @@ weitere_schalter:
   - W4_ANKUNFT                 # Ankunftsszene im Testbild gespielt
   - W4_WECHSEL_FREI            # Figurenwechsel freigeschaltet (Ankunft)
   - W4_BETRETEN                # Wert: Räume, deren Szene beim ersten Betreten lief
+  - W4_AGENT_GESPRAECHE        # Wert: wie oft Max mit dem FBI-Agenten gesprochen hat (Einstieg erst ab dem zweiten)
+  - W4_GERD_PUPPEN_GEFRAGT     # Max hat Gerd nach den Puppen gefragt (Option 0380), danach Untertitel-Witz W4_TAST_0210
   - W4_MAX_RAUM                # Wert: Sender, in dem Max steht (Pixel kehrt aus dem Rauschen dorthin zurück)
   - W4_PIXEL_IM_RAUSCHEN       # Pixel krabbelt im Rauschen, Max und Pixel sind getrennt
   - W4_RAUSCHEN_BESUCHE        # Wert: Zahl der Besuche im Rauschen (Nachrichtensprecher)

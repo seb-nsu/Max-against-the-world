@@ -97,6 +97,7 @@ const PIIArchivband := preload("res://game/inventory_items/archivband/inventory_
 const PIIAmboss := preload("res://game/inventory_items/amboss/inventory_item_amboss.gd")
 const PIILichtroehreDeluxe := preload("res://game/inventory_items/lichtroehre_deluxe/inventory_item_lichtroehre_deluxe.gd")
 const PIIGoldeneFernbedienung := preload("res://game/inventory_items/goldene_fernbedienung/inventory_item_goldene_fernbedienung.gd")
+const PIIPortalgeraet := preload("res://game/inventory_items/portalgeraet/inventory_item_portalgeraet.gd")
 # ---- classes
 
 # nodes ----
@@ -195,6 +196,7 @@ var Archivband: PIIArchivband : get = get_Archivband
 var Amboss: PIIAmboss : get = get_Amboss
 var LichtroehreDeluxe: PIILichtroehreDeluxe : get = get_LichtroehreDeluxe
 var GoldeneFernbedienung: PIIGoldeneFernbedienung : get = get_GoldeneFernbedienung
+var Portalgeraet: PIIPortalgeraet : get = get_Portalgeraet
 # ---- nodes
 
 # functions ----
@@ -293,5 +295,6 @@ func get_Archivband() -> PIIArchivband: return get_item_instance("Archivband")
 func get_Amboss() -> PIIAmboss: return get_item_instance("Amboss")
 func get_LichtroehreDeluxe() -> PIILichtroehreDeluxe: return get_item_instance("LichtroehreDeluxe")
 func get_GoldeneFernbedienung() -> PIIGoldeneFernbedienung: return get_item_instance("GoldeneFernbedienung")
+func get_Portalgeraet() -> PIIPortalgeraet: return get_item_instance("Portalgeraet")
 # ---- functions
 

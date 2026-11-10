@@ -12,7 +12,7 @@
 #   _startet       Optionen, deren Folgezeilen die Rätsel-Logik spielt (Bonusrunde)
 #   _antwort_ende  letzte Antwort einer Option; was folgt, gehört zum Rätsel (Beweis für den Agenten)
 _startet: [W4_BONU_MAX_0010]
-_antwort_ende: [W4_HALL_AGE_0410]
+_antwort_ende: [W4_HALL_AGE_0600]
 _alias: {laken_im_keller: bettlaken, laken: bettlaken}
 _figur_alias: {mutter: sitcom_mutter, vater: sitcom_vater, sohn: sitcom_sohn, gerd: gerd_glueck, agent: fbi_agent, siegfried: super_siegfried, wilma: wonder_wilma, sitcom_vater_im_keller: sitcom_vater}
 

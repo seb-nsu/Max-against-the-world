@@ -8554,6 +8554,22 @@
         "W1_TAV_GOL_0740"
        ],
        "regie": "Hinweis R1a und R1b"
+      },
+      {
+       "zeile": "W1_TAV_MAX_1640",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_TAV_MAX_1640"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W1_TAV_GOL_1650",
+       "sprecher": "GOL",
+       "blasen": [
+        "W1_TAV_GOL_1650"
+       ],
+       "regie": ""
       }
      ],
      "beendet": false,
@@ -8666,6 +8682,22 @@
         "W1_SCHM_SCH_0240"
        ],
        "regie": ""
+      },
+      {
+       "zeile": "W1_SCHM_MAX_0750",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_SCHM_MAX_0750"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W1_SCHM_SCH_0760",
+       "sprecher": "SCH",
+       "blasen": [
+        "W1_SCHM_SCH_0760"
+       ],
+       "regie": ""
       }
      ],
      "beendet": false,
@@ -8680,6 +8712,22 @@
        "sprecher": "SCH",
        "blasen": [
         "W1_SCHM_SCH_0260"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W1_SCHM_MAX_0770",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_SCHM_MAX_0770"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W1_SCHM_SCH_0780",
+       "sprecher": "SCH",
+       "blasen": [
+        "W1_SCHM_SCH_0780"
        ],
        "regie": ""
       }
@@ -8796,6 +8844,22 @@
         "W1_STAB_STA_0240_2"
        ],
        "regie": "Hinweis R2"
+      },
+      {
+       "zeile": "W1_STAB_MAX_0750",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_STAB_MAX_0750"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W1_STAB_STA_0760",
+       "sprecher": "STA",
+       "blasen": [
+        "W1_STAB_STA_0760"
+       ],
+       "regie": ""
       }
      ],
      "beendet": false,
@@ -8810,6 +8874,22 @@
        "sprecher": "STA",
        "blasen": [
         "W1_STAB_STA_0260"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W1_STAB_MAX_0770",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_STAB_MAX_0770"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W1_STAB_STA_0780",
+       "sprecher": "STA",
+       "blasen": [
+        "W1_STAB_STA_0780"
        ],
        "regie": ""
       }
@@ -8941,6 +9021,22 @@
         "W1_HOGG_ALW_0360_2"
        ],
        "regie": "Hinweis R6, Teil 1"
+      },
+      {
+       "zeile": "W1_HOGG_MAX_0950",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_HOGG_MAX_0950"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W1_HOGG_ALW_0960",
+       "sprecher": "ALW",
+       "blasen": [
+        "W1_HOGG_ALW_0960"
+       ],
+       "regie": ""
       }
      ],
      "beendet": false,
@@ -8963,6 +9059,22 @@
         "W1_HOGG_ALW_0380"
        ],
        "regie": "gibt Alwins Hinweiszettel"
+      },
+      {
+       "zeile": "W1_HOGG_MAX_0970",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_HOGG_MAX_0970"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W1_HOGG_ALW_0980",
+       "sprecher": "ALW",
+       "blasen": [
+        "W1_HOGG_ALW_0980"
+       ],
+       "regie": ""
       }
      ],
      "beendet": false,
@@ -9012,6 +9124,22 @@
         "W1_HOGG_ALW_0420"
        ],
        "regie": "Hinweis auf Rätsel 11"
+      },
+      {
+       "zeile": "W1_HOGG_PIX_0990",
+       "sprecher": "PIX",
+       "blasen": [
+        "W1_HOGG_PIX_0990"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W1_HOGG_ALW_1000",
+       "sprecher": "ALW",
+       "blasen": [
+        "W1_HOGG_ALW_1000"
+       ],
+       "regie": ""
       }
      ],
      "beendet": false,
@@ -9093,6 +9221,22 @@
         "W1_BRUE_WAL_0240_2"
        ],
        "regie": "räuspert sich"
+      },
+      {
+       "zeile": "W1_BRUE_MAX_1240",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_BRUE_MAX_1240"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W1_BRUE_WAL_1250",
+       "sprecher": "WAL",
+       "blasen": [
+        "W1_BRUE_WAL_1250"
+       ],
+       "regie": ""
       }
      ],
      "beendet": false,
@@ -9142,6 +9286,22 @@
         "W1_BRUE_WAL_0280"
        ],
        "regie": "Hinweis R4c"
+      },
+      {
+       "zeile": "W1_BRUE_MAX_1260",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_BRUE_MAX_1260"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W1_BRUE_WAL_1270",
+       "sprecher": "WAL",
+       "blasen": [
+        "W1_BRUE_WAL_1270"
+       ],
+       "regie": ""
       }
      ],
      "beendet": false,
@@ -9159,6 +9319,22 @@
         "W1_BRUE_WAL_0300_2"
        ],
        "regie": "geht Richtung Wald; weiter in Abschnitt 9, Rätsel 7"
+      },
+      {
+       "zeile": "W1_BRUE_MAX_1280",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_BRUE_MAX_1280"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W1_BRUE_WAL_1290",
+       "sprecher": "WAL",
+       "blasen": [
+        "W1_BRUE_WAL_1290"
+       ],
+       "regie": ""
       }
      ],
      "beendet": false,
@@ -9282,6 +9458,22 @@
         "W1_WALD_ROT_0260"
        ],
        "regie": ""
+      },
+      {
+       "zeile": "W1_WALD_MAX_0770",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_WALD_MAX_0770"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W1_WALD_ROT_0780",
+       "sprecher": "ROT",
+       "blasen": [
+        "W1_WALD_ROT_0780"
+       ],
+       "regie": ""
       }
      ],
      "beendet": false,
@@ -9362,6 +9554,22 @@
         "W1_LUFT_ZEL_0220"
        ],
        "regie": "stellt den Karton ab"
+      },
+      {
+       "zeile": "W1_LUFT_MAX_0830",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_LUFT_MAX_0830"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W1_LUFT_ZEL_0840",
+       "sprecher": "ZEL",
+       "blasen": [
+        "W1_LUFT_ZEL_0840"
+       ],
+       "regie": ""
       }
      ],
      "beendet": false,
@@ -9376,6 +9584,22 @@
        "sprecher": "ZEL",
        "blasen": [
         "W1_LUFT_ZEL_0240"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W1_LUFT_MAX_0850",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_LUFT_MAX_0850"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W1_LUFT_ZEL_0860",
+       "sprecher": "ZEL",
+       "blasen": [
+        "W1_LUFT_ZEL_0860"
        ],
        "regie": ""
       }
@@ -9469,6 +9693,22 @@
         "W1_LUFT_ZEL_0720_2"
        ],
        "regie": "Notizbuch trägt „Mo“ als Anfang ein"
+      },
+      {
+       "zeile": "W1_LUFT_MAX_0870",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_LUFT_MAX_0870"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W1_LUFT_ZEL_0880",
+       "sprecher": "ZEL",
+       "blasen": [
+        "W1_LUFT_ZEL_0880"
+       ],
+       "regie": ""
       }
      ],
      "beendet": false,
@@ -9529,6 +9769,22 @@
         "W1_LUFT_ZEL_0760"
        ],
        "regie": "Hinweis R10, Weg B"
+      },
+      {
+       "zeile": "W1_LUFT_MAX_0890",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_LUFT_MAX_0890"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W1_LUFT_ZEL_0900",
+       "sprecher": "ZEL",
+       "blasen": [
+        "W1_LUFT_ZEL_0900"
+       ],
+       "regie": ""
       }
      ],
      "beendet": false,
@@ -9869,6 +10125,22 @@
         "W1_BERG_GRI_0380"
        ],
        "regie": ""
+      },
+      {
+       "zeile": "W1_BERG_MAX_0830",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_BERG_MAX_0830"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W1_BERG_GRI_0840",
+       "sprecher": "GRI",
+       "blasen": [
+        "W1_BERG_GRI_0840"
+       ],
+       "regie": ""
       }
      ],
      "beendet": false,
@@ -9950,6 +10222,22 @@
         "W1_SMAU_SMA_0320"
        ],
        "regie": "streichelt eine Teekanne"
+      },
+      {
+       "zeile": "W1_SMAU_MAX_0830",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_SMAU_MAX_0830"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W1_SMAU_SMA_0840",
+       "sprecher": "SMA",
+       "blasen": [
+        "W1_SMAU_SMA_0840"
+       ],
+       "regie": ""
       }
      ],
      "beendet": false,
@@ -9999,6 +10287,22 @@
         "W1_SMAU_SMA_0360"
        ],
        "regie": ""
+      },
+      {
+       "zeile": "W1_SMAU_MAX_0850",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_SMAU_MAX_0850"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W1_SMAU_SMA_0860",
+       "sprecher": "SMA",
+       "blasen": [
+        "W1_SMAU_SMA_0860"
+       ],
+       "regie": ""
       }
      ],
      "beendet": false,
@@ -10015,6 +10319,22 @@
         "W1_SMAU_SMA_0380"
        ],
        "regie": "schnieft"
+      },
+      {
+       "zeile": "W1_SMAU_PIX_0870",
+       "sprecher": "PIX",
+       "blasen": [
+        "W1_SMAU_PIX_0870"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W1_SMAU_SMA_0880",
+       "sprecher": "SMA",
+       "blasen": [
+        "W1_SMAU_SMA_0880"
+       ],
+       "regie": ""
       }
      ],
      "beendet": false,

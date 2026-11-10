@@ -465,7 +465,8 @@ func hingehen(ziel: PopochiuClickable) -> void:
 ## Zeile (Zahnstocher: „Er wählt mich nicht“). Pixel nimmt in der Graubox nichts (WECH 0070).
 func nehmen(prop: PopochiuProp, daten: Dictionary) -> void:
 	if ist_pixel():
-		await wechsel_regel("pixel_nehmen")
+		if not await regel("pixel_nehmen", prop):
+			await wechsel_regel("pixel_nehmen")
 		return
 	await hingehen(prop)
 	if not kann_aufnehmen(C.player):
@@ -510,6 +511,17 @@ func _leise_an() -> bool:
 
 
 ## Raumwechsel über einen Ausgang. Die Ankunft steht im Marker „Von<Herkunft>“.
+## Raumwechsel, der erst zurückkehrt, wenn der Zielraum steht. Popochiu ignoriert ein goto_room,
+## solange der vorige Wechsel noch läuft (E.in_room false); Szenen mit mehreren Räumen
+## hintereinander (Welt-3-Abschluss) brauchen deshalb diese Variante.
+func raum_wechseln_und_warten(sn: String) -> void:
+	while not E.in_room:
+		await get_tree().process_frame
+	await R.goto_room(sn)
+	while not (E.in_room and is_instance_valid(R.current) and R.current.script_name == sn):
+		await get_tree().process_frame
+
+
 func raum_wechseln(ziel_raum_id: String) -> void:
 	var sn := Bauplan.raum_script_name(ziel_raum_id)
 	if sn.is_empty():
@@ -551,7 +563,7 @@ func figur_wechseln(mit_zeile := true) -> bool:
 		return true
 	I.active = null
 	Klang.geraeusch("wechsel")
-	C.player = C.Pixel if C.player == C.Max else C.Max
+	C.player = C.get_character("Pixel") if C.player.script_name == "Max" else C.get_character("Max")
 	figur_gewechselt.emit(C.player)
 	if mit_zeile:
 		_wechsel_sagen.call_deferred()
@@ -800,6 +812,8 @@ func zwischenspiel_beginnen(nr: int) -> void:
 	Zustand.abschnitt = "finale"
 	Zustand.setze_wert("ZWISCHENSPIEL", nr)
 	herkunft_raum = ""
+	while not E.in_room:  # ein laufender Raumwechsel würde goto_room verschlucken
+		await get_tree().process_frame
 	await R.goto_room(Bauplan.raum_script_name("dachboden"))
 
 
@@ -818,6 +832,8 @@ func finale_beginnen() -> void:
 	Zustand.setze_wert("ZWISCHENSPIEL", 0)
 	Zustand.setze("FINALE")
 	herkunft_raum = ""
+	while not E.in_room:  # ein laufender Raumwechsel würde goto_room verschlucken
+		await get_tree().process_frame
 	await R.goto_room(Bauplan.raum_script_name("dachboden"))
 
 

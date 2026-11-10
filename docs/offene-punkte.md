@@ -2,7 +2,7 @@
 
 Hier steht nur, was noch offen ist. Erledigtes steht in der Git-Historie, die gültigen Entscheidungen mit Begründung in `entscheidungen.md`. Ist ein Punkt erledigt, wird er hier gestrichen und, falls er etwas entscheidet, in `entscheidungen.md` und der Besitzer-Datei eingetragen.
 
-Stand 9. November 2026. Kennungen: S = zurückgestellte Punkte aus Gutachten 4, A = Automatisierung, P = weitere Punkte, K = Abgleich zwischen Dateien.
+Stand 10. November 2026. Kennungen: S = zurückgestellte Punkte aus Gutachten 4, A = Automatisierung, P = weitere Punkte, K = Abgleich zwischen Dateien.
 
 ## Entscheidungen und Aufgaben von Sebastian
 
@@ -51,11 +51,11 @@ Alle sechzehn Ideen sind in `03-produktion.md` (Abschnitt Automatisierung) mit N
 | A5 | Parallele Claude-Agenten je Raum | 4 |
 | A6 | Audio-Pipeline mit ElevenLabs-API und Audacity-Batch | Technik 2, Vollvertonung 5 |
 | A7 | GitHub Actions: Prüfskript, Export, Rätsel-Test, Build | 1 |
-| A8 | Web-Export für Testspieler | 2 |
+| A8 | Web-Export für Testspieler: gebaut. Vorlage „Web Testbuild“ in `game/export_presets.cfg` (ohne Threads, also ohne SharedArrayBuffer-Header), der Workflow „Testbuild“ liefert ihn als drittes Artefakt, im Browser lädt der Telemetrie-Knopf das Protokoll als Datei herunter. In Chromium geprüft: Zustimmung, Epilepsie-Hinweis, Menü und Prolog-Start laufen. Offen: einmal an einem echten Bildschirm mit Ton durchspielen, privat auf itch.io hochladen | gebaut, Rest 2 |
 | A9 | Telemetrie im Testbuild: gebaut (Protokoll, Zustimmung, Auswertung, Beobachtungsbogen, Testbuild-Workflow; Stand in `03-produktion.md`). Offen: Testbuild einmal am Bildschirm unter Linux und Windows prüfen (Zustimmungsdialog, Einstellungen, Mauszeiger, da Popochiu im Export Fehler in seinen Editor-Skripten meldet), Upload an einen eigenen Dienst statt Datei per Hand | gebaut, Rest 2 |
 | A10 | Grafik-Batch: Prompt-Tabelle, Retro-Diffusion-API, Palettize, Zuschnitt, Protokoll | 3, nach S16 |
 | A11 | KI-Protokoll automatisch als CSV | 1 |
-| A12 | Englische Fassung per Claude aus der CSV mit Glossar | Technik früh, Inhalt 5 |
+| A12 | Englische Fassung per Claude aus der CSV mit Glossar: Werkzeug `tools/en_eintragen.py`, alle Skriptzeilen, Systemzeilen und Menüs sind übersetzt (Stand in `05-spielsysteme.md`). Offen: Prüfung der Witze und Wortspiele durch einen Muttersprachler | Text fertig, Prüfung in 5 |
 | A13 | Konsistenz-Check der Dokumente (läuft als `tools/pruefen.py`, in A7 eingebunden) | erledigt |
 | A14 | Hinweis-Datei aus Skript und Rätseltabelle erzeugen (läuft als `tools/spieldaten.py`) | erledigt |
 | A15 | Playtest-Auswertung per Claude | 3 |
@@ -72,3 +72,16 @@ Am 9. November 2026 gegen Spielablauf, Ton und Bedienung geprüft und eingetrage
 | G17 | Zuruf-Bedingung „Pixel auf dem Balken“ (TAV 1630) ist nicht prüfbar, Pixel steht nach dem Wechsel neben Max | der Zuruf entfällt, bis Pixel in der Taverne einen eigenen Platz auf dem Balken bekommt (Grafik); die Taverne hat mit 1610 und 1620 trotzdem zwei Zurufe | `skript/welt-1.md` (Abschnitt 3) |
 | G18 | Prolog-Optionen 1362–1366 sind nicht in Zehnerschritten (nach dem Umzug in Baum 2b) | Prüfwarnung bleibt; beim nächsten Umnummern glätten | `skript/prolog.md` |
 | G21 | Der Generator liest „Ansehen:“-Zellen jetzt auch aus reinen Regie-Tabellen (Brücke nach R4, Socke voller Pollen, Opas Zettel kommen aus den Daten). „Benutzen:“-Zellen in Regie-Tabellen (z. B. Bach 0930) liest er nicht; Kreuzung 2 und 3 und Abstellkammer 1 brauchen eigene Raum-Codes oder Mehrfach-Aliase; der Tarifvertrag braucht im Skript den Zustand („Ansehen: Tarifvertrag, unterschrieben“) | von Hand im Raum- bzw. Gegenstandsskript, Verhalten wie im Skript | `skript/welt-1.md`, `tools/godot_raeume.py` |
+
+## Funde aus der Durchsicht aller Welten (10. November 2026)
+
+Das ganze Spiel lief noch einmal durch: Prolog bis Finale im Testmodus, dazu ein Abgleich, welche Skriptzeilen das Spiel nie abspielt. Behoben und im Code oder Skript eingetragen sind:
+
+- Welt 3 blieb nach dem Abschluss am Übergang zum Dachboden hängen, weil Popochiu einen Raumwechsel verschluckt, solange der vorige noch läuft. Das hätte auch im echten Spiel zugeschlagen. Verkettete Raumwechsel gehen jetzt über `Spiel.raum_wechseln_und_warten` (Entscheidung).
+- Die vier Nahansichten in Welt 3 (Telefonbuchseite, Schmidts Akte, Kochbuch, Kritzelei) öffneten sich nie. Damit war auch die Errungenschaft für alle Nahansichten nicht zu schaffen.
+- Viele Zeilen kamen im Spiel nie vor: Erstgespräche (Deckert, Herr Vier, Schmidt, Hausmeister, Kalle), M.U.T.T.I.s Kammer-Kommentare, Pixels Schnupper- und Hungerzeilen in Welt 4, der Gong im Rauschen, die Bonus-Pause bei Gerd, Zeldinas Ofen und die Luke des Roboters im Finale. Alle sind eingebaut. Übrig sind nur Reservezeilen, die im Skript als „Reserve, kommt nicht vor“ markiert sind (FI\_INV 0010 bis 0045, ZS3\_DACH\_PIX\_0550).
+- Die Einstiegszeile des FBI-Agenten kam vor seiner Vorstellung, und Schmidts Einstieg in Welt 3 hatte eine falsche Bedingung.
+- Dialogoptionen in Welt 2 bis 4 endeten oft nach einer einzigen Antwortzeile. 151 neue Zeilen geben ihnen einen Nachsatz oder eine Rückfrage. Was noch einzeilig ist, sind Abschiede. Danach bekamen auch Welt 1, Prolog und Finale 52 solche Zeilen.
+- Welt 2 und Welt 3 haben jetzt eigene Headless-Tests (`welt_2_anspiel`, `welt_3_anspiel`), die auch in GitHub Actions laufen.
+
+Am selben Tag erledigt: G28 (Pixels Zeilen auf Herrn Vier und den weinenden Mann finden ihre Figur in der Straße über einen Alias), G29 (der Generator akzeptiert den Namen eines späteren Zustands, „Kochlöffel-Zauberstab“), G30 (Nehmen an einem Hotspot, das die Rätsel-Logik spielt, gilt nicht mehr als fehlendes Prop). G27 ist entschieden: Reaktionen „Gegenstand auf Ziel“ aus Regie-Tabellen bleiben von Hand im Code, und `tools/abdeckung.py` meldet in GitHub Actions jede Zeile, die dabei verloren geht (`entscheidungen.md`).

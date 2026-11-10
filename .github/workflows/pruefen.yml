@@ -32,6 +32,8 @@ jobs:
         run: python3 tools/godot_raeume.py --pruefen
       - name: Audio-Dateien passen zu den IDs
         run: python3 tools/audio_liste.py --pruefen
+      - name: Jede Skriptzeile kommt im Spiel vor
+        run: python3 tools/abdeckung.py --pruefen
 
   godot:
     runs-on: ubuntu-latest
@@ -52,6 +54,10 @@ jobs:
         env:
           CQ_TELEMETRIE_BEHALTEN: "1"
         run: timeout 600 ./godot --headless --path game -s res://tests/prolog_durchlauf.gd
+      - name: Welt 2 anspielen (Testmodus)
+        run: timeout 300 ./godot --headless --path game -s res://tests/welt_2_anspiel.gd
+      - name: Welt 3 anspielen (Testmodus)
+        run: timeout 400 ./godot --headless --path game -s res://tests/welt_3_anspiel.gd
       - name: Welt 4 anspielen (Testmodus)
         run: timeout 300 ./godot --headless --path game -s res://tests/welt_4_anspiel.gd
       - name: Finale anspielen (Testmodus)

@@ -14,8 +14,8 @@ extends Node
 ## Rechnerdaten außer dem Betriebssystem-Namen.
 ##
 ## Jede Sitzung schreibt user://telemetrie/<sitzung>.jsonl, ein JSON-Objekt je Zeile. Es gibt
-## keinen Upload: Tester öffnen den Ordner über die Einstellungen („Telemetrie-Ordner öffnen“)
-## und schicken die Datei. Auswertung: tools/telemetrie_auswertung.py.
+## keinen Upload: Tester öffnen den Ordner über die Einstellungen („Telemetrie-Ordner öffnen“,
+## im Web-Build „Telemetrie herunterladen“) und schicken die Datei. Auswertung: tools/telemetrie_auswertung.py.
 ##
 ## Felder in jeder Zeile: ev (Ereignis), t (Sekunden seit Sitzungsbeginn, Echtzeit), spielzeit
 ## (Zustand.spielzeit, wird mitgespeichert), abschnitt, raum. Ereignisse und Zusatzfelder:
@@ -130,7 +130,7 @@ func frage_zeigen() -> void:
 	_frage.layer = 100
 	add_child(_frage)
 	var wurzel := ColorRect.new()
-	wurzel.color = Color(0.08, 0.09, 0.15, 0.85)
+	wurzel.color = Color(0.08, 0.09, 0.15, 1.0)  # deckend, sonst scheint beim ersten Start der Epilepsie-Hinweis durch
 	wurzel.set_anchors_preset(Control.PRESET_FULL_RECT)
 	wurzel.mouse_filter = Control.MOUSE_FILTER_STOP
 	if ResourceLoader.exists(THEMA):
@@ -170,10 +170,18 @@ func _frage_beantwortet(ja: bool) -> void:
 
 
 ## Für die Einstellungen: Ordner im Dateimanager öffnen, damit Tester die Datei schicken können.
+## Im Web-Build gibt es keinen Ordner: Der Browser lädt dann alle Sitzungen als eine Datei herunter.
 func ordner_oeffnen() -> void:
 	DirAccess.make_dir_recursive_absolute(ordner)
 	if _datei:
 		_datei.flush()
+	if OS.has_feature("web"):
+		var alles := PackedByteArray()
+		for name in DirAccess.get_files_at(ordner):
+			if name.ends_with(".jsonl"):
+				alles.append_array(FileAccess.get_file_as_bytes(ordner.path_join(name)))
+		JavaScriptBridge.download_buffer(alles, "couch_quest_telemetrie.jsonl", "application/x-ndjson")
+		return
 	OS.shell_show_in_file_manager(ProjectSettings.globalize_path(ordner), true)
 
 

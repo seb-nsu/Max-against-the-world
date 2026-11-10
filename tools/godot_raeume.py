@@ -239,6 +239,7 @@ def baue(abschnitt):
                 raum["hotspots"].append({
                     "id": hid, "script_name": pascal(hid), "name_key": name_key(hid, h["name"]),
                     "rect": h["rect"], "gehe": h.get("gehe", [0, 0]), "ansehen": [],
+                    **({"versteckt": True} if h.get("versteckt") else {}),
                 })
         raeume.append(raum)
     raum_nach_id = {r["id"]: r for r in raeume}
@@ -257,6 +258,22 @@ def baue(abschnitt):
              "rect": lay["rect"], "gehe": lay.get("gehe", [0, 0]), "ansehen": []}
         raum["hotspots"].append(o)
         return o
+
+    def zuruf_raeume(ausloeser):
+        """Räume eines Zurufs aus dem Auslöser eines Sammelblocks."""
+        ort = re.split(r"[,;]", ausloeser)[0].strip()
+        if ort.startswith("überall"):
+            return list(raum_nach_id)
+        treffer = []
+        for teil in re.split(r"\s+oder\s+", ort):
+            sl = slug(teil)
+            for r in welt["raeume"]:
+                if r["id"] in raum_nach_id and sl and (slug(r["name"]).startswith(sl) or r["id"].startswith(sl)):
+                    treffer.append(r["id"])
+                    break
+            else:
+                warnungen.append(f"Zuruf „{ausloeser}“: kein Raum „{teil}“")
+        return treffer
 
     def zeile_id(z):
         """„nach 0580“ in Zeile z → Zeilen-ID derselben Szene."""
@@ -337,6 +354,12 @@ def baue(abschnitt):
                 or z["block"].startswith("Zurufe")):
             if raum:
                 raum["zurufe"].append(zeile(z))
+            elif z["szene"] not in code_zu_raum:
+                # Sammelblock (W2 ZURU, W4 ZURF): Raum steht im Auslöser („Nil-Delta oder
+                # Fährsteg“, „Sitcom; vor R3“, „überall …“); weitere Angaben nach dem Komma
+                # bleiben Worte und blenden den Zuruf aus, bis der Rätselcode sie kennt
+                for r in zuruf_raeume(a):
+                    raum_nach_id[r]["zurufe"].append(zeile(z))
             continue
         if z["szene"] in code_zu_raum and not raum:
             continue  # Raum noch nicht gebaut
@@ -377,6 +400,8 @@ def baue(abschnitt):
             continue
         if re.match(r"^Pixel redet mit [^,;]+$", z["regie"]) and not a:
             a = z["regie"]
+        if m_sp := re.match(r"^Spielfigur Pixel: Ansehen (.+)$", a or z["regie"]):
+            a = "Pixel auf " + m_sp.group(1)   # Ansehen mit Pixel als Spielfigur
         if z["regie"] == "Übersetzung" and not a:
             a = "Übersetzung"
         if not a:
@@ -387,6 +412,12 @@ def baue(abschnitt):
             typ, fid, _ = aufloesen(raum, name)
             if typ == "figur":
                 ablegen("pixel_auf", ("figur", fid, name), zeile(z), raum)
+            elif typ == "gegenstand" or any(o["id"] == fid for li in ("props", "hotspots") for o in raum[li]) \
+                    or fid in (layout.get(raum["id"], {}).get("hotspots") or {}):
+                # Schnupperzeile an Objekt oder Gegenstand: gilt, wenn Pixel die aktive Figur ist
+                ablegen("ansehen", (typ, fid, name), zeile(z, 1, True), raum)
+            else:
+                warnungen.append(f"{z['id']}: Pixel auf {name} ohne Objekt in {raum['id']}")
             continue
         if re.match(r"^Pixel redet mit [^,;]+$", a):
             name = a[len("Pixel redet mit "):]
@@ -431,11 +462,20 @@ def baue(abschnitt):
             continue
         if art == "nehmen":
             treffer = [p for p in raum["props"] if p["id"] == ziel[1] or p.get("gegenstand") == ziel[1].split("@")[0]]
+            # Nehmen an einem Hotspot, das die Rätsel-Logik selbst spielt (benutzen_<id> im Abschnittsskript)
+            regeln = ROOT / "game" / "skripte" / f"{abschnitt.replace('-', '_')}.gd"
+            im_code = regeln.exists() and f"func benutzen_{ziel[1]}(" in regeln.read_text(encoding="utf-8")
             if not treffer:
-                warnungen.append(f"{z['id']}: Nehmen {name.strip()} ohne Prop im Layout von {raum['id']}")
+                if not im_code:
+                    warnungen.append(f"{z['id']}: Nehmen {name.strip()} ohne Prop im Layout von {raum['id']}")
                 continue
             eintrag = zeile(z)
-            treffer[0]["nehmen"] = eintrag
+            if treffer[0].get("nehmen") and ("danach" in teile[1:] or not ("bedingung" in eintrag or "bedingung_text" in eintrag
+                                                 or "bedingung" in treffer[0]["nehmen"] or "bedingung_text" in treffer[0]["nehmen"])):
+                # zweite Nehmen-Zeile („Nehmen: Tintenfisch, danach“): folgt auf die erste
+                treffer[0]["nehmen"].setdefault("folge", []).append(eintrag)
+            else:
+                treffer[0]["nehmen"] = eintrag
             wurzel[z["id"]] = eintrag
             continue
         ablegen(art, ziel, zeile(z, mal, pixel), raum)
@@ -470,8 +510,9 @@ def baue(abschnitt):
         herkunft = g.get("herkunft", "")
         als_prop = any(p.get("gegenstand") == g["id"] for r in raeume for p in r["props"])
         # … oder von einer Figur der Welt überreicht (Opas Papyrus von Hermes, Haufen vom Steinmetz)
+        # … oder in einem gebauten Raum zu finden (Portalgerät in der Halterung von Kammer 1)
         if not (als_prop or herkunft in ausbau or herkunft == "prolog" or herkunft in figur_ids
-                or set(g.get("verwendet_in", [])) & set(ausbau)):
+                or herkunft in raum_nach_id or set(g.get("verwendet_in", [])) & set(ausbau)):
             continue
         d = gegenstand_daten.get(g["id"], {})
         eintrag = {
@@ -485,7 +526,9 @@ def baue(abschnitt):
             "kombinieren": d.get("kombinieren", []),
         }
         de = texte.get(eintrag["name_key"])
-        if de is not None and de != g["name"]:
+        # Name eines späteren Zustands zählt auch („Kochlöffel-Zauberstab“ = UI_OBJ_KOCHLOEFFEL_ZAUBERSTAB)
+        zustand_namen = {texte.get(f"{eintrag['name_key']}_{slug(z).upper()}") for z in g.get("zustaende", [])}
+        if de is not None and de != g["name"] and g["name"] not in zustand_namen:
             warnungen.append(f"{eintrag['name_key']}: ui.csv „{de}“ weicht von der Welt-Tabelle „{g['name']}“ ab")
         gegenstaende_out.append(eintrag)
 
@@ -668,6 +711,8 @@ def platzhalter(plan):
         d.polygon(poly, fill=farbe(raum["farbe"], 0.7))
         d.text((4, h - s_(12)), f"[{texte.get(raum['name_key'], raum['id'])}]", font=font, fill=(255, 255, 255, 255))
         for hs in raum["hotspots"]:
+            if hs.get("versteckt"):
+                continue  # erst später sichtbar (etwa die Geburtstagsdeko im Finale), nicht ins Bild malen
             beschriften(d, hs["rect"], texte.get(hs["name_key"], hs["id"]), farbe(raum["farbe"], 1.35), (38, 43, 68, 255))
         for a in raum["ausgaenge"]:
             beschriften(d, a["rect"], "> " + texte.get(a["name_key"], a["ziel"]), (38, 43, 68, 255), (255, 255, 255, 255))

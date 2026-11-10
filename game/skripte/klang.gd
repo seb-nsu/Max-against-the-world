@@ -11,8 +11,9 @@ extends Node
 ##   res://audio/stimmen/<sprache>/<ZEILEN_ID>   eine Datei je Sprechblase (Kaskaden _2, _3 eigen)
 ##
 ## Busse: Musik, Geraeusche, Stimmen (default_bus_layout.tres), Lautstärken aus den Optionen.
-## Ohne Stimmdatei kann statt Stille „Brabbel“ kommen (Probe für P4, Option brabbel): je Silbe
-## ein kurzer Ton, Tonhöhe und Tempo je Figur.
+## Ohne Stimmdatei kommt „Brabbel“ (Option brabbel, Probe für P4): je Silbe ein kurzer Ton,
+## Tonhöhe und Tempo je Figur. Ohne Geräusch- oder Jingle-Datei spielt ein erzeugter Platzhalter
+## (Option platzhalter_klang, skripte/platzhalter_klang.gd). Headless bleibt beides still.
 
 const ORDNER := {
 	musik = "res://audio/musik/", jingle = "res://audio/jingles/",
@@ -25,12 +26,23 @@ const UEBERBLENDEN := 1.0
 const JINGLES := ["aufgehoben", "geloest", "welt_geschafft", "falsch", "lachkonserve", "gluecksrad"]
 ## Geräusche der Spielsysteme und der Bedienung (04-audio.md, Geräusche: Bedienung, Spielsysteme)
 const GERAEUSCHE := ["ui_klick", "inventar", "seite", "kombinieren", "fehler", "wechsel",
-	"hinweis", "speichern", "nahansicht", "notiz", "zappomat_sog", "werbeblock_start"]
+	"hinweis", "speichern", "nahansicht", "notiz", "zappomat_sog", "werbeblock_start",
+	"umschalten", "gong"]
 
 ## Brabbel: Grundton (Hz) und Silben je Sekunde je Sprecherkürzel (04-audio.md, Stimmen)
+## Hauptfiguren fest (Stimmen-Tabelle in 04-audio.md); alle anderen bekommen Werte aus ihrem Kürzel.
 const BRABBEL := {
 	MAX = [150.0, 7.0], PIX = [120.0, 6.0], OPA = [170.0, 6.5], TOA = [420.0, 11.0],
+	OMA = [230.0, 6.5], ZEL = [260.0, 8.0], MOD = [200.0, 7.5], HUM = [130.0, 6.0],
+	ALW = [190.0, 5.5], GOL = [240.0, 9.0], WAL = [95.0, 5.0], SMA = [110.0, 6.0],
+	TIR = [160.0, 7.0], RAM = [140.0, 6.0], CIC = [175.0, 8.0], LEO = [120.0, 7.0],
+	ARC = [165.0, 8.0], HER = [210.0, 11.0], MOR = [115.0, 5.0], ORA = [240.0, 6.0],
+	DEC = [135.0, 6.0], VIE = [185.0, 7.5], KAL = [200.0, 9.0], HAU = [100.0, 6.0],
+	MUT = [250.0, 7.0], GER = [190.0, 10.0], KOM = [145.0, 6.5], NSP = [150.0, 7.0],
+	HYA = [300.0, 10.0], GST = [450.0, 9.0], PIE = [900.0, 14.0],
 }
+## Figuren ohne Stimme (04-audio.md: stumm)
+const STUMM := ["NAR", "TOI", "SKR", "BER"]
 const BRABBEL_STANDARD := [220.0, 8.0]
 const MISCHRATE := 22050.0
 
@@ -60,6 +72,8 @@ func _ready() -> void:
 	gen.mix_rate = MISCHRATE
 	gen.buffer_length = 4.0
 	_brabbel.stream = gen
+	# Im Browser spielt Godot sonst als „Sample“ ab, und ein Generator lässt sich nicht sampeln
+	_brabbel.playback_type = AudioServer.PLAYBACK_TYPE_STREAM
 
 
 func _spieler(bus: String) -> AudioStreamPlayer:
@@ -144,13 +158,23 @@ func jingle(id: String) -> void:
 func _kurz(art: String, id: String) -> void:
 	protokoll.append("%s/%s" % [art, id])
 	var pfad := datei(art, id)
-	if pfad.is_empty():
+	var strom: AudioStream = null
+	if not pfad.is_empty():
+		strom = load(pfad)
+	elif Einstellungen.wert("platzhalter_klang") and not _headless():
+		strom = CQPlatzhalterKlang.klang(id)   # bis die Datei da ist: erzeugter Platzhalter
+	if strom == null:
 		return
 	for p in _geraeusche:
 		if not p.playing:
-			p.stream = load(pfad)
+			p.stream = strom
 			p.play()
 			return
+
+
+## Ohne Ausgabe (Tests, Server) nichts erzeugen: spart Rechenzeit bei tausenden Zeilen.
+static func _headless() -> bool:
+	return DisplayServer.get_name() == "headless"
 
 
 #endregion
@@ -159,14 +183,14 @@ func _kurz(art: String, id: String) -> void:
 ## Eine Sprechblase beginnt (Spiel.sagen). Stimmdatei der aktuellen Sprache, sonst Brabbel
 ## (wenn eingeschaltet), sonst nichts.
 func zeile(kuerzel: String, schluessel: String, text: String) -> void:
-	if kuerzel == "NAR":
+	if kuerzel in STUMM:
 		return
 	_stimme.stop()
 	var pfad := datei("stimme", "%s/%s" % [TranslationServer.get_locale().left(2), schluessel])
 	if not pfad.is_empty():
 		_stimme.stream = load(pfad)
 		_stimme.play()
-	elif Einstellungen.wert("brabbel"):
+	elif Einstellungen.wert("brabbel") and not _headless():
 		brabbeln(kuerzel, text)
 
 
@@ -177,8 +201,19 @@ static func silben(text: String) -> int:
 	return maxi(1, re.search_all(text).size())
 
 
+## Grundton und Tempo einer Figur: fest aus BRABBEL, sonst aus dem Kürzel abgeleitet (gleich bei
+## jedem Start, damit eine Figur immer gleich klingt).
+static func stimme(kuerzel: String) -> Array:
+	if BRABBEL.has(kuerzel):
+		return BRABBEL[kuerzel]
+	if kuerzel.is_empty():
+		return BRABBEL_STANDARD
+	var h := absi(hash(kuerzel))
+	return [120.0 + float(h % 260), 6.0 + float((h / 7) % 5)]
+
+
 func brabbeln(kuerzel: String, text: String) -> void:
-	var p: Array = BRABBEL.get(kuerzel, BRABBEL_STANDARD)
+	var p: Array = stimme(kuerzel)
 	var n := mini(silben(text), 40)
 	if not _brabbel.playing:
 		_brabbel.play()

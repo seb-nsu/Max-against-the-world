@@ -16,7 +16,7 @@ _alias:
 _figur_alias: {detektiv_deckert: deckert, morphaeus_in_der_gasse: morphaeus, oma: orakel_oma}
 
 unterstadt_strasse:
-  alias: {apothekengasse: ausgang_apothekengasse, durchgang_zum_laboreingang: ausgang_laboreingang, detektiv_deckert: deckert}
+  alias: {apothekengasse: ausgang_apothekengasse, durchgang_zum_laboreingang: ausgang_laboreingang, detektiv_deckert: deckert, herrn_vier: herr_vier, weinenden_mann: weinender_mann, nudeltopf: nudelbude, pizza_plakat: neon_pizza_plakat}
   farbe: '#3b3f58'
   laufbereich:
   - [6, 210]
@@ -109,7 +109,7 @@ apothekengasse:
       rect: [6, 105, 27, 105]
       gehe: [36, 240]
 widerstandsbasis:
-  alias: {fenster_als_max: fenster, stromkasten_als_max: stromkasten, patch_panel_als_max: patch_panel, terminal_mit_ziel_labor: terminal, plakat_m_u_t_t_i: plakat}
+  alias: {fenster_als_max: fenster, stromkasten_als_max: stromkasten, patch_panel_als_max: patch_panel, terminal_mit_ziel_labor: terminal, plakat_m_u_t_t_i: plakat, max_in_der_kapsel: max_kapsel}
   farbe: '#4a4a40'
   laufbereich:
   - [6, 210]

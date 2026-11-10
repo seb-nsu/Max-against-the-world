@@ -272,6 +272,8 @@ Gespräch mit Gollo:
 | W1\_TAV\_GOL\_0722 | Gollo | Er ist schwer. Nicht in der Hand, im Kopf. Er flüstert. Meistens Preise. | flüstert |
 | W1\_TAV\_MAX\_0730 | Max | Warum wirfst du ihn nicht einfach in den Topf? | Option Gollo (bleibt) |
 | W1\_TAV\_GOL\_0740 | Gollo | Der Vulkan! Ja! Nein! Der Wirt guckt. Die Katze guckt. Und wenn keiner guckt, gucke ich. Ich traue mich nicht. | Hinweis R1a und R1b |
+| W1\_TAV\_MAX\_1640 | Max | Ich gucke auch weg, wenn das hilft. |  |
+| W1\_TAV\_GOL\_1650 | Gollo | Dann guckt immer noch der Ring. Er hat kein Auge, aber er guckt. Glaub mir. |  |
 | W1\_TAV\_MAX\_0750 | Max | Du spielst gern Rätselspiele? | Option Gollo (bleibt) |
 | W1\_TAV\_GOL\_0760 | Gollo | Rätsel! Ja! Ich gewinne immer! Was hat Wurzeln, die keiner sieht, und ist höher als Bäume? | kichert |
 | W1\_TAV\_MAX\_0770 | Max | Ein Berg. Das steht in jedem Buch. | Antwort auf 0760 |
@@ -391,8 +393,12 @@ Gespräch mit dem Schmied:
 | W1\_SCHM\_SCH\_0222 | Schmied | Dreimal. Sie kam jedes Mal zurück. Mit einem Schwert im Maul. Mit meinem. |  |
 | W1\_SCHM\_MAX\_0230 | Max | Gehört die Ziege dir? | Option Schmied |
 | W1\_SCHM\_SCH\_0240 | Schmied | Die Ziege gehört niemandem. Sie ist eines Morgens aufgetaucht. Wie Schulden. |  |
+| W1\_SCHM\_MAX\_0750 | Max | Und warum jagst du sie nicht weg? |  |
+| W1\_SCHM\_SCH\_0760 | Schreiber | Hab ich versucht. Sie war schneller wieder da als ich. Seitdem nenne ich sie Kollegin. |  |
 | W1\_SCHM\_MAX\_0250 | Max | Was ist das für ein Schwert in ihrem Maul? | Option Schmied |
 | W1\_SCHM\_SCH\_0260 | Schmied | Das war Ingrid. Humbert wollte sie für seine Sammlung. Jetzt ist sie Ziegenfutter. Sag ihm nichts, er hängt an Namen. |  |
+| W1\_SCHM\_MAX\_0770 | Max | Du hast deinen Schwertern Namen gegeben? |  |
+| W1\_SCHM\_SCH\_0780 | Schreiber | Jedes Schwert hat einen Namen. Ingrid, Helga, Kurt. Kurt war ein Missverständnis. |  |
 | W1\_SCHM\_MAX\_0270 | Max | Kann ich die Ziege haben? | Option Schmied; auch bei Benutzen: Ziege |
 | W1\_SCHM\_SCH\_0280 | Schmied | Du willst sie? Nimm sie! Nimm sie mit! Ich schmiede dir ein Denkmal! Aus Blech, aber ein Denkmal! | fällt fast auf die Knie; Ziege folgt Max ab jetzt |
 | W1\_SCHM\_ZIE\_0290 | Schmiede-Ziege | Mäh. | kaut weiter, trottet zu Max |
@@ -470,8 +476,12 @@ Gespräch mit dem Stabmacher:
 | W1\_STAB\_STA\_0222 | Stabmacher | Das sagst du. Der Löffel hat sich dazu noch nicht geäußert. | tätschelt das Kissen |
 | W1\_STAB\_MAX\_0230 | Max | Wie wählt ein Stab denn? | Option Stabmacher (bleibt) |
 | W1\_STAB\_STA\_0240 | Stabmacher | Mein letzter Stab hat seinen Zauberer gewählt, indem er an ihm kleben blieb. Honigfinger. Drei Tage ließ er nicht los. // Das nenne ich Berufung. | Hinweis R2 |
+| W1\_STAB\_MAX\_0750 | Max | Und wenn mich keiner wählt? |  |
+| W1\_STAB\_STA\_0760 | Stabmacher | Dann wählst du einen. Der Stab merkt das nicht. Die meisten merken gar nichts. Es ist Holz. |  |
 | W1\_STAB\_MAX\_0250 | Max | Was ist in den ganzen Schachteln? | Option Stabmacher |
 | W1\_STAB\_STA\_0260 | Stabmacher | Nichts. Aber sie sehen gut aus. Ein Laden braucht Schachteln. Ohne Schachteln ist es ein Flur. |  |
+| W1\_STAB\_MAX\_0770 | Max | Und wenn jemand eine kauft? |  |
+| W1\_STAB\_STA\_0780 | Stabmacher | Dann verkaufe ich ihm eine leere Schachtel mit Würde. Das ist mein bestes Produkt. |  |
 | W1\_STAB\_MAX\_0270 | Max | Was ist mit der Socke da? | Option Stabmacher |
 | W1\_STAB\_STA\_0280 | Stabmacher | Ein Probestück. Der Sortierhut von Hoggelwarz ist in Rente, die Schule hat kein Geld, ich habe Socken. Das ist der Prototyp. |  |
 | W1\_STAB\_MAX\_0281 | Max | Eine Socke sortiert Schüler? |  |
@@ -567,14 +577,20 @@ Gespräch mit Alwin (ab Prüfungsbeginn):
 | W1\_HOGG\_ALW\_0342 | Alwin | Der Pilz. Ohne Pilz ist es Frühstück, mit Pilz ist es Bildung. Leuchtpilze wachsen im Zauberwald, hinter der Trollbrücke. | Hinweis R6, Teil 1 |
 | W1\_HOGG\_MAX\_0350 | Max | Wo gibt es hier Milch? | Option Alwin (bleibt); nach 0320 |
 | W1\_HOGG\_ALW\_0360 | Alwin | Milch? Milch gibt es im ganzen Reich nicht mehr. Die Milch ist in einem anderen Schloss. // Aber Ziegen. Ziegen haben Milch, sagt man. Ich habe nie nachgesehen. | Hinweis R6, Teil 1 |
+| W1\_HOGG\_MAX\_0950 | Max | In welchem Schloss? |  |
+| W1\_HOGG\_ALW\_0960 | Alwin | In dem, das schwebt. Die Milch hat jetzt einen schöneren Ausblick als ich. |  |
 | W1\_HOGG\_MAX\_0370 | Max | Was hat es mit dem Regal auf sich? | Option Alwin (bleibt) |
 | W1\_HOGG\_ALW\_0380 | Alwin | Sechs Flaschen. Die Etiketten hat jemand vertauscht. Vermutlich ich. Mein Zettel sagt dir, welche die richtige ist. In Reimen. Ich war mal Barde. | gibt Alwins Hinweiszettel |
+| W1\_HOGG\_MAX\_0970 | Max | Kannst du mir nicht einfach sagen, welche es ist? |  |
+| W1\_HOGG\_ALW\_0980 | Alwin | Könnte ich. Aber dann hätte ich den Reim umsonst geschrieben. Ich habe vier Tage an „Schleim“ gesessen. |  |
 | W1\_HOGG\_MAX\_0390 | Max | Wer ist eigentlich dieser Moderwort? | Option Alwin |
 | W1\_HOGG\_ALW\_0400 | Alwin | Ein Schüler. Erstes Jahr. Er nieste in Kräuterkunde, alle lachten, er ging. Sehr empfindlich. // Sein Zeugnis liegt noch im Archiv. Nie abgeholt. | Hinweis auf das Zeugnis |
 | W1\_HOGG\_MAX\_0401 | Max | Er ist gegangen, weil alle gelacht haben? |  |
 | W1\_HOGG\_ALW\_0402 | Alwin | Ich habe auch gelacht. Er hat sehr laut geniest. Ich denke oft an ihn, meistens, wenn es blüht. | putzt die Brille |
 | W1\_HOGG\_MAX\_0410 | Max | Was ist mit dem Besen los? | Option Alwin |
 | W1\_HOGG\_ALW\_0420 | Alwin | Verzaubert. Alle Besen hier sind verzaubert. Sie fegen, was sich bewegt. Katzenhaare bewegen sich am schönsten. Frag mich nicht, warum. | Hinweis auf Rätsel 11 |
+| W1\_HOGG\_PIX\_0990 | Pixel | Ich bewege mich nicht. Ich bin Deko. |  |
+| W1\_HOGG\_ALW\_1000 | Alwin | Das sagen sie alle. Der Besen glaubt es keinem. |  |
 | W1\_HOGG\_MAX\_0430 | Max | Bis später. | Option Alwin, beendet das Gespräch |
 | W1\_HOGG\_ALW\_0440 | Alwin | Geh nur. Der Kessel läuft nicht weg. Also, einmal schon. Lange Geschichte. |  |
 
@@ -680,14 +696,20 @@ Gespräch mit Waldemar:
 | W1\_BRUE\_WAL\_0222 | Waldemar | Dann stelle ich mich in den Weg. Sehr höflich, aber sehr breit. | macht sich breit |
 | W1\_BRUE\_MAX\_0230 | Max | Welches Märchen? | Option Waldemar (bleibt) |
 | W1\_BRUE\_WAL\_0240 | Waldemar | Das mit den drei Ziegenböcken. Klein, mittel, groß, jeder sagt seinen Satz, und am Ende gehe ich ins Wasser. // Das ist der Teil, den ich … nun. Ich kann nicht schwimmen. Aber Regel ist Regel. | räuspert sich |
+| W1\_BRUE\_MAX\_1240 | Max | Und das findest du gut? |  |
+| W1\_BRUE\_WAL\_1250 | Waldemar | Gut nicht. Aber es steht so in der Satzung. Ohne Satzung wäre ich nur ein großer Mann unter einer Brücke. |  |
 | W1\_BRUE\_MAX\_0250 | Max | Was läuft da unten? | Option Waldemar |
 | W1\_BRUE\_WAL\_0260 | Waldemar | Nichts! Schlager! Marschmusik! Trollmusik! // … Musicals. Sag es niemandem. Trolle hören keine Musicals. Es steht in keiner Satzung, aber in jedem Blick. | Fliege zittert |
 | W1\_BRUE\_MAX\_0261 | Max | Welches Musical denn? |  |
 | W1\_BRUE\_WAL\_0262 | Waldemar | Alle. Am liebsten das mit der Katze, die auf dem Dach singt. Ich weine jedes Mal. Laut Satzung nur innerlich. | flüstert |
 | W1\_BRUE\_MAX\_0270 | Max | Du kannst wirklich nicht schwimmen? | Option Waldemar (bleibt) |
 | W1\_BRUE\_WAL\_0280 | Waldemar | Ich sinke wie ein Paragraf. Aber die Satzung sagt Wasser, also Wasser. Ich bin Troll, kein Anwalt. Leider. | Hinweis R4c |
+| W1\_BRUE\_MAX\_1260 | Max | Dann ändere doch die Satzung. |  |
+| W1\_BRUE\_WAL\_1270 | Waldemar | Dafür brauche ich eine Versammlung. Die Versammlung bin ich. Ich bin nie beschlussfähig. |  |
 | W1\_BRUE\_MAX\_0290 | Max | Würdest du für mich singen? | Option Waldemar; nach R4, mit Socke, Zauberwald betreten |
 | W1\_BRUE\_WAL\_0300 | Waldemar | Hier? Vor der Brücke? Niemals. Die Akustik. Im Wald, zwischen den Pilzen, da trägt der Ton. // Komm. Bevor ich es mir anders überlege. | geht Richtung Wald; weiter in Abschnitt 9, Rätsel 7 |
+| W1\_BRUE\_MAX\_1280 | Max | Also im Wald schon? |  |
+| W1\_BRUE\_WAL\_1290 | Waldemar | Vielleicht. Wenn keiner zuhört. Und wenn doch, dann bitte mit Applaus. |  |
 | W1\_BRUE\_MAX\_0310 | Max | Bis dann. | Option Waldemar, beendet das Gespräch |
 | W1\_BRUE\_WAL\_0320 | Waldemar | Auf Wiedersehen. Paragraf 7: Höflichkeit ist Pflicht. Ich halte mich daran. Auch wenn es schwerfällt. |  |
 
@@ -861,6 +883,8 @@ Gespräch mit Rotkäppchen:
 | W1\_WALD\_ROT\_0242 | Rotkäppchen | Sie haben nur eine. Also zählen sie bis eins, dann ist es dunkel, und sie fangen von vorne an. | Hinweis R10 |
 | W1\_WALD\_MAX\_0250 | Max | Hast du keine Angst vor dem Wolf? | Option Rotkäppchen |
 | W1\_WALD\_ROT\_0260 | Rotkäppchen | Welcher Wolf? Ach, der. Der ist Kunde. Bestellt immer Nachthemden in Oma-Größe. Ich frag nicht. Trinkgeld stimmt. |  |
+| W1\_WALD\_MAX\_0770 | Max | Und die Großmutter? |  |
+| W1\_WALD\_ROT\_0780 | Rotkäppchen | Ist in Rente. Wohnt auf Mallorca. Der Wolf gießt ihre Blumen. |  |
 | W1\_WALD\_MAX\_0270 | Max | Was ist mit den Rosen? | Option Rotkäppchen (bleibt) |
 | W1\_WALD\_ROT\_0280 | Rotkäppchen | Niesrosen. Gehen nur auf, wenn einer singt. Richtig singt. Ich hab's probiert. Sie sind zugegangen. Fester. | Hinweis R7 |
 | W1\_WALD\_MAX\_0281 | Max | Und wer singt hier richtig? |  |
@@ -949,8 +973,12 @@ Gespräch mit Zeldina, vor dem Team:
 | --- | --- | --- | --- |
 | W1\_LUFT\_MAX\_0210 | Max | Du bist die Prinzessin? | Option Zeldina |
 | W1\_LUFT\_ZEL\_0220 | Zeldina | Zeldina. Ohne Prinzessin, bitte. Ich suche eine Wohnung, keinen Retter. | stellt den Karton ab |
+| W1\_LUFT\_MAX\_0830 | Max | Und der Drache? Der Turm? Das ganze Entführungsding? |  |
+| W1\_LUFT\_ZEL\_0840 | Zeldina | Der Drache war der Vermieter. Der Turm war zu teuer. Und entführt hat mich nur die Nebenkostenabrechnung. |  |
 | W1\_LUFT\_MAX\_0230 | Max | Toadi sucht dich überall. | Option Zeldina |
 | W1\_LUFT\_ZEL\_0240 | Zeldina | Toadi sucht mich seit drei Jahren. Er ist sehr gut im Suchen und sehr schlecht im Finden. Ich hab ihm dreimal die Adresse geschickt. |  |
+| W1\_LUFT\_MAX\_0850 | Max | Und er hat sie nie gelesen? |  |
+| W1\_LUFT\_ZEL\_0860 | Zeldina | Er hat sie gelesen. Dann ist er in ein Rohr gesprungen, um schneller da zu sein. Rohre führen nie dahin, wo man hinwill. |  |
 | W1\_LUFT\_MAX\_0250 | Max | Wurdest du jetzt entführt oder nicht? | Option Zeldina |
 | W1\_LUFT\_ZEL\_0260 | Zeldina | Umzugsfirmen kosten. Dunkle Lords tragen Kisten umsonst. // Man lässt sich entführen, wartet die Rettung ab, und schon wohnt man woanders. Kostenlos. |  |
 | W1\_LUFT\_PIX\_0270 | Pixel | Das ist die klügste Person dieser Welt. Ich sage das ungern über Menschen. | nach 0260 |
@@ -996,12 +1024,16 @@ Gespräch mit Zeldina im Team (überall, wo sie folgt):
 | --- | --- | --- | --- |
 | W1\_LUFT\_MAX\_0710 | Max | Was weißt du über Moderwort? | Option Zeldina; nach R9 |
 | W1\_LUFT\_ZEL\_0720 | Zeldina | Alle nennen ihn Moderwort. Seine Mutter nicht. Die hatte einen Spitznamen für ihn, vier Teile, furchtbar. // Ich weiß nur, dass er mit „Mo“ anfängt. Es ist das Passwort zu seiner Geheimtür. Er ist ein sehr schlechter Dunkler Lord. | Notizbuch trägt „Mo“ als Anfang ein |
+| W1\_LUFT\_MAX\_0870 | Max | Vier Teile? Wie lang ist das denn? |  |
+| W1\_LUFT\_ZEL\_0880 | Zeldina | Lang genug, dass seine Mutter mittendrin Luft holen musste. Vor der ganzen Schulklasse. |  |
 | W1\_LUFT\_MAX\_0730 | Max | Was willst du mit dem Turm? | Option Zeldina; nach R9 |
 | W1\_LUFT\_ZEL\_0740 | Zeldina | Wohnen. Einziehen. Nie wieder umziehen. Vielleicht einen Kronleuchter. Ich träume groß, aber mit Festpreis. | Hinweis R12 |
 | W1\_LUFT\_MAX\_0741 | Max | Und wenn Moderwort nicht auszieht? |  |
 | W1\_LUFT\_ZEL\_0742 | Zeldina | Dann wohnen wir eben zusammen. Er niest, ich räume auf. Ich hatte schon schlimmere Mitbewohner. |  |
 | W1\_LUFT\_MAX\_0750 | Max | Kennst du die Goblins? | Option Zeldina; nach R9, vor R10 |
 | W1\_LUFT\_ZEL\_0760 | Zeldina | Grimmzahn? Streikt seit Jahren. Will eigentlich nur einen Posten mit Schlüsselbund. Ein Turm bräuchte einen Hausmeister. Nur so ein Gedanke. | Hinweis R10, Weg B |
+| W1\_LUFT\_MAX\_0890 | Max | Du meinst, ich soll ihm einen Job anbieten? |  |
+| W1\_LUFT\_ZEL\_0900 | Zeldina | Ich meine gar nichts. Ich mache nur Andeutungen. Das ist billiger als Meinungen. |  |
 | W1\_LUFT\_MAX\_0770 | Max | Gehen wir. | Option Zeldina, beendet das Gespräch |
 | W1\_LUFT\_ZEL\_0780 | Zeldina | Du vorne. Ich trage. |  |
 
@@ -1065,6 +1097,8 @@ Gespräch mit Grimmzahn:
 | W1\_BERG\_GRI\_0360 | Grimmzahn | Oder etwas, das so aussieht. Wir sind traditionell, nicht genau. |  |
 | W1\_BERG\_MAX\_0370 | Max | Wie komm ich durch? | Option Grimmzahn |
 | W1\_BERG\_GRI\_0380 | Grimmzahn | Gar nicht. Oder du gibst uns Licht und unterschreibst. Oder du machst mir ein besseres Angebot. Ich bin Gewerkschafter, keine Mauer. |  |
+| W1\_BERG\_MAX\_0830 | Max | Was für ein Angebot? |  |
+| W1\_BERG\_GRI\_0840 | Grimmzahn | Eins mit Zukunft. Und mit Schlüsseln. Ein Goblin ohne Schlüssel ist nur ein grüner Mann im Dunkeln. |  |
 | W1\_BERG\_MAX\_0390 | Max | Wie wär's mit einem Posten als Hausmeister im Dunklen Turm? | Option Grimmzahn; nur mit Zeldina im Team; Weg B |
 | W1\_BERG\_GRI\_0400 | Grimmzahn | Hausmeister? Mit Schlüsselbund? Eigenem Keller? … Wer bürgt? | misstrauisch |
 | W1\_BERG\_ZEL\_0410 | Zeldina | Ich. Der Turm wird demnächst neu vergeben. Ich hätte gern jemanden, der sich über alles beschwert. Das hält die Mieter wach. |  |
@@ -1212,14 +1246,20 @@ Gespräch mit Smaugi:
 | --- | --- | --- | --- |
 | W1\_SMAU\_MAX\_0310 | Max | Wem gehört das alles? | Option Smaugi |
 | W1\_SMAU\_SMA\_0320 | Smaugi | Mir. Alles. Jeder Löffel. Ich könnte es brauchen. Irgendwann. Man weiß nie, wann man dreihundert Teekannen braucht. | streichelt eine Teekanne |
+| W1\_SMAU\_MAX\_0830 | Max | Dreihundert Teekannen? Du trinkst doch gar keinen Tee. |  |
+| W1\_SMAU\_SMA\_0840 | Smaugi | Noch nicht. Aber wenn ich anfange, bin ich vorbereitet. |  |
 | W1\_SMAU\_MAX\_0330 | Max | Gibst du mir das Ei? | Option Smaugi |
 | W1\_SMAU\_SMA\_0340 | Smaugi | Das Ei? Das EI? Es ist das Einzige hier, das keinen Staub ansetzt. Ich gebe nichts her. // Außer, jemand braucht es wirklich. Wirklich wirklich. | Hinweis R12 |
 | W1\_SMAU\_MAX\_0341 | Max | Und was heißt „wirklich wirklich“? |  |
 | W1\_SMAU\_SMA\_0342 | Smaugi | Wenn mir jemand zeigt, dass mein Kram woanders glücklicher ist als hier. Dann vielleicht. Ganz vielleicht. | Hinweis R12 |
 | W1\_SMAU\_MAX\_0350 | Max | Was ist mit der Tür da oben? | Option Smaugi |
 | W1\_SMAU\_SMA\_0360 | Smaugi | Moderworts Geheimtür. Sie kichert, wenn man falsch rät. Sie kichert viel. Ich halte mir die Ohren zu, aber ich habe nur Krallen dafür. |  |
+| W1\_SMAU\_MAX\_0850 | Max | Was muss man denn sagen? |  |
+| W1\_SMAU\_SMA\_0860 | Smaugi | Das Passwort. Es hat mehrere Teile, und keiner hier kennt alle. Ich kenne keinen. Ich höre nur das Kichern. |  |
 | W1\_SMAU\_MAX\_0370 | Max | Warum sammelst du das alles? | Option Smaugi |
 | W1\_SMAU\_SMA\_0380 | Smaugi | Ich sammle nicht. Ich bewahre. Für den Fall. Welchen Fall? Den Fall! Irgendeinen Fall! | schnieft |
+| W1\_SMAU\_PIX\_0870 | Pixel | Ich kenne das. Ich bewahre auch. Unter dem Sofa. |  |
+| W1\_SMAU\_SMA\_0880 | Smaugi | Eine Kollegin! Was bewahrst du? Nein, sag es nicht. Ich will es auch haben. |  |
 | W1\_SMAU\_MAX\_0390 | Max | Bis gleich. | Option Smaugi, beendet das Gespräch |
 | W1\_SMAU\_SMA\_0400 | Smaugi | Geh nur. Aber nimm nichts mit. Doch, nimm. Nein. Ach. |  |
 

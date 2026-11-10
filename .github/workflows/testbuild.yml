@@ -2,7 +2,8 @@ name: Testbuild
 
 # Spielbarer Testbuild für Linux und Windows mit Feature-Tag cq_testbuild (Telemetrie mit
 # Zustimmung, 03-produktion.md A7 und A9). Läuft von Hand: Actions → Testbuild → Run workflow.
-# Ergebnis: zwei Artefakte (couch-quest-testbuild-linux, couch-quest-testbuild-windows).
+# Ergebnis: drei Artefakte (couch-quest-testbuild-linux, -windows, -web). Den Web-Build entpacken und
+# auf itch.io (HTML, „SharedArrayBuffer“ aus) oder einen beliebigen Webspace legen; er läuft ohne Threads.
 
 on:
   workflow_dispatch:
@@ -26,13 +27,13 @@ jobs:
         uses: actions/cache@v4
         with:
           path: ~/.local/share/godot/export_templates/${{ env.GODOT_VERSION }}.stable
-          key: godot-vorlagen-${{ env.GODOT_VERSION }}-linux-windows
+          key: godot-vorlagen-${{ env.GODOT_VERSION }}-linux-windows-web
 
-      - name: Export-Vorlagen laden (nur Linux und Windows x86_64)
+      - name: Export-Vorlagen laden (nur Linux und Windows x86_64, Web ohne Threads)
         if: steps.vorlagen.outputs.cache-hit != 'true'
         run: |
           curl -sSL -o vorlagen.tpz "https://github.com/godotengine/godot/releases/download/${GODOT_VERSION}-stable/Godot_v${GODOT_VERSION}-stable_export_templates.tpz"
-          unzip -q vorlagen.tpz "templates/version.txt" "templates/linux_*.x86_64" "templates/windows_*_x86_64*"
+          unzip -q vorlagen.tpz "templates/version.txt" "templates/linux_*.x86_64" "templates/windows_*_x86_64*" "templates/web_nothreads_*.zip"
           ziel="$HOME/.local/share/godot/export_templates/${GODOT_VERSION}.stable"
           mkdir -p "$ziel"
           mv templates/* "$ziel/"
@@ -47,13 +48,15 @@ jobs:
       - name: Prolog-Durchlauf (Testmodus) vor dem Export
         run: timeout 600 ./godot --headless --path game -s res://tests/prolog_durchlauf.gd
 
-      - name: Export Linux und Windows
+      - name: Export Linux, Windows und Web
         run: |
-          mkdir -p build/linux build/windows
+          mkdir -p build/linux build/windows build/web
           ./godot --headless --path game --export-release "Linux Testbuild" ../build/linux/couch_quest.x86_64
           ./godot --headless --path game --export-release "Windows Testbuild" ../build/windows/couch_quest.exe
           test -s build/linux/couch_quest.x86_64
+          ./godot --headless --path game --export-release "Web Testbuild" ../build/web/index.html
           test -s build/windows/couch_quest.exe
+          test -s build/web/index.pck
           # Artefakte verlieren das Ausführbar-Bit: Linux-Build als tar.gz, das behält es
           tar -czf build/couch_quest_linux.tar.gz -C build/linux couch_quest.x86_64
 
@@ -66,3 +69,8 @@ jobs:
         with:
           name: couch-quest-testbuild-windows
           path: build/windows/
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: couch-quest-testbuild-web
+          path: build/web/

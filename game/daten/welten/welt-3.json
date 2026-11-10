@@ -675,6 +675,7 @@
    "benoetigt": [],
    "ergibt": [],
    "schalter": [
+    "W3_R01_A_GELOEST",
     "BEOBACHTUNG_SCHIRM",
     "BEOBACHTUNG_MUSIKER",
     "BEOBACHTUNG_SUPPE"
@@ -690,6 +691,7 @@
    ],
    "ergibt": [],
    "schalter": [
+    "W3_R01_B_GELOEST",
     "STEMPEL_MENSCH"
    ],
    "optional": false
@@ -701,6 +703,7 @@
    "benoetigt": [],
    "ergibt": [],
    "schalter": [
+    "W3_R02_GELOEST",
     "MORPHAEUS_GETROFFEN"
    ],
    "optional": false
@@ -718,6 +721,7 @@
     "blaue_pastille"
    ],
    "schalter": [
+    "W3_R03_A_GELOEST",
     "DIAGNOSE_MATRIX"
    ],
    "optional": false
@@ -734,6 +738,7 @@
     "omas_kekse"
    ],
    "schalter": [
+    "W3_R03_B_GELOEST",
     "KEKSE_DABEI",
     "SIMULATION_OFFEN"
    ],
@@ -750,6 +755,7 @@
     "rezeptkarte"
    ],
    "schalter": [
+    "W3_R04_GELOEST",
     "VASE_ZERBROCHEN",
     "REGEL_2"
    ],
@@ -764,6 +770,7 @@
    ],
    "ergibt": [],
    "schalter": [
+    "W3_R05_GELOEST",
     "CODE_SICHT",
     "GLASTUER_OFFEN"
    ],
@@ -779,6 +786,7 @@
    ],
    "ergibt": [],
    "schalter": [
+    "W3_R06_A_GELOEST",
     "HEXENSCHUSS",
     "TASSE_ORIGINAL"
    ],
@@ -797,6 +805,7 @@
     "schmidts_akte"
    ],
    "schalter": [
+    "W3_R06_B_GELOEST",
     "KLONE_MITTAGSPAUSE",
     "REGEL_1"
    ],
@@ -813,6 +822,7 @@
    ],
    "ergibt": [],
    "schalter": [
+    "W3_R07_A_GELOEST",
     "FARBCODE_GESENDET"
    ],
    "optional": false
@@ -826,6 +836,7 @@
    ],
    "ergibt": [],
    "schalter": [
+    "W3_R07_B_GELOEST",
     "KABEL_GESTECKT"
    ],
    "optional": false
@@ -839,6 +850,7 @@
    ],
    "ergibt": [],
    "schalter": [
+    "W3_R08_GELOEST",
     "HAUSMEISTER_WEG",
     "FREUND_0815"
    ],
@@ -854,6 +866,7 @@
    ],
    "ergibt": [],
    "schalter": [
+    "W3_R09_A_GELOEST",
     "LEITUNG_LABOR"
    ],
    "optional": false
@@ -912,6 +925,7 @@
    ],
    "ergibt": [],
    "schalter": [
+    "W3_R10_GELOEST",
     "MUTTI_AUS"
    ],
    "optional": false
@@ -931,6 +945,7 @@
     "energiezelle"
    ],
    "schalter": [
+    "W3_R11_GELOEST",
     "ZELLE_GEKUEHLT"
    ],
    "optional": false
@@ -946,6 +961,7 @@
     "zugangskarte"
    ],
    "schalter": [
+    "W3_R12_GELOEST",
     "SUPPE_GEKOCHT"
    ],
    "optional": false
@@ -961,6 +977,7 @@
     "morse_tabelle"
    ],
    "schalter": [
+    "W3_R13_GELOEST",
     "MORSE_TABELLE",
     "OPAS_NACHRICHT"
    ],
@@ -971,6 +988,7 @@
   "W3_PIXEL_AUF_LEITUNG",
   "W3_WECHSEL_FREI",
   "W3_EBENE",
+  "W3_PIXEL_EINMAL",
   "W3_MAX_RAUM",
   "W3_PIXEL_RAUM",
   "W3_LETZTE_ZELLE",

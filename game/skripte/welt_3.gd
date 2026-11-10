@@ -142,6 +142,9 @@ func ereignis(art: String, obj: Variant, item: Variant) -> bool:
 	if art == "raum_betreten":
 		await _raum_betreten(obj)
 		return false
+	# Erste Worte und Zwischenbemerkungen, bevor das Gespräch (oder die Code-Sicht) beginnt
+	if art == "benutzen" and not Spiel.ist_pixel() and obj is PopochiuCharacter:
+		await _vor_gespraech(oid)
 	# Code-Sicht: Benutzen auf einem Tauschobjekt
 	if art == "benutzen" and not Spiel.ist_pixel() and oid in TAUSCH_OBJEKTE.get(_raum_id(), []):
 		if await _code_sicht(oid):
@@ -316,7 +319,7 @@ func _wechsel_getrennt() -> void:
 	var ziel: String
 	if C.player == C.Max:
 		Zustand.setze_wert("W3_MAX_RAUM", rid)
-		C.player = C.Pixel
+		C.player = C.get_character("Pixel")  # C.Pixel fehlt, solange Pixel in diesem Lauf in keinem Raum stand
 		ziel = str(Zustand.wert("W3_PIXEL_RAUM", "widerstandsbasis"))
 	else:
 		Zustand.setze_wert("W3_PIXEL_RAUM", rid)
@@ -349,7 +352,7 @@ func _aufwachen() -> void:
 	C.player = C.Max
 	Spiel.figur_gewechselt.emit(C.player)
 	Spiel.herkunft_raum = "Kapsel"
-	await R.goto_room(Bauplan.raum_script_name("widerstandsbasis"))
+	await Spiel.raum_wechseln_und_warten(Bauplan.raum_script_name("widerstandsbasis"))
 
 
 ## Klingelnde Zelle oder Omas Wandtelefon: zurück in die Realität.
@@ -371,7 +374,7 @@ func _raum_betreten(raum: CQRaum) -> void:
 		_tausch["budget"] = 3
 	if C.player == C.Max and getrennt():
 		Zustand.setze_wert("W3_MAX_RAUM", rid)
-	elif C.player == C.Pixel and getrennt():
+	elif C.player.script_name == "Pixel" and getrennt():
 		Zustand.setze_wert("W3_PIXEL_RAUM", rid)
 
 
@@ -605,6 +608,12 @@ func sichtbar_herr_vier_0090() -> Variant:
 
 
 ## Morphäus beschreibt das Symptom (R3a)
+func option_morphaeus_0600() -> bool:
+	if _einmal("W3_WENIGER_LOGISCH"):
+		await _sag("W3_NUD_MAX_0620")
+	return false
+
+
 func option_morphaeus_0480() -> bool:
 	Zustand.setze("W3_SYMPTOM_BEKANNT")
 	return false
@@ -637,7 +646,15 @@ func benutzen_pastillenautomat(_obj, _x) -> bool:
 
 func _automat() -> bool:
 	if Spiel.ist_pixel():
+		# Pixel läuft auf eigene Faust einmal vorbei: zählt nicht, Max sieht den Unterschied
+		if Zustand.ist("W3_SYMPTOM_BEKANNT") and not Zustand.ist("W3_PIXEL_DOPPELT") and not Zustand.geloest("R3a"):
+			await _sag("W3_APO_PIX_0180")
+			Zustand.setze("W3_PIXEL_EINMAL")
+			return true
 		return false
+	if Zustand.ist("W3_PIXEL_EINMAL") and not Zustand.ist("W3_PIXEL_DOPPELT") and _einmal("W3_PIXEL_NICHT_GLEICH"):
+		await _sag("W3_APO_MAX_0220")
+		return true
 	if not Zustand.geloest("R1b"):
 		await _sag("W3_APO_AUT_0030")
 		return true
@@ -891,9 +908,12 @@ func option_orakel_oma_0150() -> bool:
 	return false
 
 
-func ansehen_kochbuch(_obj, _x) -> bool:
+func ansehen_kochbuch(obj, _x) -> bool:
+	if obj is Object:
+		await obj.ansehen()
+	await Spiel.nahansicht_zeigen("kochbuch")
 	Zustand.setze("REGEL_2")
-	return false
+	return true
 
 
 func gegenstand_orakel_oma(_obj, iid) -> bool:
@@ -941,10 +961,15 @@ func _tasse_befiehlt(iid: String) -> bool:
 	return true
 
 
-## Regel 1 steht in der Akte (Nahansicht)
+## Regel 1 steht in der Akte (Nahansicht); beim ersten Lesen auch die Berichte über Max.
 func ansehen_inventar_schmidts_akte(_obj, _x) -> bool:
+	var neu := not "schmidts_akte" in Zustand.nahansichten
+	await Spiel.nahansicht_zeigen("schmidts_akte")
 	Zustand.setze("REGEL_1")
-	return false
+	if not neu:
+		return false
+	await _szene(["W3_TURM_MAX_0470", "W3_TURM_MAX_0480"])
+	return true
 
 
 func benutzen_farbcode_an_der_wand(_obj, _x) -> bool:
@@ -1053,6 +1078,9 @@ func sichtbar_kalle_0420() -> Variant:
 #region Rätsel 8 und 9a: Laboreingang ###############################################################
 func gegenstand_hausmeister(_obj, iid) -> bool:
 	match iid:
+		"thunfischdose":
+			await _sag("W3_EING_MAX_0530")
+			return true
 		"olivenoel":
 			if Zustand.ist("FREUND_0815"):
 				return false
@@ -1098,6 +1126,11 @@ func benutzen_panzertuer(obj, x) -> bool:
 
 #region Rätsel 12: Die vierte Zutat ################################################################
 func gegenstand_herr_vier(_obj, iid) -> bool:
+	const FALSCH := {"hundekuchen": "W3_SUPP_MAX_0170", "thunfischdose": "W3_SUPP_MAX_0180",
+		"schmidts_akte": "W3_SUPP_VIE_0190"}
+	if FALSCH.has(iid):
+		await _sag(FALSCH[iid])
+		return true
 	if iid != "rezeptkarte" or Zustand.geloest("R12"):
 		return false
 	await _szene(["W3_SUPP_MAX_0010", "W3_SUPP_VIE_0020", "W3_SUPP_VIE_0030", "W3_SUPP_VIE_0040",
@@ -1147,9 +1180,16 @@ func benutzen_laser(_obj, _x) -> bool:
 	return await _code_sicht("laser")
 
 
-func ansehen_kritzelei(_obj, _x) -> bool:
+## Kritzelei: Max' Ansehen-Zeile, dann die Nahansicht mit Regel 3 (beim ersten Mal vorgelesen).
+func ansehen_kritzelei(obj, _x) -> bool:
+	if obj is Object:
+		await obj.ansehen()
+	var neu := not "kritzelei_kammer_2" in Zustand.nahansichten
+	await Spiel.nahansicht_zeigen("kritzelei_kammer_2")
 	Zustand.setze("REGEL_3")
-	return false
+	if neu:
+		await _szene(["W3_KAM2_MAX_0150", "W3_KAM2_PIX_0160"])
+	return true
 
 
 func ansehen_kritzelei_kammer_2(obj, x) -> bool:
@@ -1163,7 +1203,7 @@ func _regeln() -> int:
 
 func benutzen_mutti(_obj, _x) -> bool:
 	if _raum_id() != "kern":
-		return false
+		return await _mutti_kammer()
 	if Zustand.geloest("R10"):
 		await _sag("W3_KERN_MUT_0610")
 		return true
@@ -1243,6 +1283,157 @@ func kombi_energiezelle_portalgeraet() -> bool:
 	return true
 #endregion
 
+#region Gesprächsanfänge, Kammer-Gags, Fehlkombinationen ############################################
+## Erste Worte (Regie „Reden: …, erstes Mal“) und Bemerkungen zum Stand, bevor das Gespräch
+## der Figur beginnt. Spielt nie selbst das Gespräch.
+func _vor_gespraech(oid: String) -> void:
+	match oid:
+		"deckert":
+			if Zustand.geloest("R1b"):
+				if _einmal("W3_DECKERT_NACH_TEST"):
+					await _sag("W3_TEST_DEC_0370")
+			elif _einmal("W3_DECKERT_ERSTES_MAL"):
+				await _szene(["W3_TEST_DEC_0010", "W3_TEST_DEC_0020", "W3_TEST_PIX_0030"])
+			elif not BEOBACHTUNG.values().any(func(b): return Zustand.ist(b)) \
+					and _einmal("W3_DECKERT_SCHWEIGEN"):
+				await _szene(["W3_TEST_MAX_0380", "W3_TEST_DEC_0390"])
+		"herr_vier":
+			if Zustand.geloest("R12"):
+				if _einmal("W3_VIER_NACH_SUPPE"):
+					await _sag("W3_SUPP_VIE_0160")
+			elif _einmal("W3_VIER_ERSTES_MAL"):
+				await _sag("W3_NUD_VIE_0010")
+		"schmidt":
+			if _raum_id() == "stadtstrasse" and not Zustand.geloest("R5") and _einmal("W3_SCHMIDT_ERSTES_MAL"):
+				await _szene(["W3_TUER_SCH_0010", "W3_TUER_SCH_0020"])
+		"hausmeister":
+			if _raum_id() != "laboreingang" or Zustand.geloest("R8"):
+				return
+			if _einmal("W3_HAUSMEISTER_ERSTES_MAL"):
+				await _szene(["W3_EING_HAU_0010", "W3_EING_MAX_0020", "W3_EING_HAU_0030"])
+			elif _einmal("W3_GEDANKENTRICK"):
+				await _szene(["W3_EING_MAX_0160", "W3_EING_HAU_0170", "W3_EING_PIX_0180"])
+		"kalle":
+			if Zustand.geloest("R13") and _einmal("W3_KALLE_NEUER_KAFFEE"):
+				await _sag("W3_PIEP_KAL_0280")
+
+
+## Schmidt nach dem Tausch: vor der Tür stumm, im Büroturm die Kopie ohne Meinung.
+func benutzen_schmidt(_obj, _x) -> bool:
+	match _raum_id():
+		"stadtstrasse":
+			if Zustand.geloest("R5"):
+				await _sag("W3_TUER_SCH_0220")
+				return true
+		"buero_50":
+			if Zustand.geloest("R6a"):
+				await _sag("W3_TURM_SCH_0560")
+				if not Zustand.geloest("R7b") and _einmal("W3_SCHMIDT_TASSE_MIT"):
+					await _sag("W3_TERM_SCH_0370")
+				return true
+	return false
+
+
+## Die Tür vor dem Büroturm: zu, solange Schmidt redet; danach redet sie.
+func benutzen_tuer(_obj, _x) -> bool:
+	if _raum_id() != "stadtstrasse":
+		return false
+	await _sag("W3_TUER_TUR_0240" if Zustand.geloest("R5") else "W3_TUER_MAX_0140")
+	return true
+
+
+func benutzen_rebell(_obj, _x) -> bool:
+	await _sag("W3_BAS_REL_0850")
+	return true
+
+
+func benutzen_rebellin(_obj, _x) -> bool:
+	await _sag("W3_BAS_REB_0860")
+	return true
+
+
+func benutzen_piepsi(_obj, _x) -> bool:
+	if not Zustand.geloest("R13"):
+		return false
+	await _sag("W3_PIEP_PIE_0240")
+	if _einmal("W3_PIEPSI_UEBERSETZT"):
+		await _sag("W3_PIEP_PIX_0250")
+	return true
+
+
+## M.U.T.T.I. aus dem Lautsprecher in den Kammern: der Kuchen ist immer woanders.
+func _mutti_kammer() -> bool:
+	match _raum_id():
+		"testkammer_1":
+			if Zustand.geloest("R9b"):
+				await _szene(["W3_KAM1_MAX_0500", "W3_KAM1_MUT_0510", "W3_KAM1_MAX_0520"])
+				return true
+		"testkammer_2":
+			await _szene(["W3_KAM2_MAX_0260", "W3_KAM2_MUT_0270"])
+			return true
+		"testkammer_3":
+			if not Zustand.geloest("R9d"):
+				await _szene(["W3_KAM3_MAX_0300", "W3_KAM3_MUT_0310"])
+				return true
+	return false
+
+
+## Kammer 2 verlassen, nachdem der Laser quietscht: M.U.T.T.I. lobt, Max fragt doch.
+func ausgang_ausgang_testkammer_3(_obj, _x) -> bool:
+	if _raum_id() == "testkammer_2" and Zustand.geloest("R9c") and _einmal("W3_KAM2_VERLASSEN"):
+		await _szene(["W3_KAM2_MUT_0250", "W3_KAM2_MAX_0260", "W3_KAM2_MUT_0270"])
+		if _hat("gummihuhn"):
+			await _sag("W3_KAM2_MAX_0130")
+	return false
+
+
+## Kammer 3 verlassen: M.U.T.T.I. merkt, dass ihr Lautsprecher-Tausch mit dem Raum endet.
+func ausgang_ausgang_kern(_obj, _x) -> bool:
+	if _raum_id() == "testkammer_3" and Zustand.geloest("R9d") and _einmal("W3_KAM3_VERLASSEN"):
+		await _sag("W3_KAM3_MUT_0180")
+	return false
+
+
+func gegenstand_bernd(_obj, iid) -> bool:
+	if iid != "thunfischdose":
+		return false
+	await _sag("W3_KAM1_MAX_0590")
+	if Zustand.ist("W3_PIXEL_AUF_LEITUNG"):
+		await _sag("W3_KAM1_PIX_0600")
+	return true
+
+
+## Im Kern mit Code-Sicht: beim zweiten Blick auf die Kekse die Ersatzpointe.
+func ansehen_inventar_omas_kekse(_obj, _x) -> bool:
+	if _raum_id() != "kern" or Zustand.ist("W3_ZELLE_KALT") or not Zustand.geloest("R10"):
+		return false
+	if _einmal("W3_KEKSE_IM_KERN_1"):
+		return false
+	if _einmal("W3_KEKSE_IM_KERN_2"):
+		await _sag("W3_KERN_MAX_0590")
+		return true
+	return false
+
+
+func kombi_kochloeffel_portalgeraet() -> bool:
+	await _sag("W3_KAM1_MAX_0610")
+	return true
+
+
+## Telefonbuch in der Zelle: Ansehen, dann die Seite mit den 47 Konners (Nahansicht).
+func ansehen_telefonbuch_in_der_zelle(obj, _x) -> bool:
+	if obj is Object:
+		await obj.ansehen()
+	await Spiel.nahansicht_zeigen("telefonbuchseite")
+	await _sag("W3_STR_MAX_0070")
+	return true
+
+
+func ansehen_inventar_telefonbuchseite(_obj, _x) -> bool:
+	await Spiel.nahansicht_zeigen("telefonbuchseite")
+	return false
+#endregion
+
 #region Abschluss ##################################################################################
 ## Pixels Lob nur ohne einen einzigen Hinweis der Stufe 3 in dieser Welt
 func _hinweis_stufe_3() -> bool:
@@ -1261,7 +1452,7 @@ func _abschluss() -> void:
 		zeilen.append("W3_ENDE_PIX_0080")
 	await _szene(zeilen)
 	Spiel.herkunft_raum = ""
-	await R.goto_room(Bauplan.raum_script_name("unterstadt_strasse"))
+	await Spiel.raum_wechseln_und_warten(Bauplan.raum_script_name("unterstadt_strasse"))
 	await _szene(["W3_ENDE_NAR_0090", "W3_ENDE_MAX_0100", "W3_ENDE_PIX_0110", "W3_ENDE_MAX_0120",
 		"W3_ENDE_PIX_0130", "W3_ENDE_DEC_0140"])
 	await Spiel.zwischenspiel_beginnen(3)

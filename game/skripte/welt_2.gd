@@ -26,6 +26,9 @@ const ANKUNFT := {
 const GETRAENK := ["Traubensaft", "Wein", "Essig"]
 ## Der Essigkrug ist in Syrakus 120 Jahre alt: Alter = Jahre des Stegs − 17
 const ESSIGKRUG_VERSATZ := -17
+## Ohne Sanduhr: ein Kommentar je Ding auf einer Fahrt (FAHR 0240–0270)
+const ZEITLOS := {"handy": "W2_FAHR_MAX_0240", "kaugummi": "W2_FAHR_MAX_0250",
+	"thunfischdose": "W2_FAHR_PIX_0260", "olivenoel": "W2_FAHR_MAX_0270"}
 
 ## Hieroglyphen-Tafel (2a): 16 Kacheln, Zielsatz Mann, Katze, Pharao, Ohr
 const KACHELN := ["mann", "katze", "pharao", "ohr", "mund", "hand", "auge", "krokodil",
@@ -463,7 +466,9 @@ func pixel_sobek(_obj, _x) -> bool:
 ## Die Flusskarte: von jedem Steg zu den beiden anderen (auch Ägypten–Syrakus ohne Halt).
 func flusskarte() -> void:
 	if _einmal("W2_FLUSSKARTE_OFFEN"):
-		await _sag("W2_FAHR_PIX_0020")
+		await _szene(["W2_FAHR_PIX_0020", "W2_FAHR_MAX_0010"])
+	elif _einmal("W2_FLUSSKARTE_ZWEITES"):
+		await _sag("W2_FAHR_MAX_0015")
 	var hier := steg()
 	var ziele: Array = STEGE.filter(func(s): return s != hier)
 	var wahl := await Spiel.auswahl(ziele.map(func(s): return "UI_RAUM_" + s.to_upper()) + ["UI_W2_DOCH_NICHT"])
@@ -481,7 +486,12 @@ func fahren(ziel: String) -> void:
 	var zeilen := ["W2_FAHR_FAE_0030"]
 	var fahrten := int(Zustand.wert("W2_FAHRTEN", 0))
 	if fahrten == 0:
-		zeilen.append("W2_FAHR_PIX_0070")
+		zeilen.append_array(["W2_FAHR_PIX_0070", "W2_FAHR_SOB_0080"])
+	# Dinge ohne Sanduhr-Symbol: je einmal ein Blick während der Fahrt
+	for id in ZEITLOS:
+		if _hat(id) and _einmal("W2_ZEITLOS_" + id.to_upper()):
+			zeilen.append(ZEITLOS[id])
+			break
 	if von == "nil_delta" and ziel != "nil_delta" and _einmal("W2_FAHRT_OLYMPIA"):
 		zeilen.append("W2_FAHR_FAE_0040")
 	if ziel == "hafen_syrakus" and _einmal("W2_FAHRT_SYRAKUS"):
@@ -533,6 +543,26 @@ func _getraenk_zeilen(a: int, b: int) -> Array:
 	return out
 
 
+## Fährtafel: Nahansicht, Max liest die drei Zeilen vor (Notizbuch Seite 2)
+func ansehen_faehrtafel(obj, _x) -> bool:
+	if obj is Object:
+		await obj.ansehen()
+	var neu := not "faehrtafel" in Zustand.nahansichten
+	await Spiel.nahansicht_zeigen("faehrtafel")
+	await _sag("W2_NIL_MAX_0650")
+	if neu:
+		await _sag("W2_NIL_PIX_0660")
+	return true
+
+
+## Feigensetzling ins Schilf (oder in die Erde am Ufer): lieber nicht
+func gegenstand_schilf(_obj, iid) -> bool:
+	if iid == "feigensetzling":
+		await _sag("W2_SAND_MAX_0390")
+		return true
+	return false
+
+
 #endregion
 
 #region Rätsel 2a: Die Hieroglyphen-Botschaft #######################################################
@@ -557,6 +587,11 @@ func benutzen_inschrift(obj, x) -> bool:
 
 func benutzen_inventar_bildtafel(_obj, _x) -> bool:
 	await botschaft_legen()
+	return true
+
+
+func kombi_bildtafel_pixel() -> bool:
+	await _sag("W2_HIER_MAX_0300")
 	return true
 
 
@@ -647,6 +682,9 @@ func gegenstand_hofkater(_obj, iid) -> bool:
 		"handy":
 			await _sag("W2_DUEL_MAX_0340")
 			_baustein("leuchtet")
+			return true
+		"kugelschreiber":
+			await _sag("W2_DUEL_MAX_0330")
 			return true
 	return false
 
@@ -909,7 +947,18 @@ func kombi_fladen_zwiebel() -> bool:
 	return true
 
 
+## Nebet wehrt ab, solange das Öl nicht verdient ist
+func benutzen_oelkruege(_obj, _x) -> bool:
+	if Zustand.geloest("R4"):
+		return false
+	await _sag("W2_KUCH_NEB_0070")
+	return true
+
+
 func gegenstand_lehmoefen(_obj, iid) -> bool:
+	if iid == "pixel":
+		await _sag("W2_KUCH_PIX_0480")
+		return true
 	if iid == "fladen" and Zustand.wert("W2_FLADEN", "") == "roh":
 		await _szene(["W2_KUCH_MAX_0380", "W2_KUCH_PIX_0390"])
 		Zustand.setze_wert("W2_FLADEN", "mit Kruste")
@@ -955,6 +1004,15 @@ func kombi_goldbarren_waage() -> bool:
 
 func gegenstand_badewanne(_obj, iid) -> bool:
 	match iid:
+		"pixel":
+			await _szene(["W2_KRON_MAX_0210", "W2_KRON_PIX_0220"])
+			return true
+		"thunfischdose":
+			await _sag("W2_KRON_MAX_0230")
+			return true
+		"brennspiegel":
+			await _sag("W2_KRON_MAX_0270")
+			return true
 		"krone":
 			await _sag("W2_KRON_MAX_0070")
 			Zustand.setze_wert("W2_GETAUCHT", "krone")
@@ -1293,6 +1351,15 @@ func gegenstand_tiro(_obj, iid) -> bool:
 	return false
 
 
+## Schriftrolle ansehen; steht Max dabei vor der Sphinx, ergänzt sie einmal (0550).
+func ansehen_inventar_schriftrolle(obj, _x) -> bool:
+	if obj is Object:
+		await Spiel.ansehen(obj.bauplan().get("ansehen", []), "Gegenstand/Schriftrolle")
+	if _raum_id() == "sphinx" and not Zustand.geloest("R9") and _einmal("W2_ROLLE_BEI_SPHINX"):
+		await _sag("W2_SPHX_SPH_0550")
+	return true
+
+
 func gegenstand_sphinx_figur(_obj, iid) -> bool:
 	if iid in ["handy", "kaugummi", "kugelschreiber"]:
 		await _sag("W2_SPHX_MAX_0560")
@@ -1439,6 +1506,9 @@ func gegenstand_sockel(_obj, iid) -> bool:
 			return true
 		"haufen":
 			await _sag("W2_GRAB_CIC_0240")
+			return true
+		"pixel":
+			await _sag("W2_GRAB_MAX_0260")
 			return true
 	return false
 

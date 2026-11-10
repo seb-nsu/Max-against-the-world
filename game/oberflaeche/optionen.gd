@@ -78,6 +78,7 @@ func _audio(g: GridContainer) -> void:
 	for k in ["gesamt", "musik", "geraeusche", "stimmen"]:
 		_regler(g, "UI_OPT_" + k.to_upper(), k)
 	_schalter(g, "UI_OPT_STUMM_HINTERGRUND", "stumm_im_hintergrund")
+	_schalter(g, "UI_OPT_PLATZHALTER_KLANG", "platzhalter_klang")
 
 
 func _anzeige(g: GridContainer) -> void:

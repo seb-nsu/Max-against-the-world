@@ -102,8 +102,23 @@ const REDEN := {
 	"sicherheitsmann": ["W4_EMPF_SIC_0220"],
 	"wettkandidat": ["W4_STUD_WET_0650"],
 	"troedel_experte": ["W4_GLUE_EXP_0500", "W4_GLUE_EXP_0520"],
-	"flimmer": ["W4_RAU_FLI_0230", "W4_RAU_PIX_0240", "W4_RAU_FLI_0250"],
 }
+
+## Tasten im Inventar ansehen: erstes Mal, ab dem zweiten Mal (Pause: ansehen_inventar_taste_pause)
+const TASTE_ANSEHEN := {
+	"taste_rueckspulen": ["W4_FERN_MAX_0080", "W4_FERN_PIX_0090"],
+	"taste_stumm": ["W4_FERN_MAX_0100", "W4_FERN_MAX_0105"],
+	"taste_untertitel": ["W4_FERN_MAX_0110", "W4_FERN_MAX_0115"],
+	"taste_sendersuchlauf": ["W4_FERN_MAX_0120", "W4_FERN_MAX_0125"],
+	"splitscreen_adapter": ["W4_FERN_MAX_0130", "W4_FERN_MAX_0135"],
+}
+## Pixel schnuppert an Gegenständen (Ansehen als Pixel)
+const SCHNUPPERN := {"fondue_kaese": "W4_PIXM_PIX_0240", "bananenschale": "W4_PIXM_PIX_0250",
+	"amboss": "W4_PIXM_PIX_0260", "archivband": "W4_PIXM_PIX_0270", "billig_fernbedienung": "W4_FERN_PIX_0260"}
+## Geräte für Menschen mit Daumen (Pixel benutzt sie)
+const DAUMEN_OBJEKTE := ["zahlenfeld_mit_code", "hebel", "lichterkette", "moderationspult"]
+## Pixel schnuppert an Objekten im Raum
+const SCHNUPPERN_OBJEKT := {"keksdose": "W4_PIXM_PIX_0230", "scherben_der_keksdose": "W4_PIXM_PIX_0230"}
 
 ## Pixel auf Mensch (PIXM)
 const PIXEL_AUF := {"gerd_glueck": "W4_PIXM_PIX_0010", "sitcom_vater": "W4_PIXM_PIX_0020",
@@ -163,9 +178,29 @@ func ereignis(art: String, obj: Variant, item: Variant) -> bool:
 		return await _taste(oid, "")
 	if art == "gegenstand" and str(iid) in TASTEN:
 		return await _taste(str(iid), oid)
+	# Pixel mit Max' Inventar: im Rauschen Korrespondent, sonst fehlen die Daumen
+	if Spiel.ist_pixel() and art == "benutzen_inventar":
+		await _sag("W4_RAU_PIX_0140" if Zustand.ist("W4_PIXEL_IM_RAUSCHEN") else "W4_PIXM_PIX_0280")
+		return true
+	if Spiel.ist_pixel() and art == "ansehen_inventar" and SCHNUPPERN.has(oid):
+		await _sag(SCHNUPPERN[oid])
+		return true
+	if art == "ansehen_inventar" and TASTE_ANSEHEN.has(oid):
+		var zeilen: Array = TASTE_ANSEHEN[oid]
+		await _sag(zeilen[0] if _zaehle("W4_ANSEHEN_" + oid.to_upper()) == 1 else zeilen[1])
+		return true
+	if art == "pixel_nehmen":
+		await _sag("W4_PIXM_PIX_0290")
+		return true
 	var name := "%s_%s" % [art, oid]
 	if has_method(name):
 		return bool(await call(name, obj, iid))
+	if art == "pixel" and SCHNUPPERN_OBJEKT.has(oid):
+		await _sag(SCHNUPPERN_OBJEKT[oid])
+		return true
+	if art == "pixel" and oid in DAUMEN_OBJEKTE:
+		await _sag("W4_PIXM_PIX_0280")
+		return true
 	if art == "benutzen" and obj is PopochiuCharacter and REDEN.has(oid) and not Spiel.ist_pixel():
 		await _szene(REDEN[oid])
 		return true
@@ -300,7 +335,7 @@ func _bedingung_text(text: String) -> Variant:
 		"Voraussetzungen erfüllt":
 			return not _g("R9")  # die Option prüft selbst, ob Gerd die Bonusrunde startet
 		"ohne Beweis, nach dem ersten Gespräch":
-			return not _g("R8")
+			return not _g("R8") and int(Zustand.wert("W4_AGENT_GESPRAECHE", 0)) >= 2
 		"vor der Begegnung":
 			return not _g("R13")
 		"Pixel", "als Pixel, Kaskade":
@@ -460,7 +495,10 @@ func nach_uebergang_zappmanns_studio(_raum, _x) -> bool:
 func nach_uebergang_rauschen(_raum, _x) -> bool:
 	var n := _zaehle("W4_RAUSCHEN_BESUCHE")
 	if n == 1:
-		await _szene(["W4_RAU_PIX_0010", "W4_RAU_FLI_0020", "W4_RAU_FLI_0040"])
+		await _szene(["W4_RAU_PIX_0010", "W4_RAU_FLI_0020", "W4_RAU_FLI_0040", "W4_RAU_MAX_0340"])
+	elif n == 2:
+		Klang.geraeusch("gong")
+		await _szene(["W4_RAU_NAR_0190", "W4_RAU_PIX_0200", "W4_RAU_MAX_0210"])
 	elif n == 3:
 		await _szene(["W4_RAU_NSP_0150", "W4_RAU_PIX_0160"])
 	elif n == 5:
@@ -584,6 +622,7 @@ func ansehen_inventar_programmzeitschrift(_obj, _x) -> bool:
 		await _sag("W4_FERN_PIX_0160")
 		return true
 	Zustand.setze("W4_ZEITSCHRIFT_ANGESEHEN")
+	await _sag("W4_FERN_MAX_0150")
 	await Spiel.nahansicht_zeigen("programmzeitschrift")
 	return true
 
@@ -613,7 +652,7 @@ func pixel_kriechweg(_obj, _x) -> bool:
 		await _sag("W4_RAU_PIX_0110" if k == "friedhof" and _g("R5") else SPAEHEN[k])
 		return true
 	Zustand.setze("W4_PIXEL_IM_RAUSCHEN", false)
-	C.player = C.Pixel
+	C.player = C.get_character("Pixel")
 	Spiel.herkunft_raum = ""
 	await R.goto_room(Bauplan.raum_script_name(str(Zustand.wert("W4_MAX_RAUM", "testbild"))))
 	return true
@@ -677,6 +716,16 @@ func _taste(t: String, oid: String) -> bool:
 			if rid != "zappmanns_studio":
 				await _sag("W4_FERN_MAX_0140")
 				return true
+	if t == "taste_pause" and oid.is_empty() and rid == "spukhaus_halle":
+		if not _g("R7"):
+			await _sag("W4_HALL_MAX_0540")
+		else:
+			await _sag("W4_HALL_MAX_0510" if _zaehle("W4_PAUSE_HALLE") == 1 else "W4_TAST_MAX_0150")
+		return true
+	if t == "taste_untertitel" and oid == "gerd_glueck" and Zustand.ist("W4_GERD_PUPPEN_GEFRAGT") \
+			and _einmal("W4_GERD_UNTERTITEL_PUPPEN"):
+		await _sag("W4_TAST_MAX_0210")
+		return true
 	if oid.is_empty() and TASTE_RAUM.get(t, {}).has(rid):
 		await _sag(TASTE_RAUM[t][rid])
 		return true
@@ -727,12 +776,18 @@ func pixel_balken(_obj, _x) -> bool:
 
 
 ## Fragerunde: falsche Antworten kosten nichts, Gerd stellt dieselbe Frage neu.
-func _fragen(fragen: Array) -> void:
+func _fragen(fragen: Array, bonus := false) -> void:
 	for f in fragen:
 		var fehler := 0
 		while true:
 			await _sag(f[0])
-			var wahl := await Spiel.auswahl(ANTWORTEN)
+			var antworten := ANTWORTEN.duplicate()
+			if bonus:
+				antworten.append("W4_BONU_MAX_0150")  # kurz wegschalten und nachsehen
+			var wahl := await Spiel.auswahl(antworten)
+			if bonus and wahl == 3:
+				await _bonus_pause()
+				continue
 			if wahl == f[1]:
 				await _szene(f[2])
 				break
@@ -741,6 +796,16 @@ func _fragen(fragen: Array) -> void:
 			fehler += 1
 			if fragen == QUIZ and fehler == 1 and f == QUIZ[0]:
 				await _sag("W4_GLUE_MAX_0100")
+
+
+## Max schaltet mitten in der Bonusrunde weg: Gerd wirbt für sich selbst, bis Max zurück ist.
+func _bonus_pause() -> void:
+	await _sag("W4_BONU_MAX_0150")
+	var werbung := ["W4_BONU_GER_0160", "W4_BONU_GER_0170", "W4_BONU_GER_0180"]
+	await _sag(werbung[(_zaehle("W4_BONUS_PAUSEN") - 1) % werbung.size()])
+	await _sag("W4_BONU_GER_0190")
+	if _einmal("W4_BONUS_KATER_UNTER_MENSCHEN"):
+		await _sag("W4_BONU_PIX_0200")
 
 
 func _quiz_r2() -> void:
@@ -768,6 +833,12 @@ func benutzen_inventar_lichtroehre_deluxe(_obj, _x) -> bool:
 	return true
 
 
+## Gerd über Zappmann: danach verrät die Untertitel-Taste, was er verschweigt.
+func option_gerd_glueck_0380() -> bool:
+	Zustand.setze("W4_GERD_PUPPEN_GEFRAGT")
+	return false
+
+
 ## Gerd bestätigt das Alibi des Geiers (R4d).
 func option_gerd_glueck_0330() -> bool:
 	Zustand.loese("R4d")
@@ -780,7 +851,7 @@ func option_gerd_glueck_0010() -> bool:
 		await _szene(["W4_BONU_GER_0260", "W4_BONU_MAX_0270"])
 		return true
 	await _szene(["W4_BONU_GER_0020", "W4_BONU_MAX_0030"])
-	await _fragen(BONUS)
+	await _fragen(BONUS, true)
 	await _szene(["W4_BONU_GER_0210", "W4_BONU_MAX_0220", _geben.bind("splitscreen_adapter"),
 		"W4_BONU_GER_0230", "W4_BONU_PIX_0240", "W4_BONU_GER_0250"])
 	await _geben("splitscreen_adapter")
@@ -869,7 +940,7 @@ func pixel_drehbuch(obj, x) -> bool:
 	if _raum_id() != "savanne" or _g("R4c"):
 		return false
 	var vorher := C.player
-	C.player = C.Pixel
+	C.player = C.get_character("Pixel")
 	await benutzen_drehbuch(obj, x)
 	C.player = vorher
 	return true
@@ -943,7 +1014,7 @@ func _tanzflaeche() -> bool:
 
 
 func _r5_geloest() -> void:
-	await _sag("W4_FRIE_NAR_0340")
+	await _szene(["W4_FRIE_NAR_0340", "W4_FRIE_MAX_0350"])
 	Zustand.loese("R5b")
 	Zustand.loese("R5")
 
@@ -1319,6 +1390,127 @@ func benutzen_inventar_goldene_fernbedienung(_obj, _x) -> bool:
 
 #region Abschluss ##################################################################################
 ## Pixels Lob nur ohne einen einzigen Hinweis der Stufe 3 in dieser Welt
+#region Gesprächsanfänge, Inventar-Blicke, Rauschen ###############################################
+## Pixel und Flimmer im Rauschen: kleines Gespräch mit vier Fragen.
+func pixel_flimmer(_obj, _x) -> bool:
+	if _raum_id() != "rauschen":
+		return false
+	if _einmal("W4_FLIMMER_GESCHNUPPERT"):
+		await _sag("W4_PIXM_PIX_0220")
+	var optionen := ["UI_W4_FLIMMER_HUNGER", "W4_RAU_PIX_0260", "W4_RAU_PIX_0290", "W4_RAU_PIX_0310"]
+	while true:
+		var w := await Spiel.auswahl(optionen)
+		match w:
+			0:
+				await _szene(["W4_RAU_FLI_0230", "W4_RAU_PIX_0240", "W4_RAU_FLI_0250"])
+			1:
+				await _szene(["W4_RAU_PIX_0260", "W4_RAU_FLI_0270", "W4_RAU_PIX_0280"])
+			2:
+				await _szene(["W4_RAU_PIX_0290", "W4_RAU_FLI_0300"])
+			_:
+				if w == 3:
+					await _szene(["W4_RAU_PIX_0310", "W4_RAU_FLI_0320"])
+				return true
+	return true
+
+
+## Billig-Fernbedienung: Max' Blick hängt davon ab, wie viele Tasten schon drinstecken.
+func ansehen_inventar_billig_fernbedienung(_obj, _x) -> bool:
+	if Spiel.ist_pixel():
+		return false  # Schnuppern (SCHNUPPERN) oder Max' Zeile
+	var n := TASTEN.filter(func(t): return _hat(t)).size()
+	var stufe := "0" if n == 0 else ("1" if n <= 2 else ("4" if n < TASTEN.size() else "6"))
+	var zweites := _zaehle("W4_ANSEHEN_FERNBEDIENUNG_" + stufe) > 1
+	match stufe:
+		"0":
+			await _sag("W4_FERN_MAX_0015" if zweites else "W4_FERN_MAX_0010")
+		"1":
+			await _sag("W4_FERN_MAX_0025" if zweites else "W4_FERN_MAX_0020")
+		"4":
+			await _sag("W4_FERN_MAX_0035" if zweites else "W4_FERN_MAX_0030")
+		"6":
+			await _sag("W4_FERN_MAX_0035" if zweites else "W4_FERN_MAX_0030")
+			await _sag("W4_FERN_PIX_0045" if zweites else "W4_FERN_PIX_0040")
+	return true
+
+
+## Drehbuch des Erzählers in anderen Sendern: dort steht anderes drin.
+func ansehen_inventar_drehbuch(_obj, _x) -> bool:
+	var rid := _raum_id()
+	if rid == "sitcom_kueche":
+		await _sag("W4_VERH_MAX_0265" if _zaehle("W4_DREHBUCH_SITCOM") > 1 else "W4_VERH_MAX_0260")
+		return true
+	if GENRE.get(rid, "") == "comic":
+		await _sag("W4_VERH_MAX_0275" if _zaehle("W4_DREHBUCH_COMIC") > 1 else "W4_VERH_MAX_0270")
+		return true
+	return false
+
+
+## Das Drehbuch zurück an den Erzähler: er verzeiht, Max behält es trotzdem nicht.
+func gegenstand_erzaehler(_obj, iid) -> bool:
+	if iid != "drehbuch":
+		return false
+	await _sag("W4_VERH_ERZ_0240")
+	await _abgeben("drehbuch")
+	return true
+
+
+## Archivband im Inventar: Pixel kommentiert einmal, was es wert ist.
+func ansehen_inventar_archivband(obj, _x) -> bool:
+	if Spiel.ist_pixel() or not obj is Object:
+		return false
+	await Spiel.ansehen(obj.bauplan().get("ansehen", []), "Gegenstand/" + obj.script_name, obj.zustand())
+	if _einmal("W4_ARCHIVBAND_TRUMPF"):
+		await _sag("W4_ARCH_PIX_0100")
+	return true
+
+
+## Nashorn: beim ersten Mal das Gespräch, danach hat nur noch der Vogel einen Blick.
+func benutzen_nashorn(_obj, _x) -> bool:
+	if Spiel.ist_pixel():
+		return false
+	if _einmal("W4_NASHORN_GEREDET"):
+		await _szene(REDEN["nashorn"])
+	else:
+		await _sag("W4_VERH_MAX_0280")
+	return true
+
+
+## Hyäne ansehen: der Erzähler flüstert ihren Spitznamen (Antwort für die Bonusrunde, R9).
+func ansehen_hyaene(obj, _x) -> bool:
+	if Spiel.ist_pixel() or not obj is Object:
+		return false
+	await obj.ansehen()
+	if _einmal("W4_POKERFACE"):
+		await _sag("W4_SAV_ERZ_0460")
+	return true
+
+
+## Trödel-Experte: Pixel fragt nach seinem Wert, wenn er dabei ist.
+func benutzen_troedel_experte(_obj, _x) -> bool:
+	if Spiel.ist_pixel():
+		return false
+	var zeilen := ["W4_GLUE_EXP_0500"]
+	if not Zustand.ist("W4_PIXEL_IM_RAUSCHEN"):
+		zeilen.append("W4_GLUE_PIX_0510")
+	zeilen.append("W4_GLUE_EXP_0520")
+	await _szene(zeilen)
+	return true
+
+
+## FBI-Agent: beim ersten Ansprechen die Begrüßung mit Detektor, nach R8 bleibt er einfach.
+func benutzen_fbi_agent(_obj, _x) -> bool:
+	if Spiel.ist_pixel():
+		return false
+	if _g("R8"):
+		await _sag("W4_HALL_AGE_0500")
+		return true
+	if _zaehle("W4_AGENT_GESPRAECHE") == 1:
+		await _szene(["W4_HALL_AGE_0330", "W4_HALL_MAX_0340", "W4_HALL_AGE_0350"])
+	return false
+#endregion
+
+
 func _hinweis_stufe_3() -> bool:
 	for r in Zustand.alle_raetsel("welt-4"):
 		if Hinweise.stufe(str(r.get("id", ""))) >= 3:

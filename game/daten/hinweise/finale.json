@@ -13,7 +13,7 @@
    "offen_wenn": [],
    "offen_wenn_eins_von": [],
    "geloest_schalter": [
-    "LUKE_ERKANNT"
+    "FI_R01_GELOEST"
    ],
    "objekte": [],
    "optional": false,
@@ -177,7 +177,7 @@
    ],
    "offen_wenn_eins_von": [],
    "geloest_schalter": [
-    "KEKSE_DABEI"
+    "FI_R02_GELOEST"
    ],
    "objekte": [
     "omas_kekse"

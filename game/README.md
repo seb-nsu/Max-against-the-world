@@ -130,21 +130,26 @@ nur das Dateiformat ist eigenes JSON mit Versionsnummer: `user://saves/<platz>.j
 
 ## Testbuild und Telemetrie
 
-Für Tests mit Fremden (Stufe 2, `docs/03-produktion.md` A9) gibt es einen Testbuild für Linux
-und Windows. `export_presets.cfg` hat zwei Vorlagen, „Linux Testbuild“ und „Windows Testbuild“,
-beide mit dem Feature-Tag `cq_testbuild`:
+Für Tests mit Fremden (Stufe 2, `docs/03-produktion.md` A8 und A9) gibt es einen Testbuild für
+Linux, Windows und den Browser. `export_presets.cfg` hat drei Vorlagen, „Linux Testbuild“,
+„Windows Testbuild“ und „Web Testbuild“, alle mit dem Feature-Tag `cq_testbuild`:
 
 ```
 godot --headless --path game --export-release "Linux Testbuild" ../build/linux/couch_quest.x86_64
 godot --headless --path game --export-release "Windows Testbuild" ../build/windows/couch_quest.exe
+godot --headless --path game --export-release "Web Testbuild" ../build/web/index.html
 ```
+
+Der Web-Build läuft ohne Threads und braucht deshalb keine besonderen Server-Header; zum
+Ausprobieren reicht `python3 -m http.server` im Ordner `build/web`. Im Browser lädt der
+Telemetrie-Knopf in den Einstellungen das Protokoll als Datei herunter.
 
 Dafür müssen die Export-Vorlagen 4.7.2 installiert sein (Editor: Editor → Export-Vorlagen
 verwalten; oder `Godot_v4.7.2-stable_export_templates.tpz` nach
 `~/.local/share/godot/export_templates/4.7.2.stable/` entpacken). Ohne eigene Vorlagen geht es
 über GitHub Actions: Workflow „Testbuild“ (`.github/workflows/testbuild.yml`) von Hand starten
 (Actions → Testbuild → Run workflow). Er lädt Godot und die Vorlagen, lässt den Test im
-Testmodus laufen, exportiert beide Builds und legt sie als Artefakte ab (Linux als `tar.gz`,
+Testmodus laufen, exportiert alle drei Builds und legt sie als Artefakte ab (Linux als `tar.gz`,
 damit das Ausführbar-Bit bleibt). Die Build-Kennung im Protokoll ist dort der Commit.
 
 Beim Start des exportierten Spiels meldet Popochiu 2.2.1 Kompilierfehler in seinen

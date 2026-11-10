@@ -11,7 +11,7 @@
    "offen_wenn": [],
    "offen_wenn_eins_von": [],
    "geloest_schalter": [
-    "BEOBACHTUNG_SCHIRM"
+    "W3_R01_A_GELOEST"
    ],
    "objekte": [],
    "optional": false,
@@ -40,7 +40,7 @@
    ],
    "offen_wenn_eins_von": [],
    "geloest_schalter": [
-    "STEMPEL_MENSCH"
+    "W3_R01_B_GELOEST"
    ],
    "objekte": [],
    "optional": false,
@@ -67,7 +67,7 @@
    "offen_wenn": [],
    "offen_wenn_eins_von": [],
    "geloest_schalter": [
-    "MORPHAEUS_GETROFFEN"
+    "W3_R02_GELOEST"
    ],
    "objekte": [],
    "optional": false,
@@ -97,7 +97,7 @@
    ],
    "offen_wenn_eins_von": [],
    "geloest_schalter": [
-    "DIAGNOSE_MATRIX"
+    "W3_R03_A_GELOEST"
    ],
    "objekte": [],
    "optional": false,
@@ -127,7 +127,7 @@
    ],
    "offen_wenn_eins_von": [],
    "geloest_schalter": [
-    "KEKSE_DABEI"
+    "W3_R03_B_GELOEST"
    ],
    "objekte": [
     "rote_pastille"
@@ -158,7 +158,7 @@
    ],
    "offen_wenn_eins_von": [],
    "geloest_schalter": [
-    "VASE_ZERBROCHEN"
+    "W3_R04_GELOEST"
    ],
    "objekte": [],
    "optional": false,
@@ -187,7 +187,7 @@
    ],
    "offen_wenn_eins_von": [],
    "geloest_schalter": [
-    "CODE_SICHT"
+    "W3_R05_GELOEST"
    ],
    "objekte": [],
    "optional": false,
@@ -217,7 +217,7 @@
    ],
    "offen_wenn_eins_von": [],
    "geloest_schalter": [
-    "HEXENSCHUSS"
+    "W3_R06_A_GELOEST"
    ],
    "objekte": [
     "kaffeetasse"
@@ -249,7 +249,7 @@
    ],
    "offen_wenn_eins_von": [],
    "geloest_schalter": [
-    "KLONE_MITTAGSPAUSE"
+    "W3_R06_B_GELOEST"
    ],
    "objekte": [
     "kaffeetasse"
@@ -282,7 +282,7 @@
    ],
    "offen_wenn_eins_von": [],
    "geloest_schalter": [
-    "FARBCODE_GESENDET"
+    "W3_R07_A_GELOEST"
    ],
    "objekte": [
     "farbcode_zettel",
@@ -314,7 +314,7 @@
    ],
    "offen_wenn_eins_von": [],
    "geloest_schalter": [
-    "KABEL_GESTECKT"
+    "W3_R07_B_GELOEST"
    ],
    "objekte": [],
    "optional": false,
@@ -343,7 +343,7 @@
    ],
    "offen_wenn_eins_von": [],
    "geloest_schalter": [
-    "HAUSMEISTER_WEG"
+    "W3_R08_GELOEST"
    ],
    "objekte": [
     "telefonbuchseite"
@@ -375,7 +375,7 @@
    ],
    "offen_wenn_eins_von": [],
    "geloest_schalter": [
-    "LEITUNG_LABOR"
+    "W3_R09_A_GELOEST"
    ],
    "objekte": [
     "zugangskarte"
@@ -502,7 +502,7 @@
    ],
    "offen_wenn_eins_von": [],
    "geloest_schalter": [
-    "MUTTI_AUS"
+    "W3_R10_GELOEST"
    ],
    "objekte": [
     "schmidts_akte"
@@ -536,7 +536,7 @@
     "R3b"
    ],
    "geloest_schalter": [
-    "ZELLE_GEKUEHLT"
+    "W3_R11_GELOEST"
    ],
    "objekte": [
     "omas_kekse"
@@ -567,7 +567,7 @@
    ],
    "offen_wenn_eins_von": [],
    "geloest_schalter": [
-    "SUPPE_GEKOCHT"
+    "W3_R12_GELOEST"
    ],
    "objekte": [
     "rezeptkarte"
@@ -598,7 +598,7 @@
    ],
    "offen_wenn_eins_von": [],
    "geloest_schalter": [
-    "MORSE_TABELLE"
+    "W3_R13_GELOEST"
    ],
    "objekte": [],
    "optional": false,

@@ -36,7 +36,8 @@ const STANDARD := {
 	sprache = "de", text_tempo = "normal", text_auto = false, untertitel = true,
 	grosse_schrift = false, hotspots_dauerhaft = false, hotspot_namen = true, wackeln_aus = false,
 	flackern_reduzieren = false, farbenblind = false,
-	brabbel = false,  # Probe für P4 (Brabbel-Laute), bis zur Entscheidung aus
+	brabbel = true,  # Brabbel-Laute statt Stille, solange es keine Stimmdateien gibt (P4)
+	platzhalter_klang = true,  # erzeugte Töne für Geräusche und Jingles ohne Datei
 }
 
 var _werte := {}
