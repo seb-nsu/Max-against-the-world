@@ -148,7 +148,8 @@
        "zeile": "W3_STR_PIX_0020",
        "sprecher": "PIX",
        "blasen": [
-        "W3_STR_PIX_0020"
+        "W3_STR_PIX_0020",
+        "W3_STR_PIX_0020_2"
        ],
        "mal": 2
       },
@@ -156,7 +157,8 @@
        "zeile": "W3_STR_PIX_1070",
        "sprecher": "PIX",
        "blasen": [
-        "W3_STR_PIX_1070"
+        "W3_STR_PIX_1070",
+        "W3_STR_PIX_1070_2"
        ],
        "figur": "PIX"
       }
@@ -249,7 +251,8 @@
          "zeile": "W3_STR_PIX_0050",
          "sprecher": "PIX",
          "blasen": [
-          "W3_STR_PIX_0050"
+          "W3_STR_PIX_0050",
+          "W3_STR_PIX_0050_2"
          ]
         }
        ]
@@ -386,7 +389,8 @@
        "zeile": "W3_STR_PIX_0135",
        "sprecher": "PIX",
        "blasen": [
-        "W3_STR_PIX_0135"
+        "W3_STR_PIX_0135",
+        "W3_STR_PIX_0135_2"
        ],
        "mal": 2
       },
@@ -499,7 +503,8 @@
        "zeile": "W3_STR_PIX_0270",
        "sprecher": "PIX",
        "blasen": [
-        "W3_STR_PIX_0270"
+        "W3_STR_PIX_0270",
+        "W3_STR_PIX_0270_2"
        ],
        "mal": 2
       }
@@ -541,7 +546,8 @@
         "zeile": "W3_STR_PIX_0090",
         "sprecher": "PIX",
         "blasen": [
-         "W3_STR_PIX_0090"
+         "W3_STR_PIX_0090",
+         "W3_STR_PIX_0090_2"
         ]
        }
       ]
@@ -668,7 +674,8 @@
      "zeile": "W3_STR_PIX_0910",
      "sprecher": "PIX",
      "blasen": [
-      "W3_STR_PIX_0910"
+      "W3_STR_PIX_0910",
+      "W3_STR_PIX_0910_2"
      ]
     },
     {
@@ -682,7 +689,8 @@
      "zeile": "W3_STR_PIX_0930",
      "sprecher": "PIX",
      "blasen": [
-      "W3_STR_PIX_0930"
+      "W3_STR_PIX_0930",
+      "W3_STR_PIX_0930_2"
      ]
     }
    ]
@@ -816,7 +824,8 @@
        "zeile": "W3_APO_PIX_0240",
        "sprecher": "PIX",
        "blasen": [
-        "W3_APO_PIX_0240"
+        "W3_APO_PIX_0240",
+        "W3_APO_PIX_0240_2"
        ],
        "figur": "PIX"
       },
@@ -863,7 +872,8 @@
        "zeile": "W3_APO_PIX_0265",
        "sprecher": "PIX",
        "blasen": [
-        "W3_APO_PIX_0265"
+        "W3_APO_PIX_0265",
+        "W3_APO_PIX_0265_2"
        ],
        "mal": 2
       }
@@ -895,7 +905,8 @@
        "zeile": "W3_APO_PIX_0280",
        "sprecher": "PIX",
        "blasen": [
-        "W3_APO_PIX_0280"
+        "W3_APO_PIX_0280",
+        "W3_APO_PIX_0280_2"
        ],
        "mal": 2
       }
@@ -1103,7 +1114,8 @@
        "zeile": "W3_BAS_PIX_0525",
        "sprecher": "PIX",
        "blasen": [
-        "W3_BAS_PIX_0525"
+        "W3_BAS_PIX_0525",
+        "W3_BAS_PIX_0525_2"
        ],
        "mal": 2
       },
@@ -1111,7 +1123,8 @@
        "zeile": "W3_BAS_PIX_0530",
        "sprecher": "PIX",
        "blasen": [
-        "W3_BAS_PIX_0530"
+        "W3_BAS_PIX_0530",
+        "W3_BAS_PIX_0530_2"
        ],
        "figur": "PIX"
       },
@@ -1255,7 +1268,8 @@
        "zeile": "W3_BAS_PIX_0625",
        "sprecher": "PIX",
        "blasen": [
-        "W3_BAS_PIX_0625"
+        "W3_BAS_PIX_0625",
+        "W3_BAS_PIX_0625_2"
        ],
        "mal": 2
       },
@@ -1377,7 +1391,8 @@
        "zeile": "W3_BAS_PIX_0720",
        "sprecher": "PIX",
        "blasen": [
-        "W3_BAS_PIX_0720"
+        "W3_BAS_PIX_0720",
+        "W3_BAS_PIX_0720_2"
        ],
        "mal": 2
       },
@@ -1425,7 +1440,8 @@
        "zeile": "W3_BAS_PIX_1090",
        "sprecher": "PIX",
        "blasen": [
-        "W3_BAS_PIX_1090"
+        "W3_BAS_PIX_1090",
+        "W3_BAS_PIX_1090_2"
        ],
        "figur": "PIX"
       }
@@ -1435,7 +1451,8 @@
        "zeile": "W3_BAS_PIX_0740",
        "sprecher": "PIX",
        "blasen": [
-        "W3_BAS_PIX_0740"
+        "W3_BAS_PIX_0740",
+        "W3_BAS_PIX_0740_2"
        ]
       }
      ]
@@ -1474,7 +1491,8 @@
        "zeile": "W3_BAS_PIX_1100",
        "sprecher": "PIX",
        "blasen": [
-        "W3_BAS_PIX_1100"
+        "W3_BAS_PIX_1100",
+        "W3_BAS_PIX_1100_2"
        ],
        "figur": "PIX"
       }
@@ -1592,7 +1610,8 @@
        "zeile": "W3_BAS_PIX_0790",
        "sprecher": "PIX",
        "blasen": [
-        "W3_BAS_PIX_0790"
+        "W3_BAS_PIX_0790",
+        "W3_BAS_PIX_0790_2"
        ],
        "bedingung": [
         {
@@ -1646,7 +1665,8 @@
        "zeile": "W3_BAS_PIX_0830",
        "sprecher": "PIX",
        "blasen": [
-        "W3_BAS_PIX_0830"
+        "W3_BAS_PIX_0830",
+        "W3_BAS_PIX_0830_2"
        ],
        "mal": 2
       },
@@ -1769,7 +1789,8 @@
      "zeile": "W3_BAS_PIX_1310",
      "sprecher": "PIX",
      "blasen": [
-      "W3_BAS_PIX_1310"
+      "W3_BAS_PIX_1310",
+      "W3_BAS_PIX_1310_2"
      ]
     },
     {
@@ -1783,7 +1804,8 @@
      "zeile": "W3_BAS_PIX_1330",
      "sprecher": "PIX",
      "blasen": [
-      "W3_BAS_PIX_1330"
+      "W3_BAS_PIX_1330",
+      "W3_BAS_PIX_1330_2"
      ]
     }
    ]
@@ -2113,7 +2135,8 @@
        "zeile": "W3_EING_PIX_0430",
        "sprecher": "PIX",
        "blasen": [
-        "W3_EING_PIX_0430"
+        "W3_EING_PIX_0430",
+        "W3_EING_PIX_0430_2"
        ],
        "mal": 2
       },
@@ -2121,7 +2144,8 @@
        "zeile": "W3_EING_PIX_1020",
        "sprecher": "PIX",
        "blasen": [
-        "W3_EING_PIX_1020"
+        "W3_EING_PIX_1020",
+        "W3_EING_PIX_1020_2"
        ],
        "figur": "PIX"
       }
@@ -2997,7 +3021,8 @@
        "zeile": "W3_KUCH_PIX_0535",
        "sprecher": "PIX",
        "blasen": [
-        "W3_KUCH_PIX_0535"
+        "W3_KUCH_PIX_0535",
+        "W3_KUCH_PIX_0535_2"
        ],
        "mal": 2
       }
@@ -3047,7 +3072,8 @@
        "zeile": "W3_KUCH_PIX_0570",
        "sprecher": "PIX",
        "blasen": [
-        "W3_KUCH_PIX_0570"
+        "W3_KUCH_PIX_0570",
+        "W3_KUCH_PIX_0570_2"
        ],
        "bedingung_text": "Pixel auf der Leitung"
       }
@@ -3146,7 +3172,8 @@
          "zeile": "W3_KUCH_PIX_0630",
          "sprecher": "PIX",
          "blasen": [
-          "W3_KUCH_PIX_0630"
+          "W3_KUCH_PIX_0630",
+          "W3_KUCH_PIX_0630_2"
          ],
          "bedingung_text": "Pixel auf der Leitung"
         }
@@ -3571,7 +3598,8 @@
        "zeile": "W3_TURM_PIX_0235",
        "sprecher": "PIX",
        "blasen": [
-        "W3_TURM_PIX_0235"
+        "W3_TURM_PIX_0235",
+        "W3_TURM_PIX_0235_2"
        ],
        "mal": 2
       }
@@ -4150,7 +4178,8 @@
        "zeile": "W3_KAM1_PIX_0365",
        "sprecher": "PIX",
        "blasen": [
-        "W3_KAM1_PIX_0365"
+        "W3_KAM1_PIX_0365",
+        "W3_KAM1_PIX_0365_2"
        ],
        "mal": 2
       }
@@ -4972,7 +5001,8 @@
        "zeile": "W3_KERN_PIX_0415",
        "sprecher": "PIX",
        "blasen": [
-        "W3_KERN_PIX_0415"
+        "W3_KERN_PIX_0415",
+        "W3_KERN_PIX_0415_2"
        ],
        "mal": 2
       }
@@ -5089,7 +5119,8 @@
      "zeile": "W3_BAS_PIX_0880",
      "sprecher": "PIX",
      "blasen": [
-      "W3_BAS_PIX_0880"
+      "W3_BAS_PIX_0880",
+      "W3_BAS_PIX_0880_2"
      ],
      "gegenstand": "omas_kekse",
      "raum": "widerstandsbasis"
@@ -5155,7 +5186,8 @@
      "zeile": "W3_STR_PIX_1030",
      "sprecher": "PIX",
      "blasen": [
-      "W3_STR_PIX_1030"
+      "W3_STR_PIX_1030",
+      "W3_STR_PIX_1030_2"
      ],
      "raum": "unterstadt_strasse"
     }
@@ -5210,7 +5242,8 @@
      "zeile": "W3_STR_PIX_1010",
      "sprecher": "PIX",
      "blasen": [
-      "W3_STR_PIX_1010"
+      "W3_STR_PIX_1010",
+      "W3_STR_PIX_1010_2"
      ],
      "raum": "unterstadt_strasse"
     }
@@ -5391,7 +5424,8 @@
        "zeile": "W3_STR_PIX_0230",
        "sprecher": "PIX",
        "blasen": [
-        "W3_STR_PIX_0230"
+        "W3_STR_PIX_0230",
+        "W3_STR_PIX_0230_2"
        ]
       }
      ]
@@ -5425,7 +5459,8 @@
        "zeile": "W3_STR_PIX_0160",
        "sprecher": "PIX",
        "blasen": [
-        "W3_STR_PIX_0160"
+        "W3_STR_PIX_0160",
+        "W3_STR_PIX_0160_2"
        ]
       }
      ]
@@ -5490,7 +5525,8 @@
      "zeile": "W3_APO_PIX_0020",
      "sprecher": "PIX",
      "blasen": [
-      "W3_APO_PIX_0020"
+      "W3_APO_PIX_0020",
+      "W3_APO_PIX_0020_2"
      ],
      "mal": 2,
      "raum": "apothekengasse"
@@ -5739,7 +5775,8 @@
      "zeile": "W3_EING_PIX_0525",
      "sprecher": "PIX",
      "blasen": [
-      "W3_EING_PIX_0525"
+      "W3_EING_PIX_0525",
+      "W3_EING_PIX_0525_2"
      ],
      "mal": 2,
      "raum": "laboreingang"
@@ -6076,7 +6113,8 @@
      "zeile": "W3_SIM_PIX_0180",
      "sprecher": "PIX",
      "blasen": [
-      "W3_SIM_PIX_0180"
+      "W3_SIM_PIX_0180",
+      "W3_SIM_PIX_0180_2"
      ],
      "bedingung_text": "Pixel auf der Leitung",
      "raum": "stadtstrasse"
@@ -6466,7 +6504,8 @@
      "zeile": "W3_BAS_PIX_0910",
      "sprecher": "PIX",
      "blasen": [
-      "W3_BAS_PIX_0910"
+      "W3_BAS_PIX_0910",
+      "W3_BAS_PIX_0910_2"
      ],
      "mal": 2,
      "zustand": "glueckskeks"
@@ -6813,7 +6852,8 @@
      "zeile": "W3_INV_PIX_0115",
      "sprecher": "PIX",
      "blasen": [
-      "W3_INV_PIX_0115"
+      "W3_INV_PIX_0115",
+      "W3_INV_PIX_0115_2"
      ],
      "mal": 2,
      "zustand": "harmlos"
@@ -6881,7 +6921,8 @@
      "zeile": "W3_INV_PIX_0135",
      "sprecher": "PIX",
      "blasen": [
-      "W3_INV_PIX_0135"
+      "W3_INV_PIX_0135",
+      "W3_INV_PIX_0135_2"
      ],
      "mal": 2,
      "zustand": "gluehend"
@@ -6978,7 +7019,8 @@
        "zeile": "W3_NUD_PIX_0060",
        "sprecher": "PIX",
        "blasen": [
-        "W3_NUD_PIX_0060"
+        "W3_NUD_PIX_0060",
+        "W3_NUD_PIX_0060_2"
        ],
        "regie": ""
       }
@@ -7081,6 +7123,22 @@
        "sprecher": "VIE",
        "blasen": [
         "W3_NUD_VIE_0700"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W3_NUD_MAX_0702",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_NUD_MAX_0702"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W3_NUD_VIE_0704",
+       "sprecher": "VIE",
+       "blasen": [
+        "W3_NUD_VIE_0704"
        ],
        "regie": ""
       }
@@ -7192,7 +7250,8 @@
        "zeile": "W3_NUD_PIX_0500",
        "sprecher": "PIX",
        "blasen": [
-        "W3_NUD_PIX_0500"
+        "W3_NUD_PIX_0500",
+        "W3_NUD_PIX_0500_2"
        ],
        "regie": "hochnäsig"
       }
@@ -7254,7 +7313,8 @@
        "zeile": "W3_NUD_PIX_0570",
        "sprecher": "PIX",
        "blasen": [
-        "W3_NUD_PIX_0570"
+        "W3_NUD_PIX_0570",
+        "W3_NUD_PIX_0570_2"
        ],
        "regie": ""
       }
@@ -7380,7 +7440,8 @@
        "zeile": "W3_TEST_PIX_0080",
        "sprecher": "PIX",
        "blasen": [
-        "W3_TEST_PIX_0080"
+        "W3_TEST_PIX_0080",
+        "W3_TEST_PIX_0080_2"
        ],
        "regie": ""
       }
@@ -7421,7 +7482,8 @@
        "zeile": "W3_TUER_SCH_0040",
        "sprecher": "SCH",
        "blasen": [
-        "W3_TUER_SCH_0040"
+        "W3_TUER_SCH_0040",
+        "W3_TUER_SCH_0040_2"
        ],
        "regie": "redet weiter, Blase bricht ab"
       },
@@ -7485,7 +7547,8 @@
        "zeile": "W3_TUER_SCH_0080",
        "sprecher": "SCH",
        "blasen": [
-        "W3_TUER_SCH_0080"
+        "W3_TUER_SCH_0080",
+        "W3_TUER_SCH_0080_2"
        ],
        "regie": ""
       },
@@ -7517,7 +7580,24 @@
        "zeile": "W3_TUER_SCH_0100",
        "sprecher": "SCH",
        "blasen": [
-        "W3_TUER_SCH_0100"
+        "W3_TUER_SCH_0100",
+        "W3_TUER_SCH_0100_2"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W3_TUER_MAX_0103",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_TUER_MAX_0103"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W3_TUER_SCH_0106",
+       "sprecher": "SCH",
+       "blasen": [
+        "W3_TUER_SCH_0106"
        ],
        "regie": ""
       }
@@ -7722,7 +7802,8 @@
        "zeile": "W3_KUCH_PIX_0250",
        "sprecher": "PIX",
        "blasen": [
-        "W3_KUCH_PIX_0250"
+        "W3_KUCH_PIX_0250",
+        "W3_KUCH_PIX_0250_2"
        ],
        "regie": "Pixel auf der Leitung"
       }
@@ -7907,7 +7988,8 @@
        "zeile": "W3_BAS_PIX_1340",
        "sprecher": "PIX",
        "blasen": [
-        "W3_BAS_PIX_1340"
+        "W3_BAS_PIX_1340",
+        "W3_BAS_PIX_1340_2"
        ],
        "regie": ""
       },
@@ -8027,7 +8109,8 @@
        "zeile": "W3_BAS_PIX_1400",
        "sprecher": "PIX",
        "blasen": [
-        "W3_BAS_PIX_1400"
+        "W3_BAS_PIX_1400",
+        "W3_BAS_PIX_1400_2"
        ],
        "regie": ""
       },
@@ -8226,6 +8309,22 @@
        "sprecher": "HAU",
        "blasen": [
         "W3_EING_HAU_1080"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W3_EING_MAX_1083",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_EING_MAX_1083"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W3_EING_HAU_1086",
+       "sprecher": "HAU",
+       "blasen": [
+        "W3_EING_HAU_1086"
        ],
        "regie": ""
       }

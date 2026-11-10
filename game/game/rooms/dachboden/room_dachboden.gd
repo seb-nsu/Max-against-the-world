@@ -103,6 +103,7 @@ func _nach_uebergang() -> void:
 		Spiel.z("OPA", "P0_DACH_OPA_0060"),
 		Spiel.z("OPA", "P0_DACH_OPA_0070"),
 		Spiel.z("OPA", "P0_DACH_OPA_0080"),
+		Spiel.z("MAX", "P0_DACH_MAX_0085"),
 		Spiel.z("OPA", "P0_DACH_OPA_0090"),
 		Spiel.z("MAX", "P0_DACH_MAX_0100"),
 		Spiel.z("OPA", "P0_DACH_OPA_0110"),
@@ -110,6 +111,7 @@ func _nach_uebergang() -> void:
 		Spiel.z("OPA", "P0_DACH_OPA_0130"),
 		Spiel.z("OPA", "P0_DACH_OPA_0140"),
 		Spiel.z("MAX", "P0_DACH_MAX_0150"),
+		Spiel.z("OPA", "P0_DACH_OPA_0155"),
 		Spiel.z("OPA", "P0_DACH_OPA_0160"),
 	])
 
@@ -237,6 +239,7 @@ func zs1_ankunft() -> void:
 		Spiel.z("OPA", "ZS1_DACH_OPA_0130"),
 		Spiel.z("MAX", "ZS1_DACH_MAX_0132"),
 		Spiel.z("PIX", "ZS1_DACH_PIX_0140"),
+		Spiel.z("MAX", "ZS1_DACH_MAX_0142"),
 		Spiel.z("MAX", "ZS1_DACH_MAX_0150"),
 		Spiel.z("OPA", "ZS1_DACH_OPA_0160"),
 		Spiel.z("OPA", "ZS1_DACH_OPA_0170"),
@@ -336,7 +339,8 @@ const ZS_ANKUNFT := {
 		"ZS2_DACH_PIX_0250"],
 	3: ["ZS3_DACH_NAR_0010", "ZS3_DACH_PIX_0020", "ZS3_DACH_MAX_0030", "ZS3_DACH_OPA_0040",
 		"ZS3_DACH_MAX_0050", "@", "ZS3_DACH_NAR_0060", "ZS3_DACH_OPA_0070", "ZS3_DACH_MAX_0080",
-		"ZS3_DACH_NAR_0090", "ZS3_DACH_MAX_0100", "ZS3_DACH_OPA_0110", "ZS3_DACH_PIX_0120",
+		"ZS3_DACH_NAR_0090", "ZS3_DACH_MAX_0100", "ZS3_DACH_OPA_0110", "ZS3_DACH_MAX_0112",
+		"ZS3_DACH_PIX_0120",
 		"ZS3_DACH_NAR_0130", "ZS3_DACH_PIX_0140", "ZS3_DACH_OPA_0150", "ZS3_DACH_MAX_0160",
 		"ZS3_DACH_NAR_0170", "ZS3_DACH_OPA_0180", "ZS3_DACH_MAX_0190", "ZS3_DACH_OPA_0200",
 		"ZS3_DACH_PIX_0210", "ZS3_DACH_MAX_0220", "ZS3_DACH_PIX_0230"],

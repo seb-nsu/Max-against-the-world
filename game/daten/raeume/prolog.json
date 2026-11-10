@@ -1478,7 +1478,8 @@
        "zeile": "P0_DACH_PIX_0920",
        "sprecher": "PIX",
        "blasen": [
-        "P0_DACH_PIX_0920"
+        "P0_DACH_PIX_0920",
+        "P0_DACH_PIX_0920_2"
        ],
        "bedingung": [
         {
@@ -1491,7 +1492,8 @@
        "zeile": "P0_DACH_PIX_0925",
        "sprecher": "PIX",
        "blasen": [
-        "P0_DACH_PIX_0925"
+        "P0_DACH_PIX_0925",
+        "P0_DACH_PIX_0925_2"
        ],
        "bedingung": [
         {
@@ -1637,7 +1639,8 @@
        "zeile": "P0_DACH_PIX_0945",
        "sprecher": "PIX",
        "blasen": [
-        "P0_DACH_PIX_0945"
+        "P0_DACH_PIX_0945",
+        "P0_DACH_PIX_0945_2"
        ],
        "bedingung": [
         {
@@ -1650,7 +1653,8 @@
        "zeile": "P0_DACH_PIX_0946",
        "sprecher": "PIX",
        "blasen": [
-        "P0_DACH_PIX_0946"
+        "P0_DACH_PIX_0946",
+        "P0_DACH_PIX_0946_2"
        ],
        "bedingung": [
         {
@@ -1698,7 +1702,8 @@
        "zeile": "P0_DACH_PIX_0950",
        "sprecher": "PIX",
        "blasen": [
-        "P0_DACH_PIX_0950"
+        "P0_DACH_PIX_0950",
+        "P0_DACH_PIX_0950_2"
        ],
        "bedingung": [
         {
@@ -1711,7 +1716,8 @@
        "zeile": "P0_DACH_PIX_0955",
        "sprecher": "PIX",
        "blasen": [
-        "P0_DACH_PIX_0955"
+        "P0_DACH_PIX_0955",
+        "P0_DACH_PIX_0955_2"
        ],
        "bedingung": [
         {
@@ -2322,7 +2328,8 @@
      "zeile": "P0_DACH_PIX_1230",
      "sprecher": "PIX",
      "blasen": [
-      "P0_DACH_PIX_1230"
+      "P0_DACH_PIX_1230",
+      "P0_DACH_PIX_1230_2"
      ],
      "bedingung": [
       {
@@ -2335,7 +2342,8 @@
      "zeile": "P0_DACH_PIX_1240",
      "sprecher": "PIX",
      "blasen": [
-      "P0_DACH_PIX_1240"
+      "P0_DACH_PIX_1240",
+      "P0_DACH_PIX_1240_2"
      ],
      "bedingung": [
       {
@@ -2434,7 +2442,8 @@
      "zeile": "P0_DACH_PIX_0215",
      "sprecher": "PIX",
      "blasen": [
-      "P0_DACH_PIX_0215"
+      "P0_DACH_PIX_0215",
+      "P0_DACH_PIX_0215_2"
      ],
      "bedingung": [
       {
@@ -2520,7 +2529,8 @@
      "zeile": "P0_INV_PIX_0015",
      "sprecher": "PIX",
      "blasen": [
-      "P0_INV_PIX_0015"
+      "P0_INV_PIX_0015",
+      "P0_INV_PIX_0015_2"
      ],
      "mal": 2,
      "zustand": "zu"
@@ -2754,6 +2764,14 @@
         "P0_DACH_OPA_1460"
        ],
        "regie": ""
+      },
+      {
+       "zeile": "P0_DACH_MAX_1462",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_DACH_MAX_1462"
+       ],
+       "regie": ""
       }
      ],
      "beendet": false,
@@ -2862,9 +2880,10 @@
        "zeile": "P0_DACH_PIX_1366",
        "sprecher": "PIX",
        "blasen": [
-        "P0_DACH_PIX_1366"
+        "P0_DACH_PIX_1366",
+        "P0_DACH_PIX_1366_2"
        ],
-       "regie": "Hinweis auf Omas Geburtstag"
+       "regie": "Hinweis auf Omas Geburtstag, Kaskade"
       }
      ],
      "beendet": false,
@@ -2921,6 +2940,22 @@
         "P0_DACH_PIX_1400_2"
        ],
        "regie": "Kaskade"
+      },
+      {
+       "zeile": "P0_DACH_MAX_1402",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_DACH_MAX_1402"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "P0_DACH_PIX_1404",
+       "sprecher": "PIX",
+       "blasen": [
+        "P0_DACH_PIX_1404"
+       ],
+       "regie": ""
       }
      ],
      "beendet": false,
@@ -2940,9 +2975,10 @@
        "zeile": "P0_DACH_PIX_1420",
        "sprecher": "PIX",
        "blasen": [
-        "P0_DACH_PIX_1420"
+        "P0_DACH_PIX_1420",
+        "P0_DACH_PIX_1420_2"
        ],
-       "regie": "Hinweis auf den Toaster"
+       "regie": "Hinweis auf den Toaster, Kaskade"
       },
       {
        "zeile": "P0_DACH_MAX_1490",
@@ -2956,7 +2992,8 @@
        "zeile": "P0_DACH_PIX_1500",
        "sprecher": "PIX",
        "blasen": [
-        "P0_DACH_PIX_1500"
+        "P0_DACH_PIX_1500",
+        "P0_DACH_PIX_1500_2"
        ],
        "regie": ""
       }
