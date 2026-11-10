@@ -247,3 +247,43 @@ Funde:
 ### Werkzeug `tools/zeilen_einfuegen.py` (Ursache der falschen Sprecher)
 
 Der Sprechername zu einem Kürzel wird als häufigster Name über **alle** Skriptdateien bestimmt, nicht je Welt. Darum wurde SCH in Welt 1 und 3 zu „Schreiber“ (statt Schmied, Schmidt) und GRI in Welt 2 zu „Grimmzahn“ (statt Grieche). Betroffen: `welt-1.md` Z.400/404, `welt-2.md` Z.831, `welt-3.md` Z.342/346/350. Vorschlag: Namenssuche auf die Datei der Zielzeile beschränken. Schwere mittel.
+
+### Aus `docs/skript/zwischenspiele-und-finale.md`
+
+Stärken (bleiben): Opas „Rückverwandlungsschwund“ mit der Steigerung über drei Rückkehren („Rückverwandlungs…“ – „…schwund. Ich weiß.“); Pixels „Hatschi. // Bäckerei.“; Max bietet Haushalt an und Opa friert ein (ZS2_DACH_MAX_0160 bis OPA_0210); „Das Passwort ist ‚Kuchen123‘. Oder?“ (ZS3_DACH_MAX_0160); der Stapel „Prospekte“ mit Auflösung (FI_AUFL_PIX_0310); Zettel „Bin aufgestanden. Z.“ (FI_RUF_NAR_0280); Zeldina als Wohnungssuchende („Wie sieht es denn mit den Nebenkosten aus?“, Oma: „Du bist also die Neue.“ – „Der Dachboden wäre frei.“); Modell 08/15 („Servus, Tür.“); die Abfrage Drachenei – „Ein Ei. Freiland.“; „Du hättest mich auch einfach fragen können“ – „Und was hättest du gesagt?“ – „… Nein. Wahrscheinlich nicht.“ (FI_AUFL_MAX_0372 bis 0376) als ehrlichster Moment des Spiels; Oma („Der Junge ist in Ordnung. Du nicht, Konrad. Aber der Junge.“, „Ich dachte: Den nehme ich.“); „Ich hol sie.“ und Pixels Sturz vom Schrank; „Der Kuchen war keine Lüge.“; Toadis letzter Satz. Der rote Kreis im Kalender wächst sichtbar mit (Kreis, Doppelkreis, Ausrufezeichen).
+
+Funde:
+
+- **Pixels Wünsche sind nicht verpassbar:** Die Einträge für Welt 1 bis 3 fallen in den Zwischenspielen (ZS1_DACH_PIX_0220, ZS2_DACH_PIX_0230, ZS3_DACH_PIX_0210). Der Verdacht aus Welt 2 (Weizenfeld) ist damit erledigt.
+- **Zeitlinie stimmt:** „Drei Tage Mittelalter“, „drei Tage und ein Fünfkampf“, „eine Woche im Regen“; auf dem Dachboden vergeht ein Nachmittag. Max’ „eine Woche lang“ in Welt 4 ist damit ungefähr gedeckt (genau wären es rund zwei Wochen). Die Fernbedienung fehlt „seit Wochen“ (FI_AUFL_OPA_0180), passt zu Welt 4.
+- **Roboter ohne Bedingung:** FI_RAET_MAX_0090 „Zeldina, Opa, der Roboter und ich.“ hat keine Bedingung FREUND_0815. Ohne den Roboter ist der Satz falsch. Gegen Code und Welt-Tabelle prüfen.
+- **„Oben“ statt „unten“:** FI_HINT_PIX_0200 „Oben hat jemand Geburtstag.“ Max und Pixel sind auf dem Dachboden, Oma steht unter der Luke.
+- **Anrede der Mutter:** FI_WOHN_MUT_0230 „Alles Gute, Mama.“ (zu Oma), aber FI_WOHN_MUT_0260 „Konrad, das ist deine Einkaufsliste.“ Wenn Oma ihre Mutter ist, wäre Opa „Papa“. Gegen das Konzept prüfen (wessen Eltern sind es?).
+- **Unklarer Satz:** FI_AUFL_MAX_0270 „Und Zappmann? Die Lichterkette hat geblinkt, du kennst ihn. Lange Geschichte.“ Das „Lange Geschichte“ am Ende klingt, als beantworte Max seine Frage selbst. Gemeint ist wohl „Lange Geschichte?“.
+- **Unklare Rechnung:** FI_DACH_OPA_0060 „Zwanzig Minuten Fernsehzeit sind drei Stunden Werkbank.“ ZS2 sagt: drüben drei Tage, hier zwanzig Minuten. Der Satz dreht das Verhältnis um und ist schwer zu verstehen.
+- **Figuren sprechen in Entwurfs-Sprache:** „Seit Welt 3“ (FI_AUFL_PIX_0240), „In Welt 4“ (FI_DACH_PIX_0160, FI_AUFL_MAX_0250). In der Geschichte heißen die Orte Kanal 42 und Kanal 999. „Vier Welten“ als Menge ist dagegen in Ordnung.
+- **Offener Faden Milchwerbung:** Pixel verdächtigt Opa als Absender (ZS3_DACH_PIX_0020), im Finale hat Opa die Werbung aber nie gesehen (FI_WOHN_OPA_0050). Wer die Werbung sendet, bleibt offen. Kann als Rätsel stehen bleiben, dann sollte Pixels Verdacht nicht so eindeutig auf Opa zeigen.
+- **Doppelt belegte Auslöser:** ZS1_DACH_MAX_0315 / PIX_0320, ZS2_DACH_MAX_0315 / PIX_0320, ZS3_DACH_MAX_0315 / PIX_0320 (Werkbank-Ablage, zweites Mal), ZS3_DACH_MAX_0335 / PIX_0340 (Kiste, zweites Mal).
+- **Wiederholung:** „Lange Geschichte“ viermal (ZS1_DACH_MAX_0072, ZS3_DACH_MAX_0050, FI_AUFL_MAX_0270, FI_AUFL_MAX_0500); „Ich komme wieder“ dreimal bei Modell 08/15 (Welt 3, FI_RUF_HAU_0190, FI_WOHN_HAU_0390); „Das ist kein X, das ist Y“ (ZS1_DACH_PIX_0530 Glaube, ZS1_DACH_PIX_0454 Tradition, ZS3_DACH_PIX_0020 Botschaft, FI_RIEG_MAX_0090 Feature, FI_HINT_PIX_0040).
+- **Kleinigkeiten:** „Seite 3“ (FI_WOHN_MAX_0160) und „Seite drei“ (0165) nebeneinander. IDs außer der Reihe (ZS1 0420/0425 nach 0462; FI_RUF 0380/0390 nach 0330; FI_WOHN 0420/0430 nach 0190). ZS1_DACH_MAX_0120 „ich hatte es drei Tage im Arm“, das Ei bekommt Max aber erst am Ende von Welt 1.
+- **Wörtliches Zitat:** FI_RIEG_MAX_0155 „Es ist gefährlich, allein zu gehen.“ (The Legend of Zelda), passt zu Zeldina, ohne Vorwissen leer.
+
+### Aus `docs/raetsel/*` und `docs/welten/*`
+
+Gelesen: alle sechs Rätsel-Dateien, `abhaengigkeiten.md`, `welten/README.md` und alle sechs Welt-Tabellen.
+
+Stärken (bleiben): Jede Welt hat eine eigene Mechanik, die aus dem Thema kommt (Figurenwechsel, Zeitfähre, Eigenschaften tauschen, Tasten und Genre-Logik). Sackgassen sind durchgehend bedacht: Wunderdinge haben Zweitwege, die Sphinx braucht nur das Wort, Fehltausche setzen sich zurück, Pixel hält Max ohne Archivband am Aufzug zurück, das Finale hat einen eigenen Abschnitt „Lösbarkeit“. Logikrätsel sind nachgerechnet (Flaschen: nur Flasche 3; Diskus: nur Tiro; Kammer 3: genau eine Lösung). Minispiele haben eine Nachsichtsregel. Farbcode-Rätsel hat Symbole für Farbenblinde.
+
+Funde:
+
+- **Zwei-Ebenen-Mechanik in Welt 3 wird kaum gebraucht:** Die Tabelle nennt vier Eingriffe von Pixel (Strom aus = Nacht, Wasser = Regen, Fenster = Schnee, Kabel = Ente). Ein Rätsel verlangt nur das Kabel (7); das Fenster ist der Zweitweg in 11. Nacht und Regen haben kein Rätsel. Der Satz „Viele Rätsel verlangen mehrere Sprünge“ (`raetsel/welt-3.md`) verspricht mehr. Im Skript und Code prüfen, ob Nacht und Regen wenigstens Reaktionen haben.
+- **Freund 08/15 ist dauerhaft verpassbar:** Nur wer das Olivenöl in Zwischenspiel 2 einpackt und den Roboter vor der Übergabe der Seite ölt, bekommt ihn im Finale. Das ist gewollt und im Finale angesprochen (FI_RUF_PIX_0230). Fair ist es, wenn Pixel vor der Übergabe einmal warnt; im Skript Welt 3 gegenprüfen.
+- **Welt 4, Rätsel 4:** Die Rätsel-Datei sagt selbst, die Hyäne „lacht bei keinem Witz der Folge“. Zusammen mit W4_SIT_SMU_0360 („gefleckte Dame in Reihe drei“) saß sie also im Publikum. Dann wäre ihr Alibi (sie war bei der Sitcom) wahr und nur das Gericht falsch erinnert. Am Skript gegenprüfen.
+- **Veraltete Größenangaben:** `raetsel/welt-2.md` nennt die Agora „640×180“, die Welt-Tabelle 1280×360. `welten/README.md` nennt im Beispiel „320x180 oder 640x180“ und Nahansichten mit 320×180. Kommentare in den Tabellen nennen alte Pixelmaße (Prolog: Pixel „schlafend 10 hoch, 24 lang“; Welt 1: „Pixel als Ziege 20 px“; Welt 2: Opa „Figur 60 px im Prolog“, Beamter „stehend 58“, Sobek „16 px hoch, 70 px lang“; Welt 3: „Max als Ente 30, Max in der Kapsel 70 breit“; Welt 4: Zombie „im Grab 30“). Die Zahlen in den Feldern sind umgerechnet, die Kommentare nicht.
+- **„in die Maschine“ zu früh:** `ohne_verwendung` bei Drachenei (welt-1), Goldenem Sack (welt-2) und Energiezelle (welt-3): „Opa legt es im Zwischenspiel in die Maschine“. Im Zwischenspiel kommt es auf die Werkbank, in die Maschine erst im Finale.
+- **Schalter-Namen uneinheitlich:** Welt 1, 2 und 4 nutzen das Präfix (`W1_R01_A_GELOEST`). Welt 3 hat viele ohne Präfix (`STEMPEL_MENSCH`, `REGEL_2`, `KAMMER_1_GELOEST`, `MUTTI_AUS` …). Weltübergreifend sind nur FREUND_0815 und KEKSE_DABEI.
+- **KEKSE_DABEI doppelt vergeben:** `welt-3.yaml` setzt den Schalter schon bei R3b (Morphäus gibt die Kekse), `finale.yaml` bei F2. Laut Skript gilt er nur, wenn die Tüte im Finale im Inventar ist. Im Code prüfen, ob der Schalter beim Ablegen in die Fundkiste wieder fällt.
+- **Sprecherkürzel sind nicht spielweit eindeutig:** SCH (Schmied, Schreiber, Schmidt), GRI (Grimmzahn, Grieche), MUT (M.U.T.T.I., Mutter), MUS (Straßenmusiker Welt 2 und 3). Das ist die Wurzel des Sprecher-Fehlers im Werkzeug `zeilen_einfuegen.py`. Für Stimmen und Besetzung in `04-audio.md` gegenprüfen.
+- **Nahansichten:** 14 gezählt (Prolog 2, Welt 1 vier, Welt 2 drei, Welt 3 vier, Welt 4 eine). Stimmt mit `entscheidungen.md`.
+- **Rätsel 12 in Welt 3:** Herr Vier hat die Zugangskarte „in einer Lieferung fürs Labor gefunden“. Der Zufall ist bequem; ein halber Satz mehr (er beliefert die Kantine) würde reichen.
+- **Rätsel 9 in Welt 1 (Steckbrief als Exposé):** der Sprung vom Steckbrief zum Wohnungsangebot ist die steilste Idee der Welt. Ob das Skript sie genug anbahnt, steht bei Bereich J.
