@@ -16,36 +16,65 @@
     480,
     270
    ],
-   "hintergrund": "res://grafik/platzhalter/raum_wohnzimmer.png",
+   "hintergrund": "res://grafik/hintergruende/w0_bg_wohnzimmer_v01.png",
    "farbe": "#6b4f3f",
    "laufbereich": [
     [
      6,
-     207
-    ],
-    [
-     474,
-     207
-    ],
-    [
-     474,
-     267
+     268
     ],
     [
      6,
-     267
+     252
+    ],
+    [
+     70,
+     240
+    ],
+    [
+     195,
+     220
+    ],
+    [
+     300,
+     220
+    ],
+    [
+     302,
+     182
+    ],
+    [
+     330,
+     176
+    ],
+    [
+     400,
+     180
+    ],
+    [
+     420,
+     194
+    ],
+    [
+     476,
+     200
+    ],
+    [
+     476,
+     268
     ]
    ],
    "marker": {
     "start": [
-     105,
-     225
+     140,
+     230
     ],
     "von_treppenhaus": [
-     438,
-     237
+     440,
+     222
     ]
    },
+   "tiefe": 0.85,
    "figuren": [],
    "hotspots": [
     {
@@ -53,14 +82,14 @@
      "script_name": "Kuchen",
      "name_key": "UI_OBJ_KUCHEN",
      "rect": [
-      246,
-      162,
-      30,
-      18
+      254,
+      136,
+      32,
+      30
      ],
      "gehe": [
-      263,
-      225
+      272,
+      228
      ],
      "ansehen": [],
      "versteckt": true
@@ -70,14 +99,14 @@
      "script_name": "Girlande",
      "name_key": "UI_OBJ_GIRLANDE",
      "rect": [
-      120,
-      6,
-      240,
-      18
+      100,
+      8,
+      280,
+      20
      ],
      "gehe": [
       240,
-      225
+      228
      ],
      "ansehen": [],
      "versteckt": true
@@ -87,14 +116,14 @@
      "script_name": "Geschenke",
      "name_key": "UI_OBJ_GESCHENKE",
      "rect": [
-      192,
-      186,
-      27,
-      21
+      300,
+      196,
+      26,
+      22
      ],
      "gehe": [
-      205,
-      225
+      312,
+      230
      ],
      "ansehen": [],
      "versteckt": true
@@ -104,14 +133,14 @@
      "script_name": "Fernseher",
      "name_key": "UI_OBJ_FERNSEHER",
      "rect": [
-      327,
-      117,
-      78,
-      93
+      328,
+      90,
+      72,
+      82
      ],
      "gehe": [
-      360,
-      225
+      362,
+      190
      ],
      "ansehen": [
       {
@@ -136,13 +165,13 @@
      "script_name": "Familienfoto",
      "name_key": "UI_OBJ_FAMILIENFOTO",
      "rect": [
-      192,
-      51,
-      66,
-      51
+      205,
+      40,
+      100,
+      68
      ],
      "gehe": [
-      225,
+      255,
       225
      ],
      "ansehen": [
@@ -168,14 +197,14 @@
      "script_name": "Teetasse",
      "name_key": "UI_OBJ_TEETASSE",
      "rect": [
-      222,
-      174,
-      18,
-      18
+      226,
+      156,
+      16,
+      14
      ],
      "gehe": [
-      225,
-      225
+      236,
+      228
      ],
      "ansehen": [
       {
@@ -200,14 +229,14 @@
      "script_name": "LeererPlatzAufDemCouchtisch",
      "name_key": "UI_OBJ_LEERER_PLATZ_AUF_DEM_COUCHTISCH",
      "rect": [
-      252,
-      180,
-      33,
-      15
+      256,
+      160,
+      28,
+      11
      ],
      "gehe": [
-      263,
-      225
+      272,
+      228
      ],
      "ansehen": [
       {
@@ -232,14 +261,14 @@
      "script_name": "Sofa",
      "name_key": "UI_OBJ_SOFA",
      "rect": [
-      48,
-      144,
-      138,
-      69
+      82,
+      100,
+      113,
+      115
      ],
      "gehe": [
-      120,
-      225
+      140,
+      230
      ],
      "ansehen": [
       {
@@ -268,14 +297,14 @@
      "ziel": "treppenhaus",
      "name_key": "UI_RAUM_TREPPENHAUS",
      "rect": [
-      438,
-      60,
-      39,
-      147
+      416,
+      25,
+      56,
+      168
      ],
      "gehe": [
-      450,
-      237
+      444,
+      214
      ],
      "erreichbar_ab": "start",
      "ansehen": []
@@ -307,52 +336,81 @@
     480,
     270
    ],
-   "hintergrund": "res://grafik/platzhalter/raum_treppenhaus.png",
+   "hintergrund": "res://grafik/hintergruende/w0_bg_treppenhaus_v01.png",
    "farbe": "#584536",
    "laufbereich": [
     [
      6,
-     225
-    ],
-    [
-     180,
-     225
-    ],
-    [
-     444,
-     69
-    ],
-    [
-     474,
-     69
-    ],
-    [
-     474,
-     90
-    ],
-    [
-     210,
-     267
+     268
     ],
     [
      6,
-     267
+     232
+    ],
+    [
+     60,
+     224
+    ],
+    [
+     68,
+     208
+    ],
+    [
+     180,
+     208
+    ],
+    [
+     204,
+     210
+    ],
+    [
+     224,
+     196
+    ],
+    [
+     395,
+     64
+    ],
+    [
+     410,
+     64
+    ],
+    [
+     408,
+     73
+    ],
+    [
+     236,
+     206
+    ],
+    [
+     248,
+     228
+    ],
+    [
+     300,
+     262
+    ],
+    [
+     320,
+     268
     ]
    ],
    "marker": {
     "start": [
-     90,
-     246
+     130,
+     240
     ],
     "von_wohnzimmer": [
-     60,
-     246
+     50,
+     242
     ],
     "von_dachboden": [
-     438,
-     81
+     370,
+     92
     ]
    },
+   "tiefe": 0.85,
    "figuren": [],
    "hotspots": [
     {
@@ -360,14 +418,14 @@
      "script_name": "HutAmHaken",
      "name_key": "UI_OBJ_HUT_AM_HAKEN",
      "rect": [
-      60,
-      81,
-      30,
-      27
+      128,
+      84,
+      20,
+      24
      ],
      "gehe": [
-      78,
-      240
+      140,
+      222
      ],
      "ansehen": [
       {
@@ -392,14 +450,14 @@
      "script_name": "Fenster",
      "name_key": "UI_OBJ_FENSTER",
      "rect": [
-      210,
-      51,
-      51,
-      66
+      216,
+      55,
+      40,
+      60
      ],
      "gehe": [
-      225,
-      165
+      205,
+      224
      ],
      "ansehen": [
       {
@@ -424,14 +482,14 @@
      "script_name": "Treppe",
      "name_key": "UI_OBJ_TREPPE",
      "rect": [
-      180,
-      90,
-      210,
-      135
+      200,
+      40,
+      220,
+      175
      ],
      "gehe": [
-      255,
-      180
+      215,
+      224
      ],
      "ansehen": [
       {
@@ -460,14 +518,14 @@
      "ziel": "wohnzimmer",
      "name_key": "UI_RAUM_WOHNZIMMER",
      "rect": [
-      3,
-      66,
-      45,
-      159
+      5,
+      40,
+      55,
+      185
      ],
      "gehe": [
-      30,
-      246
+      40,
+      240
      ],
      "erreichbar_ab": "start",
      "ansehen": []
@@ -478,14 +536,14 @@
      "ziel": "dachboden",
      "name_key": "UI_RAUM_DACHBODEN",
      "rect": [
-      405,
+      300,
       0,
-      72,
-      60
+      170,
+      34
      ],
      "gehe": [
-      447,
-      78
+      402,
+      68
      ],
      "erreichbar_ab": "start",
      "ansehen": []
