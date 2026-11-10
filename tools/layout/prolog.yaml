@@ -78,11 +78,11 @@ dachboden:
     opas_staubsauger_prototyp: {rect: [294, 177, 18, 39], gehe: [300, 240]}
     fundkiste: {rect: [165, 189, 30, 27], gehe: [180, 237], name: Fundkiste}   # erst ab Zwischenspiel 1 sichtbar
     # Finale (skripte/finale.gd): Opas Maschine in der Mitte, nur im Finale sichtbar
-    maschine: {rect: [186, 96, 60, 90], gehe: [216, 237], name: Maschine}
-    ofentuer: {rect: [198, 150, 33, 30], gehe: [214, 237], name: Ofentür}
-    druckmesser: {rect: [246, 108, 18, 18], gehe: [255, 237], name: Druckmesser}
-    fassungen: {rect: [186, 78, 60, 15], gehe: [216, 237], name: Fassungen}
-    empfaenger: {rect: [222, 54, 33, 24], gehe: [238, 237], name: Empfänger}
+    maschine: {rect: [186, 96, 60, 90], gehe: [216, 237], name: Maschine, skizze: spaeter}
+    ofentuer: {rect: [198, 150, 33, 30], gehe: [214, 237], name: Ofentür, skizze: spaeter}
+    druckmesser: {rect: [246, 108, 18, 18], gehe: [255, 237], name: Druckmesser, skizze: spaeter}
+    fassungen: {rect: [186, 78, 60, 15], gehe: [216, 237], name: Fassungen, skizze: spaeter}
+    empfaenger: {rect: [222, 54, 33, 24], gehe: [238, 237], name: Empfänger, skizze: spaeter}
     lampe: {rect: [105, 6, 18, 27], gehe: [114, 237], name: Lampe}   # Opas Arbeitslampe, ab Zwischenspiel 3 an
   ausgaenge:
     treppenhaus: {rect: [348, 240, 60, 27], gehe: [375, 249], name: Bodenluke, id: bodenluke}

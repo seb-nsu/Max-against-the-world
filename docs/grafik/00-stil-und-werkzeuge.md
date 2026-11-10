@@ -45,8 +45,8 @@ Alle Welten teilen einen Pixel-Art-Stil in 480×270 Pixeln mit einer gemeinsamen
 
 **Ablauf pro Szene:**
 
-1. Konzeptbild mit ChatGPT oder Gemini, bis Aufbau und Stimmung passen.
-2. Hintergrund in 480×270 erzeugen oder umwandeln.
+1. Konzeptbild mit ChatGPT oder Gemini, bis Aufbau und Stimmung passen. Die Layout-Skizze des Raums (`grafik/skizzen/<abschnitt>/<raum>.png`, verlinkt in jeder Grafik-Datei unter „Szenen“) als Bild mitgeben und hinter den Prompt schreiben: „Use the attached sketch only for the position and size of objects and exits, not for style, colors or text. Leave the orange marked spots empty.“ Blaue Kästen gehören ins Bild, orange gestrichelte sind eigene Sprites, grüne Ausgänge, die grauen Umrisse zeigen Max' Größe vorn und hinten. Die Skizzen erzeugt `tools/layout_skizzen.py` aus den Raum-Layouts neu.
+2. Hintergrund in 480×270 erzeugen oder umwandeln: Standard ist das fertige Konzeptbild mit Neural Pixelate (behält die Anordnung), Retro Diffusion mit dem Prompt nur als Ersatzweg.
 3. In Aseprite: Palette anwenden, Perspektive prüfen, Laufbereich frei lassen, störende Details entfernen.
 4. Gegenstände der Szene als Sammelbild erzeugen und ausschneiden.
 5. In Godot einsetzen und mit Max als Platzhalter testen, ob Größen und Laufwege stimmen. Bei Boden mit Tiefe im Layout `tiefe: 0.8` eintragen (Ablauf in `game/README.md`, Abschnitt „Grafik ersetzen“).

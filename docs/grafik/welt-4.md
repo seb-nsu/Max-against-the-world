@@ -49,6 +49,10 @@ Vorne den Baustein aus `00-stil-und-werkzeuge.md`, dann das Motiv, hinten den Fa
 
 ### Szenen
 
+<!-- skizzen: erzeugt von tools/layout_skizzen.py -->
+**Layout-Skizzen** (beim Konzeptbild mitgeben, Ablauf in `00-stil-und-werkzeuge.md`): [Testbild](skizzen/welt-4/testbild.png), [Rauschen zwischen den Sendern](skizzen/welt-4/rauschen.png), [Glücksrad-Studio](skizzen/welt-4/gluecksrad.png), [Sitcom-Küche](skizzen/welt-4/sitcom_kueche.png), [Savanne](skizzen/welt-4/savanne.png), [Musikvideo-Friedhof](skizzen/welt-4/friedhof.png), [Spukhaus, Keller](skizzen/welt-4/spukhaus_keller.png), [Spukhaus, Halle](skizzen/welt-4/spukhaus_halle.png), [Kapitolis](skizzen/welt-4/kapitolis.png), [Fondue-Fabrik](skizzen/welt-4/fondue_fabrik.png), [Werbespot-Set](skizzen/welt-4/werbespot_set.png), [Empfang](skizzen/welt-4/empfang.png), [Kellerarchiv](skizzen/welt-4/kellerarchiv.png), [Zappmanns Studio](skizzen/welt-4/zappmanns_studio.png).
+<!-- /skizzen -->
+
 Alle mit dem Baustein HINTERGRUND.
 
 | Szene | Sender | Zustände | Muss sichtbar sein | Motiv |

@@ -41,6 +41,10 @@ Vorne den Baustein aus `00-stil-und-werkzeuge.md`, dann das Motiv, hinten den Fa
 
 ### Szenen
 
+<!-- skizzen: erzeugt von tools/layout_skizzen.py -->
+**Layout-Skizzen** (beim Konzeptbild mitgeben, Ablauf in `00-stil-und-werkzeuge.md`): [Unterstadt, Straße](skizzen/welt-3/unterstadt_strasse.png), [Apothekengasse mit Pastillenautomat](skizzen/welt-3/apothekengasse.png), [Widerstandsbasis](skizzen/welt-3/widerstandsbasis.png), [Kühlung](skizzen/welt-3/kuehlung.png), [Laboreingang](skizzen/welt-3/laboreingang.png), [Stadtstraße](skizzen/welt-3/stadtstrasse.png), [Küche der Orakel-Oma](skizzen/welt-3/kueche_orakel.png), [Büroturm, 50. Stock](skizzen/welt-3/buero_50.png), [Testkammer 1](skizzen/welt-3/testkammer_1.png), [Testkammer 2](skizzen/welt-3/testkammer_2.png), [Testkammer 3](skizzen/welt-3/testkammer_3.png), [Kern von M.U.T.T.I.](skizzen/welt-3/kern.png).
+<!-- /skizzen -->
+
 Alle mit dem Baustein HINTERGRUND.
 
 | Szene | Ebene | Zustände | Muss sichtbar sein | Motiv |

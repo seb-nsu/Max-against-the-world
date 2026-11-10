@@ -43,6 +43,10 @@ Vorne den Baustein aus `grafik/00-stil-und-werkzeuge.md`, dann das Motiv, hinten
 
 ### Szenen
 
+<!-- skizzen: erzeugt von tools/layout_skizzen.py -->
+**Layout-Skizzen** (beim Konzeptbild mitgeben, Ablauf in `00-stil-und-werkzeuge.md`): [Nil-Delta](skizzen/welt-2/nil_delta.png), [Thronsaal](skizzen/welt-2/thronsaal_ramses.png), [Palastküche](skizzen/welt-2/palastkueche.png), [Sphinx](skizzen/welt-2/sphinx.png), [Fährsteg Olympia](skizzen/welt-2/faehrsteg_olympia.png), [Agora](skizzen/welt-2/agora.png), [Startbüro](skizzen/welt-2/startbuero.png), [Stadion](skizzen/welt-2/stadion.png), [Hafen Syrakus](skizzen/welt-2/hafen_syrakus.png), [Archimedes' Werkstatt](skizzen/welt-2/werkstatt.png), [Grabhügel Syrakus](skizzen/welt-2/grabhuegel.png).
+<!-- /skizzen -->
+
 Alle mit dem Baustein HINTERGRUND, 480×270, wenn nicht anders angegeben; die Flusskarte mit dem Baustein KARTE. Jedes Motiv nennt links, Mitte und rechts in Bildrichtung, die Ausgänge am Bildrand und hält das Bodenband im unteren Drittel frei. Figuren und Deko-Objekte aus dem Sammelbild „Deko Welt 2“ kommen als eigene Sprites darüber; die Motive lassen dafür Platz. Gegenstände, die der Spieler mitnimmt, stehen im Motiv, damit Licht und Maßstab stimmen; sie werden in Aseprite ausgeschnitten, als eigenes Sprite gespeichert und im Hintergrund übermalt. Die Spalte „Muss sichtbar sein“ nennt beides. Deutsche Anmerkungen gehören nicht in den Prompt.
 
 | Szene | Epoche | Zustände | Muss sichtbar sein | Motiv |

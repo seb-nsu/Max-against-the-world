@@ -32,6 +32,10 @@ Vorne den Baustein aus `00-stil-und-werkzeuge.md`, dann das Motiv, hinten den Fa
 
 ### Szenen
 
+<!-- skizzen: erzeugt von tools/layout_skizzen.py -->
+**Layout-Skizzen** (beim Konzeptbild mitgeben, Ablauf in `00-stil-und-werkzeuge.md`): [Wohnzimmer](skizzen/prolog/wohnzimmer.png), [Treppenhaus](skizzen/prolog/treppenhaus.png), [Dachboden](skizzen/prolog/dachboden.png), [Supermarkt](skizzen/finale/supermarkt.png).
+<!-- /skizzen -->
+
 Alle mit dem Baustein HINTERGRUND.
 
 | Szene | Zustände | Muss sichtbar sein | Motiv |

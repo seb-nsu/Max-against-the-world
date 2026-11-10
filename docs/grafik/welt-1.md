@@ -45,6 +45,10 @@ Vorne den Baustein aus `00-stil-und-werkzeuge.md`, dann das Motiv, hinten den Fa
 
 ### Szenen
 
+<!-- skizzen: erzeugt von tools/layout_skizzen.py -->
+**Layout-Skizzen** (beim Konzeptbild mitgeben, Ablauf in `00-stil-und-werkzeuge.md`): [Dorfplatz Unterbrösel](skizzen/welt-1/dorfplatz.png), [Taverne](skizzen/welt-1/taverne.png), [Schmiede](skizzen/welt-1/schmiede.png), [Zauberstab-Laden](skizzen/welt-1/zauberstabladen.png), [Hoggelwarz](skizzen/welt-1/klassenzimmer.png), [Troll-Brücke](skizzen/welt-1/trollbruecke.png), [Wasserschloss](skizzen/welt-1/wasserschloss.png), [Zauberwald](skizzen/welt-1/zauberwald.png), [Luftschloss](skizzen/welt-1/luftschloss.png), [Goblin-Bergwerk](skizzen/welt-1/bergwerk.png), [Dunkler Turm](skizzen/welt-1/turmkeller.png), [Abstellkammer 1](skizzen/welt-1/abstellkammer_1.png), [Smaugis Abstellkammern](skizzen/welt-1/abstellkammern.png), [Thronsaal](skizzen/welt-1/thronsaal.png).
+<!-- /skizzen -->
+
 Alle mit dem Baustein HINTERGRUND, 480×270, wenn nicht anders angegeben; Keller, Kammern und Thronsaal des Dunklen Turms mit dem düsteren Farb-Baustein. Jedes Motiv nennt links, Mitte und rechts in Bildrichtung, die Ausgänge am Bildrand und hält das Bodenband im unteren Drittel frei. Figuren und Deko-Objekte aus dem Sammelbild „Deko Welt 1“ kommen als eigene Sprites darüber; die Motive lassen dafür Platz. Gegenstände, die der Spieler mitnimmt, stehen im Motiv, damit Licht und Maßstab stimmen; sie werden in Aseprite ausgeschnitten, als eigenes Sprite gespeichert und im Hintergrund übermalt. Die Spalte „Muss sichtbar sein“ nennt beides. Deutsche Anmerkungen gehören nicht in den Prompt.
 
 | Szene | Zustände | Muss sichtbar sein | Motiv |
