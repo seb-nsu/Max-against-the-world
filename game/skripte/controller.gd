@@ -18,15 +18,15 @@ extends Node
 ## Tasten für vorhandene Aktionen (bleiben bei neu belegten Tasten erhalten, Einstellungen
 ## ersetzt nur Tastatur-Tasten)
 const BELEGUNG := {
-	cq_pause = [JOY_BUTTON_START],
+	"cq_pause": [JOY_BUTTON_START],
 	"popochiu-skip": [JOY_BUTTON_START],
-	cq_figur_wechseln = [JOY_BUTTON_LEFT_SHOULDER],
-	cq_hotspots_zeigen = [JOY_BUTTON_X],
-	cq_reiter_zurueck = [JOY_BUTTON_LEFT_SHOULDER],
-	cq_reiter_vor = [JOY_BUTTON_RIGHT_SHOULDER],
+	"cq_figur_wechseln": [JOY_BUTTON_LEFT_SHOULDER],
+	"cq_hotspots_zeigen": [JOY_BUTTON_X],
+	"cq_reiter_zurueck": [JOY_BUTTON_LEFT_SHOULDER],
+	"cq_reiter_vor": [JOY_BUTTON_RIGHT_SHOULDER],
 }
 ## Achsen (Trigger), die wie ein Knopf wirken
-const ACHSEN := {cq_hotspots_zeigen = [JOY_AXIS_TRIGGER_LEFT]}
+const ACHSEN := {"cq_hotspots_zeigen": [JOY_AXIS_TRIGGER_LEFT]}
 ## Zeiger: Pixel je Sekunde bei vollem Ausschlag (Grundauflösung 480×270)
 const TEMPO := 190.0
 ## Über einem Hotspot so viel langsamer
