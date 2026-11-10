@@ -166,7 +166,7 @@ func _durchlauf() -> void:
 	_pruefe(Z.geloest("P1") and Z.ist("P0_P1_GELOEST"), "P1 gelöst (P0_P1_GELOEST)")
 	_pruefe(_gesagt("P0_DACH_PIX_0380") and _gesagt("P0_DACH_MAX_0390"), "P1-Szene vollständig")
 	_pruefe(_item("Thunfischdose").zustand() == "leer", "Thunfischdose leer nach P1")
-	_pruefe(pixel.position == Vector2(105, 189), "Pixel auf der Werkbank")
+	_pruefe(pixel.position == _raum().PIXEL_WERKBANK, "Pixel auf der Werkbank")
 	_pruefe(_raum().get_prop("ZappOMat").current_frame == 1, "Zapp-O-Mat rauscht nach P1")
 	_pruefe(H.pfote_aktiv(), "Pfote ab P1 aktiv")
 	_pruefe(Z.status("P2") == "offen", "P2 offen nach P1")
@@ -174,7 +174,7 @@ func _durchlauf() -> void:
 	_pruefe(not opa_d.option_sichtbar("1322") and _dialog("Pixel").option_sichtbar("1390"),
 		"Gesprächsoptionen nach P1 umgeschaltet")
 	await _rundreise("nach P1")
-	_pruefe(pixel.position == Vector2(105, 189), "Pixel bleibt nach Laden auf der Werkbank")
+	_pruefe(pixel.position == _raum().PIXEL_WERKBANK, "Pixel bleibt nach Laden auf der Werkbank")
 
 	# Hilfe-Pfote zu P2: Stufe 1, dann Wartezeile + Wiederholung, nach 30 s Stufe 2
 	_protokoll_leeren()

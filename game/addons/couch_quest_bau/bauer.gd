@@ -63,6 +63,8 @@ func bauen() -> int:
 			gesehen.dialogs.append(d.script_name)
 		for r in plan.raeume:
 			_raum(r)
+			if r.id in _layout_raeume():
+				_layout_uebernehmen(r)
 			gesehen.rooms.append(r.script_name)
 
 	# Pixel-Feld: Pixel als Gegenstand in Max' Inventarleiste (05-spielsysteme.md, UI). Steht in
@@ -348,6 +350,73 @@ func _raum(r: Dictionary) -> void:
 	if _angelegt.size() != vorher:
 		_szene_speichern(raum, pfad)
 	raum.free()
+
+
+## Räume aus „--cq-layout=dachboden,taverne“: Geometrie aus dem Bauplan neu übernehmen.
+func _layout_raeume() -> Array:
+	for a in OS.get_cmdline_user_args():
+		if a.begins_with("--cq-layout="):
+			return Array(a.trim_prefix("--cq-layout=").split(","))
+	return []
+
+
+## Ausnahme von der Regel „nur anlegen, nie ändern“, für den Einbau eines echten Hintergrunds:
+## Hintergrundbild, Laufbereich, Marker, Figurenplätze sowie Lage, Umriss, Laufziel und Baseline
+## aller Hotspots, Ausgänge und Props werden aus dem Layout neu gesetzt. Skripte, Texturen der
+## Props und alles andere bleiben unverändert. Aufruf siehe game/README.md („Grafik ersetzen“).
+func _layout_uebernehmen(r: Dictionary) -> void:
+	var sn: String = r.script_name
+	var snake := sn.to_snake_case()
+	var pfad := "res://game/rooms/%s/room_%s.tscn" % [snake, snake]
+	var raum: PopochiuRoom = load(pfad).instantiate(PackedScene.GEN_EDIT_STATE_INSTANCE)
+	var bg := raum.get_node("Props/Background") as PopochiuProp
+	if bg:
+		bg.texture = load(r.hintergrund)
+		bg.position = Vector2(r.groesse[0], r.groesse[1]) / 2.0
+	for wa in raum.get_node("WalkableAreas").get_children():
+		var umriss := _punkte(r.laufbereich)
+		var nav := NavigationPolygon.new()
+		nav.agent_radius = 0.0
+		nav.add_outline(umriss)
+		NavigationServer2D.bake_from_source_geometry_data(nav, NavigationMeshSourceGeometryData2D.new())
+		var umrisse: Array[PackedVector2Array] = [umriss]
+		wa.position = Vector2.ZERO
+		wa.get_node("Perimeter").navigation_polygon = nav
+		wa.interaction_polygon = umrisse
+		if not wa.scene_file_path.is_empty():
+			var eigene: Node = load(wa.scene_file_path).instantiate()
+			eigene.interaction_polygon = umrisse.duplicate()
+			eigene.get_node("Perimeter").navigation_polygon = nav.duplicate()
+			PopochiuEditorHelper.pack_scene(eigene, wa.scene_file_path)
+			eigene.free()
+		break  # nur der erste Laufbereich kommt aus dem Layout
+	for m in r.marker:
+		var name := (m as String).to_pascal_case()
+		if raum.get_node("Markers").has_node(name):
+			raum.get_node("Markers/" + name).position = Vector2(r.marker[m][0], r.marker[m][1])
+	var objekte: Array = []
+	for h in r.hotspots + r.ausgaenge:
+		objekte.append(["Hotspots/" + h.script_name, h])
+	for pd in r.props:
+		objekte.append(["Props/" + pd.script_name, pd])
+	for o in objekte:
+		if not raum.has_node(o[0]):
+			continue
+		var knoten = raum.get_node(o[0])
+		var rect := _rect(o[1].rect)
+		knoten.position = rect.get_center()
+		knoten.interaction_polygon = _rechteck_um_mitte(rect)
+		if knoten.has_node("InteractionPolygon"):
+			knoten.get_node("InteractionPolygon").polygon = knoten.interaction_polygon
+		knoten.walk_to_point = Vector2(o[1].gehe[0], o[1].gehe[1]) - rect.get_center()
+		knoten.baseline = int(rect.size.y / 2.0)
+	for fd in r.figuren:
+		for c in raum.get_node("Characters").get_children():
+			if c.name.begins_with("Character" + fd.script_name):
+				c.position = Vector2(fd.pos[0], fd.pos[1])
+	_szene_speichern(raum, pfad)
+	raum.free()
+	_angelegt.append("Layout übernommen: " + sn)
 
 
 func _hotspot(raum: PopochiuRoom, h: Dictionary, basis: String) -> void:

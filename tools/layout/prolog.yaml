@@ -48,41 +48,45 @@ treppenhaus:
 
 dachboden:
   farbe: "#7a5c43"
-  laufbereich: [[6, 219], [474, 219], [474, 267], [6, 267]]
+  # Echter Hintergrund (10. November 2026, Raumansicht mit leichter Tiefe, 32 eigene Farben).
+  # Koordinaten aus dem Bild genommen; übernommen mit --cq-layout=dachboden (game/README.md).
+  hintergrund: res://grafik/hintergruende/w0_bg_dachboden_v01.png
+  tiefe: 0.8
+  laufbereich: [[64, 268], [64, 190], [185, 184], [190, 170], [300, 170], [304, 180], [360, 182], [418, 202], [476, 204], [476, 268]]
   marker:
-    start: [375, 249]
-    von_treppenhaus: [375, 249]   # durch die Bodenluke vorne rechts
-    fernseher: [240, 237]         # vor dem Zapp-O-Mat
+    start: [395, 236]
+    von_treppenhaus: [395, 236]   # durch die Bodenluke vorne rechts
+    fernseher: [274, 182]         # vor dem Zapp-O-Mat
   figuren:
-    pixel: [156, 228]             # schläft auf dem Verlängerungskabel
-    opa: [309, 240]
+    pixel: [235, 178]             # schläft auf dem Verlängerungskabel
+    opa: [300, 215]
   props:
-    zapp_o_mat: {rect: [195, 123, 72, 93], gehe: [231, 237], item: null}
-    thunfischdose: {rect: [93, 198, 15, 12], gehe: [105, 237]}
-    dosenoeffner: {rect: [114, 198, 15, 12], gehe: [120, 237]}
-    drahtkleiderbuegel: {rect: [423, 99, 33, 15], gehe: [423, 240]}
+    zapp_o_mat: {rect: [244, 82, 60, 86], gehe: [274, 182], item: null}
+    thunfischdose: {rect: [120, 186, 15, 12], gehe: [128, 200]}
+    dosenoeffner: {rect: [140, 186, 15, 12], gehe: [146, 200]}
+    drahtkleiderbuegel: {rect: [440, 94, 20, 14], gehe: [440, 214]}
   hotspots:
-    drehknopf: {rect: [270, 144, 18, 21], gehe: [264, 237], name: Drehknopf}
-    werkzeugkiste: {rect: [84, 192, 54, 27], gehe: [111, 237]}
-    werkbank: {rect: [45, 138, 120, 51], gehe: [105, 237]}
-    kleiderschrank: {rect: [405, 60, 69, 156], gehe: [420, 240]}
-    kalender: {rect: [321, 72, 45, 45], gehe: [342, 240]}
-    ohrensessel: {rect: [312, 144, 72, 69], gehe: [348, 240]}
-    dachfenster: {rect: [60, 27, 45, 39], gehe: [90, 237]}
-    poster: {rect: [132, 45, 45, 51], gehe: [150, 237]}
-    ausgestopfter_fisch: {rect: [276, 60, 39, 21], gehe: [294, 237]}
-    kochbuch: {rect: [51, 96, 21, 18], gehe: [75, 237]}
-    toaster: {rect: [78, 120, 21, 18], gehe: [87, 237]}
-    plattenspieler: {rect: [3, 147, 39, 24], gehe: [30, 237]}
-    kiste_mit_fernbedienungen: {rect: [3, 177, 39, 36], gehe: [30, 237]}
-    opas_staubsauger_prototyp: {rect: [294, 177, 18, 39], gehe: [300, 240]}
-    fundkiste: {rect: [165, 189, 30, 27], gehe: [180, 237], name: Fundkiste}   # erst ab Zwischenspiel 1 sichtbar
-    # Finale (skripte/finale.gd): Opas Maschine in der Mitte, nur im Finale sichtbar
-    maschine: {rect: [186, 96, 60, 90], gehe: [216, 237], name: Maschine, skizze: spaeter}
-    ofentuer: {rect: [198, 150, 33, 30], gehe: [214, 237], name: Ofentür, skizze: spaeter}
-    druckmesser: {rect: [246, 108, 18, 18], gehe: [255, 237], name: Druckmesser, skizze: spaeter}
-    fassungen: {rect: [186, 78, 60, 15], gehe: [216, 237], name: Fassungen, skizze: spaeter}
-    empfaenger: {rect: [222, 54, 33, 24], gehe: [238, 237], name: Empfänger, skizze: spaeter}
-    lampe: {rect: [105, 6, 18, 27], gehe: [114, 237], name: Lampe}   # Opas Arbeitslampe, ab Zwischenspiel 3 an
+    drehknopf: {rect: [228, 118, 14, 16], gehe: [240, 182], name: Drehknopf}
+    werkzeugkiste: {rect: [76, 150, 40, 32], gehe: [96, 194]}
+    werkbank: {rect: [55, 100, 130, 40], gehe: [120, 190]}
+    kleiderschrank: {rect: [410, 80, 70, 118], gehe: [440, 214]}
+    kalender: {rect: [310, 66, 30, 36], gehe: [325, 186]}
+    ohrensessel: {rect: [300, 105, 60, 72], gehe: [330, 190]}
+    dachfenster: {rect: [60, 5, 45, 32], gehe: [95, 192]}
+    poster: {rect: [199, 48, 44, 62], gehe: [221, 180]}
+    ausgestopfter_fisch: {rect: [268, 60, 36, 20], gehe: [286, 180]}
+    kochbuch: {rect: [160, 68, 18, 28], gehe: [168, 188]}
+    toaster: {rect: [124, 76, 24, 20], gehe: [136, 188]}
+    plattenspieler: {rect: [82, 72, 36, 24], gehe: [100, 190]}
+    kiste_mit_fernbedienungen: {rect: [0, 165, 62, 70], gehe: [76, 215]}
+    opas_staubsauger_prototyp: {rect: [362, 105, 48, 90], gehe: [386, 206]}
+    fundkiste: {rect: [122, 158, 42, 27], gehe: [143, 194], name: Fundkiste}   # erst ab Zwischenspiel 1 sichtbar
+    # Finale (skripte/finale.gd): Opas Maschine an der Stelle des Zapp-O-Mat, nur im Finale sichtbar
+    maschine: {rect: [244, 78, 60, 90], gehe: [274, 182], name: Maschine, skizze: spaeter}
+    ofentuer: {rect: [256, 132, 33, 30], gehe: [272, 182], name: Ofentür, skizze: spaeter}
+    druckmesser: {rect: [226, 96, 16, 16], gehe: [250, 182], name: Druckmesser, skizze: spaeter}
+    fassungen: {rect: [244, 62, 60, 14], gehe: [274, 182], name: Fassungen, skizze: spaeter}
+    empfaenger: {rect: [262, 44, 30, 16], gehe: [276, 182], name: Empfänger, skizze: spaeter}
+    lampe: {rect: [222, 30, 36, 14], gehe: [240, 182], name: Lampe}   # Opas Arbeitslampe, ab Zwischenspiel 3 an
   ausgaenge:
-    treppenhaus: {rect: [348, 240, 60, 27], gehe: [375, 249], name: Bodenluke, id: bodenluke}
+    treppenhaus: {rect: [335, 204, 125, 40], gehe: [395, 230], name: Bodenluke, id: bodenluke}

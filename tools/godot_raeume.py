@@ -187,7 +187,7 @@ def baue(abschnitt):
             "script_name": pascal(r["id"]),
             "name_key": f"UI_RAUM_{r['id'].upper()}",
             "groesse": [breite, hoehe],
-            "hintergrund": f"{RES_PLATZHALTER}raum_{r['id']}.png",
+            "hintergrund": lay.get("hintergrund", f"{RES_PLATZHALTER}raum_{r['id']}.png"),
             "farbe": lay.get("farbe", "#5a4a3a"),
             "laufbereich": lay.get("laufbereich", [[0, hoehe - s_(40)], [breite, hoehe - s_(40)], [breite, hoehe], [0, hoehe]]),
             "marker": lay.get("marker", {}),
