@@ -4,7 +4,7 @@ Das ganze Prolog-Skript als Entwurf und Muster für alle Welten: rund 170 Zeilen
 
 ## 1. Wohnzimmer: Kein WLAN
 
-Szene. Max liegt auf Opas Sofa, das Handy über dem Gesicht. Im Fernseher läuft eine Tierdoku ohne Ton.
+Szene. Max liegt auf Opas Sofa, das Handy über dem Gesicht. Der Fernseher ist aus.
 
 | ID | Sprecher | Text | Regie |
 | --- | --- | --- | --- |
@@ -20,16 +20,26 @@ Szene. Max liegt auf Opas Sofa, das Handy über dem Gesicht. Im Fernseher läuft
 
 | ID | Sprecher | Text | Auslöser |
 | --- | --- | --- | --- |
-| P0\_WOHN\_MAX\_0110 | Max | Opas Fernseher. Älter als das Internet und genauso langsam. | Ansehen: Fernseher |
-| P0\_WOHN\_MAX\_0115 | Max | Er hat einen Knopf für „Farbe“. Als wäre das optional. Opa hat ihn auf halb gedreht. Für Stimmung. | Ansehen: Fernseher, zweites Mal |
-| P0\_WOHN\_MAX\_0120 | Max | Oma guckt auf jedem Foto, als hätte jemand ihren Geburtstag vergessen. | Ansehen: Familienfoto |
-| P0\_WOHN\_MAX\_0125 | Max | Auf einem Foto hält Opa eine Torte hoch. Sie ist verbrannt. Oma lacht trotzdem. Das muss Liebe sein. | Ansehen: Familienfoto, zweites Mal |
-| P0\_WOHN\_MAX\_0130 | Max | Kalter Tee. Opa vergisst ihn jeden Tag. Es ist fast eine Tradition. | Ansehen: Teetasse |
-| P0\_WOHN\_MAX\_0135 | Max | Im Tee schwimmt ein Keks. Er ist schon lange untergegangen. Niemand hat ihn gerettet. | Ansehen: Teetasse, zweites Mal |
-| P0\_WOHN\_MAX\_0140 | Max | Hier lag früher die Fernbedienung. Jetzt liegt hier ein fernbedienungsförmiger Staubrand. | Ansehen: Leerer Platz auf dem Couchtisch |
-| P0\_WOHN\_MAX\_0145 | Max | Ich leg meine Hand in den Staubrand. Passt nicht. Die Fernbedienung hatte breitere Schultern. | Ansehen: Leerer Platz auf dem Couchtisch, zweites Mal |
+| P0\_WOHN\_MAX\_0110 | Max | Opas Fernseher. Er hat einen Knopf für „Farbe“. Als wäre das optional. | Ansehen: Fernseher |
+| P0\_WOHN\_MAX\_0115 | Max | Opa hat „Farbe“ auf halb gedreht. Für Stimmung. | Ansehen: Fernseher, zweites Mal |
+| P0\_WOHN\_MAX\_0120 | Max | Opa hält eine Torte hoch. Sie ist verbrannt. Oma lacht trotzdem. Das muss Liebe sein. | Ansehen: Familienfoto |
+| P0\_WOHN\_MAX\_0125 | Max | Auf allen anderen Fotos guckt Oma, als hätte jemand was vergessen. Ich tippe auf Opa. | Ansehen: Familienfoto, zweites Mal |
+| P0\_WOHN\_MAX\_0130 | Max | Kalter Tee. Opa kocht jeden Tag einen und vergisst ihn jeden Tag. | Ansehen: Teetasse |
+| P0\_WOHN\_MAX\_0135 | Max | Unten in der Tasse liegt ein Keks. Beim Tunken verloren. Wir gedenken seiner. | Ansehen: Teetasse, zweites Mal |
+| P0\_WOHN\_MAX\_0140 | Max | Ein sauberes Rechteck im Staub. Hier lag Opas Fernbedienung. | Ansehen: Leerer Platz auf dem Couchtisch |
+| P0\_WOHN\_MAX\_0145 | Max | Genau ihre Umrisse. Wie am Tatort. Nur ohne Kreide. | Ansehen: Leerer Platz auf dem Couchtisch, zweites Mal |
 | P0\_WOHN\_MAX\_0150 | Max | Das Sofa. Mein Zuhause. Mein Lebenswerk. | Ansehen: Sofa |
-| P0\_WOHN\_MAX\_0155 | Max | Da ist eine Kuhle in meiner Form. Das Sofa vermisst mich. Ich bin noch nicht mal weg. | Ansehen: Sofa, zweites Mal |
+| P0\_WOHN\_MAX\_0155 | Max | Da ist eine Kuhle in meiner Form. Das Sofa vermisst mich schon. Ich steh direkt daneben. | Ansehen: Sofa, zweites Mal |
+
+**Benutzen im Wohnzimmer:** Eigene Zeilen statt Ersatzzeilen, ohne Fehler-Jingle.
+
+| ID | Sprecher | Text | Auslöser |
+| --- | --- | --- | --- |
+| P0\_WOHN\_MAX\_0160 | Max | Nicht hinlegen. Wenn ich mich jetzt hinlege, steh ich erst nächstes Jahr wieder auf. | Benutzen: Sofa |
+| P0\_WOHN\_MAX\_0170 | Max | Ich drück auf „An“. Er brummt, denkt kurz nach und geht wieder aus. Kenn ich von mir. | Benutzen: Fernseher |
+| P0\_WOHN\_MAX\_0180 | Max | Kalten Tee trinke ich nicht. Ich hab Prinzipien. Zwei. | Benutzen: Teetasse |
+| P0\_WOHN\_MAX\_0190 | Max | Ich lass es hängen. Oma merkt, wenn ein Bild schief hängt. Auch von woanders. | Benutzen: Familienfoto |
+| P0\_WOHN\_MAX\_0200 | Max | Ich wisch den Staub nicht weg. Das ist ein Beweisstück. | Benutzen: Leerer Platz auf dem Couchtisch |
 
 ## 1b. Treppenhaus: Durchgang
 
@@ -37,12 +47,15 @@ Durchgang zwischen Wohnzimmer und Dachboden, zwei Ansehen-Objekte und die Treppe
 
 | ID | Sprecher | Text | Auslöser |
 | --- | --- | --- | --- |
-| P0\_TREP\_MAX\_0010 | Max | Opas Hut. Er trägt ihn nie, aber er hängt immer hier. Wie ein Wächter. | Ansehen: Hut am Haken |
-| P0\_TREP\_MAX\_0015 | Max | Am Hutband steckt eine Feder. Vom Fasan oder vom Kopfkissen. Bei Opa ist beides möglich. | Ansehen: Hut am Haken, zweites Mal |
-| P0\_TREP\_MAX\_0020 | Max | Draußen Nachmittag, drinnen 1987. | Ansehen: Fenster |
-| P0\_TREP\_MAX\_0025 | Max | Auf der Fensterbank steht ein Kaktus. Er hat Opa überlebt. Also, er lebt noch. Opa auch. | Ansehen: Fenster, zweites Mal |
+| P0\_TREP\_MAX\_0010 | Max | Opas Hut. Am Band steckt eine Feder. Vom Fasan oder vom Kopfkissen. Bei Opa ist beides möglich. | Ansehen: Hut am Haken |
+| P0\_TREP\_MAX\_0015 | Max | Er riecht nach Lötzinn und Pfefferminz. Also genau wie Opa. | Ansehen: Hut am Haken, zweites Mal |
+| P0\_TREP\_MAX\_0020 | Max | Draußen wird's dunkel, drinnen ist 1987. | Ansehen: Fenster |
+| P0\_TREP\_MAX\_0025 | Max | Auf der Fensterbank stand mal ein Kaktus. Opa hat ihn jeden Tag gegossen. Daran lag's. | Ansehen: Fenster, zweites Mal |
 | P0\_TREP\_MAX\_0030 | Max | Jede Stufe knarrt in einer anderen Tonart. Opa nennt das Alarmanlage. | Ansehen: Treppe |
-| P0\_TREP\_MAX\_0035 | Max | Die siebte Stufe knarrt in Moll. Wer da drauftritt, klingt sofort traurig. | Ansehen: Treppe, zweites Mal |
+| P0\_TREP\_MAX\_0035 | Max | Die siebte Stufe knarrt in Moll. Ich steig immer drüber. Ohne WLAN bin ich traurig genug. | Ansehen: Treppe, zweites Mal |
+| P0\_TREP\_MAX\_0040 | Max | Ich setz ihn nicht auf. Sonst muss ich am Ende noch Opas Hobbys übernehmen. | Benutzen: Hut am Haken |
+| P0\_TREP\_MAX\_0050 | Max | Zu. Seit 1987. Opa sagt, sonst kommt die Gegenwart rein. | Benutzen: Fenster |
+| P0\_TREP\_MAX\_0060 | Max | Erste Stufe. Knarrt in Dur. Das Haus weiß jetzt, dass ich komme. | Benutzen: Treppe |
 
 ## 2. Dachboden: Opas Auftrag
 
@@ -105,8 +118,10 @@ Reden mit Opa und Pixel auf dem Dachboden. Max stellt die Frage, die Antwort fol
 
 | ID | Sprecher | Text | Auslöser |
 | --- | --- | --- | --- |
-| P0\_DACH\_MAX\_0210 | Max | Pixel liegt auf dem Stromkabel. Er hat sich den wärmsten Platz im Haus ausgesucht. Respekt. | Ansehen: Pixel |
-| P0\_DACH\_PIX\_0215 | Pixel | Wenn du mich noch mal so anguckst, schnurre ich. Das ist keine Freundlichkeit. Das ist eine Warnung. | Ansehen: Pixel, zweites Mal |
+| P0\_DACH\_MAX\_0210 | Max | Pixel liegt auf dem Stromkabel. Er hat sich den wärmsten Platz im Haus ausgesucht. Respekt. | Ansehen: Pixel; vor P1 |
+| P0\_DACH\_MAX\_0212 | Max | Pixel sitzt auf der Werkbank und verdaut. Mit Würde. | Ansehen: Pixel; nach P1 |
+| P0\_DACH\_MAX\_0213 | Max | Er schnurrt im Schlaf. Oder er knurrt. Bei Pixel klingt beides gleich. | Ansehen: Pixel, zweites Mal; vor P1 |
+| P0\_DACH\_PIX\_0215 | Pixel | Wenn du mich noch mal so anguckst, schnurre ich. Das ist keine Freundlichkeit. Das ist eine Warnung. | Ansehen: Pixel, zweites Mal; nach P1 |
 | P0\_DACH\_MAX\_0220 | Max | Er wiegt so viel wie ein Umzugskarton. Ein voller. | Benutzen: Pixel |
 | P0\_DACH\_OPA\_0230 | Opa | Den kriegst du nicht weg. Der Kater schläft wie ein Stein. Ein beleidigter Stein. | nach zwei Versuchen |
 | P0\_DACH\_MAX\_0240 | Max | Opas Werkzeugkiste. Schraubenzieher, Draht, Thunfisch. Wie man halt so sortiert. | Ansehen: Werkzeugkiste |
@@ -134,7 +149,7 @@ Reden mit Opa und Pixel auf dem Dachboden. Max stellt die Frage, die Antwort fol
 | P0\_DACH\_MAX\_0400 | Max | Der Zapp-O-Mat. Aus. Solange Pixel auf dem Kabel liegt, schaltet Opa ihn nicht ein. | Ansehen: Zapp-O-Mat; vor P1 |
 | P0\_DACH\_MAX\_0405 | Max | Der Bildschirm ist schwarz. Ich seh mein Spiegelbild. Es sieht genauso gelangweilt aus wie ich. | Ansehen: Zapp-O-Mat, zweites Mal; vor P1 |
 | P0\_DACH\_MAX\_0410 | Max | Er ist an. Er zeigt nur nichts. Sieht aus wie ein Ladebildschirm, der aufgegeben hat. | Ansehen: Zapp-O-Mat (rauschend); nach P1 |
-| P0\_DACH\_MAX\_0415 | Max | Schnee auf allen Kanälen. Das ist das älteste Wetter der Welt. Pixel sagt, früher war das Abendprogramm. | Ansehen: Zapp-O-Mat (rauschend), zweites Mal; nach P1 |
+| P0\_DACH\_MAX\_0415 | Max | Ohne Antenne nur Schnee. „Modell Kleiderbügel“, sagt Opa. Ich hoffe, das war bildlich gemeint. | Ansehen: Zapp-O-Mat (rauschend), zweites Mal; nach P1 |
 | P0\_DACH\_PIX\_0420 | Pixel | Das nennt man Schnee. Früher hat man das stundenlang angesehen, wenn das Programm vorbei war. |  |
 | P0\_DACH\_MAX\_0430 | Max | Wenn das Programm vorbei war? Das Programm war einfach … vorbei? |  |
 | P0\_DACH\_OPA\_0440 | Opa | Die Antenne fehlt! Empfangsorgan, Modell Kleiderbügel. Ich hab sie verliehen. Oder eingebaut. Irgendwo. |  |
@@ -180,29 +195,51 @@ Kurze Szene, führt die Reisetasche ein. Im Prolog gibt es nur das Pflichtfach; 
 
 | ID | Sprecher | Text | Auslöser |
 | --- | --- | --- | --- |
-| P0\_DACH\_MAX\_0910 | Max | Opas erster Versuch einer Unterwasser-Zeitmaschine. Der Fisch hat's nicht geschafft. | Ansehen: Ausgestopfter Fisch |
-| P0\_DACH\_MAX\_0915 | Max | Er hat einen Schnorchel. Der Fisch. Opa hat wirklich an alles gedacht. Außer an Luft. | Ansehen: Ausgestopfter Fisch, zweites Mal |
+| P0\_DACH\_MAX\_0910 | Max | Ein ausgestopfter Fisch. Auf dem Schild steht: „Testpilot“. | Ansehen: Ausgestopfter Fisch |
+| P0\_DACH\_MAX\_0915 | Max | Er trägt einen winzigen Schnorchel. Opa hat an alles gedacht. Nur nicht an den Fisch. | Ansehen: Ausgestopfter Fisch, zweites Mal |
 | P0\_DACH\_PIX\_0920 | Pixel | Siebzehn Fernbedienungen, und die richtige ist nie dabei. | Ansehen: Kiste mit Fernbedienungen; nach P1 |
 | P0\_DACH\_PIX\_0925 | Pixel | Ich hab nachgezählt. Immer noch siebzehn. Eine fehlt. Ich weiß, welche. Ich sag's nicht. Ich bin nicht dein Suchdienst. | Ansehen: Kiste mit Fernbedienungen, zweites Mal; nach P1 |
 | P0\_DACH\_MAX\_0930 | Max | Eine Pyramide und eine Neonstadt. Opa hat einen sehr breiten Geschmack. Oder Reisepläne. | Ansehen: Poster |
-| P0\_DACH\_MAX\_0935 | Max | In die Ecke vom Poster hat Opa Kreuze gemalt. Wie Reiseziele. Oder Einkaufsorte. | Ansehen: Poster, zweites Mal |
+| P0\_DACH\_MAX\_0935 | Max | Am Rand hat Opa notiert: „Sonnencreme. Thunfisch. Max?“ Ich stehe auf einer Packliste. | Ansehen: Poster, zweites Mal |
 | P0\_DACH\_MAX\_0940 | Max | Ein Toaster mit Propeller. Fliegendes Frühstück. Nie wieder. | Ansehen: Toaster |
-| P0\_DACH\_MAX\_0942 | Max | Am Propeller klebt noch ein Krümel. Er ist geflogen. Ich weiß nicht, wie weit. Ich will's nicht wissen. | Ansehen: Toaster, zweites Mal |
-| P0\_DACH\_PIX\_0945 | Pixel | Wir haben uns geeinigt. Er bleibt aus, ich behalte das andere Ohr. | Ansehen: Opas Staubsauger-Prototyp; nach P1 |
+| P0\_DACH\_MAX\_0942 | Max | Am Propeller klebt ein Krümel. Der Toaster hat den Flug überlebt. Der Toast nicht. | Ansehen: Toaster, zweites Mal |
+| P0\_DACH\_PIX\_0945 | Pixel | Opas Staubsauger. Er hat mal mein Ohr angesaugt. Seitdem gilt: Er bleibt aus, ich bleibe weg. | Ansehen: Opas Staubsauger-Prototyp; nach P1 |
 | P0\_DACH\_PIX\_0946 | Pixel | Er hat geblinzelt. Mit dem Schalter. Ich habe es gesehen. Wir reden nicht darüber. | Ansehen: Opas Staubsauger-Prototyp, zweites Mal; nach P1 |
-| P0\_DACH\_PIX\_0950 | Pixel | Ein Eselsohr bei Schokokuchen. Interessant. | Ansehen: Kochbuch; nach P1 |
+| P0\_DACH\_PIX\_0950 | Pixel | Ein Eselsohr bei Schokokuchen. Ein Kater merkt sich so was. Ein Opa offenbar nicht. | Ansehen: Kochbuch; nach P1 |
 | P0\_DACH\_PIX\_0955 | Pixel | Neben dem Schokokuchen: ein Datum und ein Herz. Mit Bleistift. Und ganz klein: „Nicht wieder vergessen.“ | Ansehen: Kochbuch, zweites Mal; nach P1 |
 | P0\_DACH\_MAX\_0960 | Max | „Schlager für Erfinder, Folge 3“. Es gibt also noch zwei schlimmere. | Ansehen: Plattenspieler |
 | P0\_DACH\_MAX\_0965 | Max | Auf der Hülle hat Opa ein Lied angekreuzt: „Mein Herz ist ein Lötkolben.“ Ich hab Angst vor der Melodie. | Ansehen: Plattenspieler, zweites Mal |
 | P0\_DACH\_MAX\_0970 | Max | Der Ohrensessel. Gefährlich bequem. Wenn ich mich da reinsetze, komme ich nie wieder raus. | Ansehen: Ohrensessel |
-| P0\_DACH\_MAX\_0975 | Max | Ich guck ihn nur an, und meine Beine werden schon schwer. Der Sessel hat eine Anziehungskraft. Wie ein schwarzes Loch mit Kissen. | Ansehen: Ohrensessel, zweites Mal |
+| P0\_DACH\_MAX\_0975 | Max | In der Ritze steckt was Schwarzes mit Knöpfen. Die Fernbedienung? Nein. Ein Brillenetui. | Ansehen: Ohrensessel, zweites Mal |
 | P0\_DACH\_MAX\_0980 | Max | Eine Werkbank voller halber Erfindungen. Wie mein Hausaufgaben-Ordner. | Ansehen: Werkbank |
 | P0\_DACH\_MAX\_0985 | Max | Eine halbe Zahnbürste mit Motor. Ein halber Regenschirm mit Lampe. Opa erfindet immer nur die erste Hälfte. | Ansehen: Werkbank, zweites Mal |
 | P0\_DACH\_MAX\_0990 | Max | Das Dachfenster. Draußen ist Welt. Wird überbewertet. | Ansehen: Dachfenster |
 | P0\_DACH\_MAX\_0995 | Max | Eine Taube sitzt auf dem Glas und guckt rein. Sie findet uns auch komisch. | Ansehen: Dachfenster, zweites Mal |
 | P0\_DACH\_MAX\_1000 | Max | Da geht's runter. Zum Sofa. Nein. Konzentration. | Benutzen: Bodenluke; vor P3 |
 | P0\_DACH\_MAX\_1010 | Max | Die Bodenluke. Da unten ist das Sofa. Ich sehe es nicht, aber ich spüre es. | Ansehen: Bodenluke |
-| P0\_DACH\_MAX\_1015 | Max | Ich hör von unten das Sofa rufen. Es sagt meinen Namen. Es klingt sehr gemütlich. | Ansehen: Bodenluke, zweites Mal |
+| P0\_DACH\_MAX\_1015 | Max | Ich hab kurz runtergehorcht. Das Sofa schweigt. Es ist beleidigt, dass ich gegangen bin. | Ansehen: Bodenluke, zweites Mal |
+
+## 7b. Benutzen auf dem Dachboden
+
+Linksklick auf Deko-Objekte: eigene Zeilen statt Ersatzzeilen, ohne Fehler-Jingle. Gelten auch in den Zwischenspielen, solange dort nichts Eigenes steht.
+
+| ID | Sprecher | Text | Auslöser |
+| --- | --- | --- | --- |
+| P0\_DACH\_MAX\_1610 | Max | Ich wühl nicht in Opas Werkzeug. Da beißt bestimmt was. | Benutzen: Werkzeugkiste |
+| P0\_DACH\_MAX\_1620 | Max | Ich zieh keine von Opas Strickjacken an. Ich hab noch einen Ruf. Einen kleinen. | Benutzen: Kleiderschrank |
+| P0\_DACH\_MAX\_1630 | Max | Ich blätter nicht weiter. Ich will nicht wissen, was Opa im Dezember vorhat. | Benutzen: Kalender |
+| P0\_DACH\_MAX\_1640 | Max | Ich fass ihn nicht an. Er guckt so vorwurfsvoll. | Benutzen: Ausgestopfter Fisch |
+| P0\_DACH\_MAX\_1650 | Max | Ich drück auf allen rum. Irgendwo geht ein Garagentor auf. Wir haben keine Garage. | Benutzen: Kiste mit Fernbedienungen |
+| P0\_DACH\_MAX\_1660 | Max | Ich lass es hängen. Die Kreuze hat Opa gemacht, nicht ich. | Benutzen: Poster |
+| P0\_DACH\_MAX\_1670 | Max | Ich steck kein Brot rein. Ich will nicht schuld sein, wenn er abhebt. | Benutzen: Toaster |
+| P0\_DACH\_MAX\_1680 | Max | Ich schalte ihn nicht ein. Pixel würde mir das nie verzeihen. | Benutzen: Opas Staubsauger-Prototyp |
+| P0\_DACH\_MAX\_1690 | Max | Ich koche nicht. Ich bestelle. Das ist auch eine Kunst. | Benutzen: Kochbuch |
+| P0\_DACH\_MAX\_1700 | Max | Ich leg sie nicht auf. „Schlager für Erfinder“ reicht mir als Warnung. | Benutzen: Plattenspieler |
+| P0\_DACH\_MAX\_1710 | Max | Ich setz mich nicht rein. Ich kenne meine Schwächen. Er ist eine davon. | Benutzen: Ohrensessel |
+| P0\_DACH\_MAX\_1720 | Max | Ich bau nichts fertig. Das ist Opas Prinzip, und ich respektiere das. | Benutzen: Werkbank |
+| P0\_DACH\_MAX\_1730 | Max | Ich komm nicht ran. Und draußen ist eh nur Wetter. | Benutzen: Dachfenster |
+| P0\_DACH\_MAX\_1740 | Max | Kein Strom. Pixel liegt auf dem Kabel und hält es warm. Mit seinem ganzen Gewicht. | Benutzen: Zapp-O-Mat; vor P1 |
+| P0\_DACH\_MAX\_1750 | Max | Ich klopf drauf. Opa sagt, das hilft. Es hilft nicht. | Benutzen: Zapp-O-Mat; nach P1 |
 
 ## 8. Fehlversuche mit eigener Zeile
 

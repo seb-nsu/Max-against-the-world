@@ -158,6 +158,15 @@
        ],
        "mal": 2
       }
+     ],
+     "benutzen": [
+      {
+       "zeile": "P0_WOHN_MAX_0170",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_WOHN_MAX_0170"
+       ]
+      }
      ]
     },
     {
@@ -189,6 +198,15 @@
         "P0_WOHN_MAX_0125"
        ],
        "mal": 2
+      }
+     ],
+     "benutzen": [
+      {
+       "zeile": "P0_WOHN_MAX_0190",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_WOHN_MAX_0190"
+       ]
       }
      ]
     },
@@ -222,6 +240,15 @@
        ],
        "mal": 2
       }
+     ],
+     "benutzen": [
+      {
+       "zeile": "P0_WOHN_MAX_0180",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_WOHN_MAX_0180"
+       ]
+      }
      ]
     },
     {
@@ -254,6 +281,15 @@
        ],
        "mal": 2
       }
+     ],
+     "benutzen": [
+      {
+       "zeile": "P0_WOHN_MAX_0200",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_WOHN_MAX_0200"
+       ]
+      }
      ]
     },
     {
@@ -285,6 +321,15 @@
         "P0_WOHN_MAX_0155"
        ],
        "mal": 2
+      }
+     ],
+     "benutzen": [
+      {
+       "zeile": "P0_WOHN_MAX_0160",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_WOHN_MAX_0160"
+       ]
       }
      ]
     }
@@ -443,6 +488,15 @@
        ],
        "mal": 2
       }
+     ],
+     "benutzen": [
+      {
+       "zeile": "P0_TREP_MAX_0040",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_TREP_MAX_0040"
+       ]
+      }
      ]
     },
     {
@@ -475,6 +529,15 @@
        ],
        "mal": 2
       }
+     ],
+     "benutzen": [
+      {
+       "zeile": "P0_TREP_MAX_0050",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_TREP_MAX_0050"
+       ]
+      }
      ]
     },
     {
@@ -506,6 +569,15 @@
         "P0_TREP_MAX_0035"
        ],
        "mal": 2
+      }
+     ],
+     "benutzen": [
+      {
+       "zeile": "P0_TREP_MAX_0060",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_TREP_MAX_0060"
+       ]
       }
      ]
     }
@@ -818,6 +890,15 @@
        ],
        "mal": 2
       }
+     ],
+     "benutzen": [
+      {
+       "zeile": "P0_DACH_MAX_1610",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_DACH_MAX_1610"
+       ]
+      }
      ]
     },
     {
@@ -849,6 +930,15 @@
         "P0_DACH_MAX_0455"
        ],
        "mal": 2
+      }
+     ],
+     "benutzen": [
+      {
+       "zeile": "P0_DACH_MAX_1620",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_DACH_MAX_1620"
+       ]
       }
      ]
     },
@@ -882,6 +972,15 @@
        ],
        "mal": 2
       }
+     ],
+     "benutzen": [
+      {
+       "zeile": "P0_DACH_MAX_1630",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_DACH_MAX_1630"
+       ]
+      }
      ]
     },
     {
@@ -913,6 +1012,15 @@
         "P0_DACH_MAX_0915"
        ],
        "mal": 2
+      }
+     ],
+     "benutzen": [
+      {
+       "zeile": "P0_DACH_MAX_1640",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_DACH_MAX_1640"
+       ]
       }
      ]
     },
@@ -958,6 +1066,15 @@
        ],
        "mal": 2
       }
+     ],
+     "benutzen": [
+      {
+       "zeile": "P0_DACH_MAX_1650",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_DACH_MAX_1650"
+       ]
+      }
      ]
     },
     {
@@ -990,6 +1107,15 @@
        ],
        "mal": 2
       }
+     ],
+     "benutzen": [
+      {
+       "zeile": "P0_DACH_MAX_1660",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_DACH_MAX_1660"
+       ]
+      }
      ]
     },
     {
@@ -1021,6 +1147,15 @@
         "P0_DACH_MAX_0942"
        ],
        "mal": 2
+      }
+     ],
+     "benutzen": [
+      {
+       "zeile": "P0_DACH_MAX_1670",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_DACH_MAX_1670"
+       ]
       }
      ]
     },
@@ -1066,6 +1201,15 @@
        ],
        "mal": 2
       }
+     ],
+     "benutzen": [
+      {
+       "zeile": "P0_DACH_MAX_1680",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_DACH_MAX_1680"
+       ]
+      }
      ]
     },
     {
@@ -1110,6 +1254,15 @@
        ],
        "mal": 2
       }
+     ],
+     "benutzen": [
+      {
+       "zeile": "P0_DACH_MAX_1690",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_DACH_MAX_1690"
+       ]
+      }
      ]
     },
     {
@@ -1141,6 +1294,15 @@
         "P0_DACH_MAX_0965"
        ],
        "mal": 2
+      }
+     ],
+     "benutzen": [
+      {
+       "zeile": "P0_DACH_MAX_1700",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_DACH_MAX_1700"
+       ]
       }
      ]
     },
@@ -1174,6 +1336,15 @@
        ],
        "mal": 2
       }
+     ],
+     "benutzen": [
+      {
+       "zeile": "P0_DACH_MAX_1710",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_DACH_MAX_1710"
+       ]
+      }
      ]
     },
     {
@@ -1206,6 +1377,15 @@
        ],
        "mal": 2
       }
+     ],
+     "benutzen": [
+      {
+       "zeile": "P0_DACH_MAX_1720",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_DACH_MAX_1720"
+       ]
+      }
      ]
     },
     {
@@ -1237,6 +1417,15 @@
         "P0_DACH_MAX_0995"
        ],
        "mal": 2
+      }
+     ],
+     "benutzen": [
+      {
+       "zeile": "P0_DACH_MAX_1730",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_DACH_MAX_1730"
+       ]
       }
      ]
     }
@@ -1315,6 +1504,34 @@
       }
      ],
      "nehmen": null,
+     "benutzen": [
+      {
+       "zeile": "P0_DACH_MAX_1740",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_DACH_MAX_1740"
+       ],
+       "bedingung": [
+        {
+         "art": "vor",
+         "raetsel": "P1"
+        }
+       ]
+      },
+      {
+       "zeile": "P0_DACH_MAX_1750",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_DACH_MAX_1750"
+       ],
+       "bedingung": [
+        {
+         "art": "nach",
+         "raetsel": "P1"
+        }
+       ]
+      }
+     ],
      "gegenstand_auf": [
       {
        "zeile": "P0_DACH_MAX_1130",
@@ -1529,6 +1746,41 @@
      "blasen": [
       "P0_DACH_MAX_0210"
      ],
+     "bedingung": [
+      {
+       "art": "vor",
+       "raetsel": "P1"
+      }
+     ],
+     "raum": "dachboden"
+    },
+    {
+     "zeile": "P0_DACH_MAX_0212",
+     "sprecher": "MAX",
+     "blasen": [
+      "P0_DACH_MAX_0212"
+     ],
+     "bedingung": [
+      {
+       "art": "nach",
+       "raetsel": "P1"
+      }
+     ],
+     "raum": "dachboden"
+    },
+    {
+     "zeile": "P0_DACH_MAX_0213",
+     "sprecher": "MAX",
+     "blasen": [
+      "P0_DACH_MAX_0213"
+     ],
+     "bedingung": [
+      {
+       "art": "vor",
+       "raetsel": "P1"
+      }
+     ],
+     "mal": 2,
      "raum": "dachboden"
     },
     {
@@ -1536,6 +1788,12 @@
      "sprecher": "PIX",
      "blasen": [
       "P0_DACH_PIX_0215"
+     ],
+     "bedingung": [
+      {
+       "art": "nach",
+       "raetsel": "P1"
+      }
      ],
      "mal": 2,
      "raum": "dachboden"

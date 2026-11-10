@@ -19,11 +19,7 @@ func _on_right_click() -> void:
 		])
 
 
-func _on_click() -> void:
-	if await Spiel.regel("benutzen", self):
-		return
-	await Spiel.hingehen(self)
-	await Spiel.ersatz()
+## Linksklick: Standard aus dem Bauplan (Benutzen-Zeilen 1740/1750, sonst Ersatzzeile).
 
 
 func _on_item_used(item: PopochiuInventoryItem) -> void:
