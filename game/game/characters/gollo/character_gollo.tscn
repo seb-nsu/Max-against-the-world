@@ -1,16 +1,16 @@
 [gd_scene format=3 uid="uid://tcs1hovg4gtc"]
 
-[ext_resource type="Script" path="res://game/characters/gollo/character_gollo.gd" id="1_xarv8"]
+[ext_resource type="Script" uid="uid://dp41c312t3pfb" path="res://game/characters/gollo/character_gollo.gd" id="1_xarv8"]
 [ext_resource type="Texture2D" uid="uid://crqnjfd3mbc31" path="res://grafik/platzhalter/figur_gollo.png" id="2_uis3j"]
 
 [node name="CharacterGollo" type="Area2D" unique_id=1891695985]
 script = ExtResource("1_xarv8")
 walk_speed = 135.0
-dialog_pos = Vector2(0, -72)
+dialog_pos = Vector2(0, -86)
 script_name = "Gollo"
 description = "UI_OBJ_GOLLO"
 cursor = 8
-interaction_polygon = PackedVector2Array(-12, -66, 12, -66, 12, 0, -12, 0)
+interaction_polygon = PackedVector2Array(-15, -82, 15, -82, 15, 0, -15, 0)
 
 [node name="ScalingPolygon" type="CollisionPolygon2D" parent="." unique_id=204061238]
 polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
@@ -20,11 +20,11 @@ polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2050681487]
 texture_filter = 1
 texture = ExtResource("2_uis3j")
-offset = Vector2(0, -33)
+offset = Vector2(0, -41)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=238796899]
 visible = false
-polygon = PackedVector2Array(-12, -66, 12, -66, 12, 0, -12, 0)
+polygon = PackedVector2Array(-15, -82, 15, -82, 15, 0, -15, 0)
 
 [node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=1002357574]
 visible = false

@@ -1,16 +1,16 @@
 [gd_scene format=3 uid="uid://dkdu25bcfwlk1"]
 
-[ext_resource type="Script" path="res://game/characters/nebet/character_nebet.gd" id="1_vn7w4"]
+[ext_resource type="Script" uid="uid://dawwkkt57q8bb" path="res://game/characters/nebet/character_nebet.gd" id="1_vn7w4"]
 [ext_resource type="Texture2D" uid="uid://clr1gg7ij5rd8" path="res://grafik/platzhalter/figur_nebet.png" id="2_xpghu"]
 
 [node name="CharacterNebet" type="Area2D" unique_id=1952576644]
 script = ExtResource("1_vn7w4")
 walk_speed = 90.0
-dialog_pos = Vector2(0, -82)
+dialog_pos = Vector2(0, -102)
 script_name = "Nebet"
 description = "UI_OBJ_NEBET"
 cursor = 8
-interaction_polygon = PackedVector2Array(-13, -78, 13, -78, 13, 0, -13, 0)
+interaction_polygon = PackedVector2Array(-16, -98, 16, -98, 16, 0, -16, 0)
 
 [node name="ScalingPolygon" type="CollisionPolygon2D" parent="." unique_id=1182574107]
 polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
@@ -20,11 +20,11 @@ polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=432740184]
 texture_filter = 1
 texture = ExtResource("2_xpghu")
-offset = Vector2(0, -39)
+offset = Vector2(0, -49)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=36570082]
 visible = false
-polygon = PackedVector2Array(-13, -78, 13, -78, 13, 0, -13, 0)
+polygon = PackedVector2Array(-16, -98, 16, -98, 16, 0, -16, 0)
 
 [node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=1603479266]
 visible = false

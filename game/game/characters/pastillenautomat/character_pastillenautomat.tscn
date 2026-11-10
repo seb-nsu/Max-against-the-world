@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://blg6r5dwitrph"]
 
-[ext_resource type="Script" path="res://game/characters/pastillenautomat/character_pastillenautomat.gd" id="1_dbvsl"]
+[ext_resource type="Script" uid="uid://bwc1swews8fxd" path="res://game/characters/pastillenautomat/character_pastillenautomat.gd" id="1_dbvsl"]
 [ext_resource type="Texture2D" uid="uid://dv3cueor644w1" path="res://grafik/platzhalter/figur_pastillenautomat.png" id="2_18qc7"]
 
 [node name="CharacterPastillenautomat" type="Area2D" unique_id=430336523]

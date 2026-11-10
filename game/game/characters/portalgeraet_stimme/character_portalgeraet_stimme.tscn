@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://o435xypftu51"]
 
-[ext_resource type="Script" path="res://game/characters/portalgeraet_stimme/character_portalgeraet_stimme.gd" id="1_i8q5a"]
+[ext_resource type="Script" uid="uid://caww6nhufl2f7" path="res://game/characters/portalgeraet_stimme/character_portalgeraet_stimme.gd" id="1_i8q5a"]
 [ext_resource type="Texture2D" uid="uid://82nv5na7rrhw" path="res://grafik/platzhalter/figur_portalgeraet_stimme.png" id="2_ek35d"]
 
 [node name="CharacterPortalgeraetStimme" type="Area2D" unique_id=1291778746]

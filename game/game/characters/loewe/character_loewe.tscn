@@ -1,16 +1,16 @@
 [gd_scene format=3 uid="uid://cqhkiu4alnam0"]
 
-[ext_resource type="Script" path="res://game/characters/loewe/character_loewe.gd" id="1_ulnhh"]
+[ext_resource type="Script" uid="uid://dgsg1hu2uqm5e" path="res://game/characters/loewe/character_loewe.gd" id="1_ulnhh"]
 [ext_resource type="Texture2D" uid="uid://cb7ya1ng43qdi" path="res://grafik/platzhalter/figur_loewe.png" id="2_11bie"]
 
 [node name="CharacterLoewe" type="Area2D" unique_id=114802647]
 script = ExtResource("1_ulnhh")
 walk_speed = 90.0
-dialog_pos = Vector2(0, -94)
+dialog_pos = Vector2(0, -116)
 script_name = "Loewe"
 description = "UI_OBJ_LOEWE"
 cursor = 8
-interaction_polygon = PackedVector2Array(-15, -90, 15, -90, 15, 0, -15, 0)
+interaction_polygon = PackedVector2Array(-18.5, -112, 18.5, -112, 18.5, 0, -18.5, 0)
 
 [node name="ScalingPolygon" type="CollisionPolygon2D" parent="." unique_id=353453548]
 polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
@@ -20,11 +20,11 @@ polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=204672594]
 texture_filter = 1
 texture = ExtResource("2_11bie")
-offset = Vector2(0, -45)
+offset = Vector2(0, -56)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1514384262]
 visible = false
-polygon = PackedVector2Array(-15, -90, 15, -90, 15, 0, -15, 0)
+polygon = PackedVector2Array(-18.5, -112, 18.5, -112, 18.5, 0, -18.5, 0)
 
 [node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=1990591734]
 visible = false

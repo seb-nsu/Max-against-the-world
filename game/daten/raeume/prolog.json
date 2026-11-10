@@ -559,7 +559,7 @@
      182
     ]
    },
-   "tiefe": 0.8,
+   "tiefe": 0.85,
    "figuren": [
     {
      "id": "pixel",
@@ -1435,7 +1435,7 @@
    "script_name": "Max",
    "kuerzel": "MAX",
    "name_key": "UI_OBJ_MAX",
-   "groesse_px": 84,
+   "groesse_px": 105,
    "spielbar": true,
    "textfarbe": "#ffffff",
    "sprite": "res://grafik/platzhalter/figur_max.png",
@@ -1456,7 +1456,7 @@
    "script_name": "Pixel",
    "kuerzel": "PIX",
    "name_key": "UI_OBJ_PIXEL",
-   "groesse_px": 27,
+   "groesse_px": 34,
    "spielbar": false,
    "textfarbe": "#5fd3c8",
    "sprite": "res://grafik/platzhalter/figur_pixel.png",
@@ -1512,7 +1512,7 @@
    "script_name": "Opa",
    "kuerzel": "OPA",
    "name_key": "UI_OBJ_OPA",
-   "groesse_px": 90,
+   "groesse_px": 112,
    "spielbar": false,
    "textfarbe": "#f5a04a",
    "sprite": "res://grafik/platzhalter/figur_opa.png",

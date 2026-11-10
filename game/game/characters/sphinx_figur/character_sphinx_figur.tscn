@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://3lpls05vx44o"]
 
-[ext_resource type="Script" path="res://game/characters/sphinx_figur/character_sphinx_figur.gd" id="1_u6dr0"]
+[ext_resource type="Script" uid="uid://cdunvlb50d6x3" path="res://game/characters/sphinx_figur/character_sphinx_figur.gd" id="1_u6dr0"]
 [ext_resource type="Texture2D" uid="uid://d33nn62ghbl3l" path="res://grafik/platzhalter/figur_sphinx_figur.png" id="2_ugb4m"]
 
 [node name="CharacterSphinxFigur" type="Area2D" unique_id=494662940]

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b6sud1n45app8"]
 
-[ext_resource type="Script" path="res://game/characters/grieche/character_grieche.gd" id="1_o5gvf"]
+[ext_resource type="Script" uid="uid://df3bvpugg2wsk" path="res://game/characters/grieche/character_grieche.gd" id="1_o5gvf"]
 [ext_resource type="Texture2D" uid="uid://0xdle4m1ofah" path="res://grafik/platzhalter/figur_grieche.png" id="2_cvvmd"]
 
 [node name="CharacterGrieche" type="Area2D" unique_id=2031134735]

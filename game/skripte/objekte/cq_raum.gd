@@ -23,7 +23,7 @@ func raum_id() -> String:
 
 
 ## Leichte Tiefe (Entscheidung vom 10. November 2026, Mittelweg): Steht im Layout des Raums
-## „tiefe: 0.8“, werden alle Figuren von 100 Prozent am unteren Rand des Laufbereichs auf diesen
+## „tiefe: 0.85“, werden alle Figuren von 100 Prozent am unteren Rand des Laufbereichs auf diesen
 ## Wert an seiner Hinterkante verkleinert, laufen dort auch entsprechend langsamer (Popochius
 ## Skalierung über scaling_region). Ohne Eintrag bleibt alles in Originalgröße.
 func tiefe_aktiv() -> bool:

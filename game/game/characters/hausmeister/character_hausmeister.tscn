@@ -1,16 +1,16 @@
 [gd_scene format=3 uid="uid://dimfqs0nltxbm"]
 
-[ext_resource type="Script" path="res://game/characters/hausmeister/character_hausmeister.gd" id="1_3dch6"]
+[ext_resource type="Script" uid="uid://cghmj5dt2oduh" path="res://game/characters/hausmeister/character_hausmeister.gd" id="1_3dch6"]
 [ext_resource type="Texture2D" uid="uid://cutj2nt347vk4" path="res://grafik/platzhalter/figur_hausmeister.png" id="2_ufq0m"]
 
 [node name="CharacterHausmeister" type="Area2D" unique_id=1291864463]
 script = ExtResource("1_3dch6")
 walk_speed = 90.0
-dialog_pos = Vector2(0, -91)
+dialog_pos = Vector2(0, -113)
 script_name = "Hausmeister"
 description = "UI_OBJ_HAUSMEISTER"
 cursor = 8
-interaction_polygon = PackedVector2Array(-14.5, -87, 14.5, -87, 14.5, 0, -14.5, 0)
+interaction_polygon = PackedVector2Array(-18, -109, 18, -109, 18, 0, -18, 0)
 
 [node name="ScalingPolygon" type="CollisionPolygon2D" parent="." unique_id=135810936]
 polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
@@ -20,11 +20,11 @@ polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1043216749]
 texture_filter = 1
 texture = ExtResource("2_ufq0m")
-offset = Vector2(0, -43.5)
+offset = Vector2(0, -54.5)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1031443937]
 visible = false
-polygon = PackedVector2Array(-14.5, -87, 14.5, -87, 14.5, 0, -14.5, 0)
+polygon = PackedVector2Array(-18, -109, 18, -109, 18, 0, -18, 0)
 
 [node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=57635149]
 visible = false

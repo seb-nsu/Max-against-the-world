@@ -1,16 +1,16 @@
 [gd_scene format=3 uid="uid://6spgplt0vblh"]
 
-[ext_resource type="Script" path="res://game/characters/steinmetz/character_steinmetz.gd" id="1_qjfvy"]
+[ext_resource type="Script" uid="uid://cwd0nn485whyq" path="res://game/characters/steinmetz/character_steinmetz.gd" id="1_qjfvy"]
 [ext_resource type="Texture2D" uid="uid://cexn7wr110ndu" path="res://grafik/platzhalter/figur_steinmetz.png" id="2_yq6cr"]
 
 [node name="CharacterSteinmetz" type="Area2D" unique_id=305777515]
 script = ExtResource("1_qjfvy")
 walk_speed = 90.0
-dialog_pos = Vector2(0, -94)
+dialog_pos = Vector2(0, -116)
 script_name = "Steinmetz"
 description = "UI_OBJ_STEINMETZ"
 cursor = 8
-interaction_polygon = PackedVector2Array(-15, -90, 15, -90, 15, 0, -15, 0)
+interaction_polygon = PackedVector2Array(-18.5, -112, 18.5, -112, 18.5, 0, -18.5, 0)
 
 [node name="ScalingPolygon" type="CollisionPolygon2D" parent="." unique_id=1858798075]
 polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
@@ -20,11 +20,11 @@ polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1186716359]
 texture_filter = 1
 texture = ExtResource("2_yq6cr")
-offset = Vector2(0, -45)
+offset = Vector2(0, -56)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=2057213467]
 visible = false
-polygon = PackedVector2Array(-15, -90, 15, -90, 15, 0, -15, 0)
+polygon = PackedVector2Array(-18.5, -112, 18.5, -112, 18.5, 0, -18.5, 0)
 
 [node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=1088062956]
 visible = false

@@ -1,16 +1,16 @@
 [gd_scene format=3 uid="uid://dmvhrryghki27"]
 
-[ext_resource type="Script" path="res://game/characters/faecherwedler/character_faecherwedler.gd" id="1_t5c5g"]
+[ext_resource type="Script" uid="uid://erd0rq04qgre" path="res://game/characters/faecherwedler/character_faecherwedler.gd" id="1_t5c5g"]
 [ext_resource type="Texture2D" uid="uid://smh1ckaduee7" path="res://grafik/platzhalter/figur_faecherwedler.png" id="2_dndn7"]
 
 [node name="CharacterFaecherwedler" type="Area2D" unique_id=1689266275]
 script = ExtResource("1_t5c5g")
 walk_speed = 90.0
-dialog_pos = Vector2(0, -88)
+dialog_pos = Vector2(0, -109)
 script_name = "Faecherwedler"
 description = "UI_OBJ_FAECHERWEDLER"
 cursor = 8
-interaction_polygon = PackedVector2Array(-14, -84, 14, -84, 14, 0, -14, 0)
+interaction_polygon = PackedVector2Array(-17.5, -105, 17.5, -105, 17.5, 0, -17.5, 0)
 
 [node name="ScalingPolygon" type="CollisionPolygon2D" parent="." unique_id=460677463]
 polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
@@ -20,11 +20,11 @@ polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2094182039]
 texture_filter = 1
 texture = ExtResource("2_dndn7")
-offset = Vector2(0, -42)
+offset = Vector2(0, -52.5)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=2019580488]
 visible = false
-polygon = PackedVector2Array(-14, -84, 14, -84, 14, 0, -14, 0)
+polygon = PackedVector2Array(-17.5, -105, 17.5, -105, 17.5, 0, -17.5, 0)
 
 [node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=1464662727]
 visible = false

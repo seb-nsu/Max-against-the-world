@@ -187,6 +187,15 @@ func _gegenstand(g: Dictionary) -> void:
 func _figur(fd: Dictionary) -> void:
 	var sn: String = fd.script_name
 	if PopochiuResources.has_data_value("characters", sn):
+		# „--cq-figuren-groesse“: Sprite, Fußpunkt, Klickfläche und Sprechblasenhöhe an die
+		# (größere) Textur anpassen, etwa nach der Figurenvergrößerung vom 10. November 2026
+		if "--cq-figuren-groesse" in OS.get_cmdline_user_args():
+			var vorhanden := "res://game/characters/%s/character_%s.tscn" % [sn.to_snake_case(), sn.to_snake_case()]
+			if ResourceLoader.exists(vorhanden):
+				var alt: Node = load(vorhanden).instantiate(PackedScene.GEN_EDIT_STATE_INSTANCE)
+				_figur_sprite(alt, fd)
+				_szene_speichern(alt, vorhanden)
+				alt.free()
 		return
 	var f := PopochiuCharacterFactory.new()
 	if f.create(sn, sn == SPIELER) != ResultCodes.SUCCESS:
@@ -199,6 +208,15 @@ func _figur(fd: Dictionary) -> void:
 		"# Ansehen kommt aus dem Bauplan; Reden, Benutzen und Gegenstände hier überschreiben.",
 	])
 	var szene: Node = load(pfad).instantiate(PackedScene.GEN_EDIT_STATE_INSTANCE)
+	_figur_sprite(szene, fd)
+	szene.description = fd.name_key
+	szene.text_color = Color(fd.textfarbe)
+	szene.walk_speed = 90.0
+	_szene_speichern(szene, pfad)
+	_angelegt.append("Figur " + sn)
+
+
+func _figur_sprite(szene: Node, fd: Dictionary) -> void:
 	var tex: Texture2D = load(fd.sprite)
 	var sprite: Sprite2D = szene.get_node("Sprite2D")
 	sprite.texture = tex
@@ -209,12 +227,7 @@ func _figur(fd: Dictionary) -> void:
 	var poly := PackedVector2Array([Vector2(-w, -h), Vector2(w, -h), Vector2(w, 0), Vector2(-w, 0)])
 	szene.interaction_polygon = poly
 	szene.get_node("InteractionPolygon").polygon = poly
-	szene.description = fd.name_key
-	szene.text_color = Color(fd.textfarbe)
 	szene.dialog_pos = Vector2(0, -h - 4)
-	szene.walk_speed = 90.0
-	_szene_speichern(szene, pfad)
-	_angelegt.append("Figur " + sn)
 
 
 func _dialog(d: Dictionary) -> void:

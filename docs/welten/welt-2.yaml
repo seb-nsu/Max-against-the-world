@@ -132,13 +132,13 @@ figuren:
     name: Max
     kuerzel: MAX
     raum: [nil_delta, thronsaal_ramses, palastkueche, sphinx, faehrsteg_olympia, agora, startbuero, stadion, hafen_syrakus, werkstatt, grabhuegel]
-    groesse_px: 84
+    groesse_px: 105
     spielbar: true
   - id: pixel
     name: Pixel
     kuerzel: PIX
     raum: [nil_delta, thronsaal_ramses, palastkueche, sphinx, faehrsteg_olympia, agora, startbuero, stadion, hafen_syrakus, werkstatt, grabhuegel]
-    groesse_px: 27
+    groesse_px: 34
     spielbar: true
   - id: opa
     name: Opa
@@ -150,55 +150,55 @@ figuren:
     name: Fährmann
     kuerzel: FAE
     raum: [nil_delta, faehrsteg_olympia, hafen_syrakus]   # fährt mit der Fähre mit
-    groesse_px: 87
+    groesse_px: 109
     spielbar: false
   - id: sobek
     name: Sobek
     kuerzel: SOB
     raum: [nil_delta, thronsaal_ramses]
-    groesse_px: 24                             # im Wasser 16 px hoch; an Land 70 px lang
+    groesse_px: 30                             # im Wasser 16 px hoch; an Land 70 px lang
     spielbar: false
   - id: steinmetz
     name: Steinmetz
     kuerzel: STM
     raum: [nil_delta]
-    groesse_px: 90
+    groesse_px: 112
     spielbar: false
   - id: hermes
     name: Hermes
     kuerzel: HER
     raum: [nil_delta, startbuero, stadion]
-    groesse_px: 84
+    groesse_px: 105
     spielbar: false
   - id: ramses
     name: Ramses
     kuerzel: RAM
     raum: [thronsaal_ramses, stadion]                 # im Stadion nur an den Wettkampftagen und zur Parade
-    groesse_px: 90
+    groesse_px: 112
     spielbar: false
   - id: hofkater
     name: Hofkater
     kuerzel: HOF
     raum: [thronsaal_ramses]
-    groesse_px: 30
+    groesse_px: 38
     spielbar: false
   - id: schreiber
     name: Schreiber
     kuerzel: SCH
     raum: [thronsaal_ramses]
-    groesse_px: 54                             # sitzend
+    groesse_px: 68                             # sitzend
     spielbar: false
   - id: faecherwedler
     name: Fächerwedler
     kuerzel: FAW
     raum: [thronsaal_ramses, stadion]                 # zwei Figuren, eine Stimme
-    groesse_px: 84
+    groesse_px: 105
     spielbar: false
   - id: nebet
     name: Nebet
     kuerzel: NEB
     raum: [palastkueche]
-    groesse_px: 78
+    groesse_px: 98
     spielbar: false
   - id: sphinx_figur
     name: Sphinx
@@ -210,25 +210,25 @@ figuren:
     name: Archimedes
     kuerzel: ARC
     raum: [werkstatt, stadion, grabhuegel]
-    groesse_px: 81
+    groesse_px: 101
     spielbar: false
   - id: hieron
     name: Hieron
     kuerzel: HIE
     raum: [werkstatt]
-    groesse_px: 93
+    groesse_px: 116
     spielbar: false
   - id: cicero
     name: Cicero
     kuerzel: CIC
     raum: [agora, grabhuegel, stadion]
-    groesse_px: 87
+    groesse_px: 109
     spielbar: false
   - id: tiro
     name: Tiro
     kuerzel: TIR
     raum: [agora]
-    groesse_px: 78
+    groesse_px: 98
     spielbar: false
   - id: grieche
     name: Grieche
@@ -240,67 +240,67 @@ figuren:
     name: Tourist
     kuerzel: TOU
     raum: [agora]
-    groesse_px: 87                             # Grafik: Römischer Tourist
+    groesse_px: 109                             # Grafik: Römischer Tourist
     spielbar: false
   - id: touristin
     name: Römische Touristin
     kuerzel: TOI                               # spricht nicht
     raum: [agora]
-    groesse_px: 84
+    groesse_px: 105
     spielbar: false
   - id: philosoph
     name: Philosoph
     kuerzel: PHI
     raum: [agora]
-    groesse_px: 60                             # mit Tonne
+    groesse_px: 75                             # mit Tonne
     spielbar: false
   - id: brian
     name: Brian
     kuerzel: BRI
     raum: [agora]
-    groesse_px: 87
+    groesse_px: 109
     spielbar: false
   - id: strassenmusiker
     name: Straßenmusiker
     kuerzel: MUS                               # spricht nicht
     raum: [agora]
-    groesse_px: 84
+    groesse_px: 105
     spielbar: false
   - id: beamter_1
     name: Beamter 1
     kuerzel: BE1
     raum: [startbuero]
-    groesse_px: 66                             # sitzend, stehend 58
+    groesse_px: 82                             # sitzend, stehend 58
     spielbar: false
   - id: beamter_2
     name: Beamter 2
     kuerzel: BE2
     raum: [startbuero]
-    groesse_px: 87
+    groesse_px: 109
     spielbar: false
   - id: leonidas
     name: Leonidas
     kuerzel: LEO
     raum: [stadion]
-    groesse_px: 96
+    groesse_px: 120
     spielbar: false
   - id: schildkroete
     name: Schildkröte
     kuerzel: SKR                               # spricht nicht
     raum: [stadion]
-    groesse_px: 18
+    groesse_px: 22
     spielbar: false
   - id: zeremonienmeister
     name: Zeremonienmeister
     kuerzel: ZER
     raum: [stadion]
-    groesse_px: 90
+    groesse_px: 112
     spielbar: false
   - id: aegypter
     name: Ägypter
     kuerzel: VOL
     raum: [stadion]                            # Volk auf den Rängen, Parade
-    groesse_px: 84
+    groesse_px: 105
     spielbar: false
 
 gegenstaende:

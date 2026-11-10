@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://badbb0jebrxma"]
 
-[ext_resource type="Script" path="res://game/characters/nachrichtensprecher/character_nachrichtensprecher.gd" id="1_f4vpg"]
+[ext_resource type="Script" uid="uid://cvrhegsm2fpfp" path="res://game/characters/nachrichtensprecher/character_nachrichtensprecher.gd" id="1_f4vpg"]
 [ext_resource type="Texture2D" uid="uid://2lxxcavhx8kw" path="res://grafik/platzhalter/figur_nachrichtensprecher.png" id="2_ol2kr"]
 
 [node name="CharacterNachrichtensprecher" type="Area2D" unique_id=1670805931]

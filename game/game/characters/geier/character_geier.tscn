@@ -1,16 +1,16 @@
 [gd_scene format=3 uid="uid://d1xj8spavyjxu"]
 
-[ext_resource type="Script" path="res://game/characters/geier/character_geier.gd" id="1_j0g3g"]
+[ext_resource type="Script" uid="uid://pufpoh6kkbuh" path="res://game/characters/geier/character_geier.gd" id="1_j0g3g"]
 [ext_resource type="Texture2D" uid="uid://bavusesqyeyge" path="res://grafik/platzhalter/figur_geier.png" id="2_acucu"]
 
 [node name="CharacterGeier" type="Area2D" unique_id=1211231314]
 script = ExtResource("1_j0g3g")
 walk_speed = 90.0
-dialog_pos = Vector2(0, -49)
+dialog_pos = Vector2(0, -60)
 script_name = "Geier"
 description = "UI_OBJ_GEIER"
 cursor = 8
-interaction_polygon = PackedVector2Array(-12, -45, 12, -45, 12, 0, -12, 0)
+interaction_polygon = PackedVector2Array(-15, -56, 15, -56, 15, 0, -15, 0)
 
 [node name="ScalingPolygon" type="CollisionPolygon2D" parent="." unique_id=1915936963]
 polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
@@ -20,11 +20,11 @@ polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2123196606]
 texture_filter = 1
 texture = ExtResource("2_acucu")
-offset = Vector2(0, -22.5)
+offset = Vector2(0, -28)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=519636937]
 visible = false
-polygon = PackedVector2Array(-12, -45, 12, -45, 12, 0, -12, 0)
+polygon = PackedVector2Array(-15, -56, 15, -56, 15, 0, -15, 0)
 
 [node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=1183428518]
 visible = false

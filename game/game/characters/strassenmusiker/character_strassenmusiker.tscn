@@ -1,16 +1,16 @@
 [gd_scene format=3 uid="uid://cclbyxn1ccx8u"]
 
-[ext_resource type="Script" path="res://game/characters/strassenmusiker/character_strassenmusiker.gd" id="1_myak4"]
+[ext_resource type="Script" uid="uid://culn7oxeh2qa1" path="res://game/characters/strassenmusiker/character_strassenmusiker.gd" id="1_myak4"]
 [ext_resource type="Texture2D" uid="uid://qpa3ug504q4y" path="res://grafik/platzhalter/figur_strassenmusiker.png" id="2_p85tt"]
 
 [node name="CharacterStrassenmusiker" type="Area2D" unique_id=686969109]
 script = ExtResource("1_myak4")
 walk_speed = 90.0
-dialog_pos = Vector2(0, -91)
+dialog_pos = Vector2(0, -113)
 script_name = "Strassenmusiker"
 description = "UI_OBJ_STRASSENMUSIKER"
 cursor = 8
-interaction_polygon = PackedVector2Array(-14.5, -87, 14.5, -87, 14.5, 0, -14.5, 0)
+interaction_polygon = PackedVector2Array(-18, -109, 18, -109, 18, 0, -18, 0)
 
 [node name="ScalingPolygon" type="CollisionPolygon2D" parent="." unique_id=859368099]
 polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
@@ -20,11 +20,11 @@ polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1935027948]
 texture_filter = 1
 texture = ExtResource("2_p85tt")
-offset = Vector2(0, -43.5)
+offset = Vector2(0, -54.5)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=21199677]
 visible = false
-polygon = PackedVector2Array(-14.5, -87, 14.5, -87, 14.5, 0, -14.5, 0)
+polygon = PackedVector2Array(-18, -109, 18, -109, 18, 0, -18, 0)
 
 [node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=1691965191]
 visible = false

@@ -7,7 +7,7 @@ beschriftete Kästen an ihrem Platz. Die Skizze geht beim Konzeptbild (ChatGPT o
 Vorlage für die Anordnung mit, siehe docs/grafik/00-stil-und-werkzeuge.md.
 
 Umrechnung aus dem flachen Platzhalter-Layout: Alles oberhalb des Laufbereichs ist Rückwand und
-wird auf 60 Prozent verkleinert auf die Wand gesetzt (Fluchtpunkt auf 40 Prozent der Höhe, Rückwand 80 Prozent breit),
+wird auf 75 Prozent verkleinert auf die Wand gesetzt (Fluchtpunkt auf 40 Prozent der Höhe, Rückwand 80 Prozent breit),
 der Laufbereich wird zum Boden mit Tiefe im unteren Bildteil. Räume, deren Laufbereich kein
 waagrechtes Band ist (Treppen, Kletterwege), bleiben flach und sind als Sonderfall beschriftet.
 
@@ -15,7 +15,7 @@ Beschriftung englisch (Spalte en aus docs/uebersetzung/ui.csv), weil auch die Pr
 Hotspots und Props, die erst in einem späteren Zustand des Raums dazukommen (Opas Maschine im
 Finale), tragen im Layout „skizze: spaeter“ und fehlen in der Skizze, ebenso versteckte Hotspots.
 Farben: blau = Hotspot im Hintergrund, orange gestrichelt = eigenes Sprite (Platz frei lassen),
-grün = Ausgang, lila = Figur, grau = Max als Größenmaßstab (vorn 100, hinten 80 Prozent).
+grün = Ausgang, lila = Figur, grau = Max als Größenmaßstab (vorn 100, hinten 85 Prozent).
 
 Aufruf:  python3 tools/layout_skizzen.py [ZIELORDNER]\n(Standard docs/grafik/skizzen/; dann stehen die Links auch in den Grafik-Dateien unter „Szenen“.)
 """
@@ -35,9 +35,9 @@ SK = 3                     # Zeichenmaßstab: 480×270 wird als 1440×810 gezeic
 FLUCHT_Y = 0.40            # Fluchtpunkt auf 40 Prozent der Bildhöhe
 BODEN_OBEN = 160           # Hinterkante des Bodens in Spielpixeln (Boden 110 Pixel hoch)
 WAND_RAND = 0.10           # Seitenstreifen je 10 Prozent der Breite
-MAX_HOEHE = 84
-WAND_MASS = 0.6          # Möbel an der Rückwand: Schrank etwa 80 bis 95 Pixel, Sessel etwa 40
-TIEFE = 0.8
+MAX_HOEHE = 105
+WAND_MASS = 0.75         # Möbel an der Rückwand: Schrank etwa 100 bis 115 Pixel, Sessel etwa 50
+TIEFE = 0.85
 
 FARBEN = {
     "wand": (226, 214, 190), "seite": (196, 181, 155), "boden": (176, 150, 116), "linie": (120, 98, 72),
@@ -173,10 +173,10 @@ def zeichne(raum, texte, layout):
     if u.band:
         for x, y in ((u.w * 0.06 + 10, u.h - 4), (u.w * 0.5, BODEN_OBEN + 2)):
             m = u.massstab(y)
-            hh, bb = MAX_HOEHE * m, 28 * m
+            hh, bb = MAX_HOEHE * m, 35 * m
             gestrichelt(d, [(x - bb / 2) * SK, (y - hh) * SK, (x + bb / 2) * SK, y * SK], FARBEN["max"], 2)
         beschriften(d, [(u.w * 0.06 + 10) * SK, (u.h - MAX_HOEHE - 4) * SK, (u.w * 0.06 + 10) * SK, (u.h - MAX_HOEHE - 4) * SK],
-                    "Max 84 px", FARBEN["max"], f_klein)
+                    f"Max {MAX_HOEHE} px", FARBEN["max"], f_klein)
 
     for hs in raum["hotspots"]:
         b = box(hs["rect"])
@@ -196,8 +196,8 @@ def zeichne(raum, texte, layout):
         beschriften(d, b, "EXIT " + texte.get(a["name_key"], a["ziel"]), FARBEN["ausgang"], f_klein)
     for fg in raum.get("figuren", []):
         x, y = u.punkt(fg["pos"])
-        hh = (27 if fg["id"] == "pixel" else MAX_HOEHE) * u.massstab(y)
-        bb = (39 if fg["id"] == "pixel" else 30) * u.massstab(y)
+        hh = (34 if fg["id"] == "pixel" else MAX_HOEHE) * u.massstab(y)
+        bb = (49 if fg["id"] == "pixel" else 37) * u.massstab(y)
         b = [(x - bb / 2) * SK, (y - hh) * SK, (x + bb / 2) * SK, y * SK]
         gestrichelt(d, b, FARBEN["figur"], 2)
         beschriften(d, b, fg["script_name"] + " (character)", FARBEN["figur"], f_klein)

@@ -7,7 +7,7 @@
 #
 # Koordinaten in Spielpixeln (tools/aufloesung.py), Rechteck = [x, y, breite, hoehe],
 # gehe = Punkt, zu dem die Figur vor der Aktion läuft.
-# tiefe = optional, z. B. 0.8: Figuren am oberen Rand des Laufbereichs auf 80 Prozent verkleinert
+# tiefe = optional, z. B. 0.85: Figuren am oberen Rand des Laufbereichs auf 85 Prozent verkleinert
 # (Raumansicht mit leichter Tiefe; erst eintragen, wenn der echte Hintergrund drin ist).
 # Schlüssel der Hotspots = Objekt-ID, die godot_raeume.py aus dem Auslöser des Skripts
 # ableitet („Ansehen: Ausgestopfter Fisch“ → ausgestopfter_fisch).
@@ -51,7 +51,7 @@ dachboden:
   # Echter Hintergrund (10. November 2026, Raumansicht mit leichter Tiefe, 32 eigene Farben).
   # Koordinaten aus dem Bild genommen; übernommen mit --cq-layout=dachboden (game/README.md).
   hintergrund: res://grafik/hintergruende/w0_bg_dachboden_v01.png
-  tiefe: 0.8
+  tiefe: 0.85
   laufbereich: [[64, 268], [64, 190], [185, 184], [190, 170], [300, 170], [304, 180], [360, 182], [418, 202], [476, 204], [476, 268]]
   marker:
     start: [395, 236]

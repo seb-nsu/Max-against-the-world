@@ -82,7 +82,7 @@
     "treppenhaus",
     "dachboden"
    ],
-   "groesse_px": 84,
+   "groesse_px": 105,
    "spielbar": true
   },
   {
@@ -90,7 +90,7 @@
    "name": "Pixel",
    "kuerzel": "PIX",
    "raum": "dachboden",
-   "groesse_px": 27,
+   "groesse_px": 34,
    "spielbar": false
   },
   {
@@ -98,7 +98,7 @@
    "name": "Opa",
    "kuerzel": "OPA",
    "raum": "dachboden",
-   "groesse_px": 90,
+   "groesse_px": 112,
    "spielbar": false
   }
  ],

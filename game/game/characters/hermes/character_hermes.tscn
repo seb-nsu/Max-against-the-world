@@ -1,16 +1,16 @@
 [gd_scene format=3 uid="uid://uqhj333o6f3j"]
 
-[ext_resource type="Script" path="res://game/characters/hermes/character_hermes.gd" id="1_gvdx1"]
+[ext_resource type="Script" uid="uid://doaov7ftqlueb" path="res://game/characters/hermes/character_hermes.gd" id="1_gvdx1"]
 [ext_resource type="Texture2D" uid="uid://by2plsl4c8sk3" path="res://grafik/platzhalter/figur_hermes.png" id="2_aqgwc"]
 
 [node name="CharacterHermes" type="Area2D" unique_id=1935030840]
 script = ExtResource("1_gvdx1")
 walk_speed = 90.0
-dialog_pos = Vector2(0, -88)
+dialog_pos = Vector2(0, -109)
 script_name = "Hermes"
 description = "UI_OBJ_HERMES"
 cursor = 8
-interaction_polygon = PackedVector2Array(-14, -84, 14, -84, 14, 0, -14, 0)
+interaction_polygon = PackedVector2Array(-17.5, -105, 17.5, -105, 17.5, 0, -17.5, 0)
 
 [node name="ScalingPolygon" type="CollisionPolygon2D" parent="." unique_id=1003268801]
 polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
@@ -20,11 +20,11 @@ polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1440747876]
 texture_filter = 1
 texture = ExtResource("2_aqgwc")
-offset = Vector2(0, -42)
+offset = Vector2(0, -52.5)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1600307987]
 visible = false
-polygon = PackedVector2Array(-14, -84, 14, -84, 14, 0, -14, 0)
+polygon = PackedVector2Array(-17.5, -105, 17.5, -105, 17.5, 0, -17.5, 0)
 
 [node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=959111537]
 visible = false

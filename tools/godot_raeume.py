@@ -754,9 +754,9 @@ def platzhalter(plan):
             if (PLATZHALTER / f"figur_{f['id']}.png").exists():
                 continue
             hoehe = s_(40)
-        breite = s_(24) if f["id"] == "pixel" else max(s_(16), hoehe // 3)
+        breite = s_(30) if f["id"] == "pixel" else max(s_(20), hoehe // 3)
         if f["id"] == "pixel":
-            hoehe = s_(12)
+            hoehe = s_(15)
         img = Image.new("RGBA", (breite, hoehe), (0, 0, 0, 0))
         d = ImageDraw.Draw(img)
         d.rectangle([0, 0, breite - 1, hoehe - 1], fill=farbe(f["textfarbe"], 0.55), outline=(38, 43, 68, 255))
