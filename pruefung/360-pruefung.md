@@ -4,8 +4,8 @@
 >
 > - Geprüfter Stand: `main` bei Commit `6fe02fd` (enthält den Humor-Durchgang aus Pull Request 14).
 > - Arbeitszweig: `claude/project-thread-769z6c`.
-> - **Erledigt:** Dateiliste aufgenommen. Vollständig gelesen: `docs/00-aufbau.md`, `docs/01-konzept.md`, `docs/entscheidungen.md`, `docs/05-spielsysteme.md`, `docs/skript/prolog.md`, `docs/skript/welt-1.md`, `docs/skript/welt-2.md`, `docs/skript/welt-3.md`, `docs/skript/welt-4.md`. Rohfunde dazu stehen im Abschnitt „Arbeitsnotizen“ ganz unten.
-> - **Als Nächstes lesen:** `docs/skript/zwischenspiele-und-finale.md`, `docs/raetsel/*`, `docs/welten/*`, `docs/grafik/*`, `docs/04-audio.md`, `docs/03-produktion.md`, `docs/offene-punkte.md`, `docs/uebersetzung/ui.csv`, dann die Bilder, dann der Spielcode (`game/skripte`, `game/oberflaeche`, `game/tests`, `tools`).
+> - **Erledigt:** Dateiliste aufgenommen. Vollständig gelesen: `docs/00-aufbau.md`, `docs/01-konzept.md`, `docs/entscheidungen.md`, `docs/05-spielsysteme.md`, alle Skripte unter `docs/skript/`, alle Rätseldokumente unter `docs/raetsel/`, alle Welt-Tabellen unter `docs/welten/`, aus `docs/grafik/` die Dateien `00`, `01`, `02`, `welt-1.md`, `welt-2.md`. Rohfunde dazu stehen im Abschnitt „Arbeitsnotizen“ ganz unten.
+> - **Als Nächstes lesen:** `docs/grafik/welt-3.md`, `docs/grafik/welt-4.md`, `docs/grafik/fertige-prompts/*`, `docs/04-audio.md`, `docs/03-produktion.md`, `docs/offene-punkte.md`, `docs/uebersetzung/ui.csv`, `docs/test/beobachtungsbogen.md`, dann die Bilder, dann der Spielcode (`game/skripte`, `game/oberflaeche`, `game/tests`, `tools`).
 > - **Auftrag erweitert (Sebastian, 10. November, 22:03 Uhr):** Der Spielcode im Repository wird mitgeprüft.
 > - **Noch offen:** Story-Bibel, Abschnitte A bis N, Codeprüfung, Gesamtbild, Korrekturen, Fundliste, Zusammenfassung.
 
@@ -287,3 +287,22 @@ Funde:
 - **Nahansichten:** 14 gezählt (Prolog 2, Welt 1 vier, Welt 2 drei, Welt 3 vier, Welt 4 eine). Stimmt mit `entscheidungen.md`.
 - **Rätsel 12 in Welt 3:** Herr Vier hat die Zugangskarte „in einer Lieferung fürs Labor gefunden“. Der Zufall ist bequem; ein halber Satz mehr (er beliefert die Kantine) würde reichen.
 - **Rätsel 9 in Welt 1 (Steckbrief als Exposé):** der Sprung vom Steckbrief zum Wohnungsangebot ist die steilste Idee der Welt. Ob das Skript sie genug anbahnt, steht bei Bereich J.
+
+### Aus `docs/grafik/00-stil-und-werkzeuge.md`, `01-max-und-pixel.md`, `02-prolog-und-finale.md`, `grafik/welt-1.md`, `grafik/welt-2.md`
+
+**Stärken:** Klare Stilregeln (640×360, Perspektive „Mittelweg“, Licht von oben links, Palette je Welt, Endesga 32 für Figuren). Prompt-Bausteine mit Größenregeln. Der Steckbrief von Max und Pixel wird wörtlich wiederverwendet. Parodie-Sicherungen stehen in den Prompts selbst („No …“ am Ende, Kuh „(not purple)“, Pixel „not orange, no lasagne“). Hinweise fürs Rätsel stehen ausdrücklich im Prompt, Lösungsverräter sind neutral gehalten (identische Fläschchen). KI-Protokoll und Farbenblind-Symbole sind mitgedacht.
+
+**Funde:**
+
+- **Baustein FIGUR-KLEIN passt nicht zu seinen Figuren (mittel).** `00-stil-und-werkzeuge.md`: FIGUR-KLEIN gilt für 29 bis 75 Pixel auf einer Leinwand von 96×96. Zugewiesen ist er aber auch Toadi (101), dem Zauberbesen (101), der Schmiede-Ziege (93), dem Schwan (81) und den Flamingos in Welt 4 (81). Figuren über etwa 90 Pixel passen nicht auf die Leinwand. Vorschlag: Grenze im Baustein auf die echte Spanne anheben oder diese Figuren auf FIGUR mit ausdrücklicher Höhe umstellen.
+- **Veraltete Zahl im Deko-Prompt (mittel, echter Prompt-Fehler).** `02-prolog-und-finale.md` Z. 195: „scene props at the same scale as a 84-pixel tall character“. Die Figuren sind 189 Pixel hoch. Dazu Z. 165: „Oma steht vorerst mit 84 Pixeln an der Untergrenze … will Sebastian sie kleiner (etwa 120 Pixel)“. Oma ist laut Tabelle 189, und 120 ist nicht kleiner als 84.
+- **Pixel schlafend in drei Größen (klein).** `00`: „about 25 pixels high and 48 long“. `02`: „34 Pixel hoch, 36 lang“. `prolog.yaml` Kommentar: „10 hoch, 24 lang“. Dazu „Pixel auf dem Schrank … 34 hoch, 39 lang“, obwohl der laufende Pixel 88 lang ist.
+- **Pixel als Ziege in drei Größen (klein).** `grafik/welt-1.md`: Tabelle „69 Pixel“, Motiv „About 51 pixels tall in costume“, `welt-1.yaml` Kommentar „20 px“.
+- **Maschine im Finale (klein).** `02`: Motiv „about 297 pixels tall“, Bild-zu-Bild-Prompt „about half the image height“ (das wären 180).
+- **Bildschirm-Einblendungen, Spalte „Anlass“ (klein).** `02`: Kanal 3 „Rückkehr 1 bis 3 und Finale“, Kanal 7 „Rückkehr 2 bis 3“. Laut Skript zeigt der Zapp-O-Mat Kanal 3 nur im Zwischenspiel 1, Kanal 7 nur im Zwischenspiel 2, Kanal 42 im Zwischenspiel 3, Kanal 999 im Finale.
+- **Wohnzimmer Abend (klein).** `02`: Der Tabellen-Prompt hat keine Lichterkette, der Bild-zu-Bild-Prompt ergänzt „a string of small warm fairy lights“. Der Prompt für Rückkehr 3 erwähnt „the poster“, das Poster ist aber ein Deko-Sprite und steht nicht im Hintergrund-Prompt.
+- **Baustein HINTERGRUND noch auf Retro Diffusion geschrieben (klein).** `00`: `rd_plus__environment`, „damit Retro Diffusion … trifft“. Der Standardweg ist inzwischen Gemini plus `tools/pixelieren.py`.
+- **Beamter 1 (klein).** `grafik/welt-2.md`: „about 147 pixels tall seated (87 standing)“. Stehend kleiner als sitzend, also alte Zahl. `welt-2.yaml` Kommentar „stehend 58“.
+- **Formatierung (Direktkorrektur möglich).** `02`, Zeile Hauptmenü: `rd\_pro\_\_ui\_panel` ohne Code-Schreibweise, alle anderen Werkzeugnamen stehen in Backticks.
+- Die Parodie-Regel hält in Welt 1 und 2: keine Film- oder Spielnamen in den englischen Prompts, Namen stehen nur in den deutschen Spalten „Anspielung“.
+- **Anspielungen aus den Tabellen „Nur zum Ansehen“ (für Abschnitt D).** Welt 1: Bremer Stadtmusikanten (Statue), Ritter der Kokosnuss (Kokosnusshälften), Herr der Ringe (Ring-Laden), The Witcher (Laute mit Münzbecher), Sprechender Hut (Socke), Aschenputtel (Kürbisturm, Glasschuh), Schneewittchen (Spiegel), Zelda (Okarina), Artus (Schwert im Stein), Zauberlehrling (Besen). Welt 2: Walk Like an Egyptian (Fries mit Ghettoblaster), Gladiator (Weizenfeld), Die Mumie (Katzenmumie), Assassin's Creed (Heuhaufen, Adler-Säule), Leben des Brian (Latein-Kritzelei), Indiana Jones (Steinkugel), Orpheus, Pisa (schiefer Turm), Venus von Milo.
