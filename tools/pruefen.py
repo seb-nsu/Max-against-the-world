@@ -555,6 +555,7 @@ def pruefe_code_schalter(alle):
     bekannt = set()
     for d in alle.values():
         bekannt |= {str(x) for x in als_liste(d.get("weitere_schalter"))}
+        bekannt |= {str(x) for x in (d.get("werte") or {})}   # gespeicherte Werte der Welt (W2_FAEHRE_STEG)
         for r in d.get("raetsel") or []:
             bekannt |= {str(x) for x in als_liste(r.get("schalter"))}
     muster = re.compile(r'Zustand\.(?:ist|setze|wert|setze_wert)\(\s*"([A-Z][A-Z0-9_]*)"')

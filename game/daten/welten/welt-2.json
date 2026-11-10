@@ -24,6 +24,34 @@
    "feigenkern"
   ]
  },
+ "weitere_schalter": [
+  "W2_WECHSEL_FREI",
+  "W2_FAHRTEN",
+  "W2_SOBEK_FOLGT",
+  "W2_DUELL",
+  "W2_DUELL_OPFER",
+  "W2_DUELL_GEFOLGE",
+  "W2_DUELL_WUNDER",
+  "W2_AUDIENZ",
+  "W2_HERMES_IM_BUERO",
+  "W2_RUNDSCHREIBEN",
+  "W2_FLADEN",
+  "W2_SANDALEN_GEOELT",
+  "W2_KRONE_AUF_WAAGE",
+  "W2_GETAUCHT",
+  "W2_KRONE_GEMESSEN",
+  "W2_BARREN_GEMESSEN",
+  "W2_TAG1_LAEUFT",
+  "W2_LAUF_GEOELT",
+  "W2_KORB",
+  "W2_HEBEL_FEHLER",
+  "W2_DISKUS_ERSATZ",
+  "W2_BAUSTEINE",
+  "W2_KONTER",
+  "W2_CICERO_FORDERUNG",
+  "W2_WUNDERDINGE_BEHALTEN",
+  "W2_GESCHAFFT"
+ ],
  "raeume": [
   {
    "id": "nil_delta",
@@ -33,7 +61,7 @@
    ],
    "groesse": "480x270",
    "ausgaenge": [
-    "thronsaal",
+    "thronsaal_ramses",
     "sphinx",
     "faehrsteg_olympia",
     "hafen_syrakus"
@@ -42,7 +70,7 @@
    "musik": "w2_aegypten"
   },
   {
-   "id": "thronsaal",
+   "id": "thronsaal_ramses",
    "name": "Thronsaal",
    "skript_code": [
     "THRO",
@@ -66,7 +94,7 @@
    ],
    "groesse": "480x270",
    "ausgaenge": [
-    "thronsaal"
+    "thronsaal_ramses"
    ],
    "erreichbar_ab": "start",
    "musik": "w2_aegypten"
@@ -216,7 +244,7 @@
    "kuerzel": "MAX",
    "raum": [
     "nil_delta",
-    "thronsaal",
+    "thronsaal_ramses",
     "palastkueche",
     "sphinx",
     "faehrsteg_olympia",
@@ -236,7 +264,7 @@
    "kuerzel": "PIX",
    "raum": [
     "nil_delta",
-    "thronsaal",
+    "thronsaal_ramses",
     "palastkueche",
     "sphinx",
     "faehrsteg_olympia",
@@ -278,7 +306,7 @@
    "kuerzel": "SOB",
    "raum": [
     "nil_delta",
-    "thronsaal"
+    "thronsaal_ramses"
    ],
    "groesse_px": 24,
    "spielbar": false
@@ -310,7 +338,7 @@
    "name": "Ramses",
    "kuerzel": "RAM",
    "raum": [
-    "thronsaal",
+    "thronsaal_ramses",
     "stadion"
    ],
    "groesse_px": 90,
@@ -321,7 +349,7 @@
    "name": "Hofkater",
    "kuerzel": "HOF",
    "raum": [
-    "thronsaal"
+    "thronsaal_ramses"
    ],
    "groesse_px": 30,
    "spielbar": false
@@ -331,7 +359,7 @@
    "name": "Schreiber",
    "kuerzel": "SCH",
    "raum": [
-    "thronsaal"
+    "thronsaal_ramses"
    ],
    "groesse_px": 54,
    "spielbar": false
@@ -341,7 +369,7 @@
    "name": "Fächerwedler",
    "kuerzel": "FAW",
    "raum": [
-    "thronsaal",
+    "thronsaal_ramses",
     "stadion"
    ],
    "groesse_px": 84,
@@ -543,7 +571,7 @@
    "verwendet_in": [
     "R8"
    ],
-   "reist_mit": false,
+   "reist_mit": true,
    "nahansicht": false
   },
   {
@@ -557,7 +585,7 @@
     "R2b",
     "R8"
    ],
-   "reist_mit": false,
+   "reist_mit": true,
    "nahansicht": false
   },
   {
@@ -571,7 +599,7 @@
     "R3a",
     "R8"
    ],
-   "reist_mit": false,
+   "reist_mit": true,
    "nahansicht": false
   },
   {
@@ -663,14 +691,14 @@
   {
    "id": "pharaonenteller",
    "name": "Pharaonenteller",
-   "herkunft": "thronsaal",
+   "herkunft": "thronsaal_ramses",
    "zustaende": [
     "normal"
    ],
    "verwendet_in": [
     "R13"
    ],
-   "reist_mit": false,
+   "reist_mit": true,
    "nahansicht": false
   },
   {
@@ -1015,7 +1043,7 @@
    "verwendet_in": [
     "R13"
    ],
-   "reist_mit": false,
+   "reist_mit": true,
    "nahansicht": false
   },
   {
@@ -1028,7 +1056,7 @@
    "verwendet_in": [
     "R13"
    ],
-   "reist_mit": false,
+   "reist_mit": true,
    "nahansicht": false
   },
   {
@@ -1041,7 +1069,7 @@
    "verwendet_in": [
     "R13"
    ],
-   "reist_mit": false,
+   "reist_mit": true,
    "nahansicht": false
   },
   {
@@ -1054,7 +1082,7 @@
    "verwendet_in": [
     "R9"
    ],
-   "reist_mit": false,
+   "reist_mit": true,
    "nahansicht": false
   },
   {
@@ -1067,7 +1095,7 @@
    "verwendet_in": [
     "R11a"
    ],
-   "reist_mit": false,
+   "reist_mit": true,
    "nahansicht": false
   },
   {
@@ -1100,7 +1128,7 @@
   {
    "id": "hieroglyphen_grammatik",
    "name": "Hieroglyphen-Grammatik",
-   "raum": "thronsaal"
+   "raum": "thronsaal_ramses"
   },
   {
    "id": "faehrtafel",
@@ -1128,7 +1156,7 @@
   {
    "id": "R2a",
    "name": "Die Hieroglyphen-Botschaft",
-   "raum": "thronsaal",
+   "raum": "thronsaal_ramses",
    "benoetigt": [
     "bildtafel"
    ],
@@ -1141,7 +1169,7 @@
   {
    "id": "R2b",
    "name": "Das Götter-Duell",
-   "raum": "thronsaal",
+   "raum": "thronsaal_ramses",
    "benoetigt": [
     "R1",
     "thunfischdose"
@@ -1276,7 +1304,7 @@
   {
    "id": "R6b",
    "name": "Frische Feigen für die Fächerwedler",
-   "raum": "thronsaal",
+   "raum": "thronsaal_ramses",
    "benoetigt": [
     "R6a",
     "feigensetzling",

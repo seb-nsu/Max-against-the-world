@@ -34,7 +34,7 @@
   {
    "schritt": "R2a",
    "ziel": "Die Hieroglyphen-Botschaft",
-   "raum": "thronsaal",
+   "raum": "thronsaal_ramses",
    "offen_wenn": [
     "bildtafel"
    ],
@@ -65,7 +65,7 @@
   {
    "schritt": "R2b",
    "ziel": "Das Götter-Duell",
-   "raum": "thronsaal",
+   "raum": "thronsaal_ramses",
    "offen_wenn": [
     "R1",
     "thunfischdose"
@@ -306,7 +306,7 @@
   {
    "schritt": "R6b",
    "ziel": "Frische Feigen für die Fächerwedler",
-   "raum": "thronsaal",
+   "raum": "thronsaal_ramses",
    "offen_wenn": [
     "R6a",
     "feigensetzling",

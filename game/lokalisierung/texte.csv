@@ -329,6 +329,202 @@ UI_TASTE_HOTSPOTS_ZEIGEN,Hotspots zeigen,Show hotspots
 UI_TASTE_PAUSE,Pausemenü,Pause menu
 UI_TASTE_SCHNELLSPEICHERN,Schnellspeichern,Quicksave
 UI_TASTE_SCHNELLLADEN,Schnellladen,Quickload
+UI_RAUM_NIL_DELTA,Nil-Delta,Nile delta
+UI_RAUM_THRONSAAL_RAMSES,Thronsaal,Throne room
+UI_RAUM_PALASTKUECHE,Palastküche,Palace kitchen
+UI_RAUM_SPHINX,Sphinx,Sphinx
+UI_RAUM_FAEHRSTEG_OLYMPIA,Fährsteg Olympia,Olympia ferry pier
+UI_RAUM_AGORA,Agora,Agora
+UI_RAUM_STARTBUERO,Startbüro,Registration office
+UI_RAUM_STADION,Stadion,Stadium
+UI_RAUM_HAFEN_SYRAKUS,Hafen Syrakus,Port of Syracuse
+UI_RAUM_WERKSTATT,Archimedes' Werkstatt,Archimedes' workshop
+UI_RAUM_GRABHUEGEL,Grabhügel Syrakus,Burial mound of Syracuse
+UI_OBJ_SANDWEG,Sandweg,Sandy path
+UI_OBJ_DUENENPFAD,Dünenpfad,Dune path
+UI_OBJ_PAPYRUSBLATT,Papyrusblatt,Papyrus sheet
+UI_OBJ_FAEHRE,Fähre,Ferry
+UI_OBJ_FAEHRTAFEL,Tafel,Sign
+UI_OBJ_SANDUHR,Sanduhr,Hourglass
+UI_OBJ_WEIZENFELD_MIT_HANDABDRUCK,Weizenfeld,Wheat field
+UI_OBJ_VERKEHRTE_PYRAMIDE,Verkehrte Pyramide,Upside-down pyramid
+UI_OBJ_BAUPLAN,Bauplan,Blueprint
+UI_OBJ_AUSGANG_NIL_DELTA,Nil-Delta,Nile delta
+UI_OBJ_TUER_ZUR_KUECHE,Tür zur Küche,Kitchen door
+UI_OBJ_PHARAONENTELLER,Pharaonenteller,Pharaoh's plate
+UI_OBJ_SCHREIBERPULT,Schreiberpult,Scribe's desk
+UI_OBJ_SARKOPHAG,Sarkophag,Sarcophagus
+UI_OBJ_MUMIFIZIERTE_KATZE,Mumifizierte Katze,Mummified cat
+UI_OBJ_WANDFRIES,Wandfries,Wall frieze
+UI_OBJ_SAEULEN,Säulen,Columns
+UI_OBJ_INSCHRIFT,Inschrift,Inscription
+UI_OBJ_OPFERSCHALE,Opferschale,Offering bowl
+UI_OBJ_AUSGANG_THRONSAAL,Thronsaal,Throne room
+UI_OBJ_BROT,Brot,Bread
+UI_OBJ_DATTELN,Datteln,Dates
+UI_OBJ_ZWIEBEL,Zwiebel,Onion
+UI_OBJ_TRAUBENSAFT,Traubensaft,Grape juice
+UI_OBJ_LEHMOEFEN,Lehmöfen,Clay ovens
+UI_OBJ_SCHNEIDETISCH,Schneidetisch,Chopping table
+UI_OBJ_OELKRUEGE,Ölkrüge,Oil jars
+UI_OBJ_LEERE_AMPHOREN,Leere Amphoren,Empty amphorae
+UI_OBJ_KNOBLAUCH_UND_KRAEUTER,Knoblauch und Kräuter,Garlic and herbs
+UI_OBJ_TRAUBENSAFT_AMPHORE,Traubensaft-Amphore,Grape juice amphora
+UI_OBJ_DAMPF,Dampf,Steam
+UI_OBJ_SCHREIBPULT,Schreibpult,Writing desk
+UI_OBJ_ZERKNUELLTE_PAPYRI,Zerknüllte Papyri,Crumpled papyri
+UI_OBJ_NOTIZBLOCK,Notizblock,Notepad
+UI_OBJ_FUSSSPUREN,Fußspuren,Footprints
+UI_OBJ_STEINKUGEL,Steinkugel,Stone ball
+UI_OBJ_NASE,Nase,Nose
+UI_OBJ_WEG_ZUR_AGORA,Weg zur Agora,Path to the agora
+UI_OBJ_OLIVENBAEUME,Olivenbäume,Olive trees
+UI_OBJ_FISCHERBOOT,Fischerboot,Fishing boat
+UI_OBJ_SANDUHR_OLYMPIA,Sanduhr,Hourglass
+UI_OBJ_TAFEL_OLYMPIA,Tafel,Sign
+UI_OBJ_WEG_ZUM_FAEHRSTEG,Weg zum Fährsteg,Path to the pier
+UI_OBJ_BOGEN_ZUM_STADION,Bogen zum Stadion,Arch to the stadium
+UI_OBJ_TUER_ZUM_STARTBUERO,Startbüro,Registration office
+UI_OBJ_SAEULENHALLE,Säulenhalle,Colonnade
+UI_OBJ_HOHE_SAEULE_MIT_ADLER,Säule mit Adler,Eagle column
+UI_OBJ_SANDALE_AUF_DER_SAEULE,Sandale,Sandal
+UI_OBJ_HEUHAUFEN,Heuhaufen,Haystack
+UI_OBJ_VENUSSTATUE,Venusstatue,Statue of Venus
+UI_OBJ_REDNERPULT,Rednerpult,Lectern
+UI_OBJ_MARKTSTAENDE,Marktstände,Market stalls
+UI_OBJ_TONNE,Tonne,Barrel
+UI_OBJ_MENGE,Menge,Crowd
+UI_OBJ_LATEIN_KRITZELEI,Latein-Kritzelei,Latin graffiti
+UI_OBJ_AUSGANG_AGORA,Agora,Agora
+UI_OBJ_LEERES_FORMULAR,Leeres Formular,Blank form
+UI_OBJ_FORMULARBERG,Formularberg,Mountain of forms
+UI_OBJ_WACHSTAFELN,Wachstafeln,Wax tablets
+UI_OBJ_AUSHANG,Aushang,Notice
+UI_OBJ_BANK_MIT_WARTENDEN,Bank,Bench
+UI_OBJ_STAUB,Staub,Dust
+UI_OBJ_LAUFBAHN,Laufbahn,Running track
+UI_OBJ_SANDGRUBE,Sandgrube,Sand pit
+UI_OBJ_KAMPFRICHTERZELT,Kampfrichterzelt,Judges' tent
+UI_OBJ_ZUSCHAUERRAENGE,Zuschauerränge,Stands
+UI_OBJ_GLOCKENTURM,Glockenturm,Bell tower
+UI_OBJ_SIEGERLISTE,Siegerliste,List of victors
+UI_OBJ_STARTLINIE,Startlinie,Starting line
+UI_OBJ_WURFHEBEL,Wurfhebel,Throwing lever
+UI_OBJ_GASSE_ZUR_WERKSTATT,Gasse zur Werkstatt,Alley to the workshop
+UI_OBJ_PFAD_ZUM_GRABHUEGEL,Pfad zum Grabhügel,Path to the burial mound
+UI_OBJ_TINTENFASS,Tintenfass,Inkwell
+UI_OBJ_MEER,Meer,Sea
+UI_OBJ_FISCHERNETZE,Fischernetze,Fishing nets
+UI_OBJ_AMPHOREN_AM_KAI,Amphoren,Amphorae
+UI_OBJ_SANDUHR_SYRAKUS,Sanduhr,Hourglass
+UI_OBJ_AUSGANG_HAFEN,Hafen,Port
+UI_OBJ_BRENNSPIEGEL,Brennspiegel,Burning mirror
+UI_OBJ_WAAGE,Waage,Scales
+UI_OBJ_MESSBECHER,Messbecher,Measuring cup
+UI_OBJ_ESSIGKRUG,Essigkrug,Vinegar jug
+UI_OBJ_BADEWANNE,Badewanne,Bathtub
+UI_OBJ_WASSERORGEL,Wasserorgel,Water organ
+UI_OBJ_BAUPLAN_DAMPFMASCHINE,Bauplan Dampfmaschine,Steam engine plan
+UI_OBJ_MODELL_SCHIEFER_TURM,Modell,Model
+UI_OBJ_SKIZZE_KUGEL_UND_ZYLINDER,Skizze,Sketch
+UI_OBJ_ZAHNRAEDER,Zahnräder,Gears
+UI_OBJ_SOCKEL,Sockel,Plinth
+UI_OBJ_BROMBEEREN,Brombeeren,Brambles
+UI_OBJ_ALTE_GRABSTEINE,Alte Grabsteine,Old gravestones
+UI_OBJ_ZYPRESSEN,Zypressen,Cypresses
+UI_OBJ_ZIKADEN,Zikaden,Cicadas
+UI_OBJ_FAEHRMANN,Fährmann,Ferryman
+UI_OBJ_SOBEK,Sobek,Sobek
+UI_OBJ_STEINMETZ,Steinmetz,Stonemason
+UI_OBJ_HERMES,Hermes,Hermes
+UI_OBJ_RAMSES,Ramses,Ramses
+UI_OBJ_HOFKATER,Hofkater,Court cat
+UI_OBJ_SCHREIBER,Schreiber,Scribe
+UI_OBJ_FAECHERWEDLER,Fächerwedler,Fan bearers
+UI_OBJ_NEBET,Nebet,Nebet
+UI_OBJ_SPHINX_FIGUR,Sphinx,Sphinx
+UI_OBJ_ARCHIMEDES,Archimedes,Archimedes
+UI_OBJ_HIERON,Hieron,Hiero
+UI_OBJ_CICERO,Cicero,Cicero
+UI_OBJ_TIRO,Tiro,Tiro
+UI_OBJ_GRIECHE,Grieche,Greek
+UI_OBJ_TOURIST,Tourist,Tourist
+UI_OBJ_TOURISTIN,Römische Touristin,Roman tourist
+UI_OBJ_PHILOSOPH,Philosoph,Philosopher
+UI_OBJ_BRIAN,Brian,Brian
+UI_OBJ_STRASSENMUSIKER,Straßenmusiker,Street musician
+UI_OBJ_BEAMTER_1,Beamter 1,Clerk 1
+UI_OBJ_BEAMTER_2,Beamter 2,Clerk 2
+UI_OBJ_LEONIDAS,Leonidas,Leonidas
+UI_OBJ_SCHILDKROETE,Schildkröte,Tortoise
+UI_OBJ_ZEREMONIENMEISTER,Zeremonienmeister,Master of ceremonies
+UI_OBJ_AEGYPTER,Ägypter,Egyptians
+UI_OBJ_HANDY,Handy,Phone
+UI_OBJ_KAUGUMMI,Kaugummi,Chewing gum
+UI_OBJ_KUGELSCHREIBER,Kugelschreiber,Ballpoint pen
+UI_OBJ_BILDTAFEL,Bildtafel,Picture tablet
+UI_OBJ_FLADEN,Fladen,Flatbread
+UI_OBJ_OLIVENOEL,Olivenöl,Olive oil
+UI_OBJ_KRONE,Krone,Crown
+UI_OBJ_GOLDBARREN,Goldbarren,Gold bar
+UI_OBJ_ENTWURF,Entwurf,Design
+UI_OBJ_GRABSTEIN,Grabstein,Gravestone
+UI_OBJ_RUNDSCHREIBEN,Rundschreiben,Circular
+UI_OBJ_EMPFEHLUNGSSCHREIBEN,Empfehlungsschreiben,Letter of recommendation
+UI_OBJ_STARTPASS,Startpass,Entry pass
+UI_OBJ_SANDALEN,Geflügelte Sandalen,Winged sandals
+UI_OBJ_SANDALE,Geflügelte Sandale,Winged sandal
+UI_OBJ_BRIANS_SCHILD,Brians Schild,Brian's sign
+UI_OBJ_FEIGENSETZLING,Feigensetzling,Fig seedling
+UI_OBJ_FEIGEN,Feigen,Figs
+UI_OBJ_SCHALLPLATTE,Schallplatte,Record
+UI_OBJ_WURFSCHEIBE,Wurfscheibe,Flying disc
+UI_OBJ_DISKUS,Diskus,Discus
+UI_OBJ_SCHRIFTROLLE,Schriftrolle,Scroll
+UI_OBJ_OLIVENKRANZ,Olivenkranz,Olive wreath
+UI_OBJ_PARADEN_PLAN,Paraden-Plan,Parade plan
+UI_OBJ_GOLDENER_SACK,Goldener Sack Pharaonenkorn,Golden sack of Pharaoh's grain
+UI_OBJ_HIEROGLYPHEN_GRAMMATIK,Hieroglyphen-Grammatik,Hieroglyph grammar
+UI_OPT_W2_BUER_HER_0650,Was hältst du von den Römern?,What do you think of the Romans?
+UI_OPT_W2_AGOR_GRI_0420,Wie haltet ihr Cicero aus?,How do you put up with Cicero?
+UI_OBJ_OPAS_PAPYRUS,Opas Papyrus,Grandpa's Papyrus
+UI_OBJ_HAUFEN,Zerbröselter Haufen,Crumbled Heap
+UI_W2_DOCH_NICHT,Doch nicht,Never mind
+UI_W2_KACHEL_MANN,Mann,Man
+UI_W2_KACHEL_KATZE,Katze,Cat
+UI_W2_KACHEL_PHARAO,Pharao,Pharaoh
+UI_W2_KACHEL_OHR,Ohr,Ear
+UI_W2_KACHEL_MUND,Mund,Mouth
+UI_W2_KACHEL_HAND,Hand,Hand
+UI_W2_KACHEL_AUGE,Auge,Eye
+UI_W2_KACHEL_KROKODIL,Krokodil,Crocodile
+UI_W2_KACHEL_SKARABAEUS,Skarabäus,Scarab
+UI_W2_KACHEL_HAUS,Haus,House
+UI_W2_KACHEL_VOGEL,Vogel,Bird
+UI_W2_KACHEL_SONNE,Sonne,Sun
+UI_W2_KACHEL_WASSER,Wasser,Water
+UI_W2_KACHEL_SCHLANGE,Schlange,Snake
+UI_W2_KACHEL_LOTUS,Lotusblume,Lotus flower
+UI_W2_KACHEL_FEDER,Feder,Feather
+UI_W2_BAUSTEIN_KLINGELT,„Es klingelt, wenn jemand dich will“
+UI_W2_BAUSTEIN_LEUCHTET,„Es leuchtet im Dunkeln, aber nur kurz“
+UI_W2_BAUSTEIN_STIRBT,„Es stirbt bei drei Prozent“,"""It dies at three percent"""
+UI_W2_BAUSTEIN_NIE_ALLE,„Es wird nie alle“,"""It never runs out"""
+UI_W2_BAUSTEIN_KLEBT,„Es klebt unter jedem Tisch“,"""It sticks under every table"""
+UI_W2_BAUSTEIN_SONNE,„Man kann daraus eine Sonne machen“,"""You can make a sun out of it"""
+UI_W2_BAUSTEIN_SCHREIBT,„Es schreibt ohne Tintenfass“,"""It writes without an inkwell"""
+UI_W2_BAUSTEIN_KLICKT,„Es klickt, wenn man nervös ist“
+UI_W2_BAUSTEIN_BLAU,„Es ist blau und hat trotzdem keine Laune“,"""It is blue and still not moody"""
+UI_W2_ANKLAGEN,Du warst es!,It was you!
+UI_W2_HEBEL_ZIEHEN,Abspringen!,Launch!
+UI_W2_KORB_LEEREN,Korb ausräumen,Empty the basket
+UI_W2_FELD_1,Feld 1: Einladung,Box 1: Invitation
+UI_W2_FELD_2,Feld 2: Sonne,Box 2: Sun
+UI_W2_FELD_3,Feld 3: Volk,Box 3: Crowd
+UI_W2_FELD_4,Feld 4: Höhepunkt,Box 4: Climax
+UI_WELT_2_ENDE,Ende der Graubox. Welt 3 folgt.,End of the greybox. World 3 to follow.
+UI_W2_REDEN,Reden,Talk
+UI_WELT_3_ENDE,Ende der Graubox. Welt 4 folgt.,End of the greybox. World 4 to follow.
 P0_WOHN_MAX_0010,Ein Balken. Ein einziger Balken.,
 P0_WOHN_MAX_0020,Und der ist auch nur zur Deko da.,
 P0_WOHN_OPA_0030,Maaax! Komm mal rauf! Wissenschaft!,

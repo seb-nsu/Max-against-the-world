@@ -311,6 +311,44 @@ func ersatz(kuerzel := "") -> void:
 
 #endregion
 
+#region Regeln der Abschnitte #######################################################################
+## Regeln eines Abschnitts, die über einzelne Objekte hinausgehen (skripte/welt_2.gd …): ein
+## Objekt je Abschnitt, geladen beim ersten Gebrauch. Die Basisklassen der Objekte melden ihre
+## Ereignisse an ereignis(art, obj, item) -> bool (true = erledigt, sonst Standardverhalten aus
+## dem Bauplan); Werte ohne Warten (Zustand eines Gegenstands, Bedingungen in Worten) liefert
+## wert(art, obj) (null = Standard). Welt 1 regelt ihre Rätsel in den Objektskripten.
+var _regeln := {}
+
+
+func regeln() -> Object:
+	var ab: String = Zustand.abschnitt
+	if not _regeln.has(ab):
+		var pfad := "res://skripte/%s.gd" % ab.replace("-", "_")
+		_regeln[ab] = load(pfad).new() if ResourceLoader.exists(pfad) else null
+	return _regeln[ab]
+
+
+## Ereignis an die Regeln des Abschnitts melden. Arten: benutzen, ansehen, gegenstand, pixel
+## (Hotspots, Props, Figuren), ausgang (true sperrt), kombinieren, benutzen_inventar,
+## ansehen_inventar (Gegenstände), raum_betreten, nach_uebergang, nach_laden (Räume),
+## nach_option (Gespräche: obj ist der Dialog, item die Options-ID).
+func regel(art: String, obj: Variant = null, item: Variant = null) -> bool:
+	var r := regeln()
+	if r == null or not r.has_method("ereignis"):
+		return false
+	return bool(await r.ereignis(art, obj, item))
+
+
+## Wert aus den Regeln des Abschnitts ohne Warten; null, wenn die Regeln nichts dazu sagen.
+func regel_wert(art: String, obj: Variant = null, item: Variant = null) -> Variant:
+	var r := regeln()
+	if r == null or not r.has_method("wert"):
+		return null
+	return r.wert(art, obj, item)
+
+
+#endregion
+
 #region Standardverhalten ##########################################################################
 ## Bedingungen aus dem Bauplan: [{art: "nach"/"vor", raetsel: "P1"}], [{art: "hat"/"hat_nicht",
 ## gegenstand: "goldmuenze"}] (Max' Inventar). „nach_zeile“ prüft das Gespräch selbst (CQDialog).
@@ -680,6 +718,9 @@ func _bedingung_text_ok(text: String) -> bool:
 			return is_instance_valid(R.current) and (
 				R.current.has_character("SchmiedeZiege") or R.current.has_character("XxlZiege")
 			)
+	var w = regel_wert("bedingung_text", text)
+	if w != null:
+		return bool(w)
 	return false  # unbekannt: Rätselcode entscheidet (Option bzw. Zuruf bleibt aus)
 
 
@@ -719,6 +760,11 @@ func welt_beginnen(ab: String) -> void:
 		if not sn in mit:
 			await abgeben(sn)
 	Zustand.abschnitt = ab
+	# Dinge aus Max' eigenen Taschen (Welt-Tabelle: herkunft „max“, Welt 2: Handy, Kaugummi,
+	# Kugelschreiber) hat er zu Beginn der Welt dabei.
+	for g in Bauplan.welten.get(ab, {}).get("gegenstaende", []):
+		if g.get("herkunft", "") == "max":
+			await geben(Bauplan.gegenstand_script_name(g.id))
 	herkunft_raum = ""
 	var erster: Dictionary = Bauplan.welten.get(ab, {}).get("raeume", [{}])[0]
 	await R.goto_room(Bauplan.raum_script_name(erster.get("id", "")))

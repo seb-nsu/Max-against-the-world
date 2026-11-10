@@ -77,7 +77,7 @@ def pascal(ident):
 ANMERKUNG_RE = re.compile(
     r"^(Hinweis|auch |löst |schaltet |führt |Notizbuch|Lösung|Pixels Wunsch|Szene|weiter |"
     r"Radio|Schwing|öffnet |Weg [AB]$|Max kennt|Rezept bekannt|die Nase lügt|Besen zuckt|"
-    r"Flasche steht|grüner Rauch|Textvariante)")
+    r"Flasche steht|grüner Rauch|Textvariante|Konter \d|Gag$)")
 # Auslöser im Abschnitt „Figurenwechsel“ (Szenen-Code WECH) → Schlüssel im Bauplan
 WECHSEL_REGELN = [
     (r"^Wechsel zu Pixel", "zu_pixel"),
@@ -100,6 +100,7 @@ def bedingungen(text, gegenstand_id=None, zeile_id=None):
     """
     if not text:
         return [], ""
+    text = re.sub(r"\bRätsel (\d+)([a-d]?)\b", lambda m: f"R{m.group(1)}{m.group(2)}", text)
     liste = [{"art": a, "raetsel": r} for a, r in BEDINGUNG_RE.findall(text)]
     rest = []
     for teil in re.split(r"[,;]", BEDINGUNG_RE.sub("", text)):
@@ -201,6 +202,8 @@ def baue(abschnitt):
         for fid, pos in (lay.get("figuren") or {}).items():
             raum["figuren"].append({"id": fid, "script_name": pascal(fid), "pos": pos})
         for ziel in r["ausgaenge"]:
+            if ziel in (lay.get("faehre") or []):
+                continue  # nur über die Zeitfähre erreichbar (Welt 2, Flusskarte am Hotspot „faehre“)
             a = (lay.get("ausgaenge") or {}).get(ziel, {})
             aid = a.get("id", f"ausgang_{ziel}")
             anzeige = a.get("name")
@@ -466,7 +469,8 @@ def baue(abschnitt):
         # Voraussetzung eines gebauten Rätsels, oder aus dem Prolog mitgebracht.
         herkunft = g.get("herkunft", "")
         als_prop = any(p.get("gegenstand") == g["id"] for r in raeume for p in r["props"])
-        if not (als_prop or herkunft in ausbau or herkunft == "prolog"
+        # … oder von einer Figur der Welt überreicht (Opas Papyrus von Hermes, Haufen vom Steinmetz)
+        if not (als_prop or herkunft in ausbau or herkunft == "prolog" or herkunft in figur_ids
                 or set(g.get("verwendet_in", [])) & set(ausbau)):
             continue
         d = gegenstand_daten.get(g["id"], {})
@@ -486,19 +490,72 @@ def baue(abschnitt):
         gegenstaende_out.append(eintrag)
 
     # ---- Gespräche (Regie „Option <Figur>“, Antworten bis zur nächsten Option) --------------
+    # Ab Welt 2 steht „Option <Figur>“ auch in der Auslöser-Spalte (Bedingung nach dem Semikolon),
+    # und „Reden: <Figur>, Einstieg“ eröffnet das erste Gespräch (Einstieg, einmalig vor dem Menü).
+    def figur_aus_name(name):
+        sl = slug(name)
+        sl = (layout.get("_figur_alias") or {}).get(sl, sl)
+        fid = sl if sl in figur_ids else figur_namen.get(sl) if figur_namen.get(sl) in figur_ids else None
+        return None if fid in (layout.get("_ohne_gespraech") or []) else fid
+
+    OPTION_RE = re.compile(r"Option ([A-ZÄÖÜ][\wäöüß]*(?: \d)?)(.*)")
+    REDEN_RE = re.compile(r"^Reden: ([^,;]+?)(?:,\s*(.+))?$")
+    ohne_gespraech = set(layout.get("_ohne_gespraech") or [])   # Gespräch regelt der Rätselcode
+    def echter_ausloeser(z):
+        """Auslöser einer eigenen Handlung (Ansehen, Gegenstand auf …), nicht nur Regie oder Notiz."""
+        a = z["ausloeser"]
+        if not a or z["regie"]:
+            return False
+        if re.match(r"^(Ansehen|Nehmen|Benutzen|Reden|Option|Pixel auf|Pixel schnuppert|Pixel redet|Spielfigur)", a):
+            return True
+        m_auf = re.match(r"^(.+?) (auf|in|an) (.+)$", a.split(";")[0])
+        return bool(m_auf and gegenstand_id(m_auf.group(1)))
+
+    mit_optionen = {figur_aus_name(m.group(1)) for z in alle
+                    if (m := OPTION_RE.match(z["regie"] or z["ausloeser"]))} - {None} - ohne_gespraech
     dialoge = {}
     aktuelle, block = None, None
     for z in alle:
         if z["block"] != block:
             aktuelle, block = None, z["block"]
         raum_id = code_zu_raum.get(z["szene"])
-        m = re.match(r"Option ([A-ZÄÖÜ][\wäöüß]*)(.*)", z["regie"])
-        if m:
-            fig = slug(m.group(1))
-            if fig not in figur_ids or (raum_id and raum_id not in gebaut):
+        quelle = z["regie"] or z["ausloeser"]
+        m = OPTION_RE.match(quelle)
+        m_ein = REDEN_RE.match(z["ausloeser"]) if not z["regie"] else None
+        if m_ein and "erschöpft" not in (m_ein.group(2) or "") and figur_aus_name(m_ein.group(1)) in mit_optionen:
+            # Einstieg (oder Vorrede mit Bedingung): einmal vor dem ersten Menü
+            fig = figur_aus_name(m_ein.group(1))
+            if raum_id and raum_id not in gebaut:
+                aktuelle = None
+                continue
+            d = dialoge.setdefault(fig, {"id": fig, "script_name": pascal(fig), "optionen": []})
+            aktuelle = {"zeilen": [], "einstieg": True}
+            rest = ", ".join(t for t in [m_ein.group(2) or "", z["bedingung"]] if t and t != "Einstieg")
+            bed, text = bedingungen(rest, gegenstand_id, zeile_id(z))
+            if bed:
+                aktuelle["bedingung"] = bed
+            if text:
+                aktuelle["bedingung_text"] = text
+            aktuelle["zeilen"].append({"zeile": z["id"], "sprecher": z["sprecher"], "blasen": blasen(z["id"], texte)})
+            d["einstieg"] = aktuelle
+        elif m and figur_aus_name(m.group(1)) and not m.group(2).lstrip().startswith(":") or (
+                m and figur_aus_name(m.group(1)) and z["sprecher"] != "MAX"):
+            fig = figur_aus_name(m.group(1))
+            if raum_id and raum_id not in gebaut:
                 aktuelle = None
                 continue
             rest = m.group(2)
+            frage = z["id"]
+            antworten_start = []
+            if rest.lstrip().startswith(":"):
+                # „Option Grieche: Wie haltet ihr Cicero aus?“ – die Zeile ist schon die Antwort;
+                # die Frage steht als UI-Text UI_OPT_<Zeilen-ID> in ui.csv
+                frage = f"UI_OPT_{z['id']}"
+                if frage not in texte:
+                    fehler.append(f"{frage} fehlt in docs/uebersetzung/ui.csv (Frage: {rest.lstrip()[1:].strip()})")
+                antworten_start = [{"zeile": z["id"], "sprecher": z["sprecher"], "blasen": blasen(z["id"], texte), "regie": ""}]
+                rest = ""
+            rest = ", ".join(t for t in [rest, z["bedingung"]] if t.strip())
             bleibt = "(bleibt)" in rest   # Hinweis- oder Rätseloption: bleibt nach Nutzung (grau)
             rest = rest.replace("(bleibt)", "")
             bed, text = bedingungen(rest.replace("beendet das Gespräch", ""), gegenstand_id, zeile_id(z))
@@ -506,7 +563,8 @@ def baue(abschnitt):
                 bed = [{"art": "vor", "raetsel": r} for r in re.findall(r"nur vor\s+([PRF]\d+)", rest)]
                 # übrige Bedingung in Worten behalten („nach der Nahansicht Kalender, nur vor P3“)
                 text = ", ".join(t.strip() for t in re.sub(r"\([^)]*\)|nur vor\s+[PRF]\d+", "", text).split(",") if t.strip() not in ("", "nur"))
-            aktuelle = {"id": z["id"].rsplit("_", 1)[1], "frage": z["id"], "antworten": [],
+            text = ", ".join(t.strip() for t in text.split(",") if t.strip() and t.strip() not in ("Gag",))
+            aktuelle = {"id": z["id"].rsplit("_", 1)[1], "frage": frage, "antworten": antworten_start,
                         "beendet": "beendet das Gespräch" in rest, "bleibt": bleibt}
             if bed:
                 aktuelle["bedingung"] = bed
@@ -514,6 +572,12 @@ def baue(abschnitt):
                 aktuelle["bedingung_text"] = text
             d = dialoge.setdefault(fig, {"id": fig, "script_name": pascal(fig), "optionen": []})
             d["optionen"].append(aktuelle)
+            if "öffnet" in rest:
+                # „öffnet die Rätsel-Auswahl“: Folgezeilen spielt die Rätsel-Logik der Welt
+                aktuelle["oeffnet"] = True
+                aktuelle = None
+        elif m:
+            aktuelle = None
         elif m_abs := re.match(r"^Reden(?::\s*([^,;]+))?,\s*Gespräch erschöpft", z["ausloeser"] or z["regie"]):
             # Abschiedszeilen, wenn nur noch „Tschüss“ übrig ist („Reden: Opa, Gespräch erschöpft“);
             # ohne Figurennamen gilt der Sprecher der Zeile
@@ -524,9 +588,18 @@ def baue(abschnitt):
                 d = dialoge.setdefault(fig, {"id": fig, "script_name": pascal(fig), "optionen": []})
                 d.setdefault("erschoepft", []).append({"zeile": z["id"], "sprecher": z["sprecher"]})
             aktuelle = None
+        elif aktuelle and aktuelle.get("einstieg"):
+            if echter_ausloeser(z):
+                aktuelle = None   # neuer Auslöser: Einstieg zu Ende
+            else:
+                aktuelle["zeilen"].append({"zeile": z["id"], "sprecher": z["sprecher"], "blasen": blasen(z["id"], texte)})
         elif aktuelle:
+            if echter_ausloeser(z) or (aktuelle["beendet"] and aktuelle["antworten"] and (z["regie"] or z["ausloeser"])):
+                # nach der Abschiedsantwort folgen eigene Szenen (Rätselzeilen, Auftritte)
+                aktuelle = None   # eigener Auslöser (Gegenstand auf Figur …): gehört nicht zur Antwort
+                continue
             aktuelle["antworten"].append({"zeile": z["id"], "sprecher": z["sprecher"],
-                                          "blasen": blasen(z["id"], texte), "regie": z["regie"]})
+                                          "blasen": blasen(z["id"], texte), "regie": z["regie"] or z["ausloeser"]})
 
     # ---- Ersatzpool ---------------------------------------------------------------------------
     ersatz, wiederholung, plauder = {}, {}, {}
@@ -620,6 +693,12 @@ def platzhalter(plan):
 
     for f in plan["figuren"]:
         hoehe = f["groesse_px"]
+        if not hoehe:
+            # Nur Stimme in diesem Abschnitt (Opa in Welt 2, Grieche, Sphinx): ein vorhandenes Bild
+            # aus einem anderen Abschnitt bleibt, sonst ein kleiner Platzhalter
+            if (PLATZHALTER / f"figur_{f['id']}.png").exists():
+                continue
+            hoehe = s_(40)
         breite = s_(24) if f["id"] == "pixel" else max(s_(16), hoehe // 3)
         if f["id"] == "pixel":
             hoehe = s_(12)

@@ -25,6 +25,25 @@ const ZS1_OPTIONEN := [
 	["zs1_0450", "ZS1_DACH_MAX_0450", [["OPA", "ZS1_DACH_OPA_0452"], ["PIX", "ZS1_DACH_PIX_0454"]]],
 	["zs1_0460", "ZS1_DACH_MAX_0460", [["OPA", "ZS1_DACH_OPA_0462"]], true],
 ]
+## Zwischenspiele 2 und 3: je eine Frage; „Ich geh packen“ (beendet) wie in Zwischenspiel 1
+const ZS2_OPTIONEN := [
+	["zs2_0410", "ZS2_DACH_MAX_0410", [["OPA", "ZS2_DACH_OPA_0420"], ["MAX", "ZS2_DACH_MAX_0430"], ["OPA", "ZS2_DACH_OPA_0440"]]],
+	["zs2_0460", "ZS1_DACH_MAX_0460", [["OPA", "ZS1_DACH_OPA_0462"]], true],
+]
+const ZS3_OPTIONEN := [
+	["zs3_0450", "ZS3_DACH_MAX_0450", [["OPA", "ZS3_DACH_OPA_0460"], ["MAX", "ZS3_DACH_MAX_0470"], ["PIX", "ZS3_DACH_PIX_0480"]]],
+	["zs3_0460", "ZS1_DACH_MAX_0460", [["OPA", "ZS1_DACH_OPA_0462"]], true],
+]
+## Nach dem Ansehen des Kalenders erklärt Opa den Kreis, bevor das Menü kommt (Reden: Opa nach
+## Kalender): [Zeile des Kalenders, Opas Ausrede, Pixels Kommentar]
+const ZS_KALENDER := {
+	2: ["ZS2_DACH_MAX_0330", "ZS2_DACH_OPA_0340", "ZS2_DACH_PIX_0350"],
+	3: ["ZS3_DACH_MAX_0360", "ZS3_DACH_OPA_0370", "ZS3_DACH_PIX_0380"],
+}
+
+
+func _zs_optionen() -> Array:
+	return {1: ZS1_OPTIONEN, 2: ZS2_OPTIONEN, 3: ZS3_OPTIONEN}.get(_zwischenspiel(), [])
 
 
 func _zwischenspiel() -> int:
@@ -33,10 +52,11 @@ func _zwischenspiel() -> int:
 
 func bauplan() -> Dictionary:
 	var plan: Dictionary = super()
-	if _zwischenspiel() != 1:
+	if _zs_optionen().is_empty():
 		return plan
 	plan = plan.duplicate()
-	plan.optionen = ZS1_OPTIONEN.map(func(o): return {
+	plan.erase("einstieg")
+	plan.optionen = _zs_optionen().map(func(o): return {
 		id = o[0], frage = o[1], bleibt = false, beendet = o.size() > 3 and o[3],
 		antworten = o[2].map(func(a): return {sprecher = a[0], zeile = a[1]}),
 	})
@@ -45,7 +65,7 @@ func bauplan() -> Dictionary:
 
 ## Popochiu baut die Optionen nur einmal; im Zwischenspiel kommen die neuen dazu.
 func sichtbarkeit_anpassen() -> void:
-	if _zwischenspiel() == 1 and not is_instance_valid(get_option(ZS1_OPTIONEN[0][0])):
+	if not _zs_optionen().is_empty() and not is_instance_valid(get_option(_zs_optionen()[0][0])):
 		_has_done_init = false
 	super()
 
@@ -54,7 +74,20 @@ func sichtbarkeit_anpassen() -> void:
 func option_sichtbar(id: String) -> bool:
 	if id.begins_with("zs") != (_zwischenspiel() > 0):
 		return false
+	if id.begins_with("zs") and not id.begins_with("zs%d_" % _zwischenspiel()):
+		return false
 	return super(id)
 
 
 #endregion
+
+
+func einstieg() -> void:
+	var k: Array = ZS_KALENDER.get(_zwischenspiel(), [])
+	if k.is_empty():
+		await super()
+		return
+	var gesehen := Zustand.angesehen.keys().any(func(s): return k[0] in str(s))
+	if gesehen and Zustand.ansehen_zaehlen("Opa/Kalender/%d" % _zwischenspiel()) == 1:
+		await Spiel.sagen("OPA", k[1])
+		await Spiel.sagen("PIX", k[2])

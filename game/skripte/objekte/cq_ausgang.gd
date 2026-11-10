@@ -49,6 +49,8 @@ func _darf_gehen() -> bool:
 	if Spiel.ist_pixel():
 		await Spiel.wechsel_regel("pixel_tuer")
 		return false
+	if await Spiel.regel("ausgang", self):
+		return false  # die Regeln des Abschnitts sperren (und sagen, warum)
 	if not offen():
 		var zeile: String = bauplan().get("gesperrt", "")
 		await Spiel.hingehen(self)

@@ -20,8 +20,25 @@ func _on_build_options(existing: Array[PopochiuDialogOption]) -> Array[PopochiuD
 
 
 func _on_start() -> void:
+	await einstieg()
 	sichtbarkeit_anpassen()
 	await E.get_tree().process_frame
+
+
+## Einstieg („Reden: X, Einstieg“ im Skript): einmal vor dem ersten Menü, wenn seine
+## Bedingung gilt. Gemerkt wird er im Zustand (Zähler „Einstieg/<Dialog>“).
+func einstieg() -> void:
+	var e: Dictionary = bauplan().get("einstieg", {})
+	if e.is_empty() or Zustand.angesehen.get("Einstieg/" + script_name, 0) > 0:
+		return
+	if not Spiel.bedingung_ok(e.get("bedingung", [])):
+		return
+	if not e.get("bedingung_text", "").is_empty() and not Spiel.bedingung_text_ok(e.bedingung_text):
+		return
+	Zustand.ansehen_zaehlen("Einstieg/" + script_name)
+	for z in e.get("zeilen", []):
+		await Spiel.sagen(z.sprecher, z.zeile)
+	await Spiel.regel("nach_einstieg", self)
 
 
 func sichtbarkeit_anpassen() -> void:
@@ -45,6 +62,9 @@ func option_sichtbar(id: String) -> bool:
 			return false
 	if not o.get("bedingung_text", "").is_empty() and not Spiel.bedingung_text_ok(o.bedingung_text):
 		return false
+	var w = Spiel.regel_wert("option_sichtbar", self, id)
+	if w != null:
+		return bool(w)
 	return Spiel.bedingung_ok(o.get("bedingung", []))
 
 
@@ -113,8 +133,9 @@ func waehlen(id: String) -> bool:
 
 
 ## Folgen einer Option (Schalter setzen, Szene). true beendet das Gespräch (die Figur geht).
-func _nach_option(_id: String) -> bool:
-	return false
+## Standard: die Regeln des Abschnitts (Spiel.regel „nach_option“).
+func _nach_option(id: String) -> bool:
+	return await Spiel.regel("nach_option", self, id)
 
 
 ## Antwortzeilen einer Option als [{sprecher, zeile}]. Sonderfälle hier überschreiben.

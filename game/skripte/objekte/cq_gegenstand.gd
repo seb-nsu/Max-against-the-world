@@ -11,8 +11,12 @@ func bauplan() -> Dictionary:
 	return Bauplan.gegenstand(script_name)
 
 
-## Aktueller Zustand, z. B. „antenne“. Standard: der erste aus der Welt-Tabelle.
+## Aktueller Zustand, z. B. „antenne“. Standard: was die Regeln des Abschnitts ableiten (Welt 2:
+## Alter der Krüge und des Grabsteins aus dem Fährsteg), sonst der erste aus der Welt-Tabelle.
 func zustand() -> String:
+	var w = Spiel.regel_wert("zustand", self)
+	if w != null:
+		return w
 	var z: Array = bauplan().get("zustaende", [])
 	return z[0] if not z.is_empty() else ""
 
@@ -66,6 +70,8 @@ func _on_right_click() -> void:
 
 ## Standard: Ansehen-Zeile aus dem Bauplan (je Zustand), sonst Ersatzzeile.
 func _ansehen() -> void:
+	if await Spiel.regel("ansehen_inventar", self):
+		return
 	await Spiel.ansehen(bauplan().get("ansehen", []), "Gegenstand/" + script_name, zustand())
 
 
@@ -84,6 +90,8 @@ func _on_item_used(item: PopochiuInventoryItem) -> void:
 		await Spiel.ersatz("PIX")
 		return
 	Hinweise.objekt_beruehrt(bauplan().get("id", ""))
+	if await Spiel.regel("kombinieren", self, item):
+		return
 	if await _kombinieren(item):
 		return
 	if item.has_method("_kombinieren") and await item._kombinieren(self):
@@ -98,6 +106,8 @@ func _on_item_used(item: PopochiuInventoryItem) -> void:
 
 ## Benutzen im Inventar. Standard: Benutzen-Zeile aus dem Bauplan (je Zustand), sonst nichts.
 func _benutzen() -> void:
+	if await Spiel.regel("benutzen_inventar", self):
+		return
 	for e in bauplan().get("benutzen", []):
 		if Spiel.eintrag_passt(e, zustand()):
 			await Spiel.sagen_eintrag(e)

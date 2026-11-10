@@ -39,6 +39,7 @@ func _on_room_entered() -> void:
 	partner_aufstellen(true)
 	_zustand_anwenden()
 	await _raum_betreten(erster_besuch)
+	await Spiel.regel("raum_betreten", self, erster_besuch)
 	Spiel.pixel_feld_pruefen()
 
 
@@ -53,6 +54,8 @@ func _on_room_transition_finished() -> void:
 	Spiel.herkunft_raum = ""
 	if war_wechsel:
 		Spielstand.autospeichern()
+	if await Spiel.regel("nach_uebergang", self):
+		return
 	await _nach_uebergang()
 
 
@@ -63,6 +66,7 @@ func _on_restore_from_savegame() -> void:
 	partner_aufstellen()
 	_zustand_anwenden()
 	Spiel.pixel_feld_pruefen()
+	await Spiel.regel("nach_laden", self)
 	await _nach_laden()
 
 
@@ -110,6 +114,7 @@ func _zustand_anwenden() -> void:
 	var regeln = ABSCHNITT_REGELN.get(Zustand.abschnitt)
 	if regeln:
 		regeln.figuren_anwenden(self)
+	Spiel.regel_wert("zustand_anwenden", self)  # Welt 2 ff.: Begleiter, Figuren, Props
 
 
 ## Vor dem Einblenden (Figuren stellen). erster_besuch: Raum zum ersten Mal betreten.
