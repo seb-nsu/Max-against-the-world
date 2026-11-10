@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://cd31bf5c2cj34"]
+
+[ext_resource type="Script" path="res://game/rooms/widerstandsbasis/hotspots/ausgang_unterstadt_strasse/hotspot_ausgang_unterstadt_strasse.gd" id="1_7af3v"]
+
+[node name="AusgangUnterstadtStrasse" type="Area2D" unique_id=772640876]
+script = ExtResource("1_7af3v")
+script_name = "AusgangUnterstadtStrasse"
+description = "Ausgang Unterstadt Strasse"
+cursor = 1
+interaction_polygon = PackedVector2Array(-13.5, -52.5, 13.5, -52.5, 13.5, 52.5, -13.5, 52.5)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=976833427]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

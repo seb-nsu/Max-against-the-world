@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://lpvgsdeojyms"]
+
+[ext_resource type="Script" path="res://game/characters/zappmann/character_zappmann_state.gd" id="1_i2rq0"]
+
+[resource]
+resource_name = "Zappmann"
+script = ExtResource("1_i2rq0")
+script_name = "Zappmann"
+scene = "res://game/characters/zappmann/character_zappmann.tscn"

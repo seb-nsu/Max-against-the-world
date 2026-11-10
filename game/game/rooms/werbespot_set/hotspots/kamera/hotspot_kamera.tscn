@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://byxwu8s0tmvd6"]
+
+[ext_resource type="Script" path="res://game/rooms/werbespot_set/hotspots/kamera/hotspot_kamera.gd" id="1_l5nc2"]
+
+[node name="Kamera" type="Area2D" unique_id=796128608]
+script = ExtResource("1_l5nc2")
+script_name = "Kamera"
+description = "Kamera"
+cursor = 1
+interaction_polygon = PackedVector2Array(-29, -24, 29, -24, 29, 24, -29, 24)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=2132906838]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

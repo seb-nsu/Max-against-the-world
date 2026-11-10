@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://bf4mmc6etag50"]
+
+[ext_resource type="Script" path="res://game/inventory_items/handy/inventory_item_handy.gd" id="1_r5f7o"]
+[ext_resource type="Texture2D" uid="uid://ck7t7lq44dsll" path="res://grafik/platzhalter/gegenstand_handy.png" id="1_tpnd5"]
+
+[node name="ItemHandy" type="TextureRect" unique_id=1822144478]
+texture_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 4
+mouse_filter = 0
+texture = ExtResource("1_tpnd5")
+stretch_mode = 5
+script = ExtResource("1_r5f7o")
+script_name = "Handy"
+description = "UI_OBJ_HANDY"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=97342692]

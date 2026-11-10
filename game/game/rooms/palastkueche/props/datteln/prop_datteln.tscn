@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://g5mopecqeiuo"]
+
+[ext_resource type="Script" path="res://game/rooms/palastkueche/props/datteln/prop_datteln.gd" id="1_4co7e"]
+
+[node name="Datteln" type="Area2D" unique_id=1403334936]
+script = ExtResource("1_4co7e")
+script_name = "Datteln"
+description = "Datteln"
+cursor = 1
+interaction_polygon = PackedVector2Array(-7.5, -4.5, 7.5, -4.5, 7.5, 4.5, -7.5, 4.5)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=732719972]
+texture_filter = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1276937210]
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=795793416]
+visible = false
+modulate = Color(1, 1, 0, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+
+[node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=573643415]
+visible = false
+affect_navigation_mesh = true
+carve_navigation_mesh = true

@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://baw6ptn1eqfp3"]
+
+[ext_resource type="Script" path="res://game/characters/hausmeister/character_hausmeister_state.gd" id="1_dji6c"]
+
+[resource]
+resource_name = "Hausmeister"
+script = ExtResource("1_dji6c")
+script_name = "Hausmeister"
+scene = "res://game/characters/hausmeister/character_hausmeister.tscn"

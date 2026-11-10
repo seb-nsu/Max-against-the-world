@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://cwk3w6x5l517k"]
+
+[ext_resource type="Script" path="res://game/rooms/sphinx/hotspots/schreibpult/hotspot_schreibpult.gd" id="1_pji5o"]
+
+[node name="Schreibpult" type="Area2D" unique_id=809702017]
+script = ExtResource("1_pji5o")
+script_name = "Schreibpult"
+description = "Schreibpult"
+cursor = 1
+interaction_polygon = PackedVector2Array(-39, -27, 39, -27, 39, 27, -39, 27)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=372123271]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

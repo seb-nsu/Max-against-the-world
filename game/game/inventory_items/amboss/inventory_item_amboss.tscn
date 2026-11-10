@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://com4rf0xrl465"]
+
+[ext_resource type="Script" path="res://game/inventory_items/amboss/inventory_item_amboss.gd" id="1_fffbw"]
+[ext_resource type="Texture2D" uid="uid://xc3gh1tcvbvi" path="res://grafik/platzhalter/gegenstand_amboss.png" id="1_fymid"]
+
+[node name="ItemAmboss" type="TextureRect" unique_id=95772259]
+texture_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 4
+mouse_filter = 0
+texture = ExtResource("1_fymid")
+stretch_mode = 5
+script = ExtResource("1_fffbw")
+script_name = "Amboss"
+description = "UI_OBJ_AMBOSS"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=998730201]

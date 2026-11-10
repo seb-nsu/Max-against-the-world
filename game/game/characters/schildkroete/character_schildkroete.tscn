@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://xque1qvtpvdk"]
+
+[ext_resource type="Script" path="res://game/characters/schildkroete/character_schildkroete.gd" id="1_517q3"]
+[ext_resource type="Texture2D" uid="uid://bad1pw7fgq26v" path="res://grafik/platzhalter/figur_schildkroete.png" id="2_14v0l"]
+
+[node name="CharacterSchildkroete" type="Area2D" unique_id=45998621]
+script = ExtResource("1_517q3")
+walk_speed = 90.0
+dialog_pos = Vector2(0, -22)
+script_name = "Schildkroete"
+description = "UI_OBJ_SCHILDKROETE"
+cursor = 8
+interaction_polygon = PackedVector2Array(-12, -18, 12, -18, 12, 0, -12, 0)
+
+[node name="ScalingPolygon" type="CollisionPolygon2D" parent="." unique_id=535093778]
+polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1888749650]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1415670561]
+texture_filter = 1
+texture = ExtResource("2_14v0l")
+offset = Vector2(0, -9)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1811368160]
+visible = false
+polygon = PackedVector2Array(-12, -18, 12, -18, 12, 0, -12, 0)
+
+[node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=1237438982]
+visible = false
+affect_navigation_mesh = true
+carve_navigation_mesh = true

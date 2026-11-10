@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://cjojwhqvhi6jp"]
+
+[ext_resource type="Script" path="res://game/characters/empfangsdame/character_empfangsdame_state.gd" id="1_d6s50"]
+
+[resource]
+resource_name = "Empfangsdame"
+script = ExtResource("1_d6s50")
+script_name = "Empfangsdame"
+scene = "res://game/characters/empfangsdame/character_empfangsdame.tscn"

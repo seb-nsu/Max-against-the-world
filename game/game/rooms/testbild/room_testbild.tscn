@@ -1,0 +1,73 @@
+[gd_scene format=3 uid="uid://brdv2p3ys0fju"]
+
+[ext_resource type="Script" path="res://game/rooms/testbild/room_testbild.gd" id="1_b1oc7"]
+[ext_resource type="PackedScene" uid="uid://7m31nnqj32ll" path="res://game/rooms/testbild/walkable_areas/boden/walkable_area_boden.tscn" id="2_jn42v"]
+[ext_resource type="PackedScene" uid="uid://bp0iruvlgvbo3" path="res://game/rooms/testbild/props/background/prop_background.tscn" id="3_wn1vi"]
+[ext_resource type="Texture2D" uid="uid://2pg1hlkfwaau" path="res://grafik/platzhalter/raum_testbild.png" id="4_lsls4"]
+[ext_resource type="PackedScene" uid="uid://csb58of1x5xj4" path="res://game/rooms/testbild/hotspots/balken/hotspot_balken.tscn" id="5_6ej3u"]
+[ext_resource type="PackedScene" uid="uid://tf504skl0ksw" path="res://game/rooms/testbild/hotspots/testkreis/hotspot_testkreis.tscn" id="6_op5dn"]
+[ext_resource type="PackedScene" uid="uid://dnukfk6q06m6f" path="res://game/rooms/testbild/hotspots/rauschen_am_rand/hotspot_rauschen_am_rand.tscn" id="7_sstfj"]
+[ext_resource type="PackedScene" uid="uid://bkjtlhpinb17v" path="res://game/rooms/testbild/hotspots/ausgang_gluecksrad/hotspot_ausgang_gluecksrad.tscn" id="8_ese24"]
+[ext_resource type="PackedScene" uid="uid://dqevmj0vga45g" path="res://game/rooms/testbild/markers/start/marker_start.tscn" id="9_k5dns"]
+[ext_resource type="PackedScene" uid="uid://dlh0jrlv2442c" path="res://game/rooms/testbild/markers/von_gluecksrad/marker_von_gluecksrad.tscn" id="10_pfng4"]
+[ext_resource type="PackedScene" uid="uid://ble7upavwjstd" path="res://game/characters/flimmer/character_flimmer.tscn" id="11_ytct1"]
+
+[node name="RoomTestbild" type="Node2D" unique_id=224925185]
+script = ExtResource("1_b1oc7")
+script_name = "Testbild"
+width = 480
+height = 270
+
+[node name="WalkableAreas" type="Node2D" parent="." unique_id=97345365]
+
+[node name="Boden" parent="WalkableAreas" unique_id=234594936 instance=ExtResource("2_jn42v")]
+interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(6, 210, 474, 210, 474, 267, 6, 267)])
+
+[node name="Props" type="Node2D" parent="." unique_id=80238654]
+
+[node name="Background" parent="Props" unique_id=537083678 instance=ExtResource("3_wn1vi")]
+position = Vector2(240, 135)
+texture = ExtResource("4_lsls4")
+description = "UI_RAUM_TESTBILD"
+
+[node name="Hotspots" type="Node2D" parent="." unique_id=1967526242]
+
+[node name="Balken" parent="Hotspots" unique_id=1348235037 instance=ExtResource("5_6ej3u")]
+position = Vector2(106.5, 54)
+description = "UI_OBJ_BALKEN"
+baseline = 24
+walk_to_point = Vector2(-0.5, 181)
+
+[node name="Testkreis" parent="Hotspots" unique_id=1859349556 instance=ExtResource("6_op5dn")]
+position = Vector2(239.5, 54)
+description = "UI_OBJ_TESTKREIS"
+baseline = 24
+walk_to_point = Vector2(-0.5, 181)
+
+[node name="RauschenAmRand" parent="Hotspots" unique_id=367278700 instance=ExtResource("7_sstfj")]
+position = Vector2(372.5, 54)
+description = "UI_OBJ_RAUSCHEN_AM_RAND"
+baseline = 24
+walk_to_point = Vector2(-0.5, 181)
+
+[node name="AusgangGluecksrad" parent="Hotspots" unique_id=1357359236 instance=ExtResource("8_ese24")]
+position = Vector2(19.5, 157.5)
+description = "UI_RAUM_GLUECKSRAD"
+baseline = 52
+walk_to_point = Vector2(16.5, 82.5)
+cursor = 9
+
+[node name="Regions" type="Node2D" parent="." unique_id=900535713]
+
+[node name="Markers" type="Node2D" parent="." unique_id=1276967314]
+
+[node name="Start" parent="Markers" unique_id=517920912 instance=ExtResource("9_k5dns")]
+position = Vector2(240, 240)
+
+[node name="VonGluecksrad" parent="Markers" unique_id=1298333449 instance=ExtResource("10_pfng4")]
+position = Vector2(36, 240)
+
+[node name="Characters" type="Node2D" parent="." unique_id=564992503]
+
+[node name="CharacterFlimmer *" parent="Characters" unique_id=1629242648 instance=ExtResource("11_ytct1")]
+position = Vector2(240, 232)

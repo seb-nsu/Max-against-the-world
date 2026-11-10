@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://deljinf3a8g38"]
+
+[ext_resource type="Script" path="res://game/rooms/testkammer_1/walkable_areas/boden/walkable_area_boden.gd" id="1_0v2ot"]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_0v2ot"]
+vertices = PackedVector2Array(474, 267, 6, 267, 6, 210, 474, 210)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(6, 210, 474, 210, 474, 267, 6, 267)])
+agent_radius = 0.0
+
+[node name="Boden" type="Node2D" unique_id=229542532]
+script = ExtResource("1_0v2ot")
+script_name = "Boden"
+description = "Boden"
+interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(6, 210, 474, 210, 474, 267, 6, 267)])
+
+[node name="Perimeter" type="NavigationRegion2D" parent="." unique_id=98733258]
+modulate = Color(0, 1, 0, 1)
+navigation_polygon = SubResource("NavigationPolygon_0v2ot")

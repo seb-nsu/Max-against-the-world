@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://dg6ka0an61ma4"]
+
+[ext_resource type="Script" path="res://game/rooms/nil_delta/props/papyrusblatt/prop_papyrusblatt.gd" id="1_q1wl0"]
+
+[node name="Papyrusblatt" type="Area2D" unique_id=964821375]
+script = ExtResource("1_q1wl0")
+script_name = "Papyrusblatt"
+description = "Papyrusblatt"
+cursor = 1
+interaction_polygon = PackedVector2Array(-7.5, -6, 7.5, -6, 7.5, 6, -7.5, 6)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=123144562]
+texture_filter = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=251282654]
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1918274532]
+visible = false
+modulate = Color(1, 1, 0, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+
+[node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=1247932297]
+visible = false
+affect_navigation_mesh = true
+carve_navigation_mesh = true

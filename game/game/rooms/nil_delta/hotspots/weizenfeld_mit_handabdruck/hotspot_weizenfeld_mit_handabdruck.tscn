@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://swo3xegm8pq3"]
+
+[ext_resource type="Script" path="res://game/rooms/nil_delta/hotspots/weizenfeld_mit_handabdruck/hotspot_weizenfeld_mit_handabdruck.gd" id="1_fdu4y"]
+
+[node name="WeizenfeldMitHandabdruck" type="Area2D" unique_id=847886703]
+script = ExtResource("1_fdu4y")
+script_name = "WeizenfeldMitHandabdruck"
+description = "Weizenfeld Mit Handabdruck"
+cursor = 1
+interaction_polygon = PackedVector2Array(-36, -22.5, 36, -22.5, 36, 22.5, -36, 22.5)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1351180075]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://ewpipp7tvwd7"]
+
+[ext_resource type="Script" path="res://game/rooms/werkstatt/room_werkstatt_state.gd" id="1_lppop"]
+
+[resource]
+resource_name = "Werkstatt"
+script = ExtResource("1_lppop")
+script_name = "Werkstatt"
+scene = "res://game/rooms/werkstatt/room_werkstatt.tscn"

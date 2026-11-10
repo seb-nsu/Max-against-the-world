@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://4l6ji4jw25qm"]
+
+[ext_resource type="Script" path="res://game/rooms/werbespot_set/hotspots/plastikpalme/hotspot_plastikpalme.gd" id="1_svxul"]
+
+[node name="Plastikpalme" type="Area2D" unique_id=521271690]
+script = ExtResource("1_svxul")
+script_name = "Plastikpalme"
+description = "Plastikpalme"
+cursor = 1
+interaction_polygon = PackedVector2Array(-29, -24, 29, -24, 29, 24, -29, 24)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=703150498]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

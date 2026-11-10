@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://dtfhiydkkh4ul"]
+
+[ext_resource type="Script" path="res://game/rooms/apothekengasse/room_apothekengasse_state.gd" id="1_cstnb"]
+
+[resource]
+resource_name = "Apothekengasse"
+script = ExtResource("1_cstnb")
+script_name = "Apothekengasse"
+scene = "res://game/rooms/apothekengasse/room_apothekengasse.tscn"

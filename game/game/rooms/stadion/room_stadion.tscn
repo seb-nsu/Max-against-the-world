@@ -1,0 +1,140 @@
+[gd_scene format=3 uid="uid://dhbehnv4jbnlh"]
+
+[ext_resource type="Script" path="res://game/rooms/stadion/room_stadion.gd" id="1_5sspt"]
+[ext_resource type="PackedScene" uid="uid://uduv2kkh10i7" path="res://game/rooms/stadion/walkable_areas/boden/walkable_area_boden.tscn" id="2_a12rk"]
+[ext_resource type="PackedScene" uid="uid://d3edfyitrcbm3" path="res://game/rooms/stadion/props/background/prop_background.tscn" id="3_ixigb"]
+[ext_resource type="Texture2D" uid="uid://d0ub45o1ya85j" path="res://grafik/platzhalter/raum_stadion.png" id="4_tpcia"]
+[ext_resource type="PackedScene" uid="uid://dpxxl06kqdwxk" path="res://game/rooms/stadion/hotspots/laufbahn/hotspot_laufbahn.tscn" id="5_82gfv"]
+[ext_resource type="PackedScene" uid="uid://djs4qlhrd2d2b" path="res://game/rooms/stadion/hotspots/sandgrube/hotspot_sandgrube.tscn" id="6_omuwg"]
+[ext_resource type="PackedScene" uid="uid://bra07yuvpieqg" path="res://game/rooms/stadion/hotspots/kampfrichterzelt/hotspot_kampfrichterzelt.tscn" id="7_h825q"]
+[ext_resource type="PackedScene" uid="uid://c1q0serudv8kd" path="res://game/rooms/stadion/hotspots/zuschauerraenge/hotspot_zuschauerraenge.tscn" id="8_kyju0"]
+[ext_resource type="PackedScene" uid="uid://cmbgsgjcoho5r" path="res://game/rooms/stadion/hotspots/glockenturm/hotspot_glockenturm.tscn" id="9_72cca"]
+[ext_resource type="PackedScene" uid="uid://blmgrx3fcmffs" path="res://game/rooms/stadion/hotspots/siegerliste/hotspot_siegerliste.tscn" id="10_xlriu"]
+[ext_resource type="PackedScene" uid="uid://bg3ji584difux" path="res://game/rooms/stadion/hotspots/startlinie/hotspot_startlinie.tscn" id="11_ekowx"]
+[ext_resource type="PackedScene" uid="uid://cm27agwsfhva4" path="res://game/rooms/stadion/hotspots/wurfhebel/hotspot_wurfhebel.tscn" id="12_xpgu3"]
+[ext_resource type="PackedScene" uid="uid://d0eldemonfmw0" path="res://game/rooms/stadion/hotspots/ausgang_agora/hotspot_ausgang_agora.tscn" id="13_rie0b"]
+[ext_resource type="PackedScene" uid="uid://362qbykllre8" path="res://game/rooms/stadion/markers/start/marker_start.tscn" id="14_t6v7c"]
+[ext_resource type="PackedScene" uid="uid://dcbqvnnx3kq41" path="res://game/rooms/stadion/markers/von_agora/marker_von_agora.tscn" id="15_yeq08"]
+[ext_resource type="PackedScene" uid="uid://c2rmh5rwvgal5" path="res://game/rooms/stadion/markers/ramses/marker_ramses.tscn" id="16_sib87"]
+[ext_resource type="PackedScene" uid="uid://blluxgj68ad8k" path="res://game/rooms/stadion/markers/wedler/marker_wedler.tscn" id="17_0568d"]
+[ext_resource type="PackedScene" uid="uid://d1jth2ro050wl" path="res://game/rooms/stadion/markers/archimedes/marker_archimedes.tscn" id="18_qdwbs"]
+[ext_resource type="PackedScene" uid="uid://bccmpcub4tvsg" path="res://game/rooms/stadion/markers/hermes/marker_hermes.tscn" id="19_0si1o"]
+[ext_resource type="PackedScene" uid="uid://cg2optxhjkqc5" path="res://game/rooms/stadion/markers/cicero/marker_cicero.tscn" id="20_avckm"]
+[ext_resource type="PackedScene" uid="uid://bkw3yo7inrk12" path="res://game/rooms/stadion/markers/zeremonienmeister/marker_zeremonienmeister.tscn" id="21_nthgn"]
+[ext_resource type="PackedScene" uid="uid://u4f6iokmsgeb" path="res://game/rooms/stadion/markers/aegypter/marker_aegypter.tscn" id="22_fbtic"]
+[ext_resource type="PackedScene" uid="uid://dwamt5edbgy85" path="res://game/characters/leonidas/character_leonidas.tscn" id="23_ir0p1"]
+[ext_resource type="PackedScene" uid="uid://xque1qvtpvdk" path="res://game/characters/schildkroete/character_schildkroete.tscn" id="24_mvyhm"]
+
+[node name="RoomStadion" type="Node2D" unique_id=28280966]
+script = ExtResource("1_5sspt")
+script_name = "Stadion"
+width = 480
+height = 270
+
+[node name="WalkableAreas" type="Node2D" parent="." unique_id=707360395]
+
+[node name="Boden" parent="WalkableAreas" unique_id=482142947 instance=ExtResource("2_a12rk")]
+interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(6, 210, 474, 210, 474, 267, 6, 267)])
+
+[node name="Props" type="Node2D" parent="." unique_id=421494228]
+
+[node name="Background" parent="Props" unique_id=1710284010 instance=ExtResource("3_ixigb")]
+position = Vector2(240, 135)
+texture = ExtResource("4_tpcia")
+description = "UI_RAUM_STADION"
+
+[node name="Hotspots" type="Node2D" parent="." unique_id=1910512851]
+
+[node name="Laufbahn" parent="Hotspots" unique_id=1282474215 instance=ExtResource("5_82gfv")]
+position = Vector2(240, 231)
+description = "UI_OBJ_LAUFBAHN"
+baseline = 9
+walk_to_point = Vector2(0, 18)
+
+[node name="Sandgrube" parent="Hotspots" unique_id=1618560048 instance=ExtResource("6_omuwg")]
+position = Vector2(141, 198)
+description = "UI_OBJ_SANDGRUBE"
+baseline = 12
+walk_to_point = Vector2(0, 36)
+
+[node name="Kampfrichterzelt" parent="Hotspots" unique_id=1010759944 instance=ExtResource("7_h825q")]
+position = Vector2(240, 171)
+description = "UI_OBJ_KAMPFRICHTERZELT"
+baseline = 24
+walk_to_point = Vector2(0, 60)
+
+[node name="Zuschauerraenge" parent="Hotspots" unique_id=889203043 instance=ExtResource("8_kyju0")]
+position = Vector2(240, 84)
+description = "UI_OBJ_ZUSCHAUERRAENGE"
+baseline = 24
+walk_to_point = Vector2(0, 147)
+
+[node name="Glockenturm" parent="Hotspots" unique_id=638813179 instance=ExtResource("9_72cca")]
+position = Vector2(432, 31.5)
+description = "UI_OBJ_GLOCKENTURM"
+baseline = 25
+walk_to_point = Vector2(-12, 199.5)
+
+[node name="Siegerliste" parent="Hotspots" unique_id=731268277 instance=ExtResource("10_xlriu")]
+position = Vector2(318, 157.5)
+description = "UI_OBJ_SIEGERLISTE"
+baseline = 22
+walk_to_point = Vector2(0, 73.5)
+
+[node name="Startlinie" parent="Hotspots" unique_id=776175796 instance=ExtResource("11_ekowx")]
+position = Vector2(400.5, 252)
+description = "UI_OBJ_STARTLINIE"
+baseline = 12
+walk_to_point = Vector2(-1.5, 0)
+
+[node name="Wurfhebel" parent="Hotspots" unique_id=2002672959 instance=ExtResource("12_xpgu3")]
+position = Vector2(63, 180)
+description = "UI_OBJ_WURFHEBEL"
+baseline = 30
+walk_to_point = Vector2(3, 54)
+
+[node name="AusgangAgora" parent="Hotspots" unique_id=353297913 instance=ExtResource("13_rie0b")]
+position = Vector2(463.5, 157.5)
+description = "UI_OBJ_AUSGANG_AGORA"
+baseline = 52
+walk_to_point = Vector2(-4.5, 82.5)
+cursor = 9
+
+[node name="Regions" type="Node2D" parent="." unique_id=1731627739]
+
+[node name="Markers" type="Node2D" parent="." unique_id=566393897]
+
+[node name="Start" parent="Markers" unique_id=2100545164 instance=ExtResource("14_t6v7c")]
+position = Vector2(444, 240)
+
+[node name="VonAgora" parent="Markers" unique_id=1338887414 instance=ExtResource("15_yeq08")]
+position = Vector2(444, 240)
+
+[node name="Ramses" parent="Markers" unique_id=1278222484 instance=ExtResource("16_sib87")]
+position = Vector2(240, 99)
+
+[node name="Wedler" parent="Markers" unique_id=931534433 instance=ExtResource("17_0568d")]
+position = Vector2(282, 99)
+
+[node name="Archimedes" parent="Markers" unique_id=1185281788 instance=ExtResource("18_qdwbs")]
+position = Vector2(96, 228)
+
+[node name="Hermes" parent="Markers" unique_id=683299800 instance=ExtResource("19_0si1o")]
+position = Vector2(345, 240)
+
+[node name="Cicero" parent="Markers" unique_id=249143024 instance=ExtResource("20_avckm")]
+position = Vector2(165, 228)
+
+[node name="Zeremonienmeister" parent="Markers" unique_id=1979263688 instance=ExtResource("21_nthgn")]
+position = Vector2(390, 228)
+
+[node name="Aegypter" parent="Markers" unique_id=147604749 instance=ExtResource("22_fbtic")]
+position = Vector2(180, 99)
+
+[node name="Characters" type="Node2D" parent="." unique_id=657065468]
+
+[node name="CharacterLeonidas *" parent="Characters" unique_id=2063397062 instance=ExtResource("23_ir0p1")]
+position = Vector2(300, 237)
+
+[node name="CharacterSchildkroete *" parent="Characters" unique_id=45998621 instance=ExtResource("24_mvyhm")]
+position = Vector2(354, 252)

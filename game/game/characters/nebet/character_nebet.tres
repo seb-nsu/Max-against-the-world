@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://4engmpyg8fod"]
+
+[ext_resource type="Script" path="res://game/characters/nebet/character_nebet_state.gd" id="1_ymihn"]
+
+[resource]
+resource_name = "Nebet"
+script = ExtResource("1_ymihn")
+script_name = "Nebet"
+scene = "res://game/characters/nebet/character_nebet.tscn"

@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://b1nsyadlaqljw"]
+
+[ext_resource type="Script" path="res://game/rooms/testbild/room_testbild_state.gd" id="1_fek84"]
+
+[resource]
+resource_name = "Testbild"
+script = ExtResource("1_fek84")
+script_name = "Testbild"
+scene = "res://game/rooms/testbild/room_testbild.tscn"

@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://b7kprp4chyyhh"]
+
+[ext_resource type="Script" path="res://game/rooms/agora/hotspots/tonne/hotspot_tonne.gd" id="1_lhvhd"]
+
+[node name="Tonne" type="Area2D" unique_id=1216927206]
+script = ExtResource("1_lhvhd")
+script_name = "Tonne"
+description = "Tonne"
+cursor = 1
+interaction_polygon = PackedVector2Array(-27, -18, 27, -18, 27, 18, -27, 18)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=963394435]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

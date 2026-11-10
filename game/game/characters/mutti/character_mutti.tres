@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://bnbdy37qs6i8h"]
+
+[ext_resource type="Script" path="res://game/characters/mutti/character_mutti_state.gd" id="1_oacgi"]
+
+[resource]
+resource_name = "Mutti"
+script = ExtResource("1_oacgi")
+script_name = "Mutti"
+scene = "res://game/characters/mutti/character_mutti.tscn"

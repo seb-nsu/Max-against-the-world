@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://blluxgj68ad8k"]
+
+[node name="Wedler" type="Marker2D" unique_id=931534433]
+visible = false

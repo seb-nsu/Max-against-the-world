@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://qt0lv2ylxesm"]
+
+[node name="VonLaboreingang" type="Marker2D" unique_id=1799372312]
+visible = false

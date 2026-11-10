@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://dybt4ubx7q6ra"]
+
+[ext_resource type="Script" path="res://game/rooms/widerstandsbasis/hotspots/max_kapsel/hotspot_max_kapsel.gd" id="1_vn8j3"]
+
+[node name="MaxKapsel" type="Area2D" unique_id=1459581717]
+script = ExtResource("1_vn8j3")
+script_name = "MaxKapsel"
+description = "Max Kapsel"
+cursor = 1
+interaction_polygon = PackedVector2Array(-27, -24, 27, -24, 27, 24, -27, 24)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=768349211]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

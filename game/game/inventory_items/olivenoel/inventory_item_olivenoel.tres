@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://ux5v611je3vm"]
+
+[ext_resource type="Script" path="res://game/inventory_items/olivenoel/inventory_item_olivenoel_state.gd" id="1_4rxqo"]
+
+[resource]
+resource_name = "Olivenoel"
+script = ExtResource("1_4rxqo")
+script_name = "Olivenoel"
+scene = "res://game/inventory_items/olivenoel/inventory_item_olivenoel.tscn"

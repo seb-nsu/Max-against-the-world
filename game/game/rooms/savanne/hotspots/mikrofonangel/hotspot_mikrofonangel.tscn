@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://cqj8sfedberp4"]
+
+[ext_resource type="Script" path="res://game/rooms/savanne/hotspots/mikrofonangel/hotspot_mikrofonangel.gd" id="1_omh3m"]
+
+[node name="Mikrofonangel" type="Area2D" unique_id=312658071]
+script = ExtResource("1_omh3m")
+script_name = "Mikrofonangel"
+description = "Mikrofonangel"
+cursor = 1
+interaction_polygon = PackedVector2Array(-40, -24, 40, -24, 40, 24, -40, 24)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=692286650]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

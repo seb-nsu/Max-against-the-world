@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://3soi3k05vtnx"]
+
+[ext_resource type="Script" path="res://game/rooms/fondue_fabrik/hotspots/laufsteg/hotspot_laufsteg.gd" id="1_8mwwk"]
+
+[node name="Laufsteg" type="Area2D" unique_id=1547472895]
+script = ExtResource("1_8mwwk")
+script_name = "Laufsteg"
+description = "Laufsteg"
+cursor = 1
+interaction_polygon = PackedVector2Array(-29, -24, 29, -24, 29, 24, -29, 24)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1465086827]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

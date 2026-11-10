@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://cqmf1ghoqw2ha"]
+
+[ext_resource type="Script" path="res://game/characters/sitcom_sohn/character_sitcom_sohn_state.gd" id="1_mffws"]
+
+[resource]
+resource_name = "SitcomSohn"
+script = ExtResource("1_mffws")
+script_name = "SitcomSohn"
+scene = "res://game/characters/sitcom_sohn/character_sitcom_sohn.tscn"

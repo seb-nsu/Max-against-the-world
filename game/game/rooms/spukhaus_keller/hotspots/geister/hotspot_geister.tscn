@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://8sy4siofblsn"]
+
+[ext_resource type="Script" path="res://game/rooms/spukhaus_keller/hotspots/geister/hotspot_geister.gd" id="1_ugjc1"]
+
+[node name="Geister" type="Area2D" unique_id=2098551770]
+script = ExtResource("1_ugjc1")
+script_name = "Geister"
+description = "Geister"
+cursor = 1
+interaction_polygon = PackedVector2Array(-29, -24, 29, -24, 29, 24, -29, 24)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=499486636]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://cpu8prcka61yp"]
+
+[ext_resource type="Script" path="res://game/rooms/buero_50/hotspots/topfpflanzen/hotspot_topfpflanzen.gd" id="1_r2f1u"]
+
+[node name="Topfpflanzen" type="Area2D" unique_id=2121635765]
+script = ExtResource("1_r2f1u")
+script_name = "Topfpflanzen"
+description = "Topfpflanzen"
+cursor = 1
+interaction_polygon = PackedVector2Array(-29, -24, 29, -24, 29, 24, -29, 24)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1398333202]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

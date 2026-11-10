@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://dnsb2rs7j0fsk"]
+
+[node name="VonApothekengasse" type="Marker2D" unique_id=1698733634]
+visible = false

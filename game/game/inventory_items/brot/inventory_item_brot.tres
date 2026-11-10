@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://8e2m215d422h"]
+
+[ext_resource type="Script" path="res://game/inventory_items/brot/inventory_item_brot_state.gd" id="1_60kph"]
+
+[resource]
+resource_name = "Brot"
+script = ExtResource("1_60kph")
+script_name = "Brot"
+scene = "res://game/inventory_items/brot/inventory_item_brot.tscn"

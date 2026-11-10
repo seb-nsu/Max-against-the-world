@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://bwn2haamaocc5"]
+
+[ext_resource type="Script" path="res://game/rooms/stadtstrasse/hotspots/telefonzelle/hotspot_telefonzelle.gd" id="1_kiyul"]
+
+[node name="Telefonzelle" type="Area2D" unique_id=1420049876]
+script = ExtResource("1_kiyul")
+script_name = "Telefonzelle"
+description = "Telefonzelle"
+cursor = 1
+interaction_polygon = PackedVector2Array(-44.5, -24, 44.5, -24, 44.5, 24, -44.5, 24)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=12117280]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

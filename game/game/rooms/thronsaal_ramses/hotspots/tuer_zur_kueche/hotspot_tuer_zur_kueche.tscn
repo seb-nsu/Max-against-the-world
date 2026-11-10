@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://co1yaqvavgxqc"]
+
+[ext_resource type="Script" path="res://game/rooms/thronsaal_ramses/hotspots/tuer_zur_kueche/hotspot_tuer_zur_kueche.gd" id="1_a6vne"]
+
+[node name="TuerZurKueche" type="Area2D" unique_id=1306821208]
+script = ExtResource("1_a6vne")
+script_name = "TuerZurKueche"
+description = "Tuer Zur Kueche"
+cursor = 1
+interaction_polygon = PackedVector2Array(-19.5, -52.5, 19.5, -52.5, 19.5, 52.5, -19.5, 52.5)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1784536728]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

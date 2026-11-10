@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://08kjjn84cbos"]
+
+[ext_resource type="Script" path="res://game/rooms/nil_delta/hotspots/bauplan/hotspot_bauplan.gd" id="1_ro0pw"]
+
+[node name="Bauplan" type="Area2D" unique_id=1005768694]
+script = ExtResource("1_ro0pw")
+script_name = "Bauplan"
+description = "Bauplan"
+cursor = 1
+interaction_polygon = PackedVector2Array(-15, -12, 15, -12, 15, 12, -15, 12)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=613634097]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

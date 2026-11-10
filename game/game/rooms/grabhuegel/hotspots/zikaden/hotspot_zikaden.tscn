@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://bubamj0yju0e3"]
+
+[ext_resource type="Script" path="res://game/rooms/grabhuegel/hotspots/zikaden/hotspot_zikaden.gd" id="1_tfhb8"]
+
+[node name="Zikaden" type="Area2D" unique_id=577836215]
+script = ExtResource("1_tfhb8")
+script_name = "Zikaden"
+description = "Zikaden"
+cursor = 1
+interaction_polygon = PackedVector2Array(-75, -19.5, 75, -19.5, 75, 19.5, -75, 19.5)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1253287885]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

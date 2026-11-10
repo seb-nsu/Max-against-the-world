@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://dun5ej38ol45h"]
+
+[ext_resource type="Script" path="res://game/inventory_items/taste_umschalten/inventory_item_taste_umschalten_state.gd" id="1_p0hwm"]
+
+[resource]
+resource_name = "TasteUmschalten"
+script = ExtResource("1_p0hwm")
+script_name = "TasteUmschalten"
+scene = "res://game/inventory_items/taste_umschalten/inventory_item_taste_umschalten.tscn"

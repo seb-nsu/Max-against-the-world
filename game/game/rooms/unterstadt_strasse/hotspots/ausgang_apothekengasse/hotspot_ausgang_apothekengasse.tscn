@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://d2e0t01g6io4t"]
+
+[ext_resource type="Script" path="res://game/rooms/unterstadt_strasse/hotspots/ausgang_apothekengasse/hotspot_ausgang_apothekengasse.gd" id="1_ttaa7"]
+
+[node name="AusgangApothekengasse" type="Area2D" unique_id=2071626766]
+script = ExtResource("1_ttaa7")
+script_name = "AusgangApothekengasse"
+description = "Ausgang Apothekengasse"
+cursor = 1
+interaction_polygon = PackedVector2Array(-13.5, -52.5, 13.5, -52.5, 13.5, 52.5, -13.5, 52.5)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1940034466]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

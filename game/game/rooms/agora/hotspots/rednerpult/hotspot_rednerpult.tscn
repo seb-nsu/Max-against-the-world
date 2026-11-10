@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://bnpd60lhigp2e"]
+
+[ext_resource type="Script" path="res://game/rooms/agora/hotspots/rednerpult/hotspot_rednerpult.gd" id="1_idmh4"]
+
+[node name="Rednerpult" type="Area2D" unique_id=1294236936]
+script = ExtResource("1_idmh4")
+script_name = "Rednerpult"
+description = "Rednerpult"
+cursor = 1
+interaction_polygon = PackedVector2Array(-24, -22.5, 24, -22.5, 24, 22.5, -24, 22.5)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=648745765]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

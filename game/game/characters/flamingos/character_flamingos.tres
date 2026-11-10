@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://c7xk8540i73a0"]
+
+[ext_resource type="Script" path="res://game/characters/flamingos/character_flamingos_state.gd" id="1_jccx3"]
+
+[resource]
+resource_name = "Flamingos"
+script = ExtResource("1_jccx3")
+script_name = "Flamingos"
+scene = "res://game/characters/flamingos/character_flamingos.tscn"

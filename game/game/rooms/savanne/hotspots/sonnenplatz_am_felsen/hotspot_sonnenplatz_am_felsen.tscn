@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://cin3dmqwobenk"]
+
+[ext_resource type="Script" path="res://game/rooms/savanne/hotspots/sonnenplatz_am_felsen/hotspot_sonnenplatz_am_felsen.gd" id="1_cxy5e"]
+
+[node name="SonnenplatzAmFelsen" type="Area2D" unique_id=2113608579]
+script = ExtResource("1_cxy5e")
+script_name = "SonnenplatzAmFelsen"
+description = "Sonnenplatz Am Felsen"
+cursor = 1
+interaction_polygon = PackedVector2Array(-40, -24, 40, -24, 40, 24, -40, 24)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1159044260]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://cehkf4hw3q45x"]
+
+[ext_resource type="Script" path="res://game/rooms/thronsaal_ramses/hotspots/thron/hotspot_thron.gd" id="1_650rr"]
+
+[node name="Thron" type="Area2D" unique_id=1128436211]
+script = ExtResource("1_650rr")
+script_name = "Thron"
+description = "Thron"
+cursor = 1
+interaction_polygon = PackedVector2Array(-36, -46.5, 36, -46.5, 36, 46.5, -36, 46.5)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1875277213]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

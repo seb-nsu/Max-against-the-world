@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://mj44csgd24v8"]
+
+[ext_resource type="Script" path="res://game/rooms/thronsaal_ramses/room_thronsaal_ramses_state.gd" id="1_hkq23"]
+
+[resource]
+resource_name = "ThronsaalRamses"
+script = ExtResource("1_hkq23")
+script_name = "ThronsaalRamses"
+scene = "res://game/rooms/thronsaal_ramses/room_thronsaal_ramses.tscn"

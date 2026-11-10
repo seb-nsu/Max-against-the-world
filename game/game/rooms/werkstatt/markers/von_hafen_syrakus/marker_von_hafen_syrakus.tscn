@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://151xh26p4icd"]
+
+[node name="VonHafenSyrakus" type="Marker2D" unique_id=758655716]
+visible = false

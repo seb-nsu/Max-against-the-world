@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://b5i5pt5uv2d21"]
+
+[ext_resource type="Script" path="res://game/rooms/werkstatt/hotspots/ausgang_hafen/hotspot_ausgang_hafen.gd" id="1_32ybp"]
+
+[node name="AusgangHafen" type="Area2D" unique_id=2076176267]
+script = ExtResource("1_32ybp")
+script_name = "AusgangHafen"
+description = "Ausgang Hafen"
+cursor = 1
+interaction_polygon = PackedVector2Array(-13.5, -52.5, 13.5, -52.5, 13.5, 52.5, -13.5, 52.5)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1546835718]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

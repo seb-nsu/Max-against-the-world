@@ -1,0 +1,141 @@
+[gd_scene format=3 uid="uid://dmv144eicjq01"]
+
+[ext_resource type="Script" path="res://game/rooms/fondue_fabrik/room_fondue_fabrik.gd" id="1_to8v3"]
+[ext_resource type="PackedScene" uid="uid://darnn3vc1bfwa" path="res://game/rooms/fondue_fabrik/walkable_areas/boden/walkable_area_boden.tscn" id="2_rvwfh"]
+[ext_resource type="PackedScene" uid="uid://b060rnk6gcb2o" path="res://game/rooms/fondue_fabrik/props/background/prop_background.tscn" id="3_f1x8s"]
+[ext_resource type="Texture2D" uid="uid://c7vm8rio2mh21" path="res://grafik/platzhalter/raum_fondue_fabrik.png" id="4_umvdx"]
+[ext_resource type="PackedScene" uid="uid://conyoio6wtm3f" path="res://game/rooms/fondue_fabrik/hotspots/suchscheinwerfer/hotspot_suchscheinwerfer.tscn" id="5_epf4e"]
+[ext_resource type="PackedScene" uid="uid://djbvioq1ablqs" path="res://game/rooms/fondue_fabrik/hotspots/bottiche/hotspot_bottiche.tscn" id="6_ovym5"]
+[ext_resource type="PackedScene" uid="uid://3soi3k05vtnx" path="res://game/rooms/fondue_fabrik/hotspots/laufsteg/hotspot_laufsteg.tscn" id="7_1i18h"]
+[ext_resource type="PackedScene" uid="uid://b6i62wcgmj2rs" path="res://game/rooms/fondue_fabrik/hotspots/laufband/hotspot_laufband.tscn" id="8_ox14l"]
+[ext_resource type="PackedScene" uid="uid://dt6y4ah028xv" path="res://game/rooms/fondue_fabrik/hotspots/warnschilder/hotspot_warnschilder.tscn" id="9_osios"]
+[ext_resource type="PackedScene" uid="uid://ckws6y8jug30a" path="res://game/rooms/fondue_fabrik/hotspots/hebel/hotspot_hebel.tscn" id="10_wptpq"]
+[ext_resource type="PackedScene" uid="uid://16d0wibq0jhy" path="res://game/rooms/fondue_fabrik/hotspots/einzelbild_1/hotspot_einzelbild_1.tscn" id="11_k2ulh"]
+[ext_resource type="PackedScene" uid="uid://b3b1ydnldpxao" path="res://game/rooms/fondue_fabrik/hotspots/einzelbild_2/hotspot_einzelbild_2.tscn" id="12_0ngme"]
+[ext_resource type="PackedScene" uid="uid://dbdu31ieday5w" path="res://game/rooms/fondue_fabrik/hotspots/einzelbild_3/hotspot_einzelbild_3.tscn" id="13_pfxdw"]
+[ext_resource type="PackedScene" uid="uid://dbykko76ac1hf" path="res://game/rooms/fondue_fabrik/hotspots/einzelbild_4/hotspot_einzelbild_4.tscn" id="14_gp8j3"]
+[ext_resource type="PackedScene" uid="uid://7rq1b1qfoqds" path="res://game/rooms/fondue_fabrik/hotspots/normaler_kaese_in_der_fabrik/hotspot_normaler_kaese_in_der_fabrik.tscn" id="15_w0tjj"]
+[ext_resource type="PackedScene" uid="uid://kknua1sijabd" path="res://game/rooms/fondue_fabrik/hotspots/ausgang_kapitolis/hotspot_ausgang_kapitolis.tscn" id="16_bco6m"]
+[ext_resource type="PackedScene" uid="uid://dedh7ytrmw8rx" path="res://game/rooms/fondue_fabrik/markers/start/marker_start.tscn" id="17_8180v"]
+[ext_resource type="PackedScene" uid="uid://cf5i11pxjc1kl" path="res://game/rooms/fondue_fabrik/markers/von_kapitolis/marker_von_kapitolis.tscn" id="18_16xte"]
+[ext_resource type="PackedScene" uid="uid://chc343c071ue4" path="res://game/characters/super_siegfried/character_super_siegfried.tscn" id="19_ov7rh"]
+[ext_resource type="PackedScene" uid="uid://d18rrdmwhjw6i" path="res://game/characters/fledermann/character_fledermann.tscn" id="20_0prqf"]
+[ext_resource type="PackedScene" uid="uid://b38cvk13f3gn" path="res://game/characters/wonder_wilma/character_wonder_wilma.tscn" id="21_fwv1d"]
+[ext_resource type="PackedScene" uid="uid://cy8tlgdb63umu" path="res://game/characters/fabrikarbeiter/character_fabrikarbeiter.tscn" id="22_q4633"]
+
+[node name="RoomFondueFabrik" type="Node2D" unique_id=1591608900]
+script = ExtResource("1_to8v3")
+script_name = "FondueFabrik"
+width = 480
+height = 270
+
+[node name="WalkableAreas" type="Node2D" parent="." unique_id=1835922113]
+
+[node name="Boden" parent="WalkableAreas" unique_id=166293555 instance=ExtResource("2_rvwfh")]
+interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(6, 210, 474, 210, 474, 267, 6, 267)])
+
+[node name="Props" type="Node2D" parent="." unique_id=1166395714]
+
+[node name="Background" parent="Props" unique_id=852458811 instance=ExtResource("3_f1x8s")]
+position = Vector2(240, 135)
+texture = ExtResource("4_umvdx")
+description = "UI_RAUM_FONDUE_FABRIK"
+
+[node name="Hotspots" type="Node2D" parent="." unique_id=1933631849]
+
+[node name="Suchscheinwerfer" parent="Hotspots" unique_id=1762876054 instance=ExtResource("5_epf4e")]
+position = Vector2(73, 54)
+description = "UI_OBJ_SUCHSCHEINWERFER"
+baseline = 24
+walk_to_point = Vector2(0, 181)
+
+[node name="Bottiche" parent="Hotspots" unique_id=436986861 instance=ExtResource("6_ovym5")]
+position = Vector2(139, 54)
+description = "UI_OBJ_BOTTICHE"
+baseline = 24
+walk_to_point = Vector2(0, 181)
+
+[node name="Laufsteg" parent="Hotspots" unique_id=1547472895 instance=ExtResource("7_1i18h")]
+position = Vector2(205, 54)
+description = "UI_OBJ_LAUFSTEG"
+baseline = 24
+walk_to_point = Vector2(0, 181)
+
+[node name="Laufband" parent="Hotspots" unique_id=316632805 instance=ExtResource("8_ox14l")]
+position = Vector2(271, 54)
+description = "UI_OBJ_LAUFBAND"
+baseline = 24
+walk_to_point = Vector2(0, 181)
+
+[node name="Warnschilder" parent="Hotspots" unique_id=1758004751 instance=ExtResource("9_osios")]
+position = Vector2(337, 54)
+description = "UI_OBJ_WARNSCHILDER"
+baseline = 24
+walk_to_point = Vector2(0, 181)
+
+[node name="Hebel" parent="Hotspots" unique_id=1203038107 instance=ExtResource("10_wptpq")]
+position = Vector2(403, 54)
+description = "UI_OBJ_HEBEL"
+baseline = 24
+walk_to_point = Vector2(0, 181)
+
+[node name="Einzelbild1" parent="Hotspots" unique_id=1013600956 instance=ExtResource("11_k2ulh")]
+position = Vector2(73, 114)
+description = "UI_OBJ_EINZELBILD_1"
+baseline = 24
+walk_to_point = Vector2(0, 121)
+
+[node name="Einzelbild2" parent="Hotspots" unique_id=1249204940 instance=ExtResource("12_0ngme")]
+position = Vector2(139, 114)
+description = "UI_OBJ_EINZELBILD_2"
+baseline = 24
+walk_to_point = Vector2(0, 121)
+
+[node name="Einzelbild3" parent="Hotspots" unique_id=1130325296 instance=ExtResource("13_pfxdw")]
+position = Vector2(205, 114)
+description = "UI_OBJ_EINZELBILD_3"
+baseline = 24
+walk_to_point = Vector2(0, 121)
+
+[node name="Einzelbild4" parent="Hotspots" unique_id=1297605175 instance=ExtResource("14_gp8j3")]
+position = Vector2(271, 114)
+description = "UI_OBJ_EINZELBILD_4"
+baseline = 24
+walk_to_point = Vector2(0, 121)
+
+[node name="NormalerKaeseInDerFabrik" parent="Hotspots" unique_id=2121369225 instance=ExtResource("15_w0tjj")]
+position = Vector2(337, 114)
+description = "UI_OBJ_NORMALER_KAESE_IN_DER_FABRIK"
+baseline = 24
+walk_to_point = Vector2(0, 121)
+
+[node name="AusgangKapitolis" parent="Hotspots" unique_id=452335105 instance=ExtResource("16_bco6m")]
+position = Vector2(19.5, 157.5)
+description = "UI_RAUM_KAPITOLIS"
+baseline = 52
+walk_to_point = Vector2(16.5, 82.5)
+cursor = 9
+
+[node name="Regions" type="Node2D" parent="." unique_id=870372526]
+
+[node name="Markers" type="Node2D" parent="." unique_id=1956236562]
+
+[node name="Start" parent="Markers" unique_id=773035343 instance=ExtResource("17_8180v")]
+position = Vector2(240, 240)
+
+[node name="VonKapitolis" parent="Markers" unique_id=352019766 instance=ExtResource("18_16xte")]
+position = Vector2(36, 240)
+
+[node name="Characters" type="Node2D" parent="." unique_id=518787569]
+
+[node name="CharacterSuperSiegfried *" parent="Characters" unique_id=2002910130 instance=ExtResource("19_ov7rh")]
+position = Vector2(105, 232)
+
+[node name="CharacterFledermann *" parent="Characters" unique_id=1569251706 instance=ExtResource("20_0prqf")]
+position = Vector2(195, 232)
+
+[node name="CharacterWonderWilma *" parent="Characters" unique_id=284281013 instance=ExtResource("21_fwv1d")]
+position = Vector2(285, 232)
+
+[node name="CharacterFabrikarbeiter *" parent="Characters" unique_id=1254480709 instance=ExtResource("22_q4633")]
+position = Vector2(375, 232)

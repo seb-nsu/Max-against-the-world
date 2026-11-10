@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://bb2kfc1u3iddx"]
+
+[ext_resource type="Script" path="res://game/rooms/savanne/hotspots/felsenthron/hotspot_felsenthron.gd" id="1_8s12d"]
+
+[node name="Felsenthron" type="Area2D" unique_id=1944876029]
+script = ExtResource("1_8s12d")
+script_name = "Felsenthron"
+description = "Felsenthron"
+cursor = 1
+interaction_polygon = PackedVector2Array(-40, -24, 40, -24, 40, 24, -40, 24)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1461651524]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

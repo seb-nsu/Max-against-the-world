@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://d0wd5sybq1uyk"]
+
+[node name="VonEmpfang" type="Marker2D" unique_id=147140533]
+visible = false

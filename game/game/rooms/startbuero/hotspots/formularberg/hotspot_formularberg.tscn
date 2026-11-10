@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://c1hev80v06us7"]
+
+[ext_resource type="Script" path="res://game/rooms/startbuero/hotspots/formularberg/hotspot_formularberg.gd" id="1_4ljpv"]
+
+[node name="Formularberg" type="Area2D" unique_id=171233633]
+script = ExtResource("1_4ljpv")
+script_name = "Formularberg"
+description = "Formularberg"
+cursor = 1
+interaction_polygon = PackedVector2Array(-37.5, -67.5, 37.5, -67.5, 37.5, 67.5, -37.5, 67.5)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1148386820]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

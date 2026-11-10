@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://d23xiul2iaxsk"]
+
+[ext_resource type="Script" path="res://game/rooms/agora/room_agora_state.gd" id="1_tkxw3"]
+
+[resource]
+resource_name = "Agora"
+script = ExtResource("1_tkxw3")
+script_name = "Agora"
+scene = "res://game/rooms/agora/room_agora.tscn"

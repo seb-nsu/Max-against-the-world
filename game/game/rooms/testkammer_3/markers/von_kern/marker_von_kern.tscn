@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://5lc1ysgmw4j1"]
+
+[node name="VonKern" type="Marker2D" unique_id=950491300]
+visible = false

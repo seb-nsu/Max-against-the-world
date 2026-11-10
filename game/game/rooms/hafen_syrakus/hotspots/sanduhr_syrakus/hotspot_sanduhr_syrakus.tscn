@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://5oul26dlynhg"]
+
+[ext_resource type="Script" path="res://game/rooms/hafen_syrakus/hotspots/sanduhr_syrakus/hotspot_sanduhr_syrakus.gd" id="1_e0x8h"]
+
+[node name="SanduhrSyrakus" type="Area2D" unique_id=1828473548]
+script = ExtResource("1_e0x8h")
+script_name = "SanduhrSyrakus"
+description = "Sanduhr Syrakus"
+cursor = 1
+interaction_polygon = PackedVector2Array(-12, -25.5, 12, -25.5, 12, 25.5, -12, 25.5)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=2055746064]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

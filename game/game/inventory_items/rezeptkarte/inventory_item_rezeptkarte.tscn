@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://cx8un2ptanlc4"]
+
+[ext_resource type="Script" path="res://game/inventory_items/rezeptkarte/inventory_item_rezeptkarte.gd" id="1_lx65m"]
+[ext_resource type="Texture2D" uid="uid://bt856pgeaohfv" path="res://grafik/platzhalter/gegenstand_rezeptkarte.png" id="1_sebiy"]
+
+[node name="ItemRezeptkarte" type="TextureRect" unique_id=457021363]
+texture_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 4
+mouse_filter = 0
+texture = ExtResource("1_sebiy")
+stretch_mode = 5
+script = ExtResource("1_lx65m")
+script_name = "Rezeptkarte"
+description = "UI_OBJ_REZEPTKARTE"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=248302178]

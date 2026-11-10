@@ -1,0 +1,139 @@
+[gd_scene format=3 uid="uid://cark4atggf1a0"]
+
+[ext_resource type="Script" path="res://game/rooms/friedhof/room_friedhof.gd" id="1_71gm6"]
+[ext_resource type="PackedScene" uid="uid://ccm50sv4cdqtk" path="res://game/rooms/friedhof/walkable_areas/boden/walkable_area_boden.tscn" id="2_oj22s"]
+[ext_resource type="PackedScene" uid="uid://djvr0n6hlt8gc" path="res://game/rooms/friedhof/props/background/prop_background.tscn" id="3_1g5ei"]
+[ext_resource type="Texture2D" uid="uid://jrqmogynfyrp" path="res://grafik/platzhalter/raum_friedhof.png" id="4_mhte4"]
+[ext_resource type="PackedScene" uid="uid://cha0ahl7g63fp" path="res://game/rooms/friedhof/hotspots/zombies/hotspot_zombies.tscn" id="5_bvela"]
+[ext_resource type="PackedScene" uid="uid://c13vtv30wamap" path="res://game/rooms/friedhof/hotspots/leuchtfliesen/hotspot_leuchtfliesen.tscn" id="6_4401j"]
+[ext_resource type="PackedScene" uid="uid://bv2vyi6xrw3ui" path="res://game/rooms/friedhof/hotspots/graeber/hotspot_graeber.tscn" id="7_bb6bg"]
+[ext_resource type="PackedScene" uid="uid://dluoodn5q3rrx" path="res://game/rooms/friedhof/hotspots/discokugel/hotspot_discokugel.tscn" id="8_gccym"]
+[ext_resource type="PackedScene" uid="uid://l3xq5m2se1s0" path="res://game/rooms/friedhof/hotspots/mond/hotspot_mond.tscn" id="9_ggpny"]
+[ext_resource type="PackedScene" uid="uid://i6bij6iv75om" path="res://game/rooms/friedhof/hotspots/nebel/hotspot_nebel.tscn" id="10_claih"]
+[ext_resource type="PackedScene" uid="uid://djtkveelci76i" path="res://game/rooms/friedhof/hotspots/scheinwerfer/hotspot_scheinwerfer.tscn" id="11_umkrr"]
+[ext_resource type="PackedScene" uid="uid://otphj0ki11id" path="res://game/rooms/friedhof/hotspots/bananenschale_auf_mitternachts_tv/hotspot_bananenschale_auf_mitternachts_tv.tscn" id="12_sltyc"]
+[ext_resource type="PackedScene" uid="uid://c7s504qp18ny0" path="res://game/rooms/friedhof/hotspots/fondue_kaese_auf_mitternachts_tv/hotspot_fondue_kaese_auf_mitternachts_tv.tscn" id="13_wlos4"]
+[ext_resource type="PackedScene" uid="uid://bunnoaq628nbv" path="res://game/rooms/friedhof/hotspots/ausgang_spukhaus_keller/hotspot_ausgang_spukhaus_keller.tscn" id="14_0bc2x"]
+[ext_resource type="PackedScene" uid="uid://bpw0gkdag1ywo" path="res://game/rooms/friedhof/markers/start/marker_start.tscn" id="15_4m03e"]
+[ext_resource type="PackedScene" uid="uid://c4e5ircrbh7o6" path="res://game/rooms/friedhof/markers/von_spukhaus_keller/marker_von_spukhaus_keller.tscn" id="16_ymkry"]
+[ext_resource type="PackedScene" uid="uid://b5v02gafe82r" path="res://game/rooms/friedhof/markers/von_gluecksrad/marker_von_gluecksrad.tscn" id="17_dr2hp"]
+[ext_resource type="PackedScene" uid="uid://bsxkxr0x1nm35" path="res://game/rooms/friedhof/markers/von_sitcom_kueche/marker_von_sitcom_kueche.tscn" id="18_y4nrf"]
+[ext_resource type="PackedScene" uid="uid://rgcjco0gygc6" path="res://game/rooms/friedhof/markers/von_savanne/marker_von_savanne.tscn" id="19_jwo82"]
+[ext_resource type="PackedScene" uid="uid://cv2686s0uvwsl" path="res://game/rooms/friedhof/markers/von_kapitolis/marker_von_kapitolis.tscn" id="20_iwntb"]
+[ext_resource type="PackedScene" uid="uid://cal48xhto4uwl" path="res://game/rooms/friedhof/markers/von_werbespot_set/marker_von_werbespot_set.tscn" id="21_uh55y"]
+[ext_resource type="PackedScene" uid="uid://bbushk01fp5nj" path="res://game/rooms/friedhof/markers/von_empfang/marker_von_empfang.tscn" id="22_642jx"]
+[ext_resource type="PackedScene" uid="uid://c4eosltaib4hb" path="res://game/characters/zombie/character_zombie.tscn" id="23_pwnpc"]
+
+[node name="RoomFriedhof" type="Node2D" unique_id=1099570576]
+script = ExtResource("1_71gm6")
+script_name = "Friedhof"
+width = 480
+height = 270
+
+[node name="WalkableAreas" type="Node2D" parent="." unique_id=233444916]
+
+[node name="Boden" parent="WalkableAreas" unique_id=263896457 instance=ExtResource("2_oj22s")]
+interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(6, 210, 474, 210, 474, 267, 6, 267)])
+
+[node name="Props" type="Node2D" parent="." unique_id=1377907779]
+
+[node name="Background" parent="Props" unique_id=867756663 instance=ExtResource("3_1g5ei")]
+position = Vector2(240, 135)
+texture = ExtResource("4_mhte4")
+description = "UI_RAUM_FRIEDHOF"
+
+[node name="Hotspots" type="Node2D" parent="." unique_id=1699213722]
+
+[node name="Zombies" parent="Hotspots" unique_id=1361848113 instance=ExtResource("5_bvela")]
+position = Vector2(73, 54)
+description = "UI_OBJ_ZOMBIES"
+baseline = 24
+walk_to_point = Vector2(0, 181)
+
+[node name="Leuchtfliesen" parent="Hotspots" unique_id=1285834122 instance=ExtResource("6_4401j")]
+position = Vector2(139, 54)
+description = "UI_OBJ_LEUCHTFLIESEN"
+baseline = 24
+walk_to_point = Vector2(0, 181)
+
+[node name="Graeber" parent="Hotspots" unique_id=1106185018 instance=ExtResource("7_bb6bg")]
+position = Vector2(205, 54)
+description = "UI_OBJ_GRAEBER"
+baseline = 24
+walk_to_point = Vector2(0, 181)
+
+[node name="Discokugel" parent="Hotspots" unique_id=1835080169 instance=ExtResource("8_gccym")]
+position = Vector2(271, 54)
+description = "UI_OBJ_DISCOKUGEL"
+baseline = 24
+walk_to_point = Vector2(0, 181)
+
+[node name="Mond" parent="Hotspots" unique_id=967159601 instance=ExtResource("9_ggpny")]
+position = Vector2(337, 54)
+description = "UI_OBJ_MOND"
+baseline = 24
+walk_to_point = Vector2(0, 181)
+
+[node name="Nebel" parent="Hotspots" unique_id=71427462 instance=ExtResource("10_claih")]
+position = Vector2(403, 54)
+description = "UI_OBJ_NEBEL"
+baseline = 24
+walk_to_point = Vector2(0, 181)
+
+[node name="Scheinwerfer" parent="Hotspots" unique_id=1605267946 instance=ExtResource("11_umkrr")]
+position = Vector2(73, 114)
+description = "UI_OBJ_SCHEINWERFER"
+baseline = 24
+walk_to_point = Vector2(0, 121)
+
+[node name="BananenschaleAufMitternachtsTv" parent="Hotspots" unique_id=1611088312 instance=ExtResource("12_sltyc")]
+position = Vector2(139, 114)
+description = "UI_OBJ_BANANENSCHALE_AUF_MITTERNACHTS_TV"
+baseline = 24
+walk_to_point = Vector2(0, 121)
+
+[node name="FondueKaeseAufMitternachtsTv" parent="Hotspots" unique_id=992940591 instance=ExtResource("13_wlos4")]
+position = Vector2(205, 114)
+description = "UI_OBJ_FONDUE_KAESE_AUF_MITTERNACHTS_TV"
+baseline = 24
+walk_to_point = Vector2(0, 121)
+
+[node name="AusgangSpukhausKeller" parent="Hotspots" unique_id=1542907982 instance=ExtResource("14_0bc2x")]
+position = Vector2(19.5, 157.5)
+description = "UI_RAUM_SPUKHAUS_KELLER"
+baseline = 52
+walk_to_point = Vector2(16.5, 82.5)
+cursor = 9
+
+[node name="Regions" type="Node2D" parent="." unique_id=305710328]
+
+[node name="Markers" type="Node2D" parent="." unique_id=508066106]
+
+[node name="Start" parent="Markers" unique_id=1835252198 instance=ExtResource("15_4m03e")]
+position = Vector2(240, 240)
+
+[node name="VonSpukhausKeller" parent="Markers" unique_id=1787106736 instance=ExtResource("16_ymkry")]
+position = Vector2(36, 240)
+
+[node name="VonGluecksrad" parent="Markers" unique_id=842589171 instance=ExtResource("17_dr2hp")]
+position = Vector2(240, 240)
+
+[node name="VonSitcomKueche" parent="Markers" unique_id=39349609 instance=ExtResource("18_y4nrf")]
+position = Vector2(240, 240)
+
+[node name="VonSavanne" parent="Markers" unique_id=690762313 instance=ExtResource("19_jwo82")]
+position = Vector2(240, 240)
+
+[node name="VonKapitolis" parent="Markers" unique_id=178951783 instance=ExtResource("20_iwntb")]
+position = Vector2(240, 240)
+
+[node name="VonWerbespotSet" parent="Markers" unique_id=2125163418 instance=ExtResource("21_uh55y")]
+position = Vector2(240, 240)
+
+[node name="VonEmpfang" parent="Markers" unique_id=305997751 instance=ExtResource("22_642jx")]
+position = Vector2(240, 240)
+
+[node name="Characters" type="Node2D" parent="." unique_id=1063538078]
+
+[node name="CharacterZombie *" parent="Characters" unique_id=1417922835 instance=ExtResource("23_pwnpc")]
+position = Vector2(240, 232)

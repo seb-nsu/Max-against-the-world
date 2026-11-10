@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://ci0b2lc83h3od"]
+
+[node name="VonKellerarchiv" type="Marker2D" unique_id=2056142330]
+visible = false

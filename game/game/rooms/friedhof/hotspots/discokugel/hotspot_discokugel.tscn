@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://dluoodn5q3rrx"]
+
+[ext_resource type="Script" path="res://game/rooms/friedhof/hotspots/discokugel/hotspot_discokugel.gd" id="1_y7jvi"]
+
+[node name="Discokugel" type="Area2D" unique_id=1835080169]
+script = ExtResource("1_y7jvi")
+script_name = "Discokugel"
+description = "Discokugel"
+cursor = 1
+interaction_polygon = PackedVector2Array(-29, -24, 29, -24, 29, 24, -29, 24)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1588434010]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

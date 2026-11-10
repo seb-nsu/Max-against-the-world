@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://52ra1uk4n5ym"]
+
+[ext_resource type="Script" path="res://game/inventory_items/fondue_kaese/inventory_item_fondue_kaese.gd" id="1_7ibdm"]
+[ext_resource type="Texture2D" uid="uid://brlgcqhtu0f5o" path="res://grafik/platzhalter/gegenstand_fondue_kaese.png" id="1_eovfc"]
+
+[node name="ItemFondueKaese" type="TextureRect" unique_id=807956260]
+texture_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 4
+mouse_filter = 0
+texture = ExtResource("1_eovfc")
+stretch_mode = 5
+script = ExtResource("1_7ibdm")
+script_name = "FondueKaese"
+description = "UI_OBJ_FONDUE_KAESE"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=722730662]

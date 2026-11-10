@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://cvcu0gt8s4g3s"]
+
+[ext_resource type="Script" path="res://game/inventory_items/taste_rueckspulen/inventory_item_taste_rueckspulen_state.gd" id="1_noxpa"]
+
+[resource]
+resource_name = "TasteRueckspulen"
+script = ExtResource("1_noxpa")
+script_name = "TasteRueckspulen"
+scene = "res://game/inventory_items/taste_rueckspulen/inventory_item_taste_rueckspulen.tscn"

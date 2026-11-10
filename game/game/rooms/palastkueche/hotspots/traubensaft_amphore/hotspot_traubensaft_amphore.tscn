@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://cotp4ne0veu5m"]
+
+[ext_resource type="Script" path="res://game/rooms/palastkueche/hotspots/traubensaft_amphore/hotspot_traubensaft_amphore.gd" id="1_vhlg6"]
+
+[node name="TraubensaftAmphore" type="Area2D" unique_id=136018638]
+script = ExtResource("1_vhlg6")
+script_name = "TraubensaftAmphore"
+description = "Traubensaft Amphore"
+cursor = 1
+interaction_polygon = PackedVector2Array(-15, -30, 15, -30, 15, 30, -15, 30)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1118371383]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

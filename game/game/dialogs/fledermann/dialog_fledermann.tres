@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://bpqbe7f1x882p"]
+
+[ext_resource type="Script" uid="uid://brxefo54wpm32" path="res://addons/popochiu/engine/objects/dialog/popochiu_dialog_option.gd" id="1_3qk2t"]
+[ext_resource type="Script" path="res://game/dialogs/fledermann/dialog_fledermann.gd" id="2_r2jgt"]
+
+[resource]
+resource_name = "Fledermann"
+script = ExtResource("2_r2jgt")
+script_name = "Fledermann"

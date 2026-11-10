@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://jrb1o44gxudu"]
+
+[ext_resource type="Script" path="res://game/rooms/agora/hotspots/weg_zum_faehrsteg/hotspot_weg_zum_faehrsteg.gd" id="1_t12bq"]
+
+[node name="WegZumFaehrsteg" type="Area2D" unique_id=1077435345]
+script = ExtResource("1_t12bq")
+script_name = "WegZumFaehrsteg"
+description = "Weg Zum Faehrsteg"
+cursor = 1
+interaction_polygon = PackedVector2Array(-13.5, -60, 13.5, -60, 13.5, 60, -13.5, 60)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=319915981]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

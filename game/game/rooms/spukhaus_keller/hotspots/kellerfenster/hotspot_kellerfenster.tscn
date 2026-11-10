@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://bkr6kpiykgrkt"]
+
+[ext_resource type="Script" path="res://game/rooms/spukhaus_keller/hotspots/kellerfenster/hotspot_kellerfenster.gd" id="1_3f535"]
+
+[node name="Kellerfenster" type="Area2D" unique_id=1697099775]
+script = ExtResource("1_3f535")
+script_name = "Kellerfenster"
+description = "Kellerfenster"
+cursor = 1
+interaction_polygon = PackedVector2Array(-29, -24, 29, -24, 29, 24, -29, 24)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=2101403704]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

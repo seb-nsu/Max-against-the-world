@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://cxefasybj5j8g"]
+
+[ext_resource type="Script" path="res://game/inventory_items/papyrusblatt/inventory_item_papyrusblatt_state.gd" id="1_y7fq4"]
+
+[resource]
+resource_name = "Papyrusblatt"
+script = ExtResource("1_y7fq4")
+script_name = "Papyrusblatt"
+scene = "res://game/inventory_items/papyrusblatt/inventory_item_papyrusblatt.tscn"

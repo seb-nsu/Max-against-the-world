@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://drep4imbp4w8h"]
+
+[ext_resource type="Script" path="res://game/rooms/agora/props/background/prop_background.gd" id="1_a1uki"]
+
+[node name="Background" type="Area2D" unique_id=62794125]
+z_index = -1
+input_pickable = false
+script = ExtResource("1_a1uki")
+script_name = "Background"
+description = "Background"
+clickable = false
+baseline = -135
+cursor = 1
+interaction_polygon = PackedVector2Array()
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=202922301]
+texture_filter = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1291189146]
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=121025674]
+visible = false
+modulate = Color(1, 1, 0, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+
+[node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=1777351209]
+visible = false
+affect_navigation_mesh = true
+carve_navigation_mesh = true

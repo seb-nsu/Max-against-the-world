@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://cu5dq8v0llxug"]
+
+[ext_resource type="Script" path="res://game/rooms/thronsaal_ramses/hotspots/ausgang_nil_delta/hotspot_ausgang_nil_delta.gd" id="1_h3upu"]
+
+[node name="AusgangNilDelta" type="Area2D" unique_id=1499183777]
+script = ExtResource("1_h3upu")
+script_name = "AusgangNilDelta"
+description = "Ausgang Nil Delta"
+cursor = 1
+interaction_polygon = PackedVector2Array(-3, -45, 3, -45, 3, 45, -3, 45)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1454117963]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

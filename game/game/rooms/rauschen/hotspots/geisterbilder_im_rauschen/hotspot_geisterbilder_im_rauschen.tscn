@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://js5cohkynj0d"]
+
+[ext_resource type="Script" path="res://game/rooms/rauschen/hotspots/geisterbilder_im_rauschen/hotspot_geisterbilder_im_rauschen.gd" id="1_jkm0m"]
+
+[node name="GeisterbilderImRauschen" type="Area2D" unique_id=1754609319]
+script = ExtResource("1_jkm0m")
+script_name = "GeisterbilderImRauschen"
+description = "Geisterbilder Im Rauschen"
+cursor = 1
+interaction_polygon = PackedVector2Array(-96, -24, 96, -24, 96, 24, -96, 24)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1772158670]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

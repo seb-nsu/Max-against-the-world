@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://dc43tyupdlmeq"]
+
+[ext_resource type="Script" path="res://game/rooms/widerstandsbasis/hotspots/patch_panel/hotspot_patch_panel.gd" id="1_mtg70"]
+
+[node name="PatchPanel" type="Area2D" unique_id=1097363008]
+script = ExtResource("1_mtg70")
+script_name = "PatchPanel"
+description = "Patch Panel"
+cursor = 1
+interaction_polygon = PackedVector2Array(-27, -24, 27, -24, 27, 24, -27, 24)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=39648867]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

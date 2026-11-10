@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://bu6b7xb8d36v0"]
+
+[ext_resource type="Script" path="res://game/rooms/savanne/hotspots/akazien/hotspot_akazien.gd" id="1_8fau2"]
+
+[node name="Akazien" type="Area2D" unique_id=16909979]
+script = ExtResource("1_8fau2")
+script_name = "Akazien"
+description = "Akazien"
+cursor = 1
+interaction_polygon = PackedVector2Array(-40, -24, 40, -24, 40, 24, -40, 24)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=2040829673]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://dha54dubsf0ac"]
+
+[node name="VonFaehre" type="Marker2D" unique_id=154311028]
+visible = false

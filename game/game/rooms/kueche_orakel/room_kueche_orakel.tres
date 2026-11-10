@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://d2xgwlgrqbec7"]
+
+[ext_resource type="Script" path="res://game/rooms/kueche_orakel/room_kueche_orakel_state.gd" id="1_4cupy"]
+
+[resource]
+resource_name = "KuecheOrakel"
+script = ExtResource("1_4cupy")
+script_name = "KuecheOrakel"
+scene = "res://game/rooms/kueche_orakel/room_kueche_orakel.tscn"

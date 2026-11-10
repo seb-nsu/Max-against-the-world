@@ -1,0 +1,168 @@
+[gd_scene format=3 uid="uid://bqs0nf8qlptoe"]
+
+[ext_resource type="Script" path="res://game/rooms/unterstadt_strasse/room_unterstadt_strasse.gd" id="1_46qk1"]
+[ext_resource type="PackedScene" uid="uid://cvyl3wbnogxju" path="res://game/rooms/unterstadt_strasse/walkable_areas/boden/walkable_area_boden.tscn" id="2_cn1vk"]
+[ext_resource type="PackedScene" uid="uid://dmujor5s3acwp" path="res://game/rooms/unterstadt_strasse/props/background/prop_background.tscn" id="3_bwcnd"]
+[ext_resource type="Texture2D" uid="uid://bnjkykddi74we" path="res://grafik/platzhalter/raum_unterstadt_strasse.png" id="4_cv72g"]
+[ext_resource type="PackedScene" uid="uid://banxspvpwoaop" path="res://game/rooms/unterstadt_strasse/props/telefonbuchseite/prop_telefonbuchseite.tscn" id="5_4f5jq"]
+[ext_resource type="Texture2D" uid="uid://deodc13g244l4" path="res://grafik/platzhalter/prop_telefonbuchseite.png" id="6_le1lh"]
+[ext_resource type="PackedScene" uid="uid://dl0jliai4s7ji" path="res://game/rooms/unterstadt_strasse/hotspots/nudelbude/hotspot_nudelbude.tscn" id="7_8iqpg"]
+[ext_resource type="PackedScene" uid="uid://c23lcwpg6khgr" path="res://game/rooms/unterstadt_strasse/hotspots/telefonzelle/hotspot_telefonzelle.tscn" id="8_32me3"]
+[ext_resource type="PackedScene" uid="uid://bt1nulp085ei" path="res://game/rooms/unterstadt_strasse/hotspots/telefonbuch_in_der_zelle/hotspot_telefonbuch_in_der_zelle.tscn" id="9_md4uo"]
+[ext_resource type="PackedScene" uid="uid://cy8aomk8q8o1f" path="res://game/rooms/unterstadt_strasse/hotspots/vordach/hotspot_vordach.tscn" id="10_xhpm4"]
+[ext_resource type="PackedScene" uid="uid://dulp21nr0hvic" path="res://game/rooms/unterstadt_strasse/hotspots/neon_pizza_plakat/hotspot_neon_pizza_plakat.tscn" id="11_kcbhs"]
+[ext_resource type="PackedScene" uid="uid://c3nev51c3co77" path="res://game/rooms/unterstadt_strasse/hotspots/origami_einhorn/hotspot_origami_einhorn.tscn" id="12_dniaa"]
+[ext_resource type="PackedScene" uid="uid://ciwpvbk8giwbr" path="res://game/rooms/unterstadt_strasse/hotspots/pfuetzen/hotspot_pfuetzen.tscn" id="13_pbvm8"]
+[ext_resource type="PackedScene" uid="uid://j6yx0gg0u056" path="res://game/rooms/unterstadt_strasse/hotspots/himmel_mit_fliegenden_autos/hotspot_himmel_mit_fliegenden_autos.tscn" id="14_q1jtn"]
+[ext_resource type="PackedScene" uid="uid://bgbqh2f6t38um" path="res://game/rooms/unterstadt_strasse/hotspots/dampfgitter/hotspot_dampfgitter.tscn" id="15_hmoao"]
+[ext_resource type="PackedScene" uid="uid://d2e0t01g6io4t" path="res://game/rooms/unterstadt_strasse/hotspots/ausgang_apothekengasse/hotspot_ausgang_apothekengasse.tscn" id="16_awcax"]
+[ext_resource type="PackedScene" uid="uid://e3n87pyorg4h" path="res://game/rooms/unterstadt_strasse/hotspots/ausgang_laboreingang/hotspot_ausgang_laboreingang.tscn" id="17_ox08u"]
+[ext_resource type="PackedScene" uid="uid://p4sutkgxey1s" path="res://game/rooms/unterstadt_strasse/hotspots/ausgang_widerstandsbasis/hotspot_ausgang_widerstandsbasis.tscn" id="18_ygnuq"]
+[ext_resource type="PackedScene" uid="uid://c2bww2w0qmty0" path="res://game/rooms/unterstadt_strasse/markers/start/marker_start.tscn" id="19_dmuaf"]
+[ext_resource type="PackedScene" uid="uid://dnsb2rs7j0fsk" path="res://game/rooms/unterstadt_strasse/markers/von_apothekengasse/marker_von_apothekengasse.tscn" id="20_e21hq"]
+[ext_resource type="PackedScene" uid="uid://qt0lv2ylxesm" path="res://game/rooms/unterstadt_strasse/markers/von_laboreingang/marker_von_laboreingang.tscn" id="21_6ov06"]
+[ext_resource type="PackedScene" uid="uid://db1nx1h5qmyao" path="res://game/rooms/unterstadt_strasse/markers/von_widerstandsbasis/marker_von_widerstandsbasis.tscn" id="22_o343o"]
+[ext_resource type="PackedScene" uid="uid://deh53q5s2hiyn" path="res://game/characters/morphaeus/character_morphaeus.tscn" id="23_1w8xu"]
+[ext_resource type="PackedScene" uid="uid://bclia23souhqm" path="res://game/characters/deckert/character_deckert.tscn" id="24_vjb3x"]
+[ext_resource type="PackedScene" uid="uid://b324216e0pwpi" path="res://game/characters/herr_vier/character_herr_vier.tscn" id="25_tf4qj"]
+[ext_resource type="PackedScene" uid="uid://dr780tjwos7ax" path="res://game/characters/weinender_mann/character_weinender_mann.tscn" id="26_rjs58"]
+[ext_resource type="PackedScene" uid="uid://c50i12f3nkdtd" path="res://game/characters/frau_regenschirm/character_frau_regenschirm.tscn" id="27_3qknm"]
+[ext_resource type="PackedScene" uid="uid://cclbyxn1ccx8u" path="res://game/characters/strassenmusiker/character_strassenmusiker.tscn" id="28_eww18"]
+
+[node name="RoomUnterstadtStrasse" type="Node2D" unique_id=33332051]
+script = ExtResource("1_46qk1")
+script_name = "UnterstadtStrasse"
+width = 960
+height = 270
+
+[node name="WalkableAreas" type="Node2D" parent="." unique_id=1383502760]
+
+[node name="Boden" parent="WalkableAreas" unique_id=70325798 instance=ExtResource("2_cn1vk")]
+interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(6, 210, 954, 210, 954, 267, 6, 267)])
+
+[node name="Props" type="Node2D" parent="." unique_id=187741306]
+
+[node name="Background" parent="Props" unique_id=633208307 instance=ExtResource("3_bwcnd")]
+position = Vector2(480, 135)
+texture = ExtResource("4_cv72g")
+description = "UI_RAUM_UNTERSTADT_STRASSE"
+
+[node name="Telefonbuchseite" parent="Props" unique_id=831596464 instance=ExtResource("5_4f5jq")]
+position = Vector2(107.5, 201)
+texture = ExtResource("6_le1lh")
+description = "UI_OBJ_TELEFONBUCHSEITE"
+baseline = 6
+walk_to_point = Vector2(-0.5, 34)
+
+[node name="Hotspots" type="Node2D" parent="." unique_id=119001925]
+
+[node name="Nudelbude" parent="Hotspots" unique_id=1749237561 instance=ExtResource("7_8iqpg")]
+position = Vector2(88.5, 54)
+description = "UI_OBJ_NUDELBUDE"
+baseline = 24
+walk_to_point = Vector2(-0.5, 181)
+
+[node name="Telefonzelle" parent="Hotspots" unique_id=1563726528 instance=ExtResource("8_32me3")]
+position = Vector2(185.5, 54)
+description = "UI_OBJ_TELEFONZELLE"
+baseline = 24
+walk_to_point = Vector2(-0.5, 181)
+
+[node name="TelefonbuchInDerZelle" parent="Hotspots" unique_id=103867590 instance=ExtResource("9_md4uo")]
+position = Vector2(282.5, 54)
+description = "UI_OBJ_TELEFONBUCH_IN_DER_ZELLE"
+baseline = 24
+walk_to_point = Vector2(-0.5, 181)
+
+[node name="Vordach" parent="Hotspots" unique_id=633887438 instance=ExtResource("10_xhpm4")]
+position = Vector2(379.5, 54)
+description = "UI_OBJ_VORDACH"
+baseline = 24
+walk_to_point = Vector2(-0.5, 181)
+
+[node name="NeonPizzaPlakat" parent="Hotspots" unique_id=686557563 instance=ExtResource("11_kcbhs")]
+position = Vector2(476.5, 54)
+description = "UI_OBJ_NEON_PIZZA_PLAKAT"
+baseline = 24
+walk_to_point = Vector2(-0.5, 181)
+
+[node name="OrigamiEinhorn" parent="Hotspots" unique_id=144899073 instance=ExtResource("12_dniaa")]
+position = Vector2(573.5, 54)
+description = "UI_OBJ_ORIGAMI_EINHORN"
+baseline = 24
+walk_to_point = Vector2(-0.5, 181)
+
+[node name="Pfuetzen" parent="Hotspots" unique_id=1207024256 instance=ExtResource("13_pbvm8")]
+position = Vector2(670.5, 54)
+description = "UI_OBJ_PFUETZEN"
+baseline = 24
+walk_to_point = Vector2(-0.5, 181)
+
+[node name="HimmelMitFliegendenAutos" parent="Hotspots" unique_id=196927587 instance=ExtResource("14_q1jtn")]
+position = Vector2(767.5, 54)
+description = "UI_OBJ_HIMMEL_MIT_FLIEGENDEN_AUTOS"
+baseline = 24
+walk_to_point = Vector2(-0.5, 181)
+
+[node name="Dampfgitter" parent="Hotspots" unique_id=1716115174 instance=ExtResource("15_hmoao")]
+position = Vector2(864.5, 54)
+description = "UI_OBJ_DAMPFGITTER"
+baseline = 24
+walk_to_point = Vector2(-0.5, 181)
+
+[node name="AusgangApothekengasse" parent="Hotspots" unique_id=2071626766 instance=ExtResource("16_awcax")]
+position = Vector2(19.5, 157.5)
+description = "UI_RAUM_APOTHEKENGASSE"
+baseline = 52
+walk_to_point = Vector2(16.5, 82.5)
+cursor = 9
+
+[node name="AusgangLaboreingang" parent="Hotspots" unique_id=412077471 instance=ExtResource("17_ox08u")]
+position = Vector2(940.5, 157.5)
+description = "UI_RAUM_LABOREINGANG"
+baseline = 52
+walk_to_point = Vector2(-16.5, 82.5)
+cursor = 9
+
+[node name="AusgangWiderstandsbasis" parent="Hotspots" unique_id=1771101895 instance=ExtResource("18_ygnuq")]
+position = Vector2(477, 150)
+description = "UI_RAUM_WIDERSTANDSBASIS"
+baseline = 30
+walk_to_point = Vector2(0, 72)
+cursor = 9
+
+[node name="Regions" type="Node2D" parent="." unique_id=59842487]
+
+[node name="Markers" type="Node2D" parent="." unique_id=518921881]
+
+[node name="Start" parent="Markers" unique_id=1992931261 instance=ExtResource("19_dmuaf")]
+position = Vector2(480, 240)
+
+[node name="VonApothekengasse" parent="Markers" unique_id=1698733634 instance=ExtResource("20_e21hq")]
+position = Vector2(36, 240)
+
+[node name="VonLaboreingang" parent="Markers" unique_id=1799372312 instance=ExtResource("21_6ov06")]
+position = Vector2(924, 240)
+
+[node name="VonWiderstandsbasis" parent="Markers" unique_id=12297098 instance=ExtResource("22_o343o")]
+position = Vector2(477, 222)
+
+[node name="Characters" type="Node2D" parent="." unique_id=1004855085]
+
+[node name="CharacterMorphaeus *" parent="Characters" unique_id=327095610 instance=ExtResource("23_1w8xu")]
+position = Vector2(130, 232)
+
+[node name="CharacterDeckert *" parent="Characters" unique_id=1552755411 instance=ExtResource("24_vjb3x")]
+position = Vector2(270, 232)
+
+[node name="CharacterHerrVier *" parent="Characters" unique_id=1125115703 instance=ExtResource("25_tf4qj")]
+position = Vector2(410, 232)
+
+[node name="CharacterWeinenderMann *" parent="Characters" unique_id=463555414 instance=ExtResource("26_rjs58")]
+position = Vector2(550, 232)
+
+[node name="CharacterFrauRegenschirm *" parent="Characters" unique_id=629299622 instance=ExtResource("27_3qknm")]
+position = Vector2(690, 232)
+
+[node name="CharacterStrassenmusiker *" parent="Characters" unique_id=686969109 instance=ExtResource("28_eww18")]
+position = Vector2(830, 232)

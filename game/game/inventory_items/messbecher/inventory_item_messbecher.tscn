@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://dpyhyry2dprlw"]
+
+[ext_resource type="Script" path="res://game/inventory_items/messbecher/inventory_item_messbecher.gd" id="1_jdr0h"]
+[ext_resource type="Texture2D" uid="uid://cu1oqum0mbu6j" path="res://grafik/platzhalter/gegenstand_messbecher.png" id="1_uitnt"]
+
+[node name="ItemMessbecher" type="TextureRect" unique_id=614599050]
+texture_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 4
+mouse_filter = 0
+texture = ExtResource("1_uitnt")
+stretch_mode = 5
+script = ExtResource("1_jdr0h")
+script_name = "Messbecher"
+description = "UI_OBJ_MESSBECHER"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=783735944]

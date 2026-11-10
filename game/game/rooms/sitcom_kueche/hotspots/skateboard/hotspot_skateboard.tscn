@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://dg22gk0ymokeq"]
+
+[ext_resource type="Script" path="res://game/rooms/sitcom_kueche/hotspots/skateboard/hotspot_skateboard.gd" id="1_to6jr"]
+
+[node name="Skateboard" type="Area2D" unique_id=1536216952]
+script = ExtResource("1_to6jr")
+script_name = "Skateboard"
+description = "Skateboard"
+cursor = 1
+interaction_polygon = PackedVector2Array(-29, -24, 29, -24, 29, 24, -29, 24)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1924333965]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://bwx51cs0niyjs"]
+
+[node name="VonTestbild" type="Marker2D" unique_id=402917427]
+visible = false

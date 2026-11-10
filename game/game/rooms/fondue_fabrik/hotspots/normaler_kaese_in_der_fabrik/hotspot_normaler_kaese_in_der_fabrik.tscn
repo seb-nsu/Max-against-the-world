@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://7rq1b1qfoqds"]
+
+[ext_resource type="Script" path="res://game/rooms/fondue_fabrik/hotspots/normaler_kaese_in_der_fabrik/hotspot_normaler_kaese_in_der_fabrik.gd" id="1_3qs7o"]
+
+[node name="NormalerKaeseInDerFabrik" type="Area2D" unique_id=2121369225]
+script = ExtResource("1_3qs7o")
+script_name = "NormalerKaeseInDerFabrik"
+description = "Normaler Kaese In Der Fabrik"
+cursor = 1
+interaction_polygon = PackedVector2Array(-29, -24, 29, -24, 29, 24, -29, 24)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=17790764]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

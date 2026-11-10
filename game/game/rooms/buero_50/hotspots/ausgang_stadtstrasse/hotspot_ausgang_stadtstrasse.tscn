@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://c8qbq330xxtcf"]
+
+[ext_resource type="Script" path="res://game/rooms/buero_50/hotspots/ausgang_stadtstrasse/hotspot_ausgang_stadtstrasse.gd" id="1_jkdcl"]
+
+[node name="AusgangStadtstrasse" type="Area2D" unique_id=1812715989]
+script = ExtResource("1_jkdcl")
+script_name = "AusgangStadtstrasse"
+description = "Ausgang Stadtstrasse"
+cursor = 1
+interaction_polygon = PackedVector2Array(-13.5, -52.5, 13.5, -52.5, 13.5, 52.5, -13.5, 52.5)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=764217891]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://bvcu1dt2dall3"]
+
+[ext_resource type="Script" path="res://game/rooms/palastkueche/room_palastkueche_state.gd" id="1_sxye5"]
+
+[resource]
+resource_name = "Palastkueche"
+script = ExtResource("1_sxye5")
+script_name = "Palastkueche"
+scene = "res://game/rooms/palastkueche/room_palastkueche.tscn"

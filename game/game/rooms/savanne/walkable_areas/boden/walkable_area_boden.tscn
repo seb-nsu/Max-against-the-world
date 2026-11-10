@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://cly2hyfm20yut"]
+
+[ext_resource type="Script" path="res://game/rooms/savanne/walkable_areas/boden/walkable_area_boden.gd" id="1_xs7cu"]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_xs7cu"]
+vertices = PackedVector2Array(954, 267, 6, 267, 6, 210, 954, 210)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(6, 210, 954, 210, 954, 267, 6, 267)])
+agent_radius = 0.0
+
+[node name="Boden" type="Node2D" unique_id=549391092]
+script = ExtResource("1_xs7cu")
+script_name = "Boden"
+description = "Boden"
+interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(6, 210, 954, 210, 954, 267, 6, 267)])
+
+[node name="Perimeter" type="NavigationRegion2D" parent="." unique_id=176482864]
+modulate = Color(0, 1, 0, 1)
+navigation_polygon = SubResource("NavigationPolygon_xs7cu")

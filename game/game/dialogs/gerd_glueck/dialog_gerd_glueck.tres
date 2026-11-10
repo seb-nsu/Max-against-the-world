@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://rugjkdubhc0s"]
+
+[ext_resource type="Script" uid="uid://brxefo54wpm32" path="res://addons/popochiu/engine/objects/dialog/popochiu_dialog_option.gd" id="1_mf0be"]
+[ext_resource type="Script" path="res://game/dialogs/gerd_glueck/dialog_gerd_glueck.gd" id="2_h81p5"]
+
+[resource]
+resource_name = "GerdGlueck"
+script = ExtResource("2_h81p5")
+script_name = "GerdGlueck"

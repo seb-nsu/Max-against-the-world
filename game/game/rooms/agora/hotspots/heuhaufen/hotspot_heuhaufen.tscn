@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://b7d2n6rsn0me8"]
+
+[ext_resource type="Script" path="res://game/rooms/agora/hotspots/heuhaufen/hotspot_heuhaufen.gd" id="1_5wj48"]
+
+[node name="Heuhaufen" type="Area2D" unique_id=44384867]
+script = ExtResource("1_5wj48")
+script_name = "Heuhaufen"
+description = "Heuhaufen"
+cursor = 1
+interaction_polygon = PackedVector2Array(-33, -12, 33, -12, 33, 12, -33, 12)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1810961255]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

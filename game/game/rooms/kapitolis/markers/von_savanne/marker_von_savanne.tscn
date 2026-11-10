@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://dvt00pj57mx5s"]
+
+[node name="VonSavanne" type="Marker2D" unique_id=2124569848]
+visible = false

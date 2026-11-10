@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://bgbylvywytrwg"]
+
+[ext_resource type="Script" path="res://game/rooms/stadtstrasse/hotspots/sonne/hotspot_sonne.gd" id="1_txkyv"]
+
+[node name="Sonne" type="Area2D" unique_id=595872232]
+script = ExtResource("1_txkyv")
+script_name = "Sonne"
+description = "Sonne"
+cursor = 1
+interaction_polygon = PackedVector2Array(-44.5, -24, 44.5, -24, 44.5, 24, -44.5, 24)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=658927943]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

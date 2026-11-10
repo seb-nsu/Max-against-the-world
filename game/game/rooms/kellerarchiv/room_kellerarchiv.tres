@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://uck5vaybhm6f"]
+
+[ext_resource type="Script" path="res://game/rooms/kellerarchiv/room_kellerarchiv_state.gd" id="1_m5jhr"]
+
+[resource]
+resource_name = "Kellerarchiv"
+script = ExtResource("1_m5jhr")
+script_name = "Kellerarchiv"
+scene = "res://game/rooms/kellerarchiv/room_kellerarchiv.tscn"

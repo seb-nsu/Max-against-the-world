@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://cwu614wracwnu"]
+
+[ext_resource type="Script" path="res://game/inventory_items/goldbarren/inventory_item_goldbarren_state.gd" id="1_oksw4"]
+
+[resource]
+resource_name = "Goldbarren"
+script = ExtResource("1_oksw4")
+script_name = "Goldbarren"
+scene = "res://game/inventory_items/goldbarren/inventory_item_goldbarren.tscn"

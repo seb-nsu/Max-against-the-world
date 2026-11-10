@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://r5f4v1ra8bu4"]
+
+[ext_resource type="Script" path="res://game/rooms/gluecksrad/hotspots/ausgang_testbild/hotspot_ausgang_testbild.gd" id="1_x1bh4"]
+
+[node name="AusgangTestbild" type="Area2D" unique_id=808655459]
+script = ExtResource("1_x1bh4")
+script_name = "AusgangTestbild"
+description = "Ausgang Testbild"
+cursor = 1
+interaction_polygon = PackedVector2Array(-13.5, -52.5, 13.5, -52.5, 13.5, 52.5, -13.5, 52.5)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=668039938]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://du8quwdo11cjw"]
+
+[ext_resource type="Script" path="res://game/rooms/thronsaal_ramses/hotspots/saeulen/hotspot_saeulen.gd" id="1_30jv6"]
+
+[node name="Saeulen" type="Area2D" unique_id=871946126]
+script = ExtResource("1_30jv6")
+script_name = "Saeulen"
+description = "Saeulen"
+cursor = 1
+interaction_polygon = PackedVector2Array(-16.5, -75, 16.5, -75, 16.5, 75, -16.5, 75)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=282582194]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://vr38av28fxw7"]
+
+[ext_resource type="Script" path="res://game/rooms/werbespot_set/room_werbespot_set_state.gd" id="1_tcurc"]
+
+[resource]
+resource_name = "WerbespotSet"
+script = ExtResource("1_tcurc")
+script_name = "WerbespotSet"
+scene = "res://game/rooms/werbespot_set/room_werbespot_set.tscn"

@@ -1,0 +1,102 @@
+[gd_scene format=3 uid="uid://dgfrtr4irdnxp"]
+
+[ext_resource type="Script" path="res://game/rooms/zappmanns_studio/room_zappmanns_studio.gd" id="1_mcj68"]
+[ext_resource type="PackedScene" uid="uid://brbmwcl71cngn" path="res://game/rooms/zappmanns_studio/walkable_areas/boden/walkable_area_boden.tscn" id="2_7rafh"]
+[ext_resource type="PackedScene" uid="uid://7kcj8ui4llb8" path="res://game/rooms/zappmanns_studio/props/background/prop_background.tscn" id="3_wfacp"]
+[ext_resource type="Texture2D" uid="uid://dw6ia8hqb5yb8" path="res://grafik/platzhalter/raum_zappmanns_studio.png" id="4_qbo88"]
+[ext_resource type="PackedScene" uid="uid://bml3pom0nqahn" path="res://game/rooms/zappmanns_studio/hotspots/goldenes_sofa/hotspot_goldenes_sofa.tscn" id="5_r58ui"]
+[ext_resource type="PackedScene" uid="uid://c0urjpr21kvjx" path="res://game/rooms/zappmanns_studio/hotspots/moderationspult/hotspot_moderationspult.tscn" id="6_4u1t0"]
+[ext_resource type="PackedScene" uid="uid://do04eyr066wk2" path="res://game/rooms/zappmanns_studio/hotspots/monitorwand/hotspot_monitorwand.tscn" id="7_y1e0h"]
+[ext_resource type="PackedScene" uid="uid://daiiqwrw6ot0n" path="res://game/rooms/zappmanns_studio/hotspots/applaus_schild/hotspot_applaus_schild.tscn" id="8_bqjea"]
+[ext_resource type="PackedScene" uid="uid://s3i40ir07c7j" path="res://game/rooms/zappmanns_studio/hotspots/quotenanzeige/hotspot_quotenanzeige.tscn" id="9_4oyrk"]
+[ext_resource type="PackedScene" uid="uid://cv6lwdkn2ahfq" path="res://game/rooms/zappmanns_studio/hotspots/drehbuch_in_der_senderzentrale/hotspot_drehbuch_in_der_senderzentrale.tscn" id="10_oou1e"]
+[ext_resource type="PackedScene" uid="uid://d4d25ct8wfu2o" path="res://game/rooms/zappmanns_studio/hotspots/ausgang_empfang/hotspot_ausgang_empfang.tscn" id="11_cj8jr"]
+[ext_resource type="PackedScene" uid="uid://biqw8hfrvov2v" path="res://game/rooms/zappmanns_studio/markers/start/marker_start.tscn" id="12_wyslj"]
+[ext_resource type="PackedScene" uid="uid://d0qcwqrsviga2" path="res://game/rooms/zappmanns_studio/markers/von_empfang/marker_von_empfang.tscn" id="13_8c3ar"]
+[ext_resource type="PackedScene" uid="uid://duj23n3nbhqcd" path="res://game/characters/zappmann/character_zappmann.tscn" id="14_ri3p6"]
+[ext_resource type="PackedScene" uid="uid://croo65x5gnmaf" path="res://game/characters/junger_zappmann/character_junger_zappmann.tscn" id="15_tgp8h"]
+[ext_resource type="PackedScene" uid="uid://djx57nxew0uvp" path="res://game/characters/wettkandidat/character_wettkandidat.tscn" id="16_rshmx"]
+
+[node name="RoomZappmannsStudio" type="Node2D" unique_id=1852011603]
+script = ExtResource("1_mcj68")
+script_name = "ZappmannsStudio"
+width = 480
+height = 270
+
+[node name="WalkableAreas" type="Node2D" parent="." unique_id=76500729]
+
+[node name="Boden" parent="WalkableAreas" unique_id=1152646624 instance=ExtResource("2_7rafh")]
+interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(6, 210, 474, 210, 474, 267, 6, 267)])
+
+[node name="Props" type="Node2D" parent="." unique_id=2082350109]
+
+[node name="Background" parent="Props" unique_id=896043654 instance=ExtResource("3_wfacp")]
+position = Vector2(240, 135)
+texture = ExtResource("4_qbo88")
+description = "UI_RAUM_ZAPPMANNS_STUDIO"
+
+[node name="Hotspots" type="Node2D" parent="." unique_id=671090546]
+
+[node name="GoldenesSofa" parent="Hotspots" unique_id=83134353 instance=ExtResource("5_r58ui")]
+position = Vector2(73, 54)
+description = "UI_OBJ_GOLDENES_SOFA"
+baseline = 24
+walk_to_point = Vector2(0, 181)
+
+[node name="Moderationspult" parent="Hotspots" unique_id=1977019578 instance=ExtResource("6_4u1t0")]
+position = Vector2(139, 54)
+description = "UI_OBJ_MODERATIONSPULT"
+baseline = 24
+walk_to_point = Vector2(0, 181)
+
+[node name="Monitorwand" parent="Hotspots" unique_id=1446701791 instance=ExtResource("7_y1e0h")]
+position = Vector2(205, 54)
+description = "UI_OBJ_MONITORWAND"
+baseline = 24
+walk_to_point = Vector2(0, 181)
+
+[node name="ApplausSchild" parent="Hotspots" unique_id=896894143 instance=ExtResource("8_bqjea")]
+position = Vector2(271, 54)
+description = "UI_OBJ_APPLAUS_SCHILD"
+baseline = 24
+walk_to_point = Vector2(0, 181)
+
+[node name="Quotenanzeige" parent="Hotspots" unique_id=822990280 instance=ExtResource("9_4oyrk")]
+position = Vector2(337, 54)
+description = "UI_OBJ_QUOTENANZEIGE"
+baseline = 24
+walk_to_point = Vector2(0, 181)
+
+[node name="DrehbuchInDerSenderzentrale" parent="Hotspots" unique_id=838750148 instance=ExtResource("10_oou1e")]
+position = Vector2(403, 54)
+description = "UI_OBJ_DREHBUCH_IN_DER_SENDERZENTRALE"
+baseline = 24
+walk_to_point = Vector2(0, 181)
+
+[node name="AusgangEmpfang" parent="Hotspots" unique_id=1508246279 instance=ExtResource("11_cj8jr")]
+position = Vector2(19.5, 157.5)
+description = "UI_RAUM_EMPFANG"
+baseline = 52
+walk_to_point = Vector2(16.5, 82.5)
+cursor = 9
+
+[node name="Regions" type="Node2D" parent="." unique_id=983421894]
+
+[node name="Markers" type="Node2D" parent="." unique_id=128221402]
+
+[node name="Start" parent="Markers" unique_id=319387991 instance=ExtResource("12_wyslj")]
+position = Vector2(240, 240)
+
+[node name="VonEmpfang" parent="Markers" unique_id=882459596 instance=ExtResource("13_8c3ar")]
+position = Vector2(36, 240)
+
+[node name="Characters" type="Node2D" parent="." unique_id=84770459]
+
+[node name="CharacterZappmann *" parent="Characters" unique_id=1013794678 instance=ExtResource("14_ri3p6")]
+position = Vector2(120, 232)
+
+[node name="CharacterJungerZappmann *" parent="Characters" unique_id=1700402541 instance=ExtResource("15_tgp8h")]
+position = Vector2(240, 232)
+
+[node name="CharacterWettkandidat *" parent="Characters" unique_id=891977969 instance=ExtResource("16_rshmx")]
+position = Vector2(360, 232)

@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://weq7bxd7aue8"]
+
+[ext_resource type="Script" path="res://game/rooms/empfang/hotspots/kaputtes_radio/hotspot_kaputtes_radio.gd" id="1_kpdi6"]
+
+[node name="KaputtesRadio" type="Area2D" unique_id=355196933]
+script = ExtResource("1_kpdi6")
+script_name = "KaputtesRadio"
+description = "Kaputtes Radio"
+cursor = 1
+interaction_polygon = PackedVector2Array(-29, -24, 29, -24, 29, 24, -29, 24)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=2110327268]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

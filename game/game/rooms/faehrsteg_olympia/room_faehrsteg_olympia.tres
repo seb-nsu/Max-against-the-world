@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://cy3ohw75lojc3"]
+
+[ext_resource type="Script" path="res://game/rooms/faehrsteg_olympia/room_faehrsteg_olympia_state.gd" id="1_rds7j"]
+
+[resource]
+resource_name = "FaehrstegOlympia"
+script = ExtResource("1_rds7j")
+script_name = "FaehrstegOlympia"
+scene = "res://game/rooms/faehrsteg_olympia/room_faehrsteg_olympia.tscn"

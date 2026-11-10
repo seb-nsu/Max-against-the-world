@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://do04eyr066wk2"]
+
+[ext_resource type="Script" path="res://game/rooms/zappmanns_studio/hotspots/monitorwand/hotspot_monitorwand.gd" id="1_5kp01"]
+
+[node name="Monitorwand" type="Area2D" unique_id=1446701791]
+script = ExtResource("1_5kp01")
+script_name = "Monitorwand"
+description = "Monitorwand"
+cursor = 1
+interaction_polygon = PackedVector2Array(-29, -24, 29, -24, 29, 24, -29, 24)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=63623488]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

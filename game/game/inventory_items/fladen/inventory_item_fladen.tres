@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://c3bey824v6oqv"]
+
+[ext_resource type="Script" path="res://game/inventory_items/fladen/inventory_item_fladen_state.gd" id="1_yoxsa"]
+
+[resource]
+resource_name = "Fladen"
+script = ExtResource("1_yoxsa")
+script_name = "Fladen"
+scene = "res://game/inventory_items/fladen/inventory_item_fladen.tscn"

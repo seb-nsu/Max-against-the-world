@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://k2oyiiiupijf"]
+
+[ext_resource type="Script" path="res://game/rooms/nil_delta/hotspots/faehrtafel/hotspot_faehrtafel.gd" id="1_mrcbg"]
+
+[node name="Faehrtafel" type="Area2D" unique_id=971313398]
+script = ExtResource("1_mrcbg")
+script_name = "Faehrtafel"
+description = "Faehrtafel"
+cursor = 1
+interaction_polygon = PackedVector2Array(-15, -15, 15, -15, 15, 15, -15, 15)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1153084294]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

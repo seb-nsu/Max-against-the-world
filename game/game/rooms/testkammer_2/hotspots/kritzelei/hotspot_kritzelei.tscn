@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://cpx1vkxvhy1vm"]
+
+[ext_resource type="Script" path="res://game/rooms/testkammer_2/hotspots/kritzelei/hotspot_kritzelei.gd" id="1_jny0r"]
+
+[node name="Kritzelei" type="Area2D" unique_id=301648218]
+script = ExtResource("1_jny0r")
+script_name = "Kritzelei"
+description = "Kritzelei"
+cursor = 1
+interaction_polygon = PackedVector2Array(-46, -24, 46, -24, 46, 24, -46, 24)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=212626645]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

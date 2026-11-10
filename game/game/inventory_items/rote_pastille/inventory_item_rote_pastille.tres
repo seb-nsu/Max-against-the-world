@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://cvmg7sjuiaiyx"]
+
+[ext_resource type="Script" path="res://game/inventory_items/rote_pastille/inventory_item_rote_pastille_state.gd" id="1_c6fiq"]
+
+[resource]
+resource_name = "RotePastille"
+script = ExtResource("1_c6fiq")
+script_name = "RotePastille"
+scene = "res://game/inventory_items/rote_pastille/inventory_item_rote_pastille.tscn"

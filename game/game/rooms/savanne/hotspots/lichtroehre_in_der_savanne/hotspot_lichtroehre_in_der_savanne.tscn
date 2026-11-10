@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://dwae1tqjav835"]
+
+[ext_resource type="Script" path="res://game/rooms/savanne/hotspots/lichtroehre_in_der_savanne/hotspot_lichtroehre_in_der_savanne.gd" id="1_ej7e8"]
+
+[node name="LichtroehreInDerSavanne" type="Area2D" unique_id=1036735098]
+script = ExtResource("1_ej7e8")
+script_name = "LichtroehreInDerSavanne"
+description = "Lichtroehre In Der Savanne"
+cursor = 1
+interaction_polygon = PackedVector2Array(-40, -24, 40, -24, 40, 24, -40, 24)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=923834548]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

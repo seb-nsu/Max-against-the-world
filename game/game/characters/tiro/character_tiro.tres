@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://civm5ry75e537"]
+
+[ext_resource type="Script" path="res://game/characters/tiro/character_tiro_state.gd" id="1_07d2j"]
+
+[resource]
+resource_name = "Tiro"
+script = ExtResource("1_07d2j")
+script_name = "Tiro"
+scene = "res://game/characters/tiro/character_tiro.tscn"

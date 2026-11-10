@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://cuen0hf7p2vme"]
+
+[ext_resource type="Script" path="res://game/characters/frau_regenschirm/character_frau_regenschirm_state.gd" id="1_cw6yr"]
+
+[resource]
+resource_name = "FrauRegenschirm"
+script = ExtResource("1_cw6yr")
+script_name = "FrauRegenschirm"
+scene = "res://game/characters/frau_regenschirm/character_frau_regenschirm.tscn"

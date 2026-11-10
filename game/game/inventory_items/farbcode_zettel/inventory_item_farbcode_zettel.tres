@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://bv4dbawfeaoxb"]
+
+[ext_resource type="Script" path="res://game/inventory_items/farbcode_zettel/inventory_item_farbcode_zettel_state.gd" id="1_smesn"]
+
+[resource]
+resource_name = "FarbcodeZettel"
+script = ExtResource("1_smesn")
+script_name = "FarbcodeZettel"
+scene = "res://game/inventory_items/farbcode_zettel/inventory_item_farbcode_zettel.tscn"

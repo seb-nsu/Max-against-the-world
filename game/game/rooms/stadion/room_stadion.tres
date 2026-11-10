@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://ds1gkgmrs80m4"]
+
+[ext_resource type="Script" path="res://game/rooms/stadion/room_stadion_state.gd" id="1_joim2"]
+
+[resource]
+resource_name = "Stadion"
+script = ExtResource("1_joim2")
+script_name = "Stadion"
+scene = "res://game/rooms/stadion/room_stadion.tscn"

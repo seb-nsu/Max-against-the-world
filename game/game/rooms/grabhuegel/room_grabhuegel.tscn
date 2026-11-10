@@ -1,0 +1,91 @@
+[gd_scene format=3 uid="uid://41xqtsabm4dm"]
+
+[ext_resource type="Script" path="res://game/rooms/grabhuegel/room_grabhuegel.gd" id="1_aiwc3"]
+[ext_resource type="PackedScene" uid="uid://c3ho62uhq6oco" path="res://game/rooms/grabhuegel/walkable_areas/boden/walkable_area_boden.tscn" id="2_y7n83"]
+[ext_resource type="PackedScene" uid="uid://d0yowy50776vu" path="res://game/rooms/grabhuegel/props/background/prop_background.tscn" id="3_xx5d2"]
+[ext_resource type="Texture2D" uid="uid://mk4rupqogjpc" path="res://grafik/platzhalter/raum_grabhuegel.png" id="4_o63uf"]
+[ext_resource type="PackedScene" uid="uid://bsewq7xii8do" path="res://game/rooms/grabhuegel/hotspots/sockel/hotspot_sockel.tscn" id="5_v3arj"]
+[ext_resource type="PackedScene" uid="uid://xbiyh6e5l8im" path="res://game/rooms/grabhuegel/hotspots/brombeeren/hotspot_brombeeren.tscn" id="6_0rbe7"]
+[ext_resource type="PackedScene" uid="uid://b0cae68teoxo6" path="res://game/rooms/grabhuegel/hotspots/alte_grabsteine/hotspot_alte_grabsteine.tscn" id="7_7bwq8"]
+[ext_resource type="PackedScene" uid="uid://8b3ci4mat38a" path="res://game/rooms/grabhuegel/hotspots/zypressen/hotspot_zypressen.tscn" id="8_abm57"]
+[ext_resource type="PackedScene" uid="uid://bubamj0yju0e3" path="res://game/rooms/grabhuegel/hotspots/zikaden/hotspot_zikaden.tscn" id="9_7amv4"]
+[ext_resource type="PackedScene" uid="uid://ndeipw6hbeey" path="res://game/rooms/grabhuegel/hotspots/ausgang_hafen/hotspot_ausgang_hafen.tscn" id="10_q4bo0"]
+[ext_resource type="PackedScene" uid="uid://i2gwwk5w0t0v" path="res://game/rooms/grabhuegel/markers/start/marker_start.tscn" id="11_6sras"]
+[ext_resource type="PackedScene" uid="uid://x475imi0nnj6" path="res://game/rooms/grabhuegel/markers/von_hafen_syrakus/marker_von_hafen_syrakus.tscn" id="12_wlnng"]
+[ext_resource type="PackedScene" uid="uid://dgtejd4rxb3v3" path="res://game/rooms/grabhuegel/markers/archimedes/marker_archimedes.tscn" id="13_pymi7"]
+[ext_resource type="PackedScene" uid="uid://ckhir74bccvib" path="res://game/rooms/grabhuegel/markers/cicero/marker_cicero.tscn" id="14_47u1n"]
+
+[node name="RoomGrabhuegel" type="Node2D" unique_id=1767581427]
+script = ExtResource("1_aiwc3")
+script_name = "Grabhuegel"
+width = 480
+height = 270
+
+[node name="WalkableAreas" type="Node2D" parent="." unique_id=1747749364]
+
+[node name="Boden" parent="WalkableAreas" unique_id=556068884 instance=ExtResource("2_y7n83")]
+interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(6, 210, 474, 210, 474, 267, 6, 267)])
+
+[node name="Props" type="Node2D" parent="." unique_id=1866295351]
+
+[node name="Background" parent="Props" unique_id=1507757457 instance=ExtResource("3_xx5d2")]
+position = Vector2(240, 135)
+texture = ExtResource("4_o63uf")
+description = "UI_RAUM_GRABHUEGEL"
+
+[node name="Hotspots" type="Node2D" parent="." unique_id=91654157]
+
+[node name="Sockel" parent="Hotspots" unique_id=418209288 instance=ExtResource("5_v3arj")]
+position = Vector2(235.5, 189)
+description = "UI_OBJ_SOCKEL"
+baseline = 21
+walk_to_point = Vector2(-1.5, 45)
+
+[node name="Brombeeren" parent="Hotspots" unique_id=380019194 instance=ExtResource("6_0rbe7")]
+position = Vector2(105, 184.5)
+description = "UI_OBJ_BROMBEEREN"
+baseline = 25
+walk_to_point = Vector2(0, 49.5)
+
+[node name="AlteGrabsteine" parent="Hotspots" unique_id=1572783537 instance=ExtResource("7_7bwq8")]
+position = Vector2(345, 180)
+description = "UI_OBJ_ALTE_GRABSTEINE"
+baseline = 30
+walk_to_point = Vector2(0, 54)
+
+[node name="Zypressen" parent="Hotspots" unique_id=176666706 instance=ExtResource("8_abm57")]
+position = Vector2(435, 105)
+description = "UI_OBJ_ZYPRESSEN"
+baseline = 75
+walk_to_point = Vector2(0, 126)
+
+[node name="Zikaden" parent="Hotspots" unique_id=577836215 instance=ExtResource("9_7amv4")]
+position = Vector2(225, 49.5)
+description = "UI_OBJ_ZIKADEN"
+baseline = 19
+walk_to_point = Vector2(0, 181.5)
+
+[node name="AusgangHafen" parent="Hotspots" unique_id=1108643200 instance=ExtResource("10_q4bo0")]
+position = Vector2(16.5, 157.5)
+description = "UI_OBJ_AUSGANG_HAFEN"
+baseline = 52
+walk_to_point = Vector2(1.5, 82.5)
+cursor = 9
+
+[node name="Regions" type="Node2D" parent="." unique_id=1474702681]
+
+[node name="Markers" type="Node2D" parent="." unique_id=2077149812]
+
+[node name="Start" parent="Markers" unique_id=1144732237 instance=ExtResource("11_6sras")]
+position = Vector2(36, 240)
+
+[node name="VonHafenSyrakus" parent="Markers" unique_id=167640053 instance=ExtResource("12_wlnng")]
+position = Vector2(36, 240)
+
+[node name="Archimedes" parent="Markers" unique_id=1801309172 instance=ExtResource("13_pymi7")]
+position = Vector2(390, 234)
+
+[node name="Cicero" parent="Markers" unique_id=573686420 instance=ExtResource("14_47u1n")]
+position = Vector2(300, 234)
+
+[node name="Characters" type="Node2D" parent="." unique_id=716172238]

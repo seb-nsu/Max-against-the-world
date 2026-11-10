@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://kk38bonv5nja"]
+
+[ext_resource type="Script" uid="uid://brxefo54wpm32" path="res://addons/popochiu/engine/objects/dialog/popochiu_dialog_option.gd" id="1_e1grq"]
+[ext_resource type="Script" path="res://game/dialogs/wonder_wilma/dialog_wonder_wilma.gd" id="2_sm5ba"]
+
+[resource]
+resource_name = "WonderWilma"
+script = ExtResource("2_sm5ba")
+script_name = "WonderWilma"

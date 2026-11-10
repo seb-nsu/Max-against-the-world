@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://bjel2tigj3ob0"]
+
+[ext_resource type="Script" path="res://game/rooms/agora/hotspots/tuer_zum_startbuero/hotspot_tuer_zum_startbuero.gd" id="1_vi788"]
+
+[node name="TuerZumStartbuero" type="Area2D" unique_id=758739377]
+script = ExtResource("1_vi788")
+script_name = "TuerZumStartbuero"
+description = "Tuer Zum Startbuero"
+cursor = 1
+interaction_polygon = PackedVector2Array(-19.5, -37.5, 19.5, -37.5, 19.5, 37.5, -19.5, 37.5)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=752212940]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

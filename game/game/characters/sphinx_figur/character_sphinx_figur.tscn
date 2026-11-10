@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://3lpls05vx44o"]
+
+[ext_resource type="Script" path="res://game/characters/sphinx_figur/character_sphinx_figur.gd" id="1_u6dr0"]
+[ext_resource type="Texture2D" uid="uid://d33nn62ghbl3l" path="res://grafik/platzhalter/figur_sphinx_figur.png" id="2_ugb4m"]
+
+[node name="CharacterSphinxFigur" type="Area2D" unique_id=494662940]
+script = ExtResource("1_u6dr0")
+walk_speed = 90.0
+dialog_pos = Vector2(0, -64)
+script_name = "SphinxFigur"
+description = "UI_OBJ_SPHINX_FIGUR"
+cursor = 8
+interaction_polygon = PackedVector2Array(-12, -60, 12, -60, 12, 0, -12, 0)
+
+[node name="ScalingPolygon" type="CollisionPolygon2D" parent="." unique_id=345488873]
+polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1472711604]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2010658116]
+texture_filter = 1
+texture = ExtResource("2_ugb4m")
+offset = Vector2(0, -30)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=350241925]
+visible = false
+polygon = PackedVector2Array(-12, -60, 12, -60, 12, 0, -12, 0)
+
+[node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=471370737]
+visible = false
+affect_navigation_mesh = true
+carve_navigation_mesh = true

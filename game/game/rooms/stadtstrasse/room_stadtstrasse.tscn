@@ -1,0 +1,143 @@
+[gd_scene format=3 uid="uid://1ap80nwul3d5"]
+
+[ext_resource type="Script" path="res://game/rooms/stadtstrasse/room_stadtstrasse.gd" id="1_1y7ti"]
+[ext_resource type="PackedScene" uid="uid://dy0puy2dh1g7h" path="res://game/rooms/stadtstrasse/walkable_areas/boden/walkable_area_boden.tscn" id="2_t3pnw"]
+[ext_resource type="PackedScene" uid="uid://dw2b0xq27t168" path="res://game/rooms/stadtstrasse/props/background/prop_background.tscn" id="3_r3bli"]
+[ext_resource type="Texture2D" uid="uid://bgjivng4dkl6v" path="res://grafik/platzhalter/raum_stadtstrasse.png" id="4_a2utv"]
+[ext_resource type="PackedScene" uid="uid://d0p4dx31yiq4w" path="res://game/rooms/stadtstrasse/hotspots/himmel/hotspot_himmel.tscn" id="5_ssecp"]
+[ext_resource type="PackedScene" uid="uid://rwb62d1u3y2s" path="res://game/rooms/stadtstrasse/hotspots/baeume/hotspot_baeume.tscn" id="6_kp5j5"]
+[ext_resource type="PackedScene" uid="uid://c8gokp2jxtcun" path="res://game/rooms/stadtstrasse/hotspots/haeuser/hotspot_haeuser.tscn" id="7_r0yu5"]
+[ext_resource type="PackedScene" uid="uid://b6tlpgyaeiif4" path="res://game/rooms/stadtstrasse/hotspots/autos/hotspot_autos.tscn" id="8_loho1"]
+[ext_resource type="PackedScene" uid="uid://2r24qu7x55qg" path="res://game/rooms/stadtstrasse/hotspots/auto/hotspot_auto.tscn" id="9_2bbo6"]
+[ext_resource type="PackedScene" uid="uid://bwn2haamaocc5" path="res://game/rooms/stadtstrasse/hotspots/telefonzelle/hotspot_telefonzelle.tscn" id="10_utdh6"]
+[ext_resource type="PackedScene" uid="uid://8yxupgmqwsu2" path="res://game/rooms/stadtstrasse/hotspots/klingelnde_telefonzelle/hotspot_klingelnde_telefonzelle.tscn" id="11_0bymk"]
+[ext_resource type="PackedScene" uid="uid://ji0f114mmw6w" path="res://game/rooms/stadtstrasse/hotspots/gehweg/hotspot_gehweg.tscn" id="12_b267r"]
+[ext_resource type="PackedScene" uid="uid://bgbylvywytrwg" path="res://game/rooms/stadtstrasse/hotspots/sonne/hotspot_sonne.tscn" id="13_aa3pb"]
+[ext_resource type="PackedScene" uid="uid://ba2p288xgu86u" path="res://game/rooms/stadtstrasse/hotspots/ausgang_kueche_orakel/hotspot_ausgang_kueche_orakel.tscn" id="14_48cuf"]
+[ext_resource type="PackedScene" uid="uid://c7wm3krctmju6" path="res://game/rooms/stadtstrasse/hotspots/ausgang_buero_50/hotspot_ausgang_buero_50.tscn" id="15_uc47l"]
+[ext_resource type="PackedScene" uid="uid://bag6ce0ncaxce" path="res://game/rooms/stadtstrasse/markers/start/marker_start.tscn" id="16_ku5wp"]
+[ext_resource type="PackedScene" uid="uid://b3ln6heylme2x" path="res://game/rooms/stadtstrasse/markers/von_kueche_orakel/marker_von_kueche_orakel.tscn" id="17_k2enn"]
+[ext_resource type="PackedScene" uid="uid://ua64388k561w" path="res://game/rooms/stadtstrasse/markers/von_buero_50/marker_von_buero_50.tscn" id="18_oa1fo"]
+[ext_resource type="PackedScene" uid="uid://bwstqdel4pla1" path="res://game/rooms/stadtstrasse/markers/von_widerstandsbasis/marker_von_widerstandsbasis.tscn" id="19_eubob"]
+[ext_resource type="PackedScene" uid="uid://ccirdf8lkp5t0" path="res://game/rooms/stadtstrasse/markers/von_zelle/marker_von_zelle.tscn" id="20_0gsuj"]
+[ext_resource type="PackedScene" uid="uid://bhd8p85pm6xca" path="res://game/characters/schmidt/character_schmidt.tscn" id="21_g2ks0"]
+[ext_resource type="PackedScene" uid="uid://cra0fpylsunqp" path="res://game/characters/tuer/character_tuer.tscn" id="22_5ybeq"]
+[ext_resource type="PackedScene" uid="uid://b3j5gg8q86g6e" path="res://game/characters/schwarze_katze/character_schwarze_katze.tscn" id="23_jsfrq"]
+
+[node name="RoomStadtstrasse" type="Node2D" unique_id=896887012]
+script = ExtResource("1_1y7ti")
+script_name = "Stadtstrasse"
+width = 960
+height = 270
+
+[node name="WalkableAreas" type="Node2D" parent="." unique_id=996627220]
+
+[node name="Boden" parent="WalkableAreas" unique_id=954192268 instance=ExtResource("2_t3pnw")]
+interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(6, 210, 954, 210, 954, 267, 6, 267)])
+
+[node name="Props" type="Node2D" parent="." unique_id=824765420]
+
+[node name="Background" parent="Props" unique_id=1104638053 instance=ExtResource("3_r3bli")]
+position = Vector2(480, 135)
+texture = ExtResource("4_a2utv")
+description = "UI_RAUM_STADTSTRASSE"
+
+[node name="Hotspots" type="Node2D" parent="." unique_id=358967913]
+
+[node name="Himmel" parent="Hotspots" unique_id=34324925 instance=ExtResource("5_ssecp")]
+position = Vector2(88.5, 54)
+description = "UI_OBJ_HIMMEL"
+baseline = 24
+walk_to_point = Vector2(-0.5, 181)
+
+[node name="Baeume" parent="Hotspots" unique_id=135268402 instance=ExtResource("6_kp5j5")]
+position = Vector2(185.5, 54)
+description = "UI_OBJ_BAEUME"
+baseline = 24
+walk_to_point = Vector2(-0.5, 181)
+
+[node name="Haeuser" parent="Hotspots" unique_id=1473039082 instance=ExtResource("7_r0yu5")]
+position = Vector2(282.5, 54)
+description = "UI_OBJ_HAEUSER"
+baseline = 24
+walk_to_point = Vector2(-0.5, 181)
+
+[node name="Autos" parent="Hotspots" unique_id=994601019 instance=ExtResource("8_loho1")]
+position = Vector2(379.5, 54)
+description = "UI_OBJ_AUTOS"
+baseline = 24
+walk_to_point = Vector2(-0.5, 181)
+
+[node name="Auto" parent="Hotspots" unique_id=785671883 instance=ExtResource("9_2bbo6")]
+position = Vector2(476.5, 54)
+description = "UI_OBJ_AUTO"
+baseline = 24
+walk_to_point = Vector2(-0.5, 181)
+
+[node name="Telefonzelle" parent="Hotspots" unique_id=1420049876 instance=ExtResource("10_utdh6")]
+position = Vector2(573.5, 54)
+description = "UI_OBJ_TELEFONZELLE"
+baseline = 24
+walk_to_point = Vector2(-0.5, 181)
+
+[node name="KlingelndeTelefonzelle" parent="Hotspots" unique_id=696839727 instance=ExtResource("11_0bymk")]
+position = Vector2(670.5, 54)
+description = "UI_OBJ_KLINGELNDE_TELEFONZELLE"
+baseline = 24
+walk_to_point = Vector2(-0.5, 181)
+
+[node name="Gehweg" parent="Hotspots" unique_id=827351644 instance=ExtResource("12_b267r")]
+position = Vector2(767.5, 54)
+description = "UI_OBJ_GEHWEG"
+baseline = 24
+walk_to_point = Vector2(-0.5, 181)
+
+[node name="Sonne" parent="Hotspots" unique_id=595872232 instance=ExtResource("13_aa3pb")]
+position = Vector2(864.5, 54)
+description = "UI_OBJ_SONNE"
+baseline = 24
+walk_to_point = Vector2(-0.5, 181)
+
+[node name="AusgangKuecheOrakel" parent="Hotspots" unique_id=568059912 instance=ExtResource("14_48cuf")]
+position = Vector2(19.5, 157.5)
+description = "UI_RAUM_KUECHE_ORAKEL"
+baseline = 52
+walk_to_point = Vector2(16.5, 82.5)
+cursor = 9
+
+[node name="AusgangBuero50" parent="Hotspots" unique_id=1930924985 instance=ExtResource("15_uc47l")]
+position = Vector2(940.5, 157.5)
+description = "UI_RAUM_BUERO_50"
+baseline = 52
+walk_to_point = Vector2(-16.5, 82.5)
+cursor = 9
+
+[node name="Regions" type="Node2D" parent="." unique_id=1936236226]
+
+[node name="Markers" type="Node2D" parent="." unique_id=1965963226]
+
+[node name="Start" parent="Markers" unique_id=1535299927 instance=ExtResource("16_ku5wp")]
+position = Vector2(480, 240)
+
+[node name="VonKuecheOrakel" parent="Markers" unique_id=2135013832 instance=ExtResource("17_k2enn")]
+position = Vector2(36, 240)
+
+[node name="VonBuero50" parent="Markers" unique_id=788897020 instance=ExtResource("18_oa1fo")]
+position = Vector2(924, 240)
+
+[node name="VonWiderstandsbasis" parent="Markers" unique_id=662721227 instance=ExtResource("19_eubob")]
+position = Vector2(480, 240)
+
+[node name="VonZelle" parent="Markers" unique_id=1678699323 instance=ExtResource("20_0gsuj")]
+position = Vector2(200, 240)
+
+[node name="Characters" type="Node2D" parent="." unique_id=143688727]
+
+[node name="CharacterSchmidt *" parent="Characters" unique_id=1029591084 instance=ExtResource("21_g2ks0")]
+position = Vector2(200, 232)
+
+[node name="CharacterTuer *" parent="Characters" unique_id=1898839801 instance=ExtResource("22_5ybeq")]
+position = Vector2(480, 232)
+
+[node name="CharacterSchwarzeKatze *" parent="Characters" unique_id=743428821 instance=ExtResource("23_jsfrq")]
+position = Vector2(760, 232)

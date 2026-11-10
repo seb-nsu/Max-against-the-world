@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://c4e5ircrbh7o6"]
+
+[node name="VonSpukhausKeller" type="Marker2D" unique_id=1787106736]
+visible = false

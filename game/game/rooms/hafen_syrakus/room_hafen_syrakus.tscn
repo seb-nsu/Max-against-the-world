@@ -1,0 +1,112 @@
+[gd_scene format=3 uid="uid://bjum0slygccv7"]
+
+[ext_resource type="Script" path="res://game/rooms/hafen_syrakus/room_hafen_syrakus.gd" id="1_a4dmf"]
+[ext_resource type="PackedScene" uid="uid://dyr2ntvrfewsy" path="res://game/rooms/hafen_syrakus/walkable_areas/boden/walkable_area_boden.tscn" id="2_pkdoj"]
+[ext_resource type="PackedScene" uid="uid://ccnxsamv8ql1x" path="res://game/rooms/hafen_syrakus/props/background/prop_background.tscn" id="3_6pk2n"]
+[ext_resource type="Texture2D" uid="uid://ddd8l5p5joaak" path="res://grafik/platzhalter/raum_hafen_syrakus.png" id="4_cbhjx"]
+[ext_resource type="PackedScene" uid="uid://20338jeimh2v" path="res://game/rooms/hafen_syrakus/props/tintenfass/prop_tintenfass.tscn" id="5_b8ud4"]
+[ext_resource type="Texture2D" uid="uid://bal3t7cidauf0" path="res://grafik/platzhalter/prop_tintenfass.png" id="6_laxel"]
+[ext_resource type="PackedScene" uid="uid://c5amtnugyl5fy" path="res://game/rooms/hafen_syrakus/hotspots/faehre/hotspot_faehre.tscn" id="7_tveto"]
+[ext_resource type="PackedScene" uid="uid://du1ojv4xmltbw" path="res://game/rooms/hafen_syrakus/hotspots/meer/hotspot_meer.tscn" id="8_mg004"]
+[ext_resource type="PackedScene" uid="uid://b7gnfts7ua57l" path="res://game/rooms/hafen_syrakus/hotspots/fischernetze/hotspot_fischernetze.tscn" id="9_ink40"]
+[ext_resource type="PackedScene" uid="uid://dqam42ilrimf5" path="res://game/rooms/hafen_syrakus/hotspots/amphoren_am_kai/hotspot_amphoren_am_kai.tscn" id="10_1vwmc"]
+[ext_resource type="PackedScene" uid="uid://5oul26dlynhg" path="res://game/rooms/hafen_syrakus/hotspots/sanduhr_syrakus/hotspot_sanduhr_syrakus.tscn" id="11_5a0lw"]
+[ext_resource type="PackedScene" uid="uid://ockb7x8ijmke" path="res://game/rooms/hafen_syrakus/hotspots/gasse_zur_werkstatt/hotspot_gasse_zur_werkstatt.tscn" id="12_ndipj"]
+[ext_resource type="PackedScene" uid="uid://bn5mygm4m6y4s" path="res://game/rooms/hafen_syrakus/hotspots/pfad_zum_grabhuegel/hotspot_pfad_zum_grabhuegel.tscn" id="13_gdyu0"]
+[ext_resource type="PackedScene" uid="uid://bcfemvk00lolo" path="res://game/rooms/hafen_syrakus/markers/start/marker_start.tscn" id="14_hini1"]
+[ext_resource type="PackedScene" uid="uid://bx3atehlexkpg" path="res://game/rooms/hafen_syrakus/markers/von_faehre/marker_von_faehre.tscn" id="15_s74qc"]
+[ext_resource type="PackedScene" uid="uid://chnvjd6mnjrqi" path="res://game/rooms/hafen_syrakus/markers/von_werkstatt/marker_von_werkstatt.tscn" id="16_lgiwp"]
+[ext_resource type="PackedScene" uid="uid://bdlqbrhmkqrdg" path="res://game/rooms/hafen_syrakus/markers/von_grabhuegel/marker_von_grabhuegel.tscn" id="17_iuahi"]
+[ext_resource type="PackedScene" uid="uid://dda2jvhyto7pc" path="res://game/characters/faehrmann/character_faehrmann.tscn" id="18_aru4a"]
+
+[node name="RoomHafenSyrakus" type="Node2D" unique_id=1526911783]
+script = ExtResource("1_a4dmf")
+script_name = "HafenSyrakus"
+width = 480
+height = 270
+
+[node name="WalkableAreas" type="Node2D" parent="." unique_id=189612945]
+
+[node name="Boden" parent="WalkableAreas" unique_id=149140806 instance=ExtResource("2_pkdoj")]
+interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(6, 210, 474, 210, 474, 267, 6, 267)])
+
+[node name="Props" type="Node2D" parent="." unique_id=510818672]
+
+[node name="Background" parent="Props" unique_id=1159875174 instance=ExtResource("3_6pk2n")]
+position = Vector2(240, 135)
+texture = ExtResource("4_cbhjx")
+description = "UI_RAUM_HAFEN_SYRAKUS"
+
+[node name="Tintenfass" parent="Props" unique_id=587912893 instance=ExtResource("5_b8ud4")]
+position = Vector2(196.5, 193.5)
+texture = ExtResource("6_laxel")
+description = "UI_OBJ_TINTENFASS"
+baseline = 7
+walk_to_point = Vector2(1.5, 40.5)
+
+[node name="Hotspots" type="Node2D" parent="." unique_id=1083178277]
+
+[node name="Faehre" parent="Hotspots" unique_id=733345143 instance=ExtResource("7_tveto")]
+position = Vector2(54, 210)
+description = "UI_OBJ_FAEHRE"
+baseline = 15
+walk_to_point = Vector2(30, 27)
+
+[node name="Meer" parent="Hotspots" unique_id=201160652 instance=ExtResource("8_mg004")]
+position = Vector2(75, 120)
+description = "UI_OBJ_MEER"
+baseline = 30
+walk_to_point = Vector2(15, 111)
+
+[node name="Fischernetze" parent="Hotspots" unique_id=112592016 instance=ExtResource("9_ink40")]
+position = Vector2(198, 187.5)
+description = "UI_OBJ_FISCHERNETZE"
+baseline = 22
+walk_to_point = Vector2(0, 46.5)
+
+[node name="AmphorenAmKai" parent="Hotspots" unique_id=139288517 instance=ExtResource("10_1vwmc")]
+position = Vector2(357, 189)
+description = "UI_OBJ_AMPHOREN_AM_KAI"
+baseline = 21
+walk_to_point = Vector2(0, 45)
+
+[node name="SanduhrSyrakus" parent="Hotspots" unique_id=1828473548 instance=ExtResource("11_5a0lw")]
+position = Vector2(129, 166.5)
+description = "UI_OBJ_SANDUHR_SYRAKUS"
+baseline = 25
+walk_to_point = Vector2(0, 64.5)
+
+[node name="GasseZurWerkstatt" parent="Hotspots" unique_id=1060415853 instance=ExtResource("12_ndipj")]
+position = Vector2(448.5, 150)
+description = "UI_OBJ_GASSE_ZUR_WERKSTATT"
+baseline = 60
+walk_to_point = Vector2(1.5, 90)
+cursor = 9
+
+[node name="PfadZumGrabhuegel" parent="Hotspots" unique_id=9377280 instance=ExtResource("13_gdyu0")]
+position = Vector2(282, 105)
+description = "UI_OBJ_PFAD_ZUM_GRABHUEGEL"
+baseline = 30
+walk_to_point = Vector2(0, 117)
+cursor = 9
+
+[node name="Regions" type="Node2D" parent="." unique_id=1756143405]
+
+[node name="Markers" type="Node2D" parent="." unique_id=952690520]
+
+[node name="Start" parent="Markers" unique_id=1688819795 instance=ExtResource("14_hini1")]
+position = Vector2(90, 237)
+
+[node name="VonFaehre" parent="Markers" unique_id=140883306 instance=ExtResource("15_s74qc")]
+position = Vector2(90, 237)
+
+[node name="VonWerkstatt" parent="Markers" unique_id=607715882 instance=ExtResource("16_lgiwp")]
+position = Vector2(444, 240)
+
+[node name="VonGrabhuegel" parent="Markers" unique_id=606991245 instance=ExtResource("17_iuahi")]
+position = Vector2(282, 222)
+
+[node name="Characters" type="Node2D" parent="." unique_id=2023384423]
+
+[node name="CharacterFaehrmann *" parent="Characters" unique_id=938438789 instance=ExtResource("18_aru4a")]
+position = Vector2(60, 228)

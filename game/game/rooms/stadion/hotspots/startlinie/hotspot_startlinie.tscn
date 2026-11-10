@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://bg3ji584difux"]
+
+[ext_resource type="Script" path="res://game/rooms/stadion/hotspots/startlinie/hotspot_startlinie.gd" id="1_q3pow"]
+
+[node name="Startlinie" type="Area2D" unique_id=776175796]
+script = ExtResource("1_q3pow")
+script_name = "Startlinie"
+description = "Startlinie"
+cursor = 1
+interaction_polygon = PackedVector2Array(-4.5, -12, 4.5, -12, 4.5, 12, -4.5, 12)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=838799677]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

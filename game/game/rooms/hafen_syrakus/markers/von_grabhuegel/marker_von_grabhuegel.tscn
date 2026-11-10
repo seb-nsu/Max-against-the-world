@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://bdlqbrhmkqrdg"]
+
+[node name="VonGrabhuegel" type="Marker2D" unique_id=606991245]
+visible = false

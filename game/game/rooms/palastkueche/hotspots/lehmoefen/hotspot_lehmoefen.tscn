@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://33e28op46tdk"]
+
+[ext_resource type="Script" path="res://game/rooms/palastkueche/hotspots/lehmoefen/hotspot_lehmoefen.gd" id="1_mlpvk"]
+
+[node name="Lehmoefen" type="Area2D" unique_id=1894357115]
+script = ExtResource("1_mlpvk")
+script_name = "Lehmoefen"
+description = "Lehmoefen"
+cursor = 1
+interaction_polygon = PackedVector2Array(-42, -37.5, 42, -37.5, 42, 37.5, -42, 37.5)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1475033662]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

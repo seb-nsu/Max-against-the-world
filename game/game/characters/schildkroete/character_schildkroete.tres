@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://b78y1jgv0fn30"]
+
+[ext_resource type="Script" path="res://game/characters/schildkroete/character_schildkroete_state.gd" id="1_1mh4d"]
+
+[resource]
+resource_name = "Schildkroete"
+script = ExtResource("1_1mh4d")
+script_name = "Schildkroete"
+scene = "res://game/characters/schildkroete/character_schildkroete.tscn"

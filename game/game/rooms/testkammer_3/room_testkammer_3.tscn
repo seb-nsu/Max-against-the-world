@@ -1,0 +1,79 @@
+[gd_scene format=3 uid="uid://dgb8pyogdox6j"]
+
+[ext_resource type="Script" path="res://game/rooms/testkammer_3/room_testkammer_3.gd" id="1_s3p8m"]
+[ext_resource type="PackedScene" uid="uid://bske2l8k5vxet" path="res://game/rooms/testkammer_3/walkable_areas/boden/walkable_area_boden.tscn" id="2_6iv4e"]
+[ext_resource type="PackedScene" uid="uid://b5ig113xynf7m" path="res://game/rooms/testkammer_3/props/background/prop_background.tscn" id="3_k3dvu"]
+[ext_resource type="Texture2D" uid="uid://dnrxq6685ad21" path="res://grafik/platzhalter/raum_testkammer_3.png" id="4_18mt5"]
+[ext_resource type="PackedScene" uid="uid://b7rwyswv1tlf2" path="res://game/rooms/testkammer_3/hotspots/lautsprecher/hotspot_lautsprecher.tscn" id="5_08753"]
+[ext_resource type="PackedScene" uid="uid://c1ghiy40sp8wd" path="res://game/rooms/testkammer_3/hotspots/ausgang_testkammer_2/hotspot_ausgang_testkammer_2.tscn" id="6_yjgdk"]
+[ext_resource type="PackedScene" uid="uid://b116ihgn2xyl3" path="res://game/rooms/testkammer_3/hotspots/ausgang_kern/hotspot_ausgang_kern.tscn" id="7_ipgvv"]
+[ext_resource type="PackedScene" uid="uid://bq61t6o2udk3j" path="res://game/rooms/testkammer_3/markers/start/marker_start.tscn" id="8_pnfsm"]
+[ext_resource type="PackedScene" uid="uid://ba23e3u0qcpbl" path="res://game/rooms/testkammer_3/markers/von_testkammer_2/marker_von_testkammer_2.tscn" id="9_fao46"]
+[ext_resource type="PackedScene" uid="uid://5lc1ysgmw4j1" path="res://game/rooms/testkammer_3/markers/von_kern/marker_von_kern.tscn" id="10_ne4ri"]
+[ext_resource type="PackedScene" uid="uid://cra0fpylsunqp" path="res://game/characters/tuer/character_tuer.tscn" id="11_utu7w"]
+[ext_resource type="PackedScene" uid="uid://vvrxdid0yqmy" path="res://game/characters/mutti/character_mutti.tscn" id="12_npdm8"]
+[ext_resource type="PackedScene" uid="uid://hoj0248bn3vt" path="res://game/characters/bernd/character_bernd.tscn" id="13_cd7rv"]
+
+[node name="RoomTestkammer3" type="Node2D" unique_id=166262795]
+script = ExtResource("1_s3p8m")
+script_name = "Testkammer3"
+width = 480
+height = 270
+
+[node name="WalkableAreas" type="Node2D" parent="." unique_id=1284088585]
+
+[node name="Boden" parent="WalkableAreas" unique_id=94503712 instance=ExtResource("2_6iv4e")]
+interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(6, 210, 474, 210, 474, 267, 6, 267)])
+
+[node name="Props" type="Node2D" parent="." unique_id=174080766]
+
+[node name="Background" parent="Props" unique_id=1525132495 instance=ExtResource("3_k3dvu")]
+position = Vector2(240, 135)
+texture = ExtResource("4_18mt5")
+description = "UI_RAUM_TESTKAMMER_3"
+
+[node name="Hotspots" type="Node2D" parent="." unique_id=1335762777]
+
+[node name="Lautsprecher" parent="Hotspots" unique_id=21852730 instance=ExtResource("5_08753")]
+position = Vector2(240, 54)
+description = "UI_OBJ_LAUTSPRECHER"
+baseline = 24
+walk_to_point = Vector2(0, 181)
+
+[node name="AusgangTestkammer2" parent="Hotspots" unique_id=1769844564 instance=ExtResource("6_yjgdk")]
+position = Vector2(19.5, 157.5)
+description = "UI_RAUM_TESTKAMMER_2"
+baseline = 52
+walk_to_point = Vector2(16.5, 82.5)
+cursor = 9
+
+[node name="AusgangKern" parent="Hotspots" unique_id=1262942552 instance=ExtResource("7_ipgvv")]
+position = Vector2(460.5, 157.5)
+description = "UI_RAUM_KERN"
+baseline = 52
+walk_to_point = Vector2(-16.5, 82.5)
+cursor = 9
+
+[node name="Regions" type="Node2D" parent="." unique_id=710141081]
+
+[node name="Markers" type="Node2D" parent="." unique_id=838827215]
+
+[node name="Start" parent="Markers" unique_id=1908889921 instance=ExtResource("8_pnfsm")]
+position = Vector2(240, 240)
+
+[node name="VonTestkammer2" parent="Markers" unique_id=1768377504 instance=ExtResource("9_fao46")]
+position = Vector2(36, 240)
+
+[node name="VonKern" parent="Markers" unique_id=950491300 instance=ExtResource("10_ne4ri")]
+position = Vector2(444, 240)
+
+[node name="Characters" type="Node2D" parent="." unique_id=936763417]
+
+[node name="CharacterTuer *" parent="Characters" unique_id=1898839801 instance=ExtResource("11_utu7w")]
+position = Vector2(120, 232)
+
+[node name="CharacterMutti *" parent="Characters" unique_id=609514072 instance=ExtResource("12_npdm8")]
+position = Vector2(240, 232)
+
+[node name="CharacterBernd *" parent="Characters" unique_id=601399039 instance=ExtResource("13_cd7rv")]
+position = Vector2(360, 232)

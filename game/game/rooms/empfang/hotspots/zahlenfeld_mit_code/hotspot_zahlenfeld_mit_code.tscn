@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://cr5utdjgf6a4l"]
+
+[ext_resource type="Script" path="res://game/rooms/empfang/hotspots/zahlenfeld_mit_code/hotspot_zahlenfeld_mit_code.gd" id="1_sk2kg"]
+
+[node name="ZahlenfeldMitCode" type="Area2D" unique_id=2089622886]
+script = ExtResource("1_sk2kg")
+script_name = "ZahlenfeldMitCode"
+description = "Zahlenfeld Mit Code"
+cursor = 1
+interaction_polygon = PackedVector2Array(-29, -24, 29, -24, 29, 24, -29, 24)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=414447431]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

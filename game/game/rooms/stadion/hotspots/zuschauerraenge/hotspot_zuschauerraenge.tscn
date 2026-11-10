@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://c1q0serudv8kd"]
+
+[ext_resource type="Script" path="res://game/rooms/stadion/hotspots/zuschauerraenge/hotspot_zuschauerraenge.gd" id="1_a10tc"]
+
+[node name="Zuschauerraenge" type="Area2D" unique_id=889203043]
+script = ExtResource("1_a10tc")
+script_name = "Zuschauerraenge"
+description = "Zuschauerraenge"
+cursor = 1
+interaction_polygon = PackedVector2Array(-240, -24, 240, -24, 240, 24, -240, 24)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1807574413]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

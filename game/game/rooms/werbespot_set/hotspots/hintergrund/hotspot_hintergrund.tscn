@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://c5wvj1qpdev2d"]
+
+[ext_resource type="Script" path="res://game/rooms/werbespot_set/hotspots/hintergrund/hotspot_hintergrund.gd" id="1_hj07f"]
+
+[node name="Hintergrund" type="Area2D" unique_id=472715229]
+script = ExtResource("1_hj07f")
+script_name = "Hintergrund"
+description = "Hintergrund"
+cursor = 1
+interaction_polygon = PackedVector2Array(-29, -24, 29, -24, 29, 24, -29, 24)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1909628492]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

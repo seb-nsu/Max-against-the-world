@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://cqhntdyr35ivq"]
+
+[ext_resource type="Script" path="res://game/inventory_items/sandalen/inventory_item_sandalen_state.gd" id="1_fditn"]
+
+[resource]
+resource_name = "Sandalen"
+script = ExtResource("1_fditn")
+script_name = "Sandalen"
+scene = "res://game/inventory_items/sandalen/inventory_item_sandalen.tscn"

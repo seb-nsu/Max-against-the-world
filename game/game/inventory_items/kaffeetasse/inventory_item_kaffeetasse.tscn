@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://xvelb0ctf1j4"]
+
+[ext_resource type="Texture2D" uid="uid://cmuvg44xdplti" path="res://grafik/platzhalter/gegenstand_kaffeetasse.png" id="1_gbmyf"]
+[ext_resource type="Script" path="res://game/inventory_items/kaffeetasse/inventory_item_kaffeetasse.gd" id="1_xkrg3"]
+
+[node name="ItemKaffeetasse" type="TextureRect" unique_id=1693349010]
+texture_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 4
+mouse_filter = 0
+texture = ExtResource("1_gbmyf")
+stretch_mode = 5
+script = ExtResource("1_xkrg3")
+script_name = "Kaffeetasse"
+description = "UI_OBJ_KAFFEETASSE"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1331224523]

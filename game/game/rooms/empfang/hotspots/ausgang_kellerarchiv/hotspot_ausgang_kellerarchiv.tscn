@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://cjmvtfniaemrk"]
+
+[ext_resource type="Script" path="res://game/rooms/empfang/hotspots/ausgang_kellerarchiv/hotspot_ausgang_kellerarchiv.gd" id="1_p73fy"]
+
+[node name="AusgangKellerarchiv" type="Area2D" unique_id=1613495537]
+script = ExtResource("1_p73fy")
+script_name = "AusgangKellerarchiv"
+description = "Ausgang Kellerarchiv"
+cursor = 1
+interaction_polygon = PackedVector2Array(-13.5, -52.5, 13.5, -52.5, 13.5, 52.5, -13.5, 52.5)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=727264389]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

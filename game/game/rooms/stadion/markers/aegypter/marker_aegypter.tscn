@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://u4f6iokmsgeb"]
+
+[node name="Aegypter" type="Marker2D" unique_id=147604749]
+visible = false

@@ -1,0 +1,82 @@
+[gd_scene format=3 uid="uid://b06s5u88u5mve"]
+
+[ext_resource type="Script" path="res://game/rooms/rauschen/room_rauschen.gd" id="1_nkwy5"]
+[ext_resource type="PackedScene" uid="uid://b1yanmbxifj12" path="res://game/rooms/rauschen/walkable_areas/boden/walkable_area_boden.tscn" id="2_tcxdi"]
+[ext_resource type="PackedScene" uid="uid://chgkhhwf63yvf" path="res://game/rooms/rauschen/props/background/prop_background.tscn" id="3_xowoi"]
+[ext_resource type="Texture2D" uid="uid://bvvsyxvt713v0" path="res://grafik/platzhalter/raum_rauschen.png" id="4_od7j5"]
+[ext_resource type="PackedScene" uid="uid://js5cohkynj0d" path="res://game/rooms/rauschen/hotspots/geisterbilder_im_rauschen/hotspot_geisterbilder_im_rauschen.tscn" id="5_1kxqu"]
+[ext_resource type="PackedScene" uid="uid://d00dmm5ooj7ty" path="res://game/rooms/rauschen/hotspots/kriechweg/hotspot_kriechweg.tscn" id="6_lrwfl"]
+[ext_resource type="PackedScene" uid="uid://dhdo4g7rx6dhj" path="res://game/rooms/rauschen/markers/start/marker_start.tscn" id="7_hwu37"]
+[ext_resource type="PackedScene" uid="uid://bont7oav7qhvd" path="res://game/rooms/rauschen/markers/von_gluecksrad/marker_von_gluecksrad.tscn" id="8_eennj"]
+[ext_resource type="PackedScene" uid="uid://dxfkw1agjis8h" path="res://game/rooms/rauschen/markers/von_sitcom_kueche/marker_von_sitcom_kueche.tscn" id="9_vb44e"]
+[ext_resource type="PackedScene" uid="uid://dm8p43mm6tw8f" path="res://game/rooms/rauschen/markers/von_savanne/marker_von_savanne.tscn" id="10_1y7t5"]
+[ext_resource type="PackedScene" uid="uid://bkk0l8m5o0hod" path="res://game/rooms/rauschen/markers/von_friedhof/marker_von_friedhof.tscn" id="11_hq8ah"]
+[ext_resource type="PackedScene" uid="uid://bvjwvgb3erjs2" path="res://game/rooms/rauschen/markers/von_kapitolis/marker_von_kapitolis.tscn" id="12_55gva"]
+[ext_resource type="PackedScene" uid="uid://b6qqf6iy2u0md" path="res://game/rooms/rauschen/markers/von_empfang/marker_von_empfang.tscn" id="13_olk2n"]
+[ext_resource type="PackedScene" uid="uid://ble7upavwjstd" path="res://game/characters/flimmer/character_flimmer.tscn" id="14_ph81n"]
+[ext_resource type="PackedScene" uid="uid://badbb0jebrxma" path="res://game/characters/nachrichtensprecher/character_nachrichtensprecher.tscn" id="15_8pewy"]
+
+[node name="RoomRauschen" type="Node2D" unique_id=1064547570]
+script = ExtResource("1_nkwy5")
+script_name = "Rauschen"
+width = 480
+height = 270
+
+[node name="WalkableAreas" type="Node2D" parent="." unique_id=221737822]
+
+[node name="Boden" parent="WalkableAreas" unique_id=1573293303 instance=ExtResource("2_tcxdi")]
+interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(6, 210, 474, 210, 474, 267, 6, 267)])
+
+[node name="Props" type="Node2D" parent="." unique_id=681646866]
+
+[node name="Background" parent="Props" unique_id=1343657109 instance=ExtResource("3_xowoi")]
+position = Vector2(240, 135)
+texture = ExtResource("4_od7j5")
+description = "UI_RAUM_RAUSCHEN"
+
+[node name="Hotspots" type="Node2D" parent="." unique_id=803763411]
+
+[node name="GeisterbilderImRauschen" parent="Hotspots" unique_id=1754609319 instance=ExtResource("5_1kxqu")]
+position = Vector2(140, 54)
+description = "UI_OBJ_GEISTERBILDER_IM_RAUSCHEN"
+baseline = 24
+walk_to_point = Vector2(0, 181)
+
+[node name="Kriechweg" parent="Hotspots" unique_id=239850205 instance=ExtResource("6_lrwfl")]
+position = Vector2(340, 54)
+description = "UI_OBJ_KRIECHWEG"
+baseline = 24
+walk_to_point = Vector2(0, 181)
+
+[node name="Regions" type="Node2D" parent="." unique_id=1128624923]
+
+[node name="Markers" type="Node2D" parent="." unique_id=1575960870]
+
+[node name="Start" parent="Markers" unique_id=53983254 instance=ExtResource("7_hwu37")]
+position = Vector2(240, 240)
+
+[node name="VonGluecksrad" parent="Markers" unique_id=1528639008 instance=ExtResource("8_eennj")]
+position = Vector2(240, 240)
+
+[node name="VonSitcomKueche" parent="Markers" unique_id=2015016469 instance=ExtResource("9_vb44e")]
+position = Vector2(240, 240)
+
+[node name="VonSavanne" parent="Markers" unique_id=816174051 instance=ExtResource("10_1y7t5")]
+position = Vector2(240, 240)
+
+[node name="VonFriedhof" parent="Markers" unique_id=1487461445 instance=ExtResource("11_hq8ah")]
+position = Vector2(240, 240)
+
+[node name="VonKapitolis" parent="Markers" unique_id=1888880829 instance=ExtResource("12_55gva")]
+position = Vector2(240, 240)
+
+[node name="VonEmpfang" parent="Markers" unique_id=859005985 instance=ExtResource("13_olk2n")]
+position = Vector2(240, 240)
+
+[node name="Characters" type="Node2D" parent="." unique_id=1498445173]
+
+[node name="CharacterFlimmer *" parent="Characters" unique_id=1629242648 instance=ExtResource("14_ph81n")]
+position = Vector2(150, 232)
+
+[node name="CharacterNachrichtensprecher *" parent="Characters" unique_id=1670805931 instance=ExtResource("15_8pewy")]
+position = Vector2(330, 232)

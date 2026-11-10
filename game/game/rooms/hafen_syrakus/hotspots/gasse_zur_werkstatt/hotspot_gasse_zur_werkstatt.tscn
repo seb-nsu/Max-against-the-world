@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://ockb7x8ijmke"]
+
+[ext_resource type="Script" path="res://game/rooms/hafen_syrakus/hotspots/gasse_zur_werkstatt/hotspot_gasse_zur_werkstatt.gd" id="1_6b2co"]
+
+[node name="GasseZurWerkstatt" type="Area2D" unique_id=1060415853]
+script = ExtResource("1_6b2co")
+script_name = "GasseZurWerkstatt"
+description = "Gasse Zur Werkstatt"
+cursor = 1
+interaction_polygon = PackedVector2Array(-28.5, -60, 28.5, -60, 28.5, 60, -28.5, 60)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1609287692]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

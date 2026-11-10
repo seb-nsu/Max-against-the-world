@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://b2cfky8xpymrk"]
+
+[ext_resource type="Script" path="res://game/rooms/agora/hotspots/sandale_auf_der_saeule/hotspot_sandale_auf_der_saeule.gd" id="1_14xdl"]
+
+[node name="SandaleAufDerSaeule" type="Area2D" unique_id=1715262721]
+script = ExtResource("1_14xdl")
+script_name = "SandaleAufDerSaeule"
+description = "Sandale Auf Der Saeule"
+cursor = 1
+interaction_polygon = PackedVector2Array(-18, -7.5, 18, -7.5, 18, 7.5, -18, 7.5)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=692550952]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://btqg6t74l0kbo"]
+
+[node name="VonFriedhof" type="Marker2D" unique_id=1769249118]
+visible = false

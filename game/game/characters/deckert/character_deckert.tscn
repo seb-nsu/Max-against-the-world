@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://bclia23souhqm"]
+
+[ext_resource type="Script" path="res://game/characters/deckert/character_deckert.gd" id="1_mr6s0"]
+[ext_resource type="Texture2D" uid="uid://3en43bo3h3yw" path="res://grafik/platzhalter/figur_deckert.png" id="2_11qme"]
+
+[node name="CharacterDeckert" type="Area2D" unique_id=1552755411]
+script = ExtResource("1_mr6s0")
+walk_speed = 90.0
+dialog_pos = Vector2(0, -94)
+script_name = "Deckert"
+description = "UI_OBJ_DECKERT"
+cursor = 8
+interaction_polygon = PackedVector2Array(-15, -90, 15, -90, 15, 0, -15, 0)
+
+[node name="ScalingPolygon" type="CollisionPolygon2D" parent="." unique_id=1919345599]
+polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1660400719]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=166804823]
+texture_filter = 1
+texture = ExtResource("2_11qme")
+offset = Vector2(0, -45)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1312800663]
+visible = false
+polygon = PackedVector2Array(-15, -90, 15, -90, 15, 0, -15, 0)
+
+[node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=635951409]
+visible = false
+affect_navigation_mesh = true
+carve_navigation_mesh = true

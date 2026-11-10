@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://xli86o0m2mu8"]
+
+[ext_resource type="Script" path="res://game/inventory_items/opas_papyrus/inventory_item_opas_papyrus_state.gd" id="1_e8f8q"]
+
+[resource]
+resource_name = "OpasPapyrus"
+script = ExtResource("1_e8f8q")
+script_name = "OpasPapyrus"
+scene = "res://game/inventory_items/opas_papyrus/inventory_item_opas_papyrus.tscn"

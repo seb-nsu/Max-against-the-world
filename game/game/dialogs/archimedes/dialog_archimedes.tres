@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://c6o1x658ghpvb"]
+
+[ext_resource type="Script" uid="uid://brxefo54wpm32" path="res://addons/popochiu/engine/objects/dialog/popochiu_dialog_option.gd" id="1_t3ubj"]
+[ext_resource type="Script" path="res://game/dialogs/archimedes/dialog_archimedes.gd" id="2_wnqr4"]
+
+[resource]
+resource_name = "Archimedes"
+script = ExtResource("2_wnqr4")
+script_name = "Archimedes"

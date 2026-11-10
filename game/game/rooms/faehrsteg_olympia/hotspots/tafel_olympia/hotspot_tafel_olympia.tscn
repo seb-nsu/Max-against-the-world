@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://dvegtmstskkkc"]
+
+[ext_resource type="Script" path="res://game/rooms/faehrsteg_olympia/hotspots/tafel_olympia/hotspot_tafel_olympia.gd" id="1_8mu37"]
+
+[node name="TafelOlympia" type="Area2D" unique_id=735075942]
+script = ExtResource("1_8mu37")
+script_name = "TafelOlympia"
+description = "Tafel Olympia"
+cursor = 1
+interaction_polygon = PackedVector2Array(-13.5, -13.5, 13.5, -13.5, 13.5, 13.5, -13.5, 13.5)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=915494153]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

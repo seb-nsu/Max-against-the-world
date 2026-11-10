@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://dvsq2mnnva8pm"]
+
+[ext_resource type="Texture2D" uid="uid://ytxwmerkxegg" path="res://grafik/platzhalter/gegenstand_zugangskarte.png" id="1_6x5rw"]
+[ext_resource type="Script" path="res://game/inventory_items/zugangskarte/inventory_item_zugangskarte.gd" id="1_gbq77"]
+
+[node name="ItemZugangskarte" type="TextureRect" unique_id=1864299527]
+texture_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 4
+mouse_filter = 0
+texture = ExtResource("1_6x5rw")
+stretch_mode = 5
+script = ExtResource("1_gbq77")
+script_name = "Zugangskarte"
+description = "UI_OBJ_ZUGANGSKARTE"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1895787613]

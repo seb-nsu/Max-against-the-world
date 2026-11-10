@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://pvqj6ih1nqyq"]
+
+[ext_resource type="Script" path="res://game/rooms/spukhaus_keller/room_spukhaus_keller_state.gd" id="1_1jkxd"]
+
+[resource]
+resource_name = "SpukhausKeller"
+script = ExtResource("1_1jkxd")
+script_name = "SpukhausKeller"
+scene = "res://game/rooms/spukhaus_keller/room_spukhaus_keller.tscn"

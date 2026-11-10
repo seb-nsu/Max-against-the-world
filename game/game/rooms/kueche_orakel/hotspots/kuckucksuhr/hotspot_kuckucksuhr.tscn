@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://dt6da5anwawdo"]
+
+[ext_resource type="Script" path="res://game/rooms/kueche_orakel/hotspots/kuckucksuhr/hotspot_kuckucksuhr.gd" id="1_q1ahv"]
+
+[node name="Kuckucksuhr" type="Area2D" unique_id=419432225]
+script = ExtResource("1_q1ahv")
+script_name = "Kuckucksuhr"
+description = "Kuckucksuhr"
+cursor = 1
+interaction_polygon = PackedVector2Array(-29, -24, 29, -24, 29, 24, -29, 24)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1815437560]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://srxsrn1iui7p"]
+
+[ext_resource type="Script" uid="uid://brxefo54wpm32" path="res://addons/popochiu/engine/objects/dialog/popochiu_dialog_option.gd" id="1_7gqwr"]
+[ext_resource type="Script" path="res://game/dialogs/nebet/dialog_nebet.gd" id="2_x55bl"]
+
+[resource]
+resource_name = "Nebet"
+script = ExtResource("2_x55bl")
+script_name = "Nebet"

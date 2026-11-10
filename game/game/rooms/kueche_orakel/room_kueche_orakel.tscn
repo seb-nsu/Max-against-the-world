@@ -1,0 +1,144 @@
+[gd_scene format=3 uid="uid://yju73rrvtisv"]
+
+[ext_resource type="Script" path="res://game/rooms/kueche_orakel/room_kueche_orakel.gd" id="1_waaj7"]
+[ext_resource type="PackedScene" uid="uid://cl5fh4jk0ncbd" path="res://game/rooms/kueche_orakel/walkable_areas/boden/walkable_area_boden.tscn" id="2_ip1l6"]
+[ext_resource type="PackedScene" uid="uid://btj2nnbiyetj3" path="res://game/rooms/kueche_orakel/props/background/prop_background.tscn" id="3_hjjik"]
+[ext_resource type="Texture2D" uid="uid://brakj4p628ud7" path="res://grafik/platzhalter/raum_kueche_orakel.png" id="4_3g5sk"]
+[ext_resource type="PackedScene" uid="uid://7v6m0u88y5fn" path="res://game/rooms/kueche_orakel/hotspots/vase/hotspot_vase.tscn" id="5_0ryu1"]
+[ext_resource type="PackedScene" uid="uid://bt54gxxaro03e" path="res://game/rooms/kueche_orakel/hotspots/ofen/hotspot_ofen.tscn" id="6_5b4lm"]
+[ext_resource type="PackedScene" uid="uid://df1ir333qty63" path="res://game/rooms/kueche_orakel/hotspots/kochbuch/hotspot_kochbuch.tscn" id="7_tixl3"]
+[ext_resource type="PackedScene" uid="uid://c04n8idijdtvt" path="res://game/rooms/kueche_orakel/hotspots/gabel/hotspot_gabel.tscn" id="8_kheio"]
+[ext_resource type="PackedScene" uid="uid://dt6da5anwawdo" path="res://game/rooms/kueche_orakel/hotspots/kuckucksuhr/hotspot_kuckucksuhr.tscn" id="9_s0uqs"]
+[ext_resource type="PackedScene" uid="uid://rkgti6irvu2r" path="res://game/rooms/kueche_orakel/hotspots/wandtelefon/hotspot_wandtelefon.tscn" id="10_r4p7o"]
+[ext_resource type="PackedScene" uid="uid://dtuolmxasbrk" path="res://game/rooms/kueche_orakel/hotspots/tisch_mit_teller_und_teekanne/hotspot_tisch_mit_teller_und_teekanne.tscn" id="11_21bx2"]
+[ext_resource type="PackedScene" uid="uid://d304703yp0tbh" path="res://game/rooms/kueche_orakel/hotspots/glaeser_auf_dem_regal/hotspot_glaeser_auf_dem_regal.tscn" id="12_6hj0u"]
+[ext_resource type="PackedScene" uid="uid://dr8gfh6xtnoyl" path="res://game/rooms/kueche_orakel/hotspots/gardinen_und_fenster/hotspot_gardinen_und_fenster.tscn" id="13_07ow8"]
+[ext_resource type="PackedScene" uid="uid://dfh6r31w17uiw" path="res://game/rooms/kueche_orakel/hotspots/tapete/hotspot_tapete.tscn" id="14_b0sdx"]
+[ext_resource type="PackedScene" uid="uid://7q1vmrdgyq1" path="res://game/rooms/kueche_orakel/hotspots/kehrblech/hotspot_kehrblech.tscn" id="15_hfn5g"]
+[ext_resource type="PackedScene" uid="uid://cnxyp8lskxrwt" path="res://game/rooms/kueche_orakel/hotspots/scherben/hotspot_scherben.tscn" id="16_x488x"]
+[ext_resource type="PackedScene" uid="uid://brqpyvpjqe1yf" path="res://game/rooms/kueche_orakel/hotspots/ausgang_stadtstrasse/hotspot_ausgang_stadtstrasse.tscn" id="17_aflun"]
+[ext_resource type="PackedScene" uid="uid://2bnapb6werr4" path="res://game/rooms/kueche_orakel/markers/start/marker_start.tscn" id="18_8baa5"]
+[ext_resource type="PackedScene" uid="uid://bmpvsqkxrjnml" path="res://game/rooms/kueche_orakel/markers/von_stadtstrasse/marker_von_stadtstrasse.tscn" id="19_2plge"]
+[ext_resource type="PackedScene" uid="uid://dyhi7f3qv4kxr" path="res://game/rooms/kueche_orakel/markers/von_zelle/marker_von_zelle.tscn" id="20_bemth"]
+[ext_resource type="PackedScene" uid="uid://d2catky4fgpfr" path="res://game/characters/orakel_oma/character_orakel_oma.tscn" id="21_7g5wl"]
+[ext_resource type="PackedScene" uid="uid://cwrw6it8n7jen" path="res://game/characters/radio/character_radio.tscn" id="22_fvai7"]
+
+[node name="RoomKuecheOrakel" type="Node2D" unique_id=1196092067]
+script = ExtResource("1_waaj7")
+script_name = "KuecheOrakel"
+width = 480
+height = 270
+
+[node name="WalkableAreas" type="Node2D" parent="." unique_id=135782301]
+
+[node name="Boden" parent="WalkableAreas" unique_id=585347557 instance=ExtResource("2_ip1l6")]
+interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(6, 210, 474, 210, 474, 267, 6, 267)])
+
+[node name="Props" type="Node2D" parent="." unique_id=2134928435]
+
+[node name="Background" parent="Props" unique_id=38786185 instance=ExtResource("3_hjjik")]
+position = Vector2(240, 135)
+texture = ExtResource("4_3g5sk")
+description = "UI_RAUM_KUECHE_ORAKEL"
+
+[node name="Hotspots" type="Node2D" parent="." unique_id=593920457]
+
+[node name="Vase" parent="Hotspots" unique_id=1263338610 instance=ExtResource("5_0ryu1")]
+position = Vector2(73, 54)
+description = "UI_OBJ_VASE"
+baseline = 24
+walk_to_point = Vector2(0, 181)
+
+[node name="Ofen" parent="Hotspots" unique_id=1752845131 instance=ExtResource("6_5b4lm")]
+position = Vector2(139, 54)
+description = "UI_OBJ_OFEN"
+baseline = 24
+walk_to_point = Vector2(0, 181)
+
+[node name="Kochbuch" parent="Hotspots" unique_id=1426063152 instance=ExtResource("7_tixl3")]
+position = Vector2(205, 54)
+description = "UI_OBJ_KOCHBUCH"
+baseline = 24
+walk_to_point = Vector2(0, 181)
+
+[node name="Gabel" parent="Hotspots" unique_id=1994437873 instance=ExtResource("8_kheio")]
+position = Vector2(271, 54)
+description = "UI_OBJ_GABEL"
+baseline = 24
+walk_to_point = Vector2(0, 181)
+
+[node name="Kuckucksuhr" parent="Hotspots" unique_id=419432225 instance=ExtResource("9_s0uqs")]
+position = Vector2(337, 54)
+description = "UI_OBJ_KUCKUCKSUHR"
+baseline = 24
+walk_to_point = Vector2(0, 181)
+
+[node name="Wandtelefon" parent="Hotspots" unique_id=1709442925 instance=ExtResource("10_r4p7o")]
+position = Vector2(403, 54)
+description = "UI_OBJ_WANDTELEFON"
+baseline = 24
+walk_to_point = Vector2(0, 181)
+
+[node name="TischMitTellerUndTeekanne" parent="Hotspots" unique_id=1880763587 instance=ExtResource("11_21bx2")]
+position = Vector2(73, 114)
+description = "UI_OBJ_TISCH_MIT_TELLER_UND_TEEKANNE"
+baseline = 24
+walk_to_point = Vector2(0, 121)
+
+[node name="GlaeserAufDemRegal" parent="Hotspots" unique_id=1587356528 instance=ExtResource("12_6hj0u")]
+position = Vector2(139, 114)
+description = "UI_OBJ_GLAESER_AUF_DEM_REGAL"
+baseline = 24
+walk_to_point = Vector2(0, 121)
+
+[node name="GardinenUndFenster" parent="Hotspots" unique_id=1486485759 instance=ExtResource("13_07ow8")]
+position = Vector2(205, 114)
+description = "UI_OBJ_GARDINEN_UND_FENSTER"
+baseline = 24
+walk_to_point = Vector2(0, 121)
+
+[node name="Tapete" parent="Hotspots" unique_id=993868797 instance=ExtResource("14_b0sdx")]
+position = Vector2(271, 114)
+description = "UI_OBJ_TAPETE"
+baseline = 24
+walk_to_point = Vector2(0, 121)
+
+[node name="Kehrblech" parent="Hotspots" unique_id=255308940 instance=ExtResource("15_hfn5g")]
+position = Vector2(337, 114)
+description = "UI_OBJ_KEHRBLECH"
+baseline = 24
+walk_to_point = Vector2(0, 121)
+
+[node name="Scherben" parent="Hotspots" unique_id=108497739 instance=ExtResource("16_x488x")]
+position = Vector2(403, 114)
+description = "UI_OBJ_SCHERBEN"
+baseline = 24
+walk_to_point = Vector2(0, 121)
+
+[node name="AusgangStadtstrasse" parent="Hotspots" unique_id=422752743 instance=ExtResource("17_aflun")]
+position = Vector2(19.5, 157.5)
+description = "UI_RAUM_STADTSTRASSE"
+baseline = 52
+walk_to_point = Vector2(16.5, 82.5)
+cursor = 9
+
+[node name="Regions" type="Node2D" parent="." unique_id=7871848]
+
+[node name="Markers" type="Node2D" parent="." unique_id=1755690356]
+
+[node name="Start" parent="Markers" unique_id=76080651 instance=ExtResource("18_8baa5")]
+position = Vector2(240, 240)
+
+[node name="VonStadtstrasse" parent="Markers" unique_id=486313761 instance=ExtResource("19_2plge")]
+position = Vector2(36, 240)
+
+[node name="VonZelle" parent="Markers" unique_id=664789530 instance=ExtResource("20_bemth")]
+position = Vector2(400, 240)
+
+[node name="Characters" type="Node2D" parent="." unique_id=979105823]
+
+[node name="CharacterOrakelOma *" parent="Characters" unique_id=676729534 instance=ExtResource("21_7g5wl")]
+position = Vector2(150, 232)
+
+[node name="CharacterRadio *" parent="Characters" unique_id=120766654 instance=ExtResource("22_fvai7")]
+position = Vector2(330, 232)

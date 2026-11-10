@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://dlt8x20jtfuiv"]
+
+[ext_resource type="Script" path="res://game/rooms/sphinx/room_sphinx_state.gd" id="1_abdy0"]
+
+[resource]
+resource_name = "Sphinx"
+script = ExtResource("1_abdy0")
+script_name = "Sphinx"
+scene = "res://game/rooms/sphinx/room_sphinx.tscn"

@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://dt8h5igsa7mvq"]
+
+[ext_resource type="Script" path="res://game/inventory_items/billig_fernbedienung/inventory_item_billig_fernbedienung_state.gd" id="1_1wr0r"]
+
+[resource]
+resource_name = "BilligFernbedienung"
+script = ExtResource("1_1wr0r")
+script_name = "BilligFernbedienung"
+scene = "res://game/inventory_items/billig_fernbedienung/inventory_item_billig_fernbedienung.tscn"

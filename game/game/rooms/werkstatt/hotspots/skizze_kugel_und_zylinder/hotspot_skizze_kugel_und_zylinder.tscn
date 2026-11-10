@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://cbmib80pcfrdc"]
+
+[ext_resource type="Script" path="res://game/rooms/werkstatt/hotspots/skizze_kugel_und_zylinder/hotspot_skizze_kugel_und_zylinder.gd" id="1_fujit"]
+
+[node name="SkizzeKugelUndZylinder" type="Area2D" unique_id=1359166416]
+script = ExtResource("1_fujit")
+script_name = "SkizzeKugelUndZylinder"
+description = "Skizze Kugel Und Zylinder"
+cursor = 1
+interaction_polygon = PackedVector2Array(-22.5, -18, 22.5, -18, 22.5, 18, -22.5, 18)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=183361262]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

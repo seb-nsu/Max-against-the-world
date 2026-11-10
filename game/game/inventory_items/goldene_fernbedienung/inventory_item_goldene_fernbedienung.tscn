@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://dd5pgvei0lby4"]
+
+[ext_resource type="Texture2D" uid="uid://c5w8g0647gpf5" path="res://grafik/platzhalter/gegenstand_goldene_fernbedienung.png" id="1_fxkax"]
+[ext_resource type="Script" path="res://game/inventory_items/goldene_fernbedienung/inventory_item_goldene_fernbedienung.gd" id="1_l8vhd"]
+
+[node name="ItemGoldeneFernbedienung" type="TextureRect" unique_id=1594443357]
+texture_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 4
+mouse_filter = 0
+texture = ExtResource("1_fxkax")
+stretch_mode = 5
+script = ExtResource("1_l8vhd")
+script_name = "GoldeneFernbedienung"
+description = "UI_OBJ_GOLDENE_FERNBEDIENUNG"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1035882330]

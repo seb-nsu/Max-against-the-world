@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://7lg4wjv0tlx7"]
+
+[ext_resource type="Script" path="res://game/rooms/werkstatt/hotspots/modell_schiefer_turm/hotspot_modell_schiefer_turm.gd" id="1_l150k"]
+
+[node name="ModellSchieferTurm" type="Area2D" unique_id=494153468]
+script = ExtResource("1_l150k")
+script_name = "ModellSchieferTurm"
+description = "Modell Schiefer Turm"
+cursor = 1
+interaction_polygon = PackedVector2Array(-7.5, -13.5, 7.5, -13.5, 7.5, 13.5, -7.5, 13.5)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1345371568]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

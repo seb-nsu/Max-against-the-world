@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://b38cvk13f3gn"]
+
+[ext_resource type="Script" path="res://game/characters/wonder_wilma/character_wonder_wilma.gd" id="1_4m24r"]
+[ext_resource type="Texture2D" uid="uid://y3uxly0r8r6m" path="res://grafik/platzhalter/figur_wonder_wilma.png" id="2_8e0b0"]
+
+[node name="CharacterWonderWilma" type="Area2D" unique_id=284281013]
+script = ExtResource("1_4m24r")
+walk_speed = 90.0
+dialog_pos = Vector2(0, -91)
+script_name = "WonderWilma"
+description = "UI_OBJ_WONDER_WILMA"
+cursor = 8
+interaction_polygon = PackedVector2Array(-14.5, -87, 14.5, -87, 14.5, 0, -14.5, 0)
+
+[node name="ScalingPolygon" type="CollisionPolygon2D" parent="." unique_id=1917287207]
+polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=975487163]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=969643683]
+texture_filter = 1
+texture = ExtResource("2_8e0b0")
+offset = Vector2(0, -43.5)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1700369435]
+visible = false
+polygon = PackedVector2Array(-14.5, -87, 14.5, -87, 14.5, 0, -14.5, 0)
+
+[node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=84711321]
+visible = false
+affect_navigation_mesh = true
+carve_navigation_mesh = true

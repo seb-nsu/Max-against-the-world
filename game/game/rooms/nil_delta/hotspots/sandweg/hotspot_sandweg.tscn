@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://duvfl2fyvtmcv"]
+
+[ext_resource type="Script" path="res://game/rooms/nil_delta/hotspots/sandweg/hotspot_sandweg.gd" id="1_4ewd6"]
+
+[node name="Sandweg" type="Area2D" unique_id=1360121635]
+script = ExtResource("1_4ewd6")
+script_name = "Sandweg"
+description = "Sandweg"
+cursor = 1
+interaction_polygon = PackedVector2Array(-13.5, -52.5, 13.5, -52.5, 13.5, 52.5, -13.5, 52.5)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=600438549]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

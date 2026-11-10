@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://bccmpcub4tvsg"]
+
+[node name="Hermes" type="Marker2D" unique_id=683299800]
+visible = false

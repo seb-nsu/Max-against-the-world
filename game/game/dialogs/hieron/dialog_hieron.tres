@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://bexyhu3sh403g"]
+
+[ext_resource type="Script" uid="uid://brxefo54wpm32" path="res://addons/popochiu/engine/objects/dialog/popochiu_dialog_option.gd" id="1_1nvil"]
+[ext_resource type="Script" path="res://game/dialogs/hieron/dialog_hieron.gd" id="2_n8ubb"]
+
+[resource]
+resource_name = "Hieron"
+script = ExtResource("2_n8ubb")
+script_name = "Hieron"

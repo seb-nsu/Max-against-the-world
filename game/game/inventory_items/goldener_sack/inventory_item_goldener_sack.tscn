@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://bo1a01y7q4uew"]
+
+[ext_resource type="Script" path="res://game/inventory_items/goldener_sack/inventory_item_goldener_sack.gd" id="1_vy4mo"]
+[ext_resource type="Texture2D" uid="uid://curn4aek2fnio" path="res://grafik/platzhalter/gegenstand_goldener_sack.png" id="1_yyvpp"]
+
+[node name="ItemGoldenerSack" type="TextureRect" unique_id=431311695]
+texture_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 4
+mouse_filter = 0
+texture = ExtResource("1_yyvpp")
+stretch_mode = 5
+script = ExtResource("1_vy4mo")
+script_name = "GoldenerSack"
+description = "UI_OBJ_GOLDENER_SACK"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1593332470]

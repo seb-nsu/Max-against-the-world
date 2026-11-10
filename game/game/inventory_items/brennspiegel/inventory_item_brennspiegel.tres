@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://dmoug8fquueyt"]
+
+[ext_resource type="Script" path="res://game/inventory_items/brennspiegel/inventory_item_brennspiegel_state.gd" id="1_f5s1r"]
+
+[resource]
+resource_name = "Brennspiegel"
+script = ExtResource("1_f5s1r")
+script_name = "Brennspiegel"
+scene = "res://game/inventory_items/brennspiegel/inventory_item_brennspiegel.tscn"

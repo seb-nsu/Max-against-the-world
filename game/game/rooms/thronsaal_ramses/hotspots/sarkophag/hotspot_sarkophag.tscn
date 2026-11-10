@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://c7r0pwhxsqlku"]
+
+[ext_resource type="Script" path="res://game/rooms/thronsaal_ramses/hotspots/sarkophag/hotspot_sarkophag.gd" id="1_gtx17"]
+
+[node name="Sarkophag" type="Area2D" unique_id=1620391899]
+script = ExtResource("1_gtx17")
+script_name = "Sarkophag"
+description = "Sarkophag"
+cursor = 1
+interaction_polygon = PackedVector2Array(-18, -54, 18, -54, 18, 54, -18, 54)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1754373975]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

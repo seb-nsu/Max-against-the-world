@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://gejpmpxhlh3e"]
+
+[ext_resource type="Script" path="res://game/characters/troedel_experte/character_troedel_experte_state.gd" id="1_3tq6d"]
+
+[resource]
+resource_name = "TroedelExperte"
+script = ExtResource("1_3tq6d")
+script_name = "TroedelExperte"
+scene = "res://game/characters/troedel_experte/character_troedel_experte.tscn"

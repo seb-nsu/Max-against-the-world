@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://kknua1sijabd"]
+
+[ext_resource type="Script" path="res://game/rooms/fondue_fabrik/hotspots/ausgang_kapitolis/hotspot_ausgang_kapitolis.gd" id="1_5q6qd"]
+
+[node name="AusgangKapitolis" type="Area2D" unique_id=452335105]
+script = ExtResource("1_5q6qd")
+script_name = "AusgangKapitolis"
+description = "Ausgang Kapitolis"
+cursor = 1
+interaction_polygon = PackedVector2Array(-13.5, -52.5, 13.5, -52.5, 13.5, 52.5, -13.5, 52.5)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=691283155]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

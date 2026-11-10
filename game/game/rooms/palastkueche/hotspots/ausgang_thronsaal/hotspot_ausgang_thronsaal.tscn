@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://u107f51r5eq6"]
+
+[ext_resource type="Script" path="res://game/rooms/palastkueche/hotspots/ausgang_thronsaal/hotspot_ausgang_thronsaal.gd" id="1_s15vd"]
+
+[node name="AusgangThronsaal" type="Area2D" unique_id=1998239055]
+script = ExtResource("1_s15vd")
+script_name = "AusgangThronsaal"
+description = "Ausgang Thronsaal"
+cursor = 1
+interaction_polygon = PackedVector2Array(-13.5, -52.5, 13.5, -52.5, 13.5, 52.5, -13.5, 52.5)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1346275501]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

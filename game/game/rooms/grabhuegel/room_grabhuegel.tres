@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://bh6iqe7pyjnjw"]
+
+[ext_resource type="Script" path="res://game/rooms/grabhuegel/room_grabhuegel_state.gd" id="1_6f23a"]
+
+[resource]
+resource_name = "Grabhuegel"
+script = ExtResource("1_6f23a")
+script_name = "Grabhuegel"
+scene = "res://game/rooms/grabhuegel/room_grabhuegel.tscn"

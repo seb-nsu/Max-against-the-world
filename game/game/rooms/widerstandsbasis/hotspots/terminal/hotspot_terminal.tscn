@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://c0xlgyg3v3moq"]
+
+[ext_resource type="Script" path="res://game/rooms/widerstandsbasis/hotspots/terminal/hotspot_terminal.gd" id="1_dc6dh"]
+
+[node name="Terminal" type="Area2D" unique_id=1754420779]
+script = ExtResource("1_dc6dh")
+script_name = "Terminal"
+description = "Terminal"
+cursor = 1
+interaction_polygon = PackedVector2Array(-27, -24, 27, -24, 27, 24, -27, 24)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=901222852]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

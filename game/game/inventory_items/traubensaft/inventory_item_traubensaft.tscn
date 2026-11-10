@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://dirria0vy8t35"]
+
+[ext_resource type="Script" path="res://game/inventory_items/traubensaft/inventory_item_traubensaft.gd" id="1_l7202"]
+[ext_resource type="Texture2D" uid="uid://dypja5yauw0q1" path="res://grafik/platzhalter/gegenstand_traubensaft.png" id="1_uhr73"]
+
+[node name="ItemTraubensaft" type="TextureRect" unique_id=202886385]
+texture_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 4
+mouse_filter = 0
+texture = ExtResource("1_uhr73")
+stretch_mode = 5
+script = ExtResource("1_l7202")
+script_name = "Traubensaft"
+description = "UI_OBJ_TRAUBENSAFT"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=616669126]

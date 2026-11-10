@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://cluy08vxsf7e8"]
+
+[ext_resource type="Script" path="res://game/rooms/sphinx/hotspots/steinkugel/hotspot_steinkugel.gd" id="1_dbjod"]
+
+[node name="Steinkugel" type="Area2D" unique_id=1434560379]
+script = ExtResource("1_dbjod")
+script_name = "Steinkugel"
+description = "Steinkugel"
+cursor = 1
+interaction_polygon = PackedVector2Array(-27, -27, 27, -27, 27, 27, -27, 27)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=629156156]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

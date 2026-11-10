@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://d1y007spwphke"]
+
+[ext_resource type="Script" path="res://game/inventory_items/sonnenbrille/inventory_item_sonnenbrille.gd" id="1_w7pbw"]
+[ext_resource type="Texture2D" uid="uid://co3hm22f2id4" path="res://grafik/platzhalter/gegenstand_sonnenbrille.png" id="1_w7y1w"]
+
+[node name="ItemSonnenbrille" type="TextureRect" unique_id=1148366565]
+texture_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 4
+mouse_filter = 0
+texture = ExtResource("1_w7y1w")
+stretch_mode = 5
+script = ExtResource("1_w7pbw")
+script_name = "Sonnenbrille"
+description = "UI_OBJ_SONNENBRILLE"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1010223293]

@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://cqem1ee1aorpa"]
+
+[ext_resource type="Script" path="res://game/rooms/gluecksrad/hotspots/kandidatenpodest/hotspot_kandidatenpodest.gd" id="1_nub8f"]
+
+[node name="Kandidatenpodest" type="Area2D" unique_id=1790123191]
+script = ExtResource("1_nub8f")
+script_name = "Kandidatenpodest"
+description = "Kandidatenpodest"
+cursor = 1
+interaction_polygon = PackedVector2Array(-29, -24, 29, -24, 29, 24, -29, 24)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=279798385]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

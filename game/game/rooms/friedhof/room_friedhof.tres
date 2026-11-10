@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://b820hhbngaacg"]
+
+[ext_resource type="Script" path="res://game/rooms/friedhof/room_friedhof_state.gd" id="1_uml11"]
+
+[resource]
+resource_name = "Friedhof"
+script = ExtResource("1_uml11")
+script_name = "Friedhof"
+scene = "res://game/rooms/friedhof/room_friedhof.tscn"

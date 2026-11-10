@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://ckmnwidadmnm5"]
+
+[ext_resource type="Script" path="res://game/rooms/apothekengasse/hotspots/wandlampe/hotspot_wandlampe.gd" id="1_em1qb"]
+
+[node name="Wandlampe" type="Area2D" unique_id=1200600567]
+script = ExtResource("1_em1qb")
+script_name = "Wandlampe"
+description = "Wandlampe"
+cursor = 1
+interaction_polygon = PackedVector2Array(-46, -24, 46, -24, 46, 24, -46, 24)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1435915371]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

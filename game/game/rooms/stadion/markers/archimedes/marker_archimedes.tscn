@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://d1jth2ro050wl"]
+
+[node name="Archimedes" type="Marker2D" unique_id=1185281788]
+visible = false

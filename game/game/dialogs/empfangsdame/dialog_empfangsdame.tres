@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://cgem1ao7i2pco"]
+
+[ext_resource type="Script" uid="uid://brxefo54wpm32" path="res://addons/popochiu/engine/objects/dialog/popochiu_dialog_option.gd" id="1_7hbs2"]
+[ext_resource type="Script" path="res://game/dialogs/empfangsdame/dialog_empfangsdame.gd" id="2_kg3q6"]
+
+[resource]
+resource_name = "Empfangsdame"
+script = ExtResource("2_kg3q6")
+script_name = "Empfangsdame"

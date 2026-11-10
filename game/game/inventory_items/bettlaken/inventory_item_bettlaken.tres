@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://dbrmacymubd63"]
+
+[ext_resource type="Script" path="res://game/inventory_items/bettlaken/inventory_item_bettlaken_state.gd" id="1_ce1kp"]
+
+[resource]
+resource_name = "Bettlaken"
+script = ExtResource("1_ce1kp")
+script_name = "Bettlaken"
+scene = "res://game/inventory_items/bettlaken/inventory_item_bettlaken.tscn"

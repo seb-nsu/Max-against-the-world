@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://djqe8lk3eu1k4"]
+
+[node name="VonUnterstadtStrasse" type="Marker2D" unique_id=1877361391]
+visible = false

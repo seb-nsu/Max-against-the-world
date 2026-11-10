@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://eyb7v61y4eqn"]
+
+[ext_resource type="Script" path="res://game/rooms/kellerarchiv/hotspots/ausgang_empfang/hotspot_ausgang_empfang.gd" id="1_o272g"]
+
+[node name="AusgangEmpfang" type="Area2D" unique_id=701758927]
+script = ExtResource("1_o272g")
+script_name = "AusgangEmpfang"
+description = "Ausgang Empfang"
+cursor = 1
+interaction_polygon = PackedVector2Array(-13.5, -52.5, 13.5, -52.5, 13.5, 52.5, -13.5, 52.5)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=2113662502]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

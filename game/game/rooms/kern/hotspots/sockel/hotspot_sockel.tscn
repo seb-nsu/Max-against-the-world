@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://dt208jnis77vr"]
+
+[ext_resource type="Script" path="res://game/rooms/kern/hotspots/sockel/hotspot_sockel.gd" id="1_2kvyc"]
+
+[node name="Sockel" type="Area2D" unique_id=193590444]
+script = ExtResource("1_2kvyc")
+script_name = "Sockel"
+description = "Sockel"
+cursor = 1
+interaction_polygon = PackedVector2Array(-62.5, -24, 62.5, -24, 62.5, 24, -62.5, 24)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=439843031]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

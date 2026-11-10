@@ -1,0 +1,165 @@
+[gd_scene format=3 uid="uid://dvmp4n8e2anp3"]
+
+[ext_resource type="Script" path="res://game/rooms/kapitolis/room_kapitolis.gd" id="1_eqsfg"]
+[ext_resource type="PackedScene" uid="uid://bl6xe8f5xd6jb" path="res://game/rooms/kapitolis/walkable_areas/boden/walkable_area_boden.tscn" id="2_7uwp7"]
+[ext_resource type="PackedScene" uid="uid://cmqkigny8abx7" path="res://game/rooms/kapitolis/props/background/prop_background.tscn" id="3_xi5kp"]
+[ext_resource type="Texture2D" uid="uid://w0t3keyvk81m" path="res://grafik/platzhalter/raum_kapitolis.png" id="4_xe8qp"]
+[ext_resource type="PackedScene" uid="uid://3pcu57dg7ok" path="res://game/rooms/kapitolis/props/amboss/prop_amboss.tscn" id="5_q1mg8"]
+[ext_resource type="Texture2D" uid="uid://dbnrc6hm30hmi" path="res://grafik/platzhalter/prop_amboss.png" id="6_4q7q3"]
+[ext_resource type="PackedScene" uid="uid://cm4vya2x8atuf" path="res://game/rooms/kapitolis/props/bettlaken/prop_bettlaken.tscn" id="7_heft0"]
+[ext_resource type="Texture2D" uid="uid://cu8xto6ytdjko" path="res://grafik/platzhalter/prop_bettlaken.png" id="8_ikscx"]
+[ext_resource type="PackedScene" uid="uid://c4vdy0xfgjfb1" path="res://game/rooms/kapitolis/hotspots/umhaenge_schild_nicht_der_fledermann/hotspot_umhaenge_schild_nicht_der_fledermann.tscn" id="9_cqkrx"]
+[ext_resource type="PackedScene" uid="uid://c8m23qe02ukv7" path="res://game/rooms/kapitolis/hotspots/wasserturm_mit_spinnennetz/hotspot_wasserturm_mit_spinnennetz.tscn" id="10_foy15"]
+[ext_resource type="PackedScene" uid="uid://bs1qm42mhf4f5" path="res://game/rooms/kapitolis/hotspots/wolkenkratzer/hotspot_wolkenkratzer.tscn" id="11_ocugq"]
+[ext_resource type="PackedScene" uid="uid://cbxjmrb53l7py" path="res://game/rooms/kapitolis/hotspots/sprechblasen_schilder/hotspot_sprechblasen_schilder.tscn" id="12_su2gc"]
+[ext_resource type="PackedScene" uid="uid://deuuno2mscnc1" path="res://game/rooms/kapitolis/hotspots/kiosk/hotspot_kiosk.tscn" id="13_xamep"]
+[ext_resource type="PackedScene" uid="uid://cgwqpsjsh8syg" path="res://game/rooms/kapitolis/hotspots/laterne/hotspot_laterne.tscn" id="14_xaqel"]
+[ext_resource type="PackedScene" uid="uid://0w0734vvqm4a" path="res://game/rooms/kapitolis/hotspots/lichtroehre_im_comic_kanal/hotspot_lichtroehre_im_comic_kanal.tscn" id="15_up46i"]
+[ext_resource type="PackedScene" uid="uid://bu6xhcvm1q7te" path="res://game/rooms/kapitolis/hotspots/bananenschale_im_comic_kanal/hotspot_bananenschale_im_comic_kanal.tscn" id="16_7bqaw"]
+[ext_resource type="PackedScene" uid="uid://dxn2rc0mct1hp" path="res://game/rooms/kapitolis/hotspots/fondue_kaese_im_comic_kanal/hotspot_fondue_kaese_im_comic_kanal.tscn" id="17_bv5ea"]
+[ext_resource type="PackedScene" uid="uid://uimxs3r34x5p" path="res://game/rooms/kapitolis/hotspots/ausgang_fondue_fabrik/hotspot_ausgang_fondue_fabrik.tscn" id="18_awpb6"]
+[ext_resource type="PackedScene" uid="uid://io78uj32a544" path="res://game/rooms/kapitolis/markers/start/marker_start.tscn" id="19_sim3f"]
+[ext_resource type="PackedScene" uid="uid://bx3oatbnxnk4g" path="res://game/rooms/kapitolis/markers/von_fondue_fabrik/marker_von_fondue_fabrik.tscn" id="20_kchk4"]
+[ext_resource type="PackedScene" uid="uid://1bu3bbhtxgsw" path="res://game/rooms/kapitolis/markers/von_gluecksrad/marker_von_gluecksrad.tscn" id="21_yi45f"]
+[ext_resource type="PackedScene" uid="uid://daxm6ny4o1u8x" path="res://game/rooms/kapitolis/markers/von_sitcom_kueche/marker_von_sitcom_kueche.tscn" id="22_2hm6i"]
+[ext_resource type="PackedScene" uid="uid://dvt00pj57mx5s" path="res://game/rooms/kapitolis/markers/von_savanne/marker_von_savanne.tscn" id="23_nfgin"]
+[ext_resource type="PackedScene" uid="uid://btqg6t74l0kbo" path="res://game/rooms/kapitolis/markers/von_friedhof/marker_von_friedhof.tscn" id="24_vff2r"]
+[ext_resource type="PackedScene" uid="uid://cs2ci14u3v4aj" path="res://game/rooms/kapitolis/markers/von_werbespot_set/marker_von_werbespot_set.tscn" id="25_4ehny"]
+[ext_resource type="PackedScene" uid="uid://3tyag4vu5ywm" path="res://game/rooms/kapitolis/markers/von_empfang/marker_von_empfang.tscn" id="26_u6al5"]
+[ext_resource type="PackedScene" uid="uid://chc343c071ue4" path="res://game/characters/super_siegfried/character_super_siegfried.tscn" id="27_nf3ft"]
+[ext_resource type="PackedScene" uid="uid://d18rrdmwhjw6i" path="res://game/characters/fledermann/character_fledermann.tscn" id="28_kol83"]
+[ext_resource type="PackedScene" uid="uid://b38cvk13f3gn" path="res://game/characters/wonder_wilma/character_wonder_wilma.tscn" id="29_74rfs"]
+
+[node name="RoomKapitolis" type="Node2D" unique_id=1600815117]
+script = ExtResource("1_eqsfg")
+script_name = "Kapitolis"
+width = 480
+height = 270
+
+[node name="WalkableAreas" type="Node2D" parent="." unique_id=336423266]
+
+[node name="Boden" parent="WalkableAreas" unique_id=1763892352 instance=ExtResource("2_7uwp7")]
+interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(6, 210, 474, 210, 474, 267, 6, 267)])
+
+[node name="Props" type="Node2D" parent="." unique_id=1268356859]
+
+[node name="Background" parent="Props" unique_id=1564206590 instance=ExtResource("3_xi5kp")]
+position = Vector2(240, 135)
+texture = ExtResource("4_xe8qp")
+description = "UI_RAUM_KAPITOLIS"
+
+[node name="Amboss" parent="Props" unique_id=1531689285 instance=ExtResource("5_q1mg8")]
+position = Vector2(107.5, 201)
+texture = ExtResource("6_4q7q3")
+description = "UI_OBJ_AMBOSS"
+baseline = 6
+walk_to_point = Vector2(-0.5, 34)
+
+[node name="Bettlaken" parent="Props" unique_id=937626574 instance=ExtResource("7_heft0")]
+position = Vector2(167.5, 201)
+texture = ExtResource("8_ikscx")
+description = "UI_OBJ_BETTLAKEN"
+baseline = 6
+walk_to_point = Vector2(-0.5, 34)
+
+[node name="Hotspots" type="Node2D" parent="." unique_id=1890627403]
+
+[node name="UmhaengeSchildNichtDerFledermann" parent="Hotspots" unique_id=716608172 instance=ExtResource("9_cqkrx")]
+position = Vector2(73, 54)
+description = "UI_OBJ_UMHAENGE_SCHILD_NICHT_DER_FLEDERMANN"
+baseline = 24
+walk_to_point = Vector2(0, 181)
+
+[node name="WasserturmMitSpinnennetz" parent="Hotspots" unique_id=1215408833 instance=ExtResource("10_foy15")]
+position = Vector2(139, 54)
+description = "UI_OBJ_WASSERTURM_MIT_SPINNENNETZ"
+baseline = 24
+walk_to_point = Vector2(0, 181)
+
+[node name="Wolkenkratzer" parent="Hotspots" unique_id=882260424 instance=ExtResource("11_ocugq")]
+position = Vector2(205, 54)
+description = "UI_OBJ_WOLKENKRATZER"
+baseline = 24
+walk_to_point = Vector2(0, 181)
+
+[node name="SprechblasenSchilder" parent="Hotspots" unique_id=1103323026 instance=ExtResource("12_su2gc")]
+position = Vector2(271, 54)
+description = "UI_OBJ_SPRECHBLASEN_SCHILDER"
+baseline = 24
+walk_to_point = Vector2(0, 181)
+
+[node name="Kiosk" parent="Hotspots" unique_id=201406277 instance=ExtResource("13_xamep")]
+position = Vector2(337, 54)
+description = "UI_OBJ_KIOSK"
+baseline = 24
+walk_to_point = Vector2(0, 181)
+
+[node name="Laterne" parent="Hotspots" unique_id=958662259 instance=ExtResource("14_xaqel")]
+position = Vector2(403, 54)
+description = "UI_OBJ_LATERNE"
+baseline = 24
+walk_to_point = Vector2(0, 181)
+
+[node name="LichtroehreImComicKanal" parent="Hotspots" unique_id=1807252505 instance=ExtResource("15_up46i")]
+position = Vector2(73, 114)
+description = "UI_OBJ_LICHTROEHRE_IM_COMIC_KANAL"
+baseline = 24
+walk_to_point = Vector2(0, 121)
+
+[node name="BananenschaleImComicKanal" parent="Hotspots" unique_id=507348661 instance=ExtResource("16_7bqaw")]
+position = Vector2(139, 114)
+description = "UI_OBJ_BANANENSCHALE_IM_COMIC_KANAL"
+baseline = 24
+walk_to_point = Vector2(0, 121)
+
+[node name="FondueKaeseImComicKanal" parent="Hotspots" unique_id=1062090859 instance=ExtResource("17_bv5ea")]
+position = Vector2(205, 114)
+description = "UI_OBJ_FONDUE_KAESE_IM_COMIC_KANAL"
+baseline = 24
+walk_to_point = Vector2(0, 121)
+
+[node name="AusgangFondueFabrik" parent="Hotspots" unique_id=135499730 instance=ExtResource("18_awpb6")]
+position = Vector2(19.5, 157.5)
+description = "UI_RAUM_FONDUE_FABRIK"
+baseline = 52
+walk_to_point = Vector2(16.5, 82.5)
+cursor = 9
+
+[node name="Regions" type="Node2D" parent="." unique_id=328547924]
+
+[node name="Markers" type="Node2D" parent="." unique_id=1181515640]
+
+[node name="Start" parent="Markers" unique_id=774290927 instance=ExtResource("19_sim3f")]
+position = Vector2(240, 240)
+
+[node name="VonFondueFabrik" parent="Markers" unique_id=1182334895 instance=ExtResource("20_kchk4")]
+position = Vector2(36, 240)
+
+[node name="VonGluecksrad" parent="Markers" unique_id=517880006 instance=ExtResource("21_yi45f")]
+position = Vector2(240, 240)
+
+[node name="VonSitcomKueche" parent="Markers" unique_id=526589475 instance=ExtResource("22_2hm6i")]
+position = Vector2(240, 240)
+
+[node name="VonSavanne" parent="Markers" unique_id=2124569848 instance=ExtResource("23_nfgin")]
+position = Vector2(240, 240)
+
+[node name="VonFriedhof" parent="Markers" unique_id=1769249118 instance=ExtResource("24_vff2r")]
+position = Vector2(240, 240)
+
+[node name="VonWerbespotSet" parent="Markers" unique_id=829576367 instance=ExtResource("25_4ehny")]
+position = Vector2(240, 240)
+
+[node name="VonEmpfang" parent="Markers" unique_id=2115294294 instance=ExtResource("26_u6al5")]
+position = Vector2(240, 240)
+
+[node name="Characters" type="Node2D" parent="." unique_id=125746437]
+
+[node name="CharacterSuperSiegfried *" parent="Characters" unique_id=2002910130 instance=ExtResource("27_nf3ft")]
+position = Vector2(120, 232)
+
+[node name="CharacterFledermann *" parent="Characters" unique_id=1569251706 instance=ExtResource("28_kol83")]
+position = Vector2(240, 232)
+
+[node name="CharacterWonderWilma *" parent="Characters" unique_id=284281013 instance=ExtResource("29_74rfs")]
+position = Vector2(360, 232)

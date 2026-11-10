@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://b6tig820ldqc1"]
+
+[ext_resource type="Texture2D" uid="uid://46awubkd1rdy" path="res://grafik/platzhalter/gegenstand_diskus.png" id="1_evhpu"]
+[ext_resource type="Script" path="res://game/inventory_items/diskus/inventory_item_diskus.gd" id="1_pfq0h"]
+
+[node name="ItemDiskus" type="TextureRect" unique_id=1493169767]
+texture_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 4
+mouse_filter = 0
+texture = ExtResource("1_evhpu")
+stretch_mode = 5
+script = ExtResource("1_pfq0h")
+script_name = "Diskus"
+description = "UI_OBJ_DISKUS"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=620624672]

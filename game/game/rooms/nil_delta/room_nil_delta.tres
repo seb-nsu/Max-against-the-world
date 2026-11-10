@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://c0winr4g74fe3"]
+
+[ext_resource type="Script" path="res://game/rooms/nil_delta/room_nil_delta_state.gd" id="1_oagvj"]
+
+[resource]
+resource_name = "NilDelta"
+script = ExtResource("1_oagvj")
+script_name = "NilDelta"
+scene = "res://game/rooms/nil_delta/room_nil_delta.tscn"

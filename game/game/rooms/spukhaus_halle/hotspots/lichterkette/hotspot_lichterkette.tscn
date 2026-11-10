@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://c744lbeqjj78m"]
+
+[ext_resource type="Script" path="res://game/rooms/spukhaus_halle/hotspots/lichterkette/hotspot_lichterkette.gd" id="1_ao34l"]
+
+[node name="Lichterkette" type="Area2D" unique_id=1523502235]
+script = ExtResource("1_ao34l")
+script_name = "Lichterkette"
+description = "Lichterkette"
+cursor = 1
+interaction_polygon = PackedVector2Array(-46, -24, 46, -24, 46, 24, -46, 24)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1366840378]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

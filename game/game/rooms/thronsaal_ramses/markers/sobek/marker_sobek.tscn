@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://doy3ftil54vfu"]
+
+[node name="Sobek" type="Marker2D" unique_id=674302768]
+visible = false

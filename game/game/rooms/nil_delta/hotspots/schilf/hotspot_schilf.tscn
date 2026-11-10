@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://bjn5sksi8cv7v"]
+
+[ext_resource type="Script" path="res://game/rooms/nil_delta/hotspots/schilf/hotspot_schilf.gd" id="1_6veom"]
+
+[node name="Schilf" type="Area2D" unique_id=107583191]
+script = ExtResource("1_6veom")
+script_name = "Schilf"
+description = "Schilf"
+cursor = 1
+interaction_polygon = PackedVector2Array(-27, -21, 27, -21, 27, 21, -27, 21)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1631807990]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

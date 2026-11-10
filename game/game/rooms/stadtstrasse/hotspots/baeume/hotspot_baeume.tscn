@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://rwb62d1u3y2s"]
+
+[ext_resource type="Script" path="res://game/rooms/stadtstrasse/hotspots/baeume/hotspot_baeume.gd" id="1_nlx51"]
+
+[node name="Baeume" type="Area2D" unique_id=135268402]
+script = ExtResource("1_nlx51")
+script_name = "Baeume"
+description = "Baeume"
+cursor = 1
+interaction_polygon = PackedVector2Array(-44.5, -24, 44.5, -24, 44.5, 24, -44.5, 24)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=89474904]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

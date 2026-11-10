@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://dda2jvhyto7pc"]
+
+[ext_resource type="Script" path="res://game/characters/faehrmann/character_faehrmann.gd" id="1_yj8c0"]
+[ext_resource type="Texture2D" uid="uid://c8kh28oe5hkdo" path="res://grafik/platzhalter/figur_faehrmann.png" id="2_c0vih"]
+
+[node name="CharacterFaehrmann" type="Area2D" unique_id=938438789]
+script = ExtResource("1_yj8c0")
+walk_speed = 90.0
+dialog_pos = Vector2(0, -91)
+script_name = "Faehrmann"
+description = "UI_OBJ_FAEHRMANN"
+cursor = 8
+interaction_polygon = PackedVector2Array(-14.5, -87, 14.5, -87, 14.5, 0, -14.5, 0)
+
+[node name="ScalingPolygon" type="CollisionPolygon2D" parent="." unique_id=594956423]
+polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1399844368]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1460272473]
+texture_filter = 1
+texture = ExtResource("2_c0vih")
+offset = Vector2(0, -43.5)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1221949519]
+visible = false
+polygon = PackedVector2Array(-14.5, -87, 14.5, -87, 14.5, 0, -14.5, 0)
+
+[node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=1100345995]
+visible = false
+affect_navigation_mesh = true
+carve_navigation_mesh = true

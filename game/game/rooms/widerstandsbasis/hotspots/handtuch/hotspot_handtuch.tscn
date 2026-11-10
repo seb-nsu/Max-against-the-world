@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://bbeao5knhuf8c"]
+
+[ext_resource type="Script" path="res://game/rooms/widerstandsbasis/hotspots/handtuch/hotspot_handtuch.gd" id="1_6iy2e"]
+
+[node name="Handtuch" type="Area2D" unique_id=1716181788]
+script = ExtResource("1_6iy2e")
+script_name = "Handtuch"
+description = "Handtuch"
+cursor = 1
+interaction_polygon = PackedVector2Array(-27, -24, 27, -24, 27, 24, -27, 24)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1091404458]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://dg6tu4yt8eud"]
+
+[ext_resource type="Script" path="res://game/rooms/startbuero/hotspots/bank_mit_wartenden/hotspot_bank_mit_wartenden.gd" id="1_0178n"]
+
+[node name="BankMitWartenden" type="Area2D" unique_id=1852007221]
+script = ExtResource("1_0178n")
+script_name = "BankMitWartenden"
+description = "Bank Mit Wartenden"
+cursor = 1
+interaction_polygon = PackedVector2Array(-45, -12, 45, -12, 45, 12, -45, 12)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1765476614]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

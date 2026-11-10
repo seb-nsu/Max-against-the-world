@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://3igx2a41tcw8"]
+
+[ext_resource type="Script" path="res://game/rooms/spukhaus_keller/hotspots/ausgang_spukhaus_halle/hotspot_ausgang_spukhaus_halle.gd" id="1_nl26l"]
+
+[node name="AusgangSpukhausHalle" type="Area2D" unique_id=2075652256]
+script = ExtResource("1_nl26l")
+script_name = "AusgangSpukhausHalle"
+description = "Ausgang Spukhaus Halle"
+cursor = 1
+interaction_polygon = PackedVector2Array(-13.5, -52.5, 13.5, -52.5, 13.5, 52.5, -13.5, 52.5)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=737694407]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

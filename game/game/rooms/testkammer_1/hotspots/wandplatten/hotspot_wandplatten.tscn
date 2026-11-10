@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://bkqanp06jks35"]
+
+[ext_resource type="Script" path="res://game/rooms/testkammer_1/hotspots/wandplatten/hotspot_wandplatten.gd" id="1_s5rmr"]
+
+[node name="Wandplatten" type="Area2D" unique_id=789306099]
+script = ExtResource("1_s5rmr")
+script_name = "Wandplatten"
+description = "Wandplatten"
+cursor = 1
+interaction_polygon = PackedVector2Array(-29, -24, 29, -24, 29, 24, -29, 24)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=304782521]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

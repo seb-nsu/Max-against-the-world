@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://dtfeuho08pqj0"]
+
+[ext_resource type="Script" uid="uid://brxefo54wpm32" path="res://addons/popochiu/engine/objects/dialog/popochiu_dialog_option.gd" id="1_36rsv"]
+[ext_resource type="Script" path="res://game/dialogs/sitcom_sohn/dialog_sitcom_sohn.gd" id="2_jhdl7"]
+
+[resource]
+resource_name = "SitcomSohn"
+script = ExtResource("2_jhdl7")
+script_name = "SitcomSohn"

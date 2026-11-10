@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://dkoqw414lwn80"]
+
+[ext_resource type="Script" path="res://game/rooms/empfang/hotspots/logo_an_der_wand/hotspot_logo_an_der_wand.gd" id="1_ojdp6"]
+
+[node name="LogoAnDerWand" type="Area2D" unique_id=709802914]
+script = ExtResource("1_ojdp6")
+script_name = "LogoAnDerWand"
+description = "Logo An Der Wand"
+cursor = 1
+interaction_polygon = PackedVector2Array(-29, -24, 29, -24, 29, 24, -29, 24)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=71643562]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

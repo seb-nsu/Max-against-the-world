@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://cn5aoruqla2h6"]
+
+[ext_resource type="Script" path="res://game/rooms/buero_50/hotspots/wasserspender/hotspot_wasserspender.gd" id="1_7orfs"]
+
+[node name="Wasserspender" type="Area2D" unique_id=395484706]
+script = ExtResource("1_7orfs")
+script_name = "Wasserspender"
+description = "Wasserspender"
+cursor = 1
+interaction_polygon = PackedVector2Array(-29, -24, 29, -24, 29, 24, -29, 24)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=182728796]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

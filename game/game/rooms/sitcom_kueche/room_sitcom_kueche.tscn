@@ -1,0 +1,157 @@
+[gd_scene format=3 uid="uid://di0rhsrhvux2w"]
+
+[ext_resource type="Script" path="res://game/rooms/sitcom_kueche/room_sitcom_kueche.gd" id="1_38edt"]
+[ext_resource type="PackedScene" uid="uid://csgcikxe1lfe3" path="res://game/rooms/sitcom_kueche/walkable_areas/boden/walkable_area_boden.tscn" id="2_i5pw1"]
+[ext_resource type="PackedScene" uid="uid://bfmpcaoiwdb4k" path="res://game/rooms/sitcom_kueche/props/background/prop_background.tscn" id="3_lel8a"]
+[ext_resource type="Texture2D" uid="uid://bnyqgge55uo3a" path="res://grafik/platzhalter/raum_sitcom_kueche.png" id="4_d5lj4"]
+[ext_resource type="PackedScene" uid="uid://mma81l82biqu" path="res://game/rooms/sitcom_kueche/props/fondue_kaese/prop_fondue_kaese.tscn" id="5_f2ans"]
+[ext_resource type="Texture2D" uid="uid://cinn7pciave1g" path="res://grafik/platzhalter/prop_fondue_kaese.png" id="6_a20jo"]
+[ext_resource type="PackedScene" uid="uid://srmnqmdv0cgj" path="res://game/rooms/sitcom_kueche/props/bananenschale/prop_bananenschale.tscn" id="7_d3jr1"]
+[ext_resource type="Texture2D" uid="uid://bajsy11ncg3id" path="res://grafik/platzhalter/prop_bananenschale.png" id="8_oek0g"]
+[ext_resource type="PackedScene" uid="uid://d3n5mt4v7hty4" path="res://game/rooms/sitcom_kueche/hotspots/lachkonserven_maschine/hotspot_lachkonserven_maschine.tscn" id="9_gy62r"]
+[ext_resource type="PackedScene" uid="uid://dct3e8n7kclqy" path="res://game/rooms/sitcom_kueche/hotspots/pappe_publikum/hotspot_pappe_publikum.tscn" id="10_jjcr2"]
+[ext_resource type="PackedScene" uid="uid://bsg76u8hltayn" path="res://game/rooms/sitcom_kueche/hotspots/keksdose/hotspot_keksdose.tscn" id="11_iiapy"]
+[ext_resource type="PackedScene" uid="uid://beetywrssgfry" path="res://game/rooms/sitcom_kueche/hotspots/kuechentuer/hotspot_kuechentuer.tscn" id="12_ber0y"]
+[ext_resource type="PackedScene" uid="uid://frckr0272kfj" path="res://game/rooms/sitcom_kueche/hotspots/durchreiche/hotspot_durchreiche.tscn" id="13_3xfwr"]
+[ext_resource type="PackedScene" uid="uid://dh8jwfyfbnvmp" path="res://game/rooms/sitcom_kueche/hotspots/fondue_topf/hotspot_fondue_topf.tscn" id="14_eg1me"]
+[ext_resource type="PackedScene" uid="uid://cthqyeitm04ej" path="res://game/rooms/sitcom_kueche/hotspots/studiolicht_und_set_rand/hotspot_studiolicht_und_set_rand.tscn" id="15_vur7b"]
+[ext_resource type="PackedScene" uid="uid://dg22gk0ymokeq" path="res://game/rooms/sitcom_kueche/hotspots/skateboard/hotspot_skateboard.tscn" id="16_xqso0"]
+[ext_resource type="PackedScene" uid="uid://dbmleyuhrelrx" path="res://game/rooms/sitcom_kueche/hotspots/scherben_der_keksdose/hotspot_scherben_der_keksdose.tscn" id="17_875fs"]
+[ext_resource type="PackedScene" uid="uid://ctlkxehqdeyyu" path="res://game/rooms/sitcom_kueche/markers/start/marker_start.tscn" id="18_dwyf6"]
+[ext_resource type="PackedScene" uid="uid://c5ygsbljsvosl" path="res://game/rooms/sitcom_kueche/markers/von_gluecksrad/marker_von_gluecksrad.tscn" id="19_3opfy"]
+[ext_resource type="PackedScene" uid="uid://llp41yxi31db" path="res://game/rooms/sitcom_kueche/markers/von_savanne/marker_von_savanne.tscn" id="20_a85ma"]
+[ext_resource type="PackedScene" uid="uid://c6kykmjovnf08" path="res://game/rooms/sitcom_kueche/markers/von_friedhof/marker_von_friedhof.tscn" id="21_0h87u"]
+[ext_resource type="PackedScene" uid="uid://c5ipavrl6tvrg" path="res://game/rooms/sitcom_kueche/markers/von_kapitolis/marker_von_kapitolis.tscn" id="22_jx08e"]
+[ext_resource type="PackedScene" uid="uid://by5gxf12eb2nf" path="res://game/rooms/sitcom_kueche/markers/von_werbespot_set/marker_von_werbespot_set.tscn" id="23_k23a5"]
+[ext_resource type="PackedScene" uid="uid://dbds20dy36chr" path="res://game/rooms/sitcom_kueche/markers/von_empfang/marker_von_empfang.tscn" id="24_fnhyr"]
+[ext_resource type="PackedScene" uid="uid://cpktc2uxn8olt" path="res://game/characters/sitcom_vater/character_sitcom_vater.tscn" id="25_22oqv"]
+[ext_resource type="PackedScene" uid="uid://dhcj3ffj3ldeh" path="res://game/characters/sitcom_mutter/character_sitcom_mutter.tscn" id="26_nu2xa"]
+[ext_resource type="PackedScene" uid="uid://b2ch04qvg248x" path="res://game/characters/sitcom_sohn/character_sitcom_sohn.tscn" id="27_nfuav"]
+[ext_resource type="PackedScene" uid="uid://rdsnjwq857j8" path="res://game/characters/kommissar/character_kommissar.tscn" id="28_xwmjn"]
+
+[node name="RoomSitcomKueche" type="Node2D" unique_id=249266653]
+script = ExtResource("1_38edt")
+script_name = "SitcomKueche"
+width = 480
+height = 270
+
+[node name="WalkableAreas" type="Node2D" parent="." unique_id=417046021]
+
+[node name="Boden" parent="WalkableAreas" unique_id=1039005391 instance=ExtResource("2_i5pw1")]
+interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(6, 210, 474, 210, 474, 267, 6, 267)])
+
+[node name="Props" type="Node2D" parent="." unique_id=1003101193]
+
+[node name="Background" parent="Props" unique_id=1502096066 instance=ExtResource("3_lel8a")]
+position = Vector2(240, 135)
+texture = ExtResource("4_d5lj4")
+description = "UI_RAUM_SITCOM_KUECHE"
+
+[node name="FondueKaese" parent="Props" unique_id=125157668 instance=ExtResource("5_f2ans")]
+position = Vector2(107.5, 201)
+texture = ExtResource("6_a20jo")
+description = "UI_OBJ_FONDUE_KAESE"
+baseline = 6
+walk_to_point = Vector2(-0.5, 34)
+
+[node name="Bananenschale" parent="Props" unique_id=1067218744 instance=ExtResource("7_d3jr1")]
+position = Vector2(167.5, 201)
+texture = ExtResource("8_oek0g")
+description = "UI_OBJ_BANANENSCHALE"
+baseline = 6
+walk_to_point = Vector2(-0.5, 34)
+
+[node name="Hotspots" type="Node2D" parent="." unique_id=1573758845]
+
+[node name="LachkonservenMaschine" parent="Hotspots" unique_id=347896838 instance=ExtResource("9_gy62r")]
+position = Vector2(73, 54)
+description = "UI_OBJ_LACHKONSERVEN_MASCHINE"
+baseline = 24
+walk_to_point = Vector2(0, 181)
+
+[node name="PappePublikum" parent="Hotspots" unique_id=774969414 instance=ExtResource("10_jjcr2")]
+position = Vector2(139, 54)
+description = "UI_OBJ_PAPPE_PUBLIKUM"
+baseline = 24
+walk_to_point = Vector2(0, 181)
+
+[node name="Keksdose" parent="Hotspots" unique_id=622850299 instance=ExtResource("11_iiapy")]
+position = Vector2(205, 54)
+description = "UI_OBJ_KEKSDOSE"
+baseline = 24
+walk_to_point = Vector2(0, 181)
+
+[node name="Kuechentuer" parent="Hotspots" unique_id=1059046588 instance=ExtResource("12_ber0y")]
+position = Vector2(271, 54)
+description = "UI_OBJ_KUECHENTUER"
+baseline = 24
+walk_to_point = Vector2(0, 181)
+
+[node name="Durchreiche" parent="Hotspots" unique_id=1324081229 instance=ExtResource("13_3xfwr")]
+position = Vector2(337, 54)
+description = "UI_OBJ_DURCHREICHE"
+baseline = 24
+walk_to_point = Vector2(0, 181)
+
+[node name="FondueTopf" parent="Hotspots" unique_id=1254351407 instance=ExtResource("14_eg1me")]
+position = Vector2(403, 54)
+description = "UI_OBJ_FONDUE_TOPF"
+baseline = 24
+walk_to_point = Vector2(0, 181)
+
+[node name="StudiolichtUndSetRand" parent="Hotspots" unique_id=2032277391 instance=ExtResource("15_vur7b")]
+position = Vector2(73, 114)
+description = "UI_OBJ_STUDIOLICHT_UND_SET_RAND"
+baseline = 24
+walk_to_point = Vector2(0, 121)
+
+[node name="Skateboard" parent="Hotspots" unique_id=1536216952 instance=ExtResource("16_xqso0")]
+position = Vector2(139, 114)
+description = "UI_OBJ_SKATEBOARD"
+baseline = 24
+walk_to_point = Vector2(0, 121)
+
+[node name="ScherbenDerKeksdose" parent="Hotspots" unique_id=1818516536 instance=ExtResource("17_875fs")]
+position = Vector2(205, 114)
+description = "UI_OBJ_SCHERBEN_DER_KEKSDOSE"
+baseline = 24
+walk_to_point = Vector2(0, 121)
+
+[node name="Regions" type="Node2D" parent="." unique_id=978245109]
+
+[node name="Markers" type="Node2D" parent="." unique_id=177313105]
+
+[node name="Start" parent="Markers" unique_id=1069342547 instance=ExtResource("18_dwyf6")]
+position = Vector2(240, 240)
+
+[node name="VonGluecksrad" parent="Markers" unique_id=581303724 instance=ExtResource("19_3opfy")]
+position = Vector2(240, 240)
+
+[node name="VonSavanne" parent="Markers" unique_id=1226152229 instance=ExtResource("20_a85ma")]
+position = Vector2(240, 240)
+
+[node name="VonFriedhof" parent="Markers" unique_id=633805297 instance=ExtResource("21_0h87u")]
+position = Vector2(240, 240)
+
+[node name="VonKapitolis" parent="Markers" unique_id=87945997 instance=ExtResource("22_jx08e")]
+position = Vector2(240, 240)
+
+[node name="VonWerbespotSet" parent="Markers" unique_id=255096302 instance=ExtResource("23_k23a5")]
+position = Vector2(240, 240)
+
+[node name="VonEmpfang" parent="Markers" unique_id=1632601394 instance=ExtResource("24_fnhyr")]
+position = Vector2(240, 240)
+
+[node name="Characters" type="Node2D" parent="." unique_id=1443171703]
+
+[node name="CharacterSitcomVater *" parent="Characters" unique_id=498754438 instance=ExtResource("25_22oqv")]
+position = Vector2(105, 232)
+
+[node name="CharacterSitcomMutter *" parent="Characters" unique_id=424208824 instance=ExtResource("26_nu2xa")]
+position = Vector2(195, 232)
+
+[node name="CharacterSitcomSohn *" parent="Characters" unique_id=68141443 instance=ExtResource("27_nfuav")]
+position = Vector2(285, 232)
+
+[node name="CharacterKommissar *" parent="Characters" unique_id=1799452822 instance=ExtResource("28_xwmjn")]
+position = Vector2(375, 232)

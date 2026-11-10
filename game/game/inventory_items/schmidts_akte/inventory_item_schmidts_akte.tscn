@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://ehsvvhbmmiho"]
+
+[ext_resource type="Texture2D" uid="uid://chf8gxbxja04q" path="res://grafik/platzhalter/gegenstand_schmidts_akte.png" id="1_emk06"]
+[ext_resource type="Script" path="res://game/inventory_items/schmidts_akte/inventory_item_schmidts_akte.gd" id="1_jeuq1"]
+
+[node name="ItemSchmidtsAkte" type="TextureRect" unique_id=1725772642]
+texture_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 4
+mouse_filter = 0
+texture = ExtResource("1_emk06")
+stretch_mode = 5
+script = ExtResource("1_jeuq1")
+script_name = "SchmidtsAkte"
+description = "UI_OBJ_SCHMIDTS_AKTE"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1470555782]

@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://dx2vetawof8vj"]
+
+[ext_resource type="Script" path="res://game/rooms/laboreingang/room_laboreingang_state.gd" id="1_c6cra"]
+
+[resource]
+resource_name = "Laboreingang"
+script = ExtResource("1_c6cra")
+script_name = "Laboreingang"
+scene = "res://game/rooms/laboreingang/room_laboreingang.tscn"

@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://c22ngdmdhc57b"]
+
+[ext_resource type="Script" path="res://game/rooms/fondue_fabrik/room_fondue_fabrik_state.gd" id="1_p14hv"]
+
+[resource]
+resource_name = "FondueFabrik"
+script = ExtResource("1_p14hv")
+script_name = "FondueFabrik"
+scene = "res://game/rooms/fondue_fabrik/room_fondue_fabrik.tscn"

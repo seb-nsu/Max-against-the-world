@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://bo1c4an5sqlpl"]
+
+[ext_resource type="Texture2D" uid="uid://cgjnquhim57fh" path="res://grafik/platzhalter/gegenstand_taste_rueckspulen.png" id="1_8p2te"]
+[ext_resource type="Script" path="res://game/inventory_items/taste_rueckspulen/inventory_item_taste_rueckspulen.gd" id="1_b41tv"]
+
+[node name="ItemTasteRueckspulen" type="TextureRect" unique_id=1357293823]
+texture_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 4
+mouse_filter = 0
+texture = ExtResource("1_8p2te")
+stretch_mode = 5
+script = ExtResource("1_b41tv")
+script_name = "TasteRueckspulen"
+description = "UI_OBJ_TASTE_RUECKSPULEN"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1473718176]

@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://cg2optxhjkqc5"]
+
+[node name="Cicero" type="Marker2D" unique_id=249143024]
+visible = false

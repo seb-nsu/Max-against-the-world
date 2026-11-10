@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://xa0v4idm33dj"]
+
+[ext_resource type="Script" path="res://game/rooms/werbespot_set/hotspots/panel_explosion/hotspot_panel_explosion.gd" id="1_iqy8m"]
+
+[node name="PanelExplosion" type="Area2D" unique_id=174434789]
+script = ExtResource("1_iqy8m")
+script_name = "PanelExplosion"
+description = "Panel Explosion"
+cursor = 1
+interaction_polygon = PackedVector2Array(-29, -24, 29, -24, 29, 24, -29, 24)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=2020505654]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

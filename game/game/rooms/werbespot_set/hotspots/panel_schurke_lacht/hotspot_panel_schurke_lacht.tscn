@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://gncgm12hmp5i"]
+
+[ext_resource type="Script" path="res://game/rooms/werbespot_set/hotspots/panel_schurke_lacht/hotspot_panel_schurke_lacht.gd" id="1_nyk2y"]
+
+[node name="PanelSchurkeLacht" type="Area2D" unique_id=2142606518]
+script = ExtResource("1_nyk2y")
+script_name = "PanelSchurkeLacht"
+description = "Panel Schurke Lacht"
+cursor = 1
+interaction_polygon = PackedVector2Array(-29, -24, 29, -24, 29, 24, -29, 24)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1294791099]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

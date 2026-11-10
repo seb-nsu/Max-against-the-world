@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://cy8aomk8q8o1f"]
+
+[ext_resource type="Script" path="res://game/rooms/unterstadt_strasse/hotspots/vordach/hotspot_vordach.gd" id="1_dmlr6"]
+
+[node name="Vordach" type="Area2D" unique_id=633887438]
+script = ExtResource("1_dmlr6")
+script_name = "Vordach"
+description = "Vordach"
+cursor = 1
+interaction_polygon = PackedVector2Array(-44.5, -24, 44.5, -24, 44.5, 24, -44.5, 24)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1262264254]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

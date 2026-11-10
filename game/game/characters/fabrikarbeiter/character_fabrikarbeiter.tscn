@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://cy8tlgdb63umu"]
+
+[ext_resource type="Script" path="res://game/characters/fabrikarbeiter/character_fabrikarbeiter.gd" id="1_bnhqd"]
+[ext_resource type="Texture2D" uid="uid://c5wjvsmbu06e4" path="res://grafik/platzhalter/figur_fabrikarbeiter.png" id="2_cl634"]
+
+[node name="CharacterFabrikarbeiter" type="Area2D" unique_id=1254480709]
+script = ExtResource("1_bnhqd")
+walk_speed = 90.0
+dialog_pos = Vector2(0, -91)
+script_name = "Fabrikarbeiter"
+description = "UI_OBJ_FABRIKARBEITER"
+cursor = 8
+interaction_polygon = PackedVector2Array(-14.5, -87, 14.5, -87, 14.5, 0, -14.5, 0)
+
+[node name="ScalingPolygon" type="CollisionPolygon2D" parent="." unique_id=2045604330]
+polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1617848371]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2145625489]
+texture_filter = 1
+texture = ExtResource("2_cl634")
+offset = Vector2(0, -43.5)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=859162020]
+visible = false
+polygon = PackedVector2Array(-14.5, -87, 14.5, -87, 14.5, 0, -14.5, 0)
+
+[node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=1931542790]
+visible = false
+affect_navigation_mesh = true
+carve_navigation_mesh = true

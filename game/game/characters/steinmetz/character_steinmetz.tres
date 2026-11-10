@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://b8r1q1nmc0s2e"]
+
+[ext_resource type="Script" path="res://game/characters/steinmetz/character_steinmetz_state.gd" id="1_cw63q"]
+
+[resource]
+resource_name = "Steinmetz"
+script = ExtResource("1_cw63q")
+script_name = "Steinmetz"
+scene = "res://game/characters/steinmetz/character_steinmetz.tscn"

@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://bvjwvgb3erjs2"]
+
+[node name="VonKapitolis" type="Marker2D" unique_id=1888880829]
+visible = false

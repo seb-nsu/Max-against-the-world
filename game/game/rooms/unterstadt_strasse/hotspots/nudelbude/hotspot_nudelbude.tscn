@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://dl0jliai4s7ji"]
+
+[ext_resource type="Script" path="res://game/rooms/unterstadt_strasse/hotspots/nudelbude/hotspot_nudelbude.gd" id="1_vp4ru"]
+
+[node name="Nudelbude" type="Area2D" unique_id=1749237561]
+script = ExtResource("1_vp4ru")
+script_name = "Nudelbude"
+description = "Nudelbude"
+cursor = 1
+interaction_polygon = PackedVector2Array(-44.5, -24, 44.5, -24, 44.5, 24, -44.5, 24)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=2110515735]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

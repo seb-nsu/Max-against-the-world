@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://tq477fjj0qeo"]
+
+[ext_resource type="Script" path="res://game/characters/sitcom_mutter/character_sitcom_mutter_state.gd" id="1_0i0gr"]
+
+[resource]
+resource_name = "SitcomMutter"
+script = ExtResource("1_0i0gr")
+script_name = "SitcomMutter"
+scene = "res://game/characters/sitcom_mutter/character_sitcom_mutter.tscn"

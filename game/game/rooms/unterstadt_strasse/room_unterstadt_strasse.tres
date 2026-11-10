@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://cack0rtcf6uqp"]
+
+[ext_resource type="Script" path="res://game/rooms/unterstadt_strasse/room_unterstadt_strasse_state.gd" id="1_s0q1r"]
+
+[resource]
+resource_name = "UnterstadtStrasse"
+script = ExtResource("1_s0q1r")
+script_name = "UnterstadtStrasse"
+scene = "res://game/rooms/unterstadt_strasse/room_unterstadt_strasse.tscn"

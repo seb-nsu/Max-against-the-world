@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://dr780tjwos7ax"]
+
+[ext_resource type="Script" path="res://game/characters/weinender_mann/character_weinender_mann.gd" id="1_2pq7o"]
+[ext_resource type="Texture2D" uid="uid://v8p2305c2rff" path="res://grafik/platzhalter/figur_weinender_mann.png" id="2_2q1ta"]
+
+[node name="CharacterWeinenderMann" type="Area2D" unique_id=463555414]
+script = ExtResource("1_2pq7o")
+walk_speed = 90.0
+dialog_pos = Vector2(0, -91)
+script_name = "WeinenderMann"
+description = "UI_OBJ_WEINENDER_MANN"
+cursor = 8
+interaction_polygon = PackedVector2Array(-14.5, -87, 14.5, -87, 14.5, 0, -14.5, 0)
+
+[node name="ScalingPolygon" type="CollisionPolygon2D" parent="." unique_id=1020965990]
+polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=252082039]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=765570619]
+texture_filter = 1
+texture = ExtResource("2_2q1ta")
+offset = Vector2(0, -43.5)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1849322314]
+visible = false
+polygon = PackedVector2Array(-14.5, -87, 14.5, -87, 14.5, 0, -14.5, 0)
+
+[node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=71658098]
+visible = false
+affect_navigation_mesh = true
+carve_navigation_mesh = true

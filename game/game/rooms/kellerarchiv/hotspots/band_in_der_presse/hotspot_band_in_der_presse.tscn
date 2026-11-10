@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://bjglrf3ka447p"]
+
+[ext_resource type="Script" path="res://game/rooms/kellerarchiv/hotspots/band_in_der_presse/hotspot_band_in_der_presse.gd" id="1_hmdvx"]
+
+[node name="BandInDerPresse" type="Area2D" unique_id=1981222643]
+script = ExtResource("1_hmdvx")
+script_name = "BandInDerPresse"
+description = "Band In Der Presse"
+cursor = 1
+interaction_polygon = PackedVector2Array(-36, -24, 36, -24, 36, 24, -36, 24)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=845184427]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

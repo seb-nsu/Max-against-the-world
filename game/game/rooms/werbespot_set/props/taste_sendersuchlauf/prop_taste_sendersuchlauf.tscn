@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://dyqkpxy5q6icw"]
+
+[ext_resource type="Script" path="res://game/rooms/werbespot_set/props/taste_sendersuchlauf/prop_taste_sendersuchlauf.gd" id="1_jpoq4"]
+
+[node name="TasteSendersuchlauf" type="Area2D" unique_id=566147057]
+script = ExtResource("1_jpoq4")
+script_name = "TasteSendersuchlauf"
+description = "Taste Sendersuchlauf"
+cursor = 1
+interaction_polygon = PackedVector2Array(-7.5, -6, 7.5, -6, 7.5, 6, -7.5, 6)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=459785570]
+texture_filter = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=705687788]
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=2069393832]
+visible = false
+modulate = Color(1, 1, 0, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+
+[node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=758254931]
+visible = false
+affect_navigation_mesh = true
+carve_navigation_mesh = true

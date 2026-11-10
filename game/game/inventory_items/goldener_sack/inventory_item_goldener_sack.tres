@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://b3obn04pmx6ek"]
+
+[ext_resource type="Script" path="res://game/inventory_items/goldener_sack/inventory_item_goldener_sack_state.gd" id="1_782ao"]
+
+[resource]
+resource_name = "GoldenerSack"
+script = ExtResource("1_782ao")
+script_name = "GoldenerSack"
+scene = "res://game/inventory_items/goldener_sack/inventory_item_goldener_sack.tscn"

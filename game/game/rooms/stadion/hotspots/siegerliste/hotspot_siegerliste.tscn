@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://blmgrx3fcmffs"]
+
+[ext_resource type="Script" path="res://game/rooms/stadion/hotspots/siegerliste/hotspot_siegerliste.gd" id="1_1n5xr"]
+
+[node name="Siegerliste" type="Area2D" unique_id=731268277]
+script = ExtResource("1_1n5xr")
+script_name = "Siegerliste"
+description = "Siegerliste"
+cursor = 1
+interaction_polygon = PackedVector2Array(-18, -22.5, 18, -22.5, 18, 22.5, -18, 22.5)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=705992264]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

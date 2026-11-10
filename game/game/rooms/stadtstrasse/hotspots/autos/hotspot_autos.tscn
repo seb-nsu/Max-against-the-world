@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://b6tlpgyaeiif4"]
+
+[ext_resource type="Script" path="res://game/rooms/stadtstrasse/hotspots/autos/hotspot_autos.gd" id="1_gjyhf"]
+
+[node name="Autos" type="Area2D" unique_id=994601019]
+script = ExtResource("1_gjyhf")
+script_name = "Autos"
+description = "Autos"
+cursor = 1
+interaction_polygon = PackedVector2Array(-44.5, -24, 44.5, -24, 44.5, 24, -44.5, 24)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=2009589595]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

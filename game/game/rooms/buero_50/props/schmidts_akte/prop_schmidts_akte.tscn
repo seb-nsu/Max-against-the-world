@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://b62b85cpq7ija"]
+
+[ext_resource type="Script" path="res://game/rooms/buero_50/props/schmidts_akte/prop_schmidts_akte.gd" id="1_sxmi0"]
+
+[node name="SchmidtsAkte" type="Area2D" unique_id=1233082720]
+script = ExtResource("1_sxmi0")
+script_name = "SchmidtsAkte"
+description = "Schmidts Akte"
+cursor = 1
+interaction_polygon = PackedVector2Array(-7.5, -6, 7.5, -6, 7.5, 6, -7.5, 6)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=339053371]
+texture_filter = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1743520598]
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1156488455]
+visible = false
+modulate = Color(1, 1, 0, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+
+[node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=1661748584]
+visible = false
+affect_navigation_mesh = true
+carve_navigation_mesh = true

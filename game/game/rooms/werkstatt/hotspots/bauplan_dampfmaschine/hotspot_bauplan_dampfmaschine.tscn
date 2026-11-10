@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://c5c2ow0q4nvqp"]
+
+[ext_resource type="Script" path="res://game/rooms/werkstatt/hotspots/bauplan_dampfmaschine/hotspot_bauplan_dampfmaschine.gd" id="1_7o83u"]
+
+[node name="BauplanDampfmaschine" type="Area2D" unique_id=321512282]
+script = ExtResource("1_7o83u")
+script_name = "BauplanDampfmaschine"
+description = "Bauplan Dampfmaschine"
+cursor = 1
+interaction_polygon = PackedVector2Array(-22.5, -18, 22.5, -18, 22.5, 18, -22.5, 18)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=760845799]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

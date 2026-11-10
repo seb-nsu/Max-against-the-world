@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://cra0fpylsunqp"]
+
+[ext_resource type="Script" path="res://game/characters/tuer/character_tuer.gd" id="1_g42dk"]
+[ext_resource type="Texture2D" uid="uid://dyc0namk5buf8" path="res://grafik/platzhalter/figur_tuer.png" id="2_jxhpq"]
+
+[node name="CharacterTuer" type="Area2D" unique_id=1898839801]
+script = ExtResource("1_g42dk")
+walk_speed = 90.0
+dialog_pos = Vector2(0, -64)
+script_name = "Tuer"
+description = "UI_OBJ_TUER"
+cursor = 8
+interaction_polygon = PackedVector2Array(-12, -60, 12, -60, 12, 0, -12, 0)
+
+[node name="ScalingPolygon" type="CollisionPolygon2D" parent="." unique_id=1243538679]
+polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1020505543]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=659673150]
+texture_filter = 1
+texture = ExtResource("2_jxhpq")
+offset = Vector2(0, -30)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1233065228]
+visible = false
+polygon = PackedVector2Array(-12, -60, 12, -60, 12, 0, -12, 0)
+
+[node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=1144847262]
+visible = false
+affect_navigation_mesh = true
+carve_navigation_mesh = true

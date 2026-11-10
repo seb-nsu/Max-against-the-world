@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://ba23e3u0qcpbl"]
+
+[node name="VonTestkammer2" type="Marker2D" unique_id=1768377504]
+visible = false

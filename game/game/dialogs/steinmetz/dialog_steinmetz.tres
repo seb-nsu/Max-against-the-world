@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://bpynxqjunu4sb"]
+
+[ext_resource type="Script" uid="uid://brxefo54wpm32" path="res://addons/popochiu/engine/objects/dialog/popochiu_dialog_option.gd" id="1_onjys"]
+[ext_resource type="Script" path="res://game/dialogs/steinmetz/dialog_steinmetz.gd" id="2_ow3eo"]
+
+[resource]
+resource_name = "Steinmetz"
+script = ExtResource("2_ow3eo")
+script_name = "Steinmetz"

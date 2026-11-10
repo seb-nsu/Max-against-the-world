@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://f7p11fq2405i"]
+
+[ext_resource type="Script" path="res://game/rooms/startbuero/hotspots/ausgang_agora/hotspot_ausgang_agora.gd" id="1_brfu4"]
+
+[node name="AusgangAgora" type="Area2D" unique_id=1507366225]
+script = ExtResource("1_brfu4")
+script_name = "AusgangAgora"
+description = "Ausgang Agora"
+cursor = 1
+interaction_polygon = PackedVector2Array(-13.5, -52.5, 13.5, -52.5, 13.5, 52.5, -13.5, 52.5)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=259246518]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

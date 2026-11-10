@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://c0urjpr21kvjx"]
+
+[ext_resource type="Script" path="res://game/rooms/zappmanns_studio/hotspots/moderationspult/hotspot_moderationspult.gd" id="1_v6kam"]
+
+[node name="Moderationspult" type="Area2D" unique_id=1977019578]
+script = ExtResource("1_v6kam")
+script_name = "Moderationspult"
+description = "Moderationspult"
+cursor = 1
+interaction_polygon = PackedVector2Array(-29, -24, 29, -24, 29, 24, -29, 24)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=190526503]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

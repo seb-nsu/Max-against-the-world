@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://bmphm7sr4o540"]
+
+[ext_resource type="Script" path="res://game/rooms/nil_delta/hotspots/verkehrte_pyramide/hotspot_verkehrte_pyramide.gd" id="1_0cnmu"]
+
+[node name="VerkehrtePyramide" type="Area2D" unique_id=1297977167]
+script = ExtResource("1_0cnmu")
+script_name = "VerkehrtePyramide"
+description = "Verkehrte Pyramide"
+cursor = 1
+interaction_polygon = PackedVector2Array(-52.5, -52.5, 52.5, -52.5, 52.5, 52.5, -52.5, 52.5)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1570876440]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

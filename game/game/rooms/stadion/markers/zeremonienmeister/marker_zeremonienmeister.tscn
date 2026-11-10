@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://bkw3yo7inrk12"]
+
+[node name="Zeremonienmeister" type="Marker2D" unique_id=1979263688]
+visible = false

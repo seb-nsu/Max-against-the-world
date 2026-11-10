@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://c0gixp5yyhqwc"]
+
+[ext_resource type="Script" path="res://game/rooms/savanne/hotspots/absperrband/hotspot_absperrband.gd" id="1_e88nu"]
+
+[node name="Absperrband" type="Area2D" unique_id=681639730]
+script = ExtResource("1_e88nu")
+script_name = "Absperrband"
+description = "Absperrband"
+cursor = 1
+interaction_polygon = PackedVector2Array(-40, -24, 40, -24, 40, 24, -40, 24)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1042950893]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
