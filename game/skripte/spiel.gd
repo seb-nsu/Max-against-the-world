@@ -530,6 +530,9 @@ func wechsel_moeglich() -> bool:
 		return false
 	if not Zustand.ist(praefix() + "_WECHSEL_FREI"):
 		return false
+	var regel_w = regel_wert("wechsel_moeglich")  # Welt 3: Wechsel über die Ebenen hinweg
+	if regel_w != null:
+		return bool(regel_w)
 	return is_instance_valid(C.Pixel) and C.Pixel.is_inside_tree() \
 		and is_instance_valid(C.Max) and C.Max.is_inside_tree()
 
@@ -543,6 +546,9 @@ func praefix() -> String:
 func figur_wechseln(mit_zeile := true) -> bool:
 	if not wechsel_moeglich() or in_szene > 0 or E.playing_queue:
 		return false
+	if regel_wert("wechsel_getrennt") == true:
+		regel("figur_wechseln")  # Raumwechsel zur anderen Figur, läuft für sich weiter
+		return true
 	I.active = null
 	Klang.geraeusch("wechsel")
 	C.player = C.Pixel if C.player == C.Max else C.Max

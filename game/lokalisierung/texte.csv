@@ -641,6 +641,40 @@ UI_OBJ_WASSERSPENDER,Wasserspender,Water cooler
 UI_OBJ_WEINENDER_MANN,Weinender Mann,Crying man
 UI_OBJ_WISCHEIMER,Wischeimer,Mop bucket
 UI_OBJ_ZUGANGSKARTE,Zugangskarte,Access card
+UI_OBJ_WASSEREIMER,Wassereimer,Water bucket
+UI_W3_TAUSCH_TUER_SCHMIDT,Tür: verschlossen ↔ Schmidt: gesprächig,Door: locked ↔ Schmidt: talkative
+UI_W3_TAUSCH_TUER_AUTO,Tür: grau ↔ Auto: rot,Door: grey ↔ Car: red
+UI_W3_TAUSCH_TUER_HAUSSCHUHE,Tür: verschlossen ↔ Schmidt: Hausschuhe,Door: locked ↔ Schmidt: slippers
+UI_W3_TAUSCH_SCHMIDT_BAUM,Schmidt: gesprächig ↔ Baum: grün,Schmidt: talkative ↔ Tree: green
+UI_W3_TAUSCH_ORIGINAL_TASSE,Schmidt: Original ↔ Kaffeetasse: Kopie,Schmidt: original ↔ Coffee cup: copy
+UI_W3_TAUSCH_ORIGINAL_KLON,Schmidt: Original ↔ Klon: Kopie,Schmidt: original ↔ Clone: copy
+UI_W3_TAUSCH_HAUSSCHUHE_TASSE,Schmidt: Hausschuhe ↔ Kaffeetasse: leer,Schmidt: slippers ↔ Coffee cup: empty
+UI_W3_TAUSCH_ORIGINAL_PFLANZE,Schmidt: Original ↔ Topfpflanze: gleich,Schmidt: original ↔ Potted plant: identical
+UI_W3_TAUSCH_BERND_MAX,Bernd: schwer ↔ Max: leicht,Bernd: heavy ↔ Max: light
+UI_W3_TAUSCH_BERND_KUCHEN,Bernd: schwer ↔ Pappkuchen: Pappe,Bernd: heavy ↔ Cardboard cake: cardboard
+UI_W3_TAUSCH_BERND_EHRLICH,Bernd: treu ↔ Max: ehrlich,Bernd: loyal ↔ Max: honest
+UI_W3_TAUSCH_SCHALTER_MUEDE,Bodenschalter: ungedrückt ↔ Max: müde,Floor switch: unpressed ↔ Max: tired
+UI_W3_TAUSCH_LASER_HUHN,Laser: tödlich ↔ Gummihuhn: harmlos,Laser: deadly ↔ Rubber chicken: harmless
+UI_W3_TAUSCH_LASER_FARBE,Laser: rot ↔ Gummihuhn: gelb,Laser: red ↔ Rubber chicken: yellow
+UI_W3_TAUSCH_LASER_SOCKEL,Laser: tödlich ↔ Sockel: fest,Laser: deadly ↔ Pedestal: solid
+UI_W3_TAUSCH_HUHN_KRITZELEI,Gummihuhn: harmlos ↔ Kritzelei: wahr,Rubber chicken: harmless ↔ Scribble: true
+UI_W3_TAUSCH_TUER_LAUTSPRECHER,Tür: verschlossen ↔ Lautsprecher: gesprächig,Door: locked ↔ Speaker: talkative
+UI_W3_TAUSCH_BERND_HUHN,Bernd: schwer ↔ Gummihuhn: leicht,Bernd: heavy ↔ Rubber chicken: light
+UI_W3_TAUSCH_TUER_BERND,Tür: verschlossen ↔ Bernd: schwer,Door: locked ↔ Bernd: heavy
+UI_W3_TAUSCH_LAUTSPRECHER_HUHN,Lautsprecher: gesprächig ↔ Gummihuhn: leicht,Speaker: talkative ↔ Rubber chicken: light
+UI_W3_TAUSCH_LAUTSPRECHER_BERND,Lautsprecher: gesprächig ↔ Bernd: schwer,Speaker: talkative ↔ Bernd: heavy
+UI_W3_TAUSCH_TUER_HUHN,Tür: verschlossen ↔ Gummihuhn: leicht,Door: locked ↔ Rubber chicken: light
+UI_W3_TAUSCH_ZELLE_KEKSE,Energiezelle: heiß ↔ Omas Kekse: kalt,Energy cell: hot ↔ Granny's biscuits: cold
+UI_W3_TAUSCH_ZELLE_MAX,Energiezelle: heiß ↔ Max: müde,Energy cell: hot ↔ Max: tired
+UI_W3_CODE_SICHT_AUS,Code-Sicht schließen,Close code sight
+UI_W3_REGEL_1,Regel 1 vorhalten,Quote rule 1
+UI_W3_REGEL_2,Regel 2 vorhalten,Quote rule 2
+UI_W3_REGEL_3,Regel 3 vorhalten,Quote rule 3
+UI_W3_ZIEL_STADT,Zurück in die Stadt,Back to the city
+UI_W3_ZIEL_LABOR,Ins Labor,Into the lab
+UI_W3_BUCHSE_ROT,Buchse Rot (Kreis),Red socket (circle)
+UI_W3_BUCHSE_GRUEN,Buchse Grün (Dreieck),Green socket (triangle)
+UI_W3_BUCHSE_GELB,Buchse Gelb (Quadrat),Yellow socket (square)
 P0_WOHN_MAX_0010,Ein Balken. Ein einziger Balken.,
 P0_WOHN_MAX_0020,Und der ist auch nur zur Deko da.,
 P0_WOHN_OPA_0030,Maaax! Komm mal rauf! Wissenschaft!,

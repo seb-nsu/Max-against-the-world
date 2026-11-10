@@ -123,6 +123,7 @@ widerstandsbasis:
     von_kuehlung: [924, 240]
     von_stadtstrasse: [480, 240]
     von_testkammer_1: [480, 240]
+    von_kapsel: [150, 240]
   figuren:
     opa: [130, 232]
     kalle: [270, 232]
@@ -200,6 +201,8 @@ kuehlung:
     widerstandsbasis:
       rect: [6, 105, 27, 105]
       gehe: [36, 240]
+  hotspots:
+    wassereimer: {rect: [200, 150, 40, 50], gehe: [220, 235], name: Wassereimer}
 laboreingang:
   alias: {geoeffnete_tuer: panzertuer}
   farbe: '#585858'
@@ -260,6 +263,7 @@ stadtstrasse:
     von_kueche_orakel: [36, 240]
     von_buero_50: [924, 240]
     von_widerstandsbasis: [480, 240]
+    von_zelle: [200, 240]
   figuren:
     schmidt: [200, 232]
     tuer: [480, 232]
@@ -309,6 +313,7 @@ kueche_orakel:
   marker:
     start: [240, 240]
     von_stadtstrasse: [36, 240]
+    von_zelle: [400, 240]
   figuren:
     orakel_oma: [150, 232]
     radio: [330, 232]
@@ -422,6 +427,7 @@ testkammer_1:
     start: [240, 240]
     von_testkammer_2: [36, 240]
     von_widerstandsbasis: [240, 240]
+    von_kapsel: [240, 240]
   figuren:
     opa: [105, 232]
     mutti: [195, 232]

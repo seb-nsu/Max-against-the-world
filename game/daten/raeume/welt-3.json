@@ -939,6 +939,10 @@
     "von_testkammer_1": [
      480,
      240
+    ],
+    "von_kapsel": [
+     150,
+     240
     ]
    },
    "figuren": [
@@ -1694,7 +1698,24 @@
     ]
    },
    "figuren": [],
-   "hotspots": [],
+   "hotspots": [
+    {
+     "id": "wassereimer",
+     "script_name": "Wassereimer",
+     "name_key": "UI_OBJ_WASSEREIMER",
+     "rect": [
+      200,
+      150,
+      40,
+      50
+     ],
+     "gehe": [
+      220,
+      235
+     ],
+     "ansehen": []
+    }
+   ],
    "props": [],
    "ausgaenge": [
     {
@@ -2220,6 +2241,10 @@
     "von_widerstandsbasis": [
      480,
      240
+    ],
+    "von_zelle": [
+     200,
+     240
     ]
    },
    "figuren": [
@@ -2716,6 +2741,10 @@
     ],
     "von_stadtstrasse": [
      36,
+     240
+    ],
+    "von_zelle": [
+     400,
      240
     ]
    },
@@ -3776,6 +3805,10 @@
      240
     ],
     "von_widerstandsbasis": [
+     240,
+     240
+    ],
+    "von_kapsel": [
      240,
      240
     ]

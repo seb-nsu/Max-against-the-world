@@ -92,6 +92,11 @@ func partner_aufstellen(neben_spieler := false) -> void:
 	if not Bauplan.figur_spielbar(Zustand.abschnitt, "pixel") or not is_instance_valid(C.player):
 		return
 	var partner: PopochiuCharacter = C.Pixel if C.player == C.Max else C.Max
+	# Welt 3: Max in der Simulation, Pixel in der Realität (skripte/welt_3.gd)
+	if Spiel.regel_wert("partner_getrennt", self) == true:
+		if has_character(partner.script_name):
+			Spiel.figur_hier(partner.script_name, false)
+		return
 	var x := C.player.position.x + (-20.0 if C.player.position.x > width / 2.0 else 20.0)
 	var pos := Vector2(x, C.player.position.y)
 	if not has_character(partner.script_name):

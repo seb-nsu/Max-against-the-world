@@ -509,5 +509,23 @@ raetsel:
     schalter: [MORSE_TABELLE, OPAS_NACHRICHT]
     optional: false
 
-# Schalter, die zu keinem Rätsel gehören
-weitere_schalter: [W3_PIXEL_AUF_LEITUNG]   # beim ersten Aufwachen in der Basis (W3_BAS_KAL_0160)
+# Schalter, die zu keinem Rätsel gehören (Graubox-Logik: skripte/welt_3.gd)
+weitere_schalter:
+  - W3_PIXEL_AUF_LEITUNG       # beim ersten Aufwachen in der Basis (W3_BAS_KAL_0160)
+  - W3_WECHSEL_FREI            # Figurenwechsel freigeschaltet (Ankunft)
+  - W3_EBENE                   # Wert: realitaet, simulation oder labor (wo Max' Geist ist)
+  - W3_MAX_RAUM                # Wert: Raum, in dem Max steht, solange er nicht in der Realität ist
+  - W3_PIXEL_RAUM              # Wert: Raum, in dem Pixel steht, solange Max drüben ist
+  - W3_LETZTE_ZELLE            # Wert: zuletzt benutzte Zelle (stadtstrasse oder kueche_orakel)
+  - W3_SIMULATION_BESUCHE      # Wert: Zahl der Eintritte in die Simulation (Errungenschaft Déjà-vu)
+  - W3_SYMPTOM_BEKANNT         # Morphäus hat das Déjà-vu beschrieben (W3_NUD_MOR_0490)
+  - W3_PIXEL_DOPPELT           # Pixel ist zweimal gleich am Automaten vorbeigegangen
+  - W3_PANZERTUER_OFFEN        # Zugangskarte im Leser (Rätsel 9a beginnt)
+  - W3_PORTAL_GENOMMEN         # Portalgerät aus der Halterung genommen
+  - W3_PORTAL_BENUTZT          # das eine Portal ins Wohnzimmer ist offen gewesen
+  - W3_SCHNEE                  # Pixel hat das Fenster über der Kapsel geöffnet (Lösung B)
+  - W3_ZELLE_KALT              # Energiezelle abgekühlt (Tausch oder Schnee)
+  - W3_KEKSE_WARM              # Omas Kekse ofenwarm (Tausch im Kern)
+  - W3_ZELLE_BENUTZT           # die klingelnde Zelle auf der Stadtstraße schon einmal abgehoben
+  - W3_FEHLTAUSCHE             # Wert: Räume mit Fehltauschen seit dem letzten Betreten (Zurücksetzen-Zeile)
+  - CODE_SICHT                 # Code-Sicht freigeschaltet (auch Schalter von R5)
