@@ -244,7 +244,9 @@ func _raum(r: Dictionary) -> void:
 			return _fehler("Raum %s nicht angelegt" % sn)
 		_raum_skript(pfad.replace(".tscn", ".gd"), sn, r.id)
 		_angelegt.append("Raum " + sn)
-	if sn == START_RAUM:
+	# Startszene ist das Hauptmenü (oberflaeche/hauptmenue.tscn); nur ohne eines der Startraum
+	var hauptszene: String = ProjectSettings.get_setting(PopochiuResources.MAIN_SCENE, "")
+	if sn == START_RAUM and (hauptszene.is_empty() or "/rooms/" in hauptszene):
 		ProjectSettings.set_setting(PopochiuResources.MAIN_SCENE, pfad)
 
 	var raum: PopochiuRoom = load(pfad).instantiate(PackedScene.GEN_EDIT_STATE_INSTANCE)

@@ -25,6 +25,9 @@ const HUD := preload("res://oberflaeche/hud.tscn")
 const NAHANSICHT := preload("res://oberflaeche/nahansicht.tscn")
 const NOTIZBUCH := preload("res://oberflaeche/notizbuch.tscn")
 const REISETASCHE := preload("res://oberflaeche/reisetasche.tscn")
+const PAUSEMENUE := preload("res://oberflaeche/pausemenue.gd")
+## Erster Raum eines neuen Spiels (Hauptmenü: Neues Spiel, Fortsetzen, Laden)
+const STARTRAUM := "res://game/rooms/wohnzimmer/room_wohnzimmer.tscn"
 
 var testmodus := false
 ## Alle gesagten Sprechblasen-Schlüssel in Reihenfolge (für Tests und Telemetrie)
@@ -42,7 +45,13 @@ var vorgabe_auswahl: Array = []
 ## Vorgaben für das Packen der Reisetasche (Tests): Gegenstände, die der Reihe nach berührt werden
 var vorgabe_tasche: Array = []
 
+## Platz, den der Startraum gleich nach dem Betreten lädt (Hauptmenü: Fortsetzen, Laden); -1 = keiner
+var start_platz := -1
+## Zurück zum Hauptmenü angefragt (im Testmodus statt des Neustarts)
+var hauptmenue_angefragt := false
+
 var hud: CanvasLayer
+var _pause: CanvasLayer
 var _letzte_ersatz := {}
 var _letzter_zuruf := ""
 var _ruhe := 0.0
@@ -61,7 +70,10 @@ func _input(event: InputEvent) -> void:
 
 
 func _unhandled_input(event: InputEvent) -> void:
-	if event.is_action_pressed("cq_figur_wechseln"):
+	if event.is_action_pressed("cq_pause") and pause_moeglich():
+		get_viewport().set_input_as_handled()
+		pause_oeffnen()
+	elif event.is_action_pressed("cq_figur_wechseln"):
 		get_viewport().set_input_as_handled()
 		figur_wechseln()
 	elif event.is_action_pressed("cq_notizbuch") and OS.is_debug_build():
@@ -80,6 +92,55 @@ func _process(delta: float) -> void:
 		_ruhe = 0.0
 		_zuruf()
 
+
+#region Pause und Hauptmenü ########################################################################
+## Pausemenü nur im Raum und wenn nichts läuft: In Zwischensequenzen, Gesprächen und
+## Überlagerungen bleibt Esc beim Überspringen und Schließen (05-spielsysteme.md, Bildschirme).
+func pause_moeglich() -> bool:
+	return not is_instance_valid(_pause) and not get_tree().paused \
+		and not Spielstand.beschaeftigt()
+
+
+func pause_oeffnen() -> void:
+	# Vorschaubild für „Speichern“ vor dem Menü aufnehmen, damit es das Spiel zeigt
+	Spielstand.vorschau_merken()
+	_pause = PAUSEMENUE.new()
+	_pause.geschlossen.connect(pause_schliessen)
+	add_child(_pause)
+	get_tree().paused = true
+
+
+func pause_schliessen() -> void:
+	if is_instance_valid(_pause):
+		_pause.queue_free()
+	_pause = null
+	get_tree().paused = false
+
+
+func pause_offen() -> bool:
+	return is_instance_valid(_pause)
+
+
+## „Laden“ im Pausemenü: Menü zu, dann laden.
+func pause_laden(slot: int) -> void:
+	pause_schliessen()
+	Spielstand.laden.call_deferred(slot)
+
+
+## „Hauptmenü“ im Pausemenü. Ein frischer Start ist der einzige sichere Weg zu einem sauberen
+## Zustand (Popochiu, Inventare, Schalter): Das Spiel startet neu und zeigt das Hauptmenü.
+func zum_hauptmenue() -> void:
+	pause_schliessen()
+	hauptmenue_angefragt = true
+	if testmodus:
+		return
+	Einstellungen.speichern()
+	Telemetrie.sitzung_beenden("hauptmenue")
+	OS.set_restart_on_exit(true, OS.get_cmdline_args())
+	get_tree().quit()
+
+
+#endregion
 
 #region Sprechen ###################################################################################
 func figur(kuerzel: String) -> PopochiuCharacter:
@@ -130,6 +191,7 @@ func sagen(kuerzel: String, zeile: String) -> void:
 			else:
 				await G.show_system_text(b)
 			continue
+		Klang.zeile(kuerzel, b, tr(b))
 		var gast := not c.is_inside_tree() and is_instance_valid(R.current)
 		if gast:
 			_stimme_aus_dem_off(c, true)
@@ -243,6 +305,7 @@ func ersatz(kuerzel := "") -> void:
 		wahl = pool.pick_random()
 	_letzte_ersatz[kuerzel] = wahl
 	ersatz_gesagt.emit(kuerzel, wahl)
+	Klang.jingle("falsch")
 	await sagen(kuerzel, wahl)
 
 
@@ -382,6 +445,8 @@ func nehmen(prop: PopochiuProp, daten: Dictionary) -> void:
 ## Gegenstand in Max' Inventar legen (auch wenn gerade Pixel spielt).
 func geben(sn: String) -> void:
 	if not I.is_item_in_inventory(sn, C.Max):
+		if not I.is_restoring:
+			Klang.jingle("aufgehoben")
 		var leise := _leise_an()
 		await I.add_item(I.get_item_instance(sn), 1, C.Max)
 		I.is_restoring = leise
@@ -441,6 +506,7 @@ func figur_wechseln(mit_zeile := true) -> bool:
 	if not wechsel_moeglich() or in_szene > 0 or E.playing_queue:
 		return false
 	I.active = null
+	Klang.geraeusch("wechsel")
 	C.player = C.Pixel if C.player == C.Max else C.Max
 	figur_gewechselt.emit(C.player)
 	if mit_zeile:
@@ -525,6 +591,7 @@ func nahansicht_zeigen(id: String) -> void:
 	Zustand.nahansicht_gesehen(id)
 	if testmodus:
 		return
+	Klang.geraeusch("nahansicht")
 	in_szene += 1
 	var n := NAHANSICHT.instantiate()
 	add_child(n)
@@ -537,6 +604,7 @@ func nahansicht_zeigen(id: String) -> void:
 func notizbuch_oeffnen() -> void:
 	if testmodus or has_node("Notizbuch"):
 		return
+	Klang.geraeusch("seite")
 	in_szene += 1
 	var n := NOTIZBUCH.instantiate()
 	n.name = "Notizbuch"
@@ -626,6 +694,8 @@ func bedingung_text_ok(text: String) -> bool:
 ## Ende des Prologs: Max wird in den Fernseher gesaugt (Platzhalter-Übergang) und landet in
 ## Welt 1 auf dem Dorfplatz (Ankunft, skript/welt-1.md Abschnitt 1).
 func prolog_beenden() -> void:
+	Klang.geraeusch("zappomat_sog")
+	Klang.musik("zappomat")
 	if not testmodus:
 		# Platzhalter fürs Einsaugen: Popochius Übergang „tunnel“ zieht ins Bild hinein
 		await T.play_transition("tunnel", 1.5, T.PLAY_MODE.IN)
@@ -659,6 +729,8 @@ func welt_beginnen(ab: String) -> void:
 ## ZWISCHENSPIEL = nr. Anders als welt_beginnen() bleibt das Inventar, wie es ist: Opa nimmt
 ## das Mitbringsel in der Ankunftsszene, das Packen der Reisetasche entscheidet später.
 func zwischenspiel_beginnen(nr: int) -> void:
+	Klang.jingle("welt_geschafft")
+	Klang.musik("werbeblock")
 	if not testmodus:
 		await T.play_transition("tunnel", 1.5, T.PLAY_MODE.IN)
 	I.active = null

@@ -64,7 +64,9 @@ func _process(delta: float) -> void:
 		_meldung_zeit -= delta
 		if _meldung_zeit <= 0.0:
 			_meldung.visible = false
-	var zeigen := Input.is_action_pressed("cq_hotspots_zeigen")
+	# Barrierefreiheit „Hotspots dauerhaft zeigen“: Punkte immer, sonst solange die Taste gedrückt ist
+	var zeigen: bool = Input.is_action_pressed("cq_hotspots_zeigen") \
+		or (Einstellungen.wert("hotspots_dauerhaft") and E.in_room and not G.is_blocked)
 	if zeigen != _punkte.visible:
 		_punkte.visible = zeigen
 	if zeigen:

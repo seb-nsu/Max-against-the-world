@@ -259,3 +259,73 @@ UI_TASCHE_WAHL,Zwei Wahlfächer,Two free pockets
 UI_TASCHE_AUSLAGE,Daneben liegt,Also here
 UI_TASCHE_FERTIG,Fertig gepackt,Done packing
 UI_TASCHE_HILFE,Klick packt ein oder aus. Rechtsklick: Pixel fragen.,Click packs or unpacks. Right-click: ask Pixel.
+UI_SPIELTITEL,Couch Quest,Couch Quest
+UI_SPIELUNTERTITEL,Max gegen die Welten,Max against the worlds
+UI_KANAL,Kanal,Channel
+UI_MENUE_FORTSETZEN,Fortsetzen,Continue
+UI_MENUE_NEUES_SPIEL,Neues Spiel,New game
+UI_MENUE_LADEN,Laden,Load
+UI_MENUE_SPEICHERN,Speichern,Save
+UI_MENUE_OPTIONEN,Optionen,Options
+UI_MENUE_BEENDEN,Beenden,Quit
+UI_MENUE_PAUSE,Pause,Paused
+UI_MENUE_WEITER,Weiterspielen,Resume
+UI_MENUE_HAUPTMENUE,Hauptmenü,Main menu
+UI_MENUE_HAUPTMENUE_SICHER,"Noch mal klicken: Was nicht gespeichert ist, geht verloren.",Click again: anything unsaved will be lost.
+UI_MENUE_ZURUECK,Zurück,Back
+UI_KANAL_FORTSETZEN,"Weiter, wo du aufgehört hast.",Pick up where you left off.
+UI_KANAL_NEUES_SPIEL,"Kein WLAN, ein Dachboden und ein Opa mit einer Erfindung.","No Wi-Fi, an attic and a grandpa with an invention."
+UI_KANAL_LADEN,Einen gespeicherten Spielstand wählen.,Pick a saved game.
+UI_KANAL_OPTIONEN,"Ton, Bild, Tasten und Barrierefreiheit.","Sound, display, keys and accessibility."
+UI_KANAL_BEENDEN,Fernseher aus. Bis bald!,TV off. See you soon!
+UI_EPILEPSIE_TITEL,Bevor es losgeht,Before you start
+UI_EPILEPSIE,"Bei sehr wenigen Menschen können blinkende Lichter oder schnelle Bildwechsel epileptische Anfälle auslösen, auch ohne dass sie vorher davon wussten. Wenn dir beim Spielen schwindelig wird oder du Zuckungen bemerkst, hör sofort auf. In den Optionen unter Barrierefreiheit kannst du Flackern und Bildschirmwackeln abschalten.","In a very small number of people, flashing lights or rapid image changes can trigger epileptic seizures, even if they have never had one before. If you feel dizzy or notice twitching while playing, stop right away. Under Options › Accessibility you can turn off flicker and screen shake."
+UI_VERSTANDEN,Verstanden,Got it
+UI_PLATZ_LEER,leer,empty
+UI_PLATZ_NR,Platz %d,Slot %d
+UI_PLATZ_SCHNELL,Schnellspeicher,Quicksave
+UI_PLATZ_AUTO,Autospeicher %d,Autosave %d
+UI_UEBERSCHREIBEN,Belegt. Noch mal klicken zum Überschreiben.,In use. Click again to overwrite.
+UI_OPT_AUDIO,Audio,Audio
+UI_OPT_ANZEIGE,Anzeige,Display
+UI_OPT_SPIEL,Spiel,Game
+UI_OPT_STEUERUNG,Steuerung,Controls
+UI_OPT_BARRIEREFREI,Barrierefreiheit,Accessibility
+UI_OPT_GESAMT,Gesamtlautstärke,Master volume
+UI_OPT_MUSIK,Musik,Music
+UI_OPT_GERAEUSCHE,Geräusche,Sound effects
+UI_OPT_STIMMEN,Stimmen,Voices
+UI_OPT_STUMM_HINTERGRUND,Stumm im Hintergrund,Mute in background
+UI_OPT_FENSTERMODUS,Fenstermodus,Window mode
+UI_OPT_MODUS_FENSTER,Fenster,Windowed
+UI_OPT_MODUS_VOLLBILD,Vollbild,Fullscreen
+UI_OPT_MODUS_RANDLOS,Randloses Fenster,Borderless window
+UI_OPT_FENSTERGROESSE,Fenstergröße,Window size
+UI_OPT_VSYNC,VSync,VSync
+UI_OPT_BILDRATE,Bildrate (max.),Frame rate cap
+UI_OPT_UNBEGRENZT,unbegrenzt,unlimited
+UI_OPT_SPRACHE,Sprache,Language
+UI_OPT_TEXTTEMPO,Textgeschwindigkeit,Text speed
+UI_OPT_TEMPO_LANGSAM,langsam,slow
+UI_OPT_TEMPO_NORMAL,normal,normal
+UI_OPT_TEMPO_SCHNELL,schnell,fast
+UI_OPT_TEMPO_SOFORT,sofort,instant
+UI_OPT_TEXT_WEITER,Text weiter,Advance text
+UI_OPT_PER_KLICK,per Klick,on click
+UI_OPT_AUTOMATISCH,automatisch,automatically
+UI_OPT_UNTERTITEL,Untertitel,Subtitles
+UI_OPT_BRABBEL,Brabbel-Laute (Probe),Babble voices (trial)
+UI_OPT_GROSSE_SCHRIFT,Große Schrift,Large text
+UI_OPT_HOTSPOTS_DAUERHAFT,Hotspots immer zeigen,Always show hotspots
+UI_OPT_WACKELN_AUS,Bildschirmwackeln aus,Screen shake off
+UI_OPT_FLACKERN_REDUZIEREN,Flackern reduzieren,Reduce flicker
+UI_OPT_FARBENBLIND,Farbenblind-Hilfe,Colour-blind aid
+UI_OPT_TASTE_DRUECKEN,Taste drücken …,Press a key …
+UI_OPT_MAUS_GEHT_IMMER,Mit der Maus geht alles auch ohne Tasten.,Everything also works with the mouse alone.
+UI_OPT_ZURUECKSETZEN,Standard,Defaults
+UI_TASTE_TEXT_WEITER,Text weiter,Advance text
+UI_TASTE_FIGUR_WECHSELN,Figur wechseln,Switch character
+UI_TASTE_HOTSPOTS_ZEIGEN,Hotspots zeigen,Show hotspots
+UI_TASTE_PAUSE,Pausemenü,Pause menu
+UI_TASTE_SCHNELLSPEICHERN,Schnellspeichern,Quicksave
+UI_TASTE_SCHNELLLADEN,Schnellladen,Quickload

@@ -22,6 +22,21 @@ Aufgebaut wie die Grafik-Dateien: erst die Werkzeuge, dann Regeln für Prompts, 
 - Steam verlangt die Offenlegung von KI-Stimmen und KI-Musik im selben Formular wie bei der Grafik.
 - Sprachausgabe erst erzeugen, wenn das Skript fertig ist. Jede Änderung danach kostet erneut.
 
+## Im Spiel: Dateien und IDs
+
+Das Audio-Gerüst steht (`game/skripte/klang.gd`, Autoload „Klang“): Jede Stelle, an der später ein Klang kommt, ruft ihn schon über eine ID auf. Liegt die Datei im Ordner, spielt sie; fehlt sie, bleibt es still. So wird Audio einfach in die Ordner gelegt, ohne Code anzufassen.
+
+| Art | Ordner (unter `game/`) | ID | Woher |
+| --- | --- | --- | --- |
+| Musik | `audio/musik/<id>.ogg` | `titel`, `zappomat`, `werbeblock` und die Raum-Stücke | Raum-Stücke aus der Welt-Tabelle (`musik: <ID>`); wechselt mit einer Sekunde Überblendung, dasselbe Stück läuft weiter |
+| Jingles | `audio/jingles/<id>.ogg` | `aufgehoben`, `geloest`, `welt_geschafft`, `falsch`, `lachkonserve`, `gluecksrad` | Gegenstand bekommen, Rätselschritt gelöst, Welt geschafft, Ersatzzeile |
+| Geräusche | `audio/geraeusche/<id>.ogg` | `ui_klick`, `inventar`, `seite`, `kombinieren`, `fehler`, `wechsel`, `hinweis`, `speichern`, `nahansicht`, `notiz`, `zappomat_sog`, `werbeblock_start` | Bedienung und Spielsysteme (Tabelle Geräusche) |
+| Stimmen | `audio/stimmen/<sprache>/<ZEILEN_ID>.ogg` | Zeilen-ID der Sprechblase, Kaskaden mit `_2`, `_3` | `export/audio-zeilen.csv` aus `tools/skript_export.py`; NAR bleibt stumm |
+
+`.wav` und `.mp3` gehen auch. `python3 tools/audio_liste.py` schreibt `export/audio-stand.csv` (welche ID gebraucht wird, wo, und ob die Datei schon da ist); mit `--pruefen` meldet es Dateien, deren Name zu keiner ID passt (läuft in GitHub Actions). Lautstärken kommen aus den Optionen über die Busse Musik, Geraeusche und Stimmen.
+
+**Brabbel als Probe:** Die Option „Brabbel-Laute (Probe)“ erzeugt ohne Stimmdatei je Silbe einen kurzen Ton, Tonhöhe und Tempo je Figur (Max, Pixel, Opa, Toadi, sonst ein Standardton). Das ist nur zum Ausprobieren für die Entscheidung über die Sprachausgabe gedacht und steht standardmäßig aus.
+
 ## Prompt-Regeln
 
 | Art | Aufbau | Länge |

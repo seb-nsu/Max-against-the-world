@@ -15,6 +15,10 @@ signal geladen(slot: int)
 var saveload := CQSaveLoad.new()
 ## Gemerkter Speicherwunsch (Platz) während einer Szene, -1 = keiner
 var _ausstehend := -1
+## Vorschaubild für das nächste Speichern; das Pausemenü merkt es sich beim Öffnen, damit das
+## Menü selbst nicht im Bild ist. Ohne gemerktes Bild wird der Bildschirm direkt aufgenommen.
+var vorschau: Image
+const VORSCHAU_GROESSE := Vector2i(96, 54)
 
 
 func _ready() -> void:
@@ -35,6 +39,9 @@ func _process(_delta: float) -> void:
 
 
 func _unhandled_input(event: InputEvent) -> void:
+	# Im Hauptmenü (kein Raum) gibt es nichts zu speichern oder zu laden
+	if not is_instance_valid(R.current):
+		return
 	if event.is_action_pressed("cq_schnellspeichern"):
 		get_viewport().set_input_as_handled()
 		speichern(CQSaveLoad.SCHNELL)
@@ -70,6 +77,8 @@ func _speichern_jetzt(slot: int, beschreibung := "") -> bool:
 		]
 	var ok := saveload.save_game(slot, beschreibung)
 	if ok:
+		_vorschau_schreiben(slot)
+		Klang.geraeusch("speichern")
 		E.game_saved.emit()
 		gespeichert.emit(slot)
 		if slot == CQSaveLoad.SCHNELL or slot <= CQSaveLoad.MANUELL_ANZAHL:
@@ -116,3 +125,41 @@ func neuester_platz() -> int:
 			zeit = float(kopf.get("zeitstempel", 0.0))
 			bester = slot
 	return bester
+
+
+#region Vorschaubild ###############################################################################
+## Bildschirm jetzt aufnehmen (Pausemenü beim Öffnen). Ohne Bildschirm (headless) nichts.
+func vorschau_merken() -> void:
+	vorschau = _aufnahme()
+
+
+func _aufnahme() -> Image:
+	if DisplayServer.get_name() == "headless":
+		return null
+	var tex := get_viewport().get_texture()
+	return tex.get_image() if tex else null
+
+
+static func vorschau_pfad(slot: int) -> String:
+	return CQSaveLoad.platz_pfad(slot).get_basename() + ".png"
+
+
+func _vorschau_schreiben(slot: int) -> void:
+	var bild: Image = vorschau if vorschau else _aufnahme()
+	if bild == null or bild.is_empty():
+		if FileAccess.file_exists(vorschau_pfad(slot)):
+			DirAccess.remove_absolute(vorschau_pfad(slot))
+		return
+	bild = bild.duplicate()
+	bild.resize(VORSCHAU_GROESSE.x, VORSCHAU_GROESSE.y, Image.INTERPOLATE_BILINEAR)
+	bild.save_png(vorschau_pfad(slot))
+
+
+func vorschau_laden(slot: int) -> Texture2D:
+	if not FileAccess.file_exists(vorschau_pfad(slot)):
+		return null
+	var bild := Image.load_from_file(vorschau_pfad(slot))
+	return ImageTexture.create_from_image(bild) if bild else null
+
+
+#endregion

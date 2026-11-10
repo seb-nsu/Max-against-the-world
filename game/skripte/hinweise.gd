@@ -110,6 +110,7 @@ func naechste_zeilen(schritt: String, mit_wartezeile := true) -> Array:
 
 ## Klick auf die Pfote.
 func pfote_geklickt() -> void:
+	Klang.geraeusch("hinweis")
 	if not pfote_aktiv():
 		return
 	var schritt := schritt_waehlen()

@@ -26,7 +26,6 @@ size_flags_horizontal = 0
 mouse_filter = 2
 theme_override_colors/font_outline_color = Color(0.14902, 0.168627, 0.266667, 1)
 theme_override_constants/outline_size = 2
-theme_override_font_sizes/normal_font_size = 12
 bbcode_enabled = true
 text = "An [shake]overhead[/shake] dialog text"
 fit_content = true
