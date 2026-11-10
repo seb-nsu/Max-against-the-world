@@ -2,7 +2,14 @@ name: Prüfen
 
 on:
   push:
+    branches: [main]   # Zweige mit PR prüft pull_request, sonst liefe alles doppelt
   pull_request:
+  workflow_dispatch:
+
+# Ein neuer Push bricht den laufenden Lauf desselben Zweigs ab (spart Actions-Minuten)
+concurrency:
+  group: pruefen-${{ github.head_ref || github.ref }}
+  cancel-in-progress: true
 
 jobs:
   dokumente:
