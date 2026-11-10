@@ -12,7 +12,7 @@ Alle Welten teilen einen Pixel-Art-Stil in 480×270 Pixeln mit einer gemeinsamen
 | Inventar-Icons | 36×36 Pixel | Einheitliche Inventarleiste |
 | Mauszeiger | 24×24 Pixel |  |
 | Palette | Eine gemeinsame Palette mit 32 Farben, zum Beispiel „Endesga 32“ von Lospec | Alle Assets werden darauf umgefärbt; so passen auch fremde Pakete |
-| Perspektive | Streng seitlich wie eine Bühne, Rückwand parallel zur Bildebene; begehbarer Boden als flaches Band im unteren Drittel | Klassische Adventure-Ansicht; Figuren werden nach hinten nur leicht kleiner, Laufwege bleiben lesbar |
+| Perspektive | Mittelweg mit leichter Tiefe (Entscheidung 10. November 2026): Rückwand frontal, sanfte Ein-Punkt-Perspektive mit Fluchtpunkt in der Bildmitte auf etwa 40 Prozent der Höhe, Seitenwände höchstens als schmale schräge Streifen am Rand; begehbarer Boden etwa 90 bis 120 Pixel hoch im unteren Drittel bis zur unteren Hälfte. Figuren-Sprites bleiben streng seitlich | Wie die klassischen Adventures der 1990er: Figuren laufen auch nach hinten und werden dort auf etwa 80 Prozent kleiner (Feld `tiefe: 0.8` im Raum-Layout), Laufwege bleiben lesbar |
 | Licht | Von oben links, weiche Schatten nach rechts unten | Einheitlich über alle Szenen |
 | Konturen | Figuren und Gegenstände mit dunkler, farbiger Kontur (nicht reines Schwarz); Hintergründe ohne Kontur | Figuren heben sich vom Hintergrund ab |
 | Kantenglättung | Keine; saubere Pixelgruppen ohne Farbverläufe | Echte Pixel-Art |
@@ -49,7 +49,7 @@ Alle Welten teilen einen Pixel-Art-Stil in 480×270 Pixeln mit einer gemeinsamen
 2. Hintergrund in 480×270 erzeugen oder umwandeln.
 3. In Aseprite: Palette anwenden, Perspektive prüfen, Laufbereich frei lassen, störende Details entfernen.
 4. Gegenstände der Szene als Sammelbild erzeugen und ausschneiden.
-5. In Godot einsetzen und mit Max als Platzhalter testen, ob Größen und Laufwege stimmen.
+5. In Godot einsetzen und mit Max als Platzhalter testen, ob Größen und Laufwege stimmen. Bei Boden mit Tiefe im Layout `tiefe: 0.8` eintragen (Ablauf in `game/README.md`, Abschnitt „Grafik ersetzen“).
 
 **Text in Bildern:** Generatoren schreiben fast immer fehlerhaft. Schilder, Logo, Programmzeitschrift und Kalenderzahlen deshalb ohne Text erzeugen und die Schrift später von Hand in Aseprite setzen. Was der Spieler für ein Rätsel oder das Notizbuch lesen muss (Kalender, Satzung, Kritzeleien, Hinweiszettel, Tafeln), bekommt zusätzlich eine Nahansicht in 480×270; kurze Texte, die Max beim Ansehen vorliest (etwa Steckbrief, Opas Papyrus), bleiben normales Ansehen. Es sind genau 14 Nahansichten; welche, steht in den Welt-Tabellen (`welten/*.yaml`), die Bilder beschreiben die Grafik-Dateien (Zeile „Nahansichten“), den Bildschirm `05-spielsysteme.md`. Kleine Bildschirme in der Szene (Zapp-O-Mat, Monitorwand, Röhrenfernseher, Empfangsmonitor) bekommen kein eigenes Bild: Beim Ansehen blendet Godot den Ausschnitt doppelt vergrößert und ohne Glättung ein.
 
@@ -78,13 +78,13 @@ Ein vollständiger Prompt besteht aus drei Teilen: **Baustein** (Technik, von hi
 **KONZEPT** (ChatGPT oder Gemini, nur als Vorlage):
 
 ```text
-Concept art for a 2D point-and-click adventure game in the style of classic 1990s adventure games, strictly side view like a flat theater stage, camera at chest height looking straight at the back wall, back wall parallel to the picture plane, no vanishing-point perspective, no top-down or three-quarter view, floor as a flat walkable band across the lower third kept free of objects except at the left and right edges, light from the upper left with soft shadows to the lower right, humorous and whimsical, warm hand-painted look, 16:9, no text, no letters, no logos.
+Concept art for a 2D point-and-click adventure game in the style of classic 1990s adventure games, front view of the room with gentle one-point perspective, camera at the eye level of a standing person looking straight at the back wall, back wall parallel to the picture plane, vanishing point in the center at about 40 percent of the image height, side walls at most as narrow angled strips at the image edges, open walkable floor with gentle depth across the lower third to half of the image kept free of objects except at the left and right edges, no top-down, bird's-eye or strong three-quarter view, no fisheye, light from the upper left with soft shadows to the lower right, humorous and whimsical, warm hand-painted look, 16:9, no text, no letters, no logos.
 ```
 
 **HINTERGRUND** (`rd_plus__environment`, 480×270):
 
 ```text
-Pixel art background, 480x270, strictly side view like a flat stage, camera at eye level, back wall parallel to the picture plane, no vanishing-point perspective, walkable floor as a flat band about 90 pixels high kept clear in the lower third, large objects only against the back wall or at the left and right edges, exits clearly readable, light from upper left with soft shadows to the lower right, clean pixel clusters, no anti-aliasing, no outlines, no characters, all signs, labels and book covers blank.
+Pixel art background, 480x270, front view with gentle one-point perspective, camera at eye level, back wall parallel to the picture plane, vanishing point in the center, side walls only as narrow angled strips at the edges, open walkable floor with gentle depth about 90 to 120 pixels high kept clear in the lower part, large objects only against the back wall or at the left and right edges, exits clearly readable, light from upper left with soft shadows to the lower right, clean pixel clusters, no anti-aliasing, no outlines, no characters, all signs, labels and book covers blank.
 ```
 
 **FIGUR** (`rd_pro__default`, Menschen etwa 84 Pixel):
@@ -140,7 +140,7 @@ Für Gehen und Stehen reichen `rd_advanced_animation__walking` und `__idle` mit 
 **Verbotenes** (Feld für Negativ-Prompt, falls vorhanden; bei Karte und Reisetasche „top-down view“ weglassen, bei Hintergründen „more than one character“ durch „characters, people“ ersetzen. ChatGPT und Gemini haben kein solches Feld, dort stehen die wichtigsten Verbote schon im Baustein):
 
 ```text
-text, letters, numbers, watermark, logo, signature, blur, gradients, anti-aliasing, photorealism, 3D render, isometric view, top-down view, vanishing-point perspective, tilted floor, pure black outlines, drop shadow, cropped feet, more than one character
+text, letters, numbers, watermark, logo, signature, blur, gradients, anti-aliasing, photorealism, 3D render, isometric view, top-down view, bird's-eye view, strong three-quarter view, fisheye, steep tilted floor, pure black outlines, drop shadow, cropped feet, more than one character
 ```
 
 ### Steckbriefe der Hauptfiguren

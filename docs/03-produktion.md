@@ -6,7 +6,7 @@ Diese Datei sammelt alle Absprachen zu Technik, Grafik und Audio an einer Stelle
 
 | Bereich | Entscheidung | Warum |
 | --- | --- | --- |
-| Spielart | 2D-Point-and-Click in Seitenansicht wie eine Bühne, zwei spielbare Figuren (Max und Pixel) | Klassische Adventure-Ansicht, wenig Zeichenarbeit, passt zu KI-Hintergründen |
+| Spielart | 2D-Point-and-Click, Räume frontal mit leichter Tiefe (Figuren werden nach hinten kleiner), zwei spielbare Figuren (Max und Pixel) | Klassische Adventure-Ansicht, wenig Zeichenarbeit, passt zu KI-Hintergründen |
 | Engine | Godot 4 mit dem Plugin Popochiu | Kostenlos, Popochiu bringt Räume, Hotspots, Inventar, Dialoge und Speichern für Point-and-Click mit |
 | Auflösung | 480×270 Pixel, 4-fach auf 1920×1080 skaliert; breite Räume bis 960×270. Vorläufig (9. November 2026), nach den ersten Testszenen noch einmal prüfen; die Zahl steht zentral in `tools/aufloesung.py` | Gespielt wird vor allem am Laptop und Rechner, dort wirkte 320×180 zu grob; glatt skalierbar auf 1080p und 4K, auf 1440p mit schmalem Rand |
 | Palette | Eine gemeinsame 32-Farben-Palette, z. B. Endesga 32 von Lospec | Alle Bilder, auch fremde, werden darauf umgefärbt und passen zusammen |
@@ -213,7 +213,7 @@ Quellen: [games-stats.com zu Lucy Dreaming](https://games-stats.com/steam/game/l
 
 ## Brauchst du einen Level-Editor?
 
-Nein. Bei einem Point-and-Click in Seitenansicht ist jeder Raum ein Hintergrundbild mit unsichtbaren Flächen darüber. Das erledigt der Godot-Editor mit Popochiu bereits:
+Nein. Bei einem 2D-Point-and-Click ist jeder Raum ein Hintergrundbild mit unsichtbaren Flächen darüber. Das erledigt der Godot-Editor mit Popochiu bereits:
 
 - **Räume:** Hintergrund, Laufbereich (Polygon, auf dem die Figur gehen darf), Hotspots (anklickbare Flächen), Props (Objekte mit Zuständen), Regionen (z. B. Figur wird kleiner, wenn sie nach hinten geht).
 - **Figuren, Inventar und Dialoge:** eigene Fenster im Popochiu-Panel.

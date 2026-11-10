@@ -7,6 +7,8 @@
 #
 # Koordinaten in Spielpixeln (tools/aufloesung.py), Rechteck = [x, y, breite, hoehe],
 # gehe = Punkt, zu dem die Figur vor der Aktion läuft.
+# tiefe = optional, z. B. 0.8: Figuren am oberen Rand des Laufbereichs auf 80 Prozent verkleinert
+# (Raumansicht mit leichter Tiefe; erst eintragen, wenn der echte Hintergrund drin ist).
 # Schlüssel der Hotspots = Objekt-ID, die godot_raeume.py aus dem Auslöser des Skripts
 # ableitet („Ansehen: Ausgestopfter Fisch“ → ausgestopfter_fisch).
 

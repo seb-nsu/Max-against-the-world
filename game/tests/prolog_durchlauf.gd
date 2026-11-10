@@ -307,6 +307,7 @@ func _welt_1() -> void:
 	_pruefe(_gesagt("W1_TAV_MAX_0090"), "erster Wechsel zurück: 0090")
 	await _rundreise("nach R1a")
 	_pruefe(not _raum().has_character("Minka"), "Minka bleibt nach Laden weg")
+	await _tiefe_pruefen()
 
 	# R1b: Wein bestellen
 	var hum_d = _dialog("Humbert")
@@ -1129,6 +1130,28 @@ func _i():
 
 func _raum() -> PopochiuRoom:
 	return root.get_node("R").current
+
+
+## Raumansicht mit leichter Tiefe (Entscheidung 10. Nov. 2026): mit „tiefe: 0.8“ im Layout ist eine
+## Figur am oberen Rand des Laufbereichs 80 Prozent groß, am unteren 100; ohne Eintrag bleibt sie 1.
+func _tiefe_pruefen() -> void:
+	var r = _raum()
+	var plan: Dictionary = r.bauplan()
+	var ys: Array = plan.get("laufbereich", []).map(func(p): return float(p[1]))
+	var max_f = _c().Max
+	var vorher: Vector2 = max_f.position
+	plan["tiefe"] = 0.8
+	r.tiefe_anwenden()
+	max_f.position.y = ys.min()
+	await process_frame
+	_pruefe(absf(max_f.scale.y - 0.8) < 0.01, "Tiefe: hinten 80 Prozent (%.2f)" % max_f.scale.y)
+	max_f.position.y = ys.max()
+	await process_frame
+	_pruefe(absf(max_f.scale.y - 1.0) < 0.01, "Tiefe: vorn 100 Prozent (%.2f)" % max_f.scale.y)
+	plan.erase("tiefe")
+	r.tiefe_anwenden()
+	max_f.position = vorher
+	_pruefe(max_f.scale == Vector2.ONE and max_f.scaling_region.is_empty(), "Tiefe aus: Originalgröße")
 
 
 func _raum_name() -> String:

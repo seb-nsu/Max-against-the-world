@@ -201,7 +201,11 @@ echte Grafik:
 2. Im Editor die Textur des Props bzw. der Figur austauschen. Hintergründe sind das Prop
    `Background` jedes Raums.
 3. Hotspot-Umrisse, Laufbereich und Marker an das neue Bild anpassen (Popochiu-Werkzeuge im
-   Editor).
+   Editor). Hat der Boden im Bild Tiefe (Raumansicht „Mittelweg“, Entscheidung 10. November
+   2026), im Layout des Raums `tiefe: 0.8` eintragen und `laufbereich` auf den Boden im Bild
+   setzen, dann `tools/godot_raeume.py` laufen lassen: `CQRaum.tiefe_anwenden()` verkleinert die
+   Figuren von 100 Prozent am unteren Rand des Laufbereichs auf 80 Prozent an seiner Hinterkante.
+   Räume mit Treppe oder senkrechtem Laufweg (Treppenhaus) bekommen keinen Eintrag.
 4. Gegenstands-Icons: die Pfade stehen im Bauplan (`icons` je Zustand); dafür in
    `tools/godot_raeume.py` den Pfad ändern oder im Gegenstandsskript `aussehen_anpassen()`
    überschreiben.

@@ -191,6 +191,7 @@ def baue(abschnitt):
             "farbe": lay.get("farbe", "#5a4a3a"),
             "laufbereich": lay.get("laufbereich", [[0, hoehe - s_(40)], [breite, hoehe - s_(40)], [breite, hoehe], [0, hoehe]]),
             "marker": lay.get("marker", {}),
+            **({"tiefe": float(lay["tiefe"])} if "tiefe" in lay else {}),
             "figuren": [],
             "hotspots": [],
             "props": [],
