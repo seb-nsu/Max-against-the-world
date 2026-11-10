@@ -45,22 +45,22 @@ treppenhaus:
   # --cq-layout=treppenhaus. Laufbereich: Flur vorne plus schmales Band über die Stufen nach oben rechts.
   hintergrund: res://grafik/hintergruende/w0_bg_treppenhaus_v01.png
   tiefe: 0.85
-  laufbereich: [[8, 357], [8, 309], [80, 299], [91, 277], [240, 277], [272, 280], [299, 261], [527, 85], [547, 85], [544, 97], [315, 275], [331, 304], [400, 349], [427, 357]]
+  laufbereich: [[8, 357], [8, 309], [80, 299], [91, 277], [250, 277], [262, 262], [560, 73], [580, 73], [578, 86], [290, 280], [300, 300], [400, 349], [427, 357]]
   marker:
     start: [173, 320]
     von_wohnzimmer: [67, 323]      # aus der Tür links
-    von_dachboden: [493, 123]       # oben auf der Treppe unter der Luke
+    von_dachboden: [540, 98]        # oben auf der Treppe unter der Luke
   hotspots:
     hut_am_haken: {rect: [171, 112, 27, 32], gehe: [187, 296]}   # Hut ist ins Bild gemalt
     regenschirm: {rect: [93, 207, 27, 83], gehe: [110, 300]}
     maentel: {rect: [123, 130, 48, 160], gehe: [150, 300], name: Mäntel}
     deckenlampe: {rect: [198, 10, 52, 26], gehe: [220, 300]}
-    kisten: {rect: [430, 180, 210, 170], gehe: [330, 320]}   # Kisten unter der Treppe
+    kisten: {rect: [400, 190, 240, 160], gehe: [330, 320]}   # Kisten unter der Treppe
     fenster: {rect: [288, 73, 53, 80], gehe: [273, 299]}
-    treppe: {rect: [267, 53, 293, 233], gehe: [287, 299]}
+    treppe: {rect: [341, 40, 239, 150], gehe: [270, 282]}   # rechts vom Fenster und über den Kisten, sonst verdeckt sie beide
   ausgaenge:
     wohnzimmer: {rect: [7, 53, 73, 247], gehe: [53, 320]}
-    dachboden: {rect: [400, 0, 227, 45], gehe: [536, 91]}
+    dachboden: {rect: [400, 0, 227, 45], gehe: [556, 85]}
 
 dachboden:
   farbe: "#7a5c43"

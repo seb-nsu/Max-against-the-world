@@ -39,6 +39,8 @@
 [ext_resource type="PackedScene" uid="uid://4l46a67xb8f8" path="res://game/rooms/dachboden/hotspots/fassungen/hotspot_fassungen.tscn" id="32_m8m18"]
 [ext_resource type="PackedScene" uid="uid://c0a10o1lu3vc2" path="res://game/rooms/dachboden/hotspots/empfaenger/hotspot_empfaenger.tscn" id="33_8pmei"]
 [ext_resource type="PackedScene" uid="uid://dgq1ug25fvsth" path="res://game/rooms/dachboden/hotspots/lampe/hotspot_lampe.tscn" id="34_mcqit"]
+[ext_resource type="PackedScene" uid="uid://b4mt1pnk4cum1" path="res://game/rooms/dachboden/hotspots/umzugskartons/hotspot_umzugskartons.tscn" id="35_m8m18"]
+[ext_resource type="PackedScene" uid="uid://242nenwfhtxb" path="res://game/rooms/dachboden/hotspots/steckdose/hotspot_steckdose.tscn" id="36_8pmei"]
 
 [node name="RoomDachboden" type="Node2D" unique_id=722265826]
 script = ExtResource("1_27u1a")
@@ -244,6 +246,18 @@ description = "UI_OBJ_LAMPE"
 baseline = 9
 walk_to_point = Vector2(0, 193.5)
 interaction_polygon = PackedVector2Array(-24, -9.5, 24, -9.5, 24, 9.5, -24, 9.5)
+
+[node name="Umzugskartons" parent="Hotspots" unique_id=1978452836 instance=ExtResource("35_m8m18")]
+position = Vector2(32.5, 177.5)
+description = "UI_OBJ_UMZUGSKARTONS"
+baseline = 42
+walk_to_point = Vector2(62.5, 84.5)
+
+[node name="Steckdose" parent="Hotspots" unique_id=587515452 instance=ExtResource("36_8pmei")]
+position = Vector2(269, 199)
+description = "UI_OBJ_STECKDOSE"
+baseline = 11
+walk_to_point = Vector2(1, 36)
 
 [node name="Regions" type="Node2D" parent="." unique_id=182010566]
 

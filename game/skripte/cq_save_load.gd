@@ -14,7 +14,7 @@ extends PopochiuSaveLoad
 
 ## Ordner der Spielstände (Tests nutzen einen eigenen, siehe tests/prolog_durchlauf.gd)
 static var ordner := "user://saves/"
-const VERSION := 1
+const VERSION := 2  # 2: Grundauflösung 640×360 (vorher 480×270), Koordinaten werden beim Laden umgerechnet
 const SCHNELL := 13
 const AUTO := [14, 15, 16]
 const MANUELL_ANZAHL := 12
@@ -54,6 +54,7 @@ func save_game(slot := 1, description := "") -> bool:
 	DirAccess.make_dir_recursive_absolute(ordner)
 	var datei := {
 		version = VERSION,
+		aufloesung_hoehe = _hoehe(),
 		platz = platz_name(slot),
 		beschreibung = description,
 		datum = Time.get_datetime_string_from_system(false, true),
@@ -116,9 +117,33 @@ static func umwandeln(d: Dictionary) -> Dictionary:
 	var v := int(d.get("version", 0))
 	if v > VERSION:
 		push_warning("Spielstand aus neuerer Spielversion (%d > %d)" % [v, VERSION])
-	# if v < 2: d = _von_1_auf_2(d)
+	var alt := float(d.get("aufloesung_hoehe", 270 if v < 2 else _hoehe()))
+	if not is_equal_approx(alt, _hoehe()):
+		d = _skalieren(d, _hoehe() / alt)
+	d.aufloesung_hoehe = _hoehe()
 	d.version = VERSION
 	return d
+
+
+static func _hoehe() -> float:
+	return float(ProjectSettings.get_setting("display/window/size/viewport_height", 270))
+
+
+## Spielpixel-Koordinaten umrechnen: {x, y}-Paare und die Vektor-Kodierung aus json_fest().
+static func _skalieren(v: Variant, f: float) -> Variant:
+	if v is Dictionary:
+		if v.size() == 1 and v.has("__v2"):
+			return {__v2 = [v.__v2[0] * f, v.__v2[1] * f]}
+		if v.size() == 1 and v.has("__v2a"):
+			return {__v2a = v.__v2a.map(func(p): return [p[0] * f, p[1] * f])}
+		var neu := {}
+		var paar: bool = v.has("x") and v.has("y") and (v.x is float or v.x is int) and (v.y is float or v.y is int)
+		for k in v:
+			neu[k] = v[k] * f if paar and (k == "x" or k == "y") else _skalieren(v[k], f)
+		return neu
+	if v is Array:
+		return v.map(func(e): return _skalieren(e, f))
+	return v
 
 
 ## Dieselben Daten wie PopochiuSaveLoad.save_game(), nur als Dictionary statt Datei.

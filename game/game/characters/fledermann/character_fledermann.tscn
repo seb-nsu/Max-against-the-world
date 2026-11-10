@@ -6,11 +6,11 @@
 [node name="CharacterFledermann" type="Area2D" unique_id=1569251706]
 script = ExtResource("1_p0di6")
 walk_speed = 120.0
-dialog_pos = Vector2(0, -149)
+dialog_pos = Vector2(0, -200)
 script_name = "Fledermann"
 description = "UI_OBJ_FLEDERMANN"
 cursor = 8
-interaction_polygon = PackedVector2Array(-24, -145, 24, -145, 24, 0, -24, 0)
+interaction_polygon = PackedVector2Array(-24.5, -196, 24.5, -196, 24.5, 0, -24.5, 0)
 
 [node name="ScalingPolygon" type="CollisionPolygon2D" parent="." unique_id=1378132278]
 polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
@@ -20,11 +20,11 @@ polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1304596805]
 texture_filter = 1
 texture = ExtResource("2_dyk6i")
-offset = Vector2(0, -72.5)
+offset = Vector2(0, -98)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1879586493]
 visible = false
-polygon = PackedVector2Array(-24, -145, 24, -145, 24, 0, -24, 0)
+polygon = PackedVector2Array(-24.5, -196, 24.5, -196, 24.5, 0, -24.5, 0)
 
 [node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=1534910245]
 visible = false

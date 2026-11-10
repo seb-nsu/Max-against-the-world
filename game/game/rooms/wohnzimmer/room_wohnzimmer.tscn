@@ -15,6 +15,9 @@
 [ext_resource type="PackedScene" uid="uid://ww8fdx0sdlme" path="res://game/rooms/wohnzimmer/hotspots/girlande/hotspot_girlande.tscn" id="12_lnns3"]
 [ext_resource type="PackedScene" uid="uid://d1slpglnndrpu" path="res://game/rooms/wohnzimmer/markers/von_treppenhaus/marker_von_treppenhaus.tscn" id="12_xnbt0"]
 [ext_resource type="PackedScene" uid="uid://byyu862c5h7tt" path="res://game/rooms/wohnzimmer/hotspots/geschenke/hotspot_geschenke.tscn" id="13_lhb87"]
+[ext_resource type="PackedScene" uid="uid://c2t7jwt6hfjuj" path="res://game/rooms/wohnzimmer/hotspots/schrank/hotspot_schrank.tscn" id="14_cd42f"]
+[ext_resource type="PackedScene" uid="uid://caymi67qp5qa5" path="res://game/rooms/wohnzimmer/hotspots/stehlampe/hotspot_stehlampe.tscn" id="15_01qb2"]
+[ext_resource type="PackedScene" uid="uid://cur5bf0rsfyhy" path="res://game/rooms/wohnzimmer/hotspots/zeitung/hotspot_zeitung.tscn" id="16_6xbdn"]
 
 [node name="RoomWohnzimmer" type="Node2D" unique_id=1451506244]
 script = ExtResource("1_cljk4")
@@ -98,6 +101,24 @@ description = "UI_OBJ_GESCHENKE"
 baseline = 14
 walk_to_point = Vector2(-1.5, 31.5)
 interaction_polygon = PackedVector2Array(-17.5, -14.5, 17.5, -14.5, 17.5, 14.5, -17.5, 14.5)
+
+[node name="Schrank" parent="Hotspots" unique_id=837193103 instance=ExtResource("14_cd42f")]
+position = Vector2(55, 147.5)
+description = "UI_OBJ_SCHRANK"
+baseline = 137
+walk_to_point = Vector2(35, 172.5)
+
+[node name="Stehlampe" parent="Hotspots" unique_id=1248078976 instance=ExtResource("15_01qb2")]
+position = Vector2(239, 117.5)
+description = "UI_OBJ_STEHLAMPE"
+baseline = 52
+walk_to_point = Vector2(1, 182.5)
+
+[node name="Zeitung" parent="Hotspots" unique_id=1556856929 instance=ExtResource("16_6xbdn")]
+position = Vector2(322, 199)
+description = "UI_OBJ_ZEITUNG"
+baseline = 9
+walk_to_point = Vector2(8, 101)
 
 [node name="Regions" type="Node2D" parent="." unique_id=1030263414]
 

@@ -6,11 +6,11 @@
 [node name="CharacterKalle" type="Area2D" unique_id=1500944891]
 script = ExtResource("1_pdfbc")
 walk_speed = 120.0
-dialog_pos = Vector2(0, -149)
+dialog_pos = Vector2(0, -200)
 script_name = "Kalle"
 description = "UI_OBJ_KALLE"
 cursor = 8
-interaction_polygon = PackedVector2Array(-24, -145, 24, -145, 24, 0, -24, 0)
+interaction_polygon = PackedVector2Array(-24.5, -196, 24.5, -196, 24.5, 0, -24.5, 0)
 
 [node name="ScalingPolygon" type="CollisionPolygon2D" parent="." unique_id=1986885728]
 polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
@@ -20,11 +20,11 @@ polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=804783050]
 texture_filter = 1
 texture = ExtResource("2_1rq5x")
-offset = Vector2(0, -72.5)
+offset = Vector2(0, -98)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=379037562]
 visible = false
-polygon = PackedVector2Array(-24, -145, 24, -145, 24, 0, -24, 0)
+polygon = PackedVector2Array(-24.5, -196, 24.5, -196, 24.5, 0, -24.5, 0)
 
 [node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=126235406]
 visible = false

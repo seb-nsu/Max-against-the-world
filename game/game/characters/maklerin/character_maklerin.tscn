@@ -6,11 +6,11 @@
 [node name="CharacterMaklerin" type="Area2D" unique_id=94772486]
 script = ExtResource("1_q0jry")
 walk_speed = 180.0
-dialog_pos = Vector2(0, -153)
+dialog_pos = Vector2(0, -205)
 script_name = "Maklerin"
 description = "UI_OBJ_MAKLERIN"
 cursor = 8
-interaction_polygon = PackedVector2Array(-24.5, -149, 24.5, -149, 24.5, 0, -24.5, 0)
+interaction_polygon = PackedVector2Array(-25, -201, 25, -201, 25, 0, -25, 0)
 
 [node name="ScalingPolygon" type="CollisionPolygon2D" parent="." unique_id=2063769489]
 polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
@@ -20,11 +20,11 @@ polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=18594162]
 texture_filter = 1
 texture = ExtResource("2_pdgof")
-offset = Vector2(0, -74.5)
+offset = Vector2(0, -100.5)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1288420137]
 visible = false
-polygon = PackedVector2Array(-24.5, -149, 24.5, -149, 24.5, 0, -24.5, 0)
+polygon = PackedVector2Array(-25, -201, 25, -201, 25, 0, -25, 0)
 
 [node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=183376575]
 visible = false

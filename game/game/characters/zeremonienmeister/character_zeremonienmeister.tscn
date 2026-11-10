@@ -6,11 +6,11 @@
 [node name="CharacterZeremonienmeister" type="Area2D" unique_id=494700912]
 script = ExtResource("1_tkq0n")
 walk_speed = 120.0
-dialog_pos = Vector2(0, -153)
+dialog_pos = Vector2(0, -205)
 script_name = "Zeremonienmeister"
 description = "UI_OBJ_ZEREMONIENMEISTER"
 cursor = 8
-interaction_polygon = PackedVector2Array(-24.5, -149, 24.5, -149, 24.5, 0, -24.5, 0)
+interaction_polygon = PackedVector2Array(-25, -201, 25, -201, 25, 0, -25, 0)
 
 [node name="ScalingPolygon" type="CollisionPolygon2D" parent="." unique_id=1622181597]
 polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
@@ -20,11 +20,11 @@ polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1309729943]
 texture_filter = 1
 texture = ExtResource("2_f35jx")
-offset = Vector2(0, -74.5)
+offset = Vector2(0, -100.5)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1010730522]
 visible = false
-polygon = PackedVector2Array(-24.5, -149, 24.5, -149, 24.5, 0, -24.5, 0)
+polygon = PackedVector2Array(-25, -201, 25, -201, 25, 0, -25, 0)
 
 [node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=303476925]
 visible = false

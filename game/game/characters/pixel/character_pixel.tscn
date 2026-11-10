@@ -7,11 +7,11 @@
 script = ExtResource("1_w0ns3")
 text_color = Color(0.37254903, 0.827451, 0.78431374, 1)
 walk_speed = 180.0
-dialog_pos = Vector2(0, -34)
+dialog_pos = Vector2(0, -44)
 script_name = "Pixel"
 description = "UI_OBJ_PIXEL"
 cursor = 8
-interaction_polygon = PackedVector2Array(-30, -30, 30, -30, 30, 0, -30, 0)
+interaction_polygon = PackedVector2Array(-40.5, -40, 40.5, -40, 40.5, 0, -40.5, 0)
 
 [node name="ScalingPolygon" type="CollisionPolygon2D" parent="." unique_id=524769175]
 polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
@@ -21,11 +21,11 @@ polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=575270812]
 texture_filter = 1
 texture = ExtResource("2_h3kek")
-offset = Vector2(0, -15)
+offset = Vector2(0, -20)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1994495502]
 visible = false
-polygon = PackedVector2Array(-30, -30, 30, -30, 30, 0, -30, 0)
+polygon = PackedVector2Array(-40.5, -40, 40.5, -40, 40.5, 0, -40.5, 0)
 
 [node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=207229034]
 visible = false

@@ -6,11 +6,11 @@
 [node name="CharacterSicherheitsmann" type="Area2D" unique_id=1306300928]
 script = ExtResource("1_qjg4y")
 walk_speed = 120.0
-dialog_pos = Vector2(0, -164)
+dialog_pos = Vector2(0, -220)
 script_name = "Sicherheitsmann"
 description = "UI_OBJ_SICHERHEITSMANN"
 cursor = 8
-interaction_polygon = PackedVector2Array(-26.5, -160, 26.5, -160, 26.5, 0, -26.5, 0)
+interaction_polygon = PackedVector2Array(-27, -216, 27, -216, 27, 0, -27, 0)
 
 [node name="ScalingPolygon" type="CollisionPolygon2D" parent="." unique_id=1930583498]
 polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
@@ -20,11 +20,11 @@ polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1025866867]
 texture_filter = 1
 texture = ExtResource("2_xjep1")
-offset = Vector2(0, -80)
+offset = Vector2(0, -108)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=263745294]
 visible = false
-polygon = PackedVector2Array(-26.5, -160, 26.5, -160, 26.5, 0, -26.5, 0)
+polygon = PackedVector2Array(-27, -216, 27, -216, 27, 0, -27, 0)
 
 [node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=1768650955]
 visible = false

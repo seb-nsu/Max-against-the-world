@@ -6,11 +6,11 @@
 [node name="CharacterTouristin" type="Area2D" unique_id=1553414570]
 script = ExtResource("1_myqn1")
 walk_speed = 120.0
-dialog_pos = Vector2(0, -144)
+dialog_pos = Vector2(0, -193)
 script_name = "Touristin"
 description = "UI_OBJ_TOURISTIN"
 cursor = 8
-interaction_polygon = PackedVector2Array(-23, -140, 23, -140, 23, 0, -23, 0)
+interaction_polygon = PackedVector2Array(-23.5, -189, 23.5, -189, 23.5, 0, -23.5, 0)
 
 [node name="ScalingPolygon" type="CollisionPolygon2D" parent="." unique_id=1264797064]
 polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
@@ -20,11 +20,11 @@ polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1207733918]
 texture_filter = 1
 texture = ExtResource("2_qds54")
-offset = Vector2(0, -70)
+offset = Vector2(0, -94.5)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=2068595022]
 visible = false
-polygon = PackedVector2Array(-23, -140, 23, -140, 23, 0, -23, 0)
+polygon = PackedVector2Array(-23.5, -189, 23.5, -189, 23.5, 0, -23.5, 0)
 
 [node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=1001604114]
 visible = false

@@ -6,11 +6,11 @@
 [node name="CharacterRamses" type="Area2D" unique_id=537020594]
 script = ExtResource("1_garhf")
 walk_speed = 120.0
-dialog_pos = Vector2(0, -153)
+dialog_pos = Vector2(0, -205)
 script_name = "Ramses"
 description = "UI_OBJ_RAMSES"
 cursor = 8
-interaction_polygon = PackedVector2Array(-24.5, -149, 24.5, -149, 24.5, 0, -24.5, 0)
+interaction_polygon = PackedVector2Array(-25, -201, 25, -201, 25, 0, -25, 0)
 
 [node name="ScalingPolygon" type="CollisionPolygon2D" parent="." unique_id=2144796197]
 polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
@@ -20,11 +20,11 @@ polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1507139598]
 texture_filter = 1
 texture = ExtResource("2_vp2en")
-offset = Vector2(0, -74.5)
+offset = Vector2(0, -100.5)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1423648073]
 visible = false
-polygon = PackedVector2Array(-24.5, -149, 24.5, -149, 24.5, 0, -24.5, 0)
+polygon = PackedVector2Array(-25, -201, 25, -201, 25, 0, -25, 0)
 
 [node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=382188828]
 visible = false

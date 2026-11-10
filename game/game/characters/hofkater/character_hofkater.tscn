@@ -6,11 +6,11 @@
 [node name="CharacterHofkater" type="Area2D" unique_id=1361457797]
 script = ExtResource("1_1s10n")
 walk_speed = 120.0
-dialog_pos = Vector2(0, -55)
+dialog_pos = Vector2(0, -73)
 script_name = "Hofkater"
 description = "UI_OBJ_HOFKATER"
 cursor = 8
-interaction_polygon = PackedVector2Array(-20, -51, 20, -51, 20, 0, -20, 0)
+interaction_polygon = PackedVector2Array(-20, -69, 20, -69, 20, 0, -20, 0)
 
 [node name="ScalingPolygon" type="CollisionPolygon2D" parent="." unique_id=2086713005]
 polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
@@ -20,11 +20,11 @@ polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1599510223]
 texture_filter = 1
 texture = ExtResource("2_c0h4q")
-offset = Vector2(0, -25.5)
+offset = Vector2(0, -34.5)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=2014318490]
 visible = false
-polygon = PackedVector2Array(-20, -51, 20, -51, 20, 0, -20, 0)
+polygon = PackedVector2Array(-20, -69, 20, -69, 20, 0, -20, 0)
 
 [node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=1443851505]
 visible = false

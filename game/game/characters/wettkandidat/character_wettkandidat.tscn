@@ -6,11 +6,11 @@
 [node name="CharacterWettkandidat" type="Area2D" unique_id=891977969]
 script = ExtResource("1_l6wog")
 walk_speed = 120.0
-dialog_pos = Vector2(0, -144)
+dialog_pos = Vector2(0, -193)
 script_name = "Wettkandidat"
 description = "UI_OBJ_WETTKANDIDAT"
 cursor = 8
-interaction_polygon = PackedVector2Array(-23, -140, 23, -140, 23, 0, -23, 0)
+interaction_polygon = PackedVector2Array(-23.5, -189, 23.5, -189, 23.5, 0, -23.5, 0)
 
 [node name="ScalingPolygon" type="CollisionPolygon2D" parent="." unique_id=1861967761]
 polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
@@ -20,11 +20,11 @@ polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=772106180]
 texture_filter = 1
 texture = ExtResource("2_2lm3e")
-offset = Vector2(0, -70)
+offset = Vector2(0, -94.5)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1622391768]
 visible = false
-polygon = PackedVector2Array(-23, -140, 23, -140, 23, 0, -23, 0)
+polygon = PackedVector2Array(-23.5, -189, 23.5, -189, 23.5, 0, -23.5, 0)
 
 [node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=767773788]
 visible = false

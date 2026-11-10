@@ -278,7 +278,7 @@
     "abstellkammern",
     "thronsaal"
    ],
-   "groesse_px": 140,
+   "groesse_px": 189,
    "spielbar": true
   },
   {
@@ -301,7 +301,7 @@
     "abstellkammern",
     "thronsaal"
    ],
-   "groesse_px": 45,
+   "groesse_px": 61,
    "spielbar": true
   },
   {
@@ -309,7 +309,7 @@
    "name": "Opa",
    "kuerzel": "OPA",
    "raum": [],
-   "groesse_px": 149,
+   "groesse_px": 201,
    "spielbar": false
   },
   {
@@ -324,7 +324,7 @@
     "luftschloss",
     "thronsaal"
    ],
-   "groesse_px": 75,
+   "groesse_px": 101,
    "spielbar": false
   },
   {
@@ -332,7 +332,7 @@
    "name": "Alwin",
    "kuerzel": "ALW",
    "raum": "klassenzimmer",
-   "groesse_px": 155,
+   "groesse_px": 209,
    "spielbar": false
   },
   {
@@ -346,7 +346,7 @@
     "abstellkammern",
     "thronsaal"
    ],
-   "groesse_px": 145,
+   "groesse_px": 196,
    "spielbar": false
   },
   {
@@ -354,7 +354,7 @@
    "name": "Gollo",
    "kuerzel": "GOL",
    "raum": "taverne",
-   "groesse_px": 109,
+   "groesse_px": 147,
    "spielbar": false
   },
   {
@@ -365,7 +365,7 @@
     "taverne",
     "abstellkammern"
    ],
-   "groesse_px": 149,
+   "groesse_px": 201,
    "spielbar": false
   },
   {
@@ -373,7 +373,7 @@
    "name": "Schmied",
    "kuerzel": "SCH",
    "raum": "schmiede",
-   "groesse_px": 149,
+   "groesse_px": 201,
    "spielbar": false
   },
   {
@@ -384,7 +384,7 @@
     "trollbruecke",
     "zauberwald"
    ],
-   "groesse_px": 200,
+   "groesse_px": 270,
    "spielbar": false
   },
   {
@@ -392,7 +392,7 @@
    "name": "Stabmacher",
    "kuerzel": "STA",
    "raum": "zauberstabladen",
-   "groesse_px": 145,
+   "groesse_px": 196,
    "spielbar": false
   },
   {
@@ -403,7 +403,7 @@
     "zauberwald",
     "dorfplatz"
    ],
-   "groesse_px": 120,
+   "groesse_px": 162,
    "spielbar": false
   },
   {
@@ -411,7 +411,7 @@
    "name": "Maklerin",
    "kuerzel": "MAK",
    "raum": "luftschloss",
-   "groesse_px": 149,
+   "groesse_px": 201,
    "spielbar": false
   },
   {
@@ -423,7 +423,7 @@
     "turmkeller",
     "abstellkammern"
    ],
-   "groesse_px": 100,
+   "groesse_px": 135,
    "spielbar": false
   },
   {
@@ -431,7 +431,7 @@
    "name": "Goblin 1",
    "kuerzel": "GO1",
    "raum": "bergwerk",
-   "groesse_px": 85,
+   "groesse_px": 115,
    "spielbar": false
   },
   {
@@ -439,7 +439,7 @@
    "name": "Goblin 2",
    "kuerzel": "GO2",
    "raum": "bergwerk",
-   "groesse_px": 85,
+   "groesse_px": 115,
    "spielbar": false
   },
   {
@@ -447,7 +447,7 @@
    "name": "Moderwort",
    "kuerzel": "MOD",
    "raum": "thronsaal",
-   "groesse_px": 149,
+   "groesse_px": 201,
    "spielbar": false
   },
   {
@@ -455,7 +455,7 @@
    "name": "Smaugi",
    "kuerzel": "SMA",
    "raum": "abstellkammern",
-   "groesse_px": 300,
+   "groesse_px": 340,
    "spielbar": false
   },
   {
@@ -463,7 +463,7 @@
    "name": "Minka",
    "kuerzel": "MIN",
    "raum": "taverne",
-   "groesse_px": 45,
+   "groesse_px": 61,
    "spielbar": false
   },
   {
@@ -471,7 +471,7 @@
    "name": "Huhn",
    "kuerzel": "HUH",
    "raum": "taverne",
-   "groesse_px": 35,
+   "groesse_px": 47,
    "spielbar": false
   },
   {
@@ -483,7 +483,7 @@
     "dorfplatz",
     "trollbruecke"
    ],
-   "groesse_px": 69,
+   "groesse_px": 93,
    "spielbar": false
   },
   {
@@ -494,7 +494,7 @@
     "dorfplatz",
     "trollbruecke"
    ],
-   "groesse_px": 175,
+   "groesse_px": 236,
    "spielbar": false
   },
   {
@@ -502,7 +502,7 @@
    "name": "Schwan",
    "kuerzel": "SWA",
    "raum": "wasserschloss",
-   "groesse_px": 60,
+   "groesse_px": 81,
    "spielbar": false
   },
   {
@@ -546,7 +546,7 @@
     "abstellkammer_1",
     "abstellkammern"
    ],
-   "groesse_px": 75,
+   "groesse_px": 101,
    "spielbar": false
   },
   {
@@ -554,7 +554,7 @@
    "name": "Übungsbesen",
    "kuerzel": null,
    "raum": "klassenzimmer",
-   "groesse_px": 55,
+   "groesse_px": 74,
    "spielbar": false
   }
  ],

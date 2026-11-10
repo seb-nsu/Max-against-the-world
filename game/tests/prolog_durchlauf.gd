@@ -858,6 +858,9 @@ func _rundreise(wo: String) -> void:
 	_pruefe(ok and _datei_da(SLOT), "Speichern (%s)" % wo)
 	var kopf: Dictionary = st.saveload.kopf_lesen(SLOT)
 	_pruefe(int(kopf.get("version", 0)) == CQSaveLoad.VERSION, "Versionsnummer im Spielstand (%s)" % wo)
+	var alt := CQSaveLoad.umwandeln({version = 1, player = {position = {x = 300.0, y = 150.0}}, z = {__v2 = [30, 60]}})
+	_pruefe(is_equal_approx(alt.player.position.x, 400.0) and is_equal_approx(alt.player.position.y, 200.0)
+		and is_equal_approx(alt.z.__v2[1], 80.0), "Alter Spielstand (480×270) wird auf 640×360 umgerechnet")
 	# absichtlich verfälschen
 	_zustand().setze("TEST_SCHMUTZ")
 	_zustand().hinweis_stufe["P9"] = 3

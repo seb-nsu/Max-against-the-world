@@ -13,6 +13,14 @@ enum Bild { AUS, SCHNEE, ANTENNE, BUNT, WIRBEL }
 ## Pixel nach P1: auf der Werkbank (skript/prolog.md, 0360)
 const PIXEL_WERKBANK := Vector2(160, 180)
 const PIXEL_KABEL := Vector2(313, 237)
+## Hintergrund je Zwischenspiel: Prolog Nachmittag, dann später Nachmittag, früher Abend (Lampe aus),
+## Abendrot (Lampe an). Abgeleitet mit tools/stimmung.py aus dem Grundbild.
+const LICHT := [
+	"res://grafik/hintergruende/w0_bg_dachboden_v01.png",
+	"res://grafik/hintergruende/w0_bg_dachboden_rueckkehr1_v01.png",
+	"res://grafik/hintergruende/w0_bg_dachboden_rueckkehr2_v01.png",
+	"res://grafik/hintergruende/w0_bg_dachboden_rueckkehr3_v01.png",
+]
 
 var _erster_besuch := false
 ## Während der P2-Szene zeigt der Zapp-O-Mat kurz die Antenne
@@ -48,6 +56,9 @@ func _zustand_anwenden() -> void:
 	var zapp := get_prop("ZappOMat")
 	if is_instance_valid(zapp) and not _p2_laeuft:
 		zapp.current_frame = bild()
+	var grund := get_prop("Background")
+	if is_instance_valid(grund):
+		grund.texture = load(LICHT[zwischenspiel()])  # Lichtstimmung je Rückkehr (grafik/02-prolog-und-finale.md)
 	var fundkiste := get_hotspot("Fundkiste")
 	if is_instance_valid(fundkiste):
 		fundkiste.visible = zwischenspiel() > 0 or Zustand.ist("FINALE")  # Opas Archiv gibt es erst ab der ersten Rückkehr

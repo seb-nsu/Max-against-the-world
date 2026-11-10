@@ -6,11 +6,11 @@
 [node name="CharacterPiepsi" type="Area2D" unique_id=1962739316]
 script = ExtResource("1_qy1ck")
 walk_speed = 120.0
-dialog_pos = Vector2(0, -49)
+dialog_pos = Vector2(0, -65)
 script_name = "Piepsi"
 description = "UI_OBJ_PIEPSI"
 cursor = 8
-interaction_polygon = PackedVector2Array(-20, -45, 20, -45, 20, 0, -20, 0)
+interaction_polygon = PackedVector2Array(-20, -61, 20, -61, 20, 0, -20, 0)
 
 [node name="ScalingPolygon" type="CollisionPolygon2D" parent="." unique_id=883896071]
 polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
@@ -20,11 +20,11 @@ polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=553789193]
 texture_filter = 1
 texture = ExtResource("2_36not")
-offset = Vector2(0, -22.5)
+offset = Vector2(0, -30.5)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=942870568]
 visible = false
-polygon = PackedVector2Array(-20, -45, 20, -45, 20, 0, -20, 0)
+polygon = PackedVector2Array(-20, -61, 20, -61, 20, 0, -20, 0)
 
 [node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=888396543]
 visible = false

@@ -588,36 +588,32 @@
      277
     ],
     [
-     240,
+     250,
      277
     ],
     [
-     272,
+     262,
+     262
+    ],
+    [
+     560,
+     73
+    ],
+    [
+     580,
+     73
+    ],
+    [
+     578,
+     86
+    ],
+    [
+     290,
      280
     ],
     [
-     299,
-     261
-    ],
-    [
-     527,
-     85
-    ],
-    [
-     547,
-     85
-    ],
-    [
-     544,
-     97
-    ],
-    [
-     315,
-     275
-    ],
-    [
-     331,
-     304
+     300,
+     300
     ],
     [
      400,
@@ -638,8 +634,8 @@
      323
     ],
     "von_dachboden": [
-     493,
-     123
+     540,
+     98
     ]
    },
    "tiefe": 0.85,
@@ -797,14 +793,14 @@
      "script_name": "Treppe",
      "name_key": "UI_OBJ_TREPPE",
      "rect": [
-      267,
-      53,
-      293,
-      233
+      341,
+      40,
+      239,
+      150
      ],
      "gehe": [
-      287,
-      299
+      270,
+      282
      ],
      "ansehen": [
       {
@@ -944,10 +940,10 @@
      "script_name": "Kisten",
      "name_key": "UI_OBJ_KISTEN",
      "rect": [
-      430,
-      180,
-      210,
-      170
+      400,
+      190,
+      240,
+      160
      ],
      "gehe": [
       330,
@@ -1021,8 +1017,8 @@
       45
      ],
      "gehe": [
-      536,
-      91
+      556,
+      85
      ],
      "erreichbar_ab": "start",
      "ansehen": []
@@ -2361,7 +2357,7 @@
    "script_name": "Max",
    "kuerzel": "MAX",
    "name_key": "UI_OBJ_MAX",
-   "groesse_px": 140,
+   "groesse_px": 189,
    "spielbar": true,
    "textfarbe": "#ffffff",
    "sprite": "res://grafik/platzhalter/figur_max.png",
@@ -2382,7 +2378,7 @@
    "script_name": "Pixel",
    "kuerzel": "PIX",
    "name_key": "UI_OBJ_PIXEL",
-   "groesse_px": 45,
+   "groesse_px": 61,
    "spielbar": false,
    "textfarbe": "#5fd3c8",
    "sprite": "res://grafik/platzhalter/figur_pixel.png",
@@ -2479,7 +2475,7 @@
    "script_name": "Opa",
    "kuerzel": "OPA",
    "name_key": "UI_OBJ_OPA",
-   "groesse_px": 149,
+   "groesse_px": 201,
    "spielbar": false,
    "textfarbe": "#f5a04a",
    "sprite": "res://grafik/platzhalter/figur_opa.png",

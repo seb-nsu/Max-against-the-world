@@ -6,11 +6,11 @@
 [node name="CharacterArchimedes" type="Area2D" unique_id=1777843719]
 script = ExtResource("1_d48ng")
 walk_speed = 120.0
-dialog_pos = Vector2(0, -139)
+dialog_pos = Vector2(0, -186)
 script_name = "Archimedes"
 description = "UI_OBJ_ARCHIMEDES"
 cursor = 8
-interaction_polygon = PackedVector2Array(-22.5, -135, 22.5, -135, 22.5, 0, -22.5, 0)
+interaction_polygon = PackedVector2Array(-22.5, -182, 22.5, -182, 22.5, 0, -22.5, 0)
 
 [node name="ScalingPolygon" type="CollisionPolygon2D" parent="." unique_id=1007495954]
 polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
@@ -20,11 +20,11 @@ polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1505530427]
 texture_filter = 1
 texture = ExtResource("2_w2rb7")
-offset = Vector2(0, -67.5)
+offset = Vector2(0, -91)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1534275630]
 visible = false
-polygon = PackedVector2Array(-22.5, -135, 22.5, -135, 22.5, 0, -22.5, 0)
+polygon = PackedVector2Array(-22.5, -182, 22.5, -182, 22.5, 0, -22.5, 0)
 
 [node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=429686433]
 visible = false

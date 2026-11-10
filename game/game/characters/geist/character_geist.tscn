@@ -6,11 +6,11 @@
 [node name="CharacterGeist" type="Area2D" unique_id=460054357]
 script = ExtResource("1_8hsmu")
 walk_speed = 120.0
-dialog_pos = Vector2(0, -64)
+dialog_pos = Vector2(0, -85)
 script_name = "Geist"
 description = "UI_OBJ_GEIST"
 cursor = 8
-interaction_polygon = PackedVector2Array(-20, -60, 20, -60, 20, 0, -20, 0)
+interaction_polygon = PackedVector2Array(-20, -81, 20, -81, 20, 0, -20, 0)
 
 [node name="ScalingPolygon" type="CollisionPolygon2D" parent="." unique_id=1702938934]
 polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
@@ -20,11 +20,11 @@ polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=886457184]
 texture_filter = 1
 texture = ExtResource("2_kq31u")
-offset = Vector2(0, -30)
+offset = Vector2(0, -40.5)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1524641341]
 visible = false
-polygon = PackedVector2Array(-20, -60, 20, -60, 20, 0, -20, 0)
+polygon = PackedVector2Array(-20, -81, 20, -81, 20, 0, -20, 0)
 
 [node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=412015054]
 visible = false

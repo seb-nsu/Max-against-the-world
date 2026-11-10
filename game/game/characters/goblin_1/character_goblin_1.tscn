@@ -6,11 +6,11 @@
 [node name="CharacterGoblin1" type="Area2D" unique_id=884556655]
 script = ExtResource("1_y7c3t")
 walk_speed = 180.0
-dialog_pos = Vector2(0, -89)
+dialog_pos = Vector2(0, -119)
 script_name = "Goblin1"
 description = "UI_OBJ_GOBLIN_1"
 cursor = 8
-interaction_polygon = PackedVector2Array(-20, -85, 20, -85, 20, 0, -20, 0)
+interaction_polygon = PackedVector2Array(-20, -115, 20, -115, 20, 0, -20, 0)
 
 [node name="ScalingPolygon" type="CollisionPolygon2D" parent="." unique_id=455620693]
 polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
@@ -20,11 +20,11 @@ polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=766901217]
 texture_filter = 1
 texture = ExtResource("2_voycv")
-offset = Vector2(0, -42.5)
+offset = Vector2(0, -57.5)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1538598836]
 visible = false
-polygon = PackedVector2Array(-20, -85, 20, -85, 20, 0, -20, 0)
+polygon = PackedVector2Array(-20, -115, 20, -115, 20, 0, -20, 0)
 
 [node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=852172434]
 visible = false

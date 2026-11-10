@@ -6,11 +6,11 @@
 [node name="CharacterPhilosoph" type="Area2D" unique_id=1903863663]
 script = ExtResource("1_euhy0")
 walk_speed = 120.0
-dialog_pos = Vector2(0, -104)
+dialog_pos = Vector2(0, -139)
 script_name = "Philosoph"
 description = "UI_OBJ_PHILOSOPH"
 cursor = 8
-interaction_polygon = PackedVector2Array(-20, -100, 20, -100, 20, 0, -20, 0)
+interaction_polygon = PackedVector2Array(-20, -135, 20, -135, 20, 0, -20, 0)
 
 [node name="ScalingPolygon" type="CollisionPolygon2D" parent="." unique_id=493196621]
 polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
@@ -20,11 +20,11 @@ polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2042009923]
 texture_filter = 1
 texture = ExtResource("2_wsnwi")
-offset = Vector2(0, -50)
+offset = Vector2(0, -67.5)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=919065757]
 visible = false
-polygon = PackedVector2Array(-20, -100, 20, -100, 20, 0, -20, 0)
+polygon = PackedVector2Array(-20, -135, 20, -135, 20, 0, -20, 0)
 
 [node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=1784200022]
 visible = false

@@ -6,11 +6,11 @@
 [node name="CharacterZeldina" type="Area2D" unique_id=1373959384]
 script = ExtResource("1_ytlwp")
 walk_speed = 180.0
-dialog_pos = Vector2(0, -149)
+dialog_pos = Vector2(0, -200)
 script_name = "Zeldina"
 description = "UI_OBJ_ZELDINA"
 cursor = 8
-interaction_polygon = PackedVector2Array(-24, -145, 24, -145, 24, 0, -24, 0)
+interaction_polygon = PackedVector2Array(-24.5, -196, 24.5, -196, 24.5, 0, -24.5, 0)
 
 [node name="ScalingPolygon" type="CollisionPolygon2D" parent="." unique_id=2145591165]
 polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
@@ -20,11 +20,11 @@ polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2066164822]
 texture_filter = 1
 texture = ExtResource("2_1ciup")
-offset = Vector2(0, -72.5)
+offset = Vector2(0, -98)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1468049813]
 visible = false
-polygon = PackedVector2Array(-24, -145, 24, -145, 24, 0, -24, 0)
+polygon = PackedVector2Array(-24.5, -196, 24.5, -196, 24.5, 0, -24.5, 0)
 
 [node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=605021325]
 visible = false

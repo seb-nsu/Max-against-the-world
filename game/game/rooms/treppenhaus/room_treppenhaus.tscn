@@ -10,8 +10,12 @@
 [ext_resource type="PackedScene" uid="uid://cr1lwyliq6gx1" path="res://game/rooms/treppenhaus/hotspots/ausgang_wohnzimmer/hotspot_ausgang_wohnzimmer.tscn" id="8_nsdmb"]
 [ext_resource type="PackedScene" uid="uid://jiy23p5e10lh" path="res://game/rooms/treppenhaus/hotspots/ausgang_dachboden/hotspot_ausgang_dachboden.tscn" id="9_0vblo"]
 [ext_resource type="PackedScene" uid="uid://ctyvw1bibayyl" path="res://game/rooms/treppenhaus/markers/start/marker_start.tscn" id="10_me7ro"]
+[ext_resource type="PackedScene" uid="uid://bt3cywx4qen06" path="res://game/rooms/treppenhaus/hotspots/maentel/hotspot_maentel.tscn" id="10_uakd5"]
 [ext_resource type="PackedScene" uid="uid://vvft6a7c1bn5" path="res://game/rooms/treppenhaus/markers/von_wohnzimmer/marker_von_wohnzimmer.tscn" id="11_5s0sd"]
+[ext_resource type="PackedScene" uid="uid://c6mame6t30r2k" path="res://game/rooms/treppenhaus/hotspots/regenschirm/hotspot_regenschirm.tscn" id="11_vkxdx"]
 [ext_resource type="PackedScene" uid="uid://capncmb7ywdcy" path="res://game/rooms/treppenhaus/markers/von_dachboden/marker_von_dachboden.tscn" id="12_eqpsj"]
+[ext_resource type="PackedScene" uid="uid://b1ofk85dsx8f2" path="res://game/rooms/treppenhaus/hotspots/deckenlampe/hotspot_deckenlampe.tscn" id="12_nsdmb"]
+[ext_resource type="PackedScene" uid="uid://dtt6nwvq2stne" path="res://game/rooms/treppenhaus/hotspots/kisten/hotspot_kisten.tscn" id="13_0vblo"]
 
 [node name="RoomTreppenhaus" type="Node2D" unique_id=100306385]
 script = ExtResource("1_mabc3")
@@ -47,11 +51,11 @@ walk_to_point = Vector2(-41.5, 186)
 interaction_polygon = PackedVector2Array(-26.5, -40, 26.5, -40, 26.5, 40, -26.5, 40)
 
 [node name="Treppe" parent="Hotspots" unique_id=1402502403 instance=ExtResource("7_vkxdx")]
-position = Vector2(413.5, 169.5)
+position = Vector2(460.5, 115)
 description = "UI_OBJ_TREPPE"
-baseline = 116
-walk_to_point = Vector2(-126.5, 129.5)
-interaction_polygon = PackedVector2Array(-146.5, -116.5, 146.5, -116.5, 146.5, 116.5, -146.5, 116.5)
+baseline = 75
+walk_to_point = Vector2(-190.5, 167)
+interaction_polygon = PackedVector2Array(-119.5, -75, 119.5, -75, 119.5, 75, -119.5, 75)
 
 [node name="AusgangWohnzimmer" parent="Hotspots" unique_id=862228977 instance=ExtResource("8_nsdmb")]
 position = Vector2(43.5, 176.5)
@@ -65,9 +69,33 @@ interaction_polygon = PackedVector2Array(-36.5, -123.5, 36.5, -123.5, 36.5, 123.
 position = Vector2(513.5, 22.5)
 description = "UI_RAUM_DACHBODEN"
 baseline = 22
-walk_to_point = Vector2(22.5, 68.5)
+walk_to_point = Vector2(42.5, 62.5)
 cursor = 9
 interaction_polygon = PackedVector2Array(-113.5, -22.5, 113.5, -22.5, 113.5, 22.5, -113.5, 22.5)
+
+[node name="Maentel" parent="Hotspots" unique_id=1074768735 instance=ExtResource("10_uakd5")]
+position = Vector2(147, 210)
+description = "UI_OBJ_MAENTEL"
+baseline = 80
+walk_to_point = Vector2(3, 90)
+
+[node name="Regenschirm" parent="Hotspots" unique_id=340839539 instance=ExtResource("11_vkxdx")]
+position = Vector2(106.5, 248.5)
+description = "UI_OBJ_REGENSCHIRM"
+baseline = 41
+walk_to_point = Vector2(3.5, 51.5)
+
+[node name="Deckenlampe" parent="Hotspots" unique_id=509731105 instance=ExtResource("12_nsdmb")]
+position = Vector2(224, 23)
+description = "UI_OBJ_DECKENLAMPE"
+baseline = 13
+walk_to_point = Vector2(-4, 277)
+
+[node name="Kisten" parent="Hotspots" unique_id=866912353 instance=ExtResource("13_0vblo")]
+position = Vector2(520, 270)
+description = "UI_OBJ_KISTEN"
+baseline = 80
+walk_to_point = Vector2(-190, 50)
 
 [node name="Regions" type="Node2D" parent="." unique_id=749996606]
 
@@ -80,6 +108,6 @@ position = Vector2(173, 320)
 position = Vector2(67, 323)
 
 [node name="VonDachboden" parent="Markers" unique_id=171942929 instance=ExtResource("12_eqpsj")]
-position = Vector2(493, 123)
+position = Vector2(540, 98)
 
 [node name="Characters" type="Node2D" parent="." unique_id=2045747567]

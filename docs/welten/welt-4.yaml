@@ -126,25 +126,25 @@ figuren:
     name: Max
     kuerzel: MAX
     raum: [testbild, gluecksrad, sitcom_kueche, savanne, friedhof, spukhaus_keller, spukhaus_halle, kapitolis, fondue_fabrik, werbespot_set, empfang, kellerarchiv, zappmanns_studio]
-    groesse_px: 140                     # ab R10 als Käsemann (gleiche Größe)
+    groesse_px: 189                     # ab R10 als Käsemann (gleiche Größe)
     spielbar: true
   - id: pixel
     name: Pixel
     kuerzel: PIX
     raum: [rauschen, testbild, savanne, werbespot_set, zappmanns_studio]   # meist im Rauschen, kann in jeden Sender fallen
-    groesse_px: 45
+    groesse_px: 61
     spielbar: true
   - id: opa
     name: Opa                          # Sprecher-Spalte: „Opa (Lichterkette)“
     kuerzel: OPA
     raum: spukhaus_halle               # spricht über die Lichterkette; Bild: Prolog-Wohnzimmer
-    groesse_px: 109                     # sitzend, Grafik Prolog und Finale
+    groesse_px: 147                     # sitzend, Grafik Prolog und Finale
     spielbar: false
   - id: flimmer
     name: Flimmer
     kuerzel: FLI
     raum: [testbild, rauschen]         # spricht in R5 aus der Leitung auf dem Friedhof
-    groesse_px: 40
+    groesse_px: 54
     spielbar: false
   - id: nachrichtensprecher
     name: Nachrichtensprecher
@@ -156,157 +156,157 @@ figuren:
     name: Gerd Glück
     kuerzel: GER
     raum: gluecksrad
-    groesse_px: 149
+    groesse_px: 201
     spielbar: false
   - id: troedel_experte
     name: Trödel-Experte
     kuerzel: EXP
     raum: gluecksrad
-    groesse_px: 145
+    groesse_px: 196
     spielbar: false
   - id: sitcom_vater
     name: Sitcom-Vater
     kuerzel: VAT
     raum: [sitcom_kueche, spukhaus_keller]   # nach R6 sitzt er im Keller
-    groesse_px: 145
+    groesse_px: 196
     spielbar: false
   - id: sitcom_mutter
     name: Sitcom-Mutter
     kuerzel: SMU
     raum: sitcom_kueche                # in R6 als Stimme in der Bild-in-Bild-Szene
-    groesse_px: 145
+    groesse_px: 196
     spielbar: false
   - id: sitcom_sohn
     name: Sitcom-Sohn
     kuerzel: SOH
     raum: sitcom_kueche
-    groesse_px: 140
+    groesse_px: 189
     spielbar: false
   - id: kommissar
     name: Kommissar
     kuerzel: KOM
     raum: [savanne, sitcom_kueche]     # in der Küche nur als Gast in R3
-    groesse_px: 145
+    groesse_px: 196
     spielbar: false
   - id: erzaehler
     name: Erzähler
     kuerzel: ERZ
     raum: savanne
-    groesse_px: 145                     # Stehgröße, hockt
+    groesse_px: 196                     # Stehgröße, hockt
     spielbar: false
   - id: loewe
     name: Löwe
     kuerzel: LOE
     raum: savanne
-    groesse_px: 149                     # Länge, liegend
+    groesse_px: 201                     # Länge, liegend
     spielbar: false
   - id: hyaene
     name: Hyäne
     kuerzel: HYA
     raum: savanne
-    groesse_px: 85
+    groesse_px: 115
     spielbar: false
   - id: gepard
     name: Gepard
     kuerzel: GEP
     raum: savanne
-    groesse_px: 75
+    groesse_px: 101
     spielbar: false
   - id: geier
     name: Geier
     kuerzel: GEI
     raum: savanne
-    groesse_px: 75
+    groesse_px: 101
     spielbar: false
   - id: nashorn
     name: Nashorn
     kuerzel: NAS
     raum: savanne
-    groesse_px: 149                     # Länge
+    groesse_px: 201                     # Länge
     spielbar: false
   - id: flamingos
     name: Flamingos
     kuerzel: FLA
     raum: savanne
-    groesse_px: 60                     # dreimal
+    groesse_px: 81                     # dreimal
     spielbar: false
   - id: zombie
     name: Zombie
     kuerzel: ZOM
     raum: friedhof
-    groesse_px: 145                     # sechsmal; im Grab 30
+    groesse_px: 196                     # sechsmal; im Grab 30
     spielbar: false
   - id: geist
     name: Geist
     kuerzel: GST
     raum: spukhaus_keller
-    groesse_px: 60                     # dreimal
+    groesse_px: 81                     # dreimal
     spielbar: false
   - id: fbi_agent
     name: FBI-Agent
     kuerzel: AGE
     raum: spukhaus_halle
-    groesse_px: 149
+    groesse_px: 201
     spielbar: false
   - id: super_siegfried
     name: Super-Siegfried
     kuerzel: SIE
     raum: [kapitolis, fondue_fabrik, werbespot_set]
-    groesse_px: 160
+    groesse_px: 216
     spielbar: false
   - id: fledermann
     name: Fledermann
     kuerzel: FLE
     raum: [kapitolis, fondue_fabrik, werbespot_set]
-    groesse_px: 145
+    groesse_px: 196
     spielbar: false
   - id: wonder_wilma
     name: Wonder-Wilma
     kuerzel: WIL
     raum: [kapitolis, fondue_fabrik, werbespot_set]
-    groesse_px: 145
+    groesse_px: 196
     spielbar: false
   - id: fabrikarbeiter
     name: Fabrikarbeiter
     kuerzel: null                      # spricht nicht
     raum: fondue_fabrik
-    groesse_px: 145
+    groesse_px: 196
     spielbar: false
   - id: dr_werbepause
     name: Dr. Werbepause
     kuerzel: WER
     raum: werbespot_set
-    groesse_px: 149
+    groesse_px: 201
     spielbar: false
   - id: empfangsdame
     name: Empfangsdame
     kuerzel: EMP
     raum: empfang
-    groesse_px: 145                     # Stehgröße, sitzt
+    groesse_px: 196                     # Stehgröße, sitzt
     spielbar: false
   - id: sicherheitsmann
     name: Sicherheitsmann
     kuerzel: SIC
     raum: empfang
-    groesse_px: 160                     # zweimal
+    groesse_px: 216                     # zweimal
     spielbar: false
   - id: zappmann
     name: Zappmann
     kuerzel: ZAP
     raum: zappmanns_studio
-    groesse_px: 155
+    groesse_px: 209
     spielbar: false
   - id: junger_zappmann
     name: Junger Zappmann
     kuerzel: null                      # nur im Archivband (Bild-in-Bild)
     raum: zappmanns_studio
-    groesse_px: 140
+    groesse_px: 189
     spielbar: false
   - id: wettkandidat
     name: Wettkandidat
     kuerzel: WET
     raum: zappmanns_studio
-    groesse_px: 140
+    groesse_px: 189
     spielbar: false
 
 gegenstaende:

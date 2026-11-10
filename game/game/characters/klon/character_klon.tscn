@@ -6,11 +6,11 @@
 [node name="CharacterKlon" type="Area2D" unique_id=1518121736]
 script = ExtResource("1_nllkt")
 walk_speed = 120.0
-dialog_pos = Vector2(0, -153)
+dialog_pos = Vector2(0, -205)
 script_name = "Klon"
 description = "UI_OBJ_KLON"
 cursor = 8
-interaction_polygon = PackedVector2Array(-24.5, -149, 24.5, -149, 24.5, 0, -24.5, 0)
+interaction_polygon = PackedVector2Array(-25, -201, 25, -201, 25, 0, -25, 0)
 
 [node name="ScalingPolygon" type="CollisionPolygon2D" parent="." unique_id=963898997]
 polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
@@ -20,11 +20,11 @@ polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1645728944]
 texture_filter = 1
 texture = ExtResource("2_4qwfl")
-offset = Vector2(0, -74.5)
+offset = Vector2(0, -100.5)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=704626668]
 visible = false
-polygon = PackedVector2Array(-24.5, -149, 24.5, -149, 24.5, 0, -24.5, 0)
+polygon = PackedVector2Array(-25, -201, 25, -201, 25, 0, -25, 0)
 
 [node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=777910467]
 visible = false

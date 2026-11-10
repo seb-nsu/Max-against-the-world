@@ -161,161 +161,161 @@ figuren:
     name: Max
     kuerzel: MAX
     raum: [dorfplatz, taverne, schmiede, zauberstabladen, klassenzimmer, trollbruecke, wasserschloss, zauberwald, luftschloss, bergwerk, turmkeller, abstellkammer_1, abstellkammern, thronsaal]
-    groesse_px: 140             # Variante „Max als Pilz“ in grafik/welt-1.md
+    groesse_px: 189             # Variante „Max als Pilz“ in grafik/welt-1.md
     spielbar: true
 
   - id: pixel
     name: Pixel
     kuerzel: PIX
     raum: [dorfplatz, taverne, schmiede, zauberstabladen, klassenzimmer, trollbruecke, wasserschloss, zauberwald, luftschloss, bergwerk, turmkeller, abstellkammer_1, abstellkammern, thronsaal]
-    groesse_px: 45             # sitzend; Variante „Pixel als Ziege“ 20 px; spielbar ab R1a
+    groesse_px: 61             # sitzend; Variante „Pixel als Ziege“ 20 px; spielbar ab R1a
     spielbar: true
 
   - id: opa
     name: Opa
     kuerzel: OPA
     raum: []                   # nur Opas Zettel, W1_ANK_OPA_0070
-    groesse_px: 149             # Grafik in grafik/02-prolog-und-finale.md
+    groesse_px: 201             # Grafik in grafik/02-prolog-und-finale.md
     spielbar: false
 
   - id: toadi
     name: Toadi
     kuerzel: TOA
     raum: [dorfplatz, klassenzimmer, wasserschloss, zauberwald, luftschloss, thronsaal]
-    groesse_px: 75
+    groesse_px: 101
     spielbar: false
 
   - id: alwin
     name: Alwin
     kuerzel: ALW
     raum: klassenzimmer
-    groesse_px: 155
+    groesse_px: 209
     spielbar: false
 
   - id: zeldina
     name: Zeldina
     kuerzel: ZEL
     raum: [luftschloss, bergwerk, turmkeller, abstellkammern, thronsaal]   # ab R9 Begleiterin überall
-    groesse_px: 145
+    groesse_px: 196
     spielbar: false
 
   - id: gollo
     name: Gollo
     kuerzel: GOL
     raum: taverne
-    groesse_px: 109
+    groesse_px: 147
     spielbar: false
 
   - id: humbert
     name: Humbert
     kuerzel: HUM
     raum: [taverne, abstellkammern]
-    groesse_px: 149
+    groesse_px: 201
     spielbar: false
 
   - id: schmied
     name: Schmied
     kuerzel: SCH
     raum: schmiede
-    groesse_px: 149
+    groesse_px: 201
     spielbar: false
 
   - id: waldemar
     name: Waldemar
     kuerzel: WAL
     raum: [trollbruecke, zauberwald]   # Zauberwald nur für R7
-    groesse_px: 200
+    groesse_px: 270
     spielbar: false
 
   - id: stabmacher
     name: Stabmacher
     kuerzel: STA
     raum: zauberstabladen
-    groesse_px: 145
+    groesse_px: 196
     spielbar: false
 
   - id: rotkaeppchen
     name: Rotkäppchen
     kuerzel: ROT
     raum: [zauberwald, dorfplatz]      # Dorfplatz nur bei der Lieferung (R3)
-    groesse_px: 120
+    groesse_px: 162
     spielbar: false
 
   - id: maklerin
     name: Maklerin
     kuerzel: MAK
     raum: luftschloss
-    groesse_px: 149
+    groesse_px: 201
     spielbar: false
 
   - id: grimmzahn
     name: Grimmzahn
     kuerzel: GRI
     raum: [bergwerk, turmkeller, abstellkammern]   # Turmkeller nur bei Weg B
-    groesse_px: 100
+    groesse_px: 135
     spielbar: false
 
   - id: goblin_1
     name: Goblin 1
     kuerzel: GO1
     raum: bergwerk
-    groesse_px: 85
+    groesse_px: 115
     spielbar: false
 
   - id: goblin_2
     name: Goblin 2
     kuerzel: GO2
     raum: bergwerk
-    groesse_px: 85
+    groesse_px: 115
     spielbar: false
 
   - id: moderwort
     name: Moderwort
     kuerzel: MOD
     raum: thronsaal
-    groesse_px: 149
+    groesse_px: 201
     spielbar: false
 
   - id: smaugi
     name: Smaugi
     kuerzel: SMA
     raum: abstellkammern
-    groesse_px: 300            # sitzend
+    groesse_px: 340            # sitzend, mehr passt nicht ins Bild (360 hoch)
     spielbar: false
 
   - id: minka
     name: Minka
     kuerzel: MIN
     raum: taverne
-    groesse_px: 45
+    groesse_px: 61
     spielbar: false
 
   - id: huhn
     name: Huhn
     kuerzel: HUH
     raum: taverne
-    groesse_px: 35
+    groesse_px: 47
     spielbar: false
 
   - id: schmiede_ziege
     name: Schmiede-Ziege
     kuerzel: ZIE
     raum: [schmiede, dorfplatz, trollbruecke]   # folgt Max von R3 bis R4, danach wieder Schmiede
-    groesse_px: 69
+    groesse_px: 93
     spielbar: false
 
   - id: xxl_ziege
     name: XXL-Ziege
     kuerzel: XXL
     raum: [dorfplatz, trollbruecke]             # nach R4 grasend an der Brücke
-    groesse_px: 175
+    groesse_px: 236
     spielbar: false
 
   - id: schwan
     name: Schwan
     kuerzel: SWA
     raum: wasserschloss
-    groesse_px: 60
+    groesse_px: 81
     spielbar: false
 
   - id: brunnen
@@ -350,14 +350,14 @@ figuren:
     name: Zauberbesen
     kuerzel: null              # spricht nicht; drei Stück
     raum: [turmkeller, abstellkammer_1, abstellkammern]
-    groesse_px: 75
+    groesse_px: 101
     spielbar: false
 
   - id: uebungsbesen
     name: Übungsbesen
     kuerzel: null              # spricht nicht
     raum: klassenzimmer
-    groesse_px: 55
+    groesse_px: 74
     spielbar: false
 
 gegenstaende:

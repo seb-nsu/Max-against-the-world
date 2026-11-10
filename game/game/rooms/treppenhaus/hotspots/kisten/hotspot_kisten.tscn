@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://dtt6nwvq2stne"]
+
+[ext_resource type="Script" path="res://game/rooms/treppenhaus/hotspots/kisten/hotspot_kisten.gd" id="1_rje8i"]
+
+[node name="Kisten" type="Area2D" unique_id=866912353]
+script = ExtResource("1_rje8i")
+script_name = "Kisten"
+description = "Kisten"
+cursor = 1
+interaction_polygon = PackedVector2Array(-120, -80, 120, -80, 120, 80, -120, 80)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=422277750]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

@@ -118,7 +118,7 @@
     "wohnzimmer",
     "supermarkt"
    ],
-   "groesse_px": 140,
+   "groesse_px": 189,
    "spielbar": true
   },
   {
@@ -129,7 +129,7 @@
     "dachboden",
     "wohnzimmer"
    ],
-   "groesse_px": 45,
+   "groesse_px": 61,
    "spielbar": true
   },
   {
@@ -140,7 +140,7 @@
     "dachboden",
     "wohnzimmer"
    ],
-   "groesse_px": 149,
+   "groesse_px": 201,
    "spielbar": false
   },
   {
@@ -152,7 +152,7 @@
     "dachboden",
     "wohnzimmer"
    ],
-   "groesse_px": 140,
+   "groesse_px": 189,
    "spielbar": false
   },
   {
@@ -160,7 +160,7 @@
    "name": "Mutter",
    "kuerzel": "MUT",
    "raum": "wohnzimmer",
-   "groesse_px": 145,
+   "groesse_px": 196,
    "spielbar": false
   },
   {
@@ -171,7 +171,7 @@
     "dachboden",
     "wohnzimmer"
    ],
-   "groesse_px": 145,
+   "groesse_px": 196,
    "spielbar": false
   },
   {
@@ -182,7 +182,7 @@
     "dachboden",
     "wohnzimmer"
    ],
-   "groesse_px": 145,
+   "groesse_px": 196,
    "spielbar": false
   },
   {
