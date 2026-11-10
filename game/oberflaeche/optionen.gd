@@ -2,11 +2,18 @@ extends Control
 ## Optionen (05-spielsysteme.md, Optionen) in fünf Reitern wie in üblichen PC-Spielen: Audio,
 ## Anzeige, Spiel, Steuerung, Barrierefreiheit. Jede Änderung gilt sofort und wird in
 ## user://settings.cfg gespeichert (skripte/einstellungen.gd). Aus Haupt- und Pausemenü.
+## Controller: LB und RB wechseln den Reiter, der Reiter Steuerung zeigt die Controller-Belegung.
 
 signal zurueck
 
 const S := preload("res://oberflaeche/menue_stil.gd")
 const REITER := ["UI_OPT_AUDIO", "UI_OPT_ANZEIGE", "UI_OPT_SPIEL", "UI_OPT_STEUERUNG", "UI_OPT_BARRIEREFREI"]
+## Controller-Belegung zum Nachlesen (skripte/controller.gd): Taste, Text-Schlüssel
+const CONTROLLER := [
+	["A", "UI_PAD_A"], ["B", "UI_PAD_B"], ["X / LT", "UI_TASTE_HOTSPOTS_ZEIGEN"], ["Y", "UI_PFOTE"],
+	["LB", "UI_TASTE_FIGUR_WECHSELN"], ["RB", "UI_PAD_RB"], ["Stick", "UI_PAD_STICK"],
+	["+", "UI_PAD_KREUZ"], ["Start", "UI_TASTE_PAUSE"],
+]
 
 var _reiter: TabContainer
 ## Aktion, die gerade auf eine neue Taste wartet ("" = keine)
@@ -103,10 +110,22 @@ func _steuerung(g: GridContainer) -> void:
 		_tasten_knoepfe[aktion] = k
 		g.add_child(k)
 	g.add_child(S.label(tr("UI_OPT_MAUS_GEHT_IMMER"), 8, S.GRAU))
+	# Controller-Belegung als Fließtext unter der Tabelle (der Reiter rollt nicht)
+	var pad := S.label(tr("UI_OPT_CONTROLLER") + "  " + "  ·  ".join(PackedStringArray(
+		CONTROLLER.map(func(z): return "%s %s" % [z[0], tr(z[1])]))), 8, S.GRAU)
+	pad.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	pad.custom_minimum_size = Vector2(400, 0)
+	pad.position = Vector2(0, 4)
+	var halter := Control.new()
+	halter.custom_minimum_size = Vector2(0, 40)
+	halter.add_child(pad)
+	g.add_child(Control.new())  # Rest der Zeile mit dem Maus-Hinweis
+	g.add_child(halter)
 
 
 func _barrierefrei(g: GridContainer) -> void:
-	for k in ["grosse_schrift", "hotspots_dauerhaft", "wackeln_aus", "flackern_reduzieren", "farbenblind"]:
+	for k in ["grosse_schrift", "hotspots_dauerhaft", "hotspot_namen", "wackeln_aus",
+			"flackern_reduzieren", "farbenblind"]:
 		_schalter(g, "UI_OPT_" + k.to_upper(), k)
 
 
@@ -166,6 +185,21 @@ func _tasten_name(aktion: String) -> String:
 func _belegen_starten(aktion: String) -> void:
 	_belegt_wird = aktion
 	_tasten_knoepfe[aktion].text = tr("UI_OPT_TASTE_DRUECKEN")
+
+
+func _unhandled_input(event: InputEvent) -> void:
+	# Controller: LB und RB blättern durch die Reiter
+	var r := 0
+	if event.is_action_pressed("cq_reiter_zurueck"):
+		r = -1
+	elif event.is_action_pressed("cq_reiter_vor"):
+		r = 1
+	if r == 0 or not is_instance_valid(_reiter):
+		return
+	get_viewport().set_input_as_handled()
+	_reiter.current_tab = posmod(_reiter.current_tab + r, _reiter.get_tab_count())
+	_reiter.get_tab_bar().grab_focus()
+	Klang.geraeusch("ui_klick")
 
 
 func _input(event: InputEvent) -> void:

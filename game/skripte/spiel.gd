@@ -73,7 +73,7 @@ func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("cq_pause") and pause_moeglich():
 		get_viewport().set_input_as_handled()
 		pause_oeffnen()
-	elif event.is_action_pressed("cq_figur_wechseln"):
+	elif event.is_action_pressed("cq_figur_wechseln") and not get_tree().paused:
 		get_viewport().set_input_as_handled()
 		figur_wechseln()
 	elif event.is_action_pressed("cq_notizbuch") and OS.is_debug_build():

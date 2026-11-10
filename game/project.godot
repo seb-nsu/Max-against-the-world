@@ -34,6 +34,8 @@ Spiel="*res://skripte/spiel.gd"
 Telemetrie="*res://skripte/telemetrie.gd"
 Einstellungen="*res://skripte/einstellungen.gd"
 Klang="*res://skripte/klang.gd"
+Errungenschaften="*res://skripte/errungenschaften.gd"
+Controller="*res://skripte/controller.gd"
 
 [display]
 

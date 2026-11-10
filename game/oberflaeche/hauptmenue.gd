@@ -1,7 +1,8 @@
 extends CanvasLayer
 ## Hauptmenü (05-spielsysteme.md, Bildschirme): Startszene des Spiels. Links der Zapp-O-Mat als
-## Fernseher, rechts fünf Kanäle zum Durchschalten: 1 Fortsetzen, 2 Neues Spiel, 3 Laden,
-## 4 Optionen, 5 Beenden. Die Zifferntasten schalten direkt, Pfeiltasten und Maus gehen auch.
+## Fernseher, rechts sechs Kanäle zum Durchschalten: 1 Fortsetzen, 2 Neues Spiel, 3 Laden,
+## 4 Optionen, 5 Errungenschaften, 6 Beenden. Die Zifferntasten schalten direkt, Pfeiltasten,
+## Maus und Controller (Steuerkreuz, A, B) gehen auch.
 ## Beim allerersten Start kommt vorher der Epilepsie-Hinweis.
 ##
 ## Noch ohne Grafik: Fernseher, Bildrauschen und Drehknopf sind gezeichnete Platzhalter.
@@ -10,12 +11,14 @@ extends CanvasLayer
 const S := preload("res://oberflaeche/menue_stil.gd")
 const SPIELSTAENDE := preload("res://oberflaeche/spielstaende.gd")
 const OPTIONEN := preload("res://oberflaeche/optionen.gd")
+const ERRUNGENSCHAFTEN := preload("res://oberflaeche/errungenschaften.gd")
 ## Kanal → [Text-Schlüssel des Knopfs, Text-Schlüssel auf dem Bildschirm]
 const KANAELE := [
 	["UI_MENUE_FORTSETZEN", "UI_KANAL_FORTSETZEN"],
 	["UI_MENUE_NEUES_SPIEL", "UI_KANAL_NEUES_SPIEL"],
 	["UI_MENUE_LADEN", "UI_KANAL_LADEN"],
 	["UI_MENUE_OPTIONEN", "UI_KANAL_OPTIONEN"],
+	["UI_MENUE_ERRUNGENSCHAFTEN", "UI_KANAL_ERRUNGENSCHAFTEN"],
 	["UI_MENUE_BEENDEN", "UI_KANAL_BEENDEN"],
 ]
 const BILDSCHIRM := Rect2(40, 84, 184, 120)
@@ -88,7 +91,7 @@ func _aufbauen() -> void:
 	var liste := VBoxContainer.new()
 	liste.position = Vector2(286, 92)
 	liste.size = Vector2(150, 140)
-	liste.add_theme_constant_override("separation", 6)
+	liste.add_theme_constant_override("separation", 4)
 	_haupt.add_child(liste)
 	for i in KANAELE.size():
 		var k := S.knopf("%d   %s" % [i + 1, tr(KANAELE[i][0])])
@@ -202,6 +205,8 @@ func _ausloesen(i: int) -> void:
 		3:
 			_unter_zeigen("optionen")
 		4:
+			_unter_zeigen("errungenschaften")
+		5:
 			get_tree().quit()
 
 
@@ -217,6 +222,8 @@ func _unter_zeigen(art: String) -> void:
 	_haupt.hide()
 	if art == "optionen":
 		_unter = OPTIONEN.new()
+	elif art == "errungenschaften":
+		_unter = ERRUNGENSCHAFTEN.new()
 	else:
 		_unter = SPIELSTAENDE.new()
 		_unter.modus = art
