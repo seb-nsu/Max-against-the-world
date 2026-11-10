@@ -525,6 +525,122 @@ UI_W2_FELD_4,Feld 4: Höhepunkt,Box 4: Climax
 UI_WELT_2_ENDE,Ende der Graubox. Welt 3 folgt.,End of the greybox. World 3 to follow.
 UI_W2_REDEN,Reden,Talk
 UI_WELT_3_ENDE,Ende der Graubox. Welt 4 folgt.,End of the greybox. World 4 to follow.
+UI_RAUM_UNTERSTADT_STRASSE,"Unterstadt, Straße","Undertown, street"
+UI_RAUM_APOTHEKENGASSE,Apothekengasse mit Pastillenautomat,Pharmacy alley
+UI_RAUM_WIDERSTANDSBASIS,Widerstandsbasis,Resistance base
+UI_RAUM_KUEHLUNG,Kühlung,Cooling room
+UI_RAUM_LABOREINGANG,Laboreingang,Lab entrance
+UI_RAUM_STADTSTRASSE,Stadtstraße,City street
+UI_RAUM_KUECHE_ORAKEL,Küche der Orakel-Oma,Oracle Granny's kitchen
+UI_RAUM_BUERO_50,"Büroturm, 50. Stock","Office tower, 50th floor"
+UI_RAUM_TESTKAMMER_1,Testkammer 1,Test chamber 1
+UI_RAUM_TESTKAMMER_2,Testkammer 2,Test chamber 2
+UI_RAUM_TESTKAMMER_3,Testkammer 3,Test chamber 3
+UI_RAUM_KERN,Kern von M.U.T.T.I.,Core of M.U.T.T.I.
+UI_OBJ_AUTO,Auto,Car
+UI_OBJ_AUTOMAT,Automat,Vending machine
+UI_OBJ_AUTOS,Autos,Cars
+UI_OBJ_BERND,Bernd,Bernd
+UI_OBJ_BLAUE_PASTILLE,Blaue Pastille,Blue lozenge
+UI_OBJ_BODENSCHALTER,Bodenschalter,Floor switch
+UI_OBJ_DAMPFGITTER,Dampfgitter,Steam grate
+UI_OBJ_DATENANSCHLUSS,Datenanschluss,Data port
+UI_OBJ_DECKENLAMPE,Deckenlampe,Ceiling lamp
+UI_OBJ_DECKERT,Deckert,Deckert
+UI_OBJ_ENDLOS_TREPPE,Endlos-Treppe,Endless staircase
+UI_OBJ_ENERGIEZELLE,Ewige Energiezelle,Eternal energy cell
+UI_OBJ_FARBCODE_AN_DER_WAND,Farbcode an der Wand,Colour code on the wall
+UI_OBJ_FARBCODE_ZETTEL,Farbcode-Zettel,Colour code note
+UI_OBJ_FLUR,Flur,Corridor
+UI_OBJ_FRAU_REGENSCHIRM,Frau mit Regenschirm,Woman with umbrella
+UI_OBJ_GABEL,Gabel,Fork
+UI_OBJ_GANG,Gang,Passage
+UI_OBJ_GARDINEN_UND_FENSTER,Gardinen und Fenster,Curtains and window
+UI_OBJ_GEHWEG,Gehweg,Pavement
+UI_OBJ_GLAESER_AUF_DEM_REGAL,Gläser auf dem Regal,Glasses on the shelf
+UI_OBJ_GROSSRECHNER,Großrechner,Mainframe
+UI_OBJ_GUMMIHUHN,Gummihuhn,Rubber chicken
+UI_OBJ_HALTERUNG,Halterung,Mount
+UI_OBJ_HANDTUCH,Handtuch,Towel
+UI_OBJ_HAUSMEISTER,Modell 08/15,Model 08/15
+UI_OBJ_HERR_VIER,Herr Vier,Mr Four
+UI_OBJ_HIMMEL,Himmel,Sky
+UI_OBJ_HIMMEL_MIT_FLIEGENDEN_AUTOS,Himmel mit fliegenden Autos,Sky with flying cars
+UI_OBJ_KABEL,Kabel,Cables
+UI_OBJ_KAFFEEPFUETZE,Kaffeepfütze,Coffee puddle
+UI_OBJ_KAFFEETASSE,Kaffeetasse,Coffee cup
+UI_OBJ_KALLE,Kalle,Kalle
+UI_OBJ_KALLES_TASSE,Kalles Tasse,Kalle's mug
+UI_OBJ_KAPSELN,Kapseln,Pods
+UI_OBJ_KARTENLESER,Kartenleser,Card reader
+UI_OBJ_KEHRBLECH,Kehrblech,Dustpan
+UI_OBJ_KISTEN,Kisten,Crates
+UI_OBJ_KLINGELNDE_TELEFONZELLE,klingelnde Telefonzelle,Ringing phone box
+UI_OBJ_KLON,Klon,Clone
+UI_OBJ_KLONE,Klone,Clones
+UI_OBJ_KRITZELEI_KAMMER_2,Kritzelei,Scribble
+UI_OBJ_KUCKUCKSUHR,Kuckucksuhr,Cuckoo clock
+UI_OBJ_LASER,Laser,Laser
+UI_OBJ_LAUTSPRECHER,Lautsprecher,Speaker
+UI_OBJ_LUEFTUNGSSCHACHT,Lüftungsschacht,Ventilation shaft
+UI_OBJ_MAX_KAPSEL,Max' Kapsel,Max's pod
+UI_OBJ_MORPHAEUS,Morphäus,Morphaeus
+UI_OBJ_MORSE_TABELLE,Morse-Tabelle,Morse table
+UI_OBJ_MUTTI,M.U.T.T.I.,M.U.T.T.I.
+UI_OBJ_NEON_PIZZA_PLAKAT,Neon-Pizza-Plakat,Neon pizza poster
+UI_OBJ_NUDELBUDE,Nudelbude,Noodle stand
+UI_OBJ_OFEN,Ofen,Oven
+UI_OBJ_OMAS_KEKSE,Omas Kekse,Granny's biscuits
+UI_OBJ_ORAKEL_OMA,Orakel-Oma,Oracle Granny
+UI_OBJ_ORIGAMI_EINHORN,Origami-Einhorn,Origami unicorn
+UI_OBJ_PANZERTUER,Panzertür,Armoured door
+UI_OBJ_PAPPKUCHEN,Pappkuchen,Cardboard cake
+UI_OBJ_PASTILLENAUTOMAT,Pastillenautomat,Lozenge machine
+UI_OBJ_PATCH_PANEL,Patch-Panel,Patch panel
+UI_OBJ_PFUETZEN,Pfützen,Puddles
+UI_OBJ_PIEPSI,Piepsi,Piepsi
+UI_OBJ_PINNWAND,Pinnwand,Pinboard
+UI_OBJ_PIZZAKARTONS,Pizzakartons,Pizza boxes
+UI_OBJ_PLAKAT,Plakat M.U.T.T.I.,Poster
+UI_OBJ_PLATZ_DES_HAUSMEISTERS,Platz des Hausmeisters,Caretaker's spot
+UI_OBJ_PORTALGERAET_IN_DER_HALTERUNG,Portalgerät in der Halterung,Portal device in the mount
+UI_OBJ_PORTALGERAET_STIMME,Portalgerät,Portal device
+UI_OBJ_RADIO,Radio,Radio
+UI_OBJ_REBELL,Rebell,Rebel
+UI_OBJ_REBELLEN,Rebellen,Rebels
+UI_OBJ_REBELLIN,Rebellin,Rebel woman
+UI_OBJ_REZEPTKARTE,Omas Rezeptkarte,Granny's recipe card
+UI_OBJ_ROTE_PASTILLE,Rote Pastille,Red lozenge
+UI_OBJ_SCHERBEN,Scherben,Shards
+UI_OBJ_SCHMIDT,Schmidt,Schmidt
+UI_OBJ_SCHMIDTS_AKTE,Schmidts Akte,Schmidt's file
+UI_OBJ_SCHWARZE_KATZE,Schwarze Katze,Black cat
+UI_OBJ_SONNE,Sonne,Sun
+UI_OBJ_SONNENBRILLE,Agent Schmidts Sonnenbrille,Agent Schmidt's sunglasses
+UI_OBJ_STEUERPULT,Steuerpult,Control desk
+UI_OBJ_STREIFEN,Streifen,Stripes
+UI_OBJ_STROMKASTEN,Stromkasten,Fuse box
+UI_OBJ_TAPETE,Tapete,Wallpaper
+UI_OBJ_TELEFONBUCHSEITE,Telefonbuchseite,Phone book page
+UI_OBJ_TELEFONBUCH_IN_DER_ZELLE,Telefonbuch in der Zelle,Phone book in the box
+UI_OBJ_TELEFONZELLE,Telefonzelle,Phone box
+UI_OBJ_TERMINAL,Terminal,Terminal
+UI_OBJ_TISCH_MIT_KALLES_TASSE,Tisch mit Kalles Tasse,Table with Kalle's mug
+UI_OBJ_TISCH_MIT_TELLER_UND_TEEKANNE,Tisch mit Teller und Teekanne,Table with plate and teapot
+UI_OBJ_TOPFPFLANZEN,Topfpflanzen,Potted plants
+UI_OBJ_TROPFENDES_ROHR,Tropfendes Rohr,Dripping pipe
+UI_OBJ_TUER,Die Tür,The Door
+UI_OBJ_TUEREN,Türen,Doors
+UI_OBJ_VASE,Vase,Vase
+UI_OBJ_VORDACH,Vordach,Awning
+UI_OBJ_WANDLAMPE,Wandlampe,Wall lamp
+UI_OBJ_WANDPLATTEN,Wandplatten,Wall panels
+UI_OBJ_WANDTELEFON,Wandtelefon,Wall phone
+UI_OBJ_WARNSTREIFEN,Warnstreifen,Warning stripes
+UI_OBJ_WASSERSPENDER,Wasserspender,Water cooler
+UI_OBJ_WEINENDER_MANN,Weinender Mann,Crying man
+UI_OBJ_WISCHEIMER,Wischeimer,Mop bucket
+UI_OBJ_ZUGANGSKARTE,Zugangskarte,Access card
 P0_WOHN_MAX_0010,Ein Balken. Ein einziger Balken.,
 P0_WOHN_MAX_0020,Und der ist auch nur zur Deko da.,
 P0_WOHN_OPA_0030,Maaax! Komm mal rauf! Wissenschaft!,

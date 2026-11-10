@@ -202,8 +202,8 @@ def baue(abschnitt):
         for fid, pos in (lay.get("figuren") or {}).items():
             raum["figuren"].append({"id": fid, "script_name": pascal(fid), "pos": pos})
         for ziel in r["ausgaenge"]:
-            if ziel in (lay.get("faehre") or []):
-                continue  # nur über die Zeitfähre erreichbar (Welt 2, Flusskarte am Hotspot „faehre“)
+            if ziel in (lay.get("faehre") or []) + (lay.get("wechsel") or []):
+                continue  # nur über Zeitfähre (Welt 2) oder Ebenenwechsel (Welt 3) erreichbar
             a = (lay.get("ausgaenge") or {}).get(ziel, {})
             aid = a.get("id", f"ausgang_{ziel}")
             anzeige = a.get("name")
@@ -498,7 +498,7 @@ def baue(abschnitt):
         fid = sl if sl in figur_ids else figur_namen.get(sl) if figur_namen.get(sl) in figur_ids else None
         return None if fid in (layout.get("_ohne_gespraech") or []) else fid
 
-    OPTION_RE = re.compile(r"Option ([A-ZÄÖÜ][\wäöüß]*(?: \d)?)(.*)")
+    OPTION_RE = re.compile(r"Option ([A-ZÄÖÜ][\wäöüß-]*(?: (?:\d|[A-ZÄÖÜ][\wäöüß-]*))?)(.*)")
     REDEN_RE = re.compile(r"^Reden: ([^,;]+?)(?:,\s*(.+))?$")
     ohne_gespraech = set(layout.get("_ohne_gespraech") or [])   # Gespräch regelt der Rätselcode
     def echter_ausloeser(z):
@@ -572,7 +572,7 @@ def baue(abschnitt):
                 aktuelle["bedingung_text"] = text
             d = dialoge.setdefault(fig, {"id": fig, "script_name": pascal(fig), "optionen": []})
             d["optionen"].append(aktuelle)
-            if "öffnet" in rest:
+            if "öffnet" in rest or "startet" in rest:
                 # „öffnet die Rätsel-Auswahl“: Folgezeilen spielt die Rätsel-Logik der Welt
                 aktuelle["oeffnet"] = True
                 aktuelle = None
