@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://br4ww3wjynad6"]
+
+[ext_resource type="Script" path="res://game/inventory_items/portalgeraet/inventory_item_portalgeraet_state.gd" id="1_xuwqy"]
+
+[resource]
+resource_name = "Portalgeraet"
+script = ExtResource("1_xuwqy")
+script_name = "Portalgeraet"
+scene = "res://game/inventory_items/portalgeraet/inventory_item_portalgeraet.tscn"

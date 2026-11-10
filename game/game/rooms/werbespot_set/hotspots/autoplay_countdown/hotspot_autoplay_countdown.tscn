@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://iq67op1g41nx"]
+
+[ext_resource type="Script" path="res://game/rooms/werbespot_set/hotspots/autoplay_countdown/hotspot_autoplay_countdown.gd" id="1_kvt2a"]
+
+[node name="AutoplayCountdown" type="Area2D" unique_id=434339176]
+script = ExtResource("1_kvt2a")
+script_name = "AutoplayCountdown"
+description = "Autoplay Countdown"
+cursor = 1
+interaction_polygon = PackedVector2Array(-29, -24, 29, -24, 29, 24, -29, 24)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1270039944]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

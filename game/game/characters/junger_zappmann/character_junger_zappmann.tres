@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://b3sfum02g6upj"]
+
+[ext_resource type="Script" path="res://game/characters/junger_zappmann/character_junger_zappmann_state.gd" id="1_w0h7g"]
+
+[resource]
+resource_name = "JungerZappmann"
+script = ExtResource("1_w0h7g")
+script_name = "JungerZappmann"
+scene = "res://game/characters/junger_zappmann/character_junger_zappmann.tscn"

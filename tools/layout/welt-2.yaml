@@ -1,0 +1,362 @@
+# Platzhalter-Layout Welt 2 (Antikodonien) für die Graubox (tools/godot_raeume.py).
+#
+# Nur Startwerte: Der Godot-Bau (addons/couch_quest_bau) setzt Rechtecke, Laufbereich und
+# Positionen ausschließlich beim ersten Anlegen eines Objekts. Danach gehören Umrisse und
+# Positionen der Szene in Godot (03-produktion.md, Arbeitsteilung). Lage nach grafik/welt-2.md.
+#
+# Koordinaten in Spielpixeln, Rechteck = [x, y, breite, hoehe], gehe = Punkt, zu dem die Figur
+# vor der Aktion läuft. Schlüssel der Hotspots = Objekt-ID aus dem Auslöser des Skripts.
+# Sonderschlüssel wie in welt-1.yaml; dazu je Raum:
+#   faehre    Ziele, die nur die Zeitfähre verbindet (Flusskarte am Hotspot „faehre“, kein
+#             eigener Ausgang; skripte/welt_2.gd)
+
+_alias:
+  papyrus_aus_dem_schilf: papyrusblatt
+  papyrus: papyrusblatt
+  tintenfisch_aus_dem_netz: tintenfass
+  tintenfisch: tintenfass
+  brot_vom_tisch: brot
+  leeres_formular_vom_formularberg: leeres_formular
+  sortierende_socke: socke
+  opas_papyrus: opas_papyrus
+  feigensetzling: feigensetzling
+  feigenbaum: feigensetzling@Feigenbaum
+  feigenkern: feigensetzling@Feigenkern
+  gepflueckte_feigen: feigen
+  frische_feigen: feigen
+  verwitterter_grabstein: grabstein@verwittert
+  frischer_grabstein: grabstein@frisch
+  zerbroeselter_haufen: haufen
+  roher_fladen: fladen@roh
+  fladen_mit_kruste: fladen@mit Kruste
+  wein: traubensaft
+  essig: essigkrug
+  sandalen: sandalen
+  geoelte_sandalen: sandalen
+_figur_alias: {grieche_in_der_menge: grieche, pixel_in_der_kueche: pixel}
+_tiere: [sobek, hofkater, schildkroete]
+_figuren: [sobek, hermes, ramses, faecherwedler, archimedes, cicero, zeremonienmeister, aegypter, opa, grieche]
+
+nil_delta:
+  farbe: "#c9a96e"
+  laufbereich: [[6, 210], [474, 210], [474, 267], [6, 267]]
+  faehre: [faehrsteg_olympia, hafen_syrakus]
+  marker:
+    start: [150, 240]
+    von_thronsaal_ramses: [444, 240]
+    von_sphinx: [390, 222]
+    von_faehre: [60, 237]
+    hermes: [300, 240]
+  figuren:
+    faehrmann: [72, 228]
+    sobek: [33, 255]
+    steinmetz: [330, 228]
+  alias:
+    papyrus_aus_dem_schilf: papyrusblatt
+    weizenfeld: weizenfeld_mit_handabdruck
+    bauplan_verkehrt_herum_gehalten: bauplan
+    tafel: faehrtafel
+    pyramide: verkehrte_pyramide
+  hotspots:
+    faehre: {rect: [6, 195, 96, 30], gehe: [84, 237], name: Fähre}
+    faehrtafel: {rect: [111, 150, 30, 30], gehe: [126, 231], name: Tafel}
+    sanduhr: {rect: [150, 141, 24, 51], gehe: [162, 231], name: Sanduhr}
+    schilf: {rect: [180, 168, 54, 42], gehe: [207, 231], name: Schilf}
+    weizenfeld_mit_handabdruck: {rect: [240, 165, 72, 45], gehe: [276, 231], name: Weizenfeld}
+    verkehrte_pyramide: {rect: [255, 21, 105, 105], gehe: [306, 228], name: Verkehrte Pyramide}
+    bauplan: {rect: [345, 168, 30, 24], gehe: [354, 231], name: Bauplan}
+  props:
+    papyrusblatt: {rect: [204, 195, 15, 12], gehe: [207, 231]}
+  ausgaenge:
+    thronsaal_ramses: {rect: [450, 105, 27, 105], gehe: [456, 240], id: sandweg, name: Sandweg}
+    sphinx: {rect: [375, 120, 54, 42], gehe: [399, 222], id: duenenpfad, name: Dünenpfad}
+
+thronsaal_ramses:
+  farbe: "#b98b3e"
+  laufbereich: [[6, 210], [474, 210], [474, 267], [6, 267]]
+  marker:
+    start: [36, 240]
+    von_nil_delta: [36, 240]
+    von_palastkueche: [444, 240]
+    sobek: [150, 252]
+    kissen: [270, 228]
+  figuren:
+    schreiber: [84, 228]
+    ramses: [300, 186]
+    hofkater: [270, 222]
+    faecherwedler: [354, 228]
+  alias:
+    opferschale_des_hofkaters: opferschale
+    inschrift: inschrift
+    nahansicht_inschrift: inschrift
+    nach_dem_nehmen: pharaonenteller
+    ramses_im_stadion: ramses
+    faecherwedler_waehrend_des_duells: faecherwedler
+    tuer_zur_kueche: tuer_zur_kueche
+    fackeln: fackeln
+  hotspots:
+    thron: {rect: [264, 117, 72, 93], gehe: [300, 234], name: Thron}
+    schreiberpult: {rect: [57, 177, 45, 33], gehe: [84, 234], name: Schreiberpult}
+    sarkophag: {rect: [12, 96, 36, 108], gehe: [36, 234], name: Sarkophag}
+    mumifizierte_katze: {rect: [114, 120, 24, 42], gehe: [126, 231], name: Mumifizierte Katze}
+    wandfries: {rect: [60, 24, 330, 27], gehe: [240, 231], name: Wandfries}
+    saeulen: {rect: [150, 60, 33, 150], gehe: [168, 231], name: Säulen}
+    inschrift: {rect: [195, 93, 39, 54], gehe: [213, 231], name: Inschrift}
+    opferschale: {rect: [237, 204, 21, 9], gehe: [246, 237], name: Opferschale}
+    fackeln: {rect: [384, 60, 36, 36], gehe: [402, 231], name: Fackeln}
+  props:
+    pharaonenteller: {rect: [342, 189, 18, 9], gehe: [348, 234]}
+  ausgaenge:
+    nil_delta: {rect: [3, 120, 6, 90], gehe: [18, 240], id: ausgang_nil_delta, name: Nil-Delta}
+    palastkueche: {rect: [438, 105, 39, 105], gehe: [450, 237], id: tuer_zur_kueche, name: Tür zur Küche}
+
+palastkueche:
+  farbe: "#9c6b45"
+  laufbereich: [[6, 210], [474, 210], [474, 267], [6, 267]]
+  marker:
+    start: [36, 240]
+    von_thronsaal_ramses: [36, 240]
+  figuren:
+    nebet: [240, 234]
+  alias:
+    oelkrug: oelkruege
+    lehmofen: lehmoefen
+    brot_vom_tisch: brot
+  ohne: [oelkrug]               # Nehmen Ölkrug: Nebet wehrt ab (Hotspot Ölkrüge)
+  hotspots:
+    lehmoefen: {rect: [60, 135, 84, 75], gehe: [102, 234], name: Lehmöfen}
+    schneidetisch: {rect: [165, 168, 75, 42], gehe: [204, 234], name: Schneidetisch}
+    oelkruege: {rect: [282, 141, 60, 69], gehe: [312, 234], name: Ölkrüge}
+    leere_amphoren: {rect: [354, 159, 48, 51], gehe: [378, 234], name: Leere Amphoren}
+    knoblauch_und_kraeuter: {rect: [120, 15, 120, 30], gehe: [180, 234], name: Knoblauch und Kräuter}
+    traubensaft_amphore: {rect: [414, 150, 30, 60], gehe: [429, 234], name: Traubensaft-Amphore}
+    dampf: {rect: [60, 75, 84, 54], gehe: [102, 234], name: Dampf}
+  props:
+    brot: {rect: [171, 159, 18, 9], gehe: [180, 234]}
+    datteln: {rect: [195, 159, 15, 9], gehe: [204, 234]}
+    zwiebel: {rect: [216, 159, 12, 9], gehe: [222, 234]}
+    traubensaft: {rect: [420, 192, 15, 18], gehe: [429, 234]}
+  ausgaenge:
+    thronsaal_ramses: {rect: [3, 105, 27, 105], gehe: [18, 240], id: ausgang_thronsaal, name: Thronsaal}
+
+sphinx:
+  farbe: "#d8b878"
+  laufbereich: [[6, 210], [474, 210], [474, 267], [6, 267]]
+  marker:
+    start: [36, 240]
+    von_nil_delta: [36, 240]
+  figuren:
+    sphinx_figur: [330, 207]
+  alias:
+    sphinx: sphinx_figur
+    nase_im_sand: nase
+  hotspots:
+    schreibpult: {rect: [126, 156, 78, 54], gehe: [165, 234], name: Schreibpult}
+    zerknuellte_papyri: {rect: [207, 195, 45, 15], gehe: [228, 234], name: Zerknüllte Papyri}
+    notizblock: {rect: [150, 147, 24, 9], gehe: [162, 234], name: Notizblock}
+    fussspuren: {rect: [60, 240, 90, 15], gehe: [105, 234], name: Fußspuren}
+    steinkugel: {rect: [126, 84, 54, 54], gehe: [150, 234], name: Steinkugel}
+    nase: {rect: [372, 96, 21, 24], gehe: [381, 234], name: Nase}
+  ausgaenge:
+    nil_delta: {rect: [3, 105, 27, 105], gehe: [18, 240], id: ausgang_nil_delta, name: Nil-Delta}
+
+faehrsteg_olympia:
+  farbe: "#8fae7a"
+  laufbereich: [[6, 210], [474, 210], [474, 267], [6, 267]]
+  faehre: [nil_delta, hafen_syrakus]
+  marker:
+    start: [90, 237]
+    von_faehre: [90, 237]
+    von_agora: [444, 240]
+  figuren:
+    faehrmann: [60, 228]
+  alias:
+    tafel: tafel_olympia
+    sanduhr: sanduhr_olympia
+  hotspots:
+    faehre: {rect: [6, 195, 96, 30], gehe: [84, 237], name: Fähre}
+    olivenbaeume: {rect: [150, 54, 135, 120], gehe: [216, 231], name: Olivenbäume}
+    fischerboot: {rect: [294, 186, 66, 24], gehe: [327, 234], name: Fischerboot}
+    sanduhr_olympia: {rect: [114, 141, 24, 51], gehe: [126, 231], name: Sanduhr}
+    tafel_olympia: {rect: [144, 168, 27, 27], gehe: [156, 231], name: Tafel}
+  ausgaenge:
+    agora: {rect: [438, 90, 39, 120], gehe: [450, 240], id: weg_zur_agora, name: Weg zur Agora}
+
+agora:
+  farbe: "#c8c0a8"
+  laufbereich: [[6, 210], [954, 210], [954, 267], [6, 267]]
+  marker:
+    start: [900, 240]
+    von_faehrsteg_olympia: [915, 240]
+    von_stadion: [45, 240]
+    von_startbuero: [318, 228]
+    abwurf: [600, 240]
+  figuren:
+    cicero: [480, 222]
+    tiro: [534, 234]
+    tourist: [705, 240]
+    touristin: [750, 240]
+    philosoph: [210, 237]
+    brian: [810, 237]
+    strassenmusiker: [870, 234]
+  alias:
+    tonne_mit_max: tonne
+    saeule_mit_max: hohe_saeule_mit_adler
+    saeule: hohe_saeule_mit_adler
+    sandale_auf_der_saeule: sandale_auf_der_saeule
+    grieche_in_der_menge: menge
+    roemische_touristin: touristin
+    roemischer_tourist: tourist
+    faecherwedler_im_thronsaal: faecherwedler
+  ohne: [schilf, erde]          # Feigensetzling auf Schilf oder Erde: im Nil-Delta (skripte/welt_2.gd)
+  hotspots:
+    saeulenhalle: {rect: [255, 60, 150, 120], gehe: [330, 228], name: Säulenhalle}
+    hohe_saeule_mit_adler: {rect: [600, 15, 30, 180], gehe: [615, 231], name: Säule mit Adler}
+    sandale_auf_der_saeule: {rect: [597, 6, 36, 15], gehe: [615, 231], name: Sandale}
+    heuhaufen: {rect: [582, 186, 66, 24], gehe: [615, 237], name: Heuhaufen}
+    venusstatue: {rect: [96, 96, 36, 108], gehe: [114, 231], name: Venusstatue}
+    rednerpult: {rect: [456, 165, 48, 45], gehe: [480, 237], name: Rednerpult}
+    marktstaende: {rect: [660, 120, 150, 75], gehe: [735, 231], name: Marktstände}
+    tonne: {rect: [180, 186, 54, 36], gehe: [207, 240], name: Tonne}
+    menge: {rect: [420, 120, 150, 42], gehe: [495, 231], name: Menge}
+    latein_kritzelei: {rect: [834, 129, 48, 24], gehe: [858, 231], name: Latein-Kritzelei}
+  ausgaenge:
+    faehrsteg_olympia: {rect: [930, 90, 27, 120], gehe: [942, 240], id: weg_zum_faehrsteg, name: Weg zum Fährsteg}
+    stadion: {rect: [3, 75, 45, 135], gehe: [24, 240], id: bogen_zum_stadion, name: Bogen zum Stadion}
+    startbuero: {rect: [297, 135, 39, 75], gehe: [318, 228], id: tuer_zum_startbuero, name: Startbüro}
+
+startbuero:
+  farbe: "#a89a7c"
+  laufbereich: [[6, 210], [474, 210], [474, 267], [6, 267]]
+  marker:
+    start: [36, 240]
+    von_agora: [36, 240]
+    hermes: [150, 240]
+  figuren:
+    beamter_1: [195, 210]
+    beamter_2: [330, 210]
+  alias:
+    beamter: beamter_2
+    "2": beamter_2
+    papyrus: papyrusblatt
+    leeres_formular_vom_formularberg: leeres_formular
+  hotspots:
+    formularberg: {rect: [396, 75, 75, 135], gehe: [426, 234], name: Formularberg}
+    wachstafeln: {rect: [246, 120, 42, 33], gehe: [267, 231], name: Wachstafeln}
+    aushang: {rect: [84, 81, 30, 39], gehe: [99, 231], name: Aushang}
+    bank_mit_wartenden: {rect: [63, 186, 90, 24], gehe: [108, 237], name: Bank}
+    staub: {rect: [150, 15, 180, 60], gehe: [240, 231], name: Staub}
+  props:
+    leeres_formular: {rect: [432, 195, 18, 12], gehe: [426, 234]}
+  ausgaenge:
+    agora: {rect: [3, 105, 27, 105], gehe: [18, 240], id: ausgang_agora, name: Agora}
+
+stadion:
+  farbe: "#d6b46a"
+  laufbereich: [[6, 210], [474, 210], [474, 267], [6, 267]]
+  marker:
+    start: [444, 240]
+    von_agora: [444, 240]
+    ramses: [240, 99]
+    wedler: [282, 99]
+    archimedes: [96, 228]
+    hermes: [345, 240]
+    cicero: [165, 228]
+    zeremonienmeister: [390, 228]
+    aegypter: [180, 99]
+  figuren:
+    leonidas: [300, 237]
+    schildkroete: [354, 252]
+  alias:
+    ramses_im_stadion: ramses
+    wurfhebel_im_stadion: wurfhebel
+    startlinie_mit_startpass: startlinie
+    siegel_auf_dem_sack: goldener_sack
+  hotspots:
+    laufbahn: {rect: [30, 222, 420, 18], gehe: [240, 249], name: Laufbahn}
+    sandgrube: {rect: [96, 186, 90, 24], gehe: [141, 234], name: Sandgrube}
+    kampfrichterzelt: {rect: [210, 147, 60, 48], gehe: [240, 231], name: Kampfrichterzelt}
+    zuschauerraenge: {rect: [0, 60, 480, 48], gehe: [240, 231], name: Zuschauerränge}
+    glockenturm: {rect: [420, 6, 24, 51], gehe: [420, 231], name: Glockenturm}
+    siegerliste: {rect: [300, 135, 36, 45], gehe: [318, 231], name: Siegerliste}
+    startlinie: {rect: [396, 240, 9, 24], gehe: [399, 252], name: Startlinie}
+    wurfhebel: {rect: [36, 150, 54, 60], gehe: [66, 234], name: Wurfhebel}
+  ausgaenge:
+    agora: {rect: [450, 105, 27, 105], gehe: [459, 240], id: ausgang_agora, name: Agora}
+
+hafen_syrakus:
+  farbe: "#6f98b0"
+  laufbereich: [[6, 210], [474, 210], [474, 267], [6, 267]]
+  faehre: [nil_delta, faehrsteg_olympia]
+  marker:
+    start: [90, 237]
+    von_faehre: [90, 237]
+    von_werkstatt: [444, 240]
+    von_grabhuegel: [282, 222]
+  figuren:
+    faehrmann: [60, 228]
+  alias:
+    sanduhr: sanduhr_syrakus
+    tintenfisch_aus_dem_netz: tintenfass
+    tintenfisch: tintenfass
+  hotspots:
+    faehre: {rect: [6, 195, 96, 30], gehe: [84, 237], name: Fähre}
+    meer: {rect: [0, 90, 150, 60], gehe: [90, 231], name: Meer}
+    fischernetze: {rect: [165, 165, 66, 45], gehe: [198, 234], name: Fischernetze}
+    amphoren_am_kai: {rect: [330, 168, 54, 42], gehe: [357, 234], name: Amphoren}
+    sanduhr_syrakus: {rect: [117, 141, 24, 51], gehe: [129, 231], name: Sanduhr}
+  props:
+    tintenfass: {rect: [189, 186, 15, 15], gehe: [198, 234]}
+  ausgaenge:
+    werkstatt: {rect: [420, 90, 57, 120], gehe: [450, 240], id: gasse_zur_werkstatt, name: Gasse zur Werkstatt}
+    grabhuegel: {rect: [255, 75, 54, 60], gehe: [282, 222], id: pfad_zum_grabhuegel, name: Pfad zum Grabhügel}
+
+werkstatt:
+  farbe: "#8a7a62"
+  laufbereich: [[6, 210], [474, 210], [474, 267], [6, 267]]
+  marker:
+    start: [444, 240]
+    von_hafen_syrakus: [444, 240]
+  figuren:
+    archimedes: [210, 234]
+    hieron: [300, 234]
+  alias:
+    waage_mit_krone: waage
+  hotspots:
+    badewanne: {rect: [36, 174, 84, 36], gehe: [78, 234], name: Badewanne}
+    werkbank: {rect: [138, 156, 96, 54], gehe: [186, 234], name: Werkbank}
+    wurfhebel: {rect: [345, 141, 51, 69], gehe: [369, 234], name: Wurfhebel}
+    wasserorgel: {rect: [36, 72, 66, 81], gehe: [69, 234], name: Wasserorgel}
+    bauplan_dampfmaschine: {rect: [117, 51, 45, 36], gehe: [138, 231], name: Bauplan Dampfmaschine}
+    modell_schiefer_turm: {rect: [168, 129, 15, 27], gehe: [174, 234], name: Modell}
+    skizze_kugel_und_zylinder: {rect: [174, 51, 45, 36], gehe: [195, 231], name: Skizze}
+    fenster: {rect: [261, 30, 84, 54], gehe: [303, 231], name: Fenster}
+    zahnraeder: {rect: [228, 99, 42, 42], gehe: [249, 231], name: Zahnräder}
+  props:
+    brennspiegel: {rect: [405, 108, 21, 24], gehe: [414, 234]}
+    waage: {rect: [195, 141, 21, 15], gehe: [204, 234]}
+    messbecher: {rect: [219, 144, 12, 12], gehe: [225, 234]}
+    essigkrug: {rect: [408, 180, 24, 30], gehe: [414, 234]}
+  ausgaenge:
+    hafen_syrakus: {rect: [450, 105, 27, 105], gehe: [456, 240], id: ausgang_hafen, name: Hafen}
+
+grabhuegel:
+  farbe: "#7a8a5a"
+  laufbereich: [[6, 210], [474, 210], [474, 267], [6, 267]]
+  marker:
+    start: [36, 240]
+    von_hafen_syrakus: [36, 240]
+    archimedes: [390, 234]
+    cicero: [300, 234]
+  alias:
+    leerer_sockel: sockel
+    zikaden_oder_zuruf_grabhuegel: zikaden
+    frischer_grabstein: sockel
+  hotspots:
+    sockel: {rect: [210, 168, 51, 42], gehe: [234, 234], name: Sockel}
+    brombeeren: {rect: [60, 159, 90, 51], gehe: [105, 234], name: Brombeeren}
+    alte_grabsteine: {rect: [300, 150, 90, 60], gehe: [345, 234], name: Alte Grabsteine}
+    zypressen: {rect: [405, 30, 60, 150], gehe: [435, 231], name: Zypressen}
+    zikaden: {rect: [150, 30, 150, 39], gehe: [225, 231], name: Zikaden}
+  ausgaenge:
+    hafen_syrakus: {rect: [3, 105, 27, 105], gehe: [18, 240], id: ausgang_hafen, name: Hafen}

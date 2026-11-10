@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://cv7i0mdvp3r2j"]
+
+[ext_resource type="Texture2D" uid="uid://bq218hpem5rpx" path="res://grafik/platzhalter/gegenstand_papyrusblatt.png" id="1_212fk"]
+[ext_resource type="Script" path="res://game/inventory_items/papyrusblatt/inventory_item_papyrusblatt.gd" id="1_vblgc"]
+
+[node name="ItemPapyrusblatt" type="TextureRect" unique_id=1759161327]
+texture_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 4
+mouse_filter = 0
+texture = ExtResource("1_212fk")
+stretch_mode = 5
+script = ExtResource("1_vblgc")
+script_name = "Papyrusblatt"
+description = "UI_OBJ_PAPYRUSBLATT"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1269149528]

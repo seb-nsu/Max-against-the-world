@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://bor8icfxoje1d"]
+
+[ext_resource type="Script" path="res://game/characters/sicherheitsmann/character_sicherheitsmann.gd" id="1_qjg4y"]
+[ext_resource type="Texture2D" uid="uid://hjl452ltwx5v" path="res://grafik/platzhalter/figur_sicherheitsmann.png" id="2_xjep1"]
+
+[node name="CharacterSicherheitsmann" type="Area2D" unique_id=1306300928]
+script = ExtResource("1_qjg4y")
+walk_speed = 90.0
+dialog_pos = Vector2(0, -100)
+script_name = "Sicherheitsmann"
+description = "UI_OBJ_SICHERHEITSMANN"
+cursor = 8
+interaction_polygon = PackedVector2Array(-16, -96, 16, -96, 16, 0, -16, 0)
+
+[node name="ScalingPolygon" type="CollisionPolygon2D" parent="." unique_id=1930583498]
+polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=372044843]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1025866867]
+texture_filter = 1
+texture = ExtResource("2_xjep1")
+offset = Vector2(0, -48)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=263745294]
+visible = false
+polygon = PackedVector2Array(-16, -96, 16, -96, 16, 0, -16, 0)
+
+[node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=1768650955]
+visible = false
+affect_navigation_mesh = true
+carve_navigation_mesh = true

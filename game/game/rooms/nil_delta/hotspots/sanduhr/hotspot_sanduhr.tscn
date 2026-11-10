@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://de1th5fbmuuvc"]
+
+[ext_resource type="Script" path="res://game/rooms/nil_delta/hotspots/sanduhr/hotspot_sanduhr.gd" id="1_75t50"]
+
+[node name="Sanduhr" type="Area2D" unique_id=20248749]
+script = ExtResource("1_75t50")
+script_name = "Sanduhr"
+description = "Sanduhr"
+cursor = 1
+interaction_polygon = PackedVector2Array(-12, -25.5, 12, -25.5, 12, 25.5, -12, 25.5)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=146494406]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

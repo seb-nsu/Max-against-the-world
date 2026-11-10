@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://cs5geqemq3w2"]
+
+[node name="VonStadion" type="Marker2D" unique_id=663500340]
+visible = false

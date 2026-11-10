@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://c02w4je7jr0i"]
+
+[ext_resource type="Script" uid="uid://brxefo54wpm32" path="res://addons/popochiu/engine/objects/dialog/popochiu_dialog_option.gd" id="1_pn380"]
+[ext_resource type="Script" path="res://game/dialogs/kommissar/dialog_kommissar.gd" id="2_thq6y"]
+
+[resource]
+resource_name = "Kommissar"
+script = ExtResource("2_thq6y")
+script_name = "Kommissar"

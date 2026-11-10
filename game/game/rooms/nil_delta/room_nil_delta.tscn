@@ -1,0 +1,138 @@
+[gd_scene format=3 uid="uid://bo3101ll30obg"]
+
+[ext_resource type="Script" path="res://game/rooms/nil_delta/room_nil_delta.gd" id="1_akh1e"]
+[ext_resource type="PackedScene" uid="uid://bblm1efeiuxqh" path="res://game/rooms/nil_delta/walkable_areas/boden/walkable_area_boden.tscn" id="2_y1wi8"]
+[ext_resource type="PackedScene" uid="uid://e7flnep7y8bl" path="res://game/rooms/nil_delta/props/background/prop_background.tscn" id="3_8aoqy"]
+[ext_resource type="Texture2D" uid="uid://d21gy451b5p81" path="res://grafik/platzhalter/raum_nil_delta.png" id="4_m10hn"]
+[ext_resource type="PackedScene" uid="uid://dg6ka0an61ma4" path="res://game/rooms/nil_delta/props/papyrusblatt/prop_papyrusblatt.tscn" id="5_rir52"]
+[ext_resource type="Texture2D" uid="uid://cvt8c6tk47em7" path="res://grafik/platzhalter/prop_papyrusblatt.png" id="6_fkicj"]
+[ext_resource type="PackedScene" uid="uid://l637skcx50u0" path="res://game/rooms/nil_delta/hotspots/faehre/hotspot_faehre.tscn" id="7_wi0rv"]
+[ext_resource type="PackedScene" uid="uid://k2oyiiiupijf" path="res://game/rooms/nil_delta/hotspots/faehrtafel/hotspot_faehrtafel.tscn" id="8_ntn36"]
+[ext_resource type="PackedScene" uid="uid://de1th5fbmuuvc" path="res://game/rooms/nil_delta/hotspots/sanduhr/hotspot_sanduhr.tscn" id="9_uhbjs"]
+[ext_resource type="PackedScene" uid="uid://bjn5sksi8cv7v" path="res://game/rooms/nil_delta/hotspots/schilf/hotspot_schilf.tscn" id="10_ihvd1"]
+[ext_resource type="PackedScene" uid="uid://swo3xegm8pq3" path="res://game/rooms/nil_delta/hotspots/weizenfeld_mit_handabdruck/hotspot_weizenfeld_mit_handabdruck.tscn" id="11_4knck"]
+[ext_resource type="PackedScene" uid="uid://bmphm7sr4o540" path="res://game/rooms/nil_delta/hotspots/verkehrte_pyramide/hotspot_verkehrte_pyramide.tscn" id="12_qwdp3"]
+[ext_resource type="PackedScene" uid="uid://08kjjn84cbos" path="res://game/rooms/nil_delta/hotspots/bauplan/hotspot_bauplan.tscn" id="13_xwrak"]
+[ext_resource type="PackedScene" uid="uid://duvfl2fyvtmcv" path="res://game/rooms/nil_delta/hotspots/sandweg/hotspot_sandweg.tscn" id="14_i0qh5"]
+[ext_resource type="PackedScene" uid="uid://d23xpc3xehdmy" path="res://game/rooms/nil_delta/hotspots/duenenpfad/hotspot_duenenpfad.tscn" id="15_edtj6"]
+[ext_resource type="PackedScene" uid="uid://bojdr2oxkiubd" path="res://game/rooms/nil_delta/markers/start/marker_start.tscn" id="16_heh8x"]
+[ext_resource type="PackedScene" uid="uid://dys5gcplrp76w" path="res://game/rooms/nil_delta/markers/von_thronsaal_ramses/marker_von_thronsaal_ramses.tscn" id="17_hgi45"]
+[ext_resource type="PackedScene" uid="uid://be7lch01xuvio" path="res://game/rooms/nil_delta/markers/von_sphinx/marker_von_sphinx.tscn" id="18_weo8g"]
+[ext_resource type="PackedScene" uid="uid://e6evxmm2uun2" path="res://game/rooms/nil_delta/markers/von_faehre/marker_von_faehre.tscn" id="19_thv1t"]
+[ext_resource type="PackedScene" uid="uid://cd0w8fqcg2rv4" path="res://game/rooms/nil_delta/markers/hermes/marker_hermes.tscn" id="20_yp18m"]
+[ext_resource type="PackedScene" uid="uid://dda2jvhyto7pc" path="res://game/characters/faehrmann/character_faehrmann.tscn" id="21_5yu0x"]
+[ext_resource type="PackedScene" uid="uid://bkkl2hck7rb2w" path="res://game/characters/sobek/character_sobek.tscn" id="22_jdeoi"]
+[ext_resource type="PackedScene" uid="uid://6spgplt0vblh" path="res://game/characters/steinmetz/character_steinmetz.tscn" id="23_3eyf4"]
+
+[node name="RoomNilDelta" type="Node2D" unique_id=1404265322]
+script = ExtResource("1_akh1e")
+script_name = "NilDelta"
+width = 480
+height = 270
+
+[node name="WalkableAreas" type="Node2D" parent="." unique_id=40846312]
+
+[node name="Boden" parent="WalkableAreas" unique_id=208920602 instance=ExtResource("2_y1wi8")]
+interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(6, 210, 474, 210, 474, 267, 6, 267)])
+
+[node name="Props" type="Node2D" parent="." unique_id=2058610568]
+
+[node name="Background" parent="Props" unique_id=379545559 instance=ExtResource("3_8aoqy")]
+position = Vector2(240, 135)
+texture = ExtResource("4_m10hn")
+description = "UI_RAUM_NIL_DELTA"
+
+[node name="Papyrusblatt" parent="Props" unique_id=964821375 instance=ExtResource("5_rir52")]
+position = Vector2(211.5, 201)
+texture = ExtResource("6_fkicj")
+description = "UI_OBJ_PAPYRUSBLATT"
+baseline = 6
+walk_to_point = Vector2(-4.5, 30)
+
+[node name="Hotspots" type="Node2D" parent="." unique_id=209175412]
+
+[node name="Faehre" parent="Hotspots" unique_id=743252189 instance=ExtResource("7_wi0rv")]
+position = Vector2(54, 210)
+description = "UI_OBJ_FAEHRE"
+baseline = 15
+walk_to_point = Vector2(30, 27)
+
+[node name="Faehrtafel" parent="Hotspots" unique_id=971313398 instance=ExtResource("8_ntn36")]
+position = Vector2(126, 165)
+description = "UI_OBJ_FAEHRTAFEL"
+baseline = 15
+walk_to_point = Vector2(0, 66)
+
+[node name="Sanduhr" parent="Hotspots" unique_id=20248749 instance=ExtResource("9_uhbjs")]
+position = Vector2(162, 166.5)
+description = "UI_OBJ_SANDUHR"
+baseline = 25
+walk_to_point = Vector2(0, 64.5)
+
+[node name="Schilf" parent="Hotspots" unique_id=107583191 instance=ExtResource("10_ihvd1")]
+position = Vector2(207, 189)
+description = "UI_OBJ_SCHILF"
+baseline = 21
+walk_to_point = Vector2(0, 42)
+
+[node name="WeizenfeldMitHandabdruck" parent="Hotspots" unique_id=847886703 instance=ExtResource("11_4knck")]
+position = Vector2(276, 187.5)
+description = "UI_OBJ_WEIZENFELD_MIT_HANDABDRUCK"
+baseline = 22
+walk_to_point = Vector2(0, 43.5)
+
+[node name="VerkehrtePyramide" parent="Hotspots" unique_id=1297977167 instance=ExtResource("12_qwdp3")]
+position = Vector2(307.5, 73.5)
+description = "UI_OBJ_VERKEHRTE_PYRAMIDE"
+baseline = 52
+walk_to_point = Vector2(-1.5, 154.5)
+
+[node name="Bauplan" parent="Hotspots" unique_id=1005768694 instance=ExtResource("13_xwrak")]
+position = Vector2(360, 180)
+description = "UI_OBJ_BAUPLAN"
+baseline = 12
+walk_to_point = Vector2(-6, 51)
+
+[node name="Sandweg" parent="Hotspots" unique_id=1360121635 instance=ExtResource("14_i0qh5")]
+position = Vector2(463.5, 157.5)
+description = "UI_OBJ_SANDWEG"
+baseline = 52
+walk_to_point = Vector2(-7.5, 82.5)
+cursor = 9
+
+[node name="Duenenpfad" parent="Hotspots" unique_id=752158869 instance=ExtResource("15_edtj6")]
+position = Vector2(402, 141)
+description = "UI_OBJ_DUENENPFAD"
+baseline = 21
+walk_to_point = Vector2(-3, 81)
+cursor = 9
+
+[node name="Regions" type="Node2D" parent="." unique_id=126631486]
+
+[node name="Markers" type="Node2D" parent="." unique_id=250195060]
+
+[node name="Start" parent="Markers" unique_id=1212898002 instance=ExtResource("16_heh8x")]
+position = Vector2(150, 240)
+
+[node name="VonThronsaalRamses" parent="Markers" unique_id=1967330072 instance=ExtResource("17_hgi45")]
+position = Vector2(444, 240)
+
+[node name="VonSphinx" parent="Markers" unique_id=1259328439 instance=ExtResource("18_weo8g")]
+position = Vector2(390, 222)
+
+[node name="VonFaehre" parent="Markers" unique_id=2005417047 instance=ExtResource("19_thv1t")]
+position = Vector2(60, 237)
+
+[node name="Hermes" parent="Markers" unique_id=1562054915 instance=ExtResource("20_yp18m")]
+position = Vector2(300, 240)
+
+[node name="Characters" type="Node2D" parent="." unique_id=698263444]
+
+[node name="CharacterFaehrmann *" parent="Characters" unique_id=938438789 instance=ExtResource("21_5yu0x")]
+position = Vector2(72, 228)
+
+[node name="CharacterSobek *" parent="Characters" unique_id=1702667434 instance=ExtResource("22_jdeoi")]
+position = Vector2(33, 255)
+
+[node name="CharacterSteinmetz *" parent="Characters" unique_id=305777515 instance=ExtResource("23_3eyf4")]
+position = Vector2(330, 228)

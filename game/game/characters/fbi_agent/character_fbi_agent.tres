@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://bqhtm50fl5amb"]
+
+[ext_resource type="Script" path="res://game/characters/fbi_agent/character_fbi_agent_state.gd" id="1_tvu20"]
+
+[resource]
+resource_name = "FbiAgent"
+script = ExtResource("1_tvu20")
+script_name = "FbiAgent"
+scene = "res://game/characters/fbi_agent/character_fbi_agent.tscn"

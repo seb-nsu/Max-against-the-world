@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://bs7l1nv313cf7"]
+
+[ext_resource type="Script" path="res://game/rooms/werkstatt/hotspots/fenster/hotspot_fenster.gd" id="1_xtcoo"]
+
+[node name="Fenster" type="Area2D" unique_id=899874604]
+script = ExtResource("1_xtcoo")
+script_name = "Fenster"
+description = "Fenster"
+cursor = 1
+interaction_polygon = PackedVector2Array(-42, -27, 42, -27, 42, 27, -42, 27)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=66076530]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://dy1n533616w83"]
+
+[ext_resource type="Script" path="res://game/rooms/thronsaal_ramses/hotspots/inschrift/hotspot_inschrift.gd" id="1_m2ts6"]
+
+[node name="Inschrift" type="Area2D" unique_id=916854319]
+script = ExtResource("1_m2ts6")
+script_name = "Inschrift"
+description = "Inschrift"
+cursor = 1
+interaction_polygon = PackedVector2Array(-19.5, -27, 19.5, -27, 19.5, 27, -19.5, 27)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1357267520]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

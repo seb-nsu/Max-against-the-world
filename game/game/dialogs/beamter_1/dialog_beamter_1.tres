@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://wbfh4qq4t14d"]
+
+[ext_resource type="Script" uid="uid://brxefo54wpm32" path="res://addons/popochiu/engine/objects/dialog/popochiu_dialog_option.gd" id="1_0leen"]
+[ext_resource type="Script" path="res://game/dialogs/beamter_1/dialog_beamter_1.gd" id="2_yfgpx"]
+
+[resource]
+resource_name = "Beamter1"
+script = ExtResource("2_yfgpx")
+script_name = "Beamter1"

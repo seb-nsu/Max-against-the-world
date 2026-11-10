@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://c04n8idijdtvt"]
+
+[ext_resource type="Script" path="res://game/rooms/kueche_orakel/hotspots/gabel/hotspot_gabel.gd" id="1_rft6f"]
+
+[node name="Gabel" type="Area2D" unique_id=1994437873]
+script = ExtResource("1_rft6f")
+script_name = "Gabel"
+description = "Gabel"
+cursor = 1
+interaction_polygon = PackedVector2Array(-29, -24, 29, -24, 29, 24, -29, 24)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=243708268]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

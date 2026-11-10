@@ -1,0 +1,141 @@
+[gd_scene format=3 uid="uid://c0qc452dx8ij3"]
+
+[ext_resource type="Script" path="res://game/rooms/empfang/room_empfang.gd" id="1_vpmoe"]
+[ext_resource type="PackedScene" uid="uid://dsieqhticw335" path="res://game/rooms/empfang/walkable_areas/boden/walkable_area_boden.tscn" id="2_0rc2h"]
+[ext_resource type="PackedScene" uid="uid://6vdtrbxf8yuy" path="res://game/rooms/empfang/props/background/prop_background.tscn" id="3_dxvny"]
+[ext_resource type="Texture2D" uid="uid://cnwvtvvlep8aq" path="res://grafik/platzhalter/raum_empfang.png" id="4_qnkyr"]
+[ext_resource type="PackedScene" uid="uid://cr5utdjgf6a4l" path="res://game/rooms/empfang/hotspots/zahlenfeld_mit_code/hotspot_zahlenfeld_mit_code.tscn" id="5_kyfo4"]
+[ext_resource type="PackedScene" uid="uid://cr1385mldaqs6" path="res://game/rooms/empfang/hotspots/portraet/hotspot_portraet.tscn" id="6_yxuln"]
+[ext_resource type="PackedScene" uid="uid://weq7bxd7aue8" path="res://game/rooms/empfang/hotspots/kaputtes_radio/hotspot_kaputtes_radio.tscn" id="7_vod7b"]
+[ext_resource type="PackedScene" uid="uid://c7ovtgqcqr8nr" path="res://game/rooms/empfang/hotspots/wand_mit_goldenen_schallplatten/hotspot_wand_mit_goldenen_schallplatten.tscn" id="8_lf083"]
+[ext_resource type="PackedScene" uid="uid://b785mt8f8eokn" path="res://game/rooms/empfang/hotspots/empfangstresen/hotspot_empfangstresen.tscn" id="9_3u2xo"]
+[ext_resource type="PackedScene" uid="uid://cs2bqov8iyx5l" path="res://game/rooms/empfang/hotspots/samtkordeln/hotspot_samtkordeln.tscn" id="10_w28f6"]
+[ext_resource type="PackedScene" uid="uid://dkoqw414lwn80" path="res://game/rooms/empfang/hotspots/logo_an_der_wand/hotspot_logo_an_der_wand.tscn" id="11_m16ex"]
+[ext_resource type="PackedScene" uid="uid://cjmvtfniaemrk" path="res://game/rooms/empfang/hotspots/ausgang_kellerarchiv/hotspot_ausgang_kellerarchiv.tscn" id="12_qwbla"]
+[ext_resource type="PackedScene" uid="uid://dl0e7v8ltxpss" path="res://game/rooms/empfang/hotspots/ausgang_zappmanns_studio/hotspot_ausgang_zappmanns_studio.tscn" id="13_8ajok"]
+[ext_resource type="PackedScene" uid="uid://cohjlt1uryt3n" path="res://game/rooms/empfang/markers/start/marker_start.tscn" id="14_pjcpa"]
+[ext_resource type="PackedScene" uid="uid://ci0b2lc83h3od" path="res://game/rooms/empfang/markers/von_kellerarchiv/marker_von_kellerarchiv.tscn" id="15_6ogbb"]
+[ext_resource type="PackedScene" uid="uid://dibpiancfppln" path="res://game/rooms/empfang/markers/von_zappmanns_studio/marker_von_zappmanns_studio.tscn" id="16_kxpaq"]
+[ext_resource type="PackedScene" uid="uid://qrvfdvhoyicf" path="res://game/rooms/empfang/markers/von_gluecksrad/marker_von_gluecksrad.tscn" id="17_tir5s"]
+[ext_resource type="PackedScene" uid="uid://b5s7qyjvxyx8x" path="res://game/rooms/empfang/markers/von_sitcom_kueche/marker_von_sitcom_kueche.tscn" id="18_apx4g"]
+[ext_resource type="PackedScene" uid="uid://bef3gyynhcrvb" path="res://game/rooms/empfang/markers/von_savanne/marker_von_savanne.tscn" id="19_s3i63"]
+[ext_resource type="PackedScene" uid="uid://5py6026416k0" path="res://game/rooms/empfang/markers/von_friedhof/marker_von_friedhof.tscn" id="20_40h06"]
+[ext_resource type="PackedScene" uid="uid://h0plrcgf5kdl" path="res://game/rooms/empfang/markers/von_kapitolis/marker_von_kapitolis.tscn" id="21_u1lqx"]
+[ext_resource type="PackedScene" uid="uid://64n22p8tt3gc" path="res://game/rooms/empfang/markers/von_werbespot_set/marker_von_werbespot_set.tscn" id="22_urttk"]
+[ext_resource type="PackedScene" uid="uid://7ss7hyuv86gg" path="res://game/characters/empfangsdame/character_empfangsdame.tscn" id="23_ghphk"]
+[ext_resource type="PackedScene" uid="uid://bor8icfxoje1d" path="res://game/characters/sicherheitsmann/character_sicherheitsmann.tscn" id="24_ske75"]
+
+[node name="RoomEmpfang" type="Node2D" unique_id=1599392852]
+script = ExtResource("1_vpmoe")
+script_name = "Empfang"
+width = 480
+height = 270
+
+[node name="WalkableAreas" type="Node2D" parent="." unique_id=1828194643]
+
+[node name="Boden" parent="WalkableAreas" unique_id=2078856344 instance=ExtResource("2_0rc2h")]
+interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(6, 210, 474, 210, 474, 267, 6, 267)])
+
+[node name="Props" type="Node2D" parent="." unique_id=769992415]
+
+[node name="Background" parent="Props" unique_id=997040601 instance=ExtResource("3_dxvny")]
+position = Vector2(240, 135)
+texture = ExtResource("4_qnkyr")
+description = "UI_RAUM_EMPFANG"
+
+[node name="Hotspots" type="Node2D" parent="." unique_id=1093954874]
+
+[node name="ZahlenfeldMitCode" parent="Hotspots" unique_id=2089622886 instance=ExtResource("5_kyfo4")]
+position = Vector2(73, 54)
+description = "UI_OBJ_ZAHLENFELD_MIT_CODE"
+baseline = 24
+walk_to_point = Vector2(0, 181)
+
+[node name="Portraet" parent="Hotspots" unique_id=1002341581 instance=ExtResource("6_yxuln")]
+position = Vector2(139, 54)
+description = "UI_OBJ_PORTRAET"
+baseline = 24
+walk_to_point = Vector2(0, 181)
+
+[node name="KaputtesRadio" parent="Hotspots" unique_id=355196933 instance=ExtResource("7_vod7b")]
+position = Vector2(205, 54)
+description = "UI_OBJ_KAPUTTES_RADIO"
+baseline = 24
+walk_to_point = Vector2(0, 181)
+
+[node name="WandMitGoldenenSchallplatten" parent="Hotspots" unique_id=1052584948 instance=ExtResource("8_lf083")]
+position = Vector2(271, 54)
+description = "UI_OBJ_WAND_MIT_GOLDENEN_SCHALLPLATTEN"
+baseline = 24
+walk_to_point = Vector2(0, 181)
+
+[node name="Empfangstresen" parent="Hotspots" unique_id=827793523 instance=ExtResource("9_3u2xo")]
+position = Vector2(337, 54)
+description = "UI_OBJ_EMPFANGSTRESEN"
+baseline = 24
+walk_to_point = Vector2(0, 181)
+
+[node name="Samtkordeln" parent="Hotspots" unique_id=1074753734 instance=ExtResource("10_w28f6")]
+position = Vector2(403, 54)
+description = "UI_OBJ_SAMTKORDELN"
+baseline = 24
+walk_to_point = Vector2(0, 181)
+
+[node name="LogoAnDerWand" parent="Hotspots" unique_id=709802914 instance=ExtResource("11_m16ex")]
+position = Vector2(73, 114)
+description = "UI_OBJ_LOGO_AN_DER_WAND"
+baseline = 24
+walk_to_point = Vector2(0, 121)
+
+[node name="AusgangKellerarchiv" parent="Hotspots" unique_id=1613495537 instance=ExtResource("12_qwbla")]
+position = Vector2(19.5, 157.5)
+description = "UI_RAUM_KELLERARCHIV"
+baseline = 52
+walk_to_point = Vector2(16.5, 82.5)
+cursor = 9
+
+[node name="AusgangZappmannsStudio" parent="Hotspots" unique_id=1546269288 instance=ExtResource("13_8ajok")]
+position = Vector2(460.5, 157.5)
+description = "UI_RAUM_ZAPPMANNS_STUDIO"
+baseline = 52
+walk_to_point = Vector2(-16.5, 82.5)
+cursor = 9
+
+[node name="Regions" type="Node2D" parent="." unique_id=160975585]
+
+[node name="Markers" type="Node2D" parent="." unique_id=2108764619]
+
+[node name="Start" parent="Markers" unique_id=2116175619 instance=ExtResource("14_pjcpa")]
+position = Vector2(240, 240)
+
+[node name="VonKellerarchiv" parent="Markers" unique_id=2056142330 instance=ExtResource("15_6ogbb")]
+position = Vector2(36, 240)
+
+[node name="VonZappmannsStudio" parent="Markers" unique_id=1350248523 instance=ExtResource("16_kxpaq")]
+position = Vector2(444, 240)
+
+[node name="VonGluecksrad" parent="Markers" unique_id=2133576450 instance=ExtResource("17_tir5s")]
+position = Vector2(240, 240)
+
+[node name="VonSitcomKueche" parent="Markers" unique_id=98115762 instance=ExtResource("18_apx4g")]
+position = Vector2(240, 240)
+
+[node name="VonSavanne" parent="Markers" unique_id=915966516 instance=ExtResource("19_s3i63")]
+position = Vector2(240, 240)
+
+[node name="VonFriedhof" parent="Markers" unique_id=227959159 instance=ExtResource("20_40h06")]
+position = Vector2(240, 240)
+
+[node name="VonKapitolis" parent="Markers" unique_id=116148017 instance=ExtResource("21_u1lqx")]
+position = Vector2(240, 240)
+
+[node name="VonWerbespotSet" parent="Markers" unique_id=1939524877 instance=ExtResource("22_urttk")]
+position = Vector2(240, 240)
+
+[node name="Characters" type="Node2D" parent="." unique_id=13842949]
+
+[node name="CharacterEmpfangsdame *" parent="Characters" unique_id=87528157 instance=ExtResource("23_ghphk")]
+position = Vector2(150, 232)
+
+[node name="CharacterSicherheitsmann *" parent="Characters" unique_id=1306300928 instance=ExtResource("24_ske75")]
+position = Vector2(330, 232)

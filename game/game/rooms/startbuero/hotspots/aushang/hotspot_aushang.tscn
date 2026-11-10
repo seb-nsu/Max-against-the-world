@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://lhs2a1hx0clo"]
+
+[ext_resource type="Script" path="res://game/rooms/startbuero/hotspots/aushang/hotspot_aushang.gd" id="1_b04u2"]
+
+[node name="Aushang" type="Area2D" unique_id=238001049]
+script = ExtResource("1_b04u2")
+script_name = "Aushang"
+description = "Aushang"
+cursor = 1
+interaction_polygon = PackedVector2Array(-15, -19.5, 15, -19.5, 15, 19.5, -15, 19.5)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=910162536]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

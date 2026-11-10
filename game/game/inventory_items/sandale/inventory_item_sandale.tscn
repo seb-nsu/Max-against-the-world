@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://qp05rhof2iwi"]
+
+[ext_resource type="Script" path="res://game/inventory_items/sandale/inventory_item_sandale.gd" id="1_piqgp"]
+[ext_resource type="Texture2D" uid="uid://d4mg53hm1xjrp" path="res://grafik/platzhalter/gegenstand_sandale.png" id="1_utm7i"]
+
+[node name="ItemSandale" type="TextureRect" unique_id=1214386524]
+texture_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 4
+mouse_filter = 0
+texture = ExtResource("1_utm7i")
+stretch_mode = 5
+script = ExtResource("1_piqgp")
+script_name = "Sandale"
+description = "UI_OBJ_SANDALE"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=815723875]

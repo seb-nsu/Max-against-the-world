@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://b1t6nklcemdwm"]
+
+[ext_resource type="Script" path="res://game/characters/tourist/character_tourist.gd" id="1_2ybe8"]
+[ext_resource type="Texture2D" uid="uid://cea2m850xoocp" path="res://grafik/platzhalter/figur_tourist.png" id="2_ss70y"]
+
+[node name="CharacterTourist" type="Area2D" unique_id=1077957333]
+script = ExtResource("1_2ybe8")
+walk_speed = 90.0
+dialog_pos = Vector2(0, -91)
+script_name = "Tourist"
+description = "UI_OBJ_TOURIST"
+cursor = 8
+interaction_polygon = PackedVector2Array(-14.5, -87, 14.5, -87, 14.5, 0, -14.5, 0)
+
+[node name="ScalingPolygon" type="CollisionPolygon2D" parent="." unique_id=1207967142]
+polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1477685384]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=167445738]
+texture_filter = 1
+texture = ExtResource("2_ss70y")
+offset = Vector2(0, -43.5)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=242372332]
+visible = false
+polygon = PackedVector2Array(-14.5, -87, 14.5, -87, 14.5, 0, -14.5, 0)
+
+[node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=839232461]
+visible = false
+affect_navigation_mesh = true
+carve_navigation_mesh = true

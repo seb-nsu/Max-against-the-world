@@ -12,7 +12,7 @@ Alle Welten teilen einen Pixel-Art-Stil in 480×270 Pixeln mit einer gemeinsamen
 | Inventar-Icons | 36×36 Pixel | Einheitliche Inventarleiste |
 | Mauszeiger | 24×24 Pixel |  |
 | Palette | Eine gemeinsame Palette mit 32 Farben, zum Beispiel „Endesga 32“ von Lospec | Alle Assets werden darauf umgefärbt; so passen auch fremde Pakete |
-| Perspektive | Streng seitlich wie eine Bühne, Rückwand parallel zur Bildebene; begehbarer Boden als flaches Band im unteren Drittel | Klassische Adventure-Ansicht; Figuren werden nach hinten nur leicht kleiner, Laufwege bleiben lesbar |
+| Perspektive | Mittelweg mit leichter Tiefe (Entscheidung 10. November 2026): Rückwand frontal, sanfte Ein-Punkt-Perspektive mit Fluchtpunkt in der Bildmitte auf etwa 40 Prozent der Höhe, Seitenwände höchstens als schmale schräge Streifen am Rand; begehbarer Boden etwa 90 bis 120 Pixel hoch im unteren Drittel bis zur unteren Hälfte. Figuren-Sprites bleiben streng seitlich | Wie die klassischen Adventures der 1990er: Figuren laufen auch nach hinten und werden dort auf etwa 80 Prozent kleiner (Feld `tiefe: 0.8` im Raum-Layout), Laufwege bleiben lesbar |
 | Licht | Von oben links, weiche Schatten nach rechts unten | Einheitlich über alle Szenen |
 | Konturen | Figuren und Gegenstände mit dunkler, farbiger Kontur (nicht reines Schwarz); Hintergründe ohne Kontur | Figuren heben sich vom Hintergrund ab |
 | Kantenglättung | Keine; saubere Pixelgruppen ohne Farbverläufe | Echte Pixel-Art |
@@ -45,11 +45,11 @@ Alle Welten teilen einen Pixel-Art-Stil in 480×270 Pixeln mit einer gemeinsamen
 
 **Ablauf pro Szene:**
 
-1. Konzeptbild mit ChatGPT oder Gemini, bis Aufbau und Stimmung passen.
-2. Hintergrund in 480×270 erzeugen oder umwandeln.
+1. Konzeptbild mit ChatGPT oder Gemini, bis Aufbau und Stimmung passen. Die Layout-Skizze des Raums (`grafik/skizzen/<abschnitt>/<raum>.png`, verlinkt in jeder Grafik-Datei unter „Szenen“) als Bild mitgeben und hinter den Prompt schreiben: „Use the attached sketch only for the position and size of objects and exits, not for style, colors or text. Leave the orange marked spots empty.“ Blaue Kästen gehören ins Bild, orange gestrichelte sind eigene Sprites, grüne Ausgänge, die grauen Umrisse zeigen Max' Größe vorn und hinten. Die Skizzen erzeugt `tools/layout_skizzen.py` aus den Raum-Layouts neu.
+2. Hintergrund in 480×270 erzeugen oder umwandeln: Standard ist das fertige Konzeptbild mit Neural Pixelate (behält die Anordnung), Retro Diffusion mit dem Prompt nur als Ersatzweg.
 3. In Aseprite: Palette anwenden, Perspektive prüfen, Laufbereich frei lassen, störende Details entfernen.
 4. Gegenstände der Szene als Sammelbild erzeugen und ausschneiden.
-5. In Godot einsetzen und mit Max als Platzhalter testen, ob Größen und Laufwege stimmen.
+5. In Godot einsetzen und mit Max als Platzhalter testen, ob Größen und Laufwege stimmen. Bei Boden mit Tiefe im Layout `tiefe: 0.8` eintragen (Ablauf in `game/README.md`, Abschnitt „Grafik ersetzen“).
 
 **Text in Bildern:** Generatoren schreiben fast immer fehlerhaft. Schilder, Logo, Programmzeitschrift und Kalenderzahlen deshalb ohne Text erzeugen und die Schrift später von Hand in Aseprite setzen. Was der Spieler für ein Rätsel oder das Notizbuch lesen muss (Kalender, Satzung, Kritzeleien, Hinweiszettel, Tafeln), bekommt zusätzlich eine Nahansicht in 480×270; kurze Texte, die Max beim Ansehen vorliest (etwa Steckbrief, Opas Papyrus), bleiben normales Ansehen. Es sind genau 14 Nahansichten; welche, steht in den Welt-Tabellen (`welten/*.yaml`), die Bilder beschreiben die Grafik-Dateien (Zeile „Nahansichten“), den Bildschirm `05-spielsysteme.md`. Kleine Bildschirme in der Szene (Zapp-O-Mat, Monitorwand, Röhrenfernseher, Empfangsmonitor) bekommen kein eigenes Bild: Beim Ansehen blendet Godot den Ausschnitt doppelt vergrößert und ohne Glättung ein.
 
@@ -78,13 +78,13 @@ Ein vollständiger Prompt besteht aus drei Teilen: **Baustein** (Technik, von hi
 **KONZEPT** (ChatGPT oder Gemini, nur als Vorlage):
 
 ```text
-Concept art for a 2D point-and-click adventure game in the style of classic 1990s adventure games, strictly side view like a flat theater stage, camera at chest height looking straight at the back wall, back wall parallel to the picture plane, no vanishing-point perspective, no top-down or three-quarter view, floor as a flat walkable band across the lower third kept free of objects except at the left and right edges, light from the upper left with soft shadows to the lower right, humorous and whimsical, warm hand-painted look, 16:9, no text, no letters, no logos.
+Concept art for a 2D point-and-click adventure game in the style of classic 1990s adventure games, front view of the room with gentle one-point perspective, camera at the eye level of a standing person looking straight at the back wall, back wall parallel to the picture plane, vanishing point in the center at about 40 percent of the image height, side walls at most as narrow angled strips at the image edges, open walkable floor with gentle depth across the lower third to half of the image kept free of objects except at the left and right edges, no top-down, bird's-eye or strong three-quarter view, no fisheye, light from the upper left with soft shadows to the lower right, humorous and whimsical, warm hand-painted look, 16:9, no text, no letters, no logos.
 ```
 
 **HINTERGRUND** (`rd_plus__environment`, 480×270):
 
 ```text
-Pixel art background, 480x270, strictly side view like a flat stage, camera at eye level, back wall parallel to the picture plane, no vanishing-point perspective, walkable floor as a flat band about 90 pixels high kept clear in the lower third, large objects only against the back wall or at the left and right edges, exits clearly readable, light from upper left with soft shadows to the lower right, clean pixel clusters, no anti-aliasing, no outlines, no characters, all signs, labels and book covers blank.
+Pixel art background, 480x270, front view with gentle one-point perspective, camera at eye level, back wall parallel to the picture plane, vanishing point in the center, side walls only as narrow angled strips at the edges, open walkable floor with gentle depth about 90 to 120 pixels high kept clear in the lower part, large objects only against the back wall or at the left and right edges, exits clearly readable, light from upper left with soft shadows to the lower right, clean pixel clusters, no anti-aliasing, no outlines, no characters, all signs, labels and book covers blank.
 ```
 
 **FIGUR** (`rd_pro__default`, Menschen etwa 84 Pixel):
@@ -140,7 +140,7 @@ Für Gehen und Stehen reichen `rd_advanced_animation__walking` und `__idle` mit 
 **Verbotenes** (Feld für Negativ-Prompt, falls vorhanden; bei Karte und Reisetasche „top-down view“ weglassen, bei Hintergründen „more than one character“ durch „characters, people“ ersetzen. ChatGPT und Gemini haben kein solches Feld, dort stehen die wichtigsten Verbote schon im Baustein):
 
 ```text
-text, letters, numbers, watermark, logo, signature, blur, gradients, anti-aliasing, photorealism, 3D render, isometric view, top-down view, vanishing-point perspective, tilted floor, pure black outlines, drop shadow, cropped feet, more than one character
+text, letters, numbers, watermark, logo, signature, blur, gradients, anti-aliasing, photorealism, 3D render, isometric view, top-down view, bird's-eye view, strong three-quarter view, fisheye, steep tilted floor, pure black outlines, drop shadow, cropped feet, more than one character
 ```
 
 ### Steckbriefe der Hauptfiguren
@@ -177,6 +177,7 @@ Diese Grundanimationen gelten für alle Welten. Weltspezifische Aktionen stehen 
 | Figur | Aktion | Bilder | Ablauf | Motiv |
 | --- | --- | --- | --- | --- |
 | Max | Gehen | 8 | Schleife | `walking`: standing sprite of Max as input, slouching relaxed walk, hands stay in the hoodie pocket, head bobbing slightly, sneakers on one baseline, facing right |
+| Max | Gehen nach vorn und nach hinten | je 8 | Schleife | Raumansicht mit leichter Tiefe: Godot nimmt sie als `walk_d` und `walk_u`, ohne sie läuft Max mit dem seitlichen Gang. Zuerst die Vorder- und die Rückansicht aus dem Turnaround als Eingabe. `walking`: front view of Max walking toward the viewer, slouching relaxed walk, hands in the hoodie pocket, head bobbing slightly; second animation, same settings: back view of Max walking away from the viewer |
 | Max | Stehen | 4 | Schleife | `idle`: standing sprite of Max as input, slow breathing, one blink, weight shifts from one leg to the other, hands stay in the hoodie pocket, facing right |
 | Max | Sprechen | 4 | Schleife | Max talking: mouth opens and closes, small open-hand gesture with the right hand, legs and torso stay still, facing right |
 | Max | Aufheben | 6 | einmalig | Max bends down, reaches forward with the right hand, grabs something at floor level, straightens up again, facing right |
@@ -186,6 +187,7 @@ Diese Grundanimationen gelten für alle Welten. Weltspezifische Aktionen stehen 
 | Max | Auf dem Sofa | 4 | Schleife | Standbild A (Prolog, Welt 3): Max lying flat on a sofa in side view, head on the left armrest, holding his phone above his face with both hands, sneakers on the right armrest; Standbild B (Welt 4): Max slumped half lying on a sofa, remote in hand, feet up, facing right; Animation: slow blinking, thumb tapping the phone or clicking the remote |
 | Max | Vom Sofa aufstehen | 8 | einmalig | Max swings his legs off the sofa, pushes himself up with both hands, stands, stretches, facing right (Prolog: danach Handy in die Bauchtasche; Finale: endet in der aufrechten Pose) |
 | Pixel | Gehen | 8 | Schleife | `walking`: standing sprite of Pixel as input, about 39 pixels long, smug strut with tail held high, collar light stays visible, facing right |
+| Pixel | Gehen nach vorn und nach hinten | je 6 | Schleife | Wie bei Max (`walk_d`, `walk_u`), nachrangig: Pixel ist klein, der seitliche Gang fällt beim Laufen in die Tiefe kaum auf. `walking`: front view of Pixel trotting toward the viewer, round face and white chest, collar light visible; second animation: back view trotting away, fluffy tail held high |
 | Pixel | Stehen | 4 | Schleife | `idle`: sitting sprite of Pixel as input, tail tip twitching, one slow blink, body stays still, facing right |
 | Pixel | Schlafen | 4 | Schleife | Pixel curled up asleep, about 15 pixels high and 36 long, belly rising and falling, torn ear twitching once, facing right |
 | Pixel | Putzen | 6 | Schleife | Pixel sitting, licks his front paw and wipes it over his ear, tail still, facing right |

@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://dt5akoao6ms4h"]
+
+[ext_resource type="Script" path="res://game/inventory_items/morse_tabelle/inventory_item_morse_tabelle.gd" id="1_p5u4o"]
+[ext_resource type="Texture2D" uid="uid://2e4sgqjy86ea" path="res://grafik/platzhalter/gegenstand_morse_tabelle.png" id="1_v0xbk"]
+
+[node name="ItemMorseTabelle" type="TextureRect" unique_id=310791466]
+texture_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 4
+mouse_filter = 0
+texture = ExtResource("1_v0xbk")
+stretch_mode = 5
+script = ExtResource("1_p5u4o")
+script_name = "MorseTabelle"
+description = "UI_OBJ_MORSE_TABELLE"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=306781756]

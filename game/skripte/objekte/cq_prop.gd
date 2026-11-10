@@ -59,6 +59,8 @@ func on_item_used(item: PopochiuInventoryItem) -> void:
 
 func _on_click() -> void:
 	var d := bauplan()
+	if await Spiel.regel("benutzen", self):
+		return
 	if d.get("nehmen"):
 		await Spiel.nehmen(self, d)
 		return
@@ -75,6 +77,8 @@ func _on_double_click() -> void:
 
 
 func _on_right_click() -> void:
+	if await Spiel.regel("ansehen", self):
+		return
 	await ansehen()
 
 
@@ -84,6 +88,8 @@ func _on_middle_click() -> void:
 
 func _on_item_used(item: PopochiuInventoryItem) -> void:
 	await Spiel.hingehen(self)
+	if await Spiel.regel("gegenstand", self, item):
+		return
 	var e := Spiel.gegenstand_zeile(bauplan().get("gegenstand_auf", []),
 		Bauplan.gegenstand(item.script_name).get("id", ""))
 	if e.is_empty():
@@ -93,6 +99,8 @@ func _on_item_used(item: PopochiuInventoryItem) -> void:
 
 
 func _pixel_benutzt() -> void:
+	if await Spiel.regel("pixel", self):
+		return
 	for e in bauplan().get("ansehen", []):
 		if e.get("figur") == "PIX" and Spiel.eintrag_passt(e):
 			await Spiel.sagen_eintrag(e)

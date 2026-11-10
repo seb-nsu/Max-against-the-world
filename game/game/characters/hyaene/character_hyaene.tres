@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://bhxvnpqvch2da"]
+
+[ext_resource type="Script" path="res://game/characters/hyaene/character_hyaene_state.gd" id="1_wf1cn"]
+
+[resource]
+resource_name = "Hyaene"
+script = ExtResource("1_wf1cn")
+script_name = "Hyaene"
+scene = "res://game/characters/hyaene/character_hyaene.tscn"

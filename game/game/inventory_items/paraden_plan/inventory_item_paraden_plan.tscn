@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://bwan8b0np0k36"]
+
+[ext_resource type="Script" path="res://game/inventory_items/paraden_plan/inventory_item_paraden_plan.gd" id="1_02yfe"]
+[ext_resource type="Texture2D" uid="uid://cudbpk0e1xdp" path="res://grafik/platzhalter/gegenstand_paraden_plan.png" id="1_ba7pn"]
+
+[node name="ItemParadenPlan" type="TextureRect" unique_id=352240640]
+texture_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 4
+mouse_filter = 0
+texture = ExtResource("1_ba7pn")
+stretch_mode = 5
+script = ExtResource("1_02yfe")
+script_name = "ParadenPlan"
+description = "UI_OBJ_PARADEN_PLAN"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=753773919]

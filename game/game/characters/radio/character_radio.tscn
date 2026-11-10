@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://cwrw6it8n7jen"]
+
+[ext_resource type="Script" path="res://game/characters/radio/character_radio.gd" id="1_8b2ml"]
+[ext_resource type="Texture2D" uid="uid://b4hc1lvags0oy" path="res://grafik/platzhalter/figur_radio.png" id="2_m7hq6"]
+
+[node name="CharacterRadio" type="Area2D" unique_id=120766654]
+script = ExtResource("1_8b2ml")
+walk_speed = 90.0
+dialog_pos = Vector2(0, -64)
+script_name = "Radio"
+description = "UI_OBJ_RADIO"
+cursor = 8
+interaction_polygon = PackedVector2Array(-12, -60, 12, -60, 12, 0, -12, 0)
+
+[node name="ScalingPolygon" type="CollisionPolygon2D" parent="." unique_id=1944510567]
+polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=899288653]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=524943315]
+texture_filter = 1
+texture = ExtResource("2_m7hq6")
+offset = Vector2(0, -30)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=15684124]
+visible = false
+polygon = PackedVector2Array(-12, -60, 12, -60, 12, 0, -12, 0)
+
+[node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=1546533106]
+visible = false
+affect_navigation_mesh = true
+carve_navigation_mesh = true

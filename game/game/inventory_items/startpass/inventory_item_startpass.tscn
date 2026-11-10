@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://o3fdrdrbnygs"]
+
+[ext_resource type="Texture2D" uid="uid://bbe58a2eigp33" path="res://grafik/platzhalter/gegenstand_startpass.png" id="1_0dffw"]
+[ext_resource type="Script" path="res://game/inventory_items/startpass/inventory_item_startpass.gd" id="1_wlwfl"]
+
+[node name="ItemStartpass" type="TextureRect" unique_id=1188809930]
+texture_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 4
+mouse_filter = 0
+texture = ExtResource("1_0dffw")
+stretch_mode = 5
+script = ExtResource("1_wlwfl")
+script_name = "Startpass"
+description = "UI_OBJ_STARTPASS"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1365006453]

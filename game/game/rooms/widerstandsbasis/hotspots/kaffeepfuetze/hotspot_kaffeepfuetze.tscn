@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://2etptv3kr2m6"]
+
+[ext_resource type="Script" path="res://game/rooms/widerstandsbasis/hotspots/kaffeepfuetze/hotspot_kaffeepfuetze.gd" id="1_b76bc"]
+
+[node name="Kaffeepfuetze" type="Area2D" unique_id=594987864]
+script = ExtResource("1_b76bc")
+script_name = "Kaffeepfuetze"
+description = "Kaffeepfuetze"
+cursor = 1
+interaction_polygon = PackedVector2Array(-27, -24, 27, -24, 27, 24, -27, 24)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=672628316]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

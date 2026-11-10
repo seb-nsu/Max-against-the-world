@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://7v6m0u88y5fn"]
+
+[ext_resource type="Script" path="res://game/rooms/kueche_orakel/hotspots/vase/hotspot_vase.gd" id="1_ar1qc"]
+
+[node name="Vase" type="Area2D" unique_id=1263338610]
+script = ExtResource("1_ar1qc")
+script_name = "Vase"
+description = "Vase"
+cursor = 1
+interaction_polygon = PackedVector2Array(-29, -24, 29, -24, 29, 24, -29, 24)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=96809762]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

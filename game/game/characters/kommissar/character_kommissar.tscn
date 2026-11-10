@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://rdsnjwq857j8"]
+
+[ext_resource type="Script" path="res://game/characters/kommissar/character_kommissar.gd" id="1_axcvq"]
+[ext_resource type="Texture2D" uid="uid://ck4ifmjktopy1" path="res://grafik/platzhalter/figur_kommissar.png" id="2_8o1e7"]
+
+[node name="CharacterKommissar" type="Area2D" unique_id=1799452822]
+script = ExtResource("1_axcvq")
+walk_speed = 90.0
+dialog_pos = Vector2(0, -91)
+script_name = "Kommissar"
+description = "UI_OBJ_KOMMISSAR"
+cursor = 8
+interaction_polygon = PackedVector2Array(-14.5, -87, 14.5, -87, 14.5, 0, -14.5, 0)
+
+[node name="ScalingPolygon" type="CollisionPolygon2D" parent="." unique_id=963186619]
+polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1651744747]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1179785150]
+texture_filter = 1
+texture = ExtResource("2_8o1e7")
+offset = Vector2(0, -43.5)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=603075334]
+visible = false
+polygon = PackedVector2Array(-14.5, -87, 14.5, -87, 14.5, 0, -14.5, 0)
+
+[node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=1621896767]
+visible = false
+affect_navigation_mesh = true
+carve_navigation_mesh = true

@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://dct3e8n7kclqy"]
+
+[ext_resource type="Script" path="res://game/rooms/sitcom_kueche/hotspots/pappe_publikum/hotspot_pappe_publikum.gd" id="1_48e6q"]
+
+[node name="PappePublikum" type="Area2D" unique_id=774969414]
+script = ExtResource("1_48e6q")
+script_name = "PappePublikum"
+description = "Pappe Publikum"
+cursor = 1
+interaction_polygon = PackedVector2Array(-29, -24, 29, -24, 29, 24, -29, 24)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=451630030]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

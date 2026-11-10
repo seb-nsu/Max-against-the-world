@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://cj3s6cfmow44x"]
+
+[ext_resource type="Script" path="res://game/inventory_items/olivenkranz/inventory_item_olivenkranz.gd" id="1_88qml"]
+[ext_resource type="Texture2D" uid="uid://b8x3xt6nx88a5" path="res://grafik/platzhalter/gegenstand_olivenkranz.png" id="1_sgcmo"]
+
+[node name="ItemOlivenkranz" type="TextureRect" unique_id=1385317852]
+texture_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 4
+mouse_filter = 0
+texture = ExtResource("1_sgcmo")
+stretch_mode = 5
+script = ExtResource("1_88qml")
+script_name = "Olivenkranz"
+description = "UI_OBJ_OLIVENKRANZ"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=611448498]

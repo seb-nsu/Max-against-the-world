@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://bdsvfgjdwf80v"]
+
+[ext_resource type="Script" path="res://game/rooms/laboreingang/hotspots/gang/hotspot_gang.gd" id="1_pxupy"]
+
+[node name="Gang" type="Area2D" unique_id=1425023471]
+script = ExtResource("1_pxupy")
+script_name = "Gang"
+description = "Gang"
+cursor = 1
+interaction_polygon = PackedVector2Array(-29, -24, 29, -24, 29, 24, -29, 24)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1192051088]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

@@ -17,6 +17,6 @@ func _ready() -> void:
 	an.toggled.connect(Telemetrie.einwilligung_setzen)
 	links.add_child(an)
 	var ordner := Button.new()
-	ordner.text = tr("UI_TELEMETRIE_ORDNER")
+	ordner.text = tr("UI_TELEMETRIE_HERUNTERLADEN" if OS.has_feature("web") else "UI_TELEMETRIE_ORDNER")
 	ordner.pressed.connect(Telemetrie.ordner_oeffnen)
 	links.add_child(ordner)

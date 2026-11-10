@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://c2rmh5rwvgal5"]
+
+[node name="Ramses" type="Marker2D" unique_id=1278222484]
+visible = false

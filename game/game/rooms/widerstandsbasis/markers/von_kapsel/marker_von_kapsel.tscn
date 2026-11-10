@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://dd6bqy350f13e"]
+
+[node name="VonKapsel" type="Marker2D" unique_id=1649889672]
+visible = false

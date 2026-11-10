@@ -88,10 +88,12 @@ func _kachel(slot: int, pos: Vector2) -> Control:
 	if kopf.is_empty():
 		zeilen.add_child(S.label(tr("UI_PLATZ_LEER"), 8, S.GRAU))
 	else:
-		zeilen.add_child(S.label(ort(kopf), 8))
-		zeilen.add_child(S.label("%s · %s" % [spielzeit(kopf), str(kopf.get("datum", "")).left(16)], 7, S.GRAU))
+		# Ort in 7 Punkt, damit „Raum · Welt“ auch auf Englisch in die Kachel passt
+		zeilen.add_child(S.label(ort(kopf), 7))
+		zeilen.add_child(S.label("%s · %s" % [spielzeit(kopf), str(kopf.get("datum", "")).left(10)], 7, S.GRAU))
 	for l in zeilen.get_children():
 		(l as Label).clip_text = true
+		(l as Label).text_overrun_behavior = TextServer.OVERRUN_TRIM_ELLIPSIS  # zu lang: „…“ statt abgeschnitten
 		(l as Label).custom_minimum_size.x = KACHEL.x - 58
 	return k
 
@@ -107,7 +109,11 @@ static func platz_titel(slot: int) -> String:
 ## Ort und Welt aus dem Kopf eines Spielstands: „Taverne · Schwurbelstein“.
 static func ort(kopf: Dictionary) -> String:
 	var raum: String = TranslationServer.translate(Bauplan.raum(str(kopf.get("raum", ""))).get("name_key", ""))
-	var welt: String = Bauplan.welten.get(str(kopf.get("abschnitt", "")), {}).get("name", "")
+	var ab := str(kopf.get("abschnitt", ""))
+	var welt: String = Bauplan.welten.get(ab, {}).get("name", "")
+	var schluessel := "UI_WELTNAME_" + ab.to_upper().replace("-", "_")
+	if not ab.is_empty() and TranslationServer.translate(schluessel) != schluessel:
+		welt = TranslationServer.translate(schluessel)  # Weltname in der Spielsprache
 	return "%s · %s" % [raum, welt] if not welt.is_empty() else raum
 
 

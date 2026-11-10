@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://daadtqtwwf6b"]
+
+[ext_resource type="Script" path="res://game/characters/beamter_2/character_beamter_2_state.gd" id="1_2d8v7"]
+
+[resource]
+resource_name = "Beamter2"
+script = ExtResource("1_2d8v7")
+script_name = "Beamter2"
+scene = "res://game/characters/beamter_2/character_beamter_2.tscn"

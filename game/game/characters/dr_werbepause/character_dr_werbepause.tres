@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://gaoqy1is4icw"]
+
+[ext_resource type="Script" path="res://game/characters/dr_werbepause/character_dr_werbepause_state.gd" id="1_5d1sg"]
+
+[resource]
+resource_name = "DrWerbepause"
+script = ExtResource("1_5d1sg")
+script_name = "DrWerbepause"
+scene = "res://game/characters/dr_werbepause/character_dr_werbepause.tscn"

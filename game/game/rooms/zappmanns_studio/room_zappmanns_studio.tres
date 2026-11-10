@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://dl1mli2mrhgj2"]
+
+[ext_resource type="Script" path="res://game/rooms/zappmanns_studio/room_zappmanns_studio_state.gd" id="1_vfu20"]
+
+[resource]
+resource_name = "ZappmannsStudio"
+script = ExtResource("1_vfu20")
+script_name = "ZappmannsStudio"
+scene = "res://game/rooms/zappmanns_studio/room_zappmanns_studio.tscn"

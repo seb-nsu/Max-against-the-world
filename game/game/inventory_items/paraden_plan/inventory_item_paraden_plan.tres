@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://b5b4ojigmf5l7"]
+
+[ext_resource type="Script" path="res://game/inventory_items/paraden_plan/inventory_item_paraden_plan_state.gd" id="1_wjg2n"]
+
+[resource]
+resource_name = "ParadenPlan"
+script = ExtResource("1_wjg2n")
+script_name = "ParadenPlan"
+scene = "res://game/inventory_items/paraden_plan/inventory_item_paraden_plan.tscn"

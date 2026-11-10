@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://b2m6b6kqnhoo8"]
+
+[ext_resource type="Script" path="res://game/rooms/supermarkt/hotspots/milchregal_durch_die_tuer/hotspot_milchregal_durch_die_tuer.gd" id="1_gmxxr"]
+
+[node name="MilchregalDurchDieTuer" type="Area2D" unique_id=259402121]
+script = ExtResource("1_gmxxr")
+script_name = "MilchregalDurchDieTuer"
+description = "Milchregal Durch Die Tuer"
+cursor = 1
+interaction_polygon = PackedVector2Array(-40, -60, 40, -60, 40, 60, -40, 60)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=95458958]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

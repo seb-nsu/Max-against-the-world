@@ -1,0 +1,204 @@
+[gd_scene format=3 uid="uid://ctmhyyb2fiif2"]
+
+[ext_resource type="Script" path="res://game/rooms/widerstandsbasis/room_widerstandsbasis.gd" id="1_mjrpu"]
+[ext_resource type="PackedScene" uid="uid://61shg8wdjoi5" path="res://game/rooms/widerstandsbasis/walkable_areas/boden/walkable_area_boden.tscn" id="2_3v85e"]
+[ext_resource type="PackedScene" uid="uid://m7lbn3v8u6kl" path="res://game/rooms/widerstandsbasis/props/background/prop_background.tscn" id="3_y0yuq"]
+[ext_resource type="Texture2D" uid="uid://brr4lyo2tlhjw" path="res://grafik/platzhalter/raum_widerstandsbasis.png" id="4_ovmsc"]
+[ext_resource type="PackedScene" uid="uid://ckxjyo4s8bux4" path="res://game/rooms/widerstandsbasis/hotspots/kapseln/hotspot_kapseln.tscn" id="5_jgasw"]
+[ext_resource type="PackedScene" uid="uid://dybt4ubx7q6ra" path="res://game/rooms/widerstandsbasis/hotspots/max_kapsel/hotspot_max_kapsel.tscn" id="6_1lxrf"]
+[ext_resource type="PackedScene" uid="uid://c0xlgyg3v3moq" path="res://game/rooms/widerstandsbasis/hotspots/terminal/hotspot_terminal.tscn" id="7_jafgw"]
+[ext_resource type="PackedScene" uid="uid://coew8m8uwtoy3" path="res://game/rooms/widerstandsbasis/hotspots/fenster/hotspot_fenster.tscn" id="8_ry2ko"]
+[ext_resource type="PackedScene" uid="uid://bf7al6ikmcccq" path="res://game/rooms/widerstandsbasis/hotspots/lueftungsschacht/hotspot_lueftungsschacht.tscn" id="9_u2lpm"]
+[ext_resource type="PackedScene" uid="uid://b8t6mmqh385fi" path="res://game/rooms/widerstandsbasis/hotspots/stromkasten/hotspot_stromkasten.tscn" id="10_eqwmk"]
+[ext_resource type="PackedScene" uid="uid://dc43tyupdlmeq" path="res://game/rooms/widerstandsbasis/hotspots/patch_panel/hotspot_patch_panel.tscn" id="11_ygka2"]
+[ext_resource type="PackedScene" uid="uid://sjirwxl2fj1g" path="res://game/rooms/widerstandsbasis/hotspots/pizzakartons/hotspot_pizzakartons.tscn" id="12_d5m8q"]
+[ext_resource type="PackedScene" uid="uid://bbeao5knhuf8c" path="res://game/rooms/widerstandsbasis/hotspots/handtuch/hotspot_handtuch.tscn" id="13_kfo30"]
+[ext_resource type="PackedScene" uid="uid://ciyuo8bflm15n" path="res://game/rooms/widerstandsbasis/hotspots/grossrechner/hotspot_grossrechner.tscn" id="14_xl8q6"]
+[ext_resource type="PackedScene" uid="uid://uucwqtpd58vw" path="res://game/rooms/widerstandsbasis/hotspots/steuerpult/hotspot_steuerpult.tscn" id="15_vu4h4"]
+[ext_resource type="PackedScene" uid="uid://mn3bl63eqnhd" path="res://game/rooms/widerstandsbasis/hotspots/tisch_mit_kalles_tasse/hotspot_tisch_mit_kalles_tasse.tscn" id="16_t7rt1"]
+[ext_resource type="PackedScene" uid="uid://dkni25nllegrq" path="res://game/rooms/widerstandsbasis/hotspots/kalles_tasse/hotspot_kalles_tasse.tscn" id="17_81nqr"]
+[ext_resource type="PackedScene" uid="uid://b8pse3c7c1xcn" path="res://game/rooms/widerstandsbasis/hotspots/plakat/hotspot_plakat.tscn" id="18_xjy3b"]
+[ext_resource type="PackedScene" uid="uid://dnkefhtfsgjhn" path="res://game/rooms/widerstandsbasis/hotspots/rebellen/hotspot_rebellen.tscn" id="19_7gr1m"]
+[ext_resource type="PackedScene" uid="uid://2etptv3kr2m6" path="res://game/rooms/widerstandsbasis/hotspots/kaffeepfuetze/hotspot_kaffeepfuetze.tscn" id="20_u0ey7"]
+[ext_resource type="PackedScene" uid="uid://cd31bf5c2cj34" path="res://game/rooms/widerstandsbasis/hotspots/ausgang_unterstadt_strasse/hotspot_ausgang_unterstadt_strasse.tscn" id="21_vw3en"]
+[ext_resource type="PackedScene" uid="uid://drc8hdtvuv88o" path="res://game/rooms/widerstandsbasis/hotspots/ausgang_kuehlung/hotspot_ausgang_kuehlung.tscn" id="22_a8w82"]
+[ext_resource type="PackedScene" uid="uid://d133e6ke8ckb3" path="res://game/rooms/widerstandsbasis/markers/start/marker_start.tscn" id="23_5ag68"]
+[ext_resource type="PackedScene" uid="uid://etfeb5l11hrv" path="res://game/rooms/widerstandsbasis/markers/von_unterstadt_strasse/marker_von_unterstadt_strasse.tscn" id="24_vxx1q"]
+[ext_resource type="PackedScene" uid="uid://4cn6i7ld0axw" path="res://game/rooms/widerstandsbasis/markers/von_kuehlung/marker_von_kuehlung.tscn" id="25_ctvkf"]
+[ext_resource type="PackedScene" uid="uid://btobcvnr6rbl8" path="res://game/rooms/widerstandsbasis/markers/von_stadtstrasse/marker_von_stadtstrasse.tscn" id="26_4epyk"]
+[ext_resource type="PackedScene" uid="uid://c67mdj3flerxu" path="res://game/rooms/widerstandsbasis/markers/von_testkammer_1/marker_von_testkammer_1.tscn" id="27_m8l2n"]
+[ext_resource type="PackedScene" uid="uid://dd6bqy350f13e" path="res://game/rooms/widerstandsbasis/markers/von_kapsel/marker_von_kapsel.tscn" id="28_1g7fn"]
+[ext_resource type="PackedScene" uid="uid://edkvkxbseb5w" path="res://game/characters/opa/character_opa.tscn" id="29_sbtm8"]
+[ext_resource type="PackedScene" uid="uid://cjnsvuv34mxat" path="res://game/characters/kalle/character_kalle.tscn" id="30_cw8rj"]
+[ext_resource type="PackedScene" uid="uid://cn7bmy161qepw" path="res://game/characters/rebellin/character_rebellin.tscn" id="31_wddpm"]
+[ext_resource type="PackedScene" uid="uid://bvapo16pti4f" path="res://game/characters/piepsi/character_piepsi.tscn" id="32_sejfe"]
+[ext_resource type="PackedScene" uid="uid://dimfqs0nltxbm" path="res://game/characters/hausmeister/character_hausmeister.tscn" id="33_40gy0"]
+
+[node name="RoomWiderstandsbasis" type="Node2D" unique_id=321181041]
+script = ExtResource("1_mjrpu")
+script_name = "Widerstandsbasis"
+width = 960
+height = 270
+
+[node name="WalkableAreas" type="Node2D" parent="." unique_id=80051697]
+
+[node name="Boden" parent="WalkableAreas" unique_id=1613043156 instance=ExtResource("2_3v85e")]
+interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(6, 210, 954, 210, 954, 267, 6, 267)])
+
+[node name="Props" type="Node2D" parent="." unique_id=1383482290]
+
+[node name="Background" parent="Props" unique_id=1915595604 instance=ExtResource("3_y0yuq")]
+position = Vector2(480, 135)
+texture = ExtResource("4_ovmsc")
+description = "UI_RAUM_WIDERSTANDSBASIS"
+
+[node name="Hotspots" type="Node2D" parent="." unique_id=2013163397]
+
+[node name="Kapseln" parent="Hotspots" unique_id=1990207950 instance=ExtResource("5_jgasw")]
+position = Vector2(71, 54)
+description = "UI_OBJ_KAPSELN"
+baseline = 24
+walk_to_point = Vector2(0, 181)
+
+[node name="MaxKapsel" parent="Hotspots" unique_id=1459581717 instance=ExtResource("6_1lxrf")]
+position = Vector2(133, 54)
+description = "UI_OBJ_MAX_KAPSEL"
+baseline = 24
+walk_to_point = Vector2(0, 181)
+
+[node name="Terminal" parent="Hotspots" unique_id=1754420779 instance=ExtResource("7_jafgw")]
+position = Vector2(195, 54)
+description = "UI_OBJ_TERMINAL"
+baseline = 24
+walk_to_point = Vector2(0, 181)
+
+[node name="Fenster" parent="Hotspots" unique_id=849971707 instance=ExtResource("8_ry2ko")]
+position = Vector2(319, 54)
+description = "UI_OBJ_FENSTER"
+baseline = 24
+walk_to_point = Vector2(0, 181)
+
+[node name="Lueftungsschacht" parent="Hotspots" unique_id=2093255943 instance=ExtResource("9_u2lpm")]
+position = Vector2(443, 54)
+description = "UI_OBJ_LUEFTUNGSSCHACHT"
+baseline = 24
+walk_to_point = Vector2(0, 181)
+
+[node name="Stromkasten" parent="Hotspots" unique_id=965485506 instance=ExtResource("10_eqwmk")]
+position = Vector2(505, 54)
+description = "UI_OBJ_STROMKASTEN"
+baseline = 24
+walk_to_point = Vector2(0, 181)
+
+[node name="PatchPanel" parent="Hotspots" unique_id=1097363008 instance=ExtResource("11_ygka2")]
+position = Vector2(629, 54)
+description = "UI_OBJ_PATCH_PANEL"
+baseline = 24
+walk_to_point = Vector2(0, 181)
+
+[node name="Pizzakartons" parent="Hotspots" unique_id=162891096 instance=ExtResource("12_d5m8q")]
+position = Vector2(753, 54)
+description = "UI_OBJ_PIZZAKARTONS"
+baseline = 24
+walk_to_point = Vector2(0, 181)
+
+[node name="Handtuch" parent="Hotspots" unique_id=1716181788 instance=ExtResource("13_kfo30")]
+position = Vector2(815, 54)
+description = "UI_OBJ_HANDTUCH"
+baseline = 24
+walk_to_point = Vector2(0, 181)
+
+[node name="Grossrechner" parent="Hotspots" unique_id=843250563 instance=ExtResource("14_xl8q6")]
+position = Vector2(877, 54)
+description = "UI_OBJ_GROSSRECHNER"
+baseline = 24
+walk_to_point = Vector2(0, 181)
+
+[node name="Steuerpult" parent="Hotspots" unique_id=82099594 instance=ExtResource("15_vu4h4")]
+position = Vector2(71, 114)
+description = "UI_OBJ_STEUERPULT"
+baseline = 24
+walk_to_point = Vector2(0, 121)
+
+[node name="TischMitKallesTasse" parent="Hotspots" unique_id=1461321998 instance=ExtResource("16_t7rt1")]
+position = Vector2(133, 114)
+description = "UI_OBJ_TISCH_MIT_KALLES_TASSE"
+baseline = 24
+walk_to_point = Vector2(0, 121)
+
+[node name="KallesTasse" parent="Hotspots" unique_id=376090737 instance=ExtResource("17_81nqr")]
+position = Vector2(195, 114)
+description = "UI_OBJ_KALLES_TASSE"
+baseline = 24
+walk_to_point = Vector2(0, 121)
+
+[node name="Plakat" parent="Hotspots" unique_id=1758807095 instance=ExtResource("18_xjy3b")]
+position = Vector2(319, 114)
+description = "UI_OBJ_PLAKAT"
+baseline = 24
+walk_to_point = Vector2(0, 121)
+
+[node name="Rebellen" parent="Hotspots" unique_id=755047885 instance=ExtResource("19_7gr1m")]
+position = Vector2(381, 114)
+description = "UI_OBJ_REBELLEN"
+baseline = 24
+walk_to_point = Vector2(0, 121)
+
+[node name="Kaffeepfuetze" parent="Hotspots" unique_id=594987864 instance=ExtResource("20_u0ey7")]
+position = Vector2(443, 114)
+description = "UI_OBJ_KAFFEEPFUETZE"
+baseline = 24
+walk_to_point = Vector2(0, 121)
+
+[node name="AusgangUnterstadtStrasse" parent="Hotspots" unique_id=772640876 instance=ExtResource("21_vw3en")]
+position = Vector2(19.5, 157.5)
+description = "UI_RAUM_UNTERSTADT_STRASSE"
+baseline = 52
+walk_to_point = Vector2(16.5, 82.5)
+cursor = 9
+
+[node name="AusgangKuehlung" parent="Hotspots" unique_id=891438519 instance=ExtResource("22_a8w82")]
+position = Vector2(940.5, 157.5)
+description = "UI_RAUM_KUEHLUNG"
+baseline = 52
+walk_to_point = Vector2(-16.5, 82.5)
+cursor = 9
+
+[node name="Regions" type="Node2D" parent="." unique_id=2110284089]
+
+[node name="Markers" type="Node2D" parent="." unique_id=1545824039]
+
+[node name="Start" parent="Markers" unique_id=1038710728 instance=ExtResource("23_5ag68")]
+position = Vector2(480, 240)
+
+[node name="VonUnterstadtStrasse" parent="Markers" unique_id=1224690182 instance=ExtResource("24_vxx1q")]
+position = Vector2(36, 240)
+
+[node name="VonKuehlung" parent="Markers" unique_id=1405649629 instance=ExtResource("25_ctvkf")]
+position = Vector2(924, 240)
+
+[node name="VonStadtstrasse" parent="Markers" unique_id=81276481 instance=ExtResource("26_4epyk")]
+position = Vector2(480, 240)
+
+[node name="VonTestkammer1" parent="Markers" unique_id=250825755 instance=ExtResource("27_m8l2n")]
+position = Vector2(480, 240)
+
+[node name="VonKapsel" parent="Markers" unique_id=1649889672 instance=ExtResource("28_1g7fn")]
+position = Vector2(150, 240)
+
+[node name="Characters" type="Node2D" parent="." unique_id=1167195337]
+
+[node name="CharacterOpa *" parent="Characters" unique_id=792275399 instance=ExtResource("29_sbtm8")]
+position = Vector2(130, 232)
+
+[node name="CharacterKalle *" parent="Characters" unique_id=1500944891 instance=ExtResource("30_cw8rj")]
+position = Vector2(270, 232)
+
+[node name="CharacterRebellin *" parent="Characters" unique_id=879585417 instance=ExtResource("31_wddpm")]
+position = Vector2(410, 232)
+
+[node name="CharacterPiepsi *" parent="Characters" unique_id=1962739316 instance=ExtResource("32_sejfe")]
+position = Vector2(690, 232)
+
+[node name="CharacterHausmeister *" parent="Characters" unique_id=1291864463 instance=ExtResource("33_40gy0")]
+position = Vector2(830, 232)

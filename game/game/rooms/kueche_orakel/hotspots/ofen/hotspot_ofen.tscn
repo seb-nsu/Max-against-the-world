@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://bt54gxxaro03e"]
+
+[ext_resource type="Script" path="res://game/rooms/kueche_orakel/hotspots/ofen/hotspot_ofen.gd" id="1_7twb6"]
+
+[node name="Ofen" type="Area2D" unique_id=1752845131]
+script = ExtResource("1_7twb6")
+script_name = "Ofen"
+description = "Ofen"
+cursor = 1
+interaction_polygon = PackedVector2Array(-29, -24, 29, -24, 29, 24, -29, 24)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=839843369]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

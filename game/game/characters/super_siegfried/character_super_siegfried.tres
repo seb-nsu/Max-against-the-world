@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://b7m6f6y0g5vwf"]
+
+[ext_resource type="Script" path="res://game/characters/super_siegfried/character_super_siegfried_state.gd" id="1_75dwe"]
+
+[resource]
+resource_name = "SuperSiegfried"
+script = ExtResource("1_75dwe")
+script_name = "SuperSiegfried"
+scene = "res://game/characters/super_siegfried/character_super_siegfried.tscn"

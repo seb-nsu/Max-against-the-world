@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://d304703yp0tbh"]
+
+[ext_resource type="Script" path="res://game/rooms/kueche_orakel/hotspots/glaeser_auf_dem_regal/hotspot_glaeser_auf_dem_regal.gd" id="1_022pl"]
+
+[node name="GlaeserAufDemRegal" type="Area2D" unique_id=1587356528]
+script = ExtResource("1_022pl")
+script_name = "GlaeserAufDemRegal"
+description = "Glaeser Auf Dem Regal"
+cursor = 1
+interaction_polygon = PackedVector2Array(-29, -24, 29, -24, 29, 24, -29, 24)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=914851962]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

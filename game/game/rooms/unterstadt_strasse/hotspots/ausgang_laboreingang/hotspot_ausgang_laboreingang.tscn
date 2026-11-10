@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://e3n87pyorg4h"]
+
+[ext_resource type="Script" path="res://game/rooms/unterstadt_strasse/hotspots/ausgang_laboreingang/hotspot_ausgang_laboreingang.gd" id="1_8rctg"]
+
+[node name="AusgangLaboreingang" type="Area2D" unique_id=412077471]
+script = ExtResource("1_8rctg")
+script_name = "AusgangLaboreingang"
+description = "Ausgang Laboreingang"
+cursor = 1
+interaction_polygon = PackedVector2Array(-13.5, -52.5, 13.5, -52.5, 13.5, 52.5, -13.5, 52.5)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=619245607]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

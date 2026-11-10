@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://cphdsy5mppxco"]
+
+[ext_resource type="Script" path="res://game/rooms/kuehlung/hotspots/ausgang_widerstandsbasis/hotspot_ausgang_widerstandsbasis.gd" id="1_5otin"]
+
+[node name="AusgangWiderstandsbasis" type="Area2D" unique_id=162332208]
+script = ExtResource("1_5otin")
+script_name = "AusgangWiderstandsbasis"
+description = "Ausgang Widerstandsbasis"
+cursor = 1
+interaction_polygon = PackedVector2Array(-13.5, -52.5, 13.5, -52.5, 13.5, 52.5, -13.5, 52.5)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=876410168]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

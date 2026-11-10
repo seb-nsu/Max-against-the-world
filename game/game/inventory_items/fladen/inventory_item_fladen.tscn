@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://dwong434ii58i"]
+
+[ext_resource type="Texture2D" uid="uid://crcmgy6sutvy7" path="res://grafik/platzhalter/gegenstand_fladen.png" id="1_g3q8y"]
+[ext_resource type="Script" path="res://game/inventory_items/fladen/inventory_item_fladen.gd" id="1_m6gqk"]
+
+[node name="ItemFladen" type="TextureRect" unique_id=61530617]
+texture_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 4
+mouse_filter = 0
+texture = ExtResource("1_g3q8y")
+stretch_mode = 5
+script = ExtResource("1_m6gqk")
+script_name = "Fladen"
+description = "UI_OBJ_FLADEN"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=567330906]

@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://qrvfdvhoyicf"]
+
+[node name="VonGluecksrad" type="Marker2D" unique_id=2133576450]
+visible = false

@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://jnfhl4dumvpi"]
+
+[ext_resource type="Script" path="res://game/rooms/palastkueche/props/zwiebel/prop_zwiebel.gd" id="1_4ukq3"]
+
+[node name="Zwiebel" type="Area2D" unique_id=1856452769]
+script = ExtResource("1_4ukq3")
+script_name = "Zwiebel"
+description = "Zwiebel"
+cursor = 1
+interaction_polygon = PackedVector2Array(-6, -4.5, 6, -4.5, 6, 4.5, -6, 4.5)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1006847523]
+texture_filter = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=2142038227]
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=564965790]
+visible = false
+modulate = Color(1, 1, 0, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+
+[node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=1901649331]
+visible = false
+affect_navigation_mesh = true
+carve_navigation_mesh = true

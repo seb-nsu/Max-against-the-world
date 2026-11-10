@@ -37,6 +37,7 @@ _alias:
   schwerter: schwerter_buendel
   fackeln: fackel_buendel
 _tiere: [minka, huhn, schmiede_ziege, xxl_ziege, schwan]
+_ohne_gespraech: [moderwort]   # Reden mit Moderwort regelt room_thronsaal.gd (R13)
 _figuren: [schmiede_ziege, xxl_ziege, rotkaeppchen, zeldina, grimmzahn, toadi, waldemar, humbert]
 
 dorfplatz:

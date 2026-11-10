@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://css8i4a1obg6f"]
+
+[ext_resource type="Script" path="res://game/characters/fabrikarbeiter/character_fabrikarbeiter_state.gd" id="1_ygiw8"]
+
+[resource]
+resource_name = "Fabrikarbeiter"
+script = ExtResource("1_ygiw8")
+script_name = "Fabrikarbeiter"
+scene = "res://game/characters/fabrikarbeiter/character_fabrikarbeiter.tscn"

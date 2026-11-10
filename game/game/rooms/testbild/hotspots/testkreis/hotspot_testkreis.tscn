@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://tf504skl0ksw"]
+
+[ext_resource type="Script" path="res://game/rooms/testbild/hotspots/testkreis/hotspot_testkreis.gd" id="1_7vt5o"]
+
+[node name="Testkreis" type="Area2D" unique_id=1859349556]
+script = ExtResource("1_7vt5o")
+script_name = "Testkreis"
+description = "Testkreis"
+cursor = 1
+interaction_polygon = PackedVector2Array(-62.5, -24, 62.5, -24, 62.5, 24, -62.5, 24)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=334062882]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

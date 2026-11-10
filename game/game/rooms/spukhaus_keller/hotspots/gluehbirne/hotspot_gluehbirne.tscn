@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://ba2i624oj4ac6"]
+
+[ext_resource type="Script" path="res://game/rooms/spukhaus_keller/hotspots/gluehbirne/hotspot_gluehbirne.gd" id="1_doad0"]
+
+[node name="Gluehbirne" type="Area2D" unique_id=1426126325]
+script = ExtResource("1_doad0")
+script_name = "Gluehbirne"
+description = "Gluehbirne"
+cursor = 1
+interaction_polygon = PackedVector2Array(-29, -24, 29, -24, 29, 24, -29, 24)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1407810267]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

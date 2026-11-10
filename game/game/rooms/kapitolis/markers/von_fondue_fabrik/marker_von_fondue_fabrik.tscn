@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://bx3oatbnxnk4g"]
+
+[node name="VonFondueFabrik" type="Marker2D" unique_id=1182334895]
+visible = false

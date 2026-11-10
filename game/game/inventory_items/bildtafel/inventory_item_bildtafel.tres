@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://2a36ruck7pg8"]
+
+[ext_resource type="Script" path="res://game/inventory_items/bildtafel/inventory_item_bildtafel_state.gd" id="1_anogk"]
+
+[resource]
+resource_name = "Bildtafel"
+script = ExtResource("1_anogk")
+script_name = "Bildtafel"
+scene = "res://game/inventory_items/bildtafel/inventory_item_bildtafel.tscn"

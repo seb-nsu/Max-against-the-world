@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://dys46h3nxwuox"]
+
+[ext_resource type="Script" path="res://game/rooms/thronsaal_ramses/hotspots/schreiberpult/hotspot_schreiberpult.gd" id="1_nher5"]
+
+[node name="Schreiberpult" type="Area2D" unique_id=2117171217]
+script = ExtResource("1_nher5")
+script_name = "Schreiberpult"
+description = "Schreiberpult"
+cursor = 1
+interaction_polygon = PackedVector2Array(-22.5, -16.5, 22.5, -16.5, 22.5, 16.5, -22.5, 16.5)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1288933268]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

@@ -13,7 +13,7 @@
    "offen_wenn": [],
    "offen_wenn_eins_von": [],
    "geloest_schalter": [
-    "LUKE_ERKANNT"
+    "FI_R01_GELOEST"
    ],
    "objekte": [],
    "optional": false,
@@ -177,14 +177,27 @@
    ],
    "offen_wenn_eins_von": [],
    "geloest_schalter": [
-    "KEKSE_DABEI"
+    "FI_R02_GELOEST"
    ],
    "objekte": [
     "omas_kekse"
    ],
    "optional": true,
    "sammelschritt": false,
-   "hinweise": []
+   "hinweise": [
+    {
+     "stufe": 1,
+     "zeile": "FI_HINT_PIX_0200"
+    },
+    {
+     "stufe": 2,
+     "zeile": "FI_HINT_PIX_0210"
+    },
+    {
+     "stufe": 3,
+     "zeile": "FI_HINT_PIX_0220"
+    }
+   ]
   }
  ]
 }

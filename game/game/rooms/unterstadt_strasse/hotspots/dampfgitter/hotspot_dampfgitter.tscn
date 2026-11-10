@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://bgbqh2f6t38um"]
+
+[ext_resource type="Script" path="res://game/rooms/unterstadt_strasse/hotspots/dampfgitter/hotspot_dampfgitter.gd" id="1_4vjkj"]
+
+[node name="Dampfgitter" type="Area2D" unique_id=1716115174]
+script = ExtResource("1_4vjkj")
+script_name = "Dampfgitter"
+description = "Dampfgitter"
+cursor = 1
+interaction_polygon = PackedVector2Array(-44.5, -24, 44.5, -24, 44.5, 24, -44.5, 24)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1200846423]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

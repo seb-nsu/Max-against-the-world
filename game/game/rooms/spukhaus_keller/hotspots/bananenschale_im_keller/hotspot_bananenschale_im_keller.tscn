@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://c0s06l4smbcx2"]
+
+[ext_resource type="Script" path="res://game/rooms/spukhaus_keller/hotspots/bananenschale_im_keller/hotspot_bananenschale_im_keller.gd" id="1_v7fi6"]
+
+[node name="BananenschaleImKeller" type="Area2D" unique_id=1726199868]
+script = ExtResource("1_v7fi6")
+script_name = "BananenschaleImKeller"
+description = "Bananenschale Im Keller"
+cursor = 1
+interaction_polygon = PackedVector2Array(-29, -24, 29, -24, 29, 24, -29, 24)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=20278471]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

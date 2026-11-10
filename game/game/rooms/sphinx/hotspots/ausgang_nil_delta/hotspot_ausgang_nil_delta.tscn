@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://ctbigjijynug7"]
+
+[ext_resource type="Script" path="res://game/rooms/sphinx/hotspots/ausgang_nil_delta/hotspot_ausgang_nil_delta.gd" id="1_r4s2i"]
+
+[node name="AusgangNilDelta" type="Area2D" unique_id=1452541732]
+script = ExtResource("1_r4s2i")
+script_name = "AusgangNilDelta"
+description = "Ausgang Nil Delta"
+cursor = 1
+interaction_polygon = PackedVector2Array(-13.5, -52.5, 13.5, -52.5, 13.5, 52.5, -13.5, 52.5)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=34533806]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://vvrxdid0yqmy"]
+
+[ext_resource type="Script" path="res://game/characters/mutti/character_mutti.gd" id="1_kw4go"]
+[ext_resource type="Texture2D" uid="uid://67kkv1g36xvd" path="res://grafik/platzhalter/figur_mutti.png" id="2_sgync"]
+
+[node name="CharacterMutti" type="Area2D" unique_id=609514072]
+script = ExtResource("1_kw4go")
+walk_speed = 90.0
+dialog_pos = Vector2(0, -184)
+script_name = "Mutti"
+description = "UI_OBJ_MUTTI"
+cursor = 8
+interaction_polygon = PackedVector2Array(-30, -180, 30, -180, 30, 0, -30, 0)
+
+[node name="ScalingPolygon" type="CollisionPolygon2D" parent="." unique_id=1916968242]
+polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=732084045]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1676216418]
+texture_filter = 1
+texture = ExtResource("2_sgync")
+offset = Vector2(0, -90)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1753975520]
+visible = false
+polygon = PackedVector2Array(-30, -180, 30, -180, 30, 0, -30, 0)
+
+[node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=56884304]
+visible = false
+affect_navigation_mesh = true
+carve_navigation_mesh = true

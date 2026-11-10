@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://c45evftokcxug"]
+
+[ext_resource type="Script" path="res://game/rooms/supermarkt/room_supermarkt_state.gd" id="1_5p7do"]
+
+[resource]
+resource_name = "Supermarkt"
+script = ExtResource("1_5p7do")
+script_name = "Supermarkt"
+scene = "res://game/rooms/supermarkt/room_supermarkt.tscn"

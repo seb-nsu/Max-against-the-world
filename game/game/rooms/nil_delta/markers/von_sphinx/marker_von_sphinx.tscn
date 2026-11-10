@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://be7lch01xuvio"]
+
+[node name="VonSphinx" type="Marker2D" unique_id=1259328439]
+visible = false

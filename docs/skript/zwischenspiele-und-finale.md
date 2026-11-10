@@ -402,8 +402,12 @@ Szene mit vier Drehknopf-Stufen. Nach LUKE\_ERKANNT dreht Max den Knopf einmal d
 | FI\_RUF\_ZEL\_0310 | Zeldina | Also. Eine Prinzessin, ein Kater, ein Junge, ein Hausmeister und ein durchgedrehter Erfinder. Das ist fast eine WG. | nach allen vier Kanälen; mit FREUND\_0815 |
 | FI\_RUF\_MAX\_0320 | Max | Zeldina, was war das für ein Zauberstab? | Reden: Zeldina, Option |
 | FI\_RUF\_ZEL\_0330 | Zeldina | Moderworts. Er hat ihn liegen lassen, als er zurück in die Schule ist. Ich benutze ihn für klemmende Türen. Und für Vermieter. | Hinweis auf Schritt A |
+| FI\_RUF\_MAX\_0380 | Max | Für Vermieter? |  |
+| FI\_RUF\_ZEL\_0390 | Zeldina | Die klemmen auch. Meistens bei der Kaution. |  |
 | FI\_RUF\_MAX\_0340 | Max | Hat sich der Turm gelohnt? | Reden: Zeldina, Option |
 | FI\_RUF\_ZEL\_0350 | Zeldina | Sieben Stockwerke, kein Aufzug, ein Drache als Untermieter. Ich liebe ihn. Ich suche trotzdem weiter. Man sucht immer weiter. |  |
+| FI\_RUF\_MAX\_0400 | Max | Und was suchst du jetzt? |  |
+| FI\_RUF\_ZEL\_0410 | Zeldina | Was mit Aufzug. Und ohne Drache. Der darf aber zu Besuch kommen, er bringt immer Kohlen mit. |  |
 | FI\_RUF\_MAX\_0360 | Max | Wie geht's den Gelenken? | Reden: Modell 08/15, Option; nur FREUND\_0815 |
 | FI\_RUF\_HAU\_0370 | Modell 08/15 | Geschmeidig, Bursche. Olivenöl, kalt gepresst. Ich fühle mich wie Baujahr neu. Was soll ich halten? | Hinweis auf Schritt B |
 
@@ -465,7 +469,7 @@ Vier Schritte, die in jeder Reihenfolge begonnen, aber nur in einer beendet werd
 
 ## 7b. Finale: Hinweise der Hilfe-Pfote (FI\_HINT)
 
-Drei Stufen je Schritt nach dem Hinweissystem (Spielsysteme). Schritt 0 ist die Luke in Stufe 1, Schritte A bis D gehören zu Abschnitt 7. Pixel spricht hier normal, er steht neben Max. Datei game/daten/hinweise/finale.json: FI\_R01\_0 bis FI\_R01\_D.
+Drei Stufen je Schritt nach dem Hinweissystem (Spielsysteme). Schritt 0 ist die Luke in Stufe 1, Schritte A bis D gehören zu Abschnitt 7. Pixel spricht hier normal, er steht neben Max. Datei game/daten/hinweise/finale.json: FI\_R01\_0 bis FI\_R01\_D. Der Bonus-Gag mit Omas Keksen (F2) hat drei eigene Stufen (0200 bis 0220); er ist gelöst, sobald Max die Tüte aus der Fundkiste nimmt oder sie schon aus Welt 3 mitbringt.
 
 | ID | Sprecher | Text | Auslöser |
 | --- | --- | --- | --- |
@@ -488,6 +492,9 @@ Drei Stufen je Schritt nach dem Hinweissystem (Spielsysteme). Schritt 0 ist die 
 | FI\_HINT\_PIX\_0170 | Pixel | Richte die Zündkapsel auf den Empfänger und drück die rote Taste. Stopp. Vorher die Ofentür sichern, sonst isst du Teig. Nochmal. | Schritt D, Stufe 3 |
 | FI\_HINT\_PIX\_0180 | Pixel | Ich denke noch nach. Es sieht aus wie Starren. Es ist auch Starren. Aber mit Inhalt. | Wartezeile Finale, vor der nächsten Stufe |
 | FI\_HINT\_PIX\_0190 | Pixel | Alles erledigt. Die Luke geht gleich auf. Ich würde mich jetzt hinsetzen, wenn ich du wäre. Ich bin nicht du. Ich sitze schon. | nichts offen, nach Schritt D |
+| FI\_HINT\_PIX\_0200 | Pixel | Oben hat jemand Geburtstag. Das steht seit Wochen im Kalender. Mit leeren Händen geht man da nicht hin. Sagt man. | Bonus Kekse, Stufe 1 |
+| FI\_HINT\_PIX\_0210 | Pixel | In der Fundkiste liegt Omas Kekstüte. Ich nenne das nicht Kekse. Ich habe daran gerochen. | Bonus Kekse, Stufe 2 |
+| FI\_HINT\_PIX\_0220 | Pixel | Benutz die Fundkiste und nimm die Tüte mit. Den Rest erledigt der Geburtstag. Ich schaue dabei weg. | Bonus Kekse, Stufe 3 |
 
 ## 8. Finale, Stufe 2: Die Auflösung (FI\_AUFL)
 
@@ -587,6 +594,8 @@ Szene mit kurzer freier Phase. Wohnzimmer, Variante Geburtstag: Girlande, Luftba
 | FI\_WOHN\_PIX\_0170 | Pixel | Ich war die ganze Zeit der Einzige mit Plan. Lachs stand nicht drauf. Das verzeihe ich dem Universum nie. |  |
 | FI\_WOHN\_MAX\_0180 | Max | Oma, wusstest du, dass Opa im Fernsehen war? | Reden: Oma, Option |
 | FI\_WOHN\_OMA\_0190 | Oma | Ich habe ihn dort kennengelernt. Ich saß in der ersten Reihe, als der Ofen explodierte. Der Teig hat mich getroffen. Ich dachte: Den nehme ich. | ohne eine Miene zu verziehen |
+| FI\_WOHN\_PIX\_0420 | Pixel | Romantisch. Mit Teig. |  |
+| FI\_WOHN\_OMA\_0430 | Oma | Er hat sich entschuldigt. Mit einem Kuchen. Seitdem backt er mir jedes Jahr einen. Meistens explodiert keiner. |  |
 | FI\_WOHN\_MAX\_0200 | Max | Opa, das Passwort. | Reden: Opa, Option |
 | FI\_WOHN\_OPA\_0210 | Opa | Gleich. Ich hab's aufgeschrieben. Es liegt irgendwo, wo ich jeden Tag hinsehe. | klopft seine Taschen ab |
 | FI\_WOHN\_NAR\_0220 | – | Die Tür geht auf. Max' Mutter kommt herein, Jacke noch an, Schlüssel in der Hand. Sie sieht einen Roboter beim Spülen, eine Prinzessin mit Kuchen, einen Kater auf dem Schrank. Sie atmet einmal durch. | Mutter betritt das Wohnzimmer; Roboter nur FREUND\_0815 |
@@ -616,14 +625,14 @@ Rechtsklick auf einen Gegenstand in der Inventarleiste. Erstes Mal die erste Zei
 
 | ID | Sprecher | Text | Auslöser |
 | --- | --- | --- | --- |
-| FI\_INV\_MAX\_0010 | Max | Das Drachenei. Warm, schwer, mit Schuppenmuster. Opa sagt, es muss ganz bleiben. Ich trag es wie ein rohes Ei. Was es ist. | Ansehen: Drachenei, drachenei |
-| FI\_INV\_PIX\_0015 | Pixel | Ein Ei. Drei Minuten, weich, mit Salz. Ich sage das nicht als Drohung. Ich sage das als Vision. | Ansehen: Drachenei, drachenei, zweites Mal |
-| FI\_INV\_MAX\_0020 | Max | Ein Ei. Einfach ein Ei. Ich hab eine Welt dafür gerettet. Es guckt mich an, als wäre das normal. | Ansehen: Drachenei, ei |
-| FI\_INV\_MAX\_0025 | Max | Größe M, Freilandhaltung, Drache. Steht so nicht drauf. Sollte es aber. | Ansehen: Drachenei, ei, zweites Mal |
-| FI\_INV\_MAX\_0030 | Max | Der goldene Sack mit Pharaonenkorn. Mit Siegel. Er knistert vornehm, wenn ich ihn bewege. | Ansehen: Goldener Sack Pharaonenkorn, goldener_sack |
-| FI\_INV\_MAX\_0035 | Max | Ein ganzer Pharao konnte sich nicht entscheiden, aber beim Korn war er sich sicher. Ich hab Respekt vor diesem Sack. | Ansehen: Goldener Sack Pharaonenkorn, goldener_sack, zweites Mal |
-| FI\_INV\_MAX\_0040 | Max | Ein Sack Mehl. Gold war nur die Verpackung. Opa nennt das Marketing. | Ansehen: Goldener Sack Pharaonenkorn, mehlsack |
-| FI\_INV\_PIX\_0045 | Pixel | Mehl. Daraus macht man Dinge mit Kruste. Ich habe es dir in Ägypten gesagt. Ich sage es nicht noch mal. Doch, gerade eben. | Ansehen: Goldener Sack Pharaonenkorn, mehlsack, zweites Mal |
+| FI\_INV\_MAX\_0010 | Max | Das Drachenei. Warm, schwer, mit Schuppenmuster. Opa sagt, es muss ganz bleiben. Ich trag es wie ein rohes Ei. Was es ist. | Ansehen: Drachenei, drachenei; Reserve, kommt nicht vor: Opa nimmt Ei und Sack schon in der Ankunftsszene; ID bleibt vergeben |
+| FI\_INV\_PIX\_0015 | Pixel | Ein Ei. Drei Minuten, weich, mit Salz. Ich sage das nicht als Drohung. Ich sage das als Vision. | Ansehen: Drachenei, drachenei, zweites Mal; Reserve, kommt nicht vor: Opa nimmt Ei und Sack schon in der Ankunftsszene; ID bleibt vergeben |
+| FI\_INV\_MAX\_0020 | Max | Ein Ei. Einfach ein Ei. Ich hab eine Welt dafür gerettet. Es guckt mich an, als wäre das normal. | Ansehen: Drachenei, ei; Reserve, kommt nicht vor: Opa nimmt Ei und Sack schon in der Ankunftsszene; ID bleibt vergeben |
+| FI\_INV\_MAX\_0025 | Max | Größe M, Freilandhaltung, Drache. Steht so nicht drauf. Sollte es aber. | Ansehen: Drachenei, ei, zweites Mal; Reserve, kommt nicht vor: Opa nimmt Ei und Sack schon in der Ankunftsszene; ID bleibt vergeben |
+| FI\_INV\_MAX\_0030 | Max | Der goldene Sack mit Pharaonenkorn. Mit Siegel. Er knistert vornehm, wenn ich ihn bewege. | Ansehen: Goldener Sack Pharaonenkorn, goldener_sack; Reserve, kommt nicht vor: Opa nimmt Ei und Sack schon in der Ankunftsszene; ID bleibt vergeben |
+| FI\_INV\_MAX\_0035 | Max | Ein ganzer Pharao konnte sich nicht entscheiden, aber beim Korn war er sich sicher. Ich hab Respekt vor diesem Sack. | Ansehen: Goldener Sack Pharaonenkorn, goldener_sack, zweites Mal; Reserve, kommt nicht vor: Opa nimmt Ei und Sack schon in der Ankunftsszene; ID bleibt vergeben |
+| FI\_INV\_MAX\_0040 | Max | Ein Sack Mehl. Gold war nur die Verpackung. Opa nennt das Marketing. | Ansehen: Goldener Sack Pharaonenkorn, mehlsack; Reserve, kommt nicht vor: Opa nimmt Ei und Sack schon in der Ankunftsszene; ID bleibt vergeben |
+| FI\_INV\_PIX\_0045 | Pixel | Mehl. Daraus macht man Dinge mit Kruste. Ich habe es dir in Ägypten gesagt. Ich sage es nicht noch mal. Doch, gerade eben. | Ansehen: Goldener Sack Pharaonenkorn, mehlsack, zweites Mal; Reserve, kommt nicht vor: Opa nimmt Ei und Sack schon in der Ankunftsszene; ID bleibt vergeben |
 | FI\_INV\_MAX\_0050 | Max | Die Ewige Energiezelle. Sie summt ganz leise. Wenn ich sie ans Ohr halte, höre ich die Zukunft. Sie klingt nach Regen. | Ansehen: Ewige Energiezelle, ewig |
 | FI\_INV\_MAX\_0055 | Max | Sie leuchtet im Dunkeln der Tasche. Meine Tasche hat jetzt Stimmungslicht. | Ansehen: Ewige Energiezelle, ewig, zweites Mal |
 | FI\_INV\_MAX\_0060 | Max | Eine Batterie. Eine sehr gute Batterie. Ich hab eine KI dafür abgeschaltet. Die Fernbedienung wird glücklich sein. | Ansehen: Ewige Energiezelle, batterie |

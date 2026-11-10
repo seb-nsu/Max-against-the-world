@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://dbykko76ac1hf"]
+
+[ext_resource type="Script" path="res://game/rooms/fondue_fabrik/hotspots/einzelbild_4/hotspot_einzelbild_4.gd" id="1_egpni"]
+
+[node name="Einzelbild4" type="Area2D" unique_id=1297605175]
+script = ExtResource("1_egpni")
+script_name = "Einzelbild4"
+description = "Einzelbild 4"
+cursor = 1
+interaction_polygon = PackedVector2Array(-29, -24, 29, -24, 29, 24, -29, 24)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=2110291254]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

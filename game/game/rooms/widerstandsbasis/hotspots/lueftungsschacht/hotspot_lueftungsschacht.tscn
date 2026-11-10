@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://bf7al6ikmcccq"]
+
+[ext_resource type="Script" path="res://game/rooms/widerstandsbasis/hotspots/lueftungsschacht/hotspot_lueftungsschacht.gd" id="1_43l0r"]
+
+[node name="Lueftungsschacht" type="Area2D" unique_id=2093255943]
+script = ExtResource("1_43l0r")
+script_name = "Lueftungsschacht"
+description = "Lueftungsschacht"
+cursor = 1
+interaction_polygon = PackedVector2Array(-27, -24, 27, -24, 27, 24, -27, 24)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=320363265]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

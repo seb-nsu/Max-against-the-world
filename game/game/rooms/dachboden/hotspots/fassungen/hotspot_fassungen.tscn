@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://4l46a67xb8f8"]
+
+[ext_resource type="Script" path="res://game/rooms/dachboden/hotspots/fassungen/hotspot_fassungen.gd" id="1_awfhj"]
+
+[node name="Fassungen" type="Area2D" unique_id=949107875]
+script = ExtResource("1_awfhj")
+script_name = "Fassungen"
+description = "Fassungen"
+cursor = 1
+interaction_polygon = PackedVector2Array(-30, -7.5, 30, -7.5, 30, 7.5, -30, 7.5)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=959388113]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

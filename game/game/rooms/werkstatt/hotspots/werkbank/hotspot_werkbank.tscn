@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://c2f1651r1b75s"]
+
+[ext_resource type="Script" path="res://game/rooms/werkstatt/hotspots/werkbank/hotspot_werkbank.gd" id="1_1ctci"]
+
+[node name="Werkbank" type="Area2D" unique_id=482899012]
+script = ExtResource("1_1ctci")
+script_name = "Werkbank"
+description = "Werkbank"
+cursor = 1
+interaction_polygon = PackedVector2Array(-48, -27, 48, -27, 48, 27, -48, 27)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1906372035]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

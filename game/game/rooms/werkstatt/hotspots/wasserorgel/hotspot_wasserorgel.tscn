@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://danvrheiwy3dy"]
+
+[ext_resource type="Script" path="res://game/rooms/werkstatt/hotspots/wasserorgel/hotspot_wasserorgel.gd" id="1_nbvrl"]
+
+[node name="Wasserorgel" type="Area2D" unique_id=48456285]
+script = ExtResource("1_nbvrl")
+script_name = "Wasserorgel"
+description = "Wasserorgel"
+cursor = 1
+interaction_polygon = PackedVector2Array(-33, -40.5, 33, -40.5, 33, 40.5, -33, 40.5)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=862697487]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

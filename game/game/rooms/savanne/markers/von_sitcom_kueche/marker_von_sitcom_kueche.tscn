@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://kdnd1ks10w34"]
+
+[node name="VonSitcomKueche" type="Marker2D" unique_id=191235019]
+visible = false

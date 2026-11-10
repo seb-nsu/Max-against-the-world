@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://bb7cgab1ll2au"]
+
+[ext_resource type="Script" path="res://game/rooms/agora/hotspots/marktstaende/hotspot_marktstaende.gd" id="1_m5vom"]
+
+[node name="Marktstaende" type="Area2D" unique_id=970974596]
+script = ExtResource("1_m5vom")
+script_name = "Marktstaende"
+description = "Marktstaende"
+cursor = 1
+interaction_polygon = PackedVector2Array(-75, -37.5, 75, -37.5, 75, 37.5, -75, 37.5)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=934625727]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

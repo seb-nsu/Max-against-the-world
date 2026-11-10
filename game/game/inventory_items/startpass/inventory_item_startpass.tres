@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://2ao71uid4emx"]
+
+[ext_resource type="Script" path="res://game/inventory_items/startpass/inventory_item_startpass_state.gd" id="1_qgi4r"]
+
+[resource]
+resource_name = "Startpass"
+script = ExtResource("1_qgi4r")
+script_name = "Startpass"
+scene = "res://game/inventory_items/startpass/inventory_item_startpass.tscn"

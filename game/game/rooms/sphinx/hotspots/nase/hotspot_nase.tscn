@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://dqpry7f6ycwjo"]
+
+[ext_resource type="Script" path="res://game/rooms/sphinx/hotspots/nase/hotspot_nase.gd" id="1_irk0w"]
+
+[node name="Nase" type="Area2D" unique_id=2092306991]
+script = ExtResource("1_irk0w")
+script_name = "Nase"
+description = "Nase"
+cursor = 1
+interaction_polygon = PackedVector2Array(-10.5, -12, 10.5, -12, 10.5, 12, -10.5, 12)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=410224817]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

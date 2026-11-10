@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://dfh6r31w17uiw"]
+
+[ext_resource type="Script" path="res://game/rooms/kueche_orakel/hotspots/tapete/hotspot_tapete.gd" id="1_e3j46"]
+
+[node name="Tapete" type="Area2D" unique_id=993868797]
+script = ExtResource("1_e3j46")
+script_name = "Tapete"
+description = "Tapete"
+cursor = 1
+interaction_polygon = PackedVector2Array(-29, -24, 29, -24, 29, 24, -29, 24)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=864098214]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://wavompsoski3"]
+
+[ext_resource type="Script" path="res://game/characters/herr_vier/character_herr_vier_state.gd" id="1_58604"]
+
+[resource]
+resource_name = "HerrVier"
+script = ExtResource("1_58604")
+script_name = "HerrVier"
+scene = "res://game/characters/herr_vier/character_herr_vier.tscn"

@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://dnkefhtfsgjhn"]
+
+[ext_resource type="Script" path="res://game/rooms/widerstandsbasis/hotspots/rebellen/hotspot_rebellen.gd" id="1_qhwkm"]
+
+[node name="Rebellen" type="Area2D" unique_id=755047885]
+script = ExtResource("1_qhwkm")
+script_name = "Rebellen"
+description = "Rebellen"
+cursor = 1
+interaction_polygon = PackedVector2Array(-27, -24, 27, -24, 27, 24, -27, 24)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1996034116]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

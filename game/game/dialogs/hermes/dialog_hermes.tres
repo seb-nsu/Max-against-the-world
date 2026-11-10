@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://dhjgenakt2oaa"]
+
+[ext_resource type="Script" uid="uid://brxefo54wpm32" path="res://addons/popochiu/engine/objects/dialog/popochiu_dialog_option.gd" id="1_4gg6k"]
+[ext_resource type="Script" path="res://game/dialogs/hermes/dialog_hermes.gd" id="2_on0ti"]
+
+[resource]
+resource_name = "Hermes"
+script = ExtResource("2_on0ti")
+script_name = "Hermes"

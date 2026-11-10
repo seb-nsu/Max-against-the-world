@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://dibpiancfppln"]
+
+[node name="VonZappmannsStudio" type="Marker2D" unique_id=1350248523]
+visible = false

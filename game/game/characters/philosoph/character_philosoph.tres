@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://d4mr8fud2hawm"]
+
+[ext_resource type="Script" path="res://game/characters/philosoph/character_philosoph_state.gd" id="1_etjqo"]
+
+[resource]
+resource_name = "Philosoph"
+script = ExtResource("1_etjqo")
+script_name = "Philosoph"
+scene = "res://game/characters/philosoph/character_philosoph.tscn"

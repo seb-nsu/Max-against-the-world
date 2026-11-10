@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://dwa5fjgiajtty"]
+
+[ext_resource type="Script" path="res://game/rooms/werkstatt/hotspots/badewanne/hotspot_badewanne.gd" id="1_qqvq1"]
+
+[node name="Badewanne" type="Area2D" unique_id=572086028]
+script = ExtResource("1_qqvq1")
+script_name = "Badewanne"
+description = "Badewanne"
+cursor = 1
+interaction_polygon = PackedVector2Array(-42, -18, 42, -18, 42, 18, -42, 18)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=687181040]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://dd8c4gys43wa1"]
+
+[ext_resource type="Script" path="res://game/inventory_items/grabstein/inventory_item_grabstein_state.gd" id="1_1fday"]
+
+[resource]
+resource_name = "Grabstein"
+script = ExtResource("1_1fday")
+script_name = "Grabstein"
+scene = "res://game/inventory_items/grabstein/inventory_item_grabstein.tscn"

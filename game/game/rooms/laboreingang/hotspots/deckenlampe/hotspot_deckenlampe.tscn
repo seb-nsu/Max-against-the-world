@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://dh3k8uwae5gfb"]
+
+[ext_resource type="Script" path="res://game/rooms/laboreingang/hotspots/deckenlampe/hotspot_deckenlampe.gd" id="1_qkmrr"]
+
+[node name="Deckenlampe" type="Area2D" unique_id=1462594428]
+script = ExtResource("1_qkmrr")
+script_name = "Deckenlampe"
+description = "Deckenlampe"
+cursor = 1
+interaction_polygon = PackedVector2Array(-29, -24, 29, -24, 29, 24, -29, 24)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1633216517]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

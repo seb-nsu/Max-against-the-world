@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://blrjj6ld5fka3"]
+
+[ext_resource type="Script" path="res://game/inventory_items/brians_schild/inventory_item_brians_schild_state.gd" id="1_s6r2t"]
+
+[resource]
+resource_name = "BriansSchild"
+script = ExtResource("1_s6r2t")
+script_name = "BriansSchild"
+scene = "res://game/inventory_items/brians_schild/inventory_item_brians_schild.tscn"

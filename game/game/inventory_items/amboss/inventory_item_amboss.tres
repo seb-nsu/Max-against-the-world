@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://ck8ib65dv6b2u"]
+
+[ext_resource type="Script" path="res://game/inventory_items/amboss/inventory_item_amboss_state.gd" id="1_q17p8"]
+
+[resource]
+resource_name = "Amboss"
+script = ExtResource("1_q17p8")
+script_name = "Amboss"
+scene = "res://game/inventory_items/amboss/inventory_item_amboss.tscn"

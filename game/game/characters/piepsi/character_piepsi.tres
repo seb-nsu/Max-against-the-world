@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://cfj5k4qklp2gd"]
+
+[ext_resource type="Script" path="res://game/characters/piepsi/character_piepsi_state.gd" id="1_xeeo6"]
+
+[resource]
+resource_name = "Piepsi"
+script = ExtResource("1_xeeo6")
+script_name = "Piepsi"
+scene = "res://game/characters/piepsi/character_piepsi.tscn"

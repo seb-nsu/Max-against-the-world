@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://d2catky4fgpfr"]
+
+[ext_resource type="Script" path="res://game/characters/orakel_oma/character_orakel_oma.gd" id="1_h8ry4"]
+[ext_resource type="Texture2D" uid="uid://iftrtd2hd6kj" path="res://grafik/platzhalter/figur_orakel_oma.png" id="2_v424v"]
+
+[node name="CharacterOrakelOma" type="Area2D" unique_id=676729534]
+script = ExtResource("1_h8ry4")
+walk_speed = 90.0
+dialog_pos = Vector2(0, -88)
+script_name = "OrakelOma"
+description = "UI_OBJ_ORAKEL_OMA"
+cursor = 8
+interaction_polygon = PackedVector2Array(-14, -84, 14, -84, 14, 0, -14, 0)
+
+[node name="ScalingPolygon" type="CollisionPolygon2D" parent="." unique_id=1296242104]
+polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1897459094]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1997982619]
+texture_filter = 1
+texture = ExtResource("2_v424v")
+offset = Vector2(0, -42)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1626260420]
+visible = false
+polygon = PackedVector2Array(-14, -84, 14, -84, 14, 0, -14, 0)
+
+[node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=883590091]
+visible = false
+affect_navigation_mesh = true
+carve_navigation_mesh = true

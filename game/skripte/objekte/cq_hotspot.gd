@@ -61,6 +61,8 @@ func on_item_used(item: PopochiuInventoryItem) -> void:
 
 func _on_click() -> void:
 	await Spiel.hingehen(self)
+	if await Spiel.regel("benutzen", self):
+		return
 	await benutzen_standard()
 
 
@@ -78,6 +80,8 @@ func _on_double_click() -> void:
 
 
 func _on_right_click() -> void:
+	if await Spiel.regel("ansehen", self):
+		return
 	await ansehen()
 
 
@@ -87,6 +91,8 @@ func _on_middle_click() -> void:
 
 func _on_item_used(item: PopochiuInventoryItem) -> void:
 	await Spiel.hingehen(self)
+	if await Spiel.regel("gegenstand", self, item):
+		return
 	await gegenstand_standard(item)
 
 
@@ -103,6 +109,8 @@ func gegenstand_standard(item: PopochiuInventoryItem) -> void:
 ## Pixel auf dieses Objekt (Pixel-Feld oder Pixel als aktive Figur): Pixels eigene Ansehen-
 ## bzw. Schnupper-Zeile, sonst seine Ersatzzeile.
 func _pixel_benutzt() -> void:
+	if await Spiel.regel("pixel", self):
+		return
 	for e in bauplan().get("ansehen", []):
 		if e.get("figur") == "PIX" and Spiel.eintrag_passt(e):
 			await Spiel.sagen_eintrag(e)

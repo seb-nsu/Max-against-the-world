@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://dt6y4ah028xv"]
+
+[ext_resource type="Script" path="res://game/rooms/fondue_fabrik/hotspots/warnschilder/hotspot_warnschilder.gd" id="1_supy2"]
+
+[node name="Warnschilder" type="Area2D" unique_id=1758004751]
+script = ExtResource("1_supy2")
+script_name = "Warnschilder"
+description = "Warnschilder"
+cursor = 1
+interaction_polygon = PackedVector2Array(-29, -24, 29, -24, 29, 24, -29, 24)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1698542027]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

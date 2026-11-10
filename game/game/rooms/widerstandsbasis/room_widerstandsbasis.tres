@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://xm7fokylsquu"]
+
+[ext_resource type="Script" path="res://game/rooms/widerstandsbasis/room_widerstandsbasis_state.gd" id="1_56k7y"]
+
+[resource]
+resource_name = "Widerstandsbasis"
+script = ExtResource("1_56k7y")
+script_name = "Widerstandsbasis"
+scene = "res://game/rooms/widerstandsbasis/room_widerstandsbasis.tscn"

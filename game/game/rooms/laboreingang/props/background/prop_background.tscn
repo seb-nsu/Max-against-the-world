@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://2jiuigcoheh1"]
+
+[ext_resource type="Script" path="res://game/rooms/laboreingang/props/background/prop_background.gd" id="1_150dr"]
+
+[node name="Background" type="Area2D" unique_id=1598121748]
+z_index = -1
+input_pickable = false
+script = ExtResource("1_150dr")
+script_name = "Background"
+description = "Background"
+clickable = false
+baseline = -135
+cursor = 1
+interaction_polygon = PackedVector2Array()
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1399062792]
+texture_filter = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1849561731]
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=2057277032]
+visible = false
+modulate = Color(1, 1, 0, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+
+[node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=2124885227]
+visible = false
+affect_navigation_mesh = true
+carve_navigation_mesh = true

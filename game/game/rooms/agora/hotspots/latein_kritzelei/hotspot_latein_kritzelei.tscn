@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://bnhi3bl6631tw"]
+
+[ext_resource type="Script" path="res://game/rooms/agora/hotspots/latein_kritzelei/hotspot_latein_kritzelei.gd" id="1_wl60d"]
+
+[node name="LateinKritzelei" type="Area2D" unique_id=3818086]
+script = ExtResource("1_wl60d")
+script_name = "LateinKritzelei"
+description = "Latein Kritzelei"
+cursor = 1
+interaction_polygon = PackedVector2Array(-24, -12, 24, -12, 24, 12, -24, 12)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1345713488]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

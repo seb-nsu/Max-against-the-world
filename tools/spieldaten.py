@@ -48,6 +48,8 @@ def schritt_id(ab, text, raetsel_ids):
     m = re.match(r"^Schritt ([0A-D])\b", t)
     if m:
         return FINALE_SCHRITT[m.group(1)]
+    if t.startswith("Bonus Kekse") and "F2" in raetsel_ids:
+        return "F2"
     m = re.match(r"^(?:W\d_)?([RP])0?(\d+)(?:_([A-D])|([a-d]))?(?: Teil (\d))?\b", t)
     if not m:
         return None

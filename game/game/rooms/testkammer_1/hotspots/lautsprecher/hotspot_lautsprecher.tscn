@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://c525qqgcdgfdp"]
+
+[ext_resource type="Script" path="res://game/rooms/testkammer_1/hotspots/lautsprecher/hotspot_lautsprecher.gd" id="1_mlpnk"]
+
+[node name="Lautsprecher" type="Area2D" unique_id=774588452]
+script = ExtResource("1_mlpnk")
+script_name = "Lautsprecher"
+description = "Lautsprecher"
+cursor = 1
+interaction_polygon = PackedVector2Array(-29, -24, 29, -24, 29, 24, -29, 24)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=626722549]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

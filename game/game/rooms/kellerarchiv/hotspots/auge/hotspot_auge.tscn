@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://cbvuodlbdhmt2"]
+
+[ext_resource type="Script" path="res://game/rooms/kellerarchiv/hotspots/auge/hotspot_auge.gd" id="1_nmtiu"]
+
+[node name="Auge" type="Area2D" unique_id=976982369]
+script = ExtResource("1_nmtiu")
+script_name = "Auge"
+description = "Auge"
+cursor = 1
+interaction_polygon = PackedVector2Array(-36, -24, 36, -24, 36, 24, -36, 24)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=277708286]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

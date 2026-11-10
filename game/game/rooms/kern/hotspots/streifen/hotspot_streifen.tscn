@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://d1sscqyvowfok"]
+
+[ext_resource type="Script" path="res://game/rooms/kern/hotspots/streifen/hotspot_streifen.gd" id="1_ewo0q"]
+
+[node name="Streifen" type="Area2D" unique_id=483139755]
+script = ExtResource("1_ewo0q")
+script_name = "Streifen"
+description = "Streifen"
+cursor = 1
+interaction_polygon = PackedVector2Array(-62.5, -24, 62.5, -24, 62.5, 24, -62.5, 24)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1583840685]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

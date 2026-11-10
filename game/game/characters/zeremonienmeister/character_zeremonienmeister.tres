@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://dpwymelmu08dn"]
+
+[ext_resource type="Script" path="res://game/characters/zeremonienmeister/character_zeremonienmeister_state.gd" id="1_fsn03"]
+
+[resource]
+resource_name = "Zeremonienmeister"
+script = ExtResource("1_fsn03")
+script_name = "Zeremonienmeister"
+scene = "res://game/characters/zeremonienmeister/character_zeremonienmeister.tscn"

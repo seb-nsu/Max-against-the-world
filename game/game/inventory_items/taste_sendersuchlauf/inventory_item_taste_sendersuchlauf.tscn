@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://dfl8ba6me5q2k"]
+
+[ext_resource type="Texture2D" uid="uid://cjx3fwybt1kyg" path="res://grafik/platzhalter/gegenstand_taste_sendersuchlauf.png" id="1_5uqox"]
+[ext_resource type="Script" path="res://game/inventory_items/taste_sendersuchlauf/inventory_item_taste_sendersuchlauf.gd" id="1_unb6k"]
+
+[node name="ItemTasteSendersuchlauf" type="TextureRect" unique_id=73257290]
+texture_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 4
+mouse_filter = 0
+texture = ExtResource("1_5uqox")
+stretch_mode = 5
+script = ExtResource("1_unb6k")
+script_name = "TasteSendersuchlauf"
+description = "UI_OBJ_TASTE_SENDERSUCHLAUF"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1618923733]

@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://rdwapveabjqi"]
+
+[node name="VonStadtstrasse" type="Marker2D" unique_id=579787602]
+visible = false

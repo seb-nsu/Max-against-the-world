@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://d23xpc3xehdmy"]
+
+[ext_resource type="Script" path="res://game/rooms/nil_delta/hotspots/duenenpfad/hotspot_duenenpfad.gd" id="1_l017i"]
+
+[node name="Duenenpfad" type="Area2D" unique_id=752158869]
+script = ExtResource("1_l017i")
+script_name = "Duenenpfad"
+description = "Duenenpfad"
+cursor = 1
+interaction_polygon = PackedVector2Array(-27, -21, 27, -21, 27, 21, -27, 21)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=949422803]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

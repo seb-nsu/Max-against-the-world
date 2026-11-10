@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://darnn3vc1bfwa"]
+
+[ext_resource type="Script" path="res://game/rooms/fondue_fabrik/walkable_areas/boden/walkable_area_boden.gd" id="1_g3wip"]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_g3wip"]
+vertices = PackedVector2Array(474, 267, 6, 267, 6, 210, 474, 210)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(6, 210, 474, 210, 474, 267, 6, 267)])
+agent_radius = 0.0
+
+[node name="Boden" type="Node2D" unique_id=166293555]
+script = ExtResource("1_g3wip")
+script_name = "Boden"
+description = "Boden"
+interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(6, 210, 474, 210, 474, 267, 6, 267)])
+
+[node name="Perimeter" type="NavigationRegion2D" parent="." unique_id=1447565779]
+modulate = Color(0, 1, 0, 1)
+navigation_polygon = SubResource("NavigationPolygon_g3wip")

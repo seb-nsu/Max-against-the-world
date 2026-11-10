@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://cm27agwsfhva4"]
+
+[ext_resource type="Script" path="res://game/rooms/stadion/hotspots/wurfhebel/hotspot_wurfhebel.gd" id="1_hmc6r"]
+
+[node name="Wurfhebel" type="Area2D" unique_id=2002672959]
+script = ExtResource("1_hmc6r")
+script_name = "Wurfhebel"
+description = "Wurfhebel"
+cursor = 1
+interaction_polygon = PackedVector2Array(-27, -30, 27, -30, 27, 30, -27, 30)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=392055729]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

@@ -1,0 +1,146 @@
+[gd_scene format=3 uid="uid://c7ty0h88rqwh6"]
+
+[ext_resource type="Script" path="res://game/rooms/buero_50/room_buero_50.gd" id="1_3nd8x"]
+[ext_resource type="PackedScene" uid="uid://c8c8cydu34puc" path="res://game/rooms/buero_50/walkable_areas/boden/walkable_area_boden.tscn" id="2_8t7q5"]
+[ext_resource type="PackedScene" uid="uid://bh4bnyuqvgvgv" path="res://game/rooms/buero_50/props/background/prop_background.tscn" id="3_2nn64"]
+[ext_resource type="Texture2D" uid="uid://eshlmr1lowk8" path="res://grafik/platzhalter/raum_buero_50.png" id="4_homwi"]
+[ext_resource type="PackedScene" uid="uid://prrt5dmqmkcy" path="res://game/rooms/buero_50/props/kaffeetasse/prop_kaffeetasse.tscn" id="5_4ap55"]
+[ext_resource type="Texture2D" uid="uid://gya725ig3q23" path="res://grafik/platzhalter/prop_kaffeetasse.png" id="6_wn3uy"]
+[ext_resource type="PackedScene" uid="uid://c7i6x44esqu8l" path="res://game/rooms/buero_50/props/sonnenbrille/prop_sonnenbrille.tscn" id="7_xsruw"]
+[ext_resource type="Texture2D" uid="uid://c05you06h1f8c" path="res://grafik/platzhalter/prop_sonnenbrille.png" id="8_50dl5"]
+[ext_resource type="PackedScene" uid="uid://b62b85cpq7ija" path="res://game/rooms/buero_50/props/schmidts_akte/prop_schmidts_akte.tscn" id="9_hvy57"]
+[ext_resource type="Texture2D" uid="uid://r1idi8e6obuf" path="res://grafik/platzhalter/prop_schmidts_akte.png" id="10_h4d6q"]
+[ext_resource type="PackedScene" uid="uid://b0albhhw1k28s" path="res://game/rooms/buero_50/hotspots/flur/hotspot_flur.tscn" id="11_fobwy"]
+[ext_resource type="PackedScene" uid="uid://cs7u4xb30eklt" path="res://game/rooms/buero_50/hotspots/tueren/hotspot_tueren.tscn" id="12_cwfng"]
+[ext_resource type="PackedScene" uid="uid://cpu8prcka61yp" path="res://game/rooms/buero_50/hotspots/topfpflanzen/hotspot_topfpflanzen.tscn" id="13_60yk1"]
+[ext_resource type="PackedScene" uid="uid://brqmp0jrtcch3" path="res://game/rooms/buero_50/hotspots/fenster/hotspot_fenster.tscn" id="14_u20dv"]
+[ext_resource type="PackedScene" uid="uid://xkoyqijlgyl" path="res://game/rooms/buero_50/hotspots/endlos_treppe/hotspot_endlos_treppe.tscn" id="15_omrgd"]
+[ext_resource type="PackedScene" uid="uid://cn5aoruqla2h6" path="res://game/rooms/buero_50/hotspots/wasserspender/hotspot_wasserspender.tscn" id="16_codjv"]
+[ext_resource type="PackedScene" uid="uid://dq4jb2i1838qk" path="res://game/rooms/buero_50/hotspots/klone/hotspot_klone.tscn" id="17_8ncd7"]
+[ext_resource type="PackedScene" uid="uid://bnc102a52d5os" path="res://game/rooms/buero_50/hotspots/farbcode_an_der_wand/hotspot_farbcode_an_der_wand.tscn" id="18_tv7pl"]
+[ext_resource type="PackedScene" uid="uid://bx12cl2dk17qy" path="res://game/rooms/buero_50/hotspots/terminal/hotspot_terminal.tscn" id="19_lyoph"]
+[ext_resource type="PackedScene" uid="uid://c8qbq330xxtcf" path="res://game/rooms/buero_50/hotspots/ausgang_stadtstrasse/hotspot_ausgang_stadtstrasse.tscn" id="20_q22gl"]
+[ext_resource type="PackedScene" uid="uid://dlkhwnch7vcfc" path="res://game/rooms/buero_50/markers/start/marker_start.tscn" id="21_v0ywy"]
+[ext_resource type="PackedScene" uid="uid://rdwapveabjqi" path="res://game/rooms/buero_50/markers/von_stadtstrasse/marker_von_stadtstrasse.tscn" id="22_2pc4u"]
+[ext_resource type="PackedScene" uid="uid://bhd8p85pm6xca" path="res://game/characters/schmidt/character_schmidt.tscn" id="23_xcy5n"]
+[ext_resource type="PackedScene" uid="uid://ugus0adguiqe" path="res://game/characters/klon/character_klon.tscn" id="24_dhme6"]
+
+[node name="RoomBuero50" type="Node2D" unique_id=873731353]
+script = ExtResource("1_3nd8x")
+script_name = "Buero50"
+width = 480
+height = 270
+
+[node name="WalkableAreas" type="Node2D" parent="." unique_id=1802947153]
+
+[node name="Boden" parent="WalkableAreas" unique_id=763440358 instance=ExtResource("2_8t7q5")]
+interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(6, 210, 474, 210, 474, 267, 6, 267)])
+
+[node name="Props" type="Node2D" parent="." unique_id=1357218745]
+
+[node name="Background" parent="Props" unique_id=332016736 instance=ExtResource("3_2nn64")]
+position = Vector2(240, 135)
+texture = ExtResource("4_homwi")
+description = "UI_RAUM_BUERO_50"
+
+[node name="Kaffeetasse" parent="Props" unique_id=2007546464 instance=ExtResource("5_4ap55")]
+position = Vector2(107.5, 201)
+texture = ExtResource("6_wn3uy")
+description = "UI_OBJ_KAFFEETASSE"
+baseline = 6
+walk_to_point = Vector2(-0.5, 34)
+
+[node name="Sonnenbrille" parent="Props" unique_id=507926186 instance=ExtResource("7_xsruw")]
+position = Vector2(167.5, 201)
+texture = ExtResource("8_50dl5")
+description = "UI_OBJ_SONNENBRILLE"
+baseline = 6
+walk_to_point = Vector2(-0.5, 34)
+
+[node name="SchmidtsAkte" parent="Props" unique_id=1233082720 instance=ExtResource("9_hvy57")]
+position = Vector2(227.5, 201)
+texture = ExtResource("10_h4d6q")
+description = "UI_OBJ_SCHMIDTS_AKTE"
+baseline = 6
+walk_to_point = Vector2(-0.5, 34)
+
+[node name="Hotspots" type="Node2D" parent="." unique_id=2060936893]
+
+[node name="Flur" parent="Hotspots" unique_id=1807260680 instance=ExtResource("11_fobwy")]
+position = Vector2(73, 54)
+description = "UI_OBJ_FLUR"
+baseline = 24
+walk_to_point = Vector2(0, 181)
+
+[node name="Tueren" parent="Hotspots" unique_id=881020609 instance=ExtResource("12_cwfng")]
+position = Vector2(139, 54)
+description = "UI_OBJ_TUEREN"
+baseline = 24
+walk_to_point = Vector2(0, 181)
+
+[node name="Topfpflanzen" parent="Hotspots" unique_id=2121635765 instance=ExtResource("13_60yk1")]
+position = Vector2(205, 54)
+description = "UI_OBJ_TOPFPFLANZEN"
+baseline = 24
+walk_to_point = Vector2(0, 181)
+
+[node name="Fenster" parent="Hotspots" unique_id=7001936 instance=ExtResource("14_u20dv")]
+position = Vector2(271, 54)
+description = "UI_OBJ_FENSTER"
+baseline = 24
+walk_to_point = Vector2(0, 181)
+
+[node name="EndlosTreppe" parent="Hotspots" unique_id=1962821504 instance=ExtResource("15_omrgd")]
+position = Vector2(337, 54)
+description = "UI_OBJ_ENDLOS_TREPPE"
+baseline = 24
+walk_to_point = Vector2(0, 181)
+
+[node name="Wasserspender" parent="Hotspots" unique_id=395484706 instance=ExtResource("16_codjv")]
+position = Vector2(403, 54)
+description = "UI_OBJ_WASSERSPENDER"
+baseline = 24
+walk_to_point = Vector2(0, 181)
+
+[node name="Klone" parent="Hotspots" unique_id=738808259 instance=ExtResource("17_8ncd7")]
+position = Vector2(73, 114)
+description = "UI_OBJ_KLONE"
+baseline = 24
+walk_to_point = Vector2(0, 121)
+
+[node name="FarbcodeAnDerWand" parent="Hotspots" unique_id=354775492 instance=ExtResource("18_tv7pl")]
+position = Vector2(205, 114)
+description = "UI_OBJ_FARBCODE_AN_DER_WAND"
+baseline = 24
+walk_to_point = Vector2(0, 121)
+
+[node name="Terminal" parent="Hotspots" unique_id=1449967679 instance=ExtResource("19_lyoph")]
+position = Vector2(271, 114)
+description = "UI_OBJ_TERMINAL"
+baseline = 24
+walk_to_point = Vector2(0, 121)
+
+[node name="AusgangStadtstrasse" parent="Hotspots" unique_id=1812715989 instance=ExtResource("20_q22gl")]
+position = Vector2(19.5, 157.5)
+description = "UI_RAUM_STADTSTRASSE"
+baseline = 52
+walk_to_point = Vector2(16.5, 82.5)
+cursor = 9
+
+[node name="Regions" type="Node2D" parent="." unique_id=1156180557]
+
+[node name="Markers" type="Node2D" parent="." unique_id=1959098729]
+
+[node name="Start" parent="Markers" unique_id=1431835996 instance=ExtResource("21_v0ywy")]
+position = Vector2(240, 240)
+
+[node name="VonStadtstrasse" parent="Markers" unique_id=579787602 instance=ExtResource("22_2pc4u")]
+position = Vector2(36, 240)
+
+[node name="Characters" type="Node2D" parent="." unique_id=151502435]
+
+[node name="CharacterSchmidt *" parent="Characters" unique_id=1029591084 instance=ExtResource("23_xcy5n")]
+position = Vector2(150, 232)
+
+[node name="CharacterKlon *" parent="Characters" unique_id=1518121736 instance=ExtResource("24_dhme6")]
+position = Vector2(330, 232)

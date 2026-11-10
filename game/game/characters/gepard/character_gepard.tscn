@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://bwecswvtejcak"]
+
+[ext_resource type="Script" path="res://game/characters/gepard/character_gepard.gd" id="1_si2fw"]
+[ext_resource type="Texture2D" uid="uid://bs7wm36ph80nq" path="res://grafik/platzhalter/figur_gepard.png" id="2_ifo45"]
+
+[node name="CharacterGepard" type="Area2D" unique_id=1193641110]
+script = ExtResource("1_si2fw")
+walk_speed = 90.0
+dialog_pos = Vector2(0, -49)
+script_name = "Gepard"
+description = "UI_OBJ_GEPARD"
+cursor = 8
+interaction_polygon = PackedVector2Array(-12, -45, 12, -45, 12, 0, -12, 0)
+
+[node name="ScalingPolygon" type="CollisionPolygon2D" parent="." unique_id=1892840881]
+polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=978737559]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1557882176]
+texture_filter = 1
+texture = ExtResource("2_ifo45")
+offset = Vector2(0, -22.5)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=237756267]
+visible = false
+polygon = PackedVector2Array(-12, -45, 12, -45, 12, 0, -12, 0)
+
+[node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=1354202239]
+visible = false
+affect_navigation_mesh = true
+carve_navigation_mesh = true

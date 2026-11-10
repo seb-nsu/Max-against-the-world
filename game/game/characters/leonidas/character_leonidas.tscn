@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://dwamt5edbgy85"]
+
+[ext_resource type="Script" path="res://game/characters/leonidas/character_leonidas.gd" id="1_geymu"]
+[ext_resource type="Texture2D" uid="uid://xtiwkotxw4iw" path="res://grafik/platzhalter/figur_leonidas.png" id="2_ot4wk"]
+
+[node name="CharacterLeonidas" type="Area2D" unique_id=2063397062]
+script = ExtResource("1_geymu")
+walk_speed = 90.0
+dialog_pos = Vector2(0, -100)
+script_name = "Leonidas"
+description = "UI_OBJ_LEONIDAS"
+cursor = 8
+interaction_polygon = PackedVector2Array(-16, -96, 16, -96, 16, 0, -16, 0)
+
+[node name="ScalingPolygon" type="CollisionPolygon2D" parent="." unique_id=1053584509]
+polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1063967597]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1692293840]
+texture_filter = 1
+texture = ExtResource("2_ot4wk")
+offset = Vector2(0, -48)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=835995178]
+visible = false
+polygon = PackedVector2Array(-16, -96, 16, -96, 16, 0, -16, 0)
+
+[node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=176335865]
+visible = false
+affect_navigation_mesh = true
+carve_navigation_mesh = true

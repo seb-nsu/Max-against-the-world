@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://bk5f8m8jgvwgg"]
+
+[ext_resource type="Texture2D" uid="uid://cemx6c330cijy" path="res://grafik/platzhalter/gegenstand_brians_schild.png" id="1_8jf3d"]
+[ext_resource type="Script" path="res://game/inventory_items/brians_schild/inventory_item_brians_schild.gd" id="1_oqf12"]
+
+[node name="ItemBriansSchild" type="TextureRect" unique_id=1458291361]
+texture_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 4
+mouse_filter = 0
+texture = ExtResource("1_8jf3d")
+stretch_mode = 5
+script = ExtResource("1_oqf12")
+script_name = "BriansSchild"
+description = "UI_OBJ_BRIANS_SCHILD"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=192965692]

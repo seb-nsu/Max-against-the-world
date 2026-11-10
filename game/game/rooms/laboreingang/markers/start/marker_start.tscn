@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://2augtip8x2dt"]
+
+[node name="Start" type="Marker2D" unique_id=499560006]
+visible = false

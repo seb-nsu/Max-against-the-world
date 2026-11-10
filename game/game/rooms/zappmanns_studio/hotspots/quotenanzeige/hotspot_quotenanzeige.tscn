@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://s3i40ir07c7j"]
+
+[ext_resource type="Script" path="res://game/rooms/zappmanns_studio/hotspots/quotenanzeige/hotspot_quotenanzeige.gd" id="1_au8pf"]
+
+[node name="Quotenanzeige" type="Area2D" unique_id=822990280]
+script = ExtResource("1_au8pf")
+script_name = "Quotenanzeige"
+description = "Quotenanzeige"
+cursor = 1
+interaction_polygon = PackedVector2Array(-29, -24, 29, -24, 29, 24, -29, 24)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=66334775]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

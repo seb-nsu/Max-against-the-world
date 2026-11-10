@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://b3ln6heylme2x"]
+
+[node name="VonKuecheOrakel" type="Marker2D" unique_id=2135013832]
+visible = false

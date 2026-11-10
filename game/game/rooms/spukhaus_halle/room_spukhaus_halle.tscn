@@ -1,0 +1,84 @@
+[gd_scene format=3 uid="uid://dq7sowc7u6ypi"]
+
+[ext_resource type="Script" path="res://game/rooms/spukhaus_halle/room_spukhaus_halle.gd" id="1_lk73u"]
+[ext_resource type="PackedScene" uid="uid://vwqkyu3qs20x" path="res://game/rooms/spukhaus_halle/walkable_areas/boden/walkable_area_boden.tscn" id="2_1h7g3"]
+[ext_resource type="PackedScene" uid="uid://cj7rgt371skk7" path="res://game/rooms/spukhaus_halle/props/background/prop_background.tscn" id="3_ttiec"]
+[ext_resource type="Texture2D" uid="uid://b4myue8idoqxr" path="res://grafik/platzhalter/raum_spukhaus_halle.png" id="4_y1dfq"]
+[ext_resource type="PackedScene" uid="uid://c744lbeqjj78m" path="res://game/rooms/spukhaus_halle/hotspots/lichterkette/hotspot_lichterkette.tscn" id="5_23s6n"]
+[ext_resource type="PackedScene" uid="uid://cl1a54mak5ka1" path="res://game/rooms/spukhaus_halle/hotspots/treppe/hotspot_treppe.tscn" id="6_q4qxd"]
+[ext_resource type="PackedScene" uid="uid://c1egi38femdyp" path="res://game/rooms/spukhaus_halle/hotspots/tapete/hotspot_tapete.tscn" id="7_3tf2g"]
+[ext_resource type="PackedScene" uid="uid://eihfcasxvsx" path="res://game/rooms/spukhaus_halle/hotspots/nebel_in_der_halle/hotspot_nebel_in_der_halle.tscn" id="8_p7eoj"]
+[ext_resource type="PackedScene" uid="uid://dp1mwukyqh21v" path="res://game/rooms/spukhaus_halle/hotspots/ausgang_spukhaus_keller/hotspot_ausgang_spukhaus_keller.tscn" id="9_uodo8"]
+[ext_resource type="PackedScene" uid="uid://s1y55ywcrvtl" path="res://game/rooms/spukhaus_halle/markers/start/marker_start.tscn" id="10_rystv"]
+[ext_resource type="PackedScene" uid="uid://ewgdnskv10ut" path="res://game/rooms/spukhaus_halle/markers/von_spukhaus_keller/marker_von_spukhaus_keller.tscn" id="11_karf5"]
+[ext_resource type="PackedScene" uid="uid://edkvkxbseb5w" path="res://game/characters/opa/character_opa.tscn" id="12_mmpv3"]
+[ext_resource type="PackedScene" uid="uid://d2apclq73x74i" path="res://game/characters/fbi_agent/character_fbi_agent.tscn" id="13_cm0l1"]
+
+[node name="RoomSpukhausHalle" type="Node2D" unique_id=1025444665]
+script = ExtResource("1_lk73u")
+script_name = "SpukhausHalle"
+width = 480
+height = 270
+
+[node name="WalkableAreas" type="Node2D" parent="." unique_id=2099421818]
+
+[node name="Boden" parent="WalkableAreas" unique_id=544707742 instance=ExtResource("2_1h7g3")]
+interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(6, 210, 474, 210, 474, 267, 6, 267)])
+
+[node name="Props" type="Node2D" parent="." unique_id=977433012]
+
+[node name="Background" parent="Props" unique_id=1388764212 instance=ExtResource("3_ttiec")]
+position = Vector2(240, 135)
+texture = ExtResource("4_y1dfq")
+description = "UI_RAUM_SPUKHAUS_HALLE"
+
+[node name="Hotspots" type="Node2D" parent="." unique_id=450465890]
+
+[node name="Lichterkette" parent="Hotspots" unique_id=1523502235 instance=ExtResource("5_23s6n")]
+position = Vector2(90, 54)
+description = "UI_OBJ_LICHTERKETTE"
+baseline = 24
+walk_to_point = Vector2(0, 181)
+
+[node name="Treppe" parent="Hotspots" unique_id=1952510765 instance=ExtResource("6_q4qxd")]
+position = Vector2(190, 54)
+description = "UI_OBJ_TREPPE"
+baseline = 24
+walk_to_point = Vector2(0, 181)
+
+[node name="Tapete" parent="Hotspots" unique_id=258130930 instance=ExtResource("7_3tf2g")]
+position = Vector2(290, 54)
+description = "UI_OBJ_TAPETE"
+baseline = 24
+walk_to_point = Vector2(0, 181)
+
+[node name="NebelInDerHalle" parent="Hotspots" unique_id=1223904703 instance=ExtResource("8_p7eoj")]
+position = Vector2(390, 54)
+description = "UI_OBJ_NEBEL_IN_DER_HALLE"
+baseline = 24
+walk_to_point = Vector2(0, 181)
+
+[node name="AusgangSpukhausKeller" parent="Hotspots" unique_id=496265984 instance=ExtResource("9_uodo8")]
+position = Vector2(19.5, 157.5)
+description = "UI_RAUM_SPUKHAUS_KELLER"
+baseline = 52
+walk_to_point = Vector2(16.5, 82.5)
+cursor = 9
+
+[node name="Regions" type="Node2D" parent="." unique_id=337218105]
+
+[node name="Markers" type="Node2D" parent="." unique_id=711710065]
+
+[node name="Start" parent="Markers" unique_id=1430276581 instance=ExtResource("10_rystv")]
+position = Vector2(240, 240)
+
+[node name="VonSpukhausKeller" parent="Markers" unique_id=310619718 instance=ExtResource("11_karf5")]
+position = Vector2(36, 240)
+
+[node name="Characters" type="Node2D" parent="." unique_id=793203151]
+
+[node name="CharacterOpa *" parent="Characters" unique_id=792275399 instance=ExtResource("12_mmpv3")]
+position = Vector2(150, 232)
+
+[node name="CharacterFbiAgent *" parent="Characters" unique_id=1954182870 instance=ExtResource("13_cm0l1")]
+position = Vector2(330, 232)

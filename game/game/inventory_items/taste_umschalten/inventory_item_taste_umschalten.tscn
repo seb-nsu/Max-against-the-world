@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://bclhdj8hfhco7"]
+
+[ext_resource type="Script" path="res://game/inventory_items/taste_umschalten/inventory_item_taste_umschalten.gd" id="1_7gy4v"]
+[ext_resource type="Texture2D" uid="uid://bf01gtiw6bjc4" path="res://grafik/platzhalter/gegenstand_taste_umschalten.png" id="1_ko43b"]
+
+[node name="ItemTasteUmschalten" type="TextureRect" unique_id=2144589003]
+texture_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 4
+mouse_filter = 0
+texture = ExtResource("1_ko43b")
+stretch_mode = 5
+script = ExtResource("1_7gy4v")
+script_name = "TasteUmschalten"
+description = "UI_OBJ_TASTE_UMSCHALTEN"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1245689281]

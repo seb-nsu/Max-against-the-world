@@ -1,0 +1,91 @@
+[gd_scene format=3 uid="uid://b01be6nhduiw0"]
+
+[ext_resource type="Script" path="res://game/rooms/faehrsteg_olympia/room_faehrsteg_olympia.gd" id="1_mkccu"]
+[ext_resource type="PackedScene" uid="uid://cce7x36vb5i4d" path="res://game/rooms/faehrsteg_olympia/walkable_areas/boden/walkable_area_boden.tscn" id="2_6x6m1"]
+[ext_resource type="PackedScene" uid="uid://41aspy5egqgl" path="res://game/rooms/faehrsteg_olympia/props/background/prop_background.tscn" id="3_qsoqf"]
+[ext_resource type="Texture2D" uid="uid://bn76emveho34r" path="res://grafik/platzhalter/raum_faehrsteg_olympia.png" id="4_hh7ia"]
+[ext_resource type="PackedScene" uid="uid://hin8stm6xid7" path="res://game/rooms/faehrsteg_olympia/hotspots/faehre/hotspot_faehre.tscn" id="5_07tx5"]
+[ext_resource type="PackedScene" uid="uid://d1cfpet5xcb6g" path="res://game/rooms/faehrsteg_olympia/hotspots/olivenbaeume/hotspot_olivenbaeume.tscn" id="6_m1xuc"]
+[ext_resource type="PackedScene" uid="uid://c4ht84ucno1rc" path="res://game/rooms/faehrsteg_olympia/hotspots/fischerboot/hotspot_fischerboot.tscn" id="7_r7xs0"]
+[ext_resource type="PackedScene" uid="uid://dciuif7i6i1w0" path="res://game/rooms/faehrsteg_olympia/hotspots/sanduhr_olympia/hotspot_sanduhr_olympia.tscn" id="8_5e1et"]
+[ext_resource type="PackedScene" uid="uid://dvegtmstskkkc" path="res://game/rooms/faehrsteg_olympia/hotspots/tafel_olympia/hotspot_tafel_olympia.tscn" id="9_eeguk"]
+[ext_resource type="PackedScene" uid="uid://cuf08b0rel2kw" path="res://game/rooms/faehrsteg_olympia/hotspots/weg_zur_agora/hotspot_weg_zur_agora.tscn" id="10_pb4p3"]
+[ext_resource type="PackedScene" uid="uid://67gdirrvtjqo" path="res://game/rooms/faehrsteg_olympia/markers/start/marker_start.tscn" id="11_lpuoe"]
+[ext_resource type="PackedScene" uid="uid://dha54dubsf0ac" path="res://game/rooms/faehrsteg_olympia/markers/von_faehre/marker_von_faehre.tscn" id="12_u2jeo"]
+[ext_resource type="PackedScene" uid="uid://baavf17eskhke" path="res://game/rooms/faehrsteg_olympia/markers/von_agora/marker_von_agora.tscn" id="13_7oeut"]
+[ext_resource type="PackedScene" uid="uid://dda2jvhyto7pc" path="res://game/characters/faehrmann/character_faehrmann.tscn" id="14_lfqcv"]
+
+[node name="RoomFaehrstegOlympia" type="Node2D" unique_id=714434536]
+script = ExtResource("1_mkccu")
+script_name = "FaehrstegOlympia"
+width = 480
+height = 270
+
+[node name="WalkableAreas" type="Node2D" parent="." unique_id=1585143440]
+
+[node name="Boden" parent="WalkableAreas" unique_id=1330893760 instance=ExtResource("2_6x6m1")]
+interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(6, 210, 474, 210, 474, 267, 6, 267)])
+
+[node name="Props" type="Node2D" parent="." unique_id=1469491984]
+
+[node name="Background" parent="Props" unique_id=427254302 instance=ExtResource("3_qsoqf")]
+position = Vector2(240, 135)
+texture = ExtResource("4_hh7ia")
+description = "UI_RAUM_FAEHRSTEG_OLYMPIA"
+
+[node name="Hotspots" type="Node2D" parent="." unique_id=1016371076]
+
+[node name="Faehre" parent="Hotspots" unique_id=1714802891 instance=ExtResource("5_07tx5")]
+position = Vector2(54, 210)
+description = "UI_OBJ_FAEHRE"
+baseline = 15
+walk_to_point = Vector2(30, 27)
+
+[node name="Olivenbaeume" parent="Hotspots" unique_id=1417462678 instance=ExtResource("6_m1xuc")]
+position = Vector2(217.5, 114)
+description = "UI_OBJ_OLIVENBAEUME"
+baseline = 60
+walk_to_point = Vector2(-1.5, 117)
+
+[node name="Fischerboot" parent="Hotspots" unique_id=877655982 instance=ExtResource("7_r7xs0")]
+position = Vector2(327, 198)
+description = "UI_OBJ_FISCHERBOOT"
+baseline = 12
+walk_to_point = Vector2(0, 36)
+
+[node name="SanduhrOlympia" parent="Hotspots" unique_id=440734170 instance=ExtResource("8_5e1et")]
+position = Vector2(126, 166.5)
+description = "UI_OBJ_SANDUHR_OLYMPIA"
+baseline = 25
+walk_to_point = Vector2(0, 64.5)
+
+[node name="TafelOlympia" parent="Hotspots" unique_id=735075942 instance=ExtResource("9_eeguk")]
+position = Vector2(157.5, 181.5)
+description = "UI_OBJ_TAFEL_OLYMPIA"
+baseline = 13
+walk_to_point = Vector2(-1.5, 49.5)
+
+[node name="WegZurAgora" parent="Hotspots" unique_id=1736776226 instance=ExtResource("10_pb4p3")]
+position = Vector2(457.5, 150)
+description = "UI_OBJ_WEG_ZUR_AGORA"
+baseline = 60
+walk_to_point = Vector2(-7.5, 90)
+cursor = 9
+
+[node name="Regions" type="Node2D" parent="." unique_id=1967345082]
+
+[node name="Markers" type="Node2D" parent="." unique_id=805402207]
+
+[node name="Start" parent="Markers" unique_id=733255540 instance=ExtResource("11_lpuoe")]
+position = Vector2(90, 237)
+
+[node name="VonFaehre" parent="Markers" unique_id=154311028 instance=ExtResource("12_u2jeo")]
+position = Vector2(90, 237)
+
+[node name="VonAgora" parent="Markers" unique_id=745284051 instance=ExtResource("13_7oeut")]
+position = Vector2(444, 240)
+
+[node name="Characters" type="Node2D" parent="." unique_id=552829313]
+
+[node name="CharacterFaehrmann *" parent="Characters" unique_id=938438789 instance=ExtResource("14_lfqcv")]
+position = Vector2(60, 228)

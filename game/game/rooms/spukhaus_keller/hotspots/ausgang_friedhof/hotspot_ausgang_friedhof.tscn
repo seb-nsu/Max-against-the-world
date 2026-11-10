@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://bb1wf60ne5eca"]
+
+[ext_resource type="Script" path="res://game/rooms/spukhaus_keller/hotspots/ausgang_friedhof/hotspot_ausgang_friedhof.gd" id="1_0v3ww"]
+
+[node name="AusgangFriedhof" type="Area2D" unique_id=1987709852]
+script = ExtResource("1_0v3ww")
+script_name = "AusgangFriedhof"
+description = "Ausgang Friedhof"
+cursor = 1
+interaction_polygon = PackedVector2Array(-13.5, -52.5, 13.5, -52.5, 13.5, 52.5, -13.5, 52.5)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=671129767]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

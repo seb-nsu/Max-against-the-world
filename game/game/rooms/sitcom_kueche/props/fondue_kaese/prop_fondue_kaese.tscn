@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://mma81l82biqu"]
+
+[ext_resource type="Script" path="res://game/rooms/sitcom_kueche/props/fondue_kaese/prop_fondue_kaese.gd" id="1_7w0ig"]
+
+[node name="FondueKaese" type="Area2D" unique_id=125157668]
+script = ExtResource("1_7w0ig")
+script_name = "FondueKaese"
+description = "Fondue Kaese"
+cursor = 1
+interaction_polygon = PackedVector2Array(-7.5, -6, 7.5, -6, 7.5, 6, -7.5, 6)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=303515034]
+texture_filter = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=260789762]
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=572201359]
+visible = false
+modulate = Color(1, 1, 0, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+
+[node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=602661263]
+visible = false
+affect_navigation_mesh = true
+carve_navigation_mesh = true

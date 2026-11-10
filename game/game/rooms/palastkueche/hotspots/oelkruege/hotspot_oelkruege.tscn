@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://buedn7hnm0glj"]
+
+[ext_resource type="Script" path="res://game/rooms/palastkueche/hotspots/oelkruege/hotspot_oelkruege.gd" id="1_gai0t"]
+
+[node name="Oelkruege" type="Area2D" unique_id=347719119]
+script = ExtResource("1_gai0t")
+script_name = "Oelkruege"
+description = "Oelkruege"
+cursor = 1
+interaction_polygon = PackedVector2Array(-30, -34.5, 30, -34.5, 30, 34.5, -30, 34.5)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=511562062]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

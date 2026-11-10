@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://8ifrx8mlocsf"]
+
+[ext_resource type="Script" path="res://game/rooms/gluecksrad/hotspots/moderationspult/hotspot_moderationspult.gd" id="1_bmn3i"]
+
+[node name="Moderationspult" type="Area2D" unique_id=1651528253]
+script = ExtResource("1_bmn3i")
+script_name = "Moderationspult"
+description = "Moderationspult"
+cursor = 1
+interaction_polygon = PackedVector2Array(-29, -24, 29, -24, 29, 24, -29, 24)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1129555296]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

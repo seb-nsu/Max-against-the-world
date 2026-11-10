@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://b3j5gg8q86g6e"]
+
+[ext_resource type="Script" path="res://game/characters/schwarze_katze/character_schwarze_katze.gd" id="1_0vmc5"]
+[ext_resource type="Texture2D" uid="uid://5wfuvkdetd4y" path="res://grafik/platzhalter/figur_schwarze_katze.png" id="2_drqgl"]
+
+[node name="CharacterSchwarzeKatze" type="Area2D" unique_id=743428821]
+script = ExtResource("1_0vmc5")
+walk_speed = 90.0
+dialog_pos = Vector2(0, -25)
+script_name = "SchwarzeKatze"
+description = "UI_OBJ_SCHWARZE_KATZE"
+cursor = 8
+interaction_polygon = PackedVector2Array(-12, -21, 12, -21, 12, 0, -12, 0)
+
+[node name="ScalingPolygon" type="CollisionPolygon2D" parent="." unique_id=199532544]
+polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1435730188]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1582666797]
+texture_filter = 1
+texture = ExtResource("2_drqgl")
+offset = Vector2(0, -10.5)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=664701387]
+visible = false
+polygon = PackedVector2Array(-12, -21, 12, -21, 12, 0, -12, 0)
+
+[node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=1601348483]
+visible = false
+affect_navigation_mesh = true
+carve_navigation_mesh = true

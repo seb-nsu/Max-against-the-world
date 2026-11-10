@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://bkv0qk1o046qg"]
+
+[ext_resource type="Script" path="res://game/rooms/spukhaus_keller/props/bettlaken/prop_bettlaken.gd" id="1_cluqj"]
+
+[node name="Bettlaken" type="Area2D" unique_id=348701779]
+script = ExtResource("1_cluqj")
+script_name = "Bettlaken"
+description = "Bettlaken"
+cursor = 1
+interaction_polygon = PackedVector2Array(-7.5, -6, 7.5, -6, 7.5, 6, -7.5, 6)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=106952544]
+texture_filter = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1440392414]
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1569379455]
+visible = false
+modulate = Color(1, 1, 0, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+
+[node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=1247907305]
+visible = false
+affect_navigation_mesh = true
+carve_navigation_mesh = true

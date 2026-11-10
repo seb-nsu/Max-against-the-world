@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://cvjx8luy1aftb"]
+
+[node name="VonNilDelta" type="Marker2D" unique_id=2128877846]
+visible = false

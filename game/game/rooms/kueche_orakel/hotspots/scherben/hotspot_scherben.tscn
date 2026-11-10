@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://cnxyp8lskxrwt"]
+
+[ext_resource type="Script" path="res://game/rooms/kueche_orakel/hotspots/scherben/hotspot_scherben.gd" id="1_1tb8k"]
+
+[node name="Scherben" type="Area2D" unique_id=108497739]
+script = ExtResource("1_1tb8k")
+script_name = "Scherben"
+description = "Scherben"
+cursor = 1
+interaction_polygon = PackedVector2Array(-29, -24, 29, -24, 29, 24, -29, 24)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=976188616]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

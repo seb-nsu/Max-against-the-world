@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://dciuif7i6i1w0"]
+
+[ext_resource type="Script" path="res://game/rooms/faehrsteg_olympia/hotspots/sanduhr_olympia/hotspot_sanduhr_olympia.gd" id="1_q6iin"]
+
+[node name="SanduhrOlympia" type="Area2D" unique_id=440734170]
+script = ExtResource("1_q6iin")
+script_name = "SanduhrOlympia"
+description = "Sanduhr Olympia"
+cursor = 1
+interaction_polygon = PackedVector2Array(-12, -25.5, 12, -25.5, 12, 25.5, -12, 25.5)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1977570610]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

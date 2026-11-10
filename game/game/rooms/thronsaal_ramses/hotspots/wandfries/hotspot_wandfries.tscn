@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://dvpsic427d5k2"]
+
+[ext_resource type="Script" path="res://game/rooms/thronsaal_ramses/hotspots/wandfries/hotspot_wandfries.gd" id="1_87xre"]
+
+[node name="Wandfries" type="Area2D" unique_id=1147623953]
+script = ExtResource("1_87xre")
+script_name = "Wandfries"
+description = "Wandfries"
+cursor = 1
+interaction_polygon = PackedVector2Array(-165, -13.5, 165, -13.5, 165, 13.5, -165, 13.5)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1527294977]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

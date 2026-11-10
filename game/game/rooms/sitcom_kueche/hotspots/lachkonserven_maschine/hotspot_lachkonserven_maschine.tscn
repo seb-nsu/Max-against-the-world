@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://d3n5mt4v7hty4"]
+
+[ext_resource type="Script" path="res://game/rooms/sitcom_kueche/hotspots/lachkonserven_maschine/hotspot_lachkonserven_maschine.gd" id="1_wnm8x"]
+
+[node name="LachkonservenMaschine" type="Area2D" unique_id=347896838]
+script = ExtResource("1_wnm8x")
+script_name = "LachkonservenMaschine"
+description = "Lachkonserven Maschine"
+cursor = 1
+interaction_polygon = PackedVector2Array(-29, -24, 29, -24, 29, 24, -29, 24)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1062659538]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

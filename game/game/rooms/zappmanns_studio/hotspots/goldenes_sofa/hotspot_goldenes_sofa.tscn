@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://bml3pom0nqahn"]
+
+[ext_resource type="Script" path="res://game/rooms/zappmanns_studio/hotspots/goldenes_sofa/hotspot_goldenes_sofa.gd" id="1_ym017"]
+
+[node name="GoldenesSofa" type="Area2D" unique_id=83134353]
+script = ExtResource("1_ym017")
+script_name = "GoldenesSofa"
+description = "Goldenes Sofa"
+cursor = 1
+interaction_polygon = PackedVector2Array(-29, -24, 29, -24, 29, 24, -29, 24)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1137619146]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

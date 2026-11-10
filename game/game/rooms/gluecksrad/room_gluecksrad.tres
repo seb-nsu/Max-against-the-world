@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://bmn8s31y4suhn"]
+
+[ext_resource type="Script" path="res://game/rooms/gluecksrad/room_gluecksrad_state.gd" id="1_s8i0l"]
+
+[resource]
+resource_name = "Gluecksrad"
+script = ExtResource("1_s8i0l")
+script_name = "Gluecksrad"
+scene = "res://game/rooms/gluecksrad/room_gluecksrad.tscn"

@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://cylib13hyikxo"]
+
+[ext_resource type="Script" path="res://game/characters/geist/character_geist_state.gd" id="1_dsvcb"]
+
+[resource]
+resource_name = "Geist"
+script = ExtResource("1_dsvcb")
+script_name = "Geist"
+scene = "res://game/characters/geist/character_geist.tscn"

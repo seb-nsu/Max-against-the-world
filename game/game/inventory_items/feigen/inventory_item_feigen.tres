@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://btcrchlsj3hhv"]
+
+[ext_resource type="Script" path="res://game/inventory_items/feigen/inventory_item_feigen_state.gd" id="1_tn5v5"]
+
+[resource]
+resource_name = "Feigen"
+script = ExtResource("1_tn5v5")
+script_name = "Feigen"
+scene = "res://game/inventory_items/feigen/inventory_item_feigen.tscn"

@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://dgn6knxtuj206"]
+
+[ext_resource type="Script" path="res://game/rooms/apothekengasse/hotspots/automat/hotspot_automat.gd" id="1_0poek"]
+
+[node name="Automat" type="Area2D" unique_id=1196672189]
+script = ExtResource("1_0poek")
+script_name = "Automat"
+description = "Automat"
+cursor = 1
+interaction_polygon = PackedVector2Array(-46, -24, 46, -24, 46, 24, -46, 24)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=962695097]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

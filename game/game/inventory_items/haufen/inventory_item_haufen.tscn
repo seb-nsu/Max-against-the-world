@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://h3xo21kinpka"]
+
+[ext_resource type="Texture2D" uid="uid://ca7rb8n6y4agi" path="res://grafik/platzhalter/gegenstand_haufen.png" id="1_w5dva"]
+[ext_resource type="Script" path="res://game/inventory_items/haufen/inventory_item_haufen.gd" id="1_wmf0e"]
+
+[node name="ItemHaufen" type="TextureRect" unique_id=932498020]
+texture_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 4
+mouse_filter = 0
+texture = ExtResource("1_w5dva")
+stretch_mode = 5
+script = ExtResource("1_wmf0e")
+script_name = "Haufen"
+description = "UI_OBJ_HAUFEN"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=453928410]

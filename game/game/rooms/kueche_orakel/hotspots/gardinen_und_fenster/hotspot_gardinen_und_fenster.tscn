@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://dr8gfh6xtnoyl"]
+
+[ext_resource type="Script" path="res://game/rooms/kueche_orakel/hotspots/gardinen_und_fenster/hotspot_gardinen_und_fenster.gd" id="1_jv4nl"]
+
+[node name="GardinenUndFenster" type="Area2D" unique_id=1486485759]
+script = ExtResource("1_jv4nl")
+script_name = "GardinenUndFenster"
+description = "Gardinen Und Fenster"
+cursor = 1
+interaction_polygon = PackedVector2Array(-29, -24, 29, -24, 29, 24, -29, 24)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1428615036]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://c4ht84ucno1rc"]
+
+[ext_resource type="Script" path="res://game/rooms/faehrsteg_olympia/hotspots/fischerboot/hotspot_fischerboot.gd" id="1_ulfg2"]
+
+[node name="Fischerboot" type="Area2D" unique_id=877655982]
+script = ExtResource("1_ulfg2")
+script_name = "Fischerboot"
+description = "Fischerboot"
+cursor = 1
+interaction_polygon = PackedVector2Array(-33, -12, 33, -12, 33, 12, -33, 12)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=570095465]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

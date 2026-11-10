@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://cnan1gqyoawk1"]
+
+[ext_resource type="Script" path="res://game/inventory_items/omas_kekse/inventory_item_omas_kekse_state.gd" id="1_b3rtw"]
+
+[resource]
+resource_name = "OmasKekse"
+script = ExtResource("1_b3rtw")
+script_name = "OmasKekse"
+scene = "res://game/inventory_items/omas_kekse/inventory_item_omas_kekse.tscn"

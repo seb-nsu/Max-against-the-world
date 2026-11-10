@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://0vyoupoubd01"]
+
+[ext_resource type="Script" uid="uid://brxefo54wpm32" path="res://addons/popochiu/engine/objects/dialog/popochiu_dialog_option.gd" id="1_uvvba"]
+[ext_resource type="Script" path="res://game/dialogs/schreiber/dialog_schreiber.gd" id="2_w825n"]
+
+[resource]
+resource_name = "Schreiber"
+script = ExtResource("2_w825n")
+script_name = "Schreiber"

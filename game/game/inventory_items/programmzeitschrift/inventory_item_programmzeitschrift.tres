@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://d2gesygucw7ri"]
+
+[ext_resource type="Script" path="res://game/inventory_items/programmzeitschrift/inventory_item_programmzeitschrift_state.gd" id="1_38d5f"]
+
+[resource]
+resource_name = "Programmzeitschrift"
+script = ExtResource("1_38d5f")
+script_name = "Programmzeitschrift"
+scene = "res://game/inventory_items/programmzeitschrift/inventory_item_programmzeitschrift.tscn"

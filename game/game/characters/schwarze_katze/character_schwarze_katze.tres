@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://b4gvgqdpxni0s"]
+
+[ext_resource type="Script" path="res://game/characters/schwarze_katze/character_schwarze_katze_state.gd" id="1_xt2w6"]
+
+[resource]
+resource_name = "SchwarzeKatze"
+script = ExtResource("1_xt2w6")
+script_name = "SchwarzeKatze"
+scene = "res://game/characters/schwarze_katze/character_schwarze_katze.tscn"

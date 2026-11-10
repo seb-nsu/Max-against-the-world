@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://dfdxtsk3bgnxv"]
+
+[ext_resource type="Script" path="res://game/rooms/buero_50/room_buero_50_state.gd" id="1_nrosj"]
+
+[resource]
+resource_name = "Buero50"
+script = ExtResource("1_nrosj")
+script_name = "Buero50"
+scene = "res://game/rooms/buero_50/room_buero_50.tscn"

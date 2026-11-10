@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://j6yx0gg0u056"]
+
+[ext_resource type="Script" path="res://game/rooms/unterstadt_strasse/hotspots/himmel_mit_fliegenden_autos/hotspot_himmel_mit_fliegenden_autos.gd" id="1_7b5v6"]
+
+[node name="HimmelMitFliegendenAutos" type="Area2D" unique_id=196927587]
+script = ExtResource("1_7b5v6")
+script_name = "HimmelMitFliegendenAutos"
+description = "Himmel Mit Fliegenden Autos"
+cursor = 1
+interaction_polygon = PackedVector2Array(-44.5, -24, 44.5, -24, 44.5, 24, -44.5, 24)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1300264376]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://daudwi6ql35tm"]
+
+[ext_resource type="Texture2D" uid="uid://dx54n4v4h18wa" path="res://grafik/platzhalter/gegenstand_portalgeraet.png" id="1_4bejk"]
+[ext_resource type="Script" path="res://game/inventory_items/portalgeraet/inventory_item_portalgeraet.gd" id="1_ba8it"]
+
+[node name="ItemPortalgeraet" type="TextureRect" unique_id=1456776557]
+texture_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 4
+mouse_filter = 0
+texture = ExtResource("1_4bejk")
+stretch_mode = 5
+script = ExtResource("1_ba8it")
+script_name = "Portalgeraet"
+description = "UI_OBJ_PORTALGERAET"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=430513271]

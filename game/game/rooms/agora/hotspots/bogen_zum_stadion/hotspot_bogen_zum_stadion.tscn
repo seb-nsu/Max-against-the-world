@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://c0hcfesldij48"]
+
+[ext_resource type="Script" path="res://game/rooms/agora/hotspots/bogen_zum_stadion/hotspot_bogen_zum_stadion.gd" id="1_33xac"]
+
+[node name="BogenZumStadion" type="Area2D" unique_id=1481292112]
+script = ExtResource("1_33xac")
+script_name = "BogenZumStadion"
+description = "Bogen Zum Stadion"
+cursor = 1
+interaction_polygon = PackedVector2Array(-22.5, -67.5, 22.5, -67.5, 22.5, 67.5, -22.5, 67.5)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=957900271]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

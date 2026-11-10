@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://be6lwqfh7h5d6"]
+
+[ext_resource type="Script" path="res://game/rooms/werkstatt/props/brennspiegel/prop_brennspiegel.gd" id="1_qk1iv"]
+
+[node name="Brennspiegel" type="Area2D" unique_id=1862823133]
+script = ExtResource("1_qk1iv")
+script_name = "Brennspiegel"
+description = "Brennspiegel"
+cursor = 1
+interaction_polygon = PackedVector2Array(-10.5, -12, 10.5, -12, 10.5, 12, -10.5, 12)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1622678480]
+texture_filter = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=213677284]
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=884135015]
+visible = false
+modulate = Color(1, 1, 0, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+
+[node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=774043784]
+visible = false
+affect_navigation_mesh = true
+carve_navigation_mesh = true

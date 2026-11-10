@@ -1,0 +1,550 @@
+# Platzhalter-Layout Welt 3 (Neo-Neustadt 2099) für die Graubox (tools/godot_raeume.py).
+#
+# Nur Startwerte: Der Godot-Bau (addons/couch_quest_bau) setzt Rechtecke, Laufbereich und
+# Positionen ausschließlich beim ersten Anlegen eines Objekts. Danach gehören Umrisse und
+# Positionen der Szene in Godot (03-produktion.md, Arbeitsteilung). Die Hotspots liegen hier
+# nur im Raster nebeneinander; die echte Lage kommt mit den Hintergründen (grafik/welt-3.md).
+#
+# Koordinaten in Spielpixeln, Rechteck = [x, y, breite, hoehe], gehe = Punkt, zu dem die Figur
+# vor der Aktion läuft. Sonderschlüssel wie in welt-1.yaml; dazu je Raum:
+#   wechsel   Ziele, die nur ein Ebenenwechsel verbindet (Telefonzelle, Terminal, Kapsel,
+#             Kalles Leitung; kein eigener Ausgang, skripte/welt_3.gd)
+
+_alias:
+  glueckskeks: rezeptkarte@glueckskeks
+  hundekuchen: omas_kekse@hundekuchen
+_figur_alias: {detektiv_deckert: deckert, morphaeus_in_der_gasse: morphaeus, oma: orakel_oma}
+
+unterstadt_strasse:
+  alias: {apothekengasse: ausgang_apothekengasse, durchgang_zum_laboreingang: ausgang_laboreingang, detektiv_deckert: deckert, herrn_vier: herr_vier, weinenden_mann: weinender_mann, nudeltopf: nudelbude, pizza_plakat: neon_pizza_plakat}
+  farbe: '#3b3f58'
+  laufbereich:
+  - [6, 210]
+  - [954, 210]
+  - [954, 267]
+  - [6, 267]
+  marker:
+    start: [480, 240]
+    von_apothekengasse: [36, 240]
+    von_laboreingang: [924, 240]
+    von_widerstandsbasis: [477, 222]
+  figuren:
+    morphaeus: [130, 232]
+    deckert: [270, 232]
+    herr_vier: [410, 232]
+    weinender_mann: [550, 232]
+    frau_regenschirm: [690, 232]
+    strassenmusiker: [830, 232]
+  hotspots:
+    nudelbude:
+      rect: [44, 30, 89, 48]
+      gehe: [88, 235]
+    telefonzelle:
+      rect: [141, 30, 89, 48]
+      gehe: [185, 235]
+    telefonbuch_in_der_zelle:
+      rect: [238, 30, 89, 48]
+      gehe: [282, 235]
+    vordach:
+      rect: [335, 30, 89, 48]
+      gehe: [379, 235]
+    neon_pizza_plakat:
+      rect: [432, 30, 89, 48]
+      gehe: [476, 235]
+    origami_einhorn:
+      rect: [529, 30, 89, 48]
+      gehe: [573, 235]
+    pfuetzen:
+      rect: [626, 30, 89, 48]
+      gehe: [670, 235]
+    himmel_mit_fliegenden_autos:
+      rect: [723, 30, 89, 48]
+      gehe: [767, 235]
+    dampfgitter:
+      rect: [820, 30, 89, 48]
+      gehe: [864, 235]
+  props:
+    telefonbuchseite:
+      rect: [100, 195, 15, 12]
+      gehe: [107, 235]
+  ausgaenge:
+    apothekengasse:
+      rect: [6, 105, 27, 105]
+      gehe: [36, 240]
+    laboreingang:
+      rect: [927, 105, 27, 105]
+      gehe: [924, 240]
+    widerstandsbasis:
+      rect: [450, 120, 54, 60]
+      gehe: [477, 222]
+apothekengasse:
+  alias: {morphaeus_in_der_gasse: morphaeus}
+  farbe: '#46405e'
+  laufbereich:
+  - [6, 210]
+  - [474, 210]
+  - [474, 267]
+  - [6, 267]
+  marker:
+    start: [240, 240]
+    von_unterstadt_strasse: [36, 240]
+  figuren:
+    morphaeus: [150, 232]
+    pastillenautomat: [330, 232]
+  hotspots:
+    automat:
+      rect: [44, 30, 92, 48]
+      gehe: [90, 235]
+    kisten:
+      rect: [144, 30, 92, 48]
+      gehe: [190, 235]
+    tropfendes_rohr:
+      rect: [244, 30, 92, 48]
+      gehe: [290, 235]
+    wandlampe:
+      rect: [344, 30, 92, 48]
+      gehe: [390, 235]
+  ausgaenge:
+    unterstadt_strasse:
+      rect: [6, 105, 27, 105]
+      gehe: [36, 240]
+widerstandsbasis:
+  alias: {fenster_als_max: fenster, stromkasten_als_max: stromkasten, patch_panel_als_max: patch_panel, terminal_mit_ziel_labor: terminal, plakat_m_u_t_t_i: plakat, max_in_der_kapsel: max_kapsel}
+  farbe: '#4a4a40'
+  laufbereich:
+  - [6, 210]
+  - [954, 210]
+  - [954, 267]
+  - [6, 267]
+  wechsel: [stadtstrasse, testkammer_1]
+  marker:
+    start: [480, 240]
+    von_unterstadt_strasse: [36, 240]
+    von_kuehlung: [924, 240]
+    von_stadtstrasse: [480, 240]
+    von_testkammer_1: [480, 240]
+    von_kapsel: [150, 240]
+  figuren:
+    opa: [130, 232]
+    kalle: [270, 232]
+    rebellin: [410, 232]
+    rebell: [550, 232]
+    piepsi: [690, 232]
+    hausmeister: [830, 232]
+  hotspots:
+    kapseln:
+      rect: [44, 30, 54, 48]
+      gehe: [71, 235]
+    max_kapsel:
+      rect: [106, 30, 54, 48]
+      gehe: [133, 235]
+    terminal:
+      rect: [168, 30, 54, 48]
+      gehe: [195, 235]
+    fenster:
+      rect: [292, 30, 54, 48]
+      gehe: [319, 235]
+    lueftungsschacht:
+      rect: [416, 30, 54, 48]
+      gehe: [443, 235]
+    stromkasten:
+      rect: [478, 30, 54, 48]
+      gehe: [505, 235]
+    patch_panel:
+      rect: [602, 30, 54, 48]
+      gehe: [629, 235]
+    pizzakartons:
+      rect: [726, 30, 54, 48]
+      gehe: [753, 235]
+    handtuch:
+      rect: [788, 30, 54, 48]
+      gehe: [815, 235]
+    grossrechner:
+      rect: [850, 30, 54, 48]
+      gehe: [877, 235]
+    steuerpult:
+      rect: [44, 90, 54, 48]
+      gehe: [71, 235]
+    tisch_mit_kalles_tasse:
+      rect: [106, 90, 54, 48]
+      gehe: [133, 235]
+    kalles_tasse:
+      rect: [168, 90, 54, 48]
+      gehe: [195, 235]
+    plakat:
+      rect: [292, 90, 54, 48]
+      gehe: [319, 235]
+    rebellen:
+      rect: [354, 90, 54, 48]
+      gehe: [381, 235]
+    kaffeepfuetze:
+      rect: [416, 90, 54, 48]
+      gehe: [443, 235]
+  ausgaenge:
+    unterstadt_strasse:
+      rect: [6, 105, 27, 105]
+      gehe: [36, 240]
+    kuehlung:
+      rect: [927, 105, 27, 105]
+      gehe: [924, 240]
+kuehlung:
+  farbe: '#3c5560'
+  laufbereich:
+  - [6, 210]
+  - [474, 210]
+  - [474, 267]
+  - [6, 267]
+  marker:
+    start: [240, 240]
+    von_widerstandsbasis: [36, 240]
+  ausgaenge:
+    widerstandsbasis:
+      rect: [6, 105, 27, 105]
+      gehe: [36, 240]
+  hotspots:
+    wassereimer: {rect: [200, 150, 40, 50], gehe: [220, 235], name: Wassereimer}
+laboreingang:
+  alias: {geoeffnete_tuer: panzertuer}
+  farbe: '#585858'
+  laufbereich:
+  - [6, 210]
+  - [474, 210]
+  - [474, 267]
+  - [6, 267]
+  marker:
+    start: [240, 240]
+    von_unterstadt_strasse: [36, 240]
+  figuren:
+    kalle: [150, 232]
+    hausmeister: [330, 232]
+  hotspots:
+    panzertuer:
+      rect: [44, 30, 58, 48]
+      gehe: [73, 235]
+    kartenleser:
+      rect: [110, 30, 58, 48]
+      gehe: [139, 235]
+    datenanschluss:
+      rect: [176, 30, 58, 48]
+      gehe: [205, 235]
+    wischeimer:
+      rect: [242, 30, 58, 48]
+      gehe: [271, 235]
+    pinnwand:
+      rect: [308, 30, 58, 48]
+      gehe: [337, 235]
+    warnstreifen:
+      rect: [374, 30, 58, 48]
+      gehe: [403, 235]
+    deckenlampe:
+      rect: [44, 90, 58, 48]
+      gehe: [73, 235]
+    gang:
+      rect: [110, 90, 58, 48]
+      gehe: [139, 235]
+    platz_des_hausmeisters:
+      rect: [176, 90, 58, 48]
+      gehe: [205, 235]
+  ausgaenge:
+    unterstadt_strasse:
+      rect: [6, 105, 27, 105]
+      gehe: [36, 240]
+stadtstrasse:
+  alias: {eingang_bueroturm: ausgang_buero_50, haus_der_orakel_oma: ausgang_kueche_orakel, haustuer: ausgang_kueche_orakel}
+  farbe: '#7fa36a'
+  laufbereich:
+  - [6, 210]
+  - [954, 210]
+  - [954, 267]
+  - [6, 267]
+  wechsel: [widerstandsbasis]
+  marker:
+    start: [480, 240]
+    von_kueche_orakel: [36, 240]
+    von_buero_50: [924, 240]
+    von_widerstandsbasis: [480, 240]
+    von_zelle: [200, 240]
+  figuren:
+    schmidt: [200, 232]
+    tuer: [480, 232]
+    schwarze_katze: [760, 232]
+  hotspots:
+    himmel:
+      rect: [44, 30, 89, 48]
+      gehe: [88, 235]
+    baeume:
+      rect: [141, 30, 89, 48]
+      gehe: [185, 235]
+    haeuser:
+      rect: [238, 30, 89, 48]
+      gehe: [282, 235]
+    autos:
+      rect: [335, 30, 89, 48]
+      gehe: [379, 235]
+    auto:
+      rect: [432, 30, 89, 48]
+      gehe: [476, 235]
+    telefonzelle:
+      rect: [529, 30, 89, 48]
+      gehe: [573, 235]
+    klingelnde_telefonzelle:
+      rect: [626, 30, 89, 48]
+      gehe: [670, 235]
+    gehweg:
+      rect: [723, 30, 89, 48]
+      gehe: [767, 235]
+    sonne:
+      rect: [820, 30, 89, 48]
+      gehe: [864, 235]
+  ausgaenge:
+    kueche_orakel:
+      rect: [6, 105, 27, 105]
+      gehe: [36, 240]
+    buero_50:
+      rect: [927, 105, 27, 105]
+      gehe: [924, 240]
+kueche_orakel:
+  farbe: '#b49a72'
+  laufbereich:
+  - [6, 210]
+  - [474, 210]
+  - [474, 267]
+  - [6, 267]
+  marker:
+    start: [240, 240]
+    von_stadtstrasse: [36, 240]
+    von_zelle: [400, 240]
+  figuren:
+    orakel_oma: [150, 232]
+    radio: [330, 232]
+  hotspots:
+    vase:
+      rect: [44, 30, 58, 48]
+      gehe: [73, 235]
+    ofen:
+      rect: [110, 30, 58, 48]
+      gehe: [139, 235]
+    kochbuch:
+      rect: [176, 30, 58, 48]
+      gehe: [205, 235]
+    gabel:
+      rect: [242, 30, 58, 48]
+      gehe: [271, 235]
+    kuckucksuhr:
+      rect: [308, 30, 58, 48]
+      gehe: [337, 235]
+    wandtelefon:
+      rect: [374, 30, 58, 48]
+      gehe: [403, 235]
+    tisch_mit_teller_und_teekanne:
+      rect: [44, 90, 58, 48]
+      gehe: [73, 235]
+    glaeser_auf_dem_regal:
+      rect: [110, 90, 58, 48]
+      gehe: [139, 235]
+    gardinen_und_fenster:
+      rect: [176, 90, 58, 48]
+      gehe: [205, 235]
+    tapete:
+      rect: [242, 90, 58, 48]
+      gehe: [271, 235]
+    kehrblech:
+      rect: [308, 90, 58, 48]
+      gehe: [337, 235]
+    scherben:
+      rect: [374, 90, 58, 48]
+      gehe: [403, 235]
+  ausgaenge:
+    stadtstrasse:
+      rect: [6, 105, 27, 105]
+      gehe: [36, 240]
+buero_50:
+  alias: {akte: schmidts_akte, kaffeetasse_auf_klone: klone}
+  farbe: '#8c96a0'
+  laufbereich:
+  - [6, 210]
+  - [474, 210]
+  - [474, 267]
+  - [6, 267]
+  marker:
+    start: [240, 240]
+    von_stadtstrasse: [36, 240]
+  figuren:
+    schmidt: [150, 232]
+    klon: [330, 232]
+  hotspots:
+    flur:
+      rect: [44, 30, 58, 48]
+      gehe: [73, 235]
+    tueren:
+      rect: [110, 30, 58, 48]
+      gehe: [139, 235]
+    topfpflanzen:
+      rect: [176, 30, 58, 48]
+      gehe: [205, 235]
+    fenster:
+      rect: [242, 30, 58, 48]
+      gehe: [271, 235]
+    endlos_treppe:
+      rect: [308, 30, 58, 48]
+      gehe: [337, 235]
+    wasserspender:
+      rect: [374, 30, 58, 48]
+      gehe: [403, 235]
+    klone:
+      rect: [44, 90, 58, 48]
+      gehe: [73, 235]
+    farbcode_an_der_wand:
+      rect: [176, 90, 58, 48]
+      gehe: [205, 235]
+    terminal:
+      rect: [242, 90, 58, 48]
+      gehe: [271, 235]
+  props:
+    kaffeetasse:
+      rect: [100, 195, 15, 12]
+      gehe: [107, 235]
+    sonnenbrille:
+      rect: [160, 195, 15, 12]
+      gehe: [167, 235]
+    schmidts_akte:
+      rect: [220, 195, 15, 12]
+      gehe: [227, 235]
+  ausgaenge:
+    stadtstrasse:
+      rect: [6, 105, 27, 105]
+      gehe: [36, 240]
+testkammer_1:
+  alias: {ausgangstuer: ausgang_testkammer_2, bernd_auf_bodenschalter: bodenschalter}
+  farbe: '#d8d8d8'
+  laufbereich:
+  - [6, 210]
+  - [474, 210]
+  - [474, 267]
+  - [6, 267]
+  wechsel: [widerstandsbasis]
+  marker:
+    start: [240, 240]
+    von_testkammer_2: [36, 240]
+    von_widerstandsbasis: [240, 240]
+    von_kapsel: [240, 240]
+  figuren:
+    opa: [105, 232]
+    mutti: [195, 232]
+    bernd: [285, 232]
+    portalgeraet_stimme: [375, 232]
+  hotspots:
+    portalgeraet_in_der_halterung:
+      rect: [44, 30, 58, 48]
+      gehe: [73, 235]
+    bodenschalter:
+      rect: [110, 30, 58, 48]
+      gehe: [139, 235]
+    pappkuchen:
+      rect: [242, 30, 58, 48]
+      gehe: [271, 235]
+    lautsprecher:
+      rect: [308, 30, 58, 48]
+      gehe: [337, 235]
+    wandplatten:
+      rect: [374, 30, 58, 48]
+      gehe: [403, 235]
+    halterung:
+      rect: [44, 90, 58, 48]
+      gehe: [73, 235]
+  ausgaenge:
+    testkammer_2:
+      rect: [6, 105, 27, 105]
+      gehe: [36, 240]
+testkammer_2:
+  alias: {laser_mit_bernd_idee: laser}
+  farbe: '#d0d0d0'
+  laufbereich:
+  - [6, 210]
+  - [474, 210]
+  - [474, 267]
+  - [6, 267]
+  marker:
+    start: [240, 240]
+    von_testkammer_1: [36, 240]
+    von_testkammer_3: [444, 240]
+  figuren:
+    mutti: [240, 232]
+  hotspots:
+    laser:
+      rect: [44, 30, 92, 48]
+      gehe: [90, 235]
+    kritzelei:
+      rect: [144, 30, 92, 48]
+      gehe: [190, 235]
+    sockel:
+      rect: [244, 30, 92, 48]
+      gehe: [290, 235]
+  props:
+    gummihuhn:
+      rect: [100, 195, 15, 12]
+      gehe: [107, 235]
+  ausgaenge:
+    testkammer_1:
+      rect: [6, 105, 27, 105]
+      gehe: [36, 240]
+    testkammer_3:
+      rect: [447, 105, 27, 105]
+      gehe: [444, 240]
+testkammer_3:
+  alias: {ausgangstuer: ausgang_kern}
+  farbe: '#c8c8c8'
+  laufbereich:
+  - [6, 210]
+  - [474, 210]
+  - [474, 267]
+  - [6, 267]
+  marker:
+    start: [240, 240]
+    von_testkammer_2: [36, 240]
+    von_kern: [444, 240]
+  figuren:
+    tuer: [120, 232]
+    mutti: [240, 232]
+    bernd: [360, 232]
+  hotspots:
+    lautsprecher:
+      rect: [44, 30, 392, 48]
+      gehe: [240, 235]
+  ausgaenge:
+    testkammer_2:
+      rect: [6, 105, 27, 105]
+      gehe: [36, 240]
+    kern:
+      rect: [447, 105, 27, 105]
+      gehe: [444, 240]
+kern:
+  farbe: '#2c2c3c'
+  laufbereich:
+  - [6, 210]
+  - [474, 210]
+  - [474, 267]
+  - [6, 267]
+  marker:
+    start: [240, 240]
+    von_testkammer_3: [36, 240]
+  figuren:
+    mutti: [240, 232]
+  hotspots:
+    kabel:
+      rect: [44, 30, 125, 48]
+      gehe: [106, 235]
+    sockel:
+      rect: [177, 30, 125, 48]
+      gehe: [239, 235]
+    streifen:
+      rect: [310, 30, 125, 48]
+      gehe: [372, 235]
+  props:
+    energiezelle:
+      rect: [100, 195, 15, 12]
+      gehe: [107, 235]
+  ausgaenge:
+    testkammer_3:
+      rect: [6, 105, 27, 105]
+      gehe: [36, 240]

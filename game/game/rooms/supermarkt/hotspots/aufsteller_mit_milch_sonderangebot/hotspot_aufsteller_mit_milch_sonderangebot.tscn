@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://dpgokiy5mmvbo"]
+
+[ext_resource type="Script" path="res://game/rooms/supermarkt/hotspots/aufsteller_mit_milch_sonderangebot/hotspot_aufsteller_mit_milch_sonderangebot.gd" id="1_5cqm3"]
+
+[node name="AufstellerMitMilchSonderangebot" type="Area2D" unique_id=146912656]
+script = ExtResource("1_5cqm3")
+script_name = "AufstellerMitMilchSonderangebot"
+description = "Aufsteller Mit Milch Sonderangebot"
+cursor = 1
+interaction_polygon = PackedVector2Array(-30, -40, 30, -40, 30, 40, -30, 40)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=83536181]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

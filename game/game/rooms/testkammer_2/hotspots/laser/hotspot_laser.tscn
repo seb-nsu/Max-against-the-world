@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://d1jkhrlgcsrsw"]
+
+[ext_resource type="Script" path="res://game/rooms/testkammer_2/hotspots/laser/hotspot_laser.gd" id="1_6l06u"]
+
+[node name="Laser" type="Area2D" unique_id=378879691]
+script = ExtResource("1_6l06u")
+script_name = "Laser"
+description = "Laser"
+cursor = 1
+interaction_polygon = PackedVector2Array(-46, -24, 46, -24, 46, 24, -46, 24)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=611161688]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

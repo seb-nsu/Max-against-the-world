@@ -1,0 +1,8368 @@
+{
+ "abschnitt": "welt-3",
+ "erzeugt_von": "tools/godot_raeume.py",
+ "praefix": "W3",
+ "ausbau": [
+  "R1a",
+  "R1b",
+  "R2",
+  "R3a",
+  "R3b",
+  "R4",
+  "R5",
+  "R6a",
+  "R6b",
+  "R7a",
+  "R7b",
+  "R8",
+  "R9a",
+  "R9b",
+  "R9c",
+  "R9d",
+  "R10",
+  "R11",
+  "R12",
+  "R13"
+ ],
+ "raeume": [
+  {
+   "id": "unterstadt_strasse",
+   "script_name": "UnterstadtStrasse",
+   "name_key": "UI_RAUM_UNTERSTADT_STRASSE",
+   "groesse": [
+    960,
+    270
+   ],
+   "hintergrund": "res://grafik/platzhalter/raum_unterstadt_strasse.png",
+   "farbe": "#3b3f58",
+   "laufbereich": [
+    [
+     6,
+     210
+    ],
+    [
+     954,
+     210
+    ],
+    [
+     954,
+     267
+    ],
+    [
+     6,
+     267
+    ]
+   ],
+   "marker": {
+    "start": [
+     480,
+     240
+    ],
+    "von_apothekengasse": [
+     36,
+     240
+    ],
+    "von_laboreingang": [
+     924,
+     240
+    ],
+    "von_widerstandsbasis": [
+     477,
+     222
+    ]
+   },
+   "figuren": [
+    {
+     "id": "morphaeus",
+     "script_name": "Morphaeus",
+     "pos": [
+      130,
+      232
+     ]
+    },
+    {
+     "id": "deckert",
+     "script_name": "Deckert",
+     "pos": [
+      270,
+      232
+     ]
+    },
+    {
+     "id": "herr_vier",
+     "script_name": "HerrVier",
+     "pos": [
+      410,
+      232
+     ]
+    },
+    {
+     "id": "weinender_mann",
+     "script_name": "WeinenderMann",
+     "pos": [
+      550,
+      232
+     ]
+    },
+    {
+     "id": "frau_regenschirm",
+     "script_name": "FrauRegenschirm",
+     "pos": [
+      690,
+      232
+     ]
+    },
+    {
+     "id": "strassenmusiker",
+     "script_name": "Strassenmusiker",
+     "pos": [
+      830,
+      232
+     ]
+    }
+   ],
+   "hotspots": [
+    {
+     "id": "nudelbude",
+     "script_name": "Nudelbude",
+     "name_key": "UI_OBJ_NUDELBUDE",
+     "rect": [
+      44,
+      30,
+      89,
+      48
+     ],
+     "gehe": [
+      88,
+      235
+     ],
+     "ansehen": [
+      {
+       "zeile": "W3_STR_MAX_0010",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_STR_MAX_0010"
+       ]
+      },
+      {
+       "zeile": "W3_STR_PIX_0020",
+       "sprecher": "PIX",
+       "blasen": [
+        "W3_STR_PIX_0020"
+       ],
+       "mal": 2
+      },
+      {
+       "zeile": "W3_STR_PIX_1070",
+       "sprecher": "PIX",
+       "blasen": [
+        "W3_STR_PIX_1070"
+       ],
+       "figur": "PIX"
+      }
+     ]
+    },
+    {
+     "id": "telefonzelle",
+     "script_name": "Telefonzelle",
+     "name_key": "UI_OBJ_TELEFONZELLE",
+     "rect": [
+      141,
+      30,
+      89,
+      48
+     ],
+     "gehe": [
+      185,
+      235
+     ],
+     "ansehen": [
+      {
+       "zeile": "W3_STR_MAX_0030",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_STR_MAX_0030"
+       ]
+      },
+      {
+       "zeile": "W3_STR_MAX_0035",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_STR_MAX_0035"
+       ],
+       "mal": 2
+      },
+      {
+       "zeile": "W3_STR_MAX_0330",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_STR_MAX_0330"
+       ],
+       "bedingung": [
+        {
+         "art": "nach",
+         "raetsel": "R11"
+        }
+       ],
+       "bedingung_text": "der Werbeblock klingelt"
+      },
+      {
+       "zeile": "W3_STR_MAX_0335",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_STR_MAX_0335"
+       ],
+       "bedingung": [
+        {
+         "art": "nach",
+         "raetsel": "R11"
+        }
+       ],
+       "bedingung_text": "der Werbeblock klingelt",
+       "mal": 2
+      },
+      {
+       "zeile": "W3_STR_PIX_1080",
+       "sprecher": "PIX",
+       "blasen": [
+        "W3_STR_PIX_1080"
+       ],
+       "figur": "PIX"
+      }
+     ],
+     "benutzen": [
+      {
+       "zeile": "W3_STR_MAX_0040",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_STR_MAX_0040"
+       ],
+       "bedingung": [
+        {
+         "art": "vor",
+         "raetsel": "R11"
+        }
+       ],
+       "bedingung_text": "(diese Zelle ist kein Sprungpunkt)",
+       "folge": [
+        {
+         "zeile": "W3_STR_PIX_0050",
+         "sprecher": "PIX",
+         "blasen": [
+          "W3_STR_PIX_0050"
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "telefonbuch_in_der_zelle",
+     "script_name": "TelefonbuchInDerZelle",
+     "name_key": "UI_OBJ_TELEFONBUCH_IN_DER_ZELLE",
+     "rect": [
+      238,
+      30,
+      89,
+      48
+     ],
+     "gehe": [
+      282,
+      235
+     ],
+     "ansehen": [
+      {
+       "zeile": "W3_STR_MAX_0060",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_STR_MAX_0060"
+       ]
+      },
+      {
+       "zeile": "W3_STR_MAX_0065",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_STR_MAX_0065"
+       ],
+       "mal": 2
+      }
+     ]
+    },
+    {
+     "id": "vordach",
+     "script_name": "Vordach",
+     "name_key": "UI_OBJ_VORDACH",
+     "rect": [
+      335,
+      30,
+      89,
+      48
+     ],
+     "gehe": [
+      379,
+      235
+     ],
+     "ansehen": [
+      {
+       "zeile": "W3_STR_MAX_0100",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_STR_MAX_0100"
+       ]
+      },
+      {
+       "zeile": "W3_STR_MAX_0105",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_STR_MAX_0105"
+       ],
+       "mal": 2
+      }
+     ]
+    },
+    {
+     "id": "neon_pizza_plakat",
+     "script_name": "NeonPizzaPlakat",
+     "name_key": "UI_OBJ_NEON_PIZZA_PLAKAT",
+     "rect": [
+      432,
+      30,
+      89,
+      48
+     ],
+     "gehe": [
+      476,
+      235
+     ],
+     "ansehen": [
+      {
+       "zeile": "W3_STR_MAX_0110",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_STR_MAX_0110"
+       ]
+      },
+      {
+       "zeile": "W3_STR_PIX_0120",
+       "sprecher": "PIX",
+       "blasen": [
+        "W3_STR_PIX_0120"
+       ],
+       "mal": 2
+      },
+      {
+       "zeile": "W3_STR_PIX_1100",
+       "sprecher": "PIX",
+       "blasen": [
+        "W3_STR_PIX_1100"
+       ],
+       "figur": "PIX"
+      }
+     ]
+    },
+    {
+     "id": "origami_einhorn",
+     "script_name": "OrigamiEinhorn",
+     "name_key": "UI_OBJ_ORIGAMI_EINHORN",
+     "rect": [
+      529,
+      30,
+      89,
+      48
+     ],
+     "gehe": [
+      573,
+      235
+     ],
+     "ansehen": [
+      {
+       "zeile": "W3_STR_MAX_0130",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_STR_MAX_0130"
+       ]
+      },
+      {
+       "zeile": "W3_STR_PIX_0135",
+       "sprecher": "PIX",
+       "blasen": [
+        "W3_STR_PIX_0135"
+       ],
+       "mal": 2
+      },
+      {
+       "zeile": "W3_STR_PIX_1090",
+       "sprecher": "PIX",
+       "blasen": [
+        "W3_STR_PIX_1090"
+       ],
+       "figur": "PIX"
+      }
+     ],
+     "benutzen": [
+      {
+       "zeile": "W3_STR_MAX_0140",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_STR_MAX_0140"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "pfuetzen",
+     "script_name": "Pfuetzen",
+     "name_key": "UI_OBJ_PFUETZEN",
+     "rect": [
+      626,
+      30,
+      89,
+      48
+     ],
+     "gehe": [
+      670,
+      235
+     ],
+     "ansehen": [
+      {
+       "zeile": "W3_STR_MAX_0240",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_STR_MAX_0240"
+       ]
+      },
+      {
+       "zeile": "W3_STR_MAX_0245",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_STR_MAX_0245"
+       ],
+       "mal": 2
+      }
+     ]
+    },
+    {
+     "id": "himmel_mit_fliegenden_autos",
+     "script_name": "HimmelMitFliegendenAutos",
+     "name_key": "UI_OBJ_HIMMEL_MIT_FLIEGENDEN_AUTOS",
+     "rect": [
+      723,
+      30,
+      89,
+      48
+     ],
+     "gehe": [
+      767,
+      235
+     ],
+     "ansehen": [
+      {
+       "zeile": "W3_STR_MAX_0250",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_STR_MAX_0250"
+       ]
+      },
+      {
+       "zeile": "W3_STR_MAX_0255",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_STR_MAX_0255"
+       ],
+       "mal": 2
+      }
+     ]
+    },
+    {
+     "id": "dampfgitter",
+     "script_name": "Dampfgitter",
+     "name_key": "UI_OBJ_DAMPFGITTER",
+     "rect": [
+      820,
+      30,
+      89,
+      48
+     ],
+     "gehe": [
+      864,
+      235
+     ],
+     "ansehen": [
+      {
+       "zeile": "W3_STR_MAX_0260",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_STR_MAX_0260"
+       ]
+      },
+      {
+       "zeile": "W3_STR_PIX_0270",
+       "sprecher": "PIX",
+       "blasen": [
+        "W3_STR_PIX_0270"
+       ],
+       "mal": 2
+      }
+     ]
+    }
+   ],
+   "props": [
+    {
+     "id": "telefonbuchseite",
+     "script_name": "Telefonbuchseite",
+     "name_key": "UI_OBJ_TELEFONBUCHSEITE",
+     "rect": [
+      100,
+      195,
+      15,
+      12
+     ],
+     "gehe": [
+      107,
+      235
+     ],
+     "textur": "res://grafik/platzhalter/prop_telefonbuchseite.png",
+     "gegenstand": "telefonbuchseite",
+     "ansehen": [],
+     "nehmen": {
+      "zeile": "W3_STR_MAX_0080",
+      "sprecher": "MAX",
+      "blasen": [
+       "W3_STR_MAX_0080"
+      ],
+      "bedingung": [
+       {
+        "art": "nach_zeile",
+        "zeile": "W3_STR_MAX_0070"
+       }
+      ],
+      "folge": [
+       {
+        "zeile": "W3_STR_PIX_0090",
+        "sprecher": "PIX",
+        "blasen": [
+         "W3_STR_PIX_0090"
+        ]
+       }
+      ]
+     }
+    }
+   ],
+   "ausgaenge": [
+    {
+     "id": "ausgang_apothekengasse",
+     "script_name": "AusgangApothekengasse",
+     "ziel": "apothekengasse",
+     "name_key": "UI_RAUM_APOTHEKENGASSE",
+     "rect": [
+      6,
+      105,
+      27,
+      105
+     ],
+     "gehe": [
+      36,
+      240
+     ],
+     "erreichbar_ab": "R1b",
+     "ansehen": [
+      {
+       "zeile": "W3_STR_MAX_0280",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_STR_MAX_0280"
+       ],
+       "bedingung": [
+        {
+         "art": "vor",
+         "raetsel": "R1"
+        }
+       ]
+      },
+      {
+       "zeile": "W3_STR_MAX_0285",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_STR_MAX_0285"
+       ],
+       "bedingung": [
+        {
+         "art": "vor",
+         "raetsel": "R1"
+        }
+       ],
+       "mal": 2
+      }
+     ],
+     "benutzen": [
+      {
+       "zeile": "W3_STR_DEC_0290",
+       "sprecher": "DEC",
+       "blasen": [
+        "W3_STR_DEC_0290"
+       ],
+       "bedingung": [
+        {
+         "art": "vor",
+         "raetsel": "R1"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "ausgang_laboreingang",
+     "script_name": "AusgangLaboreingang",
+     "ziel": "laboreingang",
+     "name_key": "UI_RAUM_LABOREINGANG",
+     "rect": [
+      927,
+      105,
+      27,
+      105
+     ],
+     "gehe": [
+      924,
+      240
+     ],
+     "erreichbar_ab": "start",
+     "ansehen": [
+      {
+       "zeile": "W3_STR_MAX_0300",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_STR_MAX_0300"
+       ]
+      },
+      {
+       "zeile": "W3_STR_MAX_0305",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_STR_MAX_0305"
+       ],
+       "mal": 2
+      }
+     ]
+    },
+    {
+     "id": "ausgang_widerstandsbasis",
+     "script_name": "AusgangWiderstandsbasis",
+     "ziel": "widerstandsbasis",
+     "name_key": "UI_RAUM_WIDERSTANDSBASIS",
+     "rect": [
+      450,
+      120,
+      54,
+      60
+     ],
+     "gehe": [
+      477,
+      222
+     ],
+     "erreichbar_ab": "R3b",
+     "ansehen": []
+    }
+   ],
+   "zurufe": [
+    {
+     "zeile": "W3_STR_PIX_0910",
+     "sprecher": "PIX",
+     "blasen": [
+      "W3_STR_PIX_0910"
+     ]
+    },
+    {
+     "zeile": "W3_STR_PIX_0920",
+     "sprecher": "PIX",
+     "blasen": [
+      "W3_STR_PIX_0920"
+     ]
+    },
+    {
+     "zeile": "W3_STR_PIX_0930",
+     "sprecher": "PIX",
+     "blasen": [
+      "W3_STR_PIX_0930"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "apothekengasse",
+   "script_name": "Apothekengasse",
+   "name_key": "UI_RAUM_APOTHEKENGASSE",
+   "groesse": [
+    480,
+    270
+   ],
+   "hintergrund": "res://grafik/platzhalter/raum_apothekengasse.png",
+   "farbe": "#46405e",
+   "laufbereich": [
+    [
+     6,
+     210
+    ],
+    [
+     474,
+     210
+    ],
+    [
+     474,
+     267
+    ],
+    [
+     6,
+     267
+    ]
+   ],
+   "marker": {
+    "start": [
+     240,
+     240
+    ],
+    "von_unterstadt_strasse": [
+     36,
+     240
+    ]
+   },
+   "figuren": [
+    {
+     "id": "morphaeus",
+     "script_name": "Morphaeus",
+     "pos": [
+      150,
+      232
+     ]
+    },
+    {
+     "id": "pastillenautomat",
+     "script_name": "Pastillenautomat",
+     "pos": [
+      330,
+      232
+     ]
+    }
+   ],
+   "hotspots": [
+    {
+     "id": "automat",
+     "script_name": "Automat",
+     "name_key": "UI_OBJ_AUTOMAT",
+     "rect": [
+      44,
+      30,
+      92,
+      48
+     ],
+     "gehe": [
+      90,
+      235
+     ],
+     "ansehen": [
+      {
+       "zeile": "W3_APO_PIX_0230",
+       "sprecher": "PIX",
+       "blasen": [
+        "W3_APO_PIX_0230"
+       ],
+       "figur": "PIX"
+      }
+     ],
+     "benutzen": [
+      {
+       "zeile": "W3_APO_AUT_0030",
+       "sprecher": "AUT",
+       "blasen": [
+        "W3_APO_AUT_0030"
+       ],
+       "bedingung": [
+        {
+         "art": "vor",
+         "raetsel": "R1"
+        }
+       ]
+      },
+      {
+       "zeile": "W3_APO_AUT_0040",
+       "sprecher": "AUT",
+       "blasen": [
+        "W3_APO_AUT_0040"
+       ],
+       "bedingung": [
+        {
+         "art": "nach",
+         "raetsel": "R1"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "kisten",
+     "script_name": "Kisten",
+     "name_key": "UI_OBJ_KISTEN",
+     "rect": [
+      144,
+      30,
+      92,
+      48
+     ],
+     "gehe": [
+      190,
+      235
+     ],
+     "ansehen": [
+      {
+       "zeile": "W3_APO_PIX_0240",
+       "sprecher": "PIX",
+       "blasen": [
+        "W3_APO_PIX_0240"
+       ],
+       "figur": "PIX"
+      },
+      {
+       "zeile": "W3_APO_MAX_0250",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_APO_MAX_0250"
+       ]
+      },
+      {
+       "zeile": "W3_APO_MAX_0255",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_APO_MAX_0255"
+       ],
+       "mal": 2
+      }
+     ]
+    },
+    {
+     "id": "tropfendes_rohr",
+     "script_name": "TropfendesRohr",
+     "name_key": "UI_OBJ_TROPFENDES_ROHR",
+     "rect": [
+      244,
+      30,
+      92,
+      48
+     ],
+     "gehe": [
+      290,
+      235
+     ],
+     "ansehen": [
+      {
+       "zeile": "W3_APO_MAX_0260",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_APO_MAX_0260"
+       ]
+      },
+      {
+       "zeile": "W3_APO_PIX_0265",
+       "sprecher": "PIX",
+       "blasen": [
+        "W3_APO_PIX_0265"
+       ],
+       "mal": 2
+      }
+     ]
+    },
+    {
+     "id": "wandlampe",
+     "script_name": "Wandlampe",
+     "name_key": "UI_OBJ_WANDLAMPE",
+     "rect": [
+      344,
+      30,
+      92,
+      48
+     ],
+     "gehe": [
+      390,
+      235
+     ],
+     "ansehen": [
+      {
+       "zeile": "W3_APO_MAX_0270",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_APO_MAX_0270"
+       ]
+      },
+      {
+       "zeile": "W3_APO_PIX_0280",
+       "sprecher": "PIX",
+       "blasen": [
+        "W3_APO_PIX_0280"
+       ],
+       "mal": 2
+      }
+     ]
+    }
+   ],
+   "props": [],
+   "ausgaenge": [
+    {
+     "id": "ausgang_unterstadt_strasse",
+     "script_name": "AusgangUnterstadtStrasse",
+     "ziel": "unterstadt_strasse",
+     "name_key": "UI_RAUM_UNTERSTADT_STRASSE",
+     "rect": [
+      6,
+      105,
+      27,
+      105
+     ],
+     "gehe": [
+      36,
+      240
+     ],
+     "erreichbar_ab": "start",
+     "ansehen": []
+    }
+   ],
+   "zurufe": [
+    {
+     "zeile": "W3_APO_PIX_0910",
+     "sprecher": "PIX",
+     "blasen": [
+      "W3_APO_PIX_0910"
+     ]
+    },
+    {
+     "zeile": "W3_APO_PIX_0920",
+     "sprecher": "PIX",
+     "blasen": [
+      "W3_APO_PIX_0920"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "widerstandsbasis",
+   "script_name": "Widerstandsbasis",
+   "name_key": "UI_RAUM_WIDERSTANDSBASIS",
+   "groesse": [
+    960,
+    270
+   ],
+   "hintergrund": "res://grafik/platzhalter/raum_widerstandsbasis.png",
+   "farbe": "#4a4a40",
+   "laufbereich": [
+    [
+     6,
+     210
+    ],
+    [
+     954,
+     210
+    ],
+    [
+     954,
+     267
+    ],
+    [
+     6,
+     267
+    ]
+   ],
+   "marker": {
+    "start": [
+     480,
+     240
+    ],
+    "von_unterstadt_strasse": [
+     36,
+     240
+    ],
+    "von_kuehlung": [
+     924,
+     240
+    ],
+    "von_stadtstrasse": [
+     480,
+     240
+    ],
+    "von_testkammer_1": [
+     480,
+     240
+    ],
+    "von_kapsel": [
+     150,
+     240
+    ]
+   },
+   "figuren": [
+    {
+     "id": "opa",
+     "script_name": "Opa",
+     "pos": [
+      130,
+      232
+     ]
+    },
+    {
+     "id": "kalle",
+     "script_name": "Kalle",
+     "pos": [
+      270,
+      232
+     ]
+    },
+    {
+     "id": "rebellin",
+     "script_name": "Rebellin",
+     "pos": [
+      410,
+      232
+     ]
+    },
+    {
+     "id": "rebell",
+     "script_name": "Rebell",
+     "pos": [
+      550,
+      232
+     ]
+    },
+    {
+     "id": "piepsi",
+     "script_name": "Piepsi",
+     "pos": [
+      690,
+      232
+     ]
+    },
+    {
+     "id": "hausmeister",
+     "script_name": "Hausmeister",
+     "pos": [
+      830,
+      232
+     ]
+    }
+   ],
+   "hotspots": [
+    {
+     "id": "kapseln",
+     "script_name": "Kapseln",
+     "name_key": "UI_OBJ_KAPSELN",
+     "rect": [
+      44,
+      30,
+      54,
+      48
+     ],
+     "gehe": [
+      71,
+      235
+     ],
+     "ansehen": [
+      {
+       "zeile": "W3_BAS_MAX_0510",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_BAS_MAX_0510"
+       ]
+      },
+      {
+       "zeile": "W3_BAS_MAX_0515",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_BAS_MAX_0515"
+       ],
+       "mal": 2
+      }
+     ]
+    },
+    {
+     "id": "max_kapsel",
+     "script_name": "MaxKapsel",
+     "name_key": "UI_OBJ_MAX_KAPSEL",
+     "rect": [
+      106,
+      30,
+      54,
+      48
+     ],
+     "gehe": [
+      133,
+      235
+     ],
+     "ansehen": [
+      {
+       "zeile": "W3_BAS_MAX_0520",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_BAS_MAX_0520"
+       ]
+      },
+      {
+       "zeile": "W3_BAS_PIX_0525",
+       "sprecher": "PIX",
+       "blasen": [
+        "W3_BAS_PIX_0525"
+       ],
+       "mal": 2
+      },
+      {
+       "zeile": "W3_BAS_PIX_0530",
+       "sprecher": "PIX",
+       "blasen": [
+        "W3_BAS_PIX_0530"
+       ],
+       "figur": "PIX"
+      },
+      {
+       "zeile": "W3_BAS_PIX_1060",
+       "sprecher": "PIX",
+       "blasen": [
+        "W3_BAS_PIX_1060"
+       ],
+       "figur": "PIX"
+      }
+     ]
+    },
+    {
+     "id": "terminal",
+     "script_name": "Terminal",
+     "name_key": "UI_OBJ_TERMINAL",
+     "rect": [
+      168,
+      30,
+      54,
+      48
+     ],
+     "gehe": [
+      195,
+      235
+     ],
+     "ansehen": [
+      {
+       "zeile": "W3_BAS_MAX_0550",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_BAS_MAX_0550"
+       ]
+      },
+      {
+       "zeile": "W3_BAS_MAX_0555",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_BAS_MAX_0555"
+       ],
+       "mal": 2
+      },
+      {
+       "zeile": "W3_BAS_PIX_1070",
+       "sprecher": "PIX",
+       "blasen": [
+        "W3_BAS_PIX_1070"
+       ],
+       "figur": "PIX"
+      }
+     ],
+     "benutzen": [
+      {
+       "zeile": "W3_BAS_MAX_0560",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_BAS_MAX_0560"
+       ],
+       "bedingung_text": "Ebenenwechsel in die Simulation, Ankunft an der letzten Zelle"
+      },
+      {
+       "zeile": "W3_BAS_MAX_0570",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_BAS_MAX_0570"
+       ],
+       "bedingung": [
+        {
+         "art": "vor",
+         "raetsel": "R9"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "fenster",
+     "script_name": "Fenster",
+     "name_key": "UI_OBJ_FENSTER",
+     "rect": [
+      292,
+      30,
+      54,
+      48
+     ],
+     "gehe": [
+      319,
+      235
+     ],
+     "ansehen": [
+      {
+       "zeile": "W3_BAS_MAX_0580",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_BAS_MAX_0580"
+       ]
+      },
+      {
+       "zeile": "W3_BAS_MAX_0585",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_BAS_MAX_0585"
+       ],
+       "mal": 2
+      }
+     ],
+     "benutzen": [
+      {
+       "zeile": "W3_BAS_MAX_0590",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_BAS_MAX_0590"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "lueftungsschacht",
+     "script_name": "Lueftungsschacht",
+     "name_key": "UI_OBJ_LUEFTUNGSSCHACHT",
+     "rect": [
+      416,
+      30,
+      54,
+      48
+     ],
+     "gehe": [
+      443,
+      235
+     ],
+     "ansehen": [
+      {
+       "zeile": "W3_BAS_MAX_0620",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_BAS_MAX_0620"
+       ]
+      },
+      {
+       "zeile": "W3_BAS_PIX_0625",
+       "sprecher": "PIX",
+       "blasen": [
+        "W3_BAS_PIX_0625"
+       ],
+       "mal": 2
+      },
+      {
+       "zeile": "W3_BAS_PIX_1120",
+       "sprecher": "PIX",
+       "blasen": [
+        "W3_BAS_PIX_1120"
+       ],
+       "figur": "PIX"
+      }
+     ]
+    },
+    {
+     "id": "stromkasten",
+     "script_name": "Stromkasten",
+     "name_key": "UI_OBJ_STROMKASTEN",
+     "rect": [
+      478,
+      30,
+      54,
+      48
+     ],
+     "gehe": [
+      505,
+      235
+     ],
+     "ansehen": [
+      {
+       "zeile": "W3_BAS_MAX_0660",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_BAS_MAX_0660"
+       ]
+      },
+      {
+       "zeile": "W3_BAS_MAX_0665",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_BAS_MAX_0665"
+       ],
+       "mal": 2
+      }
+     ],
+     "benutzen": [
+      {
+       "zeile": "W3_BAS_MAX_0670",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_BAS_MAX_0670"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "patch_panel",
+     "script_name": "PatchPanel",
+     "name_key": "UI_OBJ_PATCH_PANEL",
+     "rect": [
+      602,
+      30,
+      54,
+      48
+     ],
+     "gehe": [
+      629,
+      235
+     ],
+     "ansehen": [
+      {
+       "zeile": "W3_BAS_MAX_0690",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_BAS_MAX_0690"
+       ]
+      },
+      {
+       "zeile": "W3_BAS_MAX_0695",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_BAS_MAX_0695"
+       ],
+       "mal": 2
+      }
+     ],
+     "benutzen": [
+      {
+       "zeile": "W3_BAS_MAX_0700",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_BAS_MAX_0700"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "pizzakartons",
+     "script_name": "Pizzakartons",
+     "name_key": "UI_OBJ_PIZZAKARTONS",
+     "rect": [
+      726,
+      30,
+      54,
+      48
+     ],
+     "gehe": [
+      753,
+      235
+     ],
+     "ansehen": [
+      {
+       "zeile": "W3_BAS_MAX_0710",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_BAS_MAX_0710"
+       ]
+      },
+      {
+       "zeile": "W3_BAS_PIX_0720",
+       "sprecher": "PIX",
+       "blasen": [
+        "W3_BAS_PIX_0720"
+       ],
+       "mal": 2
+      },
+      {
+       "zeile": "W3_BAS_PIX_1080",
+       "sprecher": "PIX",
+       "blasen": [
+        "W3_BAS_PIX_1080"
+       ],
+       "figur": "PIX"
+      }
+     ]
+    },
+    {
+     "id": "handtuch",
+     "script_name": "Handtuch",
+     "name_key": "UI_OBJ_HANDTUCH",
+     "rect": [
+      788,
+      30,
+      54,
+      48
+     ],
+     "gehe": [
+      815,
+      235
+     ],
+     "ansehen": [
+      {
+       "zeile": "W3_BAS_MAX_0730",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_BAS_MAX_0730"
+       ]
+      },
+      {
+       "zeile": "W3_BAS_MAX_0735",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_BAS_MAX_0735"
+       ],
+       "mal": 2
+      },
+      {
+       "zeile": "W3_BAS_PIX_1090",
+       "sprecher": "PIX",
+       "blasen": [
+        "W3_BAS_PIX_1090"
+       ],
+       "figur": "PIX"
+      }
+     ],
+     "benutzen": [
+      {
+       "zeile": "W3_BAS_PIX_0740",
+       "sprecher": "PIX",
+       "blasen": [
+        "W3_BAS_PIX_0740"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "grossrechner",
+     "script_name": "Grossrechner",
+     "name_key": "UI_OBJ_GROSSRECHNER",
+     "rect": [
+      850,
+      30,
+      54,
+      48
+     ],
+     "gehe": [
+      877,
+      235
+     ],
+     "ansehen": [
+      {
+       "zeile": "W3_BAS_MAX_0750",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_BAS_MAX_0750"
+       ]
+      },
+      {
+       "zeile": "W3_BAS_MAX_0755",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_BAS_MAX_0755"
+       ],
+       "mal": 2
+      },
+      {
+       "zeile": "W3_BAS_PIX_1100",
+       "sprecher": "PIX",
+       "blasen": [
+        "W3_BAS_PIX_1100"
+       ],
+       "figur": "PIX"
+      }
+     ],
+     "benutzen": [
+      {
+       "zeile": "W3_BAS_KAL_0760",
+       "sprecher": "KAL",
+       "blasen": [
+        "W3_BAS_KAL_0760"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "steuerpult",
+     "script_name": "Steuerpult",
+     "name_key": "UI_OBJ_STEUERPULT",
+     "rect": [
+      44,
+      90,
+      54,
+      48
+     ],
+     "gehe": [
+      71,
+      235
+     ],
+     "ansehen": [
+      {
+       "zeile": "W3_BAS_MAX_0770",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_BAS_MAX_0770"
+       ]
+      },
+      {
+       "zeile": "W3_BAS_MAX_0775",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_BAS_MAX_0775"
+       ],
+       "mal": 2
+      },
+      {
+       "zeile": "W3_BAS_PIX_1130",
+       "sprecher": "PIX",
+       "blasen": [
+        "W3_BAS_PIX_1130"
+       ],
+       "figur": "PIX"
+      }
+     ]
+    },
+    {
+     "id": "tisch_mit_kalles_tasse",
+     "script_name": "TischMitKallesTasse",
+     "name_key": "UI_OBJ_TISCH_MIT_KALLES_TASSE",
+     "rect": [
+      106,
+      90,
+      54,
+      48
+     ],
+     "gehe": [
+      133,
+      235
+     ],
+     "ansehen": [
+      {
+       "zeile": "W3_BAS_MAX_0780",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_BAS_MAX_0780"
+       ],
+       "bedingung": [
+        {
+         "art": "vor",
+         "raetsel": "R13"
+        }
+       ]
+      },
+      {
+       "zeile": "W3_BAS_MAX_0785",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_BAS_MAX_0785"
+       ],
+       "bedingung": [
+        {
+         "art": "vor",
+         "raetsel": "R13"
+        }
+       ],
+       "mal": 2
+      }
+     ]
+    },
+    {
+     "id": "kalles_tasse",
+     "script_name": "KallesTasse",
+     "name_key": "UI_OBJ_KALLES_TASSE",
+     "rect": [
+      168,
+      90,
+      54,
+      48
+     ],
+     "gehe": [
+      195,
+      235
+     ],
+     "ansehen": [
+      {
+       "zeile": "W3_BAS_PIX_0790",
+       "sprecher": "PIX",
+       "blasen": [
+        "W3_BAS_PIX_0790"
+       ],
+       "bedingung": [
+        {
+         "art": "vor",
+         "raetsel": "R13"
+        }
+       ],
+       "mal": 2
+      },
+      {
+       "zeile": "W3_BAS_PIX_1110",
+       "sprecher": "PIX",
+       "blasen": [
+        "W3_BAS_PIX_1110"
+       ],
+       "figur": "PIX"
+      }
+     ]
+    },
+    {
+     "id": "plakat",
+     "script_name": "Plakat",
+     "name_key": "UI_OBJ_PLAKAT",
+     "rect": [
+      292,
+      90,
+      54,
+      48
+     ],
+     "gehe": [
+      319,
+      235
+     ],
+     "ansehen": [
+      {
+       "zeile": "W3_BAS_MAX_0820",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_BAS_MAX_0820"
+       ]
+      },
+      {
+       "zeile": "W3_BAS_MAX_0825",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_BAS_MAX_0825"
+       ],
+       "mal": 2
+      },
+      {
+       "zeile": "W3_BAS_PIX_0830",
+       "sprecher": "PIX",
+       "blasen": [
+        "W3_BAS_PIX_0830"
+       ],
+       "mal": 2
+      },
+      {
+       "zeile": "W3_BAS_PIX_1140",
+       "sprecher": "PIX",
+       "blasen": [
+        "W3_BAS_PIX_1140"
+       ],
+       "figur": "PIX"
+      }
+     ]
+    },
+    {
+     "id": "rebellen",
+     "script_name": "Rebellen",
+     "name_key": "UI_OBJ_REBELLEN",
+     "rect": [
+      354,
+      90,
+      54,
+      48
+     ],
+     "gehe": [
+      381,
+      235
+     ],
+     "ansehen": [
+      {
+       "zeile": "W3_BAS_MAX_0840",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_BAS_MAX_0840"
+       ]
+      },
+      {
+       "zeile": "W3_BAS_MAX_0845",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_BAS_MAX_0845"
+       ],
+       "mal": 2
+      }
+     ]
+    },
+    {
+     "id": "kaffeepfuetze",
+     "script_name": "Kaffeepfuetze",
+     "name_key": "UI_OBJ_KAFFEEPFUETZE",
+     "rect": [
+      416,
+      90,
+      54,
+      48
+     ],
+     "gehe": [
+      443,
+      235
+     ],
+     "ansehen": [
+      {
+       "zeile": "W3_PIEP_MAX_0290",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_PIEP_MAX_0290"
+       ]
+      },
+      {
+       "zeile": "W3_PIEP_MAX_0295",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_PIEP_MAX_0295"
+       ],
+       "mal": 2
+      }
+     ]
+    }
+   ],
+   "props": [],
+   "ausgaenge": [
+    {
+     "id": "ausgang_unterstadt_strasse",
+     "script_name": "AusgangUnterstadtStrasse",
+     "ziel": "unterstadt_strasse",
+     "name_key": "UI_RAUM_UNTERSTADT_STRASSE",
+     "rect": [
+      6,
+      105,
+      27,
+      105
+     ],
+     "gehe": [
+      36,
+      240
+     ],
+     "erreichbar_ab": "start",
+     "ansehen": []
+    },
+    {
+     "id": "ausgang_kuehlung",
+     "script_name": "AusgangKuehlung",
+     "ziel": "kuehlung",
+     "name_key": "UI_RAUM_KUEHLUNG",
+     "rect": [
+      927,
+      105,
+      27,
+      105
+     ],
+     "gehe": [
+      924,
+      240
+     ],
+     "erreichbar_ab": "R3b",
+     "ansehen": []
+    }
+   ],
+   "zurufe": [
+    {
+     "zeile": "W3_BAS_PIX_1310",
+     "sprecher": "PIX",
+     "blasen": [
+      "W3_BAS_PIX_1310"
+     ]
+    },
+    {
+     "zeile": "W3_BAS_PIX_1320",
+     "sprecher": "PIX",
+     "blasen": [
+      "W3_BAS_PIX_1320"
+     ]
+    },
+    {
+     "zeile": "W3_BAS_PIX_1330",
+     "sprecher": "PIX",
+     "blasen": [
+      "W3_BAS_PIX_1330"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "kuehlung",
+   "script_name": "Kuehlung",
+   "name_key": "UI_RAUM_KUEHLUNG",
+   "groesse": [
+    480,
+    270
+   ],
+   "hintergrund": "res://grafik/platzhalter/raum_kuehlung.png",
+   "farbe": "#3c5560",
+   "laufbereich": [
+    [
+     6,
+     210
+    ],
+    [
+     474,
+     210
+    ],
+    [
+     474,
+     267
+    ],
+    [
+     6,
+     267
+    ]
+   ],
+   "marker": {
+    "start": [
+     240,
+     240
+    ],
+    "von_widerstandsbasis": [
+     36,
+     240
+    ]
+   },
+   "figuren": [],
+   "hotspots": [
+    {
+     "id": "wassereimer",
+     "script_name": "Wassereimer",
+     "name_key": "UI_OBJ_WASSEREIMER",
+     "rect": [
+      200,
+      150,
+      40,
+      50
+     ],
+     "gehe": [
+      220,
+      235
+     ],
+     "ansehen": []
+    }
+   ],
+   "props": [],
+   "ausgaenge": [
+    {
+     "id": "ausgang_widerstandsbasis",
+     "script_name": "AusgangWiderstandsbasis",
+     "ziel": "widerstandsbasis",
+     "name_key": "UI_RAUM_WIDERSTANDSBASIS",
+     "rect": [
+      6,
+      105,
+      27,
+      105
+     ],
+     "gehe": [
+      36,
+      240
+     ],
+     "erreichbar_ab": "R3b",
+     "ansehen": []
+    }
+   ],
+   "zurufe": []
+  },
+  {
+   "id": "laboreingang",
+   "script_name": "Laboreingang",
+   "name_key": "UI_RAUM_LABOREINGANG",
+   "groesse": [
+    480,
+    270
+   ],
+   "hintergrund": "res://grafik/platzhalter/raum_laboreingang.png",
+   "farbe": "#585858",
+   "laufbereich": [
+    [
+     6,
+     210
+    ],
+    [
+     474,
+     210
+    ],
+    [
+     474,
+     267
+    ],
+    [
+     6,
+     267
+    ]
+   ],
+   "marker": {
+    "start": [
+     240,
+     240
+    ],
+    "von_unterstadt_strasse": [
+     36,
+     240
+    ]
+   },
+   "figuren": [
+    {
+     "id": "kalle",
+     "script_name": "Kalle",
+     "pos": [
+      150,
+      232
+     ]
+    },
+    {
+     "id": "hausmeister",
+     "script_name": "Hausmeister",
+     "pos": [
+      330,
+      232
+     ]
+    }
+   ],
+   "hotspots": [
+    {
+     "id": "panzertuer",
+     "script_name": "Panzertuer",
+     "name_key": "UI_OBJ_PANZERTUER",
+     "rect": [
+      44,
+      30,
+      58,
+      48
+     ],
+     "gehe": [
+      73,
+      235
+     ],
+     "ansehen": [
+      {
+       "zeile": "W3_EING_MAX_0310",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_EING_MAX_0310"
+       ]
+      },
+      {
+       "zeile": "W3_EING_MAX_0315",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_EING_MAX_0315"
+       ],
+       "mal": 2
+      },
+      {
+       "zeile": "W3_EING_MAX_0370",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_EING_MAX_0370"
+       ]
+      },
+      {
+       "zeile": "W3_EING_MAX_0375",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_EING_MAX_0375"
+       ],
+       "mal": 2
+      },
+      {
+       "zeile": "W3_EING_PIX_1030",
+       "sprecher": "PIX",
+       "blasen": [
+        "W3_EING_PIX_1030"
+       ],
+       "figur": "PIX"
+      }
+     ],
+     "benutzen": [
+      {
+       "zeile": "W3_EING_MAX_0320",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_EING_MAX_0320"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "kartenleser",
+     "script_name": "Kartenleser",
+     "name_key": "UI_OBJ_KARTENLESER",
+     "rect": [
+      110,
+      30,
+      58,
+      48
+     ],
+     "gehe": [
+      139,
+      235
+     ],
+     "ansehen": [
+      {
+       "zeile": "W3_EING_MAX_0330",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_EING_MAX_0330"
+       ]
+      },
+      {
+       "zeile": "W3_EING_MAX_0335",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_EING_MAX_0335"
+       ],
+       "mal": 2
+      }
+     ],
+     "benutzen": [
+      {
+       "zeile": "W3_EING_MAX_0340",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_EING_MAX_0340"
+       ]
+      }
+     ],
+     "gegenstand_auf": [
+      {
+       "zeile": "W3_EING_MAX_0350",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_EING_MAX_0350"
+       ],
+       "bedingung": [
+        {
+         "art": "nach",
+         "raetsel": "R8"
+        }
+       ],
+       "bedingung_text": "Tür öffnet sich, die Karte bleibt im Leser",
+       "gegenstand": "zugangskarte"
+      },
+      {
+       "zeile": "W3_EING_HAU_0360",
+       "sprecher": "HAU",
+       "blasen": [
+        "W3_EING_HAU_0360"
+       ],
+       "bedingung": [
+        {
+         "art": "vor",
+         "raetsel": "R8"
+        }
+       ],
+       "gegenstand": "zugangskarte"
+      }
+     ]
+    },
+    {
+     "id": "datenanschluss",
+     "script_name": "Datenanschluss",
+     "name_key": "UI_OBJ_DATENANSCHLUSS",
+     "rect": [
+      176,
+      30,
+      58,
+      48
+     ],
+     "gehe": [
+      205,
+      235
+     ],
+     "ansehen": [],
+     "benutzen": [
+      {
+       "zeile": "W3_EING_KAL_0380",
+       "sprecher": "KAL",
+       "blasen": [
+        "W3_EING_KAL_0380"
+       ],
+       "bedingung_text": "Kalle kommt mit Kabeltrommel"
+      }
+     ]
+    },
+    {
+     "id": "wischeimer",
+     "script_name": "Wischeimer",
+     "name_key": "UI_OBJ_WISCHEIMER",
+     "rect": [
+      242,
+      30,
+      58,
+      48
+     ],
+     "gehe": [
+      271,
+      235
+     ],
+     "ansehen": [
+      {
+       "zeile": "W3_EING_MAX_0420",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_EING_MAX_0420"
+       ]
+      },
+      {
+       "zeile": "W3_EING_PIX_0430",
+       "sprecher": "PIX",
+       "blasen": [
+        "W3_EING_PIX_0430"
+       ],
+       "mal": 2
+      },
+      {
+       "zeile": "W3_EING_PIX_1020",
+       "sprecher": "PIX",
+       "blasen": [
+        "W3_EING_PIX_1020"
+       ],
+       "figur": "PIX"
+      }
+     ],
+     "benutzen": [
+      {
+       "zeile": "W3_EING_MAX_0440",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_EING_MAX_0440"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "pinnwand",
+     "script_name": "Pinnwand",
+     "name_key": "UI_OBJ_PINNWAND",
+     "rect": [
+      308,
+      30,
+      58,
+      48
+     ],
+     "gehe": [
+      337,
+      235
+     ],
+     "ansehen": [
+      {
+       "zeile": "W3_EING_MAX_0450",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_EING_MAX_0450"
+       ]
+      },
+      {
+       "zeile": "W3_EING_PIX_0460",
+       "sprecher": "PIX",
+       "blasen": [
+        "W3_EING_PIX_0460"
+       ],
+       "mal": 2
+      },
+      {
+       "zeile": "W3_EING_MAX_0470",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_EING_MAX_0470"
+       ]
+      },
+      {
+       "zeile": "W3_EING_PIX_1040",
+       "sprecher": "PIX",
+       "blasen": [
+        "W3_EING_PIX_1040"
+       ],
+       "figur": "PIX"
+      }
+     ]
+    },
+    {
+     "id": "warnstreifen",
+     "script_name": "Warnstreifen",
+     "name_key": "UI_OBJ_WARNSTREIFEN",
+     "rect": [
+      374,
+      30,
+      58,
+      48
+     ],
+     "gehe": [
+      403,
+      235
+     ],
+     "ansehen": [
+      {
+       "zeile": "W3_EING_MAX_0480",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_EING_MAX_0480"
+       ]
+      },
+      {
+       "zeile": "W3_EING_MAX_0485",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_EING_MAX_0485"
+       ],
+       "mal": 2
+      }
+     ]
+    },
+    {
+     "id": "deckenlampe",
+     "script_name": "Deckenlampe",
+     "name_key": "UI_OBJ_DECKENLAMPE",
+     "rect": [
+      44,
+      90,
+      58,
+      48
+     ],
+     "gehe": [
+      73,
+      235
+     ],
+     "ansehen": [
+      {
+       "zeile": "W3_EING_MAX_0490",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_EING_MAX_0490"
+       ]
+      },
+      {
+       "zeile": "W3_EING_MAX_0495",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_EING_MAX_0495"
+       ],
+       "mal": 2
+      }
+     ]
+    },
+    {
+     "id": "gang",
+     "script_name": "Gang",
+     "name_key": "UI_OBJ_GANG",
+     "rect": [
+      110,
+      90,
+      58,
+      48
+     ],
+     "gehe": [
+      139,
+      235
+     ],
+     "ansehen": [
+      {
+       "zeile": "W3_EING_MAX_0500",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_EING_MAX_0500"
+       ]
+      },
+      {
+       "zeile": "W3_EING_MAX_0505",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_EING_MAX_0505"
+       ],
+       "mal": 2
+      }
+     ]
+    },
+    {
+     "id": "platz_des_hausmeisters",
+     "script_name": "PlatzDesHausmeisters",
+     "name_key": "UI_OBJ_PLATZ_DES_HAUSMEISTERS",
+     "rect": [
+      176,
+      90,
+      58,
+      48
+     ],
+     "gehe": [
+      205,
+      235
+     ],
+     "ansehen": [
+      {
+       "zeile": "W3_EING_MAX_0510",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_EING_MAX_0510"
+       ]
+      },
+      {
+       "zeile": "W3_EING_MAX_0515",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_EING_MAX_0515"
+       ],
+       "mal": 2
+      }
+     ]
+    }
+   ],
+   "props": [],
+   "ausgaenge": [
+    {
+     "id": "ausgang_unterstadt_strasse",
+     "script_name": "AusgangUnterstadtStrasse",
+     "ziel": "unterstadt_strasse",
+     "name_key": "UI_RAUM_UNTERSTADT_STRASSE",
+     "rect": [
+      6,
+      105,
+      27,
+      105
+     ],
+     "gehe": [
+      36,
+      240
+     ],
+     "erreichbar_ab": "start",
+     "ansehen": []
+    }
+   ],
+   "zurufe": [
+    {
+     "zeile": "W3_EING_PIX_0910",
+     "sprecher": "PIX",
+     "blasen": [
+      "W3_EING_PIX_0910"
+     ]
+    },
+    {
+     "zeile": "W3_EING_PIX_0920",
+     "sprecher": "PIX",
+     "blasen": [
+      "W3_EING_PIX_0920"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "stadtstrasse",
+   "script_name": "Stadtstrasse",
+   "name_key": "UI_RAUM_STADTSTRASSE",
+   "groesse": [
+    960,
+    270
+   ],
+   "hintergrund": "res://grafik/platzhalter/raum_stadtstrasse.png",
+   "farbe": "#7fa36a",
+   "laufbereich": [
+    [
+     6,
+     210
+    ],
+    [
+     954,
+     210
+    ],
+    [
+     954,
+     267
+    ],
+    [
+     6,
+     267
+    ]
+   ],
+   "marker": {
+    "start": [
+     480,
+     240
+    ],
+    "von_kueche_orakel": [
+     36,
+     240
+    ],
+    "von_buero_50": [
+     924,
+     240
+    ],
+    "von_widerstandsbasis": [
+     480,
+     240
+    ],
+    "von_zelle": [
+     200,
+     240
+    ]
+   },
+   "figuren": [
+    {
+     "id": "schmidt",
+     "script_name": "Schmidt",
+     "pos": [
+      200,
+      232
+     ]
+    },
+    {
+     "id": "tuer",
+     "script_name": "Tuer",
+     "pos": [
+      480,
+      232
+     ]
+    },
+    {
+     "id": "schwarze_katze",
+     "script_name": "SchwarzeKatze",
+     "pos": [
+      760,
+      232
+     ]
+    }
+   ],
+   "hotspots": [
+    {
+     "id": "himmel",
+     "script_name": "Himmel",
+     "name_key": "UI_OBJ_HIMMEL",
+     "rect": [
+      44,
+      30,
+      89,
+      48
+     ],
+     "gehe": [
+      88,
+      235
+     ],
+     "ansehen": [
+      {
+       "zeile": "W3_SIM_MAX_0110",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_SIM_MAX_0110"
+       ]
+      },
+      {
+       "zeile": "W3_SIM_MAX_0115",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_SIM_MAX_0115"
+       ],
+       "mal": 2
+      }
+     ]
+    },
+    {
+     "id": "baeume",
+     "script_name": "Baeume",
+     "name_key": "UI_OBJ_BAEUME",
+     "rect": [
+      141,
+      30,
+      89,
+      48
+     ],
+     "gehe": [
+      185,
+      235
+     ],
+     "ansehen": [
+      {
+       "zeile": "W3_SIM_MAX_0120",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_SIM_MAX_0120"
+       ]
+      },
+      {
+       "zeile": "W3_SIM_MAX_0125",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_SIM_MAX_0125"
+       ],
+       "mal": 2
+      }
+     ]
+    },
+    {
+     "id": "haeuser",
+     "script_name": "Haeuser",
+     "name_key": "UI_OBJ_HAEUSER",
+     "rect": [
+      238,
+      30,
+      89,
+      48
+     ],
+     "gehe": [
+      282,
+      235
+     ],
+     "ansehen": [
+      {
+       "zeile": "W3_SIM_MAX_0130",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_SIM_MAX_0130"
+       ]
+      },
+      {
+       "zeile": "W3_SIM_MAX_0135",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_SIM_MAX_0135"
+       ],
+       "mal": 2
+      }
+     ]
+    },
+    {
+     "id": "autos",
+     "script_name": "Autos",
+     "name_key": "UI_OBJ_AUTOS",
+     "rect": [
+      335,
+      30,
+      89,
+      48
+     ],
+     "gehe": [
+      379,
+      235
+     ],
+     "ansehen": [
+      {
+       "zeile": "W3_SIM_MAX_0140",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_SIM_MAX_0140"
+       ]
+      },
+      {
+       "zeile": "W3_SIM_MAX_0145",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_SIM_MAX_0145"
+       ],
+       "mal": 2
+      }
+     ]
+    },
+    {
+     "id": "auto",
+     "script_name": "Auto",
+     "name_key": "UI_OBJ_AUTO",
+     "rect": [
+      432,
+      30,
+      89,
+      48
+     ],
+     "gehe": [
+      476,
+      235
+     ],
+     "ansehen": [],
+     "benutzen": [
+      {
+       "zeile": "W3_SIM_MAX_0150",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_SIM_MAX_0150"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "telefonzelle",
+     "script_name": "Telefonzelle",
+     "name_key": "UI_OBJ_TELEFONZELLE",
+     "rect": [
+      529,
+      30,
+      89,
+      48
+     ],
+     "gehe": [
+      573,
+      235
+     ],
+     "ansehen": [
+      {
+       "zeile": "W3_SIM_MAX_0210",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_SIM_MAX_0210"
+       ],
+       "bedingung_text": "bevor sie klingelt"
+      },
+      {
+       "zeile": "W3_SIM_MAX_0215",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_SIM_MAX_0215"
+       ],
+       "bedingung_text": "bevor sie klingelt",
+       "mal": 2
+      },
+      {
+       "zeile": "W3_SIM_MAX_0220",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_SIM_MAX_0220"
+       ],
+       "bedingung_text": "sie klingelt"
+      }
+     ],
+     "benutzen": [
+      {
+       "zeile": "W3_SIM_MAX_0240",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_SIM_MAX_0240"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "klingelnde_telefonzelle",
+     "script_name": "KlingelndeTelefonzelle",
+     "name_key": "UI_OBJ_KLINGELNDE_TELEFONZELLE",
+     "rect": [
+      626,
+      30,
+      89,
+      48
+     ],
+     "gehe": [
+      670,
+      235
+     ],
+     "ansehen": [],
+     "benutzen": [
+      {
+       "zeile": "W3_SIM_MAX_0230",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_SIM_MAX_0230"
+       ],
+       "bedingung_text": "Ebenenwechsel in die Realität, Max wacht in der Kapsel auf"
+      }
+     ]
+    },
+    {
+     "id": "gehweg",
+     "script_name": "Gehweg",
+     "name_key": "UI_OBJ_GEHWEG",
+     "rect": [
+      723,
+      30,
+      89,
+      48
+     ],
+     "gehe": [
+      767,
+      235
+     ],
+     "ansehen": [
+      {
+       "zeile": "W3_SIM_MAX_0310",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_SIM_MAX_0310"
+       ]
+      },
+      {
+       "zeile": "W3_SIM_MAX_0315",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_SIM_MAX_0315"
+       ],
+       "mal": 2
+      }
+     ]
+    },
+    {
+     "id": "sonne",
+     "script_name": "Sonne",
+     "name_key": "UI_OBJ_SONNE",
+     "rect": [
+      820,
+      30,
+      89,
+      48
+     ],
+     "gehe": [
+      864,
+      235
+     ],
+     "ansehen": [
+      {
+       "zeile": "W3_SIM_MAX_0320",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_SIM_MAX_0320"
+       ]
+      },
+      {
+       "zeile": "W3_SIM_MAX_0325",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_SIM_MAX_0325"
+       ],
+       "mal": 2
+      }
+     ]
+    }
+   ],
+   "props": [],
+   "ausgaenge": [
+    {
+     "id": "ausgang_kueche_orakel",
+     "script_name": "AusgangKuecheOrakel",
+     "ziel": "kueche_orakel",
+     "name_key": "UI_RAUM_KUECHE_ORAKEL",
+     "rect": [
+      6,
+      105,
+      27,
+      105
+     ],
+     "gehe": [
+      36,
+      240
+     ],
+     "erreichbar_ab": "R3b",
+     "ansehen": [
+      {
+       "zeile": "W3_SIM_MAX_0280",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_SIM_MAX_0280"
+       ]
+      },
+      {
+       "zeile": "W3_SIM_MAX_0285",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_SIM_MAX_0285"
+       ],
+       "mal": 2
+      }
+     ],
+     "benutzen": [
+      {
+       "zeile": "W3_SIM_ORA_0290",
+       "sprecher": "ORA",
+       "blasen": [
+        "W3_SIM_ORA_0290"
+       ],
+       "bedingung_text": "erstes Mal",
+       "folge": [
+        {
+         "zeile": "W3_SIM_MAX_0300",
+         "sprecher": "MAX",
+         "blasen": [
+          "W3_SIM_MAX_0300"
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "ausgang_buero_50",
+     "script_name": "AusgangBuero50",
+     "ziel": "buero_50",
+     "name_key": "UI_RAUM_BUERO_50",
+     "rect": [
+      927,
+      105,
+      27,
+      105
+     ],
+     "gehe": [
+      924,
+      240
+     ],
+     "erreichbar_ab": "R5",
+     "ansehen": [
+      {
+       "zeile": "W3_SIM_MAX_0260",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_SIM_MAX_0260"
+       ],
+       "bedingung": [
+        {
+         "art": "vor",
+         "raetsel": "R5"
+        }
+       ]
+      },
+      {
+       "zeile": "W3_SIM_MAX_0265",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_SIM_MAX_0265"
+       ],
+       "bedingung": [
+        {
+         "art": "vor",
+         "raetsel": "R5"
+        }
+       ],
+       "mal": 2
+      },
+      {
+       "zeile": "W3_SIM_MAX_0270",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_SIM_MAX_0270"
+       ],
+       "bedingung": [
+        {
+         "art": "nach",
+         "raetsel": "R5"
+        }
+       ]
+      },
+      {
+       "zeile": "W3_SIM_MAX_0275",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_SIM_MAX_0275"
+       ],
+       "bedingung": [
+        {
+         "art": "nach",
+         "raetsel": "R5"
+        }
+       ],
+       "mal": 2
+      }
+     ]
+    }
+   ],
+   "zurufe": [
+    {
+     "zeile": "W3_SIM_PIX_0910",
+     "sprecher": "PIX",
+     "blasen": [
+      "W3_SIM_PIX_0910"
+     ]
+    },
+    {
+     "zeile": "W3_SIM_PIX_0920",
+     "sprecher": "PIX",
+     "blasen": [
+      "W3_SIM_PIX_0920"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "kueche_orakel",
+   "script_name": "KuecheOrakel",
+   "name_key": "UI_RAUM_KUECHE_ORAKEL",
+   "groesse": [
+    480,
+    270
+   ],
+   "hintergrund": "res://grafik/platzhalter/raum_kueche_orakel.png",
+   "farbe": "#b49a72",
+   "laufbereich": [
+    [
+     6,
+     210
+    ],
+    [
+     474,
+     210
+    ],
+    [
+     474,
+     267
+    ],
+    [
+     6,
+     267
+    ]
+   ],
+   "marker": {
+    "start": [
+     240,
+     240
+    ],
+    "von_stadtstrasse": [
+     36,
+     240
+    ],
+    "von_zelle": [
+     400,
+     240
+    ]
+   },
+   "figuren": [
+    {
+     "id": "orakel_oma",
+     "script_name": "OrakelOma",
+     "pos": [
+      150,
+      232
+     ]
+    },
+    {
+     "id": "radio",
+     "script_name": "Radio",
+     "pos": [
+      330,
+      232
+     ]
+    }
+   ],
+   "hotspots": [
+    {
+     "id": "vase",
+     "script_name": "Vase",
+     "name_key": "UI_OBJ_VASE",
+     "rect": [
+      44,
+      30,
+      58,
+      48
+     ],
+     "gehe": [
+      73,
+      235
+     ],
+     "ansehen": [
+      {
+       "zeile": "W3_KUCH_MAX_0510",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_KUCH_MAX_0510"
+       ]
+      },
+      {
+       "zeile": "W3_KUCH_MAX_0515",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_KUCH_MAX_0515"
+       ],
+       "mal": 2
+      }
+     ],
+     "benutzen": [
+      {
+       "zeile": "W3_KUCH_ORA_0520",
+       "sprecher": "ORA",
+       "blasen": [
+        "W3_KUCH_ORA_0520"
+       ],
+       "bedingung_text": "vor der Lösung"
+      }
+     ]
+    },
+    {
+     "id": "ofen",
+     "script_name": "Ofen",
+     "name_key": "UI_OBJ_OFEN",
+     "rect": [
+      110,
+      30,
+      58,
+      48
+     ],
+     "gehe": [
+      139,
+      235
+     ],
+     "ansehen": [
+      {
+       "zeile": "W3_KUCH_MAX_0530",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_KUCH_MAX_0530"
+       ]
+      },
+      {
+       "zeile": "W3_KUCH_PIX_0535",
+       "sprecher": "PIX",
+       "blasen": [
+        "W3_KUCH_PIX_0535"
+       ],
+       "mal": 2
+      }
+     ],
+     "benutzen": [
+      {
+       "zeile": "W3_KUCH_ORA_0540",
+       "sprecher": "ORA",
+       "blasen": [
+        "W3_KUCH_ORA_0540"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "kochbuch",
+     "script_name": "Kochbuch",
+     "name_key": "UI_OBJ_KOCHBUCH",
+     "rect": [
+      176,
+      30,
+      58,
+      48
+     ],
+     "gehe": [
+      205,
+      235
+     ],
+     "ansehen": [
+      {
+       "zeile": "W3_KUCH_MAX_0550",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_KUCH_MAX_0550"
+       ],
+       "bedingung_text": "Nahansicht"
+      },
+      {
+       "zeile": "W3_KUCH_MAX_0560",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_KUCH_MAX_0560"
+       ],
+       "mal": 2
+      },
+      {
+       "zeile": "W3_KUCH_PIX_0570",
+       "sprecher": "PIX",
+       "blasen": [
+        "W3_KUCH_PIX_0570"
+       ],
+       "bedingung_text": "Pixel auf der Leitung"
+      }
+     ]
+    },
+    {
+     "id": "gabel",
+     "script_name": "Gabel",
+     "name_key": "UI_OBJ_GABEL",
+     "rect": [
+      242,
+      30,
+      58,
+      48
+     ],
+     "gehe": [
+      271,
+      235
+     ],
+     "ansehen": [
+      {
+       "zeile": "W3_KUCH_MAX_0580",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_KUCH_MAX_0580"
+       ],
+       "bedingung_text": "Max starrt drei Sekunden"
+      },
+      {
+       "zeile": "W3_KUCH_MAX_0585",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_KUCH_MAX_0585"
+       ],
+       "bedingung_text": "Max starrt drei Sekunden",
+       "mal": 2
+      }
+     ],
+     "benutzen": [
+      {
+       "zeile": "W3_KUCH_MAX_0590",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_KUCH_MAX_0590"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "kuckucksuhr",
+     "script_name": "Kuckucksuhr",
+     "name_key": "UI_OBJ_KUCKUCKSUHR",
+     "rect": [
+      308,
+      30,
+      58,
+      48
+     ],
+     "gehe": [
+      337,
+      235
+     ],
+     "ansehen": [
+      {
+       "zeile": "W3_KUCH_MAX_0600",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_KUCH_MAX_0600"
+       ]
+      },
+      {
+       "zeile": "W3_KUCH_MAX_0605",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_KUCH_MAX_0605"
+       ],
+       "mal": 2
+      }
+     ],
+     "benutzen": [
+      {
+       "zeile": "W3_KUCH_NAR_0610",
+       "sprecher": "NAR",
+       "blasen": [
+        "W3_KUCH_NAR_0610"
+       ],
+       "folge": [
+        {
+         "zeile": "W3_KUCH_MAX_0620",
+         "sprecher": "MAX",
+         "blasen": [
+          "W3_KUCH_MAX_0620"
+         ]
+        },
+        {
+         "zeile": "W3_KUCH_PIX_0630",
+         "sprecher": "PIX",
+         "blasen": [
+          "W3_KUCH_PIX_0630"
+         ],
+         "bedingung_text": "Pixel auf der Leitung"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "wandtelefon",
+     "script_name": "Wandtelefon",
+     "name_key": "UI_OBJ_WANDTELEFON",
+     "rect": [
+      374,
+      30,
+      58,
+      48
+     ],
+     "gehe": [
+      403,
+      235
+     ],
+     "ansehen": [
+      {
+       "zeile": "W3_KUCH_MAX_0670",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_KUCH_MAX_0670"
+       ]
+      },
+      {
+       "zeile": "W3_KUCH_MAX_0675",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_KUCH_MAX_0675"
+       ],
+       "mal": 2
+      }
+     ],
+     "benutzen": [
+      {
+       "zeile": "W3_KUCH_MAX_0680",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_KUCH_MAX_0680"
+       ],
+       "bedingung_text": "Ebenenwechsel in die Realität"
+      }
+     ]
+    },
+    {
+     "id": "tisch_mit_teller_und_teekanne",
+     "script_name": "TischMitTellerUndTeekanne",
+     "name_key": "UI_OBJ_TISCH_MIT_TELLER_UND_TEEKANNE",
+     "rect": [
+      44,
+      90,
+      58,
+      48
+     ],
+     "gehe": [
+      73,
+      235
+     ],
+     "ansehen": [
+      {
+       "zeile": "W3_KUCH_MAX_0690",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_KUCH_MAX_0690"
+       ]
+      },
+      {
+       "zeile": "W3_KUCH_MAX_0695",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_KUCH_MAX_0695"
+       ],
+       "mal": 2
+      }
+     ]
+    },
+    {
+     "id": "glaeser_auf_dem_regal",
+     "script_name": "GlaeserAufDemRegal",
+     "name_key": "UI_OBJ_GLAESER_AUF_DEM_REGAL",
+     "rect": [
+      110,
+      90,
+      58,
+      48
+     ],
+     "gehe": [
+      139,
+      235
+     ],
+     "ansehen": [
+      {
+       "zeile": "W3_KUCH_MAX_0700",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_KUCH_MAX_0700"
+       ]
+      },
+      {
+       "zeile": "W3_KUCH_MAX_0705",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_KUCH_MAX_0705"
+       ],
+       "mal": 2
+      }
+     ]
+    },
+    {
+     "id": "gardinen_und_fenster",
+     "script_name": "GardinenUndFenster",
+     "name_key": "UI_OBJ_GARDINEN_UND_FENSTER",
+     "rect": [
+      176,
+      90,
+      58,
+      48
+     ],
+     "gehe": [
+      205,
+      235
+     ],
+     "ansehen": [
+      {
+       "zeile": "W3_KUCH_MAX_0710",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_KUCH_MAX_0710"
+       ]
+      },
+      {
+       "zeile": "W3_KUCH_MAX_0715",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_KUCH_MAX_0715"
+       ],
+       "mal": 2
+      }
+     ]
+    },
+    {
+     "id": "tapete",
+     "script_name": "Tapete",
+     "name_key": "UI_OBJ_TAPETE",
+     "rect": [
+      242,
+      90,
+      58,
+      48
+     ],
+     "gehe": [
+      271,
+      235
+     ],
+     "ansehen": [
+      {
+       "zeile": "W3_KUCH_MAX_0720",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_KUCH_MAX_0720"
+       ]
+      },
+      {
+       "zeile": "W3_KUCH_MAX_0725",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_KUCH_MAX_0725"
+       ],
+       "mal": 2
+      }
+     ]
+    },
+    {
+     "id": "kehrblech",
+     "script_name": "Kehrblech",
+     "name_key": "UI_OBJ_KEHRBLECH",
+     "rect": [
+      308,
+      90,
+      58,
+      48
+     ],
+     "gehe": [
+      337,
+      235
+     ],
+     "ansehen": [
+      {
+       "zeile": "W3_KUCH_MAX_0730",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_KUCH_MAX_0730"
+       ],
+       "bedingung_text": "vor der Szene"
+      },
+      {
+       "zeile": "W3_KUCH_MAX_0735",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_KUCH_MAX_0735"
+       ],
+       "bedingung_text": "vor der Szene",
+       "mal": 2
+      }
+     ]
+    },
+    {
+     "id": "scherben",
+     "script_name": "Scherben",
+     "name_key": "UI_OBJ_SCHERBEN",
+     "rect": [
+      374,
+      90,
+      58,
+      48
+     ],
+     "gehe": [
+      403,
+      235
+     ],
+     "ansehen": [
+      {
+       "zeile": "W3_KUCH_MAX_0740",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_KUCH_MAX_0740"
+       ],
+       "bedingung_text": "nach der Szene"
+      },
+      {
+       "zeile": "W3_KUCH_MAX_0745",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_KUCH_MAX_0745"
+       ],
+       "bedingung_text": "nach der Szene",
+       "mal": 2
+      }
+     ]
+    }
+   ],
+   "props": [],
+   "ausgaenge": [
+    {
+     "id": "ausgang_stadtstrasse",
+     "script_name": "AusgangStadtstrasse",
+     "ziel": "stadtstrasse",
+     "name_key": "UI_RAUM_STADTSTRASSE",
+     "rect": [
+      6,
+      105,
+      27,
+      105
+     ],
+     "gehe": [
+      36,
+      240
+     ],
+     "erreichbar_ab": "R3b",
+     "ansehen": []
+    }
+   ],
+   "zurufe": [
+    {
+     "zeile": "W3_KUCH_PIX_0910",
+     "sprecher": "PIX",
+     "blasen": [
+      "W3_KUCH_PIX_0910"
+     ]
+    },
+    {
+     "zeile": "W3_KUCH_PIX_0920",
+     "sprecher": "PIX",
+     "blasen": [
+      "W3_KUCH_PIX_0920"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "buero_50",
+   "script_name": "Buero50",
+   "name_key": "UI_RAUM_BUERO_50",
+   "groesse": [
+    480,
+    270
+   ],
+   "hintergrund": "res://grafik/platzhalter/raum_buero_50.png",
+   "farbe": "#8c96a0",
+   "laufbereich": [
+    [
+     6,
+     210
+    ],
+    [
+     474,
+     210
+    ],
+    [
+     474,
+     267
+    ],
+    [
+     6,
+     267
+    ]
+   ],
+   "marker": {
+    "start": [
+     240,
+     240
+    ],
+    "von_stadtstrasse": [
+     36,
+     240
+    ]
+   },
+   "figuren": [
+    {
+     "id": "schmidt",
+     "script_name": "Schmidt",
+     "pos": [
+      150,
+      232
+     ]
+    },
+    {
+     "id": "klon",
+     "script_name": "Klon",
+     "pos": [
+      330,
+      232
+     ]
+    }
+   ],
+   "hotspots": [
+    {
+     "id": "flur",
+     "script_name": "Flur",
+     "name_key": "UI_OBJ_FLUR",
+     "rect": [
+      44,
+      30,
+      58,
+      48
+     ],
+     "gehe": [
+      73,
+      235
+     ],
+     "ansehen": [
+      {
+       "zeile": "W3_TURM_MAX_0210",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_TURM_MAX_0210"
+       ]
+      },
+      {
+       "zeile": "W3_TURM_MAX_0215",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_TURM_MAX_0215"
+       ],
+       "mal": 2
+      }
+     ]
+    },
+    {
+     "id": "tueren",
+     "script_name": "Tueren",
+     "name_key": "UI_OBJ_TUEREN",
+     "rect": [
+      110,
+      30,
+      58,
+      48
+     ],
+     "gehe": [
+      139,
+      235
+     ],
+     "ansehen": [],
+     "benutzen": [
+      {
+       "zeile": "W3_TURM_MAX_0220",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_TURM_MAX_0220"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "topfpflanzen",
+     "script_name": "Topfpflanzen",
+     "name_key": "UI_OBJ_TOPFPFLANZEN",
+     "rect": [
+      176,
+      30,
+      58,
+      48
+     ],
+     "gehe": [
+      205,
+      235
+     ],
+     "ansehen": [
+      {
+       "zeile": "W3_TURM_MAX_0230",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_TURM_MAX_0230"
+       ]
+      },
+      {
+       "zeile": "W3_TURM_PIX_0235",
+       "sprecher": "PIX",
+       "blasen": [
+        "W3_TURM_PIX_0235"
+       ],
+       "mal": 2
+      }
+     ]
+    },
+    {
+     "id": "fenster",
+     "script_name": "Fenster",
+     "name_key": "UI_OBJ_FENSTER",
+     "rect": [
+      242,
+      30,
+      58,
+      48
+     ],
+     "gehe": [
+      271,
+      235
+     ],
+     "ansehen": [
+      {
+       "zeile": "W3_TURM_MAX_0240",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_TURM_MAX_0240"
+       ]
+      },
+      {
+       "zeile": "W3_TURM_MAX_0245",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_TURM_MAX_0245"
+       ],
+       "mal": 2
+      }
+     ],
+     "benutzen": [
+      {
+       "zeile": "W3_TURM_MAX_0250",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_TURM_MAX_0250"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "endlos_treppe",
+     "script_name": "EndlosTreppe",
+     "name_key": "UI_OBJ_ENDLOS_TREPPE",
+     "rect": [
+      308,
+      30,
+      58,
+      48
+     ],
+     "gehe": [
+      337,
+      235
+     ],
+     "ansehen": [
+      {
+       "zeile": "W3_TURM_MAX_0260",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_TURM_MAX_0260"
+       ]
+      },
+      {
+       "zeile": "W3_TURM_MAX_0265",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_TURM_MAX_0265"
+       ],
+       "mal": 2
+      }
+     ],
+     "benutzen": [
+      {
+       "zeile": "W3_TURM_MAX_0270",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_TURM_MAX_0270"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "wasserspender",
+     "script_name": "Wasserspender",
+     "name_key": "UI_OBJ_WASSERSPENDER",
+     "rect": [
+      374,
+      30,
+      58,
+      48
+     ],
+     "gehe": [
+      403,
+      235
+     ],
+     "ansehen": [
+      {
+       "zeile": "W3_TURM_MAX_0280",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_TURM_MAX_0280"
+       ]
+      },
+      {
+       "zeile": "W3_TURM_MAX_0285",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_TURM_MAX_0285"
+       ],
+       "mal": 2
+      }
+     ],
+     "benutzen": [
+      {
+       "zeile": "W3_TURM_MAX_0290",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_TURM_MAX_0290"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "klone",
+     "script_name": "Klone",
+     "name_key": "UI_OBJ_KLONE",
+     "rect": [
+      44,
+      90,
+      58,
+      48
+     ],
+     "gehe": [
+      73,
+      235
+     ],
+     "ansehen": [
+      {
+       "zeile": "W3_TURM_MAX_0320",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_TURM_MAX_0320"
+       ]
+      },
+      {
+       "zeile": "W3_TURM_MAX_0325",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_TURM_MAX_0325"
+       ],
+       "mal": 2
+      }
+     ],
+     "benutzen": [
+      {
+       "zeile": "W3_TURM_MAX_0390",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_TURM_MAX_0390"
+       ]
+      }
+     ],
+     "gegenstand_auf": [
+      {
+       "zeile": "W3_TURM_MAX_0550",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_TURM_MAX_0550"
+       ],
+       "gegenstand": "kaffeetasse"
+      }
+     ]
+    },
+    {
+     "id": "farbcode_an_der_wand",
+     "script_name": "FarbcodeAnDerWand",
+     "name_key": "UI_OBJ_FARBCODE_AN_DER_WAND",
+     "rect": [
+      176,
+      90,
+      58,
+      48
+     ],
+     "gehe": [
+      205,
+      235
+     ],
+     "ansehen": [
+      {
+       "zeile": "W3_TERM_MAX_0010",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_TERM_MAX_0010"
+       ]
+      },
+      {
+       "zeile": "W3_TERM_MAX_0015",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_TERM_MAX_0015"
+       ],
+       "mal": 2
+      }
+     ]
+    },
+    {
+     "id": "terminal",
+     "script_name": "Terminal",
+     "name_key": "UI_OBJ_TERMINAL",
+     "rect": [
+      242,
+      90,
+      58,
+      48
+     ],
+     "gehe": [
+      271,
+      235
+     ],
+     "ansehen": [
+      {
+       "zeile": "W3_TERM_MAX_0030",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_TERM_MAX_0030"
+       ]
+      },
+      {
+       "zeile": "W3_TERM_MAX_0035",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_TERM_MAX_0035"
+       ],
+       "mal": 2
+      }
+     ]
+    }
+   ],
+   "props": [
+    {
+     "id": "kaffeetasse",
+     "script_name": "Kaffeetasse",
+     "name_key": "UI_OBJ_KAFFEETASSE",
+     "rect": [
+      100,
+      195,
+      15,
+      12
+     ],
+     "gehe": [
+      107,
+      235
+     ],
+     "textur": "res://grafik/platzhalter/prop_kaffeetasse.png",
+     "gegenstand": "kaffeetasse",
+     "ansehen": [
+      {
+       "zeile": "W3_TURM_MAX_0300",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_TURM_MAX_0300"
+       ]
+      },
+      {
+       "zeile": "W3_TURM_MAX_0305",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_TURM_MAX_0305"
+       ],
+       "mal": 2
+      }
+     ],
+     "nehmen": {
+      "zeile": "W3_TURM_MAX_0310",
+      "sprecher": "MAX",
+      "blasen": [
+       "W3_TURM_MAX_0310"
+      ]
+     }
+    },
+    {
+     "id": "sonnenbrille",
+     "script_name": "Sonnenbrille",
+     "name_key": "UI_OBJ_SONNENBRILLE",
+     "rect": [
+      160,
+      195,
+      15,
+      12
+     ],
+     "gehe": [
+      167,
+      235
+     ],
+     "textur": "res://grafik/platzhalter/prop_sonnenbrille.png",
+     "gegenstand": "sonnenbrille",
+     "ansehen": [],
+     "nehmen": {
+      "zeile": "W3_TURM_MAX_0440",
+      "sprecher": "MAX",
+      "blasen": [
+       "W3_TURM_MAX_0440"
+      ]
+     }
+    },
+    {
+     "id": "schmidts_akte",
+     "script_name": "SchmidtsAkte",
+     "name_key": "UI_OBJ_SCHMIDTS_AKTE",
+     "rect": [
+      220,
+      195,
+      15,
+      12
+     ],
+     "gehe": [
+      227,
+      235
+     ],
+     "textur": "res://grafik/platzhalter/prop_schmidts_akte.png",
+     "gegenstand": "schmidts_akte",
+     "ansehen": [],
+     "nehmen": {
+      "zeile": "W3_TURM_MAX_0460",
+      "sprecher": "MAX",
+      "blasen": [
+       "W3_TURM_MAX_0460"
+      ]
+     }
+    }
+   ],
+   "ausgaenge": [
+    {
+     "id": "ausgang_stadtstrasse",
+     "script_name": "AusgangStadtstrasse",
+     "ziel": "stadtstrasse",
+     "name_key": "UI_RAUM_STADTSTRASSE",
+     "rect": [
+      6,
+      105,
+      27,
+      105
+     ],
+     "gehe": [
+      36,
+      240
+     ],
+     "erreichbar_ab": "R3b",
+     "ansehen": []
+    }
+   ],
+   "zurufe": [
+    {
+     "zeile": "W3_TURM_PIX_0910",
+     "sprecher": "PIX",
+     "blasen": [
+      "W3_TURM_PIX_0910"
+     ]
+    },
+    {
+     "zeile": "W3_TURM_PIX_0920",
+     "sprecher": "PIX",
+     "blasen": [
+      "W3_TURM_PIX_0920"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "testkammer_1",
+   "script_name": "Testkammer1",
+   "name_key": "UI_RAUM_TESTKAMMER_1",
+   "groesse": [
+    480,
+    270
+   ],
+   "hintergrund": "res://grafik/platzhalter/raum_testkammer_1.png",
+   "farbe": "#d8d8d8",
+   "laufbereich": [
+    [
+     6,
+     210
+    ],
+    [
+     474,
+     210
+    ],
+    [
+     474,
+     267
+    ],
+    [
+     6,
+     267
+    ]
+   ],
+   "marker": {
+    "start": [
+     240,
+     240
+    ],
+    "von_testkammer_2": [
+     36,
+     240
+    ],
+    "von_widerstandsbasis": [
+     240,
+     240
+    ],
+    "von_kapsel": [
+     240,
+     240
+    ]
+   },
+   "figuren": [
+    {
+     "id": "opa",
+     "script_name": "Opa",
+     "pos": [
+      105,
+      232
+     ]
+    },
+    {
+     "id": "mutti",
+     "script_name": "Mutti",
+     "pos": [
+      195,
+      232
+     ]
+    },
+    {
+     "id": "bernd",
+     "script_name": "Bernd",
+     "pos": [
+      285,
+      232
+     ]
+    },
+    {
+     "id": "portalgeraet_stimme",
+     "script_name": "PortalgeraetStimme",
+     "pos": [
+      375,
+      232
+     ]
+    }
+   ],
+   "hotspots": [
+    {
+     "id": "portalgeraet_in_der_halterung",
+     "script_name": "PortalgeraetInDerHalterung",
+     "name_key": "UI_OBJ_PORTALGERAET_IN_DER_HALTERUNG",
+     "rect": [
+      44,
+      30,
+      58,
+      48
+     ],
+     "gehe": [
+      73,
+      235
+     ],
+     "ansehen": [
+      {
+       "zeile": "W3_KAM1_MAX_0070",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_KAM1_MAX_0070"
+       ]
+      },
+      {
+       "zeile": "W3_KAM1_MAX_0075",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_KAM1_MAX_0075"
+       ],
+       "mal": 2
+      }
+     ]
+    },
+    {
+     "id": "bodenschalter",
+     "script_name": "Bodenschalter",
+     "name_key": "UI_OBJ_BODENSCHALTER",
+     "rect": [
+      110,
+      30,
+      58,
+      48
+     ],
+     "gehe": [
+      139,
+      235
+     ],
+     "ansehen": [
+      {
+       "zeile": "W3_KAM1_MAX_0310",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_KAM1_MAX_0310"
+       ]
+      },
+      {
+       "zeile": "W3_KAM1_MAX_0315",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_KAM1_MAX_0315"
+       ],
+       "mal": 2
+      }
+     ],
+     "benutzen": [
+      {
+       "zeile": "W3_KAM1_MAX_0320",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_KAM1_MAX_0320"
+       ]
+      },
+      {
+       "zeile": "W3_KAM1_MAX_0340",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_KAM1_MAX_0340"
+       ],
+       "folge": [
+        {
+         "zeile": "W3_KAM1_MUT_0350",
+         "sprecher": "MUT",
+         "blasen": [
+          "W3_KAM1_MUT_0350"
+         ]
+        }
+       ]
+      },
+      {
+       "zeile": "W3_KAM1_NAR_0460",
+       "sprecher": "NAR",
+       "blasen": [
+        "W3_KAM1_NAR_0460"
+       ],
+       "bedingung_text": "Animation Bernd beleidigt, Jingle"
+      }
+     ]
+    },
+    {
+     "id": "pappkuchen",
+     "script_name": "Pappkuchen",
+     "name_key": "UI_OBJ_PAPPKUCHEN",
+     "rect": [
+      242,
+      30,
+      58,
+      48
+     ],
+     "gehe": [
+      271,
+      235
+     ],
+     "ansehen": [
+      {
+       "zeile": "W3_KAM1_MAX_0360",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_KAM1_MAX_0360"
+       ]
+      },
+      {
+       "zeile": "W3_KAM1_PIX_0365",
+       "sprecher": "PIX",
+       "blasen": [
+        "W3_KAM1_PIX_0365"
+       ],
+       "mal": 2
+      }
+     ],
+     "benutzen": [
+      {
+       "zeile": "W3_KAM1_MAX_0370",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_KAM1_MAX_0370"
+       ],
+       "folge": [
+        {
+         "zeile": "W3_KAM1_PIX_0380",
+         "sprecher": "PIX",
+         "blasen": [
+          "W3_KAM1_PIX_0380"
+         ]
+        }
+       ]
+      }
+     ],
+     "gegenstand_auf": [
+      {
+       "zeile": "W3_KAM1_MAX_0580",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_KAM1_MAX_0580"
+       ],
+       "gegenstand": "portalgeraet"
+      }
+     ]
+    },
+    {
+     "id": "lautsprecher",
+     "script_name": "Lautsprecher",
+     "name_key": "UI_OBJ_LAUTSPRECHER",
+     "rect": [
+      308,
+      30,
+      58,
+      48
+     ],
+     "gehe": [
+      337,
+      235
+     ],
+     "ansehen": [
+      {
+       "zeile": "W3_KAM1_MAX_0400",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_KAM1_MAX_0400"
+       ]
+      },
+      {
+       "zeile": "W3_KAM1_MAX_0405",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_KAM1_MAX_0405"
+       ],
+       "mal": 2
+      }
+     ]
+    },
+    {
+     "id": "wandplatten",
+     "script_name": "Wandplatten",
+     "name_key": "UI_OBJ_WANDPLATTEN",
+     "rect": [
+      374,
+      30,
+      58,
+      48
+     ],
+     "gehe": [
+      403,
+      235
+     ],
+     "ansehen": [
+      {
+       "zeile": "W3_KAM1_MAX_0410",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_KAM1_MAX_0410"
+       ]
+      },
+      {
+       "zeile": "W3_KAM1_MAX_0415",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_KAM1_MAX_0415"
+       ],
+       "mal": 2
+      }
+     ]
+    },
+    {
+     "id": "halterung",
+     "script_name": "Halterung",
+     "name_key": "UI_OBJ_HALTERUNG",
+     "rect": [
+      44,
+      90,
+      58,
+      48
+     ],
+     "gehe": [
+      73,
+      235
+     ],
+     "ansehen": [
+      {
+       "zeile": "W3_KAM1_MAX_0420",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_KAM1_MAX_0420"
+       ]
+      },
+      {
+       "zeile": "W3_KAM1_MAX_0425",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_KAM1_MAX_0425"
+       ],
+       "mal": 2
+      }
+     ]
+    }
+   ],
+   "props": [],
+   "ausgaenge": [
+    {
+     "id": "ausgang_testkammer_2",
+     "script_name": "AusgangTestkammer2",
+     "ziel": "testkammer_2",
+     "name_key": "UI_RAUM_TESTKAMMER_2",
+     "rect": [
+      6,
+      105,
+      27,
+      105
+     ],
+     "gehe": [
+      36,
+      240
+     ],
+     "erreichbar_ab": "R9b",
+     "ansehen": [
+      {
+       "zeile": "W3_KAM1_MAX_0390",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_KAM1_MAX_0390"
+       ]
+      },
+      {
+       "zeile": "W3_KAM1_MAX_0395",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_KAM1_MAX_0395"
+       ],
+       "mal": 2
+      }
+     ]
+    }
+   ],
+   "zurufe": [
+    {
+     "zeile": "W3_KAM1_PIX_0910",
+     "sprecher": "PIX",
+     "blasen": [
+      "W3_KAM1_PIX_0910"
+     ]
+    },
+    {
+     "zeile": "W3_KAM1_PIX_0920",
+     "sprecher": "PIX",
+     "blasen": [
+      "W3_KAM1_PIX_0920"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "testkammer_2",
+   "script_name": "Testkammer2",
+   "name_key": "UI_RAUM_TESTKAMMER_2",
+   "groesse": [
+    480,
+    270
+   ],
+   "hintergrund": "res://grafik/platzhalter/raum_testkammer_2.png",
+   "farbe": "#d0d0d0",
+   "laufbereich": [
+    [
+     6,
+     210
+    ],
+    [
+     474,
+     210
+    ],
+    [
+     474,
+     267
+    ],
+    [
+     6,
+     267
+    ]
+   ],
+   "marker": {
+    "start": [
+     240,
+     240
+    ],
+    "von_testkammer_1": [
+     36,
+     240
+    ],
+    "von_testkammer_3": [
+     444,
+     240
+    ]
+   },
+   "figuren": [
+    {
+     "id": "mutti",
+     "script_name": "Mutti",
+     "pos": [
+      240,
+      232
+     ]
+    }
+   ],
+   "hotspots": [
+    {
+     "id": "laser",
+     "script_name": "Laser",
+     "name_key": "UI_OBJ_LASER",
+     "rect": [
+      44,
+      30,
+      92,
+      48
+     ],
+     "gehe": [
+      90,
+      235
+     ],
+     "ansehen": [
+      {
+       "zeile": "W3_KAM2_MAX_0020",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_KAM2_MAX_0020"
+       ]
+      },
+      {
+       "zeile": "W3_KAM2_MAX_0025",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_KAM2_MAX_0025"
+       ],
+       "mal": 2
+      }
+     ],
+     "benutzen": [
+      {
+       "zeile": "W3_KAM2_MAX_0030",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_KAM2_MAX_0030"
+       ],
+       "folge": [
+        {
+         "zeile": "W3_KAM2_MUT_0040",
+         "sprecher": "MUT",
+         "blasen": [
+          "W3_KAM2_MUT_0040"
+         ]
+        }
+       ]
+      },
+      {
+       "zeile": "W3_KAM2_MAX_0100",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_KAM2_MAX_0100"
+       ],
+       "bedingung_text": "Jingle"
+      },
+      {
+       "zeile": "W3_KAM2_MAX_0240",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_KAM2_MAX_0240"
+       ]
+      }
+     ],
+     "gegenstand_auf": [
+      {
+       "zeile": "W3_KAM2_MAX_0230",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_KAM2_MAX_0230"
+       ],
+       "gegenstand": "portalgeraet"
+      }
+     ]
+    },
+    {
+     "id": "kritzelei",
+     "script_name": "Kritzelei",
+     "name_key": "UI_OBJ_KRITZELEI",
+     "rect": [
+      144,
+      30,
+      92,
+      48
+     ],
+     "gehe": [
+      190,
+      235
+     ],
+     "ansehen": [
+      {
+       "zeile": "W3_KAM2_MAX_0140",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_KAM2_MAX_0140"
+       ]
+      },
+      {
+       "zeile": "W3_KAM2_MAX_0145",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_KAM2_MAX_0145"
+       ],
+       "mal": 2
+      }
+     ],
+     "benutzen": [
+      {
+       "zeile": "W3_KAM2_MUT_0170",
+       "sprecher": "MUT",
+       "blasen": [
+        "W3_KAM2_MUT_0170"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "sockel",
+     "script_name": "Sockel",
+     "name_key": "UI_OBJ_SOCKEL",
+     "rect": [
+      244,
+      30,
+      92,
+      48
+     ],
+     "gehe": [
+      290,
+      235
+     ],
+     "ansehen": [
+      {
+       "zeile": "W3_KAM2_MAX_0180",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_KAM2_MAX_0180"
+       ]
+      },
+      {
+       "zeile": "W3_KAM2_MAX_0185",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_KAM2_MAX_0185"
+       ],
+       "mal": 2
+      }
+     ]
+    }
+   ],
+   "props": [
+    {
+     "id": "gummihuhn",
+     "script_name": "Gummihuhn",
+     "name_key": "UI_OBJ_GUMMIHUHN",
+     "rect": [
+      100,
+      195,
+      15,
+      12
+     ],
+     "gehe": [
+      107,
+      235
+     ],
+     "textur": "res://grafik/platzhalter/prop_gummihuhn.png",
+     "gegenstand": "gummihuhn",
+     "ansehen": [
+      {
+       "zeile": "W3_KAM2_MAX_0050",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_KAM2_MAX_0050"
+       ]
+      },
+      {
+       "zeile": "W3_KAM2_MAX_0055",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_KAM2_MAX_0055"
+       ],
+       "mal": 2
+      }
+     ],
+     "nehmen": {
+      "zeile": "W3_KAM2_MAX_0060",
+      "sprecher": "MAX",
+      "blasen": [
+       "W3_KAM2_MAX_0060"
+      ],
+      "folge": [
+       {
+        "zeile": "W3_KAM2_PIX_0070",
+        "sprecher": "PIX",
+        "blasen": [
+         "W3_KAM2_PIX_0070"
+        ]
+       }
+      ]
+     }
+    }
+   ],
+   "ausgaenge": [
+    {
+     "id": "ausgang_testkammer_1",
+     "script_name": "AusgangTestkammer1",
+     "ziel": "testkammer_1",
+     "name_key": "UI_RAUM_TESTKAMMER_1",
+     "rect": [
+      6,
+      105,
+      27,
+      105
+     ],
+     "gehe": [
+      36,
+      240
+     ],
+     "erreichbar_ab": "R9a",
+     "ansehen": []
+    },
+    {
+     "id": "ausgang_testkammer_3",
+     "script_name": "AusgangTestkammer3",
+     "ziel": "testkammer_3",
+     "name_key": "UI_RAUM_TESTKAMMER_3",
+     "rect": [
+      447,
+      105,
+      27,
+      105
+     ],
+     "gehe": [
+      444,
+      240
+     ],
+     "erreichbar_ab": "R9c",
+     "ansehen": []
+    }
+   ],
+   "zurufe": []
+  },
+  {
+   "id": "testkammer_3",
+   "script_name": "Testkammer3",
+   "name_key": "UI_RAUM_TESTKAMMER_3",
+   "groesse": [
+    480,
+    270
+   ],
+   "hintergrund": "res://grafik/platzhalter/raum_testkammer_3.png",
+   "farbe": "#c8c8c8",
+   "laufbereich": [
+    [
+     6,
+     210
+    ],
+    [
+     474,
+     210
+    ],
+    [
+     474,
+     267
+    ],
+    [
+     6,
+     267
+    ]
+   ],
+   "marker": {
+    "start": [
+     240,
+     240
+    ],
+    "von_testkammer_2": [
+     36,
+     240
+    ],
+    "von_kern": [
+     444,
+     240
+    ]
+   },
+   "figuren": [
+    {
+     "id": "tuer",
+     "script_name": "Tuer",
+     "pos": [
+      120,
+      232
+     ]
+    },
+    {
+     "id": "mutti",
+     "script_name": "Mutti",
+     "pos": [
+      240,
+      232
+     ]
+    },
+    {
+     "id": "bernd",
+     "script_name": "Bernd",
+     "pos": [
+      360,
+      232
+     ]
+    }
+   ],
+   "hotspots": [
+    {
+     "id": "lautsprecher",
+     "script_name": "Lautsprecher",
+     "name_key": "UI_OBJ_LAUTSPRECHER",
+     "rect": [
+      44,
+      30,
+      392,
+      48
+     ],
+     "gehe": [
+      240,
+      235
+     ],
+     "ansehen": [
+      {
+       "zeile": "W3_KAM3_MAX_0080",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_KAM3_MAX_0080"
+       ]
+      },
+      {
+       "zeile": "W3_KAM3_MAX_0085",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_KAM3_MAX_0085"
+       ],
+       "mal": 2
+      }
+     ],
+     "benutzen": [
+      {
+       "zeile": "W3_KAM3_MUT_0090",
+       "sprecher": "MUT",
+       "blasen": [
+        "W3_KAM3_MUT_0090"
+       ]
+      }
+     ]
+    }
+   ],
+   "props": [],
+   "ausgaenge": [
+    {
+     "id": "ausgang_testkammer_2",
+     "script_name": "AusgangTestkammer2",
+     "ziel": "testkammer_2",
+     "name_key": "UI_RAUM_TESTKAMMER_2",
+     "rect": [
+      6,
+      105,
+      27,
+      105
+     ],
+     "gehe": [
+      36,
+      240
+     ],
+     "erreichbar_ab": "R9b",
+     "ansehen": []
+    },
+    {
+     "id": "ausgang_kern",
+     "script_name": "AusgangKern",
+     "ziel": "kern",
+     "name_key": "UI_RAUM_KERN",
+     "rect": [
+      447,
+      105,
+      27,
+      105
+     ],
+     "gehe": [
+      444,
+      240
+     ],
+     "erreichbar_ab": "R9d",
+     "ansehen": [
+      {
+       "zeile": "W3_KAM3_MAX_0050",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_KAM3_MAX_0050"
+       ]
+      },
+      {
+       "zeile": "W3_KAM3_MAX_0055",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_KAM3_MAX_0055"
+       ],
+       "mal": 2
+      }
+     ]
+    }
+   ],
+   "zurufe": []
+  },
+  {
+   "id": "kern",
+   "script_name": "Kern",
+   "name_key": "UI_RAUM_KERN",
+   "groesse": [
+    480,
+    270
+   ],
+   "hintergrund": "res://grafik/platzhalter/raum_kern.png",
+   "farbe": "#2c2c3c",
+   "laufbereich": [
+    [
+     6,
+     210
+    ],
+    [
+     474,
+     210
+    ],
+    [
+     474,
+     267
+    ],
+    [
+     6,
+     267
+    ]
+   ],
+   "marker": {
+    "start": [
+     240,
+     240
+    ],
+    "von_testkammer_3": [
+     36,
+     240
+    ]
+   },
+   "figuren": [
+    {
+     "id": "mutti",
+     "script_name": "Mutti",
+     "pos": [
+      240,
+      232
+     ]
+    }
+   ],
+   "hotspots": [
+    {
+     "id": "kabel",
+     "script_name": "Kabel",
+     "name_key": "UI_OBJ_KABEL",
+     "rect": [
+      44,
+      30,
+      125,
+      48
+     ],
+     "gehe": [
+      106,
+      235
+     ],
+     "ansehen": [
+      {
+       "zeile": "W3_KERN_MAX_0550",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_KERN_MAX_0550"
+       ]
+      },
+      {
+       "zeile": "W3_KERN_MAX_0555",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_KERN_MAX_0555"
+       ],
+       "mal": 2
+      }
+     ]
+    },
+    {
+     "id": "sockel",
+     "script_name": "Sockel",
+     "name_key": "UI_OBJ_SOCKEL",
+     "rect": [
+      177,
+      30,
+      125,
+      48
+     ],
+     "gehe": [
+      239,
+      235
+     ],
+     "ansehen": [
+      {
+       "zeile": "W3_KERN_MAX_0560",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_KERN_MAX_0560"
+       ]
+      },
+      {
+       "zeile": "W3_KERN_MAX_0565",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_KERN_MAX_0565"
+       ],
+       "mal": 2
+      }
+     ]
+    },
+    {
+     "id": "streifen",
+     "script_name": "Streifen",
+     "name_key": "UI_OBJ_STREIFEN",
+     "rect": [
+      310,
+      30,
+      125,
+      48
+     ],
+     "gehe": [
+      372,
+      235
+     ],
+     "ansehen": [
+      {
+       "zeile": "W3_KERN_MAX_0570",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_KERN_MAX_0570"
+       ]
+      },
+      {
+       "zeile": "W3_KERN_MAX_0575",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_KERN_MAX_0575"
+       ],
+       "mal": 2
+      }
+     ]
+    }
+   ],
+   "props": [
+    {
+     "id": "energiezelle",
+     "script_name": "Energiezelle",
+     "name_key": "UI_OBJ_ENERGIEZELLE",
+     "rect": [
+      100,
+      195,
+      15,
+      12
+     ],
+     "gehe": [
+      107,
+      235
+     ],
+     "textur": "res://grafik/platzhalter/prop_energiezelle.png",
+     "gegenstand": "energiezelle",
+     "ansehen": [
+      {
+       "zeile": "W3_KERN_MAX_0410",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_KERN_MAX_0410"
+       ]
+      },
+      {
+       "zeile": "W3_KERN_PIX_0415",
+       "sprecher": "PIX",
+       "blasen": [
+        "W3_KERN_PIX_0415"
+       ],
+       "mal": 2
+      }
+     ],
+     "nehmen": {
+      "zeile": "W3_KERN_MAX_0500",
+      "sprecher": "MAX",
+      "blasen": [
+       "W3_KERN_MAX_0500"
+      ],
+      "bedingung_text": "Jingle Welt geschafft"
+     },
+     "benutzen": [
+      {
+       "zeile": "W3_KERN_MAX_0420",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_KERN_MAX_0420"
+       ]
+      }
+     ]
+    }
+   ],
+   "ausgaenge": [
+    {
+     "id": "ausgang_testkammer_3",
+     "script_name": "AusgangTestkammer3",
+     "ziel": "testkammer_3",
+     "name_key": "UI_RAUM_TESTKAMMER_3",
+     "rect": [
+      6,
+      105,
+      27,
+      105
+     ],
+     "gehe": [
+      36,
+      240
+     ],
+     "erreichbar_ab": "R9c",
+     "ansehen": []
+    }
+   ],
+   "zurufe": [
+    {
+     "zeile": "W3_KERN_PIX_0910",
+     "sprecher": "PIX",
+     "blasen": [
+      "W3_KERN_PIX_0910"
+     ]
+    },
+    {
+     "zeile": "W3_KERN_PIX_0920",
+     "sprecher": "PIX",
+     "blasen": [
+      "W3_KERN_PIX_0920"
+     ]
+    }
+   ]
+  }
+ ],
+ "figuren": [
+  {
+   "id": "max",
+   "script_name": "Max",
+   "kuerzel": "MAX",
+   "name_key": "UI_OBJ_MAX",
+   "groesse_px": 84,
+   "spielbar": true,
+   "textfarbe": "#ffffff",
+   "sprite": "res://grafik/platzhalter/figur_max.png",
+   "raeume": [
+    "unterstadt_strasse",
+    "apothekengasse",
+    "widerstandsbasis",
+    "laboreingang",
+    "stadtstrasse",
+    "kueche_orakel",
+    "buero_50",
+    "testkammer_1",
+    "testkammer_2",
+    "testkammer_3",
+    "kern"
+   ],
+   "tier": false,
+   "ansehen": [],
+   "pixel_auf": [],
+   "pixel_redet": [],
+   "gegenstand_auf": [],
+   "benutzen": []
+  },
+  {
+   "id": "pixel",
+   "script_name": "Pixel",
+   "kuerzel": "PIX",
+   "name_key": "UI_OBJ_PIXEL",
+   "groesse_px": 27,
+   "spielbar": true,
+   "textfarbe": "#5fd3c8",
+   "sprite": "res://grafik/platzhalter/figur_pixel.png",
+   "raeume": [
+    "unterstadt_strasse",
+    "apothekengasse",
+    "widerstandsbasis",
+    "kuehlung",
+    "laboreingang"
+   ],
+   "tier": false,
+   "ansehen": [],
+   "pixel_auf": [],
+   "pixel_redet": [],
+   "gegenstand_auf": [
+    {
+     "zeile": "W3_BAS_PIX_0880",
+     "sprecher": "PIX",
+     "blasen": [
+      "W3_BAS_PIX_0880"
+     ],
+     "gegenstand": "omas_kekse",
+     "raum": "widerstandsbasis"
+    }
+   ],
+   "benutzen": []
+  },
+  {
+   "id": "opa",
+   "script_name": "Opa",
+   "kuerzel": "OPA",
+   "name_key": "UI_OBJ_OPA",
+   "groesse_px": 36,
+   "spielbar": false,
+   "textfarbe": "#f5a04a",
+   "sprite": "res://grafik/platzhalter/figur_opa.png",
+   "raeume": [
+    "widerstandsbasis",
+    "testkammer_1"
+   ],
+   "tier": false,
+   "ansehen": [],
+   "pixel_auf": [],
+   "pixel_redet": [],
+   "gegenstand_auf": [],
+   "benutzen": []
+  },
+  {
+   "id": "morphaeus",
+   "script_name": "Morphaeus",
+   "kuerzel": "MOR",
+   "name_key": "UI_OBJ_MORPHAEUS",
+   "groesse_px": 90,
+   "spielbar": false,
+   "textfarbe": "#ffffff",
+   "sprite": "res://grafik/platzhalter/figur_morphaeus.png",
+   "raeume": [
+    "unterstadt_strasse",
+    "apothekengasse"
+   ],
+   "tier": false,
+   "ansehen": [
+    {
+     "zeile": "W3_APO_MAX_0290",
+     "sprecher": "MAX",
+     "blasen": [
+      "W3_APO_MAX_0290"
+     ],
+     "raum": "apothekengasse"
+    },
+    {
+     "zeile": "W3_APO_MAX_0295",
+     "sprecher": "MAX",
+     "blasen": [
+      "W3_APO_MAX_0295"
+     ],
+     "mal": 2,
+     "raum": "apothekengasse"
+    }
+   ],
+   "pixel_auf": [
+    {
+     "zeile": "W3_STR_PIX_1030",
+     "sprecher": "PIX",
+     "blasen": [
+      "W3_STR_PIX_1030"
+     ],
+     "raum": "unterstadt_strasse"
+    }
+   ],
+   "pixel_redet": [],
+   "gegenstand_auf": [],
+   "benutzen": [
+    {
+     "zeile": "W3_APO_MOR_0300",
+     "sprecher": "MOR",
+     "blasen": [
+      "W3_APO_MOR_0300"
+     ],
+     "raum": "apothekengasse"
+    }
+   ]
+  },
+  {
+   "id": "deckert",
+   "script_name": "Deckert",
+   "kuerzel": "DEC",
+   "name_key": "UI_OBJ_DECKERT",
+   "groesse_px": 90,
+   "spielbar": false,
+   "textfarbe": "#ffffff",
+   "sprite": "res://grafik/platzhalter/figur_deckert.png",
+   "raeume": [
+    "unterstadt_strasse"
+   ],
+   "tier": false,
+   "ansehen": [
+    {
+     "zeile": "W3_STR_MAX_0310",
+     "sprecher": "MAX",
+     "blasen": [
+      "W3_STR_MAX_0310"
+     ],
+     "raum": "unterstadt_strasse"
+    },
+    {
+     "zeile": "W3_STR_MAX_0315",
+     "sprecher": "MAX",
+     "blasen": [
+      "W3_STR_MAX_0315"
+     ],
+     "mal": 2,
+     "raum": "unterstadt_strasse"
+    }
+   ],
+   "pixel_auf": [
+    {
+     "zeile": "W3_STR_PIX_1010",
+     "sprecher": "PIX",
+     "blasen": [
+      "W3_STR_PIX_1010"
+     ],
+     "raum": "unterstadt_strasse"
+    }
+   ],
+   "pixel_redet": [],
+   "gegenstand_auf": [],
+   "benutzen": []
+  },
+  {
+   "id": "herr_vier",
+   "script_name": "HerrVier",
+   "kuerzel": "VIE",
+   "name_key": "UI_OBJ_HERR_VIER",
+   "groesse_px": 84,
+   "spielbar": false,
+   "textfarbe": "#ffffff",
+   "sprite": "res://grafik/platzhalter/figur_herr_vier.png",
+   "raeume": [
+    "unterstadt_strasse"
+   ],
+   "tier": false,
+   "ansehen": [
+    {
+     "zeile": "W3_STR_MAX_0320",
+     "sprecher": "MAX",
+     "blasen": [
+      "W3_STR_MAX_0320"
+     ],
+     "raum": "unterstadt_strasse"
+    },
+    {
+     "zeile": "W3_STR_MAX_0325",
+     "sprecher": "MAX",
+     "blasen": [
+      "W3_STR_MAX_0325"
+     ],
+     "mal": 2,
+     "raum": "unterstadt_strasse"
+    }
+   ],
+   "pixel_auf": [
+    {
+     "zeile": "W3_STR_PIX_1020",
+     "sprecher": "PIX",
+     "blasen": [
+      "W3_STR_PIX_1020"
+     ],
+     "raum": "unterstadt_strasse"
+    }
+   ],
+   "pixel_redet": [],
+   "gegenstand_auf": [],
+   "benutzen": []
+  },
+  {
+   "id": "weinender_mann",
+   "script_name": "WeinenderMann",
+   "kuerzel": "WEI",
+   "name_key": "UI_OBJ_WEINENDER_MANN",
+   "groesse_px": 87,
+   "spielbar": false,
+   "textfarbe": "#ffffff",
+   "sprite": "res://grafik/platzhalter/figur_weinender_mann.png",
+   "raeume": [
+    "unterstadt_strasse"
+   ],
+   "tier": false,
+   "ansehen": [
+    {
+     "zeile": "W3_STR_MAX_0180",
+     "sprecher": "MAX",
+     "blasen": [
+      "W3_STR_MAX_0180"
+     ],
+     "bedingung_text": "trägt Beobachtung „weint in die Suppe“ ins Notizbuch ein",
+     "raum": "unterstadt_strasse"
+    },
+    {
+     "zeile": "W3_STR_MAX_0185",
+     "sprecher": "MAX",
+     "blasen": [
+      "W3_STR_MAX_0185"
+     ],
+     "bedingung_text": "trägt Beobachtung „weint in die Suppe“ ins Notizbuch ein",
+     "mal": 2,
+     "raum": "unterstadt_strasse"
+    }
+   ],
+   "pixel_auf": [
+    {
+     "zeile": "W3_STR_PIX_1040",
+     "sprecher": "PIX",
+     "blasen": [
+      "W3_STR_PIX_1040"
+     ],
+     "raum": "unterstadt_strasse"
+    }
+   ],
+   "pixel_redet": [],
+   "gegenstand_auf": [],
+   "benutzen": [
+    {
+     "zeile": "W3_STR_WEI_0190",
+     "sprecher": "WEI",
+     "blasen": [
+      "W3_STR_WEI_0190"
+     ],
+     "raum": "unterstadt_strasse",
+     "folge": [
+      {
+       "zeile": "W3_STR_MAX_0200",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_STR_MAX_0200"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "frau_regenschirm",
+   "script_name": "FrauRegenschirm",
+   "kuerzel": "FRA",
+   "name_key": "UI_OBJ_FRAU_REGENSCHIRM",
+   "groesse_px": 84,
+   "spielbar": false,
+   "textfarbe": "#ffffff",
+   "sprite": "res://grafik/platzhalter/figur_frau_regenschirm.png",
+   "raeume": [
+    "unterstadt_strasse"
+   ],
+   "tier": false,
+   "ansehen": [
+    {
+     "zeile": "W3_STR_MAX_0210",
+     "sprecher": "MAX",
+     "blasen": [
+      "W3_STR_MAX_0210"
+     ],
+     "bedingung_text": "trägt Beobachtung „streitet mit Gegenständen“ ins Notizbuch ein",
+     "raum": "unterstadt_strasse"
+    },
+    {
+     "zeile": "W3_STR_MAX_0215",
+     "sprecher": "MAX",
+     "blasen": [
+      "W3_STR_MAX_0215"
+     ],
+     "bedingung_text": "trägt Beobachtung „streitet mit Gegenständen“ ins Notizbuch ein",
+     "mal": 2,
+     "raum": "unterstadt_strasse"
+    }
+   ],
+   "pixel_auf": [
+    {
+     "zeile": "W3_STR_PIX_1050",
+     "sprecher": "PIX",
+     "blasen": [
+      "W3_STR_PIX_1050"
+     ],
+     "raum": "unterstadt_strasse"
+    }
+   ],
+   "pixel_redet": [],
+   "gegenstand_auf": [],
+   "benutzen": [
+    {
+     "zeile": "W3_STR_FRA_0220",
+     "sprecher": "FRA",
+     "blasen": [
+      "W3_STR_FRA_0220"
+     ],
+     "bedingung_text": "sie meint den Schirm",
+     "raum": "unterstadt_strasse",
+     "folge": [
+      {
+       "zeile": "W3_STR_PIX_0230",
+       "sprecher": "PIX",
+       "blasen": [
+        "W3_STR_PIX_0230"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "strassenmusiker",
+   "script_name": "Strassenmusiker",
+   "kuerzel": "MUS",
+   "name_key": "UI_OBJ_STRASSENMUSIKER",
+   "groesse_px": 87,
+   "spielbar": false,
+   "textfarbe": "#ffffff",
+   "sprite": "res://grafik/platzhalter/figur_strassenmusiker.png",
+   "raeume": [
+    "unterstadt_strasse"
+   ],
+   "tier": false,
+   "ansehen": [
+    {
+     "zeile": "W3_STR_MAX_0150",
+     "sprecher": "MAX",
+     "blasen": [
+      "W3_STR_MAX_0150"
+     ],
+     "bedingung_text": "trägt Beobachtung „spielt im Regen weiter“ ins Notizbuch ein",
+     "raum": "unterstadt_strasse",
+     "folge": [
+      {
+       "zeile": "W3_STR_PIX_0160",
+       "sprecher": "PIX",
+       "blasen": [
+        "W3_STR_PIX_0160"
+       ]
+      }
+     ]
+    },
+    {
+     "zeile": "W3_STR_MAX_0155",
+     "sprecher": "MAX",
+     "blasen": [
+      "W3_STR_MAX_0155"
+     ],
+     "bedingung_text": "trägt Beobachtung „spielt im Regen weiter“ ins Notizbuch ein",
+     "mal": 2,
+     "raum": "unterstadt_strasse"
+    }
+   ],
+   "pixel_auf": [
+    {
+     "zeile": "W3_STR_PIX_1060",
+     "sprecher": "PIX",
+     "blasen": [
+      "W3_STR_PIX_1060"
+     ],
+     "raum": "unterstadt_strasse"
+    }
+   ],
+   "pixel_redet": [],
+   "gegenstand_auf": [],
+   "benutzen": [
+    {
+     "zeile": "W3_STR_MUS_0170",
+     "sprecher": "MUS",
+     "blasen": [
+      "W3_STR_MUS_0170"
+     ],
+     "raum": "unterstadt_strasse"
+    }
+   ]
+  },
+  {
+   "id": "pastillenautomat",
+   "script_name": "Pastillenautomat",
+   "kuerzel": "AUT",
+   "name_key": "UI_OBJ_PASTILLENAUTOMAT",
+   "groesse_px": 0,
+   "spielbar": false,
+   "textfarbe": "#ffffff",
+   "sprite": "res://grafik/platzhalter/figur_pastillenautomat.png",
+   "raeume": [
+    "apothekengasse"
+   ],
+   "tier": false,
+   "ansehen": [
+    {
+     "zeile": "W3_APO_MAX_0010",
+     "sprecher": "MAX",
+     "blasen": [
+      "W3_APO_MAX_0010"
+     ],
+     "raum": "apothekengasse"
+    },
+    {
+     "zeile": "W3_APO_PIX_0020",
+     "sprecher": "PIX",
+     "blasen": [
+      "W3_APO_PIX_0020"
+     ],
+     "mal": 2,
+     "raum": "apothekengasse"
+    }
+   ],
+   "pixel_auf": [
+    {
+     "zeile": "W3_APO_PIX_1010",
+     "sprecher": "PIX",
+     "blasen": [
+      "W3_APO_PIX_1010"
+     ],
+     "raum": "apothekengasse"
+    }
+   ],
+   "pixel_redet": [],
+   "gegenstand_auf": [],
+   "benutzen": []
+  },
+  {
+   "id": "kalle",
+   "script_name": "Kalle",
+   "kuerzel": "KAL",
+   "name_key": "UI_OBJ_KALLE",
+   "groesse_px": 87,
+   "spielbar": false,
+   "textfarbe": "#ffffff",
+   "sprite": "res://grafik/platzhalter/figur_kalle.png",
+   "raeume": [
+    "widerstandsbasis",
+    "laboreingang"
+   ],
+   "tier": false,
+   "ansehen": [],
+   "pixel_auf": [
+    {
+     "zeile": "W3_BAS_PIX_1010",
+     "sprecher": "PIX",
+     "blasen": [
+      "W3_BAS_PIX_1010"
+     ],
+     "raum": "widerstandsbasis"
+    }
+   ],
+   "pixel_redet": [],
+   "gegenstand_auf": [],
+   "benutzen": []
+  },
+  {
+   "id": "rebellin",
+   "script_name": "Rebellin",
+   "kuerzel": "REB",
+   "name_key": "UI_OBJ_REBELLIN",
+   "groesse_px": 87,
+   "spielbar": false,
+   "textfarbe": "#ffffff",
+   "sprite": "res://grafik/platzhalter/figur_rebellin.png",
+   "raeume": [
+    "widerstandsbasis"
+   ],
+   "tier": false,
+   "ansehen": [],
+   "pixel_auf": [
+    {
+     "zeile": "W3_BAS_PIX_1020",
+     "sprecher": "PIX",
+     "blasen": [
+      "W3_BAS_PIX_1020"
+     ],
+     "raum": "widerstandsbasis"
+    }
+   ],
+   "pixel_redet": [],
+   "gegenstand_auf": [],
+   "benutzen": []
+  },
+  {
+   "id": "rebell",
+   "script_name": "Rebell",
+   "kuerzel": "REL",
+   "name_key": "UI_OBJ_REBELL",
+   "groesse_px": 90,
+   "spielbar": false,
+   "textfarbe": "#ffffff",
+   "sprite": "res://grafik/platzhalter/figur_rebell.png",
+   "raeume": [
+    "widerstandsbasis"
+   ],
+   "tier": false,
+   "ansehen": [],
+   "pixel_auf": [
+    {
+     "zeile": "W3_BAS_PIX_1030",
+     "sprecher": "PIX",
+     "blasen": [
+      "W3_BAS_PIX_1030"
+     ],
+     "raum": "widerstandsbasis"
+    }
+   ],
+   "pixel_redet": [],
+   "gegenstand_auf": [],
+   "benutzen": []
+  },
+  {
+   "id": "piepsi",
+   "script_name": "Piepsi",
+   "kuerzel": "PIE",
+   "name_key": "UI_OBJ_PIEPSI",
+   "groesse_px": 27,
+   "spielbar": false,
+   "textfarbe": "#ffffff",
+   "sprite": "res://grafik/platzhalter/figur_piepsi.png",
+   "raeume": [
+    "widerstandsbasis"
+   ],
+   "tier": false,
+   "ansehen": [
+    {
+     "zeile": "W3_BAS_MAX_0800",
+     "sprecher": "MAX",
+     "blasen": [
+      "W3_BAS_MAX_0800"
+     ],
+     "bedingung": [
+      {
+       "art": "vor",
+       "raetsel": "R13"
+      }
+     ],
+     "raum": "widerstandsbasis"
+    },
+    {
+     "zeile": "W3_BAS_MAX_0805",
+     "sprecher": "MAX",
+     "blasen": [
+      "W3_BAS_MAX_0805"
+     ],
+     "bedingung": [
+      {
+       "art": "vor",
+       "raetsel": "R13"
+      }
+     ],
+     "mal": 2,
+     "raum": "widerstandsbasis"
+    },
+    {
+     "zeile": "W3_PIEP_MAX_0230",
+     "sprecher": "MAX",
+     "blasen": [
+      "W3_PIEP_MAX_0230"
+     ],
+     "raum": "widerstandsbasis"
+    },
+    {
+     "zeile": "W3_PIEP_MAX_0235",
+     "sprecher": "MAX",
+     "blasen": [
+      "W3_PIEP_MAX_0235"
+     ],
+     "mal": 2,
+     "raum": "widerstandsbasis"
+    }
+   ],
+   "pixel_auf": [
+    {
+     "zeile": "W3_BAS_PIX_1040",
+     "sprecher": "PIX",
+     "blasen": [
+      "W3_BAS_PIX_1040"
+     ],
+     "raum": "widerstandsbasis"
+    },
+    {
+     "zeile": "W3_BAS_PIX_1050",
+     "sprecher": "PIX",
+     "blasen": [
+      "W3_BAS_PIX_1050"
+     ],
+     "raum": "widerstandsbasis"
+    }
+   ],
+   "pixel_redet": [],
+   "gegenstand_auf": [],
+   "benutzen": [
+    {
+     "zeile": "W3_BAS_MAX_0810",
+     "sprecher": "MAX",
+     "blasen": [
+      "W3_BAS_MAX_0810"
+     ],
+     "bedingung": [
+      {
+       "art": "vor",
+       "raetsel": "R13"
+      }
+     ],
+     "raum": "widerstandsbasis"
+    }
+   ]
+  },
+  {
+   "id": "hausmeister",
+   "script_name": "Hausmeister",
+   "kuerzel": "HAU",
+   "name_key": "UI_OBJ_HAUSMEISTER",
+   "groesse_px": 87,
+   "spielbar": false,
+   "textfarbe": "#ffffff",
+   "sprite": "res://grafik/platzhalter/figur_hausmeister.png",
+   "raeume": [
+    "laboreingang",
+    "widerstandsbasis"
+   ],
+   "tier": false,
+   "ansehen": [
+    {
+     "zeile": "W3_EING_MAX_0280",
+     "sprecher": "MAX",
+     "blasen": [
+      "W3_EING_MAX_0280"
+     ],
+     "bedingung_text": "ohne Olivenöl in der Tasche",
+     "raum": "laboreingang"
+    },
+    {
+     "zeile": "W3_EING_MAX_0285",
+     "sprecher": "MAX",
+     "blasen": [
+      "W3_EING_MAX_0285"
+     ],
+     "bedingung_text": "ohne Olivenöl in der Tasche",
+     "mal": 2,
+     "raum": "laboreingang"
+    },
+    {
+     "zeile": "W3_EING_MAX_0520",
+     "sprecher": "MAX",
+     "blasen": [
+      "W3_EING_MAX_0520"
+     ],
+     "raum": "laboreingang"
+    },
+    {
+     "zeile": "W3_EING_PIX_0525",
+     "sprecher": "PIX",
+     "blasen": [
+      "W3_EING_PIX_0525"
+     ],
+     "mal": 2,
+     "raum": "laboreingang"
+    }
+   ],
+   "pixel_auf": [
+    {
+     "zeile": "W3_EING_PIX_1010",
+     "sprecher": "PIX",
+     "blasen": [
+      "W3_EING_PIX_1010"
+     ],
+     "raum": "laboreingang"
+    }
+   ],
+   "pixel_redet": [],
+   "gegenstand_auf": [
+    {
+     "zeile": "W3_EING_HAU_0540",
+     "sprecher": "HAU",
+     "blasen": [
+      "W3_EING_HAU_0540"
+     ],
+     "gegenstand": "rezeptkarte",
+     "raum": "laboreingang"
+    },
+    {
+     "zeile": "W3_EING_MAX_0550",
+     "sprecher": "MAX",
+     "blasen": [
+      "W3_EING_MAX_0550"
+     ],
+     "gegenstand": "omas_kekse",
+     "raum": "laboreingang"
+    }
+   ],
+   "benutzen": []
+  },
+  {
+   "id": "orakel_oma",
+   "script_name": "OrakelOma",
+   "kuerzel": "ORA",
+   "name_key": "UI_OBJ_ORAKEL_OMA",
+   "groesse_px": 84,
+   "spielbar": false,
+   "textfarbe": "#ffffff",
+   "sprite": "res://grafik/platzhalter/figur_orakel_oma.png",
+   "raeume": [
+    "kueche_orakel"
+   ],
+   "tier": false,
+   "ansehen": [],
+   "pixel_auf": [],
+   "pixel_redet": [],
+   "gegenstand_auf": [
+    {
+     "zeile": "W3_KUCH_MAX_0760",
+     "sprecher": "MAX",
+     "blasen": [
+      "W3_KUCH_MAX_0760"
+     ],
+     "gegenstand": "omas_kekse",
+     "raum": "kueche_orakel"
+    },
+    {
+     "zeile": "W3_KUCH_MAX_0770",
+     "sprecher": "MAX",
+     "blasen": [
+      "W3_KUCH_MAX_0770"
+     ],
+     "gegenstand": "rezeptkarte",
+     "raum": "kueche_orakel",
+     "folge": [
+      {
+       "zeile": "W3_KUCH_ORA_0780",
+       "sprecher": "ORA",
+       "blasen": [
+        "W3_KUCH_ORA_0780"
+       ]
+      }
+     ]
+    }
+   ],
+   "benutzen": []
+  },
+  {
+   "id": "radio",
+   "script_name": "Radio",
+   "kuerzel": "RAD",
+   "name_key": "UI_OBJ_RADIO",
+   "groesse_px": 0,
+   "spielbar": false,
+   "textfarbe": "#ffffff",
+   "sprite": "res://grafik/platzhalter/figur_radio.png",
+   "raeume": [
+    "kueche_orakel"
+   ],
+   "tier": false,
+   "ansehen": [
+    {
+     "zeile": "W3_KUCH_MAX_0640",
+     "sprecher": "MAX",
+     "blasen": [
+      "W3_KUCH_MAX_0640"
+     ],
+     "bedingung_text": "vor 0230",
+     "raum": "kueche_orakel"
+    },
+    {
+     "zeile": "W3_KUCH_MAX_0645",
+     "sprecher": "MAX",
+     "blasen": [
+      "W3_KUCH_MAX_0645"
+     ],
+     "bedingung_text": "vor 0230",
+     "mal": 2,
+     "raum": "kueche_orakel"
+    },
+    {
+     "zeile": "W3_KUCH_MAX_0650",
+     "sprecher": "MAX",
+     "blasen": [
+      "W3_KUCH_MAX_0650"
+     ],
+     "bedingung": [
+      {
+       "art": "nach_zeile",
+       "zeile": "W3_KUCH_RAD_0230"
+      }
+     ],
+     "raum": "kueche_orakel"
+    },
+    {
+     "zeile": "W3_KUCH_MAX_0655",
+     "sprecher": "MAX",
+     "blasen": [
+      "W3_KUCH_MAX_0655"
+     ],
+     "bedingung": [
+      {
+       "art": "nach_zeile",
+       "zeile": "W3_KUCH_RAD_0230"
+      }
+     ],
+     "mal": 2,
+     "raum": "kueche_orakel"
+    }
+   ],
+   "pixel_auf": [],
+   "pixel_redet": [],
+   "gegenstand_auf": [],
+   "benutzen": [
+    {
+     "zeile": "W3_KUCH_ORA_0660",
+     "sprecher": "ORA",
+     "blasen": [
+      "W3_KUCH_ORA_0660"
+     ],
+     "raum": "kueche_orakel"
+    }
+   ]
+  },
+  {
+   "id": "schmidt",
+   "script_name": "Schmidt",
+   "kuerzel": "SCH",
+   "name_key": "UI_OBJ_SCHMIDT",
+   "groesse_px": 90,
+   "spielbar": false,
+   "textfarbe": "#ffffff",
+   "sprite": "res://grafik/platzhalter/figur_schmidt.png",
+   "raeume": [
+    "stadtstrasse",
+    "buero_50"
+   ],
+   "tier": false,
+   "ansehen": [
+    {
+     "zeile": "W3_TUER_MAX_0310",
+     "sprecher": "MAX",
+     "blasen": [
+      "W3_TUER_MAX_0310"
+     ],
+     "raum": "stadtstrasse"
+    },
+    {
+     "zeile": "W3_TUER_MAX_0315",
+     "sprecher": "MAX",
+     "blasen": [
+      "W3_TUER_MAX_0315"
+     ],
+     "mal": 2,
+     "raum": "stadtstrasse"
+    },
+    {
+     "zeile": "W3_TUER_MAX_0320",
+     "sprecher": "MAX",
+     "blasen": [
+      "W3_TUER_MAX_0320"
+     ],
+     "raum": "stadtstrasse"
+    },
+    {
+     "zeile": "W3_TUER_MAX_0325",
+     "sprecher": "MAX",
+     "blasen": [
+      "W3_TUER_MAX_0325"
+     ],
+     "mal": 2,
+     "raum": "stadtstrasse"
+    }
+   ],
+   "pixel_auf": [],
+   "pixel_redet": [],
+   "gegenstand_auf": [],
+   "benutzen": []
+  },
+  {
+   "id": "klon",
+   "script_name": "Klon",
+   "kuerzel": "KLO",
+   "name_key": "UI_OBJ_KLON",
+   "groesse_px": 90,
+   "spielbar": false,
+   "textfarbe": "#ffffff",
+   "sprite": "res://grafik/platzhalter/figur_klon.png",
+   "raeume": [
+    "buero_50"
+   ],
+   "tier": false,
+   "ansehen": [],
+   "pixel_auf": [],
+   "pixel_redet": [],
+   "gegenstand_auf": [],
+   "benutzen": []
+  },
+  {
+   "id": "tuer",
+   "script_name": "Tuer",
+   "kuerzel": "TUR",
+   "name_key": "UI_OBJ_TUER",
+   "groesse_px": 0,
+   "spielbar": false,
+   "textfarbe": "#ffffff",
+   "sprite": "res://grafik/platzhalter/figur_tuer.png",
+   "raeume": [
+    "stadtstrasse",
+    "testkammer_3"
+   ],
+   "tier": false,
+   "ansehen": [
+    {
+     "zeile": "W3_TUER_MAX_0130",
+     "sprecher": "MAX",
+     "blasen": [
+      "W3_TUER_MAX_0130"
+     ],
+     "raum": "stadtstrasse"
+    },
+    {
+     "zeile": "W3_TUER_MAX_0150",
+     "sprecher": "MAX",
+     "blasen": [
+      "W3_TUER_MAX_0150"
+     ],
+     "bedingung_text": "Animation Code-Sicht einschalten, Code-Sicht freigeschaltet",
+     "mal": 2,
+     "raum": "stadtstrasse"
+    }
+   ],
+   "pixel_auf": [],
+   "pixel_redet": [],
+   "gegenstand_auf": [
+    {
+     "zeile": "W3_KAM3_MAX_0320",
+     "sprecher": "MAX",
+     "blasen": [
+      "W3_KAM3_MAX_0320"
+     ],
+     "gegenstand": "portalgeraet",
+     "raum": "testkammer_3"
+    }
+   ],
+   "benutzen": [
+    {
+     "zeile": "W3_KAM3_MAX_0060",
+     "sprecher": "MAX",
+     "blasen": [
+      "W3_KAM3_MAX_0060"
+     ],
+     "raum": "testkammer_3"
+    },
+    {
+     "zeile": "W3_KAM3_TUR_0170",
+     "sprecher": "TUR",
+     "blasen": [
+      "W3_KAM3_TUR_0170"
+     ],
+     "raum": "testkammer_3"
+    }
+   ]
+  },
+  {
+   "id": "schwarze_katze",
+   "script_name": "SchwarzeKatze",
+   "kuerzel": null,
+   "name_key": "UI_OBJ_SCHWARZE_KATZE",
+   "groesse_px": 21,
+   "spielbar": false,
+   "textfarbe": "#ffffff",
+   "sprite": "res://grafik/platzhalter/figur_schwarze_katze.png",
+   "raeume": [
+    "stadtstrasse"
+   ],
+   "tier": false,
+   "ansehen": [
+    {
+     "zeile": "W3_SIM_MAX_0160",
+     "sprecher": "MAX",
+     "blasen": [
+      "W3_SIM_MAX_0160"
+     ],
+     "raum": "stadtstrasse"
+    },
+    {
+     "zeile": "W3_SIM_MAX_0170",
+     "sprecher": "MAX",
+     "blasen": [
+      "W3_SIM_MAX_0170"
+     ],
+     "raum": "stadtstrasse"
+    },
+    {
+     "zeile": "W3_SIM_PIX_0180",
+     "sprecher": "PIX",
+     "blasen": [
+      "W3_SIM_PIX_0180"
+     ],
+     "bedingung_text": "Pixel auf der Leitung",
+     "raum": "stadtstrasse"
+    },
+    {
+     "zeile": "W3_SIM_PIX_0190",
+     "sprecher": "PIX",
+     "blasen": [
+      "W3_SIM_PIX_0190"
+     ],
+     "bedingung_text": "Pixel auf der Leitung",
+     "raum": "stadtstrasse"
+    }
+   ],
+   "pixel_auf": [],
+   "pixel_redet": [],
+   "gegenstand_auf": [],
+   "benutzen": [
+    {
+     "zeile": "W3_SIM_MAX_0200",
+     "sprecher": "MAX",
+     "blasen": [
+      "W3_SIM_MAX_0200"
+     ],
+     "raum": "stadtstrasse"
+    }
+   ]
+  },
+  {
+   "id": "mutti",
+   "script_name": "Mutti",
+   "kuerzel": "MUT",
+   "name_key": "UI_OBJ_MUTTI",
+   "groesse_px": 180,
+   "spielbar": false,
+   "textfarbe": "#ffffff",
+   "sprite": "res://grafik/platzhalter/figur_mutti.png",
+   "raeume": [
+    "testkammer_1",
+    "testkammer_2",
+    "testkammer_3",
+    "kern"
+   ],
+   "tier": false,
+   "ansehen": [
+    {
+     "zeile": "W3_KERN_MAX_0540",
+     "sprecher": "MAX",
+     "blasen": [
+      "W3_KERN_MAX_0540"
+     ],
+     "raum": "kern"
+    },
+    {
+     "zeile": "W3_KERN_MAX_0545",
+     "sprecher": "MAX",
+     "blasen": [
+      "W3_KERN_MAX_0545"
+     ],
+     "mal": 2,
+     "raum": "kern"
+    }
+   ],
+   "pixel_auf": [],
+   "pixel_redet": [],
+   "gegenstand_auf": [],
+   "benutzen": [
+    {
+     "zeile": "W3_KERN_MUT_0610",
+     "sprecher": "MUT",
+     "blasen": [
+      "W3_KERN_MUT_0610"
+     ],
+     "bedingung_text": "letztes Zucken, dann Stille",
+     "raum": "kern"
+    }
+   ]
+  },
+  {
+   "id": "bernd",
+   "script_name": "Bernd",
+   "kuerzel": "BER",
+   "name_key": "UI_OBJ_BERND",
+   "groesse_px": 24,
+   "spielbar": false,
+   "textfarbe": "#ffffff",
+   "sprite": "res://grafik/platzhalter/figur_bernd.png",
+   "raeume": [
+    "testkammer_1",
+    "testkammer_3"
+   ],
+   "tier": false,
+   "ansehen": [
+    {
+     "zeile": "W3_KAM1_MAX_0330",
+     "sprecher": "MAX",
+     "blasen": [
+      "W3_KAM1_MAX_0330"
+     ],
+     "raum": "testkammer_1"
+    },
+    {
+     "zeile": "W3_KAM1_MAX_0335",
+     "sprecher": "MAX",
+     "blasen": [
+      "W3_KAM1_MAX_0335"
+     ],
+     "mal": 2,
+     "raum": "testkammer_1"
+    },
+    {
+     "zeile": "W3_KAM3_MAX_0030",
+     "sprecher": "MAX",
+     "blasen": [
+      "W3_KAM3_MAX_0030"
+     ],
+     "raum": "testkammer_3"
+    },
+    {
+     "zeile": "W3_KAM3_MAX_0035",
+     "sprecher": "MAX",
+     "blasen": [
+      "W3_KAM3_MAX_0035"
+     ],
+     "mal": 2,
+     "raum": "testkammer_3"
+    }
+   ],
+   "pixel_auf": [],
+   "pixel_redet": [],
+   "gegenstand_auf": [],
+   "benutzen": [
+    {
+     "zeile": "W3_KAM3_MAX_0070",
+     "sprecher": "MAX",
+     "blasen": [
+      "W3_KAM3_MAX_0070"
+     ],
+     "raum": "testkammer_3"
+    }
+   ]
+  },
+  {
+   "id": "portalgeraet_stimme",
+   "script_name": "PortalgeraetStimme",
+   "kuerzel": "POR",
+   "name_key": "UI_OBJ_PORTALGERAET_STIMME",
+   "groesse_px": 0,
+   "spielbar": false,
+   "textfarbe": "#ffffff",
+   "sprite": "res://grafik/platzhalter/figur_portalgeraet_stimme.png",
+   "raeume": [
+    "testkammer_1"
+   ],
+   "tier": false,
+   "ansehen": [],
+   "pixel_auf": [],
+   "pixel_redet": [],
+   "gegenstand_auf": [
+    {
+     "zeile": "W3_KERN_MAX_0580",
+     "sprecher": "MAX",
+     "blasen": [
+      "W3_KERN_MAX_0580"
+     ],
+     "gegenstand": "energiezelle",
+     "raum": "kern"
+    }
+   ],
+   "benutzen": []
+  }
+ ],
+ "gegenstaende": [
+  {
+   "id": "telefonbuchseite",
+   "script_name": "Telefonbuchseite",
+   "name_key": "UI_OBJ_TELEFONBUCHSEITE",
+   "zustaende": [
+    "normal"
+   ],
+   "reist_mit": false,
+   "nahansicht": true,
+   "icon": "res://grafik/platzhalter/gegenstand_telefonbuchseite.png",
+   "icons": {},
+   "ansehen": [
+    {
+     "zeile": "W3_INV_MAX_0010",
+     "sprecher": "MAX",
+     "blasen": [
+      "W3_INV_MAX_0010"
+     ]
+    },
+    {
+     "zeile": "W3_INV_MAX_0015",
+     "sprecher": "MAX",
+     "blasen": [
+      "W3_INV_MAX_0015"
+     ],
+     "mal": 2
+    }
+   ],
+   "benutzen": [],
+   "kombinieren": []
+  },
+  {
+   "id": "rote_pastille",
+   "script_name": "RotePastille",
+   "name_key": "UI_OBJ_ROTE_PASTILLE",
+   "zustaende": [
+    "normal"
+   ],
+   "reist_mit": false,
+   "nahansicht": false,
+   "icon": "res://grafik/platzhalter/gegenstand_rote_pastille.png",
+   "icons": {},
+   "ansehen": [
+    {
+     "zeile": "W3_INV_MAX_0020",
+     "sprecher": "MAX",
+     "blasen": [
+      "W3_INV_MAX_0020"
+     ]
+    },
+    {
+     "zeile": "W3_INV_MAX_0025",
+     "sprecher": "MAX",
+     "blasen": [
+      "W3_INV_MAX_0025"
+     ],
+     "mal": 2
+    }
+   ],
+   "benutzen": [],
+   "kombinieren": []
+  },
+  {
+   "id": "blaue_pastille",
+   "script_name": "BlauePastille",
+   "name_key": "UI_OBJ_BLAUE_PASTILLE",
+   "zustaende": [
+    "normal"
+   ],
+   "reist_mit": false,
+   "nahansicht": false,
+   "icon": "res://grafik/platzhalter/gegenstand_blaue_pastille.png",
+   "icons": {},
+   "ansehen": [
+    {
+     "zeile": "W3_INV_MAX_0030",
+     "sprecher": "MAX",
+     "blasen": [
+      "W3_INV_MAX_0030"
+     ]
+    },
+    {
+     "zeile": "W3_INV_MAX_0035",
+     "sprecher": "MAX",
+     "blasen": [
+      "W3_INV_MAX_0035"
+     ],
+     "mal": 2
+    }
+   ],
+   "benutzen": [],
+   "kombinieren": []
+  },
+  {
+   "id": "omas_kekse",
+   "script_name": "OmasKekse",
+   "name_key": "UI_OBJ_OMAS_KEKSE",
+   "zustaende": [
+    "kalt",
+    "ofenwarm",
+    "hundekuchen"
+   ],
+   "reist_mit": true,
+   "nahansicht": false,
+   "icon": "res://grafik/platzhalter/gegenstand_omas_kekse.png",
+   "icons": {
+    "ofenwarm": "res://grafik/platzhalter/gegenstand_omas_kekse_ofenwarm.png",
+    "hundekuchen": "res://grafik/platzhalter/gegenstand_omas_kekse_hundekuchen.png"
+   },
+   "ansehen": [
+    {
+     "zeile": "W3_BAS_MAX_0870",
+     "sprecher": "MAX",
+     "blasen": [
+      "W3_BAS_MAX_0870"
+     ],
+     "zustand": "hundekuchen"
+    },
+    {
+     "zeile": "W3_BAS_MAX_0875",
+     "sprecher": "MAX",
+     "blasen": [
+      "W3_BAS_MAX_0875"
+     ],
+     "mal": 2,
+     "zustand": "hundekuchen"
+    },
+    {
+     "zeile": "W3_INV_MAX_0040",
+     "sprecher": "MAX",
+     "blasen": [
+      "W3_INV_MAX_0040"
+     ],
+     "zustand": "kalt"
+    },
+    {
+     "zeile": "W3_INV_PIX_0045",
+     "sprecher": "PIX",
+     "blasen": [
+      "W3_INV_PIX_0045"
+     ],
+     "mal": 2,
+     "zustand": "kalt"
+    },
+    {
+     "zeile": "W3_INV_MAX_0050",
+     "sprecher": "MAX",
+     "blasen": [
+      "W3_INV_MAX_0050"
+     ],
+     "zustand": "ofenwarm"
+    },
+    {
+     "zeile": "W3_INV_MAX_0055",
+     "sprecher": "MAX",
+     "blasen": [
+      "W3_INV_MAX_0055"
+     ],
+     "mal": 2,
+     "zustand": "ofenwarm"
+    },
+    {
+     "zeile": "W3_BAS_PIX_1150",
+     "sprecher": "PIX",
+     "blasen": [
+      "W3_BAS_PIX_1150"
+     ],
+     "figur": "PIX",
+     "zustand": "hundekuchen"
+    }
+   ],
+   "benutzen": [],
+   "kombinieren": []
+  },
+  {
+   "id": "rezeptkarte",
+   "script_name": "Rezeptkarte",
+   "name_key": "UI_OBJ_REZEPTKARTE",
+   "zustaende": [
+    "rezeptkarte",
+    "glueckskeks"
+   ],
+   "reist_mit": false,
+   "nahansicht": false,
+   "icon": "res://grafik/platzhalter/gegenstand_rezeptkarte.png",
+   "icons": {
+    "glueckskeks": "res://grafik/platzhalter/gegenstand_rezeptkarte_glueckskeks.png"
+   },
+   "ansehen": [
+    {
+     "zeile": "W3_KUCH_MAX_0750",
+     "sprecher": "MAX",
+     "blasen": [
+      "W3_KUCH_MAX_0750"
+     ]
+    },
+    {
+     "zeile": "W3_KUCH_MAX_0755",
+     "sprecher": "MAX",
+     "blasen": [
+      "W3_KUCH_MAX_0755"
+     ],
+     "mal": 2
+    },
+    {
+     "zeile": "W3_BAS_MAX_0900",
+     "sprecher": "MAX",
+     "blasen": [
+      "W3_BAS_MAX_0900"
+     ],
+     "zustand": "glueckskeks"
+    },
+    {
+     "zeile": "W3_BAS_PIX_0910",
+     "sprecher": "PIX",
+     "blasen": [
+      "W3_BAS_PIX_0910"
+     ],
+     "mal": 2,
+     "zustand": "glueckskeks"
+    },
+    {
+     "zeile": "W3_SUPP_MAX_0200",
+     "sprecher": "MAX",
+     "blasen": [
+      "W3_SUPP_MAX_0200"
+     ],
+     "bedingung": [
+      {
+       "art": "nach",
+       "raetsel": "R4"
+      }
+     ],
+     "zustand": "glueckskeks"
+    },
+    {
+     "zeile": "W3_BAS_PIX_1160",
+     "sprecher": "PIX",
+     "blasen": [
+      "W3_BAS_PIX_1160"
+     ],
+     "figur": "PIX",
+     "zustand": "glueckskeks"
+    }
+   ],
+   "benutzen": [],
+   "kombinieren": []
+  },
+  {
+   "id": "kaffeetasse",
+   "script_name": "Kaffeetasse",
+   "name_key": "UI_OBJ_KAFFEETASSE",
+   "zustaende": [
+    "normal"
+   ],
+   "reist_mit": true,
+   "nahansicht": false,
+   "icon": "res://grafik/platzhalter/gegenstand_kaffeetasse.png",
+   "icons": {},
+   "ansehen": [],
+   "benutzen": [],
+   "kombinieren": []
+  },
+  {
+   "id": "sonnenbrille",
+   "script_name": "Sonnenbrille",
+   "name_key": "UI_OBJ_SONNENBRILLE",
+   "zustaende": [
+    "normal"
+   ],
+   "reist_mit": true,
+   "nahansicht": false,
+   "icon": "res://grafik/platzhalter/gegenstand_sonnenbrille.png",
+   "icons": {},
+   "ansehen": [
+    {
+     "zeile": "W3_TERM_MAX_0360",
+     "sprecher": "MAX",
+     "blasen": [
+      "W3_TERM_MAX_0360"
+     ]
+    },
+    {
+     "zeile": "W3_TERM_MAX_0365",
+     "sprecher": "MAX",
+     "blasen": [
+      "W3_TERM_MAX_0365"
+     ],
+     "mal": 2
+    },
+    {
+     "zeile": "W3_INV_MAX_0060",
+     "sprecher": "MAX",
+     "blasen": [
+      "W3_INV_MAX_0060"
+     ]
+    },
+    {
+     "zeile": "W3_INV_MAX_0065",
+     "sprecher": "MAX",
+     "blasen": [
+      "W3_INV_MAX_0065"
+     ],
+     "mal": 2
+    }
+   ],
+   "benutzen": [],
+   "kombinieren": []
+  },
+  {
+   "id": "schmidts_akte",
+   "script_name": "SchmidtsAkte",
+   "name_key": "UI_OBJ_SCHMIDTS_AKTE",
+   "zustaende": [
+    "datei",
+    "ordner"
+   ],
+   "reist_mit": true,
+   "nahansicht": true,
+   "icon": "res://grafik/platzhalter/gegenstand_schmidts_akte.png",
+   "icons": {
+    "ordner": "res://grafik/platzhalter/gegenstand_schmidts_akte_ordner.png"
+   },
+   "ansehen": [
+    {
+     "zeile": "W3_TERM_MAX_0350",
+     "sprecher": "MAX",
+     "blasen": [
+      "W3_TERM_MAX_0350"
+     ]
+    },
+    {
+     "zeile": "W3_TERM_MAX_0355",
+     "sprecher": "MAX",
+     "blasen": [
+      "W3_TERM_MAX_0355"
+     ],
+     "mal": 2
+    },
+    {
+     "zeile": "W3_INV_MAX_0070",
+     "sprecher": "MAX",
+     "blasen": [
+      "W3_INV_MAX_0070"
+     ],
+     "zustand": "datei"
+    },
+    {
+     "zeile": "W3_INV_MAX_0075",
+     "sprecher": "MAX",
+     "blasen": [
+      "W3_INV_MAX_0075"
+     ],
+     "mal": 2,
+     "zustand": "datei"
+    }
+   ],
+   "benutzen": [],
+   "kombinieren": []
+  },
+  {
+   "id": "farbcode_zettel",
+   "script_name": "FarbcodeZettel",
+   "name_key": "UI_OBJ_FARBCODE_ZETTEL",
+   "zustaende": [
+    "normal"
+   ],
+   "reist_mit": false,
+   "nahansicht": false,
+   "icon": "res://grafik/platzhalter/gegenstand_farbcode_zettel.png",
+   "icons": {},
+   "ansehen": [
+    {
+     "zeile": "W3_INV_MAX_0080",
+     "sprecher": "MAX",
+     "blasen": [
+      "W3_INV_MAX_0080"
+     ]
+    },
+    {
+     "zeile": "W3_INV_MAX_0085",
+     "sprecher": "MAX",
+     "blasen": [
+      "W3_INV_MAX_0085"
+     ],
+     "mal": 2
+    }
+   ],
+   "benutzen": [],
+   "kombinieren": []
+  },
+  {
+   "id": "morse_tabelle",
+   "script_name": "MorseTabelle",
+   "name_key": "UI_OBJ_MORSE_TABELLE",
+   "zustaende": [
+    "normal"
+   ],
+   "reist_mit": true,
+   "nahansicht": false,
+   "icon": "res://grafik/platzhalter/gegenstand_morse_tabelle.png",
+   "icons": {},
+   "ansehen": [
+    {
+     "zeile": "W3_PIEP_MAX_0220",
+     "sprecher": "MAX",
+     "blasen": [
+      "W3_PIEP_MAX_0220"
+     ]
+    },
+    {
+     "zeile": "W3_PIEP_MAX_0225",
+     "sprecher": "MAX",
+     "blasen": [
+      "W3_PIEP_MAX_0225"
+     ],
+     "mal": 2
+    }
+   ],
+   "benutzen": [],
+   "kombinieren": []
+  },
+  {
+   "id": "zugangskarte",
+   "script_name": "Zugangskarte",
+   "name_key": "UI_OBJ_ZUGANGSKARTE",
+   "zustaende": [
+    "plastikkarte",
+    "code_schluessel"
+   ],
+   "reist_mit": false,
+   "nahansicht": false,
+   "icon": "res://grafik/platzhalter/gegenstand_zugangskarte.png",
+   "icons": {
+    "code_schluessel": "res://grafik/platzhalter/gegenstand_zugangskarte_code_schluessel.png"
+   },
+   "ansehen": [
+    {
+     "zeile": "W3_BAS_MAX_0890",
+     "sprecher": "MAX",
+     "blasen": [
+      "W3_BAS_MAX_0890"
+     ]
+    },
+    {
+     "zeile": "W3_BAS_MAX_0895",
+     "sprecher": "MAX",
+     "blasen": [
+      "W3_BAS_MAX_0895"
+     ],
+     "mal": 2
+    },
+    {
+     "zeile": "W3_INV_MAX_0090",
+     "sprecher": "MAX",
+     "blasen": [
+      "W3_INV_MAX_0090"
+     ],
+     "zustand": "code_schluessel"
+    },
+    {
+     "zeile": "W3_INV_MAX_0095",
+     "sprecher": "MAX",
+     "blasen": [
+      "W3_INV_MAX_0095"
+     ],
+     "mal": 2,
+     "zustand": "code_schluessel"
+    }
+   ],
+   "benutzen": [],
+   "kombinieren": []
+  },
+  {
+   "id": "portalgeraet",
+   "script_name": "Portalgeraet",
+   "name_key": "UI_OBJ_PORTALGERAET",
+   "zustaende": [
+    "leer"
+   ],
+   "reist_mit": true,
+   "nahansicht": false,
+   "icon": "res://grafik/platzhalter/gegenstand_portalgeraet.png",
+   "icons": {},
+   "ansehen": [
+    {
+     "zeile": "W3_INV_MAX_0100",
+     "sprecher": "MAX",
+     "blasen": [
+      "W3_INV_MAX_0100"
+     ],
+     "zustand": "leer"
+    },
+    {
+     "zeile": "W3_INV_MAX_0105",
+     "sprecher": "MAX",
+     "blasen": [
+      "W3_INV_MAX_0105"
+     ],
+     "mal": 2,
+     "zustand": "leer"
+    }
+   ],
+   "benutzen": [],
+   "kombinieren": []
+  },
+  {
+   "id": "gummihuhn",
+   "script_name": "Gummihuhn",
+   "name_key": "UI_OBJ_GUMMIHUHN",
+   "zustaende": [
+    "harmlos",
+    "toedlich"
+   ],
+   "reist_mit": false,
+   "nahansicht": false,
+   "icon": "res://grafik/platzhalter/gegenstand_gummihuhn.png",
+   "icons": {
+    "toedlich": "res://grafik/platzhalter/gegenstand_gummihuhn_toedlich.png"
+   },
+   "ansehen": [
+    {
+     "zeile": "W3_KAM2_MAX_0110",
+     "sprecher": "MAX",
+     "blasen": [
+      "W3_KAM2_MAX_0110"
+     ]
+    },
+    {
+     "zeile": "W3_KAM2_MAX_0115",
+     "sprecher": "MAX",
+     "blasen": [
+      "W3_KAM2_MAX_0115"
+     ],
+     "mal": 2
+    },
+    {
+     "zeile": "W3_KAM3_MAX_0290",
+     "sprecher": "MAX",
+     "blasen": [
+      "W3_KAM3_MAX_0290"
+     ]
+    },
+    {
+     "zeile": "W3_KAM3_MAX_0295",
+     "sprecher": "MAX",
+     "blasen": [
+      "W3_KAM3_MAX_0295"
+     ],
+     "mal": 2
+    },
+    {
+     "zeile": "W3_INV_MAX_0110",
+     "sprecher": "MAX",
+     "blasen": [
+      "W3_INV_MAX_0110"
+     ],
+     "zustand": "harmlos"
+    },
+    {
+     "zeile": "W3_INV_PIX_0115",
+     "sprecher": "PIX",
+     "blasen": [
+      "W3_INV_PIX_0115"
+     ],
+     "mal": 2,
+     "zustand": "harmlos"
+    }
+   ],
+   "benutzen": [],
+   "kombinieren": []
+  },
+  {
+   "id": "energiezelle",
+   "script_name": "Energiezelle",
+   "name_key": "UI_OBJ_ENERGIEZELLE",
+   "zustaende": [
+    "gluehend",
+    "vereist"
+   ],
+   "reist_mit": false,
+   "nahansicht": false,
+   "icon": "res://grafik/platzhalter/gegenstand_energiezelle.png",
+   "icons": {
+    "vereist": "res://grafik/platzhalter/gegenstand_energiezelle_vereist.png"
+   },
+   "ansehen": [
+    {
+     "zeile": "W3_ENDE_MAX_0040",
+     "sprecher": "MAX",
+     "blasen": [
+      "W3_ENDE_MAX_0040"
+     ]
+    },
+    {
+     "zeile": "W3_ENDE_MAX_0045",
+     "sprecher": "MAX",
+     "blasen": [
+      "W3_ENDE_MAX_0045"
+     ],
+     "mal": 2
+    },
+    {
+     "zeile": "W3_INV_MAX_0120",
+     "sprecher": "MAX",
+     "blasen": [
+      "W3_INV_MAX_0120"
+     ],
+     "zustand": "vereist"
+    },
+    {
+     "zeile": "W3_INV_MAX_0125",
+     "sprecher": "MAX",
+     "blasen": [
+      "W3_INV_MAX_0125"
+     ],
+     "mal": 2,
+     "zustand": "vereist"
+    },
+    {
+     "zeile": "W3_INV_MAX_0130",
+     "sprecher": "MAX",
+     "blasen": [
+      "W3_INV_MAX_0130"
+     ],
+     "zustand": "gluehend"
+    },
+    {
+     "zeile": "W3_INV_PIX_0135",
+     "sprecher": "PIX",
+     "blasen": [
+      "W3_INV_PIX_0135"
+     ],
+     "mal": 2,
+     "zustand": "gluehend"
+    },
+    {
+     "zeile": "W3_BAS_PIX_1170",
+     "sprecher": "PIX",
+     "blasen": [
+      "W3_BAS_PIX_1170"
+     ],
+     "figur": "PIX"
+    }
+   ],
+   "benutzen": [],
+   "kombinieren": []
+  }
+ ],
+ "nahansichten": [
+  {
+   "id": "kochbuch",
+   "name_key": "UI_OBJ_KOCHBUCH",
+   "raum": "kueche_orakel",
+   "bild": "res://grafik/platzhalter/nah_kochbuch.png"
+  },
+  {
+   "id": "kritzelei_kammer_2",
+   "name_key": "UI_OBJ_KRITZELEI_KAMMER_2",
+   "raum": "testkammer_2",
+   "bild": "res://grafik/platzhalter/nah_kritzelei_kammer_2.png"
+  },
+  {
+   "id": "telefonbuchseite",
+   "name_key": "UI_OBJ_TELEFONBUCHSEITE",
+   "raum": null,
+   "bild": "res://grafik/platzhalter/nah_telefonbuchseite.png"
+  },
+  {
+   "id": "schmidts_akte",
+   "name_key": "UI_OBJ_SCHMIDTS_AKTE",
+   "raum": null,
+   "bild": "res://grafik/platzhalter/nah_schmidts_akte.png"
+  }
+ ],
+ "dialoge": [
+  {
+   "id": "herr_vier",
+   "script_name": "HerrVier",
+   "optionen": [
+    {
+     "id": "0020",
+     "frage": "W3_NUD_MAX_0020",
+     "antworten": [
+      {
+       "zeile": "W3_NUD_VIE_0030",
+       "sprecher": "VIE",
+       "blasen": [
+        "W3_NUD_VIE_0030"
+       ],
+       "regie": "ernst"
+      },
+      {
+       "zeile": "W3_NUD_MAX_0630",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_NUD_MAX_0630"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W3_NUD_VIE_0640",
+       "sprecher": "VIE",
+       "blasen": [
+        "W3_NUD_VIE_0640"
+       ],
+       "regie": ""
+      }
+     ],
+     "beendet": false,
+     "bleibt": false
+    },
+    {
+     "id": "0040",
+     "frage": "W3_NUD_MAX_0040",
+     "antworten": [
+      {
+       "zeile": "W3_NUD_VIE_0050",
+       "sprecher": "VIE",
+       "blasen": [
+        "W3_NUD_VIE_0050"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W3_NUD_PIX_0060",
+       "sprecher": "PIX",
+       "blasen": [
+        "W3_NUD_PIX_0060"
+       ],
+       "regie": ""
+      }
+     ],
+     "beendet": false,
+     "bleibt": false
+    },
+    {
+     "id": "0070",
+     "frage": "W3_NUD_MAX_0070",
+     "antworten": [
+      {
+       "zeile": "W3_NUD_VIE_0080",
+       "sprecher": "VIE",
+       "blasen": [
+        "W3_NUD_VIE_0080"
+       ],
+       "regie": "zeigt die Hände"
+      },
+      {
+       "zeile": "W3_NUD_PIX_0650",
+       "sprecher": "PIX",
+       "blasen": [
+        "W3_NUD_PIX_0650"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W3_NUD_VIE_0660",
+       "sprecher": "VIE",
+       "blasen": [
+        "W3_NUD_VIE_0660"
+       ],
+       "regie": ""
+      }
+     ],
+     "beendet": false,
+     "bleibt": false
+    },
+    {
+     "id": "0090",
+     "frage": "W3_NUD_MAX_0090",
+     "antworten": [
+      {
+       "zeile": "W3_NUD_VIE_0100",
+       "sprecher": "VIE",
+       "blasen": [
+        "W3_NUD_VIE_0100"
+       ],
+       "regie": "Hinweis auf die Bestellung"
+      },
+      {
+       "zeile": "W3_NUD_MAX_0670",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_NUD_MAX_0670"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W3_NUD_VIE_0680",
+       "sprecher": "VIE",
+       "blasen": [
+        "W3_NUD_VIE_0680"
+       ],
+       "regie": ""
+      }
+     ],
+     "beendet": false,
+     "bleibt": false,
+     "bedingung": [
+      {
+       "art": "vor",
+       "raetsel": "R2"
+      }
+     ]
+    },
+    {
+     "id": "0110",
+     "frage": "W3_NUD_MAX_0110",
+     "antworten": [
+      {
+       "zeile": "W3_NUD_VIE_0120",
+       "sprecher": "VIE",
+       "blasen": [
+        "W3_NUD_VIE_0120"
+       ],
+       "regie": "Hinweis auf Rätsel 12"
+      },
+      {
+       "zeile": "W3_NUD_MAX_0690",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_NUD_MAX_0690"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W3_NUD_VIE_0700",
+       "sprecher": "VIE",
+       "blasen": [
+        "W3_NUD_VIE_0700"
+       ],
+       "regie": ""
+      }
+     ],
+     "beendet": false,
+     "bleibt": false
+    },
+    {
+     "id": "0130",
+     "frage": "W3_NUD_MAX_0130",
+     "antworten": [
+      {
+       "zeile": "W3_NUD_VIE_0140",
+       "sprecher": "VIE",
+       "blasen": [
+        "W3_NUD_VIE_0140"
+       ],
+       "regie": ""
+      }
+     ],
+     "beendet": true,
+     "bleibt": false
+    }
+   ],
+   "erschoepft": [
+    {
+     "zeile": "W3_ABS_VIE_0050",
+     "sprecher": "VIE"
+    },
+    {
+     "zeile": "W3_ABS_VIE_0060",
+     "sprecher": "VIE"
+    }
+   ]
+  },
+  {
+   "id": "morphaeus",
+   "script_name": "Morphaeus",
+   "optionen": [
+    {
+     "id": "0410",
+     "frage": "W3_NUD_MAX_0410",
+     "antworten": [
+      {
+       "zeile": "W3_NUD_MOR_0420",
+       "sprecher": "MOR",
+       "blasen": [
+        "W3_NUD_MOR_0420"
+       ],
+       "regie": "öffnet die Hand: leer"
+      },
+      {
+       "zeile": "W3_NUD_MOR_0430",
+       "sprecher": "MOR",
+       "blasen": [
+        "W3_NUD_MOR_0430"
+       ],
+       "regie": "dreht das Schild um: „Beige vorrätig“"
+      },
+      {
+       "zeile": "W3_NUD_MAX_0440",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_NUD_MAX_0440"
+       ],
+       "regie": ""
+      }
+     ],
+     "beendet": false,
+     "bleibt": false
+    },
+    {
+     "id": "0450",
+     "frage": "W3_NUD_MAX_0450",
+     "antworten": [
+      {
+       "zeile": "W3_NUD_MOR_0460",
+       "sprecher": "MOR",
+       "blasen": [
+        "W3_NUD_MOR_0460"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W3_NUD_MOR_0470",
+       "sprecher": "MOR",
+       "blasen": [
+        "W3_NUD_MOR_0470"
+       ],
+       "regie": "Hinweis Rätsel 1"
+      }
+     ],
+     "beendet": false,
+     "bleibt": true
+    },
+    {
+     "id": "0480",
+     "frage": "W3_NUD_MAX_0480",
+     "antworten": [
+      {
+       "zeile": "W3_NUD_MOR_0490",
+       "sprecher": "MOR",
+       "blasen": [
+        "W3_NUD_MOR_0490"
+       ],
+       "regie": "Hinweis Rätsel 3; lange Pause"
+      },
+      {
+       "zeile": "W3_NUD_PIX_0500",
+       "sprecher": "PIX",
+       "blasen": [
+        "W3_NUD_PIX_0500"
+       ],
+       "regie": "hochnäsig"
+      }
+     ],
+     "beendet": false,
+     "bleibt": true,
+     "bedingung": [
+      {
+       "art": "nach_zeile",
+       "zeile": "W3_NUD_MOR_0460"
+      }
+     ]
+    },
+    {
+     "id": "0510",
+     "frage": "W3_NUD_MAX_0510",
+     "antworten": [
+      {
+       "zeile": "W3_NUD_MOR_0520",
+       "sprecher": "MOR",
+       "blasen": [
+        "W3_NUD_MOR_0520"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W3_NUD_MOR_0530",
+       "sprecher": "MOR",
+       "blasen": [
+        "W3_NUD_MOR_0530"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W3_NUD_MAX_0540",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_NUD_MAX_0540"
+       ],
+       "regie": ""
+      }
+     ],
+     "beendet": false,
+     "bleibt": false
+    },
+    {
+     "id": "0550",
+     "frage": "W3_NUD_MAX_0550",
+     "antworten": [
+      {
+       "zeile": "W3_NUD_MOR_0560",
+       "sprecher": "MOR",
+       "blasen": [
+        "W3_NUD_MOR_0560"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W3_NUD_PIX_0570",
+       "sprecher": "PIX",
+       "blasen": [
+        "W3_NUD_PIX_0570"
+       ],
+       "regie": ""
+      }
+     ],
+     "beendet": false,
+     "bleibt": false,
+     "bedingung": [
+      {
+       "art": "nach_zeile",
+       "zeile": "W3_NUD_MOR_0460"
+      }
+     ]
+    },
+    {
+     "id": "0580",
+     "frage": "W3_NUD_MAX_0580",
+     "antworten": [
+      {
+       "zeile": "W3_NUD_MOR_0590",
+       "sprecher": "MOR",
+       "blasen": [
+        "W3_NUD_MOR_0590"
+       ],
+       "regie": "Hinweis auf die Orakel-Oma"
+      },
+      {
+       "zeile": "W3_NUD_MAX_0710",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_NUD_MAX_0710"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W3_NUD_MOR_0720",
+       "sprecher": "MOR",
+       "blasen": [
+        "W3_NUD_MOR_0720"
+       ],
+       "regie": ""
+      }
+     ],
+     "beendet": false,
+     "bleibt": false
+    },
+    {
+     "id": "0600",
+     "frage": "W3_NUD_MAX_0600",
+     "antworten": [
+      {
+       "zeile": "W3_NUD_MOR_0610",
+       "sprecher": "MOR",
+       "blasen": [
+        "W3_NUD_MOR_0610"
+       ],
+       "regie": "nickt zur Straße; Hinweis Rätsel 1"
+      }
+     ],
+     "beendet": true,
+     "bleibt": false
+    }
+   ],
+   "erschoepft": [
+    {
+     "zeile": "W3_ABS_MOR_0010",
+     "sprecher": "MOR"
+    },
+    {
+     "zeile": "W3_ABS_MOR_0020",
+     "sprecher": "MOR"
+    }
+   ]
+  },
+  {
+   "id": "deckert",
+   "script_name": "Deckert",
+   "optionen": [
+    {
+     "id": "0040",
+     "frage": "W3_TEST_MAX_0040",
+     "antworten": [
+      {
+       "zeile": "W3_TEST_DEC_0050",
+       "sprecher": "DEC",
+       "blasen": [
+        "W3_TEST_DEC_0050"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W3_TEST_PIX_0400",
+       "sprecher": "PIX",
+       "blasen": [
+        "W3_TEST_PIX_0400"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W3_TEST_DEC_0410",
+       "sprecher": "DEC",
+       "blasen": [
+        "W3_TEST_DEC_0410"
+       ],
+       "regie": ""
+      }
+     ],
+     "beendet": false,
+     "bleibt": false
+    },
+    {
+     "id": "0060",
+     "frage": "W3_TEST_MAX_0060",
+     "antworten": [
+      {
+       "zeile": "W3_TEST_DEC_0070",
+       "sprecher": "DEC",
+       "blasen": [
+        "W3_TEST_DEC_0070"
+       ],
+       "regie": "sieht Pixel an"
+      },
+      {
+       "zeile": "W3_TEST_PIX_0080",
+       "sprecher": "PIX",
+       "blasen": [
+        "W3_TEST_PIX_0080"
+       ],
+       "regie": ""
+      }
+     ],
+     "beendet": false,
+     "bleibt": false
+    },
+    {
+     "id": "0090",
+     "frage": "W3_TEST_MAX_0090",
+     "antworten": [],
+     "beendet": false,
+     "bleibt": false,
+     "bedingung_text": "startet die Fragen",
+     "oeffnet": true
+    }
+   ],
+   "erschoepft": [
+    {
+     "zeile": "W3_ABS_DEC_0030",
+     "sprecher": "DEC"
+    },
+    {
+     "zeile": "W3_ABS_DEC_0040",
+     "sprecher": "DEC"
+    }
+   ]
+  },
+  {
+   "id": "schmidt",
+   "script_name": "Schmidt",
+   "optionen": [
+    {
+     "id": "0030",
+     "frage": "W3_TUER_MAX_0030",
+     "antworten": [
+      {
+       "zeile": "W3_TUER_SCH_0040",
+       "sprecher": "SCH",
+       "blasen": [
+        "W3_TUER_SCH_0040"
+       ],
+       "regie": "redet weiter, Blase bricht ab"
+      },
+      {
+       "zeile": "W3_TUER_MAX_0330",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_TUER_MAX_0330"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W3_TUER_SCH_0340",
+       "sprecher": "SCH",
+       "blasen": [
+        "W3_TUER_SCH_0340"
+       ],
+       "regie": ""
+      }
+     ],
+     "beendet": false,
+     "bleibt": false
+    },
+    {
+     "id": "0050",
+     "frage": "W3_TUER_MAX_0050",
+     "antworten": [
+      {
+       "zeile": "W3_TUER_SCH_0060",
+       "sprecher": "SCH",
+       "blasen": [
+        "W3_TUER_SCH_0060"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W3_TUER_MAX_0350",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_TUER_MAX_0350"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W3_TUER_SCH_0360",
+       "sprecher": "SCH",
+       "blasen": [
+        "W3_TUER_SCH_0360"
+       ],
+       "regie": ""
+      }
+     ],
+     "beendet": false,
+     "bleibt": false
+    },
+    {
+     "id": "0070",
+     "frage": "W3_TUER_MAX_0070",
+     "antworten": [
+      {
+       "zeile": "W3_TUER_SCH_0080",
+       "sprecher": "SCH",
+       "blasen": [
+        "W3_TUER_SCH_0080"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W3_TUER_MAX_0370",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_TUER_MAX_0370"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W3_TUER_SCH_0380",
+       "sprecher": "SCH",
+       "blasen": [
+        "W3_TUER_SCH_0380"
+       ],
+       "regie": ""
+      }
+     ],
+     "beendet": false,
+     "bleibt": false
+    },
+    {
+     "id": "0090",
+     "frage": "W3_TUER_MAX_0090",
+     "antworten": [
+      {
+       "zeile": "W3_TUER_SCH_0100",
+       "sprecher": "SCH",
+       "blasen": [
+        "W3_TUER_SCH_0100"
+       ],
+       "regie": ""
+      }
+     ],
+     "beendet": false,
+     "bleibt": false
+    },
+    {
+     "id": "0110",
+     "frage": "W3_TUER_MAX_0110",
+     "antworten": [
+      {
+       "zeile": "W3_TUER_SCH_0120",
+       "sprecher": "SCH",
+       "blasen": [
+        "W3_TUER_SCH_0120"
+       ],
+       "regie": "redet im Hintergrund stumm weiter"
+      }
+     ],
+     "beendet": true,
+     "bleibt": false
+    }
+   ],
+   "einstieg": {
+    "zeilen": [
+     {
+      "zeile": "W3_TURM_SCH_0560",
+      "sprecher": "SCH",
+      "blasen": [
+       "W3_TURM_SCH_0560"
+      ]
+     },
+     {
+      "zeile": "W3_TURM_MAX_0570",
+      "sprecher": "MAX",
+      "blasen": [
+       "W3_TURM_MAX_0570"
+      ]
+     }
+    ],
+    "einstieg": true,
+    "bedingung_text": "nach dem Tausch"
+   },
+   "erschoepft": [
+    {
+     "zeile": "W3_ABS_SCH_0090",
+     "sprecher": "SCH"
+    },
+    {
+     "zeile": "W3_ABS_SCH_0100",
+     "sprecher": "SCH"
+    }
+   ]
+  },
+  {
+   "id": "orakel_oma",
+   "script_name": "OrakelOma",
+   "optionen": [
+    {
+     "id": "0110",
+     "frage": "W3_KUCH_MAX_0110",
+     "antworten": [
+      {
+       "zeile": "W3_KUCH_ORA_0120",
+       "sprecher": "ORA",
+       "blasen": [
+        "W3_KUCH_ORA_0120"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W3_KUCH_MAX_0930",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_KUCH_MAX_0930"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W3_KUCH_ORA_0940",
+       "sprecher": "ORA",
+       "blasen": [
+        "W3_KUCH_ORA_0940"
+       ],
+       "regie": ""
+      }
+     ],
+     "beendet": false,
+     "bleibt": false
+    },
+    {
+     "id": "0130",
+     "frage": "W3_KUCH_MAX_0130",
+     "antworten": [
+      {
+       "zeile": "W3_KUCH_ORA_0140",
+       "sprecher": "ORA",
+       "blasen": [
+        "W3_KUCH_ORA_0140"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W3_KUCH_MAX_0950",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_KUCH_MAX_0950"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W3_KUCH_ORA_0960",
+       "sprecher": "ORA",
+       "blasen": [
+        "W3_KUCH_ORA_0960"
+       ],
+       "regie": ""
+      }
+     ],
+     "beendet": false,
+     "bleibt": false,
+     "bedingung_text": "erster Versuch"
+    },
+    {
+     "id": "0150",
+     "frage": "W3_KUCH_MAX_0150",
+     "antworten": [
+      {
+       "zeile": "W3_KUCH_ORA_0160",
+       "sprecher": "ORA",
+       "blasen": [
+        "W3_KUCH_ORA_0160"
+       ],
+       "regie": "lange Pause, Ofenhandschuh an der Stirn"
+      },
+      {
+       "zeile": "W3_KUCH_ORA_0170",
+       "sprecher": "ORA",
+       "blasen": [
+        "W3_KUCH_ORA_0170"
+       ],
+       "regie": "seufzt, reicht die Vase"
+      },
+      {
+       "zeile": "W3_KUCH_MAX_0180",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_KUCH_MAX_0180"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W3_KUCH_ORA_0190",
+       "sprecher": "ORA",
+       "blasen": [
+        "W3_KUCH_ORA_0190"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W3_KUCH_NAR_0200",
+       "sprecher": "NAR",
+       "blasen": [
+        "W3_KUCH_NAR_0200"
+       ],
+       "regie": "Szene; Vase vom Regal verschwindet; Inventar: Omas Rezeptkarte"
+      },
+      {
+       "zeile": "W3_KUCH_MAX_0210",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_KUCH_MAX_0210"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W3_KUCH_ORA_0220",
+       "sprecher": "ORA",
+       "blasen": [
+        "W3_KUCH_ORA_0220"
+       ],
+       "regie": "kehrt zusammen"
+      },
+      {
+       "zeile": "W3_KUCH_RAD_0230",
+       "sprecher": "RAD",
+       "blasen": [
+        "W3_KUCH_RAD_0230"
+       ],
+       "regie": "Radio-Moment; läuft direkt nach 0220, leicht verrauscht"
+      },
+      {
+       "zeile": "W3_KUCH_MAX_0240",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_KUCH_MAX_0240"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W3_KUCH_PIX_0250",
+       "sprecher": "PIX",
+       "blasen": [
+        "W3_KUCH_PIX_0250"
+       ],
+       "regie": "Pixel auf der Leitung"
+      }
+     ],
+     "beendet": false,
+     "bleibt": false,
+     "bedingung_text": "nach 0120 und 0140"
+    },
+    {
+     "id": "0260",
+     "frage": "W3_KUCH_MAX_0260",
+     "antworten": [
+      {
+       "zeile": "W3_KUCH_ORA_0270",
+       "sprecher": "ORA",
+       "blasen": [
+        "W3_KUCH_ORA_0270"
+       ],
+       "regie": "Hinweis Rätsel 11"
+      },
+      {
+       "zeile": "W3_KUCH_MAX_0280",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_KUCH_MAX_0280"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W3_KUCH_ORA_0290",
+       "sprecher": "ORA",
+       "blasen": [
+        "W3_KUCH_ORA_0290"
+       ],
+       "regie": ""
+      }
+     ],
+     "beendet": false,
+     "bleibt": true
+    },
+    {
+     "id": "0300",
+     "frage": "W3_KUCH_MAX_0300",
+     "antworten": [
+      {
+       "zeile": "W3_KUCH_ORA_0310",
+       "sprecher": "ORA",
+       "blasen": [
+        "W3_KUCH_ORA_0310"
+       ],
+       "regie": "Hinweis Rätsel 10"
+      },
+      {
+       "zeile": "W3_KUCH_MAX_0320",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_KUCH_MAX_0320"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W3_KUCH_ORA_0330",
+       "sprecher": "ORA",
+       "blasen": [
+        "W3_KUCH_ORA_0330"
+       ],
+       "regie": ""
+      }
+     ],
+     "beendet": false,
+     "bleibt": true
+    },
+    {
+     "id": "0340",
+     "frage": "W3_KUCH_MAX_0340",
+     "antworten": [
+      {
+       "zeile": "W3_KUCH_ORA_0350",
+       "sprecher": "ORA",
+       "blasen": [
+        "W3_KUCH_ORA_0350"
+       ],
+       "regie": "Opa-Hinweis"
+      },
+      {
+       "zeile": "W3_KUCH_MAX_0360",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_KUCH_MAX_0360"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W3_KUCH_ORA_0370",
+       "sprecher": "ORA",
+       "blasen": [
+        "W3_KUCH_ORA_0370"
+       ],
+       "regie": ""
+      }
+     ],
+     "beendet": false,
+     "bleibt": true
+    },
+    {
+     "id": "0380",
+     "frage": "W3_KUCH_MAX_0380",
+     "antworten": [
+      {
+       "zeile": "W3_KUCH_ORA_0390",
+       "sprecher": "ORA",
+       "blasen": [
+        "W3_KUCH_ORA_0390"
+       ],
+       "regie": "warm"
+      },
+      {
+       "zeile": "W3_KUCH_MAX_0400",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_KUCH_MAX_0400"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W3_KUCH_ORA_0410",
+       "sprecher": "ORA",
+       "blasen": [
+        "W3_KUCH_ORA_0410"
+       ],
+       "regie": ""
+      }
+     ],
+     "beendet": false,
+     "bleibt": false
+    },
+    {
+     "id": "0420",
+     "frage": "W3_KUCH_MAX_0420",
+     "antworten": [
+      {
+       "zeile": "W3_KUCH_ORA_0430",
+       "sprecher": "ORA",
+       "blasen": [
+        "W3_KUCH_ORA_0430"
+       ],
+       "regie": ""
+      }
+     ],
+     "beendet": true,
+     "bleibt": false
+    }
+   ],
+   "erschoepft": [
+    {
+     "zeile": "W3_ABS_ORA_0070",
+     "sprecher": "ORA"
+    },
+    {
+     "zeile": "W3_ABS_ORA_0080",
+     "sprecher": "ORA"
+    }
+   ]
+  },
+  {
+   "id": "kalle",
+   "script_name": "Kalle",
+   "optionen": [
+    {
+     "id": "0310",
+     "frage": "W3_BAS_MAX_0310",
+     "antworten": [
+      {
+       "zeile": "W3_BAS_KAL_0320",
+       "sprecher": "KAL",
+       "blasen": [
+        "W3_BAS_KAL_0320"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W3_BAS_PIX_1340",
+       "sprecher": "PIX",
+       "blasen": [
+        "W3_BAS_PIX_1340"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W3_BAS_KAL_1350",
+       "sprecher": "KAL",
+       "blasen": [
+        "W3_BAS_KAL_1350"
+       ],
+       "regie": ""
+      }
+     ],
+     "beendet": false,
+     "bleibt": false
+    },
+    {
+     "id": "0330",
+     "frage": "W3_BAS_MAX_0330",
+     "antworten": [
+      {
+       "zeile": "W3_BAS_KAL_0340",
+       "sprecher": "KAL",
+       "blasen": [
+        "W3_BAS_KAL_0340"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W3_BAS_MAX_1360",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_BAS_MAX_1360"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W3_BAS_KAL_1370",
+       "sprecher": "KAL",
+       "blasen": [
+        "W3_BAS_KAL_1370"
+       ],
+       "regie": ""
+      }
+     ],
+     "beendet": false,
+     "bleibt": false
+    },
+    {
+     "id": "0350",
+     "frage": "W3_BAS_MAX_0350",
+     "antworten": [
+      {
+       "zeile": "W3_BAS_KAL_0360",
+       "sprecher": "KAL",
+       "blasen": [
+        "W3_BAS_KAL_0360"
+       ],
+       "regie": "Hinweis Rätsel 8 und 9"
+      },
+      {
+       "zeile": "W3_BAS_KAL_0370",
+       "sprecher": "KAL",
+       "blasen": [
+        "W3_BAS_KAL_0370"
+       ],
+       "regie": ""
+      }
+     ],
+     "beendet": false,
+     "bleibt": true
+    },
+    {
+     "id": "0380",
+     "frage": "W3_BAS_MAX_0380",
+     "antworten": [
+      {
+       "zeile": "W3_BAS_KAL_0390",
+       "sprecher": "KAL",
+       "blasen": [
+        "W3_BAS_KAL_0390"
+       ],
+       "regie": "Hinweis Rätsel 10"
+      },
+      {
+       "zeile": "W3_BAS_MAX_1380",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_BAS_MAX_1380"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W3_BAS_KAL_1390",
+       "sprecher": "KAL",
+       "blasen": [
+        "W3_BAS_KAL_1390"
+       ],
+       "regie": ""
+      }
+     ],
+     "beendet": false,
+     "bleibt": true
+    },
+    {
+     "id": "0400",
+     "frage": "W3_BAS_MAX_0400",
+     "antworten": [
+      {
+       "zeile": "W3_BAS_KAL_0410",
+       "sprecher": "KAL",
+       "blasen": [
+        "W3_BAS_KAL_0410"
+       ],
+       "regie": "Hinweis Rätsel 13; vor der Lösung"
+      },
+      {
+       "zeile": "W3_BAS_PIX_1400",
+       "sprecher": "PIX",
+       "blasen": [
+        "W3_BAS_PIX_1400"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W3_BAS_MAX_1410",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_BAS_MAX_1410"
+       ],
+       "regie": ""
+      }
+     ],
+     "beendet": false,
+     "bleibt": true
+    },
+    {
+     "id": "0420",
+     "frage": "W3_BAS_KAL_0420",
+     "antworten": [],
+     "beendet": false,
+     "bleibt": false,
+     "bedingung": [
+      {
+       "art": "nach",
+       "raetsel": "R13"
+      }
+     ]
+    },
+    {
+     "id": "0430",
+     "frage": "W3_BAS_MAX_0430",
+     "antworten": [
+      {
+       "zeile": "W3_BAS_KAL_0440",
+       "sprecher": "KAL",
+       "blasen": [
+        "W3_BAS_KAL_0440"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W3_BAS_MAX_0450",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_BAS_MAX_0450"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W3_BAS_KAL_0460",
+       "sprecher": "KAL",
+       "blasen": [
+        "W3_BAS_KAL_0460"
+       ],
+       "regie": ""
+      }
+     ],
+     "beendet": false,
+     "bleibt": false
+    },
+    {
+     "id": "0470",
+     "frage": "W3_BAS_MAX_0470",
+     "antworten": [
+      {
+       "zeile": "W3_BAS_KAL_0480",
+       "sprecher": "KAL",
+       "blasen": [
+        "W3_BAS_KAL_0480"
+       ],
+       "regie": ""
+      }
+     ],
+     "beendet": true,
+     "bleibt": false
+    }
+   ],
+   "erschoepft": [
+    {
+     "zeile": "W3_ABS_KAL_0110",
+     "sprecher": "KAL"
+    },
+    {
+     "zeile": "W3_ABS_KAL_0120",
+     "sprecher": "KAL"
+    }
+   ]
+  },
+  {
+   "id": "hausmeister",
+   "script_name": "Hausmeister",
+   "optionen": [
+    {
+     "id": "0040",
+     "frage": "W3_EING_MAX_0040",
+     "antworten": [
+      {
+       "zeile": "W3_EING_HAU_0050",
+       "sprecher": "HAU",
+       "blasen": [
+        "W3_EING_HAU_0050"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W3_EING_PIX_0060",
+       "sprecher": "PIX",
+       "blasen": [
+        "W3_EING_PIX_0060"
+       ],
+       "regie": ""
+      }
+     ],
+     "beendet": false,
+     "bleibt": false
+    },
+    {
+     "id": "0070",
+     "frage": "W3_EING_MAX_0070",
+     "antworten": [
+      {
+       "zeile": "W3_EING_HAU_0080",
+       "sprecher": "HAU",
+       "blasen": [
+        "W3_EING_HAU_0080"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W3_EING_PIX_0090",
+       "sprecher": "PIX",
+       "blasen": [
+        "W3_EING_PIX_0090",
+        "W3_EING_PIX_0090_2"
+       ],
+       "regie": "Kaskade; Erklärung des Ausdrucks laut Glossar"
+      }
+     ],
+     "beendet": false,
+     "bleibt": false
+    },
+    {
+     "id": "0100",
+     "frage": "W3_EING_MAX_0100",
+     "antworten": [
+      {
+       "zeile": "W3_EING_HAU_0110",
+       "sprecher": "HAU",
+       "blasen": [
+        "W3_EING_HAU_0110"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W3_EING_MAX_1050",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_EING_MAX_1050"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W3_EING_HAU_1060",
+       "sprecher": "HAU",
+       "blasen": [
+        "W3_EING_HAU_1060"
+       ],
+       "regie": ""
+      }
+     ],
+     "beendet": false,
+     "bleibt": false
+    },
+    {
+     "id": "0120",
+     "frage": "W3_EING_MAX_0120",
+     "antworten": [
+      {
+       "zeile": "W3_EING_HAU_0130",
+       "sprecher": "HAU",
+       "blasen": [
+        "W3_EING_HAU_0130"
+       ],
+       "regie": "Hinweis Olivenöl"
+      },
+      {
+       "zeile": "W3_EING_MAX_1070",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_EING_MAX_1070"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "W3_EING_HAU_1080",
+       "sprecher": "HAU",
+       "blasen": [
+        "W3_EING_HAU_1080"
+       ],
+       "regie": ""
+      }
+     ],
+     "beendet": false,
+     "bleibt": true
+    },
+    {
+     "id": "0140",
+     "frage": "W3_EING_MAX_0140",
+     "antworten": [
+      {
+       "zeile": "W3_EING_HAU_0150",
+       "sprecher": "HAU",
+       "blasen": [
+        "W3_EING_HAU_0150"
+       ],
+       "regie": "wischt weiter"
+      }
+     ],
+     "beendet": true,
+     "bleibt": false
+    }
+   ],
+   "erschoepft": [
+    {
+     "zeile": "W3_ABS_HAU_0130",
+     "sprecher": "HAU"
+    },
+    {
+     "zeile": "W3_ABS_HAU_0140",
+     "sprecher": "HAU"
+    }
+   ]
+  }
+ ],
+ "figurenwechsel": {},
+ "ersatz": {
+  "MAX": [
+   "SYS_ERS_MAX_0010",
+   "SYS_ERS_MAX_0020",
+   "SYS_ERS_MAX_0030",
+   "SYS_ERS_MAX_0040",
+   "SYS_ERS_MAX_0050",
+   "SYS_ERS_MAX_0060",
+   "SYS_ERS_MAX_0070",
+   "SYS_ERS_MAX_0080",
+   "SYS_ERS_MAX_0090",
+   "SYS_ERS_MAX_0100",
+   "SYS_ERS_MAX_0110",
+   "SYS_ERS_MAX_0120",
+   "SYS_ERS_MAX_0130",
+   "SYS_ERS_MAX_0140",
+   "SYS_ERS_MAX_0150",
+   "SYS_ERS_MAX_0160",
+   "SYS_ERS_MAX_0170",
+   "SYS_ERS_MAX_0180",
+   "SYS_ERS_MAX_0190",
+   "SYS_ERS_MAX_0200",
+   "SYS_ERS_MAX_0210",
+   "SYS_ERS_MAX_0220",
+   "SYS_ERS_MAX_0230",
+   "SYS_ERS_MAX_0240",
+   "SYS_ERS_MAX_0250"
+  ],
+  "PIX": [
+   "SYS_ERS_PIX_0110",
+   "SYS_ERS_PIX_0120",
+   "SYS_ERS_PIX_0130",
+   "SYS_ERS_PIX_0140",
+   "SYS_ERS_PIX_0150",
+   "SYS_ERS_PIX_0160",
+   "SYS_ERS_PIX_0170",
+   "SYS_ERS_PIX_0180",
+   "SYS_ERS_PIX_0190",
+   "SYS_ERS_PIX_0200",
+   "SYS_ERS_PIX_0210",
+   "SYS_ERS_PIX_0220",
+   "SYS_ERS_PIX_0230",
+   "SYS_ERS_PIX_0240",
+   "SYS_ERS_PIX_0250",
+   "SYS_ERS_PIX_0260",
+   "SYS_ERS_PIX_0270",
+   "SYS_ERS_PIX_0280",
+   "SYS_ERS_PIX_0290",
+   "SYS_ERS_PIX_0300",
+   "SYS_ERS_PIX_0310",
+   "SYS_ERS_PIX_0320",
+   "SYS_ERS_PIX_0330",
+   "SYS_ERS_PIX_0340",
+   "SYS_ERS_PIX_0350"
+  ]
+ },
+ "wiederholung": {
+  "MAX": [
+   "SYS_WDH_MAX_0010",
+   "SYS_WDH_MAX_0020",
+   "SYS_WDH_MAX_0030",
+   "SYS_WDH_MAX_0040",
+   "SYS_WDH_MAX_0050",
+   "SYS_WDH_MAX_0060",
+   "SYS_WDH_MAX_0070",
+   "SYS_WDH_MAX_0080",
+   "SYS_WDH_MAX_0090",
+   "SYS_WDH_MAX_0100",
+   "SYS_WDH_MAX_0110",
+   "SYS_WDH_MAX_0120",
+   "SYS_WDH_MAX_0130",
+   "SYS_WDH_MAX_0140",
+   "SYS_WDH_MAX_0150",
+   "SYS_WDH_MAX_0160",
+   "SYS_WDH_MAX_0170",
+   "SYS_WDH_MAX_0180",
+   "SYS_WDH_MAX_0190",
+   "SYS_WDH_MAX_0200"
+  ],
+  "PIX": [
+   "SYS_WDH_PIX_0010",
+   "SYS_WDH_PIX_0020",
+   "SYS_WDH_PIX_0030",
+   "SYS_WDH_PIX_0040",
+   "SYS_WDH_PIX_0050",
+   "SYS_WDH_PIX_0060",
+   "SYS_WDH_PIX_0070",
+   "SYS_WDH_PIX_0080",
+   "SYS_WDH_PIX_0090",
+   "SYS_WDH_PIX_0100"
+  ]
+ },
+ "plauder": {
+  "MAX": [
+   "SYS_PLA_MAX_0010",
+   "SYS_PLA_MAX_0020",
+   "SYS_PLA_MAX_0030",
+   "SYS_PLA_MAX_0040",
+   "SYS_PLA_MAX_0050",
+   "SYS_PLA_MAX_0060"
+  ]
+ }
+}

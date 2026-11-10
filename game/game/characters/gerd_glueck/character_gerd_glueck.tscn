@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://bir3fg4ut186l"]
+
+[ext_resource type="Script" path="res://game/characters/gerd_glueck/character_gerd_glueck.gd" id="1_81jgh"]
+[ext_resource type="Texture2D" uid="uid://c70r0ynus30ca" path="res://grafik/platzhalter/figur_gerd_glueck.png" id="2_macc3"]
+
+[node name="CharacterGerdGlueck" type="Area2D" unique_id=1802687030]
+script = ExtResource("1_81jgh")
+walk_speed = 90.0
+dialog_pos = Vector2(0, -94)
+script_name = "GerdGlueck"
+description = "UI_OBJ_GERD_GLUECK"
+cursor = 8
+interaction_polygon = PackedVector2Array(-15, -90, 15, -90, 15, 0, -15, 0)
+
+[node name="ScalingPolygon" type="CollisionPolygon2D" parent="." unique_id=1524395093]
+polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=411709504]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1002328576]
+texture_filter = 1
+texture = ExtResource("2_macc3")
+offset = Vector2(0, -45)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1656161011]
+visible = false
+polygon = PackedVector2Array(-15, -90, 15, -90, 15, 0, -15, 0)
+
+[node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=478051380]
+visible = false
+affect_navigation_mesh = true
+carve_navigation_mesh = true

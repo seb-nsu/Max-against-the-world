@@ -6,7 +6,7 @@ Diese Datei sammelt alle Absprachen zu Technik, Grafik und Audio an einer Stelle
 
 | Bereich | Entscheidung | Warum |
 | --- | --- | --- |
-| Spielart | 2D-Point-and-Click in Seitenansicht wie eine Bühne, zwei spielbare Figuren (Max und Pixel) | Klassische Adventure-Ansicht, wenig Zeichenarbeit, passt zu KI-Hintergründen |
+| Spielart | 2D-Point-and-Click, Räume frontal mit leichter Tiefe (Figuren werden nach hinten kleiner), zwei spielbare Figuren (Max und Pixel) | Klassische Adventure-Ansicht, wenig Zeichenarbeit, passt zu KI-Hintergründen |
 | Engine | Godot 4 mit dem Plugin Popochiu | Kostenlos, Popochiu bringt Räume, Hotspots, Inventar, Dialoge und Speichern für Point-and-Click mit |
 | Auflösung | 480×270 Pixel, 4-fach auf 1920×1080 skaliert; breite Räume bis 960×270. Vorläufig (9. November 2026), nach den ersten Testszenen noch einmal prüfen; die Zahl steht zentral in `tools/aufloesung.py` | Gespielt wird vor allem am Laptop und Rechner, dort wirkte 320×180 zu grob; glatt skalierbar auf 1080p und 4K, auf 1440p mit schmalem Rand |
 | Palette | Eine gemeinsame 32-Farben-Palette, z. B. Endesga 32 von Lospec | Alle Bilder, auch fremde, werden darauf umgefärbt und passen zusammen |
@@ -117,6 +117,10 @@ Welche Automatisierung in welche Stufe gehört, steht unter Automatisierung.
 
 **Stand Errungenschaften, Barrierefreiheit und Controller (10. November 2026):** Die 13 Errungenschaften schalten sich aus dem Zustand frei, bleiben über alle Spielstände und gehen an Steam, sobald GodotSteam eingebunden ist; das Hauptmenü zeigt sie als sechsten Kanal. Das ganze Spiel geht mit Gamepad und Steam Deck: Zeiger mit Einrasten, Steuerkreuz springt zwischen Hotspots, Menüs über den Fokus. Beim Zeigen der Hotspots stehen ihre Namen dabei. Wackeln, Flackern und Farbsymbole laufen über `CQEffekte` und beachten die Optionen. Offen: vier Schalter, die Welt 3, Welt 4 und das Finale setzen müssen (`05-spielsysteme.md`, Errungenschaften), Errungenschaften in Steamworks anlegen, GodotSteam einbinden, Steam-Input-Glyphen.
 
+**Stand Durchsicht aller Welten (10. November 2026):** Prolog bis Finale laufen im Testmodus ohne Fehler durch; Welt 2 und Welt 3 haben jetzt eigene Headless-Tests, die auch in GitHub Actions laufen. Ein Abgleich zwischen Skript und Spiel fand viele Zeilen, die nie vorkamen; sie sind eingebaut, übrig sind nur markierte Reservezeilen. Behoben sind außerdem der hängende Übergang von Welt 3 zum Dachboden, die vier Nahansichten in Welt 3, die sich nie öffneten, und die Reihenfolge von Vorstellung und Einstieg bei mehreren Figuren. 151 neue Zeilen geben einzeiligen Dialogoptionen in Welt 2 bis 4 einen Nachsatz. Die Funde G27 bis G30 sind am selben Tag erledigt; `tools/abdeckung.py` prüft seitdem in GitHub Actions, dass jede Skriptzeile im Spiel vorkommt.
+
+**Stand zweite Runde (10. November 2026):** Welt 1, Prolog, Zwischenspiele und Finale haben dieselbe Rundung bekommen wie Welt 2 bis 4 (52 neue Nachsätze für einzeilige Optionen). Das Spiel ist nicht mehr stumm: Ohne Dateien brabbeln die Figuren, und Geräusche und Jingles kommen als erzeugte Platzhalter-Töne (`04-audio.md`). Der Web-Testbuild (A8) entsteht über den Workflow „Testbuild“ und läuft im Browser ohne Installation; in Chromium sind Start, Menü und Prolog geprüft. Dabei fielen zwei Fehler auf und sind behoben: Beim ersten Start schien der Epilepsie-Hinweis durch die Telemetrie-Frage, und das Platzhalterbild des Wohnzimmers zeigte schon im Prolog „Kuchen“, „Girlande“ und „Geschenke“ (verriet das Ende; Hotspots mit `versteckt: true` im Layout werden nicht mehr ins Bild gemalt). Danach (zweiter Teil des Tages): Die Wettkampftage in Welt 2 und der Kekse-Bonus im Finale haben Hinweise, vorher blieb die Pfote dort stumm; G17, G18 und G21 sind abgeschlossen; der Screenshot-Regressionstest (A16) läuft über alle 55 Räume; die englische Fassung ist im echten Spiel durchgesehen (Glossar vereinheitlicht: Gerald, Zappi's Dollhouse, M.O.T.H.E.R., Paw and Order; Weltnamen im Spielstand übersetzt; Controller-Hilfe und Spielstand-Kacheln passen jetzt auch auf Englisch). Die englische Fassung (A12) ist vollständig: alle 5.284 Skriptzeilen, Systemzeilen und Menüs sind übersetzt, im Optionsmenü umschaltbar. Offen ist nur noch, dass ein Muttersprachler die Witze prüft.
+
 Bei 10 bis 15 Stunden pro Woche sind das rund drei Jahre, bei 20 Stunden gut zwei. Die Stundenbudgets sind Messlatten, keine Versprechen; die Grafikstunden aus der Zähltabelle stecken darin.
 
 **Puffer und Termin für die Steam-Seite (Schätzung vom 9. November 2026, wird später festgelegt):** Auf jede Stufe kommen 20 Prozent Puffer: Grundgerüst 5 statt 4 Wochen, Vertical Slice 10 statt 8 Wochen, Demo Welt 1 gut 7 statt 6 Monate, Welten 2 bis 4 je 6 bis 8,5 statt 5 bis 7 Monate, Finale und Politur knapp 4 statt 3 Monate. Ohne Puffer ergibt das 27 bis 33 Monate, mit Puffer 32 bis 40 Monate.
@@ -144,7 +148,7 @@ Sechzehn Ideen aus dem Gutachten vom 8. November 2026 (A1 bis A16), mit Nutzen, 
 | A13 | Konsistenz-Check der Dokumente: Abhängigkeiten, Sackgassen, Verweise | mittel | 1 | niedrig | 1 | Läuft als `tools/pruefen.py` (siehe oben) |
 | A14 | Hinweis-Datei (`game/daten/hinweise/<abschnitt>.json`, erzeugt von `tools/spieldaten.py`) aus Skript und Rätseltabelle erzeugen statt von Hand pflegen | mittel | 1 | niedrig | 2 | Hält Hinweise, Notizbuch-Ziele und Schalter gleich |
 | A15 | Playtest-Auswertung per Claude: Telemetrie-JSON plus Beobachtungsbogen → Bericht je Rätsel mit Vorschlag | mittel | 0,5 | niedrig | 3 | Erst sinnvoll, wenn A9 Daten liefert |
-| A16 | Screenshot-Regressionstest: Headless-Build rendert jeden Raum mit Max an fester Position und vergleicht mit einer Referenz (Laufbereich, Größe, Palette) | niedrig bis mittel | 1 | niedrig | 4 | Erst mit mehreren Agenten (A5) nötig |
+| A16 | Screenshot-Regressionstest: rendert jeden Raum beim ersten Betreten und vergleicht mit einer Referenz | niedrig bis mittel | 1 | niedrig | 4 | Gebaut (10. November 2026): `game/tests/bildschirm_vergleich.gd`, 55 Räume, Referenzen in `tests/bildschirm/referenz/`, eigener Job in GitHub Actions (Anleitung in `game/README.md`) |
 
 Nicht automatisieren: Laufbereiche, Hotspot-Umrisse, Freigabe der Pointen und die Nacharbeit der Hintergründe.
 
@@ -209,7 +213,7 @@ Quellen: [games-stats.com zu Lucy Dreaming](https://games-stats.com/steam/game/l
 
 ## Brauchst du einen Level-Editor?
 
-Nein. Bei einem Point-and-Click in Seitenansicht ist jeder Raum ein Hintergrundbild mit unsichtbaren Flächen darüber. Das erledigt der Godot-Editor mit Popochiu bereits:
+Nein. Bei einem 2D-Point-and-Click ist jeder Raum ein Hintergrundbild mit unsichtbaren Flächen darüber. Das erledigt der Godot-Editor mit Popochiu bereits:
 
 - **Räume:** Hintergrund, Laufbereich (Polygon, auf dem die Figur gehen darf), Hotspots (anklickbare Flächen), Props (Objekte mit Zuständen), Regionen (z. B. Figur wird kleiner, wenn sie nach hinten geht).
 - **Figuren, Inventar und Dialoge:** eigene Fenster im Popochiu-Panel.

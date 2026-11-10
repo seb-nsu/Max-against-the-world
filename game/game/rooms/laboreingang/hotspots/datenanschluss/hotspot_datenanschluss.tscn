@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://cmj8ex8dibjh7"]
+
+[ext_resource type="Script" path="res://game/rooms/laboreingang/hotspots/datenanschluss/hotspot_datenanschluss.gd" id="1_pwp7q"]
+
+[node name="Datenanschluss" type="Area2D" unique_id=1479994652]
+script = ExtResource("1_pwp7q")
+script_name = "Datenanschluss"
+description = "Datenanschluss"
+cursor = 1
+interaction_polygon = PackedVector2Array(-29, -24, 29, -24, 29, 24, -29, 24)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=565158829]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

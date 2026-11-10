@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://bkrl4xuq7kmcg"]
+
+[ext_resource type="Script" path="res://game/rooms/agora/hotspots/hohe_saeule_mit_adler/hotspot_hohe_saeule_mit_adler.gd" id="1_ij5kc"]
+
+[node name="HoheSaeuleMitAdler" type="Area2D" unique_id=263523984]
+script = ExtResource("1_ij5kc")
+script_name = "HoheSaeuleMitAdler"
+description = "Hohe Saeule Mit Adler"
+cursor = 1
+interaction_polygon = PackedVector2Array(-15, -90, 15, -90, 15, 90, -15, 90)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1597059717]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://20338jeimh2v"]
+
+[ext_resource type="Script" path="res://game/rooms/hafen_syrakus/props/tintenfass/prop_tintenfass.gd" id="1_qwe6h"]
+
+[node name="Tintenfass" type="Area2D" unique_id=587912893]
+script = ExtResource("1_qwe6h")
+script_name = "Tintenfass"
+description = "Tintenfass"
+cursor = 1
+interaction_polygon = PackedVector2Array(-7.5, -7.5, 7.5, -7.5, 7.5, 7.5, -7.5, 7.5)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1446694419]
+texture_filter = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1026033832]
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=962611889]
+visible = false
+modulate = Color(1, 1, 0, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+
+[node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=1060922429]
+visible = false
+affect_navigation_mesh = true
+carve_navigation_mesh = true

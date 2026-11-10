@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://s2onpa7rt0lq"]
+
+[ext_resource type="Script" path="res://game/characters/faecherwedler/character_faecherwedler_state.gd" id="1_c8x1o"]
+
+[resource]
+resource_name = "Faecherwedler"
+script = ExtResource("1_c8x1o")
+script_name = "Faecherwedler"
+scene = "res://game/characters/faecherwedler/character_faecherwedler.tscn"

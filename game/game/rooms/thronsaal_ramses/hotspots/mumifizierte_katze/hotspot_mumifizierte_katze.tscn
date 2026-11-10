@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://bukk4nhq5mmfj"]
+
+[ext_resource type="Script" path="res://game/rooms/thronsaal_ramses/hotspots/mumifizierte_katze/hotspot_mumifizierte_katze.gd" id="1_etyp0"]
+
+[node name="MumifizierteKatze" type="Area2D" unique_id=1892102398]
+script = ExtResource("1_etyp0")
+script_name = "MumifizierteKatze"
+description = "Mumifizierte Katze"
+cursor = 1
+interaction_polygon = PackedVector2Array(-12, -21, 12, -21, 12, 21, -12, 21)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=129554516]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://b013yc3mdpjy0"]
+
+[node name="VonThronsaalRamses" type="Marker2D" unique_id=493242966]
+visible = false

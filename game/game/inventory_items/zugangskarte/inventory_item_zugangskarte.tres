@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://b8jrdnrp8lxt7"]
+
+[ext_resource type="Script" path="res://game/inventory_items/zugangskarte/inventory_item_zugangskarte_state.gd" id="1_5brj3"]
+
+[resource]
+resource_name = "Zugangskarte"
+script = ExtResource("1_5brj3")
+script_name = "Zugangskarte"
+scene = "res://game/inventory_items/zugangskarte/inventory_item_zugangskarte.tscn"

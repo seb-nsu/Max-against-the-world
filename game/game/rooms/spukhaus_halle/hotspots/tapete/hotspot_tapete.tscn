@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://c1egi38femdyp"]
+
+[ext_resource type="Script" path="res://game/rooms/spukhaus_halle/hotspots/tapete/hotspot_tapete.gd" id="1_x7vfh"]
+
+[node name="Tapete" type="Area2D" unique_id=258130930]
+script = ExtResource("1_x7vfh")
+script_name = "Tapete"
+description = "Tapete"
+cursor = 1
+interaction_polygon = PackedVector2Array(-46, -24, 46, -24, 46, 24, -46, 24)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=746411958]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

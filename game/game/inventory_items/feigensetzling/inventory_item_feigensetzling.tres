@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://u61mmjmsoats"]
+
+[ext_resource type="Script" path="res://game/inventory_items/feigensetzling/inventory_item_feigensetzling_state.gd" id="1_3b70d"]
+
+[resource]
+resource_name = "Feigensetzling"
+script = ExtResource("1_3b70d")
+script_name = "Feigensetzling"
+scene = "res://game/inventory_items/feigensetzling/inventory_item_feigensetzling.tscn"

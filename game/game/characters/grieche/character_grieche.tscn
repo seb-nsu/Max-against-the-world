@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://b6sud1n45app8"]
+
+[ext_resource type="Script" path="res://game/characters/grieche/character_grieche.gd" id="1_o5gvf"]
+[ext_resource type="Texture2D" uid="uid://0xdle4m1ofah" path="res://grafik/platzhalter/figur_grieche.png" id="2_cvvmd"]
+
+[node name="CharacterGrieche" type="Area2D" unique_id=2031134735]
+script = ExtResource("1_o5gvf")
+walk_speed = 90.0
+dialog_pos = Vector2(0, -64)
+script_name = "Grieche"
+description = "UI_OBJ_GRIECHE"
+cursor = 8
+interaction_polygon = PackedVector2Array(-12, -60, 12, -60, 12, 0, -12, 0)
+
+[node name="ScalingPolygon" type="CollisionPolygon2D" parent="." unique_id=91545667]
+polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=223966003]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1144201921]
+texture_filter = 1
+texture = ExtResource("2_cvvmd")
+offset = Vector2(0, -30)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1294279392]
+visible = false
+polygon = PackedVector2Array(-12, -60, 12, -60, 12, 0, -12, 0)
+
+[node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=1690387093]
+visible = false
+affect_navigation_mesh = true
+carve_navigation_mesh = true

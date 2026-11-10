@@ -1,0 +1,94 @@
+[gd_scene format=3 uid="uid://xitv8728m8tk"]
+
+[ext_resource type="Script" path="res://game/rooms/sphinx/room_sphinx.gd" id="1_qrkv8"]
+[ext_resource type="PackedScene" uid="uid://scsqcoeuy273" path="res://game/rooms/sphinx/walkable_areas/boden/walkable_area_boden.tscn" id="2_863sw"]
+[ext_resource type="PackedScene" uid="uid://cshf54scjsffy" path="res://game/rooms/sphinx/props/background/prop_background.tscn" id="3_4ft1y"]
+[ext_resource type="Texture2D" uid="uid://c3nqw6t8idfid" path="res://grafik/platzhalter/raum_sphinx.png" id="4_fhhk3"]
+[ext_resource type="PackedScene" uid="uid://cwk3w6x5l517k" path="res://game/rooms/sphinx/hotspots/schreibpult/hotspot_schreibpult.tscn" id="5_ijeel"]
+[ext_resource type="PackedScene" uid="uid://b3w13mmgq8eny" path="res://game/rooms/sphinx/hotspots/zerknuellte_papyri/hotspot_zerknuellte_papyri.tscn" id="6_d2w5h"]
+[ext_resource type="PackedScene" uid="uid://brg4jm8dlkthl" path="res://game/rooms/sphinx/hotspots/notizblock/hotspot_notizblock.tscn" id="7_6rh2c"]
+[ext_resource type="PackedScene" uid="uid://dtq2awoadardv" path="res://game/rooms/sphinx/hotspots/fussspuren/hotspot_fussspuren.tscn" id="8_oq436"]
+[ext_resource type="PackedScene" uid="uid://cluy08vxsf7e8" path="res://game/rooms/sphinx/hotspots/steinkugel/hotspot_steinkugel.tscn" id="9_nklnj"]
+[ext_resource type="PackedScene" uid="uid://dqpry7f6ycwjo" path="res://game/rooms/sphinx/hotspots/nase/hotspot_nase.tscn" id="10_4b4di"]
+[ext_resource type="PackedScene" uid="uid://ctbigjijynug7" path="res://game/rooms/sphinx/hotspots/ausgang_nil_delta/hotspot_ausgang_nil_delta.tscn" id="11_wqjuf"]
+[ext_resource type="PackedScene" uid="uid://tlxkmtyn4myy" path="res://game/rooms/sphinx/markers/start/marker_start.tscn" id="12_3fct2"]
+[ext_resource type="PackedScene" uid="uid://cvjx8luy1aftb" path="res://game/rooms/sphinx/markers/von_nil_delta/marker_von_nil_delta.tscn" id="13_dnqx6"]
+[ext_resource type="PackedScene" uid="uid://3lpls05vx44o" path="res://game/characters/sphinx_figur/character_sphinx_figur.tscn" id="14_gr7p6"]
+
+[node name="RoomSphinx" type="Node2D" unique_id=789613468]
+script = ExtResource("1_qrkv8")
+script_name = "Sphinx"
+width = 480
+height = 270
+
+[node name="WalkableAreas" type="Node2D" parent="." unique_id=492387709]
+
+[node name="Boden" parent="WalkableAreas" unique_id=1752451314 instance=ExtResource("2_863sw")]
+interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(6, 210, 474, 210, 474, 267, 6, 267)])
+
+[node name="Props" type="Node2D" parent="." unique_id=143240942]
+
+[node name="Background" parent="Props" unique_id=950661274 instance=ExtResource("3_4ft1y")]
+position = Vector2(240, 135)
+texture = ExtResource("4_fhhk3")
+description = "UI_RAUM_SPHINX"
+
+[node name="Hotspots" type="Node2D" parent="." unique_id=1828087293]
+
+[node name="Schreibpult" parent="Hotspots" unique_id=809702017 instance=ExtResource("5_ijeel")]
+position = Vector2(165, 183)
+description = "UI_OBJ_SCHREIBPULT"
+baseline = 27
+walk_to_point = Vector2(0, 51)
+
+[node name="ZerknuelltePapyri" parent="Hotspots" unique_id=1995054590 instance=ExtResource("6_d2w5h")]
+position = Vector2(229.5, 202.5)
+description = "UI_OBJ_ZERKNUELLTE_PAPYRI"
+baseline = 7
+walk_to_point = Vector2(-1.5, 31.5)
+
+[node name="Notizblock" parent="Hotspots" unique_id=1676197878 instance=ExtResource("7_6rh2c")]
+position = Vector2(162, 151.5)
+description = "UI_OBJ_NOTIZBLOCK"
+baseline = 4
+walk_to_point = Vector2(0, 82.5)
+
+[node name="Fussspuren" parent="Hotspots" unique_id=981661707 instance=ExtResource("8_oq436")]
+position = Vector2(105, 247.5)
+description = "UI_OBJ_FUSSSPUREN"
+baseline = 7
+walk_to_point = Vector2(0, -13.5)
+
+[node name="Steinkugel" parent="Hotspots" unique_id=1434560379 instance=ExtResource("9_nklnj")]
+position = Vector2(153, 111)
+description = "UI_OBJ_STEINKUGEL"
+baseline = 27
+walk_to_point = Vector2(-3, 123)
+
+[node name="Nase" parent="Hotspots" unique_id=2092306991 instance=ExtResource("10_4b4di")]
+position = Vector2(382.5, 108)
+description = "UI_OBJ_NASE"
+baseline = 12
+walk_to_point = Vector2(-1.5, 126)
+
+[node name="AusgangNilDelta" parent="Hotspots" unique_id=1452541732 instance=ExtResource("11_wqjuf")]
+position = Vector2(16.5, 157.5)
+description = "UI_OBJ_AUSGANG_NIL_DELTA"
+baseline = 52
+walk_to_point = Vector2(1.5, 82.5)
+cursor = 9
+
+[node name="Regions" type="Node2D" parent="." unique_id=1308321562]
+
+[node name="Markers" type="Node2D" parent="." unique_id=662166787]
+
+[node name="Start" parent="Markers" unique_id=1306499611 instance=ExtResource("12_3fct2")]
+position = Vector2(36, 240)
+
+[node name="VonNilDelta" parent="Markers" unique_id=2128877846 instance=ExtResource("13_dnqx6")]
+position = Vector2(36, 240)
+
+[node name="Characters" type="Node2D" parent="." unique_id=636472370]
+
+[node name="CharacterSphinxFigur *" parent="Characters" unique_id=494662940 instance=ExtResource("14_gr7p6")]
+position = Vector2(330, 207)

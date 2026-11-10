@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://msuqm8rsln3j"]
+
+[ext_resource type="Script" path="res://game/inventory_items/waage/inventory_item_waage_state.gd" id="1_dt56j"]
+
+[resource]
+resource_name = "Waage"
+script = ExtResource("1_dt56j")
+script_name = "Waage"
+scene = "res://game/inventory_items/waage/inventory_item_waage.tscn"

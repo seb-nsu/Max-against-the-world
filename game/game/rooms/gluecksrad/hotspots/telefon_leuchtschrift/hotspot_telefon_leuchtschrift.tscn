@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://bdgfjl4j8r1fa"]
+
+[ext_resource type="Script" path="res://game/rooms/gluecksrad/hotspots/telefon_leuchtschrift/hotspot_telefon_leuchtschrift.gd" id="1_gdilv"]
+
+[node name="TelefonLeuchtschrift" type="Area2D" unique_id=175207209]
+script = ExtResource("1_gdilv")
+script_name = "TelefonLeuchtschrift"
+description = "Telefon Leuchtschrift"
+cursor = 1
+interaction_polygon = PackedVector2Array(-29, -24, 29, -24, 29, 24, -29, 24)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1176024860]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

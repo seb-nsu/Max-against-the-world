@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://b8uflve6wnjad"]
+
+[ext_resource type="Script" path="res://game/characters/nachrichtensprecher/character_nachrichtensprecher_state.gd" id="1_4nqlm"]
+
+[resource]
+resource_name = "Nachrichtensprecher"
+script = ExtResource("1_4nqlm")
+script_name = "Nachrichtensprecher"
+scene = "res://game/characters/nachrichtensprecher/character_nachrichtensprecher.tscn"

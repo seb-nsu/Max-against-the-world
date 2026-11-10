@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://cj0l4nhvauyu8"]
+
+[ext_resource type="Script" path="res://game/characters/archimedes/character_archimedes_state.gd" id="1_dci82"]
+
+[resource]
+resource_name = "Archimedes"
+script = ExtResource("1_dci82")
+script_name = "Archimedes"
+scene = "res://game/characters/archimedes/character_archimedes.tscn"

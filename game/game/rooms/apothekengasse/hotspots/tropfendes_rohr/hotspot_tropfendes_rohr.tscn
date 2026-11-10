@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://c87l48455ds1b"]
+
+[ext_resource type="Script" path="res://game/rooms/apothekengasse/hotspots/tropfendes_rohr/hotspot_tropfendes_rohr.gd" id="1_2j67j"]
+
+[node name="TropfendesRohr" type="Area2D" unique_id=547362383]
+script = ExtResource("1_2j67j")
+script_name = "TropfendesRohr"
+description = "Tropfendes Rohr"
+cursor = 1
+interaction_polygon = PackedVector2Array(-46, -24, 46, -24, 46, 24, -46, 24)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=391610427]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

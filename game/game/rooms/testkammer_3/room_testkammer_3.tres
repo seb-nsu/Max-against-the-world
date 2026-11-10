@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://bknqb5tfc06mc"]
+
+[ext_resource type="Script" path="res://game/rooms/testkammer_3/room_testkammer_3_state.gd" id="1_f4vox"]
+
+[resource]
+resource_name = "Testkammer3"
+script = ExtResource("1_f4vox")
+script_name = "Testkammer3"
+scene = "res://game/rooms/testkammer_3/room_testkammer_3.tscn"

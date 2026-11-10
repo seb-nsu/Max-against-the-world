@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://cs2ci14u3v4aj"]
+
+[node name="VonWerbespotSet" type="Marker2D" unique_id=829576367]
+visible = false

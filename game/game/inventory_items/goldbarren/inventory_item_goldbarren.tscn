@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://eofn4ey6o423"]
+
+[ext_resource type="Texture2D" uid="uid://dfm51fppnpwvx" path="res://grafik/platzhalter/gegenstand_goldbarren.png" id="1_g5osq"]
+[ext_resource type="Script" path="res://game/inventory_items/goldbarren/inventory_item_goldbarren.gd" id="1_hm008"]
+
+[node name="ItemGoldbarren" type="TextureRect" unique_id=1307581104]
+texture_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 4
+mouse_filter = 0
+texture = ExtResource("1_g5osq")
+stretch_mode = 5
+script = ExtResource("1_hm008")
+script_name = "Goldbarren"
+description = "UI_OBJ_GOLDBARREN"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=650752296]

@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://ds4qcfkopx0bx"]
+
+[ext_resource type="Script" path="res://game/characters/gepard/character_gepard_state.gd" id="1_f42q5"]
+
+[resource]
+resource_name = "Gepard"
+script = ExtResource("1_f42q5")
+script_name = "Gepard"
+scene = "res://game/characters/gepard/character_gepard.tscn"

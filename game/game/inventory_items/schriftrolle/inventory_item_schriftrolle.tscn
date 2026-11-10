@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://g6k4mk6nnk0k"]
+
+[ext_resource type="Script" path="res://game/inventory_items/schriftrolle/inventory_item_schriftrolle.gd" id="1_0skyl"]
+[ext_resource type="Texture2D" uid="uid://cptx3ijv50s5g" path="res://grafik/platzhalter/gegenstand_schriftrolle.png" id="1_wq1qs"]
+
+[node name="ItemSchriftrolle" type="TextureRect" unique_id=1091611894]
+texture_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 4
+mouse_filter = 0
+texture = ExtResource("1_wq1qs")
+stretch_mode = 5
+script = ExtResource("1_0skyl")
+script_name = "Schriftrolle"
+description = "UI_OBJ_SCHRIFTROLLE"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=2126295316]

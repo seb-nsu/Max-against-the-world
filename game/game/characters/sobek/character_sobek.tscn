@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://bkkl2hck7rb2w"]
+
+[ext_resource type="Script" path="res://game/characters/sobek/character_sobek.gd" id="1_qmj0b"]
+[ext_resource type="Texture2D" uid="uid://mjk1leexhqqo" path="res://grafik/platzhalter/figur_sobek.png" id="2_fen6s"]
+
+[node name="CharacterSobek" type="Area2D" unique_id=1702667434]
+script = ExtResource("1_qmj0b")
+walk_speed = 90.0
+dialog_pos = Vector2(0, -28)
+script_name = "Sobek"
+description = "UI_OBJ_SOBEK"
+cursor = 8
+interaction_polygon = PackedVector2Array(-12, -24, 12, -24, 12, 0, -12, 0)
+
+[node name="ScalingPolygon" type="CollisionPolygon2D" parent="." unique_id=1873230515]
+polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1911078495]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1505755998]
+texture_filter = 1
+texture = ExtResource("2_fen6s")
+offset = Vector2(0, -12)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=155076511]
+visible = false
+polygon = PackedVector2Array(-12, -24, 12, -24, 12, 0, -12, 0)
+
+[node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=1349924829]
+visible = false
+affect_navigation_mesh = true
+carve_navigation_mesh = true

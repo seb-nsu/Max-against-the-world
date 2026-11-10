@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://ji0f114mmw6w"]
+
+[ext_resource type="Script" path="res://game/rooms/stadtstrasse/hotspots/gehweg/hotspot_gehweg.gd" id="1_q0q80"]
+
+[node name="Gehweg" type="Area2D" unique_id=827351644]
+script = ExtResource("1_q0q80")
+script_name = "Gehweg"
+description = "Gehweg"
+cursor = 1
+interaction_polygon = PackedVector2Array(-44.5, -24, 44.5, -24, 44.5, 24, -44.5, 24)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1372524721]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://cirtw6j8jj8q4"]
+
+[ext_resource type="Script" path="res://game/rooms/kellerarchiv/props/archivband/prop_archivband.gd" id="1_yeynd"]
+
+[node name="Archivband" type="Area2D" unique_id=256116965]
+script = ExtResource("1_yeynd")
+script_name = "Archivband"
+description = "Archivband"
+cursor = 1
+interaction_polygon = PackedVector2Array(-7.5, -6, 7.5, -6, 7.5, 6, -7.5, 6)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=643548015]
+texture_filter = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=933692131]
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1426697449]
+visible = false
+modulate = Color(1, 1, 0, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+
+[node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=1246703701]
+visible = false
+affect_navigation_mesh = true
+carve_navigation_mesh = true

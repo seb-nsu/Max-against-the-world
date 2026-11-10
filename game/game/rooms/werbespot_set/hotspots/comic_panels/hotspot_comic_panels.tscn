@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://cx00268xs2ehd"]
+
+[ext_resource type="Script" path="res://game/rooms/werbespot_set/hotspots/comic_panels/hotspot_comic_panels.gd" id="1_7losr"]
+
+[node name="ComicPanels" type="Area2D" unique_id=1467630913]
+script = ExtResource("1_7losr")
+script_name = "ComicPanels"
+description = "Comic Panels"
+cursor = 1
+interaction_polygon = PackedVector2Array(-29, -24, 29, -24, 29, 24, -29, 24)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=394850845]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

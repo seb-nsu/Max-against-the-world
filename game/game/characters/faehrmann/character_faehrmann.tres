@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://bhgbfvyyni8kb"]
+
+[ext_resource type="Script" path="res://game/characters/faehrmann/character_faehrmann_state.gd" id="1_jeceb"]
+
+[resource]
+resource_name = "Faehrmann"
+script = ExtResource("1_jeceb")
+script_name = "Faehrmann"
+scene = "res://game/characters/faehrmann/character_faehrmann.tscn"

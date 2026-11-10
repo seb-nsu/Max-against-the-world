@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://duj23n3nbhqcd"]
+
+[ext_resource type="Script" path="res://game/characters/zappmann/character_zappmann.gd" id="1_gfvnb"]
+[ext_resource type="Texture2D" uid="uid://x55b21dciro7" path="res://grafik/platzhalter/figur_zappmann.png" id="2_2x5s1"]
+
+[node name="CharacterZappmann" type="Area2D" unique_id=1013794678]
+script = ExtResource("1_gfvnb")
+walk_speed = 90.0
+dialog_pos = Vector2(0, -97)
+script_name = "Zappmann"
+description = "UI_OBJ_ZAPPMANN"
+cursor = 8
+interaction_polygon = PackedVector2Array(-15.5, -93, 15.5, -93, 15.5, 0, -15.5, 0)
+
+[node name="ScalingPolygon" type="CollisionPolygon2D" parent="." unique_id=1547098238]
+polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1150708684]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=214909949]
+texture_filter = 1
+texture = ExtResource("2_2x5s1")
+offset = Vector2(0, -46.5)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=2036345597]
+visible = false
+polygon = PackedVector2Array(-15.5, -93, 15.5, -93, 15.5, 0, -15.5, 0)
+
+[node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=1534726231]
+visible = false
+affect_navigation_mesh = true
+carve_navigation_mesh = true

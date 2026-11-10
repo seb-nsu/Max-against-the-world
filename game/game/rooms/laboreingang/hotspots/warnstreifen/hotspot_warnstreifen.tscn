@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://dutlj5en0ox47"]
+
+[ext_resource type="Script" path="res://game/rooms/laboreingang/hotspots/warnstreifen/hotspot_warnstreifen.gd" id="1_msbke"]
+
+[node name="Warnstreifen" type="Area2D" unique_id=1532717507]
+script = ExtResource("1_msbke")
+script_name = "Warnstreifen"
+description = "Warnstreifen"
+cursor = 1
+interaction_polygon = PackedVector2Array(-29, -24, 29, -24, 29, 24, -29, 24)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1517613974]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

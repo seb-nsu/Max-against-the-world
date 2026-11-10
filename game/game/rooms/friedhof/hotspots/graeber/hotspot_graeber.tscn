@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://bv2vyi6xrw3ui"]
+
+[ext_resource type="Script" path="res://game/rooms/friedhof/hotspots/graeber/hotspot_graeber.gd" id="1_li10u"]
+
+[node name="Graeber" type="Area2D" unique_id=1106185018]
+script = ExtResource("1_li10u")
+script_name = "Graeber"
+description = "Graeber"
+cursor = 1
+interaction_polygon = PackedVector2Array(-29, -24, 29, -24, 29, 24, -29, 24)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=2012031292]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

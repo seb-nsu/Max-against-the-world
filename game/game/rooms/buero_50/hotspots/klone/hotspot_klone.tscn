@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://dq4jb2i1838qk"]
+
+[ext_resource type="Script" path="res://game/rooms/buero_50/hotspots/klone/hotspot_klone.gd" id="1_td2yn"]
+
+[node name="Klone" type="Area2D" unique_id=738808259]
+script = ExtResource("1_td2yn")
+script_name = "Klone"
+description = "Klone"
+cursor = 1
+interaction_polygon = PackedVector2Array(-29, -24, 29, -24, 29, 24, -29, 24)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=372317148]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

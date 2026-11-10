@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://cvv8ff32no16h"]
+
+[ext_resource type="Script" uid="uid://brxefo54wpm32" path="res://addons/popochiu/engine/objects/dialog/popochiu_dialog_option.gd" id="1_bji53"]
+[ext_resource type="Script" path="res://game/dialogs/grieche/dialog_grieche.gd" id="2_sgnv1"]
+
+[resource]
+resource_name = "Grieche"
+script = ExtResource("2_sgnv1")
+script_name = "Grieche"

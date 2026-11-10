@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://uimxs3r34x5p"]
+
+[ext_resource type="Script" path="res://game/rooms/kapitolis/hotspots/ausgang_fondue_fabrik/hotspot_ausgang_fondue_fabrik.gd" id="1_0y514"]
+
+[node name="AusgangFondueFabrik" type="Area2D" unique_id=135499730]
+script = ExtResource("1_0y514")
+script_name = "AusgangFondueFabrik"
+description = "Ausgang Fondue Fabrik"
+cursor = 1
+interaction_polygon = PackedVector2Array(-13.5, -52.5, 13.5, -52.5, 13.5, 52.5, -13.5, 52.5)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=105912324]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

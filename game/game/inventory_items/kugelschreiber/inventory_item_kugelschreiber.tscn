@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://b5wrne3e4jrms"]
+
+[ext_resource type="Script" path="res://game/inventory_items/kugelschreiber/inventory_item_kugelschreiber.gd" id="1_gggal"]
+[ext_resource type="Texture2D" uid="uid://cq88a3oabxcx3" path="res://grafik/platzhalter/gegenstand_kugelschreiber.png" id="1_x1ed6"]
+
+[node name="ItemKugelschreiber" type="TextureRect" unique_id=569656123]
+texture_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 4
+mouse_filter = 0
+texture = ExtResource("1_x1ed6")
+stretch_mode = 5
+script = ExtResource("1_gggal")
+script_name = "Kugelschreiber"
+description = "UI_OBJ_KUGELSCHREIBER"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1684480065]

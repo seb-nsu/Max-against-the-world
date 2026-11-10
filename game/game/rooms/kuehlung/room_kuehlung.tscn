@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://rtstvd0ett82"]
+
+[ext_resource type="Script" path="res://game/rooms/kuehlung/room_kuehlung.gd" id="1_cicmg"]
+[ext_resource type="PackedScene" uid="uid://bgmujfuflrb5b" path="res://game/rooms/kuehlung/walkable_areas/boden/walkable_area_boden.tscn" id="2_0omhv"]
+[ext_resource type="PackedScene" uid="uid://bph3sik0jn23v" path="res://game/rooms/kuehlung/props/background/prop_background.tscn" id="3_cdd7l"]
+[ext_resource type="Texture2D" uid="uid://bg0kek5q2owqx" path="res://grafik/platzhalter/raum_kuehlung.png" id="4_5onkc"]
+[ext_resource type="PackedScene" uid="uid://cqo7tgah1sekc" path="res://game/rooms/kuehlung/hotspots/wassereimer/hotspot_wassereimer.tscn" id="5_bxgqn"]
+[ext_resource type="PackedScene" uid="uid://cphdsy5mppxco" path="res://game/rooms/kuehlung/hotspots/ausgang_widerstandsbasis/hotspot_ausgang_widerstandsbasis.tscn" id="6_rkgb6"]
+[ext_resource type="PackedScene" uid="uid://08u3l2kbi808" path="res://game/rooms/kuehlung/markers/start/marker_start.tscn" id="7_xojbe"]
+[ext_resource type="PackedScene" uid="uid://dqlast1fvwi3n" path="res://game/rooms/kuehlung/markers/von_widerstandsbasis/marker_von_widerstandsbasis.tscn" id="8_8qvb5"]
+
+[node name="RoomKuehlung" type="Node2D" unique_id=1497497959]
+script = ExtResource("1_cicmg")
+script_name = "Kuehlung"
+width = 480
+height = 270
+
+[node name="WalkableAreas" type="Node2D" parent="." unique_id=1597974355]
+
+[node name="Boden" parent="WalkableAreas" unique_id=982491251 instance=ExtResource("2_0omhv")]
+interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(6, 210, 474, 210, 474, 267, 6, 267)])
+
+[node name="Props" type="Node2D" parent="." unique_id=497711570]
+
+[node name="Background" parent="Props" unique_id=1325893396 instance=ExtResource("3_cdd7l")]
+position = Vector2(240, 135)
+texture = ExtResource("4_5onkc")
+description = "UI_RAUM_KUEHLUNG"
+
+[node name="Hotspots" type="Node2D" parent="." unique_id=1772135447]
+
+[node name="Wassereimer" parent="Hotspots" unique_id=439926969 instance=ExtResource("5_bxgqn")]
+position = Vector2(220, 175)
+description = "UI_OBJ_WASSEREIMER"
+baseline = 25
+walk_to_point = Vector2(0, 60)
+
+[node name="AusgangWiderstandsbasis" parent="Hotspots" unique_id=162332208 instance=ExtResource("6_rkgb6")]
+position = Vector2(19.5, 157.5)
+description = "UI_RAUM_WIDERSTANDSBASIS"
+baseline = 52
+walk_to_point = Vector2(16.5, 82.5)
+cursor = 9
+
+[node name="Regions" type="Node2D" parent="." unique_id=1374678177]
+
+[node name="Markers" type="Node2D" parent="." unique_id=1749464059]
+
+[node name="Start" parent="Markers" unique_id=1411732969 instance=ExtResource("7_xojbe")]
+position = Vector2(240, 240)
+
+[node name="VonWiderstandsbasis" parent="Markers" unique_id=1563154885 instance=ExtResource("8_8qvb5")]
+position = Vector2(36, 240)
+
+[node name="Characters" type="Node2D" parent="." unique_id=550061715]

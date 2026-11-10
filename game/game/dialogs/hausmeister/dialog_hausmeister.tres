@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://dl6kt86d7w4gn"]
+
+[ext_resource type="Script" uid="uid://brxefo54wpm32" path="res://addons/popochiu/engine/objects/dialog/popochiu_dialog_option.gd" id="1_nekyi"]
+[ext_resource type="Script" path="res://game/dialogs/hausmeister/dialog_hausmeister.gd" id="2_1yl2y"]
+
+[resource]
+resource_name = "Hausmeister"
+script = ExtResource("2_1yl2y")
+script_name = "Hausmeister"

@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://c23lcwpg6khgr"]
+
+[ext_resource type="Script" path="res://game/rooms/unterstadt_strasse/hotspots/telefonzelle/hotspot_telefonzelle.gd" id="1_k6fuq"]
+
+[node name="Telefonzelle" type="Area2D" unique_id=1563726528]
+script = ExtResource("1_k6fuq")
+script_name = "Telefonzelle"
+description = "Telefonzelle"
+cursor = 1
+interaction_polygon = PackedVector2Array(-44.5, -24, 44.5, -24, 44.5, 24, -44.5, 24)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1103118244]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

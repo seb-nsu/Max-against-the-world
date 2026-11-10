@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://tlx7nwlb2dyk"]
+
+[ext_resource type="Script" path="res://game/rooms/werbespot_set/hotspots/panel_schurke_im_kaese/hotspot_panel_schurke_im_kaese.gd" id="1_m7obk"]
+
+[node name="PanelSchurkeImKaese" type="Area2D" unique_id=585647447]
+script = ExtResource("1_m7obk")
+script_name = "PanelSchurkeImKaese"
+description = "Panel Schurke Im Kaese"
+cursor = 1
+interaction_polygon = PackedVector2Array(-29, -24, 29, -24, 29, 24, -29, 24)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=191221066]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

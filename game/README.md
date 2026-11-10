@@ -54,6 +54,7 @@ Der Weg vom Skript ins Spiel hat drei Schritte:
 python3 tools/skript_export.py          # docs/skript + ui.csv → lokalisierung/texte.csv
 python3 tools/spieldaten.py             # Welt-Tabellen, Hinweise → daten/welten, daten/hinweise
 python3 tools/godot_raeume.py           # + tools/layout/<abschnitt>.yaml → daten/raeume/*.json, Platzhalter
+python3 tools/layout_skizzen.py         # Layout-Skizzen mit Tiefe für die Konzeptbilder → docs/grafik/skizzen/
 godot --headless --editor --path game -- --cq-bauen   # Godot-Bau: fehlende Popochiu-Objekte anlegen
 ```
 
@@ -130,21 +131,26 @@ nur das Dateiformat ist eigenes JSON mit Versionsnummer: `user://saves/<platz>.j
 
 ## Testbuild und Telemetrie
 
-Für Tests mit Fremden (Stufe 2, `docs/03-produktion.md` A9) gibt es einen Testbuild für Linux
-und Windows. `export_presets.cfg` hat zwei Vorlagen, „Linux Testbuild“ und „Windows Testbuild“,
-beide mit dem Feature-Tag `cq_testbuild`:
+Für Tests mit Fremden (Stufe 2, `docs/03-produktion.md` A8 und A9) gibt es einen Testbuild für
+Linux, Windows und den Browser. `export_presets.cfg` hat drei Vorlagen, „Linux Testbuild“,
+„Windows Testbuild“ und „Web Testbuild“, alle mit dem Feature-Tag `cq_testbuild`:
 
 ```
 godot --headless --path game --export-release "Linux Testbuild" ../build/linux/couch_quest.x86_64
 godot --headless --path game --export-release "Windows Testbuild" ../build/windows/couch_quest.exe
+godot --headless --path game --export-release "Web Testbuild" ../build/web/index.html
 ```
+
+Der Web-Build läuft ohne Threads und braucht deshalb keine besonderen Server-Header; zum
+Ausprobieren reicht `python3 -m http.server` im Ordner `build/web`. Im Browser lädt der
+Telemetrie-Knopf in den Einstellungen das Protokoll als Datei herunter.
 
 Dafür müssen die Export-Vorlagen 4.7.2 installiert sein (Editor: Editor → Export-Vorlagen
 verwalten; oder `Godot_v4.7.2-stable_export_templates.tpz` nach
 `~/.local/share/godot/export_templates/4.7.2.stable/` entpacken). Ohne eigene Vorlagen geht es
 über GitHub Actions: Workflow „Testbuild“ (`.github/workflows/testbuild.yml`) von Hand starten
 (Actions → Testbuild → Run workflow). Er lädt Godot und die Vorlagen, lässt den Test im
-Testmodus laufen, exportiert beide Builds und legt sie als Artefakte ab (Linux als `tar.gz`,
+Testmodus laufen, exportiert alle drei Builds und legt sie als Artefakte ab (Linux als `tar.gz`,
 damit das Ausführbar-Bit bleibt). Die Build-Kennung im Protokoll ist dort der Commit.
 
 Beim Start des exportierten Spiels meldet Popochiu 2.2.1 Kompilierfehler in seinen
@@ -196,7 +202,14 @@ echte Grafik:
 2. Im Editor die Textur des Props bzw. der Figur austauschen. Hintergründe sind das Prop
    `Background` jedes Raums.
 3. Hotspot-Umrisse, Laufbereich und Marker an das neue Bild anpassen (Popochiu-Werkzeuge im
-   Editor).
+   Editor). Hat der Boden im Bild Tiefe (Raumansicht „Mittelweg“, Entscheidung 10. November
+   2026), im Layout des Raums `tiefe: 0.8` eintragen und `laufbereich` auf den Boden im Bild
+   setzen, dann `tools/godot_raeume.py` laufen lassen: `CQRaum.tiefe_anwenden()` verkleinert die
+   Figuren von 100 Prozent am unteren Rand des Laufbereichs auf 80 Prozent an seiner Hinterkante.
+   Räume mit Treppe oder senkrechtem Laufweg (Treppenhaus) bekommen keinen Eintrag.
+   Mit Tiefe kann eine Figur vor oder hinter Möbeln stehen, die auf dem Boden stehen: Solche
+   Teile aus dem Hintergrund als eigenes Prop ausschneiden und ihre Baseline auf den Fußpunkt
+   setzen, dann sortiert Popochiu die Figuren richtig davor oder dahinter.
 4. Gegenstands-Icons: die Pfade stehen im Bauplan (`icons` je Zustand); dafür in
    `tools/godot_raeume.py` den Pfad ändern oder im Gegenstandsskript `aussehen_anpassen()`
    überschreiben.
@@ -213,6 +226,23 @@ godot --headless --path . -s res://tests/prolog_durchlauf.gd          # Testmodu
 godot --headless --path . -s res://tests/prolog_durchlauf.gd -- --echt   # echte Sprechblasen, gut 9 Minuten
 godot --headless --path . -s res://tests/menues.gd                    # Menüs, Optionen, Audio-Gerüst, unter 1 Minute
 ```
+
+**Screenshot-Regressionstest (A16):** `tests/bildschirm_vergleich.gd` betritt jeden gebauten Raum
+aller Abschnitte, fotografiert ihn ohne Oberfläche und vergleicht mit `tests/bildschirm/referenz/`
+im Repo-Wurzelordner (Toleranz: höchstens 0,5 Prozent abweichende Pixel). Braucht einen Bildschirm,
+unter Linux xvfb-run; gut 3 Minuten. Abweichungen landen als Dreierbild (Referenz, jetzt, Maske)
+im Ausgabeordner, dazu je Abschnitt eine Übersicht aller Räume. Nach gewollten Grafikänderungen
+(neue Platzhalter, echte Hintergründe, geänderte Layouts) die Referenzen neu schreiben und die
+Übersicht einmal mit dem Auge prüfen:
+
+```
+xvfb-run -a -s "-screen 0 1280x720x24" godot --path . --rendering-driver opengl3 --resolution 480x270 \
+    -s res://tests/bildschirm_vergleich.gd -- [--aktualisieren] [AUSGABEORDNER]
+```
+
+Läuft in GitHub Actions als eigener Job „bildschirm“; Abweichungen und Übersichten gibt es dort als
+Artefakt. Die Bildschirmfotos der Oberfläche (`bildschirmfoto.gd`, `bildschirmfoto_menues.gd`)
+nehmen `--sprache=en` für die englische Fassung.
 
 Der allererste Import nach dem Klonen meldet rund 60 Fehler (Autoloads und Übersetzungen, die erst beim Import entstehen). Das ist normal: Ein zweiter Import und das Öffnen im Editor laufen fehlerfrei. Im Editor genügt es, das Projekt einmal zu öffnen und, falls Godot fragt, neu zu laden.
 

@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://cfhlf8h672qhh"]
+
+[ext_resource type="Script" uid="uid://brxefo54wpm32" path="res://addons/popochiu/engine/objects/dialog/popochiu_dialog_option.gd" id="1_iibcv"]
+[ext_resource type="Script" path="res://game/dialogs/sphinx_figur/dialog_sphinx_figur.gd" id="2_p4n0x"]
+
+[resource]
+resource_name = "SphinxFigur"
+script = ExtResource("2_p4n0x")
+script_name = "SphinxFigur"

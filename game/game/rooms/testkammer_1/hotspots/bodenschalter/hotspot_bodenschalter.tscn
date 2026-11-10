@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://bdg4dqjx5fyhu"]
+
+[ext_resource type="Script" path="res://game/rooms/testkammer_1/hotspots/bodenschalter/hotspot_bodenschalter.gd" id="1_pnpxr"]
+
+[node name="Bodenschalter" type="Area2D" unique_id=194844835]
+script = ExtResource("1_pnpxr")
+script_name = "Bodenschalter"
+description = "Bodenschalter"
+cursor = 1
+interaction_polygon = PackedVector2Array(-29, -24, 29, -24, 29, 24, -29, 24)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=83258770]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

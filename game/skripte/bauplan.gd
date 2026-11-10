@@ -37,7 +37,11 @@ func laden() -> void:
 		var ordner: String = ordner_ziel[0]
 		for datei in _dateien(ordner):
 			ordner_ziel[1][datei.get_basename()] = _json(ordner + datei)
-	for ab in plaene:
+	# In Spielreihenfolge zusammenlegen (das Finale kommt alphabetisch zuerst, spielt aber zuletzt):
+	# der erste Zustand eines Gegenstands ist der aus dem frühesten Abschnitt
+	var reihe: Array = plaene.keys()
+	reihe.sort_custom(func(x, y): return (x != "finale" and y == "finale") or ((x == "finale") == (y == "finale") and x < y))
+	for ab in reihe:
 		var plan: Dictionary = plaene[ab]
 		for r in plan.raeume:
 			_raeume[r.script_name] = {abschnitt = ab, daten = r}
@@ -65,7 +69,13 @@ func _vereinen(alt: Dictionary, neu: Dictionary) -> Dictionary:
 		return neu.duplicate(true)
 	var out := alt.duplicate(true)
 	for k in neu:
-		if out.get(k) is Array and neu[k] is Array and k != "zustaende":
+		if k == "zustaende":
+			# Vereinigung in Reihenfolge: der erste Zustand (Standard) bleibt der aus dem frühesten
+			# Abschnitt (Kochlöffel „ohne_kaese“ aus Welt 1, nicht „zauberstab“ aus Welt 2)
+			for z in neu[k]:
+				if not z in out.get(k, []):
+					out[k] = out.get(k, []) + [z]
+		elif out.get(k) is Array and neu[k] is Array:
 			out[k] = out[k] + neu[k]
 		elif out.get(k) is Dictionary and neu[k] is Dictionary:
 			out[k].merge(neu[k], true)
@@ -85,8 +95,13 @@ func figurenwechsel(abschnitt: String) -> Dictionary:
 	return plaene.get(abschnitt, {}).get("figurenwechsel", {})
 
 
-## Sprecherkürzel → script_name der Figur (MAX → Max, TOA → Toadi)
+## Sprecherkürzel → script_name der Figur (MAX → Max, TOA → Toadi). Kürzel können sich zwischen
+## Welten wiederholen (SCH: Schmied in Welt 1, Schreiber in Welt 2): die Figuren des aktuellen
+## Abschnitts gehen vor.
 func figur_zu_kuerzel(kuerzel: String) -> String:
+	for f in plaene.get(Zustand.abschnitt, {}).get("figuren", []):
+		if f.get("kuerzel") == kuerzel:
+			return f.script_name
 	for sn in _figuren:
 		if _figuren[sn].get("kuerzel") == kuerzel:
 			return sn

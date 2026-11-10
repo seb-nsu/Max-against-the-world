@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://b6i0bvgjok17a"]
+
+[ext_resource type="Script" path="res://game/characters/sphinx_figur/character_sphinx_figur_state.gd" id="1_lgcwh"]
+
+[resource]
+resource_name = "SphinxFigur"
+script = ExtResource("1_lgcwh")
+script_name = "SphinxFigur"
+scene = "res://game/characters/sphinx_figur/character_sphinx_figur.tscn"

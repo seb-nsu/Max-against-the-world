@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://d00dmm5ooj7ty"]
+
+[ext_resource type="Script" path="res://game/rooms/rauschen/hotspots/kriechweg/hotspot_kriechweg.gd" id="1_p5vjb"]
+
+[node name="Kriechweg" type="Area2D" unique_id=239850205]
+script = ExtResource("1_p5vjb")
+script_name = "Kriechweg"
+description = "Kriechweg"
+cursor = 1
+interaction_polygon = PackedVector2Array(-96, -24, 96, -24, 96, 24, -96, 24)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=930754978]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

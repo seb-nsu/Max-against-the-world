@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://77tptk60lk88"]
+
+[ext_resource type="Script" path="res://game/inventory_items/taste_pause/inventory_item_taste_pause_state.gd" id="1_encj4"]
+
+[resource]
+resource_name = "TastePause"
+script = ExtResource("1_encj4")
+script_name = "TastePause"
+scene = "res://game/inventory_items/taste_pause/inventory_item_taste_pause.tscn"

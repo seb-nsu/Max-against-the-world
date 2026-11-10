@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://c7s504qp18ny0"]
+
+[ext_resource type="Script" path="res://game/rooms/friedhof/hotspots/fondue_kaese_auf_mitternachts_tv/hotspot_fondue_kaese_auf_mitternachts_tv.gd" id="1_jpi8u"]
+
+[node name="FondueKaeseAufMitternachtsTv" type="Area2D" unique_id=992940591]
+script = ExtResource("1_jpi8u")
+script_name = "FondueKaeseAufMitternachtsTv"
+description = "Fondue Kaese Auf Mitternachts Tv"
+cursor = 1
+interaction_polygon = PackedVector2Array(-29, -24, 29, -24, 29, 24, -29, 24)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=90661565]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

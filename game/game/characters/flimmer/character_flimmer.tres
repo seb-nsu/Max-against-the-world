@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://8i1676fvwch6"]
+
+[ext_resource type="Script" path="res://game/characters/flimmer/character_flimmer_state.gd" id="1_1akyk"]
+
+[resource]
+resource_name = "Flimmer"
+script = ExtResource("1_1akyk")
+script_name = "Flimmer"
+scene = "res://game/characters/flimmer/character_flimmer.tscn"

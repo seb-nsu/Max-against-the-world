@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://c00hxlbdu5ub3"]
+
+[ext_resource type="Script" path="res://game/rooms/werbespot_set/hotspots/panel_held_springt/hotspot_panel_held_springt.gd" id="1_1rip2"]
+
+[node name="PanelHeldSpringt" type="Area2D" unique_id=571682142]
+script = ExtResource("1_1rip2")
+script_name = "PanelHeldSpringt"
+description = "Panel Held Springt"
+cursor = 1
+interaction_polygon = PackedVector2Array(-29, -24, 29, -24, 29, 24, -29, 24)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=790828344]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

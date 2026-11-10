@@ -154,6 +154,8 @@ func status(id: String, ab := "") -> String:
 		return "gesperrt"
 	if not Bauplan.gebaut(ab, id):
 		return "gesperrt"  # noch nicht gebaut (Graubox-Ausbaustand): Pfote und Notizbuch schweigen
+	if ab == "finale" and not ist("FINALE"):
+		return "gesperrt"  # Zwischenspiele: die Rätsel F1 ff. gehören erst zum Finale
 	if not war_in(r.raum):
 		return "gesperrt"
 	for v in r.get("benoetigt", []):

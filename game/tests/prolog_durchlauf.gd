@@ -275,6 +275,7 @@ func _welt_1() -> void:
 	_pruefe(Z.ist("W1_WECHSEL_FREI") and S.wechsel_moeglich(), "Wechsel in der Taverne freigeschaltet")
 	_pruefe(Z.status("R1a") == "offen" and Z.status("R1b") == "offen", "R1a und R1b offen")
 	_pruefe(Z.status("R1c") == "gesperrt", "R1c gesperrt vor R1a und R1b")
+	_pruefe(S.bedingung_text_ok("Pixel auf dem Balken"), "Pixel sitzt auf dem Balken (Zuruf 1630)")
 	_pruefe(H.pfote_aktiv(), "Pfote in Welt 1 aktiv")
 	_protokoll_leeren()
 	await H.pfote_geklickt()
@@ -294,6 +295,8 @@ func _welt_1() -> void:
 	_pruefe(_i().is_item_in_inventory("PixelFeld", _c().Max), "Pixel-Feld nach Laden bei Max")
 	await _hotspot("AusgangDorfplatz").on_click()
 	_pruefe(_gesagt("W1_WECH_PIX_0080") and _raum_name() == "Taverne", "Pixel geht nicht durch Türen")
+	await _hotspot("Dachbalken").on_click()
+	_pruefe(_c().Pixel.position.distance_to(_raum().get_marker_position("Balken")) < 4.0, "Pixel springt auf den Balken")
 	await _ansehen(_hotspot("Fischsuppe"), "W1_TAV_PIX_0320")
 	_pruefe(_gesagt("W1_TAV_PIX_0340"), "Fischsuppe: Pixels Nase interpretiert (0320–0340)")
 	await _c().get_character("Minka").on_click()
@@ -304,6 +307,7 @@ func _welt_1() -> void:
 	_pruefe(_gesagt("W1_TAV_MAX_0090"), "erster Wechsel zurück: 0090")
 	await _rundreise("nach R1a")
 	_pruefe(not _raum().has_character("Minka"), "Minka bleibt nach Laden weg")
+	await _tiefe_pruefen()
 
 	# R1b: Wein bestellen
 	var hum_d = _dialog("Humbert")
@@ -825,8 +829,10 @@ func _welt_1_r5_bis_r13() -> void:
 	_pruefe(_i().is_item_in_inventory("Dosenoeffner") and Z.wert("TASCHE", []) == ["Socke", "Dosenoeffner"],
 		"nach Laden: Tasche unverändert")
 	await _hotspot("Drehknopf").on_click()
-	_pruefe(_gesagt("ZS1_DACH_MAX_0660") and _gesagt("ZS1_DACH_PIX_0670") and _gesagt("UI_WELT_1_ENDE"),
-		"Zweiter Dreh: Kanal 7 (0660, 0670), Ende des Ausbaustands")
+	_pruefe(_gesagt("ZS1_DACH_MAX_0660") and _gesagt("ZS1_DACH_PIX_0670"), "Zweiter Dreh: Kanal 7 (0660, 0670)")
+	_pruefe(Z.abschnitt == "welt-2" and _i().is_item_in_inventory("Handy")
+		and _i().is_item_in_inventory("Socke") and not _i().is_item_in_inventory("Drachenei"),
+		"Welt 2 beginnt: Handy aus Max' Taschen, Wahlfächer dabei")
 
 
 func _gehe(ausgang: String, raum: String) -> void:
@@ -1124,6 +1130,28 @@ func _i():
 
 func _raum() -> PopochiuRoom:
 	return root.get_node("R").current
+
+
+## Raumansicht mit leichter Tiefe (Entscheidung 10. Nov. 2026): mit „tiefe: 0.8“ im Layout ist eine
+## Figur am oberen Rand des Laufbereichs 80 Prozent groß, am unteren 100; ohne Eintrag bleibt sie 1.
+func _tiefe_pruefen() -> void:
+	var r = _raum()
+	var plan: Dictionary = r.bauplan()
+	var ys: Array = plan.get("laufbereich", []).map(func(p): return float(p[1]))
+	var max_f = _c().Max
+	var vorher: Vector2 = max_f.position
+	plan["tiefe"] = 0.8
+	r.tiefe_anwenden()
+	max_f.position.y = ys.min()
+	await process_frame
+	_pruefe(absf(max_f.scale.y - 0.8) < 0.01, "Tiefe: hinten 80 Prozent (%.2f)" % max_f.scale.y)
+	max_f.position.y = ys.max()
+	await process_frame
+	_pruefe(absf(max_f.scale.y - 1.0) < 0.01, "Tiefe: vorn 100 Prozent (%.2f)" % max_f.scale.y)
+	plan.erase("tiefe")
+	r.tiefe_anwenden()
+	max_f.position = vorher
+	_pruefe(max_f.scale == Vector2.ONE and max_f.scaling_region.is_empty(), "Tiefe aus: Originalgröße")
 
 
 func _raum_name() -> String:

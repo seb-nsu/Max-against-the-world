@@ -29,9 +29,23 @@ const KOMMENTARE := {
 		Eimer = "ZS1_DACH_PIX_0570", Dosenoeffner = "ZS1_DACH_PIX_0580",
 		Leuchttrank = "ZS1_DACH_PIX_0590", Ketchup = "ZS1_DACH_PIX_0600",
 	},
+	2: {
+		Olivenoel = "ZS2_DACH_PIX_0520", Sandale = "ZS2_DACH_PIX_0530",
+		Olivenkranz = "ZS2_DACH_PIX_0540", Schriftrolle = "ZS2_DACH_PIX_0550",
+		Handy = "ZS2_DACH_PIX_0560", Kaugummi = "ZS2_DACH_PIX_0570",
+		Kugelschreiber = "ZS2_DACH_PIX_0580", Diskus = "ZS2_DACH_PIX_0590",
+		Wurfscheibe = "ZS2_DACH_PIX_0590", Pharaonenteller = "ZS2_DACH_PIX_0590",
+		Schallplatte = "ZS2_DACH_PIX_0590",
+	},
+	3: {
+		Sonnenbrille = "ZS3_DACH_PIX_0520", OmasKekse = "ZS3_DACH_PIX_0530",
+		Portalgeraet = "ZS3_DACH_PIX_0540", Kaffeetasse = "ZS3_DACH_PIX_0560",
+		SchmidtsAkte = "ZS3_DACH_PIX_0570", MorseTabelle = "ZS3_DACH_PIX_0580",
+		Olivenoel = "ZS3_DACH_PIX_0590",
+	},
 }
-const ZU_VIEL := {1: "ZS1_DACH_MAX_0610"}
-const BESTAETIGT := {1: "ZS1_DACH_PIX_0620"}
+const ZU_VIEL := {1: "ZS1_DACH_MAX_0610", 2: "ZS2_DACH_MAX_0600", 3: "ZS3_DACH_MAX_0600"}
+const BESTAETIGT := {1: "ZS1_DACH_PIX_0620", 2: "ZS2_DACH_PIX_0610", 3: "ZS3_DACH_PIX_0610"}
 
 var nr := 1
 var auslage: Array[String] = []

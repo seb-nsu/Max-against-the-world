@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://chnvjd6mnjrqi"]
+
+[node name="VonWerkstatt" type="Marker2D" unique_id=607715882]
+visible = false

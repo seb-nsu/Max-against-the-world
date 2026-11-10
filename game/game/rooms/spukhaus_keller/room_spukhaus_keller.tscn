@@ -1,0 +1,149 @@
+[gd_scene format=3 uid="uid://fc85w2l6m4ce"]
+
+[ext_resource type="Script" path="res://game/rooms/spukhaus_keller/room_spukhaus_keller.gd" id="1_suk3e"]
+[ext_resource type="PackedScene" uid="uid://bmw3d78408vww" path="res://game/rooms/spukhaus_keller/walkable_areas/boden/walkable_area_boden.tscn" id="2_ibv65"]
+[ext_resource type="PackedScene" uid="uid://mkbu72a8m55w" path="res://game/rooms/spukhaus_keller/props/background/prop_background.tscn" id="3_c638e"]
+[ext_resource type="Texture2D" uid="uid://y6kmj0ttfpob" path="res://grafik/platzhalter/raum_spukhaus_keller.png" id="4_6yujk"]
+[ext_resource type="PackedScene" uid="uid://13serslmaapu" path="res://game/rooms/spukhaus_keller/props/taste_stumm/prop_taste_stumm.tscn" id="5_mcxyj"]
+[ext_resource type="Texture2D" uid="uid://b8ashvinl50nh" path="res://grafik/platzhalter/prop_taste_stumm.png" id="6_l50um"]
+[ext_resource type="PackedScene" uid="uid://bkv0qk1o046qg" path="res://game/rooms/spukhaus_keller/props/bettlaken/prop_bettlaken.tscn" id="7_yt0pk"]
+[ext_resource type="Texture2D" uid="uid://cu8xto6ytdjko" path="res://grafik/platzhalter/prop_bettlaken.png" id="8_juywg"]
+[ext_resource type="PackedScene" uid="uid://31jhhgft8t22" path="res://game/rooms/spukhaus_keller/hotspots/roehrenfernseher/hotspot_roehrenfernseher.tscn" id="9_w382b"]
+[ext_resource type="PackedScene" uid="uid://djp2leuojh1ll" path="res://game/rooms/spukhaus_keller/hotspots/kassetten/hotspot_kassetten.tscn" id="10_4gumy"]
+[ext_resource type="PackedScene" uid="uid://bm0a0w78h7ndv" path="res://game/rooms/spukhaus_keller/hotspots/geruempel/hotspot_geruempel.tscn" id="11_aix7q"]
+[ext_resource type="PackedScene" uid="uid://ba2i624oj4ac6" path="res://game/rooms/spukhaus_keller/hotspots/gluehbirne/hotspot_gluehbirne.tscn" id="12_1sbst"]
+[ext_resource type="PackedScene" uid="uid://bkr6kpiykgrkt" path="res://game/rooms/spukhaus_keller/hotspots/kellerfenster/hotspot_kellerfenster.tscn" id="13_gl6vg"]
+[ext_resource type="PackedScene" uid="uid://b43cq6l7dgugw" path="res://game/rooms/spukhaus_keller/hotspots/verkettete_tuer/hotspot_verkettete_tuer.tscn" id="14_ta2l4"]
+[ext_resource type="PackedScene" uid="uid://8sy4siofblsn" path="res://game/rooms/spukhaus_keller/hotspots/geister/hotspot_geister.tscn" id="15_qthrm"]
+[ext_resource type="PackedScene" uid="uid://dit4wijry8qrb" path="res://game/rooms/spukhaus_keller/hotspots/ketten/hotspot_ketten.tscn" id="16_2uv4n"]
+[ext_resource type="PackedScene" uid="uid://c0s06l4smbcx2" path="res://game/rooms/spukhaus_keller/hotspots/bananenschale_im_keller/hotspot_bananenschale_im_keller.tscn" id="17_11qwx"]
+[ext_resource type="PackedScene" uid="uid://bb1wf60ne5eca" path="res://game/rooms/spukhaus_keller/hotspots/ausgang_friedhof/hotspot_ausgang_friedhof.tscn" id="18_7ramt"]
+[ext_resource type="PackedScene" uid="uid://3igx2a41tcw8" path="res://game/rooms/spukhaus_keller/hotspots/ausgang_spukhaus_halle/hotspot_ausgang_spukhaus_halle.tscn" id="19_nsjx8"]
+[ext_resource type="PackedScene" uid="uid://o0m70ccj01dd" path="res://game/rooms/spukhaus_keller/markers/start/marker_start.tscn" id="20_s72p5"]
+[ext_resource type="PackedScene" uid="uid://j0nb7n2vce1v" path="res://game/rooms/spukhaus_keller/markers/von_friedhof/marker_von_friedhof.tscn" id="21_u8ktq"]
+[ext_resource type="PackedScene" uid="uid://du4cv7qqop6n1" path="res://game/rooms/spukhaus_keller/markers/von_spukhaus_halle/marker_von_spukhaus_halle.tscn" id="22_5x8i3"]
+[ext_resource type="PackedScene" uid="uid://cpktc2uxn8olt" path="res://game/characters/sitcom_vater/character_sitcom_vater.tscn" id="23_y6ui3"]
+[ext_resource type="PackedScene" uid="uid://xw6rjxvvsxaq" path="res://game/characters/geist/character_geist.tscn" id="24_sqw88"]
+
+[node name="RoomSpukhausKeller" type="Node2D" unique_id=105359092]
+script = ExtResource("1_suk3e")
+script_name = "SpukhausKeller"
+width = 480
+height = 270
+
+[node name="WalkableAreas" type="Node2D" parent="." unique_id=1563906323]
+
+[node name="Boden" parent="WalkableAreas" unique_id=585122387 instance=ExtResource("2_ibv65")]
+interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(6, 210, 474, 210, 474, 267, 6, 267)])
+
+[node name="Props" type="Node2D" parent="." unique_id=1589090862]
+
+[node name="Background" parent="Props" unique_id=1508625400 instance=ExtResource("3_c638e")]
+position = Vector2(240, 135)
+texture = ExtResource("4_6yujk")
+description = "UI_RAUM_SPUKHAUS_KELLER"
+
+[node name="TasteStumm" parent="Props" unique_id=1243120342 instance=ExtResource("5_mcxyj")]
+position = Vector2(107.5, 201)
+texture = ExtResource("6_l50um")
+description = "UI_OBJ_TASTE_STUMM"
+baseline = 6
+walk_to_point = Vector2(-0.5, 34)
+
+[node name="Bettlaken" parent="Props" unique_id=348701779 instance=ExtResource("7_yt0pk")]
+position = Vector2(167.5, 201)
+texture = ExtResource("8_juywg")
+description = "UI_OBJ_BETTLAKEN"
+baseline = 6
+walk_to_point = Vector2(-0.5, 34)
+
+[node name="Hotspots" type="Node2D" parent="." unique_id=2059755794]
+
+[node name="Roehrenfernseher" parent="Hotspots" unique_id=2142004057 instance=ExtResource("9_w382b")]
+position = Vector2(73, 54)
+description = "UI_OBJ_ROEHRENFERNSEHER"
+baseline = 24
+walk_to_point = Vector2(0, 181)
+
+[node name="Kassetten" parent="Hotspots" unique_id=1287886747 instance=ExtResource("10_4gumy")]
+position = Vector2(139, 54)
+description = "UI_OBJ_KASSETTEN"
+baseline = 24
+walk_to_point = Vector2(0, 181)
+
+[node name="Geruempel" parent="Hotspots" unique_id=73366371 instance=ExtResource("11_aix7q")]
+position = Vector2(205, 54)
+description = "UI_OBJ_GERUEMPEL"
+baseline = 24
+walk_to_point = Vector2(0, 181)
+
+[node name="Gluehbirne" parent="Hotspots" unique_id=1426126325 instance=ExtResource("12_1sbst")]
+position = Vector2(271, 54)
+description = "UI_OBJ_GLUEHBIRNE"
+baseline = 24
+walk_to_point = Vector2(0, 181)
+
+[node name="Kellerfenster" parent="Hotspots" unique_id=1697099775 instance=ExtResource("13_gl6vg")]
+position = Vector2(337, 54)
+description = "UI_OBJ_KELLERFENSTER"
+baseline = 24
+walk_to_point = Vector2(0, 181)
+
+[node name="VerketteteTuer" parent="Hotspots" unique_id=1019109948 instance=ExtResource("14_ta2l4")]
+position = Vector2(403, 54)
+description = "UI_OBJ_VERKETTETE_TUER"
+baseline = 24
+walk_to_point = Vector2(0, 181)
+
+[node name="Geister" parent="Hotspots" unique_id=2098551770 instance=ExtResource("15_qthrm")]
+position = Vector2(73, 114)
+description = "UI_OBJ_GEISTER"
+baseline = 24
+walk_to_point = Vector2(0, 121)
+
+[node name="Ketten" parent="Hotspots" unique_id=160125347 instance=ExtResource("16_2uv4n")]
+position = Vector2(139, 114)
+description = "UI_OBJ_KETTEN"
+baseline = 24
+walk_to_point = Vector2(0, 121)
+
+[node name="BananenschaleImKeller" parent="Hotspots" unique_id=1726199868 instance=ExtResource("17_11qwx")]
+position = Vector2(205, 114)
+description = "UI_OBJ_BANANENSCHALE_IM_KELLER"
+baseline = 24
+walk_to_point = Vector2(0, 121)
+
+[node name="AusgangFriedhof" parent="Hotspots" unique_id=1987709852 instance=ExtResource("18_7ramt")]
+position = Vector2(19.5, 157.5)
+description = "UI_RAUM_FRIEDHOF"
+baseline = 52
+walk_to_point = Vector2(16.5, 82.5)
+cursor = 9
+
+[node name="AusgangSpukhausHalle" parent="Hotspots" unique_id=2075652256 instance=ExtResource("19_nsjx8")]
+position = Vector2(460.5, 157.5)
+description = "UI_RAUM_SPUKHAUS_HALLE"
+baseline = 52
+walk_to_point = Vector2(-16.5, 82.5)
+cursor = 9
+
+[node name="Regions" type="Node2D" parent="." unique_id=1186025398]
+
+[node name="Markers" type="Node2D" parent="." unique_id=934425911]
+
+[node name="Start" parent="Markers" unique_id=1384378432 instance=ExtResource("20_s72p5")]
+position = Vector2(240, 240)
+
+[node name="VonFriedhof" parent="Markers" unique_id=1219459280 instance=ExtResource("21_u8ktq")]
+position = Vector2(36, 240)
+
+[node name="VonSpukhausHalle" parent="Markers" unique_id=1087787155 instance=ExtResource("22_5x8i3")]
+position = Vector2(444, 240)
+
+[node name="Characters" type="Node2D" parent="." unique_id=1133982679]
+
+[node name="CharacterSitcomVater *" parent="Characters" unique_id=498754438 instance=ExtResource("23_y6ui3")]
+position = Vector2(150, 232)
+
+[node name="CharacterGeist *" parent="Characters" unique_id=460054357 instance=ExtResource("24_sqw88")]
+position = Vector2(330, 232)

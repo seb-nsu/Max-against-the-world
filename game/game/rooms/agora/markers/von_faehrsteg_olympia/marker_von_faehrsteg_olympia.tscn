@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://cit85ffd1wy3v"]
+
+[node name="VonFaehrstegOlympia" type="Marker2D" unique_id=1511038938]
+visible = false

@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://cv0o4joqfb28u"]
+
+[ext_resource type="Script" path="res://game/characters/schreiber/character_schreiber.gd" id="1_o5i7k"]
+[ext_resource type="Texture2D" uid="uid://dyf2ai3whrmyr" path="res://grafik/platzhalter/figur_schreiber.png" id="2_xl6r1"]
+
+[node name="CharacterSchreiber" type="Area2D" unique_id=1624699989]
+script = ExtResource("1_o5i7k")
+walk_speed = 90.0
+dialog_pos = Vector2(0, -58)
+script_name = "Schreiber"
+description = "UI_OBJ_SCHREIBER"
+cursor = 8
+interaction_polygon = PackedVector2Array(-12, -54, 12, -54, 12, 0, -12, 0)
+
+[node name="ScalingPolygon" type="CollisionPolygon2D" parent="." unique_id=6574703]
+polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=234459808]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=797563351]
+texture_filter = 1
+texture = ExtResource("2_xl6r1")
+offset = Vector2(0, -27)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=80856010]
+visible = false
+polygon = PackedVector2Array(-12, -54, 12, -54, 12, 0, -12, 0)
+
+[node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=1995519345]
+visible = false
+affect_navigation_mesh = true
+carve_navigation_mesh = true

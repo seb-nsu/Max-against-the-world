@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://brqpyvpjqe1yf"]
+
+[ext_resource type="Script" path="res://game/rooms/kueche_orakel/hotspots/ausgang_stadtstrasse/hotspot_ausgang_stadtstrasse.gd" id="1_hmfbf"]
+
+[node name="AusgangStadtstrasse" type="Area2D" unique_id=422752743]
+script = ExtResource("1_hmfbf")
+script_name = "AusgangStadtstrasse"
+description = "Ausgang Stadtstrasse"
+cursor = 1
+interaction_polygon = PackedVector2Array(-13.5, -52.5, 13.5, -52.5, 13.5, 52.5, -13.5, 52.5)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=691848435]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

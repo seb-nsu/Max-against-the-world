@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://dqhj0lrrsoh75"]
+
+[ext_resource type="Script" path="res://game/characters/erzaehler/character_erzaehler.gd" id="1_34ak7"]
+[ext_resource type="Texture2D" uid="uid://dxidjdcdsetg4" path="res://grafik/platzhalter/figur_erzaehler.png" id="2_4m4hm"]
+
+[node name="CharacterErzaehler" type="Area2D" unique_id=452605292]
+script = ExtResource("1_34ak7")
+walk_speed = 90.0
+dialog_pos = Vector2(0, -91)
+script_name = "Erzaehler"
+description = "UI_OBJ_ERZAEHLER"
+cursor = 8
+interaction_polygon = PackedVector2Array(-14.5, -87, 14.5, -87, 14.5, 0, -14.5, 0)
+
+[node name="ScalingPolygon" type="CollisionPolygon2D" parent="." unique_id=663561219]
+polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1066543914]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1025101428]
+texture_filter = 1
+texture = ExtResource("2_4m4hm")
+offset = Vector2(0, -43.5)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1877486358]
+visible = false
+polygon = PackedVector2Array(-14.5, -87, 14.5, -87, 14.5, 0, -14.5, 0)
+
+[node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=1915180826]
+visible = false
+affect_navigation_mesh = true
+carve_navigation_mesh = true

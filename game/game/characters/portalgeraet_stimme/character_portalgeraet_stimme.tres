@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://dw6b6guvh7cl6"]
+
+[ext_resource type="Script" path="res://game/characters/portalgeraet_stimme/character_portalgeraet_stimme_state.gd" id="1_nrxgq"]
+
+[resource]
+resource_name = "PortalgeraetStimme"
+script = ExtResource("1_nrxgq")
+script_name = "PortalgeraetStimme"
+scene = "res://game/characters/portalgeraet_stimme/character_portalgeraet_stimme.tscn"

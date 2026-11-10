@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://clbvhyhajwalp"]
 
-[ext_resource type="Script" path="res://game/rooms/wohnzimmer/room_wohnzimmer.gd" id="1_cljk4"]
+[ext_resource type="Script" uid="uid://b4wpr2130rrae" path="res://game/rooms/wohnzimmer/room_wohnzimmer.gd" id="1_cljk4"]
 [ext_resource type="PackedScene" uid="uid://qvv0itl7m3ga" path="res://game/rooms/wohnzimmer/walkable_areas/boden/walkable_area_boden.tscn" id="2_whx36"]
 [ext_resource type="PackedScene" uid="uid://bwmc8ae2nvb72" path="res://game/rooms/wohnzimmer/props/background/prop_background.tscn" id="3_2l8he"]
 [ext_resource type="Texture2D" uid="uid://dvrukgnswlyr5" path="res://grafik/platzhalter/raum_wohnzimmer.png" id="4_1odig"]
@@ -11,7 +11,10 @@
 [ext_resource type="PackedScene" uid="uid://c86j8km38topt" path="res://game/rooms/wohnzimmer/hotspots/sofa/hotspot_sofa.tscn" id="9_01qb2"]
 [ext_resource type="PackedScene" uid="uid://cr81hxbkydgc5" path="res://game/rooms/wohnzimmer/hotspots/ausgang_treppenhaus/hotspot_ausgang_treppenhaus.tscn" id="10_6xbdn"]
 [ext_resource type="PackedScene" uid="uid://b0iox62w45jxo" path="res://game/rooms/wohnzimmer/markers/start/marker_start.tscn" id="11_vyxjo"]
+[ext_resource type="PackedScene" uid="uid://brsbrkjowdlv2" path="res://game/rooms/wohnzimmer/hotspots/kuchen/hotspot_kuchen.tscn" id="11_y7vpg"]
+[ext_resource type="PackedScene" uid="uid://ww8fdx0sdlme" path="res://game/rooms/wohnzimmer/hotspots/girlande/hotspot_girlande.tscn" id="12_lnns3"]
 [ext_resource type="PackedScene" uid="uid://d1slpglnndrpu" path="res://game/rooms/wohnzimmer/markers/von_treppenhaus/marker_von_treppenhaus.tscn" id="12_xnbt0"]
+[ext_resource type="PackedScene" uid="uid://byyu862c5h7tt" path="res://game/rooms/wohnzimmer/hotspots/geschenke/hotspot_geschenke.tscn" id="13_lhb87"]
 
 [node name="RoomWohnzimmer" type="Node2D" unique_id=1451506244]
 script = ExtResource("1_cljk4")
@@ -22,7 +25,6 @@ height = 270
 [node name="WalkableAreas" type="Node2D" parent="." unique_id=1570062211]
 
 [node name="Boden" parent="WalkableAreas" unique_id=210142540 instance=ExtResource("2_whx36")]
-interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(6, 207, 474, 207, 474, 267, 6, 267)])
 
 [node name="Props" type="Node2D" parent="." unique_id=1744186134]
 
@@ -69,6 +71,24 @@ description = "UI_RAUM_TREPPENHAUS"
 baseline = 74
 walk_to_point = Vector2(-8, 104)
 cursor = 9
+
+[node name="Kuchen" parent="Hotspots" unique_id=688588870 instance=ExtResource("11_y7vpg")]
+position = Vector2(261, 171)
+description = "UI_OBJ_KUCHEN"
+baseline = 9
+walk_to_point = Vector2(2, 54)
+
+[node name="Girlande" parent="Hotspots" unique_id=118934864 instance=ExtResource("12_lnns3")]
+position = Vector2(240, 15)
+description = "UI_OBJ_GIRLANDE"
+baseline = 9
+walk_to_point = Vector2(0, 210)
+
+[node name="Geschenke" parent="Hotspots" unique_id=513624291 instance=ExtResource("13_lhb87")]
+position = Vector2(205.5, 196.5)
+description = "UI_OBJ_GESCHENKE"
+baseline = 10
+walk_to_point = Vector2(-0.5, 28.5)
 
 [node name="Regions" type="Node2D" parent="." unique_id=1030263414]
 

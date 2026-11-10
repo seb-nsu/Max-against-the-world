@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://onl8kym16dl1"]
+
+[ext_resource type="Texture2D" uid="uid://dl3opcjggixoj" path="res://grafik/platzhalter/gegenstand_brennspiegel.png" id="1_2m7tv"]
+[ext_resource type="Script" path="res://game/inventory_items/brennspiegel/inventory_item_brennspiegel.gd" id="1_hipdb"]
+
+[node name="ItemBrennspiegel" type="TextureRect" unique_id=1426452606]
+texture_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 4
+mouse_filter = 0
+texture = ExtResource("1_2m7tv")
+stretch_mode = 5
+script = ExtResource("1_hipdb")
+script_name = "Brennspiegel"
+description = "UI_OBJ_BRENNSPIEGEL"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1311254380]

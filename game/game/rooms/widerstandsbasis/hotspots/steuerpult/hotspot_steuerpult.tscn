@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://uucwqtpd58vw"]
+
+[ext_resource type="Script" path="res://game/rooms/widerstandsbasis/hotspots/steuerpult/hotspot_steuerpult.gd" id="1_ffxbl"]
+
+[node name="Steuerpult" type="Area2D" unique_id=82099594]
+script = ExtResource("1_ffxbl")
+script_name = "Steuerpult"
+description = "Steuerpult"
+cursor = 1
+interaction_polygon = PackedVector2Array(-27, -24, 27, -24, 27, 24, -27, 24)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1096640075]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

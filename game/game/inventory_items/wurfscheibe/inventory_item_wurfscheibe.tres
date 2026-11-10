@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://dfef2gp0kw1x3"]
+
+[ext_resource type="Script" path="res://game/inventory_items/wurfscheibe/inventory_item_wurfscheibe_state.gd" id="1_166si"]
+
+[resource]
+resource_name = "Wurfscheibe"
+script = ExtResource("1_166si")
+script_name = "Wurfscheibe"
+scene = "res://game/inventory_items/wurfscheibe/inventory_item_wurfscheibe.tscn"

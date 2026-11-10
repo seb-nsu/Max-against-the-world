@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://bu6xhcvm1q7te"]
+
+[ext_resource type="Script" path="res://game/rooms/kapitolis/hotspots/bananenschale_im_comic_kanal/hotspot_bananenschale_im_comic_kanal.gd" id="1_ickeu"]
+
+[node name="BananenschaleImComicKanal" type="Area2D" unique_id=507348661]
+script = ExtResource("1_ickeu")
+script_name = "BananenschaleImComicKanal"
+description = "Bananenschale Im Comic Kanal"
+cursor = 1
+interaction_polygon = PackedVector2Array(-29, -24, 29, -24, 29, 24, -29, 24)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1420822829]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://drc8hdtvuv88o"]
+
+[ext_resource type="Script" path="res://game/rooms/widerstandsbasis/hotspots/ausgang_kuehlung/hotspot_ausgang_kuehlung.gd" id="1_kdbda"]
+
+[node name="AusgangKuehlung" type="Area2D" unique_id=891438519]
+script = ExtResource("1_kdbda")
+script_name = "AusgangKuehlung"
+description = "Ausgang Kuehlung"
+cursor = 1
+interaction_polygon = PackedVector2Array(-13.5, -52.5, 13.5, -52.5, 13.5, 52.5, -13.5, 52.5)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1745484949]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

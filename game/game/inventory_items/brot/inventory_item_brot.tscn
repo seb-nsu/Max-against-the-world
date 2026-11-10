@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://cs6y4irpkoxki"]
+
+[ext_resource type="Script" path="res://game/inventory_items/brot/inventory_item_brot.gd" id="1_v34xx"]
+[ext_resource type="Texture2D" uid="uid://bme40n0pigvo7" path="res://grafik/platzhalter/gegenstand_brot.png" id="1_x3ula"]
+
+[node name="ItemBrot" type="TextureRect" unique_id=918858377]
+texture_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 4
+mouse_filter = 0
+texture = ExtResource("1_x3ula")
+stretch_mode = 5
+script = ExtResource("1_v34xx")
+script_name = "Brot"
+description = "UI_OBJ_BROT"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=17679008]

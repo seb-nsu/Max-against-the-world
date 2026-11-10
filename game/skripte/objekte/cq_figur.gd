@@ -38,6 +38,8 @@ func _klick() -> void:
 	if C.player != self and is_instance_valid(R.current) and R.current.has_method("figur_benutzt") \
 			and await R.current.call("figur_benutzt", self, null):
 		return
+	if C.player != self and await Spiel.regel("pixel" if Spiel.ist_pixel() else "benutzen", self):
+		return
 	if Spiel.ist_pixel() and C.player != self:
 		await _pixel_auf()
 		return
@@ -63,7 +65,12 @@ func _gegenstand_benutzt(item: PopochiuInventoryItem) -> void:
 		return
 	if item.script_name == Spiel.PIXEL_FELD:
 		I.active = null
+		if await Spiel.regel("pixel", self):
+			return
 		await _pixel_auf()
+		return
+	if await Spiel.regel("gegenstand", self, item):
+		I.active = null
 		return
 	await super.on_item_used(item)
 
@@ -86,6 +93,8 @@ func _on_double_click() -> void:
 
 func _on_right_click() -> void:
 	if C.player == self:
+		return
+	if await Spiel.regel("ansehen", self):
 		return
 	await ansehen()
 

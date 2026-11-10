@@ -19,7 +19,22 @@
   "ZS1_EI_ABGEGEBEN",
   "ZS1_GEPACKT",
   "TASCHE",
-  "FUNDKISTE"
+  "FUNDKISTE",
+  "EINKAUFSLISTE",
+  "FINALE",
+  "FI_HEIMKEHR",
+  "FI_FERNBEDIENUNG",
+  "FI_OPA_RUFE",
+  "FI_ANSEHEN",
+  "FI_KANAELE",
+  "FI_ZELDINA_DA",
+  "FI_ROBOTER_DA",
+  "FI_HILFERUF",
+  "FI_ZELLE_IM_MAUL",
+  "FI_WOHN_ANKUNFT",
+  "FI_MUTTER_DA",
+  "FI_SUPERMARKT",
+  "FI_ENDE_GESEHEN"
  ],
  "raeume": [
   {
@@ -330,6 +345,7 @@
    "benoetigt": [],
    "ergibt": [],
    "schalter": [
+    "FI_R01_GELOEST",
     "LUKE_ERKANNT"
    ],
    "optional": false
@@ -398,6 +414,7 @@
    ],
    "ergibt": [],
    "schalter": [
+    "FI_R02_GELOEST",
     "KEKSE_DABEI"
    ],
    "optional": true

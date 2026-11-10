@@ -1,0 +1,176 @@
+[gd_scene format=3 uid="uid://nkwavku8t7w8"]
+
+[ext_resource type="Script" path="res://game/rooms/werbespot_set/room_werbespot_set.gd" id="1_wahli"]
+[ext_resource type="PackedScene" uid="uid://b5leaygwxbjle" path="res://game/rooms/werbespot_set/walkable_areas/boden/walkable_area_boden.tscn" id="2_2syh0"]
+[ext_resource type="PackedScene" uid="uid://cklvgiqko7jtg" path="res://game/rooms/werbespot_set/props/background/prop_background.tscn" id="3_0crka"]
+[ext_resource type="Texture2D" uid="uid://bbrvexqgwipj2" path="res://grafik/platzhalter/raum_werbespot_set.png" id="4_lsx05"]
+[ext_resource type="PackedScene" uid="uid://dyqkpxy5q6icw" path="res://game/rooms/werbespot_set/props/taste_sendersuchlauf/prop_taste_sendersuchlauf.tscn" id="5_l1xsj"]
+[ext_resource type="Texture2D" uid="uid://0gwjf2surn8l" path="res://grafik/platzhalter/prop_taste_sendersuchlauf.png" id="6_dfgos"]
+[ext_resource type="PackedScene" uid="uid://bmli4d2gn5r8w" path="res://game/rooms/werbespot_set/hotspots/werbepause/hotspot_werbepause.tscn" id="7_jx2po"]
+[ext_resource type="PackedScene" uid="uid://cx00268xs2ehd" path="res://game/rooms/werbespot_set/hotspots/comic_panels/hotspot_comic_panels.tscn" id="8_3cql0"]
+[ext_resource type="PackedScene" uid="uid://gncgm12hmp5i" path="res://game/rooms/werbespot_set/hotspots/panel_schurke_lacht/hotspot_panel_schurke_lacht.tscn" id="9_b53of"]
+[ext_resource type="PackedScene" uid="uid://c00hxlbdu5ub3" path="res://game/rooms/werbespot_set/hotspots/panel_held_springt/hotspot_panel_held_springt.tscn" id="10_chout"]
+[ext_resource type="PackedScene" uid="uid://xa0v4idm33dj" path="res://game/rooms/werbespot_set/hotspots/panel_explosion/hotspot_panel_explosion.tscn" id="11_f2rbs"]
+[ext_resource type="PackedScene" uid="uid://tlx7nwlb2dyk" path="res://game/rooms/werbespot_set/hotspots/panel_schurke_im_kaese/hotspot_panel_schurke_im_kaese.tscn" id="12_ek1oj"]
+[ext_resource type="PackedScene" uid="uid://dinhxt36liq2q" path="res://game/rooms/werbespot_set/hotspots/produktpodest/hotspot_produktpodest.tscn" id="13_h2pb4"]
+[ext_resource type="PackedScene" uid="uid://byxwu8s0tmvd6" path="res://game/rooms/werbespot_set/hotspots/kamera/hotspot_kamera.tscn" id="14_do2t3"]
+[ext_resource type="PackedScene" uid="uid://bb13e6eeosega" path="res://game/rooms/werbespot_set/hotspots/regiestuhl/hotspot_regiestuhl.tscn" id="15_verwh"]
+[ext_resource type="PackedScene" uid="uid://4l6ji4jw25qm" path="res://game/rooms/werbespot_set/hotspots/plastikpalme/hotspot_plastikpalme.tscn" id="16_k2tf8"]
+[ext_resource type="PackedScene" uid="uid://cjiikhv4kixq3" path="res://game/rooms/werbespot_set/hotspots/klappe/hotspot_klappe.tscn" id="17_6ovt4"]
+[ext_resource type="PackedScene" uid="uid://c5wvj1qpdev2d" path="res://game/rooms/werbespot_set/hotspots/hintergrund/hotspot_hintergrund.tscn" id="18_51266"]
+[ext_resource type="PackedScene" uid="uid://iq67op1g41nx" path="res://game/rooms/werbespot_set/hotspots/autoplay_countdown/hotspot_autoplay_countdown.tscn" id="19_uelnk"]
+[ext_resource type="PackedScene" uid="uid://p405lw48v0d2" path="res://game/rooms/werbespot_set/markers/start/marker_start.tscn" id="20_k2rux"]
+[ext_resource type="PackedScene" uid="uid://1355wwt2gkwr" path="res://game/rooms/werbespot_set/markers/von_gluecksrad/marker_von_gluecksrad.tscn" id="21_dqd4e"]
+[ext_resource type="PackedScene" uid="uid://cshl53a4274es" path="res://game/rooms/werbespot_set/markers/von_sitcom_kueche/marker_von_sitcom_kueche.tscn" id="22_r4u4n"]
+[ext_resource type="PackedScene" uid="uid://cul7dbuqo4xkm" path="res://game/rooms/werbespot_set/markers/von_savanne/marker_von_savanne.tscn" id="23_0fdmy"]
+[ext_resource type="PackedScene" uid="uid://bnj8enyvtvff3" path="res://game/rooms/werbespot_set/markers/von_friedhof/marker_von_friedhof.tscn" id="24_1a6fq"]
+[ext_resource type="PackedScene" uid="uid://kwm7n71nw6wx" path="res://game/rooms/werbespot_set/markers/von_kapitolis/marker_von_kapitolis.tscn" id="25_b5uf1"]
+[ext_resource type="PackedScene" uid="uid://dp5o66s4yxw8j" path="res://game/rooms/werbespot_set/markers/von_empfang/marker_von_empfang.tscn" id="26_e2tpf"]
+[ext_resource type="PackedScene" uid="uid://chc343c071ue4" path="res://game/characters/super_siegfried/character_super_siegfried.tscn" id="27_5vyns"]
+[ext_resource type="PackedScene" uid="uid://d18rrdmwhjw6i" path="res://game/characters/fledermann/character_fledermann.tscn" id="28_gadfi"]
+[ext_resource type="PackedScene" uid="uid://b38cvk13f3gn" path="res://game/characters/wonder_wilma/character_wonder_wilma.tscn" id="29_fj5qd"]
+[ext_resource type="PackedScene" uid="uid://ca1k3f30fff3h" path="res://game/characters/dr_werbepause/character_dr_werbepause.tscn" id="30_dhsb1"]
+
+[node name="RoomWerbespotSet" type="Node2D" unique_id=920785159]
+script = ExtResource("1_wahli")
+script_name = "WerbespotSet"
+width = 480
+height = 270
+
+[node name="WalkableAreas" type="Node2D" parent="." unique_id=845511733]
+
+[node name="Boden" parent="WalkableAreas" unique_id=1935020182 instance=ExtResource("2_2syh0")]
+interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(6, 210, 474, 210, 474, 267, 6, 267)])
+
+[node name="Props" type="Node2D" parent="." unique_id=1309132278]
+
+[node name="Background" parent="Props" unique_id=793186524 instance=ExtResource("3_0crka")]
+position = Vector2(240, 135)
+texture = ExtResource("4_lsx05")
+description = "UI_RAUM_WERBESPOT_SET"
+
+[node name="TasteSendersuchlauf" parent="Props" unique_id=566147057 instance=ExtResource("5_l1xsj")]
+position = Vector2(107.5, 201)
+texture = ExtResource("6_dfgos")
+description = "UI_OBJ_TASTE_SENDERSUCHLAUF"
+baseline = 6
+walk_to_point = Vector2(-0.5, 34)
+
+[node name="Hotspots" type="Node2D" parent="." unique_id=1194914796]
+
+[node name="Werbepause" parent="Hotspots" unique_id=818378831 instance=ExtResource("7_jx2po")]
+position = Vector2(73, 54)
+description = "UI_OBJ_WERBEPAUSE"
+baseline = 24
+walk_to_point = Vector2(0, 181)
+
+[node name="ComicPanels" parent="Hotspots" unique_id=1467630913 instance=ExtResource("8_3cql0")]
+position = Vector2(139, 54)
+description = "UI_OBJ_COMIC_PANELS"
+baseline = 24
+walk_to_point = Vector2(0, 181)
+
+[node name="PanelSchurkeLacht" parent="Hotspots" unique_id=2142606518 instance=ExtResource("9_b53of")]
+position = Vector2(205, 54)
+description = "UI_OBJ_PANEL_SCHURKE_LACHT"
+baseline = 24
+walk_to_point = Vector2(0, 181)
+
+[node name="PanelHeldSpringt" parent="Hotspots" unique_id=571682142 instance=ExtResource("10_chout")]
+position = Vector2(271, 54)
+description = "UI_OBJ_PANEL_HELD_SPRINGT"
+baseline = 24
+walk_to_point = Vector2(0, 181)
+
+[node name="PanelExplosion" parent="Hotspots" unique_id=174434789 instance=ExtResource("11_f2rbs")]
+position = Vector2(337, 54)
+description = "UI_OBJ_PANEL_EXPLOSION"
+baseline = 24
+walk_to_point = Vector2(0, 181)
+
+[node name="PanelSchurkeImKaese" parent="Hotspots" unique_id=585647447 instance=ExtResource("12_ek1oj")]
+position = Vector2(403, 54)
+description = "UI_OBJ_PANEL_SCHURKE_IM_KAESE"
+baseline = 24
+walk_to_point = Vector2(0, 181)
+
+[node name="Produktpodest" parent="Hotspots" unique_id=1686970469 instance=ExtResource("13_h2pb4")]
+position = Vector2(73, 114)
+description = "UI_OBJ_PRODUKTPODEST"
+baseline = 24
+walk_to_point = Vector2(0, 121)
+
+[node name="Kamera" parent="Hotspots" unique_id=796128608 instance=ExtResource("14_do2t3")]
+position = Vector2(139, 114)
+description = "UI_OBJ_KAMERA"
+baseline = 24
+walk_to_point = Vector2(0, 121)
+
+[node name="Regiestuhl" parent="Hotspots" unique_id=1591649507 instance=ExtResource("15_verwh")]
+position = Vector2(205, 114)
+description = "UI_OBJ_REGIESTUHL"
+baseline = 24
+walk_to_point = Vector2(0, 121)
+
+[node name="Plastikpalme" parent="Hotspots" unique_id=521271690 instance=ExtResource("16_k2tf8")]
+position = Vector2(271, 114)
+description = "UI_OBJ_PLASTIKPALME"
+baseline = 24
+walk_to_point = Vector2(0, 121)
+
+[node name="Klappe" parent="Hotspots" unique_id=393012862 instance=ExtResource("17_6ovt4")]
+position = Vector2(337, 114)
+description = "UI_OBJ_KLAPPE"
+baseline = 24
+walk_to_point = Vector2(0, 121)
+
+[node name="Hintergrund" parent="Hotspots" unique_id=472715229 instance=ExtResource("18_51266")]
+position = Vector2(403, 114)
+description = "UI_OBJ_HINTERGRUND"
+baseline = 24
+walk_to_point = Vector2(0, 121)
+
+[node name="AutoplayCountdown" parent="Hotspots" unique_id=434339176 instance=ExtResource("19_uelnk")]
+position = Vector2(73, 174)
+description = "UI_OBJ_AUTOPLAY_COUNTDOWN"
+baseline = 24
+walk_to_point = Vector2(0, 61)
+
+[node name="Regions" type="Node2D" parent="." unique_id=1044151901]
+
+[node name="Markers" type="Node2D" parent="." unique_id=1985412662]
+
+[node name="Start" parent="Markers" unique_id=1647380526 instance=ExtResource("20_k2rux")]
+position = Vector2(240, 240)
+
+[node name="VonGluecksrad" parent="Markers" unique_id=1014186540 instance=ExtResource("21_dqd4e")]
+position = Vector2(240, 240)
+
+[node name="VonSitcomKueche" parent="Markers" unique_id=1502347843 instance=ExtResource("22_r4u4n")]
+position = Vector2(240, 240)
+
+[node name="VonSavanne" parent="Markers" unique_id=646916648 instance=ExtResource("23_0fdmy")]
+position = Vector2(240, 240)
+
+[node name="VonFriedhof" parent="Markers" unique_id=315398391 instance=ExtResource("24_1a6fq")]
+position = Vector2(240, 240)
+
+[node name="VonKapitolis" parent="Markers" unique_id=188818250 instance=ExtResource("25_b5uf1")]
+position = Vector2(240, 240)
+
+[node name="VonEmpfang" parent="Markers" unique_id=1898033396 instance=ExtResource("26_e2tpf")]
+position = Vector2(240, 240)
+
+[node name="Characters" type="Node2D" parent="." unique_id=2101047108]
+
+[node name="CharacterSuperSiegfried *" parent="Characters" unique_id=2002910130 instance=ExtResource("27_5vyns")]
+position = Vector2(105, 232)
+
+[node name="CharacterFledermann *" parent="Characters" unique_id=1569251706 instance=ExtResource("28_gadfi")]
+position = Vector2(195, 232)
+
+[node name="CharacterWonderWilma *" parent="Characters" unique_id=284281013 instance=ExtResource("29_fj5qd")]
+position = Vector2(285, 232)
+
+[node name="CharacterDrWerbepause *" parent="Characters" unique_id=2081413659 instance=ExtResource("30_dhsb1")]
+position = Vector2(375, 232)

@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://cjh6aw2jyqtdc"]
+
+[ext_resource type="Script" path="res://game/rooms/palastkueche/hotspots/knoblauch_und_kraeuter/hotspot_knoblauch_und_kraeuter.gd" id="1_potpl"]
+
+[node name="KnoblauchUndKraeuter" type="Area2D" unique_id=564214554]
+script = ExtResource("1_potpl")
+script_name = "KnoblauchUndKraeuter"
+description = "Knoblauch Und Kraeuter"
+cursor = 1
+interaction_polygon = PackedVector2Array(-60, -15, 60, -15, 60, 15, -60, 15)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1118037025]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

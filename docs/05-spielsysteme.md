@@ -49,8 +49,8 @@ Eigennamen-Glossar: Sprechende Namen werden nicht wörtlich übersetzt, sondern 
 | Deutsch | Englisch | Hinweis |
 | --- | --- | --- |
 | Type 405 | Type 405 | bleibt, Fehlercode-Witz funktioniert in beiden Sprachen |
-| Herr Vier | Mr. Four | Zahl bleibt, Anrede wechselt |
-| Tiertort | Paw and Order | Serienparodie, andere Vorlage mit gleichem Effekt |
+| Herr Vier | Mr Four | Zahl bleibt, Anrede wechselt (britisch ohne Punkt, wie im ganzen Text) |
+| Tiertort (Savanne) | Paw and Order (Savannah) | Serienparodie, andere Vorlage mit gleichem Effekt |
 | Schwurbelstein | Waffleton | Klang eines Ortsnamens plus Geschwafel |
 | Unterbrösel | Lower Crumbly | englisches Dorfnamensmuster |
 | Hoggelwarz | Hogwartle | erkennbar, aber verfremdet |
@@ -60,6 +60,22 @@ Eigennamen-Glossar: Sprechende Namen werden nicht wörtlich übersetzt, sondern 
 | Dr. Werbepause | Dr. Adbreak | Titel bleibt |
 | Pfote (Hilfe) | Paw | UI-Begriff |
 | Moderwort | Lord Mouldword | erkennbar, aber verfremdet |
+| Mo-Knuddel-Puddi-Bärchen | Mo-Cuddles-Pudding-Teddy | Passwort; die vier Teile heißen in ui.csv und Notizbuch genauso, das Arbeitslied singt „Cuddles-Pudding“ |
+| Grimmzahn | Grimtooth | Gewerkschaftsboss der Goblins |
+| Rotkäppchen | Little Red | Lieferdienst bleibt Lieferdienst |
+| Burg Brösel / Schloss Steinbeiß | Castle Crumble / Stonebite Palace | Burgen, in denen Zeldina nicht ist |
+| Schicksalsberg (Jahrgang) | Mount Doomsday | Weinjahrgang in der Taverne |
+| Vielsaft-Limo | Polyjuicy Lemonade | Trank-Parodie |
+| Bohn-O-Mat | Bean-O-Matic | wie Zap-O-Matic |
+| Niesrosen | Sneezeroses | Wortbildung bleibt |
+| Gerhard, Birgit, Klaus-Dieter (Humberts Schwerter) | Gerald, Brenda, Nigel | deutsche Allerweltsnamen werden englische; Ingrid, Helga, Kurt bleiben |
+| Zeldina, Toadi, Smaugi, Gollo, Alwin, Humbert, Waldemar, Minka, Kalle, Flimmer, Zappmann, Gerd Glück, Konrad, Hildegard | gleich | funktionieren in beiden Sprachen |
+| Kuchen123 | Cake123 | Max' Passwort-Raten im Zwischenspiel 3 |
+| „Servus“ (Modell 08/15) | „Greetings“ | der Roboter grüßt alles, auch Türen |
+| Zappis Puppenstube | Zappi's Dollhouse | Opas Kindersendung von 1977 |
+| Opas Dachboden, Schwurbelstein, Antikodonien, Neo-Neustadt 2099, Kanal 999 (Weltnamen) | Grandpa's attic, Waffleton, Antikodonien, Neo-Neustadt 2099, Channel 999 | Weltnamen in Spielständen und auf dem Drehknopf; Antikodonien und Neo-Neustadt bleiben |
+
+Stand der englischen Fassung (10. November 2026): alle Skriptzeilen (Prolog, Welt 1 bis 4, die drei Zwischenspiele, das Finale), die Systemzeilen und alle Menütexte sind übersetzt. Kommt eine neue deutsche Zeile ohne englische dazu, zeigt das Spiel dort die deutsche (Rückfallsprache `de`). Ablauf: `python3 tools/en_eintragen.py --offen W2` gibt die offenen Zeilen mit Sprecher, Auslöser und Regie aus, Claude übersetzt sie als `ID | Text` in eine Datei, `python3 tools/en_eintragen.py DATEI` trägt sie nach `uebersetzung/en.csv` ein (Kaskaden müssen dieselbe Zahl Blasen haben, sonst wird die Zeile abgelehnt), danach `python3 tools/skript_export.py`. Ein Muttersprachler prüft die Witze vor dem Release.
 
 **Zeilenarten:**
 
@@ -89,6 +105,8 @@ Eigennamen-Glossar: Sprechende Namen werden nicht wörtlich übersetzt, sondern 
 - Max erklärt nie die Vorlage, und jede Anspielung funktioniert auch ohne sie. Retro-Witze gehören Pixel oder Opa.
 - Ein Fehlversuch darf nie wie eine Belohnung für Raten wirken, aber er soll lustig sein. Naheliegende falsche Kombinationen bekommen eine eigene Zeile.
 - Jede Zeile, die eine Lösung andeutet, steht so im Skript, dass das Hinweissystem darauf aufbauen kann.
+- Gespräche sollen fließen. Eine Plauderoption endet nicht nach einer einzigen Antwortzeile, sondern bekommt einen Nachsatz oder eine Rückfrage von Max (Ausnahme: Abschiede). Eine neue Zeile kommt mit `tools/zeilen_einfuegen.py` hinter die passende Zeile, ohne dass etwas umnummeriert wird.
+- Jede Zeile muss im Spiel vorkommen. Eine Zeile, die bewusst nicht vorkommt, wird im Skript als „Reserve, kommt nicht vor“ markiert.
 
 **Umfang:** Etwa 5.000 Zeilen (angehoben am 9. November 2026, weil jede Ansehen-Stelle eine Zweitzeile bekommt und Inventar-Ansehen, Abschiedszeilen und Pools dazukamen). Als Budget: Prolog 170, jede Welt 1.000 bis 1.100, Zwischenspiele 200, Finale und Abspann 320, Menüs und Systemtexte 150. Die Systemzeilen (`SYS_ERS_*` 50, `SYS_WDH_*` 30, `SYS_PLA_*` 6) stehen in `skript/prolog.md`, zählen aber zu Menüs und Systemtexten; der Prolog selbst hat 165 Zeilen. Stand der Entwürfe am 9. November 2026: Welten 1.019 bis 1.099, Zwischenspiele 191, Finale und Abspann 315. Die Pixel-auf-Mensch-Zeilen stecken im Budget der Welten.
 

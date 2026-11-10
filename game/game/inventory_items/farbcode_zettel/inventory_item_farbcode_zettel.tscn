@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://dagfnt2gbymjb"]
+
+[ext_resource type="Script" path="res://game/inventory_items/farbcode_zettel/inventory_item_farbcode_zettel.gd" id="1_2ks4a"]
+[ext_resource type="Texture2D" uid="uid://dpspx04fbi1j2" path="res://grafik/platzhalter/gegenstand_farbcode_zettel.png" id="1_7i4oi"]
+
+[node name="ItemFarbcodeZettel" type="TextureRect" unique_id=157438867]
+texture_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 4
+mouse_filter = 0
+texture = ExtResource("1_7i4oi")
+stretch_mode = 5
+script = ExtResource("1_2ks4a")
+script_name = "FarbcodeZettel"
+description = "UI_OBJ_FARBCODE_ZETTEL"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=178724018]

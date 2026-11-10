@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://dpwbs6ag4cvb6"]
+
+[ext_resource type="Script" path="res://game/characters/hieron/character_hieron_state.gd" id="1_yjv3b"]
+
+[resource]
+resource_name = "Hieron"
+script = ExtResource("1_yjv3b")
+script_name = "Hieron"
+scene = "res://game/characters/hieron/character_hieron.tscn"

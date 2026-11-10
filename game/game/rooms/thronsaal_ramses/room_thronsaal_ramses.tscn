@@ -1,0 +1,156 @@
+[gd_scene format=3 uid="uid://cvqomxoma7ni8"]
+
+[ext_resource type="Script" path="res://game/rooms/thronsaal_ramses/room_thronsaal_ramses.gd" id="1_xheud"]
+[ext_resource type="PackedScene" uid="uid://bcofmkhw8dgc1" path="res://game/rooms/thronsaal_ramses/walkable_areas/boden/walkable_area_boden.tscn" id="2_tk8g4"]
+[ext_resource type="PackedScene" uid="uid://c5qvib56ppqnb" path="res://game/rooms/thronsaal_ramses/props/background/prop_background.tscn" id="3_frc5r"]
+[ext_resource type="Texture2D" uid="uid://d1q7vwjww843f" path="res://grafik/platzhalter/raum_thronsaal_ramses.png" id="4_qn4hq"]
+[ext_resource type="PackedScene" uid="uid://bu7yjdq45nen4" path="res://game/rooms/thronsaal_ramses/props/pharaonenteller/prop_pharaonenteller.tscn" id="5_f7e4k"]
+[ext_resource type="Texture2D" uid="uid://cx3lcuy78oo8t" path="res://grafik/platzhalter/prop_pharaonenteller.png" id="6_svoxn"]
+[ext_resource type="PackedScene" uid="uid://cehkf4hw3q45x" path="res://game/rooms/thronsaal_ramses/hotspots/thron/hotspot_thron.tscn" id="7_cc8ma"]
+[ext_resource type="PackedScene" uid="uid://dys46h3nxwuox" path="res://game/rooms/thronsaal_ramses/hotspots/schreiberpult/hotspot_schreiberpult.tscn" id="8_r4kn1"]
+[ext_resource type="PackedScene" uid="uid://c7r0pwhxsqlku" path="res://game/rooms/thronsaal_ramses/hotspots/sarkophag/hotspot_sarkophag.tscn" id="9_puone"]
+[ext_resource type="PackedScene" uid="uid://bukk4nhq5mmfj" path="res://game/rooms/thronsaal_ramses/hotspots/mumifizierte_katze/hotspot_mumifizierte_katze.tscn" id="10_2dqne"]
+[ext_resource type="PackedScene" uid="uid://dvpsic427d5k2" path="res://game/rooms/thronsaal_ramses/hotspots/wandfries/hotspot_wandfries.tscn" id="11_v4yld"]
+[ext_resource type="PackedScene" uid="uid://du8quwdo11cjw" path="res://game/rooms/thronsaal_ramses/hotspots/saeulen/hotspot_saeulen.tscn" id="12_kg0i2"]
+[ext_resource type="PackedScene" uid="uid://dy1n533616w83" path="res://game/rooms/thronsaal_ramses/hotspots/inschrift/hotspot_inschrift.tscn" id="13_plqg3"]
+[ext_resource type="PackedScene" uid="uid://dxvnlqil886ae" path="res://game/rooms/thronsaal_ramses/hotspots/opferschale/hotspot_opferschale.tscn" id="14_w1ipt"]
+[ext_resource type="PackedScene" uid="uid://uqihtjvdqncj" path="res://game/rooms/thronsaal_ramses/hotspots/fackeln/hotspot_fackeln.tscn" id="15_jk6w6"]
+[ext_resource type="PackedScene" uid="uid://cu5dq8v0llxug" path="res://game/rooms/thronsaal_ramses/hotspots/ausgang_nil_delta/hotspot_ausgang_nil_delta.tscn" id="16_2ktrr"]
+[ext_resource type="PackedScene" uid="uid://co1yaqvavgxqc" path="res://game/rooms/thronsaal_ramses/hotspots/tuer_zur_kueche/hotspot_tuer_zur_kueche.tscn" id="17_fg5ta"]
+[ext_resource type="PackedScene" uid="uid://b8lv2aj8yhqnh" path="res://game/rooms/thronsaal_ramses/markers/start/marker_start.tscn" id="18_2xhcn"]
+[ext_resource type="PackedScene" uid="uid://dhjpxsi3dj3g6" path="res://game/rooms/thronsaal_ramses/markers/von_nil_delta/marker_von_nil_delta.tscn" id="19_pddwx"]
+[ext_resource type="PackedScene" uid="uid://b68culiojsv5u" path="res://game/rooms/thronsaal_ramses/markers/von_palastkueche/marker_von_palastkueche.tscn" id="20_68r8d"]
+[ext_resource type="PackedScene" uid="uid://doy3ftil54vfu" path="res://game/rooms/thronsaal_ramses/markers/sobek/marker_sobek.tscn" id="21_7gpy4"]
+[ext_resource type="PackedScene" uid="uid://dhr8rgwereyw2" path="res://game/rooms/thronsaal_ramses/markers/kissen/marker_kissen.tscn" id="22_d8a4t"]
+[ext_resource type="PackedScene" uid="uid://cv0o4joqfb28u" path="res://game/characters/schreiber/character_schreiber.tscn" id="23_u8y8i"]
+[ext_resource type="PackedScene" uid="uid://clih1ayja27k3" path="res://game/characters/ramses/character_ramses.tscn" id="24_2fdqd"]
+[ext_resource type="PackedScene" uid="uid://pgritmjhncry" path="res://game/characters/hofkater/character_hofkater.tscn" id="25_vyfnt"]
+[ext_resource type="PackedScene" uid="uid://dmvhrryghki27" path="res://game/characters/faecherwedler/character_faecherwedler.tscn" id="26_2pesd"]
+
+[node name="RoomThronsaalRamses" type="Node2D" unique_id=6242541]
+script = ExtResource("1_xheud")
+script_name = "ThronsaalRamses"
+width = 480
+height = 270
+
+[node name="WalkableAreas" type="Node2D" parent="." unique_id=949025426]
+
+[node name="Boden" parent="WalkableAreas" unique_id=1242328803 instance=ExtResource("2_tk8g4")]
+interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(6, 210, 474, 210, 474, 267, 6, 267)])
+
+[node name="Props" type="Node2D" parent="." unique_id=825459027]
+
+[node name="Background" parent="Props" unique_id=2099230114 instance=ExtResource("3_frc5r")]
+position = Vector2(240, 135)
+texture = ExtResource("4_qn4hq")
+description = "UI_RAUM_THRONSAAL_RAMSES"
+
+[node name="Pharaonenteller" parent="Props" unique_id=645458935 instance=ExtResource("5_f7e4k")]
+position = Vector2(351, 193.5)
+texture = ExtResource("6_svoxn")
+description = "UI_OBJ_PHARAONENTELLER"
+baseline = 4
+walk_to_point = Vector2(-3, 40.5)
+
+[node name="Hotspots" type="Node2D" parent="." unique_id=474147086]
+
+[node name="Thron" parent="Hotspots" unique_id=1128436211 instance=ExtResource("7_cc8ma")]
+position = Vector2(300, 163.5)
+description = "UI_OBJ_THRON"
+baseline = 46
+walk_to_point = Vector2(0, 70.5)
+
+[node name="Schreiberpult" parent="Hotspots" unique_id=2117171217 instance=ExtResource("8_r4kn1")]
+position = Vector2(79.5, 193.5)
+description = "UI_OBJ_SCHREIBERPULT"
+baseline = 16
+walk_to_point = Vector2(4.5, 40.5)
+
+[node name="Sarkophag" parent="Hotspots" unique_id=1620391899 instance=ExtResource("9_puone")]
+position = Vector2(30, 150)
+description = "UI_OBJ_SARKOPHAG"
+baseline = 54
+walk_to_point = Vector2(6, 84)
+
+[node name="MumifizierteKatze" parent="Hotspots" unique_id=1892102398 instance=ExtResource("10_2dqne")]
+position = Vector2(126, 141)
+description = "UI_OBJ_MUMIFIZIERTE_KATZE"
+baseline = 21
+walk_to_point = Vector2(0, 90)
+
+[node name="Wandfries" parent="Hotspots" unique_id=1147623953 instance=ExtResource("11_v4yld")]
+position = Vector2(225, 37.5)
+description = "UI_OBJ_WANDFRIES"
+baseline = 13
+walk_to_point = Vector2(15, 193.5)
+
+[node name="Saeulen" parent="Hotspots" unique_id=871946126 instance=ExtResource("12_kg0i2")]
+position = Vector2(166.5, 135)
+description = "UI_OBJ_SAEULEN"
+baseline = 75
+walk_to_point = Vector2(1.5, 96)
+
+[node name="Inschrift" parent="Hotspots" unique_id=916854319 instance=ExtResource("13_plqg3")]
+position = Vector2(214.5, 120)
+description = "UI_OBJ_INSCHRIFT"
+baseline = 27
+walk_to_point = Vector2(-1.5, 111)
+
+[node name="Opferschale" parent="Hotspots" unique_id=806973818 instance=ExtResource("14_w1ipt")]
+position = Vector2(247.5, 208.5)
+description = "UI_OBJ_OPFERSCHALE"
+baseline = 4
+walk_to_point = Vector2(-1.5, 28.5)
+
+[node name="Fackeln" parent="Hotspots" unique_id=1986828130 instance=ExtResource("15_jk6w6")]
+position = Vector2(402, 78)
+description = "UI_OBJ_FACKELN"
+baseline = 18
+walk_to_point = Vector2(0, 153)
+
+[node name="AusgangNilDelta" parent="Hotspots" unique_id=1499183777 instance=ExtResource("16_2ktrr")]
+position = Vector2(6, 165)
+description = "UI_OBJ_AUSGANG_NIL_DELTA"
+baseline = 45
+walk_to_point = Vector2(12, 75)
+cursor = 9
+
+[node name="TuerZurKueche" parent="Hotspots" unique_id=1306821208 instance=ExtResource("17_fg5ta")]
+position = Vector2(457.5, 157.5)
+description = "UI_OBJ_TUER_ZUR_KUECHE"
+baseline = 52
+walk_to_point = Vector2(-7.5, 79.5)
+cursor = 9
+
+[node name="Regions" type="Node2D" parent="." unique_id=2013709478]
+
+[node name="Markers" type="Node2D" parent="." unique_id=2096259892]
+
+[node name="Start" parent="Markers" unique_id=2033373354 instance=ExtResource("18_2xhcn")]
+position = Vector2(36, 240)
+
+[node name="VonNilDelta" parent="Markers" unique_id=1311006681 instance=ExtResource("19_pddwx")]
+position = Vector2(36, 240)
+
+[node name="VonPalastkueche" parent="Markers" unique_id=1408568347 instance=ExtResource("20_68r8d")]
+position = Vector2(444, 240)
+
+[node name="Sobek" parent="Markers" unique_id=674302768 instance=ExtResource("21_7gpy4")]
+position = Vector2(150, 252)
+
+[node name="Kissen" parent="Markers" unique_id=354513727 instance=ExtResource("22_d8a4t")]
+position = Vector2(270, 228)
+
+[node name="Characters" type="Node2D" parent="." unique_id=1099026890]
+
+[node name="CharacterSchreiber *" parent="Characters" unique_id=1624699989 instance=ExtResource("23_u8y8i")]
+position = Vector2(84, 228)
+
+[node name="CharacterRamses *" parent="Characters" unique_id=537020594 instance=ExtResource("24_2fdqd")]
+position = Vector2(300, 186)
+
+[node name="CharacterHofkater *" parent="Characters" unique_id=1361457797 instance=ExtResource("25_vyfnt")]
+position = Vector2(270, 222)
+
+[node name="CharacterFaecherwedler *" parent="Characters" unique_id=1689266275 instance=ExtResource("26_2pesd")]
+position = Vector2(354, 228)

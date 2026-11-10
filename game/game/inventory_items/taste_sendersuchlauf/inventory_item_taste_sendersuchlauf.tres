@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://cawc7414wom1l"]
+
+[ext_resource type="Script" path="res://game/inventory_items/taste_sendersuchlauf/inventory_item_taste_sendersuchlauf_state.gd" id="1_hna4f"]
+
+[resource]
+resource_name = "TasteSendersuchlauf"
+script = ExtResource("1_hna4f")
+script_name = "TasteSendersuchlauf"
+scene = "res://game/inventory_items/taste_sendersuchlauf/inventory_item_taste_sendersuchlauf.tscn"

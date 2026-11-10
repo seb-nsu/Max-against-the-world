@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://d35jmqwwurf1x"]
+
+[ext_resource type="Script" uid="uid://brxefo54wpm32" path="res://addons/popochiu/engine/objects/dialog/popochiu_dialog_option.gd" id="1_qehca"]
+[ext_resource type="Script" path="res://game/dialogs/deckert/dialog_deckert.gd" id="2_824ve"]
+
+[resource]
+resource_name = "Deckert"
+script = ExtResource("2_824ve")
+script_name = "Deckert"

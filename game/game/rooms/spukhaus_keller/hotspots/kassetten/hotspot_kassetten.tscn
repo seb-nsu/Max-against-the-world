@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://djp2leuojh1ll"]
+
+[ext_resource type="Script" path="res://game/rooms/spukhaus_keller/hotspots/kassetten/hotspot_kassetten.gd" id="1_rgcyl"]
+
+[node name="Kassetten" type="Area2D" unique_id=1287886747]
+script = ExtResource("1_rgcyl")
+script_name = "Kassetten"
+description = "Kassetten"
+cursor = 1
+interaction_polygon = PackedVector2Array(-29, -24, 29, -24, 29, 24, -29, 24)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=2038041139]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

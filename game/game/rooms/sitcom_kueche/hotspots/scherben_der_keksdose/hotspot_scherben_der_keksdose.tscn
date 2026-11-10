@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://dbmleyuhrelrx"]
+
+[ext_resource type="Script" path="res://game/rooms/sitcom_kueche/hotspots/scherben_der_keksdose/hotspot_scherben_der_keksdose.gd" id="1_6q3mv"]
+
+[node name="ScherbenDerKeksdose" type="Area2D" unique_id=1818516536]
+script = ExtResource("1_6q3mv")
+script_name = "ScherbenDerKeksdose"
+description = "Scherben Der Keksdose"
+cursor = 1
+interaction_polygon = PackedVector2Array(-29, -24, 29, -24, 29, 24, -29, 24)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1901985205]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

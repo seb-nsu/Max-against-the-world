@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://ccirdf8lkp5t0"]
+
+[node name="VonZelle" type="Marker2D" unique_id=1678699323]
+visible = false

@@ -311,6 +311,44 @@ func ersatz(kuerzel := "") -> void:
 
 #endregion
 
+#region Regeln der Abschnitte #######################################################################
+## Regeln eines Abschnitts, die über einzelne Objekte hinausgehen (skripte/welt_2.gd …): ein
+## Objekt je Abschnitt, geladen beim ersten Gebrauch. Die Basisklassen der Objekte melden ihre
+## Ereignisse an ereignis(art, obj, item) -> bool (true = erledigt, sonst Standardverhalten aus
+## dem Bauplan); Werte ohne Warten (Zustand eines Gegenstands, Bedingungen in Worten) liefert
+## wert(art, obj) (null = Standard). Welt 1 regelt ihre Rätsel in den Objektskripten.
+var _regeln := {}
+
+
+func regeln() -> Object:
+	var ab: String = Zustand.abschnitt
+	if not _regeln.has(ab):
+		var pfad := "res://skripte/%s.gd" % ab.replace("-", "_")
+		_regeln[ab] = load(pfad).new() if ResourceLoader.exists(pfad) else null
+	return _regeln[ab]
+
+
+## Ereignis an die Regeln des Abschnitts melden. Arten: benutzen, ansehen, gegenstand, pixel
+## (Hotspots, Props, Figuren), ausgang (true sperrt), kombinieren, benutzen_inventar,
+## ansehen_inventar (Gegenstände), raum_betreten, nach_uebergang, nach_laden (Räume),
+## nach_option (Gespräche: obj ist der Dialog, item die Options-ID).
+func regel(art: String, obj: Variant = null, item: Variant = null) -> bool:
+	var r := regeln()
+	if r == null or not r.has_method("ereignis"):
+		return false
+	return bool(await r.ereignis(art, obj, item))
+
+
+## Wert aus den Regeln des Abschnitts ohne Warten; null, wenn die Regeln nichts dazu sagen.
+func regel_wert(art: String, obj: Variant = null, item: Variant = null) -> Variant:
+	var r := regeln()
+	if r == null or not r.has_method("wert"):
+		return null
+	return r.wert(art, obj, item)
+
+
+#endregion
+
 #region Standardverhalten ##########################################################################
 ## Bedingungen aus dem Bauplan: [{art: "nach"/"vor", raetsel: "P1"}], [{art: "hat"/"hat_nicht",
 ## gegenstand: "goldmuenze"}] (Max' Inventar). „nach_zeile“ prüft das Gespräch selbst (CQDialog).
@@ -427,7 +465,8 @@ func hingehen(ziel: PopochiuClickable) -> void:
 ## Zeile (Zahnstocher: „Er wählt mich nicht“). Pixel nimmt in der Graubox nichts (WECH 0070).
 func nehmen(prop: PopochiuProp, daten: Dictionary) -> void:
 	if ist_pixel():
-		await wechsel_regel("pixel_nehmen")
+		if not await regel("pixel_nehmen", prop):
+			await wechsel_regel("pixel_nehmen")
 		return
 	await hingehen(prop)
 	if not kann_aufnehmen(C.player):
@@ -472,6 +511,17 @@ func _leise_an() -> bool:
 
 
 ## Raumwechsel über einen Ausgang. Die Ankunft steht im Marker „Von<Herkunft>“.
+## Raumwechsel, der erst zurückkehrt, wenn der Zielraum steht. Popochiu ignoriert ein goto_room,
+## solange der vorige Wechsel noch läuft (E.in_room false); Szenen mit mehreren Räumen
+## hintereinander (Welt-3-Abschluss) brauchen deshalb diese Variante.
+func raum_wechseln_und_warten(sn: String) -> void:
+	while not E.in_room:
+		await get_tree().process_frame
+	await R.goto_room(sn)
+	while not (E.in_room and is_instance_valid(R.current) and R.current.script_name == sn):
+		await get_tree().process_frame
+
+
 func raum_wechseln(ziel_raum_id: String) -> void:
 	var sn := Bauplan.raum_script_name(ziel_raum_id)
 	if sn.is_empty():
@@ -492,6 +542,9 @@ func wechsel_moeglich() -> bool:
 		return false
 	if not Zustand.ist(praefix() + "_WECHSEL_FREI"):
 		return false
+	var regel_w = regel_wert("wechsel_moeglich")  # Welt 3: Wechsel über die Ebenen hinweg
+	if regel_w != null:
+		return bool(regel_w)
 	return is_instance_valid(C.Pixel) and C.Pixel.is_inside_tree() \
 		and is_instance_valid(C.Max) and C.Max.is_inside_tree()
 
@@ -505,9 +558,12 @@ func praefix() -> String:
 func figur_wechseln(mit_zeile := true) -> bool:
 	if not wechsel_moeglich() or in_szene > 0 or E.playing_queue:
 		return false
+	if regel_wert("wechsel_getrennt") == true:
+		regel("figur_wechseln")  # Raumwechsel zur anderen Figur, läuft für sich weiter
+		return true
 	I.active = null
 	Klang.geraeusch("wechsel")
-	C.player = C.Pixel if C.player == C.Max else C.Max
+	C.player = C.get_character("Pixel") if C.player.script_name == "Max" else C.get_character("Max")
 	figur_gewechselt.emit(C.player)
 	if mit_zeile:
 		_wechsel_sagen.call_deferred()
@@ -672,6 +728,13 @@ func _bedingung_text_ok(text: String) -> bool:
 			return is_instance_valid(R.current) and R.current.has_character("Toadi")
 		"Zauberwald betreten":
 			return Zustand.war_in("zauberwald")
+		"Pixel auf dem Balken":
+			# Taverne: Pixel sitzt auf dem Dachbalken, solange Max spielt (G17)
+			return (
+				is_instance_valid(R.current) and R.current.script_name == "Taverne"
+				and R.current.has_character("Pixel") and C.player != C.Pixel
+				and C.Pixel.position.distance_to(R.current.get_marker_position("Balken")) < 4.0
+			)
 		"nur mit Zeldina im Team":
 			return Zustand.ist("W1_ZELDINA_FOLGT")
 		"Feilschen", "Haustier", "richtig":
@@ -680,6 +743,9 @@ func _bedingung_text_ok(text: String) -> bool:
 			return is_instance_valid(R.current) and (
 				R.current.has_character("SchmiedeZiege") or R.current.has_character("XxlZiege")
 			)
+	var w = regel_wert("bedingung_text", text)
+	if w != null:
+		return bool(w)
 	return false  # unbekannt: Rätselcode entscheidet (Option bzw. Zuruf bleibt aus)
 
 
@@ -719,9 +785,23 @@ func welt_beginnen(ab: String) -> void:
 		if not sn in mit:
 			await abgeben(sn)
 	Zustand.abschnitt = ab
+	# Dinge aus Max' eigenen Taschen (Welt-Tabelle: herkunft „max“, Welt 2: Handy, Kaugummi,
+	# Kugelschreiber) hat er zu Beginn der Welt dabei.
+	for g in Bauplan.welten.get(ab, {}).get("gegenstaende", []):
+		if g.get("herkunft", "") == "max":
+			await geben(Bauplan.gegenstand_script_name(g.id))
 	herkunft_raum = ""
 	var erster: Dictionary = Bauplan.welten.get(ab, {}).get("raeume", [{}])[0]
 	await R.goto_room(Bauplan.raum_script_name(erster.get("id", "")))
+
+
+## Ist der Abschnitt in Godot gebaut? Die Raumdaten (Bauplan) können vor den Szenen da sein;
+## erst der Godot-Bau (addons/couch_quest_bau) legt Räume und Gegenstände an. Geprüft wird die
+## Szene des ersten Raums der Welt-Tabelle.
+func abschnitt_gebaut(ab: String) -> bool:
+	var erster: Dictionary = Bauplan.welten.get(ab, {}).get("raeume", [{}])[0]
+	var rid: String = str(erster.get("id", ""))
+	return not rid.is_empty() and ResourceLoader.exists("res://game/rooms/%s/room_%s.tscn" % [rid, rid])
 
 
 ## Zwischenspiel nach einer Welt (skript/zwischenspiele-und-finale.md): zurück auf den
@@ -739,6 +819,28 @@ func zwischenspiel_beginnen(nr: int) -> void:
 	Zustand.abschnitt = "finale"
 	Zustand.setze_wert("ZWISCHENSPIEL", nr)
 	herkunft_raum = ""
+	while not E.in_room:  # ein laufender Raumwechsel würde goto_room verschlucken
+		await get_tree().process_frame
+	await R.goto_room(Bauplan.raum_script_name("dachboden"))
+
+
+## Finale nach Welt 4 (skript/zwischenspiele-und-finale.md, Abschnitt 4): zurück auf den
+## Dachboden wie im Zwischenspiel, aber ohne Wert ZWISCHENSPIEL und mit Schalter FINALE; die
+## Regeln stehen in skripte/finale.gd. Das Inventar bleibt (die Goldene Fernbedienung gibt Max in
+## der Heimkehr-Szene ab).
+func finale_beginnen() -> void:
+	Klang.jingle("welt_geschafft")
+	if not testmodus:
+		await T.play_transition("tunnel", 1.5, T.PLAY_MODE.IN)
+	I.active = null
+	if is_instance_valid(C.Max) and C.player != C.Max:
+		C.player = C.Max
+	Zustand.abschnitt = "finale"
+	Zustand.setze_wert("ZWISCHENSPIEL", 0)
+	Zustand.setze("FINALE")
+	herkunft_raum = ""
+	while not E.in_room:  # ein laufender Raumwechsel würde goto_room verschlucken
+		await get_tree().process_frame
 	await R.goto_room(Bauplan.raum_script_name("dachboden"))
 
 

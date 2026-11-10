@@ -29,10 +29,16 @@
 [ext_resource type="PackedScene" uid="uid://cdht3gwwjoqio" path="res://game/rooms/dachboden/hotspots/bodenluke/hotspot_bodenluke.tscn" id="27_fqk22"]
 [ext_resource type="PackedScene" uid="uid://bwioj5sty1vjn" path="res://game/rooms/dachboden/markers/start/marker_start.tscn" id="28_180jd"]
 [ext_resource type="PackedScene" uid="uid://dbunxr4fev6x1" path="res://game/rooms/dachboden/hotspots/fundkiste/hotspot_fundkiste.tscn" id="28_v3y1t"]
+[ext_resource type="PackedScene" uid="uid://dtb35etga182k" path="res://game/rooms/dachboden/hotspots/maschine/hotspot_maschine.tscn" id="29_vyv7m"]
 [ext_resource type="PackedScene" uid="uid://wgywaxqa3gtb" path="res://game/rooms/dachboden/markers/von_treppenhaus/marker_von_treppenhaus.tscn" id="29_xxq08"]
+[ext_resource type="PackedScene" uid="uid://cachq3x4pmhps" path="res://game/rooms/dachboden/hotspots/ofentuer/hotspot_ofentuer.tscn" id="30_mcqit"]
 [ext_resource type="PackedScene" uid="uid://cs4idsu1anhgi" path="res://game/rooms/dachboden/markers/fernseher/marker_fernseher.tscn" id="30_w5i4a"]
 [ext_resource type="PackedScene" uid="uid://bi52qvl201pvg" path="res://game/characters/pixel/character_pixel.tscn" id="31_0qvcd"]
+[ext_resource type="PackedScene" uid="uid://c5elgi08ncf60" path="res://game/rooms/dachboden/hotspots/druckmesser/hotspot_druckmesser.tscn" id="31_je6ao"]
 [ext_resource type="PackedScene" uid="uid://edkvkxbseb5w" path="res://game/characters/opa/character_opa.tscn" id="32_53g1l"]
+[ext_resource type="PackedScene" uid="uid://4l46a67xb8f8" path="res://game/rooms/dachboden/hotspots/fassungen/hotspot_fassungen.tscn" id="32_m8m18"]
+[ext_resource type="PackedScene" uid="uid://c0a10o1lu3vc2" path="res://game/rooms/dachboden/hotspots/empfaenger/hotspot_empfaenger.tscn" id="33_8pmei"]
+[ext_resource type="PackedScene" uid="uid://dgq1ug25fvsth" path="res://game/rooms/dachboden/hotspots/lampe/hotspot_lampe.tscn" id="34_mcqit"]
 
 [node name="RoomDachboden" type="Node2D" unique_id=722265826]
 script = ExtResource("1_27u1a")
@@ -178,6 +184,42 @@ position = Vector2(180, 202.5)
 description = "UI_OBJ_FUNDKISTE"
 baseline = 13
 walk_to_point = Vector2(0, 34.5)
+
+[node name="Maschine" parent="Hotspots" unique_id=526618408 instance=ExtResource("29_vyv7m")]
+position = Vector2(216, 141)
+description = "UI_OBJ_MASCHINE"
+baseline = 45
+walk_to_point = Vector2(0, 96)
+
+[node name="Ofentuer" parent="Hotspots" unique_id=639124886 instance=ExtResource("30_mcqit")]
+position = Vector2(214.5, 165)
+description = "UI_OBJ_OFENTUER"
+baseline = 15
+walk_to_point = Vector2(-0.5, 72)
+
+[node name="Druckmesser" parent="Hotspots" unique_id=732991401 instance=ExtResource("31_je6ao")]
+position = Vector2(255, 117)
+description = "UI_OBJ_DRUCKMESSER"
+baseline = 9
+walk_to_point = Vector2(0, 120)
+
+[node name="Fassungen" parent="Hotspots" unique_id=949107875 instance=ExtResource("32_m8m18")]
+position = Vector2(216, 85.5)
+description = "UI_OBJ_FASSUNGEN"
+baseline = 7
+walk_to_point = Vector2(0, 151.5)
+
+[node name="Empfaenger" parent="Hotspots" unique_id=673938355 instance=ExtResource("33_8pmei")]
+position = Vector2(238.5, 66)
+description = "UI_OBJ_EMPFAENGER"
+baseline = 12
+walk_to_point = Vector2(-0.5, 171)
+
+[node name="Lampe" parent="Hotspots" unique_id=2112794198 instance=ExtResource("34_mcqit")]
+position = Vector2(114, 19.5)
+description = "UI_OBJ_LAMPE"
+baseline = 13
+walk_to_point = Vector2(0, 217.5)
 
 [node name="Regions" type="Node2D" parent="." unique_id=182010566]
 

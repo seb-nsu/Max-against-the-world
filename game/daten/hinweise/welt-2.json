@@ -34,7 +34,7 @@
   {
    "schritt": "R2a",
    "ziel": "Die Hieroglyphen-Botschaft",
-   "raum": "thronsaal",
+   "raum": "thronsaal_ramses",
    "offen_wenn": [
     "bildtafel"
    ],
@@ -65,7 +65,7 @@
   {
    "schritt": "R2b",
    "ziel": "Das Götter-Duell",
-   "raum": "thronsaal",
+   "raum": "thronsaal_ramses",
    "offen_wenn": [
     "R1",
     "thunfischdose"
@@ -272,7 +272,20 @@
    ],
    "optional": false,
    "sammelschritt": false,
-   "hinweise": []
+   "hinweise": [
+    {
+     "stufe": 1,
+     "zeile": "W2_HINT_PIX_1210"
+    },
+    {
+     "stufe": 2,
+     "zeile": "W2_HINT_PIX_1220"
+    },
+    {
+     "stufe": 3,
+     "zeile": "W2_HINT_PIX_1230"
+    }
+   ]
   },
   {
    "schritt": "R6a",
@@ -306,7 +319,7 @@
   {
    "schritt": "R6b",
    "ziel": "Frische Feigen für die Fächerwedler",
-   "raum": "thronsaal",
+   "raum": "thronsaal_ramses",
    "offen_wenn": [
     "R6a",
     "feigensetzling",
@@ -524,7 +537,20 @@
    ],
    "optional": false,
    "sammelschritt": false,
-   "hinweise": []
+   "hinweise": [
+    {
+     "stufe": 1,
+     "zeile": "W2_HINT_PIX_1310"
+    },
+    {
+     "stufe": 2,
+     "zeile": "W2_HINT_PIX_1320"
+    },
+    {
+     "stufe": 3,
+     "zeile": "W2_HINT_PIX_1330"
+    }
+   ]
   },
   {
    "schritt": "R11a",

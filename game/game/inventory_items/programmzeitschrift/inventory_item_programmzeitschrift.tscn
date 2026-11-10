@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://dxfsoly5r1r18"]
+
+[ext_resource type="Script" path="res://game/inventory_items/programmzeitschrift/inventory_item_programmzeitschrift.gd" id="1_5nv5e"]
+[ext_resource type="Texture2D" uid="uid://bmc2esygeg7jx" path="res://grafik/platzhalter/gegenstand_programmzeitschrift.png" id="1_o0ibi"]
+
+[node name="ItemProgrammzeitschrift" type="TextureRect" unique_id=577141691]
+texture_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 4
+mouse_filter = 0
+texture = ExtResource("1_o0ibi")
+stretch_mode = 5
+script = ExtResource("1_5nv5e")
+script_name = "Programmzeitschrift"
+description = "UI_OBJ_PROGRAMMZEITSCHRIFT"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=2111456725]

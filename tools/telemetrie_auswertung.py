@@ -7,7 +7,8 @@ Aufruf aus dem Repo-Wurzelverzeichnis:
   python3 tools/telemetrie_auswertung.py … --mit-tests               # auch Sitzungen aus dem Headless-Test
 
 Liest eine oder mehrere Protokolldateien (user://telemetrie/<sitzung>.jsonl, ein JSON-Objekt
-je Zeile, Felder in game/skripte/telemetrie.gd). Ordner werden nach *.jsonl durchsucht.
+je Zeile, Felder in game/skripte/telemetrie.gd). Ordner werden nach *.jsonl durchsucht. Eine Datei
+darf mehrere Sitzungen enthalten (Download aus dem Web-Build).
 Sitzungen desselben Testers (gleiche zufällige Tester-ID) gehören zusammen.
 
 Bericht als Markdown:
@@ -79,16 +80,21 @@ def lese(pfade, mit_tests):
                 ev.append(json.loads(zeile))
             except json.JSONDecodeError:
                 print(f"WARNUNG  {datei}:{nr}: kein JSON, übersprungen", file=sys.stderr)
-        if not ev:
-            continue
-        start = ev[0] if ev[0].get("ev") == "sitzung_start" else {}
-        if start.get("testmodus") and not mit_tests:
-            continue
-        sitzungen += 1
-        tid = start.get("tester") or start.get("sitzung") or datei.stem
+        # Eine Datei kann mehrere Sitzungen enthalten (Download aus dem Web-Build hängt alle an)
+        teile = []
         for e in ev:
-            e["_sitzung"] = start.get("sitzung", datei.stem)
-        tester[tid].extend(ev)
+            if e.get("ev") == "sitzung_start" or not teile:
+                teile.append([])
+            teile[-1].append(e)
+        for ev in teile:
+            start = ev[0] if ev[0].get("ev") == "sitzung_start" else {}
+            if start.get("testmodus") and not mit_tests:
+                continue
+            sitzungen += 1
+            tid = start.get("tester") or start.get("sitzung") or datei.stem
+            for e in ev:
+                e["_sitzung"] = start.get("sitzung", datei.stem)
+            tester[tid].extend(ev)
     return tester, sitzungen
 
 

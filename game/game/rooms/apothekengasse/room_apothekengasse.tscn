@@ -1,0 +1,84 @@
+[gd_scene format=3 uid="uid://tew14su7glcv"]
+
+[ext_resource type="Script" path="res://game/rooms/apothekengasse/room_apothekengasse.gd" id="1_nx8fb"]
+[ext_resource type="PackedScene" uid="uid://ckgak7ech2vf" path="res://game/rooms/apothekengasse/walkable_areas/boden/walkable_area_boden.tscn" id="2_lklt3"]
+[ext_resource type="PackedScene" uid="uid://b2ld5000p3cfk" path="res://game/rooms/apothekengasse/props/background/prop_background.tscn" id="3_1pthc"]
+[ext_resource type="Texture2D" uid="uid://cs05dsf48iimq" path="res://grafik/platzhalter/raum_apothekengasse.png" id="4_0mh64"]
+[ext_resource type="PackedScene" uid="uid://dgn6knxtuj206" path="res://game/rooms/apothekengasse/hotspots/automat/hotspot_automat.tscn" id="5_i4aaw"]
+[ext_resource type="PackedScene" uid="uid://c87dadyjtwg4o" path="res://game/rooms/apothekengasse/hotspots/kisten/hotspot_kisten.tscn" id="6_orm36"]
+[ext_resource type="PackedScene" uid="uid://c87l48455ds1b" path="res://game/rooms/apothekengasse/hotspots/tropfendes_rohr/hotspot_tropfendes_rohr.tscn" id="7_nmn8i"]
+[ext_resource type="PackedScene" uid="uid://ckmnwidadmnm5" path="res://game/rooms/apothekengasse/hotspots/wandlampe/hotspot_wandlampe.tscn" id="8_6hq8l"]
+[ext_resource type="PackedScene" uid="uid://dnd16q8uvgxkv" path="res://game/rooms/apothekengasse/hotspots/ausgang_unterstadt_strasse/hotspot_ausgang_unterstadt_strasse.tscn" id="9_let01"]
+[ext_resource type="PackedScene" uid="uid://dn760814lavqm" path="res://game/rooms/apothekengasse/markers/start/marker_start.tscn" id="10_tgu04"]
+[ext_resource type="PackedScene" uid="uid://ckklorsfxi371" path="res://game/rooms/apothekengasse/markers/von_unterstadt_strasse/marker_von_unterstadt_strasse.tscn" id="11_mtrj7"]
+[ext_resource type="PackedScene" uid="uid://deh53q5s2hiyn" path="res://game/characters/morphaeus/character_morphaeus.tscn" id="12_b5k68"]
+[ext_resource type="PackedScene" uid="uid://blg6r5dwitrph" path="res://game/characters/pastillenautomat/character_pastillenautomat.tscn" id="13_fynu3"]
+
+[node name="RoomApothekengasse" type="Node2D" unique_id=695753311]
+script = ExtResource("1_nx8fb")
+script_name = "Apothekengasse"
+width = 480
+height = 270
+
+[node name="WalkableAreas" type="Node2D" parent="." unique_id=447515517]
+
+[node name="Boden" parent="WalkableAreas" unique_id=1283010525 instance=ExtResource("2_lklt3")]
+interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(6, 210, 474, 210, 474, 267, 6, 267)])
+
+[node name="Props" type="Node2D" parent="." unique_id=124686341]
+
+[node name="Background" parent="Props" unique_id=624049158 instance=ExtResource("3_1pthc")]
+position = Vector2(240, 135)
+texture = ExtResource("4_0mh64")
+description = "UI_RAUM_APOTHEKENGASSE"
+
+[node name="Hotspots" type="Node2D" parent="." unique_id=1754417129]
+
+[node name="Automat" parent="Hotspots" unique_id=1196672189 instance=ExtResource("5_i4aaw")]
+position = Vector2(90, 54)
+description = "UI_OBJ_AUTOMAT"
+baseline = 24
+walk_to_point = Vector2(0, 181)
+
+[node name="Kisten" parent="Hotspots" unique_id=598413205 instance=ExtResource("6_orm36")]
+position = Vector2(190, 54)
+description = "UI_OBJ_KISTEN"
+baseline = 24
+walk_to_point = Vector2(0, 181)
+
+[node name="TropfendesRohr" parent="Hotspots" unique_id=547362383 instance=ExtResource("7_nmn8i")]
+position = Vector2(290, 54)
+description = "UI_OBJ_TROPFENDES_ROHR"
+baseline = 24
+walk_to_point = Vector2(0, 181)
+
+[node name="Wandlampe" parent="Hotspots" unique_id=1200600567 instance=ExtResource("8_6hq8l")]
+position = Vector2(390, 54)
+description = "UI_OBJ_WANDLAMPE"
+baseline = 24
+walk_to_point = Vector2(0, 181)
+
+[node name="AusgangUnterstadtStrasse" parent="Hotspots" unique_id=1833158551 instance=ExtResource("9_let01")]
+position = Vector2(19.5, 157.5)
+description = "UI_RAUM_UNTERSTADT_STRASSE"
+baseline = 52
+walk_to_point = Vector2(16.5, 82.5)
+cursor = 9
+
+[node name="Regions" type="Node2D" parent="." unique_id=379615949]
+
+[node name="Markers" type="Node2D" parent="." unique_id=571900429]
+
+[node name="Start" parent="Markers" unique_id=25021763 instance=ExtResource("10_tgu04")]
+position = Vector2(240, 240)
+
+[node name="VonUnterstadtStrasse" parent="Markers" unique_id=2018715955 instance=ExtResource("11_mtrj7")]
+position = Vector2(36, 240)
+
+[node name="Characters" type="Node2D" parent="." unique_id=237207175]
+
+[node name="CharacterMorphaeus *" parent="Characters" unique_id=327095610 instance=ExtResource("12_b5k68")]
+position = Vector2(150, 232)
+
+[node name="CharacterPastillenautomat *" parent="Characters" unique_id=430336523 instance=ExtResource("13_fynu3")]
+position = Vector2(330, 232)

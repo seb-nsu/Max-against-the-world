@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://c02yj8h6s0li6"]
+
+[ext_resource type="Script" path="res://game/characters/zeremonienmeister/character_zeremonienmeister.gd" id="1_tkq0n"]
+[ext_resource type="Texture2D" uid="uid://btacvkmxrf3gm" path="res://grafik/platzhalter/figur_zeremonienmeister.png" id="2_f35jx"]
+
+[node name="CharacterZeremonienmeister" type="Area2D" unique_id=494700912]
+script = ExtResource("1_tkq0n")
+walk_speed = 90.0
+dialog_pos = Vector2(0, -94)
+script_name = "Zeremonienmeister"
+description = "UI_OBJ_ZEREMONIENMEISTER"
+cursor = 8
+interaction_polygon = PackedVector2Array(-15, -90, 15, -90, 15, 0, -15, 0)
+
+[node name="ScalingPolygon" type="CollisionPolygon2D" parent="." unique_id=1622181597]
+polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1060937728]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1309729943]
+texture_filter = 1
+texture = ExtResource("2_f35jx")
+offset = Vector2(0, -45)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1010730522]
+visible = false
+polygon = PackedVector2Array(-15, -90, 15, -90, 15, 0, -15, 0)
+
+[node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=303476925]
+visible = false
+affect_navigation_mesh = true
+carve_navigation_mesh = true

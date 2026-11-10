@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://cqo7tgah1sekc"]
+
+[ext_resource type="Script" path="res://game/rooms/kuehlung/hotspots/wassereimer/hotspot_wassereimer.gd" id="1_djq5b"]
+
+[node name="Wassereimer" type="Area2D" unique_id=439926969]
+script = ExtResource("1_djq5b")
+script_name = "Wassereimer"
+description = "Wassereimer"
+cursor = 1
+interaction_polygon = PackedVector2Array(-20, -25, 20, -25, 20, 25, -20, 25)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=487681170]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

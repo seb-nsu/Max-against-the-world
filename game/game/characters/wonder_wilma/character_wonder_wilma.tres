@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://cq1jans07hdws"]
+
+[ext_resource type="Script" path="res://game/characters/wonder_wilma/character_wonder_wilma_state.gd" id="1_aotjb"]
+
+[resource]
+resource_name = "WonderWilma"
+script = ExtResource("1_aotjb")
+script_name = "WonderWilma"
+scene = "res://game/characters/wonder_wilma/character_wonder_wilma.tscn"

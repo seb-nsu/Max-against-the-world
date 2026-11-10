@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://ctptsrjgyh80t"]
+
+[ext_resource type="Script" path="res://game/inventory_items/zwiebel/inventory_item_zwiebel_state.gd" id="1_uqqwq"]
+
+[resource]
+resource_name = "Zwiebel"
+script = ExtResource("1_uqqwq")
+script_name = "Zwiebel"
+scene = "res://game/inventory_items/zwiebel/inventory_item_zwiebel.tscn"

@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://cx7jny0pyb552"]
+
+[ext_resource type="Script" path="res://game/inventory_items/rundschreiben/inventory_item_rundschreiben_state.gd" id="1_ncue8"]
+
+[resource]
+resource_name = "Rundschreiben"
+script = ExtResource("1_ncue8")
+script_name = "Rundschreiben"
+scene = "res://game/inventory_items/rundschreiben/inventory_item_rundschreiben.tscn"

@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://l3xq5m2se1s0"]
+
+[ext_resource type="Script" path="res://game/rooms/friedhof/hotspots/mond/hotspot_mond.gd" id="1_f4yge"]
+
+[node name="Mond" type="Area2D" unique_id=967159601]
+script = ExtResource("1_f4yge")
+script_name = "Mond"
+description = "Mond"
+cursor = 1
+interaction_polygon = PackedVector2Array(-29, -24, 29, -24, 29, 24, -29, 24)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=304524609]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

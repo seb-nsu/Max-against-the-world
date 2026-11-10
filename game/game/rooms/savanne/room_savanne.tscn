@@ -1,0 +1,171 @@
+[gd_scene format=3 uid="uid://bv7bsr0oka4ar"]
+
+[ext_resource type="Script" path="res://game/rooms/savanne/room_savanne.gd" id="1_kw837"]
+[ext_resource type="PackedScene" uid="uid://cly2hyfm20yut" path="res://game/rooms/savanne/walkable_areas/boden/walkable_area_boden.tscn" id="2_2nr82"]
+[ext_resource type="PackedScene" uid="uid://nt3k4us78ubw" path="res://game/rooms/savanne/props/background/prop_background.tscn" id="3_1xui2"]
+[ext_resource type="Texture2D" uid="uid://cagpjrgpwtxif" path="res://grafik/platzhalter/raum_savanne.png" id="4_bb1tp"]
+[ext_resource type="PackedScene" uid="uid://bcieyyppir78b" path="res://game/rooms/savanne/props/drehbuch/prop_drehbuch.tscn" id="5_ptwvu"]
+[ext_resource type="Texture2D" uid="uid://dnmjx1ocu0b4o" path="res://grafik/platzhalter/prop_drehbuch.png" id="6_u4g4t"]
+[ext_resource type="PackedScene" uid="uid://bb2kfc1u3iddx" path="res://game/rooms/savanne/hotspots/felsenthron/hotspot_felsenthron.tscn" id="7_ybng3"]
+[ext_resource type="PackedScene" uid="uid://cqj8sfedberp4" path="res://game/rooms/savanne/hotspots/mikrofonangel/hotspot_mikrofonangel.tscn" id="8_usl72"]
+[ext_resource type="PackedScene" uid="uid://c0gixp5yyhqwc" path="res://game/rooms/savanne/hotspots/absperrband/hotspot_absperrband.tscn" id="9_37a72"]
+[ext_resource type="PackedScene" uid="uid://u2j038a12sor" path="res://game/rooms/savanne/hotspots/wasserloch/hotspot_wasserloch.tscn" id="10_16fpt"]
+[ext_resource type="PackedScene" uid="uid://cin3dmqwobenk" path="res://game/rooms/savanne/hotspots/sonnenplatz_am_felsen/hotspot_sonnenplatz_am_felsen.tscn" id="11_w5ay1"]
+[ext_resource type="PackedScene" uid="uid://bu6b7xb8d36v0" path="res://game/rooms/savanne/hotspots/akazien/hotspot_akazien.tscn" id="12_pl3xf"]
+[ext_resource type="PackedScene" uid="uid://bc67iqpe6bk5t" path="res://game/rooms/savanne/hotspots/regenwolke/hotspot_regenwolke.tscn" id="13_58spu"]
+[ext_resource type="PackedScene" uid="uid://cjk54rjmnersx" path="res://game/rooms/savanne/hotspots/kiste/hotspot_kiste.tscn" id="14_0206q"]
+[ext_resource type="PackedScene" uid="uid://brlq0jeicf84v" path="res://game/rooms/savanne/hotspots/himmel/hotspot_himmel.tscn" id="15_eltq3"]
+[ext_resource type="PackedScene" uid="uid://dwae1tqjav835" path="res://game/rooms/savanne/hotspots/lichtroehre_in_der_savanne/hotspot_lichtroehre_in_der_savanne.tscn" id="16_0wl1n"]
+[ext_resource type="PackedScene" uid="uid://bhrch6foncge5" path="res://game/rooms/savanne/markers/start/marker_start.tscn" id="17_yppb1"]
+[ext_resource type="PackedScene" uid="uid://d0lq88qs3efkr" path="res://game/rooms/savanne/markers/von_gluecksrad/marker_von_gluecksrad.tscn" id="18_4unb2"]
+[ext_resource type="PackedScene" uid="uid://kdnd1ks10w34" path="res://game/rooms/savanne/markers/von_sitcom_kueche/marker_von_sitcom_kueche.tscn" id="19_jnmf6"]
+[ext_resource type="PackedScene" uid="uid://2jil1aualu7p" path="res://game/rooms/savanne/markers/von_friedhof/marker_von_friedhof.tscn" id="20_3aiu1"]
+[ext_resource type="PackedScene" uid="uid://bpjrf71s7eyw4" path="res://game/rooms/savanne/markers/von_kapitolis/marker_von_kapitolis.tscn" id="21_b2hbj"]
+[ext_resource type="PackedScene" uid="uid://dkr5qk0bpg0w2" path="res://game/rooms/savanne/markers/von_werbespot_set/marker_von_werbespot_set.tscn" id="22_adtsm"]
+[ext_resource type="PackedScene" uid="uid://il5yjqd5004m" path="res://game/rooms/savanne/markers/von_empfang/marker_von_empfang.tscn" id="23_acxyt"]
+[ext_resource type="PackedScene" uid="uid://rdsnjwq857j8" path="res://game/characters/kommissar/character_kommissar.tscn" id="24_ejo4q"]
+[ext_resource type="PackedScene" uid="uid://dqhj0lrrsoh75" path="res://game/characters/erzaehler/character_erzaehler.tscn" id="25_k1e2m"]
+[ext_resource type="PackedScene" uid="uid://cqhkiu4alnam0" path="res://game/characters/loewe/character_loewe.tscn" id="26_hakwu"]
+[ext_resource type="PackedScene" uid="uid://de52ol180dnhd" path="res://game/characters/hyaene/character_hyaene.tscn" id="27_3b8nw"]
+[ext_resource type="PackedScene" uid="uid://bwecswvtejcak" path="res://game/characters/gepard/character_gepard.tscn" id="28_oye8y"]
+[ext_resource type="PackedScene" uid="uid://d1xj8spavyjxu" path="res://game/characters/geier/character_geier.tscn" id="29_6g5cd"]
+[ext_resource type="PackedScene" uid="uid://cm56w14cpndjk" path="res://game/characters/nashorn/character_nashorn.tscn" id="30_v85xl"]
+[ext_resource type="PackedScene" uid="uid://cfwrf530lxy71" path="res://game/characters/flamingos/character_flamingos.tscn" id="31_5fwol"]
+
+[node name="RoomSavanne" type="Node2D" unique_id=9256560]
+script = ExtResource("1_kw837")
+script_name = "Savanne"
+width = 960
+height = 270
+
+[node name="WalkableAreas" type="Node2D" parent="." unique_id=746077398]
+
+[node name="Boden" parent="WalkableAreas" unique_id=549391092 instance=ExtResource("2_2nr82")]
+interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(6, 210, 954, 210, 954, 267, 6, 267)])
+
+[node name="Props" type="Node2D" parent="." unique_id=2102988811]
+
+[node name="Background" parent="Props" unique_id=570204321 instance=ExtResource("3_1xui2")]
+position = Vector2(480, 135)
+texture = ExtResource("4_bb1tp")
+description = "UI_RAUM_SAVANNE"
+
+[node name="Drehbuch" parent="Props" unique_id=1928669409 instance=ExtResource("5_ptwvu")]
+position = Vector2(107.5, 201)
+texture = ExtResource("6_u4g4t")
+description = "UI_OBJ_DREHBUCH"
+baseline = 6
+walk_to_point = Vector2(-0.5, 34)
+
+[node name="Hotspots" type="Node2D" parent="." unique_id=70652538]
+
+[node name="Felsenthron" parent="Hotspots" unique_id=1944876029 instance=ExtResource("7_ybng3")]
+position = Vector2(84, 54)
+description = "UI_OBJ_FELSENTHRON"
+baseline = 24
+walk_to_point = Vector2(0, 181)
+
+[node name="Mikrofonangel" parent="Hotspots" unique_id=312658071 instance=ExtResource("8_usl72")]
+position = Vector2(172, 54)
+description = "UI_OBJ_MIKROFONANGEL"
+baseline = 24
+walk_to_point = Vector2(0, 181)
+
+[node name="Absperrband" parent="Hotspots" unique_id=681639730 instance=ExtResource("9_37a72")]
+position = Vector2(260, 54)
+description = "UI_OBJ_ABSPERRBAND"
+baseline = 24
+walk_to_point = Vector2(0, 181)
+
+[node name="Wasserloch" parent="Hotspots" unique_id=376742247 instance=ExtResource("10_16fpt")]
+position = Vector2(348, 54)
+description = "UI_OBJ_WASSERLOCH"
+baseline = 24
+walk_to_point = Vector2(0, 181)
+
+[node name="SonnenplatzAmFelsen" parent="Hotspots" unique_id=2113608579 instance=ExtResource("11_w5ay1")]
+position = Vector2(436, 54)
+description = "UI_OBJ_SONNENPLATZ_AM_FELSEN"
+baseline = 24
+walk_to_point = Vector2(0, 181)
+
+[node name="Akazien" parent="Hotspots" unique_id=16909979 instance=ExtResource("12_pl3xf")]
+position = Vector2(524, 54)
+description = "UI_OBJ_AKAZIEN"
+baseline = 24
+walk_to_point = Vector2(0, 181)
+
+[node name="Regenwolke" parent="Hotspots" unique_id=1128635824 instance=ExtResource("13_58spu")]
+position = Vector2(612, 54)
+description = "UI_OBJ_REGENWOLKE"
+baseline = 24
+walk_to_point = Vector2(0, 181)
+
+[node name="Kiste" parent="Hotspots" unique_id=1911492146 instance=ExtResource("14_0206q")]
+position = Vector2(700, 54)
+description = "UI_OBJ_KISTE"
+baseline = 24
+walk_to_point = Vector2(0, 181)
+
+[node name="Himmel" parent="Hotspots" unique_id=772601611 instance=ExtResource("15_eltq3")]
+position = Vector2(788, 54)
+description = "UI_OBJ_HIMMEL"
+baseline = 24
+walk_to_point = Vector2(0, 181)
+
+[node name="LichtroehreInDerSavanne" parent="Hotspots" unique_id=1036735098 instance=ExtResource("16_0wl1n")]
+position = Vector2(876, 54)
+description = "UI_OBJ_LICHTROEHRE_IN_DER_SAVANNE"
+baseline = 24
+walk_to_point = Vector2(0, 181)
+
+[node name="Regions" type="Node2D" parent="." unique_id=1578348713]
+
+[node name="Markers" type="Node2D" parent="." unique_id=22618052]
+
+[node name="Start" parent="Markers" unique_id=88447843 instance=ExtResource("17_yppb1")]
+position = Vector2(480, 240)
+
+[node name="VonGluecksrad" parent="Markers" unique_id=1869587257 instance=ExtResource("18_4unb2")]
+position = Vector2(480, 240)
+
+[node name="VonSitcomKueche" parent="Markers" unique_id=191235019 instance=ExtResource("19_jnmf6")]
+position = Vector2(480, 240)
+
+[node name="VonFriedhof" parent="Markers" unique_id=1460990178 instance=ExtResource("20_3aiu1")]
+position = Vector2(480, 240)
+
+[node name="VonKapitolis" parent="Markers" unique_id=1291938660 instance=ExtResource("21_b2hbj")]
+position = Vector2(480, 240)
+
+[node name="VonWerbespotSet" parent="Markers" unique_id=702269301 instance=ExtResource("22_adtsm")]
+position = Vector2(480, 240)
+
+[node name="VonEmpfang" parent="Markers" unique_id=333421316 instance=ExtResource("23_acxyt")]
+position = Vector2(480, 240)
+
+[node name="Characters" type="Node2D" parent="." unique_id=1134428685]
+
+[node name="CharacterKommissar *" parent="Characters" unique_id=1799452822 instance=ExtResource("24_ejo4q")]
+position = Vector2(112, 232)
+
+[node name="CharacterErzaehler *" parent="Characters" unique_id=452605292 instance=ExtResource("25_k1e2m")]
+position = Vector2(217, 232)
+
+[node name="CharacterLoewe *" parent="Characters" unique_id=114802647 instance=ExtResource("26_hakwu")]
+position = Vector2(322, 232)
+
+[node name="CharacterHyaene *" parent="Characters" unique_id=1076889052 instance=ExtResource("27_3b8nw")]
+position = Vector2(427, 232)
+
+[node name="CharacterGepard *" parent="Characters" unique_id=1193641110 instance=ExtResource("28_oye8y")]
+position = Vector2(532, 232)
+
+[node name="CharacterGeier *" parent="Characters" unique_id=1211231314 instance=ExtResource("29_6g5cd")]
+position = Vector2(637, 232)
+
+[node name="CharacterNashorn *" parent="Characters" unique_id=1900163601 instance=ExtResource("30_v85xl")]
+position = Vector2(742, 232)
+
+[node name="CharacterFlamingos *" parent="Characters" unique_id=1245925696 instance=ExtResource("31_5fwol")]
+position = Vector2(847, 232)

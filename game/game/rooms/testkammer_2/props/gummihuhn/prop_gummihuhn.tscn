@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://ddhrw6l3dgpfj"]
+
+[ext_resource type="Script" path="res://game/rooms/testkammer_2/props/gummihuhn/prop_gummihuhn.gd" id="1_7fxd2"]
+
+[node name="Gummihuhn" type="Area2D" unique_id=1218023172]
+script = ExtResource("1_7fxd2")
+script_name = "Gummihuhn"
+description = "Gummihuhn"
+cursor = 1
+interaction_polygon = PackedVector2Array(-7.5, -6, 7.5, -6, 7.5, 6, -7.5, 6)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1291680685]
+texture_filter = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1377482493]
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=2067896128]
+visible = false
+modulate = Color(1, 1, 0, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+
+[node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=1514074907]
+visible = false
+affect_navigation_mesh = true
+carve_navigation_mesh = true

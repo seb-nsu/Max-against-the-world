@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://baavf17eskhke"]
+
+[node name="VonAgora" type="Marker2D" unique_id=745284051]
+visible = false

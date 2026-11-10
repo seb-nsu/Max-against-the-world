@@ -11,6 +11,15 @@ var state: Data = load("res://game/rooms/wohnzimmer/room_wohnzimmer.tres")
 var _intro := false
 
 
+## Geburtstagsdeko nur im Finale (skripte/finale.gd)
+func _zustand_anwenden() -> void:
+	super()
+	for sn in ["Kuchen", "Girlande", "Geschenke"]:
+		var h := get_hotspot(sn)
+		if is_instance_valid(h):
+			h.visible = Zustand.ist("FINALE")
+
+
 func _raum_betreten(erster_besuch: bool) -> void:
 	# Spielbeginn: Szene „Kein WLAN“ (skript/prolog.md, Abschnitt 1)
 	# (nicht, wenn das Hauptmenü gleich einen Spielstand lädt)

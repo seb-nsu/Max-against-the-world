@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://xb3870sw5cfr"]
+
+[ext_resource type="Script" path="res://game/characters/morphaeus/character_morphaeus_state.gd" id="1_augj0"]
+
+[resource]
+resource_name = "Morphaeus"
+script = ExtResource("1_augj0")
+script_name = "Morphaeus"
+scene = "res://game/characters/morphaeus/character_morphaeus.tscn"

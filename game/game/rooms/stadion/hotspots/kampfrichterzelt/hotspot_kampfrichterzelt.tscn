@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://bra07yuvpieqg"]
+
+[ext_resource type="Script" path="res://game/rooms/stadion/hotspots/kampfrichterzelt/hotspot_kampfrichterzelt.gd" id="1_2itve"]
+
+[node name="Kampfrichterzelt" type="Area2D" unique_id=1010759944]
+script = ExtResource("1_2itve")
+script_name = "Kampfrichterzelt"
+description = "Kampfrichterzelt"
+cursor = 1
+interaction_polygon = PackedVector2Array(-30, -24, 30, -24, 30, 24, -30, 24)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1352513982]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

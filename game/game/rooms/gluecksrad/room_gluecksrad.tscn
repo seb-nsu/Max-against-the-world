@@ -1,0 +1,136 @@
+[gd_scene format=3 uid="uid://btikajha62lfg"]
+
+[ext_resource type="Script" path="res://game/rooms/gluecksrad/room_gluecksrad.gd" id="1_mu8nd"]
+[ext_resource type="PackedScene" uid="uid://c5ywxdlowl3ic" path="res://game/rooms/gluecksrad/walkable_areas/boden/walkable_area_boden.tscn" id="2_ej54t"]
+[ext_resource type="PackedScene" uid="uid://bh1ilc2j8nrc2" path="res://game/rooms/gluecksrad/props/background/prop_background.tscn" id="3_xuyyx"]
+[ext_resource type="Texture2D" uid="uid://b8nkmmrql4dcm" path="res://grafik/platzhalter/raum_gluecksrad.png" id="4_etby8"]
+[ext_resource type="PackedScene" uid="uid://dag18xnqy4dsx" path="res://game/rooms/gluecksrad/hotspots/gluecksrad/hotspot_gluecksrad.tscn" id="5_2iyia"]
+[ext_resource type="PackedScene" uid="uid://8ifrx8mlocsf" path="res://game/rooms/gluecksrad/hotspots/moderationspult/hotspot_moderationspult.tscn" id="6_21dwc"]
+[ext_resource type="PackedScene" uid="uid://cdb6l2bknbxkr" path="res://game/rooms/gluecksrad/hotspots/gestapelte_preise/hotspot_gestapelte_preise.tscn" id="7_wdw3p"]
+[ext_resource type="PackedScene" uid="uid://bdgfjl4j8r1fa" path="res://game/rooms/gluecksrad/hotspots/telefon_leuchtschrift/hotspot_telefon_leuchtschrift.tscn" id="8_io6xv"]
+[ext_resource type="PackedScene" uid="uid://bc33ecirtw5ni" path="res://game/rooms/gluecksrad/hotspots/publikum/hotspot_publikum.tscn" id="9_cu6ro"]
+[ext_resource type="PackedScene" uid="uid://dksqllphp0s4p" path="res://game/rooms/gluecksrad/hotspots/lichtroehre/hotspot_lichtroehre.tscn" id="10_43rqd"]
+[ext_resource type="PackedScene" uid="uid://cqem1ee1aorpa" path="res://game/rooms/gluecksrad/hotspots/kandidatenpodest/hotspot_kandidatenpodest.tscn" id="11_m8ksw"]
+[ext_resource type="PackedScene" uid="uid://dhei1tx67guoj" path="res://game/rooms/gluecksrad/hotspots/gluehbirnenreihen/hotspot_gluehbirnenreihen.tscn" id="12_618ud"]
+[ext_resource type="PackedScene" uid="uid://r5f4v1ra8bu4" path="res://game/rooms/gluecksrad/hotspots/ausgang_testbild/hotspot_ausgang_testbild.tscn" id="13_ep2vt"]
+[ext_resource type="PackedScene" uid="uid://dkas4u8vgn8ea" path="res://game/rooms/gluecksrad/markers/start/marker_start.tscn" id="14_plhyj"]
+[ext_resource type="PackedScene" uid="uid://bwx51cs0niyjs" path="res://game/rooms/gluecksrad/markers/von_testbild/marker_von_testbild.tscn" id="15_5j5ui"]
+[ext_resource type="PackedScene" uid="uid://b7tsbi1gdlngy" path="res://game/rooms/gluecksrad/markers/von_sitcom_kueche/marker_von_sitcom_kueche.tscn" id="16_k1vjm"]
+[ext_resource type="PackedScene" uid="uid://erola2xvxidq" path="res://game/rooms/gluecksrad/markers/von_savanne/marker_von_savanne.tscn" id="17_ll4ad"]
+[ext_resource type="PackedScene" uid="uid://dipu7rkb3u124" path="res://game/rooms/gluecksrad/markers/von_friedhof/marker_von_friedhof.tscn" id="18_6ch2k"]
+[ext_resource type="PackedScene" uid="uid://ckelpd5yeposi" path="res://game/rooms/gluecksrad/markers/von_kapitolis/marker_von_kapitolis.tscn" id="19_sg2g4"]
+[ext_resource type="PackedScene" uid="uid://davmy4p7dqwgu" path="res://game/rooms/gluecksrad/markers/von_werbespot_set/marker_von_werbespot_set.tscn" id="20_o5c21"]
+[ext_resource type="PackedScene" uid="uid://d0wd5sybq1uyk" path="res://game/rooms/gluecksrad/markers/von_empfang/marker_von_empfang.tscn" id="21_0cy0c"]
+[ext_resource type="PackedScene" uid="uid://bir3fg4ut186l" path="res://game/characters/gerd_glueck/character_gerd_glueck.tscn" id="22_jdxur"]
+[ext_resource type="PackedScene" uid="uid://cmhuoda0c5hg7" path="res://game/characters/troedel_experte/character_troedel_experte.tscn" id="23_qiuyn"]
+
+[node name="RoomGluecksrad" type="Node2D" unique_id=664515675]
+script = ExtResource("1_mu8nd")
+script_name = "Gluecksrad"
+width = 480
+height = 270
+
+[node name="WalkableAreas" type="Node2D" parent="." unique_id=1575060498]
+
+[node name="Boden" parent="WalkableAreas" unique_id=2138176822 instance=ExtResource("2_ej54t")]
+interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(6, 210, 474, 210, 474, 267, 6, 267)])
+
+[node name="Props" type="Node2D" parent="." unique_id=1128063116]
+
+[node name="Background" parent="Props" unique_id=69838424 instance=ExtResource("3_xuyyx")]
+position = Vector2(240, 135)
+texture = ExtResource("4_etby8")
+description = "UI_RAUM_GLUECKSRAD"
+
+[node name="Hotspots" type="Node2D" parent="." unique_id=813239253]
+
+[node name="Gluecksrad" parent="Hotspots" unique_id=1298882583 instance=ExtResource("5_2iyia")]
+position = Vector2(73, 54)
+description = "UI_OBJ_GLUECKSRAD"
+baseline = 24
+walk_to_point = Vector2(0, 181)
+
+[node name="Moderationspult" parent="Hotspots" unique_id=1651528253 instance=ExtResource("6_21dwc")]
+position = Vector2(139, 54)
+description = "UI_OBJ_MODERATIONSPULT"
+baseline = 24
+walk_to_point = Vector2(0, 181)
+
+[node name="GestapeltePreise" parent="Hotspots" unique_id=638365422 instance=ExtResource("7_wdw3p")]
+position = Vector2(205, 54)
+description = "UI_OBJ_GESTAPELTE_PREISE"
+baseline = 24
+walk_to_point = Vector2(0, 181)
+
+[node name="TelefonLeuchtschrift" parent="Hotspots" unique_id=175207209 instance=ExtResource("8_io6xv")]
+position = Vector2(271, 54)
+description = "UI_OBJ_TELEFON_LEUCHTSCHRIFT"
+baseline = 24
+walk_to_point = Vector2(0, 181)
+
+[node name="Publikum" parent="Hotspots" unique_id=1528125637 instance=ExtResource("9_cu6ro")]
+position = Vector2(337, 54)
+description = "UI_OBJ_PUBLIKUM"
+baseline = 24
+walk_to_point = Vector2(0, 181)
+
+[node name="Lichtroehre" parent="Hotspots" unique_id=1151904293 instance=ExtResource("10_43rqd")]
+position = Vector2(403, 54)
+description = "UI_OBJ_LICHTROEHRE"
+baseline = 24
+walk_to_point = Vector2(0, 181)
+
+[node name="Kandidatenpodest" parent="Hotspots" unique_id=1790123191 instance=ExtResource("11_m8ksw")]
+position = Vector2(73, 114)
+description = "UI_OBJ_KANDIDATENPODEST"
+baseline = 24
+walk_to_point = Vector2(0, 121)
+
+[node name="Gluehbirnenreihen" parent="Hotspots" unique_id=249882550 instance=ExtResource("12_618ud")]
+position = Vector2(139, 114)
+description = "UI_OBJ_GLUEHBIRNENREIHEN"
+baseline = 24
+walk_to_point = Vector2(0, 121)
+
+[node name="AusgangTestbild" parent="Hotspots" unique_id=808655459 instance=ExtResource("13_ep2vt")]
+position = Vector2(19.5, 157.5)
+description = "UI_RAUM_TESTBILD"
+baseline = 52
+walk_to_point = Vector2(16.5, 82.5)
+cursor = 9
+
+[node name="Regions" type="Node2D" parent="." unique_id=1476313422]
+
+[node name="Markers" type="Node2D" parent="." unique_id=1505019067]
+
+[node name="Start" parent="Markers" unique_id=1632958935 instance=ExtResource("14_plhyj")]
+position = Vector2(240, 240)
+
+[node name="VonTestbild" parent="Markers" unique_id=402917427 instance=ExtResource("15_5j5ui")]
+position = Vector2(36, 240)
+
+[node name="VonSitcomKueche" parent="Markers" unique_id=2032475890 instance=ExtResource("16_k1vjm")]
+position = Vector2(240, 240)
+
+[node name="VonSavanne" parent="Markers" unique_id=1364484888 instance=ExtResource("17_ll4ad")]
+position = Vector2(240, 240)
+
+[node name="VonFriedhof" parent="Markers" unique_id=1010757778 instance=ExtResource("18_6ch2k")]
+position = Vector2(240, 240)
+
+[node name="VonKapitolis" parent="Markers" unique_id=249571000 instance=ExtResource("19_sg2g4")]
+position = Vector2(240, 240)
+
+[node name="VonWerbespotSet" parent="Markers" unique_id=1275076776 instance=ExtResource("20_o5c21")]
+position = Vector2(240, 240)
+
+[node name="VonEmpfang" parent="Markers" unique_id=147140533 instance=ExtResource("21_0cy0c")]
+position = Vector2(240, 240)
+
+[node name="Characters" type="Node2D" parent="." unique_id=1243994305]
+
+[node name="CharacterGerdGlueck *" parent="Characters" unique_id=1802687030 instance=ExtResource("22_jdxur")]
+position = Vector2(150, 232)
+
+[node name="CharacterTroedelExperte *" parent="Characters" unique_id=2120660997 instance=ExtResource("23_qiuyn")]
+position = Vector2(330, 232)

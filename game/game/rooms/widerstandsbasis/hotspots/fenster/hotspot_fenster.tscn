@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://coew8m8uwtoy3"]
+
+[ext_resource type="Script" path="res://game/rooms/widerstandsbasis/hotspots/fenster/hotspot_fenster.gd" id="1_m8tvg"]
+
+[node name="Fenster" type="Area2D" unique_id=849971707]
+script = ExtResource("1_m8tvg")
+script_name = "Fenster"
+description = "Fenster"
+cursor = 1
+interaction_polygon = PackedVector2Array(-27, -24, 27, -24, 27, 24, -27, 24)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=90830760]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

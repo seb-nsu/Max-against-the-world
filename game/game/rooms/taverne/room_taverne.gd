@@ -30,6 +30,9 @@ func humbert_im_keller() -> bool:
 ## Figurenwechsel wird freigeschaltet (Rätsel 1a lehrt ihn).
 func _nach_uebergang() -> void:
 	if not _erster_besuch:
+		# Spielt Max, sitzt Pixel wieder auf seinem Balken (Zuruf 1630 „Pixel auf dem Balken“)
+		if C.player == C.Max and Zustand.ist("W1_WECHSEL_FREI") and has_character("Pixel"):
+			C.Pixel.position = get_marker_position("Balken")
 		return
 	_erster_besuch = false
 	await Spiel.szene([

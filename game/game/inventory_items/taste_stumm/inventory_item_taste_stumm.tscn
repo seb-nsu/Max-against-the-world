@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://iophbewa4gf5"]
+
+[ext_resource type="Texture2D" uid="uid://cdc6vjmcyp52k" path="res://grafik/platzhalter/gegenstand_taste_stumm.png" id="1_ak2ys"]
+[ext_resource type="Script" path="res://game/inventory_items/taste_stumm/inventory_item_taste_stumm.gd" id="1_w4i2c"]
+
+[node name="ItemTasteStumm" type="TextureRect" unique_id=1242337904]
+texture_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 4
+mouse_filter = 0
+texture = ExtResource("1_ak2ys")
+stretch_mode = 5
+script = ExtResource("1_w4i2c")
+script_name = "TasteStumm"
+description = "UI_OBJ_TASTE_STUMM"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=230278876]

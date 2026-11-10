@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://dme7oh3ik287a"]
+
+[ext_resource type="Script" path="res://game/rooms/supermarkt/room_supermarkt.gd" id="1_lgnfu"]
+[ext_resource type="PackedScene" uid="uid://c2baaxfipjwn3" path="res://game/rooms/supermarkt/walkable_areas/boden/walkable_area_boden.tscn" id="2_j0h18"]
+[ext_resource type="PackedScene" uid="uid://bt6d7ywyosgex" path="res://game/rooms/supermarkt/props/background/prop_background.tscn" id="3_4608l"]
+[ext_resource type="Texture2D" uid="uid://fyymymswy1yq" path="res://grafik/platzhalter/raum_supermarkt.png" id="4_ovyxt"]
+[ext_resource type="PackedScene" uid="uid://dx4154ck377ur" path="res://game/rooms/supermarkt/hotspots/automatische_tuer/hotspot_automatische_tuer.tscn" id="5_gvpd4"]
+[ext_resource type="PackedScene" uid="uid://dpgokiy5mmvbo" path="res://game/rooms/supermarkt/hotspots/aufsteller_mit_milch_sonderangebot/hotspot_aufsteller_mit_milch_sonderangebot.tscn" id="6_cesfg"]
+[ext_resource type="PackedScene" uid="uid://b2m6b6kqnhoo8" path="res://game/rooms/supermarkt/hotspots/milchregal_durch_die_tuer/hotspot_milchregal_durch_die_tuer.tscn" id="7_6yna1"]
+[ext_resource type="PackedScene" uid="uid://bpcu38effdmf0" path="res://game/rooms/supermarkt/markers/start/marker_start.tscn" id="8_r7nda"]
+
+[node name="RoomSupermarkt" type="Node2D" unique_id=229868025]
+script = ExtResource("1_lgnfu")
+script_name = "Supermarkt"
+width = 480
+height = 270
+
+[node name="WalkableAreas" type="Node2D" parent="." unique_id=92515742]
+
+[node name="Boden" parent="WalkableAreas" unique_id=489343030 instance=ExtResource("2_j0h18")]
+interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(6, 210, 474, 210, 474, 267, 6, 267)])
+
+[node name="Props" type="Node2D" parent="." unique_id=1548693926]
+
+[node name="Background" parent="Props" unique_id=977164050 instance=ExtResource("3_4608l")]
+position = Vector2(240, 135)
+texture = ExtResource("4_ovyxt")
+description = "UI_RAUM_SUPERMARKT"
+
+[node name="Hotspots" type="Node2D" parent="." unique_id=204685808]
+
+[node name="AutomatischeTuer" parent="Hotspots" unique_id=1244446895 instance=ExtResource("5_gvpd4")]
+position = Vector2(350, 130)
+description = "UI_OBJ_AUTOMATISCHE_TUER"
+baseline = 80
+walk_to_point = Vector2(0, 105)
+
+[node name="AufstellerMitMilchSonderangebot" parent="Hotspots" unique_id=146912656 instance=ExtResource("6_cesfg")]
+position = Vector2(70, 160)
+description = "UI_OBJ_AUFSTELLER_MIT_MILCH_SONDERANGEBOT"
+baseline = 40
+walk_to_point = Vector2(0, 75)
+
+[node name="MilchregalDurchDieTuer" parent="Hotspots" unique_id=259402121 instance=ExtResource("7_6yna1")]
+position = Vector2(240, 120)
+description = "UI_OBJ_MILCHREGAL_DURCH_DIE_TUER"
+baseline = 60
+walk_to_point = Vector2(0, 115)
+
+[node name="Regions" type="Node2D" parent="." unique_id=24390593]
+
+[node name="Markers" type="Node2D" parent="." unique_id=1781375581]
+
+[node name="Start" parent="Markers" unique_id=1313819993 instance=ExtResource("8_r7nda")]
+position = Vector2(120, 240)
+
+[node name="Characters" type="Node2D" parent="." unique_id=230384806]

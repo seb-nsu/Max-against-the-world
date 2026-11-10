@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://cqvtuhmg3527a"]
+
+[ext_resource type="Script" path="res://game/inventory_items/taste_pause/inventory_item_taste_pause.gd" id="1_gh4oq"]
+[ext_resource type="Texture2D" uid="uid://632a5xp0kto8" path="res://grafik/platzhalter/gegenstand_taste_pause.png" id="1_rdt3y"]
+
+[node name="ItemTastePause" type="TextureRect" unique_id=1745676944]
+texture_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 4
+mouse_filter = 0
+texture = ExtResource("1_rdt3y")
+stretch_mode = 5
+script = ExtResource("1_gh4oq")
+script_name = "TastePause"
+description = "UI_OBJ_TASTE_PAUSE"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=68229122]

@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://brg4jm8dlkthl"]
+
+[ext_resource type="Script" path="res://game/rooms/sphinx/hotspots/notizblock/hotspot_notizblock.gd" id="1_yg2d0"]
+
+[node name="Notizblock" type="Area2D" unique_id=1676197878]
+script = ExtResource("1_yg2d0")
+script_name = "Notizblock"
+description = "Notizblock"
+cursor = 1
+interaction_polygon = PackedVector2Array(-12, -4.5, 12, -4.5, 12, 4.5, -12, 4.5)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1797190925]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

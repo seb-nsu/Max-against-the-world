@@ -53,11 +53,11 @@ UI_GELADEN,Geladen,Loaded
 UI_KEIN_SPIELSTAND,Kein Spielstand vorhanden,No saved game
 UI_SPEICHERN_GLEICH,Wird nach der Szene gespeichert,Will save after the scene
 UI_PROLOG_ENDE,Ende des Prologs. Weiter geht es in Welt 1.,End of the prologue. To be continued in World 1.
-UI_RAUM_DORFPLATZ,Dorfplatz Unterbrösel,Underbrösel village square
+UI_RAUM_DORFPLATZ,Dorfplatz Unterbrösel,Lower Crumbly village square
 UI_RAUM_TAVERNE,Taverne,Tavern
 UI_RAUM_SCHMIEDE,Schmiede,Smithy
 UI_RAUM_ZAUBERSTABLADEN,Zauberstab-Laden,Wand shop
-UI_RAUM_KLASSENZIMMER,Hoggelwarz,Hoggelwarz
+UI_RAUM_KLASSENZIMMER,Hoggelwarz,Hogwartle
 UI_RAUM_TROLLBRUECKE,Troll-Brücke,Troll bridge
 UI_RAUM_WASSERSCHLOSS,Wasserschloss,Moated castle
 UI_RAUM_ZAUBERWALD,Zauberwald,Enchanted forest
@@ -87,7 +87,7 @@ UI_OBJ_KOCHLOEFFEL_ZAUBERSTAB,Kochlöffel-Zauberstab,Spoon wand
 UI_OBJ_SOCKE,Sortierende Socke,Sorting sock
 UI_OBJ_ZIEGENFELL_VORLEGER,Ziegenfell-Vorleger,Goatskin rug
 UI_OBJ_BESTELLZETTEL,Bestellzettel,Order form
-UI_OBJ_STECKBRIEF,Moderworts Steckbrief,Moderwort's wanted poster
+UI_OBJ_STECKBRIEF,Moderworts Steckbrief,Mouldword's wanted poster
 UI_OBJ_EIMER,Eimer,Bucket
 UI_OBJ_EIMER_MIT_WASSER,Eimer mit Wasser,Bucket of water
 UI_OBJ_KRUG,Krug,Jug
@@ -95,7 +95,7 @@ UI_OBJ_EI,Ei,Egg
 UI_OBJ_TAVERNE_VON_AUSSEN,Taverne,Tavern
 UI_OBJ_SCHMIEDE_VON_AUSSEN,Schmiede,Smithy
 UI_OBJ_ZAUBERSTAB_LADEN_VON_AUSSEN,Zauberstab-Laden,Wand shop
-UI_OBJ_WEG_NACH_HOGGELWARZ,Weg nach Hoggelwarz,Path to Hoggelwarz
+UI_OBJ_WEG_NACH_HOGGELWARZ,Weg nach Hoggelwarz,Path to Hogwartle
 UI_OBJ_WALDWEG,Waldweg,Forest path
 UI_OBJ_BOHNENRANKE,Bohnenranke,Beanstalk
 UI_OBJ_LUFTSCHLOSS,Luftschloss,Castle in the air
@@ -109,7 +109,7 @@ UI_OBJ_DORFBRETT,Dorfbrett,Notice board
 UI_OBJ_DACHBALKEN,Dachbalken,Ceiling beams
 UI_OBJ_TRESEN,Tresen,Bar
 UI_OBJ_FISCHSUPPE,Fischsuppe,Fish soup
-UI_OBJ_FLASCHE_VIELSAFT_LIMO,Vielsaft-Limo,Polyjuice lemonade
+UI_OBJ_FLASCHE_VIELSAFT_LIMO,Vielsaft-Limo,Polyjuicy Lemonade
 UI_OBJ_WEINKARTE_AM_TRESEN,Weinkarte,Wine list
 UI_OBJ_FONDUE_TOPF,Fondue-Topf,Fondue pot
 UI_OBJ_KELLERTUER,Kellertür,Cellar door
@@ -207,7 +207,7 @@ UI_OBJ_LEUCHTPILZ,Leuchtpilz,Glowing mushroom
 UI_OBJ_LEUCHTTRANK,Leuchttrank,Glowing potion
 UI_OBJ_LUFTSCHLOSS_KRITZELEI,Kritzelei,Scribble
 UI_OBJ_MAKLERIN,Maklerin,Estate agent
-UI_OBJ_MODERWORT,Moderwort,Moderwort
+UI_OBJ_MODERWORT,Moderwort,Mouldword
 UI_OBJ_OKARINA,Okarina,Ocarina
 UI_OBJ_RANKENENDE,Rankenende,End of the beanstalk
 UI_OBJ_SCHLEIFEN_ROUTE,Schleifen-Route,Loop route
@@ -225,7 +225,7 @@ UI_OBJ_WENDELTREPPE,Wendeltreppe,Spiral staircase
 UI_OBJ_WOLKEN,Wolken,Clouds
 UI_OBJ_ZAUBERBOHNE,Zauberbohne,Magic bean
 UI_OBJ_ZELDINA,Zeldina,Zeldina
-UI_OBJ_ZEUGNIS,Moderworts Zeugnis,Moderwort's school report
+UI_OBJ_ZEUGNIS,Moderworts Zeugnis,Mouldword's school report
 UI_OBJ_ZICKZACK_ROUTE,Zickzack-Route,Zigzag route
 UI_ZIEL_W1_R5,Einen Wunsch beim Brunnen frei haben,Get a wish from the well
 UI_ZIEL_W1_R6A,Die Zutaten für Alwins Trank,The ingredients for Alwin's potion
@@ -235,15 +235,15 @@ UI_ZIEL_W1_R8,Die Bohne zum Wachsen bringen,Make the bean grow
 UI_ZIEL_W1_R9,Zeldina die Wohnung retten,Save Zeldina's flat
 UI_ZIEL_W1_R10,Durch das Bergwerk kommen,Get through the mine
 UI_ZIEL_W1_R10A,Den Goblins Licht und Unterschrift bringen,Bring the goblins light and a signature
-UI_ZIEL_W1_R10B,Grimmzahn einen Posten anbieten,Offer Grimmzahn a job
+UI_ZIEL_W1_R10B,Grimmzahn einen Posten anbieten,Offer Grimtooth a job
 UI_ZIEL_W1_R11A,Das Passwort der Geheimtür,The secret door's password
 UI_ZIEL_W1_R11B,Die Besen loswerden,Get rid of the brooms
 UI_ZIEL_W1_R12,Smaugi das Ei abschwatzen,Talk Smaugi out of the egg
-UI_ZIEL_W1_R13,Lord Moderwort besiegen,Defeat Lord Moderwort
+UI_ZIEL_W1_R13,Lord Moderwort besiegen,Defeat Lord Mouldword
 UI_PASSWORT_TEIL_MO,Mo,Mo
-UI_PASSWORT_TEIL_KNUDDEL,Knuddel,Knuddel
-UI_PASSWORT_TEIL_PUDDI,Puddi,Puddi
-UI_PASSWORT_TEIL_BAERCHEN,Bärchen,Bärchen
+UI_PASSWORT_TEIL_KNUDDEL,Knuddel,Cuddles
+UI_PASSWORT_TEIL_PUDDI,Puddi,Pudding
+UI_PASSWORT_TEIL_BAERCHEN,Bärchen,Teddy
 UI_TELEMETRIE_TITEL,Testversion: Darf das Spiel mitschreiben?,Test build: may the game keep a log?
 UI_TELEMETRIE_FRAGE,"Das Spiel kann ein anonymes Protokoll schreiben: welche Räume, wie lange je Rätsel, welche Hinweise, welche Klicks ins Leere. Keine Namen, nichts über dich. Die Datei bleibt auf deinem Rechner, bis du sie selbst schickst. Ändern geht jederzeit in den Einstellungen.","The game can keep an anonymous log: which rooms, how long each puzzle takes, which hints, which clicks hit nothing. No names, nothing about you. The file stays on your computer until you send it yourself. You can change this any time in the settings."
 UI_TELEMETRIE_JA,"Ja, mitschreiben","Yes, keep a log"
@@ -252,6 +252,7 @@ UI_TELEMETRIE_DANKE,Danke! Das Protokoll läuft.,Thanks! The log is running.
 UI_TELEMETRIE_AUS,Kein Protokoll. Viel Spaß!,No log. Have fun!
 UI_TELEMETRIE_SCHALTER,Telemetrie,Telemetry
 UI_TELEMETRIE_ORDNER,Telemetrie-Ordner öffnen,Open telemetry folder
+UI_TELEMETRIE_HERUNTERLADEN,Telemetrie herunterladen,Download telemetry
 UI_OBJ_FUNDKISTE,Fundkiste,Lost-and-found box
 UI_TASCHE_TITEL,Reisetasche,Travel bag
 UI_TASCHE_PFLICHT,Pflichtfach,Always packed
@@ -286,21 +287,21 @@ UI_ERR_EMPFANG,Empfang,Reception
 UI_ERR_EMPFANG_TEXT,"Den Prolog beendet, der Fernseher läuft.","Finished the prologue, the TV is on."
 UI_ERR_ZIEGENFLUESTERER,Ziegenflüsterer,Goat Whisperer
 UI_ERR_ZIEGENFLUESTERER_TEXT,Alle drei Ziegen über die Brücke gebracht.,Got all three goats across the bridge.
-UI_ERR_OHNE_PFOTE_1,"Ohne Pfote: Welt 1","No Paw: World 1"
+UI_ERR_OHNE_PFOTE_1,Ohne Pfote: Welt 1,No Paw: World 1
 UI_ERR_OHNE_PFOTE_1_TEXT,Welt 1 ohne Lösungs-Hinweis der Hilfe-Pfote geschafft.,Finished World 1 without a solution hint from the help paw.
 UI_ERR_FUENFKAMPF,Fünfkampf,Pentathlon
 UI_ERR_FUENFKAMPF_TEXT,Alle fünf Disziplinen in Welt 2 mit Bestleistung.,All five events in World 2 with a personal best.
-UI_ERR_OHNE_PFOTE_2,"Ohne Pfote: Welt 2","No Paw: World 2"
+UI_ERR_OHNE_PFOTE_2,Ohne Pfote: Welt 2,No Paw: World 2
 UI_ERR_OHNE_PFOTE_2_TEXT,Welt 2 ohne Lösungs-Hinweis der Hilfe-Pfote geschafft.,Finished World 2 without a solution hint from the help paw.
 UI_ERR_DEJA_VU,Déjà-vu,Déjà Vu
 UI_ERR_DEJA_VU_TEXT,Die Simulation in Welt 3 zum dritten Mal betreten.,Entered the simulation in World 3 for the third time.
 UI_ERR_FREUND_0815,Freund 08/15,Friend 08/15
 UI_ERR_FREUND_0815_TEXT,Modell 08/15 als Freund gewonnen.,Made a friend of Model 08/15.
-UI_ERR_OHNE_PFOTE_3,"Ohne Pfote: Welt 3","No Paw: World 3"
+UI_ERR_OHNE_PFOTE_3,Ohne Pfote: Welt 3,No Paw: World 3
 UI_ERR_OHNE_PFOTE_3_TEXT,Welt 3 ohne Lösungs-Hinweis der Hilfe-Pfote geschafft.,Finished World 3 without a solution hint from the help paw.
 UI_ERR_ZAPP_MEISTER,Zapp-Meister,Zap Master
 UI_ERR_ZAPP_MEISTER_TEXT,Alle Kanäle der Programmzeitschrift gefunden.,Found every channel in the TV guide.
-UI_ERR_OHNE_PFOTE_4,"Ohne Pfote: Welt 4","No Paw: World 4"
+UI_ERR_OHNE_PFOTE_4,Ohne Pfote: Welt 4,No Paw: World 4
 UI_ERR_OHNE_PFOTE_4_TEXT,Welt 4 ohne Lösungs-Hinweis der Hilfe-Pfote geschafft.,Finished World 4 without a solution hint from the help paw.
 UI_ERR_EINKAUFSLISTE,Einkaufsliste komplett,Shopping List Complete
 UI_ERR_EINKAUFSLISTE_TEXT,Alle Wünsche von Pixel stehen im Notizbuch.,All of Pixel's wishes are in the notebook.
@@ -344,7 +345,8 @@ UI_OPT_TEXT_WEITER,Text weiter,Advance text
 UI_OPT_PER_KLICK,per Klick,on click
 UI_OPT_AUTOMATISCH,automatisch,automatically
 UI_OPT_UNTERTITEL,Untertitel,Subtitles
-UI_OPT_BRABBEL,Brabbel-Laute (Probe),Babble voices (trial)
+UI_OPT_BRABBEL,Brabbel-Laute,Babble voices
+UI_OPT_PLATZHALTER_KLANG,Platzhalter-Töne,Placeholder sounds
 UI_OPT_GROSSE_SCHRIFT,Große Schrift,Large text
 UI_OPT_HOTSPOTS_DAUERHAFT,Hotspots immer zeigen,Always show hotspots
 UI_OPT_HOTSPOT_NAMEN,Namen zu den Hotspots zeigen,Show hotspot names
@@ -366,3 +368,555 @@ UI_TASTE_HOTSPOTS_ZEIGEN,Hotspots zeigen,Show hotspots
 UI_TASTE_PAUSE,Pausemenü,Pause menu
 UI_TASTE_SCHNELLSPEICHERN,Schnellspeichern,Quicksave
 UI_TASTE_SCHNELLLADEN,Schnellladen,Quickload
+UI_RAUM_NIL_DELTA,Nil-Delta,Nile delta
+UI_RAUM_THRONSAAL_RAMSES,Thronsaal,Throne room
+UI_RAUM_PALASTKUECHE,Palastküche,Palace kitchen
+UI_RAUM_SPHINX,Sphinx,Sphinx
+UI_RAUM_FAEHRSTEG_OLYMPIA,Fährsteg Olympia,Olympia ferry pier
+UI_RAUM_AGORA,Agora,Agora
+UI_RAUM_STARTBUERO,Startbüro,Registration office
+UI_RAUM_STADION,Stadion,Stadium
+UI_RAUM_HAFEN_SYRAKUS,Hafen Syrakus,Port of Syracuse
+UI_RAUM_WERKSTATT,Archimedes' Werkstatt,Archimedes' workshop
+UI_RAUM_GRABHUEGEL,Grabhügel Syrakus,Burial mound of Syracuse
+UI_OBJ_SANDWEG,Sandweg,Sandy path
+UI_OBJ_DUENENPFAD,Dünenpfad,Dune path
+UI_OBJ_PAPYRUSBLATT,Papyrusblatt,Papyrus sheet
+UI_OBJ_FAEHRE,Fähre,Ferry
+UI_OBJ_FAEHRTAFEL,Tafel,Sign
+UI_OBJ_SANDUHR,Sanduhr,Hourglass
+UI_OBJ_WEIZENFELD_MIT_HANDABDRUCK,Weizenfeld,Wheat field
+UI_OBJ_VERKEHRTE_PYRAMIDE,Verkehrte Pyramide,Upside-down pyramid
+UI_OBJ_BAUPLAN,Bauplan,Blueprint
+UI_OBJ_AUSGANG_NIL_DELTA,Nil-Delta,Nile delta
+UI_OBJ_TUER_ZUR_KUECHE,Tür zur Küche,Kitchen door
+UI_OBJ_PHARAONENTELLER,Pharaonenteller,Pharaoh's plate
+UI_OBJ_SCHREIBERPULT,Schreiberpult,Scribe's desk
+UI_OBJ_SARKOPHAG,Sarkophag,Sarcophagus
+UI_OBJ_MUMIFIZIERTE_KATZE,Mumifizierte Katze,Mummified cat
+UI_OBJ_WANDFRIES,Wandfries,Wall frieze
+UI_OBJ_SAEULEN,Säulen,Columns
+UI_OBJ_INSCHRIFT,Inschrift,Inscription
+UI_OBJ_OPFERSCHALE,Opferschale,Offering bowl
+UI_OBJ_AUSGANG_THRONSAAL,Thronsaal,Throne room
+UI_OBJ_BROT,Brot,Bread
+UI_OBJ_DATTELN,Datteln,Dates
+UI_OBJ_ZWIEBEL,Zwiebel,Onion
+UI_OBJ_TRAUBENSAFT,Traubensaft,Grape juice
+UI_OBJ_LEHMOEFEN,Lehmöfen,Clay ovens
+UI_OBJ_SCHNEIDETISCH,Schneidetisch,Chopping table
+UI_OBJ_OELKRUEGE,Ölkrüge,Oil jars
+UI_OBJ_LEERE_AMPHOREN,Leere Amphoren,Empty amphorae
+UI_OBJ_KNOBLAUCH_UND_KRAEUTER,Knoblauch und Kräuter,Garlic and herbs
+UI_OBJ_TRAUBENSAFT_AMPHORE,Traubensaft-Amphore,Grape juice amphora
+UI_OBJ_DAMPF,Dampf,Steam
+UI_OBJ_SCHREIBPULT,Schreibpult,Writing desk
+UI_OBJ_ZERKNUELLTE_PAPYRI,Zerknüllte Papyri,Crumpled papyri
+UI_OBJ_NOTIZBLOCK,Notizblock,Notepad
+UI_OBJ_FUSSSPUREN,Fußspuren,Footprints
+UI_OBJ_STEINKUGEL,Steinkugel,Stone ball
+UI_OBJ_NASE,Nase,Nose
+UI_OBJ_WEG_ZUR_AGORA,Weg zur Agora,Path to the agora
+UI_OBJ_OLIVENBAEUME,Olivenbäume,Olive trees
+UI_OBJ_FISCHERBOOT,Fischerboot,Fishing boat
+UI_OBJ_SANDUHR_OLYMPIA,Sanduhr,Hourglass
+UI_OBJ_TAFEL_OLYMPIA,Tafel,Sign
+UI_OBJ_WEG_ZUM_FAEHRSTEG,Weg zum Fährsteg,Path to the pier
+UI_OBJ_BOGEN_ZUM_STADION,Bogen zum Stadion,Arch to the stadium
+UI_OBJ_TUER_ZUM_STARTBUERO,Startbüro,Registration office
+UI_OBJ_SAEULENHALLE,Säulenhalle,Colonnade
+UI_OBJ_HOHE_SAEULE_MIT_ADLER,Säule mit Adler,Eagle column
+UI_OBJ_SANDALE_AUF_DER_SAEULE,Sandale,Sandal
+UI_OBJ_HEUHAUFEN,Heuhaufen,Haystack
+UI_OBJ_VENUSSTATUE,Venusstatue,Statue of Venus
+UI_OBJ_REDNERPULT,Rednerpult,Lectern
+UI_OBJ_MARKTSTAENDE,Marktstände,Market stalls
+UI_OBJ_TONNE,Tonne,Barrel
+UI_OBJ_MENGE,Menge,Crowd
+UI_OBJ_LATEIN_KRITZELEI,Latein-Kritzelei,Latin graffiti
+UI_OBJ_AUSGANG_AGORA,Agora,Agora
+UI_OBJ_LEERES_FORMULAR,Leeres Formular,Blank form
+UI_OBJ_FORMULARBERG,Formularberg,Mountain of forms
+UI_OBJ_WACHSTAFELN,Wachstafeln,Wax tablets
+UI_OBJ_AUSHANG,Aushang,Notice
+UI_OBJ_BANK_MIT_WARTENDEN,Bank,Bench
+UI_OBJ_STAUB,Staub,Dust
+UI_OBJ_LAUFBAHN,Laufbahn,Running track
+UI_OBJ_SANDGRUBE,Sandgrube,Sand pit
+UI_OBJ_KAMPFRICHTERZELT,Kampfrichterzelt,Judges' tent
+UI_OBJ_ZUSCHAUERRAENGE,Zuschauerränge,Stands
+UI_OBJ_GLOCKENTURM,Glockenturm,Bell tower
+UI_OBJ_SIEGERLISTE,Siegerliste,List of victors
+UI_OBJ_STARTLINIE,Startlinie,Starting line
+UI_OBJ_WURFHEBEL,Wurfhebel,Throwing lever
+UI_OBJ_GASSE_ZUR_WERKSTATT,Gasse zur Werkstatt,Alley to the workshop
+UI_OBJ_PFAD_ZUM_GRABHUEGEL,Pfad zum Grabhügel,Path to the burial mound
+UI_OBJ_TINTENFASS,Tintenfass,Inkwell
+UI_OBJ_MEER,Meer,Sea
+UI_OBJ_FISCHERNETZE,Fischernetze,Fishing nets
+UI_OBJ_AMPHOREN_AM_KAI,Amphoren,Amphorae
+UI_OBJ_SANDUHR_SYRAKUS,Sanduhr,Hourglass
+UI_OBJ_AUSGANG_HAFEN,Hafen,Port
+UI_OBJ_BRENNSPIEGEL,Brennspiegel,Burning mirror
+UI_OBJ_WAAGE,Waage,Scales
+UI_OBJ_MESSBECHER,Messbecher,Measuring cup
+UI_OBJ_ESSIGKRUG,Essigkrug,Vinegar jug
+UI_OBJ_BADEWANNE,Badewanne,Bathtub
+UI_OBJ_WASSERORGEL,Wasserorgel,Water organ
+UI_OBJ_BAUPLAN_DAMPFMASCHINE,Bauplan Dampfmaschine,Steam engine plan
+UI_OBJ_MODELL_SCHIEFER_TURM,Modell,Model
+UI_OBJ_SKIZZE_KUGEL_UND_ZYLINDER,Skizze,Sketch
+UI_OBJ_ZAHNRAEDER,Zahnräder,Gears
+UI_OBJ_SOCKEL,Sockel,Plinth
+UI_OBJ_BROMBEEREN,Brombeeren,Brambles
+UI_OBJ_ALTE_GRABSTEINE,Alte Grabsteine,Old gravestones
+UI_OBJ_ZYPRESSEN,Zypressen,Cypresses
+UI_OBJ_ZIKADEN,Zikaden,Cicadas
+UI_OBJ_FAEHRMANN,Fährmann,Ferryman
+UI_OBJ_SOBEK,Sobek,Sobek
+UI_OBJ_STEINMETZ,Steinmetz,Stonemason
+UI_OBJ_HERMES,Hermes,Hermes
+UI_OBJ_RAMSES,Ramses,Ramses
+UI_OBJ_HOFKATER,Hofkater,Court cat
+UI_OBJ_SCHREIBER,Schreiber,Scribe
+UI_OBJ_FAECHERWEDLER,Fächerwedler,Fan bearers
+UI_OBJ_NEBET,Nebet,Nebet
+UI_OBJ_SPHINX_FIGUR,Sphinx,Sphinx
+UI_OBJ_ARCHIMEDES,Archimedes,Archimedes
+UI_OBJ_HIERON,Hieron,Hiero
+UI_OBJ_CICERO,Cicero,Cicero
+UI_OBJ_TIRO,Tiro,Tiro
+UI_OBJ_GRIECHE,Grieche,Greek
+UI_OBJ_TOURIST,Tourist,Tourist
+UI_OBJ_TOURISTIN,Römische Touristin,Roman tourist
+UI_OBJ_PHILOSOPH,Philosoph,Philosopher
+UI_OBJ_BRIAN,Brian,Brian
+UI_OBJ_STRASSENMUSIKER,Straßenmusiker,Street musician
+UI_OBJ_BEAMTER_1,Beamter 1,Clerk 1
+UI_OBJ_BEAMTER_2,Beamter 2,Clerk 2
+UI_OBJ_LEONIDAS,Leonidas,Leonidas
+UI_OBJ_SCHILDKROETE,Schildkröte,Tortoise
+UI_OBJ_ZEREMONIENMEISTER,Zeremonienmeister,Master of ceremonies
+UI_OBJ_AEGYPTER,Ägypter,Egyptians
+UI_OBJ_HANDY,Handy,Phone
+UI_OBJ_KAUGUMMI,Kaugummi,Chewing gum
+UI_OBJ_KUGELSCHREIBER,Kugelschreiber,Ballpoint pen
+UI_OBJ_BILDTAFEL,Bildtafel,Picture tablet
+UI_OBJ_FLADEN,Fladen,Flatbread
+UI_OBJ_OLIVENOEL,Olivenöl,Olive oil
+UI_OBJ_KRONE,Krone,Crown
+UI_OBJ_GOLDBARREN,Goldbarren,Gold bar
+UI_OBJ_ENTWURF,Entwurf,Design
+UI_OBJ_GRABSTEIN,Grabstein,Gravestone
+UI_OBJ_RUNDSCHREIBEN,Rundschreiben,Circular
+UI_OBJ_EMPFEHLUNGSSCHREIBEN,Empfehlungsschreiben,Letter of recommendation
+UI_OBJ_STARTPASS,Startpass,Entry pass
+UI_OBJ_SANDALEN,Geflügelte Sandalen,Winged sandals
+UI_OBJ_SANDALE,Geflügelte Sandale,Winged sandal
+UI_OBJ_BRIANS_SCHILD,Brians Schild,Brian's sign
+UI_OBJ_FEIGENSETZLING,Feigensetzling,Fig seedling
+UI_OBJ_FEIGEN,Feigen,Figs
+UI_OBJ_SCHALLPLATTE,Schallplatte,Record
+UI_OBJ_WURFSCHEIBE,Wurfscheibe,Flying disc
+UI_OBJ_DISKUS,Diskus,Discus
+UI_OBJ_SCHRIFTROLLE,Schriftrolle,Scroll
+UI_OBJ_OLIVENKRANZ,Olivenkranz,Olive wreath
+UI_OBJ_PARADEN_PLAN,Paraden-Plan,Parade plan
+UI_OBJ_GOLDENER_SACK,Goldener Sack Pharaonenkorn,Golden sack of Pharaoh's grain
+UI_OBJ_HIEROGLYPHEN_GRAMMATIK,Hieroglyphen-Grammatik,Hieroglyph grammar
+UI_OPT_W2_BUER_HER_0650,Was hältst du von den Römern?,What do you think of the Romans?
+UI_OPT_W2_AGOR_GRI_0420,Wie haltet ihr Cicero aus?,How do you put up with Cicero?
+UI_OBJ_OPAS_PAPYRUS,Opas Papyrus,Grandpa's Papyrus
+UI_OBJ_HAUFEN,Zerbröselter Haufen,Crumbled Heap
+UI_W2_DOCH_NICHT,Doch nicht,Never mind
+UI_W2_KACHEL_MANN,Mann,Man
+UI_W2_KACHEL_KATZE,Katze,Cat
+UI_W2_KACHEL_PHARAO,Pharao,Pharaoh
+UI_W2_KACHEL_OHR,Ohr,Ear
+UI_W2_KACHEL_MUND,Mund,Mouth
+UI_W2_KACHEL_HAND,Hand,Hand
+UI_W2_KACHEL_AUGE,Auge,Eye
+UI_W2_KACHEL_KROKODIL,Krokodil,Crocodile
+UI_W2_KACHEL_SKARABAEUS,Skarabäus,Scarab
+UI_W2_KACHEL_HAUS,Haus,House
+UI_W2_KACHEL_VOGEL,Vogel,Bird
+UI_W2_KACHEL_SONNE,Sonne,Sun
+UI_W2_KACHEL_WASSER,Wasser,Water
+UI_W2_KACHEL_SCHLANGE,Schlange,Snake
+UI_W2_KACHEL_LOTUS,Lotusblume,Lotus flower
+UI_W2_KACHEL_FEDER,Feder,Feather
+UI_W2_BAUSTEIN_KLINGELT,"„Es klingelt, wenn jemand dich will“","""It rings when someone wants you"""
+UI_W2_BAUSTEIN_LEUCHTET,"„Es leuchtet im Dunkeln, aber nur kurz“","""It glows in the dark, but only briefly"""
+UI_W2_BAUSTEIN_STIRBT,„Es stirbt bei drei Prozent“,"""It dies at three percent"""
+UI_W2_BAUSTEIN_NIE_ALLE,„Es wird nie alle“,"""It never runs out"""
+UI_W2_BAUSTEIN_KLEBT,„Es klebt unter jedem Tisch“,"""It sticks under every table"""
+UI_W2_BAUSTEIN_SONNE,„Man kann daraus eine Sonne machen“,"""You can make a sun out of it"""
+UI_W2_BAUSTEIN_SCHREIBT,„Es schreibt ohne Tintenfass“,"""It writes without an inkwell"""
+UI_W2_BAUSTEIN_KLICKT,"„Es klickt, wenn man nervös ist“","""It clicks when you're nervous"""
+UI_W2_BAUSTEIN_BLAU,„Es ist blau und hat trotzdem keine Laune“,"""It is blue and still not moody"""
+UI_W2_ANKLAGEN,Du warst es!,It was you!
+UI_W2_HEBEL_ZIEHEN,Abspringen!,Launch!
+UI_W2_KORB_LEEREN,Korb ausräumen,Empty the basket
+UI_W2_FELD_1,Feld 1: Einladung,Box 1: Invitation
+UI_W2_FELD_2,Feld 2: Sonne,Box 2: Sun
+UI_W2_FELD_3,Feld 3: Volk,Box 3: Crowd
+UI_W2_FELD_4,Feld 4: Höhepunkt,Box 4: Climax
+UI_WELT_2_ENDE,Ende der Graubox. Welt 3 folgt.,End of the greybox. World 3 to follow.
+UI_W2_REDEN,Reden,Talk
+UI_WELT_3_ENDE,Ende der Graubox. Welt 4 folgt.,End of the greybox. World 4 to follow.
+UI_RAUM_UNTERSTADT_STRASSE,"Unterstadt, Straße","Undertown, street"
+UI_RAUM_APOTHEKENGASSE,Apothekengasse mit Pastillenautomat,Pharmacy alley
+UI_RAUM_WIDERSTANDSBASIS,Widerstandsbasis,Resistance base
+UI_RAUM_KUEHLUNG,Kühlung,Cooling room
+UI_RAUM_LABOREINGANG,Laboreingang,Lab entrance
+UI_RAUM_STADTSTRASSE,Stadtstraße,City street
+UI_RAUM_KUECHE_ORAKEL,Küche der Orakel-Oma,Oracle Granny's kitchen
+UI_RAUM_BUERO_50,"Büroturm, 50. Stock","Office tower, 50th floor"
+UI_RAUM_TESTKAMMER_1,Testkammer 1,Test chamber 1
+UI_RAUM_TESTKAMMER_2,Testkammer 2,Test chamber 2
+UI_RAUM_TESTKAMMER_3,Testkammer 3,Test chamber 3
+UI_RAUM_KERN,Kern von M.U.T.T.I.,Core of M.O.T.H.E.R.
+UI_OBJ_AUTO,Auto,Car
+UI_OBJ_AUTOMAT,Automat,Vending machine
+UI_OBJ_AUTOS,Autos,Cars
+UI_OBJ_BERND,Bernd,Bernd
+UI_OBJ_BLAUE_PASTILLE,Blaue Pastille,Blue lozenge
+UI_OBJ_BODENSCHALTER,Bodenschalter,Floor switch
+UI_OBJ_DAMPFGITTER,Dampfgitter,Steam grate
+UI_OBJ_DATENANSCHLUSS,Datenanschluss,Data port
+UI_OBJ_DECKENLAMPE,Deckenlampe,Ceiling lamp
+UI_OBJ_DECKERT,Deckert,Deckert
+UI_OBJ_ENDLOS_TREPPE,Endlos-Treppe,Endless staircase
+UI_OBJ_ENERGIEZELLE,Ewige Energiezelle,Eternal energy cell
+UI_OBJ_FARBCODE_AN_DER_WAND,Farbcode an der Wand,Colour code on the wall
+UI_OBJ_FARBCODE_ZETTEL,Farbcode-Zettel,Colour code note
+UI_OBJ_FLUR,Flur,Corridor
+UI_OBJ_FRAU_REGENSCHIRM,Frau mit Regenschirm,Woman with umbrella
+UI_OBJ_GABEL,Gabel,Fork
+UI_OBJ_GANG,Gang,Passage
+UI_OBJ_GARDINEN_UND_FENSTER,Gardinen und Fenster,Curtains and window
+UI_OBJ_GEHWEG,Gehweg,Pavement
+UI_OBJ_GLAESER_AUF_DEM_REGAL,Gläser auf dem Regal,Glasses on the shelf
+UI_OBJ_GROSSRECHNER,Großrechner,Mainframe
+UI_OBJ_GUMMIHUHN,Gummihuhn,Rubber chicken
+UI_OBJ_HALTERUNG,Halterung,Mount
+UI_OBJ_HANDTUCH,Handtuch,Towel
+UI_OBJ_HAUSMEISTER,Modell 08/15,Model 08/15
+UI_OBJ_HERR_VIER,Herr Vier,Mr Four
+UI_OBJ_HIMMEL,Himmel,Sky
+UI_OBJ_HIMMEL_MIT_FLIEGENDEN_AUTOS,Himmel mit fliegenden Autos,Sky with flying cars
+UI_OBJ_KABEL,Kabel,Cables
+UI_OBJ_KAFFEEPFUETZE,Kaffeepfütze,Coffee puddle
+UI_OBJ_KAFFEETASSE,Kaffeetasse,Coffee cup
+UI_OBJ_KALLE,Kalle,Kalle
+UI_OBJ_KALLES_TASSE,Kalles Tasse,Kalle's mug
+UI_OBJ_KAPSELN,Kapseln,Pods
+UI_OBJ_KARTENLESER,Kartenleser,Card reader
+UI_OBJ_KEHRBLECH,Kehrblech,Dustpan
+UI_OBJ_KISTEN,Kisten,Crates
+UI_OBJ_KLINGELNDE_TELEFONZELLE,klingelnde Telefonzelle,Ringing phone box
+UI_OBJ_KLON,Klon,Clone
+UI_OBJ_KLONE,Klone,Clones
+UI_OBJ_KRITZELEI_KAMMER_2,Kritzelei,Scribble
+UI_OBJ_KUCKUCKSUHR,Kuckucksuhr,Cuckoo clock
+UI_OBJ_LASER,Laser,Laser
+UI_OBJ_LAUTSPRECHER,Lautsprecher,Speaker
+UI_OBJ_LUEFTUNGSSCHACHT,Lüftungsschacht,Ventilation shaft
+UI_OBJ_MAX_KAPSEL,Max' Kapsel,Max's pod
+UI_OBJ_MORPHAEUS,Morphäus,Morphaeus
+UI_OBJ_MORSE_TABELLE,Morse-Tabelle,Morse table
+UI_OBJ_MUTTI,M.U.T.T.I.,M.O.T.H.E.R.
+UI_OBJ_NEON_PIZZA_PLAKAT,Neon-Pizza-Plakat,Neon pizza poster
+UI_OBJ_NUDELBUDE,Nudelbude,Noodle stand
+UI_OBJ_OFEN,Ofen,Oven
+UI_OBJ_OMAS_KEKSE,Omas Kekse,Granny's biscuits
+UI_OBJ_ORAKEL_OMA,Orakel-Oma,Oracle Granny
+UI_OBJ_ORIGAMI_EINHORN,Origami-Einhorn,Origami unicorn
+UI_OBJ_PANZERTUER,Panzertür,Armoured door
+UI_OBJ_PAPPKUCHEN,Pappkuchen,Cardboard cake
+UI_OBJ_PASTILLENAUTOMAT,Pastillenautomat,Lozenge machine
+UI_OBJ_PATCH_PANEL,Patch-Panel,Patch panel
+UI_OBJ_PFUETZEN,Pfützen,Puddles
+UI_OBJ_PIEPSI,Piepsi,Piepsi
+UI_OBJ_PINNWAND,Pinnwand,Pinboard
+UI_OBJ_PIZZAKARTONS,Pizzakartons,Pizza boxes
+UI_OBJ_PLAKAT,Plakat M.U.T.T.I.,Poster
+UI_OBJ_PLATZ_DES_HAUSMEISTERS,Platz des Hausmeisters,Caretaker's spot
+UI_OBJ_PORTALGERAET_IN_DER_HALTERUNG,Portalgerät in der Halterung,Portal device in the mount
+UI_OBJ_PORTALGERAET_STIMME,Portalgerät,Portal device
+UI_OBJ_RADIO,Radio,Radio
+UI_OBJ_REBELL,Rebell,Rebel
+UI_OBJ_REBELLEN,Rebellen,Rebels
+UI_OBJ_REBELLIN,Rebellin,Rebel woman
+UI_OBJ_REZEPTKARTE,Omas Rezeptkarte,Granny's recipe card
+UI_OBJ_ROTE_PASTILLE,Rote Pastille,Red lozenge
+UI_OBJ_SCHERBEN,Scherben,Shards
+UI_OBJ_SCHMIDT,Schmidt,Schmidt
+UI_OBJ_SCHMIDTS_AKTE,Schmidts Akte,Schmidt's file
+UI_OBJ_SCHWARZE_KATZE,Schwarze Katze,Black cat
+UI_OBJ_SONNE,Sonne,Sun
+UI_OBJ_SONNENBRILLE,Agent Schmidts Sonnenbrille,Agent Schmidt's sunglasses
+UI_OBJ_STEUERPULT,Steuerpult,Control desk
+UI_OBJ_STREIFEN,Streifen,Stripes
+UI_OBJ_STROMKASTEN,Stromkasten,Fuse box
+UI_OBJ_TAPETE,Tapete,Wallpaper
+UI_OBJ_TELEFONBUCHSEITE,Telefonbuchseite,Phone book page
+UI_OBJ_TELEFONBUCH_IN_DER_ZELLE,Telefonbuch in der Zelle,Phone book in the box
+UI_OBJ_TELEFONZELLE,Telefonzelle,Phone box
+UI_OBJ_TERMINAL,Terminal,Terminal
+UI_OBJ_TISCH_MIT_KALLES_TASSE,Tisch mit Kalles Tasse,Table with Kalle's mug
+UI_OBJ_TISCH_MIT_TELLER_UND_TEEKANNE,Tisch mit Teller und Teekanne,Table with plate and teapot
+UI_OBJ_TOPFPFLANZEN,Topfpflanzen,Potted plants
+UI_OBJ_TROPFENDES_ROHR,Tropfendes Rohr,Dripping pipe
+UI_OBJ_TUER,Die Tür,The Door
+UI_OBJ_TUEREN,Türen,Doors
+UI_OBJ_VASE,Vase,Vase
+UI_OBJ_VORDACH,Vordach,Awning
+UI_OBJ_WANDLAMPE,Wandlampe,Wall lamp
+UI_OBJ_WANDPLATTEN,Wandplatten,Wall panels
+UI_OBJ_WANDTELEFON,Wandtelefon,Wall phone
+UI_OBJ_WARNSTREIFEN,Warnstreifen,Warning stripes
+UI_OBJ_WASSERSPENDER,Wasserspender,Water cooler
+UI_OBJ_WEINENDER_MANN,Weinender Mann,Crying man
+UI_OBJ_WISCHEIMER,Wischeimer,Mop bucket
+UI_OBJ_ZUGANGSKARTE,Zugangskarte,Access card
+UI_OBJ_WASSEREIMER,Wassereimer,Water bucket
+UI_W3_TAUSCH_TUER_SCHMIDT,Tür: verschlossen ↔ Schmidt: gesprächig,Door: locked ↔ Schmidt: talkative
+UI_W3_TAUSCH_TUER_AUTO,Tür: grau ↔ Auto: rot,Door: grey ↔ Car: red
+UI_W3_TAUSCH_TUER_HAUSSCHUHE,Tür: verschlossen ↔ Schmidt: Hausschuhe,Door: locked ↔ Schmidt: slippers
+UI_W3_TAUSCH_SCHMIDT_BAUM,Schmidt: gesprächig ↔ Baum: grün,Schmidt: talkative ↔ Tree: green
+UI_W3_TAUSCH_ORIGINAL_TASSE,Schmidt: Original ↔ Kaffeetasse: Kopie,Schmidt: original ↔ Coffee cup: copy
+UI_W3_TAUSCH_ORIGINAL_KLON,Schmidt: Original ↔ Klon: Kopie,Schmidt: original ↔ Clone: copy
+UI_W3_TAUSCH_HAUSSCHUHE_TASSE,Schmidt: Hausschuhe ↔ Kaffeetasse: leer,Schmidt: slippers ↔ Coffee cup: empty
+UI_W3_TAUSCH_ORIGINAL_PFLANZE,Schmidt: Original ↔ Topfpflanze: gleich,Schmidt: original ↔ Potted plant: identical
+UI_W3_TAUSCH_BERND_MAX,Bernd: schwer ↔ Max: leicht,Bernd: heavy ↔ Max: light
+UI_W3_TAUSCH_BERND_KUCHEN,Bernd: schwer ↔ Pappkuchen: Pappe,Bernd: heavy ↔ Cardboard cake: cardboard
+UI_W3_TAUSCH_BERND_EHRLICH,Bernd: treu ↔ Max: ehrlich,Bernd: loyal ↔ Max: honest
+UI_W3_TAUSCH_SCHALTER_MUEDE,Bodenschalter: ungedrückt ↔ Max: müde,Floor switch: unpressed ↔ Max: tired
+UI_W3_TAUSCH_LASER_HUHN,Laser: tödlich ↔ Gummihuhn: harmlos,Laser: deadly ↔ Rubber chicken: harmless
+UI_W3_TAUSCH_LASER_FARBE,Laser: rot ↔ Gummihuhn: gelb,Laser: red ↔ Rubber chicken: yellow
+UI_W3_TAUSCH_LASER_SOCKEL,Laser: tödlich ↔ Sockel: fest,Laser: deadly ↔ Pedestal: solid
+UI_W3_TAUSCH_HUHN_KRITZELEI,Gummihuhn: harmlos ↔ Kritzelei: wahr,Rubber chicken: harmless ↔ Scribble: true
+UI_W3_TAUSCH_TUER_LAUTSPRECHER,Tür: verschlossen ↔ Lautsprecher: gesprächig,Door: locked ↔ Speaker: talkative
+UI_W3_TAUSCH_BERND_HUHN,Bernd: schwer ↔ Gummihuhn: leicht,Bernd: heavy ↔ Rubber chicken: light
+UI_W3_TAUSCH_TUER_BERND,Tür: verschlossen ↔ Bernd: schwer,Door: locked ↔ Bernd: heavy
+UI_W3_TAUSCH_LAUTSPRECHER_HUHN,Lautsprecher: gesprächig ↔ Gummihuhn: leicht,Speaker: talkative ↔ Rubber chicken: light
+UI_W3_TAUSCH_LAUTSPRECHER_BERND,Lautsprecher: gesprächig ↔ Bernd: schwer,Speaker: talkative ↔ Bernd: heavy
+UI_W3_TAUSCH_TUER_HUHN,Tür: verschlossen ↔ Gummihuhn: leicht,Door: locked ↔ Rubber chicken: light
+UI_W3_TAUSCH_ZELLE_KEKSE,Energiezelle: heiß ↔ Omas Kekse: kalt,Energy cell: hot ↔ Granny's biscuits: cold
+UI_W3_TAUSCH_ZELLE_MAX,Energiezelle: heiß ↔ Max: müde,Energy cell: hot ↔ Max: tired
+UI_W3_CODE_SICHT_AUS,Code-Sicht schließen,Close code sight
+UI_W3_REGEL_1,Regel 1 vorhalten,Quote rule 1
+UI_W3_REGEL_2,Regel 2 vorhalten,Quote rule 2
+UI_W3_REGEL_3,Regel 3 vorhalten,Quote rule 3
+UI_W3_ZIEL_STADT,Zurück in die Stadt,Back to the city
+UI_W3_ZIEL_LABOR,Ins Labor,Into the lab
+UI_W3_BUCHSE_ROT,Buchse Rot (Kreis),Red socket (circle)
+UI_W3_BUCHSE_GRUEN,Buchse Grün (Dreieck),Green socket (triangle)
+UI_W3_BUCHSE_GELB,Buchse Gelb (Quadrat),Yellow socket (square)
+UI_RAUM_TESTBILD,Testbild,Test card
+UI_RAUM_RAUSCHEN,Rauschen zwischen den Sendern,Static between channels
+UI_RAUM_GLUECKSRAD,Glücksrad-Studio,Wheel of fortune studio
+UI_RAUM_SITCOM_KUECHE,Sitcom-Küche,Sitcom kitchen
+UI_RAUM_SAVANNE,Savanne,Savannah
+UI_RAUM_FRIEDHOF,Musikvideo-Friedhof,Music video graveyard
+UI_RAUM_SPUKHAUS_KELLER,"Spukhaus, Keller","Haunted house, cellar"
+UI_RAUM_SPUKHAUS_HALLE,"Spukhaus, Halle","Haunted house, hall"
+UI_RAUM_KAPITOLIS,Kapitolis,Kapitolis
+UI_RAUM_FONDUE_FABRIK,Fondue-Fabrik,Fondue factory
+UI_RAUM_WERBESPOT_SET,Werbespot-Set,Commercial set
+UI_RAUM_EMPFANG,Empfang,Reception
+UI_RAUM_KELLERARCHIV,Kellerarchiv,Basement archive
+UI_RAUM_ZAPPMANNS_STUDIO,Zappmanns Studio,Zappmann's studio
+UI_OBJ_ABSPERRBAND,Absperrband,Barrier tape
+UI_OBJ_AKAZIEN,Akazien,Acacias
+UI_OBJ_APPLAUS_SCHILD,Applaus-Schild,Applause sign
+UI_OBJ_ARCHIVBAND,Archivband,Archive tape
+UI_OBJ_AUGE,Auge auf dem Stiel,Eye on a stalk
+UI_OBJ_AUTOPLAY_COUNTDOWN,Autoplay-Countdown,Autoplay countdown
+UI_OBJ_BALKEN,Balken,Bars
+UI_OBJ_BANANENSCHALE,Bananenschale,Banana peel
+UI_OBJ_BANANENSCHALE_AUF_MITTERNACHTS_TV,Bananenschale auf Mitternachts-TV,Banana peel on Midnight TV
+UI_OBJ_BANANENSCHALE_IM_COMIC_KANAL,frische Bananenschale im Comic-Kanal,Fresh banana peel on the comic channel
+UI_OBJ_BANANENSCHALE_IM_KELLER,Bananenschale im Keller,Banana peel in the cellar
+UI_OBJ_BAND_IN_DER_PRESSE,Band in der Presse,Tape in the press
+UI_OBJ_BETTLAKEN,Bettlaken,Bed sheet
+UI_OBJ_BILLIG_FERNBEDIENUNG,Billig-Fernbedienung,Cheap remote
+UI_OBJ_BOTTICHE,Bottiche,Vats
+UI_OBJ_COMIC_PANELS,Comic-Panels,Comic panels
+UI_OBJ_DISCOKUGEL,Discokugel im toten Baum,Disco ball in the dead tree
+UI_OBJ_DREHBUCH,Drehbuch des Erzählers,Narrator's script
+UI_OBJ_DREHBUCH_IN_DER_SENDERZENTRALE,Drehbuch in der Senderzentrale,Script at the broadcasting centre
+UI_OBJ_DR_WERBEPAUSE,Dr. Werbepause,Dr. Adbreak
+UI_OBJ_DURCHREICHE,Durchreiche,Serving hatch
+UI_OBJ_EINZELBILD_1,Einzelbild 1,Frame 1
+UI_OBJ_EINZELBILD_2,Einzelbild 2,Frame 2
+UI_OBJ_EINZELBILD_3,Einzelbild 3,Frame 3
+UI_OBJ_EINZELBILD_4,Einzelbild 4,Frame 4
+UI_OBJ_EMPFANGSDAME,Empfangsdame,Receptionist
+UI_OBJ_EMPFANGSTRESEN,Empfangstresen,Reception desk
+UI_OBJ_ERZAEHLER,Erzähler,Narrator
+UI_OBJ_FABRIKARBEITER,Fabrikarbeiter,Factory worker
+UI_OBJ_FBI_AGENT,FBI-Agent,FBI agent
+UI_OBJ_FELSENTHRON,Felsenthron,Rock throne
+UI_OBJ_FLAMINGOS,Flamingos,Flamingos
+UI_OBJ_FLEDERMANN,Fledermann,Fledermann
+UI_OBJ_FLIMMER,Flimmer,Flimmer
+UI_OBJ_FONDUE_KAESE,Fondue-Käse,Fondue cheese
+UI_OBJ_FONDUE_KAESE_AUF_MITTERNACHTS_TV,Fondue-Käse auf Mitternachts-TV,Fondue cheese on Midnight TV
+UI_OBJ_FONDUE_KAESE_IM_COMIC_KANAL,Fondue-Käse im Comic-Kanal,Fondue cheese on the comic channel
+UI_OBJ_GEIER,Geier,Vulture
+UI_OBJ_GEIST,Geist,Ghost
+UI_OBJ_GEISTER,Geister,Ghosts
+UI_OBJ_GEISTERBILDER_IM_RAUSCHEN,Geisterbilder im Rauschen,Ghost images in the static
+UI_OBJ_GEPARD,Gepard,Cheetah
+UI_OBJ_GERD_GLUECK,Gerd Glück,Gerd Glück
+UI_OBJ_GERUEMPEL,Gerümpel unter Laken,Junk under sheets
+UI_OBJ_GESTAPELTE_PREISE,Gestapelte Preise,Stacked prizes
+UI_OBJ_GLUECKSRAD,Glücksrad,Wheel of fortune
+UI_OBJ_GLUEHBIRNE,Glühbirne,Light bulb
+UI_OBJ_GLUEHBIRNENREIHEN,Glühbirnenreihen,Rows of bulbs
+UI_OBJ_GOLDENES_SOFA,goldenes Sofa,Golden sofa
+UI_OBJ_GOLDENE_FERNBEDIENUNG,Goldene Fernbedienung,Golden remote
+UI_OBJ_GRAEBER,Gräber,Graves
+UI_OBJ_HEBEL,Hebel,Lever
+UI_OBJ_HINTERGRUND,Hintergrund,Backdrop
+UI_OBJ_HYAENE,Hyäne,Hyena
+UI_OBJ_JUNGER_ZAPPMANN,Junger Zappmann,Young Zappmann
+UI_OBJ_KAMERA,Kamera,Camera
+UI_OBJ_KANDIDATENPODEST,Kandidatenpodest,Contestant's podium
+UI_OBJ_KAPUTTES_RADIO,Kaputtes Radio,Broken radio
+UI_OBJ_KASSETTEN,Kassetten-Sammlung,Cassette collection
+UI_OBJ_KEKSDOSE,Keksdose,Biscuit tin
+UI_OBJ_KELLERFENSTER,Kellerfenster,Cellar window
+UI_OBJ_KETTEN,Ketten,Chains
+UI_OBJ_KIOSK,Kiosk,Kiosk
+UI_OBJ_KISTE,Kiste mit Krabbeltieren,Box of creepy-crawlies
+UI_OBJ_KLAPPE,Klappe,Clapperboard
+UI_OBJ_KOMMISSAR,Kommissar,Inspector
+UI_OBJ_KRIECHWEG,Kriechweg,Crawl path
+UI_OBJ_KUECHENTUER,Küchentür,Kitchen door
+UI_OBJ_LACHKONSERVEN_MASCHINE,Lachkonserven-Maschine,Laugh track machine
+UI_OBJ_LATERNE,Laterne,Street lamp
+UI_OBJ_LAUFBAND,Laufband,Conveyor belt
+UI_OBJ_LAUFSTEG,Laufsteg,Catwalk
+UI_OBJ_LEUCHTFLIESEN,Leuchtfliesen,Light-up tiles
+UI_OBJ_LICHTERKETTE,Lichterkette,String lights
+UI_OBJ_LICHTROEHRE,Lichtröhre,Light tube
+UI_OBJ_LICHTROEHRE_DELUXE,Lichtröhre Deluxe,Light tube deluxe
+UI_OBJ_LICHTROEHRE_IM_COMIC_KANAL,Lichtröhre im Comic-Kanal,Light tube on the comic channel
+UI_OBJ_LICHTROEHRE_IN_DER_SAVANNE,Lichtröhre in der Savanne,Light tube in the savannah
+UI_OBJ_LOEWE,Löwe,Lion
+UI_OBJ_LOGO_AN_DER_WAND,Logo an der Wand,Logo on the wall
+UI_OBJ_MIKROFONANGEL,Mikrofonangel,Boom mic
+UI_OBJ_MODERATIONSPULT,Moderationspult,Host's desk
+UI_OBJ_MOND,Mond,Moon
+UI_OBJ_MONITORWAND,Monitorwand,Monitor wall
+UI_OBJ_MUELLPRESSE,Müllpresse,Trash compactor
+UI_OBJ_NACHRICHTENSPRECHER,Nachrichtensprecher,Newsreader
+UI_OBJ_NASHORN,Nashorn,Rhino
+UI_OBJ_NEBEL,Nebel,Fog
+UI_OBJ_NEBEL_IN_DER_HALLE,Nebel in der Halle,Fog in the hall
+UI_OBJ_NEONROEHRE,Neonröhre,Neon tube
+UI_OBJ_NORMALER_KAESE_IN_DER_FABRIK,normaler Käse in der Fabrik,Ordinary cheese in the factory
+UI_OBJ_PANEL_EXPLOSION,Panel Explosion,Panel: explosion
+UI_OBJ_PANEL_HELD_SPRINGT,Panel Held springt,Panel: hero jumps
+UI_OBJ_PANEL_SCHURKE_IM_KAESE,Panel Schurke im Käse,Panel: villain in the cheese
+UI_OBJ_PANEL_SCHURKE_LACHT,Panel Schurke lacht,Panel: villain laughs
+UI_OBJ_PAPPE_PUBLIKUM,Pappe-Publikum,Cardboard audience
+UI_OBJ_PLASTIKPALME,Plastikpalme,Plastic palm
+UI_OBJ_PORTRAET,Porträt,Portrait
+UI_OBJ_PRODUKTPODEST,Produktpodest,Product pedestal
+UI_OBJ_PROGRAMMZEITSCHRIFT,Programmzeitschrift,TV guide
+UI_OBJ_PUBLIKUM,Publikum,Audience
+UI_OBJ_QUOTENANZEIGE,Quotenanzeige,Ratings display
+UI_OBJ_RAUSCHEN_AM_RAND,Rauschen am Rand,Static at the edge
+UI_OBJ_REGENWOLKE,Regenwolke über dem Schlagzeug,Rain cloud over the drum kit
+UI_OBJ_REGIESTUHL,Regiestuhl,Director's chair
+UI_OBJ_ROEHRENFERNSEHER,Röhrenfernseher mit Rauschen,CRT TV with static
+UI_OBJ_SAMTKORDELN,Samtkordeln,Velvet ropes
+UI_OBJ_SCHEINWERFER,Scheinwerfer,Spotlight
+UI_OBJ_SCHERBEN_DER_KEKSDOSE,Scherben der Keksdose,Shards of the biscuit tin
+UI_OBJ_SICHERHEITSMANN,Sicherheitsmann,Security man
+UI_OBJ_SITCOM_MUTTER,Sitcom-Mutter,Sitcom mum
+UI_OBJ_SITCOM_SOHN,Sitcom-Sohn,Sitcom son
+UI_OBJ_SITCOM_VATER,Sitcom-Vater,Sitcom dad
+UI_OBJ_SKATEBOARD,Skateboard,Skateboard
+UI_OBJ_SONNENPLATZ_AM_FELSEN,Sonnenplatz am Felsen,Sunny spot on the rock
+UI_OBJ_SPLITSCREEN_ADAPTER,Splitscreen-Adapter,Split-screen adapter
+UI_OBJ_SPRECHBLASEN_SCHILDER,Sprechblasen-Schilder,Speech-bubble signs
+UI_OBJ_STUDIOLICHT_UND_SET_RAND,Studiolicht und Set-Rand,Studio lights and set edge
+UI_OBJ_SUCHSCHEINWERFER,Käse-Suchscheinwerfer am Himmel,Cheese searchlight in the sky
+UI_OBJ_SUPER_SIEGFRIED,Super-Siegfried,Super-Siegfried
+UI_OBJ_TASTE_PAUSE,Taste Pause,Pause button
+UI_OBJ_TASTE_RUECKSPULEN,Taste Rückspulen,Rewind button
+UI_OBJ_TASTE_SENDERSUCHLAUF,Taste Sendersuchlauf,Channel search button
+UI_OBJ_TASTE_STUMM,Taste Stumm,Mute button
+UI_OBJ_TASTE_UMSCHALTEN,Taste Umschalten,Channel button
+UI_OBJ_TASTE_UNTERTITEL,Taste Untertitel,Subtitles button
+UI_OBJ_TELEFON_LEUCHTSCHRIFT,Telefon-Leuchtschrift,Neon phone sign
+UI_OBJ_TESTKREIS,Testkreis,Test circle
+UI_OBJ_TROEDEL_EXPERTE,Trödel-Experte,Antiques expert
+UI_OBJ_UMHAENGE_SCHILD_NICHT_DER_FLEDERMANN,Umhänge-Schild „Nicht der Fledermann“,"Sign ""Not the Fledermann"""
+UI_OBJ_VERKETTETE_TUER,verkettete Tür,Chained door
+UI_OBJ_WAND_MIT_GOLDENEN_SCHALLPLATTEN,Wand mit goldenen Schallplatten,Wall of gold records
+UI_OBJ_WARNSCHILDER,Warnschilder,Warning signs
+UI_OBJ_WASSERLOCH,Wasserloch,Watering hole
+UI_OBJ_WASSERTURM_MIT_SPINNENNETZ,Wasserturm mit Spinnennetz,Water tower with cobweb
+UI_OBJ_WERBEPAUSE,Werbepause,Ad break
+UI_OBJ_WETTKANDIDAT,Wettkandidat,Rival contestant
+UI_OBJ_WOLKENKRATZER,Wolkenkratzer,Skyscrapers
+UI_OBJ_WONDER_WILMA,Wonder-Wilma,Wonder-Wilma
+UI_OBJ_ZAHLENFELD_MIT_CODE,Zahlenfeld mit Code,Keypad
+UI_OBJ_ZAPPMANN,Zappmann,Zappmann
+UI_OBJ_ZOMBIE,Zombie,Zombie
+UI_OBJ_ZOMBIES,Zombies,Zombies
+UI_W4_ZS_2015,"20:15 – Küchen-Sitcom, Folge 112","8:15 pm – Kitchen sitcom, episode 112"
+UI_W4_ZS_MITTERNACHT,Mitternachts-TV: Friedhofs-Funk,Midnight TV: Graveyard Funk
+UI_W4_FLIMMER_HUNGER,Gibt es hier was zu essen?,Is there anything to eat here?
+UI_W4_ZS_WERBESPOT,Dr. Werbepause präsentiert den Couch-Magnet 3000,Dr. Adbreak presents the Couch Magnet 3000
+UI_W4_ZS_TIERTORT,Tiertort Savanne,Paw and Order: Savannah
+UI_W4_ZS_GLUECKSRAD,Glücksrad-Shopping,Wheel of Fortune Shopping
+UI_W4_ZS_LEER,(leeres Feld),(empty slot)
+UI_W4_ZS_KANAL_999,Kanal 999: Senderzentrale,Channel 999: Network headquarters
+UI_W4_ANTWORT_A,Antwort A,Answer A
+UI_W4_ANTWORT_B,Antwort B,Answer B
+UI_W4_ANTWORT_C,Antwort C,Answer C
+UI_W4_BALKEN_HELL_DUNKEL,Von hell nach dunkel sortieren,Sort from light to dark
+UI_W4_BALKEN_DUNKEL_HELL,Von dunkel nach hell sortieren,Sort from dark to light
+UI_W4_BALKEN_BUNT,Nach Farben sortieren,Sort by colour
+UI_W4_TANZ_TAKT,Im Takt tanzen,Dance to the beat
+UI_W4_TANZ_GEGEN,Gegen den Takt tanzen,Dance against the beat
+UI_RAUM_SUPERMARKT,Supermarkt,Supermarket
+UI_OBJ_AUFSTELLER_MIT_MILCH_SONDERANGEBOT,Aufsteller mit Milch-Sonderangebot,Milk special offer sign
+UI_OBJ_MILCHREGAL_DURCH_DIE_TUER,Milchregal,Milk shelf
+UI_OBJ_OMA,Oma,Grandma
+UI_OBJ_MUTTER,Mutter,Mum
+UI_OBJ_MODELL_0815,Modell 08/15,Model 08/15
+UI_OBJ_KUCHEN,Kuchen,Cake
+UI_OBJ_GIRLANDE,Girlande,Garland
+UI_OBJ_GESCHENKE,Geschenke,Presents
+UI_OBJ_MASCHINE,Maschine,Machine
+UI_OBJ_OFENTUER,Ofentür,Oven door
+UI_OBJ_DRUCKMESSER,Druckmesser,Pressure gauge
+UI_OBJ_FASSUNGEN,Fassungen,Sockets
+UI_OBJ_LAMPE,Lampe,Lamp
+UI_OBJ_EMPFAENGER,Empfänger,Receiver
+UI_OBJ_AUTOMATISCHE_TUER,Automatische Tür,Automatic door
+UI_FI_KANAL_3,Kanal 3 – Schwurbelstein,Channel 3 – Waffleton
+UI_FI_KANAL_7,Kanal 7 – Antikodonien,Channel 7 – Antikodonien
+UI_FI_KANAL_42,Kanal 42 – Neo-Neustadt 2099,Channel 42 – Neo-Neustadt 2099
+UI_FI_KANAL_999,Kanal 999,Channel 999
+UI_FI_TASTE_LAUTER,Lauter,Volume up
+UI_FI_TASTE_PROGRAMM,Programm,Channel
+UI_FI_TASTE_STUMM,Stumm,Mute
+UI_FI_TASTE_ROT,Rote Taste,Red button
+UI_FI_ZELDINA_OFEN,Kannst du die Ofentür aufhebeln?,Can you pry the oven door open?
+UI_FI_ROBOTER_LUKE,Kannst du die Luke öffnen?,Can you open the hatch?
+UI_OBJ_PORTALGERAET,Portalgerät,Portal device
+UI_WELTNAME_PROLOG,Opas Dachboden,Grandpa's attic
+UI_WELTNAME_WELT_1,Schwurbelstein,Waffleton
+UI_WELTNAME_WELT_2,Antikodonien,Antikodonien
+UI_WELTNAME_WELT_3,Neo-Neustadt 2099,Neo-Neustadt 2099
+UI_WELTNAME_WELT_4,Kanal 999,Channel 999
+UI_WELTNAME_FINALE,Zwischenspiele und Finale,Interludes and finale

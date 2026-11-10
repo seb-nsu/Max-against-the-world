@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://bn5mygm4m6y4s"]
+
+[ext_resource type="Script" path="res://game/rooms/hafen_syrakus/hotspots/pfad_zum_grabhuegel/hotspot_pfad_zum_grabhuegel.gd" id="1_mrh6s"]
+
+[node name="PfadZumGrabhuegel" type="Area2D" unique_id=9377280]
+script = ExtResource("1_mrh6s")
+script_name = "PfadZumGrabhuegel"
+description = "Pfad Zum Grabhuegel"
+cursor = 1
+interaction_polygon = PackedVector2Array(-27, -30, 27, -30, 27, 30, -27, 30)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=986098628]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

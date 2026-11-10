@@ -78,6 +78,7 @@ func _audio(g: GridContainer) -> void:
 	for k in ["gesamt", "musik", "geraeusche", "stimmen"]:
 		_regler(g, "UI_OPT_" + k.to_upper(), k)
 	_schalter(g, "UI_OPT_STUMM_HINTERGRUND", "stumm_im_hintergrund")
+	_schalter(g, "UI_OPT_PLATZHALTER_KLANG", "platzhalter_klang")
 
 
 func _anzeige(g: GridContainer) -> void:
@@ -112,10 +113,10 @@ func _steuerung(g: GridContainer) -> void:
 	g.add_child(S.label(tr("UI_OPT_MAUS_GEHT_IMMER"), 8, S.GRAU))
 	# Controller-Belegung als Fließtext unter der Tabelle (der Reiter rollt nicht)
 	var pad := S.label(tr("UI_OPT_CONTROLLER") + "  " + "  ·  ".join(PackedStringArray(
-		CONTROLLER.map(func(z): return "%s %s" % [z[0], tr(z[1])]))), 8, S.GRAU)
+		CONTROLLER.map(func(z): return "%s %s" % [z[0], tr(z[1])]))), 7, S.GRAU)
 	pad.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	pad.custom_minimum_size = Vector2(400, 0)
-	pad.position = Vector2(0, 4)
+	pad.position = Vector2(0, 0)  # klein und ohne Abstand: zwei Zeilen passen auch auf Englisch über die Knöpfe
 	var halter := Control.new()
 	halter.custom_minimum_size = Vector2(0, 40)
 	halter.add_child(pad)

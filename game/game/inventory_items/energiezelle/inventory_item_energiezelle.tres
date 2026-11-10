@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://cjafudvobqtoe"]
+
+[ext_resource type="Script" path="res://game/inventory_items/energiezelle/inventory_item_energiezelle_state.gd" id="1_84k4y"]
+
+[resource]
+resource_name = "Energiezelle"
+script = ExtResource("1_84k4y")
+script_name = "Energiezelle"
+scene = "res://game/inventory_items/energiezelle/inventory_item_energiezelle.tscn"

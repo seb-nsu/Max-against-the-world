@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://djs4qlhrd2d2b"]
+
+[ext_resource type="Script" path="res://game/rooms/stadion/hotspots/sandgrube/hotspot_sandgrube.gd" id="1_8l4kc"]
+
+[node name="Sandgrube" type="Area2D" unique_id=1618560048]
+script = ExtResource("1_8l4kc")
+script_name = "Sandgrube"
+description = "Sandgrube"
+cursor = 1
+interaction_polygon = PackedVector2Array(-45, -12, 45, -12, 45, 12, -45, 12)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=756743643]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

@@ -1,0 +1,137 @@
+[gd_scene format=3 uid="uid://d1fi3mvags162"]
+
+[ext_resource type="Script" path="res://game/rooms/palastkueche/room_palastkueche.gd" id="1_jf24h"]
+[ext_resource type="PackedScene" uid="uid://b8vbcvccib4r2" path="res://game/rooms/palastkueche/walkable_areas/boden/walkable_area_boden.tscn" id="2_jyw5k"]
+[ext_resource type="PackedScene" uid="uid://byo6hnhhjjo3q" path="res://game/rooms/palastkueche/props/background/prop_background.tscn" id="3_6m36i"]
+[ext_resource type="Texture2D" uid="uid://bofe3jvph5dpn" path="res://grafik/platzhalter/raum_palastkueche.png" id="4_e52xd"]
+[ext_resource type="PackedScene" uid="uid://dn06esnhx6puf" path="res://game/rooms/palastkueche/props/brot/prop_brot.tscn" id="5_fx6sy"]
+[ext_resource type="Texture2D" uid="uid://dvcy16l75ygb3" path="res://grafik/platzhalter/prop_brot.png" id="6_wfjqw"]
+[ext_resource type="PackedScene" uid="uid://g5mopecqeiuo" path="res://game/rooms/palastkueche/props/datteln/prop_datteln.tscn" id="7_fakaf"]
+[ext_resource type="Texture2D" uid="uid://bscs7sgegv03l" path="res://grafik/platzhalter/prop_datteln.png" id="8_v3ihe"]
+[ext_resource type="PackedScene" uid="uid://jnfhl4dumvpi" path="res://game/rooms/palastkueche/props/zwiebel/prop_zwiebel.tscn" id="9_yg6n2"]
+[ext_resource type="Texture2D" uid="uid://dr6fdsplpgyq6" path="res://grafik/platzhalter/prop_zwiebel.png" id="10_5tsgx"]
+[ext_resource type="PackedScene" uid="uid://cwxoajjp3p7mi" path="res://game/rooms/palastkueche/props/traubensaft/prop_traubensaft.tscn" id="11_wfgf2"]
+[ext_resource type="Texture2D" uid="uid://drlw40tlhrxwd" path="res://grafik/platzhalter/prop_traubensaft.png" id="12_oruhb"]
+[ext_resource type="PackedScene" uid="uid://33e28op46tdk" path="res://game/rooms/palastkueche/hotspots/lehmoefen/hotspot_lehmoefen.tscn" id="13_nf6vp"]
+[ext_resource type="PackedScene" uid="uid://c6d5w7cxbmy8q" path="res://game/rooms/palastkueche/hotspots/schneidetisch/hotspot_schneidetisch.tscn" id="14_c6osl"]
+[ext_resource type="PackedScene" uid="uid://buedn7hnm0glj" path="res://game/rooms/palastkueche/hotspots/oelkruege/hotspot_oelkruege.tscn" id="15_uxp8y"]
+[ext_resource type="PackedScene" uid="uid://cco7asq6yeols" path="res://game/rooms/palastkueche/hotspots/leere_amphoren/hotspot_leere_amphoren.tscn" id="16_gsno8"]
+[ext_resource type="PackedScene" uid="uid://cjh6aw2jyqtdc" path="res://game/rooms/palastkueche/hotspots/knoblauch_und_kraeuter/hotspot_knoblauch_und_kraeuter.tscn" id="17_4by7y"]
+[ext_resource type="PackedScene" uid="uid://cotp4ne0veu5m" path="res://game/rooms/palastkueche/hotspots/traubensaft_amphore/hotspot_traubensaft_amphore.tscn" id="18_2u5gr"]
+[ext_resource type="PackedScene" uid="uid://b2j4hm44lwisf" path="res://game/rooms/palastkueche/hotspots/dampf/hotspot_dampf.tscn" id="19_idmat"]
+[ext_resource type="PackedScene" uid="uid://u107f51r5eq6" path="res://game/rooms/palastkueche/hotspots/ausgang_thronsaal/hotspot_ausgang_thronsaal.tscn" id="20_v0sp3"]
+[ext_resource type="PackedScene" uid="uid://bbfa0hsq0cm82" path="res://game/rooms/palastkueche/markers/start/marker_start.tscn" id="21_5aot7"]
+[ext_resource type="PackedScene" uid="uid://b013yc3mdpjy0" path="res://game/rooms/palastkueche/markers/von_thronsaal_ramses/marker_von_thronsaal_ramses.tscn" id="22_eeeou"]
+[ext_resource type="PackedScene" uid="uid://dkdu25bcfwlk1" path="res://game/characters/nebet/character_nebet.tscn" id="23_i64q0"]
+
+[node name="RoomPalastkueche" type="Node2D" unique_id=1629270286]
+script = ExtResource("1_jf24h")
+script_name = "Palastkueche"
+width = 480
+height = 270
+
+[node name="WalkableAreas" type="Node2D" parent="." unique_id=2030253347]
+
+[node name="Boden" parent="WalkableAreas" unique_id=479200405 instance=ExtResource("2_jyw5k")]
+interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(6, 210, 474, 210, 474, 267, 6, 267)])
+
+[node name="Props" type="Node2D" parent="." unique_id=787523762]
+
+[node name="Background" parent="Props" unique_id=1754625551 instance=ExtResource("3_6m36i")]
+position = Vector2(240, 135)
+texture = ExtResource("4_e52xd")
+description = "UI_RAUM_PALASTKUECHE"
+
+[node name="Brot" parent="Props" unique_id=1151775597 instance=ExtResource("5_fx6sy")]
+position = Vector2(180, 163.5)
+texture = ExtResource("6_wfjqw")
+description = "UI_OBJ_BROT"
+baseline = 4
+walk_to_point = Vector2(0, 70.5)
+
+[node name="Datteln" parent="Props" unique_id=1403334936 instance=ExtResource("7_fakaf")]
+position = Vector2(202.5, 163.5)
+texture = ExtResource("8_v3ihe")
+description = "UI_OBJ_DATTELN"
+baseline = 4
+walk_to_point = Vector2(1.5, 70.5)
+
+[node name="Zwiebel" parent="Props" unique_id=1856452769 instance=ExtResource("9_yg6n2")]
+position = Vector2(222, 163.5)
+texture = ExtResource("10_5tsgx")
+description = "UI_OBJ_ZWIEBEL"
+baseline = 4
+walk_to_point = Vector2(0, 70.5)
+
+[node name="Traubensaft" parent="Props" unique_id=320117237 instance=ExtResource("11_wfgf2")]
+position = Vector2(427.5, 201)
+texture = ExtResource("12_oruhb")
+description = "UI_OBJ_TRAUBENSAFT"
+baseline = 9
+walk_to_point = Vector2(1.5, 33)
+
+[node name="Hotspots" type="Node2D" parent="." unique_id=1094012216]
+
+[node name="Lehmoefen" parent="Hotspots" unique_id=1894357115 instance=ExtResource("13_nf6vp")]
+position = Vector2(102, 172.5)
+description = "UI_OBJ_LEHMOEFEN"
+baseline = 37
+walk_to_point = Vector2(0, 61.5)
+
+[node name="Schneidetisch" parent="Hotspots" unique_id=1116231173 instance=ExtResource("14_c6osl")]
+position = Vector2(202.5, 189)
+description = "UI_OBJ_SCHNEIDETISCH"
+baseline = 21
+walk_to_point = Vector2(1.5, 45)
+
+[node name="Oelkruege" parent="Hotspots" unique_id=347719119 instance=ExtResource("15_uxp8y")]
+position = Vector2(312, 175.5)
+description = "UI_OBJ_OELKRUEGE"
+baseline = 34
+walk_to_point = Vector2(0, 58.5)
+
+[node name="LeereAmphoren" parent="Hotspots" unique_id=9069718 instance=ExtResource("16_gsno8")]
+position = Vector2(378, 184.5)
+description = "UI_OBJ_LEERE_AMPHOREN"
+baseline = 25
+walk_to_point = Vector2(0, 49.5)
+
+[node name="KnoblauchUndKraeuter" parent="Hotspots" unique_id=564214554 instance=ExtResource("17_4by7y")]
+position = Vector2(180, 30)
+description = "UI_OBJ_KNOBLAUCH_UND_KRAEUTER"
+baseline = 15
+walk_to_point = Vector2(0, 204)
+
+[node name="TraubensaftAmphore" parent="Hotspots" unique_id=136018638 instance=ExtResource("18_2u5gr")]
+position = Vector2(429, 180)
+description = "UI_OBJ_TRAUBENSAFT_AMPHORE"
+baseline = 30
+walk_to_point = Vector2(0, 54)
+
+[node name="Dampf" parent="Hotspots" unique_id=392909080 instance=ExtResource("19_idmat")]
+position = Vector2(102, 102)
+description = "UI_OBJ_DAMPF"
+baseline = 27
+walk_to_point = Vector2(0, 132)
+
+[node name="AusgangThronsaal" parent="Hotspots" unique_id=1998239055 instance=ExtResource("20_v0sp3")]
+position = Vector2(16.5, 157.5)
+description = "UI_OBJ_AUSGANG_THRONSAAL"
+baseline = 52
+walk_to_point = Vector2(1.5, 82.5)
+cursor = 9
+
+[node name="Regions" type="Node2D" parent="." unique_id=157496026]
+
+[node name="Markers" type="Node2D" parent="." unique_id=1807884672]
+
+[node name="Start" parent="Markers" unique_id=1820821496 instance=ExtResource("21_5aot7")]
+position = Vector2(36, 240)
+
+[node name="VonThronsaalRamses" parent="Markers" unique_id=493242966 instance=ExtResource("22_eeeou")]
+position = Vector2(36, 240)
+
+[node name="Characters" type="Node2D" parent="." unique_id=1047825863]
+
+[node name="CharacterNebet *" parent="Characters" unique_id=1952576644 instance=ExtResource("23_i64q0")]
+position = Vector2(240, 234)

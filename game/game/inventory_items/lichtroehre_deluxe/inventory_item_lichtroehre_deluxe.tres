@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://dck70cwktyipl"]
+
+[ext_resource type="Script" path="res://game/inventory_items/lichtroehre_deluxe/inventory_item_lichtroehre_deluxe_state.gd" id="1_dn16c"]
+
+[resource]
+resource_name = "LichtroehreDeluxe"
+script = ExtResource("1_dn16c")
+script_name = "LichtroehreDeluxe"
+scene = "res://game/inventory_items/lichtroehre_deluxe/inventory_item_lichtroehre_deluxe.tscn"

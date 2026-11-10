@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://bal4h5o8esqil"]
+
+[ext_resource type="Script" path="res://game/rooms/testkammer_2/hotspots/ausgang_testkammer_1/hotspot_ausgang_testkammer_1.gd" id="1_hfnga"]
+
+[node name="AusgangTestkammer1" type="Area2D" unique_id=1457831466]
+script = ExtResource("1_hfnga")
+script_name = "AusgangTestkammer1"
+description = "Ausgang Testkammer 1"
+cursor = 1
+interaction_polygon = PackedVector2Array(-13.5, -52.5, 13.5, -52.5, 13.5, 52.5, -13.5, 52.5)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=639588269]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

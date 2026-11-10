@@ -75,12 +75,16 @@ Reden mit Opa und Pixel auf dem Dachboden. Max stellt die Frage, die Antwort fol
 | --- | --- | --- | --- |
 | P0\_DACH\_MAX\_1310 | Max | Was genau ist der Zapp-O-Mat? | Option Opa |
 | P0\_DACH\_OPA\_1320 | Opa | Ein Fernseher, der nicht zeigt, sondern hinschickt. Zurück holt dich der Werbeblock. Frag nicht, warum. | stolz, dann unsicher |
+| P0\_DACH\_MAX\_1450 | Max | Und wenn der Werbeblock nicht kommt? |  |
+| P0\_DACH\_OPA\_1460 | Opa | Werbung kommt immer. Das ist das Einzige, auf das man sich im Fernsehen verlassen kann. |  |
 | P0\_DACH\_MAX\_1322 | Max | Wie krieg ich Pixel vom Kabel? | Option Opa (bleibt); nur vor P1 (Hinweise zu P1 laut Spielsysteme, Wer hilft wann) |
 | P0\_DACH\_OPA\_1324 | Opa | Mit Argumenten. Er versteht genau eins, und das liegt in meiner Werkzeugkiste. // Zwischen Schraubenzieher und Draht. | Hinweis P1, Stufe 1 (Thunfischdose); Kaskade |
 | P0\_DACH\_OPA\_1326 | Opa | Und die Dose ist zu. Da hilft kein Reden. Da hilft Kurbeln. | Hinweis P1, Stufe 2 (Dosenöffner); ersetzt 1324 beim nächsten Klick auf die Option, frühestens 30 Sekunden nach 1324 |
 | P0\_DACH\_OPA\_1328 | Opa | Mach die Thunfischdose mit dem Dosenöffner auf. Dann ist er sofort da. | Hinweis P1, Stufe 3; ersetzt 1326 beim nächsten Klick auf die Option, frühestens 60 Sekunden nach 1326; vorher wiederholt Opa die letzte Stufe |
 | P0\_DACH\_MAX\_1330 | Max | Warum ich? | Option Opa |
 | P0\_DACH\_OPA\_1340 | Opa | Weil du der Einzige bist, der gerade nichts zu tun hat. Und weil ich dir vertraue. In der Reihenfolge. | zwinkert |
+| P0\_DACH\_MAX\_1470 | Max | Danke. Glaube ich. |  |
+| P0\_DACH\_OPA\_1480 | Opa | Gern. Und jetzt guck nicht so. Wer nichts zu tun hat, hat die beste Voraussetzung fürs Weltenretten. |  |
 | P0\_DACH\_MAX\_1350 | Max | Was ist drüben gefährlich? | Option Opa (bleibt) |
 | P0\_DACH\_OPA\_1360 | Opa | Alles, was du anfasst, ohne es vorher anzusehen. Ansehen ist umsonst. | Hinweis auf den Rechtsklick |
 | P0\_DACH\_MAX\_1362 | Max | Opa, was ist mit dem roten Kreis? | Option Opa (bleibt); nach der Nahansicht Kalender, nur vor P3 |
@@ -92,6 +96,8 @@ Reden mit Opa und Pixel auf dem Dachboden. Max stellt die Frage, die Antwort fol
 | P0\_DACH\_PIX\_1400 | Pixel | Ich komme nirgendwo mit. Ich werde mitgenommen. // Das ist ein Unterschied in Würde. | Kaskade |
 | P0\_DACH\_MAX\_1410 | Max | Was weißt du über Opas Erfindungen? | Option Pixel (bleibt); nach P1 |
 | P0\_DACH\_PIX\_1420 | Pixel | Alle wärmen gut. Keine funktioniert. Eine fliegt. | Hinweis auf den Toaster |
+| P0\_DACH\_MAX\_1490 | Max | Welche fliegt? |  |
+| P0\_DACH\_PIX\_1500 | Pixel | Der Toaster. Er steht da drüben und tut harmlos. Glaub ihm kein Wort. |  |
 | P0\_DACH\_MAX\_1430 | Max | Schlaf weiter. | Option Pixel, beendet das Gespräch |
 | P0\_DACH\_PIX\_1440 | Pixel | Endlich ein vernünftiger Vorschlag. | rollt sich ein |
 

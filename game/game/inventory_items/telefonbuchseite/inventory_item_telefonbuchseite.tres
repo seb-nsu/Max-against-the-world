@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://dqvtai6en0tow"]
+
+[ext_resource type="Script" path="res://game/inventory_items/telefonbuchseite/inventory_item_telefonbuchseite_state.gd" id="1_1mvkh"]
+
+[resource]
+resource_name = "Telefonbuchseite"
+script = ExtResource("1_1mvkh")
+script_name = "Telefonbuchseite"
+scene = "res://game/inventory_items/telefonbuchseite/inventory_item_telefonbuchseite.tscn"

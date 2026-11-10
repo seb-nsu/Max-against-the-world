@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://cs7u4xb30eklt"]
+
+[ext_resource type="Script" path="res://game/rooms/buero_50/hotspots/tueren/hotspot_tueren.gd" id="1_3tqeq"]
+
+[node name="Tueren" type="Area2D" unique_id=881020609]
+script = ExtResource("1_3tqeq")
+script_name = "Tueren"
+description = "Tueren"
+cursor = 1
+interaction_polygon = PackedVector2Array(-29, -24, 29, -24, 29, 24, -29, 24)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=374350015]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

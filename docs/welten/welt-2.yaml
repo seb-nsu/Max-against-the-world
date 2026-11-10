@@ -12,16 +12,45 @@ werte:
   W2_FAEHRE_STEG: [nil_delta, faehrsteg_olympia, hafen_syrakus]   # Startwert nil_delta
   W2_FEIGE_ZUSTAND: [setzling, feigenbaum, feigenkern]           # jede Fahrt flussabwärts: Baum, flussaufwärts: Kern
 
+# Schalter und Werte der Rätsellogik (game/skripte/welt_2.gd), die keinem Rätselschritt gehören
+weitere_schalter:
+  - W2_WECHSEL_FREI          # Figurenwechsel frei (Ankunft im Nil-Delta)
+  - W2_FAHRTEN               # Wert: Zahl der Fährfahrten (Opas Papyrus nach der ersten)
+  - W2_SOBEK_FOLGT           # Sobek kriecht Pixel hinterher (Gefolge im Götter-Duell), bis 2b
+  - W2_DUELL                 # Götter-Duell angenommen (DUEL 0080)
+  - W2_DUELL_OPFER           # Opfergabe gezählt (Thunfischdose)
+  - W2_DUELL_GEFOLGE         # Gefolge gezählt (Sobek)
+  - W2_DUELL_WUNDER          # Wunder gezählt (Kaugummi-Sonne oder Brennspiegel)
+  - W2_AUDIENZ               # Audienz bei Ramses gespielt (2a und 2b gelöst)
+  - W2_HERMES_IM_BUERO       # Hermes steht im Startbüro (nach dem ersten Beamten-Gespräch)
+  - W2_RUNDSCHREIBEN         # Wert: mit Kugelschreiber, mit Tinte oder gefunden (3a)
+  - W2_FLADEN                # Wert: Stufe des Fladens (mit Datteln, roh, mit Kruste)
+  - W2_SANDALEN_GEOELT       # Olivenöl auf den Sandalen (Lauf an Tag 1, Öl angebrochen)
+  - W2_KRONE_AUF_WAAGE       # Krone liegt auf der Waage (KRON 0040)
+  - W2_GETAUCHT              # Wert: zuletzt in die Wanne getaucht (krone, goldbarren)
+  - W2_KRONE_GEMESSEN        # Krone: zwei Striche
+  - W2_BARREN_GEMESSEN       # Barren: ein Strich
+  - W2_TAG1_LAEUFT           # Wettkampftag 1 läuft (Hebel-Minispiel)
+  - W2_LAUF_GEOELT           # Lauf mit geölten Sandalen (Bestleistung, gesetzt nach R12)
+  - W2_KORB                  # Wert: Gegenstände im Korb des Wurfhebels
+  - W2_HEBEL_FEHLER          # Wert: Fehlversuche am Hebel (großzügige Wertung ab 2)
+  - W2_DISKUS_ERSATZ         # Rätsel 7 mit Ersatz gelöst (DISK 0340)
+  - W2_BAUSTEINE             # Wert: gefundene Rätsel-Bausteine der Sphinx
+  - W2_KONTER                # Wert: gesammelte Konter 1 bis 7
+  - W2_CICERO_FORDERUNG      # Cicero hat das Grab verlangt (AGOR 0260)
+  - W2_WUNDERDINGE_BEHALTEN  # Handy, Kaugummi und Kugelschreiber bis zur Parade behalten
+  - W2_GESCHAFFT             # Welt 2 abgeschlossen (PARA 0360)
+
 raeume:
   - id: nil_delta
     name: Nil-Delta mit Fährsteg
     skript_code: [NIL]
     groesse: 480x270
-    ausgaenge: [thronsaal, sphinx, faehrsteg_olympia, hafen_syrakus]   # zwei Fußwege, Fähre (Flusskarte) zu beiden Anlegestellen
+    ausgaenge: [thronsaal_ramses, sphinx, faehrsteg_olympia, hafen_syrakus]   # zwei Fußwege, Fähre (Flusskarte) zu beiden Anlegestellen
     erreichbar_ab: start
     musik: w2_aegypten
     # Anlegestelle Ägypten: Grabstein 0 Jahre (frisch), Krug aus dem Palast Traubensaft, Essigkrug Traubensaft
-  - id: thronsaal
+  - id: thronsaal_ramses
     name: Thronsaal
     skript_code: [THRO, HIER, DUEL, AUDI]
     groesse: 480x270
@@ -32,7 +61,7 @@ raeume:
     name: Palastküche
     skript_code: [KUCH]
     groesse: 480x270
-    ausgaenge: [thronsaal]
+    ausgaenge: [thronsaal_ramses]
     erreichbar_ab: start
     musik: w2_aegypten
   - id: sphinx
@@ -102,13 +131,13 @@ figuren:
   - id: max
     name: Max
     kuerzel: MAX
-    raum: [nil_delta, thronsaal, palastkueche, sphinx, faehrsteg_olympia, agora, startbuero, stadion, hafen_syrakus, werkstatt, grabhuegel]
+    raum: [nil_delta, thronsaal_ramses, palastkueche, sphinx, faehrsteg_olympia, agora, startbuero, stadion, hafen_syrakus, werkstatt, grabhuegel]
     groesse_px: 84
     spielbar: true
   - id: pixel
     name: Pixel
     kuerzel: PIX
-    raum: [nil_delta, thronsaal, palastkueche, sphinx, faehrsteg_olympia, agora, startbuero, stadion, hafen_syrakus, werkstatt, grabhuegel]
+    raum: [nil_delta, thronsaal_ramses, palastkueche, sphinx, faehrsteg_olympia, agora, startbuero, stadion, hafen_syrakus, werkstatt, grabhuegel]
     groesse_px: 27
     spielbar: true
   - id: opa
@@ -126,7 +155,7 @@ figuren:
   - id: sobek
     name: Sobek
     kuerzel: SOB
-    raum: [nil_delta, thronsaal]
+    raum: [nil_delta, thronsaal_ramses]
     groesse_px: 24                             # im Wasser 16 px hoch; an Land 70 px lang
     spielbar: false
   - id: steinmetz
@@ -144,25 +173,25 @@ figuren:
   - id: ramses
     name: Ramses
     kuerzel: RAM
-    raum: [thronsaal, stadion]                 # im Stadion nur an den Wettkampftagen und zur Parade
+    raum: [thronsaal_ramses, stadion]                 # im Stadion nur an den Wettkampftagen und zur Parade
     groesse_px: 90
     spielbar: false
   - id: hofkater
     name: Hofkater
     kuerzel: HOF
-    raum: [thronsaal]
+    raum: [thronsaal_ramses]
     groesse_px: 30
     spielbar: false
   - id: schreiber
     name: Schreiber
     kuerzel: SCH
-    raum: [thronsaal]
+    raum: [thronsaal_ramses]
     groesse_px: 54                             # sitzend
     spielbar: false
   - id: faecherwedler
     name: Fächerwedler
     kuerzel: FAW
-    raum: [thronsaal, stadion]                 # zwei Figuren, eine Stimme
+    raum: [thronsaal_ramses, stadion]                 # zwei Figuren, eine Stimme
     groesse_px: 84
     spielbar: false
   - id: nebet
@@ -281,21 +310,21 @@ gegenstaende:
     herkunft: max
     zustaende: [normal]                        # 3 % Akku; Taschenlampe bei der Parade (R11) nur Bonus, dann verbraucht
     verwendet_in: [R8]                         # Lösungswort für die Sphinx (eins von drei)
-    reist_mit: false
+    reist_mit: true   # Reisetasche Zwischenspiel 2 (Pixels Kommentar)
     nahansicht: false
   - id: kaugummi
     name: Kaugummi
     herkunft: max
     zustaende: [normal]
     verwendet_in: [R2b, R8]                    # Wunder im Duell oder „ewiges Brot“ für Nebet (R4), dann verbraucht; Sphinx-Wort
-    reist_mit: false
+    reist_mit: true   # Reisetasche Zwischenspiel 2 (Pixels Kommentar)
     nahansicht: false
   - id: kugelschreiber
     name: Kugelschreiber
     herkunft: max
     zustaende: [normal]                        # Weg A für das Rundschreiben (R3a), dabei verbraucht
     verwendet_in: [R3a, R8]                    # R8: Lösungswort für die Sphinx
-    reist_mit: false
+    reist_mit: true   # Reisetasche Zwischenspiel 2 (Pixels Kommentar)
     nahansicht: false
   - id: thunfischdose
     name: Thunfischdose
@@ -350,10 +379,10 @@ gegenstaende:
     nahansicht: false
   - id: pharaonenteller
     name: Pharaonenteller
-    herkunft: thronsaal                        # nehmbar nach der Audienz
+    herkunft: thronsaal_ramses                        # nehmbar nach der Audienz
     zustaende: [normal]
     verwendet_in: [R13]                        # Diskus-Ersatz, bei Leonidas gewählt (R7)
-    reist_mit: false
+    reist_mit: true   # Reisetasche Zwischenspiel 2 (Pixels Kommentar)
     nahansicht: false
   - id: brot
     name: Brot
@@ -540,35 +569,35 @@ gegenstaende:
     herkunft: R12                              # nach Tag 1 in der Reisetasche gefunden
     zustaende: [normal]
     verwendet_in: [R13]                        # Diskus-Ersatz, bei Leonidas gewählt (R7)
-    reist_mit: false
+    reist_mit: true   # Reisetasche Zwischenspiel 2 (Pixels Kommentar)
     nahansicht: false
   - id: wurfscheibe
     name: Wurfscheibe
     herkunft: R12                              # nach Tag 1 in der Bauchtasche gefunden
     zustaende: [normal]
     verwendet_in: [R13]                        # Diskus-Ersatz, bei Leonidas gewählt (R7)
-    reist_mit: false
+    reist_mit: true   # Reisetasche Zwischenspiel 2 (Pixels Kommentar)
     nahansicht: false
   - id: diskus
     name: Diskus
     herkunft: R7
     zustaende: [normal]
     verwendet_in: [R13]                        # oder ein Ersatz (siehe R13, benoetigt_eins_von)
-    reist_mit: false
+    reist_mit: true   # Reisetasche Zwischenspiel 2 (Pixels Kommentar)
     nahansicht: false
   - id: schriftrolle
     name: Schriftrolle
     herkunft: R8                               # „Die sieben Antworten“, Konter 1 bis 3
     zustaende: [normal]
     verwendet_in: [R9]
-    reist_mit: false
+    reist_mit: true   # Reisetasche Zwischenspiel 2 (Pixels Kommentar)
     nahansicht: false
   - id: olivenkranz
     name: Olivenkranz
     herkunft: R13
     zustaende: [normal]
     verwendet_in: [R11a]
-    reist_mit: false
+    reist_mit: true   # Reisetasche Zwischenspiel 2 (Pixels Kommentar)
     nahansicht: false
   - id: paraden_plan
     name: Paraden-Plan
@@ -589,7 +618,7 @@ gegenstaende:
 nahansichten:                                  # Nahansichten, die kein Gegenstand sind
   - id: hieroglyphen_grammatik
     name: Hieroglyphen-Grammatik
-    raum: thronsaal
+    raum: thronsaal_ramses
   - id: faehrtafel
     name: Fährtafel
     raum: nil_delta
@@ -607,14 +636,14 @@ raetsel:
     optional: false
   - id: R2a
     name: Die Hieroglyphen-Botschaft
-    raum: thronsaal
+    raum: thronsaal_ramses
     benoetigt: [bildtafel]                     # geht auch vor der Fähre
     ergibt: []
     schalter: [W2_R02_A_GELOEST]
     optional: false
   - id: R2b
     name: Das Götter-Duell
-    raum: thronsaal
+    raum: thronsaal_ramses
     benoetigt: [R1, thunfischdose]
     benoetigt_eins_von: [kaugummi, brennspiegel]   # das Wunder
     ergibt: []
@@ -667,7 +696,7 @@ raetsel:
     optional: true                             # wie 6b freiwillig
   - id: R6b
     name: Frische Feigen für die Fächerwedler
-    raum: thronsaal
+    raum: thronsaal_ramses
     benoetigt: [R6a, feigensetzling, feigen]   # Setzling nach Syrakus fahren, pflücken
     ergibt: []
     schalter: [W2_R06_B_GELOEST]               # Wedler bestochen: Speer trifft am Finaltag

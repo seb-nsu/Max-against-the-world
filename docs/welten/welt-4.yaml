@@ -630,3 +630,40 @@ raetsel:
     ergibt: [goldene_fernbedienung]
     schalter: [W4_R13_GELOEST]
     optional: false
+
+weitere_schalter:
+  - W4_ANKUNFT                 # Ankunftsszene im Testbild gespielt
+  - W4_WECHSEL_FREI            # Figurenwechsel freigeschaltet (Ankunft)
+  - W4_BETRETEN                # Wert: Räume, deren Szene beim ersten Betreten lief
+  - W4_AGENT_GESPRAECHE        # Wert: wie oft Max mit dem FBI-Agenten gesprochen hat (Einstieg erst ab dem zweiten)
+  - W4_GERD_PUPPEN_GEFRAGT     # Max hat Gerd nach den Puppen gefragt (Option 0380), danach Untertitel-Witz W4_TAST_0210
+  - W4_MAX_RAUM                # Wert: Sender, in dem Max steht (Pixel kehrt aus dem Rauschen dorthin zurück)
+  - W4_PIXEL_IM_RAUSCHEN       # Pixel krabbelt im Rauschen, Max und Pixel sind getrennt
+  - W4_RAUSCHEN_BESUCHE        # Wert: Zahl der Besuche im Rauschen (Nachrichtensprecher)
+  - W4_UMGESCHALTET            # erstes Umschalten gespielt (W4_FERN_MAX_0050)
+  - W4_ZEITSCHRIFT_BENUTZT     # Programmzeitschrift zum ersten Mal aufgeschlagen
+  - W4_ZEITSCHRIFT_ANGESEHEN   # Nahansicht der Programmzeitschrift gesehen
+  - W4_ZEITSCHRIFT_GEFUNDEN    # Wert: angeklickte Einträge der Programmzeitschrift
+  - W4_ALLE_KANAELE            # alle Einträge der Programmzeitschrift gefunden (Errungenschaft Zapp-Meister)
+  - W4_FOLGE_2015_GELESEN      # 20:15-Folge in der Zeitschrift gelesen: Fondue (R4a)
+  - W4_KOMMISSAR_FOLGT         # Max hat gerade mit dem Kommissar geredet; Umschalten nimmt ihn mit (R3)
+  - W4_KOMMISSAR_KOMMT         # Kommissar kommt mit in die Sitcom-Küche (R3 beginnt)
+  - W4_KOMMISSAR_IN_SITCOM     # Kommissar steht nach R3 in der Küche, bis Max umschaltet
+  - W4_GEPARD_LIEGT            # Gepard ist gesprintet und liegt erschöpft (R4b)
+  - W4_GEPARD_VERHOERT         # Pixel hat den Geparden verhört (R4b)
+  - W4_ERZAEHLER_GEPARD        # Erzähler hat den Sprint kommentiert (W4_VERH_ERZ_0090)
+  - W4_REDEN_HYAENE            # Wert: Zahl der Gespräche mit der Hyäne
+  - W4_ZOMBIES_START           # Zombies nach Rückspulen in Startposition (R5b)
+  - W4_NACHRICHTEN             # Wert: gehörte Nachrichten an der Lichterkette (R7)
+  - W4_LAKEN_GEWORFEN          # Fledermann hat das Bettlaken heruntergeworfen (R10b)
+  - W4_KAESE                   # Wert: Zustand des Fondue-Käses (normal, leuchtend, Wunderkäse)
+  - W4_BANANE                  # Wert: Zustand der Bananenschale (frisch, faulig, Stinkbombe)
+  - W4_ANSEHEN_KAESE_FABRIK    # Wert: Ansehen des normalen Käses in der Fabrik
+  - W4_PANELS_GESEHEN          # Comic-Panels einmal angesehen
+  - W4_PANEL_FEHLER            # Wert: Fehlversuche beim Sortieren der Panels (R11d)
+  - W4_CODE_BEKANNT            # Untertitel auf die Empfangsdame: Code 1988 (R12b)
+  - W4_CODE_EINGEGEBEN         # Code am Zahlenfeld eingegeben, die Sicherheitsleute treten vor (R12b)
+  - W4_ANSEHEN_BAND            # Wert: Ansehen des Bands in der Müllpresse
+  - W4_ANSEHEN_PAUSE           # Wert: Ansehen der Taste Pause
+  - W4_SOFA_GESEHEN            # goldenes Sofa einmal angesehen (R13)
+  - W4_KAMPF                   # Wert: Schritt im Kampf gegen Zappmann (1 Pause … 5 Sendersuchlauf, R13)

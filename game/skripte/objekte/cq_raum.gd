@@ -22,6 +22,42 @@ func raum_id() -> String:
 	return bauplan().get("id", script_name.to_snake_case())
 
 
+## Leichte Tiefe (Entscheidung vom 10. November 2026, Mittelweg): Steht im Layout des Raums
+## „tiefe: 0.8“, werden alle Figuren von 100 Prozent am unteren Rand des Laufbereichs auf diesen
+## Wert an seiner Hinterkante verkleinert, laufen dort auch entsprechend langsamer (Popochius
+## Skalierung über scaling_region). Ohne Eintrag bleibt alles in Originalgröße.
+func tiefe_aktiv() -> bool:
+	return bauplan().has("tiefe") and not Engine.is_editor_hint()
+
+
+func tiefe_anwenden() -> void:
+	if Engine.is_editor_hint():
+		return
+	var ys: Array = bauplan().get("laufbereich", []).map(func(p): return float(p[1]))
+	for c in get_characters():
+		var chr := c as PopochiuCharacter
+		if chr == null:
+			continue
+		if not tiefe_aktiv() or ys.is_empty():
+			if not chr.scaling_region.is_empty():
+				chr.scaling_region = {}
+				chr.update_scale()
+			continue
+		var oben := float(bauplan().tiefe)
+		chr.scaling_region = {
+			region_description = "Tiefe", scale_top = oben, scale_bottom = 1.0,
+			scale_max = maxf(oben, 1.0), scale_min = minf(oben, 1.0),
+			polygon_top_y = ys.min(), polygon_bottom_y = ys.max(), target_scale = 1.0,
+		}
+		chr.update_scale()
+
+
+func _process(_delta: float) -> void:
+	# Auch Figuren, die ohne Laufen versetzt werden (Marker, Szenen), bekommen ihre Größe
+	if tiefe_aktiv():
+		tiefe_anwenden()
+
+
 func _on_room_entered() -> void:
 	# Der Raum bestimmt den Abschnitt, außer er gehört auch zum aktuellen (Dachboden im
 	# Zwischenspiel: Bauplan aus dem Prolog, Welt-Tabelle „finale“).
@@ -38,7 +74,9 @@ func _on_room_entered() -> void:
 		C.player.position = get_marker_position("Start")
 	partner_aufstellen(true)
 	_zustand_anwenden()
+	tiefe_anwenden()
 	await _raum_betreten(erster_besuch)
+	await Spiel.regel("raum_betreten", self, erster_besuch)
 	Spiel.pixel_feld_pruefen()
 
 
@@ -53,6 +91,8 @@ func _on_room_transition_finished() -> void:
 	Spiel.herkunft_raum = ""
 	if war_wechsel:
 		Spielstand.autospeichern()
+	if await Spiel.regel("nach_uebergang", self):
+		return
 	await _nach_uebergang()
 
 
@@ -62,7 +102,9 @@ func _on_restore_from_savegame() -> void:
 	Klang.raum_musik(raum_id())
 	partner_aufstellen()
 	_zustand_anwenden()
+	tiefe_anwenden()
 	Spiel.pixel_feld_pruefen()
+	await Spiel.regel("nach_laden", self)
 	await _nach_laden()
 
 
@@ -87,7 +129,16 @@ func has_marker(name: String) -> bool:
 func partner_aufstellen(neben_spieler := false) -> void:
 	if not Bauplan.figur_spielbar(Zustand.abschnitt, "pixel") or not is_instance_valid(C.player):
 		return
-	var partner: PopochiuCharacter = C.Pixel if C.player == C.Max else C.Max
+	# get_character legt die Figur an, falls sie in diesem Lauf noch in keinem Raum stand
+	# (Spielstand mitten in einer Welt geladen)
+	var partner: PopochiuCharacter = C.get_character("Max" if C.player.script_name == "Pixel" else "Pixel")
+	if not is_instance_valid(partner):
+		return
+	# Welt 3: Max in der Simulation, Pixel in der Realität (skripte/welt_3.gd)
+	if Spiel.regel_wert("partner_getrennt", self) == true:
+		if has_character(partner.script_name):
+			Spiel.figur_hier(partner.script_name, false)
+		return
 	var x := C.player.position.x + (-20.0 if C.player.position.x > width / 2.0 else 20.0)
 	var pos := Vector2(x, C.player.position.y)
 	if not has_character(partner.script_name):
@@ -110,6 +161,7 @@ func _zustand_anwenden() -> void:
 	var regeln = ABSCHNITT_REGELN.get(Zustand.abschnitt)
 	if regeln:
 		regeln.figuren_anwenden(self)
+	Spiel.regel_wert("zustand_anwenden", self)  # Welt 2 ff.: Begleiter, Figuren, Props
 
 
 ## Vor dem Einblenden (Figuren stellen). erster_besuch: Raum zum ersten Mal betreten.

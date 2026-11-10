@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://bn34vg0gd0mj4"]
+
+[ext_resource type="Script" path="res://game/inventory_items/traubensaft/inventory_item_traubensaft_state.gd" id="1_8hn2f"]
+
+[resource]
+resource_name = "Traubensaft"
+script = ExtResource("1_8hn2f")
+script_name = "Traubensaft"
+scene = "res://game/inventory_items/traubensaft/inventory_item_traubensaft.tscn"

@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://c8m23qe02ukv7"]
+
+[ext_resource type="Script" path="res://game/rooms/kapitolis/hotspots/wasserturm_mit_spinnennetz/hotspot_wasserturm_mit_spinnennetz.gd" id="1_kyv1o"]
+
+[node name="WasserturmMitSpinnennetz" type="Area2D" unique_id=1215408833]
+script = ExtResource("1_kyv1o")
+script_name = "WasserturmMitSpinnennetz"
+description = "Wasserturm Mit Spinnennetz"
+cursor = 1
+interaction_polygon = PackedVector2Array(-29, -24, 29, -24, 29, 24, -29, 24)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=740611506]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

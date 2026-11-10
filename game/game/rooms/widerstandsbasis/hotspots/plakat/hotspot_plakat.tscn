@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://b8pse3c7c1xcn"]
+
+[ext_resource type="Script" path="res://game/rooms/widerstandsbasis/hotspots/plakat/hotspot_plakat.gd" id="1_8dj4s"]
+
+[node name="Plakat" type="Area2D" unique_id=1758807095]
+script = ExtResource("1_8dj4s")
+script_name = "Plakat"
+description = "Plakat"
+cursor = 1
+interaction_polygon = PackedVector2Array(-27, -24, 27, -24, 27, 24, -27, 24)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1955297164]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

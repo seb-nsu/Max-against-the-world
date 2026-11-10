@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://bxbsoh6hc6a57"]
+
+[ext_resource type="Script" path="res://game/inventory_items/wurfscheibe/inventory_item_wurfscheibe.gd" id="1_6ip7s"]
+[ext_resource type="Texture2D" uid="uid://ev27vlo2ngg5" path="res://grafik/platzhalter/gegenstand_wurfscheibe.png" id="1_xlgvf"]
+
+[node name="ItemWurfscheibe" type="TextureRect" unique_id=1565239954]
+texture_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 4
+mouse_filter = 0
+texture = ExtResource("1_xlgvf")
+stretch_mode = 5
+script = ExtResource("1_6ip7s")
+script_name = "Wurfscheibe"
+description = "UI_OBJ_WURFSCHEIBE"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=450583825]

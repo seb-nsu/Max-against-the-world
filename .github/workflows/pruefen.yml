@@ -2,7 +2,14 @@ name: Prüfen
 
 on:
   push:
+    branches: [main]   # Zweige mit PR prüft pull_request, sonst liefe alles doppelt
   pull_request:
+  workflow_dispatch:
+
+# Ein neuer Push bricht den laufenden Lauf desselben Zweigs ab (spart Actions-Minuten)
+concurrency:
+  group: pruefen-${{ github.head_ref || github.ref }}
+  cancel-in-progress: true
 
 jobs:
   dokumente:
@@ -25,6 +32,8 @@ jobs:
         run: python3 tools/godot_raeume.py --pruefen
       - name: Audio-Dateien passen zu den IDs
         run: python3 tools/audio_liste.py --pruefen
+      - name: Jede Skriptzeile kommt im Spiel vor
+        run: python3 tools/abdeckung.py --pruefen
 
   godot:
     runs-on: ubuntu-latest
@@ -39,13 +48,50 @@ jobs:
           mv "Godot_v${GODOT_VERSION}-stable_linux.x86_64" godot
       - name: Import (erster Import meldet Fehler, bis der Klassen-Cache steht)
         run: ./godot --headless --path game --import || true
+      - name: Regeln aller Welten kompilieren
+        run: timeout 200 ./godot --headless --path game -s res://tests/regeln_laden.gd
       - name: Prolog-Durchlauf (Testmodus)
         env:
           CQ_TELEMETRIE_BEHALTEN: "1"
         run: timeout 600 ./godot --headless --path game -s res://tests/prolog_durchlauf.gd
+      - name: Welt 2 anspielen (Testmodus)
+        run: timeout 300 ./godot --headless --path game -s res://tests/welt_2_anspiel.gd
+      - name: Welt 3 anspielen (Testmodus)
+        run: timeout 400 ./godot --headless --path game -s res://tests/welt_3_anspiel.gd
+      - name: Welt 4 anspielen (Testmodus)
+        run: timeout 300 ./godot --headless --path game -s res://tests/welt_4_anspiel.gd
+      - name: Finale anspielen (Testmodus)
+        run: timeout 300 ./godot --headless --path game -s res://tests/finale_anspiel.gd
       - name: Menüs, Optionen und Audio-Gerüst
         run: timeout 300 ./godot --headless --path game -s res://tests/menues.gd
       - name: Telemetrie-Auswertung (Protokoll aus dem Testmodus)
         run: python3 tools/telemetrie_auswertung.py ~/.local/share/godot/app_userdata/*/test_telemetrie --mit-tests > /dev/null
       - name: Prolog-Durchlauf (echte Sprechblasen und Wege)
         run: timeout 1200 ./godot --headless --path game -s res://tests/prolog_durchlauf.gd -- --echt
+
+  bildschirm:
+    # Screenshot-Regressionstest (A16): jeder Raum gegen tests/bildschirm/referenz/
+    runs-on: ubuntu-latest
+    env:
+      GODOT_VERSION: "4.7.2"
+    steps:
+      - uses: actions/checkout@v4
+      - name: Godot laden, Xvfb und Mesa
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq xvfb libgl1-mesa-dri > /dev/null
+          curl -sSL -o godot.zip "https://github.com/godotengine/godot/releases/download/${GODOT_VERSION}-stable/Godot_v${GODOT_VERSION}-stable_linux.x86_64.zip"
+          unzip -q godot.zip
+          mv "Godot_v${GODOT_VERSION}-stable_linux.x86_64" godot
+      - name: Import (erster Import meldet Fehler, bis der Klassen-Cache steht)
+        run: ./godot --headless --path game --import || true
+      - name: Alle Räume gegen die Referenzbilder
+        run: |
+          timeout 900 xvfb-run -a -s "-screen 0 1280x720x24" ./godot --path game --rendering-driver opengl3 \
+            --resolution 480x270 -s res://tests/bildschirm_vergleich.gd -- "$PWD/bildschirm"
+      - name: Abweichungen und Übersicht hochladen
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: bildschirm
+          path: bildschirm/
+          if-no-files-found: ignore

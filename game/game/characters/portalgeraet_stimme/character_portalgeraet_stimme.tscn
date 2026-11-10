@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://o435xypftu51"]
+
+[ext_resource type="Script" path="res://game/characters/portalgeraet_stimme/character_portalgeraet_stimme.gd" id="1_i8q5a"]
+[ext_resource type="Texture2D" uid="uid://82nv5na7rrhw" path="res://grafik/platzhalter/figur_portalgeraet_stimme.png" id="2_ek35d"]
+
+[node name="CharacterPortalgeraetStimme" type="Area2D" unique_id=1291778746]
+script = ExtResource("1_i8q5a")
+walk_speed = 90.0
+dialog_pos = Vector2(0, -64)
+script_name = "PortalgeraetStimme"
+description = "UI_OBJ_PORTALGERAET_STIMME"
+cursor = 8
+interaction_polygon = PackedVector2Array(-12, -60, 12, -60, 12, 0, -12, 0)
+
+[node name="ScalingPolygon" type="CollisionPolygon2D" parent="." unique_id=901124536]
+polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1884471346]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=382934713]
+texture_filter = 1
+texture = ExtResource("2_ek35d")
+offset = Vector2(0, -30)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1130677634]
+visible = false
+polygon = PackedVector2Array(-12, -60, 12, -60, 12, 0, -12, 0)
+
+[node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=2099520873]
+visible = false
+affect_navigation_mesh = true
+carve_navigation_mesh = true

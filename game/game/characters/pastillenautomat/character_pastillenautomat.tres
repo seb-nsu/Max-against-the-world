@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://c70eexod6un45"]
+
+[ext_resource type="Script" path="res://game/characters/pastillenautomat/character_pastillenautomat_state.gd" id="1_nvu8p"]
+
+[resource]
+resource_name = "Pastillenautomat"
+script = ExtResource("1_nvu8p")
+script_name = "Pastillenautomat"
+scene = "res://game/characters/pastillenautomat/character_pastillenautomat.tscn"

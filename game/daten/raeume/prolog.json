@@ -49,6 +49,57 @@
    "figuren": [],
    "hotspots": [
     {
+     "id": "kuchen",
+     "script_name": "Kuchen",
+     "name_key": "UI_OBJ_KUCHEN",
+     "rect": [
+      246,
+      162,
+      30,
+      18
+     ],
+     "gehe": [
+      263,
+      225
+     ],
+     "ansehen": [],
+     "versteckt": true
+    },
+    {
+     "id": "girlande",
+     "script_name": "Girlande",
+     "name_key": "UI_OBJ_GIRLANDE",
+     "rect": [
+      120,
+      6,
+      240,
+      18
+     ],
+     "gehe": [
+      240,
+      225
+     ],
+     "ansehen": [],
+     "versteckt": true
+    },
+    {
+     "id": "geschenke",
+     "script_name": "Geschenke",
+     "name_key": "UI_OBJ_GESCHENKE",
+     "rect": [
+      192,
+      186,
+      27,
+      21
+     ],
+     "gehe": [
+      205,
+      225
+     ],
+     "ansehen": [],
+     "versteckt": true
+    },
+    {
      "id": "fernseher",
      "script_name": "Fernseher",
      "name_key": "UI_OBJ_FERNSEHER",
@@ -554,6 +605,102 @@
      ],
      "gehe": [
       180,
+      237
+     ],
+     "ansehen": []
+    },
+    {
+     "id": "maschine",
+     "script_name": "Maschine",
+     "name_key": "UI_OBJ_MASCHINE",
+     "rect": [
+      186,
+      96,
+      60,
+      90
+     ],
+     "gehe": [
+      216,
+      237
+     ],
+     "ansehen": []
+    },
+    {
+     "id": "ofentuer",
+     "script_name": "Ofentuer",
+     "name_key": "UI_OBJ_OFENTUER",
+     "rect": [
+      198,
+      150,
+      33,
+      30
+     ],
+     "gehe": [
+      214,
+      237
+     ],
+     "ansehen": []
+    },
+    {
+     "id": "druckmesser",
+     "script_name": "Druckmesser",
+     "name_key": "UI_OBJ_DRUCKMESSER",
+     "rect": [
+      246,
+      108,
+      18,
+      18
+     ],
+     "gehe": [
+      255,
+      237
+     ],
+     "ansehen": []
+    },
+    {
+     "id": "fassungen",
+     "script_name": "Fassungen",
+     "name_key": "UI_OBJ_FASSUNGEN",
+     "rect": [
+      186,
+      78,
+      60,
+      15
+     ],
+     "gehe": [
+      216,
+      237
+     ],
+     "ansehen": []
+    },
+    {
+     "id": "empfaenger",
+     "script_name": "Empfaenger",
+     "name_key": "UI_OBJ_EMPFAENGER",
+     "rect": [
+      222,
+      54,
+      33,
+      24
+     ],
+     "gehe": [
+      238,
+      237
+     ],
+     "ansehen": []
+    },
+    {
+     "id": "lampe",
+     "script_name": "Lampe",
+     "name_key": "UI_OBJ_LAMPE",
+     "rect": [
+      105,
+      6,
+      18,
+      27
+     ],
+     "gehe": [
+      114,
       237
      ],
      "ansehen": []
@@ -1603,6 +1750,22 @@
         "P0_DACH_OPA_1320"
        ],
        "regie": "stolz, dann unsicher"
+      },
+      {
+       "zeile": "P0_DACH_MAX_1450",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_DACH_MAX_1450"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "P0_DACH_OPA_1460",
+       "sprecher": "OPA",
+       "blasen": [
+        "P0_DACH_OPA_1460"
+       ],
+       "regie": ""
       }
      ],
      "beendet": false,
@@ -1658,6 +1821,22 @@
         "P0_DACH_OPA_1340"
        ],
        "regie": "zwinkert"
+      },
+      {
+       "zeile": "P0_DACH_MAX_1470",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_DACH_MAX_1470"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "P0_DACH_OPA_1480",
+       "sprecher": "OPA",
+       "blasen": [
+        "P0_DACH_OPA_1480"
+       ],
+       "regie": ""
       }
      ],
      "beendet": false,
@@ -1776,6 +1955,22 @@
         "P0_DACH_PIX_1420"
        ],
        "regie": "Hinweis auf den Toaster"
+      },
+      {
+       "zeile": "P0_DACH_MAX_1490",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_DACH_MAX_1490"
+       ],
+       "regie": ""
+      },
+      {
+       "zeile": "P0_DACH_PIX_1500",
+       "sprecher": "PIX",
+       "blasen": [
+        "P0_DACH_PIX_1500"
+       ],
+       "regie": ""
       }
      ],
      "beendet": false,

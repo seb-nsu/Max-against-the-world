@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://db1nx1h5qmyao"]
+
+[node name="VonWiderstandsbasis" type="Marker2D" unique_id=12297098]
+visible = false

@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://bfe7k4veglqiv"]
+
+[ext_resource type="Script" path="res://game/rooms/kellerarchiv/hotspots/regale/hotspot_regale.gd" id="1_3di1k"]
+
+[node name="Regale" type="Area2D" unique_id=1256140546]
+script = ExtResource("1_3di1k")
+script_name = "Regale"
+description = "Regale"
+cursor = 1
+interaction_polygon = PackedVector2Array(-36, -24, 36, -24, 36, 24, -36, 24)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=2106712491]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://cco7asq6yeols"]
+
+[ext_resource type="Script" path="res://game/rooms/palastkueche/hotspots/leere_amphoren/hotspot_leere_amphoren.gd" id="1_tdc1y"]
+
+[node name="LeereAmphoren" type="Area2D" unique_id=9069718]
+script = ExtResource("1_tdc1y")
+script_name = "LeereAmphoren"
+description = "Leere Amphoren"
+cursor = 1
+interaction_polygon = PackedVector2Array(-24, -25.5, 24, -25.5, 24, 25.5, -24, 25.5)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=419200354]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

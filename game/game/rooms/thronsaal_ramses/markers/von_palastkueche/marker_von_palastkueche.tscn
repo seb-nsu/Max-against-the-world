@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://b68culiojsv5u"]
+
+[node name="VonPalastkueche" type="Marker2D" unique_id=1408568347]
+visible = false

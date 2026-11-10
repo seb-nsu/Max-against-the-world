@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://yfj2aqf6repa"]
+
+[ext_resource type="Script" path="res://game/inventory_items/kaugummi/inventory_item_kaugummi_state.gd" id="1_upgnc"]
+
+[resource]
+resource_name = "Kaugummi"
+script = ExtResource("1_upgnc")
+script_name = "Kaugummi"
+scene = "res://game/inventory_items/kaugummi/inventory_item_kaugummi.tscn"
