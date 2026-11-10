@@ -10,6 +10,21 @@ weitere_schalter:
   - ZS1_GEPACKT              # Reisetasche für Welt 2 gepackt (ZS1_DACH 0620), der nächste Dreh wählt Kanal 7
   - TASCHE                   # Wert: Gegenstände der zwei Wahlfächer aus dem letzten Packen (reisen in die nächste Welt mit)
   - FUNDKISTE                # Wert: was in Opas Fundkiste liegt; vor dem ersten Packen nur der Dosenöffner
+  - EINKAUFSLISTE            # Wert: Zahl der Wünsche Pixels auf Seite 3 des Notizbuchs (1 bis 3 in den Zwischenspielen, 4 in Welt 4)
+  - FINALE                   # Finale läuft (Spiel.finale_beginnen); die Regeln in skripte/finale.gd greifen nur dann
+  - FI_HEIMKEHR              # Heimkehr-Szene auf dem Dachboden gespielt (FI_DACH)
+  - FI_FERNBEDIENUNG         # Wert: Zustand der Goldenen Fernbedienung (golden, grau_ohne_zelle, zuendkapsel)
+  - FI_OPA_RUFE              # Wert: wie oft Opa in Stufe 1 gerufen hat (Graubox: pro Klick statt alle 15 Sekunden)
+  - FI_ANSEHEN               # Wert: Objekt → wie oft im Finale angesehen (erste/zweite Zeile)
+  - FI_KANAELE               # Wert: beim Hilferuf schon gewählte Kanäle
+  - FI_ZELDINA_DA            # Zeldina ist aus dem Zapp-O-Mat gekommen
+  - FI_ROBOTER_DA            # Modell 08/15 ist gekommen (nur mit FREUND_0815)
+  - FI_HILFERUF              # alle vier Kanäle gerufen
+  - FI_ZELLE_IM_MAUL         # Pixel trägt die Energiezelle (Schritt C), beim Wechsel zu Max ins Inventar
+  - FI_WOHN_ANKUNFT          # Ankunftsszene im Wohnzimmer gespielt
+  - FI_MUTTER_DA             # Mutter ist im Wohnzimmer (Einkaufsliste)
+  - FI_SUPERMARKT            # Supermarkt-Szene gespielt
+  - FI_ENDE_GESEHEN          # Abspann gesehen (Errungenschaft)
 
 raeume:
   - id: dachboden

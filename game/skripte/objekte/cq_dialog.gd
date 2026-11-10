@@ -106,7 +106,9 @@ func zeile_gehoert(zeile: String) -> bool:
 		if o.antworten.any(func(a): return a.zeile == zeile):
 			var opt := get_option(o.id)
 			return is_instance_valid(opt) and opt.used
-	return false
+	# Zeile außerhalb des Gesprächs (Szene, Welt 4: Wilmas Hinweis bei der Ankunft): die Regeln
+	# des Abschnitts wissen, ob sie gefallen ist
+	return Spiel.regel_wert("zeile_gehoert", self, zeile) == true
 
 
 func _option_selected(opt: PopochiuDialogOption) -> void:

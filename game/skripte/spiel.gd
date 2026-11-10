@@ -803,6 +803,24 @@ func zwischenspiel_beginnen(nr: int) -> void:
 	await R.goto_room(Bauplan.raum_script_name("dachboden"))
 
 
+## Finale nach Welt 4 (skript/zwischenspiele-und-finale.md, Abschnitt 4): zurück auf den
+## Dachboden wie im Zwischenspiel, aber ohne Wert ZWISCHENSPIEL und mit Schalter FINALE; die
+## Regeln stehen in skripte/finale.gd. Das Inventar bleibt (die Goldene Fernbedienung gibt Max in
+## der Heimkehr-Szene ab).
+func finale_beginnen() -> void:
+	Klang.jingle("welt_geschafft")
+	if not testmodus:
+		await T.play_transition("tunnel", 1.5, T.PLAY_MODE.IN)
+	I.active = null
+	if is_instance_valid(C.Max) and C.player != C.Max:
+		C.player = C.Max
+	Zustand.abschnitt = "finale"
+	Zustand.setze_wert("ZWISCHENSPIEL", 0)
+	Zustand.setze("FINALE")
+	herkunft_raum = ""
+	await R.goto_room(Bauplan.raum_script_name("dachboden"))
+
+
 ## Auswahl ohne Gesprächsfigur (Wünsche am Brunnen, Passwort an der Geheimtür): Popochius
 ## Inline-Dialog mit den übersetzten Texten, liefert den Index. Tests geben die Antwort über
 ## vorgabe_auswahl vor.

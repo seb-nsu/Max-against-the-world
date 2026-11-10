@@ -91,7 +91,11 @@ func has_marker(name: String) -> bool:
 func partner_aufstellen(neben_spieler := false) -> void:
 	if not Bauplan.figur_spielbar(Zustand.abschnitt, "pixel") or not is_instance_valid(C.player):
 		return
-	var partner: PopochiuCharacter = C.Pixel if C.player == C.Max else C.Max
+	# get_character legt die Figur an, falls sie in diesem Lauf noch in keinem Raum stand
+	# (Spielstand mitten in einer Welt geladen)
+	var partner: PopochiuCharacter = C.get_character("Max" if C.player.script_name == "Pixel" else "Pixel")
+	if not is_instance_valid(partner):
+		return
 	# Welt 3: Max in der Simulation, Pixel in der Realität (skripte/welt_3.gd)
 	if Spiel.regel_wert("partner_getrennt", self) == true:
 		if has_character(partner.script_name):

@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://dx4154ck377ur"]
+
+[ext_resource type="Script" path="res://game/rooms/supermarkt/hotspots/automatische_tuer/hotspot_automatische_tuer.gd" id="1_pgm35"]
+
+[node name="AutomatischeTuer" type="Area2D" unique_id=1244446895]
+script = ExtResource("1_pgm35")
+script_name = "AutomatischeTuer"
+description = "Automatische Tuer"
+cursor = 1
+interaction_polygon = PackedVector2Array(-50, -80, 50, -80, 50, 80, -50, 80)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=350688064]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

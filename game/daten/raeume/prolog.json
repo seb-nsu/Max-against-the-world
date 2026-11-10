@@ -49,6 +49,54 @@
    "figuren": [],
    "hotspots": [
     {
+     "id": "kuchen",
+     "script_name": "Kuchen",
+     "name_key": "UI_OBJ_KUCHEN",
+     "rect": [
+      246,
+      162,
+      30,
+      18
+     ],
+     "gehe": [
+      263,
+      225
+     ],
+     "ansehen": []
+    },
+    {
+     "id": "girlande",
+     "script_name": "Girlande",
+     "name_key": "UI_OBJ_GIRLANDE",
+     "rect": [
+      120,
+      6,
+      240,
+      18
+     ],
+     "gehe": [
+      240,
+      225
+     ],
+     "ansehen": []
+    },
+    {
+     "id": "geschenke",
+     "script_name": "Geschenke",
+     "name_key": "UI_OBJ_GESCHENKE",
+     "rect": [
+      192,
+      186,
+      27,
+      21
+     ],
+     "gehe": [
+      205,
+      225
+     ],
+     "ansehen": []
+    },
+    {
      "id": "fernseher",
      "script_name": "Fernseher",
      "name_key": "UI_OBJ_FERNSEHER",
@@ -554,6 +602,86 @@
      ],
      "gehe": [
       180,
+      237
+     ],
+     "ansehen": []
+    },
+    {
+     "id": "maschine",
+     "script_name": "Maschine",
+     "name_key": "UI_OBJ_MASCHINE",
+     "rect": [
+      186,
+      96,
+      60,
+      90
+     ],
+     "gehe": [
+      216,
+      237
+     ],
+     "ansehen": []
+    },
+    {
+     "id": "ofentuer",
+     "script_name": "Ofentuer",
+     "name_key": "UI_OBJ_OFENTUER",
+     "rect": [
+      198,
+      150,
+      33,
+      30
+     ],
+     "gehe": [
+      214,
+      237
+     ],
+     "ansehen": []
+    },
+    {
+     "id": "druckmesser",
+     "script_name": "Druckmesser",
+     "name_key": "UI_OBJ_DRUCKMESSER",
+     "rect": [
+      246,
+      108,
+      18,
+      18
+     ],
+     "gehe": [
+      255,
+      237
+     ],
+     "ansehen": []
+    },
+    {
+     "id": "fassungen",
+     "script_name": "Fassungen",
+     "name_key": "UI_OBJ_FASSUNGEN",
+     "rect": [
+      186,
+      78,
+      60,
+      15
+     ],
+     "gehe": [
+      216,
+      237
+     ],
+     "ansehen": []
+    },
+    {
+     "id": "empfaenger",
+     "script_name": "Empfaenger",
+     "name_key": "UI_OBJ_EMPFAENGER",
+     "rect": [
+      222,
+      54,
+      33,
+      24
+     ],
+     "gehe": [
+      238,
       237
      ],
      "ansehen": []

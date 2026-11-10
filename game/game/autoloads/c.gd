@@ -98,6 +98,9 @@ const PCSicherheitsmann := preload("res://game/characters/sicherheitsmann/charac
 const PCZappmann := preload("res://game/characters/zappmann/character_zappmann.gd")
 const PCJungerZappmann := preload("res://game/characters/junger_zappmann/character_junger_zappmann.gd")
 const PCWettkandidat := preload("res://game/characters/wettkandidat/character_wettkandidat.gd")
+const PCOma := preload("res://game/characters/oma/character_oma.gd")
+const PCMutter := preload("res://game/characters/mutter/character_mutter.gd")
+const PCModell0815 := preload("res://game/characters/modell_0815/character_modell_0815.gd")
 # ---- classes
 
 # nodes ----
@@ -197,6 +200,9 @@ var Sicherheitsmann: PCSicherheitsmann : get = get_Sicherheitsmann
 var Zappmann: PCZappmann : get = get_Zappmann
 var JungerZappmann: PCJungerZappmann : get = get_JungerZappmann
 var Wettkandidat: PCWettkandidat : get = get_Wettkandidat
+var Oma: PCOma : get = get_Oma
+var Mutter: PCMutter : get = get_Mutter
+var Modell0815: PCModell0815 : get = get_Modell0815
 # ---- nodes
 
 # functions ----
@@ -296,5 +302,8 @@ func get_Sicherheitsmann() -> PCSicherheitsmann: return get_runtime_character("S
 func get_Zappmann() -> PCZappmann: return get_runtime_character("Zappmann")
 func get_JungerZappmann() -> PCJungerZappmann: return get_runtime_character("JungerZappmann")
 func get_Wettkandidat() -> PCWettkandidat: return get_runtime_character("Wettkandidat")
+func get_Oma() -> PCOma: return get_runtime_character("Oma")
+func get_Mutter() -> PCMutter: return get_runtime_character("Mutter")
+func get_Modell0815() -> PCModell0815: return get_runtime_character("Modell0815")
 # ---- functions
 

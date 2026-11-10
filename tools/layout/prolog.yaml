@@ -22,6 +22,10 @@ wohnzimmer:
     teetasse: {rect: [222, 174, 18, 18], gehe: [225, 225]}
     fernseher: {rect: [327, 117, 78, 93], gehe: [360, 225]}
     familienfoto: {rect: [192, 51, 66, 51], gehe: [225, 225]}
+    # Finale (skripte/finale.gd): nur im Finale sichtbar
+    kuchen: {rect: [246, 162, 30, 18], gehe: [263, 225], name: Kuchen}
+    girlande: {rect: [120, 6, 240, 18], gehe: [240, 225], name: Girlande}
+    geschenke: {rect: [192, 186, 27, 21], gehe: [205, 225], name: Geschenke}
   ausgaenge:
     treppenhaus: {rect: [438, 60, 39, 147], gehe: [450, 237]}
 
@@ -71,5 +75,11 @@ dachboden:
     kiste_mit_fernbedienungen: {rect: [3, 177, 39, 36], gehe: [30, 237]}
     opas_staubsauger_prototyp: {rect: [294, 177, 18, 39], gehe: [300, 240]}
     fundkiste: {rect: [165, 189, 30, 27], gehe: [180, 237], name: Fundkiste}   # erst ab Zwischenspiel 1 sichtbar
+    # Finale (skripte/finale.gd): Opas Maschine in der Mitte, nur im Finale sichtbar
+    maschine: {rect: [186, 96, 60, 90], gehe: [216, 237], name: Maschine}
+    ofentuer: {rect: [198, 150, 33, 30], gehe: [214, 237], name: Ofentür}
+    druckmesser: {rect: [246, 108, 18, 18], gehe: [255, 237], name: Druckmesser}
+    fassungen: {rect: [186, 78, 60, 15], gehe: [216, 237], name: Fassungen}
+    empfaenger: {rect: [222, 54, 33, 24], gehe: [238, 237], name: Empfänger}
   ausgaenge:
     treppenhaus: {rect: [348, 240, 60, 27], gehe: [375, 249], name: Bodenluke, id: bodenluke}

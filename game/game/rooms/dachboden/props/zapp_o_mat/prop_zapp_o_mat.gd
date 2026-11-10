@@ -7,6 +7,8 @@ extends CQProp
 
 ## Erstes Ansehen nach P1 mit Pixel und Opa (0410–0440), danach nur noch 0410.
 func _on_right_click() -> void:
+	if await Spiel.regel("ansehen", self):
+		return
 	var zeile := await ansehen()
 	if zeile == "P0_DACH_MAX_0410" and not Zustand.ist("P0_SCHNEE_GESEHEN"):
 		Zustand.setze("P0_SCHNEE_GESEHEN")
@@ -18,12 +20,16 @@ func _on_right_click() -> void:
 
 
 func _on_click() -> void:
+	if await Spiel.regel("benutzen", self):
+		return
 	await Spiel.hingehen(self)
 	await Spiel.ersatz()
 
 
 func _on_item_used(item: PopochiuInventoryItem) -> void:
 	await Spiel.hingehen(self)
+	if await Spiel.regel("gegenstand", self, item):
+		return
 	match item.script_name:
 		"Drahtkleiderbuegel":
 			if not Zustand.geloest("P1"):

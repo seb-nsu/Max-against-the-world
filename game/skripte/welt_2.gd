@@ -1428,7 +1428,7 @@ func gegenstand_sockel(_obj, iid) -> bool:
 				return true
 			var raum: CQRaum = R.current
 			for sn in ["Cicero", "Archimedes"]:
-				var m := sn
+				var m: String = sn
 				Spiel.figur_hier(sn, true, raum.get_marker_position(m) if raum.has_marker(m) else Vector2.INF)
 			await _szene(["W2_GRAB_MAX_0160", "W2_GRAB_CIC_0170", "W2_GRAB_ARC_0180", "W2_GRAB_CIC_0190",
 				"W2_GRAB_PIX_0200", "W2_GRAB_ARC_0210"])

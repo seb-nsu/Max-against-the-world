@@ -1,0 +1,29 @@
+# Platzhalter-Layout Finale für die Graubox (tools/godot_raeume.py).
+#
+# Dachboden, Treppenhaus und Wohnzimmer gehören zum Layout des Prologs (tools/layout/prolog.yaml);
+# ihre Finale-Objekte (Maschine, Kuchen …) stehen dort und sind außerhalb des Finales unsichtbar.
+# Hier steht nur der Supermarkt-Eingang, dazu die Figuren, die das Finale neu braucht und die
+# in keinem Raum dieses Layouts stehen (_figuren). Die Logik steht in skripte/finale.gd.
+
+_figuren: [oma, mutter, modell_0815]
+
+supermarkt:
+  farbe: '#6a7a8a'
+  laufbereich:
+  - [6, 210]
+  - [474, 210]
+  - [474, 267]
+  - [6, 267]
+  marker:
+    start: [120, 240]
+  hotspots:
+    aufsteller_mit_milch_sonderangebot:
+      rect: [40, 120, 60, 80]
+      gehe: [70, 235]
+    milchregal_durch_die_tuer:
+      rect: [200, 60, 80, 120]
+      gehe: [240, 235]
+    automatische_tuer:
+      rect: [300, 50, 100, 160]
+      gehe: [350, 235]
+      name: Automatische Tür

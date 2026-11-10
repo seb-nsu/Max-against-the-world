@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://byyu862c5h7tt"]
+
+[ext_resource type="Script" path="res://game/rooms/wohnzimmer/hotspots/geschenke/hotspot_geschenke.gd" id="1_ougf3"]
+
+[node name="Geschenke" type="Area2D" unique_id=513624291]
+script = ExtResource("1_ougf3")
+script_name = "Geschenke"
+description = "Geschenke"
+cursor = 1
+interaction_polygon = PackedVector2Array(-13.5, -10.5, 13.5, -10.5, 13.5, 10.5, -13.5, 10.5)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=54697495]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

@@ -6,6 +6,8 @@ extends CQHotspot
 
 
 func _on_click() -> void:
+	if await Spiel.regel("benutzen", self):
+		return
 	await Spiel.hingehen(self)
 	if room.call("zwischenspiel") == 1:
 		await room.call("zs1_drehknopf")

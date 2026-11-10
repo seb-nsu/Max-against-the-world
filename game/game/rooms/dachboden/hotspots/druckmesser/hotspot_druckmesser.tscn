@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://c5elgi08ncf60"]
+
+[ext_resource type="Script" path="res://game/rooms/dachboden/hotspots/druckmesser/hotspot_druckmesser.gd" id="1_frxff"]
+
+[node name="Druckmesser" type="Area2D" unique_id=732991401]
+script = ExtResource("1_frxff")
+script_name = "Druckmesser"
+description = "Druckmesser"
+cursor = 1
+interaction_polygon = PackedVector2Array(-9, -9, 9, -9, 9, 9, -9, 9)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1630590466]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

@@ -56,6 +56,7 @@ const PRWerbespotSet := preload("res://game/rooms/werbespot_set/room_werbespot_s
 const PREmpfang := preload("res://game/rooms/empfang/room_empfang.gd")
 const PRKellerarchiv := preload("res://game/rooms/kellerarchiv/room_kellerarchiv.gd")
 const PRZappmannsStudio := preload("res://game/rooms/zappmanns_studio/room_zappmanns_studio.gd")
+const PRSupermarkt := preload("res://game/rooms/supermarkt/room_supermarkt.gd")
 # ---- classes
 
 # nodes ----
@@ -113,6 +114,7 @@ var WerbespotSet: PRWerbespotSet : get = get_WerbespotSet
 var Empfang: PREmpfang : get = get_Empfang
 var Kellerarchiv: PRKellerarchiv : get = get_Kellerarchiv
 var ZappmannsStudio: PRZappmannsStudio : get = get_ZappmannsStudio
+var Supermarkt: PRSupermarkt : get = get_Supermarkt
 # ---- nodes
 
 # functions ----
@@ -170,5 +172,6 @@ func get_WerbespotSet() -> PRWerbespotSet: return get_runtime_room("WerbespotSet
 func get_Empfang() -> PREmpfang: return get_runtime_room("Empfang")
 func get_Kellerarchiv() -> PRKellerarchiv: return get_runtime_room("Kellerarchiv")
 func get_ZappmannsStudio() -> PRZappmannsStudio: return get_runtime_room("ZappmannsStudio")
+func get_Supermarkt() -> PRSupermarkt: return get_runtime_room("Supermarkt")
 # ---- functions
 

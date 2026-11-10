@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://dl0pbb33qabld"]
+
+[ext_resource type="Script" path="res://game/characters/modell_0815/character_modell_0815.gd" id="1_ud7hv"]
+[ext_resource type="Texture2D" uid="uid://myx3byvmfs8e" path="res://grafik/platzhalter/figur_modell_0815.png" id="2_ycoh2"]
+
+[node name="CharacterModell0815" type="Area2D" unique_id=40858005]
+script = ExtResource("1_ud7hv")
+walk_speed = 90.0
+dialog_pos = Vector2(0, -91)
+script_name = "Modell0815"
+description = "UI_OBJ_MODELL_0815"
+cursor = 8
+interaction_polygon = PackedVector2Array(-14.5, -87, 14.5, -87, 14.5, 0, -14.5, 0)
+
+[node name="ScalingPolygon" type="CollisionPolygon2D" parent="." unique_id=135067633]
+polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=219161013]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=571259866]
+texture_filter = 1
+texture = ExtResource("2_ycoh2")
+offset = Vector2(0, -43.5)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1956174709]
+visible = false
+polygon = PackedVector2Array(-14.5, -87, 14.5, -87, 14.5, 0, -14.5, 0)
+
+[node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=194058356]
+visible = false
+affect_navigation_mesh = true
+carve_navigation_mesh = true

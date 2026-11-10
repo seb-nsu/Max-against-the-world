@@ -46,10 +46,16 @@ jobs:
           mv "Godot_v${GODOT_VERSION}-stable_linux.x86_64" godot
       - name: Import (erster Import meldet Fehler, bis der Klassen-Cache steht)
         run: ./godot --headless --path game --import || true
+      - name: Regeln aller Welten kompilieren
+        run: timeout 200 ./godot --headless --path game -s res://tests/regeln_laden.gd
       - name: Prolog-Durchlauf (Testmodus)
         env:
           CQ_TELEMETRIE_BEHALTEN: "1"
         run: timeout 600 ./godot --headless --path game -s res://tests/prolog_durchlauf.gd
+      - name: Welt 4 anspielen (Testmodus)
+        run: timeout 300 ./godot --headless --path game -s res://tests/welt_4_anspiel.gd
+      - name: Finale anspielen (Testmodus)
+        run: timeout 300 ./godot --headless --path game -s res://tests/finale_anspiel.gd
       - name: Menüs, Optionen und Audio-Gerüst
         run: timeout 300 ./godot --headless --path game -s res://tests/menues.gd
       - name: Telemetrie-Auswertung (Protokoll aus dem Testmodus)

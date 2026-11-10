@@ -825,8 +825,10 @@ func _welt_1_r5_bis_r13() -> void:
 	_pruefe(_i().is_item_in_inventory("Dosenoeffner") and Z.wert("TASCHE", []) == ["Socke", "Dosenoeffner"],
 		"nach Laden: Tasche unverändert")
 	await _hotspot("Drehknopf").on_click()
-	_pruefe(_gesagt("ZS1_DACH_MAX_0660") and _gesagt("ZS1_DACH_PIX_0670") and _gesagt("UI_WELT_1_ENDE"),
-		"Zweiter Dreh: Kanal 7 (0660, 0670), Ende des Ausbaustands")
+	_pruefe(_gesagt("ZS1_DACH_MAX_0660") and _gesagt("ZS1_DACH_PIX_0670"), "Zweiter Dreh: Kanal 7 (0660, 0670)")
+	_pruefe(Z.abschnitt == "welt-2" and _i().is_item_in_inventory("Handy")
+		and _i().is_item_in_inventory("Socke") and not _i().is_item_in_inventory("Drachenei"),
+		"Welt 2 beginnt: Handy aus Max' Taschen, Wahlfächer dabei")
 
 
 func _gehe(ausgang: String, raum: String) -> void:

@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://cachq3x4pmhps"]
+
+[ext_resource type="Script" path="res://game/rooms/dachboden/hotspots/ofentuer/hotspot_ofentuer.gd" id="1_o5evx"]
+
+[node name="Ofentuer" type="Area2D" unique_id=639124886]
+script = ExtResource("1_o5evx")
+script_name = "Ofentuer"
+description = "Ofentuer"
+cursor = 1
+interaction_polygon = PackedVector2Array(-16.5, -15, 16.5, -15, 16.5, 15, -16.5, 15)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=802418629]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

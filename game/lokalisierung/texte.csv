@@ -869,6 +869,44 @@ UI_OBJ_ZAHLENFELD_MIT_CODE,Zahlenfeld mit Code,Keypad
 UI_OBJ_ZAPPMANN,Zappmann,Zappmann
 UI_OBJ_ZOMBIE,Zombie,Zombie
 UI_OBJ_ZOMBIES,Zombies,Zombies
+UI_W4_ZS_2015,"20:15 – Küchen-Sitcom, Folge 112","8:15 pm – Kitchen sitcom, episode 112"
+UI_W4_ZS_MITTERNACHT,Mitternachts-TV: Friedhofs-Funk,Midnight TV: Graveyard Funk
+UI_W4_ZS_WERBESPOT,Dr. Werbepause präsentiert den Couch-Magnet 3000,Dr. Adbreak presents the Couch Magnet 3000
+UI_W4_ZS_TIERTORT,Tiertort Savanne,Savannah Crime Scene
+UI_W4_ZS_GLUECKSRAD,Glücksrad-Shopping,Wheel of Fortune Shopping
+UI_W4_ZS_LEER,(leeres Feld),(empty slot)
+UI_W4_ZS_KANAL_999,Kanal 999: Senderzentrale,Channel 999: Network headquarters
+UI_W4_ANTWORT_A,Antwort A,Answer A
+UI_W4_ANTWORT_B,Antwort B,Answer B
+UI_W4_ANTWORT_C,Antwort C,Answer C
+UI_W4_BALKEN_HELL_DUNKEL,Von hell nach dunkel sortieren,Sort from light to dark
+UI_W4_BALKEN_DUNKEL_HELL,Von dunkel nach hell sortieren,Sort from dark to light
+UI_W4_BALKEN_BUNT,Nach Farben sortieren,Sort by colour
+UI_W4_TANZ_TAKT,Im Takt tanzen,Dance to the beat
+UI_W4_TANZ_GEGEN,Gegen den Takt tanzen,Dance against the beat
+UI_RAUM_SUPERMARKT,Supermarkt,Supermarket
+UI_OBJ_AUFSTELLER_MIT_MILCH_SONDERANGEBOT,Aufsteller mit Milch-Sonderangebot,Milk special offer sign
+UI_OBJ_MILCHREGAL_DURCH_DIE_TUER,Milchregal,Milk shelf
+UI_OBJ_OMA,Oma,Grandma
+UI_OBJ_MUTTER,Mutter,Mum
+UI_OBJ_MODELL_0815,Modell 08/15,Model 08/15
+UI_OBJ_KUCHEN,Kuchen,Cake
+UI_OBJ_GIRLANDE,Girlande,Garland
+UI_OBJ_GESCHENKE,Geschenke,Presents
+UI_OBJ_MASCHINE,Maschine,Machine
+UI_OBJ_OFENTUER,Ofentür,Oven door
+UI_OBJ_DRUCKMESSER,Druckmesser,Pressure gauge
+UI_OBJ_FASSUNGEN,Fassungen,Sockets
+UI_OBJ_EMPFAENGER,Empfänger,Receiver
+UI_OBJ_AUTOMATISCHE_TUER,Automatische Tür,Automatic door
+UI_FI_KANAL_3,Kanal 3 – Schwurbelstein,Channel 3 – Schwurbelstein
+UI_FI_KANAL_7,Kanal 7 – Antikodonien,Channel 7 – Antikodonien
+UI_FI_KANAL_42,Kanal 42 – Neo-Neustadt 2099,Channel 42 – Neo-Neustadt 2099
+UI_FI_KANAL_999,Kanal 999,Channel 999
+UI_FI_TASTE_LAUTER,Lauter,Volume up
+UI_FI_TASTE_PROGRAMM,Programm,Channel
+UI_FI_TASTE_STUMM,Stumm,Mute
+UI_FI_TASTE_ROT,Rote Taste,Red button
 P0_WOHN_MAX_0010,Ein Balken. Ein einziger Balken.,
 P0_WOHN_MAX_0020,Und der ist auch nur zur Deko da.,
 P0_WOHN_OPA_0030,Maaax! Komm mal rauf! Wissenschaft!,

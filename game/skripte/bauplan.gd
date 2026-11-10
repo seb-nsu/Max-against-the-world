@@ -37,7 +37,11 @@ func laden() -> void:
 		var ordner: String = ordner_ziel[0]
 		for datei in _dateien(ordner):
 			ordner_ziel[1][datei.get_basename()] = _json(ordner + datei)
-	for ab in plaene:
+	# In Spielreihenfolge zusammenlegen (das Finale kommt alphabetisch zuerst, spielt aber zuletzt):
+	# der erste Zustand eines Gegenstands ist der aus dem frühesten Abschnitt
+	var reihe: Array = plaene.keys()
+	reihe.sort_custom(func(x, y): return (x != "finale" and y == "finale") or ((x == "finale") == (y == "finale") and x < y))
+	for ab in reihe:
 		var plan: Dictionary = plaene[ab]
 		for r in plan.raeume:
 			_raeume[r.script_name] = {abschnitt = ab, daten = r}

@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://b2kj4xxwum7i3"]
+
+[ext_resource type="Script" path="res://game/characters/mutter/character_mutter.gd" id="1_pb3tb"]
+[ext_resource type="Texture2D" uid="uid://bu1c10xxx6ys2" path="res://grafik/platzhalter/figur_mutter.png" id="2_grip2"]
+
+[node name="CharacterMutter" type="Area2D" unique_id=769405159]
+script = ExtResource("1_pb3tb")
+walk_speed = 90.0
+dialog_pos = Vector2(0, -91)
+script_name = "Mutter"
+description = "UI_OBJ_MUTTER"
+cursor = 8
+interaction_polygon = PackedVector2Array(-14.5, -87, 14.5, -87, 14.5, 0, -14.5, 0)
+
+[node name="ScalingPolygon" type="CollisionPolygon2D" parent="." unique_id=690561882]
+polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=593052271]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1491390434]
+texture_filter = 1
+texture = ExtResource("2_grip2")
+offset = Vector2(0, -43.5)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1556112732]
+visible = false
+polygon = PackedVector2Array(-14.5, -87, 14.5, -87, 14.5, 0, -14.5, 0)
+
+[node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=1875120376]
+visible = false
+affect_navigation_mesh = true
+carve_navigation_mesh = true

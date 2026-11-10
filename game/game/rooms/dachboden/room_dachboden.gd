@@ -50,7 +50,11 @@ func _zustand_anwenden() -> void:
 		zapp.current_frame = bild()
 	var fundkiste := get_hotspot("Fundkiste")
 	if is_instance_valid(fundkiste):
-		fundkiste.visible = zwischenspiel() > 0  # Opas Archiv gibt es erst ab der ersten Rückkehr
+		fundkiste.visible = zwischenspiel() > 0 or Zustand.ist("FINALE")  # Opas Archiv gibt es erst ab der ersten Rückkehr
+	for sn in ["Maschine", "Ofentuer", "Druckmesser", "Fassungen", "Empfaenger"]:
+		var h := get_hotspot(sn)  # Opas Maschine: nur im Finale (skripte/finale.gd)
+		if is_instance_valid(h):
+			h.visible = Zustand.ist("FINALE")
 	if is_instance_valid(C.Pixel) and has_character("Pixel") and zwischenspiel() == 0:
 		C.Pixel.position = PIXEL_WERKBANK if Zustand.geloest("P1", "prolog") else PIXEL_KABEL
 
@@ -235,6 +239,7 @@ func zs1_ankunft() -> void:
 		Spiel.z("PIX", "ZS1_DACH_PIX_0240"),
 	])
 	await _ei_abgeben()  # falls übersprungen
+	wunsch_eintragen(1)
 	Spielstand.autospeichern()
 
 
@@ -361,7 +366,14 @@ func zs_ankunft(nr: int) -> void:
 			schritte.append(Spiel.z(z.split("_")[2], z))
 	await Spiel.szene(schritte)
 	await _mitbringsel_abgeben(nr)  # falls übersprungen
+	wunsch_eintragen(nr)
 	Spielstand.autospeichern()
+
+
+## Pixels Einkaufsliste (Notizbuch Seite 3): ein Wunsch je Rückkehr, der vierte (Milch) in Welt 4.
+## Wert EINKAUFSLISTE zählt die Wünsche (Errungenschaft „Einkaufsliste komplett“).
+static func wunsch_eintragen(n: int) -> void:
+	Zustand.setze_wert("EINKAUFSLISTE", maxi(int(Zustand.wert("EINKAUFSLISTE", 0)), n))
 
 
 func _mitbringsel_abgeben(nr: int) -> void:
