@@ -117,8 +117,11 @@ func loese(id: String, ab := "") -> void:
 	if r.is_empty():
 		push_error("Zustand: Rätsel %s unbekannt" % id)
 		return
+	var neu := not geloest(id, ab)
 	for s in r.schalter:
 		setze(s)
+	if neu and geloest(id, ab):
+		Klang.jingle("geloest")
 
 
 ## Gelöst = alle „…_GELOEST“-Schalter des Rätsels sind gesetzt. Andere Schalter in der Liste

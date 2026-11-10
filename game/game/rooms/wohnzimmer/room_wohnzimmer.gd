@@ -13,7 +13,8 @@ var _intro := false
 
 func _raum_betreten(erster_besuch: bool) -> void:
 	# Spielbeginn: Szene „Kein WLAN“ (skript/prolog.md, Abschnitt 1)
-	_intro = erster_besuch and not Zustand.war_in("dachboden")
+	# (nicht, wenn das Hauptmenü gleich einen Spielstand lädt)
+	_intro = erster_besuch and not Zustand.war_in("dachboden") and Spiel.start_platz < 0
 
 
 func _nach_uebergang() -> void:

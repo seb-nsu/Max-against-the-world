@@ -28,6 +28,7 @@ func _on_room_entered() -> void:
 	var ab := Bauplan.raum_abschnitt(script_name)
 	if not ab.is_empty() and not _im_abschnitt(Zustand.abschnitt):
 		Zustand.abschnitt = ab
+	Klang.raum_musik(raum_id())
 	var erster_besuch := not Zustand.war_in(raum_id())
 	Telemetrie.raum_betreten(raum_id())
 	Zustand.besuche(raum_id())
@@ -42,6 +43,12 @@ func _on_room_entered() -> void:
 
 
 func _on_room_transition_finished() -> void:
+	# Start aus dem Hauptmenü mit „Fortsetzen“ oder „Laden“: gleich den Spielstand laden
+	if Spiel.start_platz >= 0:
+		var platz := Spiel.start_platz
+		Spiel.start_platz = -1
+		await Spielstand.laden(platz)
+		return
 	var war_wechsel := not Spiel.herkunft_raum.is_empty()
 	Spiel.herkunft_raum = ""
 	if war_wechsel:
@@ -52,6 +59,7 @@ func _on_room_transition_finished() -> void:
 func _on_restore_from_savegame() -> void:
 	Spiel.herkunft_raum = ""
 	Telemetrie.raum_betreten(raum_id())
+	Klang.raum_musik(raum_id())
 	partner_aufstellen()
 	_zustand_anwenden()
 	Spiel.pixel_feld_pruefen()

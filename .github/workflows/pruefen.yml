@@ -23,6 +23,8 @@ jobs:
         run: python3 tools/spieldaten.py --pruefen
       - name: Godot-Bauplan aktuell
         run: python3 tools/godot_raeume.py --pruefen
+      - name: Audio-Dateien passen zu den IDs
+        run: python3 tools/audio_liste.py --pruefen
 
   godot:
     runs-on: ubuntu-latest
@@ -41,6 +43,8 @@ jobs:
         env:
           CQ_TELEMETRIE_BEHALTEN: "1"
         run: timeout 600 ./godot --headless --path game -s res://tests/prolog_durchlauf.gd
+      - name: Menüs, Optionen und Audio-Gerüst
+        run: timeout 300 ./godot --headless --path game -s res://tests/menues.gd
       - name: Telemetrie-Auswertung (Protokoll aus dem Testmodus)
         run: python3 tools/telemetrie_auswertung.py ~/.local/share/godot/app_userdata/*/test_telemetrie --mit-tests > /dev/null
       - name: Prolog-Durchlauf (echte Sprechblasen und Wege)

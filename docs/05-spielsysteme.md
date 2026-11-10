@@ -170,8 +170,8 @@ Mockup: `tools/ui_mockup_hd.py` zeichnet zwei Zustände auf dem Dachboden-Hinter
 
 | Bildschirm | Inhalt |
 | --- | --- |
-| Hauptmenü | Titelbild mit Zapp-O-Mat; Fortsetzen (lädt den neuesten Stand), Neues Spiel, Laden, Optionen, Beenden. Die Menüpunkte sind Fernsehkanäle, der Drehknopf wählt |
-| Pausemenü (Esc) | Weiterspielen, Speichern, Laden, Optionen, Hauptmenü |
+| Hauptmenü | Startszene des Spiels (`game/oberflaeche/hauptmenue.gd`). Titelbild mit Zapp-O-Mat; Fortsetzen (lädt den neuesten Stand, ohne Spielstand ausgegraut), Neues Spiel, Laden, Optionen, Beenden. Die Menüpunkte sind Fernsehkanäle 1 bis 5, der Bildschirm zeigt den gewählten Kanal (bei Fortsetzen Ort, Spielzeit und Datum), der Drehknopf dreht mit; Zifferntasten schalten direkt. Beim allerersten Start kommt vorher der Epilepsie-Hinweis |
+| Pausemenü (Esc) | Weiterspielen, Speichern, Laden, Optionen, Hauptmenü. Öffnet nur, wenn nichts läuft (in Zwischensequenzen und Gesprächen überspringt Esc), und hält das Spiel an. „Hauptmenü“ fragt mit einem zweiten Klick nach, weil Ungespeichertes verloren geht; das Spiel startet dafür neu, damit kein Zustand der alten Sitzung übrig bleibt |
 | Speichern und Laden | Zwölf Plätze mit Vorschaubild, Ort, Welt, Spielzeit und Datum, dazu Autospeicher und Schnellspeicher (siehe Speichern) |
 | Notizbuch | Öffnet sich aus dem Inventar, immer auf Seite 1. Seite 1: aktuelle Ziele, die das Hinweissystem mitpflegt. Seite 2: gesammelte Regeln und Passwort-Teile. Seite 3: Pixels Einkaufsliste als Running Gag, je Welt ein neuer Wunsch (Konzept, Running Gags) |
 | Nahansicht | Bildschirmfüllende Überlagerung in Spielauflösung (480×270) mit Rahmen und Schließen-Knopf oben rechts; zeigt Objekte, deren Text in der Szene zu klein wäre. Es gibt genau 14 Nahansichten im ganzen Spiel; die Liste gehört den Welt-Tabellen (`welten/*.yaml`: Feld `nahansicht` bei Gegenständen, Liste `nahansichten` für Schilder, Tafeln und Ähnliches), die Grafik-Dateien beschreiben die Bilder (Zeile „Nahansichten“). Das Notizbuch trägt Regeln und Passwort-Teile erst nach dem Öffnen der Nahansicht ein |
@@ -179,17 +179,17 @@ Mockup: `tools/ui_mockup_hd.py` zeichnet zwei Zustände auf dem Dachboden-Hinter
 | Reisetasche | Vor jeder Welt: zwei Wahlfächer, ein Pflichtfach. Überlagerung im oberen Bildteil, damit die Sprechblasen darüber sichtbar bleiben: oben Pflichtfach und Wahlfächer, darunter, was daneben liegt (alles Mitreisefähige aus dem Inventar und der Fundkiste). Klick packt ein oder aus, Rechtsklick fragt Pixel; Pixel kommentiert jeden Gegenstand beim ersten Berühren. „Fertig gepackt“ schließt, der Rest kommt in die Fundkiste |
 | Optionen | Siehe unten |
 
-**Optionen:**
+**Optionen:** fünf Reiter wie in üblichen PC-Spielen, aus Haupt- und Pausemenü. Jede Änderung gilt sofort und steht in `user://settings.cfg`; „Standard“ setzt alles zurück.
 
-- Lautstärke getrennt für Musik, Geräusche und Stimmen
-- Textgeschwindigkeit und „Text weiter per Klick“ oder automatisch
-- Untertitel an oder aus (sobald es Stimmen gibt); Liedtexte haben immer Untertitel, kursiv mit Notenzeichen, bei den drei Rätsel-Liedern auch dann, wenn Untertitel aus sind (`04-audio.md`)
-- Sprache Deutsch oder Englisch
-- Große Schrift, Hotspots dauerhaft hervorheben, Bildschirmwackeln aus
-- Vollbild oder Fenster, Fenstergröße in ganzzahligen Stufen
-- Farbenblind-Hilfe: Farbcodes bekommen zusätzlich Symbole (Kreis, Dreieck, Quadrat), siehe Welt 3
-- Flackern reduzieren: ersetzt Lampenflackern und Umschalt-Störungen durch weiche Varianten; ein Epilepsie-Hinweis erscheint beim ersten Start
-- Tastenbelegung änderbar, dazu eine Taste „Text weiter“ (Standard Leertaste, Eingabetaste geht auch; Linksklick geht immer). Die Hotspot-Anzeige liegt auf Umschalt/Shift (halten), damit keine Taste doppelt belegt ist
+| Reiter | Einstellungen |
+| --- | --- |
+| Audio | Gesamtlautstärke, Musik, Geräusche, Stimmen (je 0 bis 100, eigener Audio-Bus); stumm, solange das Fenster im Hintergrund ist |
+| Anzeige | Fenster, Vollbild oder randloses Fenster; Fenstergröße in ganzzahligen Stufen (960×540, 1440×810, 1920×1080); VSync; Bildrate 30, 60, 120 oder unbegrenzt |
+| Spiel | Sprache Deutsch oder Englisch; Textgeschwindigkeit (langsam, normal, schnell, sofort); Text weiter per Klick oder automatisch; Untertitel an oder aus (sobald es Stimmen gibt; Liedtexte haben immer Untertitel, kursiv mit Notenzeichen, bei den drei Rätsel-Liedern auch dann, wenn Untertitel aus sind, `04-audio.md`); Brabbel-Laute als Probe, bis die Entscheidung über die Sprachausgabe fällt |
+| Steuerung | Tastenbelegung für Text weiter (Standard Leertaste, Eingabetaste geht auch; Linksklick geht immer), Figur wechseln (Tab), Hotspots zeigen (Umschalt/Shift halten, damit keine Taste doppelt belegt ist), Pausemenü (Esc), Schnellspeichern (F5), Schnellladen (F9). Mit der Maus geht alles auch ohne Tasten |
+| Barrierefreiheit | Große Schrift (ein Viertel größer); Hotspots dauerhaft zeigen; Bildschirmwackeln aus; Flackern reduzieren (ersetzt Lampenflackern und Umschalt-Störungen durch weiche Varianten; ein Epilepsie-Hinweis erscheint beim ersten Start); Farbenblind-Hilfe (Farbcodes bekommen zusätzlich Symbole: Kreis, Dreieck, Quadrat, siehe Welt 3) |
+
+Wackeln, Flackern und Farbenblind-Hilfe sind als Schalter da; sie wirken, sobald die Effekte mit der Grafik kommen.
 
 Steam-Tags für Barrierefreiheit, die das Spiel damit erfüllt: Untertitel, anpassbare Textgröße, Farbenblind-Modus, Tastenbelegung anpassbar, Steuerung nur mit der Maus, kein Zeitdruck. Die Liste wird vor der Store-Seite gegen Steams aktuelle Barrierefreiheits-Felder geprüft.
 

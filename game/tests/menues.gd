@@ -1,0 +1,214 @@
+extends SceneTree
+## Headless-Test der Menüs, Optionen und des Audio-Gerüsts:
+## - Einstellungen: Rundreise über die Datei, Buslautstärken, große Schrift, Tastenbelegung,
+##   Zurücksetzen
+## - Klang: Raum-Musik aus der Welt-Tabelle, fehlende Dateien werden gemerkt, nichts stürzt ab
+## - Hauptmenü: Epilepsie-Hinweis beim ersten Start, fünf Kanäle, Fortsetzen ohne Spielstand aus,
+##   Optionen (fünf Reiter) und Laden (16 Plätze) öffnen und schließen, Neues Spiel startet im
+##   Wohnzimmer und blendet HUD und Popochiu-Oberfläche wieder ein
+## - Pausemenü: öffnet nur, wenn nichts läuft, hält das Spiel an, Speichern zeigt zwölf Plätze,
+##   Speichern und Fortsetzen aus dem Hauptmenü über den neuesten Platz
+##
+## Aufruf (aus dem Ordner game/):
+##   godot --headless --path . -s res://tests/menues.gd
+## Ende mit Code 0 (alles grün) oder 1 (Fehler, Liste am Ende).
+
+const HAUPTMENUE := "res://oberflaeche/hauptmenue.tscn"
+
+var fehler: Array[String] = []
+var _pruefungen := 0
+var _ordner := "user://test_menues/%d/" % OS.get_process_id()
+
+
+func _initialize() -> void:
+	_lauf.call_deferred()
+
+
+func pruefe(ok: bool, was: String) -> void:
+	_pruefungen += 1
+	if not ok:
+		fehler.append(was)
+		print("  FEHLER: ", was)
+
+
+func _warten(frames := 2) -> void:
+	for i in frames:
+		await process_frame
+
+
+func _warten_bis(bedingung: Callable, sekunden := 10.0) -> bool:
+	var ende := Time.get_ticks_msec() + int(sekunden * 1000.0)
+	while not bedingung.call():
+		if Time.get_ticks_msec() > ende:
+			return false
+		await process_frame
+	return true
+
+
+func _lauf() -> void:
+	await process_frame
+	var spiel = root.get_node("Spiel")
+	spiel.testmodus = true
+	DirAccess.make_dir_recursive_absolute(_ordner)
+	CQSaveLoad.ordner = _ordner + "saves/"
+	var einst = root.get_node("Einstellungen")
+	einst.datei = _ordner + "settings.cfg"
+	einst.laden()
+
+	_einstellungen(einst)
+	_klang(root.get_node("Klang"))
+	await _hauptmenue(spiel, einst)
+	await _pausemenue(spiel)
+	await _fortsetzen(spiel)
+
+	print("")
+	print("Prüfungen: %d, Fehler: %d" % [_pruefungen, fehler.size()])
+	for f in fehler:
+		print("  FEHLER: ", f)
+	quit(1 if fehler.size() > 0 else 0)
+
+
+func _einstellungen(einst) -> void:
+	print("Einstellungen")
+	pruefe(einst.erster_start(), "erster Start ohne Datei")
+	pruefe(einst.wert("musik") == 70, "Standard Musik 70")
+	einst.setze("musik", 40)
+	var bus := AudioServer.get_bus_index("Musik")
+	pruefe(bus >= 0, "Bus Musik vorhanden")
+	pruefe(is_equal_approx(AudioServer.get_bus_volume_db(bus), linear_to_db(0.4)), "Musik-Bus auf 40 %")
+	einst.setze("stimmen", 0)
+	pruefe(AudioServer.is_bus_mute(AudioServer.get_bus_index("Stimmen")), "Stimmen 0 = stumm")
+	pruefe(not einst.erster_start(), "nach dem Speichern kein erster Start mehr")
+	var cfg := ConfigFile.new()
+	pruefe(cfg.load(einst.datei) == OK and cfg.get_value("optionen", "musik") == 40, "Musik 40 in der Datei")
+	einst.setze("grosse_schrift", true)
+	pruefe(einst.schrift(10) == 13 and einst.schrift(12) == 15, "große Schrift: ein Viertel größer")
+	einst.taste_belegen("cq_figur_wechseln", KEY_F)
+	pruefe(einst.taste("cq_figur_wechseln") == KEY_F, "Figur wechseln auf F")
+	einst.laden()
+	pruefe(einst.wert("musik") == 40 and einst.wert("grosse_schrift") == true, "Werte nach erneutem Laden")
+	einst.zuruecksetzen()
+	pruefe(einst.wert("musik") == 70 and einst.schrift(10) == 10, "Zurücksetzen")
+	pruefe(einst.taste("cq_figur_wechseln") == KEY_TAB, "Zurücksetzen: Tab wieder Figur wechseln")
+	pruefe(einst.taste("cq_pause") == KEY_ESCAPE, "Pause auf Esc")
+
+
+func _klang(klang) -> void:
+	print("Klang")
+	pruefe(klang.musik_fuer_raum("dorfplatz") == "w1_dorf", "Dorfplatz → w1_dorf")
+	pruefe(klang.musik_fuer_raum("wohnzimmer") == "gegenwart", "Wohnzimmer → gegenwart")
+	klang.musik("gibt_es_nicht")
+	pruefe(klang.fehlend.has("musik/gibt_es_nicht"), "fehlende Musik gemerkt")
+	klang.geraeusch("ui_klick")
+	klang.jingle("geloest")
+	pruefe(klang.protokoll.slice(-2) == ["geraeusch/ui_klick", "jingle/geloest"], "Protokoll der Klänge")
+	klang.zeile("MAX", "P0_WOHN_MAX_0010", "Ein Balken. Ein einziger Balken.")
+	pruefe(klang.fehlend.has("stimme/de/P0_WOHN_MAX_0010"), "fehlende Stimme gemerkt")
+	pruefe(klang.silben("Ein Balken") == 3, "Silben zählen")
+
+
+func _hauptmenue(spiel, einst) -> void:
+	print("Hauptmenü")
+	# Wie beim allerersten Start: keine Optionen-Datei
+	DirAccess.remove_absolute(einst.datei)
+	einst.laden()
+	change_scene_to_file(HAUPTMENUE)
+	await _warten(3)
+	var menue = current_scene
+	pruefe(menue != null and menue.scene_file_path == HAUPTMENUE, "Hauptmenü ist die Szene")
+	pruefe(menue.hinweis_offen(), "Epilepsie-Hinweis beim ersten Start")
+	pruefe(not spiel.hud.visible, "HUD im Menü aus")
+	menue._hinweis_schliessen()
+	pruefe(not menue.hinweis_offen() and not einst.erster_start(), "Hinweis bestätigt")
+	pruefe(menue._knoepfe.size() == 5, "fünf Kanäle")
+	pruefe(menue._knoepfe[0].disabled, "Fortsetzen ohne Spielstand aus")
+	pruefe(menue._kanal == 1, "ohne Spielstand steht Kanal 2 (Neues Spiel)")
+	menue._ausloesen(3)
+	await _warten()
+	var opt = menue.unter_offen()
+	pruefe(opt != null and opt._reiter.get_tab_count() == 5, "Optionen mit fünf Reitern")
+	opt.zurueck.emit()
+	await _warten()
+	pruefe(menue.unter_offen() == null and menue._haupt.visible, "Optionen geschlossen")
+	menue._ausloesen(2)
+	await _warten()
+	var plaetze = menue.unter_offen()
+	pruefe(plaetze != null and _kacheln(plaetze) == 16, "Laden: 12 Plätze, Schnell, 3 Auto")
+	pruefe(_kacheln(plaetze, true) == 16, "Laden: leere Plätze nicht wählbar")
+	plaetze.zurueck.emit()
+	await _warten()
+	menue._ausloesen(1)
+	var da := await _warten_bis(func(): return _im_raum("Wohnzimmer"), 20.0)
+	pruefe(da, "Neues Spiel: im Wohnzimmer")
+	pruefe(spiel.hud.visible, "HUD im Spiel wieder an")
+	var gui_ebene = root.get_node("E").get_node("GraphicInterfaceLayer")
+	pruefe(gui_ebene.visible, "Popochiu-Oberfläche wieder an")
+
+
+func _pausemenue(spiel) -> void:
+	print("Pausemenü")
+	var spielstand = root.get_node("Spielstand")
+	pruefe(await _warten_bis(func(): return not spielstand.beschaeftigt(), 30.0), "Intro durch")
+	pruefe(spiel.pause_moeglich(), "Pause möglich")
+	var esc := InputEventAction.new()
+	esc.action = "cq_pause"
+	esc.pressed = true
+	Input.parse_input_event(esc)
+	await _warten(3)
+	pruefe(spiel.pause_offen() and paused, "Esc öffnet das Pausemenü und hält das Spiel an")
+	pruefe(not spiel.pause_moeglich(), "kein zweites Pausemenü")
+	var p = spiel._pause
+	p._unter_zeigen("speichern")
+	await _warten()
+	pruefe(_kacheln(p._unter) == 12, "Speichern: zwölf Plätze")
+	p._unter._gewaehlt_von(2, false)
+	await _warten()
+	pruefe(not root.get_node("Spielstand").saveload.kopf_lesen(2).is_empty(), "auf Platz 2 gespeichert")
+	p._unter_schliessen()
+	await _warten()
+	p._zum_hauptmenue()
+	pruefe(not spiel.hauptmenue_angefragt, "Hauptmenü erst beim zweiten Klick")
+	p.schliessen()
+	await _warten()
+	pruefe(not spiel.pause_offen() and not paused, "Weiterspielen: Spiel läuft wieder")
+	spiel.pause_oeffnen()
+	spiel._pause._zum_hauptmenue()
+	spiel._pause._zum_hauptmenue()
+	pruefe(spiel.hauptmenue_angefragt and not paused, "Hauptmenü nach Bestätigung")
+
+
+func _fortsetzen(spiel) -> void:
+	print("Fortsetzen")
+	# Im echten Spiel führt der Weg zurück über einen Neustart; hier liegt das Menü über dem Raum.
+	var menue = load(HAUPTMENUE).instantiate()
+	root.add_child(menue)
+	await _warten(2)
+	pruefe(not spiel.hud.visible, "HUD im Menü wieder aus")
+	pruefe(not menue._knoepfe[0].disabled and menue._neuester == 2, "Fortsetzen: neuester Platz 2")
+	pruefe(menue._kanal == 0, "mit Spielstand steht Kanal 1 (Fortsetzen)")
+	pruefe(menue._kanal_info.text.contains("Wohnzimmer"), "Fortsetzen zeigt den Ort")
+	menue.queue_free()
+	await _warten(2)
+	pruefe(spiel.hud.visible, "HUD nach dem Menü wieder an")
+	# Der Startraum lädt den gewählten Platz, sobald er betreten ist
+	var spielstand = root.get_node("Spielstand")
+	var geladen := [-1]
+	spielstand.geladen.connect(func(s): geladen[0] = s)
+	spiel.start_platz = 2
+	root.get_node("R").current._on_room_transition_finished()
+	pruefe(await _warten_bis(func(): return geladen[0] == 2, 20.0), "Startraum lädt Platz 2")
+	pruefe(spiel.start_platz == -1, "Startplatz verbraucht")
+	pruefe(await _warten_bis(func(): return _im_raum("Wohnzimmer"), 20.0), "nach dem Laden im Wohnzimmer")
+
+
+func _im_raum(sn: String) -> bool:
+	var r = root.get_node("R")
+	return root.get_node("E").in_room and is_instance_valid(r.current) and r.current.script_name == sn
+
+
+func _kacheln(seite: Control, nur_gesperrt := false) -> int:
+	var n := 0
+	for k in seite.get_child(seite.get_child_count() - 1).get_children():
+		if k is Button and k.size.y > 30 and (not nur_gesperrt or k.disabled):
+			n += 1
+	return n

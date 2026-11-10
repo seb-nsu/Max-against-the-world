@@ -5,7 +5,7 @@ Auflösung 480×270 (vorläufig; Maße zentral in `tools/aufloesung.py`, Wechsel
 `python3 tools/aufloesung.py --umrechnen 480x270 640x360`), Pixelgrafik ohne Glättung, ganzzahlig
 skaliert. Text (Nunito) wird in voller Bildschirmauflösung gezeichnet (Stretch-Modus
 „canvas_items“ mit Pixel-Einrasten, `docs/05-spielsysteme.md`, Schrift). Bildschirmfotos aus dem
-laufenden Spiel: `tests/bildschirmfoto.gd` (Aufruf im Kopf der Datei, braucht xvfb-run). Stand: Stufe 1
+laufenden Spiel: `tests/bildschirmfoto.gd` und `tests/bildschirmfoto_menues.gd` (Aufruf im Kopf der Datei, braucht xvfb-run). Stand: Stufe 1
 (Grundgerüst) und Graubox: Prolog und ganz Welt 1 (R1 bis R13, Rätsel 10 über Weg A oder B)
 sind mit Platzhaltergrafik durchspielbar, danach die Ankunft in Zwischenspiel 1 mit der Abgabe
 des Dracheneis. Reisetasche packen und Kanal 7 fehlen noch: der Drehknopf meldet dort „Ende der
@@ -115,6 +115,12 @@ Autoloads in `skripte/`:
 | `Hinweise` | Hilfe-Pfote: Schrittwahl, Stufen, Wartezeiten 30 und 60 Sekunden, Wartezeile |
 | `Spielstand` | Autospeicher bei jedem Raumwechsel (3 Plätze), F5/F9, 12 manuelle Plätze, wartet mit dem Speichern bis eine Szene vorbei ist |
 | `Telemetrie` | anonymes Spielprotokoll, nur im Testbuild und nur mit Zustimmung (siehe Testbuild und Telemetrie) |
+| `Einstellungen` | Optionen in `user://settings.cfg`: Lautstärken je Bus, Fenster, VSync, Bildrate, Sprache, Texttempo, Tastenbelegung, Barrierefreiheit; gelten sofort |
+| `Klang` | Audio-Gerüst: Musik je Raum (Welt-Tabelle), Jingles, Geräusche, Stimmen über IDs aus `audio/`; fehlende Dateien bleiben still (`docs/04-audio.md`, Im Spiel) |
+
+Menüs in `oberflaeche/`: `hauptmenue.tscn` ist die Startszene; `pausemenue.gd` (Esc),
+`spielstaende.gd` (Speichern und Laden) und `optionen.gd` (fünf Reiter) teilen den Stil aus
+`menue_stil.gd`. Wer im Editor direkt einen Raum starten will, nimmt „Szene starten“ (F6).
 
 Speichern nutzt Popochius eigene Speicherung (Räume, Figuren, Inventar je Figur, Gespräche),
 nur das Dateiformat ist eigenes JSON mit Versionsnummer: `user://saves/<platz>.json`
@@ -203,6 +209,7 @@ cd game
 godot --headless --path . --import                                   # einmal nach dem Klonen
 godot --headless --path . -s res://tests/prolog_durchlauf.gd          # Testmodus, gut 3 Minuten
 godot --headless --path . -s res://tests/prolog_durchlauf.gd -- --echt   # echte Sprechblasen, gut 9 Minuten
+godot --headless --path . -s res://tests/menues.gd                    # Menüs, Optionen, Audio-Gerüst, unter 1 Minute
 ```
 
 Der allererste Import nach dem Klonen meldet rund 60 Fehler (Autoloads und Übersetzungen, die erst beim Import entstehen). Das ist normal: Ein zweiter Import und das Öffnen im Editor laufen fehlerfrei. Im Editor genügt es, das Projekt einmal zu öffnen und, falls Godot fragt, neu zu laden.

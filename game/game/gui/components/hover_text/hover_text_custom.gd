@@ -12,7 +12,12 @@ func _ready() -> void:
 	label.set_anchors_preset(Control.PRESET_TOP_LEFT)
 	label.size = Vector2(BREITE, 14)
 	label.add_theme_color_override(&"default_color", GELB)
-	label.add_theme_font_size_override(&"normal_font_size", 10)
+	_schrift()
+	Einstellungen.geaendert.connect(func(k): if k == "grosse_schrift": _schrift())
+
+
+func _schrift() -> void:
+	label.add_theme_font_size_override(&"normal_font_size", Einstellungen.schrift(10))
 
 
 func _process(_delta: float) -> void:
