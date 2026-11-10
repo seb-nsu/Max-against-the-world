@@ -776,6 +776,15 @@ func welt_beginnen(ab: String) -> void:
 	await R.goto_room(Bauplan.raum_script_name(erster.get("id", "")))
 
 
+## Ist der Abschnitt in Godot gebaut? Die Raumdaten (Bauplan) können vor den Szenen da sein;
+## erst der Godot-Bau (addons/couch_quest_bau) legt Räume und Gegenstände an. Geprüft wird die
+## Szene des ersten Raums der Welt-Tabelle.
+func abschnitt_gebaut(ab: String) -> bool:
+	var erster: Dictionary = Bauplan.welten.get(ab, {}).get("raeume", [{}])[0]
+	var rid: String = str(erster.get("id", ""))
+	return not rid.is_empty() and ResourceLoader.exists("res://game/rooms/%s/room_%s.tscn" % [rid, rid])
+
+
 ## Zwischenspiel nach einer Welt (skript/zwischenspiele-und-finale.md): zurück auf den
 ## Dachboden, Abschnitt „finale“ (der Dachboden gehört dort zur Welt-Tabelle), Wert
 ## ZWISCHENSPIEL = nr. Anders als welt_beginnen() bleibt das Inventar, wie es ist: Opa nimmt

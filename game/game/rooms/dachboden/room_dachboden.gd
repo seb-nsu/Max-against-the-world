@@ -266,7 +266,10 @@ func zs1_drehknopf() -> void:
 		Spiel.z("MAX", "ZS1_DACH_MAX_0660"),
 		Spiel.z("PIX", "ZS1_DACH_PIX_0670"),
 	])
-	await Spiel.welt_beginnen("welt-2")
+	if Spiel.abschnitt_gebaut("welt-2"):
+		await Spiel.welt_beginnen("welt-2")
+	else:
+		Spiel.ausbau_ende("UI_WELT_1_ENDE")
 
 
 ## Ansehen im Zwischenspiel 1 (0310–0375, Fundkiste 0420/0425): nur, was sich verändert hat;
@@ -376,7 +379,7 @@ func zs_drehknopf(nr: int) -> void:
 		Spielstand.autospeichern()
 		return
 	await _zeilen(d.kanal)
-	if Bauplan.plaene.has(d.welt):
+	if Spiel.abschnitt_gebaut(d.welt):
 		await Spiel.welt_beginnen(d.welt)
 	else:
 		Spiel.ausbau_ende(d.ende)
