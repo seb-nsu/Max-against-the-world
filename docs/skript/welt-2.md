@@ -909,7 +909,7 @@ Laufbahn, Sandgrube, Kampfrichterzelt, Zuschauerränge, im Hintergrund der Glock
 
 | ID | Sprecher | Text | Auslöser |
 | --- | --- | --- | --- |
-| W2\_STAD\_MAX\_0010 | Max | Ein Stadion. Hier schwitzen Leute mit Absicht. | erstes Betreten |
+| W2\_STAD\_MAX\_0010 | Max | Ein Stadion. Hier schwitzen Leute mit Absicht. Die spinnen, die Griechen. | erstes Betreten |
 | W2\_STAD\_MAX\_0020 | Max | Eine Laufbahn aus Sand. Sie führt von hier nach da, und mehr passiert nicht. Angeblich ist das aufregend. | Ansehen: Laufbahn |
 | W2\_STAD\_MAX\_0025 | Max | Ich guck die Bahn entlang. Am Ende ist das Ziel, am Anfang steh ich. Dazwischen steht eine Schildkröte und dehnt sich. | Ansehen: Laufbahn, zweites Mal |
 | W2\_STAD\_MAX\_0030 | Max | Eine Sandgrube mit Mauer. Hier wird gerungen, mit Armen oder, wie ich gehört hab, mit Wörtern. | Ansehen: Sandgrube |

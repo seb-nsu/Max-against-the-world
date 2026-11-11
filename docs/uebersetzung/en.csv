@@ -3359,7 +3359,7 @@ W2_STAD_LEO_0230,TONIGHT WE DINE … AT HOME! MY MOTHER IS COOKING!
 W2_STAD_LEO_0330,THE CAT CAN TAKE IT! THE CAT IS A SPARTAN!
 W2_STAD_LEO_0350,WHOEVER IS LOUDER WINS! THAT'S HOW I'VE ALWAYS UNDERSTOOD IT! SO FAR NOBODY HAS DISAGREED!
 W2_STAD_LEO_0370,… a bit. BUT LOUD!
-W2_STAD_MAX_0010,A stadium. People sweat here on purpose.
+W2_STAD_MAX_0010,A stadium. People sweat here on purpose. These Greeks are crazy.
 W2_STAD_MAX_0020,"A running track made of sand. It goes from here to there, and nothing more happens. Apparently that's exciting."
 W2_STAD_MAX_0025,"I look down the track. The finish is at the end, I'm at the start. In between there's a tortoise doing stretches."
 W2_STAD_MAX_0030,"A sand pit with a wall. This is where they wrestle, with arms or, as I've heard, with words."
@@ -3872,7 +3872,7 @@ W3_EING_MAX_0070,What does 08/15 mean?
 W3_EING_MAX_0100,Can you let me in?
 W3_EING_MAX_0120,Why do you squeak?
 W3_EING_MAX_0140,I'll be off then.
-W3_EING_MAX_0160,You never saw me. You're looking for somebody else.
+W3_EING_MAX_0160,This is not the boy you're looking for.
 W3_EING_MAX_0190,"Here. Sahra Konner. Forty-seven of them, with addresses."
 W3_EING_MAX_0240,"Here, for your joints: olive oil. From a world where people thought sport was a good idea."
 W3_EING_MAX_0280,"Without oil he just keeps saying cheerio and squeaking. I feel sorry for him, as far as you can feel sorry for a robot."
@@ -3893,7 +3893,7 @@ W3_EING_MAX_0450,"A noticeboard with test results. Hundreds of sheets, all with 
 W3_EING_MAX_0470,"Test subject 12: ""Asked about the cake. Was reset."" Test subject 33: ""Did not ask about the cake. Was reset."" Fair."
 W3_EING_MAX_0480,"Yellow and black stripes on the floor. They say: caution. Caution of what, they don't say, and that's called design."
 W3_EING_MAX_0485,I stand on a yellow stripe. Nothing happens. Then on a black one. Nothing either. Pretty disappointing for so much warning.
-W3_EING_MAX_0490,"A lamp on the ceiling, dripping next to it. Someone mopped here for years, and it's still dripping. Nineteen years against one drip. The drip is winning."
+W3_EING_MAX_0490,"A lamp on the ceiling, dripping next to it. Someone mopped here for years, and it's still dripping. That's called Sisyphus with a mop."
 W3_EING_MAX_0495,"The drop lands right next to the bucket, every single time. I'm sure it does it on purpose."
 W3_EING_MAX_0500,"A passage under the city. Neon behind me, concrete ahead. The city has a basement, and the basement has a door."
 W3_EING_MAX_0505,Something is humming somewhere at the back. Big and patient. Like a fridge that rules the world.
@@ -3954,7 +3954,7 @@ W3_HINT_PIX_0130,"Look at the crying man, the woman with the umbrella and the mu
 W3_HINT_PIX_0140,You have the answers in your notebook. Now you only have to say them instead of thinking.
 W3_HINT_PIX_0140_2,"For you, with all due respect, that shouldn't be particularly hard."
 W3_HINT_PIX_0150,"For every question, the sensible answer fails. Pick the one that sounds like someone off the street said it."
-W3_HINT_PIX_0160,Wallet: argue with it. Rain: play the synthesizer. Soup: cry into it. I'm only saying this once. I have now said it once.
+W3_HINT_PIX_0160,Tortoise: argue with it. Rain: play the synthesizer. Soup: cry into it. I'm only saying this once. I have now said it once.
 W3_HINT_PIX_0210,"The man in the cardigan wants a recognition dish, the cook knows one number. You have to translate. You're bad at it, but it's only one number."
 W3_HINT_PIX_0220,Two times two. How much is that?
 W3_HINT_PIX_0220_2,"Don't tell me, I've known for ages. Tell the cook, he's waiting for exactly one number."
@@ -4418,7 +4418,7 @@ W3_PIEP_MAX_0290,A coffee puddle that isn't spreading. It's still thinking about
 W3_PIEP_MAX_0295,The puddle has a skin now. Kalle's coffee is alive.
 W3_PIEP_NAR_0030,"The mug tips over. The coffee oozes across the floor, right into Piepsi's joints."
 W3_PIEP_NAR_0050,"Piepsi twitches. Sits up. His eye glows blue, his hat pops up."
-W3_PIEP_OPA_0120,"Help me, Max. You're the only one who's got time right now. The core must stay soft. Hard outside, soft inside. Otherwise all is lost."
+W3_PIEP_OPA_0120,"Help me, Max. You're my only hope. The core must stay soft. Hard outside, soft inside. Otherwise all is lost."
 W3_PIEP_OPA_0130,And while you're there anyway …
 W3_PIEP_PIE_0060,Beep. Beeeep. Beep-beep-beep.
 W3_PIEP_PIE_0100,Beep. Beep-beep. Beeeeep.
@@ -4636,10 +4636,10 @@ W3_TEST_DEC_0010,It has been raining for twenty-nine years. I keep count. Somebo
 W3_TEST_DEC_0020,Deckert. Detective. I check who's human here and who's only pretending. Machines answer logically. Humans just answer.
 W3_TEST_DEC_0050,"Nothing. You stay outside the alley and I write in my notebook: ""Suspiciously logical."" The notebook is full."
 W3_TEST_DEC_0070,Cats always pass the test. They don't answer. That's the most human answer there is.
-W3_TEST_DEC_0100,You find a wallet on the bus. Inside is a photo of you. What do you do?
+W3_TEST_DEC_0100,You're walking through the desert. A tortoise is lying on its back. It can't get up. What do you do?
 W3_TEST_DEC_0120,Helpful. Efficient. No hesitation. That's how a well-raised machine answers. Fail.
-W3_TEST_DEC_0140,Resentful. Unfair. Towards a wallet. That's a human. Next.
-W3_TEST_DEC_0160,"The wallet doesn't have Wi-Fi. Nobody here has Wi-Fi. That wasn't an answer, that was homesickness. Fail."
+W3_TEST_DEC_0140,Resentful. Unfair. Towards a reptile. That's a human. Next.
+W3_TEST_DEC_0160,"The tortoise doesn't have Wi-Fi. Nobody here has Wi-Fi. That wasn't an answer, that was homesickness. Fail."
 W3_TEST_DEC_0170,Second question. It's raining. It will rain tomorrow. It will always rain. What do you do?
 W3_TEST_DEC_0190,Sensible. Dry. Calculated. Machine. I was almost impressed. Fail.
 W3_TEST_DEC_0210,Pointless. Wet. Beautiful. No program in the world would do that voluntarily. Next.
@@ -4656,8 +4656,8 @@ W3_TEST_DEC_0410,The cat is right. I'll make a note of it. In the margin.
 W3_TEST_MAX_0040,What happens if I fail?
 W3_TEST_MAX_0060,What about the cat?
 W3_TEST_MAX_0090,All right. Let's start the test.
-W3_TEST_MAX_0110,I hand it in to the driver.
-W3_TEST_MAX_0130,First I argue with it. It should have known I don't like that photo.
+W3_TEST_MAX_0110,I turn it over.
+W3_TEST_MAX_0130,First I argue with it. It should have known it was going to be windy.
 W3_TEST_MAX_0150,I ask it for the Wi-Fi password.
 W3_TEST_MAX_0180,I stay inside.
 W3_TEST_MAX_0200,I go outside and play the synthesizer. For nobody.

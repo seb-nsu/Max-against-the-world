@@ -3646,7 +3646,7 @@ W2_SAND_MAX_0365,"Ein Kern. Ein ganzer Baum, zusammengefaltet in einen Krümel."
 W2_SAND_FAW_0370,Ein Kern. Du gibst uns einen Kern. Dafür wedeln wir genau einmal. So. Fertig.,A seed. You're giving us a seed. For that we'll fan exactly once. There. Done.
 W2_SAND_MAX_0380,"Den ganzen Baum abgeben? Dann wedeln die damit. Das wär auch Wind, aber nicht der richtige.","Hand over the whole tree? Then they'd fan with it. That'd be wind too, but not the right kind."
 W2_SAND_MAX_0390,"Den Setzling hier einpflanzen? Dann steht hier in hundert Jahren ein Baum. Ich hab keine hundert Jahre, ich hab eine Fähre.","Plant the sapling here? Then there'll be a tree here in a hundred years. I haven't got a hundred years, I've got a ferry."
-W2_STAD_MAX_0010,Ein Stadion. Hier schwitzen Leute mit Absicht.,A stadium. People sweat here on purpose.
+W2_STAD_MAX_0010,"Ein Stadion. Hier schwitzen Leute mit Absicht. Die spinnen, die Griechen.",A stadium. People sweat here on purpose. These Greeks are crazy.
 W2_STAD_MAX_0020,"Eine Laufbahn aus Sand. Sie führt von hier nach da, und mehr passiert nicht. Angeblich ist das aufregend.","A running track made of sand. It goes from here to there, and nothing more happens. Apparently that's exciting."
 W2_STAD_MAX_0025,"Ich guck die Bahn entlang. Am Ende ist das Ziel, am Anfang steh ich. Dazwischen steht eine Schildkröte und dehnt sich.","I look down the track. The finish is at the end, I'm at the start. In between there's a tortoise doing stretches."
 W2_STAD_MAX_0030,"Eine Sandgrube mit Mauer. Hier wird gerungen, mit Armen oder, wie ich gehört hab, mit Wörtern.","A sand pit with a wall. This is where they wrestle, with arms or, as I've heard, with words."
@@ -4328,13 +4328,13 @@ W3_TEST_DEC_0070,"Katzen bestehen den Test immer. Sie antworten nicht. Das ist d
 W3_TEST_PIX_0080,"Ich bin nicht menschlich. Ich bin, wenn man es genau nimmt, ein gutes Stück darüber hinaus.","I am not human. I am, strictly speaking, a good deal beyond it."
 W3_TEST_PIX_0080_2,"Aber danke. Es kommt selten vor, dass jemand mit Hut das erkennt.",But thank you. It's rare for someone in a hat to recognise that.
 W3_TEST_MAX_0090,Na gut. Fangen wir mit dem Test an.,All right. Let's start the test.
-W3_TEST_DEC_0100,Du findest im Bus ein Portemonnaie. Darin ist ein Foto von dir. Was tust du?,You find a wallet on the bus. Inside is a photo of you. What do you do?
-W3_TEST_MAX_0110,Ich geb es beim Fahrer ab.,I hand it in to the driver.
+W3_TEST_DEC_0100,Du gehst durch die Wüste. Eine Schildkröte liegt auf dem Rücken. Sie kommt nicht hoch. Was tust du?,You're walking through the desert. A tortoise is lying on its back. It can't get up. What do you do?
+W3_TEST_MAX_0110,Ich dreh sie um.,I turn it over.
 W3_TEST_DEC_0120,Hilfsbereit. Effizient. Ohne Zögern. So antwortet eine Maschine mit guter Kinderstube. Durchgefallen.,Helpful. Efficient. No hesitation. That's how a well-raised machine answers. Fail.
-W3_TEST_MAX_0130,"Ich streite erst mal mit ihm. Es hätte wissen müssen, dass ich das Foto nicht mag.",First I argue with it. It should have known I don't like that photo.
-W3_TEST_DEC_0140,Nachtragend. Unfair. Gegenüber einem Portemonnaie. Das ist ein Mensch. Weiter.,Resentful. Unfair. Towards a wallet. That's a human. Next.
-W3_TEST_MAX_0150,Ich frag es nach dem WLAN-Passwort.,I ask it for the Wi-Fi password.
-W3_TEST_DEC_0160,"Das Portemonnaie hat kein WLAN. Niemand hier hat WLAN. Das war keine Antwort, das war Heimweh. Durchgefallen.","The wallet doesn't have Wi-Fi. Nobody here has Wi-Fi. That wasn't an answer, that was homesickness. Fail."
+W3_TEST_MAX_0130,"Ich streite erst mal mit ihr. Sie hätte wissen müssen, dass es windig wird.",First I argue with it. It should have known it was going to be windy.
+W3_TEST_DEC_0140,Nachtragend. Unfair. Gegenüber einem Reptil. Das ist ein Mensch. Weiter.,Resentful. Unfair. Towards a reptile. That's a human. Next.
+W3_TEST_MAX_0150,Ich frag sie nach dem WLAN-Passwort.,I ask it for the Wi-Fi password.
+W3_TEST_DEC_0160,"Die Schildkröte hat kein WLAN. Niemand hier hat WLAN. Das war keine Antwort, das war Heimweh. Durchgefallen.","The tortoise doesn't have Wi-Fi. Nobody here has Wi-Fi. That wasn't an answer, that was homesickness. Fail."
 W3_TEST_DEC_0170,Zweite Frage. Es regnet. Es wird morgen regnen. Es wird immer regnen. Was tust du?,Second question. It's raining. It will rain tomorrow. It will always rain. What do you do?
 W3_TEST_MAX_0180,Ich bleib drinnen.,I stay inside.
 W3_TEST_DEC_0190,Vernünftig. Trocken. Berechnet. Maschine. Ich war fast beeindruckt. Durchgefallen.,Sensible. Dry. Calculated. Machine. I was almost impressed. Fail.
@@ -4844,7 +4844,7 @@ W3_PIEP_PIX_0090,"Er piept, ich bin eine Katze. Wir sprechen beide die Sprache d
 W3_PIEP_PIX_0090_2,Sie besteht hauptsächlich aus Beschwerden.,It consists mainly of complaints.
 W3_PIEP_PIE_0100,Piep. Piep-piep. Piiiiep.,Beep. Beep-beep. Beeeeep.
 W3_PIEP_PIX_0110,"Er sagt: „Ich habe eine Nachricht gespeichert. Seit Jahren. Für einen Max.“ Er hat Max gesagt, als wäre das ein Fehlercode.","He says: ""I have a message stored. For years. For a Max."" He said Max like it was an error code."
-W3_PIEP_OPA_0120,"Hilf mir, Max. Du bist der Einzige, der gerade Zeit hat. Der Kern muss weich bleiben. Außen hart, innen weich. Sonst ist alles verloren.","Help me, Max. You're the only one who's got time right now. The core must stay soft. Hard outside, soft inside. Otherwise all is lost."
+W3_PIEP_OPA_0120,"Hilf mir, Max. Du bist meine einzige Hoffnung. Der Kern muss weich bleiben. Außen hart, innen weich. Sonst ist alles verloren.","Help me, Max. You're my only hope. The core must stay soft. Hard outside, soft inside. Otherwise all is lost."
 W3_PIEP_OPA_0130,Und wenn du schon unterwegs bist …,And while you're there anyway …
 W3_PIEP_MAX_0140,"Das war Opa. In Blau und auf den Knien, seit Jahren gespeichert. Wie kommt Opa bitte in einen Putzroboter im Jahr 2099?","That was Grandpa. In blue and on his knees, stored for years. How on earth does Grandpa end up in a cleaning robot in 2099?"
 W3_PIEP_PIX_0150,"Er war schon einmal hier, das riecht man an der Nachricht.","He has been here before, you can smell it on the message."
@@ -4890,7 +4890,7 @@ W3_EING_MAX_1083,Ich komm wieder. Wirklich.,I'll be back. Really.
 W3_EING_HAU_1086,"Das ist mein Satz, Bursche. Aber ich leihe ihn dir gern. Bring ihn sauber zurück.","That's my line, lad. But I'm happy to lend it to you. Bring it back clean."
 W3_EING_MAX_0140,Ich geh dann mal.,I'll be off then.
 W3_EING_HAU_0150,"Pfiat di, Bursche. Ich komme wieder. Also: Ich bleibe hier. Aber es klingt besser so.","Cheerio, lad. I'll be back. That is: I'm staying here. But it sounds better that way."
-W3_EING_MAX_0160,Du hast mich nie gesehen. Du suchst jemand anderen.,You never saw me. You're looking for somebody else.
+W3_EING_MAX_0160,"Das ist nicht der Junge, den du suchst.",This is not the boy you're looking for.
 W3_EING_HAU_0170,Ich bin ein Hausmeister. Ich suche nur Dreck.,I'm a caretaker. I'm only looking for dirt.
 W3_EING_PIX_0180,Du hast gerade mit der Hand gewedelt und einen Roboter angelogen. Ich habe es gesehen.,You just waved your hand and lied to a robot. I saw it.
 W3_EING_PIX_0180_2,"Ich werde es wieder sehen, in meinen Träumen, und ich werde jedes Mal lachen.","I shall see it again, in my dreams, and I shall laugh every time."
@@ -4931,7 +4931,7 @@ W3_EING_PIX_0460,"Testperson 47: „Sehr gut, aber zu wenig Kuchen verlangt.“"
 W3_EING_MAX_0470,Testperson 12: „Hat nach dem Kuchen gefragt. Wurde zurückgesetzt.“ Testperson 33: „Hat nicht nach dem Kuchen gefragt. Wurde zurückgesetzt.“ Fair.,"Test subject 12: ""Asked about the cake. Was reset."" Test subject 33: ""Did not ask about the cake. Was reset."" Fair."
 W3_EING_MAX_0480,"Gelb-schwarze Streifen am Boden. Sie sagen: Achtung. Wovor, sagen sie nicht, und das nennt man dann Design.","Yellow and black stripes on the floor. They say: caution. Caution of what, they don't say, and that's called design."
 W3_EING_MAX_0485,Ich stell mich auf einen gelben Streifen. Nichts passiert. Dann auf einen schwarzen. Auch nichts. Ziemlich enttäuschend für so viel Warnung.,I stand on a yellow stripe. Nothing happens. Then on a black one. Nothing either. Pretty disappointing for so much warning.
-W3_EING_MAX_0490,"Eine Lampe an der Decke, es tropft daneben. Jemand hat hier jahrelang gewischt, und es tropft immer noch. Neunzehn Jahre gegen einen Tropfen. Der Tropfen führt.","A lamp on the ceiling, dripping next to it. Someone mopped here for years, and it's still dripping. Nineteen years against one drip. The drip is winning."
+W3_EING_MAX_0490,"Eine Lampe an der Decke, es tropft daneben. Jemand hat hier jahrelang gewischt, und es tropft immer noch. Das nennt man Sisyphos mit Mopp.","A lamp on the ceiling, dripping next to it. Someone mopped here for years, and it's still dripping. That's called Sisyphus with a mop."
 W3_EING_MAX_0495,"Der Tropfen fällt genau neben den Eimer, und zwar jedes Mal. Ich bin mir sicher, er macht das mit Absicht.","The drop lands right next to the bucket, every single time. I'm sure it does it on purpose."
 W3_EING_MAX_0500,"Ein Gang unter der Stadt. Hinter mir Neon, vor mir Beton. Die Stadt hat einen Keller, und der Keller hat eine Tür.","A passage under the city. Neon behind me, concrete ahead. The city has a basement, and the basement has a door."
 W3_EING_MAX_0505,"Irgendwo hinten summt etwas. Groß und geduldig. Wie ein Kühlschrank, der die Welt regiert.",Something is humming somewhere at the back. Big and patient. Like a fridge that rules the world.
@@ -5286,7 +5286,7 @@ W3_HINT_PIX_0130,"Sieh dir den weinenden Mann, die Frau mit dem Schirm und den M
 W3_HINT_PIX_0140,"Du hast die Antworten im Notizbuch. Jetzt musst du sie nur noch aussprechen, statt nachzudenken.",You have the answers in your notebook. Now you only have to say them instead of thinking.
 W3_HINT_PIX_0140_2,"Für dich sollte das, bei allem Respekt, nicht besonders schwer sein.","For you, with all due respect, that shouldn't be particularly hard."
 W3_HINT_PIX_0150,"Bei jeder Frage fällt die vernünftige Antwort durch. Nimm die, die klingt, als hätte sie jemand von der Straße gesagt.","For every question, the sensible answer fails. Pick the one that sounds like someone off the street said it."
-W3_HINT_PIX_0160,Portemonnaie: mit ihm streiten. Regen: Synthesizer spielen. Suppe: reinheulen. Ich sage das nur einmal. Ich habe es jetzt einmal gesagt.,Wallet: argue with it. Rain: play the synthesizer. Soup: cry into it. I'm only saying this once. I have now said it once.
+W3_HINT_PIX_0160,Schildkröte: mit ihr streiten. Regen: Synthesizer spielen. Suppe: reinheulen. Ich sage das nur einmal. Ich habe es jetzt einmal gesagt.,Tortoise: argue with it. Rain: play the synthesizer. Soup: cry into it. I'm only saying this once. I have now said it once.
 W3_HINT_PIX_0210,"Der Mann in der Strickjacke will ein Erkennungsgericht, der Koch kennt eine Zahl. Du musst übersetzen. Du bist schlecht darin, aber es ist nur eine Zahl.","The man in the cardigan wants a recognition dish, the cook knows one number. You have to translate. You're bad at it, but it's only one number."
 W3_HINT_PIX_0220,Zwei mal zwei. Wie viel ist das?,Two times two. How much is that?
 W3_HINT_PIX_0220_2,"Sag es nicht mir, ich weiß es längst. Sag es dem Koch, der wartet auf genau eine Zahl.","Don't tell me, I've known for ages. Tell the cook, he's waiting for exactly one number."

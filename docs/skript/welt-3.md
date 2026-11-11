@@ -177,13 +177,13 @@ Detektiv Deckert unter dem Vordach, Ebene: Realität. Drei Fragen, je drei Antwo
 | W3\_TEST\_DEC\_0070 | Deckert | Katzen bestehen den Test immer. Sie antworten nicht. Das ist die menschlichste Antwort, die es gibt. | sieht Pixel an |
 | W3\_TEST\_PIX\_0080 | Pixel | Ich bin nicht menschlich. Ich bin, wenn man es genau nimmt, ein gutes Stück darüber hinaus. // Aber danke. Es kommt selten vor, dass jemand mit Hut das erkennt. |  |
 | W3\_TEST\_MAX\_0090 | Max | Na gut. Fangen wir mit dem Test an. | Option Deckert, startet die Fragen |
-| W3\_TEST\_DEC\_0100 | Deckert | Du findest im Bus ein Portemonnaie. Darin ist ein Foto von dir. Was tust du? | Frage 1; Notizblock raus |
-| W3\_TEST\_MAX\_0110 | Max | Ich geb es beim Fahrer ab. | Antwort 1, logisch |
+| W3\_TEST\_DEC\_0100 | Deckert | Du gehst durch die Wüste. Eine Schildkröte liegt auf dem Rücken. Sie kommt nicht hoch. Was tust du? | Frage 1; Notizblock raus |
+| W3\_TEST\_MAX\_0110 | Max | Ich dreh sie um. | Antwort 1, logisch |
 | W3\_TEST\_DEC\_0120 | Deckert | Hilfsbereit. Effizient. Ohne Zögern. So antwortet eine Maschine mit guter Kinderstube. Durchgefallen. | Test beginnt neu |
-| W3\_TEST\_MAX\_0130 | Max | Ich streite erst mal mit ihm. Es hätte wissen müssen, dass ich das Foto nicht mag. | Antwort 1, menschlich; nur mit Beobachtung „streitet mit Gegenständen“ |
-| W3\_TEST\_DEC\_0140 | Deckert | Nachtragend. Unfair. Gegenüber einem Portemonnaie. Das ist ein Mensch. Weiter. | notiert |
-| W3\_TEST\_MAX\_0150 | Max | Ich frag es nach dem WLAN-Passwort. | Antwort 1, Unsinn |
-| W3\_TEST\_DEC\_0160 | Deckert | Das Portemonnaie hat kein WLAN. Niemand hier hat WLAN. Das war keine Antwort, das war Heimweh. Durchgefallen. | Test beginnt neu |
+| W3\_TEST\_MAX\_0130 | Max | Ich streite erst mal mit ihr. Sie hätte wissen müssen, dass es windig wird. | Antwort 1, menschlich; nur mit Beobachtung „streitet mit Gegenständen“ |
+| W3\_TEST\_DEC\_0140 | Deckert | Nachtragend. Unfair. Gegenüber einem Reptil. Das ist ein Mensch. Weiter. | notiert |
+| W3\_TEST\_MAX\_0150 | Max | Ich frag sie nach dem WLAN-Passwort. | Antwort 1, Unsinn |
+| W3\_TEST\_DEC\_0160 | Deckert | Die Schildkröte hat kein WLAN. Niemand hier hat WLAN. Das war keine Antwort, das war Heimweh. Durchgefallen. | Test beginnt neu |
 | W3\_TEST\_DEC\_0170 | Deckert | Zweite Frage. Es regnet. Es wird morgen regnen. Es wird immer regnen. Was tust du? | Frage 2 |
 | W3\_TEST\_MAX\_0180 | Max | Ich bleib drinnen. | Antwort 2, logisch |
 | W3\_TEST\_DEC\_0190 | Deckert | Vernünftig. Trocken. Berechnet. Maschine. Ich war fast beeindruckt. Durchgefallen. | Test beginnt neu |
@@ -732,7 +732,7 @@ Ebene: Realität, Spielfigur Pixel. Die Tasse steht am Tischrand, Piepsi rostet 
 | W3\_PIEP\_PIX\_0090 | Pixel | Er piept, ich bin eine Katze. Wir sprechen beide die Sprache derer, die wach sind, wenn andere schlafen. // Sie besteht hauptsächlich aus Beschwerden. |  |
 | W3\_PIEP\_PIE\_0100 | Piepsi | Piep. Piep-piep. Piiiiep. | leiser, Hologramm-Effekt fährt hoch |
 | W3\_PIEP\_PIX\_0110 | Pixel | Er sagt: „Ich habe eine Nachricht gespeichert. Seit Jahren. Für einen Max.“ Er hat Max gesagt, als wäre das ein Fehlercode. |  |
-| W3\_PIEP\_OPA\_0120 | Opa (Hologramm) | Hilf mir, Max. Du bist der Einzige, der gerade Zeit hat. Der Kern muss weich bleiben. Außen hart, innen weich. Sonst ist alles verloren. | blau, flackernd, kniend, Funk-Filter |
+| W3\_PIEP\_OPA\_0120 | Opa (Hologramm) | Hilf mir, Max. Du bist meine einzige Hoffnung. Der Kern muss weich bleiben. Außen hart, innen weich. Sonst ist alles verloren. | blau, flackernd, kniend, Funk-Filter |
 | W3\_PIEP\_OPA\_0130 | Opa (Hologramm) | Und wenn du schon unterwegs bist … | Aufnahme bricht ab, Rauschen |
 | W3\_PIEP\_MAX\_0140 | Max | Das war Opa. In Blau und auf den Knien, seit Jahren gespeichert. Wie kommt Opa bitte in einen Putzroboter im Jahr 2099? | aus der Kapsel oder daneben |
 | W3\_PIEP\_PIX\_0150 | Pixel | Er war schon einmal hier, das riecht man an der Nachricht. // Sie riecht nach Kuchen und schlechtem Gewissen, und das ist bei deinem Großvater eine sehr typische Mischung. | Andeutung Finale |
@@ -781,7 +781,7 @@ Ebene: Realität, von Anfang an erreichbar. Der Roboter wischt vor der Panzertü
 | W3\_EING\_HAU\_1086 | Modell 08/15 | Das ist mein Satz, Bursche. Aber ich leihe ihn dir gern. Bring ihn sauber zurück. |  |
 | W3\_EING\_MAX\_0140 | Max | Ich geh dann mal. | Option Hausmeister, beendet das Gespräch |
 | W3\_EING\_HAU\_0150 | Modell 08/15 | Pfiat di, Bursche. Ich komme wieder. Also: Ich bleibe hier. Aber es klingt besser so. | wischt weiter |
-| W3\_EING\_MAX\_0160 | Max | Du hast mich nie gesehen. Du suchst jemand anderen. | Benutzen: Hausmeister (Gedankentrick); Animation Handbewegung, ernstes Gesicht |
+| W3\_EING\_MAX\_0160 | Max | Das ist nicht der Junge, den du suchst. | Benutzen: Hausmeister (Gedankentrick); Animation Handbewegung, ernstes Gesicht |
 | W3\_EING\_HAU\_0170 | Modell 08/15 | Ich bin ein Hausmeister. Ich suche nur Dreck. | trocken |
 | W3\_EING\_PIX\_0180 | Pixel | Du hast gerade mit der Hand gewedelt und einen Roboter angelogen. Ich habe es gesehen. // Ich werde es wieder sehen, in meinen Träumen, und ich werde jedes Mal lachen. | nach 0170 |
 | W3\_EING\_PIX\_0185 | Pixel | Er quietscht noch. Und du hast Öl in der Tasche. | Telefonbuchseite auf Hausmeister; mit Olivenöl, vor dem Ölen (einmal, die Seite bleibt bei Max) |
@@ -823,7 +823,7 @@ Ebene: Realität, von Anfang an erreichbar. Der Roboter wischt vor der Panzertü
 | W3\_EING\_MAX\_0470 | Max | Testperson 12: „Hat nach dem Kuchen gefragt. Wurde zurückgesetzt.“ Testperson 33: „Hat nicht nach dem Kuchen gefragt. Wurde zurückgesetzt.“ Fair. | Ansehen: Pinnwand, drittes Mal |
 | W3\_EING\_MAX\_0480 | Max | Gelb-schwarze Streifen am Boden. Sie sagen: Achtung. Wovor, sagen sie nicht, und das nennt man dann Design. | Ansehen: Warnstreifen |
 | W3\_EING\_MAX\_0485 | Max | Ich stell mich auf einen gelben Streifen. Nichts passiert. Dann auf einen schwarzen. Auch nichts. Ziemlich enttäuschend für so viel Warnung. | Ansehen: Warnstreifen, zweites Mal |
-| W3\_EING\_MAX\_0490 | Max | Eine Lampe an der Decke, es tropft daneben. Jemand hat hier jahrelang gewischt, und es tropft immer noch. Neunzehn Jahre gegen einen Tropfen. Der Tropfen führt. | Ansehen: Deckenlampe |
+| W3\_EING\_MAX\_0490 | Max | Eine Lampe an der Decke, es tropft daneben. Jemand hat hier jahrelang gewischt, und es tropft immer noch. Das nennt man Sisyphos mit Mopp. | Ansehen: Deckenlampe |
 | W3\_EING\_MAX\_0495 | Max | Der Tropfen fällt genau neben den Eimer, und zwar jedes Mal. Ich bin mir sicher, er macht das mit Absicht. | Ansehen: Deckenlampe, zweites Mal |
 | W3\_EING\_MAX\_0500 | Max | Ein Gang unter der Stadt. Hinter mir Neon, vor mir Beton. Die Stadt hat einen Keller, und der Keller hat eine Tür. | Ansehen: Gang |
 | W3\_EING\_MAX\_0505 | Max | Irgendwo hinten summt etwas. Groß und geduldig. Wie ein Kühlschrank, der die Welt regiert. | Ansehen: Gang, zweites Mal |
@@ -1244,7 +1244,7 @@ Drei Stufen je Rätselschritt, vom Stups bis zur Lösung, nach den Regeln in `05
 | W3\_HINT\_PIX\_0130 | Pixel | Sieh dir den weinenden Mann, die Frau mit dem Schirm und den Musiker an. Dann stehen ihre Dummheiten in deinem Notizbuch. Dann geh zum Hut. | R1a, Stufe 3 |
 | W3\_HINT\_PIX\_0140 | Pixel | Du hast die Antworten im Notizbuch. Jetzt musst du sie nur noch aussprechen, statt nachzudenken. // Für dich sollte das, bei allem Respekt, nicht besonders schwer sein. | R1b Test, Stufe 1 |
 | W3\_HINT\_PIX\_0150 | Pixel | Bei jeder Frage fällt die vernünftige Antwort durch. Nimm die, die klingt, als hätte sie jemand von der Straße gesagt. | R1b, Stufe 2 |
-| W3\_HINT\_PIX\_0160 | Pixel | Portemonnaie: mit ihm streiten. Regen: Synthesizer spielen. Suppe: reinheulen. Ich sage das nur einmal. Ich habe es jetzt einmal gesagt. | R1b, Stufe 3 |
+| W3\_HINT\_PIX\_0160 | Pixel | Schildkröte: mit ihr streiten. Regen: Synthesizer spielen. Suppe: reinheulen. Ich sage das nur einmal. Ich habe es jetzt einmal gesagt. | R1b, Stufe 3 |
 | W3\_HINT\_PIX\_0210 | Pixel | Der Mann in der Strickjacke will ein Erkennungsgericht, der Koch kennt eine Zahl. Du musst übersetzen. Du bist schlecht darin, aber es ist nur eine Zahl. | R2 Bestellung, Stufe 1 |
 | W3\_HINT\_PIX\_0220 | Pixel | Zwei mal zwei. Wie viel ist das? // Sag es nicht mir, ich weiß es längst. Sag es dem Koch, der wartet auf genau eine Zahl. | R2, Stufe 2 |
 | W3\_HINT\_PIX\_0230 | Pixel | Bestell „die Nummer vier“. Nicht zwei mal zwei. Vier. Er versteht nur Vier. Ich verstehe nur Thunfisch. Jeder hat sein Wort. | R2, Stufe 3 |
