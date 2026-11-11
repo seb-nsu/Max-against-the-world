@@ -497,3 +497,97 @@ Liste zu Punkt 2 (erste Zeile kommt nie, zweite kommt immer; in Klammern der Aus
 - welt-4, kapitolis, `fondue_kaese_im_comic_kanal`: `W4_KAPI_MAX_0635` („Ansehen: Fondue-Käse im Comic-Kanal, nach dem Grusel-Sender, zweites Mal“) wird verdrängt von `W4_KAPI_MAX_0645` („Ansehen: Fondue-Käse im Comic-Kanal, ohne Grusel-Sender, zweites Mal“)
 - welt-4, fondue_fabrik, `suchscheinwerfer`: `W4_FABR_PIX_0045` („Ansehen: Käse-Suchscheinwerfer am Himmel, zweites Mal“) wird verdrängt von `W4_FABR_MAX_0050` („Ansehen: Suchscheinwerfer, zweites Mal“)
 - welt-4, kellerarchiv, `auge`: `W4_ARCH_PIX_0025` („Ansehen: Auge auf dem Stiel, zweites Mal“) wird verdrängt von `W4_ARCH_MAX_0030` („Ansehen: Auge, zweites Mal“)
+
+### Zweiter Durchgang, fertig formuliert (wird in Abschnitt C, D und E einsortiert)
+
+Zur Zählweise in C: Das Spiel hat 5.414 Skriptzeilen, fast jede Ansehen- und Benutzen-Zeile ist ein kleiner Gag. Einzeln bewertet ist jeder Gag mit eigener Pointe oder eigenem Muster. Zeilen, die nur das Muster der Szene wiederholen, sind in der letzten Tabellenzeile der Szene zusammengefasst. Alternativen sind Vorschläge im Ton des Spiels, nichts davon ist eingebaut.
+
+#### C Prolog (`docs/skript/prolog.md`)
+
+| Szene | Gag (Zeile) | Urteil | Grund | Alternativen |
+| --- | --- | --- | --- | --- |
+| 1 Wohnzimmer | „Ein Balken … bloß zur Deko“ (`P0_WOHN_MAX_0010`, `0020`) | zündet | Stellt Max in zwei Sätzen vor. | |
+| 1 Wohnzimmer | „Die Wissenschaft hat Knie, Junge! Alte Knie!“ (`P0_WOHN_OPA_0042`) | zündet | Opa in einem Satz: Pathos und Gebrechen. | |
+| 1 Wohnzimmer | „Jeder hat sein Päckchen zu tragen.“ (`P0_WOHN_MAX_0044`) | mittel | Fertige Redensart als Pointe. Die Zeile davor ist stärker. | „Und ich hab einen Balken. Wir leiden beide.“ / „Deine Knie haben wenigstens Empfang.“ |
+| 1 Wohnzimmer | WLAN-Passwort als Erpressung (`0050` bis `0070`) | zündet | Motiv für das ganze Spiel, sauber gesetzt. | |
+| 1 Wohnzimmer, Ansehen | Knopf für „Farbe“, „Nachrichten zu fröhlich“ (`0110`, `0115`) | zündet | Retro-Detail aus Max' Sicht, zweite Zeile dreht weiter. | |
+| 1 Wohnzimmer, Ansehen | „Ich glaube, das ist Liebe.“ (`0120`) | mittel | Max sagt das Gefühl an, das Bild sagt es schon. | „Sie hat das Foto eingerahmt. Nicht die Torte.“ / Letzten Satz streichen. |
+| 1 Wohnzimmer, Ansehen | Teetasse: „Das ist schon fast ein Ritual.“ (`0130`), „Ruhe in Frieden, Keks.“ (`0135`) | mittel / zündet | Der Schlusssatz in `0130` erklärt nur. Der Keks sitzt. | `0130` ohne letzten Satz. / „Morgen kocht er den nächsten daneben.“ |
+| 1 Wohnzimmer | Tatort Couchtisch (`0140`, `0145`, `0200`, `0205`) | zündet | Vier Zeilen bauen aufeinander auf, „Hauptverdächtiger“ schließt ab. Legt nebenbei die Spur zur Fernbedienung. | |
+| 1 Wohnzimmer | Sofa: „Das Sofa vermisst mich trotzdem schon.“ (`0155`), „plötzlich ist es Dienstag“ (`0165`) | zündet | Dauergag Sofa beginnt hier und trägt bis zur Bodenluke. | |
+| 1 Wohnzimmer, Benutzen | Fernseher: „Ehrlich gesagt kenne ich das von mir.“ (`0170`) | mittel | Selbstvergleich kommt im Prolog viermal (`0170`, `P0_DACH_MAX_0405`, `0980`, `P0_SYS_ERS_MAX_0030`). | „Er brummt, denkt nach und geht wieder aus. Mein Wecker macht das auch.“ / Satz streichen, `0175` trägt allein. |
+| 1 Wohnzimmer, Benutzen | „wie sich ein Montagmorgen anfühlt“ (`0185`) | mittel | Montag ist der verbrauchteste Vergleich im Spiel. | „Kalter Tee riecht wie ein Wartezimmer.“ / „… wie Opas Thermoskanne von 1994.“ |
+| 1 Wohnzimmer, Benutzen | Familienfoto: „auch aus dem Urlaub“ (`0190`) | zündet | Oma wird Figur, bevor sie auftritt. | |
+| 1 Wohnzimmer | Schrank, Bügelbrett „als wollte es reden“ (`0310` bis `0325`) | zündet | „Und mit Opa.“ ist ein guter Nachklapp. | |
+| 1 Wohnzimmer | Stehlampe benutzen (`0340`, `0345`) | zündet nicht | „dann bin ich schuld“ und „irgendwie beleidigt“ sind Füllung. „Beleidigt“ kommt im Prolog dreimal (Lampe, Stein, Sofa). | „Auf dem Zettel steht nicht, was passiert. Ich finde, das sagt genug.“ / „Ich hab gewackelt. Im Keller ist was angegangen.“ |
+| 1 Wohnzimmer | Kreuzworträtsel „ZAPPOMAT“ mit dazugemaltem Kästchen (`0355`), „NEIN“ (`0365`) | zündet | Beste Objekt-Gags des Prologs. „Keine Lösung, eine Haltung“ ist hier verdient. | |
+| 1b Treppenhaus | Hut „Fasan oder Kopfkissen“, „Lötzinn und Pfefferminz“ (`P0_TREP_MAX_0010`, `0015`) | zündet | Zweite Zeile ist warm statt witzig, das tut der Szene gut. | |
+| 1b Treppenhaus | „Drinnen ist es … ungefähr 1987.“ (`0020`), Kaktus (`0025`) | zündet | Trocken, kurz. | |
+| 1b Treppenhaus | „sonst kommt die Gegenwart rein“ (`0050`) | zündet | Opas Weltbild in einem Halbsatz. | |
+| 1b Treppenhaus | Treppe: vier Tonart-Zeilen (`0030`, `0035`, `0060`, `0065`) | mittel | „Moll“ (`0035`) ist die Pointe. Dur und Fis danach wiederholen sie nur. | `0060`: „Ich geh ja schon. Die Treppe petzt sowieso.“ / `0065`: „Opa ruft von oben: ‚Das war die dritte!‘ Es war die zweite.“ |
+| 1b Treppenhaus | Regenschirm „keine Bitte, sondern eine Warnung“ (`0115`) | mittel | Gleiche Form wie Pixels „keine Freundlichkeit, sondern eine förmliche Warnung“ (`P0_DACH_PIX_0215`). | „Prototyp 2. Was aus Prototyp 1 wurde, steht nicht drauf.“ / „Bei Opa heißt das: Lauf.“ |
+| 1b Treppenhaus | Mäntel „man weiß ja nie“, „nicht unbewaffnet“, Bonbon „es wohnt hier“ (`0130`, `0135`, `0145`) | zündet | Drei verschiedene Pointen an einem Objekt. | |
+| 1b Treppenhaus | „Die Lampe sammelt.“ (`0155`), Kisten „Hallo“ (`0185`) | zündet | Kurz, eigener Blick. | |
+| 1b Treppenhaus | Rest: `0040`, `0055`, `0125`, `0140`, `0160`, `0180` | mittel | Muster „Ich mach das nicht, weil …“ ohne eigene Idee. | Je Raum zwei dieser Zeilen durch einen Zwischenruf von Opa ersetzen („Finger weg vom Schirm!“). |
+| 2 Dachboden | „… und du kommst in Socken!“ (`P0_DACH_OPA_0010`), „Passwörter sind was für Leute, die eine Zukunft haben“ (`0030`) | zündet | | |
+| 2 Dachboden | „Zu einem Flugzeug sagst du ja auch nicht Bus.“ (`0060`) | zündet | | |
+| 2 Dachboden | „Fair, motivierend, modern.“ / „… großväterlich.“ (`0120`, `0130`) | zündet | Echo-Pointe, Opa gewinnt. | |
+| 2 Dachboden | „Seit heute Morgen. Oder seit Dienstag.“ (`0155`), „Modell Pixel, Baujahr unbekannt“ (`0160`) | zündet | | |
+| 2b Gespräche | „Werbung kommt immer, Max.“ (`P0_DACH_OPA_1460`) | zündet | Erklärt die Rückkehr-Regel als Witz. | |
+| 2b Gespräche | „Das ist das Beruhigendste und gleichzeitig Traurigste …“ (`1462`) | mittel | Max erklärt, wie der Satz davor wirken soll. | „Toll. Mein Rückweg ist ein Joghurt-Spot.“ / Zeile streichen. |
+| 2b Gespräche | „In genau der Reihenfolge.“ (`1340`) | zündet | Greift `0080` auf. | |
+| 2b Gespräche | „Anfassen manchmal die Augenbrauen.“ (`1360`) | zündet | Bedienhilfe als Pointe. | |
+| 2b Gespräche | Roter Kreis: „Sie sind rund. Ja. Genau.“ (`1364`), „riecht … nach Kuchen“ (`1366`) | zündet | Legt das Geheimnis, ohne es zu verraten. | |
+| 2b Gespräche | „Ich werde mitgenommen“ (`1400`), „Keine einzige funktioniert. Und eine davon fliegt.“ (`1420`) | zündet | | |
+| 3 Rätsel P1 | „Wie ein sehr beleidigter Stein.“ (`0230`), „Schraubenzieher, Draht und Thunfisch“ (`0240`) | zündet | | |
+| 3 Rätsel P1 | „… nur ans WLAN nicht.“ (`0250`) | mittel | Der fünfte WLAN-Bezug in zehn Minuten. | „Notproviant. Abgelaufen ist er auch schon mal nicht.“ |
+| 3 Rätsel P1 | Pixels Auftritt: „Wer. Hat. Mich. Geweckt.“, Lachs-Traum, „Barbarisch. Gib trotzdem her.“ (`0310` bis `0360`) | zündet | Stärkste Szene des Prologs. | |
+| 3 Rätsel P1 | „Ich hab schon Schlimmeres heruntergeladen.“ (`0390`) | zündet | | |
+| 4 Rätsel P2 | Sendeschluss: „Mit Absicht?“ (`0420`, `0430`) | zündet | Der Generationen-Witz, den das Konzept will. | |
+| 4 Rätsel P2 | „Wenigstens sind wir uns einig.“ (`0405`) | mittel | Selbstvergleich, siehe oben. | „Mein Spiegelbild hat auch keinen Empfang.“ |
+| 4 Rätsel P2 | „ein Hase, der Empfang hat“ (`0470`), Techniker und Kekse (`0480`, `0490`) | zündet | | |
+| 5 Rätsel P3 | „Geburtstag oder Zahnarzttermin“ (`0620`) | zündet | | |
+| 5 Rätsel P3 | Testbild (`0680`) | zündet, aber Regelbruch | Max kennt laut Konzept kein Testbild. | „Kanal 4. Bunte Streifen und ein Pfeifton. Das Langweiligste, was ich heute gesehen hab. Und ich hab Opas Zeitung gesehen.“ |
+| 6 Reisetasche | „der fieseste Spoiler“ (`0840`), „Hier vergeht sie normal.“ (`0845`), „Ich habe nur noch keine gemacht.“ (`0850`), „Übersetzung nicht verfügbar“ (`0880`) | zündet | Guter Abgang. | |
+| 6 Reisetasche | Daumenabdruck (`0842`) | zündet nicht | Keine Pointe, nur Beschreibung. | „Gegen das Licht sehe ich drei Wörter. Eins ist durchgestrichen. Eins ist ‚Oma‘.“ (legt das Geheimnis) / „Opa ruft: ‚Ich seh das!‘ Er sieht es nicht.“ |
+| 7 Ansehen Dachboden | Fisch „Testpilot“, Poster „Max?“, Toaster, Staubsauger „Er hat geblinzelt.“, Platte „Folge 3“, „Mein Herz ist ein Lötkolben“ | zündet | Dichtester Raum, jeder Gegenstand erzählt Opa. | |
+| 7 Ansehen Dachboden | Kochbuch: „Nicht wieder vergessen.“ (`0955`) | zündet | Der wichtigste leise Moment. Bleibt. | |
+| 7 Ansehen Dachboden | Brillenetui im Sessel (`0975`) | zündet | Und bereitet das Finale vor. | |
+| 7 Ansehen Dachboden | Ohrensessel (`0970`), Bodenluke (`1015`) | mittel | Dritte und vierte Fassung von „wenn ich mich setze, komme ich nie wieder hoch“ und „das Sofa ist beleidigt“. | `0970`: „Der Sessel hat Opas Form. Wenn ich mich reinsetze, will ich plötzlich was erfinden.“ |
+| 7b Benutzen | Maßband (`1615`), „Pixel: Lachs“ (`1635`), „Wir haben keine Garage.“ (`1650`), „größter Beitrag zur Rettung der Welt“ (`1665`), „Ich koche nicht, ich bestelle.“ (`1690`), „Pixel nennt es Gewalt.“ (`1755`) | zündet | | |
+| 7b Benutzen | Rest: `1640`, `1645`, `1670` bis `1685`, `1700` bis `1730`, `1840`, `1845` | mittel | Immer dieselbe Form: erst „Ich mach das nicht“, dann „Ich hab's doch getan“. Dreimal „es guckt zurück“ (`1675`, `1685`, `P0_TREP_MAX_0055`). | Bei jedem dritten Objekt die Form brechen: Pixel antwortet, Opa ruft, oder es passiert sichtbar etwas. |
+| 7c Weitere Dinge | Kartons „Später“ / „Später, wirklich. Der ist von 1979.“ (`1810`, `1815`), „230 Volt. Nicht lecken.“ (`1835`) | zündet | | |
+| 8 Fehlversuche | „Ich bin keine Antenne, ich bin ein Gesamtkunstwerk.“ (`1120`), „damit du es nicht musst“ (`1130`), Milchwerbung (`1140`) | zündet | | |
+| 8c Hinweise | „Er nennt das Garderobe. Ich nenne es Material.“ (`P0_HINT_PIX_0220`), „gelegentlich auf mich“ (`0310`) | zündet | Hinweise bleiben im Ton. | |
+| 8d Inventar | „durch die Zeit riechen“ (`P0_INV_PIX_0015`), Akkuschrauber (`0035`), „ob die Tasche gemeint ist oder ich“ (`0065`) | zündet | | |
+| 8d Inventar | Kleiderbügel „aufgegeben“, „Stolz“ (`0040`, `0045`) | mittel | „Sieht traurig aus“ steht schon beim Nehmen (`P0_DACH_MAX_0460`). | „Ein Bügel ohne Hemd. Bei Opa hat alles einen Zweitberuf, der hier wartet noch.“ |
+| 9 Ersatz-Pool Max | Serien- und Handy-Vergleiche | zündet überwiegend | Passen zur Figur. Schwach: „Meine Motivation übrigens auch nicht.“, „Also mein innerer.“, „Fast. Also, ehrlich gesagt, gar nicht.“ | „Funktioniert nicht.“ reicht. / „Mein Akku sinkt.“ ohne Erklärung. |
+| 9 Ersatz-Pool Pixel | „beruflich Nein sagt“, „fresse ich einen Besen“, „Sie spricht bis heute nicht darüber“ | zündet | Der Pool ist besser als mancher Szenentext. | |
+| 9b Wiederholung | „Das ist gelogen, ich sage nie Bescheid. Aber es klingt nett.“ (`P0_SYS_WDH_PIX_0080`) | zündet | | |
+
+Bilanz Prolog: Von rund 60 bewerteten Gags zünden gut 40. Schwach wird es dort, wo dieselbe Bauform dreimal hintereinander kommt.
+
+#### D Prolog
+
+| Anspielung | Ort | Worauf sie verweist | Ohne Vorwissen verständlich? | Trägt sie zur Szene bei? |
+| --- | --- | --- | --- | --- |
+| „Zapp-O-Mat 3000“ | `P0_DACH_OPA_0040` | Gerätenamen aus Werbung und Trickfilm der 80er | ja | ja, setzt Opas Ton |
+| Sendeschluss, Schnee, Testbild | `P0_DACH_PIX_0420`, `0680` | Fernsehen vor dem 24-Stunden-Programm | ja, Pixel erklärt es | ja, Generationen-Witz |
+| Kreidelinie, Tatort, Hauptverdächtiger | `P0_WOHN_MAX_0145`, `0205` | Fernsehkrimi | ja | ja |
+| „Schlager für Erfinder“, „Mein Herz ist ein Lötkolben“ | `P0_DACH_MAX_0960`, `0965` | Schlagerplatten-Reihen | ja | ja |
+| Cheatcode, Komplettlösung, Intro überspringen, Ladebildschirm | Ersatz-Pool, `P0_DACH_MAX_0410` | Videospiele | ja | ja, Max' Sprache |
+| „Meine Vorfahren wurden am Nil als Götter verehrt.“ | `P0_SYS_ERS_PIX_0230` | Katzenverehrung im alten Ägypten | ja | ja, bereitet Welt 2 vor |
+
+Der Prolog kommt fast ohne Zitate aus. Das ist richtig so.
+
+#### E Prolog (klingt es nach Maschine?)
+
+| Zitat | Ort | Was auffällt | Menschlicher wäre |
+| --- | --- | --- | --- |
+| „Ich glaube, das ist Liebe.“ | `P0_WOHN_MAX_0120` | Figur benennt das Gefühl. | „Sie hat das Foto eingerahmt. Nicht die Torte.“ |
+| „Das ist das Beruhigendste und gleichzeitig Traurigste, was du heute gesagt hast.“ | `P0_DACH_MAX_1462` | Erklärt die Pointe davor, ausgewogen wie ein Aufsatz. | „Toll. Mein Rückweg ist ein Joghurt-Spot.“ |
+| „Bei Opa ist so was keine Bitte, sondern eine Warnung.“ / „Das wäre keine Freundlichkeit, sondern eine förmliche Warnung.“ / „keine Meinung, sondern ein Messergebnis“ / „Nicht aus Müdigkeit, sondern als stiller, aber deutlicher Protest.“ / „nicht aus Eigennutz, sondern weil …“ | `P0_TREP_MAX_0115`, `P0_DACH_PIX_0215`, `P0_SYS_WDH_PIX_0020`, `0030`, `P0_SYS_ERS_PIX_0150` | Fünfmal „nicht X, sondern Y“, zweimal mit „Warnung“. | Zwei behalten. Sonst geradeaus: „… fange ich an zu schnurren. Das ist eine Drohung.“ / „… schlafe ich ein. Aus Protest.“ |
+| „Das ist schon fast ein Ritual.“ / „Ich lass das ab sofort.“ / „Ich fass hier nichts mehr an.“ / „Wir reden nie wieder darüber.“ / „Er gewinnt.“ | `P0_WOHN_MAX_0130`, `0195`, `0345`, `P0_TREP_MAX_0125`, `P0_DACH_MAX_1745` | Jede Zeile bekommt einen runden Schlusssatz. Über drei Räume ist das dieselbe Melodie. | Jeden zweiten Schlusssatz streichen. Die Zeile endet dann auf dem Bild („Jetzt hängen alle anderen schief.“). |
+| „Ehrlich gesagt kenne ich das von mir.“ / „Und ehrlich gesagt will ich die Fliegen auch nicht stören.“ / „und ehrlich, sie funktioniert“ | `P0_WOHN_MAX_0170`, `P0_TREP_MAX_0160`, `0030` | Füllwort als Tonfall-Ersatz. | Weglassen. Der Satz steht ohne. |
+| „Opa hat einen großen Kopf, da muss ja auch einiges rein.“ | `P0_TREP_MAX_0045` | Erklärt den Witz gleich mit. | „Opa hat einen großen Kopf. Oma sagt das auch, meint aber was anderes.“ |
+| „wenn ich das anmerken darf“, „Ich möchte festhalten“, „Ich möchte zu Protokoll geben“, „Ich möchte das ausdrücklich loben“, „damit das klar ist“, „bei allem Respekt“, „um ehrlich zu sein“, „wenn ich das hinzufügen darf“ | Pixel, durchgehend | Acht Amtsformeln in zehn Minuten. Einzeln ist das seine Stimme, in der Menge wird es Schablone. | Zwei Formeln zu seinen machen („zu Protokoll“, „junger Mann“), die anderen streichen. Pixel darf auch mal einen kurzen Satz sagen: „Barbarisch. Gib trotzdem her.“ ist seine beste Zeile. |
