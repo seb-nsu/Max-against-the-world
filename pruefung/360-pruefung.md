@@ -4,8 +4,8 @@
 >
 > - Geprüfter Stand: `main` bei Commit `6fe02fd` (enthält den Humor-Durchgang aus Pull Request 14).
 > - Arbeitszweig: `claude/project-thread-769z6c`.
-> - **Erledigt:** Dateiliste aufgenommen. Vollständig gelesen: alle Dateien unter `docs/` außer `uebersetzung/en.csv` (nur Stichprobe). Alle Bilder angesehen. Rohfunde dazu stehen im Abschnitt „Arbeitsnotizen“ ganz unten.
-> - **Als Nächstes:** Spielcode (`game/skripte`, `game/oberflaeche`, `game/tests`, `tools`, `.github/workflows`), dann zweiter Durchgang durch die Skripte je Welt für die Abschnitte C, D und E.
+> - **Erledigt:** Dateiliste aufgenommen. Vollständig gelesen: alle Dateien unter `docs/` außer `uebersetzung/en.csv` (nur Stichprobe). Alle Bilder angesehen. Spielcode: Kern, Menüs und Regeln für Welt 2 bis Finale gelesen. Rohfunde dazu stehen im Abschnitt „Arbeitsnotizen“ ganz unten.
+> - **Als Nächstes:** Rest vom Spielcode (`game/tests`, `tools`, `.github/workflows/testbuild.yml`, Raumskripte unter `game/game/`), zwei Verdachtsfälle im laufenden Spiel nachstellen (Notiz „Spielcode und Werkzeuge“, Punkt 1 und 2). Dann zweiter Durchgang durch die Skripte je Welt für die Abschnitte C, D und E.
 > - **Auftrag erweitert (Sebastian, 10. November, 22:03 Uhr):** Der Spielcode im Repository wird mitgeprüft.
 > - **Noch offen:** Story-Bibel, Abschnitte A bis N, Codeprüfung, Gesamtbild, Korrekturen, Fundliste, Zusammenfassung.
 
@@ -415,3 +415,26 @@ Angesehen: alle 6 echten Hintergründe, 3 Konzeptbilder, alle 55 Layout-Skizzen,
 
 - Beide vollständig gelesen. Für C und E wichtig: Die „Nachher“-Zeilen sind durchweg länger und erklären oft ihren eigenen Witz. Beispiel `P0_DACH_PIX_0360`: vorher „Barbarisch. Gib her.“, nachher eine lange Fassung. `SYS_WDH_PIX_0080`: „Das ist gelogen, ich sage nie Bescheid. Aber es klingt nett.“
 - Notiz dort: In Welt 3 sind „Es gibt keinen Löffel“, „Herr Anderson“, „Fehler in der Matrix“ und ein doppelter Kaninchenbau gestrichen. „junger Mann“ von über 300 auf etwa 75 ausgedünnt.
+
+### Spielcode und Werkzeuge (Stand: Kern, Menüs und Welt-Regeln gelesen)
+
+Gelesen: alle Dateien in `game/skripte/` (außer `platzhalter_klang.gd`), alle in `game/skripte/objekte/` und `game/oberflaeche/`, dazu `welt_2.gd`, `welt_3.gd`, `welt_4.gd`, `finale.gd`. Noch offen: `game/tests/`, `tools/`, `.github/workflows/testbuild.yml`, Raum- und Objektskripte unter `game/game/` (Welt 1, Dachboden mit Zwischenspielen).
+
+Werkzeugläufe: `python3 tools/pruefen.py` meldet 0 Fehler, 108 Warnungen, 5414 Skriptzeilen. 102 Warnungen sind „Nummer nicht aufsteigend im Block“ (Welt 3, Welt 4, Zwischenspiele), 6 sind die falschen Sprecher (siehe oben). `python3 tools/abdeckung.py --pruefen` meldet 5295 Zeilen, 9 Reserve, 0 fehlen im Spiel.
+
+Funde (Schwere ist vorläufig, „bestätigt“ heißt: im laufenden Spiel nachgestellt):
+
+1. **Hinweis-Stufen gelten über Welten hinweg (Kandidat kritisch).** `game/skripte/hinweise.gd`, Z. 57 bis 99: `Zustand.hinweis_stufe[schritt]` und `hinweis_zeit[schritt]` hängen nur an der Rätselnummer (zum Beispiel „R5“). 26 Nummern kommen in mehreren Welten vor, R4, R5, R8, R12 und R13 in allen vier. Wer in Welt 1 bei R5 Stufe 3 geholt hat, bekommt in Welt 2, 3 und 4 bei R5 beim ersten Klick sofort die Komplettlösung. Der Zähler `stufe3_zaehler` zählt dann nicht mit. Folge: „Ohne Pfote“ und Pixels Lob in Welt 2 stimmen nicht, das Lob in Welt 3 und 4 (`_hinweis_stufe_3()`) bleibt zu Unrecht aus. Vorschlag: Schlüssel aus Abschnitt und Nummer bilden („welt_2/R5“), alte Spielstände beim Laden umrechnen.
+2. **Finale: Figurenwechsel ist nie freigeschaltet (Kandidat kritisch).** `game/skripte/spiel.gd`, `wechsel_moeglich()` verlangt den Schalter `<Präfix>_WECHSEL_FREI`. `game/daten/raeume/finale.json` hat das Präfix „ZS1“, und `ZS1_WECHSEL_FREI` setzt niemand. Das Skript verlangt den Wechsel aber: `FI_RAET_PIX_0200` („Wechsel zu mir“), `FI_RAET_PIX_0210` („als Pixel“), `FI_RAET_MAX_0220` („Pixel auf Max oder Figurenwechsel zurück“). `game/tests/finale_anspiel.gd`, Z. 69 bis 73 ruft die Regeln direkt auf und merkt das nicht.
+3. **Schnellladen mitten in einer Szene (mittel).** `game/skripte/spielstand.gd`, Z. 48 bis 50: F9 lädt ohne die Prüfung `beschaeftigt()`. Eine laufende Zwischensequenz läuft nach dem Laden weiter und setzt Schalter im geladenen Stand.
+4. **Testbuild im Browser: „Hauptmenü“ beendet das Spiel (mittel).** `spiel.gd`, `zum_hauptmenue()` nutzt `OS.set_restart_on_exit` und `quit()`. Das gibt es nur auf dem Desktop. Im Browser bleibt das Bild stehen. Betrifft auch das Ende des Abspanns (`finale.gd`, `_abspann()`).
+5. **Reisetasche-Fenster: ab dem neunten Gegenstand liegen Felder übereinander (mittel).** `game/oberflaeche/reisetasche.gd`, `_aufbauen`: die Auslage hat eine feste Zeile (`y = 131`), die Spalte läuft mit `i % 8` um. Welt 2 hat 14 Gegenstände mit „reist mit“.
+6. **Vier Schalter in den Optionen tun nichts (mittel).** `untertitel`, `wackeln_aus`, `farbenblind` und weitgehend `flackern_reduzieren` werden nirgends gelesen. `CQEffekte.wackeln`, `weich_blinken` und `farbsymbol` ruft niemand auf. Das Kabelrätsel in Welt 3 unterscheidet Buchsen nur über Farbwörter.
+7. **Notizbuch: Seite „Pixels Einkaufsliste“ bleibt leer (klein bis mittel).** `game/oberflaeche/notizbuch.gd` füllt nur Seite 0 und 1. Die Einkaufsliste wird gezählt und ist ein Dauergag samt Errungenschaft, man kann sie aber nirgends lesen.
+8. **Welt 3, Telefonzelle doppelt (klein).** Stadtstraße hat die Hotspots `telefonzelle` und `klingelnde_telefonzelle`. `benutzen_klingelnde_telefonzelle` setzt `W3_ZELLE_BENUTZT` vor dem Weiterreichen, deshalb kommt `W3_SIM_MAX_0230` („Hallo?“) dort nie. Muster dahinter: Adjektive in den Auslösern der Skripttabellen werden zu eigenen Hotspots („goldenes Sofa“, „verkettete Tür“, „normaler Käse in der Fabrik“).
+9. **Welt 4, R4a (klein).** `option_sitcom_mutter_0320` löst R4a nur, wenn die Zeitschrift schon gelesen ist. Wer vorher fragt, hört die Antwort, und nichts passiert. Kein Festhänger, aber unklar.
+10. **Welt 2, R7 Diskus (zu prüfen gegen `raetsel/welt-2.md`).** Der Diebstahl lässt sich direkt nach dem ersten Gespräch mit Leonidas überspringen (`W2_DISK_MAX_0340`).
+11. **Welt 3:** Freund 0815 ist nur mit Olivenöl vor R8 zu gewinnen, danach geht der Hausmeister. Dauerhaft verpassbar. Die Code-Sicht schaltet erst das zweite Ansehen der Tür frei.
+12. **Minispiele sind in der Graubox Auswahlmenüs.** Hieroglyphen, Hebel, Rede-Ringen, Patch-Panel, Zombie-Tanz, Comic-Panels, Einzelbilder, Finale-Tasten. Wie sich diese Rätsel anfühlen, lässt sich noch nicht testen.
+13. **Kleineres:** Leerlauf-Zurufe kommen beim Spielen mit Controller nach 45 Sekunden, weil nur Maus und Tasten die Uhr zurücksetzen (`spiel.gd`, `_input`). „Neues Spiel“ fragt nicht nach. Spielstände werden direkt geschrieben, ohne Zwischendatei. `kopf_lesen` liest je Platz die ganze Datei. Tastenbelegung ohne Konfliktprüfung. `Klang.brabbeln` rechnet Töne im Hauptfaden. `CQRaum._process` baut Skalierungsdaten jedes Bild neu. `UI_W2_DOCH_NICHT` wird in Welt 3 mitbenutzt. `docs/entscheidungen.md`, Z. 83 nennt Errungenschaften den „sechsten Kanal“, im Spiel und in `05-spielsysteme.md` ist es der fünfte. `game/README.md`, Absatz „Stand“ ist veraltet (nennt nur Prolog und Welt 1 als spielbar).
+14. **Stärken im Code:** Daten und Logik sauber getrennt. Telemetrie nur mit Zustimmung, lokal, anonym. Spielstände mit Versionsnummer und Umrechnung. Keine Fehlzustände in den Minispielen. Automatische Durchläufe für alle Abschnitte, Bildvergleich der Menüs.
