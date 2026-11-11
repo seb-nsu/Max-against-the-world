@@ -6780,6 +6780,12 @@ ZS2_DACH_PIX_0570,"Kaugummi. Ewiges Brot, sozusagen. In der Zukunft gilt so etwa
 ZS2_DACH_PIX_0580,"Der Kugelschreiber. Beamte fürchten ihn. Maschinen vermutlich nicht, aber man weiß nie, wer dort Beamter ist.","The ballpoint pen. Officials fear it. Machines probably don't, but you never know who's an official there."
 ZS2_DACH_PIX_0590,"Der Diskus, oder was auch immer du da geworfen hast. Rund, flach, fliegt.","The discus, or whatever it was you threw. Round, flat, flies."
 ZS2_DACH_PIX_0590_2,"Wo du hinfährst, fliegt allerdings alles von selbst, sogar die Autos. Damit beeindruckst du dort niemanden.","Where you're going, though, everything flies by itself, even the cars. Nobody there will be impressed."
+ZS2_DACH_PIX_0592,"Der Eimer. Wo du hinfährst, regnet es angeblich ohne Pause.","The bucket. Where you are going, they say it rains without a break."
+ZS2_DACH_PIX_0592_2,"Ein einzelner Eimer gegen so viel Regen, das nenne ich Optimismus, junger Mann. Ich bewundere ihn und lasse ihn hier.","A single bucket against that much rain. I call that optimism, young man. I admire it, and I am leaving it here."
+ZS2_DACH_PIX_0594,Der Leuchttrank leuchtet immer noch.,The glow potion is still glowing.
+ZS2_DACH_PIX_0594_2,"Wo du hinfährst, leuchtet jede Hauswand, und zwar in Farben, die es gar nicht gibt. Er würde dort nicht einmal auffallen.","Where you are going, every wall glows, and in colours that do not even exist. It would not stand out there at all."
+ZS2_DACH_PIX_0596,"Ketchup. In der Zukunft ist vermutlich alles Soße, was man essen darf.","Ketchup. In the future, everything you are allowed to eat is probably sauce."
+ZS2_DACH_PIX_0596_2,"Dann fällt eine mehr nicht auf. Ich sehe darin weder Chance noch Problem, und das will bei Ketchup etwas heißen.","One more will not stand out. I see neither a chance nor a problem in it, and with ketchup that means something."
 ZS2_DACH_MAX_0600,"Zwei Fächer. Ich will einen Rucksack mit Cloud, wo man alles reinlädt und nie wiederfindet.","Two pockets. I want a backpack with cloud storage, where you upload everything and never find it again."
 ZS2_DACH_PIX_0610,Gepackt. Ich habe nichts davon getragen und bin trotzdem vollkommen erschöpft. Mitgefühl ist anstrengend.,Packed. I carried none of it and I'm still utterly exhausted. Sympathy is hard work.
 ZS2_DACH_OPA_0620,"Kanal 42. Die Zukunft. Dort gibt es eine … Dame, die alles besser weiß. Hör nicht auf sie. Hör auf dich.",Channel 42. The future. There's a … lady there who knows everything better. Don't listen to her. Listen to yourself.
@@ -6871,6 +6877,22 @@ ZS3_DACH_PIX_0580,"Kalles Morse-Tabelle. Miau, Miau, Pause, Miau.","Kalle's Mors
 ZS3_DACH_PIX_0580_2,"Wo du hinfährst, krabble ich durch das Rauschen. Ich brauche keine Tabelle. Du vielleicht.","Where you're going, I crawl through the static. I don't need a table. You might."
 ZS3_DACH_PIX_0590,"Das Olivenöl, beziehungsweise der Rest davon. Es hat seine Pflicht getan.","The olive oil, or rather what's left of it. It has done its duty."
 ZS3_DACH_PIX_0590_2,"Ich würde es hierlassen. Hier oben quietscht bald einiges, glaub mir.","I'd leave it here. Plenty of things will be squeaking up here soon, believe me."
+ZS3_DACH_PIX_0591,Der Eimer. Im Fernsehen kippt so etwas immer von einer Tür auf einen Kopf.,"The bucket. On television, a thing like that always tips off a door onto a head."
+ZS3_DACH_PIX_0591_2,"Ich habe diese Sendungen studiert, junger Mann. Der Kopf ist jedes Mal der falsche.","I have studied these shows, young man. It is the wrong head every single time."
+ZS3_DACH_PIX_0592,"Der Leuchttrank. Im Fernsehen leuchtet schon alles von allein, sogar die Zähne der Moderatoren.","The glow potion. On television everything glows by itself already, even the hosts' teeth."
+ZS3_DACH_PIX_0592_2,Dagegen kommt er nicht an.,It cannot compete with that.
+ZS3_DACH_PIX_0593,"Ketchup. Im Fernsehen ist das seit jeher Blut, das weiß jede Katze, die Krimis schaut.",Ketchup. On television that has always been blood. Every cat who watches crime shows knows it.
+ZS3_DACH_PIX_0593_2,"Jedes Opfer dort riecht nach Pommes, und kein Kommissar sagt etwas.","Every victim there smells of chips, and no inspector says a word."
+ZS3_DACH_PIX_0594,"„Die sieben Antworten.“ Im Fernsehen reicht eine einzige, und die lautet: nach der Werbung.","""The Seven Answers."" On television a single one is enough, and it goes: after the break."
+ZS3_DACH_PIX_0594_2,Sieben wären dort Verschwendung.,Seven would be a waste there.
+ZS3_DACH_PIX_0595,"Dein Handy, immer noch drei Prozent.","Your phone, still at three percent."
+ZS3_DACH_PIX_0595_2,"Du willst einen kleinen Bildschirm in einen großen mitnehmen. Der große frisst den kleinen. So ist das bei Bildschirmen, und bei Fischen übrigens auch.","You want to take a small screen into a big one. The big one eats the small one. That is how it goes with screens, and with fish too, by the way."
+ZS3_DACH_PIX_0596,"Kaugummi. Im Fernsehen klebt so etwas unter jedem Stuhl, in jeder Sendung, seit Jahrzehnten.","Chewing gum. On television it sticks under every chair, in every show, and has for decades."
+ZS3_DACH_PIX_0596_2,Du würdest also nichts Neues beitragen.,So you would not be adding anything new.
+ZS3_DACH_PIX_0597,"Der Kugelschreiber. Im Fernsehen unterschreibt man damit Verträge, die man vorher nicht gelesen hat.",The ballpoint pen. On television people use it to sign contracts they have not read.
+ZS3_DACH_PIX_0597_2,Ich rate ab. Vom Lesen wie vom Unterschreiben.,I advise against it. Against the reading as much as the signing.
+ZS3_DACH_PIX_0598,"Die Scheibe, was immer sie diesmal ist. Rund, flach, fliegt.","The disc, whatever it is this time. Round, flat, flies."
+ZS3_DACH_PIX_0598_2,"Im Fernsehen fliegen nur Torten, und die treffen immer. Dagegen bist du mit dem Ding ein Anfänger.","On television only cream pies fly, and they always hit. Next to that, you and that thing are beginners."
 ZS3_DACH_MAX_0600,"Zwei Fächer, letzte Welt. Die Tasche bleibt hart. Wenigstens einer hier oben hat sich nicht verändert.","Two pockets, last world. The bag won't budge. At least one of us up here hasn't changed."
 ZS3_DACH_PIX_0610,Gepackt. Zum letzten Mal.,Packed. For the last time.
 ZS3_DACH_PIX_0610_2,"Ich spreche ein Gebet für die Tasche. Es ist kurz, sie hat ja auch nicht viel geleistet.","I shall say a prayer for the bag. It's a short one, the bag hasn't done that much."

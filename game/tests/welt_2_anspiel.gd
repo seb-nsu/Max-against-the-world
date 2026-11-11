@@ -204,7 +204,17 @@ func _durchlauf() -> void:
 	_pruefe(tasche.kommentar_zeile("Kochloeffel") == "ZS1_DACH_PIX_0520"
 		and tasche.kommentar_zeile("Socke") == "ZS1_DACH_PIX_0540"
 		and tasche.kommentar_zeile("Olivenoel") == "ZS2_DACH_PIX_0520"
-		and tasche.kommentar_zeile("Eimer") == "", "Reisetasche: ältere Dinge behalten Pixels Kommentar, wo er noch passt")
+		and tasche.kommentar_zeile("Eimer") == "ZS2_DACH_PIX_0592",
+		"Reisetasche: ältere Dinge behalten Pixels Kommentar, wo er noch passt, sonst eine eigene Zeile")
+	var tasche_3 = load("res://skripte/reisetasche.gd").new(3)
+	var ohne_zeile: Array = ["Kochloeffel", "Thunfischdose", "Notizbuch", "Socke", "ZiegenfellVorleger", "Zeugnis",
+		"Eimer", "Dosenoeffner", "Leuchttrank", "Ketchup", "Olivenoel", "Sandale", "Olivenkranz", "Schriftrolle",
+		"Handy", "Kaugummi", "Kugelschreiber", "Diskus", "Wurfscheibe", "Pharaonenteller", "Schallplatte",
+		"Sonnenbrille", "OmasKekse", "Portalgeraet", "Kaffeetasse", "SchmidtsAkte", "MorseTabelle"].filter(
+		func(sn):
+			var z: String = tasche_3.kommentar_zeile(sn)
+			return z.is_empty() or TranslationServer.translate(z) == z)
+	_pruefe(ohne_zeile.is_empty(), "Reisetasche: im dritten Zwischenspiel hat jedes Ding eine Zeile von Pixel %s" % [ohne_zeile])
 	S.vorgabe_tasche = []
 	await _hotspot("drehknopf").on_click()
 	_pruefe(Z.ist("ZS2_GEPACKT"), "Reisetasche gepackt")
