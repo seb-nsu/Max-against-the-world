@@ -3,8 +3,8 @@ name: Neo-Neustadt 2099
 skript_praefix: W3
 
 # Ebenen: Realität (echte Unterstadt), Simulation (Stadt), Labor (abgeschottete Ebene der Simulation).
-# Ebenenwechsel laufen nicht über Ausgänge, sondern über klingelnde Zellen, das Terminal neben der Kapsel,
-# Pixels Schütteln der Kapsel und Kalles Leitung (Ablauf: raetsel/welt-3.md, Abschnitt „Wechseln über Telefonzellen“).
+# Ebenenwechsel laufen nicht über Ausgänge, sondern über klingelnde Wecker, das Terminal neben der Kapsel,
+# Pixels Schütteln der Kapsel und Kalles Leitung (Ablauf: raetsel/welt-3.md, Abschnitt „Wechseln über Wecker“).
 
 raeume:
   # --- Realität ---
@@ -28,7 +28,7 @@ raeume:
     name: Widerstandsbasis
     skript_code: [BAS, PIEP, ENDE]   # ENDE beginnt in der Basis, ab W3_ENDE_NAR_0090 auf der Straße
     groesse: 1280x360
-    ausgaenge: [unterstadt_strasse, kuehlung, stadtstrasse, testkammer_1]   # stadtstrasse: Ebenenwechsel (Zelle/Terminal); testkammer_1: Kalles Leitung (R9a)
+    ausgaenge: [unterstadt_strasse, kuehlung, stadtstrasse, testkammer_1]   # stadtstrasse: Ebenenwechsel (Wecker/Terminal); testkammer_1: Kalles Leitung (R9a)
     erreichbar_ab: R3b
     musik: w3_basis
     zustaende: [Fenster zu, Fenster offen, Tasse auf dem Tisch, Kaffee am Boden]
@@ -53,7 +53,7 @@ raeume:
     name: Stadtstraße
     skript_code: [SIM, TUER]   # Glaseingang des Büroturms liegt auf der Stadtstraße
     groesse: 1280x360
-    ausgaenge: [kueche_orakel, buero_50, widerstandsbasis]   # widerstandsbasis: Ebenenwechsel über klingelnde Zelle und Terminal
+    ausgaenge: [kueche_orakel, buero_50, widerstandsbasis]   # widerstandsbasis: Ebenenwechsel über den klingelnden Radiowecker und das Terminal
     erreichbar_ab: R3b
     musik: w3_simulation
     zustaende: [Tag, Nacht]
@@ -61,10 +61,10 @@ raeume:
     name: Küche der Orakel-Oma
     skript_code: [KUCH]
     groesse: 640x360
-    ausgaenge: [stadtstrasse]   # Omas Wandtelefon ist zusätzlich ein Ebenenwechsel in die Basis
+    ausgaenge: [stadtstrasse]   # Omas Eieruhr ist zusätzlich ein Ebenenwechsel in die Basis
     erreichbar_ab: R3b
     musik: w3_simulation
-    zustaende: [Vase auf dem Regal, Scherben am Boden]
+    zustaende: [Sparschwein auf dem Regal, Scherben am Boden]
   - id: buero_50
     name: Büroturm, 50. Stock
     skript_code: [TURM, TERM]   # TERM: Pixels Teil spielt in der Basis
@@ -120,7 +120,7 @@ figuren:
   - id: pixel
     name: Pixel
     kuerzel: PIX
-    raum: [unterstadt_strasse, apothekengasse, widerstandsbasis, kuehlung, laboreingang]   # in Simulation und Labor nur Stimme (Hörer, Wandtelefon, Terminal, Lautsprecher)
+    raum: [unterstadt_strasse, apothekengasse, widerstandsbasis, kuehlung, laboreingang]   # in Simulation und Labor nur Stimme (Radiowecker, Küchenradio, Terminal, Lautsprecher)
     groesse_px: 61
     spielbar: true
   - id: opa
@@ -403,11 +403,11 @@ raetsel:
     schalter: [W3_R03_B_GELOEST, SIMULATION_OFFEN]
     optional: false
   - id: R4
-    name: Die Vase des Orakels
+    name: Das Sparschwein des Orakels
     raum: kueche_orakel
     benoetigt: [R3b]
     ergibt: [rezeptkarte]
-    schalter: [W3_R04_GELOEST, VASE_ZERBROCHEN, REGEL_2]   # REGEL_2 aus der Nahansicht Kochbuch, jederzeit in der Küche
+    schalter: [W3_R04_GELOEST, SPARSCHWEIN_ZERSCHLAGEN, REGEL_2]   # REGEL_2 aus der Nahansicht Kochbuch, jederzeit in der Küche
     optional: false
   - id: R5
     name: Die gesprächige Tür
@@ -518,7 +518,7 @@ weitere_schalter:
   - W3_PIXEL_EINMAL            # Pixel hat den Automaten einmal bedient (W3_APO_PIX_0180), Max kommentiert es einmal
   - W3_MAX_RAUM                # Wert: Raum, in dem Max steht, solange er nicht in der Realität ist
   - W3_PIXEL_RAUM              # Wert: Raum, in dem Pixel steht, solange Max drüben ist
-  - W3_LETZTE_ZELLE            # Wert: zuletzt benutzte Zelle (stadtstrasse oder kueche_orakel)
+  - W3_LETZTE_ZELLE            # Wert: zuletzt benutzter Wecker (stadtstrasse oder kueche_orakel); der Name stammt aus der Fassung mit Telefonzellen
   - W3_SIMULATION_BESUCHE      # Wert: Zahl der Eintritte in die Simulation (Errungenschaft Déjà-vu)
   - W3_SYMPTOM_BEKANNT         # Morphäus hat das Déjà-vu beschrieben (W3_NUD_MOR_0490)
   - W3_PIXEL_DOPPELT           # Pixel ist zweimal gleich am Automaten vorbeigegangen
@@ -528,6 +528,6 @@ weitere_schalter:
   - W3_SCHNEE                  # Pixel hat das Fenster über der Kapsel geöffnet (Lösung B)
   - W3_ZELLE_KALT              # Energiezelle abgekühlt (Tausch oder Schnee)
   - W3_KEKSE_WARM              # Omas Kekse ofenwarm (Tausch im Kern)
-  - W3_ZELLE_BENUTZT           # die klingelnde Zelle auf der Stadtstraße schon einmal abgehoben
+  - W3_ZELLE_BENUTZT           # am klingelnden Radiowecker auf der Stadtstraße schon einmal aufgestanden; der Name stammt aus der Fassung mit Telefonzellen
   - W3_FEHLTAUSCHE             # Wert: Räume mit Fehltauschen seit dem letzten Betreten (Zurücksetzen-Zeile)
   - CODE_SICHT                 # Code-Sicht freigeschaltet (auch Schalter von R5)

@@ -184,7 +184,7 @@ flowchart TD
   R2["R2 Die Nudelbude „Vier“"]
   R3a["R3a Der Pastillenautomat, Déjà-vu"]
   R3b["R3b Der Pastillenautomat, die Wahl"]
-  R4["R4 Die Vase des Orakels"]
+  R4["R4 Das Sparschwein des Orakels"]
   R5["R5 Die gesprächige Tür"]
   R6a["R6a Die Agenten-Klone, Original und Kopie"]
   R6b["R6b Die Agenten-Klone, Mittagspause"]

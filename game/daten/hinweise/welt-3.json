@@ -151,7 +151,7 @@
   },
   {
    "schritt": "R4",
-   "ziel": "Die Vase des Orakels",
+   "ziel": "Das Sparschwein des Orakels",
    "raum": "kueche_orakel",
    "offen_wenn": [
     "R3b"

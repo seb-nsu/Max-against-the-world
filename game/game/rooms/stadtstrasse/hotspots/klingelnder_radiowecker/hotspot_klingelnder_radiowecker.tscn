@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://8yxupgmqwsu2"]
 
-[ext_resource type="Script" path="res://game/rooms/stadtstrasse/hotspots/klingelnde_telefonzelle/hotspot_klingelnde_telefonzelle.gd" id="1_yysq8"]
+[ext_resource type="Script" path="res://game/rooms/stadtstrasse/hotspots/klingelnder_radiowecker/hotspot_klingelnder_radiowecker.gd" id="1_yysq8"]
 
-[node name="KlingelndeTelefonzelle" type="Area2D" unique_id=696839727]
+[node name="KlingelnderRadiowecker" type="Area2D" unique_id=696839727]
 script = ExtResource("1_yysq8")
-script_name = "KlingelndeTelefonzelle"
-description = "Klingelnde Telefonzelle"
+script_name = "KlingelnderRadiowecker"
+description = "Klingelnder Radiowecker"
 cursor = 1
 interaction_polygon = PackedVector2Array(-59.3333, -32, 59.3333, -32, 59.3333, 32, -59.3333, 32)
 

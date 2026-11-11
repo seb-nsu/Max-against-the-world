@@ -3676,7 +3676,7 @@ W3_APO_MAX_0600,I don't know what's over there. The sofa I know by heart.
 W3_APO_MOR_0300,"I wait in alleys. That's what I do. I used to have a leather jacket, but the cardigan is warmer."
 W3_APO_MOR_0420,Before you choose: take these. A sample from an old lady who knows everything in advance. She said you'd need them. She also said you'd ask why.
 W3_APO_MOR_0440,She said you'd ask that. That's all she said.
-W3_APO_MOR_0610,Then let yourself be surprised. And if a phone rings over there: answer it. I'll take the cat to the others. He'll express himself.
+W3_APO_MOR_0610,Then let yourself be surprised. And if an alarm clock rings over there: get up. I'll take the cat to the others. He'll express himself.
 W3_APO_PIX_0020,"It has a lens bigger than my head, and I feel watched."
 W3_APO_PIX_0020_2,"That's unusual. Given my importance, I am normally watched far too rarely."
 W3_APO_PIX_0170,"I do not repeat myself, I am an original."
@@ -3705,11 +3705,11 @@ W3_APO_PIX_1010,"I sit in front of the lens. It scans me. It says: ""No symptom.
 W3_BAS_KAL_0040,"Welcome back to the real world! Kalle. Cable Kalle. Cables, consoles, cups of tea. The cat's been talking the whole time."
 W3_BAS_KAL_0110,Haha! Yes! It always does that. The simulation translates everything. Whatever you take with you arrives as whatever it would be on the other side.
 W3_BAS_KAL_0120,"Over there, biscuits for people; here, biscuits for … well. The simulation has an opinion about you. Works the other way round too. Everything's reversible. Except coffee."
-W3_BAS_KAL_0150,The terminal next to your pod takes you back. You come out at the phone box you used last. Headache included.
-W3_BAS_KAL_0160,And I'll put the cat on the line. Then you'll hear him over there from every receiver. You'll regret it. Everyone regrets it.
+W3_BAS_KAL_0150,The terminal next to your pod takes you back. You come out at the alarm clock that woke you last. Headache included.
+W3_BAS_KAL_0160,And I'll put the cat on the line. Then you'll hear him over there from every radio. You'll regret it. Everyone regrets it.
 W3_BAS_KAL_0320,"Resistance. That is: we sit in a wreck, eat noodles and wear sunglasses at night. It's more attitude than plan."
 W3_BAS_KAL_0340,Morphaeus carried you in. And the cat. The cat complained. Morphaeus stayed silent. Both were very good at it.
-W3_BAS_KAL_0360,The lab is a sealed-off level of the simulation. No phone box goes there. Only a data port behind the armoured door at the end of the street.
+W3_BAS_KAL_0360,The lab is a sealed-off level of the simulation. Nothing that rings will get you there. Only a data port behind the armoured door at the end of the street.
 W3_BAS_KAL_0370,"If you get the door open, I'll run a line from there to your pod. Then you lie down and wake up in the lab. Sounds easy. It's cables. Cables are never easy."
 W3_BAS_KAL_0390,"She used to be a food mixer. Then she made rules. Three of them. She sticks to them. Always. That's her strength and her problem. If you know all three, you can … well. Confuse her."
 W3_BAS_KAL_0410,"Fluently. Well, fluently with a table. Without the table … I lost the table. Somewhere around here. Piepsi had a copy. Piepsi is standing over there, rusting."
@@ -3784,7 +3784,7 @@ W3_BAS_PIX_0090_3,Near me.
 W3_BAS_PIX_0090_4,I've ended friendships for less.
 W3_BAS_PIX_0140,"Then go back, and right now."
 W3_BAS_PIX_0140_2,And turn that thing back into something I can ignore with dignity.
-W3_BAS_PIX_0170,"So now I'm everywhere, in every receiver and every line."
+W3_BAS_PIX_0170,"So now I'm everywhere, in every radio and every line."
 W3_BAS_PIX_0170_2,At last my voice gets the reach it deserves. I shall use it responsibly. Mostly.
 W3_BAS_PIX_0525,"Your body lies there smiling, and I sit on the lid keeping watch."
 W3_BAS_PIX_0525_2,"That is work, young man. Unpaid work. I only mention it so that it has been mentioned once."
@@ -3966,9 +3966,9 @@ W3_HINT_PIX_0340,"Two lozenges. One makes it comfortable, one makes it true. You
 W3_HINT_PIX_0350,"The blue one leads to the sofa. You've been there, for sixteen years."
 W3_HINT_PIX_0350_2,"I was there for fourteen of them, and I can assure you: it was not exciting."
 W3_HINT_PIX_0360,Take the red one. I won't catch you. The man in the cardigan does that.
-W3_HINT_PIX_0410,Granny knows you'll break the vase. She says it to your face. Use that. Anything said to your face can be turned around.
+W3_HINT_PIX_0410,Granny knows you'll smash the piggy bank. She says it to your face. Use that. Anything said to your face can be turned around.
 W3_HINT_PIX_0420,"If something's going to happen anyway, you might as well get it over with. Tell her that. Politely. Granny-politely."
-W3_HINT_PIX_0430,"Ask her about the vase first, then say: ""If I'm going to break it anyway, give it to me now."" She'll sigh and hand it over. She already knows."
+W3_HINT_PIX_0430,"Ask her about the piggy bank first, then say: ""If I'm going to smash it anyway, give it to me now."" She'll sigh and hand it over. She already knows."
 W3_HINT_PIX_0510,The door is shut and says nothing. The man in front is open and says everything. That's the wrong way round. Almost as if you could turn it round.
 W3_HINT_PIX_0520,Squint and look at the door. Twice. There are words on it. Words can be moved.
 W3_HINT_PIX_0530,"Open code view, click ""locked"" on the door, click ""talkative"" on Schmidt. The door talks, he goes quiet, you walk through."
@@ -4024,7 +4024,7 @@ W3_INV_MAX_0040,"Grandma's biscuits in the bag. Cold, but they still smell of Su
 W3_INV_MAX_0050,"The biscuits are oven-warm. The cell gave off its heat, and the biscuits took it. Best oven in the world."
 W3_INV_MAX_0055,Steam is rising from my bag. I smell like a bakery on the run.
 W3_INV_MAX_0060,Schmidt's sunglasses. I put them on for a second. Everything gets darker and I look more important. I take them off before anyone sees.
-W3_INV_MAX_0065,With these on I could lean back and dodge bullets. Could. My back is against it.
+W3_INV_MAX_0065,With these on I could lean back and dodge hole punches. Could. My back is against it.
 W3_INV_MAX_0070,Schmidt's file. A glowing data file that hums when I hold it. Rule 1 is in it. And a report about me.
 W3_INV_MAX_0075,"I'm not reading the report about me again. ""Suspiciously human."" That's enough for a lifetime."
 W3_INV_MAX_0080,"Circle red, triangle green, square yellow. My handwriting. Looks like a recipe for very colourful maths."
@@ -4239,10 +4239,10 @@ W3_KERN_PIX_0520,Or in a remote control. Just a thought. I have a lot of thought
 W3_KERN_PIX_0910,The food mixer is saying nothing. You are saying nothing. Only one of you has an excuse.
 W3_KERN_PIX_0920,It's hot down there. I can feel it through the cable. Do something cold. I mean that as a hint and as a life lesson.
 W3_KUCH_MAX_0020,I wasn't going to …
-W3_KUCH_MAX_0040,"I'm not breaking anything here. I'm not touching anything, I'm just standing around, and I'm really good at that."
-W3_KUCH_MAX_0110,What about the vase?
-W3_KUCH_MAX_0130,Could you give me the vase?
-W3_KUCH_MAX_0150,"If I'm going to break it anyway, you might as well give it to me now. Saves you the wait."
+W3_KUCH_MAX_0040,"I'm not smashing anything here. I'm not touching anything, I'm just standing around, and I'm really good at that."
+W3_KUCH_MAX_0110,What about the piggy bank?
+W3_KUCH_MAX_0130,Could you give me the piggy bank?
+W3_KUCH_MAX_0150,"If I'm going to smash it anyway, you might as well give it to me now. Saves you the wait."
 W3_KUCH_MAX_0180,Thanks. And now?
 W3_KUCH_MAX_0210,"… I dropped it. She said so, and I dropped it. Is that fate or just clumsiness?"
 W3_KUCH_MAX_0240,World Forgotten Birthdays Day. I bet they forgot to celebrate it.
@@ -4255,8 +4255,8 @@ W3_KUCH_MAX_0360,You know my grandpa?
 W3_KUCH_MAX_0380,What will become of me?
 W3_KUCH_MAX_0400,"Honestly, that doesn't sound like me at all."
 W3_KUCH_MAX_0420,I have to go.
-W3_KUCH_MAX_0510,"A blue vase on the top shelf. It looks like it's waiting for something. For me, apparently."
-W3_KUCH_MAX_0515,The vase is so close to the edge it's practically falling already. It's been practising.
+W3_KUCH_MAX_0510,"A blue piggy bank on the top shelf. It looks like it's waiting for something. For me, apparently."
+W3_KUCH_MAX_0515,The piggy bank is so close to the edge it's practically falling already. It's been practising.
 W3_KUCH_MAX_0530,"An oven full of biscuits, warm and golden, and it smells like Sunday. I'm not allowed one, I know that before I even ask."
 W3_KUCH_MAX_0550,"A thick book with a food mixer on the page. ""Rule 2: After every mixing cycle there is cake."" Underlined. Twice."
 W3_KUCH_MAX_0560,"""Warning: the appliance may develop affection. Do not charge near children."" Good manual."
@@ -4270,9 +4270,9 @@ W3_KUCH_MAX_0640,A radio. It's playing quietly. News from a city where nothing e
 W3_KUCH_MAX_0645,"The newsreader says: ""Nothing new."" Then the weather: ""Same as yesterday."" Honest news."
 W3_KUCH_MAX_0650,"A radio. It just said ""forgotten birthdays"" and then went over to music as if nothing happened."
 W3_KUCH_MAX_0655,I turn the knob. Just music. The radio is pretending it said nothing. I know better.
-W3_KUCH_MAX_0670,A wall phone with a cord. The cord is longer than the kitchen. Someone had long conversations here.
-W3_KUCH_MAX_0675,I'm not picking up. She probably knows who's calling already. I don't want to spoil it for her.
-W3_KUCH_MAX_0680,It's ringing. Grandma's wall phone is an exit too. The simulation has more doors than walls.
+W3_KUCH_MAX_0670,"An egg timer shaped like a hen. It's ticking, and the hen looks as if it knows exactly when."
+W3_KUCH_MAX_0675,I'm not winding it. Granny probably knows already when it'll ring. I don't want to spoil it for her.
+W3_KUCH_MAX_0680,It's ringing. Granny's egg timer is an exit too. The simulation has more doors than walls.
 W3_KUCH_MAX_0690,"A plate, a teapot, no cup. Either she drinks from the pot or she isn't expecting anyone. Either fits."
 W3_KUCH_MAX_0695,The tea is still steaming. She poured it before I rang the bell.
 W3_KUCH_MAX_0700,"Jars with labels. ""Cinnamon."" ""Sugar."" ""Do not touch."" The third one is the fullest."
@@ -4288,19 +4288,19 @@ W3_KUCH_MAX_0745,"One shard looks like a heart. She left that one when she swept
 W3_KUCH_MAX_0750,"A recipe card in beautiful handwriting. ""The fourth ingredient: a pinch of …"" The last word is tiny. She wrote it extra small. For someone else."
 W3_KUCH_MAX_0755,I tilt the card into the light. The one word stays tiny. It doesn't want to be read. Not yet.
 W3_KUCH_MAX_0760,I'm not giving her back her own biscuits. She surely knows what they taste like by now.
-W3_KUCH_MAX_0770,Give the recipe card back? She just handed it to me in vase form. I'm keeping it.
-W3_KUCH_MAX_0930,I won't break it.
+W3_KUCH_MAX_0770,Give the recipe card back? She just handed it to me inside a piggy bank. I'm keeping it.
+W3_KUCH_MAX_0930,I won't smash it.
 W3_KUCH_MAX_0950,Then I won't ask again.
-W3_KUCH_NAR_0200,Max turns the vase upside down. A rolled-up slip of paper falls out. The vase slips. Shards.
+W3_KUCH_NAR_0200,"Max shakes the piggy bank. It doesn't jingle, it rustles. Then it slips out of his hand. Shards, and among them a rolled-up slip of paper."
 W3_KUCH_NAR_0610,"The little door of the clock flips open. The cuckoo calls: ""Milk! Milk! Milk!"""
 W3_KUCH_ORA_0010,Sit down. You're about to ask whether I really know everything in advance. Yes. Then you'll want a biscuit. No. They're still hot.
-W3_KUCH_ORA_0030,"You were. And before you leave, you'll break my vase. The blue one. On the shelf. I didn't move it anyway. You shouldn't do fate's work for it."
+W3_KUCH_ORA_0030,"You were. And before you leave, you'll smash my piggy bank. The blue one. On the shelf. I didn't move it anyway. You shouldn't do fate's work for it."
 W3_KUCH_ORA_0050,That's what they all said. All forty-seven of them. I keep a list. Next to the recipes.
-W3_KUCH_ORA_0120,My secret recipe is in there. The spice for the biscuits. Nobody can get at it. You can't either. You'll only break it.
-W3_KUCH_ORA_0140,No. I don't give my vase to anyone. That's what I have it for. For not giving away.
+W3_KUCH_ORA_0120,"My secret recipe is in there. The spice for the biscuits. It has no stopper, so nobody can get at it. You can't either. You'll only smash it."
+W3_KUCH_ORA_0140,No. I don't give my piggy bank to anyone. That's what I have it for. For not giving away.
 W3_KUCH_ORA_0160,…
 W3_KUCH_ORA_0170,"Forty-seven people, and none of them said that. I knew you'd say it. I just hoped you'd take your time."
-W3_KUCH_ORA_0190,Now you break it. It's in the plan. I've already put the dustpan and brush out.
+W3_KUCH_ORA_0190,Now you smash it. It's in the plan. I've already put the dustpan and brush out.
 W3_KUCH_ORA_0220,"It's the same thing, child. Clumsiness is just fate that couldn't be bothered to introduce itself."
 W3_KUCH_ORA_0270,You already have some. In the bag. From me. Via the man in the cardigan. They've gone cold. That doesn't matter. They'll get warm again. Somewhere else.
 W3_KUCH_ORA_0290,"Where it's too hot. You'll notice. You'll say ""Oh."" And then you'll swap."
@@ -4310,7 +4310,7 @@ W3_KUCH_ORA_0350,"Hot. Far too hot. A grandpa once said: hard outside, soft insi
 W3_KUCH_ORA_0370,I know all the grandpas. It's my age.
 W3_KUCH_ORA_0390,You'll get up and fetch something without anyone asking you. Not today. But soon. And you'll surprise yourself.
 W3_KUCH_ORA_0410,Not yet. That's why it's a prophecy and not a report.
-W3_KUCH_ORA_0430,I know. Take the door. The phone will ring when you need it. It always rings when you need it. That's the only thing here I programmed.
+W3_KUCH_ORA_0430,I know. Take the door. The egg timer will ring when you need it. It always rings when you need it. That's the only thing here I programmed.
 W3_KUCH_ORA_0520,Hands off. It's not time yet.
 W3_KUCH_ORA_0540,Leave the oven shut. They need four more minutes. I know that. I know everything to do with minutes.
 W3_KUCH_ORA_0660,Leave it on. I'm waiting for the lottery numbers. Not to play. To check.
@@ -4442,7 +4442,7 @@ W3_SIM_MAX_0020,"Okay, dry. That's progress, even if I don't know towards what."
 W3_SIM_MAX_0030,Everything is so … smooth. It looks like someone cut a city out of a brochure.
 W3_SIM_MAX_0040,"Pixel? … Right. No cats here. Just one, and that one's scenery."
 W3_SIM_MAX_0050,"That's the first time in three worlds nobody's moaning next to me. And honestly, it's … too quiet."
-W3_SIM_MAX_0060,"A phone box. An office tower. A house with lace curtains and a smell of biscuits. None of it looks real. So, look at everything."
+W3_SIM_MAX_0060,"A bedside table with a clock radio, in the middle of the pavement. An office tower. A house with lace curtains and a smell of biscuits. None of it looks real. So, look at everything."
 W3_SIM_MAX_0110,"The same cloud, three times. Someone found copy and then simply couldn't stop pressing paste."
 W3_SIM_MAX_0115,I count the clouds again. Three. Still the same one. It hasn't even turned.
 W3_SIM_MAX_0120,A tree. The same tree. The same tree again. Whoever built this had exactly one photo of a tree.
@@ -4455,11 +4455,12 @@ W3_SIM_MAX_0150,"Locked, of course. In a perfect city nobody nicks a car, not ev
 W3_SIM_MAX_0160,"A black cat. Walks past, tail up, without looking at me. Seems familiar."
 W3_SIM_MAX_0170,"And again, exactly the same, same paw first. I've seen that once already today. Twice, actually."
 W3_SIM_MAX_0200,"I'm not touching her. If she's scenery, my hand goes straight through. If not, that's one more cat who doesn't like me."
-W3_SIM_MAX_0210,"A phone box. It's clean and quiet, and I get the feeling it's waiting for someone."
-W3_SIM_MAX_0215,I knock on the glass. No sound. The box prefers to wait in peace.
-W3_SIM_MAX_0220,"It's ringing. Morphaeus said that when it rings, I should answer. I hope this time it isn't just rain again."
-W3_SIM_MAX_0230,Hello? …
-W3_SIM_MAX_0240,"If I pick up, I wake up in the pod, I know that by now. Still, I flinch every time, like at the school bell."
+W3_SIM_MAX_0210,"A bedside table with a clock radio, in the middle of the pavement. It says 5:59, and I get the feeling it's waiting for someone."
+W3_SIM_MAX_0215,I tap the display. Still 5:59. That minute is taking its time. I know the feeling.
+W3_SIM_MAX_0220,"Six o'clock, and it's ringing. Morphaeus said that when an alarm clock rings, I should get up. Normally only my phone tells me that, and I never listen to it."
+W3_SIM_MAX_0225,"The radio in it is playing the same song as before. Every morning here is the same morning, and the alarm acts as if it were the first time."
+W3_SIM_MAX_0230,"All right, all right. I'm getting up."
+W3_SIM_MAX_0240,"If I switch it off, I wake up in the pod, I know that by now. Still, every time, I look for the snooze button first."
 W3_SIM_MAX_0260,A glass entrance. Behind it a corridor that never ends. And in front of it a man in a corduroy suit who starts talking before I get there.
 W3_SIM_MAX_0265,He's talking again. I haven't even said hello. He's been talking since yesterday.
 W3_SIM_MAX_0270,The tower is open. The door is still talking. I'll slip past quickly before it gets to know me.
@@ -4474,7 +4475,7 @@ W3_SIM_MAX_0325,My shadow points the same way as before. Exactly the same. I mar
 W3_SIM_NAR_0010,"Sunshine. A street so straight it hurts. Identical trees, identical houses, identical red cars. One cloud, three times."
 W3_SIM_ORA_0290,"Come in, Max. The door is open. It was open before you knocked."
 W3_SIM_PIX_0180,I know her. We're not on speaking terms.
-W3_SIM_PIX_0180_2,"There was a thing with a windowsill, and I'd rather not say more about it on the phone."
+W3_SIM_PIX_0180_2,"There was a thing with a windowsill, and I'd rather not say more about it on the radio."
 W3_SIM_PIX_0190,"She walks past the same way twice and everyone finds it creepy. I did that in the alley and you said: ""Again."""
 W3_SIM_PIX_0250,"This is your third time here. That isn't déjà vu any more, young man."
 W3_SIM_PIX_0250_2,"That's a subscription, and for your sake I hope you can cancel it."
@@ -4751,6 +4752,9 @@ W3_TURM_MAX_0290,"A cup of water. Tastes of nothing. Zero calories, zero water."
 W3_TURM_MAX_0300,"A white coffee cup, empty. Every clone has the same one, and the word on it is ""copy"". At least it knows what it is."
 W3_TURM_MAX_0305,"""Copy"" it says on the cup, in a serif font. So at least they gave it a bit of style."
 W3_TURM_MAX_0310,"I'll take the cup with me. You never know, maybe in the end it'll have to take responsibility."
+W3_TURM_MAX_0312,"An office photocopier. That's where the agents came from earlier, and there's still a warm slipper in the output tray."
+W3_TURM_MAX_0314,"The display says: ""Jam in tray 2. Please remove agent."" I'm not removing anything here."
+W3_TURM_MAX_0316,"I'd rather not copy myself. Two of me, and neither one gets up."
 W3_TURM_MAX_0320,"Thirty men in corduroy suits, all in pink slippers, and one of them is real. This is the most boring spot-the-difference ever."
 W3_TURM_MAX_0325,They all turn their heads towards me at the same time. One of them is about to say my surname very slowly.
 W3_TURM_MAX_0330,"In code view they all say ""copy"". All except one. He's standing at the back pretending to be one too."
@@ -4767,8 +4771,8 @@ W3_TURM_MAX_0510,"The cup is wearing slippers now, and Schmidt is barefoot. He l
 W3_TURM_MAX_0520,"The plant is the original now. All the clones are listening to a plant. The plant says nothing. Good leadership, honestly."
 W3_TURM_MAX_0530,"No swaps left. Out and back in once, then everything's reset, and I get to enjoy the stairs all over again."
 W3_TURM_MAX_0550,No sending them on lunch break before they know who the boss is. They only listen to the original. And that's neither me nor the cup. Yet.
-W3_TURM_MAX_0570,"The corridor is empty. Just Schmidt, a cup with responsibilities and me. No exit, no phone box, but there's a terminal back there."
-W3_TURM_NAR_0080,Max bends backwards in slow motion. The bullet passes over him. He gets stuck in the pose.
+W3_TURM_MAX_0570,"The corridor is empty. Just Schmidt, a cup with responsibilities and me. No exit, no alarm clock, but there's a terminal back there."
+W3_TURM_NAR_0080,"Max bends backwards in slow motion. The hole punch sails over him, trailing a line of confetti. Max gets stuck in the pose."
 W3_TURM_NAR_0350,Swap: original (Schmidt) ↔ copy (coffee cup). The cup lights up briefly. Schmidt looks down at himself.
 W3_TURM_PIX_0235,"Twelve identical plants. If I were there, I would dig in all twelve, just to see whether the soil is the same too."
 W3_TURM_PIX_0235_2,"That isn't curiosity, that's science. Curiosity is for dogs."

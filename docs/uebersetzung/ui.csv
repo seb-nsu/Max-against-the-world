@@ -621,7 +621,7 @@ UI_OBJ_KAPSELN,Kapseln,Pods
 UI_OBJ_KARTENLESER,Kartenleser,Card reader
 UI_OBJ_KEHRBLECH,Kehrblech,Dustpan
 UI_OBJ_KISTEN,Kisten,Crates
-UI_OBJ_KLINGELNDE_TELEFONZELLE,Klingelnde Telefonzelle,Ringing phone box
+UI_OBJ_KLINGELNDER_RADIOWECKER,Klingelnder Radiowecker,Ringing clock radio
 UI_OBJ_KLON,Klon,Clone
 UI_OBJ_KLONE,Klone,Clones
 UI_OBJ_KRITZELEI_KAMMER_2,Kritzelei,Scribble
@@ -670,6 +670,8 @@ UI_OBJ_TAPETE,Tapete,Wallpaper
 UI_OBJ_TELEFONBUCHSEITE,Telefonbuchseite,Phone book page
 UI_OBJ_TELEFONBUCH_IN_DER_ZELLE,Telefonbuch in der Zelle,Phone book in the box
 UI_OBJ_TELEFONZELLE,Telefonzelle,Phone box
+UI_OBJ_RADIOWECKER,Radiowecker,Clock radio
+UI_OBJ_KOPIERER,Kopierer,Photocopier
 UI_OBJ_TERMINAL,Terminal,Terminal
 UI_OBJ_TISCH_MIT_KALLES_TASSE,Tisch mit Kalles Tasse,Table with Kalle's mug
 UI_OBJ_TISCH_MIT_TELLER_UND_TEEKANNE,Tisch mit Teller und Teekanne,Table with plate and teapot
@@ -677,11 +679,11 @@ UI_OBJ_TOPFPFLANZEN,Topfpflanzen,Potted plants
 UI_OBJ_TROPFENDES_ROHR,Tropfendes Rohr,Dripping pipe
 UI_OBJ_TUER,Die Tür,The Door
 UI_OBJ_TUEREN,Türen,Doors
-UI_OBJ_VASE,Vase,Vase
+UI_OBJ_SPARSCHWEIN,Sparschwein,Piggy bank
 UI_OBJ_VORDACH,Vordach,Awning
 UI_OBJ_WANDLAMPE,Wandlampe,Wall lamp
 UI_OBJ_WANDPLATTEN,Wandplatten,Wall panels
-UI_OBJ_WANDTELEFON,Wandtelefon,Wall phone
+UI_OBJ_EIERUHR,Eieruhr,Egg timer
 UI_OBJ_WARNSTREIFEN,Warnstreifen,Warning stripes
 UI_OBJ_WASSERSPENDER,Wasserspender,Water cooler
 UI_OBJ_WEINENDER_MANN,Weinender Mann,Crying man

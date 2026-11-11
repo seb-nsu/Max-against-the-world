@@ -221,6 +221,8 @@ Die Welt-Idee: zwei Ebenen. Max liegt in einer Kapsel und spielt in der zu saube
 - *Matrix*: rote und blaue Pastille, déjà-vu als Fehler in der Simulation, das Orakel mit Keksen in der Küche ([Wikipedia](<https://en.wikipedia.org/wiki/The_Oracle_(The_Matrix)>), [IMDb](https://m.imdb.com/title/tt0133093/characters/nm0000401)).
 - *Terminator*: Killerroboter aus der Zukunft, „Ich komme wieder“.
 - *Blade Runner*: Neon-Stadt im Dauerregen, Replikanten und der Test, ob jemand ein Mensch ist.
+- *Und täglich grüßt das Murmeltier*: der Radiowecker, der jeden Morgen dasselbe Lied spielt. In der Simulation ist er der Ausgang: Wer aufsteht, wacht auf.
+- Die Welt folgt keinem der Filme Station für Station. Der Ausgang (Wecker statt Telefon), das Sparschwein der Orakel-Oma und der Bürokopierer im Turm sind eigene Einfälle (Entscheidung vom 11. November 2026, `entscheidungen.md`).
 - Außerdem *WALL-E*, *2001*, *Per Anhalter durch die Galaxis* und *Futurama*.
 
 ### Orte

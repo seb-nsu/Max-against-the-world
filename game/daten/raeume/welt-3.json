@@ -245,7 +245,7 @@
          "raetsel": "R11"
         }
        ],
-       "bedingung_text": "(diese Zelle ist kein Sprungpunkt)",
+       "bedingung_text": "(die Zelle ist kein Sprungpunkt, in der Simulation wecken nur Wecker)",
        "folge": [
         {
          "zeile": "W3_STR_PIX_0050",
@@ -1185,7 +1185,7 @@
        "blasen": [
         "W3_BAS_MAX_0560"
        ],
-       "bedingung_text": "Ebenenwechsel in die Simulation, Ankunft an der letzten Zelle"
+       "bedingung_text": "Ebenenwechsel in die Simulation, Ankunft am letzten Wecker"
       },
       {
        "zeile": "W3_BAS_MAX_0570",
@@ -2629,9 +2629,9 @@
      ]
     },
     {
-     "id": "telefonzelle",
-     "script_name": "Telefonzelle",
-     "name_key": "UI_OBJ_TELEFONZELLE",
+     "id": "radiowecker",
+     "script_name": "Radiowecker",
+     "name_key": "UI_OBJ_RADIOWECKER",
      "rect": [
       705,
       40,
@@ -2649,7 +2649,7 @@
        "blasen": [
         "W3_SIM_MAX_0210"
        ],
-       "bedingung_text": "bevor sie klingelt"
+       "bedingung_text": "bevor er klingelt"
       },
       {
        "zeile": "W3_SIM_MAX_0215",
@@ -2657,7 +2657,7 @@
        "blasen": [
         "W3_SIM_MAX_0215"
        ],
-       "bedingung_text": "bevor sie klingelt",
+       "bedingung_text": "bevor er klingelt",
        "mal": 2
       }
      ],
@@ -2668,15 +2668,15 @@
        "blasen": [
         "W3_SIM_MAX_0240"
        ],
-       "bedingung_text": "vor dem Abheben",
+       "bedingung_text": "vor dem Aufstehen",
        "mal": 2
       }
      ]
     },
     {
-     "id": "klingelnde_telefonzelle",
-     "script_name": "KlingelndeTelefonzelle",
-     "name_key": "UI_OBJ_KLINGELNDE_TELEFONZELLE",
+     "id": "klingelnder_radiowecker",
+     "script_name": "KlingelnderRadiowecker",
+     "name_key": "UI_OBJ_KLINGELNDER_RADIOWECKER",
      "rect": [
       835,
       40,
@@ -2694,6 +2694,14 @@
        "blasen": [
         "W3_SIM_MAX_0220"
        ]
+      },
+      {
+       "zeile": "W3_SIM_MAX_0225",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_SIM_MAX_0225"
+       ],
+       "mal": 2
       }
      ],
      "benutzen": [
@@ -2979,9 +2987,9 @@
    ],
    "hotspots": [
     {
-     "id": "vase",
-     "script_name": "Vase",
-     "name_key": "UI_OBJ_VASE",
+     "id": "sparschwein",
+     "script_name": "Sparschwein",
+     "name_key": "UI_OBJ_SPARSCHWEIN",
      "rect": [
       59,
       40,
@@ -3209,9 +3217,9 @@
      ]
     },
     {
-     "id": "wandtelefon",
-     "script_name": "Wandtelefon",
-     "name_key": "UI_OBJ_WANDTELEFON",
+     "id": "eieruhr",
+     "script_name": "Eieruhr",
+     "name_key": "UI_OBJ_EIERUHR",
      "rect": [
       499,
       40,
@@ -3752,6 +3760,47 @@
        "sprecher": "MAX",
        "blasen": [
         "W3_TURM_MAX_0290"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "kopierer",
+     "script_name": "Kopierer",
+     "name_key": "UI_OBJ_KOPIERER",
+     "rect": [
+      147,
+      120,
+      77,
+      64
+     ],
+     "gehe": [
+      185,
+      313
+     ],
+     "ansehen": [
+      {
+       "zeile": "W3_TURM_MAX_0312",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_TURM_MAX_0312"
+       ]
+      },
+      {
+       "zeile": "W3_TURM_MAX_0314",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_TURM_MAX_0314"
+       ],
+       "mal": 2
+      }
+     ],
+     "benutzen": [
+      {
+       "zeile": "W3_TURM_MAX_0316",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_TURM_MAX_0316"
        ]
       }
      ]
@@ -7842,7 +7891,7 @@
        "blasen": [
         "W3_KUCH_ORA_0170"
        ],
-       "regie": "seufzt, reicht die Vase"
+       "regie": "seufzt, reicht das Sparschwein"
       },
       {
        "zeile": "W3_KUCH_MAX_0180",
@@ -7866,7 +7915,7 @@
        "blasen": [
         "W3_KUCH_NAR_0200"
        ],
-       "regie": "Szene; Vase vom Regal verschwindet; Inventar: Omas Rezeptkarte"
+       "regie": "Szene; Sparschwein vom Regal verschwindet; Inventar: Omas Rezeptkarte"
       },
       {
        "zeile": "W3_KUCH_MAX_0210",

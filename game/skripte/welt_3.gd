@@ -361,9 +361,10 @@ func _aufwachen() -> void:
 	await Spiel.raum_wechseln_und_warten(Bauplan.raum_script_name("widerstandsbasis"))
 
 
-## Klingelnde Zelle oder Omas Wandtelefon: zurück in die Realität.
-func _zelle_abheben(zelle: String, zeile: String) -> void:
-	Zustand.setze_wert("W3_LETZTE_ZELLE", zelle)
+## Klingelnder Radiowecker oder Omas Eieruhr: zurück in die Realität. Die Werte W3_LETZTE_ZELLE und
+## W3_ZELLE_BENUTZT heißen noch nach der Fassung mit Telefonzellen (Spielstände bleiben gültig).
+func _wecker_aufstehen(wecker: String, zeile: String) -> void:
+	Zustand.setze_wert("W3_LETZTE_ZELLE", wecker)
 	await _sag(zeile)
 	await _aufwachen()
 
@@ -728,23 +729,23 @@ func benutzen_inventar_rote_pastille(_obj, _x) -> bool:
 	return true
 #endregion
 
-#region Ebenenwechsel: Zellen, Terminal, Kapsel #####################################################
-func benutzen_telefonzelle(_obj, _x) -> bool:
-	if _raum_id() != "stadtstrasse":
-		return false  # Unterstadt: kein Sprungpunkt (W3_STR_MAX_0040), am Ende der Werbeblock
-	# Beim ersten Abheben „Hallo? …“ (0230), danach 0240. Beide Hotspots der Zelle gelten gleich.
+#region Ebenenwechsel: Wecker, Terminal, Kapsel #####################################################
+## Die Telefonzelle der Unterstadt ist kein Sprungpunkt (W3_STR_MAX_0040 aus dem Bauplan), am Ende
+## klingelt dort der Werbeblock. In der Simulation wecken nur Wecker.
+func benutzen_radiowecker(_obj, _x) -> bool:
+	# Beim ersten Aufstehen 0230, danach 0240. Beide Hotspots des Weckers gelten gleich.
 	var zeile := "W3_SIM_MAX_0240" if Zustand.ist("W3_ZELLE_BENUTZT") else "W3_SIM_MAX_0230"
 	Zustand.setze("W3_ZELLE_BENUTZT")
-	await _zelle_abheben("stadtstrasse", zeile)
+	await _wecker_aufstehen("stadtstrasse", zeile)
 	return true
 
 
-func benutzen_klingelnde_telefonzelle(obj, x) -> bool:
-	return await benutzen_telefonzelle(obj, x)
+func benutzen_klingelnder_radiowecker(obj, x) -> bool:
+	return await benutzen_radiowecker(obj, x)
 
 
-func benutzen_wandtelefon(_obj, _x) -> bool:
-	await _zelle_abheben("kueche_orakel", "W3_KUCH_MAX_0680")
+func benutzen_eieruhr(_obj, _x) -> bool:
+	await _wecker_aufstehen("kueche_orakel", "W3_KUCH_MAX_0680")
 	return true
 
 
@@ -897,7 +898,7 @@ func _tauschen(rid: String, t: Dictionary) -> void:
 		await _szene(BUDGET_LEER.get(rid, []))
 #endregion
 
-#region Rätsel 4: Die Vase des Orakels ##############################################################
+#region Rätsel 4: Das Sparschwein des Orakels #####################################################
 func sichtbar_orakel_oma_0150() -> Variant:
 	return _option_gewaehlt("OrakelOma", "0110") and _option_gewaehlt("OrakelOma", "0130") \
 		and not Zustand.geloest("R4")

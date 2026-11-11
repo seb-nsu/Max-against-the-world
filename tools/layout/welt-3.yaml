@@ -7,7 +7,7 @@
 #
 # Koordinaten in Spielpixeln, Rechteck = [x, y, breite, hoehe], gehe = Punkt, zu dem die Figur
 # vor der Aktion läuft. Sonderschlüssel wie in welt-1.yaml; dazu je Raum:
-#   wechsel   Ziele, die nur ein Ebenenwechsel verbindet (Telefonzelle, Terminal, Kapsel,
+#   wechsel   Ziele, die nur ein Ebenenwechsel verbindet (Wecker, Terminal, Kapsel,
 #             Kalles Leitung; kein eigener Ausgang, skripte/welt_3.gd)
 
 _alias:
@@ -284,10 +284,10 @@ stadtstrasse:
     auto:
       rect: [576, 40, 119, 64]
       gehe: [635, 313]
-    telefonzelle:
+    radiowecker:
       rect: [705, 40, 119, 64]
       gehe: [764, 313]
-    klingelnde_telefonzelle:
+    klingelnder_radiowecker:
       rect: [835, 40, 119, 64]
       gehe: [893, 313]
     gehweg:
@@ -318,7 +318,7 @@ kueche_orakel:
     orakel_oma: [200, 309]
     radio: [440, 309]
   hotspots:
-    vase:
+    sparschwein:
       rect: [59, 40, 77, 64]
       gehe: [97, 313]
     ofen:
@@ -333,7 +333,7 @@ kueche_orakel:
     kuckucksuhr:
       rect: [411, 40, 77, 64]
       gehe: [449, 313]
-    wandtelefon:
+    eieruhr:
       rect: [499, 40, 77, 64]
       gehe: [537, 313]
     tisch_mit_teller_und_teekanne:
@@ -394,6 +394,9 @@ buero_50:
     klone:
       rect: [59, 120, 77, 64]
       gehe: [97, 313]
+    kopierer:
+      rect: [147, 120, 77, 64]
+      gehe: [185, 313]
     farbcode_an_der_wand:
       rect: [235, 120, 77, 64]
       gehe: [273, 313]

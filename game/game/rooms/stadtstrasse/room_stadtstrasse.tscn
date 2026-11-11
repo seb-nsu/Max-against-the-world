@@ -9,8 +9,8 @@
 [ext_resource type="PackedScene" uid="uid://c8gokp2jxtcun" path="res://game/rooms/stadtstrasse/hotspots/haeuser/hotspot_haeuser.tscn" id="7_r0yu5"]
 [ext_resource type="PackedScene" uid="uid://b6tlpgyaeiif4" path="res://game/rooms/stadtstrasse/hotspots/autos/hotspot_autos.tscn" id="8_loho1"]
 [ext_resource type="PackedScene" uid="uid://2r24qu7x55qg" path="res://game/rooms/stadtstrasse/hotspots/auto/hotspot_auto.tscn" id="9_2bbo6"]
-[ext_resource type="PackedScene" uid="uid://bwn2haamaocc5" path="res://game/rooms/stadtstrasse/hotspots/telefonzelle/hotspot_telefonzelle.tscn" id="10_utdh6"]
-[ext_resource type="PackedScene" uid="uid://8yxupgmqwsu2" path="res://game/rooms/stadtstrasse/hotspots/klingelnde_telefonzelle/hotspot_klingelnde_telefonzelle.tscn" id="11_0bymk"]
+[ext_resource type="PackedScene" uid="uid://bwn2haamaocc5" path="res://game/rooms/stadtstrasse/hotspots/radiowecker/hotspot_radiowecker.tscn" id="10_utdh6"]
+[ext_resource type="PackedScene" uid="uid://8yxupgmqwsu2" path="res://game/rooms/stadtstrasse/hotspots/klingelnder_radiowecker/hotspot_klingelnder_radiowecker.tscn" id="11_0bymk"]
 [ext_resource type="PackedScene" uid="uid://ji0f114mmw6w" path="res://game/rooms/stadtstrasse/hotspots/gehweg/hotspot_gehweg.tscn" id="12_b267r"]
 [ext_resource type="PackedScene" uid="uid://bgbylvywytrwg" path="res://game/rooms/stadtstrasse/hotspots/sonne/hotspot_sonne.tscn" id="13_aa3pb"]
 [ext_resource type="PackedScene" uid="uid://ba2p288xgu86u" path="res://game/rooms/stadtstrasse/hotspots/ausgang_kueche_orakel/hotspot_ausgang_kueche_orakel.tscn" id="14_48cuf"]
@@ -74,15 +74,15 @@ description = "UI_OBJ_AUTO"
 baseline = 32
 walk_to_point = Vector2(-0.666667, 241)
 
-[node name="Telefonzelle" parent="Hotspots" unique_id=1420049876 instance=ExtResource("10_utdh6")]
+[node name="Radiowecker" parent="Hotspots" unique_id=1420049876 instance=ExtResource("10_utdh6")]
 position = Vector2(764.667, 72)
-description = "UI_OBJ_TELEFONZELLE"
+description = "UI_OBJ_RADIOWECKER"
 baseline = 32
 walk_to_point = Vector2(-0.666667, 241)
 
-[node name="KlingelndeTelefonzelle" parent="Hotspots" unique_id=696839727 instance=ExtResource("11_0bymk")]
+[node name="KlingelnderRadiowecker" parent="Hotspots" unique_id=696839727 instance=ExtResource("11_0bymk")]
 position = Vector2(894.0, 72)
-description = "UI_OBJ_KLINGELNDE_TELEFONZELLE"
+description = "UI_OBJ_KLINGELNDER_RADIOWECKER"
 baseline = 32
 walk_to_point = Vector2(-0.666667, 241)
 

@@ -102,7 +102,7 @@ Preise Stand November 2026, laut [Retro Diffusion auf itch.io](https://astropuls
 | Prolog und Gegenwart | 3 Räume, 3 Figuren, 6 Gegenstände, 1 Nahansicht; Hauptmenü und Oberfläche | Titelthema, `gegenwart`, `zappomat`; 16 Geräusche der Bedienung, 13 für Max, Pixel und die Gegenwart | Test mit fünf Fremden (Prolog und Welt 1 bis Rätsel 4) |
 | Welt 1 | 14 Räume, 29 Figuren, 25 Gegenstände, 2 Nahansichten | 7 Musikstücke, 8 Geräusche, Goblin-Arbeitslied und Waldemars Nummer | Demo und Steam-Seite |
 | Welt 2 | 11 Räume, 29 Figuren, 43 Gegenstände, 3 Nahansichten | 4 Musikstücke, 8 Geräusche | Minispiele des Fünfkampfs bauen, Test |
-| Welt 3 | 12 Räume, 24 Figuren, 14 Gegenstände, 2 Nahansichten | 5 Musikstücke, 10 Geräusche | Test |
+| Welt 3 | 12 Räume, 24 Figuren, 14 Gegenstände, 2 Nahansichten | 5 Musikstücke, 12 Geräusche | Test |
 | Welt 4 | 14 Räume, 31 Figuren, 17 Gegenstände | 9 Musikstücke, 11 Geräusche, Dr. Werbepauses Jingle | Rhythmus-Minispiel bauen, Test |
 | Zwischenspiele und Finale | 4 Räume, 15 Figuren, 6 Gegenstände | `finale_maschine`, `finale_geburtstag`, `werbeblock`, Abspann | Sprachausgabe oder Brabbel entscheiden, Steam-Einreichung |
 

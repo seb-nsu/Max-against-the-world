@@ -185,7 +185,9 @@ Jedes Geräusch hat eine Kennung; die Datei heißt `audio/geraeusche/<Kennung>.o
 | Kennung | Geräusch (Prompt) | Einsatz |
 | --- | --- | --- |
 | regen_strasse | heavy rain on neon street loop | Unterstadt, Straße und Apothekengasse, Raum-Atmosphäre (Schleife) |
-| telefonzelle | phone booth ringing old-fashioned | Stadtstraße (Simulation), Telefonzelle |
+| telefonzelle | phone booth ringing old-fashioned | Unterstadt (Realität), Telefonzelle |
+| radiowecker | 1980s clock radio alarm beeping, then a tinny cheerful pop tune from a small speaker | Stadtstraße (Simulation), Radiowecker |
+| eieruhr | mechanical wind-up kitchen timer ticking, then ringing | Küche der Orakel-Oma, Eieruhr |
 | schleusentor | hydraulic blast door opening | Laboreingang |
 | terminal | computer terminal beeps | Terminals (Apothekengasse, Widerstandsbasis, Laboreingang, Büroturm) |
 | laser | laser barrier hum | Testkammern, Einsatz noch festlegen |

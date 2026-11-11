@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://7v6m0u88y5fn"]
 
-[ext_resource type="Script" path="res://game/rooms/kueche_orakel/hotspots/vase/hotspot_vase.gd" id="1_ar1qc"]
+[ext_resource type="Script" path="res://game/rooms/kueche_orakel/hotspots/sparschwein/hotspot_sparschwein.gd" id="1_ar1qc"]
 
-[node name="Vase" type="Area2D" unique_id=1263338610]
+[node name="Sparschwein" type="Area2D" unique_id=1263338610]
 script = ExtResource("1_ar1qc")
-script_name = "Vase"
-description = "Vase"
+script_name = "Sparschwein"
+description = "Sparschwein"
 cursor = 1
 interaction_polygon = PackedVector2Array(-39, -32, 39, -32, 39, 32, -39, 32)
 

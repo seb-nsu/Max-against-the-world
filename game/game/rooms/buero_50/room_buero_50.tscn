@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c7ty0h88rqwh6"]
 
-[ext_resource type="Script" path="res://game/rooms/buero_50/room_buero_50.gd" id="1_3nd8x"]
+[ext_resource type="Script" uid="uid://f5b4bsfcxd35" path="res://game/rooms/buero_50/room_buero_50.gd" id="1_3nd8x"]
 [ext_resource type="PackedScene" uid="uid://c8c8cydu34puc" path="res://game/rooms/buero_50/walkable_areas/boden/walkable_area_boden.tscn" id="2_8t7q5"]
 [ext_resource type="PackedScene" uid="uid://bh4bnyuqvgvgv" path="res://game/rooms/buero_50/props/background/prop_background.tscn" id="3_2nn64"]
 [ext_resource type="Texture2D" uid="uid://eshlmr1lowk8" path="res://grafik/platzhalter/raum_buero_50.png" id="4_homwi"]
@@ -20,6 +20,7 @@
 [ext_resource type="PackedScene" uid="uid://bnc102a52d5os" path="res://game/rooms/buero_50/hotspots/farbcode_an_der_wand/hotspot_farbcode_an_der_wand.tscn" id="18_tv7pl"]
 [ext_resource type="PackedScene" uid="uid://bx12cl2dk17qy" path="res://game/rooms/buero_50/hotspots/terminal/hotspot_terminal.tscn" id="19_lyoph"]
 [ext_resource type="PackedScene" uid="uid://c8qbq330xxtcf" path="res://game/rooms/buero_50/hotspots/ausgang_stadtstrasse/hotspot_ausgang_stadtstrasse.tscn" id="20_q22gl"]
+[ext_resource type="PackedScene" uid="uid://cgxtaxebiaxkq" path="res://game/rooms/buero_50/hotspots/kopierer/hotspot_kopierer.tscn" id="21_2nn64"]
 [ext_resource type="PackedScene" uid="uid://dlkhwnch7vcfc" path="res://game/rooms/buero_50/markers/start/marker_start.tscn" id="21_v0ywy"]
 [ext_resource type="PackedScene" uid="uid://rdwapveabjqi" path="res://game/rooms/buero_50/markers/von_stadtstrasse/marker_von_stadtstrasse.tscn" id="22_2pc4u"]
 [ext_resource type="PackedScene" uid="uid://bhd8p85pm6xca" path="res://game/characters/schmidt/character_schmidt.tscn" id="23_xcy5n"]
@@ -34,7 +35,6 @@ height = 360
 [node name="WalkableAreas" type="Node2D" parent="." unique_id=1802947153]
 
 [node name="Boden" parent="WalkableAreas" unique_id=763440358 instance=ExtResource("2_8t7q5")]
-interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(8, 280, 632, 280, 632, 356, 8, 356)])
 
 [node name="Props" type="Node2D" parent="." unique_id=1357218745]
 
@@ -121,11 +121,17 @@ baseline = 32
 walk_to_point = Vector2(0, 161)
 
 [node name="AusgangStadtstrasse" parent="Hotspots" unique_id=1812715989 instance=ExtResource("20_q22gl")]
-position = Vector2(26.0, 210.0)
+position = Vector2(26, 210)
 description = "UI_RAUM_STADTSTRASSE"
 baseline = 69
-walk_to_point = Vector2(22.0, 110.0)
+walk_to_point = Vector2(22, 110)
 cursor = 9
+
+[node name="Kopierer" parent="Hotspots" unique_id=788295757 instance=ExtResource("21_2nn64")]
+position = Vector2(185.5, 152)
+description = "UI_OBJ_KOPIERER"
+baseline = 32
+walk_to_point = Vector2(-0.5, 161)
 
 [node name="Regions" type="Node2D" parent="." unique_id=1156180557]
 

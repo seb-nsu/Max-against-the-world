@@ -130,7 +130,7 @@
    "erreichbar_ab": "R3b",
    "musik": "w3_simulation",
    "zustaende": [
-    "Vase auf dem Regal",
+    "Sparschwein auf dem Regal",
     "Scherben am Boden"
    ]
   },
@@ -745,7 +745,7 @@
   },
   {
    "id": "R4",
-   "name": "Die Vase des Orakels",
+   "name": "Das Sparschwein des Orakels",
    "raum": "kueche_orakel",
    "benoetigt": [
     "R3b"
@@ -755,7 +755,7 @@
    ],
    "schalter": [
     "W3_R04_GELOEST",
-    "VASE_ZERBROCHEN",
+    "SPARSCHWEIN_ZERSCHLAGEN",
     "REGEL_2"
    ],
    "optional": false

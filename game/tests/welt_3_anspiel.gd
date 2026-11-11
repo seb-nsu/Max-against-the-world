@@ -81,31 +81,49 @@ func _durchlauf() -> void:
 	await S.regel("benutzen", "tuer")
 	_pruefe(Z.geloest("R5"), "R5 gesprächige Tür")
 
-	# Telefonzelle auf der Stadtstraße: beim ersten Abheben „Hallo? …“ (0230), danach 0240.
-	# Beide Hotspots der Zelle gelten gleich.
-	await S.regel("benutzen", "klingelnde_telefonzelle")
+	# Radiowecker auf der Stadtstraße: beim ersten Aufstehen 0230, danach 0240.
+	# Beide Hotspots des Weckers gelten gleich.
+	await S.regel("benutzen", "klingelnder_radiowecker")
 	await _warte_auf_raum("widerstandsbasis")
-	_pruefe(_gesagt("W3_SIM_MAX_0230") and not _gesagt("W3_SIM_MAX_0240"), "Telefonzelle, erstes Abheben: „Hallo? …“")
+	_pruefe(_gesagt("W3_SIM_MAX_0230") and not _gesagt("W3_SIM_MAX_0240"), "Radiowecker, erstes Aufstehen: die erste Zeile")
 	S.vorgabe_auswahl = [0]
 	await S.regel("benutzen", "terminal")
 	await _warte_auf_raum("stadtstrasse")
-	await S.regel("benutzen", "telefonzelle")
+	await S.regel("benutzen", "radiowecker")
 	await _warte_auf_raum("widerstandsbasis")
-	_pruefe(_gesagt("W3_SIM_MAX_0240"), "Telefonzelle, zweites Abheben: die zweite Zeile")
+	_pruefe(_gesagt("W3_SIM_MAX_0240"), "Radiowecker, zweites Aufstehen: die zweite Zeile")
 	S.vorgabe_auswahl = [0]
 	await S.regel("benutzen", "terminal")
 	await _warte_auf_raum("stadtstrasse")
 
 	# R4: Orakel-Oma, Kochbuch (Regel 2)
 	await _geh("kueche_orakel")
-	_pruefe(root.get_node("D").get_instance("OrakelOma").option_sichtbar("0130"), "Orakel-Oma bietet die Frage nach der Vase an")
+	_pruefe(root.get_node("D").get_instance("OrakelOma").option_sichtbar("0130"), "Orakel-Oma bietet die Frage nach dem Sparschwein an")
 	await S.regel("nach_option", "orakel_oma", "0150")
 	await S.regel("ansehen", "kochbuch")
-	_pruefe(Z.geloest("R4") and _hat("rezeptkarte") and Z.ist("REGEL_2"), "R4 Vase, Regel 2")
+	_pruefe(Z.geloest("R4") and _hat("rezeptkarte") and Z.ist("REGEL_2"), "R4 Sparschwein, Regel 2")
+	_pruefe(_objekt("sparschwein") != null and _objekt("eieruhr") != null and _objekt("vase") == null
+		and _objekt("wandtelefon") == null, "Küche: Sparschwein und Eieruhr statt Vase und Wandtelefon")
+	# Omas Eieruhr weckt auch: Max wacht in der Kapsel auf und kommt über das Terminal in die Küche zurück.
+	await S.regel("benutzen", "eieruhr")
+	await _warte_auf_raum("widerstandsbasis")
+	_pruefe(_gesagt("W3_KUCH_MAX_0680") and Z.wert("W3_LETZTE_ZELLE", "") == "kueche_orakel", "Eieruhr: Ausgang aus der Küche")
+	S.vorgabe_auswahl = [0]
+	await S.regel("benutzen", "terminal")
+	await _warte_auf_raum("kueche_orakel")
 
 	# R6: Büroturm
 	await _geh("buero_50")
 	_pruefe(Z.ist("HEXENSCHUSS"), "Büroturm: Hexenschuss")
+	# Der Bürokopierer, aus dem die Kopien kommen: zwei Zeilen beim Ansehen, eine beim Benutzen
+	var kopierer := _objekt("kopierer")
+	_pruefe(kopierer != null, "Büroturm: Kopierer steht im Flur")
+	if kopierer != null:
+		await kopierer.ansehen()
+		await kopierer.ansehen()
+		await kopierer.benutzen_standard()
+		_pruefe(_gesagt("W3_TURM_MAX_0312") and _gesagt("W3_TURM_MAX_0314") and _gesagt("W3_TURM_MAX_0316"),
+			"Kopierer: Ansehen zweimal, Benutzen")
 	await S.geben(_sn("kaffeetasse"))
 	S.vorgabe_auswahl = [0]
 	await S.regel("benutzen", "klone")
