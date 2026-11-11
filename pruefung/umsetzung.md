@@ -9,8 +9,9 @@ Grundlage: `pruefung/360-pruefung.md` (111 Funde). Auftrag: `pruefung/umsetzung-
 - Paket 3 (Rätseltexte und Hinweis-Lücken): fertig.
 - Paket 4 (Widersprüche): fertig.
 - Paket 5 (Originalwortlaut): fertig.
-- Pakete 6 bis 9: noch nicht begonnen.
-- Weiter bei: Paket 6, Humor, Anspielungen und KI-Klang, beginnend mit Prolog und Welt 1.
+- Paket 6 (Humor, Anspielungen, KI-Klang): fertig, ein Commit je Skriptdatei.
+- Pakete 7 bis 9: noch nicht begonnen.
+- Weiter bei: Paket 7, Grafik-Dokumente und Prompts.
 
 Arbeitsweise nach einer Unterbrechung: Tabelle 1 zeigt je Fund den Status. Vor jedem Commit laufen `python3 tools/pruefen.py`, alle `--pruefen`-Läufe aus `.github/workflows/pruefen.yml` und nach Code-Änderungen die Godot-Tests.
 
@@ -36,14 +37,14 @@ Status: umgesetzt, nicht bestätigt, Entscheidung bitte prüfen, offen für Seba
 | 14 | 4 | umgesetzt, Bilder offen | Bestätigt. `P0_TREP_MAX_0020`: „Draußen ist bestes Wetter.“ Die beiden Bilder (Wohnzimmer, Treppenhaus) erzeuge ich nicht neu, die Prompts dafür folgen in Paket 7. |
 | 15 | 4 | umgesetzt, eine Zeile nicht bestätigt | Bestätigt für sechs der sieben Zeilen. `W3_KUCH_PIX_0535`, `W3_TURM_PIX_0235`, `W3_KAM1_PIX_0365`, `W3_KERN_PIX_0415`, `W3_INV_PIX_0045`, `W3_INV_PIX_0135` sind auf die Leitung umgeschrieben, die Pointen bleiben. Sprecher wie bei den Nachbarzeilen („aus dem Wandtelefon“, „aus dem Terminal“, „aus dem Lautsprecher“). Ofen, Topfpflanzen und kalte Kekse kommen erst, wenn Pixel auf der Leitung ist (Bedingung im Auslöser). Nicht bestätigt: `W3_INV_PIX_0115` (Gummihuhn) ist eine Erinnerung, Pixel tut dort nichts, die Zeile bleibt. |
 | 16 | 4 | umgesetzt, eine Zeile Entscheidung | Bestätigt. `P0_DACH_MAX_0680` ohne das Wort „Testbild“ (Vorschlag aus Abschnitt C, die Zeitung bleibt). `W4_KELL_MAX_0175` und `W4_KAPI_MAX_0525` gestrichen, `W3_BAS_MAX_0755` ohne den Stecker-Nachsatz (alle drei laut Streichliste in Abschnitt D). Entscheidung, bitte prüfen: `W4_TEST_MAX_0255` bleibt, weil Abschnitt D sie ausdrücklich duldet („schadet nicht“). |
-| 17 | 6 | noch nicht bearbeitet |  |
+| 17 | 6 | umgesetzt, Rest bleibt mit Absicht | Bestätigt. Rund 30 Zeilen, in denen Max sich klein macht und die Abschnitt C als „mittel“ oder „zündet nicht“ führt, haben die Alternative des Berichts oder eine eigene im selben Ton (Abschnitt 2, Grund „Max macht sich klein“). Zeilen mit „zündet“ bleiben, auch wenn Max sich dort klein macht. Ob damit überall „höchstens einmal pro Raum“ gilt, habe ich nicht Raum für Raum gezählt (Liste für Sebastian). |
 | 18 | 4 | umgesetzt | Bestätigt. `W1_SCHM_MAX_0770` und `W1_SCHM_SCH_0780` gestrichen, `W1_ABS_SCH_0160` heißt jetzt „Mehr hab ich nicht. Nur noch Blech.“ (Alternative aus Abschnitt C). Damit geht „Kurt war ein Missverständnis“ verloren, das Abschnitt C als gelungen wertet (Liste für Sebastian). |
-| 19 | 6 | noch nicht bearbeitet |  |
-| 20 | 6 | noch nicht bearbeitet |  |
-| 21 | 6 | noch nicht bearbeitet |  |
-| 22 | 6 | noch nicht bearbeitet |  |
+| 19 | 6 | umgesetzt, Rest bleibt mit Absicht | Bestätigt. Kürzungsdurchgang nach den Tabellen in C und E, je Skriptdatei ein Commit. Alle Zeilen stehen in Abschnitt 2, die Zahlen vorher und nachher in Abschnitt 3. Umgebaut sind nur Zeilen, die der Bericht als schwach führt oder in E zitiert. Bauformen in Zeilen mit „zündet“ und in unerwähnten Zeilen bleiben (Liste für Sebastian). |
+| 20 | 6 | umgesetzt, eine Stelle Entscheidung | Bestätigt. `W1_HOGG_ALW_0360` ohne den Milch-Satz, `FI_RUF_HER_0140` heißt „Eilmeldung! Jemand braucht Hilfe! Ich sage es sofort weiter!“. Toadis eigene Stationen mit „in einem anderen Schloss“ bleiben, Abschnitt C wertet sie als „zündet“ (Liste für Sebastian). |
+| 21 | 6 | umgesetzt | Bestätigt. Je Paar eine Stelle geändert: `W2_STAD_MAX_0010`, `W2_BUER_HER_0650`, `W2_INV_MAX_0465`, `W2_HAFS_PIX_0020`, `W4_RAU_PIX_0100`, `W4_GLUE_PIX_0460`, `W4_FERN_MAX_0050`, `W4_SIT_MAX_0140`, `W4_KELL_PIX_0075`, `W4_PIXM_PIX_0290`, `FI_HINT_PIX_0060`, dazu `P0_TREP_MAX_0115`, `W1_TAV_MAX_0240`, `W1_SCHM_MAX_0055`, `W1_HOGG_MAX_0110`. Die übrigen Paare aus der Liste sind über die Funde 20, 24, 74 und 77 erledigt. |
+| 22 | 6 | umgesetzt, zwei Stellen Entscheidung | Bestätigt. Streichliste aus D: `W1_DORF_MAX_0240` ohne das halbe Zitat, `W1_TAV_MAX_1550` gestrichen, `W1_HOGG_ALW_0360` gekürzt, `W2_STAD_MAX_0010`, `W3_TEST_MAX_0220`, `W3_EING_MAX_0490` umgeschrieben, `W4_KAPI_PIX_0515` gestrichen. Schon in Paket 4 und 5: `W4_KELL_MAX_0175`, `W4_KAPI_MAX_0525`, `W3_BAS_MAX_0755`. `W2_BUER_HER_0650` und `W2_AGOR_MAX_0180` sind entschärft statt gestrichen, weil an beiden eine Dialogoption oder eine gute Zweitzeile hängt (Liste für Sebastian). |
 | 23 | 9 | noch nicht bearbeitet |  |
-| 24 | 6 | noch nicht bearbeitet |  |
+| 24 | 6 | umgesetzt | Bestätigt. `FI_WOHN_MAX_0400` heißt „Ich geh dann mal. Und niemand sagt jetzt was.“ `FI_SUPM_MAX_0080` endet auf „Zum ersten Mal heute will niemand was von mir.“ (zweite Sprechblase). Nur Pixel sagt noch „Freiwillig“ (`FI_ABSP_PIX_0200`, unverändert). |
 | 25 | 4 | umgesetzt | Bestätigt. `W4_STUD_MAX_0160` nach dem Vorschlag in Abschnitt L: „Ich bin gerade erst aufgestanden. Ich setz mich nicht wieder hin.“ „Freiwillig.“ ist dabei entfallen, wie im Vorschlag. |
 | 26 | 7 | noch nicht bearbeitet |  |
 | 27 | 7 | noch nicht bearbeitet |  |
@@ -93,15 +94,15 @@ Status: umgesetzt, nicht bestätigt, Entscheidung bitte prüfen, offen für Seba
 | 71 | 4 | umgesetzt | Bestätigt. `W1_BRUE_WAL_1060`: „Das Bad ist Paragraf drei.“ `W1_BRUE_WAL_1000` und `ZS1_DACH_PIX_0570`: „Paragraf 14b“. `docs/test/beobachtungsbogen.md` nachgezogen. In `entscheidungen.md` steht weiter „Regel 14b“, das ist dein Protokoll. |
 | 72 | 4 | umgesetzt | Bestätigt. `W1_ANK_PIX_0040`: Drehknopf statt Fernbedienung. |
 | 73 | 4 | Entscheidung, bitte prüfen | Bestätigt. Das Huhn heißt jetzt Berta (`W1_TAV_PIX_1470`). Der andere Weg wäre, den Gleichklang mit Hildegard im Finale zu nutzen. |
-| 74 | 6 | noch nicht bearbeitet |  |
-| 75 | 6 | noch nicht bearbeitet |  |
-| 76 | 6 | noch nicht bearbeitet |  |
-| 77 | 6 | noch nicht bearbeitet |  |
-| 78 | 6 | noch nicht bearbeitet |  |
-| 79 | 6 | noch nicht bearbeitet |  |
+| 74 | 6 | umgesetzt, Entscheidung | Bestätigt. `W1_SCHM_MAX_0750` fragt jetzt „Und wenn du sie verkaufst?“ (Alternative 2 des Berichts). Umgefragt statt gestrichen, damit die Antwort `0760` bleibt. |
+| 75 | 6 | umgesetzt | Bestätigt. `W1_HOGG_ALW_0620` bekommt einen Schlussvers: „Mehr reimt sich nicht, auch wenn du fluchst.“ Die drei Regeln des Rätsels bleiben wortgleich. |
+| 76 | 6 | umgesetzt, ein Teil nicht bestätigt | Bestätigt für zwei Stellen: `W4_GLUE_GER_0045` („Vier Silben zum Preis von drei!“) und `W3_PIEP_PIX_0250` („Ein Piep, eine ganze Haltung.“). Nicht bestätigt: „dreihundert Jahre“ in `W2_DISK_PIX_0200`. Die Sphinx nennt die Zahl selbst dreimal, sie stimmt. |
+| 77 | 6 | umgesetzt | Bestätigt. `FI_DACH_OMA_0220` endet auf „Mach bitte auf.“ Die pünktliche Bahn kommt nur noch in `FI_AUFL_OMA_0420` vor. |
+| 78 | 6 | umgesetzt | Bestätigt. `FI_RAET_OPA_0440` („Strom ohne Auftrag!“) und `FI_AUFL_PIX_0380` („… Ich gehe ans Fenster.“), beides Alternativen aus C. |
+| 79 | 6 | umgesetzt, Entscheidung | Bestätigt. Beide Texte stehen jetzt als neue Zeilen `ZS1_DACH_MAX_0322` und `ZS1_DACH_PIX_0324` am Ei auf der Werkbank, beim dritten Ansehen in Zwischenspiel 1 (`room_dachboden.gd`, Test in `prolog_durchlauf.gd`). Die Reservezeilen `FI_INV_PIX_0015` und `FI_INV_MAX_0025` bleiben mit ihren IDs stehen. |
 | 80 | 7 | noch nicht bearbeitet |  |
-| 81 | 6 | noch nicht bearbeitet |  |
-| 82 | 6 | noch nicht bearbeitet |  |
+| 81 | 6 | umgesetzt, Entscheidung | Bestätigt. Acht Benutzen-Zeilen im Prolog brechen die Bauform (`P0_WOHN_MAX_0340`, `0345`, `P0_TREP_MAX_0060`, `0065`, `0125`, `P0_DACH_MAX_1675`, `1685`, `1705`). Dreimal ruft Opa dazwischen (neue Zeilen `P0_TREP_OPA_0126`, `P0_DACH_OPA_1676`, `1706`). |
+| 82 | 6 | umgesetzt | Bestätigt. `W4_STUD_MAX_0250` („… Na und? Ich hätte zugeguckt.“) und `FI_WOHN_MAX_0105` („… Opa sucht gerade die Kamera.“) nach den Vorschlägen in E. Weitere glatte Schlusssätze sind mit den C-Zeilen der jeweiligen Welt gekürzt (Abschnitt 2). |
 | 83 | 7 | noch nicht bearbeitet |  |
 | 84 | 7 | noch nicht bearbeitet |  |
 | 85 | 7 | noch nicht bearbeitet |  |
@@ -723,10 +724,62 @@ Fund 2, wenn nichts anderes dasteht: Das Spiel konnte diese Zeilen nicht von ein
 | `FI_WOHN_MUT_0260` | Konrad, das ist deine Einkaufsliste. Du hast nichts davon gekauft, oder? | Papa, das ist deine Einkaufsliste. Du hast nichts davon gekauft, oder? | Fund 62: Die Mutter ist die Tochter von Oma und Opa („Mama“ in 0230). Entscheidung, bitte prüfen. |
 | `ZS1_DACH_PIX_0570` | Der Eimer. Waldemar hat ihn zurückgegeben, nach Regel 14b. // Am Nil allerdings gibt es Wasser genug, und Krokodile auch. Einen Eimer braucht man dort höchstens zum Weglaufen. | Der Eimer. Waldemar hat ihn zurückgegeben, nach Paragraf 14b. // Am Nil allerdings gibt es Wasser genug, und Krokodile auch. Einen Eimer braucht man dort höchstens zum Weglaufen. | Fund 71: Die Satzung nennt es Paragraf 14b. |
 | `FI_RAET_MAX_0095` | (neu) | Zeldina, Opa und ich. Wenn wir jetzt die Luke aufkriegen, kommt Oma rein, und das Ding läuft noch. | Fund 69: Fassung ohne Roboter. 0090 gilt jetzt nur mit FREUND_0815. |
+| `ZS1_DACH_MAX_0310` | Ein Ei in einem Eierkarton auf einer Werkbank. Ehrlich gesagt das Normalste, was ich seit Tagen gesehen hab. | Ein Ei in einem Eierkarton auf einer Werkbank. Das Normalste, was ich seit drei Tagen gesehen hab, und es kommt von einem Drachen. | C Zwischenspiel 1 (mittel), E „Ehrlich gesagt“ |
+| `ZS1_DACH_PIX_0320` | Es liegt da, als hätte es schon immer hierher gehört, und das finde ich, offen gesagt, beunruhigend. // Dinge aus Märchen sollten sich auf einer Werkbank fremd fühlen. Dieses Ei fühlt sich wie zu Hause. | Es liegt da, als hätte es schon immer hierher gehört. // Dinge aus Märchen sollten sich auf einer Werkbank fremd fühlen. Dieses hier hat schon einen Stammplatz. | C Zwischenspiel 1 (mittel) |
+| `ZS1_DACH_MAX_0370` | Der Sessel kommt mir noch bequemer vor als heute Mittag. Ich glaube, der hat auf mich gewartet. | Der Sessel ist noch bequemer als heute Mittag. Er hat geübt. | C Zwischenspiel 1 (mittel), E „Ich glaube“ |
+| `ZS1_DACH_MAX_0610` | Zwei Fächer, zwei Dinge. Ich muss mich entscheiden, und genau da bin ich am allerschlechtesten. | Zwei Fächer, zwei Dinge. Die Tasche ist strenger als jede Fluggesellschaft. | C Zwischenspiel 1 (mittel), E Sich-klein-Machen |
+| `ZS2_DACH_MAX_0360` | Das Licht ist orange geworden. Drüben waren es drei Tage, und hier gibt es noch nicht mal Abendessen. | Das Licht ist orange geworden. Drüben drei Tage, hier ein Nachmittag. Mein Magen rechnet in Tagen. | C Zwischenspiel 2 (mittel) |
+| `ZS2_DACH_MAX_0400` | Der Sessel. Ich war in der Antike, ich hab mir Sitzen eigentlich verdient. Aber später. | Der Sessel. Ich hab einen Fünfkampf hinter mir und setz mich trotzdem nicht. Mit mir stimmt was nicht. | C Zwischenspiel 2 (mittel), E „eigentlich“ |
+| `ZS3_DACH_MAX_0335` | Eine ist runtergefallen und hat dabei den Fernseher angeschaltet. Hier oben hängt echt alles irgendwie zusammen. | Eine ist runtergefallen und hat dabei den Fernseher angeschaltet. Siebzehn Stück, und die einzige, die funktioniert, tut es aus Versehen. | C Zwischenspiel 3 (mittel), E „irgendwie“ |
+| `ZS3_DACH_MAX_0365` | Das Ausrufezeichen ist so fest gemalt, dass der Stift durchs Papier gegangen ist. Opa meint es ernst. Mit was auch immer. | Das Ausrufezeichen ist so fest gemalt, dass der Stift durchs Papier gegangen ist. Der nächste Monat hat jetzt auch einen Termin. | C Zwischenspiel 3 (mittel) |
+| `ZS3_DACH_MAX_0405` | Er sucht und sucht. Ich hätte ihm helfen können und hab's nicht gemacht. Das hängt mir irgendwie nach. | Er sucht und sucht. Ich hätte ihm helfen können. Ich guck jetzt woanders hin. | C Zwischenspiel 3 (mittel): Gefühl zeigen statt benennen, E „irgendwie“ |
+| `ZS3_DACH_MAX_0600` | Zwei Fächer, letzte Welt. Ich packe, als wär's ein Staffelfinale, also mit viel zu viel Drama. | Zwei Fächer, letzte Welt. Die Tasche bleibt hart. Wenigstens einer hier oben hat sich nicht verändert. | C Zwischenspiel 3 (mittel): erklärt den eigenen Witz |
+| `FI_DACH_OMA_0220` | Konrad? Ich bin's. Ich bin etwas früher. Die Bahn war pünktlich, stell dir vor. | Konrad? Ich bin's. Ich bin etwas früher. Mach bitte auf. | Fund 77: pünktliche Bahn nur beim zweiten Mal |
+| `FI_DACH_MAX_0280` | Okay. Das klang jetzt ehrlich gesagt ziemlich nach Endgegner. | Okay. Das klang jetzt ziemlich nach Endgegner. | E „ehrlich gesagt“ |
+| `FI_RIEG_MAX_0165` | Die Antenne dreht sich ein bisschen mit, wenn ich mich bewege. Entweder mag sie mich, oder sie will was von mir. | Die Antenne dreht sich mit, wenn ich mich bewege. Sie zielt. Ich hoffe, sie zielt freundlich. | C Finale (mittel), E „entweder“ und „ein bisschen“ |
+| `FI_RUF_HER_0140` | Dein Verbündeter ist in einem anderen Kanal! | Eilmeldung! Jemand braucht Hilfe! Ich sage es sofort weiter! | Fund 20: Hermes nimmt Toadis Form vorweg |
+| `FI_RAET_OPA_0440` | Die Zelle ist nichts ohne die Kapsel! Nichts! Ein Knöpfchen ohne Knopf! | Die Zelle ist nichts ohne die Kapsel! Nichts! Strom ohne Auftrag! | Fund 78, C Finale Fehlversuche (zündet nicht) |
+| `FI_RAET_MAX_0450` | Keine Zelle, keine Macht. Kenn ich vom Handy, das ist im Grunde mein ganzes Leben. | Ich ziele, ich drücke, nichts. Ich bin im Endkampf und brauche Batterien. Typisch. | C Finale Fehlversuche (mittel) |
+| `FI_HINT_PIX_0040` | Hier steht eine Prinzessin mit dem Zauberstab eines Dunklen Lords herum. // Das ist kein Zufall, junger Mann. Im Fernsehen nennt man so etwas Besetzung. | Hier steht eine Prinzessin mit dem Zauberstab eines Dunklen Lords herum. // Im Fernsehen nennt man so etwas Besetzung. | E „kein X, das ist Y“ (eine umbauen) |
+| `FI_HINT_PIX_0060` | Rede mit Zeldina und frag sie nach der Luke. Sie hebelt den Riegel auf. Ich hätte es selbst getan, aber ich habe keine Daumen. | Rede mit Zeldina und frag sie nach der Luke. Sie hebelt den Riegel auf. Ich hätte es selbst getan, aber ich bin heute fürs Zusehen eingeteilt. | C Finale Hinweise (mittel): „keine Daumen“ doppelt mit Flimmer |
+| `FI_AUFL_PIX_0380` | Beide sagen die Wahrheit. Es riecht nach Kuchen und nach Reue. // Reue riecht bei Menschen ein wenig nach nassem Hund. Aber im Gegensatz zum Hund kann man ihr nicht böse sein. | Es riecht nach Kuchen und nach Reue. // Reue riecht bei Menschen nach nassem Hund. Ich gehe ans Fenster. | Fund 78, C Finale Auflösung (mittel) |
+| `FI_WOHN_MAX_0105` | Auf dem neuesten Foto lächelt Oma. Das ist zwar noch gar nicht gemacht, aber ich weiß schon, wie es aussieht. | Auf dem neuesten Foto lächelt Oma. Das gibt es noch gar nicht. Opa sucht gerade die Kamera. | Fund 82: glatter Schlusssatz |
+| `FI_WOHN_MAX_0110` | Das Sofa sieht irgendwie kleiner aus als heute Mittag. Oder ich bin größer geworden. Beides eher unwahrscheinlich. | Das Sofa sieht kleiner aus als heute Mittag. Oder ich bin größer geworden. Beides eher unwahrscheinlich. | E „irgendwie“ |
+| `FI_WOHN_MAX_0400` | Ich geh dann mal. Zum Supermarkt. Freiwillig. Und niemand sagt jetzt was. | Ich geh dann mal. Und niemand sagt jetzt was. | Fund 24: „freiwillig“ behält nur Pixel |
+| `FI_SUPM_MAX_0080` | Kein Rauschen, kein Kanal, nur eine Tür, die von selbst aufgeht. Und ich geh freiwillig durch. Das ist neu. | Kein Rauschen, kein Kanal, nur eine Tür, die von selbst aufgeht. // Zum ersten Mal heute will niemand was von mir. | Fund 24: „freiwillig“ und „Das ist neu.“ |
+| `ZS1_DACH_MAX_0322` | (neu) | Größe M, Freilandhaltung, Drache. Steht so nicht drauf. Sollte es aber. | Fund 79: Reservezeile FI_INV_MAX_0025 in Zwischenspiel 1 untergebracht |
+| `ZS1_DACH_PIX_0324` | (neu) | Ein Ei. Drei Minuten, weich, mit Salz. Ich sage das nicht als Drohung. Ich sage das als Vision. | Fund 79: Reservezeile FI_INV_PIX_0015 in Zwischenspiel 1 untergebracht |
 
 ## 3. Musterzahlen vorher und nachher
 
-Folgt mit Paket 6.
+Gezählt hat ein kleines Skript mit festen Suchmustern, über die Textspalte aller sechs Skriptdateien. „Vorher“ ist der Stand vor dem ersten Commit der Umsetzung, „nachher“ der Stand nach Paket 6. Die Zahlen weichen leicht von denen im Bericht ab, weil der Bericht anders abgrenzt. Der Vergleich vorher und nachher ist in sich stimmig.
+
+| Muster | Prolog | Welt 1 | Welt 2 | Welt 3 | Welt 4 | Zwischenspiele und Finale | Summe |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| „kein X, das ist Y“ | 2 | 15 → 12 | 14 → 9 | 20 → 17 | 14 → 12 | 5 | 70 → 57 |
+| „nicht X, sondern Y“ | 6 → 3 | 3 | 1 | 1 | 2 | 1 | 14 → 11 |
+| „entweder“ | 3 | 11 → 10 | 8 → 7 | 10 | 15 → 11 | 3 → 2 | 50 → 43 |
+| „Schule“ | 2 | 23 → 22 | 13 → 8 | 12 → 6 | 10 → 7 | 4 | 64 → 49 |
+| „ehrlich gesagt“ | 5 → 0 | 9 → 1 | 5 → 0 | 7 → 2 | 9 → 1 | 3 → 1 | 38 → 5 |
+| „Ich glaub(e)“ | 13 → 8 | 15 → 4 | 11 → 5 | 19 → 7 | 17 → 3 | 5 → 4 | 80 → 31 |
+| „eigentlich“ | 3 | 15 → 9 | 10 → 7 | 6 → 1 | 12 → 3 | 5 → 4 | 51 → 27 |
+| „ein bisschen“ | 2 → 1 | 11 → 6 | 7 → 5 | 8 → 4 | 10 → 6 | 3 → 2 | 41 → 24 |
+| „irgendwie“ | 3 → 1 | 5 → 3 | 4 → 2 | 6 → 2 | 9 → 1 | 3 → 0 | 30 → 9 |
+| „und zwar“ | 8 → 7 | 44 → 21 | 23 → 22 | 11 | 21 → 18 | 7 | 114 → 86 |
+| „beleidigt“ | 3 → 1 | 4 → 2 | 8 → 4 | 6 → 3 | 2 → 0 | 0 | 23 → 10 |
+| „Traurigste“ | 1 → 0 | 1 | 2 → 1 | 2 → 1 | 1 → 0 | 0 | 7 → 3 |
+| „beeindruckt“ | 0 | 4 → 3 | 5 → 1 | 3 → 1 | 2 | 1 | 15 → 8 |
+| „in einem anderen“ | 1 | 5 → 4 | 5 | 7 | 3 | 2 → 1 | 23 → 21 |
+| „freiwillig“ | 1 | 4 | 8 → 7 | 3 | 7 → 6 | 5 → 3 | 28 → 24 |
+
+Hinweise zu den Zahlen:
+
+- „Schule“ zählt jedes Wort aus dem Schulbereich (Lehrer, Klassenarbeit, Referat, Zeugnis und ähnliche). Darunter sind auch Zeilen, die im Klassenzimmer von Hogglewarz spielen und dort hingehören. Die Zahl ist also zu hoch.
+- „in einem anderen“ zählt auch Toadis eigene Stationen. Die bleiben mit Absicht (Fund 20).
+- „und zwar“ ist in Welt 1 halbiert, wie der Bericht es vorschlägt. In den anderen Dateien bleibt es Pixels Tick.
+- Was übrig ist, steht fast nur in Zeilen, die Abschnitt C mit „zündet“ wertet oder gar nicht erwähnt. Die habe ich nach Grundsatz 2 nicht angefasst.
+- „Ich bin beeindruckt“ als Lob für Max sagt Pixel nur noch in Welt 4 (`W4_STUD_PIX_0440`). Drei weitere Stellen gelten nicht Max, sondern Bratfett, einem Schläfer und einem Verkäufer (`W1_HOGG_PIX_0220`, `W1_BERG_PIX_0135`, `W4_RAU_PIX_0070`). Der Bericht nennt sie nicht, sie bleiben.
+- Pixels Superlativ („das Traurigste“) kommt je Welt noch einmal vor.
 
 ## 4. Liste für Sebastian
 
@@ -752,6 +805,18 @@ Folgt mit Paket 6.
 - Fund 42: „Er sagt Nein! So bescheiden ist nur der Echte!“ statt des wörtlichen Messias-Satzes.
 - Fund 42: Rätsel 8 in Welt 4 heißt „Ein Beweis für den Agenten“.
 - Fund 44: drei englische Namen geändert (Hogglewarz, Manyjuice Lemonade, Lucky Wheel).
+- Fund 17 und 19: Umgebaut sind nur Zeilen, die der Bericht als „mittel“ oder „zündet nicht“ führt oder in Abschnitt E zitiert. „Entweder“-, Schul- und „kein X, das ist Y“-Sätze in Zeilen mit „zündet“ und in unerwähnten Zeilen stehen noch. Die Zahlen stehen in Abschnitt 3. Wenn dir das noch zu viel ist, wäre ein zweiter Durchgang über diese Zeilen der nächste Schritt. Er greift dann aber in Zeilen ein, die der Bericht gut findet.
+- Fund 17: „Höchstens einmal pro Raum“ habe ich nicht Raum für Raum nachgezählt. Geändert sind alle Stellen, die der Bericht nennt.
+- Abschnitt E, Rhythmus von Pixels zweiter Sprechblase: nur an den Beispielen geändert, die E nennt, nicht an jeder dritten Zeile.
+- Fund 20: Toadis eigene Stationen behalten „in einem anderen Schloss“. Abschnitt C wertet sie als „zündet“, die Fundliste will „einmal pro Welt“.
+- Fund 22: `W2_AGOR_MAX_0180` (Kritzelei an der Wand) und `W2_BUER_HER_0650` (Hermes über die Römer) sind entschärft statt gestrichen. An der ersten hängt Pixels gute Zweitzeile `0190`, die zweite ist Hermes' einzige Antwort auf seine Dialogoption.
+- Fund 74: `W1_SCHM_MAX_0750` fragt jetzt „Und wenn du sie verkaufst?“, statt zu entfallen.
+- Fund 79: Die zwei Ei-Zeilen stehen als neue Zeilen beim dritten Ansehen der Werkbank in Zwischenspiel 1. Die Reservezeilen im Finale gibt es weiter, der Text steht damit zweimal im Skript. Wenn du die Reserve nicht mehr brauchst, kann sie weg.
+- Fund 81: Opa ruft im Prolog dreimal dazwischen (`P0_TREP_OPA_0126`, `P0_DACH_OPA_1676`, `P0_DACH_OPA_1706`). Das sind neue Zeilen.
+- Pixels Lob für Max in Welt 1 bis 3 kommt jetzt ohne „Ich bin beeindruckt“ aus. Als Lob fällt der Satz einmal, in Welt 4.
+- Eigene Fassungen statt der Alternative des Berichts, weil die Alternative etwas behauptet hätte, das es im Spiel nicht gibt: `W2_GRAB_MAX_0140`, `W2_THRO_MAX_0175`, `W3_TERM_MAX_0360`, `W3_INV_MAX_0065`, `W3_SIM_PIX_0920` („Kalle sagt“, weil Pixel in der Simulation nichts sieht), `W4_FERN_MAX_0125` (Opas Fernbedienung statt Lesebrille), `W4_GLUE_MAX_0560`, `W4_RAU_PIX_0100`, `W4_KELL_MAX_0100`, `W4_FABR_MAX_0090`, `ZS3_DACH_MAX_0405`.
+- `W4_GLUE_MAX_0040` bleibt, obwohl Abschnitt E eine Alternative anbietet. Abschnitt C wertet die Zeile als „zündet“.
+- „Drei Prozent“ in Welt 2 fällt noch zwölfmal statt dreizehnmal. Der Rest trägt das Rätsel oder steht in Zeilen mit „zündet“.
 
 ### Kann Absicht sein, nicht geändert
 
@@ -762,6 +827,8 @@ Folgt mit Paket 6.
 - Fund 58: `FI_AUFL_PIX_0080` sagt noch „nach Welt 2“. Die Zeile zahlt „Bäckerei“ aus und ist geschützt. „Nach Kanal 7“ wäre die passende Fassung.
 - Fund 102: Opa bedankt sich nie. Vorschlag aus dem Bericht, falls gewünscht: ganz am Ende „Max. // … Bring Quittung mit.“
 - Fund 71: In `docs/entscheidungen.md` steht weiter „Regel 14b“. Im Spiel heißt es jetzt überall „Paragraf 14b“.
+- `W4_TEST_PIX_0290`: „wo bei Oma immer der Hund schlafen muss“. Das ist die einzige Stelle, an der Oma einen Hund hat.
+- Fund 76: „dreihundert Jahre“ bei der Sphinx stimmt mit ihren eigenen Angaben überein.
 
 ### Fernere Fassungen für die Schublade (Fund 105)
 

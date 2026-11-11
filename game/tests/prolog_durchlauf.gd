@@ -803,6 +803,9 @@ func _welt_1_r5_bis_r13() -> void:
 	_pruefe(_hotspot("Fundkiste").visible, "Fundkiste sichtbar im Zwischenspiel")
 	await _ansehen(_hotspot("Fundkiste"), "ZS1_DACH_MAX_0420")
 	await _ansehen(_hotspot("Werkbank"), "ZS1_DACH_MAX_0310")
+	await _ansehen(_hotspot("Werkbank"), "ZS1_DACH_MAX_0315")
+	await _ansehen(_hotspot("Werkbank"), "ZS1_DACH_MAX_0322")
+	_pruefe(_gesagt("ZS1_DACH_PIX_0324"), "Ei auf der Werkbank, drittes Ansehen: Pixel folgt (0324)")
 	var opa_zs = _dialog("Opa")
 	opa_zs.sichtbarkeit_anpassen()
 	_pruefe(opa_zs.option_sichtbar("zs1_0380") and not opa_zs.option_sichtbar("1310"),

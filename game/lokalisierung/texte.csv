@@ -6632,10 +6632,12 @@ ZS1_DACH_PIX_0220_2,"Nicht dieses Ei, um Himmels willen. Dieses Ei hat eine Vorg
 ZS1_DACH_MAX_0230,"Du hast die Liste wirklich angefangen. Ich dachte, das war ein Witz.",You've actually started the list. I thought that was a joke.
 ZS1_DACH_PIX_0240,"Jeder braucht eine Liste. Deine ist leer, meine hat Ziele.","Everyone needs a list. Yours is empty, mine has goals."
 ZS1_DACH_PIX_0240_2,"Ziel eins: weich. Ziel zwei kommt noch, ich lasse mich da nicht hetzen. Gute Listen wachsen langsam, wie ein ordentlicher Bauch.","Goal one: soft. Goal two is still coming, I won't be rushed. Good lists grow slowly, like a decent belly."
-ZS1_DACH_MAX_0310,"Ein Ei in einem Eierkarton auf einer Werkbank. Ehrlich gesagt das Normalste, was ich seit Tagen gesehen hab.",An egg in an egg box on a workbench. Honestly the most normal thing I've seen in days.
+ZS1_DACH_MAX_0310,"Ein Ei in einem Eierkarton auf einer Werkbank. Das Normalste, was ich seit drei Tagen gesehen hab, und es kommt von einem Drachen.","An egg in an egg box on a workbench. The most normal thing I've seen in three days, and it comes from a dragon."
 ZS1_DACH_MAX_0315,"Ein Drache hat das Ei gewärmt, als wär's sein eigenes. Jetzt liegt es neben Schrauben. Opa hat ein Talent für Ehrfurcht.",A dragon kept that egg warm like it was his own. Now it's lying next to screws. Grandpa has a talent for reverence.
-ZS1_DACH_PIX_0320,"Es liegt da, als hätte es schon immer hierher gehört, und das finde ich, offen gesagt, beunruhigend.","It lies there as if it had always belonged here, and that, frankly, I find unsettling."
-ZS1_DACH_PIX_0320_2,Dinge aus Märchen sollten sich auf einer Werkbank fremd fühlen. Dieses Ei fühlt sich wie zu Hause.,Things from fairy tales ought to feel out of place on a workbench. This egg feels right at home.
+ZS1_DACH_PIX_0320,"Es liegt da, als hätte es schon immer hierher gehört.",It lies there as if it had always belonged here.
+ZS1_DACH_PIX_0320_2,Dinge aus Märchen sollten sich auf einer Werkbank fremd fühlen. Dieses hier hat schon einen Stammplatz.,Things from fairy tales ought to feel out of place on a workbench. This one already has its regular spot.
+ZS1_DACH_MAX_0322,"Größe M, Freilandhaltung, Drache. Steht so nicht drauf. Sollte es aber.","Size M, free-range, dragon. It doesn't say that on it. But it should."
+ZS1_DACH_PIX_0324,"Ein Ei. Drei Minuten, weich, mit Salz. Ich sage das nicht als Drohung. Ich sage das als Vision.","An egg. Three minutes, soft, with salt. I'm not saying that as a threat. I'm saying it as a vision."
 ZS1_DACH_MAX_0330,"Das Licht hat sich kaum bewegt. Drüben war ich Tage weg, und hier ist höchstens eine Folge vergangen.","The light has barely moved. I was gone for days over there, and here it's been one episode at most."
 ZS1_DACH_MAX_0335,"Eine Fliege läuft übers Glas, dieselbe wie heute Mittag. Die hat nicht mal gemerkt, dass ich weg war.","A fly is walking across the glass, the same one as at lunchtime. It didn't even notice I was gone."
 ZS1_DACH_MAX_0340,"Der rote Kreis ist immer noch da. Und wenn ich Opa so ansehe, ist es immer noch kein Zahnarzttermin.","The red circle is still there. And looking at Grandpa, it's still not a dentist's appointment."
@@ -6647,7 +6649,7 @@ ZS1_DACH_PIX_0360,"Siebzehn Fernbedienungen, und dein Großvater fragt ausgerech
 ZS1_DACH_PIX_0360_2,"Denk einmal darüber nach. Ich tue das schon länger, meistens nachts, auf genau dieser Kiste.","Think about that for a moment. I've been doing so for a while, mostly at night, on this very box."
 ZS1_DACH_PIX_0365,Eine davon hat Bissspuren. Die sind nicht von mir.,One of them has bite marks. They are not mine.
 ZS1_DACH_PIX_0365_2,"Ich sage das nur vorsorglich, weil gleich jemand fragt. Es fragt immer jemand, und es trifft immer den Kater.","I mention it purely as a precaution, because someone's about to ask. Someone always asks, and it always lands on the cat."
-ZS1_DACH_MAX_0370,"Der Sessel kommt mir noch bequemer vor als heute Mittag. Ich glaube, der hat auf mich gewartet.",The armchair looks even comfier than at lunchtime. I think it's been waiting for me.
+ZS1_DACH_MAX_0370,Der Sessel ist noch bequemer als heute Mittag. Er hat geübt.,The armchair is even comfier than at lunchtime. It's been practising.
 ZS1_DACH_MAX_0375,"Ich setz mich da nicht rein. Wer sich da reinsetzt, wacht in drei Jahren mit Bart auf und hat drei Staffeln verpasst.",I'm not sitting in that. Anyone who sits in that wakes up three years later with a beard and three seasons missed.
 ZS1_DACH_MAX_0380,"Opa, was wird das eigentlich mit den vier Dingen?","Grandpa, what are the four things actually for?"
 ZS1_DACH_OPA_0390,"Ein Werk. Ein großes, dunkles, warmes Werk. Mehr sage ich nicht, sonst geht es nicht auf.","A work. A great, dark, warm work. I'm not saying more, or it won't rise."
@@ -6690,7 +6692,7 @@ ZS1_DACH_PIX_0580_2,"Merk dir das gut. Irgendwann braucht alles Strom, und dann 
 ZS1_DACH_PIX_0590,"Der Leuchttrank. Er leuchtet, das ist alles. Wo wir hinfahren, scheint ohnehin die Sonne. Rechne selbst.","The glowing potion. It glows, and that's all. Where we're going, the sun is shining anyway. Do the maths."
 ZS1_DACH_PIX_0600,"Ketchup. Gilt in diesem Königreich als Blut, als Soße und als Unterschrift.","Ketchup. In this kingdom it counts as blood, as sauce and as a signature."
 ZS1_DACH_PIX_0600_2,"In der Antike kennt das noch keiner. Das ist entweder eine Chance oder ein Problem, und ich wette auf beides.","Nobody in antiquity knows it yet. That's either an opportunity or a problem, and I'm betting on both."
-ZS1_DACH_MAX_0610,"Zwei Fächer, zwei Dinge. Ich muss mich entscheiden, und genau da bin ich am allerschlechtesten.","Two pockets, two things. I have to choose, and choosing is exactly what I'm worst at."
+ZS1_DACH_MAX_0610,"Zwei Fächer, zwei Dinge. Die Tasche ist strenger als jede Fluggesellschaft.","Two pockets, two things. This bag is stricter than any airline."
 ZS1_DACH_PIX_0620,"Volle Tasche, leere Pfoten. Ich trage ohnehin nichts, das ist eine Frage des Standes.","Full bag, empty paws. I don't carry things anyway, it's a question of rank."
 ZS1_DACH_OPA_0630,Diesmal kein Zettel. Ich hab vorgearbeitet. Drüben wartet die Post auf dich.,No note this time. I've planned ahead. There's post waiting for you over there.
 ZS1_DACH_MAX_0640,Moment. Du hast mir Post in die Antike geschickt? Wie soll das denn bitte gehen?,Hang on. You sent me post to antiquity? How is that even supposed to work?
@@ -6739,7 +6741,7 @@ ZS2_DACH_MAX_0335,"Ich frag Opa lieber nicht, was das ist. Er hat den Kalender e
 ZS2_DACH_OPA_0340,Der zweite Kreis? Ein Verstärkungskreis. Der hält den ersten zusammen. Rein technisch.,The second circle? A reinforcement circle. It holds the first one together. Purely technical.
 ZS2_DACH_PIX_0350,"Er lügt schon wieder. Es riecht nach Angst, wie beim letzten Mal.","He's lying again. It smells of fear, like last time."
 ZS2_DACH_PIX_0350_2,"Und diesmal, wenn ich das ergänzen darf, auch nach Mehl. Die Lügen in diesem Haus werden immer nahrhafter.","And this time, if I may add, of flour as well. The lies in this house are getting more nourishing every time."
-ZS2_DACH_MAX_0360,"Das Licht ist orange geworden. Drüben waren es drei Tage, und hier gibt es noch nicht mal Abendessen.","The light's gone orange. Over there it was three days, and here it isn't even dinner time yet."
+ZS2_DACH_MAX_0360,"Das Licht ist orange geworden. Drüben drei Tage, hier ein Nachmittag. Mein Magen rechnet in Tagen.","The light's gone orange. Three days over there, one afternoon here. My stomach counts in days."
 ZS2_DACH_MAX_0365,"Die Sonne steht so tief, dass Pixels Schatten aussieht wie ein Tiger. Er weiß das. Er bleibt genau da liegen.",The sun is so low that Pixel's shadow looks like a tiger. He knows. He's staying exactly where he is.
 ZS2_DACH_MAX_0370,"Kanal 7. Hermes steht immer noch da und winkt. Der merkt bestimmt erst morgen, dass ich weg bin.",Channel 7. Hermes is still standing there waving. He probably won't notice I'm gone until tomorrow.
 ZS2_DACH_MAX_0375,"Im Hintergrund trainiert Leonidas. Ich hör ihn sogar durch den Lautsprecher brüllen, und der ist nur Mono.","Leonidas is training in the background. I can hear him yelling even through the speaker, and that's only mono."
@@ -6750,7 +6752,7 @@ ZS2_DACH_PIX_0390,"Siebzehn Fernbedienungen, und keine davon ist golden.","Seven
 ZS2_DACH_PIX_0390_2,"Noch nicht, würde ich sagen, wenn ich etwas sagen würde. Ich sage aber nichts.","Not yet, I would say, if I were saying anything. But I'm not saying anything."
 ZS2_DACH_PIX_0395,"Ich habe sie sortiert, nach Geschmack. Die mit den Gummitasten schmecken am besten.","I've sorted them, by taste. The ones with rubber buttons taste best."
 ZS2_DACH_PIX_0395_2,Erzähl das bitte niemandem. Ein Kater hat einen Ruf zu verlieren.,Please don't tell anyone. A cat has a reputation to lose.
-ZS2_DACH_MAX_0400,"Der Sessel. Ich war in der Antike, ich hab mir Sitzen eigentlich verdient. Aber später.","The armchair. I've been to antiquity, I've actually earned a sit-down. But later."
+ZS2_DACH_MAX_0400,Der Sessel. Ich hab einen Fünfkampf hinter mir und setz mich trotzdem nicht. Mit mir stimmt was nicht.,The armchair. I've got a pentathlon behind me and I'm still not sitting down. Something's wrong with me.
 ZS2_DACH_MAX_0405,Auf der Armlehne ist ein tiefer Abdruck von Opas Ellbogen. Der Sessel kennt Opa schon länger als ich.,There's a deep dent from Grandpa's elbow in the armrest. That chair has known Grandpa longer than I have.
 ZS2_DACH_MAX_0410,"Opa, warum muss das Korn „fein wie Staub“ sein?","Grandpa, why does the grain have to be ""fine as dust""?"
 ZS2_DACH_OPA_0420,"Weil Klumpen alles ruinieren. Alles! Ein einziger Klumpen, und das ganze Werk fällt in sich zusammen!","Because lumps ruin everything. Everything! One single lump, and the whole work collapses!"
@@ -6816,20 +6818,20 @@ ZS3_DACH_MAX_0315,"Die Zelle summt, das Mehl rieselt, das Ei liegt still. Das is
 ZS3_DACH_PIX_0320,"Drei. Ich habe bis drei gezählt, leise, wie versprochen.","Three. I've counted to three, quietly, as promised."
 ZS3_DACH_PIX_0320_2,Bei vier sage ich etwas. Ein Kater hält sein Wort. Meistens jedenfalls.,"At four I shall say something. A cat keeps his word. Mostly, anyway."
 ZS3_DACH_MAX_0330,"Die Kiste steht offen, und siebzehn Fernbedienungen gucken raus wie Vogelküken.","The box is open, and seventeen remotes are peeking out like baby birds."
-ZS3_DACH_MAX_0335,Eine ist runtergefallen und hat dabei den Fernseher angeschaltet. Hier oben hängt echt alles irgendwie zusammen.,One fell out and switched the TV on. Up here everything really is connected somehow.
+ZS3_DACH_MAX_0335,"Eine ist runtergefallen und hat dabei den Fernseher angeschaltet. Siebzehn Stück, und die einzige, die funktioniert, tut es aus Versehen.","One fell out and switched the TV on. Seventeen of them, and the only one that works does it by accident."
 ZS3_DACH_PIX_0340,Alle kaputt. Alle ohne Batterie.,All broken. All without batteries.
 ZS3_DACH_PIX_0340_2,Hier hat jemand sehr lange nach etwas gesucht. Und es nicht gefunden. Und es niemandem erzählt.,Someone has been searching for something here for a very long time. And didn't find it. And told no one.
 ZS3_DACH_MAX_0350,"Abendrot. Drüben war ich eine Woche im Regen, und hier sind nicht mal die Abendnachrichten vorbei.","Sunset. Over there I spent a week in the rain, and here the evening news isn't even over."
 ZS3_DACH_MAX_0355,"Draußen fliegt ein Flugzeug vorbei, und mir kommt es total langsam vor. Ich hab mich viel zu schnell an die Zukunft gewöhnt.","A plane flies past outside, and it seems really slow to me. I got used to the future way too fast."
 ZS3_DACH_MAX_0360,"Doppelt umrandet, und jetzt auch noch ein Ausrufezeichen daneben. Der Tag ist heute. Und heute ist bald vorbei.","Two rings, and now an exclamation mark next to it as well. The day is today. And today is nearly over."
-ZS3_DACH_MAX_0365,"Das Ausrufezeichen ist so fest gemalt, dass der Stift durchs Papier gegangen ist. Opa meint es ernst. Mit was auch immer.",The exclamation mark is drawn so hard the pen went through the paper. Grandpa means it. Whatever it is.
+ZS3_DACH_MAX_0365,"Das Ausrufezeichen ist so fest gemalt, dass der Stift durchs Papier gegangen ist. Der nächste Monat hat jetzt auch einen Termin.",The exclamation mark is drawn so hard the pen went through the paper. Next month has an appointment now too.
 ZS3_DACH_OPA_0370,"Das Ausrufezeichen? Ein Betonungszeichen. Rein wissenschaftlich. Damit der Kreis weiß, dass er wichtig ist.",The exclamation mark? An emphasis mark. Purely scientific. So the circle knows it's important.
 ZS3_DACH_PIX_0380,"Angst, Mehl und jetzt auch noch Verzweiflung.","Fear, flour and now despair as well."
 ZS3_DACH_PIX_0380_2,"Seine Nase würde für ihn lügen. Meine nicht. Meine ist unbestechlich, außer mit Lachs.","His nose would lie for him. Mine wouldn't. Mine is incorruptible, except with salmon."
 ZS3_DACH_MAX_0390,"Kanal 42. Kalle winkt, und Modell 08/15 wischt den Regen weg. Jeden Tropfen einzeln.","Channel 42. Kalle is waving, and Model 08/15 is wiping away the rain. Every single drop."
 ZS3_DACH_MAX_0395,"Modell 08/15 winkt mit dem Mopp, und ich wink zurück. Ich hab jetzt einen Brieffreund mit Putzplan.","Model 08/15 waves with his mop, and I wave back. I've got a pen pal with a cleaning rota now."
 ZS3_DACH_MAX_0400,Kanal 42. Kalle winkt. Im Hintergrund sucht ein Roboter immer noch eine Frau namens Konner.,Channel 42. Kalle is waving. In the background a robot is still looking for a woman called Konner.
-ZS3_DACH_MAX_0405,Er sucht und sucht. Ich hätte ihm helfen können und hab's nicht gemacht. Das hängt mir irgendwie nach.,He keeps searching. I could have helped him and I didn't. That kind of stays with me.
+ZS3_DACH_MAX_0405,Er sucht und sucht. Ich hätte ihm helfen können. Ich guck jetzt woanders hin.,He keeps searching. I could have helped him. I'm going to look somewhere else now.
 ZS3_DACH_MAX_0410,"Opas Lampe brummt. Hier oben brummt alles, sobald es Strom kriegt. Außer Pixel, der brummt nur, wenn er will.","Grandpa's lamp is humming. Everything up here hums once it gets power. Except Pixel, he only hums when he feels like it."
 ZS3_DACH_PIX_0415,"Sie brummt. Ich brumme auch, allerdings nur, wenn man mich streichelt, und auch dann nur nach Absprache.","It hums. I hum too, but only when stroked, and even then only by arrangement."
 ZS3_DACH_PIX_0415_2,Die Lampe tut es umsonst und für jeden. Das ist billig.,The lamp does it for free and for anyone. That's cheap.
@@ -6862,7 +6864,7 @@ ZS3_DACH_PIX_0580,"Kalles Morse-Tabelle. Miau, Miau, Pause, Miau.","Kalle's Mors
 ZS3_DACH_PIX_0580_2,"Wo du hinfährst, krabble ich durch das Rauschen. Ich brauche keine Tabelle. Du vielleicht.","Where you're going, I crawl through the static. I don't need a table. You might."
 ZS3_DACH_PIX_0590,"Das Olivenöl, beziehungsweise der Rest davon. Es hat seine Pflicht getan.","The olive oil, or rather what's left of it. It has done its duty."
 ZS3_DACH_PIX_0590_2,"Ich würde es hierlassen. Hier oben quietscht bald einiges, glaub mir.","I'd leave it here. Plenty of things will be squeaking up here soon, believe me."
-ZS3_DACH_MAX_0600,"Zwei Fächer, letzte Welt. Ich packe, als wär's ein Staffelfinale, also mit viel zu viel Drama.","Two pockets, last world. I'm packing like it's a season finale, so with way too much drama."
+ZS3_DACH_MAX_0600,"Zwei Fächer, letzte Welt. Die Tasche bleibt hart. Wenigstens einer hier oben hat sich nicht verändert.","Two pockets, last world. The bag won't budge. At least one of us up here hasn't changed."
 ZS3_DACH_PIX_0610,Gepackt. Zum letzten Mal.,Packed. For the last time.
 ZS3_DACH_PIX_0610_2,"Ich spreche ein Gebet für die Tasche. Es ist kurz, sie hat ja auch nicht viel geleistet.","I shall say a prayer for the bag. It's a short one, the bag hasn't done that much."
 ZS3_DACH_OPA_0620,Kanal 999. Dort … dort hat mal jemand etwas verloren. Irgendjemand. Falls du es findest: Es gehört mir. Irgendjemandem.,Channel 999. Someone … someone lost something there once. Someone or other. If you find it: it's mine. Someone's.
@@ -6898,13 +6900,13 @@ FI_DACH_PIX_0180,"Nichts. Sieh einfach zu. Das hier ist dein Moment, nicht meine
 FI_DACH_NAR_0190,"Opa richtet die Zündkapsel auf den Empfänger und drückt. Die Maschine brummt an. Lampen blinken, Rauch steigt, die Nadel am Druckmesser wandert nach rechts.","Grandpa points the detonator at the receiver and presses. The machine hums into life. Lamps blink, smoke rises, the needle on the pressure gauge creeps to the right."
 FI_DACH_OPA_0200,"Es läuft! Es läuft! Zwölf Minuten, dann ist alles anders!","It's working! It's working! Twelve minutes, and everything will be different!"
 FI_DACH_NAR_0210,Unten klingelt es. Zweimal. Eine Stimme ruft von unten herauf.,The doorbell rings downstairs. Twice. A voice calls up from below.
-FI_DACH_OMA_0220,"Konrad? Ich bin's. Ich bin etwas früher. Die Bahn war pünktlich, stell dir vor.","Konrad? It's me. I'm a bit early. The train was on time, imagine that."
+FI_DACH_OMA_0220,Konrad? Ich bin's. Ich bin etwas früher. Mach bitte auf.,"Konrad? It's me. I'm a bit early. Open up, please."
 FI_DACH_OPA_0230,"Nein. Nein, nein, nein. Nicht jetzt. Nicht sie. Nicht vor der Zeit!","No. No, no, no. Not now. Not her. Not before it's time!"
 FI_DACH_NAR_0240,"Die Maschine zischt. Ein eiserner Riegel fährt über die Bodenluke, eine rote Lampe blinkt. Die Druckanzeige steht im roten Bereich.","The machine hisses. An iron bolt slides across the floor hatch, a red lamp blinks. The pressure gauge is in the red."
 FI_DACH_OPA_0250,Teig… Drucküberlastung! Sicherheitsverriegelung! Das Werk schützt sich selbst!,Dou… pressure overload! Safety lock! The work is protecting itself!
 FI_DACH_MAX_0260,"Opa, Oma steht unten vor der Tür, und wir sind hier oben mit deinem Werk eingesperrt.","Grandpa, Grandma's downstairs at the door, and we're locked up here with your work."
 FI_DACH_OPA_0270,"Niemand hält mein dunkles Werk auf! Sie darf es nicht erfahren, bevor es vollendet ist!",No one stops my dark work! She mustn't find out before it's complete!
-FI_DACH_MAX_0280,Okay. Das klang jetzt ehrlich gesagt ziemlich nach Endgegner.,"Okay. Honestly, that sounded a lot like a final boss."
+FI_DACH_MAX_0280,Okay. Das klang jetzt ziemlich nach Endgegner.,Okay. That sounded a lot like a final boss.
 FI_RIEG_OPA_0010,Die Welt wird weich werden! Weich und warm!,The world will become soft! Soft and warm!
 FI_RIEG_OPA_0020,"Noch zwölf Minuten, dann kennt mich jeder in diesem Haus!","Twelve more minutes, and everyone in this house will know my name!"
 FI_RIEG_OPA_0030,"Keiner verlässt diesen Dachboden, bis es aufgegangen ist!",No one leaves this attic until it has risen!
@@ -6931,7 +6933,7 @@ FI_RIEG_MAX_0145,"Ich hab ans Glas geklopft, und die Nadel hat gezittert. Dann h
 FI_RIEG_MAX_0150,"Zwei Fassungen, beide zu. Da drin sind das Ei und das Mehl. Legendäre Artefakte. Ganz sicher. Was denn sonst.","Two sockets, both closed. The egg and the flour are in there. Legendary artefacts. Definitely. What else."
 FI_RIEG_MAX_0155,"Ein legendäres Ei und ein legendäres Mehl. In meinem Kopf sagt ein alter Mann: „Es ist gefährlich, allein zu gehen.“","A legendary egg and a legendary flour. In my head an old man says: ""It's dangerous to go alone."""
 FI_RIEG_MAX_0160,Eine kleine Schüsselantenne. Da hat Opa die Zündkapsel draufgehalten. Also die Fernbedienung. Also das Ding.,"A little dish antenna. That's where Grandpa pointed the detonator. The remote, I mean. The thing."
-FI_RIEG_MAX_0165,"Die Antenne dreht sich ein bisschen mit, wenn ich mich bewege. Entweder mag sie mich, oder sie will was von mir.",The antenna turns a bit when I move. Either it likes me or it wants something from me.
+FI_RIEG_MAX_0165,"Die Antenne dreht sich mit, wenn ich mich bewege. Sie zielt. Ich hoffe, sie zielt freundlich.",The antenna turns with me when I move. It's aiming. I hope it's aiming in a friendly way.
 FI_RIEG_MAX_0170,"Opa. Rotes Gesicht, weiße Haare, Schraubenzieher hinterm Ohr. Wenn das der Endgegner ist, war der Rest Tutorial.","Grandpa. Red face, white hair, screwdriver behind his ear. If that's the final boss, the rest was the tutorial."
 FI_RIEG_MAX_0175,"Er schwitzt und lächelt gleichzeitig. Opa hat nichts zu verbergen, außer ungefähr allem.","He's sweating and smiling at the same time. Grandpa has nothing to hide, apart from roughly everything."
 FI_RIEG_MAX_0180,"Finger weg, sagt er. Ich fass es auch nicht an, ich hab Angst, dass es zurückfasst.","Hands off, he says. I'm not touching it anyway, I'm scared it'll touch back."
@@ -6966,7 +6968,7 @@ FI_RUF_PIX_0100,"Noch nirgends, Prinzessin. Und genau das finde ich so beunruhig
 FI_RUF_MAX_0110,Kanal 7. Archimedes! Ramses! Irgendwer!,Channel 7. Archimedes! Ramses! Anyone!
 FI_RUF_ARC_0120,"Heureka! Nein, Moment, falscher Anlass. Ein verriegelter Dachboden? Hebel! Du brauchst einen Hebel!","Eureka! No, wait, wrong occasion. A locked attic? A lever! You need a lever!"
 FI_RUF_RAM_0130,Soll ich helfen? Oder lieber nicht? Ich überlege. Ich melde mich. Vielleicht. Ziemlich sicher vielleicht.,Should I help? Or rather not? I'm thinking it over. I'll get back to you. Maybe. Quite definitely maybe.
-FI_RUF_HER_0140,Dein Verbündeter ist in einem anderen Kanal!,Your ally is in another channel!
+FI_RUF_HER_0140,Eilmeldung! Jemand braucht Hilfe! Ich sage es sofort weiter!,Breaking news! Somebody needs help! I'll pass it on at once!
 FI_RUF_MAX_0150,Danke. Sehr hilfreich. Alle.,Thanks. Very helpful. All of you.
 FI_RUF_MAX_0160,Kanal 42. Hallo? Jemand mit Gelenken?,Channel 42. Hello? Anyone with joints?
 FI_RUF_HAU_0170,"Servus, Bursche. Verriegelt, sagst du? Ordnungsgemäß? Dann komm ich. Ordnung ist mein Fach.","Greetings, lad. Locked, you say? Properly? Then I'm coming. Order is my speciality."
@@ -7048,8 +7050,8 @@ FI_RAET_ZEL_0400,"Ich hebele Riegel, keine Öfen. Für Öfen gibt es Fachleute."
 FI_RAET_HAU_0410,"Die Luke ist ordnungsgemäß verriegelt. Ich öffne nichts, was ordnungsgemäß ist. Servus.",The hatch is properly locked. I don't open anything that's proper. Greetings.
 FI_RAET_MAX_0420,"Der Löffel passt nicht in den Riegel. Er klebt bloß dran, und das hilft keinem.","The spoon doesn't fit in the bolt. It just sticks to it, and that helps nobody."
 FI_RAET_PIX_0430,"Die Thunfischdose hält keine Ofentür. Sie hält mich bei Laune, und das ist ihre einzige Aufgabe.","The tuna tin doesn't hold oven doors. It keeps me in a good mood, and that's its only job."
-FI_RAET_OPA_0440,Die Zelle ist nichts ohne die Kapsel! Nichts! Ein Knöpfchen ohne Knopf!,The cell is nothing without the capsule! Nothing! A button with nothing to push it!
-FI_RAET_MAX_0450,"Keine Zelle, keine Macht. Kenn ich vom Handy, das ist im Grunde mein ganzes Leben.","No cell, no power. I know that from my phone, it's basically my whole life."
+FI_RAET_OPA_0440,Die Zelle ist nichts ohne die Kapsel! Nichts! Strom ohne Auftrag!,The cell is nothing without the capsule! Nothing! Power without a purpose!
+FI_RAET_MAX_0450,"Ich ziele, ich drücke, nichts. Ich bin im Endkampf und brauche Batterien. Typisch.","I aim, I press, nothing. I'm in the final battle and I need batteries. Typical."
 FI_RAET_MAX_0460,Opa die Zündkapsel geben? Er hat sie schon einmal fallen lassen. Und er hat sie schon einmal benutzt. Lieber nicht.,Give Grandpa the detonator? He's dropped it once already. And he's used it once already. Better not.
 FI_RAET_OPA_0470,"Ja! Gib sie … nein. Nein, ich will sie gar nicht. Meine Hände zittern. Mach du.","Yes! Give it … no. No, I don't even want it. My hands are shaking. You do it."
 FI_HINT_PIX_0010,"Dein Großvater brüllt, die Luke blinkt, und du stehst nur da.","Your grandfather is bellowing, the hatch is blinking, and you're just standing there."
@@ -7057,9 +7059,9 @@ FI_HINT_PIX_0010_2,"Einer von euch dreien sollte etwas tun, und ich tippe nicht 
 FI_HINT_PIX_0020,"Die Luke. Sieh sie dir an, und dann fass sie an. Danach wissen wir wenigstens, was wir wissen.","The hatch. Look at it, and then touch it. Afterwards we'll at least know what we know."
 FI_HINT_PIX_0030,"Benutz die Luke. Sie geht nicht auf. Aber erst, wenn du es versucht hast, denkst du über Alternativen nach. So bist du.",Use the hatch. It won't open. But you only think about alternatives once you've tried. That's how you are.
 FI_HINT_PIX_0040,Hier steht eine Prinzessin mit dem Zauberstab eines Dunklen Lords herum.,There's a princess standing around here with a Dark Lord's wand.
-FI_HINT_PIX_0040_2,"Das ist kein Zufall, junger Mann. Im Fernsehen nennt man so etwas Besetzung.","That's no coincidence, young man. On television they call that casting."
+FI_HINT_PIX_0040_2,Im Fernsehen nennt man so etwas Besetzung.,On television they call that casting.
 FI_HINT_PIX_0050,"Zeldina hat dir gesagt, wofür sie den Stab benutzt. Türen. Vermieter. Hier gibt es eine Tür.",Zeldina told you what she uses the wand for. Doors. Landlords. There's a door here.
-FI_HINT_PIX_0060,"Rede mit Zeldina und frag sie nach der Luke. Sie hebelt den Riegel auf. Ich hätte es selbst getan, aber ich habe keine Daumen.","Talk to Zeldina and ask her about the hatch. She'll prise the bolt open. I'd have done it myself, but I have no thumbs."
+FI_HINT_PIX_0060,"Rede mit Zeldina und frag sie nach der Luke. Sie hebelt den Riegel auf. Ich hätte es selbst getan, aber ich bin heute fürs Zusehen eingeteilt.","Talk to Zeldina and ask her about the hatch. She'll prise the bolt open. I'd have done it myself, but I'm down for watching today."
 FI_HINT_PIX_0070,"Hinter dem kleinen Fenster wächst etwas. Wenn das Ding stehen bleibt, will das Etwas heraus.","Something is growing behind the little window. If the thing stops, the something will want out."
 FI_HINT_PIX_0070_2,"Jemand sollte also die Tür halten. Ich nicht, ich bin für so etwas zu flauschig.","So someone ought to hold the door. Not me, I'm far too fluffy for that kind of thing."
 FI_HINT_PIX_0080,"Hier steht ein Roboter, der Türen hält, seit er gebaut wurde. Frag ihn. Höflich. Er ist Österreicher.",There's a robot here who's been holding doors since he was built. Ask him. Politely. He's Austrian.
@@ -7124,8 +7126,8 @@ FI_AUFL_OPA_0370,"Wenn sie es merkt, geht die Welt unter. Meine jedenfalls. Das 
 FI_AUFL_MAX_0372,"Opa. Du hättest mich auch einfach fragen können, ob ich für dich einkaufen geh.",Grandpa. You could've just asked me to go shopping for you.
 FI_AUFL_OPA_0374,Hätte ich. Und was hättest du gesagt?,I could have. And what would you have said?
 FI_AUFL_MAX_0376,… Nein. Wahrscheinlich nicht.,… No. Probably not.
-FI_AUFL_PIX_0380,Beide sagen die Wahrheit. Es riecht nach Kuchen und nach Reue.,They're both telling the truth. It smells of cake and of remorse.
-FI_AUFL_PIX_0380_2,Reue riecht bei Menschen ein wenig nach nassem Hund. Aber im Gegensatz zum Hund kann man ihr nicht böse sein.,"In humans, remorse smells a little of wet dog. But unlike the dog, you can't be cross with it."
+FI_AUFL_PIX_0380,Es riecht nach Kuchen und nach Reue.,It smells of cake and of remorse.
+FI_AUFL_PIX_0380_2,Reue riecht bei Menschen nach nassem Hund. Ich gehe ans Fenster.,"In humans, remorse smells of wet dog. I'm going to the window."
 FI_AUFL_NAR_0390,"Die Luke geht auf. Oma steht in der Öffnung, Handtasche am Arm, und sieht: Rauch, einen Kuchen, eine Prinzessin, einen Kater, ihren Mann.","The hatch opens. Grandma stands in the opening, handbag on her arm, and sees: smoke, a cake, a princess, a cat, her husband."
 FI_AUFL_OMA_0400,Konrad.,Konrad.
 FI_AUFL_OPA_0410,Hildegard. Du bist früh.,Hildegard. You're early.
@@ -7160,8 +7162,8 @@ FI_WOHN_MAX_0085,"Die Girlande hängt schief. Opa sagt, das ist Absicht. Oma sag
 FI_WOHN_MAX_0090,"Kleine Geschenke. Eins davon ist eine Fernbedienungshülle. Opa lernt dazu, nur eben langsam.","Little presents. One of them is a remote control cover. Grandpa's learning, just slowly."
 FI_WOHN_MAX_0095,"Ein Geschenk ist in Zeitung eingewickelt, genauer gesagt in die Programmzeitschrift. Ich erkenne Opas Eselsohren.","One present is wrapped in newspaper, the TV guide to be exact. I recognise Grandpa's dog-ears."
 FI_WOHN_MAX_0100,"Oma guckt auf jedem Foto, als hätte jemand ihren Geburtstag vergessen. Jetzt weiß ich endlich, warum.",On every photo Grandma looks like someone's forgotten her birthday. Now I finally know why.
-FI_WOHN_MAX_0105,"Auf dem neuesten Foto lächelt Oma. Das ist zwar noch gar nicht gemacht, aber ich weiß schon, wie es aussieht.","In the newest photo Grandma's smiling. It hasn't even been taken yet, but I already know what it looks like."
-FI_WOHN_MAX_0110,Das Sofa sieht irgendwie kleiner aus als heute Mittag. Oder ich bin größer geworden. Beides eher unwahrscheinlich.,"The sofa looks smaller than at lunchtime, somehow. Or I've grown. Both fairly unlikely."
+FI_WOHN_MAX_0105,Auf dem neuesten Foto lächelt Oma. Das gibt es noch gar nicht. Opa sucht gerade die Kamera.,In the newest photo Grandma's smiling. It doesn't exist yet. Grandpa's just looking for the camera.
+FI_WOHN_MAX_0110,Das Sofa sieht kleiner aus als heute Mittag. Oder ich bin größer geworden. Beides eher unwahrscheinlich.,The sofa looks smaller than at lunchtime. Or I've grown. Both fairly unlikely.
 FI_WOHN_PIX_0115,"Das Sofa. Mein Revier. Ich habe es euch Menschen ein paar Welten lang überlassen, aus reiner Großzügigkeit.","The sofa. My territory. I left it to you humans for a few worlds, out of sheer generosity."
 FI_WOHN_PIX_0115_2,Die Leihfrist ist jetzt abgelaufen.,The loan period has now expired.
 FI_WOHN_MAX_0120,"Der Zapp-O-Mat steht jetzt im Wohnzimmer. Opa sagt, Fernsehen zum Geburtstag sei Tradition. Oma sagt nichts. Das ist schlimmer.",The Zap-O-Matic is in the living room now. Grandpa says TV on birthdays is a tradition. Grandma says nothing. That's worse.
@@ -7205,7 +7207,7 @@ FI_WOHN_OMA_0360,"Der Junge ist in Ordnung. Du nicht, Konrad. Aber der Junge.","
 FI_WOHN_ZEL_0370,"Soll ich mitkommen? Ich kenne mich mit Suchen aus, ich suche seit Jahren eine Wohnung.","Shall I come along? I know about searching, I've been searching for a flat for years."
 FI_WOHN_MAX_0380,"Nein, danke. Das ist eine Quest für eine Person. Bleib ruhig, Oma hat bestimmt noch Fragen zur Kaltmiete.","No, thanks. This is a one-person quest. You stay, Grandma's bound to have more questions about the rent."
 FI_WOHN_HAU_0390,Ich komme wieder. Mit dem Geschirrtuch.,I'll be back. With the tea towel.
-FI_WOHN_MAX_0400,Ich geh dann mal. Zum Supermarkt. Freiwillig. Und niemand sagt jetzt was.,"I'm off, then. To the supermarket. Voluntarily. And nobody say anything."
+FI_WOHN_MAX_0400,Ich geh dann mal. Und niemand sagt jetzt was.,"I'm off, then. And nobody say anything."
 FI_WOHN_PIX_0410,"Ich sage etwas. Ich sage es nur später, wenn ich wieder sitzen kann.","I'm saying something. I'm just saying it later, when I can sit again."
 FI_INV_MAX_0010,"Das Drachenei. Warm, schwer, mit Schuppenmuster. Opa sagt, es muss ganz bleiben. Ich trag es wie ein rohes Ei. Was es ist.","The dragon egg. Warm, heavy, with a scale pattern. Grandpa says it has to stay in one piece. I'm carrying it like a raw egg. Which it is."
 FI_INV_PIX_0015,"Ein Ei. Drei Minuten, weich, mit Salz. Ich sage das nicht als Drohung. Ich sage das als Vision.","An egg. Three minutes, soft, with salt. I'm not saying that as a threat. I'm saying it as a vision."
@@ -7231,7 +7233,8 @@ FI_SUPM_MAX_0060,Ein Zeichen. Ein ziemlich deutliches Zeichen sogar.,"A sign. A 
 FI_SUPM_MAX_0065,"„Nur heute.“ Ich wusste, dass das kommt. Es steht seit vier Welten in den Sternen. Und auf dem Aufsteller.","""Today only."" I knew it was coming. It's been written in the stars for four worlds. And on the display stand."
 FI_SUPM_MAX_0070,Die letzte Quest. Ganz ohne Drachen.,The last quest. No dragons at all.
 FI_SUPM_MAX_0075,"Die Milch steht ganz hinten. Natürlich. Jeder Laden ist ein Dungeon, und die Milch ist der Schatz im letzten Raum.","The milk is right at the back. Of course. Every shop is a dungeon, and the milk is the treasure in the last room."
-FI_SUPM_MAX_0080,"Kein Rauschen, kein Kanal, nur eine Tür, die von selbst aufgeht. Und ich geh freiwillig durch. Das ist neu.","No static, no channel, just a door that opens by itself. And I'm walking through voluntarily. That's new."
+FI_SUPM_MAX_0080,"Kein Rauschen, kein Kanal, nur eine Tür, die von selbst aufgeht.","No static, no channel, just a door that opens by itself."
+FI_SUPM_MAX_0080_2,Zum ersten Mal heute will niemand was von mir.,"For the first time today, nobody wants anything from me."
 FI_SUPM_NAR_0090,Die Tür gleitet auf. Max geht hinein. Das Licht aus dem Laden fällt auf den Gehweg. Schwarzblende.,The door slides open. Max goes inside. The light from the shop falls onto the pavement. Fade to black.
 FI_ABSP_NAR_0100,"Foto 1: Alle um den Couchtisch, der Kuchen angeschnitten, Oma mit Gabel, Opa mit Mehl im Haar. Im Zapp-O-Mat winken Kalle und Flimmer. Unterschrift: „Der Kuchen war keine Lüge.“","Photo 1: everyone round the coffee table, the cake cut, Grandma with a fork, Grandpa with flour in his hair. Kalle and Flimmer wave from the Zap-O-Matic. Caption: ""The cake was not a lie."""
 FI_ABSP_NAR_0110,Foto 2: Zeldina misst mit Moderworts Zauberstab die Wohnzimmerwand aus. Oma hält das andere Ende. Unterschrift: „Der Dachboden wäre frei.“,"Photo 2: Zeldina measures the living-room wall with Mouldword's wand. Grandma holds the other end. Caption: ""The attic would be available."""

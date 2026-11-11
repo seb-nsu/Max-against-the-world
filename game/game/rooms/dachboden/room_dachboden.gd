@@ -297,7 +297,8 @@ func zs1_drehknopf() -> void:
 ## Ansehen im Zwischenspiel 1 (0310–0375, Fundkiste 0420/0425): nur, was sich verändert hat;
 ## sonst gelten die Prolog-Zeilen. Die Werkbank-Ablage mit dem Ei ist die Werkbank (G26).
 const ZS1_ANSEHEN := {
-	werkbank = [["MAX", "ZS1_DACH_MAX_0310", 1], ["MAX", "ZS1_DACH_MAX_0315", 2, "ZS1_DACH_PIX_0320"]],
+	werkbank = [["MAX", "ZS1_DACH_MAX_0310", 1], ["MAX", "ZS1_DACH_MAX_0315", 2, "ZS1_DACH_PIX_0320"],
+		["MAX", "ZS1_DACH_MAX_0322", 3, "ZS1_DACH_PIX_0324"]],
 	dachfenster = [["MAX", "ZS1_DACH_MAX_0330", 1], ["MAX", "ZS1_DACH_MAX_0335", 2]],
 	kalender = [["MAX", "ZS1_DACH_MAX_0340", 1], ["MAX", "ZS1_DACH_MAX_0345", 2]],
 	zapp_o_mat = [["MAX", "ZS1_DACH_MAX_0350", 1], ["PIX", "ZS1_DACH_PIX_0355", 2]],
