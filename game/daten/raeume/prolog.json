@@ -882,7 +882,16 @@
        "blasen": [
         "P0_TREP_MAX_0125"
        ],
-       "mal": 2
+       "mal": 2,
+       "folge": [
+        {
+         "zeile": "P0_TREP_OPA_0126",
+         "sprecher": "OPA",
+         "blasen": [
+          "P0_TREP_OPA_0126"
+         ]
+        }
+       ]
       }
      ]
     },
@@ -1618,7 +1627,16 @@
        "blasen": [
         "P0_DACH_MAX_1675"
        ],
-       "mal": 2
+       "mal": 2,
+       "folge": [
+        {
+         "zeile": "P0_DACH_OPA_1676",
+         "sprecher": "OPA",
+         "blasen": [
+          "P0_DACH_OPA_1676"
+         ]
+        }
+       ]
       }
      ]
     },
@@ -1793,7 +1811,16 @@
        "blasen": [
         "P0_DACH_MAX_1705"
        ],
-       "mal": 2
+       "mal": 2,
+       "folge": [
+        {
+         "zeile": "P0_DACH_OPA_1706",
+         "sprecher": "OPA",
+         "blasen": [
+          "P0_DACH_OPA_1706"
+         ]
+        }
+       ]
       }
      ]
     },
