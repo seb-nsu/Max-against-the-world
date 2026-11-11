@@ -11,8 +11,9 @@ Grundlage: `pruefung/360-pruefung.md` (111 Funde). Auftrag: `pruefung/umsetzung-
 - Paket 5 (Originalwortlaut): fertig.
 - Paket 6 (Humor, Anspielungen, KI-Klang): fertig, ein Commit je Skriptdatei.
 - Paket 7 (Grafik-Dokumente und Prompts): fertig. Bilder sind keine erzeugt, das Offene steht in Abschnitt 4.
-- Pakete 8 und 9: noch nicht begonnen.
-- Weiter bei: Paket 8, Audio-Dokument.
+- Paket 8 (Audio-Dokument): fertig. Geändert ist nur `docs/04-audio.md`.
+- Paket 9: noch nicht begonnen.
+- Weiter bei: Paket 9, übrige Dokumente, Bedienung, Oberflächentexte.
 
 Arbeitsweise nach einer Unterbrechung: Tabelle 1 zeigt je Fund den Status. Vor jedem Commit laufen `python3 tools/pruefen.py`, alle `--pruefen`-Läufe aus `.github/workflows/pruefen.yml` und nach Code-Änderungen die Godot-Tests.
 
@@ -57,9 +58,9 @@ Status: umgesetzt, nicht bestätigt, Entscheidung bitte prüfen, offen für Seba
 | 33 | 7 | umgesetzt | Bestätigt. `grafik/00-stil-und-werkzeuge.md`: FIGUR-KLEIN gilt für 29 bis 110 Pixel auf einer Leinwand von 128×128. `grafik/01-max-und-pixel.md` nennt dieselbe Leinwand. |
 | 34 | 7 | umgesetzt | Bestätigt. `grafik/02-prolog-und-finale.md`: Der Deko-Prompt rechnet mit „189-pixel tall adult character“, Omas Größe steht als 189 Pixel im Text. |
 | 35 | 7 | umgesetzt | Bestätigt. Innen-Fassungen der Farb-Bausteine: Welt 1 „Goblin-Bergwerk“, Welt 2 „Ägypten innen“, Welt 3 „Realität innen“ und „Simulation innen“, Welt 4 „Mitternachts-TV innen“. Die Innenräume tragen diese Schlüssel. `tools/prompts_zusammensetzen.py` nimmt „… innen“ nur bei genauem Treffer, damit kein Außenraum versehentlich die Innen-Fassung bekommt. |
-| 36 | 8 | noch nicht bearbeitet |  |
-| 37 | 8 | noch nicht bearbeitet |  |
-| 38 | 8 | noch nicht bearbeitet |  |
+| 36 | 8 | Dokument umgesetzt, Zuweisung offen | Bestätigt: Alle vier Räume des Finales spielen `gegenwart`. `docs/04-audio.md`: zwei neue Stücke `finale_maschine` und `finale_geburtstag` mit den Prompts aus dem Bericht, am Supermarkt kein Stück, nur `kuehlregal` und `tuergong`. Die Zuweisung im Spiel ist nicht gemacht, der Auftrag beschränkt Ton auf das Audio-Dokument. `welten/finale.yaml` nennt weiter `gegenwart`; der Absatz „Finale“ im Dokument sagt, was dafür im Code fehlt. |
+| 37 | 8 | umgesetzt (Entscheidung, bitte prüfen) | Bestätigt. `docs/04-audio.md`, Leitmotiv: fünf Töne festgelegt (g′ – c″ – e″ – d″ – c″ in C-Dur, kurz, kurz, lang, kurz, lang), als Pfeif-Aufnahme und MIDI ablegen, nachträglich in jedes Welt-Stück setzen. Welt-Stücke bekommen „in C major“ oder „in A minor“ im Prompt, der alte Motiv-Satz entfällt. Die Töne sind mein Vorschlag. |
+| 38 | 8 | umgesetzt | Bestätigt. Stimme der Hyäne mit dem Prompt aus dem Bericht (flach und ernst, platzt nur in den markierten Zeilen). Die markierten Zeilen sind benannt: `W4_VERH_HYA_0350` und `W4_VERH_HYA_0400`. |
 | 39 | 9 | noch nicht bearbeitet |  |
 | 40 | 9 | noch nicht bearbeitet |  |
 | 41 | 2 | umgesetzt | Bestätigt und nachgestellt (SCH wurde in Welt 1 und 3 zu „Schreiber“). `tools/zeilen_einfuegen.py` sucht den Namen nur noch in der Zieldatei und bricht ab, wenn das Kürzel dort noch nicht vorkommt. Geprüft: SCH wird in Welt 1 „Schmied“, in Welt 3 „Schmidt“, GRI in Welt 2 „Grieche“. Die Kürzel selbst bleiben, weil Zeilen-IDs nicht umnummeriert werden. |
@@ -111,7 +112,7 @@ Status: umgesetzt, nicht bestätigt, Entscheidung bitte prüfen, offen für Seba
 | 87 | 7 | umgesetzt (Entscheidung, bitte prüfen) | Bestätigt. Quelle für Größen ist die Tabelle in `grafik/00-stil-und-werkzeuge.md` (neuer Absatz „Größen, eine Quelle“). Pixel schlafend 25 hoch und 48 lang, Pixel als Ziege 69, Beamter ohne zweite Stehhöhe, Maschine „about 80 percent of the image height“. Veraltete Pixelzahlen aus den Kommentaren der Welt-Tabellen entfernt (`welten/*.yaml`, die erzeugten Daten bleiben gleich). Entscheidung: Für den schlafenden Pixel gilt 25×48 aus `00`; mit dem Zuschlag von 35 Prozent wären es 34. |
 | 88 | 7 | umgesetzt | Bestätigt. `grafik/00-stil-und-werkzeuge.md`: neuer Baustein KONZEPT-AUSSEN (Text aus dem Bericht), HINTERGRUND heißt „HINTERGRUND (Ersatzweg)“. Jede Grafik-Datei nennt ihre Außenszenen in einer Zeile „Außenszenen“, `tools/prompts_zusammensetzen.py` setzt dort den Außen-Baustein ein (unbekannter Name bricht ab). Entscheidung: Der Supermarkt-Eingang zählt als Außenszene. |
 | 89 | 7 | teilweise | Bestätigt. `tools/layout_skizzen.py`: Legende vollständig (violett für Figuren), Figuren in ihrer Größe aus der Welt-Tabelle mit Namen und Pixelhöhe. Alle 55 Skizzen neu erzeugt, fünf waren veraltet. Nicht geändert: Außenräume sind weiter als Raum gezeichnet, und die Beschriftungen der Platzhalter im Spiel bleiben (laut Bericht reicht das für die Graubox). |
-| 90 | 8 | noch nicht bearbeitet |  |
+| 90 | 8 | umgesetzt, Kosten offen | Bestätigt, alle sechs Teile. Pixels Stimme „with a rarely shown, dry warmth underneath“. Musik-Baustein mit Ausnahmen für `zappomat`, `werbeblock`, `abspann` und Jingles. Tempo im Rhythmus-Spiel: nach dem Erzeugen messen, Taktmarken von Hand. Geräusche als Tabellen mit Kennung und Einsatz, dazu Zeitfähre, Code-Sicht, Portalgerät und je Welt eine Grundatmosphäre (`w1_atmo` bis `w4_atmo`); 14 sind verdrahtet, die übrigen als „noch nicht im Code“ benannt. Kosten in der Datei einheitlich vier Monate, rund 400 $. Umfang: 5.435 Zeilen, 6.180 Sprechblasen, rund 504.000 Zeichen (der Bericht nennt 5.414 und 6.306, das war der Stand vor den Kürzungen). Suno und Udio mit Datum. Offen: Mit den echten Zahlen ist die Kostenschätzung eher zu niedrig, eine neue Zahl erfinde ich nicht. |
 | 91 | 9 | noch nicht bearbeitet |  |
 | 92 | 9 | noch nicht bearbeitet |  |
 | 93 | 9 | noch nicht bearbeitet |  |
@@ -826,6 +827,8 @@ Hinweise zu den Zahlen:
 - Fund 87: Für den schlafenden Pixel gilt 25 hoch und 48 lang (aus `grafik/00-stil-und-werkzeuge.md`). Mit dem Zuschlag von 35 Prozent wären es 34.
 - Fund 88: Der Supermarkt-Eingang zählt als Außenszene und bekommt den Außen-Baustein.
 - Fund 30: Der gemalte Kalenderkreis bleibt im Dachboden-Prompt, weil das freigegebene Bild ihn hat. Das Sprite deckt ihn in zwei Zuständen ab.
+- Fund 37: Die fünf Töne des Leitmotivs (g′ – c″ – e″ – d″ – c″) sind mein Vorschlag. Wenn du eine andere Melodie pfeifst, gilt deine.
+- Fund 90: Neue Kennungen für rund 60 Geräusche in `docs/04-audio.md`. Wo ich den Raum nicht sicher wusste, steht „Einsatz noch festlegen“ (Miau, Schnurren, Fauchen, Huhn, Frosch, Steinschleifen, Laser).
 
 ### Kann Absicht sein, nicht geändert
 
@@ -865,6 +868,12 @@ Nichts davon ist eingebaut. Es sind Vorschläge für den Fall, dass ein Anwalt e
 - Fund 85: Konzeptbilder in `concepts/` zuschneiden oder neu erzeugen (Max mit Bedienelementen, Pixel ohne Kerbe, alter Dachboden).
 - Fund 89: Außenräume sind in den Skizzen weiter als Raum gezeichnet.
 - Ohne Fund, nicht geändert: Klassenzimmer und Turmkeller bekommen keinen Skizzen-Link, weil die Namen in Grafik-Datei und Welt-Tabelle verschieden sind. Die Flusskarte bekommt den Raum-Baustein, obwohl sie eine Karte ist.
+
+### Offen im Ton
+
+- Fund 36: Die zwei Finale-Stücke sind beschrieben, aber keinem Raum zugewiesen. Der Dachboden ist im Finale derselbe Raum wie in den Zwischenspielen, das Feld `musik` reicht dafür nicht. Es braucht einen Aufruf im Code beim Start der Maschine und eine Kennung für „kein Stück“ am Supermarkt.
+- Fund 90: Die Grundatmosphäre je Welt und alle Geräusche außer den 14 verdrahteten ruft der Code noch nicht auf.
+- Fund 90: Die Kostenschätzung für die Vollvertonung (rund 400 $) stammt aus der alten Rechnung mit 5.000 Zeilen zu 60 Zeichen. Echt sind 6.180 Sprechblasen zu 82 Zeichen. Neu rechnen, wenn der Faktor aus dem Vertical Slice da ist. `03-produktion.md` und `entscheidungen.md` nennen noch drei Monate und 300 $ (siehe Paket 9).
 
 ### Offen laut Bericht
 

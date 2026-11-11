@@ -6,14 +6,14 @@ Aufgebaut wie die Grafik-Dateien: erst die Werkzeuge, dann Regeln für Prompts, 
 
 | Aufgabe | Empfehlung | Kosten | Warum |
 | --- | --- | --- | --- |
-| Sprachausgabe (Dialoge) | ElevenLabs, Voice Design | Starter 6 $/Monat zum Testen, für die Gesamtproduktion etwa 3 Monate Pro (rund 300 $) | Beste deutsche Betonung, Stimmen per Beschreibung erfinden, kommerzielle Rechte ab Starter |
+| Sprachausgabe (Dialoge) | ElevenLabs, Voice Design | Starter 6 $/Monat zum Testen, für die Gesamtproduktion etwa vier Monate Pro (rund 400 $, Rechnung unter „Sprachausgabe“) | Beste deutsche Betonung, Stimmen per Beschreibung erfinden, kommerzielle Rechte ab Starter |
 | Geräusche (SFX) | ElevenLabs Sound Effects | im selben Abo | Geräusch per Satz beschreiben, mehrere Varianten pro Klick |
 | Musik, Cloud | ElevenLabs Music | im selben Abo | Mit lizenzierter Musik trainiert, Spiele ausdrücklich erlaubt; verbietet Künstlernamen im Prompt, passt also zur Parodie-Regel |
 | Musik, lokal | ACE-Step 1.5 in ComfyUI Desktop | kostenlos | Apache-2.0-Lizenz (beim Download prüfen und so in die Credits eintragen), laut AMD läuft es unter Windows auf Radeon über ComfyUI Desktop (Vorlage „ACE Step 1.5 Turbo AIO“); ideal zum Ausprobieren vieler Varianten |
 | Nachbearbeitung | Audacity | kostenlos | Loops schneiden, Lautstärke angleichen, Stille entfernen, Effekte wie Telefon- oder Radio-Klang |
 | Ergänzung | CC0-Sammlungen (z. B. Kenney, freesound.org mit CC0-Filter) | kostenlos | Klicks, Schritte und UI-Geräusche gibt es fertig und in guter Qualität |
 
-**Mein Vorschlag:** Ein ElevenLabs-Abo deckt Stimmen, Geräusche und Musik ab. ACE-Step lokal nimmst du für Musik-Experimente, die viele Versuche brauchen. Suno nicht verwenden: Dort laufen noch Klagen der Plattenfirmen, und Udio erlaubt keine Downloads mehr.
+**Mein Vorschlag:** Ein ElevenLabs-Abo deckt Stimmen, Geräusche und Musik ab. ACE-Step lokal nimmst du für Musik-Experimente, die viele Versuche brauchen. Suno nicht verwenden: Dort laufen noch Klagen der Plattenfirmen, und Udio erlaubt keine Downloads mehr (Stand November 2026; vor der Steam-Seite neu prüfen und das Datum hier nachtragen).
 
 **Regeln:**
 
@@ -30,7 +30,7 @@ Das Audio-Gerüst steht (`game/skripte/klang.gd`, Autoload „Klang“): Jede St
 | --- | --- | --- | --- |
 | Musik | `audio/musik/<id>.ogg` | `titel`, `zappomat`, `werbeblock` und die Raum-Stücke | Raum-Stücke aus der Welt-Tabelle (`musik: <ID>`); wechselt mit einer Sekunde Überblendung, dasselbe Stück läuft weiter |
 | Jingles | `audio/jingles/<id>.ogg` | `aufgehoben`, `geloest`, `welt_geschafft`, `falsch`, `lachkonserve`, `gluecksrad` | Gegenstand bekommen, Rätselschritt gelöst, Welt geschafft, Ersatzzeile |
-| Geräusche | `audio/geraeusche/<id>.ogg` | `ui_klick`, `inventar`, `seite`, `kombinieren`, `fehler`, `wechsel`, `hinweis`, `speichern`, `nahansicht`, `notiz`, `zappomat_sog`, `werbeblock_start`, `umschalten` (Fernbedienung), `gong` (Welt 4, Rauschen um acht) | Bedienung und Spielsysteme (Tabelle Geräusche) |
+| Geräusche | `audio/geraeusche/<id>.ogg` | `ui_klick`, `inventar`, `seite`, `kombinieren`, `fehler`, `wechsel`, `hinweis`, `speichern`, `nahansicht`, `notiz`, `zappomat_sog`, `werbeblock_start`, `umschalten` (Fernbedienung), `gong` (Welt 4, Rauschen um acht) | Bedienung und Spielsysteme (Tabelle Geräusche). Diese 14 ruft der Code schon auf; die übrigen Kennungen der Tabelle Geräusche sind vergeben, aber noch nicht verdrahtet |
 | Stimmen | `audio/stimmen/<sprache>/<ZEILEN_ID>.ogg` | Zeilen-ID der Sprechblase, Kaskaden mit `_2`, `_3` | `export/audio-zeilen.csv` aus `tools/skript_export.py`; NAR bleibt stumm |
 
 `.wav` und `.mp3` gehen auch. `python3 tools/audio_liste.py` schreibt `export/audio-stand.csv` (welche ID gebraucht wird, wo, und ob die Datei schon da ist); mit `--pruefen` meldet es Dateien, deren Name zu keiner ID passt (läuft in GitHub Actions). Lautstärken kommen aus den Optionen über die Busse Musik, Geraeusche und Stimmen.
@@ -41,13 +41,20 @@ Das Audio-Gerüst steht (`game/skripte/klang.gd`, Autoload „Klang“): Jede St
 
 | Art | Aufbau | Länge |
 | --- | --- | --- |
-| Musik | Genre, Instrumente, Tempo in BPM, Stimmung, Einsatz im Spiel, „instrumental, seamless loop“, Dauer | 25–45 Wörter |
+| Musik | Genre, Instrumente, Tempo in BPM, Stimmung, Einsatz im Spiel, dahinter der Musik-Baustein (Ausnahmen unten) | 25–45 Wörter |
 | Geräusch | Was, woraus, wie nah, wie lang, Nachhall | 8–20 Wörter |
 | Stimme (Voice Design) | Alter, Geschlecht, Stimmfarbe, Tempo, Haltung, Akzent | 20–40 Wörter |
 
-**Musik-Baustein (immer anhängen):** `instrumental, no vocals, seamless loop, retro game soundtrack, warm and clean mix, 90 seconds`
+**Musik-Baustein (an jedes Raum-Stück anhängen):** `instrumental, no vocals, seamless loop, retro game soundtrack, warm and clean mix, 90 seconds`
 
-**Leitmotiv:** Das Titelthema ist eine kurze, pfeifbare Melodie. Jede Welt spielt sie in ihrem Stil an, damit alles zusammengehört. Bei ACE-Step lässt sich die Melodie als Referenz-Audio mitgeben. ElevenLabs Music kennt keine Melodie-Referenz; deshalb bekommt jedes Welt-Stück hinter dem Prompt den Zusatz „quotes the short cheerful five-note whistled motif of the main theme once“. Der Zusatz steht vor dem Musik-Baustein.
+**Ausnahmen:** Nicht anhängen bei Stücken, die kein Loop sind: `zappomat` (4 Sekunden), `werbeblock` (5 Sekunden), `abspann` (endet auf einer Kadenz) und alle Jingles. Dort steht die Dauer im Prompt, dahinter nur `instrumental, no vocals, retro game soundtrack, warm and clean mix`.
+
+**Leitmotiv:** Das Titelthema ist eine kurze, pfeifbare Melodie. Jede Welt spielt sie in ihrem Stil an, damit alles zusammengehört. Ein Text-Prompt kann eine Melodie nicht weitergeben: Jedes Stück würde fünf andere Töne erfinden. Deshalb sind die fünf Töne hier festgelegt und kommen nachträglich in jedes Stück.
+
+- **Die fünf Töne (Vorschlag, bitte prüfen):** g′ – c″ – e″ – d″ – c″ in C-Dur, also Quinte von unten, Grundton, Terz, Sekunde, Grundton. Rhythmus: kurz, kurz, lang, kurz, lang (zwei Achtel, Viertel, Achtel, Halbe). Bei 110 BPM dauert das rund zwei Sekunden.
+- **Ablegen:** einmal als Pfeif-Aufnahme und einmal als MIDI-Datei speichern, beide neben den Musikdateien.
+- **Einsetzen:** Das Titelthema wird um diese Töne gebaut (bei ACE-Step die Aufnahme als Referenz-Audio mitgeben, sonst so lange erzeugen, bis ein Stück die Töne trägt, oder sie in Audacity darüberlegen). In jedes Welt-Stück kommen die fünf Töne einmal nachträglich in Audacity, an einer ruhigen Stelle und im Instrument der Welt (MIDI mit passendem Klang oder neu eingespielt).
+- **Tonart:** Damit das ohne Umstimmen passt, bekommt jedes Welt-Stück hinter dem Prompt den Zusatz „in C major“, die düsteren Stücke „in A minor“. Der Zusatz steht vor dem Musik-Baustein. Der frühere Zusatz „quotes the short cheerful five-note whistled motif of the main theme once“ entfällt.
 
 ## Musik
 
@@ -56,7 +63,7 @@ Welcher Raum welches Stück spielt, steht beim Raum in der Welt-Tabelle (`musik:
 | ID | Stück | Einsatz | Prompt |
 | --- | --- | --- | --- |
 | titel | Titelthema | Hauptmenü, Abspann-Variante; kein Raum-Stück | Playful adventure main theme, whistled melody over plucked guitar, upright bass and light brushed drums, 110 BPM, curious and mischievous, a short cheerful five-note motif repeated |
-| gegenwart | Opas Wohnzimmer | Prolog, Rückkehr in die Gegenwart (Zwischenspiele, Finale) | Cozy lo-fi living room music, warm electric piano, soft vinyl crackle, slow bass, 80 BPM, lazy Sunday afternoon, slightly sleepy |
+| gegenwart | Opas Wohnzimmer | Prolog, Rückkehr in die Gegenwart (Zwischenspiele); im Finale nur noch, bis die beiden Finale-Stücke zugewiesen sind | Cozy lo-fi living room music, warm electric piano, soft vinyl crackle, slow bass, 80 BPM, lazy Sunday afternoon, slightly sleepy |
 | zappomat | Zapp-O-Mat | Übergang in jede Welt; kein Raum-Stück | Short sci-fi transition sting, rising analog synth sweep, TV static and a bright chime at the end, 4 seconds, not a loop |
 | w1_dorf | Schwurbelstein Dorf | Welt 1 | Medieval village tune, lute, recorder and tambourine, 100 BPM, cheerful and slightly silly, like a bard who knows only one song |
 | w1_schule | Zauberschule | Welt 1 | Whimsical magical school music, celesta, pizzicato strings and bassoon, 95 BPM, mysterious but funny, sparkling |
@@ -83,8 +90,14 @@ Welcher Raum welches Stück spielt, steht beim Raum in der Welt-Tabelle (`musik:
 | w4_spukhaus | Spukhaus | Welt 4, Spukhaus; das Rhythmus-Minispiel behält Mitternachts-TV | Creaky haunted house music, detuned harpsichord, theremin, slow heartbeat drum and a distant music box, 72 BPM, spooky but cozy, a ghost who enjoys company |
 | w4_zentrale | Senderzentrale, Empfang | Welt 4, Senderzentrale auf Kanal 999 bis vor das Studio; die Zappmann-Show beginnt erst im Studio | Smooth corporate lobby jazz, muted trumpet, vibraphone and brushed drums, 92 BPM, polished and slightly sinister, elevator music that watches you |
 | w4_zappmann | Zappmann-Show | Welt 4, Begegnung mit Zappmann | Glitzy late-night talk show band, big band brass, piano and drums, 120 BPM, smug and shiny |
+| finale_maschine | Finale, Maschine läuft | Finale auf dem Dachboden, vom Start der Maschine bis zur roten Taste; auch der Schnitt ins Treppenhaus. Noch keinem Raum zugewiesen (siehe unten) | The main theme played faster and tighter, ticking percussion like a kitchen timer, low brass pulses, a steam whistle rising every eight bars, 126 BPM, tense but comic, never scary |
+| finale_geburtstag | Finale, Geburtstag | Finale im Wohnzimmer, ab der Auflösung. Noch keinem Raum zugewiesen (siehe unten) | A warm, slightly clumsy living-room version of the main theme on upright piano, accordion and brushed drums, 92 BPM, like a family playing it themselves |
 | werbeblock | Werbeblock-Spot | Zwischenspiele (Rückkehr auf den Dachboden), 5 Sekunden, kein Loop; kein Raum-Stück | Overly cheerful 1990s milk commercial sting, bright synth brass, cowbell and a sparkle, 5 seconds, not a loop, cut off by TV static at the end |
 | abspann | Abspann | Ende; kein Raum-Stück | Warm variation of the main theme, acoustic guitar, piano and strings, 95 BPM, heartfelt with a wink, ends on a cheerful cadence |
+
+**Finale (Prüfbericht, Fund 36):** Das Finale spielte bisher überall `gegenwart`, das schläfrige Wohnzimmer-Stück, obwohl eine Maschine heiß läuft und Oma vor der Luke steht. Dafür gibt es jetzt `finale_maschine` und `finale_geburtstag`. Am Supermarkt läuft kein Stück, nur Kühlregal-Brummen und Türgong (Tabelle Geräusche), mit der Schwarzblende setzt das Titelthema ein. Zugewiesen ist das noch nicht: In `welten/finale.yaml` steht für alle vier Räume weiter `gegenwart`. Der Dachboden ist dort derselbe Raum wie in den Zwischenspielen, deshalb reicht das Feld `musik` nicht. Es braucht einen Aufruf im Code, sobald die Maschine startet, und eine Kennung für „kein Stück“ am Supermarkt.
+
+**Tempo im Rhythmus-Minispiel:** Erzeugte Musik hält ein Tempo nicht taktgenau. Bei `w4_mitternacht` deshalb das Tempo nach dem Erzeugen messen (Audacity, „Beat Finder“ oder von Hand) und die Taktmarken für das Minispiel von Hand setzen. Die 118 BPM im Prompt sind nur der Zielwert.
 
 **Jingles (je 2–5 Sekunden, kein Loop):** Gegenstand aufgehoben, Rätsel gelöst, Welt geschafft, falscher Versuch (komische Posaune), Lachkonserve, Glücksrad-Gewinn. Prompt-Schema: `short [Stimmung] sting, [Instrument], [Dauer] seconds, not a loop`.
 
@@ -100,21 +113,109 @@ Welcher Raum welches Stück spielt, steht beim Raum in der Welt-Tabelle (`musik:
 
 Alle mit ElevenLabs Sound Effects oder aus CC0-Sammlungen. Immer mehrere Varianten erzeugen und die beste behalten.
 
-| Bereich | Geräusche (Prompt) |
-| --- | --- |
-| Bedienung | soft wooden UI click; inventory bag rustle; paper page turn; item combine pop with a sparkle; error buzz, soft and funny |
-| Spielsysteme | character switch: short whoosh with a tiny cat bell; hint ready: soft paw tap and a light bulb ping; save game: quick pencil scribble and a page flip; close-up open: paper unfolding close to the ear; notebook entry: pencil scratching two words; time ferry departure: hourglass flip and a deep wooden bell; code view toggle: digital shimmer rising then falling; remote channel change: heavy plastic click and a short static burst; portal device battery: three rising electronic beeps; commercial break start: cheerful TV sting cut off by static |
-| Max und Pixel | sneakers walking on carpet; sneakers on stone floor; cat paws on wood; cat meow annoyed; cat purr close; cat hiss short; manual can opener cranking around a tin lid, then a soft hiss |
-| Prolog | old CRT television turning on with a high whine; TV channel switching static burst; clock ticking in a quiet living room; old man snoring softly on a sofa |
-| Zapp-O-Mat | rising electric hum and a whoosh as someone is sucked into a TV screen, 3 seconds |
-| Welt 1 | magic wand sparkle; potion bottle uncorked; goat bleat comical; chicken cluck; anvil hammer strike; tavern crowd murmur loop; frog croak |
-| Welt 2 | sand footsteps; crocodile splash; hourglass sand trickling; stone grinding; bronze discus whoosh; crowd cheering in a stadium; bathtub splash |
-| Welt 3 | heavy rain on neon street loop; phone booth ringing old-fashioned; hydraulic blast door opening; computer terminal beeps; laser barrier hum; rubber chicken squeak; digital glitch; small robot beeping and whistling in fast rude tones (Piepsi, 6–8 Varianten); hologram flicker hum with crackle |
-| Welt 4 | TV static loop; tape rewind squeal; pause click with a tape stop; game show wheel ticking slowing down; studio audience laughter; zombie groan; comic punch impact; fluorescent tube buzzing and swooshing when swung; rusty trash compactor walls grinding with crunching video tapes; deep evening news gong echoing through TV static, 3 seconds (`gong`) |
+Jedes Geräusch hat eine Kennung; die Datei heißt `audio/geraeusche/<Kennung>.ogg`. **Verdrahtet** heißt: Der Code ruft die Kennung schon auf (die 14 aus der Tabelle „Im Spiel: Dateien und IDs“). Alle anderen Kennungen sind vergeben, aber noch nicht im Code; sie kommen mit dem jeweiligen Abschnitt nach `Klang.GERAEUSCHE` in `game/skripte/klang.gd`. Wo der Einsatz noch nicht feststeht, steht „Einsatz noch festlegen“.
+
+**Bedienung und Spielsysteme**
+
+| Kennung | Geräusch (Prompt) | Einsatz |
+| --- | --- | --- |
+| ui_klick | soft wooden UI click | Menüs und Knöpfe (verdrahtet) |
+| inventar | inventory bag rustle | Inventar auf und zu (verdrahtet) |
+| seite | paper page turn | Notizbuch blättern (verdrahtet) |
+| kombinieren | item combine pop with a sparkle | zwei Gegenstände kombiniert (verdrahtet) |
+| fehler | error buzz, soft and funny | Aktion geht nicht (verdrahtet) |
+| wechsel | character switch: short whoosh with a tiny cat bell | Wechsel zwischen Max und Pixel (verdrahtet) |
+| hinweis | hint ready: soft paw tap and a light bulb ping | Hilfe-Pfote hat einen Hinweis (verdrahtet) |
+| speichern | save game: quick pencil scribble and a page flip | Spielstand gespeichert (verdrahtet) |
+| nahansicht | close-up open: paper unfolding close to the ear | Nahansicht geht auf (verdrahtet) |
+| notiz | notebook entry: pencil scratching two words | neuer Eintrag im Notizbuch (verdrahtet) |
+| zappomat_sog | rising electric hum and a whoosh as someone is sucked into a TV screen, 3 seconds | Zapp-O-Mat, Übergang in jede Welt (verdrahtet) |
+| werbeblock_start | commercial break start: cheerful TV sting cut off by static | Zwischenspiele, Beginn des Werbeblocks (verdrahtet) |
+| umschalten | remote channel change: heavy plastic click and a short static burst | Welt 4, Fernbedienung, jeder Kanalwechsel (verdrahtet) |
+| zeitfaehre | time ferry departure: hourglass flip and a deep wooden bell | Welt 2, Abfahrt der Zeitfähre an den drei Fährstegen (Nil-Delta, Olympia, Syrakus) |
+| code_sicht | code view toggle: digital shimmer rising then falling | Welt 3, Code-Sicht an und aus |
+| portalgeraet | portal device battery: three rising electronic beeps | Welt 3, Portalgerät in den Testkammern |
+
+**Max und Pixel, Gegenwart**
+
+| Kennung | Geräusch (Prompt) | Einsatz |
+| --- | --- | --- |
+| schritt_teppich | sneakers walking on carpet | Max, Wohnzimmer |
+| schritt_stein | sneakers on stone floor | Max, Räume mit Steinboden (Welt 1 Turm, Welt 2) |
+| pfoten_holz | cat paws on wood | Pixel, Dachboden und Treppenhaus |
+| pixel_miau | cat meow annoyed | Pixel, Einsatz noch festlegen |
+| pixel_schnurren | cat purr close | Pixel, Einsatz noch festlegen; auch Minka (Welt 1) |
+| pixel_fauchen | cat hiss short | Pixel, Einsatz noch festlegen; auch Minka und Schwan (Welt 1), Hofkater (Welt 2) |
+| dosenoeffner | manual can opener cranking around a tin lid, then a soft hiss | Prolog und Finale, Dosenöffner |
+| fernseher_an | old CRT television turning on with a high whine | Prolog, Fernseher im Wohnzimmer |
+| kanal_rauschen | TV channel switching static burst | Prolog und Zwischenspiele, Kanäle am Fernseher |
+| uhr_ticken | clock ticking in a quiet living room | Wohnzimmer, Grundatmosphäre der Gegenwart (Schleife) |
+| opa_schnarchen | old man snoring softly on a sofa | Prolog, Wohnzimmer, solange Opa schläft |
+| kuehlregal | supermarket refrigerated shelf hum, low and steady, loop | Finale, Supermarkt-Eingang (statt Musik, Schleife) |
+| tuergong | supermarket entrance door chime, two soft electronic notes | Finale, Supermarkt-Eingang |
+
+**Welt 1**
+
+| Kennung | Geräusch (Prompt) | Einsatz |
+| --- | --- | --- |
+| zauberfunken | magic wand sparkle | Zauberstab-Laden und Klassenzimmer, jeder Zauber |
+| korken | potion bottle uncorked | Klassenzimmer, Tränke |
+| ziege | goat bleat comical | Schmiede (Schmiede-Ziege); tiefer und länger für die XXL-Ziege |
+| huhn | chicken cluck | Huhn, Einsatz noch festlegen |
+| amboss | anvil hammer strike | Schmiede |
+| taverne_stimmen | tavern crowd murmur loop | Taverne, Raum-Atmosphäre (Schleife) |
+| frosch | frog croak | Einsatz noch festlegen |
+| w1_atmo | quiet village ambience, distant birds, a light breeze and a far-off cart, very soft, loop | Grundatmosphäre Welt 1, alle Außenräume (Schleife) |
+
+**Welt 2**
+
+| Kennung | Geräusch (Prompt) | Einsatz |
+| --- | --- | --- |
+| sand_schritte | sand footsteps | Ägypten, Außenräume (Nil-Delta, Sphinx) |
+| krokodil_platschen | crocodile splash | Nil-Delta, Sobek |
+| sanduhr | hourglass sand trickling | Zeitfähre, während der Überfahrt |
+| stein_schleifen | stone grinding | Einsatz noch festlegen (Sphinx oder Grabhügel) |
+| diskus | bronze discus whoosh | Stadion, Diskuswurf |
+| stadion_jubel | crowd cheering in a stadium | Stadion, Raum-Atmosphäre und Fünfkampf |
+| badewanne | bathtub splash | Archimedes' Werkstatt |
+| w2_atmo | quiet warm ambience, soft wind over water, distant gulls and cicadas, very soft, loop | Grundatmosphäre Welt 2, alle Außenräume (Schleife) |
+
+**Welt 3**
+
+| Kennung | Geräusch (Prompt) | Einsatz |
+| --- | --- | --- |
+| regen_strasse | heavy rain on neon street loop | Unterstadt, Straße und Apothekengasse, Raum-Atmosphäre (Schleife) |
+| telefonzelle | phone booth ringing old-fashioned | Stadtstraße (Simulation), Telefonzelle |
+| schleusentor | hydraulic blast door opening | Laboreingang |
+| terminal | computer terminal beeps | Terminals (Apothekengasse, Widerstandsbasis, Laboreingang, Büroturm) |
+| laser | laser barrier hum | Testkammern, Einsatz noch festlegen |
+| gummihuhn | rubber chicken squeak | Testkammern 1 bis 3, Gummihuhn |
+| glitch | digital glitch | Simulation, Fehler im Bild |
+| piepsi | small robot beeping and whistling in fast rude tones (Piepsi, 6–8 Varianten) | Piepsi, statt einer Stimme |
+| hologramm | hologram flicker hum with crackle | Opas Hologramm (Widerstandsbasis, Testkammer 1) |
+| w3_atmo | quiet low electrical hum with distant ventilation and a faint drip, very soft, loop | Grundatmosphäre Welt 3, Innenräume der Realität und Labor (Schleife) |
+
+**Welt 4**
+
+| Kennung | Geräusch (Prompt) | Einsatz |
+| --- | --- | --- |
+| rauschen | TV static loop | Rauschen zwischen den Sendern, Raum-Atmosphäre (Schleife) |
+| rueckspulen | tape rewind squeal | Fernbedienung, Taste Zurückspulen |
+| pause | pause click with a tape stop | Fernbedienung, Taste Pause |
+| gluecksrad_ticken | game show wheel ticking slowing down | Glücksrad-Studio, das Rad dreht sich |
+| lachkonserve | studio audience laughter | Sitcom-Küche; ist der Jingle `lachkonserve` aus `audio/jingles/` |
+| zombie | zombie groan | Musikvideo-Friedhof |
+| comic_schlag | comic punch impact | Kapitolis |
+| lichtroehre | fluorescent tube buzzing and swooshing when swung | Lichtröhre Deluxe, jede Benutzung |
+| muellpresse | rusty trash compactor walls grinding with crunching video tapes | Kellerarchiv, Müllpresse |
+| gong | deep evening news gong echoing through TV static, 3 seconds | Rauschen zwischen den Sendern, um acht (verdrahtet) |
+| w4_atmo | quiet television hum with a faint high whine and soft studio air conditioning, very soft, loop | Grundatmosphäre Welt 4, alle Studioräume (Schleife) |
+
+**Grundatmosphäre:** Je Welt läuft eine leise Schleife unter der Musik (`w1_atmo` bis `w4_atmo`, in der Gegenwart `uhr_ticken`), damit kein Raum tot klingt. Räume mit eigener Atmosphäre (Taverne, Regen, Stadion, Rauschen) nehmen ihre statt der Grundatmosphäre. Das ist noch nicht verdrahtet: Es braucht ein Feld je Raum oder je Abschnitt und einen eigenen Abspieler in `klang.gd`.
 
 ## Sprachausgabe
 
-**Umfang (grob geschätzt):** Das Skript hat etwa 5.000 Zeilen (Budget in `05-spielsysteme.md`, Umfang), weil Max und Pixel fast jeden Gegenstand zweimal kommentieren, dazu Pixel-auf-Mensch-Zeilen, Pools und Zwischenspiele. Bei rund 60 Zeichen pro Zeile und drei bis fünf Versuchen pro Pointe sind das 1.000.000 bis 1.250.000 Zeichen, Voice-Design-Vorschauen eingerechnet. Das sind etwa vier Monate ElevenLabs Pro (rund 400 $). Der echte Faktor wird mit den 450 Zeilen des Vertical Slice gemessen.
+**Umfang (grob geschätzt):** Das Skript hat 5.435 Zeilen, daraus werden 6.180 gesprochene Sprechblasen mit zusammen rund 504.000 Zeichen, im Schnitt 82 Zeichen je Sprechblase (Stand November 2026; die aktuellen Zahlen druckt `python3 tools/skript_export.py`, die Liste steht in `export/audio-zeilen.csv`). Es sind so viele, weil Max und Pixel fast jeden Gegenstand zweimal kommentieren, dazu Pixel-auf-Mensch-Zeilen, Pools und Zwischenspiele. Bei drei bis fünf Versuchen pro Pointe sind das 1,5 bis 2,5 Millionen Zeichen, Voice-Design-Vorschauen nicht eingerechnet. Die Kostenangabe oben (etwa vier Monate ElevenLabs Pro, rund 400 $) stammt aus der früheren Schätzung mit 5.000 Zeilen zu je 60 Zeichen und ist damit eher zu niedrig. Neu gerechnet wird, wenn der echte Faktor mit den 450 Zeilen des Vertical Slice gemessen ist.
 
 **Drei Möglichkeiten:**
 
@@ -131,7 +232,7 @@ Empfehlung: erst ohne Stimmen entwickeln. Entschieden wird spätestens zu Beginn
 | Figur | Kürzel | Prompt |
 | --- | --- | --- |
 | Max | MAX | A 16-year-old German boy, slightly hoarse voice, slow and lazy delivery, dry sarcastic humor, mumbles a little, sounds like he just woke up |
-| Pixel | PIX | A middle-aged man with a deep smooth voice, very arrogant and theatrical, slightly nasal, speaks slowly as if bored by everyone |
+| Pixel | PIX | A middle-aged man with a deep smooth voice, very arrogant and theatrical, slightly nasal, speaks slowly as if bored by everyone, with a rarely shown, dry warmth underneath |
 | Opa (Konrad) | OPA | An old German man around 75, warm raspy voice, cheerful and a bit absent-minded, speaks with pauses |
 | Ramses | RAM | A man in his 30s with a high, hesitant voice, constantly unsure, voice cracks when he has to decide |
 | Archimedes | ARC | An excited old man, fast and breathless speech, high-pitched when enthusiastic |
@@ -161,7 +262,7 @@ Empfehlung: erst ohne Stimmen entwickeln. Entschieden wird spätestens zu Beginn
 | Deckert | DEC | A gravelly tired detective voice, slow, narrates his own life, sounds like rain on a window |
 | Kommissar (Tiertort) | KOM | A gruff middle-aged German police inspector, dry and nasal, sighs between sentences, chews on every word |
 | Dr. Werbepause | WER | A hyperactive TV salesman, fast and loud, every sentence an exclamation, slightly hoarse from shouting prices |
-| Hyäne | HYA | A sly giggling female voice, breaks into cackles mid-sentence, stretches vowels, pretends to be innocent |
+| Hyäne | HYA | A female voice held unnaturally flat and serious, lips pressed, tiny suppressed squeaks between words; bursts into wild cackling only in the marked lines |
 | Hermes | HER | A smooth fast-talking young messenger, breathless from running, salesman charm, always in a hurry |
 | Sphinx | SPH | A deep ancient female voice with a slow echo, bored and mysterious, sighs audibly at wrong answers |
 | Flimmer | FLI | A small cheerful voice made of TV static, crackly and bright, speaks in short bursts, pitch jumps like a bad signal, glitchy stutter added in Audacity |
@@ -237,4 +338,4 @@ Empfehlung: erst ohne Stimmen entwickeln. Entschieden wird spätestens zu Beginn
 | SIC | Sicherheitsmann | welt-4 | Variante von Waldemar (WAL), knapp |
 | WET | Wettkandidat | welt-4 | Variante von Toadi (TOA), etwas tiefer |
 
-Opas Hologramm in Welt 3 ist Opas Stimme mit Funk-Filter und leichtem Rauschen in Audacity; Piepsi bekommt keine Stimme, nur Pieptöne. Pixels Kaskaden (zwei kurze Sprechblasen hintereinander, `05-spielsysteme.md`) werden als zwei Dateien erzeugt, damit die Pause dazwischen sitzt.
+Opas Hologramm in Welt 3 ist Opas Stimme mit Funk-Filter und leichtem Rauschen in Audacity; Piepsi bekommt keine Stimme, nur Pieptöne. Pixels Kaskaden (zwei kurze Sprechblasen hintereinander, `05-spielsysteme.md`) werden als zwei Dateien erzeugt, damit die Pause dazwischen sitzt. Die Hyäne lacht nur in `W4_VERH_HYA_0350` und `W4_VERH_HYA_0400` (das sind die „marked lines“ ihres Prompts); alle anderen Zeilen bleiben flach und ernst, sonst verrät die Stimme das Rätsel.
