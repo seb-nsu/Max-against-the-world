@@ -2636,7 +2636,7 @@ W2_HAFS_MAX_0075,The cogwheel over the door turns in the wind. Here even the doo
 W2_HAFS_MAX_0080,"The hourglass of Syracuse. All the sand is at the bottom here, because this is where the line ends."
 W2_HAFS_MAX_0085,"""Last stop, all change, please."" I'm saying it in my head in a station announcer's voice."
 W2_HAFS_PIX_0020,"This is where the broadcast ends, and you don't even know what that is."
-W2_HAFS_PIX_0020_2,"In the old days a test card came on at night, and then all decent people went to bed."
+W2_HAFS_PIX_0020_2,"In the old days a test card came on at night, and then there was peace."
 W2_HAFS_PIX_0020_3,A civilised era. I miss it every evening at about eleven.
 W2_HAFS_PIX_0050,"A squid. Fried it is a poem, raw it is an insult."
 W2_HAFS_PIX_0050_2,"And you took it raw, with your bare hands, without lemon. I am appalled."
@@ -4805,13 +4805,13 @@ W4_ABS_WIL_0180,That's all there is. I've still got three boys to rescue. From t
 W4_ARCH_MAX_0010,"A trash compactor full of cassettes, and the walls are slowly closing in. So this is where every series ends up after season one."
 W4_ARCH_MAX_0030,"An eye on a stalk, between the tapes. It blinks at me, and I blink back. Now we've got something in common."
 W4_ARCH_MAX_0040,"Shelves full of unlabelled tapes: cancelled, forgotten, nameless. The archive is a waiting list for nothing."
-W4_ARCH_MAX_0045,"One tape just says ""Pilot"". An episode that never became a series. That's the saddest thing in this whole archive."
+W4_ARCH_MAX_0045,"One tape just says ""Pilot"". A first episode that never got a second."
 W4_ARCH_MAX_0050,A flickering light tube. Even the light in here is a rerun.
-W4_ARCH_MAX_0055,"Flicker, flicker, on. Flicker. I think the tube is counting, the way I do before a maths test."
+W4_ARCH_MAX_0055,"Flicker, flicker, on. Flicker. The tube is still trying. Since 1977."
 W4_ARCH_MAX_0060,"The walls move in a bit and then back again. The compactor has time, and nobody wins against a compactor that has time."
 W4_ARCH_MAX_0065,"The walls are breathing, in and out. I'm holding my breath, purely out of solidarity."
 W4_ARCH_MAX_0070,"There's a tape sticking out. Handwriting on the label: ""Zappi's Dollhouse, 1977""."
-W4_ARCH_MAX_0075,"""Zappi's Dollhouse, 1977."" The handwriting is childish and a bit sad, like on a childhood photo you don't want to show anyone."
+W4_ARCH_MAX_0075,"""Zappi's Dollhouse, 1977."" In felt-tip, and there's a star over the i. He drew that himself."
 W4_ARCH_MAX_0080,"Zappi's Dollhouse. Grandpa's lights told me about it: his first show, the one nobody saw. I'm taking it."
 W4_ARCH_MAX_0090,"A tape with a faded label, something with a P. I don't know anyone called that, so I'll leave it where it is."
 W4_ARCH_MAX_0095,The P on the label is all curly. Who writes a P with that much care? Someone it mattered to.
@@ -4846,13 +4846,13 @@ W4_BONU_MAX_0010,I'm ready for the bonus round.
 W4_BONU_MAX_0030,"I've been inside everything, not just in front of it. That's more than most viewers can say."
 W4_BONU_MAX_0050,"Fondue, episode 112. And they don't talk about episode 87."
 W4_BONU_MAX_0090,"Miss Poker Face. He whispers it, but you can tell he means it."
-W4_BONU_MAX_0120,The Couch Magnet 3000. You never get up again. The product is basically me.
+W4_BONU_MAX_0120,The Couch Magnet 3000. You never get up again. The product is me.
 W4_BONU_MAX_0150,Hang on. I need to check something.
 W4_BONU_MAX_0220,"Two channels at once. Grandpa and Grandma could have used that, then Sunday evenings would have been peaceful."
 W4_BONU_MAX_0270,He wants me to watch TV before I'm allowed to watch TV. I guess that's the warm-up.
 W4_BONU_MAX_0280,Pause. Gerd freezes mid-smile and looks exactly the same as before.
 W4_BONU_MAX_0290,"Rewind. The wheel turns backwards, and Gerd promises everything backwards. It sounds just as believable as before."
-W4_BONU_MAX_0300,"Mute. Gerd keeps talking, the teeth keep talking, just without sound. Honestly, it's better this way."
+W4_BONU_MAX_0300,"Mute. Gerd keeps talking, the teeth keep talking, just without sound. It's better this way."
 W4_BONU_MAX_0310,"Subtitles on Gerd: ""Smile. Smile. Jaw hurts. Smile."" The man is suffering, but with sparkle."
 W4_BONU_MAX_0320,"Channel search here? Every channel at once, and Gerd still keeps selling. He's stronger than technology."
 W4_BONU_PIX_0200,"He talked about himself the whole time, to nobody, without a break."
@@ -4869,7 +4869,7 @@ W4_EMPF_EMP_0370,Then I'll think it louder. That won't help you either.
 W4_EMPF_EMP_0390,"Once a year, at the Christmas party. They say ""Merry Christmas"". At the same time."
 W4_EMPF_MAX_0020,"Channel 999. Black marble, gold and lift music. So this is where the man who broadcasts everything lives, and it looks like a bank."
 W4_EMPF_MAX_0050,I have a remote.
-W4_EMPF_MAX_0065,I'd rather stand. Somehow sitting is my final boss today.
+W4_EMPF_MAX_0065,I'd rather stand.
 W4_EMPF_MAX_0070,How do I get upstairs?
 W4_EMPF_MAX_0090,Who are the two gentlemen?
 W4_EMPF_MAX_0110,Do you like working here?
@@ -4879,7 +4879,7 @@ W4_EMPF_MAX_0160,"1988. She thought it, and I read it. That's either espionage o
 W4_EMPF_MAX_0170,A keypad with golden buttons. I type 1988.
 W4_EMPF_MAX_0190,"Two wardrobes with earpieces. They only move once I move. So I have to freeze them, and I've got a button for that."
 W4_EMPF_MAX_0210,"They're standing still. They were standing still before too, but now it's authorised."
-W4_EMPF_MAX_0230,"Subtitles on the security man: ""Mhm."" He thinks exactly what he says. Honestly, enviable."
+W4_EMPF_MAX_0230,"Subtitles on the security man: ""Mhm."" He thinks exactly what he says. Enviable."
 W4_EMPF_MAX_0240,"Wrong code. The keypad beeps, and the two wardrobes look at me as if I'd farted in the lift."
 W4_EMPF_MAX_0250,"A portrait in gold: Zappmann in sunglasses. Brass plaque: ""Director general since 1988. Before that: see cellar archive."" Anyone who files their past in the cellar is afraid of it."
 W4_EMPF_MAX_0255,The sunglasses in the picture shine more than the gold. Even his portrait is made for spotlights.
@@ -4891,9 +4891,9 @@ W4_EMPF_MAX_0300,Velvet ropes that separate nothing from nothing. But very elega
 W4_EMPF_MAX_0305,"I'm not stepping over, I'm going round. The rope won without moving."
 W4_EMPF_MAX_0310,A golden logo with no text. The brand is so famous it doesn't need a name any more. Or nobody thought of one.
 W4_EMPF_MAX_0315,"The logo is a golden circle. Could be an eye or a button, and with Zappmann that's probably the same thing."
-W4_EMPF_MAX_0320,"A golden lift door. Behind it the way goes up, to the studio and the sofa, so to everything I always actually wanted. That's exactly the problem."
-W4_EMPF_MAX_0325,Quiet music is playing in the lift. Even through the door. Lift music is the only thing that's the same in every world.
-W4_EMPF_MAX_0330,"A service door, and behind it the way goes down. It's always the same: gold upstairs, concrete downstairs."
+W4_EMPF_MAX_0320,"A golden lift door. Behind it the way goes up, to the studio and the sofa. I used to push to the front for that."
+W4_EMPF_MAX_0325,Quiet music is playing in the lift. Even through the door. Someone picked it so that nobody listens.
+W4_EMPF_MAX_0330,"A service door, and behind it the way goes down. Gold upstairs, concrete downstairs. He doesn't show anyone the concrete."
 W4_EMPF_MAX_0335,"The door says: ""Staff only."" Underneath, scratched: ""And the forgotten."""
 W4_EMPF_MAX_0360,And if I ask really nicely?
 W4_EMPF_MAX_0380,Do they ever talk?
@@ -4922,7 +4922,7 @@ W4_FABR_MAX_0065,"One vat is making bubbles shaped like faces. I count three, an
 W4_FABR_MAX_0070,"Too hot, too fast, too shut. The lid always slams shut exactly when it's my turn. Timing really isn't my thing."
 W4_FABR_MAX_0080,"A catwalk above the vats, without a railing. The missing railing is basically the accident here already."
 W4_FABR_MAX_0085,"I look down, and the yellow looks up. In this comic someone fell in here once, and afterwards he had a costume."
-W4_FABR_MAX_0090,A conveyor belt with blocks of cheese going round in circles. That's roughly how my thoughts go round at three in the morning.
+W4_FABR_MAX_0090,A conveyor belt with blocks of cheese going round in circles. Nobody gets off. Nobody gets on.
 W4_FABR_MAX_0095,"One block of cheese has a heart-shaped hole. It won't get far, too much feeling for fondue."
 W4_FABR_MAX_0100,"Warning signs without text: an exclamation mark, a lightning bolt and a cheese with a face. I still understand everything."
 W4_FABR_MAX_0105,The cheese face on the sign looks frightened. That scares me more than the lightning.
@@ -4932,18 +4932,18 @@ W4_FABR_MAX_0120,"I pull it, but it's already pulled. The loop was faster than m
 W4_FABR_MAX_0130,"The searchlight is up on the roof. I can't get there, and that's where most heroes want to go anyway."
 W4_FABR_MAX_0140,"Rewind. The loop stops and breaks into four frames, like a film reel. I get to pick one."
 W4_FABR_MAX_0150,"Frame one: the worker waves, the vat is shut. If I jump here, I land on a lid. With momentum."
-W4_FABR_MAX_0155,"Frame one again: vat closed, worker waving. A lid is the best floor you can get here, but it's only floor."
+W4_FABR_MAX_0155,Frame one. The worker is waving. He's waving at me. He knows what's coming and waves anyway.
 W4_FABR_MAX_0160,"Frame two: the lever is being pulled, everything is tensing, but nothing's open yet."
-W4_FABR_MAX_0165,"Frame two again: lever pulled, everything tense, nothing open. The moment just before the music cuts out in a film."
+W4_FABR_MAX_0165,Frame two. The moment just before the music cuts out in a film.
 W4_FABR_MAX_0170,"Frame three: the vat flips open. The cheese bubbles. That's the frame that always says ""OH NO"" in a comic."
 W4_FABR_MAX_0175,Frame three again: the vat is open. That's the moment you become a hero. Or fondue.
 W4_FABR_MAX_0180,"Frame four: the belt is racing, and the vat is already shut again. Too late is a time too, I suppose."
-W4_FABR_MAX_0185,"Frame four again: the belt is racing, the vat is shut. Whoever only jumps here ends up with the cheese blocks."
+W4_FABR_MAX_0185,Frame four. The belt is racing. Whoever only jumps here ends up with the cheese blocks.
 W4_FABR_MAX_0200,A lid. I jumped onto a lid with full momentum. Nobody ever became a hero through a lid.
-W4_FABR_MAX_0220,"I was a bat for a moment. Honestly, it wasn't nearly as fulfilling as he always claims."
+W4_FABR_MAX_0220,I was a bat for a moment. It wasn't nearly as fulfilling as he always claims.
 W4_FABR_MAX_0240,"""Best before 2099."" Well, that's longer than my phone contract."
 W4_FABR_MAX_0260,"Frame three, open vat. I've got the wonder cheese, the sheet and the cat. Now all that's missing is the accident."
-W4_FABR_MAX_0280,"I fell, and I'm covered in cheese. I feel kind of … melted. But strong."
+W4_FABR_MAX_0280,"I fell, and I'm covered in cheese. I'm glowing. Grandpa will never believe me."
 W4_FABR_MAX_0310,"It says ""CHEESEMAN"", in bold letters. I didn't choose the name, but nobody probably chooses something like that."
 W4_FABR_MAX_0340,"I am Cheeseman. I have a bed sheet, a cat and outlines. Nobody has ever needed less to become the boss."
 W4_FABR_MAX_0360,"The vat is open, but my cheese is just normal cheese. Whoever falls into normal cheese doesn't become a hero, but dinner."
@@ -4977,24 +4977,24 @@ W4_FERN_MAX_0015,Five holes and one button. It's an advent calendar someone aban
 W4_FERN_MAX_0020,Two buttons. Now it's officially a device.
 W4_FERN_MAX_0025,"I press both buttons alternately. Nothing happens, but it still feels a bit like power."
 W4_FERN_MAX_0030,"Almost full. Grandpa would have wrapped tape around it long ago so nothing falls out. And then again, out of love."
-W4_FERN_MAX_0035,The buttons are all different colours. I think the manufacturer couldn't decide and just took all of them.
-W4_FERN_MAX_0050,"Switch channel. Zap. I can do that, I always could. Finally something I practised for years pays off."
+W4_FERN_MAX_0035,The buttons are all different colours. The manufacturer couldn't decide and just took all of them.
+W4_FERN_MAX_0050,Switch channel. Zap. I can do that. It's the only thing I've never needed a manual for.
 W4_FERN_MAX_0070,"Pause, a button that stops the world. I had one of those in the living room too, it was called the sofa."
-W4_FERN_MAX_0075,"If I press pause, does homework time stop too? Asking for a friend."
+W4_FERN_MAX_0075,"If I press pause, does Pixel stop too? Asking for my ears."
 W4_FERN_MAX_0080,"Rewind. Everything again, faster and backwards. I could unsay a few things I've come out with today."
 W4_FERN_MAX_0100,Mute. The most important button known to humanity. After snooze.
 W4_FERN_MAX_0105,At home I pressed it during every advert. Now I press it while saving the world. I guess that's called a career.
-W4_FERN_MAX_0110,"Subtitles. Shows what people are thinking. Honestly, with most people I don't want to know that in detail."
+W4_FERN_MAX_0110,Subtitles. Shows what people are thinking. With most people I don't want to know that in detail.
 W4_FERN_MAX_0115,"If I pointed it at myself, it would probably just say: ""Hungry. Sofa. Hungry."" I'll leave it."
 W4_FERN_MAX_0120,"Channel search. It finds channels that are hiding, including the ones that absolutely don't want to be found."
-W4_FERN_MAX_0125,"If that button searches long enough, it'll probably find my motivation too. Somewhere between two channels."
+W4_FERN_MAX_0125,"If that button searches long enough, it'll probably find Grandpa's remote too. The normal one."
 W4_FERN_MAX_0130,"The split-screen adapter. Two cables, two pictures, one main prize. And it smells faintly of Gerd's aftershave."
 W4_FERN_MAX_0135,Two pictures on one screen. At last I can play games and pretend to be listening at the same time.
 W4_FERN_MAX_0140,"That does nothing here. The adapter needs two channels that make sense side by side, and that's almost never the case."
 W4_FERN_MAX_0150,"A TV guide. Five channels, one week, a dog-eared corner. Grandpa has one just like it in the loo, the same one for years."
 W4_FERN_MAX_0170,"Quarter past eight: ""The Kitchen's on Fire, episode 112: Fondue Night"". So at quarter past eight there was cheese. Not lasagne."
 W4_FERN_MAX_0180,"Midnight: ""Midnight TV: Graveyard Funk"", a music video with zombies. Sounds roughly like what my phone suggests at midnight."
-W4_FERN_MAX_0190,"""Advert: Dr. Adbreak presents the Couch Magnet 3000"". Somehow I feel personally addressed."
+W4_FERN_MAX_0190,"""Advert: Dr. Adbreak presents the Couch Magnet 3000"". I feel personally addressed."
 W4_FERN_MAX_0200,"""Paw and Order: The Case of the Missing Crown"". On a loop since 8:15. Crime shows apparently never stop."
 W4_FERN_MAX_0210,"""Lucky Wheel Shopping, round the clock"". So Gerd never sleeps. Honestly, that explains a lot."
 W4_FERN_MAX_0220,"Channel 999: not listed. Just an empty slot with a gold border. If you don't put yourself in the listings, you don't want to be found."
@@ -5015,7 +5015,7 @@ W4_FERN_PIX_0260,"That's plastic. Not even tuna plastic, if such a thing exists.
 W4_FERN_PIX_0260_2,I licked it briefly anyway. For scientific reasons.
 W4_FRIE_FLI_0300,Hey-hey. Shall I switch the zombies off? I can do that. I'm on the line. Nobody needs to know.
 W4_FRIE_FLI_0330,Zap. The zombies are on standby. They don't even notice.
-W4_FRIE_MAX_0010,"A sign: ""Back in a moment."" And in front of it a ghost is asleep. The programme is on a break, and honestly, the programme has a better life than me."
+W4_FRIE_MAX_0010,"A sign: ""Back in a moment."" And in front of it a ghost is asleep. Even the dead knock off work here."
 W4_FRIE_MAX_0030,"The TV guide says: midnight. So I don't have to wait, I just have to flip pages."
 W4_FRIE_MAX_0050,Dancing dead in mustard suits. That's the music video Grandpa always dances along to when he thinks nobody's looking.
 W4_FRIE_MAX_0070,"The way to the gate goes across the dance floor, right through the choreo. Anyone who walks through ends up a backing dancer."
@@ -5032,7 +5032,7 @@ W4_FRIE_MAX_0135,One hand is giving a thumbs up. It's the only one really lookin
 W4_FRIE_MAX_0150,"A disco ball in a dead tree. The tree didn't deserve that, but then it hasn't got much left to lose."
 W4_FRIE_MAX_0160,"Full moon, of course. Nobody would dance here at half moon."
 W4_FRIE_MAX_0165,A bat flies past the moon. Or a man in a costume. Here either is possible.
-W4_FRIE_MAX_0170,"Fog up to the knees. Either dry ice, or someone took a very, very long shower here."
+W4_FRIE_MAX_0170,"Fog up to the knees. Someone took a very, very long shower here."
 W4_FRIE_MAX_0175,"I wave my hand through the fog, and it comes straight back. It's definitely being paid."
 W4_FRIE_MAX_0180,"Purple spotlights. Everything here that isn't green is purple. In the 80s they apparently only had two colours, but no fear."
 W4_FRIE_MAX_0185,"If I look into the spotlight long enough, I see everything purple, even my future."
@@ -5048,7 +5048,7 @@ W4_FRIE_MAX_0310,"Yes. I've got no pride left, only trainers."
 W4_FRIE_MAX_0320,"No, one more try. I want to be able to do this. I don't know what's going on with me either."
 W4_FRIE_MAX_0350,"A cellar, of course a cellar. In horror films you always go into the cellar, but at least I've got a reason."
 W4_FRIE_MAX_0360,"Pause. Six zombies, frozen mid-spin. Looks great, but they're still in the way."
-W4_FRIE_MAX_0370,"Mute. The music's gone, and the zombies just keep dancing. Honestly, that's even creepier."
+W4_FRIE_MAX_0370,"Mute. The music's gone, and the zombies just keep dancing. They don't need music. They've got a contract."
 W4_FRIE_MAX_0380,"The light tube glows in the fog. Almost looks good, but only almost."
 W4_FRIE_MAX_0390,The banana peel is going soft and dark in my bag. And it smells of the end.
 W4_FRIE_MAX_0395,"I put it in my bag, and now the whole bag smells of the end. The notebook too."
@@ -5058,8 +5058,8 @@ W4_FRIE_PIX_0020,"Closedown. That used to happen every night: first the anthem, 
 W4_FRIE_PIX_0020_2,Nothing was underrated. I took my finest naps in that nothing.
 W4_FRIE_PIX_0060,"They dance better than you, young man."
 W4_FRIE_PIX_0060_2,And before you get excited: that's no compliment to the dead.
-W4_FRIE_PIX_0140,The ball lights up zombies who are undead and still better dressed than you.
-W4_FRIE_PIX_0140_2,I'm not saying it to hurt you. It's just been weighing on my mind for a while.
+W4_FRIE_PIX_0140,A disco ball in a dead tree. It turns. The tree no longer does.
+W4_FRIE_PIX_0140_2,I consider that a fair division of labour.
 W4_FRIE_PIX_0145,"The ball is turning, although there's no electricity anywhere."
 W4_FRIE_PIX_0145_2,"I don't ask how. One doesn't ask how here, I learned that from my ancestors in the attic."
 W4_FRIE_PIX_0220,"They all get up on the same beat now. If you dance against the beat, they'll trip over each other."
@@ -5076,7 +5076,7 @@ W4_GLUE_EXP_0500,"The shoes: twelve euros, out of pity. The hoodie: collector's 
 W4_GLUE_EXP_0520,"Unsellable. Too much patina, too little use."
 W4_GLUE_GER_0010,"Gerd Glück, your good luck! And you are?"
 W4_GLUE_GER_0030,"The exit is NOT up for grabs today! But this wheel, these prizes, this smile! All for a limited time only!"
-W4_GLUE_GER_0045,"Efficient! Thank you! I'm adding that word to the range right now! Three syllables, only 19.99!"
+W4_GLUE_GER_0045,Efficient! Thank you! I'm adding that word to the range right now! Four syllables for the price of three!
 W4_GLUE_GER_0050,"Three questions, three answers, one wheel! Let's give it a spin!"
 W4_GLUE_GER_0060,"Question one, category fantasy! What is the name of innkeeper Humbert's favourite sword? A: Gerald. B: Excalibur. C: Fondue."
 W4_GLUE_GER_0080,CORRECT! And everybody: applause!
@@ -5104,7 +5104,7 @@ W4_GLUE_MAX_0070,"Gerald. Humbert introduced us personally, with a handshake. We
 W4_GLUE_MAX_0100,"I could have googled that if I had signal here. Could have, would have."
 W4_GLUE_MAX_0120,The crocodile. Pixel still tells everyone about it who doesn't get away fast enough.
 W4_GLUE_MAX_0160,Four. You could only order Four there. The noodles were really good anyway.
-W4_GLUE_MAX_0190,"A remote with one button. That's not cheap, that's minimalist."
+W4_GLUE_MAX_0190,"A remote with one button. I bet Gerd calls that the ""starter model""."
 W4_GLUE_MAX_0210,"A magazine made of paper that tells you what's on TV. And if something changes, they just print a new one?"
 W4_GLUE_MAX_0230,Consolation prize? I got everything right. What exactly am I being consoled for?
 W4_GLUE_MAX_0250,Of course it is.
@@ -5115,16 +5115,16 @@ W4_GLUE_MAX_0360,How much is the price tag on your sleeve?
 W4_GLUE_MAX_0380,Do you know Zappmann?
 W4_GLUE_MAX_0400,I'll go and do some channel-hopping.
 W4_GLUE_MAX_0420,"The wheel of fortune. Twelve segments, and not a single one says ""Exit"". I counted twice."
-W4_GLUE_MAX_0425,"One segment says ""Bankrupt"", and it's the biggest. The wheel clearly has more life experience than me."
+W4_GLUE_MAX_0425,"One segment says ""Bankrupt"", and it's the biggest. The wheel is more honest than its host."
 W4_GLUE_MAX_0430,"I'm not allowed to spin. Gerd says the wheel is part of the hosting, just like the mic and the smile."
 W4_GLUE_MAX_0440,"The host's desk. Glitter, a big button and three coffee stains. Everything a host needs to survive."
 W4_GLUE_MAX_0445,"There's a note stuck under the desk: ""Always smile. Inside too."" Gerd took that literally."
 W4_GLUE_MAX_0450,"A toaster, a cruise and another toaster. Choosing really takes concentration."
 W4_GLUE_MAX_0455,"The cruise is just a photo of a ship glued to cardboard. The toaster, on the other hand, is real. That says a lot about this show."
-W4_GLUE_MAX_0470,"A neon sign with no number. You're supposed to call, but nobody says where. Honestly, that's more honest than any hotline."
+W4_GLUE_MAX_0470,"A neon sign with no number. You're supposed to call, but nobody says where. That's more honest than any hotline."
 W4_GLUE_MAX_0475,"""Call now!"" The sign blinks more frantically when I look at it. It senses a customer."
-W4_GLUE_MAX_0480,The audience is sitting in the dark. Either they're all very quiet or there's nobody there. Same with our class group chat.
-W4_GLUE_MAX_0485,"Someone in the audience coughs. Just one. Honestly, I'm relieved there's anyone there at all."
+W4_GLUE_MAX_0480,"The audience is sitting in the dark. Either they're all very quiet, or Gerd does the clapping himself."
+W4_GLUE_MAX_0485,Someone in the audience coughs. Just one. I'm relieved there's anyone there at all.
 W4_GLUE_MAX_0490,"A man with a magnifying glass who values things. Right now he's valuing me, and he doesn't look thrilled."
 W4_GLUE_MAX_0495,"He looked at my trainer and muttered ""unsellable"". I don't know if that was a compliment."
 W4_GLUE_MAX_0530,"A fluorescent tube in blister packaging, with a gold sticker. Someone really, really wanted it to look like a sword."
@@ -5132,10 +5132,10 @@ W4_GLUE_MAX_0535,A neon tube with a gold sticker. I have the stupid feeling it'l
 W4_GLUE_MAX_0540,"It hums, the famous original humming sound. I still don't feel the slightest bit more powerful."
 W4_GLUE_MAX_0550,"Gerd Glück. He has more teeth than sentences, and he has a lot of sentences."
 W4_GLUE_MAX_0555,"He laughs when a camera's on. And when none is on, he laughs too, just in case."
-W4_GLUE_MAX_0560,"The contestant's podium. I stood here and won, and somehow it still feels like losing."
+W4_GLUE_MAX_0560,The contestant's podium. This is where I won. What I got was a magazine and a light tube.
 W4_GLUE_MAX_0565,"The podium has footprints from a hundred contestants, and they're all leaning slightly forward. That's what hope looks like."
-W4_GLUE_MAX_0570,"Rows of light bulbs. When one goes out, nobody notices. I know that feeling from PE."
-W4_GLUE_MAX_0575,"One bulb is flickering, and nobody replaces it. It just keeps shining anyway. Honestly, respect."
+W4_GLUE_MAX_0570,"Rows of light bulbs. When one goes out, nobody notices. Gerd would still sell it as a special edition."
+W4_GLUE_MAX_0575,"One bulb is flickering, and nobody replaces it. It just keeps shining anyway. Respect."
 W4_GLUE_MAX_0580,And what do I have to do for it?
 W4_GLUE_MAX_0600,And what would you cost?
 W4_GLUE_MAX_0620,You suddenly seem pretty nervous.
@@ -5143,8 +5143,8 @@ W4_GLUE_PIX_0130,Sobek had style. That was the only time in three worlds that an
 W4_GLUE_PIX_0130_2,"I think of him often. Mostly before falling asleep, so constantly."
 W4_GLUE_PIX_0260,"Four worlds, and the same sentence every time."
 W4_GLUE_PIX_0260_2,"I must confess, I'm slowly starting to feel at home. That's the worst thing you can say about a game show."
-W4_GLUE_PIX_0460,"The cruise is cardboard, the toaster is real. That's life."
-W4_GLUE_PIX_0460_2,"The big things are scenery, and the small things make crumbs. Personally, I prefer the crumbs."
+W4_GLUE_PIX_0460,"That's life: the big things are scenery, and the small things make crumbs."
+W4_GLUE_PIX_0460_2,"Personally, I prefer the crumbs."
 W4_GLUE_PIX_0510,And the cat?
 W4_HALL_AGE_0330,Don't move. Are you from here? From this planet?
 W4_HALL_AGE_0350,They all say that. The truth is around here somewhere. I've mislaid the address. Show me proof and I'll believe anything you say.
@@ -5310,7 +5310,7 @@ W4_INV_MAX_0010,"A bedsheet with two holes. Fledermann's first draft. Two holes,
 W4_INV_MAX_0015,"It smells of attic and Halloween. If I put it on, I'm either a ghost or a picnic blanket."
 W4_INV_MAX_0020,"My superhero suit with cape, made from a bedsheet. I'm wearing bed linen, and it even suits me."
 W4_INV_MAX_0025,"There's a fondue pot painted on the chest. Every hero needs an emblem, and mine bubbles."
-W4_INV_MAX_0030,"A videotape from the cellar archive: ""Zappi's Dollhouse, 1977."" It feels heavy, but not in weight."
+W4_INV_MAX_0030,"A videotape from the cellar archive: ""Zappi's Dollhouse, 1977."" I'm holding it like a raw egg. If the tape snaps, I've got nothing."
 W4_INV_PIX_0035,"A tape. If you look at it, the phone rings in seven days."
 W4_INV_PIX_0035_2,That was a joke. Probably. I still wouldn't pick up.
 W4_KAPI_FLE_0100,I'm hanging here and I can hear everything! Mostly the blood in my ears!
@@ -5356,11 +5356,11 @@ W4_KAPI_MAX_0615,"The peel shines like it's freshly waxed. You don't slip here, 
 W4_KAPI_MAX_0620,"The rotten banana has changed: green, with a fuse. That's not a banana any more, that's an argument."
 W4_KAPI_MAX_0625,The fuse is hissing quietly. Or that's the smell. With this banana you can't tell any more.
 W4_KAPI_MAX_0630,"The cheese is glowing green and sparkling: radioactive wonder cheese. I shouldn't touch it, and it's in my trouser pocket."
-W4_KAPI_MAX_0635,"The cheese hums softly, as if it has powers. And I've got this queasy feeling in my stomach. I think those are the side effects."
+W4_KAPI_MAX_0635,"The cheese hums softly, as if it has powers. And I've got this queasy feeling in my stomach. Those are the side effects."
 W4_KAPI_MAX_0640,"Normal cheese, just in a comic. It's yellower than usual, but that's not enough for an origin story yet."
 W4_KAPI_MAX_0645,"I hold the cheese up to the light. It's just cheese, no fate, no destiny. Ordinary everyday Gouda."
-W4_KAPI_MAX_0650,"Pause. The Fledermann is hanging still now. Honestly, that's not much of a difference."
-W4_KAPI_MAX_0660,"Subtitles on Siegfried: ""Sleep. Sleep. Cat in tree. Sleep."" I think we have the same screensaver."
+W4_KAPI_MAX_0650,Pause. The Fledermann is hanging still now. That's not much of a difference.
+W4_KAPI_MAX_0660,"Subtitles on Siegfried: ""Sleep. Sleep. Cat in tree. Sleep."" We have the same screensaver."
 W4_KAPI_MAX_0670,And what do you do?
 W4_KAPI_MAX_0690,And when will it have paid off?
 W4_KAPI_MAX_0710,And the butler?
@@ -5381,8 +5381,6 @@ W4_KAPI_PIX_0430,"I knew that. I was lying next to you the whole season, sufferi
 W4_KAPI_PIX_0430_2,"The soufflé episode was the best, by the way. It collapsed, just like you."
 W4_KAPI_PIX_0510,"Someone friendly from the neighbourhood lives there, unless I'm mistaken."
 W4_KAPI_PIX_0510_2,"I smell spider, sense of duty and cold pizza. A sad combination."
-W4_KAPI_PIX_0515,The web is neatly strung. Anyone who works this cleanly carries great responsibility.
-W4_KAPI_PIX_0515_2,And probably has an aunt who worries. People like that always have an aunt.
 W4_KAPI_PIX_0580,"The anvil stays in the inventory, I know."
 W4_KAPI_PIX_0580_2,"My head remembers it, young man, very vividly and in the shape of a bump."
 W4_KAPI_PIX_0585,"When I look at it, my head gets flatter, at least in my mind."
@@ -5407,14 +5405,14 @@ W4_KELL_GST_0020,Boooo …
 W4_KELL_GST_0180,Boooo? Boo.
 W4_KELL_GST_0290,BOOOOO!
 W4_KELL_MAX_0010,"A cellar. Boxes, sheets, a light bulb that can't make up its mind. And a television showing nothing but snow."
-W4_KELL_MAX_0030,"The ghost got scared of me. Honestly, that's the nicest thing that's happened to me today."
-W4_KELL_MAX_0040,"TV inside the TV. Honestly, that's too meta for me."
+W4_KELL_MAX_0030,The ghost got scared of me. That's the nicest thing that's happened to me today.
+W4_KELL_MAX_0040,TV inside the TV. That's too meta for me.
 W4_KELL_MAX_0045,On the TV there's a cellar with a TV. I'm not looking any closer. At the end there'll be a boy sitting there looking at me.
 W4_KELL_MAX_0060,"I turn the knob. Snow, more snow, then a blizzard. The TV only has one channel, and on it, it's winter."
 W4_KELL_MAX_0080,"""80s Hits"", labelled by hand. Cassettes are music you can't skip. Grandpa calls that character."
 W4_KELL_MAX_0090,"Furniture under sheets. Either someone's moving out, or that's the ghosts' wardrobe."
 W4_KELL_MAX_0095,Something is moving under one of the sheets. I hope it's just an armchair with feelings.
-W4_KELL_MAX_0100,"I pull the sheet, and underneath is an armchair. The armchair isn't offended, but the ghost next to it is."
+W4_KELL_MAX_0100,"I pull the sheet, and underneath is an armchair. The ghost next to it pulls its own a bit tighter."
 W4_KELL_MAX_0110,A bare light bulb. It always flickers exactly when things get dramatic. It's really got timing.
 W4_KELL_MAX_0115,"I say out loud: ""What a quiet cellar."" The bulb flickers. It understood me."
 W4_KELL_MAX_0120,"A window right at the top. Too small for me, too high for Pixel, just right for spiders."
@@ -5430,10 +5428,10 @@ W4_KELL_MAX_0200,"The chains won't come off. I tried with my hands, but I've onl
 W4_KELL_MAX_0210,"The adapter picks its own partner: two cables, two channels, kitchen on the left, cellar on the right. The picture splits."
 W4_KELL_MAX_0230,"The door is right at the edge of the picture. If I push it across, it's over here. That's physics, TV physics."
 W4_KELL_MAX_0260,"Push, push, over the edge. It creaks. The door is now in a horror film and hasn't even noticed."
-W4_KELL_MAX_0300,"The ghosts are fleeing from the laugh track. Honestly, I understand them."
+W4_KELL_MAX_0300,The ghosts are fleeing from the laugh track. I understand them.
 W4_KELL_MAX_0320,"You're in a cellar, in a completely different channel. And the door belongs to me now. Well, to the cellar."
 W4_KELL_MAX_0340,The ghosts lost something: a button with a crossed-out speaker. They've been living on mute the whole time.
-W4_KELL_MAX_0360,"The door opens, and nobody bursts in. That's almost a bit disappointing."
+W4_KELL_MAX_0360,"The door opens, and nobody bursts in. That's almost disappointing."
 W4_KELL_MAX_0380,"The sheet stays on the armchair. I don't need a costume, not yet anyway."
 W4_KELL_MAX_0390,"The adapter's no use here any more. The door's already here, and you can't steal a door twice, not even on TV."
 W4_KELL_MAX_0400,The banana peel is completely black now. It looks like it's seen things it doesn't want to talk about.
@@ -5446,13 +5444,13 @@ W4_KELL_PIX_0050,I wouldn't get too close. Things live in televisions like that.
 W4_KELL_PIX_0050_2,"I know that first-paw, because I'm currently living in one myself."
 W4_KELL_PIX_0070,Tape spaghetti in four courses.
 W4_KELL_PIX_0070_2,Your grandfather had that once and sat at the kitchen table with tweezers for two days. I sat beside him and advised.
-W4_KELL_PIX_0075,"A cassette with a pencil in it. That's how people used to turn back time, with patience and a pencil."
-W4_KELL_PIX_0075_2,Today you press a button. The young have no idea what they're missing with a good pencil.
+W4_KELL_PIX_0075,A cassette with a pencil in it. Someone was in the middle of rewinding and never came back.
+W4_KELL_PIX_0075_2,In a horror film this is the moment I leave.
 W4_KELL_PIX_0160,"This door won't open, and that's not a question of keys but of genre. Here nothing ever opens."
 W4_KELL_PIX_0160_2,"In the sitcom, on the other hand, everything opens all the time, someone bursts in every two minutes."
 W4_KELL_PIX_0160_3,"Think about it, young man. I'll be taking a nap meanwhile."
 W4_KELL_PIX_0350,Mute. The button I've been wishing for for years.
-W4_KELL_PIX_0350_2,"For you, for Gerd and for that laugh track, in exactly that order. Although, maybe the laugh track first."
+W4_KELL_PIX_0350_2,"For you, for Gerd and for that laugh track. For the laugh track I press twice."
 W4_KELL_SMU_0250,"Leave him, honey. Maybe he'll bring it back. With a tie."
 W4_KELL_SOH_0240,"Hey, that guy's stealing our door!"
 W4_KELL_VAT_0280,"Honey, I'm home!"
@@ -5465,7 +5463,7 @@ W4_PIXM_PIX_0010_2,"Apparently I'm on special offer now, and well below value. T
 W4_PIXM_PIX_0020,The man holds a biscuit tin tighter than me.
 W4_PIXM_PIX_0020_2,"I respect priorities, really, but not these. A biscuit tin doesn't purr, it doesn't keep you warm, and it doesn't silently judge you."
 W4_PIXM_PIX_0030,"She offered me cheese, and I politely declined."
-W4_PIXM_PIX_0030_2,"Whereupon the tape laughed. I don't understand this channel, and I don't think it understands me either."
+W4_PIXM_PIX_0030_2,"Whereupon the tape laughed. I don't understand this channel, and it doesn't understand me either."
 W4_PIXM_PIX_0040,"He wants to photograph me on the skateboard, for his followers."
 W4_PIXM_PIX_0040_2,"He has no followers, and neither do I. That's a bond, but not enough of one for a skateboard."
 W4_PIXM_PIX_0050,"He questioned me, for twenty minutes, with a cigar."
@@ -5485,7 +5483,7 @@ W4_PIXM_PIX_0110_2,"Three flamingos are basically a group chat with legs, and I'
 W4_PIXM_PIX_0120,He picked me up and danced with me.
 W4_PIXM_PIX_0120_2,"I'm now part of a choreography, involuntarily, but at least on the beat. That's more than can be said of you."
 W4_PIXM_PIX_0130,"The sheet is empty, there's nothing underneath."
-W4_PIXM_PIX_0130_2,"I've lain under many sheets, but never under an empty one. That is deeply unsettling."
+W4_PIXM_PIX_0130_2,"I've lain under many sheets, but never under an empty one."
 W4_PIXM_PIX_0140,"He scanned me, and his device beeped. He says I'm not of this world."
 W4_PIXM_PIX_0140_2,Finally someone recognises it. I've always suspected as much.
 W4_PIXM_PIX_0150,"He wanted to rescue me from a tree, but I wasn't in a tree."
@@ -5503,17 +5501,17 @@ W4_PIXM_PIX_0200_2,I feel scanned and a little flattered. He searched very thoro
 W4_PIXM_PIX_0210,"He put me on the sofa. It really is warm, and now I understand everything."
 W4_PIXM_PIX_0210_2,"Max, get me down from here. Right now. Or later. Later is fine too."
 W4_PIXM_PIX_0220,"Flimmer has no smell, I sniffed. Nothing."
-W4_PIXM_PIX_0220_2,"He's the only thing here that doesn't smell of television, and that makes him deeply likeable to me."
+W4_PIXM_PIX_0220_2,He's the only thing here that doesn't smell of television. That makes him likeable to me.
 W4_PIXM_PIX_0230,Smells of biscuits and of a man who hugs too much.
 W4_PIXM_PIX_0240,"Smells of cheese, of glowing cheese, of cheese with a future."
 W4_PIXM_PIX_0240_2,"I'll stick with tuna all the same. Tuna has no future, but a glorious past."
 W4_PIXM_PIX_0250,Smells of the end and a bit of comic.
-W4_PIXM_PIX_0250_2,"One shouldn't inhale either. I did it anyway, out of curiosity, and deeply regret it."
+W4_PIXM_PIX_0250_2,"One shouldn't inhale either. I did it anyway, out of curiosity."
 W4_PIXM_PIX_0260,Smells of iron and of my head. We've met.
 W4_PIXM_PIX_0270,"Smells of dust, of 1977 and of a man who liked puppets more than people."
 W4_PIXM_PIX_0270_2,"Which I find, frankly, very understandable."
 W4_PIXM_PIX_0280,"Paws. I have paws. This is built for creatures with thumbs, so for you."
-W4_PIXM_PIX_0290,I don't carry things. I get carried. That's the difference between a cat and a courier.
+W4_PIXM_PIX_0290,I don't carry things. I get carried.
 W4_RAU_FLI_0020,"Welcome to my place! Nothing ever happens here, and that's the best part. Have a seat. Well, have a float."
 W4_RAU_FLI_0040,"The other channels! You can see everything, just blurry. Like through a shower. Without water. So, through nothing."
 W4_RAU_FLI_0050,"One more rule, because you would have asked: whoever's talking to you when you switch channels comes along."
@@ -5539,11 +5537,11 @@ W4_RAU_PIX_0035_2,Stare into the static too long and you become part of the prog
 W4_RAU_PIX_0070,The man with the teeth is selling a toaster to a woman who clearly doesn't want one.
 W4_RAU_PIX_0070_2,And she's buying it. I'm impressed and slightly alarmed.
 W4_RAU_PIX_0080,"The family is cooking, and after every sentence someone laughs whom I can't see."
-W4_RAU_PIX_0080_2,"None of the sentences are funny, I listened closely. It's the eeriest thing I've experienced today."
+W4_RAU_PIX_0080_2,None of the sentences are funny. I took notes.
 W4_RAU_PIX_0090,"A lion is sulking on a rock, and next to it a man in a raincoat stands sighing."
 W4_RAU_PIX_0090_2,They both look as if they haven't had lunch in hours. I feel for them.
-W4_RAU_PIX_0100,"The dead are dancing in the fog, and better than Max."
-W4_RAU_PIX_0100_2,"That's no compliment to the dead, though, in all fairness."
+W4_RAU_PIX_0100,The dead are dancing in the fog. In step.
+W4_RAU_PIX_0100_2,I have seen living people who can't do that. One of them wears a hoodie.
 W4_RAU_PIX_0110,A house with fog in the hallway and a string of fairy lights.
 W4_RAU_PIX_0110_2,It's blinking as if someone urgently wants to talk to us. Someone who never learned to keep it short.
 W4_RAU_PIX_0120,"Thick black lines, garish colours, and something very heavy just fell out of the sky."
@@ -5557,7 +5555,7 @@ W4_RAU_PIX_0200,"Eight o'clock. At home it's dinner now, always, for as long as 
 W4_RAU_PIX_0200_2,"Not here, apparently. I shall complain as soon as I know to whom."
 W4_RAU_PIX_0220,Flimmer. The only creature here who doesn't want to sell me anything. I'm touched. Briefly.
 W4_RAU_PIX_0225,"He crackles when he's happy, like a woolly blanket fresh out of the dryer."
-W4_RAU_PIX_0225_2,"I like him, to be honest. Don't tell him, he'd only spread it around, on every channel."
+W4_RAU_PIX_0225_2,I like him. Don't tell him. He broadcasts on every channel.
 W4_RAU_PIX_0240,Milk. I want milk.
 W4_RAU_PIX_0240_2,"Just once, a single time on this whole journey, I'd like a bowl of milk. Without having to save the world first."
 W4_RAU_PIX_0255,"Sent there and never arrived. That's how Max does the shopping, young Mr Flimmer. I've been waiting for weeks."
@@ -5584,7 +5582,7 @@ W4_SAV_KOM_0170,Stay behind the tape. The tape is the only thing here that has r
 W4_SAV_LOE_0060,GRRROAAAR.
 W4_SAV_LOE_0130,GROAR. Grrr.
 W4_SAV_MAX_0020,Who's talking?
-W4_SAV_MAX_0040,"I'm not a nature documentary, I'm a teenager. This is a reportage at best, and a bad one."
+W4_SAV_MAX_0040,"I'm not a nature documentary. I'm sixteen. Nobody makes films about us, we film ourselves."
 W4_SAV_MAX_0080,"Four suspects, one evening and a man in a raincoat. That's every crime show Grandpa watches on Sundays, and he falls asleep ten minutes into all of them."
 W4_SAV_MAX_0110,A rock shaped like a throne. On top an empty spot where something golden used to be. And a lion who takes it personally.
 W4_SAV_MAX_0115,"There's a round mark on the rock, as if someone once held a lion cub up into the sun. I can almost hear the orchestra."
@@ -5593,7 +5591,7 @@ W4_SAV_MAX_0125,"He sighs, and the whole mane sighs with him. Instead of a circl
 W4_SAV_MAX_0140,"I think that meant no. Or lunch. With lions those are often the same thing, honestly."
 W4_SAV_MAX_0150,The lion gets his own mic. I don't even get Wi-Fi here.
 W4_SAV_MAX_0155,The mic hangs over the lion like a cloud with ears. He pretends not to notice. A real pro.
-W4_SAV_MAX_0160,"Yellow tape around a bush. The bush is the crime scene, and the bush isn't talking. Typical bush, honestly."
+W4_SAV_MAX_0160,Yellow tape around a bush. The bush is the crime scene. The bush refuses to make a statement.
 W4_SAV_MAX_0165,"A leaf from the bush is lying on the ground, exhibit number one. I'm not touching it, I've seen enough crime shows."
 W4_SAV_MAX_0180,A watering hole with three flamingos whispering the whole time. So the savannah has a group chat too.
 W4_SAV_MAX_0185,"The flamingos dip their beaks into the water, all at the same time. That looks very rehearsed."
@@ -5602,14 +5600,14 @@ W4_SAV_MAX_0210,"He's commenting on how I drink. Next he'll rate my walk, and th
 W4_SAV_MAX_0220,"I'll lie in the sun for a bit. That's not laziness, that's research."
 W4_SAV_MAX_0240,"He has a script. The narrator of a nature documentary has a script! Nothing here is real, not even nature."
 W4_SAV_MAX_0250,"Acacias, flat on top like tables. The giraffes would have the best seats here, but there isn't a single one. Budget, I guess."
-W4_SAV_MAX_0255,"There's a sign on one acacia: ""Giraffe from 8 pm"". I don't think it's coming."
+W4_SAV_MAX_0255,"There's a sign on one acacia: ""Giraffe from 8 pm"". It's not coming."
 W4_SAV_MAX_0260,It's only raining on the drum kit. Someone definitely wanted it exactly like that.
 W4_SAV_MAX_0265,A drop lands on the snare. Ba-dum-tss. Even the weather does punchlines here.
 W4_SAV_MAX_0280,"A box full of creepy-crawlies with a star-shaped sign. I'm not reaching in there, not even for a million followers."
 W4_SAV_MAX_0285,"The box says ""Trial 3"". I haven't won anything and I already want to get out of here."
 W4_SAV_MAX_0310,"The narrator. He crouches behind the bush, whispers into the mic and pretends he isn't there at all. My mum does exactly that at parents' evening."
 W4_SAV_MAX_0315,He whispers so quietly the ants complain. I saw one shake its head.
-W4_SAV_MAX_0320,A thick script with a coffee stain. He holds it tight like the dad holds the biscuit tin. Everyone here has a favourite thing.
+W4_SAV_MAX_0320,A thick script with a coffee stain. He holds it tight like the dad holds the biscuit tin.
 W4_SAV_MAX_0325,"The coffee stain on the script is shaped like Africa. The man's a pro, even at spilling."
 W4_SAV_MAX_0340,"The inspector. Coat, cigar, the look of someone who's had one more question since 1979."
 W4_SAV_MAX_0345,He half turns away as if he's already gone. He'll come back any second with one more question. He always has one more question.
@@ -5619,14 +5617,14 @@ W4_SAV_MAX_0360,"The cheetah. Headband, stopwatch, panting. He's the fastest ani
 W4_SAV_MAX_0365,"He's timing himself standing still. Personal best at standing around, congratulations."
 W4_SAV_MAX_0370,The vulture. He's creaming his bald head and admiring himself in the mirror. He's the only one here who really likes himself.
 W4_SAV_MAX_0375,He winks at his reflection. The reflection winks back. They're a couple.
-W4_SAV_MAX_0380,"The rhino sleeps standing up, with a bird on its horn. That's what I call multitasking."
+W4_SAV_MAX_0380,"The rhino sleeps standing up, with a bird on its horn. The bird is keeping watch. Or it's asleep too."
 W4_SAV_MAX_0390,Hello? Rhino?
 W4_SAV_MAX_0410,That's the most honest alibi I've ever heard.
 W4_SAV_MAX_0420,"Three flamingos, each on one leg. They're not talking to me, they're talking about me, and pretty loudly."
-W4_SAV_MAX_0425,"One just switched legs, and now the other two are whispering about him. I feel a bit sorry for him."
+W4_SAV_MAX_0425,"One just switched legs, and now the other two are whispering about him. I feel sorry for him."
 W4_SAV_MAX_0430,"Orange sky, golden hour. In this light really everyone looks good, even the vulture."
 W4_SAV_MAX_0435,"The sky is so orange that someone's bound to take a photo with a filter any second. The vulture, for example."
-W4_SAV_MAX_0440,"The light tube only glows a little bluish here. No bubble, no boom. The savannah doesn't take it seriously, and honestly, neither do I."
+W4_SAV_MAX_0440,"The light tube only glows a little bluish here. No bubble, no boom. The savannah doesn't take it seriously, and neither do I."
 W4_SAV_MAX_0450,"The inspector doesn't want cheese. He wants answers, and maybe a sandwich."
 W4_SAV_NAS_0400,Zzzzz.
 W4_SAV_PIX_0100,"I heard that, Inspector."
@@ -5642,23 +5640,23 @@ W4_SIT_KOM_0510,Where am I. This isn't the savannah. It smells of cheese and fea
 W4_SIT_KOM_0540,I'm not a boss. I'm an inspector. There's just one thing …
 W4_SIT_KOM_0600,Just one more thing. Why is nobody laughing that I can see?
 W4_SIT_KOM_0620,I'm going back to my case. At least the suspects there are animals. With them you know where you stand.
-W4_SIT_MAX_0030,"Someone's laughing, but there's nobody here. Honestly, I think the wall is laughing."
+W4_SIT_MAX_0030,"Someone's laughing, but there's nobody here. The wall is laughing. At me."
 W4_SIT_MAX_0060,"I'm just passing through. I'm looking for a button, and then I'm gone again."
-W4_SIT_MAX_0080,"I've been to three worlds, but I've never seen a grown man hug a biscuit tin. And that's saying something."
+W4_SIT_MAX_0080,"A grown man is hugging a biscuit tin. I've been with dragons, pharaohs and robots. This is stranger."
 W4_SIT_MAX_0110,"The laugh track. A box with a red button that laughs at everything. Even at me, and I haven't done anything yet."
 W4_SIT_MAX_0115,"I'm not pressing the button. But I'm sure if I trip now, the box will laugh all by itself."
 W4_SIT_MAX_0120,"I press it, and everyone laughs. I didn't even say anything. Best audience of my life."
-W4_SIT_MAX_0140,"Cardboard figures in the front row. They never clap, but they never go to the loo either."
+W4_SIT_MAX_0140,"Cardboard figures in the front row. They don't laugh. The tape does that, they're only there to sit."
 W4_SIT_MAX_0150,A biscuit tin shaped like a chicken. The dad holds it like a baby. A baby with a lid.
-W4_SIT_MAX_0155,"The chicken tin has a face, and it looks worried. I think it knows what's coming."
+W4_SIT_MAX_0155,"The chicken tin has a face, and it looks worried. It knows what's coming."
 W4_SIT_MAX_0170,Visitors with a tie. Where am I supposed to find someone with a tie at this hour? I don't even know anyone with a shirt.
 W4_SIT_MAX_0180,"The kitchen door. Round window, light wood, and every few seconds someone bursts in. It's the real star of the show."
 W4_SIT_MAX_0185,"The door is still swinging. Someone just came in, went out and came back in, because they forgot the punchline."
 W4_SIT_MAX_0190,I can't carry that. It's bigger than me and has more appearances.
 W4_SIT_MAX_0200,"A serving hatch. Behind it is a living room nobody ever sits in, because everyone stands in the kitchen. That's how every party goes."
-W4_SIT_MAX_0205,In the living room there's a picture of the living room. I think the set is homesick for itself.
+W4_SIT_MAX_0205,In the living room there's a picture of the living room. The set is homesick for itself.
 W4_SIT_MAX_0210,"A pot of melted cheese that bubbles and smells of too much wine. Grandpa would say that's not food, that's an event."
-W4_SIT_MAX_0220,"A piece of cheese for the road. It drips, and I notice that somehow everything I take with me drips."
+W4_SIT_MAX_0220,A piece of cheese for the road. It drips. Everything I take with me drips.
 W4_SIT_MAX_0240,"A banana peel on the floor, in the middle of a sitcom. That's not a peel, that's a cue."
 W4_SIT_MAX_0245,"The peel is lying exactly where someone's about to walk. Nothing here is left to chance, except maybe dignity."
 W4_SIT_MAX_0250,"I'll pick it up before someone else does. Before someone steps on it, I mean. Or both."
@@ -5671,7 +5669,7 @@ W4_SIT_MAX_0295,"She puts her hands on her hips, and even though I haven't done 
 W4_SIT_MAX_0300,"The dad. Tank top, slippers, biscuit tin. A man who expects nothing more from life except biscuits."
 W4_SIT_MAX_0305,"He's got his feet in his slippers and his eyes on the door. He's waiting for his wife to yell at him, and usually it works."
 W4_SIT_MAX_0310,"The son. Cap on backwards, trousers too baggy, jokes too loud. I'd rather not know how I come across to other people."
-W4_SIT_MAX_0315,"He says ""cool"" to everything, even soup. I think that's his entire script for the season."
+W4_SIT_MAX_0315,"He says ""cool"" to everything, even soup. That's his entire script for the season."
 W4_SIT_MAX_0320,What did you cook yesterday at quarter past eight?
 W4_SIT_MAX_0350,Did any of you laugh last night?
 W4_SIT_MAX_0370,Why is the door so loud?
@@ -5740,7 +5738,7 @@ W4_STUD_MAX_0160,No. I've spent two weeks doing things. I exposed a hyena and I 
 W4_STUD_MAX_0160_2,I've only just got up. I'm not sitting back down.
 W4_STUD_MAX_0190,He's stopped listening. He's broadcasting.
 W4_STUD_MAX_0220,He's bragging about his career. I've got the start of it in my pocket.
-W4_STUD_MAX_0250,"You had a kids' show with puppets, and nobody watched. That's not embarrassing. That's a start."
+W4_STUD_MAX_0250,"You had a kids' show with puppets, and nobody watched. So what? I would have watched."
 W4_STUD_MAX_0270,"The tape is clapping everything away. He's saying something, and nobody hears it, probably for years now. Mute."
 W4_STUD_MAX_0290,"He's silent, for the first time. I'd love to know what's going on in there right now."
 W4_STUD_MAX_0310,"I could have said that. I did, too, four worlds ago, on a different sofa."
@@ -5763,7 +5761,7 @@ W4_STUD_MAX_0610,"A wall of little TVs, and each one's showing something differe
 W4_STUD_MAX_0620,"An applause sign. When it lights up, a tape claps. That's the audience he deserves."
 W4_STUD_MAX_0625,"The sign lights up although nobody did anything. At my place it's exactly the other way round: I do something, and nobody claps."
 W4_STUD_MAX_0630,"The ratings, a number saying how many people are watching. He looks at it more often than at his audience."
-W4_STUD_MAX_0635,"The ratings just went up by one. I think that's me, and I feel kind of used."
+W4_STUD_MAX_0635,The ratings just went up by one. That's me. I feel used.
 W4_STUD_MAX_0640,A man who recognises crayons by taste. And I thought my hobby was embarrassing.
 W4_STUD_MAX_0645,"He hesitated at ""dark green"". I saw him suffer. Sorry, mate, bet's off."
 W4_STUD_MAX_0660,"Zappmann. Glitter jacket, silver hair, sunglasses indoors. A man who looks like a show and feels like a rerun."
@@ -5794,8 +5792,8 @@ W4_STUD_PIX_0440,You didn't need a single hint right to the end.
 W4_STUD_PIX_0440_2,"I am … impressed. It won't happen again, neither the being impressed nor the admitting it."
 W4_STUD_PIX_0450,"Milk. Finally, milk. That goes on the list, right at the top, underlined twice."
 W4_STUD_PIX_0450_2,With an exclamation mark. I've waited long enough.
-W4_STUD_PIX_0600,"So that's what your weekend looks like, young man, seen from the outside."
-W4_STUD_PIX_0600_2,"I always wondered what you were actually doing. Now I know, and I wish I didn't."
+W4_STUD_PIX_0600,"So that's what it looks like from the outside, young man."
+W4_STUD_PIX_0600_2,"A hundred screens, one sofa and nobody to fill the bowl."
 W4_STUD_WET_0650,"Ochre. No. Sienna. No, that's … flesh tone. I'm sure of it."
 W4_STUD_ZAP_0010,There he is! The boy who zapped through my schedule like a viewer with too much time on his hands! Applause!
 W4_STUD_ZAP_0030,"All in good time. First, the offer. Sit down, Max. The sofa's warm. It's always warm."
@@ -5817,14 +5815,14 @@ W4_TAST_MAX_0030,"Mute. No more laughs, the family just keeps talking and sudden
 W4_TAST_MAX_0040,"Subtitles on the father: ""Biscuits. Biscuits. Is the boss here? Biscuits."" He's a simple man."
 W4_TAST_MAX_0050,"Subtitles on the son: ""Pizza. Pizza. Skating. Pizza."" We'd definitely have been friends."
 W4_TAST_MAX_0060,Pause in the savannah. The cheetah freezes mid-sprint and looks like a poster. Finally someone catches him.
-W4_TAST_MAX_0070,"Rewind in the savannah. The sun briefly rises again, and the narrator says everything backwards. It sounds just as soothing."
-W4_TAST_MAX_0080,"Mute in the savannah. The lion roars silently, and I understand exactly as much as before."
+W4_TAST_MAX_0070,Rewind in the savannah. The sun briefly rises again. The narrator whispers backwards and doesn't notice.
+W4_TAST_MAX_0080,Mute in the savannah. The lion roars silently. It makes him seem almost polite.
 W4_TAST_MAX_0090,"Subtitles on the hyena: ""Don't laugh. Don't laugh. Fondue. DON'T LAUGH."" Interesting."
 W4_TAST_MAX_0100,"Subtitles on the narrator: ""Quiet. Quieter. Even quieter. Perfect."" The man thinks in a whisper."
 W4_TAST_MAX_0110,"Subtitles on the inspector: ""Just one more thing. Which thing? Doesn't matter. One."""
 W4_TAST_MAX_0120,"Subtitles on the zombie: ""…"" Nothing at all, not even hunger. They're just well choreographed."
 W4_TAST_MAX_0130,Subtitles on Flimmer: pure snow. Even his thoughts are static.
-W4_TAST_MAX_0150,"Pause in the hall. The fog stands still, the cobwebs too. Honestly, everything here has been standing still for a hundred years anyway."
+W4_TAST_MAX_0150,"Pause in the hall. The fog stands still, the cobwebs too. Everything here has been standing still for a hundred years anyway."
 W4_TAST_MAX_0160,"Rewind in Kapitolis. The anvil flies back into the sky, and Pixel is briefly clever again. Then the anvil falls back down, and Pixel sort of does too."
 W4_TAST_MAX_0170,"Mute in the comic. The VRRROOM bubble is empty, a silent VRRROOM. That's almost art."
 W4_TAST_MAX_0180,"Subtitles on Wilma: ""The boys. Always the boys. I do everything myself."" She's right."
@@ -5842,8 +5840,8 @@ W4_TEST_FLI_0120,"The right one! Light to dark, dead easy. Well, easy for people
 W4_TEST_FLI_0330,Reception! First channel's in! And … oh. Oh no. It's the one with the man with the teeth.
 W4_TEST_GER_0350,WELCOME to Lucky Wheel Shopping! Our next contestant comes straight from … the test card? Who cares! Applause!
 W4_TEST_MAX_0010,Ouch.
-W4_TEST_MAX_0030,"Coloured stripes and a beep that just won't stop. That's either modern art or a glitch, and my money's on glitch."
-W4_TEST_MAX_0050,"Television that goes to bed voluntarily. Honestly, that's the creepiest idea so far, and I've been to the future."
+W4_TEST_MAX_0030,Coloured stripes and a beep that just won't stop. That's what it looks like when a television has a headache.
+W4_TEST_MAX_0050,Television that goes to bed voluntarily. My phone can't even manage that when the battery's dead.
 W4_TEST_MAX_0070,"A glitch that talks. And quite a lot, for a glitch."
 W4_TEST_MAX_0110,And what order are they supposed to go in?
 W4_TEST_MAX_0130,Can't see colours. Who do I know who …
@@ -5854,7 +5852,7 @@ W4_TEST_MAX_0250,"It's snowing at the edges, and it's snowing inwards. That's we
 W4_TEST_MAX_0255,"If the static spits out a little girl saying they're here, I'm leaving. Immediately. On foot."
 W4_TEST_MAX_0260,Flimmer. He looks like a loading icon that one day decided to go freelance.
 W4_TEST_MAX_0265,"He spins when he's thinking, and he thinks a lot. Or he's loading. Honestly, with him you never know."
-W4_TEST_MAX_0270,"I push, and nothing happens. Either the bars are too heavy, or I'm not worthy."
+W4_TEST_MAX_0270,"I push, and nothing happens. The bars are made of light. I'm pushing light."
 W4_TEST_MAX_0280,"Which is lighter, purple or red? No idea. On my phone I'd just slap a black-and-white filter on it."
 W4_TEST_MAX_0340,What man with the teeth?
 W4_TEST_MAX_0360,"I've never watched a game show voluntarily, and now I'm in one. Apparently karma has a TV guide."
@@ -5864,8 +5862,8 @@ W4_TEST_PIX_0020_2,"On you, to be precise. As a mattress you are chronically und
 W4_TEST_PIX_0040,"That, young man, is a test card. It used to come on when television went to sleep."
 W4_TEST_PIX_0040_2,"Yes, you heard right: television slept, every night, on time and without argument."
 W4_TEST_PIX_0040_3,"A sensible creature, if you ask me. I always respected it deeply."
-W4_TEST_PIX_0090,Finally someone with even less substance than Max's weekend.
-W4_TEST_PIX_0090_2,"That's a compliment, Mr Flimmer. Substance is overrated, it only leaves hair on the sofa."
+W4_TEST_PIX_0090,Finally someone you can see straight through.
+W4_TEST_PIX_0090_2,"That's a compliment, Mr Flimmer. Substance only leaves hair on the sofa."
 W4_TEST_PIX_0140,"I most certainly see colours. Just the important ones: grey, dark grey and tuna."
 W4_TEST_PIX_0140_2,Everything else is decoration for creatures without whiskers.
 W4_TEST_PIX_0220,"Seven shades of grey, clearly distinguishable. The lightest goes on the left, the darkest on the right."
@@ -5912,7 +5910,7 @@ W4_VERH_MAX_0030,What exactly did the hyena say?
 W4_VERH_MAX_0050,Where was the vulture?
 W4_VERH_MAX_0070,And the cheetah?
 W4_VERH_MAX_0100,I've still got things to do.
-W4_VERH_MAX_0130,Gone. And now he's lying over there panting. Twenty seconds flat out and then sofa. I think that's my spirit animal.
+W4_VERH_MAX_0130,Gone. And now he's lying over there panting. Twenty seconds flat out and then sofa. That's my spirit animal.
 W4_VERH_MAX_0190,"Three flamingos as witnesses. That wouldn't stand up in any court, but there's no court here anyway, just a bush."
 W4_VERH_MAX_0230,An alibi from a script. First time television has ever told the truth.
 W4_VERH_MAX_0250,"The narrator's script. Page 1 says: ""Speak quietly. Always."""
@@ -5924,9 +5922,9 @@ W4_VERH_MAX_0275,"Even the page numbers are in bold here. ""PAGE THREE!"", with 
 W4_VERH_MAX_0280,The bird on the horn says nothing. But it has a look that clearly says: don't ask.
 W4_VERH_MAX_0300,"That's what he says, anyway. Whether it's true, only the man with the teeth knows."
 W4_VERH_MAX_0320,"A hyena who never laughs, and a sitcom where every line gets a laugh. Something doesn't add up."
-W4_VERH_MAX_0340,At quarter past eight there was no mince. There was fondue. Episode 112. The family is still offended.
+W4_VERH_MAX_0340,"At quarter past eight there was no mince. There was fondue. Episode 112. It's in the magazine, and the mother swears by it."
 W4_VERH_MAX_0420,"Rewind. Grandpa does that with his stories, a little differently every time. Now I can do it with everything."
-W4_VERH_MAX_0450,"The vulture has a skin cream, but no alibi yet. I have to check that somehow."
+W4_VERH_MAX_0450,"The vulture has a skin cream, but no alibi yet. I have to check that."
 W4_VERH_MAX_0460,"Pixel's supposed to look for the crown? He only looks for things you can eat, and the crown is gold. So no."
 W4_VERH_MAX_0490,Sounds like everyone has an alibi.
 W4_VERH_MAX_0510,Then I'll ask in the sitcom what they actually cooked.
@@ -5943,7 +5941,7 @@ W4_VERH_PIX_0220_2,"He narrates everything live, so it's true, so it was asleep.
 W4_VERH_PIX_0380,"He says: thank you, little cat. I didn't correct him, I forgive kings the ""little""."
 W4_VERH_PIX_0380_2,Then he says something about the human that I won't translate out of tact. It was about food.
 W4_VERH_PIX_0470,The lion says he was asleep when the crown disappeared.
-W4_VERH_PIX_0470_2,"He says it very loudly, but he says everything very loudly. I believe that comes with being a king."
+W4_VERH_PIX_0470_2,"He says it very loudly, but he says everything very loudly. That comes with being a king."
 W4_WERB_FLE_0390,"I saw everything! Upside down! It was magnificent, but the wrong way up!"
 W4_WERB_MAX_0020,"A product that glues me to the sofa. That's not an offer, that's my CV."
 W4_WERB_MAX_0040,"I can't move, because of the countdown. I know this one: after the third episode nobody can move any more."
@@ -5971,7 +5969,7 @@ W4_WERB_MAX_0330,"The hero's lying in the cheese, and the villain's laughing. Th
 W4_WERB_MAX_0350,"Again, and this time I'll read the clock: twelve, one, two, three. It can't be that hard."
 W4_WERB_MAX_0370,"The heroes win, because of me. Because of a banana, a cheese and a wall clock. That's not in any comic, but it is now."
 W4_WERB_MAX_0400,"A podium under a spotlight where the Couch Magnet stood. Now there's nothing there, and even the nothing looks like a special offer."
-W4_WERB_MAX_0405,"There's a round mark on the podium, that's where the Couch Magnet stood. Even its dust somehow looks good for sales."
+W4_WERB_MAX_0405,"There's a round mark on the podium, that's where the Couch Magnet stood. Even its dust looks good for sales."
 W4_WERB_MAX_0410,"A camera on three legs with a red light. It's recording, nonstop. Like everything these days."
 W4_WERB_MAX_0415,I wave at the camera. The red light blinks. Somewhere out there someone is switching channels.
 W4_WERB_MAX_0420,"A director's chair with ""DR. A."" on the back. Nobody's in it, he prefers to rule standing up."
@@ -5979,7 +5977,7 @@ W4_WERB_MAX_0425,"On the chair there's a cushion saying ""I'm the boss"". Self-e
 W4_WERB_MAX_0430,A plastic palm tree in a pot. It's advertising a holiday nobody here has ever had.
 W4_WERB_MAX_0435,"The price tag is still on the palm. It's on special offer, forever."
 W4_WERB_MAX_0440,"A clapperboard on the floor: ""Scene 1, Take 400"". He shot the ad four hundred times. Or once and then never stopped."
-W4_WERB_MAX_0445,"Take 400, and he still hasn't nailed the line. Suddenly I almost feel a little sorry for him."
+W4_WERB_MAX_0445,"Take 400, and he still hasn't nailed the line. Suddenly I almost feel sorry for him."
 W4_WERB_MAX_0450,"Rainbow stripes in the background, garish, loud and colourful. It's a pop-up you can't click away."
 W4_WERB_MAX_0455,"I look at the stripes and then away, and now I see rainbows on everything. Adverts stick, unfortunately."
 W4_WERB_MAX_0460,"Dr. Adbreak: a suit made of stickers, a megaphone and a sign without text. I've been clicking him away for years, and now he's standing in front of me."
@@ -6030,12 +6028,12 @@ W4_ZURF_PIX_0060,The tape just laughed at nothing. Maybe at you.
 W4_ZURF_PIX_0060_2,"That would be something, at least, because you haven't said anything funny yet."
 W4_ZURF_PIX_0100,The flamingos are talking about your shoes. And not nicely.
 W4_ZURF_PIX_0120,You're standing next to dancing corpses and doing nothing.
-W4_ZURF_PIX_0120_2,"That's either respect or shock, and I know you well enough to bet on shock."
+W4_ZURF_PIX_0120_2,I know you well enough. That's shock.
 W4_ZURF_PIX_0140,"The door is still shut. It won't open because you stare at it. Trust me, I stare professionally."
 W4_ZURF_PIX_0190,The anvil is lying there waiting for a second chance.
 W4_ZURF_PIX_0190_2,"I'm not giving it one. I hold grudges, it runs in the family, ever since the ancient Egyptians."
 W4_ZURF_PIX_0230,The eye in the compactor just blinked twice.
-W4_ZURF_PIX_0230_2,"I think that means: hurry up. Or it's got something in its eye, which for an eye would be a serious problem."
+W4_ZURF_PIX_0230_2,"That means: hurry up. Or it's got something in its eye, which for an eye would be a serious problem."
 W4_ZURF_PIX_0250,You're standing. That's more than he's managed in years.
 W4_ZURF_PIX_0250_2,"Keep it up. And now press something, finally."
 W4_ZURF_SIE_0170,Zzz. Cat. Tree. Zzz.

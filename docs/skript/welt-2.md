@@ -178,7 +178,7 @@ Zwei Durchgangsräume, kein Rätsel. Am Hafen von Syrakus liegt der Tintenfisch 
 | W2\_STOL\_MAX\_0060 | Max | Ein Steinweg den Hügel hoch zu weißen Säulen. Da oben brüllt jemand, also ist das entweder Sport oder Politik. | Ansehen: Weg zur Agora |
 | W2\_STOL\_MAX\_0065 | Max | Der Hügel ist steil. Wer da hochrennt, kommt oben entweder als Held an oder als Pfütze, und ich tippe bei mir auf Pfütze. | Ansehen: Weg zur Agora, zweites Mal |
 | W2\_HAFS\_MAX\_0010 | Max | Ein Hafen, dahinter das Meer, und dahinter kommt einfach gar nichts mehr. Hier hört die Zeit auf. | Ansehen: Meer |
-| W2\_HAFS\_PIX\_0020 | Pixel | Hier ist Sendeschluss, und du weißt nicht einmal, was das ist. // Früher kam nachts ein Testbild, und dann gingen alle anständigen Leute schlafen. // Eine zivilisierte Zeit. Ich vermisse sie jeden Abend gegen elf. | Ansehen: Meer, zweites Mal |
+| W2\_HAFS\_PIX\_0020 | Pixel | Hier ist Sendeschluss, und du weißt nicht einmal, was das ist. // Früher kam nachts ein Testbild, und dann war Ruhe. // Eine zivilisierte Zeit. Ich vermisse sie jeden Abend gegen elf. | Ansehen: Meer, zweites Mal |
 | W2\_HAFS\_MAX\_0030 | Max | Fischernetze. Da drin zappelt etwas mit Armen, und zwar mit eindeutig zu vielen Armen. | Ansehen: Fischernetze |
 | W2\_HAFS\_MAX\_0035 | Max | Das Ding im Netz winkt mir mit allen acht Armen. Ich winke mit zweien zurück und verliere. | Ansehen: Fischernetze, zweites Mal |
 | W2\_HAFS\_MAX\_0040 | Max | Ein Tintenfisch, klein und nass. Er guckt, als wüsste er, was ich vorhabe. Keine Sorge, ich leih mir nur Tinte. | Nehmen: Tintenfisch aus dem Netz; wird „Tintenfass“ im Inventar |
