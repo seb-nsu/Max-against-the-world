@@ -9,8 +9,10 @@ Eingabe (Datei oder stdin), Blöcke getrennt durch Leerzeilen:
 
 Jede neue Zeile bekommt die nächste freie Nummer der Szene (Zehnerschritte über der
 höchsten vergebenen Nummer); bestehende IDs werden nie umnummeriert. Der Sprechername
-kommt aus den vorhandenen Zeilen desselben Kürzels. Die vierte Spalte bleibt leer, die
-Zeile gehört damit zur Antwort bzw. Szene davor.
+kommt aus den vorhandenen Zeilen desselben Kürzels in derselben Skriptdatei, denn Kürzel wie
+SCH, GRI, MUT und MUS gehören je Welt einer anderen Figur. Kennt die Datei das Kürzel noch
+nicht, bricht das Werkzeug ab. Die vierte Spalte bleibt leer, die Zeile gehört damit zur
+Antwort bzw. Szene davor.
 """
 import re
 import sys
@@ -30,17 +32,21 @@ def main():
     text = (open(sys.argv[1], encoding="utf-8") if len(sys.argv) > 1 else sys.stdin).read()
     bloecke = [b.strip().splitlines() for b in re.split(r"\n\s*\n", text) if b.strip()]
     dateien = {p: p.read_text(encoding="utf-8").split("\n") for p in sorted(SKRIPT.glob("*.md"))}
-    namen = Counter()
-    for zeilen in dateien.values():
+    namen = {p: Counter() for p in dateien}
+    for p, zeilen in dateien.items():
         for z in zeilen:
             m = ZEILE_RE.match(z)
             if m:
                 kz = m.group(1).replace("\\_", "_").split("_")[-2]
-                namen[(kz, m.group(2).strip())] += 1
-    def name(kz):
-        k = [(n, c) for (k2, n), c in namen.items() if k2 == kz and "(" not in n]
+                namen[p][(kz, m.group(2).strip())] += 1
+
+    def name(p, kz):
+        """Häufigster Name des Kürzels in der Zieldatei (ohne Zusätze in Klammern)."""
+        k = [(n, c) for (k2, n), c in namen[p].items() if k2 == kz and "(" not in n]
         if not k:
-            k = [(n, c) for (k2, n), c in namen.items() if k2 == kz]
+            k = [(n, c) for (k2, n), c in namen[p].items() if k2 == kz]
+        if not k:
+            sys.exit(f"Kürzel {kz} kommt in {p.name} noch nicht vor: erste Zeile der Figur von Hand anlegen")
         return max(k, key=lambda x: x[1])[0]
     neu = 0
     for b in bloecke:
@@ -58,7 +64,7 @@ def main():
             for zeile in b[1:]:
                 kz, txt = (t.strip() for t in zeile.split("|", 1))
                 zid = f"{praefix_szene}_{kz}_{nr:04d}"
-                einfuegen.append(f"| {esc(zid)} | {name(kz)} | {txt} |  |")
+                einfuegen.append(f"| {esc(zid)} | {name(p, kz)} | {txt} |  |")
                 nr += 10
                 neu += 1
             zeilen[idx + 1:idx + 1] = einfuegen

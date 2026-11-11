@@ -130,9 +130,10 @@ def main():
         alt = [p for p, t in texte.items()
                if not (ZIEL / p).exists() or (ZIEL / p).read_text(encoding="utf-8") != t]
         for x in fehler:
-            print("WARNUNG ", x)
+            print("FEHLER  ", x)
         if alt:
             print("game/daten/ ist veraltet: python3 tools/spieldaten.py ausführen")
+        if alt or fehler:
             sys.exit(1)
         return
     for p, t in texte.items():

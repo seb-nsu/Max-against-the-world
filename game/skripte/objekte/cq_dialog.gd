@@ -60,11 +60,14 @@ func option_sichtbar(id: String) -> bool:
 	for b in o.get("bedingung", []):
 		if b.art == "nach_zeile" and not zeile_gehoert(b.zeile):
 			return false
-	if not o.get("bedingung_text", "").is_empty() and not Spiel.bedingung_text_ok(o.bedingung_text):
-		return false
+	# Die Regeln des Abschnitts entscheiden zuerst (sichtbar_<figur>_<nummer>). Erst ohne ihre
+	# Antwort zählen die Worte aus dem Skript: Was das Spiel nicht kennt, bleibt aus. Dass keine
+	# Option deshalb für immer fehlt, prüft tools/godot_raeume.py (unbekannte_worte).
 	var w = Spiel.regel_wert("option_sichtbar", self, id)
 	if w != null:
 		return bool(w)
+	if not o.get("bedingung_text", "").is_empty() and not Spiel.bedingung_text_ok(o.bedingung_text):
+		return false
 	return Spiel.bedingung_ok(o.get("bedingung", []))
 
 

@@ -806,6 +806,8 @@ func _bedingung_text_wert(text: String) -> Variant:
 			)
 		"nur mit Zeldina im Team":
 			return Zustand.ist("W1_ZELDINA_FOLGT")
+		"vor dem Duell":
+			return not Zustand.geloest("R13")  # Welt 1, Thronsaal: Lord Moderwort
 		"Feilschen", "Haustier", "richtig":
 			return true  # Beschreibung der Option, keine Bedingung (Maklerin, LUFT 0410–0470)
 		"wenn Ziegen dabei sind":

@@ -5,8 +5,9 @@ Grundlage: `pruefung/360-pruefung.md` (111 Funde). Auftrag: `pruefung/umsetzung-
 ## Stand
 
 - Paket 1 (die drei kritischen Fehler): fertig.
-- Pakete 2 bis 9: noch nicht begonnen.
-- Weiter bei: Paket 2, Werkzeuge.
+- Paket 2 (Werkzeuge): fertig.
+- Pakete 3 bis 9: noch nicht begonnen.
+- Weiter bei: Paket 3, Rätseltexte und Hinweis-Lücken.
 
 Arbeitsweise nach einer Unterbrechung: Tabelle 1 zeigt je Fund den Status. Vor jedem Commit laufen `python3 tools/pruefen.py`, alle `--pruefen`-Läufe aus `.github/workflows/pruefen.yml` und nach Code-Änderungen die Godot-Tests.
 
@@ -46,7 +47,7 @@ Status: umgesetzt, nicht bestätigt, Entscheidung bitte prüfen, offen für Seba
 | 28 | 7 | noch nicht bearbeitet |  |
 | 29 | 7 | noch nicht bearbeitet |  |
 | 30 | 7 | noch nicht bearbeitet |  |
-| 31 | 2 | noch nicht bearbeitet |  |
+| 31 | 2 | umgesetzt | Bestätigt. `tools/prompts_zusammensetzen.py`: Kopfzeile der Baustein-Tabelle zählt nicht mehr als Baustein, unbekannter Schlüssel bricht ab statt zu raten, Zeilen ohne eigenes Konzeptbild („Keine eigene Grafik“, „Wiederverwendung“, „FIGUR-…“) fallen weg. In den Grafik-Dateien vier Schlüssel gesetzt: Flusskarte „Ägypten“, Code-Sicht „Simulation“, Rauschen „Testbild und Rauschen“, Kindersendung „Kindersendung 1977“ (neuer Baustein aus dem Bericht in `grafik/welt-4.md`). Kein Prompt endet mehr auf „Baustein.“. Weggefallen sind Bild-in-Bild, Opa vor flackernden Lampen, Opas Sofa und „Max auf der Couch“ (Figuren-Prompt, kein Konzeptbild). |
 | 32 | 7 | noch nicht bearbeitet |  |
 | 33 | 7 | noch nicht bearbeitet |  |
 | 34 | 7 | noch nicht bearbeitet |  |
@@ -56,14 +57,14 @@ Status: umgesetzt, nicht bestätigt, Entscheidung bitte prüfen, offen für Seba
 | 38 | 8 | noch nicht bearbeitet |  |
 | 39 | 9 | noch nicht bearbeitet |  |
 | 40 | 9 | noch nicht bearbeitet |  |
-| 41 | 2 | noch nicht bearbeitet |  |
+| 41 | 2 | umgesetzt | Bestätigt und nachgestellt (SCH wurde in Welt 1 und 3 zu „Schreiber“). `tools/zeilen_einfuegen.py` sucht den Namen nur noch in der Zieldatei und bricht ab, wenn das Kürzel dort noch nicht vorkommt. Geprüft: SCH wird in Welt 1 „Schmied“, in Welt 3 „Schmidt“, GRI in Welt 2 „Grieche“. Die Kürzel selbst bleiben, weil Zeilen-IDs nicht umnummeriert werden. |
 | 42 | 5 | noch nicht bearbeitet |  |
 | 43 | 5 | noch nicht bearbeitet |  |
 | 44 | 5 | noch nicht bearbeitet |  |
 | 45 | 9 | noch nicht bearbeitet |  |
 | 46 | 5 | noch nicht bearbeitet |  |
-| 47 | 2 | noch nicht bearbeitet |  |
-| 48 | 2 | noch nicht bearbeitet |  |
+| 47 | 2 | umgesetzt | Teilweise anders als im Bericht: `en_eintragen.py` teilt schon an „//“. Die 793 Zeilen sind am Werkzeug vorbei in `en.csv` gekommen. Alle 793 geteilt (die Blasenzahl passte überall), dabei 124 ältere Folgeblasen durch die neuere Fassung ersetzt. Neu in `tools/pruefen.py`: Fehler bei „//“ im englischen Text, bei abweichender Blasenzahl und bei Schlüsseln, die es im Skript nicht mehr gibt. |
+| 48 | 2 | umgesetzt | Bestätigt. `pruefen.py`: 102 harmlose Meldungen „Nummer nicht aufsteigend“ sind jetzt Hinweise (`--hinweise`), falscher Sprechername ist ein Fehler, jede Warnung bricht ab. `spieldaten.py --pruefen` und `godot_raeume.py --pruefen` brechen bei Warnungen ab. `abdeckung.py` zählt verdrängte Ansehen-Zeilen als fehlend. `godot_raeume.py` bricht ab, wenn eine Gesprächsoption oder ein Zuruf eine Bedingung in Worten hat, die das Spiel nicht kennt. `testbuild.yml`: zweiter Import ohne Fehlermeldung, dazu alle Durchläufe vor dem Export. **Dabei gefunden (nicht im Bericht):** In Welt 3 bot Deckert die Option zum Mensch-Test nie an und die Orakel-Oma zwei Optionen zur Vase nie. Die Welt war über die Bedienung nicht lösbar, der Test rief die Regeln direkt auf. Behoben in `cq_dialog.gd` (Regeln entscheiden zuerst), `godot_raeume.py` („startet …“ ist Anmerkung), `spiel.gd` (Zuruf „vor dem Duell“ in Welt 1 kam nie). `welt_3_anspiel.gd` prüft jetzt, dass die Optionen angeboten werden (vorher 2 Fehler). Die Prüfung der Hinweise je offenem Schritt kommt mit Fund 4 in Paket 3. |
 | 49 | 9 | noch nicht bearbeitet |  |
 | 50 | 9 | noch nicht bearbeitet |  |
 | 51 | 9 | noch nicht bearbeitet |  |

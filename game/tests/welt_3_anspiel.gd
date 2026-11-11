@@ -49,6 +49,8 @@ func _durchlauf() -> void:
 	for f in ["frau_regenschirm", "strassenmusiker", "weinender_mann"]:
 		await S.regel("ansehen", f)
 	_pruefe(Z.geloest("R1a"), "R1a Beobachtungen")
+	# Das Gespräch muss die Option auch anbieten, sonst ist der Test im Spiel nicht zu starten.
+	_pruefe(root.get_node("D").get_instance("Deckert").option_sichtbar("0090"), "Deckert bietet den Mensch-Test im Gespräch an")
 	S.vorgabe_auswahl = [0]
 	await S.regel("nach_option", "deckert", "0090")
 	_pruefe(not Z.geloest("R1b"), "Logische Antwort fällt durch")
@@ -81,6 +83,7 @@ func _durchlauf() -> void:
 
 	# R4: Orakel-Oma, Kochbuch (Regel 2)
 	await _geh("kueche_orakel")
+	_pruefe(root.get_node("D").get_instance("OrakelOma").option_sichtbar("0130"), "Orakel-Oma bietet die Frage nach der Vase an")
 	await S.regel("nach_option", "orakel_oma", "0150")
 	await S.regel("ansehen", "kochbuch")
 	_pruefe(Z.geloest("R4") and _hat("rezeptkarte") and Z.ist("REGEL_2"), "R4 Vase, Regel 2")

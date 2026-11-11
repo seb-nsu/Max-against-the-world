@@ -74,7 +74,7 @@ MAX_ZEICHEN = 120
 # Festgelegte Zahl der Nahansichten im ganzen Spiel (entscheidungen.md)
 NAHANSICHTEN_GESAMT = 14
 
-fehler, warnungen = [], []
+fehler, warnungen, hinweise = [], [], []
 
 
 def F(ort, text):
@@ -83,6 +83,11 @@ def F(ort, text):
 
 def W(ort, text):
     warnungen.append(f"WARNUNG  {ort}: {text}")
+
+
+def H(ort, text):
+    """Hinweis: harmlos, zählt nicht als Warnung und wird nur mit --hinweise gezeigt."""
+    hinweise.append(f"HINWEIS  {ort}: {text}")
 
 
 def als_liste(x):
@@ -359,14 +364,14 @@ def pruefe_skript(ab, d, codes, kuerzel, alle_ids):
         elif len(zellen) > 1:
             sprecher = norm(zellen[1])
             if namen.get(kz) and not sprecher.startswith(namen[kz]) and namen[kz] not in sprecher:
-                W(ort, f"Sprecher „{zellen[1]}“ passt nicht zu {kz} = {namen[kz]}")
+                F(ort, f"Sprecher „{zellen[1]}“ passt nicht zu {kz} = {namen[kz]}")
         if code not in OHNE_ZEHNER:
             n = int(num)
             # Neue Zeilen in Zehnerschritten; eingeschobene Zeilen nehmen eine
             # freie Nummer zwischen den Nachbarn (05-spielsysteme.md), daher
             # wird nur die aufsteigende Reihenfolge geprüft.
             if n <= letzte.get(code, -1):
-                W(ort, f"{roh}: Nummer nicht aufsteigend im Block")
+                H(ort, f"{roh}: Nummer nicht aufsteigend im Block")
             letzte[code] = n
         if len(zellen) > 2:
             # Längerer Text wird an Satzgrenzen auf Folgeblasen verteilt
@@ -568,6 +573,32 @@ def pruefe_code_schalter(alle):
                     W(f"{datei.relative_to(ROOT)}:{nr}", f"Schalter {name} steht in keiner Welt-Tabelle (weitere_schalter)")
 
 
+def pruefe_englisch(alle_ids):
+    """Englische Fassung: je deutscher Sprechblase ein Eintrag, nie „//“ im Text.
+
+    Steht eine Kaskade als ein Stück unter dem ersten Schlüssel, zeigt das Spiel „//“ in der
+    Blase und die Folgeblasen bleiben leer. Geprüft werden nur Zeilen, die schon übersetzt sind.
+    """
+    sys.path.insert(0, str(Path(__file__).resolve().parent))
+    import skript_export
+    en = skript_export.lade_en()
+    rel = "uebersetzung/en.csv"
+    gueltig = set()
+    for z in skript_export.zeilen_lesen():
+        n = len(skript_export.blasen(z["de"]))
+        schluessel = [skript_export.schluessel(z["id"], i) for i in range(n)]
+        gueltig.update(schluessel)
+        da = [k for k in schluessel if en.get(k)]
+        if da and len(da) != n:
+            F(rel, f"{z['id']}: {n} Sprechblasen auf Deutsch, {len(da)} auf Englisch "
+                   f"(neu eintragen mit tools/en_eintragen.py)")
+    for k, text in en.items():
+        if "//" in text:
+            F(rel, f"{k}: „//“ im englischen Text (Kaskade über tools/en_eintragen.py eintragen)")
+        if k not in gueltig:
+            F(rel, f"{k}: Schlüssel gibt es im Skript nicht (mehr)")
+
+
 def main():
     nur_fehler = "--nur-fehler" in sys.argv
     alle = lade_tabellen()
@@ -584,6 +615,7 @@ def main():
     pruefe_audio(alle)
     pruefe_nahansichten(alle)
     pruefe_code_schalter(alle)
+    pruefe_englisch(alle_ids)
     import importlib.util
     spec = importlib.util.spec_from_file_location("diagramme", Path(__file__).with_name("diagramme.py"))
     dia = importlib.util.module_from_spec(spec)
@@ -595,8 +627,14 @@ def main():
     if not nur_fehler:
         for z in warnungen:
             print(z)
-    print(f"\n{len(fehler)} Fehler, {len(warnungen)} Warnungen, {len(alle_ids)} Skriptzeilen geprüft.")
-    sys.exit(1 if fehler else 0)
+    if "--hinweise" in sys.argv:
+        for z in hinweise:
+            print(z)
+    print(f"\n{len(fehler)} Fehler, {len(warnungen)} Warnungen, {len(hinweise)} Hinweise "
+          f"(anzeigen mit --hinweise), {len(alle_ids)} Skriptzeilen geprüft.")
+    # Warnungen brechen ab wie Fehler: Zwischen 102 harmlosen Meldungen standen früher sechs
+    # falsche Sprecher, und keiner hat sie gesehen.
+    sys.exit(1 if fehler or warnungen else 0)
 
 
 if __name__ == "__main__":

@@ -80,7 +80,7 @@ def pascal(ident):
 # Objekts für das Spiel nicht zu unterscheiden sind.
 ANMERKUNG_RE = re.compile(
     r"^(Hinweis|auch |löst |schaltet |führt |Notizbuch|Lösung|Pixels Wunsch|Szene|weiter |"
-    r"Radio|Schwing|öffnet |Weg [AB]$|Max kennt|Rezept bekannt|die Nase lügt|Besen zuckt|"
+    r"Radio|Schwing|öffnet |startet |Weg [AB]$|Max kennt|Rezept bekannt|die Nase lügt|Besen zuckt|"
     r"Flasche steht|grüner Rauch|Textvariante|Konter \d|Gag$)")
 # Auslöser im Abschnitt „Figurenwechsel“ (Szenen-Code WECH) → Schlüssel im Bauplan
 WECHSEL_REGELN = [
@@ -192,6 +192,30 @@ def verdraengte(plan):
                     meldungen.append(f"{ort}: {e1['zeile']} kommt nie, {e2['zeile']} verdrängt sie "
                                      f"(Auslöser im Skript unterscheiden oder Bedingung in den Regeln ergänzen)")
                     break
+    return meldungen
+
+
+def unbekannte_worte(plan):
+    """Gesprächsoptionen, Einstiege und Zurufe mit einer Bedingung in Worten, die das Spiel nicht
+    kennt. Das Spiel blendet sie aus (Spiel._bedingung_text_ok), die Zeilen kämen also nie.
+    Ausnahme: Optionen, über die die Regeln selbst entscheiden (sichtbar_<figur>_<nummer>)."""
+    bekannt = bekannte_worte(plan["abschnitt"])
+    regeln = GAME / "skripte" / f"{plan['abschnitt'].replace('-', '_')}.gd"
+    code = regeln.read_text(encoding="utf-8") if regeln.exists() else ""
+    meldungen = []
+    for d in plan["dialoge"]:
+        for o in d["optionen"] + ([d["einstieg"]] if d.get("einstieg") else []):
+            text = o.get("bedingung_text", "")
+            nr = o.get("id", "einstieg")
+            if text and text not in bekannt and f"func sichtbar_{d['id']}_{nr}(" not in code:
+                meldungen.append(f"Gespräch {d['id']}, Option {nr}: Bedingung „{text}“ kennt das Spiel nicht, "
+                                 f"die Option käme nie (Regeln ergänzen oder als Anmerkung führen)")
+    for r in plan["raeume"]:
+        for zr in r["zurufe"]:
+            text = zr.get("bedingung_text", "")
+            if text and text not in bekannt:
+                meldungen.append(f"{r['id']}, Zuruf {zr['zeile']}: Bedingung „{text}“ kennt das Spiel nicht, "
+                                 f"der Zuruf käme nie")
     return meldungen
 
 
@@ -912,13 +936,13 @@ def main():
     rc = 0
     for ab in abschnitte:
         plan, fehler, warnungen = baue(ab)
-        fehler += verdraengte(plan)
+        fehler += verdraengte(plan) + unbekannte_worte(plan)
         for w in warnungen:
             print(f"WARNUNG  {ab}: {w}")
         for f in fehler:
             print(f"FEHLER   {ab}: {f}")
-        if fehler:
-            rc = 1
+        if fehler or (pruefen and warnungen):
+            rc = 1   # beim Prüfen brechen auch Warnungen ab, sonst liest sie keiner
             continue
         neu = json.dumps(plan, ensure_ascii=False, indent=1) + "\n"
         ziel = RAEUME / f"{ab}.json"
