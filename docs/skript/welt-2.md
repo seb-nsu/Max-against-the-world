@@ -98,7 +98,7 @@ Der Fährmann will einen Obolus. Max hat keinen. Sobek verneigt sich vor Pixel, 
 | W2\_NIL\_MAX\_0780 | Max | Meißelt ihr auch kleine Sachen? | Option Steinmetz |
 | W2\_NIL\_STM\_0790 | Steinmetz | Alles, was eine Kante hat. Grabsteine, Türschwellen, Katzenfiguren. Bring einen Entwurf, und wir hauen ihn in Stein, wörtlich. |  |
 | W2\_NIL\_MAX\_1060 | Max | Katzenfiguren? Pixel, bleib mal kurz so sitzen. |  |
-| W2\_NIL\_PIX\_1070 | Pixel | Ich sitze seit drei Welten Modell, und zwar ohne jede Gage. // Wenn dieser Mann mich meißelt, ohne vorher über Thunfisch zu verhandeln, verklage ich den Nil. |  |
+| W2\_NIL\_PIX\_1070 | Pixel | Ich sitze seit zwei Welten Modell, und zwar ohne jede Gage. // Wenn dieser Mann mich meißelt, ohne vorher über Thunfisch zu verhandeln, verklage ich den Nil. |  |
 | W2\_NIL\_MAX\_0800 | Max | Wie lange bleibt so ein Stein frisch? | Option Steinmetz (bleibt) |
 | W2\_NIL\_STM\_0810 | Steinmetz | Hier bei mir: ewig. Auf der Fähre kommt's drauf an, wie weit du fährst, weil Stein mit der Zeit reist. Steht auf der Tafel. | Hinweis Rätsel 10 |
 | W2\_NIL\_MAX\_1080 | Max | Und wenn ich bis Syrakus fahre? |  |
@@ -1324,7 +1324,7 @@ Ein Klick auf die Figur, wenn im Gesprächsmenü nur noch „Tschüss“ übrig 
 | W2\_ABS\_BRI\_0210 | Brian | Ich hab nichts mehr zu sagen. Und wenn du jetzt sagst, das ist ein Zeichen, schrei ich. | Reden: Brian, Gespräch erschöpft |
 | W2\_ABS\_BRI\_0220 | Brian | Geh weg. Bitte. Das ist keine Botschaft, das ist nur eine Bitte. Schreib's nicht auf. | Reden: Brian, Gespräch erschöpft |
 | W2\_ABS\_BE1\_0230 | Beamter 1 | Nummer ziehen, warten, wiederkommen. Das war alles, was ich sagen darf, und ich hab's gesagt. | Reden: Beamter 1, Gespräch erschöpft |
-| W2\_ABS\_BE1\_0240 | Beamter 1 | Mein Schalter ist für Sie jetzt geschlossen. Für alle anderen auch. Er war nie offen. | Reden: Beamter 1, Gespräch erschöpft |
+| W2\_ABS\_BE1\_0240 | Beamter 1 | Mein Schalter ist für dich jetzt geschlossen. Für alle anderen auch. Er war nie offen. | Reden: Beamter 1, Gespräch erschöpft |
 | W2\_ABS\_BE2\_0250 | Beamter 2 | Für weitere Fragen ist ein anderes Amt zuständig. Welches, steht auf einem Formular, das es nicht gibt. | Reden: Beamter 2, Gespräch erschöpft |
 | W2\_ABS\_BE2\_0260 | Beamter 2 | Wir sind fertig miteinander. Verwaltungstechnisch. Menschlich waren wir es nie. | Reden: Beamter 2, Gespräch erschöpft |
 | W2\_ABS\_LEO\_0270 | Leonidas | ICH HAB ALLES GESAGT! JETZT WIRD TRAINIERT! NICHT GEREDET! | Reden: Leonidas, Gespräch erschöpft |

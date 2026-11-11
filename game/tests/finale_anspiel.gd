@@ -64,6 +64,11 @@ func _durchlauf() -> void:
 	S.vorgabe_auswahl = [2]
 	await S.regel("benutzen", C().get_character("Zeldina"))
 	_pruefe(Z.geloest("F1a"), "F1a: Riegel")
+	# Noch einmal fragen: Ohne Modell 08/15 zählt Max den Roboter nicht mit (0095 statt 0090)
+	S.vorgabe_auswahl = [2]
+	await S.regel("benutzen", C().get_character("Zeldina"))
+	_pruefe(_gesagt("FI_RAET_MAX_0095") and not _gesagt("FI_RAET_MAX_0090"),
+		"Zeldina nach Schritt A: Fassung ohne Roboter")
 	# B: Kochlöffel in die Ofentür
 	await S.regel("gegenstand", _hotspot("ofentuer"), _i().get_item_instance(_sn("kochloeffel")))
 	_pruefe(Z.geloest("F1b"), "F1b: Ofentür mit dem Kochlöffel")

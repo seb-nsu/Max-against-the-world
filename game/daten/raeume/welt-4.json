@@ -2768,14 +2768,6 @@
        "blasen": [
         "W4_KELL_MAX_0170"
        ]
-      },
-      {
-       "zeile": "W4_KELL_MAX_0175",
-       "sprecher": "MAX",
-       "blasen": [
-        "W4_KELL_MAX_0175"
-       ],
-       "mal": 2
       }
      ]
     },
@@ -3435,14 +3427,6 @@
        "blasen": [
         "W4_KAPI_MAX_0520"
        ]
-      },
-      {
-       "zeile": "W4_KAPI_MAX_0525",
-       "sprecher": "MAX",
-       "blasen": [
-        "W4_KAPI_MAX_0525"
-       ],
-       "mal": 2
       }
      ]
     },

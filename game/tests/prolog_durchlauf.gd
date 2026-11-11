@@ -748,6 +748,7 @@ func _welt_1_r5_bis_r13() -> void:
 	await _benutze("Kronleuchter", _c().get_character("Zeldina"), "W1_SMAU_ZEL_0580")
 	_pruefe(Z.geloest("R12") and _i().is_item_in_inventory("Drachenei") and _gesagt("W1_SMAU_PIX_0640"),
 		"R12 gelöst: Drachenei (0610–0640)")
+	_pruefe(_gesagt("W1_SMAU_MAX_0645"), "nach dem Ei entscheidet Max sich für Zeldinas Wohnung (0645)")
 	await _ansehen_item("Drachenei", "W1_INV_MAX_0170")
 	await _rundreise("nach R12")
 

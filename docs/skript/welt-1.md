@@ -11,7 +11,7 @@ Szene. Der Wirbel spuckt Max auf das Kopfsteinpflaster, Pixel landet auf allen v
 | W1\_ANK\_MAX\_0010 | Max | Au. | liegt auf dem Rücken, Hoodie über dem Gesicht |
 | W1\_ANK\_PIX\_0020 | Pixel | Ich bin, wie es sich für einen Kater gehört, auf allen vier Pfoten gelandet. Du bist auf dem Gesicht gelandet. // Jeder, wie er kann, junger Mann. Ich urteile nicht, ich stelle nur fest. | sitzt kerzengerade |
 | W1\_ANK\_MAX\_0030 | Max | Wo sind wir überhaupt? Und warum riecht es hier so nach Stall? | setzt sich auf, sieht sich um |
-| W1\_ANK\_PIX\_0040 | Pixel | Auf Kanal 3, wenn ich die Fernbedienung richtig gelesen habe, und ich lese Fernbedienungen grundsätzlich richtig. // Es riecht nach Stroh, nach Bier und nach Leuten, die „Wohlan“ sagen, ohne dabei rot zu werden. | schnuppert |
+| W1\_ANK\_PIX\_0040 | Pixel | Auf Kanal 3, wenn ich den Drehknopf richtig gelesen habe, und ich lese Drehknöpfe grundsätzlich richtig. // Es riecht nach Stroh, nach Bier und nach Leuten, die „Wohlan“ sagen, ohne dabei rot zu werden. | schnuppert |
 | W1\_ANK\_MAX\_0050 | Max | Fantasy also. Die Staffel hab ich übersprungen, weil die erste Folge fast nur aus Landkarten bestand. | steht auf, Hände in die Bauchtasche |
 | W1\_ANK\_PIX\_0051 | Pixel | Dann holst du sie eben jetzt nach, und zwar live. Außerdem wollte dein Großvater, dass du seinen Zettel liest. // Er sagte ausdrücklich: erst, wenn ihr drüben seid. Ich sehe mich um und stelle fest: Wir sind drüben. |  |
 | W1\_ANK\_MAX\_0060 | Max | Stimmt. Dann darf ich ihn jetzt ja ganz offiziell lesen. | zieht den Zettel aus der Reisetasche |
@@ -350,7 +350,7 @@ Weitere Gegenstände und Fehlversuche in der Taverne:
 | W1\_TAV\_HUH\_1440 | Huhn | Gaaack. | nach 1430 |
 | W1\_TAV\_PIX\_1450 | Pixel | Ein Ei. Weich gekocht. Zum Frühstück. Das kommt auf meine Liste. // Nicht dieses hier, wohlgemerkt, sondern ein eigenes. Ich teile meine Eier nicht mit Kesseln. | nach 1430; Pixels Wunsch Welt 1 |
 | W1\_TAV\_HUH\_1460 | Huhn | Gack gack. Gaack. | Pixel redet mit Huhn |
-| W1\_TAV\_PIX\_1470 | Pixel | Sie heißt Hilde. Sie legt, seit sie denken kann, und sie denkt nicht viel. // Sie sagt, das Ei riecht nach Schule, was auch immer das heißen soll. Hühner sind keine großen Erklärer. | Übersetzung |
+| W1\_TAV\_PIX\_1470 | Pixel | Sie heißt Berta. Sie legt, seit sie denken kann, und sie denkt nicht viel. // Sie sagt, das Ei riecht nach Schule, was auch immer das heißen soll. Hühner sind keine großen Erklärer. | Übersetzung |
 | W1\_TAV\_MAX\_1480 | Max | Thunfisch in Käse. Auch ich hab irgendwo Grenzen. | Thunfischdose auf Fondue-Topf |
 | W1\_TAV\_PIX\_1490 | Pixel | Es gibt keine Grenzen. Aber es gibt meine Dose, und die bleibt draußen. | nach 1480 |
 | W1\_TAV\_MAX\_1500 | Max | Ein Eimer voll Käse wäre schon verlockend. Aber Humbert hat eine Schwertersammlung, und ich will keins davon näher kennenlernen. | Eimer auf Fondue-Topf |
@@ -413,8 +413,6 @@ Gespräch mit dem Schmied:
 | W1\_SCHM\_SCH\_0760 | Schmied | Hab ich versucht. Sie war schneller wieder da als ich. Seitdem nenne ich sie Kollegin. |  |
 | W1\_SCHM\_MAX\_0250 | Max | Was ist das für ein Schwert in ihrem Maul? | Option Schmied |
 | W1\_SCHM\_SCH\_0260 | Schmied | Das war Ingrid. Humbert wollte sie für seine Sammlung. Jetzt ist sie Ziegenfutter. Sag ihm nichts, er hängt an Namen. |  |
-| W1\_SCHM\_MAX\_0770 | Max | Du hast deinen Schwertern Namen gegeben? |  |
-| W1\_SCHM\_SCH\_0780 | Schmied | Jedes Schwert hat einen Namen. Ingrid, Helga, Kurt. Kurt war ein Missverständnis. |  |
 | W1\_SCHM\_MAX\_0270 | Max | Kann ich die Ziege haben? | Option Schmied; auch bei Benutzen: Ziege |
 | W1\_SCHM\_SCH\_0280 | Schmied | Du willst sie? Nimm sie! Nimm sie mit! Ich schmiede dir ein Denkmal! Aus Blech, aber ein Denkmal! | fällt fast auf die Knie; Ziege folgt Max ab jetzt |
 | W1\_SCHM\_ZIE\_0290 | Schmiede-Ziege | Mäh. | kaut weiter, trottet zu Max |
@@ -800,14 +798,14 @@ Rätsel 4c, ins Wasser: Waldemar muss laut Paragraf 3 ins Wasser. Der Eimer vom 
 | W1\_BRUE\_WAL\_0970 | Waldemar | Regel erfüllt. Ahhh. | wackelt mit den Zehen |
 | W1\_BRUE\_MAX\_0980 | Max | Fußbad. Zählt. |  |
 | W1\_BRUE\_PIX\_0990 | Pixel | Die Füße im Eimer und das Gesicht eines Mannes, der zum ersten Mal seit vierzig Jahren Urlaub hat. // Ich kenne diesen Blick. Ich sehe ihn jeden Morgen im Spiegel, kurz nach dem Frühstück. |  |
-| W1\_BRUE\_WAL\_1000 | Waldemar | Die Brücke ist frei. Und: Regel 14b. Leihgaben sind zurückzugeben. | gibt den leeren Eimer zurück; R4 gelöst, Zauberwald und Wasserschloss offen |
+| W1\_BRUE\_WAL\_1000 | Waldemar | Die Brücke ist frei. Und: Paragraf 14b. Leihgaben sind zurückzugeben. | gibt den leeren Eimer zurück; R4 gelöst, Zauberwald und Wasserschloss offen |
 | W1\_BRUE\_PIX\_1010 | Pixel | Darf ich den Teppich jetzt bitte ausziehen? | Pixel-Ziege |
 | W1\_BRUE\_MAX\_1020 | Max | Behalt ihn noch kurz an. Vielleicht gibt's ja eine Fortsetzung. |  |
 | W1\_BRUE\_PIX\_1030 | Pixel | Ich hasse Fortsetzungen. | Pixel legt das Fell ab; Vorleger zurück ins Inventar |
 | W1\_BRUE\_MAX\_1040 | Max | Der Troll badet, und die Brücke ist frei. Ich geh jetzt einfach drüber, wie ein ganz normaler Mensch. | Ansehen: Brücke; nach R4 |
 | W1\_BRUE\_MAX\_1045 | Max | Er planscht und singt dabei leise vor sich hin. Ich glaube, er ist glücklich. Ich geh trotzdem lieber schnell. | Ansehen: Brücke, zweites Mal; nach R4 |
 | W1\_BRUE\_WAL\_1050 | Waldemar | Noch ein Eimer? Paragraf drei ist erfüllt. Mehr Wasser wäre Luxus. Ich nehme ihn trotzdem. Nein. Regel ist Regel. | Eimer mit Wasser auf Waldemar; nach R4 |
-| W1\_BRUE\_WAL\_1060 | Waldemar | Wasser? Jetzt schon? Paragraf eins: Erst das Märchen, dann das Bad. Und keine deiner Ziegen hat bisher einen ganzen Satz gesagt. | Eimer mit Wasser auf Waldemar; vor R4b |
+| W1\_BRUE\_WAL\_1060 | Waldemar | Wasser? Jetzt schon? Das Bad ist Paragraf drei. Erst das Märchen, dann das Bad. Und keine deiner Ziegen hat bisher einen ganzen Satz gesagt. | Eimer mit Wasser auf Waldemar; vor R4b |
 | W1\_BRUE\_WAL\_1070 | Waldemar | Finger weg von meinem Bach. Paragraf elf: Wasser bleibt, wo es wohnt. Hol dir eigenes. | leerer Eimer auf Bach |
 
 Szene beim ersten Betreten der Troll-Brücke (einmalig):
@@ -905,7 +903,7 @@ Gespräch mit Rotkäppchen:
 | W1\_WALD\_MAX\_0210 | Max | Was lieferst du so? | Option Rotkäppchen |
 | W1\_WALD\_ROT\_0220 | Rotkäppchen | Alles. Kuchen, Wein, Ziegen, Omas. Omas sind am schwersten zu verpacken. | zählt an den Fingern |
 | W1\_WALD\_MAX\_0221 | Max | Omas? Mehrere? |  |
-| W1\_WALD\_ROT\_0222 | Rotkäppchen | Meine. Sie zieht dauernd um, immer tiefer in den Wald. Wegen der Ruhe, sagt sie. | zuckt mit den Schultern |
+| W1\_WALD\_ROT\_0222 | Rotkäppchen | Meine. Sie ist dauernd umgezogen, immer tiefer in den Wald. Wegen der Ruhe, hat sie gesagt. | zuckt mit den Schultern |
 | W1\_WALD\_MAX\_0230 | Max | Kann ich eine Flasche Ketchup haben? | Option Rotkäppchen (bleibt) |
 | W1\_WALD\_ROT\_0240 | Rotkäppchen | Der ist für die Goblins. Die bestellen jede Woche Ketchup und nie Pommes. Nimm eine, die merken's nicht. Die zählen in Fackeln. | gibt den Ketchup frei |
 | W1\_WALD\_MAX\_0241 | Max | Die Goblins zählen in Fackeln? |  |
@@ -1003,7 +1001,7 @@ Gespräch mit Zeldina, vor dem Team:
 | W1\_LUFT\_MAX\_0210 | Max | Du bist die Prinzessin? | Option Zeldina |
 | W1\_LUFT\_ZEL\_0220 | Zeldina | Zeldina. Ohne Prinzessin, bitte. Ich suche eine Wohnung, keinen Retter. | stellt den Karton ab |
 | W1\_LUFT\_MAX\_0830 | Max | Und der Drache? Der Turm? Das ganze Entführungsding? |  |
-| W1\_LUFT\_ZEL\_0840 | Zeldina | Der Drache war der Vermieter. Der Turm war zu teuer. Und entführt hat mich nur die Nebenkostenabrechnung. |  |
+| W1\_LUFT\_ZEL\_0840 | Zeldina | Der letzte Drache war mein Vermieter. Sein Turm war zu teuer. Und entführt hat mich nur die Nebenkostenabrechnung. |  |
 | W1\_LUFT\_MAX\_0230 | Max | Toadi sucht dich überall. | Option Zeldina |
 | W1\_LUFT\_ZEL\_0240 | Zeldina | Toadi sucht mich seit drei Jahren. Er ist sehr gut im Suchen und sehr schlecht im Finden. Ich hab ihm dreimal die Adresse geschickt. |  |
 | W1\_LUFT\_MAX\_0850 | Max | Und er hat sie nie gelesen? |  |
@@ -1023,7 +1021,7 @@ Rätsel 9: Gespräch mit der Maklerin, drei Optionen, eine führt zum Ziel. Die 
 | ID | Sprecher | Text | Regie |
 | --- | --- | --- | --- |
 | W1\_LUFT\_MAX\_0410 | Max | Zwei Monatsmieten? | Option Maklerin, Feilschen |
-| W1\_LUFT\_MAK\_0420 | Maklerin | Vier. Feilschen kostet extra. Fünf, wenn du so weiterguckst. | notiert |
+| W1\_LUFT\_MAK\_0420 | Maklerin | Vier. Feilschen kostet extra. Fünf, wenn Sie so weitergucken. | notiert |
 | W1\_LUFT\_ZEL\_0430 | Zeldina | Lass es. Ich bin bei sechs. | nach 0420 |
 | W1\_LUFT\_MAX\_0440 | Max | Ich hätte einen Kater als Mitbewohner anzubieten. | Option Maklerin, Haustier |
 | W1\_LUFT\_MAK\_0450 | Maklerin | Haustier? Katzenzuschlag. Plus Haarzuschlag. Plus Zuschlag für den Blick, den er mir gerade zuwirft. |  |
@@ -1127,7 +1125,7 @@ Gespräch mit Grimmzahn:
 | W1\_BERG\_MAX\_0370 | Max | Wie komm ich durch? | Option Grimmzahn |
 | W1\_BERG\_GRI\_0380 | Grimmzahn | Gar nicht. Oder du gibst uns Licht und unterschreibst. Oder du machst mir ein besseres Angebot. Ich bin Gewerkschafter, keine Mauer. |  |
 | W1\_BERG\_MAX\_0830 | Max | Was für ein Angebot? |  |
-| W1\_BERG\_GRI\_0840 | Grimmzahn | Eins mit Zukunft. Und mit Schlüsseln. Ein Goblin ohne Schlüssel ist nur ein grüner Mann im Dunkeln. |  |
+| W1\_BERG\_GRI\_0840 | Grimmzahn | Eins mit Zukunft. Und mit Schlüsseln. Ein Goblin ohne Schlüssel steht vor jeder Tür wie ein Kunde. |  |
 | W1\_BERG\_MAX\_0390 | Max | Wie wär's mit einem Posten als Hausmeister im Dunklen Turm? | Option Grimmzahn; nur mit Zeldina im Team; Weg B |
 | W1\_BERG\_GRI\_0400 | Grimmzahn | Hausmeister? Mit Schlüsselbund? Eigenem Keller? … Wer bürgt? | misstrauisch |
 | W1\_BERG\_ZEL\_0410 | Zeldina | Ich. Der Turm wird demnächst neu vergeben. Ich hätte gern jemanden, der sich über alles beschwert. Das hält die Mieter wach. |  |
@@ -1288,7 +1286,7 @@ Gespräch mit Smaugi:
 | W1\_SMAU\_MAX\_0370 | Max | Warum sammelst du das alles? | Option Smaugi |
 | W1\_SMAU\_SMA\_0380 | Smaugi | Ich sammle nicht. Ich bewahre. Für den Fall. Welchen Fall? Den Fall! Irgendeinen Fall! | schnieft |
 | W1\_SMAU\_PIX\_0870 | Pixel | Ich kenne das. Ich bewahre auch, und zwar unter dem Sofa. // Was genau, verrate ich nicht. Aber es ist sehr gut sortiert, und ein Teil davon ist eine Olive. |  |
-| W1\_SMAU\_SMA\_0880 | Smaugi | Eine Kollegin! Was bewahrst du? Nein, sag es nicht. Ich will es auch haben. |  |
+| W1\_SMAU\_SMA\_0880 | Smaugi | Ein Kollege! Was bewahrst du? Nein, sag es nicht. Ich will es auch haben. |  |
 | W1\_SMAU\_MAX\_0390 | Max | Bis gleich. | Option Smaugi, beendet das Gespräch |
 | W1\_SMAU\_SMA\_0400 | Smaugi | Geh nur. Aber nimm nichts mit. Doch, nimm. Nein. Ach. |  |
 
@@ -1310,6 +1308,7 @@ Rätsel 12: drei Schätze, drei Abnehmer. Max zieht einen Gegenstand auf den pas
 | W1\_SMAU\_SMA\_0620 | Smaugi | Nimm das Ei. Es war nie meins. Es hat nur hier gelegen, und ich hab es gewärmt. Das ist das Einzige, was ich kann. | gibt das Drachenei; R12 gelöst |
 | W1\_SMAU\_MAX\_0630 | Max | Ich pass drauf auf. Opa sagt, es muss ganz bleiben, alles hängt davon ab. Ich weiß bloß immer noch nicht, was eigentlich. | Inventar: Drachenei |
 | W1\_SMAU\_PIX\_0640 | Pixel | Ein Ei, von einem Drachen gewärmt. // Wenn das nicht weich wird, dann wird überhaupt nichts mehr weich auf dieser Welt. |  |
+| W1\_SMAU\_MAX\_0645 | Max | Ich hab das Ei. Ich könnte jetzt gehen. // … Zeldina hat immer noch keine Wohnung. | nach 0640 |
 | W1\_SMAU\_GRI\_0650 | Grimmzahn | Schwerter? Wir hauen Steine, keine Ritter. | Schwerter auf Grimmzahn |
 | W1\_SMAU\_ZEL\_0660 | Zeldina | Fackeln in einem Turm voller Holz? Nein danke. Ich hab Pläne mit dem Turm. | Fackeln auf Zeldina |
 | W1\_SMAU\_HUM\_0670 | Humbert | Zu fein für den Pony-Express. Bei mir hängen Schinken von der Decke. | Kronleuchter auf Humbert |
@@ -1486,18 +1485,18 @@ Ein Klick auf die Figur, wenn im Gesprächsmenü nur noch „Tschüss“ übrig 
 | W1\_ABS\_TOA\_0090 | Toadi | Danke fürs Zuhören! Aber die Antworten, die du suchst, sind in einem anderen Gespräch! | Reden: Toadi, Gespräch erschöpft |
 | W1\_ABS\_TOA\_0100 | Toadi | Ich hab dir alles erzählt! Zweimal! Einmal davon mit Hut! | Reden: Toadi, Gespräch erschöpft |
 | W1\_ABS\_STA\_0110 | Stabmacher | Der Kunde wählt den Stab nicht. Und das Gespräch wählt den Kunden nicht. Wir sind fertig. | Reden: Stabmacher, Gespräch erschöpft |
-| W1\_ABS\_STA\_0120 | Stabmacher | Kommen Sie wieder, wenn Sie einen Stab brauchen. Oder eine Erklärung. Ich habe keine von beiden. | Reden: Stabmacher, Gespräch erschöpft |
+| W1\_ABS\_STA\_0120 | Stabmacher | Komm wieder, wenn du einen Stab brauchst. Oder eine Erklärung. Ich habe keine von beiden. | Reden: Stabmacher, Gespräch erschöpft |
 | W1\_ABS\_SMA\_0130 | Smaugi | Ich habe dir alles erzählt. Jetzt muss ich abstauben. Gold staubt so schnell ein. | Reden: Smaugi, Gespräch erschöpft |
 | W1\_ABS\_SMA\_0140 | Smaugi | Kein Wort mehr. Mein Rücken braucht Ruhe. Und mein Hort braucht Ordnung. | Reden: Smaugi, Gespräch erschöpft |
 | W1\_ABS\_SCH\_0150 | Schmied | Ich hab dir alles erzählt. Jetzt schmiede ich. Die Ziege meckert. So ist die Arbeitsteilung. | Reden: Schmied, Gespräch erschöpft |
-| W1\_ABS\_SCH\_0160 | Schmied | Mehr hab ich nicht. Und wenn doch, hat es schon einen Namen. | Reden: Schmied, Gespräch erschöpft |
+| W1\_ABS\_SCH\_0160 | Schmied | Mehr hab ich nicht. Nur noch Blech. | Reden: Schmied, Gespräch erschöpft |
 | W1\_ABS\_ROT\_0170 | Rotkäppchen | Alles gesagt, alles geliefert. Wenn du noch was willst: Bestellzettel. Zehn Minuten oder gratis. | Reden: Rotkäppchen, Gespräch erschöpft |
 | W1\_ABS\_ROT\_0180 | Rotkäppchen | Ich muss weiter. Oma wartet. Der Wolf auch. Beide nicht gern. | Reden: Rotkäppchen, Gespräch erschöpft |
 | W1\_ABS\_GRI\_0190 | Grimmzahn | Die Verhandlungen sind abgeschlossen. Weitere Gespräche nur mit Tagesordnung und Kaffee. | Reden: Grimmzahn, Gespräch erschöpft |
 | W1\_ABS\_GRI\_0200 | Grimmzahn | Kein Kommentar. Das ist nicht unhöflich. Das ist Gewerkschaft. | Reden: Grimmzahn, Gespräch erschöpft |
 | W1\_ABS\_GOL\_0210 | Gollo | Alles gesagt, alles. Jetzt schweigen wirsss. Wir und unser Kummer. | Reden: Gollo, Gespräch erschöpft |
-| W1\_ABS\_GOL\_0220 | Gollo | Geh, geh. Unser Gold ist weg, unsere Worte auch. Nur das Ssschätzchen bleibt. Niemand will es. | Reden: Gollo, Gespräch erschöpft |
-| W1\_ABS\_MAK\_0225 | Maklerin | Bring mir ein Objekt, dann reden wir. | Reden: Maklerin, Gespräch erschöpft |
+| W1\_ABS\_GOL\_0220 | Gollo | Geh, geh. Meine Worte sind weg. Nur das Ssschätzchen bleibt. Niemand will es. | Reden: Gollo, Gespräch erschöpft |
+| W1\_ABS\_MAK\_0225 | Maklerin | Bringen Sie mir ein Objekt, dann reden wir. | Reden: Maklerin, Gespräch erschöpft |
 | W1\_ABS\_MAK\_0230 | Maklerin | Für weitere Fragen vereinbaren Sie bitte einen Besichtigungstermin. Den nächsten habe ich in drei Jahren. | Reden: Maklerin, Gespräch erschöpft |
 | W1\_ABS\_MAK\_0240 | Maklerin | Ich habe Ihnen alles gezeigt. Alles andere steht im Kleingedruckten. Das ist sehr klein. | Reden: Maklerin, Gespräch erschöpft |
 

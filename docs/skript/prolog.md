@@ -73,7 +73,7 @@ Durchgang zwischen Wohnzimmer und Dachboden, mehrere Ansehen-Objekte und die Tre
 | --- | --- | --- | --- |
 | P0\_TREP\_MAX\_0010 | Max | Opas Hut. Am Band steckt eine Feder, entweder vom Fasan oder aus dem Kopfkissen. Bei Opa ist beides möglich. | Ansehen: Hut am Haken |
 | P0\_TREP\_MAX\_0015 | Max | Der Hut riecht nach Lötzinn und Pfefferminz. Also im Grunde genau wie Opa, wenn man ihn umarmt. | Ansehen: Hut am Haken, zweites Mal |
-| P0\_TREP\_MAX\_0020 | Max | Draußen wird es langsam dunkel. Drinnen ist es, wenn man sich die Tapete ansieht, ungefähr 1987. | Ansehen: Fenster |
+| P0\_TREP\_MAX\_0020 | Max | Draußen ist bestes Wetter. Drinnen ist es, wenn man sich die Tapete ansieht, ungefähr 1987. | Ansehen: Fenster |
 | P0\_TREP\_MAX\_0025 | Max | Auf der Fensterbank stand mal ein Kaktus. Opa hat ihn jeden Tag gegossen. Ich glaube, daran ist er gestorben. | Ansehen: Fenster, zweites Mal |
 | P0\_TREP\_MAX\_0030 | Max | Jede Stufe knarrt in einer anderen Tonart. Opa nennt das seine Alarmanlage, und ehrlich, sie funktioniert. | Ansehen: Treppe |
 | P0\_TREP\_MAX\_0035 | Max | Die siebte Stufe knarrt in Moll. Über die steig ich immer drüber, ohne WLAN bin ich schon traurig genug. | Ansehen: Treppe, zweites Mal |
@@ -191,7 +191,7 @@ Reden mit Opa und Pixel auf dem Dachboden. Max stellt die Frage, die Antwort fol
 | P0\_DACH\_PIX\_0340 | Pixel | Der redet seit Jahren, junger Mann. Es hat ihm bisher bloß niemand zugehört, und das trage ich keinem nach. Fast keinem. // Aber genug von mir. Ist das Thunfisch in Lake oder in Öl? |  |
 | P0\_DACH\_MAX\_0350 | Max | In Lake. Steht drauf. |  |
 | P0\_DACH\_PIX\_0360 | Pixel | In Lake. Natürlich. Man serviert einem Kater meines Ranges Fisch in Salzwasser, als wäre er ein gewöhnlicher Hafenkater. // Barbarisch. Gib trotzdem her. | frisst, wechselt vom Kabel auf die Werkbank |
-| P0\_DACH\_OPA\_0370 | Opa | Er ist wach! Wunderbar. Pixel kommt mit dir, Max. Er kennt die Welten, und er kennt alle Antworten. | schaltet nebenbei den Zapp-O-Mat ein, der Bildschirm rauscht |
+| P0\_DACH\_OPA\_0370 | Opa | Er ist wach! Wunderbar. Pixel kommt mit dir, Max. Er kennt jede Sendung, die je gelaufen ist, und er kennt alle Antworten. | schaltet nebenbei den Zapp-O-Mat ein, der Bildschirm rauscht |
 | P0\_DACH\_PIX\_0380 | Pixel | Ich kenne tatsächlich alle Antworten. Ich gebe sie nur ungern heraus, denn Wissen sollte man, genau wie Thunfisch, nicht verschwenden. // Wer also festhängt, darf meine Pfote drücken. Höflich, bitte. Und nicht zu oft. | Hilfe-Pfote leuchtet zum ersten Mal auf, Kaskade |
 | P0\_DACH\_MAX\_0390 | Max | Ein Kater mit eingebauter Hilfefunktion. Ich hab schon Schlimmeres heruntergeladen. |  |
 
@@ -224,7 +224,7 @@ Opas Ausrede zum roten Kreis (1362 bis 1366) steht als Option im Gesprächsbaum,
 | P0\_DACH\_MAX\_0620 | Max | Ein Kalender, und ein Tag ist dick rot eingekreist. Entweder ein Geburtstag oder ein Zahnarzttermin. Bei beiden würde Opa so gucken. | Ansehen: Kalender |
 | P0\_DACH\_MAX\_0630 | Max | Und daneben, ganz klein mit Bleistift: „K3 – Schwurbelstein“. | nach 0620; öffnet die Nahansicht Kalender, Max kennt ab jetzt die Nummer |
 | P0\_DACH\_MAX\_0670 | Max | Kanal 3. Da wären wir. | Benutzen: Drehknopf; nach P2 und nach 0630, löst P3 |
-| P0\_DACH\_MAX\_0680 | Max | Kanal 4. Das ist ein Testbild, und es ist das Langweiligste, was ich heute gesehen hab. Und ich hab Opas Zeitung gesehen. | Benutzen: Drehknopf nach P2, bevor Max die Nummer kennt (Testbild Kanal 4) |
+| P0\_DACH\_MAX\_0680 | Max | Kanal 4. Bunte Streifen und ein Pfeifton. Das Langweiligste, was ich heute gesehen hab. Und ich hab Opas Zeitung gesehen. | Benutzen: Drehknopf nach P2, bevor Max die Nummer kennt (Testbild Kanal 4) |
 | P0\_DACH\_OPA\_0690 | Opa | Halt! Halt, halt! Erst die Tasche! | Bildschirm zeigt den Wirbel |
 
 ## 6. Die Reisetasche

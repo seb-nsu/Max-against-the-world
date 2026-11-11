@@ -374,7 +374,9 @@ func benutzen_drehknopf(_obj, _x) -> bool:
 func benutzen_zeldina(_obj, _x) -> bool:
 	if _raum_id() != "dachboden":
 		return false
-	var fragen := ["FI_RUF_MAX_0320", "FI_RUF_MAX_0340", "FI_RAET_MAX_0090" if _g("F1a") else "FI_RAET_MAX_0010",
+	# Nach Schritt A zählt Max auf, wer da ist: mit Modell 08/15 die Zeile 0090, ohne ihn 0095
+	var wer_da: String = "FI_RAET_MAX_0090" if Zustand.ist("FREUND_0815") else "FI_RAET_MAX_0095"
+	var fragen := ["FI_RUF_MAX_0320", "FI_RUF_MAX_0340", wer_da if _g("F1a") else "FI_RAET_MAX_0010",
 		"UI_FI_ZELDINA_OFEN", "UI_MENUE_ZURUECK"]
 	match await Spiel.auswahl(fragen):
 		0:
@@ -383,7 +385,7 @@ func benutzen_zeldina(_obj, _x) -> bool:
 			await _szene(["FI_RUF_MAX_0340", "FI_RUF_ZEL_0350", "FI_RUF_MAX_0400", "FI_RUF_ZEL_0410"])
 		2:
 			if _g("F1a"):
-				await _szene(["FI_RAET_MAX_0090", "FI_RAET_ZEL_0100"])
+				await _szene([wer_da, "FI_RAET_ZEL_0100"])
 			else:
 				await _szene(["FI_RAET_MAX_0010", "FI_RAET_ZEL_0020", "FI_RAET_NAR_0030", "FI_RAET_ZEL_0040",
 					"FI_RAET_MAX_0050", "FI_RAET_PIX_0060", "FI_RAET_MAX_0070", "FI_RAET_OPA_0080"])

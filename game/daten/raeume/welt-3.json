@@ -3049,6 +3049,7 @@
         "W3_KUCH_PIX_0535",
         "W3_KUCH_PIX_0535_2"
        ],
+       "bedingung_text": "Pixel auf der Leitung",
        "mal": 2
       }
      ],
@@ -3627,6 +3628,7 @@
         "W3_TURM_PIX_0235",
         "W3_TURM_PIX_0235_2"
        ],
+       "bedingung_text": "Pixel auf der Leitung",
        "mal": 2
       }
      ]
@@ -6511,6 +6513,7 @@
      "blasen": [
       "W3_INV_PIX_0045"
      ],
+     "bedingung_text": "Pixel auf der Leitung",
      "mal": 2,
      "zustand": "kalt"
     },

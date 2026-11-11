@@ -9010,22 +9010,6 @@
         "W1_SCHM_SCH_0260"
        ],
        "regie": ""
-      },
-      {
-       "zeile": "W1_SCHM_MAX_0770",
-       "sprecher": "MAX",
-       "blasen": [
-        "W1_SCHM_MAX_0770"
-       ],
-       "regie": ""
-      },
-      {
-       "zeile": "W1_SCHM_SCH_0780",
-       "sprecher": "SCH",
-       "blasen": [
-        "W1_SCHM_SCH_0780"
-       ],
-       "regie": ""
       }
      ],
      "beendet": false,

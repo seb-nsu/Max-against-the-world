@@ -969,7 +969,7 @@ P0_WOHN_MAX_0360,"Ich lese keine Zeitung. Da kann man nicht mal drunter kommenti
 P0_WOHN_MAX_0365,"Senkrecht drei: „Funknetz, vier Buchstaben“. Opa hat „NEIN“ eingetragen. Das ist keine Lösung, das ist eine Haltung.","Three down: ""Wireless network, four letters"". Grandpa wrote ""NOPE"". That's not an answer, that's an attitude."
 P0_TREP_MAX_0010,"Opas Hut. Am Band steckt eine Feder, entweder vom Fasan oder aus dem Kopfkissen. Bei Opa ist beides möglich.","Grandpa's hat. There's a feather in the band, either from a pheasant or from a pillow. With Grandpa, either is possible."
 P0_TREP_MAX_0015,"Der Hut riecht nach Lötzinn und Pfefferminz. Also im Grunde genau wie Opa, wenn man ihn umarmt.",The hat smells of solder and peppermint. So basically exactly like Grandpa when you hug him.
-P0_TREP_MAX_0020,"Draußen wird es langsam dunkel. Drinnen ist es, wenn man sich die Tapete ansieht, ungefähr 1987.","It's slowly getting dark outside. Inside, judging by the wallpaper, it's roughly 1987."
+P0_TREP_MAX_0020,"Draußen ist bestes Wetter. Drinnen ist es, wenn man sich die Tapete ansieht, ungefähr 1987.","The weather's glorious outside. Inside, judging by the wallpaper, it's roughly 1987."
 P0_TREP_MAX_0025,"Auf der Fensterbank stand mal ein Kaktus. Opa hat ihn jeden Tag gegossen. Ich glaube, daran ist er gestorben.",There used to be a cactus on the windowsill. Grandpa watered it every day. I think that's what killed it.
 P0_TREP_MAX_0030,"Jede Stufe knarrt in einer anderen Tonart. Opa nennt das seine Alarmanlage, und ehrlich, sie funktioniert.","Every step creaks in a different key. Grandpa calls it his alarm system, and honestly, it works."
 P0_TREP_MAX_0035,"Die siebte Stufe knarrt in Moll. Über die steig ich immer drüber, ohne WLAN bin ich schon traurig genug.",The seventh step creaks in a minor key. I always step over it. Without Wi-Fi I'm sad enough already.
@@ -1073,7 +1073,7 @@ P0_DACH_PIX_0340_2,Aber genug von mir. Ist das Thunfisch in Lake oder in Öl?,Bu
 P0_DACH_MAX_0350,In Lake. Steht drauf.,In brine. It says so on the tin.
 P0_DACH_PIX_0360,"In Lake. Natürlich. Man serviert einem Kater meines Ranges Fisch in Salzwasser, als wäre er ein gewöhnlicher Hafenkater.","In brine. Of course. One serves a cat of my standing fish in salt water, as if he were some common harbour cat."
 P0_DACH_PIX_0360_2,Barbarisch. Gib trotzdem her.,Barbaric. Hand it over anyway.
-P0_DACH_OPA_0370,"Er ist wach! Wunderbar. Pixel kommt mit dir, Max. Er kennt die Welten, und er kennt alle Antworten.","He's awake! Wonderful. Pixel's going with you, Max. He knows the worlds, and he knows all the answers."
+P0_DACH_OPA_0370,"Er ist wach! Wunderbar. Pixel kommt mit dir, Max. Er kennt jede Sendung, die je gelaufen ist, und er kennt alle Antworten.","He's awake! Wonderful. Pixel's going with you, Max. He knows every programme that ever aired, and he knows all the answers."
 P0_DACH_PIX_0380,"Ich kenne tatsächlich alle Antworten. Ich gebe sie nur ungern heraus, denn Wissen sollte man, genau wie Thunfisch, nicht verschwenden.","I do indeed know all the answers. I simply dislike giving them out, for knowledge, like tuna, should not be wasted."
 P0_DACH_PIX_0380_2,"Wer also festhängt, darf meine Pfote drücken. Höflich, bitte. Und nicht zu oft.","So whoever is stuck may press my paw. Politely, please. And not too often."
 P0_DACH_MAX_0390,Ein Kater mit eingebauter Hilfefunktion. Ich hab schon Schlimmeres heruntergeladen.,A cat with a built-in help function. I've downloaded worse.
@@ -1097,7 +1097,7 @@ P0_DACH_OPA_0610,"Ich hab ihn mir aufgeschrieben, ganz bestimmt. Irgendwo, wo ic
 P0_DACH_MAX_0620,"Ein Kalender, und ein Tag ist dick rot eingekreist. Entweder ein Geburtstag oder ein Zahnarzttermin. Bei beiden würde Opa so gucken.","A calendar, and one day is circled in thick red. Either a birthday or a dentist appointment. Grandpa would look like that for both."
 P0_DACH_MAX_0630,"Und daneben, ganz klein mit Bleistift: „K3 – Schwurbelstein“.","And next to it, very small, in pencil: ""Ch3 – Waffleton""."
 P0_DACH_MAX_0670,Kanal 3. Da wären wir.,Channel 3. Here we go.
-P0_DACH_MAX_0680,"Kanal 4. Das ist ein Testbild, und es ist das Langweiligste, was ich heute gesehen hab. Und ich hab Opas Zeitung gesehen.","Channel 4. That's a test card, and it's the most boring thing I've seen today. And I've seen Grandpa's newspaper."
+P0_DACH_MAX_0680,"Kanal 4. Bunte Streifen und ein Pfeifton. Das Langweiligste, was ich heute gesehen hab. Und ich hab Opas Zeitung gesehen.",Channel 4. Coloured stripes and a whistling tone. The most boring thing I've seen today. And I've seen Grandpa's newspaper.
 P0_DACH_OPA_0690,"Halt! Halt, halt! Erst die Tasche!","Stop! Stop, stop! The bag first!"
 P0_DACH_OPA_0810,"Meine Reisetasche. Notizbuch und Thunfisch reisen immer mit, das ist das Pflichtfach. Alles andere entscheidest du.","My travel bag. The notebook and the tuna always travel with you, that's the mandatory pocket. Everything else is up to you."
 P0_DACH_PIX_0820,"Der Thunfisch ist die erste vernünftige Entscheidung, die heute in diesem Haus getroffen wurde.",The tuna is the first sensible decision anyone has made in this house today.
@@ -1335,7 +1335,7 @@ W1_ANK_MAX_0010,Au.,Ow.
 W1_ANK_PIX_0020,"Ich bin, wie es sich für einen Kater gehört, auf allen vier Pfoten gelandet. Du bist auf dem Gesicht gelandet.","I landed on all four paws, as befits a cat. You landed on your face."
 W1_ANK_PIX_0020_2,"Jeder, wie er kann, junger Mann. Ich urteile nicht, ich stelle nur fest.","Everyone does what they can, young man. I'm not judging, I'm merely observing."
 W1_ANK_MAX_0030,Wo sind wir überhaupt? Und warum riecht es hier so nach Stall?,"Where are we, anyway? And why does it smell so much like a barn?"
-W1_ANK_PIX_0040,"Auf Kanal 3, wenn ich die Fernbedienung richtig gelesen habe, und ich lese Fernbedienungen grundsätzlich richtig.","Channel 3, if I read the remote correctly, and I always read remotes correctly."
+W1_ANK_PIX_0040,"Auf Kanal 3, wenn ich den Drehknopf richtig gelesen habe, und ich lese Drehknöpfe grundsätzlich richtig.","Channel 3, if I read the dial correctly, and I always read dials correctly."
 W1_ANK_PIX_0040_2,"Es riecht nach Stroh, nach Bier und nach Leuten, die „Wohlan“ sagen, ohne dabei rot zu werden.","It smells of straw, of beer and of people who say ""Prithee"" without blushing."
 W1_ANK_MAX_0050,"Fantasy also. Die Staffel hab ich übersprungen, weil die erste Folge fast nur aus Landkarten bestand.","Fantasy, then. I skipped that season, because the first episode was basically just maps."
 W1_ANK_PIX_0051,"Dann holst du sie eben jetzt nach, und zwar live. Außerdem wollte dein Großvater, dass du seinen Zettel liest.","Then you'll catch up now, live. Besides, your grandfather wanted you to read his note."
@@ -1651,7 +1651,7 @@ W1_TAV_HUH_1440,Gaaack.,Bwaaak.
 W1_TAV_PIX_1450,Ein Ei. Weich gekocht. Zum Frühstück. Das kommt auf meine Liste.,An egg. Soft-boiled. For breakfast. That's going on my list.
 W1_TAV_PIX_1450_2,"Nicht dieses hier, wohlgemerkt, sondern ein eigenes. Ich teile meine Eier nicht mit Kesseln.","Not this one, mind you, but one of my own. I do not share my eggs with cauldrons."
 W1_TAV_HUH_1460,Gack gack. Gaack.,Bok bok. Bwaak.
-W1_TAV_PIX_1470,"Sie heißt Hilde. Sie legt, seit sie denken kann, und sie denkt nicht viel.","Her name is Hilda. She's been laying for as long as she can think, and she doesn't think much."
+W1_TAV_PIX_1470,"Sie heißt Berta. Sie legt, seit sie denken kann, und sie denkt nicht viel.","Her name is Berta. She's been laying for as long as she can think, and she doesn't think much."
 W1_TAV_PIX_1470_2,"Sie sagt, das Ei riecht nach Schule, was auch immer das heißen soll. Hühner sind keine großen Erklärer.","She says the egg smells of school, whatever that means. Chickens are not great explainers."
 W1_TAV_MAX_1480,Thunfisch in Käse. Auch ich hab irgendwo Grenzen.,Tuna in cheese. Even I have limits somewhere.
 W1_TAV_PIX_1490,"Es gibt keine Grenzen. Aber es gibt meine Dose, und die bleibt draußen.","There are no limits. But there is my tin, and it stays out of this."
@@ -1706,8 +1706,6 @@ W1_SCHM_MAX_0750,Und warum jagst du sie nicht weg?,So why don't you chase her of
 W1_SCHM_SCH_0760,Hab ich versucht. Sie war schneller wieder da als ich. Seitdem nenne ich sie Kollegin.,I tried. She was back faster than I was. Since then I call her my colleague.
 W1_SCHM_MAX_0250,Was ist das für ein Schwert in ihrem Maul?,What's that sword in her mouth?
 W1_SCHM_SCH_0260,"Das war Ingrid. Humbert wollte sie für seine Sammlung. Jetzt ist sie Ziegenfutter. Sag ihm nichts, er hängt an Namen.","That was Ingrid. Humbert wanted her for his collection. Now she's goat food. Don't tell him, he gets attached to names."
-W1_SCHM_MAX_0770,Du hast deinen Schwertern Namen gegeben?,You gave your swords names?
-W1_SCHM_SCH_0780,"Jedes Schwert hat einen Namen. Ingrid, Helga, Kurt. Kurt war ein Missverständnis.","Every sword has a name. Ingrid, Helga, Kurt. Kurt was a misunderstanding."
 W1_SCHM_MAX_0270,Kann ich die Ziege haben?,Can I have the goat?
 W1_SCHM_SCH_0280,"Du willst sie? Nimm sie! Nimm sie mit! Ich schmiede dir ein Denkmal! Aus Blech, aber ein Denkmal!","You want her? Take her! Take her with you! I'll forge you a monument! Out of tin, but a monument!"
 W1_SCHM_ZIE_0290,Mäh.,Baa.
@@ -2041,14 +2039,14 @@ W1_BRUE_WAL_0970,Regel erfüllt. Ahhh.,Rule fulfilled. Ahhh.
 W1_BRUE_MAX_0980,Fußbad. Zählt.,Footbath. Counts.
 W1_BRUE_PIX_0990,"Die Füße im Eimer und das Gesicht eines Mannes, der zum ersten Mal seit vierzig Jahren Urlaub hat.",Feet in the bucket and the face of a man on his first holiday in forty years.
 W1_BRUE_PIX_0990_2,"Ich kenne diesen Blick. Ich sehe ihn jeden Morgen im Spiegel, kurz nach dem Frühstück.","I know that look. I see it in the mirror every morning, shortly after breakfast."
-W1_BRUE_WAL_1000,Die Brücke ist frei. Und: Regel 14b. Leihgaben sind zurückzugeben.,The bridge is clear. And: rule 14b. Borrowed items are to be returned.
+W1_BRUE_WAL_1000,Die Brücke ist frei. Und: Paragraf 14b. Leihgaben sind zurückzugeben.,The bridge is clear. And: clause 14b. Borrowed items are to be returned.
 W1_BRUE_PIX_1010,Darf ich den Teppich jetzt bitte ausziehen?,"May I take the rug off now, please?"
 W1_BRUE_MAX_1020,Behalt ihn noch kurz an. Vielleicht gibt's ja eine Fortsetzung.,Keep it on a bit longer. Maybe there's a sequel.
 W1_BRUE_PIX_1030,Ich hasse Fortsetzungen.,I hate sequels.
 W1_BRUE_MAX_1040,"Der Troll badet, und die Brücke ist frei. Ich geh jetzt einfach drüber, wie ein ganz normaler Mensch.","The troll's having a bath, and the bridge is free. I'm just going to walk across, like a completely normal person."
 W1_BRUE_MAX_1045,"Er planscht und singt dabei leise vor sich hin. Ich glaube, er ist glücklich. Ich geh trotzdem lieber schnell.","He's splashing about and singing quietly to himself. I think he's happy. I'm still going to hurry, though."
 W1_BRUE_WAL_1050,Noch ein Eimer? Paragraf drei ist erfüllt. Mehr Wasser wäre Luxus. Ich nehme ihn trotzdem. Nein. Regel ist Regel.,Another bucket? Clause three is fulfilled. More water would be a luxury. I'll take it anyway. No. Rules are rules.
-W1_BRUE_WAL_1060,"Wasser? Jetzt schon? Paragraf eins: Erst das Märchen, dann das Bad. Und keine deiner Ziegen hat bisher einen ganzen Satz gesagt.","Water? Already? Clause one: first the fairy tale, then the bath. And none of your goats has said a full line yet."
+W1_BRUE_WAL_1060,"Wasser? Jetzt schon? Das Bad ist Paragraf drei. Erst das Märchen, dann das Bad. Und keine deiner Ziegen hat bisher einen ganzen Satz gesagt.","Water? Already? The bath is clause three. First the fairy tale, then the bath. And none of your goats has said a full line yet."
 W1_BRUE_WAL_1070,"Finger weg von meinem Bach. Paragraf elf: Wasser bleibt, wo es wohnt. Hol dir eigenes.",Hands off my stream. Clause eleven: water stays where it lives. Get your own.
 W1_BRUE_WAL_1210,Halt. Laut Satzung wird hier jeder angehalten. Du bist angehalten.,"Halt. According to the statutes, everyone is stopped here. You are stopped."
 W1_BRUE_MAX_1220,Ich hab die Brücke doch noch gar nicht betreten.,I haven't even set foot on the bridge yet.
@@ -2134,7 +2132,7 @@ W1_WALD_MAX_0730,"Das gehört Rotkäppchen, da frag ich lieber. Wer im Wald einf
 W1_WALD_MAX_0210,Was lieferst du so?,What do you deliver?
 W1_WALD_ROT_0220,"Alles. Kuchen, Wein, Ziegen, Omas. Omas sind am schwersten zu verpacken.","Everything. Cake, wine, goats, grandmas. Grandmas are the hardest to pack."
 W1_WALD_MAX_0221,Omas? Mehrere?,Grandmas? More than one?
-W1_WALD_ROT_0222,"Meine. Sie zieht dauernd um, immer tiefer in den Wald. Wegen der Ruhe, sagt sie.","Mine. She keeps moving, deeper and deeper into the forest. For the peace and quiet, she says."
+W1_WALD_ROT_0222,"Meine. Sie ist dauernd umgezogen, immer tiefer in den Wald. Wegen der Ruhe, hat sie gesagt.","Mine. She kept moving, deeper and deeper into the forest. For the peace and quiet, she said."
 W1_WALD_MAX_0230,Kann ich eine Flasche Ketchup haben?,Can I have a bottle of ketchup?
 W1_WALD_ROT_0240,"Der ist für die Goblins. Die bestellen jede Woche Ketchup und nie Pommes. Nimm eine, die merken's nicht. Die zählen in Fackeln.","That's for the goblins. They order ketchup every week and never chips. Take one, they won't notice. They count in torches."
 W1_WALD_MAX_0241,Die Goblins zählen in Fackeln?,The goblins count in torches?
@@ -2217,7 +2215,7 @@ W1_LUFT_ZEL_0190,"Ein Kater! Komm her. Nein? Gut. Katzen, die nicht kommen, sind
 W1_LUFT_MAX_0210,Du bist die Prinzessin?,You're the princess?
 W1_LUFT_ZEL_0220,"Zeldina. Ohne Prinzessin, bitte. Ich suche eine Wohnung, keinen Retter.","Zeldina. Skip the princess, please. I'm looking for a flat, not a rescuer."
 W1_LUFT_MAX_0830,Und der Drache? Der Turm? Das ganze Entführungsding?,And the dragon? The tower? The whole kidnapping thing?
-W1_LUFT_ZEL_0840,Der Drache war der Vermieter. Der Turm war zu teuer. Und entführt hat mich nur die Nebenkostenabrechnung.,The dragon was the landlord. The tower was too expensive. The only thing that kidnapped me was the service charge bill.
+W1_LUFT_ZEL_0840,Der letzte Drache war mein Vermieter. Sein Turm war zu teuer. Und entführt hat mich nur die Nebenkostenabrechnung.,The last dragon was my landlord. His tower was too expensive. The only thing that kidnapped me was the service charge bill.
 W1_LUFT_MAX_0230,Toadi sucht dich überall.,Toadi is looking for you everywhere.
 W1_LUFT_ZEL_0240,Toadi sucht mich seit drei Jahren. Er ist sehr gut im Suchen und sehr schlecht im Finden. Ich hab ihm dreimal die Adresse geschickt.,Toadi has been looking for me for three years. He's very good at looking and very bad at finding. I've sent him my address three times.
 W1_LUFT_MAX_0850,Und er hat sie nie gelesen?,And he never read it?
@@ -2235,7 +2233,7 @@ W1_LUFT_MAX_0310,Ja. … Trotzdem.,Yes. … Still.
 W1_LUFT_MAX_0320,Später.,Later.
 W1_LUFT_ZEL_0330,Ich bin hier. Zwischen Karton und Klemmbrett.,I'm here. Between box and clipboard.
 W1_LUFT_MAX_0410,Zwei Monatsmieten?,Two months' rent?
-W1_LUFT_MAK_0420,"Vier. Feilschen kostet extra. Fünf, wenn du so weiterguckst.",Four. Haggling costs extra. Five if you keep looking at me like that.
+W1_LUFT_MAK_0420,"Vier. Feilschen kostet extra. Fünf, wenn Sie so weitergucken.",Four. Haggling costs extra. Five if you keep looking at me like that.
 W1_LUFT_ZEL_0430,Lass es. Ich bin bei sechs.,Give up. I'm at six.
 W1_LUFT_MAX_0440,Ich hätte einen Kater als Mitbewohner anzubieten.,I could offer a tomcat as a flatmate.
 W1_LUFT_MAK_0450,"Haustier? Katzenzuschlag. Plus Haarzuschlag. Plus Zuschlag für den Blick, den er mir gerade zuwirft.",A pet? Cat surcharge. Plus hair surcharge. Plus a surcharge for the look he's giving me right now.
@@ -2326,7 +2324,7 @@ W1_BERG_GRI_0360,"Oder etwas, das so aussieht. Wir sind traditionell, nicht gena
 W1_BERG_MAX_0370,Wie komm ich durch?,How do I get through?
 W1_BERG_GRI_0380,"Gar nicht. Oder du gibst uns Licht und unterschreibst. Oder du machst mir ein besseres Angebot. Ich bin Gewerkschafter, keine Mauer.","You don't. Or you give us light and sign. Or you make me a better offer. I'm a trade unionist, not a wall."
 W1_BERG_MAX_0830,Was für ein Angebot?,What kind of offer?
-W1_BERG_GRI_0840,Eins mit Zukunft. Und mit Schlüsseln. Ein Goblin ohne Schlüssel ist nur ein grüner Mann im Dunkeln.,One with a future. And with keys. A goblin without keys is just a green man in the dark.
+W1_BERG_GRI_0840,Eins mit Zukunft. Und mit Schlüsseln. Ein Goblin ohne Schlüssel steht vor jeder Tür wie ein Kunde.,One with a future. And with keys. A goblin without keys stands at every door like a customer.
 W1_BERG_MAX_0390,Wie wär's mit einem Posten als Hausmeister im Dunklen Turm?,How about a job as caretaker of the Dark Tower?
 W1_BERG_GRI_0400,Hausmeister? Mit Schlüsselbund? Eigenem Keller? … Wer bürgt?,Caretaker? With a bunch of keys? My own cellar? … Who vouches for you?
 W1_BERG_ZEL_0410,"Ich. Der Turm wird demnächst neu vergeben. Ich hätte gern jemanden, der sich über alles beschwert. Das hält die Mieter wach.",I do. The tower is about to change hands. I'd like someone who complains about everything. It keeps the tenants alert.
@@ -2480,7 +2478,7 @@ W1_SMAU_MAX_0370,Warum sammelst du das alles?,Why do you collect all this?
 W1_SMAU_SMA_0380,Ich sammle nicht. Ich bewahre. Für den Fall. Welchen Fall? Den Fall! Irgendeinen Fall!,I don't collect. I keep. Just in case. In case of what? In case! Any case!
 W1_SMAU_PIX_0870,"Ich kenne das. Ich bewahre auch, und zwar unter dem Sofa.","I know that feeling. I keep things too, under the sofa."
 W1_SMAU_PIX_0870_2,"Was genau, verrate ich nicht. Aber es ist sehr gut sortiert, und ein Teil davon ist eine Olive.","What exactly, I shan't reveal. But it is very well sorted, and part of it is an olive."
-W1_SMAU_SMA_0880,"Eine Kollegin! Was bewahrst du? Nein, sag es nicht. Ich will es auch haben.","A colleague! What do you keep? No, don't tell me. I'll want it too."
+W1_SMAU_SMA_0880,"Ein Kollege! Was bewahrst du? Nein, sag es nicht. Ich will es auch haben.","A colleague! What do you keep? No, don't tell me. I'll want it too."
 W1_SMAU_MAX_0390,Bis gleich.,See you in a bit.
 W1_SMAU_SMA_0400,"Geh nur. Aber nimm nichts mit. Doch, nimm. Nein. Ach.","Off you go. But don't take anything. No, do take something. No. Oh."
 W1_SMAU_SMA_0510,Macht dich das glücklich?,Does that make you happy?
@@ -2498,6 +2496,8 @@ W1_SMAU_SMA_0620,"Nimm das Ei. Es war nie meins. Es hat nur hier gelegen, und ic
 W1_SMAU_MAX_0630,"Ich pass drauf auf. Opa sagt, es muss ganz bleiben, alles hängt davon ab. Ich weiß bloß immer noch nicht, was eigentlich.","I'll look after it. Grandpa says it has to stay whole, everything depends on it. I still just don't know what, exactly."
 W1_SMAU_PIX_0640,"Ein Ei, von einem Drachen gewärmt.","An egg, warmed by a dragon."
 W1_SMAU_PIX_0640_2,"Wenn das nicht weich wird, dann wird überhaupt nichts mehr weich auf dieser Welt.","If that doesn't turn out soft, then nothing in this world will ever be soft again."
+W1_SMAU_MAX_0645,Ich hab das Ei. Ich könnte jetzt gehen.,I've got the egg. I could leave now.
+W1_SMAU_MAX_0645_2,… Zeldina hat immer noch keine Wohnung.,… Zeldina still doesn't have a flat.
 W1_SMAU_GRI_0650,"Schwerter? Wir hauen Steine, keine Ritter.","Swords? We hit stones, not knights."
 W1_SMAU_ZEL_0660,Fackeln in einem Turm voller Holz? Nein danke. Ich hab Pläne mit dem Turm.,Torches in a tower full of wood? No thanks. I have plans for this tower.
 W1_SMAU_HUM_0670,Zu fein für den Pony-Express. Bei mir hängen Schinken von der Decke.,"Too posh for the Pony Express. At my place, hams hang from the ceiling."
@@ -2653,18 +2653,18 @@ W1_ABS_ALW_0080,Du wirst nicht vorbeikommen. An mir. Ich meine: an weiteren Antw
 W1_ABS_TOA_0090,"Danke fürs Zuhören! Aber die Antworten, die du suchst, sind in einem anderen Gespräch!",Thanks for listening! But the answers you're looking for are in another conversation!
 W1_ABS_TOA_0100,Ich hab dir alles erzählt! Zweimal! Einmal davon mit Hut!,I've told you everything! Twice! Once with a hat!
 W1_ABS_STA_0110,Der Kunde wählt den Stab nicht. Und das Gespräch wählt den Kunden nicht. Wir sind fertig.,The customer doesn't choose the wand. And the conversation doesn't choose the customer. We're done.
-W1_ABS_STA_0120,"Kommen Sie wieder, wenn Sie einen Stab brauchen. Oder eine Erklärung. Ich habe keine von beiden.",Come back when you need a wand. Or an explanation. I have neither.
+W1_ABS_STA_0120,"Komm wieder, wenn du einen Stab brauchst. Oder eine Erklärung. Ich habe keine von beiden.",Come back when you need a wand. Or an explanation. I have neither.
 W1_ABS_SMA_0130,Ich habe dir alles erzählt. Jetzt muss ich abstauben. Gold staubt so schnell ein.,I've told you everything. Now I have to dust. Gold gets dusty so fast.
 W1_ABS_SMA_0140,Kein Wort mehr. Mein Rücken braucht Ruhe. Und mein Hort braucht Ordnung.,Not another word. My back needs rest. And my hoard needs order.
 W1_ABS_SCH_0150,Ich hab dir alles erzählt. Jetzt schmiede ich. Die Ziege meckert. So ist die Arbeitsteilung.,I've told you everything. Now I forge. The goat bleats. That's the division of labour.
-W1_ABS_SCH_0160,"Mehr hab ich nicht. Und wenn doch, hat es schon einen Namen.","That's all I've got. And if there's more, it already has a name."
+W1_ABS_SCH_0160,Mehr hab ich nicht. Nur noch Blech.,That's all I've got. Just more tin.
 W1_ABS_ROT_0170,"Alles gesagt, alles geliefert. Wenn du noch was willst: Bestellzettel. Zehn Minuten oder gratis.","All said, all delivered. If you want anything else: order form. Ten minutes or it's free."
 W1_ABS_ROT_0180,Ich muss weiter. Oma wartet. Der Wolf auch. Beide nicht gern.,I have to get going. Grandma's waiting. So is the wolf. Neither of them likes it.
 W1_ABS_GRI_0190,Die Verhandlungen sind abgeschlossen. Weitere Gespräche nur mit Tagesordnung und Kaffee.,Negotiations are concluded. Further talks only with an agenda and coffee.
 W1_ABS_GRI_0200,Kein Kommentar. Das ist nicht unhöflich. Das ist Gewerkschaft.,No comment. That's not rude. That's the union.
 W1_ABS_GOL_0210,"Alles gesagt, alles. Jetzt schweigen wirsss. Wir und unser Kummer.","All said, all of it. Now we are silent, yesss. Us and our sorrow."
-W1_ABS_GOL_0220,"Geh, geh. Unser Gold ist weg, unsere Worte auch. Nur das Ssschätzchen bleibt. Niemand will es.","Go, go. Our gold is gone, our words too. Only the preciousss remains. Nobody wants it."
-W1_ABS_MAK_0225,"Bring mir ein Objekt, dann reden wir.","Bring me a property, then we'll talk."
+W1_ABS_GOL_0220,"Geh, geh. Meine Worte sind weg. Nur das Ssschätzchen bleibt. Niemand will es.","Go, go. My words are gone. Only the preciousss remains. Nobody wants it."
+W1_ABS_MAK_0225,"Bringen Sie mir ein Objekt, dann reden wir.","Bring me a property, then we'll talk."
 W1_ABS_MAK_0230,Für weitere Fragen vereinbaren Sie bitte einen Besichtigungstermin. Den nächsten habe ich in drei Jahren.,For further questions please book a viewing. My next free slot is in three years.
 W1_ABS_MAK_0240,Ich habe Ihnen alles gezeigt. Alles andere steht im Kleingedruckten. Das ist sehr klein.,I've shown you everything. Everything else is in the small print. It's very small.
 W1_HINT_PIX_0111,"Die Wirtskatze lässt dich nicht an den Topf. Sie braucht Ablenkung,","The landlord's cat won't let you near the pot. She needs distracting,"
@@ -2829,7 +2829,7 @@ W2_NIL_STM_0770,"Das sagen alle. Dann drehen wir ihn um, und dann ist er wieder 
 W2_NIL_MAX_0780,Meißelt ihr auch kleine Sachen?,Do you carve small things too?
 W2_NIL_STM_0790,"Alles, was eine Kante hat. Grabsteine, Türschwellen, Katzenfiguren. Bring einen Entwurf, und wir hauen ihn in Stein, wörtlich.","Anything with an edge. Gravestones, thresholds, cat figures. Bring a design and we'll carve it in stone, literally."
 W2_NIL_MAX_1060,"Katzenfiguren? Pixel, bleib mal kurz so sitzen.","Cat statues? Pixel, sit still like that for a sec."
-W2_NIL_PIX_1070,"Ich sitze seit drei Welten Modell, und zwar ohne jede Gage.","I have been modelling for three worlds now, and without any fee."
+W2_NIL_PIX_1070,"Ich sitze seit zwei Welten Modell, und zwar ohne jede Gage.","I have been modelling for two worlds now, and without any fee."
 W2_NIL_PIX_1070_2,"Wenn dieser Mann mich meißelt, ohne vorher über Thunfisch zu verhandeln, verklage ich den Nil.","If this man carves me without first negotiating about tuna, I shall sue the Nile."
 W2_NIL_MAX_0800,Wie lange bleibt so ein Stein frisch?,How long does a stone like that stay fresh?
 W2_NIL_STM_0810,"Hier bei mir: ewig. Auf der Fähre kommt's drauf an, wie weit du fährst, weil Stein mit der Zeit reist. Steht auf der Tafel.","Here with me: forever. On the ferry it depends how far you go, because stone travels with time. It's on the board."
@@ -4048,7 +4048,7 @@ W2_ABS_CIC_0200,Wie lange willst du meine Geduld noch missbrauchen? Das ist eine
 W2_ABS_BRI_0210,"Ich hab nichts mehr zu sagen. Und wenn du jetzt sagst, das ist ein Zeichen, schrei ich.","I've got nothing more to say. And if you say that's a sign now, I'll scream."
 W2_ABS_BRI_0220,"Geh weg. Bitte. Das ist keine Botschaft, das ist nur eine Bitte. Schreib's nicht auf.","Go away. Please. That's not a message, it's just a request. Don't write it down."
 W2_ABS_BE1_0230,"Nummer ziehen, warten, wiederkommen. Das war alles, was ich sagen darf, und ich hab's gesagt.","Take a number, wait, come back. That was all I'm allowed to say, and I've said it."
-W2_ABS_BE1_0240,Mein Schalter ist für Sie jetzt geschlossen. Für alle anderen auch. Er war nie offen.,"My counter is now closed to you. To everyone else too. Honestly, it was never open."
+W2_ABS_BE1_0240,Mein Schalter ist für dich jetzt geschlossen. Für alle anderen auch. Er war nie offen.,"My counter is now closed to you. To everyone else too. Honestly, it was never open."
 W2_ABS_BE2_0250,"Für weitere Fragen ist ein anderes Amt zuständig. Welches, steht auf einem Formular, das es nicht gibt.",Further questions are the responsibility of another office. Which one is written on a form that doesn't exist.
 W2_ABS_BE2_0260,Wir sind fertig miteinander. Verwaltungstechnisch. Menschlich waren wir es nie.,We are done with each other. Administratively. As people we never got started.
 W2_ABS_LEO_0270,ICH HAB ALLES GESAGT! JETZT WIRD TRAINIERT! NICHT GEREDET!,I'VE SAID EVERYTHING! NOW WE TRAIN! NO TALKING!
@@ -4390,7 +4390,7 @@ W3_APO_MAX_0270,"Eine Lampe, die flackert. Wenn sie es im Takt täte, wäre es A
 W3_APO_PIX_0280,Die Lampe flackert in Morse. Sie sagt „Hilfe“. Oder „Hering“.,"The lamp is flickering in Morse. It says ""help"". Or ""herring""."
 W3_APO_PIX_0280_2,"Ich höre ehrlich gesagt immer, was ich hören will, und meistens ist es Hering.","To be honest, I always hear what I want to hear, and usually it's herring."
 W3_APO_MAX_0290,"Morphäus. Steht in der Gasse, wartet und sieht dabei weise aus. Das kann nicht jeder.","Morphaeus. Standing in the alley, waiting and looking wise. Not everyone can do that."
-W3_APO_MAX_0295,"Er bewegt sich nicht, nur der Mantel weht. Ich wette, er hat dafür irgendwo einen kleinen Ventilator.","He doesn't move, only his coat flutters. I bet he's got a little fan hidden somewhere for that."
+W3_APO_MAX_0295,"Er bewegt sich nicht, nur die Strickjacke weht. Ich wette, er hat dafür irgendwo einen kleinen Ventilator.","He doesn't move, only his cardigan flutters. I bet he's got a little fan hidden somewhere for that."
 W3_APO_MOR_0300,"Ich warte in Gassen. Das ist, was ich tue. Früher hatte ich eine Lederjacke, aber die Strickjacke ist wärmer.","I wait in alleys. That's what I do. I used to have a leather jacket, but the cardigan is warmer."
 W3_APO_MAX_0410,"Zwei Pastillen, eine blaue und eine rote, und ich darf wählen. Kein Knopf für „irgendwas Zufälliges“. Eine echte Wahl.","Two pills, a blue one and a red one, and I get to choose. No ""play something random"" button. A real choice."
 W3_APO_MOR_0420,"Bevor du wählst: Nimm die hier. Eine Probe von einer alten Dame, die alles vorher weiß. Sie sagte, du brauchst sie. Sie sagte auch, du würdest fragen, warum.",Before you choose: take these. A sample from an old lady who knows everything in advance. She said you'd need them. She also said you'd ask why.
@@ -4553,8 +4553,8 @@ W3_KUCH_MAX_0510,"Eine blaue Vase auf dem obersten Regal. Sie sieht aus, als wü
 W3_KUCH_MAX_0515,"Die Vase steht so knapp an der Kante, dass sie schon fast fällt. Sie hat geübt.",The vase is so close to the edge it's practically falling already. It's been practising.
 W3_KUCH_ORA_0520,Finger weg. Noch ist es nicht so weit.,Hands off. It's not time yet.
 W3_KUCH_MAX_0530,"Ein Ofen voller Kekse, warm und goldbraun, und es riecht nach Sonntag. Ich darf keinen, das weiß ich, bevor ich frage.","An oven full of biscuits, warm and golden, and it smells like Sunday. I'm not allowed one, I know that before I even ask."
-W3_KUCH_PIX_0535,"Kekse im Ofen. Ich rieche sie bis hierher, und ich darf keinen haben.","Biscuits in the oven. I can smell them from here, and I'm not allowed one."
-W3_KUCH_PIX_0535_2,"Ich habe daher beschlossen, beleidigt zu sein. Lautlos, aber mit großer Ausdauer.","I have therefore decided to be offended. Silently, but with great stamina."
+W3_KUCH_PIX_0535,Kekse im Ofen. Beschreib mir den Geruch. Langsam.,Biscuits in the oven. Describe the smell to me. Slowly.
+W3_KUCH_PIX_0535_2,Ich habe mir die Uhrzeit gemerkt. Für die Abrechnung.,I've made a note of the time. For the bill.
 W3_KUCH_ORA_0540,"Lass den Ofen zu. Die brauchen noch vier Minuten. Ich weiß das. Ich weiß alles, was mit Minuten zu tun hat.",Leave the oven shut. They need four more minutes. I know that. I know everything to do with minutes.
 W3_KUCH_MAX_0550,Ein dickes Buch mit einer Küchenmaschine auf der Seite. „Regel 2: Nach jedem Rührgang gibt es Kuchen.“ Unterstrichen. Zweimal.,"A thick book with a food mixer on the page. ""Rule 2: After every mixing cycle there is cake."" Underlined. Twice."
 W3_KUCH_MAX_0560,„Warnung: Das Gerät kann Zuneigung entwickeln. Nicht in der Nähe von Kindern aufladen.“ Gute Anleitung.,"""Warning: the appliance may develop affection. Do not charge near children."" Good manual."
@@ -4611,7 +4611,7 @@ W3_TURM_MAX_0210,"Ein Flur, der nicht aufhört. Graue Türen, alle gleich, und h
 W3_TURM_MAX_0215,Ich ruf „Hallo“ in den Flur. Das Echo antwortet nach einer Minute vom anderen Ende. Glaube ich zumindest.,"I shout ""hello"" down the corridor. The echo answers a minute later from the other end. I think."
 W3_TURM_MAX_0220,"Zu. Und die Tür daneben auch. Und die daneben. Ich hör auf, bevor es ein Hobby wird.",Shut. And the next door too. And the one after that. I'll stop before it becomes a hobby.
 W3_TURM_MAX_0230,"Topfpflanzen. Dieselbe Pflanze, zwölfmal. In der Code-Sicht steht an jeder: „gleich“. Wenigstens ehrlich.","Potted plants. The same plant, twelve times. In code view each one says ""identical"". Honest, at least."
-W3_TURM_PIX_0235,"Zwölf gleiche Pflanzen. Ich würde in allen zwölf graben, nur um zu sehen, ob die Erde auch gleich ist.","Twelve identical plants. I would dig in all twelve, just to see whether the soil is the same too."
+W3_TURM_PIX_0235,"Zwölf gleiche Pflanzen. Wäre ich da, würde ich in allen zwölf graben, nur um zu sehen, ob die Erde auch gleich ist.","Twelve identical plants. If I were there, I would dig in all twelve, just to see whether the soil is the same too."
 W3_TURM_PIX_0235_2,"Das ist keine Neugier, das ist Wissenschaft. Neugier haben Hunde.","That isn't curiosity, that's science. Curiosity is for dogs."
 W3_TURM_MAX_0240,"Ein Fenster. Draußen ist noch ein Flur, mit Fenster, und dahinter wieder Flur. Ich hör jetzt auf zu gucken.","A window. Outside there's another corridor, with a window, and behind that more corridor. I'm going to stop looking now."
 W3_TURM_MAX_0245,"Ich winke ins Fenster. Hinten im Flur winkt einer zurück. Ich hoffe, das war mein Spiegelbild.",I wave at the window. Someone at the far end of the corridor waves back. I hope that was my reflection.
@@ -4796,7 +4796,7 @@ W3_BAS_MAX_0735,Auf dem Handtuch steht „Keine Panik“. Gestickt. Das ist das 
 W3_BAS_PIX_0740,"Das gehört ab jetzt mir. Es ist trocken, und ich bin es nicht.","That is mine from now on. It is dry, and I am not."
 W3_BAS_PIX_0740_2,"Das ist eine ganz einfache Rechnung, und selbst Herr Vier würde sie verstehen.","It's a very simple calculation, and even Mr Four would understand it."
 W3_BAS_MAX_0750,Ein alter Großrechner mit Bandspulen. Er summt ein Kinderlied. Das ist entweder süß oder sehr beunruhigend.,An old mainframe with tape reels. It's humming a nursery rhyme. That's either sweet or very worrying.
-W3_BAS_MAX_0755,"Er summt das Kinderlied immer langsamer. Falls er gleich anfängt, mit mir über seine Gefühle zu reden, zieh ich keinen Stecker.","It's humming the nursery rhyme slower and slower. If it starts talking to me about its feelings, I'm not pulling the plug."
+W3_BAS_MAX_0755,Er summt das Kinderlied immer langsamer.,It's humming the nursery rhyme slower and slower.
 W3_BAS_KAL_0760,"Nicht anfassen. Er summt, wenn er glücklich ist. Wenn er aufhört zu summen, gehen wir alle raus. Schnell.","Don't touch. It hums when it's happy. If it stops humming, we all go outside. Fast."
 W3_BAS_MAX_0770,"Das Steuerpult des Wracks. Hundert Schalter, kein Bildschirm. Fliegen war früher Handarbeit.","The wreck's control desk. A hundred switches, no screen. Flying used to be handicraft."
 W3_BAS_MAX_0775,Ein Schalter heißt „Bitte nicht“. Ein anderer heißt „Wirklich nicht“. Die Piloten waren vorsichtige Leute.,"One switch is labelled ""Please don't"". Another says ""Really don't"". The pilots were careful people."
@@ -4863,7 +4863,7 @@ W3_PIEP_MAX_0290,"Eine Kaffeepfütze, die nicht wegläuft. Ich glaube, sie denkt
 W3_PIEP_MAX_0295,Die Pfütze hat jetzt eine Haut. Kalles Kaffee lebt.,The puddle has a skin now. Kalle's coffee is alive.
 W3_EING_HAU_0010,"Servus, Bursche. Bitte den Boden nicht betreten, der ist frisch. Alles hier ist frisch. Ich wische seit neunzehn Jahren.","Greetings, lad. Please don't step on the floor, it's freshly mopped. Everything here is fresh. I've been mopping for nineteen years."
 W3_EING_MAX_0020,Hi. Ich müsste da mal durch.,Hi. I need to get through there.
-W3_EING_HAU_0030,"Da kommt niemand durch, Bursche. Außer mit Karte. Und außer Sahra Konner. Die suche ich. Haben Sie sie gesehen?","Nobody gets through there, lad. Except with a card. And except Sahra Konner. I'm looking for her. Have you seen her?"
+W3_EING_HAU_0030,"Da kommt niemand durch, Bursche. Außer mit Karte. Und außer Sahra Konner. Die suche ich. Hast du sie gesehen?","Nobody gets through there, lad. Except with a card. And except Sahra Konner. I'm looking for her. Have you seen her?"
 W3_EING_MAX_0040,Wer ist Sahra Konner?,Who is Sahra Konner?
 W3_EING_HAU_0050,Das weiß ich nicht. Es steht auf meinem Auftragszettel. „Sahra Konner finden.“ Darunter: „Boden wischen.“ Den zweiten Punkt habe ich erledigt.,"I don't know. It's on my job sheet. ""Find Sahra Konner."" Underneath: ""Mop floor."" I've done the second item."
 W3_EING_PIX_0060,"Ein Roboter, der neunzehn Jahre lang den zweiten Punkt erledigt hat, weil der erste zu schwer war. Ich erkenne mich wieder.",A robot who spent nineteen years on the second item because the first was too hard. I see myself in him.
@@ -4874,7 +4874,7 @@ W3_EING_PIX_0090_2,Er trägt es auf der Brust. Das ist entweder sehr traurig ode
 W3_EING_MAX_0100,Kannst du mich reinlassen?,Can you let me in?
 W3_EING_HAU_0110,"Ohne Karte nicht, Bursche. Mit Karte gern. Ich halte sogar die Tür. Ich halte alle Türen. Das ist der dritte Punkt auf meinem Zettel.","Not without a card, lad. With a card, gladly. I'll even hold the door. I hold all doors. That's the third item on my sheet."
 W3_EING_MAX_1050,Und was steht unter Punkt eins und zwei?,And what are items one and two?
-W3_EING_HAU_1060,Erstens wischen. Zweitens Sahra Konner finden. Drittens Türen halten. Ich bin seit neunzehn Jahren bei Punkt zwei.,"One, mop. Two, find Sahra Konner. Three, hold doors. I've been on item two for nineteen years."
+W3_EING_HAU_1060,Erstens Sahra Konner finden. Zweitens wischen. Drittens Türen halten. Ich bin seit neunzehn Jahren bei Punkt zwei. Punkt eins hebe ich mir auf.,"One, find Sahra Konner. Two, mop. Three, hold doors. I've been on item two for nineteen years. I'm saving item one for later."
 W3_EING_MAX_0120,Warum quietschst du?,Why do you squeak?
 W3_EING_HAU_0130,"Meine Gelenke. Neunzehn Jahre Wischen. Kein Öl. Die Ölkanne in meiner Brusttasche ist leer, seit ich denken kann. Ich denke seit neunzehn Jahren.",My joints. Nineteen years of mopping. No oil. The oil can in my breast pocket has been empty for as long as I can think. I've been thinking for nineteen years.
 W3_EING_MAX_1070,"Neunzehn Jahre ohne Öl. Ich schau mal, was ich in der Tasche habe.",Nineteen years without oil. Let me see what I've got in my bag.
@@ -4988,11 +4988,11 @@ W3_KAM1_MAX_0335,Auf seiner Seite ist ein Herz. Ich soll ihn bestimmt nicht lieb
 W3_KAM1_MAX_0340,Ich schieb ihn zum Schalter. Er schwebt zurück. Ich schieb ihn wieder. Er schwebt zurück. Bernd hat Prinzipien.,I push him to the switch. He floats back. I push him again. He floats back. Bernd has principles.
 W3_KAM1_MUT_0350,Der Würfel steht nicht auf Schaltern. Er begleitet. Lies die Stellenbeschreibung.,The cube does not stand on switches. It accompanies. Read the job description.
 W3_KAM1_MAX_0360,Ein Kuchen in der Ecke. Aus Pappe. Mit aufgemalter Kerze. Wenigstens ist sie ehrlich.,A cake in the corner. Made of cardboard. With a painted candle. At least it's honest.
-W3_KAM1_PIX_0365,Ein Kuchen aus Pappe.,A cake made of cardboard.
-W3_KAM1_PIX_0365_2,"Das ist das Grausamste, was man einem Tier mit einer so feinen Nase wie meiner antun kann. Ich protestiere. Schriftlich, später.","That is the cruellest thing you can do to an animal with a nose as fine as mine. I protest. In writing, later."
+W3_KAM1_PIX_0365,"Ein Kuchen aus Pappe, sagst du.","A cake made of cardboard, you say."
+W3_KAM1_PIX_0365_2,"Das ist das Grausamste, was man einem Tier mit einer so feinen Nase wie meiner erzählen kann. Ich protestiere. Schriftlich, später.","That is the cruellest thing you can tell an animal with a nose as fine as mine. I protest. In writing, later."
 W3_KAM1_MAX_0370,Ich tipp dagegen. Er kippt um. Auf der Rückseite steht: „Kuchen (symbolisch)“.,"I tap it. It falls over. On the back it says: ""Cake (symbolic)""."
 W3_KAM1_PIX_0380,"Pappe. Nicht mal Hundekuchen-Niveau. Ich wusste nicht, dass es darunter noch etwas gibt.",Cardboard. Not even dog-biscuit level. I didn't know there was anything below that.
-W3_KAM1_MAX_0390,"Eine Ausgangstür. Zu. Sie geht auf, wenn der Schalter gedrückt ist. Das weiß ich, weil M.U.T.T.I. es dreimal gesagt hat.",An exit door. Shut. It opens when the switch is pressed. I know because M.O.T.H.E.R. said so three times.
+W3_KAM1_MAX_0390,"Eine Ausgangstür. Zu. Sie geht auf, wenn der Schalter gedrückt ist. Das weiß ich, weil M.U.T.T.I. es gesagt hat. Zu meinem Besten.",An exit door. Shut. It opens when the switch is pressed. I know because M.O.T.H.E.R. said so. For my own good.
 W3_KAM1_MAX_0395,Auf der Tür steht „Ausgang“. Sie meint es ernst. Nur eben nicht jetzt.,"The door says ""Exit"". It means it. Just not right now."
 W3_KAM1_MAX_0400,Ein runder Lautsprecher an der Decke. Aus ihm kommen eine KI und ein Kater. Keiner von beiden lässt den anderen ausreden.,A round loudspeaker in the ceiling. An AI and a cat come out of it. Neither lets the other finish.
 W3_KAM1_MAX_0405,"Der Lautsprecher knackt, bevor jemand redet. Ich zucke jedes Mal. Er weiß das.",The speaker crackles before anyone talks. I flinch every time. It knows that.
@@ -5050,7 +5050,7 @@ W3_KAM2_MAX_0210,"Die Kritzelei ist jetzt harmlos und das Huhn ist wahr. Ein wah
 W3_KAM2_MUT_0220,Zurücksetzen. Wie bei allen meinen Testpersonen. Auch bei der mit dem Filzstift.,Resetting. As with all my test subjects. Including the one with the felt tip.
 W3_KAM2_MAX_0230,"Das Portalgerät auf den Laser? Zwei Dinge aus demselben Labor, die sich offenbar nichts zu sagen haben.",The portal device on the laser? Two things from the same lab that apparently have nothing to say to each other.
 W3_KAM2_MAX_0240,Bernd? Bernd ist beleidigt und in Kammer eins. Ich hab ihn nicht in der Tasche. Man steckt Freunde nicht in Taschen. Pixel ausgenommen.,Bernd? Bernd is sulking in chamber one. I don't have him in my bag. You don't put friends in bags. Pixel excepted.
-W3_KAM2_MUT_0250,Kammer zwei bestanden. Du bist besser als Testperson 47. Sie hat nach dem Kuchen gefragt. Du fragst nicht mehr. Das ist Fortschritt.,Chamber two passed. You're better than test subject 47. She asked about the cake. You don't ask any more. That's progress.
+W3_KAM2_MUT_0250,Kammer zwei bestanden. Du bist besser als Testperson 47. Sie hat nie nach dem Kuchen gefragt. Du fragst ständig. Das ist Fortschritt.,Chamber two passed. You're better than test subject 47. She never asked about the cake. You ask all the time. That's progress.
 W3_KAM2_MAX_0260,Wo ist der Kuchen?,Where's the cake?
 W3_KAM2_MUT_0270,In einer anderen Testkammer. Es gibt nur drei. Die Chancen stehen also gut. Für mich.,In another test chamber. There are only three. So the odds are good. For me.
 W3_KAM3_MUT_0010,Kammer drei. Die letzte. Die Tür ist verschlossen. Ich bin gesprächig. Beides ist mein Recht.,Chamber three. The last one. The door is locked. I am talkative. Both are my right.
@@ -5124,7 +5124,7 @@ W3_KERN_MAX_0340,"Ich hab noch nicht alle Regeln. Sie hält mich hin, und ich ka
 W3_KERN_PIX_0350,"Die fehlenden Regeln liegen nicht im Labor. Wechsel zu mir, dann schüttle ich deine Kapsel.","The missing rules aren't in the lab. Switch to me, then I'll shake your pod."
 W3_KERN_PIX_0350_2,"Und zwar mit einem Vergnügen, das ich nicht im Geringsten zu verbergen gedenke.",And with a pleasure I have not the slightest intention of hiding.
 W3_KERN_MAX_0410,"Die Energiezelle. Orange, glühend, auf einem Sockel. Sie ist so heiß, dass die Luft darüber flimmert. Opa will die. Opa will immer das Heißeste.","The energy cell. Orange, glowing, on a plinth. It's so hot the air above it shimmers. Grandpa wants it. Grandpa always wants the hottest thing."
-W3_KERN_PIX_0415,"Das Ding glüht wie ein Heizkissen, und ich würde mich sofort drauflegen.","That thing glows like a heat pad, and I would lie down on it at once."
+W3_KERN_PIX_0415,"Das Ding glüht wie ein Heizkissen, sagst du. Wäre ich da, würde ich mich sofort drauflegen.","That thing glows like a heat pad, you say. If I were there, I would lie down on it at once."
 W3_KERN_PIX_0415_2,"Ungefähr eine halbe Sekunde lang. Danach würde ich mich, glaube ich, umentscheiden.",For about half a second. After that I believe I would change my mind.
 W3_KERN_MAX_0420,"Au. Nein. Au. Ich hab sie nicht mal berührt, und es tut schon weh. Das ist wie bei Omas Herd: Man weiß es und macht's trotzdem.","Ow. No. Ow. I didn't even touch it and it already hurts. It's like Grandma's hob: you know it, and you do it anyway."
 W3_KERN_MAX_0430,"„Heiß.“ Steht an der Zelle. Und an den Keksen in meiner Tasche steht: „kalt“. Oma hat gesagt, ich würde „Oh“ sagen. Oh.","""Hot."" It says so on the cell. And the biscuits in my bag say ""cold"". Grandma said I'd say ""Oh"". Oh."
@@ -5200,7 +5200,7 @@ W3_INV_MAX_0025,"Ich halte die Wahrheit in der Hand. Sie ist klein, rund und ein
 W3_INV_MAX_0030,"Blau. Aufwachen, alles vergessen, Sofa. Ehrlich gesagt klingt das gar nicht so schlecht.","Blue. Wake up, forget everything, sofa. Honestly, that doesn't sound too bad."
 W3_INV_MAX_0035,"Ich behalte sie. Nicht zum Schlucken. Als Erinnerung, dass ich einmal die unbequeme Wahl getroffen hab.",I'm keeping it. Not to swallow. As a reminder that once I made the uncomfortable choice.
 W3_INV_MAX_0040,"Omas Kekse in der Tüte. Kalt, aber sie riechen trotzdem nach Sonntag. Ich darf keinen essen. Das weiß ich einfach.","Grandma's biscuits in the bag. Cold, but they still smell of Sunday. I'm not allowed to eat one. I just know."
-W3_INV_PIX_0045,"Die Tüte knistert jedes Mal, wenn du dich bewegst. Ich höre das. Ich höre alles, was knistert. Es ist eine Gabe und eine Qual.",The bag rustles every time you move. I can hear it. I hear everything that rustles. It's a gift and a torment.
+W3_INV_PIX_0045,"Die Tüte knistert jedes Mal, wenn du dich bewegst. Ich höre das, sogar durch die Leitung. Ich höre alles, was knistert. Es ist eine Gabe und eine Qual.","The bag rustles every time you move. I can hear it, even down the line. I hear everything that rustles. It's a gift and a torment."
 W3_INV_MAX_0050,"Die Kekse sind ofenwarm. Die Zelle hat ihre Hitze abgegeben, und die Kekse haben sie genommen. Bester Backofen der Welt.","The biscuits are oven-warm. The cell gave off its heat, and the biscuits took it. Best oven in the world."
 W3_INV_MAX_0055,Aus meiner Tasche steigt Dampf. Ich rieche wie eine Bäckerei auf der Flucht.,Steam is rising from my bag. I smell like a bakery on the run.
 W3_INV_MAX_0060,"Schmidts Sonnenbrille. Ich setz sie kurz auf. Alles wird dunkler, und ich wirke wichtiger. Ich setz sie ab, bevor es jemand sieht.",Schmidt's sunglasses. I put them on for a second. Everything gets darker and I look more important. I take them off before anyone sees.
@@ -5219,7 +5219,7 @@ W3_INV_PIX_0115_2,"Ich habe einmal so eines gejagt, im Wohnzimmer, eine ganze Na
 W3_INV_MAX_0120,"Die Energiezelle. Jetzt frostig und harmlos. Ich trag den Endgegner in der Hosentasche, und er ist kalt wie ein Eis am Stiel.","The energy cell. Frosty and harmless now. I'm carrying the final boss in my trouser pocket, and it's as cold as an ice lolly."
 W3_INV_MAX_0125,Sie beschlägt meine Tasche von innen. Ich hab jetzt eine Hose mit Klimaanlage.,It's misting up my pocket from the inside. I now have air-conditioned trousers.
 W3_INV_MAX_0130,"Die Zelle glüht in meiner Tasche. Ich spüre sie durch drei Schichten Stoff. Opa, du schuldest mir eine Hose.","The cell is glowing in my pocket. I can feel it through three layers of fabric. Grandpa, you owe me a pair of trousers."
-W3_INV_PIX_0135,Du riechst nach Bügeleisen. Ich setze mich trotzdem auf dich.,You smell like an iron. I'm sitting on you anyway.
+W3_INV_PIX_0135,"Du klingst nach Bügeleisen. Wenn du zurück bist, setze ich mich trotzdem auf dich.","You sound like an iron. When you're back, I'm sitting on you anyway."
 W3_INV_PIX_0135_2,"Wärme ist Wärme, junger Mann, und ich bin gerade nicht in der Position, wählerisch zu sein.","Warmth is warmth, young man, and I'm in no position to be choosy right now."
 W3_ABS_MOR_0010,Ich kann dir nur die Tür zeigen. Hindurchgehen musst du selbst. Ich habe dir die Tür auch schon zweimal gezeigt.,I can only show you the door. You have to walk through it yourself. I've also shown you the door twice already.
 W3_ABS_MOR_0020,Du hast keine Fragen mehr. Das ist der erste Schritt zur Erleuchtung. Oder zur Langeweile.,You have no more questions. That's the first step to enlightenment. Or to boredom.
@@ -5290,7 +5290,7 @@ W3_HINT_PIX_0320,"Wechsel zu mir. Ich laufe am Automaten vorbei. Dann noch mal. 
 W3_HINT_PIX_0330,"Wechsel zu mir und lauf zweimal über den Gehweg vor dem Automaten. Dann zurück zu dir, Automat benutzen, „Déjà-vu“ wählen. Ich will dafür Fisch.","Switch to me and walk twice across the pavement in front of the machine. Then back to you, use the machine, choose ""déjà vu"". I want fish for this."
 W3_HINT_PIX_0340,"Zwei Pastillen. Eine macht es bequem, eine macht es wahr. Du weißt, welche du nehmen würdest. Nimm die andere.","Two lozenges. One makes it comfortable, one makes it true. You know which one you'd take. Take the other."
 W3_HINT_PIX_0350,"Die blaue führt aufs Sofa. Da warst du schon, sechzehn Jahre lang.","The blue one leads to the sofa. You've been there, for sixteen years."
-W3_HINT_PIX_0350_2,"Ich war die ganze Zeit dabei, und ich kann dir versichern: Es war nicht spannend.","I was there the whole time, and I can assure you: it was not exciting."
+W3_HINT_PIX_0350_2,"Vierzehn Jahre davon war ich dabei, und ich kann dir versichern: Es war nicht spannend.","I was there for fourteen of them, and I can assure you: it was not exciting."
 W3_HINT_PIX_0360,Nimm die rote. Ich fange dich nicht auf. Das macht der Mann in der Strickjacke.,Take the red one. I won't catch you. The man in the cardigan does that.
 W3_HINT_PIX_0410,"Die Oma weiß, dass du die Vase zerbrichst. Sie sagt es dir ins Gesicht. Benutze das. Alles, was einem ins Gesicht gesagt wird, kann man umdrehen.",Granny knows you'll break the vase. She says it to your face. Use that. Anything said to your face can be turned around.
 W3_HINT_PIX_0420,"Wenn etwas sowieso passiert, kann man es auch gleich hinter sich bringen. Sag ihr das. Höflich. Oma-höflich.","If something's going to happen anyway, you might as well get it over with. Tell her that. Politely. Granny-politely."
@@ -5868,7 +5868,6 @@ W4_KELL_PIX_0160,"Diese Tür geht nicht auf, und das ist keine Frage von Schlüs
 W4_KELL_PIX_0160_2,"In der Sitcom dagegen geht ständig alles auf, alle zwei Minuten platzt dort jemand herein.","In the sitcom, on the other hand, everything opens all the time, someone bursts in every two minutes."
 W4_KELL_PIX_0160_3,"Denk mal drüber nach, junger Mann. Ich mache inzwischen ein Nickerchen.","Think about it, young man. I'll be taking a nap meanwhile."
 W4_KELL_MAX_0170,"Die Geister. Drei Laken mit Löchern drin. Sie sehen aus wie Faschingskostüme, die nach der Party keiner abgeholt hat.",The ghosts. Three sheets with holes in them. They look like fancy dress costumes nobody picked up after the party.
-W4_KELL_MAX_0175,"Wenn die gleich einen Song über sich anfangen und ich wen anrufen soll, weiß ich nicht, wen. Ich hab nur Pixel.","If they start a song about themselves and I'm supposed to call someone, I don't know who. I've only got Pixel."
 W4_KELL_GST_0180,Buuuh? Buh.,Boooo? Boo.
 W4_KELL_MAX_0190,"Die sagen nichts, die machen nur „Buh“. Als hätte jemand bei denen den Ton vergessen.","They don't say anything, they just go ""Boo"". As if someone forgot to turn their sound on."
 W4_KELL_MAX_0200,"Die Ketten gehen nicht ab. Ich hab es mit den Händen versucht, aber ich hab nur zwei Hände, und der Film hat ein Budget.","The chains won't come off. I tried with my hands, but I've only got two hands, and the film has a budget."
@@ -6068,7 +6067,6 @@ W4_KAPI_PIX_0510_2,"Ich rieche Spinne, Pflichtgefühl und kalte Pizza. Eine trau
 W4_KAPI_PIX_0515,"Das Netz ist ordentlich gespannt. Wer so sauber arbeitet, trägt große Verantwortung.",The web is neatly strung. Anyone who works this cleanly carries great responsibility.
 W4_KAPI_PIX_0515_2,"Und hat vermutlich eine Tante, die sich Sorgen macht. Solche Leute haben immer eine Tante.",And probably has an aunt who worries. People like that always have an aunt.
 W4_KAPI_MAX_0520,"Wolkenkratzer mit dicken schwarzen Linien. Da drin sind keine Büros, da drin ist nur Tusche.","Skyscrapers with thick black lines. There are no offices in there, just ink."
-W4_KAPI_MAX_0525,"An einem Fenster lehnt ein Mann mit Brille und Krawatte. Wenn der gleich in eine Telefonzelle rennt, weiß ich Bescheid.","A man with glasses and a tie is leaning at a window. If he runs into a phone box, I'll know."
 W4_KAPI_MAX_0530,"Schilder in Form von Sprechblasen, und alle sind leer. Die Stadt hat was zu sagen, aber den Text vergessen.","Signs shaped like speech bubbles, and they're all empty. The city has something to say but forgot the words."
 W4_KAPI_MAX_0535,"Eine Blase ist halb voll. Da steht „ZACK–“, und dann nichts mehr. Da wurde jemand mitten im Zack unterbrochen.","One bubble is half full. It says ""ZAP–"", and then nothing. Someone got interrupted mid-zap."
 W4_KAPI_MAX_0540,Ein Zeitungskiosk. Schlagzeile: „SCHURKE UNTERBRICHT ALLES!“ Darunter: Werbung.,"A newspaper kiosk. Headline: ""VILLAIN INTERRUPTS EVERYTHING!"" Underneath: adverts."
@@ -6315,7 +6313,8 @@ W4_STUD_PIX_0120_2,"Ich habe das immer gesagt, aber ich meinte es als Beleidigun
 W4_STUD_NAR_0130,"Schnitt. Max steht wieder im Studio, Zappmann lächelt. Die Optionen erscheinen erneut.","Cut. Max is back in the studio, Zappmann is smiling. The options appear again."
 W4_STUD_ZAP_0140,Siehst du? Es tut gar nicht weh. Also?,See? It doesn't hurt at all. So?
 W4_STUD_ZAP_0150,"Für immer. Das ist der Deal. Immer ist hier nicht lang. Immer ist nur bis zum Sendeschluss, und den habe ich abgeschafft.","Forever. That's the deal. Forever isn't long here. Forever only lasts until closedown, and I've abolished closedown."
-W4_STUD_MAX_0160,"Nein. Ich habe eine Woche lang Dinge getan. Ich habe eine Hyäne überführt und getanzt. Freiwillig. Ich kann nicht zurück auf ein Sofa, auf dem ich schon sitze.",No. I've spent a whole week doing things. I exposed a hyena and I danced. Voluntarily. I can't go back to a sofa I'm already sitting on.
+W4_STUD_MAX_0160,Nein. Ich habe zwei Wochen lang Dinge getan. Ich habe eine Hyäne überführt und getanzt.,No. I've spent two weeks doing things. I exposed a hyena and I danced.
+W4_STUD_MAX_0160_2,Ich bin gerade erst aufgestanden. Ich setz mich nicht wieder hin.,I've only just got up. I'm not sitting back down.
 W4_STUD_PIX_0170,Das war fast eine Rede. Ich bin erschüttert.,That was almost a speech. I'm shaken.
 W4_STUD_PIX_0170_2,"Positiv erschüttert, aber hauptsächlich erschüttert. Ich brauche gleich ein Kissen.","Shaken in a good way, but mostly shaken. I'll need a cushion in a moment."
 W4_STUD_ZAP_0180,"Dann bleiben wir eben auf Sendung. LIVE! Die Zappmann-Show, ohne Pause, ohne Ende!","Then we'll just stay on air. LIVE! The Zappmann Show, no breaks, no ending!"
@@ -6455,7 +6454,7 @@ W4_PIXM_PIX_0270,"Riecht nach Staub, nach 1977 und nach einem Mann, der Puppen l
 W4_PIXM_PIX_0270_2,Das finde ich sehr verständlich.,"Which I find, frankly, very understandable."
 W4_PIXM_PIX_0280,"Pfoten. Ich habe Pfoten. Das hier ist für Wesen mit Daumen gebaut, also für dich.","Paws. I have paws. This is built for creatures with thumbs, so for you."
 W4_PIXM_PIX_0290,Ich trage nichts. Ich werde getragen. Das ist der Unterschied zwischen Kater und Kurier.,I don't carry things. I get carried. That's the difference between a cat and a courier.
-W4_INV_MAX_0010,Ein Bettlaken mit zwei Löchern. Ein Geist hat es mir überlassen. Darunter war nichts. Nicht mal ein Geist.,A bedsheet with two holes. A ghost left it to me. There was nothing underneath. Not even a ghost.
+W4_INV_MAX_0010,"Ein Bettlaken mit zwei Löchern. Der erste Entwurf vom Fledermann. Zwei Löcher, null Schirme.","A bedsheet with two holes. Fledermann's first draft. Two holes, zero umbrellas."
 W4_INV_MAX_0015,"Es riecht nach Dachboden und nach Halloween. Wenn ich es überzieh, bin ich entweder ein Geist oder eine Picknickdecke.","It smells of attic and Halloween. If I put it on, I'm either a ghost or a picnic blanket."
 W4_INV_MAX_0020,"Mein Superhelden-Anzug mit Umhang, aus einem Bettlaken. Ich trag Bettwäsche, und sie steht mir auch noch.","My superhero suit with cape, made from a bedsheet. I'm wearing bed linen, and it even suits me."
 W4_INV_MAX_0025,"Auf der Brust ist ein Fondue-Topf aufgemalt. Jeder Held braucht ein Wappen, und meins blubbert.","There's a fondue pot painted on the chest. Every hero needs an emblem, and mine bubbles."
@@ -6617,7 +6616,7 @@ ZS1_DACH_OPA_0080,"Der Eierkarton! Modell Spezialzwecke, sechsfach gepolstert. D
 ZS1_DACH_MAX_0090,"Opa, das ist ein Eierkarton. Da waren mal Eier drin. Ganz normale Eier aus dem Supermarkt.","Grandpa, that's an egg box. There used to be eggs in it. Perfectly normal eggs from the supermarket."
 ZS1_DACH_OPA_0100,"Für Spezialzwecke. Steht doch drauf. Hab ich selbst draufgeschrieben, also stimmt es.","For special purposes. It says so right there. I wrote it myself, so it must be true."
 ZS1_DACH_NAR_0110,"Opa legt das Ei in den Karton. Glitzer, ein leises Plopp. Das Ei sieht plötzlich sehr nach Ei aus.","Grandpa puts the egg in the box. Glitter, a soft plop. Suddenly the egg looks very much like an egg."
-ZS1_DACH_MAX_0120,"Komisch. Drüben war es größer. Und goldener. Und es hatte Schuppen, ich schwör's, ich hatte es drei Tage im Arm.","Weird. Over there it was bigger. And more golden. And it had scales, I swear, I carried it for three days."
+ZS1_DACH_MAX_0120,"Komisch. Drüben war es größer. Und goldener. Und es hatte Schuppen, ich schwör's, ich hab es durch den halben Turm getragen.","Weird. Over there it was bigger. And more golden. And it had scales, I swear, I carried it through half the tower."
 ZS1_DACH_OPA_0130,"Rückverwandlungsschwund. Völlig normal. Drüben ist alles ein bisschen größer, das macht das Fernsehen.","Retransformation shrinkage. Perfectly normal. Everything's a bit bigger over there, that's television for you."
 ZS1_DACH_MAX_0132,"Rückverwandlungsschwund. Okay. Klingt jedenfalls so, als hätte das schon mal jemand nachgemessen.","Retransformation shrinkage. Okay. Sounds like somebody's actually measured it, anyway."
 ZS1_DACH_PIX_0140,Gestern noch Bio-Freiland mit eigenem Drachen als Wachpersonal. Heute ein Eierkarton.,Yesterday it was free-range with its own dragon as security. Today it's in an egg box.
@@ -6693,7 +6692,7 @@ ZS1_DACH_PIX_0550,"Ein Ziegenfell. Ich habe eine Zeit lang darin gelebt, und ich
 ZS1_DACH_PIX_0550_2,"Nur so viel: Wo es heiß ist, braucht so etwas kein Mensch. Und kein Kater.","Only this much: where it's hot, no human needs one of these. Nor does any cat."
 ZS1_DACH_PIX_0560,Moderworts Zeugnis. Ungenügend in Zaubertränke.,Moderwort's school report. Unsatisfactory in Potions.
 ZS1_DACH_PIX_0560_2,"Es beeindruckt niemanden, wenn ich das sagen darf. Außer vielleicht Mütter, und die nicht im guten Sinn.","It impresses nobody, if I may say so. Except perhaps mothers, and not in a good way."
-ZS1_DACH_PIX_0570,"Der Eimer. Waldemar hat ihn zurückgegeben, nach Regel 14b.","The bucket. Waldemar gave it back, rule 14b."
+ZS1_DACH_PIX_0570,"Der Eimer. Waldemar hat ihn zurückgegeben, nach Paragraf 14b.","The bucket. Waldemar gave it back, clause 14b."
 ZS1_DACH_PIX_0570_2,"Am Nil allerdings gibt es Wasser genug, und Krokodile auch. Einen Eimer braucht man dort höchstens zum Weglaufen.","By the Nile, though, there's plenty of water, and plenty of crocodiles too. There a bucket is mostly for running away."
 ZS1_DACH_PIX_0580,Ein Dosenöffner. Er kurbelt und braucht keinen Strom.,A tin opener. It cranks and needs no electricity.
 ZS1_DACH_PIX_0580_2,"Merk dir das gut. Irgendwann braucht alles Strom, und dann sitzt man vor einer vollen Dose und weint.","Remember that well. Some day everything needs electricity, and then you sit in front of a full tin and weep."
@@ -6793,7 +6792,7 @@ ZS2_DACH_PIX_0670,Die Zukunft. Dort gibt es vermutlich Dosenfutter aus dem Druck
 ZS2_DACH_PIX_0670_2,"Ich bin dagegen, und zwar jetzt schon, ohne es probiert zu haben. Das nennt man Prinzipien.","I'm against it, already, without having tried it. That's called having principles."
 ZS3_DACH_NAR_0010,"Werbeblock: Milchglas, Kuh, Preisschild, Blitz. Fünf Sekunden.","Ad break: glass of milk, cow, price tag, flash. Five seconds."
 ZS3_DACH_PIX_0020,"Dreimal Milch. Das ist keine Werbung mehr, das ist eine Botschaft.","Milk three times. That's not an advert any more, that's a message."
-ZS3_DACH_PIX_0020_2,"Jemand will, dass in diesem Haus etwas gekauft wird. Ich ahne auch, wer. Ich sehe nur ganz zufällig in seine Richtung.",Somebody wants something bought in this house. I have an idea who. I just happen to be looking in his direction.
+ZS3_DACH_PIX_0020_2,"Jemand will, dass in diesem Haus etwas gekauft wird.",Somebody wants something bought in this house.
 ZS3_DACH_MAX_0030,"Es regnet nicht mehr. Ich hatte schon vergessen, wie sich das anfühlt, wenn einem nichts auf den Kopf tropft.",It's stopped raining. I'd forgotten what it feels like when nothing's dripping on your head.
 ZS3_DACH_OPA_0040,Die Zelle. Die Ewige Energiezelle. Gib sie mir. Langsam. Mit beiden Händen.,The cell. The Eternal Energy Cell. Give it to me. Slowly. With both hands.
 ZS3_DACH_MAX_0050,"Sie ist warm, aber nicht mehr heiß. Das ist eine lange Geschichte mit einer Küchenmaschine, die mich nicht leiden konnte.","It's warm, but not hot any more. That's a long story involving a kitchen appliance that couldn't stand me."
@@ -6889,7 +6888,7 @@ FI_DACH_PIX_0020_2,"Mir fehlt etwas, junger Mann, und ich wusste bis eben nicht,
 FI_DACH_MAX_0030,"Es ist dunkel. Opa, es ist richtig dunkel geworden.","It's dark. Grandpa, it's got really dark."
 FI_DACH_OPA_0040,"Natürlich ist es dunkel! Es ist Abend! Vier Welten an einem Nachmittag, das hält kein Tag aus!","Of course it's dark! It's evening! Four worlds in one afternoon, no day can take that!"
 FI_DACH_MAX_0050,"Opa, was ist das?","Grandpa, what is that?"
-FI_DACH_OPA_0060,"Das Werk. Ich habe es aufgebaut, während du weg warst. Zwanzig Minuten Fernsehzeit sind drei Stunden Werkbank.",The work. I built it while you were away. Twenty minutes of TV time is three hours at the workbench.
+FI_DACH_OPA_0060,"Das Werk. Ich habe es aufgebaut, während du weg warst. Viermal zwanzig Minuten. Ich bin selbst überrascht.",The work. I built it while you were away. Four times twenty minutes. I'm surprised myself.
 FI_DACH_OPA_0070,Die Fernbedienung! Die goldene! Du hast sie! Gib sie her. Nein. Warte. Erst die anderen.,The remote! The golden one! You've got it! Give it here. No. Wait. The others first.
 FI_DACH_NAR_0080,Opa nimmt das Ei aus dem Karton und legt es feierlich in die linke Fassung. Dann den Mehlsack in die rechte. Die Maschine schluckt beides mit einem Klack.,Grandpa takes the egg out of the box and solemnly places it in the left socket. Then the flour sack in the right one. The machine swallows both with a clack.
 FI_DACH_OPA_0090,"Erstens: das Drachenei, Modell ganz. Zweitens: das Pharaonenkorn, Modell fein wie Staub.","One: the dragon egg, unbroken model. Two: the pharaoh's grain, fine-as-dust model."
@@ -6901,7 +6900,7 @@ FI_DACH_MAX_0130,Das ist eine Fernbedienung.,That's a remote control.
 FI_DACH_OPA_0140,Zündkapsel. Mit Tasten.,Detonator. With buttons.
 FI_DACH_MAX_0150,"Ich hab eine ganze Welt lang eine Fernbedienung durch die Gegend getragen und gedacht, das ist ein Artefakt.",I carried a remote around for a whole world and thought it was an artefact.
 FI_DACH_PIX_0160,Ei. Mehl. Batterie. Fernbedienung.,Egg. Flour. Battery. Remote.
-FI_DACH_PIX_0160_2,"In Welt 4 habe ich das schon einmal laut gesagt, und dann kam ein Amboss.","In World 4 I said that out loud once, and then came an anvil."
+FI_DACH_PIX_0160_2,"Auf Kanal 999 habe ich das schon einmal laut gesagt, und dann kam ein Amboss.","On Channel 999 I said that out loud once, and then came an anvil."
 FI_DACH_PIX_0160_3,"Jetzt sage ich es noch einmal, ganz leise. Ohne Amboss, wenn ich bitten darf.","Now I'm saying it again, very quietly. Without an anvil, if you please."
 FI_DACH_MAX_0170,Was sagst du da?,What are you saying?
 FI_DACH_PIX_0180,"Nichts. Sieh einfach zu. Das hier ist dein Moment, nicht meiner. Ich hatte meinen schon, mit Amboss.","Nothing. Just watch. This is your moment, not mine. I already had mine, with the anvil."
@@ -7015,6 +7014,7 @@ FI_RAET_PIX_0060_2,Derjenige mit der Zündkapsel. Sieh dir deinen Opa an. Was ha
 FI_RAET_MAX_0070,Nichts. Er hat gar nichts in der Hand. Er fuchtelt nur mit leeren Händen herum.,Nothing. He's got nothing in his hands at all. He's just waving empty hands around.
 FI_RAET_OPA_0080,"Die Zündkapsel! Wo ist die Zündkapsel? Ich hatte sie! Ich hatte sie, als es geklingelt hat!",The detonator! Where's the detonator? I had it! I had it when the doorbell rang!
 FI_RAET_MAX_0090,"Zeldina, Opa, der Roboter und ich. Wenn wir jetzt die Luke aufkriegen, kommt Oma rein, und das Ding läuft noch.","Zeldina, Grandpa, the robot and me. If we get the hatch open now, Grandma comes in and the thing is still running."
+FI_RAET_MAX_0095,"Zeldina, Opa und ich. Wenn wir jetzt die Luke aufkriegen, kommt Oma rein, und das Ding läuft noch.","Zeldina, Grandpa and me. If we get the hatch open now, Grandma comes in and the thing is still running."
 FI_RAET_ZEL_0100,"Dann stoppt es. Und haltet vorher die Ofentür. Ich hab mal gesehen, was ein Drache macht, wenn man die Tür zu früh aufmacht.",Then stop it. And hold the oven door first. I once saw what a dragon does when you open the door too early.
 FI_RAET_MAX_0110,Du kannst die Ofentür halten?,Can you hold the oven door?
 FI_RAET_HAU_0120,"Ich halte Türen seit Baujahr 2077. Diese hier ist warm. Ich halte sie trotzdem. Servus, Tür.","I've been holding doors since 2077. This one is warm. I'll hold it anyway. Greetings, door."
@@ -7084,7 +7084,7 @@ FI_HINT_PIX_0160,Dein Opa schreit bei einer Taste besonders laut. Menschen schre
 FI_HINT_PIX_0170,"Richte die Zündkapsel auf den Empfänger und drück die rote Taste. Stopp. Vorher die Ofentür sichern, sonst isst du Teig. Nochmal.","Point the detonator at the receiver and press the red button. Stop. Secure the oven door first, or you'll be eating dough. Again."
 FI_HINT_PIX_0180,"Ich denke noch nach. Es sieht aus wie Starren, und es ist auch Starren. Aber mit Inhalt.","I'm still thinking. It looks like staring, and it is staring. But with content."
 FI_HINT_PIX_0190,"Alles erledigt. Die Luke geht gleich auf. Ich würde mich jetzt hinsetzen, wenn ich du wäre. Ich bin nicht du. Ich sitze schon.",All done. The hatch is about to open. I'd sit down now if I were you. I'm not you. I'm already sitting.
-FI_HINT_PIX_0200,Oben hat jemand Geburtstag. Das steht seit Wochen im Kalender. Mit leeren Händen geht man da nicht hin. Sagt man.,Someone upstairs has a birthday. It's been on the calendar for weeks. You don't turn up empty-handed. So they say.
+FI_HINT_PIX_0200,Unten hat jemand Geburtstag. Das steht seit Wochen im Kalender. Dein Großvater hat es trotzdem geschafft. Mit leeren Händen geht man da nicht hin. Sagt man.,Someone downstairs has a birthday. It's been on the calendar for weeks. Your grandfather managed it anyway. You don't turn up empty-handed. So they say.
 FI_HINT_PIX_0210,In der Fundkiste liegt Omas Kekstüte. Ich nenne das nicht Kekse. Ich habe daran gerochen.,Granny's biscuit bag is in the lost-and-found box. I wouldn't call those biscuits. I've smelled them.
 FI_HINT_PIX_0220,Benutz die Fundkiste und nimm die Tüte mit. Den Rest erledigt der Geburtstag. Ich schaue dabei weg.,Use the lost-and-found box and take the bag with you. The birthday will do the rest. I'll be looking away.
 FI_AUFL_NAR_0010,"Die Maschine seufzt. Die Lampen gehen eine nach der anderen aus, die Nadel fällt ins Grüne, der Riegel klackt zurück. Stille.","The machine sighs. The lamps go out one by one, the needle drops into the green, the bolt clacks back. Silence."
@@ -7111,13 +7111,13 @@ FI_AUFL_MAX_0200,"Ich war in vier Welten. Ich habe einen Troll ins Fußbad geste
 FI_AUFL_MAX_0200_2,Für einen Einkaufszettel.,For a shopping list.
 FI_AUFL_OPA_0210,"Für einen Kuchen, Max. Das ist etwas ganz anderes.","For a cake, Max. That's something quite different."
 FI_AUFL_MAX_0220,"Und die Fernbedienung? Du hast mich heute Nachmittag gefragt, ob ich sie gesehen hab.",And the remote? This afternoon you asked me whether I'd seen it.
-FI_AUFL_OPA_0230,Ich war schon mal drin. Im Zapp-O-Mat. Einmal. Zum Testen.,I've been inside before. In the Zap-O-Matic. Once. To test it.
+FI_AUFL_OPA_0230,Ich war schon mal drin. Im Zapp-O-Mat. Einmal. Zum Testen. Durch alle Kanäle.,I've been inside before. In the Zap-O-Matic. Once. To test it. Through every channel.
 FI_AUFL_OPA_0230_2,"Auf Kanal 999 ist sie mir aus der Tasche gefallen, direkt in Zappmanns Studio. Und ich wollte nicht zugeben, wo sie liegt. Vor dem Kater schon gar nicht.","On Channel 999 it fell out of my pocket, right into Zappmann's studio. And I didn't want to admit where it was. Least of all in front of the cat."
-FI_AUFL_PIX_0240,Ich hab's gewusst. Seit Welt 3.,I knew it. Since World 3.
+FI_AUFL_PIX_0240,Ich hab's gewusst. Seit Kanal 42.,I knew it. Since Channel 42.
 FI_AUFL_PIX_0240_2,"Das Hologramm. „Hilf mir, Max.“ Wer hinterlässt eine Notfall-Nachricht in einer Welt, in der er angeblich nie war?","The hologram. ""Help me, Max."" Who leaves an emergency message in a world he's supposedly never been to?"
-FI_AUFL_MAX_0250,Du hast es in Welt 4 laut gesagt. Und dann kam der Amboss.,You said it out loud in World 4. And then came the anvil.
+FI_AUFL_MAX_0250,Du hast es auf Kanal 999 laut gesagt. Und dann kam der Amboss.,You said it out loud on Channel 999. And then came the anvil.
 FI_AUFL_PIX_0260,"Das zählt als Zensur. Ich werde mich beschweren, sobald ich herausgefunden habe, bei wem.",That counts as censorship. I shall complain as soon as I've found out to whom.
-FI_AUFL_MAX_0270,"Und Zappmann? Die Lichterkette hat geblinkt, du kennst ihn. Lange Geschichte.","And Zappmann? The fairy lights blinked, you know him. Long story."
+FI_AUFL_MAX_0270,"Und Zappmann? Du kennst ihn. Lange Geschichte, hast du geblinkt. Ich hab Zeit.","And Zappmann? You know him. Long story, you blinked. I've got time."
 FI_AUFL_OPA_0280,1977. „Zappis Puppenstube.“ Ich war der Bastel-Onkel. Jeden Samstag.,"1977. ""Zappi's Dollhouse."" I was the crafts uncle. Every Saturday."
 FI_AUFL_OPA_0280_2,In der letzten Folge habe ich live einen Backofen vorgeführt. Er ist explodiert. Live. Mit Teig. Auf Zappi.,In the last episode I demonstrated an oven live. It exploded. Live. With dough. All over Zappi.
 FI_AUFL_OPA_0290,Zappmann durfte danach nie wieder vor eine Kamera. Und ich backe seitdem nur noch heimlich. Auf dem Dachboden. Mit Verriegelung.,"Zappmann was never allowed in front of a camera again. And ever since, I only bake in secret. In the attic. With a safety lock."
@@ -7198,7 +7198,7 @@ FI_WOHN_NAR_0220,"Die Tür geht auf. Max' Mutter kommt herein, Jacke noch an, Sc
 FI_WOHN_MUT_0230,"Guten Abend. Alles Gute, Mama.","Good evening. Happy birthday, Mum."
 FI_WOHN_MUT_0240,"Ich frage nicht. Ich hatte Spätschicht. Ich frage morgen, und dann ausführlich.","I'm not asking. I've had a late shift. I'll ask tomorrow, and in detail."
 FI_WOHN_NAR_0250,"Sie hebt einen zerknitterten Zettel vom Couchtisch auf, direkt neben der Fernbedienung.","She picks a crumpled note up off the coffee table, right next to the remote."
-FI_WOHN_MUT_0260,"Konrad, das ist deine Einkaufsliste. Du hast nichts davon gekauft, oder?","Konrad, this is your shopping list. You didn't buy any of it, did you?"
+FI_WOHN_MUT_0260,"Papa, das ist deine Einkaufsliste. Du hast nichts davon gekauft, oder?","Dad, this is your shopping list. You didn't buy any of it, did you?"
 FI_WOHN_MUT_0270,Eier. Mehl. Batterien. Fernbedienung finden.,Eggs. Flour. Batteries. Find the remote.
 FI_WOHN_MUT_0270_2,Und Milch. Wo ist die Milch?,And milk. Where's the milk?
 FI_WOHN_NAR_0280,Stille. Pixel lässt sich vom Schrank in Richtung Sofa fallen. Opa zieht einen zweiten Zettel aus der Strickjacke und hält ihn Max hin. Darauf steht etwas mit vielen Zeichen.,Silence. Pixel lets himself drop from the cupboard towards the sofa. Grandpa pulls a second note out of his cardigan and holds it out to Max. It has something with lots of characters on it.

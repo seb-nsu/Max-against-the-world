@@ -553,7 +553,6 @@ Max kommt durch die Grabplatte in den Keller. Die verkettete Tür nach oben blei
 | W4\_KELL\_MAX\_0150 | Max | Zu, natürlich. Im Horrorfilm ist die Tür immer zu, bis zum ungünstigsten Moment. | Benutzen: verkettete Tür |
 | W4\_KELL\_PIX\_0160 | Pixel | Diese Tür geht nicht auf, und das ist keine Frage von Schlüsseln, sondern von Genre. Hier geht grundsätzlich nichts auf. // In der Sitcom dagegen geht ständig alles auf, alle zwei Minuten platzt dort jemand herein. // Denk mal drüber nach, junger Mann. Ich mache inzwischen ein Nickerchen. | Benutzen: verkettete Tür, zweites Mal; Kaskade; Hinweis R6a |
 | W4\_KELL\_MAX\_0170 | Max | Die Geister. Drei Laken mit Löchern drin. Sie sehen aus wie Faschingskostüme, die nach der Party keiner abgeholt hat. | Ansehen: Geister |
-| W4\_KELL\_MAX\_0175 | Max | Wenn die gleich einen Song über sich anfangen und ich wen anrufen soll, weiß ich nicht, wen. Ich hab nur Pixel. | Ansehen: Geister, zweites Mal |
 | W4\_KELL\_GST\_0180 | Geist | Buuuh? Buh. | Reden: Geist |
 | W4\_KELL\_MAX\_0190 | Max | Die sagen nichts, die machen nur „Buh“. Als hätte jemand bei denen den Ton vergessen. | nach 0180; Hinweis auf Stumm |
 | W4\_KELL\_MAX\_0200 | Max | Die Ketten gehen nicht ab. Ich hab es mit den Händen versucht, aber ich hab nur zwei Hände, und der Film hat ein Budget. | Benutzen: Ketten |
@@ -763,7 +762,6 @@ Gespräche und Ansehen in Kapitolis.
 | W4\_KAPI\_PIX\_0510 | Pixel | Da wohnt jemand Freundliches aus der Nachbarschaft, wenn ich mich nicht irre. // Ich rieche Spinne, Pflichtgefühl und kalte Pizza. Eine traurige Kombination. | Ansehen: Wasserturm mit Spinnennetz |
 | W4\_KAPI\_PIX\_0515 | Pixel | Das Netz ist ordentlich gespannt. Wer so sauber arbeitet, trägt große Verantwortung. // Und hat vermutlich eine Tante, die sich Sorgen macht. Solche Leute haben immer eine Tante. | Ansehen: Wasserturm mit Spinnennetz, zweites Mal |
 | W4\_KAPI\_MAX\_0520 | Max | Wolkenkratzer mit dicken schwarzen Linien. Da drin sind keine Büros, da drin ist nur Tusche. | Ansehen: Wolkenkratzer |
-| W4\_KAPI\_MAX\_0525 | Max | An einem Fenster lehnt ein Mann mit Brille und Krawatte. Wenn der gleich in eine Telefonzelle rennt, weiß ich Bescheid. | Ansehen: Wolkenkratzer, zweites Mal |
 | W4\_KAPI\_MAX\_0530 | Max | Schilder in Form von Sprechblasen, und alle sind leer. Die Stadt hat was zu sagen, aber den Text vergessen. | Ansehen: Sprechblasen-Schilder |
 | W4\_KAPI\_MAX\_0535 | Max | Eine Blase ist halb voll. Da steht „ZACK–“, und dann nichts mehr. Da wurde jemand mitten im Zack unterbrochen. | Ansehen: Sprechblasen-Schilder, zweites Mal |
 | W4\_KAPI\_MAX\_0540 | Max | Ein Zeitungskiosk. Schlagzeile: „SCHURKE UNTERBRICHT ALLES!“ Darunter: Werbung. | Ansehen: Kiosk |
@@ -1020,7 +1018,7 @@ Szene. Der Aufzug öffnet sich auf eine Talkshow-Bühne: goldenes Sofa, Applaus-
 | W4\_STUD\_NAR\_0130 | – | Schnitt. Max steht wieder im Studio, Zappmann lächelt. Die Optionen erscheinen erneut. | nach dem Albtraum |
 | W4\_STUD\_ZAP\_0140 | Zappmann | Siehst du? Es tut gar nicht weh. Also? | nach dem Albtraum |
 | W4\_STUD\_ZAP\_0150 | Zappmann | Für immer. Das ist der Deal. Immer ist hier nicht lang. Immer ist nur bis zum Sendeschluss, und den habe ich abgeschafft. | nach Option 2; zurück zur Auswahl |
-| W4\_STUD\_MAX\_0160 | Max | Nein. Ich habe eine Woche lang Dinge getan. Ich habe eine Hyäne überführt und getanzt. Freiwillig. Ich kann nicht zurück auf ein Sofa, auf dem ich schon sitze. | nach Option 3 |
+| W4\_STUD\_MAX\_0160 | Max | Nein. Ich habe zwei Wochen lang Dinge getan. Ich habe eine Hyäne überführt und getanzt. // Ich bin gerade erst aufgestanden. Ich setz mich nicht wieder hin. | nach Option 3 |
 | W4\_STUD\_PIX\_0170 | Pixel | Das war fast eine Rede. Ich bin erschüttert. // Positiv erschüttert, aber hauptsächlich erschüttert. Ich brauche gleich ein Kissen. |  |
 | W4\_STUD\_ZAP\_0180 | Zappmann | Dann bleiben wir eben auf Sendung. LIVE! Die Zappmann-Show, ohne Pause, ohne Ende! | Band spielt, Kameras schwenken, Zappmann redet ins Publikum |
 | W4\_STUD\_MAX\_0190 | Max | Er hört nicht mehr zu. Er sendet. | Kampf beginnt; sichtbarer Grund: Live-Show läuft |
@@ -1155,7 +1153,7 @@ Rechtsklick auf einen Gegenstand in der Inventarleiste. Erstes Mal die erste Zei
 
 | ID | Sprecher | Text | Auslöser |
 | --- | --- | --- | --- |
-| W4\_INV\_MAX\_0010 | Max | Ein Bettlaken mit zwei Löchern. Ein Geist hat es mir überlassen. Darunter war nichts. Nicht mal ein Geist. | Ansehen: Bettlaken, Bettlaken |
+| W4\_INV\_MAX\_0010 | Max | Ein Bettlaken mit zwei Löchern. Der erste Entwurf vom Fledermann. Zwei Löcher, null Schirme. | Ansehen: Bettlaken, Bettlaken |
 | W4\_INV\_MAX\_0015 | Max | Es riecht nach Dachboden und nach Halloween. Wenn ich es überzieh, bin ich entweder ein Geist oder eine Picknickdecke. | Ansehen: Bettlaken, Bettlaken, zweites Mal |
 | W4\_INV\_MAX\_0020 | Max | Mein Superhelden-Anzug mit Umhang, aus einem Bettlaken. Ich trag Bettwäsche, und sie steht mir auch noch. | Ansehen: Bettlaken, Superhelden-Anzug |
 | W4\_INV\_MAX\_0025 | Max | Auf der Brust ist ein Fondue-Topf aufgemalt. Jeder Held braucht ein Wappen, und meins blubbert. | Ansehen: Bettlaken, Superhelden-Anzug, zweites Mal |

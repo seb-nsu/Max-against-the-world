@@ -89,6 +89,7 @@ func ei_bekommen() -> void:
 		_r12_setzen,
 		Spiel.z("MAX", "W1_SMAU_MAX_0630"),
 		Spiel.z("PIX", "W1_SMAU_PIX_0640"),
+		Spiel.z("MAX", "W1_SMAU_MAX_0645"),
 	])
 	await _r12_setzen()
 
