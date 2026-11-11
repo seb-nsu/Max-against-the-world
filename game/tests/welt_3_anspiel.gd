@@ -76,7 +76,7 @@ func _durchlauf() -> void:
 	# R5: Code-Sicht an der Tür
 	await S.regel("ansehen", "tuer")
 	await S.regel("ansehen", "tuer")
-	_pruefe(Z.ist("CODE_SICHT"), "Code-Sicht frei")
+	_pruefe(Z.ist("W3_CODE_SICHT"), "Code-Sicht frei")
 	S.vorgabe_auswahl = [0]
 	await S.regel("benutzen", "tuer")
 	_pruefe(Z.geloest("R5"), "R5 gesprächige Tür")
@@ -105,7 +105,7 @@ func _durchlauf() -> void:
 	_pruefe(root.get_node("D").get_instance("OrakelOma").option_sichtbar("0130"), "Orakel-Oma bietet die Frage nach dem Sparschwein an")
 	await S.regel("nach_option", "orakel_oma", "0150")
 	await S.regel("ansehen", "kochbuch")
-	_pruefe(Z.geloest("R4") and _hat("rezeptkarte") and Z.ist("REGEL_2"), "R4 Sparschwein, Regel 2")
+	_pruefe(Z.geloest("R4") and _hat("rezeptkarte") and Z.ist("W3_REGEL_2"), "R4 Sparschwein, Regel 2")
 	_pruefe(_objekt("sparschwein") != null and _objekt("eieruhr") != null and _objekt("vase") == null
 		and _objekt("wandtelefon") == null, "Küche: Sparschwein und Eieruhr statt Vase und Wandtelefon")
 	# Omas Eieruhr weckt auch: Max wacht in der Kapsel auf und kommt über das Terminal in die Küche zurück.
@@ -118,7 +118,7 @@ func _durchlauf() -> void:
 
 	# R6: Büroturm
 	await _geh("buero_50")
-	_pruefe(Z.ist("HEXENSCHUSS"), "Büroturm: Hexenschuss")
+	_pruefe(Z.ist("W3_HEXENSCHUSS"), "Büroturm: Hexenschuss")
 	# Der Bürokopierer, aus dem die Kopien kommen: zwei Zeilen beim Ansehen, eine beim Benutzen
 	var kopierer := _objekt("kopierer")
 	_pruefe(kopierer != null, "Büroturm: Kopierer steht im Flur")
@@ -134,7 +134,7 @@ func _durchlauf() -> void:
 	_pruefe(Z.geloest("R6a"), "R6a Original und Kopie")
 	await S.regel("benutzen_inventar", "kaffeetasse")
 	await S.regel("ansehen_inventar", "schmidts_akte")
-	_pruefe(Z.geloest("R6b") and _hat("schmidts_akte") and Z.ist("REGEL_1"), "R6b Mittagspause, Regel 1")
+	_pruefe(Z.geloest("R6b") and _hat("schmidts_akte") and Z.ist("W3_REGEL_1"), "R6b Mittagspause, Regel 1")
 
 	# R13: Pixel in der Basis wirft Kalles Tasse
 	await _wechsel("widerstandsbasis")
@@ -168,7 +168,7 @@ func _durchlauf() -> void:
 	_pruefe(_gesagt("W3_EING_PIX_0185") and not Z.geloest("R8") and _hat("telefonbuchseite"),
 		"Seite vor dem Ölen: Pixel warnt, die Seite bleibt bei Max")
 	await S.regel("gegenstand", "hausmeister", "olivenoel")
-	_pruefe(Z.ist("FREUND_0815"), "Öl für Modell 08/15: Freund")
+	_pruefe(Z.ist("W3_FREUND_0815"), "Öl für Modell 08/15: Freund")
 	await S.regel("gegenstand", "hausmeister", "telefonbuchseite")
 	_pruefe(Z.geloest("R8"), "R8 Hausmeister")
 	await S.regel("gegenstand", "kartenleser", "zugangskarte")
@@ -191,7 +191,7 @@ func _durchlauf() -> void:
 	await S.geben(_sn("gummihuhn"))
 	S.vorgabe_auswahl = [0]
 	await S.regel("benutzen", "laser")
-	_pruefe(Z.geloest("R9c") and Z.ist("REGEL_3"), "R9c Kammer 2, Regel 3")
+	_pruefe(Z.geloest("R9c") and Z.ist("W3_REGEL_3"), "R9c Kammer 2, Regel 3")
 	await _geh("testkammer_3")
 	S.vorgabe_auswahl = [0]
 	await S.regel("benutzen", "tuer")
@@ -222,6 +222,7 @@ func _durchlauf() -> void:
 	_pruefe("atmo/w3_atmo" in klaenge and "atmo/laser" in klaenge, "Ton: Grundatmosphäre in Basis und Labor, Laser in Testkammer 2")
 	_pruefe(int(Z.wert("ZWISCHENSPIEL", 0)) == 3, "Zwischenspiel 3")
 	_pruefe(int(Z.wert("EINKAUFSLISTE", 0)) == 3, "Einkaufsliste: dritter Wunsch")
+	_alter_spielstand()
 	await _hotspot("drehknopf").on_click()
 	_pruefe(Z.ist("ZS3_GEPACKT"), "Reisetasche gepackt")
 	await _hotspot("drehknopf").on_click()
@@ -229,7 +230,45 @@ func _durchlauf() -> void:
 	_pruefe(Z.abschnitt == "welt-4", "Welt 4 beginnt")
 
 
-#region Hilfen #####################################################################################
+## Spielstand der Version 2 (Schalter aus Welt 3 und Finale noch ohne Präfix) als Datei schreiben,
+## lesen und in den Zustand laden: Nach der Umwandlung muss alles stehen wie vorher.
+func _alter_spielstand() -> void:
+	var Z = _zustand()
+	var vorher: Dictionary = Z.speichern()
+	var alt: Dictionary = vorher.duplicate(true)
+	alt.schalter = {"LUKE_ERKANNT": true}
+	var umbenannt := 0
+	for name in vorher.schalter:
+		var kurz := str(name)
+		for praefix in CQSaveLoad.SCHALTER_V3:
+			if kurz.begins_with(praefix) and kurz.trim_prefix(praefix) in CQSaveLoad.SCHALTER_V3[praefix]:
+				kurz = kurz.trim_prefix(praefix)
+				umbenannt += 1
+				break
+		alt.schalter[kurz] = vorher.schalter[name]
+	_pruefe(umbenannt == CQSaveLoad.SCHALTER_V3["W3_"].size(),
+		"Alter Spielstand: alle %d Schalter von Welt 3 sind am Ende der Welt gesetzt (%d)"
+		% [CQSaveLoad.SCHALTER_V3["W3_"].size(), umbenannt])
+	const PLATZ := 12
+	DirAccess.make_dir_recursive_absolute(CQSaveLoad.ordner)
+	var f := FileAccess.open(CQSaveLoad.platz_pfad(PLATZ), FileAccess.WRITE)
+	f.store_string(JSON.stringify({version = 2, aufloesung_hoehe = 360,
+		popochiu = {globals = {custom_data = alt}}}))
+	f.close()
+	var datei: Dictionary = root.get_node("Spielstand").saveload.datei_lesen(PLATZ)
+	_pruefe(int(datei.get("version", 0)) == CQSaveLoad.VERSION and CQSaveLoad.VERSION >= 3,
+		"Alter Spielstand: Versionsnummer nach dem Lesen angehoben")
+	Z.schalter = {}
+	Z.laden(datei.popochiu.globals.custom_data)
+	var erwartet: Dictionary = vorher.schalter.duplicate()
+	erwartet["FI_LUKE_ERKANNT"] = true
+	_pruefe(Z.schalter == erwartet, "Alter Spielstand: Schalter tragen nach dem Laden ihr Präfix\n      erwartet %s\n      geladen  %s"
+		% [erwartet.keys(), Z.schalter.keys()])
+	_pruefe(Z.ist("W3_CODE_SICHT") and Z.ist("W3_FREUND_0815") and not Z.schalter.has("CODE_SICHT")
+		and Z.geloest("R9c", "welt-3") and Z.geloest("R10", "welt-3"),
+		"Alter Spielstand: Code-Sicht, Freund 08/15 und die Testkammern bleiben erhalten")
+	Z.laden(vorher)
+	DirAccess.remove_absolute(CQSaveLoad.platz_pfad(PLATZ))
 func _geh(rid: String) -> void:
 	_spiel().herkunft_raum = ""
 	root.get_node("R").goto_room(root.get_node("Bauplan").raum_script_name(rid))

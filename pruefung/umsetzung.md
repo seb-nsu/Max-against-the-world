@@ -221,6 +221,8 @@ Fund 2, wenn nichts anderes dasteht: Das Spiel konnte diese Zeilen nicht von ein
 | `W3_TURM_KLO_0070` | hebt die Hand, schießt eine Kugel in Zeitlupe | holt aus, wirft einen Locher in Zeitlupe | Fund 43: Wecker statt Telefon, Sparschwein statt Vase, Bürokopierer und Locher im Turm (Freigabe Sebastian) |
 | `W3_BAS_MAX_0560` | Benutzen: Terminal; Ebenenwechsel in die Simulation, Ankunft an der letzten Zelle | Benutzen: Terminal; Ebenenwechsel in die Simulation, Ankunft am letzten Wecker | Fund 43: Wecker statt Telefon, Sparschwein statt Vase, Bürokopierer und Locher im Turm (Freigabe Sebastian) |
 
+**Nachtrag aus Punkt 5 (Schalter-Präfixe).** In diesen 47 Zeilen nennt die Regie-Spalte einen Schalter aus Welt 3 oder dem Finale. Dort steht jetzt der Name mit Präfix, zum Beispiel `W3_FREUND_0815` statt `FREUND_0815` und `FI_KEKSE_DABEI` statt `KEKSE_DABEI`. Sonst ist an den Zeilen nichts geändert, der Wortlaut ist gleich: `W3_APO_MOR_0420`, `W3_EING_HAU_0260`, `W3_EING_KAL_0390`, `W3_ENDE_HAU_0060`, `W3_ENDE_HAU_0070`, `W3_KERN_NAR_0440`, `FI_AUFL_HAU_0020`, `FI_AUFL_HAU_0470`, `FI_AUFL_MAX_0510`, `FI_AUFL_NAR_0030`, `FI_AUFL_NAR_0390`, `FI_AUFL_NAR_0520`, `FI_AUFL_OMA_0460`, `FI_AUFL_OMA_0480`, `FI_AUFL_OMA_0530`, `FI_AUFL_PIX_0540`, `FI_HINT_PIX_0080`, `FI_HINT_PIX_0090`, `FI_HINT_PIX_0100`, `FI_HINT_PIX_0110`, `FI_RAET_HAU_0410`, `FI_RAET_MAX_0110`, `FI_RAET_MAX_0140`, `FI_RAET_MAX_0160`, `FI_RAET_PIX_0130`, `FI_RAET_PIX_0150`, `FI_RIEG_MAX_0090`, `FI_RIEG_MAX_0260`, `FI_RIEG_PIX_0230`, `FI_RUF_HAU_0170`, `FI_RUF_HAU_0190`, `FI_RUF_KAL_0200`, `FI_RUF_KAL_0220`, `FI_RUF_MAX_0210`, `FI_RUF_MAX_0360`, `FI_RUF_NAR_0180`, `FI_RUF_PIX_0010`, `FI_RUF_PIX_0230`, `FI_RUF_ZEL_0300`, `FI_RUF_ZEL_0310`, `FI_WOHN_HAU_0390`, `FI_WOHN_MAX_0150`, `FI_WOHN_MAX_0155`, `FI_WOHN_NAR_0220`, `ZS3_DACH_MAX_0390`, `ZS3_DACH_MAX_0395`, `ZS3_DACH_MAX_0400`.
+
 ### Sprecher (zweite Spalte), Wortlaut unverändert
 
 Fund 93: ein Name je Figur. Die vier Pixel-Zeilen gehören zu Fund 15 (Pixel spricht in der Simulation nur über die Leitung). Die Zeilen mit Radiowecker und Küchenradio gehören zu Fund 43 (Nachtrag, Abschnitt 6): Pixels Stimme kommt in der Simulation jetzt aus dem Radiowecker und aus Omas Küchenradio.
@@ -944,7 +946,7 @@ Hinweise zu den Zahlen:
 - Fund 76: „dreihundert Jahre“ bei der Sphinx stimmt mit ihren eigenen Angaben überein.
 - Fund 108: Sprechblasen bleiben über dem Taschen-Fenster sichtbar. `docs/entscheidungen.md` nennt das als Absicht.
 - Fund 93: „Ansehen: Traubensaft, Traubensaft“ und „Bettlaken, Bettlaken“ sind die Schreibweise „Gegenstand, Zustand“. Das Werkzeug liest sie so.
-- Fund 92: Die Schalter `STEMPEL_MENSCH`, `REGEL_2` und `MUTTI_AUS` in Welt 3 haben kein Präfix. Umbenennen ändert Code, Tests und alte Spielstände; der Bericht rät selbst, das mit der nächsten Arbeit an Welt 3 zu tun.
+- Fund 92: Die Schalter `STEMPEL_MENSCH`, `REGEL_2` und `MUTTI_AUS` in Welt 3 haben kein Präfix. Umbenennen ändert Code, Tests und alte Spielstände; der Bericht rät selbst, das mit der nächsten Arbeit an Welt 3 zu tun. **Nachtrag: erledigt in Punkt 5 unten.**
 - Fund 100: Doppelte Hotspots außer der Telefonzelle (Tresen und Weinkarte, Halterung, Keksdose und Scherben, Tasse und Tisch, Amphore und Traubensaft) bleiben. Im Spiel verhalten sich beide Namen gleich; zusammenlegen lohnt erst mit den echten Bildern.
 
 ### Fernere Fassungen für die Schublade (Fund 105)
@@ -1229,3 +1231,50 @@ Entscheidungen, bitte prüfen:
 Aufgefallen im Deutschen, nicht geändert: `P0_WOHN_MAX_0355` hat denselben Rechenfehler wie die englische Zeile. Das Rätsel verlangt „neun Buchstaben“, ZAPPOMAT hat acht, und Opa malt „für den neunten ein Kästchen dazu“. Aufgehen würde es mit „sieben Buchstaben“ und „für den achten“. Das ist dein Wortlaut, deshalb steht es nur hier.
 
 Prüfläufe vor dem Commit von Punkt 4: `tools/pruefen.py` 0 Fehler, 0 Warnungen. Alle acht Dokument-Prüfungen grün. Godot: Prolog 779, Welt 2 58, Welt 3 68, Welt 4 24, Finale 33, Hinweise 19, Ansehen 31, Menüs 75, Minispiele 63, Ton 32, Schalter 31, Prolog mit echten Sprechblasen 778, Bildvergleich 55 Räume. Überall 0 Fehler. Die Telemetrie-Auswertung der Testläufe ist grün.
+
+### Punkt 5: Kleinkram
+
+**Schalter-Präfixe.** Alle 29 Schalter aus Welt 3 ohne Präfix heißen jetzt `W3_…` (etwa `W3_CODE_SICHT`, `W3_FREUND_0815`, `W3_KAMMER_1_GELOEST`). Dazu zwei aus dem Finale: `FI_LUKE_ERKANNT` und `FI_KEKSE_DABEI`. Die standen nicht in deinem Auftrag. Ich habe sie mitgenommen, weil dieselbe Umwandlung der Spielstände sie abdeckt und ein späteres Umbenennen eine weitere Version gekostet hätte.
+
+- Geändert sind 185 Stellen in 16 Dateien: Welt-Tabellen, Regie-Spalten im Skript, Rätsel- und Grafik-Dokumente, `welt_3.gd`, `finale.gd`, `errungenschaften.gd`, der Dachboden und drei Tests. Der Wortlaut ist unberührt.
+- Die Kennung der Errungenschaft `FREUND_0815` bleibt, weil sie später an Steam geht. Nur ihr Schalter heißt jetzt `W3_FREUND_0815`.
+- **Alte Spielstände:** Die Spielstände haben jetzt Version 3. Ein älterer Stand wird beim Lesen umgewandelt (`game/skripte/cq_save_load.gd`, `SCHALTER_V3`). `welt_3_anspiel` prüft das am Ende von Welt 3: Es schreibt einen Stand der Version 2 mit den alten Namen als Datei, liest ihn und vergleicht. Alle 29 Schalter kommen an.
+- **Damit es so bleibt:** `tools/pruefen.py` meldet jeden Schalter ohne Präfix seines Abschnitts als Fehler. Gegenprobe gemacht: `MUTTI_AUS` ohne Präfix gibt einen Fehler.
+- Ohne Präfix bleiben fünf Werte, die über die Abschnitte hinweg gelten: `ZWISCHENSPIEL`, `TASCHE`, `FUNDKISTE`, `EINKAUFSLISTE`, `FINALE`. Die Regel steht in `docs/05-spielsysteme.md` (Speichern).
+
+**Schriften des Baukastens.** Das war schon erledigt (Fund 104). Nachgeprüft im Web-Build: Die Dateien von `monkeyisland_1991.ttf` und `minecraftia-regular.ttf` liegen nicht im Paket. Es bleiben nur ihre Pfade als Text in Popochius Thema.
+
+**„Hauptmenü“ im Browser-Build.** Getestet in Chromium mit dem echten Web-Export (Vorlagen 4.7.2, ohne Threads), bedient mit Maus und Tastatur.
+
+- Es funktioniert: Pausemenü, zweimal „Hauptmenü“, die Seite lädt neu, das Spiel steht wieder im Hauptmenü. Der Autospeicher ist noch da, „Fortsetzen“ zeigt ihn an.
+- Die Häkchen in den Optionen erscheinen, die Symbolschrift greift also auch im Browser.
+- **Fund 1, behoben: Der erste Raum saß verschoben.** Nach „Neues Spiel“ stand das Wohnzimmer um 160×90 Spielpixel nach rechts unten versetzt, mit grauem Rand links und oben. Das galt auch am Rechner, nicht nur im Browser. Ursache: Popochius Kamera bringt aus ihrer Szene Grenzen von 320×180 mit und stellt sie erst beim ersten Raumwechsel richtig. Das Spiel beginnt aber im Hauptmenü, der erste Raum kommt ohne Raumwechsel. `Spiel._ready()` stellt die Grenzen jetzt gleich beim Start. Kein Test hatte es gemerkt, weil die Tests den Raum im allerersten Bild laden oder das Bild nicht ansehen. `menues` prüft es jetzt (Gegenprobe: ohne die Korrektur schlägt der Test fehl).
+- **Fund 2, behoben: Das Hauptmenü hatte die falsche Schrift.** Es zeigte Godots eigene Schrift. Festgelegt sind Pixelify Sans für Titel und Nunito für Menüs. Jetzt stehen Titel und Untertitel in Pixelify Sans, die Kanäle in Nunito. `menues` prüft beides.
+- **Bleibt: Fehlermeldungen von Popochiu.** Der Export meldet beim Start rund hundert Fehler in Popochius Editor-Skripten. Das Spiel läuft trotzdem, das war schon vermerkt (`docs/offene-punkte.md`, A9). Weg bekäme man sie nur mit einem Eingriff in den Baukasten.
+- Nicht getestet: Ton im Browser und ein echter Bildschirm. Das bleibt in A8 offen.
+
+### Punkt 6: Dokumente auf den neuesten Stand
+
+Dein Nachtrag vom Abend. Ich habe die Dokumente nach veralteten Ständen durchsucht (Stand-Absätze, Zahlen, offene Punkte, Tabellen) und die Zahlen gegen Welt-Tabellen und Skript nachgezählt. Wort für Wort neu gelesen habe ich sie nicht. Eingetragen ist, was nicht mehr stimmte.
+
+| Datei | Was sich geändert hat |
+| --- | --- |
+| `docs/03-produktion.md` | Neuer Stand-Absatz (englische Durchsicht, Schalter, Spielstand Version 3, Browser-Test). Zahl der Nahansichten je Abschnitt berichtigt (2, 4, 3, 4, 1 statt 1, 2, 3, 2, 0). Zeilen von Zwischenspielen und Finale auf 229 und 328. Hinweis, dass die Stundentabelle der Grafik noch mit 105 Figuren rechnet, die Welt-Tabellen führen 131. |
+| `docs/04-audio.md` | Umfang der Vertonung auf 5.450 Zeilen, 6.206 Sprechblasen, 506.000 Zeichen. Neuer Absatz zu fertiger Musik als Ergänzung. |
+| `docs/05-spielsysteme.md` | Zeilenstand je Abschnitt. Regel für Schalter-Präfixe und Spielstand-Version. Hauptmenü mit seinen Schriften. Ein veralteter Satz zu vier „noch fehlenden“ Schaltern berichtigt. |
+| `docs/grafik/00-stil-und-werkzeuge.md` | Tabelle der sechs Werkzeuge, die du heute geschickt hast, mit Einschätzung. Nichts davon ist entschieden. |
+| `docs/entscheidungen.md` | Drei neue Einträge: Schalter-Präfixe, englischer Tonfall (vorläufig), Kamera beim Start. |
+| `docs/offene-punkte.md` | A8 und A12 auf Stand. Neu P10 bis P14 (siehe unten). |
+| `docs/welten/README.md`, `game/README.md` | Präfix-Regel, Spielstand-Version, Tests. |
+
+Neu in `docs/offene-punkte.md`, alles deine Entscheidungen:
+
+- **P10:** Pixels englischer Tonfall ohne Kurzformen.
+- **P11:** `P0_WOHN_MAX_0355` zählt neun Buchstaben, ZAPPOMAT hat acht.
+- **P12:** Test an Max, ob Animationen aus deinen Bildern per Code reichen.
+- **P13:** Musik-Bundle, Lizenz prüfen.
+- **P14:** Das Skript hat 5.450 Zeilen bei einem Budget von etwa 5.000. Bis auf Welt 3 liegt jeder Abschnitt über seinem Budget. Die Budgets habe ich nicht angehoben.
+
+Aufgefallen, nicht geändert: Die Regie von `W3_APO_MOR_0420` sagt „Schalter FI_KEKSE_DABEI gesetzt“. Seit Fund 107 setzt ihn erst das Finale. Die Regie-Spalte ist hier nur ein Hinweis für den Bau, das Spiel verhält sich richtig.
+
+Prüfläufe vor dem Commit von Punkt 5 und 6: `pruefen.py` 0 Fehler, 0 Warnungen, 5.450 Skriptzeilen. Alle acht Dokumentprüfungen ohne Abweichung. Godot: Regeln laden grün, Prolog 779, Welt 2 58, Welt 3 72, Welt 4 24, Finale 33, Hinweise 19, Ansehen 31, Menüs 77, Minispiele 63, Ton 32, Schalter 31, Prolog mit echten Wartezeiten 778, überall 0 Fehler. Bildvergleich 55 Räume, 0 Fehler. Telemetrie-Auswertung ohne Befund. Import ohne Fehlermeldung.

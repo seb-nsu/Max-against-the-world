@@ -106,7 +106,7 @@ func _durchlauf() -> void:
 	var stufe_1: Array = H.naechste_zeilen(schritt_fi)
 	Z.spielzeit += 100.0
 	var stufe_2: Array = H.naechste_zeilen(schritt_fi)
-	Z.setze("FREUND_0815")
+	Z.setze("W3_FREUND_0815")
 	Z.spielzeit += 100.0
 	var stufe_3: Array = H.naechste_zeilen(schritt_fi)
 	Z.abschnitt = "welt-4"

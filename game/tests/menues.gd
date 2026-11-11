@@ -133,6 +133,11 @@ func _hauptmenue(spiel, einst) -> void:
 	menue._hinweis_schliessen()
 	pruefe(not menue.hinweis_offen() and not einst.erster_start(), "Hinweis bestätigt")
 	pruefe(menue._knoepfe.size() == 6, "sechs Kanäle")
+	var titel: Label = menue._haupt.get_node("Titel")
+	pruefe(titel.get_theme_font("font").resource_path.ends_with("pixelify-sans.ttf")
+		and menue._knoepfe[1].get_theme_font("font").resource_path.ends_with("nunito-extrabold.ttf"),
+		"Schriften im Hauptmenü: Titel in Pixelify Sans, Menüpunkte in Nunito (%s, %s)"
+		% [titel.get_theme_font("font").resource_path.get_file(), menue._knoepfe[1].get_theme_font("font").resource_path.get_file()])
 	pruefe(menue._knoepfe[0].disabled, "Fortsetzen ohne Spielstand aus")
 	pruefe(menue._kanal == 1, "ohne Spielstand steht Kanal 2 (Neues Spiel)")
 	menue._ausloesen(3)
@@ -174,6 +179,14 @@ func _hauptmenue(spiel, einst) -> void:
 	menue._ausloesen(1)
 	var da := await _warten_bis(func(): return _im_raum("Wohnzimmer"), 20.0)
 	pruefe(da, "Neues Spiel: im Wohnzimmer")
+	# Der erste Raum kommt aus dem Hauptmenü ohne Raumwechsel. Popochius Kamera muss trotzdem die
+	# Grenzen der Spielauflösung haben, sonst sitzt der Raum um 160×90 Pixel verschoben.
+	await _warten(5)
+	var kamera: Camera2D = root.get_node("E").camera
+	pruefe(kamera.limit_right == 640 and kamera.limit_bottom == 360
+		and root.canvas_transform.origin.is_equal_approx(Vector2.ZERO),
+		"Neues Spiel aus dem Hauptmenü: Raum sitzt richtig im Bild (Grenzen %d×%d, Versatz %s)"
+		% [kamera.limit_right, kamera.limit_bottom, root.canvas_transform.origin])
 	pruefe(spiel.hud.visible, "HUD im Spiel wieder an")
 	var gui_ebene = root.get_node("E").get_node("GraphicInterfaceLayer")
 	pruefe(gui_ebene.visible, "Popochiu-Oberfläche wieder an")

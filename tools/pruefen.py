@@ -572,15 +572,27 @@ def pruefe_nahansichten(alle):
         F("welten/*.yaml", f"{summe} Nahansichten (nahansicht: true plus nahansichten:), festgelegt sind {NAHANSICHTEN_GESAMT}")
 
 
+# Werte, die über die Abschnitte hinweg gelten (Zwischenspiele, Reisetasche, Finale) und deshalb
+# kein Präfix tragen. Neue Namen gehören nicht hierher, sondern bekommen ein Präfix.
+SCHALTER_OHNE_PRAEFIX = {"ZWISCHENSPIEL", "TASCHE", "FUNDKISTE", "EINKAUFSLISTE", "FINALE"}
+
+
 def pruefe_code_schalter(alle):
     """Schalter und Werte, die der Godot-Code setzt oder liest, stehen in einer Welt-Tabelle
     (Rätsel-„schalter“ oder „weitere_schalter“, 05-spielsysteme.md, Regeln für den Code)."""
     bekannt = set()
-    for d in alle.values():
-        bekannt |= {str(x) for x in als_liste(d.get("weitere_schalter"))}
-        bekannt |= {str(x) for x in (d.get("werte") or {})}   # gespeicherte Werte der Welt (W2_FAEHRE_STEG)
+    for abschnitt, d in alle.items():
+        eigene = {str(x) for x in als_liste(d.get("weitere_schalter"))}
+        eigene |= {str(x) for x in (d.get("werte") or {})}   # gespeicherte Werte der Welt (W2_FAEHRE_STEG)
         for r in d.get("raetsel") or []:
-            bekannt |= {str(x) for x in als_liste(r.get("schalter"))}
+            eigene |= {str(x) for x in als_liste(r.get("schalter"))}
+        # Jeder Name trägt das Präfix seines Abschnitts. Ein Umbenennen später kostet eine
+        # Umwandlung alter Spielstände (game/skripte/cq_save_load.gd), deshalb gleich richtig.
+        praefixe = [str(x) for x in als_liste(d.get("skript_praefix"))]
+        for name in sorted(eigene - SCHALTER_OHNE_PRAEFIX):
+            if not any(name.startswith(x + "_") for x in praefixe):
+                F(f"welten/{abschnitt}.yaml", f"Schalter {name} trägt kein Präfix des Abschnitts ({', '.join(praefixe)})")
+        bekannt |= eigene
     muster = re.compile(r'Zustand\.(?:ist|setze|wert|setze_wert)\(\s*"([A-Z][A-Z0-9_]*)"')
     for datei in sorted((ROOT / "game").rglob("*.gd")):
         if "addons" in datei.parts:

@@ -140,7 +140,8 @@ Menüs in `oberflaeche/`: `hauptmenue.tscn` ist die Startszene; `pausemenue.gd` 
 
 Speichern nutzt Popochius eigene Speicherung (Räume, Figuren, Inventar je Figur, Gespräche),
 nur das Dateiformat ist eigenes JSON mit Versionsnummer: `user://saves/<platz>.json`
-(`skripte/cq_save_load.gd`). Der Zustand hängt über `game/popochiu_globals.gd` daran.
+(`skripte/cq_save_load.gd`). Stand ist Version 3; ältere Spielstände hebt `umwandeln()` beim Lesen an
+(Koordinaten der alten Auflösung, umbenannte Schalter). Der Zustand hängt über `game/popochiu_globals.gd` daran.
 
 ## Testbuild und Telemetrie
 
@@ -247,7 +248,7 @@ cd game
 godot --headless --path . --import                                   # einmal nach dem Klonen
 godot --headless --path . -s res://tests/prolog_durchlauf.gd          # Testmodus, gut 3 Minuten
 godot --headless --path . -s res://tests/prolog_durchlauf.gd -- --echt   # echte Sprechblasen, gut 9 Minuten
-godot --headless --path . -s res://tests/menues.gd                    # Menüs, Optionen, Audio-Gerüst, unter 1 Minute
+godot --headless --path . -s res://tests/menues.gd                    # Menüs, Optionen, Audio-Gerüst, erster Raum nach dem Hauptmenü, unter 1 Minute
 godot --headless --path . -s res://tests/minispiele.gd                # Hebel, Rede-Ringen, Zombie-Tanz, unter 1 Minute
 godot --headless --path . -s res://tests/ton.gd                       # Geräusche, Atmosphäre, Stücke, unter 1 Minute
 godot --headless --path . -s res://tests/schalter.gd                  # Untertitel, Wackeln aus, Farbenblind-Hilfe, unter 1 Minute

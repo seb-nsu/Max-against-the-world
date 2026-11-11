@@ -1,6 +1,6 @@
 # Skript Welt 3: Neo-Neustadt 2099
 
-Das komplette Dialog-Skript für Welt 3 als Entwurf in 20 Abschnitten, von der Ankunft im Regen bis zum Klingeln des Werbeblocks, ohne die Rückkehr auf den Dachboden. Die Tabellen nutzen die Kurzform aus `05-spielsysteme.md` (ID, Sprecher, Text, Regie oder Auslöser; Bedingungen und die Ebene Simulation, Realität oder Labor stehen in der letzten Spalte), die IDs folgen dem Schema W3\_SZENE\_SPRECHER\_NUMMER in Zehnerschritten, Hinweise heißen W3\_HINT\_PIX\_xxxx, Ersatzzeilen kommen aus dem SYS\_ERS-Pool. Sprecherkürzel dieser Welt: MOR Morphäus, ORA Orakel-Oma, SCH Agent Schmidt, KLO Klon, TUR die Tür, DEC Deckert, VIE Herr Vier, KAL Kabel-Kalle, HAU Modell 08/15, MUT M.U.T.T.I., BER Bernd, PIE Piepsi, AUT Pastillenautomat, POR Portalgerät, RAD Radio, WEI weinender Mann, FRA Frau mit Regenschirm, MUS Straßenmusiker, REB Rebellin, REL Rebell, OPA Opa (als Hologramm und durch das Portal), NAR Regie ohne Text. Schalter mit Wirkung über die Welt hinaus heißen wie im Finale-Skript: FREUND\_0815 (Olivenöl für Modell 08/15) und KEKSE\_DABEI (Omas Kekse in der Tasche). Räume, Gegenstände, Figuren und alle Schalter stehen in der [Welt-Tabelle Welt 3](../welten/welt-3.yaml), Abläufe, Lösungen und Teilschritte in [Rätsel Welt 3](../raetsel/welt-3.md).
+Das komplette Dialog-Skript für Welt 3 als Entwurf in 20 Abschnitten, von der Ankunft im Regen bis zum Klingeln des Werbeblocks, ohne die Rückkehr auf den Dachboden. Die Tabellen nutzen die Kurzform aus `05-spielsysteme.md` (ID, Sprecher, Text, Regie oder Auslöser; Bedingungen und die Ebene Simulation, Realität oder Labor stehen in der letzten Spalte), die IDs folgen dem Schema W3\_SZENE\_SPRECHER\_NUMMER in Zehnerschritten, Hinweise heißen W3\_HINT\_PIX\_xxxx, Ersatzzeilen kommen aus dem SYS\_ERS-Pool. Sprecherkürzel dieser Welt: MOR Morphäus, ORA Orakel-Oma, SCH Agent Schmidt, KLO Klon, TUR die Tür, DEC Deckert, VIE Herr Vier, KAL Kabel-Kalle, HAU Modell 08/15, MUT M.U.T.T.I., BER Bernd, PIE Piepsi, AUT Pastillenautomat, POR Portalgerät, RAD Radio, WEI weinender Mann, FRA Frau mit Regenschirm, MUS Straßenmusiker, REB Rebellin, REL Rebell, OPA Opa (als Hologramm und durch das Portal), NAR Regie ohne Text. Schalter mit Wirkung über die Welt hinaus heißen wie im Finale-Skript: W3\_FREUND\_0815 (Olivenöl für Modell 08/15) und FI\_KEKSE\_DABEI (Omas Kekse in der Tasche). Räume, Gegenstände, Figuren und alle Schalter stehen in der [Welt-Tabelle Welt 3](../welten/welt-3.yaml), Abläufe, Lösungen und Teilschritte in [Rätsel Welt 3](../raetsel/welt-3.md).
 
 ## 1. Unterstadt, Straße: Ankunft im Regen
 
@@ -255,7 +255,7 @@ Szene nach der Diagnose. Zwei Pastillen liegen im Fach. Die Zeilen 0410 bis 0450
 | ID | Sprecher | Text | Regie |
 | --- | --- | --- | --- |
 | W3\_APO\_MAX\_0410 | Max | Zwei Pastillen, eine blaue und eine rote, und ich darf wählen. Kein Knopf für „irgendwas Zufälliges“. Eine echte Wahl. | sieht ins Fach |
-| W3\_APO\_MOR\_0420 | Morphäus | Bevor du wählst: Nimm die hier. Eine Probe von einer alten Dame, die alles vorher weiß. Sie sagte, du brauchst sie. Sie sagte auch, du würdest fragen, warum. | reicht eine Tüte Kekse; Inventar: Omas Kekse; Schalter KEKSE\_DABEI gesetzt |
+| W3\_APO\_MOR\_0420 | Morphäus | Bevor du wählst: Nimm die hier. Eine Probe von einer alten Dame, die alles vorher weiß. Sie sagte, du brauchst sie. Sie sagte auch, du würdest fragen, warum. | reicht eine Tüte Kekse; Inventar: Omas Kekse; Schalter FI\_KEKSE\_DABEI gesetzt |
 | W3\_APO\_MAX\_0430 | Max | Warum? |  |
 | W3\_APO\_MOR\_0440 | Morphäus | Sie sagte, das würdest du fragen. Mehr sagte sie nicht. | zuckt mit den Schultern |
 | W3\_APO\_PIX\_0450 | Pixel | Kekse. In einer Tüte. Außerhalb meiner Reichweite. // Ich merke mir das, Strickjacke. Ich merke mir alles, was mit Keksen zu tun hat, und ich vergebe sehr langsam. | gierig |
@@ -494,7 +494,7 @@ Ebene: Simulation. Der Tausch von der Straße gilt nur dort, hier redet Schmidt 
 | W3\_TURM\_KLO\_0070 | Klon | Zu Ihrem Schutz. | holt aus, wirft einen Locher in Zeitlupe |
 | W3\_TURM\_NAR\_0080 | – | Max biegt sich in Zeitlupe nach hinten. Der Locher segelt über ihm vorbei und zieht eine Spur Konfetti hinter sich her. Max bleibt in der Pose hängen. | Animation Zeitlupen-Ausweichen |
 | W3\_TURM\_MAX\_0090 | Max | Hab ich. Hab ich. … Ich komm nicht mehr hoch. | hält sich den Rücken |
-| W3\_TURM\_MAX\_0100 | Max | Hexenschuss. Mit sechzehn. In einer Simulation. Der Rücken ist nicht mal echt, und er tut trotzdem weh. | richtet sich langsam auf; Schalter HEXENSCHUSS gesetzt |
+| W3\_TURM\_MAX\_0100 | Max | Hexenschuss. Mit sechzehn. In einer Simulation. Der Rücken ist nicht mal echt, und er tut trotzdem weh. | richtet sich langsam auf; Schalter W3\_HEXENSCHUSS gesetzt |
 | W3\_TURM\_SCH\_0110 | Schmidt | Nur das Original kann die Kopien abberufen, und das Original erkennt man an den Hausschuhen | alle heben ein Bein mit rosa Hausschuh |
 | W3\_TURM\_KLO\_0120 | Klon | Wir haben auch Hausschuhe. Sie waren im Angebot. |  |
 | W3\_TURM\_MAX\_0130 | Max | Natürlich habt ihr die. Okay. Dann gucken wir mal, was die Wörter dazu sagen. | Hinweis auf die Code-Sicht |
@@ -792,7 +792,7 @@ Ebene: Realität, von Anfang an erreichbar. Der Roboter wischt vor der Panzertü
 | W3\_EING\_PIX\_0230 | Pixel | Er ist glücklich. Ein Roboter hat eine Liste bekommen und ist glücklich. // Ich habe auch eine Liste, und ich bin es nicht. Auf meiner fehlt Thunfisch, und das spürt man. | nach 0220 |
 | W3\_EING\_MAX\_0240 | Max | Hier, für deine Gelenke: Olivenöl. Aus einer Welt, in der die Leute Sport für eine gute Idee hielten. | Olivenöl auf Hausmeister; nur wenn Olivenöl in der Reisetasche |
 | W3\_EING\_HAU\_0250 | Modell 08/15 | … Bursche. Das ist … Ich höre nichts. Ich höre kein Quietschen. Zum ersten Mal seit neunzehn Jahren höre ich mich selbst nicht. | dreht einen Arm, kein Geräusch |
-| W3\_EING\_HAU\_0260 | Modell 08/15 | Du bist mein Freund. Das ist ein neuer Punkt auf dem Zettel. Ich schreibe ihn ganz oben hin. Wenn du mich brauchst, Bursche: Ich komme. | Schalter FREUND\_0815 gesetzt; Errungenschaft Freund 08/15 |
+| W3\_EING\_HAU\_0260 | Modell 08/15 | Du bist mein Freund. Das ist ein neuer Punkt auf dem Zettel. Ich schreibe ihn ganz oben hin. Wenn du mich brauchst, Bursche: Ich komme. | Schalter W3\_FREUND\_0815 gesetzt; Errungenschaft Freund 08/15 |
 | W3\_EING\_PIX\_0270 | Pixel | Ich habe es beim Packen gesagt: für alles, was quietscht, auch für Blechköpfe. | nach 0260 |
 | W3\_EING\_MAX\_0280 | Max | Ohne Öl sagt er einfach weiter Servus und quietscht. Er tut mir leid, so weit einem ein Roboter eben leidtun kann. | Ansehen: Hausmeister; ohne Olivenöl in der Tasche |
 | W3\_EING\_MAX\_0285 | Max | Er quietscht bei jedem Wischen. Das klingt nach einer Tür, die leise um Hilfe bittet. | Ansehen: Hausmeister, zweites Mal; ohne Olivenöl in der Tasche |
@@ -812,7 +812,7 @@ Ebene: Realität, von Anfang an erreichbar. Der Roboter wischt vor der Panzertü
 | W3\_EING\_MAX\_0370 | Max | Dahinter: kein Labor. Eine Wand mit leuchtenden Buchsen und ein dickes Kabel. Das Labor ist nicht hier. Das Labor ist „dran“. | Ansehen: geöffnete Tür, Datenanschlüsse; Panzertür offen |
 | W3\_EING\_MAX\_0375 | Max | Die Buchsen leuchten im Takt, als würde das Labor durch die Kabel atmen. Ich muss da rein, also irgendwie in die Kabel. | Ansehen: geöffnete Tür, Datenanschlüsse, zweites Mal; Panzertür offen |
 | W3\_EING\_KAL\_0380 | Kalle | Bin da! Hab die Trommel mitgebracht. Leitung von hier bis zu deiner Kapsel. Achtzig Meter Kabel, zwei Knoten, eine Hoffnung. | Benutzen: Datenanschluss; Kalle kommt mit Kabeltrommel |
-| W3\_EING\_KAL\_0390 | Kalle | Fertig. Ich zapf unterwegs noch den Lautsprecher der KI an, dann hörst du den Kater auch da drin. Ich tu dir keinen Gefallen damit. Ich weiß. | Leitung liegt; Schalter LEITUNG\_LABOR; Pixel im Labor hörbar |
+| W3\_EING\_KAL\_0390 | Kalle | Fertig. Ich zapf unterwegs noch den Lautsprecher der KI an, dann hörst du den Kater auch da drin. Ich tu dir keinen Gefallen damit. Ich weiß. | Leitung liegt; Schalter W3\_LEITUNG\_LABOR; Pixel im Labor hörbar |
 | W3\_EING\_PIX\_0400 | Pixel | Er hat mich in eine Weltherrschafts-KI eingespeist. Ich werde ihr Lautsprecher sein. // Ich war schon Schlimmeres, junger Mann. Ich war heute schon mehrmals nass. |  |
 | W3\_EING\_MAX\_0410 | Max | Jetzt zurück zur Kapsel, hinlegen, aufwachen im Labor. Mein Lebenslauf wird immer komischer. | nach 0390 |
 | W3\_EING\_MAX\_0420 | Max | Ein Wischeimer. Das Wasser darin ist sauberer als alles, was ich heute getrunken hab. | Ansehen: Wischeimer |
@@ -1068,7 +1068,7 @@ Gespräch mit M.U.T.T.I. Die drei Regeln sind Optionen, sobald sie im Notizbuch 
 | W3\_KERN\_PIX\_0415 | Pixel (aus dem Lautsprecher) | Das Ding glüht wie ein Heizkissen, sagst du. Wäre ich da, würde ich mich sofort drauflegen. // Ungefähr eine halbe Sekunde lang. Danach würde ich mich, glaube ich, umentscheiden. | Ansehen: Energiezelle, glühend, zweites Mal |
 | W3\_KERN\_MAX\_0420 | Max | Au. Nein. Au. Ich hab sie nicht mal berührt, und es tut schon weh. Das ist wie bei Omas Herd: Man weiß es und macht's trotzdem. | Benutzen: Energiezelle, heiß |
 | W3\_KERN\_MAX\_0430 | Max | „Heiß.“ Steht an der Zelle. Und an den Keksen in meiner Tasche steht: „kalt“. Oma hat gesagt, ich würde „Oh“ sagen. Oh. | Code-Sicht: Zelle und Kekse ansehen |
-| W3\_KERN\_NAR\_0440 | – | Tausch: heiß (Energiezelle) ↔ kalt (Omas Kekse). Die Zelle wird matt und frostig. Aus Max' Tasche steigt Dampf. | Code-Sicht: Lösung A; nur bei KEKSE\_DABEI; Inventar: Omas Kekse, ofenwarm (Schalter bleibt gesetzt, für das Finale) |
+| W3\_KERN\_NAR\_0440 | – | Tausch: heiß (Energiezelle) ↔ kalt (Omas Kekse). Die Zelle wird matt und frostig. Aus Max' Tasche steigt Dampf. | Code-Sicht: Lösung A; nur bei FI\_KEKSE\_DABEI; Inventar: Omas Kekse, ofenwarm (Schalter bleibt gesetzt, für das Finale) |
 | W3\_KERN\_MAX\_0450 | Max | Die Zelle ist kalt. Die Kekse sind warm. Zum ersten Mal in dieser Welt hat ein Tausch alle glücklich gemacht. Außer Pixel. Pixel kriegt keinen. | nimmt die Zelle |
 | W3\_KERN\_PIX\_0460 | Pixel (aus dem Lautsprecher) | Ofenwarme Kekse. In deiner Tasche. Für Menschen. Ich rieche sie durch den Lautsprecher. Das ist technisch unmöglich und trotzdem grausam. |  |
 | W3\_KERN\_MAX\_0470 | Max | Kein Tausch mehr übrig, und die Zelle glüht. Also brauch ich Wetter. Pixel. Fenster. Jetzt. | Code-Sicht: Budget im Kern verbraucht, Zelle noch heiß; Hinweis Lösung B, Figurenwechsel |
@@ -1103,8 +1103,8 @@ Szene. Max wacht in der Basis auf, die Zelle in der Hand. In der Realität ist s
 | W3\_ENDE\_MAX\_0040 | Max | Die Zelle. In der Simulation glühend, hier kalt und schwer. Für „ewig“ ist sie erstaunlich klein. | Ansehen: Energiezelle im Inventar, Realität |
 | W3\_ENDE\_MAX\_0045 | Max | Sie summt ganz leise. Ewig, sagt Opa. Ich hoffe, sie hat einen Ausschalter. Ewig ist lang. | Ansehen: Energiezelle im Inventar, Realität, zweites Mal |
 | W3\_ENDE\_REB\_0050 | Rebellin | Danke, Junge. Wir ziehen jetzt um. In ein Haus mit Fenstern. Die Sonnenbrillen behalten wir. | nimmt die Sonnenbrille nicht ab |
-| W3\_ENDE\_HAU\_0060 | Modell 08/15 | Bursche! Siebenundvierzig Sahra Konners, siebenundvierzig saubere Eingänge. Keine war die Richtige. Aber alle haben sich bedankt. Ich bin zufrieden. | nur bei FREUND\_0815; rollt herein |
-| W3\_ENDE\_HAU\_0070 | Modell 08/15 | Wenn du mich brauchst: Ich komme. Ich komme wieder. Diesmal stimmt es wirklich. | nur bei FREUND\_0815 |
+| W3\_ENDE\_HAU\_0060 | Modell 08/15 | Bursche! Siebenundvierzig Sahra Konners, siebenundvierzig saubere Eingänge. Keine war die Richtige. Aber alle haben sich bedankt. Ich bin zufrieden. | nur bei W3\_FREUND\_0815; rollt herein |
+| W3\_ENDE\_HAU\_0070 | Modell 08/15 | Wenn du mich brauchst: Ich komme. Ich komme wieder. Diesmal stimmt es wirklich. | nur bei W3\_FREUND\_0815 |
 | W3\_ENDE\_PIX\_0080 | Pixel | Ich muss etwas zugeben. Widerwillig. Du hast kein einziges Mal die Lösung von mir verlangt. // Ich hatte sie alle vorbereitet. Schade um die Arbeit. | nur bei null Stufe-3-Hinweisen in Welt 3; Kaskade |
 | W3\_ENDE\_NAR\_0090 | – | Draußen auf der Straße klingelt die Telefonzelle. Lauter als sonst. Mit Jingle. | Szene, Straße |
 | W3\_ENDE\_MAX\_0100 | Max | Die Telefonzelle. Sie klingelt, als wär sie ein Werbespot. | geht hin |

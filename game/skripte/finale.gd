@@ -5,7 +5,7 @@ extends RefCounted
 ## Dachbodens. Diese Regeln greifen nur im Finale (Schalter FINALE, Spiel.finale_beginnen()).
 ##
 ## Ablauf: Heimkehr (Szene) → Stufe 1, verriegelt (Schritt 0: Bodenluke) → Hilferuf (vier Kanäle
-## am Drehknopf, Zeldina und mit FREUND_0815 Modell 08/15 kommen heraus) → letztes Rätsel
+## am Drehknopf, Zeldina und mit W3_FREUND_0815 Modell 08/15 kommen heraus) → letztes Rätsel
 ## (A Riegel, B Ofentür, C Zündkapsel, D rote Taste) → Auflösung → Wohnzimmer (Geburtstag) →
 ## Abspann-Szene, Supermarkt, Abspann → Hauptmenü.
 ##
@@ -25,7 +25,7 @@ const HEIMKEHR := ["FI_DACH_NAR_0010", "FI_DACH_PIX_0020", "FI_DACH_MAX_0030", "
 const OPA_RUFE := [["FI_RIEG_OPA_0010", "FI_RIEG_PIX_0040"], ["FI_RIEG_OPA_0020", "FI_RIEG_PIX_0050"],
 	["FI_RIEG_OPA_0030"]]
 
-## Hilferuf: Kanal → Zeilen; „+“-Zeilen nur mit FREUND_0815, „-“-Zeilen nur ohne
+## Hilferuf: Kanal → Zeilen; „+“-Zeilen nur mit W3_FREUND_0815, „-“-Zeilen nur ohne
 const KANAELE := {
 	"3": ["FI_RUF_MAX_0030", "FI_RUF_ZEL_0040", "FI_RUF_TOA_0050", "@zeldina", "FI_RUF_NAR_0060",
 		"FI_RUF_ZEL_0070", "FI_RUF_MAX_0080", "FI_RUF_ZEL_0090", "FI_RUF_PIX_0100"],
@@ -206,13 +206,13 @@ func _ansehen(oid: String) -> void:
 		await _sag("FI_RIEG_PIX_0130")  # beim dritten Blick schnuppert Pixel: kein Schwefel
 		return
 	await _sag(ANSEHEN[oid][1 if n > 1 else 0])
-	if oid == "zapp_o_mat" and Zustand.ist("LUKE_ERKANNT") and not Zustand.ist("FI_HILFERUF"):
+	if oid == "zapp_o_mat" and Zustand.ist("FI_LUKE_ERKANNT") and not Zustand.ist("FI_HILFERUF"):
 		await _sag("FI_RIEG_PIX_0230")
 
 
 func _figuren_anwenden(raum: CQRaum) -> void:
 	var rid := raum.raum_id()
-	var robo := Zustand.ist("FREUND_0815")
+	var robo := Zustand.ist("W3_FREUND_0815")
 	var plan := {
 		"Opa": rid in ["dachboden", "wohnzimmer"],
 		"Zeldina": (rid == "dachboden" and Zustand.ist("FI_ZELDINA_DA")) or rid == "wohnzimmer",
@@ -275,7 +275,7 @@ func ausgang_bodenluke(_obj, _x) -> bool:
 	if _g("F1d"):
 		return false
 	await _sag("FI_RIEG_MAX_0090")
-	if not Zustand.ist("LUKE_ERKANNT"):
+	if not Zustand.ist("FI_LUKE_ERKANNT"):
 		Zustand.loese("F1")
 		await _sag("FI_RIEG_PIX_0100")
 		await _hilferuf()
@@ -323,7 +323,7 @@ func benutzen_fundkiste(_obj, _x) -> bool:
 ## Vier Kanäle am Drehknopf, jeder einmal; die Auswahl bleibt offen, bis alle dran waren.
 func _hilferuf() -> void:
 	await _szene(["FI_RUF_PIX_0010", "FI_RUF_MAX_0020"])
-	var robo := Zustand.ist("FREUND_0815")
+	var robo := Zustand.ist("W3_FREUND_0815")
 	while true:
 		var offen := KANAELE.keys().filter(func(k): return not k in _liste("FI_KANAELE"))
 		if offen.is_empty():
@@ -371,7 +371,7 @@ func _liste(name: String) -> Array:
 
 ## Drehknopf im Finale: vor dem Hilferuf erst die Luke, danach nur noch ein Kommentar.
 func benutzen_drehknopf(_obj, _x) -> bool:
-	if not Zustand.ist("LUKE_ERKANNT"):
+	if not Zustand.ist("FI_LUKE_ERKANNT"):
 		await _sag("FI_RIEG_MAX_0240")
 	elif not Zustand.ist("FI_HILFERUF"):
 		await _hilferuf()
@@ -386,7 +386,7 @@ func benutzen_zeldina(_obj, _x) -> bool:
 	if _raum_id() != "dachboden":
 		return false
 	# Nach Schritt A zählt Max auf, wer da ist: mit Modell 08/15 die Zeile 0090, ohne ihn 0095
-	var wer_da: String = "FI_RAET_MAX_0090" if Zustand.ist("FREUND_0815") else "FI_RAET_MAX_0095"
+	var wer_da: String = "FI_RAET_MAX_0090" if Zustand.ist("W3_FREUND_0815") else "FI_RAET_MAX_0095"
 	var fragen := ["FI_RUF_MAX_0320", "FI_RUF_MAX_0340", wer_da if _g("F1a") else "FI_RAET_MAX_0010",
 		"UI_FI_ZELDINA_OFEN", "UI_MENUE_ZURUECK"]
 	match await Spiel.auswahl(fragen):
@@ -406,7 +406,7 @@ func benutzen_zeldina(_obj, _x) -> bool:
 	return true
 
 
-## Modell 08/15 (nur mit FREUND_0815): hält die Ofentür (Schritt B).
+## Modell 08/15 (nur mit W3_FREUND_0815): hält die Ofentür (Schritt B).
 func benutzen_modell_0815(_obj, _x) -> bool:
 	if _raum_id() != "dachboden":
 		return false
@@ -432,7 +432,7 @@ func benutzen_modell0815(obj, x) -> bool:
 func gegenstand_ofentuer(_obj, iid) -> bool:
 	match iid:
 		"kochloeffel":
-			if Zustand.ist("FREUND_0815"):
+			if Zustand.ist("W3_FREUND_0815"):
 				await _sag("FI_RAET_MAX_0160")
 			elif not _g("F1b"):
 				await _szene(["FI_RAET_MAX_0140", "FI_RAET_PIX_0150"])
@@ -565,7 +565,7 @@ func gegenstand_opa(_obj, iid) -> bool:
 
 #region Auflösung, Wohnzimmer, Abspann #############################################################
 func _aufloesung() -> void:
-	var robo := Zustand.ist("FREUND_0815")
+	var robo := Zustand.ist("W3_FREUND_0815")
 	var kekse := _hat("omas_kekse")
 	var vor := ["FI_AUFL_NAR_0010", "FI_AUFL_HAU_0020" if robo else "FI_AUFL_NAR_0030"]
 	vor.append_array(AUFLOESUNG_VOR)
@@ -584,7 +584,7 @@ func _aufloesung() -> void:
 	z.append_array(["FI_AUFL_OMA_0490", "FI_AUFL_MAX_0500"])
 	if kekse:
 		z.append_array(["FI_AUFL_MAX_0510", "FI_AUFL_NAR_0520", "FI_AUFL_OMA_0530", "FI_AUFL_PIX_0540"])
-		Zustand.setze("KEKSE_DABEI")
+		Zustand.setze("FI_KEKSE_DABEI")
 	z.append_array(["FI_AUFL_OMA_0550", "FI_AUFL_PIX_0560"])
 	await _szene(z)
 	if kekse:
@@ -635,7 +635,7 @@ func _mutter_kommt() -> void:
 		"FI_WOHN_MUT_0260", "FI_WOHN_MUT_0270", "FI_WOHN_NAR_0280", "FI_WOHN_OPA_0290", "FI_WOHN_NAR_0300",
 		"FI_WOHN_MAX_0310", "FI_WOHN_NAR_0320", "FI_WOHN_PIX_0330", "FI_WOHN_OPA_0340", "FI_WOHN_MAX_0350",
 		"FI_WOHN_OMA_0360", "FI_WOHN_ZEL_0370", "FI_WOHN_MAX_0380"]
-	if Zustand.ist("FREUND_0815"):
+	if Zustand.ist("W3_FREUND_0815"):
 		z.append("FI_WOHN_HAU_0390")
 	z.append_array(["FI_WOHN_MAX_0400", "FI_WOHN_PIX_0410"])
 	await _szene(z)

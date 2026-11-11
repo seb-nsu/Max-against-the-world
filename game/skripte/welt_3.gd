@@ -86,19 +86,19 @@ const RAUM_RAETSEL := {"stadtstrasse": "R5", "buero_50": "R6a", "testkammer_1": 
 
 ## Mensch-Test (R1b): je Frage logisch, menschlich (mit Beobachtung), Unsinn
 const TEST := [
-	{"frage": "W3_TEST_DEC_0100", "beobachtung": "BEOBACHTUNG_SCHIRM",
+	{"frage": "W3_TEST_DEC_0100", "beobachtung": "W3_BEOBACHTUNG_SCHIRM",
 		"antworten": [["W3_TEST_MAX_0110", "W3_TEST_DEC_0120"], ["W3_TEST_MAX_0130", "W3_TEST_DEC_0140"],
 			["W3_TEST_MAX_0150", "W3_TEST_DEC_0160"]]},
-	{"frage": "W3_TEST_DEC_0170", "beobachtung": "BEOBACHTUNG_MUSIKER",
+	{"frage": "W3_TEST_DEC_0170", "beobachtung": "W3_BEOBACHTUNG_MUSIKER",
 		"antworten": [["W3_TEST_MAX_0180", "W3_TEST_DEC_0190"], ["W3_TEST_MAX_0200", "W3_TEST_DEC_0210"],
 			["W3_TEST_MAX_0220", "W3_TEST_DEC_0230"]]},
-	{"frage": "W3_TEST_DEC_0240", "beobachtung": "BEOBACHTUNG_SUPPE",
+	{"frage": "W3_TEST_DEC_0240", "beobachtung": "W3_BEOBACHTUNG_SUPPE",
 		"antworten": [["W3_TEST_MAX_0250", "W3_TEST_DEC_0260"], ["W3_TEST_MAX_0270", "W3_TEST_DEC_0280"],
 			["W3_TEST_MAX_0290", "W3_TEST_DEC_0300"]]},
 ]
 ## Beobachtungen (R1a): Figur → Schalter
-const BEOBACHTUNG := {"frau_regenschirm": "BEOBACHTUNG_SCHIRM",
-	"strassenmusiker": "BEOBACHTUNG_MUSIKER", "weinender_mann": "BEOBACHTUNG_SUPPE"}
+const BEOBACHTUNG := {"frau_regenschirm": "W3_BEOBACHTUNG_SCHIRM",
+	"strassenmusiker": "W3_BEOBACHTUNG_MUSIKER", "weinender_mann": "W3_BEOBACHTUNG_SUPPE"}
 
 ## Patch-Panel (R7b): Kabel → richtige Buchse und Zeile
 const KABEL := {"kreis": ["rot", "W3_TERM_PIX_0220"], "dreieck": ["gruen", "W3_TERM_PIX_0230"],
@@ -236,7 +236,7 @@ func _einmal(schalter: String) -> bool:
 	return true
 
 
-## Rätsel lösen, ohne dabei Schalter zu setzen, die eigene Bedingungen haben (FREUND_0815 nur mit
+## Rätsel lösen, ohne dabei Schalter zu setzen, die eigene Bedingungen haben (W3_FREUND_0815 nur mit
 ## Olivenöl, Regeln erst aus der Nahansicht).
 func _loese(id: String, ausnahmen: Array = []) -> void:
 	var vorher := {}
@@ -289,13 +289,13 @@ func _bedingung_text(text: String) -> Variant:
 		"nach dem Tausch":
 			return _raum_geloest()
 		"nach Hexenschuss":
-			return Zustand.ist("HEXENSCHUSS")
+			return Zustand.ist("W3_HEXENSCHUSS")
 		"ohne Olivenöl in der Tasche":
 			return not _hat("olivenoel")
 		"mit Olivenöl":
 			return _hat("olivenoel")
-		"nur bei FREUND_0815":
-			return Zustand.ist("FREUND_0815")
+		"nur bei W3_FREUND_0815":
+			return Zustand.ist("W3_FREUND_0815")
 		"nach dem Portal":
 			return Zustand.ist("W3_PORTAL_BENUTZT")
 		"Max wach":
@@ -433,7 +433,7 @@ func nach_uebergang_buero_50(_raum, _x) -> bool:
 		await _szene(["W3_TURM_SCH_0010", "W3_TURM_MAX_0020", "W3_TURM_SCH_0030", "W3_TURM_SCH_0040",
 			"W3_TURM_KLO_0050", "W3_TURM_MAX_0060", "W3_TURM_KLO_0070", "W3_TURM_NAR_0080",
 			"W3_TURM_MAX_0090", "W3_TURM_MAX_0100"])
-		Zustand.setze("HEXENSCHUSS")
+		Zustand.setze("W3_HEXENSCHUSS")
 		await _szene(["W3_TURM_SCH_0110", "W3_TURM_KLO_0120", "W3_TURM_MAX_0130"])
 	await _zurueckgesetzt()
 	return true
@@ -820,19 +820,19 @@ func benutzen_wassereimer(_obj, _x) -> bool:
 #region Code-Sicht und Tausche ######################################################################
 ## Rätsel 5: Beim zweiten Ansehen der Tür am Glaseingang schaltet Max die Code-Sicht frei.
 func ansehen_tuer(_obj, _x) -> bool:
-	if _raum_id() != "stadtstrasse" or Zustand.ist("CODE_SICHT"):
+	if _raum_id() != "stadtstrasse" or Zustand.ist("W3_CODE_SICHT"):
 		return false
 	if _einmal("W3_TUER_ANGESEHEN"):
 		return false
 	await _szene(["W3_TUER_MAX_0150", "W3_TUER_MAX_0160", "W3_TUER_MAX_0170"])
-	Zustand.setze("CODE_SICHT")
+	Zustand.setze("W3_CODE_SICHT")
 	return true
 
 
 ## Code-Sicht im Raum: Auswahl der Tausche. true, wenn die Code-Sicht offen war.
 func _code_sicht(oid: String) -> bool:
 	var rid := _raum_id()
-	if not Zustand.ist("CODE_SICHT") or _raum_geloest():
+	if not Zustand.ist("W3_CODE_SICHT") or _raum_geloest():
 		return false
 	if rid == "kern":
 		if not Zustand.geloest("R10") or Zustand.ist("W3_ZELLE_KALT"):
@@ -888,7 +888,7 @@ func _tauschen(rid: String, t: Dictionary) -> void:
 			"R9b":
 				_loese("R9b")
 			"R9c":
-				_loese("R9c", ["REGEL_3"])
+				_loese("R9c", ["W3_REGEL_3"])
 			"tuer", "bernd":
 				if "tuer" in _tausch.geloest and "bernd" in _tausch.geloest:
 					await _abgeben("gummihuhn")  # bleibt am Boden von Kammer 3
@@ -915,7 +915,7 @@ func option_orakel_oma_0150() -> bool:
 	if Zustand.geloest("R4"):
 		return false
 	await _geben("rezeptkarte")
-	_loese("R4", ["REGEL_2"])
+	_loese("R4", ["W3_REGEL_2"])
 	return false
 
 
@@ -923,7 +923,7 @@ func ansehen_kochbuch(obj, _x) -> bool:
 	if obj is Object:
 		await obj.ansehen()
 	await Spiel.nahansicht_zeigen("kochbuch")
-	Zustand.setze("REGEL_2")
+	Zustand.setze("W3_REGEL_2")
 	return true
 
 
@@ -966,7 +966,7 @@ func _tasse_befiehlt(iid: String) -> bool:
 	await _geben("sonnenbrille")
 	await _szene(["W3_TURM_SCH_0450", "W3_TURM_MAX_0460"])
 	await _geben("schmidts_akte")
-	_loese("R6b", ["REGEL_1"])
+	_loese("R6b", ["W3_REGEL_1"])
 	_figuren_anwenden(R.current)
 	await _sag("W3_TURM_MAX_0570")
 	return true
@@ -976,7 +976,7 @@ func _tasse_befiehlt(iid: String) -> bool:
 func ansehen_inventar_schmidts_akte(_obj, _x) -> bool:
 	var neu := not "schmidts_akte" in Zustand.nahansichten
 	await Spiel.nahansicht_zeigen("schmidts_akte")
-	Zustand.setze("REGEL_1")
+	Zustand.setze("W3_REGEL_1")
 	if not neu:
 		return false
 	await _szene(["W3_TURM_MAX_0470", "W3_TURM_MAX_0480"])
@@ -1095,21 +1095,21 @@ func gegenstand_hausmeister(_obj, iid) -> bool:
 			await _sag("W3_EING_MAX_0530")
 			return true
 		"olivenoel":
-			if Zustand.ist("FREUND_0815"):
+			if Zustand.ist("W3_FREUND_0815"):
 				return false
 			await _sag("W3_EING_MAX_0240")
 			await _szene(["W3_EING_HAU_0250", "W3_EING_HAU_0260", "W3_EING_PIX_0270"])
-			Zustand.setze("FREUND_0815")
+			Zustand.setze("W3_FREUND_0815")
 			return true
 		"telefonbuchseite":
 			# Mit Öl in der Tasche warnt Pixel einmal, bevor der Roboter für immer losrollt
-			if _hat("olivenoel") and not Zustand.ist("FREUND_0815") and _einmal("W3_OEL_WARNUNG"):
+			if _hat("olivenoel") and not Zustand.ist("W3_FREUND_0815") and _einmal("W3_OEL_WARNUNG"):
 				await _sag("W3_EING_PIX_0185")
 				return true
 			await _szene(["W3_EING_MAX_0190", "W3_EING_HAU_0200", "W3_EING_HAU_0210", "W3_EING_HAU_0220",
 				"W3_EING_PIX_0230"])
 			await _abgeben("telefonbuchseite")
-			_loese("R8", ["FREUND_0815"])
+			_loese("R8", ["W3_FREUND_0815"])
 			_figuren_anwenden(R.current)
 			return true
 	return false
@@ -1185,14 +1185,14 @@ func benutzen_inventar_portalgeraet(_obj, _x) -> bool:
 func benutzen_bodenschalter(_obj, _x) -> bool:
 	if Zustand.geloest("R9b"):
 		return false
-	if not Zustand.ist("CODE_SICHT"):
+	if not Zustand.ist("W3_CODE_SICHT"):
 		await _sag("W3_KAM1_MAX_0320")
 		return true
 	return await _code_sicht("bodenschalter")
 
 
 func benutzen_laser(_obj, _x) -> bool:
-	if Zustand.geloest("R9c") or not Zustand.ist("CODE_SICHT"):
+	if Zustand.geloest("R9c") or not Zustand.ist("W3_CODE_SICHT"):
 		return false
 	return await _code_sicht("laser")
 
@@ -1203,7 +1203,7 @@ func ansehen_kritzelei(obj, _x) -> bool:
 		await obj.ansehen()
 	var neu := not "kritzelei_kammer_2" in Zustand.nahansichten
 	await Spiel.nahansicht_zeigen("kritzelei_kammer_2")
-	Zustand.setze("REGEL_3")
+	Zustand.setze("W3_REGEL_3")
 	if neu:
 		await _szene(["W3_KAM2_MAX_0150", "W3_KAM2_PIX_0160"])
 	return true
@@ -1215,7 +1215,7 @@ func ansehen_kritzelei_kammer_2(obj, x) -> bool:
 
 #region Rätsel 10 und 11: Kern #####################################################################
 func _regeln() -> int:
-	return ["REGEL_1", "REGEL_2", "REGEL_3"].filter(func(r): return Zustand.ist(r)).size()
+	return ["W3_REGEL_1", "W3_REGEL_2", "W3_REGEL_3"].filter(func(r): return Zustand.ist(r)).size()
 
 
 func benutzen_mutti(_obj, _x) -> bool:
@@ -1226,7 +1226,7 @@ func benutzen_mutti(_obj, _x) -> bool:
 		return true
 	if _regeln() < 3:
 		await _sag("W3_KERN_MAX_0340")
-		if not Zustand.ist("REGEL_1") or not Zustand.ist("REGEL_2"):
+		if not Zustand.ist("W3_REGEL_1") or not Zustand.ist("W3_REGEL_2"):
 			await _sag("W3_KERN_PIX_0350")
 		return true
 	await _paradoxon()
@@ -1463,7 +1463,7 @@ func _hinweis_stufe_3() -> bool:
 func _abschluss() -> void:
 	await _aufwachen()
 	var zeilen := ["W3_ENDE_NAR_0010", "W3_ENDE_PIX_0020", "W3_ENDE_KAL_0030", "W3_ENDE_REB_0050"]
-	if Zustand.ist("FREUND_0815"):
+	if Zustand.ist("W3_FREUND_0815"):
 		zeilen.append_array(["W3_ENDE_HAU_0060", "W3_ENDE_HAU_0070"])
 	if not _hinweis_stufe_3():
 		zeilen.append("W3_ENDE_PIX_0080")

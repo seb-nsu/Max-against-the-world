@@ -22,6 +22,7 @@ const KANAELE := [
 	["UI_MENUE_BEENDEN", "UI_KANAL_BEENDEN"],
 ]
 const BILDSCHIRM := Rect2(53, 112, 245, 160)
+const TITELSCHRIFT := "res://schriften/pixelify-sans.ttf"
 
 var _haupt: Control
 var _unter: Control
@@ -75,14 +76,22 @@ func _aufbauen() -> void:
 	_haupt = Control.new()
 	_haupt.set_anchors_preset(Control.PRESET_FULL_RECT)
 	_haupt.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	# Schriften wie festgelegt (05-spielsysteme.md, Schrift): Nunito aus dem GUI-Thema für die
+	# Menüpunkte, Pixelify Sans für Titel und Untertitel. Ohne Thema nähme Godot seine eigene Schrift.
+	_haupt.theme = S.thema()
 	add_child(_haupt)
 
+	var titelschrift: Font = load(TITELSCHRIFT) if ResourceLoader.exists(TITELSCHRIFT) else null
 	var titel := S.label(tr("UI_SPIELTITEL"), 24, S.GELB)
 	titel.position = Vector2(0, 19)
 	titel.size = Vector2(640, 43)
 	titel.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	titel.name = "Titel"
 	_haupt.add_child(titel)
 	var unter := S.label(tr("UI_SPIELUNTERTITEL"), 10, S.ORANGE)
+	if titelschrift:
+		titel.add_theme_font_override("font", titelschrift)
+		unter.add_theme_font_override("font", titelschrift)
 	unter.position = Vector2(0, 61)
 	unter.size = Vector2(640, 19)
 	unter.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER

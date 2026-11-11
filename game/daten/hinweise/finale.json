@@ -87,22 +87,22 @@
     {
      "stufe": 2,
      "zeile": "FI_HINT_PIX_0080",
-     "bedingung": "nur FREUND_0815"
+     "bedingung": "nur W3_FREUND_0815"
     },
     {
      "stufe": 2,
      "zeile": "FI_HINT_PIX_0090",
-     "bedingung": "ohne FREUND_0815"
+     "bedingung": "ohne W3_FREUND_0815"
     },
     {
      "stufe": 3,
      "zeile": "FI_HINT_PIX_0100",
-     "bedingung": "nur FREUND_0815"
+     "bedingung": "nur W3_FREUND_0815"
     },
     {
      "stufe": 3,
      "zeile": "FI_HINT_PIX_0110",
-     "bedingung": "ohne FREUND_0815"
+     "bedingung": "ohne W3_FREUND_0815"
     }
    ]
   },

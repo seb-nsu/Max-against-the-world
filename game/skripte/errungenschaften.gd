@@ -34,7 +34,7 @@ const LISTE := [
 		"W2_SPEER_BESTLEISTUNG", "W2_DISKUS_BESTLEISTUNG", "W2_RINGEN_BESTLEISTUNG"]}},
 	{id = "OHNE_PFOTE_2", wenn = {ohne_pfote = "welt-2"}},
 	{id = "DEJA_VU", wenn = {wert = "W3_SIMULATION_BESUCHE", mindestens = 3}},
-	{id = "FREUND_0815", wenn = {schalter = "FREUND_0815"}},
+	{id = "FREUND_0815", wenn = {schalter = "W3_FREUND_0815"}},
 	{id = "OHNE_PFOTE_3", wenn = {ohne_pfote = "welt-3"}},
 	{id = "ZAPP_MEISTER", wenn = {schalter = "W4_ALLE_KANAELE"}},
 	{id = "OHNE_PFOTE_4", wenn = {ohne_pfote = "welt-4"}},

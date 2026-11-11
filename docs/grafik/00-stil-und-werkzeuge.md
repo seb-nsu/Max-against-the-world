@@ -43,6 +43,19 @@ Alle Welten teilen einen Pixel-Art-Stil in 640×360 Pixeln. Figuren und Gegenst�
 
 **Modellnamen prüfen:** Die Namen `rd_plus__environment`, `rd_pro__default` und die Animationsmodelle entsprechen dem Stand vom 8. November 2026. Vor dem ersten Auftrag auf der Retro-Diffusion-Website prüfen, ob sie noch so heißen, und das Datum der Prüfung im KI-Protokoll notieren.
 
+**Zusätzliche Werkzeuge, geprüft am 11. November 2026.** Sebastian hat sechs Werkzeuge für Pixel Art vorgeschlagen. Gelesen sind die Beschreibungen, ausprobiert ist noch keins. Der Ablauf oben gilt weiter. Entschieden wird nach einem Test an Max (`offene-punkte.md`, P12).
+
+| Werkzeug | Was es tut | Einschätzung |
+| --- | --- | --- |
+| [Pixel Snapper](https://github.com/Hugo-Dz/spritefusion-pixel-snapper) | Rückt erzeugte Pixel Art auf ein sauberes Raster und eine feste Palette; Kommandozeile, MIT-Lizenz | Ergänzt `tools/pixelieren.py`: das eigene Werkzeug für Hintergründe aus großen Bildern, Pixel Snapper für Figuren und Gegenstände mit krummen Pixeln |
+| [Codixel](https://github.com/mankidev/codixel) | Anleitung für Claude: Bild in Pixel umrechnen, in Teile zerlegen, per Code bewegen | Für Bewegungen aus vorhandenen Teilen (Atmen, Blinzeln, Sprechen, einfaches Gehen) und für Effekte; neue Posen entstehen so nicht |
+| [Agent Sprite Forge](https://github.com/0x0funky/agent-sprite-forge) | Macht aus einem Standbild ganze Bewegungssätze und exportiert für Godot; braucht einen Bild- und Video-Generator mit eigenem Zugang, jeder Clip kostet | Möglicher zweiter Weg neben den Animationsmodellen von Retro Diffusion; erst, wenn der Test an Max zeigt, dass er nötig ist |
+| [pxl](https://github.com/crsolver/claude-pxl) | Pixel Art als Code | Nur für Kleines, das Claude selbst zeichnet: Symbole, Mauszeiger, Effekte |
+| Hermes pixel-art (NousResearch) | Bild zu Pixel Art mit festen Paletten, dazu Regen oder Schnee als Video | Kein Gewinn gegenüber `tools/pixelieren.py`; das Video hilft nicht, das Spiel braucht Einzelbilder |
+| pixel-plugin | Steuert ein Aseprite auf dem eigenen Rechner | Nur an Sebastians Rechner sinnvoll |
+
+Nicht nötig ist das Humble-Bundle „Ultimate AI Image Toolkit“ (Distinct AI, nur Windows): Vektorgrafik und HDR helfen bei Pixel Art nicht, und Bilder erzeugen die Werkzeuge oben schon. Popochiu liest Aseprite-Dateien direkt ein und macht aus den benannten Abschnitten die Animationen einer Figur; Aseprite bleibt deshalb das Werkzeug für alles, was von Hand gezeichnet wird.
+
 **Ablauf pro Szene:**
 
 1. Konzeptbild mit ChatGPT oder Gemini, bis Aufbau und Stimmung passen. Fertig zusammengesetzte Prompts (Baustein, Motiv, Farb-Baustein, Skizzen-Satz) je Raum stehen in `grafik/fertige-prompts/` und werden mit `tools/prompts_zusammensetzen.py` aus den Grafik-Dateien erzeugt. Die Layout-Skizze des Raums (`grafik/skizzen/<abschnitt>/<raum>.png`, verlinkt in jeder Grafik-Datei unter „Szenen“) als Bild mitgeben und hinter den Prompt schreiben: „Use the attached sketch only for the position and size of objects and exits, not for style, colors or text. Leave the orange marked spots empty.“ Blaue Kästen gehören ins Bild, orange gestrichelte sind eigene Sprites, violette gestrichelte sind Figuren in ihrer Größe (auch eigene Sprites), grüne Ausgänge, die grauen Umrisse zeigen Max' Größe vorn und hinten. Die Skizzen erzeugt `tools/layout_skizzen.py` aus den Raum-Layouts neu. Für Welt 3 und 4 gibt es bisher nur automatische Raster und keine entworfenen Räume: Dort keine Skizze anhängen, die fertigen Prompts lassen den Satz weg. Vor dem Erzeugen dieser Hintergründe braucht jeder Raum eine Handskizze wie in Welt 1 und 2.

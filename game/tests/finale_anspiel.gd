@@ -60,7 +60,7 @@ func _durchlauf() -> void:
 	# Schritt 0: Luke verriegelt, dann der Hilferuf über alle vier Kanäle
 	S.vorgabe_auswahl = [0, 0, 0, 0]
 	await S.regel("ausgang", _hotspot("bodenluke"))
-	_pruefe(Z.ist("LUKE_ERKANNT") and Z.ist("FI_HILFERUF"), "F1: Luke erkannt, Hilferuf abgeschlossen")
+	_pruefe(Z.ist("FI_LUKE_ERKANNT") and Z.ist("FI_HILFERUF"), "F1: Luke erkannt, Hilferuf abgeschlossen")
 	_pruefe(_gesagt("FI_RUF_ZEL_0040") and _gesagt("FI_RUF_KAL_0200") and _gesagt("FI_RUF_FLI_0250"),
 		"Alle vier Kanäle (ohne Modell 08/15: Kalle)")
 	_pruefe(_raum().has_character("Zeldina") and not _raum().has_character("Modell0815"), "Zeldina ist da")

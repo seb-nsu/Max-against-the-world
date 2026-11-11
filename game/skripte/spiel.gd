@@ -67,6 +67,10 @@ func _ready() -> void:
 	TranslationServer.set_locale("de")
 	hud = HUD.instantiate()
 	add_child(hud)
+	# Popochius Kamera bringt aus ihrer Szene Grenzen von 320×180 mit und stellt sie erst beim
+	# ersten Raumwechsel auf die Spielauflösung. Das Spiel beginnt aber im Hauptmenü, der erste
+	# Raum kommt ohne Raumwechsel: Ohne diese Zeile sitzt er um 160×90 Pixel verschoben.
+	E.camera.restore_default_limits()
 
 
 func _input(event: InputEvent) -> void:

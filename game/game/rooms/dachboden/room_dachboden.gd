@@ -311,7 +311,7 @@ const ZS1_ANSEHEN := {
 func ansehen_zusatz(objekt: String) -> Array:
 	var tabelle: Dictionary = {1: ZS1_ANSEHEN, 2: ZS2_ANSEHEN, 3: ZS3_ANSEHEN}.get(zwischenspiel(), {})
 	if zwischenspiel() == 3 and objekt == "zapp_o_mat":
-		tabelle = {zapp_o_mat = ZS3_ZAPP_FREUND if Zustand.ist("FREUND_0815") else ZS3_ZAPP_OHNE}
+		tabelle = {zapp_o_mat = ZS3_ZAPP_FREUND if Zustand.ist("W3_FREUND_0815") else ZS3_ZAPP_OHNE}
 	if not tabelle.has(objekt):
 		return []
 	var out := []

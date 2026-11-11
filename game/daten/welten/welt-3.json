@@ -688,9 +688,9 @@
    "ergibt": [],
    "schalter": [
     "W3_R01_A_GELOEST",
-    "BEOBACHTUNG_SCHIRM",
-    "BEOBACHTUNG_MUSIKER",
-    "BEOBACHTUNG_SUPPE"
+    "W3_BEOBACHTUNG_SCHIRM",
+    "W3_BEOBACHTUNG_MUSIKER",
+    "W3_BEOBACHTUNG_SUPPE"
    ],
    "optional": false
   },
@@ -704,7 +704,7 @@
    "ergibt": [],
    "schalter": [
     "W3_R01_B_GELOEST",
-    "STEMPEL_MENSCH"
+    "W3_STEMPEL_MENSCH"
    ],
    "optional": false
   },
@@ -716,7 +716,7 @@
    "ergibt": [],
    "schalter": [
     "W3_R02_GELOEST",
-    "MORPHAEUS_GETROFFEN"
+    "W3_MORPHAEUS_GETROFFEN"
    ],
    "optional": false
   },
@@ -734,7 +734,7 @@
    ],
    "schalter": [
     "W3_R03_A_GELOEST",
-    "DIAGNOSE_MATRIX"
+    "W3_DIAGNOSE_MATRIX"
    ],
    "optional": false
   },
@@ -751,7 +751,7 @@
    ],
    "schalter": [
     "W3_R03_B_GELOEST",
-    "SIMULATION_OFFEN"
+    "W3_SIMULATION_OFFEN"
    ],
    "optional": false
   },
@@ -767,8 +767,8 @@
    ],
    "schalter": [
     "W3_R04_GELOEST",
-    "SPARSCHWEIN_ZERSCHLAGEN",
-    "REGEL_2"
+    "W3_SPARSCHWEIN_ZERSCHLAGEN",
+    "W3_REGEL_2"
    ],
    "optional": false
   },
@@ -782,8 +782,8 @@
    "ergibt": [],
    "schalter": [
     "W3_R05_GELOEST",
-    "CODE_SICHT",
-    "GLASTUER_OFFEN"
+    "W3_CODE_SICHT",
+    "W3_GLASTUER_OFFEN"
    ],
    "optional": false
   },
@@ -798,8 +798,8 @@
    "ergibt": [],
    "schalter": [
     "W3_R06_A_GELOEST",
-    "HEXENSCHUSS",
-    "TASSE_ORIGINAL"
+    "W3_HEXENSCHUSS",
+    "W3_TASSE_ORIGINAL"
    ],
    "optional": false
   },
@@ -817,8 +817,8 @@
    ],
    "schalter": [
     "W3_R06_B_GELOEST",
-    "KLONE_MITTAGSPAUSE",
-    "REGEL_1"
+    "W3_KLONE_MITTAGSPAUSE",
+    "W3_REGEL_1"
    ],
    "optional": false
   },
@@ -834,7 +834,7 @@
    "ergibt": [],
    "schalter": [
     "W3_R07_A_GELOEST",
-    "FARBCODE_GESENDET"
+    "W3_FARBCODE_GESENDET"
    ],
    "optional": false
   },
@@ -848,7 +848,7 @@
    "ergibt": [],
    "schalter": [
     "W3_R07_B_GELOEST",
-    "KABEL_GESTECKT"
+    "W3_KABEL_GESTECKT"
    ],
    "optional": false
   },
@@ -862,8 +862,8 @@
    "ergibt": [],
    "schalter": [
     "W3_R08_GELOEST",
-    "HAUSMEISTER_WEG",
-    "FREUND_0815"
+    "W3_HAUSMEISTER_WEG",
+    "W3_FREUND_0815"
    ],
    "optional": false
   },
@@ -878,7 +878,7 @@
    "ergibt": [],
    "schalter": [
     "W3_R09_A_GELOEST",
-    "LEITUNG_LABOR"
+    "W3_LEITUNG_LABOR"
    ],
    "optional": false
   },
@@ -891,7 +891,7 @@
    ],
    "ergibt": [],
    "schalter": [
-    "KAMMER_1_GELOEST"
+    "W3_KAMMER_1_GELOEST"
    ],
    "optional": false
   },
@@ -905,8 +905,8 @@
    ],
    "ergibt": [],
    "schalter": [
-    "KAMMER_2_GELOEST",
-    "REGEL_3"
+    "W3_KAMMER_2_GELOEST",
+    "W3_REGEL_3"
    ],
    "optional": false
   },
@@ -920,7 +920,7 @@
    ],
    "ergibt": [],
    "schalter": [
-    "KAMMER_3_GELOEST"
+    "W3_KAMMER_3_GELOEST"
    ],
    "optional": false
   },
@@ -937,7 +937,7 @@
    "ergibt": [],
    "schalter": [
     "W3_R10_GELOEST",
-    "MUTTI_AUS"
+    "W3_MUTTI_AUS"
    ],
    "optional": false
   },
@@ -957,7 +957,7 @@
    ],
    "schalter": [
     "W3_R11_GELOEST",
-    "ZELLE_GEKUEHLT"
+    "W3_ZELLE_GEKUEHLT"
    ],
    "optional": false
   },
@@ -973,7 +973,7 @@
    ],
    "schalter": [
     "W3_R12_GELOEST",
-    "SUPPE_GEKOCHT"
+    "W3_SUPPE_GEKOCHT"
    ],
    "optional": false
   },
@@ -989,8 +989,8 @@
    ],
    "schalter": [
     "W3_R13_GELOEST",
-    "MORSE_TABELLE",
-    "OPAS_NACHRICHT"
+    "W3_MORSE_TABELLE",
+    "W3_OPAS_NACHRICHT"
    ],
    "optional": false
   }
@@ -1015,6 +1015,6 @@
   "W3_KEKSE_WARM",
   "W3_ZELLE_BENUTZT",
   "W3_FEHLTAUSCHE",
-  "CODE_SICHT"
+  "W3_CODE_SICHT"
  ]
 }

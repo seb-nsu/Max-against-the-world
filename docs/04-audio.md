@@ -15,6 +15,8 @@ Aufgebaut wie die Grafik-Dateien: erst die Werkzeuge, dann Regeln für Prompts, 
 
 **Mein Vorschlag:** Ein ElevenLabs-Abo deckt Stimmen, Geräusche und Musik ab. ACE-Step lokal nimmst du für Musik-Experimente, die viele Versuche brauchen. Suno nicht verwenden: Dort laufen noch Klagen der Plattenfirmen, und Udio erlaubt keine Downloads mehr (Stand November 2026; vor der Steam-Seite neu prüfen und das Datum hier nachtragen).
 
+**Fertige Musik als Ergänzung (geprüft am 11. November 2026):** Lizenzfreie Sammlungen wie das Humble-Bundle „The Complete Works“ enthalten nur Musik, keine Geräusche und keine Stimmen. Sie können Stücke liefern, für die sich ein eigenes Erzeugen nicht lohnt. Vor dem Kauf prüfen: Erlaubt die Lizenz ein verkauftes Spiel? Lassen sich die Stücke als Schleife schneiden? Jedes übernommene Stück kommt mit Quelle und Lizenz in die Credits. Die Leitmotive je Welt und die drei gesungenen Stücke mit Rätselfunktion bleiben eigene Stücke. Entschieden ist der Kauf nicht (`offene-punkte.md`, P13).
+
 **Regeln:**
 
 - Nur bezahlte Tarife verwenden; die kostenlosen Stufen erlauben keine kommerzielle Nutzung. Rechnungen aus der Zeit der Erzeugung aufheben.
@@ -220,7 +222,7 @@ Jedes Geräusch hat eine Kennung; die Datei heißt `audio/geraeusche/<Kennung>.o
 
 ## Sprachausgabe
 
-**Umfang (grob geschätzt):** Das Skript hat 5.435 Zeilen, daraus werden 6.180 gesprochene Sprechblasen mit zusammen rund 504.000 Zeichen, im Schnitt 82 Zeichen je Sprechblase (Stand November 2026; die aktuellen Zahlen druckt `python3 tools/skript_export.py`, die Liste steht in `export/audio-zeilen.csv`). Es sind so viele, weil Max und Pixel fast jeden Gegenstand zweimal kommentieren, dazu Pixel-auf-Mensch-Zeilen, Pools und Zwischenspiele. Bei drei bis fünf Versuchen pro Pointe sind das 1,5 bis 2,5 Millionen Zeichen, Voice-Design-Vorschauen nicht eingerechnet. Die Kostenangabe oben (etwa vier Monate ElevenLabs Pro, rund 400 $) stammt aus der früheren Schätzung mit 5.000 Zeilen zu je 60 Zeichen und ist damit eher zu niedrig. Neu gerechnet wird, wenn der echte Faktor mit den 450 Zeilen des Vertical Slice gemessen ist.
+**Umfang (grob geschätzt):** Das Skript hat 5.450 Zeilen, daraus werden 6.206 gesprochene Sprechblasen mit zusammen rund 506.000 Zeichen, im Schnitt 82 Zeichen je Sprechblase (Stand 11. November 2026; die aktuellen Zahlen druckt `python3 tools/skript_export.py`, die Liste steht in `export/audio-zeilen.csv`). Es sind so viele, weil Max und Pixel fast jeden Gegenstand zweimal kommentieren, dazu Pixel-auf-Mensch-Zeilen, Pools und Zwischenspiele. Bei drei bis fünf Versuchen pro Pointe sind das 1,5 bis 2,5 Millionen Zeichen, Voice-Design-Vorschauen nicht eingerechnet. Die Kostenangabe oben (etwa vier Monate ElevenLabs Pro, rund 400 $) stammt aus der früheren Schätzung mit 5.000 Zeilen zu je 60 Zeichen und ist damit eher zu niedrig. Neu gerechnet wird, wenn der echte Faktor mit den 450 Zeilen des Vertical Slice gemessen ist.
 
 **Drei Möglichkeiten:**
 

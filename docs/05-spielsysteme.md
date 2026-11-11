@@ -130,7 +130,7 @@ Stand der englischen Fassung (11. November 2026): alle Skriptzeilen (Prolog, Wel
 - Gespräche sollen fließen. Eine Plauderoption endet nicht nach einer einzigen Antwortzeile, sondern bekommt einen Nachsatz oder eine Rückfrage von Max (Ausnahme: Abschiede). Eine neue Zeile kommt mit `tools/zeilen_einfuegen.py` hinter die passende Zeile, ohne dass etwas umnummeriert wird.
 - Jede Zeile muss im Spiel vorkommen. Eine Zeile, die bewusst nicht vorkommt, wird im Skript als „Reserve, kommt nicht vor“ markiert.
 
-**Umfang:** Etwa 5.000 Zeilen (angehoben am 9. November 2026, weil jede Ansehen-Stelle eine Zweitzeile bekommt und Inventar-Ansehen, Abschiedszeilen und Pools dazukamen). Als Budget: Prolog 170, jede Welt 1.000 bis 1.100, Zwischenspiele 200, Finale und Abspann 320, Menüs und Systemtexte 150. Die Systemzeilen (`SYS_ERS_*` 50, `SYS_WDH_*` 30, `SYS_PLA_*` 6) stehen in `skript/prolog.md`, zählen aber zu Menüs und Systemtexten; der Prolog selbst hat 165 Zeilen. Stand der Entwürfe am 9. November 2026: Welten 1.019 bis 1.099, Zwischenspiele 191, Finale und Abspann 315. Die Pixel-auf-Mensch-Zeilen stecken im Budget der Welten.
+**Umfang:** Etwa 5.000 Zeilen (angehoben am 9. November 2026, weil jede Ansehen-Stelle eine Zweitzeile bekommt und Inventar-Ansehen, Abschiedszeilen und Pools dazukamen). Als Budget: Prolog 170, jede Welt 1.000 bis 1.100, Zwischenspiele 200, Finale und Abspann 320, Menüs und Systemtexte 150. Die Systemzeilen (`SYS_ERS_*` 50, `SYS_WDH_*` 30, `SYS_PLA_*` 6) stehen in `skript/prolog.md`, zählen aber zu Menüs und Systemtexten; der Prolog selbst hat 165 Zeilen. Stand der Entwürfe am 9. November 2026: Welten 1.019 bis 1.099, Zwischenspiele 191, Finale und Abspann 315. Stand am 11. November 2026 nach Hinweisen, Zweitzeilen, Nachsätzen und der Prüfung: 5.450 Zeilen, davon Prolog 266, Welt 1 1.196, Welt 2 1.182, Welt 3 1.060, Welt 4 1.103, Zwischenspiele 229, Finale und Abspann 328, Systemzeilen 86. Bis auf Welt 3 liegt damit jeder Abschnitt über seinem Budget; die Budgets sind nicht angehoben (`offene-punkte.md`, P14). Die Pixel-auf-Mensch-Zeilen stecken im Budget der Welten.
 
 **Ablauf pro Raum:**
 
@@ -210,7 +210,7 @@ Mockup: `tools/ui_mockup_hd.py` zeichnet zwei Zustände auf dem Dachboden-Hinter
 
 | Bildschirm | Inhalt |
 | --- | --- |
-| Hauptmenü | Startszene des Spiels (`game/oberflaeche/hauptmenue.gd`). Titelbild mit Zapp-O-Mat; Fortsetzen (lädt den neuesten Stand, ohne Spielstand ausgegraut), Neues Spiel, Laden, Optionen, Errungenschaften, Beenden. Die Menüpunkte sind Fernsehkanäle 1 bis 6, der Bildschirm zeigt den gewählten Kanal (bei Fortsetzen Ort, Spielzeit und Datum), der Drehknopf dreht mit; Zifferntasten schalten direkt. Beim allerersten Start kommt vorher der Epilepsie-Hinweis |
+| Hauptmenü | Startszene des Spiels (`game/oberflaeche/hauptmenue.gd`). Titel und Untertitel in Pixelify Sans, Menüpunkte in Nunito. Titelbild mit Zapp-O-Mat; Fortsetzen (lädt den neuesten Stand, ohne Spielstand ausgegraut), Neues Spiel, Laden, Optionen, Errungenschaften, Beenden. Die Menüpunkte sind Fernsehkanäle 1 bis 6, der Bildschirm zeigt den gewählten Kanal (bei Fortsetzen Ort, Spielzeit und Datum), der Drehknopf dreht mit; Zifferntasten schalten direkt. Beim allerersten Start kommt vorher der Epilepsie-Hinweis |
 | Pausemenü (Esc) | Weiterspielen, Speichern, Laden, Optionen, Hauptmenü. Öffnet nur, wenn nichts läuft (in Zwischensequenzen und Gesprächen überspringt Esc), und hält das Spiel an. „Hauptmenü“ fragt mit einem zweiten Klick nach, weil Ungespeichertes verloren geht; das Spiel startet dafür neu, damit kein Zustand der alten Sitzung übrig bleibt |
 | Speichern und Laden | Zwölf Plätze mit Vorschaubild, Ort, Welt, Spielzeit und Datum, dazu Autospeicher und Schnellspeicher (siehe Speichern) |
 | Notizbuch | Öffnet sich aus dem Inventar, immer auf Seite 1. Seite 1: aktuelle Ziele, die das Hinweissystem mitpflegt. Seite 2: gesammelte Regeln und Passwort-Teile. Seite 3: Pixels Einkaufsliste als Running Gag, je Welt ein neuer Wunsch (Konzept, Running Gags) |
@@ -278,13 +278,13 @@ Errungenschaften (Steam): 13 Stück, alle aus Zählern und Schaltern, die das Sp
 | OHNE\_PFOTE\_1 bis \_4 | Ohne Pfote: Welt 1 bis 4 | Welt beendet und dort keine Stufe 3 (Zähler `stufe3_zaehler`). Beendet heißt: Welt 1 bis 3, sobald das Zwischenspiel danach beginnt (Wert ZWISCHENSPIEL ≥ Nummer); Welt 4 mit Rätsel R13 |
 | FUENFKAMPF | Fünfkampf | alle fünf Disziplinen in Welt 2 mit Bestleistung (Definition in `raetsel/welt-2.md`): W2\_LAUF\_, \_HEBEL\_, \_SPEER\_, \_DISKUS\_, \_RINGEN\_BESTLEISTUNG |
 | DEJA\_VU | Déjà-vu | Simulation in Welt 3 zum dritten Mal betreten: Wert W3\_SIMULATION\_BESUCHE ≥ 3 |
-| FREUND\_0815 | Freund 08/15 | Modell 08/15 als Freund gewonnen: FREUND\_0815 |
+| FREUND\_0815 | Freund 08/15 | Modell 08/15 als Freund gewonnen: W3\_FREUND\_0815 |
 | ZAPP\_MEISTER | Zapp-Meister | alle Kanäle der Programmzeitschrift gefunden: W4\_ALLE\_KANAELE |
 | EINKAUFSLISTE | Einkaufsliste komplett | alle Wünsche Pixels im Notizbuch: Wert EINKAUFSLISTE ≥ 4 |
 | NEUGIER | Neugier | alle 14 Nahansichten des Spiels geöffnet (Welt-Tabellen) |
 | WELT\_GERETTET | Welt gerettet | Finale gesehen: FI\_ENDE\_GESEHEN |
 
-Vier Namen gibt es in den Welt-Tabellen noch nicht; wer die Welt baut, legt sie unter `weitere_schalter` an und setzt sie: W3\_SIMULATION\_BESUCHE (Welt 3, zählt jedes Betreten der Simulation), W4\_ALLE\_KANAELE (Welt 4), EINKAUFSLISTE (Finale-Tabelle, Zahl der Wünsche auf Seite 3) und FI\_ENDE\_GESEHEN (Finale, nach dem Abspann). Wo eine Bedingung nicht als Schalter passt, schaltet `Errungenschaften.freischalten("ID")` direkt frei.
+Vier Namen gehören zu keinem Rätsel und stehen in den Welt-Tabellen unter `weitere_schalter`: W3\_SIMULATION\_BESUCHE (Welt 3, zählt jedes Betreten der Simulation), W4\_ALLE\_KANAELE (Welt 4), EINKAUFSLISTE (Finale-Tabelle, Zahl der Wünsche auf Seite 3) und FI\_ENDE\_GESEHEN (Finale, nach dem Abspann). Wo eine Bedingung nicht als Schalter passt, schaltet `Errungenschaften.freischalten("ID")` direkt frei.
 
 **Datenformat:** Eine Datei pro Abschnitt, `game/daten/hinweise/<abschnitt>.json`, erzeugt von `tools/spieldaten.py` aus Welt-Tabelle und Skript (nie von Hand bearbeiten), mit einem Eintrag pro Schritt:
 
@@ -360,6 +360,8 @@ Während einer Zwischensequenz, eines Gesprächs oder eines Minispiels merkt sic
 - Gespeichert werden nur Schalter und Werte, nie etwas, das sich daraus ableiten lässt. Ob eine Tür offen ist, folgt aus dem Rätselschalter.
 - Schalter heißen wie die Rätselschritte, damit Hinweissystem, Notizbuch und Speichern dieselbe Sprache sprechen.
 - Hilfsschalter und Hilfswerte, die zu keinem Rätsel gehören (etwa `P0_SCHNEE_GESEHEN`, `W1_ZIEGE_FOLGT`), tragen das Präfix ihres Abschnitts und stehen in der Welt-Tabelle unter `weitere_schalter`; `tools/pruefen.py` warnt, wenn der Code einen anderen Namen setzt.
+- Jeder Schalter und jeder Wert trägt das Präfix seines Abschnitts (`P0_`, `W1_` bis `W4_`, `ZS1_` bis `ZS3_`, `FI_`), auch die Nebenschalter eines Rätsels wie `W3_CODE_SICHT` oder `W3_FREUND_0815`. Ohne Präfix bleiben nur fünf Werte, die über die Abschnitte hinweg gelten: `ZWISCHENSPIEL`, `TASCHE`, `FUNDKISTE`, `EINKAUFSLISTE` und `FINALE`. `tools/pruefen.py` meldet jeden anderen Namen ohne Präfix als Fehler.
+- Wird ein Schalter umbenannt, steigt die Versionsnummer der Spielstände, und die Umwandlung in `game/skripte/cq_save_load.gd` übersetzt den alten Namen. Stand: Version 3 (seit dem 11. November 2026 tragen die Schalter aus Welt 3 und dem Finale ihr Präfix).
 - Claude schreibt einen automatischen Test, der im Vertical Slice nach jedem gelösten Schritt speichert, lädt und prüft, dass nichts fehlt.
 
 ## Offene Entscheidungen

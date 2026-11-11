@@ -14,7 +14,22 @@ extends PopochiuSaveLoad
 
 ## Ordner der Spielstände (Tests nutzen einen eigenen, siehe tests/prolog_durchlauf.gd)
 static var ordner := "user://saves/"
-const VERSION := 2  # 2: Grundauflösung 640×360 (vorher 480×270), Koordinaten werden beim Laden umgerechnet
+## 2: Grundauflösung 640×360 (vorher 480×270), Koordinaten werden beim Laden umgerechnet
+## 3: Schalter aus Welt 3 und Finale tragen das Präfix ihres Abschnitts (SCHALTER_V3)
+const VERSION := 3
+## Schalter, die bis Version 2 ohne Präfix gespeichert wurden: Präfix → alte Namen
+const SCHALTER_V3 := {
+	"W3_": [
+		"BEOBACHTUNG_SCHIRM", "BEOBACHTUNG_MUSIKER", "BEOBACHTUNG_SUPPE", "STEMPEL_MENSCH",
+		"MORPHAEUS_GETROFFEN", "DIAGNOSE_MATRIX", "SIMULATION_OFFEN", "SPARSCHWEIN_ZERSCHLAGEN",
+		"REGEL_1", "REGEL_2", "REGEL_3", "CODE_SICHT", "GLASTUER_OFFEN", "HEXENSCHUSS",
+		"TASSE_ORIGINAL", "KLONE_MITTAGSPAUSE", "FARBCODE_GESENDET", "KABEL_GESTECKT",
+		"HAUSMEISTER_WEG", "FREUND_0815", "LEITUNG_LABOR", "KAMMER_1_GELOEST", "KAMMER_2_GELOEST",
+		"KAMMER_3_GELOEST", "MUTTI_AUS", "ZELLE_GEKUEHLT", "SUPPE_GEKOCHT", "MORSE_TABELLE",
+		"OPAS_NACHRICHT",
+	],
+	"FI_": ["LUKE_ERKANNT", "KEKSE_DABEI"],
+}
 const SCHNELL := 13
 const AUTO := [14, 15, 16]
 const MANUELL_ANZAHL := 12
@@ -121,8 +136,29 @@ static func umwandeln(d: Dictionary) -> Dictionary:
 	if not is_equal_approx(alt, _hoehe()):
 		d = _skalieren(d, _hoehe() / alt)
 	d.aufloesung_hoehe = _hoehe()
+	if v < 3:
+		_schalter_umbenennen(d)
 	d.version = VERSION
 	return d
+
+
+## Version 3: Die Schalter aus SCHALTER_V3 bekommen ihr Präfix. Sie liegen im Spielstand unter
+## popochiu.globals.custom_data.schalter (Zustand.speichern()).
+static func _schalter_umbenennen(d: Dictionary) -> void:
+	var z: Variant = d
+	for k in ["popochiu", "globals", "custom_data"]:
+		z = z.get(k) if z is Dictionary else null
+	if not z is Dictionary or not z.get("schalter") is Dictionary:
+		return
+	var neu := {}
+	for name in z.schalter:
+		var ziel := str(name)
+		for praefix in SCHALTER_V3:
+			if ziel in SCHALTER_V3[praefix]:
+				ziel = praefix + ziel
+				break
+		neu[ziel] = bool(z.schalter[name]) or bool(neu.get(ziel, false))
+	z.schalter = neu
 
 
 static func _hoehe() -> float:
