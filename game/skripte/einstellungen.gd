@@ -47,6 +47,7 @@ var _erster_start := true
 
 func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_ALWAYS
+	CQEffekte.schriften_einrichten()
 	laden()
 	anwenden.call_deferred()
 

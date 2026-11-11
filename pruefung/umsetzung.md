@@ -84,7 +84,7 @@ Status: umgesetzt, nicht bestätigt, Entscheidung bitte prüfen, offen für Seba
 | 49 | 9 | umgesetzt | Bestätigt. `game/oberflaeche/reisetasche.gd`: Die Auslage bricht nach acht Feldern in eine zweite Zeile um, das Fenster wächst mit. Test in `welt_2_anspiel.gd`: elf Dinge, zwei Zeilen, kein Feld liegt auf einem anderen. |
 | 50 | 9 | umgesetzt | Bestätigt. `game/skripte/spielstand.gd`: F9 lädt nicht mehr mitten in einer Szene, sondern meldet „Laden geht erst nach der Szene“ (`UI_LADEN_NACH_SZENE`, neu in `ui.csv`, DE und EN). |
 | 51 | 9 | umgesetzt, Entscheidung, bitte prüfen | Bestätigt am Code. `game/skripte/spiel.gd`, `zum_hauptmenue()`: Im Browser lädt das Spiel die Seite neu, statt sich zu beenden. Der Weg ist hier nicht im Browser getestet (kein Web-Build in den Prüfläufen); bitte im Web-Testbuild einmal „Hauptmenü“ drücken. |
-| 52 | 9 | teilweise umgesetzt | Bestätigt für drei von vier Schaltern. `game/oberflaeche/optionen.gd`: „Untertitel“, „Bildschirmwackeln aus“ und „Farbenblind-Hilfe“ stehen grau mit „(kommt noch)“ im Menü. „Flackern reduzieren“ wirkt schon im Hauptmenü und bleibt aktiv. Nicht bestätigt: Das Kabelrätsel nennt die Symbole schon im Text („Buchse Rot (Kreis)“). `05-spielsysteme.md` nennt den Stand und dass die Steam-Tags erst zählen, wenn die Schalter wirken. Test in `menues.gd`. |
+| 52 | 9 | teilweise umgesetzt | Bestätigt für drei von vier Schaltern. `game/oberflaeche/optionen.gd`: „Untertitel“, „Bildschirmwackeln aus“ und „Farbenblind-Hilfe“ stehen grau mit „(kommt noch)“ im Menü. „Flackern reduzieren“ wirkt schon im Hauptmenü und bleibt aktiv. Nicht bestätigt: Das Kabelrätsel nennt die Symbole schon im Text („Buchse Rot (Kreis)“). `05-spielsysteme.md` nennt den Stand und dass die Steam-Tags erst zählen, wenn die Schalter wirken. Test in `menues.gd`. Nachtrag: Seit Punkt 3 in Abschnitt 7 wirken alle drei Schalter. |
 | 53 | 9 | umgesetzt | Bestätigt. `game/oberflaeche/notizbuch.gd`: Seite 3 zeigt Pixels Wünsche, je Welt einen (Wert `EINKAUFSLISTE`), im Finale dazu das Sofa. Die fünf Einträge stehen in `ui.csv` (`UI_EINKAUF_1` bis `_4`, `UI_EINKAUF_SOFA`) und sind aus den Skriptzeilen abgeleitet, in denen Pixel den Wunsch nennt. Entscheidung, bitte prüfen (Wortlaut). Test in `welt_2_anspiel.gd`. |
 | 54 | 4 | umgesetzt | Bestätigt. `P0_DACH_OPA_0370`: „Er kennt jede Sendung, die je gelaufen ist, und er kennt alle Antworten.“ Der zweite Satz aus dem Vorschlag fehlt, weil Pixel in `0380` auf „alle Antworten“ antwortet. |
 | 55 | 4 | Entscheidung, bitte prüfen | Bestätigt. Gewählt: offen lassen. `ZS3_DACH_PIX_0020` endet nach „Jemand will, dass in diesem Haus etwas gekauft wird.“, Pixel sieht Opa nicht mehr an. Der andere Weg (Oma als Absenderin, eine neue Zeile im Finale) steht auf der Liste für Sebastian. |
@@ -922,7 +922,7 @@ Hinweise zu den Zahlen:
 - Fund 37: Die fünf Töne des Leitmotivs (g′ – c″ – e″ – d″ – c″) sind mein Vorschlag. Wenn du eine andere Melodie pfeifst, gilt deine.
 - Fund 39: Der Meilensteinplan hat jetzt einen Stand-Absatz und eine Tabelle, was je Welt an Grafik und Audio offen ist. Der alte Stufenplan steht noch darunter. Neue Dauern, Stunden und Termine habe ich nicht eingetragen; die musst du schätzen. Auch das Beispiel „Projektstart im Januar 2027“ und die Grafikstunden (für 480×270 geschätzt) warten darauf.
 - Fund 51: „Hauptmenü“ lädt im Browser die Seite neu. Bitte im Web-Testbuild einmal ausprobieren, hier ließ sich das nicht testen.
-- Fund 52: Drei Schalter sind grau mit „(kommt noch)“. Wenn du sie lieber ganz ausblenden willst, ist das eine Zeile in `optionen.gd`.
+- Fund 52: Drei Schalter sind grau mit „(kommt noch)“. Wenn du sie lieber ganz ausblenden willst, ist das eine Zeile in `optionen.gd`. Nachtrag: erledigt, die Schalter wirken (Abschnitt 7, Punkt 3).
 - Fund 53: Die fünf Einträge auf Seite 3 des Notizbuchs (`UI_EINKAUF_1` bis `_4`, `UI_EINKAUF_SOFA` in `docs/uebersetzung/ui.csv`) sind aus Pixels Zeilen abgeleitet. Der Wortlaut ist deiner.
 - Fund 94: Die drei Meldungen „Hier endet diese Fassung. Welt N folgt.“ erscheinen nur, wenn eine Welt im Build fehlt.
 - Fund 43: Welt 3 ist umgebaut (Wecker statt Telefon, Sparschwein statt Vase, Bürokopierer und Locher im Turm). Bitte die neuen und geänderten Zeilen in Abschnitt 6 und in der Tabelle zu `welt-3.md` gegenlesen. Der Umbau ist ein eigener Commit und lässt sich als Ganzes zurücknehmen.
@@ -1143,3 +1143,39 @@ Entscheidungen, bitte prüfen:
 Offen bleibt: Der Abspann hat noch keinen eigenen Bildschirm. Das Stück `abspann` setzt deshalb mit dem ersten Abspann-Foto ein.
 
 Prüfläufe vor dem Commit von Punkt 2: `tools/pruefen.py` 0 Fehler, 0 Warnungen. Alle acht Dokument-Prüfungen grün, darunter der neue Abgleich von Ton-Dokument und Spiel. Godot: Prolog 779, Welt 2 58, Welt 3 68, Welt 4 24, Finale 33, Hinweise 19, Ansehen 31, Menüs 74, Minispiele 63, Ton 32, Prolog mit echten Sprechblasen 778, Bildvergleich 55 Räume. Überall 0 Fehler. Die Telemetrie-Auswertung der Testläufe ist grün.
+
+### Punkt 3: Die drei grauen Schalter
+
+Untertitel, Bildschirmwackeln aus und Farbenblind-Hilfe wirken jetzt. Kein Schalter steht mehr grau im Menü. Damit stimmen auch die Steam-Tags „Untertitel“ und „Farbenblind-Modus“.
+
+| Schalter | Vorher | Jetzt |
+| --- | --- | --- |
+| Untertitel | grau, ohne Wirkung | Aus heißt: Eine Zeile mit Aufnahme läuft ohne Sprechblase. Zeilen ohne Aufnahme und gesungene Zeilen behalten ihren Text. |
+| Bildschirmwackeln aus | grau, im Spiel wackelte nur der Hebel und der Zombie-Tanz | Sieben Skriptzeilen lassen das Bild wackeln. Der Schalter stellt das und das Wackeln der Minispiele ab. |
+| Farbenblind-Hilfe | grau, ohne Wirkung | Vor jeder Sprechblase steht der Name der Figur. Im Kabelrätsel steht die Form vor der Buchse. |
+
+So ist es gebaut:
+
+- **Untertitel.** `Spiel.blase_zeigen()` entscheidet je Sprechblase. Bei „aus“ wartet das Spiel das Ende der Aufnahme ab. Ein Klick oder „Text weiter“ beendet die Zeile vorher.
+- **Gesungene Zeilen.** Die Liste `LIED` in `game/skripte/klang_einsatz.gd` nennt acht Zeilen: das Arbeitslied der Goblins, Waldemars Nummer im Zauberwald und im Abspann. Ihr Text erscheint kursiv mit einer Note davor, immer.
+- **Wackeln.** Die Tabelle `WACKELN` in `game/skripte/effekte.gd` hängt ein Wackeln an eine Skriptzeile: die beiden Ambosse in Welt 4, Max' Sprung auf den Deckel, die Müllpresse, im Finale die Maschine beim Anbrummen, beim Lauterwerden und bei der Ofentür.
+- **Farbenblind-Hilfe.** Wer spricht, zeigte bisher nur die Schriftfarbe. Mit der Hilfe steht „Opa: …“ in der Sprechblase. Der Verlauf nennt den Namen schon und bleibt, wie er war. Im Kabelrätsel von Welt 3 steht ● vor Rot, ▲ vor Grün und ■ vor Gelb.
+- **Symbolschrift.** Nunito und Pixelify Sans haben die Zeichen ✓ ✗ ♪ ● ▲ ■ ◆ ↔ nicht. Am Rechner sprang dafür eine Schrift des Systems ein, im Browser gibt es keine. Neu ist `game/schriften/symbole.ttf` mit genau diesen acht Zeichen aus DejaVu Sans Bold (2 Kilobyte). Das Spiel hängt sie beim Start an beide Schriften. `tools/symbolschrift.py` baut die Datei, die Lizenz liegt in `licenses/dejavu-LICENSE.txt`.
+- **Optionen.** Unter „Untertitel“ und „Farbenblind-Hilfe“ steht eine kleine Zeile, die sagt, was der Schalter tut. Die Texte stehen in `docs/uebersetzung/ui.csv` (`UI_OPT_UNTERTITEL_HILFE`, `UI_OPT_FARBENBLIND_HILFE`), deutsch und englisch.
+- **Tests:** neu `game/tests/schalter.gd` mit 31 Prüfungen, läuft in GitHub Actions. Ein Teil läuft mit echten Sprechblasen und liest, was in der Blase steht. `menues.gd` prüft, dass kein Schalter mehr grau ist.
+- **Werkzeuge:** `tools/audio_liste.py --pruefen` prüft jetzt auch die Zeilen-IDs der Listen `LIED` und `WACKELN` gegen das Skript.
+- **Dokumente:** `docs/05-spielsysteme.md` (Optionen, Stand der Schalter, Steam-Tags), `docs/04-audio.md` (gesungene Stücke), `docs/entscheidungen.md`, `licenses/README.md`, `game/README.md`.
+
+Entscheidungen, bitte prüfen:
+
+- **Untertitel aus ändert heute sichtbar nichts.** Es liegen noch keine Stimmen im Ordner, und ohne Aufnahme darf kein Text verschwinden, sonst wäre die Zeile weg. Der Schalter greift ab der ersten Datei in `game/audio/stimmen/`. Der Test beweist das mit einer Probe-Aufnahme.
+- **Alle gesungenen Zeilen zeigen ihren Text immer.** Das Dokument verlangte das nur für die drei Rätsel-Lieder. Alle acht gesungenen Zeilen des Skripts gehören aber zu zwei dieser drei Lieder. Der Werbejingle hat im Skript keine gesungene Zeile.
+- **`04-audio.md` nannte für Liedzeilen ein eigenes ID-Schema (LIED\_Welt\_Stück\_Nummer).** Das Skript benutzt gewöhnliche Zeilen-IDs. Ich habe das Dokument an das Skript angepasst, keine ID geändert.
+- **Welche Zeilen wackeln, habe ich gewählt.** Es sind sieben Stellen, an denen die Regie einen Aufprall oder die bebende Maschine nennt. Jede weitere ist eine Zeile in der Tabelle.
+- **Farbenblind-Hilfe als Sprechernamen.** Das Dokument nannte nur „Symbole zu Farbcodes“. Das einzige Rätsel mit Farbcode trägt seine Symbole schon immer im Namen der Buchse. Die eine Stelle, an der wirklich nur die Farbe etwas sagt, ist die Sprechblase.
+- **Sprechende Dinge haben jetzt auch Brabbel.** Brunnen, Grammophon, Geheimtür und Spiegel liefen bisher an der Stimmen-Wiedergabe vorbei. Sonst hätte der Untertitel-Schalter bei ihnen nicht gegriffen.
+- **Farbe Gelb ist das Quadrat.** Im Code stand für Gelb eine Raute. Das Kabelrätsel sagt Quadrat auf Gelb.
+
+Aufgefallen, nicht geändert: Pixelify Sans liegt im Spiel, aber keine Szene und kein Skript benutzt die Schrift. Titel und Hauptmenü stehen in Nunito.
+
+Prüfläufe vor dem Commit von Punkt 3: `tools/pruefen.py` 0 Fehler, 0 Warnungen. Alle acht Dokument-Prüfungen grün. Godot: Prolog 779, Welt 2 58, Welt 3 68, Welt 4 24, Finale 33, Hinweise 19, Ansehen 31, Menüs 75, Minispiele 63, Ton 32, Schalter 31, Prolog mit echten Sprechblasen 778, Bildvergleich 55 Räume. Überall 0 Fehler. Die Telemetrie-Auswertung der Testläufe ist grün.

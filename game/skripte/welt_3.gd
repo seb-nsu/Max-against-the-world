@@ -1036,7 +1036,9 @@ func _kabel_stecken() -> bool:
 	for kabel in ["kreis", "dreieck", "quadrat"]:
 		while true:
 			var frei := BUCHSEN.filter(func(b): return not b in gesteckt)
-			var w := await Spiel.auswahl(BUCHSEN.map(func(b): return "UI_W3_BUCHSE_" + b.to_upper()) + ["UI_W2_DOCH_NICHT"])
+			# Mit der Farbenblind-Hilfe steht das Zeichen der Buchse als Form davor (● ▲ ■)
+			var w := await Spiel.auswahl(BUCHSEN.map(func(b):
+				return CQEffekte.mit_farbsymbol(b, "UI_W3_BUCHSE_" + b.to_upper())) + ["UI_W2_DOCH_NICHT"])
 			if w < 0 or w >= BUCHSEN.size():
 				return true
 			var b: String = BUCHSEN[w]

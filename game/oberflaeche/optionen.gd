@@ -14,14 +14,20 @@ const CONTROLLER := [
 	["LB", "UI_TASTE_FIGUR_WECHSELN"], ["RB", "UI_PAD_RB"], ["Stick", "UI_PAD_STICK"],
 	["+", "UI_PAD_KREUZ"], ["Start", "UI_TASTE_PAUSE"],
 ]
-## Schalter, die im Spiel noch nichts bewirken: Sie stehen ausgegraut mit „kommt noch“ da, bis
-## es Stimmen (Untertitel), Bildschirmwackeln und farbcodierte Rätsel ohne Symbol gibt. Das
-## Kabelrätsel in Welt 3 zeigt die Symbole immer. „Flackern reduzieren“ wirkt schon im Hauptmenü.
-const OHNE_WIRKUNG := ["untertitel", "wackeln_aus", "farbenblind"]
+## Schalter, die im Spiel noch nichts bewirken, stehen ausgegraut mit „kommt noch“ da. Zurzeit
+## ist die Liste leer: Untertitel (Spiel.blase_zeigen), Bildschirmwackeln aus (CQEffekte.wackeln)
+## und Farbenblind-Hilfe (CQEffekte.mit_sprecher, farbsymbol) wirken.
+const OHNE_WIRKUNG := []
+## Schalter mit einer Erklärung in kleiner Schrift unter dem Namen: Schlüssel → Text
+const ERKLAERUNG := {
+	"untertitel": "UI_OPT_UNTERTITEL_HILFE",
+	"farbenblind": "UI_OPT_FARBENBLIND_HILFE",
+}
 
 var _reiter: TabContainer
-## Ausgegraute Schalter (für Tests)
+## Ausgegraute Schalter und Schalter mit Wirkung (für Tests): Schlüssel → CheckButton
 var _schalter_aus := {}
+var _schalter_an := {}
 ## Aktion, die gerade auf eine neue Taste wartet ("" = keine)
 var _belegt_wird := ""
 var _tasten_knoepfe := {}
@@ -38,6 +44,7 @@ func _aufbauen() -> void:
 		k.queue_free()
 	_tasten_knoepfe.clear()
 	_schalter_aus.clear()
+	_schalter_an.clear()
 	var p := S.panel(Vector2(32, 12), Vector2(576, 336))
 	add_child(p)
 	var titel := S.label(tr("UI_MENUE_OPTIONEN"), 12)
@@ -105,7 +112,7 @@ func _spiel(g: GridContainer) -> void:
 	_wahl(g, "UI_OPT_TEXTTEMPO", "text_tempo",
 		Einstellungen.TEXT_TEMPI.keys().map(func(t): return [t, "UI_OPT_TEMPO_" + t.to_upper()]))
 	_wahl(g, "UI_OPT_TEXT_WEITER", "text_auto", [[false, "UI_OPT_PER_KLICK"], [true, "UI_OPT_AUTOMATISCH"]])
-	_schalter(g, "UI_OPT_UNTERTITEL", "untertitel")  # in OHNE_WIRKUNG, solange es keine Stimmen gibt
+	_schalter(g, "UI_OPT_UNTERTITEL", "untertitel")
 	_schalter(g, "UI_OPT_BRABBEL", "brabbel")
 
 
@@ -171,7 +178,16 @@ func _schalter(g: GridContainer, text_key: String, schluessel: String) -> void:
 		g.add_child(c)
 		_schalter_aus[schluessel] = c
 		return
-	g.add_child(S.label(tr(text_key)))
+	if ERKLAERUNG.has(schluessel):
+		var spalte := VBoxContainer.new()
+		spalte.add_theme_constant_override("separation", -3)
+		spalte.add_child(S.label(tr(text_key)))
+		spalte.add_child(S.label(tr(ERKLAERUNG[schluessel]), 7, S.GRAU))
+		g.add_child(spalte)
+	else:
+		g.add_child(S.label(tr(text_key)))
+	c.size_flags_vertical = Control.SIZE_SHRINK_CENTER
+	_schalter_an[schluessel] = c
 	c.toggled.connect(func(an):
 		Klang.geraeusch("ui_klick")
 		Einstellungen.setze(schluessel, an)

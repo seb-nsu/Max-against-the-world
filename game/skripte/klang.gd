@@ -55,6 +55,9 @@ var fehlend := {}
 ## Zuletzt angefragte Klänge (für Tests): ["musik/titel", "jingle/geloest", …]
 var protokoll: Array[String] = []
 
+## Stimmen ohne Datei, nur für Tests: Schlüssel der Sprechblase → AudioStream
+var probe_stimmen := {}
+
 var _musik: Array[AudioStreamPlayer] = []
 var _aktiv := 0
 var _geraeusche: Array[AudioStreamPlayer] = []
@@ -317,12 +320,48 @@ func zeile(kuerzel: String, schluessel: String, text: String) -> void:
 	if CQKlangEinsatz.hat_laut(kuerzel):
 		return  # Laut statt Stimme: kommt über zeilen_klang()
 	_stimme.stop()
-	var pfad := datei("stimme", "%s/%s" % [TranslationServer.get_locale().left(2), schluessel])
-	if not pfad.is_empty():
-		_stimme.stream = load(pfad)
+	var aufnahme := stimme_zu(schluessel)
+	if aufnahme != null:
+		_stimme.stream = aufnahme
 		_stimme.play()
 	elif Einstellungen.wert("brabbel") and not _headless():
 		brabbeln(kuerzel, text)
+
+
+## Aufnahme zu einer Sprechblase in der aktuellen Sprache, null wenn es keine gibt.
+func stimme_zu(schluessel: String) -> AudioStream:
+	if probe_stimmen.has(schluessel):
+		return probe_stimmen[schluessel]
+	var pfad := datei("stimme", "%s/%s" % [TranslationServer.get_locale().left(2), schluessel])
+	return load(pfad) if not pfad.is_empty() else null
+
+
+## Gibt es zu dieser Sprechblase eine Aufnahme? Nur dann darf ihr Text bei „Untertitel aus“
+## wegbleiben (Spiel.blase_zeigen).
+func hat_stimme(schluessel: String) -> bool:
+	return stimme_zu(schluessel) != null
+
+
+## Wartet, bis die laufende Aufnahme zu Ende ist (Sprechblase ohne Text bei „Untertitel aus“).
+## Ein Klick, „Text weiter“ oder das Überspringen der Szene beendet die Zeile vorher.
+func stimme_abwarten() -> void:
+	var rest := 0.0
+	if _stimme.stream != null:
+		rest = _stimme.stream.get_length()
+	if rest <= 0.0:
+		rest = 2.0  # Länge unbekannt (Stream ohne Dauer)
+	var gedrueckt := true  # der Klick, der die vorige Zeile beendet hat, zählt nicht
+	while rest > 0.0 and _stimme.playing:
+		if is_instance_valid(E) and E.cutscene_skipped:
+			break
+		var jetzt := Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT) \
+			or Input.is_action_pressed("cq_text_weiter")
+		if jetzt and not gedrueckt:
+			break
+		gedrueckt = jetzt
+		await get_tree().process_frame
+		rest -= get_process_delta_time()
+	_stimme.stop()
 
 
 ## Silben grob zählen: Gruppen von Selbstlauten.

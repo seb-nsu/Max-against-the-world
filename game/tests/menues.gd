@@ -139,9 +139,12 @@ func _hauptmenue(spiel, einst) -> void:
 	await _warten()
 	var opt = menue.unter_offen()
 	pruefe(opt != null and opt._reiter.get_tab_count() == 5, "Optionen mit fünf Reitern")
-	pruefe(opt._schalter_aus.size() == 3 and opt._schalter_aus.has("untertitel")
-		and opt._schalter_aus["farbenblind"].disabled and opt._schalter_aus["wackeln_aus"].disabled,
-		"Optionen: drei Schalter ohne Wirkung sind ausgegraut")
+	pruefe(opt._schalter_aus.is_empty() and not opt._schalter_an["untertitel"].disabled
+		and not opt._schalter_an["farbenblind"].disabled and not opt._schalter_an["wackeln_aus"].disabled,
+		"Optionen: kein Schalter ist mehr ausgegraut, Untertitel, Wackeln und Farbenblind-Hilfe sind bedienbar")
+	opt._schalter_an["wackeln_aus"].button_pressed = true
+	pruefe(einst.wert("wackeln_aus"), "Optionen: Schalter „Bildschirmwackeln aus“ stellt die Einstellung um")
+	opt._schalter_an["wackeln_aus"].button_pressed = false
 	var rb := InputEventAction.new()
 	rb.action = "cq_reiter_vor"
 	rb.pressed = true

@@ -10,6 +10,7 @@ extends RefCounted
 ##   GEGENSTAND  spielt, wenn der Gegenstand benutzt wird: im Inventar, auf etwas, kombiniert
 ##   SCHRITT_MAX, SCHRITT_PIXEL   Schritte je Raum, solange die Figur läuft (Spiel._process)
 ##   MUSIK       Stück, das mit einer Skriptzeile einsetzt; „raum“ = zurück zum Stück des Raums
+##   LIED        gesungene Zeilen: Ihr Text erscheint immer, auch bei „Untertitel aus“
 ## Ein Wert „jingle/<id>“ spielt den Jingle statt eines Geräuschs. Einzelne Ereignisse ohne Zeile
 ## und ohne Objekt (Abfahrt der Zeitfähre, Code-Sicht, Tausch) rufen Klang.geraeusch() direkt in
 ## den Regeln auf. tools/audio_liste.py liest diese Tabellen mit und prüft sie gegen 04-audio.md
@@ -80,6 +81,15 @@ const MUSIK := {
 	"FI_ABSP_NAR_0100": "abspann",           # die Abspann-Fotos
 	"FI_ABSP_WAL_0160": "lied_waldemar",     # Waldemars Nummer im Abspann
 }
+
+## Gesungene Zeilen (04-audio.md, gesungene Stücke; 05-spielsysteme.md, Untertitel): Der Text
+## erscheint kursiv mit einer Note davor und bleibt auch bei „Untertitel aus“ stehen, damit kein
+## Rätsel an einer verschluckten Silbe hängt. Der Werbejingle hat keine gesungene Zeile im Skript.
+const LIED := [
+	"W1_BERG_GO1_0620", "W1_BERG_GO1_0630",       # das Arbeitslied der Goblins (Passwort-Teil)
+	"W1_WALD_WAL_0490", "W1_WALD_WAL_0500",       # Waldemars Nummer im Zauberwald
+	"FI_ABSP_WAL_0160", "FI_ABSP_WAL_0170", "FI_ABSP_WAL_0180", "FI_ABSP_WAL_0190",  # Abspann
+]
 
 ## Laute statt Stimme (04-audio.md, Nebenstimmen: „Laute als Geräusch“)
 const LAUT := {
@@ -167,6 +177,11 @@ static func fuer_ereignis(art: String, objekt_id: String, gegenstand_id: String)
 
 static func schritt(raum_id: String, pixel: bool) -> String:
 	return (SCHRITT_PIXEL if pixel else SCHRITT_MAX).get(raum_id, "")
+
+
+## Ist die Zeile gesungen?
+static func ist_lied(zeile: String) -> bool:
+	return zeile in LIED
 
 
 ## Hat die Figur einen Laut statt einer Stimme? Dann brabbelt sie nicht.

@@ -43,6 +43,7 @@ SPRACHEN = ("de", "en")
 
 
 EINSATZ = GAME / "skripte" / "klang_einsatz.gd"
+EFFEKTE = GAME / "skripte" / "effekte.gd"
 AUDIO_DOKU = ROOT / "docs" / "04-audio.md"
 TEXTE = GAME / "lokalisierung" / "texte.csv"
 # Kennungen ohne Datei: kein Stück, keine Atmosphäre, zurück zum Raum-Stück
@@ -65,6 +66,16 @@ def einsatz_tabellen() -> dict[str, list[tuple[str, str]]]:
             raise SystemExit(f"klang_einsatz.gd: Tabelle {name} nicht gefunden")
         out[name] = re.findall(r'"([^"]+)":\s*"([^"]+)"', m.group(1))
     return out
+
+
+def zeilen_liste(datei: Path, name: str) -> list[str]:
+    """Zeilen-IDs einer Liste oder Tabelle, die keine Klänge nennt: LIED (gesungene Zeilen,
+    klang_einsatz.gd) und WACKELN (Bildschirmwackeln je Zeile, effekte.gd)."""
+    text = datei.read_text(encoding="utf-8")
+    m = re.search(r"^const " + name + r" := [\[{](.*?)^[\]}]", text, re.S | re.M)
+    if not m:
+        raise SystemExit(f"{datei.name}: {name} nicht gefunden")
+    return re.findall(r'"([A-Z0-9]+_[A-Z0-9]+_[A-Z0-9]+_\d+)"', m.group(1))
 
 
 def gebraucht() -> list[tuple[str, str, str]]:
@@ -147,6 +158,10 @@ def abgleich(zeilen: list) -> list[str]:
         for schluessel, _wert in einsatz_tabellen()[name]:
             if schluessel not in skript:
                 fehler.append(f"klang_einsatz.gd {name}: Zeile {schluessel} gibt es im Skript nicht")
+    for datei, name in ((EINSATZ, "LIED"), (EFFEKTE, "WACKELN")):
+        for schluessel in zeilen_liste(datei, name):
+            if schluessel not in skript:
+                fehler.append(f"{datei.name} {name}: Zeile {schluessel} gibt es im Skript nicht")
     return fehler
 
 

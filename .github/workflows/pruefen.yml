@@ -74,6 +74,8 @@ jobs:
         run: timeout 300 ./godot --headless --path game -s res://tests/minispiele.gd
       - name: Ton (Geräusche, Atmosphäre und Stücke an ihren Einsatzstellen)
         run: timeout 300 ./godot --headless --path game -s res://tests/ton.gd
+      - name: Schalter (Untertitel, Bildschirmwackeln aus, Farbenblind-Hilfe, Symbolschrift)
+        run: timeout 300 ./godot --headless --path game -s res://tests/schalter.gd
       - name: Telemetrie-Auswertung (Protokoll aus dem Testmodus)
         run: python3 tools/telemetrie_auswertung.py ~/.local/share/godot/app_userdata/*/test_telemetrie --mit-tests > /dev/null
       - name: Prolog-Durchlauf (echte Sprechblasen und Wege)

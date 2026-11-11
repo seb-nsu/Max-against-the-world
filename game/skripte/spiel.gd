@@ -210,10 +210,12 @@ func blasen(zeile: String) -> Array[String]:
 
 ## Lässt die Figur mit dem Kürzel die Zeile sagen (Popochiu übersetzt die ID selbst).
 ## NAR-Zeilen sind Regie ohne Text: es gibt nur eine kurze Pause für die Animation.
+## Mit der Zeile beginnen ihre Geräusche (Klang.zeilen_klang) und ihr Wackeln (CQEffekte).
 func sagen(kuerzel: String, zeile: String) -> void:
 	if tr(zeile) == zeile:
 		push_error("Zeile %s fehlt in texte.csv" % zeile)
 	Klang.zeilen_klang(kuerzel, zeile)
+	CQEffekte.zeilen_wackeln(zeile)
 	for b in blasen(zeile):
 		protokoll.append(b)
 		zeile_gesagt.emit(b)
@@ -223,22 +225,47 @@ func sagen(kuerzel: String, zeile: String) -> void:
 			await E.wait(1.0)
 			continue
 		var c := figur(kuerzel)
+		var quelle: PopochiuClickable = null
 		if not is_instance_valid(c):
-			var quelle := _objekt_im_raum(OBJEKTSTIMMEN.get(kuerzel, ""))
-			if is_instance_valid(quelle):
-				await _objekt_sagt(kuerzel, quelle, b)
-			else:
+			quelle = _objekt_im_raum(OBJEKTSTIMMEN.get(kuerzel, ""))
+			if not is_instance_valid(quelle):
 				await G.show_system_text(b)
-			continue
+				continue
 		Klang.zeile(kuerzel, b, tr(b))
+		if not blase_zeigen(zeile, b):
+			ohne_text.append(b)
+			await Klang.stimme_abwarten()
+			continue
+		if is_instance_valid(quelle):
+			await _objekt_sagt(kuerzel, quelle, blasen_text(zeile, b))
+			continue
 		var gast := not c.is_inside_tree() and is_instance_valid(R.current)
 		if gast:
 			_stimme_aus_dem_off(c, true)
-		await c.say(b)
+		await c.say(blasen_text(zeile, b))
 		if gast:
 			_stimme_aus_dem_off(c, false)
 	if testmodus:
 		await get_tree().process_frame
+
+
+## Sprechblasen, die bei „Untertitel aus“ ohne Text liefen (für Tests), neueste zuletzt
+var ohne_text: Array[String] = []
+
+
+## Erscheint der Text dieser Sprechblase? Bei „Untertitel aus“ bleibt er nur weg, wenn es zur
+## Blase eine Aufnahme gibt; Zeilen ohne Stimme und gesungene Zeilen zeigen ihn immer
+## (05-spielsysteme.md, Optionen: Untertitel).
+func blase_zeigen(zeile: String, blase: String) -> bool:
+	if Einstellungen.wert("untertitel") or CQKlangEinsatz.ist_lied(zeile):
+		return true
+	return not Klang.hat_stimme(blase)
+
+
+## Was Popochiu als Sprechblase zeigt: der Schlüssel der Blase (Popochiu übersetzt ihn) oder,
+## bei gesungenen Zeilen, der fertige Text kursiv mit einer Note davor.
+func blasen_text(zeile: String, blase: String) -> String:
+	return CQEffekte.lied_text(tr(blase)) if CQKlangEinsatz.ist_lied(zeile) else blase
 
 
 ## Sprechende Objekte ohne Figur (welt-1.yaml: Figuren mit groesse_px 0) → Objekt-ID im Raum.

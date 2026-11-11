@@ -250,6 +250,7 @@ godot --headless --path . -s res://tests/prolog_durchlauf.gd -- --echt   # echte
 godot --headless --path . -s res://tests/menues.gd                    # Menüs, Optionen, Audio-Gerüst, unter 1 Minute
 godot --headless --path . -s res://tests/minispiele.gd                # Hebel, Rede-Ringen, Zombie-Tanz, unter 1 Minute
 godot --headless --path . -s res://tests/ton.gd                       # Geräusche, Atmosphäre, Stücke, unter 1 Minute
+godot --headless --path . -s res://tests/schalter.gd                  # Untertitel, Wackeln aus, Farbenblind-Hilfe, unter 1 Minute
 ```
 
 **Screenshot-Regressionstest (A16):** `tests/bildschirm_vergleich.gd` betritt jeden gebauten Raum

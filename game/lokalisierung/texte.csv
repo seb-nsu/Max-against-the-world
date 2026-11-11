@@ -351,6 +351,7 @@ UI_OPT_TEXT_WEITER,Text weiter,Advance text
 UI_OPT_PER_KLICK,per Klick,on click
 UI_OPT_AUTOMATISCH,automatisch,automatically
 UI_OPT_UNTERTITEL,Untertitel,Subtitles
+UI_OPT_UNTERTITEL_HILFE,Zeilen ohne Aufnahme und Lieder behalten ihren Text.,Lines without a recording and songs keep their text.
 UI_OPT_BRABBEL,Brabbel-Laute,Babble voices
 UI_OPT_PLATZHALTER_KLANG,Platzhalter-Töne,Placeholder sounds
 UI_OPT_GROSSE_SCHRIFT,Große Schrift,Large text
@@ -359,6 +360,7 @@ UI_OPT_HOTSPOT_NAMEN,Namen zu den Hotspots zeigen,Show hotspot names
 UI_OPT_WACKELN_AUS,Bildschirmwackeln aus,Screen shake off
 UI_OPT_FLACKERN_REDUZIEREN,Flackern reduzieren,Reduce flicker
 UI_OPT_FARBENBLIND,Farbenblind-Hilfe,Colour-blind aid
+UI_OPT_FARBENBLIND_HILFE,"Name vor jeder Sprechblase, Formen zu den Farben","Speaker names in speech bubbles, shapes next to colours"
 UI_OPT_KOMMT_NOCH,kommt noch,coming later
 UI_OPT_TASTE_DRUECKEN,Taste drücken …,Press a key …
 UI_OPT_MAUS_GEHT_IMMER,Mit der Maus geht alles auch ohne Tasten.,Everything also works with the mouse alone.
