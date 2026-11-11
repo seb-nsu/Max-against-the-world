@@ -43,10 +43,15 @@ const TASTE_FEHL := [["FI_RAET_NAR_0290", "FI_RAET_OPA_0300"], ["FI_RAET_NAR_031
 	["FI_RAET_NAR_0330", "FI_RAET_PIX_0340"]]
 
 ## Auflösung (skript/zwischenspiele-und-finale.md, Abschnitt 6): Maschine, Geständnis, Grund
-const AUFLOESUNG := ["FI_AUFL_NAR_0040", "FI_AUFL_MAX_0050", "FI_AUFL_PIX_0060", "FI_AUFL_MAX_0070",
-	"FI_AUFL_PIX_0080", "FI_AUFL_MAX_0090", "FI_AUFL_OPA_0100", "FI_AUFL_MAX_0110", "FI_AUFL_OPA_0120",
-	"FI_AUFL_MAX_0130", "FI_AUFL_OPA_0140", "FI_AUFL_MAX_0150", "FI_AUFL_OPA_0160", "FI_AUFL_MAX_0170",
-	"FI_AUFL_OPA_0180", "FI_AUFL_NAR_0190", "FI_AUFL_MAX_0200", "FI_AUFL_OPA_0210", "FI_AUFL_MAX_0220",
+const AUFLOESUNG_VOR := ["FI_AUFL_NAR_0040", "FI_AUFL_MAX_0050", "FI_AUFL_PIX_0060", "FI_AUFL_MAX_0070",
+	"FI_AUFL_PIX_0080", "FI_AUFL_MAX_0090", "FI_AUFL_OPA_0100"]
+## Die Abfrage der vier Dinge spielt der Spieler selbst: Er wählt Ei, Korn und Zelle in beliebiger
+## Reihenfolge, Opa gesteht jedes einzeln. Die Fernbedienung kommt als letzte Frage, damit Opas
+## „Meine.“ der Schluss bleibt. Die Auswahl zeigt Max' Zeilen als Optionen.
+const AUFLOESUNG_DINGE := [["FI_AUFL_MAX_0110", "FI_AUFL_OPA_0120"], ["FI_AUFL_MAX_0130", "FI_AUFL_OPA_0140"],
+	["FI_AUFL_MAX_0150", "FI_AUFL_OPA_0160"]]
+const AUFLOESUNG_FERNBEDIENUNG := ["FI_AUFL_MAX_0170", "FI_AUFL_OPA_0180"]
+const AUFLOESUNG := ["FI_AUFL_NAR_0190", "FI_AUFL_MAX_0200", "FI_AUFL_OPA_0210", "FI_AUFL_MAX_0220",
 	"FI_AUFL_OPA_0230", "FI_AUFL_PIX_0240", "FI_AUFL_MAX_0250", "FI_AUFL_PIX_0260", "FI_AUFL_MAX_0270",
 	"FI_AUFL_OPA_0280", "FI_AUFL_OPA_0290", "FI_AUFL_MAX_0300", "FI_AUFL_PIX_0310", "FI_AUFL_MAX_0320",
 	"FI_AUFL_OPA_0330", "FI_AUFL_MAX_0340", "FI_AUFL_OPA_0350", "FI_AUFL_MAX_0360", "FI_AUFL_OPA_0370",
@@ -556,8 +561,16 @@ func gegenstand_opa(_obj, iid) -> bool:
 func _aufloesung() -> void:
 	var robo := Zustand.ist("FREUND_0815")
 	var kekse := _hat("omas_kekse")
-	var z := ["FI_AUFL_NAR_0010", "FI_AUFL_HAU_0020" if robo else "FI_AUFL_NAR_0030"]
-	z.append_array(AUFLOESUNG)
+	var vor := ["FI_AUFL_NAR_0010", "FI_AUFL_HAU_0020" if robo else "FI_AUFL_NAR_0030"]
+	vor.append_array(AUFLOESUNG_VOR)
+	await _szene(vor)
+	var offen: Array = AUFLOESUNG_DINGE.duplicate()
+	while not offen.is_empty():
+		var w := await Spiel.auswahl(offen.map(func(d): return d[0]))
+		await _szene(offen.pop_at(w if w >= 0 and w < offen.size() else 0))
+	await Spiel.auswahl([AUFLOESUNG_FERNBEDIENUNG[0]])
+	await _szene(AUFLOESUNG_FERNBEDIENUNG)
+	var z: Array = AUFLOESUNG.duplicate()
 	z.append_array(["FI_AUFL_NAR_0390", "FI_AUFL_OMA_0400", "FI_AUFL_OPA_0410", "FI_AUFL_OMA_0420",
 		"FI_AUFL_OMA_0430", "FI_AUFL_ZEL_0440", "FI_AUFL_OMA_0450"])
 	if robo:

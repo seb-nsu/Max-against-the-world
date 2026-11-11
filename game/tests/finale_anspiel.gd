@@ -94,10 +94,17 @@ func _durchlauf() -> void:
 	S.vorgabe_auswahl = [0]
 	await S.regel("gegenstand", _hotspot("empfaenger"), _i().get_item_instance(_sn("goldene_fernbedienung")))
 	_pruefe(_gesagt("FI_RAET_NAR_0290") and not Z.geloest("F1d"), "Lauter: falsche Taste")
-	S.vorgabe_auswahl = [3]
+	# rote Taste; danach fragt der Spieler die vier Dinge selbst ab: Zelle, Ei, Korn, zuletzt die Fernbedienung
+	S.vorgabe_auswahl = [3, 2, 0, 0, 0]
 	S.regel("gegenstand", _hotspot("empfaenger"), _i().get_item_instance(_sn("goldene_fernbedienung")))
 	await _warte_auf_raum("wohnzimmer")
 	_pruefe(Z.geloest("F1d") and _gesagt("FI_AUFL_PIX_0560"), "F1d und Auflösung")
+	var reihe := ["FI_AUFL_OPA_0160", "FI_AUFL_OPA_0120", "FI_AUFL_OPA_0140", "FI_AUFL_OPA_0180", "FI_AUFL_NAR_0190"]
+	var stellen := reihe.map(func(z): return S.protokoll.find(z))
+	var sortiert := stellen.duplicate()
+	sortiert.sort()
+	_pruefe(not stellen.has(-1) and stellen == sortiert and S.vorgabe_auswahl.is_empty(),
+		"Auflösung: vier Dinge in gewählter Reihenfolge, Fernbedienung zuletzt")
 	await _warte_bis(func(): return _gesagt("FI_WOHN_PIX_0060"), 10.0)
 	_pruefe(_raum().has_character("Oma") and _hotspot("kuchen").visible, "Geburtstag im Wohnzimmer")
 

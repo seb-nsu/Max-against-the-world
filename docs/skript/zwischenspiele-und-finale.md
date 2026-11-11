@@ -503,7 +503,7 @@ Drei Stufen je Schritt nach dem Hinweissystem (Spielsysteme). Schritt 0 ist die 
 
 ## 8. Finale, Stufe 2: Die Auflösung (FI\_AUFL)
 
-Szene. Die Maschine fährt herunter, die Nadel sinkt, Dampf zieht ab. Die Ofentür geht langsam auf (Modell 08/15 öffnet sie, oder der Kochlöffel fällt heraus). Es riecht nach Kuchen. Opa wird klein, Max wird ruhig, Pixel bekommt recht. Danach öffnet sich die Luke, Oma steht darin. Varianten nach FREUND\_0815 und KEKSE\_DABEI.
+Szene. Die Maschine fährt herunter, die Nadel sinkt, Dampf zieht ab. Die Ofentür geht langsam auf (Modell 08/15 öffnet sie, oder der Kochlöffel fällt heraus). Es riecht nach Kuchen. Opa wird klein, Max wird ruhig, Pixel bekommt recht. Die vier Dinge fragt der Spieler selbst ab (`FI_AUFL_MAX_0110` bis `0170`): Ei, Korn und Zelle in beliebiger Reihenfolge, zuletzt die Fernbedienung. Danach öffnet sich die Luke, Oma steht darin. Varianten nach FREUND\_0815 und KEKSE\_DABEI.
 
 | ID | Sprecher | Text | Regie |
 | --- | --- | --- | --- |
@@ -517,13 +517,13 @@ Szene. Die Maschine fährt herunter, die Nadel sinkt, Dampf zieht ab. Die Ofent�
 | FI\_AUFL\_PIX\_0080 | Pixel | Bäckerei. Ich habe es gesagt, nach Welt 2, laut und deutlich, mit Niesen. // Aber niemand hört dem Kater zu. Niemand hört jemals dem Kater zu. |  |
 | FI\_AUFL\_MAX\_0090 | Max | Opa. Was ist das für eine Maschine. | sehr ruhig |
 | FI\_AUFL\_OPA\_0100 | Opa | Ein … Backofen. Ein selbstgebauter. Mit Dampfdruck und Rührwerk. Modell Konrad. | ganz klein, Goggles rutschen |
-| FI\_AUFL\_MAX\_0110 | Max | Das Drachenei. |  |
+| FI\_AUFL\_MAX\_0110 | Max | Das Drachenei. | Spieler wählt; Ei, Korn und Zelle in freier Reihenfolge |
 | FI\_AUFL\_OPA\_0120 | Opa | Ein Ei. Freiland. |  |
-| FI\_AUFL\_MAX\_0130 | Max | Das Pharaonenkorn. |  |
+| FI\_AUFL\_MAX\_0130 | Max | Das Pharaonenkorn. | Spieler wählt; freie Reihenfolge |
 | FI\_AUFL\_OPA\_0140 | Opa | Mehl. Type 405. Fein wie Staub. Das war wichtig, das mit dem Staub. |  |
-| FI\_AUFL\_MAX\_0150 | Max | Die Ewige Energiezelle. |  |
+| FI\_AUFL\_MAX\_0150 | Max | Die Ewige Energiezelle. | Spieler wählt; freie Reihenfolge |
 | FI\_AUFL\_OPA\_0160 | Opa | Eine Batterie. AA. Für die Fernbedienung. Sie hält ewig, wenn man sie nicht benutzt. |  |
-| FI\_AUFL\_MAX\_0170 | Max | Und die Goldene Fernbedienung ist … |  |
+| FI\_AUFL\_MAX\_0170 | Max | Und die Goldene Fernbedienung ist … | Spieler wählt; erst nach den drei anderen |
 | FI\_AUFL\_OPA\_0180 | Opa | Meine. Die ich seit Wochen suche. Ja. |  |
 | FI\_AUFL\_NAR\_0190 | – | Niemand sagt etwas. Zeldina sieht die Decke an, als prüfe sie Feuchtigkeit. | Pause |
 | FI\_AUFL\_MAX\_0200 | Max | Ich war in vier Welten. Ich habe einen Troll ins Fußbad gestellt, einen Pharao zu einer Entscheidung gebracht … eine KI in den Wahnsinn geredet und einen Fernsehchef vom Sofa geholt. // Für einen Einkaufszettel. |  |

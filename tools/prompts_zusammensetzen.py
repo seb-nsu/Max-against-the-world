@@ -6,6 +6,13 @@ Baustein KONZEPT (docs/grafik/00-stil-und-werkzeuge.md) + Motiv + passender Farb
 Welt + Satz zur Layout-Skizze. Ergebnis: docs/grafik/fertige-prompts/<datei>.md.
 Die Quelle bleiben die Grafik-Dateien; nach Änderungen dort dieses Werkzeug neu laufen lassen.
 
+Außenszenen bekommen den Baustein KONZEPT-AUSSEN. Welche das sind, steht in der Grafik-Datei in
+der Zeile „**Außenszenen** (Baustein KONZEPT-AUSSEN): …“ (Szenennamen wie in der Tabelle, mit
+Semikolon getrennt). Ein Name, den die Tabelle nicht kennt, ist ein Fehler.
+
+Welt 3 und 4 haben noch keine entworfenen Skizzen, nur automatische Raster (Prüfbericht, G4).
+Für sie entfällt der Skizzen-Satz, bis es Handskizzen gibt (Liste OHNE_SKIZZE).
+
 Kein Raten: Passt der Schlüssel einer Szene (Epoche, Ebene, Sender) zu keinem Farb-Baustein,
 bricht das Werkzeug mit einer Meldung ab. Zeilen ohne eigenes Konzeptbild werden ausgelassen:
 Motive, die mit „Keine eigene Grafik“, „Wiederverwendung“ oder einem Figuren-Baustein
@@ -24,6 +31,8 @@ DATEIEN = ["02-prolog-und-finale", "welt-1", "welt-2", "welt-3", "welt-4"]
 SKIZZE_SATZ = ("Use the attached sketch only for the position and size of objects and exits, "
                "not for style, colors or text. Leave the orange marked spots empty.")
 DUESTER = ("Keller", "Kammer", "Thronsaal", "Turm")
+OHNE_SKIZZE = ("welt-3", "welt-4")
+AUSSEN_MARKE = "**Außenszenen** (Baustein KONZEPT-AUSSEN):"
 OHNE_KONZEPTBILD = ("Keine eigene Grafik", "Wiederverwendung", "FIGUR-")
 fehler = []
 
@@ -56,6 +65,8 @@ def farb_bausteine(text):
         werte = {"": textblock_nach(text, "**Farb-Baustein")}
         if "Für den Dunklen Turm stattdessen" in text:
             werte["düster"] = textblock_nach(text, "Für den Dunklen Turm stattdessen")
+        if "Für das Goblin-Bergwerk stattdessen" in text:
+            werte["bergwerk"] = textblock_nach(text, "Für das Goblin-Bergwerk stattdessen")
         return werte
     werte = {}
     for z in tabelle(text, "**Farb-Bausteine"):
@@ -64,11 +75,15 @@ def farb_bausteine(text):
 
 
 def farbe_fuer(werte, schluessel, szene, datei):
+    if "bergwerk" in werte and "bergwerk" in szene.lower():
+        return werte["bergwerk"]
     if "düster" in werte and any(w.lower() in szene.lower() for w in DUESTER):
         return werte["düster"]
     if schluessel in werte:
         return werte[schluessel]
     for k, v in werte.items():
+        if k.endswith(" innen"):
+            continue   # Innen-Fassungen gelten nur, wenn die Szene sie wörtlich nennt
         if schluessel and schluessel != "–" and (schluessel in k or k.startswith(schluessel)):
             return v
     fehler.append(f"{datei}.md, Szene „{szene}“: kein Farb-Baustein für „{schluessel}“ "
@@ -83,6 +98,17 @@ def skizzen(text):
     return dict(re.findall(r"\[([^\]]+)\]\(([^)]+)\)", m.group(1)))
 
 
+def aussenszenen(text, datei, szenen):
+    """Namen der Szenen, die den Baustein KONZEPT-AUSSEN bekommen."""
+    if AUSSEN_MARKE not in text:
+        return set()
+    zeile = text[text.index(AUSSEN_MARKE) + len(AUSSEN_MARKE):].split("\n", 1)[0]
+    namen = {n.strip().rstrip(".") for n in zeile.split(";") if n.strip()}
+    for n in sorted(namen - set(szenen)):
+        fehler.append(f"{datei}.md, Außenszenen: „{n}“ steht nicht in der Tabelle „Szenen“")
+    return namen
+
+
 def skizze_fuer(liste, szene):
     for name, pfad in liste.items():
         n, s = name.lower(), szene.lower()
@@ -91,16 +117,21 @@ def skizze_fuer(liste, szene):
     return None
 
 
-def datei_bauen(name, konzept):
+def datei_bauen(name, konzept, konzept_aussen):
     text = (GRAFIK / f"{name}.md").read_text(encoding="utf-8")
     werte = farb_bausteine(text)
-    liste = skizzen(text)
+    liste = {} if name in OHNE_SKIZZE else skizzen(text)
+    aussen = aussenszenen(text, name, [z[0] for z in tabelle(text, "### Szenen")])
     titel = text.split("\n", 1)[0].lstrip("# ").replace("Grafik: ", "")
     out = [f"# Fertige Konzeptbild-Prompts: {titel}", "",
            f"Erzeugt von `tools/prompts_zusammensetzen.py` aus `../{name}.md` (dort ändern, nicht hier).",
            "Je Szene den Block komplett in ChatGPT oder Gemini kopieren und die Layout-Skizze als Bild",
            "anhängen. Danach Prüfliste und Umwandeln wie in `../00-stil-und-werkzeuge.md` (Ablauf pro Szene).",
            ""]
+    if name in OHNE_SKIZZE:
+        out[3:5] = ["Je Szene den Block komplett in ChatGPT oder Gemini kopieren. Keine Skizze anhängen: Für diese",
+                    "Welt gibt es noch keine entworfenen Skizzen, die automatischen Raster widersprechen dem Motiv.",
+                    "Danach Prüfliste und Umwandeln wie in `../00-stil-und-werkzeuge.md` (Ablauf pro Szene)."]
     for z in tabelle(text, "### Szenen"):
         szene, motiv = z[0], z[-1]
         schluessel = z[1] if len(z) == 5 else ""
@@ -118,16 +149,19 @@ def datei_bauen(name, konzept):
             out.append(f"**Layout-Skizze:** [{sk[0]}](../{sk[1]})")
             out.append("")
         satz = f" {SKIZZE_SATZ}" if sk else ""
-        out += ["```text", f"{konzept} {motiv.rstrip('.')}. {farbe}.{satz}", "```", ""]
+        baustein = konzept_aussen if szene in aussen else konzept
+        out += ["```text", f"{baustein} {motiv.rstrip('.')}. {farbe}.{satz}", "```", ""]
     return "\n".join(out)
 
 
 def main():
     pruefen = "--pruefen" in sys.argv
-    konzept = textblock_nach((GRAFIK / "00-stil-und-werkzeuge.md").read_text(encoding="utf-8"), "**KONZEPT**")
+    stil = (GRAFIK / "00-stil-und-werkzeuge.md").read_text(encoding="utf-8")
+    konzept = textblock_nach(stil, "**KONZEPT**")
+    konzept_aussen = textblock_nach(stil, "**KONZEPT-AUSSEN**")
     veraltet = []
     ZIEL.mkdir(exist_ok=True)
-    gebaut = {name: datei_bauen(name, konzept) for name in DATEIEN}
+    gebaut = {name: datei_bauen(name, konzept, konzept_aussen) for name in DATEIEN}
     if fehler:
         for f in fehler:
             print("FEHLER  " + f)

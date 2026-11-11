@@ -234,7 +234,7 @@ figuren:
     name: Zombie
     kuerzel: ZOM
     raum: friedhof
-    groesse_px: 196                     # sechsmal; im Grab 30
+    groesse_px: 196                     # sechsmal; im Grab siehe grafik/welt-4.md
     spielbar: false
   - id: geist
     name: Geist

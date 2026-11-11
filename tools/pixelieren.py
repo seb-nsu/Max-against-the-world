@@ -6,6 +6,14 @@
 entfernen. Ersetzt Neural Pixelate von Retro Diffusion (docs/grafik/00-stil-und-werkzeuge.md, Ablauf).
 
 Aufruf:  python3 tools/pixelieren.py original.jpg ziel.png [BREITE HOEHE]   (Standard tools/aufloesung.py)
+
+Gemeinsame Raumpalette (vorbereitet, Prüfbericht Fund 29): Statt je Bild 32 eigene Farben zu wählen,
+kann eine feste Palette für mehrere Räume gelten, damit die Bilder eines Abschnitts Farben teilen.
+  python3 tools/pixelieren.py --palette-bestimmen raum.hex [--farben 56] bild1 bild2 …
+      bestimmt aus mehreren Vorlagen (Originale oder fertige Hintergründe) eine gemeinsame Palette
+      und schreibt sie als Textdatei, eine Farbe je Zeile (#rrggbb)
+  python3 tools/pixelieren.py original.jpg ziel.png [BREITE HOEHE] --palette raum.hex
+      rechnet das Bild auf genau diese Palette (jede Farbe auf die nächste in OKLab)
 """
 import sys
 from pathlib import Path
@@ -49,12 +57,14 @@ def oklab(rgb):
     return np.cbrt(c @ M1.T) @ M2.T
 
 
-def farben_32(klein, n=32):
-    """Bild (H×W×3, uint8) auf n eigene Farben bringen (k-Means in OKLab), Streupixel entfernen."""
-    H, W = klein.shape[:2]
-    px = klein.reshape(-1, 3).astype(np.float32)
-    lab = oklab(px) * np.array([1.0, 2.0, 2.0])   # Farbigkeit stärker gewichten, damit kräftige Töne eine eigene Farbe bekommen
-    k0 = np.asarray(Image.fromarray(klein).quantize(n, method=Image.Quantize.MEDIANCUT, dither=Image.Dither.NONE)).ravel()
+GEWICHT = np.array([1.0, 2.0, 2.0])   # Farbigkeit stärker gewichten, damit kräftige Töne eine eigene Farbe bekommen
+
+
+def palette_finden(px, n):
+    """n Farben für die Pixel px (N×3, float32) per k-Means in OKLab; liefert Palette und Zuordnung."""
+    lab = oklab(px) * GEWICHT
+    bild = Image.fromarray(px.astype(np.uint8).reshape(1, -1, 3))
+    k0 = np.asarray(bild.quantize(n, method=Image.Quantize.MEDIANCUT, dither=Image.Dither.NONE)).ravel()
     zent = np.array([lab[k0 == i].mean(0) if (k0 == i).any() else lab[0] for i in range(n)])
     for _ in range(20):
         d = ((lab[:, None, :] - zent[None]) ** 2).sum(-1); z = d.argmin(1)
@@ -62,6 +72,48 @@ def farben_32(klein, n=32):
             s = z == i
             zent[i] = lab[s].mean(0) if s.any() else lab[d.min(1).argmax()]
     pal = np.array([np.median(px[z == i], 0) if (z == i).any() else [0, 0, 0] for i in range(n)]).astype(np.uint8)
+    return pal, z
+
+
+def palette_lesen(pfad):
+    """Palette aus einer Textdatei: eine Farbe je Zeile als #rrggbb; Leerzeilen und Kommentare (;) zählen nicht."""
+    farben = []
+    for zeile in Path(pfad).read_text(encoding="utf-8").splitlines():
+        z = zeile.split(";")[0].strip().lstrip("#")
+        if z:
+            farben.append([int(z[i:i + 2], 16) for i in (0, 2, 4)])
+    if not farben:
+        sys.exit(f"{pfad}: keine Farben gefunden")
+    return np.array(farben, dtype=np.uint8)
+
+
+def palette_bestimmen(ziel, bilder, n=56, W=BREITE, H=HOEHE):
+    """Gemeinsame Palette für mehrere Räume: alle Bilder verkleinern, Pixel mischen, n Farben suchen."""
+    rng = np.random.default_rng(1)   # fester Zufall: gleiche Eingabe, gleiche Palette
+    teile = []
+    for b in bilder:
+        px = verkleinern(b, W, H).reshape(-1, 3)
+        teile.append(px[rng.choice(len(px), min(len(px), 60000), replace=False)])   # je Bild gleich viele Pixel
+    pal, _ = palette_finden(np.concatenate(teile).astype(np.float32), n)
+    pal = pal[np.lexsort((pal[:, 2], pal[:, 1], pal[:, 0]))]
+    pal = np.unique(pal, axis=0)
+    Path(ziel).write_text("".join("#%02x%02x%02x\n" % tuple(c) for c in pal), encoding="utf-8")
+    return pal
+
+
+def farben_32(klein, n=32, palette=None):
+    """Bild (H×W×3, uint8) auf n eigene Farben bringen (k-Means in OKLab), Streupixel entfernen.
+    Mit palette (K×3, uint8) stattdessen auf genau diese Farben rechnen."""
+    H, W = klein.shape[:2]
+    px = klein.reshape(-1, 3).astype(np.float32)
+    if palette is None:
+        pal, z = palette_finden(px, n)
+    else:
+        pal = palette
+        ziel = oklab(pal.astype(np.float32)) * GEWICHT
+        lab = oklab(px) * GEWICHT
+        z = np.concatenate([((lab[i:i + 50000, None, :] - ziel[None]) ** 2).sum(-1).argmin(1)
+                            for i in range(0, len(lab), 50000)])
     idx = z.reshape(H, W).astype(np.uint8)
     # Streupixel: Pixel, dessen vier Nachbarn alle dieselbe andere Farbe haben
     for _ in range(2):
@@ -73,11 +125,24 @@ def farben_32(klein, n=32):
 
 
 def main():
-    if len(sys.argv) not in (3, 5):
+    arg = sys.argv[1:]
+    if arg[:1] == ["--palette-bestimmen"]:
+        n = 56
+        if "--farben" in arg:
+            i = arg.index("--farben"); n = int(arg[i + 1]); del arg[i:i + 2]
+        if len(arg) < 3:
+            sys.exit(__doc__)
+        pal = palette_bestimmen(arg[1], arg[2:], n)
+        print(arg[1], len(pal), "Farben aus", len(arg) - 2, "Bildern")
+        return
+    palette = None
+    if "--palette" in arg:
+        i = arg.index("--palette"); palette = palette_lesen(arg[i + 1]); del arg[i:i + 2]
+    if len(arg) not in (2, 4):
         sys.exit(__doc__)
-    src, out = sys.argv[1], sys.argv[2]
-    W, H = (int(sys.argv[3]), int(sys.argv[4])) if len(sys.argv) == 5 else (BREITE, HOEHE)
-    e = farben_32(verkleinern(src, W, H))
+    src, out = arg[0], arg[1]
+    W, H = (int(arg[2]), int(arg[3])) if len(arg) == 4 else (BREITE, HOEHE)
+    e = farben_32(verkleinern(src, W, H), palette=palette)
     e.save(out)
     print(out, e.size, len(e.getcolors(999)))
 

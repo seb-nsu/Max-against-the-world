@@ -48,7 +48,7 @@ figuren:
     name: Pixel
     kuerzel: PIX
     raum: dachboden
-    groesse_px: 61                   # schlafend 10 hoch, 24 lang
+    groesse_px: 61                   # sitzend; schlafend siehe grafik/02-prolog-und-finale.md
     spielbar: false                  # Figurenwechsel erst ab Welt 1
 
   - id: opa

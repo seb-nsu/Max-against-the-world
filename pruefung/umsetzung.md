@@ -10,8 +10,9 @@ Grundlage: `pruefung/360-pruefung.md` (111 Funde). Auftrag: `pruefung/umsetzung-
 - Paket 4 (Widersprüche): fertig.
 - Paket 5 (Originalwortlaut): fertig.
 - Paket 6 (Humor, Anspielungen, KI-Klang): fertig, ein Commit je Skriptdatei.
-- Pakete 7 bis 9: noch nicht begonnen.
-- Weiter bei: Paket 7, Grafik-Dokumente und Prompts.
+- Paket 7 (Grafik-Dokumente und Prompts): fertig. Bilder sind keine erzeugt, das Offene steht in Abschnitt 4.
+- Pakete 8 und 9: noch nicht begonnen.
+- Weiter bei: Paket 8, Audio-Dokument.
 
 Arbeitsweise nach einer Unterbrechung: Tabelle 1 zeigt je Fund den Status. Vor jedem Commit laufen `python3 tools/pruefen.py`, alle `--pruefen`-Läufe aus `.github/workflows/pruefen.yml` und nach Code-Änderungen die Godot-Tests.
 
@@ -34,7 +35,7 @@ Status: umgesetzt, nicht bestätigt, Entscheidung bitte prüfen, offen für Seba
 | 11 | 3 | Entscheidung, bitte prüfen | Bestätigt. Gewählt ist der kleinere Weg: `docs/raetsel/welt-3.md` verspricht keine Rätsel mehr für „Nacht“ und „Regen“. Die Tabelle der Eingriffe hat eine Spalte „Wofür“ (Gag, Gag, Zweitweg in Rätsel 11, Fehlversuch in Rätsel 7). Am Skript ist nichts geändert. Der andere Weg (kleines Rätsel für Nacht oder Regen) steht auf der Liste für Sebastian. |
 | 12 | 4 | umgesetzt | Bestätigt. Neue Zeile `W1_SMAU_MAX_0645` direkt nach der Ei-Übergabe, nach dem Vorschlag im Bericht („Ich hab das Ei. Ich könnte jetzt gehen. // … Zeldina hat immer noch keine Wohnung.“). `room_abstellkammern.gd` spielt sie nach 0640, `prolog_durchlauf.gd` prüft sie. |
 | 13 | 4 | umgesetzt | Bestätigt. `FI_DACH_OPA_0060` nach dem Vorschlag im Bericht („Viermal zwanzig Minuten. Ich bin selbst überrascht.“). |
-| 14 | 4 | umgesetzt, Bilder offen | Bestätigt. `P0_TREP_MAX_0020`: „Draußen ist bestes Wetter.“ Die beiden Bilder (Wohnzimmer, Treppenhaus) erzeuge ich nicht neu, die Prompts dafür folgen in Paket 7. |
+| 14 | 4 | umgesetzt, Bilder offen | Bestätigt. `P0_TREP_MAX_0020`: „Draußen ist bestes Wetter.“ In `grafik/02-prolog-und-finale.md` stehen für Wohnzimmer und Treppenhaus jetzt die Nachmittags-Prompts aus dem Bericht (G1), mit dem Vermerk, dass die vorhandenen Bilder neu erzeugt werden müssen. Die Bilder selbst erzeuge ich nicht. |
 | 15 | 4 | umgesetzt, eine Zeile nicht bestätigt | Bestätigt für sechs der sieben Zeilen. `W3_KUCH_PIX_0535`, `W3_TURM_PIX_0235`, `W3_KAM1_PIX_0365`, `W3_KERN_PIX_0415`, `W3_INV_PIX_0045`, `W3_INV_PIX_0135` sind auf die Leitung umgeschrieben, die Pointen bleiben. Sprecher wie bei den Nachbarzeilen („aus dem Wandtelefon“, „aus dem Terminal“, „aus dem Lautsprecher“). Ofen, Topfpflanzen und kalte Kekse kommen erst, wenn Pixel auf der Leitung ist (Bedingung im Auslöser). Nicht bestätigt: `W3_INV_PIX_0115` (Gummihuhn) ist eine Erinnerung, Pixel tut dort nichts, die Zeile bleibt. |
 | 16 | 4 | umgesetzt, eine Zeile Entscheidung | Bestätigt. `P0_DACH_MAX_0680` ohne das Wort „Testbild“ (Vorschlag aus Abschnitt C, die Zeitung bleibt). `W4_KELL_MAX_0175` und `W4_KAPI_MAX_0525` gestrichen, `W3_BAS_MAX_0755` ohne den Stecker-Nachsatz (alle drei laut Streichliste in Abschnitt D). Entscheidung, bitte prüfen: `W4_TEST_MAX_0255` bleibt, weil Abschnitt D sie ausdrücklich duldet („schadet nicht“). |
 | 17 | 6 | umgesetzt, Rest bleibt mit Absicht | Bestätigt. Rund 30 Zeilen, in denen Max sich klein macht und die Abschnitt C als „mittel“ oder „zündet nicht“ führt, haben die Alternative des Berichts oder eine eigene im selben Ton (Abschnitt 2, Grund „Max macht sich klein“). Zeilen mit „zündet“ bleiben, auch wenn Max sich dort klein macht. Ob damit überall „höchstens einmal pro Raum“ gilt, habe ich nicht Raum für Raum gezählt (Liste für Sebastian). |
@@ -46,16 +47,16 @@ Status: umgesetzt, nicht bestätigt, Entscheidung bitte prüfen, offen für Seba
 | 23 | 9 | noch nicht bearbeitet |  |
 | 24 | 6 | umgesetzt | Bestätigt. `FI_WOHN_MAX_0400` heißt „Ich geh dann mal. Und niemand sagt jetzt was.“ `FI_SUPM_MAX_0080` endet auf „Zum ersten Mal heute will niemand was von mir.“ (zweite Sprechblase). Nur Pixel sagt noch „Freiwillig“ (`FI_ABSP_PIX_0200`, unverändert). |
 | 25 | 4 | umgesetzt | Bestätigt. `W4_STUD_MAX_0160` nach dem Vorschlag in Abschnitt L: „Ich bin gerade erst aufgestanden. Ich setz mich nicht wieder hin.“ „Freiwillig.“ ist dabei entfallen, wie im Vorschlag. |
-| 26 | 7 | noch nicht bearbeitet |  |
-| 27 | 7 | noch nicht bearbeitet |  |
-| 28 | 7 | noch nicht bearbeitet |  |
-| 29 | 7 | noch nicht bearbeitet |  |
-| 30 | 7 | noch nicht bearbeitet |  |
+| 26 | 7 | umgesetzt (Entscheidung, bitte prüfen) | Bestätigt: Die Auflösung lief ohne Eingabe durch. `game/skripte/finale.gd`: Die Artefakt-Abfrage ist jetzt anklickbar. Der Spieler wählt Lupe, Sneaker und Batterie in freier Reihenfolge (`FI_AUFL_MAX_0110`, `0130`, `0150`), Opa antwortet jeweils, die Fernbedienung (`0170`) kommt als letzte. Kein Wort geändert, nur der Auslöser der vier Zeilen im Skript und die Beschreibung in `raetsel/finale.md`. Neue Prüfung in `game/tests/finale_anspiel.gd` (Reihenfolge nach Wahl). |
+| 27 | 7 | teilweise, Handskizzen offen | Bestätigt: Die 26 Skizzen von Welt 3 und 4 sind automatische Raster. Handskizzen zeichne ich nicht. `tools/prompts_zusammensetzen.py` hängt bei Welt 3 und 4 keinen Skizzen-Link und keinen Skizzen-Satz mehr an den Prompt, `tools/layout_skizzen.py` schreibt über diese Skizzen „automatische Raster, noch keine entworfenen Räume“, `grafik/00-stil-und-werkzeuge.md` nennt die Handskizze als Schritt vor dem Erzeugen. |
+| 28 | 7 | Prompt umgesetzt, Bild offen | Bestätigt. Der Wohnzimmer-Prompt in `grafik/02-prolog-und-finale.md` ist der aus dem Bericht (Nachmittag, Staubrand, Fernseher frontal, Möbelgrößen). Das Bild `w0_bg_wohnzimmer_v01.png` muss Sebastian neu erzeugen. |
+| 29 | 7 | vorbereitet, nicht angewendet | Bestätigt. `tools/pixelieren.py` kann jetzt eine gemeinsame Raumpalette bestimmen (`--palette-bestimmen raum.hex bild…`) und ein Bild darauf rechnen (`--palette raum.hex`). An Kopien getestet: 56 Farben aus drei Bildern, Wohnzimmer und Dachboden teilen danach 44 Farben. Die sechs Bilder im Repo sind nicht umgerechnet, das verändert freigegebene Bilder. Ablauf in `grafik/00-stil-und-werkzeuge.md`. |
+| 30 | 7 | Dokument umgesetzt, Sprites offen | Bestätigt. `grafik/02-prolog-und-finale.md`: Kalenderkreis und Dachlampe stehen als Objekte mit je zwei Zuständen in „Große Objekte mit Zuständen“, der Dachboden-Prompt nennt sie als Sprites, der Sonnenstrahl ist als fester Bildteil benannt. Der gemalte Kreis bleibt im Prompt, weil das freigegebene Bild ihn hat; das Sprite deckt ihn ab. Im Spiel schaltet noch nichts, das kommt mit den Sprites. |
 | 31 | 2 | umgesetzt | Bestätigt. `tools/prompts_zusammensetzen.py`: Kopfzeile der Baustein-Tabelle zählt nicht mehr als Baustein, unbekannter Schlüssel bricht ab statt zu raten, Zeilen ohne eigenes Konzeptbild („Keine eigene Grafik“, „Wiederverwendung“, „FIGUR-…“) fallen weg. In den Grafik-Dateien vier Schlüssel gesetzt: Flusskarte „Ägypten“, Code-Sicht „Simulation“, Rauschen „Testbild und Rauschen“, Kindersendung „Kindersendung 1977“ (neuer Baustein aus dem Bericht in `grafik/welt-4.md`). Kein Prompt endet mehr auf „Baustein.“. Weggefallen sind Bild-in-Bild, Opa vor flackernden Lampen, Opas Sofa und „Max auf der Couch“ (Figuren-Prompt, kein Konzeptbild). |
-| 32 | 7 | noch nicht bearbeitet |  |
-| 33 | 7 | noch nicht bearbeitet |  |
-| 34 | 7 | noch nicht bearbeitet |  |
-| 35 | 7 | noch nicht bearbeitet |  |
+| 32 | 7 | umgesetzt | Bestätigt. Deutsche Arbeitsnotizen aus den Motiven von Welt 3 und 4 in die Spalten „Zustände“ und „Muss sichtbar sein“ verschoben (`grafik/welt-3.md`, `grafik/welt-4.md`), im Prompt steht dafür „labels stay blank, no letters“. Geprüft: In den Prompt-Blöcken von `fertige-prompts/welt-3.md` und `welt-4.md` steht kein deutscher Satz mehr. |
+| 33 | 7 | umgesetzt | Bestätigt. `grafik/00-stil-und-werkzeuge.md`: FIGUR-KLEIN gilt für 29 bis 110 Pixel auf einer Leinwand von 128×128. `grafik/01-max-und-pixel.md` nennt dieselbe Leinwand. |
+| 34 | 7 | umgesetzt | Bestätigt. `grafik/02-prolog-und-finale.md`: Der Deko-Prompt rechnet mit „189-pixel tall adult character“, Omas Größe steht als 189 Pixel im Text. |
+| 35 | 7 | umgesetzt | Bestätigt. Innen-Fassungen der Farb-Bausteine: Welt 1 „Goblin-Bergwerk“, Welt 2 „Ägypten innen“, Welt 3 „Realität innen“ und „Simulation innen“, Welt 4 „Mitternachts-TV innen“. Die Innenräume tragen diese Schlüssel. `tools/prompts_zusammensetzen.py` nimmt „… innen“ nur bei genauem Treffer, damit kein Außenraum versehentlich die Innen-Fassung bekommt. |
 | 36 | 8 | noch nicht bearbeitet |  |
 | 37 | 8 | noch nicht bearbeitet |  |
 | 38 | 8 | noch nicht bearbeitet |  |
@@ -100,16 +101,16 @@ Status: umgesetzt, nicht bestätigt, Entscheidung bitte prüfen, offen für Seba
 | 77 | 6 | umgesetzt | Bestätigt. `FI_DACH_OMA_0220` endet auf „Mach bitte auf.“ Die pünktliche Bahn kommt nur noch in `FI_AUFL_OMA_0420` vor. |
 | 78 | 6 | umgesetzt | Bestätigt. `FI_RAET_OPA_0440` („Strom ohne Auftrag!“) und `FI_AUFL_PIX_0380` („… Ich gehe ans Fenster.“), beides Alternativen aus C. |
 | 79 | 6 | umgesetzt, Entscheidung | Bestätigt. Beide Texte stehen jetzt als neue Zeilen `ZS1_DACH_MAX_0322` und `ZS1_DACH_PIX_0324` am Ei auf der Werkbank, beim dritten Ansehen in Zwischenspiel 1 (`room_dachboden.gd`, Test in `prolog_durchlauf.gd`). Die Reservezeilen `FI_INV_PIX_0015` und `FI_INV_MAX_0025` bleiben mit ihren IDs stehen. |
-| 80 | 7 | noch nicht bearbeitet |  |
+| 80 | 7 | umgesetzt | Bestätigt. `grafik/welt-3.md`, „Nur zum Ansehen“: Der Gabel-Kommentar steht ohne „Es gibt keinen Löffel“. |
 | 81 | 6 | umgesetzt, Entscheidung | Bestätigt. Acht Benutzen-Zeilen im Prolog brechen die Bauform (`P0_WOHN_MAX_0340`, `0345`, `P0_TREP_MAX_0060`, `0065`, `0125`, `P0_DACH_MAX_1675`, `1685`, `1705`). Dreimal ruft Opa dazwischen (neue Zeilen `P0_TREP_OPA_0126`, `P0_DACH_OPA_1676`, `1706`). |
 | 82 | 6 | umgesetzt | Bestätigt. `W4_STUD_MAX_0250` („… Na und? Ich hätte zugeguckt.“) und `FI_WOHN_MAX_0105` („… Opa sucht gerade die Kamera.“) nach den Vorschlägen in E. Weitere glatte Schlusssätze sind mit den C-Zeilen der jeweiligen Welt gekürzt (Abschnitt 2). |
-| 83 | 7 | noch nicht bearbeitet |  |
-| 84 | 7 | noch nicht bearbeitet |  |
-| 85 | 7 | noch nicht bearbeitet |  |
-| 86 | 7 | noch nicht bearbeitet |  |
-| 87 | 7 | noch nicht bearbeitet |  |
-| 88 | 7 | noch nicht bearbeitet |  |
-| 89 | 7 | noch nicht bearbeitet |  |
+| 83 | 7 | offen für Sebastian | Bestätigt: Der Dorfplatz ist der dichteste Raum und der erste von Welt 1. Nicht umgesetzt. Die Dichte kommt von den gemalten Häusern und Durchgängen, nicht von Deko-Sprites. Gestaffeltes Einblenden braucht eigene Sprites und greift in den Rätselfluss ein. Steht auf der Liste. |
+| 84 | 7 | umgesetzt | Bestätigt. Der Dachboden-Prompt in `grafik/02-prolog-und-finale.md` beschreibt jetzt das freigegebene Bild (Lampe, Regal mit Plattenspieler, Toaster und Kochbuch, Liste „Painted into the background“). Der Absatz „Dachboden neu erzeugen“ ist nachgezogen. |
+| 85 | 7 | Prompts umgesetzt, Bilder offen | Bestätigt. Bilder ersetze und beschneide ich nicht. `grafik/01-max-und-pixel.md`: Max' Blatt verlangt den Pulli „clearly darker than his jeans“, Pixels Blatt „the notch visible in every view“ und „plain unmarked forehead“. Der Dachboden-Prompt ist mit Fund 84 nachgezogen. Die Konzeptbilder in `concepts/` muss Sebastian zuschneiden oder neu erzeugen. |
+| 86 | 7 | umgesetzt | Bestätigt. `grafik/welt-4.md`, Kommissar: „a lollipop stick in the corner of his mouth“ statt Zigarre. |
+| 87 | 7 | umgesetzt (Entscheidung, bitte prüfen) | Bestätigt. Quelle für Größen ist die Tabelle in `grafik/00-stil-und-werkzeuge.md` (neuer Absatz „Größen, eine Quelle“). Pixel schlafend 25 hoch und 48 lang, Pixel als Ziege 69, Beamter ohne zweite Stehhöhe, Maschine „about 80 percent of the image height“. Veraltete Pixelzahlen aus den Kommentaren der Welt-Tabellen entfernt (`welten/*.yaml`, die erzeugten Daten bleiben gleich). Entscheidung: Für den schlafenden Pixel gilt 25×48 aus `00`; mit dem Zuschlag von 35 Prozent wären es 34. |
+| 88 | 7 | umgesetzt | Bestätigt. `grafik/00-stil-und-werkzeuge.md`: neuer Baustein KONZEPT-AUSSEN (Text aus dem Bericht), HINTERGRUND heißt „HINTERGRUND (Ersatzweg)“. Jede Grafik-Datei nennt ihre Außenszenen in einer Zeile „Außenszenen“, `tools/prompts_zusammensetzen.py` setzt dort den Außen-Baustein ein (unbekannter Name bricht ab). Entscheidung: Der Supermarkt-Eingang zählt als Außenszene. |
+| 89 | 7 | teilweise | Bestätigt. `tools/layout_skizzen.py`: Legende vollständig (violett für Figuren), Figuren in ihrer Größe aus der Welt-Tabelle mit Namen und Pixelhöhe. Alle 55 Skizzen neu erzeugt, fünf waren veraltet. Nicht geändert: Außenräume sind weiter als Raum gezeichnet, und die Beschriftungen der Platzhalter im Spiel bleiben (laut Bericht reicht das für die Graubox). |
 | 90 | 8 | noch nicht bearbeitet |  |
 | 91 | 9 | noch nicht bearbeitet |  |
 | 92 | 9 | noch nicht bearbeitet |  |
@@ -176,6 +177,10 @@ Fund 2, wenn nichts anderes dasteht: Das Spiel konnte diese Zeilen nicht von ein
 | `W3_TURM_PIX_0235` | Ansehen: Topfpflanzen, zweites Mal | Ansehen: Topfpflanzen, zweites Mal; Pixel auf der Leitung | Fund 15, wie 0535. Sprecher jetzt „Pixel (aus dem Terminal)“. |
 | `W3_INV_PIX_0045` | Ansehen: Omas Kekse, kalt, zweites Mal | Ansehen: Omas Kekse, kalt, zweites Mal; Pixel auf der Leitung | Fund 15, wie 0535 |
 | `ZS3_DACH_PIX_0020` | kommt aus dem Bildschirm, sieht Opa an | kommt aus dem Bildschirm | Fund 55: Pixel zeigt nicht mehr auf Opa. |
+| `FI_AUFL_MAX_0110` | (leer) | Spieler wählt; Ei, Korn und Zelle in freier Reihenfolge | Fund 26: Der Spieler fragt die vier Dinge selbst ab. Wortlaut unverändert. |
+| `FI_AUFL_MAX_0130` | (leer) | Spieler wählt; freie Reihenfolge | Fund 26, wie 0110 |
+| `FI_AUFL_MAX_0150` | (leer) | Spieler wählt; freie Reihenfolge | Fund 26, wie 0110 |
+| `FI_AUFL_MAX_0170` | (leer) | Spieler wählt; erst nach den drei anderen | Fund 26: Die Fernbedienung bleibt die letzte Frage, damit Opas „Meine.“ der Schluss ist. |
 
 ### prolog.md
 
@@ -817,6 +822,10 @@ Hinweise zu den Zahlen:
 - Eigene Fassungen statt der Alternative des Berichts, weil die Alternative etwas behauptet hätte, das es im Spiel nicht gibt: `W2_GRAB_MAX_0140`, `W2_THRO_MAX_0175`, `W3_TERM_MAX_0360`, `W3_INV_MAX_0065`, `W3_SIM_PIX_0920` („Kalle sagt“, weil Pixel in der Simulation nichts sieht), `W4_FERN_MAX_0125` (Opas Fernbedienung statt Lesebrille), `W4_GLUE_MAX_0560`, `W4_RAU_PIX_0100`, `W4_KELL_MAX_0100`, `W4_FABR_MAX_0090`, `ZS3_DACH_MAX_0405`.
 - `W4_GLUE_MAX_0040` bleibt, obwohl Abschnitt E eine Alternative anbietet. Abschnitt C wertet die Zeile als „zündet“.
 - „Drei Prozent“ in Welt 2 fällt noch zwölfmal statt dreizehnmal. Der Rest trägt das Rätsel oder steht in Zeilen mit „zündet“.
+- Fund 26: Die Auflösung im Finale hat jetzt eine Auswahl. Lupe, Sneaker und Batterie in freier Reihenfolge, die Fernbedienung zuletzt. Kein Wort ist geändert.
+- Fund 87: Für den schlafenden Pixel gilt 25 hoch und 48 lang (aus `grafik/00-stil-und-werkzeuge.md`). Mit dem Zuschlag von 35 Prozent wären es 34.
+- Fund 88: Der Supermarkt-Eingang zählt als Außenszene und bekommt den Außen-Baustein.
+- Fund 30: Der gemalte Kalenderkreis bleibt im Dachboden-Prompt, weil das freigegebene Bild ihn hat. Das Sprite deckt ihn in zwei Zuständen ab.
 
 ### Kann Absicht sein, nicht geändert
 
@@ -845,6 +854,17 @@ Nichts davon ist eingebaut. Es sind Vorschläge für den Fall, dass ein Anwalt e
 | Vielsaft-Limo | Vielfrucht-Limo | Bericht, Abschnitt M |
 | Jahrgang Schicksalsberg | Jahrgang Schicksalshügel | Bericht, Abschnitt M |
 | Morphaeus (englisch) | folgt dem deutschen Namen | Fund 44 |
+
+### Offen, weil es Bilder oder Handarbeit braucht
+
+- Fund 14 und 28: Wohnzimmer und Treppenhaus neu erzeugen. Die Prompts stehen in `grafik/02-prolog-und-finale.md`.
+- Fund 27: Handskizzen für die 26 Räume von Welt 3 und 4. Bis dahin verweisen die Prompts dort auf keine Skizze.
+- Fund 29: Gemeinsame Palette anwenden. Ablauf: `python3 tools/pixelieren.py --palette-bestimmen raum.hex bild…`, dann jedes Bild mit `--palette raum.hex` neu rechnen. Das verändert die sechs freigegebenen Bilder, deshalb habe ich es nicht getan.
+- Fund 30: Sprites für Kalenderkreis und Dachlampe zeichnen und im Spiel schalten. Im freigegebenen Bild brennt die Lampe noch.
+- Fund 83: Dorfplatz entzerren. Die Dichte kommt von gemalten Häusern, gestaffeltes Einblenden braucht eigene Sprites.
+- Fund 85: Konzeptbilder in `concepts/` zuschneiden oder neu erzeugen (Max mit Bedienelementen, Pixel ohne Kerbe, alter Dachboden).
+- Fund 89: Außenräume sind in den Skizzen weiter als Raum gezeichnet.
+- Ohne Fund, nicht geändert: Klassenzimmer und Turmkeller bekommen keinen Skizzen-Link, weil die Namen in Grafik-Datei und Welt-Tabelle verschieden sind. Die Flusskarte bekommt den Raum-Baustein, obwohl sie eine Karte ist.
 
 ### Offen laut Bericht
 

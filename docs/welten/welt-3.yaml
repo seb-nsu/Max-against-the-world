@@ -115,7 +115,7 @@ figuren:
     name: Max
     kuerzel: MAX
     raum: [unterstadt_strasse, apothekengasse, widerstandsbasis, laboreingang, stadtstrasse, kueche_orakel, buero_50, testkammer_1, testkammer_2, testkammer_3, kern]
-    groesse_px: 189   # Sonderformen: Max als Ente 30, Max in der Kapsel 70 breit
+    groesse_px: 189   # Sonderformen Max als Ente und Max in der Kapsel in grafik/welt-3.md
     spielbar: true
   - id: pixel
     name: Pixel

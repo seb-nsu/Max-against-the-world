@@ -16,6 +16,12 @@ Für den Dunklen Turm stattdessen:
 dusky fairy tale palette of violet, slate grey and pale green, flickering torch light, comically gloomy
 ```
 
+Für das Goblin-Bergwerk stattdessen:
+
+```text
+dim torch-lit mine palette of earthy browns and mossy greens with small warm gold highlights, friendly rather than scary
+```
+
 **Orte:**
 
 | Ort | Beschreibung | Rätsel |
@@ -41,7 +47,7 @@ dusky fairy tale palette of violet, slate grey and pale green, flickering torch 
 
 ## Prompts
 
-Vorne den Baustein aus `00-stil-und-werkzeuge.md`, dann das Motiv, hinten den Farb-Baustein dieser Welt (für den Dunklen Turm den düsteren).
+Vorne den Baustein aus `00-stil-und-werkzeuge.md`, dann das Motiv, hinten den Farb-Baustein dieser Welt (für den Dunklen Turm den düsteren, für das Goblin-Bergwerk den eigenen).
 
 ### Szenen
 
@@ -49,7 +55,11 @@ Vorne den Baustein aus `00-stil-und-werkzeuge.md`, dann das Motiv, hinten den Fa
 **Layout-Skizzen** (beim Konzeptbild mitgeben, Ablauf in `00-stil-und-werkzeuge.md`): [Dorfplatz Unterbrösel](skizzen/welt-1/dorfplatz.png), [Taverne](skizzen/welt-1/taverne.png), [Schmiede](skizzen/welt-1/schmiede.png), [Zauberstab-Laden](skizzen/welt-1/zauberstabladen.png), [Hoggelwarz](skizzen/welt-1/klassenzimmer.png), [Troll-Brücke](skizzen/welt-1/trollbruecke.png), [Wasserschloss](skizzen/welt-1/wasserschloss.png), [Zauberwald](skizzen/welt-1/zauberwald.png), [Luftschloss](skizzen/welt-1/luftschloss.png), [Goblin-Bergwerk](skizzen/welt-1/bergwerk.png), [Dunkler Turm](skizzen/welt-1/turmkeller.png), [Abstellkammer 1](skizzen/welt-1/abstellkammer_1.png), [Smaugis Abstellkammern](skizzen/welt-1/abstellkammern.png), [Thronsaal](skizzen/welt-1/thronsaal.png).
 <!-- /skizzen -->
 
-Alle mit dem Baustein HINTERGRUND, 640×360, wenn nicht anders angegeben; Keller, Kammern und Thronsaal des Dunklen Turms mit dem düsteren Farb-Baustein. Jedes Motiv nennt links, Mitte und rechts in Bildrichtung, die Ausgänge am Bildrand und hält das Bodenband im unteren Drittel frei. Figuren und Deko-Objekte aus dem Sammelbild „Deko Welt 1“ kommen als eigene Sprites darüber; die Motive lassen dafür Platz. Gegenstände, die der Spieler mitnimmt, stehen im Motiv, damit Licht und Maßstab stimmen; sie werden in Aseprite ausgeschnitten, als eigenes Sprite gespeichert und im Hintergrund übermalt. Die Spalte „Muss sichtbar sein“ nennt beides. Deutsche Anmerkungen gehören nicht in den Prompt.
+Standardweg: Konzeptbild mit dem Baustein KONZEPT in Gemini, danach `tools/pixelieren.py` auf 640×360, wenn nicht anders angegeben; die fertig zusammengesetzten Prompts stehen in `fertige-prompts/`. Der Baustein HINTERGRUND ist nur der Ersatzweg über Retro Diffusion. Keller, Kammern und Thronsaal des Dunklen Turms mit dem düsteren Farb-Baustein, das Goblin-Bergwerk mit dem eigenen.
+
+**Außenszenen** (Baustein KONZEPT-AUSSEN): Dorfplatz; Troll-Brücke; Zauberwald; Luftschloss; Wasserschloss (Gag-Szene).
+
+Zu den Motiven: Jedes Motiv nennt links, Mitte und rechts in Bildrichtung, die Ausgänge am Bildrand und hält das Bodenband im unteren Drittel frei. Figuren und Deko-Objekte aus dem Sammelbild „Deko Welt 1“ kommen als eigene Sprites darüber; die Motive lassen dafür Platz. Gegenstände, die der Spieler mitnimmt, stehen im Motiv, damit Licht und Maßstab stimmen; sie werden in Aseprite ausgeschnitten, als eigenes Sprite gespeichert und im Hintergrund übermalt. Die Spalte „Muss sichtbar sein“ nennt beides. Deutsche Anmerkungen gehören nicht in den Prompt.
 
 | Szene | Zustände | Muss sichtbar sein | Motiv |
 | --- | --- | --- | --- |
@@ -93,7 +103,7 @@ Jede Figur als Referenzbild: genau eine Figur, ruhige Seitenansicht nach rechts,
 | Taverne-Huhn | FIGUR-KLEIN, 47 Pixel | A plump brown hen, about 47 pixels tall, small red comb, sitting in a small straw basket, one eye half closed, facing right, suspicious look |
 | Schmiede-Ziege | FIGUR-KLEIN, 93 Pixel | A small white goat, about 93 pixels tall, short horns, a small brass bell on a red string, a sword blade sticking out of its chewing mouth. Standing on all fours, facing right, calm chewing look |
 | XXL-Ziege | FIGUR-GROSS, 236 Pixel | A huge shaggy brown goat, about 236 pixels tall, as tall as a man, big curled horns. A blank brown paper delivery label tied around its neck with string. Standing on all fours, facing right, bored expression |
-| Pixel als Ziege | FIGUR-KLEIN, 69 Pixel | Pixel, a chubby round tomcat about 61 pixels tall when sitting, short legs, light silver-grey fur (#c0cbdc) with three darker blue-grey stripes on his back (#5a6988), white chest and white paws, a very fluffy tail, a notch torn out of his left ear, smug half-closed amber eyes (#feae34), pink nose, a red collar (#e43b44) with a small round silver speaker and a clearly visible two-pixel turquoise light (#2ce8f5), not orange, no tabby markings on the face. About 51 pixels tall in costume: a fluffy white goat skin rug draped over his back, two small fake horns tied on his head, red collar still visible. Standing on all fours, facing right, deeply offended look |
+| Pixel als Ziege | FIGUR-KLEIN, 69 Pixel | Pixel, a chubby round tomcat about 61 pixels tall when sitting, short legs, light silver-grey fur (#c0cbdc) with three darker blue-grey stripes on his back (#5a6988), white chest and white paws, a very fluffy tail, a notch torn out of his left ear, smug half-closed amber eyes (#feae34), pink nose, a red collar (#e43b44) with a small round silver speaker and a clearly visible two-pixel turquoise light (#2ce8f5), not orange, no tabby markings on the face. About 69 pixels tall in costume: a fluffy white goat skin rug draped over his back, two small fake horns tied on his head, red collar still visible. Standing on all fours, facing right, deeply offended look |
 | Max als Pilz | FIGUR | Max, a lanky 16-year-old boy with a slight slouch, messy shaggy dark brown hair (#733e39) with strands falling over his forehead and eyes, sleepy half-closed eyes, lopsided smirk, a few freckles, oversized dark slate blue-grey hoodie (#3a4466) with sleeves over his hands, uneven drawstrings and a tiny retro TV with a turquoise screen (#2ce8f5) on the chest, dark blue jeans (#124e89) slightly too long, worn red sneakers (#e43b44) with white soles, one lace untied, hands in his hoodie pocket. About 189 pixels tall, his hair replaced by a big round plain brown mushroom cap, confused eyes peeking out under its rim. Standing upright, facing right. No spots on the cap |
 | Zauberbesen | FIGUR-KLEIN, 101 Pixel | An enchanted straw broom, about 101 pixels tall, birch handle tied to the bristles with brown cord, two thin stick arms and an angry face on the binding. Standing upright on its bristles, facing right |
 | Übungsbesen | FIGUR-KLEIN, 74 Pixel | A small enchanted practice broom, about 74 pixels tall, short birch handle, pale straw bristles tied with a red cord, two thin stick arms and a small wide-eyed face on the binding. Standing upright on its bristles, facing right, twitching eagerly |

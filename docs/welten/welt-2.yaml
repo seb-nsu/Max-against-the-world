@@ -144,7 +144,7 @@ figuren:
     name: Opa
     kuerzel: OPA
     raum: [nil_delta]
-    groesse_px: 0                              # nur Stimme, Max liest Opas Papyrus vor (Figur 60 px im Prolog)
+    groesse_px: 0                              # nur Stimme, Max liest Opas Papyrus vor
     spielbar: false
   - id: faehrmann
     name: Fährmann
@@ -156,7 +156,7 @@ figuren:
     name: Sobek
     kuerzel: SOB
     raum: [nil_delta, thronsaal_ramses]
-    groesse_px: 54                             # im Wasser 16 px hoch; an Land 70 px lang
+    groesse_px: 54                             # im Wasser; an Land siehe grafik/welt-2.md
     spielbar: false
   - id: steinmetz
     name: Steinmetz
@@ -270,7 +270,7 @@ figuren:
     name: Beamter 1
     kuerzel: BE1
     raum: [startbuero]
-    groesse_px: 147                             # sitzend, stehend 58
+    groesse_px: 147                             # sitzend
     spielbar: false
   - id: beamter_2
     name: Beamter 2

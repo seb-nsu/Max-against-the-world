@@ -168,7 +168,7 @@ figuren:
     name: Pixel
     kuerzel: PIX
     raum: [dorfplatz, taverne, schmiede, zauberstabladen, klassenzimmer, trollbruecke, wasserschloss, zauberwald, luftschloss, bergwerk, turmkeller, abstellkammer_1, abstellkammern, thronsaal]
-    groesse_px: 61             # sitzend; Variante „Pixel als Ziege“ 20 px; spielbar ab R1a
+    groesse_px: 61             # sitzend; Variante „Pixel als Ziege“ in grafik/welt-1.md; spielbar ab R1a
     spielbar: true
 
   - id: opa
