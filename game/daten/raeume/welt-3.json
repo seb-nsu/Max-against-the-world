@@ -1134,6 +1134,7 @@
        "blasen": [
         "W3_BAS_PIX_1060"
        ],
+       "mal": 2,
        "figur": "PIX"
       }
      ]
@@ -1627,6 +1628,12 @@
        "blasen": [
         "W3_BAS_PIX_1110"
        ],
+       "bedingung": [
+        {
+         "art": "vor",
+         "raetsel": "R13"
+        }
+       ],
        "figur": "PIX"
       }
      ]
@@ -1668,7 +1675,7 @@
         "W3_BAS_PIX_0830",
         "W3_BAS_PIX_0830_2"
        ],
-       "mal": 2
+       "mal": 3
       },
       {
        "zeile": "W3_BAS_PIX_1140",
@@ -1967,7 +1974,8 @@
        "sprecher": "MAX",
        "blasen": [
         "W3_EING_MAX_0310"
-       ]
+       ],
+       "bedingung_text": "zu"
       },
       {
        "zeile": "W3_EING_MAX_0315",
@@ -1975,6 +1983,7 @@
        "blasen": [
         "W3_EING_MAX_0315"
        ],
+       "bedingung_text": "zu",
        "mal": 2
       },
       {
@@ -1982,7 +1991,8 @@
        "sprecher": "MAX",
        "blasen": [
         "W3_EING_MAX_0370"
-       ]
+       ],
+       "bedingung_text": "Datenanschlüsse, Panzertür offen"
       },
       {
        "zeile": "W3_EING_MAX_0375",
@@ -1990,6 +2000,7 @@
        "blasen": [
         "W3_EING_MAX_0375"
        ],
+       "bedingung_text": "Datenanschlüsse, Panzertür offen",
        "mal": 2
       },
       {
@@ -2195,7 +2206,8 @@
        "sprecher": "MAX",
        "blasen": [
         "W3_EING_MAX_0470"
-       ]
+       ],
+       "mal": 3
       },
       {
        "zeile": "W3_EING_PIX_1040",
@@ -2323,6 +2335,12 @@
        "sprecher": "MAX",
        "blasen": [
         "W3_EING_MAX_0510"
+       ],
+       "bedingung": [
+        {
+         "art": "nach",
+         "raetsel": "R8"
+        }
        ]
       },
       {
@@ -2330,6 +2348,12 @@
        "sprecher": "MAX",
        "blasen": [
         "W3_EING_MAX_0515"
+       ],
+       "bedingung": [
+        {
+         "art": "nach",
+         "raetsel": "R8"
+        }
        ],
        "mal": 2
       }
@@ -2635,14 +2659,6 @@
        ],
        "bedingung_text": "bevor sie klingelt",
        "mal": 2
-      },
-      {
-       "zeile": "W3_SIM_MAX_0220",
-       "sprecher": "MAX",
-       "blasen": [
-        "W3_SIM_MAX_0220"
-       ],
-       "bedingung_text": "sie klingelt"
       }
      ],
      "benutzen": [
@@ -2651,7 +2667,9 @@
        "sprecher": "MAX",
        "blasen": [
         "W3_SIM_MAX_0240"
-       ]
+       ],
+       "bedingung_text": "vor dem Abheben",
+       "mal": 2
       }
      ]
     },
@@ -2669,7 +2687,15 @@
       893,
       313
      ],
-     "ansehen": [],
+     "ansehen": [
+      {
+       "zeile": "W3_SIM_MAX_0220",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_SIM_MAX_0220"
+       ]
+      }
+     ],
      "benutzen": [
       {
        "zeile": "W3_SIM_MAX_0230",
@@ -2788,7 +2814,6 @@
        "blasen": [
         "W3_SIM_ORA_0290"
        ],
-       "bedingung_text": "erstes Mal",
        "folge": [
         {
          "zeile": "W3_SIM_MAX_0300",
@@ -3075,7 +3100,8 @@
         "W3_KUCH_PIX_0570",
         "W3_KUCH_PIX_0570_2"
        ],
-       "bedingung_text": "Pixel auf der Leitung"
+       "bedingung_text": "Pixel auf der Leitung",
+       "mal": 3
       }
      ]
     },
@@ -3765,7 +3791,8 @@
        "sprecher": "MAX",
        "blasen": [
         "W3_TURM_MAX_0390"
-       ]
+       ],
+       "bedingung_text": "nach dem Tausch"
       }
      ],
      "gegenstand_auf": [
@@ -3775,6 +3802,7 @@
        "blasen": [
         "W3_TURM_MAX_0550"
        ],
+       "bedingung_text": "vor dem Tausch",
        "gegenstand": "kaffeetasse"
       }
      ]
@@ -4124,7 +4152,8 @@
        "sprecher": "MAX",
        "blasen": [
         "W3_KAM1_MAX_0320"
-       ]
+       ],
+       "bedingung_text": "vor dem Tausch"
       },
       {
        "zeile": "W3_KAM1_MAX_0340",
@@ -4132,6 +4161,7 @@
        "blasen": [
         "W3_KAM1_MAX_0340"
        ],
+       "bedingung_text": "vor dem Tausch",
        "folge": [
         {
          "zeile": "W3_KAM1_MUT_0350",
@@ -4148,7 +4178,7 @@
        "blasen": [
         "W3_KAM1_NAR_0460"
        ],
-       "bedingung_text": "Animation Bernd beleidigt, Jingle"
+       "bedingung_text": "nach dem Tausch, Animation Bernd beleidigt, Jingle"
       }
      ]
     },
@@ -4297,7 +4327,8 @@
        "sprecher": "MAX",
        "blasen": [
         "W3_KAM1_MAX_0420"
-       ]
+       ],
+       "bedingung_text": "nach dem Portal"
       },
       {
        "zeile": "W3_KAM1_MAX_0425",
@@ -4305,6 +4336,7 @@
        "blasen": [
         "W3_KAM1_MAX_0425"
        ],
+       "bedingung_text": "nach dem Portal",
        "mal": 2
       }
      ]
@@ -4334,7 +4366,8 @@
        "sprecher": "MAX",
        "blasen": [
         "W3_KAM1_MAX_0390"
-       ]
+       ],
+       "bedingung_text": "zu"
       },
       {
        "zeile": "W3_KAM1_MAX_0395",
@@ -4342,6 +4375,7 @@
        "blasen": [
         "W3_KAM1_MAX_0395"
        ],
+       "bedingung_text": "zu",
        "mal": 2
       }
      ]
@@ -4455,6 +4489,7 @@
        "blasen": [
         "W3_KAM2_MAX_0030"
        ],
+       "bedingung_text": "vor dem Tausch",
        "folge": [
         {
          "zeile": "W3_KAM2_MUT_0040",
@@ -4471,14 +4506,15 @@
        "blasen": [
         "W3_KAM2_MAX_0100"
        ],
-       "bedingung_text": "Jingle"
+       "bedingung_text": "nach dem Tausch, Jingle"
       },
       {
        "zeile": "W3_KAM2_MAX_0240",
        "sprecher": "MAX",
        "blasen": [
         "W3_KAM2_MAX_0240"
-       ]
+       ],
+       "bedingung_text": "vor Kammer 3"
       }
      ],
      "gegenstand_auf": [
@@ -4553,7 +4589,8 @@
        "sprecher": "MAX",
        "blasen": [
         "W3_KAM2_MAX_0180"
-       ]
+       ],
+       "bedingung_text": "leer"
       },
       {
        "zeile": "W3_KAM2_MAX_0185",
@@ -4561,6 +4598,7 @@
        "blasen": [
         "W3_KAM2_MAX_0185"
        ],
+       "bedingung_text": "leer",
        "mal": 2
       }
      ]
@@ -4811,7 +4849,8 @@
        "sprecher": "MAX",
        "blasen": [
         "W3_KAM3_MAX_0050"
-       ]
+       ],
+       "bedingung_text": "zu"
       },
       {
        "zeile": "W3_KAM3_MAX_0055",
@@ -4819,6 +4858,7 @@
        "blasen": [
         "W3_KAM3_MAX_0055"
        ],
+       "bedingung_text": "zu",
        "mal": 2
       }
      ]
@@ -4927,7 +4967,8 @@
        "sprecher": "MAX",
        "blasen": [
         "W3_KERN_MAX_0560"
-       ]
+       ],
+       "bedingung_text": "leer"
       },
       {
        "zeile": "W3_KERN_MAX_0565",
@@ -4935,6 +4976,7 @@
        "blasen": [
         "W3_KERN_MAX_0565"
        ],
+       "bedingung_text": "leer",
        "mal": 2
       }
      ]
@@ -4995,7 +5037,8 @@
        "sprecher": "MAX",
        "blasen": [
         "W3_KERN_MAX_0410"
-       ]
+       ],
+       "bedingung_text": "glühend"
       },
       {
        "zeile": "W3_KERN_PIX_0415",
@@ -5004,6 +5047,7 @@
         "W3_KERN_PIX_0415",
         "W3_KERN_PIX_0415_2"
        ],
+       "bedingung_text": "glühend",
        "mal": 2
       }
      ],
@@ -5021,7 +5065,8 @@
        "sprecher": "MAX",
        "blasen": [
         "W3_KERN_MAX_0420"
-       ]
+       ],
+       "bedingung_text": "heiß"
       }
      ]
     }
@@ -5680,6 +5725,12 @@
      "blasen": [
       "W3_PIEP_MAX_0230"
      ],
+     "bedingung": [
+      {
+       "art": "nach",
+       "raetsel": "R13"
+      }
+     ],
      "raum": "widerstandsbasis"
     },
     {
@@ -5687,6 +5738,12 @@
      "sprecher": "MAX",
      "blasen": [
       "W3_PIEP_MAX_0235"
+     ],
+     "bedingung": [
+      {
+       "art": "nach",
+       "raetsel": "R13"
+      }
      ],
      "mal": 2,
      "raum": "widerstandsbasis"
@@ -5769,6 +5826,13 @@
      "blasen": [
       "W3_EING_MAX_0520"
      ],
+     "bedingung": [
+      {
+       "art": "vor",
+       "raetsel": "R8"
+      }
+     ],
+     "bedingung_text": "mit Olivenöl",
      "raum": "laboreingang"
     },
     {
@@ -5778,6 +5842,13 @@
       "W3_EING_PIX_0525",
       "W3_EING_PIX_0525_2"
      ],
+     "bedingung": [
+      {
+       "art": "vor",
+       "raetsel": "R8"
+      }
+     ],
+     "bedingung_text": "mit Olivenöl",
      "mal": 2,
      "raum": "laboreingang"
     }
@@ -5977,6 +6048,7 @@
      "blasen": [
       "W3_TUER_MAX_0320"
      ],
+     "bedingung_text": "nach dem Tausch",
      "raum": "stadtstrasse"
     },
     {
@@ -5985,6 +6057,7 @@
      "blasen": [
       "W3_TUER_MAX_0325"
      ],
+     "bedingung_text": "nach dem Tausch",
      "mal": 2,
      "raum": "stadtstrasse"
     }
@@ -6067,6 +6140,7 @@
      "blasen": [
       "W3_KAM3_MAX_0060"
      ],
+     "bedingung_text": "vor den Tauschen",
      "raum": "testkammer_3"
     },
     {
@@ -6075,6 +6149,7 @@
      "blasen": [
       "W3_KAM3_TUR_0170"
      ],
+     "bedingung_text": "nach beiden Tauschen",
      "raum": "testkammer_3"
     }
    ]
@@ -6099,6 +6174,7 @@
      "blasen": [
       "W3_SIM_MAX_0160"
      ],
+     "bedingung_text": "erster Durchlauf",
      "raum": "stadtstrasse"
     },
     {
@@ -6107,6 +6183,8 @@
      "blasen": [
       "W3_SIM_MAX_0170"
      ],
+     "bedingung_text": "zweiter Durchlauf",
+     "mal": 2,
      "raum": "stadtstrasse"
     },
     {
@@ -6117,6 +6195,7 @@
       "W3_SIM_PIX_0180_2"
      ],
      "bedingung_text": "Pixel auf der Leitung",
+     "mal": 3,
      "raum": "stadtstrasse"
     },
     {
@@ -6126,6 +6205,7 @@
       "W3_SIM_PIX_0190"
      ],
      "bedingung_text": "Pixel auf der Leitung",
+     "mal": 4,
      "raum": "stadtstrasse"
     }
    ],
@@ -6166,6 +6246,7 @@
      "blasen": [
       "W3_KERN_MAX_0540"
      ],
+     "bedingung_text": "nach dem Herunterfahren",
      "raum": "kern"
     },
     {
@@ -6174,6 +6255,7 @@
      "blasen": [
       "W3_KERN_MAX_0545"
      ],
+     "bedingung_text": "nach dem Herunterfahren",
      "mal": 2,
      "raum": "kern"
     }
@@ -6188,7 +6270,7 @@
      "blasen": [
       "W3_KERN_MUT_0610"
      ],
-     "bedingung_text": "letztes Zucken, dann Stille",
+     "bedingung_text": "nach dem Herunterfahren, letztes Zucken, dann Stille",
      "raum": "kern"
     }
    ]
@@ -6482,7 +6564,8 @@
      "sprecher": "MAX",
      "blasen": [
       "W3_KUCH_MAX_0750"
-     ]
+     ],
+     "bedingung_text": "Simulation"
     },
     {
      "zeile": "W3_KUCH_MAX_0755",
@@ -6490,6 +6573,7 @@
      "blasen": [
       "W3_KUCH_MAX_0755"
      ],
+     "bedingung_text": "Simulation",
      "mal": 2
     },
     {
@@ -6498,6 +6582,7 @@
      "blasen": [
       "W3_BAS_MAX_0900"
      ],
+     "bedingung_text": "Realität",
      "zustand": "glueckskeks"
     },
     {
@@ -6569,7 +6654,8 @@
      "sprecher": "MAX",
      "blasen": [
       "W3_TERM_MAX_0360"
-     ]
+     ],
+     "bedingung_text": "Realität"
     },
     {
      "zeile": "W3_TERM_MAX_0365",
@@ -6577,6 +6663,7 @@
      "blasen": [
       "W3_TERM_MAX_0365"
      ],
+     "bedingung_text": "Realität",
      "mal": 2
     },
     {
@@ -6584,7 +6671,8 @@
      "sprecher": "MAX",
      "blasen": [
       "W3_INV_MAX_0060"
-     ]
+     ],
+     "bedingung_text": "Simulation"
     },
     {
      "zeile": "W3_INV_MAX_0065",
@@ -6592,6 +6680,7 @@
      "blasen": [
       "W3_INV_MAX_0065"
      ],
+     "bedingung_text": "Simulation",
      "mal": 2
     }
    ],
@@ -6618,7 +6707,8 @@
      "sprecher": "MAX",
      "blasen": [
       "W3_TERM_MAX_0350"
-     ]
+     ],
+     "bedingung_text": "Realität"
     },
     {
      "zeile": "W3_TERM_MAX_0355",
@@ -6626,6 +6716,7 @@
      "blasen": [
       "W3_TERM_MAX_0355"
      ],
+     "bedingung_text": "Realität",
      "mal": 2
     },
     {
@@ -6731,7 +6822,8 @@
      "sprecher": "MAX",
      "blasen": [
       "W3_BAS_MAX_0890"
-     ]
+     ],
+     "bedingung_text": "Realität"
     },
     {
      "zeile": "W3_BAS_MAX_0895",
@@ -6739,6 +6831,7 @@
      "blasen": [
       "W3_BAS_MAX_0895"
      ],
+     "bedingung_text": "Realität",
      "mal": 2
     },
     {
@@ -6815,7 +6908,8 @@
      "sprecher": "MAX",
      "blasen": [
       "W3_KAM2_MAX_0110"
-     ]
+     ],
+     "zustand": "toedlich"
     },
     {
      "zeile": "W3_KAM2_MAX_0115",
@@ -6823,14 +6917,16 @@
      "blasen": [
       "W3_KAM2_MAX_0115"
      ],
-     "mal": 2
+     "mal": 2,
+     "zustand": "toedlich"
     },
     {
      "zeile": "W3_KAM3_MAX_0290",
      "sprecher": "MAX",
      "blasen": [
       "W3_KAM3_MAX_0290"
-     ]
+     ],
+     "bedingung_text": "nach dem zweiten Tausch"
     },
     {
      "zeile": "W3_KAM3_MAX_0295",
@@ -6838,6 +6934,7 @@
      "blasen": [
       "W3_KAM3_MAX_0295"
      ],
+     "bedingung_text": "nach dem zweiten Tausch",
      "mal": 2
     },
     {
@@ -6882,7 +6979,8 @@
      "sprecher": "MAX",
      "blasen": [
       "W3_ENDE_MAX_0040"
-     ]
+     ],
+     "bedingung_text": "Realität"
     },
     {
      "zeile": "W3_ENDE_MAX_0045",
@@ -6890,6 +6988,7 @@
      "blasen": [
       "W3_ENDE_MAX_0045"
      ],
+     "bedingung_text": "Realität",
      "mal": 2
     },
     {
@@ -6933,6 +7032,7 @@
      "blasen": [
       "W3_BAS_PIX_1170"
      ],
+     "bedingung_text": "Realität",
      "figur": "PIX"
     }
    ],

@@ -25,7 +25,8 @@ var spielzeit := 0.0
 var besucht: Array = []
 ## Geöffnete Nahansichten (für Notizbuch und Errungenschaft „Neugier“)
 var nahansichten: Array = []
-## Hilfe-Pfote: erreichte Stufe und Spielzeit des letzten Hinweises je Schritt
+## Hilfe-Pfote: erreichte Stufe und Spielzeit des letzten Hinweises je Schritt, Schlüssel
+## „<abschnitt>/<schritt>“ (Hinweise.schluessel)
 var hinweis_stufe := {}
 var hinweis_zeit := {}
 ## Stufe-3-Hinweise je Abschnitt (Errungenschaften „Ohne Pfote“)
@@ -236,10 +237,16 @@ func laden(d: Dictionary) -> void:
 	angesehen = {}
 	for k in d.get("angesehen", {}):
 		angesehen[k] = int(d.angesehen[k])
+	# Alte Spielstände führten die Stufen nur je Rätselnummer („R5“). Solche Einträge lassen sich
+	# keiner Welt mehr zuordnen und verfallen: Die Pfote beginnt dort wieder bei Stufe 1.
 	hinweis_stufe = {}
 	for k in d.get("hinweis_stufe", {}):
-		hinweis_stufe[k] = int(d.hinweis_stufe[k])  # JSON liefert float
-	hinweis_zeit = d.get("hinweis_zeit", {}).duplicate()
+		if "/" in str(k):
+			hinweis_stufe[k] = int(d.hinweis_stufe[k])  # JSON liefert float
+	hinweis_zeit = {}
+	for k in d.get("hinweis_zeit", {}):
+		if "/" in str(k):
+			hinweis_zeit[k] = float(d.hinweis_zeit[k])
 	stufe3_zaehler = {}
 	for k in d.get("stufe3_zaehler", {}):
 		stufe3_zaehler[k] = int(d.stufe3_zaehler[k])

@@ -54,8 +54,14 @@ func schritt_waehlen() -> String:
 	return offen[0]
 
 
-func stufe(schritt: String) -> int:
-	return int(Zustand.hinweis_stufe.get(schritt, 0))
+## Stufe und Zeit hängen am Schritt des Abschnitts („welt-2/R5“): Die Rätselnummern wiederholen
+## sich von Welt zu Welt, eine Stufe 3 bei R5 in Welt 1 darf in Welt 2 nichts verraten.
+func schluessel(schritt: String, ab := "") -> String:
+	return "%s/%s" % [ab if ab else Zustand.abschnitt, schritt]
+
+
+func stufe(schritt: String, ab := "") -> int:
+	return int(Zustand.hinweis_stufe.get(schluessel(schritt, ab), 0))
 
 
 func naechste_stufe_bereit(schritt: String) -> bool:
@@ -66,7 +72,7 @@ func naechste_stufe_bereit(schritt: String) -> bool:
 		return false
 	if s == 0:
 		return true
-	var seit: float = Zustand.spielzeit - float(Zustand.hinweis_zeit.get(schritt, 0.0))
+	var seit: float = Zustand.spielzeit - float(Zustand.hinweis_zeit.get(schluessel(schritt), 0.0))
 	return seit >= wartezeit[s + 1]
 
 
@@ -88,8 +94,8 @@ func naechste_zeilen(schritt: String, mit_wartezeile := true) -> Array:
 	var s := stufe(schritt)
 	if naechste_stufe_bereit(schritt):
 		s += 1
-		Zustand.hinweis_stufe[schritt] = s
-		Zustand.hinweis_zeit[schritt] = Zustand.spielzeit
+		Zustand.hinweis_stufe[schluessel(schritt)] = s
+		Zustand.hinweis_zeit[schluessel(schritt)] = Zustand.spielzeit
 		if s == 3:
 			Zustand.stufe3_zaehler[Zustand.abschnitt] = (
 				int(Zustand.stufe3_zaehler.get(Zustand.abschnitt, 0)) + 1

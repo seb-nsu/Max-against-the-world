@@ -159,7 +159,7 @@ Gespräch mit Gerd Glück (nach R2, außerhalb der Bonusrunde) und Ansehen im St
 | W4\_GLUE\_MAX\_0445 | Max | Unter dem Pult klebt ein Zettel: „Immer lächeln. Auch innen.“ Gerd hat das wörtlich genommen. | Ansehen: Moderationspult, zweites Mal |
 | W4\_GLUE\_MAX\_0450 | Max | Ein Toaster, eine Kreuzfahrt und noch ein Toaster. Bei der Auswahl muss man sich echt konzentrieren. | Ansehen: Gestapelte Preise |
 | W4\_GLUE\_MAX\_0455 | Max | Die Kreuzfahrt ist nur ein Foto von einem Schiff, auf Pappe geklebt. Der Toaster dagegen ist echt. Das sagt viel über diese Sendung. | Ansehen: Gestapelte Preise, zweites Mal |
-| W4\_GLUE\_PIX\_0460 | Pixel | Die Kreuzfahrt ist aus Pappe, der Toaster ist echt. So ist das Leben. // Das Große ist Kulisse, und das Kleine macht Krümel. Ich persönlich bevorzuge die Krümel. | Ansehen: Preise, zweites Mal |
+| W4\_GLUE\_PIX\_0460 | Pixel | Die Kreuzfahrt ist aus Pappe, der Toaster ist echt. So ist das Leben. // Das Große ist Kulisse, und das Kleine macht Krümel. Ich persönlich bevorzuge die Krümel. | Ansehen: Preise, drittes Mal |
 | W4\_GLUE\_MAX\_0470 | Max | Eine Leuchtschrift ohne Nummer. Man soll anrufen, aber keiner sagt, wo. Eigentlich ist das ehrlicher als jede Hotline. | Ansehen: Telefon-Leuchtschrift |
 | W4\_GLUE\_MAX\_0475 | Max | „Rufen Sie jetzt an!“ Die Leuchtschrift blinkt hektischer, wenn ich hinsehe. Sie spürt Kundschaft. | Ansehen: Telefon-Leuchtschrift, zweites Mal |
 | W4\_GLUE\_MAX\_0480 | Max | Das Publikum sitzt im Dunkeln. Entweder sind die alle sehr leise, oder da ist gar keiner. Bei unserem Klassenchat weiß man das auch nie. | Ansehen: Publikum |
@@ -370,7 +370,7 @@ Ansehen und Benutzen in der Savanne.
 | W4\_SAV\_MAX\_0255 | Max | Auf einer Akazie hängt ein Schild: „Giraffe ab 20 Uhr“. Ich glaube, die kommt nicht mehr. | Ansehen: Akazien, zweites Mal |
 | W4\_SAV\_MAX\_0260 | Max | Es regnet nur auf das Schlagzeug. Irgendjemand hat das bestimmt genau so gewollt. | Ansehen: Regenwolke über dem Schlagzeug |
 | W4\_SAV\_MAX\_0265 | Max | Ein Tropfen landet auf der Snare. Ba-dum-tss. Selbst das Wetter macht hier Pointen. | Ansehen: Regenwolke über dem Schlagzeug, zweites Mal |
-| W4\_SAV\_PIX\_0270 | Pixel | Eine Wolke, die ausschließlich über einem Schlagzeug regnet. // Das ist entweder Rhythmus oder Rache, und wenn ich mir die Wolke so ansehe, tippe ich auf Rache. | Ansehen: Regenwolke, zweites Mal |
+| W4\_SAV\_PIX\_0270 | Pixel | Eine Wolke, die ausschließlich über einem Schlagzeug regnet. // Das ist entweder Rhythmus oder Rache, und wenn ich mir die Wolke so ansehe, tippe ich auf Rache. | Ansehen: Regenwolke, drittes Mal |
 | W4\_SAV\_MAX\_0280 | Max | Eine Kiste voller Krabbeltiere mit einem Sternchen-Schild. Da greif ich nicht rein, nicht mal für eine Million Follower. | Ansehen: Kiste mit Krabbeltieren |
 | W4\_SAV\_MAX\_0285 | Max | Auf der Kiste steht „Prüfung 3“. Ich hab nichts gewonnen und will trotzdem schon raus hier. | Ansehen: Kiste mit Krabbeltieren, zweites Mal |
 | W4\_SAV\_PIX\_0290 | Pixel | Ich schon. | nach 0280 |
@@ -491,14 +491,14 @@ Außerhalb von Mitternacht zeigt der Sender eine Pausentafel mit schlafendem Gei
 | W4\_FRIE\_MAX\_0135 | Max | Eine Hand zeigt den Daumen hoch. Sie hat als Einzige richtig Lust auf die Probe. | Ansehen: Gräber, zu, zweites Mal; nach Rückspulen |
 | W4\_FRIE\_PIX\_0140 | Pixel | Die Kugel beleuchtet Zombies, die untot sind und trotzdem besser angezogen als du. // Ich sage das nicht, um dich zu kränken. Es liegt mir nur schon länger auf der Seele. | Ansehen: Discokugel im toten Baum |
 | W4\_FRIE\_PIX\_0145 | Pixel | Die Kugel dreht sich, obwohl hier nirgends Strom ist. // Ich frage nicht, wie. Hier fragt man nicht, wie, das habe ich bei meinen Vorfahren auf dem Dachboden gelernt. | Ansehen: Discokugel im toten Baum, zweites Mal |
-| W4\_FRIE\_MAX\_0150 | Max | Eine Discokugel in einem toten Baum. Das hat der Baum nicht verdient, aber er hat ja auch sonst nichts mehr zu verlieren. | Ansehen: Discokugel, zweites Mal |
+| W4\_FRIE\_MAX\_0150 | Max | Eine Discokugel in einem toten Baum. Das hat der Baum nicht verdient, aber er hat ja auch sonst nichts mehr zu verlieren. | Ansehen: Discokugel, drittes Mal |
 | W4\_FRIE\_MAX\_0160 | Max | Vollmond, natürlich. Bei Halbmond würde hier keiner tanzen. | Ansehen: Mond |
 | W4\_FRIE\_MAX\_0165 | Max | Vor dem Mond fliegt eine Fledermaus. Oder ein Mann im Kostüm. Hier ist beides möglich. | Ansehen: Mond, zweites Mal |
 | W4\_FRIE\_MAX\_0170 | Max | Nebel bis zu den Knien. Entweder Trockeneis, oder jemand hat hier sehr, sehr lange geduscht. | Ansehen: Nebel |
 | W4\_FRIE\_MAX\_0175 | Max | Ich wedel mit der Hand durch den Nebel, und er kommt sofort wieder zurück. Der wird hier eindeutig bezahlt. | Ansehen: Nebel, zweites Mal |
 | W4\_FRIE\_MAX\_0180 | Max | Lila Scheinwerfer. Hier ist alles lila, was nicht grün ist. In den 80ern hatten sie offenbar nur zwei Farben, aber dafür keine Angst. | Ansehen: Scheinwerfer |
 | W4\_FRIE\_MAX\_0185 | Max | Wenn ich lange genug in den Scheinwerfer gucke, seh ich alles lila, sogar meine Zukunft. | Ansehen: Scheinwerfer, zweites Mal |
-| W4\_FRIE\_MAX\_0190 | Max | Hinter dem Tor geht ein Weg runter zu einem Haus. Jedes Musikvideo endet offenbar in einem Haus, das man besser nicht betritt. | Ansehen: Gittertor, zweites Mal |
+| W4\_FRIE\_MAX\_0190 | Max | Hinter dem Tor geht ein Weg runter zu einem Haus. Jedes Musikvideo endet offenbar in einem Haus, das man besser nicht betritt. | Ansehen: Gittertor, drittes Mal |
 | W4\_FRIE\_MAX\_0200 | Max | Zurück! Die Zombies laufen rückwärts in ihre Gräber, die Erde hüpft hinterher, und das Lied läuft rückwärts. Klingt besser so. | Rückspulen auf dem Friedhof, während der Refrain läuft |
 | W4\_FRIE\_MAX\_0210 | Max | Kurz vor dem Refrain. Alle liegen, und gleich stehen alle gleichzeitig auf. Das ist meine Chance. | nach 0200; Zombies in Startposition |
 | W4\_FRIE\_PIX\_0220 | Pixel (aus dem Rauschen) | Sie stehen jetzt alle im selben Takt auf. Wenn du gegen den Takt tanzt, stolpern sie übereinander. // Ich habe das einmal mit drei Mäusen und einem Staubsauger gemacht. Lange Geschichte, und die Mäuse reden nicht mehr mit mir. | nach 0210; Kaskade; Hinweis R5b |
@@ -534,11 +534,11 @@ Max kommt durch die Grabplatte in den Keller. Die verkettete Tür nach oben blei
 | W4\_KELL\_MAX\_0030 | Max | Der Geist hat sich vor mir erschreckt. Eigentlich ist das das Netteste, was mir heute passiert ist. |  |
 | W4\_KELL\_MAX\_0040 | Max | Fernsehen im Fernsehen. Das ist mir ehrlich gesagt zu meta. | Ansehen: Röhrenfernseher mit Rauschen |
 | W4\_KELL\_MAX\_0045 | Max | Im Fernseher läuft ein Keller mit einem Fernseher. Ich guck nicht weiter rein. Am Ende sitzt da ein Junge, der mich anguckt. | Ansehen: Röhrenfernseher mit Rauschen, zweites Mal |
-| W4\_KELL\_PIX\_0050 | Pixel | Da würde ich nicht zu nah rangehen. In solchen Fernsehern wohnen Dinge. // Ich weiß das aus erster Pfote, denn ich wohne gerade selbst in einem. | Ansehen: Röhrenfernseher, zweites Mal |
+| W4\_KELL\_PIX\_0050 | Pixel | Da würde ich nicht zu nah rangehen. In solchen Fernsehern wohnen Dinge. // Ich weiß das aus erster Pfote, denn ich wohne gerade selbst in einem. | Ansehen: Röhrenfernseher, drittes Mal |
 | W4\_KELL\_MAX\_0060 | Max | Ich dreh am Knopf. Schnee, mehr Schnee, dann ein Schneesturm. Der Fernseher hat nur einen Kanal, und auf dem ist Winter. | Benutzen: Röhrenfernseher |
 | W4\_KELL\_PIX\_0070 | Pixel | Bandsalat in vier Gängen. // Dein Großvater hatte das auch einmal und hat zwei Tage lang mit einer Pinzette am Küchentisch gesessen. Ich saß daneben und habe ihn beraten. | Ansehen: Kassetten-Sammlung |
 | W4\_KELL\_PIX\_0075 | Pixel | Eine Kassette mit einem Bleistift drin. So hat man früher die Zeit zurückgedreht, mit Geduld und einem Bleistift. // Heute drückt man eine Taste. Die Jugend weiß gar nicht, was sie an einem guten Bleistift hätte. | Ansehen: Kassetten-Sammlung, zweites Mal |
-| W4\_KELL\_MAX\_0080 | Max | „Hits der 80er“, mit der Hand beschriftet. Kassetten sind Musik, die man nicht überspringen kann. Opa nennt das Charakter. | Ansehen: Kassetten, zweites Mal |
+| W4\_KELL\_MAX\_0080 | Max | „Hits der 80er“, mit der Hand beschriftet. Kassetten sind Musik, die man nicht überspringen kann. Opa nennt das Charakter. | Ansehen: Kassetten, drittes Mal |
 | W4\_KELL\_MAX\_0090 | Max | Möbel unter Laken. Entweder zieht hier jemand um, oder das ist die Garderobe der Geister. | Ansehen: Gerümpel unter Laken |
 | W4\_KELL\_MAX\_0095 | Max | Unter einem Laken bewegt sich etwas. Ich hoffe, es ist nur ein Sessel mit Gefühlen. | Ansehen: Gerümpel unter Laken, zweites Mal |
 | W4\_KELL\_MAX\_0100 | Max | Ich zieh am Laken, und drunter ist ein Sessel. Der Sessel ist nicht beleidigt, aber der Geist daneben schon. | Benutzen: Gerümpel |
@@ -799,7 +799,7 @@ In der Fabrik läuft ein Unfall als Schleife. Rückspulen hält an vier festen E
 | W4\_FABR\_MAX\_0030 | Max | Das ist ein GIF. Ich stehe in einem GIF. |  |
 | W4\_FABR\_PIX\_0040 | Pixel | Wenn es so penetrant nach Käse riecht, ist der Held nicht weit. // Oder ein Fondue-Abend. Bei meinem Glück beides. | Ansehen: Käse-Suchscheinwerfer am Himmel |
 | W4\_FABR\_PIX\_0045 | Pixel | Ein Käse am Himmel. Das ist die schönste Wolke, die ich je gesehen habe. // Ich setze mich hierhin und warte, bis sie herunterfällt. Ich habe Zeit, ich bin Katze. | Ansehen: Käse-Suchscheinwerfer am Himmel, zweites Mal |
-| W4\_FABR\_MAX\_0050 | Max | Ein Scheinwerfer, der einen Käse an den Himmel wirft. Die Stadt ruft nach jemandem, und zwar offenbar nach einem Käse. | Ansehen: Suchscheinwerfer, zweites Mal |
+| W4\_FABR\_MAX\_0050 | Max | Ein Scheinwerfer, der einen Käse an den Himmel wirft. Die Stadt ruft nach jemandem, und zwar offenbar nach einem Käse. | Ansehen: Suchscheinwerfer, drittes Mal |
 | W4\_FABR\_MAX\_0060 | Max | Riesige Bottiche voller gelbem Zeug, das blubbert. Vielleicht lebt es sogar. | Ansehen: Bottiche |
 | W4\_FABR\_MAX\_0065 | Max | Ein Bottich macht Blasen in Form von Gesichtern. Ich zähl drei, und alle lächeln. Ich nicht. | Ansehen: Bottiche, zweites Mal |
 | W4\_FABR\_MAX\_0070 | Max | Zu heiß, zu schnell, zu zu. Der Deckel klappt immer genau dann zu, wenn ich dran bin. Timing ist echt nicht meins. | Benutzen: Bottiche ohne Rückspulen |
@@ -980,7 +980,7 @@ Kellerarchiv.
 | W4\_ARCH\_MAX\_0010 | Max | Eine Müllpresse voller Kassetten, und die Wände rücken langsam zusammen. Hier landen also alle Serien nach der ersten Staffel. | erstes Betreten |
 | W4\_ARCH\_PIX\_0020 | Pixel | Der da guckt seit 1977 nur noch Wiederholungen. // Ich kenne das Gefühl. Dein Opa hat elfmal denselben Film geschaut, und ich saß jedes Mal daneben. | Ansehen: Auge auf dem Stiel |
 | W4\_ARCH\_PIX\_0025 | Pixel | Es blinzelt im Takt des Abspanns. Es hat jede Folge gesehen und kennt jedes Ende. // Verraten wird es keins. Ich mag dieses Auge, es hat Manieren. | Ansehen: Auge auf dem Stiel, zweites Mal |
-| W4\_ARCH\_MAX\_0030 | Max | Ein Auge auf einem Stiel, zwischen den Bändern. Es blinzelt mich an, und ich blinzle zurück. Jetzt haben wir was gemeinsam. | Ansehen: Auge, zweites Mal |
+| W4\_ARCH\_MAX\_0030 | Max | Ein Auge auf einem Stiel, zwischen den Bändern. Es blinzelt mich an, und ich blinzle zurück. Jetzt haben wir was gemeinsam. | Ansehen: Auge, drittes Mal |
 | W4\_ARCH\_MAX\_0040 | Max | Regale voller Bänder ohne Beschriftung: abgesetzt, vergessen, unbenannt. Das Archiv ist eine Warteliste für nichts. | Ansehen: Regale |
 | W4\_ARCH\_MAX\_0045 | Max | Ein Band heißt nur „Pilot“. Eine Folge, die nie eine Serie wurde. Das ist das Traurigste im ganzen Archiv. | Ansehen: Regale, zweites Mal |
 | W4\_ARCH\_MAX\_0050 | Max | Eine Neonröhre, die flackert. Sogar das Licht hier ist eine Wiederholung. | Ansehen: Neonröhre |

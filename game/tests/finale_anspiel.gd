@@ -50,6 +50,8 @@ func _durchlauf() -> void:
 		"Fernbedienung bei Opa, ohne Zelle")
 	_pruefe(_hotspot("maschine").visible and _hotspot("fundkiste").visible, "Maschine und Fundkiste sichtbar")
 
+	_pruefe(not S.wechsel_moeglich(), "Vor dem Hilferuf kein Figurenwechsel")
+
 	# Schritt 0: Luke verriegelt, dann der Hilferuf über alle vier Kanäle
 	S.vorgabe_auswahl = [0, 0, 0, 0]
 	await S.regel("ausgang", _hotspot("bodenluke"))
@@ -65,13 +67,21 @@ func _durchlauf() -> void:
 	# B: Kochlöffel in die Ofentür
 	await S.regel("gegenstand", _hotspot("ofentuer"), _i().get_item_instance(_sn("kochloeffel")))
 	_pruefe(Z.geloest("F1b"), "F1b: Ofentür mit dem Kochlöffel")
-	# C: Fernbedienung unter dem Sessel, die Zelle holt Pixel
-	await S.regel("benutzen", _hotspot("ohrensessel"))
+	# C: Fernbedienung unter dem Sessel, die Zelle holt Pixel. Über die echte Bedienung, so wie
+	# Skript und Hinweise es verlangen (FI_RAET_PIX_0200, FI_HINT_PIX_0130): Klick auf den Sessel,
+	# Klick auf Pixels Porträt, als Pixel Klick auf den Sessel, Klick auf Max' Porträt.
+	await _hotspot("ohrensessel").on_click()
 	_pruefe(_hat("goldene_fernbedienung"), "Fernbedienung zurück")
-	await S.regel("pixel", _hotspot("ohrensessel"))
+	await _hotspot("ohrensessel").on_click()
+	_pruefe(_gesagt("FI_RAET_PIX_0200"), "Pixel fordert den Figurenwechsel")
+	S.hud._pixel.pressed.emit()
+	await _warte_bis(func(): return C().player.script_name == "Pixel" and S.in_szene == 0 and not _e().playing_queue, 5.0)
+	_pruefe(C().player.script_name == "Pixel", "Klick auf Pixels Porträt wechselt zu Pixel")
+	await _hotspot("ohrensessel").on_click()
 	_pruefe(Z.ist("FI_ZELLE_IM_MAUL"), "Pixel hat die Zelle im Maul")
-	await S.regel("pixel", C().get_character("Max"))
-	_pruefe(_hat("energiezelle"), "Zelle in Max' Inventar")
+	S.hud._max.pressed.emit()
+	await _warte_bis(func(): return _hat("energiezelle"), 5.0)
+	_pruefe(C().player.script_name == "Max" and _hat("energiezelle"), "Klick auf Max' Porträt: Zelle in Max' Inventar")
 	await S.regel("kombinieren", _i().get_item_instance(_sn("energiezelle")),
 		_i().get_item_instance(_sn("goldene_fernbedienung")))
 	_pruefe(Z.geloest("F1c") and Z.wert("FI_FERNBEDIENUNG") == "zuendkapsel", "F1c: Zündkapsel")

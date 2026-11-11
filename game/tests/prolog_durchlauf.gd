@@ -863,7 +863,7 @@ func _rundreise(wo: String) -> void:
 		and is_equal_approx(alt.z.__v2[1], 80.0), "Alter Spielstand (480×270) wird auf 640×360 umgerechnet")
 	# absichtlich verfälschen
 	_zustand().setze("TEST_SCHMUTZ")
-	_zustand().hinweis_stufe["P9"] = 3
+	_zustand().hinweis_stufe["prolog/P9"] = 3
 	await st.laden(SLOT)
 	await _warte_bis(func(): return not _e().in_room, 3.0)
 	await _warte_bis(func(): return _e().in_room and _e().loaded_game.is_empty(), 10.0)

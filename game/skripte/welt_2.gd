@@ -299,6 +299,12 @@ func _bedingung_text(text: String) -> Variant:
 			return _wettkampf()
 		"nach dem Training":
 			return Zustand.geloest("R5")
+		"vor dem Finaltag":
+			return not Zustand.geloest("R13")
+		"nach dem Finaltag":
+			return Zustand.geloest("R13")
+		"während des Duells":
+			return Zustand.ist("W2_DUELL") and not Zustand.geloest("R2b")
 	return null
 
 

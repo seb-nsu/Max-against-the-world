@@ -305,13 +305,13 @@ Szene beim ersten Eintritt in die Simulation. Ebene: Simulation. Max ist allein;
 | W3\_SIM\_MAX\_0145 | Max | Ich such einen Fleck auf den Autos, irgendeinen. Nichts. Ich vermisse Vogeldreck, und das hätte ich nie von mir gedacht. | Ansehen: Autos, zweites Mal |
 | W3\_SIM\_MAX\_0150 | Max | Abgeschlossen, natürlich. In einer perfekten Stadt klaut auch keiner ein Auto, nicht mal aus Langeweile. | Benutzen: Auto |
 | W3\_SIM\_MAX\_0160 | Max | Eine schwarze Katze. Läuft vorbei, Schwanz hoch, ohne mich anzusehen. Kommt mir bekannt vor. | Ansehen: Schwarze Katze, erster Durchlauf |
-| W3\_SIM\_MAX\_0170 | Max | Und noch mal, exakt gleich, dieselbe Pfote zuerst. Das hab ich heute schon mal gesehen. Zweimal sogar. | Ansehen: Schwarze Katze, zweiter Durchlauf |
-| W3\_SIM\_PIX\_0180 | Pixel (aus dem Hörer) | Ich kenne die. Wir reden nicht miteinander. // Es gab da eine Sache mit einem Fensterbrett, und mehr möchte ich dazu am Telefon nicht sagen. | Ansehen: Schwarze Katze; Pixel auf der Leitung |
-| W3\_SIM\_PIX\_0190 | Pixel (aus dem Hörer) | Sie läuft zweimal gleich vorbei, und alle finden das unheimlich. Ich habe das in der Gasse gemacht, und du hast gesagt: „Noch mal.“ | Ansehen: Schwarze Katze, drittes Mal; Pixel auf der Leitung |
+| W3\_SIM\_MAX\_0170 | Max | Und noch mal, exakt gleich, dieselbe Pfote zuerst. Das hab ich heute schon mal gesehen. Zweimal sogar. | Ansehen: Schwarze Katze, zweites Mal; zweiter Durchlauf |
+| W3\_SIM\_PIX\_0180 | Pixel (aus dem Hörer) | Ich kenne die. Wir reden nicht miteinander. // Es gab da eine Sache mit einem Fensterbrett, und mehr möchte ich dazu am Telefon nicht sagen. | Ansehen: Schwarze Katze, drittes Mal; Pixel auf der Leitung |
+| W3\_SIM\_PIX\_0190 | Pixel (aus dem Hörer) | Sie läuft zweimal gleich vorbei, und alle finden das unheimlich. Ich habe das in der Gasse gemacht, und du hast gesagt: „Noch mal.“ | Ansehen: Schwarze Katze, viertes Mal; Pixel auf der Leitung |
 | W3\_SIM\_MAX\_0200 | Max | Ich fass sie nicht an. Sie ist Kulisse, und wenn sie doch keine ist, ist sie hinterher beleidigt. | Benutzen: Schwarze Katze |
 | W3\_SIM\_MAX\_0210 | Max | Eine Telefonzelle. Sie ist sauber und still, und irgendwie hab ich das Gefühl, sie wartet auf jemanden. | Ansehen: Telefonzelle; bevor sie klingelt |
 | W3\_SIM\_MAX\_0215 | Max | Ich klopf an die Scheibe. Kein Ton. Die Zelle wartet lieber in Ruhe. | Ansehen: Telefonzelle, zweites Mal; bevor sie klingelt |
-| W3\_SIM\_MAX\_0220 | Max | Sie klingelt. Morphäus hat gesagt, wenn's klingelt, soll ich rangehen. Ich hoffe, diesmal ist es nicht wieder nur Regen. | Ansehen: Telefonzelle; sie klingelt |
+| W3\_SIM\_MAX\_0220 | Max | Sie klingelt. Morphäus hat gesagt, wenn's klingelt, soll ich rangehen. Ich hoffe, diesmal ist es nicht wieder nur Regen. | Ansehen: klingelnde Telefonzelle |
 | W3\_SIM\_MAX\_0230 | Max | Hallo? … | Benutzen: klingelnde Telefonzelle; Ebenenwechsel in die Realität, Max wacht in der Kapsel auf |
 | W3\_SIM\_MAX\_0240 | Max | Wenn ich abhebe, wach ich in der Kapsel auf, das weiß ich inzwischen. Trotzdem zuck ich jedes Mal zusammen wie bei der Schulklingel. | Benutzen: Telefonzelle, zweites Mal und folgende, vor dem Abheben |
 | W3\_SIM\_PIX\_0250 | Pixel (aus dem Hörer) | Du bist zum dritten Mal hier. Das ist kein Déjà-vu mehr, junger Mann. // Das ist ein Abo, und ich hoffe für dich, dass man es kündigen kann. | Simulation zum dritten Mal betreten; Errungenschaft Déjà-vu |
@@ -702,7 +702,7 @@ Szene beim ersten Ebenenwechsel in die Realität, egal über welche Zelle. Ebene
 | W3\_BAS\_MAX\_0810 | Max | Ich schubs ihn an. Er kippt. Ich stell ihn wieder hin. Wir sind quitt. | Benutzen: Piepsi; vor Rätsel 13 |
 | W3\_BAS\_MAX\_0820 | Max | Ein Werbeplakat: eine Küchenmaschine mit Blümchenschürze und dem Satz „Ich weiß, was gut für dich ist.“ Das wird noch peinlich. Für sie. | Ansehen: Plakat M.U.T.T.I. |
 | W3\_BAS\_MAX\_0825 | Max | Die Küchenmaschine auf dem Plakat lächelt. Küchenmaschinen sollten nicht lächeln. Das ist eine Regel. | Ansehen: Plakat M.U.T.T.I., zweites Mal |
-| W3\_BAS\_PIX\_0830 | Pixel | Sie hat „gut für dich“ unterstrichen. Zweimal. // Wer etwas zweimal unterstreicht, hat es nötig. Ich unterstreiche nie. Ich wiederhole mich laut. | Ansehen: Plakat, zweites Mal |
+| W3\_BAS\_PIX\_0830 | Pixel | Sie hat „gut für dich“ unterstrichen. Zweimal. // Wer etwas zweimal unterstreicht, hat es nötig. Ich unterstreiche nie. Ich wiederhole mich laut. | Ansehen: Plakat, drittes Mal |
 | W3\_BAS\_MAX\_0840 | Max | Zwei Rebellen. Lederjacke, Sonnenbrille, Nudeln. Es ist Nacht, es ist drinnen, und sie sehen trotzdem nichts. Aus Prinzip. | Ansehen: Rebellen |
 | W3\_BAS\_MAX\_0845 | Max | Einer hat seit Minuten eine Nudel im Mundwinkel und tut so, als wär nichts. Coolness hat eben ihren Preis. | Ansehen: Rebellen, zweites Mal |
 | W3\_BAS\_REL\_0850 | Rebell | Wir sind der Widerstand. Wir widerstehen. Zum Beispiel dem Drang, die Sonnenbrille abzunehmen. | Reden: Rebell |
@@ -808,8 +808,8 @@ Ebene: Realität, von Anfang an erreichbar. Der Roboter wischt vor der Panzertü
 | W3\_EING\_MAX\_0340 | Max | Ich halt meine Hand mit dem Stempel dran. „Mensch, vorläufig.“ Der Leser denkt nach. Rot. Er wollte eine Karte, keine Biografie. | Benutzen: Kartenleser ohne Karte |
 | W3\_EING\_MAX\_0350 | Max | Die Karte rein. Grün. Die Tür rollt zur Seite wie ein sehr langsamer Vorhang. | Zugangskarte auf Kartenleser; nach Rätsel 8; Tür öffnet sich, die Karte bleibt im Leser |
 | W3\_EING\_HAU\_0360 | Modell 08/15 | Bursche, auch mit Karte: erst Sahra Konner. Der Zettel ist eindeutig. Der Zettel ist mein Leben. | Zugangskarte auf Kartenleser; vor Rätsel 8 |
-| W3\_EING\_MAX\_0370 | Max | Dahinter: kein Labor. Eine Wand mit leuchtenden Buchsen und ein dickes Kabel. Das Labor ist nicht hier. Das Labor ist „dran“. | Ansehen: geöffnete Tür, Datenanschlüsse |
-| W3\_EING\_MAX\_0375 | Max | Die Buchsen leuchten im Takt, als würde das Labor durch die Kabel atmen. Ich muss da rein, also irgendwie in die Kabel. | Ansehen: geöffnete Tür, Datenanschlüsse, zweites Mal |
+| W3\_EING\_MAX\_0370 | Max | Dahinter: kein Labor. Eine Wand mit leuchtenden Buchsen und ein dickes Kabel. Das Labor ist nicht hier. Das Labor ist „dran“. | Ansehen: geöffnete Tür, Datenanschlüsse; Panzertür offen |
+| W3\_EING\_MAX\_0375 | Max | Die Buchsen leuchten im Takt, als würde das Labor durch die Kabel atmen. Ich muss da rein, also irgendwie in die Kabel. | Ansehen: geöffnete Tür, Datenanschlüsse, zweites Mal; Panzertür offen |
 | W3\_EING\_KAL\_0380 | Kalle | Bin da! Hab die Trommel mitgebracht. Leitung von hier bis zu deiner Kapsel. Achtzig Meter Kabel, zwei Knoten, eine Hoffnung. | Benutzen: Datenanschluss; Kalle kommt mit Kabeltrommel |
 | W3\_EING\_KAL\_0390 | Kalle | Fertig. Ich zapf unterwegs noch den Lautsprecher der KI an, dann hörst du den Kater auch da drin. Ich tu dir keinen Gefallen damit. Ich weiß. | Leitung liegt; Schalter LEITUNG\_LABOR; Pixel im Labor hörbar |
 | W3\_EING\_PIX\_0400 | Pixel | Er hat mich in eine Weltherrschafts-KI eingespeist. Ich werde ihr Lautsprecher sein. // Ich war schon Schlimmeres, junger Mann. Ich war heute schon mehrmals nass. |  |
@@ -828,8 +828,8 @@ Ebene: Realität, von Anfang an erreichbar. Der Roboter wischt vor der Panzertü
 | W3\_EING\_MAX\_0505 | Max | Irgendwo hinten summt etwas. Groß und geduldig. Wie ein Kühlschrank, der die Welt regiert. | Ansehen: Gang, zweites Mal |
 | W3\_EING\_MAX\_0510 | Max | Der Roboter ist weg, aber der Boden ist noch nass. Er hat es bis zum Schluss ernst gemeint. | Ansehen: Platz des Hausmeisters, nach Rätsel 8 |
 | W3\_EING\_MAX\_0515 | Max | Am Boden ist noch der letzte Kreis vom Wischen zu sehen. Ein perfekter Kreis, wie ein Abschiedsbrief. | Ansehen: Platz des Hausmeisters, nach Rätsel 8, zweites Mal |
-| W3\_EING\_MAX\_0520 | Max | Er wischt in Kreisen. Immer in Kreisen. Wenn er jemals eine Gerade wischt, ist etwas passiert. | Ansehen: Hausmeister, vor Rätsel 8 |
-| W3\_EING\_PIX\_0525 | Pixel | Er wischt im Kreis, und ich laufe im Kreis, bevor ich mich hinlege. // Wir verstehen uns, ohne ein Wort zu wechseln. Das ist die höchste Form der Freundschaft. | Ansehen: Hausmeister, vor Rätsel 8, zweites Mal |
+| W3\_EING\_MAX\_0520 | Max | Er wischt in Kreisen. Immer in Kreisen. Wenn er jemals eine Gerade wischt, ist etwas passiert. | Ansehen: Hausmeister, vor Rätsel 8; mit Olivenöl |
+| W3\_EING\_PIX\_0525 | Pixel | Er wischt im Kreis, und ich laufe im Kreis, bevor ich mich hinlege. // Wir verstehen uns, ohne ein Wort zu wechseln. Das ist die höchste Form der Freundschaft. | Ansehen: Hausmeister, vor Rätsel 8, zweites Mal; mit Olivenöl |
 | W3\_EING\_MAX\_0530 | Max | Thunfisch für einen Roboter. Er würde die Dose höflich annehmen und höflich nicht wissen, was tun. | Thunfischdose auf Hausmeister |
 | W3\_EING\_HAU\_0540 | Modell 08/15 | Ein Keks mit Zettel. Steht da Sahra Konner drauf? Nein? Dann wische ich die Krümel weg, bevor sie fallen. | Glückskeks auf Hausmeister |
 | W3\_EING\_MAX\_0550 | Max | Hundekuchen für einen Hausmeister? Er hat keinen Hund, er hat einen Mopp, und der Mopp isst nichts. | Hundekuchen auf Hausmeister |
@@ -950,8 +950,8 @@ Ebene: Labor. Ein roter Laser quer durch die Kammer, links ein Sockel mit Gummih
 | W3\_KAM2\_MAX\_0080 | Max | „Harmlos.“ „Leicht.“ Das Huhn ist das Einzige hier, das keine Drohung ist. | Code-Sicht: Gummihuhn ansehen |
 | W3\_KAM2\_NAR\_0090 | – | Tausch: tödlich (Laser) ↔ harmlos (Gummihuhn). Der Laser wird matt und quietscht bei jeder Berührung. Das Huhn in Max' Tasche glüht leise. | Code-Sicht: Lösung; Laser-Zustand aus |
 | W3\_KAM2\_MAX\_0100 | Max | Der Laser quietscht. Ich geh durch, quietsch, quietsch. Das ist der ungefährlichste Spezialeffekt meines Lebens. | Benutzen: Laser, nach dem Tausch; Jingle |
-| W3\_KAM2\_MAX\_0110 | Max | Das Huhn in meiner Tasche ist jetzt tödlich. Ich fass es nicht an. Ich trag es wie ein Handy mit aufgeblähtem Akku. | Ansehen: Gummihuhn im Inventar, nach dem Tausch |
-| W3\_KAM2\_MAX\_0115 | Max | Ich hab gerade überlegt, ob ich drauf drücke. Ich drücke nicht. Ich bin neugierig, nicht lebensmüde. | Ansehen: Gummihuhn im Inventar, nach dem Tausch, zweites Mal |
+| W3\_KAM2\_MAX\_0110 | Max | Das Huhn in meiner Tasche ist jetzt tödlich. Ich fass es nicht an. Ich trag es wie ein Handy mit aufgeblähtem Akku. | Ansehen: Gummihuhn im Inventar (nach dem Tausch), toedlich |
+| W3\_KAM2\_MAX\_0115 | Max | Ich hab gerade überlegt, ob ich drauf drücke. Ich drücke nicht. Ich bin neugierig, nicht lebensmüde. | Ansehen: Gummihuhn im Inventar (nach dem Tausch), toedlich, zweites Mal |
 | W3\_KAM2\_MUT\_0120 | M.U.T.T.I. | Du hast den Laser entwaffnet und ein Huhn bewaffnet. Ich schreibe das auf. Unter „kreativ“. Das ist bei mir kein Lob. |  |
 | W3\_KAM2\_MAX\_0130 | Max | Das Huhn ist wieder harmlos. Der Tausch gilt nur im Raum. Ich hab's trotzdem nicht angefasst. Aus Prinzip. | Kammer 2 verlassen, Huhn im Inventar |
 | W3\_KAM2\_MAX\_0140 | Max | Kritzelei an der unteren Platte. Filzstift. „DER KUCHEN EXISTIERT NICHT.“ Dreimal unterstrichen. Jemand war hier sehr lange. | Ansehen: Kritzelei |
@@ -1215,7 +1215,7 @@ Pixel wird als Gegenstand aus dem Inventar auf eine Figur oder einen Hotspot gez
 | W3\_BAS\_PIX\_1030 | Pixel | Werkzeuggürtel. Ich klettere dran hoch. Er sagt nichts. Die Sonnenbrille sagt auch nichts. Wir haben uns verstanden. | Pixel auf Rebell |
 | W3\_BAS\_PIX\_1040 | Pixel | Er piept. Ich schnurre. Wir reden eine Minute. Er hat Meinungen über Kalle, die ich nicht wiederholen werde. Aber sie sind richtig. | Pixel auf Piepsi, nach Rätsel 13 |
 | W3\_BAS\_PIX\_1050 | Pixel | Rost. Kaffee-Erwartung. Ein Hut, der nach Jahrzehnten riecht. Da drin ist jemand, der schlecht gelaunt ist. Ich mag ihn jetzt schon. | Pixel auf Piepsi, vor Rätsel 13 |
-| W3\_BAS\_PIX\_1060 | Pixel | Die Kapsel riecht nach dir. Nach Hoodie, Regen und dem Rest der Suppe. Ich lege mich auf den Deckel. Warm. Gut. Bleib ruhig drüben. | Pixel auf Max' Kapsel |
+| W3\_BAS\_PIX\_1060 | Pixel | Die Kapsel riecht nach dir. Nach Hoodie, Regen und dem Rest der Suppe. Ich lege mich auf den Deckel. Warm. Gut. Bleib ruhig drüben. | Pixel auf Max' Kapsel, zweites Mal |
 | W3\_BAS\_PIX\_1070 | Pixel | Tastatur. Warm. Genau so breit wie ich. Es wurde für mich gebaut, und jemand hat vergessen, es mir zu sagen. | Pixel auf Terminal |
 | W3\_BAS\_PIX\_1080 | Pixel | Pizzakarton, leer. Der Geruch ist noch da. Der Geruch ist das Grausamste an einem leeren Karton. | Pixel auf Pizzakartons |
 | W3\_BAS\_PIX\_1090 | Pixel | Ein Handtuch, trocken, Baumwolle. Ich wickle mich ein und komme nicht wieder heraus. // Ruf mich, wenn es Thunfisch gibt. Oder lass es, dann bleibe ich eben hier drin. | Pixel auf Handtuch |

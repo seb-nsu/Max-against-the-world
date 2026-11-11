@@ -3718,7 +3718,8 @@
        "sprecher": "MAX",
        "blasen": [
         "W1_WALD_MAX_0050"
-       ]
+       ],
+       "bedingung_text": "geschlossen"
       },
       {
        "zeile": "W1_WALD_MAX_0055",
@@ -3726,6 +3727,7 @@
        "blasen": [
         "W1_WALD_MAX_0055"
        ],
+       "bedingung_text": "geschlossen",
        "mal": 2
       },
       {
@@ -3758,7 +3760,8 @@
          "art": "nach",
          "raetsel": "R7"
         }
-       ]
+       ],
+       "bedingung_text": "offen"
       },
       {
        "zeile": "W1_WALD_MAX_0075",
@@ -3772,6 +3775,7 @@
          "raetsel": "R7"
         }
        ],
+       "bedingung_text": "offen",
        "mal": 2
       }
      ]
@@ -4239,6 +4243,7 @@
         "W1_LUFT_PIX_0080",
         "W1_LUFT_PIX_0080_2"
        ],
+       "mal": 2,
        "figur": "PIX"
       }
      ]

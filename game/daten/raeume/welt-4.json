@@ -119,7 +119,8 @@
         "W4_TEST_PIX_0220",
         "W4_TEST_PIX_0220_2"
        ],
-       "bedingung_text": "als Pixel, Kaskade"
+       "bedingung_text": "Kaskade",
+       "figur": "PIX"
       },
       {
        "zeile": "W4_TEST_PIX_0225",
@@ -128,8 +129,9 @@
         "W4_TEST_PIX_0225",
         "W4_TEST_PIX_0225_2"
        ],
-       "bedingung_text": "als Pixel, Kaskade",
-       "mal": 2
+       "bedingung_text": "Kaskade",
+       "mal": 2,
+       "figur": "PIX"
       }
      ],
      "benutzen": [
@@ -154,7 +156,8 @@
        "blasen": [
         "W4_TEST_PIX_0290"
        ],
-       "bedingung_text": "beim Ziehen"
+       "bedingung_text": "beim Ziehen",
+       "figur": "PIX"
       },
       {
        "zeile": "W4_TEST_PIX_0380",
@@ -200,7 +203,7 @@
         "W4_TEST_PIX_0240",
         "W4_TEST_PIX_0240_2"
        ],
-       "bedingung_text": "zweites Mal"
+       "mal": 2
       }
      ]
     },
@@ -616,7 +619,7 @@
         "W4_GLUE_PIX_0460",
         "W4_GLUE_PIX_0460_2"
        ],
-       "mal": 2
+       "mal": 3
       }
      ]
     },
@@ -705,7 +708,8 @@
        "sprecher": "MAX",
        "blasen": [
         "W4_GLUE_MAX_0540"
-       ]
+       ],
+       "bedingung_text": "außerhalb des Comic-Kanals"
       }
      ]
     },
@@ -1763,7 +1767,7 @@
         "W4_SAV_PIX_0270",
         "W4_SAV_PIX_0270_2"
        ],
-       "mal": 2
+       "mal": 3
       }
      ]
     },
@@ -1813,7 +1817,8 @@
        "sprecher": "PIX",
        "blasen": [
         "W4_SAV_PIX_0300"
-       ]
+       ],
+       "figur": "PIX"
       }
      ]
     },
@@ -1923,7 +1928,8 @@
        "blasen": [
         "W4_VERH_PIX_0200",
         "W4_VERH_PIX_0200_2"
-       ]
+       ],
+       "figur": "PIX"
       }
      ]
     }
@@ -2110,7 +2116,8 @@
        "sprecher": "MAX",
        "blasen": [
         "W4_FRIE_MAX_0120"
-       ]
+       ],
+       "bedingung_text": "offen"
       },
       {
        "zeile": "W4_FRIE_MAX_0125",
@@ -2118,6 +2125,7 @@
        "blasen": [
         "W4_FRIE_MAX_0125"
        ],
+       "bedingung_text": "offen",
        "mal": 2
       },
       {
@@ -2126,7 +2134,7 @@
        "blasen": [
         "W4_FRIE_MAX_0130"
        ],
-       "bedingung_text": "nach Rückspulen"
+       "bedingung_text": "zu, nach Rückspulen"
       },
       {
        "zeile": "W4_FRIE_MAX_0135",
@@ -2134,7 +2142,7 @@
        "blasen": [
         "W4_FRIE_MAX_0135"
        ],
-       "bedingung_text": "nach Rückspulen",
+       "bedingung_text": "zu, nach Rückspulen",
        "mal": 2
       }
      ]
@@ -2177,7 +2185,7 @@
        "blasen": [
         "W4_FRIE_MAX_0150"
        ],
-       "mal": 2
+       "mal": 3
       }
      ]
     },
@@ -2297,7 +2305,8 @@
        "sprecher": "MAX",
        "blasen": [
         "W4_FRIE_MAX_0390"
-       ]
+       ],
+       "bedingung_text": "nach dem Betreten"
       },
       {
        "zeile": "W4_FRIE_MAX_0395",
@@ -2305,6 +2314,7 @@
        "blasen": [
         "W4_FRIE_MAX_0395"
        ],
+       "bedingung_text": "nach dem Betreten",
        "mal": 2
       }
      ]
@@ -2384,7 +2394,7 @@
        "blasen": [
         "W4_FRIE_MAX_0190"
        ],
-       "mal": 2
+       "mal": 3
       }
      ]
     }
@@ -2505,7 +2515,7 @@
         "W4_KELL_PIX_0050",
         "W4_KELL_PIX_0050_2"
        ],
-       "mal": 2
+       "mal": 3
       }
      ],
      "benutzen": [
@@ -2566,7 +2576,7 @@
        "blasen": [
         "W4_KELL_MAX_0080"
        ],
-       "mal": 2
+       "mal": 3
       }
      ]
     },
@@ -2814,7 +2824,8 @@
        "sprecher": "MAX",
        "blasen": [
         "W4_KELL_MAX_0400"
-       ]
+       ],
+       "bedingung_text": "faulig"
       },
       {
        "zeile": "W4_KELL_MAX_0405",
@@ -2822,6 +2833,7 @@
        "blasen": [
         "W4_KELL_MAX_0405"
        ],
+       "bedingung_text": "faulig",
        "mal": 2
       }
      ]
@@ -3601,7 +3613,7 @@
        "blasen": [
         "W4_KAPI_MAX_0620"
        ],
-       "bedingung_text": "Stinkbombe"
+       "bedingung_text": "nach dem Grusel-Sender, Stinkbombe"
       },
       {
        "zeile": "W4_KAPI_MAX_0625",
@@ -3609,7 +3621,7 @@
        "blasen": [
         "W4_KAPI_MAX_0625"
        ],
-       "bedingung_text": "Stinkbombe",
+       "bedingung_text": "nach dem Grusel-Sender, Stinkbombe",
        "mal": 2
       }
      ]
@@ -3634,7 +3646,8 @@
        "sprecher": "MAX",
        "blasen": [
         "W4_KAPI_MAX_0630"
-       ]
+       ],
+       "bedingung_text": "nach dem Grusel-Sender"
       },
       {
        "zeile": "W4_KAPI_MAX_0635",
@@ -3642,6 +3655,7 @@
        "blasen": [
         "W4_KAPI_MAX_0635"
        ],
+       "bedingung_text": "nach dem Grusel-Sender",
        "mal": 2
       },
       {
@@ -3649,7 +3663,8 @@
        "sprecher": "MAX",
        "blasen": [
         "W4_KAPI_MAX_0640"
-       ]
+       ],
+       "bedingung_text": "ohne Grusel-Sender"
       },
       {
        "zeile": "W4_KAPI_MAX_0645",
@@ -3657,6 +3672,7 @@
        "blasen": [
         "W4_KAPI_MAX_0645"
        ],
+       "bedingung_text": "ohne Grusel-Sender",
        "mal": 2
       }
      ]
@@ -3886,7 +3902,7 @@
        "blasen": [
         "W4_FABR_MAX_0050"
        ],
-       "mal": 2
+       "mal": 3
       }
      ],
      "benutzen": [
@@ -4606,7 +4622,8 @@
        "sprecher": "MAX",
        "blasen": [
         "W4_WERB_MAX_0470"
-       ]
+       ],
+       "bedingung_text": "vor der Stinkbombe"
       }
      ]
     },
@@ -5347,7 +5364,7 @@
        "blasen": [
         "W4_ARCH_MAX_0030"
        ],
-       "mal": 2
+       "mal": 3
       }
      ],
      "benutzen": [
@@ -5687,7 +5704,8 @@
        "sprecher": "MAX",
        "blasen": [
         "W4_STUD_MAX_0040"
-       ]
+       ],
+       "bedingung_text": "zugleich Einstieg in das Angebot"
       },
       {
        "zeile": "W4_STUD_MAX_0045",
@@ -5695,6 +5713,7 @@
        "blasen": [
         "W4_STUD_MAX_0045"
        ],
+       "bedingung_text": "zugleich Einstieg in das Angebot",
        "mal": 2
       }
      ]
@@ -6896,6 +6915,7 @@
      "blasen": [
       "W4_STUD_MAX_0640"
      ],
+     "bedingung_text": "der Buntstifte am Geschmack erkennt",
      "raum": "zappmanns_studio"
     },
     {
@@ -6904,6 +6924,7 @@
      "blasen": [
       "W4_STUD_MAX_0645"
      ],
+     "bedingung_text": "der Buntstifte am Geschmack erkennt",
      "mal": 2,
      "raum": "zappmanns_studio"
     }
@@ -7097,7 +7118,7 @@
       "W4_SIT_PIX_0230",
       "W4_SIT_PIX_0230_2"
      ],
-     "bedingung_text": "Pixel"
+     "figur": "PIX"
     }
    ],
    "benutzen": [],
@@ -7238,7 +7259,7 @@
       "W4_KAPI_PIX_0580",
       "W4_KAPI_PIX_0580_2"
      ],
-     "bedingung_text": "Pixel"
+     "figur": "PIX"
     },
     {
      "zeile": "W4_KAPI_PIX_0585",
@@ -7247,8 +7268,8 @@
       "W4_KAPI_PIX_0585",
       "W4_KAPI_PIX_0585_2"
      ],
-     "bedingung_text": "Pixel",
-     "mal": 2
+     "mal": 2,
+     "figur": "PIX"
     }
    ],
    "benutzen": [],

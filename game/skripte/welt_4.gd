@@ -344,6 +344,11 @@ func _bedingung_text(text: String) -> Variant:
 			return Zustand.ist("W4_ZOMBIES_START")
 		"Stinkbombe":
 			return _zustand_gegenstand("bananenschale") == "Stinkbombe"
+		"nach dem Grusel-Sender":
+			# Käse oder Banane haben sich auf einem Grusel-Sender verwandelt (_raum_betreten)
+			return _zustand_gegenstand("fondue_kaese") != "normal" or _zustand_gegenstand("bananenschale") != "frisch"
+		"ohne Grusel-Sender":
+			return _zustand_gegenstand("fondue_kaese") == "normal"
 	return null
 
 
@@ -1513,7 +1518,7 @@ func benutzen_fbi_agent(_obj, _x) -> bool:
 
 func _hinweis_stufe_3() -> bool:
 	for r in Zustand.alle_raetsel("welt-4"):
-		if Hinweise.stufe(str(r.get("id", ""))) >= 3:
+		if Hinweise.stufe(str(r.get("id", "")), "welt-4") >= 3:
 			return true
 	return false
 

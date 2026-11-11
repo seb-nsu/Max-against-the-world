@@ -103,6 +103,10 @@ func ereignis(art: String, obj: Variant, item: Variant) -> bool:
 
 
 func wert(art: String, obj: Variant, _item: Variant) -> Variant:
+	if art == "wechsel_frei":
+		# Zwischenspiele: kein Wechsel. Finale: ab dem Hilferuf bis zur roten Taste, Schritt C
+		# braucht Pixel unter dem Ohrensessel (raetsel/finale.md, „Lösbarkeit“).
+		return Zustand.ist("FINALE") and Zustand.ist("FI_HILFERUF") and not _g("F1d")
 	if not Zustand.ist("FINALE"):
 		return null
 	match art:

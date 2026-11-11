@@ -958,7 +958,7 @@ Rätsel 9 und Max' Entwicklungsmoment dieser Welt. Oben stehen die Maklerin mit 
 | W1\_LUFT\_MAX\_0060 | Max | Kinderschrift mit Kreide: „…-Bärchen war hier.“ Der Anfang ist weggewischt. | Ansehen: Kritzelei, öffnet die Nahansicht; Notizbuch trägt „…-Bärchen“ ein |
 | W1\_LUFT\_MAX\_0065 | Max | Daneben ein kleines Kreideherz und ein Strichmännchen ohne Nase. Das ist Kunst, und zwar mit Hintergedanken. | Ansehen: Kritzelei, öffnet die Nahansicht, zweites Mal; Notizbuch trägt „…-Bärchen“ ein |
 | W1\_LUFT\_PIX\_0070 | Pixel | Bärchen. Jemand wurde hier Bärchen genannt und hat es überlebt. // Knapp, sehr knapp. Mich hat einmal jemand „Mausi“ genannt, und ich habe drei Tage nicht gegessen. | Nahansicht Kritzelei, Pixel |
-| W1\_LUFT\_PIX\_0080 | Pixel | Alte Kreide, und Tränen. Jemand hat beim Schreiben geweint. // Bei so einem Namen hätte ich das an seiner Stelle auch getan, und zwar öffentlich. | Pixel schnuppert: Kritzelei |
+| W1\_LUFT\_PIX\_0080 | Pixel | Alte Kreide, und Tränen. Jemand hat beim Schreiben geweint. // Bei so einem Namen hätte ich das an seiner Stelle auch getan, und zwar öffentlich. | Pixel schnuppert: Kritzelei, zweites Mal |
 | W1\_LUFT\_MAX\_0090 | Max | Ein Balkon mit Aussicht auf alles. Das Geländer hat bestimmt noch nie einen Prüfer von innen gesehen. | Ansehen: Balkon |
 | W1\_LUFT\_MAX\_0095 | Max | Ich lehn mich nicht ans Geländer. Ich hab gesehen, wie es wackelt, wenn bloß eine Wolke vorbeizieht. | Ansehen: Balkon, zweites Mal |
 | W1\_LUFT\_SPI\_0100 | Spiegel | Spiegel, Spiegel … ach, du bist's. Sehr schöne Haare. Sehr lebendig. Sehr mutig. | Ansehen oder Benutzen: Spiegel |

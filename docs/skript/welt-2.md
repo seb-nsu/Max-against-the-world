@@ -73,7 +73,7 @@ Der Fährmann will einen Obolus. Max hat keinen. Sobek verneigt sich vor Pixel, 
 | --- | --- | --- | --- |
 | W2\_NIL\_MAX\_0610 | Max | Jemand ist hier mit der Hand durchs Korn gelaufen, und zwar sehr bedeutungsvoll. | Ansehen: Weizenfeld mit Handabdruck |
 | W2\_NIL\_MAX\_0615 | Max | Ein Handabdruck im Korn. Fehlt eigentlich nur noch einer in Rüstung, der traurig guckt, während irgendwo Geigen einsetzen. | Ansehen: Weizenfeld mit Handabdruck, zweites Mal |
-| W2\_NIL\_PIX\_0620 | Pixel | Korn. Daraus macht man Dinge mit Kruste, und Dinge mit Kruste sind das Beste, was Menschen je erfunden haben. // Merk dir das. Ich merke es mir auch, für alle Fälle. | Ansehen: Weizenfeld, zweites Mal; Notizbuch Seite 3: „irgendwas aus Mehl, mit Kruste“ |
+| W2\_NIL\_PIX\_0620 | Pixel | Korn. Daraus macht man Dinge mit Kruste, und Dinge mit Kruste sind das Beste, was Menschen je erfunden haben. // Merk dir das. Ich merke es mir auch, für alle Fälle. | Ansehen: Weizenfeld, drittes Mal; Notizbuch Seite 3: „irgendwas aus Mehl, mit Kruste“ |
 | W2\_NIL\_MAX\_0630 | Max | Eine Sanduhr, so groß wie ich. Der Sand läuft mal nach oben, mal nach unten, je nachdem, wohin die Fähre gerade fährt. | Ansehen: Sanduhr |
 | W2\_NIL\_MAX\_0635 | Max | Wenn ich die umdrehe, spule ich vielleicht die Zeit zurück. In Spielen klappt das immer, und danach macht man einen Salto. | Ansehen: Sanduhr, zweites Mal |
 | W2\_NIL\_MAX\_0640 | Max | Eine Tafel mit drei Zeilen. Entweder der Fahrplan oder die Hausordnung, was hier vermutlich dasselbe ist. | Ansehen: Tafel; öffnet Nahansicht |
@@ -239,7 +239,7 @@ Ansehen im Thronsaal:
 | W2\_THRO\_MAX\_0320 | Max | Ein goldener Teller neben dem Thron, leer. Das ist quasi ein Napf für Götter. | Ansehen: Pharaonenteller |
 | W2\_THRO\_PIX\_0325 | Pixel | Ein goldener Napf, und er ist leer. Das ist kein Teller, das ist eine Einladung. // Eine Einladung, die hier offenbar keiner annimmt. Ich schon. Ich nehme Einladungen immer an. | Ansehen: Pharaonenteller, zweites Mal |
 | W2\_THRO\_MAX\_0330 | Max | Ich nehm den Teller mit. Falls irgendwer Gold in Scheibenform braucht. | Nehmen: Pharaonenteller; nach der Audienz |
-| W2\_THRO\_RAM\_0340 | Ramses | Der Teller? Nimm ihn. Oder nicht. Nein, nimm ihn. Oder … ach, er ist schon weg. Gut. Dann ist das entschieden. | nach dem Nehmen |
+| W2\_THRO\_RAM\_0340 | Ramses | Der Teller? Nimm ihn. Oder nicht. Nein, nimm ihn. Oder … ach, er ist schon weg. Gut. Dann ist das entschieden. | nach 0330 |
 | W2\_THRO\_MAX\_0350 | Max | Fackeln und Sonnenstrahlen gleichzeitig. Das ist Stimmungsbeleuchtung, bevor es das Wort dafür gab. | Ansehen: Fackeln |
 | W2\_THRO\_MAX\_0355 | Max | Die Fackeln qualmen, die Sonne nicht. Hier ist die Sonne das modernere Licht. | Ansehen: Fackeln, zweites Mal |
 
@@ -305,8 +305,8 @@ Der Hofkater zweifelt Pixels Gottstatus an. Pixel fordert ihn heraus: Wer mehr V
 | W2\_DUEL\_MAX\_0100 | Max | Opfergabe, Gefolge, Wunder. Drei Sachen. Opa würde sagen, das ist eine Einkaufsliste. | Notizbuch Seite 1 |
 | W2\_DUEL\_MAX\_0110 | Max | Eine Schale mit Datteln vor dem Kissen. Das ist seine Opfergabe, von der Küche gespendet, wahrscheinlich nicht ganz freiwillig. | Ansehen: Opferschale des Hofkaters |
 | W2\_DUEL\_PIX\_0115 | Pixel | Datteln. Für ihn. Von der Küche. // Ich habe soeben einen Antrag auf Gleichbehandlung gestellt. Bei mir selbst. Er wird gerade wohlwollend geprüft. | Ansehen: Opferschale des Hofkaters, zweites Mal |
-| W2\_DUEL\_MAX\_0120 | Max | Zwei schwitzende Männer mit Palmwedeln. Das ist sein Gefolge. Großes Gefolge, wenig Begeisterung. | Ansehen: Fächerwedler während des Duells |
-| W2\_DUEL\_MAX\_0125 | Max | Die wedeln jetzt für den Kater. Ich glaube, die haben nicht so genau nachgefragt, für wen. | Ansehen: Fächerwedler während des Duells, zweites Mal |
+| W2\_DUEL\_MAX\_0120 | Max | Zwei schwitzende Männer mit Palmwedeln. Das ist sein Gefolge. Großes Gefolge, wenig Begeisterung. | Ansehen: Fächerwedler, während des Duells |
+| W2\_DUEL\_MAX\_0125 | Max | Die wedeln jetzt für den Kater. Ich glaube, die haben nicht so genau nachgefragt, für wen. | Ansehen: Fächerwedler, während des Duells, zweites Mal |
 | W2\_DUEL\_MAX\_0130 | Max | Hier, bitte schön. Eine Dose, silbern, glänzend und leer. Unsere Opfergabe. | Thunfischdose auf Hofkater oder vor das Kissen |
 | W2\_DUEL\_HOF\_0140 | Hofkater | Leer. | schnuppert |
 | W2\_DUEL\_PIX\_0150 | Pixel | Leer ist eine Frage der Haltung. Sie glänzt, mein Lieber. // Deine Datteln dagegen glänzen nicht. Sie kleben bloß, und Kleben ist keine Ausstrahlung. | Opfergabe zählt; ein Diener verneigt sich |
@@ -1202,8 +1202,8 @@ Ramses' Volk ist unbeeindruckt und will Brot und Spiele. Die Parade findet in Ol
 | W2\_PARA\_RAM\_0270 | Ramses | Mein Volk jubelt. Mir! Also dem Kater. Also dir. Egal. Hier ist der Goldene Sack Pharaonenkorn. // Ich habe mich entschieden. Zum ersten Mal. Es fühlt sich … gut an. Glaube ich. | übergibt den Sack; Ziel der Welt |
 | W2\_PARA\_MAX\_0280 | Max | Ein goldener Sack, schwer und weich, mit Siegel. Der zweite von vier. Und ich hab dafür Sport gemacht. Freiwillig. Teilweise. | Ansehen: Goldener Sack Pharaonenkorn |
 | W2\_PARA\_MAX\_0285 | Max | Ich hab draufgeklopft, und er knistert. Für fünf Sportarten und einen Pharao klingt das ehrlich gesagt ziemlich unspektakulär. | Ansehen: Goldener Sack Pharaonenkorn, zweites Mal |
-| W2\_PARA\_PIX\_0290 | Pixel | Vierhundertfünf. Klingt nach einer Backzahl. | Ansehen: Siegel auf dem Sack |
-| W2\_PARA\_PIX\_0295 | Pixel | Ich habe die Zahl noch einmal gelesen. Vierhundertfünf. Sie klingt immer noch nach Ofen. | Ansehen: Siegel auf dem Sack, zweites Mal |
+| W2\_PARA\_PIX\_0290 | Pixel | Vierhundertfünf. Klingt nach einer Backzahl. | Ansehen: Goldener Sack Pharaonenkorn (Siegel auf dem Sack), Pixel |
+| W2\_PARA\_PIX\_0295 | Pixel | Ich habe die Zahl noch einmal gelesen. Vierhundertfünf. Sie klingt immer noch nach Ofen. | Ansehen: Goldener Sack Pharaonenkorn (Siegel auf dem Sack), Pixel, zweites Mal |
 | W2\_PARA\_PIX\_0300 | Pixel | Riecht nach Bäckerei. | Pixel schnuppert am Sack; Max überhört es |
 | W2\_PARA\_MAX\_0310 | Max | Was? |  |
 | W2\_PARA\_PIX\_0320 | Pixel | Nichts. Fahr. |  |

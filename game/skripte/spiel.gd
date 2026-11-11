@@ -367,15 +367,35 @@ func bedingung_ok(bedingungen: Array) -> bool:
 	return true
 
 
-## Ob ein Eintrag gerade gilt: Bedingungen, Raum (bei Figuren in mehreren Räumen), Zustand des
-## Gegenstands und aktive Figur („, Pixel“-Zeilen nur, wenn Pixel spielt).
+## Ob ein Eintrag gerade gilt: Bedingungen, Bedingung in Worten („nach dem Finaltag“), Raum (bei
+## Figuren in mehreren Räumen), Zustand des Gegenstands und aktive Figur („, Pixel“-Zeilen nur,
+## wenn Pixel spielt).
 func eintrag_passt(e: Dictionary, zustand := "") -> bool:
 	if not bedingung_ok(e.get("bedingung", [])):
+		return false
+	if not zusatz_ok(e.get("bedingung_text", "")):
 		return false
 	if e.has("raum") and is_instance_valid(R.current) and e.raum != Bauplan.raum(R.current.script_name).get("id", ""):
 		return false
 	if e.has("zustand") and e.zustand != zustand:
 		return false
+	return true
+
+
+## Zusatz in Worten an einer Ansehen-, Benutzen- oder Gegenstand-Zeile („vor dem Finaltag“,
+## „nach dem Tausch, Jingle“). Jeder Teil, den das Spiel oder die Regeln des Abschnitts kennen,
+## muss gelten. Unbekannte Teile sind Anmerkungen für die Regie und zählen nicht. Dass dabei
+## keine Zeile verdrängt wird, prüft tools/godot_raeume.py (verdraengte).
+func zusatz_ok(text: String) -> bool:
+	if text.is_empty():
+		return true
+	var ganz = _bedingung_text_wert(text)
+	if ganz != null:
+		return bool(ganz)
+	for teil in text.split(", "):
+		var w = _bedingung_text_wert(teil)
+		if w != null and not bool(w):
+			return false
 	return true
 
 
@@ -397,9 +417,9 @@ func ansehen_waehlen(eintraege: Array, mal: int, zustand := "") -> Dictionary:
 
 
 ## Ansehen (Rechtsklick) nach der Wiederholungsregel (05, „Wiederholung und Erschöpfung“):
-## 1. Mal die eigene Zeile, 2. Mal die „zweites Mal“-Zeile, ab dem 3. Mal eine Zeile aus dem
-## Wiederholungs-Pool (SYS_WDH_*) des Sprechers der ersten Zeile, nie zweimal dieselbe
-## hintereinander. Fehlt die „zweites Mal“-Zeile, kommt schon beim 2. Mal der Pool; fehlt der
+## 1. Mal die eigene Zeile, 2. Mal die „zweites Mal“-Zeile, 3. und 4. Mal die „drittes Mal“- und
+## „viertes Mal“-Zeile, wenn das Skript eine hat; sonst eine Zeile aus dem Wiederholungs-Pool (SYS_WDH_*) des Sprechers
+## der ersten Zeile, nie zweimal dieselbe hintereinander. Fehlt die „zweites Mal“-Zeile, kommt schon beim 2. Mal der Pool; fehlt der
 ## Pool (noch nicht geschrieben), wiederholen sich die eigenen Zeilen. Gezählt wird je Objekt,
 ## Zustand, erster Zeile und Figur im Zustand (gespeichert). Ohne eigene Zeile: Ersatzzeile.
 ## Liefert die gesagte Zeilen-ID ("" bei Ersatzzeile).
@@ -419,6 +439,10 @@ func ansehen(eintraege: Array, schluessel: String, zustand := "") -> String:
 	if n == 2 and hat_zweite:
 		await sagen_eintrag(zweite)
 		return zweite.zeile
+	var nte := ansehen_waehlen(eintraege, n, zustand)
+	if n >= 3 and int(nte.get("mal", 1)) == n:
+		await sagen_eintrag(nte)
+		return nte.zeile
 	var kz: String = erste.sprecher if erste.sprecher in ["MAX", "PIX"] else kuerzel_von(C.player)
 	var wahl := pool_zeile(Bauplan.wiederholung.get(kz, []), "WDH_" + kz)
 	if wahl.is_empty():
@@ -565,18 +589,29 @@ func raum_wechseln(ziel_raum_id: String) -> void:
 
 #region Figuren ####################################################################################
 ## Wechsel ist erlaubt, wenn Pixel im Abschnitt spielbar ist (Welt-Tabelle), der Wechsel
-## freigeschaltet ist (<Präfix>_WECHSEL_FREI, Welt 1: erstes Betreten der Taverne) und beide im
-## Raum stehen. Im Prolog nie (raetsel/prolog-und-welt-1.md: Wechsel erst ab Welt 1).
+## freigeschaltet ist und beide im Raum stehen. Im Prolog nie (raetsel/prolog-und-welt-1.md:
+## Wechsel erst ab Welt 1).
 func wechsel_moeglich() -> bool:
 	if not Bauplan.figur_spielbar(Zustand.abschnitt, "pixel"):
 		return false
-	if not Zustand.ist(praefix() + "_WECHSEL_FREI"):
+	if not wechsel_frei():
 		return false
 	var regel_w = regel_wert("wechsel_moeglich")  # Welt 3: Wechsel über die Ebenen hinweg
 	if regel_w != null:
 		return bool(regel_w)
 	return is_instance_valid(C.Pixel) and C.Pixel.is_inside_tree() \
 		and is_instance_valid(C.Max) and C.Max.is_inside_tree()
+
+
+## Ob der Wechsel im Abschnitt freigeschaltet ist. Die Welten setzen dafür bei der Ankunft den
+## Schalter <Präfix>_WECHSEL_FREI (Welt 1: erstes Betreten der Taverne). Abschnitte ohne eigenen
+## Schalter antworten über ihre Regeln (wert "wechsel_frei"): Der Abschnitt „finale“ hat vier
+## Präfixe (ZS1 bis FI), dort ist der Wechsel nur im letzten Rätsel frei (skripte/finale.gd).
+func wechsel_frei() -> bool:
+	var regel_f = regel_wert("wechsel_frei")
+	if regel_f != null:
+		return bool(regel_f)
+	return Zustand.ist(praefix() + "_WECHSEL_FREI")
 
 
 func praefix() -> String:
@@ -745,11 +780,15 @@ func _zuruf() -> void:
 	await sagen(zr.sprecher, zr.zeile)
 
 
-## Bedingungen, die das Skript in Worten nennt (nicht „vor/nach Rätsel“).
+## Bedingungen, die das Skript in Worten nennt (nicht „vor/nach Rätsel“). Gesprächsoptionen und
+## Zurufe mit unbekanntem Text bleiben aus: Dann entscheidet der Rätselcode.
 func _bedingung_text_ok(text: String) -> bool:
+	return text.is_empty() or _bedingung_text_wert(text) == true
+
+
+## Wert einer Bedingung in Worten; null, wenn weder das Spiel noch die Regeln sie kennen.
+func _bedingung_text_wert(text: String) -> Variant:
 	match text:
-		"":
-			return true
 		"vor dem Dachboden":
 			return not Zustand.war_in("dachboden")
 		"nach der Nahansicht Kalender":
@@ -776,7 +815,7 @@ func _bedingung_text_ok(text: String) -> bool:
 	var w = regel_wert("bedingung_text", text)
 	if w != null:
 		return bool(w)
-	return false  # unbekannt: Rätselcode entscheidet (Option bzw. Zuruf bleibt aus)
+	return null
 
 
 ## Öffentlicher Zugang für Gespräche und Tests.

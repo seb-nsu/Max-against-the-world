@@ -292,6 +292,8 @@ func _bedingung_text(text: String) -> Variant:
 			return Zustand.ist("HEXENSCHUSS")
 		"ohne Olivenöl in der Tasche":
 			return not _hat("olivenoel")
+		"mit Olivenöl":
+			return _hat("olivenoel")
 		"nur bei FREUND_0815":
 			return Zustand.ist("FREUND_0815")
 		"nach dem Portal":
@@ -302,6 +304,10 @@ func _bedingung_text(text: String) -> Variant:
 			return not Zustand.geloest("R4") if _raum_id() == "kueche_orakel" else null
 		"nach der Szene":
 			return Zustand.geloest("R4")
+		"Panzertür offen":
+			return Zustand.ist("W3_PANZERTUER_OFFEN")
+		"nach dem zweiten Tausch":
+			return Zustand.geloest("R9d")
 	return null
 
 
@@ -1438,7 +1444,7 @@ func ansehen_inventar_telefonbuchseite(_obj, _x) -> bool:
 ## Pixels Lob nur ohne einen einzigen Hinweis der Stufe 3 in dieser Welt
 func _hinweis_stufe_3() -> bool:
 	for r in Zustand.alle_raetsel("welt-3"):
-		if Hinweise.stufe(str(r.get("id", ""))) >= 3:
+		if Hinweise.stufe(str(r.get("id", "")), "welt-3") >= 3:
 			return true
 	return false
 
