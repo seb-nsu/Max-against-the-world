@@ -859,8 +859,10 @@ func _code_sicht(oid: String) -> bool:
 		return (not t.has("braucht") or _hat(t.braucht)) and not t.get("loesung", "") in _tausch.geloest)
 	var texte: Array = liste.map(func(t): return t.text)
 	texte.append("UI_W3_CODE_SICHT_AUS")
+	Klang.geraeusch("code_sicht")  # Code-Sicht an
 	var w := await Spiel.auswahl(texte)
 	if w < 0 or w >= liste.size():
+		Klang.geraeusch("code_sicht")  # und wieder aus
 		return true
 	await _tauschen(rid, liste[w])
 	return true
@@ -868,6 +870,7 @@ func _code_sicht(oid: String) -> bool:
 
 func _tauschen(rid: String, t: Dictionary) -> void:
 	_tausch.budget = int(_tausch.budget) - 1
+	Klang.geraeusch("glitch")  # jeder Tausch ist ein Fehler im Bild
 	await _szene(t.zeilen)
 	var l: String = t.get("loesung", "")
 	if l.is_empty():

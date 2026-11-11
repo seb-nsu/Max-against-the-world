@@ -39,7 +39,31 @@ const REZEPTE := {
 		["rechteck", 1200, 1200, 0.03, 0.25, true], ["sin", 0, 0, 0.09, 0.0, false],
 		["rechteck", 1200, 1200, 0.03, 0.25, true], ["sin", 0, 0, 0.16, 0.0, false],
 		["rechteck", 1200, 1200, 0.03, 0.25, true]],
+	# Schritte: sehr kurz und leise, sie kommen mehrmals je Sekunde
+	"schritt_teppich": [["rauschen", 0, 0, 0.05, 0.07, true]],
+	"schritt_stein": [["rauschen", 0, 0, 0.04, 0.13, true]],
+	"pfoten_holz": [["rauschen", 0, 0, 0.025, 0.07, true]],
+	"sand_schritte": [["rauschen", 0, 0, 0.08, 0.09, true]],
+	"piepsi": [["sin", 1800, 2400, 0.06, 0.25, true], ["sin", 2600, 2000, 0.09, 0.25, true]],
+	"takt": [["rechteck", 1000, 1000, 0.015, 0.25, true]],
+	"tuergong": [["glocke", 880, 880, 0.3, 0.3, true], ["glocke", 660, 660, 0.5, 0.3, true]],
 }
+
+## Schleifen der Atmosphäre: leise, zwei Sekunden lang, ohne Abklingen. Was hier fehlt, bekommt
+## ein leises Rauschen.
+const SCHLEIFEN := {
+	"uhr_ticken": [["rechteck", 2000, 2000, 0.012, 0.1, true], ["sin", 0, 0, 0.488, 0.0, false],
+		["rechteck", 1600, 1600, 0.012, 0.08, true], ["sin", 0, 0, 0.488, 0.0, false]],
+	"kuehlregal": [["sin", 100, 100, 2.0, 0.08, false]],
+	"w3_atmo": [["sin", 60, 60, 2.0, 0.08, false]],
+	"w4_atmo": [["sin", 120, 120, 2.0, 0.05, false]],
+	"laser": [["rechteck", 180, 180, 2.0, 0.03, false]],
+	"regen_strasse": [["rauschen", 0, 0, 2.0, 0.06, false]],
+	"rauschen": [["rauschen", 0, 0, 2.0, 0.07, false]],
+	"taverne_stimmen": [["rauschen", 0, 0, 2.0, 0.04, false]],
+	"stadion_jubel": [["rauschen", 0, 0, 2.0, 0.05, false]],
+}
+const SCHLEIFE_STANDARD := [["rauschen", 0, 0, 2.0, 0.02, false]]
 
 static var _cache := {}
 
@@ -48,6 +72,17 @@ static func klang(id: String) -> AudioStreamWAV:
 	if not _cache.has(id):
 		_cache[id] = _bauen(REZEPTE.get(id, _standard(id)), hash(id))
 	return _cache[id]
+
+
+## Schleife für die Atmosphäre: derselbe Aufbau wie klang(), aber mit Wiederholung.
+static func schleife(id: String) -> AudioStreamWAV:
+	var name := "schleife/" + id
+	if not _cache.has(name):
+		var s := _bauen(SCHLEIFEN.get(id, SCHLEIFE_STANDARD), hash(id))
+		s.loop_mode = AudioStreamWAV.LOOP_FORWARD
+		s.loop_end = s.data.size() / 2
+		_cache[name] = s
+	return _cache[name]
 
 
 static func _standard(id: String) -> Array:

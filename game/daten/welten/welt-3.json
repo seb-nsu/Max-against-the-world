@@ -21,6 +21,7 @@
    ],
    "erreichbar_ab": "start",
    "musik": "w3_unterstadt",
+   "atmo": "regen_strasse",
    "zustaende": []
   },
   {
@@ -36,6 +37,7 @@
    ],
    "erreichbar_ab": "R1b",
    "musik": "w3_unterstadt",
+   "atmo": "regen_strasse",
    "zustaende": [
     "Fächer zu",
     "Fächer offen"
@@ -58,6 +60,7 @@
    ],
    "erreichbar_ab": "R3b",
    "musik": "w3_basis",
+   "atmo": "w3_atmo",
    "zustaende": [
     "Fenster zu",
     "Fenster offen",
@@ -75,6 +78,7 @@
    ],
    "erreichbar_ab": "R3b",
    "musik": "w3_basis",
+   "atmo": "w3_atmo",
    "zustaende": [
     "Eimer voll",
     "Eimer ausgekippt"
@@ -92,6 +96,7 @@
    ],
    "erreichbar_ab": "start",
    "musik": "w3_unterstadt",
+   "atmo": "w3_atmo",
    "zustaende": [
     "Tür zu",
     "Tür offen"
@@ -112,6 +117,7 @@
    ],
    "erreichbar_ab": "R3b",
    "musik": "w3_simulation",
+   "atmo": "keine",
    "zustaende": [
     "Tag",
     "Nacht"
@@ -129,6 +135,7 @@
    ],
    "erreichbar_ab": "R3b",
    "musik": "w3_simulation",
+   "atmo": "keine",
    "zustaende": [
     "Sparschwein auf dem Regal",
     "Scherben am Boden"
@@ -147,6 +154,7 @@
    ],
    "erreichbar_ab": "R5",
    "musik": "w3_simulation",
+   "atmo": "keine",
    "zustaende": []
   },
   {
@@ -162,6 +170,7 @@
    ],
    "erreichbar_ab": "R9a",
    "musik": "w3_labor",
+   "atmo": "w3_atmo",
    "zustaende": [
     "Ausgangstür zu",
     "Ausgangstür offen"
@@ -180,6 +189,7 @@
    ],
    "erreichbar_ab": "R9b",
    "musik": "w3_labor",
+   "atmo": "laser",
    "zustaende": [
     "Laser tödlich",
     "Laser harmlos"
@@ -198,6 +208,7 @@
    ],
    "erreichbar_ab": "R9c",
    "musik": "w3_labor",
+   "atmo": "w3_atmo",
    "zustaende": [
     "Tür zu",
     "Tür offen"
@@ -215,6 +226,7 @@
    ],
    "erreichbar_ab": "R9d",
    "musik": "w3_kern",
+   "atmo": "w3_atmo",
    "zustaende": [
     "Zelle glühend",
     "Zelle vereist",

@@ -1106,3 +1106,40 @@ Entscheidungen, bitte prüfen:
 Offen bleibt: Die Bilder für Hebel, Sandgrube und Tanzfläche gibt es noch nicht. Die Spielflächen zeigen bis dahin Kästen mit Namen.
 
 Prüfläufe vor dem Commit von Punkt 1: `tools/pruefen.py` 0 Fehler, 0 Warnungen. Alle acht Dokument-Prüfungen grün. Godot: Prolog 779, Welt 2 56, Welt 3 64, Welt 4 24, Finale 26, Hinweise 19, Ansehen 31, Menüs 74, Minispiele 63, Prolog mit echten Sprechblasen 778, Bildvergleich 55 Räume. Überall 0 Fehler. Die Telemetrie-Auswertung der Testläufe ist grün.
+
+### Punkt 2: Ton verdrahten
+
+Jeder Klang aus `docs/04-audio.md` hat jetzt seinen Einsatz im Spiel. Es spielen Platzhalter-Töne, bis die Dateien da sind. Die echten Dateien legst du nur noch in `game/audio/musik/`, `game/audio/jingles/` und `game/audio/geraeusche/`.
+
+| Was | Vorher | Jetzt |
+| --- | --- | --- |
+| Geräusche | 14 standen in einer Liste im Code, davon rief das Spiel nur 11 wirklich auf | 70 Kennungen, jede mit Einsatz im Spiel |
+| Finale | überall `gegenwart` | `finale_maschine` ab der Zeile, in der die Maschine anbrummt, `finale_geburtstag` ab der Auflösung, am Supermarkt kein Stück, Titelthema mit der Schwarzblende |
+| Grundatmosphäre | keine | leise Schleife je Raum unter der Musik |
+| Schritte | keine | Max und Pixel je nach Boden |
+| Laute statt Stimme | Brabbel | Ziege, Huhn, Schwan, Piepsi, Zombie und Löwe spielen ihr Geräusch |
+| Prüfung | Liste im Code galt als „verdrahtet“ | Werkzeug zählt nur echte Aufrufe und gleicht Dokument und Spiel ab |
+
+So ist es gebaut:
+
+- **Tabellen statt verstreuter Aufrufe.** Neu ist `game/skripte/klang_einsatz.gd`. Darin steht, welches Geräusch zu welcher Skriptzeile gehört (45 Zeilen), zu welchem Objekt (21), zu welchem Gegenstand (5), welche Figur einen Laut statt einer Stimme hat (7) und welcher Boden wie klingt. Wer einen Einsatz ändern will, ändert eine Zeile der Tabelle.
+- **Atmosphäre.** Jeder Raum hat in der Welt-Tabelle ein Feld `atmo`. `keine` heißt: nur Musik. `tupfer` setzt einen einzelnen Laut dazu (der Frosch am Wasserschloss, alle 14 bis 32 Sekunden).
+- **Stücke mitten in der Szene.** Die Tabelle `MUSIK` hängt ein Stück an eine Skriptzeile. So setzen die Finale-Stücke, das Goblin-Arbeitslied, Waldemars Nummer und der Abspann ein. In den Minispielen des Fünfkampfs läuft `w2_fuenfkampf`.
+- **Direkte Aufrufe** gibt es nur, wo weder Zeile noch Objekt passt: Abfahrt der Zeitfähre, Sanduhr während der Überfahrt, Code-Sicht an und aus, jeder Tausch, Jubel beim Treffer am Hebel.
+- **Platzhalter.** Schleifen sind sehr leise (Rauschen, Brummen, Ticken), Schritte kurz und leise.
+- **Tests:** neu `game/tests/ton.gd` mit 32 Prüfungen, läuft in GitHub Actions. Dazu Ton-Prüfungen in den Anspiel-Tests von Welt 2, Welt 3 und Finale.
+- **Werkzeuge:** `tools/audio_liste.py --pruefen` meldet jede Kennung, die im Dokument steht und im Spiel fehlt, und umgekehrt, und jede Zeilen-ID der Tabellen, die es im Skript nicht gibt. `tools/pruefen.py` prüft `atmo` und `tupfer` gegen die Geräusch-Tabellen.
+- **Dokumente:** `docs/04-audio.md` (Spalte Einsatz jeder Geräusch-Zeile, Absätze Finale, Grundatmosphäre, Platzhalter), `docs/welten/*.yaml` (Feld `atmo` bei allen 58 Räumen), `docs/03-produktion.md`, `docs/entscheidungen.md`, `game/README.md`.
+
+Entscheidungen, bitte prüfen:
+
+- **`opa_schnarchen` heißt jetzt `schnarchen`.** Die Tabelle sah es für den Prolog vor, „solange Opa schläft“. Opa schläft im Spiel aber nie, er ruft vom Dachboden. Geschnarcht wird an zwei anderen Stellen: die Beule im Teppich am Wasserschloss und Ciceros Rede im Zeitraffer. Dort spielt es jetzt.
+- **Fünf Einsätze standen auf „noch festlegen“.** Pixel miaut, wenn er etwas nicht kann oder will. Er schnurrt im Prolog im Schlaf. Gefaucht wird von Minka, Schwan und Hofkater. Das Huhn gackert statt zu brabbeln. Der Frosch quakt am Wasserschloss. Das Steinschleifen gehört dem Steinmetz. Der Laser brummt als Atmosphäre in Testkammer 2.
+- **Neue Kennung `loewe`.** Die Stimmen-Tabelle gibt dem Löwen einen Laut, eine Kennung gab es nicht.
+- **Atmosphäre nur, wo die Tabelle sie vorsieht.** Innenräume in Welt 1 und 2 und die Simulation in Welt 3 haben `atmo: keine`. Wenn dort doch etwas laufen soll, ist es ein Wort in der Welt-Tabelle.
+- **Dosenöffner im Finale.** Die Tabelle nannte „Prolog und Finale“. Im Finale gibt es den Dosenöffner nicht, also spielt er nur im Prolog.
+- **Drei Kennungen der alten Liste rief das Spiel gar nicht auf:** `inventar`, `kombinieren` und `werbeblock_start`, dazu die Jingles `lachkonserve` und `gluecksrad`. Sie haben jetzt Einsätze.
+
+Offen bleibt: Der Abspann hat noch keinen eigenen Bildschirm. Das Stück `abspann` setzt deshalb mit dem ersten Abspann-Foto ein.
+
+Prüfläufe vor dem Commit von Punkt 2: `tools/pruefen.py` 0 Fehler, 0 Warnungen. Alle acht Dokument-Prüfungen grün, darunter der neue Abgleich von Ton-Dokument und Spiel. Godot: Prolog 779, Welt 2 58, Welt 3 68, Welt 4 24, Finale 33, Hinweise 19, Ansehen 31, Menüs 74, Minispiele 63, Ton 32, Prolog mit echten Sprechblasen 778, Bildvergleich 55 Räume. Überall 0 Fehler. Die Telemetrie-Auswertung der Testläufe ist grün.

@@ -79,6 +79,8 @@ func _on_dialog_finished(dialog: PopochiuDialog) -> void:
 
 # Called when an inventory `item` is selected (for example, by clicking it).
 func _on_inventory_item_selected(item: PopochiuInventoryItem) -> void:
+	if is_instance_valid(item):
+		Klang.geraeusch("inventar")  # ein Gegenstand kommt aus der Tasche in die Hand
 	super(item)
 
 

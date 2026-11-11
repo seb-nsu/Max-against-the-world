@@ -65,6 +65,7 @@ func _on_room_entered() -> void:
 	if not ab.is_empty() and not _im_abschnitt(Zustand.abschnitt):
 		Zustand.abschnitt = ab
 	Klang.raum_musik(raum_id())
+	Klang.raum_atmo(raum_id())
 	var erster_besuch := not Zustand.war_in(raum_id())
 	Telemetrie.raum_betreten(raum_id())
 	Zustand.besuche(raum_id())
@@ -100,6 +101,7 @@ func _on_restore_from_savegame() -> void:
 	Spiel.herkunft_raum = ""
 	Telemetrie.raum_betreten(raum_id())
 	Klang.raum_musik(raum_id())
+	Klang.raum_atmo(raum_id())
 	partner_aufstellen()
 	_zustand_anwenden()
 	tiefe_anwenden()

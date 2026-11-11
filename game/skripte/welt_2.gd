@@ -529,6 +529,10 @@ func fahren(ziel: String) -> void:
 			Zustand.setze_wert("W2_FEIGE_ZUSTAND", "feigenkern")
 	if _hat("feigen"):
 		zeilen.append("W2_FAHR_MAX_0190")
+	# Abfahrt: Glocke und Sanduhr-Dreh, während der Überfahrt rieselt der Sand
+	Klang.geraeusch("zeitfaehre")
+	await _sag(zeilen.pop_front())
+	Klang.geraeusch("sanduhr")
 	zeilen.append(ANKUNFT[ziel])
 	await _szene(zeilen)
 	Zustand.setze_wert("W2_FAEHRE_STEG", ziel)
@@ -1143,6 +1147,7 @@ func benutzen_wurfhebel(_obj, _x) -> bool:
 		return false
 	var hebel := CQHebel.new(GEWICHT, _liste("W2_KORB"), int(Zustand.wert("W2_WINKEL", CQHebel.MITTEL)))
 	var feld := Spiel.minispiel_oeffnen(HEBEL_FELD)
+	Klang.musik("w2_fuenfkampf")
 	feld.zeigen(hebel, _hebel_taschen())
 	var ende := ""  # "treffer", "nachsicht" (Tag 1 endet) oder "zu" (später weiter)
 	while ende.is_empty():
@@ -1167,6 +1172,7 @@ func benutzen_wurfhebel(_obj, _x) -> bool:
 		if ende.is_empty():
 			feld.neu_aufstellen()
 	Spiel.minispiel_schliessen()
+	Klang.raum_musik(_raum_id())
 	if ende != "zu":
 		await _tag_1_ende(ende == "treffer")
 	return true
@@ -1189,6 +1195,7 @@ func _hebel_sprung(feld, hebel: CQHebel) -> String:
 	var fehler := int(Zustand.wert("W2_HEBEL_FEHLER", 0))
 	await feld.sprung(ergebnis)
 	if ergebnis == "treffer":
+		Klang.geraeusch("stadion_jubel")
 		await _szene(["W2_HEBL_NAR_0300", "W2_HEBL_ARC_0310"])
 		return "treffer"
 	if ergebnis == "leicht":
@@ -1603,6 +1610,7 @@ func _rede_ringen() -> bool:
 	await _szene(["W2_RING_CIC_0010", "W2_RING_MAX_0020"])
 	var ringen := CQRedeRingen.new(_liste("W2_KONTER"), PASSEND)
 	var feld := Spiel.minispiel_oeffnen(RINGEN_FELD)
+	Klang.musik("w2_fuenfkampf")
 	feld.zeigen(ringen, KONTER_ZEILE)
 	var nachsicht := false
 	while not ringen.gewonnen():
@@ -1625,6 +1633,7 @@ func _rede_ringen() -> bool:
 			nachsicht = true
 			break
 	Spiel.minispiel_schliessen()
+	Klang.raum_musik(_raum_id())
 	await _szene(["W2_RING_NAR_0230", "W2_RING_CIC_0240", "W2_RING_MAX_0250", "W2_RING_PIX_0260",
 		"W2_RING_RAM_0270"])
 	await _geben("olivenkranz")

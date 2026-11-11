@@ -33,7 +33,8 @@ raeume:
     groesse: 640x360
     ausgaenge: [treppenhaus]         # Luke im Finale verriegelt bis zur Auflösung
     erreichbar_ab: start
-    musik: gegenwart
+    musik: gegenwart                 # Zwischenspiele; im Finale ab dem Start der Maschine finale_maschine, ab der Auflösung finale_geburtstag (Regel in game/skripte/finale.gd)
+    atmo: uhr_ticken
     zustaende: [Später Nachmittag, Früher Abend, Abendrot, Nacht Maschine läuft, Nacht Maschine steht]
 
   - id: treppenhaus
@@ -42,7 +43,8 @@ raeume:
     groesse: 640x360
     ausgaenge: [dachboden, wohnzimmer]
     erreichbar_ab: F1d               # Abgang zum Wohnzimmer als Szene nach der Auflösung
-    musik: gegenwart
+    musik: finale_maschine   # im Finale kein eigener Besuch; der Schnitt gehört zum Maschinen-Stück
+    atmo: uhr_ticken
     zustaende: [Später Abend]
 
   - id: wohnzimmer
@@ -51,7 +53,8 @@ raeume:
     groesse: 640x360
     ausgaenge: [treppenhaus]         # zum Supermarkt nur als Szene (FI_ABSP)
     erreichbar_ab: F1d
-    musik: gegenwart
+    musik: finale_geburtstag   # ab der Auflösung
+    atmo: uhr_ticken
     zustaende: [Geburtstag]
 
   - id: supermarkt
@@ -60,7 +63,8 @@ raeume:
     groesse: 640x360
     ausgaenge: []                    # Endbild, nur die Ladentür (Spielende)
     erreichbar_ab: F1d               # per Szene aus dem Wohnzimmer
-    musik: gegenwart                 # mit der Schwarzblende setzt das Titelthema ein (FI_SUPM_NAR_0090), danach Abspann
+    musik: stille   # kein Stück, nur Kühlregal und Türgong; mit der Schwarzblende setzt das Titelthema ein (FI_SUPM_NAR_0090), danach Abspann
+    atmo: kuehlregal
     zustaende: [Später Abend]
 
 figuren:

@@ -16,6 +16,7 @@ raeume:
     ausgaenge: [treppenhaus]
     erreichbar_ab: start
     musik: gegenwart
+    atmo: uhr_ticken
     zustaende: [Nachmittag]          # Abend und Geburtstag gehören zu Welt 3, Welt 4 und Finale
 
   - id: treppenhaus
@@ -25,6 +26,7 @@ raeume:
     ausgaenge: [wohnzimmer, dachboden]
     erreichbar_ab: start
     musik: gegenwart
+    atmo: uhr_ticken
     zustaende: [Nachmittag]
 
   - id: dachboden
@@ -34,6 +36,7 @@ raeume:
     ausgaenge: [treppenhaus]         # Rückweg durch die Bodenluke verweigert Max (P0_DACH_MAX_1000)
     erreichbar_ab: start
     musik: gegenwart
+    atmo: uhr_ticken
     zustaende: [Nachmittag]
 
 figuren:

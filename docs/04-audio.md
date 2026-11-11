@@ -28,14 +28,14 @@ Das Audio-Gerüst steht (`game/skripte/klang.gd`, Autoload „Klang“): Jede St
 
 | Art | Ordner (unter `game/`) | ID | Woher |
 | --- | --- | --- | --- |
-| Musik | `audio/musik/<id>.ogg` | `titel`, `zappomat`, `werbeblock` und die Raum-Stücke | Raum-Stücke aus der Welt-Tabelle (`musik: <ID>`); wechselt mit einer Sekunde Überblendung, dasselbe Stück läuft weiter |
+| Musik | `audio/musik/<id>.ogg` | `titel`, `zappomat`, `werbeblock` und die Raum-Stücke | Raum-Stücke aus der Welt-Tabelle (`musik: <ID>`, `stille` = kein Stück); Stücke, die mitten in einer Szene einsetzen, stehen in `game/skripte/klang_einsatz.gd` (Tabelle `MUSIK`: Skriptzeile → Stück). Wechselt mit einer Sekunde Überblendung, dasselbe Stück läuft weiter |
 | Jingles | `audio/jingles/<id>.ogg` | `aufgehoben`, `geloest`, `welt_geschafft`, `falsch`, `lachkonserve`, `gluecksrad` | Gegenstand bekommen, Rätselschritt gelöst, Welt geschafft, Ersatzzeile |
-| Geräusche | `audio/geraeusche/<id>.ogg` | `ui_klick`, `inventar`, `seite`, `kombinieren`, `fehler`, `wechsel`, `hinweis`, `speichern`, `nahansicht`, `notiz`, `zappomat_sog`, `werbeblock_start`, `umschalten` (Fernbedienung), `gong` (Welt 4, Rauschen um acht) | Bedienung und Spielsysteme (Tabelle Geräusche). Diese 14 ruft der Code schon auf; die übrigen Kennungen der Tabelle Geräusche sind vergeben, aber noch nicht verdrahtet |
+| Geräusche | `audio/geraeusche/<id>.ogg` | `ui_klick`, `inventar`, `seite`, `kombinieren`, `fehler`, `wechsel`, `hinweis`, `speichern`, `nahansicht`, `notiz`, `zappomat_sog`, `werbeblock_start`, `umschalten` (Fernbedienung), `gong` (Welt 4, Rauschen um acht) | Bedienung und Spielsysteme; dazu alle Kennungen der Tabellen unter „Geräusche“ (Welten, Atmosphäre, Schritte, Laute). Der Code ruft jede davon auf, `tools/audio_liste.py --pruefen` gleicht das ab |
 | Stimmen | `audio/stimmen/<sprache>/<ZEILEN_ID>.ogg` | Zeilen-ID der Sprechblase, Kaskaden mit `_2`, `_3` | `export/audio-zeilen.csv` aus `tools/skript_export.py`; NAR bleibt stumm |
 
 `.wav` und `.mp3` gehen auch. `python3 tools/audio_liste.py` schreibt `export/audio-stand.csv` (welche ID gebraucht wird, wo, und ob die Datei schon da ist); mit `--pruefen` meldet es Dateien, deren Name zu keiner ID passt (läuft in GitHub Actions). Lautstärken kommen aus den Optionen über die Busse Musik, Geraeusche und Stimmen.
 
-**Brabbel-Laute und Platzhalter-Töne (bis die echten Dateien da sind):** Ohne Stimmdatei brabbelt jede Figur: je Silbe des angezeigten Textes ein kurzer Ton, Tonhöhe und Tempo je Figur aus `game/skripte/klang.gd` (rund 30 Hauptfiguren eingestellt, alle übrigen bekommen Werte aus ihrem Kürzel, damit jede anders klingt; Erzähler, Toilette, Schrank und Berater bleiben stumm). Fehlt eine Datei für ein Geräusch oder einen Jingle, erzeugt `game/skripte/platzhalter_klang.gd` einen kurzen Ton aus Sinus, Rechteck, Rauschen oder Glocke (eigenes Rezept für jede ID der Tabelle oben, unbekannte IDs bekommen einen Ton, dessen Höhe aus der ID folgt). Beides steht in den Optionen („Brabbel-Laute“, „Platzhalter-Töne“) und ist standardmäßig an; eine echte Datei hat immer Vorrang. Im Headless-Test bleibt beides aus. Die Entscheidung über die Sprachausgabe (Tabelle unten) bleibt offen; Brabbel ist bis dahin der Platzhalter.
+**Brabbel-Laute und Platzhalter-Töne (bis die echten Dateien da sind):** Ohne Stimmdatei brabbelt jede Figur: je Silbe des angezeigten Textes ein kurzer Ton, Tonhöhe und Tempo je Figur aus `game/skripte/klang.gd` (rund 30 Hauptfiguren eingestellt, alle übrigen bekommen Werte aus ihrem Kürzel, damit jede anders klingt; Erzähler, Toilette, Schrank und Berater bleiben stumm). Fehlt eine Datei für ein Geräusch oder einen Jingle, erzeugt `game/skripte/platzhalter_klang.gd` einen kurzen Ton aus Sinus, Rechteck, Rauschen oder Glocke (eigenes Rezept für jede ID der Tabelle oben, unbekannte IDs bekommen einen Ton, dessen Höhe aus der ID folgt). Die Schleifen der Atmosphäre bekommen als Platzhalter ein sehr leises Rauschen, Brummen oder Ticken von zwei Sekunden Länge, Schritte ein kurzes leises Rauschen. Beides steht in den Optionen („Brabbel-Laute“, „Platzhalter-Töne“) und ist standardmäßig an; eine echte Datei hat immer Vorrang. Im Headless-Test bleibt beides aus. Die Entscheidung über die Sprachausgabe (Tabelle unten) bleibt offen; Brabbel ist bis dahin der Platzhalter.
 
 ## Prompt-Regeln
 
@@ -62,8 +62,8 @@ Welcher Raum welches Stück spielt, steht beim Raum in der Welt-Tabelle (`musik:
 
 | ID | Stück | Einsatz | Prompt |
 | --- | --- | --- | --- |
-| titel | Titelthema | Hauptmenü, Abspann-Variante; kein Raum-Stück | Playful adventure main theme, whistled melody over plucked guitar, upright bass and light brushed drums, 110 BPM, curious and mischievous, a short cheerful five-note motif repeated |
-| gegenwart | Opas Wohnzimmer | Prolog, Rückkehr in die Gegenwart (Zwischenspiele); im Finale nur noch, bis die beiden Finale-Stücke zugewiesen sind | Cozy lo-fi living room music, warm electric piano, soft vinyl crackle, slow bass, 80 BPM, lazy Sunday afternoon, slightly sleepy |
+| titel | Titelthema | Hauptmenü; im Finale ab der Schwarzblende am Supermarkt (FI_SUPM_NAR_0090); kein Raum-Stück | Playful adventure main theme, whistled melody over plucked guitar, upright bass and light brushed drums, 110 BPM, curious and mischievous, a short cheerful five-note motif repeated |
+| gegenwart | Opas Wohnzimmer | Prolog, Rückkehr in die Gegenwart (Zwischenspiele); im Finale nur die Heimkehr auf den Dachboden, bis die Maschine anläuft | Cozy lo-fi living room music, warm electric piano, soft vinyl crackle, slow bass, 80 BPM, lazy Sunday afternoon, slightly sleepy |
 | zappomat | Zapp-O-Mat | Übergang in jede Welt; kein Raum-Stück | Short sci-fi transition sting, rising analog synth sweep, TV static and a bright chime at the end, 4 seconds, not a loop |
 | w1_dorf | Schwurbelstein Dorf | Welt 1 | Medieval village tune, lute, recorder and tambourine, 100 BPM, cheerful and slightly silly, like a bard who knows only one song |
 | w1_schule | Zauberschule | Welt 1 | Whimsical magical school music, celesta, pizzicato strings and bassoon, 95 BPM, mysterious but funny, sparkling |
@@ -90,12 +90,12 @@ Welcher Raum welches Stück spielt, steht beim Raum in der Welt-Tabelle (`musik:
 | w4_spukhaus | Spukhaus | Welt 4, Spukhaus; das Rhythmus-Minispiel behält Mitternachts-TV | Creaky haunted house music, detuned harpsichord, theremin, slow heartbeat drum and a distant music box, 72 BPM, spooky but cozy, a ghost who enjoys company |
 | w4_zentrale | Senderzentrale, Empfang | Welt 4, Senderzentrale auf Kanal 999 bis vor das Studio; die Zappmann-Show beginnt erst im Studio | Smooth corporate lobby jazz, muted trumpet, vibraphone and brushed drums, 92 BPM, polished and slightly sinister, elevator music that watches you |
 | w4_zappmann | Zappmann-Show | Welt 4, Begegnung mit Zappmann | Glitzy late-night talk show band, big band brass, piano and drums, 120 BPM, smug and shiny |
-| finale_maschine | Finale, Maschine läuft | Finale auf dem Dachboden, vom Start der Maschine bis zur roten Taste; auch der Schnitt ins Treppenhaus. Noch keinem Raum zugewiesen (siehe unten) | The main theme played faster and tighter, ticking percussion like a kitchen timer, low brass pulses, a steam whistle rising every eight bars, 126 BPM, tense but comic, never scary |
-| finale_geburtstag | Finale, Geburtstag | Finale im Wohnzimmer, ab der Auflösung. Noch keinem Raum zugewiesen (siehe unten) | A warm, slightly clumsy living-room version of the main theme on upright piano, accordion and brushed drums, 92 BPM, like a family playing it themselves |
+| finale_maschine | Finale, Maschine läuft | Finale auf dem Dachboden, vom Start der Maschine (FI_DACH_NAR_0190) bis zur roten Taste; auch der Schnitt ins Treppenhaus (siehe unten) | The main theme played faster and tighter, ticking percussion like a kitchen timer, low brass pulses, a steam whistle rising every eight bars, 126 BPM, tense but comic, never scary |
+| finale_geburtstag | Finale, Geburtstag | Finale ab der Auflösung (FI_AUFL_NAR_0010) und im Wohnzimmer (siehe unten) | A warm, slightly clumsy living-room version of the main theme on upright piano, accordion and brushed drums, 92 BPM, like a family playing it themselves |
 | werbeblock | Werbeblock-Spot | Zwischenspiele (Rückkehr auf den Dachboden), 5 Sekunden, kein Loop; kein Raum-Stück | Overly cheerful 1990s milk commercial sting, bright synth brass, cowbell and a sparkle, 5 seconds, not a loop, cut off by TV static at the end |
-| abspann | Abspann | Ende; kein Raum-Stück | Warm variation of the main theme, acoustic guitar, piano and strings, 95 BPM, heartfelt with a wink, ends on a cheerful cadence |
+| abspann | Abspann | Ende, ab dem ersten Abspann-Foto (FI_ABSP_NAR_0100); kein Raum-Stück | Warm variation of the main theme, acoustic guitar, piano and strings, 95 BPM, heartfelt with a wink, ends on a cheerful cadence |
 
-**Finale (Prüfbericht, Fund 36):** Das Finale spielte bisher überall `gegenwart`, das schläfrige Wohnzimmer-Stück, obwohl eine Maschine heiß läuft und Oma vor der Luke steht. Dafür gibt es jetzt `finale_maschine` und `finale_geburtstag`. Am Supermarkt läuft kein Stück, nur Kühlregal-Brummen und Türgong (Tabelle Geräusche), mit der Schwarzblende setzt das Titelthema ein. Zugewiesen ist das noch nicht: In `welten/finale.yaml` steht für alle vier Räume weiter `gegenwart`. Der Dachboden ist dort derselbe Raum wie in den Zwischenspielen, deshalb reicht das Feld `musik` nicht. Es braucht einen Aufruf im Code, sobald die Maschine startet, und eine Kennung für „kein Stück“ am Supermarkt.
+**Finale (Prüfbericht, Fund 36):** Das Finale spielte früher überall `gegenwart`, das schläfrige Wohnzimmer-Stück, obwohl eine Maschine heiß läuft und Oma vor der Luke steht. Jetzt ist es so verdrahtet: Auf dem Dachboden läuft `gegenwart` nur während der Heimkehr. Mit der Zeile, in der die Maschine anbrummt (FI_DACH_NAR_0190), setzt `finale_maschine` ein und bleibt bis zur roten Taste, auch nach dem Laden eines Spielstands (Regel „musik“ in `game/skripte/finale.gd`, weil der Dachboden derselbe Raum ist wie in den Zwischenspielen). Mit der Auflösung (FI_AUFL_NAR_0010) wechselt es zu `finale_geburtstag`, das auch im Wohnzimmer läuft. Am Supermarkt steht in `welten/finale.yaml` `musik: stille`: Die Musik blendet aus, es bleiben das Kühlregal als Schleife und der Türgong. Mit der Schwarzblende setzt das Titelthema ein, mit dem ersten Abspann-Foto `abspann`, und Waldemar singt seine Nummer (`lied_waldemar`). Die gesungenen Stücke setzen ebenfalls mit ihrer Skriptzeile ein (Goblin-Arbeitslied im Bergwerk, Waldemar im Zauberwald), danach läuft wieder das Stück des Raums. In den Minispielen des Fünfkampfs (Hebel, Rede-Ringen) läuft `w2_fuenfkampf`.
 
 **Tempo im Rhythmus-Minispiel:** Erzeugte Musik hält ein Tempo nicht taktgenau. Bei `w4_mitternacht` deshalb das Tempo nach dem Erzeugen messen (Audacity, „Beat Finder“ oder von Hand) und die Taktmarken für das Minispiel von Hand setzen. Die 118 BPM im Prompt sind nur der Zielwert.
 
@@ -113,71 +113,71 @@ Welcher Raum welches Stück spielt, steht beim Raum in der Welt-Tabelle (`musik:
 
 Alle mit ElevenLabs Sound Effects oder aus CC0-Sammlungen. Immer mehrere Varianten erzeugen und die beste behalten.
 
-Jedes Geräusch hat eine Kennung; die Datei heißt `audio/geraeusche/<Kennung>.ogg`. **Verdrahtet** heißt: Der Code ruft die Kennung schon auf (die 14 aus der Tabelle „Im Spiel: Dateien und IDs“). Alle anderen Kennungen sind vergeben, aber noch nicht im Code; sie kommen mit dem jeweiligen Abschnitt nach `Klang.GERAEUSCHE` in `game/skripte/klang.gd`. Wo der Einsatz noch nicht feststeht, steht „Einsatz noch festlegen“.
+Jedes Geräusch hat eine Kennung; die Datei heißt `audio/geraeusche/<Kennung>.ogg`. Alle Kennungen sind verdrahtet: Die Spalte Einsatz sagt, wann der Code sie aufruft. Die meisten Einsätze stehen als Tabelle in `game/skripte/klang_einsatz.gd`: Geräusch zu einer Skriptzeile, zu einem Objekt, zu einem Gegenstand, als Laut einer Figur oder als Schritt je Raum. Einzelne Ereignisse (Abfahrt der Fähre, Code-Sicht, Tausch) rufen `Klang.geraeusch()` direkt in den Regeln auf. Wer einen Einsatz ändern will, ändert die Tabelle und diese Spalte. `tools/audio_liste.py --pruefen` (läuft in GitHub Actions) meldet jede Kennung, die hier steht und im Spiel fehlt, und umgekehrt. Fehlt die Datei, spielt ein Platzhalter-Ton.
 
 **Bedienung und Spielsysteme**
 
 | Kennung | Geräusch (Prompt) | Einsatz |
 | --- | --- | --- |
-| ui_klick | soft wooden UI click | Menüs und Knöpfe (verdrahtet) |
-| inventar | inventory bag rustle | Inventar auf und zu (verdrahtet) |
-| seite | paper page turn | Notizbuch blättern (verdrahtet) |
-| kombinieren | item combine pop with a sparkle | zwei Gegenstände kombiniert (verdrahtet) |
-| fehler | error buzz, soft and funny | Aktion geht nicht (verdrahtet) |
-| wechsel | character switch: short whoosh with a tiny cat bell | Wechsel zwischen Max und Pixel (verdrahtet) |
-| hinweis | hint ready: soft paw tap and a light bulb ping | Hilfe-Pfote hat einen Hinweis (verdrahtet) |
-| speichern | save game: quick pencil scribble and a page flip | Spielstand gespeichert (verdrahtet) |
-| nahansicht | close-up open: paper unfolding close to the ear | Nahansicht geht auf (verdrahtet) |
-| notiz | notebook entry: pencil scratching two words | neuer Eintrag im Notizbuch (verdrahtet) |
-| zappomat_sog | rising electric hum and a whoosh as someone is sucked into a TV screen, 3 seconds | Zapp-O-Mat, Übergang in jede Welt (verdrahtet) |
-| werbeblock_start | commercial break start: cheerful TV sting cut off by static | Zwischenspiele, Beginn des Werbeblocks (verdrahtet) |
-| umschalten | remote channel change: heavy plastic click and a short static burst | Welt 4, Fernbedienung, jeder Kanalwechsel (verdrahtet) |
+| ui_klick | soft wooden UI click | Menüs und Knöpfe |
+| inventar | inventory bag rustle | ein Gegenstand kommt aus der Inventarleiste in die Hand; die Reisetasche geht auf |
+| seite | paper page turn | Notizbuch blättern |
+| kombinieren | item combine pop with a sparkle | ein Gegenstand wird auf einen anderen gezogen |
+| fehler | error buzz, soft and funny | Aktion geht nicht: Wechsel zu Pixel gerade unmöglich, Schritt im Takt beim Rhythmus-Minispiel |
+| wechsel | character switch: short whoosh with a tiny cat bell | Wechsel zwischen Max und Pixel |
+| hinweis | hint ready: soft paw tap and a light bulb ping | Hilfe-Pfote hat einen Hinweis |
+| speichern | save game: quick pencil scribble and a page flip | Spielstand gespeichert |
+| nahansicht | close-up open: paper unfolding close to the ear | Nahansicht geht auf |
+| notiz | notebook entry: pencil scratching two words | neuer Eintrag im Notizbuch |
+| zappomat_sog | rising electric hum and a whoosh as someone is sucked into a TV screen, 3 seconds | Zapp-O-Mat, Übergang in jede Welt |
+| werbeblock_start | commercial break start: cheerful TV sting cut off by static | Zwischenspiele, Beginn des Werbeblocks |
+| umschalten | remote channel change: heavy plastic click and a short static burst | Welt 4, Fernbedienung, jeder Kanalwechsel |
 | zeitfaehre | time ferry departure: hourglass flip and a deep wooden bell | Welt 2, Abfahrt der Zeitfähre an den drei Fährstegen (Nil-Delta, Olympia, Syrakus) |
-| code_sicht | code view toggle: digital shimmer rising then falling | Welt 3, Code-Sicht an und aus |
-| portalgeraet | portal device battery: three rising electronic beeps | Welt 3, Portalgerät in den Testkammern |
+| code_sicht | code view toggle: digital shimmer rising then falling | Welt 3, Code-Sicht an und aus (Auswahl der Tausche geht auf und zu) |
+| portalgeraet | portal device battery: three rising electronic beeps | Welt 3, Portalgerät: jede Benutzung und der erste Schuss in Testkammer 1 |
 
 **Max und Pixel, Gegenwart**
 
 | Kennung | Geräusch (Prompt) | Einsatz |
 | --- | --- | --- |
-| schritt_teppich | sneakers walking on carpet | Max, Wohnzimmer |
-| schritt_stein | sneakers on stone floor | Max, Räume mit Steinboden (Welt 1 Turm, Welt 2) |
-| pfoten_holz | cat paws on wood | Pixel, Dachboden und Treppenhaus |
-| pixel_miau | cat meow annoyed | Pixel, Einsatz noch festlegen |
-| pixel_schnurren | cat purr close | Pixel, Einsatz noch festlegen; auch Minka (Welt 1) |
-| pixel_fauchen | cat hiss short | Pixel, Einsatz noch festlegen; auch Minka und Schwan (Welt 1), Hofkater (Welt 2) |
-| dosenoeffner | manual can opener cranking around a tin lid, then a soft hiss | Prolog und Finale, Dosenöffner |
-| fernseher_an | old CRT television turning on with a high whine | Prolog, Fernseher im Wohnzimmer |
-| kanal_rauschen | TV channel switching static burst | Prolog und Zwischenspiele, Kanäle am Fernseher |
-| uhr_ticken | clock ticking in a quiet living room | Wohnzimmer, Grundatmosphäre der Gegenwart (Schleife) |
-| opa_schnarchen | old man snoring softly on a sofa | Prolog, Wohnzimmer, solange Opa schläft |
+| schritt_teppich | sneakers walking on carpet | Max läuft, Wohnzimmer |
+| schritt_stein | sneakers on stone floor | Max läuft, Räume mit Steinboden (Welt 1: Turmkeller, Abstellkammern, Thronsaal; Welt 2: alle außer Nil-Delta, Sphinx und Grabhügel) |
+| pfoten_holz | cat paws on wood | Pixel läuft, Dachboden und Treppenhaus |
+| pixel_miau | cat meow annoyed | Pixel kann oder will etwas nicht (nehmen, Tür, Figur); Minkas „Miau“ (Welt 1) |
+| pixel_schnurren | cat purr close | Prolog, Pixel schläft („Er schnurrt im Schlaf“); Minkas „Mrrr“ (Welt 1) |
+| pixel_fauchen | cat hiss short | Minkas „Chhh!“ und der Schwan (Welt 1), das „Fsssch“ des Hofkaters (Welt 2) |
+| dosenoeffner | manual can opener cranking around a tin lid, then a soft hiss | Prolog, Max öffnet die Thunfischdose („Und … Zisch.“) |
+| fernseher_an | old CRT television turning on with a high whine | Prolog: Fernseher im Wohnzimmer benutzen; auf dem Dachboden, wenn das Bild da ist |
+| kanal_rauschen | TV channel switching static burst | Drehknopf am Zapp-O-Mat benutzen (Prolog, Zwischenspiele, Hilferuf im Finale); Max' Griff zum Knopf vor dem Supermarkt |
+| uhr_ticken | clock ticking in a quiet living room | Grundatmosphäre der Gegenwart: Wohnzimmer, Treppenhaus, Dachboden (Schleife) |
+| schnarchen | soft comical snoring, slow and steady | Welt 1, die schnarchende Beule im Teppich (Wasserschloss); Welt 2, Ciceros Rede im Zeitraffer. Hieß `opa_schnarchen`; Opa schläft im Spiel aber nie |
 | kuehlregal | supermarket refrigerated shelf hum, low and steady, loop | Finale, Supermarkt-Eingang (statt Musik, Schleife) |
-| tuergong | supermarket entrance door chime, two soft electronic notes | Finale, Supermarkt-Eingang |
+| tuergong | supermarket entrance door chime, two soft electronic notes | Finale, Supermarkt-Eingang: beim Schnitt vor die Tür und wenn sie aufgleitet |
 
 **Welt 1**
 
 | Kennung | Geräusch (Prompt) | Einsatz |
 | --- | --- | --- |
-| zauberfunken | magic wand sparkle | Zauberstab-Laden und Klassenzimmer, jeder Zauber |
-| korken | potion bottle uncorked | Klassenzimmer, Tränke |
-| ziege | goat bleat comical | Schmiede (Schmiede-Ziege); tiefer und länger für die XXL-Ziege |
-| huhn | chicken cluck | Huhn, Einsatz noch festlegen |
-| amboss | anvil hammer strike | Schmiede |
+| zauberfunken | magic wand sparkle | Zauberstab-Laden (Max schwingt den Löffel), Klassenzimmer (der Kessel leuchtet auf), Finale (Zeldina am Riegel) |
+| korken | potion bottle uncorked | Klassenzimmer, die Flaschen im Regal: Max nimmt eine, Pixel riecht an einer |
+| ziege | goat bleat comical | Laut der Schmiede-Ziege und der XXL-Ziege statt einer Stimme; für die XXL-Ziege spielt dieselbe Datei tiefer und länger |
+| huhn | chicken cluck | Laut des Huhns in der Taverne statt einer Stimme |
+| amboss | anvil hammer strike | Schmiede (Max haut auf den Amboss; vom Dorfplatz aus hört man das Hämmern); Welt 4, der Amboss schlägt neben Dr. Werbepause ein |
 | taverne_stimmen | tavern crowd murmur loop | Taverne, Raum-Atmosphäre (Schleife) |
-| frosch | frog croak | Einsatz noch festlegen |
+| frosch | frog croak | Wasserschloss, Tupfer zur Atmosphäre: alle 14 bis 32 Sekunden ein Quaken aus dem Burggraben |
 | w1_atmo | quiet village ambience, distant birds, a light breeze and a far-off cart, very soft, loop | Grundatmosphäre Welt 1, alle Außenräume (Schleife) |
 
 **Welt 2**
 
 | Kennung | Geräusch (Prompt) | Einsatz |
 | --- | --- | --- |
-| sand_schritte | sand footsteps | Ägypten, Außenräume (Nil-Delta, Sphinx) |
-| krokodil_platschen | crocodile splash | Nil-Delta, Sobek |
-| sanduhr | hourglass sand trickling | Zeitfähre, während der Überfahrt |
-| stein_schleifen | stone grinding | Einsatz noch festlegen (Sphinx oder Grabhügel) |
-| diskus | bronze discus whoosh | Stadion, Diskuswurf |
-| stadion_jubel | crowd cheering in a stadium | Stadion, Raum-Atmosphäre und Fünfkampf |
-| badewanne | bathtub splash | Archimedes' Werkstatt |
+| sand_schritte | sand footsteps | Max und Pixel laufen, Ägypten, Außenräume (Nil-Delta, Sphinx) |
+| krokodil_platschen | crocodile splash | Nil-Delta, Sobek hebt den Kopf aus dem Wasser |
+| sanduhr | hourglass sand trickling | Zeitfähre, während der Überfahrt; die Sanduhren an den drei Stegen benutzen |
+| stein_schleifen | stone grinding | Grabhügel, der Steinmetz macht den Grabstein |
+| diskus | bronze discus whoosh | Stadion, Diskuswurf im Finale des Fünfkampfs (auch Teller und Schallplatte) |
+| stadion_jubel | crowd cheering in a stadium | Stadion, Raum-Atmosphäre (Schleife); als einzelner Jubel bei Treffern im Rede-Ringen, beim Treffer am Hebel und an der Ziellinie |
+| badewanne | bathtub splash | Archimedes' Werkstatt: Badewanne benutzen, Krone und Barren tauchen ein |
 | w2_atmo | quiet warm ambience, soft wind over water, distant gulls and cicadas, very soft, loop | Grundatmosphäre Welt 2, alle Außenräume (Schleife) |
 
 **Welt 3**
@@ -185,16 +185,16 @@ Jedes Geräusch hat eine Kennung; die Datei heißt `audio/geraeusche/<Kennung>.o
 | Kennung | Geräusch (Prompt) | Einsatz |
 | --- | --- | --- |
 | regen_strasse | heavy rain on neon street loop | Unterstadt, Straße und Apothekengasse, Raum-Atmosphäre (Schleife) |
-| telefonzelle | phone booth ringing old-fashioned | Unterstadt (Realität), Telefonzelle |
-| radiowecker | 1980s clock radio alarm beeping, then a tinny cheerful pop tune from a small speaker | Stadtstraße (Simulation), Radiowecker |
-| eieruhr | mechanical wind-up kitchen timer ticking, then ringing | Küche der Orakel-Oma, Eieruhr |
-| schleusentor | hydraulic blast door opening | Laboreingang |
-| terminal | computer terminal beeps | Terminals (Apothekengasse, Widerstandsbasis, Laboreingang, Büroturm) |
-| laser | laser barrier hum | Testkammern, Einsatz noch festlegen |
-| gummihuhn | rubber chicken squeak | Testkammern 1 bis 3, Gummihuhn |
-| glitch | digital glitch | Simulation, Fehler im Bild |
-| piepsi | small robot beeping and whistling in fast rude tones (Piepsi, 6–8 Varianten) | Piepsi, statt einer Stimme |
-| hologramm | hologram flicker hum with crackle | Opas Hologramm (Widerstandsbasis, Testkammer 1) |
+| telefonzelle | phone booth ringing old-fashioned | Unterstadt (Realität), Telefonzelle: benutzen, und wenn sie klingelt |
+| radiowecker | 1980s clock radio alarm beeping, then a tinny cheerful pop tune from a small speaker | Stadtstraße (Simulation), Radiowecker benutzen |
+| eieruhr | mechanical wind-up kitchen timer ticking, then ringing | Küche der Orakel-Oma, Eieruhr benutzen |
+| schleusentor | hydraulic blast door opening | Laboreingang, die Panzertür rollt auf |
+| terminal | computer terminal beeps | Terminals benutzen (Automat in der Apothekengasse, Widerstandsbasis, Kartenleser und Datenanschluss am Laboreingang, Büroturm) |
+| laser | laser barrier hum | Testkammer 2: Raum-Atmosphäre (Schleife) und Laser benutzen |
+| gummihuhn | rubber chicken squeak | Gummihuhn: jede Benutzung und die beiden Tausche mit dem Huhn (Testkammern 2 und 3) |
+| glitch | digital glitch | Welt 3, jeder Tausch in der Code-Sicht |
+| piepsi | small robot beeping and whistling in fast rude tones (Piepsi, 6–8 Varianten) | Laut von Piepsi statt einer Stimme |
+| hologramm | hologram flicker hum with crackle | Welt 3, jedes Mal, wenn Opa spricht (Hologramm, Portal), zusätzlich zur Stimme |
 | w3_atmo | quiet low electrical hum with distant ventilation and a faint drip, very soft, loop | Grundatmosphäre Welt 3, Innenräume der Realität und Labor (Schleife) |
 
 **Welt 4**
@@ -202,20 +202,21 @@ Jedes Geräusch hat eine Kennung; die Datei heißt `audio/geraeusche/<Kennung>.o
 | Kennung | Geräusch (Prompt) | Einsatz |
 | --- | --- | --- |
 | rauschen | TV static loop | Rauschen zwischen den Sendern, Raum-Atmosphäre (Schleife) |
-| rueckspulen | tape rewind squeal | Fernbedienung, Taste Zurückspulen |
-| pause | pause click with a tape stop | Fernbedienung, Taste Pause |
-| gluecksrad_ticken | game show wheel ticking slowing down | Glücksrad-Studio, das Rad dreht sich |
-| lachkonserve | studio audience laughter | Sitcom-Küche; ist der Jingle `lachkonserve` aus `audio/jingles/` |
-| zombie | zombie groan | Musikvideo-Friedhof, Zusammenstoß der Zombies am Ende des Rhythmus-Minispiels (verdrahtet) |
-| takt | dry rimshot click, one hit, very short | Rhythmus-Minispiel, jeder Schlag; entfällt, sobald `w4_mitternacht` den Takt selbst trägt (verdrahtet) |
-| tanz_schritt | sneaker squeak on a disco floor, one short step | Rhythmus-Minispiel, Max tritt gegen den Takt auf (verdrahtet) |
-| comic_schlag | comic punch impact | Kapitolis |
-| lichtroehre | fluorescent tube buzzing and swooshing when swung | Lichtröhre Deluxe, jede Benutzung |
-| muellpresse | rusty trash compactor walls grinding with crunching video tapes | Kellerarchiv, Müllpresse |
-| gong | deep evening news gong echoing through TV static, 3 seconds | Rauschen zwischen den Sendern, um acht (verdrahtet) |
-| w4_atmo | quiet television hum with a faint high whine and soft studio air conditioning, very soft, loop | Grundatmosphäre Welt 4, alle Studioräume (Schleife) |
+| rueckspulen | tape rewind squeal | Fernbedienung, Taste Zurückspulen: jede Benutzung |
+| pause | pause click with a tape stop | Fernbedienung, Taste Pause: jede Benutzung |
+| gluecksrad_ticken | game show wheel ticking slowing down | Glücksrad-Studio, das Rad benutzen |
+| lachkonserve | studio audience laughter | Sitcom-Küche: „Jemand lacht“ bei der Ankunft, Lachkonserven-Maschine benutzen; ist der Jingle `lachkonserve` aus `audio/jingles/` |
+| zombie | zombie groan | Musikvideo-Friedhof: Laut der Zombies statt einer Stimme, Zusammenstoß am Ende des Rhythmus-Minispiels |
+| loewe | lion roar, short and theatrical, slightly comic | Tiertort Savanne, Laut des Löwen statt einer Stimme |
+| takt | dry rimshot click, one hit, very short | Rhythmus-Minispiel, jeder Schlag; entfällt, sobald `w4_mitternacht` den Takt selbst trägt |
+| tanz_schritt | sneaker squeak on a disco floor, one short step | Rhythmus-Minispiel, Max tritt gegen den Takt auf |
+| comic_schlag | comic punch impact | Kapitolis, der Amboss trifft Pixel |
+| lichtroehre | fluorescent tube buzzing and swooshing when swung | Lichtröhre Deluxe: jede Benutzung, auch der Röhren im Glücksrad-Studio, in der Savanne und in Kapitolis |
+| muellpresse | rusty trash compactor walls grinding with crunching video tapes | Kellerarchiv, Müllpresse: benutzen, und wenn die Wände sich bewegen |
+| gong | deep evening news gong echoing through TV static, 3 seconds | Rauschen zwischen den Sendern, um acht |
+| w4_atmo | quiet television hum with a faint high whine and soft studio air conditioning, very soft, loop | Grundatmosphäre Welt 4, alle Räume außer dem Rauschen (Schleife) |
 
-**Grundatmosphäre:** Je Welt läuft eine leise Schleife unter der Musik (`w1_atmo` bis `w4_atmo`, in der Gegenwart `uhr_ticken`), damit kein Raum tot klingt. Räume mit eigener Atmosphäre (Taverne, Regen, Stadion, Rauschen) nehmen ihre statt der Grundatmosphäre. Das ist noch nicht verdrahtet: Es braucht ein Feld je Raum oder je Abschnitt und einen eigenen Abspieler in `klang.gd`.
+**Grundatmosphäre:** Je Raum läuft eine leise Schleife unter der Musik, damit kein Raum tot klingt. Welche, steht beim Raum in der Welt-Tabelle (`atmo: <Kennung>` in `welten/*.yaml`, wie `musik`): `w1_atmo` bis `w4_atmo`, in der Gegenwart `uhr_ticken`, am Supermarkt `kuehlregal`. Räume mit eigener Atmosphäre nehmen ihre statt der Grundatmosphäre (Taverne, Regen, Stadion, Rauschen, der Laser in Testkammer 2). `atmo: keine` heißt: nur Musik. Das gilt für die Innenräume von Welt 1 und 2 und für die Simulation in Welt 3, weil die Tabellen oben die Grundatmosphäre dort nicht vorsehen. `tupfer: <Kennung>` setzt einen einzelnen Laut dazu, der alle 14 bis 32 Sekunden kommt (bisher nur der Frosch am Wasserschloss). Die Schleife spielt `game/skripte/klang.gd` auf einem eigenen Abspieler, 14 dB leiser als Geräusche; die Datei muss nicht nahtlos sein, sie beginnt am Ende von vorn. `tools/pruefen.py` prüft, dass jedes `atmo` und `tupfer` in einer Tabelle oben steht.
 
 ## Sprachausgabe
 

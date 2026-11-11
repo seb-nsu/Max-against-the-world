@@ -80,6 +80,10 @@ func _durchlauf() -> void:
 	S.vorgabe_auswahl = [0]
 	await S.regel("benutzen", "tuer")
 	_pruefe(Z.geloest("R5"), "R5 gesprächige Tür")
+	var klaenge: Array = root.get_node("Klang").protokoll
+	_pruefe("geraeusch/code_sicht" in klaenge and "geraeusch/glitch" in klaenge, "Ton: Code-Sicht und Tausch")
+	_pruefe("atmo/regen_strasse" in klaenge and "atmo/keine" in klaenge, "Ton: Regen in der Unterstadt, die Simulation ohne Atmosphäre")
+	_pruefe("geraeusch/hologramm" in klaenge, "Ton: Opa spricht in Welt 3 als Hologramm")
 
 	# Radiowecker auf der Stadtstraße: beim ersten Aufstehen 0230, danach 0240.
 	# Beide Hotspots des Weckers gelten gleich.
@@ -215,6 +219,7 @@ func _durchlauf() -> void:
 	# Zwischenspiel 3: Ankunft, Packen, Kanal 999
 	await _warte_bis(func(): return int(Z.wert("EINKAUFSLISTE", 0)) == 3, 60.0)
 	await _warte_auf_raum("dachboden")
+	_pruefe("atmo/w3_atmo" in klaenge and "atmo/laser" in klaenge, "Ton: Grundatmosphäre in Basis und Labor, Laser in Testkammer 2")
 	_pruefe(int(Z.wert("ZWISCHENSPIEL", 0)) == 3, "Zwischenspiel 3")
 	_pruefe(int(Z.wert("EINKAUFSLISTE", 0)) == 3, "Einkaufsliste: dritter Wunsch")
 	await _hotspot("drehknopf").on_click()

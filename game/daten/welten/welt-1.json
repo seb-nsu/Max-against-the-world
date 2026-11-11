@@ -61,6 +61,7 @@
    ],
    "erreichbar_ab": "start",
    "musik": "w1_dorf",
+   "atmo": "w1_atmo",
    "zustaende": [
     "vor_R8",
     "nach_R8"
@@ -77,7 +78,8 @@
     "dorfplatz"
    ],
    "erreichbar_ab": "start",
-   "musik": "w1_taverne"
+   "musik": "w1_taverne",
+   "atmo": "taverne_stimmen"
   },
   {
    "id": "schmiede",
@@ -90,7 +92,8 @@
     "dorfplatz"
    ],
    "erreichbar_ab": "start",
-   "musik": "w1_dorf"
+   "musik": "w1_dorf",
+   "atmo": "keine"
   },
   {
    "id": "zauberstabladen",
@@ -103,7 +106,8 @@
     "dorfplatz"
    ],
    "erreichbar_ab": "start",
-   "musik": "w1_dorf"
+   "musik": "w1_dorf",
+   "atmo": "keine"
   },
   {
    "id": "klassenzimmer",
@@ -116,7 +120,8 @@
     "dorfplatz"
    ],
    "erreichbar_ab": "start",
-   "musik": "w1_schule"
+   "musik": "w1_schule",
+   "atmo": "keine"
   },
   {
    "id": "trollbruecke",
@@ -131,7 +136,8 @@
     "wasserschloss"
    ],
    "erreichbar_ab": "start",
-   "musik": "w1_dorf"
+   "musik": "w1_dorf",
+   "atmo": "w1_atmo"
   },
   {
    "id": "wasserschloss",
@@ -144,7 +150,9 @@
     "trollbruecke"
    ],
    "erreichbar_ab": "R4",
-   "musik": "w1_dorf"
+   "musik": "w1_dorf",
+   "atmo": "w1_atmo",
+   "tupfer": "frosch"
   },
   {
    "id": "zauberwald",
@@ -159,6 +167,7 @@
    ],
    "erreichbar_ab": "R4",
    "musik": "w1_wald",
+   "atmo": "w1_atmo",
    "zustaende": [
     "niesrosen_zu",
     "niesrosen_offen"
@@ -175,7 +184,8 @@
     "dorfplatz"
    ],
    "erreichbar_ab": "R8",
-   "musik": "w1_luftschloss"
+   "musik": "w1_luftschloss",
+   "atmo": "w1_atmo"
   },
   {
    "id": "bergwerk",
@@ -190,6 +200,7 @@
    ],
    "erreichbar_ab": "R4",
    "musik": "w1_bergwerk",
+   "atmo": "keine",
    "zustaende": [
     "rune_tuer_zu",
     "rune_tuer_offen"
@@ -209,6 +220,7 @@
    ],
    "erreichbar_ab": "R10",
    "musik": "w1_turm",
+   "atmo": "keine",
    "zustaende": [
     "vor_R11b",
     "nach_R11b"
@@ -223,7 +235,8 @@
     "turmkeller"
    ],
    "erreichbar_ab": "R11b",
-   "musik": "w1_turm"
+   "musik": "w1_turm",
+   "atmo": "keine"
   },
   {
    "id": "abstellkammern",
@@ -238,6 +251,7 @@
    ],
    "erreichbar_ab": "R11b",
    "musik": "w1_turm",
+   "atmo": "keine",
    "zustaende": [
     "voll",
     "aufgeraeumt"
@@ -254,7 +268,8 @@
     "abstellkammern"
    ],
    "erreichbar_ab": "R12",
-   "musik": "w1_turm"
+   "musik": "w1_turm",
+   "atmo": "keine"
   }
  ],
  "figuren": [

@@ -8,7 +8,8 @@ skaliert. Text (Nunito) wird in voller Bildschirmauflösung gezeichnet (Stretch-
 laufenden Spiel: `tests/bildschirmfoto.gd`, `tests/bildschirmfoto_menues.gd` und `tests/bildschirmfoto_minispiele.gd` (Aufruf im Kopf der Datei, braucht xvfb-run). Stand (11. November 2026):
 Graubox. Prolog, Welt 1 bis 4, die drei Zwischenspiele mit Reisetasche und das Finale mit Abspann
 sind mit Platzhaltergrafik durchspielbar, die drei Minispiele (Hebel, Rede-Ringen, Zombie-Tanz)
-mit eigener Spielfläche. Grafik und Ton fehlen.
+mit eigener Spielfläche. Grafik und Tondateien fehlen; der Ton ist verdrahtet und spielt bis dahin
+Platzhalter-Töne.
 
 ## Öffnen und spielen
 
@@ -131,7 +132,7 @@ Autoloads in `skripte/`:
 | `Spielstand` | Autospeicher bei jedem Raumwechsel (3 Plätze), F5/F9, 12 manuelle Plätze, wartet mit dem Speichern bis eine Szene vorbei ist |
 | `Telemetrie` | anonymes Spielprotokoll, nur im Testbuild und nur mit Zustimmung (siehe Testbuild und Telemetrie) |
 | `Einstellungen` | Optionen in `user://settings.cfg`: Lautstärken je Bus, Fenster, VSync, Bildrate, Sprache, Texttempo, Tastenbelegung, Barrierefreiheit; gelten sofort |
-| `Klang` | Audio-Gerüst: Musik je Raum (Welt-Tabelle), Jingles, Geräusche, Stimmen über IDs aus `audio/`; fehlende Dateien bleiben still (`docs/04-audio.md`, Im Spiel) |
+| `Klang` | Audio-Gerüst: Musik und Atmosphäre je Raum (Welt-Tabelle, Felder `musik`, `atmo`, `tupfer`), Jingles, Geräusche, Stimmen über IDs aus `audio/`; fehlende Dateien bleiben still oder spielen einen Platzhalter (`docs/04-audio.md`, Im Spiel). Wo welches Geräusch spielt, steht in `skripte/klang_einsatz.gd`: Tabellen je Skriptzeile, Objekt, Gegenstand, Laut einer Figur und Schritt je Raum |
 
 Menüs in `oberflaeche/`: `hauptmenue.tscn` ist die Startszene; `pausemenue.gd` (Esc),
 `spielstaende.gd` (Speichern und Laden) und `optionen.gd` (fünf Reiter) teilen den Stil aus
@@ -248,6 +249,7 @@ godot --headless --path . -s res://tests/prolog_durchlauf.gd          # Testmodu
 godot --headless --path . -s res://tests/prolog_durchlauf.gd -- --echt   # echte Sprechblasen, gut 9 Minuten
 godot --headless --path . -s res://tests/menues.gd                    # Menüs, Optionen, Audio-Gerüst, unter 1 Minute
 godot --headless --path . -s res://tests/minispiele.gd                # Hebel, Rede-Ringen, Zombie-Tanz, unter 1 Minute
+godot --headless --path . -s res://tests/ton.gd                       # Geräusche, Atmosphäre, Stücke, unter 1 Minute
 ```
 
 **Screenshot-Regressionstest (A16):** `tests/bildschirm_vergleich.gd` betritt jeden gebauten Raum

@@ -16,7 +16,8 @@ Geprüft wird:
   4. Namen aus der Tabelle kommen in Rätsel- und Grafik-Datei vor (Warnung).
   5. Audio (docs/04-audio.md): jedes Sprecherkürzel steht mit dem Namen aus der
      Welt-Tabelle in einer Kürzel-Spalte (Warnung), jedes musik eines Raums steht
-     in der Musik-Tabelle (Fehler; Raum ohne musik: Warnung), die Rätsel-IDs der
+     in der Musik-Tabelle (Fehler; Raum ohne musik: Warnung; „stille“ = kein Stück),
+     jedes atmo und tupfer eines Raums in einer Geräusch-Tabelle, die Rätsel-IDs der
      Lieder-Tabelle gibt es (Fehler).
   6. Nahansichten: Summe aller nahansicht: true und aller Einträge unter
      nahansichten: über alle Welt-Tabellen ist NAHANSICHTEN_GESAMT (Fehler).
@@ -507,13 +508,30 @@ def pruefe_audio(alle):
                 musik_ids.add(i)
     if not musik_ids:
         F(rel, "keine Musik-Tabelle mit Spalte ID gefunden")
+    # Kennungen der Geräusche (Tabellen mit Spalte Kennung): auch die Schleifen der Atmosphäre
+    kennungen = set()
+    for kopf, inhalt in tabellen:
+        if "Kennung" in kopf:
+            for nr, z in inhalt:
+                k = z.get("Kennung", "").strip("`")
+                if k in kennungen:
+                    F(f"{rel}:{nr}", f"Geräusch-Kennung {k} doppelt")
+                kennungen.add(k)
     for ab, d in alle.items():
         for r in d["raeume"]:
             m = r.get("musik")
             if m is None:
                 W(f"welten/{ab}.yaml", f"Raum {r.get('id')}: kein musik-Eintrag")
-            elif m not in musik_ids:
+            elif m != "stille" and m not in musik_ids:   # stille: kein Stück (game/skripte/klang.gd)
                 F(f"welten/{ab}.yaml", f"Raum {r.get('id')}: musik {m} steht nicht in der Musik-Tabelle von {rel}")
+            a = r.get("atmo")
+            if a is None:
+                W(f"welten/{ab}.yaml", f"Raum {r.get('id')}: kein atmo-Eintrag (Schleife oder „keine“)")
+            elif a != "keine" and a not in kennungen:
+                F(f"welten/{ab}.yaml", f"Raum {r.get('id')}: atmo {a} steht in keiner Geräusch-Tabelle von {rel}")
+            t = r.get("tupfer")
+            if t is not None and t not in kennungen:
+                F(f"welten/{ab}.yaml", f"Raum {r.get('id')}: tupfer {t} steht in keiner Geräusch-Tabelle von {rel}")
 
     # (c) Rätsel-IDs der Lieder
     for kopf, inhalt in tabellen:

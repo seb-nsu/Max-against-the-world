@@ -115,6 +115,12 @@ func wert(art: String, obj: Variant, _item: Variant) -> Variant:
 	if not Zustand.ist("FINALE"):
 		return null
 	match art:
+		"musik":
+			# Der Dachboden ist derselbe Raum wie in den Zwischenspielen: Im Finale läuft dort
+			# das Maschinen-Stück, sobald die Maschine an ist (FI_DACH_NAR_0190 startet es in
+			# der Szene), und ab der Auflösung das Geburtstags-Stück.
+			if str(obj) == "dachboden" and Zustand.ist("FI_HEIMKEHR"):
+				return "finale_geburtstag" if _g("F1d") else "finale_maschine"
 		"zustand":
 			match _id(obj):
 				"goldene_fernbedienung":

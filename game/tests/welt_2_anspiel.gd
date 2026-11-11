@@ -168,6 +168,12 @@ func _durchlauf() -> void:
 	S.vorgabe_auswahl = [0, 1, 3, 2, 4, 0]  # Diskus; Konter je Linie
 	await S.regel("benutzen", "startlinie")
 	_pruefe(Z.geloest("R13") and _hat("olivenkranz") and _hat("paraden_plan"), "R13 Finaltag")
+	var klaenge: Array = root.get_node("Klang").protokoll
+	var fehlt := ["geraeusch/zeitfaehre", "geraeusch/sanduhr", "musik/w2_fuenfkampf", "geraeusch/stadion_jubel",
+		"atmo/stadion_jubel", "atmo/w2_atmo", "geraeusch/badewanne", "geraeusch/diskus"].filter(
+		func(k): return not k in klaenge)
+	_pruefe(fehlt.is_empty(), "Ton in Welt 2: Fähre, Sanduhr, Fünfkampf-Stück, Jubel, Atmosphäre, Wanne, Diskus %s" % [fehlt])
+	_pruefe(klaenge.find("geraeusch/zeitfaehre") < klaenge.find("geraeusch/sanduhr"), "Ton: erst die Abfahrt, dann die Sanduhr")
 
 	# R11: Parade und Wein
 	await S.geben(_sn("brennspiegel"))

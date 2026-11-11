@@ -49,6 +49,11 @@ func _durchlauf() -> void:
 	_pruefe(not _hat("goldene_fernbedienung") and Z.wert("FI_FERNBEDIENUNG") == "grau_ohne_zelle",
 		"Fernbedienung bei Opa, ohne Zelle")
 	_pruefe(_hotspot("maschine").visible and _hotspot("fundkiste").visible, "Maschine und Fundkiste sichtbar")
+	var klang = root.get_node("Klang")
+	_pruefe(klang.aktuelle_musik == "finale_maschine", "Ton: Mit der Maschine setzt finale_maschine ein (%s)" % klang.aktuelle_musik)
+	_pruefe(klang.musik_fuer_raum("dachboden") == "gegenwart" and S.regel_wert("musik", "dachboden") == "finale_maschine",
+		"Ton: Dachboden im Finale spielt nach dem Laden wieder finale_maschine")
+	_pruefe(klang.aktuelle_atmo == "uhr_ticken", "Ton: Gegenwart tickt (%s)" % klang.aktuelle_atmo)
 
 	_pruefe(not S.wechsel_moeglich(), "Vor dem Hilferuf kein Figurenwechsel")
 
@@ -107,13 +112,21 @@ func _durchlauf() -> void:
 		"Auflösung: vier Dinge in gewählter Reihenfolge, Fernbedienung zuletzt")
 	await _warte_bis(func(): return _gesagt("FI_WOHN_PIX_0060"), 10.0)
 	_pruefe(_raum().has_character("Oma") and _hotspot("kuchen").visible, "Geburtstag im Wohnzimmer")
+	_pruefe(klang.aktuelle_musik == "finale_geburtstag" and S.regel_wert("musik", "dachboden") == "finale_geburtstag",
+		"Ton: ab der Auflösung finale_geburtstag (%s)" % klang.aktuelle_musik)
 
 	# Mutter, Abspann-Szene, Supermarkt, Abspann
 	S.regel("benutzen", C().get_character("Oma"))
 	await _warte_auf_raum("supermarkt")
 	_pruefe(_gesagt("FI_WOHN_MUT_0230") and _gesagt("FI_ABSP_MAX_0030"), "Mutter und Abspann-Szene")
+	_pruefe(klang.aktuelle_musik == "" and "musik/stille" in klang.protokoll and klang.aktuelle_atmo == "kuehlregal",
+		"Ton: Supermarkt ohne Stück, mit Kühlregal (%s, %s)" % [klang.aktuelle_musik, klang.aktuelle_atmo])
+	_pruefe("geraeusch/tuergong" in klang.protokoll, "Ton: Türgong am Supermarkt")
 	await S.regel("benutzen", _hotspot("automatische_tuer"))
 	_pruefe(Z.ist("FI_ENDE_GESEHEN") and S.hauptmenue_angefragt, "Abspann gesehen, zurück ins Hauptmenü")
+	var folge := ["musik/titel", "musik/abspann", "musik/lied_waldemar"].map(func(m): return klang.protokoll.find(m))
+	_pruefe(not folge.has(-1) and folge[0] < folge[1] and folge[1] < folge[2],
+		"Ton: Titelthema mit der Schwarzblende, dann Abspann, dann Waldemars Nummer %s" % [folge])
 
 
 #region Hilfen #####################################################################################

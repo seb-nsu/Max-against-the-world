@@ -15,6 +15,7 @@ raeume:
     ausgaenge: [apothekengasse, laboreingang, widerstandsbasis]
     erreichbar_ab: start
     musik: w3_unterstadt
+    atmo: regen_strasse
     zustaende: []
   - id: apothekengasse
     name: Apothekengasse mit Pastillenautomat
@@ -23,6 +24,7 @@ raeume:
     ausgaenge: [unterstadt_strasse]
     erreichbar_ab: R1b
     musik: w3_unterstadt
+    atmo: regen_strasse
     zustaende: [Fächer zu, Fächer offen]
   - id: widerstandsbasis
     name: Widerstandsbasis
@@ -31,6 +33,7 @@ raeume:
     ausgaenge: [unterstadt_strasse, kuehlung, stadtstrasse, testkammer_1]   # stadtstrasse: Ebenenwechsel (Wecker/Terminal); testkammer_1: Kalles Leitung (R9a)
     erreichbar_ab: R3b
     musik: w3_basis
+    atmo: w3_atmo
     zustaende: [Fenster zu, Fenster offen, Tasse auf dem Tisch, Kaffee am Boden]
   - id: kuehlung
     name: Kühlung
@@ -39,6 +42,7 @@ raeume:
     ausgaenge: [widerstandsbasis]   # durch den Lüftungsschacht, nur Pixel
     erreichbar_ab: R3b
     musik: w3_basis
+    atmo: w3_atmo
     zustaende: [Eimer voll, Eimer ausgekippt]
   - id: laboreingang
     name: Laboreingang
@@ -47,6 +51,7 @@ raeume:
     ausgaenge: [unterstadt_strasse]
     erreichbar_ab: start
     musik: w3_unterstadt
+    atmo: w3_atmo
     zustaende: [Tür zu, Tür offen]
   # --- Simulation ---
   - id: stadtstrasse
@@ -56,6 +61,7 @@ raeume:
     ausgaenge: [kueche_orakel, buero_50, widerstandsbasis]   # widerstandsbasis: Ebenenwechsel über den klingelnden Radiowecker und das Terminal
     erreichbar_ab: R3b
     musik: w3_simulation
+    atmo: keine
     zustaende: [Tag, Nacht]
   - id: kueche_orakel
     name: Küche der Orakel-Oma
@@ -64,6 +70,7 @@ raeume:
     ausgaenge: [stadtstrasse]   # Omas Eieruhr ist zusätzlich ein Ebenenwechsel in die Basis
     erreichbar_ab: R3b
     musik: w3_simulation
+    atmo: keine
     zustaende: [Sparschwein auf dem Regal, Scherben am Boden]
   - id: buero_50
     name: Büroturm, 50. Stock
@@ -72,6 +79,7 @@ raeume:
     ausgaenge: [stadtstrasse]   # Einbahn: hinein durch den Glaseingang, heraus nur über R7 und das Terminal der Basis
     erreichbar_ab: R5
     musik: w3_simulation
+    atmo: keine
     zustaende: []
   # --- Labor ---
   - id: testkammer_1
@@ -81,6 +89,7 @@ raeume:
     ausgaenge: [testkammer_2, widerstandsbasis]   # widerstandsbasis: Ebenenwechsel über Kalles Leitung und die Kapsel
     erreichbar_ab: R9a
     musik: w3_labor
+    atmo: w3_atmo
     zustaende: [Ausgangstür zu, Ausgangstür offen]
   - id: testkammer_2
     name: Testkammer 2
@@ -89,6 +98,7 @@ raeume:
     ausgaenge: [testkammer_1, testkammer_3]
     erreichbar_ab: R9b
     musik: w3_labor
+    atmo: laser
     zustaende: [Laser tödlich, Laser harmlos]
   - id: testkammer_3
     name: Testkammer 3
@@ -97,6 +107,7 @@ raeume:
     ausgaenge: [testkammer_2, kern]
     erreichbar_ab: R9c
     musik: w3_labor
+    atmo: w3_atmo
     zustaende: [Tür zu, Tür offen]
   - id: kern
     name: Kern von M.U.T.T.I.
@@ -105,6 +116,7 @@ raeume:
     ausgaenge: [testkammer_3]
     erreichbar_ab: R9d
     musik: w3_kern
+    atmo: w3_atmo
     zustaende: [Zelle glühend, Zelle vereist, Sockel leer]
 
 sonder_codes: [HINT, INV, ABS]   # INV: Inventar ansehen, ABS: Gespräch erschöpft

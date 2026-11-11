@@ -59,6 +59,7 @@ var _pause: CanvasLayer
 var _letzte_ersatz := {}
 var _letzter_zuruf := ""
 var _ruhe := 0.0
+var _schritt_in := 0.0
 
 
 func _ready() -> void:
@@ -101,6 +102,7 @@ func _eigene_figur_durchlassen() -> void:
 
 func _process(delta: float) -> void:
 	_eigene_figur_durchlassen()
+	_schritte(delta)
 	if testmodus or not E.in_room or E.playing_queue or in_szene > 0 \
 			or is_instance_valid(D.current_dialog):
 		_ruhe = 0.0
@@ -109,6 +111,19 @@ func _process(delta: float) -> void:
 	if _ruhe >= ZURUF_NACH:
 		_ruhe = 0.0
 		_zuruf()
+
+
+## Schritte der aktiven Figur, solange sie läuft (CQKlangEinsatz.SCHRITT_MAX, SCHRITT_PIXEL).
+func _schritte(delta: float) -> void:
+	if not is_instance_valid(C.player) or not C.player.is_inside_tree() or not C.player.is_moving \
+			or not is_instance_valid(R.current):
+		_schritt_in = 0.0
+		return
+	_schritt_in -= delta
+	if _schritt_in > 0.0:
+		return
+	_schritt_in = CQKlangEinsatz.SCHRITT_TAKT_PIXEL if ist_pixel() else CQKlangEinsatz.SCHRITT_TAKT_MAX
+	Klang.einsatz(CQKlangEinsatz.schritt(R.current.raum_id() if R.current.has_method("raum_id") else "", ist_pixel()))
 
 
 #region Pause und Hauptmenü ########################################################################
@@ -198,6 +213,7 @@ func blasen(zeile: String) -> Array[String]:
 func sagen(kuerzel: String, zeile: String) -> void:
 	if tr(zeile) == zeile:
 		push_error("Zeile %s fehlt in texte.csv" % zeile)
+	Klang.zeilen_klang(kuerzel, zeile)
 	for b in blasen(zeile):
 		protokoll.append(b)
 		zeile_gesagt.emit(b)
@@ -356,10 +372,23 @@ func regeln() -> Object:
 ## ansehen_inventar (Gegenstände), raum_betreten, nach_uebergang, nach_laden (Räume),
 ## nach_option (Gespräche: obj ist der Dialog, item die Options-ID).
 func regel(art: String, obj: Variant = null, item: Variant = null) -> bool:
+	Klang.einsatz(CQKlangEinsatz.fuer_ereignis(art, klang_id(obj), klang_id(item)))
 	var r := regeln()
 	if r == null or not r.has_method("ereignis"):
 		return false
 	return bool(await r.ereignis(art, obj, item))
+
+
+## Kennung eines Objekts oder Gegenstands für die Geräusch-Tabellen (CQKlangEinsatz): die ID aus
+## dem Bauplan.
+func klang_id(o: Variant) -> String:
+	if o is String:
+		return o
+	if o is PopochiuInventoryItem:
+		return str(Bauplan.gegenstand(o.script_name).get("id", o.script_name.to_snake_case()))
+	if o is Object and o.has_method("objekt_id"):
+		return str(o.objekt_id())
+	return ""
 
 
 ## Wert aus den Regeln des Abschnitts ohne Warten; null, wenn die Regeln nichts dazu sagen.
@@ -645,6 +674,8 @@ func praefix() -> String:
 ## hintereinander), außer der Raum übernimmt (Taverne: erste Wechsel, TAV 0080/0090).
 func figur_wechseln(mit_zeile := true) -> bool:
 	if not wechsel_moeglich() or in_szene > 0 or E.playing_queue:
+		if in_szene == 0 and not E.playing_queue:
+			Klang.geraeusch("fehler")  # Wechsel geht hier nicht
 		return false
 	if regel_wert("wechsel_getrennt") == true:
 		regel("figur_wechseln")  # Raumwechsel zur anderen Figur, läuft für sich weiter
@@ -676,6 +707,8 @@ func _wechsel_sagen() -> void:
 
 ## Feste Zeile aus dem Abschnitt „Figurenwechsel“ (pixel_tuer, max_tier …), sonst Ersatzzeile.
 func wechsel_regel(schluessel: String) -> void:
+	if schluessel.begins_with("pixel_"):
+		Klang.geraeusch("pixel_miau")  # Pixel kann oder will das nicht
 	var zeile: String = Bauplan.figurenwechsel(Zustand.abschnitt).get(schluessel, "")
 	if zeile.is_empty():
 		await ersatz()
@@ -770,6 +803,7 @@ func reisetasche_packen(nr: int) -> void:
 		vorgabe_tasche.clear()
 	else:
 		G.block()
+		Klang.geraeusch("inventar")
 		hud.visible = false  # Porträts und Pfote lägen über dem Fenster
 		var n := REISETASCHE.instantiate()
 		add_child(n)
@@ -942,6 +976,7 @@ func abschnitt_gebaut(ab: String) -> bool:
 ## das Mitbringsel in der Ankunftsszene, das Packen der Reisetasche entscheidet später.
 func zwischenspiel_beginnen(nr: int) -> void:
 	Klang.jingle("welt_geschafft")
+	Klang.geraeusch("werbeblock_start")
 	Klang.musik("werbeblock")
 	if not testmodus:
 		await T.play_transition("tunnel", 1.5, T.PLAY_MODE.IN)

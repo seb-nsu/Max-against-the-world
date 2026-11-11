@@ -50,6 +50,7 @@ raeume:
     ausgaenge: [thronsaal_ramses, sphinx, faehrsteg_olympia, hafen_syrakus]   # zwei Fußwege, Fähre (Flusskarte) zu beiden Anlegestellen
     erreichbar_ab: start
     musik: w2_aegypten
+    atmo: w2_atmo
     # Anlegestelle Ägypten: Grabstein 0 Jahre (frisch), Krug aus dem Palast Traubensaft, Essigkrug Traubensaft
   - id: thronsaal_ramses
     name: Thronsaal
@@ -58,6 +59,7 @@ raeume:
     ausgaenge: [nil_delta, palastkueche]
     erreichbar_ab: start
     musik: w2_aegypten
+    atmo: keine
   - id: palastkueche
     name: Palastküche
     skript_code: [KUCH]
@@ -65,6 +67,7 @@ raeume:
     ausgaenge: [thronsaal_ramses]
     erreichbar_ab: start
     musik: w2_aegypten
+    atmo: keine
   - id: sphinx
     name: Sphinx
     skript_code: [SPHX]
@@ -72,6 +75,7 @@ raeume:
     ausgaenge: [nil_delta]
     erreichbar_ab: start
     musik: w2_aegypten
+    atmo: w2_atmo
     zustaende: [mit Nase, ohne Nase]          # ohne Nase ab dem Finaltag (Probewürfe)
   - id: faehrsteg_olympia
     name: Fährsteg Olympia
@@ -80,6 +84,7 @@ raeume:
     ausgaenge: [agora, nil_delta, hafen_syrakus]   # Steinweg, Fähre
     erreichbar_ab: R1
     musik: w2_olympia
+    atmo: w2_atmo
     # Anlegestelle Olympia: Grabstein 112 Jahre (grau), Krug aus dem Palast Essig, Essigkrug Wein
   - id: agora
     name: Agora
@@ -88,6 +93,7 @@ raeume:
     ausgaenge: [faehrsteg_olympia, stadion, startbuero]
     erreichbar_ab: R1
     musik: w2_olympia
+    atmo: w2_atmo
     zustaende: [vor Tag 1, Sandale auf der Säule, nach dem Finaltag]   # Sandale bis R6a; ab Finaltag Statue ohne Arme
   - id: startbuero
     name: Startbüro
@@ -96,6 +102,7 @@ raeume:
     ausgaenge: [agora]
     erreichbar_ab: R1
     musik: w2_olympia
+    atmo: keine
   - id: stadion
     name: Stadion
     skript_code: [STAD, TAG1, HEBL, DISK, FINA, RING, PARA]   # DISK spielt auch auf der Agora und bei der Sphinx
@@ -103,6 +110,7 @@ raeume:
     ausgaenge: [agora]
     erreichbar_ab: R1
     musik: w2_olympia
+    atmo: stadion_jubel
     zustaende: [normal, Parade]                # Parade ab Ende des Finaltags, Glockenturm schief
   - id: hafen_syrakus
     name: Hafen Syrakus
@@ -111,6 +119,7 @@ raeume:
     ausgaenge: [werkstatt, grabhuegel, nil_delta, faehrsteg_olympia]   # Gasse, Pfad, Fähre
     erreichbar_ab: R1
     musik: w2_syrakus
+    atmo: w2_atmo
     # Anlegestelle Syrakus: Grabstein 137 Jahre (verwittert), Krug aus dem Palast Essig, Essigkrug Essig
   - id: werkstatt
     name: Archimedes' Werkstatt
@@ -119,6 +128,7 @@ raeume:
     ausgaenge: [hafen_syrakus]
     erreichbar_ab: R1
     musik: w2_syrakus
+    atmo: keine
   - id: grabhuegel
     name: Grabhügel Syrakus
     skript_code: [GRAB]                        # W2_GRAB 0010–0090 spielen beim Steinmetz im Nil-Delta
@@ -126,6 +136,7 @@ raeume:
     ausgaenge: [hafen_syrakus]
     erreichbar_ab: R1
     musik: w2_syrakus
+    atmo: w2_atmo
     zustaende: [leer, mit verwittertem Grabstein]
 
 figuren:
