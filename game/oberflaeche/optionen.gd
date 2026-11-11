@@ -14,8 +14,14 @@ const CONTROLLER := [
 	["LB", "UI_TASTE_FIGUR_WECHSELN"], ["RB", "UI_PAD_RB"], ["Stick", "UI_PAD_STICK"],
 	["+", "UI_PAD_KREUZ"], ["Start", "UI_TASTE_PAUSE"],
 ]
+## Schalter, die im Spiel noch nichts bewirken: Sie stehen ausgegraut mit „kommt noch“ da, bis
+## es Stimmen (Untertitel), Bildschirmwackeln und farbcodierte Rätsel ohne Symbol gibt. Das
+## Kabelrätsel in Welt 3 zeigt die Symbole immer. „Flackern reduzieren“ wirkt schon im Hauptmenü.
+const OHNE_WIRKUNG := ["untertitel", "wackeln_aus", "farbenblind"]
 
 var _reiter: TabContainer
+## Ausgegraute Schalter (für Tests)
+var _schalter_aus := {}
 ## Aktion, die gerade auf eine neue Taste wartet ("" = keine)
 var _belegt_wird := ""
 var _tasten_knoepfe := {}
@@ -31,6 +37,7 @@ func _aufbauen() -> void:
 	for k in get_children():
 		k.queue_free()
 	_tasten_knoepfe.clear()
+	_schalter_aus.clear()
 	var p := S.panel(Vector2(32, 12), Vector2(576, 336))
 	add_child(p)
 	var titel := S.label(tr("UI_MENUE_OPTIONEN"), 12)
@@ -98,7 +105,7 @@ func _spiel(g: GridContainer) -> void:
 	_wahl(g, "UI_OPT_TEXTTEMPO", "text_tempo",
 		Einstellungen.TEXT_TEMPI.keys().map(func(t): return [t, "UI_OPT_TEMPO_" + t.to_upper()]))
 	_wahl(g, "UI_OPT_TEXT_WEITER", "text_auto", [[false, "UI_OPT_PER_KLICK"], [true, "UI_OPT_AUTOMATISCH"]])
-	_schalter(g, "UI_OPT_UNTERTITEL", "untertitel")
+	_schalter(g, "UI_OPT_UNTERTITEL", "untertitel")  # in OHNE_WIRKUNG, solange es keine Stimmen gibt
 	_schalter(g, "UI_OPT_BRABBEL", "brabbel")
 
 
@@ -155,9 +162,16 @@ func _regler(g: GridContainer, text_key: String, schluessel: String) -> void:
 
 
 func _schalter(g: GridContainer, text_key: String, schluessel: String) -> void:
-	g.add_child(S.label(tr(text_key)))
 	var c := CheckButton.new()
 	c.button_pressed = bool(Einstellungen.wert(schluessel))
+	if schluessel in OHNE_WIRKUNG:
+		g.add_child(S.label("%s (%s)" % [tr(text_key), tr("UI_OPT_KOMMT_NOCH")], 10, S.GRAU))
+		c.disabled = true
+		c.focus_mode = Control.FOCUS_NONE
+		g.add_child(c)
+		_schalter_aus[schluessel] = c
+		return
+	g.add_child(S.label(tr(text_key)))
 	c.toggled.connect(func(an):
 		Klang.geraeusch("ui_klick")
 		Einstellungen.setze(schluessel, an)

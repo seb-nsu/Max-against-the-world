@@ -184,6 +184,27 @@ func _durchlauf() -> void:
 	await _warte_auf_raum("dachboden")
 	_pruefe(int(Z.wert("ZWISCHENSPIEL", 0)) == 2 and not _hat("goldener_sack"), "Zwischenspiel 2: Opa nimmt den Sack")
 	_pruefe(int(Z.wert("EINKAUFSLISTE", 0)) == 2, "Einkaufsliste: zweiter Wunsch")
+	_pruefe(load("res://oberflaeche/notizbuch.gd").einkaufsliste() == ["UI_EINKAUF_1", "UI_EINKAUF_2"],
+		"Notizbuch Seite 3 zeigt zwei Wünsche")
+	# Reisetasche: Ab dem neunten Gegenstand kommt eine zweite Zeile, kein Feld liegt auf einem anderen
+	var tasche = load("res://skripte/reisetasche.gd").new(2)
+	tasche.auslage.assign(["Socke", "Zeugnis", "Eimer", "Dosenoeffner", "Olivenoel", "Sandale", "Olivenkranz",
+		"Schriftrolle", "Handy", "Kaugummi", "Kugelschreiber"])
+	var fenster = S.REISETASCHE.instantiate()
+	S.add_child(fenster)
+	fenster.zeigen(tasche)
+	var felder: Array = fenster.auslage_felder()
+	var frei: bool = felder.size() == 11 and fenster.zeilen() == 2
+	for i in felder.size():
+		for j in range(i + 1, felder.size()):
+			if felder[i].intersects(felder[j]):
+				frei = false
+	_pruefe(frei, "Reisetasche: elf Dinge in zwei Zeilen, nichts überlappt")
+	fenster.queue_free()
+	_pruefe(tasche.kommentar_zeile("Kochloeffel") == "ZS1_DACH_PIX_0520"
+		and tasche.kommentar_zeile("Socke") == "ZS1_DACH_PIX_0540"
+		and tasche.kommentar_zeile("Olivenoel") == "ZS2_DACH_PIX_0520"
+		and tasche.kommentar_zeile("Eimer") == "", "Reisetasche: ältere Dinge behalten Pixels Kommentar, wo er noch passt")
 	S.vorgabe_tasche = []
 	await _hotspot("drehknopf").on_click()
 	_pruefe(Z.ist("ZS2_GEPACKT"), "Reisetasche gepackt")

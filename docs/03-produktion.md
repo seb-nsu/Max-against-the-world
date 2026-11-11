@@ -11,11 +11,11 @@ Diese Datei sammelt alle Absprachen zu Technik, Grafik und Audio an einer Stelle
 | Auflösung | 640×360 Pixel, ganzzahlig skaliert: 3-fach auf 1920×1080, 4-fach auf 2560×1440, 6-fach auf 3840×2160; breite Räume bis 1280×360. Festgelegt am 10. November 2026 nach dem ersten Anspielen (vorher 480×270, das in WQHD nicht ganzzahlig aufgeht); die Zahl steht zentral in `tools/aufloesung.py` | Gespielt wird vor allem am Laptop und Rechner; 640×360 skaliert glatt auf Full HD, WQHD und 4K und zeigt mehr Details |
 | Palette | Eine gemeinsame 32-Farben-Palette, z. B. Endesga 32 von Lospec | Alle Bilder, auch fremde, werden darauf umgefärbt und passen zusammen |
 | Programmierung | Claude schreibt alle Skripte (GDScript) | Du konzentrierst dich auf Grafik, Laufbereiche und Testen |
-| Grafik | KI-gestützt: Konzeptbilder mit ChatGPT oder Gemini, Spielgrafik mit Retro Diffusion, Nacharbeit in Aseprite | Schnell und einheitlich; Nacharbeit hält die Qualität |
+| Grafik | KI-gestützt: Hintergründe mit Gemini und `tools/pixelieren.py`, Figuren und Gegenstände mit Retro Diffusion, Nacharbeit in Aseprite | Schnell und einheitlich; Nacharbeit hält die Qualität |
 | Audio | KI-gestützt: ElevenLabs für Stimmen, Geräusche und Musik, ACE-Step lokal für Musik-Experimente, Audacity für Nacharbeit | Ein Abo deckt fast alles ab, lizenzrechtlich sauberer als Suno |
 | Parodien | Keine geschützten Namen, Logos oder Figurendesigns; bekannte Zitate erlaubt, wenn sie als Anspielung erkennbar sind; Parodienamen nie im Titel, Store-Text, Tags, Trailer oder Screenshots; Toadi und Zeldina erscheinen in keinem Marketing-Material (auch nicht in Kapselbildern und Social Media), der Abspann-Pilz wird vor dem Trailer-Schnitt geprüft; Rechtscheck der Namen in `01-konzept.md` | Rechtliche Sicherheit, eigene Witze statt Kopien |
 | KI-Offenlegung | Steam-Formular für KI-Inhalte ausfüllen (Grafik, Musik, Stimmen); jede Erzeugung im KI-Protokoll festhalten; Strategie, Formularangaben und Store-Text unter „KI-Offenlegung“ weiter unten | Pflicht auf Steam, Nachweis bei Rückfragen |
-| Vorgehen | Erst ein Vertical Slice (Prolog und Rätsel 1 bis 4 aus Welt 1: 8 Räume, 13 Figuren, etwa 450 Zeilen), dann die Demo mit ganz Welt 1 für die Steam-Seite, dann Serienproduktion; Stufen unter Meilensteine | Früh testen, ob Rätsel und Witz funktionieren |
+| Vorgehen | Erst ein Vertical Slice (Prolog und Rätsel 1 bis 4 aus Welt 1: 12 Räume, 13 Figuren, etwa 450 Zeilen), dann die Demo mit ganz Welt 1 für die Steam-Seite, dann Serienproduktion; Stufen unter Meilensteine | Früh testen, ob Rätsel und Witz funktionieren |
 | Veröffentlichung | Ein Spiel mit kostenloser Demo (Prolog und Welt 1) statt verkaufter Episoden; die frühere Idee, Prolog und Welt 1 vorab als eigene Episode zu verkaufen, ist damit verworfen (8. November 2026) | Eine Demo sammelt Wunschlisten ohne Bruch; vier Episoden wären vier Veröffentlichungen mit je eigener Steam-Seite |
 | Hauptfiguren | Max, Pixel und Opa entstehen als KI-Entwurf und werden in Aseprite Pixel für Pixel von Hand nachgezogen; alle anderen Figuren KI mit Nacharbeit | Mittelweg zwischen „Hauptfiguren ganz von Hand“ und der freigegebenen KI-Pipeline; die drei Figuren sind in jedem Screenshot und tragen die Store-Seite. Für Pixels Posen darf ein freies Katzen-Asset (CC0) nur als Anschauung neben dem Bild liegen; seine Pixel werden nicht übernommen |
 | Umfang | Etwa 8 Stunden Spielzeit, 53 Rätsel, 3 Zwischenspiele (Rückkehren nach Welt 1 bis 3, das Packen ist jeweils eingebaut; laut Skript 191 Zeilen, Budget 200) und ein Finale in acht Abschnitten (315 Zeilen, Budget 320; Budgets in `05-spielsysteme.md`, Umfang); der Vertical Slice dauert etwa 40 Minuten | Richtwert für Zeitplan, Zeilenbudget und Steam-Seite; 8 bis 12 Minuten je Rätsel sind klassisch |
@@ -37,11 +37,11 @@ Diese Datei sammelt alle Absprachen zu Technik, Grafik und Audio an einer Stelle
 
 | Schritt | Werkzeug | Absprache |
 | --- | --- | --- |
-| Konzeptbild | ChatGPT oder Gemini | Baustein KONZEPT voranstellen, 16:9; nur als Vorlage, nie ins Spiel |
-| Hintergründe | Retro Diffusion, Modell `rd_plus__environment` | Konzeptbild in voller Größe lokal mit Neural Pixelate umwandeln |
+| Konzeptbild | ChatGPT oder Gemini | Baustein KONZEPT voranstellen, 16:9; bei Hintergründen ist es die Vorlage für das Spielbild (nächste Zeile), bei Figuren nur Anschauung |
+| Hintergründe | Gemini, dann `tools/pixelieren.py` (seit 10. November 2026); Ersatzweg Retro Diffusion, Modell `rd_plus__environment` | Konzeptbild in voller Größe mit `tools/pixelieren.py` auf 640×360 und 32 Farben umwandeln, danach Nacharbeit von Hand (`grafik/00-stil-und-werkzeuge.md`) |
 | Figuren | Retro Diffusion Cloud, `rd_pro__default` mit Referenzbild, `rd_plus__character_turnaround` | Erst eine Seitenansicht festlegen, dann als Referenz für alles Weitere |
 | Animationen | Retro Diffusion Cloud, `rd_advanced_animation__walking`, `__idle`, `__custom_action` | Nur auf der Website möglich, nicht in der lokalen Erweiterung |
-| Gegenstände | `rd_plus__item_sheet` oder `rd_pro__inventory_items` | Sammelbilder, dann ausschneiden und auf 36×36 bringen |
+| Gegenstände | `rd_plus__item_sheet` oder `rd_pro__inventory_items` | Sammelbilder, dann ausschneiden und auf 48×48 bringen |
 | Oberfläche | `rd_pro__ui_panel` | Rahmen und Knöpfe; Schrift immer von Hand |
 | Nacharbeit | Aseprite mit der lokalen Retro-Diffusion-Erweiterung | Palette anwenden, Freistellen, Laufbereich frei lassen, Text von Hand setzen |
 
@@ -53,14 +53,14 @@ Diese Datei sammelt alle Absprachen zu Technik, Grafik und Audio an einer Stelle
 
 | Asset | Stückzahl | Werkzeug | Zeit je Stück | Summe |
 | --- | --- | --- | --- | --- |
-| Hintergründe | etwa 80 (59 Räume plus etwa 20 Zustandsvarianten) | Konzeptbild, `tools/pixelieren.py`, Aseprite | 3 bis 6 h | 240 bis 480 h |
+| Hintergründe | etwa 80 (58 Räume in den Welt-Tabellen plus etwa 20 Zustandsvarianten) | Konzeptbild, `tools/pixelieren.py`, Aseprite | 3 bis 6 h | 240 bis 480 h |
 | Figurensprites mit Gehen, Stehen, Sprechen | etwa 105 (Prolog 7, W1 22, W2 26, W3 22, W4 27) | Retro Diffusion Cloud, Aseprite | 3 bis 4,5 h | 315 bis 473 h |
 | Sonderanimationen | etwa 60 | `rd_advanced_animation__custom_action` | 1 h | 60 h |
 | Effekte | etwa 25 | Baustein EFFEKT | 0,5 h | 13 h |
 | Inventar-Icons | etwa 150 | Sammelbilder, Aseprite | 20 Minuten | 50 h |
 | Nahansichten | 14 (Prolog 2, W1 4, W2 3, W3 4, W4 1 Programmzeitschrift; Liste in `welten/*.yaml`) | Baustein HINTERGRUND, Schrift von Hand | 3 h | 42 h |
 | UI-Panels | etwa 12 | `rd_pro__ui_panel` | 2 h | 24 h |
-| Summe Grafik |  |  |  | rund 800 bis 1.150 h (bei 320×180 waren es 600 bis 800 h; die Zeiten je Stück sind für 480×270 um etwa die Hälfte erhöht geschätzt, weil die Nacharbeit mit der Fläche wächst, das Erzeugen aber nicht) |
+| Summe Grafik |  |  |  | rund 800 bis 1.150 h (bei 320×180 waren es 600 bis 800 h; die Zeiten je Stück sind für 480×270 um etwa die Hälfte erhöht geschätzt, weil die Nacharbeit mit der Fläche wächst, das Erzeugen aber nicht; für 640×360 ist die Summe noch nicht neu geschätzt) |
 
 ## System 3: Audio mit KI
 
@@ -81,7 +81,7 @@ Diese Datei sammelt alle Absprachen zu Technik, Grafik und Audio an einer Stelle
 | Retro Diffusion lokal | 65 $ einmalig (Lite 20 $) | nach erfolgreichem Demotest |
 | Retro Diffusion Cloud | Credits nach Verbrauch; geschätzt mehrere hundert Dollar bei etwa 80 Hintergründen und 300 Animationsjobs mit je drei Versuchen | ab den ersten Figuren |
 | GDAI MCP | 19 $ einmalig, optional | wenn Claude Screenshots braucht |
-| ElevenLabs | ab 6 $ im Monat; für die Vollvertonung etwa 3 Monate Pro (rund 300 $) | Geräusche und Musik laufend, Stimmen am Ende |
+| ElevenLabs | ab 6 $ im Monat; für die Vollvertonung etwa vier Monate Pro (rund 400 $ nach der alten Schätzung, eher mehr; Rechnung in `04-audio.md`, Sprachausgabe) | Geräusche und Musik laufend, Stimmen am Ende |
 | Steam-Veröffentlichung | 100 $ Gebühr pro Spiel | vor der Steam-Seite |
 | Claude-Abo | 100 bis 200 $ im Monat; über 30 Monate 3.000 bis 6.000 $ | laufend, größter Posten |
 | ChatGPT oder Gemini | etwa 20 $ im Monat in den Grafikphasen | Konzeptbilder je Welt |
@@ -93,12 +93,25 @@ Preise Stand November 2026, laut [Retro Diffusion auf itch.io](https://astropuls
 
 ## Meilensteine und Stundenbudget
 
-Fünf Stufen mit Dauer, Stundenbudget und einer Regel, wann umgesteuert wird. Nach jeder Stufe Ist und Plan vergleichen und die nächste Stufe neu schätzen. Der Umfang des Spiels bleibt dabei fest; umgesteuert wird am Ablauf, nicht an den Rätseln.
+**Stand 11. November 2026:** Der Bau ist dem Plan voraus. Prolog, Welt 1 bis 4, die drei Zwischenspiele und das Finale sind als Graubox durchspielbar, mit Hilfe-Pfote, Speichern, Menüs, englischer Fassung und automatischen Tests (Stand-Absätze unten). Die Stufen 1 und 2 sind bis auf den Test mit fünf Fremden erledigt, aus den Stufen 3 bis 5 der Bau aller Welten. Offen sind je Abschnitt Grafik, Audio und der Test mit Fremden, dazu die Minispiele (bisher Auswahlmenüs) und die Steam-Seite.
+
+**Was je Abschnitt noch offen ist** (Stückzahlen aus `welten/*.yaml` und `04-audio.md`; Zustandsvarianten, Animationen und Stimmen kommen dazu). Dauer und Stunden je Zeile sind noch nicht neu geschätzt; das legt Sebastian fest.
+
+| Abschnitt | Grafik | Audio | Danach |
+| --- | --- | --- | --- |
+| Prolog und Gegenwart | 3 Räume, 3 Figuren, 6 Gegenstände, 1 Nahansicht; Hauptmenü und Oberfläche | Titelthema, `gegenwart`, `zappomat`; 16 Geräusche der Bedienung, 13 für Max, Pixel und die Gegenwart | Test mit fünf Fremden (Prolog und Welt 1 bis Rätsel 4) |
+| Welt 1 | 14 Räume, 29 Figuren, 25 Gegenstände, 2 Nahansichten | 7 Musikstücke, 8 Geräusche, Goblin-Arbeitslied und Waldemars Nummer | Demo und Steam-Seite |
+| Welt 2 | 11 Räume, 29 Figuren, 43 Gegenstände, 3 Nahansichten | 4 Musikstücke, 8 Geräusche | Minispiele des Fünfkampfs bauen, Test |
+| Welt 3 | 12 Räume, 24 Figuren, 14 Gegenstände, 2 Nahansichten | 5 Musikstücke, 10 Geräusche | Test |
+| Welt 4 | 14 Räume, 31 Figuren, 17 Gegenstände | 9 Musikstücke, 11 Geräusche, Dr. Werbepauses Jingle | Rhythmus-Minispiel bauen, Test |
+| Zwischenspiele und Finale | 4 Räume, 15 Figuren, 6 Gegenstände | `finale_maschine`, `finale_geburtstag`, `werbeblock`, Abspann | Sprachausgabe oder Brabbel entscheiden, Steam-Einreichung |
+
+**Plan vom 9. November 2026 (vor dem Bau der Graubox):** Die Tabelle unten bleibt als Messlatte stehen. Ihre Dauern und Stundenbudgets enthalten den Bau der Welten, der schon erledigt ist; für Grafik und Audio allein sind sie zu hoch und müssen neu geschätzt werden. Fünf Stufen mit Dauer, Stundenbudget und einer Regel, wann umgesteuert wird. Nach jeder Stufe Ist und Plan vergleichen und die nächste Stufe neu schätzen. Der Umfang des Spiels bleibt dabei fest; umgesteuert wird am Ablauf, nicht an den Rätseln.
 
 | Stufe | Dauer | Ergebnis | Stundenbudget | Umsteuern, wenn |
 | --- | --- | --- | --- | --- |
 | 1 Grundgerüst | 4 Wochen | Godot und Popochiu eingerichtet, Git mit LFS, gemeinsames Zustandssystem, Figurenwechsel, Speichern, Nahansicht, Notizbuch, tr() in allen Texten, Dachboden mit Platzhaltergrafik; Prüfskript für die Skript-Tabellen (Zeilenlänge, doppelte IDs, Zehnerschritte, Sprecherliste; A1, A2) und Konsistenz-Check der Rätsel-Dateien (Benötigt und Belohnung, Sackgassen, falsche Verweise; A13) laufen bei jedem Push in GitHub Actions (A7); dazu ein automatischer Speichern/Laden-Test und ein Rundreise-Test (A4): Spielstand an jeder Stelle speichern, laden und vergleichen | 60 h | Der Figurenwechsel läuft nach vier Wochen nicht: Popochiu-Version prüfen, dann Hilfe im Popochiu-Discord holen |
-| 2 Vertical Slice | 8 Wochen | Prolog und Welt 1 Rätsel 1 bis 4: 8 Räume, 13 Figuren, etwa 450 Zeilen, Platzhalter erlaubt; fünf Fremde testen mit Telemetrie-Log; die Hinweis-Datei der Hilfe-Pfote wird automatisch aus Skript und Rätseltabelle erzeugt (A14) | 120 h | Tester lösen Rätsel 1 bis 4 mit Hinweisen nicht in 40 Minuten: Hinweise und Hotspots nachbessern, bevor Grafik in Serie geht |
+| 2 Vertical Slice | 8 Wochen | Prolog und Welt 1 Rätsel 1 bis 4: 12 Räume, 13 Figuren, etwa 450 Zeilen, Platzhalter erlaubt; fünf Fremde testen mit Telemetrie-Log; die Hinweis-Datei der Hilfe-Pfote wird automatisch aus Skript und Rätseltabelle erzeugt (A14) | 120 h | Tester lösen Rätsel 1 bis 4 mit Hinweisen nicht in 40 Minuten: Hinweise und Hotspots nachbessern, bevor Grafik in Serie geht |
 | 3 Demo Welt 1 | 6 Monate | Prolog und Welt 1 komplett mit fertiger Grafik und Audio, Zwischenspiel 1, Steam-Seite mit Demo online | 350 h | Mehr als 9 Monate: Zeitplan der Welten 2 bis 4 neu rechnen und Prompt-Vorlagen verbessern |
 | 4 Welten 2 bis 4 | je 5 bis 7 Monate | Eine Welt je Stufe mit Rückkehr, Packszene und Test; Reihenfolge 2, 3, 4 | je 300 h | Eine Welt dauert mehr als 9 Monate: Ablauf prüfen (Automatisierung, Sammelbilder, Wiederverwendung), nicht die Rätselzahl |
 | 5 Finale und Politur | 3 Monate | Finale, Abspann, Übersetzung, Sprachausgabe oder Brabbel, Errungenschaften, Barrierefreiheit, Steam-Einreichung | 180 h | Die Entscheidung Vollvertonung oder Brabbel fällt spätestens am Anfang dieser Stufe |
@@ -113,9 +126,9 @@ Welche Automatisierung in welche Stufe gehört, steht unter Automatisierung.
 
 **Stand Testbuild und Telemetrie (9. November 2026, A9):** Der Testbuild für Linux und Windows entsteht aus `game/export_presets.cfg` (Feature-Tag `cq_testbuild`), lokal oder über den Workflow „Testbuild“ in GitHub Actions (von Hand gestartet, Builds als Artefakte); der lokale Export mit den Vorlagen 4.7.2 lief für beide Plattformen. Im Testbuild fragt das Spiel beim ersten Start, ob es ein anonymes Protokoll schreiben darf; mit Zustimmung schreibt es je Sitzung eine JSON-Lines-Datei (Räume mit Zeit, Rätselschritt offen und gelöst, Hinweisstufen mit Wartezeile, Fehlklicks je Objekt, Ersatzzeilen, Klicks ins Leere, Gesprächsoptionen, Speichern und Laden). Tester öffnen den Ordner über die Einstellungen und schicken die Datei; einen Upload gibt es noch nicht. `tools/telemetrie_auswertung.py` macht daraus einen Bericht je Schritt und Rätsel mit den Zielwerten, `test/beobachtungsbogen.md` ist der Bogen je Tester. Der Headless-Test prüft das Protokoll mit: 710 Prüfungen im Testmodus, 709 mit echtem Ablauf, 0 Fehler. Offen: der Test mit fünf Fremden, ein Blick auf den Build am Bildschirm (Popochiu meldet beim Start Fehler in seinen Editor-Skripten, das Spiel läuft headless trotzdem), Upload und Web-Export (A8).
 
-**Stand Menüs und Audio-Gerüst (10. November 2026):** Das Spiel startet im Hauptmenü (Fernseher mit fünf Kanälen, Epilepsie-Hinweis beim ersten Start). Esc öffnet das Pausemenü, sofern nichts läuft; Speichern und Laden zeigen zwölf Plätze mit Vorschaubild, Ort, Welt, Spielzeit und Datum, beim Laden dazu Schnell- und Autospeicher. Die Optionen haben fünf Reiter (Audio, Anzeige, Spiel, Steuerung, Barrierefreiheit) und gelten sofort; große Schrift und dauerhafte Hotspots wirken schon. Das Audio-Gerüst ruft Musik je Raum, Jingles, Geräusche und Stimmen über IDs auf; Dateien muss man nur in die Ordner legen (`04-audio.md`, Im Spiel), `tools/audio_liste.py` zeigt den Stand. Ein eigener Headless-Test prüft Optionen, Klang, Hauptmenü, Pausemenü und Fortsetzen. Offen: Grafik für Menü und Fernseher, Musik und Geräusche selbst, die Wirkung von Wackeln, Flackern und Farbenblind-Hilfe (kommt mit den Effekten).
+**Stand Menüs und Audio-Gerüst (10. November 2026):** Das Spiel startet im Hauptmenü (Fernseher mit fünf Kanälen, seit den Errungenschaften sechs, Epilepsie-Hinweis beim ersten Start). Esc öffnet das Pausemenü, sofern nichts läuft; Speichern und Laden zeigen zwölf Plätze mit Vorschaubild, Ort, Welt, Spielzeit und Datum, beim Laden dazu Schnell- und Autospeicher. Die Optionen haben fünf Reiter (Audio, Anzeige, Spiel, Steuerung, Barrierefreiheit) und gelten sofort; große Schrift und dauerhafte Hotspots wirken schon. Das Audio-Gerüst ruft Musik je Raum, Jingles, Geräusche und Stimmen über IDs auf; Dateien muss man nur in die Ordner legen (`04-audio.md`, Im Spiel), `tools/audio_liste.py` zeigt den Stand. Ein eigener Headless-Test prüft Optionen, Klang, Hauptmenü, Pausemenü und Fortsetzen. Offen: Grafik für Menü und Fernseher, Musik und Geräusche selbst, die Wirkung von Wackeln, Flackern und Farbenblind-Hilfe (kommt mit den Effekten).
 
-**Stand Errungenschaften, Barrierefreiheit und Controller (10. November 2026):** Die 13 Errungenschaften schalten sich aus dem Zustand frei, bleiben über alle Spielstände und gehen an Steam, sobald GodotSteam eingebunden ist; das Hauptmenü zeigt sie als sechsten Kanal. Das ganze Spiel geht mit Gamepad und Steam Deck: Zeiger mit Einrasten, Steuerkreuz springt zwischen Hotspots, Menüs über den Fokus. Beim Zeigen der Hotspots stehen ihre Namen dabei. Wackeln, Flackern und Farbsymbole laufen über `CQEffekte` und beachten die Optionen. Offen: vier Schalter, die Welt 3, Welt 4 und das Finale setzen müssen (`05-spielsysteme.md`, Errungenschaften), Errungenschaften in Steamworks anlegen, GodotSteam einbinden, Steam-Input-Glyphen.
+**Stand Errungenschaften, Barrierefreiheit und Controller (10. November 2026):** Die 13 Errungenschaften schalten sich aus dem Zustand frei, bleiben über alle Spielstände und gehen an Steam, sobald GodotSteam eingebunden ist; das Hauptmenü zeigt sie als fünften von sechs Kanälen. Das ganze Spiel geht mit Gamepad und Steam Deck: Zeiger mit Einrasten, Steuerkreuz springt zwischen Hotspots, Menüs über den Fokus. Beim Zeigen der Hotspots stehen ihre Namen dabei. Wackeln, Flackern und Farbsymbole laufen über `CQEffekte` und beachten die Optionen. Offen: vier Schalter, die Welt 3, Welt 4 und das Finale setzen müssen (`05-spielsysteme.md`, Errungenschaften), Errungenschaften in Steamworks anlegen, GodotSteam einbinden, Steam-Input-Glyphen.
 
 **Stand Durchsicht aller Welten (10. November 2026):** Prolog bis Finale laufen im Testmodus ohne Fehler durch; Welt 2 und Welt 3 haben jetzt eigene Headless-Tests, die auch in GitHub Actions laufen. Ein Abgleich zwischen Skript und Spiel fand viele Zeilen, die nie vorkamen; sie sind eingebaut, übrig sind nur markierte Reservezeilen. Behoben sind außerdem der hängende Übergang von Welt 3 zum Dachboden, die vier Nahansichten in Welt 3, die sich nie öffneten, und die Reihenfolge von Vorstellung und Einstieg bei mehreren Figuren. 151 neue Zeilen geben einzeiligen Dialogoptionen in Welt 2 bis 4 einen Nachsatz. Die Funde G27 bis G30 sind am selben Tag erledigt; `tools/abdeckung.py` prüft seitdem in GitHub Actions, dass jede Skriptzeile im Spiel vorkommt.
 
@@ -125,7 +138,7 @@ Bei 10 bis 15 Stunden pro Woche sind das rund drei Jahre, bei 20 Stunden gut zwe
 
 **Puffer und Termin für die Steam-Seite (Schätzung vom 9. November 2026, wird später festgelegt):** Auf jede Stufe kommen 20 Prozent Puffer: Grundgerüst 5 statt 4 Wochen, Vertical Slice 10 statt 8 Wochen, Demo Welt 1 gut 7 statt 6 Monate, Welten 2 bis 4 je 6 bis 8,5 statt 5 bis 7 Monate, Finale und Politur knapp 4 statt 3 Monate. Ohne Puffer ergibt das 27 bis 33 Monate, mit Puffer 32 bis 40 Monate.
 
-Die Steam-Seite geht online, sobald der Vertical Slice bestanden ist und ein fertiges Kapselbild und fünf echte Screenshots aus Welt 1 vorliegen, geschätzt im Monat 7 bis 9 nach Projektstart. Die Demo folgt am Ende von Stufe 3 (etwa Monat 10 bis 11) und zielt auf das nächste Steam Next Fest (Februar, Juni oder Oktober). Beispiel bei Projektstart im Januar 2027: Steam-Seite im Herbst 2027, Demo zum Next Fest im Februar 2028, Veröffentlichung zwischen Herbst 2029 und Frühjahr 2030. Die Seite hätte damit gut zwei Jahre, um Wunschlisten zu sammeln.
+Die Steam-Seite geht online, sobald der Vertical Slice bestanden ist und ein fertiges Kapselbild und fünf echte Screenshots aus Welt 1 vorliegen, geschätzt im Monat 7 bis 9 nach Projektstart. Die Demo folgt am Ende von Stufe 3 (etwa Monat 10 bis 11) und zielt auf das nächste Steam Next Fest (Februar, Juni oder Oktober). Beispiel bei Projektstart im Januar 2027: Steam-Seite im Herbst 2027, Demo zum Next Fest im Februar 2028, Veröffentlichung zwischen Herbst 2029 und Frühjahr 2030. Die Seite hätte damit gut zwei Jahre, um Wunschlisten zu sammeln. Dieses Beispiel rechnet noch mit dem Bau der Welten ab Januar 2027; der Bau ist seit November 2026 als Graubox fertig, die Termine sind deshalb neu zu rechnen (offen).
 
 ## Automatisierung
 
@@ -156,18 +169,18 @@ Nicht automatisieren: Laufbereiche, Hotspot-Umrisse, Freigabe der Pointen und di
 
 | Baustein | Was zu tun ist | Wer |
 | --- | --- | --- |
-| Dialog-Skript | Alle Zeilen von Max, Pixel und den Figuren, jede mit fester ID für Übersetzung und Sprachausgabe; dazu Kommentare für „Benutze X mit Y“, die nicht gehen | Claude schreibt, du kürzt |
+| Dialog-Skript | Alle Zeilen von Max, Pixel und den Figuren, jede mit fester ID für Übersetzung und Sprachausgabe; dazu Kommentare für „Benutze X mit Y“, die nicht gehen. Geschrieben für alle Abschnitte (`skript/*.md`) | erledigt; du kürzt und prüfst den Ton |
 | Schrift | Nunito (OFL) für Text im Spiel, Pixelify Sans (OFL) für Titel; festgelegt am 9. November 2026, Lizenzen in `licenses/` (`05-spielsysteme.md`, Schrift) | erledigt |
 | Menüs und UI | Hauptmenü, Pausemenü, Speichern und Laden mit Vorschaubild, Optionen in fünf Reitern, Hotspot-Anzeige; gebaut am 10. November 2026 (`05-spielsysteme.md`, Bildschirme), Grafik fehlt noch | erledigt (Platzhaltergrafik) |
-| Hinweis-System | Der Pfoten-Hilfeknopf aus dem Prolog: drei Stufen pro Rätsel, vom Wink bis zur Lösung | Claude schreibt die Hinweise |
-| Speichern | Spielstand mit Inventar, Rätsel-Fortschritt und aktueller Figur | Claude skriptet |
+| Hinweis-System | Der Pfoten-Hilfeknopf aus dem Prolog: drei Stufen pro Rätsel, vom Wink bis zur Lösung. Für alle Abschnitte gebaut, die Hinweis-Dateien entstehen aus Skript und Rätseltabelle | erledigt |
+| Speichern | Spielstand mit Inventar, Rätsel-Fortschritt und aktueller Figur. Gebaut: Autospeicher, F5/F9, zwölf Plätze | erledigt |
 | Übersetzung | Englisch verdoppelt den Markt auf Steam; alle Texte ab Tag 1 über tr() und Zeilen-IDs, keine festen Strings im Skript; Eigennamen-Glossar in `05-spielsysteme.md` | Englische Fassung fest beschlossen (9. November 2026); Claude übersetzt aus der Skript-CSV mit Glossar (A12), Muttersprachler prüft Witze |
 | Testen | Ab dem Vertical Slice Fremde spielen lassen. Der Build schreibt ein Telemetrie-Log (Raum, Rätsel, Zeit, Hinweisstufe, Klicks ins Leere); dazu ein Beobachtungsbogen je Tester mit Zielwerten: Rätsel unter 12 Minuten, höchstens eine Hinweisstufe 3 je Welt, jeder Witz mindestens einmal gelacht | du und Testspieler |
 | Steam-Seite | Kapselbilder in mehreren Formaten, 5+ Screenshots, Trailer, Beschreibung, KI-Offenlegung; Seite früh online stellen, um Wunschlisten zu sammeln | du, Claude hilft bei Texten |
 | Rechtliches | Rechtscheck der Namen (`01-konzept.md`) vor jeder Welt durchgehen; Markencheck des Titels „Couch Quest – Max against the worlds“ in DPMAregister, EUIPO eSearch und der Steam-Suche vor der Steam-Seite, Ergebnis mit Datum hier eintragen (Stand 9. November 2026: Websuche erledigt, Registersuche offen. Kein Videospiel namens „Couch Quest“ auf Steam gefunden; der Name ist aber belegt durch eine Live-Gameshow „Couch Quests“ auf Twitch und YouTube, Social-Media-Konten „Couch Quest“ und „Couch Quest Gaming“ sowie einen Möbelhändler in den USA. Die Suche in DPMAregister und EUIPO eSearch nach „Couch Quest“ in den Klassen 9, 28 und 41 fehlt noch); eine Anwaltsstunde für Figurenliste und Titel vor der Veröffentlichung; Gewerbe und Steuer vor der Steam-Seite: Gewerbe anmelden (oder Kleinunternehmerregelung klären), Steuernummer für das Steam-Steuerinterview, Erstgespräch beim Steuerberater (Umsatzsteuer auf Steam-Umsätze führt Valve ab, Einkommensteuer bleibt), Impressum mit Anschrift auch auf der Steam-Seite; Lizenznachweise für Schrift, Musik und Geräusche sammeln; Impressum für die Seite. Altersfreigabe: Ziel USK 6 und PEGI 7 über den IARC-Fragebogen auf Steam (Wein in Welt 1 und 2 nur als Bestellung oder Rätselgegenstand, Max trinkt keinen Alkohol, Pastillen statt Pillen in Welt 3, Slapstick ohne Blut); fällt die Einstufung höher aus, ist USK 12 akzeptiert. Das Dokument ersetzt keine Rechtsberatung | du |
 | Versionierung | Git mit GitHub und Git LFS für audio/ und concepts/; wichtig, sobald eine KI Dateien im Projekt ändert, damit jeder Schritt rückgängig gemacht werden kann | einmal einrichten |
 
-**Reihenfolge:** Erst das Grundgerüst, dann der Vertical Slice (Prolog und Welt 1 Rätsel 1 bis 4: 8 Räume, 13 Figuren, etwa 450 Zeilen, Platzhaltergrafik erlaubt), dann testen, dann Grafik und Audio in Serie. Die Stufen stehen unter Meilensteine.
+**Reihenfolge:** Erst das Grundgerüst, dann der Vertical Slice (Prolog und Welt 1 Rätsel 1 bis 4: 12 Räume, 13 Figuren, etwa 450 Zeilen, Platzhaltergrafik erlaubt), dann testen, dann Grafik und Audio in Serie. Die Stufen stehen unter Meilensteine.
 
 ## KI-Offenlegung
 
@@ -175,16 +188,16 @@ Steam fragt im Fragebogen zu den Inhalten zwei Arten ab: vorab erzeugte KI-Inhal
 
 **Angaben im Steam-Formular (vorab erzeugt):**
 
-- Grafik: Konzeptbilder mit ChatGPT oder Gemini als Vorlage, nie im Spiel. Hintergründe, Figuren, Animationen und Gegenstände mit Retro Diffusion erzeugt und in Aseprite von Hand nachbearbeitet; Max, Pixel und Opa Pixel für Pixel von Hand nachgezogen.
+- Grafik: Hintergründe sind mit einem Bildgenerator erzeugt (Gemini), verkleinert (`tools/pixelieren.py`) und von Hand überarbeitet. Figuren, Animationen und Gegenstände mit Retro Diffusion erzeugt und in Aseprite von Hand nachbearbeitet; Max, Pixel und Opa als KI-Entwurf von Hand nachgezeichnet und animiert.
 - Audio: Stimmen, Geräusche und Musik mit ElevenLabs (Voice Design, keine geklonten Stimmen echter Personen) und ACE-Step, Nacharbeit in Audacity; Liedtexte von Hand.
 - Text: Geschichte, Welten, Figuren und Rätsel von Sebastian; Dialoge mit Claude als Schreibpartner entworfen und von Sebastian überarbeitet; englische Fassung mit Claude übersetzt und von einem Muttersprachler geprüft.
 - Code: mit Claude Code geschrieben.
 - Live erzeugt: nein. Das Spiel erzeugt beim Spielen keine Inhalte mit KI.
 - Nachweis: KI-Protokoll mit Prompt, Datum und Ähnlichkeitsprüfung für jedes Asset.
 
-**Store-Text, deutsch (Entwurf):** „Couch Quest ist ein kleines Indie-Projekt, bei dem KI ein Werkzeug ist und nicht der Autor. Geschichte, Figuren und Rätsel stammen von mir. Grafik und Audio sind mit KI-Werkzeugen entstanden (Retro Diffusion, ElevenLabs); jedes Bild ist in Aseprite von Hand nachgearbeitet, und Max, Pixel und Opa sind Pixel für Pixel von Hand gezeichnet. Die Dialoge habe ich mit Claude als Schreibpartner entworfen und selbst überarbeitet, der Code ist mit Claude Code entstanden. Keine Stimme einer echten Person wurde geklont, und das Spiel erzeugt beim Spielen keine Inhalte mit KI.“
+**Store-Text, deutsch (Entwurf):** „Couch Quest ist ein kleines Indie-Projekt, bei dem KI ein Werkzeug ist und nicht der Autor. Geschichte, Figuren und Rätsel stammen von mir. Grafik und Audio sind mit KI-Werkzeugen entstanden (Gemini, Retro Diffusion, ElevenLabs); die Hintergründe sind mit einem Bildgenerator erzeugt, verkleinert und von Hand überarbeitet, und Max, Pixel und Opa sind von Hand nachgezeichnet und animiert. Die Dialoge habe ich mit Claude als Schreibpartner entworfen und selbst überarbeitet, der Code ist mit Claude Code entstanden. Keine Stimme einer echten Person wurde geklont, und das Spiel erzeugt beim Spielen keine Inhalte mit KI.“
 
-**Store-Text, englisch (Entwurf):** „Couch Quest is a small indie project where AI is a tool, not the author. The story, characters and puzzles are mine. Art and audio were made with AI tools (Retro Diffusion, ElevenLabs); every image was reworked by hand in Aseprite, and Max, Pixel and Grandpa were drawn pixel by pixel. I drafted the dialogue with Claude as a writing partner and edited it myself, and the code was written with Claude Code. No real person’s voice was cloned, and the game generates no AI content while you play.“
+**Store-Text, englisch (Entwurf):** „Couch Quest is a small indie project where AI is a tool, not the author. The story, characters and puzzles are mine. Art and audio were made with AI tools (Gemini, Retro Diffusion, ElevenLabs); the backgrounds were generated with an image generator, scaled down and reworked by hand, and Max, Pixel and Grandpa were redrawn and animated by hand. I drafted the dialogue with Claude as a writing partner and edited it myself, and the code was written with Claude Code. No real person’s voice was cloned, and the game generates no AI content while you play.“
 
 ## Markt
 
@@ -201,7 +214,7 @@ Stand 9. November 2026. Alle Verkaufszahlen sind Schätzungen von Analyse-Seiten
 
 **Preis:** 17,99 € bzw. 17,99 $ zum Start, Demo kostenlos, 10 bis 15 Prozent Startrabatt. Acht Stunden Spielzeit tragen diesen Preis; Lucy Dreaming und Sam & Max liegen bei 19 bis 20 $.
 
-**Zielgruppe:** Adventure-Fans zwischen 25 und 45 mit Erinnerungen an die LucasArts- und Daedalic-Zeit, auf Deutsch und Englisch; dazu Popkultur-Fans, die Parodien mögen, und Steam-Deck-Spieler. Nebenzielgruppe Jugendliche ab 12 (Freigabe-Ziel USK 6 und PEGI 7, siehe Was noch fehlt, Rechtliches).
+**Zielgruppe:** Adventure-Fans zwischen 25 und 45 mit Erinnerungen an die LucasArts- und Daedalic-Zeit, auf Deutsch und Englisch; dazu Popkultur-Fans, die Parodien mögen, und Steam-Deck-Spieler. Nebenzielgruppe Jugendliche ab 12 (Freigabe-Ziel USK 6 und PEGI 7, siehe Was noch fehlt, Rechtliches). Die Freigabe ist eine Unbedenklichkeit, keine Empfehlung: Bei über 6.000 Sprechblasen Lesestoff nennt der Store-Text „Empfohlen ab 10“.
 
 **Wunschlisten-Ziel:** 10.000 zum Start, mindestens 7.000. Bei 10.000 Wunschlisten sind 1.200 bis 2.500 Verkäufe im ersten Monat und 3.000 bis 6.000 im ersten Jahr realistisch.
 

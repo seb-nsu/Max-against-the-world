@@ -34,6 +34,8 @@ var _rauschen: Control
 var _knopf_dreh: Control
 var _kanal := 0
 var _neuester := -1
+## „Neues Spiel“ bei vorhandenem Spielstand: erst beim zweiten Auslösen (wie „Hauptmenü“ im Pausemenü)
+var _neu_sicher := false
 var _zeit := 0.0
 
 
@@ -181,6 +183,7 @@ func _kanal_waehlen(i: int, still := false) -> void:
 	if i != _kanal and not still:
 		Klang.geraeusch("wechsel")
 	_kanal = i
+	_neu_sicher = false
 	_kanal_nr.text = "%s %d" % [tr("UI_KANAL"), i + 1]
 	_kanal_text.text = tr(KANAELE[i][0])
 	_kanal_info.text = tr(KANAELE[i][1])
@@ -199,6 +202,10 @@ func _ausloesen(i: int) -> void:
 			if _neuester >= 0:
 				starten(_neuester)
 		1:
+			if _neuester >= 0 and not _neu_sicher:
+				_neu_sicher = true
+				_kanal_info.text = tr("UI_MENUE_NEUES_SPIEL_SICHER")
+				return
 			starten(-1)
 		2:
 			_unter_zeigen("laden")

@@ -2,7 +2,6 @@
 
 [ext_resource type="Theme" uid="uid://ifeiqf452xqd" path="res://game/gui/resources/gui_theme.tres" id="1_tdxhg"]
 [ext_resource type="Script" uid="uid://bmx8d38xtww0y" path="res://game/gui/components/dialog_menu/dialog_menu_option/dialog_menu_option_custom.gd" id="2_rads0"]
-[ext_resource type="FontFile" uid="uid://bv18h6qukjo3s" path="res://game/gui/fonts/monkeyisland_1991.ttf" id="3_35cmc"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0ctoq"]
 content_margin_left = 2.0

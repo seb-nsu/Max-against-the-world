@@ -81,6 +81,21 @@ func _durchlauf() -> void:
 	await S.regel("benutzen", "tuer")
 	_pruefe(Z.geloest("R5"), "R5 gesprächige Tür")
 
+	# Telefonzelle auf der Stadtstraße: beim ersten Abheben „Hallo? …“ (0230), danach 0240.
+	# Beide Hotspots der Zelle gelten gleich.
+	await S.regel("benutzen", "klingelnde_telefonzelle")
+	await _warte_auf_raum("widerstandsbasis")
+	_pruefe(_gesagt("W3_SIM_MAX_0230") and not _gesagt("W3_SIM_MAX_0240"), "Telefonzelle, erstes Abheben: „Hallo? …“")
+	S.vorgabe_auswahl = [0]
+	await S.regel("benutzen", "terminal")
+	await _warte_auf_raum("stadtstrasse")
+	await S.regel("benutzen", "telefonzelle")
+	await _warte_auf_raum("widerstandsbasis")
+	_pruefe(_gesagt("W3_SIM_MAX_0240"), "Telefonzelle, zweites Abheben: die zweite Zeile")
+	S.vorgabe_auswahl = [0]
+	await S.regel("benutzen", "terminal")
+	await _warte_auf_raum("stadtstrasse")
+
 	# R4: Orakel-Oma, Kochbuch (Regel 2)
 	await _geh("kueche_orakel")
 	_pruefe(root.get_node("D").get_instance("OrakelOma").option_sichtbar("0130"), "Orakel-Oma bietet die Frage nach der Vase an")

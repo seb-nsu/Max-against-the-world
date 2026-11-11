@@ -44,6 +44,12 @@ const KOMMENTARE := {
 		Olivenoel = "ZS3_DACH_PIX_0590",
 	},
 }
+## Ältere Dinge aus der Fundkiste und das Pflichtfach: Pixels Kommentar aus einem früheren
+## Zwischenspiel gilt weiter, wenn er nichts über das nächste Reiseziel sagt. Für die übrigen
+## älteren Dinge (Eimer, Leuchttrank, Ketchup; in Zwischenspiel 3 auch Schriftrolle, Handy,
+## Kaugummi, Kugelschreiber, Diskus) fehlt noch eine eigene Zeile, dort kommt eine Ersatzzeile.
+const KOMMENTAR_BLEIBT := ["Kochloeffel", "Thunfischdose", "Notizbuch", "Socke",
+	"ZiegenfellVorleger", "Zeugnis", "Dosenoeffner", "Sandale", "Olivenkranz"]
 const ZU_VIEL := {1: "ZS1_DACH_MAX_0610", 2: "ZS2_DACH_MAX_0600", 3: "ZS3_DACH_MAX_0600"}
 const BESTAETIGT := {1: "ZS1_DACH_PIX_0620", 2: "ZS2_DACH_PIX_0610", 3: "ZS3_DACH_PIX_0610"}
 
@@ -101,8 +107,19 @@ func ansehen(sn: String) -> void:
 	beschaeftigt = false
 
 
-func _kommentar(sn: String) -> void:
+## Die Zeile, die Pixel zu diesem Gegenstand sagt ("" = Ersatzzeile).
+func kommentar_zeile(sn: String) -> String:
 	var zeile: String = KOMMENTARE.get(nr, {}).get(sn, "")
+	if zeile.is_empty() and sn in KOMMENTAR_BLEIBT:
+		for frueher in range(nr - 1, 0, -1):
+			zeile = KOMMENTARE[frueher].get(sn, "")
+			if not zeile.is_empty():
+				break
+	return zeile
+
+
+func _kommentar(sn: String) -> void:
+	var zeile := kommentar_zeile(sn)
 	if zeile.is_empty():
 		await Spiel.ersatz("PIX")
 	else:

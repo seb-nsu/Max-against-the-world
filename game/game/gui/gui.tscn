@@ -282,7 +282,7 @@ grow_vertical = 2
 mouse_filter = 2
 theme = ExtResource("1_jeul6")
 script = ExtResource("9_s50ci")
-wrap_width = 270.0
+wrap_width = 360.0
 
 [node name="DialogMenu" type="Control" parent="." unique_id=1001808863 groups=["popochiu_gui_component"] instance=ExtResource("7_b83v5")]
 visible = false

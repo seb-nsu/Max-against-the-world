@@ -64,18 +64,20 @@ Max ist gelassen-genervt, nicht zynisch; der Zyniker ist Pixel. Zusammen funktio
 - Anspielungen sind ein Augenzwinkern, kein Zitat: Max nennt nie den Titel der Vorlage, und kein Witz hängt allein daran, dass man sie kennt.
 - Hinweise der Hilfe-Pfote dürfen in Pixels Ton verpackt sein, Stufe 3 sagt die Lösung aber immer eindeutig.
 
-**Beispielsätze für „Ansehen“:**
+**Beispielsätze für „Ansehen“ (alle aus dem Skript, Stand 11. November 2026):**
 
-- Drachenei: „Größer als Ostern. Kleiner als mein Problem.“
-- Zauberstab-Kochlöffel: „Klebt. Ich nenne das eine Bindung.“
-- Goblin-Streikposten: „Sieht aus wie Montagmorgen, nur grüner.“
-- Die Sphinx: „Hat ein Rätsel im Gesicht und keine Ahnung im Kopf.“
-- Olympisches Stadion: „Sport. Freiwillig. Die spinnen, die Griechen.“
-- Der Pastillenautomat mit roter und blauer Pastille: „Sofa oder Wahrheit. Klingt wie mein Samstag.“
-- M.U.T.T.I.: „Sie klingt wie die Schulsekretärin, nur mit Laser.“
-- Autoplay-Countdown: „Nächste Folge in fünf Sekunden. Endlich mal eine ehrliche Drohung.“
-- Zappmanns goldenes Sofa: „Verlockend. Genau deshalb nicht.“
-- Die Milch im Supermarkt: „Die letzte Quest. Ganz ohne Drachen.“
+- Drachenei: „Größer als Ostern. Kleiner als mein Problem.“ (`W1_SMAU_MAX_0080`)
+- Zauberstab-Kochlöffel: „Klebt. Ich nenne das eine Bindung.“ (`W1_STAB_MAX_0550`)
+- Goblin-Streikposten: „Einer hat ein Schild ‚Wir sind Goblins, keine Maschinen‘. Darunter: ‚Okay, Maschinen auch nicht.‘“ (`W1_BERG_MAX_0025`)
+- Die Sphinx: „Hat ein Rätsel im Gesicht und keine Ahnung im Kopf.“ (`W2_SPHX_MAX_0010`)
+- Laufbahn im Stadion: „Eine Laufbahn aus Sand. Sie führt von hier nach da, und mehr passiert nicht. Angeblich ist das aufregend.“ (`W2_STAD_MAX_0020`)
+- Der Pastillenautomat mit roter und blauer Pastille: „Ein Automat mit Linse, Kreuz und zwei Fächern. Rot und blau. Sofa oder Wahrheit. Und kein Fach für beides.“ (`W3_APO_MAX_0010`)
+- M.U.T.T.I.: „Sie klingt wie die Schulsekretärin, nur mit Laser.“ (`W3_KAM1_MAX_0030`)
+- Autoplay-Countdown: „Nächste Folge in fünf Sekunden. Endlich mal eine ehrliche Drohung.“ (`W4_WERB_MAX_0480`)
+- Zappmanns goldenes Sofa: „Verlockend. Genau deshalb nicht.“ (`W4_STUD_MAX_0040`)
+- Die Milch im Supermarkt: „Die letzte Quest. Ganz ohne Drachen.“ (`FI_SUPM_MAX_0070`)
+
+Die Beispiele halten die Dialogregeln oben: Kurze Sätze stehen als Pointe und nicht als Reihe, und die Vergleichsformel bei M.U.T.T.I. ist die eine, die ihr Raum haben darf.
 
 ### Eigene Figuren
 
@@ -174,7 +176,7 @@ Details: [Welt-Tabelle](welten/welt-1.yaml), [Rätsel](raetsel/prolog-und-welt-1
 
 Max braucht den **Goldenen Sack Pharaonenkorn**. Pharao Ramses der Unentschlossene gibt ihn nur her, wenn Max sein Volk überzeugt, dass der Pharao noch Ansehen hat, und das geht nur mit einem Olympiasieg im Fünfkampf.
 
-**Running Gag:** Ägypten und Griechenland liegen hier nebeneinander, und eine römische Touristengruppe mit Cicero ist auch schon da, weil der Zeitstrom „verknotet“ ist. Alle wundern sich, warum Cicero und Archimedes gleichzeitig leben, obwohl Cicero laut Geschichtsbüchern erst rund 137 Jahre nach Archimedes' Tod dessen Grab wiederentdeckte ([Biografie](https://alankyerematen.org/archimedes-s-biography-net-worth-fact-career-awards-and-life-story.html)).
+**Running Gag:** Ägypten und Griechenland liegen hier nebeneinander, und eine römische Touristengruppe mit Cicero ist auch schon da, weil der Zeitstrom „verknotet“ ist. Alle wundern sich, warum Cicero und Archimedes gleichzeitig leben, obwohl Cicero laut Geschichtsbüchern erst rund 137 Jahre nach Archimedes' Tod dessen Grab wiederentdeckte (Cicero, Tusculanae disputationes 5,64 bis 66).
 
 **Inspirationen:** *Asterix* (besonders *Asterix bei den Olympischen Spielen* und *Asterix und Kleopatra*), *Das Leben des Brian*, *300*, *Gladiator*, *Die Mumie*, Disneys *Hercules* und *Assassin's Creed Origins/Odyssey*.
 
@@ -359,7 +361,7 @@ Ergebnis einer Online-Recherche, keine Rechtsberatung. § 51a UrhG erlaubt Karik
 | Leonidas der Lautstarke | 300 (Warner), historische Figur | Historischer Name frei; das Design war die Filmfigur | Bleibt, Design geändert (Grafik Welt 2) |
 | M.U.T.T.I. | GLaDOS (Valve) | Eigener Name, eigenes Design (Küchenmaschine) | Bleibt |
 | Frisbee | Marke von Wham-O | Markenname als Gattungsbegriff | Ersetzt durch „Wurfscheibe“ |
-| Couch Quest – Max against the worlds | Arbeitstitel | Titel festgelegt am 9. November 2026; Websuche ohne Spiel gleichen Namens, Registersuche in DPMA und EUIPO macht Sebastian | Aufgabe in [Produktion](03-produktion.md) |
+| Couch Quest – Max against the worlds | Titel des Spiels | Titel festgelegt am 9. November 2026; Websuche ohne Spiel gleichen Namens, Registersuche in DPMA und EUIPO macht Sebastian | Aufgabe in [Produktion](03-produktion.md) |
 | Kommissar (Welt 4, Tiertort Savanne) | Columbo (Universal) | Kein Name übernommen; Anspielung nur über Regenmantel und „Nur noch eine Frage“-Haltung | Bleibt. Zwei eigene Merkmale: Glatze mit grauem Haarkranz und dicker grauer Walrossschnurrbart; beiger Regenmantel über braunem Anzug mit schmaler Krawatte, kurze Zigarre (Grafik Welt 4, mit „Not a likeness of any real actor“) |
 | FBI-Agent (Welt 4) | Akte X (20th Television) | Kein Name übernommen; Anspielung über Genre und Ausrüstung | Bleibt. Eigene Merkmale: roter Bürstenschnitt, Sommersprossen, dunkle Augenringe; langer grauer Trenchcoat, lockere Krawatte, piepsendes Gerät mit grünem Licht (Grafik Welt 4) |
 
@@ -369,7 +371,7 @@ Ergebnis einer Online-Recherche, keine Rechtsberatung. § 51a UrhG erlaubt Karik
 - [Our princess is in another castle! (Wikipedia)](https://en.wikipedia.org/wiki/Our_princess_is_in_another_castle!)
 - [Pentathlon (Wikipedia)](https://en.wikipedia.org/wiki/Pentathlon)
 - [Olympic contests in antiquity (Foundation of the Hellenic World)](https://www.fhw.gr/olympics/ancient/en/205.html)
-- [Archimedes, Biografie mit Cicero und dem Grab](https://alankyerematen.org/archimedes-s-biography-net-worth-fact-career-awards-and-life-story.html)
+- Cicero, Tusculanae disputationes 5,64 bis 66 (Cicero findet als Quästor in Sizilien das Grab des Archimedes; Archimedes starb 212 v. Chr., Cicero war 75 v. Chr. dort)
 - [The cake is a lie (Wikipedia)](https://en.wikipedia.org/wiki/The_cake_is_a_lie)
 - [The Oracle, The Matrix (Wikipedia)](<https://en.wikipedia.org/wiki/The_Oracle_(The_Matrix)>)
 - [The Matrix, Zitate (IMDb)](https://m.imdb.com/title/tt0133093/characters/nm0000401)

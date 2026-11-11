@@ -65,7 +65,8 @@ func _ready() -> void:
 
 
 func _input(event: InputEvent) -> void:
-	if event is InputEventMouseButton or event is InputEventKey:
+	if event is InputEventMouseButton or event is InputEventKey or event is InputEventJoypadButton \
+			or (event is InputEventJoypadMotion and absf(event.axis_value) > 0.5):
 		_ruhe = 0.0
 
 
@@ -82,7 +83,20 @@ func _unhandled_input(event: InputEvent) -> void:
 		notizbuch_oeffnen()
 
 
+## Die aktive Figur verdeckt nichts: Klicks gehen durch sie durch. Nur mit gewähltem Gegenstand
+## bleibt sie anklickbar (Gegenstand oder Pixel-Feld auf sich selbst, 05-spielsysteme.md).
+## Popochiu regelt das beim Start und beim Figurenwechsel, aber nicht nach einem Raumwechsel.
+func _eigene_figur_durchlassen() -> void:
+	var p: PopochiuCharacter = C.player
+	if not is_instance_valid(p):
+		return
+	var soll: bool = I.active != null and p.clickable and p.visible
+	if p.input_pickable != soll:
+		p.input_pickable = soll
+
+
 func _process(delta: float) -> void:
+	_eigene_figur_durchlassen()
 	if testmodus or not E.in_room or E.playing_queue or in_szene > 0 \
 			or is_instance_valid(D.current_dialog):
 		_ruhe = 0.0
@@ -136,6 +150,11 @@ func zum_hauptmenue() -> void:
 		return
 	Einstellungen.speichern()
 	Telemetrie.sitzung_beenden("hauptmenue")
+	# Im Browser gibt es keinen Neustart des Programms: Dort lädt die Seite neu, das ist derselbe
+	# frische Start.
+	if OS.has_feature("web"):
+		JavaScriptBridge.eval("window.location.reload()")
+		return
 	OS.set_restart_on_exit(true, OS.get_cmdline_args())
 	get_tree().quit()
 

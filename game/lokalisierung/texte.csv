@@ -45,6 +45,11 @@ UI_NOTIZBUCH_ZIELE,Ziele,Goals
 UI_NOTIZBUCH_REGELN,Regeln und Passwort-Teile,Rules and password pieces
 UI_NOTIZBUCH_EINKAUF,Pixels Einkaufsliste,Pixel's shopping list
 UI_NOTIZBUCH_LEER,Gerade ist nichts offen.,Nothing is open right now.
+UI_EINKAUF_1,"Ein Ei, weich, zum Frühstück","One egg, soft-boiled, for breakfast"
+UI_EINKAUF_2,"Irgendwas aus Mehl, mit Kruste","Something made of flour, with a crust"
+UI_EINKAUF_3,Batterien für den elektrischen Dosenöffner bei Oma,Batteries for Grandma's electric tin opener
+UI_EINKAUF_4,Milch!,Milk!
+UI_EINKAUF_SOFA,Nächstes Jahr: Sofa für zwei.,Next year: sofa for two.
 UI_SEITE_WEITER,Weiter,Next
 UI_SEITE_ZURUECK,Zurück,Back
 UI_SCHLIESSEN,Schließen,Close
@@ -52,7 +57,7 @@ UI_GESPEICHERT,Gespeichert,Saved
 UI_GELADEN,Geladen,Loaded
 UI_KEIN_SPIELSTAND,Kein Spielstand vorhanden,No saved game
 UI_SPEICHERN_GLEICH,Wird nach der Szene gespeichert,Will save after the scene
-UI_PROLOG_ENDE,Ende des Prologs. Weiter geht es in Welt 1.,End of the prologue. To be continued in World 1.
+UI_LADEN_NACH_SZENE,Laden geht erst nach der Szene,Loading works after the scene
 UI_RAUM_DORFPLATZ,Dorfplatz Unterbrösel,Lower Crumbly village square
 UI_RAUM_TAVERNE,Taverne,Tavern
 UI_RAUM_SCHMIEDE,Schmiede,Smithy
@@ -169,7 +174,7 @@ UI_ZIEL_W1_R3,Drei Ziegenböcke finden,Find three billy goats
 UI_ZIEL_W1_R4A,Die Ziegen in der richtigen Reihenfolge,The goats in the right order
 UI_ZIEL_W1_R4B,Die Ziegen ihre Sätze sagen lassen,Make the goats say their lines
 UI_ZIEL_W1_R4C,Den Troll ins Wasser bringen,Get the troll into the water
-UI_WELT_1_ENDE,Ende der Graubox. Welt 2 folgt.,End of the greybox. World 2 to follow.
+UI_WELT_1_ENDE,Hier endet diese Fassung. Welt 2 folgt.,This version ends here. World 2 to follow.
 UI_RAUM_ABSTELLKAMMER_1,Abstellkammer 1,Storeroom 1
 UI_RAUM_ABSTELLKAMMERN,Smaugis Abstellkammern,Smaugi's storerooms
 UI_RAUM_THRONSAAL,Thronsaal,Throne room
@@ -272,6 +277,7 @@ UI_MENUE_BEENDEN,Beenden,Quit
 UI_MENUE_PAUSE,Pause,Paused
 UI_MENUE_WEITER,Weiterspielen,Resume
 UI_MENUE_HAUPTMENUE,Hauptmenü,Main menu
+UI_MENUE_NEUES_SPIEL_SICHER,Noch mal wählen: Es beginnt ein neues Spiel. Deine Spielstände bleiben erhalten.,Select again to start a new game. Your saved games are kept.
 UI_MENUE_HAUPTMENUE_SICHER,"Noch mal klicken: Was nicht gespeichert ist, geht verloren.",Click again: anything unsaved will be lost.
 UI_MENUE_ZURUECK,Zurück,Back
 UI_KANAL_FORTSETZEN,"Weiter, wo du aufgehört hast.",Pick up where you left off.
@@ -353,6 +359,7 @@ UI_OPT_HOTSPOT_NAMEN,Namen zu den Hotspots zeigen,Show hotspot names
 UI_OPT_WACKELN_AUS,Bildschirmwackeln aus,Screen shake off
 UI_OPT_FLACKERN_REDUZIEREN,Flackern reduzieren,Reduce flicker
 UI_OPT_FARBENBLIND,Farbenblind-Hilfe,Colour-blind aid
+UI_OPT_KOMMT_NOCH,kommt noch,coming later
 UI_OPT_TASTE_DRUECKEN,Taste drücken …,Press a key …
 UI_OPT_MAUS_GEHT_IMMER,Mit der Maus geht alles auch ohne Tasten.,Everything also works with the mouse alone.
 UI_OPT_CONTROLLER,Controller:,Controller:
@@ -561,9 +568,9 @@ UI_W2_FELD_1,Feld 1: Einladung,Box 1: Invitation
 UI_W2_FELD_2,Feld 2: Sonne,Box 2: Sun
 UI_W2_FELD_3,Feld 3: Volk,Box 3: Crowd
 UI_W2_FELD_4,Feld 4: Höhepunkt,Box 4: Climax
-UI_WELT_2_ENDE,Ende der Graubox. Welt 3 folgt.,End of the greybox. World 3 to follow.
+UI_WELT_2_ENDE,Hier endet diese Fassung. Welt 3 folgt.,This version ends here. World 3 to follow.
 UI_W2_REDEN,Reden,Talk
-UI_WELT_3_ENDE,Ende der Graubox. Welt 4 folgt.,End of the greybox. World 4 to follow.
+UI_WELT_3_ENDE,Hier endet diese Fassung. Welt 4 folgt.,This version ends here. World 4 to follow.
 UI_RAUM_UNTERSTADT_STRASSE,"Unterstadt, Straße","Undertown, street"
 UI_RAUM_APOTHEKENGASSE,Apothekengasse mit Pastillenautomat,Pharmacy alley
 UI_RAUM_WIDERSTANDSBASIS,Widerstandsbasis,Resistance base
@@ -614,7 +621,7 @@ UI_OBJ_KAPSELN,Kapseln,Pods
 UI_OBJ_KARTENLESER,Kartenleser,Card reader
 UI_OBJ_KEHRBLECH,Kehrblech,Dustpan
 UI_OBJ_KISTEN,Kisten,Crates
-UI_OBJ_KLINGELNDE_TELEFONZELLE,klingelnde Telefonzelle,Ringing phone box
+UI_OBJ_KLINGELNDE_TELEFONZELLE,Klingelnde Telefonzelle,Ringing phone box
 UI_OBJ_KLON,Klon,Clone
 UI_OBJ_KLONE,Klone,Clones
 UI_OBJ_KRITZELEI_KAMMER_2,Kritzelei,Scribble
@@ -737,7 +744,7 @@ UI_OBJ_AUTOPLAY_COUNTDOWN,Autoplay-Countdown,Autoplay countdown
 UI_OBJ_BALKEN,Balken,Bars
 UI_OBJ_BANANENSCHALE,Bananenschale,Banana peel
 UI_OBJ_BANANENSCHALE_AUF_MITTERNACHTS_TV,Bananenschale auf Mitternachts-TV,Banana peel on Midnight TV
-UI_OBJ_BANANENSCHALE_IM_COMIC_KANAL,frische Bananenschale im Comic-Kanal,Fresh banana peel on the comic channel
+UI_OBJ_BANANENSCHALE_IM_COMIC_KANAL,Frische Bananenschale im Comic-Kanal,Fresh banana peel on the comic channel
 UI_OBJ_BANANENSCHALE_IM_KELLER,Bananenschale im Keller,Banana peel in the cellar
 UI_OBJ_BAND_IN_DER_PRESSE,Band in der Presse,Tape in the press
 UI_OBJ_BETTLAKEN,Bettlaken,Bed sheet
@@ -776,7 +783,7 @@ UI_OBJ_GESTAPELTE_PREISE,Gestapelte Preise,Stacked prizes
 UI_OBJ_GLUECKSRAD,Glücksrad,Lucky wheel
 UI_OBJ_GLUEHBIRNE,Glühbirne,Light bulb
 UI_OBJ_GLUEHBIRNENREIHEN,Glühbirnenreihen,Rows of bulbs
-UI_OBJ_GOLDENES_SOFA,goldenes Sofa,Golden sofa
+UI_OBJ_GOLDENES_SOFA,Goldenes Sofa,Golden sofa
 UI_OBJ_GOLDENE_FERNBEDIENUNG,Goldene Fernbedienung,Golden remote
 UI_OBJ_GRAEBER,Gräber,Graves
 UI_OBJ_HEBEL,Hebel,Lever
@@ -818,7 +825,7 @@ UI_OBJ_NASHORN,Nashorn,Rhino
 UI_OBJ_NEBEL,Nebel,Fog
 UI_OBJ_NEBEL_IN_DER_HALLE,Nebel in der Halle,Fog in the hall
 UI_OBJ_NEONROEHRE,Neonröhre,Neon tube
-UI_OBJ_NORMALER_KAESE_IN_DER_FABRIK,normaler Käse in der Fabrik,Ordinary cheese in the factory
+UI_OBJ_NORMALER_KAESE_IN_DER_FABRIK,Normaler Käse in der Fabrik,Ordinary cheese in the factory
 UI_OBJ_PANEL_EXPLOSION,Panel Explosion,Panel: explosion
 UI_OBJ_PANEL_HELD_SPRINGT,Panel Held springt,Panel: hero jumps
 UI_OBJ_PANEL_SCHURKE_IM_KAESE,Panel Schurke im Käse,Panel: villain in the cheese
@@ -858,7 +865,7 @@ UI_OBJ_TELEFON_LEUCHTSCHRIFT,Telefon-Leuchtschrift,Neon phone sign
 UI_OBJ_TESTKREIS,Testkreis,Test circle
 UI_OBJ_TROEDEL_EXPERTE,Trödel-Experte,Antiques expert
 UI_OBJ_UMHAENGE_SCHILD_NICHT_DER_FLEDERMANN,Umhänge-Schild „Nicht der Fledermann“,"Sign ""Not the Fledermann"""
-UI_OBJ_VERKETTETE_TUER,verkettete Tür,Chained door
+UI_OBJ_VERKETTETE_TUER,Verkettete Tür,Chained door
 UI_OBJ_WAND_MIT_GOLDENEN_SCHALLPLATTEN,Wand mit goldenen Schallplatten,Wall of gold records
 UI_OBJ_WARNSCHILDER,Warnschilder,Warning signs
 UI_OBJ_WASSERLOCH,Wasserloch,Watering hole
@@ -7178,7 +7185,7 @@ FI_WOHN_MAX_0150,"Der Hausmeister spült, und zwar unaufgefordert. Oma sieht ihm
 FI_WOHN_MAX_0155,Er trocknet jede Tasse einzeln und sagt bei jeder „Servus“. Oma hat ihm eine Schürze geschenkt. Er weint Öl.,"He dries every cup separately and says ""Greetings"" to each one. Grandma gave him an apron. He's weeping oil."
 FI_WOHN_MAX_0160,"Seite 3. Ein Ei, weich. Irgendwas aus Mehl. Batterien. Milch.","Page 3. An egg, soft-boiled. Something made of flour. Batteries. Milk."
 FI_WOHN_MAX_0160_2,Pixel. Deine Einkaufsliste ist Opas Einkaufsliste.,Pixel. Your shopping list is Grandpa's shopping list.
-FI_WOHN_MAX_0165,Ganz unten auf Seite drei steht noch: „Nächstes Jahr: Sofa für zwei.“ In Pixels Pfotenschrift.,"At the very bottom of page three it also says: ""Next year: sofa for two."" In Pixel's paw-writing."
+FI_WOHN_MAX_0165,Ganz unten auf Seite 3 steht noch: „Nächstes Jahr: Sofa für zwei.“ In Pixels Pfotenschrift.,"At the very bottom of page 3 it also says: ""Next year: sofa for two."" In Pixel's paw-writing."
 FI_WOHN_PIX_0170,Ich war die ganze Zeit der Einzige mit einem Plan. Das darfst du gern weitererzählen.,I was the only one with a plan the whole time. Feel free to tell people.
 FI_WOHN_PIX_0170_2,"Lachs stand allerdings nicht drauf, und das verzeihe ich dem Universum nie.","Salmon wasn't on it, though, and I shall never forgive the universe for that."
 FI_WOHN_MAX_0180,"Oma, wusstest du, dass Opa im Fernsehen war?","Grandma, did you know Grandpa used to be on television?"

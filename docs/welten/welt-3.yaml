@@ -284,7 +284,7 @@ gegenstaende:
     herkunft: R3b   # Morphäus gibt die Papiertüte direkt vor der Pastillenwahl; kann nicht verloren gehen
     zustaende: [kalt, ofenwarm, hundekuchen]   # Simulation kalt, nach R11 ofenwarm; in der Realität Hundekuchen
     verwendet_in: [R11]
-    reist_mit: true   # Schalter KEKSE_DABEI, sonst Fundkiste
+    reist_mit: true   # eingepackt reisen sie mit, sonst Fundkiste; den Schalter KEKSE_DABEI setzt erst das Finale
     nahansicht: false
   - id: rezeptkarte
     name: Omas Rezeptkarte
@@ -354,7 +354,7 @@ gegenstaende:
     herkunft: R11
     zustaende: [gluehend, vereist]   # glühend nur auf dem Sockel; im Inventar vereist, in der Realität nur schwerer
     verwendet_in: []   # Artefakt, geht im Zwischenspiel 3 an Opa (Gegenwart: AA-Batterie)
-    ohne_verwendung: Artefakt, Opa legt sie im Zwischenspiel in die Maschine
+    ohne_verwendung: Artefakt, Opa legt sie im Zwischenspiel auf die Werkbank (in die Maschine erst im Finale)
     reist_mit: false
     nahansicht: false
 
@@ -400,7 +400,7 @@ raetsel:
     raum: apothekengasse
     benoetigt: [R3a, rote_pastille]
     ergibt: [omas_kekse]
-    schalter: [W3_R03_B_GELOEST, KEKSE_DABEI, SIMULATION_OFFEN]
+    schalter: [W3_R03_B_GELOEST, SIMULATION_OFFEN]
     optional: false
   - id: R4
     name: Die Vase des Orakels

@@ -139,6 +139,9 @@ func _hauptmenue(spiel, einst) -> void:
 	await _warten()
 	var opt = menue.unter_offen()
 	pruefe(opt != null and opt._reiter.get_tab_count() == 5, "Optionen mit fünf Reitern")
+	pruefe(opt._schalter_aus.size() == 3 and opt._schalter_aus.has("untertitel")
+		and opt._schalter_aus["farbenblind"].disabled and opt._schalter_aus["wackeln_aus"].disabled,
+		"Optionen: drei Schalter ohne Wirkung sind ausgegraut")
 	var rb := InputEventAction.new()
 	rb.action = "cq_reiter_vor"
 	rb.pressed = true
@@ -215,6 +218,15 @@ func _fortsetzen(spiel) -> void:
 	pruefe(not menue._knoepfe[0].disabled and menue._neuester == 2, "Fortsetzen: neuester Platz 2")
 	pruefe(menue._kanal == 0, "mit Spielstand steht Kanal 1 (Fortsetzen)")
 	pruefe(menue._kanal_info.text.contains("Wohnzimmer"), "Fortsetzen zeigt den Ort")
+	# „Neues Spiel“ fragt nach, wenn es schon einen Spielstand gibt
+	spiel.start_platz = 7
+	menue._kanal_waehlen(1, true)
+	menue._ausloesen(1)
+	pruefe(menue._neu_sicher and spiel.start_platz == 7
+		and menue._kanal_info.text == tr("UI_MENUE_NEUES_SPIEL_SICHER"), "Neues Spiel mit Spielstand: erst die Nachfrage")
+	menue._kanal_waehlen(0, true)
+	pruefe(not menue._neu_sicher, "Kanalwechsel nimmt die Nachfrage zurück")
+	spiel.start_platz = -1
 	menue.queue_free()
 	await _warten(2)
 	pruefe(spiel.hud.visible, "HUD nach dem Menü wieder an")

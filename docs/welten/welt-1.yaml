@@ -559,7 +559,7 @@ gegenstaende:
     herkunft: R12
     zustaende: [normal]        # golden, geschuppt; auf dem Dachboden weißes Ei
     verwendet_in: []           # Ziel der Welt, Abgabe in Zwischenspiel 1
-    ohne_verwendung: Artefakt, Opa legt es im Zwischenspiel in die Maschine
+    ohne_verwendung: Artefakt, Opa legt es im Zwischenspiel auf die Werkbank (in die Maschine erst im Finale)
     reist_mit: false
     nahansicht: false
 

@@ -122,7 +122,7 @@ Als Muster steht das ganze Prolog-Skript in `skript/prolog.md`, einschließlich 
 
 ## Schrift
 
-Festgelegt am 9. November 2026 (Sebastian): **Nunito** (ExtraBold) für Sprechblasen, Objektnamen, Dialogauswahl und Menüs, gesetzt in voller Bildschirmauflösung über dem Pixelbild, wie bei Thimbleweed Park. **Pixelify Sans** bleibt für Titel und große Überschriften. Die Pixelschriften unten waren die erste Wahl; im Mockup nahm Monogram Extended bei 320×180 zu viel Bildfläche ein (drei Zeilen Blase plus vier Zeilen Auswahl), deshalb der Wechsel.
+Festgelegt am 9. November 2026 (Sebastian): **Nunito** (ExtraBold) für Sprechblasen, Objektnamen, Dialogauswahl und Menüs, gesetzt in voller Bildschirmauflösung über dem Pixelbild, wie bei Thimbleweed Park. **Pixelify Sans** bleibt für Titel und große Überschriften. Die Pixelschriften unten waren die erste Wahl; im Mockup nahm Monogram Extended bei der damaligen Auflösung 320×180 zu viel Bildfläche ein (drei Zeilen Blase plus vier Zeilen Auswahl), deshalb der Wechsel.
 
 | Schrift | Lizenz | Nennung nötig | Deutsch | Einsatz |
 | --- | --- | --- | --- | --- |
@@ -140,9 +140,9 @@ Frühere Kandidaten (Pixelschriften in Spielauflösung):
 
 Lizenzen gelesen am 6. November 2026 auf den verlinkten Seiten.
 
-**Größe:** Text liegt auf einer eigenen Ebene in 1920×1080 (bei anderen Bildschirmen mitskaliert), Grafik und Inventarsymbole bleiben in Spielauflösung. Sprechblasen in 46 px, Objektnamen und Dialogauswahl in 39 px; eine Blase ist höchstens 1.080 px breit, das sind rund 50 Zeichen je Zeile. Die Option „Große Schrift“ vergrößert die Textebene um ein Viertel. Ersetzt die Entscheidung vom 8. November 2026 (Text in Spielauflösung).
+**Größe:** Text liegt auf einer eigenen Ebene in 1920×1080 (bei anderen Bildschirmen mitskaliert), Grafik und Inventarsymbole bleiben in Spielauflösung. Sprechblasen in 48 px, Objektnamen und Dialogauswahl in 39 px; eine Blase ist höchstens 1.080 px breit, das sind rund 50 Zeichen je Zeile. Die Option „Große Schrift“ vergrößert die Textebene um ein Viertel. Ersetzt die Entscheidung vom 8. November 2026 (Text in Spielauflösung).
 
-**Einstellungen in Godot:** Stretch-Modus „canvas_items“ mit ganzzahliger Skalierung und Pixel-Einrasten (`rendering/2d/snap`): Grafik bleibt scharf in Spielpixeln, Schrift wird in Bildschirmauflösung gezeichnet. Größen stehen in Spielpixeln: Sprechblasen 12 (bei 1080p 48 px), Objektnamen und Dialogauswahl 10 (40 px), Blasen höchstens 270 breit (rund 50 Zeichen je Zeile). Thema `game/gui/resources/gui_theme.tres`; Pixelify Sans für Titel ohne Kantenglättung in ganzzahligen Vielfachen. Bildschirmfotos aus dem laufenden Spiel macht `game/tests/bildschirmfoto.gd`. Text in Sprechblasen und Objektnamen bekommt einen dunklen Rand (#262b44 aus Endesga 32), damit Text auf jedem Hintergrund lesbar bleibt. Jede Figur hat eine eigene Textfarbe aus der Palette: Max weiß, Pixel türkis wie seine Halsband-Leuchte, Opa orange.
+**Einstellungen in Godot:** Stretch-Modus „canvas_items“ mit ganzzahliger Skalierung und Pixel-Einrasten (`rendering/2d/snap`): Grafik bleibt scharf in Spielpixeln, Schrift wird in Bildschirmauflösung gezeichnet. Größen stehen in Spielpixeln bei 640×360: Sprechblasen 16 (bei 1080p 48 px), Objektnamen und Dialogauswahl 13 (39 px), Blasen höchstens 360 breit (1.080 px, rund 50 Zeichen je Zeile). Thema `game/gui/resources/gui_theme.tres`; Pixelify Sans für Titel ohne Kantenglättung in ganzzahligen Vielfachen. Bildschirmfotos aus dem laufenden Spiel macht `game/tests/bildschirmfoto.gd`. Text in Sprechblasen und Objektnamen bekommt einen dunklen Rand (#262b44 aus Endesga 32), damit Text auf jedem Hintergrund lesbar bleibt. Jede Figur hat eine eigene Textfarbe aus der Palette: Max weiß, Pixel türkis wie seine Halsband-Leuchte, Opa orange.
 
 **Test vor der Entscheidung:** Diesen Satz in jeder Kandidatin in Godot bei Originalgröße setzen und auf drei Hintergründen ansehen (Dachboden, Zauberwald, Neonstadt):
 
@@ -203,14 +203,14 @@ Mockup: `tools/ui_mockup_hd.py` zeichnet zwei Zustände auf dem Dachboden-Hinter
 | Reiter | Einstellungen |
 | --- | --- |
 | Audio | Gesamtlautstärke, Musik, Geräusche, Stimmen (je 0 bis 100, eigener Audio-Bus); stumm, solange das Fenster im Hintergrund ist |
-| Anzeige | Fenster, Vollbild oder randloses Fenster; Fenstergröße in ganzzahligen Stufen (960×540, 1440×810, 1920×1080); VSync; Bildrate 30, 60, 120 oder unbegrenzt |
+| Anzeige | Fenster, Vollbild oder randloses Fenster; Fenstergröße in ganzzahligen Stufen (1280×720, 1920×1080, 2560×1440); VSync; Bildrate 30, 60, 120 oder unbegrenzt |
 | Spiel | Sprache Deutsch oder Englisch; Textgeschwindigkeit (langsam, normal, schnell, sofort); Text weiter per Klick oder automatisch; Untertitel an oder aus (sobald es Stimmen gibt; Liedtexte haben immer Untertitel, kursiv mit Notenzeichen, bei den drei Rätsel-Liedern auch dann, wenn Untertitel aus sind, `04-audio.md`); Brabbel-Laute als Probe, bis die Entscheidung über die Sprachausgabe fällt |
 | Steuerung | Tastenbelegung für Text weiter (Standard Leertaste, Eingabetaste geht auch; Linksklick geht immer), Figur wechseln (Tab), Hotspots zeigen (Umschalt/Shift halten, damit keine Taste doppelt belegt ist), Pausemenü (Esc), Schnellspeichern (F5), Schnellladen (F9). Mit der Maus geht alles auch ohne Tasten. Darunter steht die Controller-Belegung (siehe Controller und Steam Deck) |
 | Barrierefreiheit | Große Schrift (ein Viertel größer); Hotspots dauerhaft zeigen; Namen zu den Hotspots zeigen (Standard an: wer die Hotspots zeigt, sieht auch, was sie sind); Bildschirmwackeln aus; Flackern reduzieren (ersetzt Lampenflackern und Umschalt-Störungen durch weiche Varianten; ein Epilepsie-Hinweis erscheint beim ersten Start); Farbenblind-Hilfe (Farbcodes bekommen zusätzlich Symbole: Kreis, Dreieck, Quadrat, siehe Welt 3) |
 
-Wackeln, Flackern und Farbenblind-Hilfe sind als Schalter da. Jeder Effekt geht über `game/skripte/effekte.gd` (`CQEffekte.wackeln()`, `flackern_erlaubt()`, `weich_blinken()`, `farbsymbol()`), damit die Schalter überall gleich wirken, sobald die Effekte mit der Grafik kommen; wer einen Effekt baut, ruft diese Funktionen statt der Kamera oder eigener Zufallswerte.
+Wackeln, Flackern und Farbenblind-Hilfe sind als Schalter da. Stand 11. November 2026: „Untertitel“, „Bildschirmwackeln aus“ und „Farbenblind-Hilfe“ haben noch keine Wirkung und stehen im Menü grau mit „(kommt noch)“; „Flackern reduzieren“ wirkt schon im Hauptmenü. Jeder Effekt geht über `game/skripte/effekte.gd` (`CQEffekte.wackeln()`, `flackern_erlaubt()`, `weich_blinken()`, `farbsymbol()`), damit die Schalter überall gleich wirken, sobald die Effekte mit der Grafik kommen; wer einen Effekt baut, ruft diese Funktionen statt der Kamera oder eigener Zufallswerte.
 
-Steam-Tags für Barrierefreiheit, die das Spiel damit erfüllt: Untertitel, anpassbare Textgröße, Farbenblind-Modus, Tastenbelegung anpassbar, Steuerung nur mit der Maus, volle Controller-Unterstützung, kein Zeitdruck. Die Liste wird vor der Store-Seite gegen Steams aktuelle Barrierefreiheits-Felder geprüft.
+Steam-Tags für Barrierefreiheit, die das Spiel damit erfüllt: Untertitel, anpassbare Textgröße, Farbenblind-Modus, Tastenbelegung anpassbar, Steuerung nur mit der Maus, volle Controller-Unterstützung, kein Zeitdruck. „Untertitel“ und „Farbenblind-Modus“ zählen erst, wenn die Schalter wirken. Die Liste wird vor der Store-Seite gegen Steams aktuelle Barrierefreiheits-Felder geprüft.
 
 **Controller und Steam Deck** (`game/skripte/controller.gd`, Autoload „Controller“): Das ganze Spiel geht mit dem Gamepad, ohne Maus und Tastatur.
 
@@ -343,7 +343,7 @@ Während einer Zwischensequenz, eines Gesprächs oder eines Minispiels merkt sic
 
 ## Offene Entscheidungen
 
-- [ ] Schrift festlegen nach dem Umlaut-Test (Monogram Extended oder m5x7)
+- [x] Schrift festlegen: entschieden am 9. November 2026, Nunito für Text im Spiel, Pixelify Sans für Titel (Abschnitt Schrift).
 - [x] Text in Spielauflösung lassen oder gleich die Ebene in doppelter Auflösung bauen: entschieden am 8. November 2026, Text bleibt in Spielauflösung; die Ebene in doppelter Auflösung kommt nur als Option „Große Schrift“.
 - [ ] Wartezeiten der Hinweise (30 und 60 Sekunden) nach dem ersten Test mit Fremden anpassen
 - [ ] Zwei-Klick-Steuerung bestätigen oder doch eine Verbenleiste

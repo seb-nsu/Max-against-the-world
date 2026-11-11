@@ -1,6 +1,6 @@
 # Skript Welt 2: Antikodonien
 
-Das komplette Dialog-Skript für Welt 2 als Entwurf, rund 900 Zeilen: Ankunft im Nil-Delta, alle elf Rätsel mit Gesprächsbäumen, Ansehen-, Benutzen- und Kombinierzeilen, die beiden Wettkampftage mit beiden Minispielen, Zeitfähre, Siegesparade und Abschluss, dazu Pixel-auf-Mensch-Zeilen, Zurufe und die Hinweise in drei Stufen je Rätselschritt. Aufbau und Kurzform wie im Skript Prolog: ID, Sprecher, Text und Regie (Szenen) oder Auslöser (sonst), Bedingung nach Semikolon; Nummern in Zehnerschritten je Szene, Pixels Kaskaden mit „//“. Die Rückkehr auf den Dachboden steht im Skript der Zwischenspiele, die Ersatzzeilen im SYS\_ERS-Pool.
+Das komplette Dialog-Skript für Welt 2 als Entwurf: Ankunft im Nil-Delta, alle elf Rätsel mit Gesprächsbäumen, Ansehen-, Benutzen- und Kombinierzeilen, die beiden Wettkampftage mit beiden Minispielen, Zeitfähre, Siegesparade und Abschluss, dazu Pixel-auf-Mensch-Zeilen, Zurufe und die Hinweise in drei Stufen je Rätselschritt. Aufbau und Kurzform wie im Skript Prolog: ID, Sprecher, Text und Regie (Szenen) oder Auslöser (sonst), Bedingung nach Semikolon; Nummern in Zehnerschritten je Szene, Pixels Kaskaden mit „//“. Die Rückkehr auf den Dachboden steht im Skript der Zwischenspiele, die Ersatzzeilen im SYS\_ERS-Pool.
 
 ## 1. Nil-Delta: Ankunft
 

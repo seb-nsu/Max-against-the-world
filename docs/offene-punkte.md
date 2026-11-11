@@ -2,7 +2,7 @@
 
 Hier steht nur, was noch offen ist. Erledigtes steht in der Git-Historie, die gültigen Entscheidungen mit Begründung in `entscheidungen.md`. Ist ein Punkt erledigt, wird er hier gestrichen und, falls er etwas entscheidet, in `entscheidungen.md` und der Besitzer-Datei eingetragen.
 
-Stand 10. November 2026. Kennungen: S = zurückgestellte Punkte aus Gutachten 4, A = Automatisierung, P = weitere Punkte, K = Abgleich zwischen Dateien.
+Stand 11. November 2026. Kennungen: S = zurückgestellte Punkte aus Gutachten 4, A = Automatisierung, P = weitere Punkte, K = Abgleich zwischen Dateien.
 
 ## Entscheidungen und Aufgaben von Sebastian
 
@@ -33,12 +33,10 @@ Stand 10. November 2026. Kennungen: S = zurückgestellte Punkte aus Gutachten 4,
 | P7 | Retro Diffusion vor dem ersten Auftrag prüfen | Sebastian: Modellnamen und Stil-Liste auf der Website prüfen und mit Datum ins KI-Protokoll; die lokale Version vorher auf der Radeon 7900 XT mit der Demo testen | `grafik/00-stil-und-werkzeuge.md`, `03-produktion.md` (System 2) |
 | P8 | Bildschirm-Einblendungen des Zapp-O-Mat (80×60, im Spiel etwa 40×30): Sind Gesichter lesbar? | Test in Godot; sonst die 80×60-Fassung auch beim Ansehen nutzen | `grafik/02-prolog-und-finale.md` |
 | P9 | Wartezeiten der Hinweise (30 und 60 Sekunden) | Nach dem ersten Test mit Fremden anpassen | `05-spielsysteme.md` (Hinweissystem) |
-| P10 | Gemeinsames Zustandssystem: dieselben Schalter wie Speichern und Hinweise? | Claude prüft es im Grundgerüst (Stufe 1) | `05-spielsysteme.md`, `03-produktion.md` (System 1) |
-| P11 | Godot 4.7.x und Popochiu 2.2.x auf Fehlerkorrekturen prüfen | Claude beim Projektstart | `03-produktion.md` (System 1) |
 
 ## Automatisierung
 
-Alle sechzehn Ideen sind in `03-produktion.md` (Abschnitt Automatisierung) mit Nutzen, Aufwand und Stufe beschrieben. Offen ist ihr Bau. Die Dokument-Prüfung `tools/pruefen.py` deckt A13 und den Dokument-Teil von A2 schon ab.
+Alle sechzehn Ideen sind in `03-produktion.md` (Abschnitt Automatisierung) mit Nutzen, Aufwand und Stufe beschrieben. Hier stehen nur die, an denen noch etwas offen ist. Erledigt und deshalb gestrichen: A13 (`tools/pruefen.py`), A14 (`tools/spieldaten.py`) und A16 (`game/tests/bildschirm_vergleich.gd`). Die Dokument-Prüfung deckt auch den Dokument-Teil von A2 ab.
 
 | Nr. | Was | Stufe |
 | --- | --- | --- |
@@ -54,10 +52,7 @@ Alle sechzehn Ideen sind in `03-produktion.md` (Abschnitt Automatisierung) mit N
 | A10 | Grafik-Batch: Prompt-Tabelle, Retro-Diffusion-API, Palettize, Zuschnitt, Protokoll | 3, nach S16 |
 | A11 | KI-Protokoll automatisch als CSV | 1 |
 | A12 | Englische Fassung per Claude aus der CSV mit Glossar: Werkzeug `tools/en_eintragen.py`, alle Skriptzeilen, Systemzeilen und Menüs sind übersetzt (Stand in `05-spielsysteme.md`). Offen: Prüfung der Witze und Wortspiele durch einen Muttersprachler | Text fertig, Prüfung in 5 |
-| A13 | Konsistenz-Check der Dokumente (läuft als `tools/pruefen.py`, in A7 eingebunden) | erledigt |
-| A14 | Hinweis-Datei aus Skript und Rätseltabelle erzeugen (läuft als `tools/spieldaten.py`) | erledigt |
 | A15 | Playtest-Auswertung per Claude | 3 |
-| A16 | Screenshot-Regressionstest: gebaut (`game/tests/bildschirm_vergleich.gd`, Job „bildschirm“ in GitHub Actions); bei echten Hintergründen die Referenzen mit `--aktualisieren` neu schreiben | erledigt |
 
 ## Funde aus der Graubox (9. November 2026)
 

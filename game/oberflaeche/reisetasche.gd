@@ -9,6 +9,9 @@ signal geschlossen
 const THEMA := "res://game/gui/resources/gui_theme.tres"
 const FELD := 53
 const ABSTAND := 56
+## So viele Felder passen in eine Zeile der Auslage; weitere Dinge kommen in die nächste Zeile.
+const JE_ZEILE := 8
+const PANEL_HOEHE := 208
 const GELB := Color("fee761")
 const RAND := Color("3a4466")
 const RAND_AKTIV := Color("2ce8f5")
@@ -34,7 +37,7 @@ func zeigen(t: CQReisetasche) -> void:
 	add_child(sperre)
 	_panel = Panel.new()
 	_panel.position = Vector2(72, 8)
-	_panel.size = Vector2(496, 208)
+	_panel.size = Vector2(496, PANEL_HOEHE)
 	if ResourceLoader.exists(THEMA):
 		_panel.theme = load(THEMA)
 	var grund := StyleBoxFlat.new()
@@ -90,7 +93,24 @@ func _aufbauen() -> void:
 		var sn: String = tasche.wahl[i] if i < tasche.wahl.size() else ""
 		_feld(sn, Vector2(200 + i * ABSTAND, 51), true)
 	for i in tasche.auslage.size():
-		_feld(tasche.auslage[i], Vector2(16 + (i % 8) * ABSTAND, 131), false)
+		_feld(tasche.auslage[i], Vector2(16 + (i % JE_ZEILE) * ABSTAND, 131 + (i / JE_ZEILE) * ABSTAND), false)
+	# Ab dem neunten Gegenstand wächst das Fenster um eine Zeile, der Name rutscht mit.
+	var mehr := (zeilen() - 1) * ABSTAND
+	_panel.size.y = PANEL_HOEHE + mehr
+	_name.position.y = 184 + mehr
+
+
+## Zeilen der Auslage (mindestens eine).
+func zeilen() -> int:
+	return maxi(1, ceili(tasche.auslage.size() / float(JE_ZEILE)))
+
+
+## Lage der Felder der Auslage im Fenster (für Tests: Kein Feld liegt auf einem anderen).
+func auslage_felder() -> Array:
+	var out := []
+	for f in _felder.slice(CQReisetasche.PFLICHT.size() + CQReisetasche.WAHLFAECHER):
+		out.append(Rect2(f.position, f.size))
+	return out
 
 
 func _feld(sn: String, pos: Vector2, wahlfach: bool) -> void:

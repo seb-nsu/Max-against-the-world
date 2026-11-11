@@ -611,7 +611,7 @@ gegenstaende:
     herkunft: R11b
     zustaende: [normal]
     verwendet_in: []
-    ohne_verwendung: Artefakt, Opa legt es im Zwischenspiel in die Maschine
+    ohne_verwendung: Artefakt, Opa legt es im Zwischenspiel auf die Werkbank (in die Maschine erst im Finale)
     reist_mit: false                           # Artefakt: kommt auf Opas Werkbank (Zwischenspiel 2), nicht über die Reisetasche; wie Drachenei und Energiezelle
     nahansicht: false
 

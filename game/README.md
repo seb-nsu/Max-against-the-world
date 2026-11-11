@@ -5,11 +5,10 @@ Auflösung 640×360 (seit 10. November 2026, vorher 480×270; Maße zentral in `
 Wechsel mit `python3 tools/aufloesung.py --umrechnen ALT NEU`), Pixelgrafik ohne Glättung, ganzzahlig
 skaliert. Text (Nunito) wird in voller Bildschirmauflösung gezeichnet (Stretch-Modus
 „canvas_items“ mit Pixel-Einrasten, `docs/05-spielsysteme.md`, Schrift). Bildschirmfotos aus dem
-laufenden Spiel: `tests/bildschirmfoto.gd` und `tests/bildschirmfoto_menues.gd` (Aufruf im Kopf der Datei, braucht xvfb-run). Stand: Stufe 1
-(Grundgerüst) und Graubox: Prolog und ganz Welt 1 (R1 bis R13, Rätsel 10 über Weg A oder B)
-sind mit Platzhaltergrafik durchspielbar, danach die Ankunft in Zwischenspiel 1 mit der Abgabe
-des Dracheneis. Reisetasche packen und Kanal 7 fehlen noch: der Drehknopf meldet dort „Ende der
-Graubox“.
+laufenden Spiel: `tests/bildschirmfoto.gd` und `tests/bildschirmfoto_menues.gd` (Aufruf im Kopf der Datei, braucht xvfb-run). Stand (11. November 2026):
+Graubox. Prolog, Welt 1 bis 4, die drei Zwischenspiele mit Reisetasche und das Finale mit Abspann
+sind mit Platzhaltergrafik durchspielbar. Die Minispiele sind noch Auswahlmenüs, Grafik und Ton
+fehlen.
 
 ## Öffnen und spielen
 

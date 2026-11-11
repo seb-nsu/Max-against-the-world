@@ -1,6 +1,6 @@
 # Skript Welt 4: Kanal 999
 
-Das komplette Dialog-Skript für Welt 4, Kanal 999, von der Ankunft im Testbild bis zur Übergabe der Goldenen Fernbedienung: rund 880 Zeilen in 20 Abschnitten, geordnet nach Sendern und Szenen, mit allen Gesprächsbäumen, Rätsellösungen, Ansehen-, Benutzen- und Kombinieren-Zeilen, den Tastenreaktionen, Pixel-auf-Mensch-Zeilen, Zurufen und den Hinweisen der Hilfe-Pfote. Format wie im Skript Prolog: ID, Sprecher, Text, Regie oder Auslöser (Bedingung nach Semikolon); „//“ trennt Pixels Kaskaden; Ersatzzeilen kommen aus dem SYS\_ERS-Pool. Die Rückkehr auf den Dachboden und das Finale stehen in eigenen Dateien.
+Das komplette Dialog-Skript für Welt 4, Kanal 999, von der Ankunft im Testbild bis zur Übergabe der Goldenen Fernbedienung, in 20 Abschnitten, geordnet nach Sendern und Szenen, mit allen Gesprächsbäumen, Rätsellösungen, Ansehen-, Benutzen- und Kombinieren-Zeilen, den Tastenreaktionen, Pixel-auf-Mensch-Zeilen, Zurufen und den Hinweisen der Hilfe-Pfote. Format wie im Skript Prolog: ID, Sprecher, Text, Regie oder Auslöser (Bedingung nach Semikolon); „//“ trennt Pixels Kaskaden; Ersatzzeilen kommen aus dem SYS\_ERS-Pool. Die Rückkehr auf den Dachboden und das Finale stehen in eigenen Dateien.
 
 ## 1. Testbild: Ankunft (Rätsel 1)
 

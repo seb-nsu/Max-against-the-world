@@ -1,6 +1,6 @@
 # Skript Prolog: Opas Dachboden
 
-Das ganze Prolog-Skript als Entwurf und Muster für alle Welten: rund 180 Zeilen, Spielzeit etwa zehn Minuten. Die Tabellen nutzen die Kurzform aus `05-spielsysteme.md`: ID, Sprecher, Text und Regie oder Auslöser; eine Bedingung steht im Auslöser nach Semikolon. Eine Sprechblase fasst bis zu drei Zeilen (etwa 120 Zeichen); „//“ trennt Pixels Kaskaden in Folgeblasen. Die Nummern laufen pro Szene in Zehnerschritten durch, egal wer spricht, damit die Reihenfolge an der ID ablesbar ist. Die Kanäle sind festgelegt: 3 für Welt 1, 7 für Welt 2, 42 für Welt 3, 999 für Welt 4. Ton nach den Dialogregeln in `01-konzept.md` (Humor-Durchgang 10. November 2026).
+Das ganze Prolog-Skript als Entwurf und Muster für alle Welten, Spielzeit etwa zehn Minuten. Die Tabellen nutzen die Kurzform aus `05-spielsysteme.md`: ID, Sprecher, Text und Regie oder Auslöser; eine Bedingung steht im Auslöser nach Semikolon. Eine Sprechblase fasst bis zu drei Zeilen (etwa 120 Zeichen); „//“ trennt Pixels Kaskaden in Folgeblasen. Die Nummern laufen pro Szene in Zehnerschritten durch, egal wer spricht, damit die Reihenfolge an der ID ablesbar ist. Die Kanäle sind festgelegt: 3 für Welt 1, 7 für Welt 2, 42 für Welt 3, 999 für Welt 4. Ton nach den Dialogregeln in `01-konzept.md` (Humor-Durchgang 10. November 2026).
 
 ## 1. Wohnzimmer: Kein WLAN
 

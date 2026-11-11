@@ -1,6 +1,6 @@
 # Skript Welt 3: Neo-Neustadt 2099
 
-Das komplette Dialog-Skript für Welt 3 als Entwurf: rund 870 Zeilen in 20 Abschnitten, von der Ankunft im Regen bis zum Klingeln des Werbeblocks, ohne die Rückkehr auf den Dachboden. Die Tabellen nutzen die Kurzform aus `05-spielsysteme.md` (ID, Sprecher, Text, Regie oder Auslöser; Bedingungen und die Ebene Simulation, Realität oder Labor stehen in der letzten Spalte), die IDs folgen dem Schema W3\_SZENE\_SPRECHER\_NUMMER in Zehnerschritten, Hinweise heißen W3\_HINT\_PIX\_xxxx, Ersatzzeilen kommen aus dem SYS\_ERS-Pool. Sprecherkürzel dieser Welt: MOR Morphäus, ORA Orakel-Oma, SCH Agent Schmidt, KLO Klon, TUR die Tür, DEC Deckert, VIE Herr Vier, KAL Kabel-Kalle, HAU Modell 08/15, MUT M.U.T.T.I., BER Bernd, PIE Piepsi, AUT Pastillenautomat, POR Portalgerät, RAD Radio, WEI weinender Mann, FRA Frau mit Regenschirm, MUS Straßenmusiker, REB Rebellin, REL Rebell, OPA Opa (als Hologramm und durch das Portal), NAR Regie ohne Text. Schalter mit Wirkung über die Welt hinaus heißen wie im Finale-Skript: FREUND\_0815 (Olivenöl für Modell 08/15) und KEKSE\_DABEI (Omas Kekse in der Tasche). Räume, Gegenstände, Figuren und alle Schalter stehen in der [Welt-Tabelle Welt 3](../welten/welt-3.yaml), Abläufe, Lösungen und Teilschritte in [Rätsel Welt 3](../raetsel/welt-3.md).
+Das komplette Dialog-Skript für Welt 3 als Entwurf in 20 Abschnitten, von der Ankunft im Regen bis zum Klingeln des Werbeblocks, ohne die Rückkehr auf den Dachboden. Die Tabellen nutzen die Kurzform aus `05-spielsysteme.md` (ID, Sprecher, Text, Regie oder Auslöser; Bedingungen und die Ebene Simulation, Realität oder Labor stehen in der letzten Spalte), die IDs folgen dem Schema W3\_SZENE\_SPRECHER\_NUMMER in Zehnerschritten, Hinweise heißen W3\_HINT\_PIX\_xxxx, Ersatzzeilen kommen aus dem SYS\_ERS-Pool. Sprecherkürzel dieser Welt: MOR Morphäus, ORA Orakel-Oma, SCH Agent Schmidt, KLO Klon, TUR die Tür, DEC Deckert, VIE Herr Vier, KAL Kabel-Kalle, HAU Modell 08/15, MUT M.U.T.T.I., BER Bernd, PIE Piepsi, AUT Pastillenautomat, POR Portalgerät, RAD Radio, WEI weinender Mann, FRA Frau mit Regenschirm, MUS Straßenmusiker, REB Rebellin, REL Rebell, OPA Opa (als Hologramm und durch das Portal), NAR Regie ohne Text. Schalter mit Wirkung über die Welt hinaus heißen wie im Finale-Skript: FREUND\_0815 (Olivenöl für Modell 08/15) und KEKSE\_DABEI (Omas Kekse in der Tasche). Räume, Gegenstände, Figuren und alle Schalter stehen in der [Welt-Tabelle Welt 3](../welten/welt-3.yaml), Abläufe, Lösungen und Teilschritte in [Rätsel Welt 3](../raetsel/welt-3.md).
 
 ## 1. Unterstadt, Straße: Ankunft im Regen
 
@@ -560,7 +560,7 @@ Ebene: Simulation und Realität im Wechsel. Max tippt am Terminal, Kalle liest i
 | W3\_TERM\_MAX\_0035 | Max | Der Cursor blinkt. Blink. Blink. Er fragt nichts, er wartet nur. Das ist schlimmer. | Ansehen: Terminal, zweites Mal |
 | W3\_TERM\_MAX\_0040 | Max | Erst mal das Handy dranhalten, vielleicht … Nein. Kein Netz. Nicht mal im Jahr 2099. | Handy auf Terminal |
 | W3\_TERM\_MAX\_0050 | Max | „Verbindung: Widerstandsbasis. Tippen Sie.“ Okay. Jemand da? | Benutzen: Terminal, erstes Mal |
-| W3\_TERM\_KAL\_0060 | Kalle (Text auf dem Bildschirm) | hier kalle. du steckst fest, oder. alle stecken da fest. der turm hat keinen ausgang, das ist sein ganzer witz. | Terminal-Text, Kleinbuchstaben |
+| W3\_TERM\_KAL\_0060 | Kalle (Text) | hier kalle. du steckst fest, oder. alle stecken da fest. der turm hat keinen ausgang, das ist sein ganzer witz. | Terminal-Text, Kleinbuchstaben |
 | W3\_TERM\_KAL\_0070 | Kalle (Text) | nur dein körper kann raus. der liegt hier. wir müssen deine kapsel umstecken. drei kabel. ich kann das nicht, ich bin am tippen. der kater muss. |  |
 | W3\_TERM\_MAX\_0080 | Max | Der Kater muss. Okay, drei Kabel. Dann tipp ich ihm mal die Farben durch. | tippt |
 | W3\_TERM\_KAL\_0090 | Kalle (Text) | der kater antwortet in miau-morse. ich übersetze. ich bin fließend. fast. | nur mit Morse-Tabelle |
@@ -1183,10 +1183,10 @@ Ein Klick auf die Figur, wenn im Gesprächsmenü nur noch „Tschüss“ übrig 
 | W3\_ABS\_VIE\_0060 | Herr Vier | Bestell was oder geh. Vier Sekunden. Drei. Zwei. Gut, du darfst bleiben. Aber schweigend. | Reden: Herr Vier, Gespräch erschöpft |
 | W3\_ABS\_ORA\_0070 | Orakel-Oma | Ich hab dir alles erzählt, Junge. Und das, was ich nicht erzählt hab, weißt du schon morgen. | Reden: Orakel-Oma, Gespräch erschöpft |
 | W3\_ABS\_ORA\_0080 | Orakel-Oma | Ich wusste, dass du noch mal fragst. Ich weiß auch, dass ich jetzt nichts mehr sage. Nimm einen Keks. Nein. Doch nicht. | Reden: Orakel-Oma, Gespräch erschöpft |
-| W3\_ABS\_SCH\_0090 | Agent Schmidt | Ich habe Ihnen alles mitgeteilt, Herr Max, und zwar zweimal, das zweite Mal langsamer, zu Ihrem Schutz | Reden: Schmidt, Gespräch erschöpft |
-| W3\_ABS\_SCH\_0100 | Agent Schmidt | Weitere Auskünfte nur mit Formular, das Formular gibt es nur mit Auskunft, guten Tag | Reden: Schmidt, Gespräch erschöpft |
-| W3\_ABS\_KAL\_0110 | Kabel-Kalle | Ich hab dir alles erklärt. Zweimal. Einmal davon richtig. Rate, welches. | Reden: Kalle, Gespräch erschöpft |
-| W3\_ABS\_KAL\_0120 | Kabel-Kalle | Nicht jetzt. Ich sortier gerade meine Kabel. Nach Gefühl. | Reden: Kalle, Gespräch erschöpft |
+| W3\_ABS\_SCH\_0090 | Schmidt | Ich habe Ihnen alles mitgeteilt, Herr Max, und zwar zweimal, das zweite Mal langsamer, zu Ihrem Schutz | Reden: Schmidt, Gespräch erschöpft |
+| W3\_ABS\_SCH\_0100 | Schmidt | Weitere Auskünfte nur mit Formular, das Formular gibt es nur mit Auskunft, guten Tag | Reden: Schmidt, Gespräch erschöpft |
+| W3\_ABS\_KAL\_0110 | Kalle | Ich hab dir alles erklärt. Zweimal. Einmal davon richtig. Rate, welches. | Reden: Kalle, Gespräch erschöpft |
+| W3\_ABS\_KAL\_0120 | Kalle | Nicht jetzt. Ich sortier gerade meine Kabel. Nach Gefühl. | Reden: Kalle, Gespräch erschöpft |
 | W3\_ABS\_HAU\_0130 | Modell 08/15 | Servus, Bursche. Mehr hab ich nicht im Programm. Servus ist bei mir Begrüßung, Abschied und Unterhaltung. | Reden: Hausmeister, Gespräch erschöpft |
 | W3\_ABS\_HAU\_0140 | Modell 08/15 | Ich hab dir alles gesagt, was auf meinem Zettel steht. Der Rest ist Wischen. | Reden: Hausmeister, Gespräch erschöpft |
 

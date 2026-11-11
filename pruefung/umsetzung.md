@@ -12,8 +12,8 @@ Grundlage: `pruefung/360-pruefung.md` (111 Funde). Auftrag: `pruefung/umsetzung-
 - Paket 6 (Humor, Anspielungen, KI-Klang): fertig, ein Commit je Skriptdatei.
 - Paket 7 (Grafik-Dokumente und Prompts): fertig. Bilder sind keine erzeugt, das Offene steht in Abschnitt 4.
 - Paket 8 (Audio-Dokument): fertig. Geändert ist nur `docs/04-audio.md`.
-- Paket 9: noch nicht begonnen.
-- Weiter bei: Paket 9, übrige Dokumente, Bedienung, Oberflächentexte.
+- Paket 9 (übrige Dokumente, Bedienung, Oberflächentexte): fertig.
+- Schlusskontrolle: siehe Ende von Abschnitt 4.
 
 Arbeitsweise nach einer Unterbrechung: Tabelle 1 zeigt je Fund den Status. Vor jedem Commit laufen `python3 tools/pruefen.py`, alle `--pruefen`-Läufe aus `.github/workflows/pruefen.yml` und nach Code-Änderungen die Godot-Tests.
 
@@ -45,7 +45,7 @@ Status: umgesetzt, nicht bestätigt, Entscheidung bitte prüfen, offen für Seba
 | 20 | 6 | umgesetzt, eine Stelle Entscheidung | Bestätigt. `W1_HOGG_ALW_0360` ohne den Milch-Satz, `FI_RUF_HER_0140` heißt „Eilmeldung! Jemand braucht Hilfe! Ich sage es sofort weiter!“. Toadis eigene Stationen mit „in einem anderen Schloss“ bleiben, Abschnitt C wertet sie als „zündet“ (Liste für Sebastian). |
 | 21 | 6 | umgesetzt | Bestätigt. Je Paar eine Stelle geändert: `W2_STAD_MAX_0010`, `W2_BUER_HER_0650`, `W2_INV_MAX_0465`, `W2_HAFS_PIX_0020`, `W4_RAU_PIX_0100`, `W4_GLUE_PIX_0460`, `W4_FERN_MAX_0050`, `W4_SIT_MAX_0140`, `W4_KELL_PIX_0075`, `W4_PIXM_PIX_0290`, `FI_HINT_PIX_0060`, dazu `P0_TREP_MAX_0115`, `W1_TAV_MAX_0240`, `W1_SCHM_MAX_0055`, `W1_HOGG_MAX_0110`. Die übrigen Paare aus der Liste sind über die Funde 20, 24, 74 und 77 erledigt. |
 | 22 | 6 | umgesetzt, zwei Stellen Entscheidung | Bestätigt. Streichliste aus D: `W1_DORF_MAX_0240` ohne das halbe Zitat, `W1_TAV_MAX_1550` gestrichen, `W1_HOGG_ALW_0360` gekürzt, `W2_STAD_MAX_0010`, `W3_TEST_MAX_0220`, `W3_EING_MAX_0490` umgeschrieben, `W4_KAPI_PIX_0515` gestrichen. Schon in Paket 4 und 5: `W4_KELL_MAX_0175`, `W4_KAPI_MAX_0525`, `W3_BAS_MAX_0755`. `W2_BUER_HER_0650` und `W2_AGOR_MAX_0180` sind entschärft statt gestrichen, weil an beiden eine Dialogoption oder eine gute Zweitzeile hängt (Liste für Sebastian). |
-| 23 | 9 | noch nicht bearbeitet |  |
+| 23 | 9 | umgesetzt | Bestätigt. `docs/01-konzept.md`: Die Beispielsätze sind durch zehn Zeilen aus dem heutigen Skript ersetzt, je mit Zeilen-ID; sie halten die Regeln darüber ein. Dazu die Cicero-Quelle („Tusculanae disputationes 5,64 bis 66“) und „Titel des Spiels“ statt „Arbeitstitel“ in der Rechtstabelle. |
 | 24 | 6 | umgesetzt | Bestätigt. `FI_WOHN_MAX_0400` heißt „Ich geh dann mal. Und niemand sagt jetzt was.“ `FI_SUPM_MAX_0080` endet auf „Zum ersten Mal heute will niemand was von mir.“ (zweite Sprechblase). Nur Pixel sagt noch „Freiwillig“ (`FI_ABSP_PIX_0200`, unverändert). |
 | 25 | 4 | umgesetzt | Bestätigt. `W4_STUD_MAX_0160` nach dem Vorschlag in Abschnitt L: „Ich bin gerade erst aufgestanden. Ich setz mich nicht wieder hin.“ „Freiwillig.“ ist dabei entfallen, wie im Vorschlag. |
 | 26 | 7 | umgesetzt (Entscheidung, bitte prüfen) | Bestätigt: Die Auflösung lief ohne Eingabe durch. `game/skripte/finale.gd`: Die Artefakt-Abfrage ist jetzt anklickbar. Der Spieler wählt Lupe, Sneaker und Batterie in freier Reihenfolge (`FI_AUFL_MAX_0110`, `0130`, `0150`), Opa antwortet jeweils, die Fernbedienung (`0170`) kommt als letzte. Kein Wort geändert, nur der Auslöser der vier Zeilen im Skript und die Beschreibung in `raetsel/finale.md`. Neue Prüfung in `game/tests/finale_anspiel.gd` (Reihenfolge nach Wahl). |
@@ -61,21 +61,21 @@ Status: umgesetzt, nicht bestätigt, Entscheidung bitte prüfen, offen für Seba
 | 36 | 8 | Dokument umgesetzt, Zuweisung offen | Bestätigt: Alle vier Räume des Finales spielen `gegenwart`. `docs/04-audio.md`: zwei neue Stücke `finale_maschine` und `finale_geburtstag` mit den Prompts aus dem Bericht, am Supermarkt kein Stück, nur `kuehlregal` und `tuergong`. Die Zuweisung im Spiel ist nicht gemacht, der Auftrag beschränkt Ton auf das Audio-Dokument. `welten/finale.yaml` nennt weiter `gegenwart`; der Absatz „Finale“ im Dokument sagt, was dafür im Code fehlt. |
 | 37 | 8 | umgesetzt (Entscheidung, bitte prüfen) | Bestätigt. `docs/04-audio.md`, Leitmotiv: fünf Töne festgelegt (g′ – c″ – e″ – d″ – c″ in C-Dur, kurz, kurz, lang, kurz, lang), als Pfeif-Aufnahme und MIDI ablegen, nachträglich in jedes Welt-Stück setzen. Welt-Stücke bekommen „in C major“ oder „in A minor“ im Prompt, der alte Motiv-Satz entfällt. Die Töne sind mein Vorschlag. |
 | 38 | 8 | umgesetzt | Bestätigt. Stimme der Hyäne mit dem Prompt aus dem Bericht (flach und ernst, platzt nur in den markierten Zeilen). Die markierten Zeilen sind benannt: `W4_VERH_HYA_0350` und `W4_VERH_HYA_0400`. |
-| 39 | 9 | noch nicht bearbeitet |  |
-| 40 | 9 | noch nicht bearbeitet |  |
+| 39 | 9 | umgesetzt, Entscheidung, bitte prüfen | Bestätigt. `docs/03-produktion.md`, Meilensteine: neuer Stand-Absatz (Bau fertig als Graubox, Stufe 1 und 2 bis auf den Test mit Fremden erledigt) und eine Tabelle „Was je Abschnitt noch offen ist“ nach Grafik und Audio je Welt, mit Stückzahlen aus den Welt-Tabellen und `04-audio.md`. Der alte Stufenplan bleibt als „Plan vom 9. November 2026“ stehen, mit dem Hinweis, dass seine Dauern den Bau enthalten. Neue Dauern, Stunden und Termine sind nicht eingetragen (Liste für Sebastian). |
+| 40 | 9 | mit Fund 2 erledigt | Bestätigt und schon in Paket 1 aufgelöst: Alle doppelt belegten Auslöser sind als erstes, zweites, drittes Mal geordnet oder an eine Bedingung gebunden (Tabelle „Auslöser“ in Abschnitt 2). `godot_raeume.py` bricht seitdem ab, wenn eine Zeile eine andere am selben Objekt verdrängt. In Paket 9 keine weitere Änderung. |
 | 41 | 2 | umgesetzt | Bestätigt und nachgestellt (SCH wurde in Welt 1 und 3 zu „Schreiber“). `tools/zeilen_einfuegen.py` sucht den Namen nur noch in der Zieldatei und bricht ab, wenn das Kürzel dort noch nicht vorkommt. Geprüft: SCH wird in Welt 1 „Schmied“, in Welt 3 „Schmidt“, GRI in Welt 2 „Grieche“. Die Kürzel selbst bleiben, weil Zeilen-IDs nicht umnummeriert werden. |
 | 42 | 5 | umgesetzt, in Teilen Entscheidung | Bestätigt. Eigene Sätze statt Originalwortlaut: Gollos Rätsel (`W1_TAV_GOL_0760`, `W1_TAV_MAX_0770`: Flasche statt Berg), „einzige Hoffnung“ (`W3_PIEP_OPA_0120`), Gedankentrick (`W3_EING_MAX_0160`), „Kaninchenbau“ (`W3_NUD_MOR_0420`), „Die Wahrheit ist irgendwo da draußen“ (`W4_HALL_AGE_0350`, Rätsel 8 heißt jetzt „Ein Beweis für den Agenten“). Kessel-Lauf gestrichen (`W3_BAS_MAX_0430` bis `KAL_0460`), „Gleis neundreiviertel“ gestrichen (`W1_DORF_MAX_0295`). Entscheidung, bitte prüfen: Mensch-Test Frage 1 ist jetzt das Portemonnaie im Bus (sieben Zeilen `W3_TEST_*` und `W3_HINT_PIX_0160`, Aufbau und Pointen unverändert). Die Römer-Frage und ihre Aufzählung sind neu geschrieben (`W2_AGOR_GRI_0400`, `0410`, Konter 4 in `W2_RING_MAX_0110`, `W2_RING_CIC_0120`: Kalender, Fußbodenheizung, Beton, Post). `W2_SAND_GRI_0190` heißt „Er sagt Nein! So bescheiden ist nur der Echte!“. Aus „Passierschein A38“ wird „Passierschein Vier-Strich-Ypsilon“ (fünf Zeilen). Unverändert laut Bericht: `FI_RIEG_MAX_0155`, „Die spinnen, die Griechen“, „Vielsaft“ und „Schicksalsberg“ (im Rechtscheck als „bleiben“ geführt). Unverändert bleibt auch der schlichte Satz „Ich bin nicht der Messias.“ samt Brians Schild. Rätsel-Dateien, Grafik-Tabelle Welt 3 und Englisch nachgezogen. |
 | 43 | 5 | offen für Sebastian | Nichts geändert. Der Bericht empfiehlt, die Nähe von Welt 3 zur Filmvorlage rechtlich prüfen zu lassen. Das kann nur ein Anwalt entscheiden. Mit Paket 5 sind drei wortnahe Zitate aus dieser Welt weg. |
 | 44 | 5 | Entscheidung, bitte prüfen | Bestätigt. Drei englische Namen rücken weiter vom Original weg, in `ui.csv`, `en.csv` und im Glossar in `05-spielsysteme.md`: „Hogwartle“ wird „Hogglewarz“, „Polyjuicy Lemonade“ wird „Manyjuice Lemonade“, „Wheel of Fortune (Shopping)“ wird „Lucky Wheel (Shopping)“. Im Englischen steht bei `W4_HALL_AGE_0350` auch nicht mehr der Serienslogan. Unverändert: „Paw and Order“ (Wortspiel wie „Tiertort“) und „Morphaeus“ (Figurenname, siehe Fund 105). |
-| 45 | 9 | noch nicht bearbeitet |  |
+| 45 | 9 | umgesetzt | Bestätigt. `docs/03-produktion.md`: Angaben im Steam-Formular und beide Store-Texte nennen jetzt den festgelegten Weg („Hintergründe sind mit einem Bildgenerator erzeugt, verkleinert und von Hand überarbeitet“). Die Tabellen „Technik“ und „System 2“ nennen Gemini und `tools/pixelieren.py` statt Neural Pixelate; Icons 48×48 statt 36×36. |
 | 46 | 5 | umgesetzt | Bestätigt. `W4_FABR_FLE_0330`: „Ein Anführer mit Laken!“ |
 | 47 | 2 | umgesetzt | Teilweise anders als im Bericht: `en_eintragen.py` teilt schon an „//“. Die 793 Zeilen sind am Werkzeug vorbei in `en.csv` gekommen. Alle 793 geteilt (die Blasenzahl passte überall), dabei 124 ältere Folgeblasen durch die neuere Fassung ersetzt. Neu in `tools/pruefen.py`: Fehler bei „//“ im englischen Text, bei abweichender Blasenzahl und bei Schlüsseln, die es im Skript nicht mehr gibt. |
 | 48 | 2 | umgesetzt | Bestätigt. `pruefen.py`: 102 harmlose Meldungen „Nummer nicht aufsteigend“ sind jetzt Hinweise (`--hinweise`), falscher Sprechername ist ein Fehler, jede Warnung bricht ab. `spieldaten.py --pruefen` und `godot_raeume.py --pruefen` brechen bei Warnungen ab. `abdeckung.py` zählt verdrängte Ansehen-Zeilen als fehlend. `godot_raeume.py` bricht ab, wenn eine Gesprächsoption oder ein Zuruf eine Bedingung in Worten hat, die das Spiel nicht kennt. `testbuild.yml`: zweiter Import ohne Fehlermeldung, dazu alle Durchläufe vor dem Export. **Dabei gefunden (nicht im Bericht):** In Welt 3 bot Deckert die Option zum Mensch-Test nie an und die Orakel-Oma zwei Optionen zur Vase nie. Die Welt war über die Bedienung nicht lösbar, der Test rief die Regeln direkt auf. Behoben in `cq_dialog.gd` (Regeln entscheiden zuerst), `godot_raeume.py` („startet …“ ist Anmerkung), `spiel.gd` (Zuruf „vor dem Duell“ in Welt 1 kam nie). `welt_3_anspiel.gd` prüft jetzt, dass die Optionen angeboten werden (vorher 2 Fehler). Die Prüfung der Hinweise je offenem Schritt kommt mit Fund 4 in Paket 3. |
-| 49 | 9 | noch nicht bearbeitet |  |
-| 50 | 9 | noch nicht bearbeitet |  |
-| 51 | 9 | noch nicht bearbeitet |  |
-| 52 | 9 | noch nicht bearbeitet |  |
-| 53 | 9 | noch nicht bearbeitet |  |
+| 49 | 9 | umgesetzt | Bestätigt. `game/oberflaeche/reisetasche.gd`: Die Auslage bricht nach acht Feldern in eine zweite Zeile um, das Fenster wächst mit. Test in `welt_2_anspiel.gd`: elf Dinge, zwei Zeilen, kein Feld liegt auf einem anderen. |
+| 50 | 9 | umgesetzt | Bestätigt. `game/skripte/spielstand.gd`: F9 lädt nicht mehr mitten in einer Szene, sondern meldet „Laden geht erst nach der Szene“ (`UI_LADEN_NACH_SZENE`, neu in `ui.csv`, DE und EN). |
+| 51 | 9 | umgesetzt, Entscheidung, bitte prüfen | Bestätigt am Code. `game/skripte/spiel.gd`, `zum_hauptmenue()`: Im Browser lädt das Spiel die Seite neu, statt sich zu beenden. Der Weg ist hier nicht im Browser getestet (kein Web-Build in den Prüfläufen); bitte im Web-Testbuild einmal „Hauptmenü“ drücken. |
+| 52 | 9 | teilweise umgesetzt | Bestätigt für drei von vier Schaltern. `game/oberflaeche/optionen.gd`: „Untertitel“, „Bildschirmwackeln aus“ und „Farbenblind-Hilfe“ stehen grau mit „(kommt noch)“ im Menü. „Flackern reduzieren“ wirkt schon im Hauptmenü und bleibt aktiv. Nicht bestätigt: Das Kabelrätsel nennt die Symbole schon im Text („Buchse Rot (Kreis)“). `05-spielsysteme.md` nennt den Stand und dass die Steam-Tags erst zählen, wenn die Schalter wirken. Test in `menues.gd`. |
+| 53 | 9 | umgesetzt | Bestätigt. `game/oberflaeche/notizbuch.gd`: Seite 3 zeigt Pixels Wünsche, je Welt einen (Wert `EINKAUFSLISTE`), im Finale dazu das Sofa. Die fünf Einträge stehen in `ui.csv` (`UI_EINKAUF_1` bis `_4`, `UI_EINKAUF_SOFA`) und sind aus den Skriptzeilen abgeleitet, in denen Pixel den Wunsch nennt. Entscheidung, bitte prüfen (Wortlaut). Test in `welt_2_anspiel.gd`. |
 | 54 | 4 | umgesetzt | Bestätigt. `P0_DACH_OPA_0370`: „Er kennt jede Sendung, die je gelaufen ist, und er kennt alle Antworten.“ Der zweite Satz aus dem Vorschlag fehlt, weil Pixel in `0380` auf „alle Antworten“ antwortet. |
 | 55 | 4 | Entscheidung, bitte prüfen | Bestätigt. Gewählt: offen lassen. `ZS3_DACH_PIX_0020` endet nach „Jemand will, dass in diesem Haus etwas gekauft wird.“, Pixel sieht Opa nicht mehr an. Der andere Weg (Oma als Absenderin, eine neue Zeile im Finale) steht auf der Liste für Sebastian. |
 | 56 | 4 | umgesetzt | Bestätigt. `FI_AUFL_OPA_0230`: „Einmal. Zum Testen. Durch alle Kanäle.“ |
@@ -113,27 +113,27 @@ Status: umgesetzt, nicht bestätigt, Entscheidung bitte prüfen, offen für Seba
 | 88 | 7 | umgesetzt | Bestätigt. `grafik/00-stil-und-werkzeuge.md`: neuer Baustein KONZEPT-AUSSEN (Text aus dem Bericht), HINTERGRUND heißt „HINTERGRUND (Ersatzweg)“. Jede Grafik-Datei nennt ihre Außenszenen in einer Zeile „Außenszenen“, `tools/prompts_zusammensetzen.py` setzt dort den Außen-Baustein ein (unbekannter Name bricht ab). Entscheidung: Der Supermarkt-Eingang zählt als Außenszene. |
 | 89 | 7 | teilweise | Bestätigt. `tools/layout_skizzen.py`: Legende vollständig (violett für Figuren), Figuren in ihrer Größe aus der Welt-Tabelle mit Namen und Pixelhöhe. Alle 55 Skizzen neu erzeugt, fünf waren veraltet. Nicht geändert: Außenräume sind weiter als Raum gezeichnet, und die Beschriftungen der Platzhalter im Spiel bleiben (laut Bericht reicht das für die Graubox). |
 | 90 | 8 | umgesetzt, Kosten offen | Bestätigt, alle sechs Teile. Pixels Stimme „with a rarely shown, dry warmth underneath“. Musik-Baustein mit Ausnahmen für `zappomat`, `werbeblock`, `abspann` und Jingles. Tempo im Rhythmus-Spiel: nach dem Erzeugen messen, Taktmarken von Hand. Geräusche als Tabellen mit Kennung und Einsatz, dazu Zeitfähre, Code-Sicht, Portalgerät und je Welt eine Grundatmosphäre (`w1_atmo` bis `w4_atmo`); 14 sind verdrahtet, die übrigen als „noch nicht im Code“ benannt. Kosten in der Datei einheitlich vier Monate, rund 400 $. Umfang: 5.435 Zeilen, 6.180 Sprechblasen, rund 504.000 Zeichen (der Bericht nennt 5.414 und 6.306, das war der Stand vor den Kürzungen). Suno und Udio mit Datum. Offen: Mit den echten Zahlen ist die Kostenschätzung eher zu niedrig, eine neue Zahl erfinde ich nicht. |
-| 91 | 9 | noch nicht bearbeitet |  |
-| 92 | 9 | noch nicht bearbeitet |  |
-| 93 | 9 | noch nicht bearbeitet |  |
-| 94 | 9 | noch nicht bearbeitet |  |
+| 91 | 9 | umgesetzt | Bestätigt. `README.md` (640×360, Gemini und `pixelieren.py`). Kopfzeilen der fünf Skripte: Zeilenzahl gestrichen. `05-spielsysteme.md`: 48 px, Maße in Spielpixeln bei 640×360, Fenstergrößen 1280×720 bis 2560×1440, „Schrift festlegen“ abgehakt. `entscheidungen.md`: fünfter von sechs Kanälen, „Max 105 Pixel“ durchgestrichen, Verweis bei ElevenLabs. `offene-punkte.md`: A13, A14, A16, P10, P11 gelöscht. `03-produktion.md`: 58 Räume, 12 statt 8 Räume im Vertical Slice (Prolog 3, Welt 1 neun), vier Monate ElevenLabs mit Verweis auf `04-audio.md`, „Was noch fehlt“ führt Skript, Hinweise und Speichern als erledigt. Die Grafikstunden sind nicht neu geschätzt, nur als „für 640×360 noch nicht neu geschätzt“ markiert. |
+| 92 | 9 | teilweise umgesetzt | Bestätigt. `raetsel/welt-2.md` (Agora 1280×360), `welten/README.md` (Nahansicht 640×360), `welt-1.yaml`, `welt-2.yaml`, `welt-3.yaml`: „auf die Werkbank (in die Maschine erst im Finale)“. Die übrigen Kommentare mit alten Maßen waren schon weg. Nicht geändert: die Schalter ohne Präfix in Welt 3. Der Bericht sagt selbst „sobald ohnehin an Welt 3 gearbeitet wird“; ein Umbenennen ändert Code, Tests und alte Spielstände (Liste für Sebastian). |
+| 93 | 9 | teilweise umgesetzt | Bestätigt. Sprecherspalte: „Alwin“ (`W1_ABS_ALW_0070`, `_0080`), „Schmidt“ (`W3_ABS_SCH_0090`, `_0100`), „Kalle“ (`W3_ABS_KAL_0110`, `_0120`), „Kalle (Text)“ (`W3_TERM_KAL_0060`). `FI_WOHN_MAX_0165`: „Seite 3“ wie in den anderen Zeilen, englisch nachgezogen. Nicht geändert: „Ansehen: Traubensaft, Traubensaft“ und „Bettlaken, Bettlaken“. Das ist die feste Schreibweise „Gegenstand, Zustand“, die das Werkzeug liest; Klammerzusätze wie „(aus dem Lautsprecher)“ bleiben. |
+| 94 | 9 | umgesetzt | Bestätigt. `docs/uebersetzung/ui.csv`: fünf Hotspot-Namen groß geschrieben (Klingelnde Telefonzelle, Goldenes Sofa, Verkettete Tür, Frische Bananenschale, Normaler Käse). `UI_PROLOG_ENDE` gelöscht (unbenutzt). `UI_WELT_1_ENDE` bis `_3_ENDE` sind eine Sicherung im Code für den Fall, dass eine Welt fehlt; Text jetzt „Hier endet diese Fassung. Welt N folgt.“ statt „Ende der Graubox“. |
 | 95 | 3 | umgesetzt | Bestätigt. `character_gollo.gd`: Jeder Gegenstand auf Gollo startet das Rätsel, solange Max die Thunfischdose hat. Auslöser von `W1_TAV_GOL_1110` und `W1_TAV_MAX_1120` und die Rätsel-Datei nachgezogen. Wortlaut unverändert. |
 | 96 | 3 | umgesetzt | Bestätigt. Neue Zeile `W3_EING_PIX_0185` („Er quietscht noch. Und du hast Öl in der Tasche.“): Pixel warnt einmal, wenn Max die Telefonbuchseite vor dem Ölen gibt, die Seite bleibt bei Max (`welt_3.gd`, Schalter `W3_OEL_WARNUNG`). Der Halbsatz „Ich sage es nur“ aus dem Vorschlag fehlt, weil Abschnitt E ihn als Muster führt. `W3_SUPP_VIE_0130`: Die Karte lag „im Leergut aus dem Labor“, damit ist ihre Herkunft kein Zufall mehr. Test `welt_3_anspiel.gd` erweitert. |
 | 97 | 3 | umgesetzt | Bestätigt. `welt_2.gd`: Anklage und Ersatzweg gehen erst, wenn alle vier verhört sind. `welt_4.gd`: Wer die Mutter nach dem Abendessen fragt (`W4_MUTTER_FONDUE`), löst R4a beim Lesen der Folge um 20:15. Rätsel-Dateien nachgezogen, Tests `welt_2_anspiel.gd` und `welt_4_anspiel.gd` erweitert. |
 | 98 | 3 | umgesetzt | Bestätigt. `W3_HINT_PIX_0130`, `0330`, `0730`, `1230` nennen keine Maus und keine Taste mehr („Sieh dir … an“, „Wechsel zu mir“). `UI_TASCHE_HILFE` in `docs/uebersetzung/ui.csv` ebenso, deutsch und englisch. |
 | 99 | 3 | Entscheidung, bitte prüfen | Bestätigt. 20 neue Zweitzeilen für Gegenstände: 13 in der Taverne (`W1_TAV_MAX_0115` bis `0315`), 7 im Klassenzimmer (`W1_HOGG_MAX_0115` bis `0205`). Neuer Wortlaut, jede Zeile zeigt etwas Neues am Objekt. Die Figuren in beiden Räumen haben weiter keine Zweitzeile (Liste für Sebastian). |
-| 100 | 9 | noch nicht bearbeitet |  |
-| 101 | 9 | noch nicht bearbeitet |  |
+| 100 | 9 | teilweise umgesetzt | Telefonzelle bestätigt und behoben: `game/skripte/welt_3.gd` behandelt beide Hotspots gleich, `W3_SIM_MAX_0230` kommt beim ersten Abheben, `_0240` danach (Test in `welt_3_anspiel.gd`). Die übrigen Paare sind nicht zusammengelegt: Tresen und Weinkarte sind zwei Dinge; Halterung, Keksdose und Scherben, Tasse und Tisch, Amphore und Traubensaft sind Zustände oder Paare der Graubox, und die Regeln behandeln beide Namen schon gleich. Zusammenlegen geht erst sinnvoll mit den echten Bildern (Liste für Sebastian). |
+| 101 | 9 | teilweise umgesetzt | Alle vier Teile bestätigt. „Neues Spiel“ fragt nach, wenn es einen Spielstand gibt (`hauptmenue.gd`, `UI_MENUE_NEUES_SPIEL_SICHER`). Die eigene Figur fängt keine Klicks mehr ab, solange kein Gegenstand in der Hand ist (`spiel.gd`, `_eigene_figur_durchlassen`). Controller-Eingaben zählen als Tätigkeit, Zurufe kommen nicht mehr mitten im Spielen (`spiel.gd`, `_input`). Pack-Kommentare: Neun ältere Dinge behalten Pixels Kommentar aus dem früheren Zwischenspiel, wo er noch passt (`skripte/reisetasche.gd`, Auslöser der neun Zeilen ergänzt). Für die übrigen älteren Dinge fehlen Zeilen; neue Zeilen sind Tonarbeit (Liste für Sebastian). Tests in `menues.gd`, `ansehen_zustand.gd`, `welt_2_anspiel.gd`. |
 | 102 | 4 | offen für Sebastian | Nichts geändert. Der Bericht sagt selbst: kann Absicht sein. Vorschlag aus dem Bericht steht auf der Liste. |
-| 103 | 9 | noch nicht bearbeitet |  |
-| 104 | 9 | noch nicht bearbeitet |  |
+| 103 | 9 | umgesetzt | Bestätigt. `docs/03-produktion.md`: Formular-Angabe und Store-Text deutsch „von Hand nachgezeichnet und animiert“, englisch „redrawn and animated by hand“. |
+| 104 | 9 | teilweise umgesetzt | Lizenz nicht geklärt, deshalb entfernt: Die Datei `game/game/gui/fonts/monkeyisland_1991.ttf` ist gelöscht. Zwei Szenen des Verlaufsfensters nehmen jetzt Nunito, die dritte Szene (Dialogauswahl) hatte die Schrift nur eingetragen, nicht benutzt. Offen: Der Popochiu-Baukasten selbst bringt die Datei weiter mit (`game/addons/popochiu/engine/objects/gui/fonts/`, dazu `minecraftia-regular.ttf`); seine eigenen Szenen verweisen darauf. Vor der Veröffentlichung klären oder vom Export ausnehmen (Liste für Sebastian). |
 | 105 | 5 | offen für Sebastian | Keine Figur umbenannt, wie im Auftrag festgelegt. Fernere Fassungen für die Schublade stehen auf der Liste für Sebastian. |
-| 106 | 9 | noch nicht bearbeitet |  |
-| 107 | 9 | noch nicht bearbeitet |  |
-| 108 | 9 | noch nicht bearbeitet |  |
-| 109 | – | noch nicht bearbeitet |  |
-| 110 | – | noch nicht bearbeitet |  |
-| 111 | – | noch nicht bearbeitet |  |
+| 106 | 9 | umgesetzt | Bestätigt. `docs/03-produktion.md`, Zielgruppe: Die Freigabe ist eine Unbedenklichkeit, der Store-Text nennt „Empfohlen ab 10“. Die Zahl dort heißt „über 6.000 Sprechblasen“ (heute 6.180). Der Satz steht in der Zielgruppe; in den Entwurf des Store-Absatzes zur KI gehört er nicht. |
+| 107 | 9 | umgesetzt | Bestätigt. `game/skripte/welt_3.gd`: `KEKSE_DABEI` wird in Welt 3 nicht mehr gesetzt, das Finale setzt ihn (Welt-Tabelle angepasst). `game/README.md` und der Kopf von `tools/aufloesung.py` nennen den heutigen Stand. |
+| 108 | 9 | teilweise umgesetzt | Maße bestätigt: `05-spielsysteme.md` nennt jetzt überall 48 px und 39 px; die Blase war im Spiel nur 270 Spielpixel breit (beim Wechsel der Auflösung nicht mitgerechnet), jetzt 360 wie im Dokument (`game/game/gui/gui.tscn`, Entscheidung, bitte prüfen). Untertitel über dem Taschen-Fenster: kann Absicht sein, `entscheidungen.md` nennt „Blasen bleiben darüber sichtbar“; nicht geändert. |
+| 109 | – | offen | Nicht prüfbar, wie im Bericht: Die Minispiele sind in der Graubox Auswahlmenüs. Nichts geändert (Liste für Sebastian). |
+| 110 | – | offen | Nicht prüfbar, wie im Bericht: Es gibt keine Audiodatei. Nichts geändert (Liste für Sebastian). |
+| 111 | – | offen | Kein eigener Durchgang durch `en.csv`. Nachgezogen ist nur die englische Fassung jeder geänderten deutschen Zeile (Liste für Sebastian). |
 
 ## 2. Geänderte Skriptzeilen je Datei
 
@@ -182,6 +182,29 @@ Fund 2, wenn nichts anderes dasteht: Das Spiel konnte diese Zeilen nicht von ein
 | `FI_AUFL_MAX_0130` | (leer) | Spieler wählt; freie Reihenfolge | Fund 26, wie 0110 |
 | `FI_AUFL_MAX_0150` | (leer) | Spieler wählt; freie Reihenfolge | Fund 26, wie 0110 |
 | `FI_AUFL_MAX_0170` | (leer) | Spieler wählt; erst nach den drei anderen | Fund 26: Die Fernbedienung bleibt die letzte Frage, damit Opas „Meine.“ der Schluss ist. |
+| `ZS1_DACH_PIX_0520` | (Auslöser wie bisher) | wie bisher, dazu „; auch in Zwischenspiel 2 und 3“ | Fund 101: Pixels Pack-Kommentar gilt auch später, wenn das Ding noch in der Tasche liegt. |
+| `ZS1_DACH_PIX_0530` | (Auslöser wie bisher) | wie bisher, dazu „; auch in Zwischenspiel 2 und 3“ | Fund 101: Pixels Pack-Kommentar gilt auch später, wenn das Ding noch in der Tasche liegt. |
+| `ZS1_DACH_PIX_0535` | (Auslöser wie bisher) | wie bisher, dazu „; auch in Zwischenspiel 2 und 3“ | Fund 101: Pixels Pack-Kommentar gilt auch später, wenn das Ding noch in der Tasche liegt. |
+| `ZS1_DACH_PIX_0540` | (Auslöser wie bisher) | wie bisher, dazu „; auch in Zwischenspiel 2 und 3“ | Fund 101: Pixels Pack-Kommentar gilt auch später, wenn das Ding noch in der Tasche liegt. |
+| `ZS1_DACH_PIX_0550` | (Auslöser wie bisher) | wie bisher, dazu „; auch in Zwischenspiel 2 und 3“ | Fund 101: Pixels Pack-Kommentar gilt auch später, wenn das Ding noch in der Tasche liegt. |
+| `ZS1_DACH_PIX_0560` | (Auslöser wie bisher) | wie bisher, dazu „; auch in Zwischenspiel 2 und 3“ | Fund 101: Pixels Pack-Kommentar gilt auch später, wenn das Ding noch in der Tasche liegt. |
+| `ZS1_DACH_PIX_0580` | (Auslöser wie bisher) | wie bisher, dazu „; auch in Zwischenspiel 2 und 3“ | Fund 101: Pixels Pack-Kommentar gilt auch später, wenn das Ding noch in der Tasche liegt. |
+| `ZS2_DACH_PIX_0530` | (Auslöser wie bisher) | wie bisher, dazu „; auch in Zwischenspiel 3“ | Fund 101, wie oben |
+| `ZS2_DACH_PIX_0540` | (Auslöser wie bisher) | wie bisher, dazu „; auch in Zwischenspiel 3“ | Fund 101, wie oben |
+
+### Sprecher (zweite Spalte), Wortlaut unverändert
+
+Fund 93: ein Name je Figur. Die vier Pixel-Zeilen gehören zu Fund 15 (Pixel spricht in der Simulation nur über die Leitung).
+
+| Zeilen-ID | Sprecher vorher | Sprecher nachher |
+| --- | --- | --- |
+| `W1_ABS_ALW_0070`, `W1_ABS_ALW_0080` | Alwin Grauwald | Alwin |
+| `W3_ABS_SCH_0090`, `W3_ABS_SCH_0100` | Agent Schmidt | Schmidt |
+| `W3_ABS_KAL_0110`, `W3_ABS_KAL_0120` | Kabel-Kalle | Kalle |
+| `W3_TERM_KAL_0060` | Kalle (Text auf dem Bildschirm) | Kalle (Text) |
+| `W3_KUCH_PIX_0535` | Pixel | Pixel (aus dem Wandtelefon) |
+| `W3_TURM_PIX_0235` | Pixel | Pixel (aus dem Terminal) |
+| `W3_KAM1_PIX_0365`, `W3_KERN_PIX_0415` | Pixel | Pixel (aus dem Lautsprecher) |
 
 ### prolog.md
 
@@ -755,6 +778,7 @@ Fund 2, wenn nichts anderes dasteht: Das Spiel konnte diese Zeilen nicht von ein
 | `FI_SUPM_MAX_0080` | Kein Rauschen, kein Kanal, nur eine Tür, die von selbst aufgeht. Und ich geh freiwillig durch. Das ist neu. | Kein Rauschen, kein Kanal, nur eine Tür, die von selbst aufgeht. // Zum ersten Mal heute will niemand was von mir. | Fund 24: „freiwillig“ und „Das ist neu.“ |
 | `ZS1_DACH_MAX_0322` | (neu) | Größe M, Freilandhaltung, Drache. Steht so nicht drauf. Sollte es aber. | Fund 79: Reservezeile FI_INV_MAX_0025 in Zwischenspiel 1 untergebracht |
 | `ZS1_DACH_PIX_0324` | (neu) | Ein Ei. Drei Minuten, weich, mit Salz. Ich sage das nicht als Drohung. Ich sage das als Vision. | Fund 79: Reservezeile FI_INV_PIX_0015 in Zwischenspiel 1 untergebracht |
+| `FI_WOHN_MAX_0165` | Ganz unten auf Seite drei steht noch: „Nächstes Jahr: Sofa für zwei.“ In Pixels Pfotenschrift. | Ganz unten auf Seite 3 steht noch: „Nächstes Jahr: Sofa für zwei.“ In Pixels Pfotenschrift. | Fund 93: „Seite 3“ wie in 0160. |
 
 ## 3. Musterzahlen vorher und nachher
 
@@ -828,6 +852,13 @@ Hinweise zu den Zahlen:
 - Fund 88: Der Supermarkt-Eingang zählt als Außenszene und bekommt den Außen-Baustein.
 - Fund 30: Der gemalte Kalenderkreis bleibt im Dachboden-Prompt, weil das freigegebene Bild ihn hat. Das Sprite deckt ihn in zwei Zuständen ab.
 - Fund 37: Die fünf Töne des Leitmotivs (g′ – c″ – e″ – d″ – c″) sind mein Vorschlag. Wenn du eine andere Melodie pfeifst, gilt deine.
+- Fund 39: Der Meilensteinplan hat jetzt einen Stand-Absatz und eine Tabelle, was je Welt an Grafik und Audio offen ist. Der alte Stufenplan steht noch darunter. Neue Dauern, Stunden und Termine habe ich nicht eingetragen; die musst du schätzen. Auch das Beispiel „Projektstart im Januar 2027“ und die Grafikstunden (für 480×270 geschätzt) warten darauf.
+- Fund 51: „Hauptmenü“ lädt im Browser die Seite neu. Bitte im Web-Testbuild einmal ausprobieren, hier ließ sich das nicht testen.
+- Fund 52: Drei Schalter sind grau mit „(kommt noch)“. Wenn du sie lieber ganz ausblenden willst, ist das eine Zeile in `optionen.gd`.
+- Fund 53: Die fünf Einträge auf Seite 3 des Notizbuchs (`UI_EINKAUF_1` bis `_4`, `UI_EINKAUF_SOFA` in `docs/uebersetzung/ui.csv`) sind aus Pixels Zeilen abgeleitet. Der Wortlaut ist deiner.
+- Fund 94: Die drei Meldungen „Hier endet diese Fassung. Welt N folgt.“ erscheinen nur, wenn eine Welt im Build fehlt.
+- Fund 101: „Neues Spiel“ fragt mit „Noch mal wählen: Es beginnt ein neues Spiel. Deine Spielstände bleiben erhalten.“ nach (`UI_MENUE_NEUES_SPIEL_SICHER`). Wortlaut bitte prüfen.
+- Fund 108: Die Sprechblase ist jetzt 360 statt 270 Spielpixel breit, wie im Dokument (1.080 px bei Full HD). Die Blasen werden damit breiter und niedriger als bisher. Wenn dir die schmale Blase besser gefiel, ist es eine Zahl in `game/game/gui/gui.tscn`.
 - Fund 90: Neue Kennungen für rund 60 Geräusche in `docs/04-audio.md`. Wo ich den Raum nicht sicher wusste, steht „Einsatz noch festlegen“ (Miau, Schnurren, Fauchen, Huhn, Frosch, Steinschleifen, Laser).
 
 ### Kann Absicht sein, nicht geändert
@@ -841,6 +872,10 @@ Hinweise zu den Zahlen:
 - Fund 71: In `docs/entscheidungen.md` steht weiter „Regel 14b“. Im Spiel heißt es jetzt überall „Paragraf 14b“.
 - `W4_TEST_PIX_0290`: „wo bei Oma immer der Hund schlafen muss“. Das ist die einzige Stelle, an der Oma einen Hund hat.
 - Fund 76: „dreihundert Jahre“ bei der Sphinx stimmt mit ihren eigenen Angaben überein.
+- Fund 108: Sprechblasen bleiben über dem Taschen-Fenster sichtbar. `docs/entscheidungen.md` nennt das als Absicht.
+- Fund 93: „Ansehen: Traubensaft, Traubensaft“ und „Bettlaken, Bettlaken“ sind die Schreibweise „Gegenstand, Zustand“. Das Werkzeug liest sie so.
+- Fund 92: Die Schalter `STEMPEL_MENSCH`, `REGEL_2` und `MUTTI_AUS` in Welt 3 haben kein Präfix. Umbenennen ändert Code, Tests und alte Spielstände; der Bericht rät selbst, das mit der nächsten Arbeit an Welt 3 zu tun.
+- Fund 100: Doppelte Hotspots außer der Telefonzelle (Tresen und Weinkarte, Halterung, Keksdose und Scherben, Tasse und Tisch, Amphore und Traubensaft) bleiben. Im Spiel verhalten sich beide Namen gleich; zusammenlegen lohnt erst mit den echten Bildern.
 
 ### Fernere Fassungen für die Schublade (Fund 105)
 
@@ -873,10 +908,15 @@ Nichts davon ist eingebaut. Es sind Vorschläge für den Fall, dass ein Anwalt e
 
 - Fund 36: Die zwei Finale-Stücke sind beschrieben, aber keinem Raum zugewiesen. Der Dachboden ist im Finale derselbe Raum wie in den Zwischenspielen, das Feld `musik` reicht dafür nicht. Es braucht einen Aufruf im Code beim Start der Maschine und eine Kennung für „kein Stück“ am Supermarkt.
 - Fund 90: Die Grundatmosphäre je Welt und alle Geräusche außer den 14 verdrahteten ruft der Code noch nicht auf.
-- Fund 90: Die Kostenschätzung für die Vollvertonung (rund 400 $) stammt aus der alten Rechnung mit 5.000 Zeilen zu 60 Zeichen. Echt sind 6.180 Sprechblasen zu 82 Zeichen. Neu rechnen, wenn der Faktor aus dem Vertical Slice da ist. `03-produktion.md` und `entscheidungen.md` nennen noch drei Monate und 300 $ (siehe Paket 9).
+- Fund 90: Die Kostenschätzung für die Vollvertonung (rund 400 $) stammt aus der alten Rechnung mit 5.000 Zeilen zu 60 Zeichen. Echt sind 6.180 Sprechblasen zu 82 Zeichen. Neu rechnen, wenn der Faktor aus dem Vertical Slice da ist. `03-produktion.md` nennt seit Paket 9 vier Monate und verweist auf `04-audio.md`; `entscheidungen.md` behält den alten Eintrag mit einem Verweis.
 
 ### Offen laut Bericht
 
 - Fund 43: Welt 3 folgt einem bekannten Film Station für Station. Der Bericht rät, das vor der Steam-Seite von einem Medienanwalt prüfen zu lassen.
 
-Folgt mit den Funden 109 bis 111.
+- Fund 109: Die Minispiele sind Auswahlmenüs. Der Bericht rät, Rede-Ringen und Zombie-Tanz zuerst zu bauen.
+- Fund 110: Es gibt keine Audiodatei. Musik, Geräusche und Stimmen sind nicht prüfbar.
+- Fund 111: Die englische Fassung braucht einen eigenen Durchgang. Nachgezogen ist nur jede geänderte deutsche Zeile.
+- Fund 101: Für ältere Dinge in der Reisetasche ohne passenden Kommentar (Eimer, Leuchttrank, Ketchup; im dritten Zwischenspiel auch Schriftrolle, Handy, Kaugummi, Kugelschreiber und die vier Scheiben) kommt weiter eine Ersatzzeile. Eigene Zeilen wären neue Gags.
+- Fund 104: Der Popochiu-Baukasten bringt `monkeyisland_1991.ttf` und `minecraftia-regular.ttf` selbst mit. Das Spiel benutzt sie nicht mehr. Vor der Veröffentlichung Lizenz klären oder die zwei Dateien vom Export ausnehmen.
+- Fund 52 und 106: Die Steam-Tags „Untertitel“ und „Farbenblind-Modus“ erst setzen, wenn die Schalter wirken.

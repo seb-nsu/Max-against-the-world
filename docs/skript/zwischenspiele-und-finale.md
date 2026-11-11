@@ -97,14 +97,14 @@ Reisetasche packen für Welt 2. Bildschirm Reisetasche (eigene Überlagerung aus
 | ZS1\_DACH\_OPA\_0510 | Opa | Zwei Wahlfächer, nicht mehr. Die Tasche hat Prinzipien, und die hab ich ihr beigebracht. | öffnet die Tasche, Bildschirm Reisetasche |
 | ZS1\_DACH\_MAX\_0512 | Max | Zwei? Ich hab ungefähr ein halbes Mittelalter in den Hosentaschen. |  |
 | ZS1\_DACH\_OPA\_0514 | Opa | Der Rest kommt in die Fundkiste. Ich werfe nichts weg. Nie. | klopft auf die Kiste am Kistenstapel |
-| ZS1\_DACH\_PIX\_0520 | Pixel | Der Kochlöffel reist ab jetzt immer mit. Er hat sich das verdient, mehr als manche in diesem Raum. // Und er klebt übrigens noch. Ich habe es mit der Nase geprüft und bereue es. | Berühren: Kochlöffel (Pflichtfach) |
-| ZS1\_DACH\_PIX\_0530 | Pixel | Der Thunfisch bleibt. Das ist kein Gepäck, junger Mann, das ist mein Glaube, und über den wird nicht verhandelt. | Berühren: Thunfischdose (Pflichtfach) |
-| ZS1\_DACH\_PIX\_0535 | Pixel | Das Notizbuch. Darin steht meine Liste, und die reist mit, solange ich atme. Danach wird sie vorgelesen. | Berühren: Notizbuch (Pflichtfach) |
-| ZS1\_DACH\_PIX\_0540 | Pixel | Die Socke sortiert alles, was man ihr gibt. // Wo es Beamte gibt, gibt es Stapel, und wo es Stapel gibt, ist so eine Socke Gold wert. Ich kenne mich mit Wäschekörben aus. | Berühren: Sortierende Socke |
-| ZS1\_DACH\_PIX\_0550 | Pixel | Ein Ziegenfell. Ich habe eine Zeit lang darin gelebt, und ich spreche nicht darüber. // Nur so viel: Wo es heiß ist, braucht so etwas kein Mensch. Und kein Kater. | Berühren: Ziegenfell-Vorleger |
-| ZS1\_DACH\_PIX\_0560 | Pixel | Moderworts Zeugnis. Ungenügend in Zaubertränke. // Es beeindruckt niemanden, wenn ich das sagen darf. Außer vielleicht Mütter, und die nicht im guten Sinn. | Berühren: Moderworts Zeugnis |
+| ZS1\_DACH\_PIX\_0520 | Pixel | Der Kochlöffel reist ab jetzt immer mit. Er hat sich das verdient, mehr als manche in diesem Raum. // Und er klebt übrigens noch. Ich habe es mit der Nase geprüft und bereue es. | Berühren: Kochlöffel (Pflichtfach); auch in Zwischenspiel 2 und 3 |
+| ZS1\_DACH\_PIX\_0530 | Pixel | Der Thunfisch bleibt. Das ist kein Gepäck, junger Mann, das ist mein Glaube, und über den wird nicht verhandelt. | Berühren: Thunfischdose (Pflichtfach); auch in Zwischenspiel 2 und 3 |
+| ZS1\_DACH\_PIX\_0535 | Pixel | Das Notizbuch. Darin steht meine Liste, und die reist mit, solange ich atme. Danach wird sie vorgelesen. | Berühren: Notizbuch (Pflichtfach); auch in Zwischenspiel 2 und 3 |
+| ZS1\_DACH\_PIX\_0540 | Pixel | Die Socke sortiert alles, was man ihr gibt. // Wo es Beamte gibt, gibt es Stapel, und wo es Stapel gibt, ist so eine Socke Gold wert. Ich kenne mich mit Wäschekörben aus. | Berühren: Sortierende Socke; auch in Zwischenspiel 2 und 3 |
+| ZS1\_DACH\_PIX\_0550 | Pixel | Ein Ziegenfell. Ich habe eine Zeit lang darin gelebt, und ich spreche nicht darüber. // Nur so viel: Wo es heiß ist, braucht so etwas kein Mensch. Und kein Kater. | Berühren: Ziegenfell-Vorleger; auch in Zwischenspiel 2 und 3 |
+| ZS1\_DACH\_PIX\_0560 | Pixel | Moderworts Zeugnis. Ungenügend in Zaubertränke. // Es beeindruckt niemanden, wenn ich das sagen darf. Außer vielleicht Mütter, und die nicht im guten Sinn. | Berühren: Moderworts Zeugnis; auch in Zwischenspiel 2 und 3 |
 | ZS1\_DACH\_PIX\_0570 | Pixel | Der Eimer. Waldemar hat ihn zurückgegeben, nach Paragraf 14b. // Am Nil allerdings gibt es Wasser genug, und Krokodile auch. Einen Eimer braucht man dort höchstens zum Weglaufen. | Berühren: Eimer |
-| ZS1\_DACH\_PIX\_0580 | Pixel | Ein Dosenöffner. Er kurbelt und braucht keinen Strom. // Merk dir das gut. Irgendwann braucht alles Strom, und dann sitzt man vor einer vollen Dose und weint. | Berühren: Dosenöffner |
+| ZS1\_DACH\_PIX\_0580 | Pixel | Ein Dosenöffner. Er kurbelt und braucht keinen Strom. // Merk dir das gut. Irgendwann braucht alles Strom, und dann sitzt man vor einer vollen Dose und weint. | Berühren: Dosenöffner; auch in Zwischenspiel 2 und 3 |
 | ZS1\_DACH\_PIX\_0590 | Pixel | Der Leuchttrank. Er leuchtet, das ist alles. Wo wir hinfahren, scheint ohnehin die Sonne. Rechne selbst. | Berühren: Leuchttrank; nur Goblin-Weg B |
 | ZS1\_DACH\_PIX\_0600 | Pixel | Ketchup. Gilt in diesem Königreich als Blut, als Soße und als Unterschrift. // In der Antike kennt das noch keiner. Das ist entweder eine Chance oder ein Problem, und ich wette auf beides. | Berühren: Ketchup; nur Goblin-Weg B |
 | ZS1\_DACH\_MAX\_0610 | Max | Zwei Fächer, zwei Dinge. Die Tasche ist strenger als jede Fluggesellschaft. | Beim Versuch, ein drittes einzupacken |
@@ -185,8 +185,8 @@ Reisetasche packen für Welt 3. Gegenstände aus Welt 1, die Max damals eingepac
 | --- | --- | --- | --- |
 | ZS2\_DACH\_OPA\_0510 | Opa | Die Tasche! Zwei Fächer. Was nicht mitkommt, kommt in die Fundkiste. Ich werfe nichts weg. Nie. | öffnet die Tasche, Bildschirm Reisetasche |
 | ZS2\_DACH\_PIX\_0520 | Pixel | Olivenöl. Für alles, was quietscht, auch für Blechköpfe. // Wo du hinfährst, quietscht vieles. Und manches, was dort quietscht, wäre für ein paar Tropfen sehr dankbar. | Berühren: Olivenöl |
-| ZS2\_DACH\_PIX\_0530 | Pixel | Eine geflügelte Sandale. Nur eine, die andere ist inzwischen ein Religionsgegenstand. // Leicht, flattert und hat Eigenschaften. Und Eigenschaften, so sagt man, kann man tauschen. | Berühren: Hermes' geflügelte Sandale |
-| ZS2\_DACH\_PIX\_0540 | Pixel | Der Olivenkranz. Gold, das kein Gold ist, und damit passt er hervorragend zum Rest dieses Dachbodens. // Theoretisch essbar. Ich habe es probiert. Die Antwort ist nein. | Berühren: Olivenkranz |
+| ZS2\_DACH\_PIX\_0530 | Pixel | Eine geflügelte Sandale. Nur eine, die andere ist inzwischen ein Religionsgegenstand. // Leicht, flattert und hat Eigenschaften. Und Eigenschaften, so sagt man, kann man tauschen. | Berühren: Hermes' geflügelte Sandale; auch in Zwischenspiel 3 |
+| ZS2\_DACH\_PIX\_0540 | Pixel | Der Olivenkranz. Gold, das kein Gold ist, und damit passt er hervorragend zum Rest dieses Dachbodens. // Theoretisch essbar. Ich habe es probiert. Die Antwort ist nein. | Berühren: Olivenkranz; auch in Zwischenspiel 3 |
 | ZS2\_DACH\_PIX\_0550 | Pixel | „Die sieben Antworten.“ Sieben Konter, und kein einziger davon gegen eine Küchenmaschine. // Trotzdem: Papier brennt gut. Falls es irgendwo kalt wird. | Berühren: Schriftrolle „Die sieben Antworten“ |
 | ZS2\_DACH\_PIX\_0560 | Pixel | Dein Handy. Drei Prozent. Es hat mehr Welten gesehen als du Ladekabel. // Wo du hinfährst, gibt es Strom. Ob er dir gehört, ist allerdings eine ganz andere Frage. | Berühren: Handy; nur wenn in Welt 2 nicht verbraucht |
 | ZS2\_DACH\_PIX\_0570 | Pixel | Kaugummi. Ewiges Brot, sozusagen. In der Zukunft gilt so etwas vermutlich schon als Antiquität. | Berühren: Kaugummi; nur wenn in Welt 2 nicht verbraucht |
@@ -598,7 +598,7 @@ Szene mit kurzer freier Phase. Wohnzimmer, Variante Geburtstag: Girlande, Luftba
 | FI\_WOHN\_MAX\_0150 | Max | Der Hausmeister spült, und zwar unaufgefordert. Oma sieht ihm dabei zu wie einem Sonnenuntergang. | Ansehen: Modell 08/15; nur FREUND\_0815 |
 | FI\_WOHN\_MAX\_0155 | Max | Er trocknet jede Tasse einzeln und sagt bei jeder „Servus“. Oma hat ihm eine Schürze geschenkt. Er weint Öl. | Ansehen: Modell 08/15, zweites Mal; nur FREUND\_0815 |
 | FI\_WOHN\_MAX\_0160 | Max | Seite 3. Ein Ei, weich. Irgendwas aus Mehl. Batterien. Milch. // Pixel. Deine Einkaufsliste ist Opas Einkaufsliste. | Ansehen: Notizbuch |
-| FI\_WOHN\_MAX\_0165 | Max | Ganz unten auf Seite drei steht noch: „Nächstes Jahr: Sofa für zwei.“ In Pixels Pfotenschrift. | Ansehen: Notizbuch, zweites Mal |
+| FI\_WOHN\_MAX\_0165 | Max | Ganz unten auf Seite 3 steht noch: „Nächstes Jahr: Sofa für zwei.“ In Pixels Pfotenschrift. | Ansehen: Notizbuch, zweites Mal |
 | FI\_WOHN\_PIX\_0170 | Pixel | Ich war die ganze Zeit der Einzige mit einem Plan. Das darfst du gern weitererzählen. // Lachs stand allerdings nicht drauf, und das verzeihe ich dem Universum nie. |  |
 | FI\_WOHN\_MAX\_0180 | Max | Oma, wusstest du, dass Opa im Fernsehen war? | Reden: Oma, Option |
 | FI\_WOHN\_OMA\_0190 | Oma | Ich habe ihn dort kennengelernt. Ich saß in der ersten Reihe, als der Ofen explodierte. Der Teig hat mich getroffen. Ich dachte: Den nehme ich. | ohne eine Miene zu verziehen |

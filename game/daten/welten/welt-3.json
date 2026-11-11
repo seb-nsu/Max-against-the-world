@@ -650,7 +650,7 @@
     "vereist"
    ],
    "verwendet_in": [],
-   "ohne_verwendung": "Artefakt, Opa legt sie im Zwischenspiel in die Maschine",
+   "ohne_verwendung": "Artefakt, Opa legt sie im Zwischenspiel auf die Werkbank (in die Maschine erst im Finale)",
    "reist_mit": false,
    "nahansicht": false
   }
@@ -739,7 +739,6 @@
    ],
    "schalter": [
     "W3_R03_B_GELOEST",
-    "KEKSE_DABEI",
     "SIMULATION_OFFEN"
    ],
    "optional": false

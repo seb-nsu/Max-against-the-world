@@ -691,7 +691,6 @@ func _automat() -> bool:
 			await _geben("blaue_pastille")
 			await _szene(["W3_APO_MAX_0410", "W3_APO_MOR_0420"])
 			await _geben("omas_kekse")
-			Zustand.setze("KEKSE_DABEI")
 			await _szene(["W3_APO_MAX_0430", "W3_APO_MOR_0440", "W3_APO_PIX_0450"])
 	return true
 
@@ -733,12 +732,14 @@ func benutzen_inventar_rote_pastille(_obj, _x) -> bool:
 func benutzen_telefonzelle(_obj, _x) -> bool:
 	if _raum_id() != "stadtstrasse":
 		return false  # Unterstadt: kein Sprungpunkt (W3_STR_MAX_0040), am Ende der Werbeblock
-	await _zelle_abheben("stadtstrasse", "W3_SIM_MAX_0240" if Zustand.ist("W3_ZELLE_BENUTZT") else "W3_SIM_MAX_0230")
+	# Beim ersten Abheben „Hallo? …“ (0230), danach 0240. Beide Hotspots der Zelle gelten gleich.
+	var zeile := "W3_SIM_MAX_0240" if Zustand.ist("W3_ZELLE_BENUTZT") else "W3_SIM_MAX_0230"
+	Zustand.setze("W3_ZELLE_BENUTZT")
+	await _zelle_abheben("stadtstrasse", zeile)
 	return true
 
 
 func benutzen_klingelnde_telefonzelle(obj, x) -> bool:
-	Zustand.setze("W3_ZELLE_BENUTZT")
 	return await benutzen_telefonzelle(obj, x)
 
 

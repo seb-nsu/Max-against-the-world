@@ -43,6 +43,21 @@ func _durchlauf() -> void:
 	await _warte_auf_raum("nil_delta")
 	await _warte_bis(func(): return _gesagt("W2_NIL_PIX_0120"), 10.0)
 
+	# Die aktive Figur verdeckt nichts: Nach dem Raumwechsel ist Max nicht anklickbar, mit einem
+	# gewählten Gegenstand schon (Gegenstand auf sich selbst).
+	var c = root.get_node("C")
+	var inv = root.get_node("I")
+	for i in 3:
+		await process_frame
+	_pruefe(not c.player.input_pickable, "Eigene Figur lässt Klicks durch")
+	inv.active = inv.get_item_instance("Kochloeffel")
+	for i in 3:
+		await process_frame
+	_pruefe(c.player.input_pickable, "Mit gewähltem Gegenstand ist die eigene Figur anklickbar")
+	inv.active = null
+	for i in 3:
+		await process_frame
+
 	# Vor dem Finaltag: Nase, Statue und Turm sind heil.
 	await _geh("sphinx")
 	await _ansehen("nase")
