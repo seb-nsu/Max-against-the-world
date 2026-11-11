@@ -2,6 +2,14 @@
 
 Grundlage: `pruefung/360-pruefung.md` (111 Funde). Auftrag: `pruefung/umsetzung-prompt.md`.
 
+## Ergebnis
+
+- Alle neun Arbeitspakete sind durch. Jeder der 111 Funde ist am Material nachgeprüft und hat in Abschnitt 1 einen Status.
+- Die drei kritischen Fehler sind behoben und haben Tests: Pixel ist im Finale wählbar, Ansehen-Zeilen mit Zustand kommen richtig, Hinweis-Stufen gelten je Welt.
+- 544 Skriptzeilen sind geändert, neu oder gestrichen. Jede steht in Abschnitt 2 mit ihrem Fund. Die Stellen aus „Was auf keinen Fall verloren gehen darf“ stehen wortgleich da.
+- Alle Prüfläufe bestehen (Abschnitt 5).
+- Was du entscheiden oder selbst tun musst, steht in Abschnitt 4: Entscheidungen zum Gegenlesen, Dinge, die Absicht sein können, und Offenes bei Bildern, Ton, Terminen und Kosten.
+
 ## Stand
 
 - Paket 1 (die drei kritischen Fehler): fertig.
@@ -13,7 +21,7 @@ Grundlage: `pruefung/360-pruefung.md` (111 Funde). Auftrag: `pruefung/umsetzung-
 - Paket 7 (Grafik-Dokumente und Prompts): fertig. Bilder sind keine erzeugt, das Offene steht in Abschnitt 4.
 - Paket 8 (Audio-Dokument): fertig. Geändert ist nur `docs/04-audio.md`.
 - Paket 9 (übrige Dokumente, Bedienung, Oberflächentexte): fertig.
-- Schlusskontrolle: siehe Ende von Abschnitt 4.
+- Schlusskontrolle: gemacht, Ergebnis in Abschnitt 5.
 
 Arbeitsweise nach einer Unterbrechung: Tabelle 1 zeigt je Fund den Status. Vor jedem Commit laufen `python3 tools/pruefen.py`, alle `--pruefen`-Läufe aus `.github/workflows/pruefen.yml` und nach Code-Änderungen die Godot-Tests.
 
@@ -114,7 +122,7 @@ Status: umgesetzt, nicht bestätigt, Entscheidung bitte prüfen, offen für Seba
 | 89 | 7 | teilweise | Bestätigt. `tools/layout_skizzen.py`: Legende vollständig (violett für Figuren), Figuren in ihrer Größe aus der Welt-Tabelle mit Namen und Pixelhöhe. Alle 55 Skizzen neu erzeugt, fünf waren veraltet. Nicht geändert: Außenräume sind weiter als Raum gezeichnet, und die Beschriftungen der Platzhalter im Spiel bleiben (laut Bericht reicht das für die Graubox). |
 | 90 | 8 | umgesetzt, Kosten offen | Bestätigt, alle sechs Teile. Pixels Stimme „with a rarely shown, dry warmth underneath“. Musik-Baustein mit Ausnahmen für `zappomat`, `werbeblock`, `abspann` und Jingles. Tempo im Rhythmus-Spiel: nach dem Erzeugen messen, Taktmarken von Hand. Geräusche als Tabellen mit Kennung und Einsatz, dazu Zeitfähre, Code-Sicht, Portalgerät und je Welt eine Grundatmosphäre (`w1_atmo` bis `w4_atmo`); 14 sind verdrahtet, die übrigen als „noch nicht im Code“ benannt. Kosten in der Datei einheitlich vier Monate, rund 400 $. Umfang: 5.435 Zeilen, 6.180 Sprechblasen, rund 504.000 Zeichen (der Bericht nennt 5.414 und 6.306, das war der Stand vor den Kürzungen). Suno und Udio mit Datum. Offen: Mit den echten Zahlen ist die Kostenschätzung eher zu niedrig, eine neue Zahl erfinde ich nicht. |
 | 91 | 9 | umgesetzt | Bestätigt. `README.md` (640×360, Gemini und `pixelieren.py`). Kopfzeilen der fünf Skripte: Zeilenzahl gestrichen. `05-spielsysteme.md`: 48 px, Maße in Spielpixeln bei 640×360, Fenstergrößen 1280×720 bis 2560×1440, „Schrift festlegen“ abgehakt. `entscheidungen.md`: fünfter von sechs Kanälen, „Max 105 Pixel“ durchgestrichen, Verweis bei ElevenLabs. `offene-punkte.md`: A13, A14, A16, P10, P11 gelöscht. `03-produktion.md`: 58 Räume, 12 statt 8 Räume im Vertical Slice (Prolog 3, Welt 1 neun), vier Monate ElevenLabs mit Verweis auf `04-audio.md`, „Was noch fehlt“ führt Skript, Hinweise und Speichern als erledigt. Die Grafikstunden sind nicht neu geschätzt, nur als „für 640×360 noch nicht neu geschätzt“ markiert. |
-| 92 | 9 | teilweise umgesetzt | Bestätigt. `raetsel/welt-2.md` (Agora 1280×360), `welten/README.md` (Nahansicht 640×360), `welt-1.yaml`, `welt-2.yaml`, `welt-3.yaml`: „auf die Werkbank (in die Maschine erst im Finale)“. Die übrigen Kommentare mit alten Maßen waren schon weg. Nicht geändert: die Schalter ohne Präfix in Welt 3. Der Bericht sagt selbst „sobald ohnehin an Welt 3 gearbeitet wird“; ein Umbenennen ändert Code, Tests und alte Spielstände (Liste für Sebastian). |
+| 92 | 9 | teilweise umgesetzt | Bestätigt. `raetsel/welt-2.md` (Agora 1280×360), `welten/README.md` (Nahansicht 640×360), `welt-1.yaml`, `welt-2.yaml`, `welt-3.yaml`: „auf die Werkbank (in die Maschine erst im Finale)“. Zwei Kommentare mit alten Maßen (`prolog.yaml`, `welt-4.yaml`) verweisen seit Paket 7 auf die Grafik-Datei, weitere gab es nicht mehr. Nicht geändert: die Schalter ohne Präfix in Welt 3. Der Bericht sagt selbst „sobald ohnehin an Welt 3 gearbeitet wird“; ein Umbenennen ändert Code, Tests und alte Spielstände (Liste für Sebastian). |
 | 93 | 9 | teilweise umgesetzt | Bestätigt. Sprecherspalte: „Alwin“ (`W1_ABS_ALW_0070`, `_0080`), „Schmidt“ (`W3_ABS_SCH_0090`, `_0100`), „Kalle“ (`W3_ABS_KAL_0110`, `_0120`), „Kalle (Text)“ (`W3_TERM_KAL_0060`). `FI_WOHN_MAX_0165`: „Seite 3“ wie in den anderen Zeilen, englisch nachgezogen. Nicht geändert: „Ansehen: Traubensaft, Traubensaft“ und „Bettlaken, Bettlaken“. Das ist die feste Schreibweise „Gegenstand, Zustand“, die das Werkzeug liest; Klammerzusätze wie „(aus dem Lautsprecher)“ bleiben. |
 | 94 | 9 | umgesetzt | Bestätigt. `docs/uebersetzung/ui.csv`: fünf Hotspot-Namen groß geschrieben (Klingelnde Telefonzelle, Goldenes Sofa, Verkettete Tür, Frische Bananenschale, Normaler Käse). `UI_PROLOG_ENDE` gelöscht (unbenutzt). `UI_WELT_1_ENDE` bis `_3_ENDE` sind eine Sicherung im Code für den Fall, dass eine Welt fehlt; Text jetzt „Hier endet diese Fassung. Welt N folgt.“ statt „Ende der Graubox“. |
 | 95 | 3 | umgesetzt | Bestätigt. `character_gollo.gd`: Jeder Gegenstand auf Gollo startet das Rätsel, solange Max die Thunfischdose hat. Auslöser von `W1_TAV_GOL_1110` und `W1_TAV_MAX_1120` und die Rätsel-Datei nachgezogen. Wortlaut unverändert. |
@@ -920,3 +928,14 @@ Nichts davon ist eingebaut. Es sind Vorschläge für den Fall, dass ein Anwalt e
 - Fund 101: Für ältere Dinge in der Reisetasche ohne passenden Kommentar (Eimer, Leuchttrank, Ketchup; im dritten Zwischenspiel auch Schriftrolle, Handy, Kaugummi, Kugelschreiber und die vier Scheiben) kommt weiter eine Ersatzzeile. Eigene Zeilen wären neue Gags.
 - Fund 104: Der Popochiu-Baukasten bringt `monkeyisland_1991.ttf` und `minecraftia-regular.ttf` selbst mit. Das Spiel benutzt sie nicht mehr. Vor der Veröffentlichung Lizenz klären oder die zwei Dateien vom Export ausnehmen.
 - Fund 52 und 106: Die Steam-Tags „Untertitel“ und „Farbenblind-Modus“ erst setzen, wenn die Schalter wirken.
+
+## 5. Schlusskontrolle
+
+Verglichen ist der ganze Unterschied zwischen dem Stand vor Paket 1 und dem Stand nach Paket 9.
+
+- **Skriptzeilen:** 544 Zeilen haben einen anderen Wortlaut, sind neu oder gestrichen (Prolog 44, Welt 1 145, Welt 2 99, Welt 3 116, Welt 4 102, Zwischenspiele und Finale 38). Jede steht in Abschnitt 2 mit Fund oder Berichtsabschnitt. 49 Auslöser und 11 Sprecher sind geändert, alle stehen in Abschnitt 2. Keine Änderung ohne Fund gefunden, nichts zurückgenommen.
+- **Geschützte Stellen (Bericht, Abschnitt 4):** Alle 16 genannten Zeilen sind wortgleich mit dem Stand vor der Umsetzung. Im Mensch-Test (`W3_TEST_*`, 41 Zeilen) sind sieben Zeilen geändert, alle wegen Fund 42 und der Streichliste; „Das ist keine Menschlichkeit. Das ist 2026.“ steht unverändert. Die Änderung an der Schildkröten-Frage steht bei den Entscheidungen.
+- **Übrige Dateien:** Jede geänderte Datei außerhalb der Skripte gehört zu einem Fund in Abschnitt 1. Ohne eigene Nennung dort: `docs/raetsel/abhaengigkeiten.md` und `docs/welten/welt-4.yaml` (neuer Rätselname, Fund 42), `docs/test/beobachtungsbogen.md` („Paragraf 14b“, Fund 71).
+- **Englisch:** `docs/uebersetzung/en.csv` hat viele geänderte Zeilen, weil Paket 2 die zweiten Sprechblasen in eigene Schlüssel geteilt hat (`…_2`). Der englische Wortlaut ist nur dort neu, wo die deutsche Zeile geändert ist.
+- **Erzeugte Dateien:** `game/daten/`, `game/lokalisierung/texte.csv`, `docs/grafik/fertige-prompts/` und die Skizzen sind mit den Werkzeugen neu erzeugt, nicht von Hand bearbeitet.
+- **Prüfläufe nach Paket 9:** `tools/pruefen.py` und die sieben `--pruefen`-Läufe bestehen. Godot: Regeln laden, Prolog und Welt 1 (779 Prüfungen), Welt 2 (55), Welt 3 (58), Welt 4 (24), Finale (26), Hinweise (19), Ansehen mit Zustand (31), Menüs (74), Prolog mit echten Sprechblasen (778), Bildvergleich aller 55 Räume: überall 0 Fehler. Telemetrie-Auswertung besteht. Kein Test ist abgeschaltet.
