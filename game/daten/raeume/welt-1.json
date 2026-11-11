@@ -417,8 +417,7 @@
        "zeile": "W1_DORF_PIX_0145",
        "sprecher": "PIX",
        "blasen": [
-        "W1_DORF_PIX_0145",
-        "W1_DORF_PIX_0145_2"
+        "W1_DORF_PIX_0145"
        ],
        "mal": 2,
        "figur": "PIX"
@@ -1103,15 +1102,6 @@
         "W1_TAV_PIX_0300_2"
        ],
        "figur": "PIX"
-      }
-     ],
-     "benutzen": [
-      {
-       "zeile": "W1_TAV_MAX_1550",
-       "sprecher": "MAX",
-       "blasen": [
-        "W1_TAV_MAX_1550"
-       ]
       }
      ]
     },

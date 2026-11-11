@@ -1340,11 +1340,11 @@ W1_ANK_MAX_0030,Wo sind wir überhaupt? Und warum riecht es hier so nach Stall?,
 W1_ANK_PIX_0040,"Auf Kanal 3, wenn ich den Drehknopf richtig gelesen habe, und ich lese Drehknöpfe grundsätzlich richtig.","Channel 3, if I read the dial correctly, and I always read dials correctly."
 W1_ANK_PIX_0040_2,"Es riecht nach Stroh, nach Bier und nach Leuten, die „Wohlan“ sagen, ohne dabei rot zu werden.","It smells of straw, of beer and of people who say ""Prithee"" without blushing."
 W1_ANK_MAX_0050,"Fantasy also. Die Staffel hab ich übersprungen, weil die erste Folge fast nur aus Landkarten bestand.","Fantasy, then. I skipped that season, because the first episode was basically just maps."
-W1_ANK_PIX_0051,"Dann holst du sie eben jetzt nach, und zwar live. Außerdem wollte dein Großvater, dass du seinen Zettel liest.","Then you'll catch up now, live. Besides, your grandfather wanted you to read his note."
+W1_ANK_PIX_0051,"Dann holst du sie eben jetzt nach. Live. Außerdem wollte dein Großvater, dass du seinen Zettel liest.","Then you'll catch up now. Live. Besides, your grandfather wanted you to read his note."
 W1_ANK_PIX_0051_2,"Er sagte ausdrücklich: erst, wenn ihr drüben seid. Ich sehe mich um und stelle fest: Wir sind drüben.",He said quite clearly: only once you're over there. I look around and observe: we are over there.
 W1_ANK_MAX_0060,Stimmt. Dann darf ich ihn jetzt ja ganz offiziell lesen.,True. So now I'm officially allowed to read it.
 W1_ANK_OPA_0070,„Das Ei muss ganz bleiben. Alles hängt davon ab.“,"""The egg must stay whole. Everything depends on it."""
-W1_ANK_MAX_0080,"Alles hängt von einem Ei ab. Na super, dann ist ja überhaupt kein Druck dabei.","Everything depends on an egg. Great, so no pressure at all, then."
+W1_ANK_MAX_0080,Opa vertraut mir ein Ei an. Der Mann kennt mich doch.,Grandpa's trusting me with an egg. You'd think he knew me.
 W1_ANK_PIX_0090,"Er hat es zweimal unterstrichen. Das tut dein Großvater nur, wenn er Angst hat.",He underlined it twice. Your grandfather only does that when he's scared.
 W1_ANK_PIX_0090_2,"Oder Hunger. Nach meiner Erfahrung meistens beides, und meistens kurz vor dem Abendessen.","Or hungry. In my experience usually both, and usually just before dinner."
 W1_ANK_TOA_0100,Hilfe! Hilfe! Ein Held! Da ist ein Held!,Help! Help! A hero! There's a hero!
@@ -1352,7 +1352,7 @@ W1_ANK_MAX_0110,Wo? Ich seh keinen.,Where? I don't see one.
 W1_ANK_TOA_0120,"Du! Du siehst aus wie einer! Also, fast. An der Haltung arbeiten wir noch, aber die Grundform stimmt!","You! You look like one! Well, almost. We'll work on the posture, but the basic shape is right!"
 W1_ANK_MAX_0121,Ich hab keine Haltung. Ich hab einen Hoodie.,I don't have posture. I have a hoodie.
 W1_ANK_TOA_0130,"Egal! Prinzessin Zeldina ist entführt worden! Vom Dunklen Lord! Auf Burg Brösel ist sie nicht, da hab ich schon nachgesehen!","Doesn't matter! Princess Zeldina has been kidnapped! By the Dark Lord! She's not at Castle Crumble, I already checked!"
-W1_ANK_MAX_0140,"Tut mir leid, ich bin wegen eines Eis hier. Prinzessinnen sind ehrlich gesagt nicht so mein Bereich.","Sorry, I'm here for an egg. Princesses honestly aren't really my department."
+W1_ANK_MAX_0140,"Tut mir leid, ich bin wegen eines Eis hier. Prinzessinnen hab ich bisher nur gerettet, wenn es dafür Punkte gab.","Sorry, I'm here for an egg. I've only ever rescued princesses when there were points for it."
 W1_ANK_TOA_0150,"Ein Ei? Der Dunkle Lord hat alles, was es gibt. Dein Ei bestimmt auch. Er wohnt im Dunklen Turm, da hinten, wo es violett wird.","An egg? The Dark Lord has everything there is. Probably your egg too. He lives in the Dark Tower, back there where it goes purple."
 W1_ANK_PIX_0160,"Ein Turm, der sich selbst Dunkler Turm nennt. Das ist ungefähr so unauffällig wie mein Napf, auf dem groß „Napf“ steht.","A tower that calls itself the Dark Tower. About as subtle as my bowl, which says ""Bowl"" on it in big letters."
 W1_ANK_PIX_0160_2,Ich habe den Napf trotzdem gern. Den Turm vermutlich nicht.,I'm fond of the bowl anyway. Probably not of the tower.
@@ -1371,13 +1371,12 @@ W1_DORF_MAX_0115,"Ganz unten glitzert eine Münze. Da hat sich jemand was gewün
 W1_DORF_PIX_0120,"Wasser. Es rauscht. Fische sind keine drin, ich habe nachgefragt.","Water. It rushes. There are no fish in it, I asked."
 W1_DORF_PIX_0120_2,"Der Brunnen hat nicht geantwortet, was ich als Unhöflichkeit werte, aber auch als Bestätigung.","The well didn't answer, which I consider rude, but also confirmation."
 W1_DORF_PIX_0125,"Ich habe noch einmal hineingesehen, nur zur Sicherheit. Immer noch keine Fische.","I looked in once more, just to be sure. Still no fish."
-W1_DORF_PIX_0125_2,"Ich werde eine Beschwerde schreiben, und zwar an den Brunnen persönlich.","I shall write a complaint, addressed to the well personally."
+W1_DORF_PIX_0125_2,Ich werde eine Beschwerde schreiben. An den Brunnen persönlich.,I shall write a complaint. Addressed to the well personally.
 W1_DORF_MAX_0130,"Esel, Hund, Katze und Hahn, übereinandergestapelt. Das ist eine Boyband, die sich nie auf einen Sänger einigen konnte.","Donkey, dog, cat and rooster, stacked on top of each other. That's a boy band that never agreed on a lead singer."
 W1_DORF_MAX_0135,"Wenn die vier jetzt anfangen zu singen, renn ich weg. Ich hab gehört, die Räuber haben das damals genauso gemacht.","If those four start singing, I'm running. I hear the robbers did exactly the same back then."
 W1_DORF_PIX_0140,"Eine Katze, fast ganz oben. Endlich ein Denkmal, das die Verhältnisse realistisch darstellt.","A cat, almost at the top. Finally a monument that depicts the hierarchy realistically."
 W1_DORF_PIX_0140_2,"Der Hahn obendrauf ist selbstverständlich ein Druckfehler. Ich würde das dem Bildhauer mitteilen, falls er noch lebt.","The rooster on top is, of course, a misprint. I'd tell the sculptor, if he's still alive."
-W1_DORF_PIX_0145,"Die Katze auf der Statue schaut nach links. Also habe ich auch nach links geschaut, und da ist nichts.","The cat on the statue is looking left. So I looked left too, and there's nothing there."
-W1_DORF_PIX_0145_2,"Sie lügt. Das tun alle Statuen, sie haben ja den ganzen Tag sonst nichts zu tun.","She's lying. All statues do, they've got nothing else to do all day."
+W1_DORF_PIX_0145,Die Katze auf der Statue schaut nach links. Da ist nichts. Sie blufft.,The cat on the statue is looking left. There's nothing there. She's bluffing.
 W1_DORF_MAX_0150,"Ein Dorfbrett. Das ist hier wohl das Internet: Alle pinnen was dran, und keiner liest es.",A village noticeboard. That's basically the internet around here: everybody pins stuff on it and nobody reads it.
 W1_DORF_MAX_0155,"Ein Zettel sucht einen Helden, ein anderer sucht einen Hund. Der Hund hat deutlich mehr Rückmeldungen.","One note is looking for a hero, another one is looking for a dog. The dog has way more replies."
 W1_DORF_MAX_0160,"„Rotkäppchens Lieferdienst. Alles, was Oma nicht mehr trägt. In zehn Minuten da oder der Korb ist gratis.“","""Little Red's Delivery Service. Everything Grandma doesn't wear anymore. There in ten minutes or the basket's free."""
@@ -1385,17 +1384,17 @@ W1_DORF_MAX_0165,"Unten klein: „Achtung, Wolf im Lieferbereich. Nicht füttern
 W1_DORF_MAX_0170,"Ein Bestellzettel. Den nehm ich mit, man weiß ja nie, wann man mal dringend eine Lieferung braucht.","An order form. I'll take it, you never know when you'll urgently need a delivery."
 W1_DORF_MAX_0180,"„Gesucht wegen Weltherrschaft. Wohnhaft: Dunkler Turm, sieben Stockwerke, steht größtenteils leer. Besondere Kennzeichen: reagiert empfindlich auf Kosenamen.“","""Wanted for world domination. Residence: Dark Tower, seven floors, mostly vacant. Distinguishing features: sensitive to pet names."""
 W1_DORF_MAX_0185,"Unter das Bild hat jemand „Gesundheit!“ gekritzelt. Mehrmals, und jedes Mal ein bisschen verzweifelter.","Someone's scribbled ""Bless you!"" under the picture. Several times, and a bit more desperately each time."
-W1_DORF_MAX_0190,"Da hat jemand eine ziemlich große Lücke im Lebenslauf, und die hängt jetzt am Dorfbrett.","Somebody's got a pretty big gap in their CV, and now it's hanging on the noticeboard."
+W1_DORF_MAX_0190,Die Adresse steht dabei. Finden wollte ihn offenbar keiner.,His address is right there. Apparently nobody wanted to find him.
 W1_DORF_PIX_0200,"Kein Gesicht auf dem Bild, nur zwei rote Nasenlöcher.","No face in the picture, just two red nostrils."
 W1_DORF_PIX_0200_2,"Entweder ist dieser Mann sehr böse, oder der Zeichner war sehr schlecht. Aus Erfahrung tippe ich auf beides.","Either this man is very evil, or the artist was very bad. From experience, I'd guess both."
 W1_DORF_MAX_0210,"Den nehm ich mit. Als Lesezeichen, oder falls ich mal jemandem drohen muss.","I'll take that with me. As a bookmark, or in case I ever need to threaten somebody."
-W1_DORF_MAX_0220,"Ein Schloss auf einer Wolke. Da oben ist der Empfang bestimmt auch nicht besser, nur die Aussicht.","A castle on a cloud. The reception up there can't be any better either, just the view."
-W1_DORF_MAX_0225,"Das Schloss schaukelt ein bisschen im Wind. Wer da oben wohnt, braucht jedenfalls keine Hängematte mehr.",The castle sways a bit in the wind. Whoever lives up there definitely doesn't need a hammock anymore.
+W1_DORF_MAX_0220,"Ein Schloss auf einer Wolke. Irgendwer zahlt dafür Miete, und ich will wissen, an wen.","A castle on a cloud. Somebody's paying rent for that, and I want to know who to."
+W1_DORF_MAX_0225,"Das Schloss schaukelt im Wind. Wer da oben wohnt, braucht jedenfalls keine Hängematte mehr.",The castle sways in the wind. Whoever lives up there definitely doesn't need a hammock anymore.
 W1_DORF_PIX_0230,"Hoch oben, sonnenwarm und garantiert hundefrei. Ich möchte dort wohnen, und zwar sofort.","High up, sun-warmed and guaranteed dog-free. I wish to live there, immediately."
 W1_DORF_PIX_0230_2,"Und das sage ich, obwohl ich Wolken hasse. Daran siehst du, wie ernst es mir ist.",And I say that although I hate clouds. That's how serious I am.
 W1_DORF_PIX_0235,"Ich habe soeben beschlossen, Wolken doch zu mögen, unter einer einzigen Bedingung:","I have just decided to like clouds after all, on one single condition:"
 W1_DORF_PIX_0235_2,"Ich wohne oben, und die Wolke wohnt unten. So herum hat die Natur das, wie ich finde, auch gemeint.","I live on top, and the cloud lives underneath. That, I believe, is how nature intended it."
-W1_DORF_MAX_0240,"„Einer für alles. Ausverkauf.“ Ein Ring, sie alle zu … nein, danke.","""One for everything. Closing-down sale."" One ring to rule them … no, thanks."
+W1_DORF_MAX_0240,"„Einer für alles. Ausverkauf.“ Wenn ein Ring für alles im Angebot ist, stimmt was nicht mit ihm.","""One for everything. Closing-down sale."" If a ring for everything is on special offer, something's wrong with it."
 W1_DORF_MAX_0245,Im Schaufenster liegt ein Zettel: „Ringe bitte nicht ins Feuer werfen. Rückgabe ausgeschlossen.“,"There's a note in the shop window: ""Please don't throw rings into fire. No refunds."""
 W1_DORF_MAX_0250,"Ein Stall, aber kein Pferd weit und breit, nur zwei Kokosnusshälften. Trotzdem hab ich sofort das Geräusch im Ohr.","A stable, but no horse anywhere, just two coconut halves. And I can still hear the sound in my head straight away."
 W1_DORF_MAX_0255,"Ich hab die zwei Hälften aneinandergeklopft. Klapp-klapp. Jetzt will ich auf einem unsichtbaren Pferd losreiten, und keiner hält mich auf.","I knocked the two halves together. Clip-clop. Now I want to ride off on an invisible horse, and nobody can stop me."
@@ -1408,24 +1407,24 @@ W1_DORF_MAX_0285,"Im Fenster liegen Stäbe aus Holz, aus Knochen und aus etwas, 
 W1_DORF_MAX_0290,Ein Wegweiser: „Hoggelwarz für Durchgefallene“. Endlich mal eine Schule mit realistischen Zielen.,"A signpost: ""Hogglewarz for Dropouts"". Finally, a school with realistic goals."
 W1_DORF_MAX_0300,"Der Weg zur Brücke. Toadi sagt, da sitzt ein Troll. Aber Toadi sagt auch sonst ziemlich viel.","The path to the bridge. Toadi says there's a troll there. But then, Toadi says a lot of things."
 W1_DORF_MAX_0305,"Auf einem Stein am Weg ist ein Smiley eingeritzt, mit Hauern. Ich nehm das jetzt einfach mal als freundliches Willkommen.","Someone's carved a smiley into a stone by the path, with tusks. I'm just going to take that as a friendly welcome."
-W1_DORF_MAX_0310,"Runde Häuser mit schiefen Dächern. Als hätte ein Kind sie gebaut, ein sehr begabtes Kind mit sehr viel Zeit.","Round houses with crooked roofs. Like a kid built them, a very talented kid with a lot of time."
-W1_DORF_MAX_0315,"Aus einem Schornstein kommt Rauch in Herzform. Ich finde, das Dorf übertreibt da ein bisschen.",One chimney is puffing heart-shaped smoke. I think the village is overdoing it a bit.
+W1_DORF_MAX_0310,"Runde Häuser, schiefe Dächer. Hier hat noch nie jemand eine Wasserwaage besessen.","Round houses, crooked roofs. Nobody here has ever owned a spirit level."
+W1_DORF_MAX_0315,Aus einem Schornstein kommt Rauch in Herzform. Der daneben macht einen Totenkopf. Nachbarn.,One chimney is puffing heart-shaped smoke. The one next door is doing a skull. Neighbours.
 W1_DORF_MAX_0320,"Ein Fleck Erde zwischen den Pflastersteinen. Der sieht aus, als würde er auf irgendwas warten.",A patch of earth between the cobblestones. It looks like it's waiting for something.
 W1_DORF_MAX_0325,Der Erdfleck ist genau bohnengroß. Ich sag ja nur.,The patch of earth is exactly bean-sized. Just saying.
-W1_DORF_MAX_0330,Eine Bohnenranke bis in die Wolken. Eine Treppe hätte es ehrlich gesagt auch getan.,"A beanstalk up into the clouds. Honestly, a staircase would have done."
+W1_DORF_MAX_0330,Eine Bohnenranke bis in die Wolken. Eine Treppe hätte es auch getan.,A beanstalk up into the clouds. A staircase would have done.
 W1_DORF_MAX_0335,"Ganz oben bewegt sich was. Hoffentlich nur ein Riese, der kurz Hallo sagen will und dann wieder geht.",Something's moving right at the top. Hopefully just a giant who wants to say hi and then leave.
 W1_DORF_PIX_0340,"Ich klettere nicht. Ich werde getragen. Das ist eine alte Tradition meiner Vorfahren, und ich halte sie hoch.","I do not climb. I am carried. It is an old tradition of my ancestors, and I uphold it."
 W1_DORF_PIX_0340_2,Genauer gesagt: Ich lasse sie hochhalten. Von dir.,To be precise: I have it upheld. By you.
 W1_DORF_PIX_0345,Ich habe gründlich nachgedacht und bin zu folgendem Ergebnis gekommen: Ich klettere immer noch nicht.,I have thought about it thoroughly and reached the following conclusion: I still do not climb.
 W1_DORF_PIX_0345_2,"Aber ich zeige dir gern, wie man elegant zusieht, während andere klettern. Auch das ist eine Kunst.","But I'll gladly show you how to watch elegantly while others climb. That, too, is an art."
-W1_DORF_MAX_0350,"Ein Eimer am Brunnen. Den leih ich mir mal aus. Das ist kein Diebstahl, das ist Teilen.","A bucket by the well. I'll borrow it for a bit. That's not stealing, that's sharing."
+W1_DORF_MAX_0350,Ein Eimer am Brunnen. Den leih ich mir aus. Der Brunnen hat genickt.,A bucket by the well. I'll borrow it. The well nodded.
 W1_DORF_MAX_0360,"Eimer voll. Wasser aus einem Wunschbrunnen. Ich frag mich, ob das jetzt so was wie Premium-Wasser ist.",Bucket's full. Water from a wishing well. I wonder if that counts as premium water.
 W1_DORF_PIX_0370,"Wunschwasser. Ich wünsche mir hiermit, dass du es nicht über mich kippst.",Wish water. I hereby wish that you don't tip it over me.
 W1_DORF_PIX_0370_2,"Und sieh an, es funktioniert. Ich werde diesen Brunnen weiterempfehlen.","And look at that, it works. I shall recommend this well."
 W1_DORF_MAX_0380,"Gollos letzte Goldmünze. Die fühlt sich viel schwerer an, als so ein kleines Ding eigentlich sein dürfte.",Gollo's last gold coin. It feels much heavier than such a small thing has any right to.
 W1_DORF_MAX_0385,"Die Münze ist noch warm, weil Gollo sie die ganze Zeit in der Faust hatte. Ich fühl mich wie ein Bankräuber mit Gewissen.","The coin's still warm, because Gollo had it in his fist the whole time. I feel like a bank robber with a conscience."
 W1_DORF_MAX_0390,"Eine Zauberbohne. Sie glitzert, und Pixel wollte sie fressen, bevor ich sie überhaupt richtig angeguckt hab.","A magic bean. It sparkles, and Pixel wanted to eat it before I even got a proper look."
-W1_DORF_MAX_0395,"Ich hab sie mir ans Ohr gehalten, und sie flüstert. Ich glaube, sie will in die Erde. Oder in Pixel.","I held it up to my ear, and it whispers. I think it wants to go in the ground. Or in Pixel."
+W1_DORF_MAX_0395,"Ich hab sie mir ans Ohr gehalten, und sie flüstert. Sie will in die Erde. Oder in Pixel.","I held it up to my ear, and it whispers. It wants to go in the ground. Or in Pixel."
 W1_DORF_PIX_0400,Ich wollte sie lediglich probieren. Unter Fachleuten nennt man das Qualitätskontrolle.,"I merely wished to taste it. Among professionals, that is called quality control."
 W1_DORF_PIX_0400_2,"Es ist ein anstrengender Beruf, und keiner dankt es einem.","It is an exhausting profession, and nobody ever thanks you."
 W1_DORF_PIX_0410,"Pergament, Pilzgeruch und Panikschweiß. Toadi hat dieses Brett heute schon mindestens viermal gelesen.","Parchment, mushroom smell and panic sweat. Toadi has read this board at least four times today."
@@ -1467,7 +1466,7 @@ W1_DORF_BRU_0800,Stille. Wird bearbeitet.,Silence. Processing.
 W1_DORF_PIX_0810,"… und deshalb ist Thunfisch in Lake eine Beleidigung, das war Punkt eins von vierzig, Punkt zwei: Heizungen.","… and that's why tuna in brine is an insult, that was point one of forty, point two: radiators."
 W1_DORF_PIX_0810_2,"Punkt drei: Wer ist dieser Toadi überhaupt, und warum hat er einen Hut, der aussieht wie ein Frühstück?","Point three: who is this Toadi anyway, and why does he have a hat that looks like breakfast?"
 W1_DORF_PIX_0810_3,Punkt vier …,Point four …
-W1_DORF_MAX_0820,"Er redet jetzt doppelt so viel. Das ist ziemlich genau das Gegenteil von dem, was ich mir gewünscht hab.",He's talking twice as much now. That's pretty much the exact opposite of what I wished for.
+W1_DORF_MAX_0820,Er redet jetzt doppelt so viel. Ich nehm den Wunsch zurück. Ich nehm alle Wünsche zurück.,He's talking twice as much now. I take the wish back. I take all wishes back.
 W1_DORF_BRU_0830,Bekannte Nebenwirkung. Reklamation anerkannt. Münze zurück.,Known side effect. Complaint accepted. Coin returned.
 W1_DORF_MAX_0840,"Etwas, das hoch hinaus will.",Something that wants to go far.
 W1_DORF_BRU_0850,"Etwas, das hoch hinaus will. Gewährt. Nicht zurückgeben, nicht umtauschen.","Something that wants to go far. Granted. No returns, no exchanges."
@@ -1507,16 +1506,16 @@ W1_DORF_PIX_1330,"Toadi hat dich in zwei Minuten dreimal angesehen, voller Hoffn
 W1_DORF_PIX_1330_2,"Enttäusch ihn bitte sanft. Er ist ein Pilz, und Pilze sind empfindlich.","Please disappoint him gently. He's a mushroom, and mushrooms are sensitive."
 W1_TAV_HUM_0010,"Willkommen im Pony-Express! Setz dich, trink was, mach's dir gemütlich. Nur fass Gerhard nicht an.","Welcome to the Pony Express! Sit down, have a drink, make yourself at home. Just don't touch Gerald."
 W1_TAV_MAX_0020,Wer ist Gerhard? Dein Sohn?,Who's Gerald? Your son?
-W1_TAV_HUM_0030,"Das Schwert über dem Kamin. Das, was so glänzt. Er mag keine Fremden, und ehrlich gesagt mag er die meisten Bekannten auch nicht.","The sword above the fireplace. The shiny one. He doesn't like strangers, and to be honest he doesn't like most acquaintances either."
+W1_TAV_HUM_0030,"Das Schwert über dem Kamin. Das, was so glänzt. Er mag keine Fremden, und die meisten Bekannten mag er auch nicht.","The sword above the fireplace. The shiny one. He doesn't like strangers, and he doesn't like most acquaintances either."
 W1_TAV_NAR_0040,Pixel springt in einem Satz auf den Dachbalken. Sein Porträt oben links beginnt zu blinken.,Pixel leaps up onto the roof beam in one bound. His portrait in the top left starts to flash.
 W1_TAV_PIX_0050,"Max. Hier oben. Klick mich an, dann zeige ich dir die Welt einmal von oben, so wie sie gemeint ist.","Max. Up here. Click on me, and I'll show you the world from above, the way it was meant to be seen."
 W1_TAV_PIX_0050_2,"Ich beiße nur manchmal. Und meistens nur Leute, die es verdient haben.",I only bite sometimes. And mostly people who deserve it.
-W1_TAV_MAX_0060,"Er sitzt auf einem Balken und gibt von da oben Anweisungen. Ich glaube, genau so hat er sich sein Leben immer vorgestellt.","He's sitting on a beam, giving orders from up there. I think this is exactly how he always pictured his life."
+W1_TAV_MAX_0060,Er sitzt auf einem Balken und gibt von da oben Anweisungen. Genau so hat er sich sein Leben immer vorgestellt.,"He's sitting on a beam, giving orders from up there. This is exactly how he always pictured his life."
 W1_TAV_GOL_0070,Pssst. Die Katze da oben soll leise sein. Der Vulkan hört zu.,Pssst. Tell the cat up there to be quiet. The volcano is listening.
 W1_TAV_PIX_0080,Endlich sitzt jemand mit Übersicht am Steuer. Von hier oben sieht man einfach alles.,"At last, someone with an overview at the helm. From up here you can see everything."
 W1_TAV_PIX_0080_2,"Vor allem den Käse. Ich möchte betonen, dass ich ihn nur beobachte. Vorerst.","Above all, the cheese. I'd like to stress that I am only observing it. For now."
 W1_TAV_MAX_0090,"Und zurück zu dem, der Taschen hat und nicht auf Balken schläft.",And back to the one with pockets who doesn't sleep on beams.
-W1_TAV_MAX_0110,"Ein Tresen voller Krüge und Flecken. Jeder Fleck sieht aus, als hätte er eine Geschichte, und keine davon will ich hören.","A counter full of tankards and stains. Every stain looks like it has a story, and I don't want to hear any of them."
+W1_TAV_MAX_0110,Ein Tresen voller Krüge und Flecken. Jeder Fleck hat eine Geschichte. Der große da hat eine Fortsetzung.,A counter full of tankards and stains. Every stain has a story. The big one there has a sequel.
 W1_TAV_MAX_0115,Unter dem Tresen klebt ein Zettel: „Anschreiben nur für Zwerge. Die zahlen wenigstens in Gold.“,"There's a note stuck under the bar: ""Tabs for dwarves only. At least they pay in gold."""
 W1_TAV_MAX_0120,Ein Topf voll blubberndem Käse. Gollo nennt das Vulkan. Ich nenne das Abendessen.,A pot full of bubbling cheese. Gollo calls it the volcano. I call it dinner.
 W1_TAV_MAX_0125,"Am Topfrand ist etwas eingeritzt: „Nichts hineinwerfen, was flüstert.“","Something's scratched into the rim of the pot: ""Do not throw in anything that whispers."""
@@ -1532,14 +1531,14 @@ W1_TAV_MAX_0175,Darunter steht kleiner: „Bitte nicht lebend bringen. Der letzt
 W1_TAV_MAX_0180,"Ein Huhn im Korb. Es guckt mich an, als würde ich ihm noch Geld schulden.",A chicken in a basket. It's looking at me like I still owe it money.
 W1_TAV_PIX_0190,"Ein Huhn. Ich verspüre gerade einen sehr natürlichen, sehr alten Impuls.","A chicken. I am currently experiencing a very natural, very ancient impulse."
 W1_TAV_PIX_0190_2,"Ich unterdrücke ihn, und zwar einzig und allein für den Thunfisch. Merk dir das, falls ich je Dankbarkeit verlange.","I am suppressing it, solely for the sake of the tuna. Remember that, should I ever demand gratitude."
-W1_TAV_MAX_0200,"Ein Kamin, in dem das Feuer knistert. Da könnte ich stundenlang reingucken, und genau deshalb guck ich lieber weg.","A fireplace with a crackling fire. I could stare into that for hours, and that's exactly why I'd better look away."
+W1_TAV_MAX_0200,Ein Kaminfeuer. Zu Hause läuft das als Zehn-Stunden-Video.,A log fire. At home that's a ten-hour video.
 W1_TAV_MAX_0205,"Auf dem Sims steht ein Pokal: „Zweiter Platz, Armdrücken gegen Troll.“ Mehr als zwei Teilnehmer hatte das Turnier wohl nicht.","There's a trophy on the mantelpiece: ""Second place, arm wrestling against a troll."" I doubt the tournament had more than two entrants."
 W1_TAV_MAX_0210,"Rostige Schwerter mit Namensschildern: Gerhard, Birgit, Gerhard der Zweite. Humbert hat eindeutig Lieblinge.","Rusty swords with name tags: Gerald, Brenda, Gerald the Second. Humbert definitely has favourites."
 W1_TAV_MAX_0215,Birgit hängt ein Stück höher als die anderen und ist als Einzige poliert. Über Birgit redet hier keiner schlecht.,Brenda hangs a bit higher than the others and is the only one that's polished. Nobody here says a bad word about Brenda.
 W1_TAV_MAX_0220,"Leere Namensschilder. Entweder wartet Humbert auf neue Schwerter, oder er hat die Namen schon und wartet nur noch auf die Schwerter.","Empty name tags. Either Humbert's waiting for new swords, or he's already got the names and is just waiting for the swords."
 W1_TAV_MAX_0225,Auf der Rückseite von einem Schild steht mit Bleistift: „Gerhard der Dritte?“ Er plant voraus.,"On the back of one tag, in pencil: ""Gerald the Third?"" He plans ahead."
 W1_TAV_MAX_0230,"Eine Laute mit einem Becher davor. Soll ich dem Barden eine Münze reinwerfen? Ich hab genau eine, und die brauch ich noch.","A lute with a cup in front of it. Should I toss the bard a coin? I've got exactly one, and I still need it."
-W1_TAV_MAX_0240,"Eine Laute mit Becher, aber kein Barde weit und breit. Der Becher sammelt trotzdem, ganz von allein.","A lute with a cup, but no bard anywhere. The cup's collecting anyway, all by itself."
+W1_TAV_MAX_0240,"Eine Laute mit Becher, aber kein Barde weit und breit. Die Laute wirkt erleichtert.","A lute with a cup, but no bard anywhere. The lute looks relieved."
 W1_TAV_MAX_0245,"Im Becher liegen zwei Knöpfe und ein Zahn. Das Publikum hier zahlt mit dem, was es übrig hat.",There are two buttons and a tooth in the cup. The audience here pays with whatever it has left.
 W1_TAV_MAX_0250,"Ein Ziegenfell-Vorleger, sehr flauschig. Pixel guckt ihn an, als hätte das Fell ihm persönlich was getan.","A goatskin rug, very fluffy. Pixel's looking at it like the fur did something to him personally."
 W1_TAV_MAX_0255,An einer Ecke hängt noch ein Glöckchen. Das Fell hat früher gebimmelt.,There's still a little bell on one corner. That fleece used to jingle.
@@ -1607,7 +1606,7 @@ W1_TAV_GOL_0780,"Siehst du! Alle wissen alles! Ich verliere nur, wenn jemand etw
 W1_TAV_MAX_0790,"Tschüss, Gollo.","Bye, Gollo."
 W1_TAV_GOL_0800,Geh nur. Alle gehen. Der Ring bleibt. Der Ring bleibt immer.,Go on. Everyone goes. The ring stays. The ring always stays.
 W1_TAV_MIN_0910,Chhh!,Hsss!
-W1_TAV_MAX_0920,"Sie faucht. Ich glaube, das war ein Nein, und zwar ein sehr deutliches.","She's hissing. I think that was a no, and a very clear one."
+W1_TAV_MAX_0920,Sie faucht. Das war ein Nein. Ein sehr deutliches.,She's hissing. That was a no. A very clear one.
 W1_TAV_PIX_0930,"An den Topf komme ich nicht, solange Madame dort sitzt. Und ich würde es auch niemals wagen.",I can't get to the pot while Madame is sitting there. And I would never dare.
 W1_TAV_PIX_0930_2,"Noch nicht, jedenfalls. Ein Kater weiß, wann er warten muss.","Not yet, anyway. A cat knows when to wait."
 W1_TAV_MIN_0940,Miau?,Meow?
@@ -1618,7 +1617,6 @@ W1_TAV_PIX_0970_2,Darf ich vorausgehen? Nein. Darf ich hinterhergehen? Unbedingt
 W1_TAV_MIN_0980,Miau.,Meow.
 W1_TAV_MAX_0990,"Ich versteh nur Miau, aber das war ein sehr überzeugtes Miau.","I only understand meow, but that was a very convinced meow."
 W1_TAV_PIX_1000,"Sie sitzt jetzt im Stall und bewundert die Kokosnüsse. Sie hält sie für Pferde, und ich habe nicht widersprochen.","She's now sitting in the stable admiring the coconuts. She thinks they're horses, and I didn't contradict her."
-W1_TAV_PIX_1000_2,"Ich habe einen Charme, der anderer Leute Hausaufgaben erledigt.","I have a charm, that does other people's homework."
 W1_TAV_GOL_1110,"Nicht jetzt! Der Wirt! Die Katze! Alle gucken! Frag mich, wenn keiner guckt.",Not now! The landlord! The cat! Everyone's watching! Ask me when nobody's watching.
 W1_TAV_MAX_1120,Gollo. Ich hab ein Rätsel für dich: Was hab ich in meiner Tasche?,Gollo. I've got a riddle for you: what have I got in my pocket?
 W1_TAV_GOL_1130,Das ist keine Frage! Das ist … gemein. Ich rate. Dreimal. Das sind die Regeln.,That's not a question! That's … mean. I'll guess. Three times. Those are the rules.
@@ -1647,7 +1645,7 @@ W1_TAV_MAX_1330,"In Serien braucht man irgendwann alles. Vor allem das, was man 
 W1_TAV_MAX_1410,"Den nehm ich mit. Humbert sieht's nicht, der poliert.","I'll take that. Humbert won't notice, he's polishing."
 W1_TAV_PIX_1420,"Du nimmst einen Teppich mit. Ich will nicht wissen, warum.",You're taking a rug with you. I don't want to know why.
 W1_TAV_PIX_1420_2,"Das heißt, ich ahne es bereits, und ich hasse alles, was ich ahne.","That is to say, I already suspect, and I hate everything I suspect."
-W1_TAV_MAX_1430,"Ein Ei. Das Huhn protestiert leise, und ich ehrlich gesagt auch, innerlich.","An egg. The chicken's protesting quietly, and honestly so am I, on the inside."
+W1_TAV_MAX_1430,Ein Ei. Das Huhn protestiert leise. Ich auch.,An egg. The chicken's protesting quietly. So am I.
 W1_TAV_HUH_1440,Gaaack.,Bwaaak.
 W1_TAV_PIX_1450,Ein Ei. Weich gekocht. Zum Frühstück. Das kommt auf meine Liste.,An egg. Soft-boiled. For breakfast. That's going on my list.
 W1_TAV_PIX_1450_2,"Nicht dieses hier, wohlgemerkt, sondern ein eigenes. Ich teile meine Eier nicht mit Kesseln.","Not this one, mind you, but one of my own. I do not share my eggs with cauldrons."
@@ -1661,8 +1659,7 @@ W1_TAV_MAX_1510,"Humbert guckt. Ich warte lieber, bis ich ein eigenes Schälchen
 W1_TAV_MAX_1520,"Gerhard bleibt, wo er ist. Ich mag meine Hände, und zwar beide.","Gerald stays where he is. I like my hands, both of them."
 W1_TAV_HUM_1530,Finger weg von Gerhard!,Hands off Gerald!
 W1_TAV_MAX_1540,Seit Gollos Ring in dem Topf liegt? Ich leg's lieber nicht drauf an.,With Gollo's ring in the pot now? I'd rather not risk it.
-W1_TAV_MAX_1550,"Die Limo bleibt zu. Ich will heute nicht aussehen wie jemand anderes, ich hab mit mir schon genug zu tun.","The lemonade stays shut. I don't want to look like someone else today, I've got enough on my plate being me."
-W1_TAV_MAX_1560,"Ich hab einmal über die Saiten geschrammelt. Klingt ungefähr wie mein Handy, wenn es in der Tasche aus Versehen Musik abspielt.",I strummed the strings once. Sounds about like my phone when it starts playing music in my pocket by accident.
+W1_TAV_MAX_1560,Ich hab einmal über die Saiten geschrammelt. Das Huhn hat sich weggedreht.,I strummed the strings once. The chicken turned its back.
 W1_TAV_GOL_1570,"Zzzz. Mein Ssschätzchen … nein, weg damit … zzz.","Zzzz. My preciousss … no, away with it … zzz."
 W1_TAV_PIX_1610,"Der Käse blubbert seit zehn Minuten vor sich hin. Er will gegessen werden, ich höre so etwas.","The cheese has been bubbling away for ten minutes. It wants to be eaten, I can hear that sort of thing."
 W1_TAV_PIX_1610_2,"Es ist eine Gabe. Eine schwere Gabe, wenn man sie nicht nutzen darf.","It's a gift. A heavy gift, when you're not allowed to use it."
@@ -1671,8 +1668,8 @@ W1_TAV_PIX_1620_2,"Das ist eine Taverne, kein Wachsfigurenkabinett. Irgendwer so
 W1_TAV_PIX_1630,"Von hier oben sehe ich alles, und vor allem sehe ich, dass du nichts tust.","From up here I can see everything, and above all I can see that you're doing nothing."
 W1_TAV_PIX_1630_2,Es ist ein schöner Ausblick. Nur die Handlung fehlt.,It's a lovely view. Only the plot is missing.
 W1_SCHM_MAX_0010,"Eine Esse. Die ist ungefähr so heiß wie mein Handy, wenn ich drei Stunden am Stück Videos gucke.",A forge. It's about as hot as my phone after three hours of videos in a row.
-W1_SCHM_MAX_0015,"Die Glut flackert jedes Mal, wenn ich atme. Also atme ich jetzt nicht mehr, weil ich keine beleidigte Esse will.","The embers flicker every time I breathe. So now I've stopped breathing, because I don't want an offended forge."
-W1_SCHM_PIX_0020,"Warm. Sehr warm. Zu warm, um ehrlich zu sein.","Warm. Very warm. Too warm, to be honest."
+W1_SCHM_MAX_0015,"Die Glut flackert jedes Mal, wenn ich atme. Ich atme jetzt zur Seite.",The embers flicker every time I breathe. I'm breathing sideways now.
+W1_SCHM_PIX_0020,Warm. Sehr warm. Zu warm.,Warm. Very warm. Too warm.
 W1_SCHM_PIX_0020_2,Die perfekte Temperatur liegt genau zwei Schritte weiter links. Ich habe das mit meinem gesamten Körper ausgemessen.,The perfect temperature is exactly two steps to the left. I measured it with my entire body.
 W1_SCHM_PIX_0025,"Zwei Schritte links, ich habe es soeben noch einmal nachgemessen. Es bleibt bei zwei.","Two steps left, I've just measured it again. It remains two."
 W1_SCHM_PIX_0025_2,"Die Wissenschaft hat gesprochen, junger Mann, und die Wissenschaft legt sich jetzt dorthin.","Science has spoken, young man, and science is now going to lie down there."
@@ -1681,7 +1678,7 @@ W1_SCHM_MAX_0035,"Ich hab draufgeklopft, und er klingt wie ein Gong. Irgendwo ve
 W1_SCHM_MAX_0040,"Pfannen, Töpfe, Kellen, und alle haben ein Namensschild. Das mit den Namen ist hier im Dorf wohl ansteckend.","Pans, pots, ladles, and every one has a name tag. The name thing must be contagious in this village."
 W1_SCHM_MAX_0045,"Die Pfanne heißt „Brutzelbart“, der Topf heißt „Tiefgang“. Wie die Kelle heißt, will ich gar nicht wissen.","The pan is called ""Sizzlebeard"", the pot is called ""Deepwater"". I really don't want to know what the ladle's called."
 W1_SCHM_MAX_0050,Eine weiße Ziege mit Glöckchen. Sie hat ein Schwert im Maul und kaut darauf rum wie auf einem Kaugummi.,A white goat with a little bell. She's got a sword in her mouth and she's chewing on it like gum.
-W1_SCHM_MAX_0055,"Das Glöckchen bimmelt, wenn sie kaut. Sie kaut eigentlich immer, also bimmelt es eigentlich immer.","The bell jingles when she chews. She basically always chews, so it basically always jingles."
+W1_SCHM_MAX_0055,"Das Glöckchen bimmelt, wenn sie kaut. Der Schmied zuckt jedes Mal.",The bell jingles when she chews. The smith flinches every time.
 W1_SCHM_PIX_0060,"Sie frisst Eisen. Ich fresse Thunfisch. Wir sind beide Spezialisten,","She eats iron. I eat tuna. We are both specialists,"
 W1_SCHM_PIX_0060_2,"aber nur einer von uns beweist dabei Geschmack, und ich möchte niemanden beschämen, indem ich sage, wer.","but only one of us shows any taste in the matter, and I wouldn't want to embarrass anyone by saying which."
 W1_SCHM_PIX_0065,"Sie hat mir gerade zugezwinkert. Ich zwinkere nicht zurück, denn wir sind Rivalen.","She just winked at me. I shall not wink back, for we are rivals."
@@ -1689,11 +1686,11 @@ W1_SCHM_PIX_0065_2,"Worum wir konkurrieren, weiß ich nicht genau. Aber ich werd
 W1_SCHM_MAX_0070,"Der Schmied. Roter Bart, Ruß im Gesicht und der Blick von einem Mann, der seine Ziege nicht mehr liebt.","The blacksmith. Red beard, soot on his face and the look of a man who no longer loves his goat."
 W1_SCHM_MAX_0075,"Er streichelt der Ziege über den Kopf und zieht die Hand ganz schnell zurück. Er liebt sie doch noch, nur sehr vorsichtig.","He strokes the goat's head and pulls his hand back really fast. He does still love her, just very carefully."
 W1_SCHM_MAX_0080,"Ein leerer Krug, und auf seinem Namensschild steht auch nichts. Da war der Schmied wohl noch nicht so weit.","An empty jug, and there's nothing on its name tag either. I guess the blacksmith wasn't ready yet."
-W1_SCHM_MAX_0085,"Ich hab reingerufen, und er klingt hohl. Der Krug weiß noch nicht, wer er ist. Das kenn ich irgendwoher.","I called into it, and it sounds hollow. The jug doesn't know who it is yet. That sounds familiar."
+W1_SCHM_MAX_0085,"Ich hab reingerufen, und er klingt hohl. Der Krug wartet noch auf seine Aufgabe.","I called into it, and it sounds hollow. The jug's still waiting for its job."
 W1_SCHM_MAX_0090,Den Krug leih ich mir mal aus.,I'll just borrow the jug.
 W1_SCHM_SCH_0100,"Nimm. Nimm alles. Nur nicht die Hoffnung, die habe ich selbst nicht mehr.","Take it. Take everything. Just not hope, I don't have any of that left myself."
-W1_SCHM_MAX_0110,Klong. Ich hab auf einen Amboss gehauen. Damit hab ich für heute eigentlich genug geleistet.,Clong. I hit an anvil. That's pretty much enough achievement for one day.
-W1_SCHM_MAX_0120,"Zu heiß. Ich hab noch nicht mal hingefasst und hab trotzdem schon Brandblasen, und zwar im Kopf.","Too hot. I haven't even touched it and I've already got blisters, in my head."
+W1_SCHM_MAX_0110,Klong. Ich hab auf einen Amboss gehauen. Damit hab ich für heute genug geleistet.,Clong. I hit an anvil. That's enough achievement for one day.
+W1_SCHM_MAX_0120,Zu heiß. Meine Augenbrauen sind dagegen.,Too hot. My eyebrows vote no.
 W1_SCHM_PIX_0130,"Pfannen, die noch nie benutzt wurden. Eine Tragödie in Blech.",Pans that have never been used. A tragedy in tin.
 W1_SCHM_PIX_0130_2,Was man in ihnen alles hätte braten können. Fisch. Mehr Fisch. Und zum Nachtisch Fisch.,Think of everything one could have fried in them. Fish. More fish. And fish for dessert.
 W1_SCHM_SCH_0140,Eine Katze. Frisst sie Eisen? Nein? Dann darf sie bleiben. Sie darf sogar wohnen.,A cat. Does it eat iron? No? Then it can stay. It can even move in.
@@ -1703,7 +1700,7 @@ W1_SCHM_MAX_0221,"Hast du mal versucht, sie wegzuschicken?",Have you ever tried 
 W1_SCHM_SCH_0222,Dreimal. Sie kam jedes Mal zurück. Mit einem Schwert im Maul. Mit meinem.,Three times. She came back every time. With a sword in her mouth. Mine.
 W1_SCHM_MAX_0230,Gehört die Ziege dir?,Is the goat yours?
 W1_SCHM_SCH_0240,Die Ziege gehört niemandem. Sie ist eines Morgens aufgetaucht. Wie Schulden.,The goat belongs to nobody. She just turned up one morning. Like debt.
-W1_SCHM_MAX_0750,Und warum jagst du sie nicht weg?,So why don't you chase her off?
+W1_SCHM_MAX_0750,Und wenn du sie verkaufst?,And what if you sold her?
 W1_SCHM_SCH_0760,Hab ich versucht. Sie war schneller wieder da als ich. Seitdem nenne ich sie Kollegin.,I tried. She was back faster than I was. Since then I call her my colleague.
 W1_SCHM_MAX_0250,Was ist das für ein Schwert in ihrem Maul?,What's that sword in her mouth?
 W1_SCHM_SCH_0260,"Das war Ingrid. Humbert wollte sie für seine Sammlung. Jetzt ist sie Ziegenfutter. Sag ihm nichts, er hängt an Namen.","That was Ingrid. Humbert wanted her for his collection. Now she's goat food. Don't tell him, he gets attached to names."
@@ -1738,16 +1735,16 @@ W1_SCHM_PIX_0620_2,"wenn du nicht so laut denken würdest. Man hört es bis hier
 W1_STAB_MAX_0010,"Regale bis zur Decke, voller schmaler Schachteln. Wie ein Schuhladen für sehr dünne Leute.","Shelves up to the ceiling, full of narrow boxes. Like a shoe shop for very thin people."
 W1_STAB_MAX_0015,Eine Schachtel ist offen und leer. Der Stab hat sich wohl schon seinen Zauberer ausgesucht. Hoffentlich nicht mich.,One box is open and empty. That wand's probably already chosen its wizard. Hopefully not me.
 W1_STAB_MAX_0020,Eine Rollleiter. In Filmen rollt damit immer jemand total elegant durchs Bild. Ich würde eher durchs Fenster rollen.,"A rolling ladder. In films somebody always glides across the shot on one of these, super elegantly. I'd glide out the window."
-W1_STAB_MAX_0025,"Ich hab sie angeschubst, und sie rollt, ohne mich. Sie hatte schon immer mehr Talent als ich.","I gave it a push, and it rolls, without me. It always had more talent than me."
+W1_STAB_MAX_0025,"Ich hab sie angeschubst, und sie rollt ohne mich weiter. Sie kennt den Weg.","I gave it a push, and it rolls on without me. It knows the way."
 W1_STAB_MAX_0030,Ein lila Samtkissen mit drei Dingen drauf. Das ist das Sortiment. Das ganze Sortiment.,A purple velvet cushion with three things on it. That's the range. The entire range.
 W1_STAB_MAX_0035,"Auf dem Kissen sind Abdrücke, da lagen mal mehr Stäbe. Oder sehr dicke Würste, das kann ich nicht ausschließen.","There are dents in the cushion, so there used to be more wands. Or very fat sausages, I can't rule that out."
 W1_STAB_MAX_0040,Ein Zahnstocher. Für Zauberer mit sehr kleinen Problemen.,A toothpick. For wizards with very small problems.
-W1_STAB_MAX_0045,"Er hat einen kleinen Zettel: „Für Zahnfeen und Präzisionszauber.“ Das ist mehr Selbstbewusstsein, als ich habe.","It has a little label: ""For tooth fairies and precision spells."" That's more confidence than I have."
+W1_STAB_MAX_0045,Er hat einen kleinen Zettel: „Für Zahnfeen und Präzisionszauber.“ Der Zahnstocher hat einen Lebenslauf.,"It has a little label: ""For tooth fairies and precision spells."" The toothpick has a CV."
 W1_STAB_MAX_0050,"Ein Zollstock. Zwei Meter Magie, und man kann ihn sogar zusammenklappen.","A folding ruler. Two metres of magic, and you can even fold it up."
 W1_STAB_MAX_0055,"Ich klapp ihn auf und zu, klack, klack. Das ist ungefähr der einzige Zauber, den ich gerade draufhab.","I fold it open and shut, clack, clack. That's pretty much the only spell I've got right now."
 W1_STAB_MAX_0060,Ein Kochlöffel aus Holz. Der hat bestimmt schon mehr Eintöpfe gesehen als Zaubersprüche.,A wooden spoon. I bet it's seen more stews than spells.
 W1_STAB_MAX_0065,"Der Löffel hat eine Kerbe. Da hat jemand mal sehr, sehr wütend umgerührt.","The spoon has a notch in it. Somebody once stirred very, very angrily."
-W1_STAB_PIX_0070,"Holz und alter Eintopf. Mit diesem Löffel hat jemand wirklich gekocht, und zwar mit Hingabe.","Wood and old stew. Someone really cooked with this spoon, and with devotion."
+W1_STAB_PIX_0070,Holz und alter Eintopf. Mit diesem Löffel hat jemand wirklich gekocht. Mit Hingabe.,Wood and old stew. Someone really cooked with this spoon. With devotion.
 W1_STAB_PIX_0070_2,Ich respektiere ihn. Er hat mehr für die Ernährung getan als die meisten Zauberer.,I respect it. It has done more for nutrition than most wizards.
 W1_STAB_PIX_0075,"Linseneintopf mit Speck, ich habe noch einmal sehr gründlich gerochen.","Lentil stew with bacon, I've had another very thorough sniff."
 W1_STAB_PIX_0075_2,"Dieser Löffel hat eine Geschichte. Und, was noch wichtiger ist, er hat Speck.","This spoon has a history. And, more importantly, it has bacon."
@@ -1791,7 +1788,7 @@ W1_STAB_MAX_0470,"Käse auf den Zollstock? Dann hätte ich zwei Meter Snack. Kli
 W1_STAB_MAX_0480,"Thunfisch klebt nicht, Thunfisch stinkt. Das ist laut Pixel ein wichtiger Unterschied.","Tuna doesn't stick, tuna stinks. According to Pixel, that's an important difference."
 W1_STAB_PIX_0490,"Thunfisch stinkt nicht. Thunfisch duftet, junger Mann.","Tuna does not stink. Tuna has a bouquet, young man."
 W1_STAB_PIX_0490_2,"Noch so eine Beleidigung, und ich wechsle die Seite. Ich weiß noch nicht, auf welche, aber es wird nicht deine sein.","One more insult like that and I'm switching sides. I don't know yet which side, but it won't be yours."
-W1_STAB_MAX_0500,"Käse auf den Löffel. Jetzt klebt er an meiner Hand, und zwar richtig fest.","Cheese on the spoon. Now it's stuck to my hand, and properly stuck."
+W1_STAB_MAX_0500,Käse auf den Löffel. Jetzt klebt er an meiner Hand. Richtig fest.,Cheese on the spoon. Now it's stuck to my hand. Properly stuck.
 W1_STAB_STA_0510,"Er hängt an dir! Siehst du, wie er hängt! Er hat dich gewählt!",It's attached to you! Look how it clings! It has chosen you!
 W1_STAB_MAX_0520,"Er hängt nur, weil Käse dran ist.",It's only stuck because there's cheese on it.
 W1_STAB_STA_0530,"Alle großen Berufungen haben einen Grund. Honig, Käse, Schicksal. Nimm ihn. Und nimm die Socke, als Probestück für die Schule.","All great callings have a reason. Honey, cheese, destiny. Take it. And take the sock, as a sample for the school."
@@ -1825,7 +1822,7 @@ W1_HOGG_MAX_0040,"Ein Besen mit Verfolgungswahn. Wenn den einer filmt, hat er mo
 W1_HOGG_ALW_0050,"Ah, ein neuer Durchgefallener! Willkommen in Hoggelwarz! Zeig mir deinen Stab, Junge.","Ah, a new dropout! Welcome to Hogglewarz! Show me your wand, boy."
 W1_HOGG_ALW_0060,"Keinen Stab? Dann komm wieder, wenn dich etwas gewählt hat. Ein Stab, ein Löffel, ein Schicksal. Alles wird genommen.","No wand? Then come back when something has chosen you. A wand, a spoon, a destiny. We take anything."
 W1_HOGG_ALW_0070,Ein Kochlöffel! Endlich einer mit Sinn für das Wesentliche. Die Prüfung kann beginnen.,A wooden spoon! Finally someone with a sense for the essentials. The exam may begin.
-W1_HOGG_MAX_0110,"Schiefe Schulbänke, und unter jeder klebt Kaugummi, wette ich. Manche Sachen sind in jeder Welt gleich.","Wonky school desks, and I bet there's gum stuck under every one. Some things are the same in every world."
+W1_HOGG_MAX_0110,"Schiefe Schulbänke, und unter jeder klebt Kaugummi, wette ich.","Wonky school desks, and I bet there's gum stuck under every one."
 W1_HOGG_MAX_0115,In eine Bank ist ein Herz geritzt: „A. + Kelle“. Der Schulleiter saß hier selbst mal.,"There's a heart carved into one desk: ""A. + ladle"". The headmaster used to sit here himself."
 W1_HOGG_MAX_0120,"Eine leere Tafel. Entweder hat Alwin nichts zu sagen, oder er hat schon wieder alles vergessen.","An empty blackboard. Either Alwin has nothing to say, or he's forgotten everything again."
 W1_HOGG_MAX_0125,Ganz unten in der Ecke steht doch was: „Nicht wegwischen!“ Drumherum ist alles weggewischt.,"Right down in the corner there is something after all: ""Do not wipe!"" Everything around it has been wiped."
@@ -1835,14 +1832,14 @@ W1_HOGG_MAX_0140,"Sechs braune Flaschen ohne Etikett, und zwei davon sind doppel
 W1_HOGG_MAX_0145,"Am Regalbrett kleben sechs Kleberänder. Die Etiketten gab es also mal, und jemand wollte sie nicht mehr.","There are six rings of glue on the shelf. So the labels did exist once, and somebody didn't want them any more."
 W1_HOGG_PIX_0150,"Sechs Flaschen, kein Etikett. Ich rieche sie von hier aus, alle sechs.","Six bottles, no labels. I can smell them from here, all six."
 W1_HOGG_PIX_0150_2,"Aber ich lasse mich bitten. Mindestens zweimal, und beim zweiten Mal bitte mit mehr Gefühl.","But I like to be asked. At least twice, and the second time with more feeling, please."
-W1_HOGG_MAX_0160,"Hohe Fenster, kühles Licht. Schulen sehen in jeder Welt so aus, als wäre gerade Montag.","High windows, cold light. In every world, schools look like it's Monday."
+W1_HOGG_MAX_0160,"Hohe Fenster. Draußen ist Wetter, drinnen ist Stundenplan.","High windows. Outside there's weather, inside there's a timetable."
 W1_HOGG_MAX_0165,"Draußen fliegt ein Schüler vorbei, rückwärts. Er winkt, als wäre das so geplant.","A pupil flies past outside, backwards. He waves as if that were the plan."
 W1_HOGG_MAX_0170,"Der Schulleiter. Sternenrobe, Kochschürze, Kelle. Er weiß selbst nicht, was er gerade unterrichtet.","The headmaster. Star-spangled robe, cooking apron, ladle. He doesn't know himself what he's teaching right now."
 W1_HOGG_MAX_0180,"Eine Socke mit Löchern, die auf einem Hocker liegt wie ein Ehrengast.","A sock full of holes, lying on a stool like a guest of honour."
 W1_HOGG_MAX_0185,"Die Löcher sind rund und alle gleich groß. Motten waren das nicht, das war ein Zauber, der danebenging.","The holes are round and all the same size. That wasn't moths, that was a spell that missed."
 W1_HOGG_PIX_0190,"Die ist nach dem dritten Jahrgang in Rente gegangen, weil die Schüler sie durchgetragen haben.","That one retired after the third year group, because the pupils wore it through."
 W1_HOGG_PIX_0190_2,"Man sollte ihr ein Kissen geben. Wer so viel ertragen hat, verdient ein Kissen.",Someone should give it a cushion. Anyone who has endured that much deserves a cushion.
-W1_HOGG_MAX_0200,"Der Übungsbesen liegt im Schrank und zuckt. Ich glaube, er träumt von Katzenhaaren.","The practice broom's lying in the cupboard, twitching. I think it's dreaming about cat hair."
+W1_HOGG_MAX_0200,Der Übungsbesen liegt im Schrank und zuckt. Er träumt von Katzenhaaren.,"The practice broom's lying in the cupboard, twitching. It's dreaming about cat hair."
 W1_HOGG_MAX_0205,"Am Stiel hängt ein Schild: „Übungsbesen. Fliegt nicht. Fegt nur, und das ungern.“","There's a tag on the handle: ""Practice broom. Does not fly. Only sweeps, and not gladly."""
 W1_HOGG_MAX_0210,"Toadi steht in der Tür und drückt die Daumen, und zwar beide. Mehr hat er auch nicht.","Toadi's standing in the doorway with his fingers crossed, both hands. That's all the fingers he's got."
 W1_HOGG_PIX_0220,"Kreide, Ruß und alter Pfannkuchen. Diese Schule hat Geschichte.","Chalk, soot and old pancake. This school has history."
@@ -1855,7 +1852,7 @@ W1_HOGG_ALW_0340,Ist es? Ist es nicht? Die Grenzen sind fließend. Wie Teig.,Is 
 W1_HOGG_MAX_0341,Und was macht aus einem Pfannkuchen einen Leuchttrank?,And what turns a pancake into a glowing potion?
 W1_HOGG_ALW_0342,"Der Pilz. Ohne Pilz ist es Frühstück, mit Pilz ist es Bildung. Leuchtpilze wachsen im Zauberwald, hinter der Trollbrücke.","The mushroom. Without the mushroom it's breakfast, with the mushroom it's education. Glow mushrooms grow in the enchanted forest, beyond the troll bridge."
 W1_HOGG_MAX_0350,Wo gibt es hier Milch?,Where can I get milk around here?
-W1_HOGG_ALW_0360,Milch? Milch gibt es im ganzen Reich nicht mehr. Die Milch ist in einem anderen Schloss.,Milk? There's no milk left in the entire kingdom. The milk is in another castle.
+W1_HOGG_ALW_0360,Milch? Milch gibt es im ganzen Reich nicht mehr. Der Lord trinkt seinen Kaffee jetzt schwarz. Daher die Laune.,Milk? There's no milk left in the entire kingdom. The Lord takes his coffee black now. Hence the mood.
 W1_HOGG_ALW_0360_2,"Aber Ziegen. Ziegen haben Milch, sagt man. Ich habe nie nachgesehen.","But goats. Goats have milk, they say. I've never checked."
 W1_HOGG_MAX_0950,In welchem Schloss?,In which castle?
 W1_HOGG_ALW_0960,"In dem, das schwebt. Die Milch hat jetzt einen schöneren Ausblick als ich.",The floating one. The milk has a nicer view now than I do.
@@ -1877,7 +1874,7 @@ W1_HOGG_ALW_1000,Das sagen sie alle. Der Besen glaubt es keinem.,That's what the
 W1_HOGG_MAX_0430,Bis später.,See you later.
 W1_HOGG_ALW_0440,"Geh nur. Der Kessel läuft nicht weg. Also, einmal schon. Lange Geschichte.","Off you go. The cauldron won't run away. Well, it did once. Long story."
 W1_HOGG_MAX_0510,"Ei rein. Es blubbert gelb, so wie bei jedem Pfannkuchen.","Egg in. It bubbles yellow, like every pancake does."
-W1_HOGG_MAX_0520,"Milch rein, und zwar alles. Der ganze Krug.","Milk in, all of it. The whole jug."
+W1_HOGG_MAX_0520,Milch rein. Der ganze Krug.,Milk in. The whole jug.
 W1_HOGG_PIX_0530,"Du hast die ganze Milch in einen Kessel gekippt, ohne einen einzigen Tropfen für den Kater.","You poured all the milk into a cauldron, without a single drop for the cat."
 W1_HOGG_PIX_0530_2,"Ich merke mir das. Lebenslang. Und Katzen haben, wie du weißt, neun davon.","I shall remember that. For life. And cats, as you know, have nine of those."
 W1_HOGG_MAX_0540,"Pilz rein, und jetzt leuchtet es. Ich hab einen Pfannkuchen mit eingebauter Beleuchtung gemacht.","Mushroom in, and now it's glowing. I made a pancake with built-in lighting."
@@ -1887,19 +1884,19 @@ W1_HOGG_MAX_0570,"Den Löffel zum Rühren nehmen? Nein, der ist jetzt ein Zauber
 W1_HOGG_ALW_0580,Drei Zutaten. Jetzt die letzte: eine der sechs Flaschen. Wähle weise. Oder schnell. Beides ergibt eine Geschichte.,Three ingredients. Now the last one: one of the six bottles. Choose wisely. Or quickly. Either way you get a story.
 W1_HOGG_MAX_0590,"Erst Ei, Milch und Pilz. Alwin ist da streng, also beim Rezept. Beim Rest eher nicht.","Egg, milk and mushroom first. Alwin's strict about that, about the recipe, anyway. Not so much about anything else."
 W1_HOGG_ALW_0610,"Sechs Flaschen im Regal, so lautet die Zahl: ein Trank, ein Öl, zweimal Gift, zweimal Saft. Mehr hat mein Regal nie geschafft.","Six bottles on my shelf, as anyone can see: one potion and one oil, two poisons, two juices, all plain as can be. My shelf has never managed more, take it from me."
-W1_HOGG_ALW_0620,"Das Fischöl, das stinkt, steht gleich rechts neben dem Trank. Die zwei Riesen sind gleich bis zum Rand. Und am Rand des Regals steht nie, was du suchst.","The fish oil that stinks stands just right of the potion, quite near. The two giants are twins, filled up to the brim. And the ends of the shelf never hold what you're after, I fear."
+W1_HOGG_ALW_0620,"Das Fischöl, das stinkt, steht gleich rechts neben dem Trank. Die zwei Riesen sind gleich bis zum Rand. Und am Rand des Regals steht nie, was du suchst. Mehr reimt sich nicht, auch wenn du fluchst.","The fish oil that stinks stands just right of the potion, quite near. The two giants are twins, filled up to the brim. And the ends of the shelf never hold what you're after, I fear. That's all of my rhymes, so don't shed a tear."
 W1_HOGG_MAX_0630,"Rechts daneben. Hoffentlich von mir aus gesehen, sonst werd ich gleich ein Pilz.","Directly to the right. Hopefully from where I'm standing, or I'm about to become a mushroom."
 W1_HOGG_PIX_0640,"Brennnessel. So riechen Pflanzen, wenn sie beleidigt sind, und diese hier ist sehr beleidigt.","Nettle. That's how plants smell when they're offended, and this one is very offended."
 W1_HOGG_PIX_0650,"Pilz, und zwar bitter. Wer das trinkt, wird selbst einer.","Mushroom, and bitter. Whoever drinks this will become one."
 W1_HOGG_PIX_0650_2,"Ich habe das soeben erfunden, junger Mann, und bin mir trotzdem vollkommen sicher.","I just made that up, young man, and I'm still completely certain."
 W1_HOGG_PIX_0660,"Zitrone, Honig und ein Hauch von Ärger. Das könnte alles Mögliche sein.","Lemon, honey and a hint of trouble. Could be anything."
-W1_HOGG_PIX_0660_2,"Ich lege mich nicht fest. Das ist keine Unsicherheit, das ist Stil.","I shan't commit. That isn't uncertainty, that's style."
+W1_HOGG_PIX_0660_2,Ich lege mich nicht fest. Das machen nur Hunde.,I shan't commit. Only dogs do that.
 W1_HOGG_PIX_0670,Der Trank! Ganz sicher! Er riecht nach Erfolg und Zitrone und … Meer.,The potion! Definitely! It smells of success and lemon and … the sea.
 W1_HOGG_PIX_0670_2,"Erfolg riecht nach Meer, das weiß doch jeder. Meine Nase bürgt dafür.","Success smells of the sea, everyone knows that. My nose vouches for it."
 W1_HOGG_PIX_0680,"Pilzgift, genau wie in der anderen Großen. Die beiden Riesen sind Zwillinge, und keiner von beiden ist nett.","Mushroom poison, just like the other big one. The two giants are twins, and neither of them is nice."
 W1_HOGG_PIX_0690,"Brennnessel, am Rand des Regals. Da steht nie, was man sucht. Das weiß sogar der Zettel, und der ist aus Papier.","Nettle, at the edge of the shelf. What you're looking for is never there. Even the note knows that, and it's made of paper."
-W1_HOGG_PIX_0700,"Zwei Flaschen, mehr schnuppere ich nicht. Meine Nase ist ein Instrument,","Two bottles, and I'm sniffing no more. My nose is an instrument,"
-W1_HOGG_PIX_0700_2,und kein Werkzeug. Man spielt nicht einfach so darauf herum.,not a tool. One doesn't simply play around on it.
+W1_HOGG_PIX_0700,"Zwei Flaschen, mehr schnuppere ich nicht.","Two bottles, and I'm sniffing no more."
+W1_HOGG_PIX_0700_2,Danach nimmt meine Nase Urlaub.,After that my nose goes on holiday.
 W1_HOGG_MAX_0710,Rein damit.,In it goes.
 W1_HOGG_MAX_0720,Ich bin ein Pilz. Ich fühl mich irgendwie … bodenständig.,I'm a mushroom. I feel kind of … grounded.
 W1_HOGG_TOA_0730,Familie?,Family?
@@ -1912,7 +1909,7 @@ W1_HOGG_MAX_0770,"Flasche drei. Nicht am Rand, nicht groß, und das Fischöl ste
 W1_HOGG_PIX_0780,Interpretiert.,Interpreted.
 W1_HOGG_NAR_0790,Der Kessel leuchtet gelb auf und beleuchtet das ganze Klassenzimmer.,The cauldron flares yellow and lights up the whole classroom.
 W1_HOGG_ALW_0800,"Bestanden! Der Trank des Leuchtens! Abfüllen, mitnehmen, nicht trinken. Er schmeckt nach Pfannkuchen, und das verwirrt.","Passed! The Potion of Glowing! Bottle it, take it, don't drink it. It tastes of pancake, and that's confusing."
-W1_HOGG_MAX_0810,"Ein Trank, der leuchtet. Die Taschenlampe in meinem Handy kann das auch. Konnte das. Bis der Akku leer war.",A potion that glows. The torch on my phone can do that too. Could do that. Until the battery died.
+W1_HOGG_MAX_0810,"Ein Trank, der leuchtet. Trinken würde ich ihn trotzdem nicht. Dann leuchte ich.",A potion that glows. I still wouldn't drink it. Then I'd glow.
 W1_HOGG_ALW_0820,"Und weil du bestanden hast, zeige ich dir, wie es nicht geht. Moderworts Zeugnis. Aus dem Archiv. Als Abschreckung.","And because you passed, I'll show you how not to do it. Mouldword's school report. From the archive. As a deterrent."
 W1_HOGG_MAX_0830,"„Kräuterkunde: ungenügend. Zaubertränke: ungenügend. Bosheit: befriedigend.“ Und eine Notiz: „Für meinen Mo-Knuddel, stolz!“","""Herbology: fail. Potions: fail. Malice: satisfactory."" And a note: ""For my little Mo-Cuddles, so proud!"""
 W1_HOGG_PIX_0840,Mo-Knuddel. Das schreibt man sich auf.,Mo-Cuddles. One writes that down.
@@ -1939,18 +1936,18 @@ W1_BRUE_WAL_0040,"Paragraf 1: Drei Ziegenböcke überqueren die Brücke, der kle
 W1_BRUE_WAL_0050,"Paragraf 2: Jeder Bock spricht seinen Satz. Der Kleine: „Friss mich nicht, mein Bruder ist fetter.“ Der Mittlere: „Friss mich nicht, mein Bruder ist noch fetter.“ Der Große: „Friss mich doch, wenn du dich traust.“","Clause 2: Each goat says its line. The little one: ""Don't eat me, my brother is fatter."" The middle one: ""Don't eat me, my brother is even fatter."" The big one: ""Eat me, then, if you dare."""
 W1_BRUE_WAL_0060,Paragraf 3: Der Troll geht ins Wasser. Paragraf 14b: Leihgaben sind zurückzugeben.,Clause 3: The troll goes into the water. Clause 14b: Borrowed items are to be returned.
 W1_BRUE_MAX_0070,"„Der Troll geht ins Wasser.“ Steht da wirklich so. Von Reinfallen steht da nichts, und von einem Fluss auch nicht.","""The troll goes into the water."" That's really what it says. Nothing about falling in, and nothing about a river either."
-W1_BRUE_PIX_0080,"Holz, Farbe und Pedanterie. Jemand hat jeden Paragrafen einzeln poliert,","Wood, paint and pedantry. Somebody has polished every clause individually,"
-W1_BRUE_PIX_0080_2,"und zwar, wenn ich mich nicht irre, mit einem Taschentuch und sehr viel Liebe.","with a handkerchief and a great deal of love, if I'm not mistaken."
+W1_BRUE_PIX_0080,"Holz, Farbe und Pedanterie. Jemand hat jeden Paragrafen einzeln poliert.","Wood, paint and pedantry. Somebody has polished every clause individually."
+W1_BRUE_PIX_0080_2,Mit einem Taschentuch und sehr viel Liebe.,With a handkerchief and a great deal of love.
 W1_BRUE_MAX_0090,"Ein Grammophon unter der Brücke. Der Troll hört heimlich Musicals, und ich werde das keinem erzählen.","A gramophone under the bridge. The troll secretly listens to musicals, and I'm not telling anyone."
 W1_BRUE_MAX_0095,"Die Platte heißt „Troll-Musicals, Folge 2“. Folge 1 liegt völlig zerkratzt daneben, die wurde offensichtlich sehr geliebt.","The record's called ""Troll Musicals, Vol. 2"". Vol. 1 is lying next to it, completely scratched, so it was obviously very loved."
 W1_BRUE_MAX_0100,"Notenblätter. „Der Troll und ich, eine Ballade in drei Paragrafen.“ Eigenkomposition.","Sheet music. ""The Troll and I, a Ballad in Three Clauses."" His own composition."
 W1_BRUE_MAX_0105,Am Rand steht mit Bleistift: „Hier lauter singen. Mehr Gefühl. Weniger Brücke.“,"In the margin, in pencil: ""Sing louder here. More feeling. Less bridge."""
 W1_BRUE_GRA_0110,… und zwischen zwei Liedern: Milch im Angebot. Nur heute. Nur für Vergessliche.,… and between two songs: milk on special offer. Today only. For the forgetful only.
-W1_BRUE_MAX_0120,"Werbung auf einem Grammophon. Ich dachte echt, wenigstens hier wäre man davor sicher.",Adverts on a gramophone. I honestly thought you'd be safe from them here at least.
+W1_BRUE_MAX_0120,Werbung auf einem Grammophon. Und ich kann sie nicht mal überspringen.,Adverts on a gramophone. And I can't even skip them.
 W1_BRUE_PIX_0130,„Nur für Vergessliche.“ Eine sehr spezielle Zielgruppe.,"""For the forgetful only."" A very specific target audience."
 W1_BRUE_PIX_0130_2,"Ich kenne genau einen, der dazugehört. Er trägt Hut und riecht nach Lötzinn.",I know exactly one person who belongs to it. He wears a hat and smells of solder.
 W1_BRUE_MAX_0140,"Wildblumen. Hübsch, und voller Pollen. Das merk ich mir mal, für niemanden Bestimmten.","Wildflowers. Pretty, and full of pollen. I'll remember that, for nobody in particular."
-W1_BRUE_MAX_0145,"Eine Blume hat ein Blatt in Herzform. Die hat der Troll bestimmt mit Absicht stehen lassen, der ist ein Romantiker.","One flower has a heart-shaped leaf. I bet the troll left that one on purpose, he's a romantic."
+W1_BRUE_MAX_0145,Eine Blume hat ein Blatt in Herzform. Drumherum ist alles gestutzt. Die eine nicht.,One flower has a heart-shaped leaf. Everything around it has been trimmed. Not that one.
 W1_BRUE_MAX_0150,"Der Troll. Er steht so gerade, als hätte er ein Lineal verschluckt, und dazu trägt er eine Fliege.","The troll. He's standing so straight it's like he swallowed a ruler, and he's wearing a bow tie."
 W1_BRUE_MAX_0155,"Er rückt seine Fliege zurecht, zweimal, obwohl keiner guckt. Außer mir. Der Mann ist ein Profi.","He's straightening his bow tie, twice, even though nobody's looking. Except me. The man's a professional."
 W1_BRUE_PIX_0160,"Moos, Regelbuch und Lampenfieber. Dieser Troll riecht nach einer zweiten Karriere.","Moss, rulebook and stage fright. This troll smells of a second career."
@@ -2045,7 +2042,7 @@ W1_BRUE_PIX_1010,Darf ich den Teppich jetzt bitte ausziehen?,"May I take the rug
 W1_BRUE_MAX_1020,Behalt ihn noch kurz an. Vielleicht gibt's ja eine Fortsetzung.,Keep it on a bit longer. Maybe there's a sequel.
 W1_BRUE_PIX_1030,Ich hasse Fortsetzungen.,I hate sequels.
 W1_BRUE_MAX_1040,"Der Troll badet, und die Brücke ist frei. Ich geh jetzt einfach drüber, wie ein ganz normaler Mensch.","The troll's having a bath, and the bridge is free. I'm just going to walk across, like a completely normal person."
-W1_BRUE_MAX_1045,"Er planscht und singt dabei leise vor sich hin. Ich glaube, er ist glücklich. Ich geh trotzdem lieber schnell.","He's splashing about and singing quietly to himself. I think he's happy. I'm still going to hurry, though."
+W1_BRUE_MAX_1045,Er planscht und singt dabei leise vor sich hin. Die Fliege liegt neben dem Eimer.,He's splashing about and singing quietly to himself. His bow tie's lying next to the bucket.
 W1_BRUE_WAL_1050,Noch ein Eimer? Paragraf drei ist erfüllt. Mehr Wasser wäre Luxus. Ich nehme ihn trotzdem. Nein. Regel ist Regel.,Another bucket? Clause three is fulfilled. More water would be a luxury. I'll take it anyway. No. Rules are rules.
 W1_BRUE_WAL_1060,"Wasser? Jetzt schon? Das Bad ist Paragraf drei. Erst das Märchen, dann das Bad. Und keine deiner Ziegen hat bisher einen ganzen Satz gesagt.","Water? Already? The bath is clause three. First the fairy tale, then the bath. And none of your goats has said a full line yet."
 W1_BRUE_WAL_1070,"Finger weg von meinem Bach. Paragraf elf: Wasser bleibt, wo es wohnt. Hol dir eigenes.",Hands off my stream. Clause eleven: water stays where it lives. Get your own.
@@ -2072,11 +2069,11 @@ W1_WASS_PIX_0080,"Kartons. Katzen lieben Kartons, das ist allgemein bekannt.","B
 W1_WASS_PIX_0080_2,"Und diese hier sind zugeklebt. Das ist Grausamkeit mit Klebeband, junger Mann, und ich nehme es persönlich.","And these are taped shut. That is cruelty with sticky tape, young man, and I take it personally."
 W1_WASS_PIX_0085,"Ich habe an jedem einzelnen Karton gekratzt, und keiner hat sich geöffnet.","I have scratched every single box, and not one has opened."
 W1_WASS_PIX_0085_2,"Das ist meine schlimmste Niederlage seit dem Staubsauger, und über den Staubsauger reden wir nicht.","It's my worst defeat since the vacuum cleaner, and we do not talk about the vacuum cleaner."
-W1_WASS_MAX_0090,"Zugeklebt, und außerdem nicht meins. Das sind zwei Gründe, und eigentlich reicht schon der erste.","Taped shut, and not mine anyway. That's two reasons, and the first one's really enough."
+W1_WASS_MAX_0090,"Zugeklebt, und außerdem nicht meins. Das sind zwei Gründe, und schon der erste reicht.","Taped shut, and not mine anyway. That's two reasons, and the first one's enough."
 W1_WASS_MAX_0100,"Ein zusammengerollter Teppich. Den lass ich liegen, ein Kater im Teppich reicht mir für heute.","A rolled-up rug. I'll leave it, one cat in a rug is enough for today."
-W1_WASS_MAX_0105,"Der Teppich hat eine Beule. Ich frag lieber nicht nach, ich hab genug Filme gesehen.","The rug has a lump in it. I'd rather not ask, I've seen enough films."
-W1_WASS_MAX_0110,"Ein Ruderboot ohne Ruder. Damit ist es eigentlich nur noch ein Boot, das ein bisschen rumliegt.",A rowing boat without oars. So it's really just a boat lying around a bit.
-W1_WASS_MAX_0115,"Am Bug steht „Seerose II“. Wo die Seerose I ist, will ich lieber nicht wissen.","The bow says ""Water Lily II"". I'd rather not know where Water Lily I is."
+W1_WASS_MAX_0105,Der Teppich hat eine Beule. Die Beule schnarcht.,The rug has a lump in it. The lump is snoring.
+W1_WASS_MAX_0110,Ein Ruderboot ohne Ruder. Die Ruder hat sie eingepackt. Die Frau denkt mit.,A rowing boat without oars. She's packed the oars. The woman thinks ahead.
+W1_WASS_MAX_0115,Am Bug steht „Seerose II“. Die Seerose I liegt da hinten. Unter Wasser. Mit Seerosen drauf.,"The bow says ""Water Lily II"". Water Lily I is over there. Under water. With water lilies on top."
 W1_WASS_MAX_0120,"Ein Schwan. Er guckt, als wäre ich an irgendetwas schuld.",A swan. It's looking at me like I'm to blame for something.
 W1_WASS_MAX_0125,"Er guckt immer noch. Ich hab drüber nachgedacht, und vielleicht bin ich wirklich an irgendwas schuld. Ich weiß bloß nicht, woran.","He's still looking. I've thought about it, and maybe I really am guilty of something. I just don't know what."
 W1_WASS_SWA_0130,Fauch.,Hiss.
@@ -2098,11 +2095,11 @@ W1_WALD_PIX_0040_2,"Es hilft ein bisschen. Nicht viel, aber ein bisschen.","It h
 W1_WALD_MAX_0050,"Ein Busch voller rosa Rosen. Alle zu. Wie ein Chat, in dem keiner zuerst schreibt.",A bush full of pink roses. All closed. Like a chat where nobody wants to text first.
 W1_WALD_MAX_0055,"Eine Rose zuckt, wenn ich hingucke. Sie ist kurz davor, so wie ich kurz vor einem Niesen.","One rose twitches when I look at it. It's about to go, like me right before a sneeze."
 W1_WALD_PIX_0060,"Niesrosen. Ich rieche sie nicht, weil sie zu sind.","Sneezeroses. I can't smell them, because they're closed."
-W1_WALD_PIX_0060_2,"Und das ist ehrlich gesagt das Einzige, was ich an ihnen mag. Blumen gehören in Vasen, nicht in Nasen.","And honestly, that's the only thing I like about them. Flowers belong in vases, not in noses."
+W1_WALD_PIX_0060_2,"Und das ist das Einzige, was ich an ihnen mag. Blumen gehören in Vasen, nicht in Nasen.","And that's the only thing I like about them. Flowers belong in vases, not in noses."
 W1_WALD_PIX_0065,"Ich sehe sie an, und sie sehen mich an. Wir haben einen Pakt geschlossen:","I look at them, and they look at me. We have made a pact:"
 W1_WALD_PIX_0065_2,"Sie bleiben zu, und ich bleibe hübsch. Bisher halten sich beide Seiten daran.","They stay closed, and I stay pretty. So far both sides are keeping to it."
 W1_WALD_MAX_0070,Offen. Und voller Pollen. Jemand mit Heuschnupfen würde hier sofort umdrehen.,Open. And full of pollen. Anyone with hay fever would turn round immediately.
-W1_WALD_MAX_0075,"Die Luft ist gelb. Ich halte die Luft an und sehe trotzdem gelb. Das ist kein Busch mehr, das ist eine Waffe.","The air's yellow. I'm holding my breath and still seeing yellow. That's not a bush anymore, that's a weapon."
+W1_WALD_MAX_0075,Die Luft ist gelb. Ich halte die Luft an und sehe trotzdem gelb. Der Busch hat gewonnen.,The air's yellow. I'm holding my breath and still seeing yellow. The bush has won.
 W1_WALD_MAX_0080,"Ein Lieferkarren voller Kisten: „Zerbrechlich“, „Oma“ und „Ziege, Ersatz“.","A delivery cart full of crates: ""Fragile"", ""Grandma"" and ""Goat, spare""."
 W1_WALD_MAX_0085,"Eine Kiste heißt „Wolf, Rücksendung“. Dieses Märchen hat ein ernsthaftes Retourenproblem.","One crate says ""Wolf, return"". This fairy tale has a serious returns problem."
 W1_WALD_MAX_0090,„Rotkäppchens Ketchup. Rot wie Omas Mütze.“ Immerhin kein Blut.,"""Little Red's Ketchup. Red as Grandma's hood."" At least it's not blood."
@@ -2115,17 +2112,17 @@ W1_WALD_MAX_0110,Eine Flasche Ketchup. Falls ich irgendwo unterschreiben muss. O
 W1_WALD_MAX_0120,"Ein Kürbis auf einem Kürbis auf einem Kürbis. Und daneben ein Glasschuh, Größe 38, würde ich schätzen.","A pumpkin on a pumpkin on a pumpkin. And next to it a glass slipper, size 5, I'd guess."
 W1_WALD_MAX_0125,Der Schuh hat einen Absatz und eine Mitternachts-Garantie. Eine Kutsche ist leider nicht dabei.,"The slipper has a heel and a midnight guarantee. Sadly, no carriage included."
 W1_WALD_PIX_0130,Da hatte es jemand um Mitternacht sehr eilig.,Somebody was in a great hurry at midnight.
-W1_WALD_PIX_0130_2,"Ich kenne das. Um Mitternacht gibt es bei deinem Großvater manchmal Reste, und dann bin auch ich sehr schnell.","I know the feeling. At midnight there are sometimes leftovers at your grandfather's, and then even I am very fast."
+W1_WALD_PIX_0130_2,Um Mitternacht gibt es bei deinem Großvater manchmal Reste. Dann bin auch ich sehr schnell.,At midnight there are sometimes leftovers at your grandfather's. Then even I am very fast.
 W1_WALD_PIX_0135,Ein Schuh aus Glas. Man sieht die Zehen.,A shoe made of glass. You can see the toes.
 W1_WALD_PIX_0135_2,"Das ist keine Mode, das ist ein Röntgenbild, und ich wollte niemandes Zehen so genau kennen.","That isn't fashion, it's an X-ray, and I never wished to know anyone's toes that well."
-W1_WALD_MAX_0140,"Glühwürmchen. Die blinken genau wie die Lämpchen am Router, und deshalb tut mir das hier ein bisschen weh.","Fireflies. They blink exactly like the little lights on the router, which is why this hurts a bit."
-W1_WALD_MAX_0145,"Eins blinkt anders als die anderen. Ich glaube, es hat Verbindungsprobleme. Ich kann das gut verstehen.",One's blinking differently from the others. I think it's got connection problems. I can totally relate.
-W1_WALD_MAX_0150,"Ein Stolleneingang mit Plakaten davor. Die Goblins streiken. Ich dachte immer, Goblins arbeiten sowieso nicht.",A mine entrance with posters in front. The goblins are on strike. I always thought goblins didn't work anyway.
+W1_WALD_MAX_0140,Glühwürmchen. Zwanzig kleine Standby-Lämpchen.,Fireflies. Twenty little standby lights.
+W1_WALD_MAX_0145,Eins blinkt anders als die anderen. Die anderen halten Abstand.,One's blinking differently from the others. The others are keeping their distance.
+W1_WALD_MAX_0150,Ein Stolleneingang mit Plakaten davor. Die Goblins streiken.,A mine entrance with posters in front. The goblins are on strike.
 W1_WALD_MAX_0155,Auf einem Plakat steht: „Kein Gold ohne Pausen!“ Auf einem anderen: „Mehr Pausen!“ Da ist eine Bewegung entstanden.,"One poster says: ""No gold without breaks!"" Another one: ""More breaks!"" A movement has formed."
-W1_WALD_MAX_0160,"Rotkäppchen. Rote Jacke, rote Kappe, Sneaker. Der Korb ist inzwischen ein Karren, die Zeiten ändern sich eben.","Little Red. Red jacket, red cap, trainers. The basket's a cart now, times change."
+W1_WALD_MAX_0160,"Rotkäppchen. Rote Jacke, rote Kappe, Sneaker. Der Korb ist jetzt ein Karren. Die Oma ist dieselbe.","Little Red. Red jacket, red cap, trainers. The basket's a cart now. The grandma's the same."
 W1_WALD_MAX_0165,"Sie hakt eine Liste ab: ein Haken bei „Oma“, ein Fragezeichen bei „Wolf“ und ein Smiley bei „Trinkgeld“.","She's ticking off a list: a tick next to ""Grandma"", a question mark next to ""Wolf"" and a smiley next to ""Tip""."
 W1_WALD_MAX_0170,Verdrehte Bäume. Als hätte jemand den Wald beim Wachsen gestört.,Twisted trees. Like someone disturbed the forest while it was growing.
-W1_WALD_MAX_0175,"Ein Baum hat ein Gesicht in der Rinde, und er sieht genervt aus. Ich auch. Wir sind quasi Kollegen.","One tree has a face in its bark, and it looks annoyed. Me too. We're basically colleagues."
+W1_WALD_MAX_0175,"Ein Baum hat ein Gesicht in der Rinde, und er sieht genervt aus. An seinem Ast hängt ein Paketzettel.","One tree has a face in its bark, and it looks annoyed. There's a delivery slip hanging from its branch."
 W1_WALD_PIX_0180,"Pappe, Ketchup und ein Hauch von Oma. Dieser Karren hat mehr erlebt als ich,","Cardboard, ketchup and a hint of grandma. This cart has seen more than I have,"
 W1_WALD_PIX_0180_2,"und ich war immerhin schon im Fernseher. Von innen, was nicht jeder Kater behaupten kann.","and I have been inside a television. From the inside, which not every cat can claim."
 W1_WALD_ROT_0190,"Eine Katze! Hallo! Ich hab Katzenfutter dabei. Nein, hab ich nicht. Das war ein Lieferdienst-Reflex.","A cat! Hi! I've got cat food with me. No, I don't. That was a delivery reflex."
@@ -2149,7 +2146,7 @@ W1_WALD_ROT_0282,"Im Wald? Keiner. Aber an der Brücke summt manchmal jemand. Se
 W1_WALD_MAX_0290,Bis dann.,See you.
 W1_WALD_ROT_0300,Bewertung nicht vergessen! Fünf Körbe!,Don't forget to leave a review! Five baskets!
 W1_WALD_MAX_0410,"Die Rosen sind zu, und die Socke ist leer. Keiner will hier den ersten Schritt machen.","The roses are closed, and the sock is empty. Nobody here wants to make the first move."
-W1_WALD_MAX_0420,"La. … Nein. Die Rosen haben sich noch fester zugemacht, und ehrlich gesagt hab ich das verdient.","La. … No. The roses closed up even tighter, and honestly I deserved that."
+W1_WALD_MAX_0420,La. … Nein. Eine Rose hat sich weggedreht.,La. … No. One rose turned away.
 W1_WALD_PIX_0430,"Du singst wie ein Modem, junger Mann. Ich meine das als Kompliment.","You sing like a modem, young man. I mean that as a compliment."
 W1_WALD_PIX_0430_2,An das Modem. Die Dinger hatten wenigstens Rhythmus.,To the modem. At least those things had rhythm.
 W1_WALD_PIX_0440,Miaaau. … Sie bleiben zu. Banausen.,Miaaaow. … They stay shut. Philistines.
@@ -2166,7 +2163,7 @@ W1_WALD_MAX_0530,"Die Socke sortiert schon: „Pollen, Kategorie: Niesen.“ Dan
 W1_WALD_PIX_0540,Hatschi.,Atchoo.
 W1_WALD_PIX_0540_2,Das war nicht ich. Das war die Natur. Durch mich.,That wasn't me. That was nature. Through me.
 W1_WALD_WAL_0550,War es … gut? Sei ehrlich. Paragraf 12: Kritik muss konstruktiv sein.,Was it … good? Be honest. Clause 12: criticism must be constructive.
-W1_WALD_MAX_0560,"Die Rosen sind aufgegangen, Rotkäppchen klatscht, und Toadi weint. Das ist mehr Reaktion, als ich je auf irgendwas gekriegt hab.","The roses opened, Little Red is clapping, and Toadi's crying. That's more of a reaction than I've ever got for anything."
+W1_WALD_MAX_0560,"Die Rosen sind aufgegangen, Rotkäppchen klatscht, und Toadi weint. Fünf Körbe, Waldemar.","The roses opened, Little Red is clapping, and Toadi's crying. Five baskets, Waldemar."
 W1_WALD_MAX_0570,"Und du kriegst deinen Auftritt, ganz am Ende. Ich hab gute Beziehungen zum Abspann.","And you get your big number, right at the end. I've got good connections to the credits."
 W1_WALD_WAL_0580,Im Abspann! Mit Scheinwerfer? … Ich nehme auch eine Fackel.,In the credits! With a spotlight? … I'll settle for a torch.
 W1_WALD_PIX_0590,"Du hast einem Troll einen Auftritt versprochen, über den du nicht das Geringste zu bestimmen hast.",You've promised a troll a performance over which you have not the slightest say.
@@ -2187,13 +2184,13 @@ W1_LUFT_MAK_0030,"Besichtigung läuft! Drei Monatsmieten Provision, in Drachengo
 W1_LUFT_MAX_0040,Das Ende der Ranke. Runter geht's hoffentlich leichter als rauf.,The end of the beanstalk. Hopefully going down's easier than coming up.
 W1_LUFT_MAX_0045,"Ich hab runtergeguckt, und das Dorf ist da unten winzig. Ich guck jetzt wieder nach oben, oben ist gesünder.","I looked down, and the village is tiny down there. I'm looking back up now, up is healthier."
 W1_LUFT_MAX_0050,"Ein Torbogen in Pastell, und dahinter das Schloss. Zwei Zimmer, Wolkenblick, sehr luftig.","A pastel archway, and the castle behind it. Two rooms, cloud view, very airy."
-W1_LUFT_MAX_0055,"In den Bogen sind Wolken geschnitzt, und zwar aus Wolke. Das ist für einen Torbogen ganz schön viel Nachdenken.","There are clouds carved into the arch, made of cloud. That's a lot of thinking for an archway."
+W1_LUFT_MAX_0055,"In den Bogen sind Wolken geschnitzt, und zwar aus Wolke.","There are clouds carved into the arch, made of cloud."
 W1_LUFT_MAX_0060,Kinderschrift mit Kreide: „…-Bärchen war hier.“ Der Anfang ist weggewischt.,"Child's handwriting in chalk: ""…-Teddy was here."" The beginning has been wiped off."
-W1_LUFT_MAX_0065,"Daneben ein kleines Kreideherz und ein Strichmännchen ohne Nase. Das ist Kunst, und zwar mit Hintergedanken.","Next to it, a little chalk heart and a stick figure with no nose. That's art, with an agenda."
+W1_LUFT_MAX_0065,Daneben ein kleines Kreideherz und ein Strichmännchen ohne Nase. Das Männchen kenn ich vom Steckbrief.,"Next to it, a little chalk heart and a stick figure with no nose. I know that figure from the wanted poster."
 W1_LUFT_PIX_0070,Bärchen. Jemand wurde hier Bärchen genannt und hat es überlebt.,Teddy. Someone was called Teddy here and survived it.
 W1_LUFT_PIX_0070_2,"Knapp, sehr knapp. Mich hat einmal jemand „Mausi“ genannt, und ich habe drei Tage nicht gegessen.","Barely, only just. Someone once called me ""Kitty-Wiggles"", and I didn't eat for three days."
 W1_LUFT_PIX_0080,"Alte Kreide, und Tränen. Jemand hat beim Schreiben geweint.","Old chalk, and tears. Someone cried while writing this."
-W1_LUFT_PIX_0080_2,"Bei so einem Namen hätte ich das an seiner Stelle auch getan, und zwar öffentlich.","With a name like that I'd have done the same in his place, and in public."
+W1_LUFT_PIX_0080_2,Bei so einem Namen hätte ich das an seiner Stelle auch getan. Öffentlich.,With a name like that I'd have done the same in his place. In public.
 W1_LUFT_MAX_0090,Ein Balkon mit Aussicht auf alles. Das Geländer hat bestimmt noch nie einen Prüfer von innen gesehen.,A balcony with a view of everything. That railing has definitely never met a safety inspector.
 W1_LUFT_MAX_0095,"Ich lehn mich nicht ans Geländer. Ich hab gesehen, wie es wackelt, wenn bloß eine Wolke vorbeizieht.",I'm not leaning on the railing. I've seen how it wobbles when a single cloud drifts past.
 W1_LUFT_SPI_0100,"Spiegel, Spiegel … ach, du bist's. Sehr schöne Haare. Sehr lebendig. Sehr mutig.","Mirror, mirror … oh, it's you. Very nice hair. Very lively. Very brave."
@@ -2201,11 +2198,11 @@ W1_LUFT_MAX_0110,"Endlich mal jemand, der mich versteht.","Finally, someone who 
 W1_LUFT_SPI_0120,Ein prachtvoller Kater! Die Statur eines Löwen! Das Ohr: ein Charakterzug!,A magnificent tomcat! The build of a lion! The ear: a mark of character!
 W1_LUFT_PIX_0130,"Endlich jemand mit Augen im Kopf. Wir nehmen ihn mit, junger Mann.","At last, someone with eyes in his head. We're taking him with us, young man."
 W1_LUFT_PIX_0130_2,"Nein? Dann komme ich eben jeden Tag hierher. Ich habe nichts gegen lange Wege, solange man mich trägt.","No? Then I'll simply come here every day. I don't mind long journeys, as long as I'm carried."
-W1_LUFT_MAX_0140,"Wolken, auf denen man laufen kann. Ich frag lieber nicht nach, wie das funktioniert.",Clouds you can walk on. I'd rather not ask how that works.
+W1_LUFT_MAX_0140,"Wolken, auf denen man laufen kann. Ich hüpf lieber nicht. Wegen der Leute unten.",Clouds you can walk on. I'd rather not jump. Because of the people below.
 W1_LUFT_MAX_0145,"Ich bin auf eine draufgetreten, und sie hat leise gequietscht. Wie ein Sofakissen mit Höhenangst.","I stepped on one, and it squeaked quietly. Like a sofa cushion that's scared of heights."
 W1_LUFT_MAX_0150,"Die Maklerin. Dutt, Klemmbrett und ein Lächeln, unter dem noch Kleingedrucktes steht.","The estate agent. Hair bun, clipboard and a smile with small print underneath."
 W1_LUFT_MAX_0155,"Sie lächelt, wenn sie „Wolkenblick“ sagt. Wenn sie „Kaution“ sagt, lächelt sie noch mehr.","She smiles when she says ""cloud view"". When she says ""deposit"", she smiles even more."
-W1_LUFT_MAX_0160,"Kurze Haare, die Krone mit einer Schnur festgebunden, ein Umzugskarton unterm Arm. Entführt sieht ehrlich gesagt anders aus.","Short hair, crown tied on with string, moving box under her arm. Honestly, kidnapped looks different."
+W1_LUFT_MAX_0160,"Kurze Haare, die Krone mit einer Schnur festgebunden, ein Umzugskarton unterm Arm. Entführt sieht anders aus.","Short hair, crown tied on with string, moving box under her arm. Kidnapped looks different."
 W1_LUFT_MAX_0165,"Sie trägt das Schwert über dem Karton. Das ist keine Prinzessin, die gerettet werden will, das ist eine, die umzieht.","She carries her sword on top of the box. That's not a princess who wants rescuing, that's one who's moving house."
 W1_LUFT_PIX_0170,"Karton, Kronenpolitur und Entschlossenheit. Diese Frau riecht nach einem Plan.","Cardboard, crown polish and determination. This woman smells of a plan."
 W1_LUFT_PIX_0170_2,"Das ist selten. Die meisten Menschen riechen nach Mittagessen, und das meine ich nicht als Kritik.","That's rare. Most people smell of lunch, and I don't mean that as a criticism."
@@ -2228,7 +2225,7 @@ W1_LUFT_PIX_0270,Das ist die klügste Person dieser Welt.,That is the cleverest 
 W1_LUFT_PIX_0270_2,"Ich sage so etwas ungern über Menschen, und noch weniger gern laut.","I say such things about humans reluctantly, and even more reluctantly out loud."
 W1_LUFT_MAX_0280,Was ist mit der Maklerin?,What about the estate agent?
 W1_LUFT_ZEL_0290,"Will Provision in Drachengold. Ich hab Kronen, keine Drachen. Und sie lässt nicht mit sich reden. Glaub mir, ich bin bei sechs Monatsmieten.","She wants commission in dragon gold. I have crowns, not dragons. And she won't be talked round. Believe me, I'm up to six months' rent."
-W1_LUFT_PIX_0300,"Das geht uns nichts an. Wir wollen ein Ei, und zwar nur ein Ei.","That's none of our business. We want an egg, and only an egg."
+W1_LUFT_PIX_0300,Das geht uns nichts an. Wir wollen ein Ei. Nur ein Ei.,That's none of our business. We want an egg. Only an egg.
 W1_LUFT_PIX_0300_2,"Die Wohnungssuche fremder Leute ist das Langweiligste, was ich kenne, und ich kenne Regen.","Other people's flat-hunting is the most boring thing I know, and I know rain."
 W1_LUFT_MAX_0310,Ja. … Trotzdem.,Yes. … Still.
 W1_LUFT_MAX_0320,Später.,Later.
@@ -2278,12 +2275,12 @@ W1_LUFT_PIX_0810_2,"und ich empfehle dir dasselbe. Fragen machen schwer, und auf
 W1_LUFT_PIX_0820,Die Maklerin hat dich zweimal von oben bis unten taxiert.,The estate agent has sized you up twice from head to toe.
 W1_LUFT_PIX_0820_2,Für sie bist du ein Objekt mit Sanierungsbedarf. Ich widerspreche ihr ungern.,To her you're a property in need of renovation. I hate to contradict her.
 W1_BERG_GRI_0010,"STREIK! Keiner kommt durch! Nicht mal du, Langer!","STRIKE! Nobody gets through! Not even you, beanpole!"
-W1_BERG_MAX_0020,"Sieht aus wie Montagmorgen, nur grüner.","Looks like Monday morning, only greener."
+W1_BERG_MAX_0020,"Goblins, die nichts tun. Aber organisiert.",Goblins doing nothing. But organised.
 W1_BERG_MAX_0025,"Einer hat ein Schild „Wir sind Goblins, keine Maschinen“. Darunter: „Okay, Maschinen auch nicht.“","One of them has a sign: ""We are goblins, not machines."" Underneath: ""Okay, not machines either."""
 W1_BERG_MAX_0030,"Streikschilder ohne Text. Die Forderung ist so klar, dass sie keiner aufschreiben musste.",Picket signs with no writing. The demand is so obvious nobody had to write it down.
 W1_BERG_MAX_0035,"Auf der Rückseite von einem Schild steht eine Einkaufsliste: Pilze, Kaffee, Würde.","On the back of one sign there's a shopping list: mushrooms, coffee, dignity."
 W1_BERG_MAX_0040,"Loren auf Schienen, und die Schienen enden direkt im Streikposten. Sehr konsequent, muss man sagen.","Mine carts on rails, and the rails end right at the picket line. Very consistent, you have to admit."
-W1_BERG_MAX_0045,"In einer Lore schläft eine Fledermaus. Ich glaube, die streikt auch, aus Solidarität.","There's a bat asleep in one of the carts. I think it's on strike too, out of solidarity."
+W1_BERG_MAX_0045,In einer Lore schläft eine Fledermaus. Die streikt auch. Aus Solidarität.,There's a bat asleep in one of the carts. It's on strike too. Out of solidarity.
 W1_BERG_MAX_0050,Sogar die Kaffeemaschine streikt. Die meint das wahrscheinlich ernster als alle anderen hier.,Even the coffee machine is on strike. It probably means it more than anyone else here.
 W1_BERG_MAX_0055,Ein Zettel klebt dran: „Kaffee nur für Gewerkschaftsmitglieder.“ Darunter: „Und auch nicht.“,"There's a note stuck to it: ""Coffee for union members only."" Underneath: ""Not them either."""
 W1_BERG_PIX_0060,"Kaffee von vorgestern. Das ist kein Streik mehr, junger Mann, das ist Resignation mit Filter.","Coffee from the day before yesterday. That's not a strike anymore, young man, that's resignation with a filter."
@@ -2293,13 +2290,13 @@ W1_BERG_PIX_0065_2,"Wir respektieren uns nicht, der Kaffee und ich, und wir werd
 W1_BERG_MAX_0070,"Fackeln, die so schwach leuchten, dass sie praktisch im Nachtmodus sind.",Torches so dim they're practically in night mode.
 W1_BERG_MAX_0075,"Eine Fackel geht aus, als ich hingucke. Ich hab sie nicht angefasst, das schwör ich beim Streik.","A torch goes out as I look at it. I didn't touch it, I swear on the strike."
 W1_BERG_MAX_0080,"Eine Steinwand mit einer Rune drauf. Das sieht nach einer Tür aus, aber auch sehr nach „noch nicht“.","A stone wall with a rune on it. That looks like a door, but also very much like ""not yet""."
-W1_BERG_MAX_0085,Ich hab gegen die Rune geklopft. Es klingt hohl und irgendwie ein bisschen beleidigt.,I knocked on the rune. It sounds hollow and somehow a bit offended.
+W1_BERG_MAX_0085,Ich hab gegen die Rune geklopft. Es klingt hohl. Von drinnen klopft keiner zurück. Gut so.,I knocked on the rune. It sounds hollow. Nobody knocks back from inside. Good.
 W1_BERG_MAX_0090,"Die Rune leuchtet. Das ist der Kellereingang zum Turm, also geht's nach oben erst mal nach unten.","The rune is glowing. That's the cellar entrance to the tower, so the way up starts by going down."
-W1_BERG_MAX_0095,"Die Rune pulsiert, als hätte sie Herzklopfen. Ich glaube, sie freut sich auf Besuch.",The rune's pulsing like it has a racing heart. I think it's looking forward to visitors.
+W1_BERG_MAX_0095,"Die Rune pulsiert, als hätte sie Herzklopfen.",The rune's pulsing like it has a racing heart.
 W1_BERG_MAX_0100,"Der Gewerkschaftsboss. Gelber Helm, Trillerpfeife, Unterbiss. Der verhandelt um jeden Stein.","The union boss. Yellow helmet, whistle, underbite. He haggles over every stone."
 W1_BERG_MAX_0105,"Er pfeift, wenn er nachdenkt, und er denkt ziemlich oft nach. Seine Gewerkschaft hat bestimmt Kopfschmerzen.","He whistles when he's thinking, and he thinks a lot. His union must have a headache."
 W1_BERG_MAX_0110,"Ein dünner Goblin mit Spitzhacke und Stirnlampe. Die Lampe ist aus, und das ist der ganze Streik.","A skinny goblin with a pickaxe and a head torch. The torch is off, and that's the whole strike."
-W1_BERG_MAX_0115,"Er poliert während des Streiks seine Spitzhacke, für den Tag danach. Der Mann ist ein Optimist.","He's polishing his pickaxe during the strike, for the day after. The guy's an optimist."
+W1_BERG_MAX_0115,Er poliert im Streik seine Spitzhacke. Heimlich. Grimmzahn darf das nicht sehen.,He's polishing his pickaxe during the strike. In secret. Grimtooth mustn't see.
 W1_BERG_MAX_0120,"Ein runder Goblin mit Becher, der im Stehen schläft. Respekt, das schaff ich nur im Liegen.","A round goblin with a mug, asleep standing up. Respect, I can only do that lying down."
 W1_BERG_MAX_0125,Er hat im Schlaf „mehr Urlaub“ gemurmelt. Manche Träume muss man einfach laut sagen.,"He mumbled ""more holidays"" in his sleep. Some dreams you just have to say out loud."
 W1_BERG_PIX_0130,"Schlaf, Kaffee und Schweinsleder. Dieser Goblin hat sein Leben im Griff.","Sleep, coffee and pigskin. This goblin has his life under control."
@@ -2307,7 +2304,7 @@ W1_BERG_PIX_0130_2,"Er hat begriffen, worauf es ankommt, und das ist mehr, als i
 W1_BERG_PIX_0135,"Er hat sich im Schlaf umgedreht und einfach weitergeschlafen, ganz ohne Kissen.","He rolled over in his sleep and simply carried on sleeping, without a cushion."
 W1_BERG_PIX_0135_2,"Das ist wahre Größe. Ich bin beeindruckt, und ich bin selten beeindruckt.","That is true greatness. I am impressed, and I am rarely impressed."
 W1_BERG_MAX_0140,Ich puste nicht in fremde Fackeln. Die haben's schon schwer genug.,I'm not blowing into other people's torches. They've got it hard enough already.
-W1_BERG_MAX_0150,"Sie zischt mich an. Ich glaube, das ist Solidarität.",It's hissing at me. I think that's solidarity.
+W1_BERG_MAX_0150,Sie zischt mich an. Verstanden: kein Kaffee.,It's hissing at me. Understood: no coffee.
 W1_BERG_MAX_0160,"Eine Lorenfahrt? Bis zum Streikposten sind es zehn Meter, die geh ich lieber zu Fuß.","A cart ride? It's ten metres to the picket line, I'd rather walk."
 W1_BERG_MAX_0170,Zu. Eine Rune ist halt kein Klingelknopf.,Shut. A rune just isn't a doorbell.
 W1_BERG_GRI_0180,Eine Katze. Gewerkschaft der Katzen? Gibt's nicht? Und das lasst ihr euch gefallen?,A cat. A cats' union? There isn't one? And you put up with that?
@@ -2367,15 +2364,15 @@ W1_TURM_PIX_0020,"Besen. Drei Stück, und alle verzaubert. Ich kenne diesen Blic
 W1_TURM_PIX_0020_2,"Der Besen in der Schule hatte ihn auch, kurz bevor er mich durch das halbe Klassenzimmer gejagt hat.","The broom at the school had it too, just before it chased me across half the classroom."
 W1_TURM_ZEL_0030,Ein Hausmeister hätte hier nicht geschadet.,A caretaker wouldn't have hurt down here.
 W1_TURM_GRI_0040,"Ich fange an, wenn die Besen weg sind. Steht im Vertrag. Den ich mir gerade ausdenke.",I start when the brooms are gone. It's in the contract. Which I'm making up right now.
-W1_TURM_MAX_0050,"Eine gerade Linie aus roten Fliesen, und ein Besen fegt sie rauf und runter, immer gleich. Das kommt mir ziemlich bekannt vor.","A straight line of red tiles, and one broom sweeps it up and down, always the same. That feels pretty familiar."
-W1_TURM_MAX_0055,"Der Besen auf der geraden Strecke pfeift dabei. Er hat einen Ohrwurm, und ich ahne, welchen.","The broom on the straight route whistles while it works. It's got an earworm, and I can guess which one."
+W1_TURM_MAX_0050,"Eine gerade Linie aus roten Fliesen, und ein Besen fegt sie rauf und runter, immer gleich. Der hat den sichersten Job im Turm.","A straight line of red tiles, and one broom sweeps it up and down, always the same. That's the safest job in the tower."
+W1_TURM_MAX_0055,Der Besen auf der geraden Strecke pfeift dabei. Es ist das Goblin-Lied. Das hat sich rumgesprochen.,The broom on the straight route whistles while it works. It's the goblin song. Word gets around.
 W1_TURM_MAX_0060,"Zickzack-Fliesen. Der Besen hält sich so genau dran, als gäbe es Punkte dafür.",Zigzag tiles. The broom sticks to them so precisely you'd think it was getting points.
 W1_TURM_MAX_0065,"Zick, zack, zick. Wenn dieser Besen einmal geradeaus fegen müsste, würde er wahrscheinlich umfallen.","Zig, zag, zig. If this broom ever had to sweep in a straight line, it would probably fall over."
 W1_TURM_MAX_0070,"Eine Schleife aus Fliesen, und der dritte Besen dreht darauf seine Runden. Autoplay für Besen.","A loop of tiles, and the third broom is doing laps on it. Autoplay for brooms."
 W1_TURM_MAX_0075,"Er dreht und dreht. Ich krieg vom Zugucken einen Drehwurm, und er sieht dabei total entspannt aus.","Round and round it goes. I'm getting dizzy just watching, and it looks totally relaxed."
 W1_TURM_MAX_0080,"Hier kreuzen sich zwei Wege. Ein guter Platz, um etwas fallen zu lassen. Etwas Haariges.",Two paths cross here. A good spot to drop something. Something hairy.
 W1_TURM_MAX_0085,"Auf der Kreuzung ist ein Fleck, da ist schon mal was runtergefallen. Etwas Klebriges. Ich tippe auf Zufall.","There's a stain on the crossing, so something's been dropped here before. Something sticky. I'm going with coincidence."
-W1_TURM_MAX_0090,"Ein Besen mit Gesicht, und zwar einem wütenden. Er fegt alles, was sich bewegt, also beweg ich mich lieber nicht.","A broom with a face, an angry one. It sweeps anything that moves, so I'd rather not move."
+W1_TURM_MAX_0090,"Ein Besen mit wütendem Gesicht. Er fegt alles, was sich bewegt, also beweg ich mich lieber nicht.","A broom with an angry face. It sweeps anything that moves, so I'd rather not move."
 W1_TURM_MAX_0095,"Die Besen sind verzaubert. Ich bräuchte jetzt einen alten Meister mit Hut, der „Halt“ ruft, aber so einer kommt nur in Filmen.","The brooms are enchanted. What I need now is an old master in a hat who shouts ""Stop"", but that only happens in films."
 W1_TURM_PIX_0100,Er sieht mich an. Genauer gesagt sieht er mein Fell an.,"It's looking at me. More precisely, it's looking at my fur."
 W1_TURM_PIX_0100_2,"Ich fühle mich gleichzeitig wie Beute und wie Werkzeug, und keins von beidem steht mir.","I feel like prey and a tool at the same time, and neither suits me."
@@ -2423,7 +2420,7 @@ W1_TURM_PIX_0325_2,"Den mit dem Schal. Er hat Stil, und ich kratze nur an Dingen
 W1_TURM_MAX_0330,"Eimer, Fahnen, Lappen. Das ist Smaugis Einsteigerkram, der richtige Kram wartet bestimmt weiter oben.","Buckets, flags, rags. That's Smaugi's beginner stuff, the real stuff is probably waiting further up."
 W1_TURM_MAX_0335,"Eine Fahne hat ein Drachenwappen, das ziemlich schief gestickt ist. Das hat Smaugi selbst gemacht, man sieht die Mühe.","One flag has a dragon crest on it, embroidered pretty crookedly. Smaugi did that himself, you can see the effort."
 W1_SMAU_SMA_0010,Nicht anfassen! Das … das ist alles noch gut.,Don't touch! That … that's all still good.
-W1_SMAU_MAX_0020,"Ein Drache mit Kopftuch, der auf einem Haufen Gerümpel sitzt. Das hab ich mir irgendwie anders vorgestellt.","A dragon in a headscarf, sitting on a pile of junk. I somehow pictured this differently."
+W1_SMAU_MAX_0020,"Ein Drache mit Kopftuch, der auf einem Haufen Gerümpel sitzt. Das hab ich mir anders vorgestellt.","A dragon in a headscarf, sitting on a pile of junk. I pictured this differently."
 W1_SMAU_SMA_0030,"Seit die Besen da sind, finde ich alles. Das ist noch schlimmer.","Since the brooms arrived, I can find everything. That's even worse."
 W1_SMAU_HUM_0040,Fondue-Lieferung für eine Einweihung! Wer hat bestellt?,Fondue delivery for a housewarming! Who ordered?
 W1_SMAU_ZEL_0050,Ich. Vorsichtshalber.,Me. Just in case.
@@ -2437,20 +2434,20 @@ W1_SMAU_PIX_0095,"Ich habe darüber nachgedacht. Drei Minuten sind zu lang, zwei
 W1_SMAU_PIX_0095_2,"Ich bin Feinschmecker, und Feinschmecker irren sich nur beim Essen anderer Leute.","I am a gourmet, and gourmets are only ever wrong about other people's food."
 W1_SMAU_MAX_0100,"Gold, haufenweise. Und er sitzt darauf, als wäre es ein Sitzsack.","Gold, heaps of it. And he's sitting on it like it's a beanbag."
 W1_SMAU_MAX_0105,"Eine Münze rollt den Haufen runter, und Smaugi zuckt. Ich wette, er zählt sie sogar im Schlaf.","A coin rolls down the pile, and Smaugi flinches. I bet he counts them in his sleep."
-W1_SMAU_MAX_0110,Ein schiefer Kronleuchter. Zeldina guckt ihn an wie ich ein neues Handy.,A crooked chandelier. Zeldina's looking at it the way I look at a new phone.
-W1_SMAU_MAX_0115,"Eine Kerze ist schief. Zeldina hat sie schon zweimal angeguckt, ich glaube, sie plant eine Renovierung.","One candle's crooked. Zeldina's looked at it twice already, I think she's planning a renovation."
+W1_SMAU_MAX_0110,Ein schiefer Kronleuchter. Zeldina misst schon die Decke aus.,A crooked chandelier. Zeldina's already measuring the ceiling.
+W1_SMAU_MAX_0115,"Eine Kerze ist schief. Zeldina hat sie schon zweimal angeguckt, sie plant eine Renovierung.","One candle's crooked. Zeldina's looked at it twice already, she's planning a renovation."
 W1_SMAU_MAX_0120,Ein Bündel rostiger Schwerter ohne Namen. Für Humbert wäre das ein Tierheim voller Welpen.,"A bundle of rusty swords with no names. For Humbert, that would be a shelter full of puppies."
 W1_SMAU_MAX_0125,"An einem Schwert hängt noch ein Preisschild: „Wie neu.“ Es ist nicht wie neu, es ist wie alt.","One sword still has a price tag on it: ""As new."" It's not as new, it's as old."
 W1_SMAU_MAX_0130,"Alte Fackeln, ausgebrannt. Für die Goblins sind die trotzdem noch besser als ihre eigenen.","Old torches, burnt out. For the goblins they're still better than their own."
-W1_SMAU_MAX_0135,Ich hab an einer gerochen: Rauch und Ruß. Für einen Goblin ist das wahrscheinlich das Parfüm des Sieges.,I sniffed one: smoke and soot. For a goblin that's probably the perfume of victory.
+W1_SMAU_MAX_0135,Ich hab an einer gerochen: Rauch und Ruß. Grimmzahn hat auch gerochen. Er hat Tränen in den Augen.,I sniffed one: smoke and soot. Grimtooth had a sniff too. He's got tears in his eyes.
 W1_SMAU_MAX_0140,"Wenn ich da reinblase, fängt's bestimmt an zu regnen.","If I blow into that, it'll probably start raining."
 W1_SMAU_MAX_0145,"Sie hat sieben Löcher. Ich weiß nicht, welche Melodie man darauf spielt, aber irgendwie kenn ich sie trotzdem.","It has seven holes. I don't know what tune you play on it, but somehow I know it anyway."
 W1_SMAU_MAX_0150,"Töööt. Es regnet nicht, aber Smaugi hat kurz hochgeguckt. Das reicht mir als Erfolg.","Toooot. It's not raining, but Smaugi looked up for a second. I'll count that as a success."
 W1_SMAU_PIX_0160,"Wer das herauszieht, wird König.",Whoever pulls this out becomes king.
-W1_SMAU_PIX_0160_2,"Oder er bekommt Rücken, junger Mann. Nach allem, was ich über Könige weiß, ist das ungefähr dasselbe.","Or gets a bad back, young man. From what I know about kings, that's roughly the same thing."
+W1_SMAU_PIX_0160_2,"Oder er bekommt Rücken, junger Mann.","Or gets a bad back, young man."
 W1_SMAU_PIX_0165,"Ich habe daran gezogen, mit einer Kralle, und es hat sich nichts getan. Ich bin also kein König.","I pulled on it, with one claw, and nothing happened. So I am not a king."
 W1_SMAU_PIX_0165_2,"Ich bin etwas Besseres, nämlich eine Katze. Das wusste ich schon, aber es ist schön, es bestätigt zu bekommen.","I am something better, namely a cat. I knew that already, but it's nice to have it confirmed."
-W1_SMAU_MAX_0170,"Steckt fest. Ich bin also kein König, aber das weiß ich eigentlich schon seit der Grundschule.","Stuck. So I'm not a king, but honestly I've known that since primary school."
+W1_SMAU_MAX_0170,"Steckt fest. Ich bin also kein König, aber das weiß ich schon seit der Grundschule.","Stuck. So I'm not a king, but I've known that since primary school."
 W1_SMAU_MAX_0180,"Ein rostiger Helm, ein kaputter Spiegel, eine Socke und eine Teekanne. Ein Flohmarkt, auf den nie jemand gekommen ist.","A rusty helmet, a broken mirror, a sock and a teapot. A flea market nobody ever came to."
 W1_SMAU_MAX_0185,"Im kaputten Spiegel sehe ich mich siebenmal. Keiner davon hat eine Ahnung, was er hier tut.",In the broken mirror I see myself seven times. None of them has a clue what he's doing here.
 W1_SMAU_PIX_0190,"Staub, Gold und Drachenschweiß. Und irgendwo da drin eine einzelne Socke,","Dust, gold and dragon sweat. And somewhere in there a single sock"
@@ -2477,7 +2474,7 @@ W1_SMAU_MAX_0850,Was muss man denn sagen?,What do you have to say?
 W1_SMAU_SMA_0860,"Das Passwort. Es hat mehrere Teile, und keiner hier kennt alle. Ich kenne keinen. Ich höre nur das Kichern.","The password. It has several parts, and nobody here knows all of them. I don't know any. I just hear the giggling."
 W1_SMAU_MAX_0370,Warum sammelst du das alles?,Why do you collect all this?
 W1_SMAU_SMA_0380,Ich sammle nicht. Ich bewahre. Für den Fall. Welchen Fall? Den Fall! Irgendeinen Fall!,I don't collect. I keep. Just in case. In case of what? In case! Any case!
-W1_SMAU_PIX_0870,"Ich kenne das. Ich bewahre auch, und zwar unter dem Sofa.","I know that feeling. I keep things too, under the sofa."
+W1_SMAU_PIX_0870,Ich bewahre auch. Unter dem Sofa.,I keep things too. Under the sofa.
 W1_SMAU_PIX_0870_2,"Was genau, verrate ich nicht. Aber es ist sehr gut sortiert, und ein Teil davon ist eine Olive.","What exactly, I shan't reveal. But it is very well sorted, and part of it is an olive."
 W1_SMAU_SMA_0880,"Ein Kollege! Was bewahrst du? Nein, sag es nicht. Ich will es auch haben.","A colleague! What do you keep? No, don't tell me. I'll want it too."
 W1_SMAU_MAX_0390,Bis gleich.,See you in a bit.
@@ -2517,7 +2514,7 @@ W1_SMAU_ZEL_0790,"Sieben Stockwerke, und die Tür hat einen Mutterkomplex. Ich n
 W1_SMAU_PIX_0800,"Der Drache seufzt alle dreißig Sekunden, ich habe mitgezählt.","The dragon sighs every thirty seconds, I've been counting."
 W1_SMAU_PIX_0800_2,"Ich hatte sonst nichts zu tun, und du offenbar auch nicht.","I had nothing else to do, and apparently neither do you."
 W1_SMAU_PIX_0810,Die Besen fegen Smaugis Haufen zu Stapeln. Ordnung durch Terror.,The brooms are sweeping Smaugi's heap into piles. Order through terror.
-W1_SMAU_PIX_0810_2,"Ich kenne das von deiner Großmutter, wenn sich Besuch angekündigt hat.","I know it from your grandmother, whenever visitors are announced."
+W1_SMAU_PIX_0810_2,"Deine Großmutter macht das auch, wenn sich Besuch angekündigt hat.",Your grandmother does the same whenever visitors are announced.
 W1_SMAU_MAX_0820,Erst das Ei. Von einem Dunklen Lord stand auf Opas Zettel nichts drauf.,Egg first. Grandpa's note didn't say anything about a Dark Lord.
 W1_THRO_MOD_0010,Wer wagt es … hatschi … meinen Thronsaal zu betreten?,Who dares … atchoo … enter my throne room?
 W1_THRO_MAX_0020,Ich. Wegen eines Eis. Das hab ich aber schon.,"Me. Because of an egg. Which I've already got, though."
@@ -2532,19 +2529,19 @@ W1_THRO_MAX_0125,"Auf einem Taschentuch sind Initialen: „L. M.“ Lord Moderwo
 W1_THRO_MAX_0130,"Blumen, im Thronsaal von einem Dunklen Lord mit Heuschnupfen. Das ist entweder Mut, oder es war die Maklerin.","Flowers, in the throne room of a Dark Lord with hay fever. That's either courage, or it was the estate agent."
 W1_THRO_MAX_0135,An einem Strauß hängt eine Karte: „Gute Besserung. Deine Maklerin.“ Die macht also auch Hausbesuche.,"One bouquet has a card: ""Get well soon. Your estate agent."" So she does house calls too."
 W1_THRO_PIX_0140,Seite 1: „Heute böse sein.“ Seite 2 bis 300: leer.,"Page 1: ""Be evil today."" Pages 2 to 300: blank."
-W1_THRO_PIX_0140_2,Ich kenne diese Art von Tagebuch. Dein Großvater führt eins über seine Diät.,I know this kind of diary. Your grandfather keeps one about his diet.
+W1_THRO_PIX_0140_2,Dein Großvater führt so eins über seine Diät.,Your grandfather keeps one like it about his diet.
 W1_THRO_PIX_0145,Ich habe weitergeblättert. Auf Seite 301 ist ein Kringel.,I kept leafing. On page 301 there's a doodle.
 W1_THRO_PIX_0145_2,"Er hat also wenigstens gezeichnet. Das ist nicht viel, aber für einen Dunklen Lord ist es Fleiß.","So at least he drew something. It isn't much, but for a Dark Lord it counts as diligence."
 W1_THRO_MAX_0150,"Ein Lerntagebuch mit Totenkopf. Innen steht ein Vorsatz, und dann kommt ganz viel Platz.","A study diary with a skull on it. Inside there's one resolution, and then loads of empty space."
 W1_THRO_MAX_0155,Auf der letzten Seite steht ganz klein „Morgen.“ Und auf der davor auch. Das Gefühl kenne ich.,"On the last page it says, really small: ""Tomorrow."" And on the page before as well. I know that feeling."
-W1_THRO_MAX_0160,"Buntglas mit Mondlicht. Sehr dramatisch, und bestimmt sehr teuer in der Reinigung.","Stained glass with moonlight. Very dramatic, and probably very expensive to clean."
+W1_THRO_MAX_0160,Buntglas mit Mondlicht. Sehr dramatisch. Der Mond hängt an einem Haken.,Stained glass with moonlight. Very dramatic. The moon's hanging from a hook.
 W1_THRO_MAX_0165,"Im Buntglas ist ein Bild von Moderwort, wie er gewinnt. Das war wohl das einzige Mal, und er hat es verglasen lassen.","The stained glass shows Mouldword winning. That was probably the only time, and he had it put in glass."
 W1_THRO_MAX_0170,"Lord Moderwort. Keine Nase, aber zwei rote Löcher, die aussehen, als hätten sie gerade geweint.","Lord Mouldword. No nose, just two red holes that look like they've just been crying."
 W1_THRO_MAX_0175,"Er schnieft und guckt sich dann um, ob es jemand gehört hat. Ich hab's gehört, aber ich sag nichts.","He sniffs and then looks around to see if anyone heard. I heard, but I'm not saying anything."
 W1_THRO_PIX_0180,"Pollenstaub, Taschentücher und Selbstmitleid.","Pollen dust, tissues and self-pity."
 W1_THRO_PIX_0180_2,"Das ist weniger ein Dunkler Lord, als ein Dunkler Schnupfen. Mit Thron.","That's less a Dark Lord, than a Dark Cold. With a throne."
-W1_THRO_PIX_0185,"Er niest leiser, wenn man ihn ansieht. Das ist entweder Höflichkeit oder Angst,","He sneezes more quietly when you look at him. That's either politeness or fear,"
-W1_THRO_PIX_0185_2,"und bei Lords ist das, nach allem, was ich gehört habe, ein und dasselbe.","and with lords, from all I've heard, that's one and the same."
+W1_THRO_PIX_0185,"Er niest leiser, wenn man ihn ansieht.",He sneezes more quietly when you look at him.
+W1_THRO_PIX_0185_2,Das ist Angst. Lords nennen es Höflichkeit.,That's fear. Lords call it politeness.
 W1_THRO_MOD_0190,Eine Katze! Katzenhaare! Hatschi! Weg mit … hatschi … dem Vieh!,A cat! Cat hair! Atchoo! Get that … atchoo … beast away!
 W1_THRO_MOD_0210,Ein Kochlöffel? Ich habe einen echten Stab! Zittere! Hat… hatschi.,A wooden spoon? I have a real staff! Tremble! Atch… atchoo.
 W1_THRO_MOD_0220,Fisch? Ich bin allergisch. Gegen alles. Hatschi.,Fish? I'm allergic. To everything. Atchoo.
@@ -2574,8 +2571,8 @@ W1_THRO_MOD_0520,Und die Maklerin kriegt keine Provision?,And the estate agent d
 W1_THRO_ZEL_0530,Die kriegt Smaugis Teekannen. Alle dreihundert.,She gets Smaugi's teapots. All three hundred.
 W1_THRO_TOA_0540,"Danke, Max! Aber die Prinzessin ist in … da ist sie. Sie ist hier. Hoheit, du bist in diesem Schloss!","Thank you, Max! But the princess is in … there she is. She's here. Your Highness, you're in this castle!"
 W1_THRO_ZEL_0550,Endlich.,Finally.
-W1_THRO_PIX_0560,"Du hast diese ganze Welt geschafft, ohne eine einzige meiner Lösungen. Ich bin … beeindruckt.",You got through this whole world without a single one of my solutions. I am … impressed.
-W1_THRO_PIX_0560_2,"Das sage ich nie wieder. Streich es aus dem Protokoll, und zwar sofort.","I'll never say that again. Strike it from the record, immediately."
+W1_THRO_PIX_0560,"Du hast diese ganze Welt geschafft, ohne eine einzige meiner Lösungen.",You got through this whole world without a single one of my solutions.
+W1_THRO_PIX_0560_2,Das war eben fast ein Lob. Streich es aus dem Protokoll.,That was very nearly praise just now. Strike it from the record.
 W1_THRO_PIX_0570,"Du hast es geschafft. Mit Hilfe, und zwar mit meiner Hilfe.","You did it. With help, namely my help."
 W1_THRO_PIX_0570_2,Deshalb gehört das Ei zu einem Drittel mir. Ich nehme den weichen Teil.,Therefore one third of the egg is mine. I'll take the soft part.
 W1_THRO_MAX_0580,"Ich hab das Ei, und auf dem Zettel steht: „Alles hängt davon ab.“ Also nichts wie zurück.","I've got the egg, and the note says: ""Everything depends on it."" So let's get back."
@@ -2590,19 +2587,19 @@ W1_THRO_PIX_0710_2,"Das ist das Traurigste, was ich heute gesehen habe, und ich 
 W1_THRO_PIX_0720,"Blumen, Taschentücher und Heuschnupfen.","Flowers, tissues and hay fever."
 W1_THRO_PIX_0720_2,"Dieser Raum ist ein Rätsel, das sich praktisch selbst löst. Man muss nur hinsehen und notfalls niesen.","This room is a puzzle that practically solves itself. You just have to look, and sneeze if necessary."
 W1_WECH_PIX_0010,"Ich übernehme. Versuch, in der Zwischenzeit nichts Wichtiges zu verpassen.",I'm taking over. Try not to miss anything important in the meantime.
-W1_WECH_PIX_0020,"Vier Pfoten, ein Gehirn und kein Inventar. Ich bin bereit, und zwar schon immer.","Four paws, one brain and no inventory. I am ready, and always have been."
+W1_WECH_PIX_0020,"Vier Pfoten, ein Gehirn und kein Inventar. Ich bin bereit. Schon immer.","Four paws, one brain and no inventory. I am ready. Always have been."
 W1_WECH_PIX_0030,"Pfoten statt Hände. Du wirst merken, dass das ein Aufstieg ist.","Paws instead of hands. You'll notice, that it's a promotion."
 W1_WECH_MAX_0040,Zurück zu dem mit den Taschen.,Back to the one with pockets.
 W1_WECH_MAX_0050,"Okay, Hände. Die hab ich vermisst.","Okay, hands. Missed those."
 W1_WECH_MAX_0060,Ich hab mich ohne mich irgendwie komisch gefühlt.,I felt kind of weird without me.
-W1_WECH_PIX_0070,"Ich trage genau einen Gegenstand, und zwar im Maul und mit Würde.","I carry exactly one item, in my mouth and with dignity."
+W1_WECH_PIX_0070,"Ich trage genau einen Gegenstand, im Maul und mit Würde.","I carry exactly one item, in my mouth and with dignity."
 W1_WECH_PIX_0070_2,Das hier ist zu groß für beides. Für das Maul und für die Würde.,This one is too big for both. For the mouth and for the dignity.
 W1_WECH_PIX_0080,"Türen und Pfoten. Du weißt, wie das endet, und ich weiß es auch.","Doors and paws. You know how that ends, and so do I."
 W1_WECH_MAX_0090,"Das ist Pixels Revier. Ich hab keine Krallen, nur Sneaker, und bei einem ist der Senkel offen.","That's Pixel's territory. I don't have claws, just trainers, and one of my laces is undone."
 W1_WECH_MAX_0100,"Miau? Miau. Ich glaube, es hat Nein gesagt. Oder es hat Hunger.",Meow? Meow. I think it said no. Or it's hungry.
 W1_WECH_PIX_0110,"Ich rede nicht mit Menschen, ich lasse mich von ihnen kommentieren.","I don't talk to humans, I let them comment on me."
 W1_WECH_PIX_0110_2,"Wechsel zu Max, wenn du Wörter brauchst. Er hat welche, wenn auch keine besonders schönen.","Switch to Max if you need words. He has some, though not particularly beautiful ones."
-W1_INV_MAX_0010,"Käsefondue in einer Schale. Es blubbert immer noch, und zwar in meiner Tasche. Ich frag lieber nicht, wie.","Cheese fondue in a bowl. It's still bubbling, in my pocket. I'd rather not ask how."
+W1_INV_MAX_0010,Käsefondue in einer Schale. Es blubbert immer noch. In meiner Tasche. Die hat jetzt eine Betriebstemperatur.,Cheese fondue in a bowl. It's still bubbling. In my pocket. Which now has an operating temperature.
 W1_INV_PIX_0015,"Geschmolzener Käse. Er klebt an allem, was er liebt.",Melted cheese. It clings to everything it loves.
 W1_INV_PIX_0015_2,Ich halte Abstand. Für diese Art von Beziehung bin ich noch nicht bereit.,I'm keeping my distance. I'm not ready for that kind of relationship yet.
 W1_INV_MAX_0020,"Ein Kochlöffel aus Holz. Der Stabmacher sagt, der Stab wählt den Zauberer. Dieser hier hat Eintopf gewählt.",A wooden cooking spoon. The wandmaker says the wand chooses the wizard. This one chose stew.
@@ -2613,27 +2610,27 @@ W1_INV_PIX_0035_2,"Ich lege mich gleich darauf, sobald du nicht hinsiehst. Aus R
 W1_INV_MAX_0040,"Rotkäppchens Bestellzettel. Ein Kästchen für „Oma“, eins für „Wolf“ und eins für „Sonstiges“. Ich bin Sonstiges.","Little Red's order form. One box for ""Grandma"", one for ""Wolf"" and one for ""Other"". I'm Other."
 W1_INV_MAX_0045,"Kleingedruckt steht da: „Lieferung nur bis zum Waldrand, danach auf eigene Gefahr.“ Ehrlich, aber ganz schön unheimlich.","The small print says: ""Delivery only to the edge of the forest, beyond that at your own risk."" Honest, but pretty creepy."
 W1_INV_MAX_0050,"Moderworts Steckbrief. Er sieht aus wie jemand, der beim Klassenfoto nie lächeln durfte.",Mouldword's wanted poster. He looks like someone who was never allowed to smile on class photo day.
-W1_INV_MAX_0055,„Belohnung: ein warmes Wort.“ Wer hat das ausgesetzt? Und warum rührt mich das?,"""Reward: a kind word."" Who offered that? And why does it move me?"
+W1_INV_MAX_0055,„Belohnung: ein warmes Wort.“ Unterschrieben hat keiner.,"""Reward: a kind word."" Nobody signed it."
 W1_INV_MAX_0060,"Ein leerer Eimer. Wenn ich reinspreche, hallt es. Der hat mehr Echo als meine Klasse, wenn der Lehrer was fragt.","An empty bucket. If I talk into it, it echoes. It's got more echo than my class when the teacher asks a question."
 W1_INV_MAX_0065,"Am Boden steht „Brunnen-Eigentum“. Ich bring ihn zurück, irgendwann. Versprochen. Fast versprochen.","On the bottom it says ""Property of the well"". I'll take it back, sometime. Promise. Almost a promise."
 W1_INV_MAX_0070,"Ein Eimer voll Wasser, der bei jedem Schritt schwappt. Ich lauf rum wie ein Kellner auf Glatteis.",A bucket full of water that sloshes with every step. I'm walking around like a waiter on black ice.
 W1_INV_PIX_0075,"Wasser in einem Eimer. Das ist eine Waffe, junger Mann.","Water in a bucket. That is a weapon, young man."
 W1_INV_PIX_0075_2,"Ich weiß es, und du weißt es. Wir reden nicht darüber, und du richtest ihn nicht auf mich.","I know it, and you know it. We won't talk about it, and you won't point it at me."
-W1_INV_MAX_0080,"Ein leerer Krug aus der Schmiede. Er hat noch kein Namensschild, also ist er bereit für ein Schicksal.","An empty jug from the smithy. It doesn't have a name tag yet, so it's ready for a destiny."
+W1_INV_MAX_0080,Ein leerer Krug aus der Schmiede. Noch ohne Namensschild. Humbert darf ihn nicht sehen.,An empty jug from the smithy. No name tag yet. Humbert mustn't see it.
 W1_INV_MAX_0085,"Ich hab „Hallo“ reingesagt, und er hat „Hallo“ zurückgesagt. Das ist immerhin ein Anfang.","I said ""hello"" into it, and it said ""hello"" back. That's a start, at least."
 W1_INV_MAX_0090,"Ein Krug Ziegenmilch. Frisch, warm und ein bisschen vorwurfsvoll. Die Ziege hat zugesehen.","A jug of goat's milk. Fresh, warm and a little reproachful. The goat was watching."
 W1_INV_PIX_0095,"Milch. Ich bin nicht stolz darauf, aber für diesen Krug würde ich Dinge tun.","Milk. I'm not proud of it, but for this jug I would do things."
 W1_INV_PIX_0095_2,"Schlimme Dinge. Dinge, nach denen man nicht mehr aufs Sofa darf.",Terrible things. Things after which you're no longer allowed on the sofa.
-W1_INV_MAX_0100,"Ein Ei vom Huhn, noch warm. Das Huhn hat mich sehr lange angeguckt, ich glaube, ich schulde ihm was.","A chicken egg, still warm. The chicken stared at me for a really long time, I think I owe it one."
+W1_INV_MAX_0100,"Ein Ei vom Huhn, noch warm. Das Huhn hat mich sehr lange angeguckt. Ich schulde ihm was.","A chicken egg, still warm. The chicken stared at me for a really long time. I owe it one."
 W1_INV_PIX_0105,"Ein Ei. Drei Minuten. Ich sage es nur,","An egg. Three minutes. I'm just saying,"
 W1_INV_PIX_0105_2,"für den Fall, dass du irgendwann einen Plan brauchst. Ich habe immer einen, und er hat immer mit Essen zu tun.","in case you ever need a plan. I always have one, and it always involves food."
 W1_INV_MAX_0110,"Ein Leuchtpilz. Ich halt ihn wie eine Taschenlampe, und das Beste ist: Er muss nie geladen werden.","A glow mushroom. I hold it like a torch, and the best part is: it never needs charging."
-W1_INV_MAX_0115,"Er leuchtet heller, wenn ich ihn lobe. Ich hab „Guter Pilz“ gesagt, und er strahlt. Wir sind jetzt Freunde.","It glows brighter when I praise it. I said ""good mushroom"", and it's beaming. We're friends now."
+W1_INV_MAX_0115,"Er leuchtet heller, wenn ich ihn lobe. Ich hab „Guter Pilz“ gesagt, und er strahlt.","It glows brighter when I praise it. I said ""good mushroom"", and it's beaming."
 W1_INV_MAX_0120,"Alwins Hinweiszettel. Seine Handschrift wandert schräg nach oben, als würde der Zettel gleich abheben.","Alwin's hint note. His handwriting slopes upwards, like the note's about to take off."
 W1_INV_MAX_0125,"Unten hat er einen Stern mit Hut gemalt. Ein Zauberer, der Sterne mit Hut malt, kann kein schlechter Mensch sein.",At the bottom he's drawn a star with a hat. A wizard who draws stars with hats can't be a bad person.
-W1_INV_MAX_0130,Ein winziges Fläschchen. Es passt kaum ein Tropfen rein. Für Tränke mit schlechtem Selbstbewusstsein.,A tiny vial. It barely holds a drop. For potions with low self-esteem.
+W1_INV_MAX_0130,Ein winziges Fläschchen. Es passt kaum ein Tropfen rein. Probiergröße.,A tiny vial. It barely holds a drop. Sample size.
 W1_INV_MAX_0135,"Auf dem Etikett steht „Trink mich“. Mach ich nicht, ich hab in Büchern gelesen, was danach passiert.","The label says ""Drink me"". Not happening, I've read in books what happens next."
-W1_INV_MAX_0140,"Jetzt ist das Fläschchen groß. Es ist gewachsen, und zwar mehr, als ich in dem Alter geschafft hab.","Now the vial is big. It grew, and more than I managed at that age."
+W1_INV_MAX_0140,Jetzt ist das Fläschchen groß. Das ging schneller als bei mir. Und ohne Stimmbruch.,Now the vial is big. That went faster than it did for me. And without the voice breaking.
 W1_INV_PIX_0145,"Eine Flasche, die wächst. Mir wäre eine Dose lieber gewesen, die wächst,","A bottle that grows. I'd have preferred a tin that grows,"
 W1_INV_PIX_0145_2,aber mich fragt ja keiner. Ich sage es nur als Anregung für den Hersteller.,but nobody asks me. I merely offer it as a suggestion to the manufacturer.
 W1_INV_MAX_0150,"Rotkäppchens Ketchup. Auf dem Etikett lacht eine Tomate. Sie weiß nicht, was mit ihren Freunden passiert ist.",Little Red's ketchup. A tomato is laughing on the label. It doesn't know what happened to its friends.
@@ -2668,15 +2665,15 @@ W1_ABS_GOL_0220,"Geh, geh. Meine Worte sind weg. Nur das Ssschätzchen bleibt. N
 W1_ABS_MAK_0225,"Bringen Sie mir ein Objekt, dann reden wir.","Bring me a property, then we'll talk."
 W1_ABS_MAK_0230,Für weitere Fragen vereinbaren Sie bitte einen Besichtigungstermin. Den nächsten habe ich in drei Jahren.,For further questions please book a viewing. My next free slot is in three years.
 W1_ABS_MAK_0240,Ich habe Ihnen alles gezeigt. Alles andere steht im Kleingedruckten. Das ist sehr klein.,I've shown you everything. Everything else is in the small print. It's very small.
-W1_HINT_PIX_0111,"Die Wirtskatze lässt dich nicht an den Topf. Sie braucht Ablenkung,","The landlord's cat won't let you near the pot. She needs distracting,"
-W1_HINT_PIX_0111_2,"und zwar charmante Ablenkung. Ich nenne keine Namen, aber einer davon fängt mit P an.","charming distracting. I name no names, but one of them begins with P."
+W1_HINT_PIX_0111,Die Wirtskatze lässt dich nicht an den Topf. Sie braucht Ablenkung.,The landlord's cat won't let you near the pot. She needs distracting.
+W1_HINT_PIX_0111_2,"Charmante Ablenkung. Ich nenne keine Namen, aber einer davon fängt mit P an.","Charming distracting. I name no names, but one of them begins with P."
 W1_HINT_PIX_0121,"Ich könnte mit Minka reden, unter Katzen sozusagen. Wechsel zu mir, falls du dich traust.","I could talk to Minka, cat to cat, so to speak. Switch to me, if you dare."
 W1_HINT_PIX_0131,Wechsel zu mir und sprich mit Minka. Ich locke sie raus. Mein Charme ist eine Naturgewalt.,Switch to me and talk to Minka. I'll lure her out. My charm is a force of nature.
-W1_HINT_PIX_0112,"Der Wirt klebt am Topf wie ich an der Heizung. Er braucht einen Grund zu gehen,","The landlord is stuck to that pot like I am to the radiator. He needs a reason to leave,"
-W1_HINT_PIX_0112_2,"und zwar einen, der möglichst weit weg liegt. Möglichst tief unten.",ideally one that's as far away as possible. As far down as possible.
+W1_HINT_PIX_0112,Der Wirt klebt am Topf wie ich an der Heizung. Er braucht einen Grund zu gehen.,The landlord is stuck to that pot like I am to the radiator. He needs a reason to leave.
+W1_HINT_PIX_0112_2,"Einen, der möglichst weit weg liegt. Möglichst tief unten.",One that's as far away as possible. As far down as possible.
 W1_HINT_PIX_0122,"Wirf einen Blick auf die Weinkarte. Da steht etwas, das ganz hinten im Keller liegt.",Take a look at the wine list. There's something on it that's right at the back of the cellar.
 W1_HINT_PIX_0132,"Bestell den Jahrgang Schicksalsberg. Den holt er aus dem Keller, und das dauert.","Order the Mount Doomsday vintage. He has to fetch it from the cellar, and that takes a while."
-W1_HINT_PIX_0113,"Gollo traut sich nicht. Er will vorher spielen, und zwar Rätselspiele, was sonst.","Gollo doesn't dare. He wants to play first, riddle games, what else."
+W1_HINT_PIX_0113,"Gollo traut sich nicht. Er will vorher spielen. Rätselspiele, was sonst.","Gollo doesn't dare. He wants to play first. Riddle games, what else."
 W1_HINT_PIX_0113_2,"Wer ihm seinen Ring abnehmen will, muss ihn erst einmal besiegen.",Whoever wants to take that ring off him has to beat him first.
 W1_HINT_PIX_0123,"Er verliert nur bei einer Frage, deren Antwort nur du kennen kannst. Etwas, das du bei dir trägst, zum Beispiel.","He only loses to a question whose answer only you can know. Something you're carrying, for example."
 W1_HINT_PIX_0133,"Zieh die Thunfischdose auf Gollo. Dann fragst du ihn, was in deiner Tasche ist. Da kommt er nie drauf.",Drag the tin of tuna onto Gollo. Then ask him what's in your pocket. He'll never guess.
@@ -2687,7 +2684,7 @@ W1_HINT_PIX_0230,"Schmier Käse auf den Löffel. Ich bin ein Kater, kein Lösung
 W1_HINT_PIX_0310,"Der Troll will drei Ziegen, und wir haben null. Das ist, wenn ich das anmerken darf, ein schlechter Start.","The troll wants three goats, and we have none. That is, if I may say so, a poor start."
 W1_HINT_PIX_0320,"Eine Ziege frisst gerade beim Schmied, eine zweite kann man am Dorfbrett bestellen. Die dritte … bitte nicht.","One goat is eating at the blacksmith's, a second one can be ordered at the village board. The third … please no."
 W1_HINT_PIX_0330,Hol die Schmiede-Ziege. Bestell die zweite mit dem Zettel am Dorfbrett und gib mir den Ziegenfell-Vorleger aus der Taverne. Ich hasse alles daran.,Fetch the forge goat. Order the second with the form from the village board and give me the goatskin rug from the tavern. I hate everything about this.
-W1_HINT_PIX_0411,"Der Troll ist ein Paragrafenreiter. Lies das Brückenschild, und zwar ganz.","The troll is a stickler for rules. Read the bridge sign, all of it."
+W1_HINT_PIX_0411,Der Troll ist ein Paragrafenreiter. Lies das Brückenschild. Ganz.,The troll is a stickler for rules. Read the bridge sign. All of it.
 W1_HINT_PIX_0421,"Im Märchen läuft immer erst die Kleine, dann die Mittlere, dann die Große.","In the fairy tale it's always the little one first, then the middle one, then the big one."
 W1_HINT_PIX_0431,"Schick die Ziegen klein, mittel, groß über die Brücke. Ich bin die Kleine. Sag's niemandem.","Send the goats over the bridge little, middle, big. I'm the little one. Don't tell anyone."
 W1_HINT_PIX_0412,Die Ziegen müssen ihren Text sagen. Sie sprechen nur Ziegisch. Ich übrigens fließend.,"The goats have to say their lines. They only speak Goatish. I'm fluent, by the way."
@@ -2704,7 +2701,7 @@ W1_HINT_PIX_0611,"Alwin will Ei, Milch und einen Leuchtpilz, also einen Pfannkuc
 W1_HINT_PIX_0611_2,"Zutaten muss man sammeln, junger Mann. Sie kommen nicht von allein, das weiß ich vom Thunfisch.","Ingredients have to be gathered, young man. They don't come by themselves, I know that from the tuna."
 W1_HINT_PIX_0621,"Ei beim Huhn in der Taverne, Pilz im Zauberwald, und Milch gibt es hier nicht. Außer bei Tieren mit Glöckchen.","Egg from the hen in the tavern, mushroom in the enchanted forest, and there's no milk here. Except from animals with bells."
 W1_HINT_PIX_0631,"Nimm den Krug aus der Schmiede, melk die Ziege, wirf Ei, Milch und Pilz in den Kessel. Ich sehe weg.","Take the jug from the forge, milk the goat, throw egg, milk and mushroom into the cauldron. I'll look away."
-W1_HINT_PIX_0612,"Sechs Flaschen, ein Zettel. Lies den Zettel, und zwar zweimal.","Six bottles, one note. Read the note, twice."
+W1_HINT_PIX_0612,"Sechs Flaschen, ein Zettel. Lies den Zettel. Zweimal.","Six bottles, one note. Read the note. Twice."
 W1_HINT_PIX_0612_2,"Er reimt sich, aber er lügt nicht. Im Gegensatz zu gewissen Nasen, die ich nicht näher bezeichnen möchte.","It rhymes, but it doesn't lie. Unlike certain noses I'd rather not specify."
 W1_HINT_PIX_0622,"Nicht am Rand. Nicht die Großen, die sind Zwillinge. Und das Fischöl steht rechts neben dem Trank. Rechts von dir aus.","Not at the ends. Not the big ones, they're twins. And the fish oil stands to the right of the potion. Right as you see it."
 W1_HINT_PIX_0632,"Flasche drei. Die dritte von links. Ich hätte vier gesagt, und ich hätte gelogen. Nimm drei.","Bottle three. The third from the left. I'd have said four, and I'd have been lying. Take three."
@@ -2716,7 +2713,7 @@ W1_HINT_PIX_0810,Eine Bohne wächst nicht in der Tasche. Sie braucht Erde. Da is
 W1_HINT_PIX_0820,"Pflanzen und gießen. Zum Gießen braucht es den Eimer vom Brunnen. Mit Wasser drin, wenn man ihn hineinhält.","Plant and water. To water it you need the bucket from the well. With water in it, if you dip it in."
 W1_HINT_PIX_0830,"Bohne in den Erdfleck, Eimer am Brunnen füllen, Wasser auf die Bohne. Dann klettern. Du. Ich werde getragen.","Bean in the soil patch, fill the bucket at the well, water on the bean. Then climb. You. I'm being carried."
 W1_HINT_PIX_0910,"Die Maklerin will Provision. Feilschen bringt nichts, Haustiere bringen Zuschläge. Sie will etwas verkaufen. Gib ihr etwas zu verkaufen.","The estate agent wants commission. Haggling gets you nowhere, pets get you surcharges. She wants to sell something. Give her something to sell."
-W1_HINT_PIX_0920,"Du hast einen Steckbrief in der Tasche. Für eine Maklerin ist das kein Steckbrief, das ist ein Exposé.","You've got a wanted poster in your pocket. To an estate agent that's not a wanted poster, it's a brochure."
+W1_HINT_PIX_0920,Du hast einen Steckbrief in der Tasche. Eine Maklerin liest so etwas als Exposé.,You've got a wanted poster in your pocket. An estate agent reads that sort of thing as a brochure.
 W1_HINT_PIX_0930,"Zeig der Maklerin Moderworts Steckbrief und preis ihr den Turm an. Sieben Stockwerke, Turmlage. Ich sage so etwas nie wieder.","Show the estate agent Mouldword's wanted poster and pitch her the tower. Seven floors, tower location. I will never say anything like that again."
 W1_HINT_PIX_1010,"Die Goblins wollen Licht und eine Unterschrift. Oder eine Karriere. Grimmzahn ist käuflich, nur nicht mit Geld.","The goblins want light and a signature. Or a career. Grimtooth can be bought, just not with money."
 W1_HINT_PIX_1020,"Weg eins: Der Leuchttrank aus Hoggelwarz ist eine Fackel, und Ketchup sieht aus wie Blut. Weg zwei: Zeldina braucht einen Hausmeister.","Option one: the glow potion from Hogglewarz is a torch, and ketchup looks like blood. Option two: Zeldina needs a caretaker."
