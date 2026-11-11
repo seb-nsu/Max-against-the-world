@@ -4,8 +4,8 @@
 >
 > - Geprüfter Stand: `main` bei Commit `6fe02fd` (enthält den Humor-Durchgang aus Pull Request 14).
 > - Arbeitszweig: `claude/project-thread-769z6c`.
-> - **Erledigt:** Dateiliste aufgenommen. Vollständig gelesen: alle Dateien unter `docs/` außer `uebersetzung/en.csv` (nur Stichprobe). Rohfunde dazu stehen im Abschnitt „Arbeitsnotizen“ ganz unten.
-> - **Als Nächstes:** Bilder ansehen (`game/grafik/`, `concepts/`, `docs/grafik/skizzen/`, Projektordner), dann Spielcode (`game/skripte`, `game/oberflaeche`, `game/tests`, `tools`, `.github/workflows`), dann zweiter Durchgang durch die Skripte je Welt für die Abschnitte C, D und E.
+> - **Erledigt:** Dateiliste aufgenommen. Vollständig gelesen: alle Dateien unter `docs/` außer `uebersetzung/en.csv` (nur Stichprobe). Alle Bilder angesehen. Rohfunde dazu stehen im Abschnitt „Arbeitsnotizen“ ganz unten.
+> - **Als Nächstes:** Spielcode (`game/skripte`, `game/oberflaeche`, `game/tests`, `tools`, `.github/workflows`), dann zweiter Durchgang durch die Skripte je Welt für die Abschnitte C, D und E.
 > - **Auftrag erweitert (Sebastian, 10. November, 22:03 Uhr):** Der Spielcode im Repository wird mitgeprüft.
 > - **Noch offen:** Story-Bibel, Abschnitte A bis N, Codeprüfung, Gesamtbild, Korrekturen, Fundliste, Zusammenfassung.
 
@@ -75,7 +75,7 @@ Die Hauptfassung liegt im Repository `seb-nsu/Max-against-the-world`. Der Projek
 | `skript/` | Vorher-Nachher-Gegenüberstellungen des Humor-Durchgangs |
 | `ui/` | 22 Menü- und Oberflächen-Entwürfe, Schrifttests |
 | `git/` | Drei Git-Bündel (Sicherungen) |
-| `uploads/hearth/` | 8 hochgeladene Dateien ohne Endung (noch zu sichten) |
+| `uploads/hearth/` | 24 hochgeladene Dateien ohne Endung: Gemini-Originale, Pixel-Tests, Schriftdateien, Bildschirmfotos |
 
 ### Was zu fehlen scheint (erster Stand)
 
@@ -373,3 +373,45 @@ Funde:
 - **Englische Fassung, Recht (Abschnitt M).** Einige englische Namen liegen näher am Original als die deutschen: „Hogwartle“ (Hoggelwarz), „Polyjuicy Lemonade“ (Vielsaft-Limo), „Wheel of Fortune Shopping“ und „Wheel of fortune studio“ (im Englischen der eingetragene Titel der Sendung), „Paw and Order“, „Morphaeus“.
 - **Englische Fassung, Kleinigkeiten:** „Sneezeroses“ (Hotspot) gegen „sneeze roses“ (Ziel); „Wettkandidat“ als „Rival contestant“ (gemeint ist ein Kandidat mit einer Wette).
 - Die englische Skriptfassung (`en.csv`, 5.607 Zeilen) ist eine abgeleitete Übersetzung. Sie wurde nicht Zeile für Zeile geprüft.
+
+### Bilder (Spielgrafik, Konzeptbilder, Layout-Skizzen, Platzhalter, Projektordner)
+
+Angesehen: alle 6 echten Hintergründe, 3 Konzeptbilder, alle 55 Layout-Skizzen, Stichproben der 453 Platzhalter, die Bilder im Projektordner (`grafik/`, `grafik-pruefung/`, `ui/`, `uploads/hearth/`).
+
+**Echte Hintergründe (`game/grafik/hintergruende/`):**
+
+- Alle sechs Bilder sind 640×360 und haben je genau 32 Farben. Aber: Dachboden, Wohnzimmer und Treppenhaus teilen **keine einzige Farbe**. Jedes Bild hat seine eigene Palette. `03-produktion.md` verspricht „eine gemeinsame 32-Farben-Palette“. Gemessen mit Pillow (Farbmengen verglichen).
+- **Dachboden** (`w0_bg_dachboden_v01.png`) gegen den Prompt in `grafik/02-prolog-und-finale.md`: Die Lampe leuchtet (Prompt: „switched off“). Das Regal ist nicht leer (Plattenspieler, Toaster, Kochbuch). Poster, ausgestopfter Fisch, Staubsauger-Prototyp, Kiste mit Fernbedienungen und Fundkiste sind ins Bild gemalt. Das passt zur Layout-Skizze (blau = in den Hintergrund malen), widerspricht aber dem Prompt („an empty shelf above“, „nothing added“). Der Prompt ist älter als Skizze und Bild. Richtig sind: Kalender mit rotem Kreis, Luke mit Ring, Kordel, Sessel, Schrank einen Spalt offen.
+- **Wohnzimmer** (`w0_bg_wohnzimmer_v01.png`): wirkt wie Abend (dunkel, grünstichig, Lampe an, kein Tageslicht). Der Prolog spielt an einem „ruhigen Nachmittag“. Das erste Bild des Spiels wirkt düster statt gemütlich. Die „leere Stelle mit Staubrand“ auf dem Couchtisch fehlt (Hotspot „Leerer Platz auf dem Couchtisch“, der Hinweis auf die verschwundene Fernbedienung). Der Fernseher steht schräg, nicht „screen facing the viewer“. Der Schrank ist etwa 320 Pixel hoch (89 % der Bildhöhe); die Regel im Konzept-Baustein sagt etwa 50 %. Die Möbel sind damit rund 1,5-mal so groß wie auf dem Dachboden (Schrank dort etwa 180 Pixel). Max (189 Pixel) wirkt daneben klein. Das Gemini-Original (im Projektordner) ist wärmer und heller; das Pixelieren hat es stumpf gemacht.
+- **Treppenhaus** (`w0_bg_treppenhaus_v01.png`): Fenster zeigt Nachthimmel, Deckenlampe an. Kartons unter der Treppe sind dazugekommen. Hut, Mäntel, Schirm, freier Haken, Durchgang, Luke stimmen.
+- **Tageszeit im Prolog passt nicht zusammen:** Wohnzimmer (Abend), Treppenhaus (Nacht im Fenster), Dachboden (Sonnenstrahl). `P0_TREP_MAX_0020` „Draußen wird es langsam dunkel.“ folgt dem Bild, nicht dem Konzept (Nachmittag).
+- **Rückkehr 1 bis 3:** Umfärbungen des Dachbodens (`tools/stimmung.py`). Der Sonnenstrahl hat in allen vier Fassungen denselben Winkel. Die Lampe wirkt in allen vier an (Vorgabe: aus bis Rückkehr 3). Der Kalenderkreis wächst noch nicht (Vorgabe: von Hand in Aseprite). Im Skript ist der wachsende Kreis ein tragender Gag.
+
+**Konzeptbilder (`concepts/`):**
+
+- `w0_concept_dachboden.png`: alte Dreiviertel-Ansicht vom 6. November. Überholt durch die Frontal-Regel. Wer es als Referenz anhängt, bekommt den falschen Blickwinkel.
+- `w0_concept_max.png`: passt zum Steckbrief. Der Kapuzenpulli ist heller grau als die Vorgabe `#3a4466`. Am unteren Rand sind Bedienelemente einer Chat-Oberfläche zu sehen (Bildschirmfoto statt Bildexport). Zuschneiden.
+- `w0_concept_pixel.png`: passt (Streifen, weiße Brust, rotes Halsband, Lautsprecher mit türkisem Licht, bernsteinfarbene Augen). Die Kerbe im Ohr ist nur in einigen Ansichten da. Auf der Stirn sind leichte Streifen, obwohl der Steckbrief „no tabby markings on the face“ sagt.
+
+**Layout-Skizzen (`docs/grafik/skizzen/`, 55 Stück):**
+
+- Prolog, Welt 1, Welt 2 und Finale sind von Hand gesetzt und brauchbar.
+- **Alle 26 Skizzen von Welt 3 und Welt 4 sind automatische Raster.** Gleich große Kästen in Reihen unter der Decke, Figuren in gleichen Abständen. Im Raster stehen auch Dinge, die kein Gegenstand sind (Himmel, Sonne, Mond, Nebel), Zustandsvarianten als eigene Kästen („Bananenschale im Mitternachts-TV“) und Oberflächen-Elemente (Bilderrahmen 1 bis 4, Autoplay-Countdown). Der Kopf von `tools/layout/welt-3.yaml` sagt das selbst: „Die Hotspots liegen hier nur im Raster nebeneinander“. Die fertigen Prompts sagen aber weiter: „Use the attached sketch only for the position and size of objects and exits“. Für Welt 3 und 4 widerspricht die Skizze dem Motivtext. Auch die Graubox von Welt 3 und 4 nutzt dieses Raster. Spieltests zur Raumaufteilung sagen dort nichts aus. Schwere: mittel.
+- Die Legende nennt Violett (Figuren) nicht.
+- Alle Figurenkästen sind menschengroß, egal wie groß die Figur ist (Schildkröte, Schwan, Sobek, Huhn, Minka, Schmiede-Ziege). Die Sphinx ist ein menschengroßer Kasten, obwohl sie laut Motiv das Bild füllt.
+- Beschriftungen nutzen umgeschriebene Kennungen statt Namen („Faehrmann“, „Rotkaeppchen“, „Schildkroete“, „Strassenmusiker“, „SphinxFigur“).
+- Außenszenen sind als Zimmer mit Rückwand gezeichnet. Beschriftungen überlappen sich teils.
+
+**Platzhalter (`game/grafik/platzhalter/`, 453 Bilder):** erzeugte beschriftete Kästen. Beschriftungen sind abgeschnitten („Kellert“, „Drachen-S“, „Stehlam“). In der Savanne sind sie unlesbar klein. Für eine Graubox reicht das.
+
+**Projektordner:**
+
+- `export/` (9. November) und `konzepte/` (6. November) sind ältere Kopien der Dokumente im Repository, also vor dem Humor-Durchgang. Nicht noch einmal Zeile für Zeile gelesen. Wer dort liest, liest alten Text.
+- `uploads/hearth/` enthält 24 Dateien (nicht 8, wie oben zuerst notiert): vier Gemini-Originale (2752×1536) von Dachboden, Wohnzimmer, Treppenhaus; Pixel-Tests in 480×270; die Schrift Monogram; Bildschirmfotos aus Godot und dem laufenden Spiel; ein Bildschirmfoto der Retro-Diffusion-Einstellungen.
+- Menü-Übersicht (10. November, 05:20 Uhr): Der Epilepsie-Hinweis ist ohne Zeilenumbruch abgeschnitten („… epileptische Ar“). Das Hauptmenü hatte da 5 Kanäle. Die Fenstergröße bietet 1440×810 an (Faktor 2,25, also keine ganzen Pixel). Im Code noch zu prüfen.
+- Bildschirmfoto Reisetasche: Hilfetext „Klick packt ein oder aus. Rechtsklick: Pixel fragen.“ (nur Maus). Ein Untertitel („Die Socke sorti…“) läuft hinter dem Fenster weiter und überlappt.
+
+### Aus `/mnt/project-files/skript/prolog-vorher-nachher.md` und `welten-vorher-nachher.md`
+
+- Beide vollständig gelesen. Für C und E wichtig: Die „Nachher“-Zeilen sind durchweg länger und erklären oft ihren eigenen Witz. Beispiel `P0_DACH_PIX_0360`: vorher „Barbarisch. Gib her.“, nachher eine lange Fassung. `SYS_WDH_PIX_0080`: „Das ist gelogen, ich sage nie Bescheid. Aber es klingt nett.“
+- Notiz dort: In Welt 3 sind „Es gibt keinen Löffel“, „Herr Anderson“, „Fehler in der Matrix“ und ein doppelter Kaninchenbau gestrichen. „junger Mann“ von über 300 auf etwa 75 ausgedünnt.
