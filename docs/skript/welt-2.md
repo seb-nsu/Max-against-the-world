@@ -634,7 +634,7 @@ Max wägt Krone und Barren (gleich schwer), taucht beide nacheinander in die Bad
 | W2\_KRON\_ARC\_0120 | Archimedes | Mehr Wasser! Gleiches Gewicht! Größeres Volumen! Leichteres Metall! Falsche Krone! Ich … ich … | Augen weit |
 | W2\_KRON\_ARC\_0130 | Archimedes | HEUREKA! | springt in die Wanne und wieder raus, rennt mit flatterndem Handtuch zur Tür hinaus |
 | W2\_KRON\_HIE\_0140 | Hieron | Er hat es wieder getan. Jedes Mal dasselbe. Die halbe Stadt kennt ihn nur so. | sieht ihm nach |
-| W2\_KRON\_PIX\_0150 | Pixel | Er rennt nackt durch Syrakus und schreit ein einziges Wort. // Und DU, bist bloß der Diener einer Katze. // Ich finde, im Vergleich kommst du sehr gut weg. Das solltest du öfter bedenken. |  |
+| W2\_KRON\_PIX\_0150 | Pixel | Er rennt nackt durch Syrakus und schreit ein einziges Wort. // Und DU bist bloß der Diener einer Katze. // Ich finde, im Vergleich kommst du sehr gut weg. Das solltest du öfter bedenken. |  |
 | W2\_KRON\_MAX\_0160 | Max | Also: gefälscht, das steht fest. Kann ich jetzt endlich trainieren? | zu Hieron |
 | W2\_KRON\_HIE\_0170 | Hieron | Gefälscht. Gut. Also, nicht gut. Aber gut zu wissen. Der Goldschmied bekommt Besuch. // Archimedes gehört dir, sobald er zurück ist. Und angezogen. | nimmt Krone und Barren; Rätsel 5 gelöst |
 | W2\_KRON\_MAX\_0180 | Max | Die Krone aufsetzen? Hieron würde mich köpfen lassen. Mit der Krone. | Krone auf Max |
@@ -828,7 +828,7 @@ Marktplatz neben dem Stadion. Cicero redet am Pult vor römischen Touristen, Tir
 | W2\_AGOR\_GRI\_0410 | Grieche | Na gut, die Straßen. Und das Aquädukt. Und die Thermen. Und die Post. Aber sonst? Was haben die Römer je für uns getan, außer Straßen, Aquädukt, Thermen und Post? | zweiter Grieche ruft dazwischen; Konter 4 ins Notizbuch: „Außer den Straßen, dem Aquädukt und den Thermen?“ |
 | W2\_AGOR\_GRI\_0420 | Grieche | Und wenn einer von denen redet, dann redet er. Stundenlang. Da hilft nur eins: fragen, ob er auch mal Luft holt. Das bringt sie aus dem Takt. | Option Grieche: Wie haltet ihr Cicero aus?; Konter 5 ins Notizbuch: „Holst du auch mal Luft?“ |
 | W2\_AGOR\_MAX\_0650 | Max | Fragen, ob er auch mal Luft holt. Merk ich mir. |  |
-| W2\_AGOR\_GRI\_0660 | Grimmzahn | Aber frag nicht zu laut, sonst hält er eine Rede übers Atmen. |  |
+| W2\_AGOR\_GRI\_0660 | Grieche | Aber frag nicht zu laut, sonst hält er eine Rede übers Atmen. |  |
 | W2\_AGOR\_MAX\_0430 | Max | Danke für das Gespräch. | Option Grieche, beendet das Gespräch |
 | W2\_AGOR\_GRI\_0440 | Grieche | Und jetzt sag bloß nicht, du bist Römer. Du siehst nicht aus wie ein Römer. Du siehst aus wie jemand, der zu lange drinnen war. |  |
 | W2\_AGOR\_MAX\_0450 | Max | Hallo? Alles okay da drin? | Reden: Philosoph |
@@ -940,7 +940,7 @@ Laufbahn, Sandgrube, Kampfrichterzelt, Zuschauerränge, im Hintergrund der Glock
 | W2\_STAD\_MAX\_0340 | Max | Und beim Rede-Ringen? Da geht's doch um Argumente. |  |
 | W2\_STAD\_LEO\_0350 | Leonidas | WER LAUTER IST, GEWINNT! SO HABE ICH ES IMMER VERSTANDEN! BIS JETZT HAT NIEMAND WIDERSPROCHEN! |  |
 | W2\_STAD\_MAX\_0200 | Max | Wo isst du eigentlich zu Mittag? | Option Leonidas |
-| W2\_STAD\_LEO\_0210 | Leonidas | AM RAND DER LAUFBAHN! TELLER AUF DEM SCHOß! NIEMAND WAGT SICH IN MEINE NÄHE! | Vorbereitung Speer-Pointe |
+| W2\_STAD\_LEO\_0210 | Leonidas | AM RAND DER LAUFBAHN! TELLER AUF DEM SCHOSS! NIEMAND WAGT SICH IN MEINE NÄHE! | Vorbereitung Speer-Pointe |
 | W2\_STAD\_MAX\_0360 | Max | Klingt ehrlich gesagt ein bisschen einsam. |  |
 | W2\_STAD\_LEO\_0370 | Leonidas | … ein bisschen. ABER LAUT! |  |
 | W2\_STAD\_MAX\_0220 | Max | Bis zum Wettkampf. | Option Leonidas, beendet das Gespräch |
@@ -969,7 +969,7 @@ Szene. Beginnt, sobald Startpass (3) und Hebel (5) vorhanden sind und Max die St
 | W2\_TAG1\_LEO\_0040 | Leonidas | MARATHOOON! | von weit weg, falsche Richtung |
 | W2\_TAG1\_MAX\_0050 | Max | Die Sandalen ziehen nach vorn. Zum ersten Mal in meinem Leben will irgendwas an mir nach vorn. | mit Öl; Max läuft, Sandalen flattern |
 | W2\_TAG1\_NAR\_0060 | – | Max läuft. Die Schildkröte neben der Bahn läuft auch. Die Schildkröte überholt ihn. Kurz. Dann er sie. Dann sie ihn. | Animation Schildkröte |
-| W2\_TAG1\_PIX\_0070 | Pixel | Eine Schildkröte überholt ihn. Ein Philosoph hat einmal bewiesen, dass so etwas unmöglich ist. // Der Philosoph, hat Max nicht gekannt. | von der Tribüne |
+| W2\_TAG1\_PIX\_0070 | Pixel | Eine Schildkröte überholt ihn. Ein Philosoph hat einmal bewiesen, dass so etwas unmöglich ist. // Der Philosoph hat Max nicht gekannt. | von der Tribüne |
 | W2\_TAG1\_NAR\_0080 | – | Max überquert die Ziellinie. Die Riemen reißen, die Sandalen schießen in den Himmel. Eine fliegt Richtung Agora. | mit Öl; Max läuft stolz ein |
 | W2\_TAG1\_MAX\_0090 | Max | Ziel. Erster. Vor einer Schildkröte und einem Mann, der gerade in Syrakus ankommt. Ich nehm's. | mit Öl |
 | W2\_TAG1\_NAR\_0100 | – | Die Riemen reißen am Start. Die Sandalen heben ab, eine Richtung Agora, eine Richtung Sonne. Max steht barfuß im heißen Sand. | ohne Öl |
@@ -979,7 +979,7 @@ Szene. Beginnt, sobald Startpass (3) und Hebel (5) vorhanden sind und Max die St
 | W2\_TAG1\_RAM\_0140 | Ramses | Er ist angekommen! Das zählt! Oder? Es zählt. Ich habe entschieden, dass es zählt. Weiter! | in jedem Fall; Lauf abgeschlossen |
 | W2\_TAG1\_LEO\_0150 | Leonidas | WO IST DAS ZIEL? ICH BIN IN SYRAKUS! HIER IST EIN NASSER MANN! | aus dem Off |
 | W2\_TAG1\_MAX\_0160 | Max | Hermes' Sandalen sind weg, eine davon Richtung Agora. Ich hab so das Gefühl, da seh ich sie wieder. | nach dem Lauf; Hinweis Rätsel 6 |
-| W2\_TAG1\_PIX\_0170 | Pixel | Jetzt kommt der Hebel. Du setzt dich hin, ich lege nichts hinein, und du fliegst nirgendwohin. // So, stelle ich mir Sport vor. Er ist kurz, er ist ruhig, und keiner schwitzt. | Übergang zum Hebel-Minispiel |
+| W2\_TAG1\_PIX\_0170 | Pixel | Jetzt kommt der Hebel. Du setzt dich hin, ich lege nichts hinein, und du fliegst nirgendwohin. // So stelle ich mir Sport vor. Er ist kurz, er ist ruhig, und keiner schwitzt. | Übergang zum Hebel-Minispiel |
 
 ## 21. Stadion, Tag 1: Minispiel Archimedes' Hebel
 
@@ -1006,7 +1006,7 @@ Max legt Gegenstände aus dem Inventar als Gegengewichte in den Korb und stellt 
 | W2\_HEBL\_ARC\_0170 | Archimedes | Mein Spiegel, aus Bronze. Brauchbar. Aber wenn die Sonne reinfällt, zündest du den Korb an. | Brennspiegel in den Korb |
 | W2\_HEBL\_ARC\_0180 | Archimedes | Eine Socke. Sie wiegt nichts und sortiert dabei meinen Korb. Faszinierend. Und nutzlos. | Sortierende Socke in den Korb |
 | W2\_HEBL\_ARC\_0190 | Archimedes | Der Kater! Endlich ein Gewicht mit Charakter. So schwer wie ein voller Umzugskarton. Genau richtig. | Pixel in den Korb |
-| W2\_HEBL\_PIX\_0200 | Pixel | Ich bin kein Gewicht, ich bin ein Gott. // Aber wenn es denn sein muss, dann bin ich eben ein sehr schweres und sehr beleidigtes Gewicht. // Und niemand, erwähnt jemals wieder den Umzugskarton. | nach 0190 |
+| W2\_HEBL\_PIX\_0200 | Pixel | Ich bin kein Gewicht, ich bin ein Gott. // Aber wenn es denn sein muss, dann bin ich eben ein sehr schweres und sehr beleidigtes Gewicht. // Und niemand erwähnt jemals wieder den Umzugskarton. | nach 0190 |
 | W2\_HEBL\_NAR\_0210 | – | Der Hebel klappt müde hoch. Max rutscht einen Meter und landet in der Sandgrube. | zu leicht |
 | W2\_HEBL\_MAX\_0220 | Max | Ich lieg in der Sandgrube, direkt vor dem Hebel. Das war kein Sprung, das war Umfallen mit Anlauf. | zu leicht |
 | W2\_HEBL\_NAR\_0230 | – | Der Hebel schnellt hoch. Max fliegt über die Ränge, über die Olivenbäume, und landet mit einem Platsch im Fluss. Der Fährmann treibt vorbei. | zu schwer, erste Variante |
@@ -1220,7 +1220,7 @@ Ansehen-Zeilen der Wunderdinge liefern die Rätsel-Bausteine für die Sphinx (Ab
 | --- | --- | --- | --- |
 | W2\_INV\_MAX\_0010 | Max | Drei Prozent. Es klingelt noch, falls mich jemand erreichen will. Will bloß keiner, weil hier seit viertausend Jahren kein Netz ist. | Ansehen: Handy, erstes Mal; Baustein „klingelt“ |
 | W2\_INV\_MAX\_0020 | Max | Die Taschenlampe geht noch, einmal und kurz. Danach ist das Handy ein sehr teurer Stein. | Ansehen: Handy, zweites Mal; Baustein „leuchtet kurz“ |
-| W2\_INV\_MAX\_0030 | Max | Ein Kaugummi. Man kaut und kaut, und er wird nie alle. Die Antike hält das für ein Wunder. Ich auch,. | Ansehen: Kaugummi, erstes Mal; Baustein „wird nie alle“ |
+| W2\_INV\_MAX\_0030 | Max | Ein Kaugummi. Man kaut und kaut, und er wird nie alle. Die Antike hält das für ein Wunder. Ich auch. | Ansehen: Kaugummi, erstes Mal; Baustein „wird nie alle“ |
 | W2\_INV\_MAX\_0040 | Max | Am Ende klebt er unter irgendeinem Tisch. Das ist sein Schicksal, auch hier. | Ansehen: Kaugummi, zweites Mal; Baustein „klebt unter jedem Tisch“ |
 | W2\_INV\_MAX\_0050 | Max | Ein Kugelschreiber, der ohne Tintenfass schreibt. Hier ist das Zauberei, und zu Hause heißt es Schule. | Ansehen: Kugelschreiber, erstes Mal; Baustein „schreibt ohne Tintenfass“ |
 | W2\_INV\_MAX\_0060 | Max | Klick. Klick. Klick. Ich klicke, wenn ich nervös bin, und ich bin ehrlich gesagt seit Welt eins nervös. | Ansehen: Kugelschreiber, zweites Mal; Baustein „klickt, wenn man nervös ist“ |
@@ -1378,7 +1378,7 @@ Drei Stufen je Rätselschritt für die Hilfe-Pfote, Wartezeiten laut Spielsystem
 | W2\_HINT\_PIX\_0621 | Pixel | Wechsel zu mir, Säule hoch, Sandale runter. Dann ziehst du sie an. Dann bist du heilig. Es wird nicht lange halten. | R06a, Stufe 2 |
 | W2\_HINT\_PIX\_0631 | Pixel | Ich hole sie, du ziehst sie an, Brian hängt dir sein Schild um, und die Menge schenkt dir Dinge. Nimm alles. Besonders das mit Blättern. | R06a, Stufe 3 |
 | W2\_HINT\_PIX\_0612 | Pixel | Die Wedler wollen reife Feigen, und du hast einen Setzling. // Dazwischen liegen Jahre. Oder, wenn man es geschickt anstellt, eine Fährfahrt. | R06b, Stufe 1 |
-| W2\_HINT\_PIX\_0622 | Pixel | Flussabwärts wird alles älter, auch Pflanzen im Topf. Das steht auf der Tafel. // Und Syrakus, liegt flussabwärts. | R06b, Stufe 2 |
+| W2\_HINT\_PIX\_0622 | Pixel | Flussabwärts wird alles älter, auch Pflanzen im Topf. Das steht auf der Tafel. // Und Syrakus liegt flussabwärts. | R06b, Stufe 2 |
 | W2\_HINT\_PIX\_0632 | Pixel | Fahr den Setzling nach Syrakus, pflück die Feigen vom Baum, fahr zurück. Gepflücktes altert nicht mehr. Gib den Wedlern die Feigen. Nicht mir. Leider. | R06b, Stufe 3 |
 | W2\_HINT\_PIX\_0710 | Pixel | Vier Verdächtige, je zwei Aussagen, und jeder lügt genau einmal. // Schreib alles auf, und streich dann durch, was nicht aufgeht. So mache ich es mit meinen Feinden. | R07, Stufe 1 |
 | W2\_HINT\_PIX\_0720 | Pixel | Prüf jeden als Dieb: Stimmt dann bei jedem genau eine Aussage? // Und, junger Mann, ganz unter uns: Meine Nase lügt bei Fisch. Einer riecht nach Fisch. Ich sage es nur. | R07, Stufe 2 |

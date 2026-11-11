@@ -3338,7 +3338,7 @@ W2_KRON_ARC_0120,Mehr Wasser! Gleiches Gewicht! Größeres Volumen! Leichteres M
 W2_KRON_ARC_0130,HEUREKA!,EUREKA!
 W2_KRON_HIE_0140,Er hat es wieder getan. Jedes Mal dasselbe. Die halbe Stadt kennt ihn nur so.,He's done it again. Every time the same. Half the city only knows him like this.
 W2_KRON_PIX_0150,Er rennt nackt durch Syrakus und schreit ein einziges Wort.,"He's running naked through Syracuse shouting a single word. // And YOU, are merely the servant of a cat. // I think by comparison you're getting off very lightly. You should bear that in mind more often."
-W2_KRON_PIX_0150_2,"Und DU, bist bloß der Diener einer Katze.",And YOU are the servant of a cat.
+W2_KRON_PIX_0150_2,Und DU bist bloß der Diener einer Katze.,And YOU are the servant of a cat.
 W2_KRON_PIX_0150_3,"Ich finde, im Vergleich kommst du sehr gut weg. Das solltest du öfter bedenken.",I think you're getting off lightly.
 W2_KRON_MAX_0160,"Also: gefälscht, das steht fest. Kann ich jetzt endlich trainieren?","So: fake, that's settled. Can I finally train now?"
 W2_KRON_HIE_0170,"Gefälscht. Gut. Also, nicht gut. Aber gut zu wissen. Der Goldschmied bekommt Besuch.","Fake. Good. Well, not good. But good to know. The goldsmith will be getting a visit. // Archimedes is yours as soon as he's back. And dressed."
@@ -3653,7 +3653,7 @@ W2_STAD_LEO_0190,ALLE! LAUF! SPRUNG! SPEER! DISKUS! UND DAS MIT DEN WORTEN! DA B
 W2_STAD_MAX_0340,Und beim Rede-Ringen? Da geht's doch um Argumente.,And the debate wrestling? Isn't that about arguments?
 W2_STAD_LEO_0350,"WER LAUTER IST, GEWINNT! SO HABE ICH ES IMMER VERSTANDEN! BIS JETZT HAT NIEMAND WIDERSPROCHEN!",WHOEVER IS LOUDER WINS! THAT'S HOW I'VE ALWAYS UNDERSTOOD IT! SO FAR NOBODY HAS DISAGREED!
 W2_STAD_MAX_0200,Wo isst du eigentlich zu Mittag?,Where do you actually eat lunch?
-W2_STAD_LEO_0210,AM RAND DER LAUFBAHN! TELLER AUF DEM SCHOß! NIEMAND WAGT SICH IN MEINE NÄHE!,AT THE EDGE OF THE TRACK! PLATE ON MY LAP! NOBODY DARES COME NEAR ME!
+W2_STAD_LEO_0210,AM RAND DER LAUFBAHN! TELLER AUF DEM SCHOSS! NIEMAND WAGT SICH IN MEINE NÄHE!,AT THE EDGE OF THE TRACK! PLATE ON MY LAP! NOBODY DARES COME NEAR ME!
 W2_STAD_MAX_0360,Klingt ehrlich gesagt ein bisschen einsam.,"Honestly, that sounds a bit lonely."
 W2_STAD_LEO_0370,… ein bisschen. ABER LAUT!,… a bit. BUT LOUD!
 W2_STAD_MAX_0220,Bis zum Wettkampf.,See you at the competition.
@@ -3677,7 +3677,7 @@ W2_TAG1_LEO_0040,MARATHOOON!,MARATHOOON!
 W2_TAG1_MAX_0050,Die Sandalen ziehen nach vorn. Zum ersten Mal in meinem Leben will irgendwas an mir nach vorn.,"The sandals are pulling forwards. For the first time in my life, something about me wants to go forwards."
 W2_TAG1_NAR_0060,Max läuft. Die Schildkröte neben der Bahn läuft auch. Die Schildkröte überholt ihn. Kurz. Dann er sie. Dann sie ihn.,Max runs. The tortoise beside the track runs too. The tortoise overtakes him. Briefly. Then he overtakes it. Then it overtakes him.
 W2_TAG1_PIX_0070,"Eine Schildkröte überholt ihn. Ein Philosoph hat einmal bewiesen, dass so etwas unmöglich ist.","A tortoise is overtaking him. A philosopher once proved that such a thing is impossible. // The philosopher, never knew Max."
-W2_TAG1_PIX_0070_2,"Der Philosoph, hat Max nicht gekannt.",
+W2_TAG1_PIX_0070_2,Der Philosoph hat Max nicht gekannt.,
 W2_TAG1_NAR_0080,"Max überquert die Ziellinie. Die Riemen reißen, die Sandalen schießen in den Himmel. Eine fliegt Richtung Agora.","Max crosses the finish line. The straps snap, and the sandals shoot into the sky. One flies towards the agora."
 W2_TAG1_MAX_0090,"Ziel. Erster. Vor einer Schildkröte und einem Mann, der gerade in Syrakus ankommt. Ich nehm's.",Finish. First. Ahead of a tortoise and a man who's just arriving in Syracuse. I'll take it.
 W2_TAG1_NAR_0100,"Die Riemen reißen am Start. Die Sandalen heben ab, eine Richtung Agora, eine Richtung Sonne. Max steht barfuß im heißen Sand.","The straps snap at the start. The sandals take off, one towards the agora, one towards the sun. Max stands barefoot in the hot sand."
@@ -3689,7 +3689,7 @@ W2_TAG1_RAM_0140,"Er ist angekommen! Das zählt! Oder? Es zählt. Ich habe entsc
 W2_TAG1_LEO_0150,WO IST DAS ZIEL? ICH BIN IN SYRAKUS! HIER IST EIN NASSER MANN!,WHERE IS THE FINISH? I'M IN SYRACUSE! THERE'S A WET MAN HERE!
 W2_TAG1_MAX_0160,"Hermes' Sandalen sind weg, eine davon Richtung Agora. Ich hab so das Gefühl, da seh ich sie wieder.","Hermes' sandals are gone, one of them towards the agora. I've got a feeling I'll be seeing it again there."
 W2_TAG1_PIX_0170,"Jetzt kommt der Hebel. Du setzt dich hin, ich lege nichts hinein, und du fliegst nirgendwohin.","Now comes the lever. You sit down, I put nothing in, and you fly nowhere. // That, is how I imagine sport. It is short, it is quiet, and nobody sweats."
-W2_TAG1_PIX_0170_2,"So, stelle ich mir Sport vor. Er ist kurz, er ist ruhig, und keiner schwitzt.",
+W2_TAG1_PIX_0170_2,"So stelle ich mir Sport vor. Er ist kurz, er ist ruhig, und keiner schwitzt.",
 W2_HEBL_ARC_0010,"Gewicht hinten, Junge vorne, dazwischen der Winkel. Drei Dinge. Mehr ist Physik nie.","Weight at the back, boy at the front, the angle in between. Three things. Physics is never more than that."
 W2_HEBL_ARC_0020,Eine leere Dose. Die wiegt ungefähr so viel wie die Idee einer Dose.,An empty tin. It weighs about as much as the idea of a tin.
 W2_HEBL_PIX_0030,Die Dose kommt da sofort wieder heraus. Sie ist kein Gewicht.,"The tin is coming straight back out of there. It is not a weight. // It is an heirloom, and one does not throw heirlooms through the air."
@@ -3712,7 +3712,7 @@ W2_HEBL_ARC_0180,Eine Socke. Sie wiegt nichts und sortiert dabei meinen Korb. Fa
 W2_HEBL_ARC_0190,Der Kater! Endlich ein Gewicht mit Charakter. So schwer wie ein voller Umzugskarton. Genau richtig.,The cat! Finally a weight with character. As heavy as a full moving box. Just right.
 W2_HEBL_PIX_0200,"Ich bin kein Gewicht, ich bin ein Gott.","I am not a weight, I am a god. // But if it must be, then I shall be a very heavy and very offended weight. // And nobody, ever mentions the moving box again."
 W2_HEBL_PIX_0200_2,"Aber wenn es denn sein muss, dann bin ich eben ein sehr schweres und sehr beleidigtes Gewicht.","But if I must, then I'm a very heavy, very offended weight."
-W2_HEBL_PIX_0200_3,"Und niemand, erwähnt jemals wieder den Umzugskarton.",Nobody ever mentions the moving box again.
+W2_HEBL_PIX_0200_3,Und niemand erwähnt jemals wieder den Umzugskarton.,Nobody ever mentions the moving box again.
 W2_HEBL_NAR_0210,Der Hebel klappt müde hoch. Max rutscht einen Meter und landet in der Sandgrube.,The lever flops up wearily. Max slides one metre and lands in the sand pit.
 W2_HEBL_MAX_0220,"Ich lieg in der Sandgrube, direkt vor dem Hebel. Das war kein Sprung, das war Umfallen mit Anlauf.","I'm lying in the sand pit, right in front of the lever. That wasn't a jump, that was falling over with a run-up."
 W2_HEBL_NAR_0230,"Der Hebel schnellt hoch. Max fliegt über die Ränge, über die Olivenbäume, und landet mit einem Platsch im Fluss. Der Fährmann treibt vorbei.","The lever shoots up. Max flies over the stands, over the olive trees, and lands with a splash in the river. The ferryman drifts past."
@@ -3915,7 +3915,7 @@ W2_PARA_ARC_0350,"Komm wieder, Schüler. Ich habe noch einen Hebel. Einen größ
 W2_PARA_MAX_0360,"Zurück zur Fähre, dann zum Werbeblock, dann zum Sofa. Mit dem Sack. Also zu Opa.","Back to the ferry, then to the ad break, then to the sofa. With the sack. So, to Grandpa."
 W2_INV_MAX_0010,"Drei Prozent. Es klingelt noch, falls mich jemand erreichen will. Will bloß keiner, weil hier seit viertausend Jahren kein Netz ist.","Three percent. It still rings in case anyone wants to reach me. Except nobody does, because there's been no signal here for four thousand years."
 W2_INV_MAX_0020,"Die Taschenlampe geht noch, einmal und kurz. Danach ist das Handy ein sehr teurer Stein.","The torch still works, once and briefly. After that the phone is a very expensive stone."
-W2_INV_MAX_0030,"Ein Kaugummi. Man kaut und kaut, und er wird nie alle. Die Antike hält das für ein Wunder. Ich auch,.","Chewing gum. You chew and chew and it never runs out. Antiquity thinks that's a miracle. Honestly, so do I."
+W2_INV_MAX_0030,"Ein Kaugummi. Man kaut und kaut, und er wird nie alle. Die Antike hält das für ein Wunder. Ich auch.","Chewing gum. You chew and chew and it never runs out. Antiquity thinks that's a miracle. Honestly, so do I."
 W2_INV_MAX_0040,"Am Ende klebt er unter irgendeinem Tisch. Das ist sein Schicksal, auch hier.","In the end it'll stick under some table. That's its destiny, here too."
 W2_INV_MAX_0050,"Ein Kugelschreiber, der ohne Tintenfass schreibt. Hier ist das Zauberei, und zu Hause heißt es Schule.","A ballpoint pen that writes without an inkwell. Here that's magic, and at home it's called school."
 W2_INV_MAX_0060,"Klick. Klick. Klick. Ich klicke, wenn ich nervös bin, und ich bin ehrlich gesagt seit Welt eins nervös.","Click. Click. Click. I click when I'm nervous, and honestly, I've been nervous since world one."
@@ -4095,7 +4095,7 @@ W2_HINT_PIX_0631,"Ich hole sie, du ziehst sie an, Brian hängt dir sein Schild u
 W2_HINT_PIX_0612,"Die Wedler wollen reife Feigen, und du hast einen Setzling.","The fanners want ripe figs, and you have a sapling. // In between lie years. Or, if one goes about it cleverly, a ferry ride."
 W2_HINT_PIX_0612_2,"Dazwischen liegen Jahre. Oder, wenn man es geschickt anstellt, eine Fährfahrt.",
 W2_HINT_PIX_0622,"Flussabwärts wird alles älter, auch Pflanzen im Topf. Das steht auf der Tafel.","Downstream everything gets older, plants in pots too. It says so on the board. // And Syracuse, is downstream."
-W2_HINT_PIX_0622_2,"Und Syrakus, liegt flussabwärts.",
+W2_HINT_PIX_0622_2,Und Syrakus liegt flussabwärts.,
 W2_HINT_PIX_0632,"Fahr den Setzling nach Syrakus, pflück die Feigen vom Baum, fahr zurück. Gepflücktes altert nicht mehr. Gib den Wedlern die Feigen. Nicht mir. Leider.","Take the seedling to Syracuse, pick the figs off the tree, ride back. Picked fruit doesn't age any more. Give the figs to the fan bearers. Not to me. Sadly."
 W2_HINT_PIX_0710,"Vier Verdächtige, je zwei Aussagen, und jeder lügt genau einmal.","Four suspects, two statements each, and everyone lies exactly once. // Write everything down, and then cross out what doesn't add up. That's what I do with my enemies."
 W2_HINT_PIX_0710_2,"Schreib alles auf, und streich dann durch, was nicht aufgeht. So mache ich es mit meinen Feinden.",
@@ -4402,7 +4402,7 @@ W3_SIM_NAR_0010,"Sonne. Eine Straße, so gerade, dass sie wehtut. Gleiche Bäume
 W3_SIM_MAX_0020,"Okay, trocken. Das ist schon mal ein Fortschritt, auch wenn ich nicht weiß, wohin.","Okay, dry. That's progress, even if I don't know towards what."
 W3_SIM_MAX_0030,"Alles ist so … glatt. Hier sieht es aus, als hätte jemand eine Stadt aus einem Prospekt ausgeschnitten.",Everything is so … smooth. It looks like someone cut a city out of a brochure.
 W3_SIM_MAX_0040,"Pixel? … Richtig. Keine Katzen hier. Nur eine, und die ist Kulisse.","Pixel? … Right. No cats here. Just one, and that one's scenery."
-W3_SIM_MAX_0050,"Das ist das erste Mal seit drei Welten, dass keiner neben mir meckert. Und ist es … zu leise.","That's the first time in three worlds nobody's moaning next to me. And honestly, it's … too quiet."
+W3_SIM_MAX_0050,"Das ist das erste Mal seit drei Welten, dass keiner neben mir meckert. Und es ist … zu leise.","That's the first time in three worlds nobody's moaning next to me. And honestly, it's … too quiet."
 W3_SIM_MAX_0060,Eine Telefonzelle. Ein Büroturm. Ein Haus mit Spitzengardinen und Keksgeruch. Nichts davon wirkt echt. Also alles anschauen.,"A phone box. An office tower. A house with lace curtains and a smell of biscuits. None of it looks real. So, look at everything."
 W3_SIM_MAX_0110,"Dieselbe Wolke, dreimal. Jemand hat Kopieren gefunden und dann einfach nicht mehr aufgehört, Einfügen zu drücken.","The same cloud, three times. Someone found copy and then simply couldn't stop pressing paste."
 W3_SIM_MAX_0115,Ich zähle die Wolken nochmal. Drei. Immer noch dieselbe. Sie hat sich nicht mal gedreht.,I count the clouds again. Three. Still the same one. It hasn't even turned.
@@ -4625,7 +4625,7 @@ W3_TURM_MAX_0480,Dahinter: Berichte über mich. „Testperson 48 hat im Regen ge
 W3_TURM_MAX_0490,"Jetzt gibt es zwei Originale, und beide wollen die Mittagspause ansagen. Keiner geht, alle streiten. Ich hab's schlimmer gemacht.","Now there are two originals, and both want to announce the lunch break. Nobody leaves, everybody argues. I've made it worse."
 W3_TURM_KLO_0500,Ich bin das Original. Ich habe schon immer anders gerochen.,I am the original. I've always smelled different.
 W3_TURM_MAX_0510,"Die Tasse trägt jetzt Hausschuhe, und Schmidt ist barfuß. Er guckt, als hätte er alles verloren, dabei sind es nur die Schuhe.","The cup is wearing slippers now, and Schmidt is barefoot. He looks like he's lost everything, but it's just the shoes."
-W3_TURM_MAX_0520,"Die Pflanze ist jetzt das Original. Alle Klone hören auf eine Pflanze. Die Pflanze sagt nichts. Gute Führung,.","The plant is the original now. All the clones are listening to a plant. The plant says nothing. Good leadership, honestly."
+W3_TURM_MAX_0520,Die Pflanze ist jetzt das Original. Alle Klone hören auf eine Pflanze. Die Pflanze sagt nichts. Gute Führung.,"The plant is the original now. All the clones are listening to a plant. The plant says nothing. Good leadership, honestly."
 W3_TURM_MAX_0530,"Keine Tausche mehr. Einmal raus und wieder rein, dann ist alles zurückgesetzt, und ich darf die Treppe noch mal genießen.","No swaps left. Out and back in once, then everything's reset, and I get to enjoy the stairs all over again."
 W3_TURM_SCH_0540,"Sie wieder, wir wieder, alles wieder","You again, us again, everything again"
 W3_TURM_MAX_0550,"Nicht in die Mittagspause schicken, bevor sie wissen, wer der Chef ist. Sie hören nur aufs Original. Und das bin weder ich noch die Tasse. Noch.",No sending them on lunch break before they know who the boss is. They only listen to the original. And that's neither me nor the cup. Yet.
@@ -5253,7 +5253,7 @@ W3_BAS_PIX_1160,Ein Keks mit Zettel. Ich lecke am Keks. Der Zettel schmeckt bess
 W3_BAS_PIX_1170,Die Zelle ist kalt und riecht nach Metall. Sie ist genau so lang wie ein … Nein. Ich sage es nicht. Noch nicht.,The cell is cold and smells of metal. It's exactly as long as a … No. I'm not saying it. Not yet.
 W3_HINT_PIX_0110,"Der Mann mit dem Hut will keine richtigen Antworten, sondern menschliche. Das ist nicht dasselbe, junger Mann.","The man in the hat doesn't want correct answers, he wants human ones. That's not the same thing, young man. // Look at what the people on the street get up to. None of it is sensible."
 W3_HINT_PIX_0110_2,"Sieh dir an, was die Leute hier auf der Straße treiben. Vernünftig ist davon nichts.",
-W3_HINT_PIX_0120,"Sieh dir die Leute auf der Straße an. Den Weinenden, die mit dem Schirm, den mit der Musik. Keiner von denen tut etwas Vernünftiges. Genau das braucht du.","Look at the people on the street. The crying man, the one with the umbrella, the one with the music. None of them is doing anything sensible. That's exactly what you need."
+W3_HINT_PIX_0120,"Sieh dir die Leute auf der Straße an. Den Weinenden, die mit dem Schirm, den mit der Musik. Keiner von denen tut etwas Vernünftiges. Genau das brauchst du.","Look at the people on the street. The crying man, the one with the umbrella, the one with the music. None of them is doing anything sensible. That's exactly what you need."
 W3_HINT_PIX_0130,"Rechtsklick auf den weinenden Mann, die Frau mit dem Schirm und den Musiker. Dann stehen ihre Dummheiten in deinem Notizbuch. Dann geh zum Hut.","Right-click the crying man, the woman with the umbrella and the musician. Then their silliness goes in your notebook. Then go to the hat."
 W3_HINT_PIX_0140,"Du hast die Antworten im Notizbuch. Jetzt musst du sie nur noch aussprechen, statt nachzudenken.","You have the answers in your notebook. Now you only have to say them instead of thinking. // For you, with all due respect, that shouldn't be particularly hard."
 W3_HINT_PIX_0140_2,"Für dich sollte das, bei allem Respekt, nicht besonders schwer sein.",
@@ -5758,7 +5758,7 @@ W4_VERH_MAX_0460,"Pixel soll die Krone suchen? Er sucht nur Dinge, die man essen
 W4_VERH_PIX_0470,"Der Löwe sagt, er habe geschlafen, als die Krone verschwand.","The lion says he was asleep when the crown disappeared. // He says it very loudly, but he says everything very loudly. I believe that comes with being a king."
 W4_VERH_PIX_0470_2,"Er sagt das sehr laut, aber er sagt alles sehr laut. Ich glaube, das gehört bei Königen zum Beruf.",
 W4_VERH_LOE_0480,Grrr. Roar. Grr.,Grrr. Roar. Grr.
-W4_FRIE_MAX_0010,"Eine Tafel: „Gleich geht's weiter.“ Und davor schläft ein Geist. Das Programm macht Pause, und hat das Programm ein besseres Leben als ich.","A sign: ""Back in a moment."" And in front of it a ghost is asleep. The programme is on a break, and honestly, the programme has a better life than me."
+W4_FRIE_MAX_0010,"Eine Tafel: „Gleich geht's weiter.“ Und davor schläft ein Geist. Das Programm macht Pause, und das Programm hat ein besseres Leben als ich.","A sign: ""Back in a moment."" And in front of it a ghost is asleep. The programme is on a break, and honestly, the programme has a better life than me."
 W4_FRIE_PIX_0020,"Sendepause. Früher gab es das jede Nacht: erst die Hymne, dann das Testbild, dann gar nichts mehr.","Closedown. That used to happen every night: first the anthem, then the test card, then nothing at all. // Nothing was underrated. I took my finest naps in that nothing."
 W4_FRIE_PIX_0020_2,Nichts war unterbewertet. Ich habe in diesem Nichts meine besten Nickerchen gemacht.,Nothing was underrated.
 W4_FRIE_MAX_0030,"In der Programmzeitschrift steht: Mitternacht. Ich muss also nicht warten, ich muss nur blättern.","The TV guide says: midnight. So I don't have to wait, I just have to flip pages."
@@ -6009,7 +6009,7 @@ W4_KAPI_SIE_0290,"Dreht einen Film. Über sich. Seit drei Jahren. Wir sind das, 
 W4_KAPI_MAX_0670,Und was machst du so?,And what do you do?
 W4_KAPI_SIE_0680,Ich kann fliegen. Ich mache es nur ungern. Oben zieht es.,I can fly. I just don't like to. It's draughty up there.
 W4_KAPI_MAX_0300,Warum hängen Sie da oben?,Why are you hanging up there?
-W4_KAPI_FLE_0310,"Ich bin eine Fledermaus! Fledermause hängen! Ich habe dafür sehr viel Geld ausgegeben, und ich hänge, bis es sich gelohnt hat!","I'm a bat! Bats hang! I spent a lot of money on this, and I'm hanging until it's paid off!"
+W4_KAPI_FLE_0310,"Ich bin eine Fledermaus! Fledermäuse hängen! Ich habe dafür sehr viel Geld ausgegeben, und ich hänge, bis es sich gelohnt hat!","I'm a bat! Bats hang! I spent a lot of money on this, and I'm hanging until it's paid off!"
 W4_KAPI_MAX_0690,Und wann hat es sich gelohnt?,And when will it have paid off?
 W4_KAPI_FLE_0700,In zwei Jahren! Dann bin ich bei null! Ab da hänge ich aus Spaß!,In two years! Then I'll break even! After that I'll hang for fun!
 W4_KAPI_MAX_0320,Was können Sie?,What can you do?
@@ -6430,7 +6430,7 @@ W4_PIXM_PIX_0250,Riecht nach Ende und ein bisschen nach Comic.,"Smells of the en
 W4_PIXM_PIX_0250_2,"Beides sollte man nicht einatmen. Ich habe es trotzdem getan, aus Neugier, und bereue es zutiefst.",
 W4_PIXM_PIX_0260,Riecht nach Eisen und nach meinem Kopf. Wir kennen uns.,Smells of iron and of my head. We've met.
 W4_PIXM_PIX_0270,"Riecht nach Staub, nach 1977 und nach einem Mann, der Puppen lieber mochte als Menschen.","Smells of dust, of 1977 and of a man who liked puppets more than people. // Which I find, frankly, very understandable."
-W4_PIXM_PIX_0270_2,"Das finde ich, sehr verständlich.",
+W4_PIXM_PIX_0270_2,Das finde ich sehr verständlich.,
 W4_PIXM_PIX_0280,"Pfoten. Ich habe Pfoten. Das hier ist für Wesen mit Daumen gebaut, also für dich.","Paws. I have paws. This is built for creatures with thumbs, so for you."
 W4_PIXM_PIX_0290,Ich trage nichts. Ich werde getragen. Das ist der Unterschied zwischen Kater und Kurier.,I don't carry things. I get carried. That's the difference between a cat and a courier.
 W4_INV_MAX_0010,Ein Bettlaken mit zwei Löchern. Ein Geist hat es mir überlassen. Darunter war nichts. Nicht mal ein Geist.,A bedsheet with two holes. A ghost left it to me. There was nothing underneath. Not even a ghost.

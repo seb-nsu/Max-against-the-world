@@ -471,7 +471,7 @@ Außerhalb von Mitternacht zeigt der Sender eine Pausentafel mit schlafendem Gei
 
 | ID | Sprecher | Text | Auslöser |
 | --- | --- | --- | --- |
-| W4\_FRIE\_MAX\_0010 | Max | Eine Tafel: „Gleich geht's weiter.“ Und davor schläft ein Geist. Das Programm macht Pause, und hat das Programm ein besseres Leben als ich. | Umschalten auf Mitternachts-TV außerhalb von Mitternacht |
+| W4\_FRIE\_MAX\_0010 | Max | Eine Tafel: „Gleich geht's weiter.“ Und davor schläft ein Geist. Das Programm macht Pause, und das Programm hat ein besseres Leben als ich. | Umschalten auf Mitternachts-TV außerhalb von Mitternacht |
 | W4\_FRIE\_PIX\_0020 | Pixel | Sendepause. Früher gab es das jede Nacht: erst die Hymne, dann das Testbild, dann gar nichts mehr. // Nichts war unterbewertet. Ich habe in diesem Nichts meine besten Nickerchen gemacht. | nach 0010; Kaskade |
 | W4\_FRIE\_MAX\_0030 | Max | In der Programmzeitschrift steht: Mitternacht. Ich muss also nicht warten, ich muss nur blättern. | nach 0010, Rückspulen im Inventar |
 | W4\_FRIE\_NAR\_0040 | – | Nebel, Vollmond, eine Tanzfläche aus Leuchtfliesen zwischen Gräbern. Synthesizer setzen ein. Sechs Zombies tanzen im Gleichschritt und versperren den Weg zum Gittertor. | Ankunft um Mitternacht |
@@ -731,7 +731,7 @@ Gespräche und Ansehen in Kapitolis.
 | W4\_KAPI\_MAX\_0670 | Max | Und was machst du so? |  |
 | W4\_KAPI\_SIE\_0680 | Super-Siegfried | Ich kann fliegen. Ich mache es nur ungern. Oben zieht es. |  |
 | W4\_KAPI\_MAX\_0300 | Max | Warum hängen Sie da oben? | Option Fledermann |
-| W4\_KAPI\_FLE\_0310 | Fledermann | Ich bin eine Fledermaus! Fledermause hängen! Ich habe dafür sehr viel Geld ausgegeben, und ich hänge, bis es sich gelohnt hat! |  |
+| W4\_KAPI\_FLE\_0310 | Fledermann | Ich bin eine Fledermaus! Fledermäuse hängen! Ich habe dafür sehr viel Geld ausgegeben, und ich hänge, bis es sich gelohnt hat! |  |
 | W4\_KAPI\_MAX\_0690 | Max | Und wann hat es sich gelohnt? |  |
 | W4\_KAPI\_FLE\_0700 | Fledermann | In zwei Jahren! Dann bin ich bei null! Ab da hänge ich aus Spaß! |  |
 | W4\_KAPI\_MAX\_0320 | Max | Was können Sie? | Option Fledermann |
@@ -1145,7 +1145,7 @@ Pixel wird als Gegenstand auf eine Figur oder einen Gegenstand gezogen (eine Zei
 | W4\_PIXM\_PIX\_0240 | Pixel | Riecht nach Käse, nach leuchtendem Käse, nach Käse mit Zukunft. // Ich bleibe trotzdem bei Thunfisch. Thunfisch hat keine Zukunft, aber eine glorreiche Vergangenheit. | Schnuppern: Fondue-Käse, jede Form |
 | W4\_PIXM\_PIX\_0250 | Pixel | Riecht nach Ende und ein bisschen nach Comic. // Beides sollte man nicht einatmen. Ich habe es trotzdem getan, aus Neugier, und bereue es zutiefst. | Schnuppern: Bananenschale, faulig oder Stinkbombe |
 | W4\_PIXM\_PIX\_0260 | Pixel | Riecht nach Eisen und nach meinem Kopf. Wir kennen uns. | Schnuppern: Amboss |
-| W4\_PIXM\_PIX\_0270 | Pixel | Riecht nach Staub, nach 1977 und nach einem Mann, der Puppen lieber mochte als Menschen. // Das finde ich, sehr verständlich. | Schnuppern: Archivband |
+| W4\_PIXM\_PIX\_0270 | Pixel | Riecht nach Staub, nach 1977 und nach einem Mann, der Puppen lieber mochte als Menschen. // Das finde ich sehr verständlich. | Schnuppern: Archivband |
 | W4\_PIXM\_PIX\_0280 | Pixel | Pfoten. Ich habe Pfoten. Das hier ist für Wesen mit Daumen gebaut, also für dich. | Benutzen als Pixel: Fernbedienung, Zahlenfeld, Hebel, Lichterkette |
 | W4\_PIXM\_PIX\_0290 | Pixel | Ich trage nichts. Ich werde getragen. Das ist der Unterschied zwischen Kater und Kurier. | Nehmen als Pixel: jeder Inventar-Gegenstand |
 

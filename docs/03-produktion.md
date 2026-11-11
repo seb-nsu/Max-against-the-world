@@ -55,11 +55,11 @@ Diese Datei sammelt alle Absprachen zu Technik, Grafik und Audio an einer Stelle
 | --- | --- | --- | --- | --- |
 | Hintergründe | etwa 80 (59 Räume plus etwa 20 Zustandsvarianten) | Konzeptbild, `tools/pixelieren.py`, Aseprite | 3 bis 6 h | 240 bis 480 h |
 | Figurensprites mit Gehen, Stehen, Sprechen | etwa 105 (Prolog 7, W1 22, W2 26, W3 22, W4 27) | Retro Diffusion Cloud, Aseprite | 3 bis 4,5 h | 315 bis 473 h |
-| Sonderanimationen | etwa 60 | rd\_advanced\_animation\_\_custom\_action | 1 h | 60 h |
+| Sonderanimationen | etwa 60 | `rd_advanced_animation__custom_action` | 1 h | 60 h |
 | Effekte | etwa 25 | Baustein EFFEKT | 0,5 h | 13 h |
 | Inventar-Icons | etwa 150 | Sammelbilder, Aseprite | 20 Minuten | 50 h |
 | Nahansichten | 14 (Prolog 2, W1 4, W2 3, W3 4, W4 1 Programmzeitschrift; Liste in `welten/*.yaml`) | Baustein HINTERGRUND, Schrift von Hand | 3 h | 42 h |
-| UI-Panels | etwa 12 | rd\_pro\_\_ui\_panel | 2 h | 24 h |
+| UI-Panels | etwa 12 | `rd_pro__ui_panel` | 2 h | 24 h |
 | Summe Grafik |  |  |  | rund 800 bis 1.150 h (bei 320×180 waren es 600 bis 800 h; die Zeiten je Stück sind für 480×270 um etwa die Hälfte erhöht geschätzt, weil die Nacharbeit mit der Fläche wächst, das Erzeugen aber nicht) |
 
 ## System 3: Audio mit KI

@@ -288,7 +288,7 @@ Szene beim ersten Eintritt in die Simulation. Ebene: Simulation. Max ist allein;
 | W3\_SIM\_MAX\_0020 | Max | Okay, trocken. Das ist schon mal ein Fortschritt, auch wenn ich nicht weiß, wohin. | sieht an sich herunter |
 | W3\_SIM\_MAX\_0030 | Max | Alles ist so … glatt. Hier sieht es aus, als hätte jemand eine Stadt aus einem Prospekt ausgeschnitten. |  |
 | W3\_SIM\_MAX\_0040 | Max | Pixel? … Richtig. Keine Katzen hier. Nur eine, und die ist Kulisse. | sieht sich um, schwarze Katze läuft vorbei |
-| W3\_SIM\_MAX\_0050 | Max | Das ist das erste Mal seit drei Welten, dass keiner neben mir meckert. Und ist es … zu leise. | kurze Pause |
+| W3\_SIM\_MAX\_0050 | Max | Das ist das erste Mal seit drei Welten, dass keiner neben mir meckert. Und es ist … zu leise. | kurze Pause |
 | W3\_SIM\_MAX\_0060 | Max | Eine Telefonzelle. Ein Büroturm. Ein Haus mit Spitzengardinen und Keksgeruch. Nichts davon wirkt echt. Also alles anschauen. |  |
 
 ### Ansehen und Benutzen auf der Stadtstraße
@@ -339,15 +339,15 @@ Eingang des Büroturms auf der Stadtstraße. Agent Schmidt bewacht die verschlos
 | W3\_TUER\_MAX\_0030 | Max | Kann ich da rein? | Option Schmidt |
 | W3\_TUER\_SCH\_0040 | Schmidt | Nein, das wäre unverantwortlich, dort oben gibt es Fenster, Treppen und Akten, Akten sind scharfkantig, // ich habe einmal eine Akte gesehen, die … | redet weiter, Blase bricht ab |
 | W3\_TUER\_MAX\_0330 | Max | Die … was? |  |
-| W3\_TUER\_SCH\_0340 | Schreiber | Die Akte, sie hatte eine Ecke, ich spreche nicht darüber, ich spreche nur über alles andere, und zwar ausführlich |  |
+| W3\_TUER\_SCH\_0340 | Schmidt | Die Akte, sie hatte eine Ecke, ich spreche nicht darüber, ich spreche nur über alles andere, und zwar ausführlich |  |
 | W3\_TUER\_MAX\_0050 | Max | Warum tragen Sie Hausschuhe? | Option Schmidt |
 | W3\_TUER\_SCH\_0060 | Schmidt | Bequemlichkeit ist kein Verbrechen, noch nicht, ich arbeite daran, und rosa war im Angebot |  |
 | W3\_TUER\_MAX\_0350 | Max | Rosa steht Ihnen. |  |
-| W3\_TUER\_SCH\_0360 | Schreiber | Danke, das hat noch niemand gesagt, und das ist verdächtig, ich notiere es, zu Ihrem Schutz |  |
+| W3\_TUER\_SCH\_0360 | Schmidt | Danke, das hat noch niemand gesagt, und das ist verdächtig, ich notiere es, zu Ihrem Schutz |  |
 | W3\_TUER\_MAX\_0070 | Max | Wer ist M.U.T.T.I. für Sie? | Option Schmidt |
 | W3\_TUER\_SCH\_0080 | Schmidt | Meine Vorgesetzte, meine Erschafferin, im weitesten Sinne meine Mutter, sie weiß, was gut für uns ist, // und ich bin nur der Außendienst, also derjenige, der es Ihnen ausrichtet, ob Sie wollen oder nicht |  |
 | W3\_TUER\_MAX\_0370 | Max | Und was ist gut für uns? |  |
-| W3\_TUER\_SCH\_0380 | Schreiber | Kein Zucker, keine Kanten, keine Fragen, und jetzt fragen Sie schon wieder, ich sage das nur aus Sorge |  |
+| W3\_TUER\_SCH\_0380 | Schmidt | Kein Zucker, keine Kanten, keine Fragen, und jetzt fragen Sie schon wieder, ich sage das nur aus Sorge |  |
 | W3\_TUER\_MAX\_0090 | Max | Hören Sie auch mal auf zu reden? | Option Schmidt |
 | W3\_TUER\_SCH\_0100 | Schmidt | Nein, Schweigen ist eine Sicherheitslücke, in jedes Schweigen passt eine Frage, Fragen führen zu Antworten, // Antworten führen zu Türen, Türen führen nach draußen, darum nein, darum niemals, darum rede ich |  |
 | W3\_TUER\_MAX\_0103 | Max | Sie haben da gerade einen ganzen Absatz ohne einen einzigen Punkt gesagt. |  |
@@ -540,7 +540,7 @@ Ebene: Simulation. Der Tausch von der Straße gilt nur dort, hier redet Schmidt 
 | W3\_TURM\_MAX\_0490 | Max | Jetzt gibt es zwei Originale, und beide wollen die Mittagspause ansagen. Keiner geht, alle streiten. Ich hab's schlimmer gemacht. | Code-Sicht: Fehltausch Original ↔ Kopie mit einem Klon |
 | W3\_TURM\_KLO\_0500 | Klon | Ich bin das Original. Ich habe schon immer anders gerochen. | nach 0490 |
 | W3\_TURM\_MAX\_0510 | Max | Die Tasse trägt jetzt Hausschuhe, und Schmidt ist barfuß. Er guckt, als hätte er alles verloren, dabei sind es nur die Schuhe. | Code-Sicht: Fehltausch Hausschuhe ↔ leer |
-| W3\_TURM\_MAX\_0520 | Max | Die Pflanze ist jetzt das Original. Alle Klone hören auf eine Pflanze. Die Pflanze sagt nichts. Gute Führung,. | Code-Sicht: Fehltausch Original ↔ gleich |
+| W3\_TURM\_MAX\_0520 | Max | Die Pflanze ist jetzt das Original. Alle Klone hören auf eine Pflanze. Die Pflanze sagt nichts. Gute Führung. | Code-Sicht: Fehltausch Original ↔ gleich |
 | W3\_TURM\_MAX\_0530 | Max | Keine Tausche mehr. Einmal raus und wieder rein, dann ist alles zurückgesetzt, und ich darf die Treppe noch mal genießen. | Code-Sicht: Budget aufgebraucht |
 | W3\_TURM\_SCH\_0540 | Schmidt | Sie wieder, wir wieder, alles wieder | 50. Stock erneut betreten nach Fehltauschen |
 | W3\_TURM\_MAX\_0550 | Max | Nicht in die Mittagspause schicken, bevor sie wissen, wer der Chef ist. Sie hören nur aufs Original. Und das bin weder ich noch die Tasse. Noch. | Kaffeetasse auf Klone, vor dem Tausch |
@@ -1239,7 +1239,7 @@ Drei Stufen je Rätselschritt, vom Stups bis zur Lösung, nach den Regeln in `05
 | ID | Sprecher | Text | Auslöser |
 | --- | --- | --- | --- |
 | W3\_HINT\_PIX\_0110 | Pixel | Der Mann mit dem Hut will keine richtigen Antworten, sondern menschliche. Das ist nicht dasselbe, junger Mann. // Sieh dir an, was die Leute hier auf der Straße treiben. Vernünftig ist davon nichts. | R1a Beobachtungen, Stufe 1 |
-| W3\_HINT\_PIX\_0120 | Pixel | Sieh dir die Leute auf der Straße an. Den Weinenden, die mit dem Schirm, den mit der Musik. Keiner von denen tut etwas Vernünftiges. Genau das braucht du. | R1a, Stufe 2 |
+| W3\_HINT\_PIX\_0120 | Pixel | Sieh dir die Leute auf der Straße an. Den Weinenden, die mit dem Schirm, den mit der Musik. Keiner von denen tut etwas Vernünftiges. Genau das brauchst du. | R1a, Stufe 2 |
 | W3\_HINT\_PIX\_0130 | Pixel | Rechtsklick auf den weinenden Mann, die Frau mit dem Schirm und den Musiker. Dann stehen ihre Dummheiten in deinem Notizbuch. Dann geh zum Hut. | R1a, Stufe 3 |
 | W3\_HINT\_PIX\_0140 | Pixel | Du hast die Antworten im Notizbuch. Jetzt musst du sie nur noch aussprechen, statt nachzudenken. // Für dich sollte das, bei allem Respekt, nicht besonders schwer sein. | R1b Test, Stufe 1 |
 | W3\_HINT\_PIX\_0150 | Pixel | Bei jeder Frage fällt die vernünftige Antwort durch. Nimm die, die klingt, als hätte sie jemand von der Straße gesagt. | R1b, Stufe 2 |

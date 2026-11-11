@@ -397,11 +397,11 @@ Gespräch mit dem Schmied:
 | W1\_SCHM\_MAX\_0230 | Max | Gehört die Ziege dir? | Option Schmied |
 | W1\_SCHM\_SCH\_0240 | Schmied | Die Ziege gehört niemandem. Sie ist eines Morgens aufgetaucht. Wie Schulden. |  |
 | W1\_SCHM\_MAX\_0750 | Max | Und warum jagst du sie nicht weg? |  |
-| W1\_SCHM\_SCH\_0760 | Schreiber | Hab ich versucht. Sie war schneller wieder da als ich. Seitdem nenne ich sie Kollegin. |  |
+| W1\_SCHM\_SCH\_0760 | Schmied | Hab ich versucht. Sie war schneller wieder da als ich. Seitdem nenne ich sie Kollegin. |  |
 | W1\_SCHM\_MAX\_0250 | Max | Was ist das für ein Schwert in ihrem Maul? | Option Schmied |
 | W1\_SCHM\_SCH\_0260 | Schmied | Das war Ingrid. Humbert wollte sie für seine Sammlung. Jetzt ist sie Ziegenfutter. Sag ihm nichts, er hängt an Namen. |  |
 | W1\_SCHM\_MAX\_0770 | Max | Du hast deinen Schwertern Namen gegeben? |  |
-| W1\_SCHM\_SCH\_0780 | Schreiber | Jedes Schwert hat einen Namen. Ingrid, Helga, Kurt. Kurt war ein Missverständnis. |  |
+| W1\_SCHM\_SCH\_0780 | Schmied | Jedes Schwert hat einen Namen. Ingrid, Helga, Kurt. Kurt war ein Missverständnis. |  |
 | W1\_SCHM\_MAX\_0270 | Max | Kann ich die Ziege haben? | Option Schmied; auch bei Benutzen: Ziege |
 | W1\_SCHM\_SCH\_0280 | Schmied | Du willst sie? Nimm sie! Nimm sie mit! Ich schmiede dir ein Denkmal! Aus Blech, aber ein Denkmal! | fällt fast auf die Knie; Ziege folgt Max ab jetzt |
 | W1\_SCHM\_ZIE\_0290 | Schmiede-Ziege | Mäh. | kaut weiter, trottet zu Max |
