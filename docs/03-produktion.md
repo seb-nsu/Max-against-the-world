@@ -93,7 +93,7 @@ Preise Stand November 2026, laut [Retro Diffusion auf itch.io](https://astropuls
 
 ## Meilensteine und Stundenbudget
 
-**Stand 11. November 2026:** Der Bau ist dem Plan voraus. Prolog, Welt 1 bis 4, die drei Zwischenspiele und das Finale sind als Graubox durchspielbar, mit Hilfe-Pfote, Speichern, Menüs, englischer Fassung und automatischen Tests (Stand-Absätze unten). Die Stufen 1 und 2 sind bis auf den Test mit fünf Fremden erledigt, aus den Stufen 3 bis 5 der Bau aller Welten. Offen sind je Abschnitt Grafik, Audio und der Test mit Fremden, dazu die Minispiele (bisher Auswahlmenüs) und die Steam-Seite.
+**Stand 11. November 2026:** Der Bau ist dem Plan voraus. Prolog, Welt 1 bis 4, die drei Zwischenspiele und das Finale sind als Graubox durchspielbar, mit Hilfe-Pfote, Speichern, Menüs, englischer Fassung und automatischen Tests (Stand-Absätze unten). Die Stufen 1 und 2 sind bis auf den Test mit fünf Fremden erledigt, aus den Stufen 3 bis 5 der Bau aller Welten. Die drei Minispiele (Hebel, Rede-Ringen, Zombie-Tanz) haben eigene Spielflächen mit Platzhaltergrafik. Offen sind je Abschnitt Grafik, Audio und der Test mit Fremden, dazu die Steam-Seite.
 
 **Was je Abschnitt noch offen ist** (Stückzahlen aus `welten/*.yaml` und `04-audio.md`; Zustandsvarianten, Animationen und Stimmen kommen dazu). Dauer und Stunden je Zeile sind noch nicht neu geschätzt; das legt Sebastian fest.
 
@@ -101,9 +101,9 @@ Preise Stand November 2026, laut [Retro Diffusion auf itch.io](https://astropuls
 | --- | --- | --- | --- |
 | Prolog und Gegenwart | 3 Räume, 3 Figuren, 6 Gegenstände, 1 Nahansicht; Hauptmenü und Oberfläche | Titelthema, `gegenwart`, `zappomat`; 16 Geräusche der Bedienung, 13 für Max, Pixel und die Gegenwart | Test mit fünf Fremden (Prolog und Welt 1 bis Rätsel 4) |
 | Welt 1 | 14 Räume, 29 Figuren, 25 Gegenstände, 2 Nahansichten | 7 Musikstücke, 8 Geräusche, Goblin-Arbeitslied und Waldemars Nummer | Demo und Steam-Seite |
-| Welt 2 | 11 Räume, 29 Figuren, 43 Gegenstände, 3 Nahansichten | 4 Musikstücke, 8 Geräusche | Minispiele des Fünfkampfs bauen, Test |
+| Welt 2 | 11 Räume, 29 Figuren, 43 Gegenstände, 3 Nahansichten | 4 Musikstücke, 8 Geräusche | Grafik für Hebel und Sandgrube (Minispiele), Test |
 | Welt 3 | 12 Räume, 24 Figuren, 14 Gegenstände, 2 Nahansichten | 5 Musikstücke, 12 Geräusche | Test |
-| Welt 4 | 14 Räume, 31 Figuren, 17 Gegenstände | 9 Musikstücke, 11 Geräusche, Dr. Werbepauses Jingle | Rhythmus-Minispiel bauen, Test |
+| Welt 4 | 14 Räume, 31 Figuren, 17 Gegenstände | 9 Musikstücke, 13 Geräusche, Dr. Werbepauses Jingle | Tempo der Musik ins Rhythmus-Minispiel eintragen, Test |
 | Zwischenspiele und Finale | 4 Räume, 15 Figuren, 6 Gegenstände | `finale_maschine`, `finale_geburtstag`, `werbeblock`, Abspann | Sprachausgabe oder Brabbel entscheiden, Steam-Einreichung |
 
 **Plan vom 9. November 2026 (vor dem Bau der Graubox):** Die Tabelle unten bleibt als Messlatte stehen. Ihre Dauern und Stundenbudgets enthalten den Bau der Welten, der schon erledigt ist; für Grafik und Audio allein sind sie zu hoch und müssen neu geschätzt werden. Fünf Stufen mit Dauer, Stundenbudget und einer Regel, wann umgesteuert wird. Nach jeder Stufe Ist und Plan vergleichen und die nächste Stufe neu schätzen. Der Umfang des Spiels bleibt dabei fest; umgesteuert wird am Ablauf, nicht an den Rätseln.

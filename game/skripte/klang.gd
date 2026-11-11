@@ -138,6 +138,16 @@ func musik(id: String) -> void:
 		_tween.chain().tween_callback(alt.stop)
 
 
+## Das laufende Stück von einer Stelle (Sekunden) neu starten: Das Rhythmus-Minispiel legt seinen
+## ersten Schlag auf den Takt der Musik (skripte/minispiele/zombie_tanz.gd, VERSATZ). Ohne Datei
+## passiert nichts.
+func musik_von_vorn(ab := 0.0) -> void:
+	protokoll.append("musik_von_vorn/" + aktuelle_musik)
+	var p := _musik[_aktiv]
+	if p.stream != null and p.playing:
+		p.play(maxf(0.0, ab))
+
+
 func musik_stopp() -> void:
 	aktuelle_musik = ""
 	for m in _musik:

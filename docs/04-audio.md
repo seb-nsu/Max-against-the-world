@@ -206,7 +206,9 @@ Jedes Geräusch hat eine Kennung; die Datei heißt `audio/geraeusche/<Kennung>.o
 | pause | pause click with a tape stop | Fernbedienung, Taste Pause |
 | gluecksrad_ticken | game show wheel ticking slowing down | Glücksrad-Studio, das Rad dreht sich |
 | lachkonserve | studio audience laughter | Sitcom-Küche; ist der Jingle `lachkonserve` aus `audio/jingles/` |
-| zombie | zombie groan | Musikvideo-Friedhof |
+| zombie | zombie groan | Musikvideo-Friedhof, Zusammenstoß der Zombies am Ende des Rhythmus-Minispiels (verdrahtet) |
+| takt | dry rimshot click, one hit, very short | Rhythmus-Minispiel, jeder Schlag; entfällt, sobald `w4_mitternacht` den Takt selbst trägt (verdrahtet) |
+| tanz_schritt | sneaker squeak on a disco floor, one short step | Rhythmus-Minispiel, Max tritt gegen den Takt auf (verdrahtet) |
 | comic_schlag | comic punch impact | Kapitolis |
 | lichtroehre | fluorescent tube buzzing and swooshing when swung | Lichtröhre Deluxe, jede Benutzung |
 | muellpresse | rusty trash compactor walls grinding with crunching video tapes | Kellerarchiv, Müllpresse |

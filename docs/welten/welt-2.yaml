@@ -34,6 +34,7 @@ weitere_schalter:
   - W2_LAUF_GEOELT           # Lauf mit geölten Sandalen (Bestleistung, gesetzt nach R12)
   - W2_KORB                  # Wert: Gegenstände im Korb des Wurfhebels
   - W2_HEBEL_FEHLER          # Wert: Fehlversuche am Hebel (großzügige Wertung ab 2)
+  - W2_WINKEL                # Wert: Winkelstufe des Wurfhebels (0 flach, 1 mittel, 2 steil)
   - W2_DISKUS_ERSATZ         # Rätsel 7 mit Ersatz gelöst (DISK 0340)
   - W2_BAUSTEINE             # Wert: gefundene Rätsel-Bausteine der Sphinx
   - W2_KONTER                # Wert: gesammelte Konter 1 bis 7

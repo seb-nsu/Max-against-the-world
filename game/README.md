@@ -5,10 +5,10 @@ Auflösung 640×360 (seit 10. November 2026, vorher 480×270; Maße zentral in `
 Wechsel mit `python3 tools/aufloesung.py --umrechnen ALT NEU`), Pixelgrafik ohne Glättung, ganzzahlig
 skaliert. Text (Nunito) wird in voller Bildschirmauflösung gezeichnet (Stretch-Modus
 „canvas_items“ mit Pixel-Einrasten, `docs/05-spielsysteme.md`, Schrift). Bildschirmfotos aus dem
-laufenden Spiel: `tests/bildschirmfoto.gd` und `tests/bildschirmfoto_menues.gd` (Aufruf im Kopf der Datei, braucht xvfb-run). Stand (11. November 2026):
+laufenden Spiel: `tests/bildschirmfoto.gd`, `tests/bildschirmfoto_menues.gd` und `tests/bildschirmfoto_minispiele.gd` (Aufruf im Kopf der Datei, braucht xvfb-run). Stand (11. November 2026):
 Graubox. Prolog, Welt 1 bis 4, die drei Zwischenspiele mit Reisetasche und das Finale mit Abspann
-sind mit Platzhaltergrafik durchspielbar. Die Minispiele sind noch Auswahlmenüs, Grafik und Ton
-fehlen.
+sind mit Platzhaltergrafik durchspielbar, die drei Minispiele (Hebel, Rede-Ringen, Zombie-Tanz)
+mit eigener Spielfläche. Grafik und Ton fehlen.
 
 ## Öffnen und spielen
 
@@ -84,6 +84,16 @@ godot --headless --editor --path game -- --cq-bauen   # Godot-Bau: fehlende Popo
   `room_dachboden.gd`. Regeln über mehrere Räume (Ziegen, Zeldina und Grimmzahn als
   Begleiter, die Abnehmer in Smaugis Kammer, Pixel im Fell) stehen in `skripte/welt_1.gd`;
   `CQRaum` ruft sie nach jedem Betreten und Laden auf.
+- **Minispiele** (Archimedes' Hebel und Rede-Ringen in Welt 2, Zombie-Tanz in Welt 4): Die Regeln
+  stehen ohne Oberfläche in `skripte/minispiele/` (`hebel.gd`, `rede_ringen.gd`,
+  `zombie_tanz.gd`), die Spielflächen in `oberflaeche/minispiel_*.gd` (gemeinsamer Rahmen
+  `minispiel.gd`). `Spiel.minispiel_oeffnen(skript)` öffnet eine Spielfläche; sie zählt wie eine
+  Zwischensequenz. Die Regeln des Abschnitts führen den Ablauf und fragen die Spielfläche nach dem
+  nächsten Zug. Im Testmodus kommen die Züge aus `Spiel.vorgabe_auswahl`; mit
+  `Spiel.minispiel_von_hand` drückt ein Test die echten Knöpfe (`tests/minispiele.gd`). Figuren und
+  Hintergründe sind gezeichnete Platzhalter, bis es die Grafik gibt. Tempo und Versatz des
+  Zombie-Tanzes stehen als `BPM` und `VERSATZ` in `zombie_tanz.gd` (nach dem Erzeugen der Musik
+  messen und eintragen).
 - **Auswahl ohne Gesprächsfigur** (Wünsche am Brunnen, Passwort an der Geheimtür):
   `Spiel.auswahl(texte)` zeigt Popochius Inline-Auswahl; Tests geben die Antwort über
   `Spiel.vorgabe_auswahl` vor. Das Passwort sind vier Auswahlen nacheinander (gewählte Teile
@@ -237,6 +247,7 @@ godot --headless --path . --import                                   # einmal na
 godot --headless --path . -s res://tests/prolog_durchlauf.gd          # Testmodus, gut 3 Minuten
 godot --headless --path . -s res://tests/prolog_durchlauf.gd -- --echt   # echte Sprechblasen, gut 9 Minuten
 godot --headless --path . -s res://tests/menues.gd                    # Menüs, Optionen, Audio-Gerüst, unter 1 Minute
+godot --headless --path . -s res://tests/minispiele.gd                # Hebel, Rede-Ringen, Zombie-Tanz, unter 1 Minute
 ```
 
 **Screenshot-Regressionstest (A16):** `tests/bildschirm_vergleich.gd` betritt jeden gebauten Raum
@@ -253,7 +264,8 @@ xvfb-run -a -s "-screen 0 1280x720x24" godot --path . --rendering-driver opengl3
 ```
 
 Läuft in GitHub Actions als eigener Job „bildschirm“; Abweichungen und Übersichten gibt es dort als
-Artefakt. Die Bildschirmfotos der Oberfläche (`bildschirmfoto.gd`, `bildschirmfoto_menues.gd`)
+Artefakt. Die Bildschirmfotos der Oberfläche (`bildschirmfoto.gd`, `bildschirmfoto_menues.gd`,
+`bildschirmfoto_minispiele.gd`)
 nehmen `--sprache=en` für die englische Fassung.
 
 Der allererste Import nach dem Klonen meldet rund 60 Fehler (Autoloads und Übersetzungen, die erst beim Import entstehen). Das ist normal: Ein zweiter Import und das Öffnen im Editor laufen fehlerfrei. Im Editor genügt es, das Projekt einmal zu öffnen und, falls Godot fragt, neu zu laden.

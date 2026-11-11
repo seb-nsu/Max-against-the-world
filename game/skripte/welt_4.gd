@@ -152,6 +152,8 @@ const SPAEHEN := {"gluecksrad": "W4_RAU_PIX_0070", "sitcom_kueche": "W4_RAU_PIX_
 	"savanne": "W4_RAU_PIX_0090", "friedhof": "W4_RAU_PIX_0100", "kapitolis": "W4_RAU_PIX_0120",
 	"empfang": "W4_RAU_PIX_0130"}
 
+## Spielfläche des Zombie-Tanzes (Regeln in skripte/minispiele/zombie_tanz.gd)
+const TANZ_FELD := preload("res://oberflaeche/minispiel_tanz.gd")
 ## Zahl der Fehlversuche beim Zombie-Tanz (nur im Raum)
 var _tanz_fehler := 0
 #endregion
@@ -1004,9 +1006,16 @@ func _tanzflaeche() -> bool:
 		await _szene(["W4_FRIE_ZOM_0080", "W4_FRIE_MAX_0090"])
 		return true
 	await _sag("W4_FRIE_MAX_0240")
-	var wahl := await Spiel.auswahl(["UI_W4_TANZ_TAKT", "UI_W4_TANZ_GEGEN"])
-	if wahl == 1:
-		await _szene(["W4_FRIE_ZOM_0250", "W4_FRIE_MAX_0260", "W4_FRIE_PIX_0270"])
+	# Rhythmus-Minispiel (Regeln: skripte/minispiele/zombie_tanz.gd, Spielfläche:
+	# oberflaeche/minispiel_tanz.gd): Max tritt zwischen den Schlägen auf.
+	var feld := Spiel.minispiel_oeffnen(TANZ_FELD)
+	feld.zeigen(CQZombieTanz.new())
+	var gewonnen: bool = await feld.runde()
+	if gewonnen:
+		await _sag("W4_FRIE_ZOM_0250")
+	Spiel.minispiel_schliessen()
+	if gewonnen:
+		await _szene(["W4_FRIE_MAX_0260", "W4_FRIE_PIX_0270"])
 		await _r5_geloest()
 		return true
 	_tanz_fehler += 1

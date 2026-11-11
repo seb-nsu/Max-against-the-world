@@ -564,6 +564,17 @@ UI_W2_BAUSTEIN_BLAU,„Es ist blau und hat trotzdem keine Laune“,"""It is blue
 UI_W2_ANKLAGEN,Du warst es!,It was you!
 UI_W2_HEBEL_ZIEHEN,Abspringen!,Launch!
 UI_W2_KORB_LEEREN,Korb ausräumen,Empty the basket
+UI_MS_HEBEL_TITEL,Archimedes' Hebel,Archimedes' Lever
+UI_MS_HEBEL_HILFE,Ein Klick legt etwas in den Korb oder holt es wieder heraus.,Click to put something in the basket or take it out again.
+UI_MS_HEBEL_WINKEL,Winkel,Angle
+UI_MS_WINKEL_FLACH,flach,flat
+UI_MS_WINKEL_MITTEL,mittel,medium
+UI_MS_WINKEL_STEIL,steil,steep
+UI_MS_HEBEL_TASCHEN,Taschen,Pockets
+UI_MS_HEBEL_KORB,Korb,Basket
+UI_MS_SPAETER,Später,Later
+UI_MS_RINGEN_TITEL,Rede-Ringen,Word Wrestling
+UI_MS_RINGEN_HILFE,Wähle den Konter. Cicero muss fünf Linien weit bis über die Mauer.,Pick a comeback. Cicero has to go five lines and over the wall.
 UI_W2_FELD_1,Feld 1: Einladung,Box 1: Invitation
 UI_W2_FELD_2,Feld 2: Sonne,Box 2: Sun
 UI_W2_FELD_3,Feld 3: Volk,Box 3: Crowd
@@ -894,8 +905,12 @@ UI_W4_ANTWORT_C,Antwort C,Answer C
 UI_W4_BALKEN_HELL_DUNKEL,Von hell nach dunkel sortieren,Sort from light to dark
 UI_W4_BALKEN_DUNKEL_HELL,Von dunkel nach hell sortieren,Sort from dark to light
 UI_W4_BALKEN_BUNT,Nach Farben sortieren,Sort by colour
-UI_W4_TANZ_TAKT,Im Takt tanzen,Dance to the beat
-UI_W4_TANZ_GEGEN,Gegen den Takt tanzen,Dance against the beat
+UI_W4_TANZ_TAKT,Im Takt,On the beat
+UI_W4_TANZ_GEGEN,Gegen den Takt,Off the beat
+UI_MS_TANZ_TITEL,Zombie-Tanz,Zombie Dance
+UI_MS_TANZ_HILFE,"Tritt zwischen zwei Schlägen auf: Klick, Leertaste oder A.","Step between two beats: click, space bar or A."
+UI_MS_TANZ_ZAEHLER,Durcheinander,Confusion
+UI_MS_TANZ_EINZAEHLEN,Gleich geht es los …,Here we go …
 UI_RAUM_SUPERMARKT,Supermarkt,Supermarket
 UI_OBJ_AUFSTELLER_MIT_MILCH_SONDERANGEBOT,Aufsteller mit Milch-Sonderangebot,Milk special offer sign
 UI_OBJ_MILCHREGAL_DURCH_DIE_TUER,Milchregal,Milk shelf

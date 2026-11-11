@@ -70,6 +70,8 @@ jobs:
         run: timeout 300 ./godot --headless --path game -s res://tests/ansehen_zustand.gd
       - name: Menüs, Optionen und Audio-Gerüst
         run: timeout 300 ./godot --headless --path game -s res://tests/menues.gd
+      - name: Minispiele (Regeln und Spielflächen mit echten Knöpfen)
+        run: timeout 300 ./godot --headless --path game -s res://tests/minispiele.gd
       - name: Telemetrie-Auswertung (Protokoll aus dem Testmodus)
         run: python3 tools/telemetrie_auswertung.py ~/.local/share/godot/app_userdata/*/test_telemetrie --mit-tests > /dev/null
       - name: Prolog-Durchlauf (echte Sprechblasen und Wege)

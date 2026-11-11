@@ -1069,3 +1069,40 @@ Pixel hat jetzt für jedes ältere Ding eine eigene Zeile, die zum nächsten Rei
 - Godot: Regeln laden, Prolog und Welt 1 (779 Prüfungen), Welt 2 (56), Welt 3 (64, Laufzeit 73 Sekunden bei 400 Sekunden Grenze), Welt 4 (24), Finale (26), Hinweise (19), Ansehen mit Zustand (31), Menüs (74), Prolog mit echten Sprechblasen (778): überall 0 Fehler. Der Import meldet keinen Fehler, die Telemetrie-Auswertung besteht. Kein Test ist abgeschaltet.
 - Bildvergleich: 55 Räume, 0 Fehler. Die Referenzbilder von Stadtstraße, Küche der Orakel-Oma und Büroturm sind neu, weil dort gewollt andere Platzhalter stehen (der Büroturm lag mit dem neuen Kopierer bei 0,78 Prozent über der Grenze von 0,5).
 - Schlusskontrolle wiederholt, nach dem Zurückholen der fünf Anspielungen: Jetzt sind 582 Skriptzeilen geändert, neu oder gestrichen (Prolog 44, Welt 1 145, Welt 2 99, Welt 3 143, Welt 4 102, Zwischenspiele und Finale 49), dazu 67 Auslöser und 27 Sprecher. Alle stehen in Abschnitt 2. Die 16 geschützten Zeilen sind weiter wortgleich, auch „Das war … bequem. Wirklich bequem. Darum nehm ich die nicht.“ in Welt 3.
+
+## 7. Zweiter Nachtrag vom 11. November 2026: fünf Punkte vor dem Merge
+
+Sebastian hat fünf Punkte bestellt und den Merge auf danach gelegt: Minispiele bauen, Ton verdrahten, die drei grauen Schalter echt machen, die englische Fassung ganz durchgehen, Kleinkram. Am Wortlaut des Skripts ändert Punkt 1 nichts.
+
+### Punkt 1: Minispiele
+
+Rede-Ringen, Hebel und Zombie-Tanz waren Auswahlmenüs. Jetzt hat jedes eine eigene Spielfläche über dem Raum. Die Regeln stehen getrennt von der Oberfläche, damit Tests sie ohne Bild prüfen können.
+
+| Minispiel | vorher | nachher |
+| --- | --- | --- |
+| Archimedes' Hebel (Welt 2, Tag 1) | Gegenstände einzeln auf den Hebel ziehen, dann ein Menü „Abspringen“ oder „Korb ausräumen“ | Spielfläche mit dem Hebel von der Seite, Max' Taschen und dem Korb. Ein Klick legt etwas hinein oder holt es heraus, Archimedes kommentiert wie bisher. Dazu der Winkel in drei Stufen und die Knöpfe „Abspringen!“, „Korb ausräumen“, „Später“. Der Absprung ist zu sehen. |
+| Rede-Ringen (Welt 2, Finaltag) | Menü mit den Konter-Sätzen | Sandgrube von der Seite mit fünf Schrittlinien, Max links, Cicero auf der Linie seiner Beleidigung, rechts die Mauer. Darunter das Konter-Panel mit allen gesammelten Kontern. Treffer: Cicero stolpert eine Linie weiter, die Linie leuchtet golden, das Publikum jubelt. Fehlversuch: Die Sonne wandert im Zeitraffer, alle schlafen ein, Cicero rückt zurück, der falsche Konter bleibt für diese Beleidigung ausgegraut. |
+| Zombie-Tanz (Welt 4) | Menü „Im Takt tanzen“ oder „Gegen den Takt tanzen“ | Rhythmus-Spiel: Sechs Zombies treten auf jeden Schlag, ein Taktbalken zeigt den Zeiger zwischen zwei Schlägen. Max tritt mit Klick, Leertaste oder A dazwischen auf. Acht Gegenschritte in 24 Schlägen, und die Zombies laufen ineinander. |
+
+Die Sonderfälle der anderen drei Disziplinen (Lauf, Speer, Diskus) bleiben Szenen. So steht es in `docs/raetsel/welt-2.md`.
+
+Was dazugehört:
+
+- **Regeln:** `game/skripte/minispiele/rede_ringen.gd`, `hebel.gd`, `zombie_tanz.gd`.
+- **Spielflächen:** `game/oberflaeche/minispiel.gd` (gemeinsamer Rahmen), `minispiel_ringen.gd`, `minispiel_hebel.gd`, `minispiel_tanz.gd`. Figuren und Hintergrund sind gezeichnete Platzhalter wie in den Graubox-Räumen. Die Sprechblasen stehen über den Figuren auf der Spielfläche.
+- **Ablauf:** `game/skripte/welt_2.gd` und `welt_4.gd` rufen die Spielflächen auf. Alle Zeilen, Fehlversuche und die großzügige Wertung nach zwei Fehlversuchen sind dieselben wie vorher. Ein Minispiel zählt wie eine Zwischensequenz: Speichern und Pausemenü warten, bis es zu ist.
+- **Bedienung:** Maus, Tastatur und Controller. Knöpfe sind Ziele des Zeigers, im Tanz ist A der Schritt.
+- **Barrierefreiheit:** Treffer und Fehler im Tanz haben Zeichen und Text, nicht nur Farben. „Flackern reduzieren“ lässt die Fliesen weich pulsieren. „Bildschirmwackeln aus“ nimmt das Wackeln beim Zusammenstoß und beim Fehlsprung weg.
+- **Texte:** 17 neue Einträge in `docs/uebersetzung/ui.csv`, deutsch und englisch. Die zwei Tanz-Einträge heißen jetzt „Im Takt“ und „Gegen den Takt“ und stehen als Rückmeldung unter dem Balken.
+- **Tests:** neu `game/tests/minispiele.gd` mit 63 Prüfungen. Der Test prüft die Regeln und drückt im Spiel die echten Knöpfe. Er läuft in GitHub Actions mit. `welt_2_anspiel.gd` spielt Hebel und Ringen weiter auf dem alten Weg über Vorgaben durch. Neu ist auch `game/tests/bildschirmfoto_minispiele.gd` für Bildschirmfotos.
+- **Dokumente:** `docs/raetsel/welt-2.md`, `docs/raetsel/welt-4.md`, `docs/05-spielsysteme.md`, `docs/03-produktion.md`, `docs/04-audio.md` (zwei neue Geräusche `takt` und `tanz_schritt`), `docs/entscheidungen.md`, `docs/welten/welt-2.yaml` (Wert `W2_WINKEL`), `game/README.md`.
+
+Entscheidungen, bitte prüfen:
+
+- **Winkel am Hebel.** Das Skript nennt ihn („dazwischen der Winkel“), die Regeln hatten ihn nicht. Jetzt verschiebt er die Kraft um eine Stufe: flach nimmt eins weg, steil gibt eins dazu. Treffer bleibt 8 bis 10. Pixel allein trifft bei jedem Winkel, der Normalweg ändert sich also nicht.
+- **Zahlen im Tanz.** 118 Schläge je Minute wie im Musik-Prompt, vier Schläge Einzählen, 24 Schläge je Runde (gut zwölf Sekunden), acht Punkte zum Sieg. Als „gegen den Takt“ zählt die mittlere Hälfte zwischen zwei Schlägen. Ein Schritt im Takt nimmt einen Punkt weg, und je Schlag zählt nur der erste Schritt, damit wildes Klicken nichts bringt. Ob das zu leicht oder zu schwer ist, zeigt erst der Test mit Fremden. Die Zahlen stehen oben in `zombie_tanz.gd`.
+- **Takt und Musik.** Das Spiel zählt den Takt selbst und spielt je Schlag das Geräusch `takt`. Wenn die echte Musik da ist: Tempo messen, als `BPM` eintragen, den Abstand bis zum ersten Schlag als `VERSATZ`. Die Runde startet das Stück dann von vorn.
+
+Offen bleibt: Die Bilder für Hebel, Sandgrube und Tanzfläche gibt es noch nicht. Die Spielflächen zeigen bis dahin Kästen mit Namen.
+
+Prüfläufe vor dem Commit von Punkt 1: `tools/pruefen.py` 0 Fehler, 0 Warnungen. Alle acht Dokument-Prüfungen grün. Godot: Prolog 779, Welt 2 56, Welt 3 64, Welt 4 24, Finale 26, Hinweise 19, Ansehen 31, Menüs 74, Minispiele 63, Prolog mit echten Sprechblasen 778, Bildvergleich 55 Räume. Überall 0 Fehler. Die Telemetrie-Auswertung der Testläufe ist grün.

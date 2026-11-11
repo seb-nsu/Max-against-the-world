@@ -42,6 +42,10 @@ var herkunft_raum := ""
 
 ## Vorgegebene Antworten für auswahl() (Tests): Index je Auswahl, der Reihe nach verbraucht
 var vorgabe_auswahl: Array = []
+## Tests: Minispiele warten auch im Testmodus auf echte Knöpfe (tests/minispiele.gd)
+var minispiel_von_hand := false
+## Offene Spielfläche eines Minispiels (oberflaeche/minispiel.gd), sonst null
+var minispiel: CQMinispiel
 ## Vorgaben für das Packen der Reisetasche (Tests): Gegenstände, die der Reihe nach berührt werden
 var vorgabe_tasche: Array = []
 
@@ -776,6 +780,44 @@ func reisetasche_packen(nr: int) -> void:
 		G.unblock()
 	await t.bestaetigen()
 	in_szene -= 1
+
+
+## Spielfläche eines Minispiels öffnen (oberflaeche/minispiel_*.gd). Minispiele zählen wie
+## Zwischensequenzen: Speichern und Pausemenü warten, bis sie zu sind (05-spielsysteme.md,
+## Speichern). Popochius Leiste bleibt gesperrt, auch wenn eine Szene im Minispiel sie freigibt.
+func minispiel_oeffnen(skript: Script) -> CQMinispiel:
+	in_szene += 1
+	I.active = null
+	minispiel = skript.new()
+	minispiel.name = "Minispiel"
+	add_child(minispiel)
+	hud.visible = false  # Porträts und Pfote lägen über dem Fenster
+	G.show_hover_text()  # der Name des Hotspots unter dem Zeiger bliebe sonst stehen
+	if not testmodus:
+		if not G.unblocked.is_connected(_minispiel_sperren):
+			G.unblocked.connect(_minispiel_sperren)
+		G.block()
+	return minispiel
+
+
+func minispiel_schliessen() -> void:
+	if not is_instance_valid(minispiel):
+		return
+	minispiel.blasen_zurueck()
+	minispiel.queue_free()
+	minispiel = null
+	in_szene -= 1
+	hud.visible = true
+	if not testmodus:
+		if G.unblocked.is_connected(_minispiel_sperren):
+			G.unblocked.disconnect(_minispiel_sperren)
+		if not E.playing_queue:
+			G.unblock()
+
+
+func _minispiel_sperren() -> void:
+	if is_instance_valid(minispiel) and not G.is_blocked:
+		G.block.call_deferred()
 
 
 ## Kurze Meldung unten im Bild (Schlüssel aus ui.csv).

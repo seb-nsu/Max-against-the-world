@@ -4,6 +4,7 @@ extends RefCounted
 ## Spiel wackeln, flackern oder mit Farben codieren will, geht über diese Funktionen, damit die
 ## Schalter überall gleich wirken:
 ## - wackeln(): Bildschirmwackeln, entfällt bei „Bildschirmwackeln aus“
+## - wackeln_ebene(): dasselbe für eine Überlagerung (Minispiele liegen über der Kamera)
 ## - flackern_erlaubt(): false bei „Flackern reduzieren“; dann die weiche Variante zeigen
 ##   (Lampe dimmt langsam statt zu flackern, Umschalt-Störung als kurze Blende)
 ## - weich_blinken(): Helligkeit für eine flackernde Lichtquelle, mit der Option als sanftes Pulsieren
@@ -17,6 +18,21 @@ static func wackeln(staerke := 1.0, dauer := 0.5) -> void:
 	if Einstellungen.wert("wackeln_aus") or not is_instance_valid(E) or not E.camera:
 		return
 	E.camera.shake(staerke, dauer)
+
+
+## Eine Überlagerung (CanvasLayer) wackeln lassen: Die Kamera des Raums erreicht sie nicht.
+## Liefert false, wenn die Option das Wackeln abgeschaltet hat.
+static func wackeln_ebene(ebene: CanvasLayer, staerke := 3.0, dauer := 0.4) -> bool:
+	if Einstellungen.wert("wackeln_aus") or not is_instance_valid(ebene) or not ebene.is_inside_tree():
+		return false
+	var t := ebene.create_tween()
+	var schritte := maxi(2, int(dauer / 0.04))
+	for i in schritte:
+		var rest := 1.0 - float(i) / schritte
+		t.tween_property(ebene, "offset",
+			Vector2(randf_range(-1.0, 1.0), randf_range(-1.0, 1.0)) * staerke * rest, 0.04)
+	t.tween_property(ebene, "offset", Vector2.ZERO, 0.04)
+	return true
 
 
 static func flackern_erlaubt() -> bool:
