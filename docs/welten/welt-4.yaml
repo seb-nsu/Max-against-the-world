@@ -15,6 +15,7 @@ raeume:
     ausgaenge: [gluecksrad]            # nach R1 wischt das Bild ins Studio
     erreichbar_ab: start
     musik: w4_testbild
+    atmo: w4_atmo
     zustaende: [Balken durcheinander, Balken geordnet, Graustufen]
   - id: rauschen
     name: Rauschen zwischen den Sendern
@@ -23,6 +24,7 @@ raeume:
     ausgaenge: [gluecksrad, sitcom_kueche, savanne, friedhof, kapitolis, empfang]   # nur Pixel, kriecht in die Sender
     erreichbar_ab: R1
     musik: w4_testbild
+    atmo: rauschen
   - id: gluecksrad
     name: Glücksrad-Studio
     skript_code: [GLUE, BONU]
@@ -30,6 +32,7 @@ raeume:
     ausgaenge: [testbild, sitcom_kueche, savanne, friedhof, kapitolis, werbespot_set, empfang]   # Umschalten
     erreichbar_ab: R1
     musik: w4_gluecksrad
+    atmo: w4_atmo
   - id: sitcom_kueche
     name: Sitcom-Küche
     skript_code: [SIT]
@@ -37,6 +40,7 @@ raeume:
     ausgaenge: [gluecksrad, savanne, friedhof, kapitolis, werbespot_set, empfang]   # Umschalten
     erreichbar_ab: R2
     musik: w4_sitcom
+    atmo: w4_atmo
     zustaende: [Keksdose ganz, Scherben am Boden, Küchentür weg]
   - id: savanne
     name: Savanne
@@ -45,6 +49,7 @@ raeume:
     ausgaenge: [gluecksrad, sitcom_kueche, friedhof, kapitolis, werbespot_set, empfang]   # Umschalten
     erreichbar_ab: R2
     musik: w4_savanne
+    atmo: w4_atmo
   - id: friedhof
     name: Musikvideo-Friedhof
     skript_code: [FRIE]
@@ -52,6 +57,7 @@ raeume:
     ausgaenge: [spukhaus_keller, gluecksrad, sitcom_kueche, savanne, kapitolis, werbespot_set, empfang]   # Keller zu Fuß nach R5, sonst Umschalten
     erreichbar_ab: R2                  # nur um Mitternacht über die Programmzeitschrift, sonst Pausentafel
     musik: w4_mitternacht    # Musikvideo mit Rhythmus-Minispiel
+    atmo: w4_atmo
     zustaende: [Gräber zu mit Händen, Gräber offen]
   - id: spukhaus_keller
     name: Spukhaus, Keller
@@ -60,6 +66,7 @@ raeume:
     ausgaenge: [friedhof, spukhaus_halle]   # Grabplatte zum Friedhof; Sitcom-Tür nach oben ab R6
     erreichbar_ab: R5
     musik: w4_spukhaus
+    atmo: w4_atmo
     zustaende: [Tür zu, Sitcom-Tür eingesetzt]
   - id: spukhaus_halle
     name: Spukhaus, Halle
@@ -68,6 +75,7 @@ raeume:
     ausgaenge: [spukhaus_keller]
     erreichbar_ab: R6
     musik: w4_spukhaus
+    atmo: w4_atmo
     zustaende: [Lichterkette aus, Lichterkette blinkt]
   - id: kapitolis
     name: Kapitolis
@@ -76,6 +84,7 @@ raeume:
     ausgaenge: [fondue_fabrik, gluecksrad, sitcom_kueche, savanne, friedhof, werbespot_set, empfang]   # Fabrik zu Fuß, sonst Umschalten
     erreichbar_ab: R2
     musik: w4_comic
+    atmo: w4_atmo
     zustaende: [Amboss auf der Straße, Amboss weg]
   - id: fondue_fabrik
     name: Fondue-Fabrik
@@ -84,6 +93,7 @@ raeume:
     ausgaenge: [kapitolis]
     erreichbar_ab: R2
     musik: w4_comic
+    atmo: w4_atmo
     zustaende: [Bottich zu, Bottich offen]   # Suchscheinwerfer aus bzw. an
   - id: werbespot_set
     name: Werbespot-Set
@@ -92,6 +102,7 @@ raeume:
     ausgaenge: [gluecksrad, sitcom_kueche, savanne, friedhof, kapitolis, empfang]   # hinein über die Programmzeitschrift
     erreichbar_ab: R2
     musik: lied_werbepause   # Dr. Werbepauses Jingle läuft im Spot, bis Stumm ihn abbricht (R11b)
+    atmo: w4_atmo
     zustaende: [Couch-Magnet auf dem Podest, Podest leer]
   - id: empfang
     name: Empfang
@@ -100,6 +111,7 @@ raeume:
     ausgaenge: [kellerarchiv, zappmanns_studio, gluecksrad, sitcom_kueche, savanne, friedhof, kapitolis, werbespot_set]   # Aufzug nur hinauf (R12); hinaus per Umschalten
     erreichbar_ab: R11                 # Sendersuchlauf, danach Kanal 999 in der Programmzeitschrift
     musik: w4_zentrale
+    atmo: w4_atmo
   - id: kellerarchiv
     name: Kellerarchiv
     skript_code: [ARCH]
@@ -107,6 +119,7 @@ raeume:
     ausgaenge: [empfang]               # Servicetür
     erreichbar_ab: R11
     musik: w4_zentrale
+    atmo: w4_atmo
   - id: zappmanns_studio
     name: Zappmanns Studio
     skript_code: [STUD]
@@ -114,6 +127,7 @@ raeume:
     ausgaenge: [empfang]               # Aufzug; zurück erst nach R13, Umschalten gesperrt
     erreichbar_ab: R12
     musik: w4_zappmann
+    atmo: w4_atmo
     zustaende: [Quote hoch, Quote eingebrochen]
 # Weitere Bilder ohne begehbaren Raum (Grafik Welt 4): Zappmanns erste Kindersendung (Bild-in-Bild in R13),
 # Max auf der Couch (Albtraum in R13), Opa vor flackernden Lampen (Prolog-Wohnzimmer, R7), Pausentafel Mitternachts-TV.
@@ -234,7 +248,7 @@ figuren:
     name: Zombie
     kuerzel: ZOM
     raum: friedhof
-    groesse_px: 196                     # sechsmal; im Grab 30
+    groesse_px: 196                     # sechsmal; im Grab siehe grafik/welt-4.md
     spielbar: false
   - id: geist
     name: Geist
@@ -525,7 +539,7 @@ raetsel:
     schalter: [W4_R07_GELOEST]
     optional: false
   - id: R8
-    name: Die Wahrheit ist irgendwo da draußen
+    name: Ein Beweis für den Agenten
     raum: spukhaus_halle
     benoetigt: [R6]
     benoetigt_eins_von: [R7, sonnenbrille]   # Sonnenbrille aus Welt 3 als Abkürzung
@@ -646,6 +660,7 @@ weitere_schalter:
   - W4_ZEITSCHRIFT_GEFUNDEN    # Wert: angeklickte Einträge der Programmzeitschrift
   - W4_ALLE_KANAELE            # alle Einträge der Programmzeitschrift gefunden (Errungenschaft Zapp-Meister)
   - W4_FOLGE_2015_GELESEN      # 20:15-Folge in der Zeitschrift gelesen: Fondue (R4a)
+  - W4_MUTTER_FONDUE           # Sitcom-Mutter hat das Fondue bestätigt (R4a), auch vor dem Lesen der Zeitschrift
   - W4_KOMMISSAR_FOLGT         # Max hat gerade mit dem Kommissar geredet; Umschalten nimmt ihn mit (R3)
   - W4_KOMMISSAR_KOMMT         # Kommissar kommt mit in die Sitcom-Küche (R3 beginnt)
   - W4_KOMMISSAR_IN_SITCOM     # Kommissar steht nach R3 in der Küche, bis Max umschaltet

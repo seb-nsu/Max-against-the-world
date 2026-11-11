@@ -548,7 +548,8 @@
    ],
    "optional": true,
    "sammelschritt": false,
-   "hinweise": []
+   "hinweise": [],
+   "hinweise_von": "R10"
   },
   {
    "schritt": "R10b",
@@ -564,7 +565,8 @@
    "objekte": [],
    "optional": true,
    "sammelschritt": false,
-   "hinweise": []
+   "hinweise": [],
+   "hinweise_von": "R10"
   },
   {
    "schritt": "R11",

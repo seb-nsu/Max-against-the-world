@@ -14,8 +14,20 @@ const CONTROLLER := [
 	["LB", "UI_TASTE_FIGUR_WECHSELN"], ["RB", "UI_PAD_RB"], ["Stick", "UI_PAD_STICK"],
 	["+", "UI_PAD_KREUZ"], ["Start", "UI_TASTE_PAUSE"],
 ]
+## Schalter, die im Spiel noch nichts bewirken, stehen ausgegraut mit „kommt noch“ da. Zurzeit
+## ist die Liste leer: Untertitel (Spiel.blase_zeigen), Bildschirmwackeln aus (CQEffekte.wackeln)
+## und Farbenblind-Hilfe (CQEffekte.mit_sprecher, farbsymbol) wirken.
+const OHNE_WIRKUNG := []
+## Schalter mit einer Erklärung in kleiner Schrift unter dem Namen: Schlüssel → Text
+const ERKLAERUNG := {
+	"untertitel": "UI_OPT_UNTERTITEL_HILFE",
+	"farbenblind": "UI_OPT_FARBENBLIND_HILFE",
+}
 
 var _reiter: TabContainer
+## Ausgegraute Schalter und Schalter mit Wirkung (für Tests): Schlüssel → CheckButton
+var _schalter_aus := {}
+var _schalter_an := {}
 ## Aktion, die gerade auf eine neue Taste wartet ("" = keine)
 var _belegt_wird := ""
 var _tasten_knoepfe := {}
@@ -31,6 +43,8 @@ func _aufbauen() -> void:
 	for k in get_children():
 		k.queue_free()
 	_tasten_knoepfe.clear()
+	_schalter_aus.clear()
+	_schalter_an.clear()
 	var p := S.panel(Vector2(32, 12), Vector2(576, 336))
 	add_child(p)
 	var titel := S.label(tr("UI_MENUE_OPTIONEN"), 12)
@@ -155,9 +169,25 @@ func _regler(g: GridContainer, text_key: String, schluessel: String) -> void:
 
 
 func _schalter(g: GridContainer, text_key: String, schluessel: String) -> void:
-	g.add_child(S.label(tr(text_key)))
 	var c := CheckButton.new()
 	c.button_pressed = bool(Einstellungen.wert(schluessel))
+	if schluessel in OHNE_WIRKUNG:
+		g.add_child(S.label("%s (%s)" % [tr(text_key), tr("UI_OPT_KOMMT_NOCH")], 10, S.GRAU))
+		c.disabled = true
+		c.focus_mode = Control.FOCUS_NONE
+		g.add_child(c)
+		_schalter_aus[schluessel] = c
+		return
+	if ERKLAERUNG.has(schluessel):
+		var spalte := VBoxContainer.new()
+		spalte.add_theme_constant_override("separation", -3)
+		spalte.add_child(S.label(tr(text_key)))
+		spalte.add_child(S.label(tr(ERKLAERUNG[schluessel]), 7, S.GRAU))
+		g.add_child(spalte)
+	else:
+		g.add_child(S.label(tr(text_key)))
+	c.size_flags_vertical = Control.SIZE_SHRINK_CENTER
+	_schalter_an[schluessel] = c
 	c.toggled.connect(func(an):
 		Klang.geraeusch("ui_klick")
 		Einstellungen.setze(schluessel, an)

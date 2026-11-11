@@ -35,15 +35,27 @@ const KOMMENTARE := {
 		Handy = "ZS2_DACH_PIX_0560", Kaugummi = "ZS2_DACH_PIX_0570",
 		Kugelschreiber = "ZS2_DACH_PIX_0580", Diskus = "ZS2_DACH_PIX_0590",
 		Wurfscheibe = "ZS2_DACH_PIX_0590", Pharaonenteller = "ZS2_DACH_PIX_0590",
-		Schallplatte = "ZS2_DACH_PIX_0590",
+		Schallplatte = "ZS2_DACH_PIX_0590", Eimer = "ZS2_DACH_PIX_0592",
+		Leuchttrank = "ZS2_DACH_PIX_0594", Ketchup = "ZS2_DACH_PIX_0596",
 	},
 	3: {
 		Sonnenbrille = "ZS3_DACH_PIX_0520", OmasKekse = "ZS3_DACH_PIX_0530",
 		Portalgeraet = "ZS3_DACH_PIX_0540", Kaffeetasse = "ZS3_DACH_PIX_0560",
 		SchmidtsAkte = "ZS3_DACH_PIX_0570", MorseTabelle = "ZS3_DACH_PIX_0580",
-		Olivenoel = "ZS3_DACH_PIX_0590",
+		Olivenoel = "ZS3_DACH_PIX_0590", Eimer = "ZS3_DACH_PIX_0591",
+		Leuchttrank = "ZS3_DACH_PIX_0592", Ketchup = "ZS3_DACH_PIX_0593",
+		Schriftrolle = "ZS3_DACH_PIX_0594", Handy = "ZS3_DACH_PIX_0595",
+		Kaugummi = "ZS3_DACH_PIX_0596", Kugelschreiber = "ZS3_DACH_PIX_0597",
+		Diskus = "ZS3_DACH_PIX_0598", Wurfscheibe = "ZS3_DACH_PIX_0598",
+		Pharaonenteller = "ZS3_DACH_PIX_0598", Schallplatte = "ZS3_DACH_PIX_0598",
 	},
 }
+## Ältere Dinge aus der Fundkiste und das Pflichtfach: Pixels Kommentar aus einem früheren
+## Zwischenspiel gilt weiter, wenn er nichts über das nächste Reiseziel sagt. Die übrigen
+## älteren Dinge (Eimer, Leuchttrank, Ketchup; in Zwischenspiel 3 auch Schriftrolle, Handy,
+## Kaugummi, Kugelschreiber, Diskus) haben je Zwischenspiel eine eigene Zeile in KOMMENTARE.
+const KOMMENTAR_BLEIBT := ["Kochloeffel", "Thunfischdose", "Notizbuch", "Socke",
+	"ZiegenfellVorleger", "Zeugnis", "Dosenoeffner", "Sandale", "Olivenkranz"]
 const ZU_VIEL := {1: "ZS1_DACH_MAX_0610", 2: "ZS2_DACH_MAX_0600", 3: "ZS3_DACH_MAX_0600"}
 const BESTAETIGT := {1: "ZS1_DACH_PIX_0620", 2: "ZS2_DACH_PIX_0610", 3: "ZS3_DACH_PIX_0610"}
 
@@ -101,8 +113,19 @@ func ansehen(sn: String) -> void:
 	beschaeftigt = false
 
 
-func _kommentar(sn: String) -> void:
+## Die Zeile, die Pixel zu diesem Gegenstand sagt ("" = Ersatzzeile).
+func kommentar_zeile(sn: String) -> String:
 	var zeile: String = KOMMENTARE.get(nr, {}).get(sn, "")
+	if zeile.is_empty() and sn in KOMMENTAR_BLEIBT:
+		for frueher in range(nr - 1, 0, -1):
+			zeile = KOMMENTARE[frueher].get(sn, "")
+			if not zeile.is_empty():
+				break
+	return zeile
+
+
+func _kommentar(sn: String) -> void:
+	var zeile := kommentar_zeile(sn)
 	if zeile.is_empty():
 		await Spiel.ersatz("PIX")
 	else:

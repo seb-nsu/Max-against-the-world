@@ -45,6 +45,7 @@
   "W2_LAUF_GEOELT",
   "W2_KORB",
   "W2_HEBEL_FEHLER",
+  "W2_WINKEL",
   "W2_DISKUS_ERSATZ",
   "W2_BAUSTEINE",
   "W2_KONTER",
@@ -67,7 +68,8 @@
     "hafen_syrakus"
    ],
    "erreichbar_ab": "start",
-   "musik": "w2_aegypten"
+   "musik": "w2_aegypten",
+   "atmo": "w2_atmo"
   },
   {
    "id": "thronsaal_ramses",
@@ -84,7 +86,8 @@
     "palastkueche"
    ],
    "erreichbar_ab": "start",
-   "musik": "w2_aegypten"
+   "musik": "w2_aegypten",
+   "atmo": "keine"
   },
   {
    "id": "palastkueche",
@@ -97,7 +100,8 @@
     "thronsaal_ramses"
    ],
    "erreichbar_ab": "start",
-   "musik": "w2_aegypten"
+   "musik": "w2_aegypten",
+   "atmo": "keine"
   },
   {
    "id": "sphinx",
@@ -111,6 +115,7 @@
    ],
    "erreichbar_ab": "start",
    "musik": "w2_aegypten",
+   "atmo": "w2_atmo",
    "zustaende": [
     "mit Nase",
     "ohne Nase"
@@ -129,7 +134,8 @@
     "hafen_syrakus"
    ],
    "erreichbar_ab": "R1",
-   "musik": "w2_olympia"
+   "musik": "w2_olympia",
+   "atmo": "w2_atmo"
   },
   {
    "id": "agora",
@@ -146,6 +152,7 @@
    ],
    "erreichbar_ab": "R1",
    "musik": "w2_olympia",
+   "atmo": "w2_atmo",
    "zustaende": [
     "vor Tag 1",
     "Sandale auf der Säule",
@@ -163,7 +170,8 @@
     "agora"
    ],
    "erreichbar_ab": "R1",
-   "musik": "w2_olympia"
+   "musik": "w2_olympia",
+   "atmo": "keine"
   },
   {
    "id": "stadion",
@@ -183,6 +191,7 @@
    ],
    "erreichbar_ab": "R1",
    "musik": "w2_olympia",
+   "atmo": "stadion_jubel",
    "zustaende": [
     "normal",
     "Parade"
@@ -202,7 +211,8 @@
     "faehrsteg_olympia"
    ],
    "erreichbar_ab": "R1",
-   "musik": "w2_syrakus"
+   "musik": "w2_syrakus",
+   "atmo": "w2_atmo"
   },
   {
    "id": "werkstatt",
@@ -217,7 +227,8 @@
     "hafen_syrakus"
    ],
    "erreichbar_ab": "R1",
-   "musik": "w2_syrakus"
+   "musik": "w2_syrakus",
+   "atmo": "keine"
   },
   {
    "id": "grabhuegel",
@@ -231,6 +242,7 @@
    ],
    "erreichbar_ab": "R1",
    "musik": "w2_syrakus",
+   "atmo": "w2_atmo",
    "zustaende": [
     "leer",
     "mit verwittertem Grabstein"
@@ -1119,7 +1131,7 @@
     "normal"
    ],
    "verwendet_in": [],
-   "ohne_verwendung": "Artefakt, Opa legt es im Zwischenspiel in die Maschine",
+   "ohne_verwendung": "Artefakt, Opa legt es im Zwischenspiel auf die Werkbank (in die Maschine erst im Finale)",
    "reist_mit": false,
    "nahansicht": false
   }

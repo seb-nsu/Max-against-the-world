@@ -151,7 +151,7 @@
   },
   {
    "schritt": "R4",
-   "ziel": "Die Vase des Orakels",
+   "ziel": "Das Sparschwein des Orakels",
    "raum": "kueche_orakel",
    "offen_wenn": [
     "R3b"
@@ -406,7 +406,7 @@
    ],
    "offen_wenn_eins_von": [],
    "geloest_schalter": [
-    "KAMMER_1_GELOEST"
+    "W3_KAMMER_1_GELOEST"
    ],
    "objekte": [],
    "optional": false,
@@ -436,7 +436,7 @@
    ],
    "offen_wenn_eins_von": [],
    "geloest_schalter": [
-    "KAMMER_2_GELOEST"
+    "W3_KAMMER_2_GELOEST"
    ],
    "objekte": [
     "gummihuhn"
@@ -468,7 +468,7 @@
    ],
    "offen_wenn_eins_von": [],
    "geloest_schalter": [
-    "KAMMER_3_GELOEST"
+    "W3_KAMMER_3_GELOEST"
    ],
    "objekte": [
     "gummihuhn"

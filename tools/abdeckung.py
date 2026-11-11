@@ -5,6 +5,10 @@ Eine Zeile gilt als benutzt, wenn ihre ID in den Spieldaten (game/daten), in ein
 oder einer Szene unter game/ steht. Skripte, die IDs zusammensetzen („W3_KAM1_MAX_“ + „0500“),
 zählen mit, wenn Präfix und Nummer beide als Text im selben Skript stehen. Tests zählen nicht.
 
+Eine Ansehen-Zeile zählt trotzdem als fehlend, wenn das Spiel sie nie wählen kann, weil eine
+andere Zeile desselben Objekts sie verdrängt (godot_raeume.verdraengte). Die Nummer in den
+Spieldaten allein sagt das nicht, denn die Spieldaten werden aus dem Skript erzeugt.
+
 Zeilen, die bewusst nicht vorkommen, stehen im Skript mit „Reserve, kommt nicht vor“ in der
 letzten Spalte; sie werden nur aufgezählt.
 
@@ -12,9 +16,13 @@ letzten Spalte; sie werden nur aufgezählt.
     python3 tools/abdeckung.py --pruefen  Fehler (Rückgabe 1), wenn eine Zeile ohne Reserve-Vermerk fehlt
 """
 import csv
+import json
 import re
 import sys
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import godot_raeume  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
 GAME = ROOT / "game"
@@ -44,6 +52,11 @@ def main():
         return any(f'"{praefix}_"' in t and f'"{nummer}"' in t for t in skripte)
 
     fehlend = [i for i in ids if i not in benutzt and not zusammengesetzt(i)]
+    verdraengt = {}
+    for p in sorted((GAME / "daten" / "raeume").glob("*.json")):
+        for meldung in godot_raeume.verdraengte(json.loads(p.read_text(encoding="utf-8"))):
+            verdraengt[ID_RE.search(meldung).group(0)] = meldung
+    fehlend += [i for i in verdraengt if i not in fehlend]
 
     reserve, zeilen = set(), {}
     for datei in sorted((ROOT / "docs" / "skript").glob("*.md")):
@@ -59,7 +72,7 @@ def main():
     fehler = [i for i in fehlend if i not in reserve]
     for i in fehlend:
         art = "Reserve" if i in reserve else "FEHLT  "
-        print(f"{art}  {i}  ({zeilen.get(i, '?')})")
+        print(f"{art}  {i}  ({zeilen.get(i, '?')})" + (f"  {verdraengt[i]}" if i in verdraengt else ""))
     print(f"{len(ids)} Zeilen, {len(fehlend) - len(fehler)} Reserve, {len(fehler)} kommen im Spiel nicht vor.")
     if pruefen and fehler:
         sys.exit(1)

@@ -15,6 +15,7 @@
    ],
    "erreichbar_ab": "start",
    "musik": "w4_testbild",
+   "atmo": "w4_atmo",
    "zustaende": [
     "Balken durcheinander",
     "Balken geordnet",
@@ -37,7 +38,8 @@
     "empfang"
    ],
    "erreichbar_ab": "R1",
-   "musik": "w4_testbild"
+   "musik": "w4_testbild",
+   "atmo": "rauschen"
   },
   {
    "id": "gluecksrad",
@@ -57,7 +59,8 @@
     "empfang"
    ],
    "erreichbar_ab": "R1",
-   "musik": "w4_gluecksrad"
+   "musik": "w4_gluecksrad",
+   "atmo": "w4_atmo"
   },
   {
    "id": "sitcom_kueche",
@@ -76,6 +79,7 @@
    ],
    "erreichbar_ab": "R2",
    "musik": "w4_sitcom",
+   "atmo": "w4_atmo",
    "zustaende": [
     "Keksdose ganz",
     "Scherben am Boden",
@@ -99,7 +103,8 @@
     "empfang"
    ],
    "erreichbar_ab": "R2",
-   "musik": "w4_savanne"
+   "musik": "w4_savanne",
+   "atmo": "w4_atmo"
   },
   {
    "id": "friedhof",
@@ -119,6 +124,7 @@
    ],
    "erreichbar_ab": "R2",
    "musik": "w4_mitternacht",
+   "atmo": "w4_atmo",
    "zustaende": [
     "Gräber zu mit Händen",
     "Gräber offen"
@@ -137,6 +143,7 @@
    ],
    "erreichbar_ab": "R5",
    "musik": "w4_spukhaus",
+   "atmo": "w4_atmo",
    "zustaende": [
     "Tür zu",
     "Sitcom-Tür eingesetzt"
@@ -154,6 +161,7 @@
    ],
    "erreichbar_ab": "R6",
    "musik": "w4_spukhaus",
+   "atmo": "w4_atmo",
    "zustaende": [
     "Lichterkette aus",
     "Lichterkette blinkt"
@@ -177,6 +185,7 @@
    ],
    "erreichbar_ab": "R2",
    "musik": "w4_comic",
+   "atmo": "w4_atmo",
    "zustaende": [
     "Amboss auf der Straße",
     "Amboss weg"
@@ -194,6 +203,7 @@
    ],
    "erreichbar_ab": "R2",
    "musik": "w4_comic",
+   "atmo": "w4_atmo",
    "zustaende": [
     "Bottich zu",
     "Bottich offen"
@@ -216,6 +226,7 @@
    ],
    "erreichbar_ab": "R2",
    "musik": "lied_werbepause",
+   "atmo": "w4_atmo",
    "zustaende": [
     "Couch-Magnet auf dem Podest",
     "Podest leer"
@@ -239,7 +250,8 @@
     "werbespot_set"
    ],
    "erreichbar_ab": "R11",
-   "musik": "w4_zentrale"
+   "musik": "w4_zentrale",
+   "atmo": "w4_atmo"
   },
   {
    "id": "kellerarchiv",
@@ -252,7 +264,8 @@
     "empfang"
    ],
    "erreichbar_ab": "R11",
-   "musik": "w4_zentrale"
+   "musik": "w4_zentrale",
+   "atmo": "w4_atmo"
   },
   {
    "id": "zappmanns_studio",
@@ -266,6 +279,7 @@
    ],
    "erreichbar_ab": "R12",
    "musik": "w4_zappmann",
+   "atmo": "w4_atmo",
    "zustaende": [
     "Quote hoch",
     "Quote eingebrochen"
@@ -1011,7 +1025,7 @@
   },
   {
    "id": "R8",
-   "name": "Die Wahrheit ist irgendwo da draußen",
+   "name": "Ein Beweis für den Agenten",
    "raum": "spukhaus_halle",
    "benoetigt": [
     "R6"
@@ -1263,6 +1277,7 @@
   "W4_ZEITSCHRIFT_GEFUNDEN",
   "W4_ALLE_KANAELE",
   "W4_FOLGE_2015_GELESEN",
+  "W4_MUTTER_FONDUE",
   "W4_KOMMISSAR_FOLGT",
   "W4_KOMMISSAR_KOMMT",
   "W4_KOMMISSAR_IN_SITCOM",

@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://rkgti6irvu2r"]
 
-[ext_resource type="Script" path="res://game/rooms/kueche_orakel/hotspots/wandtelefon/hotspot_wandtelefon.gd" id="1_ul7ak"]
+[ext_resource type="Script" path="res://game/rooms/kueche_orakel/hotspots/eieruhr/hotspot_eieruhr.gd" id="1_ul7ak"]
 
-[node name="Wandtelefon" type="Area2D" unique_id=1709442925]
+[node name="Eieruhr" type="Area2D" unique_id=1709442925]
 script = ExtResource("1_ul7ak")
-script_name = "Wandtelefon"
-description = "Wandtelefon"
+script_name = "Eieruhr"
+description = "Eieruhr"
 cursor = 1
 interaction_polygon = PackedVector2Array(-39, -32, 39, -32, 39, 32, -39, 32)
 

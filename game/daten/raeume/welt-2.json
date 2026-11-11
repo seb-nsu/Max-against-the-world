@@ -285,7 +285,7 @@
         "W2_NIL_PIX_0620_2"
        ],
        "bedingung_text": "mit Kruste“",
-       "mal": 2
+       "mal": 3
       }
      ]
     },
@@ -342,7 +342,8 @@
        "sprecher": "MAX",
        "blasen": [
         "W2_NIL_MAX_0710"
-       ]
+       ],
+       "bedingung_text": "verkehrt herum gehalten"
       },
       {
        "zeile": "W2_NIL_MAX_0715",
@@ -350,6 +351,7 @@
        "blasen": [
         "W2_NIL_MAX_0715"
        ],
+       "bedingung_text": "verkehrt herum gehalten",
        "mal": 2
       }
      ]
@@ -715,7 +717,8 @@
        "blasen": [
         "W2_THRO_PIX_0250",
         "W2_THRO_PIX_0250_2"
-       ]
+       ],
+       "mal": 3
       }
      ]
     },
@@ -794,7 +797,8 @@
        "blasen": [
         "W2_THRO_PIX_0290",
         "W2_THRO_PIX_0290_2"
-       ]
+       ],
+       "bedingung_text": "nach dem Lesen"
       }
      ]
     },
@@ -897,13 +901,6 @@
         "W2_THRO_PIX_0325_2"
        ],
        "mal": 2
-      },
-      {
-       "zeile": "W2_THRO_RAM_0340",
-       "sprecher": "RAM",
-       "blasen": [
-        "W2_THRO_RAM_0340"
-       ]
       }
      ],
      "nehmen": {
@@ -912,7 +909,16 @@
       "blasen": [
        "W2_THRO_MAX_0330"
       ],
-      "bedingung_text": "nach der Audienz"
+      "bedingung_text": "nach der Audienz",
+      "folge": [
+       {
+        "zeile": "W2_THRO_RAM_0340",
+        "sprecher": "RAM",
+        "blasen": [
+         "W2_THRO_RAM_0340"
+        ]
+       }
+      ]
      }
     }
    ],
@@ -1700,7 +1706,8 @@
        "sprecher": "MAX",
        "blasen": [
         "W2_SPHX_MAX_0100"
-       ]
+       ],
+       "bedingung_text": "vor dem Finaltag"
       },
       {
        "zeile": "W2_SPHX_MAX_0105",
@@ -1708,6 +1715,7 @@
        "blasen": [
         "W2_SPHX_MAX_0105"
        ],
+       "bedingung_text": "vor dem Finaltag",
        "mal": 2
       },
       {
@@ -1716,6 +1724,7 @@
        "blasen": [
         "W2_SPHX_MAX_0110"
        ],
+       "bedingung_text": "nach dem Finaltag",
        "folge": [
         {
          "zeile": "W2_SPHX_SPH_0120",
@@ -1732,6 +1741,7 @@
        "blasen": [
         "W2_SPHX_MAX_0115"
        ],
+       "bedingung_text": "nach dem Finaltag",
        "mal": 2
       }
      ]
@@ -2309,7 +2319,8 @@
        "sprecher": "MAX",
        "blasen": [
         "W2_AGOR_MAX_0060"
-       ]
+       ],
+       "bedingung_text": "vor dem Finaltag"
       },
       {
        "zeile": "W2_AGOR_MAX_0065",
@@ -2317,6 +2328,7 @@
        "blasen": [
         "W2_AGOR_MAX_0065"
        ],
+       "bedingung_text": "vor dem Finaltag",
        "mal": 2
       },
       {
@@ -2324,7 +2336,8 @@
        "sprecher": "MAX",
        "blasen": [
         "W2_AGOR_MAX_0070"
-       ]
+       ],
+       "bedingung_text": "nach dem Finaltag"
       },
       {
        "zeile": "W2_AGOR_MAX_0075",
@@ -2332,6 +2345,7 @@
        "blasen": [
         "W2_AGOR_MAX_0075"
        ],
+       "bedingung_text": "nach dem Finaltag",
        "mal": 2
       }
      ]
@@ -3139,7 +3153,8 @@
        "sprecher": "MAX",
        "blasen": [
         "W2_STAD_MAX_0070"
-       ]
+       ],
+       "bedingung_text": "vor dem Finaltag"
       },
       {
        "zeile": "W2_STAD_MAX_0075",
@@ -3147,6 +3162,7 @@
        "blasen": [
         "W2_STAD_MAX_0075"
        ],
+       "bedingung_text": "vor dem Finaltag",
        "mal": 2
       },
       {
@@ -3154,7 +3170,8 @@
        "sprecher": "MAX",
        "blasen": [
         "W2_STAD_MAX_0080"
-       ]
+       ],
+       "bedingung_text": "nach dem Finaltag"
       },
       {
        "zeile": "W2_STAD_MAX_0085",
@@ -3162,6 +3179,7 @@
        "blasen": [
         "W2_STAD_MAX_0085"
        ],
+       "bedingung_text": "nach dem Finaltag",
        "mal": 2
       }
      ]
@@ -3243,6 +3261,12 @@
        "sprecher": "MAX",
        "blasen": [
         "W2_STAD_MAX_0290"
+       ],
+       "bedingung": [
+        {
+         "art": "vor",
+         "raetsel": "R5"
+        }
        ]
       },
       {
@@ -3250,7 +3274,8 @@
        "sprecher": "MAX",
        "blasen": [
         "W2_STAD_MAX_0300"
-       ]
+       ],
+       "bedingung_text": "solange der Finaltag noch nicht bereit ist"
       },
       {
        "zeile": "W2_STAD_MAX_0310",
@@ -3258,7 +3283,7 @@
        "blasen": [
         "W2_STAD_MAX_0310"
        ],
-       "bedingung_text": "beim nächsten Benutzen beginnt der Finaltag"
+       "bedingung_text": "wenn der Finaltag bereit ist und die Wedler nicht bestochen sind, beim nächsten Benutzen beginnt der Finaltag"
       }
      ]
     },
@@ -3821,7 +3846,8 @@
        "sprecher": "MAX",
        "blasen": [
         "W2_WERK_MAX_0170"
-       ]
+       ],
+       "bedingung_text": "vor dem Training"
       },
       {
        "zeile": "W2_WERK_MAX_0175",
@@ -3829,6 +3855,7 @@
        "blasen": [
         "W2_WERK_MAX_0175"
        ],
+       "bedingung_text": "vor dem Training",
        "mal": 2
       }
      ]
@@ -4392,23 +4419,6 @@
      ],
      "ansehen": [
       {
-       "zeile": "W2_GRAB_MAX_0080",
-       "sprecher": "MAX",
-       "blasen": [
-        "W2_GRAB_MAX_0080"
-       ],
-       "bedingung_text": "Sanduhr-Symbol"
-      },
-      {
-       "zeile": "W2_GRAB_MAX_0085",
-       "sprecher": "MAX",
-       "blasen": [
-        "W2_GRAB_MAX_0085"
-       ],
-       "bedingung_text": "Sanduhr-Symbol",
-       "mal": 2
-      },
-      {
        "zeile": "W2_GRAB_MAX_0130",
        "sprecher": "MAX",
        "blasen": [
@@ -4909,6 +4919,7 @@
      "blasen": [
       "W2_GRAB_MAX_0010"
      ],
+     "bedingung_text": "Nil-Delta",
      "gegenstand": "entwurf",
      "raum": "grabhuegel"
     }
@@ -5007,6 +5018,7 @@
      "blasen": [
       "W2_AUDI_RAM_0350"
      ],
+     "bedingung_text": "nach dem Finaltag, solange der Paraden-Plan nicht gelöst ist",
      "gegenstand": "olivenkranz",
      "raum": "thronsaal_ramses"
     },
@@ -5154,6 +5166,7 @@
      "blasen": [
       "W2_DUEL_MAX_0120"
      ],
+     "bedingung_text": "während des Duells",
      "raum": "thronsaal_ramses"
     },
     {
@@ -5162,6 +5175,7 @@
      "blasen": [
       "W2_DUEL_MAX_0125"
      ],
+     "bedingung_text": "während des Duells",
      "mal": 2,
      "raum": "thronsaal_ramses"
     }
@@ -6813,6 +6827,25 @@
    },
    "ansehen": [
     {
+     "zeile": "W2_GRAB_MAX_0080",
+     "sprecher": "MAX",
+     "blasen": [
+      "W2_GRAB_MAX_0080"
+     ],
+     "bedingung_text": "Sanduhr-Symbol",
+     "zustand": "frisch"
+    },
+    {
+     "zeile": "W2_GRAB_MAX_0085",
+     "sprecher": "MAX",
+     "blasen": [
+      "W2_GRAB_MAX_0085"
+     ],
+     "bedingung_text": "Sanduhr-Symbol",
+     "mal": 2,
+     "zustand": "frisch"
+    },
+    {
      "zeile": "W2_INV_MAX_0470",
      "sprecher": "MAX",
      "blasen": [
@@ -7533,7 +7566,8 @@
      "sprecher": "PIX",
      "blasen": [
       "W2_PARA_PIX_0290"
-     ]
+     ],
+     "figur": "PIX"
     },
     {
      "zeile": "W2_PARA_PIX_0295",
@@ -7541,7 +7575,8 @@
      "blasen": [
       "W2_PARA_PIX_0295"
      ],
-     "mal": 2
+     "mal": 2,
+     "figur": "PIX"
     }
    ],
    "benutzen": [],

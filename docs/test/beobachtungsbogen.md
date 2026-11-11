@@ -26,7 +26,7 @@ Uhrzeit beim ersten Hinsehen auf das Rätsel und beim Lösen; Stufe = höchste H
 | R3 Drei Ziegenböcke | R3 | unter 10 min | | | | | | XXL-Ziege; Pixel im Ziegenfell | |
 | R4 Das Märchen an der Troll-Brücke | R4a Reihenfolge | unter 10 min | | | | | | Pixel als kleinste Ziege | |
 | | R4b Ziegisch | unter 10 min | | | | | | Übersetzungsfehler beim ersten Versuch | |
-| | R4c Ins Wasser | unter 10 min | | | | | | Fußbad; „Regel 14b: Leihgaben sind zurückzugeben“ | |
+| | R4c Ins Wasser | unter 10 min | | | | | | Fußbad; „Paragraf 14b: Leihgaben sind zurückzugeben“ | |
 | | R4 gesamt | unter 12 min | | | | | | Wasserschloss: „Die Prinzessin ist in einem anderen Schloss“ | |
 | **Vertical Slice** | Prolog bis R4 | **40 min** | | | | Stufe 3 in Welt 1: ___ (Ziel höchstens 1) | | | |
 

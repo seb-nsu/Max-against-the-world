@@ -2,7 +2,7 @@
 
 Hier steht nur, was noch offen ist. Erledigtes steht in der Git-Historie, die gültigen Entscheidungen mit Begründung in `entscheidungen.md`. Ist ein Punkt erledigt, wird er hier gestrichen und, falls er etwas entscheidet, in `entscheidungen.md` und der Besitzer-Datei eingetragen.
 
-Stand 10. November 2026. Kennungen: S = zurückgestellte Punkte aus Gutachten 4, A = Automatisierung, P = weitere Punkte, K = Abgleich zwischen Dateien.
+Stand 11. November 2026. Kennungen: S = zurückgestellte Punkte aus Gutachten 4, A = Automatisierung, P = weitere Punkte, K = Abgleich zwischen Dateien.
 
 ## Entscheidungen und Aufgaben von Sebastian
 
@@ -14,6 +14,9 @@ Stand 10. November 2026. Kennungen: S = zurückgestellte Punkte aus Gutachten 4,
 | P1 | Anwaltsstunde für Figurenliste und Titel | Sebastian, vor der Veröffentlichung (Budget 200 bis 350 €) | `03-produktion.md` (Rechtliches, Kosten) |
 | P3 | Zwei-Klick-Steuerung bestätigen oder doch eine Verbenleiste | Sebastian nach dem ersten Test | `05-spielsysteme.md` (UI) |
 | P4 | Vollvertonung oder Brabbel-Laute | Sebastian, spätestens zu Beginn von Stufe 5 (ab etwa 10.000 Wunschlisten Vollvertonung) | `03-produktion.md`, `04-audio.md` |
+| P10 | Englisch: Pixel spricht ohne Kurzformen. Passt der Tonfall? | Sebastian liest ein paar Zeilen von Pixel in `uebersetzung/en.csv`; gefällt es nicht, stellt der Commit vor der Durchsicht den alten Tonfall wieder her | `05-spielsysteme.md` (Englische Fassung) |
+| P11 | `P0_WOHN_MAX_0355` verlangt „neun Buchstaben“, ZAPPOMAT hat acht, und Opa malt „für den neunten ein Kästchen dazu“ | Sebastian entscheidet den Wortlaut (aufgehen würde es mit „sieben“ und „für den achten“); danach Englisch nachziehen | `skript/prolog.md` |
+| P14 | Zeilenbudget: Das Skript hat 5.450 Zeilen bei einem Budget von etwa 5.000; bis auf Welt 3 liegt jeder Abschnitt darüber (Zahlen in `05-spielsysteme.md`, Umfang) | Sebastian: Budgets anheben oder kürzen. Wichtig für die Kosten der Vertonung (`04-audio.md`, Umfang) | `05-spielsysteme.md` (Umfang) |
 
 ## Vor der Steam-Seite auffrischen
 
@@ -33,12 +36,12 @@ Stand 10. November 2026. Kennungen: S = zurückgestellte Punkte aus Gutachten 4,
 | P7 | Retro Diffusion vor dem ersten Auftrag prüfen | Sebastian: Modellnamen und Stil-Liste auf der Website prüfen und mit Datum ins KI-Protokoll; die lokale Version vorher auf der Radeon 7900 XT mit der Demo testen | `grafik/00-stil-und-werkzeuge.md`, `03-produktion.md` (System 2) |
 | P8 | Bildschirm-Einblendungen des Zapp-O-Mat (80×60, im Spiel etwa 40×30): Sind Gesichter lesbar? | Test in Godot; sonst die 80×60-Fassung auch beim Ansehen nutzen | `grafik/02-prolog-und-finale.md` |
 | P9 | Wartezeiten der Hinweise (30 und 60 Sekunden) | Nach dem ersten Test mit Fremden anpassen | `05-spielsysteme.md` (Hinweissystem) |
-| P10 | Gemeinsames Zustandssystem: dieselben Schalter wie Speichern und Hinweise? | Claude prüft es im Grundgerüst (Stufe 1) | `05-spielsysteme.md`, `03-produktion.md` (System 1) |
-| P11 | Godot 4.7.x und Popochiu 2.2.x auf Fehlerkorrekturen prüfen | Claude beim Projektstart | `03-produktion.md` (System 1) |
+| P12 | Animation aus eigenen Bildern: Test an Max | Sebastian liefert ein Bild von Max (flach, sauber, vier- bis achtfache Größe). Claude säubert es mit Pixel Snapper, zerlegt es und baut Atmen, Sprechen und Gehen per Code. Danach Entscheidung, woher neue Posen kommen: Retro Diffusion wie geplant oder Agent Sprite Forge | `grafik/00-stil-und-werkzeuge.md` (Zusätzliche Werkzeuge) |
+| P13 | Fertige Musik als Ergänzung (Humble-Bundle „The Complete Works“) | Sebastian prüft vor dem Kauf Lizenz (verkauftes Spiel erlaubt?) und Schleifen-Eignung | `04-audio.md` (Werkzeuge) |
 
 ## Automatisierung
 
-Alle sechzehn Ideen sind in `03-produktion.md` (Abschnitt Automatisierung) mit Nutzen, Aufwand und Stufe beschrieben. Offen ist ihr Bau. Die Dokument-Prüfung `tools/pruefen.py` deckt A13 und den Dokument-Teil von A2 schon ab.
+Alle sechzehn Ideen sind in `03-produktion.md` (Abschnitt Automatisierung) mit Nutzen, Aufwand und Stufe beschrieben. Hier stehen nur die, an denen noch etwas offen ist. Erledigt und deshalb gestrichen: A13 (`tools/pruefen.py`), A14 (`tools/spieldaten.py`) und A16 (`game/tests/bildschirm_vergleich.gd`). Die Dokument-Prüfung deckt auch den Dokument-Teil von A2 ab.
 
 | Nr. | Was | Stufe |
 | --- | --- | --- |
@@ -49,15 +52,12 @@ Alle sechzehn Ideen sind in `03-produktion.md` (Abschnitt Automatisierung) mit N
 | A5 | Parallele Claude-Agenten je Raum | 4 |
 | A6 | Audio-Pipeline mit ElevenLabs-API und Audacity-Batch | Technik 2, Vollvertonung 5 |
 | A7 | GitHub Actions: Prüfskript, Export, Rätsel-Test, Build | 1 |
-| A8 | Web-Export für Testspieler: gebaut. Vorlage „Web Testbuild“ in `game/export_presets.cfg` (ohne Threads, also ohne SharedArrayBuffer-Header), der Workflow „Testbuild“ liefert ihn als drittes Artefakt, im Browser lädt der Telemetrie-Knopf das Protokoll als Datei herunter. In Chromium geprüft: Zustimmung, Epilepsie-Hinweis, Menü und Prolog-Start laufen. Offen: einmal an einem echten Bildschirm mit Ton durchspielen, privat auf itch.io hochladen | gebaut, Rest 2 |
+| A8 | Web-Export für Testspieler: gebaut. Vorlage „Web Testbuild“ in `game/export_presets.cfg` (ohne Threads, also ohne SharedArrayBuffer-Header), der Workflow „Testbuild“ liefert ihn als drittes Artefakt, im Browser lädt der Telemetrie-Knopf das Protokoll als Datei herunter. In Chromium geprüft: Zustimmung, Epilepsie-Hinweis, Menü und Prolog-Start laufen; am 11. November 2026 auch Pausemenü und „Hauptmenü“ (die Seite lädt neu, der Spielstand bleibt). Offen: einmal an einem echten Bildschirm mit Ton durchspielen, privat auf itch.io hochladen | gebaut, Rest 2 |
 | A9 | Telemetrie im Testbuild: gebaut (Protokoll, Zustimmung, Auswertung, Beobachtungsbogen, Testbuild-Workflow; Stand in `03-produktion.md`). Offen: Testbuild einmal am Bildschirm unter Linux und Windows prüfen (Zustimmungsdialog, Einstellungen, Mauszeiger, da Popochiu im Export Fehler in seinen Editor-Skripten meldet), Upload an einen eigenen Dienst statt Datei per Hand | gebaut, Rest 2 |
 | A10 | Grafik-Batch: Prompt-Tabelle, Retro-Diffusion-API, Palettize, Zuschnitt, Protokoll | 3, nach S16 |
 | A11 | KI-Protokoll automatisch als CSV | 1 |
-| A12 | Englische Fassung per Claude aus der CSV mit Glossar: Werkzeug `tools/en_eintragen.py`, alle Skriptzeilen, Systemzeilen und Menüs sind übersetzt (Stand in `05-spielsysteme.md`). Offen: Prüfung der Witze und Wortspiele durch einen Muttersprachler | Text fertig, Prüfung in 5 |
-| A13 | Konsistenz-Check der Dokumente (läuft als `tools/pruefen.py`, in A7 eingebunden) | erledigt |
-| A14 | Hinweis-Datei aus Skript und Rätseltabelle erzeugen (läuft als `tools/spieldaten.py`) | erledigt |
+| A12 | Englische Fassung per Claude aus der CSV mit Glossar: Werkzeug `tools/en_eintragen.py`, alle Skriptzeilen, Systemzeilen und Menüs sind übersetzt und am 11. November 2026 einmal ganz gelesen und vereinheitlicht (Stand in `05-spielsysteme.md`). Offen: Prüfung der Witze und Wortspiele durch einen Muttersprachler | Text fertig, Prüfung in 5 |
 | A15 | Playtest-Auswertung per Claude | 3 |
-| A16 | Screenshot-Regressionstest: gebaut (`game/tests/bildschirm_vergleich.gd`, Job „bildschirm“ in GitHub Actions); bei echten Hintergründen die Referenzen mit `--aktualisieren` neu schreiben | erledigt |
 
 ## Funde aus der Graubox (9. November 2026)
 

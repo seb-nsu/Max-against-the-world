@@ -45,8 +45,23 @@ jobs:
       - name: Import (erster Import meldet Fehler, bis der Klassen-Cache steht)
         run: ./godot --headless --path game --import || true
 
-      - name: Prolog-Durchlauf (Testmodus) vor dem Export
+      # Godot gibt beim Import auch mit Fehlern 0 zurück, deshalb zählt die Ausgabe.
+      - name: Zweiter Import (darf keinen Fehler mehr melden)
+        run: |
+          ./godot --headless --path game --import 2>&1 | tee import.log
+          if grep -q "ERROR" import.log; then echo "Import meldet Fehler"; exit 1; fi
+
+      # Vor dem Export dieselben Läufe wie in pruefen.yml: Ein Testbuild, in dem eine Welt nicht
+      # durchläuft, soll gar nicht erst entstehen.
+      - name: Regeln aller Welten kompilieren
+        run: timeout 200 ./godot --headless --path game -s res://tests/regeln_laden.gd
+      - name: Prolog-Durchlauf (Testmodus)
         run: timeout 600 ./godot --headless --path game -s res://tests/prolog_durchlauf.gd
+      - name: Welten, Finale, Hilfe-Pfote und Ansehen-Zeilen
+        run: |
+          for t in welt_2_anspiel welt_3_anspiel welt_4_anspiel finale_anspiel hinweise_welten ansehen_zustand; do
+            timeout 400 ./godot --headless --path game -s "res://tests/$t.gd"
+          done
 
       - name: Export Linux, Windows und Web
         run: |

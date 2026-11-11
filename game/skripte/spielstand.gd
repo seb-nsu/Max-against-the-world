@@ -47,7 +47,12 @@ func _unhandled_input(event: InputEvent) -> void:
 		speichern(CQSaveLoad.SCHNELL)
 	elif event.is_action_pressed("cq_schnellladen"):
 		get_viewport().set_input_as_handled()
-		laden(CQSaveLoad.SCHNELL)
+		# Wie beim Speichern: nicht mitten in einer Szene, sonst setzt die laufende Szene
+		# danach Schalter im geladenen Stand.
+		if beschaeftigt():
+			Spiel.melden("UI_LADEN_NACH_SZENE")
+		else:
+			laden(CQSaveLoad.SCHNELL)
 
 
 ## Läuft gerade etwas, das nicht unterbrochen werden darf?

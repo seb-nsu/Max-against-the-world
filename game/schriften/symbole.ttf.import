@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://bv18h6qukjo3s"
-path="res://.godot/imported/monkeyisland_1991.ttf-6e476a1464ab47c6ed55f2b6a7beb6d9.fontdata"
+uid="uid://bddeqdxqy6fg6"
+path="res://.godot/imported/symbole.ttf-556c52dd19c81ee64230fce462903b1e.fontdata"
 
 [deps]
 
-source_file="res://game/gui/fonts/monkeyisland_1991.ttf"
-dest_files=["res://.godot/imported/monkeyisland_1991.ttf-6e476a1464ab47c6ed55f2b6a7beb6d9.fontdata"]
+source_file="res://schriften/symbole.ttf"
+dest_files=["res://.godot/imported/symbole.ttf-556c52dd19c81ee64230fce462903b1e.fontdata"]
 
 [params]
 

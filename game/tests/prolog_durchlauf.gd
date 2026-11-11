@@ -95,6 +95,10 @@ func _durchlauf() -> void:
 	await _warte_bis(func(): return _datei_da(14) or _datei_da(15), 5.0)
 	_pruefe(_datei_da(14) or _datei_da(15), "Autospeicher beim Raumwechsel")
 	await _ansehen(_hotspot("HutAmHaken"), "P0_TREP_MAX_0010")
+	# Beim zweiten Griff zum Schirm ruft Opa von oben dazwischen (Folgezeile 0126, Stimme aus dem Off)
+	await _hotspot("Regenschirm").on_click()
+	await _hotspot("Regenschirm").on_click()
+	_pruefe(_gesagt("P0_TREP_MAX_0125") and _gesagt("P0_TREP_OPA_0126"), "Regenschirm zweimal: Opa ruft von oben (0126)")
 	await _hotspot("AusgangDachboden").on_click()
 	await _warte_auf_raum("Dachboden")
 	await _warte_bis(func(): return _gesagt("P0_DACH_OPA_0160"), 10.0)
@@ -210,10 +214,12 @@ func _durchlauf() -> void:
 	# --- P3: Kalender, Opa, Drehknopf ---
 	await _hotspot("Drehknopf").on_click()
 	_pruefe(_gesagt("P0_DACH_MAX_0680"), "Drehknopf ohne Nummer: Kanal 4 (0680)")
-	await _ansehen(_hotspot("Kalender"), "P0_DACH_MAX_0620")
 	_pruefe(not opa_d.option_sichtbar("1362"), "Opa-Option 1362 vor der Nahansicht verborgen")
-	await _ansehen(_hotspot("Kalender"), "P0_DACH_MAX_0630")
-	_pruefe("kalender" in Z.nahansichten, "Nahansicht Kalender gesehen")
+	# Die Kanalnummer steht nicht hinter einem zweiten Klick: 0620, 0630 und die Nahansicht
+	# kommen beim ersten Ansehen.
+	await _ansehen(_hotspot("Kalender"), "P0_DACH_MAX_0620")
+	_pruefe(_gesagt("P0_DACH_MAX_0630"), "Kalender, erstes Ansehen: auch die Kanalnummer (0630)")
+	_pruefe("kalender" in Z.nahansichten, "Nahansicht Kalender beim ersten Ansehen gesehen")
 	_pruefe(opa_d.option_sichtbar("1362"), "Opa-Option 1362 nach der Nahansicht")
 	await opa_d.waehlen("1362")
 	_pruefe(_gesagt("P0_DACH_OPA_1364") and _gesagt("P0_DACH_PIX_1366"), "Kreis-Gespräch 1364/1366")
@@ -746,6 +752,7 @@ func _welt_1_r5_bis_r13() -> void:
 	await _benutze("Kronleuchter", _c().get_character("Zeldina"), "W1_SMAU_ZEL_0580")
 	_pruefe(Z.geloest("R12") and _i().is_item_in_inventory("Drachenei") and _gesagt("W1_SMAU_PIX_0640"),
 		"R12 gelöst: Drachenei (0610–0640)")
+	_pruefe(_gesagt("W1_SMAU_MAX_0645"), "nach dem Ei entscheidet Max sich für Zeldinas Wohnung (0645)")
 	await _ansehen_item("Drachenei", "W1_INV_MAX_0170")
 	await _rundreise("nach R12")
 
@@ -796,6 +803,9 @@ func _welt_1_r5_bis_r13() -> void:
 	_pruefe(_hotspot("Fundkiste").visible, "Fundkiste sichtbar im Zwischenspiel")
 	await _ansehen(_hotspot("Fundkiste"), "ZS1_DACH_MAX_0420")
 	await _ansehen(_hotspot("Werkbank"), "ZS1_DACH_MAX_0310")
+	await _ansehen(_hotspot("Werkbank"), "ZS1_DACH_MAX_0315")
+	await _ansehen(_hotspot("Werkbank"), "ZS1_DACH_MAX_0322")
+	_pruefe(_gesagt("ZS1_DACH_PIX_0324"), "Ei auf der Werkbank, drittes Ansehen: Pixel folgt (0324)")
 	var opa_zs = _dialog("Opa")
 	opa_zs.sichtbarkeit_anpassen()
 	_pruefe(opa_zs.option_sichtbar("zs1_0380") and not opa_zs.option_sichtbar("1310"),
@@ -863,7 +873,7 @@ func _rundreise(wo: String) -> void:
 		and is_equal_approx(alt.z.__v2[1], 80.0), "Alter Spielstand (480×270) wird auf 640×360 umgerechnet")
 	# absichtlich verfälschen
 	_zustand().setze("TEST_SCHMUTZ")
-	_zustand().hinweis_stufe["P9"] = 3
+	_zustand().hinweis_stufe["prolog/P9"] = 3
 	await st.laden(SLOT)
 	await _warte_bis(func(): return not _e().in_room, 3.0)
 	await _warte_bis(func(): return _e().in_room and _e().loaded_game.is_empty(), 10.0)

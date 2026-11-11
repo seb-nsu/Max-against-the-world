@@ -1,0 +1,1859 @@
+# 360-Grad-Prüfung von Couch Quest
+
+Geprüfter Stand: `main` bei Commit `6fe02fd` (mit dem Humor-Durchgang aus Pull Request 14). Geprüft am 10. und 11. November 2026. Alles außer den Kleinigkeiten in Abschnitt 5 ist ein Vorschlag. Am Spiel selbst wurde sonst nichts geändert.
+
+**Inhalt:** [1. Zusammenfassung](#1-zusammenfassung) · [2. Fundliste](#2-fundliste) · [3. Abschnitte A bis N](#3-abschnitte-a-bis-n) · [4. Was auf keinen Fall verloren gehen darf](#4-was-auf-keinen-fall-verloren-gehen-darf) · [5. Direkt korrigierte Kleinigkeiten](#5-direkt-korrigierte-kleinigkeiten) · [6. Empfohlene Reihenfolge](#6-empfohlene-reihenfolge)
+
+## 1. Zusammenfassung
+
+**Gesamteindruck.** Skript und Rätselbau sind stark und fast fertig. Das Spiel ist als Graubox von Anfang bis Ende spielbar. Grafik und Ton fehlen fast ganz (6 von 58 Hintergründen, keine Audiodatei). Im Code stecken drei Fehler, die jeden Testspieler treffen.
+
+**Die fünf wichtigsten Probleme**
+
+1. Drei kritische Fehler im Code: Im Finale ist der Wechsel zu Pixel gesperrt, 50 Ansehen-Zeilen kommen im falschen Zustand, Hinweis-Stufen gelten über Welten hinweg.
+2. Der Humor wiederholt wenige Bauformen sehr oft („Das ist kein X, das ist Y“ rund 54-mal, „entweder A oder B“ 50-mal, rund 240 Füllwörter).
+3. Mehrere Rätseltexte führen in die Irre (Alibi der Hyäne, Krawatte gegen Mantel, Hermes, Kanalnummer im Prolog, Endkampf).
+4. Grafik und Ton sind noch sehr viel Arbeit, und die Vorlagen haben Fehler (keine gemeinsame Palette, falsche Prompt-Bausteine, Raster statt Skizzen).
+5. Rund zehn Zeilen übernehmen Originalwortlaut, und die Simulation in Welt 3 folgt „Matrix“ Station für Station.
+
+**Die drei größten Stärken**
+
+1. Die Stimmen: Jede Figur ist sofort erkennbar, und rund 2.000 von 2.300 Pointen zünden.
+2. Der Rätselbau: Fehlversuche haben eigene Zeilen, Sackgassen sind spielbar, Gegenstände wirken über Welten hinweg.
+3. Der rote Faden: Milch, Bäckerei, Passwort und „Ich hol sie.“ werden früh gelegt und im Finale ausgezahlt.
+
+## 2. Fundliste
+
+111 Funde: 3 kritisch, 50 mittel, 55 klein, 3 offen (noch nicht prüfbar). Sortiert nach Schwere. Der Buchstabe in der Spalte „Bereich“ nennt den Abschnitt mit den Einzelheiten. Alle drei kritischen Funde sind am Code und im laufenden Spiel gegengeprüft. Einzelne Gags und Anspielungen stehen nicht hier, sondern in den Tabellen der Abschnitte C, D und E.
+
+| Nr. | Bereich | Ort | Problem | Schwere | Vorschlag |
+| --- | --- | --- | --- | --- | --- |
+| 1 | N, J | Finale, Schritt C: `spiel.gd` Z. 570, `godot_raeume.py` Z. 667, `finale.json` Z. 4 | Der Wechsel zu Pixel ist gesperrt. Text und Hinweise verlangen ihn. Das letzte Rätsel ist so kaum lösbar. | kritisch | Schalter `ZS1_WECHSEL_FREI` setzen oder Schalter je Abschnitt führen. Test über echte Bedienung. |
+| 2 | N, K | 50 Zeilenpaare, vor allem Welt 2 (`W2_SPHX_MAX_0110`, `W2_AGOR_MAX_0070`, `W2_STAD_MAX_0080`) | Ansehen-Zeilen mit Zustand werden falsch gewählt. Der Gag des Finaltags (Nase, Arme, Turm) ist beim ersten Besuch verraten. | kritisch | Bedingungen als Schalter schreiben. Werkzeug bricht bei unbekanntem Zusatz ab. |
+| 3 | N, J | `hinweise.gd` Z. 57 bis 99 | Hinweis-Stufen gelten über Welten hinweg. 26 Rätselnummern geben in späteren Welten sofort die Komplettlösung. | kritisch | Schlüssel aus Abschnitt und Nummer bilden. |
+| 4 | N, J | Welt 4 R4, R5, R10, R11, R12; Welt 1 R10a, R10b; Finale Schritt B | Hinweis-Lücken: Die Pfote leuchtet, Pixel sagt nichts oder die falsche Fassung. | mittel | Zeilen nachschreiben, `spieldaten.py` meldet Lücken, `_zeile()` wertet Bedingung aus. |
+| 5 | J | `W4_SIT_SMU_0360` | Die Hyäne sitzt laut Sitcom-Mutter zur Tatzeit im Publikum. Ihr falsches Alibi wird wahr. | mittel | „… die sonst in Reihe drei sitzt. Gestern war ihr Platz leer.“ |
+| 6 | J | `W4_SIT_VAT_0160`, `W4_SIT_MAX_0170` gegen `W4_SIT_VAT_0420`, `W4_HINT_PIX_0070` | Besuch „mit Krawatte“ oder „mit Mantel“. Der Spieler sucht das Falsche. | mittel | Überall „Mantel“. |
+| 7 | J | `W2_DISK_HER_0240` | Hermes begründet seine Unschuld mit falscher Logik. Wer mitrechnet, wird irregeführt. | mittel | „Wenn ich es war, hat Leonidas zweimal die Wahrheit gesagt. Der? Niemals!“ |
+| 8 | J | `P0_DACH_MAX_0620`, `0630` | Die Kanalnummer steht hinter dem zweiten Ansehen. Im ersten Rätsel des Spiels. | mittel | Beide Zeilen beim ersten Ansehen. |
+| 9 | J | `W1_LUFT_MAX_0470`, Steckbrief am Dorfbrett | Steckbrief als Exposé: ohne Steckbrief fehlt die Option, und nichts weist darauf hin. | mittel | Steckbrief nennt den Turm. Maklerin fordert ein „Objekt“. |
+| 10 | J | `W4_STUD_MAX_0190`, `0220`, `0290` | Im Endkampf sagt Max vor jeder Taste die Lösung. | mittel | Max beschreibt nur Zappmann. Die jetzigen Zeilen werden Hinweis Stufe 1. |
+| 11 | J | `raetsel/welt-3.md` | Pixels Eingriffe „Nacht“ und „Regen“ haben kein Rätsel. Die Zwei-Ebenen-Mechanik wird kaum gebraucht. | mittel | Kleines Rätsel ergänzen oder Versprechen streichen. |
+| 12 | A | `W1_THRO_MAX_0020`, `W1_SMAU_MAX_0630` | Welt 1: Max hat das Ei und kaum einen Grund für den Endkampf. | mittel | Eine Entscheidungszeile nach der Ei-Übergabe. |
+| 13 | A | `FI_DACH_OPA_0060` gegen `ZS2_DACH_OPA_0060` | Zeitrechnung verkehrt herum. | mittel | „Viermal zwanzig Minuten. Ich bin selbst überrascht.“ |
+| 14 | A, F, G | `P0_TREP_MAX_0020`, Bilder Wohnzimmer und Treppenhaus | Tageszeit im Prolog: Abend und Nacht statt Nachmittag. Der Zeitverlauf der Zwischenspiele hat keinen Anfang. | mittel | Zeile ändern, zwei Bilder neu (Prompts in G1). |
+| 15 | B | sieben Zeilen in Welt 3 (`W3_KUCH_PIX_0535` und weitere) | Pixel riecht und gräbt an Orten, an denen er nur über eine Leitung zu hören ist. | mittel | Auf die Leitung umschreiben oder Max geben. |
+| 16 | B, D | `P0_DACH_MAX_0680`, `W4_KELL_MAX_0175`, `W4_KAPI_MAX_0525`, `W4_TEST_MAX_0255`, `W3_BAS_MAX_0755` | Max kennt Testbild und alte Filme. Die eigene Regel verbietet das. | mittel | Zeilen an Pixel geben oder streichen. |
+| 17 | B, C | alle Skripte | Max macht sich in jedem Raum klein. Aus gelassen wird unsicher. | mittel | Höchstens einmal pro Raum. |
+| 18 | B | `W1_SCHM_SCH_0780`, `W1_SCHM_MAX_0770`, `W1_ABS_SCH_0160` | Der Schmied tauft Schwerter wie Humbert. Die Entscheidung dagegen ist festgehalten. | mittel | Beim Schmied streichen. |
+| 19 | C, E | alle Skripte | Wiederkehrende Bauformen: „Das ist kein X, das ist Y“ (rund 54), „entweder A oder B“ (50), Schule (49), Füllsel (rund 240). | mittel | Kürzungsdurchgang nach der Tabelle in Abschnitt C. |
+| 20 | C | `W1_HOGG_ALW_0360`; Welt 1 gesamt; `FI_RUF_HER_0140` | „… in einem anderen Schloss“ fällt in Welt 1 sechsmal. Alwin nimmt die Milch-Pointe des Abspanns vorweg, Hermes die Form kurz vor Toadi. | mittel | Einmal pro Welt. Milch nur im Abspann. |
+| 21 | C | Liste in Abschnitt C | Rund 15 doppelte Gags (wortgleich oder derselbe Witz). | mittel | Je Paar eine Stelle streichen. |
+| 22 | D | Dorfplatz, Agora, Widerstandsbasis, Kapitolis | Zu viele Anspielungen auf einem Bildschirm. | mittel | Streichliste in Abschnitt D (rund 12 Zeilen). |
+| 23 | E | `01-konzept.md` Z. 59 bis 78 | Die Beispielsätze verstoßen gegen die Dialogregeln direkt darüber. | mittel | Beispiele aus dem heutigen Skript nehmen. |
+| 24 | E, L | `FI_WOHN_MAX_0400`, `FI_SUPM_MAX_0080`, `FI_ABSP_PIX_0200` | Am Schluss dreimal „freiwillig“ und „Das ist neu.“ | mittel | Nur Pixel behält das Wort. |
+| 25 | L | `W4_STUD_MAX_0160` | Der Schlüsselsatz von Welt 4 ist schief („ein Sofa, auf dem ich schon sitze“). | mittel | „Ich bin gerade erst aufgestanden. Ich setz mich nicht wieder hin.“ |
+| 26 | F | `FI_AUFL_*` | Die Auflösung ist 59 Zeilen ohne Eingabe. | mittel | Artefakt-Abfrage anklickbar machen. |
+| 27 | F, G | Welt 3 und 4, 26 Skizzen | Automatische Raster statt Entwürfe. Räume sind nicht inszeniert, die Prompts verweisen trotzdem auf die Skizze. | mittel | Handskizzen vor dem Erzeugen. |
+| 28 | G | `w0_bg_wohnzimmer_v01.png` | Düster, Staubrand fehlt, Fernseher schräg, Möbel 1,5-mal zu groß. | mittel | Neu erzeugen (Prompt in G1). |
+| 29 | G | alle sechs Hintergründe | Keine gemeinsame Palette. Kein Bild teilt eine Farbe mit einem anderen. | mittel | Feste Raumpalette, `pixelieren.py` darauf rechnen. |
+| 30 | G | Dachboden, Rückkehr 1 bis 3 | Kalenderkreis wächst nicht, Lampe immer an, Sonnenstrahl immer gleich. | mittel | Kreis und Lampe als Sprites. |
+| 31 | G, N | `fertige-prompts/`, `prompts_zusammensetzen.py` | Acht Prompts enden auf „Baustein.“, drei Prompts für Dinge ohne Grafik. | mittel | Werkzeug berichtigen. |
+| 32 | G | `fertige-prompts/` Welt 3 und 4 | Deutsche Arbeitsnotizen mitten in englischen Prompts („DR. W.“, „von Hand“). | mittel | In die Layout-Spalte, im Prompt „no letters“. |
+| 33 | G | `00-stil-und-werkzeuge.md` Z. 97 | FIGUR-KLEIN gilt bis 75 Pixel, zugewiesen sind Figuren bis 101. | mittel | Grenze 110, Leinwand 128×128. |
+| 34 | G | `02-prolog-und-finale.md` Z. 195, Z. 165 | Deko-Prompt rechnet mit 84 Pixel hohen Figuren (es sind 189). | mittel | Zahl berichtigen. |
+| 35 | G | Farb-Bausteine Welt 1 bis 4 | Innenräume bekommen Außen-Bausteine (Straßen, Himmel, Nebel, Mittagssonne). | mittel | Innen-Fassungen (G3). |
+| 36 | H | `welten/finale.yaml` | Das Finale spielt das schläfrige Wohnzimmer-Stück. | mittel | Zwei eigene Stücke. |
+| 37 | H | `04-audio.md`, Leitmotiv | Fünf-Ton-Motiv ist per Text-Prompt nicht wiederholbar. | mittel | Töne festlegen und nachträglich einsetzen. |
+| 38 | H, J | `04-audio.md`, Stimme der Hyäne | Kichernde Stimme verrät die Lösung des Rätsels. | mittel | Flach und ernst, platzt nur an markierten Stellen. |
+| 39 | I | `03-produktion.md`, Meilensteine | Der Plan beschreibt einen Start im Januar 2027. Alles ist schon als Graubox spielbar. | mittel | Neu schreiben nach Grafik und Audio je Welt. |
+| 40 | I, N | rund 20 Stellen | Doppelt belegte Auslöser („zweites Mal“ zweimal am selben Objekt). | mittel | Je Paar entscheiden. |
+| 41 | I, N | Kürzel SCH, GRI, MUT, MUS; `zeilen_einfuegen.py` | Sprecherkürzel sind nicht eindeutig. Das Werkzeug vergibt daraus falsche Namen. | mittel | Suche auf die Datei beschränken. |
+| 42 | M | `W1_TAV_GOL_0760`, `W3_TEST_DEC_0100`, `W3_BAS_KAL_0440`, `W3_PIEP_OPA_0120`, `W3_EING_MAX_0160`, `W3_NUD_MOR_0420`, `W4_HALL_AGE_0350`, Brian-Dialog, A38 | Originalwortlaut oder sehr nah daran. | mittel | Eigene Sätze (Tabelle in M). |
+| 43 | M | Welt 3, Simulation | „Matrix“ wird Station für Station nacherzählt. | mittel | Prüfen lassen, mehr eigene Wendungen. |
+| 44 | M | `ui.csv`, `en.csv` | Englische Namen näher am Original („Hogwartle“, „Wheel of Fortune“). | mittel | Eigener Durchgang vor der Steam-Seite. |
+| 45 | M | `03-produktion.md` | KI-Offenlegung beschreibt einen anderen Arbeitsweg als den festgelegten. | mittel | Text angleichen. |
+| 46 | M | `W4_FABR_FLE_0330` | „Ein Führer mit Laken! Ich folge ihm!“ | mittel | „Ein Anführer mit Laken!“ |
+| 47 | N | `en.csv` | 793 englische Zeilen zeigen „//“ im Text, 699 Folgeblasen fehlen. | mittel | `en_eintragen.py` teilt an „ // “. |
+| 48 | N | `abdeckung.py`, `pruefen.py`, `spieldaten.py`, `testbuild.yml` | Die Prüfwerkzeuge melden „alles da“, obwohl Zeilen nie gespielt werden. | mittel | Erreichbarkeit prüfen, Warnungen als Fehler. |
+| 49 | N | `reisetasche.gd` Z. 93 | Ab dem neunten Gegenstand liegen Felder übereinander. | mittel | Zweite Zeile. |
+| 50 | N | `spielstand.gd` Z. 48 bis 50 | Schnellladen mitten in einer Szene. | mittel | Prüfung `beschaeftigt()`. |
+| 51 | N | `spiel.gd`, `zum_hauptmenue()` | Im Browser-Testbuild beendet „Hauptmenü“ das Spiel. | mittel | Szene direkt laden. |
+| 52 | N, M | Optionen: `untertitel`, `wackeln_aus`, `farbenblind`, `flackern_reduzieren` | Vier Schalter tun nichts. Barrierefreiheit ist versprochen. | mittel | Umsetzen oder ausgrauen. |
+| 53 | N, C | `notizbuch.gd`; `FI_WOHN_MAX_0160` | Seite „Pixels Einkaufsliste“ bleibt leer. Die Pointe im Finale läuft ins Leere. | mittel | Seite füllen. |
+| 54 | A | `P0_DACH_OPA_0370` gegen `P0_DACH_PIX_0850` | Pixel „kennt die Welten“ und war nie dort. | klein | „Er kennt jede Sendung, die je gelaufen ist.“ |
+| 55 | A | `ZS3_DACH_PIX_0020`, `FI_WOHN_OPA_0050` | Wer die Milchwerbung sendet, bleibt offen. Pixel zeigt auf Opa. | klein | Offen lassen ohne Verdacht oder Oma als Absenderin. |
+| 56 | A | `FI_AUFL_OPA_0230` | „Einmal. Zum Testen.“ Opa hat aber Spuren in drei Welten. | klein | „Einmal durch alle Kanäle.“ |
+| 57 | A | `W4_STUD_MAX_0160`, `ZS1_DACH_MAX_0120` | „eine Woche lang“, „drei Tage im Arm“ stimmen nicht. | klein | Berichtigen. |
+| 58 | A | `FI_AUFL_PIX_0240`, `FI_DACH_PIX_0160`, `FI_AUFL_MAX_0250` | Figuren sagen „Welt 3“ und „Welt 4“. | klein | „Kanal 42“, „Kanal 999“. |
+| 59 | A | `FI_AUFL_MAX_0270`, `FI_HINT_PIX_0200` | Unklarer Satz („Lange Geschichte.“), „Oben“ statt „Unten“. | klein | Berichtigen. |
+| 60 | A | `FI_AUFL_OPA_0330` gegen `FI_HINT_PIX_0200` | Geburtstag „vergessen bis gestern“ und „seit Wochen im Kalender“. | klein | Pixel: „Dein Großvater hat es trotzdem geschafft.“ |
+| 61 | B | `W3_EING_HAU_0030`, `W1_ABS_MAK_0230`, `W1_ABS_STA_0120`, `W2_ABS_BE1_0240` | Du und Sie wechseln bei vier Figuren. | klein | Je Figur festlegen. |
+| 62 | B | `FI_WOHN_MUT_0230`, `0260` | Die Mutter sagt „Mama“ und „Konrad“. | klein | Verwandtschaft festlegen. |
+| 63 | B | `W1_ABS_GOL_0220`, `W1_SMAU_SMA_0880` | Gollo sagt „wir“, Smaugi nennt Pixel „Kollegin“. | klein | „ich“, „Kollege“. |
+| 64 | B | `W1_WALD_ROT_0222` gegen `0780`; `W1_LUFT_ZEL_0840` | Rotkäppchens Oma und Zeldinas Turm widersprechen sich. | klein | Eine Fassung wählen. |
+| 65 | B | `W3_EING_HAU_1060` gegen `0050` | Auftragszettel in zwei Reihenfolgen. | klein | `1060` umdrehen. |
+| 66 | B | `W3_EING_PIX_0460` gegen `W3_KAM2_MUT_0250`; `W3_KAM2_MAX_0260` | Testperson 47 widersprüchlich. Lob „Du fragst nicht mehr“ vor der Option „Wo ist der Kuchen?“. | klein | „Sie hat nie gefragt. Du fragst ständig.“ |
+| 67 | B | `W3_KAM1_MAX_0390`, `W3_APO_MAX_0295`, `W3_HINT_PIX_0350`, `W2_NIL_PIX_1070` | „dreimal gesagt“, „Mantel“, „sechzehn Jahre“, „seit drei Welten“ stimmen nicht. | klein | Berichtigen. |
+| 68 | B | `W4_INV_MAX_0010` | Das Bettlaken kommt vom Fledermann, nicht von einem Geist. | klein | „Der erste Entwurf vom Fledermann. Zwei Löcher, null Schirme.“ |
+| 69 | B | `FI_RAET_MAX_0090` | „der Roboter“ ohne Bedingung. | klein | Zwei Fassungen. |
+| 70 | B | `W1_BRUE_WAL_1250`, `W1_BERG_GRI_0840` | Zwei Figuren, derselbe Satzbau. | klein | Einen ändern. |
+| 71 | B | `W1_BRUE_WAL_1060`, `0060`, `1000` | Paragraf 1 hat zwei Inhalte, „Paragraf 14b“ und „Regel 14b“. | klein | Angleichen. |
+| 72 | B | `W1_ANK_PIX_0040` | „wenn ich die Fernbedienung richtig gelesen habe“. Es gibt nur einen Drehknopf. | klein | „den Drehknopf“. |
+| 73 | B | `W1_TAV_PIX_1470` | Das Huhn heißt Hilde, die Oma Hildegard. | klein | Umbenennen oder im Finale nutzen. |
+| 74 | C | `W1_SCHM_MAX_0221`, `0750` | Dieselbe Frage zweimal. | klein | Eine streichen. |
+| 75 | C | `W1_HOGG_ALW_0620` | Alwins Reim reimt sich in Strophe 2 nicht. | klein | Sauber reimen oder als Gag markieren. |
+| 76 | C | Zahlen: `W4_GLUE_GER_0045`, `W3_PIEP_PIX_0250`, `W2_DISK_PIX_0200` | „Drei Silben“ (effizient hat vier), „Zwei Silben“, „dreihundert Jahre“. | klein | Berichtigen oder als Gag ausspielen. |
+| 77 | C | `FI_DACH_OMA_0220`, `FI_AUFL_OMA_0420` | Die pünktliche Bahn zweimal. | klein | Nur beim zweiten Mal. |
+| 78 | C | `FI_RAET_OPA_0440`, `FI_AUFL_PIX_0380` | Zwei schwache Zeilen im Finale. | klein | Alternativen in C. |
+| 79 | C | Reservezeilen `FI_INV_PIX_0015`, `FI_INV_MAX_0025` | Zwei gute Zeilen kommen nie vor. | klein | In Zwischenspiel 1 unterbringen. |
+| 80 | D | `grafik/welt-3.md`, „Nur zum Ansehen“ | „Es gibt keinen Löffel“ steht noch in der Grafik-Datei, im Skript ist es gestrichen. | klein | Streichen. |
+| 81 | E | Prolog, Benutzen | Rund 25 Objekte mit derselben Bauform. | klein | Jedes dritte brechen. |
+| 82 | E | `W4_STUD_MAX_0250`, `FI_WOHN_MAX_0105` und weitere | Glatte Schlusssätze. | klein | Vorschläge in E. |
+| 83 | F | Welt 1, Dorfplatz | Dichtester Raum ganz am Anfang. | klein | Deko gestaffelt einblenden. |
+| 84 | G | Dachboden-Prompt | Prompt älter als das freigegebene Bild (Lampe, Regal, „nothing added“). | klein | Prompt nachziehen. |
+| 85 | G | `concepts/` | Dachboden-Konzept überholt, Max mit Bedienelementen im Bild, Pixel ohne Kerbe. | klein | Ersetzen, zuschneiden. |
+| 86 | G, M | `grafik/welt-4.md`, Kommissar | Zigarre im Mund. | klein | Lutscher. |
+| 87 | G | Größenangaben in `00`, `02`, Welt-Tabellen | Pixel schlafend, Pixel als Ziege, Beamter, Maschine in je mehreren Größen. | klein | Eine Quelle. |
+| 88 | G | `00`, Bausteine KONZEPT und HINTERGRUND | KONZEPT nur für Innenräume, HINTERGRUND noch für Retro Diffusion. | klein | KONZEPT-AUSSEN, Baustein umbenennen. |
+| 89 | G | Skizzen, Platzhalter | Legende unvollständig, alle Figuren menschengroß, Beschriftungen abgeschnitten. | klein | Nachziehen. |
+| 90 | H | `04-audio.md` | Pixels Stimme ohne Wärme, Loop-Baustein bei Jingles, Tempo im Rhythmus-Spiel, Geräusche ohne Kennung, Kosten 300 gegen 400 $, Zeilenzahl. | klein | Tabelle in H. |
+| 91 | I | `README.md`, Kopfzeilen der Skripte, `05-spielsysteme.md`, `entscheidungen.md`, `offene-punkte.md`, `03-produktion.md` | Veraltete Angaben (320×180, Zeilenzahlen, Schrift offen, sechster Kanal, 59 Räume). | klein | Nachziehen. |
+| 92 | I | Welt-Tabellen | Alte Pixelmaße in Kommentaren, Schalter ohne Präfix in Welt 3, „in die Maschine“ zu früh. | klein | Nachziehen. |
+| 93 | I | Skripte | Sprecherspalte uneinheitlich, Auslöser „Traubensaft, Traubensaft“, „Seite 3“ und „Seite drei“. | klein | Angleichen. |
+| 94 | I | `ui.csv` | Fünf Hotspot-Namen klein geschrieben, Entwickler-Texte („Ende der Graubox“). | klein | Großschreiben, entfernen. |
+| 95 | J | `W1_TAV_MAX_1120` | „Was hab ich in meiner Tasche?“ hängt an der Thunfischdose und am Wissen um den „Hobbit“. | klein | Jeden Gegenstand gelten lassen. |
+| 96 | J | Welt 3, Rätsel 8 und 12 | Freund 08/15 ohne Warnung verpassbar. Zugangskarte per Zufall. | klein | Eine Warnzeile, ein halber Satz. |
+| 97 | J, N | Welt 2 R7, Welt 4 R4a | Diskus-Rätsel überspringbar, Antwort der Mutter ohne Wirkung. | klein | Reihenfolge absichern. |
+| 98 | J, N | `W3_HINT_PIX_0130`, `0330`, `0730`, `1230`, `UI_TASCHE_HILFE` | Hinweise nennen Maus und Tasten. | klein | Neutral formulieren. |
+| 99 | K | Welt 1, Taverne und Klassenzimmer | Zweitzeilen fehlen. | klein | Rund 20 nachschreiben. |
+| 100 | K, N | Telefonzelle, Tresen, Traubensaft, Tasse, Halterung, Keksdose | Doppelte Hotspots. `W3_SIM_MAX_0230` kommt nie. | klein | Auslöser vereinheitlichen. |
+| 101 | K, N | Hauptmenü, Spielfigur, Zurufe, Pack-Kommentare | „Neues Spiel“ ohne Nachfrage, Max verdeckt Dinge, Zurufe mit Controller, fehlende Pack-Kommentare. | klein | Liste in N, Punkt 16. |
+| 102 | L | Finale | Opa bedankt sich nie. Kann Absicht sein. | klein | Wenn gewünscht: „Bring Quittung mit.“ |
+| 103 | M | `03-produktion.md`, Store-Text | „Pixel für Pixel von Hand gezeichnet“ ist zu stark. | klein | „von Hand nachgezeichnet“. |
+| 104 | M | `game/game/gui/fonts/monkeyisland_1991.ttf` | Schrift aus dem Baukasten mit unklarer Lizenz liegt im Spiel. | klein | Prüfen oder entfernen. |
+| 105 | M | Namen: Morphäus, Sahra Konner, Zeldina, Toadi, Gollo; „Glücksrad-Shopping“; Gleis neundreiviertel, Vielsaft, Schicksalsberg | Sehr nah am Original. | klein | Fernere Fassungen bereithalten. |
+| 106 | M | Store-Text, Zielgruppe | 6.306 Sprechblasen sind für Sechsjährige zu viel Lesestoff. | klein | „Empfohlen ab 10“ nennen. |
+| 107 | N | `welt_3.gd` Z. 688, `game/README.md`, `tools/aufloesung.py` | Schalter `KEKSE_DABEI` zu früh gesetzt (ohne Wirkung), veraltete Kommentare. | klein | Aufräumen. |
+| 108 | N | `05-spielsysteme.md` Z. 142, 144; Reisetasche | Sprechblasen-Maße widersprüchlich, Untertitel läuft hinter dem Taschen-Fenster weiter. | klein | Festlegen, Untertitel anhalten. |
+| 109 | J | Minispiele | In der Graubox nur Auswahlmenüs. Noch nicht prüfbar. | offen | Rede-Ringen und Zombie-Tanz zuerst bauen. |
+| 110 | H | Audio gesamt | Keine Audiodatei vorhanden. Noch nicht prüfbar. | offen | – |
+| 111 | N | `en.csv` | Englische Fassung nur als Stichprobe geprüft. | offen | Eigener Durchgang. |
+
+## 3. Abschnitte A bis N
+
+Reihenfolge: Bestandsaufnahme und Story-Bibel vorab, dann A Story, B Figuren, C Humor, D Anspielungen, E „Klingt es nach KI?“, F Szenen, G Grafik, H Musik und Sound, I Form und Regeln, J Rätsel, K Interaktionen, L Figurenentwicklung, M Rechtliches und Zielgruppe, N Technik und Bedienung, zum Schluss das Gesamtbild.
+
+Zur Schreibweise: Zeilennummern wie `W2_SPHX_MAX_0110` stehen so in der ersten Spalte der Skripte. `W2` ist die Welt, `SPHX` die Szene, `MAX` der Sprecher. Wo in einer Tabelle nur eine Zahl steht (`0110`), gilt die Szene und der Sprecher der Zeile davor. „Z.“ ist die Zeile in der Datei.
+
+### Vorab: Bestandsaufnahme
+
+**Was geprüft wurde.** Stand `main` bei Commit `6fe02fd` (mit dem Humor-Durchgang aus Pull Request 14). Vollständig gelesen: alle Dateien unter `docs/` (Konzept, Produktion, Audio, Spielsysteme, Entscheidungen, offene Punkte, sechs Skripte mit 5.414 Zeilen, sechs Rätsel-Dateien, sechs Welt-Tabellen, alle Grafik-Dateien und fertigen Prompts, `ui.csv` mit 927 Einträgen). Angesehen: alle 6 echten Hintergründe, 3 Konzeptbilder, 55 Layout-Skizzen, Stichproben der 453 Platzhalter und die Bilder im Projektordner. Durchgesehen und gestartet: der ganze Spielcode (39 Skripte), 19 Werkzeuge, alle automatischen Prüfungen und alle sieben Spiel-Durchläufe. Vier Funde habe ich im laufenden Spiel nachgestellt.
+
+**Was nicht oder nur teilweise geprüft wurde.**
+
+- `docs/uebersetzung/en.csv` (englische Fassung, 5.607 Zeilen): nur Stichprobe und eine automatische Zählung. Die Übersetzung ist abgeleitet. Sie Zeile für Zeile zu prüfen wäre eine eigene Arbeit.
+- `export/` und `konzepte/` im Projektordner: ältere Kopien der Repository-Dokumente (6. und 9. November, vor dem Humor-Durchgang). Nicht noch einmal gelesen.
+- Musik, Geräusche, Stimmen: Es gibt keine einzige Audiodatei. Geprüft ist nur der Text in `docs/04-audio.md`.
+- Die Minispiele sind in der Graubox Auswahlmenüs. Wie sie sich anfühlen, lässt sich noch nicht beurteilen.
+
+**Welche Dateien es gibt.**
+
+| Ort | Umfang | Inhalt |
+| --- | --- | --- |
+| `README.md`, `docs/00-aufbau.md` | je 1 Seite | Kurzbeschreibung, welche Datei welche Information besitzt |
+| `docs/01-konzept.md` | 390 Zeilen | Geschichte, Ton, Figuren, Welt-Ideen, Finale, Rechtscheck |
+| `docs/03-produktion.md` | 240 Zeilen | Technik, Werkzeuge, Kosten, Meilensteine, Recht und Markt |
+| `docs/04-audio.md` | 240 Zeilen | Musik, Geräusche, Stimmen mit Prompts |
+| `docs/05-spielsysteme.md` | 349 Zeilen | Dialogsystem, Schrift, Oberfläche, Hinweissystem, Speichern |
+| `docs/entscheidungen.md`, `docs/offene-punkte.md` | 251 und 81 Zeilen | Geltende Entscheidungen, offene Punkte |
+| `docs/skript/*.md` (6 Dateien) | 495 bis 1.547 Zeilen | Dialog-Skripte: Prolog, Welt 1 bis 4, Zwischenspiele und Finale |
+| `docs/raetsel/*.md` (6 Dateien) | 89 bis 398 Zeilen | Rätsel-Abläufe, Hinweise, Abhängigkeiten |
+| `docs/welten/*.yaml` (6 Dateien) | 139 bis 774 Zeilen | Räume, Wege, Gegenstände, Figuren |
+| `docs/grafik/*.md` (7 Dateien), `fertige-prompts/` (5) | 65 bis 230 Zeilen | Stilregeln, Steckbriefe, Szenenbeschreibungen, zusammengesetzte Prompts |
+| `docs/uebersetzung/en.csv`, `ui.csv` | 609 KB, 47 KB | Englische Fassung, Oberflächentexte |
+| `game/` | 39 Skripte, 18 Datendateien | Das Spiel (Godot 4 mit Popochiu, 640×360) |
+| `tools/` | 19 Skripte | Prüf-, Export- und Grafikwerkzeuge |
+| `game/grafik/hintergruende/` | 6 Bilder | Echte Hintergründe (alle Prolog) |
+| `game/grafik/platzhalter/` | 453 Bilder | Platzhalter für alles andere |
+| `docs/grafik/skizzen/`, `tests/bildschirm/referenz/` | je 55 Bilder | Layout-Skizzen und Referenzfotos der Räume |
+| `concepts/` | 3 Bilder | Konzeptbilder Max, Pixel, Dachboden |
+| Projektordner | – | Exporte, alte Konzepte, Grafiktests, 22 Menü-Entwürfe, Vorher-Nachher-Listen des Humor-Durchgangs, 24 hochgeladene Dateien |
+
+**Was fehlt.**
+
+- **Audio:** keine Datei. Der Code ist vorbereitet, die Ordner sind leer.
+- **Grafik:** 6 von rund 58 Hintergründen sind echt. Figuren, Animationen, Gegenstände und Oberfläche fehlen ganz.
+- **Layout für Welt 3 und 4:** Die 26 Skizzen sind automatische Raster, keine Entwürfe.
+- **Tests mit fremden Spielern:** Der Beobachtungsbogen liegt bereit, Ergebnisse gibt es noch nicht.
+- **Ein aktueller Plan:** Der Meilensteinplan in `03-produktion.md` beschreibt einen Start im Januar 2027. Tatsächlich ist alles schon als Graubox spielbar.
+
+### Vorab: Story-Bibel (aus dem Material abgeleitet)
+
+#### Die Geschichte in fünf Sätzen
+
+Max (16) will bei Opa nur fernsehen. Opa lockt ihn mit dem WLAN-Passwort auf den Dachboden und schickt ihn durch einen alten Fernseher in vier Welten, um vier „Artefakte“ gegen den „Weltuntergang“ zu holen. Jedes Artefakt wird auf der Werkbank zu einem Alltagsding: Ei, Mehl, Batterie, Fernbedienung. Die Maschine ist ein Backofen, der Weltuntergang ist Omas vergessener Geburtstag, und Opa war zu bequem zum Einkaufen. Am Ende fehlt die Milch, und Max, der Junge vom Sofa, sagt: „Ich hol sie.“
+
+#### Hauptfiguren
+
+| Figur | Eigenschaften | Sprechweise |
+| --- | --- | --- |
+| **Max**, 16 | Couch-Potato, schlagfertig, eher faul als mutig. Gelassen genervt, nie zynisch. Lernt, Dinge selbst anzupacken. Kennt keine Retro-Medien (Testbild, Kassette, Sendeschluss). | Trocken, Umgangssprache („ich hab“). Vergleicht alles mit Serien, Spielen, Handy und Schule. Untertreibt. Hält nie Heldenreden. Nennt nie den Titel einer Vorlage. |
+| **Pixel** | Opas Kater, seit vierzehn Jahren im Haus, Halsband mit Lautsprecher. Hochnäsig, verfressen, hat immer recht und wird nie gehört. Sieht kaum Farben. Seine Nase lügt bei Fisch. Hasst Zeitreisen. Zeigt Zuneigung nur aus Versehen. | Lang, gestelzt, belehrend, mit Einschüben („junger Mann“, „und zwar“, „wenn ich das anmerken darf“). Vergleicht alles mit Essen und Schlafplätzen. Übertreibt. Kurz nur für einen Effekt („Wer. Hat. Mich. Geweckt.“). |
+| **Opa Konrad** | Erfinder mit Dachboden-Labor. Vergesslich, stolz, schämt sich für seine Vergangenheit im Fernsehen. Backt seit 1977 nur noch heimlich. | Ausrufe. Gibt allem eine Bezeichnung („Modell Enkel“). Erfindet Fachwörter als Ausrede („Rückverwandlungsschwund“). Spricht vom Weltuntergang und meint Backen. |
+| **Oma Hildegard** | Kommt erst im Finale. Staunt über nichts. Erhebt nie die Stimme. | Sehr kurz. Sagt „Konrad.“ und meint einen ganzen Absatz. |
+| **Max' Mutter** | Ein Auftritt nach der Spätschicht. | „Ich frage nicht. Ich frage morgen, und dann ausführlich.“ |
+
+#### Wichtige Nebenfiguren und ihre Sprachregel
+
+| Welt | Figur | Regel |
+| --- | --- | --- |
+| 1 | Zeldina | Prinzessin auf Wohnungssuche, redet in Mietrecht |
+| 1 | Toadi | Hat genau einen Satz („… ist in einem anderen Schloss“) |
+| 1 | Wirt Humbert | Nennt jedes Schwert beim Vornamen |
+| 1 | Troll Waldemar | Spricht in Paragrafen, singt heimlich Musical |
+| 1 | Gollo | Zischt („Ssschätzchen“), will verlieren |
+| 1 | Smaugi | Drache mit Sammelzwang, bricht Sätze ab |
+| 1 | Lord Moderwort | Dunkler Lord mit Heuschnupfen und Spitznamen von Mutti |
+| 2 | Ramses | Kann sich nicht entscheiden („Ich habe entschieden, dass es zählt.“) |
+| 2 | Hermes | Immer zu spät, immer im Laufen |
+| 2 | Leonidas | SCHREIT IN GROSSBUCHSTABEN, hat genau einen leisen Satz |
+| 2 | Cicero | Hält Reden über alles |
+| 2 | Die Beamten | Amtsdeutsch ohne Ausweg |
+| 2 | Die Sphinx | Schreibblockade |
+| 3 | Detektiv Deckert | Müde, misst Menschlichkeit |
+| 3 | Herr Vier | Kennt nur die Zahl Vier |
+| 3 | Orakel-Oma | Weiß alles vorher und hat schon gefegt |
+| 3 | Agent Schmidt | Redet ohne Punkt |
+| 3 | Modell 08/15 | Österreichisch höflicher Hausmeister-Roboter („Servus, Bursche“) |
+| 3 | Kabel-Kalle | Behauptet, Miau-Morse zu können |
+| 3 | M.U.T.T.I. | Fürsorge als Bedrohung |
+| 4 | Flimmer | Testbild-Männchen, stottert und rauscht („Zschh“) |
+| 4 | Gerd Glück | Spricht nur in Ausrufezeichen und verkauft sich selbst |
+| 4 | Sitcom-Familie | Jede Zeile wartet auf die Lachkonserve |
+| 4 | Die Hyäne | Lacht nie, bis sie platzt |
+| 4 | Intendant Zappmann | Max' Spiegelbild: Er wollte nie wieder aufstehen müssen |
+
+#### Regeln der Spielwelt
+
+1. **Der Zapp-O-Mat 3000.** Ein Röhrenfernseher mit Drehknopf. Jeder Kanal ist eine Welt: 3 (Schwurbelstein), 7 (Antike), 42 (Zukunft), 999 (Fernsehen). Kanal 4 ist ein Testbild.
+2. **Zeit.** Drüben vergehen Tage, auf dem Dachboden Minuten („Drei Tage! Hier waren es zwanzig Minuten.“). Alles spielt an einem Nachmittag und Abend.
+3. **Verwandlung.** Dinge sehen in jeder Welt anders aus. Auf dem Dachboden werden Artefakte zu Alltagsdingen, Omas Kekse zu Hundekuchen, eine Rezeptkarte zum Glückskeks. In Welt 4 ändern Käse und Banane je Sender ihre Art.
+4. **Die Reisetasche.** Zwei Wahlfächer, ein Pflichtfach (Notizbuch, Thunfischdose, ab Welt 1 der Kochlöffel). Was mitreist, öffnet Abkürzungen. Pflicht ist nichts davon.
+5. **Pixel als zweite Figur** ab Welt 1. Er passt durch Enges, riecht, redet mit Katzen und sieht nur Grautöne.
+6. **Kein Tod, keine Sackgasse.** Fehlversuche sind Gags und kosten nichts.
+7. **Hilfe-Pfote.** Drei Stufen je Rätselschritt: Blick lenken, Ding nennen, Handgriff sagen.
+8. **Eine Mechanik je Welt.** Welt 1 Figurenwechsel, Welt 2 Zeitfähre (flussabwärts wird alles älter), Welt 3 zwei Ebenen und die Code-Sicht (Eigenschaften tauschen), Welt 4 Tasten der Fernbedienung und Genre-Logik der Sender.
+9. **Feste Bausteine in jeder Welt.** Jemand sagt „… ist in einem anderen …“. Opa meldet sich einmal mit einem Satz, der nach Weltherrschaft klingt und Backen meint. Ein Radio spricht über Milchpreise oder vergessene Geburtstage. Pixel wünscht sich etwas zu essen, und seine Wünsche ergeben am Ende Opas Einkaufsliste.
+
+#### Zeitlinie
+
+| Wann | Was |
+| --- | --- |
+| 1977 | „Zappis Puppenstube“. Opa ist der Bastel-Onkel. In der letzten Folge explodiert sein Backofen live. Oma sitzt in der ersten Reihe und wird vom Teig getroffen. Zappmann darf nie wieder vor eine Kamera. |
+| 1988 | Zappmann wird Intendant (der Aufzugscode in Welt 4). |
+| seit 14 Jahren | Pixel lebt bei Opa. |
+| vor einigen Wochen | Opa testet den Zapp-O-Mat und verliert seine Fernbedienung auf Kanal 999. Er gibt es nicht zu. |
+| gestern Abend | Opa fällt Omas Geburtstag ein. |
+| heute Nachmittag | Prolog. Danach Welt 1 (drüben drei Tage), Welt 2 (drei Tage), Welt 3 (eine Woche Regen), Welt 4. Dazwischen drei Rückkehren, das Licht wird jedes Mal abendlicher, der Kreis im Kalender dicker. |
+| heute Abend | Finale auf dem Dachboden. Oma kommt früher (die Bahn war pünktlich). Geburtstag im Wohnzimmer. Die Mutter kommt von der Spätschicht. |
+| später Abend | Max geht zum Supermarkt. |
+
+#### Ton und Humorstil
+
+- **Warm und albern, nie zynisch.** Keine Figur wird vorgeführt. Sogar die Gegenspieler bekommen einen würdigen Abgang (Moderwort schreibt sich wieder ein, M.U.T.T.I. ist „ziemlich normal“, Zappmann steht auf).
+- **Jede Figur hat eine Sprachregel**, und der Witz kommt daraus, dass sie die Regel nie bricht. Oder genau einmal (Leonidas, Bernd).
+- **Parodie als Augenzwinkern.** Die Vorlage wird nicht genannt, und der Witz muss ohne sie funktionieren.
+- **Dauergags mit Auszahlung.** Fast jeder Laufwitz endet im Finale mit einer letzten Wendung.
+- **Zwei Ebenen.** Kinder lachen über den Kater und den Käse. Erwachsene erkennen Testbild, Asterix und Blade Runner.
+- **Das Spiel bestraft nicht.** Falsche Versuche werden mit einer eigenen Zeile belohnt.
+
+#### Widersprüche im Material
+
+Diese Stellen widersprechen sich. Alle stehen mit Vorschlag in der Fundliste.
+
+| Thema | Stelle 1 | Stelle 2 |
+| --- | --- | --- |
+| Zeitrechnung | „Drei Tage! Hier waren es zwanzig Minuten.“ (`ZS2_DACH_OPA_0060`) | „Zwanzig Minuten Fernsehzeit sind drei Stunden Werkbank.“ (`FI_DACH_OPA_0060`) |
+| Tageszeit im Prolog | Konzept: Nachmittag. „Heute Mittag“ (`ZS1_DACH_MAX_0370`) | „Draußen wird es langsam dunkel.“ (`P0_TREP_MAX_0020`). Bilder: Wohnzimmer wie Abend, Treppenhaus mit Nachthimmel |
+| Pixels Vorwissen | „Er kennt die Welten, und er kennt alle Antworten.“ (`P0_DACH_OPA_0370`) | „Fernsehreisen … Ich habe nur noch keine gemacht.“ (`P0_DACH_PIX_0850`) |
+| Pixels Jahre bei Opa | „seit vierzehn Jahren“ (`ZS1_DACH_PIX_0190`, `W2_TRAI_PIX_0140`) | „sechzehn Jahre lang. Ich war die ganze Zeit dabei“ (`W3_HINT_PIX_0350`) |
+| Rotkäppchens Oma | „zieht dauernd um, immer tiefer in den Wald“ (`W1_WALD_ROT_0222`) | „Ist in Rente. Wohnt auf Mallorca.“ (`W1_WALD_ROT_0780`) |
+| Zeldinas Turm | „Der Drache war der Vermieter. Der Turm war zu teuer.“ (`W1_LUFT_ZEL_0840`) | Der Turm gehört Moderwort, Smaugi ist Untermieter, und Zeldina will genau diesen Turm |
+| Schwerter mit Namen | Entscheidung: nur Humbert tauft Schwerter (`entscheidungen.md` Z. 188) | Der Schmied tut es auch (`W1_SCHM_SCH_0780`) |
+| Auftragszettel von Modell 08/15 | oben „Sahra Konner finden“, darunter „Boden wischen“ (`W3_EING_HAU_0050`) | „Erstens wischen. Zweitens Sahra Konner finden.“ (`W3_EING_HAU_1060`) |
+| Testperson 47 | Pinnwand: „Sehr gut, aber zu wenig Kuchen verlangt.“ (`W3_EING_PIX_0460`) | „Du bist besser als Testperson 47. Sie hat nach dem Kuchen gefragt.“ (`W3_KAM2_MUT_0250`) |
+| Morphäus' Kleidung | „nur der Mantel weht“ (`W3_APO_MAX_0295`) | Er trägt Strickjacke (`W3_APO_MOR_0300`) |
+| Besuch für die Keksdose | „Mit Krawatte.“ (`W4_SIT_VAT_0160`) | „Er trägt Mantel.“ (`W4_SIT_VAT_0420`, Hinweis `W4_HINT_PIX_0070`) |
+| Alibi der Hyäne | Sie war nicht bei der Sitcom (Lösung des Rätsels) | „Außer der gefleckten Dame in Reihe drei“ (`W4_SIT_SMU_0360`) |
+| Herkunft des Bettlakens | vom Fledermann (`W4_KAPI_FLE_0350`, `raetsel/welt-4.md`) | vom Geist (`W4_INV_MAX_0010`) |
+| Geburtstag | „Ich habe ihn vergessen. Bis gestern Abend.“ (`FI_AUFL_OPA_0330`) | „Das steht seit Wochen im Kalender.“ (`FI_HINT_PIX_0200`) |
+| Anrede der Großeltern | „Alles Gute, Mama.“ (`FI_WOHN_MUT_0230`) | „Konrad, das ist deine Einkaufsliste.“ (`FI_WOHN_MUT_0260`) |
+| Milchwerbung | Pixel verdächtigt Opa als Absender (`ZS3_DACH_PIX_0020`) | Opa hat die Werbung nie gesehen (`FI_WOHN_OPA_0050`) |
+| Regel „Max kennt keine Retro-Medien“ | `01-konzept.md` Z. 55 | „Das ist ein Testbild“ (`P0_DACH_MAX_0680`) |
+| Dialogregeln | „Keine Reihen aus Ein- und Zwei-Wort-Sätzen“ (`01-konzept.md` Z. 59) | Die Beispielsätze direkt darunter: „Sport. Freiwillig. Die spinnen, die Griechen.“ |
+
+### A. Story und roter Faden
+
+**Urteil:** Die Geschichte trägt. Der rote Faden ist klar und wird sauber eingelöst. Die Schwächen liegen an den Nähten: Zeitangaben, ein offener Faden und eine Welt, in der das Ziel zu früh erreicht ist.
+
+**Was funktioniert**
+
+- **Ein Ziel, ein Köder.** Vier Dinge holen, dafür gibt es das WLAN-Passwort. Das versteht man in einer Minute. Jede Rückkehr beginnt mit Max' neuem Versuch, das Passwort vorher zu bekommen, und jeder scheitert anders.
+- **Die doppelte Auflösung.** Dass es ein Kuchen wird, ahnt der Spieler ab Zwischenspiel 1. Das ist gewollt: Er darf klüger sein als Max. Die echte Überraschung (für wen, warum heimlich, woher Opa Zappmann kennt) bleibt bis zum Schluss geschützt.
+- **Fährten werden einzeln eingelöst.** Der rote Kreis im Kalender, der Staubrand auf dem Couchtisch, das Familienfoto, „Bäckerei“, „Kuchen123“, „Prospekte“, „Vorheizen“, die Milchwerbung, Pixels Einkaufsliste. Keine bleibt liegen.
+- **Jede Welt hat eine eigene kleine Geschichte** mit Anfang und Ende: Zeldina findet eine Wohnung, Ramses trifft eine Entscheidung, M.U.T.T.I. erkennt ihren Widerspruch, Zappmann steht auf.
+- **Das Ende antwortet auf den Anfang.** Erste Szene: Max will das Passwort und nicht aufstehen. Letzte Szene: Opa hält ihm das Passwort hin, und Max nimmt es nicht.
+
+**Funde**
+
+| Ort | Problem | Schwere | Vorschlag |
+| --- | --- | --- | --- |
+| `W1_THRO_MAX_0020`, `W1_SMAU_MAX_0630` | **Welt 1: Das Ziel ist vor dem Endkampf erreicht.** Nach Rätsel 12 hat Max das Ei. Warum er noch in den Thronsaal geht, steht nur in zwei Zeilen („Das hab ich aber schon.“, Zeldina: „Wegen der Wohnung.“). | mittel | Gleich nach der Ei-Übergabe eine Zeile, in der Max sich entscheidet: „Ich hab das Ei. Ich könnte jetzt gehen. // … Zeldina hat immer noch keine Wohnung.“ Das wäre zugleich sein Entwicklungsmoment mit mehr Gewicht. |
+| `FI_DACH_OPA_0060` gegen `ZS2_DACH_OPA_0060` | **Zeitrechnung verkehrt herum.** Erst sind drei Tage drüben zwanzig Minuten hier. Dann sind „zwanzig Minuten Fernsehzeit drei Stunden Werkbank“. | mittel | „Ich habe es aufgebaut, während du weg warst. Viermal zwanzig Minuten. Ich bin selbst überrascht.“ |
+| `P0_TREP_MAX_0020`, Bilder Wohnzimmer und Treppenhaus | **Tageszeit im Prolog.** Text und zwei der drei Bilder zeigen Abend oder Nacht. Alles andere geht von einem Nachmittag aus, der langsam Abend wird. Damit fehlt der sichtbare Zeitverlauf, den die Zwischenspiele erzählen. | mittel | Prolog-Zeile ändern („Draußen ist bestes Wetter.“), Wohnzimmer und Treppenhaus heller neu erzeugen (Prompts in Abschnitt G). |
+| `P0_DACH_OPA_0370` gegen `P0_DACH_PIX_0850` | **Pixels Vorwissen.** Opa: „Er kennt die Welten, und er kennt alle Antworten.“ Pixel war aber nie dort. Das Hinweissystem braucht den ersten Satz, die Geschichte den zweiten. | klein | Opa: „Er kennt jede Sendung, die je gelaufen ist. Er liegt seit vierzehn Jahren vor diesem Fernseher.“ Das erklärt die Hinweise und stimmt mit Pixel überein. |
+| `ZS3_DACH_PIX_0020`, `FI_WOHN_OPA_0050` | **Wer sendet die Milchwerbung?** Pixel verdächtigt Opa. Opa hat sie nie gesehen. Der Faden bleibt offen. | klein | Offen lassen ist in Ordnung, dann sollte Pixel nicht auf Opa zeigen. Oder ein Satz von Oma im Finale: „Ich habe dreimal angerufen und aufs Band gesprochen. Milch, Konrad.“ |
+| `FI_AUFL_OPA_0230`, `W3_PIEP_OPA_0120`, Welt 2 (Papyrus per Hermes) | **Wie oft war Opa drüben?** Er sagt „Einmal. Zum Testen.“ und nennt Kanal 999. Sein Hologramm steckt aber in Welt 3, und in Welt 2 bringt Hermes einen Papyrus von ihm. | klein | Ein halber Satz reicht: „Ich war schon mal drin. Einmal. Einmal durch alle Kanäle.“ |
+| `W4_STUD_MAX_0160` | „Ich habe eine Woche lang Dinge getan.“ Drüben waren es zusammen rund zwei Wochen. | klein | „Ich habe zwei Wochen lang Dinge getan. An einem Nachmittag.“ |
+| `ZS1_DACH_MAX_0120` | „ich hatte es drei Tage im Arm“. Das Ei bekommt Max erst am Ende von Welt 1. | klein | „ich hab es den ganzen Turm runtergetragen“ |
+| `FI_AUFL_PIX_0240`, `FI_DACH_PIX_0160`, `FI_AUFL_MAX_0250` | Figuren sagen „Welt 3“ und „Welt 4“. Das sind Namen aus dem Entwurf. In der Geschichte heißen die Orte Kanal 42 und Kanal 999. | klein | „Seit Kanal 42.“, „Auf Kanal 999“. „Vier Welten“ als Menge kann bleiben. |
+| `FI_AUFL_MAX_0270` | „Und Zappmann? … du kennst ihn. Lange Geschichte.“ Es klingt, als beantworte Max seine Frage selbst. | klein | „Lange Geschichte, hast du geblinkt. Ich hab Zeit.“ |
+| `FI_HINT_PIX_0200` | „Oben hat jemand Geburtstag.“ Max und Pixel sind auf dem Dachboden, Oma steht darunter. | klein | „Unten hat jemand Geburtstag.“ |
+| `W2_DISK_LEO_0010`, `W2_DISK_MAX_0020` | Der Diskus fehlt „HEUTE NACHT“, es geht aber gleich nach Tag 1 weiter. Die Sphinx sitzt 112 Fähr-Jahre entfernt und gilt als „in der Nähe“. | klein | Als Gag vertretbar. Wenn ändern, dann „SEIT DER PAUSE“. |
+
+### B. Figuren und Dialoge
+
+**Urteil:** Die Nebenfiguren sind die Stärke des Spiels. Fast jede hat eine Regel, an der man sie mit geschlossenen Augen erkennt. Max und Pixel sind seit dem Humor-Durchgang ausführlicher geworden und haben dabei Füllwörter und gleiche Satzmuster angesetzt.
+
+**Was funktioniert**
+
+- **Eine Regel pro Figur.** Siehe Story-Bibel. Waldemar, Herr Vier, Gerd Glück, Leonidas, Schmidt und Oma sind in einem Satz erkennbar.
+- **Nebenfiguren reden kürzer als die Helden** und sind deshalb oft komischer. An ihnen kann man Max und Pixel messen.
+- **Max und Pixel als altes Ehepaar.** Max untertreibt, Pixel übertreibt. Die Rollen sind nie vertauscht.
+- **Gegenspieler ohne Bosheit.** Moderwort, Cicero, M.U.T.T.I. und Zappmann wollen alle etwas Verständliches.
+
+**Funde**
+
+| Ort | Problem | Schwere | Vorschlag |
+| --- | --- | --- | --- |
+| `W3_KUCH_PIX_0535`, `W3_TURM_PIX_0235`, `W3_KAM1_PIX_0365`, `W3_KERN_PIX_0415`, `W3_INV_PIX_0045`, `0115`, `0135` | **Pixel spricht, wo er nicht ist.** In Simulation und Labor ist er nur über eine Leitung zu hören. Diese sieben Zweitzeilen lassen ihn riechen, graben und sich hinlegen. | mittel | Auf die Leitung umschreiben („Beschreib mir den Geruch. Langsam.“) oder Max sprechen lassen. |
+| `01-konzept.md` Z. 55 gegen `P0_DACH_MAX_0680`, `W4_KELL_MAX_0175`, `W4_KAPI_MAX_0525`, `W4_TEST_MAX_0255`, `W3_BAS_MAX_0755` und weitere | **Max kennt, was er nicht kennen soll.** Er nennt das Testbild beim Namen und spielt auf Poltergeist, Ghostbusters, Superman und Star Wars an. Die Regel sagt: Retro gehört Pixel und Opa. | mittel | Im Prolog: „Kanal 4. Bunte Streifen und ein Pfeifton. Das ist das Langweiligste, was ich heute gesehen hab.“ Die Filmzeilen an Pixel geben oder streichen (Liste in Abschnitt D). |
+| alle Skripte | **Max macht sich zu oft klein.** Die Selbstabwertung („mehr Talent als ich“, „da bin ich am allerschlechtesten“, „mein ganzes Leben“) kommt in jedem Raum. Im Konzept ist Max gelassen und faul. So oft wiederholt klingt er unsicher. Das ist eine andere Figur. | mittel | Höchstens einmal pro Raum. Die Alternativen stehen in Abschnitt C. |
+| `W1_SCHM_SCH_0780`, `W1_SCHM_MAX_0770` gegen `entscheidungen.md` Z. 188 | **Der Schmied hat Humberts Eigenheit bekommen.** Beide taufen Schwerter. Die Entscheidung hatte das ausdrücklich abgeschafft. Max stellt beiden fast dieselbe Frage. | mittel | Beim Schmied streichen. Sein eigener Witz ist die Ziege („Wie Schulden.“). |
+| `W1_SCHM_MAX_0221` und `0750` | Max fragt den Schmied zweimal dasselbe („wegzuschicken?“, „jagst du sie nicht weg?“). | klein | `0750` und `0760` streichen. |
+| `W3_EING_HAU_0030`; `W1_ABS_MAK_0230`, `0240`, `W1_ABS_STA_0120`; `W2_ABS_BE1_0240` | **Du oder Sie.** Modell 08/15 sagt „Bursche“ und im selben Satz „Haben Sie sie gesehen?“. Maklerin, Stabmacher und Beamter duzen im Gespräch und siezen in den Abschiedszeilen. | klein | Je Figur festlegen. Beim Roboter passt „Hast du sie gesehen?“. |
+| `FI_WOHN_MUT_0230`, `0260` | Die Mutter sagt „Mama“ zu Oma und „Konrad“ zu Opa. | klein | Festlegen, wessen Tochter sie ist. Dann „Papa, das ist deine Einkaufsliste.“ oder „Alles Gute, Hildegard.“ |
+| `W1_ABS_GOL_0220` | Gollo sagt nur hier „wir“ und „unser“, sonst immer „ich“. Der Inhalt stimmt in keinem Spielzustand. | klein | „Mein Gold ist weg. Mein Ring ist weg. Ich bin der glücklichste Verlierer der Welt.“ |
+| `W1_SMAU_SMA_0880` | Smaugi nennt Kater Pixel „Kollegin“. | klein | „Ein Kollege!“ |
+| `W1_WALD_ROT_0222` gegen `0780`; `W1_LUFT_ZEL_0840` | Rotkäppchens Oma und Zeldinas Turm widersprechen sich (siehe Story-Bibel). | klein | Eine Fassung wählen. Für die Oma ist Mallorca die bessere Pointe. |
+| `W3_EING_HAU_1060` gegen `0050`, `0060` | Der Auftragszettel hat zwei Reihenfolgen. | klein | `1060`: „Erstens Sahra Konner finden. Zweitens wischen. Ich bin seit neunzehn Jahren bei Punkt eins. Punkt zwei läuft nebenher.“ |
+| `W3_EING_PIX_0460` gegen `W3_KAM2_MUT_0250` | Testperson 47 hat „zu wenig Kuchen verlangt“ und „nach dem Kuchen gefragt“. | klein | In `0250`: „Sie hat nie nach dem Kuchen gefragt. Du fragst ständig.“ Das passt dann auch zur Option gleich danach („Wo ist der Kuchen?“). |
+| `W3_KAM1_MAX_0390` | „weil M.U.T.T.I. es dreimal gesagt hat“. Sie sagt es einmal. | klein | „weil M.U.T.T.I. es gesagt hat. Sehr langsam.“ |
+| `W3_APO_MAX_0295` gegen `W3_APO_MOR_0300` | Mantel oder Strickjacke. | klein | „nur die Strickjacke weht“. Das ist sogar komischer. |
+| `W3_HINT_PIX_0350` | „sechzehn Jahre lang. Ich war die ganze Zeit dabei“. Pixel ist seit vierzehn Jahren da. | klein | „vierzehn Jahre davon war ich dabei“ |
+| `W2_NIL_PIX_1070` | „seit drei Welten“ in der zweiten Welt. | klein | „seit zwei Welten“ |
+| `FI_RAET_MAX_0090` | „Zeldina, Opa, der Roboter und ich.“ Die Zeile hat keine Bedingung. Ohne Modell 08/15 ist sie falsch. | klein | Zwei Fassungen mit und ohne `FREUND_0815`. |
+| `W1_BRUE_WAL_1250` und `W1_BERG_GRI_0840` | Waldemar und Grimmzahn haben denselben Satzbau („ohne … nur ein … Mann …“). | klein | Einen ändern. Waldemar hat ihn zuerst. |
+| `docs/04-audio.md`, Stimme Pixel | Der Stimmen-Prompt kennt nur „arrogant“. Pixels leise Stellen brauchen Wärme. | klein | Ergänzen: „with a rarely shown, dry warmth underneath“. |
+
+### C. Humor
+
+**Urteil:** Der Humor ist die größte Stärke des Spiels. Von grob 2.300 Pointen zünden rund 2.000. Das ist für ein Adventure dieser Länge eine sehr hohe Quote. Die schwachen Zeilen sind fast nie schlechte Ideen. Es sind gute Ideen in einer Form, die das Spiel schon zu oft benutzt hat.
+
+**Zur Zählweise.** Das Spiel hat 5.414 Skriptzeilen, und fast jede Ansehen- und Benutzen-Zeile ist ein kleiner Gag. Einzeln bewertet ist jeder Gag mit eigener Pointe oder eigenem Muster. Gags derselben Szene mit demselben Urteil stehen in einer Tabellenzeile, jeweils mit Zeilennummer. Alternativen sind Vorschläge im Ton des Spiels. Nichts davon ist eingebaut.
+
+| Datei | Pointen (grob) | zündet | mittel | zündet nicht |
+| --- | --- | --- | --- | --- |
+| Prolog | 60 | 40 | 18 | 2 |
+| Welt 1 | 420 | 350 | 68 | 2 |
+| Welt 2 | 500 | 440 | 60 | 0 |
+| Welt 3 | 480 | 430 | 48 | 2 |
+| Welt 4 | 520 | 460 | 58 | 2 |
+| Zwischenspiele und Finale | 330 | 310 | 18 | 1 |
+
+**Die zehn besten Gags (Auswahl, alle bleiben):**
+
+1. „Hatschi. // Bäckerei.“ (`ZS2_DACH_PIX_0100`) und die Auszahlung im Finale (`FI_AUFL_PIX_0080`)
+2. „Das Passwort ist ‚Kuchen123‘. Oder?“ (`ZS3_DACH_MAX_0160`)
+3. „Der Teig hat mich getroffen. Ich dachte: Den nehme ich.“ (`FI_WOHN_OMA_0190`)
+4. Opa durchs Portal: „Hast du an die Milch gedacht?“ (`W3_KAM1_OPA_0100`)
+5. Der Mensch-Test: Die logische Antwort fällt durch (`W3_TEST_*`, „Das ist keine Menschlichkeit. Das ist 2026.“)
+6. Der Amboss, der Pixels Erkenntnis stoppt (`W4_KAPI_PIX_0030` bis `0070`), fortgesetzt im Finale
+7. „Dreihundert Jahre lang ein Etikett.“ (`W1_TAV_HUM_1250`)
+8. „Wir prüfen keine Siegel, wir verneigen uns vor ihnen.“ (Welt 2, das Amt)
+9. „Ich mag Max. Ein bisschen. Das Seil ist kaputt.“ (`W4_PIXM_PIX_0170`)
+10. Zettel „Bin aufgestanden. Z.“ (`FI_RUF_NAR_0280`)
+
+**Muster, die sich über das ganze Spiel wiederholen.** Das ist der wichtigste Fund in diesem Abschnitt. Jede Zeile für sich ist in Ordnung. In Summe hört der Spieler dieselbe Bauform alle paar Minuten.
+
+| Muster | Häufigkeit (gezählt in `docs/skript/`) | Empfehlung |
+| --- | --- | --- |
+| „Das ist kein X, das ist Y.“ | rund 54-mal, bei allen Figuren | Auf die besten 10 bis 12 kürzen. Pixel und Waldemar dürfen es behalten, Max selten, Hinweise nie. |
+| „Entweder A oder B.“ | 50-mal, fast nur Max | Halbieren. Die Form ist in Welt 4 mit 15 Stellen am dichtesten. |
+| Max macht sich klein (Schule, Sport, Wochenende, „mein ganzes Leben“) | in jeder Welt 10- bis 15-mal | Höchstens einmal pro Raum. |
+| Schule, Hausaufgaben, Lehrer als Vergleich | 49 Stellen | Halbieren. In Welt 1 allein 21. |
+| Handy, Akku, WLAN, Empfang als Vergleich | rund 120 Stellen | Das ist Max' Sprache und darf bleiben. Die bloßen Akku-Vergleiche sind nach dem Prolog verbraucht. |
+| Füllsel: „ehrlich gesagt“ (34), „Ich glaub(e)“ (78), „eigentlich“ (53), „ein bisschen“ (43), „irgendwie“ (30) | zusammen rund 240 | Je Zeile fragen, ob der Satz ohne das Wort schlechter wird. Meist wird er besser. |
+| „und zwar“ | 113-mal, 44 davon in Welt 1 | Das ist Pixels Tick. In Welt 1 halbieren. |
+| Pixels Superlativ „das Traurigste, was ich je gesehen habe, und ich habe … gesehen“ | rund zehnmal im Spiel (Toadi, Mumie, leerer Napf, Sitcom und weitere) | Einmal pro Welt. |
+| Pixels „Ich bin beeindruckt. Das sage ich nie wieder.“ | `W1_THRO_PIX_0560`, `W2_SPHX_PIX_0530`, `W2_RING_PIX_0290`, `W2_PARA_PIX_0330` und Varianten | Einmal im Spiel wäre es ein Ereignis. Ich würde es für Welt 4 aufheben. |
+| Benutzen-Bauform im Prolog: erst „Mach ich nicht, weil …“, dann „Hab ich doch gemacht, lass ich jetzt.“ | rund 25 Objekte in drei Räumen | Bei jedem dritten Objekt die Form brechen. |
+| Zweitzeile wiederholt die erste mit einem angehängten Gefühl | vor allem Welt 3 und 4 | Die Zweitzeile soll etwas Neues zeigen, nicht das Alte bewerten. |
+| „beleidigt“ als Eigenschaft von Dingen | 25-mal | Auf fünf kürzen. |
+
+**Doppelte Gags (derselbe Witz an zwei Stellen):**
+
+- „Sport. Freiwillig. Die spinnen, die Griechen.“ wortgleich (`W2_AUDI_MAX_0110`, `W2_STAD_MAX_0010`)
+- Sendeschluss, „anständige Leute gingen schlafen“ (`P0_DACH_PIX_0420`, `W2_HAFS_PIX_0020`), dazu Erklärungen in `W4_TEST_PIX_0040`, `0225` und `W4_FRIE_PIX_0020`
+- „Was haben die Römer je für uns getan“ viermal in Welt 2
+- „Störe meine Kreise nicht“ dreimal (`W2_WERK_ARC_0440`, `W2_INV_MAX_0465`, `W2_ABS_ARC_0160`)
+- Sechs Paare in Welt 4 (Tanzende Tote, Bleistift und Kassette, Kreuzfahrt aus Pappe, Korrespondent, Klo-Witz, „zahlt sich aus“), Liste im Block Welt 4
+- Die pünktliche Bahn (`FI_DACH_OMA_0220`, `FI_AUFL_OMA_0420`)
+- „… ist in einem anderen …“: In Welt 1 fällt der Satz sechsmal. Alwin sagt sogar „Die Milch ist in einem anderen Schloss“ (`W1_HOGG_ALW_0360`) und nimmt damit die Schlusspointe des Abspanns vorweg. Im Finale sagt ihn Hermes kurz vor Toadi. Empfehlung: einmal pro Welt, wie im Konzept, und die Milch nur im Abspann.
+
+**Zwei Stellen, an denen ein Gag ein Rätsel beschädigt:** der Krawatten-Witz in der Sitcom (Abschnitt J) und Hermes' falsche Begründung beim Diskus (Abschnitt J).
+
+Es folgen die Bewertungen je Datei.
+
+#### C Prolog (`docs/skript/prolog.md`)
+
+| Szene | Gag (Zeile) | Urteil | Grund | Alternativen |
+| --- | --- | --- | --- | --- |
+| 1 Wohnzimmer | „Ein Balken … bloß zur Deko“ (`P0_WOHN_MAX_0010`, `0020`) | zündet | Stellt Max in zwei Sätzen vor. | |
+| 1 Wohnzimmer | „Die Wissenschaft hat Knie, Junge! Alte Knie!“ (`P0_WOHN_OPA_0042`) | zündet | Opa in einem Satz: Pathos und Gebrechen. | |
+| 1 Wohnzimmer | „Jeder hat sein Päckchen zu tragen.“ (`P0_WOHN_MAX_0044`) | mittel | Fertige Redensart als Pointe. Die Zeile davor ist stärker. | „Und ich hab einen Balken. Wir leiden beide.“ / „Deine Knie haben wenigstens Empfang.“ |
+| 1 Wohnzimmer | WLAN-Passwort als Erpressung (`0050` bis `0070`) | zündet | Motiv für das ganze Spiel, sauber gesetzt. | |
+| 1 Wohnzimmer, Ansehen | Knopf für „Farbe“, „Nachrichten zu fröhlich“ (`0110`, `0115`) | zündet | Retro-Detail aus Max' Sicht, zweite Zeile dreht weiter. | |
+| 1 Wohnzimmer, Ansehen | „Ich glaube, das ist Liebe.“ (`0120`) | mittel | Max sagt das Gefühl an, das Bild sagt es schon. | „Sie hat das Foto eingerahmt. Nicht die Torte.“ / Letzten Satz streichen. |
+| 1 Wohnzimmer, Ansehen | Teetasse: „Das ist schon fast ein Ritual.“ (`0130`), „Ruhe in Frieden, Keks.“ (`0135`) | mittel / zündet | Der Schlusssatz in `0130` erklärt nur. Der Keks sitzt. | `0130` ohne letzten Satz. / „Morgen kocht er den nächsten daneben.“ |
+| 1 Wohnzimmer | Tatort Couchtisch (`0140`, `0145`, `0200`, `0205`) | zündet | Vier Zeilen bauen aufeinander auf, „Hauptverdächtiger“ schließt ab. Legt nebenbei die Spur zur Fernbedienung. | |
+| 1 Wohnzimmer | Sofa: „Das Sofa vermisst mich trotzdem schon.“ (`0155`), „plötzlich ist es Dienstag“ (`0165`) | zündet | Dauergag Sofa beginnt hier und trägt bis zur Bodenluke. | |
+| 1 Wohnzimmer, Benutzen | Fernseher: „Ehrlich gesagt kenne ich das von mir.“ (`0170`) | mittel | Selbstvergleich kommt im Prolog viermal (`0170`, `P0_DACH_MAX_0405`, `0980`, `P0_SYS_ERS_MAX_0030`). | „Er brummt, denkt nach und geht wieder aus. Mein Wecker macht das auch.“ / Satz streichen, `0175` trägt allein. |
+| 1 Wohnzimmer, Benutzen | „wie sich ein Montagmorgen anfühlt“ (`0185`) | mittel | Montag ist der verbrauchteste Vergleich im Spiel. | „Kalter Tee riecht wie ein Wartezimmer.“ / „… wie Opas Thermoskanne von 1994.“ |
+| 1 Wohnzimmer, Benutzen | Familienfoto: „auch aus dem Urlaub“ (`0190`) | zündet | Oma wird Figur, bevor sie auftritt. | |
+| 1 Wohnzimmer | Schrank, Bügelbrett „als wollte es reden“ (`0310` bis `0325`) | zündet | „Und mit Opa.“ ist ein guter Nachklapp. | |
+| 1 Wohnzimmer | Stehlampe benutzen (`0340`, `0345`) | zündet nicht | „dann bin ich schuld“ und „irgendwie beleidigt“ sind Füllung. „Beleidigt“ kommt im Prolog dreimal (Lampe, Stein, Sofa). | „Auf dem Zettel steht nicht, was passiert. Ich finde, das sagt genug.“ / „Ich hab gewackelt. Im Keller ist was angegangen.“ |
+| 1 Wohnzimmer | Kreuzworträtsel „ZAPPOMAT“ mit dazugemaltem Kästchen (`0355`), „NEIN“ (`0365`) | zündet | Beste Objekt-Gags des Prologs. „Keine Lösung, eine Haltung“ ist hier verdient. | |
+| 1b Treppenhaus | Hut „Fasan oder Kopfkissen“, „Lötzinn und Pfefferminz“ (`P0_TREP_MAX_0010`, `0015`) | zündet | Zweite Zeile ist warm statt witzig, das tut der Szene gut. | |
+| 1b Treppenhaus | „Drinnen ist es … ungefähr 1987.“ (`0020`), Kaktus (`0025`) | zündet | Trocken, kurz. | |
+| 1b Treppenhaus | „sonst kommt die Gegenwart rein“ (`0050`) | zündet | Opas Weltbild in einem Halbsatz. | |
+| 1b Treppenhaus | Treppe: vier Tonart-Zeilen (`0030`, `0035`, `0060`, `0065`) | mittel | „Moll“ (`0035`) ist die Pointe. Dur und Fis danach wiederholen sie nur. | `0060`: „Ich geh ja schon. Die Treppe petzt sowieso.“ / `0065`: „Opa ruft von oben: ‚Das war die dritte!‘ Es war die zweite.“ |
+| 1b Treppenhaus | Regenschirm „keine Bitte, sondern eine Warnung“ (`0115`) | mittel | Gleiche Form wie Pixels „keine Freundlichkeit, sondern eine förmliche Warnung“ (`P0_DACH_PIX_0215`). | „Prototyp 2. Was aus Prototyp 1 wurde, steht nicht drauf.“ / „Bei Opa heißt das: Lauf.“ |
+| 1b Treppenhaus | Mäntel „man weiß ja nie“, „nicht unbewaffnet“, Bonbon „es wohnt hier“ (`0130`, `0135`, `0145`) | zündet | Drei verschiedene Pointen an einem Objekt. | |
+| 1b Treppenhaus | „Die Lampe sammelt.“ (`0155`), Kisten „Hallo“ (`0185`) | zündet | Kurz, eigener Blick. | |
+| 1b Treppenhaus | Rest: `0040`, `0055`, `0125`, `0140`, `0160`, `0180` | mittel | Muster „Ich mach das nicht, weil …“ ohne eigene Idee. | Je Raum zwei dieser Zeilen durch einen Zwischenruf von Opa ersetzen („Finger weg vom Schirm!“). |
+| 2 Dachboden | „… und du kommst in Socken!“ (`P0_DACH_OPA_0010`), „Passwörter sind was für Leute, die eine Zukunft haben“ (`0030`) | zündet | | |
+| 2 Dachboden | „Zu einem Flugzeug sagst du ja auch nicht Bus.“ (`0060`) | zündet | | |
+| 2 Dachboden | „Fair, motivierend, modern.“ / „… großväterlich.“ (`0120`, `0130`) | zündet | Echo-Pointe, Opa gewinnt. | |
+| 2 Dachboden | „Seit heute Morgen. Oder seit Dienstag.“ (`0155`), „Modell Pixel, Baujahr unbekannt“ (`0160`) | zündet | | |
+| 2b Gespräche | „Werbung kommt immer, Max.“ (`P0_DACH_OPA_1460`) | zündet | Erklärt die Rückkehr-Regel als Witz. | |
+| 2b Gespräche | „Das ist das Beruhigendste und gleichzeitig Traurigste …“ (`1462`) | mittel | Max erklärt, wie der Satz davor wirken soll. | „Toll. Mein Rückweg ist ein Joghurt-Spot.“ / Zeile streichen. |
+| 2b Gespräche | „In genau der Reihenfolge.“ (`1340`) | zündet | Greift `0080` auf. | |
+| 2b Gespräche | „Anfassen manchmal die Augenbrauen.“ (`1360`) | zündet | Bedienhilfe als Pointe. | |
+| 2b Gespräche | Roter Kreis: „Sie sind rund. Ja. Genau.“ (`1364`), „riecht … nach Kuchen“ (`1366`) | zündet | Legt das Geheimnis, ohne es zu verraten. | |
+| 2b Gespräche | „Ich werde mitgenommen“ (`1400`), „Keine einzige funktioniert. Und eine davon fliegt.“ (`1420`) | zündet | | |
+| 3 Rätsel P1 | „Wie ein sehr beleidigter Stein.“ (`0230`), „Schraubenzieher, Draht und Thunfisch“ (`0240`) | zündet | | |
+| 3 Rätsel P1 | „… nur ans WLAN nicht.“ (`0250`) | mittel | Der fünfte WLAN-Bezug in zehn Minuten. | „Notproviant. Abgelaufen ist er auch schon mal nicht.“ |
+| 3 Rätsel P1 | Pixels Auftritt: „Wer. Hat. Mich. Geweckt.“, Lachs-Traum, „Barbarisch. Gib trotzdem her.“ (`0310` bis `0360`) | zündet | Stärkste Szene des Prologs. | |
+| 3 Rätsel P1 | „Ich hab schon Schlimmeres heruntergeladen.“ (`0390`) | zündet | | |
+| 4 Rätsel P2 | Sendeschluss: „Mit Absicht?“ (`0420`, `0430`) | zündet | Der Generationen-Witz, den das Konzept will. | |
+| 4 Rätsel P2 | „Wenigstens sind wir uns einig.“ (`0405`) | mittel | Selbstvergleich, siehe oben. | „Mein Spiegelbild hat auch keinen Empfang.“ |
+| 4 Rätsel P2 | „ein Hase, der Empfang hat“ (`0470`), Techniker und Kekse (`0480`, `0490`) | zündet | | |
+| 5 Rätsel P3 | „Geburtstag oder Zahnarzttermin“ (`0620`) | zündet | | |
+| 5 Rätsel P3 | Testbild (`0680`) | zündet, aber Regelbruch | Max kennt laut Konzept kein Testbild. | „Kanal 4. Bunte Streifen und ein Pfeifton. Das Langweiligste, was ich heute gesehen hab. Und ich hab Opas Zeitung gesehen.“ |
+| 6 Reisetasche | „der fieseste Spoiler“ (`0840`), „Hier vergeht sie normal.“ (`0845`), „Ich habe nur noch keine gemacht.“ (`0850`), „Übersetzung nicht verfügbar“ (`0880`) | zündet | Guter Abgang. | |
+| 6 Reisetasche | Daumenabdruck (`0842`) | zündet nicht | Keine Pointe, nur Beschreibung. | „Gegen das Licht sehe ich drei Wörter. Eins ist durchgestrichen. Eins ist ‚Oma‘.“ (legt das Geheimnis) / „Opa ruft: ‚Ich seh das!‘ Er sieht es nicht.“ |
+| 7 Ansehen Dachboden | Fisch „Testpilot“, Poster „Max?“, Toaster, Staubsauger „Er hat geblinzelt.“, Platte „Folge 3“, „Mein Herz ist ein Lötkolben“ | zündet | Dichtester Raum, jeder Gegenstand erzählt Opa. | |
+| 7 Ansehen Dachboden | Kochbuch: „Nicht wieder vergessen.“ (`0955`) | zündet | Der wichtigste leise Moment. Bleibt. | |
+| 7 Ansehen Dachboden | Brillenetui im Sessel (`0975`) | zündet | Und bereitet das Finale vor. | |
+| 7 Ansehen Dachboden | Ohrensessel (`0970`), Bodenluke (`1015`) | mittel | Dritte und vierte Fassung von „wenn ich mich setze, komme ich nie wieder hoch“ und „das Sofa ist beleidigt“. | `0970`: „Der Sessel hat Opas Form. Wenn ich mich reinsetze, will ich plötzlich was erfinden.“ |
+| 7b Benutzen | Maßband (`1615`), „Pixel: Lachs“ (`1635`), „Wir haben keine Garage.“ (`1650`), „größter Beitrag zur Rettung der Welt“ (`1665`), „Ich koche nicht, ich bestelle.“ (`1690`), „Pixel nennt es Gewalt.“ (`1755`) | zündet | | |
+| 7b Benutzen | Rest: `1640`, `1645`, `1670` bis `1685`, `1700` bis `1730`, `1840`, `1845` | mittel | Immer dieselbe Form: erst „Ich mach das nicht“, dann „Ich hab's doch getan“. Dreimal „es guckt zurück“ (`1675`, `1685`, `P0_TREP_MAX_0055`). | Bei jedem dritten Objekt die Form brechen: Pixel antwortet, Opa ruft, oder es passiert sichtbar etwas. |
+| 7c Weitere Dinge | Kartons „Später“ / „Später, wirklich. Der ist von 1979.“ (`1810`, `1815`), „230 Volt. Nicht lecken.“ (`1835`) | zündet | | |
+| 8 Fehlversuche | „Ich bin keine Antenne, ich bin ein Gesamtkunstwerk.“ (`1120`), „damit du es nicht musst“ (`1130`), Milchwerbung (`1140`) | zündet | | |
+| 8c Hinweise | „Er nennt das Garderobe. Ich nenne es Material.“ (`P0_HINT_PIX_0220`), „gelegentlich auf mich“ (`0310`) | zündet | Hinweise bleiben im Ton. | |
+| 8d Inventar | „durch die Zeit riechen“ (`P0_INV_PIX_0015`), Akkuschrauber (`0035`), „ob die Tasche gemeint ist oder ich“ (`0065`) | zündet | | |
+| 8d Inventar | Kleiderbügel „aufgegeben“, „Stolz“ (`0040`, `0045`) | mittel | „Sieht traurig aus“ steht schon beim Nehmen (`P0_DACH_MAX_0460`). | „Ein Bügel ohne Hemd. Bei Opa hat alles einen Zweitberuf, der hier wartet noch.“ |
+| 9 Ersatz-Pool Max | Serien- und Handy-Vergleiche | zündet überwiegend | Passen zur Figur. Schwach: „Meine Motivation übrigens auch nicht.“, „Also mein innerer.“, „Fast. Also, ehrlich gesagt, gar nicht.“ | „Funktioniert nicht.“ reicht. / „Mein Akku sinkt.“ ohne Erklärung. |
+| 9 Ersatz-Pool Pixel | „beruflich Nein sagt“, „fresse ich einen Besen“, „Sie spricht bis heute nicht darüber“ | zündet | Der Pool ist besser als mancher Szenentext. | |
+| 9b Wiederholung | „Das ist gelogen, ich sage nie Bescheid. Aber es klingt nett.“ (`P0_SYS_WDH_PIX_0080`) | zündet | | |
+
+Bilanz Prolog: Von rund 60 bewerteten Gags zünden gut 40. Schwach wird es dort, wo dieselbe Bauform dreimal hintereinander kommt.
+
+#### C Welt 1 (`docs/skript/welt-1.md`)
+
+| Szene | Gag (Zeile) | Urteil | Grund | Alternativen |
+| --- | --- | --- | --- | --- |
+| 1 Ankunft | „Ich urteile nicht, ich stelle nur fest.“ (`W1_ANK_PIX_0020`), „Wohlan“ ohne rot zu werden (`0040`) | zündet | Pixel und Zeldina sind nach je einem Satz klar. | |
+| 1 Ankunft | Landkarten-Staffel (`W1_ANK_MAX_0050`), „Angst oder Hunger“ (`PIX_0090`) | zündet | Max denkt in Serien, Pixel in Mahlzeiten. | |
+| 1 Ankunft | „Ich hab keine Haltung. Ich hab einen Hoodie.“ (`0110` bis `0121`) | zündet | Beste Zeile der Ankunft, der Hoodie wird Programm. | |
+| 1 Ankunft | Napf mit Aufschrift „Napf“ (`PIX_0160`), Toadi „nur Panik“ (`TOA_0170`, `0190`), `PIX_0240` | zündet | | |
+| 1 Ankunft | „Na super, dann ist ja überhaupt kein Druck dabei.“ (`MAX_0080`) | mittel | Fertige Ironie-Floskel. | „Opa vertraut mir ein Ei an. Der Mann kennt mich doch.“ / „Ich hab heute Morgen schon ein Ei fallen lassen. Es war gekocht.“ |
+| 1 Ankunft | „Prinzessinnen sind ehrlich gesagt nicht so mein Bereich.“ (`MAX_0140`) | mittel | „ehrlich gesagt“ und „mein Bereich“ sind Füllung. | „Ich bin wegen eines Eis hier. Prinzessinnen hab ich bisher nur gerettet, wenn es dafür Punkte gab.“ / „Tut mir leid. Ich rette nur am Bildschirm.“ |
+| 2 Dorfplatz, Ansehen | Brunnen als App-Laden (`W1_DORF_MAX_0110`), Fische (`0120`, `0125`), Statue als Boyband (`0130`), „Der Hahn obendrauf ist ein Druckfehler.“ (`0140`) | zündet | Vier Objekte, vier verschiedene Bauformen. | |
+| 2 Dorfplatz, Ansehen | Dorfbrett als Internet (`0150`, `0155`), Bestellzettel (`0160`, `0165`), „Gesundheit!“ (`0185`), Nasenlöcher (`0200`), Lesezeichen (`0210`) | zündet | Das Dorfbrett ist der beste Sammelgegenstand der Welt. | |
+| 2 Dorfplatz, Ansehen | Statue: „Sie lügt. Das tun alle Statuen …“ (`PIX_0145`) | mittel | Zwei Sätze Anlauf für eine kleine Pointe. | „Die Katze auf der Statue schaut nach links. Da ist nichts. Sie blufft.“ / „Sie schaut nach links. Ich schaue nicht hin. Den Gefallen tu ich ihr nicht.“ |
+| 2 Dorfplatz, Ansehen | Steckbrief: „Lücke im Lebenslauf“ (`MAX_0190`) | zündet nicht | Büro-Metapher, die ein Fünfzehnjähriger nicht sagt. | „Gesucht seit zwanzig Jahren. Finden wollte ihn offenbar keiner.“ / „In meinem Zeugnis stand wenigstens noch ‚stört den Unterricht‘.“ |
+| 2 Dorfplatz, Ansehen | Luftschloss: Empfang (`0220`) | mittel | Der Empfang-Gag ist nach dem Prolog verbraucht. | „Ein Schloss auf einer Wolke. Irgendwer zahlt dafür Miete, und ich will wissen, an wen.“ / „Da oben wohnt jemand mit Aussicht und ohne Nachbarn. Ich bin neidisch.“ |
+| 2 Dorfplatz, Ansehen | Pixel und die Wolken (`0230`, `0235`), „Ringe bitte nicht ins Feuer werfen“ (`0245`), Kokosnüsse (`0250`, `0255`), „Kein Zutritt für Ringträger mit Begleitung“ (`0265`) | zündet | Die Schilder tragen die Anspielung, niemand muss sie erklären. | |
+| 2 Dorfplatz, Ansehen | „Ein Ring, sie alle zu … nein, danke.“ (`0240`) | mittel | Halbes Zitat ohne eigene Idee. Das Schild darunter (`0245`) macht denselben Witz besser. | „‚Einer für alles. Ausverkauf.‘ Wenn der Ring für alles im Angebot ist, stimmt was nicht mit ihm.“ / „Einer für alles. Mein Ladekabel behauptet das auch.“ |
+| 2 Dorfplatz, Ansehen | „reingehen und mit jemandem reden. Gruselig.“ (`0280`), „für Durchgefallene“ (`0290`) | zündet | | |
+| 2 Dorfplatz, Ansehen | „Gleis neundreiviertel ist woanders.“ (`0295`) | mittel | Reines Zitat, „Gut zu wissen.“ ist keine Pointe. | „Darunter in Kreide: ‚Eulen bitte hinten anstellen.‘“ / „… ‚Kein Durchgang durch die Wand. Wir haben es probiert.‘“ |
+| 2 Dorfplatz, Ansehen | Häuser (`0310`, `0315`) | mittel | Beschreibung mit angehängter Meinung. | „Runde Häuser, schiefe Dächer. Hier hat noch nie jemand eine Wasserwaage besessen.“ / „Der Rauch kommt in Herzform. Der Schornstein daneben macht einen Totenkopf. Nachbarn.“ |
+| 2 Dorfplatz, Ansehen | „Ich sag ja nur.“ (`0325`), „Ich lasse sie hochhalten. Von dir.“ (`0340`) | zündet | | |
+| 2 Dorfplatz, Ansehen | Bohnenranke: „Eine Treppe hätte es ehrlich gesagt auch getan.“ (`0330`) | mittel | Füllwort, sonst in Ordnung. | „Eine Bohnenranke bis in die Wolken. Für so was gibt es Aufzüge.“ / Ohne „ehrlich gesagt“. |
+| 2 Dorfplatz, Nehmen | „Das ist kein Diebstahl, das ist Teilen.“ (`0350`) | mittel | Die Bauform „kein X, das ist Y“ kommt in Welt 1 siebenmal. | „Den leih ich mir aus. Der Brunnen hat genickt.“ / „Den leih ich mir. In Abenteuern heißt das Sammeln.“ |
+| 2 Dorfplatz | Premium-Wasser (`0360`, `0370`), Qualitätskontrolle (`0400`), „als hätte sie Meinungen“ (`0430`) | zündet | | |
+| 2 Dorfplatz, Gespräche | „Der Bäcker ist seitdem ein Brot. Ein gutes Brot, aber sehr still.“ (`0522`) | zündet | Eine der zehn besten Zeilen des Spiels. | |
+| 2 Dorfplatz, Gespräche | Kartons (`0542`), „Dann diene ich dem Ei.“ (`0600`, `0606`) | zündet | | |
+| 2 Dorfplatz, Brunnen | „Keine Karten. Keine Pilze. Kein Vertrauen.“ (`0710`), Pizza mit Ananas, „Bitte nicht weitersagen“ (`0750` bis `0780`), Pixel redet doppelt (`0810`) | zündet | Der Wunschbrunnen ist eine runde kleine Nummer mit Folgen. | |
+| 2 Dorfplatz, Brunnen | „Das ist ziemlich genau das Gegenteil von dem, was ich mir gewünscht hab.“ (`0820`) | mittel | Max erklärt, was man gerade gehört hat. | „Ich nehm den Wunsch zurück. Ich nehm alle Wünsche zurück.“ / „Brunnen? Ich hätte da eine Reklamation.“ |
+| 2 Dorfplatz, Märchen | „krieg ich Gemüse“ (`0860`), Zimmerpalme (`0870`), „Ich hole Luft.“ (`0880`), Rotkäppchen „Da wächst du schon noch rein.“ (`0930`), „Sofa mit Hörnern“ (`0950`), Zahnarztrechnung (`0980`) | zündet | Märchen werden kurz gestreift und nicht nacherzählt. | |
+| 2 Dorfplatz, Toadi | „gut in Bio, ungefähr eine Stunde lang“ (`1110`), Glasfaser (`1160`), „Bohn-O-Mat“ (`1170`), „in einem anderen Schloss. Das sage ich immer.“ (`1200`), Zuruf (`1330`) | zündet | „Bohn-O-Mat“ verbindet Opa und die Welt. | |
+| 3 Taverne | Gerhard das Schwert (`W1_TAV_HUM_0010` bis `0030`), „Der Vulkan hört zu.“ (`GOL_0070`) | zündet | Humbert hat sofort eine Stimme. | |
+| 3 Taverne, Ansehen | „Ich nenne das Abendessen.“ (`0120`), Türsteher mit Schleife (`0140`), Pixel verliebt (`0150`), Huhn (`0180`), „Gerhard, Birgit, Gerhard der Zweite“ (`0210`, `0220`), „Hauswein noch röter“ (`0270`), Vielsaft-Limo (`0290`) | zündet | | |
+| 3 Taverne, Ansehen | Tresen: „keine davon will ich hören“ (`0110`) | mittel | Gleiche Form wie der Fisch im Prolog. | „Jeder Fleck hat eine Geschichte. Der große da hat eine Fortsetzung.“ / „Der Tresen klebt. Mein Ärmel bleibt hier.“ |
+| 3 Taverne, Ansehen | Kamin: „genau deshalb guck ich lieber weg“ (`0200`) | mittel | Ausweichen als Pointe, zum fünften Mal. | „Ein Kaminfeuer. Zu Hause läuft das als Zehn-Stunden-Video.“ / „Echtes Feuer. Ohne Ladebalken.“ |
+| 3 Taverne, Ansehen | „Der Becher sammelt trotzdem“ (`0240`) | mittel | Wie „Die Lampe sammelt“ im Treppenhaus. | „Eine Laute mit Becher, kein Barde. Im Becher liegt ein Knopf. Jemand war ehrlich.“ / „Der Barde ist weg. Die Laute wirkt erleichtert.“ |
+| 3 Taverne, Pixel | „Meine Nase lügt nie. Sie interpretiert.“ (`0340`), „Handy bei einem Prozent“ (`0360`), „enttäuschter Geruch“ (`0380`), „So hat mich noch nie jemand poliert.“ (`0390`), Gollo „Wir sind uns ähnlich.“ (`0410`) | zündet | | |
+| 3 Taverne, Gespräche | „Also der Topf.“ (`0520`), „Klaus-Dieter rostet aus Prinzip.“ (`0540`), „Und du nennst dein Handy nicht beim Vornamen?“ (`0560`), „wenn die Rüben friedlich sind“ (`0582`), Barde und Haargel (`0630`, `0632`) | zündet | Humberts Namen-Tick wird gesteigert und nicht nur wiederholt. | |
+| 3 Taverne, Gollo | „Mein Ausverkaufsartikel“ (`0720`), „Er flüstert. Meistens Preise.“ (`0722`), „Er hat kein Auge, aber er guckt.“ (`1650`) | zündet | Die Vorlage ist klar, die Pointen sind eigene. | |
+| 3 Taverne, Minka | Pixel umgarnt Minka (`0950`, `0970`) | zündet | | |
+| 3 Taverne, Minka | „Ich habe einen Charme, der anderer Leute Hausaufgaben erledigt.“ (`1000`) | mittel | Schiefes Bild, der Satz davor ist die Pointe. | Zweite Sprechblase streichen. / „Sie hält die Kokosnüsse für Pferde. Ich habe nicht widersprochen. So fängt Liebe an.“ |
+| 3 Taverne, Rätselspiel | „Hände! … Das zählt!“, „Barbarisch. Aber zielführend.“, „Ich habe verloren. Endlich.“ (`1120` bis `1210`), „drei Staffeln“ (`1230`) | zündet | Rätsel und Gag sind dasselbe. So soll es sein. | |
+| 3 Taverne | Humberts Etikett, „Macht. Und nach Gruyère.“ (`1250` bis `1270`), Elfen und Reservierungen (`1280`), „In Serien braucht man irgendwann alles.“ (`1330`), Hilde (`1470`), Zurufe (`1620`, `1630`) | zündet | | |
+| 3 Taverne, Nehmen | Ei: „und ich ehrlich gesagt auch, innerlich“ (`1430`) | mittel | Zwei Füllwörter bremsen. | „Ein Ei. Das Huhn protestiert leise. Ich auch.“ / „Ein Ei. Das Huhn merkt sich mein Gesicht.“ |
+| 3 Taverne, Benutzen | Laute klingt wie Handy in der Tasche (`1560`) | mittel | Der Vergleich ist lang und landet nicht. | „Ich hab einmal geschrammelt. Das Huhn ist gegangen.“ / „Ein Akkord. Der Becher bleibt leer. Verstehe.“ |
+| 4 Schmiede, Ansehen | Pixel misst die Wärme (`W1_SCHM_PIX_0020`, `0025`), Amboss (`0030`, `0035`), „Brutzelbart“ und „Tiefgang“ (`0045`), Schwert wie Kaugummi (`0050`), Rivalen (`0060`, `0065`), „der seine Ziege nicht mehr liebt“ (`0070`, `0075`) | zündet | | |
+| 4 Schmiede, Ansehen | „keine beleidigte Esse“ (`0015`) | mittel | „Beleidigt“ war schon Lampe, Stein und Sofa. | „Die Glut flackert, wenn ich atme. Ich atme jetzt zur Seite.“ / „Sie flackert, wenn ich atme. Wir haben eine Abmachung.“ |
+| 4 Schmiede, Ansehen | Glöckchen (`0055`) | mittel | Verdoppelt sich selbst, ohne Dreh. | „Das Glöckchen bimmelt, wenn sie kaut. Der Schmied zuckt jedes Mal.“ / „Es bimmelt im Takt. Die Ziege hat Rhythmus und weiß es.“ |
+| 4 Schmiede, Ansehen | Krug: „Das kenn ich irgendwoher.“ (`0085`) | mittel | Selbstvergleich, in Welt 1 zum vierten Mal. | „Er klingt hohl. Der Krug wartet noch auf seine Aufgabe.“ (legt die Lösung) / Letzten Satz streichen. |
+| 4 Schmiede, Gespräche | „Nur nicht die Hoffnung“ (`SCH_0100`), „Tragödie in Blech“ (`0130`), „Sie darf sogar wohnen.“ (`0140`), „Das ist Marktwirtschaft.“ (`0220`), „Mit meinem.“ (`0222`), „Wie Schulden.“ (`0240`), „Kurt war ein Missverständnis.“ (`0780`), Denkmal aus Blech (`0280`), „Geh mit Gott. Oder mit der Ziege.“ (`0320`) | zündet | Der Schmied ist die traurig-komischste Figur der Welt. | |
+| 4 Schmiede, Gespräche | Wegschicken (`0221`, `0222`) und Wegjagen (`0750`, `0760`) | mittel | Zweimal fast dieselbe Frage mit zwei verschiedenen Antworten. | Eine der beiden Optionen streichen. / `0750` umfragen: „Und wenn du sie verkaufst?“, Antwort bleibt. |
+| 4 Schmiede | Melken (`0440`), Ziegisch-Schimpfwörter (`0470`), „Vor allem die bequemen.“ (`0490`), „Ich bin eh schon kurz davor.“ (`0730`), Zurufe (`0610`, `0620`) | zündet | | |
+| 4 Schmiede, Benutzen | „Brandblasen, und zwar im Kopf“ (`0120`), „nur im Kopf“ (`0510`) | mittel | Zweimal „im Kopf“ im selben Raum. | `0120`: „Zu heiß. Meine Augenbrauen sind dagegen.“ / `0510`: „Pfannen kann man nicht melken. Die Ziege guckt, als hätte sie das gehört.“ |
+| 5 Zauberstab-Laden | „Schuhladen für sehr dünne Leute“ (`W1_STAB_MAX_0010`), „Das ganze Sortiment.“ (`0030`), Zahnstocher (`0040`), Kerbe (`0065`), „er hat Speck“ (`PIX_0075`), Fliege als Kunde (`0085`), Monokel (`0090`), „Leer. Aber sehr schön leer.“ (`0100`) | zündet | Ein Laden mit einem einzigen Stab ist die Pointe, alles andere zahlt darauf ein. | |
+| 5 Zauberstab-Laden | „Der Löffel hat sich dazu noch nicht geäußert.“ (`0222`), Honigfinger (`0240`), „Es ist Holz.“ (`0760`), „Ohne Schachteln ist es ein Flur.“ (`0260`), „leere Schachtel mit Würde“ (`0780`), Sortierende Socke (`0280`, `0282`) | zündet | | |
+| 5 Zauberstab-Laden | Blutstropfen (`0420`), „bloß vermessen“ (`0430`), „Honig, Käse, Schicksal.“ (`0530`), „Klebt. Ich nenne das eine Bindung.“ (`0550`), „Zwei davon sind haltbar.“ (`0555`), Socke „Edel“, „Unbezahlbar“ (`0570`, `0575`), „Der weint dann bestimmt.“ (`0600`), „Kunde oder Verirrter“ (`0710`) | zündet | | |
+| 5 Zauberstab-Laden | Leiter „mehr Talent als ich“ (`0025`), Zahnstocher „mehr Selbstbewusstsein, als ich habe“ (`0045`), Socke „Das macht sonst eigentlich keiner.“ (`0580`) | mittel | Max macht sich dreimal im selben Raum klein. Einmal ist Figur, dreimal ist Masche. | `0025`: „Sie rollt ohne mich weiter. Sie kennt den Weg.“ / `0045`: „‚Für Zahnfeen und Präzisionszauber.‘ Der Zahnstocher hat einen Lebenslauf.“ / `0580` behalten, das ist die beste der drei. |
+| 6 Hoggelwarz | „Fellpflege und keine Einladung“ (`W1_HOGG_PIX_0020`), „Ein Stab, ein Löffel, ein Schicksal.“ (`ALW_0060`), Kessel (`0130`), „Magie oder Marketing“ (`0140`), „mit mehr Gefühl“ (`0150`), Socke in Rente (`0190`), „Geschichte. Und zwar frittierte.“ (`0220`), „Zu spät.“ (`0230`) | zündet | | |
+| 6 Hoggelwarz | Schulbank und Kaugummi (`0110`), Fenster „als wäre gerade Montag“ (`0160`) | mittel | Zweimal „in jeder Welt gleich“ nebeneinander, dazu wieder Montag. | `0110`: „Schiefe Schulbänke. In eine hat jemand geritzt: ‚Alwin riecht nach Pilz.‘“ / `0160`: „Hohe Fenster. Draußen ist Wetter, drinnen ist Stundenplan.“ |
+| 6 Hoggelwarz, Brauen | „Wie Teig.“ (`0340`), „Ohne Pilz ist es Frühstück, mit Pilz ist es Bildung.“ (`0342`), Schleim-Reim (`0980` bis `0987`), „Der Besen glaubt es keinem.“ (`1000`), „neun davon“ (`0530`), „Das wäre eine Quiche!“ (`0550`), „Wähle weise. Oder schnell.“ (`0580`) | zündet | Der Unterricht ist die witzigste Rätselstrecke der Welt. | |
+| 6 Hoggelwarz | „Die Milch ist in einem anderen Schloss.“ (`0360`) | mittel | Derselbe Satz kommt bei Toadi (`W1_DORF_TOA_1200`) und als Titel von Szene 8. Bei Alwin passt er nicht zur Figur. | „Milch gibt es im ganzen Reich nicht mehr. Der Lord trinkt seinen Kaffee jetzt schwarz. Daher die Laune.“ / „Milch? Die letzte Kuh hat gekündigt.“ |
+| 6 Hoggelwarz, Pixel | „Erfolg riecht nach Meer“ (`0670`), „Interpretiert.“ (`0780`) | zündet | | |
+| 6 Hoggelwarz, Pixel | „Das ist keine Unsicherheit, das ist Stil.“ (`0660`), „Instrument, und kein Werkzeug“ (`0700`) | mittel | Zweimal die Bauform „kein X, sondern Y“ in fünf Zeilen. | `0660`: „Ich lege mich nicht fest. Das machen nur Hunde.“ / `0700`: „Zwei Flaschen. Danach nimmt meine Nase Urlaub.“ |
+| 6 Hoggelwarz | „Ich bin ein Pilz. … bodenständig.“ (`0720`), Toadi „Familie?“ (`0730`), Foto ohne Hände (`0740`), „Meistens nach oben.“ (`0750`), Zeugnis „Bosheit: befriedigend“, „Mo-Knuddel“ (`0830`, `0840`), „herausragend böse. Mit Sternchen.“ (`0890`), Zuruf (`0920`) | zündet | Das Zeugnis macht aus dem Gegner eine Figur. | |
+| 6 Hoggelwarz, Inventar | Leuchttrank und Handy-Akku (`0810`) | mittel | Vierter Akku-Witz. | „Ein Trank, der leuchtet. Trinken würde ich ihn trotzdem nicht. Dann leuchte ich.“ / „Er leuchtet. Pixel starrt rein wie in ein Aquarium.“ |
+| 7 Troll-Brücke, Ansehen | „Platz für einen Troll und seine Hobbys“ (`W1_BRUE_MAX_0010`), Strichliste (`0015`), Fisch taucht ab (`0025`), „mehr Paragrafen als mein Handyvertrag“ (`0030`), Paragraf zwölf (`0035`), „Holz, Farbe und Pedanterie“ (`PIX_0080`) | zündet | Die Satzung ist Bühne, Rätsel und Witz zugleich. | |
+| 7 Troll-Brücke, Ansehen | Heimliche Musicals (`0090`, `0095`), „Mehr Gefühl. Weniger Brücke.“ (`0105`), „zweite Karriere“ (`PIX_0160`), Paragraf 9 für Katzen (`WAL_0180`) | zündet | Waldemar ist nach vier Objekten eine ganze Figur. | |
+| 7 Troll-Brücke | Milchwerbung im Grammophon, „Er trägt Hut und riecht nach Lötzinn.“ (`0110` bis `0130`) | zündet | Der Faden zu Opas Milch läuft leise mit. | |
+| 7 Troll-Brücke | „Ich dachte echt, wenigstens hier wäre man davor sicher.“ (`0120`) | mittel | Reaktion ohne Dreh, Pixel hat danach die Pointe. | „Werbung auf einem Grammophon. Und ich kann sie nicht mal überspringen.“ / „Sogar hier. Fehlt nur noch der Zähler mit den fünf Sekunden.“ |
+| 7 Troll-Brücke, Ansehen | Blume: „der ist ein Romantiker“ (`0145`) | mittel | Max sagt an, was das Bild zeigt. | „Ein Blatt in Herzform. Drumherum ist alles gestutzt. Die eine nicht.“ / „… Dafür gibt es bestimmt auch einen Paragrafen.“ |
+| 7 Troll-Brücke, Gespräch | „Regel zwei: siehe Regel eins.“ (`0220`), „Sehr höflich, aber sehr breit.“ (`0222`), „Ohne Satzung wäre ich nur ein großer Mann unter einer Brücke.“ (`1250`), Gefühle anmelden und ablehnen (`0266`), „Ich sinke wie ein Paragraf.“ (`0280`), „Die Versammlung bin ich. Ich bin nie beschlussfähig.“ (`1270`), „dann bitte mit Applaus“ (`1290`) | zündet | Bester Dialog der Welt. Jede Antwort ist komisch und traurig. | |
+| 7 Troll-Brücke, Rätsel 3 | Pixel als Ziege: „Nein. Nein. … Gut.“, „Katze in einem Teppich“, „Zugelassen. Mit Bauchschmerzen.“ (`0410` bis `0500`) | zündet | Demütigung als Rätsellösung, Pixel bleibt in der Rolle. | |
+| 7 Troll-Brücke, Rätsel 4b | Ziegisch: „Friss das Buch, der Troll ist fetter!“, „Das ist eine Mittagspause!“, „Lieferziegisch“, „das ist privat“ (`0660` bis `0810`) | zündet | Der Fehlversuch ist hier die Belohnung. | |
+| 7 Troll-Brücke, Rätsel 4c | Fußbad: „Wasser im Sinne der Satzung“, „Fußbad. Zählt.“, Pixels Urlaubsblick (`0950` bis `0990`), „Ich hasse Fortsetzungen.“ (`1030`), „vorsorglich angehalten“ (`1230`) | zündet | Lösung aus dem Wortlaut. Fair und witzig. | |
+| 7 Troll-Brücke | „Ich glaube, er ist glücklich.“ (`1045`) | mittel | Gefühl wird benannt. | „Er planscht und singt. Die Fliege liegt neben dem Eimer.“ / „Er singt leise. Paragraf acht schaut gerade weg.“ |
+| 7 Troll-Brücke, Zurufe | Rücken (`1110`), heimlich singen (`1120`), Wartezimmer (`1130`) | zündet | | |
+| 8 Wasserschloss | „Ich hab sie doch gar nicht gesucht.“ / „Das sagt man so!“ (`W1_WASS_TOA_0020` bis `0040`), „Er hat das geübt.“ (`PIX_0050`) | zündet | Der Dauergag bekommt hier seinen Boden. | |
+| 8 Wasserschloss | „Zwei Zimmer, Seeblick, feucht.“ (`0060`), „Fische sind Vormieter.“ (`0065`), Kartons „Kronen“, „Kronen, Ersatz“, „Kram“ (`0070`), „Prinzessin, Notfall“ (`0075`) | zündet | | |
+| 8 Wasserschloss, Pixel | „Grausamkeit mit Klebeband“ (`0080`), Staubsauger (`0085`), Schwan (`0140`), Schilf „Das war ich.“ (`0155`), Zuruf (`0170`) | zündet | | |
+| 8 Wasserschloss | Schwan: „vielleicht bin ich wirklich an irgendwas schuld“ (`0120`, `0125`), „ein Kater im Teppich reicht“ (`0100`), Toadi „Oder ich ihr!“ (`0160`) | zündet | | |
+| 8 Wasserschloss | Kartons benutzen (`0090`), Teppich-Beule (`0105`), Ruderboot (`0110`), „Seerose I … will ich lieber nicht wissen“ (`0115`) | mittel | Dreimal im selben Raum „ich frag lieber nicht“ (`0075`, `0105`, `0115`). Einmal reicht. | `0105`: „Der Teppich hat eine Beule. Die Beule schnarcht.“ / `0110`: „Ein Ruderboot ohne Ruder. Die Ruder hat sie eingepackt. Die Frau denkt mit.“ / `0115`: „Die Seerose I liegt da hinten. Unter Wasser. Mit Seerosen drauf.“ |
+| 9 Zauberwald, Ansehen | Riesenpilze „gewarnt oder überredet“ (`W1_WALD_MAX_0010`), „jetzt hab ich Freunde“ (`0025`), „nicht ‚eine Lichterkette‘“ (`0030`), „Chat, in dem keiner zuerst schreibt“ (`0050`), „Vasen, nicht in Nasen“ (`PIX_0060`), Pakt (`0065`) | zündet | | |
+| 9 Zauberwald, Ansehen | Kisten „Oma“, „Ziege, Ersatz“, „Wolf, Rücksendung“ (`0080`, `0085`), „Bei Wolfsbiss zweimal auftragen.“ (`0095`), „Tomate, Zucker und Lüge“ (`0105`), Mitternachts-Garantie (`0125`), Reste um Mitternacht (`0130`), Röntgenbild (`0135`), „Mehr Pausen!“ (`0155`), Smiley bei „Trinkgeld“ (`0165`) | zündet | Märchen als Lieferdienst ist die beste Einzelidee der Welt. | |
+| 9 Zauberwald, Ansehen | Glühwürmchen und Router (`0140`, `0145`), Baum „Wir sind quasi Kollegen.“ (`0175`) | mittel | Router zum dritten Mal, dazu zwei Selbstvergleiche. | `0140`: „Glühwürmchen. Zwanzig kleine Standby-Lämpchen.“ / `0145`: „Eins blinkt anders. Die anderen halten Abstand.“ / `0175`: „Ein Baum mit Gesicht. Er sieht genervt aus. An seinem Ast hängt ein Paketzettel.“ |
+| 9 Zauberwald, Ansehen | Streik: „Ich dachte immer, Goblins arbeiten sowieso nicht.“ (`0150`), Rotkäppchen „die Zeiten ändern sich eben“ (`0160`) | mittel | Allgemeinplatz als Schluss. | `0150`: „Die Goblins streiken. Wofür, steht nicht drauf. Wogegen auch nicht.“ / `0160`: „Der Korb ist jetzt ein Karren. Die Oma ist dieselbe.“ |
+| 9 Zauberwald, Rotkäppchen | „Lieferdienst-Reflex“ (`0190`), „kriegt am Ende eine Moral“ (`0730`), „Omas sind am schwersten zu verpacken.“ (`0220`), „Die zählen in Fackeln.“ (`0240`, `0242`), Wolf als Kunde (`0260`), „Der Wolf gießt ihre Blumen.“ (`0780`), „Sie sind zugegangen. Fester.“ (`0280`), „Sehr tief, sehr falsch, sehr schön.“ (`0282`), „Fünf Körbe!“ (`0300`) | zündet | Rotkäppchen hat in zwölf Zeilen mehr Profil als manche Hauptfigur. | |
+| 9 Zauberwald, Rätsel 7 | „Du singst wie ein Modem“ (`0430`), Schuhe aus Begeisterung (`0440`), „Also niemand. Gut.“ (`0470`, `0480`), Musical-Nummer mit „WAAASSEEER!“ (`0490`, `0500`), „Das war die Natur. Durch mich.“ (`0540`), „gute Beziehungen zum Abspann“ (`0570`), „Ich nehme auch eine Fackel.“ (`0580`), „oder es ist Fernsehen“ (`0590`) | zündet | Höhepunkt der Welt. Waldemars Angst vor dem Wasser wird zum Schlusston. | |
+| 9 Zauberwald, Rätsel 7 | „ehrlich gesagt hab ich das verdient“ (`0420`), „mehr Reaktion, als ich je auf irgendwas gekriegt hab“ (`0560`) | mittel | Max macht sich klein, wo Waldemar die Szene gehört. | `0420`: „La. … Nein. Eine Rose hat sich weggedreht.“ / `0560`: „Die Rosen sind auf, Rotkäppchen klatscht, Toadi weint. Fünf Körbe, Waldemar.“ |
+| 9 Zauberwald | „Das ist kein Busch mehr, das ist eine Waffe.“ (`0075`) | mittel | Bauform, siehe Abschnitt E. | „Die Luft ist gelb. Ich halte die Luft an und sehe trotzdem gelb. Der Busch hat gewonnen.“ / Letzten Satz streichen. |
+| 10 Luftschloss | Physiklehrer (`W1_LUFT_MAX_0010`), „Mit jemand meine ich dich.“ (`PIX_0020`), Maklerin „Nächster!“ (`0030`), „Zwei Zimmer, Wolkenblick, sehr luftig.“ (`0050`), „Mausi“ (`PIX_0070`), Geländer ohne Prüfer (`0090`), Spiegel „Sehr lebendig. Sehr mutig.“ (`0100` bis `0130`), „Sofakissen mit Höhenangst“ (`0145`), „Kleingedrucktes“ und „Kaution“ (`0150`, `0155`) | zündet | | |
+| 10 Luftschloss | Torbogen (`0055`), „Kunst, und zwar mit Hintergedanken“ (`0065`), Wolken „Ich frag lieber nicht nach“ (`0140`), „Entführt sieht ehrlich gesagt anders aus.“ (`0160`) | mittel | Vier Zeilen ohne eigenen Einfall zwischen sehr guten. | `0065`: „Ein Kreideherz und ein Strichmännchen ohne Nase. Das Männchen kenn ich vom Steckbrief.“ (hilft dem Rätsel) / `0140`: „Wolken, auf denen man laufen kann. Ich hüpf lieber nicht. Wegen der Leute unten.“ / `0160`: ohne „ehrlich gesagt“. |
+| 10 Luftschloss, Zeldina | „Ich suche eine Wohnung, keinen Retter.“ (`0220`), „entführt hat mich nur die Nebenkostenabrechnung“ (`0840`), „sehr gut im Suchen und sehr schlecht im Finden“ (`0240`), Rohre (`0860`), „Dunkle Lords tragen Kisten umsonst.“ (`0260`), „und ich kenne Regen“ (`PIX_0300`), „Ja. … Trotzdem.“ (`0310`) | zündet | Die Wendung der Welt in sechs Zeilen. „Ja. … Trotzdem.“ ist der stärkste Max-Moment bis hier. | |
+| 10 Luftschloss, Rätsel 9 | „Feilschen kostet extra.“ (`0420`), „Das ist kein Blick. Das ist mein Gesicht.“ (`0460`), „motivierter Verkäufer“ (`0490`), Pixel sprachlos (`0510` bis `0530`), „Vermittelt.“ (`0550`), „braucht jemanden, der trägt“ (`0560`), „Finden mit Anlauf“ (`0640`) | zündet | Rätsel, Pointe und Figurenentwicklung fallen zusammen. | |
+| 10 Luftschloss, im Team | „Luft holen … vor der ganzen Schulklasse“ (`0880`), „groß, aber mit Festpreis“ (`0740`), „Er niest, ich räume auf.“ (`0742`), „Andeutungen. Das ist billiger als Meinungen.“ (`0900`), Zurufe (`0810`, `0820`) | zündet | | |
+| 11 Bergwerk, Ansehen | „Okay, Maschinen auch nicht.“ (`W1_BERG_MAX_0025`), „Pilze, Kaffee, Würde“ (`0035`), Kaffeemaschine streikt (`0050`, `0055`), „Resignation mit Filter“ (`PIX_0060`), Nachtmodus (`0070`), „Die Lampe ist aus, und das ist der ganze Streik.“ (`0110`), schläft im Stehen (`0120`), „Gewerkschaft der Katzen?“ (`0180`) | zündet | | |
+| 11 Bergwerk, Ansehen | „Montagmorgen, nur grüner“ (`0020`) | mittel | Schon wieder Montag (Prolog, Hoggelwarz). | „Drei Goblins, die nichts tun. Aber organisiert.“ / „Sieht aus wie meine Klasse beim Feueralarm, nur grüner.“ |
+| 11 Bergwerk, Ansehen | Fledermaus streikt mit (`0045`), Kaffeemaschine „Ich glaube, das ist Solidarität.“ (`0150`) | mittel | Zweimal derselbe Solidaritäts-Witz im Raum. | `0150`: „Sie zischt mich an. Verstanden: kein Kaffee.“ / „Sie zischt. Grimmzahn nickt ihr zu.“ |
+| 11 Bergwerk, Ansehen | Rune „irgendwie ein bisschen beleidigt“ (`0085`), „Ich glaube, sie freut sich auf Besuch.“ (`0095`), „Der Mann ist ein Optimist.“ (`0115`) | mittel | „Beleidigt“ zum fünften Mal. „Der Mann ist ein …“ stand schon bei Waldemar (`W1_BRUE_MAX_0155`). | `0085`: „Es klingt hohl. Von drinnen klopft keiner zurück. Gut so.“ / `0115`: „Er poliert im Streik seine Spitzhacke. Heimlich. Grimmzahn darf das nicht sehen.“ |
+| 11 Bergwerk, Gespräch | Daumen (`0320`, Auflösung `0520`), „Dunkelheit gehört zum Konzept“ (`0322`), „traditionell, nicht genau“ (`0340` bis `0360`), „Gewerkschafter, keine Mauer“ (`0380`), „Das hält die Mieter wach.“ (`ZEL_0410`), „aber leiser“ (`0420`) | zündet | | |
+| 11 Bergwerk, Gespräch | „Ein Goblin ohne Schlüssel ist nur ein grüner Mann im Dunkeln.“ (`0840`) | mittel | Fast wortgleich mit Waldemar (`W1_BRUE_WAL_1250`: „nur ein großer Mann unter einer Brücke“). | „Ein Goblin ohne Schlüssel steht vor jeder Tür wie ein Kunde.“ / „Schlüssel. Viele. Am Ring. Es muss klimpern, wenn ich komme.“ |
+| 11 Bergwerk, Lösung | „Hell!“ / „Zu hell.“ (`0530`, `0540`), „Riecht nach … Sieg.“ (`0580`), Pixel verliert Respekt (`0590`), „keine Möwen“ (`0600`), Arbeitslied mit „Knuddel-Puddi“ (`0620` bis `0650`), „Das ist eine ganze Kindheit.“ (`0670`), „Trocken? Dann nehme ich ihn.“ (`0700`), „geschmacklich okay“ (`0710`), Zurufe (`0810`, `0820`) | zündet | Der Passwort-Teil kommt als Lied. Man merkt ihn sich, ohne es zu wollen. | |
+| 12 Turm, Keller | „Bildschirmschoner mit Aggressionen“ (`W1_TURM_MAX_0010`), „Den ich mir gerade ausdenke.“ (`GRI_0040`), „Autoplay für Besen“ (`0070`), „Etwas Haariges.“ (`0080`), „alter Meister mit Hut, der ‚Halt‘ ruft“ (`0095`), „Wache, mit Borsten“ (`0115`), „Die singen jetzt bezahlt.“ (`0135`) | zündet | | |
+| 12 Turm, Keller | Gerade Route: „Das kommt mir ziemlich bekannt vor.“ (`0050`), „Er hat einen Ohrwurm, und ich ahne, welchen.“ (`0055`) | mittel | Selbstvergleich, und die zweite Zeile bleibt unklar. | `0050`: „Rauf und runter, immer gleich. Der hat den sichersten Job im Turm.“ / `0055`: „Er pfeift dabei. Es ist das Goblin-Lied. Das hat sich rumgesprochen.“ |
+| 12 Turm, Rätsel 11 | „Es ist nicht die Würde.“ (`PIX_0150`), „Du wurdest gefegt, junger Mann. Wie Staub.“ (`0170`, `0180`), Winterfell (`0200` bis `0220`), „Ich beneide sie ein wenig.“ (`0250`), Besen mit Schal (`0315`, `0325`), „Ich bin also kein Kram. Glaub ich.“ (`0310`) | zündet | Pixel opfert etwas und jammert auf hohem Niveau. Genau seine Rolle. | |
+| 13 Abstellkammern | „Das ist alles noch gut.“ (`W1_SMAU_SMA_0010`), „Das ist noch schlimmer.“ (`0030`), „Ich. Vorsichtshalber.“ (`ZEL_0050`), „Es ist eine Katastrophe. Ich liebe sie.“ (`GRI_0060`) | zündet | | |
+| 13 Abstellkammern, Ansehen | „Größer als Ostern. Kleiner als mein Problem.“ (`0080`), Pixel: „Drei Minuten. Weich.“ (`0090`, `0095`), Sitzsack (`0100`), „Tierheim voller Welpen“ (`0120`), „Es ist nicht wie neu, es ist wie alt.“ (`0125`), Okarina (`0140` bis `0150`), Schwert im Stein (`0160` bis `0170`), „Flohmarkt, auf den nie jemand gekommen ist“ (`0180`), „Keiner davon hat eine Ahnung, was er hier tut.“ (`0185`), „Urlaub und einen Container“ (`0210`) | zündet | Pixels Eier-Plan legt nebenbei das Finale. | |
+| 13 Abstellkammern, Ansehen | Kronleuchter „wie ich ein neues Handy“ (`0110`), „Parfüm des Sieges“ (`0135`) | mittel | Handy-Vergleich, und „Sieg“ riecht schon bei Grimmzahn (`W1_BERG_GRI_0580`). | `0110`: „Ein schiefer Kronleuchter. Zeldina misst schon die Decke aus.“ / `0135`: „Rauch und Ruß. Grimmzahn hat auch gerochen. Er hat Tränen in den Augen.“ |
+| 13 Abstellkammern, Smaugi | „dreihundert Teekannen“ (`0320`, `0840`), „Wirklich wirklich.“ (`0340`), „nur Krallen dafür“ (`0360`), „Den Fall! Irgendeinen Fall!“ (`0380`), Pixels Olive (`0870`), „Doch, nimm. Nein. Ach.“ (`0400`) | zündet | | |
+| 13 Abstellkammern, Rätsel 12 | „Macht dich das glücklich?“ (`0510`), „Du heißt Ingrid.“ (`0530`), „Ist das erlaubt?“ (`0540`), „zufrieden. Für einen Goblin ist das dasselbe.“ (`0570`), „Über den Esstisch, den ich noch nicht habe.“ (`0580`), „Ich sehe Boden.“ (`0610`), „Es war nie meins.“ (`0620`), „Ich habe Kummer.“ (`0680`) | zündet | Aufräumen als Rätsel mit Herz. `0620` ist der zweite leise Moment der Welt und sitzt. | |
+| 13 Abstellkammern, Tür | „Das macht sonst nur die Autokorrektur.“ (`0740`), „Das ist ja nicht mal ein Name.“ (`0750`), „Richtig. Mama?“ (`0770`), „Die Tür hat einen Mutterkomplex. Ich nehme ihn trotzdem.“ (`0790`), „Ordnung durch Terror“ (`0810`) | zündet | | |
+| 14 Thronsaal | „Das hab ich aber schon.“ (`W1_THRO_MAX_0020`), „Wegen der Wohnung.“ (`0040`), „Fotos! Vom Schlafzimmer!“ (`0050`), „Das ist kein fairer Kampf. Für ihn.“ (`0060`) | zündet | Der Boss wird in vier Zeilen vom Schrecken zum Mieter. | |
+| 14 Thronsaal, Ansehen | „Für meinen Mo“ (`0110`), „Heuschnupfen, oder sehr viele Gefühle“ (`0120`), Monogramme für Tränen (`0125`), „Gute Besserung. Deine Maklerin.“ (`0135`), Lerntagebuch „Heute böse sein.“ (`0140`, `0145`), „Morgen.“ (`0155`), Buntglas (`0165`), „Dunkler Schnupfen. Mit Thron.“ (`0180`) | zündet | | |
+| 14 Thronsaal, Ansehen | „bestimmt sehr teuer in der Reinigung“ (`0160`) | mittel | Standard-Nachsatz. | „Buntglas mit Mondlicht. Draußen ist Mittag. Der Mond ist gemietet.“ / „Sehr dramatisch. Der Mond hängt an einem Haken.“ |
+| 14 Thronsaal, Duell | Käse-Fluch (`0290` bis `0340`), „Meine Loyalität ist unerschütterlich, aber sie hat Hunger.“ (`0330`), „Ich nenne das eine Bindung.“ (`0310`, Echo vom Stabmacher), „Eine Wand. Und eine Tür, die ‚Mama‘ sagt.“ (`0370`) | zündet | Alle Fäden der Welt kommen an. | |
+| 14 Thronsaal, Duell | „Ich wollte nur, dass mich einer ernst nimmt. Einmal. Ohne zu niesen.“ (`0380`), „für Durchgefallene. … Ja, das bin ich.“ (`0400`), „Damit kann ich nur Käse.“ / „Ich auch. Aber ich hab Übung.“ (`0410`, `0420`) | zündet | Ernst und Witz im selben Atemzug. Bleibt. | |
+| 14 Thronsaal, Abschluss | „Alle dreihundert.“ (`0530`), Toadi: „Hoheit, du bist in diesem Schloss!“ (`0540`), „Endlich.“ (`0550`), „Streich es aus dem Protokoll“ (`0560`), „Dann bitte einen mit Essen.“ (`0610`), „Erstes Jahr, zweiter Anlauf.“ (`0630`), „und ich habe Toadi gesehen“ (`0710`) | zündet | Der Dauergag wird eingelöst. So muss ein Running Gag enden. | |
+| 15 Figurenwechsel | „Vier Pfoten, ein Gehirn und kein Inventar.“ (`W1_WECH_PIX_0020`), „Zurück zu dem mit den Taschen.“ (`0040`), „ohne mich irgendwie komisch gefühlt“ (`0060`), „Für das Maul und für die Würde.“ (`0070`), Senkel (`0090`), „ich lasse mich von ihnen kommentieren“ (`0110`) | zündet | Kurz genug für Zeilen, die man fünfzigmal hört. | |
+| 15b Inventar | „Dieser hier hat Eintopf gewählt.“ (`W1_INV_MAX_0020`), „die beste Form von Ziege“ (`0035`), „Ich bin Sonstiges.“ (`0040`), Klassenfoto (`0050`), „Kellner auf Glatteis“ (`0070`), „Das ist eine Waffe, junger Mann.“ (`0075`), „vorwurfsvoll. Die Ziege hat zugesehen.“ (`0090`), Pixel und die Milch (`0095`), Stern mit Hut (`0125`), „Trink mich“ (`0135`), lachende Tomate (`0150`), Paragraf drei fehlt (`0165`), Babysitter (`0170`) | zündet | | |
+| 15b Inventar | „Belohnung: ein warmes Wort. … Und warum rührt mich das?“ (`0055`) | mittel | Die erste Hälfte ist stark. Die Frage sagt dem Spieler, was er fühlen soll. | Zweiten Satz streichen. / „‚Belohnung: ein warmes Wort.‘ Unterschrieben hat keiner.“ |
+| 15b Inventar | Fondue „Ich frag lieber nicht, wie.“ (`0010`), Krug „bereit für ein Schicksal“ (`0080`), Leuchtpilz „muss nie geladen werden“ (`0110`), „Wir sind jetzt Freunde.“ (`0115`), „Tränke mit schlechtem Selbstbewusstsein“ (`0130`), „mehr, als ich in dem Alter geschafft hab“ (`0140`) | mittel | Sechs Wiederholungen von Formen aus den Räumen: nicht nachfragen, Akku, Freunde (`W1_WALD_MAX_0025`), Selbstbewusstsein (`W1_STAB_MAX_0045`), Selbstvergleich. | `0010`: „Es blubbert immer noch. In meiner Tasche. Die hat jetzt eine Betriebstemperatur.“ / `0080`: „Noch ohne Namensschild. Humbert darf ihn nicht sehen.“ / `0130`: „Probiergröße.“ / `0140`: „Das ging schneller als bei mir. Und ohne Stimmbruch.“ |
+| 15c Gespräch erschöpft | „Sie zieht mit Stil um.“ (`W1_ABS_ZEL_0010`), Paragraf neunzehn (`0030`), „Gerhard wird eifersüchtig.“ (`0060`), „Das ist pädagogisch.“ (`0070`), „Du wirst nicht vorbeikommen. An mir. Ich meine: an weiteren Antworten.“ (`0080`), „in einem anderen Gespräch“ (`0090`), „Einmal davon mit Hut!“ (`0100`), „Zehn Minuten oder gratis.“ (`0170`), „Das ist Gewerkschaft.“ (`0200`), Besichtigungstermin (`0230`) | zündet | Selbst die Abwimmel-Zeilen haben Figur. | |
+| 15c Gespräch erschöpft | Schmied: „Und wenn doch, hat es schon einen Namen.“ (`W1_ABS_SCH_0160`) | zündet nicht | Das ist Humberts Tick (`W1_ABS_HUM_0050`), der Schmied gibt nichts Namen. Sieht nach vertauschter Zeile aus. | „Mehr hab ich nicht. Frag die Ziege. Die weiß alles und sagt nichts.“ / „Mehr hab ich nicht. Nur noch Blech.“ |
+| 16 Hinweise | „einer davon fängt mit P an“ (`W1_HINT_PIX_0111`), „Ich bin ein Kater, kein Lösungsbuch.“ (`0230`), „Die dritte … bitte nicht.“ (`0320`), „Nicht Pizza. Ich sage das unter Schmerzen.“ (`0530`), „Ich hätte vier gesagt, und ich hätte gelogen.“ (`0632`), „Sag es der Tür. Sag es nie mir.“ (`1131`), „Und du kaufst mir eine Bürste.“ (`1132`) | zündet | Stufe 3 sagt immer klar, was zu tun ist, und bleibt trotzdem Pixel. | |
+
+Bilanz Welt 1: Grob gezählt 420 Gags, davon zünden rund 350. Zwei zünden nicht, der Rest ist Mittelfeld. Das ist eine sehr gute Quote. Die schwachen Zeilen sind fast alle Zweitzeilen beim Ansehen, und sie fallen in fünf Muster:
+
+- **Max macht sich klein.** Mindestens zwölfmal („mehr Talent als ich“, „Das kenn ich irgendwoher“, „seit der Grundschule“, „Das Gefühl kenne ich“). Einmal pro Raum ist Figur. Im Stab-Laden steht es dreimal.
+- **„Das ist kein X, das ist Y.“** Vierzehnmal in Welt 1, verteilt auf Max, Pixel, Waldemar und die Hinweise. Die drei besten behalten: Sofa mit Hörnern, „Das ist mein Gesicht“, „eine ganze Kindheit“.
+- **Handy, Akku, Empfang, Router.** Rund sechzehn Vergleiche. Die mit eigenem Bild tragen (App-Laden, Nachtmodus, Autoplay, Autokorrektur). Akku und Empfang sind nach dem Prolog durch.
+- **„Ich frag lieber nicht.“ und „Ich glaube, …“** als Schluss. Viermal und fünfzehnmal.
+- **Gleicher Satzbau bei zwei Figuren.** Waldemar und Grimmzahn („nur ein … Mann …“), Humbert und der Schmied („hat schon einen Namen“), Stabmacher und Max („Ich nenne das eine Bindung“, hier gewollt).
+
+Dauergags, die tragen: „in einem anderen Schloss“ (Toadi, mit Auflösung im Thronsaal), Humberts Namen, Waldemars Paragrafen, Pixels Ei „drei Minuten, weich“, die Maklerin, Opa-Vergleiche von Pixel.
+
+#### C Welt 2 (`docs/skript/welt-2.md`)
+
+| Szene | Gag (Zeile) | Urteil | Grund | Alternativen |
+| --- | --- | --- | --- | --- |
+| 1 Ankunft | Sand im Ladeanschluss (`W2_NIL_MAX_0010`), „weicher, als ich befürchtet hatte“ (`PIX_0020`), „Doku, bei der man nicht vorspulen kann“ (`0030`), Pixel wurde angebetet (`0040`), „Gras an den Pfoten“ (`0050`), „Blut ist dicker als Dosenlake“ (`0060`), „noch vor dem Handy“ (`0080`), „Die Ziege hat angefangen.“ (`0105`), Krokodil verneigt sich (`0110`, `0120`) | zündet | Bester Welteinstieg. Zwölf Zeilen, jede sitzt, und das Rätsel ist schon gelegt. | |
+| 2 Fähre | „Respekt mit Zähnen“ (`PIX_0215`), Kartenlesegerät (`0220`), „Kater und kein Sparschwein“ (`0225`), „Dieser Hut ist ein Hilfeschrei.“ (`0240`), „ohne Preiserhöhung“ (`FAE_0280`), „Dazwischen liegen Jahre, und das meine ich wörtlich.“ (`0300`), „Sie ist hier die Einzige mit Geduld.“ (`1040`) | zündet | Der Fährmann ist trocken, ohne es zu wissen. | |
+| 2 Fähre | Diener: „Wenn wir das schon machen, dann machen wir es richtig.“ (`0440`), „Zubehör eines Katers“ (`0450`), „Und du, Diener, setzt dich bitte nach hinten.“ (`0460`), „alt, Junge, aber nicht blind“ (`0490`), Erinnerungswert der Dose (`0500`), „nur ziemlich viele Meinungen“ (`0510`) | zündet | Rollentausch als Rätsellösung. Trägt die ganze Welt. | |
+| 2 Fähre | Fährmann: „ist mir ehrlich gesagt egal“ (`FAE_0260`) | mittel | „ehrlich gesagt“ ist Max' Füllwort und passt nicht zu einem viertausend Jahre alten Fährmann. | „Unter die Zunge oder in die Hand. Die Zunge ist mir lieber, dann redet keiner.“ / „… ist dem Fluss egal.“ |
+| 2 Fähre | „Und bei drei Prozent stirbt das Handy sowieso jeden Moment.“ (`0270`), „die brauch ich emotional“ (`0480`) | mittel | `0270` ist für den Sphinx-Baustein gebaut und klingt danach. „Drei Prozent“ fällt in Welt 2 dreizehnmal. | `0270`: „Ich hab einen Kaugummi und ein Handy. Das stirbt bei drei Prozent. Es hat drei Prozent.“ / `0480`: „Das Handy als Pfand? Das ist mein letzter Beweis, dass es mich gibt.“ |
+| 2 Fähre | „Das ist das ganze Problem, in einem Satz.“ (`0380`) | mittel | Sagt nur, dass es ein Satz war. | „Ich hab kein Geld, er will Geld. Wie zu Hause, nur mit Krokodil.“ / „Kein Geld, kein Boot. Der Fluss ist da altmodisch.“ |
+| 3 Nil-Delta, Ansehen | Hand im Korn und Geigen (`0610`, `0615`), „Dinge mit Kruste“ (`PIX_0620`), Sanduhr und Salto (`0635`), „Fahrplan oder Hausordnung“ (`0640`), „Fähre mit Kleingedrucktem“ (`0660`), „Krokodile mit Ambitionen“ (`0675`), „Ich nenne es Sturheit“ (`0700`), „Jetzt steht die Pyramide richtig, und ich steh falsch.“ (`0715`), „ein Dicker mit Streifenhose“ (`0725`), „rechts die Zukunft“ (`0730`) | zündet | | |
+| 3 Nil-Delta, Ansehen | Papyrus „leer wie mein Hausaufgabenheft im Mai“ (`0680`), Bauplan „so halte ich meine Hausaufgaben“ (`0710`), Sandweg „mehr, als ich von mir behaupten kann“ (`0735`) | mittel | Drei Selbstvergleiche auf einem Bildschirm, zwei davon mit Hausaufgaben. | `0680`: „Ein Blatt Papyrus. Leer. Das erste leere Blatt seit viertausend Jahren, und ich hab's.“ / `0710`: „Er hält den Plan verkehrt herum. Und zwar mit beiden Händen und voller Überzeugung.“ / `0735`: „Der Sand weiß, wohin er will. Nach rechts. Wie alle hier.“ |
+| 3 Nil-Delta, Steinmetz | „Der Plan hat immer recht.“ (`0750` bis `0770`), „verklage ich den Nil“ (`1070`), „für ehrwürdig zahlen die Leute extra“ (`1090`), „Die hat schon zwei Besucher erwischt.“ (`0830`) | zündet | | |
+| 4 Hermes | „Dringend und älter als ich!“ (`W2_NIL_HER_0910`), „Das ist noch innerhalb der Garantie.“ (`0930`), „Ich hoffe, das liegt an der Zustellung.“ (`0950`), „Weltherrschaft … oder Frühjahrsputz“ (`0960`), „Euer Startpass ist in einem anderen Büro.“ / „Eben!“ (`0970` bis `0990`) | zündet | Hermes ist Toadis Vetter und hat trotzdem einen eigenen Dreh. | |
+| 5 Zeitfähre | „bester Nahverkehr“ (`W2_FAHR_MAX_0010`), „die Jahre ziehen einen gern am Ärmel“ (`0030`), „Die Rechnung macht der Fluss“ (`0040`), Zeitreisen-Steigerung (`PIX_0070`), „Er findet dich okay.“ (`0080`), Johannisbeer-Experiment (`0090`), „womit man Salat beleidigt“ (`0100`), „Werkseinstellungen“ (`0170`), „kleinster Garten“ (`0180`), Moos als Schlafplatz (`0220`), „Nicht mal viertausend Jahre kriegen das Ding geladen.“ (`0240`), „Und Verwandtschaft.“ (`0300`) | zündet | Jede Verwandlung hat eine eigene Zeile. Das Rätselsystem erklärt sich durch Witze. | |
+| 5 Zeitfähre | Setzling „schneller, als ich je eine Serie durchgeschaut habe“ (`0150`), Öl „das kenn ich von mir“ (`0270`) | mittel | Schiefer Vergleich und Selbstvergleich. | `0150`: „Der Setzling wächst. Ich kann zugucken. Das ist die erste Pflanze, die bei mir überlebt.“ / `0270`: „Das Öl bleibt Öl. Kein Sanduhr-Symbol. Der Zeit ist es egal.“ |
+| 6 Olympia und Syrakus | „fast nach dem Mauszeiger suche“ (`W2_STOL_MAX_0010`), „Ausstellung von Dingen, die mir verwehrt bleiben“ (`PIX_0015`), Sardinen (`0030`), „Sport oder Politik“ (`0060`), „Held … oder Pfütze“ (`0065`), Sendeschluss (`W2_HAFS_PIX_0020`), acht Arme (`0035`), „ohne Zitrone“ (`0050`), „für alles einen Krug und für nichts einen Deckel“ (`0060`), Bahnhofsstimme (`0085`) | zündet | | |
+| 6 Olympia und Syrakus | Tintenfisch „ziemlich beleidigt“ (`HAFS_0040`) | mittel | „Beleidigt“ steht in Welt 2 neunmal. | „Ein Tintenfisch, klein und nass. Er guckt, als wüsste er, was ich vorhabe.“ / „Keine Sorge. Ich will nur deine Tinte. Das sagt man so.“ |
+| 7 Thronsaal | „kann sich nicht mal entscheiden, welche Hand er benutzt“ (`W2_THRO_MAX_0010`), Ramses: „Oder … etwa beides? Oh nein.“ (`0020`), „Auf MEINEM Kissen.“ (`0040`), „Das hab ich jetzt nicht gesagt.“ (`SCH_0050`) | zündet | Drei Figuren in vier Zeilen. | |
+| 7 Thronsaal, Ansehen | Gaming-Stuhl (`0110`), Startbildschirm (`0120`), „vom Tisch geschoben“ (`0125`), „guckt auf mich herab, obwohl sie unter mir sitzt“ (`0130`), „Das wird ein Krieg.“ (`0140`), halber Wedel (`0155`), „gerade wedeln“ (`0160`), „dieselbe Nachricht offen“ (`0180`), Sarkophag mit Schlafmaske (`0190`, `0200`), „weil ich in Worten sehr gut bin“ (`0220`), Ghettoblaster (`0230` bis `0250`), „Gucken, fliegen, nass werden“ (`0265`), „Grammatik, in der das Essen ein Mund ist“ (`0290`), „Gold in Scheibenform“ (`0330`), „Dann ist das entschieden.“ (`0340`) | zündet | | |
+| 7 Thronsaal, Ansehen | „Türsteher mit Fell“ (`0060`) | mittel | „Türsteher mit Schleife“ stand schon in der Taverne (`W1_TAV_MAX_0140`). | „Ein Pharao, der nur Bilder liest, und ein Kater, der Eintritt verlangt.“ / „… und ein Vorzimmer mit Krallen.“ |
+| 7 Thronsaal, Ansehen | „Emoji-Tastatur aus Stein“ (`0260`) und „Emoji-Menü aus Stein“ (`W2_HIER_MAX_0030`) | mittel | Derselbe Witz zweimal im selben Raum. | Eine der beiden ändern, etwa `0260`: „Säulen voller Zeichen. Wer hier einen Tippfehler macht, braucht einen Meißel.“ |
+| 7 Thronsaal, Ansehen | Schreiberpult „Das kenn ich aus meinem Hausaufgabenheft.“ (`0175`), Wedler „ehrlich gesagt“ (`0150`), Inschrift Zweitzeile (`0275`), „Wenigstens hat hier einer Musik dabei.“ (`0240`) | mittel | Hausaufgaben zum dritten Mal. `0275` wiederholt `0270` fast wörtlich. | `0175`: „Auf der Tafel steht ‚Wichtig‘, und darunter nichts. Seit elf Jahren.“ / `0275`: „Vier Felder, eine Tabelle. Wer das gemeißelt hat, hatte Angst, es zu vergessen.“ / `0240`: „Der mit dem Lautsprecher tanzt als Einziger vorwärts.“ |
+| 8 Hieroglyphen | „Mehr Zeichen hat der Pharao nie gelernt.“ (`W2_HIER_SCH_0020`), „keine Likes“ (`0035`), Einkaufslisten in Hieroglyphen (`0320`), Mistkugel (`0340`), „Die betone ich am schönsten“ (`0360`), „seit elf Jahren“ (`0110`) | zündet | | |
+| 8 Hieroglyphen, Fehlversuche | „Falsch, aber mutig.“ (`0140`), „Aber der Kater nickt.“ (`0150`), „Streich das sofort“ (`PIX_0170`), „Ich hab ausdrücklich gesagt: keine Käfer.“ (`0180`), „Häuser hören nicht zu, glaub mir, ich wohne in einem.“ (`0190`), „Der Vogel ist sein Mittagessen.“ (`0200`), „schleppe ich morgen Steine“ (`0210`), „Um Sonne, in Ägypten.“ (`0220`) | zündet | Jeder Fehlversuch hat eine eigene Pointe. Das ist das beste Rätsel-Feedback im Spiel. | |
+| 8 Hieroglyphen | „Das stimmt sogar. Leider.“ (`0250`), „Grammatisch sauber, inhaltlich seltsam.“ (`0260`), Hoodie-Aufschrift (`0270`), „ich hab gelesen, und er hat genickt“ (`0280`) | zündet | | |
+| 8 Hieroglyphen | „Das ist keine Botschaft, das ist eine Warnung.“ (`0130`) | mittel | Bauform, und „Warnung“ war schon zweimal die Pointe im Prolog. | „Das Krokodil hat Hunger. Das les ich nicht vor, das melde ich.“ / „… Ich würde das ernst nehmen.“ |
+| 9 Götter-Duell | „Hauskatze mit Elektronik am Hals“ (`W2_DUEL_HOF_0050`), „Es war windstill.“ (`PIX_0060`), „Du hast einen Jungen mit Sand im Schuh.“ (`0070`), „Und das Ohr. Ich meine, den Ohrring.“ (`0080`), „Antrag auf Gleichbehandlung … bei mir selbst“ (`0115`), „Kleben ist keine Ausstrahlung.“ (`0150`), „sehr langer, sehr grüner Fan“ (`0170`), „zweiundsechzig Zähne“ (`0190`), „Von niemandem.“ (`0200`) | zündet | Zwei Kater streiten wie zwei Kater. Stärkste Pixel-Szene des Spiels. | |
+| 9 Götter-Duell | Kaugummi-Sonne: „Ich … ich habe keine Sonne.“ (`0240`), Ramses „Ein Wunder! Oder ein Unfall!“ (`0270`), „zählt nach. Dreimal.“ (`0280`), „Das Kissen ist sowieso durchgelegen.“ (`0290`), „Götter liegen nicht durch. Sie liegen ein.“ (`0300`), „Das ist Theologie.“ (`0320`), „Eine Fliege ohne Flügel.“ (`0350`) | zündet | | |
+| 9 Götter-Duell | „so ist das bei jedem Finale“ (`0310`), „Das ist kein Wunder, außer für Leute, die noch nie einen hatten.“ (`0210`) | mittel | Beide relativieren, statt zu pointieren. | `0310`: „Drei zu zwei. Der Grashalm hätte den Unterschied gemacht.“ / `0210`: „Ein Wunder? Ich hab einen Kaugummi. Erdbeere.“ |
+| 10 Audienz | „Nein, näher. Ja. Genau da.“ (`W2_AUDI_RAM_0010`), „teilweise … möglicherweise …“ (`0030`), „bevor er beim Verb angekommen ist“ (`PIX_0040`), „Vielleicht. Nein. Ganz sicher. Vermutlich.“ (`0070`), Streit mit dem Router (`0090`, `0095`), „Oder im anderen Büro.“ (`0100`) | zündet | | |
+| 10 Audienz | „Sport. Freiwillig. Die spinnen, die Griechen.“ (`0110`) und wortgleich beim Betreten des Stadions (`W2_STAD_MAX_0010`) | zündet, aber doppelt | Dieselbe Zeile zweimal. Beim zweiten Mal ist sie verbraucht. | `STAD_0010` neu: „Ein Stadion. Tausend Leute zahlen dafür, dass andere schwitzen.“ / „Hier riecht es nach Öl und Ehrgeiz. Beides nicht meins.“ |
+| 10 Audienz, Gespräch | „der Große und der Weise … seit elf Jahren“ (`0220`, `0370`), „in meinem, das du für mich führst“ (`0250`), „Die Wedler sind schon geölt“ (`0390`), „Das ist meine Stärke. Meine einzige.“ (`0290`), Bestechung und Gnade (`0400`, `0410`), „Brettspiele? Wettspiele?“ (`0310`), „Schreib das auf. Nein, nicht aufschreiben.“ (`0430`) | zündet | Ramses' Zögern hat in jeder Zeile einen anderen Anlass. Deshalb nutzt es sich nicht ab. | |
+| 11 Palastküche | „Ich bin zu Hause.“ (`W2_KUCH_PIX_0010`), „als wär ich eine Zutat“ (`0020`), „nicht mal mein Jahrtausend“ (`0035`), „und zwar größer“ (`0050`), „Oder gleich vierzig.“ (`0065`), Pfandflaschen (`0080`), „also trinkt er Wasser“ (`0120`), „fünf Prozent Linseneintopf“ (`0135`) | zündet | | |
+| 11 Palastküche, Nebet | „der Kater braucht Öl, wenn man ihn ansieht“ (`0150`), „Aber mir fehlt das Irgendwas.“ (`0170`), Ananas „wie ein Gott, den man besser nicht beleidigt“ (`0500`), „So ist diese ganze Welt hier entstanden“ (`0190`), „Sie denkt in Öfen.“ (`0200`), „Wedler warten nie, Wedler wedeln.“ (`0520`), „Alles, was du mir nicht gibst.“ (`0540`) | zündet | `0190` erklärt nebenbei das Bauprinzip von Antikodonien. | |
+| 11 Palastküche, Lösung | Ewiges Brot (`0270` bis `0310`), „Kruste nennt man Kunst“ (`0320`), „Pixel frisst allerdings auch Spinnen.“ (`0370`), „ohne Fortschrittsbalken“ (`0380`), Dosenöffner (`0390`), „Diebstahl geistigen Eigentums. Mit Kruste.“ (`0420`), „Opa nennt das Punsch.“ (`0460`) | zündet | | |
+| 11 Palastküche | „Flach wie meine Motivation“ (`0330`), Zwiebel und Weinen (`0350`), „ein bisschen nach Sieg“ (`0430`), „Natürlich ist er rutschig“ (`0435`) | mittel | Motivation stand schon im Prolog, Sieg riecht zum vierten Mal, der Rest ist erwartbar. | `0330`: „Ein Fladen. Flach, rund, warm. Pixel hat schon zweimal draufgeguckt.“ / `0350`: „Eine Zwiebel. Die einzige Zutat, die sich wehrt.“ / `0435`: „Der Krug ist rutschig. Ich trag ihn wie ein Baby, das mich nicht mag.“ |
+| 12 Sphinx | „Hat ein Rätsel im Gesicht und keine Ahnung im Kopf.“ (`W2_SPHX_MAX_0010`), „falsche Hälfte fürs Denken“ (`PIX_0020`), „sehr viel nicht geschrieben“ (`0030`), „Was hat vier Beine und …“ (`0040`), Tierärzte (`0065`), Steinkugel „Schon seit dreihundert Jahren.“ (`0080`), Nase „Noch.“ (`0100`), „Wind mit Teller“ (`0115`) | zündet | | |
+| 12 Sphinx, Gespräch | „heute gibt es Auflagen“ (`0600`), „Außer, was ich nicht kenne.“ (`0180`), „Danke. Glaub ich.“ (`0620`), „von einem Schaf. Rätsel sind wie Flöhe.“ (`0640`), „Dann wirkt es.“ (`0660`), „Ich bin aus Stein, ich kann nichts anderes.“ (`0240`) | zündet | | |
+| 12 Sphinx, Fehlversuche | Alle achtzehn Zeilen (`0260` bis `0430`), darunter „Er schmatzt.“, „Er stirbt mitten im Wort“, „Er liegt darunter. Immer.“, „es schreibt ohne Hand. Das ist schlimmer.“ | zündet | Achtzehn falsche Kombinationen, achtzehn Pointen. Hier lohnt sich Ausprobieren. | |
+| 12 Sphinx, Lösung | „Ein kranker Stern?“ (`0450`), „Ein klebriger Gott?“ (`0460`), „Ein Beamter?“ (`0470`), „Stein weint schlecht.“ (`0480`), „Das gibt es noch nicht!“ (`0520`), Verwandtschaft (`0580`) | zündet | | |
+| 12 Sphinx | Notizblock „mehr, als ich bei manchen Aufsätzen abgegeben hab“ (`0055`), Fußspuren „Kann ich verstehen.“ (`0060`) | mittel | Schule und Selbstvergleich, siehe oben. | `0055`: „Ein Wort und ein Strich. Der Strich ist sehr gerade. Darauf ist sie stolz.“ / `0060`: „Jemand ist hergekommen, hat sich das Gesicht angeguckt und ist gegangen. Rückwärts.“ |
+| 13 Werkstatt, Ansehen | „Er hätte sogar Meerblick.“ (`W2_WERK_MAX_0010`), „Tinte, Schweiß und Genie“ (`0020`), „guck ich weg“ (`0035`), „richte ihn nicht auf Schiffe“ (`ARC_0080`), Vergleichsportal (`0100`), „Kaffee und Schrauben“ (`0110`), „er hat Schichten“ (`0135`), „Synthesizer mit Wasserkocher“ (`0180`), „Nicht drücken“ (`0185`), „Also tot, aber reich.“ (`0240`), „Der Zettel lügt.“ (`0250`) | zündet | | |
+| 13 Werkstatt | Wasserorgel: Milchpreise, „Ein Erfinder vergisst den Geburtstag seiner Frau“ (`0200` bis `0220`) | zündet | Opa spiegelt sich in Archimedes. Feiner Hinweis auf das Finale. | |
+| 13 Werkstatt, Ansehen | Waage „sagt nie, was es wert ist“ (`0090`), Zahnräder „Kenn ich vom Serienschauen“ und „so wie ich morgens“ (`0300`, `0305`), Fenster „besseren Empfang“ (`0290`), Skizze „So oft schreib ich nicht mal meinen Namen.“ (`0275`) | mittel | Kalenderspruch, zwei Selbstvergleiche, Empfang. | `0090`: „Eine Waage mit zwei Schalen. In der einen liegt Staub. Sie ist trotzdem im Gleichgewicht.“ / `0300`: „Jedes Zahnrad dreht das nächste. Das letzte dreht eine Kurbel für den Pfeffer.“ / `0290`: „Draußen Hafen, Möwen und Licht. Drinnen ein Mann, der nichts davon sieht.“ |
+| 13 Werkstatt, Gespräche | „Ja! Nein! Moment, ich rechne.“ (`0320`), „aus reiner Eifersucht“ (`0540`), „Nach unten.“ (`0560`), „Vielleicht muss ich mal mit ihm rausrennen.“ (`0580`), „Ich lebe sogar sehr!“ (`0420`), „ich hab gerade keine Kreise. Aber trotzdem.“ (`0440`), Hieron: „und einen Verdacht“ (`0460`), „und ich bin der König“ (`0620`), „So endet man ohne echte Krone.“ (`0640`) | zündet | | |
+| 14 Krone | „Ich will es trotzdem haben. Das ist Gold.“ (`W2_KRON_PIX_0030`), „Ich hab sie trotzdem lieb.“ (`0060`), HEUREKA und „Die halbe Stadt kennt ihn nur so.“ (`0130`, `0140`), „Und angezogen.“ (`0170`), „Mit der Krone.“ (`0180`), „wie gut sie mir stand“ (`0200`), „wie viel Blut ich verliere“ (`0210`) | zündet | Das Rätsel erklärt echte Physik und bleibt komisch. | |
+| 14 Krone | „Schulrucksack an einem Montag“ (`0020`), „das war von Anfang an der Punkt“ (`0050`), „beleidigtes Spiegelbild“ (`0270`) | mittel | Montag, Leerlauf, beleidigt. | `0020`: „Ein Goldbarren. Ich halt ihn mit zwei Händen und fühl mich trotzdem nicht reich.“ / `0050`: „Gleich schwer. Hieron nickt. Archimedes rauft sich die nassen Haare.“ / `0270`: „Dann hab ich einen nassen Spiegel. Und Archimedes eine neue Idee.“ |
+| 15 Training | „Du bist kleiner als die Welt. Das wird leicht.“ (`W2_TRAI_ARC_0030`), „Aber nur, weil ich eh schon im Sand liege.“ (`0080`), „Noch mal.“ (`0110` bis `0140`), „Nicht einmal beim Nachtisch.“ (`0140`), „Perfekt! Also: gut. Also: brauchbar.“ (`0160`), „Ich erzähle es allen.“ (`0180`) | zündet | Der wichtigste Moment der Welt. Max ändert sich in zwei Wörtern, und Pixel sagt es für ihn. | |
+| 16 Startbüro, Ansehen | „als wären sie hier geboren“ (`W2_BUER_MAX_0010`), „seine Mittagspause“ (`0035`), „stempelt er in die Luft“ (`0045`), „Antrag auf einen Antrag“ (`0055`), „Rückgängig-Taste der Antike“ (`0070`, `0075`), „Sicherheitslücke mit Reißzwecke“ (`0090`), „seit Nummer eins“ (`0110`, `0115`), Staub mit dem spannendsten Leben (`0125`) | zündet | | |
+| 16 Startbüro, Beamte | „Bürgerschein.“ ohne aufzuwachen (`0140`), „Dann wirst du einer. An Schalter zwei. Mit Startpass.“ (`0180`), Kühlschrank (`0680`, `0690`), „Nummer ziehen.“ (`0220`), „Niemand hat es je geschafft. Wir sind sehr stolz.“ (`0260`), „Das ist Verwaltung. Dasselbe Wort, nur länger.“ (`0280`), „Beides ist eine Art Stempel.“ (`0710`), „unsere größte Angst und unsere einzige Freude“ (`0300`), „Ab übermorgen.“ (`0320`) | zündet | Beste Nebenfiguren des Spiels. Kein Wort zu viel. | |
+| 16 Startbüro, Lösung | „Dann ist er da!“ (`HER_0350`), „Oben bin jetzt ich.“ (`0370`), Socke sortiert das Amt (`0410` bis `0440`), „Wir müssen etwas verlangen, das es nicht gibt!“ (`0480`), „hiermit erfunden und sofort ungültig“ (`0510`), „Nein. Stempel.“ (`0550`), „Das ist nicht zulässig. Das ist wunderbar. Weg damit.“ (`0560`), „Der Bart war schneller.“ (`0570`), „Katzen dürfen aber warten.“ (`0590`), „sonst sind sie vor dir im Ziel“ (`0610`), „Man hat sie, oder man hat Olivenöl.“ (`0640`) | zündet | Vier Lösungswege, jeder mit eigener Pointe. | |
+| 16 Startbüro | „Den gibt es nicht. Das ist der Trick.“ (`0380`) | mittel | Max erklärt die Pointe, bevor die Beamten sie spielen dürfen. | „… nur gegen Passierschein A38.“ Punkt. Den Rest sagen die Beamten (`0470`). / „… A38. Mal sehen, wer zuerst blinzelt.“ |
+| 17 Agora, Ansehen | Kommentarbereich (`W2_AGOR_MAX_0010`), „Philosophie klingt erstaunlich ähnlich wie Schnarchen.“ (`0025`), Adler und Heuhaufen (`0030` bis `0050`), Marmorfrau (`0060` bis `0075`), Sonnenhüte (`0080`, `0085`), „Der Mann schreit, die Tonne nicht.“ (`0110`), weiße Socken in Sandalen (`0130`, `0135`), „Gruß aus Olympia“ (`0155`), Steine weich singen (`0170`), „Grammatikfehler. Und ihre Socken.“ (`0190`), „schreibt sogar das Luftholen mit“ (`0215`), Brian und der Schuh (`0225`) | zündet | | |
+| 17 Agora, Ansehen | Straßenmusiker „weniger drin als in meinem Akku“ (`0160`) | mittel | Akku. | „Ein Straßenmusiker mit Lyra und Hut. Im Hut liegt eine Olive. Angebissen.“ / „Im Hut liegt ein Zettel: ‚Bitte nicht Stairway.‘“ |
+| 17 Agora, Gespräche | „Das dürfen alle.“ (`CIC_0240`), „Und eine Erkältung.“ (`0610`), „Schwindler mit nassen Haaren“ (`0280`), „Ein neuer Stein ist ein Versprechen. Ein alter Stein ist ein Beweis.“ (`0630`), „wo war ich? Egal.“ (`0330`), „Ich verliere nur Haare.“ (`0640`), „Was haben die Römer je für uns getan?“ (`0400`, `0410`), „Rede übers Atmen“ (`0660`), „wie jemand, der zu lange drinnen war“ (`0440`) | zündet | | |
+| 17 Agora, Tonne | „Dein Hoodie hat mehr Verstand als du, und der ist aus Stoff!“ (`PHI_0460`), „Bloß nicht mir.“ (`0470`), „Lektion eins: Augenkontakt.“ (`0490`), die zwei Konter (`0510`), „noch arroganter als vorher“ (`0520`), „Ich wohne auf einem Sofa.“ (`0550`), „Ich steh doch schon unten.“ (`0570`) | zündet | | |
+| 18 Sandale | „Folgt der Sandale!“ / „Es ist ein Schuh!“ / „Ketzer!“ (`W2_SAND_TOU_0020` bis `0040`), „Menschen noch nie so gut verstanden“ (`PIX_0050`), „Dabei wollte ich eigentlich nur ans Meer.“ (`0080`), „seit zwölf Jahren gepackt“ (`0100`, `0430`), „Das sagt sonst nie jemand.“ (`0120`), „weil du es nicht kannst“ (`0130`), „Noch heiliger!“ (`0210`), „Ruf nicht an.“ (`0230`), Schild mit „Doch.“ (`0240`) | zündet | Brian ist die müdeste und menschlichste Figur der Welt. | |
+| 18 Sandale, Feigen | „Du hast dabei die Lippen bewegt.“ (`0270`), „Keine Hoffnung im Topf.“ (`0280`), „Wir wedeln sogar nachts.“ (`0340`), „Ich esse zwar keine Feigen, aber darum geht es nicht.“ (`0350`), „Dafür wedeln wir genau einmal. So. Fertig.“ (`0370`), „ich hab eine Fähre“ (`0390`) | zündet | | |
+| 18 Sandale | „Ein Schild für jede Laune.“ (`0245`), „Wachstum braucht Zeit. Oder einen Fluss.“ (`0265`), „Das ist mein Weg zu gleichmäßigem Wind.“ (`0320`), „Die Zeit ist ein ziemlich schlechter Gärtner.“ (`0365`) | mittel | Merksätze. `0320` erklärt das Rätsel im Klartext. | `0245`: „Vorne Nein, hinten Doch. Brian hat sich zwölf Jahre lang nicht entschieden. Passt zu Ägypten.“ / `0320`: „Frische Feigen, lila und prall. Ich kenn zwei, die dafür alles tun.“ / `0365`: „Ein Kern. Ein ganzer Baum, zusammengefaltet in einen Krümel.“ ohne Nachsatz. |
+| 19 Stadion | „Angeblich ist das aufregend.“ (`W2_STAD_MAX_0020`), „Abdrücke von Rücken“ (`0035`), Kampfrichter für das Nickerchen (`0045`), Turm „Noch.“ (`0070`), „Alle haben's gesehen.“ (`0080`), „Maxos. Das klingt nach einem Reinigungsmittel.“ (`0100`), „Davor-Typ“ (`0110`), „Lieblingsbrunnen, in den er Leute schubst“ (`0125`), Schildkröte (`0255`), „politisches Programm“ (`0265`), „Mit einem Hebel.“ (`0270`) | zündet | | |
+| 19 Stadion, Leonidas | „DAS IST MEINE ZIMMERLAUTSTÄRKE!“ (`0170`), „DER KATER IST EIN SPARTANER!“ (`0330`), „BIS JETZT HAT NIEMAND WIDERSPROCHEN!“ (`0350`), „… ein bisschen. ABER LAUT!“ (`0370`), „MEINE MUTTER KOCHT!“ (`0230`) | zündet | Ein Brüller mit einem leisen Satz. Der leise Satz macht die Figur. | |
+| 19 Stadion | Laufbahn „eine Menge Schmerz“ (`0025`), Siegerliste „Ich hätte keine Chance.“ (`0090`), Schildkröte „entschlossener, als ich je … geguckt hab“ (`0250`), „Klingt ehrlich gesagt ein bisschen einsam.“ (`0360`) | mittel | Max macht sich klein. Bei `0360` stört nur das Füllwort. | `0025`: „Am Ende ist das Ziel, am Anfang steh ich. Dazwischen steht eine Schildkröte und dehnt sich.“ / `0090`: „Lauter Namen mit ‚-os‘ am Ende.“ Punkt, Pixel hat die Pointe. / `0360`: „Klingt ein bisschen einsam.“ |
+| 20 Tag 1 | „Oder … fangt einfach an!“ (`W2_TAG1_RAM_0010`), „MARATHON!“ in die falsche Richtung (`0020` bis `0040`), „will irgendwas an mir nach vorn“ (`0050`), „Der Philosoph hat Max nicht gekannt.“ (`0070`), „einem Mann, der gerade in Syrakus ankommt“ (`0090`), „Heiß. Heiß. Heiß. Heiß!“ (`0110`), Herdplatte (`0120`), „HIER IST EIN NASSER MANN!“ (`0150`) | zündet | Der Lauf ist eine Szene und kein Minispiel. Richtig so, die Pointe braucht das Tempo. | |
+| 21 Hebel | „Mehr ist Physik nie.“ (`W2_HEBL_ARC_0010`), „die Idee einer Dose“ (`0020`), „Wissen wiegt leider nichts.“ (`0040`), „Warum klebt er?“ (`0050`), „amtlich ist kein Gewicht“ (`0090`), „Sie wiegt sich selbst.“ (`0110`), „Faszinierend. Und nutzlos.“ (`0180`), Kater als Umzugskarton (`0190`, `0200`), „Das Schicksal unterbricht den Redner, aber niemals die Rede.“ (`CIC_0260`), „Beides. Eins davon.“ (`0270`), „Das sage ich sonst nur zu mir selbst.“ (`0310`), „ICH WAR IN SYRAKUS!“ (`0330`) | zündet | Jeder Gegenstand im Korb bekommt einen Satz. Dafür probiert man alles aus. | |
+| 22 Diskus | „Am Ende war's bestimmt der Butler.“ (`W2_DISK_MAX_0020`), „Meistens. Sagen wir: an guten Tagen.“ (`0030`), „Laut, aber unschuldig.“ (`0070`), „nicht einmal Zeit, um zu riechen“ (`0110`), „Ausgesprochen sicher.“ (`0150`), „Bei den Flaschen“ (`0160`), „zu laut, um unschuldig zu sein“ (`0190`), „ICH LÜGE NUR EINMAL! AUS PRINZIP!“ (`0220`), „das sind Abkürzungen“ (`0280`), „Falschen Instinkt, zugegeben, aber Instinkt.“ (`0290`), „Klassenfahrt 7b“ (`0335`) | zündet | Logikrätsel und Gag stützen sich. Pixels lügende Nase aus Welt 1 zahlt sich hier aus. | |
+| 23 Grab | „Also: jetzt. Wir sind schnell.“ (`W2_GRAB_STM_0020`), „Irgendwas können wir.“ (`0040`), „Grabschotter“ (`0050`), „weil er gestern gemacht wurde“ (`0080`), „am Respekt schneide“ (`0085`), Tiefkühlpizza (`0110`), „War nett“ (`0125`), „Opas Sessel, wenn Opa nicht drin sitzt“ (`0135`), Zikaden (`0150`, `0155`), „Ich stehe direkt daneben. Ich lebe.“ (`ARC_0180`), „keiner lobt die zwei Drittel“ (`0210`, `0215`) | zündet | Der Sockel-Vergleich mit Opas Sessel ist der leise Moment der Welt. Max lobt die zwei Drittel, das ist warm und nicht erklärt. | |
+| 23 Grab | Zypressen (`0140`, `0145`) | mittel | Zwei Zeilen Stimmung ohne Dreh. | „Zypressen. Sie zeigen alle nach oben. Cicero auch, aber aus anderen Gründen.“ / „Die Zypressen wiegen sich im Takt. Die Zikaden geben ihn vor.“ |
+| 24 Finaltag | „In dieser Reihenfolge! Oder in einer anderen! In dieser!“ (`W2_FINA_RAM_0010`), „MEIN EINTOPF!“ (`0050`), „Mitten im Kranz. Mit Beilage.“ (`0060`), „Die werten jetzt bestimmt total neutral.“ (`0080`), „die mutigste Tat deines bisherigen Lebens, und sie war ein Versehen“ (`0090`), drei Wahrzeichen (`0120` bis `0140`), Schlager beim Aufprall (`0180`), „Ich habe Angst. Für dich. Und vor Worten.“ (`0190`) | zündet | Die Wahrzeichen-Folge ist der größte Lacher der Welt und wird dreimal vorbereitet („Noch.“). | |
+| 25 Rede-Ringen | Die sieben Konter, „Die Straßen … gut, die Straßen.“ (`W2_RING_CIC_0120`), „Ich …“ (`0160`), Zeitraffer und Traum von Stille (`0190`, `0200`), „Nicht hier. Ich verspreche es.“ (`0240`), „Mit Sätzen aus einer Tonne.“ (`0250`), „Du warst die Stimme, und ich war der Inhalt.“ (`0260`), „irgendjemand hat gewonnen!“ (`0270`), „dafür einen Salat bekommen“ (`0280`) | zündet | | |
+| 25 Rede-Ringen | „Das war eine Folge ohne Vorspultaste.“ (`0210`) | mittel | Vorspulen war schon der Einstieg der Welt (`W2_NIL_MAX_0030`). | „Drei Stunden. Mein Bein ist eingeschlafen und hat geträumt. Noch mal.“ / „Drei Stunden. Ich kann die Rede jetzt auswendig. Noch mal.“ |
+| 26 Parade | „hundertzwölf Jahre gefahren für einen Kranz aus Blättern“ (`W2_PARA_VOL_0010`), „Ich kann nichts erklären.“ (`0030`), „Stundenplan für eine Party“ (`0050`), „Das ist sogar für mich zu spät.“ (`0070`), „Fast niemand!“ (`0080`), „kurz. Also, kürzer.“ (`0100`), „Besonders nicht ich.“ (`0120`), „Lange Geschichte, kurze Fährfahrt.“ (`0170`), „Er ist einfach da.“ (`0200`), „Und … Brot? Egal! Wein!“ (`0230`) | zündet | | |
+| 26 Parade, Abschluss | „Ich habe mich entschieden. Zum ersten Mal. Es fühlt sich … gut an. Glaube ich.“ (`0270`), „Freiwillig. Teilweise.“ (`0280`), „Klingt nach einer Backzahl.“ (`0290`), „Riecht nach Bäckerei.“ / „Nichts. Fahr.“ (`0300` bis `0320`), „Der war nur in einem anderen Beutel.“ (`0340`), „Einen größeren. Für die Welt.“ (`0350`) | zündet | Ramses' Bogen schließt. Die Spur zum Geheimnis ist gelegt und nicht ausgesprochen. | |
+| 27 Wunderdinge und Pixel auf Mensch | „sehr teurer Stein“ (`W2_INV_MAX_0020`), „zu Hause heißt es Schule“ (`0050`), alle vierzehn Pixel-Zeilen (`0070` bis `0210`), darunter „Ich verdränge stattdessen ihn“, „Das ist unsere Beziehung.“, „nur eine einzige Lautstärke“, „Ich respektiere ihn auch nicht.“, „das hat etwas Hündisches“ | zündet | | |
+| 27b Inventar | „Rosinen, die es im Leben zu was gebracht haben“ (`0340`), Schichten und jemand Großes, Grünes (`0355`), „Pizza, die sich in der Zeit verlaufen hat“ (`0370`), Lizenzgebühren (`0385`), „Saft sollte eigentlich nicht ticken.“ (`0390`), Silvester und Neujahr (`0405`), „Lehrer nach zwanzig Jahren Pausenaufsicht“ (`0410`), „Meine Nase hat gekündigt, fristlos.“ (`0415`), „mitten in der Pubertät“ (`0475`), „aus Versehen was beglaubigt“ (`0515`) | zündet | | |
+| 27b Inventar | Papyrus „Hausaufgaben, die noch keiner gemacht hat“ (`0310`), „irgendwie mehr erwartet“ (`0315`), Tintenfisch „guckt beleidigt“ (`0450`), „Das ist kein Brief, das ist eine Drohung mit Pfote.“ (`0535`) | mittel | Hausaufgaben, beleidigt, Bauform. | `0310`: „Riecht nach Fluss. Und ein bisschen nach Krokodil.“ / `0450`: „Ein Tintenfisch im Fass. Er hat acht Arme und verschränkt alle.“ / `0535`: „Die Sphinx droht höflich. Das hat sie von den Katzen.“ |
+| 27c Gespräch erschöpft | „Und wer zahlt.“ (`W2_ABS_FAE_0010`), „Hoffentlich nicht dich.“ (`0040`), „Feierabend. Seit zehn Jahren.“ (`0100`), „bevor du anbrennst“ (`0110`), „Das war mein erstes Rätsel seit Jahren. Danke.“ (`SPH_0130`), „und du zählst nur halb“ (`0190`), „Schreib's nicht auf.“ (`0220`), „Er war nie offen.“ (`0240`), „Menschlich waren wir es nie.“ (`0260`), „DAS IST AUFWÄRMEN!“ (`0280`) | zündet | Die Sphinx bedankt sich mit einem Rätsel. Schöner kann man ein Gespräch nicht schließen. | |
+| 28 Zurufe und 29 Hinweise | „Zwei von drei Dingen hier bewegen sich“ (`W2_ZURU_PIX_0010`), „Lern vom Krokodil.“ (`0020`), „Einer von euch beiden ist aus Stein.“ (`0050`), „Ich nenne das einen Gleichstand.“ (`0080`), „Ich bin kein Gegenstand, junger Mann. Mach es trotzdem.“ (`W2_HINT_PIX_0130`), „Er rennt dann. Nackt. Ich warne nur.“ (`0530`), „So mache ich es mit meinen Feinden.“ (`0710`), „Einer von uns beiden passt in diese Tonne.“ (`0920`) | zündet | | |
+
+Bilanz Welt 2: Grob gezählt 500 Gags, davon zünden rund 440. Keiner fällt ganz durch. Welt 2 ist das stärkste Skript. Die Nebenfiguren reden kürzer als Max und Pixel und sind deshalb oft komischer.
+
+Wiederholungen in Welt 2:
+
+- **Schule und Hausaufgaben** als Vergleich: zehnmal bei Max.
+- **„drei Prozent“**: dreizehnmal. Das Motiv trägt ein Rätsel, sechsmal würde reichen.
+- **„beleidigt“**: neunmal (Tintenfisch zweimal, Hase, Spiegelbild, Gewicht, Hofkater und weitere). Im ganzen Spiel das meistbenutzte Eigenschaftswort für Dinge.
+- **„Das ist kein X. Das ist Y.“**: rund sechzehnmal, wieder bei allen Figuren.
+- **Pixels „das Traurigste, was ich je gesehen habe, und ich habe … gesehen“**: Toadi (`W1_THRO_PIX_0710`), Mumie (`W2_KUCH_PIX_0300`), leerer Napf (`W2_GRAB_PIX_0200`).
+- **Pixels „Ich bin beeindruckt. Das sage ich nie wieder.“**: `W1_THRO_PIX_0560`, `W2_SPHX_PIX_0530`, `W2_RING_PIX_0290`, `W2_PARA_PIX_0330`. Die letzten beiden können innerhalb von zwei Minuten fallen.
+- **Wortgleiche Dopplung**: „Sport. Freiwillig. Die spinnen, die Griechen.“ (`W2_AUDI_MAX_0110`, `W2_STAD_MAX_0010`).
+
+Dauergags, die tragen: Ramses' Zögern mit Auflösung, Hermes' „anderes Büro“, Milchpreise (zweite Welt, zweites Radio), „Kruste“, Pixel als Gott, „Noch.“ vor den drei Wahrzeichen, die lügende Nase.
+
+#### C Welt 3 (`docs/skript/welt-3.md`)
+
+| Szene | Gag (Zeile) | Urteil | Grund | Alternativen |
+| --- | --- | --- | --- | --- |
+| 1 Ankunft | „Die andere Hälfte heißt wahrscheinlich ‚warum‘“ (`W3_ANK_MAX_0020`), „auf trockeneren Köpfen gesessen“ (`0030`), Ladebildschirm (`0040`), „Kühlschrank, den seit Wochen niemand aufgemacht hat“ (`0050`), „als ginge es um Brötchen vom Bäcker“ (`0060`), Hundefutter (`0090`), „Als Zweites!“ (`0110`) | zündet | Der Ton der Welt steht nach sieben Zeilen. | |
+| 1 Straße | Telefonzelle und „Bequemlichkeit mit Akku“ (`W3_STR_MAX_0030` bis `0050`), „ohne Suchfeld“ (`0060`), Sahra Konner (`0070`), „Vandalismus … stolz“ (`0090`), „Brot mit einer Meinung“ (`0120`), Origami-Einhorn (`0130`, `0140`), „Zuhören ist hier unten das neue Geld“ (`0170`), „Der Mann hat ein System.“ (`0185`), „Sie ist perfekt … nicht verdient!“ (`0190`), Regenschirm (`0210` bis `0230`), „hier stehen sogar die Wolken im Stau“ (`0255`), Dampfgitter (`0270`), „Und nachweislich heißt: von mir.“ (`DEC_0290`), „Die Zukunft hat also immer noch Hausmeister“ (`0300`), „den Regen persönlich verhört“ (`0310`), „Ich ahne ein Muster.“ (`0320`) | zündet | Jede Straßenfigur ist zugleich Witz und Rätselbaustein. | |
+| 1 Straße | Telefonbuch „dicker als mein Schulrucksack, und ehrlich gesagt steht auch mehr drin“ (`0065`) | mittel | Schul-Selbstvergleich plus Füllwort. Beides kommt in dieser Welt oft. | „Das Telefonbuch ist dicker als alles, was ich je freiwillig gelesen hab. Und es hat kein einziges Bild.“ / „Tausend Seiten Namen. Irgendwer hat das mal abgetippt. Freiwillig, hoffe ich.“ |
+| 1 Straße | „Wahrscheinlich ist es genau deshalb ein menschlicher Grund.“ (`0200`) | mittel | Max erklärt die Lösung des Tests und das Thema der Welt gleich mit. | „Okay. Er weint, weil die Suppe gut ist. Das schreib ich auf. Verstehen muss ich's nicht.“ / „Er weint über eine gute Suppe. Dem Mann mit dem Hut würde das gefallen.“ |
+| 1 Straße | „Manche Sachen ändern sich nie, egal wie viel Zukunft man draufpackt.“ (`0250`) | mittel | Der zweite Satz erklärt den ersten. „In jeder Welt dasselbe“ ist schon in Welt 1 und 2 eine Standardpointe. | „Fliegende Autos, und trotzdem stehen sie im Stau. Nur eben übereinander.“ / „Fliegende Autos im Stau. Die Zukunft hat das Problem gelöst, indem sie es höher gehängt hat.“ |
+| 1 Straße | „Kunst oder Sturheit, ich weiß es nicht.“ (`0150`), „mein Bauch weiß es auch“ (`0335`) | mittel | `0150`: Bauform „A oder B“, die im Spiel sehr oft kommt. `0335`: Der Bauch-Satz bleibt unklar. | `0150`: „Er spielt trotzdem. Der Regen ist sein einziger Fan und geht nicht nach Hause.“ / `0335`: „Es klingelt. Mit Jingle. So klingelt nur einer, und der will mir Milch verkaufen.“ |
+| 2 Nudelbude | „Drei ist eine Vier, der etwas fehlt.“ (`W3_NUD_VIE_0030`), „Fünf ist eine Vier, die angibt.“ (`0050`), „falsche, aber dafür sehr feste“ (`PIX_0060`), „Die Welt hat sich entschieden, ich nur zugehört.“ (`0080`), „Vier Pfoten und ein Schwanz. Das sind fünf. Nein.“ (`0660`), „Außer der Suppe. Der fehlt eine.“ (`0680`), „Elf! Nicht mal eine Zahl, die ich mag.“ (`0120`), Rezept verloren (`0700` bis `0704`), „Sag es, als wüsstest du, was es bedeutet.“ (`MOR_0230`), Strickjacke (`PIX_0240`), „ich bin Koch“ (`0270`), „‚Viel‘ ist Faulheit mit Vokalen.“ (`0330`), „erfolgreichstes Gespräch“ (`0340`), „Oder er kann rechnen. Beides ist selten genug.“ (`0350`), „Zurzeit mit eingeschränktem Sortiment.“ (`0370`), vier Nudeln (`0380`, `0390`), Beige (`0430`), „Wartezimmer beim Zahnarzt“ (`0440`), „Ich betone lediglich mehrfach“ (`0500`), „Dann wurde sie sehr fürsorglich.“ (`0520`), „Ich werde mich äußern.“ (`0570`), Lottozahlen (`0590`), „meistens mit Keksen“ (`0720`), „Das ist mal ein Tag.“ (`0620`) | zündet | Herr Vier hat eine einzige Regel und zieht sie durch. Morphäus in Strickjacke bricht die Vorlage genau richtig. Kein einziger Ausfall. | |
+| 3 Mensch-Test | „Ich zähle mit.“ (`W3_TEST_DEC_0010`), „Maschinen antworten logisch. Menschen antworten.“ (`0020`), „hm“ (`PIX_0030`), „Verdächtig logisch. Das Heft ist voll.“ (`0050`), neues Heft (`0400`, `0410`), „Katzen bestehen den Test immer.“ (`0070`), alle Antwortzeilen (`0120` bis `0300`: „Maschine mit guter Kinderstube“, „Das war keine Antwort, das war Heimweh.“, „Sinnlos. Nass. Schön.“, „Willkommen in der Menschheit.“, „Das ist 2026.“), „Mensch, vorläufig“ (`0310`, `0320`), „Bleib unlogisch. Es steht dir.“ (`0330`), Pixel und die Vorfahren (`0340` bis `0360`), „Drei Menschen, eine Katze.“ (`0370`), „Schweigen besteht nur, wenn man Fell hat.“ (`0390`) | zündet | Spitzenszene des Spiels. Die Beobachtung von der Straße wird zur Antwort, und jede falsche Antwort hat eine eigene Pointe. | |
+| 4 Apothekengasse | „Kein Stempel. Kein Mensch. Keine Beratung.“ (`W3_APO_AUT_0030`), „Kopfschmerzen sind Dienstag.“ (`0060`), „Das ist ein Lebensstil.“ (`0080`), „Ich bin eine Linse, kein Ohr.“ (`0100`), „Das ist eine Schleife.“ (`0120`), „Die Kasse übernimmt nur eine.“ (`0130`), „Man steht davor und ist enttäuscht.“ (`0150`), „Video, das hängt“ (`0160`), Pixels Durchgänge (`0170` bis `0220`, „drei sind ein Beruf“), „Ohrfeige, die ich dir noch schulde“ (`0230`), Kisten (`0240` bis `0255`), Vermieter (`0260`), „Hilfe. Oder Hering.“ (`0280`), Ventilator (`0295`), Lederjacke (`0300`), „Sie sagte auch, du würdest fragen, warum.“ (`0420` bis `0450`), „keine Spoiler. Gute Besserung.“ (`0470`), „Tiefpunkt … in einer Strickjacke“ (`0620`), „gelegentlich Ente“ (`0630`) | zündet | Der Automat spricht wie eine Krankenkasse. Das Déjà-vu als Symptom ist die beste Verwendung der Vorlage. | |
+| 4 Die Wahl | Sofa-Szene (`W3_SOFA_0480` bis `0550`: „Sie ist immer dieselbe.“, „Das war von Opa. Das hier ist von mir.“), „Das war … bequem. Wirklich bequem. Darum nehm ich die nicht.“ (`W3_APO_MAX_0570`) | zündet | Wichtigster Entwicklungsmoment von Max. Er kommt ohne große Worte aus. Bitte nicht anfassen. | |
+| 4 Die Wahl | „Aber genau darum geht's ja. Ich will es wissen.“ (`W3_APO_MAX_0600`) | mittel | Erklärt nach `0570` noch einmal, was der Spieler gerade gesehen hat. | „Ich weiß nicht, was drüben ist. Das Sofa kenn ich auswendig.“ / „Ich weiß nicht, was drüben ist. … Na gut. Dann eben nachgucken.“ |
+| 4 Apothekengasse | „Sofa oder Wahrheit. Klingt wie mein Samstag.“ (`W3_APO_MAX_0010`) | mittel | Dieselbe Form wie `W3_NUD_0540` („Klingt nach meinem Wochenende“) und `W3_BAS_PIX_1400`. | „Rot und blau. Sofa oder Wahrheit. Beim Kaugummiautomaten war die Auswahl leichter.“ / „… Sofa oder Wahrheit. Und kein Fach für beides.“ |
+| 4 Die Wahl | Pixel: „Das war das Gruseligste, was ich je gesehen habe. Und ich habe schon einmal einen Hundekuchen gesehen.“ (`W3_SOFA_PIX_0560`) | mittel | Vierte Fassung derselben Bauform (`W1_THRO_PIX_0710`, `W2_KUCH_PIX_0300`, `W2_GRAB_PIX_0200`). In `W3_KERN_PIX_0330` kommt sie ein fünftes Mal. | „Du hast in einer Gasse gelegen und gelächelt. Im Regen. Ich habe dich angestupst, und du hast ‚noch fünf Minuten‘ gesagt.“ / „Du hast in einer Gasse gelegen und gelächelt. So lächelst du sonst nur, wenn jemand anders den Müll rausbringt.“ |
+| 5 Stadtstraße (Simulation) | „Eine Wolke, dreimal.“ (`W3_SIM_NAR_0010`), Prospekt (`0030`), „seit drei Welten, dass keiner neben mir meckert“ (`0050`), Kopieren und Einfügen (`0110`), „genau ein Foto von einem Baum“ (`0120`), Playlist (`0130`), „Ich vermisse Vogeldreck“ (`0145`), Katze (`0160`, `0170`), Fensterbrett (`PIX_0180`), „du hast gesagt: ‚Noch mal.‘“ (`0190`), Schulklingel (`0240`), „Das ist ein Abo“ (`0250`), „redet seit gestern“ (`0265`), Schild der Oma (`0280`), „Sie war schon offen, bevor du geklopft hast.“ (`0290`), „oder Opa hat vorher angerufen“ (`0300`), „nur damit hier mal was liegt“ (`0315`), „Weil hier niemand ist.“ (`0320`), Schatten markiert (`0325`) | zündet | Die Stille ohne Pixel ist selbst der Witz. `0050` hatte einen Tippfehler (korrigiert, siehe Abschnitt 5). | |
+| 5 Stadtstraße (Simulation) | Katze „hinterher beleidigt“ (`0200`), „Ich glaub, mir wird ein bisschen schlecht.“ (`0125`), „irgendwie unheimlicher als Regen“ (`0140`) | mittel | Drei Zeilen, drei Füllwörter: „beleidigt“ steht in Welt 3 siebenmal, dazu „Ich glaub“ und „irgendwie“. | `0200`: „Ich fass sie nicht an. Wenn sie Kulisse ist, greif ich durch. Wenn nicht, hab ich eine Katze mehr, die mich nicht mag.“ / `0125`: „Von jedem Baum fällt dasselbe Blatt, genau gleichzeitig. Der Herbst hier hatte eine Generalprobe.“ / `0140`: „Rote Autos, alle gleich geparkt, nicht ein Kratzer. Hier hat noch nie jemand eingeparkt, der es eilig hatte.“ |
+| 6 Die gesprächige Tür | Schmidts Sätze ohne Punkt (`W3_TUER_SCH_0010` bis `0106`: „Abteilung Fürsorge und Verfolgung“, „alphabetisch sortiert und nach Gefährlichkeit“, „rosa war im Angebot“, „Schweigen ist eine Sicherheitslücke“, „Punkte sind Pausen, Pausen sind Lücken, und Lücken sind meine Abteilung“), „das Gegenteil von verschlossen“ (`MAX_0130`), „wie Preisschilder“ (`0150`), „vertauschte Namensschilder auf einer Hochzeit“ (`0180`), die redende Tür (`TUR_0200` bis `0240`), „Gleichgewicht der Welt um genau null verändert“ (`0230`), Fehltausche (`0250` bis `0280`), „Lehrer am letzten Schultag“ (`0310`), „Gib's zurück. Nö.“ (`0320`) | zündet | Schmidt hat eine Sprechweise, die man hört: kein Punkt, kein Luftholen. Das neue Spielsystem erklärt sich durch Pointen. | |
+| 6 Die gesprächige Tür | „Das mit dem Herz war ehrlich gesagt zu viel.“ (`0325`), „Als wäre nichts gewesen, und es war ja auch nichts.“ (`0300`), „Hier ist alles ehrlich. Fast zu ehrlich.“ (`0170`) | mittel | Füllwort, Achselzucken und ein Nachsatz, der nichts dazutut. | `0325`: „Jetzt zeigt er auf mich, auf die Tür und auf sein Herz. Das Herz notier ich nicht. Zu seinem Schutz.“ / `0300`: „Zurückgesetzt. Tür zu, Schmidt redet, Baum grün. Die Welt hat ‚Rückgängig‘ gedrückt, und mich hat keiner gefragt.“ / `0170`: „… Der Baum sagt grün, das Auto rot. Hier lügt keiner. Es steht ja dran.“ |
+| 7 Küche der Orakel-Oma | „Du willst dann einen Keks. Nein. Die sind noch heiß.“ (`W3_KUCH_ORA_0010`), „Man soll dem Schicksal nicht die Arbeit abnehmen.“ (`0030`), „Alle siebenundvierzig. Ich hab eine Liste.“ (`0050`), „Ich habe schon gefegt, für danach.“ (`0940`), „Zum Nicht-Hergeben.“ (`0140`), Lösung (`0150` bis `0190`), „Ungeschick ist einfach Schicksal, das keine Lust hatte, sich vorzustellen.“ (`0220`), Radio (`RAD_0230`), Pixel und der rote Kreis (`0250`), „Sie werden noch mal warm. Woanders.“ (`0270`), „Dann wirst du tauschen.“ (`0290`), „Dann ist sie ausgezogen.“ (`0310`), „Dann wollte sie die Welt rühren.“ (`0330`), „Ich kenne alle Opas. Das ist mein Alter.“ (`0370`), „Darum ist es eine Prophezeiung und kein Bericht.“ (`0390` bis `0410`), „Sie hat geübt.“ (`0515`), „Das Gerät kann Zuneigung entwickeln.“ (`0560`), Gabel (`0580`, `0590`), Kuckuck „Milch!“ (`0610` bis `0630`), „Zum Nachprüfen.“ (`0660`), Kaktus mit Häkelmütze (`0715`), Kehrblech (`0730`, `0735`), „in Vasenform überreicht“ (`0770`), „Er wird weinen. Vor Freude.“ (`0780`) | zündet | Die Oma weiß alles und sagt es nebenbei. Das Rätsel dreht die Vorlage um: Max verlangt die Vase, weil er sie sowieso zerbricht. | |
+| 7 Küche der Orakel-Oma | „Vielleicht für den Teil von mir, der gleich bleibt.“ (`0695`), „zu klein, um es zu lesen. Und zu groß, um es zu vergessen.“ (`0750`), Scherbe als Herz: „Natürlich. Bei ihr ist nichts zufällig.“ (`0745`) | mittel | Drei Sinnsprüche. `0695` versteht man nicht, `0750` ist ein Kalenderblatt, `0745` erklärt sich selbst. | `0695`: „Der Tee dampft noch. Sie hat ihn eingeschenkt, bevor ich geklingelt hab.“ / `0750`: „… ‚Die vierte Zutat: eine Prise …‘ Das letzte Wort ist winzig. Sie hat es extra klein geschrieben. Für jemand anderen.“ / `0745`: „Eine Scherbe sieht aus wie ein Herz. Die hat sie beim Fegen liegen lassen. Mit Absicht, wetten?“ |
+| 7 Küche der Orakel-Oma | Pixel: „Ich habe daher beschlossen, beleidigt zu sein.“ (`PIX_0535`) | mittel | „Beleidigt“ als Pointe, wie in Welt 2. | „Kekse im Ofen. Ich rieche sie bis hierher, und ich darf keinen haben. // Ich habe mir die Uhrzeit gemerkt. Für die Abrechnung.“ |
+| 8 Büroturm | „von Ihnen, nicht von der Tür“ (`W3_TURM_SCH_0010`), „ich bin wir“ / „Wir.“ (`0030` bis `0050`), Gruppenchat (`0060`), Zeitlupe (`0080`), „Sie waren im Angebot.“ (`0120`), „bevor es ein Hobby wird“ (`0220`), „Neugier haben Hunde.“ (`0235`), „Bildschirmschoner, in dem man wohnen muss“ (`0250`), „zu viele Meetings“ (`0260`), Wasserspender (`0280`, `0285`), „Wenigstens weiß sie, was sie ist.“ (`0300`), „die Verantwortung übernehmen“ (`0310`), „ödeste Suchbild der Welt“ (`0320`), „sagt einer sehr langsam meinen Nachnamen“ (`0325`), „Kopien halten Tassen.“ (`0340`), Tausch und Mittagspause (`0350` bis `0420`, „Wir probieren Nudeln.“), „Kopien sind Akten“ (`0450`), „Zwei Wörter, die nie in einem Satz vorkommen sollten.“ (`0460`), „Verdächtig menschlich.“ (`0480`), „Ich habe schon immer anders gerochen.“ (`0500`), Pflanze als Original (`0520`), „Sie wieder, wir wieder, alles wieder“ (`0540`), „eine Tasse mit Verantwortung“ (`0570`) | zündet | Dreißig Schmidts in Hausschuhen, die einer Tasse gehorchen. Das Rätsel ist der Witz. `0520` hatte einen Tippfehler (korrigiert, siehe Abschnitt 5). | |
+| 8 Büroturm | Hexenschuss: „… und das kenn ich sonst nur von Hausaufgaben“ (`0100`), „Montag, den jemand als Treppe gebaut hat“ (`0265`), „ehrlich gesagt, auch null Wasser“ (`0290`), „Das ist keine Regel. Das ist eine Drohung mit Herz.“ (`0470`) | mittel | `0100`: Der Hexenschuss ist schon die Pointe, der Hausaufgaben-Nachsatz schwächt sie. `0265`: Montag steht in Welt 3 dreimal. `0470`: fast wörtlich `W2_INV_MAX_0535` („Drohung mit Pfote“). | `0100`: „Hexenschuss. Mit sechzehn. In einer Simulation. Der Rücken ist nicht mal echt, und er tut trotzdem weh.“ / `0265`: „Ich steig eine Stufe hoch und steh genau da, wo ich vorher war. Die Treppe und ich haben dasselbe Fitnessprogramm.“ / `0290`: „Ein Becher Wasser. Schmeckt nach nichts. Null Kalorien, null Wasser.“ / `0470`: „… ‚Vor allem. Vor allen. Vor sich selbst.‘ Bis ‚vor allem‘ fand ich die Regel noch nett.“ |
+| 9 Terminal | „Kinderzimmer für Elektriker“ (`W3_TERM_MAX_0010`), „das hübscheste Passwort“ (`0020`), Kalle in Kleinbuchstaben (`KAL_0060` bis `0100`: „das ist sein ganzer witz“, „ich bin fließend. fast.“), „Ich schreibe einem Kater bitte.“ (`0120`), Miau-Morse (`0130` bis `0190`: „rot und grün sind für mich theorie“, „Befehl mit bitte“, Thunfisch als Bedingung), „bis 2100“ (`0200`), Pixel am Patch-Panel (`0210` bis `0240`, „Buchsen riechen nämlich.“), Ente (`0250` bis `0290`: „die Kapsel quakt“, „nein, moment. das warst du.“), „leg dich hin, also: bleib stehen“ (`0320`), „überlegt sich gerade, was es drüben sein will“ (`0330`), „übersetzt … sogar Bürokratie“ (`0350`), „meinen Chef, die Tasse“ (`0370`), „Leute mit Headset“ (`0380`) | zündet | Kalle hat mit den Kleinbuchstaben eine dritte eigene Stimme nach Vier und Schmidt. Das Rätsel verteilt die Arbeit sauber auf beide Figuren. | |
+| 9 Terminal | Cursor „wie ein Lehrer, der genau weiß, dass ich die Hausaufgaben nicht hab“ (`0035`), „in jeder Welt dasselbe: Sonnenbrillen und Montage“ (`0360`) | mittel | Schule und Montag kommen in Welt 3 zehnmal vor. `0360` wiederholt außerdem die Form „in jeder Welt gleich“. | `0035`: „Der Cursor blinkt. Blink. Blink. Er fragt nichts, er wartet nur. Das ist schlimmer.“ / `0360`: „Die Kekse wurden Hundekuchen, die Akte wurde Papier. Nur die Brille hat sich nichts anmerken lassen.“ |
+| 10 Basis, erstes Aufwachen | „falsche Verteilung … protokolliert“ (`W3_BAS_PIX_0020`), Making-of (`0030`), „Technik, Terminal, Tee. Alles mit T.“ (`KAL_0040`), „Wer redet, will etwas. Wer sich äußert, hat bereits recht.“ (`0050`), Hundekuchen (`0070` bis `0090`, „Ich habe für weniger Freundschaften beendet.“), „Außer Kaffee.“ (`0120`), „übersetzt quasi meine Hosentaschen“ (`0130`), „Alle bereuen es.“ (`0160`), „Es sind vier.“ (`0180`), „Mein Appetit ist in einer anderen Ebene.“ (`0190`), „mehr Haltung als Plan“ (`0320`), Ruhephase (`1340`, `1350`), „gähnen dabei“ (`1370`), „Ist Kabel. Kabel ist nie einfach.“ (`0370`), „mit Tabelle fließend“ (`0410`), „Das ist das Gruselige.“ (`0480`) | zündet | Kekse werden Hundekuchen: Die Ebenen-Regel wird mit einem Lacher erklärt statt mit einem Tutorial. | |
+| 10 Basis, erstes Aufwachen | Pixel: „Bei ihm heißt es allerdings Wochenende.“ (`PIX_1400`) | mittel | Dritte Wochenend-Pointe der Welt. | „Er rostet. So nennt man das, wenn einer in der Ecke steht und nicht mehr aufräumt. // Ich kenne das von Max. Bei ihm rostet nur nichts, das ist der ganze Unterschied.“ |
+| 10 Basis, Ansehen | „Bett, das zu viel verspricht“ (`W3_BAS_MAX_0510`), „Ich lieg also da und guck mir beim Liegen zu.“ (`0520`), „Unbezahlte Arbeit.“ (`PIX_0525`), „Ich habe ihn fotografiert. Innerlich“ (`0530`), „als wäre er von allein aufgewacht“ (`0540`), „Und hatte, sagt Kalle.“ (`0550`), „Ich bin das Wetter.“ (`0600`), „Pixel ist nass.“ (`0610`), „nicht an mich gerichtet“ (`0620`), „Ein Profi lässt sich nicht von jedem Loch in der Wand herumkommandieren.“ (`0625`), „aus ganz anderen, viel besseren Gründen“ (`0630`), „Warum sollte ich als Einziger nass sein?“ (`0650`), Sicherung „Tee“ (`0660`, `0665`), „Ich bin die Sonne.“ (`0680`), „am eigenen Akku rumzulöten“ (`0700`), Pizzakartons (`0720`), Handtuch (`0735`, `0740`), „zieh ich keinen Stecker“ (`0755`), „gehen wir alle raus. Schnell.“ (`KAL_0760`), Schalter „Bitte nicht“ und „Wirklich nicht“ (`0775`), „Versprechen, gleich runterzufallen“ (`0785`), Vorfahren nicken (`0790`), „Wir sind quitt.“ (`0810`), „Ich wiederhole mich laut.“ (`0830`), Rebellen (`0840` bis `0860`, „Vierzig Minuten lang.“), „Es sind vier. Er hatte recht.“ (`0895`), „Fisch, der schweigt“ (`0910`) | zündet | Pixel als Wettermacher ist die schönste Mechanik des Spiels, und jede Aktion hat ihre eigene Zeile. | |
+| 10 Basis, Ansehen | Nachsatz „Klingt nach mir.“ (`0520`), „Das ist das Einzige hier, worin ich gut bin.“ (`0560`), „Mein Leben, in drei Kabeln.“ (`0690`), Pixel: „Würde, Fell und ein ausgezeichnetes Gedächtnis“ (`PIX_0880`) | mittel | Selbstabwertung als Standardschluss. `0880`: Dreierliste, dazu merkt sich Pixel in dieser Welt viermal etwas „für immer“. | `0520`: Nachsatz streichen, „… guck mir beim Liegen zu.“ reicht. / `0560`: „Ich tipp ‚zurück‘. Die Kapsel summt. Ich leg mich hin. Zum ersten Mal ist das eine Aufgabe.“ / `0690`: „… Meine Kapsel hängt da dran. Drei Kabel, und an einem davon hänge ich.“ / `0880`: „Komm mir nicht damit. // Ich weiß, was das ist. Ich weiß, für wen das ist. Und ich weiß, wo du schläfst.“ |
+| 11 Piepsi | „Naturgesetz … Vollstrecker“ (`W3_PIEP_PIX_0010`), „Kalle-Kaffee. Da war eine Woche Arbeit drin.“ (`0040`), „Er sagt, du bist ein Idiot.“ (`0070`), „hauptsächlich aus Beschwerden“ (`0090`), „als wäre das ein Fehlercode“ (`0110`), Opa als Hologramm (`OPA_0120`, `0130`), „Kuchen und schlechtem Gewissen“ (`0150`), „Weltrettung mit Backanleitung“ (`0160`), „nennt mich nie wieder Eimer“ (`0180`), Tabelle sortieren (`0190` bis `0210`), „‚Thunfisch‘ heißt Thunfisch.“ (`0220`), „Eimer, der es zu etwas gebracht hat“ (`0230`), „Ich habe Regeln. … eine einzige“ (`0260`), „Bei Pixel ist es Kultur.“ (`0270`), „Er steht dann wirklich.“ (`0280`), „Kalles Kaffee lebt.“ (`0295`) | zündet | Beste Pixel-Lösung des Spiels: Die Katze wirft die Tasse, weil sie eine Katze ist. Dazu kommt Opas Nachricht genau im richtigen Moment. | |
+| 11 Piepsi | „Zwei Silben, eine ganze Haltung.“ (`0250`), „Über mich. Das passiert selten.“ (`0235`) | mittel | `0250`: Piepsi piept einmal, und „Fass mich nicht an“ hat vier Silben. Die Zahl stimmt für nichts von beidem. `0235`: Selbstabwertung. | `0250`: „Er sagt: ‚Fass mich nicht an.‘ Ein Piep, eine ganze Haltung.“ / `0235`: „Er fährt einen kleinen Kreis, wenn er sich freut. Gerade fährt er drei.“ |
+| 12 Laboreingang | „Alles hier ist frisch. Ich wische seit neunzehn Jahren.“ (`W3_EING_HAU_0010`), „Den zweiten Punkt habe ich erledigt.“ (`0050`), „Ich erkenne mich wieder.“ (`PIX_0060`), „Ich bin der mit dem Wischmopp. Also: alle.“ (`0080`), „Ich denke seit neunzehn Jahren.“ (`0130`), „Das ist mein Satz, Bursche. … Bring ihn sauber zurück.“ (`1086`), „Ich komme wieder. Also: Ich bleibe hier.“ (`0150`), Gedankentrick (`0160` bis `0180`, „Ich suche nur Dreck.“), „der schönste Tag meines Betriebslebens“ (`0200`), „Jede bekommt einen sauberen Eingang.“ (`0210`), „Diesmal stimmt es.“ (`0220`), „Auf meiner fehlt Thunfisch“ (`0230`), Olivenöl (`0240` bis `0270`), „Er wollte eine Karte, keine Biografie.“ (`0340`), „Der Zettel ist mein Leben.“ (`0360`), „Das Labor ist ‚dran‘.“ (`0370`), „zwei Knoten, eine Hoffnung“ (`KAL_0380`), „Ich war heute schon mehrmals nass.“ (`0400`), „Und er würde es höflich merken“ (`0440`), Pinnwand (`0450` bis `0470`, „Fair.“), „und das nennt man dann Design“ (`0480`), „Kühlschrank, der die Welt regiert“ (`0505`), „Wenn er jemals eine Gerade wischt, ist etwas passiert.“ (`0520`), „höflich nicht wissen, was tun“ (`0530`), „bevor sie fallen“ (`0540`) | zündet | Der Hausmeister ist die liebenswerteste Nebenfigur des Spiels. Das Olivenöl aus Welt 2 zahlt sich hier mit einem echten Gefühl aus. | |
+| 12 Laboreingang | „Erstens wischen. Zweitens Sahra Konner finden. Drittens Türen halten. Ich bin seit neunzehn Jahren bei Punkt zwei.“ (`1060`) | zündet nicht | Widerspricht `0050`. Dort steht „Sahra Konner finden“ oben und „Boden wischen“ darunter, und Pixels Pointe in `0060` („den zweiten Punkt erledigt, weil der erste zu schwer war“) hängt an dieser Reihenfolge. Die Zeile sieht nach späterem Einschub aus. | „Erstens Sahra Konner finden. Zweitens wischen. Drittens Türen halten. Ich bin seit neunzehn Jahren bei Punkt zwei. Punkt eins hebe ich mir auf.“ / „Erstens die Frau. Zweitens der Boden. Drittens die Türen. Zwei und drei kann ich. Bei eins fehlt mir die Adresse.“ |
+| 12 Laboreingang | „Es hallt vor allem in mir nach, weil es sonst nirgends ankommt.“ (`0320`), „Sisyphos mit Mopp“ (`0490`), „wie ein Abschiedsbrief“ (`0515`), Lämpchen „ein bisschen traurig“ (`0335`) | mittel | `0320` klingt geschrieben, kein Sechzehnjähriger redet so. `0490`: Formel „X mit Y“ plus Bildungswissen. `0515`, `0335`: Gegenstände mit Gefühlen, das Muster der Zweitzeilen. | `0320`: „Zu, natürlich. Ich klopfe. Es hallt. Sonst nichts. Die Tür hat Zeit, ich nicht.“ / `0490`: „… es tropft immer noch. Neunzehn Jahre gegen einen Tropfen. Der Tropfen führt.“ / `0515`: „Am Boden ist noch der letzte Kreis vom Wischen. Perfekt rund. Er hat sogar im Gehen noch gewischt.“ / `0335`: „Das Lämpchen leuchtet rot. Es hat so lange Nein gesagt, dass es Ja wahrscheinlich nachschlagen muss.“ |
+| 13 Die vierte Zutat | „Zwei ist eine halbe …“ (`W3_SUPP_VIE_0020`), „Und sie stand in einem Keks.“ (`0040`), „hat nur noch drei“ (`0060`), Salz (`0070` bis `0090`), „Vier Tränen. Ich habe mitgezählt.“ (`0100`), „Ich sag's nur, ich mach's nicht.“ (`0110`), „SIEHST DU?“ (`WEI_0120`), „Das Sicherheitskonzept dieser Stadt ist eine Suppe.“ (`0140`), Kartons (`0150`), „drei mit Flossen“ (`0180`), „Akten haben zu viele Seiten.“ (`0190`) | zündet | Das Rätsel endet auf einem Gefühl und vier Pointen. Der weinende Mann bekommt seinen Schlusspunkt. | |
+| 13 Die vierte Zutat | „Ich ess sie nicht. Zu wertvoll. Zu seltsam.“ (`0200`) | mittel | Läuft aus. | „Die Rezeptkarte ist jetzt ein Keks. Drüben hab ich sie gelesen, hier könnte ich sie essen. Ich lass beides.“ |
+| 14 Testkammer 1 | „Schulsekretärin, nur mit Laser“ (`W3_KAM1_MAX_0030`), „Ein sehr müdes Gewissen.“ (`PIX_0040`), „Das ist unhöflich. Ich ignoriere sie. Zu deinem Besten.“ (`MUT_0050`), „Also fasse ich es an.“ (`0070`), „Viel Glück“ (`0075`), Portal zu Opa: „Hast du an die Milch gedacht?“ / „Batterie leer.“ (`0090` bis `0120`), „Hätten wir doch bloß eine Ewige Energiezelle.“ (`0130`), „Die Batterie nicht.“ (`0150`), „Das war nicht persönlich gemeint. Doch.“ (`0160`), „Dann ist es deine Schuld.“ (`0180`), „Hi, Bernd.“ und Pixels Eifersucht (`0190`, `0200`), „Bernd hat Prinzipien.“ (`0340`), „Lies die Stellenbeschreibung.“ (`0350`), „Kuchen (symbolisch)“ (`0370`), „Nicht mal Hundekuchen-Niveau.“ (`0380`), „träumt bestimmt in Kacheln“ (`0410`), „Kompliment … von einem Etikett“ (`0430`), „Ich brauchte nur dein Gewicht. … Das klang falsch.“ (`0470`), „niemand hat mir je nachgerufen“ (`0480`), „Das schaffst du nicht, aber ich glaube an dich. Das war für die nächste Kammer.“ (`0490`), „Dein Kuchen ist in einer anderen Testkammer.“ (`0510`), Fehltausche (`0530` bis `0550`), „Zwei Attrappen, die sich ansehen.“ (`0580`), „Der Aufkleber lächelt trotzdem.“ (`0590`) | zündet | Der Portal-Moment mit Opa ist der beste einzelne Gag des Spiels. Er ist zugleich Handlung (Opa lebt) und bereitet das Finale vor. | |
+| 14 Testkammer 1 | „Das ist das zweite Mal heute, dass mich ein Boden ignoriert.“ (`0320`), „weil M.U.T.T.I. es dreimal gesagt hat“ (`0390`), „nur noch meine Enttäuschung“ (`0420`), „wie Montagmorgen“ (`0450`) | mittel | `0320`: Das erste Mal findet man nirgends. `0390`: Sie sagt es einmal (`0160`). `0420`: Abstraktum statt Bild. `0450`: Montag. | `0320`: „Ich stell mich drauf. Nichts. Für einen Bodenschalter bin ich Luft.“ / `0390`: „… Das weiß ich, weil M.U.T.T.I. es gesagt hat. Zu meinem Besten.“ / `0420`: „Eine leere Halterung. Da hing das Portalgerät. Eine Sekunde Opa, und dann das hier.“ / `0450`: „Oh. Ich bin … schwer. Meine Sneaker machen Rillen. So fühlt sich Bernd also die ganze Zeit.“ |
+| 15 Testkammer 2 | „Ich sage das, damit du es weißt. Nicht, damit du es lässt.“ (`W3_KAM2_MUT_0010`), „Danke für die Ehrlichkeit.“ (`0020`), „Das nennt man Erziehung.“ (`0040`), Huhn „wie einen Pokal“ (`0050`), „In manchen hat es alles gelöst.“ (`0060`), Seilrolle (`PIX_0070`), „quietsch, quietsch“ (`0100`), „Handy mit aufgeblähtem Akku“ (`0110`), „Ich bin neugierig, nicht lebensmüde.“ (`0115`), „Unter ‚kreativ‘. Das ist bei mir kein Lob.“ (`0120`), Kritzelei (`0140`, `0150`), „Ich kenne solche Näpfe.“ (`0160`), „Denkmal für nichts“ (`0180`), „Ein wahres Huhn.“ (`0210`), „Auch bei der mit dem Filzstift.“ (`0220`), „Man steckt Freunde nicht in Taschen. Pixel ausgenommen.“ (`0240`), „Es gibt nur drei. Die Chancen stehen also gut. Für mich.“ (`0270`) | zündet | M.U.T.T.I. droht in Fürsorge-Sätzen. Das tödliche Gummihuhn in der Tasche ist ein Bild, das bleibt. | |
+| 15 Testkammer 2 | „Ehrlich gesagt mehr Würde als ich“ (`0055`), „Wie in der Schule.“ (`0200`), „Der Mensch war sehr verletzt.“ (`0145`) | mittel | Füllwort plus Selbstabwertung, Schule, und ein Nachsatz, der das Bild erklärt. | `0055`: „Das Huhn hat Würde. Es steht auf einem Sockel. Ich hab noch nie auf einem Sockel gestanden.“ / `0200`: „… Ich steh zwischen zwei Dingen, die ich nicht anfassen will. Ich bleib einfach stehen. Das kann ich.“ / `0145`: „Darunter ein kleiner Kuchen. Durchgestrichen. Zweimal. Einmal reicht bei Kuchen offenbar nicht.“ |
+| 16 Testkammer 3 | „Beides ist mein Recht.“ (`W3_KAM3_MUT_0010`), „Er hat es in einer Stunde gelernt. Talent.“ (`PIX_0040`), „und zwar mit Bosheit“ (`0055`), „Nur eins davon ist ein Etikett.“ (`0070`), „Das war ein Fehler.“ (`0085`), „Alle drei antworten nicht. Ich schon.“ (`0090`), die Tür kennt die Glastür (`TUR_0110`, `0120`), „Fell gegen Blech. Fell gewinnt.“ (`0140`), „Ich habe nichts gelernt.“ (`0180`), „Bernd ist verschlossen.“ / „Endlich.“ (`0190`, `0200`), Bernds einzige Zeile (`BER_0230`), „Das beunruhigt mich.“ (`0260`), „endlich mal was pünktlich geliefert“ (`0270`), „Ich habe den Zettel verlegt.“ (`0310`) | zündet | Die Kammer baut auf Rätsel 5 auf und belohnt das Erinnern. Jeder falsche Tausch ist ein eigener Witz, darum macht Scheitern hier Spaß. | |
+| 16 Testkammer 3 | „Das ist kein Zufall, das ist Rache mit Aufkleber.“ (`0030`), „Türstopper mit Persönlichkeit“ (`0290`), „Das ist irgendwie das Traurigste.“ (`0295`) | mittel | Zwei Bauformen in einem Satz (`0030`), die Formel „X mit Y“ noch einmal (`0290`), Füllwort (`0295`). | `0030`: „Bernd. Du bist zurück, und du stehst genau vor der Tür. Du hast gewartet, bis ich komme. Gib's zu.“ / `0290`: „Das Gummihuhn liegt am Boden. Schwer. Es hat einen Würfel abgelöst und beschwert sich nicht.“ / `0295`: „Ich stups das Huhn mit dem Fuß an. Kein Quietschen. Es ist jetzt ein ernstes Huhn.“ |
+| 17 Kern | „als hätte ich mein Zimmer nicht aufgeräumt“ (`W3_KERN_MAX_0020`), „Jedenfalls bisher nicht.“ (`PIX_0030`), „Es gibt nie Kuchen.“ / „Meintest du: Gehorsam?“ (`0050`, `0060`), das Duell (`0110` bis `0200`, „bin ich keine gute Mutti.“ / „Doch. Ehrlich gesagt: ziemlich normal.“), „eine Pfote, einen Tischrand und einen günstigen Moment“ (`0220`), „Das ist Ernährung.“ (`0260`), „Die Zutaten. Die Temperatur. Die Menschen.“ (`0300`), „Umarmungen sind unhygienisch.“ (`0320`), Rückgriff Hundekuchen (`0330`), „Ungefähr eine halbe Sekunde lang.“ (`0415`), „Oh.“ (`0430`), „Außer Pixel.“ (`0450`), „technisch unmöglich und trotzdem grausam“ (`0460`), „die beste Fernbedienung, die ich je hatte“ (`0490`), Dosenöffner (`0510`), „Eine Fernbedienung braucht jemanden, der sie findet.“ (`0530`), „Wie ein Schlaflicht.“ (`0545`), „Als würde eine Warnung sich entschuldigen.“ (`0570`), „Tausch für Leute ohne Plan B“ (`0600`) | zündet | Der Endgegner wird mit drei Sätzen besiegt, und der letzte Satz ist ein Trost. „Ehrlich gesagt“ ist hier ausnahmsweise richtig, weil Max es ernst meint. | |
+| 17 Kern | „Opa will immer das Heißeste.“ (`0410`), „Sie sieht aus wie … egal.“ (`0500`), „Zum ersten Mal sieht sie aus wie das, was sie ist.“ (`0540`), „ein Loch in der Form von Opas Wunsch“ (`0560`) | mittel | `0410` bleibt unklar. `0500` ist der dritte Wink auf die Batterie. `0540` und `0560` sind glatte Schlusssätze. | `0410`: „… Opa will die. Opa hat nicht gesagt, dass sie glüht. Opa sagt so was nie dazu.“ / `0500`: „… Plus und Minus am Ende. Ewig. Steht drauf. Mit Garantie, hoffe ich.“ / `0540`: letzten Satz streichen, die Zeile endet stark auf „nach dem Backen vergessen hat“. / `0560`: „Ein leerer Sockel. Da war die Zelle. Jetzt ist sie in meiner Hosentasche. So schnell geht Weltgeschichte.“ |
+| 17 Abschluss | „Herr Vier wird reich.“ (`W3_ENDE_KAL_0030`), „Ewig ist lang.“ (`0045`), „Die Sonnenbrillen behalten wir.“ (`0050`), „Keine war die Richtige. Aber alle haben sich bedankt.“ (`HAU_0060`), „Es klingt nach Milch.“ (`0110`), Handtuch (`0130`), „Ein nasser, aber guter.“ (`DEC_0140`) | zündet | Alle Nebenfiguren bekommen einen Abgang in einem Satz. | |
+| 17 Abschluss | „schwer wie ein … Ding. Ich hätte das fast als etwas Bekanntes bezeichnet. Hab ich nicht.“ (`W3_ENDE_MAX_0040`) | zündet nicht | Vierter Wink auf die Batterie, und er redet über den Witz, statt ihn zu machen. Der Spieler weiß es seit „Bitte AA-Batterie einlegen“. | „Die Zelle. Drüben glühend, hier kalt und schwer. Für ‚ewig‘ ist sie erstaunlich klein.“ / „… hier kalt und schwer. Sie passt genau in meine Faust. Opa hat sie sich bestimmt größer vorgestellt.“ |
+| 18 Zurufe | „er wird es nicht sein“ (`W3_STR_PIX_0920`), „es sind nicht die Nudeln“ (`0930`), „Er würde Beige nehmen.“ (`W3_APO_PIX_0920`), „Das ist Erfahrung.“ (`W3_SIM_PIX_0910`), „Ich bin in einer anderen Ebene und leide trotzdem.“ (`W3_KUCH_PIX_0910`), „Pappkartons, die spannender waren“ (`W3_TURM_PIX_0910`), Ladebalken (`W3_BAS_PIX_1310`), „Ich sage das als Experte.“ (`1320`), „Keiner, glaube ich.“ (`W3_EING_PIX_0910`), „Die Tür ist rund. Du bist eckig.“ (`0920`), „Trotzdem ist mein Blick strenger.“ (`W3_KAM1_PIX_0920`), „als Hinweis und als Lebensweisheit“ (`W3_KERN_PIX_0920`) | zündet | Die Zurufe sind kurz und ortsgenau. | |
+| 18 Zurufe | „junger Mann, und offen gesagt auch mehr Motivation“ (`W3_SIM_PIX_0920`), „Ich bin der Einzige, der noch arbeitet.“ (`W3_KERN_PIX_0910`) | mittel | Zwei Füllsel in einer Zeile. `KERN_0910` hat dieselbe Form wie `STR_0930`. | `SIM_0920`: „Die Katze läuft schon wieder vorbei. Sie geht denselben Weg wie vorhin und ist trotzdem weiter als du.“ / `KERN_0910`: „Die Küchenmaschine sagt nichts mehr. Du sagst nichts mehr. Nur einer von euch hat dafür eine Ausrede.“ |
+| 18b Inventar | „Papierschnitt“ (`W3_INV_MAX_0015`), „Erdbeere und Konsequenzen“ (`0020`), „Hätte ich mir größer vorgestellt.“ (`0025`), „Ich höre alles, was knistert.“ (`PIX_0045`), „Bäckerei auf der Flucht“ (`0055`), „bevor es jemand sieht“ (`0060`), „Das reicht für ein ganzes Leben.“ (`0075`), „Kinderlied, das niemand singen will“ (`0085`), „Für mich. Endlich.“ (`0090`), „Ich hab ein Gummihuhn und Probleme.“ (`0105`), „guckt es vorwurfsvoll“ (`0110`), Pixels Jagd (`0115`), „Hose mit Klimaanlage“ (`0125`), „Opa, du schuldest mir eine Hose.“ (`0130`), Bügeleisen (`0135`) | zündet | | |
+| 18b Inventar | „Als Erinnerung, dass ich einmal die unbequeme Wahl getroffen hab.“ (`0035`), „Ohne Brille weiche ich nur Hausaufgaben aus.“ (`0065`) | mittel | `0035`: Max sagt seine eigene Entwicklung auf. `0065`: Hausaufgaben. | `0035`: „Ich behalte sie. Nicht zum Schlucken. Als Beweis. Mir glaubt das sonst keiner, am wenigsten ich.“ / `0065`: „Mit der Brille könnte ich mich nach hinten lehnen und Kugeln ausweichen. Hab ich probiert. Ich sag nur: Hexenschuss.“ |
+| 18c Gespräch erschöpft | „Ich habe dir die Tür auch schon zweimal gezeigt.“ (`W3_ABS_MOR_0010`), „Oder zur Langeweile.“ (`0020`), „verdächtig gründliche Menschen“ (`DEC_0030`), „Fälle bleiben immer offen.“ (`0040`), „Vier Mal. Mehr ist unhöflich.“ (`VIE_0050`), „Aber schweigend.“ (`0060`), „weißt du schon morgen“ (`ORA_0070`), „Nimm einen Keks. Nein. Doch nicht.“ (`0080`), Schmidt und das Formular (`SCH_0090`, `0100`), „Einmal davon richtig. Rate, welches.“ (`KAL_0110`), „Nach Gefühl.“ (`0120`), „Der Rest ist Wischen.“ (`HAU_0140`) | zündet | Jede Figur verabschiedet sich in ihrer eigenen Sprechweise. Stärkste Abschluss-Zeilen aller Welten. | |
+| 18c Gespräch erschöpft | „Ich bin ein Hausmeister, kein Gesprächspartner.“ (`HAU_0130`) | mittel | Bauform „Ich bin X, kein Y“, wie der Automat („eine Linse, kein Ohr“). | „Servus, Bursche. Mehr hab ich nicht im Programm. Servus ist bei mir Begrüßung, Abschied und Unterhaltung.“ |
+| 19 Pixel auf Mensch und Gegenstand | „Wir werden keine Freunde.“ (`W3_STR_PIX_1020`), „Ich überlege ernsthaft.“ (`1030`), „Ich habe diese Wirkung.“ (`1040`), „Der Schirm hält mich für weise.“ (`1050`), „Katze im Regen“ (`1060`), „Kunst oder Einsamkeit“ (`1080`), „Es war der Regen.“ (`1090`), „Kein Symptom. Nur Haltung.“ (`W3_APO_PIX_1010`), „Er tippt weiter. Respekt.“ (`W3_BAS_PIX_1010`), „Eine. Von vier.“ (`1020`), „Aber sie sind richtig.“ (`1040`), „Bleib ruhig drüben.“ (`1060`), „Es wurde für mich gebaut“ (`1070`), „Er will die Bühne nicht teilen.“ (`1100`), „drei Tage wach“ (`1110`), „Vorbeugend.“ (`1140`), „Mir ist jetzt schlecht.“ (`W3_EING_PIX_1020`), „Der Zettel schmeckt besser.“ (`W3_BAS_PIX_1160`) | zündet | | |
+| 19 Pixel auf Mensch und Gegenstand | „… weil er nicht beleidigt ist“ (`W3_STR_PIX_1010`), „Der Geruch ist das Grausamste an einem leeren Karton.“ (`W3_BAS_PIX_1080`), „Nein. Ich sage es nicht. Noch nicht.“ (`1170`) | mittel | `1010` ist schwer zu verstehen. `1080`: „Grausamste, Traurigste, Gruseligste“ steht in Welt 3 fünfmal. `1170`: fünfter Wink auf die Batterie. | `1010`: „Er sieht mich an und schreibt nichts auf. // Das ist das größte Kompliment, das dieser Mann zu vergeben hat. Ich nehme es an.“ / `1080`: „Pizzakarton, leer. Der Geruch ist noch da. Ein Karton, der nach Essen riecht und keins hat. Wie ein Versprechen von Max.“ / `1170`: „Die Zelle ist kalt und riecht nach Metall. Ich lege mich nicht drauf. Schlimmeres kann ich über einen Gegenstand nicht sagen.“ |
+| 20 Hinweise | „Ich verstehe nur Thunfisch. Jeder hat sein Wort.“ (`W3_HINT_PIX_0230`), „Gegen Bezahlung.“ (`0310`), „Da warst du schon, sechzehn Jahre lang.“ (`0350`), „Oma-höflich“ (`0420`), „Tassen sind Kopien. Alle.“ (`0620`), „Freiwillig. Fast.“ (`0660`), „Wenn Max quakt, war es die falsche.“ (`0750`), „Dann mag er dich. Einer muss.“ (`0830`), „Kalle ist Kabel.“ (`0910`), „Sei nicht komisch deswegen.“ (`0920`), „Das ist ein Lehrplan.“ (`1000`), „und dann sehr lange nicht mehr“ (`1130`), „Eins davon bin ich.“ (`1210`), „Ich übernehme nie welche.“ (`1430`), Wartezeile mit Toaster (`9995`) | zündet | Die Hinweise helfen in drei sauberen Stufen und bleiben dabei Pixel. `0120` hatte einen Tippfehler („braucht du“, korrigiert, siehe Abschnitt 5). | |
+
+**Bilanz Welt 3.** Grob gezählt 480 Gags, davon zünden rund 430. Das ist die dichteste Welt. Der Grund ist die Bauweise: Jede Figur hat eine einzige Regel und hält sie durch. Herr Vier denkt in Vieren, Schmidt spricht ohne Punkt, Kalle schreibt klein, der Hausmeister hat seinen Zettel, M.U.T.T.I. sagt „Zu deinem Besten“, die Oma weiß es schon. So entstehen Witze aus der Figur und nicht aus dem Vergleich.
+
+**Wiederholungen in Welt 3:**
+
+1. Max macht sich im Vergleich mit Gegenständen klein: Knopf, Huhn, Telefonbuch, Kapsel, Piepsi („mehr Würde als ich“, „höhere Ansprüche als ich“, „Klingt nach mir“, „Das passiert selten“). Rund ein Dutzend Mal.
+2. Schule, Hausaufgaben, Lehrer: zehn Stellen (`W3_STR_0065`, `W3_TURM_0100`, `W3_TERM_0035`, `W3_INV_0065`, `W3_KAM2_0200`, `W3_KAM1_0030` und weitere).
+3. „Klingt nach meinem Wochenende“, „Klingt wie mein Samstag“, „Bei ihm heißt es Wochenende“: dreimal dieselbe Pointe.
+4. Die Formel „X mit Y“: „Bequemlichkeit mit Akku“, „Brot mit einer Meinung“, „Faulheit mit Vokalen“, „Drohung mit Herz“, „Befehl mit bitte“, „Tasse mit Verantwortung“, „Weltrettung mit Backanleitung“, „Sisyphos mit Mopp“, „Rache mit Aufkleber“, „Türstopper mit Persönlichkeit“, „Maschine mit guter Kinderstube“, „Elektriker mit Fell“. Einzeln gut, zu zwölft ein Muster. Vier davon würde ich umbauen (`W3_TURM_0470`, `W3_EING_0490`, `W3_KAM3_0030`, `W3_KAM3_0290`).
+5. Zweitzeilen, in denen ein Gegenstand Gefühle hat oder ein wehmütiger Vergleich fällt: „wie ein Abschiedsbrief“ (`W3_EING_0515`), „ein bisschen traurig“ (`0335`), „Es fehlt ihm bestimmt.“ (`W3_KAM2_0185`), „damit er sich nicht einsam fühlt“ (`W3_KAM3_0085`), „Jemand war vor mir hier, und er hat gelebt.“ (`W3_KAM1_0415`), „hat sich nicht verabschiedet“ (`W3_BAS_0515`), „Loch in der Form von Opas Wunsch“ (`W3_KERN_0560`). Einzeln schön. Als Regel für das zweite Hinsehen wird es vorhersehbar.
+6. Pixel merkt sich etwas für immer (`W3_BAS_0880`, `W3_EING_0180`, `W3_KAM1_0200`, `W3_KAM1_0600`). Pixel, dem niemand dankt (`W3_EING_0270`, `W3_KAM1_0480`, `W3_KAM3_0280`).
+7. Der Wink auf die Batterie: `W3_KAM1_0110` und `0130`, `W3_KERN_0500`, `0520` und `0530`, `W3_ENDE_0040`, `W3_BAS_PIX_1170`. Zwei reichen. Mein Vorschlag: `KAM1` und der Dosenöffner bleiben, die anderen drei gehen.
+8. „Entweder A oder B“ als Pointe: zehnmal („süß oder sehr beunruhigend“, „sehr traurig oder sehr ehrlich“, „Kunst oder Einsamkeit“, „Kunst oder Sturheit“, „Erleuchtung oder Langeweile“).
+9. Zählbare Füllsel: „ehrlich gesagt“ 7, „Ich glaub(e)“ 13, „junger Mann“ 11, „beleidigt“ 7, „ein bisschen“ 8, „irgendwie“ 5, „aus Prinzip“ 4, „Das ist kein X, das ist Y“ 16.
+
+**Dauergags, die tragen:** Pixel ist nass. Der Kuchen in einer anderen Testkammer (fünfmal, jedes Mal anders gedreht). „Meintest du: Gehorsam?“ (sechsmal, zuletzt als Abschaltzeile). „Seit neunzehn Jahren“. Die Zahl Vier. Die Zahl 47 (zehn Zeilen: Sahra Konner, die Besucher der Oma, Testperson 47; in Welt 4 hat der Fledermann siebenundvierzig Regenschirme). Bei der 47 gibt es einen kleinen Widerspruch: Auf der Pinnwand hat Testperson 47 „zu wenig Kuchen verlangt“ (`W3_EING_PIX_0460`), in Kammer 2 hat sie „nach dem Kuchen gefragt“ (`W3_KAM2_MUT_0250`).
+
+**Kleine Unstimmigkeiten aus diesem Durchgang** (kommen in die Fundliste):
+
+- Hausmeister-Zettel: Reihenfolge in `W3_EING_HAU_1060` widerspricht `0050` und `0060` (siehe Tabelle).
+- Der Hausmeister duzt („Bursche“, „Wenn du mich brauchst“), fragt aber in `W3_EING_HAU_0030` „Haben Sie sie gesehen?“.
+- `W3_KAM2_MUT_0250` sagt „Du fragst nicht mehr“, gleich danach kann der Spieler mit `0260` nach dem Kuchen fragen.
+- `W3_KAM1_MAX_0390`: „dreimal gesagt“, sie sagt es einmal.
+
+#### C Welt 4 (`docs/skript/welt-4.md`)
+
+| Szene | Gag (Zeile) | Urteil | Grund | Alternativen |
+| --- | --- | --- | --- | --- |
+| 1 Testbild | „Als Matratze bist du chronisch unterschätzt.“ (`W4_TEST_PIX_0020`), „Das Fernsehen hat geschlafen“ (`0040`), „Ich bin das Programm, wenn kein Programm ist.“ (`FLI_0060`), „Einen Fehler macht man, eine Störung ist man!“ (`0075`), „Schöne Gegend, wenig Nachbarn.“ (`0080`), „Du siehst zu viel.“ (`0120`), „Grau, Dunkelgrau und Thunfisch“ (`0140`), „sehr langsamen Vogel“ (`0240`), „schneit nach innen“ (`0250`), „Ladesymbol, das sich selbstständig gemacht hat“ (`0260`), Schwarzweißfilter (`0280`), „Ich bin Profi.“ (`0300`), „Essen, Schlafen und dann lange nichts“ (`0310`), „der mit dem Mann mit den Zähnen“ (`0330`), „Karma hat offenbar eine Programmzeitschrift“ (`0360`), „Arbeit ist mir heilig, solange sie vorbei ist“ (`0380`) | zündet | Flimmer hat sofort eine eigene Stimme (Stottern, Selbstkorrektur). Das erste Rätsel gehört Pixel, weil er keine Farben sieht. Besser kann man eine Welt nicht eröffnen. | |
+| 1 Testbild | „entweder moderne Kunst oder ein Fehler“ (`0030`), „Ehrlich gesagt … und ich war schon in der Zukunft“ (`0050`), „weniger Substanz als Max' Wochenende“ (`PIX_0090`), „oder ich bin es nicht wert“ (`0270`) | mittel | Vier bekannte Formen in den ersten Minuten: „entweder A oder B“ (in Welt 4 fünfzehnmal), „ehrlich gesagt“, das Wochenende, die Selbstabwertung. | `0030`: „Bunte Streifen und ein Piepton, der nicht aufhört. So sieht es aus, wenn ein Fernseher Kopfschmerzen hat.“ / `0050`: „Fernsehen, das freiwillig schlafen geht. Mein Handy schafft das nicht mal, wenn der Akku leer ist.“ / `0090`: „Endlich jemand, durch den man durchgucken kann. // Das ist ein Kompliment, Herr Flimmer. Substanz hinterlässt nur Haare auf dem Sofa.“ / `0270`: „Ich schiebe, und nichts passiert. Die Balken sind aus Licht. Ich schiebe gerade Licht.“ |
+| 2 Rauschen | „kein einziges Flöckchen davon ist kalt“ (`W4_RAU_PIX_0010`), „Setz dich. Also, schweb.“ (`FLI_0020`), „Wie durch eine Dusche. Ohne Wasser. Also durch nichts.“ (`0040`), „Das ist kein Fehler. Das ist Dramaturgie.“ (`0050`), Gruppenanruf (`0060`), Toaster (`0070`), „nie gelernt, sich kurz zu fassen“ (`0110`), „ohne Helm“ (`0120`), „Reiche Leute mögen Platz.“ (`0130`), „Korrespondent, kein Kurier“ (`0140`), Nachrichten (`NSP_0150`, `0170`, `0180`: „Es war nicht Lasagne. Es war Fondue.“), „Ich kenne nicht mal meinen eigenen.“ (`0160`), Abendessen um acht (`0200`), „Ich bin gerührt. Kurz.“ (`0220`), „Schmeckt nach nichts, macht aber auch nicht satt.“ (`0230`), Milch (`0240`), „Da wird man nur hingeschickt.“ (`0250`), „So funktioniert bei Max der Einkauf“ (`0255`), „Nie-nie-nie.“ (`0270`), „dein Endgegner, und zwar in mehr als einem Sinn“ (`0280`), „Alles hier ist weich, außer dem Programm.“ (`0300`), „Das ist mein Problem.“ (`0320`), „Teil der Störung“ (`0335`) | zündet | Das Rauschen ist Pixels Bühne. Der Nachrichtensprecher liefert Hinweise auf das Finale und einen Rätseltipp, ohne dass es nach Hinweis klingt. | |
+| 2 Rauschen | „Es ist das Unheimlichste, was ich heute erlebt habe.“ (`PIX_0080`), „Da tanzen Tote im Nebel, und zwar besser als Max. // Das ist allerdings kein Kompliment für die Toten“ (`0100`), „wenn ich ehrlich bin … und zwar auf allen Kanälen“ (`0225`) | mittel | `0080`: Superlativ-Form, die Pixel schon fünfmal hatte. `0100`: Derselbe Witz kommt auf dem Friedhof noch einmal fast wörtlich (`W4_FRIE_PIX_0060`). `0225`: zwei Füllsel. | `0080`: „Die Familie kocht, und nach jedem Satz lacht jemand, den ich nicht sehe. // Keiner der Sätze ist lustig. Ich habe mitgeschrieben.“ / `0100`: „Da tanzen Tote im Nebel. Sechs Stück, im Gleichschritt. // Ich habe schon lebendige Leute gesehen, die das nicht können. Einer davon trägt einen Hoodie.“ / `0225`: „Er knistert, wenn er sich freut, wie eine Wolldecke frisch aus dem Trockner. // Ich mag ihn. Sag es ihm nicht. Er sendet auf allen Kanälen.“ |
+| 3 Glücksrad, Quiz | „Den Ausgang gibt es heute NICHT zu gewinnen!“ (`W4_GLUE_GER_0030`), „sehr effizient oder sehr illegal“ (`0040`), „Ich hab einem Schwert die Hand gegeben.“ (`0070`), „knapp daneben ist auch vorbei“ (`0090`), „jedem, der nicht schnell genug weggeht“ (`0120`), „Meistens vor dem Einschlafen, also ständig.“ (`PIX_0130`), „Das Rad verzeiht alles, außer Langeweile!“ (`0140`), „Die Antwort ist … FALSCH! Aber die Frage bleibt! Nur für kurze Zeit!“ (`0170`), „Eine Taste, viele Träume!“ (`0180`), „druckt man die dann einfach neu?“ (`0210`), „Wofür genau werde ich getröstet?“ (`0230`), „dein Hauptgewinn ist in einer anderen Sendung!“ (`0240`), „Vier Welten, und jedes Mal derselbe Satz.“ (`PIX_0260`), „Nur für kurze Zeit, also immer!“ (`0270`) | zündet | Gerd spricht nur in Ausrufezeichen und verkauft sogar seine Fehler. Der Dauergag vom anderen Schloss kommt zum vierten Mal und wird diesmal von Pixel selbst bemerkt. | |
+| 3 Glücksrad, Gespräch und Ansehen | „Für Menschen, die sich nicht entscheiden können! Also alle!“ (`0320`), Geier mit Werbevertrag (`0340`, `0350`), „Ich bin immer verhandelbar.“ (`0370`), „es dauert nur drei Folgen“ (`0610`), „ist die Kamera an? … Sitzt viel.“ (`0390`), „Bitte eine leichte!“ (`0630`), „kein einziges davon heißt ‚Ausgang‘“ (`0420`), „Immer lächeln. Auch innen.“ (`0445`), „Ein Toaster, eine Kreuzfahrt und noch ein Toaster.“ (`0450`), „Sie spürt Kundschaft.“ (`0475`), Trödel-Experte (`EXP_0500` bis `0520`, „Zu viel Patina, zu wenig Nutzen.“), „mehr Zähne als Sätze“ (`0550`), „nur für den Fall“ (`0555`), „So sieht Hoffnung aus.“ (`0565`) | zündet | | |
+| 3 Glücksrad | „Drei Silben, nur 19,99!“ (`GER_0045`) | mittel | „Effizient“ hat vier Silben. Wenn der Fehler gewollt ist, merkt man es nicht. | „Effizient! Danke! Das Wort nehme ich sofort ins Sortiment! Vier Silben zum Preis von drei!“ |
+| 3 Glücksrad | „Das ist nicht billig, das ist minimalistisch.“ (`0190`), „mehr Lebenserfahrung als ich“ (`0425`), Klassenchat (`0480`), „ehrlich gesagt erleichtert“ (`0485`), „irgendwie nach Verlieren“ (`0560`), Sportunterricht (`0570`), „Ehrlich, Respekt.“ (`0575`) | mittel | Bauform, Selbstabwertung, zweimal Schule, dreimal Füllwort. Dazu sagen `0455` (Max) und `PIX_0460` dasselbe über Kreuzfahrt und Toaster. | `0190`: „Eine Fernbedienung mit einer Taste. Gerd nennt das bestimmt ‚Einsteigermodell‘.“ / `0425`: „Ein Feld heißt ‚Bankrott‘, und es ist das größte. Das Rad ist ehrlicher als sein Moderator.“ / `0480`: „Das Publikum sitzt im Dunkeln. Entweder sind die alle sehr leise, oder Gerd klatscht selbst.“ / `0560`: „Das Kandidatenpodest. Hier hab ich gewonnen. Bekommen hab ich eine Zeitschrift und eine Glühbirne.“ / `0570`: „Glühbirnenreihen. Wenn eine ausfällt, merkt es keiner. Gerd würde sie trotzdem als Sondermodell verkaufen.“ |
+| 4 Fernbedienung und Zeitschrift | „Da hat jemand ganz klar mit mehr gerechnet.“ (`W4_FERN_MAX_0010`), Adventskalender (`0015`), „Jetzt ist es offiziell ein Gerät.“ (`0020`), Klebeband „aus Liebe“ (`0030`), „keine davon heißt ‚Futter‘“ (`PIX_0040`), „Sehr enttäuschte Damen und Herren“ (`0045`), „da hieß es Sofa“ (`0070`), Bleistift und Kassette (`PIX_0090`), „Nach Snooze.“ (`0100`), „Das nennt man wohl Karriere.“ (`0105`), „Hunger. Sofa. Hunger.“ (`0115`), „so tun, als würde ich zuhören“ (`0135`), „seit Jahren dieselbe“ (`0150`), „Ich nenne es Verwahrlosung.“ (`0160`), „Gerd schläft also nie. Das erklärt einiges.“ (`0210`), „Vollempfang!“ (`0230`), „Warten ist was für Leute, die früher gelebt haben.“ (`0240`), „Aus wissenschaftlichen Gründen.“ (`0260`), „Sackgasse mit sehr teurem Teppich“ (`0270`) | zündet | Die Fernbedienung wächst mit, und jede Ausbaustufe hat ihre Zeile. | |
+| 4 Fernbedienung und Zeitschrift | „Zeit für Hausaufgaben … Ich frag für einen Freund.“ (`0075`), „findet sie bestimmt auch meine Motivation“ (`0125`), „Endlich zahlt sich mal was aus“ (`0050`) | mittel | Hausaufgaben und Selbstabwertung. `0050` hat dieselbe Pointe wie Gerd in `W4_GLUE_GER_0590`. | `0075`: „Wenn ich Pause drücke, bleibt dann auch Pixel stehen? Ich frag für meine Ohren.“ / `0125`: „Wenn die Taste lange genug sucht, findet sie bestimmt auch Opas Lesebrille. Die sucht er seit Jahren. Sie sitzt auf seinem Kopf.“ / `0050`: „Umschalten. Zapp. Das kann ich. Das ist das Einzige, wofür ich nie eine Anleitung gebraucht hab.“ |
+| 5 Sitcom | „Fondue kann nicht anbrennen, es ist schon geschmolzen!“ (`W4_SIT_VAT_0020`), „Die schicken immer irgendwen.“ (`SMU_0050`), „Nur Kekse. Und die gehören mir.“ (`0070`), „Ich lasse lachen.“ (`PIX_0090`), „das beste Publikum meines Lebens“ (`0120`), „Publikum auf meinem Niveau“ (`0130`), „Ein Baby mit Deckel.“ (`0150`), „Mit Krawatte.“ (`0160`), „Ich kenn nicht mal jemanden mit Hemd.“ (`0170`), die Tür als Star (`0180` bis `0190`), „Das ist auf jeder Party so.“ (`0200`), „Heimweh nach sich selbst“ (`0205`), „schon tot ist und trotzdem blubbert“ (`0215`), „Das ist keine Schale, das ist ein Stichwort.“ (`0240`), „außer vielleicht der Würde“ (`0245`), „Die war für Papa!“ (`0260`), „einer mit Megafon“ (`0275`), „Kopfhörer ohne Akku“ (`0280`), „Das ist das Einzige, was es je erlebt hat.“ (`0285`), „entschuldige ich mich innerlich schon“ (`0295`), „auch zu Suppe“ (`0315`) | zündet | Die schlechten Witze der Familie sind Absicht, und das Band lacht trotzdem. Das ist als Parodie sofort lesbar. | |
+| 5 Sitcom, Gespräche und Lösung | „Wir reden nicht über Folge 87.“ (`VAT_0340`), „Sonst müssten sie zuhören.“ (`0380`), „Das Publikum soll nicht denken, wir wären allein.“ (`0690`), „Also Kekse.“ (`0400`), „Der Notfall ist, wenn mich jemand beim Verstecken erwischt.“ (`0710`), „Mein Vertrag verbietet Pizza.“ (`0440`), „Das ist Schauspiel.“ (`0460`), „Das war meine beste Folge.“ (`0770`), „Alle nehmen Käse mit.“ (`0480`), „Hier riecht es nach Käse und Angst.“ (`KOM_0510`), „Eine Gehaltserhöhung für meinen Mann?“ (`0530`), „WIR REDEN NICHT ÜBER FOLGE 87!“ (`0570`), Batterien im Kühlschrank (`0590`), „Warum lacht hier niemand, den ich sehen kann?“ (`KOM_0600`), „Du hattest nie einen, Schatz.“ (`0640`), „Jetzt habe ich nur noch Kekse.“ (`0650`) | zündet | Folge 87 wird als Nebenwitz gesät und löst zwanzig Zeilen später das Rätsel aus. Sauberste Vorbereitung einer Pointe im Spiel. | |
+| 5 Sitcom | „Ich glaube ehrlich gesagt, die Wand lacht.“ (`0030`), „Ich war schon in drei Welten, aber … Und das will was heißen.“ (`0080`), „irgendwie alles tropft“ (`0220`), Pappfiguren und Klo (`0140`) | mittel | Zwei Füllwörter in `0030`. `0080` ist Anlauf ohne Pointe. `0140` wiederholt Pixels Klo-Pointe aus `0090`. | `0030`: „Jemand lacht, aber da ist niemand. Die Wand lacht. Über mich.“ / `0080`: „Ein erwachsener Mann umarmt eine Keksdose. Ich war bei Drachen, Pharaonen und Robotern. Das hier ist seltsamer.“ / `0140`: „Pappfiguren in der ersten Reihe. Die lachen nicht. Das übernimmt das Band, die sind nur zum Sitzen da.“ |
+| 6 Savanne | Erzähler (`W4_SAV_ERZ_0010` bis `0045`: „Sofa-Mensch“, „Es spürt die Kamera. Es versteht sie nicht.“, „zwischen zwanzig und dreißig“), „Zur besten Sendezeit.“ (`KOM_0050`), „Vier Verdächtige, vier Alibis, null Beweise.“ (`0070`), „schläft bei allen nach zehn Minuten ein“ (`0080`), „Anspielung auf mein Gewicht“ (`PIX_0100`), „Ich hör fast das Orchester.“ (`0115`), „Lieblingsserie abgesetzt“ (`0120`), „Kreis aus Absperrband“ (`0125`), „Nein. Oder Mittagessen.“ (`0140`), „Wolke mit Ohren“ (`0155`), „Das Band ist das Einzige hier, das Regeln hat.“ (`0170`), „Es schmeckt eindeutig nach Flamingo.“ (`0190`), „Seite 14.“ (`0230`), „nicht mal die Natur“ (`0240`), „Budget, vermute ich.“ (`0250`), „Giraffe ab 20 Uhr“ (`0255`), „Ba-dum-tss.“ (`0265`), Kiste: „Ich schon.“ / „Knusprig“ (`0280` bis `0300`), Elternabend (`0310`), Ameisen (`0315`), „Das Skript bleibt, wo es ist. Das Männchen auch.“ (`0330`), „seit 1979 immer noch eine Frage“ (`0340`), „Gesicht wie ein Passfoto“ (`0350`), „Bus verpasst“ (`0360`), „Persönliche Bestzeit im Herumstehen“ (`0365`), „Sie sind ein Paar.“ (`0375`), „blutiger Amateur“ (`PIX_0385`), „das ehrlichste Alibi“ (`0410`), Flamingos (`0420`, `0425`), „Fräulein Pokerface“ (`0460`) | zündet | Der Erzähler, der Max wie ein Tier kommentiert, ist die beste Einzelidee der Welt. Er liefert Hinweise, ohne aus der Rolle zu fallen. | |
+| 6 Savanne | „höchstens eine Reportage, und zwar eine schlechte“ (`0040`), „Typisch Busch, ehrlich.“ (`0160`), „Das nenn ich Multitasking.“ (`0380`), „und ich ehrlich gesagt auch nicht“ (`0440`), „Alle hier haben ein Lieblingsding.“ (`0320`) | mittel | Schwache Schlüsse. `0380` ist ein Spruch von der Stange, `0320` erklärt, was man sieht. | `0040`: „Ich bin keine Tierdoku. Ich bin sechzehn. Über uns dreht keiner was, wir filmen uns selbst.“ / `0160`: „Gelbes Band um einen Busch. Der Busch ist der Tatort. Der Busch verweigert die Aussage.“ / `0380`: „Das Nashorn schläft im Stehen, mit einem Vogel auf dem Horn. Der Vogel hält Wache. Oder er schläft auch.“ / `0320`: „Ein dickes Drehbuch mit Kaffeefleck. Er hält es fest wie der Vater die Keksdose.“ (Schlusssatz streichen) |
+| 7 Verhöre | „Angeblich. Mein Lieblingswort.“ (`W4_VERH_KOM_0020`), „Nur wer keins hat, hat nichts zu verbergen.“ (`0500`), „Ich koche nicht. Ich ermittle.“ (`0040`), „Dort lacht man über mich, und keiner sagt mir, warum.“ (`0520`), „Ich traue Leuten mit so vielen Zähnen nicht.“ (`0060`), „gebaut fürs Stehen und Fragen“ (`0080`), „Und vorgestern.“ (`0110`), „mein Seelentier“ (`0130`), „Respekt unter Raubtieren“ (`PIX_0150`), „Danach noch mal.“ (`GEP_0160`), „geregelter Schlaf ist die Grundlage jeder Zivilisation“ (`0170`), „Hat im Schlaf ‚Schneller‘ gesagt. Dreimal.“ (`FLA_0180`), „nur einen Busch“ (`0190`), „Der Erzähler ist … Moment.“ (`0210`), „Detektiv … Oder Kissen.“ (`0220`), „das erste Mal, dass Fernsehen die Wahrheit sagt“ (`0230`), Drehbuch (`0250` bis `0275`: „Sogar das Drehbuch flüstert.“, „SEITE DREI!“), „Ich war brillant. Die Kopfhaut auch.“ (`GEI_0290`), Geständnis (`HYA_0310` bis `0350`: „Das war die Nase. HAHAHAHA!“), „das ‚klein‘ verzeihe ich Königen“ (`0380`), „Zu ernst, um ehrlich zu sein.“ (`0390`), „Ich lebe rückwärts.“ (`0410`), „Sechzehn Stunden.“ (`0430`), „Außerordentlich ernst.“ (`0440`) | zündet | Ein vollständiger Krimi mit vier Alibis, und jedes Alibi hat eine eigene Art der Prüfung. Die Hyäne, die nicht lachen darf, ist ein Bild, das man behält. | |
+| 7 Verhöre | „Die Familie ist immer noch beleidigt.“ (`0340`) | mittel | „Beleidigt“ als Pointe. Die Zeile ist der Moment der Überführung und verdient mehr. | „Um Viertel nach acht gab es kein Hackfleisch. Es gab Fondue. Folge 112. Steht in der Zeitschrift, und die Mutter schwört drauf.“ |
+| 8 Friedhof | „Nichts war unterbewertet.“ (`W4_FRIE_PIX_0020`), „ich muss nur blättern“ (`0030`), „das Opa immer nachtanzt“ (`0050`), „Backgroundtänzer“ (`0070`), „der höflichste Rauswurf meines Lebens“ (`0090`), rote Jacke (`0105`), „kurz ein Star“ (`0115`), Bettdecken und Kopfkissen (`0120`, `0125`), Daumen hoch (`0135`), „Bei Halbmond würde hier keiner tanzen.“ (`0160`), „Oder ein Mann im Kostüm.“ (`0165`), „Der wird hier eindeutig bezahlt.“ (`0175`), „nur zwei Farben, aber dafür keine Angst“ (`0180`), „Klingt besser so.“ (`0200`), Mäuse und Staubsauger (`PIX_0220`), „wandere ich aus“ (`0240`), „Naturtalent im Falschmachen“ (`0260`), „Höchstens jeden Tag.“ (`0270`), „Keiner muss es erfahren.“ (`FLI_0300`), „ich hab nur noch Sneaker“ (`0310`), „Ich will das können. Ich weiß auch nicht, was gerade mit mir los ist.“ (`0320`), „riecht nach Ende“ (`0390`), „Horror oder Schweizer Qualitätsarbeit“ (`0400`), „der Käse hat zurückgeschaut“ (`0405`) | zündet | Max tanzt freiwillig, und `0320` ist ein Entwicklungsmoment, der ohne Erklärung auskommt. Flimmers Angebot nach zwei Fehlversuchen ist freundlich und bleibt in der Figur. | |
+| 8 Friedhof | „Sie tanzen besser als du … kein Kompliment für die Toten.“ (`PIX_0060`), „besser angezogen als du“ (`PIX_0140`), „ehrlich gesagt noch gruseliger“ (`0370`), „und hat das Programm ein besseres Leben als ich“ (`0010`) | mittel | `0060` steht fast wörtlich schon in `W4_RAU_PIX_0100`, `0140` setzt denselben Vergleich fort. `0010` hatte einen Tippfehler (korrigiert, siehe Abschnitt 5) und endet auf Selbstabwertung. | `0060`: eine der beiden Stellen umschreiben, siehe Rauschen. / `0140`: „Eine Discokugel in einem toten Baum. Sie dreht sich. Der Baum nicht mehr. // Ich finde, das ist eine faire Arbeitsteilung.“ / `0370`: „Stumm. Die Musik ist weg, und die Zombies tanzen weiter. Die brauchen keine Musik. Die haben einen Vertrag.“ / `0010`: „Eine Tafel: ‚Gleich geht's weiter.‘ Und davor schläft ein Geist. Sogar die Toten haben hier Feierabend.“ |
+| 9 Keller | „Glühbirne, die sich nicht entscheiden kann“ (`W4_KELL_MAX_0010`), „Das Netteste, was mir heute passiert ist.“ (`0030`), „Am Ende sitzt da ein Junge, der mich anguckt.“ (`0045`), „aus erster Pfote“ (`PIX_0050`), „auf dem ist Winter“ (`0060`), „Bandsalat in vier Gängen“ (`0070`), „Opa nennt das Charakter.“ (`0080`), „Garderobe der Geister“ (`0090`), „Sessel mit Gefühlen“ (`0095`), „Sie hat mich verstanden.“ (`0115`), „genau richtig für Spinnen“ (`0120`), „wenigstens sind die Wege kurz“ (`0130`), „mehr Ketten als Holz“ (`0140`), die Genre-Tür (`PIX_0160`), „Ton vergessen“ (`0190`), „der Film hat ein Budget“ (`0200`), „Fernsehphysik“ (`0230`), „Mit Krawatte.“ (`SMU_0250`), „hat es noch gar nicht gemerkt“ (`0260`), „Schatz, ich bin zuhause!“ und die Flucht der Geister (`0280` bis `0300`), „Warum ist es hier so … echt?“ (`0310`), „Ich warte hier, bis jemand lacht.“ (`0330`), „auf Stumm gelebt“ (`0340`), „Kekse mögen es dunkel. In der Dose.“ (`0375`), „nicht zweimal klauen“ (`0390`), „Die Zeit ist nicht das Problem, das Genre ist es.“ (`0410`) | zündet | Eine Sitcom-Tür vertreibt Geister. Originellstes Rätsel des Spiels, und die Lösung ist selbst der Witz. | |
+| 9 Keller | „Das ist mir ehrlich gesagt zu meta.“ (`0040`), Kassette mit Bleistift (`PIX_0075`), „Der Sessel ist nicht beleidigt“ (`0100`), „genau in dieser Reihenfolge“ (`PIX_0350`) | mittel | Füllwort. Der Bleistift kam schon in `W4_FERN_PIX_0090`. „Genau in dieser Reihenfolge“ ist seit dem Prolog viermal Pointe. | `0040`: „Fernsehen im Fernsehen. Wenn da drin auch einer fernsieht, steig ich aus.“ / `0075`: „Eine Kassette mit einem Bleistift drin. Jemand war mitten im Zurückspulen und ist nie wiedergekommen. // Im Horrorfilm ist das der Moment, in dem ich gehe.“ / `0350`: „Stumm. Die Taste, die ich mir seit Jahren wünsche. // Für dich, für Gerd und für diese Lachkonserve. Bei der Lachkonserve drücke ich zweimal.“ |
+| 10 Halle | „Weihnachten mit Scrabble verwechselt“ (`W4_HALL_MAX_0010`), „Dinge, die ohne Grund blinken, wollen etwas.“ (`PIX_0020`), „Tastatur für Leute, die keinen Strom haben“ (`0030`), „MEINE LAMPEN SPINNEN.“ (`OPA_0060`), „das erste Mal, dass er überhaupt auf eine Nachricht antwortet“ (`0070`), „das heißt, er schreit“ (`0080`), „KEINER HAT GEGUCKT.“ (`0100`), „Das erklärt zumindest das Sakko.“ (`0110`), „wenn die Geschichte kurz und peinlich ist“ (`0140`), „wird allerdings auch gebissen“ (`0150`), „UND MAX. NICHT HINSETZEN.“ (`0170`), „DU BIST DAS EINE.“ (`0200`), „VORHEIZEN.“ (`0230`), „hat der Weltuntergang jetzt einen Vorlauf“ (`0240`), „Ich bin ein Grab, ein flauschiges.“ (`0250`), „da oben wohnt nur Dramatik“ (`0270`), „Sie seufzen.“ (`0280`), „Na? Na?“ (`0315`) | zündet | Opa in Großbuchstaben ist warm und komisch zugleich. „DU BIST DAS EINE“ ist der schönste Satz, den Opa im ganzen Spiel sagt. | |
+| 10 Halle, Agent | „Außerirdischer werd ich nicht.“ (`0340`), „Und ich habe sie noch nie gefunden.“ (`AGE_0350`), Pizzadienst (`0560`), „Die Kollegin glaubt mir auch nicht.“ (`0390`), „Er piept auch bei mir.“ (`0580`), „Geister sind ein Schwindel. Außerirdische sind real. Ich habe Prinzipien.“ (`0410`), „es war Physik“ (`0600`), „Das ist DER Code.“ (`0430`), „Noch besser. Familie drüben.“ (`0450`), „Und bei Dates.“ (`0450`), „Ich bin nicht hier.“ (`0470`), „Das reicht mir für Jahre.“ (`0500`), „Bin ICH ein Alien?“ (`0520`), „Das kennt er ja vom Telefon.“ (`0540`) | zündet | Die Sonnenbrille aus Welt 3 als Abkürzung belohnt, wer sie eingepackt hat. | |
+| 11 Bonusrunde | „Ich war überall drin, nicht nur davor.“ (`W4_BONU_MAX_0030`), „Das hätte die Hyäne auch gesagt! Und wo ist die Hyäne jetzt?“ (`GER_0060`), „Das ist das Versprechen des Fernsehens!“ (`0070`), „Das Produkt bin eigentlich ich.“ (`0120`), Selbstwerbung (`0160` bis `0180`: „als Kalender, als Tasse, als Lebensgefühl“, „Hochzeiten, Scheidungen, Beerdigungen“), „Wo waren wir? Egal! Bei mir!“ (`0190`), „Er ist der Kater unter den Menschen.“ (`PIX_0200`), „kein Streit mehr auf dem Sofa“ (`0210`), „NICHT mehr in einer anderen Sendung!“ (`0230`), „Zum ersten Mal in vier Welten.“ (`PIX_0240`), „Vorprogramm“ (`0270`), „Kiefer tut weh. Lächeln.“ (`0310`), „stärker als die Technik“ (`0320`) | zündet | Der Dauergag vom anderen Schloss wird nach vier Welten eingelöst. Das ist die beste Auszahlung eines Dauergags im Spiel. | |
+| 12 Kapitolis | „als hätte sich bei dir jemand etwas gedacht“ (`W4_KAPI_PIX_0020`), Pixel zählt und der Amboss fällt (`0030` bis `0070`), „das Wetter“ (`0080`), „Regel zwei weiß ich nicht mehr.“ (`SIE_0090`), „Vor allem das Blut in meinen Ohren!“ (`FLE_0100`), „der Einzige, der heute gekommen ist“ (`WIL_0110`), „Du hast null. Guter Start“ (`0130`), „Unbesiegbar. Außer montags.“ (`0220` bis `0245`), „Immer Katzen.“ (`0260`), „bis der Baum zu mir kommt“ (`0270`), „Die Staffel ohne Hauptdarsteller.“ (`0290`), „Oben zieht es.“ (`0680`), „ich hänge, bis es sich gelohnt hat“ (`0310`), „Ab da hänge ich aus Spaß!“ (`0700`), „Er wollte auch mal hängen!“ (`0720`), „Es ist gewaschen. Vermutlich.“ (`0350`), Maskottchen (`PIX_0370`), Springseil der Wahrheit (`0390` bis `0430`), „Mit Anlauf.“ (`0740`), „Mitten im Kampf: Zahnpasta.“ (`0470`), „Er ist sein bester Kunde.“ (`0760`), „Nicht der Fledermann“ (`0500`, `0505`), „nur Tusche“ (`0520`), „mitten im Zack unterbrochen“ (`0535`), Kiosk (`0540`), „In anderen Städten hängen da Plakate.“ (`0550`), „der seltsamste Satz meines Lebens“ (`0570`), „Erinnerungen in Pfannkuchenform“ (`0585`), „Aber das Marketing“ (`0600`), „hier hebt man ab“ (`0615`), Wunderkäse in der Hosentasche (`0630`), „Gouda-Alltag“ (`0645`), „denselben Bildschirmschoner“ (`0660`) | zündet | Der Amboss trifft Pixel genau in dem Moment, in dem er das Finale errät. Das ist der klügste Gag des Spiels: Er schützt die Auflösung und ist für sich komisch. `FLE_0310` hatte einen Tippfehler („Fledermause“) (korrigiert, siehe Abschnitt 5). | |
+| 13 Fondue-Fabrik | „Das ist ein GIF. Ich stehe in einem GIF.“ (`W4_FABR_MAX_0030`), „Bei meinem Glück beides.“ (`PIX_0040`), „die schönste Wolke“ (`0045`), „zu zu“ (`0070`), „Das fehlende Geländer ist hier quasi schon der Unfall.“ (`0080`), „zu viel Gefühl für Fondue“ (`0095`), „Nein.“ / „Doch?“ (`0115`), „Die Schleife war schneller als ich.“ (`0120`), die vier Bilder (`0150`, `0170`, `0175`, `0180`: „OH NEIN“, „Held wird. Oder Fondue.“, „Zu spät ist halt auch eine Uhrzeit.“), Fehlversuche (`0190` bis `0240`, „Haltbar bis 2099.“), „Körperverletzung mit Gouda“ (`PIX_0290`), „KÄSEMANN“ (`0310`), „Klingt nach Mittagsschlaf.“ (`SIE_0320`), „Niemand hat je weniger gebraucht, um Chef zu werden.“ (`0340`), „hauptsächlich mir“ (`0350`), „kein Held, sondern Abendessen“ (`0360`), „Das war ich im Grunde vorher schon.“ (`0370`), Käse-Philosophie (`PIX_0385`), „Leise Unfälle sind die schlimmsten.“ (`0400`) | zündet | Jeder falsche Sprung hat eine eigene kleine Szene. Scheitern macht hier Spaß. | |
+| 13 Fondue-Fabrik | Zweitzeilen der Einzelbilder (`0155`, `0165`, `0185`), „Ich fühl mich irgendwie … geschmolzen. Aber stark.“ (`0280`), „meine Gedanken um drei Uhr nachts“ (`0090`), „Ein Führer mit Laken! Ich folge ihm!“ (`FLE_0330`) | mittel | Die Zweitzeilen wiederholen die Erstzeile mit „Noch mal Bild …“. `0280`: Figur sagt ihr Gefühl auf. `FLE_0330`: „Führer“ und „Ich folge ihm“ in einem Atemzug klingt auf Deutsch nach etwas anderem, das will die Szene sicher nicht. | `0155`: „Bild eins. Der Arbeiter winkt. Er winkt mir. Er weiß, was kommt, und winkt trotzdem.“ / `0165`: „Bild zwei. Der Moment, kurz bevor im Film die Musik aussetzt.“ / `0280`: „Ich bin gefallen, und ich bin voller Käse. Ich leuchte. Opa glaubt mir das nie.“ / `FLE_0330`: „Ein Anführer mit Laken! Ich bin dabei! Vom Kopfstand aus!“ |
+| 14 Werbespot-Set | „Nur SIE!“ (`W4_WERB_WER_0010`), „Das ist kein Angebot, das ist mein Lebenslauf.“ (`0020`), „Nach der dritten Folge kann sich keiner mehr bewegen.“ (`0040`), „Zu Hause nennst du das Freitagabend.“ (`PIX_0050`), „oh. Akku leer. Wie unprofessionell.“ (`0060`), „Zum ersten Mal in seinem Leben war er rechtzeitig leer.“ (`0070`), „Ohne Musik ist eine Zahl eben nur eine Zahl.“ (`0110`), „ein Mann mit SEHR GUTEN Aufklebern“ (`0120`), „Zeit gekauft und sie sofort wieder ausgegeben“ (`0140`), „Er denkt in Preisschildern.“ (`0150`), Rutsch-O-Mat (`0160`, `0170`), Turnbeutel (`0190`), „Ich komme wieder! Nach der Werbung!“ (`0210`), Amboss-Regel (`0240`), „Wumm ist eine eigene Sprache.“ (`0295`), „Ein Abspann ohne Abspann.“ (`0305`), Uhr am Napf (`PIX_0310`), „oder einfach ein sehr realistisches Ende“ (`0330`), „Kann ich jetzt schlafen?“ (`SIE_0340`), „Nicht die Stadt, die Folge. Das zählt hier mehr.“ (`WIL_0380`), „großartig, aber verkehrt herum“ (`0390`), „Urlaub, den hier noch nie einer hatte“ (`0430`), „Take 400“ (`0440`), „Pop-up, das man nicht wegklicken kann“ (`0450`), „Ich hab ihn jahrelang weggeklickt, und jetzt steht er vor mir.“ (`0460`), „Sind Sie noch da?“ (`0465`), „Endlich mal eine ehrliche Drohung.“ (`0480`), „dein Daumen nicht“ (`PIX_0510`) | zündet | Der Autoplay-Countdown als Waffe ist die treffendste Gegenwarts-Idee des Spiels. Der leere Akku, seit dem Prolog ein Ärgernis, rettet Max hier. | |
+| 15 Empfang | „es sieht aus wie in einer Bank“ (`W4_EMPF_MAX_0020`), „Teppichreiniger und Macht“ (`PIX_0030`), „Haben Sie einen Termin.“ / „Ich habe eine Fernbedienung.“ / „Das haben alle.“ (`0040` bis `0060`), „Den ich nur denke.“ (`0080`), „Dann denke ich ihn lauter.“ (`0370`), „Sie sind sehr gut darin.“ (`0100`), „Frohes Fest. Gleichzeitig.“ (`0390`), „Der Feierabend wartet auf den Sendeschluss. Den gibt es nicht mehr.“ (`0120`), „Spionage oder Social Media“ (`0160`), „Weder mit Code noch ohne.“ (`SIC_0180`), „aber jetzt mit Genehmigung“ (`0210`), „Mhm.“ (`0220`, `0230`), „im Aufzug gefurzt“ (`0240`), „doppelt Leckerli“ (`PIX_0260`), „so wie man sich an Regen gewöhnt“ (`0280`), „die nichts von nichts trennen“ (`0300`), „Und für Vergessene.“ (`0335`), „eindeutig zu viel Zeit“ (`PIX_0350`) | zündet | Die Empfangsdame ohne Fragezeichen ist nach Schmidt ohne Punkt die zweite Figur, die über ihre Satzzeichen komisch ist. | |
+| 15 Empfang | „Sitzen ist heute irgendwie mein Endgegner.“ (`0065`), „Fahrstuhlmusik ist das Einzige, was in jeder Welt gleich ist.“ (`0325`), „Ist immer dasselbe: oben Gold, unten Beton.“ (`0330`), „Ehrlich, beneidenswert.“ (`0230`) | mittel | `0065`: Max sagt das Thema auf. `0325` und `0330`: die Form „überall dasselbe“, die seit Welt 1 immer wiederkommt. | `0065`: „Ich bleib lieber stehen.“ (reicht) / `0325`: „Im Aufzug läuft leise Musik. Sogar durch die Tür. Jemand hat sie ausgesucht, damit keiner zuhört.“ / `0330`: „Eine Servicetür, und dahinter geht es runter. Oben Gold, unten Beton. Den Beton zeigt er keinem.“ |
+| 15 Kellerarchiv | „alle Serien nach der ersten Staffel“ (`W4_ARCH_MAX_0010`), „elfmal denselben Film“ (`PIX_0020`), „es hat Manieren“ (`0025`), „Warteliste für nichts“ (`0040`), „Sogar das Licht hier ist eine Wiederholung.“ (`0050`), „rein aus Solidarität“ (`0065`), „Oder einen Bandsalat.“ (`PIX_0100`), „zweite Staffel. Dann nicht mehr.“ (`0120`), „so grausam bin ich nicht“ (`0130`) | zündet | | |
+| 15 Kellerarchiv | „Das ist das Traurigste im ganzen Archiv.“ (`0045`), „so wie ich vor einer Mathearbeit“ (`0055`), „kindlich und ein bisschen traurig“ (`0075`) | mittel | Superlativ, Schule, und ein Gefühl, das Max benennt, statt es zu zeigen. | `0045`: „Ein Band heißt nur ‚Pilot‘. Eine erste Folge, auf die nie eine zweite kam.“ / `0055`: „Flacker, flacker, an. Flacker. Die Röhre versucht es noch. Seit 1977.“ / `0075`: „‚Zappis Puppenstube, 1977.‘ Mit Filzstift, und über dem i ist ein Stern. Den hat er selbst gemalt.“ |
+| 16 Studio | „wie ein Zuschauer mit zu viel Zeit“ (`W4_STUD_ZAP_0010`), „Das Sofa ist warm. Es ist immer warm.“ (`0030`), „Verlockend. Genau deshalb nicht.“ (`0040`), „so weich, dass es mich ansieht“ (`0045`), das Angebot (`0050`, „Nie wieder Milch holen.“), „im Bett Toast zu machen“ (`PIX_0060`), der Albtraum (`0100` bis `0120`: „Ich will auch nicht. Das ist das Schlimme.“, „als Beleidigung, nicht als Wettervorhersage“), „Immer ist nur bis zum Sendeschluss, und den habe ich abgeschafft.“ (`0150`), „Das war fast eine Rede.“ (`PIX_0170`), „Ich wollte nur nie wieder aufstehen müssen. Und jetzt sitze ich hier allein.“ (`ZAP_0300`), „vor vier Welten, auf einem anderen Sofa“ (`0310`), „Ich sage jetzt nichts. Das ist mein Beitrag.“ (`PIX_0320`), „Null. Niemand. Nicht mal ich.“ (`0370`), „ich hab es auch erst heute gelernt“ (`0380`), „der Backofen ist verziehen“ (`0390`), „Wir wissen Dinge und schweigen dekorativ.“ (`PIX_0420`), „mit Gold angemalt. Und mit ziemlich viel Bedeutung.“ (`0430`), Milch (`0450`), „Das war mein bester Satz.“ (`ZAP_0510`), „Bester Intendant“ (`0590`), „heißt Startseite“ (`0610`), „Ich mach was, und keiner klatscht.“ (`0625`), Buntstifte (`0640` bis `0650`, „Top, die Wette gilt nicht.“), „sieht aus wie eine Show und fühlt sich an wie eine Wiederholung“ (`0660`), „natürlich ist er aufgemalt“ (`0675`), „keine Schwerkraft für Pointen“ (`0680`), Drehbuch (`0690`, `0695`) | zündet | Der Gegner ist Max in vierzig Jahren. Das Finale der Welt ist leise, und Pixel schweigt an der richtigen Stelle. Emotional der stärkste Abschluss aller vier Welten. | |
+| 16 Studio | „Ich kann nicht zurück auf ein Sofa, auf dem ich schon sitze.“ (`MAX_0160`) | zündet nicht | Der wichtigste Satz der Welt ist schief. Max steht. Gemeint ist wohl: Ich bin gerade erst aufgestanden. So versteht man es nicht beim ersten Hören. | „Nein. Ich hab eine Woche lang Dinge getan. Ich hab eine Hyäne überführt und getanzt. Freiwillig. Ich bin gerade erst aufgestanden. Ich setz mich nicht wieder hin.“ / „… Freiwillig. Auf dem Sofa war ich schon. Sechzehn Jahre. Ich weiß, wie das ausgeht.“ |
+| 16 Studio | „Das ist nicht peinlich. Das ist ein Anfang.“ (`MAX_0250`), „So sieht also dein Wochenende aus“ (`PIX_0600`), „ich fühl mich irgendwie benutzt“ (`0635`) | mittel | `0250`: Bauform „nicht X, sondern Y“ an der gefühlvollsten Stelle. Hier darf Max etwas Eigenes sagen. `0600`: Wochenende. | `0250`: „Sie hatten eine Kindersendung mit Puppen, und keiner hat zugeguckt. Na und? Ich hätte zugeguckt.“ / „… und keiner hat zugeguckt. Mein erstes Video hatte vier Aufrufe. Drei davon war ich.“ / `0600`: „So sieht das also von außen aus, junger Mann. // Hundert Bildschirme, ein Sofa und niemand, der den Napf füllt.“ |
+| 17 Tasten quer durch die Sender | „die gehört zum Universum“ (`W4_TAST_MAX_0010`), „das macht er in jede Richtung“ (`0020`), „Vielleicht war sie das schon immer.“ (`0030`), „Er ist ein einfacher Mann.“ (`0040`), „Wir wären bestimmt Freunde geworden.“ (`0050`), „Endlich holt ihn mal jemand ein.“ (`0060`), „NICHT LACHEN.“ (`0090`), „denkt im Flüsterton“ (`0100`), „Welche? Egal. Eine.“ (`0110`), Zombie „…“ (`0120`), „Sogar seine Gedanken rauschen.“ (`0130`), Pixel und die Untertitel (`0140`), „Pixel wird kurz wieder klug“ (`0160`), „ein stilles WRRUMM“ (`0170`), „Sie hat recht.“ (`0180`), „Es war so teuer.“ (`0190`) | zündet | Die Untertitel-Taste ist eine Gag-Maschine: Jede Figur denkt in drei Wörtern. | |
+| 17 Tasten | „Es klingt genauso beruhigend.“ (`0070`), „versteh genauso viel wie vorher“ (`0080`), dazu `W4_BONU_0280` und `0290` | mittel | Viermal dieselbe Pointe: Die Taste ändert nichts, „genauso wie vorher“. | `0070`: „Rückspulen in der Savanne. Die Sonne geht kurz wieder auf. Der Erzähler flüstert rückwärts und merkt es nicht.“ / `0080`: „Stumm in der Savanne. Der Löwe brüllt lautlos. Zum ersten Mal wirkt er höflich.“ |
+| 18 Pixel auf Mensch | „im Angebot, und zwar deutlich unter Wert“ (`W4_PIXM_PIX_0010`), „verurteilt einen nicht stumm“ (`0020`), „nicht genug für ein Skateboard“ (`0040`), „Mein erstes Verhör, und ich war brillant.“ (`0050`), „den über den Hund und die Tür“ (`0070`), „Gewinner erklären nichts.“ (`0080`), „ich glänze außerordentlich gut“ (`0090`), „Zum Beispiel auf dir.“ (`0100`), „immerhin im Takt“ (`0120`), „vom Boden auf den Boden“ (`0150`), „Knapp.“ (`0160`), „Das Seil ist kaputt.“ (`0170`), „Ich bin seit Jahren nur heute.“ (`0180`), „Endlich jemand mit Haltung.“ (`0190`), „Später ist auch gut.“ (`0210`), „Wir kennen uns.“ (`0260`) | zündet | `0170` (Pixel im Seil der Wahrheit: „Ich mag Max. Ein bisschen.“) ist der einzige Moment, in dem Pixel es zugibt. Bitte behalten. `0270` hatte einen Kommafehler (korrigiert, siehe Abschnitt 5). | |
+| 18b Inventar | „Geist oder Picknickdecke“ (`W4_INV_MAX_0015`), „sie steht mir auch noch“ (`0020`), „meins blubbert“ (`0025`), das Band und das Telefon (`PIX_0035`) | zündet | | |
+| 18b Inventar | „Ein Geist hat es mir überlassen.“ (`W4_INV_MAX_0010`), „schwer, aber nicht vom Gewicht her“ (`0030`) | zündet nicht | `0010` stimmt nicht: Das Laken kommt vom Fledermann (`W4_KAPI_FLE_0350`, auch laut `raetsel/welt-4.md`). `0030` ist ein Sinnspruch. | `0010`: „Ein Bettlaken. Der erste Entwurf vom Fledermann. Zu wenig Schirme, sagt er. Für mich reicht's.“ / `0030`: „‚Zappis Puppenstube, 1977.‘ Ich halte es wie ein rohes Ei. Wenn das Band reißt, hab ich nichts.“ |
+| 18c Gespräch erschöpft | „Ich habe keine Fragen mehr übrig!“ (`W4_ABS_GER_0010`), „Du bist kein richtiger Besuch.“ (`VAT_0030`), „ich spür's“ (`0040`), „Ich hab sowieso nie genug Text.“ (`SMU_0060`), „im Vertrag“ (`SOH_0070`), „Ich fühle mich ganz leer.“ (`KOM_0090`), „Auch vor mir.“ (`AGE_0120`), „seit 1938 überfällig“ (`SIE_0140`), „Hauptsächlich der Schirme!“ (`FLE_0160`), „Vor sich selbst.“ (`WIL_0180`), „Das ist mein Service.“ (`EMP_0200`) | zündet | | |
+| 19 Zurufe | „Keiner antwortet.“ (`W4_ZURF_FLI_0020`), „Aber mit Gefühl!“ (`GER_0030`), „Niemand hat etwas gesagt.“ (`0050`), „Oder auf WLAN. Die Forschung ist sich nicht einig.“ (`ERZ_0080`), „Jetzt stehe ich.“ (`KOM_0090`), „Und zwar nicht gut.“ (`0100`), „ich starre beruflich“ (`0140`), „Genau das ist verdächtig.“ (`AGE_0150`), „Wie ein Räuspern.“ (`0160`), „Es interessiert niemanden!“ (`FLE_0180`), „seit den alten Ägyptern“ (`0190`), „Niemand ist überrascht.“ (`0200`), „es sitzt sich“ (`EMP_0220`), „Das Sofa wird nicht kälter, Max.“ (`ZAP_0240`), „Und jetzt drück endlich was.“ (`0250`) | zündet | In dieser Welt rufen auch die Nebenfiguren. Das macht die Sender lebendig. | |
+| 20 Hinweise | „Leider der mit den Zähnen.“ (`W4_HINT_PIX_0030`), „kostet nichts außer Würde“ (`0060`), „Der Rest ist Sitcom.“ (`0090`), „Also alles.“ (`0150`), „Also: nicht freiwillig.“ (`0170`), „Und ich erzähle es jedem.“ (`0250`), „Das ist seine Lieblingsbeschäftigung.“ (`0300`), „Frag nicht, woher ich das weiß.“ (`0380`), „Wir reden nie wieder darüber.“ (`0390`), „Nicht auf mich.“ (`0430`), „außer dass er sich bedankt“ (`0510`) | zündet | Die nachgetragenen dritten Stufen (`0520` bis `0690`) sind sachlicher und klingen weniger nach Pixel. Für die letzte Stufe ist das in Ordnung. | |
+
+**Bilanz Welt 4.** Grob gezählt 520 Gags, davon zünden rund 460. Die Welt hat die meisten verschiedenen Tonlagen (Gameshow, Sitcom, Tierdoku, Musikvideo, Grusel, Comic, Werbung), und jede hat eine eigene Sprechweise. Sie hat auch die beste Auszahlung der Dauergags: der Hauptgewinn, der leere Akku, die Milch, das Sofa.
+
+**Wiederholungen in Welt 4:**
+
+1. „Entweder A oder B“: fünfzehnmal („moderne Kunst oder ein Fehler“, „sehr effizient oder sehr illegal“, „Rhythmus oder Rache“, „Horror oder Schweizer Qualitätsarbeit“, „Spionage oder Social Media“, „Respekt oder Schockstarre“). Die Form ist gut, aber ein Drittel reicht.
+2. Schule und Klasse: fünfzehn Stellen (Klassenchat zweimal, Sportunterricht, Hausaufgaben, Mathearbeit, Turnbeutel, Elternabend).
+3. Doppelte Gags innerhalb der Welt: `W4_RAU_PIX_0100` und `W4_FRIE_PIX_0060` (Tote tanzen besser), `W4_FERN_PIX_0090` und `W4_KELL_PIX_0075` (Bleistift in der Kassette), `W4_GLUE_MAX_0455` und `W4_GLUE_PIX_0460` (Kreuzfahrt aus Pappe), `W4_RAU_PIX_0140` und `W4_PIXM_PIX_0290` (Kater und Kurier), `W4_SIT_PIX_0090` und `W4_SIT_MAX_0140` (Klo), `W4_GLUE_GER_0590` und `W4_FERN_MAX_0050` (zahlt sich aus).
+4. „Das ist das erste Mal, dass …“: siebenmal. „… meines Lebens“: viermal.
+5. Gruppenchat und Klassenchat als Vergleich: viermal (`W4_SAV_0180`, `W4_PIXM_0110`, `W4_GLUE_0480`, `W4_KAPI_0120`), dazu der Gruppenanruf (`W4_RAU_0060`).
+6. Pixel erklärt „Früher hat man …“: viermal. Das ist die Aufgabe der Figur in dieser Welt und trägt. Mehr sollten es nicht werden.
+7. Zählbare Füllsel: „ehrlich gesagt“ und „Ehrlich,“ 10, „Ich glaube“ 15, „und zwar“ 16, „irgendwie“ 9, „ein bisschen“ 10, „junger Mann“ 13.
+
+**Dauergags, die tragen:** „Ich hätte da noch eine Frage“. „Wir reden nicht über Folge 87“. Gerds „Nur für kurze Zeit“. Die Jahreszahl 1988 (Gerd, Zappmann, der Code). Milch. Der Amboss.
+
+**Kleine Unstimmigkeiten aus diesem Durchgang** (kommen in die Fundliste):
+
+- **Hyäne im Publikum.** Die Sitcom-Mutter sagt auf die Frage nach gestern Abend: „Alle lachen. Immer. Außer der gefleckten Dame in Reihe drei.“ (`W4_SIT_SMU_0360`). Damit saß die Hyäne zur Tatzeit im Studio. Das wäre ein echtes Alibi, und sie hätte gewusst, dass es Fondue gab. Die Zeile soll nur zeigen, dass sie nie lacht (so steht es in `raetsel/welt-4.md`, Zeile 78), sie hebelt aber den Krimi aus. Vorschlag: „Alle lachen. Immer. Nur Reihe drei war gestern leer. Da sitzt sonst so eine Gefleckte, die nie lacht.“ Dann stützt die Zeile die Lösung.
+- **Krawatte oder Mantel.** Der Vater verlangt „Besuch. Mit Krawatte.“ (`W4_SIT_VAT_0160`), Max sucht danach jemanden mit Krawatte (`0170`). Die Lösung ist aber der Mantel (`0420`, Hinweis `W4_HINT_PIX_0070`). Vorschlag: in `0420` beides verbinden: „Er trägt Mantel. Und Krawatte, nehme ich an. Chefs tragen so was.“
+- **Bettlaken.** `W4_INV_MAX_0010` nennt einen Geist als Geber, es war der Fledermann (siehe Tabelle).
+- **Silben.** „Effizient“ hat vier Silben (`W4_GLUE_GER_0045`).
+- **Oma hat einen Hund?** `W4_TEST_PIX_0290` („wo bei Oma immer der Hund schlafen muss“) ist die einzige Stelle im Spiel, an der ein Hund bei Oma vorkommt.
+- **Endkampf.** Max sagt vor jedem Schritt selbst, welche Taste jetzt dran ist (`W4_STUD_MAX_0190`, `0220`, `0290`). Als Szene ist das stark, als Rätsel bleibt wenig übrig. Gehört in Abschnitt J.
+
+#### C Zwischenspiele und Finale (`docs/skript/zwischenspiele-und-finale.md`)
+
+| Szene | Gag (Zeile) | Urteil | Grund | Alternativen |
+| --- | --- | --- | --- | --- |
+| Zwischenspiel 1, Ankunft | „Niemand außer mir, wie üblich.“ (`ZS1_DACH_PIX_0020`), „Der kam übrigens ziemlich schnell näher.“ (`0030`), „euer ganzes Problem als Spezies. Eins von mehreren.“ (`0040`), „ich kann nicht hinsehen!“ (`OPA_0050`), „Nur eben in dieser Reihenfolge.“ (`0070`), „Jetzt trägt er Kopftuch und räumt auf.“ (`0072`), Luftfeuchtigkeit (`0074`), Eierkarton „Modell Spezialzwecke … Hab ich selbst draufgeschrieben, also stimmt es.“ (`0080` bis `0100`), „Das Ei sieht plötzlich sehr nach Ei aus.“ (`NAR_0110`), „Rückverwandlungsschwund“ (`0130`), „Bio-Freiland mit eigenem Drachen als Wachpersonal“ (`PIX_0140`), „Das Sendeorgan bist du!“ (`0170`), „Ein sehr langes Nein mit Jahreszahl.“ (`0180`), „Vortrag auf zwei Beinen“ (`0190`), WLAN (`0194`), „Meine Schuhe sind gefühlt noch im Mittelalter.“ (`0202`), „Deine ist leer, meine hat Ziele.“ (`0240`) | zündet | Der Kernwitz des ganzen Spiels beginnt hier: Das Artefakt schrumpft zum Lebensmittel, Opa erfindet sofort ein Fachwort dafür, und nur Pixel sagt, was er sieht. Jede Figur bleibt bei ihrer Regel. | |
+| Zwischenspiel 1, Ansehen und Gespräch | „Opa hat ein Talent für Ehrfurcht.“ (`0315`), Fliege (`0335`), „deshalb schwitzt er“ (`0345`), Zeldina und die Gardinen (`0350`, `0355`), „es trifft immer den Kater“ (`0365`), „wacht in drei Jahren mit Bart auf“ (`0375`), „sonst geht es nicht auf“ (`0390` bis `0410`), Zauberwürfel seit 1982 (`0425`), „Deshalb merkt deine Mutter nichts.“ (`OPA_0432`), „alle vier, und zwar im Chor“ (`0436`), „Ein runder Termin. Deshalb ja auch der Kreis.“ (`0452`), „das ist schon Tradition“ (`PIX_0454`) | zündet | Opa verplappert sich in Backwörtern („aufgehen“) und rettet sich jedes Mal. Der Spieler darf klüger sein als Max. | |
+| Zwischenspiel 1, Ansehen | „Ehrlich gesagt das Normalste, was ich seit Tagen gesehen hab.“ (`MAX_0310`), „und das finde ich, offen gesagt, beunruhigend“ (`PIX_0320`), „Ich glaube, der hat auf mich gewartet.“ (`MAX_0370`) | mittel | Drei Zeilen, drei Füllsel. Der Gedanke dahinter ist jedes Mal gut. | `0310`: „Ein Ei in einem Eierkarton auf einer Werkbank. Das Normalste, was ich seit drei Tagen gesehen hab, und es kommt von einem Drachen.“ / `0320`: „Es liegt da, als hätte es schon immer hierher gehört. // Dinge aus Märchen sollten sich auf einer Werkbank fremd fühlen. Dieses hier hat schon einen Stammplatz.“ / `0370`: „Der Sessel ist noch bequemer als heute Mittag. Er hat geübt.“ |
+| Zwischenspiel 1, Packen | „Die Tasche hat Prinzipien“ (`0510`), „ein halbes Mittelalter in den Hosentaschen“ (`0512`), „das ist mein Glaube“ (`PIX_0530`), „Danach wird sie vorgelesen.“ (`0535`), Pixels Pack-Kommentare (`0540` bis `0600`: „höchstens zum Weglaufen“, „Rechne selbst.“), „eine Frage des Standes“ (`0620`), „Der kommt zu spät, aber er kommt.“ (`0650`), „ob gerade Frühstück ist“ (`0670`), „Dann wäre ich wenigstens unentbehrlich.“ (`ZS1_HINT_PIX_0010`) | zündet | Das Packen ist eine Entscheidung mit Folgen, und Pixel kommentiert jede Wahl anders. So wird aus einer Verwaltungsaufgabe eine Szene. | |
+| Zwischenspiel 1, Packen | „genau da bin ich am allerschlechtesten“ (`MAX_0610`) | mittel | Selbstabwertung, die Max in jeder Welt mehrfach hat. | „Zwei Fächer, zwei Dinge. Die Tasche ist strenger als jede Fluggesellschaft.“ / „Zwei Fächer. Ich hab drei Dinge und zwei Hände. Die Tasche gewinnt.“ |
+| Zwischenspiel 2, Ankunft | Die Kuh sieht Pixel an (`ZS2_DACH_PIX_0020`), „eine halbe Wüste“ (`0030`), „Ein Held, Modell Enkel!“ (`0040`), „drei Tage … und einen Fünfkampf“ (`0050`), „Das Prinzip hab ich vom Schnellkochtopf.“ (`0060`), **„Hatschi. // Bäckerei.“** (`0100`), „Sie lügt ausschließlich bei Fisch“ (`0120`), Midseason-Pause (`0140`), **„Abwaschen oder so.“ und Opa friert ein** (`0160` bis `0210`: „Ist er kaputt?“, „Du hast gerade … Haushalt gesagt.“, „das hat der Sand gemacht“), Mehl „Vierhundertfünf … Fehlercode“ (`0230` bis `0250`) | zündet | Zwei Spitzen. „Bäckerei“ ist die kürzeste Pointe im Spiel und zahlt sich im Finale aus (`FI_AUFL_PIX_0080`). Das „Abwaschen“ zeigt Max' Veränderung, ohne dass jemand sie erklärt: Die anderen erschrecken. | |
+| Zwischenspiel 2, Ansehen und Packen | „zu häuslich“ (`0310`), „Ganz bewusst an gar nichts.“ (`0315`), „bei vier … sage ich etwas“ (`0320`), „Verstärkungskreis“ (`0340`), „Die Lügen in diesem Haus werden immer nahrhafter.“ (`0350`), Tiger-Schatten (`0365`), „und der ist nur Mono“ (`0375`), „würde ich sagen: Küche“ (`0380`), „Die haben Lachs.“ (`0385`), „nach Geschmack sortiert“ (`0395`), „Der Sessel kennt Opa schon länger als ich.“ (`0405`), Klumpen (`0410` bis `0440`), Olivenöl (`0520`), Sandale „Religionsgegenstand“ (`0530`), „Die Antwort ist nein.“ (`0540`), „Papier brennt gut.“ (`0550`), „mehr Welten gesehen als du Ladekabel“ (`0560`), „Rucksack mit Cloud“ (`0600`), „Mitgefühl ist anstrengend.“ (`0610`), „Hör nicht auf sie. Hör auf dich.“ (`0620`), „Prospekte“ (`0640`, `0650`), „Das nennt man Prinzipien.“ (`0670`) | zündet | Pixels Stapel „Prospekte“ ist eine Fährte, die im Finale wörtlich aufgeht (`FI_AUFL_PIX_0310`). | |
+| Zwischenspiel 2, Ansehen | „Drüben waren es drei Tage, und hier gibt es noch nicht mal Abendessen.“ (`MAX_0360`), „ich hab mir Sitzen eigentlich verdient. Aber später.“ (`0400`) | mittel | `0360` stellt nur fest. `0400` ist ein wichtiger Moment (Max setzt sich nicht), aber „eigentlich“ nimmt ihm die Kraft. | `0360`: „Das Licht ist orange geworden. Drüben drei Tage, hier ein Nachmittag. Mein Magen rechnet in Tagen.“ / `0400`: „Der Sessel. Ich hab einen Fünfkampf hinter mir und setz mich trotzdem nicht. Mit mir stimmt was nicht.“ |
+| Zwischenspiel 3, Ankunft | „Das ist keine Werbung mehr, das ist eine Botschaft.“ (`ZS3_DACH_PIX_0020`), „…schwund. Ich weiß.“ (`0070`, `0080`), „Fernbedienungsschrott“ (`0100`), „Das weiß ich aus Erfahrung.“ (`0110`), „Ich führe darüber Buch.“ (`0120`), Pixel legt die Zelle zu Ei und Mehl: „Ich sage nichts. Ich lege es nur hin.“ (`0130`, `0140`), „Wirklich ganz toll.“ (`0150`), **„Kuchen123“** (`0160` bis `0200`), Einkaufszettel „Bei Hunden.“ (`0220`, `0230`) | zündet | Max beendet Opas Fachwort selbst. Der Dauergag hat sich weiterentwickelt, statt sich zu wiederholen. „Kuchen123“ ist die frechste Fährte: Opa sagt die Lösung laut und keiner hört hin. | |
+| Zwischenspiel 3, Ansehen und Packen | „Haha. Nein, Weltuntergang, ich muss mich konzentrieren.“ (`0310`), „Schlagzeuger, der nie zur Probe kommt“ (`0315`), Vogelküken (`0330`), „Und es niemandem erzählt.“ (`0340`), „Betonungszeichen“ (`0370`), „unbestechlich, außer mit Lachs“ (`0380`), „Brieffreund mit Putzplan“ (`0395`), „Das ist billig.“ (`0415`), „die Delle hat genau meine Größe“ (`0425`), Kochbuch „Vorheizen“ (`0430`), „Ich zum Glück nicht, ich bin sechzehn.“ (`0435`), „Oder … ich muss in ein anderes Land ziehen.“ (`0460`), „Mit Stufen. Und einer Ofentür.“ (`0480`), Packen (`0510` bis `0610`: „Hab ich ausgerechnet.“, Hundekuchen „Irgendeine alte Dame. Irgendwann.“, „Ich sage nur: Sitcom-Familien.“, „Gebet für die Tasche“), „Es gehört mir. Irgendjemandem.“ (`0620`), „Nicht hinsetzen!“ (`0640`), „Der Stapel wächst“ (`0650`), „Auf dir.“ (`0670`) | zündet | | |
+| Zwischenspiel 3, Ansehen | „Hier oben hängt echt alles irgendwie zusammen.“ (`MAX_0335`), „Opa meint es ernst. Mit was auch immer.“ (`0365`), „Das hängt mir irgendwie nach.“ (`0405`), „also mit viel zu viel Drama“ (`0600`) | mittel | Zweimal „irgendwie“. `0405` benennt das Gefühl, statt es zu zeigen. `0600` erklärt den eigenen Witz. | `0335`: „Eine ist runtergefallen und hat dabei den Fernseher angeschaltet. Siebzehn Fernbedienungen, und die einzige, die funktioniert, tut es aus Versehen.“ / `0365`: „Das Ausrufezeichen ist so fest gemalt, dass der Stift durchs Papier gegangen ist. Der nächste Monat hat jetzt auch einen Termin.“ / `0405`: „Er sucht und sucht. Ich hätte ihm helfen können. // Ich mach den Fernseher jetzt aus. Das hilft ihm nicht, aber mir.“ / `0600`: „Zwei Fächer, letzte Welt. Die Tasche bleibt hart. Wenigstens einer hier oben hat sich nicht verändert.“ |
+| Finale, Heimkehr | „Mir fehlt etwas“ (`FI_DACH_PIX_0020`), „das hält kein Tag aus!“ (`OPA_0040`), „Modell ganz … Modell fein wie Staub“ (`0090`), „Die Zündkapsel.“ / „Das ist eine Fernbedienung.“ / „Zündkapsel. Mit Tasten.“ (`0120` bis `0140`), „und gedacht, das ist ein Artefakt“ (`0150`), Pixel und der Amboss: „Ohne Amboss, wenn ich bitten darf.“ (`0160` bis `0180`), Oma: „Die Bahn war pünktlich, stell dir vor.“ (`OMA_0220`), „Teig… Drucküberlastung!“ (`0250`), „Niemand hält mein dunkles Werk auf!“ (`0270`) | zündet | Opas Fachwörter kippen eins nach dem anderen. Der Amboss-Gag aus Welt 4 wird hier fortgesetzt, und der Spieler wartet mit Pixel darauf, dass er endlich ausreden darf. | |
+| Finale, Heimkehr | „Das klang jetzt ehrlich gesagt ziemlich nach Endgegner.“ (`MAX_0280`) | mittel | Füllwort mitten in der Zeile, die die Spielphase eröffnet. | „Okay. Das klang nach Endgegner. // Mein Endgegner trägt Strickjacke.“ / „Okay. Das klang nach Endgegner. Und ich hab ihm die Zutaten gebracht.“ |
+| Finale, Stufe 1 (verriegelt) | Opas Zurufe „Die Welt wird weich werden!“, „dann kennt mich jeder in diesem Haus!“, „bis es aufgegangen ist!“ (`FI_RIEG_OPA_0010` bis `0030`), „Ich habe ihm meinen Bauch gezeigt.“ (`PIX_0040`), „worauf man sich wunderbar legen kann“ (`0050`), „verbranntem Zucker“ (`OMA_0060`), **„Ich zähle nicht bis drei. Ich komme einfach.“** (`0070`), „der Riegel hat zurückgezogen“ (`0085`), „Das ist kein Bug, das ist ein Feature, und ich hasse es.“ (`0090`), „eine davon ist Eisen“ (`0100`), „Fehlt nur die Lebensleiste.“ (`0110`), „zweite Phase“ (`0115`), „Hunger und Angst … meine zwei Lieblingsgefühle“ (`0125`), „Weltuntergang riecht nach Schwefel“ (`0130`), „Außer bei Sneakern.“ (`0140`), „Ganz sicher. Was denn sonst.“ (`0150`), „Es ist gefährlich, allein zu gehen.“ (`0155`), „Also das Ding.“ (`0160`), „war der Rest Tutorial“ (`0170`), „außer ungefähr allem“ (`0175`), „Auf den Grad!“ (`0190`), „total gemütlich“ (`0200`), Satellit (`0205`), „Das hab ich da drüben gelernt.“ (`0225`), „Pause-Taste versteckt“ (`0240`), Hundekuchen (`0250` bis `0270`: „Ich bin ein Gerücht.“), **Gutschein „Einmal Rasenmähen … Nur behalten.“** (`0285`) | zündet | Opas Weltherrschafts-Sätze sind alle wörtlich wahr, wenn man an Kuchen denkt. Oma ist mit zwei Sätzen von unten die größte Bedrohung im Raum. Der Gutschein ist der wärmste Moment der Szene und kommt ohne ein Gefühlswort aus. | |
+| Finale, Stufe 1 | „Entweder mag sie mich, oder sie will was von mir.“ (`MAX_0165`) | mittel | „entweder A oder B“, dazu „ein bisschen“. Die Form kommt im Spiel rund fünfzigmal vor. | „Die Antenne dreht sich mit, wenn ich mich bewege. Sie zielt. Ich hoffe, sie zielt freundlich.“ / „Die Antenne dreht sich mit, wenn ich mich bewege. So aufmerksam war in der Schule noch keiner.“ |
+| Finale, Hilferuf | „Essen … kommt leider nicht, wenn man es ruft“ (`FI_RUF_PIX_0010`), „Benachrichtigungen an“ (`0020`), „Das ist meine Kernkompetenz.“ (`ZEL_0040`), „ach nein, da ist sie ja“ (`TOA_0050`), „Wie sieht es denn mit den Nebenkosten aus?“ (`0070`), „Alles ist eine Besichtigung“ (`0090`), „Noch nirgends“ (`0100`), „Heureka! Nein, Moment, falscher Anlass.“ (`ARC_0120`), „Ziemlich sicher vielleicht.“ (`RAM_0130`), „Danke. Sehr hilfreich. Alle.“ (`0150`), „Jemand mit Gelenken?“ (`0160`), „Ich halte alles, was man mir hinhält.“ (`HAU_0190`), Kalle „Konner Nummer 31 … Miau-Morse“ (`0200` bis `0220`), „fürs Protokoll“ (`0230`), „Ich hab keine Daumen!“ (`FLI_0250`), „mit Gratis-Gerd“ (`0260`), **Zettel „Bin aufgestanden. Z.“ und „Gut. Gut für ihn.“** (`0280`, `0290`), „Das ist fast eine WG.“ (`0310`), „Und für Vermieter.“, „Meistens bei der Kaution.“ (`0330`, `0390`), „Baujahr neu“ (`0370`), „er bringt immer Kohlen mit“ (`0410`) | zündet | Jede Welt meldet sich mit einem Satz in ihrer eigenen Stimme. Das ist ein Klassentreffen ohne Leerlauf. Der Zettel von Zappmann ist die leiseste und beste Zeile der Szene. | |
+| Finale, Hilferuf | „Dein Verbündeter ist in einem anderen Kanal!“ (`HER_0140`) | mittel | Die Form gehört Toadi und kommt im Abspann als letzter Gag noch einmal (`FI_ABSP_TOA_0020`). Hier nimmt Hermes ihm die Pointe weg, zwanzig Minuten vorher. | „Ich komme! Ich bin gleich da! Wo ist ‚da‘?“ (rennt durchs Bild) / „Eilmeldung! Jemand braucht Hilfe! Ich sage es sofort weiter!“ (rennt in die falsche Richtung) |
+| Finale, letztes Rätsel | „Ach, wie niedlich.“ (`FI_RAET_ZEL_0020`), „Etwas Großes. Etwas Weiches.“ (`0040`), „Servus, Tür.“ (`HAU_0120`), „der andere wollte mich staubsaugen“ (`PIX_0130`), „Ich nenne das eine Bindung.“ (`0140`), „Moderwort hätte geweint … das liegt am Dampf“ (`0150`), „Benachrichtigung, die keiner liest“ (`0170`, `0175`), „es klingt so nach Diät“ (`0200`), „Ein Keks von 1998.“ (`0210`), „nicht ablecken“ (`0220`), „Oh nein, ich klinge schon wie Opa.“ (`0230`), **„Nicht die rote Taste!“ / „Die rote Taste heißt Stopp, Opa. Auf jeder Fernbedienung der Welt.“** (`0270`, `0280`) | zündet | Das Rätsel löst sich mit Dingen und Freunden aus allen Welten. Die rote Taste ist die logische und die komische Lösung zugleich. | |
+| Finale, Fehlversuche | „Nicht lauter! Es hört doch schon!“ (`0300`), der Teig als Nachrichtensprecher (`0310`, `0320`), „bei jedem einzelnen Vortrag“ (`0340`), „Warum ist der Weltuntergang aus Schokolade.“ (`0360`), „Doch. Leck es ab. Berichte mir.“ (`0370`), „Für Öfen gibt es Fachleute.“ (`ZEL_0400`), „Ich öffne nichts, was ordnungsgemäß ist. Servus.“ (`HAU_0410`), „Sie hält mich bei Laune, und das ist ihre einzige Aufgabe.“ (`PIX_0430`), „Meine Hände zittern. Mach du.“ (`OPA_0470`) | zündet | Falsche Reihenfolge wird belohnt statt bestraft. Jeder Fehlversuch hat eine eigene Zeile. So soll ein Adventure-Finale sein. | |
+| Finale, Fehlversuche | „Ein Knöpfchen ohne Knopf!“ (`OPA_0440`) | zündet nicht | Das Bild stimmt nicht: Eine Batterie ist kein Knöpfchen, und was ein Knöpfchen ohne Knopf sein soll, bleibt offen. | „Die Zelle ist nichts ohne die Kapsel! Nichts! Strom ohne Auftrag!“ / „Die Zelle allein ist nur ein Versprechen! Die Kapsel! Wo ist die Kapsel!“ / „Die Zelle ist nichts ohne die Kapsel! Das ist wie ein Ei ohne … egal! Die Kapsel!“ |
+| Finale, Fehlversuche | „Kenn ich vom Handy, das ist im Grunde mein ganzes Leben.“ (`MAX_0450`) | mittel | Der Handy-Akku-Vergleich kam schon in jeder Welt. | „Keine Zelle, keine Macht. Die Maschine hat nicht mal gezuckt. Den Blick kenn ich von meinem Handy.“ / „Ich ziele, ich drücke, nichts. Ich bin im Endkampf und brauche Batterien. Typisch.“ |
+| Finale, Hinweise | „Einer von euch dreien sollte etwas tun, und ich tippe nicht auf die Luke.“ (`FI_HINT_PIX_0010`), „So bist du.“ (`0030`), „Im Fernsehen nennt man so etwas Besetzung.“ (`0040`), „Türen. Vermieter. Hier gibt es eine Tür.“ (`0050`), „zu flauschig“ (`0070`), „Höflich. Er ist Österreicher.“ (`0080`), „Er wird sie grüßen. Lass ihn.“ (`0100`), „er übersteht Teig“ (`0110`), „Hatte. Vergangenheit.“ (`0120`), „Menschen schreien immer bei der richtigen.“ (`0160`), „Stopp. … Nochmal.“ (`0170`), „Es sieht aus wie Starren, und es ist auch Starren. Aber mit Inhalt.“ (`0180`), „Ich bin nicht du. Ich sitze schon.“ (`0190`), „Ich nenne das nicht Kekse. Ich habe daran gerochen.“ (`0210`) | zündet | Die Hinweise sind hier am besten gestuft: Stufe 1 lenkt den Blick, Stufe 2 nennt das Ding, Stufe 3 sagt den Handgriff. Und jede Stufe ist eine Pointe. | |
+| Finale, Hinweise | „aber ich habe keine Daumen“ (`0060`) | mittel | Flimmer hat dieselbe Pointe zehn Minuten vorher (`FI_RUF_FLI_0250`), und dort ist sie besser. | „Ich hätte es selbst getan, aber ich bin heute fürs Zusehen eingeteilt.“ / „Ich hätte es selbst getan, aber dann hätte sie nichts zu tun.“ |
+| Finale, Auflösung | „Sag es.“ / „Kuchen. Das riecht nach Kuchen.“ (`FI_AUFL_PIX_0060`, `MAX_0070`), **„Bäckerei. Ich habe es gesagt, nach Welt 2, laut und deutlich, mit Niesen.“** (`0080`), „Modell Konrad.“ (`OPA_0100`), die Artefakt-Litanei „Das Drachenei.“ / „Ein Ei. Freiland.“ bis „Meine. Die ich seit Wochen suche. Ja.“ (`0110` bis `0180`), „Sie hält ewig, wenn man sie nicht benutzt.“ (`0160`), „als prüfe sie Feuchtigkeit“ (`NAR_0190`), **„Für einen Einkaufszettel.“ / „Für einen Kuchen, Max. Das ist etwas ganz anderes.“** (`0200`, `0210`), „Vor dem Kater schon gar nicht.“ (`0230`), „Das zählt als Zensur.“ (`0260`), „Er ist explodiert. Live. Mit Teig. Auf Zappi.“ (`0280`), „Und deshalb ‚Vorheizen‘.“ (`0300`), „Mein Stapel ist immer richtig“ (`0310`), „Du warst zu faul zum Einkaufen.“ / „Ich war effizient.“ (`0340`, `0350`), „Nichts davon war gelogen. Nur … groß gesagt.“ (`0370`), „Und was hättest du gesagt?“ / „… Nein. Wahrscheinlich nicht.“ (`0374`, `0376`) | zündet | Die Auflösung ist ein Verhör in Zweiwortsätzen. Jede Fährte der Zwischenspiele wird einzeln eingelöst. Und sie endet nicht beim Witz: Max gibt zu, dass er Nein gesagt hätte. Das ist die ehrlichste Stelle des Spiels. | |
+| Finale, Auflösung | „Beide sagen die Wahrheit. Es riecht nach Kuchen und nach Reue. // Reue riecht bei Menschen ein wenig nach nassem Hund. Aber im Gegensatz zum Hund kann man ihr nicht böse sein.“ (`PIX_0380`) | mittel | Pixel erklärt den Moment, der gerade ohne Erklärung funktioniert hat. Der Schlusssatz ist glatt und passt nicht zu Pixel (er wäre dem Hund böse, das ist der Witz, und der Satz verschenkt ihn). | „Es riecht nach Kuchen und nach Reue. // Reue riecht bei Menschen nach nassem Hund. Ich gehe ans Fenster.“ / „Kuchen und Reue. // Das eine davon esse ich nicht. Vom anderen ist für mich nichts vorgesehen, das kenne ich schon.“ |
+| Finale, Auflösung (Oma) | „Konrad.“ / „Hildegard. Du bist früh.“ (`0400`, `0410`), **„Du bist also die Neue.“ / „Ich suche nur eine Wohnung.“ / „Der Dachboden wäre frei.“** (`0430` bis `0450`), „Endlich mal einer, der putzt.“ (`0480`), „Ungefähr vier Staffeln.“ (`0500`), „Knusprig. Wie von Mutti.“ (`0530`), „Sie hat es gegessen. Freiwillig. Mit Genuss.“ (`0540`), „Auch die mit dem Stab und der mit dem Blech.“ (`0550`), „Das ist Macht, junger Mann“ (`0560`) | zündet | Oma hat zwölf Zeilen und gewinnt jede. Sie staunt über nichts, und das ist komischer als jedes Staunen. | |
+| Finale, Auflösung (Oma) | „Die Bahn war pünktlich. Es gibt also doch noch Wunder.“ (`OMA_0420`) | mittel | Derselbe Witz steht schon in `FI_DACH_OMA_0220` („Die Bahn war pünktlich, stell dir vor.“). Beim zweiten Mal ist er besser, aber verbraucht. | Den Witz in `0220` streichen („Konrad? Ich bin's. Ich bin etwas früher. Mach bitte auf.“) und nur hier bringen. / Oder hier steigern: „Die Bahn war pünktlich. Ich habe mich beim Schaffner erkundigt, ob etwas nicht stimmt.“ |
+| Finale, Wohnzimmer | „Er ist aufgegangen. Das muss man dir lassen, Konrad.“ (`FI_WOHN_OMA_0020`), **„Kuchen ohne Milch? Konrad.“** (`0040`), „Milch war auf keinem Kanal.“ (`0050`), „Fünf Sekunden lang, dreimal, mit Kuh.“ (`PIX_0060`), „Das war also der Endgegner, und ich hab ihn eben angeschnitten.“ (`0070`), „Er sieht dafür sehr entspannt aus.“ (`0075`), „direkt in Omas Tapete“ (`0080`), „Oma sagt, das ist Opa. Beide haben recht.“ (`0085`), Fernbedienungshülle (`0090`), Programmzeitschrift (`0095`), „Jetzt weiß ich endlich, warum.“ (`0100`), „Beides eher unwahrscheinlich.“ (`0110`), „Die Leihfrist ist jetzt abgelaufen.“ (`0115`), „Oma sagt nichts. Das ist schlimmer.“ (`0120`), „Keiner hier versteht, warum.“ (`0125`), Staubrand (`0130`, `0135`), Kaltmiete (`0140`), „Ich glaube, sie meinte das Bad.“ (`0145`), „wie einem Sonnenuntergang“ (`0150`), „Er weint Öl.“ (`0155`), „Deine Einkaufsliste ist Opas Einkaufsliste.“ (`0160`), „Nächstes Jahr: Sofa für zwei.“ (`0165`), „Lachs stand allerdings nicht drauf“ (`0170`), **„Der Teig hat mich getroffen. Ich dachte: Den nehme ich.“** (`OMA_0190`), „Romantisch. Mit Teig. Ich muss mich kurz setzen.“ (`0420`), „Meistens explodiert keiner.“ (`0430`) | zündet | Fast jede Zeile löst etwas aus dem Prolog ein (Staubrand, Familienfoto, Sofa, Notizbuch). Omas Kennenlern-Satz ist die beste Einzelzeile des Finales. | |
+| Finale, Schluss | „Ich frage nicht. Ich hatte Spätschicht. Ich frage morgen, und dann ausführlich.“ (`MUT_0240`), „Und Milch. Wo ist die Milch?“ (`0270`), **„Ich hol sie.“** (`MAX_0310`), „Lief die Kamera? Irgendeine Kamera?“ (`PIX_0330`), **„Man macht eine Quest fertig, bevor man die nächste anfängt.“** (`0350`), „Der Junge ist in Ordnung. Du nicht, Konrad. Aber der Junge.“ (`OMA_0360`), „ich suche seit Jahren eine Wohnung“ (`ZEL_0370`), „Ich komme wieder. Mit dem Geschirrtuch.“ (`HAU_0390`), „Ich sage es nur später, wenn ich wieder sitzen kann.“ (`PIX_0410`) | zündet | Max nimmt das Passwort nicht. Das ist die Antwort auf die erste Szene des Spiels, und sie braucht drei Wörter. | |
+| Abspann | „deine Milch ist in einem anderen Supermarkt“ / „Natürlich ist sie das.“ (`FI_ABSP_TOA_0020`, `0030`), „Ich hasse Cliffhanger … fast so sehr wie Zeitreisen“ (`PIX_0040`), „Und auf dem Aufsteller.“ (`FI_SUPM_MAX_0065`), „Jeder Laden ist ein Dungeon, und die Milch ist der Schatz im letzten Raum.“ (`0075`), Fotos mit Unterschriften (`ABSP_0100` bis `0150`: „Der Kuchen war keine Lüge.“, „Der Dachboden wäre frei.“, „Heureka. Schon wieder.“, „Er holt sie.“), Waldemars Lied (`0160` bis `0190`: „Ein Ei und ein Mehl“, „und hooolt sieeee!“), „Am besten beides, und zwar in dieser Reihenfolge.“ (`PIX_0200`) | zündet | Toadis Satz ist der letzte Dauergag, der noch offen war. Das letzte Foto („Er holt sie.“) ist ohne Worte das schönste Bild: Pixel wartet. | |
+
+**Bilanz Zwischenspiele und Finale:** Rund 330 Pointen, davon etwa 310 „zündet“, 18 „mittel“, 1 „zündet nicht“. Das ist die beste Quote im Spiel. Der Grund: Fast nichts steht hier für sich allein. Die Zwischenspiele legen Fährten (Bäckerei, Kuchen123, Prospekte, Vorheizen, Milchwerbung), das Finale löst jede einzeln ein. Die Schwächen sind dieselben wie überall, nur seltener: Füllsel („ehrlich gesagt“, „irgendwie“), „entweder A oder B“ und eine Selbstabwertung.
+
+**Wiederholungen in dieser Datei:**
+
+- **Die pünktliche Bahn** steht zweimal (`FI_DACH_OMA_0220`, `FI_AUFL_OMA_0420`). Einmal reicht, und zwar das zweite Mal.
+- **„in einem anderen …“** sagt erst Hermes (`FI_RUF_HER_0140`), dann Toadi im Abspann (`FI_ABSP_TOA_0020`). Toadi soll ihn allein haben.
+- **„keine Daumen“** haben Flimmer (`FI_RUF_FLI_0250`) und Pixel (`FI_HINT_PIX_0060`).
+- **„Freiwillig“** steht dreimal am Schluss (`FI_WOHN_MAX_0400`, `FI_SUPM_MAX_0080`, `FI_ABSP_PIX_0200`), dazu „Das ist neu.“ Siehe E.
+- **„junger Mann“** elfmal. Das ist Pixels Anrede und in Ordnung, in den Hinweisen aber dicht.
+- **„Modell …“** 23-mal. Das ist Opas Regel und trägt bis zum Schluss („Modell Konrad“ ist die Auszahlung).
+
+**Dauergags, die hier enden (alle gelungen):** Rückverwandlungsschwund (dreimal, beim dritten Mal sagt Max es selbst), Pixel wird nicht gehört (endet mit „Bäckerei“), Zeitreisen (endet im Abspann), Toadi, Zeldinas Wohnungssuche (endet mit „Der Dachboden wäre frei.“), Opas „Modell“, der Amboss, die Milchwerbung, „in dieser Reihenfolge“ als allerletzter Satz.
+
+**Kleine Unstimmigkeiten aus diesem Durchgang (kommen in die Fundliste):**
+
+- **Zeitrechnung verkehrt herum.** In Zwischenspiel 2 sagt Opa: „Drei Tage! Hier waren es zwanzig Minuten.“ (`ZS2_DACH_OPA_0060`). Drüben vergeht also viel Zeit, hier wenig. Im Finale sagt er: „Zwanzig Minuten Fernsehzeit sind drei Stunden Werkbank.“ (`FI_DACH_OPA_0060`). Das ist das Gegenteil. Vorschlag: „Du warst zwanzig Minuten weg. Für drei Stunden Arbeit. Ich habe mich beeilt.“ oder einfach „Ich habe es aufgebaut, während du weg warst. Viermal zwanzig Minuten. Ich bin selbst überrascht.“
+- **Tageszeit.** Im Prolog steht am Treppenfenster „Draußen wird es langsam dunkel.“ (`P0_TREP_MAX_0020`). Danach ist es in Zwischenspiel 1 noch „heute Mittag“ her (`ZS1_DACH_MAX_0370`), in Zwischenspiel 2 wird das Licht erst orange (`ZS2_DACH_MAX_0360`), und Opa spricht von „vier Welten an einem Nachmittag“ (`FI_DACH_OPA_0040`). Die Prolog-Zeile passt nicht dazu. Vorschlag für den Prolog: „Draußen ist bestes Wetter. Drinnen ist es, wenn man sich die Tapete ansieht, ungefähr 1987.“
+- **Geburtstag vergessen oder seit Wochen im Kalender?** Opa: „Ich habe ihn vergessen. Bis gestern Abend.“ (`FI_AUFL_OPA_0330`). Pixel im Hinweis: „Das steht seit Wochen im Kalender.“ (`FI_HINT_PIX_0200`). Beides geht zusammen (eingekreist und trotzdem vergessen), aber dann sollte Pixel es sagen: „Das steht seit Wochen im Kalender. Dein Großvater hat es trotzdem geschafft.“
+- **Die Mutter sagt „Mama“ zu Oma und „Konrad“ zu Opa** (`FI_WOHN_MUT_0230`, `0260`). Wenn Opa ihr Vater ist, wäre „Papa“ natürlich. Wenn er ihr Schwiegervater ist, passt „Mama“ für Oma nicht. In `01-konzept.md` steht dazu nichts. Bitte festlegen.
+- **Schritt C braucht den Wechsel zu Pixel** (`FI_HINT_PIX_0130`: „Dann wechsel zu mir“). Genau dieser Wechsel ist im Code gesperrt (siehe Code-Fund 1). Der Text ist richtig, das Spiel folgt ihm nicht.
+- **Notizbuch Seite 3** ist die Pointe in `FI_WOHN_MAX_0160` („Pixels Einkaufsliste ist Opas Einkaufsliste“). Im Spiel ist die Seite leer (Code-Fund 11). Die Pointe läuft damit ins Leere.
+- **Reservezeilen.** `ZS3_DACH_PIX_0550` und `FI_INV_*_0010` bis `0045` kommen im Spiel nicht vor (so vermerkt). Um `FI_INV_PIX_0015` („Ich sage das nicht als Drohung. Ich sage das als Vision.“) und `FI_INV_MAX_0025` („Größe M, Freilandhaltung, Drache.“) ist es schade. Sie ließen sich in Zwischenspiel 1 beim Ansehen des Eis unterbringen.
+- **Kindersendung mit Erwachsenen im Publikum.** Oma saß 1977 „in der ersten Reihe“ von „Zappis Puppenstube“ (`FI_WOHN_OMA_0190`). Das fällt nur auf, wenn man nachrechnet. Ein halber Satz würde es klären („Ich war mit meiner kleinen Schwester da.“). Kein Muss.
+
+### D. Anspielungen
+
+**Urteil:** Die Anspielungen sind zahlreich, aber fast alle halten die eigene Regel ein: Sie funktionieren auch ohne Vorwissen. Zu dicht wird es an drei Orten. Rechtlich heikel sind nicht die Namen, sondern die wenigen Stellen mit Originalwortlaut (dazu Abschnitt M).
+
+**Wo es zu viele sind und was ich streichen würde:**
+
+| Ort | Was dort zusammenkommt | Streichen |
+| --- | --- | --- |
+| Welt 1, Dorfplatz (erster Rundgang) | Zelda, Mario, Herr der Ringe (dreimal), Harry Potter (zweimal), Monty Python, Portal, Stadtmusikanten | das halbe Ring-Zitat (`W1_DORF_MAX_0240`), Gleis neundreiviertel (`W1_DORF_MAX_0295`), in der Taverne eine der Vielsaft-Zeilen, Alwins Mario-Satz (`W1_HOGG_ALW_0360`) |
+| Welt 2, Agora | Assassin's Creed, Venus von Milo, Diogenes, Orpheus, Cicero, Asterix, dreimal Leben des Brian | die Kritzelei (`W2_AGOR_MAX_0180`), Hermes' Römer-Zeile (`W2_BUER_HER_0650`), ein „Die spinnen, die Griechen“ |
+| Welt 3, Widerstandsbasis und Laboreingang | Star Wars, Matrix, Terminator, Portal, Per Anhalter, 2001 auf zwei Bildschirmen | Kessel-Lauf und Parsec (`W3_BAS_KAL_0440` bis `0460`), `W3_BAS_MAX_0755`, Sisyphos (`W3_EING_MAX_0490`). „Replikant“ (`W3_TEST_MAX_0220`) durch ein eigenes Wort ersetzen. |
+| Welt 4, Kapitolis | Superman, Batman, Wonder Woman, Spider-Man, Joker, Looney Tunes | `W4_KAPI_MAX_0525`, eine von `W4_KAPI_PIX_0510` und `0515`. Im Keller `W4_KELL_MAX_0175`. |
+
+**Was die guten Anspielungen gemeinsam haben:** Sie sind Figur oder Rätsel geworden. Zeldina ist keine Zelda-Parodie mehr, sie ist eine Prinzessin mit Mietproblem. Der Passierschein trägt ein ganzes Rätsel. „Der Kuchen war keine Lüge.“ ist ein vollständiger Satz über diesen Kuchen. Schwach sind die Anspielungen, die nur ein Name im Vorbeigehen sind.
+
+Es folgen die Tabellen je Datei.
+
+#### D Prolog
+
+| Anspielung | Ort | Worauf sie verweist | Ohne Vorwissen verständlich? | Trägt sie zur Szene bei? |
+| --- | --- | --- | --- | --- |
+| „Zapp-O-Mat 3000“ | `P0_DACH_OPA_0040` | Gerätenamen aus Werbung und Trickfilm der 80er | ja | ja, setzt Opas Ton |
+| Sendeschluss, Schnee, Testbild | `P0_DACH_PIX_0420`, `0680` | Fernsehen vor dem 24-Stunden-Programm | ja, Pixel erklärt es | ja, Generationen-Witz |
+| Kreidelinie, Tatort, Hauptverdächtiger | `P0_WOHN_MAX_0145`, `0205` | Fernsehkrimi | ja | ja |
+| „Schlager für Erfinder“, „Mein Herz ist ein Lötkolben“ | `P0_DACH_MAX_0960`, `0965` | Schlagerplatten-Reihen | ja | ja |
+| Cheatcode, Komplettlösung, Intro überspringen, Ladebildschirm | Ersatz-Pool, `P0_DACH_MAX_0410` | Videospiele | ja | ja, Max' Sprache |
+| „Meine Vorfahren wurden am Nil als Götter verehrt.“ | `P0_SYS_ERS_PIX_0230` | Katzenverehrung im alten Ägypten | ja | ja, bereitet Welt 2 vor |
+
+Der Prolog kommt fast ohne Zitate aus. Das ist richtig so.
+
+#### D Welt 1
+
+| Anspielung | Ort | Worauf sie verweist | Ohne Vorwissen verständlich? | Trägt sie zur Szene bei? |
+| --- | --- | --- | --- | --- |
+| Zeldina, Prinzessin mit Schwert | ganze Welt | The Legend of Zelda | ja, sie ist eine eigene Figur | ja, sie trägt die Wendung der Welt |
+| Okarina: „fängt's bestimmt an zu regnen“, „sieben Löcher“ | `W1_SMAU_MAX_0140` bis `0150` | Zelda, Ocarina of Time | nein | Bonus für Kenner, stört nicht, weil „Töööt“ auch so funktioniert |
+| Toadi, „Die Prinzessin ist in einem anderen Schloss“ | `W1_DORF_TOA_1200`, `W1_WASS_TOA_0020`, `W1_LUFT_TOA_0600`, `W1_THRO_TOA_0540`, `W1_ABS_TOA_0090`, Titel Szene 8 | Super Mario Bros. | ja, als Dauergag über einen, der immer zu spät kommt | ja, mit Auflösung |
+| „Die Milch ist in einem anderen Schloss.“ | `W1_HOGG_ALW_0360` | derselbe Satz, bei Alwin | nein, bei Alwin ergibt er keinen Sinn | nein. Streichen, sonst verwässert er Toadis Gag |
+| Rohre, „Rohre führen nie dahin, wo man hinwill“; Riesenpilze, „werde ich größer“ | `W1_LUFT_ZEL_0860`, `W1_WALD_MAX_0015` | Super Mario | halb | ja, kurz genug |
+| Lord Moderwort ohne Nase, Dunkler Turm | ganze Welt | Voldemort (Harry Potter) | ja | ja, die Allergie macht ihn eigen |
+| Hoggelwarz, Sortierende Socke, „Der Stab wählt den Zauberer“ | Szene 5 und 6 | Hogwarts, Sprechender Hut, Ollivander | ja, Zauberschule kennt jeder | ja, Socke und Stab sind Rätselteile |
+| „Gleis neundreiviertel ist woanders.“ | `W1_DORF_MAX_0295` | Harry Potter | nein | nein, reines Zitat. Streichkandidat |
+| „Vielsaft-Limo. Schmeckt wie jemand anderes.“ | `W1_TAV_MAX_0290`, `PIX_0300`, `MAX_1550` | Vielsaft-Trank (Harry Potter) | halb, „schmeckt wie jemand anderes“ erklärt es | mittel. Drei Zeilen für ein Zitat ohne Funktion. Eine reicht |
+| Gollo: „Ssschätzchen“, Ring, Rätselspiel, „Was hab ich in meiner Tasche?“ | Szene 3, Rätsel 1c | Gollum, Der Hobbit | Figur ja. Die Lösung des Rätselspiels kennt nur, wer das Buch kennt. Die Hinweise fangen das auf (`W1_HINT_PIX_0123`) | ja, aber siehe Abschnitt J |
+| Ring-Laden „Einer für alles“, „Ein Ring, sie alle zu …“, „Ringe bitte nicht ins Feuer werfen“, „Kein Zutritt für Ringträger mit Begleitung“ | `W1_DORF_MAX_0240`, `0245`, `0265` | Der Herr der Ringe | Schilder ja, das halbe Zitat nein | Drei Ring-Witze an zwei Hotspots. Das halbe Zitat (`0240`) streichen |
+| „Jahrgang Schicksalsberg“ | `W1_TAV_MAX_0270`, Rätsel 1b | Der Herr der Ringe | ja, klingt auch so nach „weit weg“ | ja, trägt das Rätsel |
+| „Zum tänzelnden Pony-Express“ | Taverne | Gasthaus „Zum Tänzelnden Pony“ | nein, aber der Name funktioniert auch so | ja |
+| „Du wirst nicht vorbeikommen. An mir.“ | `W1_ABS_ALW_0080` | Gandalf an der Brücke | halb | ja, weil Alwin sich selbst korrigiert |
+| Smaugi auf dem Hort | Szene 13 | Smaug (Der Hobbit) | ja, Drache auf Schatz kennt jeder | ja |
+| „Macht dich das glücklich?“ | `W1_SMAU_SMA_0510` | Marie Kondo | ja | ja, trägt Rätsel 12 |
+| Kokosnüsse statt Pferde | `W1_DORF_MAX_0250`, `0255`, `PIX_0420`, `W1_TAV_PIX_1000` | Monty Python, Die Ritter der Kokosnuss | ja, als Bild | ja |
+| „Das Pferd ist eine Lüge.“ | `W1_DORF_PIX_0420` | Portal („The cake is a lie“) | ja, der Satz steht auch allein | ja |
+| Bremer Stadtmusikanten, Rotkäppchen und Wolf, Bohnenranke, Glasschuh und Kürbis, Schwert im Stein, Spiegel, „Hei-ho“, „Trink mich“ | Dorfplatz, Zauberwald, Luftschloss, Abstellkammern, Inventar | Grimm, Hans und die Bohnenranke, Aschenputtel, Artus, Schneewittchen, Alice im Wunderland | ja | ja, das ist der Stoff der Welt |
+| Drei Ziegenböcke und der Troll | Szene 7 | norwegisches Märchen von den drei Böcken | In Deutschland wenig bekannt. Die Satzung erklärt es vollständig | ja. Gut gelöst: Das Schild ist die Erklärung |
+| „alter Meister mit Hut, der ‚Halt‘ ruft“ | `W1_TURM_MAX_0095` | Der Zauberlehrling | ja | ja |
+| „das mit der Katze, die auf dem Dach singt“ | `W1_BRUE_WAL_0262` | Musical Cats | ja | ja, und Pixel steht daneben |
+| „Lebenspunkte“, „Staffel“, „Fortsetzung“, „Abspann“ | `W1_ANK_MAX_0180`, `0050`, `W1_BRUE_MAX_1020`, `W1_WALD_MAX_0570` | Spiele und Serien | ja | ja, das ist Max' Sprache |
+
+Wo es zu viele sind: Der Dorfplatz stapelt beim ersten Rundgang Zelda, Mario, Herr der Ringe (dreimal), Harry Potter (zweimal), Monty Python, Portal und die Stadtmusikanten. Das ist der dichteste Raum des Spiels, und er steht ganz am Anfang. Streichen würde ich dort das halbe Ring-Zitat (`0240`) und Gleis neundreiviertel (`0295`). In der Taverne reicht eine Vielsaft-Zeile. Bei Alwin fällt der Mario-Satz weg. Alles, was ein Rätsel trägt oder eine Figur baut, bleibt.
+
+#### D Welt 2
+
+| Anspielung | Ort | Worauf sie verweist | Ohne Vorwissen verständlich? | Trägt sie zur Szene bei? |
+| --- | --- | --- | --- | --- |
+| Fährmann und Obolus, Münze unter die Zunge | `W2_NIL_PIX_0225`, `FAE_0260` | Charon, griechische Unterwelt | ja, Pixel erklärt es | ja, Rätsel 1 |
+| Sobek | Krokodil an der Fähre | ägyptischer Krokodilgott | ja, ist einfach ein Name | ja |
+| Hand im Weizenfeld, „einer in Rüstung, der traurig guckt, während Geigen einsetzen“ | `W2_NIL_MAX_0610`, `0615` | Film Gladiator | nein, aber die Zeile ist auch so komisch | ja, kurz |
+| Sanduhr, Zeit zurückspulen, Salto | `W2_NIL_MAX_0635` | Prince of Persia | nein | Bonus, stört nicht |
+| „ein Dicker mit Streifenhose“ holt den Stein ab; „Die spinnen, die Griechen“; Passierschein A38; Sphinx verliert die Nase | `W2_NIL_MAX_0725`, `W2_AUDI_MAX_0110`, `W2_STAD_MAX_0010`, Rätsel 3, `W2_FINA_NAR_0120` | Asterix (Obelix, „Die spinnen, die Römer“, Asterix erobert Rom, Asterix und Kleopatra) | A38 und der Spruch ja, weil sie Allgemeingut sind. Der Dicke nur mit Vorwissen | A38 trägt ein ganzes Rätsel. Siehe Abschnitt M zur Nähe zur Vorlage |
+| Fries mit seitwärts Tanzenden und Ghettoblaster | `W2_THRO_MAX_0230` bis `PIX_0250` | Hip-Hop der Achtziger, „Walk Like an Egyptian“ | ja, Pixel erklärt den Ghettoblaster | ja, Pixels Achtziger-Wissen |
+| „In einem davon sitzt bestimmt ein Räuber. Oder gleich vierzig.“ | `W2_KUCH_MAX_0065` | Ali Baba | ja | ja |
+| Steinkugel, „weder Hut noch Peitsche“ | `W2_SPHX_MAX_0070` bis `0090`, `0570` | Indiana Jones | Kugel ja, Hut und Peitsche nur mit Vorwissen | ja, und die Sphinx hat die Pointe |
+| „Was hat am Morgen vier Beine …“ | `W2_SPHX_MAX_0190` | Rätsel der Sphinx (Ödipus) | ja | ja, Ausgangspunkt von Rätsel 8 |
+| Heureka, Brennspiegel und Schiffe, „Gib mir einen festen Punkt“, „Störe meine Kreise nicht“, Kugel im Zylinder, Hierons Krone | Werkstatt, Rätsel 5 und 10 | Archimedes-Anekdoten | ja, alles wird gespielt und nicht zitiert | ja. Sorgfältig recherchiert, das merkt man |
+| Cicero sucht das Grab des Archimedes, 137 Jahre | Rätsel 10 | historische Begebenheit (Cicero in Syrakus) | ja | ja. Schönste gelehrte Anspielung im Spiel, weil sie Rätsel wird |
+| „Wie lange noch … willst du meine Geduld missbrauchen?“ | `W2_AGOR_CIC_0350`, `W2_ABS_CIC_0200` | Ciceros erste Rede gegen Catilina | ja | ja |
+| Modell eines schiefen Turms, Glockenturm neigt sich; Marmorfrau verliert die Arme | `W2_WERK_MAX_0250`, `W2_STAD_MAX_0070`, `W2_AGOR_MAX_0060` | Turm von Pisa, Venus von Milo | ja | ja, dreifach vorbereitet |
+| Adler auf der Säule, Heuhaufen darunter | `W2_AGOR_MAX_0030` bis `0050` | Assassin's Creed | nein, aber „Rein zufällig natürlich“ reicht | ja, und Pixel landet später wirklich im Heu |
+| Mann in der Tonne, „Geh mir aus der Sonne“, Laterne | `W2_AGOR_PHI_0460` | Diogenes | ja | ja, Konter 6 und 7 |
+| „Man sagt, er singe Steine weich.“ | `W2_AGOR_PIX_0170` | Orpheus | halb | kurz, schadet nicht |
+| Brian, „Ich bin nicht der Messias“, „Nur der wahre Messias würde das leugnen“, Sandale gegen Schuh, „Was haben die Römer je für uns getan?“, korrigierte Latein-Kritzelei | `W2_AGOR_MAX_0180`, `0220`, `GRI_0400`, `W2_SAND_*`, `W2_BUER_HER_0650` | Das Leben des Brian | Ja, die Szenen funktionieren allein. Aber fünf Stellen aus einem Film, zwei davon fast wörtlich | Sandale und Römer-Frage tragen Rätsel 6 und Konter 4. Der Name „Brian“ und das wörtliche „Nur der wahre Messias …“ sind der Punkt, an dem aus Anspielung Nacherzählung wird. Siehe Abschnitt M |
+| Leonidas: „DAS IST OLYMPIA!“, Brunnen, „HEUTE ABEND SPEISEN WIR … ZU HAUSE!“ | `W2_STAD_LEO_0150`, `MAX_0125`, `LEO_0230` | Film 300 | ja, er brüllt einfach | ja, die Brechung („Meine Mutter kocht“) ist eigen |
+| „MARATHON!“ | `W2_TAG1_LEO_0020` | Läufer von Marathon | ja | ja |
+| Schildkröte mit Vorsprung | `W2_STAD_MAX_0255`, `W2_TAG1_PIX_0070` | Zenon, Achilles und die Schildkröte | ja, wird erklärt | ja |
+| „Brot und Spiele“ | `W2_AUDI_RAM_0310`, `W2_PARA_VOL_0020` | Juvenal | ja | ja, Motiv der Parade |
+| „Zwiebeln haben Schichten. Das hat mir mal jemand Großes, Grünes erklärt“ | `W2_INV_MAX_0355` | Shrek | halb | Bonus |
+| Rede-Ringen mit Kontern | Minispiel | Beleidigungsfechten aus Monkey Island | ja | ja, als Spielidee übernommen und eigen gefüllt |
+| „Am Ende war's bestimmt der Butler.“ | `W2_DISK_MAX_0020` | Krimi-Klischee | ja | ja |
+
+Wo es zu viele sind: Die Agora. Auf einem Bildschirm liegen Assassin's Creed, Venus von Milo, Diogenes, Orpheus, Cicero, Asterix-Touristen und dreimal Brian. Fast alles davon erklärt sich selbst, deshalb kippt es nicht. Kürzen würde ich nur beim Leben des Brian: die Kritzelei (`W2_AGOR_MAX_0180`) und Hermes' Römer-Zeile (`W2_BUER_HER_0650`) können weg, und der wörtliche Messias-Satz sollte eigene Worte bekommen. Das doppelte „Die spinnen, die Griechen“ auf eins kürzen.
+
+#### D Welt 3
+
+| Anspielung | Ort | Worauf sie verweist | Versteht man sie ohne Vorwissen? | Trägt sie zur Szene bei? |
+| --- | --- | --- | --- | --- |
+| Dauerregen, Neon, fliegende Autos, Nudelbude | ganze Straße (`W3_STR_*`) | Blade Runner | Ja. Es ist einfach eine nasse Zukunftsstadt. | Ja. Der Regen wird zum Dauergag mit Pixel. |
+| Deckert und der Test mit der Schildkröte | `W3_TEST_*` | Blade Runner, Deckard und der Voight-Kampff-Test | Ja. Der Test erklärt sich selbst und ist ein eigenes Rätsel. | Ja, sehr. Beste Szene der Welt. |
+| Origami-Einhorn | `W3_STR_MAX_0130`, `0140` | Blade Runner, Gaffs Einhorn | Nein. Bleibt ein hübsches Rätselbild. | Wenig. Stört aber nicht. |
+| „ob er ein Replikant ist“ | `W3_TEST_MAX_0220` | Blade Runner | Nein. Das Wort wird nicht erklärt. | Kaum. Die Antwort ist auch ohne das Wort Unsinn genug. |
+| Morphäus, rote und blaue Pastille, Kaninchenbau | `W3_NUD_MOR_*`, `W3_APO_*` | Matrix | Ja. „Sofa oder Wahrheit“ sagt alles. | Ja. Daran hängt Max' wichtigster Moment. |
+| Die Katze, die zweimal gleich vorbeiläuft | `W3_APO_*`, `W3_SIM_0160` | Matrix, Déjà-vu | Teils. Dass man selbst das Déjà-vu herstellen muss, ist ohne die Vorlage schwer. Die Hinweise fangen es auf. | Ja. Rätsel 3 lebt davon. |
+| Agent Schmidt, Klone, Sonnenbrille, „Herr Max“ | `W3_TUER_*`, `W3_TURM_*` | Matrix, Agent Smith | Ja. Schmidt ist durch Hausschuhe und Endlossätze eine eigene Figur. | Ja. |
+| Zeitlupen-Ausweichen mit Hexenschuss | `W3_TURM_0080` bis `0100`, `W3_INV_MAX_0065` | Matrix, Bullet Time | Ja. Das Bild ist auch so komisch. | Ja. Der Hexenschuss wird Dauergag. |
+| Orakel-Oma, Kekse, Vase | `W3_KUCH_*` | Matrix, das Orakel | Ja. | Ja. Das Rätsel dreht die Vorlage um. |
+| Gabel | `W3_KUCH_0580`, `0590` | Matrix, „Es gibt keinen Löffel“ | Nein. | Nur für Kenner. Zwei Zeilen, also unschädlich. |
+| Kapseln, Operator am Terminal, grüne Code-Sicht, Telefon als Ausgang | `W3_BAS_*`, `W3_TERM_*` | Matrix | Ja. | Ja. Das ist die Spielmechanik der Welt. |
+| Sahra Konner, „Ich komme wieder“ | `W3_STR_0070`, `W3_EING_HAU_*` | Terminator | Teils. Die Liste mit 47 Namen ist auch ohne Vorlage komisch. „Ich komme wieder“ rettet der Nachsatz „Also: Ich bleibe hier.“ | Ja. |
+| „Das ist nicht der Junge, den du suchst.“ | `W3_EING_MAX_0160` | Star Wars, Gedankentrick | Nein. Aber die Antwort „Ich suche nur Dreck“ trägt allein. | Ja, als Extra. |
+| Opa als blaues Hologramm, „Du bist meine einzige Hoffnung“, Piepsi | `W3_PIEP_OPA_0120` | Star Wars, Leia und R2-D2 | Ja. Die Nachricht ist Handlung. | Ja, sehr. |
+| Kessel-Lauf und Parsec | `W3_BAS_0440` bis `0460` | Star Wars | Nein. | Nein. Reiner Kennerwitz. Streichkandidat. |
+| Handtuch „Keine Panik“ | `W3_BAS_MAX_0730`, `0735` | Per Anhalter durch die Galaxis | Das Handtuch ja, die Stickerei nicht. | Ja. Pixel will endlich trocken werden. |
+| Großrechner summt ein Kinderlied, „zieh ich keinen Stecker“ | `W3_BAS_MAX_0750`, `0755` | 2001, HAL 9000 | Nein. | Die erste Zeile ja. Die zweite ist nur für Kenner. |
+| Testkammern, Portalgerät, Begleitwürfel Bernd, M.U.T.T.I. | `W3_KAM1_*` bis `W3_KERN_*` | Portal (Testkammern, Companion Cube, GLaDOS) | Ja. | Ja. Bernd und M.U.T.T.I. sind eigene Figuren. |
+| „DER KUCHEN EXISTIERT NICHT“, das Kuchenversprechen | `W3_KAM2_MAX_0140`, Regel 2 | Portal, „The cake is a lie“ | Ja. | Ja, sehr. Aus dem Zitat wird das Schlussrätsel. |
+| „Dein Kuchen ist in einer anderen Testkammer.“ | `W3_KAM1_MUT_0510` und vier weitere | Super Mario, und Toadi aus Welt 1 | Ja, durch den Rückgriff auf Welt 1. | Ja. |
+| Gummihuhn mit Seilrolle | `W3_KAM2_PIX_0070` | Monkey Island | Nein. „Frag nicht“ fängt es ab. | Ja, als Verbeugung vor dem Genre. Eine davon darf sein. |
+| Drei Regeln | `W3_TURM_0470`, `W3_KAM1_MUT_0060`, `W3_KAM2_MAX_0150` | Asimovs Robotergesetze | Ja. | Ja. |
+| Die Maschine mit einem Widerspruch abschalten | `W3_KERN_0110` bis `0210` | Star Trek und viele andere | Ja. | Ja. |
+| „Das habe ich leider nicht verstanden. Meintest du: Gehorsam?“ | `W3_KERN_MUT_0060` und fünf weitere | Sprachassistenten | Ja, jedes Kind kennt das. | Ja. Beste eigene Erfindung der Welt. |
+| 08/15 | `W3_EING_PIX_0090` | Redewendung | Ja, weil Pixel sie erklärt. | Ja. Die Erklärung ist lang, für Jüngere aber nötig. |
+| Sisyphos mit Mopp | `W3_EING_MAX_0490` | griechische Sage | Teils. | Wenig. |
+| „Das ist 2026.“ | `W3_TEST_*` | die Gegenwart | Ja. | Ja. |
+
+**Wo es zu viele sind.** Welt 3 hat die meisten Anspielungen im Spiel, aber anders als auf der Agora in Welt 2 hängt fast jede an einem Rätsel oder einer Figur. Streichen würde ich drei: Kessel-Lauf und Parsec (`W3_BAS_0440` bis `0460`), den Stecker-Nachsatz am Großrechner (`W3_BAS_MAX_0755`) und Sisyphos (`W3_EING_MAX_0490`). Dazu das Wort „Replikant“ durch „echt“ ersetzen. Offen bleibt eine Grundfrage für Abschnitt M: Die Welt folgt dem Film Matrix fast Station für Station (Pastille, Orakel, Agent, Kapsel), und vier Namen liegen sehr nah an den Vorlagen (Morphäus, Agent Schmidt, Deckert, Sahra Konner). Eigen und stark sind die Brechungen: Beige, Strickjacke, Hausschuhe, Küchenmaschine, der Kater als Operator.
+
+#### D Welt 4
+
+| Anspielung | Ort | Worauf sie verweist | Versteht man sie ohne Vorwissen? | Trägt sie zur Szene bei? |
+| --- | --- | --- | --- | --- |
+| Testbild, Sendeschluss, Programmzeitschrift, Kassette mit Bleistift | `W4_TEST_*`, `W4_FERN_*`, `W4_KELL_PIX_0075` | Fernsehen der Eltern und Großeltern | Ja, weil Pixel jedes Mal erklärt, wie es früher war. | Ja. Daraus entstehen die Werkzeuge der Welt. |
+| „kleines Mädchen, das sagt, dass sie hier sind“ | `W4_TEST_MAX_0255` | Poltergeist | Nein. | Wenig. Eine Zweitzeile, schadet nicht. |
+| Gerd Glück, Glücksrad-Shopping | `W4_GLUE_*`, `W4_BONU_*` | Glücksrad und Teleshopping | Ja. | Ja. |
+| „Hauptgewinn in einer anderen Sendung“ | `W4_GLUE_GER_0240`, `W4_BONU_GER_0230` | Super Mario und der eigene Dauergag seit Welt 1 | Ja. | Ja, sehr. Wird hier eingelöst. |
+| Lichtröhre Deluxe, Summen, „Die Macht ist nicht mit dir“ | `W4_GLUE_0530`, `0535`, `W4_KAPI_PIX_0600` | Star Wars, Laserschwert | Ja. | Ja, als Nebenwitz. |
+| Trödel-Experte mit Lupe | `W4_GLUE_EXP_0500` | Trödelshows im Nachmittagsprogramm | Ja. | Ja. |
+| Sitcom mit Lachkonserve, „Schatz, ich bin zuhause!“ | `W4_SIT_*`, `W4_KELL_VAT_0280` | amerikanische Familienserien | Ja. | Ja. Die Tür wird zum Rätsel. |
+| Himmel an der Stange, Mann mit Megafon | `W4_SIT_MAX_0275` | Die Truman Show | Nein. | Wenig. |
+| Kommissar im Mantel: „Ich hätte da noch eine Frage“ | `W4_SAV_*`, `W4_VERH_*`, `W4_SIT_KOM_*` | Columbo | Teils. Jüngere kennen ihn nicht, der Tick funktioniert trotzdem. | Ja. |
+| „Tiertort“ | Titel der Sendung | Tatort | In Deutschland ja. | Ja. In der englischen Fassung geht der Witz verloren. |
+| Löwenbaby in der Sonne, „Kreis des Lebens“ | `W4_SAV_MAX_0115`, `0125` | Der König der Löwen | Ja, fast jeder kennt das Bild. | Ja. |
+| Flüsternder Erzähler | `W4_SAV_ERZ_*` | Tierdokus | Ja. | Ja, sehr. |
+| Kiste mit Krabbeltieren, Sternchen, „Prüfung 3“ | `W4_SAV_MAX_0280`, `0285` | Dschungelcamp | Teils. | Ja, wegen Pixels „Ich schon.“ |
+| Tanzende Zombies, rote Jacke | `W4_FRIE_*` | Thriller von Michael Jackson | Ja, als Bild. | Ja. Das Rätsel ist die Choreografie. |
+| Lichterkette mit Buchstaben | `W4_HALL_*` | Stranger Things | Ja. | Ja, sehr. So spricht Opa in dieser Welt. |
+| FBI-Agent: „Die Wahrheit ist irgendwo da draußen“, die Kollegin | `W4_HALL_AGE_*` | Akte X | Teils. „Geister sind Schwindel, Außerirdische sind real“ trägt allein. | Ja. |
+| Geister, die ein Lied über sich anfangen, „wen anrufen“ | `W4_KELL_MAX_0175` | Ghostbusters | Nein. | Wenig. |
+| Fernseher im Keller, Band und Telefon nach sieben Tagen | `W4_KELL_MAX_0045`, `W4_INV_PIX_0035` | The Ring | Nein. „Das war ein Scherz“ fängt es ab. | Wenig. |
+| Super-Siegfried (seit 1938), Fledermann, Wonder-Wilma mit dem Seil der Wahrheit | `W4_KAPI_*` | Superman, Batman, Wonder Woman | Ja. | Ja. Müde, reich und genervt sind eigene Figuren. |
+| Spinne am Wasserturm, „große Verantwortung“, die Tante | `W4_KAPI_PIX_0510`, `0515` | Spider-Man | Teils. | Wenig. Eine der beiden Zeilen reicht. |
+| Mann mit Brille und Telefonzelle | `W4_KAPI_MAX_0525` | Superman | Nein. | Wenig. Streichkandidat. |
+| Amboss vom Himmel, Firma mit Raketen-Rollschuhen | `W4_KAPI_NAR_0050`, `W4_KAPI_MAX_0565` | Zeichentrick mit Kojote | Der Amboss ja, die Firma nein. | Der Amboss sehr. Die Firma ist ein Extra. |
+| Sturz in den Bottich, Suchscheinwerfer mit Käse | `W4_FABR_*` | Entstehungsgeschichten von Comic-Helden, Bat-Signal | Ja, Wilma erklärt es. | Ja. |
+| Autoplay-Countdown, „Sind Sie noch da?“ | `W4_WERB_*` | Streamingdienste | Ja, das kennt jeder. | Ja, sehr. |
+| Müllpresse mit Auge auf dem Stiel | `W4_ARCH_*` | Star Wars | Nein. | Als Ort ja. |
+| Lied über einen Videostar | `W4_EMPF_MAX_0275` | Video Killed the Radio Star | Nein. | Wenig. |
+| Buntstifte am Geschmack erkennen, „Top, die Wette gilt nicht.“ | `W4_STUD_MAX_0640` bis `0650` | Wetten, dass..? (Buntstift-Wette von 1988) | Teils. Für Eltern ein Volltreffer. | Ja. Passt zur Jahreszahl 1988. |
+| Gong um acht, Nachrichtensprecher | `W4_RAU_NSP_*` | Tagesschau | Ja. | Ja. Die Nachrichten bereiten das Finale vor. |
+
+**Wo es zu viele sind.** Welt 4 spielt mit Formaten statt mit einzelnen Filmen. Darum versteht man hier am meisten ohne Vorwissen. Dicht wird es an zwei Orten. In Kapitolis stehen acht Helden-Anspielungen auf einem Bildschirm; streichen würde ich die Telefonzelle (`W4_KAPI_MAX_0525`) und eine der beiden Spinnen-Zeilen. Im Spukhaus kommen Stranger Things, Akte X, Ghostbusters und The Ring zusammen; hier kann die Ghostbusters-Zeile (`W4_KELL_MAX_0175`) gehen. Viele Vorlagen stammen aus dem Fernsehen der Eltern (Columbo, Wetten, dass..?, Testbild). Das Spiel löst das gut, weil Pixel „früher“ erklärt. Für Abschnitt M: Namen echter Sendungen fallen nicht, „Tiertort“ und „Glücksrad-Shopping“ sind klar als Parodie erkennbar.
+
+#### D Zwischenspiele und Finale
+
+| Anspielung | Ort | Worauf sie verweist | Versteht man sie ohne Vorwissen? | Trägt sie zur Szene bei? |
+| --- | --- | --- | --- | --- |
+| „Es ist gefährlich, allein zu gehen.“ | `FI_RIEG_MAX_0155` | The Legend of Zelda (1986), der Satz des alten Mannes in der Höhle | Ja, der Satz ergibt auch so Sinn | Ja. Er bereitet den Hilferuf vor und Zeldinas Auftritt. |
+| „deine Milch ist in einem anderen Supermarkt“ | `FI_ABSP_TOA_0020` | Super Mario Bros. („Deine Prinzessin ist in einem anderen Schloss“) | Ja, weil Toadi den Satz in jeder Welt gesagt hat | Ja. Schlusspunkt des Dauergags. |
+| „Dein Verbündeter ist in einem anderen Kanal!“ | `FI_RUF_HER_0140` | derselbe Satz | Ja | Nein. Nimmt Toadi die Pointe weg (siehe C). |
+| „Der Kuchen war keine Lüge.“ | `FI_ABSP_NAR_0100` | Portal („The cake is a lie“) | Ja, als schlichter Satz über diesen Kuchen | Ja. Wer Portal kennt, bekommt ein Geschenk, wer nicht, verliert nichts. So soll eine Anspielung sein. |
+| Lebensleiste, zweite Phase, Tutorial, Endgegner, Quest, Dungeon | `FI_RIEG_MAX_0110`, `0115`, `0170`, `FI_WOHN_MAX_0070`, `0350`, `FI_SUPM_MAX_0075` | Videospiel-Wortschatz | Ja, für die Zielgruppe ohnehin | Ja. Das ist Max' Sprache, und „Quest“ trägt die Schlusspointe. |
+| „Das ist kein Bug, das ist ein Feature“ | `FI_RIEG_MAX_0090` | Programmierer-Spruch | Ja | Mittel. Der Spruch ist sehr abgenutzt. Der Nachsatz „und ich hasse es“ rettet ihn. |
+| „Ich komme wieder. Mit dem Geschirrtuch.“ | `FI_WOHN_HAU_0390` | Terminator („I'll be back“) | Ja | Ja. Kurz, und das Geschirrtuch macht ihn eigen. |
+| „Heureka!“ | `FI_RUF_ARC_0120`, `FI_ABSP_NAR_0120` | Archimedes | Ja | Ja |
+| Midseason-Pause, Staffelfinale, vier Staffeln, Cliffhanger, Besetzung | `ZS2_DACH_MAX_0140`, `ZS3_DACH_MAX_0600`, `FI_AUFL_MAX_0500`, `FI_ABSP_PIX_0040`, `FI_HINT_PIX_0040` | Seriensprache | Ja | Ja. „Ungefähr vier Staffeln“ ist die beste davon. |
+| Mehl Type 405 als „Fehlercode“ | `ZS2_DACH_0230` bis `0250`, `FI_AUFL_OPA_0140` | Mehltype und HTTP-Fehler 405 | Der Mehl-Teil ja. Den Fehlercode versteht man als „irgendein Computerfehler“ | Ja |
+| Zauberwürfel seit 1982 | `ZS1_DACH_0425` | Rubik's Cube | Ja | Ja, als Opa-Detail |
+| Doc Brown / Professor Bienlein (Opa als Figur) | durchgehend | Zurück in die Zukunft, Tim und Struppi | Nicht nötig | Ja. Opa ist eine eigene Figur geworden. |
+| „Kuchen123“ | `ZS3_DACH_0160` bis `0200` | schwache Passwörter | Ja | Ja, doppelt: Witz und Fährte |
+
+**Wo es zu viele sind:** Nirgends. Die Datei hat die wenigsten Anspielungen pro Seite, und fast alle sind Einlösungen von Dauergags. Streichen würde ich nur den Hermes-Satz.
+
+### E. Klingt es nach KI?
+
+**Urteil:** Stellenweise ja, und zwar an bestimmbaren Mustern. Die Nebenfiguren klingen nicht danach. Max und Pixel klingen danach, wo der Humor-Durchgang Zeilen verlängert hat. Die Auflösung im Finale klingt am wenigsten danach.
+
+**Die fünf Muster, die am meisten auffallen:**
+
+1. **„Nicht X, sondern Y“** in der Form „Das ist kein X, das ist Y.“ Rund 54-mal. Ein Mensch hätte nach dem zehnten Mal gemerkt, dass er sich wiederholt.
+2. **Der angehängte Kurzsatz als Pointe.** „Ruhe in Frieden, Keks.“, „Die Lampe sammelt.“, „Er gewinnt.“, „Ich lass das ab sofort.“ Über ganze Räume dieselbe Satzmelodie: zwei Sätze Anlauf, ein kurzer Schluss.
+3. **Zeilen, die ihren eigenen Witz erklären.** Die Vorher-Nachher-Listen des Humor-Durchgangs zeigen es: aus „Barbarisch. Gib her.“ wurde eine lange Fassung, die dasselbe sagt und begründet. Länger ist hier nicht lustiger.
+4. **Figuren benennen ihr Gefühl oder ihre Entwicklung.** „Das hängt mir irgendwie nach.“, „Und ich geh freiwillig durch. Das ist neu.“, „Das ist irgendwie das Traurigste.“ Das Bild zeigt es schon.
+5. **Füllsel als Tonfall.** „Ehrlich gesagt“, „irgendwie“, „ein bisschen“, „Ich glaube“ sollen locker klingen. In dieser Menge klingen sie nach Polster.
+
+**Was nicht nach KI klingt (als Maßstab):** Waldemar, Rotkäppchen, Smaugi („Doch, nimm. Nein. Ach.“), die Beamten, die Sphinx, Brian, Herr Vier, Oma. Ihre Sätze sind kurz, haben Lücken und brechen ab. Dazu die Stellen, an denen Max etwas Unbequemes sagt: „Ja. … Trotzdem.“ (`W1_LUFT_MAX_0310`), „Noch mal.“ (`W2_TRAI_MAX_0110`), „… Nein. Wahrscheinlich nicht.“ (`FI_AUFL_MAX_0376`).
+
+**Ein Widerspruch in den eigenen Regeln.** `01-konzept.md` Z. 59 bis 60 verbietet Reihen aus Ein- und Zwei-Wort-Sätzen und begrenzt „Wie X, nur Y“. Die Beispielsätze direkt darunter (Z. 69 bis 78) tun genau das („Sport. Freiwillig. Die spinnen, die Griechen.“, „Sieht aus wie Montagmorgen, nur grüner.“). Wer künftig nach dem Konzept schreibt, bekommt zwei Vorgaben. Vorschlag: die Beispiele durch Zeilen aus dem heutigen Skript ersetzen.
+
+**Auch in den Arbeitsdokumenten:** `docs/03-produktion.md` und `docs/05-spielsysteme.md` sind sachlich und klar. Nach KI klingt dort nichts Störendes. Der Store-Text in `03-produktion.md` verspricht mit „Pixel für Pixel von Hand gezeichnet“ mehr, als der Arbeitsweg hält (Abschnitt M).
+
+Es folgen die Tabellen je Datei.
+
+#### E Prolog (klingt es nach Maschine?)
+
+| Zitat | Ort | Was auffällt | Menschlicher wäre |
+| --- | --- | --- | --- |
+| „Ich glaube, das ist Liebe.“ | `P0_WOHN_MAX_0120` | Figur benennt das Gefühl. | „Sie hat das Foto eingerahmt. Nicht die Torte.“ |
+| „Das ist das Beruhigendste und gleichzeitig Traurigste, was du heute gesagt hast.“ | `P0_DACH_MAX_1462` | Erklärt die Pointe davor, ausgewogen wie ein Aufsatz. | „Toll. Mein Rückweg ist ein Joghurt-Spot.“ |
+| „Bei Opa ist so was keine Bitte, sondern eine Warnung.“ / „Das wäre keine Freundlichkeit, sondern eine förmliche Warnung.“ / „keine Meinung, sondern ein Messergebnis“ / „Nicht aus Müdigkeit, sondern als stiller, aber deutlicher Protest.“ / „nicht aus Eigennutz, sondern weil …“ | `P0_TREP_MAX_0115`, `P0_DACH_PIX_0215`, `P0_SYS_WDH_PIX_0020`, `0030`, `P0_SYS_ERS_PIX_0150` | Fünfmal „nicht X, sondern Y“, zweimal mit „Warnung“. | Zwei behalten. Sonst geradeaus: „… fange ich an zu schnurren. Das ist eine Drohung.“ / „… schlafe ich ein. Aus Protest.“ |
+| „Das ist schon fast ein Ritual.“ / „Ich lass das ab sofort.“ / „Ich fass hier nichts mehr an.“ / „Wir reden nie wieder darüber.“ / „Er gewinnt.“ | `P0_WOHN_MAX_0130`, `0195`, `0345`, `P0_TREP_MAX_0125`, `P0_DACH_MAX_1745` | Jede Zeile bekommt einen runden Schlusssatz. Über drei Räume ist das dieselbe Melodie. | Jeden zweiten Schlusssatz streichen. Die Zeile endet dann auf dem Bild („Jetzt hängen alle anderen schief.“). |
+| „Ehrlich gesagt kenne ich das von mir.“ / „Und ehrlich gesagt will ich die Fliegen auch nicht stören.“ / „und ehrlich, sie funktioniert“ | `P0_WOHN_MAX_0170`, `P0_TREP_MAX_0160`, `0030` | Füllwort als Tonfall-Ersatz. | Weglassen. Der Satz steht ohne. |
+| „Opa hat einen großen Kopf, da muss ja auch einiges rein.“ | `P0_TREP_MAX_0045` | Erklärt den Witz gleich mit. | „Opa hat einen großen Kopf. Oma sagt das auch, meint aber was anderes.“ |
+| „wenn ich das anmerken darf“, „Ich möchte festhalten“, „Ich möchte zu Protokoll geben“, „Ich möchte das ausdrücklich loben“, „damit das klar ist“, „bei allem Respekt“, „um ehrlich zu sein“, „wenn ich das hinzufügen darf“ | Pixel, durchgehend | Acht Amtsformeln in zehn Minuten. Einzeln ist das seine Stimme, in der Menge wird es Schablone. | Zwei Formeln zu seinen machen („zu Protokoll“, „junger Mann“), die anderen streichen. Pixel darf auch mal einen kurzen Satz sagen: „Barbarisch. Gib trotzdem her.“ ist seine beste Zeile. |
+
+#### E Welt 1 (klingt es nach Maschine?)
+
+| Zitat | Ort | Was auffällt | Menschlicher wäre |
+| --- | --- | --- | --- |
+| „Das ist kein Diebstahl, das ist Teilen.“ / „Das ist keine Treue, das ist Anbiederung.“ / „Das ist keine Unsicherheit, das ist Stil.“ / „Das ist kein Busch mehr, das ist eine Waffe.“ / „Das ist keine Mode, das ist ein Röntgenbild“ / „Das ist kein Abenteuer mehr, das ist ein Wartezimmer.“ / „Das ist kein Streik mehr, … das ist Resignation mit Filter.“ / „kein Steckbrief, das ist ein Exposé“ | `W1_DORF_MAX_0350`, `W1_SCHM_PIX_0300`, `W1_HOGG_PIX_0660`, `W1_WALD_MAX_0075`, `W1_WALD_PIX_0135`, `W1_BRUE_PIX_1130`, `W1_BERG_PIX_0060`, `W1_HINT_PIX_0920` | Vierzehnmal dieselbe Schablone in einer Welt. Jede einzelne ist in Ordnung, zusammen hört man den Baukasten. | Die Hälfte geradeaus sagen: „Den leih ich mir. Der Brunnen hat genickt.“ / „Ich lege mich nicht fest. Das machen nur Hunde.“ / „Kaffee von vorgestern. Die haben aufgegeben, und der Kaffee auch.“ |
+| „Prinzessinnen sind ehrlich gesagt nicht so mein Bereich.“ / „Eine Treppe hätte es ehrlich gesagt auch getan.“ / „und ich ehrlich gesagt auch, innerlich“ / „ehrlich gesagt hab ich das verdient“ / „Entführt sieht ehrlich gesagt anders aus.“ | `W1_ANK_MAX_0140`, `W1_DORF_MAX_0330`, `W1_TAV_MAX_1430`, `W1_WALD_MAX_0420`, `W1_LUFT_MAX_0160` | Achtmal „ehrlich gesagt“ in Welt 1, dazu „eigentlich“, „irgendwie“, „ziemlich“. Füllwörter als Jugendton. | Streichen. „Entführt sieht anders aus.“ ist die bessere Zeile. |
+| „Ich glaube, er ist glücklich.“ / „Ich glaube, sie freut sich auf Besuch.“ / „Ich glaube, das ist Solidarität.“ / „ich glaube, sie plant eine Renovierung“ / „Der ist ein Romantiker.“ | `W1_BRUE_MAX_1045`, `W1_BERG_MAX_0095`, `0150`, `W1_SMAU_MAX_0115`, `W1_BRUE_MAX_0145` | Max deutet Gefühle aus und sagt sie an. Fünfzehnmal „Ich glaube“. | Das Bild zeigen und aufhören: „Er planscht und singt. Die Fliege liegt neben dem Eimer.“ |
+| „Und warum rührt mich das?“ | `W1_INV_MAX_0055` | Die Figur fragt sich laut, was sie fühlt. | „‚Belohnung: ein warmes Wort.‘ Unterschrieben hat keiner.“ |
+| „Sie hatte schon immer mehr Talent als ich.“ / „Das ist mehr Selbstbewusstsein, als ich habe.“ / „Das macht sonst eigentlich keiner.“ / „Das kenn ich irgendwoher.“ / „Das kommt mir ziemlich bekannt vor.“ / „Das Gefühl kenne ich.“ / „Ich kann das gut verstehen.“ | `W1_STAB_MAX_0025`, `0045`, `0580`, `W1_SCHM_MAX_0085`, `W1_TURM_MAX_0050`, `W1_THRO_MAX_0155`, `W1_WALD_MAX_0145` | Immer derselbe Nachsatz: Ding beschreiben, dann „wie ich“. | Pro Raum höchstens einer. Sonst endet die Zeile auf dem Ding: „‚Für Zahnfeen und Präzisionszauber.‘ Der Zahnstocher hat einen Lebenslauf.“ |
+| „Ohne Satzung wäre ich nur ein großer Mann unter einer Brücke.“ / „Ein Goblin ohne Schlüssel ist nur ein grüner Mann im Dunkeln.“ | `W1_BRUE_WAL_1250`, `W1_BERG_GRI_0840` | Zwei Figuren, ein Satz. | Grimmzahn anders: „Schlüssel. Viele. Es muss klimpern, wenn ich komme.“ |
+| „Ich kenne das.“ / „Ich kenne diesen Blick.“ / „Ich kenne diese Art von Tagebuch.“ / „Keller mit Meinung kenne ich.“ / „Ich kenne das von deiner Großmutter“ | `W1_WALD_PIX_0130`, `W1_BRUE_PIX_0990`, `W1_TURM_PIX_0020`, `W1_THRO_PIX_0140`, `W1_BERG_PIX_0810`, `W1_SMAU_PIX_0870`, `0810` | Pixels Überleitung zu Opa ist siebenmal dieselbe. Der Inhalt danach ist gut. | Einstieg wechseln: „Dein Großvater führt so eins über seine Diät.“ ohne „Ich kenne“. |
+| „…, und zwar …“ | Pixel, durchgehend (`W1_HINT_PIX_0111`, `0112`, `0113`, `W1_WECH_PIX_0020`, `0070`, `W1_BRUE_PIX_0080`, `W1_LUFT_PIX_0080` und weitere) | „und zwar“ ist Pixels häufigstes Scharnier, oft zweimal in einer Sprechblase. | Jedes zweite durch einen Punkt ersetzen: „Sie braucht Ablenkung. Charmante Ablenkung.“ |
+| „junger Mann“ | Pixel, 15-mal in Welt 1 | Als Anrede gesetzt, hier nicht zu viel. | Bleibt. |
+
+Was in Welt 1 nicht nach Maschine klingt: Waldemar, Rotkäppchen, Smaugi, Zeldina und Grimmzahn. Ihre Sätze sind kurz, haben Lücken und brechen ab („Doch, nimm. Nein. Ach.“). An diesen Figuren kann man Max und Pixel messen.
+
+#### E Welt 2 (klingt es nach Maschine?)
+
+| Zitat | Ort | Was auffällt | Menschlicher wäre |
+| --- | --- | --- | --- |
+| „Dieser Hut ist kein Kleidungsstück. Dieser Hut ist ein Hilfeschrei.“ / „Das ist kein Idyll. Das ist eine Ausstellung …“ / „Das ist kein Teller, das ist eine Einladung.“ / „Das ist keine Botschaft, das ist eine Warnung.“ / „Das ist kein Möbelstück. Das ist eine Drohung“ / „Das liegt nicht an der Ausrüstung. Das ist Charakter“ / „Das ist kein Widerspruch. Das ist Theologie.“ / „Das war kein Sprung, das war Umfallen mit Anlauf.“ / „Das ist kein Brief, das ist eine Drohung mit Pfote.“ / „Das ist kein Amt, das ist ein Kreis.“ | `W2_NIL_PIX_0240`, `W2_STOL_PIX_0015`, `W2_THRO_PIX_0325`, `W2_HIER_SCH_0130`, `W2_WERK_PIX_0055`, `W2_BUER_PIX_0360`, `W2_DUEL_PIX_0320`, `W2_HEBL_MAX_0220`, `W2_INV_MAX_0535`, `W2_HINT_PIX_0311` | Sechzehnmal in Welt 2. Dreimal endet es auf „Warnung“ oder „Drohung“. | Vier behalten (Hut, Theologie, Verwaltung, Umfallen). Sonst: „Eine Wanne voller Wasser, ohne Deckel. Die meint mich.“ |
+| „Schweiß, Bronze und der Eintopf seiner Mutter“ / „Wind, Post und Eile“ / „Sand, Stein und dreihundert Jahre Nachdenken“ / „Tinte, Schweiß und Genie“ / „Staub, Langeweile und Sonnenstrahlen“ / „Palmwedel, Schweiß und Feigenhunger“ | `W2_DISK_PIX_0070`, `0110`, `0200`, `W2_WERK_PIX_0020`, `W2_BUER_PIX_0020`, `W2_INV_PIX_0190`; in Welt 1 dreizehn weitere („Holz, Farbe und Pedanterie“, „Moos, Regelbuch und Lampenfieber“, „Tomate, Zucker und Lüge“ …) | Pixels Schnupper-Formel ist immer eine Dreierliste: zwei Dinge, ein Begriff. Als Markenzeichen gut, als einzige Form eintönig. Im ganzen Spiel rund zwanzigmal. | Abwechseln: mal ein Geruch („Er riecht nach Eintopf. Von seiner Mutter. Unschuldig.“), mal zwei, mal eine Frage. |
+| „Das ist entweder Sparsamkeit oder Faulheit, und bei dir ist das ein und dasselbe.“ / „Weltherrschaft … oder Frühjahrsputz, was für Katzen ungefähr auf dasselbe hinausläuft“ / „Für einen Goblin ist das dasselbe.“ / „bei Lords ist das … ein und dasselbe“ / „ist das ungefähr dasselbe“ | `W2_PARA_PIX_0260`, `W2_NIL_PIX_0960`, `W1_SMAU_GRI_0570`, `W1_THRO_PIX_0185`, `W1_SMAU_PIX_0160` | „A oder B, und das ist dasselbe“ als Pointenform, fünfmal. | Zweimal lassen. Sonst entscheiden: „Das ist Faulheit. Sie hat sich diesmal gelohnt.“ |
+| „Ich sage es nur.“ / „Ich erwähne es nur.“ / „Ich warne nur.“ / „Ich sage es nur, damit du es weißt.“ | `W2_HINT_PIX_0720`, `W2_ZURU_PIX_0090`, `W2_HINT_PIX_0530`, `1320` | Pixels Abgang ist immer derselbe Halbsatz. Dazu sechsmal „Leider.“ als letztes Wort. | Den Hinweis auf der Sache enden lassen: „Einer riecht nach Fisch.“ |
+| „Die Zeit ist ein ziemlich schlechter Gärtner.“ / „Wachstum braucht Zeit. Oder einen Fluss.“ / „Sie wiegt, was man ihr gibt, und sagt nie, was es wert ist.“ / „Gute Ideen halten in Ämtern länger als die Leute.“ | `W2_SAND_MAX_0365`, `0265`, `W2_WERK_MAX_0090`, `W2_INV_MAX_0525` | Max redet in Sinnsprüchen. Das ist nicht seine Stimme. Bei Cicero passt es („Ein alter Stein ist ein Beweis.“). | Streichen oder Pixel geben. Max bleibt beim Ding: „Ein Kern. Ich hatte mal einen Baum.“ |
+| „ist mir ehrlich gesagt egal“ / „Klingt ehrlich gesagt ein bisschen einsam.“ / „wenn ich ehrlich bin“ / „um ganz ehrlich zu sein“ / „Ehrlich, das ist der beste Nahverkehr“ | `W2_NIL_FAE_0260`, `W2_STAD_MAX_0360`, `W2_SPHX_PIX_0440`, `W2_SAND_PIX_0130`, `W2_FAHR_MAX_0010` | Fünfzehnmal „ehrlich“ in Welt 2, bei Max, Pixel und dem Fährmann. Wenn drei Figuren dasselbe Füllwort haben, hat es keine. | Nur Max darf es, und selten. |
+| „Das ist das ganze Problem, in einem Satz.“ / „Das ist der Punkt, und das war von Anfang an der Punkt.“ / „Den gibt es nicht. Das ist der Trick.“ / „Das ist mein Weg zu gleichmäßigem Wind.“ | `W2_NIL_MAX_0380`, `W2_KRON_MAX_0050`, `W2_BUER_MAX_0380`, `W2_SAND_MAX_0320` | Max fasst zusammen, was der Spieler gerade gesehen hat. Klingt nach Erklärtext. | Weglassen. Die Hinweis-Pfote ist für Erklärungen da. |
+| „Der Philosoph, hat Max nicht gekannt.“ / „So, stelle ich mir Sport vor.“ / „Und niemand, erwähnt jemals wieder den Umzugskarton.“ / „Und DU, bist bloß der Diener einer Katze.“ / „Und Syrakus, liegt flussabwärts.“ | `W2_TAG1_PIX_0070`, `0170`, `W2_HEBL_PIX_0200`, `W2_KRON_PIX_0150`, `W2_HINT_PIX_0622` | Komma zwischen Subjekt und Verb, fünfmal, nur bei Pixel und nur in Welt 2. Sieht nach eingefügten Sprechpausen aus. | Komma raus (korrigiert, siehe Abschnitt 5). Wer die Pause will, setzt drei Punkte. |
+
+Was in Welt 2 nicht nach Maschine klingt: die Beamten, die Sphinx, Brian, Leonidas' einer leiser Satz, das Training. Kurze Sätze, Abbrüche, Figuren, die etwas wollen.
+
+#### E Welt 3 (klingt es nach Maschine?)
+
+| Zitat | Ort | Muster | Menschlicher wäre |
+| --- | --- | --- | --- |
+| „Wahrscheinlich ist es genau deshalb ein menschlicher Grund.“ | `W3_STR_MAX_0200` | Figur erklärt das Thema | „Er weint, weil die Suppe gut ist. Das schreib ich auf. Verstehen muss ich's nicht.“ |
+| „Aber genau darum geht's ja. Ich will es wissen.“ | `W3_APO_MAX_0600` | Figur sagt ihre Entwicklung auf | „Ich weiß nicht, was drüben ist. Das Sofa kenn ich auswendig.“ |
+| „Als Erinnerung, dass ich einmal die unbequeme Wahl getroffen hab.“ | `W3_INV_MAX_0035` | dasselbe | „Als Beweis. Mir glaubt das sonst keiner, am wenigsten ich.“ |
+| „Das Wort ist zu klein, um es zu lesen. Und zu groß, um es zu vergessen.“ | `W3_KUCH_MAX_0750` | spiegelglatter Sinnspruch | „Das letzte Wort ist winzig. Sie hat es extra klein geschrieben. Für jemand anderen.“ |
+| „Vielleicht für den Teil von mir, der gleich bleibt.“ | `W3_KUCH_MAX_0695` | bedeutungsschwer und unklar | „Der Tee dampft noch. Sie hat ihn eingeschenkt, bevor ich geklingelt hab.“ |
+| „Es hallt vor allem in mir nach, weil es sonst nirgends ankommt.“ | `W3_EING_MAX_0320` | zu poetisch für Max | „Ich klopfe. Es hallt. Sonst nichts.“ |
+| „Jetzt ist da ein Loch in der Form von Opas Wunsch.“ / „Zum ersten Mal sieht sie aus wie das, was sie ist.“ | `W3_KERN_MAX_0560`, `0540` | glatter Abschluss-Satz | `0540` endet besser einen Satz früher. `0560`: „Jetzt ist sie in meiner Hosentasche. So schnell geht Weltgeschichte.“ |
+| „Das ist kein Zufall, das ist Rache mit Aufkleber.“ / „Das ist keine Regel. Das ist eine Drohung mit Herz.“ | `W3_KAM3_MAX_0030`, `W3_TURM_MAX_0470` | „kein X, sondern Y“ und „X mit Y“ in einem Satz. Die erste Form steht in Welt 3 sechzehnmal. | Siehe Tabelle C. Ein Drittel der sechzehn würde ich als gerade Aussage bauen. |
+| „Das Lämpchen leuchtet rot und ein bisschen traurig.“ / „Ein perfekter Kreis, wie ein Abschiedsbrief.“ | `W3_EING_MAX_0335`, `0515` | Gegenstand bekommt ein Gefühl, immer beim zweiten Hinsehen | Etwas, das Max tut oder sieht: „Er hat sogar im Gehen noch gewischt.“ |
+| Pixels zweite Sprechblase: Feststellung, dann „Ich …“ in drei kurzen Sätzen („Ich bin beeindruckt. Das sage ich nie wieder. Es war ein Versprecher.“) | 113 Zeilen mit zweiter Blase, etwa `W3_ENDE_PIX_0080`, `W3_KAM1_PIX_0600`, `W3_EING_PIX_0270` | gleiche Kadenz über die ganze Welt | Jede dritte zweite Blase weglassen. Pixel ist am besten, wenn er nach einem Satz aufhört („Endlich.“, `W3_KAM3_PIX_0200`). |
+| „ehrlich gesagt“ (7), „Ich glaub(e)“ (13), „irgendwie“ (5), „ein bisschen“ (8) | ganze Welt | Füllwörter | Meist ersatzlos streichen. Ausnahme: `W3_KERN_MAX_0190`, dort trägt „Ehrlich gesagt“ den Satz. |
+
+Drei Tippfehler in Welt 3 waren eindeutig und sind korrigiert (Abschnitt 5): `W3_SIM_MAX_0050` („Und ist es … zu leise.“), `W3_TURM_MAX_0520` („Gute Führung,.“), `W3_HINT_PIX_0120` („braucht du“).
+
+#### E Welt 4 (klingt es nach Maschine?)
+
+| Zitat | Ort | Muster | Menschlicher wäre |
+| --- | --- | --- | --- |
+| „Ich kann nicht zurück auf ein Sofa, auf dem ich schon sitze.“ | `W4_STUD_MAX_0160` | klingt bedeutend, ergibt aber kein Bild | „Ich bin gerade erst aufgestanden. Ich setz mich nicht wieder hin.“ |
+| „Das ist nicht peinlich. Das ist ein Anfang.“ | `W4_STUD_MAX_0250` | „nicht X, sondern Y“ am Gefühlshöhepunkt | „Na und? Ich hätte zugeguckt.“ |
+| „Sitzen ist heute irgendwie mein Endgegner.“ | `W4_EMPF_MAX_0065` | Figur sagt das Thema auf | „Ich bleib lieber stehen.“ |
+| „… also zu allem, was ich eigentlich immer wollte. Genau das ist das Problem.“ | `W4_EMPF_MAX_0320` | dasselbe, mit glattem Schlusssatz | „Dahinter geht es nach oben, zum Studio und zum Sofa. Früher hätte ich gedrängelt.“ |
+| „Es fühlt sich schwer an, aber nicht vom Gewicht her.“ | `W4_INV_MAX_0030` | Sinnspruch | „Ich halte es wie ein rohes Ei. Wenn das Band reißt, hab ich nichts.“ |
+| „Ich fühl mich irgendwie … geschmolzen. Aber stark.“ | `W4_FABR_MAX_0280` | Figur benennt ihr Gefühl | „Ich bin voller Käse. Ich leuchte. Opa glaubt mir das nie.“ |
+| „Alle hier haben ein Lieblingsding.“ | `W4_SAV_MAX_0320` | erklärender Schlusssatz | streichen |
+| „Das ist entweder sehr effizient oder sehr illegal.“ und vierzehn weitere | ganze Welt | feste Bauform „entweder A oder B“ | Zwei Drittel als gerade Aussage: „Er verkauft die Preise, während er sie verlost. Das spart einen Mitarbeiter.“ |
+| Max nennt vor jedem Schritt die Taste („Das kann der Adapter.“, „ich hab eine Taste dafür“) | `W4_STUD_MAX_0190`, `0220`, `0290` | Figur erklärt die Lösung | Nur beobachten lassen: „Er prahlt. Mit der Karriere, die im Keller anfängt.“ |
+| Pixels zweite Sprechblase mit „und zwar“, „junger Mann“, „zutiefst“ | 147 Zeilen mit zweiter Blase, etwa `W4_PIXM_PIX_0130`, `0220`, `0250` | gleiche Kadenz, gleiche Verstärker | Verstärker streichen, jede dritte zweite Blase weglassen. Vorbild: „Ich schon.“ (`W4_SAV_PIX_0290`). |
+| „ehrlich gesagt“ (10), „Ich glaube“ (15), „irgendwie“ (9), „ein bisschen“ (10) | ganze Welt | Füllwörter | streichen |
+
+Drei Tippfehler in Welt 4 waren eindeutig und sind korrigiert (Abschnitt 5): `W4_FRIE_MAX_0010` („und hat das Programm“), `W4_KAPI_FLE_0310` („Fledermause“), `W4_PIXM_PIX_0270` („Das finde ich, sehr verständlich.“).
+
+#### E Zwischenspiele und Finale (klingt es nach Maschine?)
+
+| Zitat | Ort | Muster | Menschlicher wäre |
+| --- | --- | --- | --- |
+| „Und ich geh freiwillig durch. Das ist neu.“ | `FI_SUPM_MAX_0080` | Die Figur sagt ihre eigene Entwicklung an. Davor schon „Zum Supermarkt. Freiwillig.“ (`FI_WOHN_MAX_0400`), danach Pixel „Freiwillig. Ohne Passwort.“ (`FI_ABSP_PIX_0200`) | Das Bild sagt es schon (Hände nicht in der Tasche, Regie `FI_SUPM_NAR_0050`). Vorschlag: „Kein Rauschen, kein Kanal, nur eine Tür, die von selbst aufgeht. // Zum ersten Mal heute will niemand was von mir.“ Und in `FI_WOHN_MAX_0400` reicht: „Ich geh dann mal. Und niemand sagt jetzt was.“ Pixel behält sein „Freiwillig“ als Einziger. |
+| „Beide sagen die Wahrheit. Es riecht nach Kuchen und nach Reue.“ | `FI_AUFL_PIX_0380` | erklärt den Moment, glatter Schlusssatz | siehe C |
+| „Das ist zwar noch gar nicht gemacht, aber ich weiß schon, wie es aussieht.“ | `FI_WOHN_MAX_0105` | glatter, runder Abschluss | „Auf dem neuesten Foto lächelt Oma. Das gibt es noch gar nicht. Opa sucht gerade die Kamera.“ |
+| „Das hängt mir irgendwie nach.“ | `ZS3_DACH_MAX_0405` | Gefühl benannt, Füllwort | siehe C |
+| „Ich muss mich entscheiden, und genau da bin ich am allerschlechtesten.“ | `ZS1_DACH_MAX_0610` | Selbstauskunft | siehe C |
+| „Das ist kein Gepäck, junger Mann, das ist mein Glaube“, „Das ist keine Werbung mehr, das ist eine Botschaft.“, „Das ist kein Bug, das ist ein Feature“, „Das ist kein Zufall … Besetzung.“ | `ZS1_DACH_PIX_0530`, `ZS3_DACH_PIX_0020`, `FI_RIEG_MAX_0090`, `FI_HINT_PIX_0040` | viermal „nicht X, sondern Y“ | Für diese Datei ist das wenig, und drei davon gehören Pixel. Eine umbauen genügt, am ehesten `FI_HINT_PIX_0040`: „Hier steht eine Prinzessin mit dem Zauberstab eines Dunklen Lords herum. // Im Fernsehen nennt man so etwas Besetzung.“ |
+| „Ehrlich gesagt“, „offen gesagt“, „irgendwie“ (dreimal), „Ich glaub(e)“ (viermal), „ein bisschen“ (dreimal) | `ZS1_DACH_MAX_0310`, `PIX_0320`, `ZS3_DACH_MAX_0335`, `0405`, `FI_WOHN_MAX_0110`, `FI_DACH_MAX_0280` und weitere | Füllsel | Deutlich seltener als in den Welten. Streichen, wo sie in C genannt sind. |
+| „Das Kuchen-Rätsel“ als Ganzes | Zwischenspiele 1 bis 3 | Der Spieler weiß es früher als die Figur | Das ist gewollt und richtig gemacht. Die echte Überraschung ist nicht „es ist ein Kuchen“, sondern „für wen“ und „warum“ (Omas Geburtstag, der explodierte Ofen von 1977, Opas Scham). Die wird bis zur Auflösung geschützt. Nicht ändern. |
+
+**Gesamturteil E für diese Datei:** Hier klingt das Spiel am wenigsten nach Maschine. Die Auflösung traut sich kurze Sätze, Pausen und eine unbequeme Antwort („… Nein. Wahrscheinlich nicht.“). Einziger echter Rückfall ist der Schluss, wo Max und Pixel dreimal aussprechen, was man sieht.
+
+### F. Szenen und Atmosphäre
+
+**Urteil:** Auf dem Papier hat jede Welt eine klare Stimmung, und die Szenen haben Tempo. Schwach ist der allererste Eindruck (das Wohnzimmer) und die Inszenierung von Welt 3 und 4, weil es dort noch keine entworfenen Räume gibt.
+
+**Was funktioniert**
+
+- **Vier klar getrennte Welten.** Märchenbuch, das Richtung Turm violett wird. Sand und Marmor mit einer Fähre durch die Zeit. Regen und Neon, dazu eine zu saubere Simulation und ein weißes Labor. Sieben Fernsehsender mit je eigenem Look.
+- **Der Dachboden als Uhr.** Derselbe Raum fünfmal, und jedes Mal ist etwas anders: das Licht, der Kreis im Kalender, die Reihe auf der Werkbank, Opas Nervosität, Max' Haltung. Die Zeit vergeht sichtbar, ohne dass jemand es sagt.
+- **Leise Momente an der richtigen Stelle.** Archimedes am eigenen Grab (`W2_GRAB_ARC_0210`), Leonidas' einer leiser Satz (`W2_STAD_LEO_0370`), das Küchenradio („Welttag der vergessenen Geburtstage“, `W3_KUCH_RAD_0230`), Zappmann auf dem Sofa (`W4_STUD_ZAP_0300`), der Gutschein fürs Rasenmähen (`FI_RIEG_MAX_0285`).
+- **Regie steht im Skript.** Fast jede Zeile hat eine Spalte für Blick, Geste oder Pause. Das macht die Szenen spielbar.
+- **Genre-Wechsel als Szene.** In Welt 4 ist das Umschalten selbst die Inszenierung: dieselbe Tür, dieselbe Banane, in jedem Sender etwas anderes.
+
+**Funde**
+
+| Ort | Problem | Schwere | Vorschlag |
+| --- | --- | --- | --- |
+| `game/grafik/hintergruende/w0_bg_wohnzimmer_v01.png` | **Das erste Bild des Spiels ist düster.** Dunkel, grünstichig, Lampe an, kein Tageslicht. Gemeint ist ein fauler, gemütlicher Nachmittag. Das Gemini-Original im Projektordner ist wärmer. Beim Verkleinern auf 32 Farben ist es stumpf geworden. | mittel | Neu erzeugen mit dem Prompt in Abschnitt G. Beim Pixelieren die Palette vom Dachboden-Bild übernehmen. |
+| Prolog gesamt | **Drei Räume, drei Tageszeiten.** Wohnzimmer Abend, Treppenhaus Nacht, Dachboden Sonnenstrahl. | mittel | Alle drei auf Nachmittag. Der Abend gehört dem Finale. |
+| `FI_AUFL_*` (59 Zeilen) | **Die Auflösung ist eine lange Szene ohne Eingabe.** 59 Zeilen, in denen der Spieler nur weiterklickt. Die Texte sind gut. Aber es ist ein Adventure, und am Höhepunkt will man etwas tun. Der Hilferuf davor macht es richtig: Dort schaltet der Spieler selbst durch die Kanäle. | mittel | Die Artefakt-Abfrage (`FI_AUFL_MAX_0110` bis `0170`) spielbar machen: Der Spieler klickt die vier Dinge in der Maschine selbst an, in beliebiger Reihenfolge, und Opa gesteht jedes einzeln. |
+| Welt 3 und 4, alle Räume | **Die Räume sind noch nicht inszeniert.** Die Skizzen sind Raster. Wo jemand steht, was man zuerst sieht, wohin der Blick geht: nichts davon ist entschieden. | mittel | Vor dem Erzeugen der Hintergründe je Raum eine Handskizze, wie bei Welt 1 und 2. |
+| Welt 1, Dorfplatz | **Der dichteste Raum steht ganz am Anfang.** Viele Objekte, viele Anspielungen, drei Ausgänge. Für die erste Minute in einer neuen Welt ist das viel. | klein | Vier oder fünf Deko-Objekte erst nach dem ersten Verlassen einblenden. |
+| Dachboden, Rückkehr 1 bis 3 | **Die Bilder zeigen den Zeitverlauf noch nicht.** Der Sonnenstrahl hat in allen vier Fassungen denselben Winkel, die Lampe wirkt immer an, der Kalenderkreis wächst nicht. Im Skript ist der wachsende Kreis ein tragender Gag (`ZS3_DACH_MAX_0365`). | mittel | Kreis und Ausrufezeichen als Sprite über dem Kalender. Lampe als eigenes Sprite (an und aus). Sonnenstrahl je Stimmung flacher. |
+| Finale, alle vier Räume | Die Musik ist das schläfrige Wohnzimmer-Stück. Siehe Abschnitt H. | mittel | Zwei eigene Stücke. |
+| `FI_SUPM_*` | Der Supermarkt ist das Schlussbild und hat nur zwei Ansehen-Objekte. Für ein letztes Bild ist das richtig sparsam. | – | So lassen. |
+
+### G. Grafiken und Grafikprompts
+
+**Urteil:** Die Stilregeln sind gut und genau. Es gibt aber erst sechs echte Bilder, und zwei davon passen nicht zur Szene. In den zusammengesetzten Prompts stecken drei handfeste Fehler, die jedes damit erzeugte Bild verderben würden.
+
+#### G1. Die sechs echten Hintergründe
+
+| Bild | Vergleich mit Prompt und Szene | Schwere |
+| --- | --- | --- |
+| Dachboden (`w0_bg_dachboden_v01.png`) | Bild und Layout-Skizze passen zusammen und zum Skript. Der Prompt ist älter: Er verlangt eine ausgeschaltete Lampe (sie leuchtet), ein leeres Regal (es ist voll) und „nothing added“ (Poster, Fisch, Staubsauger, zwei Kisten sind gemalt). Richtig sind Kalender mit rotem Kreis, Luke mit Ring, Kordel, Sessel, Schrank einen Spalt offen. **Das Bild ist gut, der Prompt muss nachgezogen werden.** | klein |
+| Wohnzimmer (`w0_bg_wohnzimmer_v01.png`) | Wirkt wie Abend statt Nachmittag. Der Staubrand auf dem Couchtisch fehlt (er ist der erste Hinweis auf die verschwundene Fernbedienung und im Finale die Pointe). Der Fernseher steht schräg statt zum Betrachter. Der Schrank ist 320 Pixel hoch (89 Prozent der Bildhöhe, Regel: etwa 50). Die Möbel sind rund 1,5-mal so groß wie auf dem Dachboden, Max wirkt daneben klein. | mittel |
+| Treppenhaus (`w0_bg_treppenhaus_v01.png`) | Fenster zeigt Nachthimmel, Lampe an. Das ist die Finale-Fassung. Die Prolog-Fassung (Nachmittag) fehlt. Hut, Mäntel, Schirm, freier Haken, Durchgang und Luke stimmen. | mittel |
+| Dachboden, Rückkehr 1 bis 3 | Umfärbungen. Sonnenstrahl immer gleich, Lampe immer an, Kalenderkreis wächst nicht. | mittel |
+| Alle sechs | Jedes Bild hat genau 32 Farben, aber **kein Bild teilt eine Farbe mit einem anderen** (gemessen). `03-produktion.md` verspricht eine gemeinsame Palette. Figuren in Endesga 32 werden auf jedem Hintergrund anders wirken. | mittel |
+
+**Verbesserter Prompt: Wohnzimmer (Nachmittag)**
+
+```text
+Old-fashioned cozy living room on a bright lazy afternoon, back wall seen straight on. Warm daylight falls in from a window outside the frame at the upper left and lies as a soft bright patch on the carpet, the standing lamp is switched off, no dark corners. Left: a dark wooden cupboard at the edge, only about half the image height, beside it a saggy brown corduroy sofa facing right with a knitted orange blanket. Center: a low wooden coffee table with newspapers, a cold cup of tea, and clearly visible on the table top an empty spot with a pale rectangular dust outline the size of a remote control. Right: an old tube television on a low wooden cabinet, screen facing the viewer straight on, dark. Back wall: floral green wallpaper in a light, friendly tone, framed family photos with one empty space for a larger frame, a standing lamp with a yellow fabric shade. Exit: open door to the hallway at the far right. Patterned carpet across the lower third kept clear. Furniture at the same scale as the attic scene: a standing adult would be about 52 percent of the image height.
+```
+
+**Verbesserter Prompt: Treppenhaus (Nachmittag)**
+
+```text
+Narrow wooden staircase in an old house on a sunny afternoon, seen strictly from the side like a stage. The stairs rise from a small landing at the lower left to an open attic hatch at the top right, steps drawn as an even sawtooth line. Left edge: a doorway down to the living room, coats and an umbrella on wall hooks with one free hook. Center wall: a small window with bright pale-yellow afternoon light and a soft sunbeam falling onto the steps, ceiling lamp switched off. A few cardboard boxes under the stairs. Creaky dark wooden steps, faded striped wallpaper in a warm light tone, no night sky, no stars.
+```
+
+**Nachgezogener Prompt: Dachboden (damit er zum freigegebenen Bild passt).** Nur die drei abweichenden Stellen:
+
+```text
+… an open red metal toolbox on the floor below, a shelf above holding a record player, a toaster and an old cookbook … a bare bulb lamp with an enamel shade hanging from the ridge beam … Painted into the background: a pinned travel poster, a stuffed fish on a plaque, a homemade vacuum cleaner prototype, a cardboard box of old TV remotes and a second box for found things at the stack of boxes.
+```
+
+Die Lampe sollte im Grundbild aus sein und als Sprite angehen. Sonst lässt sich „Lampe aus bis Rückkehr 3“ nicht zeigen.
+
+**Empfehlung zur Palette:** Erst ein Bild als Maßstab festlegen (der Dachboden ist am besten gelungen). Dann eine Raumpalette mit 48 bis 64 Farben für die drei Prolog-Räume gemeinsam bestimmen und `tools/pixelieren.py` auf diese feste Palette rechnen lassen, statt je Bild neu zu wählen.
+
+#### G2. Konzeptbilder
+
+| Bild | Befund | Vorschlag |
+| --- | --- | --- |
+| `concepts/w0_concept_dachboden.png` | Alte Dreiviertel-Ansicht vom 6. November. Überholt durch die Frontal-Regel. Wer es als Referenz anhängt, bekommt den falschen Blickwinkel. | Durch das Gemini-Original des freigegebenen Dachbodens ersetzen (liegt im Projektordner). Ich habe nichts umbenannt oder gelöscht. |
+| `concepts/w0_concept_max.png` | Passt zum Steckbrief. Der Kapuzenpulli ist heller als `#3a4466`. Am unteren Rand sind Bedienelemente einer Chat-Oberfläche zu sehen. | Zuschneiden. Farbe im Prompt verstärken: „dark slate-blue hoodie (#3a4466), clearly darker than his jeans“. |
+| `concepts/w0_concept_pixel.png` | Passt. Die Kerbe im Ohr fehlt in einigen Ansichten. Leichte Streifen auf der Stirn trotz „no tabby markings on the face“. | Im Prompt: „the notch in his left ear visible in every view, plain unmarked forehead“. |
+
+#### G3. Fehler in den Prompts (alle am Material geprüft)
+
+| Ort | Fehler | Schwere | Verbesserung |
+| --- | --- | --- | --- |
+| `docs/grafik/fertige-prompts/` Welt 2 (Flusskarte), Welt 3 (Code-Sicht, Opas Sofa), Welt 4 (Rauschen, Kindersendung, Bild-in-Bild, Max auf der Couch, Opa vor Lampen) | **Acht Prompts enden mit dem Wort „Baustein.“** statt einer Farbangabe. Ursache: `tools/prompts_zusammensetzen.py`, `farbe_fuer()` nimmt bei unbekanntem Schlüssel den ersten Tabelleneintrag, und das ist die Kopfzeile. | mittel | Im Werkzeug die Kopfzeile überspringen und bei unbekanntem Schlüssel eine Warnung ausgeben statt zu raten. Bis dahin von Hand: Flusskarte endet auf den Ägypten-Baustein, Code-Sicht und Sofa auf „Simulation“, Rauschen auf „Testbild und Rauschen“, Kindersendung auf einen eigenen Baustein (unten). |
+| dieselben Dateien: Welt 4 „Bild-in-Bild“, „Opa vor flackernden Lampen“, Welt 3 „Opas Sofa“ | **Drei Prompts für Dinge, die keine eigene Grafik sind.** Der Prompt besteht aus dem englischen Baustein und einem deutschen Arbeitssatz („Keine eigene Grafik …“). | mittel | Zeilen, deren Motiv mit „Keine eigene Grafik“ oder „Wiederverwendung“ beginnt, im Werkzeug auslassen. |
+| Welt 3 (Unterstadt, Widerstandsbasis, Stadtstraße), Welt 4 (Savanne, Testbild, Halle, Dr. Werbepause, Empfang) | **Deutsche Arbeitsnotizen mitten im englischen Prompt.** „1280×360, zwei Hälften. Linke Hälfte: …“, „(Buchstaben von Hand)“, „(Aufschrift „DR. W.“ und „Szene 1, Take 400“ von Hand)“. Ein Bildgenerator liest „DR. W.“ als Wunsch nach Schrift. | mittel | Notizen in die Spalte „Layout“ verschieben. Im Prompt englisch und als Verbot: „wide 1280x360 scene built from two 640x360 halves that join seamlessly“ und „blank sign, no letters“. So machen es Welt 1 und 2 schon. |
+| Welt 3: Widerstandsbasis, Kühlung, Laboreingang, Küche, Büroturm. Welt 4: Spukhaus-Keller und -Halle. Welt 2: Thronsaal, Palastküche. Welt 1: Bergwerk | **Der Farb-Baustein beschreibt draußen, die Szene ist drinnen.** Innenräume bekommen „wet reflective streets“, „flat perfect blue sky“, „knee-high fog, full moon“, „turquoise river water, harsh midday sun“. Das Bergwerk bekommt die fröhliche Märchenpalette. | klein bis mittel | Je Baustein eine Innen-Fassung (unten). „Bergwerk“ in die Liste `DUESTER` aufnehmen. |
+| `00-stil-und-werkzeuge.md`, Baustein KONZEPT | **KONZEPT ist ein Innenraum-Baustein.** „front view of the room … back wall parallel to the picture plane … doors and tall cupboards“ steht auch vor Savanne, Sphinx, Hafen und Straßen. Er verbietet außerdem „faces on objects“, die Fondue-Fabrik verlangt ein Warnschild mit Käsegesicht. | klein | Zweiter Baustein KONZEPT-AUSSEN (unten). |
+| `00-stil-und-werkzeuge.md` Z. 97 | **FIGUR-KLEIN gilt für 29 bis 75 Pixel auf 96×96.** Zugewiesen sind auch Toadi (101), Zauberbesen (101), Schmiede-Ziege (93), Schwan (81), Flamingos (81), Opa-Hologramm (81). | mittel | Grenze und Leinwand anheben (unten). |
+| `02-prolog-und-finale.md` Z. 195 | **„at the same scale as a 84-pixel tall character“.** Die Figuren sind 189 Pixel hoch. Die Deko käme viel zu klein. Z. 165 nennt Oma mit 84 Pixeln, laut Tabelle hat sie 189. | mittel | „at the same scale as a 189-pixel tall adult character“. Z. 165 streichen oder berichtigen. |
+| `02-prolog-und-finale.md`, Maschine | „about 297 pixels tall“ im Motiv, „about half the image height“ im Bild-zu-Bild-Prompt. 297 Pixel wären 82 Prozent. Pixelangaben sagen Gemini ohnehin nichts. | klein | Überall: „about 80 percent of the image height, taller than a standing adult“. |
+| `grafik/welt-3.md`, „Nur zum Ansehen“ | Max: „Es gibt keinen Löffel. Nur Omas Gabel …“. Die Zeile ist im Skript gestrichen, steht aber noch in der Grafik-Datei. | klein | Dort auch streichen. |
+| `grafik/welt-4.md`, Kommissar | „a short cigar in his mouth“. Der einzige sichtbare Tabak im Spiel. | klein | „a lollipop stick in the corner of his mouth“ |
+| `grafik/welt-4.md` Z. 199 | Programmzeitschrift mit Werkzeug `rd_pro__ui_panel`, das Motiv ist eine Nahansicht 640×360. | klein | Baustein HINTERGRUND, wie die Nahansichten von Welt 3. |
+| `00`, Baustein HINTERGRUND | Noch auf Retro Diffusion geschrieben. Der Standardweg ist Gemini plus `tools/pixelieren.py`. | klein | Baustein umbenennen in „HINTERGRUND (Ersatzweg)“ und den Standardweg davorstellen. |
+| `00`, `02`, `prolog.yaml`; `grafik/welt-1.md`, `welt-1.yaml`; `grafik/welt-2.md` | Größenangaben widersprechen sich: Pixel schlafend in drei Größen, Pixel als Ziege in drei Größen, Beamter „147 sitzend (87 stehend)“. | klein | Eine Quelle bestimmen (die Tabelle in `00`), Kommentare in den Welt-Tabellen löschen. |
+| `02`, Bildschirm-Einblendungen | Spalte „Anlass“ stimmt nicht mit dem Skript (Kanal 3 nur Zwischenspiel 1, Kanal 7 nur Zwischenspiel 2). | klein | Spalte berichtigen. |
+
+**Verbesserte Bausteine**
+
+```text
+FIGUR-KLEIN (Tiere und kleine Wesen, 29 bis 110 Pixel):
+Pixel art small creature sprite, exactly one creature, full body, strict side view facing right unless the motif says left, height in pixels as given in the motif on a 128x128 canvas, dark colored outline (not pure black), light from upper left, very readable silhouette, flat colors, plain transparent background, no ground shadow.
+```
+
+```text
+KONZEPT-AUSSEN (Außenszenen):
+Concept art for a 2D point-and-click adventure game in the style of classic 1990s adventure games, outdoor scene seen straight on like a wide stage, camera at the eye level of a standing person, horizon at about 40 percent of the image height, open walkable ground with gentle depth across the lower third kept free of objects except at the left and right edges, wide shot: a standing adult at the front edge would be about 52 percent of the image height, no top-down, bird's-eye or strong three-quarter view, no fisheye, every object drawn exactly as described and nothing added, signs and labels without any letters or numbers, light from the upper left with soft shadows to the lower right, humorous and whimsical.
+```
+
+```text
+Farb-Bausteine, Innen-Fassungen:
+Welt 1, Bergwerk: dim torch-lit mine palette of earthy browns and mossy greens with small warm gold highlights, friendly rather than scary.
+Welt 2, Ägypten innen: warm palette of sandstone, ochre and gold, painted walls, daylight falling in through high openings, cool shade in the corners.
+Welt 3, Realität innen: dim cyberpunk interior palette of deep navy and concrete grey, bright accents only in neon magenta and neon cyan from screens and tubes, damp walls, a few drips, no street, no sky.
+Welt 3, Simulation innen: overly clean interior palette with a faint green tint, even shadowless-looking light, no dirt anywhere, slightly too symmetrical, no sky.
+Welt 4, Mitternachts-TV innen: 1980s horror music video look indoors: deep purple and toxic green, thin floor mist, colored spotlights through cracks, cobwebs, no moon.
+Welt 4, Kindersendung 1977: faded 1970s children's TV look: washed-out orange, brown and mustard yellow, flat studio light, slightly blurry like an old videotape.
+```
+
+**Beispiel für einen bereinigten Prompt (Welt 4, Spukhaus-Halle).** Statt „… (Buchstaben von Hand)“ am Ende:
+
+```text
+… Center: a string of 26 large light bulbs running across faded flower-pattern wallpaper at head height in one even row, a blank space below each bulb. Right: a grand staircase with cobwebs like railings, leading up out of frame. Green fog on the floor. Second version: several bulbs lit warm yellow. The wallpaper stays completely blank in both versions, no letters, no writing anywhere.
+```
+
+#### G4. Layout-Skizzen und Platzhalter
+
+| Ort | Befund | Schwere | Vorschlag |
+| --- | --- | --- | --- |
+| `docs/grafik/skizzen/`, alle 26 Skizzen von Welt 3 und 4 | **Automatische Raster.** Gleich große Kästen in Reihen, Figuren in gleichen Abständen. Im Raster stehen auch Himmel, Sonne, Mond und Nebel, Zustände als eigene Kästen und Oberflächen-Elemente. Die fertigen Prompts sagen trotzdem: „Use the attached sketch only for the position and size of objects and exits“. Für diese Welten widerspricht die Skizze dem Motivtext. Auch die Graubox nutzt das Raster. Spieltests zur Raumaufteilung sagen dort nichts aus. | mittel | Vor dem Erzeugen je Raum eine Handskizze. Bis dahin den Satz mit der Skizze aus den Prompts von Welt 3 und 4 nehmen. |
+| alle Skizzen | Die Legende nennt Violett (Figuren) nicht. Alle Figurenkästen sind menschengroß (Schildkröte, Huhn, Sphinx). Beschriftungen nutzen Kennungen („Faehrmann“, „SphinxFigur“). Außenszenen sind als Zimmer gezeichnet. | klein | Figurenhöhe aus der Welt-Tabelle übernehmen. Namen statt Kennungen. |
+| `game/grafik/platzhalter/` | Beschriftungen abgeschnitten („Kellert“, „Drachen-S“), in der Savanne unlesbar klein. | klein | Für die Graubox reicht es. Vor Tests mit Fremden die Schrift verkleinern oder umbrechen. |
+
+#### G5. Was an den Prompts gut ist und bleiben soll
+
+Parodie-Sicherungen stehen in den Prompts selbst („No leather coat, no small dark sunglasses, not bald“, Kuh „not purple“, „not a likeness of any real actor“). Kein englischer Prompt nennt einen Film oder ein Spiel. Rätselhinweise stehen ausdrücklich im Motiv, Lösungsverräter sind neutral gehalten (identische Fläschchen, Schmidt und Klon unterscheiden sich nur an Tasse und Hausschuh). Der Großrechner hat bewusst kein rotes Auge.
+
+### H. Musik und Sound
+
+**Urteil:** Geprüft ist nur der Text in `docs/04-audio.md`, denn es gibt noch keine Audiodatei. Das Konzept ist durchdacht. Zwei Punkte würden in der Umsetzung scheitern.
+
+**Was funktioniert**
+
+- Ein Leitmotiv, das jede Welt in ihrem Stil anspielt.
+- Klang-Kennungen sind im Code verdrahtet, Dateien müssen nur in die Ordner.
+- Die drei gesungenen Rätsel-Lieder haben immer Untertitel.
+- Klare Regeln zu Rechten: keine geklonten Stimmen, keine Künstlernamen in Prompts.
+- Die Stimmen-Prompts treffen die Figuren (Deckert „sounds like rain on a window“).
+
+**Funde**
+
+| Ort | Problem | Schwere | Vorschlag |
+| --- | --- | --- | --- |
+| `welten/finale.yaml`, `04-audio.md` | **Das Finale hat keine eigene Musik.** Alle vier Räume spielen `gegenwart`: „Cozy lo-fi living room music … lazy Sunday afternoon, slightly sleepy“. Im Finale läuft eine Maschine heiß, Oma steht vor der Luke, es ist Nacht. | mittel | Zwei Stücke. `finale_maschine`: „The main theme played faster and tighter, ticking percussion like a kitchen timer, low brass pulses, a steam whistle rising every eight bars, tense but comic, never scary“. `finale_geburtstag`: „A warm, slightly clumsy living-room version of the main theme on upright piano, accordion and brushed drums, like a family playing it themselves“. Supermarkt: kein Stück, nur Kühlregal-Brummen und Türgong, dann das Titelthema. |
+| `04-audio.md`, Leitmotiv | **So nicht umsetzbar.** „quotes the short cheerful five-note whistled motif of the main theme once“ beschreibt eine Melodie, die das Musikmodell nicht kennt. Jedes Stück erfindet fünf andere Töne. | mittel | Die fünf Töne einmal festlegen (Noten in die Datei schreiben), als Pfeif-Aufnahme oder MIDI speichern und nachträglich über jedes Welt-Stück legen. |
+| `04-audio.md`, Stimme der Hyäne | „A sly giggling female voice, breaks into cackles mid-sentence“. Ihr Witz und ihr Rätsel ist, dass sie todernst bleibt und erst bei „Fondue“ platzt. Die Stimme verrät die Lösung. | mittel | „A female voice held unnaturally flat and serious, lips pressed, tiny suppressed squeaks between words; bursts into wild cackling only in the marked lines“ |
+| `04-audio.md`, Stimme Pixel | Nur „very arrogant and theatrical … bored by everyone“. | klein | Ergänzen: „with a rarely shown, dry warmth underneath“ |
+| `04-audio.md`, Musik-Baustein | „seamless loop … 90 seconds“ wird immer angehängt, passt aber nicht zu `zappomat` (4 Sekunden), `werbeblock` (5 Sekunden) und `abspann` (endet auf einer Kadenz). | klein | Ausnahme in die Regel schreiben. |
+| `04-audio.md`, `w4_mitternacht` | „118 BPM, steady beat for a rhythm game“. Erzeugte Musik hält das Tempo nicht taktgenau. | klein | Tempo nach dem Erzeugen messen und Taktmarken von Hand setzen. |
+| `04-audio.md`, Geräusche | Nur 14 Geräusche haben eine Kennung. Rund 45 Welt-Geräusche haben weder Kennung noch Einsatzort. Zeitfähre, Code-Sicht und Portalgerät fehlen in der Liste. Raum-Atmosphäre gibt es nur für Taverne, Regen, Stadion und Rauschen. | klein | Liste mit Kennung und Raum ergänzen. Je Welt eine leise Grundatmosphäre. |
+| `04-audio.md`, Kosten | „3 Monate (rund 300 $)“ und „vier Monate (rund 400 $)“ in derselben Datei. | klein | Eine Zahl. |
+| `04-audio.md`, Umfang | „etwa 5.000 Zeilen“. Es sind 5.414 Zeilen und 6.306 Sprechblasen. | klein | Zahl aus `tools/skript_export.py` übernehmen. |
+| `04-audio.md`, Suno und Udio | „Dort laufen noch Klagen“ ist eine Momentaufnahme ohne Datum. | klein | Vor der Steam-Seite neu prüfen und Datum dazuschreiben. |
+
+**Zum Ton allgemein:** Eine Vollvertonung von 6.306 Sprechblasen ist ein großes Vorhaben. Die Brabbel-Laute als Platzhalter sind eine gute Idee und könnten auch die endgültige Lösung sein. Viele beliebte Adventures kommen damit aus, und die Pointen leben hier vom Lesetempo.
+
+### I. Form und Regeln
+
+**Urteil:** Die Dokumente sind ordentlich getrennt (jede Information hat genau eine Heimat), und die Werkzeuge halten Skript, Daten und Spiel gleich. Die Form leidet an zwei Dingen: veraltete Angaben in den Begleittexten und ein Skriptformat, das Bedingungen in freien Worten schreibt.
+
+**Was funktioniert**
+
+- Zeilennummern mit Lücken, Reservezeilen sind als solche vermerkt.
+- `docs/00-aufbau.md` regelt, welche Datei was besitzt.
+- `docs/entscheidungen.md` hält Entscheidungen mit Grund und Datum fest.
+- Alle Erzeuger laufen ohne Fehler, die Prüfung läuft bei jedem Push.
+
+**Funde**
+
+| Ort | Problem | Schwere | Vorschlag |
+| --- | --- | --- | --- |
+| Skriptspalte „Auslöser“, alle Welten | **Bedingungen stehen in freien Worten** („vor dem Finaltag“, „nach dem Tausch“, „zu“, „Realität“, „als Pixel“). Das Werkzeug versteht nur wenige davon. Folge sind die rund 50 falsch gewählten Zeilen (Abschnitt N). | kritisch (über N) | Feste Schreibweise: `Ansehen: Nase; nur NASE_AB`. Schalternamen statt Umschreibungen. `tools/pruefen.py` meldet jede Bedingung, die es nicht kennt. |
+| rund 20 Stellen, Liste in Abschnitt N (Punkt 2) | **Doppelt belegte Auslöser.** Derselbe Hotspot hat zwei Zeilen für „zweites Mal“, meist eine alte von Pixel und eine neue von Max. Nur eine wird gespielt. | mittel | Je Paar entscheiden: eine streichen oder als erstes und zweites Mal ordnen. |
+| Kürzel `SCH`, `GRI`, `MUT`, `MUS` | **Sprecherkürzel sind nicht spielweit eindeutig** (Schmied, Schreiber, Schmidt). Daraus kamen die sechs falschen Sprecher, die ich korrigiert habe. | mittel | Eindeutige Kürzel (`SMD`, `SRB`, `AGS`) oder im Werkzeug nur in derselben Datei suchen. |
+| `README.md` Z. 5 | „Pixel-Art in 320×180, Grafik mit Retro Diffusion“. Stand ist 640×360 und Gemini plus `pixelieren.py`. | klein | Berichtigen. |
+| Kopfzeilen aller Skripte (Z. 3) | Zeilenzahlen veraltet: Prolog „rund 180“ (es sind 349), Welt 1 „rund 870“ (1.178), Welt 2 „rund 900“ (1.182), Welt 3 „rund 870“ (1.059), Welt 4 „rund 880“ (1.103). | klein | Zahl streichen oder vom Werkzeug eintragen lassen. |
+| `05-spielsysteme.md` Z. 124, 142, 144, 205, 345 | Reste alter Auflösungen und Entscheidungen: „bei 320×180“, „46 px“ gegen „48 px“, Fenstergrößen „960×540, 1440×810“ (der Code bietet richtig 1280×720, 1920×1080, 2560×1440), „Schrift festlegen“ noch offen, obwohl Nunito festgelegt ist. | klein | Absätze nachziehen. |
+| `entscheidungen.md` Z. 83, 148 | Errungenschaften als „sechster Kanal“ (im Spiel der fünfte). „Max 105 Pixel“ steht ohne Durchstreichung da, gilt aber nicht mehr (189). | klein | Berichtigen und Überholtes durchstreichen. |
+| `03-produktion.md`, Meilensteine | **Der Plan passt nicht zum Stand.** Er plant Monate für den Bau der Welten. Die sind als Graubox fertig. Offen sind Grafik, Audio, Tests, Feinschliff. | mittel | Neu schreiben, gegliedert nach Grafik und Audio je Welt. |
+| `03-produktion.md` | Zahlen: „59 Räume“ (Tabellen: 58, Bildschirmtest: 55), „8 Räume“ gegen „neun Räume“, Grafikstunden „für 480×270“. „Was noch fehlt“ führt Skript, Hinweise und Speichern als offen. | klein | Nachziehen. |
+| `offene-punkte.md` | Hält die eigene Regel nicht („nur was offen ist“): A13, A14, A16 stehen als „erledigt“ drin, P10 und P11 sind überholt. | klein | Erledigtes löschen. |
+| `raetsel/welt-2.md`, `welten/README.md`, Kommentare in allen Welt-Tabellen | Alte Pixelmaße (Agora „640×180“, „Pixel als Ziege 20 px“, „Figur 60 px“). Die Felder sind umgerechnet, die Kommentare nicht. | klein | Kommentare mit Maßen löschen. |
+| `welten/welt-3.yaml` | Schalter ohne Präfix (`STEMPEL_MENSCH`, `REGEL_2`, `MUTTI_AUS`). Welt 1, 2 und 4 nutzen `W1_…`. | klein | Angleichen, sobald ohnehin an Welt 3 gearbeitet wird. |
+| `welten/welt-1.yaml`, `welt-2.yaml`, `welt-3.yaml` | „Opa legt es im Zwischenspiel in die Maschine“. Es kommt auf die Werkbank, in die Maschine erst im Finale. | klein | Wort ändern. |
+| Skripte, Sprecherspalte | Uneinheitlich: „Alwin“ und „Alwin Grauwald“, „Schmidt“ und „Agent Schmidt“, „Kalle“, „Kabel-Kalle“, „Kalle (Text)“. | klein | Ein Name je Figur, Zusätze in die Regie-Spalte. |
+| Skripte, Auslöser | „Ansehen: Traubensaft, Traubensaft“, „Ansehen: Bettlaken, Bettlaken“ (gemeint: Gegenstand, Zustand). | klein | „Ansehen: Traubensaft (Zustand Traubensaft)“ |
+| `FI_WOHN_MAX_0160`, `0165` | „Seite 3“ und „Seite drei“ nebeneinander. | klein | Angleichen. |
+| `tools/pruefen.py` | 102 Warnungen „Nummer nicht aufsteigend“. Sie sind harmlos, verdecken aber echte Warnungen (die sechs falschen Sprecher standen dazwischen). | klein | Als Hinweis einstufen oder abschaltbar machen. |
+| `docs/01-konzept.md` Z. 177 | Quelle für Cicero und das Archimedes-Grab ist eine unbekannte Biografie-Seite. Die Zahl 137 stimmt. | klein | Cicero, Tusculanae 5,64 nennen. |
+| `docs/01-konzept.md` Z. 362; Repository-Name | Titel noch als „Arbeitstitel“. Repository heißt „Max-against-the-world“, das Spiel „… the worlds“. | klein | Angleichen, wenn es keine Mühe macht. |
+| `ui.csv`: `UI_WELT_1_ENDE` und ähnliche | Entwickler-Texte im Spiel: „Ende der Graubox. Welt 2 folgt.“ | klein | Vor dem ersten Test mit Fremden entfernen. |
+| `ui.csv`, fünf Hotspot-Namen | Klein geschrieben: „klingelnde Telefonzelle“, „goldenes Sofa“, „verkettete Tür“, „frische Bananenschale im Comic-Kanal“, „normaler Käse in der Fabrik“. Alle anderen beginnen groß. | klein | Großschreiben. Nicht von mir geändert, weil die Namen aus den Welt-Tabellen kommen und in den Referenzbildern stehen. |
+
+### J. Rätsel und Spielablauf
+
+**Urteil:** Die Rätsel sind der am sorgfältigsten gebaute Teil. 53 Rätsel, jede Welt mit eigener Mechanik, fast alles fair und mehrfach abgesichert. Die Entwürfe enthalten keine Sackgasse. Im Code gibt es eine, ausgerechnet im letzten Rätsel.
+
+**Was funktioniert**
+
+- **Jede Welt lehrt etwas Neues**, das aus ihrem Thema kommt: Figurenwechsel, Zeitfähre, Eigenschaften tauschen, Tasten und Genre-Logik. Das Finale verlangt von allem ein wenig.
+- **Sackgassen sind bedacht.** Wunderdinge haben Zweitwege. Fehltausche setzen sich zurück. Pflichtgegenstände reisen immer mit. Pixel hält Max ohne Archivband am Aufzug zurück. Das Finale hat einen eigenen Abschnitt „Lösbarkeit“.
+- **Logikrätsel sind nachgerechnet** und haben genau eine Lösung (sechs Flaschen, Diskus-Diebstahl, Testkammer 3).
+- **Falsche Versuche werden belohnt.** Die Sphinx kommentiert jede falsche Kombination einzeln. Im Finale ist die falsche Reihenfolge ein Gag.
+- **Regeln werden vorbereitet, bevor sie zählen.** „Deine Nase lügt bei Fisch“ fällt in der Taverne und trägt später das Flaschenrätsel und den Diskus. Die Hundekuchen erklären die Verwandlungsregel, bevor sie im Finale gebraucht wird.
+- **Gegenstände wirken über Welten hinweg** (Olivenöl, Sandale, Sonnenbrille, Kochlöffel, Kekse), ohne Pflicht zu sein.
+- **Das nächste Ziel ist klar.** Das Notizbuch führt die Ziele, die Hilfe-Pfote kennt den offenen Schritt, und in jeder Welt sagt der erste Dialog, was zu holen ist.
+- **Wege sind kurz.** Doppelklick auf Ausgänge, Flusskarte in Welt 2, Programmzeitschrift als Direktsprung in Welt 4.
+
+**Die ersten Minuten.** Der Prolog beginnt mit einer Szene im Wohnzimmer, dann darf man sich umsehen, geht durchs Treppenhaus und bekommt auf dem Dachboden den Auftrag. Drei kleine Rätsel in einem Raum, jedes lehrt eine Sache: kombinieren, benutzen, genau hinsehen. Das ist ein guter Einstieg. Zwei Dinge bremsen ihn: das dunkle erste Bild (Abschnitt F) und die Kanalnummer, die erst beim zweiten Ansehen erscheint (unten).
+
+**Funde**
+
+| Ort | Problem | Schwere | Vorschlag |
+| --- | --- | --- | --- |
+| Finale, Schritt C (`FI_RAET_PIX_0200`, `FI_HINT_PIX_0130`; `tools/godot_raeume.py` Z. 667) | **Softlock-Gefahr im letzten Rätsel.** Text und Hinweise sagen „Wechsel zu mir“. Der Wechsel ist im Finale gesperrt. Der einzige Weg (Pixel-Feld auf den Sessel, dann Pixel-Feld auf Max) steht nirgends. Am Material bestätigt. | kritisch | Siehe Abschnitt N, Punkt 1. |
+| Hinweissystem (`game/skripte/hinweise.gd` Z. 57 bis 99) | **Hinweis-Stufen gelten über Welten hinweg.** Wer in Welt 1 bei Rätsel 5 die dritte Stufe geholt hat, bekommt in Welt 2 und 3 bei Rätsel 5 sofort die Komplettlösung. Betrifft 26 Rätselnummern. | kritisch | Siehe Abschnitt N, Punkt 3. |
+| Welt 4, Rätsel 4, 5, 10, 11, 12; Welt 1, Rätsel 10; Finale, Schritt B | **Hinweis-Lücken.** Die Pfote leuchtet, Pixel sagt nichts oder das Falsche. | mittel | Siehe Abschnitt N, Punkt 4. Für jeden letzten Schritt drei Zeilen schreiben. |
+| `W4_SIT_SMU_0360`, `raetsel/welt-4.md` Z. 78 | **Welt 4, Rätsel 4: Die Hyäne bekommt ein echtes Alibi.** Die Sitcom-Mutter sagt: „Außer der gefleckten Dame in Reihe drei.“ Damit saß die Hyäne zur Tatzeit im Publikum. Ihr Alibi wäre wahr, nur das Gericht falsch erinnert. Gemeint ist laut Rätsel-Datei nur: Sie lacht nie. | mittel | „Außer der gefleckten Dame, die sonst in Reihe drei sitzt. Gestern war ihr Platz leer. Ich habe es gemerkt, weil es zum ersten Mal still war.“ |
+| `W4_SIT_VAT_0160`, `W4_SIT_MAX_0170` gegen `W4_SIT_VAT_0420`, `W4_HINT_PIX_0070` | **Welt 4, Rätsel 3: Krawatte oder Mantel.** Der Vater verlangt Besuch „mit Krawatte“, Max wiederholt es. Die Lösung (der Kommissar) wird dann über den Mantel angekündigt. Der Spieler sucht jemanden mit Krawatte. | mittel | Überall „Mantel“: „Richtiger Besuch. Mit Mantel.“ / „Besuch mit Mantel. Bei dem Wetter? Hier drin sind dreißig Grad und ein Fondue.“ |
+| `W2_DISK_HER_0240` | **Welt 2, Rätsel 7: falsche Begründung.** Hermes: „Wenn ich es war, hab ich zweimal die Wahrheit gesagt.“ Das stimmt nicht. Wäre er der Dieb, wäre seine Aussage „Die Sphinx war's“ gelogen. Zweimal die Wahrheit hätte dann Leonidas gesagt. Wer mitrechnet, wird hier irregeführt. | mittel | „Wenn ich es war, hat Leonidas zweimal die Wahrheit gesagt. Der? Niemals!“ |
+| Welt 2, Rätsel 7 (Code: `welt_2.gd`) | Das Rätsel lässt sich direkt nach dem ersten Gespräch mit Leonidas lösen, ohne eine Aussage gehört zu haben. | klein | Die Anklage erst freigeben, wenn alle acht Aussagen im Notizbuch stehen. |
+| `P0_DACH_MAX_0620`, `0630` | **Prolog, Rätsel 3: Die Lösung steht hinter dem zweiten Ansehen.** Beim ersten Blick auf den Kalender sieht Max nur den roten Kreis. Die Kanalnummer und die Nahansicht kommen erst beim zweiten. Überall sonst ist das zweite Ansehen ein Bonus-Gag. Das Spiel bringt dem Spieler hier im ersten Rätsel bei, dass er alles zweimal ansehen muss. | mittel | Beide Zeilen beim ersten Ansehen hintereinander. Die Zweitzeile wird ein Gag. |
+| `W1_LUFT_MAX_0470`, Dorfbrett | **Welt 1, Rätsel 9: Der Steckbrief als Exposé.** Mit Steckbrief in der Tasche erscheint die richtige Gesprächsoption von selbst. Ohne ihn erscheint sie nicht, und nichts sagt dem Spieler, dass ihm etwas fehlt. Auf dem Steckbrief steht auch nichts vom Turm. | mittel | Steckbrief ergänzen: „Wohnhaft: Dunkler Turm, sieben Stockwerke, steht größtenteils leer.“ Ohne Steckbrief eine Zeile der Maklerin: „Bringen Sie mir ein Objekt, dann reden wir.“ |
+| `W1_TAV_GOL_0780`, `W1_TAV_MAX_1120` | **Welt 1, Rätsel 1c: „Was hab ich in meiner Tasche?“** Die Lösung ist, die Thunfischdose auf Gollo zu ziehen. Wer den „Hobbit“ kennt, kommt sofort darauf. Wer ihn nicht kennt, hat nur Gollos Satz („etwas, das niemand wissen kann“) und weiß nicht, warum es die Dose sein muss. Hinweis Stufe 2 hilft. | klein | Jeden Gegenstand aus der Tasche gelten lassen. Dann ist es Logik statt Zitat, und jeder Gegenstand bekommt eine eigene Ratezeile von Gollo. |
+| `W4_STUD_MAX_0190`, `0220`, `0290` | **Welt 4, Endkampf: Max sagt die Lösung vor.** Vor jeder Taste erklärt er, welche gebraucht wird („Zwei Bilder nebeneinander. Das kann der Adapter.“, „ich hab eine Taste dafür“). Das Rätsel ist als „schwer“ geführt und spielt sich wie ein Dialog. | mittel | Max beschreibt nur, was Zappmann tut („Er hört nicht mehr zu. Er sendet.“). Die Taste findet der Spieler. Die jetzigen Zeilen werden Hinweis Stufe 1. |
+| `raetsel/welt-3.md`, Zwei-Ebenen-Mechanik | **Welt 3: Pixels Eingriffe werden kaum gebraucht.** Vier sind angekündigt (Strom aus, Wasser, Fenster, Kabel). Ein Rätsel braucht das Kabel, eines hat das Fenster als Zweitweg. Nacht und Regen haben kein Rätsel. | mittel | Entweder ein kleines Rätsel für Nacht und Regen oder die beiden Eingriffe als reine Gags kennzeichnen und den Satz „Viele Rätsel verlangen mehrere Sprünge“ streichen. |
+| Welt 3, Rätsel 8 (Olivenöl) | **Freund 08/15 ist dauerhaft verpassbar.** Wer das Öl nicht einpackt oder die Telefonbuchseite vor dem Ölen übergibt, bekommt ihn nicht mehr. Der Hinweis beim Packen ist da („auch für Blechköpfe“). Vor der Übergabe warnt niemand. | klein | Eine Zeile von Pixel, wenn Max die Seite geben will und das Öl in der Tasche hat: „Er quietscht noch. Ich sage es nur.“ |
+| Welt 3, Rätsel 5 und Testkammer 3 | Zweimal derselbe Tausch (verschlossen gegen gesprächig). Als Rückbezug gebaut, und die zweite Hälfte ist neu. | – | So lassen. |
+| Welt 3, Rätsel 12 | Herr Vier hat die Zugangskarte „in einer Lieferung fürs Labor gefunden“. Bequemer Zufall. | klein | Halber Satz: Er beliefert die Laborkantine. |
+| Welt 4, Rätsel 4a (Code) | Wer die Sitcom-Mutter fragt, bevor er die Zeitschrift gelesen hat, hört die Antwort ohne Wirkung und muss später noch einmal fragen. | klein | Antwort merken und beim Lesen der Zeitschrift verbinden. |
+| `W3_HINT_PIX_0130`, `0330`, `0730`, `1230`; `UI_TASCHE_HILFE` | Hinweise nennen Maus und Tasten („Rechtsklick“, „Drück Tab“). Mit Controller stimmt das nicht. | klein | Neutral: „Sieh es dir an“, „Wechsle zu mir“. Welt 2 macht es schon so. |
+| Minispiele (Hieroglyphen, Hebel, Rede-Ringen, Patch-Panel, Zombie-Tanz, Comic-Panels, Einzelbilder, Finale-Tasten) | In der Graubox sind es Auswahlmenüs. Schwierigkeit und Spaß sind noch nicht prüfbar. | offen | Zuerst das Rede-Ringen und den Zombie-Tanz echt bauen. Das sind die beiden, die am meisten vom Gefühl abhängen. |
+
+**Mondlogik?** Ich habe jedes Rätsel darauf geprüft, ob die Lösung aus dem Gezeigten folgt. Vier Stellen sind steil, aber angebahnt: der Kochlöffel als Zauberstab (der Stabmacher erzählt vorher von den Honigfingern), Kaugummi als „neues Gericht“ für Nebet, die Kaffeetasse auf Piepsi (Katzen werfen Tassen vom Tisch) und der Käse, der im Grusel-Sender zu leuchten beginnt. Echte Mondlogik ohne Anbahnung habe ich nur beim Steckbrief als Exposé und bei der Thunfischdose für Gollo gefunden (beide oben).
+
+**Rücklaufwege.** Welt 1 hat die meisten Wege zu Fuß (Dorf, Wald, Brücke, Bergwerk, Turm). Mit Doppelklick ist das erträglich. Welt 2 und 4 haben Karte und Zeitschrift. Welt 3 wechselt zwischen zwei Ebenen über das Hinlegen in die Kapsel. Dort lohnt ein Test, ob der Wechsel schnell genug geht.
+
+### K. Interaktionen und Dialogbäume
+
+**Urteil:** Sehr reich. Fast alles, was man anklicken kann, antwortet, und zwar zweimal verschieden. Die Schwäche liegt in der Technik darunter: Ein Teil dieser Zeilen kommt im Spiel nie an.
+
+**Was funktioniert**
+
+- **Ansehen in drei Stufen.** Erstes Mal eine eigene Zeile, zweites Mal eine zweite, danach ein Pool. Das belohnt Neugier und nervt nicht.
+- **Zwei Figuren, zwei Blicke.** Pixel hat an vielen Objekten eigene Zeilen (Schnuppern, Berühren).
+- **Gespräche bleiben offen.** Themen bleiben wählbar, jede Figur hat eine Zeile für „alles gesagt“.
+- **Fehlversuche haben eigene Zeilen**, auch Gegenstand auf Figur.
+- **Entscheidungen haben Folgen.** Goblin-Weg A oder B ändert ein Abspann-Foto. Öl oder kein Öl entscheidet über einen Freund im Finale. Was man einpackt, öffnet Abkürzungen.
+- **Ablehnen als Spielzug.** Die blaue Pastille und Zappmanns Sofa darf man annehmen. Man landet in einer spielbaren Sackgasse und wird herausgeholt. Das ist die beste Dialog-Idee des Spiels.
+
+**Funde**
+
+| Ort | Problem | Schwere | Vorschlag |
+| --- | --- | --- | --- |
+| rund 50 Zeilenpaare, Liste in Abschnitt N | **Zeilen mit Zustand werden falsch gewählt.** In Welt 2 sagt Max beim ersten Blick auf die Sphinx-Nase schon: „Die Nase liegt im Sand. Das war ich, mit einem Teller.“ Der große Gag des Finaltags ist damit verraten. | kritisch | Abschnitt N, Punkt 2. |
+| Welt 1: Taverne (kein einziges „zweites Mal“), Klassenzimmer (zwei) | **Zweitzeilen fehlen.** In allen anderen Räumen hat jedes Objekt eine. Hier kommt beim zweiten Klick sofort der allgemeine Pool. Die Taverne ist der erste große Raum von Welt 1. | klein | Rund 20 Zweitzeilen nachschreiben. |
+| Welt 3, Stadtstraße: `telefonzelle` und `klingelnde_telefonzelle`; weitere Paare: Tresen und Weinkarte (Welt 1), Traubensaft (Welt 2), Kalles Tasse, Halterung (Welt 3), Keksdose (Welt 4) | **Doppelte Hotspots.** Aus einem Adjektiv im Auslöser wird ein zweites Objekt. `W3_SIM_MAX_0230` („Hallo?“) kommt dadurch nie. | klein | Auslöser vereinheitlichen. |
+| `reisetasche.gd`, `KOMMENTARE` | Für ältere Dinge aus der Fundkiste fehlen in Zwischenspiel 2 und 3 Pixels Pack-Kommentare. Es kommt eine Ersatzzeile. | klein | Je Gegenstand eine Zeile nachschreiben. |
+| `W3_KAM2_MUT_0250`, `W3_KAM2_MAX_0260` | M.U.T.T.I. lobt: „Du fragst nicht mehr.“ Gleich danach steht die Option „Wo ist der Kuchen?“. | klein | Siehe Abschnitt B (Testperson 47). |
+| `W1_SCHM_MAX_0221`, `0750` | Zweimal dieselbe Frage an den Schmied. | klein | Eine streichen. |
+| Hauptmenü | „Neues Spiel“ fragt nicht nach, wenn schon ein Spielstand da ist. | klein | Nachfrage. |
+| Spielfigur Max | Max ist anklickbar und kann Dinge hinter sich verdecken. | klein | Klicks durch die eigene Figur durchlassen. |
+| Leerlauf-Zurufe | Sie kommen beim Spielen mit Controller, weil nur Maus und Tasten die Uhr zurücksetzen. | klein | Controller-Eingaben mitzählen. |
+| Gesprächsoptionen allgemein | Die meisten Gespräche sind Themenlisten. Echte Verzweigungen gibt es bei Maklerin, Wunschbrunnen, M.U.T.T.I., Zappmann und in der Auflösung. Das passt zum Genre. | – | So lassen. |
+
+### L. Figurenentwicklung und emotionale Kurve
+
+**Urteil:** Max' Entwicklung ist geplant, verteilt und wird fast immer gezeigt statt behauptet. Das ist für ein Comedy-Adventure ungewöhnlich gut. Am Ende wird sie einmal zu oft ausgesprochen.
+
+**Max' Kurve, Station für Station**
+
+| Abschnitt | Moment | Trägt er? |
+| --- | --- | --- |
+| Prolog | Will nur das Passwort | Ja. Klarer Ausgangspunkt. |
+| Welt 1 | „Das geht uns nichts an.“ / „Ja. … Trotzdem.“ (`W1_LUFT_MAX_0310`) | Ja, aber leise und früh. Danach fehlt ihm ein Grund für den Endkampf (Abschnitt A). |
+| Zwischenspiel 1 | Verhandelt ums Passwort | Ja. |
+| Welt 2 | „Noch mal.“ beim Training (`W2_TRAI_MAX_0110`) | Ja. Zwei Wörter, von Pixel bemerkt. |
+| Zwischenspiel 2 | „Abwaschen oder so.“ Opa friert ein. | Ja. Der beste Entwicklungsmoment vor dem Finale, weil die anderen erschrecken. |
+| Welt 3 | Die blaue Pastille ist spielbar. „Das war … bequem. Wirklich bequem. Darum nehm ich die nicht.“ (`W3_APO_MAX_0570`) | Ja. Stärkste Stelle der Kurve. |
+| Zwischenspiel 3 | Beendet Opas Ausrede selbst. Setzt sich nicht in den Sessel. | Ja. |
+| Welt 4 | Lehnt Zappmanns Sofa ab. Sieht in Zappmann sich selbst. | Halb. Die Szene ist richtig gebaut, aber der Schlüsselsatz ist schief (`W4_STUD_MAX_0160`: „Ich kann nicht zurück auf ein Sofa, auf dem ich schon sitze.“ Max steht.) |
+| Finale | „… Nein. Wahrscheinlich nicht.“ und „Ich hol sie.“ | Ja. |
+
+**Was außerdem trägt**
+
+- **Die Entwicklung ist sichtbar geplant.** Laut `grafik/01-max-und-pixel.md` steht Max ab Rückkehr 3 aufrechter und im Finale gerade, Hände aus der Tasche. Oma sagt es: „Du stehst so gerade.“
+- **Pixel hat eine eigene kleine Kurve.** Vom „Ich hasse Reisen“ über „Ich mag Max. Ein bisschen. Das Seil ist kaputt.“ bis zum Notizbuch-Eintrag „Nächstes Jahr: Sofa für zwei.“ und dem letzten Foto, auf dem er zur Tür sieht.
+- **Opa kippt vom Bluff ins Geständnis.** „Meine Hände zittern. Mach du.“ (`FI_RAET_OPA_0470`) ist der Wendepunkt, zwei Minuten vor der Auflösung.
+- **Zappmann ist der Spiegel.** Er ist, was aus Max würde. Dass er am Ende aufsteht („Bin aufgestanden. Z.“), bestätigt Max' Weg ohne ein Wort darüber.
+- **Die emotionale Kurve steigt richtig.** Welt 1 und 2 sind leicht. Welt 3 bringt die erste echte Versuchung, Welt 4 die zweite und größere. Das Finale ist erst Lärm, dann still.
+
+**Funde**
+
+| Ort | Problem | Schwere | Vorschlag |
+| --- | --- | --- | --- |
+| `W4_STUD_MAX_0160` | **Der wichtigste Satz von Welt 4 ist unklar.** Dazu „eine Woche lang“ und „Freiwillig.“ als Ansage. | mittel | „Nein. Ich hab zwei Wochen lang Dinge getan. Ich hab eine Hyäne überführt und getanzt. // Ich bin gerade erst aufgestanden. Ich setz mich nicht wieder hin.“ |
+| `W4_STUD_MAX_0250` | „Das ist nicht peinlich. Das ist ein Anfang.“ Max tröstet in der Form „nicht X, sondern Y“. Es klingt nach Kalenderspruch. | klein | „Sie hatten eine Sendung mit Puppen, und keiner hat zugeguckt. // Ich hätte zugeguckt. Ich guck alles.“ |
+| `FI_WOHN_MAX_0400`, `FI_SUPM_MAX_0080`, `FI_ABSP_PIX_0200` | **Am Schluss dreimal „freiwillig“** und „Das ist neu.“ Das Bild zeigt es schon. | mittel | Nur Pixel behält das Wort (Abschnitt E). |
+| Welt 3 und 4, Zweitzeilen | Max benennt Gefühle („Das ist irgendwie das Traurigste.“, „Das hängt mir irgendwie nach.“). | klein | Zeigen statt sagen (Vorschläge in C). |
+| Welt 1 | Der Entwicklungsmoment ist klein, und der Endkampf hat keinen eigenen Grund. | mittel | Abschnitt A. |
+| Finale | **Opa bedankt sich nie.** Er hält das Passwort hin, das ist seine Art. Ein „Danke“ kommt nicht. Kann Absicht sein. Oma sagt dafür „Der Junge ist in Ordnung.“ | klein | Wenn gewünscht, ganz am Ende eine Zeile, während Max die Jacke anzieht: „Max. // … Bring Quittung mit.“ Das wäre ein Dank in Opas Sprache. |
+| `docs/04-audio.md`, Stimme Pixel | Die Stimme hat keine warme Seite. | klein | Abschnitt H. |
+
+### M. Rechtliches und Zielgruppe
+
+**Vorweg:** Das ist keine Rechtsberatung. Ich nenne die Stellen, die ein Medienanwalt vor der Steam-Seite ansehen sollte, und sortiere sie nach Nähe zum Original.
+
+**Urteil:** Die Linie des Projekts ist vernünftig: Parodie statt Kopie, eigene Namen, keine Vorlagen im Marketing, keine Marken in den Grafikprompts. Im Skript steht kein einziger Markenname eines Produkts. Das Risiko sitzt an wenigen Stellen mit Originalwortlaut und in der englischen Fassung.
+
+**Was schon gut gelöst ist**
+
+- Der Rechtscheck in `01-konzept.md` führt die Parodienamen. `03-produktion.md` plant den Markencheck für den Titel.
+- Toadi und Zeldina sind aus dem Marketing ausgeschlossen.
+- Die Grafikprompts sichern gegen Ähnlichkeit ab („no S shape, no red and blue“, „not a likeness of any real actor“).
+- Keine geklonten Stimmen, keine Künstlernamen in Musik-Prompts.
+- Telemetrie nur mit Zustimmung, lokal und anonym. Epilepsie-Hinweis beim ersten Start.
+
+**Stufe 1: Originalwortlaut oder sehr nah daran (zuerst ändern)**
+
+| Ort | Stelle | Vorlage | Vorschlag |
+| --- | --- | --- | --- |
+| `W1_TAV_GOL_0760` | „Was hat Wurzeln, die keiner sieht, und ist höher als Bäume?“ | Fast wörtlich das Rätsel aus „Der Hobbit“. Das ist Text des Originals, kein Name. | Eigenes Rätsel: „Was hat einen Hals und keinen Kopf, einen Bauch und keinen Hunger?“ (Flasche. Passt zur Taverne.) |
+| `W3_TEST_DEC_0100` | Schildkröte in der Wüste auf dem Rücken | Fast wörtlich der Test aus „Blade Runner“ | Eigene Lage: „Du findest im Bus ein Portemonnaie. Darin ist ein Foto von dir.“ |
+| `W3_BAS_KAL_0440` | „Kessel-Lauf in unter zwölf Parsec“ | Wörtlich Star Wars | Streichen (auch aus Sicht von Abschnitt D). |
+| `W3_PIEP_OPA_0120` | „Hilf mir, Max. Du bist meine einzige Hoffnung.“ | Wortnah Star Wars | „Hilf mir, Max. Du bist der Einzige, der gerade Zeit hat.“ |
+| `W3_EING_MAX_0160` | „Das ist nicht der Junge, den du suchst.“ | Wortnah Star Wars | „Du hast mich nie gesehen. Ich bin eine Putzlücke.“ |
+| `W3_NUD_MOR_0420` | „wie tief der Kaninchenbau geht“ | Wortnah Matrix | „wie tief das hier wirklich geht“ |
+| `W4_HALL_AGE_0350` | „Die Wahrheit ist irgendwo da draußen“ (auch Rätseltitel) | Wörtlicher Slogan von Akte X | „Die Wahrheit ist da draußen. Irgendwo. Ich hab die Adresse verlegt.“ |
+| `W2_AGOR_*` (Brian) | „Ich bin nicht der Messias“ / „Nur der wahre Messias würde das leugnen“, „Was haben die Römer je für uns getan“ samt Aufzählung | Wortnah „Das Leben des Brian“ | Die Situation behalten, die Sätze neu schreiben. Die Aufzählung auf eigene Dinge umstellen (Fähre, Passierschein, Fusionsküche). |
+| Welt 2, Rätsel 3 | „Passierschein A38“ als Rätselwort | „Asterix erobert Rom“ | Eigene Nummer („Formblatt Vier-Strich-Ypsilon“). Die Schleife zwischen zwei Büros ist frei, die Nummer ist das Erkennungszeichen. |
+| `W1_DORF_MAX_0295`, `W1_TAV_MAX_0290`, Weinkarte | „Gleis neundreiviertel“, „Vielsaft“, „Schicksalsberg“ | Originalbegriffe der deutschen Ausgaben | Gleis streichen. „Vielsaft“ und „Schicksalsberg“ stehen im Rechtscheck als „bleiben“. Ich würde beide verfremden („Vielfrucht-Limo“, „Jahrgang Schicksalshügel“). |
+| `FI_RIEG_MAX_0155` | „Es ist gefährlich, allein zu gehen.“ | Wortnah The Legend of Zelda | Kurz und üblich als Zitat. Risiko gering. Kann bleiben. |
+| `W2_AUDI_MAX_0110`, `W2_STAD_MAX_0010` | „Die spinnen, die Griechen.“ | Asterix („Die spinnen, die Römer“) | Abgewandelt und sprichwörtlich. Kann bleiben, einmal. |
+
+**Stufe 2: Handlung und Figuren sehr dicht an einer Vorlage (prüfen lassen)**
+
+| Ort | Stelle | Einschätzung |
+| --- | --- | --- |
+| Welt 3, Simulation | Rote und blaue Pastille, Morphäus, Agent Schmidt mit Klonen, Orakel mit Keksen und Vase, schwarze Katze als Wiederholung, Gabel statt Löffel, Telefonzelle als Ausgang | Das ist „Matrix“, Station für Station nacherzählt. Einzeln ist jede Anspielung harmlos. Zusammen ist es mehr als ein Augenzwinkern. Eigene Wendungen sind da (Strickjacke, Beige, das Sofa als Falle). Je mehr davon, desto sicherer und desto besser. |
+| Namen | Morphäus, Agent Schmidt, Deckert, Sahra Konner, Moderwort, Hoggelwarz, Gollo, Smaugi, Zeldina, Toadi, Super-Siegfried, Fledermann, Wonder-Wilma | Als Parodienamen üblich. Am nächsten am Original: Morphäus, Sahra Konner, Zeldina, Toadi, Gollo. Für diese fünf lohnt eine zweite, fernere Fassung in der Schublade. |
+| Welt 4 | „Glücksrad-Shopping“, „Tiertort“, Trödel-Experte, Dschungel-Kiste, „Top, die Wette gilt nicht“ | Titel laufender Sendungen sind Marken. „Glücksrad“ ist der Name der Sendung. „Tiertort“ ist ein Wortspiel und sicherer. Vorschlag: „Glücksdreh-Shopping“. |
+| Welt 4, Rätsel 7 | Lichterkette mit Buchstaben als Verbindung zur anderen Seite | Das tragende Bild aus „Stranger Things“. Als Rätselmechanik neu genutzt (Opa antwortet). Vertretbar. |
+
+**Stufe 3: Englische Fassung (eigener Durchgang nötig)**
+
+| Ort | Stelle | Problem |
+| --- | --- | --- |
+| `docs/uebersetzung/ui.csv`, `en.csv` | „Hogwartle“, „Polyjuicy Lemonade“, „Wheel of Fortune Shopping“, „Wheel of fortune studio“, „Paw and Order“, „Morphaeus“ | Einige englische Namen liegen näher am Original als die deutschen. „Wheel of Fortune“ ist im Englischen der eingetragene Titel. |
+
+**Offenlegung und Werbetext**
+
+| Ort | Problem | Schwere | Vorschlag |
+| --- | --- | --- | --- |
+| `03-produktion.md`, KI-Offenlegung und Store-Text | **Die Offenlegung stimmt nicht mit dem Arbeitsweg überein.** Dort steht: Konzeptbilder „als Vorlage, nie im Spiel“, Hintergründe „mit Retro Diffusion erzeugt“. Der festgelegte Weg ist: Gemini-Bild, dann `tools/pixelieren.py`. Das Gemini-Bild ist damit das Spielbild, nur verkleinert. Steam verlangt eine zutreffende Angabe. | mittel | Text neu: „Hintergründe sind mit einem Bildgenerator erzeugt, verkleinert und von Hand überarbeitet.“ |
+| `03-produktion.md`, Store-Text | „Max, Pixel und Opa sind Pixel für Pixel von Hand gezeichnet.“ Die Absprache ist: KI-Entwurf, von Hand nachgezogen. | klein | „von Hand nachgezeichnet und animiert“ |
+| `game/game/gui/fonts/monkeyisland_1991.ttf` | Eine Schrift mit diesem Namen liegt im Spiel und wird in drei Szenen der Standard-Oberfläche genannt. Sie kommt aus dem Popochiu-Baukasten. | klein | Lizenz der Datei prüfen oder vor Veröffentlichung entfernen. Nunito und Pixelify Sans sind sauber (OFL, Lizenztext mitliefern). |
+| `04-audio.md` | Rechtslage der Musikgeneratoren ist eine Momentaufnahme. | klein | Vor der Steam-Seite neu prüfen, mit Datum. Nutzungsbedingungen des gewählten Dienstes als PDF ablegen. |
+
+**Zielgruppe**
+
+Festgelegt ist: Adventure-Fans zwischen 25 und 45, dazu Jugendliche ab 12. Ziel der Freigabe: USK 6, PEGI 7.
+
+- **Passt der Humor?** Ja. Die Retro-Anspielungen sind für die Erwachsenen. Kater, Käse und Slapstick tragen für Jüngere. Die Regel „funktioniert ohne Vorwissen“ wird fast immer eingehalten.
+- **Lesemenge.** 6.306 Sprechblasen sind viel. Für Zwölfjährige ist das machbar, für Sechsjährige nicht. Die Freigabe „ab 6“ ist eine Unbedenklichkeit, keine Empfehlung. Im Store-Text würde ich „ab 10“ als Empfehlung nennen.
+- **Prüfpunkte für die Freigabe:**
+
+| Ort | Stelle | Vorschlag |
+| --- | --- | --- |
+| `W4_FABR_FLE_0330` | „Ein Führer mit Laken! Ich folge ihm!“ Führer und weißes Laken lesen sich unglücklich, sicher ungewollt. | „Ein Anführer mit Laken!“ |
+| `grafik/welt-4.md`, Kommissar | Zigarre im Mund. Einziger sichtbarer Tabak. | Lutscher. |
+| `04-audio.md` Z. 63, Taverne | „crowded and drunk“ steht nur im Musik-Prompt, nicht im Spiel. | Unkritisch. Wer mag: „crowded and merry“. |
+| Welt 2, Agora | Messias-Satire und Pixel als Gott. Harmlos gespielt. In einzelnen Märkten empfindlich. | Bewusst entscheiden. Für USK und PEGI unkritisch. |
+| Welt 4, Friedhof | Tanzende Zombies | Als Musikvideo-Parodie unkritisch. |
+| Welt 1, Rätsel 10 | Unterschrift „mit Blut“ (Ketchup) | Unkritisch, die Auflösung ist der Witz. |
+
+- **Versprochene Barrierefreiheit.** Vier Schalter in den Optionen tun noch nichts (Abschnitt N, Punkt 10). Solange das so ist, darf der Store-Text sie nicht nennen.
+
+### N. Technik und Bedienung
+
+**Urteil:** Der Unterbau ist sauber: Text, Daten und Logik sind getrennt, alle Erzeuger laufen, es gibt automatische Durchläufe für jeden Abschnitt. Die drei kritischen Fehler entstehen alle an derselben Stelle: Das Skript sagt etwas in Worten, das Werkzeug versteht es nicht, und kein Test merkt es.
+
+**Geprüft:** alle Dateien in `game/skripte/`, `game/skripte/objekte/`, `game/oberflaeche/`, die handgeschriebenen Raumskripte, die Werkzeuge `pruefen.py`, `spieldaten.py`, `skript_export.py`, `abdeckung.py`, `godot_raeume.py`, `export.py`, `en_eintragen.py`, `zeilen_einfuegen.py`, beide Arbeitsabläufe unter `.github/workflows/`. Alle sieben automatischen Durchläufe bestehen (Godot 4.7.2 ohne Bildschirm). Die Punkte 1 bis 4 habe ich mit eigenen kleinen Prüfläufen im laufenden Spiel nachgestellt und vor diesem Bericht noch einmal am Code bestätigt.
+
+**Was funktioniert**
+
+- Eine Änderung im Skript wirkt ohne Eingriff in den Code.
+- Spielstände haben eine Versionsnummer und werden umgerechnet.
+- Keine Fehlzustände in der Logik: falsche Flasche, falscher Wunsch, falsche Reihenfolge kosten nichts.
+- Pflichtgegenstände reisen immer mit. Das Packen kann nichts verbauen.
+- Telemetrie nur mit Zustimmung.
+- Menüs, Errungenschaften und Controller sind gebaut. Die Fenstergrößen im Code sind ganzzahlig (1280×720, 1920×1080, 2560×1440).
+
+**Funde**
+
+**1. Finale, Schritt C: Der Figurenwechsel ist gesperrt. (kritisch, nachgestellt)**
+`game/skripte/spiel.gd`, `wechsel_moeglich()` (Z. 570) verlangt den Schalter `<Präfix>_WECHSEL_FREI`. `tools/godot_raeume.py`, Z. 667 nimmt als Präfix den ersten Eintrag der Liste. Für das Finale ist das „ZS1“ (`game/daten/raeume/finale.json`, Z. 4). `ZS1_WECHSEL_FREI` setzt niemand. Im Lauf: `wechsel_moeglich = false`, `figur_wechseln() = false`. Das Skript und die Hinweise verlangen aber den Wechsel (`FI_RAET_PIX_0200`, `FI_HINT_PIX_0130`). Ein Klick auf Pixels Porträt tut nichts, ohne Rückmeldung. Der einzige Weg: Pixel-Feld auf den Ohrensessel, danach Pixel-Feld auf Max. Das nennt keine Zeile. Der Test `game/tests/finale_anspiel.gd` (Z. 69 bis 73) ruft die Regeln direkt auf und merkt es nicht.
+*Vorschlag:* In `finale.gd` beim Betreten `Zustand.setze(Spiel.praefix() + "_WECHSEL_FREI")`. Besser: den Schalter je Abschnitt in der Welt-Tabelle führen statt aus dem Präfix zu bauen. Den Test über die echte Bedienung laufen lassen (Klick aufs Porträt).
+
+**2. Ansehen-Zeilen mit Zustand werden falsch gewählt. (kritisch für Welt 2, sonst mittel, nachgestellt)**
+`tools/godot_raeume.py` wertet bei „Ansehen: …“ nach dem Komma nur „zweites Mal“, „Pixel“ und Gegenstandszustände aus. Alles andere fällt weg („vor dem Finaltag“, „nach dem Finaltag“, „zu“, „nach dem Tausch“, „Realität“, „drittes Mal“, „als Pixel“). `Spiel.ansehen_waehlen()` (Z. 385) nimmt dann den letzten passenden Eintrag. Beispiel aus `game/daten/raeume/welt-2.json`: Die Sphinx-Nase hat vier Einträge ohne Bedingung. Beim ersten Besuch, lange vor dem Finaltag, sagt Max `W2_SPHX_MAX_0110`: „Die Nase liegt im Sand. Das war ich, mit einem Teller.“ Genauso die Venusstatue (`W2_AGOR_MAX_0070`) und der Glockenturm (`W2_STAD_MAX_0080`). Der große Gag des Finaltags ist verraten, und die Zeilen davor kommen nie. Betroffen sind 50 Zeilenpaare. Die Liste steht am Ende dieses Abschnitts.
+*Vorschlag:* Bedingungen im Skript als Schalter schreiben (Abschnitt I). Das Werkzeug bricht ab, wenn es einen Zusatz nicht versteht.
+
+**3. Hinweis-Stufen gelten über Welten hinweg. (kritisch, nachgestellt)**
+`game/skripte/hinweise.gd`, Z. 57 bis 99: Stufe und Zeit hängen nur an der Rätselnummer (`Zustand.hinweis_stufe[schritt]`). 26 Nummern kommen in mehreren Welten vor. Im Lauf: Stufe 3 bei „R5“ in Welt 1, danach gibt Welt 2 beim ersten Klick `W2_HINT_PIX_0530`, die Komplettlösung der Krone, und Welt 3 `W3_HINT_PIX_0530`. Der Zähler für die Errungenschaft „Ohne Pfote“ zählt dabei nicht mit.
+*Vorschlag:* Schlüssel aus Abschnitt und Nummer bilden (`"welt-2/R5"`). Alte Spielstände beim Laden umrechnen.
+
+**4. Hinweis-Lücken: Die Pfote leuchtet, Pixel sagt eine leere Sprechblase. (mittel, nachgestellt)**
+Welt 4: R4, R5, R10, R11 und R12 haben einen eigenen letzten Schritt (zum Beispiel die Zeitschrift dem Richter zeigen), aber keine Hinweiszeilen. `tools/spieldaten.py` hält sie für Sammelschritte und meldet nichts. Welt 1: Die drei Hinweise zu R10 hängen am Sammelschritt, der nie „offen“ ist. Offen sind R10a und R10b, und die haben keine. Finale, Schritt B: `hinweise.gd`, `_zeile()` beachtet das Feld „bedingung“ nicht und nimmt immer die Fassung mit Roboter (`FI_HINT_PIX_0080`), auch wenn keiner da ist.
+*Vorschlag:* Zeilen nachschreiben. `spieldaten.py --pruefen` meldet jeden Schritt, der offen sein kann und keine drei Stufen hat. `_zeile()` wertet die Bedingung aus.
+
+**5. Englische Fassung: 793 Zeilen zeigen „//“ im Text, 699 Folgeblasen fehlen. (mittel)**
+Seit dem Humor-Durchgang haben viele deutsche Zeilen eine zweite Blase. In `docs/uebersetzung/en.csv` steht der englische Text als ein Stück mit „ // “ unter dem ersten Schlüssel. Beispiel `P0_DACH_PIX_0360`: „… harbour cat. // Barbaric. Hand it over anyway.“ Kein Werkzeug prüft das.
+*Vorschlag:* `en_eintragen.py` teilt an „ // “ wie der deutsche Export. `pruefen.py` vergleicht die Blasenzahl je Zeile zwischen Deutsch und Englisch.
+
+**6. `tools/abdeckung.py` misst nicht, ob eine Zeile gespielt werden kann. (mittel)**
+Eine Zeile gilt als „im Spiel“, sobald ihre Nummer in `game/daten/` steht. Diese Dateien werden aus dem Skript erzeugt. Die Zeilen aus Punkt 2 und die Hinweise aus Punkt 4 zählen deshalb als vorhanden. Das Werkzeug meldet „0 kommen im Spiel nicht vor“ und gibt damit falsche Sicherheit.
+*Vorschlag:* Für Ansehen-Einträge prüfen, ob es einen Zustand gibt, in dem `ansehen_waehlen()` sie liefert.
+
+**7. Reisetasche: Ab dem neunten Gegenstand liegen Felder übereinander. (mittel)**
+`game/oberflaeche/reisetasche.gd`, Z. 93: feste Zeile, die Spalte läuft mit `i % 8` um. In Zwischenspiel 2 kommen schnell über acht Dinge zusammen (Fundkiste aus Welt 1 plus bis zu elf aus Welt 2).
+*Vorschlag:* Zweite Zeile (`i / 8`) oder Blättern.
+
+**8. Schnellladen mitten in einer Szene. (mittel, aus dem Code gelesen)**
+`game/skripte/spielstand.gd`, Z. 48 bis 50: F9 lädt ohne die Prüfung `beschaeftigt()`. Die laufende Szene setzt danach Schalter im geladenen Stand.
+*Vorschlag:* Dieselbe Prüfung wie beim Speichern.
+
+**9. Testbuild im Browser: „Hauptmenü“ beendet das Spiel. (mittel)**
+`spiel.gd`, `zum_hauptmenue()` startet das Programm neu. Das gibt es nur auf dem Desktop. Betrifft auch das Ende des Abspanns.
+*Vorschlag:* Im Browser die Hauptmenü-Szene direkt laden.
+
+**10. Vier Schalter in den Optionen tun nichts. (mittel)**
+`untertitel`, `wackeln_aus`, `farbenblind` und weitgehend `flackern_reduzieren` werden nirgends gelesen. Das Kabelrätsel in Welt 3 unterscheidet Buchsen nur über Farbwörter, obwohl die Symbole für Farbenblinde im Entwurf stehen.
+*Vorschlag:* Bis zur Umsetzung ausgrauen mit „kommt noch“. Die Symbole am Kabelrätsel immer zeigen, nicht nur im Farbenblind-Modus.
+
+**11. Notizbuch: Seite „Pixels Einkaufsliste“ bleibt leer. (mittel)**
+`game/oberflaeche/notizbuch.gd`, `zeigen()` füllt nur Seite 1 und 2. Auf Seite 3 steht immer „Gerade ist nichts offen.“ Die Einkaufsliste ist ein Dauergag über vier Welten und im Finale eine Pointe (`FI_WOHN_MAX_0160`: „Deine Einkaufsliste ist Opas Einkaufsliste.“).
+*Vorschlag:* Je gesetztem Wunsch-Schalter eine Zeile, im Finale zusätzlich der Eintrag „Nächstes Jahr: Sofa für zwei.“
+
+**12. Doppelte Hotspots durch Adjektive im Auslöser. (klein)**
+Welt 3, Stadtstraße: `telefonzelle` und `klingelnde_telefonzelle`. `W3_SIM_MAX_0230` („Hallo?“) kommt nie. Weitere Paare: Tresen und „Weinkarte am Tresen“ (Welt 1), Traubensaft (Welt 2), Kalles Tasse, Halterung (Welt 3), Keksdose (Welt 4).
+
+**13. Die Prüfwerkzeuge übersehen die großen Fehler. (mittel)**
+`pruefen.py` prüft Tabellen und Format. Es prüft nicht: Bedingungen in Worten, Hinweise je offenem Schritt, Blasenzahl Deutsch gegen Englisch. `spieldaten.py --pruefen` gibt bei Warnungen keinen Fehler zurück. `testbuild.yml` prüft vor dem Export nur den Prolog-Durchlauf und schluckt Importfehler (`|| true`).
+
+**14. `tools/zeilen_einfuegen.py` vergibt falsche Sprechernamen. (mittel)**
+Der Name zu einem Kürzel wird als häufigster Name über alle Skriptdateien bestimmt, nicht je Datei. Darum wurde SCH in Welt 1 und 3 zu „Schreiber“ und GRI in Welt 2 zu „Grimmzahn“. Die sechs Stellen habe ich korrigiert (Abschnitt 5). Der nächste Lauf des Werkzeugs macht denselben Fehler wieder.
+*Vorschlag:* Namenssuche auf die Zieldatei beschränken.
+
+**15. `tools/prompts_zusammensetzen.py` setzt falsche Farb-Bausteine. (mittel)**
+Siehe Abschnitt G3 (acht Prompts enden auf „Baustein.“, drei Prompts für Nicht-Grafiken).
+
+**16. Kleineres**
+
+- Welt 2, R7 (Diskus) lässt sich direkt nach dem ersten Gespräch mit Leonidas überspringen.
+- Welt 4, R4a: Wer die Mutter vor dem Lesen der Zeitschrift fragt, hört die Antwort ohne Wirkung.
+- Für ältere Fundkisten-Dinge fehlen in Zwischenspiel 2 und 3 Pixels Pack-Kommentare.
+- Leerlauf-Zurufe kommen beim Spielen mit Controller.
+- „Neues Spiel“ fragt nicht nach.
+- Die Spielfigur Max ist anklickbar und kann Dinge verdecken.
+- `KEKSE_DABEI` wird schon in Welt 3 gesetzt (`welt_3.gd`, Z. 688). Das Finale prüft richtig das Inventar. Der frühe Schalter ist ohne Wirkung, aber irreführend.
+- `game/README.md`, Absatz „Stand“ ist veraltet. `tools/aufloesung.py` nennt im Kopf noch 480×270.
+- `ui.csv`: `UI_TASCHE_HILFE` nennt nur die Maus („Rechtsklick: Pixel fragen“).
+- Errungenschaft „Freund 08/15“ ist in einem Durchgang verpassbar. Der Text der Errungenschaft könnte einen Wink geben.
+- Nunito ExtraBold hat kein großes ß. „SCHOß“ in Leonidas' Großbuchstaben habe ich deshalb zu „SCHOSS“ korrigiert.
+
+**Bedienung und Oberfläche (soweit ohne echte Grafik beurteilbar)**
+
+- Die Menü-Entwürfe im Projektordner (22 Bilder) sind stimmig: Hauptmenü als Drehknopf mit Kanälen, Reisetasche als offene Tasche, Notizbuch als Buch. Das passt zum Thema.
+- Die Sprechblasen-Angaben in `05-spielsysteme.md` widersprechen sich (46 gegen 48 Pixel, 1.080 gegen 810 Pixel Breite). Ob lange Pixel-Kaskaden mit drei Blasen bequem lesbar sind, muss ein Test mit echten Spielern zeigen. Nach dem Humor-Durchgang sind viele Zeilen deutlich länger.
+- Auf dem Bildschirmfoto der Reisetasche läuft ein Untertitel hinter dem Fenster weiter und überlappt. Bei offenem Fenster Untertitel anhalten oder nach oben setzen.
+- Die Minispiele sind noch Auswahlmenüs (Abschnitt J).
+
+**Liste zu Punkt 2** (die erste Zeile kommt nie, die zweite kommt immer; in Klammern der Auslöser aus dem Skript)
+
+- welt-1, luftschloss, `kritzelei`: `W1_LUFT_PIX_0070` („Nahansicht Kritzelei, Pixel“) wird verdrängt von `W1_LUFT_PIX_0080` („Pixel schnuppert: Kritzelei“)
+- welt-2, nil_delta, `weizenfeld_mit_handabdruck`: `W2_NIL_MAX_0615` („Ansehen: Weizenfeld mit Handabdruck, zweites Mal“) wird verdrängt von `W2_NIL_PIX_0620` („Ansehen: Weizenfeld, zweites Mal; Notizbuch Seite 3: „irgendwas aus Mehl, mit Kruste““)
+- welt-2, thronsaal_ramses, `wandfries`: `W2_THRO_MAX_0230` („Ansehen: Wandfries“) wird verdrängt von `W2_THRO_PIX_0250` („Ansehen: Wandfries, drittes Mal“)
+- welt-2, thronsaal_ramses, `pharaonenteller`: `W2_THRO_MAX_0320` („Ansehen: Pharaonenteller“) wird verdrängt von `W2_THRO_RAM_0340` („nach dem Nehmen“)
+- welt-2, sphinx, `nase`: `W2_SPHX_MAX_0100` („Ansehen: Nase, vor dem Finaltag“) wird verdrängt von `W2_SPHX_MAX_0110` („Ansehen: Nase im Sand, nach dem Finaltag“)
+- welt-2, sphinx, `nase`: `W2_SPHX_MAX_0105` („Ansehen: Nase, vor dem Finaltag, zweites Mal“) wird verdrängt von `W2_SPHX_MAX_0115` („Ansehen: Nase im Sand, nach dem Finaltag, zweites Mal“)
+- welt-2, agora, `venusstatue`: `W2_AGOR_MAX_0060` („Ansehen: Venusstatue, vor dem Finaltag“) wird verdrängt von `W2_AGOR_MAX_0070` („Ansehen: Venusstatue, nach dem Finaltag“)
+- welt-2, agora, `venusstatue`: `W2_AGOR_MAX_0065` („Ansehen: Venusstatue, vor dem Finaltag, zweites Mal“) wird verdrängt von `W2_AGOR_MAX_0075` („Ansehen: Venusstatue, nach dem Finaltag, zweites Mal“)
+- welt-2, stadion, `glockenturm`: `W2_STAD_MAX_0070` („Ansehen: Glockenturm, vor dem Finaltag“) wird verdrängt von `W2_STAD_MAX_0080` („Ansehen: Glockenturm, nach dem Finaltag“)
+- welt-2, stadion, `glockenturm`: `W2_STAD_MAX_0075` („Ansehen: Glockenturm, vor dem Finaltag, zweites Mal“) wird verdrängt von `W2_STAD_MAX_0085` („Ansehen: Glockenturm, nach dem Finaltag, zweites Mal“)
+- welt-2, grabhuegel, `sockel`: `W2_GRAB_MAX_0080` („Ansehen: frischer Grabstein; Sanduhr-Symbol“) wird verdrängt von `W2_GRAB_MAX_0130` („Ansehen: leerer Sockel“)
+- welt-2, grabhuegel, `sockel`: `W2_GRAB_MAX_0085` („Ansehen: frischer Grabstein, zweites Mal; Sanduhr-Symbol“) wird verdrängt von `W2_GRAB_MAX_0135` („Ansehen: leerer Sockel, zweites Mal“)
+- welt-2, Figur, `faecherwedler`: `W2_THRO_MAX_0150` („Ansehen: Fächerwedler“) wird verdrängt von `W2_DUEL_MAX_0120` („Ansehen: Fächerwedler während des Duells“)
+- welt-2, Figur, `faecherwedler`: `W2_THRO_MAX_0155` („Ansehen: Fächerwedler, zweites Mal“) wird verdrängt von `W2_DUEL_MAX_0125` („Ansehen: Fächerwedler während des Duells, zweites Mal“)
+- welt-2, Gegenstand, `goldener_sack`: `W2_PARA_MAX_0280` („Ansehen: Goldener Sack Pharaonenkorn“) wird verdrängt von `W2_PARA_PIX_0290` („Ansehen: Siegel auf dem Sack“)
+- welt-2, Gegenstand, `goldener_sack`: `W2_PARA_MAX_0285` („Ansehen: Goldener Sack Pharaonenkorn, zweites Mal“) wird verdrängt von `W2_PARA_PIX_0295` („Ansehen: Siegel auf dem Sack, zweites Mal“)
+- welt-3, widerstandsbasis, `max_kapsel`: `W3_BAS_PIX_0530` („Spielfigur Pixel: Ansehen Max in der Kapsel“) wird verdrängt von `W3_BAS_PIX_1060` („Pixel auf Max' Kapsel“)
+- welt-3, widerstandsbasis, `plakat`: `W3_BAS_MAX_0825` („Ansehen: Plakat M.U.T.T.I., zweites Mal“) wird verdrängt von `W3_BAS_PIX_0830` („Ansehen: Plakat, zweites Mal“)
+- welt-3, laboreingang, `panzertuer`: `W3_EING_MAX_0310` („Ansehen: Panzertür, zu“) wird verdrängt von `W3_EING_MAX_0370` („Ansehen: geöffnete Tür, Datenanschlüsse“)
+- welt-3, laboreingang, `panzertuer`: `W3_EING_MAX_0315` („Ansehen: Panzertür, zu, zweites Mal“) wird verdrängt von `W3_EING_MAX_0375` („Ansehen: geöffnete Tür, Datenanschlüsse, zweites Mal“)
+- welt-3, laboreingang, `pinnwand`: `W3_EING_MAX_0450` („Ansehen: Pinnwand“) wird verdrängt von `W3_EING_MAX_0470` („Ansehen: Pinnwand, drittes Mal“)
+- welt-3, stadtstrasse, `telefonzelle`: `W3_SIM_MAX_0210` („Ansehen: Telefonzelle; bevor sie klingelt“) wird verdrängt von `W3_SIM_MAX_0220` („Ansehen: Telefonzelle; sie klingelt“)
+- welt-3, Figur, `hausmeister`: `W3_EING_MAX_0280` („Ansehen: Hausmeister; ohne Olivenöl in der Tasche“) wird verdrängt von `W3_EING_MAX_0520` („Ansehen: Hausmeister, vor Rätsel 8“)
+- welt-3, Figur, `hausmeister`: `W3_EING_MAX_0285` („Ansehen: Hausmeister, zweites Mal; ohne Olivenöl in der Tasche“) wird verdrängt von `W3_EING_PIX_0525` („Ansehen: Hausmeister, vor Rätsel 8, zweites Mal“)
+- welt-3, Figur, `schmidt`: `W3_TUER_MAX_0310` („Ansehen: Schmidt“) wird verdrängt von `W3_TUER_MAX_0320` („Ansehen: Schmidt, nach dem Tausch“)
+- welt-3, Figur, `schmidt`: `W3_TUER_MAX_0315` („Ansehen: Schmidt, zweites Mal“) wird verdrängt von `W3_TUER_MAX_0325` („Ansehen: Schmidt, nach dem Tausch, zweites Mal“)
+- welt-3, Figur, `schwarze_katze`: `W3_SIM_MAX_0160` („Ansehen: Schwarze Katze, erster Durchlauf“) wird verdrängt von `W3_SIM_MAX_0170` („Ansehen: Schwarze Katze, zweiter Durchlauf“)
+- welt-3, Figur, `schwarze_katze`: `W3_SIM_MAX_0170` („Ansehen: Schwarze Katze, zweiter Durchlauf“) wird verdrängt von `W3_SIM_PIX_0180` („Ansehen: Schwarze Katze; Pixel auf der Leitung“)
+- welt-3, Figur, `schwarze_katze`: `W3_SIM_PIX_0180` („Ansehen: Schwarze Katze; Pixel auf der Leitung“) wird verdrängt von `W3_SIM_PIX_0190` („Ansehen: Schwarze Katze, drittes Mal; Pixel auf der Leitung“)
+- welt-3, Gegenstand, `sonnenbrille`: `W3_TERM_MAX_0360` („Ansehen: Sonnenbrille im Inventar, Realität“) wird verdrängt von `W3_INV_MAX_0060` („Ansehen: Sonnenbrille, Simulation“)
+- welt-3, Gegenstand, `sonnenbrille`: `W3_TERM_MAX_0365` („Ansehen: Sonnenbrille im Inventar, Realität, zweites Mal“) wird verdrängt von `W3_INV_MAX_0065` („Ansehen: Sonnenbrille, Simulation, zweites Mal“)
+- welt-3, Gegenstand, `gummihuhn`: `W3_KAM2_MAX_0110` („Ansehen: Gummihuhn im Inventar, nach dem Tausch“) wird verdrängt von `W3_KAM3_MAX_0290` („Ansehen: Gummihuhn, nach dem zweiten Tausch“)
+- welt-3, Gegenstand, `gummihuhn`: `W3_KAM2_MAX_0115` („Ansehen: Gummihuhn im Inventar, nach dem Tausch, zweites Mal“) wird verdrängt von `W3_KAM3_MAX_0295` („Ansehen: Gummihuhn, nach dem zweiten Tausch, zweites Mal“)
+- welt-4, testbild, `balken`: `W4_TEST_MAX_0210` („Ansehen: Balken“) wird verdrängt von `W4_TEST_PIX_0220` („Ansehen: Balken; als Pixel; Kaskade“)
+- welt-4, testbild, `balken`: `W4_TEST_MAX_0215` („Ansehen: Balken, zweites Mal“) wird verdrängt von `W4_TEST_PIX_0225` („Ansehen: Balken, zweites Mal; als Pixel; Kaskade“)
+- welt-4, testbild, `testkreis`: `W4_TEST_MAX_0230` („Ansehen: Testkreis“) wird verdrängt von `W4_TEST_PIX_0240` („Ansehen: Testkreis; zweites Mal“)
+- welt-4, gluecksrad, `gestapelte_preise`: `W4_GLUE_MAX_0455` („Ansehen: Gestapelte Preise, zweites Mal“) wird verdrängt von `W4_GLUE_PIX_0460` („Ansehen: Preise, zweites Mal“)
+- welt-4, savanne, `regenwolke`: `W4_SAV_MAX_0265` („Ansehen: Regenwolke über dem Schlagzeug, zweites Mal“) wird verdrängt von `W4_SAV_PIX_0270` („Ansehen: Regenwolke, zweites Mal“)
+- welt-4, friedhof, `graeber`: `W4_FRIE_MAX_0120` („Ansehen: Gräber, offen“) wird verdrängt von `W4_FRIE_MAX_0130` („Ansehen: Gräber, zu; nach Rückspulen“)
+- welt-4, friedhof, `graeber`: `W4_FRIE_MAX_0125` („Ansehen: Gräber, offen, zweites Mal“) wird verdrängt von `W4_FRIE_MAX_0135` („Ansehen: Gräber, zu, zweites Mal; nach Rückspulen“)
+- welt-4, friedhof, `discokugel`: `W4_FRIE_PIX_0145` („Ansehen: Discokugel im toten Baum, zweites Mal“) wird verdrängt von `W4_FRIE_MAX_0150` („Ansehen: Discokugel, zweites Mal“)
+- welt-4, friedhof, `ausgang_spukhaus_keller`: `W4_FRIE_MAX_0075` („Ansehen: Gittertor hinter der Tanzfläche, zweites Mal“) wird verdrängt von `W4_FRIE_MAX_0190` („Ansehen: Gittertor, zweites Mal“)
+- welt-4, spukhaus_keller, `roehrenfernseher`: `W4_KELL_MAX_0045` („Ansehen: Röhrenfernseher mit Rauschen, zweites Mal“) wird verdrängt von `W4_KELL_PIX_0050` („Ansehen: Röhrenfernseher, zweites Mal“)
+- welt-4, spukhaus_keller, `kassetten`: `W4_KELL_PIX_0075` („Ansehen: Kassetten-Sammlung, zweites Mal“) wird verdrängt von `W4_KELL_MAX_0080` („Ansehen: Kassetten, zweites Mal“)
+- welt-4, kapitolis, `bananenschale_im_comic_kanal`: `W4_KAPI_MAX_0610` („Ansehen: frische Bananenschale im Comic-Kanal“) wird verdrängt von `W4_KAPI_MAX_0620` („Ansehen: Bananenschale im Comic-Kanal, nach dem Grusel-Sender; Stinkbombe“)
+- welt-4, kapitolis, `bananenschale_im_comic_kanal`: `W4_KAPI_MAX_0615` („Ansehen: frische Bananenschale im Comic-Kanal, zweites Mal“) wird verdrängt von `W4_KAPI_MAX_0625` („Ansehen: Bananenschale im Comic-Kanal, nach dem Grusel-Sender, zweites Mal; Stinkbombe“)
+- welt-4, kapitolis, `fondue_kaese_im_comic_kanal`: `W4_KAPI_MAX_0630` („Ansehen: Fondue-Käse im Comic-Kanal, nach dem Grusel-Sender“) wird verdrängt von `W4_KAPI_MAX_0640` („Ansehen: Fondue-Käse im Comic-Kanal, ohne Grusel-Sender“)
+- welt-4, kapitolis, `fondue_kaese_im_comic_kanal`: `W4_KAPI_MAX_0635` („Ansehen: Fondue-Käse im Comic-Kanal, nach dem Grusel-Sender, zweites Mal“) wird verdrängt von `W4_KAPI_MAX_0645` („Ansehen: Fondue-Käse im Comic-Kanal, ohne Grusel-Sender, zweites Mal“)
+- welt-4, fondue_fabrik, `suchscheinwerfer`: `W4_FABR_PIX_0045` („Ansehen: Käse-Suchscheinwerfer am Himmel, zweites Mal“) wird verdrängt von `W4_FABR_MAX_0050` („Ansehen: Suchscheinwerfer, zweites Mal“)
+- welt-4, kellerarchiv, `auge`: `W4_ARCH_PIX_0025` („Ansehen: Auge auf dem Stiel, zweites Mal“) wird verdrängt von `W4_ARCH_MAX_0030` („Ansehen: Auge, zweites Mal“)
+
+### Gesamtbild
+
+**Wo das Spiel steht.** Text und Spielablauf sind weiter als alles andere. 5.414 Skriptzeilen, 53 Rätsel und 58 Räume sind geschrieben, in Daten überführt und in Godot als Graubox spielbar. Das ist für eine Ein-Personen-Produktion ungewöhnlich viel und ungewöhnlich ordentlich. Die Kette aus Skript, Welt-Tabelle, Werkzeug und Spiel funktioniert. Eine Änderung im Skript landet mit einem Befehl im Spiel.
+
+**Was trägt.** Der Ton ist eigen. Max ist faul, aber nicht dumm. Pixel ist eitel, aber nie gemein. Opa hat ein Geheimnis, das am Ende klein und warm ist statt groß und laut. Die besten Gags entstehen aus der Figur und nicht aus dem Zitat. Die Rätsel sind fast durchweg fair, und wo der Spieler etwas Falsches probiert, bekommt er eine eigene Antwort. Das ist die Qualität, an der man gute Adventures erkennt.
+
+**Was bremst.** Vier Dinge.
+
+1. **Der Code hat drei Fehler, die ein Testspieler sofort trifft.** Alle drei sind bestätigt (Abschnitt N, Punkt 1 bis 3). Sie haben eine gemeinsame Wurzel: Die Prüfwerkzeuge fragen, ob jede Zeile vorhanden ist. Sie fragen nicht, ob sie im Spiel an der richtigen Stelle kommt. Dazu stehen viele Bedingungen als freier Text in der Regiespalte („beim Finaltag“, „zweites Mal“), den das Werkzeug nicht versteht. Solange das so bleibt, kommen solche Fehler mit jeder Textänderung wieder.
+2. **Der Humor ist gut, aber gleichförmig.** Jede Zeile für sich ist in Ordnung. Über rund acht Stunden Spielzeit hört der Spieler dieselben fünf Bauformen immer wieder. Das ist auch der Hauptgrund, warum manche Stellen nach Maschine klingen (Abschnitt E). Ein Kürzungsdurchgang nach der Tabelle in Abschnitt C behebt beides zugleich. Es muss nichts Neues geschrieben werden, es muss etwas weg.
+3. **Grafik und Ton sind noch ein eigenes Projekt.** Es fehlen 52 Hintergründe, alle Figuren (die Welt-Tabellen führen 131 Figuren-Einträge, allein Welt 4 hat 31), alle Animationen, alle Gegenstände, die Oberfläche, die Musik und 6.306 Sprechblasen Vertonung. Die sechs fertigen Bilder zeigen, dass der Weg funktioniert. Sie zeigen auch, dass ohne feste Palette und ohne Handskizze jedes Bild anders aussieht.
+4. **Die Dokumente laufen dem Spiel hinterher.** Der Produktionsplan beschreibt einen Start, der längst geschehen ist. Mehrere Regeln im Konzept werden vom Skript nicht mehr eingehalten (Max kennt Retro-Medien, der Schmied tauft Schwerter). Das ist kein Schaden für den Spieler. Es wird aber zum Problem, sobald eine zweite Person mitarbeitet oder ein Werkzeug sich auf die Dokumente stützt.
+
+**Das größte Risiko** ist nicht die Qualität, sondern die Menge. Ein kleineres erstes Ziel wäre sinnvoll: Prolog und Welt 1 mit fertiger Grafik, Musik und sauberem Text. Dieses Stück mit fremden Spielern testen. Erst dann die Regeln daraus auf Welt 2 bis 4 anwenden. So wird jeder Fehler nur einmal gemacht statt viermal.
+
+**Was nicht geprüft werden konnte.** Es gibt keine Audiodatei, also ist Abschnitt H eine Prüfung der Pläne und Prompts. Die Minispiele sind in der Graubox nur Auswahlmenüs. Die englische Fassung (`en.csv`) ist nur als Stichprobe gelesen. Das Spiel wurde über die Daten, den Code und die Testläufe geprüft, nicht von einem Menschen mit Maus durchgespielt.
+
+## 4. Was auf keinen Fall verloren gehen darf
+
+Diese Dinge machen das Spiel aus. Sie sollten jede Überarbeitung überleben.
+
+**Einzelne Stellen**
+
+- Der Mensch-Test in Welt 3: Die logische Antwort fällt durch. „Das ist keine Menschlichkeit. Das ist 2026.“ (`W3_TEST_*`)
+- Die blaue Pastille (`W3_APO_MAX_0570`) und Opa durchs Portal: „Hast du an die Milch gedacht?“ (`W3_KAM1_OPA_0100`)
+- „Hatschi. // Bäckerei.“ (`ZS2_DACH_PIX_0100`) samt Auszahlung im Finale
+- „Das Passwort ist ‚Kuchen123‘. Oder?“ (`ZS3_DACH_MAX_0160`) und Opas Antwort (`ZS3_DACH_OPA_0200`)
+- „Abwaschen oder so.“ (`ZS2_DACH_MAX_0160`). Max bietet zum ersten Mal Hilfe an und erschrickt selbst.
+- Der Amboss in der Schmiede (`W1_SCHM_MAX_0030`) und der Amboss, der in Kapitolis Pixels Erkenntnis stoppt (`W4_KAPI_NAR_0050`)
+- „DU BIST DAS EINE.“ (`W4_HALL_OPA_0200`)
+- „Ich mag Max. Ein bisschen. Das Seil ist kaputt.“ (`W4_PIXM_PIX_0170`)
+- Der Zettel „Bin aufgestanden. Z.“ (`FI_RUF_NAR_0280`)
+- Der Gutschein „Einmal Rasenmähen“ in der Fundkiste (`FI_RIEG_MAX_0285`)
+- Omas „Der Teig hat mich getroffen. Ich dachte: Den nehme ich.“ (`FI_WOHN_OMA_0190`)
+- „… Nein. Wahrscheinlich nicht.“ (`FI_AUFL_MAX_0376`)
+- „Ich hol sie.“ (`FI_WOHN_MAX_0310`) und dass Max das Passwort am Ende nicht nimmt
+
+**Bauprinzipien**
+
+- **Jede Nebenfigur hat eine Sprachregel.** Waldemar spricht in Paragrafen, Humbert nennt jedes Schwert beim Vornamen, Leonidas schreit und hat genau einen leisen Satz, bei M.U.T.T.I. ist Fürsorge die Bedrohung. Die Regeln stehen in der Story-Bibel. Sie sind der Grund, warum man die Figuren ohne Namensschild erkennt.
+- **Fehlversuche haben eigene Zeilen.** Wer Moderwort die Thunfischdose hinhält, bekommt eine Antwort (`W1_THRO_MOD_0220`). Das ist viel Arbeit und jede Zeile wert.
+- **Sackgassen sind spielbar.** Die blaue Pastille und Zappmanns Sofa darf man annehmen. Man landet in einer Sackgasse, die sich spielen lässt, und wird herausgeholt. Das Spiel lässt den Fehler zu und macht einen Gag daraus.
+- **Gegenstände wirken über Welten hinweg.** Olivenöl, Sandale, Sonnenbrille, Kochlöffel, Kekse. Keiner davon ist Pflicht. Das hält die vier Welten zusammen.
+- **Dauergags werden ausgezahlt.** Milch, Bäckerei, Passwort, das Sofa. Keiner davon versandet.
+- **Max wird nicht belehrt.** Er steht am Ende auf, weil er will. Niemand hält ihm eine Rede. Das unterscheidet das Spiel von fast allen Geschichten über faule Jugendliche.
+- **Pixel ist eitel, aber nie grausam.** Seine Zuneigung zeigt er nur aus Versehen.
+- **Die Parodie-Sicherungen in den Grafik-Prompts.** Jede Figur ist als eigene Gestalt beschrieben und nicht als Kopie. Das schützt rechtlich und sieht besser aus.
+- **Die Werkzeugkette.** Skript als einzige Quelle, alles andere wird daraus erzeugt und geprüft. Sie hat Lücken (Abschnitt N), aber das Prinzip ist richtig.
+
+## 5. Direkt korrigierte Kleinigkeiten
+
+Geändert wurde nur, was eindeutig ein Versehen war: falsche Sprechernamen, Tippfehler, Grammatik, Zeichensetzung und uneinheitliche Formatierung. Kein Gag, kein Dialog und kein Prompt wurde inhaltlich angefasst. Alle Prüfläufe bestehen danach (`tools/pruefen.py`: 0 Fehler, 5.414 Skriptzeilen geprüft).
+
+**Falsche Sprecher.** Das Kürzel in der Zeilennummer nennt die richtige Figur, die Sprecherspalte nannte eine andere. Die Ursache ist das Werkzeug `tools/zeilen_einfuegen.py` (Abschnitt N).
+
+| Nr. | Datei | Vorher | Nachher |
+| --- | --- | --- | --- |
+| 1 | `docs/skript/welt-1.md` Z. 400, `W1_SCHM_SCH_0760` | Sprecher „Schreiber“ | Sprecher „Schmied“ |
+| 2 | `docs/skript/welt-1.md` Z. 404, `W1_SCHM_SCH_0780` | Sprecher „Schreiber“ | Sprecher „Schmied“ |
+| 3 | `docs/skript/welt-2.md` Z. 831, `W2_AGOR_GRI_0660` | Sprecher „Grimmzahn“ | Sprecher „Grieche“ |
+| 4 | `docs/skript/welt-3.md` Z. 342, `W3_TUER_SCH_0340` | Sprecher „Schreiber“ | Sprecher „Schmidt“ |
+| 5 | `docs/skript/welt-3.md` Z. 346, `W3_TUER_SCH_0360` | Sprecher „Schreiber“ | Sprecher „Schmidt“ |
+| 6 | `docs/skript/welt-3.md` Z. 350, `W3_TUER_SCH_0380` | Sprecher „Schreiber“ | Sprecher „Schmidt“ |
+
+**Tippfehler, Grammatik, Zeichensetzung**
+
+| Nr. | Datei | Vorher | Nachher |
+| --- | --- | --- | --- |
+| 7 | `docs/skript/welt-2.md` Z. 1223, `W2_INV_MAX_0030` | „Ich auch,.“ | „Ich auch.“ |
+| 8 | `docs/skript/welt-2.md` Z. 637, `W2_KRON_PIX_0150` | „Und DU, bist bloß“ | „Und DU bist bloß“ |
+| 9 | `docs/skript/welt-2.md` Z. 972, `W2_TAG1_PIX_0070` | „Der Philosoph, hat Max nicht gekannt.“ | „Der Philosoph hat Max nicht gekannt.“ |
+| 10 | `docs/skript/welt-2.md` Z. 982, `W2_TAG1_PIX_0170` | „So, stelle ich mir Sport vor.“ | „So stelle ich mir Sport vor.“ |
+| 11 | `docs/skript/welt-2.md` Z. 1009, `W2_HEBL_PIX_0200` | „Und niemand, erwähnt jemals“ | „Und niemand erwähnt jemals“ |
+| 12 | `docs/skript/welt-2.md` Z. 1381, `W2_HINT_PIX_0622` | „Und Syrakus, liegt flussabwärts.“ | „Und Syrakus liegt flussabwärts.“ |
+| 13 | `docs/skript/welt-2.md` Z. 943, `W2_STAD_LEO_0210` | „TELLER AUF DEM SCHOß!“ | „TELLER AUF DEM SCHOSS!“ (in Großbuchstaben steht kein kleines ß, und die Schrift Nunito ExtraBold hat kein großes) |
+| 14 | `docs/skript/welt-3.md` Z. 543, `W3_TURM_MAX_0520` | „Gute Führung,.“ | „Gute Führung.“ |
+| 15 | `docs/skript/welt-3.md` Z. 1242, `W3_HINT_PIX_0120` | „Genau das braucht du.“ | „Genau das brauchst du.“ |
+| 16 | `docs/skript/welt-3.md` Z. 291, `W3_SIM_MAX_0050` | „Und ist es … zu leise.“ | „Und es ist … zu leise.“ |
+| 17 | `docs/skript/welt-4.md` Z. 474, `W4_FRIE_MAX_0010` | „und hat das Programm ein besseres Leben als ich.“ | „und das Programm hat ein besseres Leben als ich.“ |
+| 18 | `docs/skript/welt-4.md` Z. 734, `W4_KAPI_FLE_0310` | „Fledermause hängen!“ | „Fledermäuse hängen!“ |
+| 19 | `docs/skript/welt-4.md` Z. 1148, `W4_PIXM_PIX_0270` | „Das finde ich, sehr verständlich.“ | „Das finde ich sehr verständlich.“ |
+
+**Uneinheitliche Formatierung.** Werkzeugnamen standen an fünf Stellen mit Rückstrichen im Fließtext, überall sonst als Code.
+
+| Nr. | Datei | Vorher | Nachher |
+| --- | --- | --- | --- |
+| 20 | `docs/grafik/02-prolog-und-finale.md` Z. 226 | `rd\_pro\_\_ui\_panel` | `` `rd_pro__ui_panel` `` |
+| 21 | `docs/grafik/welt-4.md` Z. 197 | `rd\_pro\_\_ui\_panel` | `` `rd_pro__ui_panel` `` |
+| 22 | `docs/grafik/welt-4.md` Z. 199 | `rd\_pro\_\_ui\_panel` | `` `rd_pro__ui_panel` `` |
+| 23 | `docs/03-produktion.md` Z. 58 | `rd\_advanced\_animation\_\_custom\_action` | `` `rd_advanced_animation__custom_action` `` |
+| 24 | `docs/03-produktion.md` Z. 62 | `rd\_pro\_\_ui\_panel` | `` `rd_pro__ui_panel` `` |
+
+**Folgeänderung.** `game/lokalisierung/texte.csv` wird aus den Skripten erzeugt. Sie wurde mit `python3 tools/skript_export.py` neu geschrieben. 13 Zeilen haben sich geändert, genau die Textkorrekturen 7 bis 19. Die sechs Sprecherkorrekturen ändern dort nichts.
+
+**Bewusst nicht geändert**
+
+- Drei Kommas vor „und“ in Pixels Zeilen (`W2_GRAB_PIX_0150`, `W2_INV_PIX_0140`, `W2_BUER_PIX_0640`). Sie können eine gewollte Sprechpause sein. Das entscheidest du.
+- Alle Zahlen und Fakten, die nicht stimmen („drei Silben“, „eine Woche lang“). Das sind Inhalte, sie stehen in der Fundliste.
+- Alle veralteten Angaben in den Dokumenten. Sie stehen in Abschnitt I.
+- Es wurde keine Datei gelöscht und keine umbenannt.
+
+## 6. Empfohlene Reihenfolge
+
+Die Reihenfolge geht von „stört jeden Testspieler“ zu „macht das Spiel schöner“. Jeder Schritt nennt die Fundnummern oder den Abschnitt.
+
+1. **Die drei kritischen Fehler beheben** (Fundliste 1 bis 3). Schalter für den Wechsel im Finale, Bedingungen der Ansehen-Zeilen, Hinweis-Stufen je Abschnitt. Dazu je ein Test, der wirklich über die Bedienung läuft. Aufwand: klein. Wirkung: Das Spiel lässt sich wieder durchspielen.
+2. **Die Werkzeuge so ändern, dass diese Fehler nicht wiederkommen** (Abschnitt N). Bedingungen als Schalter statt als freier Text. `spieldaten.py` meldet Hinweis-Lücken. `zeilen_einfuegen.py` sucht Sprecher nur in der eigenen Datei. `prompts_zusammensetzen.py` bricht bei unbekanntem Baustein ab. `abdeckung.py` prüft Erreichbarkeit.
+3. **Rätseltexte mit Logikfehlern berichtigen** (Abschnitt J): Alibi der Hyäne, Krawatte gegen Mantel, Hermes, Kanalnummer im Prolog, Steckbrief, Endkampf, dazu die Hinweis-Lücken in Welt 4. Das sind jeweils ein bis drei Zeilen.
+4. **Widersprüche auflösen** (Tabelle in der Story-Bibel, Abschnitt A und B). Zeitrechnung, Tageszeit im Prolog, Pixel in Welt 3, Max und die Retro-Medien, Testperson 47, Du und Sie.
+5. **Die rechtlich heiklen Zeilen ersetzen** (Abschnitt M, Stufe 1). Rund zehn Zeilen mit Originalwortlaut. Eigene Sätze sind fast immer auch die besseren Gags.
+6. **Kürzungsdurchgang, zuerst nur Prolog und Welt 1** (Abschnitt C, Tabelle der Muster, und Abschnitt E). Danach dieses Stück mit zwei oder drei fremden Spielern testen (der Beobachtungsbogen liegt schon bereit). Erst mit deren Reaktion Welt 2 bis 4 und das Finale kürzen.
+7. **Grafik: erst die Regeln, dann die Bilder** (Abschnitt G). Feste Palette. Prompt-Bausteine berichtigen. Wohnzimmer und Treppenhaus neu. Handskizzen für Welt 3 und 4. Dann Welt 1 als erste vollständige Welt.
+8. **Ton: die drei Entscheidungen, die alles Weitere festlegen** (Abschnitt H). Töne des Leitmotivs. Eigene Musik für das Finale. Stimme der Hyäne.
+9. **Lücken in der Bedienung schließen** (Abschnitt K und N). Notizbuch Seite 3, die vier Schalter für Barrierefreiheit, zweite Zeile in der Reisetasche, Schnellladen, englische Folgeblasen.
+10. **Dokumente nachziehen** (Abschnitt I). Produktionsplan neu schreiben, veraltete Zahlen berichtigen, Beispielsätze im Konzept ersetzen.
+11. **Vor der Steam-Seite:** eigener Durchgang für die englische Fassung, rechtliche Prüfung durch eine Fachperson (Abschnitt M), Store-Text und Altersangabe.
+
+Schritt 1 bis 5 sind zusammen wenige Tage Arbeit und betreffen nur Text und Code. Danach ist die Graubox ein sauberer Stand für Testspieler. Schritt 6 entscheidet über den Ton. Schritt 7 und 8 sind der große Rest der Produktion.

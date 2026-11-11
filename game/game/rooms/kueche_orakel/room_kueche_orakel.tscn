@@ -4,12 +4,12 @@
 [ext_resource type="PackedScene" uid="uid://cl5fh4jk0ncbd" path="res://game/rooms/kueche_orakel/walkable_areas/boden/walkable_area_boden.tscn" id="2_ip1l6"]
 [ext_resource type="PackedScene" uid="uid://btj2nnbiyetj3" path="res://game/rooms/kueche_orakel/props/background/prop_background.tscn" id="3_hjjik"]
 [ext_resource type="Texture2D" uid="uid://brakj4p628ud7" path="res://grafik/platzhalter/raum_kueche_orakel.png" id="4_3g5sk"]
-[ext_resource type="PackedScene" uid="uid://7v6m0u88y5fn" path="res://game/rooms/kueche_orakel/hotspots/vase/hotspot_vase.tscn" id="5_0ryu1"]
+[ext_resource type="PackedScene" uid="uid://7v6m0u88y5fn" path="res://game/rooms/kueche_orakel/hotspots/sparschwein/hotspot_sparschwein.tscn" id="5_0ryu1"]
 [ext_resource type="PackedScene" uid="uid://bt54gxxaro03e" path="res://game/rooms/kueche_orakel/hotspots/ofen/hotspot_ofen.tscn" id="6_5b4lm"]
 [ext_resource type="PackedScene" uid="uid://df1ir333qty63" path="res://game/rooms/kueche_orakel/hotspots/kochbuch/hotspot_kochbuch.tscn" id="7_tixl3"]
 [ext_resource type="PackedScene" uid="uid://c04n8idijdtvt" path="res://game/rooms/kueche_orakel/hotspots/gabel/hotspot_gabel.tscn" id="8_kheio"]
 [ext_resource type="PackedScene" uid="uid://dt6da5anwawdo" path="res://game/rooms/kueche_orakel/hotspots/kuckucksuhr/hotspot_kuckucksuhr.tscn" id="9_s0uqs"]
-[ext_resource type="PackedScene" uid="uid://rkgti6irvu2r" path="res://game/rooms/kueche_orakel/hotspots/wandtelefon/hotspot_wandtelefon.tscn" id="10_r4p7o"]
+[ext_resource type="PackedScene" uid="uid://rkgti6irvu2r" path="res://game/rooms/kueche_orakel/hotspots/eieruhr/hotspot_eieruhr.tscn" id="10_r4p7o"]
 [ext_resource type="PackedScene" uid="uid://dtuolmxasbrk" path="res://game/rooms/kueche_orakel/hotspots/tisch_mit_teller_und_teekanne/hotspot_tisch_mit_teller_und_teekanne.tscn" id="11_21bx2"]
 [ext_resource type="PackedScene" uid="uid://d304703yp0tbh" path="res://game/rooms/kueche_orakel/hotspots/glaeser_auf_dem_regal/hotspot_glaeser_auf_dem_regal.tscn" id="12_6hj0u"]
 [ext_resource type="PackedScene" uid="uid://dr8gfh6xtnoyl" path="res://game/rooms/kueche_orakel/hotspots/gardinen_und_fenster/hotspot_gardinen_und_fenster.tscn" id="13_07ow8"]
@@ -43,9 +43,9 @@ description = "UI_RAUM_KUECHE_ORAKEL"
 
 [node name="Hotspots" type="Node2D" parent="." unique_id=593920457]
 
-[node name="Vase" parent="Hotspots" unique_id=1263338610 instance=ExtResource("5_0ryu1")]
+[node name="Sparschwein" parent="Hotspots" unique_id=1263338610 instance=ExtResource("5_0ryu1")]
 position = Vector2(97, 72)
-description = "UI_OBJ_VASE"
+description = "UI_OBJ_SPARSCHWEIN"
 baseline = 32
 walk_to_point = Vector2(0, 241)
 
@@ -73,9 +73,9 @@ description = "UI_OBJ_KUCKUCKSUHR"
 baseline = 32
 walk_to_point = Vector2(0, 241)
 
-[node name="Wandtelefon" parent="Hotspots" unique_id=1709442925 instance=ExtResource("10_r4p7o")]
+[node name="Eieruhr" parent="Hotspots" unique_id=1709442925 instance=ExtResource("10_r4p7o")]
 position = Vector2(537, 72)
-description = "UI_OBJ_WANDTELEFON"
+description = "UI_OBJ_EIERUHR"
 baseline = 32
 walk_to_point = Vector2(0, 241)
 

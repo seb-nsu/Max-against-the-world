@@ -59,7 +59,8 @@ const BELEIDIGUNG := {1: "W2_RING_CIC_0040", 2: "W2_RING_CIC_0050", 3: "W2_RING_
 	4: "W2_RING_CIC_0070", 5: "W2_RING_CIC_0080"}
 const PASSEND := {1: [2, 7], 2: [4], 3: [3, 6], 4: [5], 5: [1]}
 
-## Archimedes' Hebel: Gewichte der Gegenstände im Korb; richtig ist 8 bis 10 (Pixel allein: 9)
+## Archimedes' Hebel: Gewichte der Gegenstände im Korb; richtig ist 8 bis 10 (Pixel allein: 9).
+## Der Winkel verschiebt die Kraft um eine Stufe (skripte/minispiele/hebel.gd).
 const GEWICHT := {"thunfischdose": 0, "notizbuch": 1, "kochloeffel": 1, "handy": 1,
 	"kugelschreiber": 0, "kaugummi": 0, "startpass": 1, "olivenoel": 6, "waage": 4,
 	"tintenfass": 3, "traubensaft": 12, "essigkrug": 12, "pharaonenteller": 3, "opas_papyrus": 0,
@@ -72,8 +73,9 @@ const HEBEL_KOMMENTAR := {"thunfischdose": "W2_HEBL_ARC_0020", "notizbuch": "W2_
 	"essigkrug": "W2_HEBL_ARC_0130", "pharaonenteller": "W2_HEBL_ARC_0140",
 	"opas_papyrus": "W2_HEBL_ARC_0150", "messbecher": "W2_HEBL_ARC_0160",
 	"brennspiegel": "W2_HEBL_ARC_0170", "socke": "W2_HEBL_ARC_0180", "pixel": "W2_HEBL_ARC_0190"}
-const HEBEL_MIN := 8
-const HEBEL_MAX := 10
+## Spielflächen der zwei Minispiele (Regeln in skripte/minispiele/)
+const HEBEL_FELD := preload("res://oberflaeche/minispiel_hebel.gd")
+const RINGEN_FELD := preload("res://oberflaeche/minispiel_ringen.gd")
 
 ## Diskus-Diebstahl (7): Verhör, Pixels Nase, Anklage
 const VERDAECHTIGE := {
@@ -299,6 +301,12 @@ func _bedingung_text(text: String) -> Variant:
 			return _wettkampf()
 		"nach dem Training":
 			return Zustand.geloest("R5")
+		"vor dem Finaltag":
+			return not Zustand.geloest("R13")
+		"nach dem Finaltag":
+			return Zustand.geloest("R13")
+		"während des Duells":
+			return Zustand.ist("W2_DUELL") and not Zustand.geloest("R2b")
 	return null
 
 
@@ -521,6 +529,10 @@ func fahren(ziel: String) -> void:
 			Zustand.setze_wert("W2_FEIGE_ZUSTAND", "feigenkern")
 	if _hat("feigen"):
 		zeilen.append("W2_FAHR_MAX_0190")
+	# Abfahrt: Glocke und Sanduhr-Dreh, während der Überfahrt rieselt der Sand
+	Klang.geraeusch("zeitfaehre")
+	await _sag(zeilen.pop_front())
+	Klang.geraeusch("sanduhr")
 	zeilen.append(ANKUNFT[ziel])
 	await _szene(zeilen)
 	Zustand.setze_wert("W2_FAEHRE_STEG", ziel)
@@ -1128,27 +1140,65 @@ func pixel_wurfhebel(obj, _x) -> bool:
 	return false
 
 
+## Der Hebel öffnet seine Spielfläche: Taschen und Korb, Winkel, Absprung. Jeder Zug kommt von
+## dort zurück; die Kommentare und Fehlversuche bleiben dieselben wie beim Benutzen im Raum.
 func benutzen_wurfhebel(_obj, _x) -> bool:
 	if not Zustand.ist("W2_TAG1_LAEUFT") or _raum_id() != "stadion":
 		return false
-	var korb := _liste("W2_KORB")
-	if not korb.is_empty():
-		# Abspringen oder den Korb ausräumen
-		var w := await Spiel.auswahl(["UI_W2_HEBEL_ZIEHEN", "UI_W2_KORB_LEEREN"])
-		if w == 1:
-			Zustand.setze_wert("W2_KORB", [])
-			return true
-		if w != 0:
-			return true
-	var gewicht := 0
-	for g in korb:
-		gewicht += int(GEWICHT.get(g, 0))
+	var hebel := CQHebel.new(GEWICHT, _liste("W2_KORB"), int(Zustand.wert("W2_WINKEL", CQHebel.MITTEL)))
+	var feld := Spiel.minispiel_oeffnen(HEBEL_FELD)
+	Klang.musik("w2_fuenfkampf")
+	feld.zeigen(hebel, _hebel_taschen())
+	var ende := ""  # "treffer", "nachsicht" (Tag 1 endet) oder "zu" (später weiter)
+	while ende.is_empty():
+		var zug: Array = await feld.naechster_zug()
+		match str(zug[0]):
+			"rein":
+				await gegenstand_wurfhebel(null, str(zug[1]))
+			"raus":
+				var korb := _liste("W2_KORB")
+				korb.erase(str(zug[1]))
+				Zustand.setze_wert("W2_KORB", korb)
+			"winkel":
+				Zustand.setze_wert("W2_WINKEL", int(zug[1]))
+			"leeren":
+				Zustand.setze_wert("W2_KORB", [])
+			"sprung":
+				ende = await _hebel_sprung(feld, hebel)
+			_:
+				ende = "zu"
+		hebel.korb = _liste("W2_KORB")
+		hebel.winkel = int(Zustand.wert("W2_WINKEL", CQHebel.MITTEL))
+		if ende.is_empty():
+			feld.neu_aufstellen()
+	Spiel.minispiel_schliessen()
+	Klang.raum_musik(_raum_id())
+	if ende != "zu":
+		await _tag_1_ende(ende == "treffer")
+	return true
+
+
+## Was Max in den Korb legen kann: alles aus seinen Taschen, wozu Archimedes etwas sagt, und Pixel.
+func _hebel_taschen() -> Array:
+	var out := []
+	for id in HEBEL_KOMMENTAR:
+		if id != "pixel" and _hat(id):
+			out.append(id)
+	out.append("pixel")
+	return out
+
+
+## Absprung: "treffer" oder "nachsicht" (Ramses' großzügige Wertung), wenn Tag 1 damit endet,
+## sonst "" (Fehlversuch, der Korb ist wieder leer).
+func _hebel_sprung(feld, hebel: CQHebel) -> String:
+	var ergebnis := hebel.ergebnis()
 	var fehler := int(Zustand.wert("W2_HEBEL_FEHLER", 0))
-	if gewicht >= HEBEL_MIN and gewicht <= HEBEL_MAX:
+	await feld.sprung(ergebnis)
+	if ergebnis == "treffer":
+		Klang.geraeusch("stadion_jubel")
 		await _szene(["W2_HEBL_NAR_0300", "W2_HEBL_ARC_0310"])
-		await _tag_1_ende(true)
-		return true
-	if gewicht < HEBEL_MIN:
+		return "treffer"
+	if ergebnis == "leicht":
 		await _szene(["W2_HEBL_NAR_0210", "W2_HEBL_MAX_0220"])
 	elif fehler % 2 == 0:
 		await _szene(["W2_HEBL_NAR_0230", "W2_HEBL_MAX_0240"])
@@ -1158,8 +1208,8 @@ func benutzen_wurfhebel(_obj, _x) -> bool:
 	Zustand.setze_wert("W2_HEBEL_FEHLER", fehler)
 	Zustand.setze_wert("W2_KORB", [])
 	if fehler >= 2 and await _nachsicht("W2_HEBL_RAM_0270"):
-		await _tag_1_ende(false)
-	return true
+		return "nachsicht"
+	return ""
 
 
 ## Ramses' großzügige Wertung nach zwei Fehlversuchen: true, wenn Max annimmt.
@@ -1282,6 +1332,11 @@ func _verdaechtiger(id: String) -> bool:
 	if _einmal("W2_VERHOERT_" + id.to_upper()):
 		await _szene(v.verhoer)
 		return true
+	# Anklagen oder aufgeben erst, wenn alle acht Aussagen im Notizbuch stehen
+	for k in VERDAECHTIGE:
+		var verhoert: String = "W2_VERHOERT_" + k.to_upper()
+		if not Zustand.ist(verhoert):
+			return false
 	var texte := ["UI_W2_ANKLAGEN", "UI_W2_REDEN"]
 	if id == "leonidas":
 		texte.append("W2_DISK_MAX_0340")
@@ -1547,38 +1602,38 @@ func _finaltag() -> void:
 	await _geben("paraden_plan")
 
 
-## Rede-Ringen: Cicero steht auf der Linie seiner Beleidigung; ein Treffer schiebt ihn eine
-## Linie weiter, ein Fehlversuch eine zurück. Falsche Konter bleiben je Linie ausgegraut (hier:
-## nicht mehr angeboten). Liefert true, wenn Max Ramses' großzügige Wertung angenommen hat.
+## Rede-Ringen (Regeln: skripte/minispiele/rede_ringen.gd, Spielfläche:
+## oberflaeche/minispiel_ringen.gd): Cicero steht auf der Linie seiner Beleidigung; ein Treffer
+## schiebt ihn eine Linie weiter, ein Fehlversuch eine zurück. Falsche Konter bleiben je Linie
+## ausgegraut. Liefert true, wenn Max Ramses' großzügige Wertung angenommen hat.
 func _rede_ringen() -> bool:
 	await _szene(["W2_RING_CIC_0010", "W2_RING_MAX_0020"])
-	var linie := 1
-	var fehler := 0
-	var gesperrt := {}
-	var konter := _liste("W2_KONTER")
+	var ringen := CQRedeRingen.new(_liste("W2_KONTER"), PASSEND)
+	var feld := Spiel.minispiel_oeffnen(RINGEN_FELD)
+	Klang.musik("w2_fuenfkampf")
+	feld.zeigen(ringen, KONTER_ZEILE)
 	var nachsicht := false
-	while linie <= 5:
-		await _sag(BELEIDIGUNG[linie])
-		var angebot: Array = konter.filter(func(k): return not k in gesperrt.get(linie, []))
-		if angebot.is_empty():
-			angebot = konter
-		var w := await Spiel.auswahl(angebot.map(func(k): return KONTER_ZEILE[k]))
-		var k: int = angebot[maxi(w, 0)]
+	while not ringen.gewonnen():
+		await _sag(BELEIDIGUNG[ringen.linie])
+		var k: int = await feld.konter_wahl()
 		await _sag(KONTER_ZEILE[k])
-		if k in PASSEND[linie]:
+		if ringen.kontern(k):
+			await feld.treffer()
 			if k == 4:
 				await _sag("W2_RING_CIC_0120")
 			elif k == 5:
 				await _sag("W2_RING_CIC_0160")
-			linie += 1
 			continue
-		gesperrt[linie] = gesperrt.get(linie, []) + [k]
-		await _szene(["W2_RING_CIC_0180", "W2_RING_NAR_0190", "W2_RING_PIX_0200", "W2_RING_MAX_0210"])
-		linie = maxi(1, linie - 1)
-		fehler += 1
-		if fehler == 2 and await _nachsicht("W2_RING_RAM_0220"):
+		await _sag("W2_RING_CIC_0180")
+		await _sag("W2_RING_NAR_0190")
+		await feld.zeitraffer()
+		await _szene(["W2_RING_PIX_0200", "W2_RING_MAX_0210"])
+		await feld.zurueck()
+		if ringen.fehler == 2 and await _nachsicht("W2_RING_RAM_0220"):
 			nachsicht = true
 			break
+	Spiel.minispiel_schliessen()
+	Klang.raum_musik(_raum_id())
 	await _szene(["W2_RING_NAR_0230", "W2_RING_CIC_0240", "W2_RING_MAX_0250", "W2_RING_PIX_0260",
 		"W2_RING_RAM_0270"])
 	await _geben("olivenkranz")

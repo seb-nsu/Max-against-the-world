@@ -53,6 +53,7 @@
    ],
    "erreichbar_ab": "start",
    "musik": "gegenwart",
+   "atmo": "uhr_ticken",
    "zustaende": [
     "Später Nachmittag",
     "Früher Abend",
@@ -71,7 +72,8 @@
     "wohnzimmer"
    ],
    "erreichbar_ab": "F1d",
-   "musik": "gegenwart",
+   "musik": "finale_maschine",
+   "atmo": "uhr_ticken",
    "zustaende": [
     "Später Abend"
    ]
@@ -88,7 +90,8 @@
     "treppenhaus"
    ],
    "erreichbar_ab": "F1d",
-   "musik": "gegenwart",
+   "musik": "finale_geburtstag",
+   "atmo": "uhr_ticken",
    "zustaende": [
     "Geburtstag"
    ]
@@ -102,7 +105,8 @@
    "groesse": "640x360",
    "ausgaenge": [],
    "erreichbar_ab": "F1d",
-   "musik": "gegenwart",
+   "musik": "stille",
+   "atmo": "kuehlregal",
    "zustaende": [
     "Später Abend"
    ]
@@ -346,7 +350,7 @@
    "ergibt": [],
    "schalter": [
     "FI_R01_GELOEST",
-    "LUKE_ERKANNT"
+    "FI_LUKE_ERKANNT"
    ],
    "optional": false
   },
@@ -415,7 +419,7 @@
    "ergibt": [],
    "schalter": [
     "FI_R02_GELOEST",
-    "KEKSE_DABEI"
+    "FI_KEKSE_DABEI"
    ],
    "optional": true
   }

@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://bwn2haamaocc5"]
 
-[ext_resource type="Script" path="res://game/rooms/stadtstrasse/hotspots/telefonzelle/hotspot_telefonzelle.gd" id="1_kiyul"]
+[ext_resource type="Script" path="res://game/rooms/stadtstrasse/hotspots/radiowecker/hotspot_radiowecker.gd" id="1_kiyul"]
 
-[node name="Telefonzelle" type="Area2D" unique_id=1420049876]
+[node name="Radiowecker" type="Area2D" unique_id=1420049876]
 script = ExtResource("1_kiyul")
-script_name = "Telefonzelle"
-description = "Telefonzelle"
+script_name = "Radiowecker"
+description = "Radiowecker"
 cursor = 1
 interaction_polygon = PackedVector2Array(-59.3333, -32, 59.3333, -32, 59.3333, 32, -59.3333, 32)
 

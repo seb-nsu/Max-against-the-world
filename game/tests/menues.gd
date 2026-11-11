@@ -133,12 +133,23 @@ func _hauptmenue(spiel, einst) -> void:
 	menue._hinweis_schliessen()
 	pruefe(not menue.hinweis_offen() and not einst.erster_start(), "Hinweis bestätigt")
 	pruefe(menue._knoepfe.size() == 6, "sechs Kanäle")
+	var titel: Label = menue._haupt.get_node("Titel")
+	pruefe(titel.get_theme_font("font").resource_path.ends_with("pixelify-sans.ttf")
+		and menue._knoepfe[1].get_theme_font("font").resource_path.ends_with("nunito-extrabold.ttf"),
+		"Schriften im Hauptmenü: Titel in Pixelify Sans, Menüpunkte in Nunito (%s, %s)"
+		% [titel.get_theme_font("font").resource_path.get_file(), menue._knoepfe[1].get_theme_font("font").resource_path.get_file()])
 	pruefe(menue._knoepfe[0].disabled, "Fortsetzen ohne Spielstand aus")
 	pruefe(menue._kanal == 1, "ohne Spielstand steht Kanal 2 (Neues Spiel)")
 	menue._ausloesen(3)
 	await _warten()
 	var opt = menue.unter_offen()
 	pruefe(opt != null and opt._reiter.get_tab_count() == 5, "Optionen mit fünf Reitern")
+	pruefe(opt._schalter_aus.is_empty() and not opt._schalter_an["untertitel"].disabled
+		and not opt._schalter_an["farbenblind"].disabled and not opt._schalter_an["wackeln_aus"].disabled,
+		"Optionen: kein Schalter ist mehr ausgegraut, Untertitel, Wackeln und Farbenblind-Hilfe sind bedienbar")
+	opt._schalter_an["wackeln_aus"].button_pressed = true
+	pruefe(einst.wert("wackeln_aus"), "Optionen: Schalter „Bildschirmwackeln aus“ stellt die Einstellung um")
+	opt._schalter_an["wackeln_aus"].button_pressed = false
 	var rb := InputEventAction.new()
 	rb.action = "cq_reiter_vor"
 	rb.pressed = true
@@ -168,6 +179,14 @@ func _hauptmenue(spiel, einst) -> void:
 	menue._ausloesen(1)
 	var da := await _warten_bis(func(): return _im_raum("Wohnzimmer"), 20.0)
 	pruefe(da, "Neues Spiel: im Wohnzimmer")
+	# Der erste Raum kommt aus dem Hauptmenü ohne Raumwechsel. Popochius Kamera muss trotzdem die
+	# Grenzen der Spielauflösung haben, sonst sitzt der Raum um 160×90 Pixel verschoben.
+	await _warten(5)
+	var kamera: Camera2D = root.get_node("E").camera
+	pruefe(kamera.limit_right == 640 and kamera.limit_bottom == 360
+		and root.canvas_transform.origin.is_equal_approx(Vector2.ZERO),
+		"Neues Spiel aus dem Hauptmenü: Raum sitzt richtig im Bild (Grenzen %d×%d, Versatz %s)"
+		% [kamera.limit_right, kamera.limit_bottom, root.canvas_transform.origin])
 	pruefe(spiel.hud.visible, "HUD im Spiel wieder an")
 	var gui_ebene = root.get_node("E").get_node("GraphicInterfaceLayer")
 	pruefe(gui_ebene.visible, "Popochiu-Oberfläche wieder an")
@@ -215,6 +234,15 @@ func _fortsetzen(spiel) -> void:
 	pruefe(not menue._knoepfe[0].disabled and menue._neuester == 2, "Fortsetzen: neuester Platz 2")
 	pruefe(menue._kanal == 0, "mit Spielstand steht Kanal 1 (Fortsetzen)")
 	pruefe(menue._kanal_info.text.contains("Wohnzimmer"), "Fortsetzen zeigt den Ort")
+	# „Neues Spiel“ fragt nach, wenn es schon einen Spielstand gibt
+	spiel.start_platz = 7
+	menue._kanal_waehlen(1, true)
+	menue._ausloesen(1)
+	pruefe(menue._neu_sicher and spiel.start_platz == 7
+		and menue._kanal_info.text == tr("UI_MENUE_NEUES_SPIEL_SICHER"), "Neues Spiel mit Spielstand: erst die Nachfrage")
+	menue._kanal_waehlen(0, true)
+	pruefe(not menue._neu_sicher, "Kanalwechsel nimmt die Nachfrage zurück")
+	spiel.start_platz = -1
 	menue.queue_free()
 	await _warten(2)
 	pruefe(spiel.hud.visible, "HUD nach dem Menü wieder an")

@@ -71,10 +71,15 @@ func _durchlauf() -> void:
 	await _warte_bis(func(): return _gesagt("W4_SIT_PIX_0090"), 10.0)
 	_pruefe(_gesagt("W4_SIT_SMU_0010"), "Erstes Betreten der Sitcom-Küche")
 
+	# R4a: Die Mutter bestätigt das Fondue, bevor Max die Folge in der Zeitschrift gelesen hat.
+	# Die Antwort zählt trotzdem, sobald er sie liest.
+	await S.regel("nach_option", "sitcom_mutter", "0320")
+	_pruefe(not Z.geloest("R4a"), "R4a: Mutter gefragt, Folge noch nicht gelesen")
 	# Programmzeitschrift: 20:15-Folge, dann Mitternacht
 	S.vorgabe_auswahl = [0]
 	await S.regel("benutzen_inventar", _item("Programmzeitschrift"))
 	_pruefe(Z.ist("W4_FOLGE_2015_GELESEN"), "20:15-Folge gelesen (Fondue)")
+	_pruefe(Z.geloest("R4a"), "R4a: gelöst ohne zweite Frage an die Mutter")
 	S.vorgabe_auswahl = [1]
 	await S.regel("benutzen_inventar", _item("Programmzeitschrift"))
 	await _warte_auf_raum("friedhof")

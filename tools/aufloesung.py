@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 """Grundauflösung des Spiels an einer Stelle (05-spielsysteme.md, Bildschirmaufbau).
 
-Vorläufig 480×270 (Sebastian, 9. November 2026; nach den ersten Testszenen noch einmal prüfen).
+640×360 (seit 10. November 2026, vorher 480×270).
 Die übrigen Werkzeuge lesen BREITE, HOEHE und die UI-Maße von hier; Godot liest die Auflösung aus
 project.godot (display/window/size/viewport_*).
 
-Ein späterer Wechsel, etwa auf 640×360:
+Ein Wechsel der Auflösung, zuletzt von 480×270 auf 640×360:
 
     python3 tools/aufloesung.py --umrechnen 480x270 640x360
 

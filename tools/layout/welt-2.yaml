@@ -89,9 +89,7 @@ thronsaal_ramses:
     opferschale_des_hofkaters: opferschale
     inschrift: inschrift
     nahansicht_inschrift: inschrift
-    nach_dem_nehmen: pharaonenteller
     ramses_im_stadion: ramses
-    faecherwedler_waehrend_des_duells: faecherwedler
     tuer_zur_kueche: tuer_zur_kueche
     fackeln: fackeln
   hotspots:
@@ -271,7 +269,6 @@ stadion:
     ramses_im_stadion: ramses
     wurfhebel_im_stadion: wurfhebel
     startlinie_mit_startpass: startlinie
-    siegel_auf_dem_sack: goldener_sack
   hotspots:
     laufbahn: {rect: [40, 296, 560, 24], gehe: [320, 332], name: Laufbahn}
     sandgrube: {rect: [128, 248, 120, 32], gehe: [188, 312], name: Sandgrube}
@@ -351,7 +348,6 @@ grabhuegel:
   alias:
     leerer_sockel: sockel
     zikaden_oder_zuruf_grabhuegel: zikaden
-    frischer_grabstein: sockel
   hotspots:
     sockel: {rect: [280, 224, 68, 56], gehe: [312, 312], name: Sockel}
     brombeeren: {rect: [80, 212, 120, 68], gehe: [140, 312], name: Brombeeren}

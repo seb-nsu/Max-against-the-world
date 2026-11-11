@@ -18,7 +18,7 @@ weitere_schalter:
   - FI_ANSEHEN               # Wert: Objekt → wie oft im Finale angesehen (erste/zweite Zeile)
   - FI_KANAELE               # Wert: beim Hilferuf schon gewählte Kanäle
   - FI_ZELDINA_DA            # Zeldina ist aus dem Zapp-O-Mat gekommen
-  - FI_ROBOTER_DA            # Modell 08/15 ist gekommen (nur mit FREUND_0815)
+  - FI_ROBOTER_DA            # Modell 08/15 ist gekommen (nur mit W3_FREUND_0815)
   - FI_HILFERUF              # alle vier Kanäle gerufen
   - FI_ZELLE_IM_MAUL         # Pixel trägt die Energiezelle (Schritt C), beim Wechsel zu Max ins Inventar
   - FI_WOHN_ANKUNFT          # Ankunftsszene im Wohnzimmer gespielt
@@ -33,7 +33,8 @@ raeume:
     groesse: 640x360
     ausgaenge: [treppenhaus]         # Luke im Finale verriegelt bis zur Auflösung
     erreichbar_ab: start
-    musik: gegenwart
+    musik: gegenwart                 # Zwischenspiele; im Finale ab dem Start der Maschine finale_maschine, ab der Auflösung finale_geburtstag (Regel in game/skripte/finale.gd)
+    atmo: uhr_ticken
     zustaende: [Später Nachmittag, Früher Abend, Abendrot, Nacht Maschine läuft, Nacht Maschine steht]
 
   - id: treppenhaus
@@ -42,7 +43,8 @@ raeume:
     groesse: 640x360
     ausgaenge: [dachboden, wohnzimmer]
     erreichbar_ab: F1d               # Abgang zum Wohnzimmer als Szene nach der Auflösung
-    musik: gegenwart
+    musik: finale_maschine   # im Finale kein eigener Besuch; der Schnitt gehört zum Maschinen-Stück
+    atmo: uhr_ticken
     zustaende: [Später Abend]
 
   - id: wohnzimmer
@@ -51,7 +53,8 @@ raeume:
     groesse: 640x360
     ausgaenge: [treppenhaus]         # zum Supermarkt nur als Szene (FI_ABSP)
     erreichbar_ab: F1d
-    musik: gegenwart
+    musik: finale_geburtstag   # ab der Auflösung
+    atmo: uhr_ticken
     zustaende: [Geburtstag]
 
   - id: supermarkt
@@ -60,7 +63,8 @@ raeume:
     groesse: 640x360
     ausgaenge: []                    # Endbild, nur die Ladentür (Spielende)
     erreichbar_ab: F1d               # per Szene aus dem Wohnzimmer
-    musik: gegenwart                 # mit der Schwarzblende setzt das Titelthema ein (FI_SUPM_NAR_0090), danach Abspann
+    musik: stille   # kein Stück, nur Kühlregal und Türgong; mit der Schwarzblende setzt das Titelthema ein (FI_SUPM_NAR_0090), danach Abspann
+    atmo: kuehlregal
     zustaende: [Später Abend]
 
 figuren:
@@ -110,7 +114,7 @@ figuren:
   - id: modell_0815
     name: Modell 08/15
     kuerzel: HAU
-    raum: [dachboden, wohnzimmer]    # nur mit FREUND_0815
+    raum: [dachboden, wohnzimmer]    # nur mit W3_FREUND_0815
     groesse_px: 196
     spielbar: false
 
@@ -146,7 +150,7 @@ figuren:
     name: Kalle
     kuerzel: KAL
     raum: dachboden
-    groesse_px: 0                    # nur Bildschirm-Einblendung (Kanal 42, ohne FREUND_0815)
+    groesse_px: 0                    # nur Bildschirm-Einblendung (Kanal 42, ohne W3_FREUND_0815)
     spielbar: false
 
   - id: flimmer
@@ -209,7 +213,7 @@ gegenstaende:
     name: Kochlöffel-Zauberstab
     herkunft: welt-1                # Welt 1, Rätsel 13; Pflichtfach
     zustaende: [zauberstab]
-    verwendet_in: [F1b]              # nur ohne FREUND_0815
+    verwendet_in: [F1b]              # nur ohne W3_FREUND_0815
     reist_mit: true
     nahansicht: false
 
@@ -226,8 +230,8 @@ raetsel:
     name: Verriegelt (Luke erkennen)
     raum: dachboden
     benoetigt: []
-    ergibt: []                       # danach automatisch der Hilferuf: Zeldina, mit FREUND_0815 Modell 08/15
-    schalter: [FI_R01_GELOEST, LUKE_ERKANNT]
+    ergibt: []                       # danach automatisch der Hilferuf: Zeldina, mit W3_FREUND_0815 Modell 08/15
+    schalter: [FI_R01_GELOEST, FI_LUKE_ERKANNT]
     optional: false
 
   - id: F1a
@@ -241,7 +245,7 @@ raetsel:
   - id: F1b
     name: Die Ofentür halten
     raum: dachboden
-    benoetigt: [F1, kochloeffel]   # Kochlöffel nur ohne FREUND_0815
+    benoetigt: [F1, kochloeffel]   # Kochlöffel nur ohne W3_FREUND_0815
     ergibt: []
     schalter: [FI_R01_B_GELOEST]
     optional: false
@@ -267,5 +271,5 @@ raetsel:
     raum: dachboden
     benoetigt: [omas_kekse]
     ergibt: []
-    schalter: [FI_R02_GELOEST, KEKSE_DABEI]
+    schalter: [FI_R02_GELOEST, FI_KEKSE_DABEI]
     optional: true

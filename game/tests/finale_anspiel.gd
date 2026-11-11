@@ -49,11 +49,18 @@ func _durchlauf() -> void:
 	_pruefe(not _hat("goldene_fernbedienung") and Z.wert("FI_FERNBEDIENUNG") == "grau_ohne_zelle",
 		"Fernbedienung bei Opa, ohne Zelle")
 	_pruefe(_hotspot("maschine").visible and _hotspot("fundkiste").visible, "Maschine und Fundkiste sichtbar")
+	var klang = root.get_node("Klang")
+	_pruefe(klang.aktuelle_musik == "finale_maschine", "Ton: Mit der Maschine setzt finale_maschine ein (%s)" % klang.aktuelle_musik)
+	_pruefe(klang.musik_fuer_raum("dachboden") == "gegenwart" and S.regel_wert("musik", "dachboden") == "finale_maschine",
+		"Ton: Dachboden im Finale spielt nach dem Laden wieder finale_maschine")
+	_pruefe(klang.aktuelle_atmo == "uhr_ticken", "Ton: Gegenwart tickt (%s)" % klang.aktuelle_atmo)
+
+	_pruefe(not S.wechsel_moeglich(), "Vor dem Hilferuf kein Figurenwechsel")
 
 	# Schritt 0: Luke verriegelt, dann der Hilferuf über alle vier Kanäle
 	S.vorgabe_auswahl = [0, 0, 0, 0]
 	await S.regel("ausgang", _hotspot("bodenluke"))
-	_pruefe(Z.ist("LUKE_ERKANNT") and Z.ist("FI_HILFERUF"), "F1: Luke erkannt, Hilferuf abgeschlossen")
+	_pruefe(Z.ist("FI_LUKE_ERKANNT") and Z.ist("FI_HILFERUF"), "F1: Luke erkannt, Hilferuf abgeschlossen")
 	_pruefe(_gesagt("FI_RUF_ZEL_0040") and _gesagt("FI_RUF_KAL_0200") and _gesagt("FI_RUF_FLI_0250"),
 		"Alle vier Kanäle (ohne Modell 08/15: Kalle)")
 	_pruefe(_raum().has_character("Zeldina") and not _raum().has_character("Modell0815"), "Zeldina ist da")
@@ -62,16 +69,29 @@ func _durchlauf() -> void:
 	S.vorgabe_auswahl = [2]
 	await S.regel("benutzen", C().get_character("Zeldina"))
 	_pruefe(Z.geloest("F1a"), "F1a: Riegel")
+	# Noch einmal fragen: Ohne Modell 08/15 zählt Max den Roboter nicht mit (0095 statt 0090)
+	S.vorgabe_auswahl = [2]
+	await S.regel("benutzen", C().get_character("Zeldina"))
+	_pruefe(_gesagt("FI_RAET_MAX_0095") and not _gesagt("FI_RAET_MAX_0090"),
+		"Zeldina nach Schritt A: Fassung ohne Roboter")
 	# B: Kochlöffel in die Ofentür
 	await S.regel("gegenstand", _hotspot("ofentuer"), _i().get_item_instance(_sn("kochloeffel")))
 	_pruefe(Z.geloest("F1b"), "F1b: Ofentür mit dem Kochlöffel")
-	# C: Fernbedienung unter dem Sessel, die Zelle holt Pixel
-	await S.regel("benutzen", _hotspot("ohrensessel"))
+	# C: Fernbedienung unter dem Sessel, die Zelle holt Pixel. Über die echte Bedienung, so wie
+	# Skript und Hinweise es verlangen (FI_RAET_PIX_0200, FI_HINT_PIX_0130): Klick auf den Sessel,
+	# Klick auf Pixels Porträt, als Pixel Klick auf den Sessel, Klick auf Max' Porträt.
+	await _hotspot("ohrensessel").on_click()
 	_pruefe(_hat("goldene_fernbedienung"), "Fernbedienung zurück")
-	await S.regel("pixel", _hotspot("ohrensessel"))
+	await _hotspot("ohrensessel").on_click()
+	_pruefe(_gesagt("FI_RAET_PIX_0200"), "Pixel fordert den Figurenwechsel")
+	S.hud._pixel.pressed.emit()
+	await _warte_bis(func(): return C().player.script_name == "Pixel" and S.in_szene == 0 and not _e().playing_queue, 5.0)
+	_pruefe(C().player.script_name == "Pixel", "Klick auf Pixels Porträt wechselt zu Pixel")
+	await _hotspot("ohrensessel").on_click()
 	_pruefe(Z.ist("FI_ZELLE_IM_MAUL"), "Pixel hat die Zelle im Maul")
-	await S.regel("pixel", C().get_character("Max"))
-	_pruefe(_hat("energiezelle"), "Zelle in Max' Inventar")
+	S.hud._max.pressed.emit()
+	await _warte_bis(func(): return _hat("energiezelle"), 5.0)
+	_pruefe(C().player.script_name == "Max" and _hat("energiezelle"), "Klick auf Max' Porträt: Zelle in Max' Inventar")
 	await S.regel("kombinieren", _i().get_item_instance(_sn("energiezelle")),
 		_i().get_item_instance(_sn("goldene_fernbedienung")))
 	_pruefe(Z.geloest("F1c") and Z.wert("FI_FERNBEDIENUNG") == "zuendkapsel", "F1c: Zündkapsel")
@@ -79,19 +99,34 @@ func _durchlauf() -> void:
 	S.vorgabe_auswahl = [0]
 	await S.regel("gegenstand", _hotspot("empfaenger"), _i().get_item_instance(_sn("goldene_fernbedienung")))
 	_pruefe(_gesagt("FI_RAET_NAR_0290") and not Z.geloest("F1d"), "Lauter: falsche Taste")
-	S.vorgabe_auswahl = [3]
+	# rote Taste; danach fragt der Spieler die vier Dinge selbst ab: Zelle, Ei, Korn, zuletzt die Fernbedienung
+	S.vorgabe_auswahl = [3, 2, 0, 0, 0]
 	S.regel("gegenstand", _hotspot("empfaenger"), _i().get_item_instance(_sn("goldene_fernbedienung")))
 	await _warte_auf_raum("wohnzimmer")
 	_pruefe(Z.geloest("F1d") and _gesagt("FI_AUFL_PIX_0560"), "F1d und Auflösung")
+	var reihe := ["FI_AUFL_OPA_0160", "FI_AUFL_OPA_0120", "FI_AUFL_OPA_0140", "FI_AUFL_OPA_0180", "FI_AUFL_NAR_0190"]
+	var stellen := reihe.map(func(z): return S.protokoll.find(z))
+	var sortiert := stellen.duplicate()
+	sortiert.sort()
+	_pruefe(not stellen.has(-1) and stellen == sortiert and S.vorgabe_auswahl.is_empty(),
+		"Auflösung: vier Dinge in gewählter Reihenfolge, Fernbedienung zuletzt")
 	await _warte_bis(func(): return _gesagt("FI_WOHN_PIX_0060"), 10.0)
 	_pruefe(_raum().has_character("Oma") and _hotspot("kuchen").visible, "Geburtstag im Wohnzimmer")
+	_pruefe(klang.aktuelle_musik == "finale_geburtstag" and S.regel_wert("musik", "dachboden") == "finale_geburtstag",
+		"Ton: ab der Auflösung finale_geburtstag (%s)" % klang.aktuelle_musik)
 
 	# Mutter, Abspann-Szene, Supermarkt, Abspann
 	S.regel("benutzen", C().get_character("Oma"))
 	await _warte_auf_raum("supermarkt")
 	_pruefe(_gesagt("FI_WOHN_MUT_0230") and _gesagt("FI_ABSP_MAX_0030"), "Mutter und Abspann-Szene")
+	_pruefe(klang.aktuelle_musik == "" and "musik/stille" in klang.protokoll and klang.aktuelle_atmo == "kuehlregal",
+		"Ton: Supermarkt ohne Stück, mit Kühlregal (%s, %s)" % [klang.aktuelle_musik, klang.aktuelle_atmo])
+	_pruefe("geraeusch/tuergong" in klang.protokoll, "Ton: Türgong am Supermarkt")
 	await S.regel("benutzen", _hotspot("automatische_tuer"))
 	_pruefe(Z.ist("FI_ENDE_GESEHEN") and S.hauptmenue_angefragt, "Abspann gesehen, zurück ins Hauptmenü")
+	var folge := ["musik/titel", "musik/abspann", "musik/lied_waldemar"].map(func(m): return klang.protokoll.find(m))
+	_pruefe(not folge.has(-1) and folge[0] < folge[1] and folge[1] < folge[2],
+		"Ton: Titelthema mit der Schwarzblende, dann Abspann, dann Waldemars Nummer %s" % [folge])
 
 
 #region Hilfen #####################################################################################

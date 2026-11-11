@@ -72,11 +72,15 @@ def pascal(ident):
 
 # Zusätze im Auslöser oder in der Bedingung, die nur erklären (Hinweis, Folge, Animation) und
 # nichts bedingen. Alles andere, was keine Rätsel-, Gegenstand- oder Zeilenbedingung ist, bleibt
-# als „bedingung_text“ stehen: Ansehen-Zeilen zeigt das Spiel trotzdem, Gesprächsoptionen und
-# Zurufe nur, wenn Spiel._bedingung_text_ok() den Text kennt (sonst entscheidet der Rätselcode).
+# als „bedingung_text“ stehen, auch der Zusatz nach dem Komma („Ansehen: Nase, vor dem Finaltag“).
+# Gesprächsoptionen und Zurufe zeigt das Spiel nur, wenn Spiel._bedingung_text_ok() den Text
+# kennt. Bei Ansehen, Benutzen und Gegenstand-auf-Objekt wertet das Spiel jeden Teil aus, den
+# die Regeln kennen (Spiel.zusatz_ok), und übergeht den Rest als Anmerkung. Damit dabei keine
+# Zeile unbemerkt verschwindet, bricht verdraengte() den Lauf ab, sobald zwei Zeilen desselben
+# Objekts für das Spiel nicht zu unterscheiden sind.
 ANMERKUNG_RE = re.compile(
     r"^(Hinweis|auch |löst |schaltet |führt |Notizbuch|Lösung|Pixels Wunsch|Szene|weiter |"
-    r"Radio|Schwing|öffnet |Weg [AB]$|Max kennt|Rezept bekannt|die Nase lügt|Besen zuckt|"
+    r"Radio|Schwing|öffnet |startet |Weg [AB]$|Max kennt|Rezept bekannt|die Nase lügt|Besen zuckt|"
     r"Flasche steht|grüner Rauch|Textvariante|Konter \d|Gag$)")
 # Auslöser im Abschnitt „Figurenwechsel“ (Szenen-Code WECH) → Schlüssel im Bauplan
 WECHSEL_REGELN = [
@@ -90,6 +94,11 @@ WECHSEL_REGELN = [
 ]
 GEGENSTAND_BED_RE = re.compile(r"^(mit|ohne)\s+(.+)$")
 ZEILE_BED_RE = re.compile(r"^nach\s+(\d{4})$")
+# Zusätze, die das n-te Ansehen oder die aktive Figur meinen (keine Bedingung in Worten)
+MAL_ZUSATZ = {"erstes mal": 1, "zweites mal": 2, "zweites mal und folgende": 2, "drittes mal": 3,
+              "viertes mal": 4}
+PIXEL_ZUSATZ = ("pixel", "pixel schnuppert", "als pixel")
+OHNE_WIRKUNG = ("als max", "fortsetzung", "danach")
 
 
 def bedingungen(text, gegenstand_id=None, zeile_id=None):
@@ -126,6 +135,88 @@ def objekt_aus_ausloeser(ausloeser):
     rest = re.sub(r"\s*\([^)]*\)", "", rest)
     name, _, zusatz = rest.partition(",")
     return slug(name), name.strip(), zusatz.strip()
+
+
+def bekannte_worte(abschnitt):
+    """Bedingungen in Worten, die das Spiel auswertet: die Zweige von _bedingung_text_wert() in
+    spiel.gd und von _bedingung_text() in den Regeln des Abschnitts."""
+    worte = set()
+    for datei, funktion in ((GAME / "skripte" / "spiel.gd", "_bedingung_text_wert"),
+                            (GAME / "skripte" / f"{abschnitt.replace('-', '_')}.gd", "_bedingung_text")):
+        if not datei.exists():
+            continue
+        m = re.search(rf"^func {funktion}\(.*?(?=^func |\Z)", datei.read_text(encoding="utf-8"), re.S | re.M)
+        for zweig in re.findall(r"^\t+((?:\"[^\"\n]*\"(?:,\s*)?)+):\s*$", m.group(0) if m else "", re.M):
+            worte.update(re.findall(r"\"([^\"]*)\"", zweig))
+    return worte - {""}
+
+
+def verdraengte(plan):
+    """Ansehen-Zeilen, die das Spiel nie wählen kann, weil eine spätere Zeile desselben Objekts
+    für dieselbe Figur, dasselbe „Mal“ und denselben Zustand immer dann gilt, wenn sie gilt
+    (Spiel.ansehen_waehlen nimmt die spätere). Liefert Meldungen für den Abbruch."""
+    bekannt = bekannte_worte(plan["abschnitt"])
+    regeln = GAME / "skripte" / f"{plan['abschnitt'].replace('-', '_')}.gd"
+    code = regeln.read_text(encoding="utf-8") if regeln.exists() else ""
+
+    def im_code(funktion):
+        """Ansehen, das die Regeln selbst spielen (ansehen_<id> im Abschnittsskript)."""
+        return f"func {funktion}(" in code
+
+    def atome(e):
+        a = {json.dumps(b, sort_keys=True, ensure_ascii=False) for b in e.get("bedingung", [])}
+        text = e.get("bedingung_text", "")
+        if text in bekannt:
+            a.add(text)
+        else:
+            a.update(t for t in text.split(", ") if t in bekannt)
+        return a
+
+    def fach(e):
+        return e.get("figur", ""), e.get("mal", 1), e.get("zustand", "")
+
+    listen = [(f"{r['id']}, {o['id']}", o.get("ansehen", []))
+              for r in plan["raeume"] for li in ("props", "hotspots", "ausgaenge") for o in r[li]
+              if not im_code(f"ansehen_{o['id']}")]
+    listen += [(f"Figur {f['id']}", f.get("ansehen", [])) for f in plan["figuren"]
+               if not im_code(f"ansehen_{f['id']}")]
+    listen += [(f"Gegenstand {g['id']}", g.get("ansehen", [])) for g in plan["gegenstaende"]
+               if not im_code(f"ansehen_inventar_{g['id']}")]
+    meldungen = []
+    for ort, eintraege in listen:
+        for i, e1 in enumerate(eintraege):
+            for e2 in eintraege[i + 1:]:
+                if fach(e1) != fach(e2) or (e1.get("raum") and e2.get("raum") and e1["raum"] != e2["raum"]):
+                    continue
+                if atome(e2) <= atome(e1):
+                    meldungen.append(f"{ort}: {e1['zeile']} kommt nie, {e2['zeile']} verdrängt sie "
+                                     f"(Auslöser im Skript unterscheiden oder Bedingung in den Regeln ergänzen)")
+                    break
+    return meldungen
+
+
+def unbekannte_worte(plan):
+    """Gesprächsoptionen, Einstiege und Zurufe mit einer Bedingung in Worten, die das Spiel nicht
+    kennt. Das Spiel blendet sie aus (Spiel._bedingung_text_ok), die Zeilen kämen also nie.
+    Ausnahme: Optionen, über die die Regeln selbst entscheiden (sichtbar_<figur>_<nummer>)."""
+    bekannt = bekannte_worte(plan["abschnitt"])
+    regeln = GAME / "skripte" / f"{plan['abschnitt'].replace('-', '_')}.gd"
+    code = regeln.read_text(encoding="utf-8") if regeln.exists() else ""
+    meldungen = []
+    for d in plan["dialoge"]:
+        for o in d["optionen"] + ([d["einstieg"]] if d.get("einstieg") else []):
+            text = o.get("bedingung_text", "")
+            nr = o.get("id", "einstieg")
+            if text and text not in bekannt and f"func sichtbar_{d['id']}_{nr}(" not in code:
+                meldungen.append(f"Gespräch {d['id']}, Option {nr}: Bedingung „{text}“ kennt das Spiel nicht, "
+                                 f"die Option käme nie (Regeln ergänzen oder als Anmerkung führen)")
+    for r in plan["raeume"]:
+        for zr in r["zurufe"]:
+            text = zr.get("bedingung_text", "")
+            if text and text not in bekannt:
+                meldungen.append(f"{r['id']}, Zuruf {zr['zeile']}: Bedingung „{text}“ kennt das Spiel nicht, "
+                                 f"der Zuruf käme nie")
+    return meldungen
 
 
 def texte_schluessel():
@@ -285,8 +376,22 @@ def baue(abschnitt):
             return None
         return finde
 
-    def zeile(z, mal=1, pixel=False):
-        bed, rest = bedingungen(z["bedingung"], gegenstand_id, zeile_id(z))
+    def zeile(z, mal=1, pixel=False, zusatz=()):
+        """Eintrag im Bauplan. zusatz: Teile nach dem Komma im Auslöser („vor dem Finaltag“).
+
+        „zweites Mal“, „drittes Mal“ und „als Pixel“ gelten auch, wenn sie hinter dem Semikolon
+        stehen („Ansehen: Testkreis; zweites Mal“, „Ansehen: Balken; als Pixel“).
+        """
+        worte = []
+        for t in [*zusatz, *re.split(r"[,;]", z["bedingung"])]:
+            t = t.strip()
+            if t.lower() in MAL_ZUSATZ:
+                mal = max(mal, MAL_ZUSATZ[t.lower()])
+            elif t.lower() in PIXEL_ZUSATZ:
+                pixel = True
+            elif t and t.lower() not in OHNE_WIRKUNG:
+                worte.append(t)
+        bed, rest = bedingungen(", ".join(worte), gegenstand_id, zeile_id(z))
         d = {"zeile": z["id"], "sprecher": z["sprecher"], "blasen": blasen(z["id"], texte)}
         if bed:
             d["bedingung"] = bed
@@ -378,10 +483,10 @@ def baue(abschnitt):
             teile_inv = [t.strip() for t in a.split(":", 1)[1].split(";")[0].split(",")]
             gid = gegenstand_id(teil0 := teile_inv[0])
             if gid:
-                zusatz = [t.lower() for t in teile_inv[1:]]
-                eintrag = zeile(z, 2 if "zweites mal" in zusatz else 1, "pixel" in zusatz)
+                zustaende_g = gegenstaende.get(gid, {}).get("zustaende", [])
+                eintrag = zeile(z, zusatz=[t for t in teile_inv[1:] if t not in zustaende_g])
                 for zst in teile_inv[1:]:
-                    if zst in gegenstaende.get(gid, {}).get("zustaende", []):
+                    if zst in zustaende_g:
                         eintrag["zustand"] = zst
                 gegenstand_daten.setdefault(gid, {}).setdefault("ansehen", []).append(eintrag)
                 wurzel[z["id"]] = eintrag
@@ -416,7 +521,7 @@ def baue(abschnitt):
             elif typ == "gegenstand" or any(o["id"] == fid for li in ("props", "hotspots") for o in raum[li]) \
                     or fid in (layout.get(raum["id"], {}).get("hotspots") or {}):
                 # Schnupperzeile an Objekt oder Gegenstand: gilt, wenn Pixel die aktive Figur ist
-                ablegen("ansehen", (typ, fid, name), zeile(z, 1, True), raum)
+                ablegen("ansehen", (typ, fid, name), zeile(z, 1, True, teile[1:]), raum)
             else:
                 warnungen.append(f"{z['id']}: Pixel auf {name} ohne Objekt in {raum['id']}")
             continue
@@ -447,7 +552,7 @@ def baue(abschnitt):
             name, art = teile[0].split(":", 1)[1], "benutzen"
         elif re.match(r"^(.+?) auf (.+)$", teile[0]) and gegenstand_id(re.match(r"^(.+?) auf (.+)$", teile[0]).group(1)):
             m = re.match(r"^(.+?) auf (.+)$", teile[0])
-            eintrag = zeile(z)
+            eintrag = zeile(z, zusatz=teile[1:])
             eintrag["gegenstand"] = gegenstand_id(m.group(1))
             for teil in m.group(2).split(" oder "):   # „Leuchttrank auf Grimmzahn oder Fackeln“
                 ziel = aufloesen(raum, teil)
@@ -457,7 +562,6 @@ def baue(abschnitt):
             name, art = teile[0], "ansehen"
         else:
             continue
-        mal = 2 if any(t.lower() == "zweites mal" for t in teile[1:]) else 1
         ziel = aufloesen(raum, name.strip())
         if art == "nehmen" and {ziel[1], slug(name)} & set(layout.get(raum["id"], {}).get("ohne") or []):
             continue
@@ -483,7 +587,7 @@ def baue(abschnitt):
         zst = None
         if ziel[0] == "gegenstand" and "@" not in ziel[1]:
             zst = next((t for t in teile[1:] if t in gegenstaende.get(ziel[1], {}).get("zustaende", [])), None)
-        ablegen(art, ziel, zeile(z, mal, pixel), raum, zst)
+        ablegen(art, ziel, zeile(z, 1, pixel, [t for t in teile[1:] if t != zst]), raum, zst)
 
     # ---- Figuren und Gegenstände -------------------------------------------------------------
     in_raeumen = {f["id"] for r in raeume for f in r["figuren"]} | set(layout.get("_figuren") or [])
@@ -832,12 +936,13 @@ def main():
     rc = 0
     for ab in abschnitte:
         plan, fehler, warnungen = baue(ab)
+        fehler += verdraengte(plan) + unbekannte_worte(plan)
         for w in warnungen:
             print(f"WARNUNG  {ab}: {w}")
         for f in fehler:
             print(f"FEHLER   {ab}: {f}")
-        if fehler:
-            rc = 1
+        if fehler or (pruefen and warnungen):
+            rc = 1   # beim Prüfen brechen auch Warnungen ab, sonst liest sie keiner
             continue
         neu = json.dumps(plan, ensure_ascii=False, indent=1) + "\n"
         ziel = RAEUME / f"{ab}.json"

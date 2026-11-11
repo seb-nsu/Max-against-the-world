@@ -90,6 +90,7 @@ func _on_item_used(item: PopochiuInventoryItem) -> void:
 		await Spiel.ersatz("PIX")
 		return
 	Hinweise.objekt_beruehrt(bauplan().get("id", ""))
+	Klang.geraeusch("kombinieren")
 	if await Spiel.regel("kombinieren", self, item):
 		return
 	if await _kombinieren(item):

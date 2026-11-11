@@ -15,7 +15,8 @@ Beschriftung englisch (Spalte en aus docs/uebersetzung/ui.csv), weil auch die Pr
 Hotspots und Props, die erst in einem späteren Zustand des Raums dazukommen (Opas Maschine im
 Finale), tragen im Layout „skizze: spaeter“ und fehlen in der Skizze, ebenso versteckte Hotspots.
 Farben: blau = Hotspot im Hintergrund, orange gestrichelt = eigenes Sprite (Platz frei lassen),
-grün = Ausgang, lila = Figur, grau = Max als Größenmaßstab (vorn 100, hinten 85 Prozent).
+grün = Ausgang, lila = Figur in ihrer Größe aus der Welt-Tabelle und mit ihrem Namen, grau = Max als
+Größenmaßstab (vorn 100, hinten 85 Prozent).
 
 Aufruf:  python3 tools/layout_skizzen.py [ZIELORDNER]\n(Standard docs/grafik/skizzen/; dann stehen die Links auch in den Grafik-Dateien unter „Szenen“.)
 """
@@ -123,8 +124,9 @@ def beschriften(d, box, text, farbe, f):
     d.text((tx, ty - tb[1] + 1), text, font=f, fill=farbe)
 
 
-def zeichne(raum, texte, layout):
+def zeichne(raum, texte, layout, figuren=None):
     u = Umrechnung(raum)
+    figuren = figuren or {}
     lay = layout.get(raum["id"], {})
 
     def spaeter(obj):
@@ -196,14 +198,18 @@ def zeichne(raum, texte, layout):
         beschriften(d, b, "EXIT " + texte.get(a["name_key"], a["ziel"]), FARBEN["ausgang"], f_klein)
     for fg in raum.get("figuren", []):
         x, y = u.punkt(fg["pos"])
-        hh = (61 if fg["id"] == "pixel" else MAX_HOEHE) * u.massstab(y)
-        bb = (49 if fg["id"] == "pixel" else 37) * u.massstab(y)
+        # Höhe aus der Welt-Tabelle (groesse_px); 0 heißt „kein eigenes Sprite“, dann Menschengröße
+        daten = figuren.get(fg["id"], {})
+        hoehe = int(daten.get("groesse_px") or 0) or MAX_HOEHE
+        hh = hoehe * u.massstab(y)
+        bb = (hoehe * 0.8 if hoehe < 120 else 37 * hoehe / MAX_HOEHE) * u.massstab(y)
         b = [(x - bb / 2) * SK, (y - hh) * SK, (x + bb / 2) * SK, y * SK]
         gestrichelt(d, b, FARBEN["figur"], 2)
-        beschriften(d, b, fg["script_name"] + " (character)", FARBEN["figur"], f_klein)
+        name = texte.get(daten.get("name_key", ""), "") or fg["script_name"]
+        beschriften(d, b, f"{name} (character, {hoehe} px)", FARBEN["figur"], f_klein)
 
     titel = (f"{texte.get(raum['name_key'], raum['id'])} · layout sketch {u.w}x{u.h} · blue: paint into background"
-             " · orange: own sprite, keep space free · green: exit · grey: Max for scale")
+             " · orange: own sprite, keep space free · purple: character (own sprite) · green: exit · grey: Max for scale")
     if not u.band:
         titel += "  ·  special case: walkway is not a flat floor"
     tb = d.textbbox((0, 0), titel, font=f_titel)
@@ -215,6 +221,7 @@ def zeichne(raum, texte, layout):
 GRAFIK_DATEI = {"prolog": "02-prolog-und-finale.md", "finale": "02-prolog-und-finale.md",
                 "welt-1": "welt-1.md", "welt-2": "welt-2.md", "welt-3": "welt-3.md", "welt-4": "welt-4.md"}
 ANFANG, ENDE = "<!-- skizzen: erzeugt von tools/layout_skizzen.py -->", "<!-- /skizzen -->"
+NUR_RASTER = ("welt-3.md", "welt-4.md")   # Prüfbericht G4: Skizzen dieser Welten sind Raster, keine Entwürfe
 
 
 def verweise_eintragen(liste):
@@ -223,7 +230,9 @@ def verweise_eintragen(liste):
         de = {z["keys"]: z["de"] for z in csv.DictReader(f)}
     for datei in sorted(set(GRAFIK_DATEI.values())):
         links = [f"[{de.get(k, rid)}](skizzen/{ab}/{rid}.png)" for ab, rid, k in liste if GRAFIK_DATEI[ab] == datei]
-        block = (f"{ANFANG}\n**Layout-Skizzen** (beim Konzeptbild mitgeben, Ablauf in `00-stil-und-werkzeuge.md`): "
+        hinweis = ("automatische Raster, noch keine entworfenen Räume: nicht ans Konzeptbild anhängen, vorher je Raum eine Handskizze"
+                   if datei in NUR_RASTER else "beim Konzeptbild mitgeben, Ablauf in `00-stil-und-werkzeuge.md`")
+        block = (f"{ANFANG}\n**Layout-Skizzen** ({hinweis}): "
                  + ", ".join(links) + f".\n{ENDE}\n\n")
         pfad = WURZEL / "docs/grafik" / datei
         text = pfad.read_text(encoding="utf-8")
@@ -247,12 +256,13 @@ def main():
     for ab in ABSCHNITTE:
         daten = json.loads((DATEN / f"{ab}.json").read_text(encoding="utf-8"))
         layout = yaml.safe_load((LAYOUT / f"{ab}.yaml").read_text(encoding="utf-8")) or {}
+        figuren = {f["id"]: f for f in daten.get("figuren", [])}
         for raum in daten["raeume"]:
             if raum["id"] in gesehen:
                 continue
             gesehen.add(raum["id"])
             (ziel / ab).mkdir(parents=True, exist_ok=True)
-            zeichne(raum, texte, layout).save(ziel / ab / f"{raum['id']}.png", optimize=True)
+            zeichne(raum, texte, layout, figuren).save(ziel / ab / f"{raum['id']}.png", optimize=True)
             anzahl += 1
             liste.append((ab, raum["id"], raum["name_key"]))
     if not eigenes_ziel:

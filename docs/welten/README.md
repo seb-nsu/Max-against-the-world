@@ -53,7 +53,7 @@ raetsel:
     benoetigt: [ring]        # Gegenstand-IDs und/oder Rätsel-IDs, die vorher gelöst sein müssen
     benoetigt_eins_von: []   # optional: mindestens eins davon (alternative Lösungswege)
     ergibt: [fondue]         # Gegenstand-IDs, freigeschaltete Räume stehen bei raeume.erreichbar_ab
-    schalter: [WIRT_VERSOEHNT]
+    schalter: [W1_WIRT_VERSOEHNT]   # immer mit dem Präfix des Abschnitts
     optional: false
 ```
 
@@ -65,11 +65,11 @@ Die Felder im Einzelnen, soweit sie nicht selbsterklärend sind:
 | `sonder_codes` | oben | Szenen-Codes, die zu keinem Raum gehören (`HINT`, `ERS`, Zurufe, Fernbedienung …) |
 | `sonder_sprecher` | oben | Sprecherkürzel ohne Figur; bisher nur `NAR` für Regie- und Animationszeilen (Sprecher „–“), die nicht vertont werden |
 | `werte` | oben | Gespeicherte Werte, die keine Schalter sind, mit ihren möglichen Werten (`NAME: [wert, …]`), etwa Fährsteg und Feigenzustand in Welt 2 |
-| `weitere_schalter` | oben | Hilfsschalter und Hilfswerte, die zu keinem Rätsel gehören, immer mit dem Präfix des Abschnitts (etwa `P0_SCHNEE_GESEHEN` im Prolog, `W3_PIXEL_AUF_LEITUNG` in Welt 3). Der Code setzt keinen Schalter, der weder hier noch unter `schalter` eines Rätsels steht (`tools/pruefen.py` warnt) |
+| `weitere_schalter` | oben | Hilfsschalter und Hilfswerte, die zu keinem Rätsel gehören, immer mit dem Präfix des Abschnitts (etwa `P0_SCHNEE_GESEHEN` im Prolog, `W3_PIXEL_AUF_LEITUNG` in Welt 3). Der Code setzt keinen Schalter, der weder hier noch unter `schalter` eines Rätsels steht (`tools/pruefen.py` warnt). Auch die Schalter eines Rätsels tragen das Präfix; ein Name ohne Präfix ist ein Fehler der Prüfung. Ausnahme sind fünf Werte, die über die Abschnitte hinweg gelten (`05-spielsysteme.md`, Speichern) |
 | `musik` | Raum | ID des Stücks, das im Raum läuft; die ID steht in der Spalte „ID“ der Musik-Tabelle in `04-audio.md` (oder der Tabelle der gesungenen Stücke, wenn ein Lied im Raum durchläuft). Die Zuordnung Raum → Stück gehört der Welt-Tabelle, Prompt und Beschreibung des Stücks gehören `04-audio.md`. Minispiele und Szenen mit eigenem Stück (etwa Fünfkampf, Mitternachts-TV) stehen in der Audio-Tabelle, nicht beim Raum |
 | `kuerzel` | Figur | Sprecherkürzel; `null` für Figuren, die nie sprechen. Jedes Kürzel steht in `04-audio.md` in einer Kürzel-Spalte (Stimmen oder Nebenstimmen), unter demselben Namen wie hier |
 | `herkunft` | Gegenstand | Raum-, Rätsel- oder Figur-ID; für Gegenstände, die Max aus einem früheren Abschnitt mitbringt, der Name des Abschnitts (`prolog`, `welt-1` …); das Ursprungsrätsel steht im Kommentar |
-| `nahansicht` | Gegenstand | `true`, wenn der Gegenstand eine eigene Nahansicht (Bildschirm 320×180) hat. Ein mitgebrachter Gegenstand zählt nur in dem Abschnitt, dessen Grafik das Bild liefert (Opas Zettel: Prolog), in späteren Tabellen steht `false` mit Kommentar |
+| `nahansicht` | Gegenstand | `true`, wenn der Gegenstand eine eigene Nahansicht (Bildschirm 640×360) hat. Ein mitgebrachter Gegenstand zählt nur in dem Abschnitt, dessen Grafik das Bild liefert (Opas Zettel: Prolog), in späteren Tabellen steht `false` mit Kommentar |
 | `nahansichten` | oben | Nahansichten, die kein Inventar-Gegenstand sind, je Eintrag `id`, `name`, `raum`. Zusammen mit allen `nahansicht: true` ist das die einzige Liste der Nahansichten; `tools/pruefen.py` prüft, dass es im ganzen Spiel genau 14 sind (`entscheidungen.md`) |
 | `benoetigt_eins_von` | Rätsel | Alternative Lösungswege: Mindestens eins der genannten Gegenstände oder Rätsel muss da sein; zusätzlich zu `benoetigt` |
 

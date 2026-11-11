@@ -46,6 +46,7 @@ raeume:
     ausgaenge: [taverne, schmiede, zauberstabladen, klassenzimmer, trollbruecke, luftschloss]
     erreichbar_ab: start
     musik: w1_dorf
+    atmo: w1_atmo
     zustaende: [vor_R8, nach_R8]   # Bohnenranke als eigenes Sprite
 
   - id: taverne
@@ -55,6 +56,7 @@ raeume:
     ausgaenge: [dorfplatz]
     erreichbar_ab: start
     musik: w1_taverne
+    atmo: taverne_stimmen
 
   - id: schmiede
     name: Schmiede
@@ -63,6 +65,7 @@ raeume:
     ausgaenge: [dorfplatz]
     erreichbar_ab: start
     musik: w1_dorf
+    atmo: keine
 
   - id: zauberstabladen
     name: Zauberstab-Laden
@@ -71,6 +74,7 @@ raeume:
     ausgaenge: [dorfplatz]
     erreichbar_ab: start
     musik: w1_dorf
+    atmo: keine
 
   - id: klassenzimmer
     name: Hoggelwarz, Klassenzimmer
@@ -79,6 +83,7 @@ raeume:
     ausgaenge: [dorfplatz]
     erreichbar_ab: start       # Prüfung erst mit Kochlöffel-Zauberstab (R2)
     musik: w1_schule
+    atmo: keine
 
   - id: trollbruecke
     name: Troll-Brücke
@@ -87,6 +92,7 @@ raeume:
     ausgaenge: [dorfplatz, zauberwald, wasserschloss]
     erreichbar_ab: start
     musik: w1_dorf
+    atmo: w1_atmo
 
   - id: wasserschloss
     name: Wasserschloss
@@ -95,6 +101,8 @@ raeume:
     ausgaenge: [trollbruecke]
     erreichbar_ab: R4          # Gag-Szene ohne Rätsel
     musik: w1_dorf
+    atmo: w1_atmo
+    tupfer: frosch
 
   - id: zauberwald
     name: Zauberwald
@@ -103,6 +111,7 @@ raeume:
     ausgaenge: [trollbruecke, bergwerk]
     erreichbar_ab: R4
     musik: w1_wald
+    atmo: w1_atmo
     zustaende: [niesrosen_zu, niesrosen_offen]   # Niesrosen als eigenes Sprite
 
   - id: luftschloss
@@ -112,6 +121,7 @@ raeume:
     ausgaenge: [dorfplatz]     # über die Bohnenranke
     erreichbar_ab: R8
     musik: w1_luftschloss
+    atmo: w1_atmo
 
   - id: bergwerk
     name: Goblin-Bergwerk
@@ -120,6 +130,7 @@ raeume:
     ausgaenge: [zauberwald, turmkeller]
     erreichbar_ab: R4          # Streikposten frei betretbar; Rune-Tür erst nach R10
     musik: w1_bergwerk
+    atmo: keine
     zustaende: [rune_tuer_zu, rune_tuer_offen]
 
   - id: turmkeller
@@ -129,6 +140,7 @@ raeume:
     ausgaenge: [bergwerk, abstellkammer_1, abstellkammern]   # Kammertür und Wendeltreppe erst nach R11b
     erreichbar_ab: R10
     musik: w1_turm
+    atmo: keine
     zustaende: [vor_R11b, nach_R11b]   # Kammertür offen mit Besen / Tür zu ohne Besen
 
   - id: abstellkammer_1
@@ -138,6 +150,7 @@ raeume:
     ausgaenge: [turmkeller]
     erreichbar_ab: R11b        # Ansehen-Raum ohne Rätsel
     musik: w1_turm
+    atmo: keine
 
   - id: abstellkammern
     name: Smaugis Abstellkammern
@@ -146,6 +159,7 @@ raeume:
     ausgaenge: [turmkeller, thronsaal]   # Geheimtür: offen nach R11a, durchgehen nach R12
     erreichbar_ab: R11b
     musik: w1_turm
+    atmo: keine
     zustaende: [voll, aufgeraeumt]       # aufgeräumt nach R12
 
   - id: thronsaal
@@ -155,6 +169,7 @@ raeume:
     ausgaenge: [abstellkammern]
     erreichbar_ab: R12         # zusätzlich R11a (Geheimtür)
     musik: w1_turm
+    atmo: keine
 
 figuren:
   - id: max
@@ -168,7 +183,7 @@ figuren:
     name: Pixel
     kuerzel: PIX
     raum: [dorfplatz, taverne, schmiede, zauberstabladen, klassenzimmer, trollbruecke, wasserschloss, zauberwald, luftschloss, bergwerk, turmkeller, abstellkammer_1, abstellkammern, thronsaal]
-    groesse_px: 61             # sitzend; Variante „Pixel als Ziege“ 20 px; spielbar ab R1a
+    groesse_px: 61             # sitzend; Variante „Pixel als Ziege“ in grafik/welt-1.md; spielbar ab R1a
     spielbar: true
 
   - id: opa
@@ -559,7 +574,7 @@ gegenstaende:
     herkunft: R12
     zustaende: [normal]        # golden, geschuppt; auf dem Dachboden weißes Ei
     verwendet_in: []           # Ziel der Welt, Abgabe in Zwischenspiel 1
-    ohne_verwendung: Artefakt, Opa legt es im Zwischenspiel in die Maschine
+    ohne_verwendung: Artefakt, Opa legt es im Zwischenspiel auf die Werkbank (in die Maschine erst im Finale)
     reist_mit: false
     nahansicht: false
 

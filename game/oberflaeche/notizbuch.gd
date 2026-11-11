@@ -4,7 +4,7 @@ extends CanvasLayer
 ##          Ziel macht es zum Schritt, den die Hilfe-Pfote nimmt (Hinweis-Regel 2).
 ## Seite 2: Regeln und Passwort-Teile (erst nach geöffneter Nahansicht; im Prolog leer;
 ##          die Graubox zeigt nur den Namen der Nahansicht).
-## Seite 3: Pixels Einkaufsliste (je Welt ein Wunsch; im Prolog leer).
+## Seite 3: Pixels Einkaufsliste (je Welt ein Wunsch; im Prolog leer), siehe einkaufsliste().
 
 signal geschlossen
 
@@ -67,6 +67,18 @@ static func regeln() -> Array:
 	return out
 
 
+## Seite 3: Pixels Einkaufsliste. Der Wert EINKAUFSLISTE zählt die Wünsche (einer je Rückkehr,
+## der vierte in Welt 4). Im Finale steht ab dem Wohnzimmer der Eintrag darunter, den Max in
+## FI_WOHN_MAX_0165 vorliest.
+static func einkaufsliste() -> Array:
+	var out := []
+	for i in clampi(int(Zustand.wert("EINKAUFSLISTE", 0)), 0, 4):
+		out.append("UI_EINKAUF_%d" % (i + 1))
+	if Zustand.ist("FI_WOHN_ANKUNFT"):
+		out.append("UI_EINKAUF_SOFA")
+	return out
+
+
 func zeigen() -> void:
 	_titel.text = tr(SEITEN[seite])
 	for k in _inhalt.get_children():
@@ -84,6 +96,11 @@ func zeigen() -> void:
 			eintraege.append(b)
 	elif seite == 1:
 		for key in regeln():
+			var l := Label.new()
+			l.text = "- " + tr(key)
+			eintraege.append(l)
+	else:
+		for key in einkaufsliste():
 			var l := Label.new()
 			l.text = "- " + tr(key)
 			eintraege.append(l)

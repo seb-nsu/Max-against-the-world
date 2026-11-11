@@ -2,7 +2,7 @@
 
 2D-Point-and-Click-Adventure mit **Max**, einem 16-jährigen Couch-Potato, und **Pixel**, dem sprechenden Kater seines Opas. Über Opas Röhrenfernseher „Zapp-O-Mat 3000“ reisen die beiden durch vier Welten – Fantasy, Antike, Zukunft und eine Fernsehwelt –, um vier legendäre Gegenstände zu holen. Am Ende stellt sich heraus, wofür Opa sie wirklich braucht.
 
-**Technik:** Godot 4 mit Popochiu, Pixel-Art in 320×180, Grafik mit Retro Diffusion und Aseprite, Audio mit ElevenLabs und ACE-Step.
+**Technik:** Godot 4 mit Popochiu, Pixel-Art in 640×360; Hintergründe mit Gemini und `tools/pixelieren.py`, Figuren und Gegenstände mit Retro Diffusion, Nacharbeit in Aseprite; Audio mit ElevenLabs und ACE-Step.
 
 ## Inhalt
 

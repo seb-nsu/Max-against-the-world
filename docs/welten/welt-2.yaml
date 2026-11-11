@@ -34,6 +34,7 @@ weitere_schalter:
   - W2_LAUF_GEOELT           # Lauf mit geölten Sandalen (Bestleistung, gesetzt nach R12)
   - W2_KORB                  # Wert: Gegenstände im Korb des Wurfhebels
   - W2_HEBEL_FEHLER          # Wert: Fehlversuche am Hebel (großzügige Wertung ab 2)
+  - W2_WINKEL                # Wert: Winkelstufe des Wurfhebels (0 flach, 1 mittel, 2 steil)
   - W2_DISKUS_ERSATZ         # Rätsel 7 mit Ersatz gelöst (DISK 0340)
   - W2_BAUSTEINE             # Wert: gefundene Rätsel-Bausteine der Sphinx
   - W2_KONTER                # Wert: gesammelte Konter 1 bis 7
@@ -49,6 +50,7 @@ raeume:
     ausgaenge: [thronsaal_ramses, sphinx, faehrsteg_olympia, hafen_syrakus]   # zwei Fußwege, Fähre (Flusskarte) zu beiden Anlegestellen
     erreichbar_ab: start
     musik: w2_aegypten
+    atmo: w2_atmo
     # Anlegestelle Ägypten: Grabstein 0 Jahre (frisch), Krug aus dem Palast Traubensaft, Essigkrug Traubensaft
   - id: thronsaal_ramses
     name: Thronsaal
@@ -57,6 +59,7 @@ raeume:
     ausgaenge: [nil_delta, palastkueche]
     erreichbar_ab: start
     musik: w2_aegypten
+    atmo: keine
   - id: palastkueche
     name: Palastküche
     skript_code: [KUCH]
@@ -64,6 +67,7 @@ raeume:
     ausgaenge: [thronsaal_ramses]
     erreichbar_ab: start
     musik: w2_aegypten
+    atmo: keine
   - id: sphinx
     name: Sphinx
     skript_code: [SPHX]
@@ -71,6 +75,7 @@ raeume:
     ausgaenge: [nil_delta]
     erreichbar_ab: start
     musik: w2_aegypten
+    atmo: w2_atmo
     zustaende: [mit Nase, ohne Nase]          # ohne Nase ab dem Finaltag (Probewürfe)
   - id: faehrsteg_olympia
     name: Fährsteg Olympia
@@ -79,6 +84,7 @@ raeume:
     ausgaenge: [agora, nil_delta, hafen_syrakus]   # Steinweg, Fähre
     erreichbar_ab: R1
     musik: w2_olympia
+    atmo: w2_atmo
     # Anlegestelle Olympia: Grabstein 112 Jahre (grau), Krug aus dem Palast Essig, Essigkrug Wein
   - id: agora
     name: Agora
@@ -87,6 +93,7 @@ raeume:
     ausgaenge: [faehrsteg_olympia, stadion, startbuero]
     erreichbar_ab: R1
     musik: w2_olympia
+    atmo: w2_atmo
     zustaende: [vor Tag 1, Sandale auf der Säule, nach dem Finaltag]   # Sandale bis R6a; ab Finaltag Statue ohne Arme
   - id: startbuero
     name: Startbüro
@@ -95,6 +102,7 @@ raeume:
     ausgaenge: [agora]
     erreichbar_ab: R1
     musik: w2_olympia
+    atmo: keine
   - id: stadion
     name: Stadion
     skript_code: [STAD, TAG1, HEBL, DISK, FINA, RING, PARA]   # DISK spielt auch auf der Agora und bei der Sphinx
@@ -102,6 +110,7 @@ raeume:
     ausgaenge: [agora]
     erreichbar_ab: R1
     musik: w2_olympia
+    atmo: stadion_jubel
     zustaende: [normal, Parade]                # Parade ab Ende des Finaltags, Glockenturm schief
   - id: hafen_syrakus
     name: Hafen Syrakus
@@ -110,6 +119,7 @@ raeume:
     ausgaenge: [werkstatt, grabhuegel, nil_delta, faehrsteg_olympia]   # Gasse, Pfad, Fähre
     erreichbar_ab: R1
     musik: w2_syrakus
+    atmo: w2_atmo
     # Anlegestelle Syrakus: Grabstein 137 Jahre (verwittert), Krug aus dem Palast Essig, Essigkrug Essig
   - id: werkstatt
     name: Archimedes' Werkstatt
@@ -118,6 +128,7 @@ raeume:
     ausgaenge: [hafen_syrakus]
     erreichbar_ab: R1
     musik: w2_syrakus
+    atmo: keine
   - id: grabhuegel
     name: Grabhügel Syrakus
     skript_code: [GRAB]                        # W2_GRAB 0010–0090 spielen beim Steinmetz im Nil-Delta
@@ -125,6 +136,7 @@ raeume:
     ausgaenge: [hafen_syrakus]
     erreichbar_ab: R1
     musik: w2_syrakus
+    atmo: w2_atmo
     zustaende: [leer, mit verwittertem Grabstein]
 
 figuren:
@@ -144,7 +156,7 @@ figuren:
     name: Opa
     kuerzel: OPA
     raum: [nil_delta]
-    groesse_px: 0                              # nur Stimme, Max liest Opas Papyrus vor (Figur 60 px im Prolog)
+    groesse_px: 0                              # nur Stimme, Max liest Opas Papyrus vor
     spielbar: false
   - id: faehrmann
     name: Fährmann
@@ -156,7 +168,7 @@ figuren:
     name: Sobek
     kuerzel: SOB
     raum: [nil_delta, thronsaal_ramses]
-    groesse_px: 54                             # im Wasser 16 px hoch; an Land 70 px lang
+    groesse_px: 54                             # im Wasser; an Land siehe grafik/welt-2.md
     spielbar: false
   - id: steinmetz
     name: Steinmetz
@@ -270,7 +282,7 @@ figuren:
     name: Beamter 1
     kuerzel: BE1
     raum: [startbuero]
-    groesse_px: 147                             # sitzend, stehend 58
+    groesse_px: 147                             # sitzend
     spielbar: false
   - id: beamter_2
     name: Beamter 2
@@ -611,7 +623,7 @@ gegenstaende:
     herkunft: R11b
     zustaende: [normal]
     verwendet_in: []
-    ohne_verwendung: Artefakt, Opa legt es im Zwischenspiel in die Maschine
+    ohne_verwendung: Artefakt, Opa legt es im Zwischenspiel auf die Werkbank (in die Maschine erst im Finale)
     reist_mit: false                           # Artefakt: kommt auf Opas Werkbank (Zwischenspiel 2), nicht über die Reisetasche; wie Drachenei und Energiezelle
     nahansicht: false
 

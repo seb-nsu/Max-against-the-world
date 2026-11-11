@@ -42,6 +42,10 @@ var herkunft_raum := ""
 
 ## Vorgegebene Antworten für auswahl() (Tests): Index je Auswahl, der Reihe nach verbraucht
 var vorgabe_auswahl: Array = []
+## Tests: Minispiele warten auch im Testmodus auf echte Knöpfe (tests/minispiele.gd)
+var minispiel_von_hand := false
+## Offene Spielfläche eines Minispiels (oberflaeche/minispiel.gd), sonst null
+var minispiel: CQMinispiel
 ## Vorgaben für das Packen der Reisetasche (Tests): Gegenstände, die der Reihe nach berührt werden
 var vorgabe_tasche: Array = []
 
@@ -55,6 +59,7 @@ var _pause: CanvasLayer
 var _letzte_ersatz := {}
 var _letzter_zuruf := ""
 var _ruhe := 0.0
+var _schritt_in := 0.0
 
 
 func _ready() -> void:
@@ -62,10 +67,15 @@ func _ready() -> void:
 	TranslationServer.set_locale("de")
 	hud = HUD.instantiate()
 	add_child(hud)
+	# Popochius Kamera bringt aus ihrer Szene Grenzen von 320×180 mit und stellt sie erst beim
+	# ersten Raumwechsel auf die Spielauflösung. Das Spiel beginnt aber im Hauptmenü, der erste
+	# Raum kommt ohne Raumwechsel: Ohne diese Zeile sitzt er um 160×90 Pixel verschoben.
+	E.camera.restore_default_limits()
 
 
 func _input(event: InputEvent) -> void:
-	if event is InputEventMouseButton or event is InputEventKey:
+	if event is InputEventMouseButton or event is InputEventKey or event is InputEventJoypadButton \
+			or (event is InputEventJoypadMotion and absf(event.axis_value) > 0.5):
 		_ruhe = 0.0
 
 
@@ -82,7 +92,21 @@ func _unhandled_input(event: InputEvent) -> void:
 		notizbuch_oeffnen()
 
 
+## Die aktive Figur verdeckt nichts: Klicks gehen durch sie durch. Nur mit gewähltem Gegenstand
+## bleibt sie anklickbar (Gegenstand oder Pixel-Feld auf sich selbst, 05-spielsysteme.md).
+## Popochiu regelt das beim Start und beim Figurenwechsel, aber nicht nach einem Raumwechsel.
+func _eigene_figur_durchlassen() -> void:
+	var p: PopochiuCharacter = C.player
+	if not is_instance_valid(p):
+		return
+	var soll: bool = I.active != null and p.clickable and p.visible
+	if p.input_pickable != soll:
+		p.input_pickable = soll
+
+
 func _process(delta: float) -> void:
+	_eigene_figur_durchlassen()
+	_schritte(delta)
 	if testmodus or not E.in_room or E.playing_queue or in_szene > 0 \
 			or is_instance_valid(D.current_dialog):
 		_ruhe = 0.0
@@ -91,6 +115,19 @@ func _process(delta: float) -> void:
 	if _ruhe >= ZURUF_NACH:
 		_ruhe = 0.0
 		_zuruf()
+
+
+## Schritte der aktiven Figur, solange sie läuft (CQKlangEinsatz.SCHRITT_MAX, SCHRITT_PIXEL).
+func _schritte(delta: float) -> void:
+	if not is_instance_valid(C.player) or not C.player.is_inside_tree() or not C.player.is_moving \
+			or not is_instance_valid(R.current):
+		_schritt_in = 0.0
+		return
+	_schritt_in -= delta
+	if _schritt_in > 0.0:
+		return
+	_schritt_in = CQKlangEinsatz.SCHRITT_TAKT_PIXEL if ist_pixel() else CQKlangEinsatz.SCHRITT_TAKT_MAX
+	Klang.einsatz(CQKlangEinsatz.schritt(R.current.raum_id() if R.current.has_method("raum_id") else "", ist_pixel()))
 
 
 #region Pause und Hauptmenü ########################################################################
@@ -136,6 +173,11 @@ func zum_hauptmenue() -> void:
 		return
 	Einstellungen.speichern()
 	Telemetrie.sitzung_beenden("hauptmenue")
+	# Im Browser gibt es keinen Neustart des Programms: Dort lädt die Seite neu, das ist derselbe
+	# frische Start.
+	if OS.has_feature("web"):
+		JavaScriptBridge.eval("window.location.reload()")
+		return
 	OS.set_restart_on_exit(true, OS.get_cmdline_args())
 	get_tree().quit()
 
@@ -172,9 +214,12 @@ func blasen(zeile: String) -> Array[String]:
 
 ## Lässt die Figur mit dem Kürzel die Zeile sagen (Popochiu übersetzt die ID selbst).
 ## NAR-Zeilen sind Regie ohne Text: es gibt nur eine kurze Pause für die Animation.
+## Mit der Zeile beginnen ihre Geräusche (Klang.zeilen_klang) und ihr Wackeln (CQEffekte).
 func sagen(kuerzel: String, zeile: String) -> void:
 	if tr(zeile) == zeile:
 		push_error("Zeile %s fehlt in texte.csv" % zeile)
+	Klang.zeilen_klang(kuerzel, zeile)
+	CQEffekte.zeilen_wackeln(zeile)
 	for b in blasen(zeile):
 		protokoll.append(b)
 		zeile_gesagt.emit(b)
@@ -184,22 +229,47 @@ func sagen(kuerzel: String, zeile: String) -> void:
 			await E.wait(1.0)
 			continue
 		var c := figur(kuerzel)
+		var quelle: PopochiuClickable = null
 		if not is_instance_valid(c):
-			var quelle := _objekt_im_raum(OBJEKTSTIMMEN.get(kuerzel, ""))
-			if is_instance_valid(quelle):
-				await _objekt_sagt(kuerzel, quelle, b)
-			else:
+			quelle = _objekt_im_raum(OBJEKTSTIMMEN.get(kuerzel, ""))
+			if not is_instance_valid(quelle):
 				await G.show_system_text(b)
-			continue
+				continue
 		Klang.zeile(kuerzel, b, tr(b))
+		if not blase_zeigen(zeile, b):
+			ohne_text.append(b)
+			await Klang.stimme_abwarten()
+			continue
+		if is_instance_valid(quelle):
+			await _objekt_sagt(kuerzel, quelle, blasen_text(zeile, b))
+			continue
 		var gast := not c.is_inside_tree() and is_instance_valid(R.current)
 		if gast:
 			_stimme_aus_dem_off(c, true)
-		await c.say(b)
+		await c.say(blasen_text(zeile, b))
 		if gast:
 			_stimme_aus_dem_off(c, false)
 	if testmodus:
 		await get_tree().process_frame
+
+
+## Sprechblasen, die bei „Untertitel aus“ ohne Text liefen (für Tests), neueste zuletzt
+var ohne_text: Array[String] = []
+
+
+## Erscheint der Text dieser Sprechblase? Bei „Untertitel aus“ bleibt er nur weg, wenn es zur
+## Blase eine Aufnahme gibt; Zeilen ohne Stimme und gesungene Zeilen zeigen ihn immer
+## (05-spielsysteme.md, Optionen: Untertitel).
+func blase_zeigen(zeile: String, blase: String) -> bool:
+	if Einstellungen.wert("untertitel") or CQKlangEinsatz.ist_lied(zeile):
+		return true
+	return not Klang.hat_stimme(blase)
+
+
+## Was Popochiu als Sprechblase zeigt: der Schlüssel der Blase (Popochiu übersetzt ihn) oder,
+## bei gesungenen Zeilen, der fertige Text kursiv mit einer Note davor.
+func blasen_text(zeile: String, blase: String) -> String:
+	return CQEffekte.lied_text(tr(blase)) if CQKlangEinsatz.ist_lied(zeile) else blase
 
 
 ## Sprechende Objekte ohne Figur (welt-1.yaml: Figuren mit groesse_px 0) → Objekt-ID im Raum.
@@ -333,10 +403,23 @@ func regeln() -> Object:
 ## ansehen_inventar (Gegenstände), raum_betreten, nach_uebergang, nach_laden (Räume),
 ## nach_option (Gespräche: obj ist der Dialog, item die Options-ID).
 func regel(art: String, obj: Variant = null, item: Variant = null) -> bool:
+	Klang.einsatz(CQKlangEinsatz.fuer_ereignis(art, klang_id(obj), klang_id(item)))
 	var r := regeln()
 	if r == null or not r.has_method("ereignis"):
 		return false
 	return bool(await r.ereignis(art, obj, item))
+
+
+## Kennung eines Objekts oder Gegenstands für die Geräusch-Tabellen (CQKlangEinsatz): die ID aus
+## dem Bauplan.
+func klang_id(o: Variant) -> String:
+	if o is String:
+		return o
+	if o is PopochiuInventoryItem:
+		return str(Bauplan.gegenstand(o.script_name).get("id", o.script_name.to_snake_case()))
+	if o is Object and o.has_method("objekt_id"):
+		return str(o.objekt_id())
+	return ""
 
 
 ## Wert aus den Regeln des Abschnitts ohne Warten; null, wenn die Regeln nichts dazu sagen.
@@ -367,15 +450,35 @@ func bedingung_ok(bedingungen: Array) -> bool:
 	return true
 
 
-## Ob ein Eintrag gerade gilt: Bedingungen, Raum (bei Figuren in mehreren Räumen), Zustand des
-## Gegenstands und aktive Figur („, Pixel“-Zeilen nur, wenn Pixel spielt).
+## Ob ein Eintrag gerade gilt: Bedingungen, Bedingung in Worten („nach dem Finaltag“), Raum (bei
+## Figuren in mehreren Räumen), Zustand des Gegenstands und aktive Figur („, Pixel“-Zeilen nur,
+## wenn Pixel spielt).
 func eintrag_passt(e: Dictionary, zustand := "") -> bool:
 	if not bedingung_ok(e.get("bedingung", [])):
+		return false
+	if not zusatz_ok(e.get("bedingung_text", "")):
 		return false
 	if e.has("raum") and is_instance_valid(R.current) and e.raum != Bauplan.raum(R.current.script_name).get("id", ""):
 		return false
 	if e.has("zustand") and e.zustand != zustand:
 		return false
+	return true
+
+
+## Zusatz in Worten an einer Ansehen-, Benutzen- oder Gegenstand-Zeile („vor dem Finaltag“,
+## „nach dem Tausch, Jingle“). Jeder Teil, den das Spiel oder die Regeln des Abschnitts kennen,
+## muss gelten. Unbekannte Teile sind Anmerkungen für die Regie und zählen nicht. Dass dabei
+## keine Zeile verdrängt wird, prüft tools/godot_raeume.py (verdraengte).
+func zusatz_ok(text: String) -> bool:
+	if text.is_empty():
+		return true
+	var ganz = _bedingung_text_wert(text)
+	if ganz != null:
+		return bool(ganz)
+	for teil in text.split(", "):
+		var w = _bedingung_text_wert(teil)
+		if w != null and not bool(w):
+			return false
 	return true
 
 
@@ -397,9 +500,9 @@ func ansehen_waehlen(eintraege: Array, mal: int, zustand := "") -> Dictionary:
 
 
 ## Ansehen (Rechtsklick) nach der Wiederholungsregel (05, „Wiederholung und Erschöpfung“):
-## 1. Mal die eigene Zeile, 2. Mal die „zweites Mal“-Zeile, ab dem 3. Mal eine Zeile aus dem
-## Wiederholungs-Pool (SYS_WDH_*) des Sprechers der ersten Zeile, nie zweimal dieselbe
-## hintereinander. Fehlt die „zweites Mal“-Zeile, kommt schon beim 2. Mal der Pool; fehlt der
+## 1. Mal die eigene Zeile, 2. Mal die „zweites Mal“-Zeile, 3. und 4. Mal die „drittes Mal“- und
+## „viertes Mal“-Zeile, wenn das Skript eine hat; sonst eine Zeile aus dem Wiederholungs-Pool (SYS_WDH_*) des Sprechers
+## der ersten Zeile, nie zweimal dieselbe hintereinander. Fehlt die „zweites Mal“-Zeile, kommt schon beim 2. Mal der Pool; fehlt der
 ## Pool (noch nicht geschrieben), wiederholen sich die eigenen Zeilen. Gezählt wird je Objekt,
 ## Zustand, erster Zeile und Figur im Zustand (gespeichert). Ohne eigene Zeile: Ersatzzeile.
 ## Liefert die gesagte Zeilen-ID ("" bei Ersatzzeile).
@@ -419,6 +522,10 @@ func ansehen(eintraege: Array, schluessel: String, zustand := "") -> String:
 	if n == 2 and hat_zweite:
 		await sagen_eintrag(zweite)
 		return zweite.zeile
+	var nte := ansehen_waehlen(eintraege, n, zustand)
+	if n >= 3 and int(nte.get("mal", 1)) == n:
+		await sagen_eintrag(nte)
+		return nte.zeile
 	var kz: String = erste.sprecher if erste.sprecher in ["MAX", "PIX"] else kuerzel_von(C.player)
 	var wahl := pool_zeile(Bauplan.wiederholung.get(kz, []), "WDH_" + kz)
 	if wahl.is_empty():
@@ -565,18 +672,29 @@ func raum_wechseln(ziel_raum_id: String) -> void:
 
 #region Figuren ####################################################################################
 ## Wechsel ist erlaubt, wenn Pixel im Abschnitt spielbar ist (Welt-Tabelle), der Wechsel
-## freigeschaltet ist (<Präfix>_WECHSEL_FREI, Welt 1: erstes Betreten der Taverne) und beide im
-## Raum stehen. Im Prolog nie (raetsel/prolog-und-welt-1.md: Wechsel erst ab Welt 1).
+## freigeschaltet ist und beide im Raum stehen. Im Prolog nie (raetsel/prolog-und-welt-1.md:
+## Wechsel erst ab Welt 1).
 func wechsel_moeglich() -> bool:
 	if not Bauplan.figur_spielbar(Zustand.abschnitt, "pixel"):
 		return false
-	if not Zustand.ist(praefix() + "_WECHSEL_FREI"):
+	if not wechsel_frei():
 		return false
 	var regel_w = regel_wert("wechsel_moeglich")  # Welt 3: Wechsel über die Ebenen hinweg
 	if regel_w != null:
 		return bool(regel_w)
 	return is_instance_valid(C.Pixel) and C.Pixel.is_inside_tree() \
 		and is_instance_valid(C.Max) and C.Max.is_inside_tree()
+
+
+## Ob der Wechsel im Abschnitt freigeschaltet ist. Die Welten setzen dafür bei der Ankunft den
+## Schalter <Präfix>_WECHSEL_FREI (Welt 1: erstes Betreten der Taverne). Abschnitte ohne eigenen
+## Schalter antworten über ihre Regeln (wert "wechsel_frei"): Der Abschnitt „finale“ hat vier
+## Präfixe (ZS1 bis FI), dort ist der Wechsel nur im letzten Rätsel frei (skripte/finale.gd).
+func wechsel_frei() -> bool:
+	var regel_f = regel_wert("wechsel_frei")
+	if regel_f != null:
+		return bool(regel_f)
+	return Zustand.ist(praefix() + "_WECHSEL_FREI")
 
 
 func praefix() -> String:
@@ -587,6 +705,8 @@ func praefix() -> String:
 ## hintereinander), außer der Raum übernimmt (Taverne: erste Wechsel, TAV 0080/0090).
 func figur_wechseln(mit_zeile := true) -> bool:
 	if not wechsel_moeglich() or in_szene > 0 or E.playing_queue:
+		if in_szene == 0 and not E.playing_queue:
+			Klang.geraeusch("fehler")  # Wechsel geht hier nicht
 		return false
 	if regel_wert("wechsel_getrennt") == true:
 		regel("figur_wechseln")  # Raumwechsel zur anderen Figur, läuft für sich weiter
@@ -618,6 +738,8 @@ func _wechsel_sagen() -> void:
 
 ## Feste Zeile aus dem Abschnitt „Figurenwechsel“ (pixel_tuer, max_tier …), sonst Ersatzzeile.
 func wechsel_regel(schluessel: String) -> void:
+	if schluessel.begins_with("pixel_"):
+		Klang.geraeusch("pixel_miau")  # Pixel kann oder will das nicht
 	var zeile: String = Bauplan.figurenwechsel(Zustand.abschnitt).get(schluessel, "")
 	if zeile.is_empty():
 		await ersatz()
@@ -712,6 +834,7 @@ func reisetasche_packen(nr: int) -> void:
 		vorgabe_tasche.clear()
 	else:
 		G.block()
+		Klang.geraeusch("inventar")
 		hud.visible = false  # Porträts und Pfote lägen über dem Fenster
 		var n := REISETASCHE.instantiate()
 		add_child(n)
@@ -722,6 +845,44 @@ func reisetasche_packen(nr: int) -> void:
 		G.unblock()
 	await t.bestaetigen()
 	in_szene -= 1
+
+
+## Spielfläche eines Minispiels öffnen (oberflaeche/minispiel_*.gd). Minispiele zählen wie
+## Zwischensequenzen: Speichern und Pausemenü warten, bis sie zu sind (05-spielsysteme.md,
+## Speichern). Popochius Leiste bleibt gesperrt, auch wenn eine Szene im Minispiel sie freigibt.
+func minispiel_oeffnen(skript: Script) -> CQMinispiel:
+	in_szene += 1
+	I.active = null
+	minispiel = skript.new()
+	minispiel.name = "Minispiel"
+	add_child(minispiel)
+	hud.visible = false  # Porträts und Pfote lägen über dem Fenster
+	G.show_hover_text()  # der Name des Hotspots unter dem Zeiger bliebe sonst stehen
+	if not testmodus:
+		if not G.unblocked.is_connected(_minispiel_sperren):
+			G.unblocked.connect(_minispiel_sperren)
+		G.block()
+	return minispiel
+
+
+func minispiel_schliessen() -> void:
+	if not is_instance_valid(minispiel):
+		return
+	minispiel.blasen_zurueck()
+	minispiel.queue_free()
+	minispiel = null
+	in_szene -= 1
+	hud.visible = true
+	if not testmodus:
+		if G.unblocked.is_connected(_minispiel_sperren):
+			G.unblocked.disconnect(_minispiel_sperren)
+		if not E.playing_queue:
+			G.unblock()
+
+
+func _minispiel_sperren() -> void:
+	if is_instance_valid(minispiel) and not G.is_blocked:
+		G.block.call_deferred()
 
 
 ## Kurze Meldung unten im Bild (Schlüssel aus ui.csv).
@@ -745,11 +906,15 @@ func _zuruf() -> void:
 	await sagen(zr.sprecher, zr.zeile)
 
 
-## Bedingungen, die das Skript in Worten nennt (nicht „vor/nach Rätsel“).
+## Bedingungen, die das Skript in Worten nennt (nicht „vor/nach Rätsel“). Gesprächsoptionen und
+## Zurufe mit unbekanntem Text bleiben aus: Dann entscheidet der Rätselcode.
 func _bedingung_text_ok(text: String) -> bool:
+	return text.is_empty() or _bedingung_text_wert(text) == true
+
+
+## Wert einer Bedingung in Worten; null, wenn weder das Spiel noch die Regeln sie kennen.
+func _bedingung_text_wert(text: String) -> Variant:
 	match text:
-		"":
-			return true
 		"vor dem Dachboden":
 			return not Zustand.war_in("dachboden")
 		"nach der Nahansicht Kalender":
@@ -767,6 +932,8 @@ func _bedingung_text_ok(text: String) -> bool:
 			)
 		"nur mit Zeldina im Team":
 			return Zustand.ist("W1_ZELDINA_FOLGT")
+		"vor dem Duell":
+			return not Zustand.geloest("R13")  # Welt 1, Thronsaal: Lord Moderwort
 		"Feilschen", "Haustier", "richtig":
 			return true  # Beschreibung der Option, keine Bedingung (Maklerin, LUFT 0410–0470)
 		"wenn Ziegen dabei sind":
@@ -776,7 +943,7 @@ func _bedingung_text_ok(text: String) -> bool:
 	var w = regel_wert("bedingung_text", text)
 	if w != null:
 		return bool(w)
-	return false  # unbekannt: Rätselcode entscheidet (Option bzw. Zuruf bleibt aus)
+	return null
 
 
 ## Öffentlicher Zugang für Gespräche und Tests.
@@ -840,6 +1007,7 @@ func abschnitt_gebaut(ab: String) -> bool:
 ## das Mitbringsel in der Ankunftsszene, das Packen der Reisetasche entscheidet später.
 func zwischenspiel_beginnen(nr: int) -> void:
 	Klang.jingle("welt_geschafft")
+	Klang.geraeusch("werbeblock_start")
 	Klang.musik("werbeblock")
 	if not testmodus:
 		await T.play_transition("tunnel", 1.5, T.PLAY_MODE.IN)

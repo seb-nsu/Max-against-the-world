@@ -3,8 +3,8 @@ name: Neo-Neustadt 2099
 skript_praefix: W3
 
 # Ebenen: Realität (echte Unterstadt), Simulation (Stadt), Labor (abgeschottete Ebene der Simulation).
-# Ebenenwechsel laufen nicht über Ausgänge, sondern über klingelnde Zellen, das Terminal neben der Kapsel,
-# Pixels Schütteln der Kapsel und Kalles Leitung (Ablauf: raetsel/welt-3.md, Abschnitt „Wechseln über Telefonzellen“).
+# Ebenenwechsel laufen nicht über Ausgänge, sondern über klingelnde Wecker, das Terminal neben der Kapsel,
+# Pixels Schütteln der Kapsel und Kalles Leitung (Ablauf: raetsel/welt-3.md, Abschnitt „Wechseln über Wecker“).
 
 raeume:
   # --- Realität ---
@@ -15,6 +15,7 @@ raeume:
     ausgaenge: [apothekengasse, laboreingang, widerstandsbasis]
     erreichbar_ab: start
     musik: w3_unterstadt
+    atmo: regen_strasse
     zustaende: []
   - id: apothekengasse
     name: Apothekengasse mit Pastillenautomat
@@ -23,14 +24,16 @@ raeume:
     ausgaenge: [unterstadt_strasse]
     erreichbar_ab: R1b
     musik: w3_unterstadt
+    atmo: regen_strasse
     zustaende: [Fächer zu, Fächer offen]
   - id: widerstandsbasis
     name: Widerstandsbasis
     skript_code: [BAS, PIEP, ENDE]   # ENDE beginnt in der Basis, ab W3_ENDE_NAR_0090 auf der Straße
     groesse: 1280x360
-    ausgaenge: [unterstadt_strasse, kuehlung, stadtstrasse, testkammer_1]   # stadtstrasse: Ebenenwechsel (Zelle/Terminal); testkammer_1: Kalles Leitung (R9a)
+    ausgaenge: [unterstadt_strasse, kuehlung, stadtstrasse, testkammer_1]   # stadtstrasse: Ebenenwechsel (Wecker/Terminal); testkammer_1: Kalles Leitung (R9a)
     erreichbar_ab: R3b
     musik: w3_basis
+    atmo: w3_atmo
     zustaende: [Fenster zu, Fenster offen, Tasse auf dem Tisch, Kaffee am Boden]
   - id: kuehlung
     name: Kühlung
@@ -39,6 +42,7 @@ raeume:
     ausgaenge: [widerstandsbasis]   # durch den Lüftungsschacht, nur Pixel
     erreichbar_ab: R3b
     musik: w3_basis
+    atmo: w3_atmo
     zustaende: [Eimer voll, Eimer ausgekippt]
   - id: laboreingang
     name: Laboreingang
@@ -47,24 +51,27 @@ raeume:
     ausgaenge: [unterstadt_strasse]
     erreichbar_ab: start
     musik: w3_unterstadt
+    atmo: w3_atmo
     zustaende: [Tür zu, Tür offen]
   # --- Simulation ---
   - id: stadtstrasse
     name: Stadtstraße
     skript_code: [SIM, TUER]   # Glaseingang des Büroturms liegt auf der Stadtstraße
     groesse: 1280x360
-    ausgaenge: [kueche_orakel, buero_50, widerstandsbasis]   # widerstandsbasis: Ebenenwechsel über klingelnde Zelle und Terminal
+    ausgaenge: [kueche_orakel, buero_50, widerstandsbasis]   # widerstandsbasis: Ebenenwechsel über den klingelnden Radiowecker und das Terminal
     erreichbar_ab: R3b
     musik: w3_simulation
+    atmo: keine
     zustaende: [Tag, Nacht]
   - id: kueche_orakel
     name: Küche der Orakel-Oma
     skript_code: [KUCH]
     groesse: 640x360
-    ausgaenge: [stadtstrasse]   # Omas Wandtelefon ist zusätzlich ein Ebenenwechsel in die Basis
+    ausgaenge: [stadtstrasse]   # Omas Eieruhr ist zusätzlich ein Ebenenwechsel in die Basis
     erreichbar_ab: R3b
     musik: w3_simulation
-    zustaende: [Vase auf dem Regal, Scherben am Boden]
+    atmo: keine
+    zustaende: [Sparschwein auf dem Regal, Scherben am Boden]
   - id: buero_50
     name: Büroturm, 50. Stock
     skript_code: [TURM, TERM]   # TERM: Pixels Teil spielt in der Basis
@@ -72,6 +79,7 @@ raeume:
     ausgaenge: [stadtstrasse]   # Einbahn: hinein durch den Glaseingang, heraus nur über R7 und das Terminal der Basis
     erreichbar_ab: R5
     musik: w3_simulation
+    atmo: keine
     zustaende: []
   # --- Labor ---
   - id: testkammer_1
@@ -81,6 +89,7 @@ raeume:
     ausgaenge: [testkammer_2, widerstandsbasis]   # widerstandsbasis: Ebenenwechsel über Kalles Leitung und die Kapsel
     erreichbar_ab: R9a
     musik: w3_labor
+    atmo: w3_atmo
     zustaende: [Ausgangstür zu, Ausgangstür offen]
   - id: testkammer_2
     name: Testkammer 2
@@ -89,6 +98,7 @@ raeume:
     ausgaenge: [testkammer_1, testkammer_3]
     erreichbar_ab: R9b
     musik: w3_labor
+    atmo: laser
     zustaende: [Laser tödlich, Laser harmlos]
   - id: testkammer_3
     name: Testkammer 3
@@ -97,6 +107,7 @@ raeume:
     ausgaenge: [testkammer_2, kern]
     erreichbar_ab: R9c
     musik: w3_labor
+    atmo: w3_atmo
     zustaende: [Tür zu, Tür offen]
   - id: kern
     name: Kern von M.U.T.T.I.
@@ -105,6 +116,7 @@ raeume:
     ausgaenge: [testkammer_3]
     erreichbar_ab: R9d
     musik: w3_kern
+    atmo: w3_atmo
     zustaende: [Zelle glühend, Zelle vereist, Sockel leer]
 
 sonder_codes: [HINT, INV, ABS]   # INV: Inventar ansehen, ABS: Gespräch erschöpft
@@ -115,12 +127,12 @@ figuren:
     name: Max
     kuerzel: MAX
     raum: [unterstadt_strasse, apothekengasse, widerstandsbasis, laboreingang, stadtstrasse, kueche_orakel, buero_50, testkammer_1, testkammer_2, testkammer_3, kern]
-    groesse_px: 189   # Sonderformen: Max als Ente 30, Max in der Kapsel 70 breit
+    groesse_px: 189   # Sonderformen Max als Ente und Max in der Kapsel in grafik/welt-3.md
     spielbar: true
   - id: pixel
     name: Pixel
     kuerzel: PIX
-    raum: [unterstadt_strasse, apothekengasse, widerstandsbasis, kuehlung, laboreingang]   # in Simulation und Labor nur Stimme (Hörer, Wandtelefon, Terminal, Lautsprecher)
+    raum: [unterstadt_strasse, apothekengasse, widerstandsbasis, kuehlung, laboreingang]   # in Simulation und Labor nur Stimme (Radiowecker, Küchenradio, Terminal, Lautsprecher)
     groesse_px: 61
     spielbar: true
   - id: opa
@@ -198,7 +210,7 @@ figuren:
   - id: hausmeister
     name: Modell 08/15
     kuerzel: HAU
-    raum: [laboreingang, widerstandsbasis]   # in der Basis nur in der Schlussszene mit FREUND_0815
+    raum: [laboreingang, widerstandsbasis]   # in der Basis nur in der Schlussszene mit W3_FREUND_0815
     groesse_px: 196
     spielbar: false
   - id: orakel_oma
@@ -284,7 +296,7 @@ gegenstaende:
     herkunft: R3b   # Morphäus gibt die Papiertüte direkt vor der Pastillenwahl; kann nicht verloren gehen
     zustaende: [kalt, ofenwarm, hundekuchen]   # Simulation kalt, nach R11 ofenwarm; in der Realität Hundekuchen
     verwendet_in: [R11]
-    reist_mit: true   # Schalter KEKSE_DABEI, sonst Fundkiste
+    reist_mit: true   # eingepackt reisen sie mit, sonst Fundkiste; den Schalter FI_KEKSE_DABEI setzt erst das Finale
     nahansicht: false
   - id: rezeptkarte
     name: Omas Rezeptkarte
@@ -354,7 +366,7 @@ gegenstaende:
     herkunft: R11
     zustaende: [gluehend, vereist]   # glühend nur auf dem Sockel; im Inventar vereist, in der Realität nur schwerer
     verwendet_in: []   # Artefakt, geht im Zwischenspiel 3 an Opa (Gegenwart: AA-Batterie)
-    ohne_verwendung: Artefakt, Opa legt sie im Zwischenspiel in die Maschine
+    ohne_verwendung: Artefakt, Opa legt sie im Zwischenspiel auf die Werkbank (in die Maschine erst im Finale)
     reist_mit: false
     nahansicht: false
 
@@ -372,119 +384,119 @@ raetsel:
     raum: unterstadt_strasse
     benoetigt: []
     ergibt: []
-    schalter: [W3_R01_A_GELOEST, BEOBACHTUNG_SCHIRM, BEOBACHTUNG_MUSIKER, BEOBACHTUNG_SUPPE]
+    schalter: [W3_R01_A_GELOEST, W3_BEOBACHTUNG_SCHIRM, W3_BEOBACHTUNG_MUSIKER, W3_BEOBACHTUNG_SUPPE]
     optional: false
   - id: R1b
     name: Der Mensch-Test, die drei Fragen
     raum: unterstadt_strasse
     benoetigt: [R1a]
     ergibt: []
-    schalter: [W3_R01_B_GELOEST, STEMPEL_MENSCH]   # Stempel auf dem Handrücken, öffnet die Apothekengasse
+    schalter: [W3_R01_B_GELOEST, W3_STEMPEL_MENSCH]   # Stempel auf dem Handrücken, öffnet die Apothekengasse
     optional: false
   - id: R2
     name: Die Nudelbude „Vier“
     raum: unterstadt_strasse
     benoetigt: []
     ergibt: []
-    schalter: [W3_R02_GELOEST, MORPHAEUS_GETROFFEN]
+    schalter: [W3_R02_GELOEST, W3_MORPHAEUS_GETROFFEN]
     optional: false
   - id: R3a
     name: Der Pastillenautomat, Déjà-vu
     raum: apothekengasse
     benoetigt: [R1b, R2]   # Option „Déjà-vu“ erst nach Morphäus' Hinweis
     ergibt: [rote_pastille, blaue_pastille]
-    schalter: [W3_R03_A_GELOEST, DIAGNOSE_MATRIX]
+    schalter: [W3_R03_A_GELOEST, W3_DIAGNOSE_MATRIX]
     optional: false
   - id: R3b
     name: Der Pastillenautomat, die Wahl
     raum: apothekengasse
     benoetigt: [R3a, rote_pastille]
     ergibt: [omas_kekse]
-    schalter: [W3_R03_B_GELOEST, KEKSE_DABEI, SIMULATION_OFFEN]
+    schalter: [W3_R03_B_GELOEST, W3_SIMULATION_OFFEN]
     optional: false
   - id: R4
-    name: Die Vase des Orakels
+    name: Das Sparschwein des Orakels
     raum: kueche_orakel
     benoetigt: [R3b]
     ergibt: [rezeptkarte]
-    schalter: [W3_R04_GELOEST, VASE_ZERBROCHEN, REGEL_2]   # REGEL_2 aus der Nahansicht Kochbuch, jederzeit in der Küche
+    schalter: [W3_R04_GELOEST, W3_SPARSCHWEIN_ZERSCHLAGEN, W3_REGEL_2]   # W3_REGEL_2 aus der Nahansicht Kochbuch, jederzeit in der Küche
     optional: false
   - id: R5
     name: Die gesprächige Tür
     raum: stadtstrasse
     benoetigt: [R3b]
     ergibt: []
-    schalter: [W3_R05_GELOEST, CODE_SICHT, GLASTUER_OFFEN]
+    schalter: [W3_R05_GELOEST, W3_CODE_SICHT, W3_GLASTUER_OFFEN]
     optional: false
   - id: R6a
     name: Die Agenten-Klone, Original und Kopie
     raum: buero_50
     benoetigt: [R5, kaffeetasse]
     ergibt: []
-    schalter: [W3_R06_A_GELOEST, HEXENSCHUSS, TASSE_ORIGINAL]   # HEXENSCHUSS schon in der Eintrittsszene
+    schalter: [W3_R06_A_GELOEST, W3_HEXENSCHUSS, W3_TASSE_ORIGINAL]   # W3_HEXENSCHUSS schon in der Eintrittsszene
     optional: false
   - id: R6b
     name: Die Agenten-Klone, Mittagspause
     raum: buero_50
     benoetigt: [R6a, kaffeetasse]
     ergibt: [sonnenbrille, schmidts_akte]
-    schalter: [W3_R06_B_GELOEST, KLONE_MITTAGSPAUSE, REGEL_1]   # REGEL_1 aus der Nahansicht Akte
+    schalter: [W3_R06_B_GELOEST, W3_KLONE_MITTAGSPAUSE, W3_REGEL_1]   # W3_REGEL_1 aus der Nahansicht Akte
     optional: false
   - id: R7a
     name: Der Ausgang im 50. Stock, Farbcode
     raum: buero_50
     benoetigt: [R6b, farbcode_zettel, morse_tabelle]   # ohne Morse-Tabelle (R13) kann Kalle nicht übersetzen
     ergibt: []
-    schalter: [W3_R07_A_GELOEST, FARBCODE_GESENDET]
+    schalter: [W3_R07_A_GELOEST, W3_FARBCODE_GESENDET]
     optional: false
   - id: R7b
     name: Der Ausgang im 50. Stock, Kabel
     raum: widerstandsbasis   # Pixel am Patch-Panel; Max wacht danach in der Basis auf
     benoetigt: [R7a]
     ergibt: []
-    schalter: [W3_R07_B_GELOEST, KABEL_GESTECKT]
+    schalter: [W3_R07_B_GELOEST, W3_KABEL_GESTECKT]
     optional: false
   - id: R8
     name: Der Hausmeister Modell 08/15
     raum: laboreingang
     benoetigt: [telefonbuchseite]
     ergibt: []
-    schalter: [W3_R08_GELOEST, HAUSMEISTER_WEG, FREUND_0815]   # FREUND_0815 nur mit Olivenöl aus Welt 2, vor der Übergabe
+    schalter: [W3_R08_GELOEST, W3_HAUSMEISTER_WEG, W3_FREUND_0815]   # W3_FREUND_0815 nur mit Olivenöl aus Welt 2, vor der Übergabe
     optional: false
   - id: R9a
     name: Die Testkammern, die Leitung
     raum: laboreingang
     benoetigt: [R8, zugangskarte]
     ergibt: []
-    schalter: [W3_R09_A_GELOEST, LEITUNG_LABOR]   # Kalle zapft dabei M.U.T.T.I.s Lautsprecher an
+    schalter: [W3_R09_A_GELOEST, W3_LEITUNG_LABOR]   # Kalle zapft dabei M.U.T.T.I.s Lautsprecher an
     optional: false
   - id: R9b
     name: Die Testkammern, Kammer 1
     raum: testkammer_1
     benoetigt: [R9a]
     ergibt: []
-    schalter: [KAMMER_1_GELOEST]
+    schalter: [W3_KAMMER_1_GELOEST]
     optional: false
   - id: R9c
     name: Die Testkammern, Kammer 2
     raum: testkammer_2
     benoetigt: [R9b, gummihuhn]
     ergibt: []
-    schalter: [KAMMER_2_GELOEST, REGEL_3]   # REGEL_3 aus der Nahansicht Kritzelei
+    schalter: [W3_KAMMER_2_GELOEST, W3_REGEL_3]   # W3_REGEL_3 aus der Nahansicht Kritzelei
     optional: false
   - id: R9d
     name: Die Testkammern, Kammer 3
     raum: testkammer_3
     benoetigt: [R9c, gummihuhn]   # mit Hermes' Sandale aus Welt 2 ein dritter Tausch
     ergibt: []
-    schalter: [KAMMER_3_GELOEST]
+    schalter: [W3_KAMMER_3_GELOEST]
     optional: false
   - id: R10
     name: Das M.U.T.T.I.-Paradoxon
     raum: kern
     benoetigt: [R4, schmidts_akte, R9c, R9d]   # Regeln 2 (Kochbuch), 1 (Akte), 3 (Kammer 2); den Turm verlässt Max nur über R7
     ergibt: []
-    schalter: [W3_R10_GELOEST, MUTTI_AUS]
+    schalter: [W3_R10_GELOEST, W3_MUTTI_AUS]
     optional: false
   - id: R11
     name: Der glühende Kern
@@ -492,32 +504,33 @@ raetsel:
     benoetigt: [R10]
     benoetigt_eins_von: [omas_kekse, R3b]   # Lösung A Omas Kekse (Tausch heiß/kalt); Lösung B Pixel öffnet das Fenster in der Basis (seit R3b dort)
     ergibt: [energiezelle]
-    schalter: [W3_R11_GELOEST, ZELLE_GEKUEHLT]
+    schalter: [W3_R11_GELOEST, W3_ZELLE_GEKUEHLT]
     optional: false
   - id: R12
     name: Die vierte Zutat
     raum: unterstadt_strasse
     benoetigt: [rezeptkarte]   # als Glückskeks, also nach einem Sprung in die Realität
     ergibt: [zugangskarte]
-    schalter: [W3_R12_GELOEST, SUPPE_GEKOCHT]
+    schalter: [W3_R12_GELOEST, W3_SUPPE_GEKOCHT]
     optional: false
   - id: R13
     name: Kalles Morse-Tabelle
     raum: widerstandsbasis
     benoetigt: [R3b]   # Spielfigur Pixel
     ergibt: [morse_tabelle]
-    schalter: [W3_R13_GELOEST, MORSE_TABELLE, OPAS_NACHRICHT]
+    schalter: [W3_R13_GELOEST, W3_MORSE_TABELLE, W3_OPAS_NACHRICHT]
     optional: false
 
 # Schalter, die zu keinem Rätsel gehören (Graubox-Logik: skripte/welt_3.gd)
 weitere_schalter:
+  - W3_OEL_WARNUNG             # Pixel hat vor der Übergabe der Telefonbuchseite ans Olivenöl erinnert (R8, einmal)
   - W3_PIXEL_AUF_LEITUNG       # beim ersten Aufwachen in der Basis (W3_BAS_KAL_0160)
   - W3_WECHSEL_FREI            # Figurenwechsel freigeschaltet (Ankunft)
   - W3_EBENE                   # Wert: realitaet, simulation oder labor (wo Max' Geist ist)
   - W3_PIXEL_EINMAL            # Pixel hat den Automaten einmal bedient (W3_APO_PIX_0180), Max kommentiert es einmal
   - W3_MAX_RAUM                # Wert: Raum, in dem Max steht, solange er nicht in der Realität ist
   - W3_PIXEL_RAUM              # Wert: Raum, in dem Pixel steht, solange Max drüben ist
-  - W3_LETZTE_ZELLE            # Wert: zuletzt benutzte Zelle (stadtstrasse oder kueche_orakel)
+  - W3_LETZTE_ZELLE            # Wert: zuletzt benutzter Wecker (stadtstrasse oder kueche_orakel); der Name stammt aus der Fassung mit Telefonzellen
   - W3_SIMULATION_BESUCHE      # Wert: Zahl der Eintritte in die Simulation (Errungenschaft Déjà-vu)
   - W3_SYMPTOM_BEKANNT         # Morphäus hat das Déjà-vu beschrieben (W3_NUD_MOR_0490)
   - W3_PIXEL_DOPPELT           # Pixel ist zweimal gleich am Automaten vorbeigegangen
@@ -527,6 +540,6 @@ weitere_schalter:
   - W3_SCHNEE                  # Pixel hat das Fenster über der Kapsel geöffnet (Lösung B)
   - W3_ZELLE_KALT              # Energiezelle abgekühlt (Tausch oder Schnee)
   - W3_KEKSE_WARM              # Omas Kekse ofenwarm (Tausch im Kern)
-  - W3_ZELLE_BENUTZT           # die klingelnde Zelle auf der Stadtstraße schon einmal abgehoben
+  - W3_ZELLE_BENUTZT           # am klingelnden Radiowecker auf der Stadtstraße schon einmal aufgestanden; der Name stammt aus der Fassung mit Telefonzellen
   - W3_FEHLTAUSCHE             # Wert: Räume mit Fehltauschen seit dem letzten Betreten (Zurücksetzen-Zeile)
-  - CODE_SICHT                 # Code-Sicht freigeschaltet (auch Schalter von R5)
+  - W3_CODE_SICHT              # Code-Sicht freigeschaltet (auch Schalter von R5)

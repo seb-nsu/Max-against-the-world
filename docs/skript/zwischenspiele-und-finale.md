@@ -1,6 +1,6 @@
 # Skript Zwischenspiele und Finale
 
-Das Skript der drei Zwischenspiele (Rückkehren auf den Dachboden nach Welt 1, 2 und 3: Werbeblock, Artefakt-Abgabe, Passwort-Versuch, Pixels Notizbuch, Ansehen-Zeilen für den jeweiligen Dachboden-Zustand und Reisetasche packen mit Pixels Kommentaren) sowie des kompletten Finales (Heimkehr, Stufe 1 als Spielphase, Hilferuf, letztes Rätsel mit Hinweisen und Fehlversuchen, Stufe 2, Geburtstag, Abspann-Szene und Abspann): 170 Zeilen Zwischenspiele und 279 Zeilen Finale samt Abspann, zusammen 449. Kurzform wie im Prolog: ID, Sprecher, Text, Regie oder Auslöser; Bedingungen stehen in der letzten Spalte (Schalter FREUND\_0815 für Modell 08/15 als Freund, KEKSE\_DABEI für Omas Kekse: gesetzt, sobald die Kekstüte im Inventar ist, also eingepackt für Welt 4 oder im Finale aus der Fundkiste genommen, Goblin-Weg A/B, LUKE\_ERKANNT für den Abschluss von Finale Stufe 1). Sprecherkürzel neu: HAU für Modell 08/15, ZEL Zeldina, TOA Toadi, WAL Waldemar, FLI Flimmer, GER Gerd Glück, ARC Archimedes, RAM Ramses, HER Hermes, KAL Kalle; dazu die festen Kürzel OMA, MUT und NAR (Erzähler, Sprecher „–“) aus den Spielsystemen. Räume, Gegenstände und Schalter stehen in der [Welt-Tabelle Finale](../welten/finale.yaml), Abläufe, Lösungen und Hinweisstufen in [Rätsel Finale](../raetsel/finale.md). Ersatzzeilen gelten aus dem Prolog-Skript.
+Das Skript der drei Zwischenspiele (Rückkehren auf den Dachboden nach Welt 1, 2 und 3: Werbeblock, Artefakt-Abgabe, Passwort-Versuch, Pixels Notizbuch, Ansehen-Zeilen für den jeweiligen Dachboden-Zustand und Reisetasche packen mit Pixels Kommentaren) sowie des kompletten Finales (Heimkehr, Stufe 1 als Spielphase, Hilferuf, letztes Rätsel mit Hinweisen und Fehlversuchen, Stufe 2, Geburtstag, Abspann-Szene und Abspann): 170 Zeilen Zwischenspiele und 279 Zeilen Finale samt Abspann, zusammen 449. Kurzform wie im Prolog: ID, Sprecher, Text, Regie oder Auslöser; Bedingungen stehen in der letzten Spalte (Schalter W3\_FREUND\_0815 für Modell 08/15 als Freund, FI\_KEKSE\_DABEI für Omas Kekse: gesetzt, sobald die Kekstüte im Inventar ist, also eingepackt für Welt 4 oder im Finale aus der Fundkiste genommen, Goblin-Weg A/B, FI\_LUKE\_ERKANNT für den Abschluss von Finale Stufe 1). Sprecherkürzel neu: HAU für Modell 08/15, ZEL Zeldina, TOA Toadi, WAL Waldemar, FLI Flimmer, GER Gerd Glück, ARC Archimedes, RAM Ramses, HER Hermes, KAL Kalle; dazu die festen Kürzel OMA, MUT und NAR (Erzähler, Sprecher „–“) aus den Spielsystemen. Räume, Gegenstände und Schalter stehen in der [Welt-Tabelle Finale](../welten/finale.yaml), Abläufe, Lösungen und Hinweisstufen in [Rätsel Finale](../raetsel/finale.md). Ersatzzeilen gelten aus dem Prolog-Skript.
 
 ## 1. Zwischenspiel 1: Rückkehr nach Welt 1 (Kanal 3)
 
@@ -21,7 +21,7 @@ Szene. Fünf Sekunden Werbeblock auf dem Zapp-O-Mat (Milchglas, Kuh, Preisschild
 | ZS1\_DACH\_MAX\_0090 | Max | Opa, das ist ein Eierkarton. Da waren mal Eier drin. Ganz normale Eier aus dem Supermarkt. |  |
 | ZS1\_DACH\_OPA\_0100 | Opa | Für Spezialzwecke. Steht doch drauf. Hab ich selbst draufgeschrieben, also stimmt es. | zeigt auf eine Bleistiftkritzelei: „Spezialzwecke“ |
 | ZS1\_DACH\_NAR\_0110 | – | Opa legt das Ei in den Karton. Glitzer, ein leises Plopp. Das Ei sieht plötzlich sehr nach Ei aus. | Effekt Verwandlung; Werkbank-Ablage Zustand 1 |
-| ZS1\_DACH\_MAX\_0120 | Max | Komisch. Drüben war es größer. Und goldener. Und es hatte Schuppen, ich schwör's, ich hatte es drei Tage im Arm. |  |
+| ZS1\_DACH\_MAX\_0120 | Max | Komisch. Drüben war es größer. Und goldener. Und es hatte Schuppen, ich schwör's, ich hab es durch den halben Turm getragen. |  |
 | ZS1\_DACH\_OPA\_0130 | Opa | Rückverwandlungsschwund. Völlig normal. Drüben ist alles ein bisschen größer, das macht das Fernsehen. | schnell, zu schnell |
 | ZS1\_DACH\_MAX\_0132 | Max | Rückverwandlungsschwund. Okay. Klingt jedenfalls so, als hätte das schon mal jemand nachgemessen. | glaubt ihm |
 | ZS1\_DACH\_PIX\_0140 | Pixel | Gestern noch Bio-Freiland mit eigenem Drachen als Wachpersonal. Heute ein Eierkarton. // Ich sage nichts. Ich bin nur ein Kater. // Ein Kater allerdings, das sei angemerkt, mit zwei sehr guten Augen. |  |
@@ -45,9 +45,11 @@ Ansehen auf dem Dachboden, Zustand später Nachmittag. Alle Prolog-Zeilen der un
 
 | ID | Sprecher | Text | Auslöser |
 | --- | --- | --- | --- |
-| ZS1\_DACH\_MAX\_0310 | Max | Ein Ei in einem Eierkarton auf einer Werkbank. Ehrlich gesagt das Normalste, was ich seit Tagen gesehen hab. | Ansehen: Werkbank-Ablage (Ei) |
+| ZS1\_DACH\_MAX\_0310 | Max | Ein Ei in einem Eierkarton auf einer Werkbank. Das Normalste, was ich seit drei Tagen gesehen hab, und es kommt von einem Drachen. | Ansehen: Werkbank-Ablage (Ei) |
 | ZS1\_DACH\_MAX\_0315 | Max | Ein Drache hat das Ei gewärmt, als wär's sein eigenes. Jetzt liegt es neben Schrauben. Opa hat ein Talent für Ehrfurcht. | Ansehen: Werkbank-Ablage (Ei), zweites Mal |
-| ZS1\_DACH\_PIX\_0320 | Pixel | Es liegt da, als hätte es schon immer hierher gehört, und das finde ich, offen gesagt, beunruhigend. // Dinge aus Märchen sollten sich auf einer Werkbank fremd fühlen. Dieses Ei fühlt sich wie zu Hause. | Ansehen: Werkbank-Ablage, zweites Mal |
+| ZS1\_DACH\_PIX\_0320 | Pixel | Es liegt da, als hätte es schon immer hierher gehört. // Dinge aus Märchen sollten sich auf einer Werkbank fremd fühlen. Dieses hier hat schon einen Stammplatz. | Ansehen: Werkbank-Ablage, zweites Mal |
+| ZS1\_DACH\_MAX\_0322 | Max | Größe M, Freilandhaltung, Drache. Steht so nicht drauf. Sollte es aber. | Ansehen: Werkbank-Ablage (Ei), drittes Mal |
+| ZS1\_DACH\_PIX\_0324 | Pixel | Ein Ei. Drei Minuten, weich, mit Salz. Ich sage das nicht als Drohung. Ich sage das als Vision. | Ansehen: Werkbank-Ablage, drittes Mal |
 | ZS1\_DACH\_MAX\_0330 | Max | Das Licht hat sich kaum bewegt. Drüben war ich Tage weg, und hier ist höchstens eine Folge vergangen. | Ansehen: Dachfenster |
 | ZS1\_DACH\_MAX\_0335 | Max | Eine Fliege läuft übers Glas, dieselbe wie heute Mittag. Die hat nicht mal gemerkt, dass ich weg war. | Ansehen: Dachfenster, zweites Mal |
 | ZS1\_DACH\_MAX\_0340 | Max | Der rote Kreis ist immer noch da. Und wenn ich Opa so ansehe, ist es immer noch kein Zahnarzttermin. | Ansehen: Kalender |
@@ -56,7 +58,7 @@ Ansehen auf dem Dachboden, Zustand später Nachmittag. Alle Prolog-Zeilen der un
 | ZS1\_DACH\_PIX\_0355 | Pixel | Sie misst die Gardinen mit dem Zollstock nach. Zweimal. // Wer zweimal misst, hat schon einmal auf einen Prinzen gewartet, der nicht kam. Ich kenne das von Futterlieferungen. | Ansehen: Zapp-O-Mat, zweites Mal |
 | ZS1\_DACH\_PIX\_0360 | Pixel | Siebzehn Fernbedienungen, und dein Großvater fragt ausgerechnet dich, ob du seine gesehen hast. // Denk einmal darüber nach. Ich tue das schon länger, meistens nachts, auf genau dieser Kiste. | Ansehen: Kiste mit Fernbedienungen |
 | ZS1\_DACH\_PIX\_0365 | Pixel | Eine davon hat Bissspuren. Die sind nicht von mir. // Ich sage das nur vorsorglich, weil gleich jemand fragt. Es fragt immer jemand, und es trifft immer den Kater. | Ansehen: Kiste mit Fernbedienungen, zweites Mal |
-| ZS1\_DACH\_MAX\_0370 | Max | Der Sessel kommt mir noch bequemer vor als heute Mittag. Ich glaube, der hat auf mich gewartet. | Ansehen: Ohrensessel |
+| ZS1\_DACH\_MAX\_0370 | Max | Der Sessel ist noch bequemer als heute Mittag. Er hat geübt. | Ansehen: Ohrensessel |
 | ZS1\_DACH\_MAX\_0375 | Max | Ich setz mich da nicht rein. Wer sich da reinsetzt, wacht in drei Jahren mit Bart auf und hat drei Staffeln verpasst. | Ansehen: Ohrensessel, zweites Mal |
 
 Gespräch mit Opa in der freien Phase (Regel wie im Prolog: Max stellt die Frage, gelesene Optionen verschwinden, „Ich geh packen“ bleibt). Die Prolog-Optionen gelten im Zwischenspiel nicht mehr; ist alles gefragt, kommen Opas Abschiedszeilen aus dem Prolog.
@@ -95,17 +97,17 @@ Reisetasche packen für Welt 2. Bildschirm Reisetasche (eigene Überlagerung aus
 | ZS1\_DACH\_OPA\_0510 | Opa | Zwei Wahlfächer, nicht mehr. Die Tasche hat Prinzipien, und die hab ich ihr beigebracht. | öffnet die Tasche, Bildschirm Reisetasche |
 | ZS1\_DACH\_MAX\_0512 | Max | Zwei? Ich hab ungefähr ein halbes Mittelalter in den Hosentaschen. |  |
 | ZS1\_DACH\_OPA\_0514 | Opa | Der Rest kommt in die Fundkiste. Ich werfe nichts weg. Nie. | klopft auf die Kiste am Kistenstapel |
-| ZS1\_DACH\_PIX\_0520 | Pixel | Der Kochlöffel reist ab jetzt immer mit. Er hat sich das verdient, mehr als manche in diesem Raum. // Und er klebt übrigens noch. Ich habe es mit der Nase geprüft und bereue es. | Berühren: Kochlöffel (Pflichtfach) |
-| ZS1\_DACH\_PIX\_0530 | Pixel | Der Thunfisch bleibt. Das ist kein Gepäck, junger Mann, das ist mein Glaube, und über den wird nicht verhandelt. | Berühren: Thunfischdose (Pflichtfach) |
-| ZS1\_DACH\_PIX\_0535 | Pixel | Das Notizbuch. Darin steht meine Liste, und die reist mit, solange ich atme. Danach wird sie vorgelesen. | Berühren: Notizbuch (Pflichtfach) |
-| ZS1\_DACH\_PIX\_0540 | Pixel | Die Socke sortiert alles, was man ihr gibt. // Wo es Beamte gibt, gibt es Stapel, und wo es Stapel gibt, ist so eine Socke Gold wert. Ich kenne mich mit Wäschekörben aus. | Berühren: Sortierende Socke |
-| ZS1\_DACH\_PIX\_0550 | Pixel | Ein Ziegenfell. Ich habe eine Zeit lang darin gelebt, und ich spreche nicht darüber. // Nur so viel: Wo es heiß ist, braucht so etwas kein Mensch. Und kein Kater. | Berühren: Ziegenfell-Vorleger |
-| ZS1\_DACH\_PIX\_0560 | Pixel | Moderworts Zeugnis. Ungenügend in Zaubertränke. // Es beeindruckt niemanden, wenn ich das sagen darf. Außer vielleicht Mütter, und die nicht im guten Sinn. | Berühren: Moderworts Zeugnis |
-| ZS1\_DACH\_PIX\_0570 | Pixel | Der Eimer. Waldemar hat ihn zurückgegeben, nach Regel 14b. // Am Nil allerdings gibt es Wasser genug, und Krokodile auch. Einen Eimer braucht man dort höchstens zum Weglaufen. | Berühren: Eimer |
-| ZS1\_DACH\_PIX\_0580 | Pixel | Ein Dosenöffner. Er kurbelt und braucht keinen Strom. // Merk dir das gut. Irgendwann braucht alles Strom, und dann sitzt man vor einer vollen Dose und weint. | Berühren: Dosenöffner |
+| ZS1\_DACH\_PIX\_0520 | Pixel | Der Kochlöffel reist ab jetzt immer mit. Er hat sich das verdient, mehr als manche in diesem Raum. // Und er klebt übrigens noch. Ich habe es mit der Nase geprüft und bereue es. | Berühren: Kochlöffel (Pflichtfach); auch in Zwischenspiel 2 und 3 |
+| ZS1\_DACH\_PIX\_0530 | Pixel | Der Thunfisch bleibt. Das ist kein Gepäck, junger Mann, das ist mein Glaube, und über den wird nicht verhandelt. | Berühren: Thunfischdose (Pflichtfach); auch in Zwischenspiel 2 und 3 |
+| ZS1\_DACH\_PIX\_0535 | Pixel | Das Notizbuch. Darin steht meine Liste, und die reist mit, solange ich atme. Danach wird sie vorgelesen. | Berühren: Notizbuch (Pflichtfach); auch in Zwischenspiel 2 und 3 |
+| ZS1\_DACH\_PIX\_0540 | Pixel | Die Socke sortiert alles, was man ihr gibt. // Wo es Beamte gibt, gibt es Stapel, und wo es Stapel gibt, ist so eine Socke Gold wert. Ich kenne mich mit Wäschekörben aus. | Berühren: Sortierende Socke; auch in Zwischenspiel 2 und 3 |
+| ZS1\_DACH\_PIX\_0550 | Pixel | Ein Ziegenfell. Ich habe eine Zeit lang darin gelebt, und ich spreche nicht darüber. // Nur so viel: Wo es heiß ist, braucht so etwas kein Mensch. Und kein Kater. | Berühren: Ziegenfell-Vorleger; auch in Zwischenspiel 2 und 3 |
+| ZS1\_DACH\_PIX\_0560 | Pixel | Moderworts Zeugnis. Ungenügend in Zaubertränke. // Es beeindruckt niemanden, wenn ich das sagen darf. Außer vielleicht Mütter, und die nicht im guten Sinn. | Berühren: Moderworts Zeugnis; auch in Zwischenspiel 2 und 3 |
+| ZS1\_DACH\_PIX\_0570 | Pixel | Der Eimer. Waldemar hat ihn zurückgegeben, nach Paragraf 14b. // Am Nil allerdings gibt es Wasser genug, und Krokodile auch. Einen Eimer braucht man dort höchstens zum Weglaufen. | Berühren: Eimer |
+| ZS1\_DACH\_PIX\_0580 | Pixel | Ein Dosenöffner. Er kurbelt und braucht keinen Strom. // Merk dir das gut. Irgendwann braucht alles Strom, und dann sitzt man vor einer vollen Dose und weint. | Berühren: Dosenöffner; auch in Zwischenspiel 2 und 3 |
 | ZS1\_DACH\_PIX\_0590 | Pixel | Der Leuchttrank. Er leuchtet, das ist alles. Wo wir hinfahren, scheint ohnehin die Sonne. Rechne selbst. | Berühren: Leuchttrank; nur Goblin-Weg B |
 | ZS1\_DACH\_PIX\_0600 | Pixel | Ketchup. Gilt in diesem Königreich als Blut, als Soße und als Unterschrift. // In der Antike kennt das noch keiner. Das ist entweder eine Chance oder ein Problem, und ich wette auf beides. | Berühren: Ketchup; nur Goblin-Weg B |
-| ZS1\_DACH\_MAX\_0610 | Max | Zwei Fächer, zwei Dinge. Ich muss mich entscheiden, und genau da bin ich am allerschlechtesten. | Beim Versuch, ein drittes einzupacken |
+| ZS1\_DACH\_MAX\_0610 | Max | Zwei Fächer, zwei Dinge. Die Tasche ist strenger als jede Fluggesellschaft. | Beim Versuch, ein drittes einzupacken |
 | ZS1\_DACH\_PIX\_0620 | Pixel | Volle Tasche, leere Pfoten. Ich trage ohnehin nichts, das ist eine Frage des Standes. | Bestätigen der Auswahl |
 | ZS1\_DACH\_OPA\_0630 | Opa | Diesmal kein Zettel. Ich hab vorgearbeitet. Drüben wartet die Post auf dich. | schließt die Tasche |
 | ZS1\_DACH\_MAX\_0640 | Max | Moment. Du hast mir Post in die Antike geschickt? Wie soll das denn bitte gehen? |  |
@@ -162,7 +164,7 @@ Ansehen auf dem Dachboden, Zustand früher Abend.
 | ZS2\_DACH\_MAX\_0335 | Max | Ich frag Opa lieber nicht, was das ist. Er hat den Kalender eben angeguckt, als würde er ihn gleich anschreien. | Ansehen: Kalender, zweites Mal |
 | ZS2\_DACH\_OPA\_0340 | Opa | Der zweite Kreis? Ein Verstärkungskreis. Der hält den ersten zusammen. Rein technisch. | Reden: Opa nach Kalender |
 | ZS2\_DACH\_PIX\_0350 | Pixel | Er lügt schon wieder. Es riecht nach Angst, wie beim letzten Mal. // Und diesmal, wenn ich das ergänzen darf, auch nach Mehl. Die Lügen in diesem Haus werden immer nahrhafter. |  |
-| ZS2\_DACH\_MAX\_0360 | Max | Das Licht ist orange geworden. Drüben waren es drei Tage, und hier gibt es noch nicht mal Abendessen. | Ansehen: Dachfenster |
+| ZS2\_DACH\_MAX\_0360 | Max | Das Licht ist orange geworden. Drüben drei Tage, hier ein Nachmittag. Mein Magen rechnet in Tagen. | Ansehen: Dachfenster |
 | ZS2\_DACH\_MAX\_0365 | Max | Die Sonne steht so tief, dass Pixels Schatten aussieht wie ein Tiger. Er weiß das. Er bleibt genau da liegen. | Ansehen: Dachfenster, zweites Mal |
 | ZS2\_DACH\_MAX\_0370 | Max | Kanal 7. Hermes steht immer noch da und winkt. Der merkt bestimmt erst morgen, dass ich weg bin. | Ansehen: Zapp-O-Mat |
 | ZS2\_DACH\_MAX\_0375 | Max | Im Hintergrund trainiert Leonidas. Ich hör ihn sogar durch den Lautsprecher brüllen, und der ist nur Mono. | Ansehen: Zapp-O-Mat, zweites Mal |
@@ -170,7 +172,7 @@ Ansehen auf dem Dachboden, Zustand früher Abend.
 | ZS2\_DACH\_PIX\_0385 | Pixel | Mehl, Eier, eine Werkbank. // Sollte dein Großvater jetzt auch noch eine Schürze umbinden, ziehe ich aus. Zu den Nachbarn. Die haben Lachs. | Ansehen: Werkbank, zweites Mal |
 | ZS2\_DACH\_PIX\_0390 | Pixel | Siebzehn Fernbedienungen, und keine davon ist golden. // Noch nicht, würde ich sagen, wenn ich etwas sagen würde. Ich sage aber nichts. | Ansehen: Kiste mit Fernbedienungen |
 | ZS2\_DACH\_PIX\_0395 | Pixel | Ich habe sie sortiert, nach Geschmack. Die mit den Gummitasten schmecken am besten. // Erzähl das bitte niemandem. Ein Kater hat einen Ruf zu verlieren. | Ansehen: Kiste mit Fernbedienungen, zweites Mal |
-| ZS2\_DACH\_MAX\_0400 | Max | Der Sessel. Ich war in der Antike, ich hab mir Sitzen eigentlich verdient. Aber später. | Ansehen: Ohrensessel |
+| ZS2\_DACH\_MAX\_0400 | Max | Der Sessel. Ich hab einen Fünfkampf hinter mir und setz mich trotzdem nicht. Mit mir stimmt was nicht. | Ansehen: Ohrensessel |
 | ZS2\_DACH\_MAX\_0405 | Max | Auf der Armlehne ist ein tiefer Abdruck von Opas Ellbogen. Der Sessel kennt Opa schon länger als ich. | Ansehen: Ohrensessel, zweites Mal |
 | ZS2\_DACH\_MAX\_0410 | Max | Opa, warum muss das Korn „fein wie Staub“ sein? | Reden: Opa, Option |
 | ZS2\_DACH\_OPA\_0420 | Opa | Weil Klumpen alles ruinieren. Alles! Ein einziger Klumpen, und das ganze Werk fällt in sich zusammen! | dramatisch |
@@ -183,13 +185,16 @@ Reisetasche packen für Welt 3. Gegenstände aus Welt 1, die Max damals eingepac
 | --- | --- | --- | --- |
 | ZS2\_DACH\_OPA\_0510 | Opa | Die Tasche! Zwei Fächer. Was nicht mitkommt, kommt in die Fundkiste. Ich werfe nichts weg. Nie. | öffnet die Tasche, Bildschirm Reisetasche |
 | ZS2\_DACH\_PIX\_0520 | Pixel | Olivenöl. Für alles, was quietscht, auch für Blechköpfe. // Wo du hinfährst, quietscht vieles. Und manches, was dort quietscht, wäre für ein paar Tropfen sehr dankbar. | Berühren: Olivenöl |
-| ZS2\_DACH\_PIX\_0530 | Pixel | Eine geflügelte Sandale. Nur eine, die andere ist inzwischen ein Religionsgegenstand. // Leicht, flattert und hat Eigenschaften. Und Eigenschaften, so sagt man, kann man tauschen. | Berühren: Hermes' geflügelte Sandale |
-| ZS2\_DACH\_PIX\_0540 | Pixel | Der Olivenkranz. Gold, das kein Gold ist, und damit passt er hervorragend zum Rest dieses Dachbodens. // Theoretisch essbar. Ich habe es probiert. Die Antwort ist nein. | Berühren: Olivenkranz |
+| ZS2\_DACH\_PIX\_0530 | Pixel | Eine geflügelte Sandale. Nur eine, die andere ist inzwischen ein Religionsgegenstand. // Leicht, flattert und hat Eigenschaften. Und Eigenschaften, so sagt man, kann man tauschen. | Berühren: Hermes' geflügelte Sandale; auch in Zwischenspiel 3 |
+| ZS2\_DACH\_PIX\_0540 | Pixel | Der Olivenkranz. Gold, das kein Gold ist, und damit passt er hervorragend zum Rest dieses Dachbodens. // Theoretisch essbar. Ich habe es probiert. Die Antwort ist nein. | Berühren: Olivenkranz; auch in Zwischenspiel 3 |
 | ZS2\_DACH\_PIX\_0550 | Pixel | „Die sieben Antworten.“ Sieben Konter, und kein einziger davon gegen eine Küchenmaschine. // Trotzdem: Papier brennt gut. Falls es irgendwo kalt wird. | Berühren: Schriftrolle „Die sieben Antworten“ |
 | ZS2\_DACH\_PIX\_0560 | Pixel | Dein Handy. Drei Prozent. Es hat mehr Welten gesehen als du Ladekabel. // Wo du hinfährst, gibt es Strom. Ob er dir gehört, ist allerdings eine ganz andere Frage. | Berühren: Handy; nur wenn in Welt 2 nicht verbraucht |
 | ZS2\_DACH\_PIX\_0570 | Pixel | Kaugummi. Ewiges Brot, sozusagen. In der Zukunft gilt so etwas vermutlich schon als Antiquität. | Berühren: Kaugummi; nur wenn in Welt 2 nicht verbraucht |
 | ZS2\_DACH\_PIX\_0580 | Pixel | Der Kugelschreiber. Beamte fürchten ihn. Maschinen vermutlich nicht, aber man weiß nie, wer dort Beamter ist. | Berühren: Kugelschreiber; nur wenn in Welt 2 nicht verbraucht |
 | ZS2\_DACH\_PIX\_0590 | Pixel | Der Diskus, oder was auch immer du da geworfen hast. Rund, flach, fliegt. // Wo du hinfährst, fliegt allerdings alles von selbst, sogar die Autos. Damit beeindruckst du dort niemanden. | Berühren: Diskus oder Ersatz; nur wenn behalten |
+| ZS2\_DACH\_PIX\_0592 | Pixel | Der Eimer. Wo du hinfährst, regnet es angeblich ohne Pause. // Ein einzelner Eimer gegen so viel Regen, das nenne ich Optimismus, junger Mann. Ich bewundere ihn und lasse ihn hier. | Berühren: Eimer; aus der Fundkiste |
+| ZS2\_DACH\_PIX\_0594 | Pixel | Der Leuchttrank leuchtet immer noch. // Wo du hinfährst, leuchtet jede Hauswand, und zwar in Farben, die es gar nicht gibt. Er würde dort nicht einmal auffallen. | Berühren: Leuchttrank; aus der Fundkiste, nur Goblin-Weg B |
+| ZS2\_DACH\_PIX\_0596 | Pixel | Ketchup. In der Zukunft ist vermutlich alles Soße, was man essen darf. // Dann fällt eine mehr nicht auf. Ich sehe darin weder Chance noch Problem, und das will bei Ketchup etwas heißen. | Berühren: Ketchup; aus der Fundkiste, nur Goblin-Weg B |
 | ZS2\_DACH\_MAX\_0600 | Max | Zwei Fächer. Ich will einen Rucksack mit Cloud, wo man alles reinlädt und nie wiederfindet. | Beim Versuch, ein drittes einzupacken |
 | ZS2\_DACH\_PIX\_0610 | Pixel | Gepackt. Ich habe nichts davon getragen und bin trotzdem vollkommen erschöpft. Mitgefühl ist anstrengend. | Bestätigen der Auswahl |
 | ZS2\_DACH\_OPA\_0620 | Opa | Kanal 42. Die Zukunft. Dort gibt es eine … Dame, die alles besser weiß. Hör nicht auf sie. Hör auf dich. | ernst, kurz |
@@ -206,7 +211,7 @@ Szene. Werbeblock, dann Ankunft. Abendrot durchs Dachfenster, Opa hat die Lampe 
 | ID | Sprecher | Text | Regie |
 | --- | --- | --- | --- |
 | ZS3\_DACH\_NAR\_0010 | – | Werbeblock: Milchglas, Kuh, Preisschild, Blitz. Fünf Sekunden. | Effekt Werbeblock, Jingle Werbeblock-Spot |
-| ZS3\_DACH\_PIX\_0020 | Pixel | Dreimal Milch. Das ist keine Werbung mehr, das ist eine Botschaft. // Jemand will, dass in diesem Haus etwas gekauft wird. Ich ahne auch, wer. Ich sehe nur ganz zufällig in seine Richtung. | kommt aus dem Bildschirm, sieht Opa an |
+| ZS3\_DACH\_PIX\_0020 | Pixel | Dreimal Milch. Das ist keine Werbung mehr, das ist eine Botschaft. // Jemand will, dass in diesem Haus etwas gekauft wird. | kommt aus dem Bildschirm |
 | ZS3\_DACH\_MAX\_0030 | Max | Es regnet nicht mehr. Ich hatte schon vergessen, wie sich das anfühlt, wenn einem nichts auf den Kopf tropft. | sieht an sich herunter, noch nass |
 | ZS3\_DACH\_OPA\_0040 | Opa | Die Zelle. Die Ewige Energiezelle. Gib sie mir. Langsam. Mit beiden Händen. | kommt mit ausgestreckten Armen, fast andachtsvoll |
 | ZS3\_DACH\_MAX\_0050 | Max | Sie ist warm, aber nicht mehr heiß. Das ist eine lange Geschichte mit einer Küchenmaschine, die mich nicht leiden konnte. | reicht sie über |
@@ -238,18 +243,18 @@ Ansehen auf dem Dachboden, Zustand Abendrot mit Lampe.
 | ZS3\_DACH\_MAX\_0315 | Max | Die Zelle summt, das Mehl rieselt, das Ei liegt still. Das ist eine Band, und das Ei ist der Schlagzeuger, der nie zur Probe kommt. | Ansehen: Werkbank-Ablage (Ei, Sack, Zelle), zweites Mal |
 | ZS3\_DACH\_PIX\_0320 | Pixel | Drei. Ich habe bis drei gezählt, leise, wie versprochen. // Bei vier sage ich etwas. Ein Kater hält sein Wort. Meistens jedenfalls. | Ansehen: Werkbank-Ablage, zweites Mal |
 | ZS3\_DACH\_MAX\_0330 | Max | Die Kiste steht offen, und siebzehn Fernbedienungen gucken raus wie Vogelküken. | Ansehen: Kiste mit Fernbedienungen |
-| ZS3\_DACH\_MAX\_0335 | Max | Eine ist runtergefallen und hat dabei den Fernseher angeschaltet. Hier oben hängt echt alles irgendwie zusammen. | Ansehen: Kiste mit Fernbedienungen, zweites Mal |
+| ZS3\_DACH\_MAX\_0335 | Max | Eine ist runtergefallen und hat dabei den Fernseher angeschaltet. Siebzehn Stück, und die einzige, die funktioniert, tut es aus Versehen. | Ansehen: Kiste mit Fernbedienungen, zweites Mal |
 | ZS3\_DACH\_PIX\_0340 | Pixel | Alle kaputt. Alle ohne Batterie. // Hier hat jemand sehr lange nach etwas gesucht. Und es nicht gefunden. Und es niemandem erzählt. | Ansehen: Kiste, zweites Mal |
 | ZS3\_DACH\_MAX\_0350 | Max | Abendrot. Drüben war ich eine Woche im Regen, und hier sind nicht mal die Abendnachrichten vorbei. | Ansehen: Dachfenster |
 | ZS3\_DACH\_MAX\_0355 | Max | Draußen fliegt ein Flugzeug vorbei, und mir kommt es total langsam vor. Ich hab mich viel zu schnell an die Zukunft gewöhnt. | Ansehen: Dachfenster, zweites Mal |
 | ZS3\_DACH\_MAX\_0360 | Max | Doppelt umrandet, und jetzt auch noch ein Ausrufezeichen daneben. Der Tag ist heute. Und heute ist bald vorbei. | Ansehen: Kalender |
-| ZS3\_DACH\_MAX\_0365 | Max | Das Ausrufezeichen ist so fest gemalt, dass der Stift durchs Papier gegangen ist. Opa meint es ernst. Mit was auch immer. | Ansehen: Kalender, zweites Mal |
+| ZS3\_DACH\_MAX\_0365 | Max | Das Ausrufezeichen ist so fest gemalt, dass der Stift durchs Papier gegangen ist. Der nächste Monat hat jetzt auch einen Termin. | Ansehen: Kalender, zweites Mal |
 | ZS3\_DACH\_OPA\_0370 | Opa | Das Ausrufezeichen? Ein Betonungszeichen. Rein wissenschaftlich. Damit der Kreis weiß, dass er wichtig ist. | Reden: Opa nach Kalender |
 | ZS3\_DACH\_PIX\_0380 | Pixel | Angst, Mehl und jetzt auch noch Verzweiflung. // Seine Nase würde für ihn lügen. Meine nicht. Meine ist unbestechlich, außer mit Lachs. |  |
-| ZS3\_DACH\_MAX\_0390 | Max | Kanal 42. Kalle winkt, und Modell 08/15 wischt den Regen weg. Jeden Tropfen einzeln. | Ansehen: Zapp-O-Mat; nur mit FREUND\_0815 |
-| ZS3\_DACH\_MAX\_0395 | Max | Modell 08/15 winkt mit dem Mopp, und ich wink zurück. Ich hab jetzt einen Brieffreund mit Putzplan. | Ansehen: Zapp-O-Mat, zweites Mal; nur mit FREUND\_0815 |
-| ZS3\_DACH\_MAX\_0400 | Max | Kanal 42. Kalle winkt. Im Hintergrund sucht ein Roboter immer noch eine Frau namens Konner. | Ansehen: Zapp-O-Mat; ohne FREUND\_0815 |
-| ZS3\_DACH\_MAX\_0405 | Max | Er sucht und sucht. Ich hätte ihm helfen können und hab's nicht gemacht. Das hängt mir irgendwie nach. | Ansehen: Zapp-O-Mat, zweites Mal; ohne FREUND\_0815 |
+| ZS3\_DACH\_MAX\_0390 | Max | Kanal 42. Kalle winkt, und Modell 08/15 wischt den Regen weg. Jeden Tropfen einzeln. | Ansehen: Zapp-O-Mat; nur mit W3\_FREUND\_0815 |
+| ZS3\_DACH\_MAX\_0395 | Max | Modell 08/15 winkt mit dem Mopp, und ich wink zurück. Ich hab jetzt einen Brieffreund mit Putzplan. | Ansehen: Zapp-O-Mat, zweites Mal; nur mit W3\_FREUND\_0815 |
+| ZS3\_DACH\_MAX\_0400 | Max | Kanal 42. Kalle winkt. Im Hintergrund sucht ein Roboter immer noch eine Frau namens Konner. | Ansehen: Zapp-O-Mat; ohne W3\_FREUND\_0815 |
+| ZS3\_DACH\_MAX\_0405 | Max | Er sucht und sucht. Ich hätte ihm helfen können. Ich guck jetzt woanders hin. | Ansehen: Zapp-O-Mat, zweites Mal; ohne W3\_FREUND\_0815 |
 | ZS3\_DACH\_MAX\_0410 | Max | Opas Lampe brummt. Hier oben brummt alles, sobald es Strom kriegt. Außer Pixel, der brummt nur, wenn er will. | Ansehen: Lampe |
 | ZS3\_DACH\_PIX\_0415 | Pixel | Sie brummt. Ich brumme auch, allerdings nur, wenn man mich streichelt, und auch dann nur nach Absprache. // Die Lampe tut es umsonst und für jeden. Das ist billig. | Ansehen: Lampe, zweites Mal |
 | ZS3\_DACH\_MAX\_0420 | Max | Der Sessel. Unter ihm ist Staub, und über ihm bin bald ich. Gleich nach dem vierten Ding. | Ansehen: Ohrensessel |
@@ -275,7 +280,15 @@ Reisetasche packen für Welt 4. Neu sind die Dinge aus Welt 3. Omas Kekse liegen
 | ZS3\_DACH\_PIX\_0570 | Pixel | Schmidts Akte. Hier Papier, drüben Daten. „Abteilung Fürsorge und Verfolgung.“ // Behörden gibt es überall. Auch im Fernsehen. Besonders da. | Berühren: Schmidts Akte |
 | ZS3\_DACH\_PIX\_0580 | Pixel | Kalles Morse-Tabelle. Miau, Miau, Pause, Miau. // Wo du hinfährst, krabble ich durch das Rauschen. Ich brauche keine Tabelle. Du vielleicht. | Berühren: Morse-Tabelle |
 | ZS3\_DACH\_PIX\_0590 | Pixel | Das Olivenöl, beziehungsweise der Rest davon. Es hat seine Pflicht getan. // Ich würde es hierlassen. Hier oben quietscht bald einiges, glaub mir. | Berühren: Olivenöl; nur wenn noch im Inventar |
-| ZS3\_DACH\_MAX\_0600 | Max | Zwei Fächer, letzte Welt. Ich packe, als wär's ein Staffelfinale, also mit viel zu viel Drama. | Beim Versuch, ein drittes einzupacken |
+| ZS3\_DACH\_PIX\_0591 | Pixel | Der Eimer. Im Fernsehen kippt so etwas immer von einer Tür auf einen Kopf. // Ich habe diese Sendungen studiert, junger Mann. Der Kopf ist jedes Mal der falsche. | Berühren: Eimer; aus der Fundkiste |
+| ZS3\_DACH\_PIX\_0592 | Pixel | Der Leuchttrank. Im Fernsehen leuchtet schon alles von allein, sogar die Zähne der Moderatoren. // Dagegen kommt er nicht an. | Berühren: Leuchttrank; aus der Fundkiste, nur Goblin-Weg B |
+| ZS3\_DACH\_PIX\_0593 | Pixel | Ketchup. Im Fernsehen ist das seit jeher Blut, das weiß jede Katze, die Krimis schaut. // Jedes Opfer dort riecht nach Pommes, und kein Kommissar sagt etwas. | Berühren: Ketchup; aus der Fundkiste, nur Goblin-Weg B |
+| ZS3\_DACH\_PIX\_0594 | Pixel | „Die sieben Antworten.“ Im Fernsehen reicht eine einzige, und die lautet: nach der Werbung. // Sieben wären dort Verschwendung. | Berühren: Schriftrolle „Die sieben Antworten“; aus der Fundkiste |
+| ZS3\_DACH\_PIX\_0595 | Pixel | Dein Handy, immer noch drei Prozent. // Du willst einen kleinen Bildschirm in einen großen mitnehmen. Der große frisst den kleinen. So ist das bei Bildschirmen, und bei Fischen übrigens auch. | Berühren: Handy; aus der Fundkiste, nur wenn in Welt 2 nicht verbraucht |
+| ZS3\_DACH\_PIX\_0596 | Pixel | Kaugummi. Im Fernsehen klebt so etwas unter jedem Stuhl, in jeder Sendung, seit Jahrzehnten. // Du würdest also nichts Neues beitragen. | Berühren: Kaugummi; aus der Fundkiste, nur wenn in Welt 2 nicht verbraucht |
+| ZS3\_DACH\_PIX\_0597 | Pixel | Der Kugelschreiber. Im Fernsehen unterschreibt man damit Verträge, die man vorher nicht gelesen hat. // Ich rate ab. Vom Lesen wie vom Unterschreiben. | Berühren: Kugelschreiber; aus der Fundkiste, nur wenn in Welt 2 nicht verbraucht |
+| ZS3\_DACH\_PIX\_0598 | Pixel | Die Scheibe, was immer sie diesmal ist. Rund, flach, fliegt. // Im Fernsehen fliegen nur Torten, und die treffen immer. Dagegen bist du mit dem Ding ein Anfänger. | Berühren: Diskus oder Ersatz; aus der Fundkiste, nur wenn behalten |
+| ZS3\_DACH\_MAX\_0600 | Max | Zwei Fächer, letzte Welt. Die Tasche bleibt hart. Wenigstens einer hier oben hat sich nicht verändert. | Beim Versuch, ein drittes einzupacken |
 | ZS3\_DACH\_PIX\_0610 | Pixel | Gepackt. Zum letzten Mal. // Ich spreche ein Gebet für die Tasche. Es ist kurz, sie hat ja auch nicht viel geleistet. | Bestätigen der Auswahl |
 | ZS3\_DACH\_OPA\_0620 | Opa | Kanal 999. Dort … dort hat mal jemand etwas verloren. Irgendjemand. Falls du es findest: Es gehört mir. Irgendjemandem. | sieht die Kiste an, dann weg |
 | ZS3\_DACH\_MAX\_0630 | Max | Opa. |  |
@@ -295,7 +308,7 @@ Szene. Kein Werbeblock: Die Goldene Fernbedienung bricht den Spot nach einer hal
 | FI\_DACH\_MAX\_0030 | Max | Es ist dunkel. Opa, es ist richtig dunkel geworden. |  |
 | FI\_DACH\_OPA\_0040 | Opa | Natürlich ist es dunkel! Es ist Abend! Vier Welten an einem Nachmittag, das hält kein Tag aus! | steht an der Maschine, Schraubenzieher hinterm Ohr |
 | FI\_DACH\_MAX\_0050 | Max | Opa, was ist das? | zeigt auf die Maschine |
-| FI\_DACH\_OPA\_0060 | Opa | Das Werk. Ich habe es aufgebaut, während du weg warst. Zwanzig Minuten Fernsehzeit sind drei Stunden Werkbank. |  |
+| FI\_DACH\_OPA\_0060 | Opa | Das Werk. Ich habe es aufgebaut, während du weg warst. Viermal zwanzig Minuten. Ich bin selbst überrascht. |  |
 | FI\_DACH\_OPA\_0070 | Opa | Die Fernbedienung! Die goldene! Du hast sie! Gib sie her. Nein. Warte. Erst die anderen. | greift, zieht die Hand zurück |
 | FI\_DACH\_NAR\_0080 | – | Opa nimmt das Ei aus dem Karton und legt es feierlich in die linke Fassung. Dann den Mehlsack in die rechte. Die Maschine schluckt beides mit einem Klack. | Fassungen schließen sich |
 | FI\_DACH\_OPA\_0090 | Opa | Erstens: das Drachenei, Modell ganz. Zweitens: das Pharaonenkorn, Modell fein wie Staub. | zählt an den Fingern |
@@ -305,23 +318,23 @@ Szene. Kein Werbeblock: Die Goldene Fernbedienung bricht den Spot nach einer hal
 | FI\_DACH\_MAX\_0130 | Max | Das ist eine Fernbedienung. |  |
 | FI\_DACH\_OPA\_0140 | Opa | Zündkapsel. Mit Tasten. |  |
 | FI\_DACH\_MAX\_0150 | Max | Ich hab eine ganze Welt lang eine Fernbedienung durch die Gegend getragen und gedacht, das ist ein Artefakt. | sieht seine Hand an |
-| FI\_DACH\_PIX\_0160 | Pixel | Ei. Mehl. Batterie. Fernbedienung. // In Welt 4 habe ich das schon einmal laut gesagt, und dann kam ein Amboss. // Jetzt sage ich es noch einmal, ganz leise. Ohne Amboss, wenn ich bitten darf. | sieht nach oben, sicherheitshalber |
+| FI\_DACH\_PIX\_0160 | Pixel | Ei. Mehl. Batterie. Fernbedienung. // Auf Kanal 999 habe ich das schon einmal laut gesagt, und dann kam ein Amboss. // Jetzt sage ich es noch einmal, ganz leise. Ohne Amboss, wenn ich bitten darf. | sieht nach oben, sicherheitshalber |
 | FI\_DACH\_MAX\_0170 | Max | Was sagst du da? |  |
 | FI\_DACH\_PIX\_0180 | Pixel | Nichts. Sieh einfach zu. Das hier ist dein Moment, nicht meiner. Ich hatte meinen schon, mit Amboss. |  |
 | FI\_DACH\_NAR\_0190 | – | Opa richtet die Zündkapsel auf den Empfänger und drückt. Die Maschine brummt an. Lampen blinken, Rauch steigt, die Nadel am Druckmesser wandert nach rechts. | Maschine startet, Licht flackert |
 | FI\_DACH\_OPA\_0200 | Opa | Es läuft! Es läuft! Zwölf Minuten, dann ist alles anders! | Erklären-Animation, glücklich |
 | FI\_DACH\_NAR\_0210 | – | Unten klingelt es. Zweimal. Eine Stimme ruft von unten herauf. | Türklingel, dann Oma aus dem Off |
-| FI\_DACH\_OMA\_0220 | Oma (von unten) | Konrad? Ich bin's. Ich bin etwas früher. Die Bahn war pünktlich, stell dir vor. | gedämpft durch die Decke |
+| FI\_DACH\_OMA\_0220 | Oma (von unten) | Konrad? Ich bin's. Ich bin etwas früher. Mach bitte auf. | gedämpft durch die Decke |
 | FI\_DACH\_OPA\_0230 | Opa | Nein. Nein, nein, nein. Nicht jetzt. Nicht sie. Nicht vor der Zeit! | wird blass, Haare noch wilder |
 | FI\_DACH\_NAR\_0240 | – | Die Maschine zischt. Ein eiserner Riegel fährt über die Bodenluke, eine rote Lampe blinkt. Die Druckanzeige steht im roten Bereich. | Luke verriegelt sich, Lampe blinkt |
 | FI\_DACH\_OPA\_0250 | Opa | Teig… Drucküberlastung! Sicherheitsverriegelung! Das Werk schützt sich selbst! |  |
 | FI\_DACH\_MAX\_0260 | Max | Opa, Oma steht unten vor der Tür, und wir sind hier oben mit deinem Werk eingesperrt. |  |
 | FI\_DACH\_OPA\_0270 | Opa | Niemand hält mein dunkles Werk auf! Sie darf es nicht erfahren, bevor es vollendet ist! | brüllt gegen den Lärm, Panik-Animation |
-| FI\_DACH\_MAX\_0280 | Max | Okay. Das klang jetzt ehrlich gesagt ziemlich nach Endgegner. | ernst, Spielphase beginnt |
+| FI\_DACH\_MAX\_0280 | Max | Okay. Das klang jetzt ziemlich nach Endgegner. | ernst, Spielphase beginnt |
 
 ## 5. Finale, Stufe 1: Verriegelt (FI\_RIEG)
 
-Spielphase. Max muss die Luke und die Maschine untersuchen, während Opa seine Sätze brüllt und Pixel nervös wird. Schalter LUKE\_ERKANNT wird gesetzt, sobald Max die Luke benutzt hat. Erst dann geht es mit dem Hilferuf weiter (Abschnitt 6). Opas drei Weltherrschafts-Sätze kommen in dieser Reihenfolge als Zurufe alle 15 Sekunden, danach in Schleife; jeder Klick auf Opa löst den nächsten aus. Oma ruft währenddessen zweimal von unten.
+Spielphase. Max muss die Luke und die Maschine untersuchen, während Opa seine Sätze brüllt und Pixel nervös wird. Schalter FI\_LUKE\_ERKANNT wird gesetzt, sobald Max die Luke benutzt hat. Erst dann geht es mit dem Hilferuf weiter (Abschnitt 6). Opas drei Weltherrschafts-Sätze kommen in dieser Reihenfolge als Zurufe alle 15 Sekunden, danach in Schleife; jeder Klick auf Opa löst den nächsten aus. Oma ruft währenddessen zweimal von unten.
 
 | ID | Sprecher | Text | Auslöser |
 | --- | --- | --- | --- |
@@ -334,7 +347,7 @@ Spielphase. Max muss die Luke und die Maschine untersuchen, während Opa seine S
 | FI\_RIEG\_OMA\_0070 | Oma (von unten) | Ich komme jetzt hoch. Ich zähle nicht bis drei. Ich komme einfach. | nach 60 Sekunden; kurzer Schnitt ins Treppenhaus (Abend, Luke oben zu): Oma steigt die Treppe hinauf (Animation Treppe steigen), dann zurück auf den Dachboden; sie wartet ab jetzt unter der Luke |
 | FI\_RIEG\_MAX\_0080 | Max | Die Luke. Ein Eisenriegel, so dick wie mein Arm, und eine rote Lampe, die mich auslacht. | Ansehen: Bodenluke |
 | FI\_RIEG\_MAX\_0085 | Max | Ich hab am Riegel gezogen, und der Riegel hat zurückgezogen. Er hat gewonnen, und ich hab jetzt einen Abdruck an der Hand. | Ansehen: Bodenluke, zweites Mal |
-| FI\_RIEG\_MAX\_0090 | Max | Verriegelt. Richtig verriegelt. Das ist kein Bug, das ist ein Feature, und ich hasse es. | Benutzen: Bodenluke; setzt LUKE\_ERKANNT |
+| FI\_RIEG\_MAX\_0090 | Max | Verriegelt. Richtig verriegelt. Das ist kein Bug, das ist ein Feature, und ich hasse es. | Benutzen: Bodenluke; setzt FI\_LUKE\_ERKANNT |
 | FI\_RIEG\_PIX\_0100 | Pixel | Unter einer Tür würde ich durchpassen. Durch Eisen leider nicht. // Ich habe es nie probiert, und ich probiere es auch jetzt nicht. Es gibt Grenzen, und eine davon ist Eisen. | nach Benutzen: Bodenluke |
 | FI\_RIEG\_MAX\_0110 | Max | Opas Werk: Kupferrohre, Nieten, ein Manometer im roten Bereich und ein kleines rundes Fenster. Fehlt nur die Lebensleiste. | Ansehen: Maschine |
 | FI\_RIEG\_MAX\_0115 | Max | Wenn das Ding eine zweite Phase hat, renne ich. Endgegner haben immer eine zweite Phase, und die ist immer schlimmer. | Ansehen: Maschine, zweites Mal |
@@ -346,7 +359,7 @@ Spielphase. Max muss die Luke und die Maschine untersuchen, während Opa seine S
 | FI\_RIEG\_MAX\_0150 | Max | Zwei Fassungen, beide zu. Da drin sind das Ei und das Mehl. Legendäre Artefakte. Ganz sicher. Was denn sonst. | Ansehen: Fassungen |
 | FI\_RIEG\_MAX\_0155 | Max | Ein legendäres Ei und ein legendäres Mehl. In meinem Kopf sagt ein alter Mann: „Es ist gefährlich, allein zu gehen.“ | Ansehen: Fassungen, zweites Mal |
 | FI\_RIEG\_MAX\_0160 | Max | Eine kleine Schüsselantenne. Da hat Opa die Zündkapsel draufgehalten. Also die Fernbedienung. Also das Ding. | Ansehen: Empfänger |
-| FI\_RIEG\_MAX\_0165 | Max | Die Antenne dreht sich ein bisschen mit, wenn ich mich bewege. Entweder mag sie mich, oder sie will was von mir. | Ansehen: Empfänger, zweites Mal |
+| FI\_RIEG\_MAX\_0165 | Max | Die Antenne dreht sich mit, wenn ich mich bewege. Sie zielt. Ich hoffe, sie zielt freundlich. | Ansehen: Empfänger, zweites Mal |
 | FI\_RIEG\_MAX\_0170 | Max | Opa. Rotes Gesicht, weiße Haare, Schraubenzieher hinterm Ohr. Wenn das der Endgegner ist, war der Rest Tutorial. | Ansehen: Opa |
 | FI\_RIEG\_MAX\_0175 | Max | Er schwitzt und lächelt gleichzeitig. Opa hat nichts zu verbergen, außer ungefähr allem. | Ansehen: Opa, zweites Mal |
 | FI\_RIEG\_MAX\_0180 | Max | Finger weg, sagt er. Ich fass es auch nicht an, ich hab Angst, dass es zurückfasst. | Benutzen: Maschine |
@@ -356,22 +369,22 @@ Spielphase. Max muss die Luke und die Maschine untersuchen, während Opa seine S
 | FI\_RIEG\_MAX\_0210 | Max | Zu klein für mich, zu hoch für Pixel, und für Oma sowieso viel zu weit oben. Das ist kein Ausgang. | Benutzen: Dachfenster |
 | FI\_RIEG\_MAX\_0220 | Max | Der Zapp-O-Mat läuft noch. Kanal 999 zeigt ein leeres Studio und ein goldenes Sofa. Nein danke. | Ansehen: Zapp-O-Mat |
 | FI\_RIEG\_MAX\_0225 | Max | Das Sofa auf Kanal 999 dreht sich langsam zu mir. Ich dreh mich weg. Das hab ich da drüben gelernt. | Ansehen: Zapp-O-Mat, zweites Mal |
-| FI\_RIEG\_PIX\_0230 | Pixel | Der Fernseher ist der einzige Ausgang hier oben. Und, das sei betont, auch der einzige Eingang. // Denk einmal darüber nach, wer durch Eingänge so alles hereinkommt. Gute Bekannte zum Beispiel. | nach Ansehen: Zapp-O-Mat; nur mit LUKE\_ERKANNT |
+| FI\_RIEG\_PIX\_0230 | Pixel | Der Fernseher ist der einzige Ausgang hier oben. Und, das sei betont, auch der einzige Eingang. // Denk einmal darüber nach, wer durch Eingänge so alles hereinkommt. Gute Bekannte zum Beispiel. | nach Ansehen: Zapp-O-Mat; nur mit FI\_LUKE\_ERKANNT |
 | FI\_RIEG\_MAX\_0240 | Max | Die Zeit läuft, Oma kommt, und die Luke ist zu. Das ist eine Folge, bei der jemand die Pause-Taste versteckt hat. | Zuruf Max, nach 45 Sekunden ohne Aktion |
 | FI\_RIEG\_MAX\_0250 | Max | Opas Fundkiste. Ganz oben liegt eine Tüte Hundekuchen. Die aus der Zukunft, die da drüben noch Kekse waren. | Ansehen: Fundkiste; nur wenn Omas Kekse darin liegen; gilt auch in Abschnitt 6 und 7 |
 | FI\_RIEG\_PIX\_0255 | Pixel | Die Hundekuchen haben die Reise überlebt. Leider. // Manche Dinge sind ewiger als jede Energiezelle, und fast alle davon sind ungenießbar. | Ansehen: Fundkiste, zweites Mal; nur wenn Omas Kekse darin liegen; gilt auch in Abschnitt 6 und 7 |
-| FI\_RIEG\_MAX\_0260 | Max | Die Kekse von der alten Dame, die alles vorher weiß. Vielleicht wusste sie auch, wofür ich die mal brauche. | Benutzen: Fundkiste; nur wenn Omas Kekse darin liegen; Tüte ins Inventar, setzt KEKSE\_DABEI |
+| FI\_RIEG\_MAX\_0260 | Max | Die Kekse von der alten Dame, die alles vorher weiß. Vielleicht wusste sie auch, wofür ich die mal brauche. | Benutzen: Fundkiste; nur wenn Omas Kekse darin liegen; Tüte ins Inventar, setzt FI\_KEKSE\_DABEI |
 | FI\_RIEG\_PIX\_0270 | Pixel | Du nimmst die Hundekuchen mit. Jetzt. Während deine Großmutter die Treppe heraufkommt. // Ich habe nichts gesehen. Ich war nicht hier. Ich bin ein Gerücht. | nach 0260; Mimik entsetzt |
 | FI\_RIEG\_MAX\_0280 | Max | Opas Fundkiste. Er wirft wirklich nichts weg. Und ich inzwischen auch nicht mehr, wie es aussieht. | Ansehen: Fundkiste; ohne Kekse darin |
 | FI\_RIEG\_MAX\_0285 | Max | Ganz oben liegt ein Gutschein „Einmal Rasenmähen“, von mir, aus der zweiten Klasse. Opa hat ihn nie eingelöst. Nur behalten. | Ansehen: Fundkiste, zweites Mal; ohne Kekse darin |
 
 ## 6. Finale: Hilferuf über den Zapp-O-Mat (FI\_RUF)
 
-Szene mit vier Drehknopf-Stufen. Nach LUKE\_ERKANNT dreht Max den Knopf einmal durch alle vier Kanäle; der Spieler klickt jeden Kanal selbst an (Reihenfolge frei). Auf jedem Kanal winkt jemand kurz durch den Bildschirm, nur Zeldina (Kanal 3) und, mit Schalter FREUND\_0815, Modell 08/15 (Kanal 42) kommen heraus. Die Kanalwahl bleibt offen, bis alle vier Kanäle angeklickt sind; dann fasst Zeldina zusammen (0300 oder 0310), und Abschnitt 7 beginnt. Die Gesprächsoptionen 0320 bis 0360 bleiben in Abschnitt 7 wählbar.
+Szene mit vier Drehknopf-Stufen. Nach FI\_LUKE\_ERKANNT dreht Max den Knopf einmal durch alle vier Kanäle; der Spieler klickt jeden Kanal selbst an (Reihenfolge frei). Auf jedem Kanal winkt jemand kurz durch den Bildschirm, nur Zeldina (Kanal 3) und, mit Schalter W3\_FREUND\_0815, Modell 08/15 (Kanal 42) kommen heraus. Die Kanalwahl bleibt offen, bis alle vier Kanäle angeklickt sind; dann fasst Zeldina zusammen (0300 oder 0310), und Abschnitt 7 beginnt. Die Gesprächsoptionen 0320 bis 0360 bleiben in Abschnitt 7 wählbar.
 
 | ID | Sprecher | Text | Regie |
 | --- | --- | --- | --- |
-| FI\_RUF\_PIX\_0010 | Pixel | Wir brauchen Hilfe, und zwar von drüben. // Du kennst dort Leute. Ich kenne dort vor allem Essen, aber das kommt leider nicht, wenn man es ruft. | nach LUKE\_ERKANNT |
+| FI\_RUF\_PIX\_0010 | Pixel | Wir brauchen Hilfe, und zwar von drüben. // Du kennst dort Leute. Ich kenne dort vor allem Essen, aber das kommt leider nicht, wenn man es ruft. | nach FI\_LUKE\_ERKANNT |
 | FI\_RUF\_MAX\_0020 | Max | Ein Hilferuf per Fernseher. Ich hoffe, irgendwer da drüben hat die Benachrichtigungen an. | geht zum Zapp-O-Mat |
 | FI\_RUF\_MAX\_0030 | Max | Kanal 3. Zeldina! Wir hängen fest, Opa ist durchgedreht und die Tür ist zu! | Benutzen: Drehknopf, Kanal 3 |
 | FI\_RUF\_ZEL\_0040 | Zeldina | Eine verschlossene Tür, ein durchgedrehter Vermieter und ein Dachboden? Ich komme. Das ist meine Kernkompetenz. | im Bildschirm, Moderworts Zauberstab in der Hand |
@@ -384,24 +397,24 @@ Szene mit vier Drehknopf-Stufen. Nach LUKE\_ERKANNT dreht Max den Knopf einmal d
 | FI\_RUF\_MAX\_0110 | Max | Kanal 7. Archimedes! Ramses! Irgendwer! | Benutzen: Drehknopf, Kanal 7 |
 | FI\_RUF\_ARC\_0120 | Archimedes | Heureka! Nein, Moment, falscher Anlass. Ein verriegelter Dachboden? Hebel! Du brauchst einen Hebel! | im Bildschirm, nass, mit Handtuch |
 | FI\_RUF\_RAM\_0130 | Ramses | Soll ich helfen? Oder lieber nicht? Ich überlege. Ich melde mich. Vielleicht. Ziemlich sicher vielleicht. | im Hintergrund, Fächerwedler wedeln |
-| FI\_RUF\_HER\_0140 | Hermes | Dein Verbündeter ist in einem anderen Kanal! | rennt durchs Bild |
+| FI\_RUF\_HER\_0140 | Hermes | Eilmeldung! Jemand braucht Hilfe! Ich sage es sofort weiter! | rennt durchs Bild |
 | FI\_RUF\_MAX\_0150 | Max | Danke. Sehr hilfreich. Alle. |  |
 | FI\_RUF\_MAX\_0160 | Max | Kanal 42. Hallo? Jemand mit Gelenken? | Benutzen: Drehknopf, Kanal 42 |
-| FI\_RUF\_HAU\_0170 | Modell 08/15 | Servus, Bursche. Verriegelt, sagst du? Ordnungsgemäß? Dann komm ich. Ordnung ist mein Fach. | im Bildschirm, Gelenke geölt; nur FREUND\_0815 |
-| FI\_RUF\_NAR\_0180 | – | Modell 08/15 steigt aus dem Bildschirm, verbeugt sich blechern und sieht die Maschine an wie einen Fleck, der weg muss. | Roboter betritt den Dachboden; nur FREUND\_0815; Jingle Figur gewonnen |
-| FI\_RUF\_HAU\_0190 | Modell 08/15 | Ich komme wieder. Habe ich gesagt. Ich halte Wort. Ich halte alles, was man mir hinhält. | nur FREUND\_0815 |
-| FI\_RUF\_KAL\_0200 | Kalle | Max! Alter! Der Hausmeister ist unterwegs zu Konner Nummer 31. Ich kann dir Miau-Morse schicken. Hilft das? | im Bildschirm; nur ohne FREUND\_0815 |
-| FI\_RUF\_MAX\_0210 | Max | Nein, Kalle. Ehrlich gesagt nicht. | nur ohne FREUND\_0815 |
-| FI\_RUF\_KAL\_0220 | Kalle | Dachte ich mir. Viel Glück, Mann. Du hast noch den Löffel! | winkt; nur ohne FREUND\_0815 |
-| FI\_RUF\_PIX\_0230 | Pixel | Hättest du den Blechkopf geölt, stünde er jetzt hier. // Ich sage das nicht als Vorwurf. Ich sage es fürs Protokoll, und das Protokoll vergisst nichts. | nur ohne FREUND\_0815 |
+| FI\_RUF\_HAU\_0170 | Modell 08/15 | Servus, Bursche. Verriegelt, sagst du? Ordnungsgemäß? Dann komm ich. Ordnung ist mein Fach. | im Bildschirm, Gelenke geölt; nur W3\_FREUND\_0815 |
+| FI\_RUF\_NAR\_0180 | – | Modell 08/15 steigt aus dem Bildschirm, verbeugt sich blechern und sieht die Maschine an wie einen Fleck, der weg muss. | Roboter betritt den Dachboden; nur W3\_FREUND\_0815; Jingle Figur gewonnen |
+| FI\_RUF\_HAU\_0190 | Modell 08/15 | Ich komme wieder. Habe ich gesagt. Ich halte Wort. Ich halte alles, was man mir hinhält. | nur W3\_FREUND\_0815 |
+| FI\_RUF\_KAL\_0200 | Kalle | Max! Alter! Der Hausmeister ist unterwegs zu Konner Nummer 31. Ich kann dir Miau-Morse schicken. Hilft das? | im Bildschirm; nur ohne W3\_FREUND\_0815 |
+| FI\_RUF\_MAX\_0210 | Max | Nein, Kalle. Ehrlich gesagt nicht. | nur ohne W3\_FREUND\_0815 |
+| FI\_RUF\_KAL\_0220 | Kalle | Dachte ich mir. Viel Glück, Mann. Du hast noch den Löffel! | winkt; nur ohne W3\_FREUND\_0815 |
+| FI\_RUF\_PIX\_0230 | Pixel | Hättest du den Blechkopf geölt, stünde er jetzt hier. // Ich sage das nicht als Vorwurf. Ich sage es fürs Protokoll, und das Protokoll vergisst nichts. | nur ohne W3\_FREUND\_0815 |
 | FI\_RUF\_MAX\_0240 | Max | Kanal 999. Flimmer? Irgendwer? | Benutzen: Drehknopf, Kanal 999 |
 | FI\_RUF\_FLI\_0250 | Flimmer | Max! Zschh! Ich kann nicht raus, ich bin Rauschen! Aber ich drück dir die Daumen! Ich hab keine Daumen! Zschh! | im Bildschirm, flackert |
 | FI\_RUF\_GER\_0260 | Gerd Glück | Eingesperrt? Dann brauchen Sie den Gerd-Glück-Dietrich, nur für kurze Zeit, jetzt mit Gratis-Gerd! | im Hintergrund, Glitzersakko-Lichter |
 | FI\_RUF\_MAX\_0270 | Max | Zappmann? | leise |
 | FI\_RUF\_NAR\_0280 | – | Auf dem goldenen Sofa sitzt niemand. Ein Zettel liegt darauf: „Bin aufgestanden. Z.“ | Kamera kurz aufs Sofa |
 | FI\_RUF\_MAX\_0290 | Max | Gut. Gut für ihn. |  |
-| FI\_RUF\_ZEL\_0300 | Zeldina | Also. Eine Prinzessin, ein Kater, ein Junge und ein durchgedrehter Erfinder. Das hat in jedem Märchen gereicht, also reicht es hier auch. | nach allen vier Kanälen; ohne FREUND\_0815 |
-| FI\_RUF\_ZEL\_0310 | Zeldina | Also. Eine Prinzessin, ein Kater, ein Junge, ein Hausmeister und ein durchgedrehter Erfinder. Das ist fast eine WG. | nach allen vier Kanälen; mit FREUND\_0815 |
+| FI\_RUF\_ZEL\_0300 | Zeldina | Also. Eine Prinzessin, ein Kater, ein Junge und ein durchgedrehter Erfinder. Das hat in jedem Märchen gereicht, also reicht es hier auch. | nach allen vier Kanälen; ohne W3\_FREUND\_0815 |
+| FI\_RUF\_ZEL\_0310 | Zeldina | Also. Eine Prinzessin, ein Kater, ein Junge, ein Hausmeister und ein durchgedrehter Erfinder. Das ist fast eine WG. | nach allen vier Kanälen; mit W3\_FREUND\_0815 |
 | FI\_RUF\_MAX\_0320 | Max | Zeldina, was war das für ein Zauberstab? | Reden: Zeldina, Option |
 | FI\_RUF\_ZEL\_0330 | Zeldina | Moderworts. Er hat ihn liegen lassen, als er zurück in die Schule ist. Ich benutze ihn für klemmende Türen. Und für Vermieter. | Hinweis auf Schritt A |
 | FI\_RUF\_MAX\_0380 | Max | Für Vermieter? |  |
@@ -410,12 +423,12 @@ Szene mit vier Drehknopf-Stufen. Nach LUKE\_ERKANNT dreht Max den Knopf einmal d
 | FI\_RUF\_ZEL\_0350 | Zeldina | Sieben Stockwerke, kein Aufzug, ein Drache als Untermieter. Ich liebe ihn. Ich suche trotzdem weiter. Man sucht immer weiter. |  |
 | FI\_RUF\_MAX\_0400 | Max | Und was suchst du jetzt? |  |
 | FI\_RUF\_ZEL\_0410 | Zeldina | Was mit Aufzug. Und ohne Drache. Der darf aber zu Besuch kommen, er bringt immer Kohlen mit. |  |
-| FI\_RUF\_MAX\_0360 | Max | Wie geht's den Gelenken? | Reden: Modell 08/15, Option; nur FREUND\_0815 |
+| FI\_RUF\_MAX\_0360 | Max | Wie geht's den Gelenken? | Reden: Modell 08/15, Option; nur W3\_FREUND\_0815 |
 | FI\_RUF\_HAU\_0370 | Modell 08/15 | Geschmeidig, Bursche. Olivenöl, kalt gepresst. Ich fühle mich wie Baujahr neu. Was soll ich halten? | Hinweis auf Schritt B |
 
 ## 7. Finale: Das letzte Rätsel (FI\_RAET)
 
-Vier Schritte, die in jeder Reihenfolge begonnen, aber nur in einer beendet werden können. (A) Zeldina hebelt den Riegel der Luke auf; die Luke bleibt trotzdem zu, weil der Teig-Druck sie von innen festhält (Druckmesser). (B) Die Ofentür muss gehalten werden, bevor die Maschine stoppt: Modell 08/15 hält sie (FREUND\_0815), sonst klemmt Max den Kochlöffel aus dem Pflichtfach hinein. (C) Die Zündkapsel: Opa hat sie vor Schreck fallen lassen, die Zelle ist herausgesprungen, beides liegt unter dem Ohrensessel; die Zelle so weit hinten, dass nur Pixel sie holen kann (Figurenwechsel). (D) Die rote Taste: Fernbedienung auf den Empfänger, Opa brüllt, Max drückt. Stoppt Max die Maschine vor (B), platzt der Teig heraus, kein Scheitern, nur ein Gag, und der Druck baut sich wieder auf. Das Ende (D) braucht B und C; A ist dafür nicht zwingend, weil beim Stopp auch die Sicherheitsverriegelung zurückfährt, aber Zeldinas Hebeln zeigt, dass der Druck das eigentliche Problem ist. Fehlversuche mit eigener Zeile stehen am Ende der Tabelle. Hinweise in Abschnitt 7b.
+Vier Schritte, die in jeder Reihenfolge begonnen, aber nur in einer beendet werden können. (A) Zeldina hebelt den Riegel der Luke auf; die Luke bleibt trotzdem zu, weil der Teig-Druck sie von innen festhält (Druckmesser). (B) Die Ofentür muss gehalten werden, bevor die Maschine stoppt: Modell 08/15 hält sie (W3\_FREUND\_0815), sonst klemmt Max den Kochlöffel aus dem Pflichtfach hinein. (C) Die Zündkapsel: Opa hat sie vor Schreck fallen lassen, die Zelle ist herausgesprungen, beides liegt unter dem Ohrensessel; die Zelle so weit hinten, dass nur Pixel sie holen kann (Figurenwechsel). (D) Die rote Taste: Fernbedienung auf den Empfänger, Opa brüllt, Max drückt. Stoppt Max die Maschine vor (B), platzt der Teig heraus, kein Scheitern, nur ein Gag, und der Druck baut sich wieder auf. Das Ende (D) braucht B und C; A ist dafür nicht zwingend, weil beim Stopp auch die Sicherheitsverriegelung zurückfährt, aber Zeldinas Hebeln zeigt, dass der Druck das eigentliche Problem ist. Fehlversuche mit eigener Zeile stehen am Ende der Tabelle. Hinweise in Abschnitt 7b.
 
 | ID | Sprecher | Text | Auslöser |
 | --- | --- | --- | --- |
@@ -427,14 +440,15 @@ Vier Schritte, die in jeder Reihenfolge begonnen, aber nur in einer beendet werd
 | FI\_RAET\_PIX\_0060 | Pixel | Dann muss das Ding aufhören zu laufen. Und wer sagt dem Ding, dass es aufhören soll? // Derjenige mit der Zündkapsel. Sieh dir deinen Opa an. Was hat er in der Hand? |  |
 | FI\_RAET\_MAX\_0070 | Max | Nichts. Er hat gar nichts in der Hand. Er fuchtelt nur mit leeren Händen herum. | sieht Opa an |
 | FI\_RAET\_OPA\_0080 | Opa | Die Zündkapsel! Wo ist die Zündkapsel? Ich hatte sie! Ich hatte sie, als es geklingelt hat! | Panik-Animation, sucht am Boden |
-| FI\_RAET\_MAX\_0090 | Max | Zeldina, Opa, der Roboter und ich. Wenn wir jetzt die Luke aufkriegen, kommt Oma rein, und das Ding läuft noch. | Reden: Zeldina nach Schritt A |
+| FI\_RAET\_MAX\_0090 | Max | Zeldina, Opa, der Roboter und ich. Wenn wir jetzt die Luke aufkriegen, kommt Oma rein, und das Ding läuft noch. | Reden: Zeldina nach Schritt A; nur W3\_FREUND\_0815 |
+| FI\_RAET\_MAX\_0095 | Max | Zeldina, Opa und ich. Wenn wir jetzt die Luke aufkriegen, kommt Oma rein, und das Ding läuft noch. | Reden: Zeldina nach Schritt A; ohne W3\_FREUND\_0815 |
 | FI\_RAET\_ZEL\_0100 | Zeldina | Dann stoppt es. Und haltet vorher die Ofentür. Ich hab mal gesehen, was ein Drache macht, wenn man die Tür zu früh aufmacht. | Hinweis auf Schritt B |
-| FI\_RAET\_MAX\_0110 | Max | Du kannst die Ofentür halten? | Reden: Modell 08/15, Option; nur FREUND\_0815; Schritt B |
+| FI\_RAET\_MAX\_0110 | Max | Du kannst die Ofentür halten? | Reden: Modell 08/15, Option; nur W3\_FREUND\_0815; Schritt B |
 | FI\_RAET\_HAU\_0120 | Modell 08/15 | Ich halte Türen seit Baujahr 2077. Diese hier ist warm. Ich halte sie trotzdem. Servus, Tür. | stellt sich an die Ofentür, Animation Ofentür halten; Schritt B gelöst |
-| FI\_RAET\_PIX\_0130 | Pixel | Er hält eine Ofentür und grüßt sie dabei. Das ist der höflichste Roboter, den ich kenne. // Zugegeben, ich kenne nur zwei, und der andere wollte mich staubsaugen. | nur FREUND\_0815 |
-| FI\_RAET\_MAX\_0140 | Max | Der Kochlöffel klemmt in der Ofentür, er klebt, und er hält. Ich nenne das eine Bindung. | Kochlöffel auf Ofentür; ohne FREUND\_0815; Schritt B gelöst |
-| FI\_RAET\_PIX\_0150 | Pixel | Ein Kochlöffel hält den Weltuntergang auf. Moderwort hätte geweint. // Ich weine nicht. Ich bin nur nah dran, und das liegt am Dampf. | nach Kochlöffel in der Ofentür; ohne FREUND\_0815 |
-| FI\_RAET\_MAX\_0160 | Max | Der Blechkopf hat die Tür im Griff. Der Löffel bleibt, wo er ist. | Kochlöffel auf Ofentür; mit FREUND\_0815 |
+| FI\_RAET\_PIX\_0130 | Pixel | Er hält eine Ofentür und grüßt sie dabei. Das ist der höflichste Roboter, den ich kenne. // Zugegeben, ich kenne nur zwei, und der andere wollte mich staubsaugen. | nur W3\_FREUND\_0815 |
+| FI\_RAET\_MAX\_0140 | Max | Der Kochlöffel klemmt in der Ofentür, er klebt, und er hält. Ich nenne das eine Bindung. | Kochlöffel auf Ofentür; ohne W3\_FREUND\_0815; Schritt B gelöst |
+| FI\_RAET\_PIX\_0150 | Pixel | Ein Kochlöffel hält den Weltuntergang auf. Moderwort hätte geweint. // Ich weine nicht. Ich bin nur nah dran, und das liegt am Dampf. | nach Kochlöffel in der Ofentür; ohne W3\_FREUND\_0815 |
+| FI\_RAET\_MAX\_0160 | Max | Der Blechkopf hat die Tür im Griff. Der Löffel bleibt, wo er ist. | Kochlöffel auf Ofentür; mit W3\_FREUND\_0815 |
 | FI\_RAET\_MAX\_0170 | Max | Unter dem Sessel blinkt etwas Rotes, ganz regelmäßig. Wie eine Benachrichtigung, die keiner liest. | Ansehen: Ohrensessel; Schritt C |
 | FI\_RAET\_MAX\_0175 | Max | Es blinkt immer noch. Eine ungelesene Nachricht unter dem Sessel, und Opa hat die Mitteilungen aus. | Ansehen: Ohrensessel, zweites Mal; Schritt C |
 | FI\_RAET\_MAX\_0180 | Max | Da. Die Fernbe… die Zündkapsel. Der Deckel ist offen. Die Zelle ist weg. | Benutzen: Ohrensessel; Fernbedienung ohne Zelle ins Inventar |
@@ -461,11 +475,11 @@ Vier Schritte, die in jeder Reihenfolge begonnen, aber nur in einer beendet werd
 | FI\_RAET\_OPA\_0380 | Opa | Siehst du! Siehst du, was passiert, wenn man mein Werk nicht respektiert! | nach Fehlversuch Rote Taste vor Schritt B |
 | FI\_RAET\_MAX\_0390 | Max | Der Zauberstab öffnet Türen, keine Maschinen. Und Zeldina lässt ihn sowieso nicht los. | Fehlversuch: Zeldina auf Maschine |
 | FI\_RAET\_ZEL\_0400 | Zeldina | Ich hebele Riegel, keine Öfen. Für Öfen gibt es Fachleute. | Fehlversuch: Zeldina auf Ofentür |
-| FI\_RAET\_HAU\_0410 | Modell 08/15 | Die Luke ist ordnungsgemäß verriegelt. Ich öffne nichts, was ordnungsgemäß ist. Servus. | Fehlversuch: Modell 08/15 auf Luke; nur FREUND\_0815 |
+| FI\_RAET\_HAU\_0410 | Modell 08/15 | Die Luke ist ordnungsgemäß verriegelt. Ich öffne nichts, was ordnungsgemäß ist. Servus. | Fehlversuch: Modell 08/15 auf Luke; nur W3\_FREUND\_0815 |
 | FI\_RAET\_MAX\_0420 | Max | Der Löffel passt nicht in den Riegel. Er klebt bloß dran, und das hilft keinem. | Fehlversuch: Kochlöffel auf Luke |
 | FI\_RAET\_PIX\_0430 | Pixel | Die Thunfischdose hält keine Ofentür. Sie hält mich bei Laune, und das ist ihre einzige Aufgabe. | Fehlversuch: Thunfischdose auf Ofentür |
-| FI\_RAET\_OPA\_0440 | Opa | Die Zelle ist nichts ohne die Kapsel! Nichts! Ein Knöpfchen ohne Knopf! | Fehlversuch: Zelle allein auf Empfänger |
-| FI\_RAET\_MAX\_0450 | Max | Keine Zelle, keine Macht. Kenn ich vom Handy, das ist im Grunde mein ganzes Leben. | Fehlversuch: Fernbedienung ohne Zelle auf Empfänger |
+| FI\_RAET\_OPA\_0440 | Opa | Die Zelle ist nichts ohne die Kapsel! Nichts! Strom ohne Auftrag! | Fehlversuch: Zelle allein auf Empfänger |
+| FI\_RAET\_MAX\_0450 | Max | Ich ziele, ich drücke, nichts. Ich bin im Endkampf und brauche Batterien. Typisch. | Fehlversuch: Fernbedienung ohne Zelle auf Empfänger |
 | FI\_RAET\_MAX\_0460 | Max | Opa die Zündkapsel geben? Er hat sie schon einmal fallen lassen. Und er hat sie schon einmal benutzt. Lieber nicht. | Fehlversuch: Zündkapsel auf Opa |
 | FI\_RAET\_OPA\_0470 | Opa | Ja! Gib sie … nein. Nein, ich will sie gar nicht. Meine Hände zittern. Mach du. | nach Fehlversuch Zündkapsel auf Opa |
 
@@ -478,14 +492,14 @@ Drei Stufen je Schritt nach dem Hinweissystem (Spielsysteme). Schritt 0 ist die 
 | FI\_HINT\_PIX\_0010 | Pixel | Dein Großvater brüllt, die Luke blinkt, und du stehst nur da. // Einer von euch dreien sollte etwas tun, und ich tippe nicht auf die Luke. | Schritt 0, Stufe 1 |
 | FI\_HINT\_PIX\_0020 | Pixel | Die Luke. Sieh sie dir an, und dann fass sie an. Danach wissen wir wenigstens, was wir wissen. | Schritt 0, Stufe 2 |
 | FI\_HINT\_PIX\_0030 | Pixel | Benutz die Luke. Sie geht nicht auf. Aber erst, wenn du es versucht hast, denkst du über Alternativen nach. So bist du. | Schritt 0, Stufe 3 |
-| FI\_HINT\_PIX\_0040 | Pixel | Hier steht eine Prinzessin mit dem Zauberstab eines Dunklen Lords herum. // Das ist kein Zufall, junger Mann. Im Fernsehen nennt man so etwas Besetzung. | Schritt A, Stufe 1 |
+| FI\_HINT\_PIX\_0040 | Pixel | Hier steht eine Prinzessin mit dem Zauberstab eines Dunklen Lords herum. // Im Fernsehen nennt man so etwas Besetzung. | Schritt A, Stufe 1 |
 | FI\_HINT\_PIX\_0050 | Pixel | Zeldina hat dir gesagt, wofür sie den Stab benutzt. Türen. Vermieter. Hier gibt es eine Tür. | Schritt A, Stufe 2 |
-| FI\_HINT\_PIX\_0060 | Pixel | Rede mit Zeldina und frag sie nach der Luke. Sie hebelt den Riegel auf. Ich hätte es selbst getan, aber ich habe keine Daumen. | Schritt A, Stufe 3 |
+| FI\_HINT\_PIX\_0060 | Pixel | Rede mit Zeldina und frag sie nach der Luke. Sie hebelt den Riegel auf. Ich hätte es selbst getan, aber ich bin heute fürs Zusehen eingeteilt. | Schritt A, Stufe 3 |
 | FI\_HINT\_PIX\_0070 | Pixel | Hinter dem kleinen Fenster wächst etwas. Wenn das Ding stehen bleibt, will das Etwas heraus. // Jemand sollte also die Tür halten. Ich nicht, ich bin für so etwas zu flauschig. | Schritt B, Stufe 1 |
-| FI\_HINT\_PIX\_0080 | Pixel | Hier steht ein Roboter, der Türen hält, seit er gebaut wurde. Frag ihn. Höflich. Er ist Österreicher. | Schritt B, Stufe 2; nur FREUND\_0815 |
-| FI\_HINT\_PIX\_0090 | Pixel | Kein Roboter da. Aber im Pflichtfach liegt etwas, das klemmt und klebt und sich noch nie beschwert hat. | Schritt B, Stufe 2; ohne FREUND\_0815 |
-| FI\_HINT\_PIX\_0100 | Pixel | Rede mit Modell 08/15 und lass ihn die Ofentür halten. Er wird sie grüßen. Lass ihn. | Schritt B, Stufe 3; nur FREUND\_0815 |
-| FI\_HINT\_PIX\_0110 | Pixel | Klemm den Kochlöffel in die Ofentür. Er hat einen Dunklen Lord überstanden, er übersteht Teig. | Schritt B, Stufe 3; ohne FREUND\_0815 |
+| FI\_HINT\_PIX\_0080 | Pixel | Hier steht ein Roboter, der Türen hält, seit er gebaut wurde. Frag ihn. Höflich. Er ist Österreicher. | Schritt B, Stufe 2; nur W3\_FREUND\_0815 |
+| FI\_HINT\_PIX\_0090 | Pixel | Kein Roboter da. Aber im Pflichtfach liegt etwas, das klemmt und klebt und sich noch nie beschwert hat. | Schritt B, Stufe 2; ohne W3\_FREUND\_0815 |
+| FI\_HINT\_PIX\_0100 | Pixel | Rede mit Modell 08/15 und lass ihn die Ofentür halten. Er wird sie grüßen. Lass ihn. | Schritt B, Stufe 3; nur W3\_FREUND\_0815 |
+| FI\_HINT\_PIX\_0110 | Pixel | Klemm den Kochlöffel in die Ofentür. Er hat einen Dunklen Lord überstanden, er übersteht Teig. | Schritt B, Stufe 3; ohne W3\_FREUND\_0815 |
 | FI\_HINT\_PIX\_0120 | Pixel | Die Maschine hört nur auf das, was dein Opa in der Hand hatte. Hatte. Vergangenheit. Wo ist es jetzt? | Schritt C, Stufe 1 |
 | FI\_HINT\_PIX\_0130 | Pixel | Unter Sesseln liegt alles, was Menschen fallen lassen. Sieh unter den Sessel. Dann wechsel zu mir, ich passe da drunter. | Schritt C, Stufe 2 |
 | FI\_HINT\_PIX\_0140 | Pixel | Die Fernbedienung liegt unter dem Sessel, die Zelle ganz hinten. Du nimmst die Fernbedienung, ich hole die Zelle, du steckst sie rein. // Ich hasse es, wenn ich Arbeitsschritte aufzählen muss. | Schritt C, Stufe 3 |
@@ -494,19 +508,19 @@ Drei Stufen je Schritt nach dem Hinweissystem (Spielsysteme). Schritt 0 ist die 
 | FI\_HINT\_PIX\_0170 | Pixel | Richte die Zündkapsel auf den Empfänger und drück die rote Taste. Stopp. Vorher die Ofentür sichern, sonst isst du Teig. Nochmal. | Schritt D, Stufe 3 |
 | FI\_HINT\_PIX\_0180 | Pixel | Ich denke noch nach. Es sieht aus wie Starren, und es ist auch Starren. Aber mit Inhalt. | Wartezeile Finale, vor der nächsten Stufe |
 | FI\_HINT\_PIX\_0190 | Pixel | Alles erledigt. Die Luke geht gleich auf. Ich würde mich jetzt hinsetzen, wenn ich du wäre. Ich bin nicht du. Ich sitze schon. | nichts offen, nach Schritt D |
-| FI\_HINT\_PIX\_0200 | Pixel | Oben hat jemand Geburtstag. Das steht seit Wochen im Kalender. Mit leeren Händen geht man da nicht hin. Sagt man. | Bonus Kekse, Stufe 1 |
+| FI\_HINT\_PIX\_0200 | Pixel | Unten hat jemand Geburtstag. Das steht seit Wochen im Kalender. Dein Großvater hat es trotzdem geschafft. Mit leeren Händen geht man da nicht hin. Sagt man. | Bonus Kekse, Stufe 1 |
 | FI\_HINT\_PIX\_0210 | Pixel | In der Fundkiste liegt Omas Kekstüte. Ich nenne das nicht Kekse. Ich habe daran gerochen. | Bonus Kekse, Stufe 2 |
 | FI\_HINT\_PIX\_0220 | Pixel | Benutz die Fundkiste und nimm die Tüte mit. Den Rest erledigt der Geburtstag. Ich schaue dabei weg. | Bonus Kekse, Stufe 3 |
 
 ## 8. Finale, Stufe 2: Die Auflösung (FI\_AUFL)
 
-Szene. Die Maschine fährt herunter, die Nadel sinkt, Dampf zieht ab. Die Ofentür geht langsam auf (Modell 08/15 öffnet sie, oder der Kochlöffel fällt heraus). Es riecht nach Kuchen. Opa wird klein, Max wird ruhig, Pixel bekommt recht. Danach öffnet sich die Luke, Oma steht darin. Varianten nach FREUND\_0815 und KEKSE\_DABEI.
+Szene. Die Maschine fährt herunter, die Nadel sinkt, Dampf zieht ab. Die Ofentür geht langsam auf (Modell 08/15 öffnet sie, oder der Kochlöffel fällt heraus). Es riecht nach Kuchen. Opa wird klein, Max wird ruhig, Pixel bekommt recht. Die vier Dinge fragt der Spieler selbst ab (`FI_AUFL_MAX_0110` bis `0170`): Ei, Korn und Zelle in beliebiger Reihenfolge, zuletzt die Fernbedienung. Danach öffnet sich die Luke, Oma steht darin. Varianten nach W3\_FREUND\_0815 und FI\_KEKSE\_DABEI.
 
 | ID | Sprecher | Text | Regie |
 | --- | --- | --- | --- |
 | FI\_AUFL\_NAR\_0010 | – | Die Maschine seufzt. Die Lampen gehen eine nach der anderen aus, die Nadel fällt ins Grüne, der Riegel klackt zurück. Stille. | Maschine stoppt, Jingle Rätsel gelöst |
-| FI\_AUFL\_HAU\_0020 | Modell 08/15 | Druck normal. Ich lasse jetzt los. Servus, Tür. Es war mir eine Ehre. | öffnet die Ofentür vorsichtig; nur FREUND\_0815 |
-| FI\_AUFL\_NAR\_0030 | – | Der Kochlöffel fällt aus der Tür und bleibt am Boden kleben. Die Tür schwingt auf. | ohne FREUND\_0815 |
+| FI\_AUFL\_HAU\_0020 | Modell 08/15 | Druck normal. Ich lasse jetzt los. Servus, Tür. Es war mir eine Ehre. | öffnet die Ofentür vorsichtig; nur W3\_FREUND\_0815 |
+| FI\_AUFL\_NAR\_0030 | – | Der Kochlöffel fällt aus der Tür und bleibt am Boden kleben. Die Tür schwingt auf. | ohne W3\_FREUND\_0815 |
 | FI\_AUFL\_NAR\_0040 | – | Aus der Maschine quillt Duft. Warm, süß, braun. | Dampf-Effekt, warmes Licht |
 | FI\_AUFL\_MAX\_0050 | Max | Das riecht nach … | hält inne |
 | FI\_AUFL\_PIX\_0060 | Pixel | Sag es. |  |
@@ -514,23 +528,23 @@ Szene. Die Maschine fährt herunter, die Nadel sinkt, Dampf zieht ab. Die Ofent�
 | FI\_AUFL\_PIX\_0080 | Pixel | Bäckerei. Ich habe es gesagt, nach Welt 2, laut und deutlich, mit Niesen. // Aber niemand hört dem Kater zu. Niemand hört jemals dem Kater zu. |  |
 | FI\_AUFL\_MAX\_0090 | Max | Opa. Was ist das für eine Maschine. | sehr ruhig |
 | FI\_AUFL\_OPA\_0100 | Opa | Ein … Backofen. Ein selbstgebauter. Mit Dampfdruck und Rührwerk. Modell Konrad. | ganz klein, Goggles rutschen |
-| FI\_AUFL\_MAX\_0110 | Max | Das Drachenei. |  |
+| FI\_AUFL\_MAX\_0110 | Max | Das Drachenei. | Spieler wählt; Ei, Korn und Zelle in freier Reihenfolge |
 | FI\_AUFL\_OPA\_0120 | Opa | Ein Ei. Freiland. |  |
-| FI\_AUFL\_MAX\_0130 | Max | Das Pharaonenkorn. |  |
+| FI\_AUFL\_MAX\_0130 | Max | Das Pharaonenkorn. | Spieler wählt; freie Reihenfolge |
 | FI\_AUFL\_OPA\_0140 | Opa | Mehl. Type 405. Fein wie Staub. Das war wichtig, das mit dem Staub. |  |
-| FI\_AUFL\_MAX\_0150 | Max | Die Ewige Energiezelle. |  |
+| FI\_AUFL\_MAX\_0150 | Max | Die Ewige Energiezelle. | Spieler wählt; freie Reihenfolge |
 | FI\_AUFL\_OPA\_0160 | Opa | Eine Batterie. AA. Für die Fernbedienung. Sie hält ewig, wenn man sie nicht benutzt. |  |
-| FI\_AUFL\_MAX\_0170 | Max | Und die Goldene Fernbedienung ist … |  |
+| FI\_AUFL\_MAX\_0170 | Max | Und die Goldene Fernbedienung ist … | Spieler wählt; erst nach den drei anderen |
 | FI\_AUFL\_OPA\_0180 | Opa | Meine. Die ich seit Wochen suche. Ja. |  |
 | FI\_AUFL\_NAR\_0190 | – | Niemand sagt etwas. Zeldina sieht die Decke an, als prüfe sie Feuchtigkeit. | Pause |
 | FI\_AUFL\_MAX\_0200 | Max | Ich war in vier Welten. Ich habe einen Troll ins Fußbad gestellt, einen Pharao zu einer Entscheidung gebracht … eine KI in den Wahnsinn geredet und einen Fernsehchef vom Sofa geholt. // Für einen Einkaufszettel. |  |
 | FI\_AUFL\_OPA\_0210 | Opa | Für einen Kuchen, Max. Das ist etwas ganz anderes. |  |
 | FI\_AUFL\_MAX\_0220 | Max | Und die Fernbedienung? Du hast mich heute Nachmittag gefragt, ob ich sie gesehen hab. |  |
-| FI\_AUFL\_OPA\_0230 | Opa | Ich war schon mal drin. Im Zapp-O-Mat. Einmal. Zum Testen. // Auf Kanal 999 ist sie mir aus der Tasche gefallen, direkt in Zappmanns Studio. Und ich wollte nicht zugeben, wo sie liegt. Vor dem Kater schon gar nicht. | sieht Pixel nicht an |
-| FI\_AUFL\_PIX\_0240 | Pixel | Ich hab's gewusst. Seit Welt 3. // Das Hologramm. „Hilf mir, Max.“ Wer hinterlässt eine Notfall-Nachricht in einer Welt, in der er angeblich nie war? |  |
-| FI\_AUFL\_MAX\_0250 | Max | Du hast es in Welt 4 laut gesagt. Und dann kam der Amboss. |  |
+| FI\_AUFL\_OPA\_0230 | Opa | Ich war schon mal drin. Im Zapp-O-Mat. Einmal. Zum Testen. Durch alle Kanäle. // Auf Kanal 999 ist sie mir aus der Tasche gefallen, direkt in Zappmanns Studio. Und ich wollte nicht zugeben, wo sie liegt. Vor dem Kater schon gar nicht. | sieht Pixel nicht an |
+| FI\_AUFL\_PIX\_0240 | Pixel | Ich hab's gewusst. Seit Kanal 42. // Das Hologramm. „Hilf mir, Max.“ Wer hinterlässt eine Notfall-Nachricht in einer Welt, in der er angeblich nie war? |  |
+| FI\_AUFL\_MAX\_0250 | Max | Du hast es auf Kanal 999 laut gesagt. Und dann kam der Amboss. |  |
 | FI\_AUFL\_PIX\_0260 | Pixel | Das zählt als Zensur. Ich werde mich beschweren, sobald ich herausgefunden habe, bei wem. |  |
-| FI\_AUFL\_MAX\_0270 | Max | Und Zappmann? Die Lichterkette hat geblinkt, du kennst ihn. Lange Geschichte. |  |
+| FI\_AUFL\_MAX\_0270 | Max | Und Zappmann? Du kennst ihn. Lange Geschichte, hast du geblinkt. Ich hab Zeit. |  |
 | FI\_AUFL\_OPA\_0280 | Opa | 1977. „Zappis Puppenstube.“ Ich war der Bastel-Onkel. Jeden Samstag. // In der letzten Folge habe ich live einen Backofen vorgeführt. Er ist explodiert. Live. Mit Teig. Auf Zappi. | leise, dann mit einem Rest Stolz |
 | FI\_AUFL\_OPA\_0290 | Opa | Zappmann durfte danach nie wieder vor eine Kamera. Und ich backe seitdem nur noch heimlich. Auf dem Dachboden. Mit Verriegelung. |  |
 | FI\_AUFL\_MAX\_0300 | Max | Deshalb die Reiseposter. Deshalb die Kiste mit den Fernbedienungen. Und deshalb „Vorheizen“. |  |
@@ -544,29 +558,29 @@ Szene. Die Maschine fährt herunter, die Nadel sinkt, Dampf zieht ab. Die Ofent�
 | FI\_AUFL\_MAX\_0372 | Max | Opa. Du hättest mich auch einfach fragen können, ob ich für dich einkaufen geh. |  |
 | FI\_AUFL\_OPA\_0374 | Opa | Hätte ich. Und was hättest du gesagt? | sieht ihn lange an |
 | FI\_AUFL\_MAX\_0376 | Max | … Nein. Wahrscheinlich nicht. | nach einer Pause |
-| FI\_AUFL\_PIX\_0380 | Pixel | Beide sagen die Wahrheit. Es riecht nach Kuchen und nach Reue. // Reue riecht bei Menschen ein wenig nach nassem Hund. Aber im Gegensatz zum Hund kann man ihr nicht böse sein. |  |
-| FI\_AUFL\_NAR\_0390 | – | Die Luke geht auf. Oma steht in der Öffnung, Handtasche am Arm, und sieht: Rauch, einen Kuchen, eine Prinzessin, einen Kater, ihren Mann. | Oma betritt den Dachboden; mit FREUND\_0815 zusätzlich der Roboter |
+| FI\_AUFL\_PIX\_0380 | Pixel | Es riecht nach Kuchen und nach Reue. // Reue riecht bei Menschen nach nassem Hund. Ich gehe ans Fenster. |  |
+| FI\_AUFL\_NAR\_0390 | – | Die Luke geht auf. Oma steht in der Öffnung, Handtasche am Arm, und sieht: Rauch, einen Kuchen, eine Prinzessin, einen Kater, ihren Mann. | Oma betritt den Dachboden; mit W3\_FREUND\_0815 zusätzlich der Roboter |
 | FI\_AUFL\_OMA\_0400 | Oma | Konrad. | nur das |
 | FI\_AUFL\_OPA\_0410 | Opa | Hildegard. Du bist früh. | Hildegard: festgelegt am 9. November 2026 |
 | FI\_AUFL\_OMA\_0420 | Oma | Die Bahn war pünktlich. Es gibt also doch noch Wunder. | mustert Zeldina |
 | FI\_AUFL\_OMA\_0430 | Oma | Du bist also die Neue. | zu Zeldina |
 | FI\_AUFL\_ZEL\_0440 | Zeldina | Ich suche nur eine Wohnung. |  |
 | FI\_AUFL\_OMA\_0450 | Oma | Der Dachboden wäre frei. | sieht Opa an |
-| FI\_AUFL\_OMA\_0460 | Oma | Und Sie sind? | zu Modell 08/15; nur FREUND\_0815 |
-| FI\_AUFL\_HAU\_0470 | Modell 08/15 | Hausmeister, gnä' Frau. Modell 08/15. Servus. | verbeugt sich; nur FREUND\_0815 |
-| FI\_AUFL\_OMA\_0480 | Oma | Endlich mal einer, der putzt. | nur FREUND\_0815 |
+| FI\_AUFL\_OMA\_0460 | Oma | Und Sie sind? | zu Modell 08/15; nur W3\_FREUND\_0815 |
+| FI\_AUFL\_HAU\_0470 | Modell 08/15 | Hausmeister, gnä' Frau. Modell 08/15. Servus. | verbeugt sich; nur W3\_FREUND\_0815 |
+| FI\_AUFL\_OMA\_0480 | Oma | Endlich mal einer, der putzt. | nur W3\_FREUND\_0815 |
 | FI\_AUFL\_OMA\_0490 | Oma | Max. Du stehst so gerade. Was ist denn mit dir passiert? | zu Max |
 | FI\_AUFL\_MAX\_0500 | Max | Lange Geschichte, Oma. Ungefähr vier Staffeln. |  |
-| FI\_AUFL\_MAX\_0510 | Max | Oma. Die sind … von einer alten Dame, die alles vorher weiß. Alles Gute zum Geburtstag. | automatisch nach 0500, nur KEKSE\_DABEI (Tüte im Inventar): Max überreicht die Tüte |
-| FI\_AUFL\_NAR\_0520 | – | Oma nimmt einen Hundekuchen, beißt ab, kaut. Pixel macht sein entsetztes Gesicht. | nur KEKSE\_DABEI; Mimik Pixel entsetzt |
-| FI\_AUFL\_OMA\_0530 | Oma | Knusprig. Wie von Mutti. | nur KEKSE\_DABEI |
-| FI\_AUFL\_PIX\_0540 | Pixel | Ich werde das nie verwinden. Ich habe es schon einmal gesagt, und jetzt gilt es doppelt. // Sie hat es gegessen. Freiwillig. Mit Genuss. | nur KEKSE\_DABEI |
+| FI\_AUFL\_MAX\_0510 | Max | Oma. Die sind … von einer alten Dame, die alles vorher weiß. Alles Gute zum Geburtstag. | automatisch nach 0500, nur FI\_KEKSE\_DABEI (Tüte im Inventar): Max überreicht die Tüte |
+| FI\_AUFL\_NAR\_0520 | – | Oma nimmt einen Hundekuchen, beißt ab, kaut. Pixel macht sein entsetztes Gesicht. | nur FI\_KEKSE\_DABEI; Mimik Pixel entsetzt |
+| FI\_AUFL\_OMA\_0530 | Oma | Knusprig. Wie von Mutti. | nur FI\_KEKSE\_DABEI |
+| FI\_AUFL\_PIX\_0540 | Pixel | Ich werde das nie verwinden. Ich habe es schon einmal gesagt, und jetzt gilt es doppelt. // Sie hat es gegessen. Freiwillig. Mit Genuss. | nur FI\_KEKSE\_DABEI |
 | FI\_AUFL\_OMA\_0550 | Oma | Gut. Der Kuchen kommt runter. Alle kommen runter. Auch die mit dem Stab und der mit dem Blech. Ich habe Geburtstag, und ich feiere ihn nicht auf einem Dachboden. | geht die Treppe hinunter; Übergang Wohnzimmer |
 | FI\_AUFL\_PIX\_0560 | Pixel | Sie hat nicht ein einziges Mal die Stimme erhoben. Das ist Macht, junger Mann, echte Macht. // Ich werde sie studieren. Aus sicherer Entfernung, vom Schrank aus. | hinterher |
 
 ## 9. Finale: Wohnzimmer, Geburtstag (FI\_WOHN)
 
-Szene mit kurzer freier Phase. Wohnzimmer, Variante Geburtstag: Girlande, Luftballons, der Kuchen auf dem Couchtisch, Opa hat den Zapp-O-Mat auf dem Rolltisch mit heruntergeschoben („Fernsehen zum Geburtstag, Tradition“). Zeldina und, mit FREUND\_0815, der Roboter sitzen mit am Tisch. Nach dem Anschneiden darf der Spieler kurz alles ansehen; die Mutter kommt, sobald Max mit Oma oder Opa gesprochen hat oder nach 60 Sekunden.
+Szene mit kurzer freier Phase. Wohnzimmer, Variante Geburtstag: Girlande, Luftballons, der Kuchen auf dem Couchtisch, Opa hat den Zapp-O-Mat auf dem Rolltisch mit heruntergeschoben („Fernsehen zum Geburtstag, Tradition“). Zeldina und, mit W3\_FREUND\_0815, der Roboter sitzen mit am Tisch. Nach dem Anschneiden darf der Spieler kurz alles ansehen; die Mutter kommt, sobald Max mit Oma oder Opa gesprochen hat oder nach 60 Sekunden.
 
 | ID | Sprecher | Text | Regie |
 | --- | --- | --- | --- |
@@ -583,8 +597,8 @@ Szene mit kurzer freier Phase. Wohnzimmer, Variante Geburtstag: Girlande, Luftba
 | FI\_WOHN\_MAX\_0090 | Max | Kleine Geschenke. Eins davon ist eine Fernbedienungshülle. Opa lernt dazu, nur eben langsam. | Ansehen: Geschenke |
 | FI\_WOHN\_MAX\_0095 | Max | Ein Geschenk ist in Zeitung eingewickelt, genauer gesagt in die Programmzeitschrift. Ich erkenne Opas Eselsohren. | Ansehen: Geschenke, zweites Mal |
 | FI\_WOHN\_MAX\_0100 | Max | Oma guckt auf jedem Foto, als hätte jemand ihren Geburtstag vergessen. Jetzt weiß ich endlich, warum. | Ansehen: Familienfoto |
-| FI\_WOHN\_MAX\_0105 | Max | Auf dem neuesten Foto lächelt Oma. Das ist zwar noch gar nicht gemacht, aber ich weiß schon, wie es aussieht. | Ansehen: Familienfoto, zweites Mal |
-| FI\_WOHN\_MAX\_0110 | Max | Das Sofa sieht irgendwie kleiner aus als heute Mittag. Oder ich bin größer geworden. Beides eher unwahrscheinlich. | Ansehen: Sofa |
+| FI\_WOHN\_MAX\_0105 | Max | Auf dem neuesten Foto lächelt Oma. Das gibt es noch gar nicht. Opa sucht gerade die Kamera. | Ansehen: Familienfoto, zweites Mal |
+| FI\_WOHN\_MAX\_0110 | Max | Das Sofa sieht kleiner aus als heute Mittag. Oder ich bin größer geworden. Beides eher unwahrscheinlich. | Ansehen: Sofa |
 | FI\_WOHN\_PIX\_0115 | Pixel | Das Sofa. Mein Revier. Ich habe es euch Menschen ein paar Welten lang überlassen, aus reiner Großzügigkeit. // Die Leihfrist ist jetzt abgelaufen. | Ansehen: Sofa, zweites Mal |
 | FI\_WOHN\_MAX\_0120 | Max | Der Zapp-O-Mat steht jetzt im Wohnzimmer. Opa sagt, Fernsehen zum Geburtstag sei Tradition. Oma sagt nichts. Das ist schlimmer. | Ansehen: Zapp-O-Mat |
 | FI\_WOHN\_MAX\_0125 | Max | Der Zapp-O-Mat zeigt ein buntes Streifenbild, und Flimmer winkt aus der Ecke. Ich wink zurück. Keiner hier versteht, warum. | Ansehen: Zapp-O-Mat, zweites Mal |
@@ -592,10 +606,10 @@ Szene mit kurzer freier Phase. Wohnzimmer, Variante Geburtstag: Girlande, Luftba
 | FI\_WOHN\_MAX\_0135 | Max | Ich hab die Fernbedienung genau in ihren Staubrand gelegt. Passt perfekt. Das Sofa seufzt. Ich auch. | Ansehen: Fernbedienung auf dem Couchtisch, zweites Mal |
 | FI\_WOHN\_PIX\_0140 | Pixel | Zeldina prüft die Tapete auf Schimmel und fragt deine Großmutter nach der Kaltmiete. // Und deine Großmutter antwortet ihr. Mit Zahlen. Ich habe ein wenig Angst. | Ansehen: Zeldina |
 | FI\_WOHN\_PIX\_0145 | Pixel | Sie hat gefragt, ob das Schloss renoviert ist, und deine Großmutter hat Ja gesagt. // Ich glaube, sie meinte das Bad. Und ich glaube, das wird niemand je aufklären. | Ansehen: Zeldina, zweites Mal |
-| FI\_WOHN\_MAX\_0150 | Max | Der Hausmeister spült, und zwar unaufgefordert. Oma sieht ihm dabei zu wie einem Sonnenuntergang. | Ansehen: Modell 08/15; nur FREUND\_0815 |
-| FI\_WOHN\_MAX\_0155 | Max | Er trocknet jede Tasse einzeln und sagt bei jeder „Servus“. Oma hat ihm eine Schürze geschenkt. Er weint Öl. | Ansehen: Modell 08/15, zweites Mal; nur FREUND\_0815 |
+| FI\_WOHN\_MAX\_0150 | Max | Der Hausmeister spült, und zwar unaufgefordert. Oma sieht ihm dabei zu wie einem Sonnenuntergang. | Ansehen: Modell 08/15; nur W3\_FREUND\_0815 |
+| FI\_WOHN\_MAX\_0155 | Max | Er trocknet jede Tasse einzeln und sagt bei jeder „Servus“. Oma hat ihm eine Schürze geschenkt. Er weint Öl. | Ansehen: Modell 08/15, zweites Mal; nur W3\_FREUND\_0815 |
 | FI\_WOHN\_MAX\_0160 | Max | Seite 3. Ein Ei, weich. Irgendwas aus Mehl. Batterien. Milch. // Pixel. Deine Einkaufsliste ist Opas Einkaufsliste. | Ansehen: Notizbuch |
-| FI\_WOHN\_MAX\_0165 | Max | Ganz unten auf Seite drei steht noch: „Nächstes Jahr: Sofa für zwei.“ In Pixels Pfotenschrift. | Ansehen: Notizbuch, zweites Mal |
+| FI\_WOHN\_MAX\_0165 | Max | Ganz unten auf Seite 3 steht noch: „Nächstes Jahr: Sofa für zwei.“ In Pixels Pfotenschrift. | Ansehen: Notizbuch, zweites Mal |
 | FI\_WOHN\_PIX\_0170 | Pixel | Ich war die ganze Zeit der Einzige mit einem Plan. Das darfst du gern weitererzählen. // Lachs stand allerdings nicht drauf, und das verzeihe ich dem Universum nie. |  |
 | FI\_WOHN\_MAX\_0180 | Max | Oma, wusstest du, dass Opa im Fernsehen war? | Reden: Oma, Option |
 | FI\_WOHN\_OMA\_0190 | Oma | Ich habe ihn dort kennengelernt. Ich saß in der ersten Reihe, als der Ofen explodierte. Der Teig hat mich getroffen. Ich dachte: Den nehme ich. | ohne eine Miene zu verziehen |
@@ -603,11 +617,11 @@ Szene mit kurzer freier Phase. Wohnzimmer, Variante Geburtstag: Girlande, Luftba
 | FI\_WOHN\_OMA\_0430 | Oma | Er hat sich entschuldigt. Mit einem Kuchen. Seitdem backt er mir jedes Jahr einen. Meistens explodiert keiner. |  |
 | FI\_WOHN\_MAX\_0200 | Max | Opa, und das Passwort? | Reden: Opa, Option |
 | FI\_WOHN\_OPA\_0210 | Opa | Gleich. Ich hab's aufgeschrieben. Es liegt irgendwo, wo ich jeden Tag hinsehe. | klopft seine Taschen ab |
-| FI\_WOHN\_NAR\_0220 | – | Die Tür geht auf. Max' Mutter kommt herein, Jacke noch an, Schlüssel in der Hand. Sie sieht einen Roboter beim Spülen, eine Prinzessin mit Kuchen, einen Kater auf dem Schrank. Sie atmet einmal durch. | Mutter betritt das Wohnzimmer; Roboter nur FREUND\_0815 |
+| FI\_WOHN\_NAR\_0220 | – | Die Tür geht auf. Max' Mutter kommt herein, Jacke noch an, Schlüssel in der Hand. Sie sieht einen Roboter beim Spülen, eine Prinzessin mit Kuchen, einen Kater auf dem Schrank. Sie atmet einmal durch. | Mutter betritt das Wohnzimmer; Roboter nur W3\_FREUND\_0815 |
 | FI\_WOHN\_MUT\_0230 | Mutter | Guten Abend. Alles Gute, Mama. | küsst Oma auf die Wange, sieht sich nicht weiter um |
 | FI\_WOHN\_MUT\_0240 | Mutter | Ich frage nicht. Ich hatte Spätschicht. Ich frage morgen, und dann ausführlich. | zu Max |
 | FI\_WOHN\_NAR\_0250 | – | Sie hebt einen zerknitterten Zettel vom Couchtisch auf, direkt neben der Fernbedienung. | Zettel als Sprite, keine Nahansicht; die Mutter liest vor |
-| FI\_WOHN\_MUT\_0260 | Mutter | Konrad, das ist deine Einkaufsliste. Du hast nichts davon gekauft, oder? | Animation Liste lesen |
+| FI\_WOHN\_MUT\_0260 | Mutter | Papa, das ist deine Einkaufsliste. Du hast nichts davon gekauft, oder? | Animation Liste lesen |
 | FI\_WOHN\_MUT\_0270 | Mutter | Eier. Mehl. Batterien. Fernbedienung finden. // Und Milch. Wo ist die Milch? | liest vor |
 | FI\_WOHN\_NAR\_0280 | – | Stille. Pixel lässt sich vom Schrank in Richtung Sofa fallen. Opa zieht einen zweiten Zettel aus der Strickjacke und hält ihn Max hin. Darauf steht etwas mit vielen Zeichen. | Opa hält das WLAN-Passwort hin |
 | FI\_WOHN\_OPA\_0290 | Opa | Das Passwort. Ehrenwort eines Wissenschaftlers. Hier. | leise |
@@ -620,8 +634,8 @@ Szene mit kurzer freier Phase. Wohnzimmer, Variante Geburtstag: Girlande, Luftba
 | FI\_WOHN\_OMA\_0360 | Oma | Der Junge ist in Ordnung. Du nicht, Konrad. Aber der Junge. |  |
 | FI\_WOHN\_ZEL\_0370 | Zeldina | Soll ich mitkommen? Ich kenne mich mit Suchen aus, ich suche seit Jahren eine Wohnung. | halb aufgestanden |
 | FI\_WOHN\_MAX\_0380 | Max | Nein, danke. Das ist eine Quest für eine Person. Bleib ruhig, Oma hat bestimmt noch Fragen zur Kaltmiete. |  |
-| FI\_WOHN\_HAU\_0390 | Modell 08/15 | Ich komme wieder. Mit dem Geschirrtuch. | aus der Küche; nur FREUND\_0815 |
-| FI\_WOHN\_MAX\_0400 | Max | Ich geh dann mal. Zum Supermarkt. Freiwillig. Und niemand sagt jetzt was. | an der Tür, zum Spieler gewandt |
+| FI\_WOHN\_HAU\_0390 | Modell 08/15 | Ich komme wieder. Mit dem Geschirrtuch. | aus der Küche; nur W3\_FREUND\_0815 |
+| FI\_WOHN\_MAX\_0400 | Max | Ich geh dann mal. Und niemand sagt jetzt was. | an der Tür, zum Spieler gewandt |
 | FI\_WOHN\_PIX\_0410 | Pixel | Ich sage etwas. Ich sage es nur später, wenn ich wieder sitzen kann. | vom Teppich |
 
 ## 9b. Inventar ansehen (FI\_INV)
@@ -660,7 +674,7 @@ Szene. Auf dem Weg zur Tür kommt Max am Zapp-O-Mat vorbei und dreht aus Gewohnh
 | FI\_SUPM\_MAX\_0065 | Max | „Nur heute.“ Ich wusste, dass das kommt. Es steht seit vier Welten in den Sternen. Und auf dem Aufsteller. | Ansehen: Aufsteller mit Milch-Sonderangebot, zweites Mal |
 | FI\_SUPM\_MAX\_0070 | Max | Die letzte Quest. Ganz ohne Drachen. | Ansehen: Milchregal durch die Tür |
 | FI\_SUPM\_MAX\_0075 | Max | Die Milch steht ganz hinten. Natürlich. Jeder Laden ist ein Dungeon, und die Milch ist der Schatz im letzten Raum. | Ansehen: Milchregal durch die Tür, zweites Mal |
-| FI\_SUPM\_MAX\_0080 | Max | Kein Rauschen, kein Kanal, nur eine Tür, die von selbst aufgeht. Und ich geh freiwillig durch. Das ist neu. | Benutzen: Automatische Tür |
+| FI\_SUPM\_MAX\_0080 | Max | Kein Rauschen, kein Kanal, nur eine Tür, die von selbst aufgeht. // Zum ersten Mal heute will niemand was von mir. | Benutzen: Automatische Tür |
 | FI\_SUPM\_NAR\_0090 | – | Die Tür gleitet auf. Max geht hinein. Das Licht aus dem Laden fällt auf den Gehweg. Schwarzblende. | Ende, Titelthema setzt ein, Jingle Welt geschafft |
 | FI\_ABSP\_NAR\_0100 | – | Foto 1: Alle um den Couchtisch, der Kuchen angeschnitten, Oma mit Gabel, Opa mit Mehl im Haar. Im Zapp-O-Mat winken Kalle und Flimmer. Unterschrift: „Der Kuchen war keine Lüge.“ | Abspann-Foto 1 |
 | FI\_ABSP\_NAR\_0110 | – | Foto 2: Zeldina misst mit Moderworts Zauberstab die Wohnzimmerwand aus. Oma hält das andere Ende. Unterschrift: „Der Dachboden wäre frei.“ | Abspann-Foto 2 |

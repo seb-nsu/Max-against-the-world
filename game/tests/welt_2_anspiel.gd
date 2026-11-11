@@ -116,8 +116,17 @@ func _durchlauf() -> void:
 	await S.regel("benutzen", "wurfhebel")
 	_pruefe(Z.geloest("R12") and _hat("schallplatte") and _hat("wurfscheibe"), "R12 Tag 1, Diskus weg")
 
-	# R7: Tiro verhören und anklagen
+	# R7: Tiro verhören. Anklagen geht erst, wenn alle vier verhört sind und alle acht Aussagen
+	# im Notizbuch stehen.
 	await S.regel("benutzen", "tiro")
+	S.vorgabe_auswahl = [0]
+	await S.regel("benutzen", "tiro")
+	_pruefe(not Z.geloest("R7"), "R7: keine Anklage, bevor alle vier verhört sind")
+	S.vorgabe_auswahl = []
+	for v in ["leonidas", "hermes", "sphinx_figur"]:
+		await S.regel("benutzen", v)
+	_pruefe(_gesagt("W2_DISK_LEO_0060") and _gesagt("W2_DISK_HER_0100") and _gesagt("W2_DISK_SPH_0190"),
+		"R7: alle vier verhört")
 	S.vorgabe_auswahl = [0]
 	await S.regel("benutzen", "tiro")
 	_pruefe(Z.geloest("R7") and _hat("diskus"), "R7 Diskus zurück")
@@ -159,6 +168,12 @@ func _durchlauf() -> void:
 	S.vorgabe_auswahl = [0, 1, 3, 2, 4, 0]  # Diskus; Konter je Linie
 	await S.regel("benutzen", "startlinie")
 	_pruefe(Z.geloest("R13") and _hat("olivenkranz") and _hat("paraden_plan"), "R13 Finaltag")
+	var klaenge: Array = root.get_node("Klang").protokoll
+	var fehlt := ["geraeusch/zeitfaehre", "geraeusch/sanduhr", "musik/w2_fuenfkampf", "geraeusch/stadion_jubel",
+		"atmo/stadion_jubel", "atmo/w2_atmo", "geraeusch/badewanne", "geraeusch/diskus"].filter(
+		func(k): return not k in klaenge)
+	_pruefe(fehlt.is_empty(), "Ton in Welt 2: Fähre, Sanduhr, Fünfkampf-Stück, Jubel, Atmosphäre, Wanne, Diskus %s" % [fehlt])
+	_pruefe(klaenge.find("geraeusch/zeitfaehre") < klaenge.find("geraeusch/sanduhr"), "Ton: erst die Abfahrt, dann die Sanduhr")
 
 	# R11: Parade und Wein
 	await S.geben(_sn("brennspiegel"))
@@ -175,6 +190,37 @@ func _durchlauf() -> void:
 	await _warte_auf_raum("dachboden")
 	_pruefe(int(Z.wert("ZWISCHENSPIEL", 0)) == 2 and not _hat("goldener_sack"), "Zwischenspiel 2: Opa nimmt den Sack")
 	_pruefe(int(Z.wert("EINKAUFSLISTE", 0)) == 2, "Einkaufsliste: zweiter Wunsch")
+	_pruefe(load("res://oberflaeche/notizbuch.gd").einkaufsliste() == ["UI_EINKAUF_1", "UI_EINKAUF_2"],
+		"Notizbuch Seite 3 zeigt zwei Wünsche")
+	# Reisetasche: Ab dem neunten Gegenstand kommt eine zweite Zeile, kein Feld liegt auf einem anderen
+	var tasche = load("res://skripte/reisetasche.gd").new(2)
+	tasche.auslage.assign(["Socke", "Zeugnis", "Eimer", "Dosenoeffner", "Olivenoel", "Sandale", "Olivenkranz",
+		"Schriftrolle", "Handy", "Kaugummi", "Kugelschreiber"])
+	var fenster = S.REISETASCHE.instantiate()
+	S.add_child(fenster)
+	fenster.zeigen(tasche)
+	var felder: Array = fenster.auslage_felder()
+	var frei: bool = felder.size() == 11 and fenster.zeilen() == 2
+	for i in felder.size():
+		for j in range(i + 1, felder.size()):
+			if felder[i].intersects(felder[j]):
+				frei = false
+	_pruefe(frei, "Reisetasche: elf Dinge in zwei Zeilen, nichts überlappt")
+	fenster.queue_free()
+	_pruefe(tasche.kommentar_zeile("Kochloeffel") == "ZS1_DACH_PIX_0520"
+		and tasche.kommentar_zeile("Socke") == "ZS1_DACH_PIX_0540"
+		and tasche.kommentar_zeile("Olivenoel") == "ZS2_DACH_PIX_0520"
+		and tasche.kommentar_zeile("Eimer") == "ZS2_DACH_PIX_0592",
+		"Reisetasche: ältere Dinge behalten Pixels Kommentar, wo er noch passt, sonst eine eigene Zeile")
+	var tasche_3 = load("res://skripte/reisetasche.gd").new(3)
+	var ohne_zeile: Array = ["Kochloeffel", "Thunfischdose", "Notizbuch", "Socke", "ZiegenfellVorleger", "Zeugnis",
+		"Eimer", "Dosenoeffner", "Leuchttrank", "Ketchup", "Olivenoel", "Sandale", "Olivenkranz", "Schriftrolle",
+		"Handy", "Kaugummi", "Kugelschreiber", "Diskus", "Wurfscheibe", "Pharaonenteller", "Schallplatte",
+		"Sonnenbrille", "OmasKekse", "Portalgeraet", "Kaffeetasse", "SchmidtsAkte", "MorseTabelle"].filter(
+		func(sn):
+			var z: String = tasche_3.kommentar_zeile(sn)
+			return z.is_empty() or TranslationServer.translate(z) == z)
+	_pruefe(ohne_zeile.is_empty(), "Reisetasche: im dritten Zwischenspiel hat jedes Ding eine Zeile von Pixel %s" % [ohne_zeile])
 	S.vorgabe_tasche = []
 	await _hotspot("drehknopf").on_click()
 	_pruefe(Z.ist("ZS2_GEPACKT"), "Reisetasche gepackt")

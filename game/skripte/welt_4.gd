@@ -152,6 +152,8 @@ const SPAEHEN := {"gluecksrad": "W4_RAU_PIX_0070", "sitcom_kueche": "W4_RAU_PIX_
 	"savanne": "W4_RAU_PIX_0090", "friedhof": "W4_RAU_PIX_0100", "kapitolis": "W4_RAU_PIX_0120",
 	"empfang": "W4_RAU_PIX_0130"}
 
+## Spielfläche des Zombie-Tanzes (Regeln in skripte/minispiele/zombie_tanz.gd)
+const TANZ_FELD := preload("res://oberflaeche/minispiel_tanz.gd")
 ## Zahl der Fehlversuche beim Zombie-Tanz (nur im Raum)
 var _tanz_fehler := 0
 #endregion
@@ -344,6 +346,11 @@ func _bedingung_text(text: String) -> Variant:
 			return Zustand.ist("W4_ZOMBIES_START")
 		"Stinkbombe":
 			return _zustand_gegenstand("bananenschale") == "Stinkbombe"
+		"nach dem Grusel-Sender":
+			# Käse oder Banane haben sich auf einem Grusel-Sender verwandelt (_raum_betreten)
+			return _zustand_gegenstand("fondue_kaese") != "normal" or _zustand_gegenstand("bananenschale") != "frisch"
+		"ohne Grusel-Sender":
+			return _zustand_gegenstand("fondue_kaese") == "normal"
 	return null
 
 
@@ -582,6 +589,8 @@ func benutzen_inventar_programmzeitschrift(_obj, _x) -> bool:
 		"2015":
 			await _sag(e[2])
 			Zustand.setze("W4_FOLGE_2015_GELESEN")
+			if Zustand.ist("W4_MUTTER_FONDUE"):
+				Zustand.loese("R4a")  # die Mutter hat das Fondue schon bestätigt
 		"mitternacht":
 			await _sag(e[2])
 			if _g("R2"):
@@ -878,8 +887,10 @@ func _besuch_r3() -> void:
 	Zustand.loese("R3")
 
 
-## Die Mutter bestätigt das Fondue (R4a), wenn Max die 20:15-Folge in der Zeitschrift gelesen hat.
+## Die Mutter bestätigt das Fondue (R4a). Gelöst ist der Schritt, sobald Max auch die
+## 20:15-Folge in der Zeitschrift gelesen hat, in welcher Reihenfolge auch immer.
 func option_sitcom_mutter_0320() -> bool:
+	Zustand.setze("W4_MUTTER_FONDUE")
 	if Zustand.ist("W4_FOLGE_2015_GELESEN"):
 		Zustand.loese("R4a")
 	return false
@@ -995,9 +1006,16 @@ func _tanzflaeche() -> bool:
 		await _szene(["W4_FRIE_ZOM_0080", "W4_FRIE_MAX_0090"])
 		return true
 	await _sag("W4_FRIE_MAX_0240")
-	var wahl := await Spiel.auswahl(["UI_W4_TANZ_TAKT", "UI_W4_TANZ_GEGEN"])
-	if wahl == 1:
-		await _szene(["W4_FRIE_ZOM_0250", "W4_FRIE_MAX_0260", "W4_FRIE_PIX_0270"])
+	# Rhythmus-Minispiel (Regeln: skripte/minispiele/zombie_tanz.gd, Spielfläche:
+	# oberflaeche/minispiel_tanz.gd): Max tritt zwischen den Schlägen auf.
+	var feld := Spiel.minispiel_oeffnen(TANZ_FELD)
+	feld.zeigen(CQZombieTanz.new())
+	var gewonnen: bool = await feld.runde()
+	if gewonnen:
+		await _sag("W4_FRIE_ZOM_0250")
+	Spiel.minispiel_schliessen()
+	if gewonnen:
+		await _szene(["W4_FRIE_MAX_0260", "W4_FRIE_PIX_0270"])
 		await _r5_geloest()
 		return true
 	_tanz_fehler += 1
@@ -1513,7 +1531,7 @@ func benutzen_fbi_agent(_obj, _x) -> bool:
 
 func _hinweis_stufe_3() -> bool:
 	for r in Zustand.alle_raetsel("welt-4"):
-		if Hinweise.stufe(str(r.get("id", ""))) >= 3:
+		if Hinweise.stufe(str(r.get("id", "")), "welt-4") >= 3:
 			return true
 	return false
 

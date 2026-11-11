@@ -297,7 +297,8 @@ func zs1_drehknopf() -> void:
 ## Ansehen im Zwischenspiel 1 (0310–0375, Fundkiste 0420/0425): nur, was sich verändert hat;
 ## sonst gelten die Prolog-Zeilen. Die Werkbank-Ablage mit dem Ei ist die Werkbank (G26).
 const ZS1_ANSEHEN := {
-	werkbank = [["MAX", "ZS1_DACH_MAX_0310", 1], ["MAX", "ZS1_DACH_MAX_0315", 2, "ZS1_DACH_PIX_0320"]],
+	werkbank = [["MAX", "ZS1_DACH_MAX_0310", 1], ["MAX", "ZS1_DACH_MAX_0315", 2, "ZS1_DACH_PIX_0320"],
+		["MAX", "ZS1_DACH_MAX_0322", 3, "ZS1_DACH_PIX_0324"]],
 	dachfenster = [["MAX", "ZS1_DACH_MAX_0330", 1], ["MAX", "ZS1_DACH_MAX_0335", 2]],
 	kalender = [["MAX", "ZS1_DACH_MAX_0340", 1], ["MAX", "ZS1_DACH_MAX_0345", 2]],
 	zapp_o_mat = [["MAX", "ZS1_DACH_MAX_0350", 1], ["PIX", "ZS1_DACH_PIX_0355", 2]],
@@ -310,7 +311,7 @@ const ZS1_ANSEHEN := {
 func ansehen_zusatz(objekt: String) -> Array:
 	var tabelle: Dictionary = {1: ZS1_ANSEHEN, 2: ZS2_ANSEHEN, 3: ZS3_ANSEHEN}.get(zwischenspiel(), {})
 	if zwischenspiel() == 3 and objekt == "zapp_o_mat":
-		tabelle = {zapp_o_mat = ZS3_ZAPP_FREUND if Zustand.ist("FREUND_0815") else ZS3_ZAPP_OHNE}
+		tabelle = {zapp_o_mat = ZS3_ZAPP_FREUND if Zustand.ist("W3_FREUND_0815") else ZS3_ZAPP_OHNE}
 	if not tabelle.has(objekt):
 		return []
 	var out := []

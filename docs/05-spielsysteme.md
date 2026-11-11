@@ -53,7 +53,7 @@ Eigennamen-Glossar: Sprechende Namen werden nicht wörtlich übersetzt, sondern 
 | Tiertort (Savanne) | Paw and Order (Savannah) | Serienparodie, andere Vorlage mit gleichem Effekt |
 | Schwurbelstein | Waffleton | Klang eines Ortsnamens plus Geschwafel |
 | Unterbrösel | Lower Crumbly | englisches Dorfnamensmuster |
-| Hoggelwarz | Hogwartle | erkennbar, aber verfremdet |
+| Hoggelwarz | Hogglewarz | erkennbar, aber verfremdet |
 | Zapp-O-Mat | Zap-O-Matic | Werbesprech der 60er |
 | M.U.T.T.I. | M.O.T.H.E.R. | Abkürzung neu ausschreiben |
 | Modell 08/15 | Model 08/15 | bleibt; Pixel erklärt den Ausdruck einmal in einer Ansehen-Zeile |
@@ -65,7 +65,8 @@ Eigennamen-Glossar: Sprechende Namen werden nicht wörtlich übersetzt, sondern 
 | Rotkäppchen | Little Red | Lieferdienst bleibt Lieferdienst |
 | Burg Brösel / Schloss Steinbeiß | Castle Crumble / Stonebite Palace | Burgen, in denen Zeldina nicht ist |
 | Schicksalsberg (Jahrgang) | Mount Doomsday | Weinjahrgang in der Taverne |
-| Vielsaft-Limo | Polyjuicy Lemonade | Trank-Parodie |
+| Vielsaft-Limo | Manyjuice Lemonade | Trank-Parodie |
+| Glücksrad-Shopping | Lucky Wheel Shopping | nicht „Wheel of Fortune“, das ist im Englischen ein eingetragener Sendungstitel |
 | Bohn-O-Mat | Bean-O-Matic | wie Zap-O-Matic |
 | Niesrosen | Sneezeroses | Wortbildung bleibt |
 | Gerhard, Birgit, Klaus-Dieter (Humberts Schwerter) | Gerald, Brenda, Nigel | deutsche Allerweltsnamen werden englische; Ingrid, Helga, Kurt bleiben |
@@ -75,7 +76,28 @@ Eigennamen-Glossar: Sprechende Namen werden nicht wörtlich übersetzt, sondern 
 | Zappis Puppenstube | Zappi's Dollhouse | Opas Kindersendung von 1977 |
 | Opas Dachboden, Schwurbelstein, Antikodonien, Neo-Neustadt 2099, Kanal 999 (Weltnamen) | Grandpa's attic, Waffleton, Antikodonien, Neo-Neustadt 2099, Channel 999 | Weltnamen in Spielständen und auf dem Drehknopf; Antikodonien und Neo-Neustadt bleiben |
 
-Stand der englischen Fassung (10. November 2026): alle Skriptzeilen (Prolog, Welt 1 bis 4, die drei Zwischenspiele, das Finale), die Systemzeilen und alle Menütexte sind übersetzt. Kommt eine neue deutsche Zeile ohne englische dazu, zeigt das Spiel dort die deutsche (Rückfallsprache `de`). Ablauf: `python3 tools/en_eintragen.py --offen W2` gibt die offenen Zeilen mit Sprecher, Auslöser und Regie aus, Claude übersetzt sie als `ID | Text` in eine Datei, `python3 tools/en_eintragen.py DATEI` trägt sie nach `uebersetzung/en.csv` ein (Kaskaden müssen dieselbe Zahl Blasen haben, sonst wird die Zeile abgelehnt), danach `python3 tools/skript_export.py`. Ein Muttersprachler prüft die Witze vor dem Release.
+Feste Begriffe: Diese Wörter heißen in den Zeilen und im Menü gleich. Wer eine Zeile nachzieht, hält sich daran.
+
+| Deutsch | Englisch | Hinweis |
+| --- | --- | --- |
+| Werbepause | ad break | britisch; nie „commercial break“. der Raum „Werbespot-Set“ heißt „Advert set“ |
+| Dosenöffner, Dose | tin opener, tin | britisch; nie „can opener“ |
+| Antenne (Modell Kleiderbügel) | aerial (model coat hanger) | britisch; die Fühler von M.U.T.T.I. bleiben „antennae“ |
+| Pastille | lozenge | nie „pill“ |
+| Zeugnis | school report | nie „report card“ |
+| Keller, Kellerarchiv | cellar, cellar archive | nie „basement“ |
+| Fächerwedler | fanners | Figurenname im Menü und in den Zeilen |
+| Feigensetzling | fig sapling | nie „seedling“ |
+| Rede-Ringen | word wrestling | Titel des Minispiels: „Word Wrestling“ |
+| Bettlaken | bedsheet | ein Wort |
+| Pflichtfach, Wahlfächer (Reisetasche) | mandatory pocket, free pockets | im Menü „Always packed“ und „Two free pockets“ |
+| Oma (Max' Großmutter) | Grandma | |
+| Oma (das Orakel in Welt 3) | Granny | so lassen sich die beiden auseinanderhalten |
+| Opa, Großvater (in Pixels Mund) | Grandpa, grandfather | Pixel sagt meist „your grandfather“; wo er deutsch „Opa“ sagt, steht „grandpa“ |
+
+Tonfall im Englischen: Max und alle Nebenfiguren sprechen mit Kurzformen (I'm, don't, it's). Pixel spricht ohne Kurzformen (I am, do not, it is) und sagt „I shall“; das ist sein gehobener Ton aus dem Deutschen. Ausnahme: wenn er jemanden wörtlich zitiert. Schmidt redet ohne Punkt, Kalle tippt am Terminal klein. Schreibweise britisch: colour, grey, any more (zwei Wörter), synthesiser, „Mr“ ohne Punkt. „Prozent“ heißt durchgehend „percent“.
+
+Stand der englischen Fassung (11. November 2026): alle Skriptzeilen (Prolog, Welt 1 bis 4, die drei Zwischenspiele, das Finale), die Systemzeilen und alle Menütexte sind übersetzt. Die ganze Fassung ist einmal am Stück gelesen und vereinheitlicht (Protokoll: `pruefung/umsetzung.md`, Punkt 4). Kommt eine neue deutsche Zeile ohne englische dazu, zeigt das Spiel dort die deutsche (Rückfallsprache `de`). Ablauf: `python3 tools/en_eintragen.py --offen W2` gibt die offenen Zeilen mit Sprecher, Auslöser und Regie aus, Claude übersetzt sie als `ID | Text` in eine Datei, `python3 tools/en_eintragen.py DATEI` trägt sie nach `uebersetzung/en.csv` ein (Kaskaden müssen dieselbe Zahl Blasen haben, sonst wird die Zeile abgelehnt), danach `python3 tools/skript_export.py`. Ein Muttersprachler prüft die Witze vor dem Release.
 
 **Zeilenarten:**
 
@@ -108,7 +130,7 @@ Stand der englischen Fassung (10. November 2026): alle Skriptzeilen (Prolog, Wel
 - Gespräche sollen fließen. Eine Plauderoption endet nicht nach einer einzigen Antwortzeile, sondern bekommt einen Nachsatz oder eine Rückfrage von Max (Ausnahme: Abschiede). Eine neue Zeile kommt mit `tools/zeilen_einfuegen.py` hinter die passende Zeile, ohne dass etwas umnummeriert wird.
 - Jede Zeile muss im Spiel vorkommen. Eine Zeile, die bewusst nicht vorkommt, wird im Skript als „Reserve, kommt nicht vor“ markiert.
 
-**Umfang:** Etwa 5.000 Zeilen (angehoben am 9. November 2026, weil jede Ansehen-Stelle eine Zweitzeile bekommt und Inventar-Ansehen, Abschiedszeilen und Pools dazukamen). Als Budget: Prolog 170, jede Welt 1.000 bis 1.100, Zwischenspiele 200, Finale und Abspann 320, Menüs und Systemtexte 150. Die Systemzeilen (`SYS_ERS_*` 50, `SYS_WDH_*` 30, `SYS_PLA_*` 6) stehen in `skript/prolog.md`, zählen aber zu Menüs und Systemtexten; der Prolog selbst hat 165 Zeilen. Stand der Entwürfe am 9. November 2026: Welten 1.019 bis 1.099, Zwischenspiele 191, Finale und Abspann 315. Die Pixel-auf-Mensch-Zeilen stecken im Budget der Welten.
+**Umfang:** Etwa 5.000 Zeilen (angehoben am 9. November 2026, weil jede Ansehen-Stelle eine Zweitzeile bekommt und Inventar-Ansehen, Abschiedszeilen und Pools dazukamen). Als Budget: Prolog 170, jede Welt 1.000 bis 1.100, Zwischenspiele 200, Finale und Abspann 320, Menüs und Systemtexte 150. Die Systemzeilen (`SYS_ERS_*` 50, `SYS_WDH_*` 30, `SYS_PLA_*` 6) stehen in `skript/prolog.md`, zählen aber zu Menüs und Systemtexten; der Prolog selbst hat 165 Zeilen. Stand der Entwürfe am 9. November 2026: Welten 1.019 bis 1.099, Zwischenspiele 191, Finale und Abspann 315. Stand am 11. November 2026 nach Hinweisen, Zweitzeilen, Nachsätzen und der Prüfung: 5.450 Zeilen, davon Prolog 266, Welt 1 1.196, Welt 2 1.182, Welt 3 1.060, Welt 4 1.103, Zwischenspiele 229, Finale und Abspann 328, Systemzeilen 86. Bis auf Welt 3 liegt damit jeder Abschnitt über seinem Budget; die Budgets sind nicht angehoben (`offene-punkte.md`, P14). Die Pixel-auf-Mensch-Zeilen stecken im Budget der Welten.
 
 **Ablauf pro Raum:**
 
@@ -121,7 +143,7 @@ Als Muster steht das ganze Prolog-Skript in `skript/prolog.md`, einschließlich 
 
 ## Schrift
 
-Festgelegt am 9. November 2026 (Sebastian): **Nunito** (ExtraBold) für Sprechblasen, Objektnamen, Dialogauswahl und Menüs, gesetzt in voller Bildschirmauflösung über dem Pixelbild, wie bei Thimbleweed Park. **Pixelify Sans** bleibt für Titel und große Überschriften. Die Pixelschriften unten waren die erste Wahl; im Mockup nahm Monogram Extended bei 320×180 zu viel Bildfläche ein (drei Zeilen Blase plus vier Zeilen Auswahl), deshalb der Wechsel.
+Festgelegt am 9. November 2026 (Sebastian): **Nunito** (ExtraBold) für Sprechblasen, Objektnamen, Dialogauswahl und Menüs, gesetzt in voller Bildschirmauflösung über dem Pixelbild, wie bei Thimbleweed Park. **Pixelify Sans** bleibt für Titel und große Überschriften. Die Pixelschriften unten waren die erste Wahl; im Mockup nahm Monogram Extended bei der damaligen Auflösung 320×180 zu viel Bildfläche ein (drei Zeilen Blase plus vier Zeilen Auswahl), deshalb der Wechsel.
 
 | Schrift | Lizenz | Nennung nötig | Deutsch | Einsatz |
 | --- | --- | --- | --- | --- |
@@ -139,9 +161,9 @@ Frühere Kandidaten (Pixelschriften in Spielauflösung):
 
 Lizenzen gelesen am 6. November 2026 auf den verlinkten Seiten.
 
-**Größe:** Text liegt auf einer eigenen Ebene in 1920×1080 (bei anderen Bildschirmen mitskaliert), Grafik und Inventarsymbole bleiben in Spielauflösung. Sprechblasen in 46 px, Objektnamen und Dialogauswahl in 39 px; eine Blase ist höchstens 1.080 px breit, das sind rund 50 Zeichen je Zeile. Die Option „Große Schrift“ vergrößert die Textebene um ein Viertel. Ersetzt die Entscheidung vom 8. November 2026 (Text in Spielauflösung).
+**Größe:** Text liegt auf einer eigenen Ebene in 1920×1080 (bei anderen Bildschirmen mitskaliert), Grafik und Inventarsymbole bleiben in Spielauflösung. Sprechblasen in 48 px, Objektnamen und Dialogauswahl in 39 px; eine Blase ist höchstens 1.080 px breit, das sind rund 50 Zeichen je Zeile. Die Option „Große Schrift“ vergrößert die Textebene um ein Viertel. Ersetzt die Entscheidung vom 8. November 2026 (Text in Spielauflösung).
 
-**Einstellungen in Godot:** Stretch-Modus „canvas_items“ mit ganzzahliger Skalierung und Pixel-Einrasten (`rendering/2d/snap`): Grafik bleibt scharf in Spielpixeln, Schrift wird in Bildschirmauflösung gezeichnet. Größen stehen in Spielpixeln: Sprechblasen 12 (bei 1080p 48 px), Objektnamen und Dialogauswahl 10 (40 px), Blasen höchstens 270 breit (rund 50 Zeichen je Zeile). Thema `game/gui/resources/gui_theme.tres`; Pixelify Sans für Titel ohne Kantenglättung in ganzzahligen Vielfachen. Bildschirmfotos aus dem laufenden Spiel macht `game/tests/bildschirmfoto.gd`. Text in Sprechblasen und Objektnamen bekommt einen dunklen Rand (#262b44 aus Endesga 32), damit Text auf jedem Hintergrund lesbar bleibt. Jede Figur hat eine eigene Textfarbe aus der Palette: Max weiß, Pixel türkis wie seine Halsband-Leuchte, Opa orange.
+**Einstellungen in Godot:** Stretch-Modus „canvas_items“ mit ganzzahliger Skalierung und Pixel-Einrasten (`rendering/2d/snap`): Grafik bleibt scharf in Spielpixeln, Schrift wird in Bildschirmauflösung gezeichnet. Größen stehen in Spielpixeln bei 640×360: Sprechblasen 16 (bei 1080p 48 px), Objektnamen und Dialogauswahl 13 (39 px), Blasen höchstens 360 breit (1.080 px, rund 50 Zeichen je Zeile). Thema `game/gui/resources/gui_theme.tres`; Pixelify Sans für Titel ohne Kantenglättung in ganzzahligen Vielfachen. Bildschirmfotos aus dem laufenden Spiel macht `game/tests/bildschirmfoto.gd`. Text in Sprechblasen und Objektnamen bekommt einen dunklen Rand (#262b44 aus Endesga 32), damit Text auf jedem Hintergrund lesbar bleibt. Jede Figur hat eine eigene Textfarbe aus der Palette: Max weiß, Pixel türkis wie seine Halsband-Leuchte, Opa orange.
 
 **Test vor der Entscheidung:** Diesen Satz in jeder Kandidatin in Godot bei Originalgröße setzen und auf drei Hintergründen ansehen (Dachboden, Zauberwald, Neonstadt):
 
@@ -188,7 +210,7 @@ Mockup: `tools/ui_mockup_hd.py` zeichnet zwei Zustände auf dem Dachboden-Hinter
 
 | Bildschirm | Inhalt |
 | --- | --- |
-| Hauptmenü | Startszene des Spiels (`game/oberflaeche/hauptmenue.gd`). Titelbild mit Zapp-O-Mat; Fortsetzen (lädt den neuesten Stand, ohne Spielstand ausgegraut), Neues Spiel, Laden, Optionen, Errungenschaften, Beenden. Die Menüpunkte sind Fernsehkanäle 1 bis 6, der Bildschirm zeigt den gewählten Kanal (bei Fortsetzen Ort, Spielzeit und Datum), der Drehknopf dreht mit; Zifferntasten schalten direkt. Beim allerersten Start kommt vorher der Epilepsie-Hinweis |
+| Hauptmenü | Startszene des Spiels (`game/oberflaeche/hauptmenue.gd`). Titel und Untertitel in Pixelify Sans, Menüpunkte in Nunito. Titelbild mit Zapp-O-Mat; Fortsetzen (lädt den neuesten Stand, ohne Spielstand ausgegraut), Neues Spiel, Laden, Optionen, Errungenschaften, Beenden. Die Menüpunkte sind Fernsehkanäle 1 bis 6, der Bildschirm zeigt den gewählten Kanal (bei Fortsetzen Ort, Spielzeit und Datum), der Drehknopf dreht mit; Zifferntasten schalten direkt. Beim allerersten Start kommt vorher der Epilepsie-Hinweis |
 | Pausemenü (Esc) | Weiterspielen, Speichern, Laden, Optionen, Hauptmenü. Öffnet nur, wenn nichts läuft (in Zwischensequenzen und Gesprächen überspringt Esc), und hält das Spiel an. „Hauptmenü“ fragt mit einem zweiten Klick nach, weil Ungespeichertes verloren geht; das Spiel startet dafür neu, damit kein Zustand der alten Sitzung übrig bleibt |
 | Speichern und Laden | Zwölf Plätze mit Vorschaubild, Ort, Welt, Spielzeit und Datum, dazu Autospeicher und Schnellspeicher (siehe Speichern) |
 | Notizbuch | Öffnet sich aus dem Inventar, immer auf Seite 1. Seite 1: aktuelle Ziele, die das Hinweissystem mitpflegt. Seite 2: gesammelte Regeln und Passwort-Teile. Seite 3: Pixels Einkaufsliste als Running Gag, je Welt ein neuer Wunsch (Konzept, Running Gags) |
@@ -202,14 +224,14 @@ Mockup: `tools/ui_mockup_hd.py` zeichnet zwei Zustände auf dem Dachboden-Hinter
 | Reiter | Einstellungen |
 | --- | --- |
 | Audio | Gesamtlautstärke, Musik, Geräusche, Stimmen (je 0 bis 100, eigener Audio-Bus); stumm, solange das Fenster im Hintergrund ist |
-| Anzeige | Fenster, Vollbild oder randloses Fenster; Fenstergröße in ganzzahligen Stufen (960×540, 1440×810, 1920×1080); VSync; Bildrate 30, 60, 120 oder unbegrenzt |
-| Spiel | Sprache Deutsch oder Englisch; Textgeschwindigkeit (langsam, normal, schnell, sofort); Text weiter per Klick oder automatisch; Untertitel an oder aus (sobald es Stimmen gibt; Liedtexte haben immer Untertitel, kursiv mit Notenzeichen, bei den drei Rätsel-Liedern auch dann, wenn Untertitel aus sind, `04-audio.md`); Brabbel-Laute als Probe, bis die Entscheidung über die Sprachausgabe fällt |
+| Anzeige | Fenster, Vollbild oder randloses Fenster; Fenstergröße in ganzzahligen Stufen (1280×720, 1920×1080, 2560×1440); VSync; Bildrate 30, 60, 120 oder unbegrenzt |
+| Spiel | Sprache Deutsch oder Englisch; Textgeschwindigkeit (langsam, normal, schnell, sofort); Text weiter per Klick oder automatisch; Untertitel an oder aus (aus heißt: Eine Zeile mit Aufnahme läuft ohne Sprechblase. Zeilen ohne Aufnahme behalten ihren Text, sonst wäre die Zeile weg. Gesungene Zeilen zeigen ihren Text immer, kursiv mit einer Note davor, `04-audio.md`); Brabbel-Laute als Probe, bis die Entscheidung über die Sprachausgabe fällt |
 | Steuerung | Tastenbelegung für Text weiter (Standard Leertaste, Eingabetaste geht auch; Linksklick geht immer), Figur wechseln (Tab), Hotspots zeigen (Umschalt/Shift halten, damit keine Taste doppelt belegt ist), Pausemenü (Esc), Schnellspeichern (F5), Schnellladen (F9). Mit der Maus geht alles auch ohne Tasten. Darunter steht die Controller-Belegung (siehe Controller und Steam Deck) |
-| Barrierefreiheit | Große Schrift (ein Viertel größer); Hotspots dauerhaft zeigen; Namen zu den Hotspots zeigen (Standard an: wer die Hotspots zeigt, sieht auch, was sie sind); Bildschirmwackeln aus; Flackern reduzieren (ersetzt Lampenflackern und Umschalt-Störungen durch weiche Varianten; ein Epilepsie-Hinweis erscheint beim ersten Start); Farbenblind-Hilfe (Farbcodes bekommen zusätzlich Symbole: Kreis, Dreieck, Quadrat, siehe Welt 3) |
+| Barrierefreiheit | Große Schrift (ein Viertel größer); Hotspots dauerhaft zeigen; Namen zu den Hotspots zeigen (Standard an: wer die Hotspots zeigt, sieht auch, was sie sind); Bildschirmwackeln aus; Flackern reduzieren (ersetzt Lampenflackern und Umschalt-Störungen durch weiche Varianten; ein Epilepsie-Hinweis erscheint beim ersten Start); Farbenblind-Hilfe (vor jeder Sprechblase steht der Name der Figur, weil sonst nur die Schriftfarbe zeigt, wer spricht; Farbcodes bekommen zusätzlich Formen: Kreis, Dreieck, Quadrat, siehe Welt 3) |
 
-Wackeln, Flackern und Farbenblind-Hilfe sind als Schalter da. Jeder Effekt geht über `game/skripte/effekte.gd` (`CQEffekte.wackeln()`, `flackern_erlaubt()`, `weich_blinken()`, `farbsymbol()`), damit die Schalter überall gleich wirken, sobald die Effekte mit der Grafik kommen; wer einen Effekt baut, ruft diese Funktionen statt der Kamera oder eigener Zufallswerte.
+Alle Schalter wirken (Stand 11. November 2026, zweiter Nachtrag): **Untertitel** entscheidet in `Spiel.blase_zeigen()`, ob eine Sprechblase Text bekommt. Bei „aus“ bleibt der Text nur weg, wenn es zur Blase eine Aufnahme gibt (`Klang.hat_stimme()`); dann wartet das Spiel das Ende der Aufnahme ab, ein Klick oder „Text weiter“ beendet sie vorher. Solange keine Stimmen im Ordner liegen, ändert der Schalter deshalb sichtbar nichts; das steht als kleine Zeile unter dem Schalter. Gesungene Zeilen (Liste `LIED` in `game/skripte/klang_einsatz.gd`) zeigen ihren Text immer. **Bildschirmwackeln aus** schaltet jedes Wackeln ab: das Wackeln zu Skriptzeilen (Tabelle `WACKELN` in `game/skripte/effekte.gd`: die beiden Ambosse, der Sprung auf den Deckel, die Müllpresse, die Maschine im Finale) und das Wackeln der Minispiele (`wackeln_ebene()`). **Farbenblind-Hilfe** setzt den Namen der Figur vor jede Sprechblase („Opa: …“, `mit_sprecher()`; der Verlauf nennt den Namen ohnehin) und die Form vor jede Farbe einer Auswahl (`mit_farbsymbol()`: ● Rot, ▲ Grün, ■ Gelb im Kabelrätsel von Welt 3, dessen Buchsen ihr Symbol auch ohne die Hilfe im Namen tragen). Andere Stellen hängen nicht an der Farbe allein: Treffer und Fehler im Zombie-Tanz haben Zeichen und Text, gefragte Dialogoptionen sind dunkler statt andersfarbig, die rote Taste im Finale heißt so. „Flackern reduzieren“ wirkt im Hauptmenü. Jeder Effekt geht über `game/skripte/effekte.gd` (`CQEffekte.wackeln()`, `zeilen_wackeln()`, `wackeln_ebene()`, `flackern_erlaubt()`, `weich_blinken()`, `farbsymbol()`, `mit_sprecher()`), damit die Schalter überall gleich wirken; wer einen Effekt baut, ruft diese Funktionen statt der Kamera oder eigener Zufallswerte. `game/tests/schalter.gd` prüft alle drei Schalter, auch mit echten Sprechblasen. Die Zeichen ✓ ✗ ♪ ● ▲ ■ ◆ ↔ fehlen in Nunito und Pixelify Sans. Sie kommen aus `game/schriften/symbole.ttf` (acht Zeichen aus DejaVu Sans Bold, gebaut von `tools/symbolschrift.py`, Lizenz in `licenses/`), die das Spiel beim Start als Ersatzschrift an beide Schriften hängt. So erscheinen sie auch im Browser-Build, wo keine Schrift des Systems einspringt.
 
-Steam-Tags für Barrierefreiheit, die das Spiel damit erfüllt: Untertitel, anpassbare Textgröße, Farbenblind-Modus, Tastenbelegung anpassbar, Steuerung nur mit der Maus, volle Controller-Unterstützung, kein Zeitdruck. Die Liste wird vor der Store-Seite gegen Steams aktuelle Barrierefreiheits-Felder geprüft.
+Steam-Tags für Barrierefreiheit, die das Spiel damit erfüllt: Untertitel, anpassbare Textgröße, Farbenblind-Modus, Tastenbelegung anpassbar, Steuerung nur mit der Maus, volle Controller-Unterstützung, kein Zeitdruck. „Untertitel“ und „Farbenblind-Modus“ zählen, seit die Schalter wirken (11. November 2026); der Tag „Untertitel“ ist schon dadurch erfüllt, dass jede gesprochene Zeile als Text erscheint. Die Liste wird vor der Store-Seite gegen Steams aktuelle Barrierefreiheits-Felder geprüft.
 
 **Controller und Steam Deck** (`game/skripte/controller.gd`, Autoload „Controller“): Das ganze Spiel geht mit dem Gamepad, ohne Maus und Tastatur.
 
@@ -241,9 +263,9 @@ Die Hilfe-Pfote gibt zu jedem offenen Rätselschritt drei Hinweise, vom Stups bi
 
 **Stufen und Wartezeit:** Jeder Schritt merkt sich seine erreichte Stufe, auch über Speichern hinweg. Ein erneuter Klick wiederholt den letzten Hinweis. Die nächste Stufe gibt es erst nach 30 Sekunden (Stufe 2) bzw. 60 Sekunden (Stufe 3) seit dem letzten Hinweis; vorher sagt Pixel eine Wartezeile („Ich denke noch nach. Das sieht aus wie Schlafen, ist es aber nicht.“). Jeder Abschnitt mit Pfote hat eine eigene Wartezeile mit der Nummer 9995 im Ton seiner Welt. Die Pfote leuchtet sanft, sobald die nächste Stufe bereitliegt.
 
-**Wer hilft wann:** Im Prolog schläft Pixel bis P1, also gibt Opa die Hinweise zu P1 über Reden; die Pfote ist bis dahin ausgegraut. In den Zwischenspielen ist kein Schritt offen; die Pfote sagt dort nur ZS1\_HINT\_PIX\_0010. In Welt 3 hängt der Weg von der Ebene ab: In der Realität steht Pixel neben Max und spricht normal. In der Simulation hört Max ihn, sobald Kabel-Kalle ihn beim ersten Aufwachen „auf die Leitung“ gelegt hat, aus dem Hörer der nächsten Telefonzelle oder aus Omas Wandtelefon; vorher und im Büroturm (Rätsel 7) gibt es nur das Terminal mit Miau-Morse, das Kalle übersetzt. Im Labor spricht Pixel aus M.U.T.T.I.s Lautsprecher, den Kalle angezapft hat. In Welt 4 meldet er sich aus dem Rauschen. Die Pfote funktioniert also überall, nur ihr Ausgabeweg wechselt.
+**Wer hilft wann:** Im Prolog schläft Pixel bis P1, also gibt Opa die Hinweise zu P1 über Reden; die Pfote ist bis dahin ausgegraut. In den Zwischenspielen ist kein Schritt offen; die Pfote sagt dort nur ZS1\_HINT\_PIX\_0010. In Welt 3 hängt der Weg von der Ebene ab: In der Realität steht Pixel neben Max und spricht normal. In der Simulation hört Max ihn, sobald Kabel-Kalle ihn beim ersten Aufwachen „auf die Leitung“ gelegt hat, aus dem Radiowecker auf der Straße oder aus Omas Küchenradio; vorher und im Büroturm (Rätsel 7) gibt es nur das Terminal mit Miau-Morse, das Kalle übersetzt. Im Labor spricht Pixel aus M.U.T.T.I.s Lautsprecher, den Kalle angezapft hat. In Welt 4 meldet er sich aus dem Rauschen. Die Pfote funktioniert also überall, nur ihr Ausgabeweg wechselt.
 
-**Nachsicht bei Minispielen:** Kein Minispiel kann den Spieler aufhalten. Nach zwei Fehlversuchen bietet eine Figur an, das Minispiel als bestanden zu werten (Welt 2: Ramses wertet „großzügig“, Welt 4: Flimmer schaltet die Zombies ab). Wer annimmt, kommt weiter; nur Errungenschaften, die eine Bestleistung verlangen, entfallen. Wer ablehnt, spielt weiter. Die Minispiele sind Archimedes' Hebel und das Rede-Ringen (Welt 2) und das Zombie-Video (Welt 4); Wortlaut und Ablauf stehen in den Rätsel-Dateien.
+**Nachsicht bei Minispielen:** Kein Minispiel kann den Spieler aufhalten. Nach zwei Fehlversuchen bietet eine Figur an, das Minispiel als bestanden zu werten (Welt 2: Ramses wertet „großzügig“, Welt 4: Flimmer schaltet die Zombies ab). Wer annimmt, kommt weiter; nur Errungenschaften, die eine Bestleistung verlangen, entfallen. Wer ablehnt, spielt weiter. Die Minispiele sind Archimedes' Hebel und das Rede-Ringen (Welt 2) und das Zombie-Video (Welt 4); Wortlaut und Ablauf stehen in den Rätsel-Dateien. Jedes Minispiel hat eine eigene Spielfläche über dem Raum; Hebel und Rede-Ringen haben keinen Zeitdruck, nur der Zombie-Tanz verlangt Rhythmus. Alle drei lassen sich mit Maus, Tastatur und Controller spielen.
 
 **Zählung:** Pro Welt wird gezählt, wie oft Stufe 3 genutzt wurde. Bei null gibt Pixel am Ende der Welt widerwillig zu, beeindruckt zu sein. Für eine Steam-Errungenschaft reicht derselbe Zähler.
 
@@ -256,13 +278,13 @@ Errungenschaften (Steam): 13 Stück, alle aus Zählern und Schaltern, die das Sp
 | OHNE\_PFOTE\_1 bis \_4 | Ohne Pfote: Welt 1 bis 4 | Welt beendet und dort keine Stufe 3 (Zähler `stufe3_zaehler`). Beendet heißt: Welt 1 bis 3, sobald das Zwischenspiel danach beginnt (Wert ZWISCHENSPIEL ≥ Nummer); Welt 4 mit Rätsel R13 |
 | FUENFKAMPF | Fünfkampf | alle fünf Disziplinen in Welt 2 mit Bestleistung (Definition in `raetsel/welt-2.md`): W2\_LAUF\_, \_HEBEL\_, \_SPEER\_, \_DISKUS\_, \_RINGEN\_BESTLEISTUNG |
 | DEJA\_VU | Déjà-vu | Simulation in Welt 3 zum dritten Mal betreten: Wert W3\_SIMULATION\_BESUCHE ≥ 3 |
-| FREUND\_0815 | Freund 08/15 | Modell 08/15 als Freund gewonnen: FREUND\_0815 |
+| FREUND\_0815 | Freund 08/15 | Modell 08/15 als Freund gewonnen: W3\_FREUND\_0815 |
 | ZAPP\_MEISTER | Zapp-Meister | alle Kanäle der Programmzeitschrift gefunden: W4\_ALLE\_KANAELE |
 | EINKAUFSLISTE | Einkaufsliste komplett | alle Wünsche Pixels im Notizbuch: Wert EINKAUFSLISTE ≥ 4 |
 | NEUGIER | Neugier | alle 14 Nahansichten des Spiels geöffnet (Welt-Tabellen) |
 | WELT\_GERETTET | Welt gerettet | Finale gesehen: FI\_ENDE\_GESEHEN |
 
-Vier Namen gibt es in den Welt-Tabellen noch nicht; wer die Welt baut, legt sie unter `weitere_schalter` an und setzt sie: W3\_SIMULATION\_BESUCHE (Welt 3, zählt jedes Betreten der Simulation), W4\_ALLE\_KANAELE (Welt 4), EINKAUFSLISTE (Finale-Tabelle, Zahl der Wünsche auf Seite 3) und FI\_ENDE\_GESEHEN (Finale, nach dem Abspann). Wo eine Bedingung nicht als Schalter passt, schaltet `Errungenschaften.freischalten("ID")` direkt frei.
+Vier Namen gehören zu keinem Rätsel und stehen in den Welt-Tabellen unter `weitere_schalter`: W3\_SIMULATION\_BESUCHE (Welt 3, zählt jedes Betreten der Simulation), W4\_ALLE\_KANAELE (Welt 4), EINKAUFSLISTE (Finale-Tabelle, Zahl der Wünsche auf Seite 3) und FI\_ENDE\_GESEHEN (Finale, nach dem Abspann). Wo eine Bedingung nicht als Schalter passt, schaltet `Errungenschaften.freischalten("ID")` direkt frei.
 
 **Datenformat:** Eine Datei pro Abschnitt, `game/daten/hinweise/<abschnitt>.json`, erzeugt von `tools/spieldaten.py` aus Welt-Tabelle und Skript (nie von Hand bearbeiten), mit einem Eintrag pro Schritt:
 
@@ -338,11 +360,13 @@ Während einer Zwischensequenz, eines Gesprächs oder eines Minispiels merkt sic
 - Gespeichert werden nur Schalter und Werte, nie etwas, das sich daraus ableiten lässt. Ob eine Tür offen ist, folgt aus dem Rätselschalter.
 - Schalter heißen wie die Rätselschritte, damit Hinweissystem, Notizbuch und Speichern dieselbe Sprache sprechen.
 - Hilfsschalter und Hilfswerte, die zu keinem Rätsel gehören (etwa `P0_SCHNEE_GESEHEN`, `W1_ZIEGE_FOLGT`), tragen das Präfix ihres Abschnitts und stehen in der Welt-Tabelle unter `weitere_schalter`; `tools/pruefen.py` warnt, wenn der Code einen anderen Namen setzt.
+- Jeder Schalter und jeder Wert trägt das Präfix seines Abschnitts (`P0_`, `W1_` bis `W4_`, `ZS1_` bis `ZS3_`, `FI_`), auch die Nebenschalter eines Rätsels wie `W3_CODE_SICHT` oder `W3_FREUND_0815`. Ohne Präfix bleiben nur fünf Werte, die über die Abschnitte hinweg gelten: `ZWISCHENSPIEL`, `TASCHE`, `FUNDKISTE`, `EINKAUFSLISTE` und `FINALE`. `tools/pruefen.py` meldet jeden anderen Namen ohne Präfix als Fehler.
+- Wird ein Schalter umbenannt, steigt die Versionsnummer der Spielstände, und die Umwandlung in `game/skripte/cq_save_load.gd` übersetzt den alten Namen. Stand: Version 3 (seit dem 11. November 2026 tragen die Schalter aus Welt 3 und dem Finale ihr Präfix).
 - Claude schreibt einen automatischen Test, der im Vertical Slice nach jedem gelösten Schritt speichert, lädt und prüft, dass nichts fehlt.
 
 ## Offene Entscheidungen
 
-- [ ] Schrift festlegen nach dem Umlaut-Test (Monogram Extended oder m5x7)
+- [x] Schrift festlegen: entschieden am 9. November 2026, Nunito für Text im Spiel, Pixelify Sans für Titel (Abschnitt Schrift).
 - [x] Text in Spielauflösung lassen oder gleich die Ebene in doppelter Auflösung bauen: entschieden am 8. November 2026, Text bleibt in Spielauflösung; die Ebene in doppelter Auflösung kommt nur als Option „Große Schrift“.
 - [ ] Wartezeiten der Hinweise (30 und 60 Sekunden) nach dem ersten Test mit Fremden anpassen
 - [ ] Zwei-Klick-Steuerung bestätigen oder doch eine Verbenleiste

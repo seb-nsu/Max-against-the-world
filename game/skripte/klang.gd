@@ -7,7 +7,8 @@ extends Node
 ## Dateien (Name = ID, Endung .ogg, .wav oder .mp3):
 ##   res://audio/musik/<id>          Raum-Stücke und Sonderstücke (titel, werbeblock, abspann …)
 ##   res://audio/jingles/<id>        kurze Stücke ohne Schleife (aufgehoben, geloest …)
-##   res://audio/geraeusche/<id>     Geräusche (ui_klick, wechsel, speichern …)
+##   res://audio/geraeusche/<id>     Geräusche (ui_klick, wechsel, speichern …), auch die Schleifen
+##                                   der Atmosphäre (w1_atmo, regen_strasse, uhr_ticken …)
 ##   res://audio/stimmen/<sprache>/<ZEILEN_ID>   eine Datei je Sprechblase (Kaskaden _2, _3 eigen)
 ##
 ## Busse: Musik, Geraeusche, Stimmen (default_bus_layout.tres), Lautstärken aus den Optionen.
@@ -22,12 +23,14 @@ const ORDNER := {
 const ENDUNGEN := ["ogg", "wav", "mp3"]
 const UEBERBLENDEN := 1.0
 
-## Jingles (04-audio.md, Jingles); die Spiel-Ereignisse rufen jingle(<id>)
-const JINGLES := ["aufgehoben", "geloest", "welt_geschafft", "falsch", "lachkonserve", "gluecksrad"]
-## Geräusche der Spielsysteme und der Bedienung (04-audio.md, Geräusche: Bedienung, Spielsysteme)
-const GERAEUSCHE := ["ui_klick", "inventar", "seite", "kombinieren", "fehler", "wechsel",
-	"hinweis", "speichern", "nahansicht", "notiz", "zappomat_sog", "werbeblock_start",
-	"umschalten", "gong"]
+## Kennung „kein Stück“ im Feld musik eines Raums (Supermarkt im Finale): Die Musik blendet aus.
+const STILLE := "stille"
+## Kennung „keine Atmosphäre“ im Feld atmo eines Raums
+const KEINE_ATMO := "keine"
+## Lautstärke der Schleifen (Atmosphäre) in dB: leise unter der Musik
+const ATMO_DB := -14.0
+## Tupfer (einzelne Laute zur Atmosphäre, Feld tupfer): Abstand in Sekunden, von bis
+const TUPFER_ABSTAND := [14.0, 32.0]
 
 ## Brabbel: Grundton (Hz) und Silben je Sekunde je Sprecherkürzel (04-audio.md, Stimmen)
 ## Hauptfiguren fest (Stimmen-Tabelle in 04-audio.md); alle anderen bekommen Werte aus ihrem Kürzel.
@@ -52,12 +55,20 @@ var fehlend := {}
 ## Zuletzt angefragte Klänge (für Tests): ["musik/titel", "jingle/geloest", …]
 var protokoll: Array[String] = []
 
+## Stimmen ohne Datei, nur für Tests: Schlüssel der Sprechblase → AudioStream
+var probe_stimmen := {}
+
 var _musik: Array[AudioStreamPlayer] = []
 var _aktiv := 0
 var _geraeusche: Array[AudioStreamPlayer] = []
 var _stimme: AudioStreamPlayer
 var _brabbel: AudioStreamPlayer
 var _tween: Tween
+## Atmosphäre: eine leise Schleife je Raum (Feld atmo der Welt-Tabelle), dazu ein Tupfer
+var aktuelle_atmo := ""
+var aktueller_tupfer := ""
+var _atmo: AudioStreamPlayer
+var _tupfer_in := 0.0
 
 
 func _ready() -> void:
@@ -66,6 +77,9 @@ func _ready() -> void:
 		_musik.append(_spieler("Musik"))
 	for i in 6:
 		_geraeusche.append(_spieler("Geraeusche"))
+	_atmo = _spieler("Geraeusche")
+	_atmo.volume_db = ATMO_DB
+	_atmo.finished.connect(_atmo_weiter)
 	_stimme = _spieler("Stimmen")
 	_brabbel = _spieler("Stimmen")
 	var gen := AudioStreamGenerator.new()
@@ -95,19 +109,31 @@ func datei(art: String, id: String) -> String:
 
 #region Musik ######################################################################################
 ## Raum-Stück aus der Welt-Tabelle (Feld musik beim Raum); ohne Angabe läuft das alte weiter.
+## Die Regeln des Abschnitts dürfen ein anderes Stück nennen (Wert „musik“: Finale, solange die
+## Maschine läuft). „stille“ heißt: kein Stück, die Musik blendet aus.
 func raum_musik(raum_id: String) -> void:
 	var id := musik_fuer_raum(raum_id)
-	if not id.is_empty():
+	var eigene = Spiel.regel_wert("musik", raum_id)
+	if eigene is String and not eigene.is_empty():
+		id = eigene
+	if id == STILLE:
+		musik_aus()
+	elif not id.is_empty():
 		musik(id)
 
 
 func musik_fuer_raum(raum_id: String) -> String:
+	return _raum_feld(raum_id, "musik")
+
+
+## Feld eines Raums aus der Welt-Tabelle: erst der aktuelle Abschnitt, dann alle anderen.
+func _raum_feld(raum_id: String, feld: String) -> String:
 	var abschnitte: Array = [Zustand.abschnitt]
 	abschnitte.append_array(Bauplan.welten.keys())
 	for ab in abschnitte:
 		for r in Bauplan.welten.get(ab, {}).get("raeume", []):
-			if r.get("id", "") == raum_id and r.has("musik"):
-				return str(r.musik)
+			if r.get("id", "") == raum_id and r.has(feld):
+				return str(r[feld])
 	return ""
 
 
@@ -138,24 +164,51 @@ func musik(id: String) -> void:
 		_tween.chain().tween_callback(alt.stop)
 
 
+## Das laufende Stück von einer Stelle (Sekunden) neu starten: Das Rhythmus-Minispiel legt seinen
+## ersten Schlag auf den Takt der Musik (skripte/minispiele/zombie_tanz.gd, VERSATZ). Ohne Datei
+## passiert nichts.
+func musik_von_vorn(ab := 0.0) -> void:
+	protokoll.append("musik_von_vorn/" + aktuelle_musik)
+	var p := _musik[_aktiv]
+	if p.stream != null and p.playing:
+		p.play(maxf(0.0, ab))
+
+
 func musik_stopp() -> void:
 	aktuelle_musik = ""
 	for m in _musik:
 		m.stop()
 
 
+## Kein Stück: Das laufende blendet aus (Supermarkt im Finale, nur Kühlregal und Türgong).
+func musik_aus() -> void:
+	if aktuelle_musik.is_empty():
+		return
+	aktuelle_musik = ""
+	protokoll.append("musik/" + STILLE)
+	if is_instance_valid(_tween):
+		_tween.kill()
+	_tween = null
+	for m in _musik:
+		if m.playing:
+			var t := create_tween()
+			t.tween_property(m, "volume_db", -40.0, UEBERBLENDEN)
+			t.tween_callback(m.stop)
+
+
 #endregion
 
 #region Geräusche und Jingles ######################################################################
-func geraeusch(id: String) -> void:
-	_kurz("geraeusch", id)
+## tonhoehe: 1.0 = wie aufgenommen, kleiner = tiefer und länger.
+func geraeusch(id: String, tonhoehe := 1.0) -> void:
+	_kurz("geraeusch", id, tonhoehe)
 
 
 func jingle(id: String) -> void:
 	_kurz("jingle", id)
 
 
-func _kurz(art: String, id: String) -> void:
+func _kurz(art: String, id: String, tonhoehe := 1.0) -> void:
 	protokoll.append("%s/%s" % [art, id])
 	var pfad := datei(art, id)
 	var strom: AudioStream = null
@@ -168,13 +221,92 @@ func _kurz(art: String, id: String) -> void:
 	for p in _geraeusche:
 		if not p.playing:
 			p.stream = strom
+			p.pitch_scale = tonhoehe
 			p.play()
 			return
+
+
+## Klang zu einem Tabelleneintrag aus CQKlangEinsatz: „<id>“ ist ein Geräusch, „jingle/<id>“ ein
+## Jingle.
+func einsatz(eintrag: String) -> void:
+	if eintrag.is_empty():
+		return
+	if eintrag.begins_with("jingle/"):
+		jingle(eintrag.trim_prefix("jingle/"))
+	else:
+		geraeusch(eintrag)
+
+
+## Geräusche und Laute zu einer Skriptzeile (Spiel.sagen ruft das zu Beginn jeder Zeile).
+func zeilen_klang(kuerzel: String, zeile: String) -> void:
+	for k in CQKlangEinsatz.fuer_zeile(kuerzel, zeile, Zustand.abschnitt):
+		if k == CQKlangEinsatz.LAUT.get(kuerzel, ""):
+			geraeusch(k, CQKlangEinsatz.LAUT_TONHOEHE.get(kuerzel, 1.0))
+		else:
+			einsatz(k)
+	var stueck: String = CQKlangEinsatz.MUSIK.get(zeile, "")
+	if stueck == "raum":
+		if is_instance_valid(R.current) and R.current.has_method("raum_id"):
+			raum_musik(R.current.raum_id())
+	elif not stueck.is_empty():
+		musik(stueck)
 
 
 ## Ohne Ausgabe (Tests, Server) nichts erzeugen: spart Rechenzeit bei tausenden Zeilen.
 static func _headless() -> bool:
 	return DisplayServer.get_name() == "headless"
+
+
+#endregion
+
+#region Atmosphäre #################################################################################
+## Atmosphäre des Raums aus der Welt-Tabelle: Feld atmo (eine Schleife, „keine“ = still) und Feld
+## tupfer (ein Laut, der alle paar Sekunden dazukommt). Die Regeln dürfen eine andere Schleife
+## nennen (Wert „atmo“).
+func raum_atmo(raum_id: String) -> void:
+	var id := _raum_feld(raum_id, "atmo")
+	var eigene = Spiel.regel_wert("atmo", raum_id)
+	if eigene is String and not eigene.is_empty():
+		id = eigene
+	atmo("" if id == KEINE_ATMO else id)
+	aktueller_tupfer = _raum_feld(raum_id, "tupfer")
+	_tupfer_in = randf_range(TUPFER_ABSTAND[0], TUPFER_ABSTAND[1])
+
+
+## Schleife wechseln. Dieselbe läuft weiter, "" hält sie an.
+func atmo(id: String) -> void:
+	if id == aktuelle_atmo:
+		return
+	aktuelle_atmo = id
+	protokoll.append("atmo/" + (id if not id.is_empty() else KEINE_ATMO))
+	_atmo.stop()
+	if id.is_empty():
+		return
+	var pfad := datei("geraeusch", id)
+	var strom: AudioStream = null
+	if not pfad.is_empty():
+		strom = load(pfad)
+	elif Einstellungen.wert("platzhalter_klang") and not _headless():
+		strom = CQPlatzhalterKlang.schleife(id)
+	if strom == null:
+		return
+	_atmo.stream = strom
+	_atmo.play()
+
+
+## Die Datei muss keine Schleife sein: Am Ende beginnt sie von vorn.
+func _atmo_weiter() -> void:
+	if not aktuelle_atmo.is_empty() and _atmo.stream != null:
+		_atmo.play()
+
+
+func _process(delta: float) -> void:
+	if aktueller_tupfer.is_empty() or get_tree().paused:
+		return
+	_tupfer_in -= delta
+	if _tupfer_in <= 0.0:
+		_tupfer_in = randf_range(TUPFER_ABSTAND[0], TUPFER_ABSTAND[1])
+		geraeusch(aktueller_tupfer)
 
 
 #endregion
@@ -185,13 +317,51 @@ static func _headless() -> bool:
 func zeile(kuerzel: String, schluessel: String, text: String) -> void:
 	if kuerzel in STUMM:
 		return
+	if CQKlangEinsatz.hat_laut(kuerzel):
+		return  # Laut statt Stimme: kommt über zeilen_klang()
 	_stimme.stop()
-	var pfad := datei("stimme", "%s/%s" % [TranslationServer.get_locale().left(2), schluessel])
-	if not pfad.is_empty():
-		_stimme.stream = load(pfad)
+	var aufnahme := stimme_zu(schluessel)
+	if aufnahme != null:
+		_stimme.stream = aufnahme
 		_stimme.play()
 	elif Einstellungen.wert("brabbel") and not _headless():
 		brabbeln(kuerzel, text)
+
+
+## Aufnahme zu einer Sprechblase in der aktuellen Sprache, null wenn es keine gibt.
+func stimme_zu(schluessel: String) -> AudioStream:
+	if probe_stimmen.has(schluessel):
+		return probe_stimmen[schluessel]
+	var pfad := datei("stimme", "%s/%s" % [TranslationServer.get_locale().left(2), schluessel])
+	return load(pfad) if not pfad.is_empty() else null
+
+
+## Gibt es zu dieser Sprechblase eine Aufnahme? Nur dann darf ihr Text bei „Untertitel aus“
+## wegbleiben (Spiel.blase_zeigen).
+func hat_stimme(schluessel: String) -> bool:
+	return stimme_zu(schluessel) != null
+
+
+## Wartet, bis die laufende Aufnahme zu Ende ist (Sprechblase ohne Text bei „Untertitel aus“).
+## Ein Klick, „Text weiter“ oder das Überspringen der Szene beendet die Zeile vorher.
+func stimme_abwarten() -> void:
+	var rest := 0.0
+	if _stimme.stream != null:
+		rest = _stimme.stream.get_length()
+	if rest <= 0.0:
+		rest = 2.0  # Länge unbekannt (Stream ohne Dauer)
+	var gedrueckt := true  # der Klick, der die vorige Zeile beendet hat, zählt nicht
+	while rest > 0.0 and _stimme.playing:
+		if is_instance_valid(E) and E.cutscene_skipped:
+			break
+		var jetzt := Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT) \
+			or Input.is_action_pressed("cq_text_weiter")
+		if jetzt and not gedrueckt:
+			break
+		gedrueckt = jetzt
+		await get_tree().process_frame
+		rest -= get_process_delta_time()
+	_stimme.stop()
 
 
 ## Silben grob zählen: Gruppen von Selbstlauten.

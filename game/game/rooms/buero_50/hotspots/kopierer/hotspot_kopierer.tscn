@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://cgxtaxebiaxkq"]
+
+[ext_resource type="Script" path="res://game/rooms/buero_50/hotspots/kopierer/hotspot_kopierer.gd" id="1_opral"]
+
+[node name="Kopierer" type="Area2D" unique_id=788295757]
+script = ExtResource("1_opral")
+script_name = "Kopierer"
+description = "Kopierer"
+cursor = 1
+interaction_polygon = PackedVector2Array(-38.5, -32, 38.5, -32, 38.5, 32, -38.5, 32)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=2027096533]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

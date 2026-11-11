@@ -34,6 +34,7 @@
    ],
    "erreichbar_ab": "start",
    "musik": "gegenwart",
+   "atmo": "uhr_ticken",
    "zustaende": [
     "Nachmittag"
    ]
@@ -51,6 +52,7 @@
    ],
    "erreichbar_ab": "start",
    "musik": "gegenwart",
+   "atmo": "uhr_ticken",
    "zustaende": [
     "Nachmittag"
    ]
@@ -67,6 +69,7 @@
    ],
    "erreichbar_ab": "start",
    "musik": "gegenwart",
+   "atmo": "uhr_ticken",
    "zustaende": [
     "Nachmittag"
    ]

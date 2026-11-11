@@ -5,11 +5,11 @@ Auflösung 640×360 (seit 10. November 2026, vorher 480×270; Maße zentral in `
 Wechsel mit `python3 tools/aufloesung.py --umrechnen ALT NEU`), Pixelgrafik ohne Glättung, ganzzahlig
 skaliert. Text (Nunito) wird in voller Bildschirmauflösung gezeichnet (Stretch-Modus
 „canvas_items“ mit Pixel-Einrasten, `docs/05-spielsysteme.md`, Schrift). Bildschirmfotos aus dem
-laufenden Spiel: `tests/bildschirmfoto.gd` und `tests/bildschirmfoto_menues.gd` (Aufruf im Kopf der Datei, braucht xvfb-run). Stand: Stufe 1
-(Grundgerüst) und Graubox: Prolog und ganz Welt 1 (R1 bis R13, Rätsel 10 über Weg A oder B)
-sind mit Platzhaltergrafik durchspielbar, danach die Ankunft in Zwischenspiel 1 mit der Abgabe
-des Dracheneis. Reisetasche packen und Kanal 7 fehlen noch: der Drehknopf meldet dort „Ende der
-Graubox“.
+laufenden Spiel: `tests/bildschirmfoto.gd`, `tests/bildschirmfoto_menues.gd` und `tests/bildschirmfoto_minispiele.gd` (Aufruf im Kopf der Datei, braucht xvfb-run). Stand (11. November 2026):
+Graubox. Prolog, Welt 1 bis 4, die drei Zwischenspiele mit Reisetasche und das Finale mit Abspann
+sind mit Platzhaltergrafik durchspielbar, die drei Minispiele (Hebel, Rede-Ringen, Zombie-Tanz)
+mit eigener Spielfläche. Grafik und Tondateien fehlen; der Ton ist verdrahtet und spielt bis dahin
+Platzhalter-Töne.
 
 ## Öffnen und spielen
 
@@ -85,6 +85,16 @@ godot --headless --editor --path game -- --cq-bauen   # Godot-Bau: fehlende Popo
   `room_dachboden.gd`. Regeln über mehrere Räume (Ziegen, Zeldina und Grimmzahn als
   Begleiter, die Abnehmer in Smaugis Kammer, Pixel im Fell) stehen in `skripte/welt_1.gd`;
   `CQRaum` ruft sie nach jedem Betreten und Laden auf.
+- **Minispiele** (Archimedes' Hebel und Rede-Ringen in Welt 2, Zombie-Tanz in Welt 4): Die Regeln
+  stehen ohne Oberfläche in `skripte/minispiele/` (`hebel.gd`, `rede_ringen.gd`,
+  `zombie_tanz.gd`), die Spielflächen in `oberflaeche/minispiel_*.gd` (gemeinsamer Rahmen
+  `minispiel.gd`). `Spiel.minispiel_oeffnen(skript)` öffnet eine Spielfläche; sie zählt wie eine
+  Zwischensequenz. Die Regeln des Abschnitts führen den Ablauf und fragen die Spielfläche nach dem
+  nächsten Zug. Im Testmodus kommen die Züge aus `Spiel.vorgabe_auswahl`; mit
+  `Spiel.minispiel_von_hand` drückt ein Test die echten Knöpfe (`tests/minispiele.gd`). Figuren und
+  Hintergründe sind gezeichnete Platzhalter, bis es die Grafik gibt. Tempo und Versatz des
+  Zombie-Tanzes stehen als `BPM` und `VERSATZ` in `zombie_tanz.gd` (nach dem Erzeugen der Musik
+  messen und eintragen).
 - **Auswahl ohne Gesprächsfigur** (Wünsche am Brunnen, Passwort an der Geheimtür):
   `Spiel.auswahl(texte)` zeigt Popochius Inline-Auswahl; Tests geben die Antwort über
   `Spiel.vorgabe_auswahl` vor. Das Passwort sind vier Auswahlen nacheinander (gewählte Teile
@@ -122,7 +132,7 @@ Autoloads in `skripte/`:
 | `Spielstand` | Autospeicher bei jedem Raumwechsel (3 Plätze), F5/F9, 12 manuelle Plätze, wartet mit dem Speichern bis eine Szene vorbei ist |
 | `Telemetrie` | anonymes Spielprotokoll, nur im Testbuild und nur mit Zustimmung (siehe Testbuild und Telemetrie) |
 | `Einstellungen` | Optionen in `user://settings.cfg`: Lautstärken je Bus, Fenster, VSync, Bildrate, Sprache, Texttempo, Tastenbelegung, Barrierefreiheit; gelten sofort |
-| `Klang` | Audio-Gerüst: Musik je Raum (Welt-Tabelle), Jingles, Geräusche, Stimmen über IDs aus `audio/`; fehlende Dateien bleiben still (`docs/04-audio.md`, Im Spiel) |
+| `Klang` | Audio-Gerüst: Musik und Atmosphäre je Raum (Welt-Tabelle, Felder `musik`, `atmo`, `tupfer`), Jingles, Geräusche, Stimmen über IDs aus `audio/`; fehlende Dateien bleiben still oder spielen einen Platzhalter (`docs/04-audio.md`, Im Spiel). Wo welches Geräusch spielt, steht in `skripte/klang_einsatz.gd`: Tabellen je Skriptzeile, Objekt, Gegenstand, Laut einer Figur und Schritt je Raum |
 
 Menüs in `oberflaeche/`: `hauptmenue.tscn` ist die Startszene; `pausemenue.gd` (Esc),
 `spielstaende.gd` (Speichern und Laden) und `optionen.gd` (fünf Reiter) teilen den Stil aus
@@ -130,7 +140,8 @@ Menüs in `oberflaeche/`: `hauptmenue.tscn` ist die Startszene; `pausemenue.gd` 
 
 Speichern nutzt Popochius eigene Speicherung (Räume, Figuren, Inventar je Figur, Gespräche),
 nur das Dateiformat ist eigenes JSON mit Versionsnummer: `user://saves/<platz>.json`
-(`skripte/cq_save_load.gd`). Der Zustand hängt über `game/popochiu_globals.gd` daran.
+(`skripte/cq_save_load.gd`). Stand ist Version 3; ältere Spielstände hebt `umwandeln()` beim Lesen an
+(Koordinaten der alten Auflösung, umbenannte Schalter). Der Zustand hängt über `game/popochiu_globals.gd` daran.
 
 ## Testbuild und Telemetrie
 
@@ -237,7 +248,10 @@ cd game
 godot --headless --path . --import                                   # einmal nach dem Klonen
 godot --headless --path . -s res://tests/prolog_durchlauf.gd          # Testmodus, gut 3 Minuten
 godot --headless --path . -s res://tests/prolog_durchlauf.gd -- --echt   # echte Sprechblasen, gut 9 Minuten
-godot --headless --path . -s res://tests/menues.gd                    # Menüs, Optionen, Audio-Gerüst, unter 1 Minute
+godot --headless --path . -s res://tests/menues.gd                    # Menüs, Optionen, Audio-Gerüst, erster Raum nach dem Hauptmenü, unter 1 Minute
+godot --headless --path . -s res://tests/minispiele.gd                # Hebel, Rede-Ringen, Zombie-Tanz, unter 1 Minute
+godot --headless --path . -s res://tests/ton.gd                       # Geräusche, Atmosphäre, Stücke, unter 1 Minute
+godot --headless --path . -s res://tests/schalter.gd                  # Untertitel, Wackeln aus, Farbenblind-Hilfe, unter 1 Minute
 ```
 
 **Screenshot-Regressionstest (A16):** `tests/bildschirm_vergleich.gd` betritt jeden gebauten Raum
@@ -254,7 +268,8 @@ xvfb-run -a -s "-screen 0 1280x720x24" godot --path . --rendering-driver opengl3
 ```
 
 Läuft in GitHub Actions als eigener Job „bildschirm“; Abweichungen und Übersichten gibt es dort als
-Artefakt. Die Bildschirmfotos der Oberfläche (`bildschirmfoto.gd`, `bildschirmfoto_menues.gd`)
+Artefakt. Die Bildschirmfotos der Oberfläche (`bildschirmfoto.gd`, `bildschirmfoto_menues.gd`,
+`bildschirmfoto_minispiele.gd`)
 nehmen `--sprache=en` für die englische Fassung.
 
 Der allererste Import nach dem Klonen meldet rund 60 Fehler (Autoloads und Übersetzungen, die erst beim Import entstehen). Das ist normal: Ein zweiter Import und das Öffnen im Editor laufen fehlerfrei. Im Editor genügt es, das Projekt einmal zu öffnen und, falls Godot fragt, neu zu laden.

@@ -16,7 +16,8 @@ Geprüft wird:
   4. Namen aus der Tabelle kommen in Rätsel- und Grafik-Datei vor (Warnung).
   5. Audio (docs/04-audio.md): jedes Sprecherkürzel steht mit dem Namen aus der
      Welt-Tabelle in einer Kürzel-Spalte (Warnung), jedes musik eines Raums steht
-     in der Musik-Tabelle (Fehler; Raum ohne musik: Warnung), die Rätsel-IDs der
+     in der Musik-Tabelle (Fehler; Raum ohne musik: Warnung; „stille“ = kein Stück),
+     jedes atmo und tupfer eines Raums in einer Geräusch-Tabelle, die Rätsel-IDs der
      Lieder-Tabelle gibt es (Fehler).
   6. Nahansichten: Summe aller nahansicht: true und aller Einträge unter
      nahansichten: über alle Welt-Tabellen ist NAHANSICHTEN_GESAMT (Fehler).
@@ -74,7 +75,7 @@ MAX_ZEICHEN = 120
 # Festgelegte Zahl der Nahansichten im ganzen Spiel (entscheidungen.md)
 NAHANSICHTEN_GESAMT = 14
 
-fehler, warnungen = [], []
+fehler, warnungen, hinweise = [], [], []
 
 
 def F(ort, text):
@@ -83,6 +84,11 @@ def F(ort, text):
 
 def W(ort, text):
     warnungen.append(f"WARNUNG  {ort}: {text}")
+
+
+def H(ort, text):
+    """Hinweis: harmlos, zählt nicht als Warnung und wird nur mit --hinweise gezeigt."""
+    hinweise.append(f"HINWEIS  {ort}: {text}")
 
 
 def als_liste(x):
@@ -359,14 +365,14 @@ def pruefe_skript(ab, d, codes, kuerzel, alle_ids):
         elif len(zellen) > 1:
             sprecher = norm(zellen[1])
             if namen.get(kz) and not sprecher.startswith(namen[kz]) and namen[kz] not in sprecher:
-                W(ort, f"Sprecher „{zellen[1]}“ passt nicht zu {kz} = {namen[kz]}")
+                F(ort, f"Sprecher „{zellen[1]}“ passt nicht zu {kz} = {namen[kz]}")
         if code not in OHNE_ZEHNER:
             n = int(num)
             # Neue Zeilen in Zehnerschritten; eingeschobene Zeilen nehmen eine
             # freie Nummer zwischen den Nachbarn (05-spielsysteme.md), daher
             # wird nur die aufsteigende Reihenfolge geprüft.
             if n <= letzte.get(code, -1):
-                W(ort, f"{roh}: Nummer nicht aufsteigend im Block")
+                H(ort, f"{roh}: Nummer nicht aufsteigend im Block")
             letzte[code] = n
         if len(zellen) > 2:
             # Längerer Text wird an Satzgrenzen auf Folgeblasen verteilt
@@ -502,13 +508,30 @@ def pruefe_audio(alle):
                 musik_ids.add(i)
     if not musik_ids:
         F(rel, "keine Musik-Tabelle mit Spalte ID gefunden")
+    # Kennungen der Geräusche (Tabellen mit Spalte Kennung): auch die Schleifen der Atmosphäre
+    kennungen = set()
+    for kopf, inhalt in tabellen:
+        if "Kennung" in kopf:
+            for nr, z in inhalt:
+                k = z.get("Kennung", "").strip("`")
+                if k in kennungen:
+                    F(f"{rel}:{nr}", f"Geräusch-Kennung {k} doppelt")
+                kennungen.add(k)
     for ab, d in alle.items():
         for r in d["raeume"]:
             m = r.get("musik")
             if m is None:
                 W(f"welten/{ab}.yaml", f"Raum {r.get('id')}: kein musik-Eintrag")
-            elif m not in musik_ids:
+            elif m != "stille" and m not in musik_ids:   # stille: kein Stück (game/skripte/klang.gd)
                 F(f"welten/{ab}.yaml", f"Raum {r.get('id')}: musik {m} steht nicht in der Musik-Tabelle von {rel}")
+            a = r.get("atmo")
+            if a is None:
+                W(f"welten/{ab}.yaml", f"Raum {r.get('id')}: kein atmo-Eintrag (Schleife oder „keine“)")
+            elif a != "keine" and a not in kennungen:
+                F(f"welten/{ab}.yaml", f"Raum {r.get('id')}: atmo {a} steht in keiner Geräusch-Tabelle von {rel}")
+            t = r.get("tupfer")
+            if t is not None and t not in kennungen:
+                F(f"welten/{ab}.yaml", f"Raum {r.get('id')}: tupfer {t} steht in keiner Geräusch-Tabelle von {rel}")
 
     # (c) Rätsel-IDs der Lieder
     for kopf, inhalt in tabellen:
@@ -549,15 +572,27 @@ def pruefe_nahansichten(alle):
         F("welten/*.yaml", f"{summe} Nahansichten (nahansicht: true plus nahansichten:), festgelegt sind {NAHANSICHTEN_GESAMT}")
 
 
+# Werte, die über die Abschnitte hinweg gelten (Zwischenspiele, Reisetasche, Finale) und deshalb
+# kein Präfix tragen. Neue Namen gehören nicht hierher, sondern bekommen ein Präfix.
+SCHALTER_OHNE_PRAEFIX = {"ZWISCHENSPIEL", "TASCHE", "FUNDKISTE", "EINKAUFSLISTE", "FINALE"}
+
+
 def pruefe_code_schalter(alle):
     """Schalter und Werte, die der Godot-Code setzt oder liest, stehen in einer Welt-Tabelle
     (Rätsel-„schalter“ oder „weitere_schalter“, 05-spielsysteme.md, Regeln für den Code)."""
     bekannt = set()
-    for d in alle.values():
-        bekannt |= {str(x) for x in als_liste(d.get("weitere_schalter"))}
-        bekannt |= {str(x) for x in (d.get("werte") or {})}   # gespeicherte Werte der Welt (W2_FAEHRE_STEG)
+    for abschnitt, d in alle.items():
+        eigene = {str(x) for x in als_liste(d.get("weitere_schalter"))}
+        eigene |= {str(x) for x in (d.get("werte") or {})}   # gespeicherte Werte der Welt (W2_FAEHRE_STEG)
         for r in d.get("raetsel") or []:
-            bekannt |= {str(x) for x in als_liste(r.get("schalter"))}
+            eigene |= {str(x) for x in als_liste(r.get("schalter"))}
+        # Jeder Name trägt das Präfix seines Abschnitts. Ein Umbenennen später kostet eine
+        # Umwandlung alter Spielstände (game/skripte/cq_save_load.gd), deshalb gleich richtig.
+        praefixe = [str(x) for x in als_liste(d.get("skript_praefix"))]
+        for name in sorted(eigene - SCHALTER_OHNE_PRAEFIX):
+            if not any(name.startswith(x + "_") for x in praefixe):
+                F(f"welten/{abschnitt}.yaml", f"Schalter {name} trägt kein Präfix des Abschnitts ({', '.join(praefixe)})")
+        bekannt |= eigene
     muster = re.compile(r'Zustand\.(?:ist|setze|wert|setze_wert)\(\s*"([A-Z][A-Z0-9_]*)"')
     for datei in sorted((ROOT / "game").rglob("*.gd")):
         if "addons" in datei.parts:
@@ -566,6 +601,32 @@ def pruefe_code_schalter(alle):
             for name in muster.findall(zeile):
                 if name not in bekannt:
                     W(f"{datei.relative_to(ROOT)}:{nr}", f"Schalter {name} steht in keiner Welt-Tabelle (weitere_schalter)")
+
+
+def pruefe_englisch(alle_ids):
+    """Englische Fassung: je deutscher Sprechblase ein Eintrag, nie „//“ im Text.
+
+    Steht eine Kaskade als ein Stück unter dem ersten Schlüssel, zeigt das Spiel „//“ in der
+    Blase und die Folgeblasen bleiben leer. Geprüft werden nur Zeilen, die schon übersetzt sind.
+    """
+    sys.path.insert(0, str(Path(__file__).resolve().parent))
+    import skript_export
+    en = skript_export.lade_en()
+    rel = "uebersetzung/en.csv"
+    gueltig = set()
+    for z in skript_export.zeilen_lesen():
+        n = len(skript_export.blasen(z["de"]))
+        schluessel = [skript_export.schluessel(z["id"], i) for i in range(n)]
+        gueltig.update(schluessel)
+        da = [k for k in schluessel if en.get(k)]
+        if da and len(da) != n:
+            F(rel, f"{z['id']}: {n} Sprechblasen auf Deutsch, {len(da)} auf Englisch "
+                   f"(neu eintragen mit tools/en_eintragen.py)")
+    for k, text in en.items():
+        if "//" in text:
+            F(rel, f"{k}: „//“ im englischen Text (Kaskade über tools/en_eintragen.py eintragen)")
+        if k not in gueltig:
+            F(rel, f"{k}: Schlüssel gibt es im Skript nicht (mehr)")
 
 
 def main():
@@ -584,6 +645,7 @@ def main():
     pruefe_audio(alle)
     pruefe_nahansichten(alle)
     pruefe_code_schalter(alle)
+    pruefe_englisch(alle_ids)
     import importlib.util
     spec = importlib.util.spec_from_file_location("diagramme", Path(__file__).with_name("diagramme.py"))
     dia = importlib.util.module_from_spec(spec)
@@ -595,8 +657,14 @@ def main():
     if not nur_fehler:
         for z in warnungen:
             print(z)
-    print(f"\n{len(fehler)} Fehler, {len(warnungen)} Warnungen, {len(alle_ids)} Skriptzeilen geprüft.")
-    sys.exit(1 if fehler else 0)
+    if "--hinweise" in sys.argv:
+        for z in hinweise:
+            print(z)
+    print(f"\n{len(fehler)} Fehler, {len(warnungen)} Warnungen, {len(hinweise)} Hinweise "
+          f"(anzeigen mit --hinweise), {len(alle_ids)} Skriptzeilen geprüft.")
+    # Warnungen brechen ab wie Fehler: Zwischen 102 harmlosen Meldungen standen früher sechs
+    # falsche Sprecher, und keiner hat sie gesehen.
+    sys.exit(1 if fehler or warnungen else 0)
 
 
 if __name__ == "__main__":
