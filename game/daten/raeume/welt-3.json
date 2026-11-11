@@ -8242,38 +8242,6 @@
      ]
     },
     {
-     "id": "0430",
-     "frage": "W3_BAS_MAX_0430",
-     "antworten": [
-      {
-       "zeile": "W3_BAS_KAL_0440",
-       "sprecher": "KAL",
-       "blasen": [
-        "W3_BAS_KAL_0440"
-       ],
-       "regie": ""
-      },
-      {
-       "zeile": "W3_BAS_MAX_0450",
-       "sprecher": "MAX",
-       "blasen": [
-        "W3_BAS_MAX_0450"
-       ],
-       "regie": ""
-      },
-      {
-       "zeile": "W3_BAS_KAL_0460",
-       "sprecher": "KAL",
-       "blasen": [
-        "W3_BAS_KAL_0460"
-       ],
-       "regie": ""
-      }
-     ],
-     "beendet": false,
-     "bleibt": false
-    },
-    {
      "id": "0470",
      "frage": "W3_BAS_MAX_0470",
      "antworten": [

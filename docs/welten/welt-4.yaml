@@ -525,7 +525,7 @@ raetsel:
     schalter: [W4_R07_GELOEST]
     optional: false
   - id: R8
-    name: Die Wahrheit ist irgendwo da draußen
+    name: Ein Beweis für den Agenten
     raum: spukhaus_halle
     benoetigt: [R6]
     benoetigt_eins_von: [R7, sonnenbrille]   # Sonnenbrille aus Welt 3 als Abkürzung

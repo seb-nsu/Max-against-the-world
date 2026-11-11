@@ -8,8 +8,9 @@ Grundlage: `pruefung/360-pruefung.md` (111 Funde). Auftrag: `pruefung/umsetzung-
 - Paket 2 (Werkzeuge): fertig.
 - Paket 3 (Rätseltexte und Hinweis-Lücken): fertig.
 - Paket 4 (Widersprüche): fertig.
-- Pakete 5 bis 9: noch nicht begonnen.
-- Weiter bei: Paket 5, Originalwortlaut.
+- Paket 5 (Originalwortlaut): fertig.
+- Pakete 6 bis 9: noch nicht begonnen.
+- Weiter bei: Paket 6, Humor, Anspielungen und KI-Klang, beginnend mit Prolog und Welt 1.
 
 Arbeitsweise nach einer Unterbrechung: Tabelle 1 zeigt je Fund den Status. Vor jedem Commit laufen `python3 tools/pruefen.py`, alle `--pruefen`-Läufe aus `.github/workflows/pruefen.yml` und nach Code-Änderungen die Godot-Tests.
 
@@ -60,11 +61,11 @@ Status: umgesetzt, nicht bestätigt, Entscheidung bitte prüfen, offen für Seba
 | 39 | 9 | noch nicht bearbeitet |  |
 | 40 | 9 | noch nicht bearbeitet |  |
 | 41 | 2 | umgesetzt | Bestätigt und nachgestellt (SCH wurde in Welt 1 und 3 zu „Schreiber“). `tools/zeilen_einfuegen.py` sucht den Namen nur noch in der Zieldatei und bricht ab, wenn das Kürzel dort noch nicht vorkommt. Geprüft: SCH wird in Welt 1 „Schmied“, in Welt 3 „Schmidt“, GRI in Welt 2 „Grieche“. Die Kürzel selbst bleiben, weil Zeilen-IDs nicht umnummeriert werden. |
-| 42 | 5 | noch nicht bearbeitet |  |
-| 43 | 5 | noch nicht bearbeitet |  |
-| 44 | 5 | noch nicht bearbeitet |  |
+| 42 | 5 | umgesetzt, in Teilen Entscheidung | Bestätigt. Eigene Sätze statt Originalwortlaut: Gollos Rätsel (`W1_TAV_GOL_0760`, `W1_TAV_MAX_0770`: Flasche statt Berg), „einzige Hoffnung“ (`W3_PIEP_OPA_0120`), Gedankentrick (`W3_EING_MAX_0160`), „Kaninchenbau“ (`W3_NUD_MOR_0420`), „Die Wahrheit ist irgendwo da draußen“ (`W4_HALL_AGE_0350`, Rätsel 8 heißt jetzt „Ein Beweis für den Agenten“). Kessel-Lauf gestrichen (`W3_BAS_MAX_0430` bis `KAL_0460`), „Gleis neundreiviertel“ gestrichen (`W1_DORF_MAX_0295`). Entscheidung, bitte prüfen: Mensch-Test Frage 1 ist jetzt das Portemonnaie im Bus (sieben Zeilen `W3_TEST_*` und `W3_HINT_PIX_0160`, Aufbau und Pointen unverändert). Die Römer-Frage und ihre Aufzählung sind neu geschrieben (`W2_AGOR_GRI_0400`, `0410`, Konter 4 in `W2_RING_MAX_0110`, `W2_RING_CIC_0120`: Kalender, Fußbodenheizung, Beton, Post). `W2_SAND_GRI_0190` heißt „Er sagt Nein! So bescheiden ist nur der Echte!“. Aus „Passierschein A38“ wird „Passierschein Vier-Strich-Ypsilon“ (fünf Zeilen). Unverändert laut Bericht: `FI_RIEG_MAX_0155`, „Die spinnen, die Griechen“, „Vielsaft“ und „Schicksalsberg“ (im Rechtscheck als „bleiben“ geführt). Unverändert bleibt auch der schlichte Satz „Ich bin nicht der Messias.“ samt Brians Schild. Rätsel-Dateien, Grafik-Tabelle Welt 3 und Englisch nachgezogen. |
+| 43 | 5 | offen für Sebastian | Nichts geändert. Der Bericht empfiehlt, die Nähe von Welt 3 zur Filmvorlage rechtlich prüfen zu lassen. Das kann nur ein Anwalt entscheiden. Mit Paket 5 sind drei wortnahe Zitate aus dieser Welt weg. |
+| 44 | 5 | Entscheidung, bitte prüfen | Bestätigt. Drei englische Namen rücken weiter vom Original weg, in `ui.csv`, `en.csv` und im Glossar in `05-spielsysteme.md`: „Hogwartle“ wird „Hogglewarz“, „Polyjuicy Lemonade“ wird „Manyjuice Lemonade“, „Wheel of Fortune (Shopping)“ wird „Lucky Wheel (Shopping)“. Im Englischen steht bei `W4_HALL_AGE_0350` auch nicht mehr der Serienslogan. Unverändert: „Paw and Order“ (Wortspiel wie „Tiertort“) und „Morphaeus“ (Figurenname, siehe Fund 105). |
 | 45 | 9 | noch nicht bearbeitet |  |
-| 46 | 5 | noch nicht bearbeitet |  |
+| 46 | 5 | umgesetzt | Bestätigt. `W4_FABR_FLE_0330`: „Ein Anführer mit Laken!“ |
 | 47 | 2 | umgesetzt | Teilweise anders als im Bericht: `en_eintragen.py` teilt schon an „//“. Die 793 Zeilen sind am Werkzeug vorbei in `en.csv` gekommen. Alle 793 geteilt (die Blasenzahl passte überall), dabei 124 ältere Folgeblasen durch die neuere Fassung ersetzt. Neu in `tools/pruefen.py`: Fehler bei „//“ im englischen Text, bei abweichender Blasenzahl und bei Schlüsseln, die es im Skript nicht mehr gibt. |
 | 48 | 2 | umgesetzt | Bestätigt. `pruefen.py`: 102 harmlose Meldungen „Nummer nicht aufsteigend“ sind jetzt Hinweise (`--hinweise`), falscher Sprechername ist ein Fehler, jede Warnung bricht ab. `spieldaten.py --pruefen` und `godot_raeume.py --pruefen` brechen bei Warnungen ab. `abdeckung.py` zählt verdrängte Ansehen-Zeilen als fehlend. `godot_raeume.py` bricht ab, wenn eine Gesprächsoption oder ein Zuruf eine Bedingung in Worten hat, die das Spiel nicht kennt. `testbuild.yml`: zweiter Import ohne Fehlermeldung, dazu alle Durchläufe vor dem Export. **Dabei gefunden (nicht im Bericht):** In Welt 3 bot Deckert die Option zum Mensch-Test nie an und die Orakel-Oma zwei Optionen zur Vase nie. Die Welt war über die Bedienung nicht lösbar, der Test rief die Regeln direkt auf. Behoben in `cq_dialog.gd` (Regeln entscheiden zuerst), `godot_raeume.py` („startet …“ ist Anmerkung), `spiel.gd` (Zuruf „vor dem Duell“ in Welt 1 kam nie). `welt_3_anspiel.gd` prüft jetzt, dass die Optionen angeboten werden (vorher 2 Fehler). Die Prüfung der Hinweise je offenem Schritt kommt mit Fund 4 in Paket 3. |
 | 49 | 9 | noch nicht bearbeitet |  |
@@ -123,7 +124,7 @@ Status: umgesetzt, nicht bestätigt, Entscheidung bitte prüfen, offen für Seba
 | 102 | 4 | offen für Sebastian | Nichts geändert. Der Bericht sagt selbst: kann Absicht sein. Vorschlag aus dem Bericht steht auf der Liste. |
 | 103 | 9 | noch nicht bearbeitet |  |
 | 104 | 9 | noch nicht bearbeitet |  |
-| 105 | 5 | noch nicht bearbeitet |  |
+| 105 | 5 | offen für Sebastian | Keine Figur umbenannt, wie im Auftrag festgelegt. Fernere Fassungen für die Schublade stehen auf der Liste für Sebastian. |
 | 106 | 9 | noch nicht bearbeitet |  |
 | 107 | 9 | noch nicht bearbeitet |  |
 | 108 | 9 | noch nicht bearbeitet |  |
@@ -224,6 +225,9 @@ Fund 2, wenn nichts anderes dasteht: Das Spiel konnte diese Zeilen nicht von ein
 | `W1_SCHM_MAX_0770` | Du hast deinen Schwertern Namen gegeben? | (gestrichen) | Fund 18: Der Schmied tauft keine Schwerter, das ist Humberts Eigenheit (entscheidungen.md). Frage gestrichen. |
 | `W1_SCHM_SCH_0780` | Jedes Schwert hat einen Namen. Ingrid, Helga, Kurt. Kurt war ein Missverständnis. | (gestrichen) | Fund 18: Antwort zur gestrichenen Frage. Abschnitt C wertet „Kurt war ein Missverständnis“ als gelungen, die Zeile steht deshalb auf der Liste für Sebastian. |
 | `W1_SMAU_MAX_0645` | (neu) | Ich hab das Ei. Ich könnte jetzt gehen. // … Zeldina hat immer noch keine Wohnung. | Fund 12: Max hatte nach der Ei-Übergabe keinen Grund für den Endkampf. Neue Zeile nach dem Vorschlag im Bericht. |
+| `W1_TAV_GOL_0760` | Rätsel! Ja! Ich gewinne immer! Was hat Wurzeln, die keiner sieht, und ist höher als Bäume? | Rätsel! Ja! Ich gewinne immer! Was hat einen Hals und keinen Kopf, einen Bauch und keinen Hunger? | Fund 42: Das alte Rätsel stand fast wörtlich in einem bekannten Buch. Eigenes Rätsel aus dem Bericht (Flasche, passt zur Taverne). |
+| `W1_TAV_MAX_0770` | Ein Berg. Das steht in jedem Rätselbuch auf der ersten Seite. | Eine Flasche. Das steht in jedem Rätselbuch auf der ersten Seite. | Fund 42: Antwort zum neuen Rätsel in 0760. |
+| `W1_DORF_MAX_0295` | Unter dem Wegweiser steht in Kreide: „Gleis neundreiviertel ist woanders.“ Gut zu wissen. | (gestrichen) | Fund 42: „Gleis neundreiviertel“ ist ein Originalbegriff. Laut Abschnitt M und D gestrichen. |
 
 ### welt-2.md
 
@@ -232,6 +236,16 @@ Fund 2, wenn nichts anderes dasteht: Das Spiel konnte diese Zeilen nicht von ein
 | `W2_DISK_HER_0240` | Wenn ich es war, hab ich zweimal die Wahrheit gesagt. Das schaff ich nicht mal mit Anlauf. | Wenn ich es war, hat Leonidas zweimal die Wahrheit gesagt. Das schafft der nicht mal mit Anlauf. | Fund 7: Hermes rechnete falsch (er selbst hätte nicht zweimal die Wahrheit gesagt, Leonidas schon). Pointe (Anlauf) bleibt. |
 | `W2_NIL_PIX_1070` | Ich sitze seit drei Welten Modell, und zwar ohne jede Gage. // Wenn dieser Mann mich meißelt, ohne vorher über Thunfisch zu verhandeln, verklage ich den Nil. | Ich sitze seit zwei Welten Modell, und zwar ohne jede Gage. // Wenn dieser Mann mich meißelt, ohne vorher über Thunfisch zu verhandeln, verklage ich den Nil. | Fund 67: Es ist die zweite Welt. |
 | `W2_ABS_BE1_0240` | Mein Schalter ist für Sie jetzt geschlossen. Für alle anderen auch. Er war nie offen. | Mein Schalter ist für dich jetzt geschlossen. Für alle anderen auch. Er war nie offen. | Fund 61: Der Beamte duzt in allen anderen Zeilen. |
+| `W2_SAND_GRI_0190` | Nur der wahre Messias würde das leugnen! | Er sagt Nein! So bescheiden ist nur der Echte! | Fund 42: Der Satz stand fast wörtlich in einem bekannten Film. Derselbe Dreh in eigenen Worten. Entscheidung, bitte prüfen. |
+| `W2_AGOR_GRI_0400` | Die Römer! Überall Römer! Sie fotografieren unsere Säulen mit Wachstafeln und fragen, wo das Kolosseum ist! Was haben die Römer je für uns getan? | Die Römer! Überall Römer! Sie fotografieren unsere Säulen mit Wachstafeln und fragen, wo das Kolosseum ist! Und was haben wir von denen? Nichts! | Fund 42: Die Frage stand wörtlich in einem bekannten Film. Eigener Satz, die Lage bleibt. Entscheidung, bitte prüfen. |
+| `W2_AGOR_GRI_0410` | Na gut, die Straßen. Und das Aquädukt. Und die Thermen. Und die Post. Aber sonst? Was haben die Römer je für uns getan, außer Straßen, Aquädukt, Thermen und Post? | Na gut, den Kalender. Und die Fußbodenheizung. Und den Beton. Und die Post. Aber sonst? Was haben wir von denen, außer Kalender, Fußbodenheizung, Beton und Post? | Fund 42: eigene Aufzählung statt der aus dem Film. Entscheidung, bitte prüfen. |
+| `W2_RING_MAX_0110` | Außer den Straßen, dem Aquädukt und den Thermen? | Außer dem Kalender, der Fußbodenheizung und dem Beton? | Fund 42: Konter 4 folgt der neuen Aufzählung in W2_AGOR_GRI_0410. |
+| `W2_RING_CIC_0120` | Die Straßen … gut, die Straßen. Und das Aquädukt. Aber sonst? Sonst! | Der Kalender … gut, der Kalender. Und die Fußbodenheizung. Aber sonst? Sonst! | Fund 42: Antwort auf den neuen Konter 4. |
+| `W2_BUER_MAX_0380` | „Rundschreiben. Ab sofort gibt es Startpass und Bürgerschein nur gegen Passierschein A38.“ Den gibt es nicht. Das ist der Trick. | „Rundschreiben. Ab sofort gibt es Startpass und Bürgerschein nur gegen Passierschein Vier-Strich-Ypsilon.“ Den gibt es nicht. Das ist der Trick. | Fund 42: „A38“ ist das Erkennungszeichen der Vorlage. Eigene Nummer nach dem Bericht. Entscheidung, bitte prüfen. |
+| `W2_BUER_MAX_0430` | „Rundschreiben: Startpass nur gegen Passierschein A38.“ Jemand hatte vor mir dieselbe Idee und dann wohl keinen Mut mehr. | „Rundschreiben: Startpass nur gegen Passierschein Vier-Strich-Ypsilon.“ Jemand hatte vor mir dieselbe Idee und dann wohl keinen Mut mehr. | Fund 42: eigene Nummer statt A38. |
+| `W2_BUER_BE2_0460` | Ein Rundschreiben. Ein neues. Es gilt sofort. Es verlangt … einen Passierschein A38. | Ein Rundschreiben. Ein neues. Es gilt sofort. Es verlangt … einen Passierschein Vier-Strich-Ypsilon. | Fund 42: eigene Nummer statt A38. |
+| `W2_BUER_BE2_0510` | Startpass. Bürgerschein. Passierschein A38, hiermit erfunden und sofort ungültig. Und jetzt geh. Bitte. | Startpass. Bürgerschein. Passierschein Vier-Strich-Ypsilon, hiermit erfunden und sofort ungültig. Und jetzt geh. Bitte. | Fund 42: eigene Nummer statt A38. |
+| `W2_INV_MAX_0505` | Passierschein A38. Den gibt es nicht, aber ich hab ihn trotzdem vorgeschrieben. So funktioniert Verwaltung. | Passierschein Vier-Strich-Ypsilon. Den gibt es nicht, aber ich hab ihn trotzdem vorgeschrieben. So funktioniert Verwaltung. | Fund 42: eigene Nummer statt A38. |
 
 ### welt-3.md
 
@@ -256,6 +270,20 @@ Fund 2, wenn nichts anderes dasteht: Das Spiel konnte diese Zeilen nicht von ein
 | `W3_INV_PIX_0045` | Die Tüte knistert jedes Mal, wenn du dich bewegst. Ich höre das. Ich höre alles, was knistert. Es ist eine Gabe und eine Qual. | Die Tüte knistert jedes Mal, wenn du dich bewegst. Ich höre das, sogar durch die Leitung. Ich höre alles, was knistert. Es ist eine Gabe und eine Qual. | Fund 15: Die kalten Kekse gibt es nur in der Simulation, dort ist Pixel auf der Leitung. Pointe bleibt. |
 | `W3_INV_PIX_0135` | Du riechst nach Bügeleisen. Ich setze mich trotzdem auf dich. // Wärme ist Wärme, junger Mann, und ich bin gerade nicht in der Position, wählerisch zu sein. | Du klingst nach Bügeleisen. Wenn du zurück bist, setze ich mich trotzdem auf dich. // Wärme ist Wärme, junger Mann, und ich bin gerade nicht in der Position, wählerisch zu sein. | Fund 15: Die glühende Zelle gibt es nur im Labor, dort ist Pixel nur zu hören. Das Bügeleisen bleibt. |
 | `W3_BAS_MAX_0755` | Er summt das Kinderlied immer langsamer. Falls er gleich anfängt, mit mir über seine Gefühle zu reden, zieh ich keinen Stecker. | Er summt das Kinderlied immer langsamer. | Fund 16: Der Nachsatz mit dem Stecker spielt auf einen alten Film an, den Max nicht kennt. Laut Abschnitt D gestrichen. |
+| `W3_TEST_DEC_0100` | Du gehst durch die Wüste. Eine Schildkröte liegt auf dem Rücken. Sie kommt nicht hoch. Was tust du? | Du findest im Bus ein Portemonnaie. Darin ist ein Foto von dir. Was tust du? | Fund 42: Die Schildkröte in der Wüste stand fast wörtlich in einem bekannten Film. Eigene Lage aus dem Bericht. Entscheidung, bitte prüfen (geschützte Szene). |
+| `W3_TEST_MAX_0110` | Ich dreh sie um. | Ich geb es beim Fahrer ab. | Fund 42: logische Antwort zur neuen Frage 1. |
+| `W3_TEST_MAX_0130` | Ich streite erst mal mit ihr. Sie hätte wissen müssen, dass es windig wird. | Ich streite erst mal mit ihm. Es hätte wissen müssen, dass ich das Foto nicht mag. | Fund 42: menschliche Antwort zur neuen Frage 1, gebaut wie die Frau mit dem Schirm („er hätte das wissen müssen“). |
+| `W3_TEST_DEC_0140` | Nachtragend. Unfair. Gegenüber einem Reptil. Das ist ein Mensch. Weiter. | Nachtragend. Unfair. Gegenüber einem Portemonnaie. Das ist ein Mensch. Weiter. | Fund 42: „Reptil“ durch „Portemonnaie“ ersetzt. |
+| `W3_TEST_MAX_0150` | Ich frag sie nach dem WLAN-Passwort. | Ich frag es nach dem WLAN-Passwort. | Fund 42: „sie“ durch „es“ ersetzt. |
+| `W3_TEST_DEC_0160` | Die Schildkröte hat kein WLAN. Niemand hier hat WLAN. Das war keine Antwort, das war Heimweh. Durchgefallen. | Das Portemonnaie hat kein WLAN. Niemand hier hat WLAN. Das war keine Antwort, das war Heimweh. Durchgefallen. | Fund 42: „Die Schildkröte“ durch „Das Portemonnaie“ ersetzt. |
+| `W3_HINT_PIX_0160` | Schildkröte: mit ihr streiten. Regen: Synthesizer spielen. Suppe: reinheulen. Ich sage das nur einmal. Ich habe es jetzt einmal gesagt. | Portemonnaie: mit ihm streiten. Regen: Synthesizer spielen. Suppe: reinheulen. Ich sage das nur einmal. Ich habe es jetzt einmal gesagt. | Fund 42: Hinweis an die neue Frage 1 angepasst. |
+| `W3_PIEP_OPA_0120` | Hilf mir, Max. Du bist meine einzige Hoffnung. Der Kern muss weich bleiben. Außen hart, innen weich. Sonst ist alles verloren. | Hilf mir, Max. Du bist der Einzige, der gerade Zeit hat. Der Kern muss weich bleiben. Außen hart, innen weich. Sonst ist alles verloren. | Fund 42: „meine einzige Hoffnung“ ist wortnah ein Filmzitat. Vorschlag aus dem Bericht. |
+| `W3_EING_MAX_0160` | Das ist nicht der Junge, den du suchst. | Du hast mich nie gesehen. Du suchst jemand anderen. | Fund 42: wortnahes Filmzitat. Erster Satz aus dem Bericht, der zweite hält die Antwort in 0170 („Ich suche nur Dreck.“). |
+| `W3_NUD_MOR_0420` | Die blaue Pastille: Du wachst auf, glaubst, was du willst, und alles bleibt bequem. Die rote: Du siehst, wie tief der Kaninchenbau geht. | Die blaue Pastille: Du wachst auf, glaubst, was du willst, und alles bleibt bequem. Die rote: Du siehst, wie tief das hier wirklich geht. | Fund 42: „Kaninchenbau“ ist wortnah ein Filmzitat. Vorschlag aus dem Bericht. |
+| `W3_BAS_MAX_0430` | Was ist das für ein Wrack? | (gestrichen) | Fund 42: Frage zur gestrichenen Antwort 0440. |
+| `W3_BAS_KAL_0440` | Die alte Kiste hat den Kessel-Lauf in unter zwölf Parsec geschafft. | (gestrichen) | Fund 42: wörtliches Filmzitat. Laut Abschnitt M und D gestrichen. |
+| `W3_BAS_MAX_0450` | Parsec ist eine Strecke, keine Zeit. | (gestrichen) | Fund 42: gehört zu 0440. |
+| `W3_BAS_KAL_0460` | Sag ich doch. Kurze Strecke. | (gestrichen) | Fund 42: gehört zu 0440. |
 
 ### welt-4.md
 
@@ -273,6 +301,8 @@ Fund 2, wenn nichts anderes dasteht: Das Spiel konnte diese Zeilen nicht von ein
 | `W4_INV_MAX_0010` | Ein Bettlaken mit zwei Löchern. Ein Geist hat es mir überlassen. Darunter war nichts. Nicht mal ein Geist. | Ein Bettlaken mit zwei Löchern. Der erste Entwurf vom Fledermann. Zwei Löcher, null Schirme. | Fund 68: Das Laken kommt vom Fledermann (W4_KAPI_FLE_0350). |
 | `W4_KELL_MAX_0175` | Wenn die gleich einen Song über sich anfangen und ich wen anrufen soll, weiß ich nicht, wen. Ich hab nur Pixel. | (gestrichen) | Fund 16: Anspielung auf einen alten Film, den Max nicht kennt. Laut Abschnitt D gestrichen. |
 | `W4_KAPI_MAX_0525` | An einem Fenster lehnt ein Mann mit Brille und Krawatte. Wenn der gleich in eine Telefonzelle rennt, weiß ich Bescheid. | (gestrichen) | Fund 16: Anspielung auf einen alten Film, den Max nicht kennt. Laut Abschnitt D gestrichen. |
+| `W4_HALL_AGE_0350` | Das sagen sie alle. Die Wahrheit ist irgendwo da draußen. Und ich habe sie noch nie gefunden. Zeigen Sie mir einen Beweis, und ich glaube Ihnen alles. | Das sagen sie alle. Die Wahrheit ist da draußen. Irgendwo. Ich habe die Adresse verlegt. Zeigen Sie mir einen Beweis, und ich glaube Ihnen alles. | Fund 42: wörtlicher Slogan einer Fernsehserie. Vorschlag aus dem Bericht. |
+| `W4_FABR_FLE_0330` | Ein Führer mit Laken! Ich folge ihm! Vom Kopfstand aus! | Ein Anführer mit Laken! Ich folge ihm! Vom Kopfstand aus! | Fund 46: „Führer“ mit weißem Laken liest sich unglücklich. Vorschlag aus dem Bericht. |
 
 ### zwischenspiele-und-finale.md
 
@@ -313,6 +343,12 @@ Folgt mit Paket 6.
 - Fund 62: Die Mutter sagt „Papa“ zu Opa. Sie ist damit die Tochter der Großeltern.
 - Fund 64: Rotkäppchens Oma „ist dauernd umgezogen“ (Vergangenheit). Zeldinas Vermieter war „der letzte Drache“.
 - Fund 73: Das Huhn heißt Berta statt Hilde.
+- Fund 42: Mensch-Test, Frage 1: Portemonnaie im Bus statt Schildkröte in der Wüste. Die Szene ist geschützt, geändert sind nur die Wörter, die an der Schildkröte hingen.
+- Fund 42: Die Römer-Aufzählung der Griechen heißt jetzt Kalender, Fußbodenheizung, Beton und Post. Der Bericht schlug Fähre, Passierschein und Fusionsküche vor. Die kommen im Spiel aber nicht von den Römern.
+- Fund 42: „Passierschein Vier-Strich-Ypsilon“ statt „A38“. Das Wort Passierschein bleibt, damit der Rätselname stimmt.
+- Fund 42: „Er sagt Nein! So bescheiden ist nur der Echte!“ statt des wörtlichen Messias-Satzes.
+- Fund 42: Rätsel 8 in Welt 4 heißt „Ein Beweis für den Agenten“.
+- Fund 44: drei englische Namen geändert (Hogglewarz, Manyjuice Lemonade, Lucky Wheel).
 
 ### Kann Absicht sein, nicht geändert
 
@@ -324,6 +360,24 @@ Folgt mit Paket 6.
 - Fund 102: Opa bedankt sich nie. Vorschlag aus dem Bericht, falls gewünscht: ganz am Ende „Max. // … Bring Quittung mit.“
 - Fund 71: In `docs/entscheidungen.md` steht weiter „Regel 14b“. Im Spiel heißt es jetzt überall „Paragraf 14b“.
 
+### Fernere Fassungen für die Schublade (Fund 105)
+
+Nichts davon ist eingebaut. Es sind Vorschläge für den Fall, dass ein Anwalt einen Namen beanstandet.
+
+| Jetzt | Fernere Fassung | Woher |
+| --- | --- | --- |
+| Morphäus | Hypnos (griechischer Gott des Schlafs, frei) | eigener Vorschlag |
+| Sahra Konner | Sandra Kenner | eigener Vorschlag |
+| Zeldina | Zerlina | eigener Vorschlag |
+| Toadi | Knolli | eigener Vorschlag |
+| Gollo | Grummo | eigener Vorschlag |
+| Glücksrad-Shopping | Glücksdreh-Shopping | Bericht, Abschnitt M |
+| Vielsaft-Limo | Vielfrucht-Limo | Bericht, Abschnitt M |
+| Jahrgang Schicksalsberg | Jahrgang Schicksalshügel | Bericht, Abschnitt M |
+| Morphaeus (englisch) | folgt dem deutschen Namen | Fund 44 |
+
 ### Offen laut Bericht
+
+- Fund 43: Welt 3 folgt einem bekannten Film Station für Station. Der Bericht rät, das vor der Steam-Seite von einem Medienanwalt prüfen zu lassen.
 
 Folgt mit den Funden 109 bis 111.

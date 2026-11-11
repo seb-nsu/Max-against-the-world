@@ -53,7 +53,7 @@ Eigennamen-Glossar: Sprechende Namen werden nicht wörtlich übersetzt, sondern 
 | Tiertort (Savanne) | Paw and Order (Savannah) | Serienparodie, andere Vorlage mit gleichem Effekt |
 | Schwurbelstein | Waffleton | Klang eines Ortsnamens plus Geschwafel |
 | Unterbrösel | Lower Crumbly | englisches Dorfnamensmuster |
-| Hoggelwarz | Hogwartle | erkennbar, aber verfremdet |
+| Hoggelwarz | Hogglewarz | erkennbar, aber verfremdet |
 | Zapp-O-Mat | Zap-O-Matic | Werbesprech der 60er |
 | M.U.T.T.I. | M.O.T.H.E.R. | Abkürzung neu ausschreiben |
 | Modell 08/15 | Model 08/15 | bleibt; Pixel erklärt den Ausdruck einmal in einer Ansehen-Zeile |
@@ -65,7 +65,8 @@ Eigennamen-Glossar: Sprechende Namen werden nicht wörtlich übersetzt, sondern 
 | Rotkäppchen | Little Red | Lieferdienst bleibt Lieferdienst |
 | Burg Brösel / Schloss Steinbeiß | Castle Crumble / Stonebite Palace | Burgen, in denen Zeldina nicht ist |
 | Schicksalsberg (Jahrgang) | Mount Doomsday | Weinjahrgang in der Taverne |
-| Vielsaft-Limo | Polyjuicy Lemonade | Trank-Parodie |
+| Vielsaft-Limo | Manyjuice Lemonade | Trank-Parodie |
+| Glücksrad-Shopping | Lucky Wheel Shopping | nicht „Wheel of Fortune“, das ist im Englischen ein eingetragener Sendungstitel |
 | Bohn-O-Mat | Bean-O-Matic | wie Zap-O-Matic |
 | Niesrosen | Sneezeroses | Wortbildung bleibt |
 | Gerhard, Birgit, Klaus-Dieter (Humberts Schwerter) | Gerald, Brenda, Nigel | deutsche Allerweltsnamen werden englische; Ingrid, Helga, Kurt bleiben |

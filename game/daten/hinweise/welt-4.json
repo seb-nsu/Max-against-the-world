@@ -400,7 +400,7 @@
   },
   {
    "schritt": "R8",
-   "ziel": "Die Wahrheit ist irgendwo da draußen",
+   "ziel": "Ein Beweis für den Agenten",
    "raum": "spukhaus_halle",
    "offen_wenn": [
     "R6"

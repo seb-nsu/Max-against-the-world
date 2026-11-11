@@ -627,7 +627,7 @@ In der Halle hängt die Lichterkette mit Buchstaben; auf der anderen Seite sitzt
 | W4\_HALL\_MAX\_0325 | Max | Er leuchtet mit der Taschenlampe in eine leere Ecke und nickt. Er glaubt an irgendwas, ich weiß nur nicht, an was. | Ansehen: FBI-Agent, zweites Mal |
 | W4\_HALL\_AGE\_0330 | FBI-Agent | Keine Bewegung. Sind Sie von hier? Von diesem Planeten? | richtet das Gerät auf Max |
 | W4\_HALL\_MAX\_0340 | Max | Ich komm aus dem Wohnzimmer. Außerirdischer werd ich nicht. |  |
-| W4\_HALL\_AGE\_0350 | FBI-Agent | Das sagen sie alle. Die Wahrheit ist irgendwo da draußen. Und ich habe sie noch nie gefunden. Zeigen Sie mir einen Beweis, und ich glaube Ihnen alles. | Hinweis R8 |
+| W4\_HALL\_AGE\_0350 | FBI-Agent | Das sagen sie alle. Die Wahrheit ist da draußen. Irgendwo. Ich habe die Adresse verlegt. Zeigen Sie mir einen Beweis, und ich glaube Ihnen alles. | Hinweis R8 |
 | W4\_HALL\_MAX\_0360 | Max | Ein Beweis wofür? | Option Agent |
 | W4\_HALL\_AGE\_0370 | FBI-Agent | Für sie. Für die anderen. Für die Stimmen von drüben. Ich suche seit Jahren Kontakt mit der anderen Seite. |  |
 | W4\_HALL\_MAX\_0550 | Max | Und was würde Sie überzeugen? |  |
@@ -834,7 +834,7 @@ In der Fabrik läuft ein Unfall als Schleife. Rückspulen hält an vier festen E
 | W4\_FABR\_WIL\_0300 | Wonder-Wilma | Ein Unfall! Ein Laken! Eine Katze! Und ein Name steht schon über dir! | zeigt auf die Sprechblase über Max |
 | W4\_FABR\_MAX\_0310 | Max | Da steht „KÄSEMANN“, in fetten Buchstaben. Ich hab mir den Namen nicht ausgesucht, aber so was sucht sich wahrscheinlich keiner aus. |  |
 | W4\_FABR\_SIE\_0320 | Super-Siegfried | Käsemann. Gefällt mir. Klingt nach Mittagsschlaf. | salutiert, gähnt |
-| W4\_FABR\_FLE\_0330 | Fledermann | Ein Führer mit Laken! Ich folge ihm! Vom Kopfstand aus! | schaukelt |
+| W4\_FABR\_FLE\_0330 | Fledermann | Ein Anführer mit Laken! Ich folge ihm! Vom Kopfstand aus! | schaukelt |
 | W4\_FABR\_MAX\_0340 | Max | Ich bin Käsemann. Ich habe ein Bettlaken, einen Kater und Umrisse. Niemand hat je weniger gebraucht, um Chef zu werden. | Käsemann-Pose; Abschluss R10 |
 | W4\_FABR\_PIX\_0350 | Pixel | Die Helden folgen ihm. Also mir. Also uns, aber hauptsächlich mir. // Ich bin der Teil dieses Duos, der so aussieht, als wüsste er, wohin es geht. Das ist die eigentliche Superkraft. |  |
 | W4\_FABR\_MAX\_0360 | Max | Der Bottich ist offen, aber mein Käse ist nur normaler Käse. Wer in normalen Käse fällt, wird kein Held, sondern Abendessen. | Einzelbild 3 gewählt, Käse nicht als Wunderkäse |

@@ -57,7 +57,7 @@ UI_RAUM_DORFPLATZ,Dorfplatz Unterbrösel,Lower Crumbly village square
 UI_RAUM_TAVERNE,Taverne,Tavern
 UI_RAUM_SCHMIEDE,Schmiede,Smithy
 UI_RAUM_ZAUBERSTABLADEN,Zauberstab-Laden,Wand shop
-UI_RAUM_KLASSENZIMMER,Hoggelwarz,Hogwartle
+UI_RAUM_KLASSENZIMMER,Hoggelwarz,Hogglewarz
 UI_RAUM_TROLLBRUECKE,Troll-Brücke,Troll bridge
 UI_RAUM_WASSERSCHLOSS,Wasserschloss,Moated castle
 UI_RAUM_ZAUBERWALD,Zauberwald,Enchanted forest
@@ -95,7 +95,7 @@ UI_OBJ_EI,Ei,Egg
 UI_OBJ_TAVERNE_VON_AUSSEN,Taverne,Tavern
 UI_OBJ_SCHMIEDE_VON_AUSSEN,Schmiede,Smithy
 UI_OBJ_ZAUBERSTAB_LADEN_VON_AUSSEN,Zauberstab-Laden,Wand shop
-UI_OBJ_WEG_NACH_HOGGELWARZ,Weg nach Hoggelwarz,Path to Hogwartle
+UI_OBJ_WEG_NACH_HOGGELWARZ,Weg nach Hoggelwarz,Path to Hogglewarz
 UI_OBJ_WALDWEG,Waldweg,Forest path
 UI_OBJ_BOHNENRANKE,Bohnenranke,Beanstalk
 UI_OBJ_LUFTSCHLOSS,Luftschloss,Castle in the air
@@ -109,7 +109,7 @@ UI_OBJ_DORFBRETT,Dorfbrett,Notice board
 UI_OBJ_DACHBALKEN,Dachbalken,Ceiling beams
 UI_OBJ_TRESEN,Tresen,Bar
 UI_OBJ_FISCHSUPPE,Fischsuppe,Fish soup
-UI_OBJ_FLASCHE_VIELSAFT_LIMO,Vielsaft-Limo,Polyjuicy Lemonade
+UI_OBJ_FLASCHE_VIELSAFT_LIMO,Vielsaft-Limo,Manyjuice Lemonade
 UI_OBJ_WEINKARTE_AM_TRESEN,Weinkarte,Wine list
 UI_OBJ_FONDUE_TOPF,Fondue-Topf,Fondue pot
 UI_OBJ_KELLERTUER,Kellertür,Cellar door
@@ -716,7 +716,7 @@ UI_W3_BUCHSE_GRUEN,Buchse Grün (Dreieck),Green socket (triangle)
 UI_W3_BUCHSE_GELB,Buchse Gelb (Quadrat),Yellow socket (square)
 UI_RAUM_TESTBILD,Testbild,Test card
 UI_RAUM_RAUSCHEN,Rauschen zwischen den Sendern,Static between channels
-UI_RAUM_GLUECKSRAD,Glücksrad-Studio,Wheel of fortune studio
+UI_RAUM_GLUECKSRAD,Glücksrad-Studio,Lucky wheel studio
 UI_RAUM_SITCOM_KUECHE,Sitcom-Küche,Sitcom kitchen
 UI_RAUM_SAVANNE,Savanne,Savannah
 UI_RAUM_FRIEDHOF,Musikvideo-Friedhof,Music video graveyard
@@ -773,7 +773,7 @@ UI_OBJ_GEPARD,Gepard,Cheetah
 UI_OBJ_GERD_GLUECK,Gerd Glück,Gerd Glück
 UI_OBJ_GERUEMPEL,Gerümpel unter Laken,Junk under sheets
 UI_OBJ_GESTAPELTE_PREISE,Gestapelte Preise,Stacked prizes
-UI_OBJ_GLUECKSRAD,Glücksrad,Wheel of fortune
+UI_OBJ_GLUECKSRAD,Glücksrad,Lucky wheel
 UI_OBJ_GLUEHBIRNE,Glühbirne,Light bulb
 UI_OBJ_GLUEHBIRNENREIHEN,Glühbirnenreihen,Rows of bulbs
 UI_OBJ_GOLDENES_SOFA,goldenes Sofa,Golden sofa
@@ -876,7 +876,7 @@ UI_W4_ZS_MITTERNACHT,Mitternachts-TV: Friedhofs-Funk,Midnight TV: Graveyard Funk
 UI_W4_FLIMMER_HUNGER,Gibt es hier was zu essen?,Is there anything to eat here?
 UI_W4_ZS_WERBESPOT,Dr. Werbepause präsentiert den Couch-Magnet 3000,Dr. Adbreak presents the Couch Magnet 3000
 UI_W4_ZS_TIERTORT,Tiertort Savanne,Paw and Order: Savannah
-UI_W4_ZS_GLUECKSRAD,Glücksrad-Shopping,Wheel of Fortune Shopping
+UI_W4_ZS_GLUECKSRAD,Glücksrad-Shopping,Lucky Wheel Shopping
 UI_W4_ZS_LEER,(leeres Feld),(empty slot)
 UI_W4_ZS_KANAL_999,Kanal 999: Senderzentrale,Channel 999: Network headquarters
 UI_W4_ANTWORT_A,Antwort A,Answer A

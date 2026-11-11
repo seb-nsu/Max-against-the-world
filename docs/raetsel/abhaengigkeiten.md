@@ -265,7 +265,7 @@ flowchart TD
   R5["R5 Das Zombie-Video"]
   R6["R6 Die Genre-Tür"]
   R7["R7 Die Lichterkette"]
-  R8["R8 Die Wahrheit ist irgendwo da draußen"]
+  R8["R8 Ein Beweis für den Agenten"]
   R9["R9 Der Hauptgewinn"]
   R10a["R10a Den Käse zum Wunderkäse machen"]
   R10b["R10b Einen Superhelden-Anzug besorgen"]

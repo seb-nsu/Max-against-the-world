@@ -57,7 +57,7 @@ UI_RAUM_DORFPLATZ,Dorfplatz Unterbrösel,Lower Crumbly village square
 UI_RAUM_TAVERNE,Taverne,Tavern
 UI_RAUM_SCHMIEDE,Schmiede,Smithy
 UI_RAUM_ZAUBERSTABLADEN,Zauberstab-Laden,Wand shop
-UI_RAUM_KLASSENZIMMER,Hoggelwarz,Hogwartle
+UI_RAUM_KLASSENZIMMER,Hoggelwarz,Hogglewarz
 UI_RAUM_TROLLBRUECKE,Troll-Brücke,Troll bridge
 UI_RAUM_WASSERSCHLOSS,Wasserschloss,Moated castle
 UI_RAUM_ZAUBERWALD,Zauberwald,Enchanted forest
@@ -95,7 +95,7 @@ UI_OBJ_EI,Ei,Egg
 UI_OBJ_TAVERNE_VON_AUSSEN,Taverne,Tavern
 UI_OBJ_SCHMIEDE_VON_AUSSEN,Schmiede,Smithy
 UI_OBJ_ZAUBERSTAB_LADEN_VON_AUSSEN,Zauberstab-Laden,Wand shop
-UI_OBJ_WEG_NACH_HOGGELWARZ,Weg nach Hoggelwarz,Path to Hogwartle
+UI_OBJ_WEG_NACH_HOGGELWARZ,Weg nach Hoggelwarz,Path to Hogglewarz
 UI_OBJ_WALDWEG,Waldweg,Forest path
 UI_OBJ_BOHNENRANKE,Bohnenranke,Beanstalk
 UI_OBJ_LUFTSCHLOSS,Luftschloss,Castle in the air
@@ -109,7 +109,7 @@ UI_OBJ_DORFBRETT,Dorfbrett,Notice board
 UI_OBJ_DACHBALKEN,Dachbalken,Ceiling beams
 UI_OBJ_TRESEN,Tresen,Bar
 UI_OBJ_FISCHSUPPE,Fischsuppe,Fish soup
-UI_OBJ_FLASCHE_VIELSAFT_LIMO,Vielsaft-Limo,Polyjuicy Lemonade
+UI_OBJ_FLASCHE_VIELSAFT_LIMO,Vielsaft-Limo,Manyjuice Lemonade
 UI_OBJ_WEINKARTE_AM_TRESEN,Weinkarte,Wine list
 UI_OBJ_FONDUE_TOPF,Fondue-Topf,Fondue pot
 UI_OBJ_KELLERTUER,Kellertür,Cellar door
@@ -716,7 +716,7 @@ UI_W3_BUCHSE_GRUEN,Buchse Grün (Dreieck),Green socket (triangle)
 UI_W3_BUCHSE_GELB,Buchse Gelb (Quadrat),Yellow socket (square)
 UI_RAUM_TESTBILD,Testbild,Test card
 UI_RAUM_RAUSCHEN,Rauschen zwischen den Sendern,Static between channels
-UI_RAUM_GLUECKSRAD,Glücksrad-Studio,Wheel of fortune studio
+UI_RAUM_GLUECKSRAD,Glücksrad-Studio,Lucky wheel studio
 UI_RAUM_SITCOM_KUECHE,Sitcom-Küche,Sitcom kitchen
 UI_RAUM_SAVANNE,Savanne,Savannah
 UI_RAUM_FRIEDHOF,Musikvideo-Friedhof,Music video graveyard
@@ -773,7 +773,7 @@ UI_OBJ_GEPARD,Gepard,Cheetah
 UI_OBJ_GERD_GLUECK,Gerd Glück,Gerd Glück
 UI_OBJ_GERUEMPEL,Gerümpel unter Laken,Junk under sheets
 UI_OBJ_GESTAPELTE_PREISE,Gestapelte Preise,Stacked prizes
-UI_OBJ_GLUECKSRAD,Glücksrad,Wheel of fortune
+UI_OBJ_GLUECKSRAD,Glücksrad,Lucky wheel
 UI_OBJ_GLUEHBIRNE,Glühbirne,Light bulb
 UI_OBJ_GLUEHBIRNENREIHEN,Glühbirnenreihen,Rows of bulbs
 UI_OBJ_GOLDENES_SOFA,goldenes Sofa,Golden sofa
@@ -876,7 +876,7 @@ UI_W4_ZS_MITTERNACHT,Mitternachts-TV: Friedhofs-Funk,Midnight TV: Graveyard Funk
 UI_W4_FLIMMER_HUNGER,Gibt es hier was zu essen?,Is there anything to eat here?
 UI_W4_ZS_WERBESPOT,Dr. Werbepause präsentiert den Couch-Magnet 3000,Dr. Adbreak presents the Couch Magnet 3000
 UI_W4_ZS_TIERTORT,Tiertort Savanne,Paw and Order: Savannah
-UI_W4_ZS_GLUECKSRAD,Glücksrad-Shopping,Wheel of Fortune Shopping
+UI_W4_ZS_GLUECKSRAD,Glücksrad-Shopping,Lucky Wheel Shopping
 UI_W4_ZS_LEER,(leeres Feld),(empty slot)
 UI_W4_ZS_KANAL_999,Kanal 999: Senderzentrale,Channel 999: Network headquarters
 UI_W4_ANTWORT_A,Antwort A,Answer A
@@ -1403,8 +1403,7 @@ W1_DORF_MAX_0270,"Da drin hämmert jemand, und da drin meckert jemand. Ich hoffe
 W1_DORF_MAX_0275,"Hammer, meckern, Hammer, meckern. Das ist der langsamste Song, den ich je gehört hab, und er hat nicht mal einen Refrain.","Hammer, bleat, hammer, bleat. That's the slowest song I've ever heard, and it doesn't even have a chorus."
 W1_DORF_MAX_0280,"Ein Laden, der nur Zauberstäbe verkauft. Da muss man richtig reingehen und mit jemandem reden. Gruselig.",A shop that only sells magic wands. You have to actually go in and talk to somebody. Creepy.
 W1_DORF_MAX_0285,"Im Fenster liegen Stäbe aus Holz, aus Knochen und aus etwas, das nach Lakritz aussieht. Der Lakritzstab ist ausverkauft.","The window has wands made of wood, of bone and of something that looks like liquorice. The liquorice one is sold out."
-W1_DORF_MAX_0290,Ein Wegweiser: „Hoggelwarz für Durchgefallene“. Endlich mal eine Schule mit realistischen Zielen.,"A signpost: ""Hogwartle for Dropouts"". Finally, a school with realistic goals."
-W1_DORF_MAX_0295,Unter dem Wegweiser steht in Kreide: „Gleis neundreiviertel ist woanders.“ Gut zu wissen.,"Under the signpost, in chalk: ""Platform nine and three-quarters is somewhere else."" Good to know."
+W1_DORF_MAX_0290,Ein Wegweiser: „Hoggelwarz für Durchgefallene“. Endlich mal eine Schule mit realistischen Zielen.,"A signpost: ""Hogglewarz for Dropouts"". Finally, a school with realistic goals."
 W1_DORF_MAX_0300,"Der Weg zur Brücke. Toadi sagt, da sitzt ein Troll. Aber Toadi sagt auch sonst ziemlich viel.","The path to the bridge. Toadi says there's a troll there. But then, Toadi says a lot of things."
 W1_DORF_MAX_0305,"Auf einem Stein am Weg ist ein Smiley eingeritzt, mit Hauern. Ich nehm das jetzt einfach mal als freundliches Willkommen.","Someone's carved a smiley into a stone by the path, with tusks. I'm just going to take that as a friendly welcome."
 W1_DORF_MAX_0310,"Runde Häuser mit schiefen Dächern. Als hätte ein Kind sie gebaut, ein sehr begabtes Kind mit sehr viel Zeit.","Round houses with crooked roofs. Like a kid built them, a very talented kid with a lot of time."
@@ -1433,7 +1432,7 @@ W1_DORF_PIX_0420,"Es riecht nach Kokos und kein bisschen nach Pferd. Das Pferd i
 W1_DORF_PIX_0420_2,"und das sage ich dir als jemand, der sich mit Lügen auskennt. Beruflich, gewissermaßen.","and I say that as someone who knows about lies. Professionally, so to speak."
 W1_DORF_TOA_0430,"Eine Katze! Ist sie gefährlich? Sie sieht aus, als hätte sie Meinungen!",A cat! Is it dangerous? It looks like it has opinions!
 W1_DORF_MAX_0510,Wer ist dieser Dunkle Lord?,Who is this Dark Lord?
-W1_DORF_TOA_0520,Lord Moderwort! Er hat Hoggelwarz im ersten Jahr abgebrochen und hasst seitdem alle Zauberer. Und Blumen.,Lord Mouldword! He dropped out of Hogwartle in his first year and has hated all wizards ever since. And flowers.
+W1_DORF_TOA_0520,Lord Moderwort! Er hat Hoggelwarz im ersten Jahr abgebrochen und hasst seitdem alle Zauberer. Und Blumen.,Lord Mouldword! He dropped out of Hogglewarz in his first year and has hated all wizards ever since. And flowers.
 W1_DORF_MAX_0521,Warum denn Blumen?,"Why flowers, though?"
 W1_DORF_TOA_0522,"Er niest bei Blumen. Und wenn er niest, gehen Flüche los. Der Bäcker ist seitdem ein Brot. Ein gutes Brot, aber sehr still.","He sneezes at flowers. And when he sneezes, curses go off. The baker's been a loaf of bread ever since. A good loaf, but very quiet."
 W1_DORF_MAX_0530,Wo hast du schon überall nachgesehen?,Where have you already looked?
@@ -1548,7 +1547,7 @@ W1_TAV_MAX_0270,"Die Weinkarte: Hauswein, Hauswein rot, Hauswein noch röter. Un
 W1_TAV_MAX_0275,Hinter „auf Anfrage“ hat jemand mit Bleistift geschrieben: „Hat noch nie jemand angefragt.“,"After ""on request"" somebody has pencilled in: ""Nobody has ever requested it."""
 W1_TAV_PIX_0280,"„Auf Anfrage“ heißt in jeder Taverne der Welt: ganz hinten im Keller, hinter den Rüben, unter den Spinnweben.","""On request"" means the same in every tavern in the world: right at the back of the cellar, behind the turnips, under the cobwebs."
 W1_TAV_PIX_0280_2,"Wer das bestellt, schickt den Wirt auf eine lange Reise. Ich erwähne das nur, falls jemand einen Wirt loswerden möchte.","Order it, and you send the landlord on a long journey. I only mention it in case anyone wants to get rid of a landlord."
-W1_TAV_MAX_0290,"„Vielsaft-Limo. Schmeckt wie jemand anderes.“ Ich bleib lieber bei Wasser, ich bin mit mir gerade ganz zufrieden.","""Polyjuicy Lemonade. Tastes like someone else."" I'll stick with water, I'm pretty happy being me right now."
+W1_TAV_MAX_0290,"„Vielsaft-Limo. Schmeckt wie jemand anderes.“ Ich bleib lieber bei Wasser, ich bin mit mir gerade ganz zufrieden.","""Manyjuice Lemonade. Tastes like someone else."" I'll stick with water, I'm pretty happy being me right now."
 W1_TAV_MAX_0295,Auf der Rückseite steht: „Wirkung hält eine Stunde. Der Nachgeschmack länger.“,"On the back it says: ""Effect lasts one hour. The aftertaste lasts longer."""
 W1_TAV_PIX_0300,"Trink das, und du siehst eine Stunde lang aus wie Toadi.",Drink that and you'll look like Toadi for an hour.
 W1_TAV_PIX_0300_2,"Ich würde dafür bezahlen, und ich bezahle nie für etwas, das kein Fisch ist.","I would pay to see that, and I never pay for anything that isn't fish."
@@ -1600,8 +1599,8 @@ W1_TAV_GOL_0740,"Der Vulkan! Ja! Nein! Der Wirt guckt. Die Katze guckt. Und wenn
 W1_TAV_MAX_1640,"Ich kann auch weggucken, wenn das hilft. Darin bin ich ziemlich gut.","I can look away too, if that helps. I'm pretty good at that."
 W1_TAV_GOL_1650,"Dann guckt immer noch der Ring. Er hat kein Auge, aber er guckt. Glaub mir.","Then the ring is still watching. It has no eye, but it watches. Believe me."
 W1_TAV_MAX_0750,Du spielst gern Rätselspiele?,You like riddle games?
-W1_TAV_GOL_0760,"Rätsel! Ja! Ich gewinne immer! Was hat Wurzeln, die keiner sieht, und ist höher als Bäume?",Riddles! Yes! I always win! What has roots nobody sees and is taller than trees?
-W1_TAV_MAX_0770,Ein Berg. Das steht in jedem Rätselbuch auf der ersten Seite.,A mountain. That's on the first page of every riddle book.
+W1_TAV_GOL_0760,"Rätsel! Ja! Ich gewinne immer! Was hat einen Hals und keinen Kopf, einen Bauch und keinen Hunger?","Riddles! Yes! I always win! What has a neck and no head, a belly and no hunger?"
+W1_TAV_MAX_0770,Eine Flasche. Das steht in jedem Rätselbuch auf der ersten Seite.,A bottle. That's on page one of every riddle book.
 W1_TAV_GOL_0780,"Siehst du! Alle wissen alles! Ich verliere nur, wenn jemand etwas fragt, das niemand wissen kann. Und das passiert nie.",See! Everyone knows everything! I only lose if someone asks something nobody could possibly know. And that never happens.
 W1_TAV_MAX_0790,"Tschüss, Gollo.","Bye, Gollo."
 W1_TAV_GOL_0800,Geh nur. Alle gehen. Der Ring bleibt. Der Ring bleibt immer.,Go on. Everyone goes. The ring stays. The ring always stays.
@@ -1775,7 +1774,7 @@ W1_STAB_STA_0260,Nichts. Aber sie sehen gut aus. Ein Laden braucht Schachteln. O
 W1_STAB_MAX_0770,Und wenn jemand eine kauft?,And what if someone buys one?
 W1_STAB_STA_0780,Dann verkaufe ich ihm eine leere Schachtel mit Würde. Das ist mein bestes Produkt.,Then I sell them an empty box with dignity. It's my best product.
 W1_STAB_MAX_0270,Was ist mit der Socke da?,What about that sock?
-W1_STAB_STA_0280,"Ein Probestück. Der Sortierhut von Hoggelwarz ist in Rente, die Schule hat kein Geld, ich habe Socken. Das ist der Prototyp.","A sample. Hogwartle's Sorting Hat has retired, the school has no money, I have socks. That's the prototype."
+W1_STAB_STA_0280,"Ein Probestück. Der Sortierhut von Hoggelwarz ist in Rente, die Schule hat kein Geld, ich habe Socken. Das ist der Prototyp.","A sample. Hogglewarz's Sorting Hat has retired, the school has no money, I have socks. That's the prototype."
 W1_STAB_MAX_0281,Eine Socke sortiert Schüler?,A sock sorts pupils?
 W1_STAB_STA_0282,Nach Charakter. Bisher nur nach Farbe. Aber sie lernt jeden Tag dazu.,By character. So far only by colour. But it learns something new every day.
 W1_STAB_MAX_0290,Ich schau mich noch mal um.,I'll have another look around.
@@ -1821,7 +1820,7 @@ W1_HOGG_PIX_0020,"Ich verliere Haare, das ist Fellpflege und keine Einladung!","
 W1_HOGG_PIX_0020_2,"Dieser Besen hat offensichtlich keine Kinderstube, und ich werde mich bei seinem Hersteller beschweren.","This broom clearly has no upbringing, and I shall complain to its manufacturer."
 W1_HOGG_ALW_0030,"Besen und Katzenhaare, das endet immer in der Abstellkammer.","Brooms and cat hair, it always ends up in the broom cupboard."
 W1_HOGG_MAX_0040,"Ein Besen mit Verfolgungswahn. Wenn den einer filmt, hat er morgen eine Million Follower.","A broom with a persecution complex. If somebody films that, it'll have a million followers by tomorrow."
-W1_HOGG_ALW_0050,"Ah, ein neuer Durchgefallener! Willkommen in Hoggelwarz! Zeig mir deinen Stab, Junge.","Ah, a new dropout! Welcome to Hogwartle! Show me your wand, boy."
+W1_HOGG_ALW_0050,"Ah, ein neuer Durchgefallener! Willkommen in Hoggelwarz! Zeig mir deinen Stab, Junge.","Ah, a new dropout! Welcome to Hogglewarz! Show me your wand, boy."
 W1_HOGG_ALW_0060,"Keinen Stab? Dann komm wieder, wenn dich etwas gewählt hat. Ein Stab, ein Löffel, ein Schicksal. Alles wird genommen.","No wand? Then come back when something has chosen you. A wand, a spoon, a destiny. We take anything."
 W1_HOGG_ALW_0070,Ein Kochlöffel! Endlich einer mit Sinn für das Wesentliche. Die Prüfung kann beginnen.,A wooden spoon! Finally someone with a sense for the essentials. The exam may begin.
 W1_HOGG_MAX_0110,"Schiefe Schulbänke, und unter jeder klebt Kaugummi, wette ich. Manche Sachen sind in jeder Welt gleich.","Wonky school desks, and I bet there's gum stuck under every one. Some things are the same in every world."
@@ -2565,7 +2564,7 @@ W1_THRO_MOD_0360,… Wer hat dir das gesagt?,… Who told you that?
 W1_THRO_MAX_0370,"Deine Mutti. Die Goblins. Eine Wand. Und eine Tür, die „Mama“ sagt.","Your mummy. The goblins. A wall. And a door that says ""Mummy""."
 W1_THRO_MOD_0380,"Ich wollte nur, dass mich einer ernst nimmt. Einmal. Ohne zu niesen.",I just wanted someone to take me seriously. Once. Without sneezing.
 W1_THRO_ZEL_0390,Dann geh zurück zur Schule. Alwin nimmt jeden. Steht am Wegweiser.,Then go back to school. Alwin takes everyone. It's on the signpost.
-W1_THRO_MOD_0400,"Hoggelwarz … für Durchgefallene. … Ja. Ja, das bin ich.","Hogwartle … for those who failed. … Yes. Yes, that's me."
+W1_THRO_MOD_0400,"Hoggelwarz … für Durchgefallene. … Ja. Ja, das bin ich.","Hogglewarz … for those who failed. … Yes. Yes, that's me."
 W1_THRO_MOD_0410,Damit kann ich nur Käse.,All I can do with this is cheese.
 W1_THRO_MAX_0420,Ich auch. Aber ich hab Übung.,Me too. But I've had practice.
 W1_THRO_ZEL_0510,"Sieben Stockwerke, Turmlage, Eigentümer verhandlungsbereit. Ich nehme ihn. Ohne Maklerin.","Seven floors, tower location, owner open to offers. I'll take it. No estate agent."
@@ -2718,7 +2717,7 @@ W1_HINT_PIX_0910,"Die Maklerin will Provision. Feilschen bringt nichts, Haustier
 W1_HINT_PIX_0920,"Du hast einen Steckbrief in der Tasche. Für eine Maklerin ist das kein Steckbrief, das ist ein Exposé.","You've got a wanted poster in your pocket. To an estate agent that's not a wanted poster, it's a brochure."
 W1_HINT_PIX_0930,"Zeig der Maklerin Moderworts Steckbrief und preis ihr den Turm an. Sieben Stockwerke, Turmlage. Ich sage so etwas nie wieder.","Show the estate agent Mouldword's wanted poster and pitch her the tower. Seven floors, tower location. I will never say anything like that again."
 W1_HINT_PIX_1010,"Die Goblins wollen Licht und eine Unterschrift. Oder eine Karriere. Grimmzahn ist käuflich, nur nicht mit Geld.","The goblins want light and a signature. Or a career. Grimtooth can be bought, just not with money."
-W1_HINT_PIX_1020,"Weg eins: Der Leuchttrank aus Hoggelwarz ist eine Fackel, und Ketchup sieht aus wie Blut. Weg zwei: Zeldina braucht einen Hausmeister.","Option one: the glow potion from Hogwartle is a torch, and ketchup looks like blood. Option two: Zeldina needs a caretaker."
+W1_HINT_PIX_1020,"Weg eins: Der Leuchttrank aus Hoggelwarz ist eine Fackel, und Ketchup sieht aus wie Blut. Weg zwei: Zeldina braucht einen Hausmeister.","Option one: the glow potion from Hogglewarz is a torch, and ketchup looks like blood. Option two: Zeldina needs a caretaker."
 W1_HINT_PIX_1030,Gib Grimmzahn den Leuchttrank und unterschreib den Vertrag mit Ketchup. Oder biete ihm mit Zeldina den Hausmeisterposten an. Eins reicht.,Give Grimtooth the glow potion and sign the agreement in ketchup. Or offer him the caretaker job together with Zeldina. One is enough.
 W1_HINT_PIX_1111,"Vier Teile, eine Reihenfolge. Jeder Fundort verrät, was an was hängt. Schau ins Notizbuch, nicht in die Luft.","Four parts, one order. Every place you found one tells you what hangs on what. Look in the notebook, not into thin air."
 W1_HINT_PIX_1121,"Mo ist der Anfang, sagt Zeldina. Das Zeugnis hängt Knuddel an Mo. Das Lied hängt Puddi an Knuddel. Und das Bärchen steht am Ende, mit Punkten davor.","Mo is the beginning, says Zeldina. The report card hangs Cuddles on Mo. The song hangs Pudding on Cuddles. And Teddy comes at the end, with dots in front."
@@ -3455,21 +3454,21 @@ W2_BUER_HER_0350,Dann ist er da!,Then it's there!
 W2_BUER_PIX_0360,Der Mann hat geflügelte Schuhe und ist trotzdem immer zu spät.,The man has winged shoes and is still always late.
 W2_BUER_PIX_0360_2,"Das liegt nicht an der Ausrüstung. Das ist Charakter, und dagegen helfen keine Federn.","That's not down to the equipment. That's character, and no feathers help against that."
 W2_BUER_MAX_0370,"Ein Formular und ein Kugelschreiber, der ohne Tintenfass schreibt. Ich schreib jetzt ein Rundschreiben, von oben. Oben bin jetzt ich.","A form and a ballpoint that writes without an inkwell. I'm writing a circular now, from above. And above is now me."
-W2_BUER_MAX_0380,„Rundschreiben. Ab sofort gibt es Startpass und Bürgerschein nur gegen Passierschein A38.“ Den gibt es nicht. Das ist der Trick.,"""Circular. With immediate effect, entry passes and citizen's certificates are only issued on presentation of Permit A38."" That doesn't exist. That's the trick."
+W2_BUER_MAX_0380,„Rundschreiben. Ab sofort gibt es Startpass und Bürgerschein nur gegen Passierschein Vier-Strich-Ypsilon.“ Den gibt es nicht. Das ist der Trick.,"""Circular. With immediate effect, entry passes and citizen's certificates are only issued on presentation of Permit Four-Slash-Y."" That doesn't exist. That's the trick."
 W2_BUER_MAX_0390,"Tinte vom Tintenfisch auf Papyrus vom Nil, und ich schreib mit dem Finger. Das klebt mehr als jeder Touchscreen.","Squid ink on papyrus from the Nile, and I'm writing with my finger. That's stickier than any touchscreen."
 W2_BUER_MAX_0400,"Dasselbe Rundschreiben, bloß blauer und mit Fingerabdruck. Amtlich genug.","The same circular, just bluer and with a fingerprint. Official enough."
 W2_BUER_MAX_0410,"Die Socke. Sie sortiert alles, und zwar sofort.","The sock. It sorts everything, and instantly."
 W2_BUER_NAR_0420,"Die Socke wirbelt durch den Berg. Rollen fliegen, Staub steigt, Beamter 1 wacht kurz auf und schläft wieder ein. Oben liegt ein einzelnes Rundschreiben, fertig geschrieben, nie abgegeben.","The sock whirls through the pile. Scrolls fly, dust rises, the first official wakes up briefly and falls asleep again. On top lies a single circular, fully written, never submitted."
-W2_BUER_MAX_0430,„Rundschreiben: Startpass nur gegen Passierschein A38.“ Jemand hatte vor mir dieselbe Idee und dann wohl keinen Mut mehr.,"""Circular: entry pass only on presentation of Permit A38."" Somebody had the same idea before me and then apparently lost their nerve."
+W2_BUER_MAX_0430,„Rundschreiben: Startpass nur gegen Passierschein Vier-Strich-Ypsilon.“ Jemand hatte vor mir dieselbe Idee und dann wohl keinen Mut mehr.,"""Circular: entry pass only on presentation of Permit Four-Slash-Y."" Somebody had the same idea before me and then apparently lost their nerve."
 W2_BUER_PIX_0440,"Diese Socke hat in zehn Sekunden erledigt, was dieses Amt in vierhundert Jahren nicht geschafft hat.",This sock has done in ten seconds what this office hasn't managed in four hundred years.
 W2_BUER_PIX_0440_2,Ich bin beinahe stolz. Auf eine Socke. So tief bin ich gesunken.,I am almost proud. Of a sock. That is how low I have sunk.
 W2_BUER_MAX_0450,"Hier. Ein neues Rundschreiben, von oben.","Here. A new circular, from above."
-W2_BUER_BE2_0460,Ein Rundschreiben. Ein neues. Es gilt sofort. Es verlangt … einen Passierschein A38.,A circular. A new one. It applies immediately. It requires … a Permit A38.
+W2_BUER_BE2_0460,Ein Rundschreiben. Ein neues. Es gilt sofort. Es verlangt … einen Passierschein Vier-Strich-Ypsilon.,A circular. A new one. It applies immediately. It requires … a Permit Four-Slash-Y.
 W2_BUER_BE1_0470,Den gibt es nicht.,That doesn't exist.
 W2_BUER_BE2_0480,"Den gibt es nicht! Aber wir müssen ihn verlangen! Wir müssen etwas verlangen, das es nicht gibt! Das ist … das ist das Ende!",That doesn't exist! But we have to require it! We have to require something that doesn't exist! This is … this is the end!
 W2_BUER_BE1_0490,"Stempel alles. Alles! Startpass, Bürgerschein, Passierschein. Damit er geht. Damit er nie wiederkommt.","Stamp everything. Everything! Entry pass, citizen's certificate, permit. So that he leaves. So that he never comes back."
 W2_BUER_NAR_0500,"Beamter 2 stempelt. Tische, Rollen, die Bank, den Mann mit dem Bart. Dann Max' Formular. Dreimal.","The second official stamps. Tables, scrolls, the bench, the man with the beard. Then Max's form. Three times."
-W2_BUER_BE2_0510,"Startpass. Bürgerschein. Passierschein A38, hiermit erfunden und sofort ungültig. Und jetzt geh. Bitte.","Entry pass. Citizen's certificate. Permit A38, hereby invented and immediately invalid. And now go. Please."
+W2_BUER_BE2_0510,"Startpass. Bürgerschein. Passierschein Vier-Strich-Ypsilon, hiermit erfunden und sofort ungültig. Und jetzt geh. Bitte.","Entry pass. Citizen's certificate. Permit Four-Slash-Y, hereby invented and immediately invalid. And now go. Please."
 W2_BUER_MAX_0520,"Ein Startpass, eine Wachstafel mit Siegel. Ich bin jetzt offiziell Grieche und Sportler, beides zum ersten Mal.","An entry pass, a wax tablet with a seal. I'm now officially Greek and an athlete, both for the first time."
 W2_BUER_MAX_0525,"Mein Name steht drauf, falsch geschrieben, aber mit Siegel. Jetzt ist der falsche Name amtlich.","My name's on it, spelled wrong, but with a seal. Now the wrong name is official."
 W2_BUER_MAX_0530,Hier. Ein Empfehlungsschreiben von der Sphinx.,Here. A letter of recommendation from the Sphinx.
@@ -3556,8 +3555,8 @@ W2_AGOR_TIR_0370,"Alles, jedes Wort, in Kurzschrift. Die hab ich erfunden, weil 
 W2_AGOR_TIR_0370_2,Egal. Vergiss es.,Never mind. Forget it.
 W2_AGOR_TIR_0380,"Blau. Ein blauer Stift. Er schreibt und schreibt und hat trotzdem schlechte Laune, genau wie ich.","Blue. A blue pen. It writes and writes and is still in a bad mood, just like me."
 W2_AGOR_MAX_0390,Was ist denn hier los?,What's going on here?
-W2_AGOR_GRI_0400,"Die Römer! Überall Römer! Sie fotografieren unsere Säulen mit Wachstafeln und fragen, wo das Kolosseum ist! Was haben die Römer je für uns getan?",The Romans! Romans everywhere! They photograph our columns with wax tablets and ask where the Colosseum is! What have the Romans ever done for us?
-W2_AGOR_GRI_0410,"Na gut, die Straßen. Und das Aquädukt. Und die Thermen. Und die Post. Aber sonst? Was haben die Römer je für uns getan, außer Straßen, Aquädukt, Thermen und Post?","All right, the roads. And the aqueduct. And the baths. And the post. But apart from that? What have the Romans ever done for us, apart from roads, the aqueduct, baths and the post?"
+W2_AGOR_GRI_0400,"Die Römer! Überall Römer! Sie fotografieren unsere Säulen mit Wachstafeln und fragen, wo das Kolosseum ist! Und was haben wir von denen? Nichts!",The Romans! Romans everywhere! They photograph our columns with wax tablets and ask where the Colosseum is! And what do we get from them? Nothing!
+W2_AGOR_GRI_0410,"Na gut, den Kalender. Und die Fußbodenheizung. Und den Beton. Und die Post. Aber sonst? Was haben wir von denen, außer Kalender, Fußbodenheizung, Beton und Post?","All right, the calendar. And the underfloor heating. And the concrete. And the post. But apart from that? What do we get from them, apart from the calendar, underfloor heating, concrete and the post?"
 W2_AGOR_GRI_0420,"Und wenn einer von denen redet, dann redet er. Stundenlang. Da hilft nur eins: fragen, ob er auch mal Luft holt. Das bringt sie aus dem Takt.","And when one of them talks, he talks. For hours. Only one thing helps: ask whether he ever takes a breath. That throws them off their rhythm."
 W2_AGOR_MAX_0650,"Fragen, ob er auch mal Luft holt. Merk ich mir.",Ask whether he ever takes a breath. I'll remember that.
 W2_AGOR_GRI_0660,"Aber frag nicht zu laut, sonst hält er eine Rede übers Atmen.","But don't ask too loudly, or he'll give a speech about breathing."
@@ -3609,7 +3608,7 @@ W2_SAND_PIX_0150_2,"Ein Kater, der aus großer Höhe fällt, hat ein Anrecht auf
 W2_SAND_MAX_0160,Sandale an. Jetzt bin ich wohl ein Zeichen.,"Sandal on. Now I'm a sign, I guess."
 W2_SAND_TOU_0170,Er trägt die Sandale! Er ist es! Der Messias!,He's wearing the sandal! It's him! The Messiah!
 W2_SAND_MAX_0180,Ich bin nicht der Messias.,I'm not the Messiah.
-W2_SAND_GRI_0190,Nur der wahre Messias würde das leugnen!,Only the true Messiah would deny it!
+W2_SAND_GRI_0190,Er sagt Nein! So bescheiden ist nur der Echte!,He says no! Only the real one is that modest!
 W2_SAND_MAX_0200,Okay. Dann bin ich's halt.,"Okay. Then it's me, I suppose."
 W2_SAND_TOU_0210,Er hat es zugegeben! Noch heiliger!,He admitted it! Even holier!
 W2_SAND_PIX_0220,"Du kannst nicht gewinnen. Ich kenne das gut, und zwar von mir.","You can't win. I know that well, from myself."
@@ -3862,8 +3861,8 @@ W2_RING_CIC_0070_2,und werde es weiter sagen ohne Pause ohne Punkt ohne Komma bi
 W2_RING_CIC_0080,"Ich werde reden, bis die Sonne untergeht und wieder aufgeht und wieder untergeht!",I shall speak until the sun sets and rises again and sets again!
 W2_RING_MAX_0090,Deine Toga hat mehr Falten als dein Argument.,Your toga has more folds than your argument.
 W2_RING_MAX_0100,"Ein Argument, so dünn, dass man den Redner dahinter sieht.",An argument so thin you can see the speaker through it.
-W2_RING_MAX_0110,"Außer den Straßen, dem Aquädukt und den Thermen?","Apart from the roads, the aqueduct and the baths?"
-W2_RING_CIC_0120,"Die Straßen … gut, die Straßen. Und das Aquädukt. Aber sonst? Sonst!","The roads … fine, the roads. And the aqueduct. But apart from that? Apart from that!"
+W2_RING_MAX_0110,"Außer dem Kalender, der Fußbodenheizung und dem Beton?","Apart from the calendar, the underfloor heating and the concrete?"
+W2_RING_CIC_0120,"Der Kalender … gut, der Kalender. Und die Fußbodenheizung. Aber sonst? Sonst!","The calendar … fine, the calendar. And the underfloor heating. But apart from that? Apart from that!"
 W2_RING_MAX_0130,"Du zitierst dich selbst. Der Einzige, der dir noch zuhört.",You quote yourself. The only one still listening.
 W2_RING_MAX_0140,"Du redest wie einer, der sich selbst zuhört, weil es sonst keiner tut.",You talk like someone who listens to himself because nobody else will.
 W2_RING_MAX_0150,Holst du auch mal Luft?,Do you ever breathe?
@@ -4015,7 +4014,7 @@ W2_INV_PIX_0485_2,"Und er weiß das. Ich sehe es an der Art, wie er mich ansieht
 W2_INV_MAX_0490,"Ein leeres Formular, das einzige im ganzen Amt. Es ist so leer, dass es schon fast wieder Möglichkeiten hat.","A blank form, the only one in the whole office. It's so blank it almost has possibilities again."
 W2_INV_MAX_0495,"Oben steht „Antrag auf“, und dann nichts. Ich könnte alles beantragen. In Gedanken beantrage ich einen Mittagsschlaf.","At the top it says ""Application for"", and then nothing. I could apply for anything. In my head I'm applying for a nap."
 W2_INV_MAX_0500,"Mein Rundschreiben, mit blauem Kuli auf Papyrus. Es sieht amtlich aus, wenn man nicht genau hinguckt, und Beamte gucken nie genau hin.","My circular, in blue biro on papyrus. It looks official if you don't look closely, and officials never look closely."
-W2_INV_MAX_0505,"Passierschein A38. Den gibt es nicht, aber ich hab ihn trotzdem vorgeschrieben. So funktioniert Verwaltung.","Permit A38. It doesn't exist, but I required it anyway. That's how administration works."
+W2_INV_MAX_0505,"Passierschein Vier-Strich-Ypsilon. Den gibt es nicht, aber ich hab ihn trotzdem vorgeschrieben. So funktioniert Verwaltung.","Permit Four-Slash-Y. It doesn't exist, but I required it anyway. That's how administration works."
 W2_INV_MAX_0510,"Das Rundschreiben in Tintenfisch-Tinte. Es riecht nach Meer und Amtsstube, und das ist eine gefährliche Mischung.","The circular in squid ink. It smells of sea and office, and that's a dangerous mix."
 W2_INV_MAX_0515,Mein Fingerabdruck in der Ecke sieht aus wie ein Siegel. Ich hab gerade aus Versehen was beglaubigt.,My fingerprint in the corner looks like a seal. I've just accidentally certified something.
 W2_INV_MAX_0520,Ein Rundschreiben aus dem Formularberg. Jemand hatte dieselbe Idee wie ich und hat es dann nur nie abgegeben.,A circular from the mountain of forms. Somebody had the same idea as me and just never handed it in.
@@ -4283,7 +4282,7 @@ W3_NUD_VIE_0380,"Einmal Vier. Vier Nudeln, vier Brühen, vier Minuten gezogen. G
 W3_NUD_PIX_0390,Vier Nudeln. Er meint das tatsächlich wörtlich.,Four noodles. He actually means it literally.
 W3_NUD_PIX_0390_2,"Ich habe schon Schnurrhaare gesehen, die sättigender aussahen, und ich weiß, wovon ich spreche.","I have seen whiskers that looked more filling, and I know what I'm talking about."
 W3_NUD_MAX_0410,Was ist das für eine Wahl?,What kind of choice?
-W3_NUD_MOR_0420,"Die blaue Pastille: Du wachst auf, glaubst, was du willst, und alles bleibt bequem. Die rote: Du siehst, wie tief der Kaninchenbau geht.","The blue lozenge: you wake up, believe whatever you want, and everything stays comfortable. The red one: you see how deep the rabbit hole goes."
+W3_NUD_MOR_0420,"Die blaue Pastille: Du wachst auf, glaubst, was du willst, und alles bleibt bequem. Die rote: Du siehst, wie tief das hier wirklich geht.","The blue lozenge: you wake up, believe whatever you want, and everything stays comfortable. The red one: you see how deep this really goes."
 W3_NUD_MOR_0430,"Beide zurzeit nicht lieferbar. Lieferkette. Ich hätte Beige. Beige führt nirgendwohin, schmeckt aber nach nichts.","Both currently out of stock. Supply chain. I have beige. Beige leads nowhere, but it tastes of nothing."
 W3_NUD_MAX_0440,"Ich nehm nichts, was aussieht wie das Wartezimmer beim Zahnarzt. Trotzdem danke.",I'm not taking anything that looks like a dentist's waiting room. Thanks anyway.
 W3_NUD_MAX_0450,Wo kriegt man die Pastillen sonst?,Where else can you get the lozenges?
@@ -4321,13 +4320,13 @@ W3_TEST_DEC_0070,"Katzen bestehen den Test immer. Sie antworten nicht. Das ist d
 W3_TEST_PIX_0080,"Ich bin nicht menschlich. Ich bin, wenn man es genau nimmt, ein gutes Stück darüber hinaus.","I am not human. I am, strictly speaking, a good deal beyond it."
 W3_TEST_PIX_0080_2,"Aber danke. Es kommt selten vor, dass jemand mit Hut das erkennt.",But thank you. It's rare for someone in a hat to recognise that.
 W3_TEST_MAX_0090,Na gut. Fangen wir mit dem Test an.,All right. Let's start the test.
-W3_TEST_DEC_0100,Du gehst durch die Wüste. Eine Schildkröte liegt auf dem Rücken. Sie kommt nicht hoch. Was tust du?,You're walking through the desert. A tortoise is lying on its back. It can't get up. What do you do?
-W3_TEST_MAX_0110,Ich dreh sie um.,I turn it over.
+W3_TEST_DEC_0100,Du findest im Bus ein Portemonnaie. Darin ist ein Foto von dir. Was tust du?,You find a wallet on the bus. Inside is a photo of you. What do you do?
+W3_TEST_MAX_0110,Ich geb es beim Fahrer ab.,I hand it in to the driver.
 W3_TEST_DEC_0120,Hilfsbereit. Effizient. Ohne Zögern. So antwortet eine Maschine mit guter Kinderstube. Durchgefallen.,Helpful. Efficient. No hesitation. That's how a well-raised machine answers. Fail.
-W3_TEST_MAX_0130,"Ich streite erst mal mit ihr. Sie hätte wissen müssen, dass es windig wird.",First I argue with it. It should have known it was going to be windy.
-W3_TEST_DEC_0140,Nachtragend. Unfair. Gegenüber einem Reptil. Das ist ein Mensch. Weiter.,Resentful. Unfair. Towards a reptile. That's a human. Next.
-W3_TEST_MAX_0150,Ich frag sie nach dem WLAN-Passwort.,I ask it for the Wi-Fi password.
-W3_TEST_DEC_0160,"Die Schildkröte hat kein WLAN. Niemand hier hat WLAN. Das war keine Antwort, das war Heimweh. Durchgefallen.","The tortoise doesn't have Wi-Fi. Nobody here has Wi-Fi. That wasn't an answer, that was homesickness. Fail."
+W3_TEST_MAX_0130,"Ich streite erst mal mit ihm. Es hätte wissen müssen, dass ich das Foto nicht mag.",First I argue with it. It should have known I don't like that photo.
+W3_TEST_DEC_0140,Nachtragend. Unfair. Gegenüber einem Portemonnaie. Das ist ein Mensch. Weiter.,Resentful. Unfair. Towards a wallet. That's a human. Next.
+W3_TEST_MAX_0150,Ich frag es nach dem WLAN-Passwort.,I ask it for the Wi-Fi password.
+W3_TEST_DEC_0160,"Das Portemonnaie hat kein WLAN. Niemand hier hat WLAN. Das war keine Antwort, das war Heimweh. Durchgefallen.","The wallet doesn't have Wi-Fi. Nobody here has Wi-Fi. That wasn't an answer, that was homesickness. Fail."
 W3_TEST_DEC_0170,Zweite Frage. Es regnet. Es wird morgen regnen. Es wird immer regnen. Was tust du?,Second question. It's raining. It will rain tomorrow. It will always rain. What do you do?
 W3_TEST_MAX_0180,Ich bleib drinnen.,I stay inside.
 W3_TEST_DEC_0190,Vernünftig. Trocken. Berechnet. Maschine. Ich war fast beeindruckt. Durchgefallen.,Sensible. Dry. Calculated. Machine. I was almost impressed. Fail.
@@ -4748,10 +4747,6 @@ W3_BAS_PIX_1400,"Er rostet. So nennt man das, wenn einer in der Ecke steht und n
 W3_BAS_PIX_1400_2,Ich kenne das von Max. Bei ihm heißt es allerdings Wochenende.,I know it from Max. With him it's called the weekend.
 W3_BAS_MAX_1410,Hey. Ich räum auf. Manchmal.,Hey. I tidy up. Sometimes.
 W3_BAS_KAL_0420,Fließend. Ich hab die Tabelle nie gebraucht. Ich hab sie nur zur Sicherheit sortiert. Dreimal.,Fluently. I never needed the table. I only sorted it to be safe. Three times.
-W3_BAS_MAX_0430,Was ist das für ein Wrack?,What is this wreck?
-W3_BAS_KAL_0440,Die alte Kiste hat den Kessel-Lauf in unter zwölf Parsec geschafft.,This old bucket made the Kessel Run in less than twelve parsecs.
-W3_BAS_MAX_0450,"Parsec ist eine Strecke, keine Zeit.","A parsec is a distance, not a time."
-W3_BAS_KAL_0460,Sag ich doch. Kurze Strecke.,That's what I'm saying. Short distance.
 W3_BAS_MAX_0470,Ich leg mich wieder hin.,I'll lie back down.
 W3_BAS_KAL_0480,Träum was Sauberes. Drüben ist alles sauber. Das ist das Gruselige.,Dream of something clean. Everything's clean over there. That's the creepy part.
 W3_BAS_MAX_0510,"Vier Kapseln mit Glasdeckel. Drei leer, eine meine. Sie sieht aus wie ein Bett, das zu viel verspricht.","Four pods with glass lids. Three empty, one mine. It looks like a bed that promises too much."
@@ -4837,7 +4832,7 @@ W3_PIEP_PIX_0090,"Er piept, ich bin eine Katze. Wir sprechen beide die Sprache d
 W3_PIEP_PIX_0090_2,Sie besteht hauptsächlich aus Beschwerden.,It consists mainly of complaints.
 W3_PIEP_PIE_0100,Piep. Piep-piep. Piiiiep.,Beep. Beep-beep. Beeeeep.
 W3_PIEP_PIX_0110,"Er sagt: „Ich habe eine Nachricht gespeichert. Seit Jahren. Für einen Max.“ Er hat Max gesagt, als wäre das ein Fehlercode.","He says: ""I have a message stored. For years. For a Max."" He said Max like it was an error code."
-W3_PIEP_OPA_0120,"Hilf mir, Max. Du bist meine einzige Hoffnung. Der Kern muss weich bleiben. Außen hart, innen weich. Sonst ist alles verloren.","Help me, Max. You're my only hope. The core must stay soft. Hard outside, soft inside. Otherwise all is lost."
+W3_PIEP_OPA_0120,"Hilf mir, Max. Du bist der Einzige, der gerade Zeit hat. Der Kern muss weich bleiben. Außen hart, innen weich. Sonst ist alles verloren.","Help me, Max. You're the only one who's got time right now. The core must stay soft. Hard outside, soft inside. Otherwise all is lost."
 W3_PIEP_OPA_0130,Und wenn du schon unterwegs bist …,And while you're there anyway …
 W3_PIEP_MAX_0140,"Das war Opa. In Blau und auf den Knien, seit Jahren gespeichert. Wie kommt Opa bitte in einen Putzroboter im Jahr 2099?","That was Grandpa. In blue and on his knees, stored for years. How on earth does Grandpa end up in a cleaning robot in 2099?"
 W3_PIEP_PIX_0150,"Er war schon einmal hier, das riecht man an der Nachricht.","He has been here before, you can smell it on the message."
@@ -4883,7 +4878,7 @@ W3_EING_MAX_1083,Ich komm wieder. Wirklich.,I'll be back. Really.
 W3_EING_HAU_1086,"Das ist mein Satz, Bursche. Aber ich leihe ihn dir gern. Bring ihn sauber zurück.","That's my line, lad. But I'm happy to lend it to you. Bring it back clean."
 W3_EING_MAX_0140,Ich geh dann mal.,I'll be off then.
 W3_EING_HAU_0150,"Pfiat di, Bursche. Ich komme wieder. Also: Ich bleibe hier. Aber es klingt besser so.","Cheerio, lad. I'll be back. That is: I'm staying here. But it sounds better that way."
-W3_EING_MAX_0160,"Das ist nicht der Junge, den du suchst.",This is not the boy you're looking for.
+W3_EING_MAX_0160,Du hast mich nie gesehen. Du suchst jemand anderen.,You never saw me. You're looking for somebody else.
 W3_EING_HAU_0170,Ich bin ein Hausmeister. Ich suche nur Dreck.,I'm a caretaker. I'm only looking for dirt.
 W3_EING_PIX_0180,Du hast gerade mit der Hand gewedelt und einen Roboter angelogen. Ich habe es gesehen.,You just waved your hand and lied to a robot. I saw it.
 W3_EING_PIX_0180_2,"Ich werde es wieder sehen, in meinen Träumen, und ich werde jedes Mal lachen.","I shall see it again, in my dreams, and I shall laugh every time."
@@ -5280,7 +5275,7 @@ W3_HINT_PIX_0130,"Sieh dir den weinenden Mann, die Frau mit dem Schirm und den M
 W3_HINT_PIX_0140,"Du hast die Antworten im Notizbuch. Jetzt musst du sie nur noch aussprechen, statt nachzudenken.",You have the answers in your notebook. Now you only have to say them instead of thinking.
 W3_HINT_PIX_0140_2,"Für dich sollte das, bei allem Respekt, nicht besonders schwer sein.","For you, with all due respect, that shouldn't be particularly hard."
 W3_HINT_PIX_0150,"Bei jeder Frage fällt die vernünftige Antwort durch. Nimm die, die klingt, als hätte sie jemand von der Straße gesagt.","For every question, the sensible answer fails. Pick the one that sounds like someone off the street said it."
-W3_HINT_PIX_0160,Schildkröte: mit ihr streiten. Regen: Synthesizer spielen. Suppe: reinheulen. Ich sage das nur einmal. Ich habe es jetzt einmal gesagt.,Tortoise: argue with it. Rain: play the synthesizer. Soup: cry into it. I'm only saying this once. I've now said it once.
+W3_HINT_PIX_0160,Portemonnaie: mit ihm streiten. Regen: Synthesizer spielen. Suppe: reinheulen. Ich sage das nur einmal. Ich habe es jetzt einmal gesagt.,Wallet: argue with it. Rain: play the synthesizer. Soup: cry into it. I'm only saying this once. I have now said it once.
 W3_HINT_PIX_0210,"Der Mann in der Strickjacke will ein Erkennungsgericht, der Koch kennt eine Zahl. Du musst übersetzen. Du bist schlecht darin, aber es ist nur eine Zahl.","The man in the cardigan wants a recognition dish, the cook knows one number. You have to translate. You're bad at it, but it's only one number."
 W3_HINT_PIX_0220,Zwei mal zwei. Wie viel ist das?,Two times two. How much is that?
 W3_HINT_PIX_0220_2,"Sag es nicht mir, ich weiß es längst. Sag es dem Koch, der wartet auf genau eine Zahl.","Don't tell me, I've known for ages. Tell the cook, he's waiting for exactly one number."
@@ -5382,7 +5377,7 @@ W4_TEST_PIX_0310,"Fertig. Hell nach dunkel, so ordentlich sortiert wie meine Pri
 W4_TEST_NAR_0320,"Die Balken rasten ein. Der Sinuston kippt in eine Fanfare, Glitzerlicht fällt durchs Bild.","The bars click into place. The test tone tips into a fanfare, glittering light falls across the picture."
 W4_TEST_FLI_0330,Empfang! Erster Sender ist drin! Und … oh. Oh nein. Es ist der mit dem Mann mit den Zähnen.,Reception! First channel's in! And … oh. Oh no. It's the one with the man with the teeth.
 W4_TEST_MAX_0340,Welcher Mann mit den Zähnen?,What man with the teeth?
-W4_TEST_GER_0350,WILLKOMMEN bei Glücksrad-Shopping! Unser nächster Kandidat kommt direkt aus … dem Testbild? Egal! Applaus!,WELCOME to Wheel of Fortune Shopping! Our next contestant comes straight from … the test card? Who cares! Applause!
+W4_TEST_GER_0350,WILLKOMMEN bei Glücksrad-Shopping! Unser nächster Kandidat kommt direkt aus … dem Testbild? Egal! Applaus!,WELCOME to Lucky Wheel Shopping! Our next contestant comes straight from … the test card? Who cares! Applause!
 W4_TEST_MAX_0360,"Ich hab noch nie freiwillig eine Gameshow geguckt, und jetzt bin ich in einer drin. Karma hat offenbar eine Programmzeitschrift.","I've never watched a game show voluntarily, and now I'm in one. Apparently karma has a TV guide."
 W4_TEST_PIX_0370,"Ich warte im Schnee, wenn es recht ist. Dort ist es ruhiger, und niemand hält mir ein Mikrofon vors Gesicht.","I shall wait in the snow, if that's all right. It's quieter there, and nobody shoves a microphone in my face."
 W4_TEST_PIX_0370_2,"Ruf, wenn es etwas zu essen gibt. Oder wenn du verlierst, das wäre auch unterhaltsam.","Call me when there's food. Or when you lose, that would be entertaining too."
@@ -5550,7 +5545,7 @@ W4_FERN_MAX_0170,"Zwanzig Uhr fünfzehn: „Die Küche brennt, Folge 112: Fondue
 W4_FERN_MAX_0180,"Null Uhr: „Mitternachts-TV: Friedhofs-Funk“, ein Musikvideo mit Zombies. Klingt ungefähr nach dem, was mir mein Handy um Mitternacht vorschlägt.","Midnight: ""Midnight TV: Graveyard Funk"", a music video with zombies. Sounds roughly like what my phone suggests at midnight."
 W4_FERN_MAX_0190,„Werbung: Dr. Werbepause präsentiert den Couch-Magnet 3000“. Da fühl ich mich irgendwie persönlich angesprochen.,"""Advert: Dr. Adbreak presents the Couch Magnet 3000"". Somehow I feel personally addressed."
 W4_FERN_MAX_0200,„Tiertort: Der Fall der fehlenden Krone“. Läuft seit 20:15 in Dauerschleife. Krimis hören offenbar einfach nie auf.,"""Paw and Order: The Case of the Missing Crown"". On a loop since 8:15. Crime shows apparently never stop."
-W4_FERN_MAX_0210,"„Glücksrad-Shopping, rund um die Uhr“. Gerd schläft also nie. Das erklärt einiges.","""Wheel of Fortune Shopping, round the clock"". So Gerd never sleeps. Honestly, that explains a lot."
+W4_FERN_MAX_0210,"„Glücksrad-Shopping, rund um die Uhr“. Gerd schläft also nie. Das erklärt einiges.","""Lucky Wheel Shopping, round the clock"". So Gerd never sleeps. Honestly, that explains a lot."
 W4_FERN_MAX_0220,"Kanal 999: nicht gelistet. Nur ein leeres Feld mit Goldrand. Wer sich nicht ins Programm schreibt, will nicht gefunden werden.","Channel 999: not listed. Just an empty slot with a gold border. If you don't put yourself in the listings, you don't want to be found."
 W4_FERN_MAX_0230,"Kanal 999 ist angekreuzt, alle Sender gefunden. Opa würde jetzt „Vollempfang!“ rufen und einmal um den Tisch tanzen.","Channel 999 is ticked, all channels found. Grandpa would shout ""Full reception!"" now and dance once round the table."
 W4_FERN_MAX_0240,"Ich kann sie lesen, oder ich spring einfach direkt hin. Warten ist was für Leute, die früher gelebt haben.","I can read it, or I just jump straight there. Waiting is for people who lived in the olden days."
@@ -5942,7 +5937,7 @@ W4_HALL_MAX_0320,"Ein Mann in Trenchcoat mit Taschenlampe und einem Ding, das pi
 W4_HALL_MAX_0325,"Er leuchtet mit der Taschenlampe in eine leere Ecke und nickt. Er glaubt an irgendwas, ich weiß nur nicht, an was.","He shines his torch into an empty corner and nods. He believes in something, I just don't know what."
 W4_HALL_AGE_0330,Keine Bewegung. Sind Sie von hier? Von diesem Planeten?,Don't move. Are you from here? From this planet?
 W4_HALL_MAX_0340,Ich komm aus dem Wohnzimmer. Außerirdischer werd ich nicht.,"I'm from the living room. Honestly, I don't get much more alien than that."
-W4_HALL_AGE_0350,"Das sagen sie alle. Die Wahrheit ist irgendwo da draußen. Und ich habe sie noch nie gefunden. Zeigen Sie mir einen Beweis, und ich glaube Ihnen alles.",They all say that. The truth is out there. And I've never found it. Show me proof and I'll believe anything you say.
+W4_HALL_AGE_0350,"Das sagen sie alle. Die Wahrheit ist da draußen. Irgendwo. Ich habe die Adresse verlegt. Zeigen Sie mir einen Beweis, und ich glaube Ihnen alles.",They all say that. The truth is around here somewhere. I've mislaid the address. Show me proof and I'll believe anything you say.
 W4_HALL_MAX_0360,Ein Beweis wofür?,Proof of what?
 W4_HALL_AGE_0370,Für sie. Für die anderen. Für die Stimmen von drüben. Ich suche seit Jahren Kontakt mit der anderen Seite.,Of them. Of the others. Of the voices from the other side. I've been trying to make contact with the other side for years.
 W4_HALL_MAX_0550,Und was würde Sie überzeugen?,And what would convince you?
@@ -6138,7 +6133,7 @@ W4_FABR_PIX_0290_2,"Das steht so in keinem Maskottchen-Vertrag. Das ist Körperv
 W4_FABR_WIL_0300,Ein Unfall! Ein Laken! Eine Katze! Und ein Name steht schon über dir!,An accident! A sheet! A cat! And there's already a name above you!
 W4_FABR_MAX_0310,"Da steht „KÄSEMANN“, in fetten Buchstaben. Ich hab mir den Namen nicht ausgesucht, aber so was sucht sich wahrscheinlich keiner aus.","It says ""CHEESEMAN"", in bold letters. I didn't choose the name, but nobody probably chooses something like that."
 W4_FABR_SIE_0320,Käsemann. Gefällt mir. Klingt nach Mittagsschlaf.,Cheeseman. I like it. Sounds like an afternoon nap.
-W4_FABR_FLE_0330,Ein Führer mit Laken! Ich folge ihm! Vom Kopfstand aus!,A leader with a sheet! I'll follow him! From a headstand!
+W4_FABR_FLE_0330,Ein Anführer mit Laken! Ich folge ihm! Vom Kopfstand aus!,A leader with a sheet! I'll follow him! From a headstand!
 W4_FABR_MAX_0340,"Ich bin Käsemann. Ich habe ein Bettlaken, einen Kater und Umrisse. Niemand hat je weniger gebraucht, um Chef zu werden.","I am Cheeseman. I have a bed sheet, a cat and outlines. Nobody has ever needed less to become the boss."
 W4_FABR_PIX_0350,"Die Helden folgen ihm. Also mir. Also uns, aber hauptsächlich mir.","The heroes follow him. That is, me. That is, us, but mainly me."
 W4_FABR_PIX_0350_2,"Ich bin der Teil dieses Duos, der so aussieht, als wüsste er, wohin es geht. Das ist die eigentliche Superkraft.",I'm the part of this duo that looks like it knows where it's going. That's the real superpower.
@@ -6535,7 +6530,7 @@ W4_HINT_PIX_0170,"Der Erzähler hat ein Drehbuch. Darin steht, was um 20:15 pass
 W4_HINT_PIX_0180,Wechsel zu mir und benutze das Drehbuch beim Erzähler. Ich stibitze es. Seite 14 ist das Alibi.,Switch to me and use the script on the narrator. I'll swipe it. Page 14 is the alibi.
 W4_HINT_PIX_0190,"Der Geier war live im Werbeblock. Frag den, der den Werbeblock macht. Du kennst ihn. Er hat Zähne.",The vulture was live in the ad break. Ask the man who does the ad break. You know him. He has teeth.
 W4_HINT_PIX_0200,"Schalte zu Gerd Glück und frag ihn, wer um Viertel nach acht in seinem Studio stand. Er redet gern. Über alles. Besonders über sich.",Switch to Gerd Glück and ask him who was in his studio at quarter past eight. He likes talking. About everything. Especially himself.
-W4_HINT_PIX_0520,"Glücksrad, Frage an Gerd: Wer war gestern um Viertel nach acht hier?","Wheel of Fortune, question for Gerd: who was here yesterday at quarter past eight?"
+W4_HINT_PIX_0520,"Glücksrad, Frage an Gerd: Wer war gestern um Viertel nach acht hier?","Lucky Wheel, question for Gerd: who was here yesterday at quarter past eight?"
 W4_HINT_PIX_0520_2,"Er sagt: der Geier, live. Dann steht es im Notizbuch.","He says: the vulture, live. Then it's in the notebook."
 W4_HINT_PIX_0700,"Drei Alibis halten, eins nicht. Jemand hat dir von einem Abendessen erzählt, das es nie gab.","Three alibis hold, one doesn't. Somebody told you about a dinner that never happened."
 W4_HINT_PIX_0710,"Die Hyäne hat Lasagne gesehen. Es gab Fondue. Sag es ihr, aber nicht mit leeren Händen.","The hyena saw lasagne. It was fondue. Tell her, but not empty-handed."

@@ -119,7 +119,7 @@ Alle mit dem Baustein GEGENSTÄNDE. Schmidts Sonnenbrille steht bei den weltenü
 | Pinnwand mit Testergebnissen | Laboreingang | *Portal* | Pixel: „Testperson 47: ‚Sehr gut, aber zu wenig Kuchen verlangt.‘“ |
 | Endlos-Treppe ins Nichts | Büroturm | Escher | Max: „Wer sowas baut, hat zu viele Meetings.“ |
 | Wasserspender mit Blubbern | Büroturm | – | Max: „Der einzige hier, der Gefühle zeigt.“ |
-| Steuerpult des Schwebeschiff-Wracks | Widerstandsbasis | Star Wars (Kessel-Lauf) | Kalle: „Die alte Kiste hat den Kessel-Lauf in unter zwölf Parsec geschafft.“ Max: „Parsec ist eine Strecke, keine Zeit.“ Kalle: „Sag ich doch. Kurze Strecke.“ |
+| Steuerpult des Schwebeschiff-Wracks | Widerstandsbasis | – | Max: „Hundert Schalter, kein Bildschirm. Fliegen war früher Handarbeit.“ |
 
 | Sammelbild | Motiv |
 | --- | --- |

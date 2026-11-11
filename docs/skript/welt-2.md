@@ -675,7 +675,7 @@ Szene nach Rätsel 5. Archimedes kommt zurück, in ein Handtuch gewickelt, und b
 
 ## 16. Olympia, Startbüro: Rätsel 3, der Passierschein
 
-Beamter 1 (Startschalter) verlangt einen Bürgerschein, Beamter 2 (Bürgerschalter) einen Startpass. Der Aushang sagt: Jedes neue Rundschreiben gilt sofort und über allem. Weg A: Max schreibt mit dem Kugelschreiber auf ein leeres Formular ein Rundschreiben, das einen Passierschein A38 verlangt. Weg B: Papyrus aus dem Nil plus Tintenfisch-Tinte vom Hafen. Weg C: das Empfehlungsschreiben der Sphinx. Weg D: Mit der Sortierenden Socke findet Max im sortierten Formularberg ein fertiges Rundschreiben, das nur noch abgegeben werden muss. Gleich nach dem Startpass kommt Hermes zurück und leiht Max von sich aus seine Sandalen (0600, 0610); ohne sie beginnt Tag 1 nicht.
+Beamter 1 (Startschalter) verlangt einen Bürgerschein, Beamter 2 (Bürgerschalter) einen Startpass. Der Aushang sagt: Jedes neue Rundschreiben gilt sofort und über allem. Weg A: Max schreibt mit dem Kugelschreiber auf ein leeres Formular ein Rundschreiben, das einen Passierschein Vier-Strich-Ypsilon verlangt. Weg B: Papyrus aus dem Nil plus Tintenfisch-Tinte vom Hafen. Weg C: das Empfehlungsschreiben der Sphinx. Weg D: Mit der Sortierenden Socke findet Max im sortierten Formularberg ein fertiges Rundschreiben, das nur noch abgegeben werden muss. Gleich nach dem Startpass kommt Hermes zurück und leiht Max von sich aus seine Sandalen (0600, 0610); ohne sie beginnt Tag 1 nicht.
 
 | ID | Sprecher | Text | Auslöser |
 | --- | --- | --- | --- |
@@ -731,20 +731,20 @@ Beamter 1 (Startschalter) verlangt einen Bürgerschein, Beamter 2 (Bürgerschalt
 | W2\_BUER\_HER\_0350 | Hermes | Dann ist er da! | zeigt auf eine Wand |
 | W2\_BUER\_PIX\_0360 | Pixel | Der Mann hat geflügelte Schuhe und ist trotzdem immer zu spät. // Das liegt nicht an der Ausrüstung. Das ist Charakter, und dagegen helfen keine Federn. |  |
 | W2\_BUER\_MAX\_0370 | Max | Ein Formular und ein Kugelschreiber, der ohne Tintenfass schreibt. Ich schreib jetzt ein Rundschreiben, von oben. Oben bin jetzt ich. | Kugelschreiber auf leeres Formular; Notizbuch: Baustein „schreibt ohne Tintenfass“ |
-| W2\_BUER\_MAX\_0380 | Max | „Rundschreiben. Ab sofort gibt es Startpass und Bürgerschein nur gegen Passierschein A38.“ Den gibt es nicht. Das ist der Trick. | Rundschreiben im Inventar; Kugelschreiber verbraucht (Mine leer, Wunderding ausgegeben) |
+| W2\_BUER\_MAX\_0380 | Max | „Rundschreiben. Ab sofort gibt es Startpass und Bürgerschein nur gegen Passierschein Vier-Strich-Ypsilon.“ Den gibt es nicht. Das ist der Trick. | Rundschreiben im Inventar; Kugelschreiber verbraucht (Mine leer, Wunderding ausgegeben) |
 | W2\_BUER\_MAX\_0390 | Max | Tinte vom Tintenfisch auf Papyrus vom Nil, und ich schreib mit dem Finger. Das klebt mehr als jeder Touchscreen. | Tintenfass auf Papyrus |
 | W2\_BUER\_MAX\_0400 | Max | Dasselbe Rundschreiben, bloß blauer und mit Fingerabdruck. Amtlich genug. | Rundschreiben (Tinte) im Inventar |
 | W2\_BUER\_MAX\_0410 | Max | Die Socke. Sie sortiert alles, und zwar sofort. | Sortierende Socke auf Formularberg |
 | W2\_BUER\_NAR\_0420 | – | Die Socke wirbelt durch den Berg. Rollen fliegen, Staub steigt, Beamter 1 wacht kurz auf und schläft wieder ein. Oben liegt ein einzelnes Rundschreiben, fertig geschrieben, nie abgegeben. | Animation |
-| W2\_BUER\_MAX\_0430 | Max | „Rundschreiben: Startpass nur gegen Passierschein A38.“ Jemand hatte vor mir dieselbe Idee und dann wohl keinen Mut mehr. | Rundschreiben gefunden; Socke zurück ins Inventar |
+| W2\_BUER\_MAX\_0430 | Max | „Rundschreiben: Startpass nur gegen Passierschein Vier-Strich-Ypsilon.“ Jemand hatte vor mir dieselbe Idee und dann wohl keinen Mut mehr. | Rundschreiben gefunden; Socke zurück ins Inventar |
 | W2\_BUER\_PIX\_0440 | Pixel | Diese Socke hat in zehn Sekunden erledigt, was dieses Amt in vierhundert Jahren nicht geschafft hat. // Ich bin beinahe stolz. Auf eine Socke. So tief bin ich gesunken. |  |
 | W2\_BUER\_MAX\_0450 | Max | Hier. Ein neues Rundschreiben, von oben. | Rundschreiben auf Beamter 1 oder Beamter 2 |
-| W2\_BUER\_BE2\_0460 | Beamter 2 | Ein Rundschreiben. Ein neues. Es gilt sofort. Es verlangt … einen Passierschein A38. | liest, Brille rutscht |
+| W2\_BUER\_BE2\_0460 | Beamter 2 | Ein Rundschreiben. Ein neues. Es gilt sofort. Es verlangt … einen Passierschein Vier-Strich-Ypsilon. | liest, Brille rutscht |
 | W2\_BUER\_BE1\_0470 | Beamter 1 | Den gibt es nicht. | hellwach |
 | W2\_BUER\_BE2\_0480 | Beamter 2 | Den gibt es nicht! Aber wir müssen ihn verlangen! Wir müssen etwas verlangen, das es nicht gibt! Das ist … das ist das Ende! | Panik |
 | W2\_BUER\_BE1\_0490 | Beamter 1 | Stempel alles. Alles! Startpass, Bürgerschein, Passierschein. Damit er geht. Damit er nie wiederkommt. |  |
 | W2\_BUER\_NAR\_0500 | – | Beamter 2 stempelt. Tische, Rollen, die Bank, den Mann mit dem Bart. Dann Max' Formular. Dreimal. | Animation Stempel |
-| W2\_BUER\_BE2\_0510 | Beamter 2 | Startpass. Bürgerschein. Passierschein A38, hiermit erfunden und sofort ungültig. Und jetzt geh. Bitte. | gibt Startpass; Rätsel 3 gelöst |
+| W2\_BUER\_BE2\_0510 | Beamter 2 | Startpass. Bürgerschein. Passierschein Vier-Strich-Ypsilon, hiermit erfunden und sofort ungültig. Und jetzt geh. Bitte. | gibt Startpass; Rätsel 3 gelöst |
 | W2\_BUER\_MAX\_0520 | Max | Ein Startpass, eine Wachstafel mit Siegel. Ich bin jetzt offiziell Grieche und Sportler, beides zum ersten Mal. | Ansehen: Startpass im Inventar |
 | W2\_BUER\_MAX\_0525 | Max | Mein Name steht drauf, falsch geschrieben, aber mit Siegel. Jetzt ist der falsche Name amtlich. | Ansehen: Startpass im Inventar, zweites Mal |
 | W2\_BUER\_MAX\_0530 | Max | Hier. Ein Empfehlungsschreiben von der Sphinx. | Empfehlungsschreiben auf Beamter 1 oder 2 |
@@ -824,8 +824,8 @@ Marktplatz neben dem Stadion. Cicero redet am Pult vor römischen Touristen, Tir
 | W2\_AGOR\_TIR\_0370 | Tiro | Alles, jedes Wort, in Kurzschrift. Die hab ich erfunden, weil er nie aufhört. Ich bräuchte nur … eine feste Unterlage. Eine runde. // Egal. Vergiss es. | räuspert sich; Hinweis Rätsel 7 |
 | W2\_AGOR\_TIR\_0380 | Tiro | Blau. Ein blauer Stift. Er schreibt und schreibt und hat trotzdem schlechte Laune, genau wie ich. | Kugelschreiber auf Tiro; Notizbuch: Baustein „blau ohne Laune“ |
 | W2\_AGOR\_MAX\_0390 | Max | Was ist denn hier los? | Reden: Grieche in der Menge, Einstieg |
-| W2\_AGOR\_GRI\_0400 | Grieche | Die Römer! Überall Römer! Sie fotografieren unsere Säulen mit Wachstafeln und fragen, wo das Kolosseum ist! Was haben die Römer je für uns getan? |  |
-| W2\_AGOR\_GRI\_0410 | Grieche | Na gut, die Straßen. Und das Aquädukt. Und die Thermen. Und die Post. Aber sonst? Was haben die Römer je für uns getan, außer Straßen, Aquädukt, Thermen und Post? | zweiter Grieche ruft dazwischen; Konter 4 ins Notizbuch: „Außer den Straßen, dem Aquädukt und den Thermen?“ |
+| W2\_AGOR\_GRI\_0400 | Grieche | Die Römer! Überall Römer! Sie fotografieren unsere Säulen mit Wachstafeln und fragen, wo das Kolosseum ist! Und was haben wir von denen? Nichts! |  |
+| W2\_AGOR\_GRI\_0410 | Grieche | Na gut, den Kalender. Und die Fußbodenheizung. Und den Beton. Und die Post. Aber sonst? Was haben wir von denen, außer Kalender, Fußbodenheizung, Beton und Post? | zweiter Grieche ruft dazwischen; Konter 4 ins Notizbuch: „Außer dem Kalender, der Fußbodenheizung und dem Beton?“ |
 | W2\_AGOR\_GRI\_0420 | Grieche | Und wenn einer von denen redet, dann redet er. Stundenlang. Da hilft nur eins: fragen, ob er auch mal Luft holt. Das bringt sie aus dem Takt. | Option Grieche: Wie haltet ihr Cicero aus?; Konter 5 ins Notizbuch: „Holst du auch mal Luft?“ |
 | W2\_AGOR\_MAX\_0650 | Max | Fragen, ob er auch mal Luft holt. Merk ich mir. |  |
 | W2\_AGOR\_GRI\_0660 | Grieche | Aber frag nicht zu laut, sonst hält er eine Rede übers Atmen. |  |
@@ -876,7 +876,7 @@ Nach Tag 1 hängt eine von Hermes' Sandalen oben auf der Säule mit dem Adler. D
 | W2\_SAND\_MAX\_0160 | Max | Sandale an. Jetzt bin ich wohl ein Zeichen. | Sandale auf Max |
 | W2\_SAND\_TOU\_0170 | Tourist | Er trägt die Sandale! Er ist es! Der Messias! | Menge kniet |
 | W2\_SAND\_MAX\_0180 | Max | Ich bin nicht der Messias. |  |
-| W2\_SAND\_GRI\_0190 | Grieche | Nur der wahre Messias würde das leugnen! |  |
+| W2\_SAND\_GRI\_0190 | Grieche | Er sagt Nein! So bescheiden ist nur der Echte! |  |
 | W2\_SAND\_MAX\_0200 | Max | Okay. Dann bin ich's halt. |  |
 | W2\_SAND\_TOU\_0210 | Tourist | Er hat es zugegeben! Noch heiliger! |  |
 | W2\_SAND\_PIX\_0220 | Pixel | Du kannst nicht gewinnen. Ich kenne das gut, und zwar von mir. // Ich bin der Kater, gegen den man nicht gewinnen kann. Frag deinen Großvater, er hat es jahrelang versucht. |  |
@@ -1145,8 +1145,8 @@ In der Sandgrube. Cicero wirft fünf Beleidigungen; jede braucht einen passenden
 | W2\_RING\_CIC\_0080 | Cicero | Ich werde reden, bis die Sonne untergeht und wieder aufgeht und wieder untergeht! | Beleidigung 5; passend: Konter 1 |
 | W2\_RING\_MAX\_0090 | Max | Deine Toga hat mehr Falten als dein Argument. | Konter 7 auf Beleidigung 1; Treffer |
 | W2\_RING\_MAX\_0100 | Max | Ein Argument, so dünn, dass man den Redner dahinter sieht. | Konter 2 auf Beleidigung 1; Treffer |
-| W2\_RING\_MAX\_0110 | Max | Außer den Straßen, dem Aquädukt und den Thermen? | Konter 4 auf Beleidigung 2; Treffer |
-| W2\_RING\_CIC\_0120 | Cicero | Die Straßen … gut, die Straßen. Und das Aquädukt. Aber sonst? Sonst! | nach 0110, stolpert einen Schritt |
+| W2\_RING\_MAX\_0110 | Max | Außer dem Kalender, der Fußbodenheizung und dem Beton? | Konter 4 auf Beleidigung 2; Treffer |
+| W2\_RING\_CIC\_0120 | Cicero | Der Kalender … gut, der Kalender. Und die Fußbodenheizung. Aber sonst? Sonst! | nach 0110, stolpert einen Schritt |
 | W2\_RING\_MAX\_0130 | Max | Du zitierst dich selbst. Der Einzige, der dir noch zuhört. | Konter 3 auf Beleidigung 3; Treffer |
 | W2\_RING\_MAX\_0140 | Max | Du redest wie einer, der sich selbst zuhört, weil es sonst keiner tut. | Konter 6 auf Beleidigung 3; Treffer |
 | W2\_RING\_MAX\_0150 | Max | Holst du auch mal Luft? | Konter 5 auf Beleidigung 4; Treffer |
@@ -1285,7 +1285,7 @@ Rechtsklick auf einen Gegenstand in der Inventarleiste. Erstes Mal die erste Zei
 | W2\_INV\_MAX\_0490 | Max | Ein leeres Formular, das einzige im ganzen Amt. Es ist so leer, dass es schon fast wieder Möglichkeiten hat. | Ansehen: Leeres Formular |
 | W2\_INV\_MAX\_0495 | Max | Oben steht „Antrag auf“, und dann nichts. Ich könnte alles beantragen. In Gedanken beantrage ich einen Mittagsschlaf. | Ansehen: Leeres Formular, zweites Mal |
 | W2\_INV\_MAX\_0500 | Max | Mein Rundschreiben, mit blauem Kuli auf Papyrus. Es sieht amtlich aus, wenn man nicht genau hinguckt, und Beamte gucken nie genau hin. | Ansehen: Rundschreiben, mit Kugelschreiber |
-| W2\_INV\_MAX\_0505 | Max | Passierschein A38. Den gibt es nicht, aber ich hab ihn trotzdem vorgeschrieben. So funktioniert Verwaltung. | Ansehen: Rundschreiben, mit Kugelschreiber, zweites Mal |
+| W2\_INV\_MAX\_0505 | Max | Passierschein Vier-Strich-Ypsilon. Den gibt es nicht, aber ich hab ihn trotzdem vorgeschrieben. So funktioniert Verwaltung. | Ansehen: Rundschreiben, mit Kugelschreiber, zweites Mal |
 | W2\_INV\_MAX\_0510 | Max | Das Rundschreiben in Tintenfisch-Tinte. Es riecht nach Meer und Amtsstube, und das ist eine gefährliche Mischung. | Ansehen: Rundschreiben, mit Tinte |
 | W2\_INV\_MAX\_0515 | Max | Mein Fingerabdruck in der Ecke sieht aus wie ein Siegel. Ich hab gerade aus Versehen was beglaubigt. | Ansehen: Rundschreiben, mit Tinte, zweites Mal |
 | W2\_INV\_MAX\_0520 | Max | Ein Rundschreiben aus dem Formularberg. Jemand hatte dieselbe Idee wie ich und hat es dann nur nie abgegeben. | Ansehen: Rundschreiben, gefunden |

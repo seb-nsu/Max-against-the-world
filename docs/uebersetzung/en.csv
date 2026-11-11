@@ -1084,8 +1084,7 @@ W1_DORF_MAX_0270,"Someone's hammering in there, and someone's bleating in there.
 W1_DORF_MAX_0275,"Hammer, bleat, hammer, bleat. That's the slowest song I've ever heard, and it doesn't even have a chorus."
 W1_DORF_MAX_0280,A shop that only sells magic wands. You have to actually go in and talk to somebody. Creepy.
 W1_DORF_MAX_0285,"The window has wands made of wood, of bone and of something that looks like liquorice. The liquorice one is sold out."
-W1_DORF_MAX_0290,"A signpost: ""Hogwartle for Dropouts"". Finally, a school with realistic goals."
-W1_DORF_MAX_0295,"Under the signpost, in chalk: ""Platform nine and three-quarters is somewhere else."" Good to know."
+W1_DORF_MAX_0290,"A signpost: ""Hogglewarz for Dropouts"". Finally, a school with realistic goals."
 W1_DORF_MAX_0300,"The path to the bridge. Toadi says there's a troll there. But then, Toadi says a lot of things."
 W1_DORF_MAX_0305,"Someone's carved a smiley into a stone by the path, with tusks. I'm just going to take that as a friendly welcome."
 W1_DORF_MAX_0310,"Round houses with crooked roofs. Like a kid built them, a very talented kid with a lot of time."
@@ -1177,7 +1176,7 @@ W1_DORF_ROT_0930,"Delivery for … Max? One goat, size medium. Medium was out, s
 W1_DORF_ROT_0960,"Sign here. And here. No returns, she doesn't fit back in the cart."
 W1_DORF_ROT_0980,"A tip would be nice. Grandma has big teeth, that means nothing, but the dentist's bill is real."
 W1_DORF_TOA_0430,A cat! Is it dangerous? It looks like it has opinions!
-W1_DORF_TOA_0520,Lord Mouldword! He dropped out of Hogwartle in his first year and has hated all wizards ever since. And flowers.
+W1_DORF_TOA_0520,Lord Mouldword! He dropped out of Hogglewarz in his first year and has hated all wizards ever since. And flowers.
 W1_DORF_TOA_0522,"He sneezes at flowers. And when he sneezes, curses go off. The baker's been a loaf of bread ever since. A good loaf, but very quiet."
 W1_DORF_TOA_0540,"Castle Crumble, Stonebite Palace, the villa behind the mill stream. Moving boxes everywhere, no princess anywhere."
 W1_DORF_TOA_0542,With her it's hard to tell the difference. She always leaves boxes behind. I think it's a sign.
@@ -1245,7 +1244,7 @@ W1_HINT_PIX_0910,"The estate agent wants commission. Haggling gets you nowhere, 
 W1_HINT_PIX_0920,"You've got a wanted poster in your pocket. To an estate agent that's not a wanted poster, it's a brochure."
 W1_HINT_PIX_0930,"Show the estate agent Mouldword's wanted poster and pitch her the tower. Seven floors, tower location. I will never say anything like that again."
 W1_HINT_PIX_1010,"The goblins want light and a signature. Or a career. Grimtooth can be bought, just not with money."
-W1_HINT_PIX_1020,"Option one: the glow potion from Hogwartle is a torch, and ketchup looks like blood. Option two: Zeldina needs a caretaker."
+W1_HINT_PIX_1020,"Option one: the glow potion from Hogglewarz is a torch, and ketchup looks like blood. Option two: Zeldina needs a caretaker."
 W1_HINT_PIX_1030,Give Grimtooth the glow potion and sign the agreement in ketchup. Or offer him the caretaker job together with Zeldina. One is enough.
 W1_HINT_PIX_1111,"Four parts, one order. Every place you found one tells you what hangs on what. Look in the notebook, not into thin air."
 W1_HINT_PIX_1112,"Three brooms, three routes. They sweep anything that moves. Preferably hair. I have hair. I can see where this is going."
@@ -1263,7 +1262,7 @@ W1_HINT_PIX_1320,"Sock open, he sneezes, the staff flies. Then he needs a replac
 W1_HINT_PIX_1330,"Sock on Mouldword, wooden spoon on Mouldword, then call him by his pet name. And don't look at me while you do it."
 W1_HINT_PIX_9995,I'm still thinking. Here even thinking has statutes. Clause one: no pushing.
 W1_HOGG_ALW_0030,"Brooms and cat hair, it always ends up in the broom cupboard."
-W1_HOGG_ALW_0050,"Ah, a new dropout! Welcome to Hogwartle! Show me your wand, boy."
+W1_HOGG_ALW_0050,"Ah, a new dropout! Welcome to Hogglewarz! Show me your wand, boy."
 W1_HOGG_ALW_0060,"No wand? Then come back when something has chosen you. A wand, a spoon, a destiny. We take anything."
 W1_HOGG_ALW_0070,A wooden spoon! Finally someone with a sense for the essentials. The exam may begin.
 W1_HOGG_ALW_0230,A tomcat! Do you have hair? Of course you have hair. Away from the broom! Away! … Too late.
@@ -1745,7 +1744,7 @@ W1_STAB_STA_0226,It'll stay with you. A spoon is loyal if you give it a reason t
 W1_STAB_STA_0240,My last wand chose its wizard by sticking to him. Honey fingers. It didn't let go for three days.
 W1_STAB_STA_0240_2,That's what I call a calling.
 W1_STAB_STA_0260,Nothing. But they look good. A shop needs boxes. Without boxes it's a hallway.
-W1_STAB_STA_0280,"A sample. Hogwartle's Sorting Hat has retired, the school has no money, I have socks. That's the prototype."
+W1_STAB_STA_0280,"A sample. Hogglewarz's Sorting Hat has retired, the school has no money, I have socks. That's the prototype."
 W1_STAB_STA_0282,By character. So far only by colour. But it learns something new every day.
 W1_STAB_STA_0300,Touch everything. Just not for too long. Or the wand will think you're serious.
 W1_STAB_STA_0420,Not chosen. I can tell by your face. And by the drop of blood.
@@ -1761,7 +1760,7 @@ W1_TAV_GOL_0410,A cat. Cats don't like rings. Cats don't like anything. We are a
 W1_TAV_GOL_0720,Nothingsss. A little box. A ring in it. My preciousss. My clearance item. Nobody wants it. Not even on special offer.
 W1_TAV_GOL_0722,"It's heavy. Not in the hand, in the head. It whispers. Mostly prices."
 W1_TAV_GOL_0740,"The volcano! Yes! No! The landlord's watching. The cat's watching. And when nobody's watching, I'm watching. I don't dare."
-W1_TAV_GOL_0760,Riddles! Yes! I always win! What has roots nobody sees and is taller than trees?
+W1_TAV_GOL_0760,"Riddles! Yes! I always win! What has a neck and no head, a belly and no hunger?"
 W1_TAV_GOL_0780,See! Everyone knows everything! I only lose if someone asks something nobody could possibly know. And that never happens.
 W1_TAV_GOL_0800,Go on. Everyone goes. The ring stays. The ring always stays.
 W1_TAV_GOL_1110,Not now! The landlord! The cat! Everyone's watching! Ask me when nobody's watching.
@@ -1822,7 +1821,7 @@ W1_TAV_MAX_0260,"Roof beams. Perfect for cats and spiders. So, for Pixel and his
 W1_TAV_MAX_0265,"Somebody has carved tally marks into one beam, one per brawl. The beam is nearly full."
 W1_TAV_MAX_0270,"The wine list: house wine, house red, house even redder. And right at the bottom: ""Mount Doomsday vintage, on request."""
 W1_TAV_MAX_0275,"After ""on request"" somebody has pencilled in: ""Nobody has ever requested it."""
-W1_TAV_MAX_0290,"""Polyjuicy Lemonade. Tastes like someone else."" I'll stick with water, I'm pretty happy being me right now."
+W1_TAV_MAX_0290,"""Manyjuice Lemonade. Tastes like someone else."" I'll stick with water, I'm pretty happy being me right now."
 W1_TAV_MAX_0295,"On the back it says: ""Effect lasts one hour. The aftertaste lasts longer."""
 W1_TAV_MAX_0310,"Humbert's fish soup. It smells like the harbour, specifically the part of the harbour nobody goes to voluntarily."
 W1_TAV_MAX_0315,"There's a fish eye floating on top. I gave it a stir, now it's looking the other way."
@@ -1844,7 +1843,7 @@ W1_TAV_MAX_0710,What have you got there?
 W1_TAV_MAX_0721,And why do you want to get rid of it?
 W1_TAV_MAX_0730,Why don't you just throw it in the pot?
 W1_TAV_MAX_0750,You like riddle games?
-W1_TAV_MAX_0770,A mountain. That's on the first page of every riddle book.
+W1_TAV_MAX_0770,A bottle. That's on page one of every riddle book.
 W1_TAV_MAX_0790,"Bye, Gollo."
 W1_TAV_MAX_0920,"She's hissing. I think that was a no, and a very clear one."
 W1_TAV_MAX_0990,"I only understand meow, but that was a very convinced meow."
@@ -1958,7 +1957,7 @@ W1_THRO_MOD_0320,CURSE OF A THOUSAND …
 W1_THRO_MOD_0340,I won't stop! I am the terror of Waffleton! I am … atchoo …
 W1_THRO_MOD_0360,… Who told you that?
 W1_THRO_MOD_0380,I just wanted someone to take me seriously. Once. Without sneezing.
-W1_THRO_MOD_0400,"Hogwartle … for those who failed. … Yes. Yes, that's me."
+W1_THRO_MOD_0400,"Hogglewarz … for those who failed. … Yes. Yes, that's me."
 W1_THRO_MOD_0410,All I can do with this is cheese.
 W1_THRO_MOD_0520,And the estate agent doesn't get a commission?
 W1_THRO_MOD_0630,"First year, second attempt. Atchoo. With tissues this time."
@@ -2226,8 +2225,8 @@ W2_AGOR_CIC_0330,"About the Romans, the Greeks, virtue, time, the fatherland, du
 W2_AGOR_CIC_0350,"How long, boy, will you abuse my patience? Go, then. I'll keep talking. I always keep talking."
 W2_AGOR_CIC_0610,"I calculated it. Three times, with a speech in between. Every time it came out at one hundred and thirty-seven years. And a cold."
 W2_AGOR_CIC_0630,"A gravestone, boy, with dignity and moss. A new stone is a promise. An old stone is proof."
-W2_AGOR_GRI_0400,The Romans! Romans everywhere! They photograph our columns with wax tablets and ask where the Colosseum is! What have the Romans ever done for us?
-W2_AGOR_GRI_0410,"All right, the roads. And the aqueduct. And the baths. And the post. But apart from that? What have the Romans ever done for us, apart from roads, the aqueduct, baths and the post?"
+W2_AGOR_GRI_0400,The Romans! Romans everywhere! They photograph our columns with wax tablets and ask where the Colosseum is! And what do we get from them? Nothing!
+W2_AGOR_GRI_0410,"All right, the calendar. And the underfloor heating. And the concrete. And the post. But apart from that? What do we get from them, apart from the calendar, underfloor heating, concrete and the post?"
 W2_AGOR_GRI_0420,"And when one of them talks, he talks. For hours. Only one thing helps: ask whether he ever takes a breath. That throws them off their rhythm."
 W2_AGOR_GRI_0440,And don't you dare tell me you're Roman. You don't look like a Roman. You look like someone who's been indoors too long.
 W2_AGOR_GRI_0660,"But don't ask too loudly, or he'll give a speech about breathing."
@@ -2366,9 +2365,9 @@ W2_BUER_BE2_0280,"That's administration. Same word, only longer."
 W2_BUER_BE2_0300,"Only if a new circular arrives. Then we do what it says, immediately, no matter what."
 W2_BUER_BE2_0300_2,It is our greatest fear and our only joy.
 W2_BUER_BE2_0320,The bench is free. From the day after tomorrow.
-W2_BUER_BE2_0460,A circular. A new one. It applies immediately. It requires … a Permit A38.
+W2_BUER_BE2_0460,A circular. A new one. It applies immediately. It requires … a Permit Four-Slash-Y.
 W2_BUER_BE2_0480,That doesn't exist! But we have to require it! We have to require something that doesn't exist! This is … this is the end!
-W2_BUER_BE2_0510,"Entry pass. Citizen's certificate. Permit A38, hereby invented and immediately invalid. And now go. Please."
+W2_BUER_BE2_0510,"Entry pass. Citizen's certificate. Permit Four-Slash-Y, hereby invented and immediately invalid. And now go. Please."
 W2_BUER_BE2_0540,"""Whoever reads this and doesn't understand had better stamp before he asks."" Do you understand that?"
 W2_BUER_BE2_0560,A pen without an inkwell. It just writes. That's … that's not permitted. That's wonderful. Take it away.
 W2_BUER_BE2_0710,You don't get out. Either you get dealt with or you get old. Both are a kind of stamp.
@@ -2405,11 +2404,11 @@ W2_BUER_MAX_0290,Are there exceptions?
 W2_BUER_MAX_0310,I'll think of something.
 W2_BUER_MAX_0340,But there's no other office here.
 W2_BUER_MAX_0370,"A form and a ballpoint that writes without an inkwell. I'm writing a circular now, from above. And above is now me."
-W2_BUER_MAX_0380,"""Circular. With immediate effect, entry passes and citizen's certificates are only issued on presentation of Permit A38."" That doesn't exist. That's the trick."
+W2_BUER_MAX_0380,"""Circular. With immediate effect, entry passes and citizen's certificates are only issued on presentation of Permit Four-Slash-Y."" That doesn't exist. That's the trick."
 W2_BUER_MAX_0390,"Squid ink on papyrus from the Nile, and I'm writing with my finger. That's stickier than any touchscreen."
 W2_BUER_MAX_0400,"The same circular, just bluer and with a fingerprint. Official enough."
 W2_BUER_MAX_0410,"The sock. It sorts everything, and instantly."
-W2_BUER_MAX_0430,"""Circular: entry pass only on presentation of Permit A38."" Somebody had the same idea before me and then apparently lost their nerve."
+W2_BUER_MAX_0430,"""Circular: entry pass only on presentation of Permit Four-Slash-Y."" Somebody had the same idea before me and then apparently lost their nerve."
 W2_BUER_MAX_0450,"Here. A new circular, from above."
 W2_BUER_MAX_0520,"An entry pass, a wax tablet with a seal. I'm now officially Greek and an athlete, both for the first time."
 W2_BUER_MAX_0525,"My name's on it, spelled wrong, but with a seal. Now the wrong name is official."
@@ -2852,7 +2851,7 @@ W2_INV_MAX_0480,"Cracks, moss and a beetle. I'm carrying a hundred years of hist
 W2_INV_MAX_0490,"A blank form, the only one in the whole office. It's so blank it almost has possibilities again."
 W2_INV_MAX_0495,"At the top it says ""Application for"", and then nothing. I could apply for anything. In my head I'm applying for a nap."
 W2_INV_MAX_0500,"My circular, in blue biro on papyrus. It looks official if you don't look closely, and officials never look closely."
-W2_INV_MAX_0505,"Permit A38. It doesn't exist, but I required it anyway. That's how administration works."
+W2_INV_MAX_0505,"Permit Four-Slash-Y. It doesn't exist, but I required it anyway. That's how administration works."
 W2_INV_MAX_0510,"The circular in squid ink. It smells of sea and office, and that's a dangerous mix."
 W2_INV_MAX_0515,My fingerprint in the corner looks like a seal. I've just accidentally certified something.
 W2_INV_MAX_0520,A circular from the mountain of forms. Somebody had the same idea as me and just never handed it in.
@@ -3184,7 +3183,7 @@ W2_RING_CIC_0060,"As I said in my third speech, and in the fourth, and in the fi
 W2_RING_CIC_0070,And so I stand here before you and tell you and tell you again
 W2_RING_CIC_0070_2,and shall go on telling you without pause without full stop without comma until …
 W2_RING_CIC_0080,I shall speak until the sun sets and rises again and sets again!
-W2_RING_CIC_0120,"The roads … fine, the roads. And the aqueduct. But apart from that? Apart from that!"
+W2_RING_CIC_0120,"The calendar … fine, the calendar. And the underfloor heating. But apart from that? Apart from that!"
 W2_RING_CIC_0160,I …
 W2_RING_CIC_0180,Wrong! Missed! And for that you shall now hear my speech on duty. All three parts.
 W2_RING_CIC_0240,"I am … outside. I have lost. I shall give a speech about it, a long one. Not here. I promise. Not here."
@@ -3192,7 +3191,7 @@ W2_RING_MAX_0020,"A war of words in the sand. Okay. I've survived comment sectio
 W2_RING_MAX_0030,"Comeback one: ""Anyone who talks that long is afraid of the end of the sentence."" Two: ""An argument so thin you can see the speaker through it."" Three: ""You quote yourself. The only one still listening."""
 W2_RING_MAX_0090,Your toga has more folds than your argument.
 W2_RING_MAX_0100,An argument so thin you can see the speaker through it.
-W2_RING_MAX_0110,"Apart from the roads, the aqueduct and the baths?"
+W2_RING_MAX_0110,"Apart from the calendar, the underfloor heating and the concrete?"
 W2_RING_MAX_0130,You quote yourself. The only one still listening.
 W2_RING_MAX_0140,You talk like someone who listens to himself because nobody else will.
 W2_RING_MAX_0150,Do you ever breathe?
@@ -3223,7 +3222,7 @@ W2_SAND_FAW_0280,"A sapling? We want figs, ripe, plump figs. Not hope in a pot."
 W2_SAND_FAW_0340,"Figs! Fresh ones! We'll fan however you like: left, right, steadily, in time. We'll even fan at night."
 W2_SAND_FAW_0370,A seed. You're giving us a seed. For that we'll fan exactly once. There. Done.
 W2_SAND_GRI_0030,"No, the shoe! Follow the shoe! It's a shoe!"
-W2_SAND_GRI_0190,Only the true Messiah would deny it!
+W2_SAND_GRI_0190,He says no! Only the real one is that modest!
 W2_SAND_MAX_0010,"There's a sandal hanging up there. Mine. Well, Hermes'. On the eagle. And the eagle doesn't look happy."
 W2_SAND_MAX_0015,The eagle is holding on to the sandal like it's a deposit. I need a plan. Or a ladder.
 W2_SAND_MAX_0070,And who says you are?
@@ -3715,8 +3714,6 @@ W3_BAS_KAL_0370,"If you get the door open, I'll run a line from there to your po
 W3_BAS_KAL_0390,"She used to be a food mixer. Then she made rules. Three of them. She sticks to them. Always. That's her strength and her problem. If you know all three, you can … well. Confuse her."
 W3_BAS_KAL_0410,"Fluently. Well, fluently with a table. Without the table … I lost the table. Somewhere around here. Piepsi had a copy. Piepsi is standing over there, rusting."
 W3_BAS_KAL_0420,Fluently. I never needed the table. I only sorted it to be safe. Three times.
-W3_BAS_KAL_0440,This old bucket made the Kessel Run in less than twelve parsecs.
-W3_BAS_KAL_0460,That's what I'm saying. Short distance.
 W3_BAS_KAL_0480,Dream of something clean. Everything's clean over there. That's the creepy part.
 W3_BAS_KAL_0760,"Don't touch. It hums when it's happy. If it stops humming, we all go outside. Fast."
 W3_BAS_KAL_1350,We call that a rest phase. Sounds more like a plan.
@@ -3732,8 +3729,6 @@ W3_BAS_MAX_0330,Why is my pod here?
 W3_BAS_MAX_0350,How do I get into the lab?
 W3_BAS_MAX_0380,What do you know about M.O.T.H.E.R.?
 W3_BAS_MAX_0400,Can you do meow Morse?
-W3_BAS_MAX_0430,What is this wreck?
-W3_BAS_MAX_0450,"A parsec is a distance, not a time."
 W3_BAS_MAX_0470,I'll lie back down.
 W3_BAS_MAX_0510,"Four pods with glass lids. Three empty, one mine. It looks like a bed that promises too much."
 W3_BAS_MAX_0515,One pod still has a pillow with a dent in it. Whoever lay there didn't say goodbye.
@@ -3877,7 +3872,7 @@ W3_EING_MAX_0070,What does 08/15 mean?
 W3_EING_MAX_0100,Can you let me in?
 W3_EING_MAX_0120,Why do you squeak?
 W3_EING_MAX_0140,I'll be off then.
-W3_EING_MAX_0160,This is not the boy you're looking for.
+W3_EING_MAX_0160,You never saw me. You're looking for somebody else.
 W3_EING_MAX_0190,"Here. Sahra Konner. Forty-seven of them, with addresses."
 W3_EING_MAX_0240,"Here, for your joints: olive oil. From a world where people thought sport was a good idea."
 W3_EING_MAX_0280,"Without oil he just keeps saying cheerio and squeaking. I feel a bit sorry for him, as far as you can feel sorry for a robot."
@@ -3960,7 +3955,7 @@ W3_HINT_PIX_0130,"Look at the crying man, the woman with the umbrella and the mu
 W3_HINT_PIX_0140,You have the answers in your notebook. Now you only have to say them instead of thinking.
 W3_HINT_PIX_0140_2,"For you, with all due respect, that shouldn't be particularly hard."
 W3_HINT_PIX_0150,"For every question, the sensible answer fails. Pick the one that sounds like someone off the street said it."
-W3_HINT_PIX_0160,Tortoise: argue with it. Rain: play the synthesizer. Soup: cry into it. I'm only saying this once. I've now said it once.
+W3_HINT_PIX_0160,Wallet: argue with it. Rain: play the synthesizer. Soup: cry into it. I'm only saying this once. I have now said it once.
 W3_HINT_PIX_0210,"The man in the cardigan wants a recognition dish, the cook knows one number. You have to translate. You're bad at it, but it's only one number."
 W3_HINT_PIX_0220,Two times two. How much is that?
 W3_HINT_PIX_0220_2,"Don't tell me, I've known for ages. Tell the cook, he's waiting for exactly one number."
@@ -4365,7 +4360,7 @@ W3_NUD_MOR_0210,"Psst. Over here. Behind the pillar. Order the recognition dish,
 W3_NUD_MOR_0230,Two times two. Say it out loud. Say it as if you knew what it means.
 W3_NUD_MOR_0350,Four. Two times two. It's him. Or he can count. Both are rare enough.
 W3_NUD_MOR_0370,I am Morphaeus. I offer people a choice. Currently from a limited range.
-W3_NUD_MOR_0420,"The blue lozenge: you wake up, believe whatever you want, and everything stays comfortable. The red one: you see how deep the rabbit hole goes."
+W3_NUD_MOR_0420,"The blue lozenge: you wake up, believe whatever you want, and everything stays comfortable. The red one: you see how deep this really goes."
 W3_NUD_MOR_0430,"Both currently out of stock. Supply chain. I have beige. Beige leads nowhere, but it tastes of nothing."
 W3_NUD_MOR_0460,The machine in the pharmacy alley. It only dispenses if it detects a genuine symptom. And only to verified humans.
 W3_NUD_MOR_0470,Verified means: by the man in the hat. Without his stamp the machine looks straight through you.
@@ -4424,7 +4419,7 @@ W3_PIEP_MAX_0290,A coffee puddle that isn't spreading. I think it's still thinki
 W3_PIEP_MAX_0295,The puddle has a skin now. Kalle's coffee is alive.
 W3_PIEP_NAR_0030,"The mug tips over. The coffee oozes across the floor, right into Piepsi's joints."
 W3_PIEP_NAR_0050,"Piepsi twitches. Sits up. His eye glows blue, his hat pops up."
-W3_PIEP_OPA_0120,"Help me, Max. You're my only hope. The core must stay soft. Hard outside, soft inside. Otherwise all is lost."
+W3_PIEP_OPA_0120,"Help me, Max. You're the only one who's got time right now. The core must stay soft. Hard outside, soft inside. Otherwise all is lost."
 W3_PIEP_OPA_0130,And while you're there anyway …
 W3_PIEP_PIE_0060,Beep. Beeeep. Beep-beep-beep.
 W3_PIEP_PIE_0100,Beep. Beep-beep. Beeeeep.
@@ -4641,10 +4636,10 @@ W3_TEST_DEC_0010,It has been raining for twenty-nine years. I keep count. Somebo
 W3_TEST_DEC_0020,Deckert. Detective. I check who's human here and who's only pretending. Machines answer logically. Humans just answer.
 W3_TEST_DEC_0050,"Nothing. You stay outside the alley and I write in my notebook: ""Suspiciously logical."" The notebook is full."
 W3_TEST_DEC_0070,Cats always pass the test. They don't answer. That's the most human answer there is.
-W3_TEST_DEC_0100,You're walking through the desert. A tortoise is lying on its back. It can't get up. What do you do?
+W3_TEST_DEC_0100,You find a wallet on the bus. Inside is a photo of you. What do you do?
 W3_TEST_DEC_0120,Helpful. Efficient. No hesitation. That's how a well-raised machine answers. Fail.
-W3_TEST_DEC_0140,Resentful. Unfair. Towards a reptile. That's a human. Next.
-W3_TEST_DEC_0160,"The tortoise doesn't have Wi-Fi. Nobody here has Wi-Fi. That wasn't an answer, that was homesickness. Fail."
+W3_TEST_DEC_0140,Resentful. Unfair. Towards a wallet. That's a human. Next.
+W3_TEST_DEC_0160,"The wallet doesn't have Wi-Fi. Nobody here has Wi-Fi. That wasn't an answer, that was homesickness. Fail."
 W3_TEST_DEC_0170,Second question. It's raining. It will rain tomorrow. It will always rain. What do you do?
 W3_TEST_DEC_0190,Sensible. Dry. Calculated. Machine. I was almost impressed. Fail.
 W3_TEST_DEC_0210,Pointless. Wet. Beautiful. No program in the world would do that voluntarily. Next.
@@ -4661,8 +4656,8 @@ W3_TEST_DEC_0410,The cat is right. I'll make a note of it. In the margin.
 W3_TEST_MAX_0040,What happens if I fail?
 W3_TEST_MAX_0060,What about the cat?
 W3_TEST_MAX_0090,All right. Let's start the test.
-W3_TEST_MAX_0110,I turn it over.
-W3_TEST_MAX_0130,First I argue with it. It should have known it was going to be windy.
+W3_TEST_MAX_0110,I hand it in to the driver.
+W3_TEST_MAX_0130,First I argue with it. It should have known I don't like that photo.
 W3_TEST_MAX_0150,I ask it for the Wi-Fi password.
 W3_TEST_MAX_0180,I stay inside.
 W3_TEST_MAX_0200,I go outside and play the synthesizer. For nobody.
@@ -5003,7 +4998,7 @@ W4_FERN_MAX_0170,"Quarter past eight: ""The Kitchen's on Fire, episode 112: Fond
 W4_FERN_MAX_0180,"Midnight: ""Midnight TV: Graveyard Funk"", a music video with zombies. Sounds roughly like what my phone suggests at midnight."
 W4_FERN_MAX_0190,"""Advert: Dr. Adbreak presents the Couch Magnet 3000"". Somehow I feel personally addressed."
 W4_FERN_MAX_0200,"""Paw and Order: The Case of the Missing Crown"". On a loop since 8:15. Crime shows apparently never stop."
-W4_FERN_MAX_0210,"""Wheel of Fortune Shopping, round the clock"". So Gerd never sleeps. Honestly, that explains a lot."
+W4_FERN_MAX_0210,"""Lucky Wheel Shopping, round the clock"". So Gerd never sleeps. Honestly, that explains a lot."
 W4_FERN_MAX_0220,"Channel 999: not listed. Just an empty slot with a gold border. If you don't put yourself in the listings, you don't want to be found."
 W4_FERN_MAX_0230,"Channel 999 is ticked, all channels found. Grandpa would shout ""Full reception!"" now and dance once round the table."
 W4_FERN_MAX_0240,"I can read it, or I just jump straight there. Waiting is for people who lived in the olden days."
@@ -5154,7 +5149,7 @@ W4_GLUE_PIX_0460,"The cruise is cardboard, the toaster is real. That's life."
 W4_GLUE_PIX_0460_2,"The big things are scenery, and the small things make crumbs. Personally, I prefer the crumbs."
 W4_GLUE_PIX_0510,And the cat?
 W4_HALL_AGE_0330,Don't move. Are you from here? From this planet?
-W4_HALL_AGE_0350,They all say that. The truth is out there. And I've never found it. Show me proof and I'll believe anything you say.
+W4_HALL_AGE_0350,They all say that. The truth is around here somewhere. I've mislaid the address. Show me proof and I'll believe anything you say.
 W4_HALL_AGE_0370,Of them. Of the others. Of the voices from the other side. I've been trying to make contact with the other side for years.
 W4_HALL_AGE_0390,"My detector. It beeps at everything. Microwaves, cats, my colleague. My colleague doesn't believe me either."
 W4_HALL_AGE_0410,Ghosts are a hoax. Aliens are real. I have principles.
@@ -5279,7 +5274,7 @@ W4_HINT_PIX_0490,"The sofa is an offer, young man."
 W4_HINT_PIX_0490_2,For three worlds you've learned what to do with offers that sound too good. I hope at least that stuck.
 W4_HINT_PIX_0500,"Say no. Twice, if you have to. Then he starts broadcasting and you start pressing. Every button has its moment, and the moment is in the picture. Show running, he brags, applause roars, he goes quiet, ratings drop."
 W4_HINT_PIX_0510,"Pause, adapter with tape, Mute, Subtitles, Channel search. In that order. Wrong buttons cost nothing, except that he thanks you."
-W4_HINT_PIX_0520,"Wheel of Fortune, question for Gerd: who was here yesterday at quarter past eight?"
+W4_HINT_PIX_0520,"Lucky Wheel, question for Gerd: who was here yesterday at quarter past eight?"
 W4_HINT_PIX_0520_2,"He says: the vulture, live. Then it's in the notebook."
 W4_HINT_PIX_0530,"Open the TV guide, click ""Midnight TV: Graveyard Funk"". The clock jumps along, and you're standing in the graveyard."
 W4_HINT_PIX_0540,"Use the lights and pick every message: hello, who is Zappmann, how do you know that."
@@ -5847,7 +5842,7 @@ W4_TEST_FLI_0080,"Flimmer! Test card man, channel zero to infinity. I live in th
 W4_TEST_FLI_0100,"You want out? Then the picture has to be steady. The bars are all jumbled, and as long as they're jumbled, no channel gets through."
 W4_TEST_FLI_0120,"The right one! Light to dark, dead easy. Well, easy for people who can't see colours. I only see static. You see too much."
 W4_TEST_FLI_0330,Reception! First channel's in! And … oh. Oh no. It's the one with the man with the teeth.
-W4_TEST_GER_0350,WELCOME to Wheel of Fortune Shopping! Our next contestant comes straight from … the test card? Who cares! Applause!
+W4_TEST_GER_0350,WELCOME to Lucky Wheel Shopping! Our next contestant comes straight from … the test card? Who cares! Applause!
 W4_TEST_MAX_0010,Ouch.
 W4_TEST_MAX_0030,"Coloured stripes and a beep that just won't stop. That's either modern art or a glitch, and my money's on glitch."
 W4_TEST_MAX_0050,"Television that goes to bed voluntarily. Honestly, that's the creepiest idea so far, and I've been to the future."

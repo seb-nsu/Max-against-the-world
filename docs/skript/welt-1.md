@@ -75,7 +75,6 @@ Der Dorfplatz ist die Drehscheibe der Welt: Rätsel 3 (Bestellung), 5 (Brunnen) 
 | W1\_DORF\_MAX\_0280 | Max | Ein Laden, der nur Zauberstäbe verkauft. Da muss man richtig reingehen und mit jemandem reden. Gruselig. | Ansehen: Zauberstab-Laden von außen |
 | W1\_DORF\_MAX\_0285 | Max | Im Fenster liegen Stäbe aus Holz, aus Knochen und aus etwas, das nach Lakritz aussieht. Der Lakritzstab ist ausverkauft. | Ansehen: Zauberstab-Laden von außen, zweites Mal |
 | W1\_DORF\_MAX\_0290 | Max | Ein Wegweiser: „Hoggelwarz für Durchgefallene“. Endlich mal eine Schule mit realistischen Zielen. | Ansehen: Weg nach Hoggelwarz |
-| W1\_DORF\_MAX\_0295 | Max | Unter dem Wegweiser steht in Kreide: „Gleis neundreiviertel ist woanders.“ Gut zu wissen. | Ansehen: Weg nach Hoggelwarz, zweites Mal |
 | W1\_DORF\_MAX\_0300 | Max | Der Weg zur Brücke. Toadi sagt, da sitzt ein Troll. Aber Toadi sagt auch sonst ziemlich viel. | Ansehen: Waldweg |
 | W1\_DORF\_MAX\_0305 | Max | Auf einem Stein am Weg ist ein Smiley eingeritzt, mit Hauern. Ich nehm das jetzt einfach mal als freundliches Willkommen. | Ansehen: Waldweg, zweites Mal |
 | W1\_DORF\_MAX\_0310 | Max | Runde Häuser mit schiefen Dächern. Als hätte ein Kind sie gebaut, ein sehr begabtes Kind mit sehr viel Zeit. | Ansehen: Häuser |
@@ -291,8 +290,8 @@ Gespräch mit Gollo:
 | W1\_TAV\_MAX\_1640 | Max | Ich kann auch weggucken, wenn das hilft. Darin bin ich ziemlich gut. |  |
 | W1\_TAV\_GOL\_1650 | Gollo | Dann guckt immer noch der Ring. Er hat kein Auge, aber er guckt. Glaub mir. |  |
 | W1\_TAV\_MAX\_0750 | Max | Du spielst gern Rätselspiele? | Option Gollo (bleibt) |
-| W1\_TAV\_GOL\_0760 | Gollo | Rätsel! Ja! Ich gewinne immer! Was hat Wurzeln, die keiner sieht, und ist höher als Bäume? | kichert |
-| W1\_TAV\_MAX\_0770 | Max | Ein Berg. Das steht in jedem Rätselbuch auf der ersten Seite. | Antwort auf 0760 |
+| W1\_TAV\_GOL\_0760 | Gollo | Rätsel! Ja! Ich gewinne immer! Was hat einen Hals und keinen Kopf, einen Bauch und keinen Hunger? | kichert |
+| W1\_TAV\_MAX\_0770 | Max | Eine Flasche. Das steht in jedem Rätselbuch auf der ersten Seite. | Antwort auf 0760 |
 | W1\_TAV\_GOL\_0780 | Gollo | Siehst du! Alle wissen alles! Ich verliere nur, wenn jemand etwas fragt, das niemand wissen kann. Und das passiert nie. | Hinweis R1c |
 | W1\_TAV\_MAX\_0790 | Max | Tschüss, Gollo. | Option Gollo, beendet das Gespräch |
 | W1\_TAV\_GOL\_0800 | Gollo | Geh nur. Alle gehen. Der Ring bleibt. Der Ring bleibt immer. |  |
