@@ -76,7 +76,28 @@ Eigennamen-Glossar: Sprechende Namen werden nicht wörtlich übersetzt, sondern 
 | Zappis Puppenstube | Zappi's Dollhouse | Opas Kindersendung von 1977 |
 | Opas Dachboden, Schwurbelstein, Antikodonien, Neo-Neustadt 2099, Kanal 999 (Weltnamen) | Grandpa's attic, Waffleton, Antikodonien, Neo-Neustadt 2099, Channel 999 | Weltnamen in Spielständen und auf dem Drehknopf; Antikodonien und Neo-Neustadt bleiben |
 
-Stand der englischen Fassung (10. November 2026): alle Skriptzeilen (Prolog, Welt 1 bis 4, die drei Zwischenspiele, das Finale), die Systemzeilen und alle Menütexte sind übersetzt. Kommt eine neue deutsche Zeile ohne englische dazu, zeigt das Spiel dort die deutsche (Rückfallsprache `de`). Ablauf: `python3 tools/en_eintragen.py --offen W2` gibt die offenen Zeilen mit Sprecher, Auslöser und Regie aus, Claude übersetzt sie als `ID | Text` in eine Datei, `python3 tools/en_eintragen.py DATEI` trägt sie nach `uebersetzung/en.csv` ein (Kaskaden müssen dieselbe Zahl Blasen haben, sonst wird die Zeile abgelehnt), danach `python3 tools/skript_export.py`. Ein Muttersprachler prüft die Witze vor dem Release.
+Feste Begriffe: Diese Wörter heißen in den Zeilen und im Menü gleich. Wer eine Zeile nachzieht, hält sich daran.
+
+| Deutsch | Englisch | Hinweis |
+| --- | --- | --- |
+| Werbepause | ad break | britisch; nie „commercial break“. der Raum „Werbespot-Set“ heißt „Advert set“ |
+| Dosenöffner, Dose | tin opener, tin | britisch; nie „can opener“ |
+| Antenne (Modell Kleiderbügel) | aerial (model coat hanger) | britisch; die Fühler von M.U.T.T.I. bleiben „antennae“ |
+| Pastille | lozenge | nie „pill“ |
+| Zeugnis | school report | nie „report card“ |
+| Keller, Kellerarchiv | cellar, cellar archive | nie „basement“ |
+| Fächerwedler | fanners | Figurenname im Menü und in den Zeilen |
+| Feigensetzling | fig sapling | nie „seedling“ |
+| Rede-Ringen | word wrestling | Titel des Minispiels: „Word Wrestling“ |
+| Bettlaken | bedsheet | ein Wort |
+| Pflichtfach, Wahlfächer (Reisetasche) | mandatory pocket, free pockets | im Menü „Always packed“ und „Two free pockets“ |
+| Oma (Max' Großmutter) | Grandma | |
+| Oma (das Orakel in Welt 3) | Granny | so lassen sich die beiden auseinanderhalten |
+| Opa, Großvater (in Pixels Mund) | Grandpa, grandfather | Pixel sagt meist „your grandfather“; wo er deutsch „Opa“ sagt, steht „grandpa“ |
+
+Tonfall im Englischen: Max und alle Nebenfiguren sprechen mit Kurzformen (I'm, don't, it's). Pixel spricht ohne Kurzformen (I am, do not, it is) und sagt „I shall“; das ist sein gehobener Ton aus dem Deutschen. Ausnahme: wenn er jemanden wörtlich zitiert. Schmidt redet ohne Punkt, Kalle tippt am Terminal klein. Schreibweise britisch: colour, grey, any more (zwei Wörter), synthesiser, „Mr“ ohne Punkt. „Prozent“ heißt durchgehend „percent“.
+
+Stand der englischen Fassung (11. November 2026): alle Skriptzeilen (Prolog, Welt 1 bis 4, die drei Zwischenspiele, das Finale), die Systemzeilen und alle Menütexte sind übersetzt. Die ganze Fassung ist einmal am Stück gelesen und vereinheitlicht (Protokoll: `pruefung/umsetzung.md`, Punkt 4). Kommt eine neue deutsche Zeile ohne englische dazu, zeigt das Spiel dort die deutsche (Rückfallsprache `de`). Ablauf: `python3 tools/en_eintragen.py --offen W2` gibt die offenen Zeilen mit Sprecher, Auslöser und Regie aus, Claude übersetzt sie als `ID | Text` in eine Datei, `python3 tools/en_eintragen.py DATEI` trägt sie nach `uebersetzung/en.csv` ein (Kaskaden müssen dieselbe Zahl Blasen haben, sonst wird die Zeile abgelehnt), danach `python3 tools/skript_export.py`. Ein Muttersprachler prüft die Witze vor dem Release.
 
 **Zeilenarten:**
 

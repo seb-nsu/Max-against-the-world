@@ -1179,3 +1179,53 @@ Entscheidungen, bitte prüfen:
 Aufgefallen, nicht geändert: Pixelify Sans liegt im Spiel, aber keine Szene und kein Skript benutzt die Schrift. Titel und Hauptmenü stehen in Nunito.
 
 Prüfläufe vor dem Commit von Punkt 3: `tools/pruefen.py` 0 Fehler, 0 Warnungen. Alle acht Dokument-Prüfungen grün. Godot: Prolog 779, Welt 2 58, Welt 3 68, Welt 4 24, Finale 33, Hinweise 19, Ansehen 31, Menüs 75, Minispiele 63, Ton 32, Schalter 31, Prolog mit echten Sprechblasen 778, Bildvergleich 55 Räume. Überall 0 Fehler. Die Telemetrie-Auswertung der Testläufe ist grün.
+
+### Punkt 4: Englische Fassung ganz durchgegangen
+
+Die englische Fassung ist einmal am Stück gelesen: alle 953 Menütexte und alle 6.352 Sprechblasen des Skripts. 863 Blasen und 16 Menütexte sind geändert. Keine deutsche Zeile ist angefasst, keine Zeilen-ID geändert, jede Kaskade hat so viele Blasen wie vorher.
+
+Das Ergebnis vorweg: Die Übersetzung war gut. Die Witze sitzen, die Rätselhinweise stimmen mit den Lösungen überein, es fehlte keine Zeile. Was nicht stimmte, war die Einheit. Die Zeilen sind in mehreren Schüben entstanden, und jeder Schub hatte seine eigenen Wörter.
+
+So bin ich vorgegangen:
+
+- Jede englische Zeile gelesen, in der Reihenfolge des Skripts, Abschnitt für Abschnitt. Wo eine Zeile schief klang oder ein Rätsel betraf, die deutsche daneben gelegt.
+- Alle Hinweise von Pixel gegen die Lösungen gelesen (drei Stufen je Rätsel).
+- Dazu Suchläufe über alles: deutsche Anführungszeichen, drei Punkte statt „…“, doppelte Leerzeichen, Platzhalter, Zahlen, leere Felder, Längenverhältnis Deutsch zu Englisch, amerikanische Schreibweisen, deutsche Kommas vor „that“.
+
+Was geändert ist:
+
+| Was | Wie viele | Beispiel |
+| --- | --- | --- |
+| Pixels Tonfall | 802 Blasen | „I'm“ wird „I am“, „don't“ wird „do not“, „I'll“ wird „I shall“ |
+| Begriffe vereinheitlicht | 55 Stellen | „commercial break“ und „ad break“ nebeneinander, jetzt überall „ad break“ |
+| Deutsche Kommas | 16 Stellen | „You will notice, that it is a promotion.“ |
+| Sinn oder Redewendung | 23 Stellen | siehe Liste unten |
+| Menütexte | 16 | „Can opener“ wird „Tin opener“, „Clerk“ wird „Official“ |
+
+Pixels Tonfall: Im Deutschen spricht Pixel gehoben und ohne Umgangsformen (2 von 2.028 Blasen haben eine). Im Englischen sprach er im Prolog und in den Systemzeilen förmlich, ab Welt 1 aber in rund 40 Prozent der Blasen mit Kurzformen wie Max. Jetzt spricht er überall förmlich. Nur wo er jemanden wörtlich zitiert, bleibt die Kurzform.
+
+Begriffe, die jetzt überall gleich heißen: ad break, tin opener, aerial, lozenge, school report, cellar, fanners, fig sapling, word wrestling, bedsheet, plinth (Welt 3) und podium (Welt 4), vacuum cleaner, synthesiser, any more, percent, Mouldword (zweimal stand noch „Moderwort“), Eternal Energy Cell. Das Orakel in Welt 3 heißt „Granny“, Max' Großmutter „Grandma“; an drei Stellen war das vertauscht. Die Liste steht jetzt in `docs/05-spielsysteme.md` unter „Feste Begriffe“, damit sie beim nächsten Nachziehen hält.
+
+Sinn und Redewendung, die wichtigsten:
+
+- `W3_APO_AUT_0130`: „Please choose yourself.“ hieß „Bitte wählen Sie sich selbst“. Jetzt „Please choose for yourself.“
+- `W2_KRON_MAX_0110` und der Hinweis `W2_HINT_PIX_0520`: „makes more wet“ ist kein Englisch. Jetzt „spills more water“. Das ist der Kern des Kronenrätsels.
+- `W2_WERK_MAX_0610`: „the same real“ wird „equally heavy doesn't automatically mean equally real“.
+- `P0_WOHN_MAX_0355`: Das Kreuzworträtsel verlangte „nine letters“, Opa schrieb ZAPOMATIC (neun Buchstaben) und malte „ein Kästchen für den neunten“ dazu. Das ging nicht auf. Jetzt verlangt das Rätsel acht.
+- `W4_SIT_KOM_0600`: „Why is nobody laughing that I can see?“ wird „Why is nobody I can see laughing?“
+- `W4_EMPF_MAX_0190`: „Two wardrobes with earpieces“ versteht im Englischen niemand als zwei Männer. Jetzt „Two men built like wardrobes, with earpieces“.
+- `W4_HINT_PIX_0200`: „Switch to Gerd Glück“ klang nach Figurenwechsel. Jetzt „Switch over to Gerd Glück“.
+- `W3_EING_HAU_0130`: „seit ich denken kann“ war wörtlich übersetzt. Jetzt „for as long as I can remember. My memory goes back nineteen years.“
+- Dreimal „I'd need“ für „Ich bräuchte“ (Sack, Öl, Startpass). Jetzt „I need“ und „I could do with“.
+
+Entscheidungen, bitte prüfen:
+
+- **Pixel ohne Kurzformen.** Das ist die größte Änderung und eine Frage des Geschmacks. Sie macht ihn steifer und älter, so wie im Deutschen. Ein Skript hat die Kurzformen aufgelöst, ich habe danach jede Blase gelesen. Neun Stellen hatte das Skript falsch aufgelöst (etwa „anyone's toes“ zu „anyone is toes“); die sind gefunden und richtig. Wer Pixel lieber lockerer hätte: Der Stand davor liegt im Commit vor diesem.
+- **„percent“ statt „per cent“.** Britische Zeitungen schreiben zwei Wörter. Im Skript stand 16-mal „percent“ und zweimal „per cent“. Ich habe der Mehrheit gefolgt.
+- **Menünamen folgen den Zeilen.** Wo Menü und Zeile verschieden hießen, habe ich das Menü angepasst (Fanners, Fig sapling, Cellar archive, Bedsheet, Product podium, Plinth, Aerial, Tin opener, Official 1 und 2).
+- **„Channel“ klein im Satz.** „on channel 999“, wie an den meisten Stellen. Als Weltname auf dem Drehknopf bleibt „Channel 999“ groß.
+- **Kein Muttersprachler.** Ich habe gelesen wie ein sorgfältiger Lektor, nicht wie jemand, der mit britischem Humor aufgewachsen ist. Ob ein Witz zündet, prüft weiter ein Muttersprachler vor dem Release. Das steht so auch im Dokument.
+
+Aufgefallen im Deutschen, nicht geändert: `P0_WOHN_MAX_0355` hat denselben Rechenfehler wie die englische Zeile. Das Rätsel verlangt „neun Buchstaben“, ZAPPOMAT hat acht, und Opa malt „für den neunten ein Kästchen dazu“. Aufgehen würde es mit „sieben Buchstaben“ und „für den achten“. Das ist dein Wortlaut, deshalb steht es nur hier.
+
+Prüfläufe vor dem Commit von Punkt 4: `tools/pruefen.py` 0 Fehler, 0 Warnungen. Alle acht Dokument-Prüfungen grün. Godot: Prolog 779, Welt 2 58, Welt 3 68, Welt 4 24, Finale 33, Hinweise 19, Ansehen 31, Menüs 75, Minispiele 63, Ton 32, Schalter 31, Prolog mit echten Sprechblasen 778, Bildvergleich 55 Räume. Überall 0 Fehler. Die Telemetrie-Auswertung der Testläufe ist grün.

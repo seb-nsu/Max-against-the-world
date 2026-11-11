@@ -31,9 +31,9 @@ UI_OBJ_KISTE_MIT_FERNBEDIENUNGEN,Kiste mit Fernbedienungen,Box of remote control
 UI_OBJ_OPAS_STAUBSAUGER_PROTOTYP,Opas Staubsauger-Prototyp,Grandpa's vacuum prototype
 UI_OBJ_BODENLUKE,Bodenluke,Floor hatch
 UI_OBJ_THUNFISCHDOSE,Thunfischdose,Tin of tuna
-UI_OBJ_DOSENOEFFNER,Dosenöffner,Can opener
+UI_OBJ_DOSENOEFFNER,Dosenöffner,Tin opener
 UI_OBJ_DRAHTKLEIDERBUEGEL,Drahtkleiderbügel,Wire coat hanger
-UI_OBJ_ANTENNE,Antenne,Antenna
+UI_OBJ_ANTENNE,Antenne,Aerial
 UI_OBJ_REISETASCHE,Opas Reisetasche,Grandpa's travel bag
 UI_OBJ_NOTIZBUCH,Notizbuch,Notebook
 UI_OBJ_OPAS_ZETTEL,Opas Zettel,Grandpa's note
@@ -57,7 +57,7 @@ UI_GESPEICHERT,Gespeichert,Saved
 UI_GELADEN,Geladen,Loaded
 UI_KEIN_SPIELSTAND,Kein Spielstand vorhanden,No saved game
 UI_SPEICHERN_GLEICH,Wird nach der Szene gespeichert,Will save after the scene
-UI_LADEN_NACH_SZENE,Laden geht erst nach der Szene,Loading works after the scene
+UI_LADEN_NACH_SZENE,Laden geht erst nach der Szene,You can load once the scene is over
 UI_RAUM_DORFPLATZ,Dorfplatz Unterbrösel,Lower Crumbly village square
 UI_RAUM_TAVERNE,Taverne,Tavern
 UI_RAUM_SCHMIEDE,Schmiede,Smithy
@@ -235,7 +235,7 @@ UI_OBJ_ZICKZACK_ROUTE,Zickzack-Route,Zigzag route
 UI_ZIEL_W1_R5,Einen Wunsch beim Brunnen frei haben,Get a wish from the well
 UI_ZIEL_W1_R6A,Die Zutaten für Alwins Trank,The ingredients for Alwin's potion
 UI_ZIEL_W1_R6B,Die richtige Flasche finden,Find the right bottle
-UI_ZIEL_W1_R7,Die Niesrosen öffnen,Open the sneeze roses
+UI_ZIEL_W1_R7,Die Niesrosen öffnen,Open the sneezeroses
 UI_ZIEL_W1_R8,Die Bohne zum Wachsen bringen,Make the bean grow
 UI_ZIEL_W1_R9,Zeldina die Wohnung retten,Save Zeldina's flat
 UI_ZIEL_W1_R10,Durch das Bergwerk kommen,Get through the mine
@@ -488,7 +488,7 @@ UI_OBJ_HERMES,Hermes,Hermes
 UI_OBJ_RAMSES,Ramses,Ramses
 UI_OBJ_HOFKATER,Hofkater,Court cat
 UI_OBJ_SCHREIBER,Schreiber,Scribe
-UI_OBJ_FAECHERWEDLER,Fächerwedler,Fan bearers
+UI_OBJ_FAECHERWEDLER,Fächerwedler,Fanners
 UI_OBJ_NEBET,Nebet,Nebet
 UI_OBJ_SPHINX_FIGUR,Sphinx,Sphinx
 UI_OBJ_ARCHIMEDES,Archimedes,Archimedes
@@ -501,8 +501,8 @@ UI_OBJ_TOURISTIN,Römische Touristin,Roman tourist
 UI_OBJ_PHILOSOPH,Philosoph,Philosopher
 UI_OBJ_BRIAN,Brian,Brian
 UI_OBJ_STRASSENMUSIKER,Straßenmusiker,Street musician
-UI_OBJ_BEAMTER_1,Beamter 1,Clerk 1
-UI_OBJ_BEAMTER_2,Beamter 2,Clerk 2
+UI_OBJ_BEAMTER_1,Beamter 1,Official 1
+UI_OBJ_BEAMTER_2,Beamter 2,Official 2
 UI_OBJ_LEONIDAS,Leonidas,Leonidas
 UI_OBJ_SCHILDKROETE,Schildkröte,Tortoise
 UI_OBJ_ZEREMONIENMEISTER,Zeremonienmeister,Master of ceremonies
@@ -523,7 +523,7 @@ UI_OBJ_STARTPASS,Startpass,Entry pass
 UI_OBJ_SANDALEN,Geflügelte Sandalen,Winged sandals
 UI_OBJ_SANDALE,Geflügelte Sandale,Winged sandal
 UI_OBJ_BRIANS_SCHILD,Brians Schild,Brian's sign
-UI_OBJ_FEIGENSETZLING,Feigensetzling,Fig seedling
+UI_OBJ_FEIGENSETZLING,Feigensetzling,Fig sapling
 UI_OBJ_FEIGEN,Feigen,Figs
 UI_OBJ_SCHALLPLATTE,Schallplatte,Record
 UI_OBJ_WURFSCHEIBE,Wurfscheibe,Flying disc
@@ -562,14 +562,14 @@ UI_W2_BAUSTEIN_KLEBT,„Es klebt unter jedem Tisch“,"""It sticks under every t
 UI_W2_BAUSTEIN_SONNE,„Man kann daraus eine Sonne machen“,"""You can make a sun out of it"""
 UI_W2_BAUSTEIN_SCHREIBT,„Es schreibt ohne Tintenfass“,"""It writes without an inkwell"""
 UI_W2_BAUSTEIN_KLICKT,"„Es klickt, wenn man nervös ist“","""It clicks when you're nervous"""
-UI_W2_BAUSTEIN_BLAU,„Es ist blau und hat trotzdem keine Laune“,"""It is blue and still not moody"""
+UI_W2_BAUSTEIN_BLAU,„Es ist blau und hat trotzdem keine Laune“,"""It is blue and still not sad"""
 UI_W2_ANKLAGEN,Du warst es!,It was you!
 UI_W2_HEBEL_ZIEHEN,Abspringen!,Launch!
 UI_W2_KORB_LEEREN,Korb ausräumen,Empty the basket
 UI_MS_HEBEL_TITEL,Archimedes' Hebel,Archimedes' Lever
 UI_MS_HEBEL_HILFE,Ein Klick legt etwas in den Korb oder holt es wieder heraus.,Click to put something in the basket or take it out again.
 UI_MS_HEBEL_WINKEL,Winkel,Angle
-UI_MS_WINKEL_FLACH,flach,flat
+UI_MS_WINKEL_FLACH,flach,shallow
 UI_MS_WINKEL_MITTEL,mittel,medium
 UI_MS_WINKEL_STEIL,steil,steep
 UI_MS_HEBEL_TASCHEN,Taschen,Pockets
@@ -660,7 +660,7 @@ UI_OBJ_PFUETZEN,Pfützen,Puddles
 UI_OBJ_PIEPSI,Piepsi,Piepsi
 UI_OBJ_PINNWAND,Pinnwand,Pinboard
 UI_OBJ_PIZZAKARTONS,Pizzakartons,Pizza boxes
-UI_OBJ_PLAKAT,Plakat M.U.T.T.I.,Poster
+UI_OBJ_PLAKAT,Plakat M.U.T.T.I.,M.O.T.H.E.R. poster
 UI_OBJ_PLATZ_DES_HAUSMEISTERS,Platz des Hausmeisters,Caretaker's spot
 UI_OBJ_PORTALGERAET_IN_DER_HALTERUNG,Portalgerät in der Halterung,Portal device in the mount
 UI_OBJ_PORTALGERAET_STIMME,Portalgerät,Portal device
@@ -717,7 +717,7 @@ UI_W3_TAUSCH_BERND_EHRLICH,Bernd: treu ↔ Max: ehrlich,Bernd: loyal ↔ Max: ho
 UI_W3_TAUSCH_SCHALTER_MUEDE,Bodenschalter: ungedrückt ↔ Max: müde,Floor switch: unpressed ↔ Max: tired
 UI_W3_TAUSCH_LASER_HUHN,Laser: tödlich ↔ Gummihuhn: harmlos,Laser: deadly ↔ Rubber chicken: harmless
 UI_W3_TAUSCH_LASER_FARBE,Laser: rot ↔ Gummihuhn: gelb,Laser: red ↔ Rubber chicken: yellow
-UI_W3_TAUSCH_LASER_SOCKEL,Laser: tödlich ↔ Sockel: fest,Laser: deadly ↔ Pedestal: solid
+UI_W3_TAUSCH_LASER_SOCKEL,Laser: tödlich ↔ Sockel: fest,Laser: deadly ↔ Plinth: solid
 UI_W3_TAUSCH_HUHN_KRITZELEI,Gummihuhn: harmlos ↔ Kritzelei: wahr,Rubber chicken: harmless ↔ Scribble: true
 UI_W3_TAUSCH_TUER_LAUTSPRECHER,Tür: verschlossen ↔ Lautsprecher: gesprächig,Door: locked ↔ Speaker: talkative
 UI_W3_TAUSCH_BERND_HUHN,Bernd: schwer ↔ Gummihuhn: leicht,Bernd: heavy ↔ Rubber chicken: light
@@ -746,9 +746,9 @@ UI_RAUM_SPUKHAUS_KELLER,"Spukhaus, Keller","Haunted house, cellar"
 UI_RAUM_SPUKHAUS_HALLE,"Spukhaus, Halle","Haunted house, hall"
 UI_RAUM_KAPITOLIS,Kapitolis,Kapitolis
 UI_RAUM_FONDUE_FABRIK,Fondue-Fabrik,Fondue factory
-UI_RAUM_WERBESPOT_SET,Werbespot-Set,Commercial set
+UI_RAUM_WERBESPOT_SET,Werbespot-Set,Advert set
 UI_RAUM_EMPFANG,Empfang,Reception
-UI_RAUM_KELLERARCHIV,Kellerarchiv,Basement archive
+UI_RAUM_KELLERARCHIV,Kellerarchiv,Cellar archive
 UI_RAUM_ZAPPMANNS_STUDIO,Zappmanns Studio,Zappmann's studio
 UI_OBJ_ABSPERRBAND,Absperrband,Barrier tape
 UI_OBJ_AKAZIEN,Akazien,Acacias
@@ -762,7 +762,7 @@ UI_OBJ_BANANENSCHALE_AUF_MITTERNACHTS_TV,Bananenschale auf Mitternachts-TV,Banan
 UI_OBJ_BANANENSCHALE_IM_COMIC_KANAL,Frische Bananenschale im Comic-Kanal,Fresh banana peel on the comic channel
 UI_OBJ_BANANENSCHALE_IM_KELLER,Bananenschale im Keller,Banana peel in the cellar
 UI_OBJ_BAND_IN_DER_PRESSE,Band in der Presse,Tape in the press
-UI_OBJ_BETTLAKEN,Bettlaken,Bed sheet
+UI_OBJ_BETTLAKEN,Bettlaken,Bedsheet
 UI_OBJ_BILLIG_FERNBEDIENUNG,Billig-Fernbedienung,Cheap remote
 UI_OBJ_BOTTICHE,Bottiche,Vats
 UI_OBJ_COMIC_PANELS,Comic-Panels,Comic panels
@@ -848,7 +848,7 @@ UI_OBJ_PANEL_SCHURKE_LACHT,Panel Schurke lacht,Panel: villain laughs
 UI_OBJ_PAPPE_PUBLIKUM,Pappe-Publikum,Cardboard audience
 UI_OBJ_PLASTIKPALME,Plastikpalme,Plastic palm
 UI_OBJ_PORTRAET,Porträt,Portrait
-UI_OBJ_PRODUKTPODEST,Produktpodest,Product pedestal
+UI_OBJ_PRODUKTPODEST,Produktpodest,Product podium
 UI_OBJ_PROGRAMMZEITSCHRIFT,Programmzeitschrift,TV guide
 UI_OBJ_PUBLIKUM,Publikum,Audience
 UI_OBJ_QUOTENANZEIGE,Quotenanzeige,Ratings display
