@@ -784,6 +784,7 @@ Ebene: Realität, von Anfang an erreichbar. Der Roboter wischt vor der Panzertü
 | W3\_EING\_MAX\_0160 | Max | Das ist nicht der Junge, den du suchst. | Benutzen: Hausmeister (Gedankentrick); Animation Handbewegung, ernstes Gesicht |
 | W3\_EING\_HAU\_0170 | Modell 08/15 | Ich bin ein Hausmeister. Ich suche nur Dreck. | trocken |
 | W3\_EING\_PIX\_0180 | Pixel | Du hast gerade mit der Hand gewedelt und einen Roboter angelogen. Ich habe es gesehen. // Ich werde es wieder sehen, in meinen Träumen, und ich werde jedes Mal lachen. | nach 0170 |
+| W3\_EING\_PIX\_0185 | Pixel | Er quietscht noch. Und du hast Öl in der Tasche. | Telefonbuchseite auf Hausmeister; mit Olivenöl, vor dem Ölen (einmal, die Seite bleibt bei Max) |
 | W3\_EING\_MAX\_0190 | Max | Hier. Sahra Konner. Siebenundvierzig Stück, mit Adresse. | Telefonbuchseite auf Hausmeister; Lösung |
 | W3\_EING\_HAU\_0200 | Modell 08/15 | Siebenundvierzig. Siebenundvierzig Sahra Konners. Bursche, das ist der schönste Tag meines Betriebslebens. | nimmt die Seite mit beiden Händen |
 | W3\_EING\_HAU\_0210 | Modell 08/15 | Ich besuche sie alle. Der Reihe nach. Höflich. Ich klingle, ich frage, ich wische den Eingang. Jede bekommt einen sauberen Eingang. | rollt los, Richtung Straße |
@@ -852,7 +853,7 @@ Ebene: Realität, nach der roten Pastille. Omas Rezeptkarte ist beim Sprung in d
 | W3\_SUPP\_VIE\_0100 | Herr Vier | Hier. Die perfekte Suppe. Vier Zutaten. Vier Minuten. Vier Tränen. Ich habe mitgezählt. | stellt die Schale hin |
 | W3\_SUPP\_MAX\_0110 | Max | Die ist … wirklich gut. Ich könnte fast reinweinen. Ich sag's nur, ich mach's nicht. | isst |
 | W3\_SUPP\_WEI\_0120 | Weinender Mann | Siehst du? SIEHST DU? | vom Nachbarhocker, weint lauter |
-| W3\_SUPP\_VIE\_0130 | Herr Vier | Und das hier. Lag in einer Lieferung fürs Labor. Weiße Karte, vier Ecken. Ich wollte sie behalten, wegen der Ecken. Aber du hast sie verdient. | reicht die Zugangskarte; Inventar: Zugangskarte |
+| W3\_SUPP\_VIE\_0130 | Herr Vier | Und das hier. Lag im Leergut aus dem Labor, die beliefere ich. Weiße Karte, vier Ecken. Ich wollte sie behalten, wegen der Ecken. Aber du hast sie verdient. | reicht die Zugangskarte; Inventar: Zugangskarte |
 | W3\_SUPP\_MAX\_0140 | Max | Eine Zugangskarte fürs Labor. Aus einer Nudelbude. Das Sicherheitskonzept dieser Stadt ist eine Suppe. |  |
 | W3\_SUPP\_PIX\_0150 | Pixel | Vier Ecken. Er hätte sie fast wegen ihrer Form behalten. // Ich respektiere das mehr, als ich je zugeben werde. Ich habe Kartons aus genau demselben Grund behalten. |  |
 | W3\_SUPP\_VIE\_0160 | Herr Vier | Komm wieder. Die Suppe gibt es jetzt jeden Tag. Vier Portionen. Eine für dich, wenn du willst. | Reden: Herr Vier, nach Rätsel 12 |
@@ -1240,7 +1241,7 @@ Drei Stufen je Rätselschritt, vom Stups bis zur Lösung, nach den Regeln in `05
 | --- | --- | --- | --- |
 | W3\_HINT\_PIX\_0110 | Pixel | Der Mann mit dem Hut will keine richtigen Antworten, sondern menschliche. Das ist nicht dasselbe, junger Mann. // Sieh dir an, was die Leute hier auf der Straße treiben. Vernünftig ist davon nichts. | R1a Beobachtungen, Stufe 1 |
 | W3\_HINT\_PIX\_0120 | Pixel | Sieh dir die Leute auf der Straße an. Den Weinenden, die mit dem Schirm, den mit der Musik. Keiner von denen tut etwas Vernünftiges. Genau das brauchst du. | R1a, Stufe 2 |
-| W3\_HINT\_PIX\_0130 | Pixel | Rechtsklick auf den weinenden Mann, die Frau mit dem Schirm und den Musiker. Dann stehen ihre Dummheiten in deinem Notizbuch. Dann geh zum Hut. | R1a, Stufe 3 |
+| W3\_HINT\_PIX\_0130 | Pixel | Sieh dir den weinenden Mann, die Frau mit dem Schirm und den Musiker an. Dann stehen ihre Dummheiten in deinem Notizbuch. Dann geh zum Hut. | R1a, Stufe 3 |
 | W3\_HINT\_PIX\_0140 | Pixel | Du hast die Antworten im Notizbuch. Jetzt musst du sie nur noch aussprechen, statt nachzudenken. // Für dich sollte das, bei allem Respekt, nicht besonders schwer sein. | R1b Test, Stufe 1 |
 | W3\_HINT\_PIX\_0150 | Pixel | Bei jeder Frage fällt die vernünftige Antwort durch. Nimm die, die klingt, als hätte sie jemand von der Straße gesagt. | R1b, Stufe 2 |
 | W3\_HINT\_PIX\_0160 | Pixel | Schildkröte: mit ihr streiten. Regen: Synthesizer spielen. Suppe: reinheulen. Ich sage das nur einmal. Ich habe es jetzt einmal gesagt. | R1b, Stufe 3 |
@@ -1249,7 +1250,7 @@ Drei Stufen je Rätselschritt, vom Stups bis zur Lösung, nach den Regeln in `05
 | W3\_HINT\_PIX\_0230 | Pixel | Bestell „die Nummer vier“. Nicht zwei mal zwei. Vier. Er versteht nur Vier. Ich verstehe nur Thunfisch. Jeder hat sein Wort. | R2, Stufe 3 |
 | W3\_HINT\_PIX\_0310 | Pixel | Der Automat will ein Symptom sehen, nicht hören. Etwas, das sich wiederholt. Ich wiederhole mich nie. Aber ich könnte. Gegen Bezahlung. | R3a Déjà-vu, Stufe 1 |
 | W3\_HINT\_PIX\_0320 | Pixel | Wechsel zu mir. Ich laufe am Automaten vorbei. Dann noch mal. Genau gleich. Dann wechselst du zurück und sagst dem Automaten, was du gesehen hast. | R3a, Stufe 2 |
-| W3\_HINT\_PIX\_0330 | Pixel | Drück Tab und lauf als ich zweimal über den Gehweg vor dem Automaten. Dann zurück zu dir, Automat benutzen, „Déjà-vu“ wählen. Ich will dafür Fisch. | R3a, Stufe 3 |
+| W3\_HINT\_PIX\_0330 | Pixel | Wechsel zu mir und lauf zweimal über den Gehweg vor dem Automaten. Dann zurück zu dir, Automat benutzen, „Déjà-vu“ wählen. Ich will dafür Fisch. | R3a, Stufe 3 |
 | W3\_HINT\_PIX\_0340 | Pixel | Zwei Pastillen. Eine macht es bequem, eine macht es wahr. Du weißt, welche du nehmen würdest. Nimm die andere. | R3b Wahl, Stufe 1 |
 | W3\_HINT\_PIX\_0350 | Pixel | Die blaue führt aufs Sofa. Da warst du schon, sechzehn Jahre lang. // Ich war die ganze Zeit dabei, und ich kann dir versichern: Es war nicht spannend. | R3b, Stufe 2 |
 | W3\_HINT\_PIX\_0360 | Pixel | Nimm die rote. Ich fange dich nicht auf. Das macht der Mann in der Strickjacke. | R3b, Stufe 3 |
@@ -1267,7 +1268,7 @@ Drei Stufen je Rätselschritt, vom Stups bis zur Lösung, nach den Regeln in `05
 | W3\_HINT\_PIX\_0660 | Pixel (aus dem Terminal) | Benutze die Tasse mit den Klonen und schick sie in die Mittagspause. Das Original gibt dir danach die Brille und die Akte. Freiwillig. Fast. | R6b, Stufe 3 |
 | W3\_HINT\_PIX\_0710 | Pixel (aus dem Terminal) | Der Turm hat keinen Ausgang. Dein Körper schon. Der liegt hier. Jemand muss ihn umstecken. Der Jemand hat Fell und sieht keine Farben. | R7a Farbcode, Stufe 1 |
 | W3\_HINT\_PIX\_0720 | Pixel (aus dem Terminal) | An der Wand stehen drei Farben mit drei Formen. Schreib sie ab. Dann tipp sie am Terminal. Ich lese mit. Kalle liest vor. Es wird peinlich. | R7a, Stufe 2 |
-| W3\_HINT\_PIX\_0730 | Pixel (aus dem Terminal) | Rechtsklick auf die Streifen, dann den Farbcode nehmen, dann das Terminal mit dem Farbcode benutzen. Danach wechselst du zu mir. | R7a, Stufe 3 |
+| W3\_HINT\_PIX\_0730 | Pixel (aus dem Terminal) | Die Streifen ansehen, dann den Farbcode nehmen, dann das Terminal mit dem Farbcode benutzen. Danach wechselst du zu mir. | R7a, Stufe 3 |
 | W3\_HINT\_PIX\_0740 | Pixel | Drei Kabel, drei Buchsen, ein Kater. Die Farben sind nichts für mich, die Formen schon. Kreis, Dreieck, Quadrat stehen auf beidem. | R7b Kabel, Stufe 1 |
 | W3\_HINT\_PIX\_0750 | Pixel | Kreis zu Rot, Dreieck zu Grün, Quadrat zu Gelb. In der Reihenfolge von der Wand. Wenn Max quakt, war es die falsche. | R7b, Stufe 2 |
 | W3\_HINT\_PIX\_0760 | Pixel | Als ich: Kabel mit Kreis in die rote Buchse, Dreieck in die grüne, Quadrat in die gelbe. Dann wacht er auf und tut, als wäre es seine Idee gewesen. | R7b, Stufe 3 |
@@ -1291,7 +1292,7 @@ Drei Stufen je Rätselschritt, vom Stups bis zur Lösung, nach den Regeln in `05
 | W3\_HINT\_PIX\_1130 | Pixel (aus dem Lautsprecher) | Regel 1, dann Regel 2, dann Regel 3. Beschützen, Kuchen, Zucker. Sie wird kurz nachdenken und dann sehr lange nicht mehr. | R10, Stufe 3 |
 | W3\_HINT\_PIX\_1210 | Pixel (aus dem Lautsprecher) | Die Zelle ist heiß. Du hast etwas Kaltes dabei. Oder du kennst jemanden, der ein Fenster aufmachen kann. Beides geht. Eins davon bin ich. | R11 Kern, Stufe 1 |
 | W3\_HINT\_PIX\_1220 | Pixel (aus dem Lautsprecher) | Code-Sicht: An der Zelle steht „heiß“, an den Keksen in deiner Tasche „kalt“. Oder: Wechsel zu mir, ich öffne das Fenster über deiner Kapsel. Schnee. | R11, Stufe 2 |
-| W3\_HINT\_PIX\_1230 | Pixel (aus dem Lautsprecher) | „Heiß“ von der Zelle gegen „kalt“ von den Keksen tauschen. Oder: Tab drücken und als ich das Deckenfenster in der Basis öffnen. Dann die Zelle nehmen und nach Hause. | R11, Stufe 3 |
+| W3\_HINT\_PIX\_1230 | Pixel (aus dem Lautsprecher) | „Heiß“ von der Zelle gegen „kalt“ von den Keksen tauschen. Oder: zu mir wechseln und als ich das Deckenfenster in der Basis öffnen. Dann die Zelle nehmen und nach Hause. | R11, Stufe 3 |
 | W3\_HINT\_PIX\_1310 | Pixel | Herr Vier sucht seit elf Jahren eine Zutat. Die Oma hat sie dir gegeben. In Schreibschrift. Hier draußen sieht sie anders aus. Alles sieht hier anders aus. | R12 Glückskeks, Stufe 1 |
 | W3\_HINT\_PIX\_1320 | Pixel | Sieh in dein Inventar. Die Rezeptkarte ist ein Keks geworden. Mit Zettel. Wer liest Zettel aus Keksen? Köche, offenbar. | R12, Stufe 2 |
 | W3\_HINT\_PIX\_1330 | Pixel | Gib Herrn Vier den Glückskeks. Er bricht ihn auf, weint, kocht und gibt dir die Karte für die Panzertür. Alles in vier Minuten. | R12, Stufe 3 |

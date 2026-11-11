@@ -15,9 +15,11 @@ func _on_click() -> void:
 	await super()
 
 
-## R1c: Thunfischdose auf Gollo, erst wenn Minka und Humbert weg sind (sonst 1110).
+## R1c: ein Gegenstand aus der Tasche auf Gollo, erst wenn Minka und Humbert weg sind (sonst
+## 1110). Jeder Gegenstand gilt, denn die Frage heißt „Was hab ich in meiner Tasche?“; die
+## Auflösung ist immer die Thunfischdose, die Max aus dem Prolog dabeihat.
 func _on_item_used(item: PopochiuInventoryItem) -> void:
-	if item.script_name == "Thunfischdose" and not Zustand.geloest("R1c"):
+	if I.is_item_in_inventory("Thunfischdose") and not Zustand.geloest("R1c"):
 		await Spiel.hingehen(self)
 		if Zustand.geloest("R1a") and Zustand.geloest("R1b"):
 			await room.call("r1c_loesen")

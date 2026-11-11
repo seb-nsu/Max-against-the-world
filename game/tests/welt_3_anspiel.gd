@@ -124,9 +124,14 @@ func _durchlauf() -> void:
 
 	# R8 und R9a: Laboreingang
 	await _geh("laboreingang")
+	# Die Seite geben, obwohl das Öl noch in der Tasche ist: Pixel warnt einmal, nichts geht verloren
+	await S.geben(_sn("telefonbuchseite"))
+	await S.geben(_sn("olivenoel"))  # der Weltbeginn behält nur die gepackte Tasche
+	await S.regel("gegenstand", "hausmeister", "telefonbuchseite")
+	_pruefe(_gesagt("W3_EING_PIX_0185") and not Z.geloest("R8") and _hat("telefonbuchseite"),
+		"Seite vor dem Ölen: Pixel warnt, die Seite bleibt bei Max")
 	await S.regel("gegenstand", "hausmeister", "olivenoel")
 	_pruefe(Z.ist("FREUND_0815"), "Öl für Modell 08/15: Freund")
-	await S.geben(_sn("telefonbuchseite"))
 	await S.regel("gegenstand", "hausmeister", "telefonbuchseite")
 	_pruefe(Z.geloest("R8"), "R8 Hausmeister")
 	await S.regel("gegenstand", "kartenleser", "zugangskarte")

@@ -587,6 +587,8 @@ func benutzen_inventar_programmzeitschrift(_obj, _x) -> bool:
 		"2015":
 			await _sag(e[2])
 			Zustand.setze("W4_FOLGE_2015_GELESEN")
+			if Zustand.ist("W4_MUTTER_FONDUE"):
+				Zustand.loese("R4a")  # die Mutter hat das Fondue schon bestätigt
 		"mitternacht":
 			await _sag(e[2])
 			if _g("R2"):
@@ -883,8 +885,10 @@ func _besuch_r3() -> void:
 	Zustand.loese("R3")
 
 
-## Die Mutter bestätigt das Fondue (R4a), wenn Max die 20:15-Folge in der Zeitschrift gelesen hat.
+## Die Mutter bestätigt das Fondue (R4a). Gelöst ist der Schritt, sobald Max auch die
+## 20:15-Folge in der Zeitschrift gelesen hat, in welcher Reihenfolge auch immer.
 func option_sitcom_mutter_0320() -> bool:
+	Zustand.setze("W4_MUTTER_FONDUE")
 	if Zustand.ist("W4_FOLGE_2015_GELESEN"):
 		Zustand.loese("R4a")
 	return false

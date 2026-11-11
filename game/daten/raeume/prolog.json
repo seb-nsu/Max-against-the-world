@@ -1382,15 +1382,16 @@
        "sprecher": "MAX",
        "blasen": [
         "P0_DACH_MAX_0620"
-       ]
-      },
-      {
-       "zeile": "P0_DACH_MAX_0630",
-       "sprecher": "MAX",
-       "blasen": [
-        "P0_DACH_MAX_0630"
        ],
-       "mal": 2
+       "folge": [
+        {
+         "zeile": "P0_DACH_MAX_0630",
+         "sprecher": "MAX",
+         "blasen": [
+          "P0_DACH_MAX_0630"
+         ]
+        }
+       ]
       }
      ],
      "benutzen": [

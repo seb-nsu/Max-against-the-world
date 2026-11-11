@@ -210,10 +210,12 @@ func _durchlauf() -> void:
 	# --- P3: Kalender, Opa, Drehknopf ---
 	await _hotspot("Drehknopf").on_click()
 	_pruefe(_gesagt("P0_DACH_MAX_0680"), "Drehknopf ohne Nummer: Kanal 4 (0680)")
-	await _ansehen(_hotspot("Kalender"), "P0_DACH_MAX_0620")
 	_pruefe(not opa_d.option_sichtbar("1362"), "Opa-Option 1362 vor der Nahansicht verborgen")
-	await _ansehen(_hotspot("Kalender"), "P0_DACH_MAX_0630")
-	_pruefe("kalender" in Z.nahansichten, "Nahansicht Kalender gesehen")
+	# Die Kanalnummer steht nicht hinter einem zweiten Klick: 0620, 0630 und die Nahansicht
+	# kommen beim ersten Ansehen.
+	await _ansehen(_hotspot("Kalender"), "P0_DACH_MAX_0620")
+	_pruefe(_gesagt("P0_DACH_MAX_0630"), "Kalender, erstes Ansehen: auch die Kanalnummer (0630)")
+	_pruefe("kalender" in Z.nahansichten, "Nahansicht Kalender beim ersten Ansehen gesehen")
 	_pruefe(opa_d.option_sichtbar("1362"), "Opa-Option 1362 nach der Nahansicht")
 	await opa_d.waehlen("1362")
 	_pruefe(_gesagt("P0_DACH_OPA_1364") and _gesagt("P0_DACH_PIX_1366"), "Kreis-Gespräch 1364/1366")

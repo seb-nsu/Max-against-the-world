@@ -278,7 +278,7 @@ Ansehen, Benutzen und Gespräche in der Küche.
 | W4\_SIT\_SMU\_0330 | Sitcom-Mutter | Fondue! Folge 112! Wer behauptet, es war Lasagne, hat die Folge nicht gesehen. Oder keinen Geschmack. | LAC; Alibi Hyäne widerlegt, ins Notizbuch |
 | W4\_SIT\_VAT\_0340 | Sitcom-Vater | Lasagne gab es in Folge 87. Da ist der Ofen explodiert. Wir reden nicht über Folge 87. | LAC, Applaus |
 | W4\_SIT\_MAX\_0350 | Max | Hat jemand von euch gestern Abend gelacht? | Option Mutter (bleibt); während R4 offen |
-| W4\_SIT\_SMU\_0360 | Sitcom-Mutter | Alle lachen. Immer. Außer der gefleckten Dame in Reihe drei. Die saß da wie beim Zahnarzt. | LAC |
+| W4\_SIT\_SMU\_0360 | Sitcom-Mutter | Alle lachen. Immer. Außer der gefleckten Dame in Reihe drei. Die sitzt da sonst wie beim Zahnarzt. Gestern war ihr Platz leer. | LAC |
 | W4\_SIT\_MAX\_0670 | Max | Gefleckt und todernst. Ich glaube, die kenne ich irgendwoher. |  |
 | W4\_SIT\_MAX\_0370 | Max | Warum ist die Tür so laut? | Option Mutter |
 | W4\_SIT\_SMU\_0380 | Sitcom-Mutter | Damit die Leute wissen, dass jemand kommt. Sonst müssten sie zuhören. | LAC |
@@ -289,7 +289,7 @@ Ansehen, Benutzen und Gespräche in der Küche.
 | W4\_SIT\_MAX\_0700 | Max | Und warum verstecken Sie die Kekse? |  |
 | W4\_SIT\_VAT\_0710 | Sitcom-Vater | Für den Notfall. Der Notfall ist, wenn mich jemand beim Verstecken erwischt. |  |
 | W4\_SIT\_MAX\_0410 | Max | Erwarten Sie Besuch? | Option Vater (bleibt) |
-| W4\_SIT\_VAT\_0420 | Sitcom-Vater | Mein neuer Chef wollte mal vorbeischauen. Irgendwann. Ich habe ihn nie gesehen. Ich weiß nur: Er trägt Mantel. | Hinweis R3; LAC |
+| W4\_SIT\_VAT\_0420 | Sitcom-Vater | Mein neuer Chef wollte mal vorbeischauen. Irgendwann. Ich habe ihn nie gesehen. Ich weiß nur: Er trägt Mantel. Und Krawatte, nehme ich an. Chefs tragen so was. | Hinweis R3; LAC |
 | W4\_SIT\_MAX\_0720 | Max | Mantel. Okay, merk ich mir. Das grenzt es ja schon mal auf die halbe Stadt ein. |  |
 | W4\_SIT\_VAT\_0730 | Sitcom-Vater | Wenn du ihn triffst, sag ihm, er soll klingeln. Unsere Tür ist laut genug. |  |
 | W4\_SIT\_MAX\_0430 | Max | Was kann man hier essen? | Option Sohn |
@@ -1023,17 +1023,17 @@ Szene. Der Aufzug öffnet sich auf eine Talkshow-Bühne: goldenes Sofa, Applaus-
 | W4\_STUD\_MAX\_0160 | Max | Nein. Ich habe eine Woche lang Dinge getan. Ich habe eine Hyäne überführt und getanzt. Freiwillig. Ich kann nicht zurück auf ein Sofa, auf dem ich schon sitze. | nach Option 3 |
 | W4\_STUD\_PIX\_0170 | Pixel | Das war fast eine Rede. Ich bin erschüttert. // Positiv erschüttert, aber hauptsächlich erschüttert. Ich brauche gleich ein Kissen. |  |
 | W4\_STUD\_ZAP\_0180 | Zappmann | Dann bleiben wir eben auf Sendung. LIVE! Die Zappmann-Show, ohne Pause, ohne Ende! | Band spielt, Kameras schwenken, Zappmann redet ins Publikum |
-| W4\_STUD\_MAX\_0190 | Max | Er hört nicht mehr zu. Er sendet. Ich muss die Show anhalten, sonst erreiche ich ihn nicht. | Kampf beginnt; sichtbarer Grund: Live-Show läuft |
+| W4\_STUD\_MAX\_0190 | Max | Er hört nicht mehr zu. Er sendet. | Kampf beginnt; sichtbarer Grund: Live-Show läuft |
 | W4\_STUD\_NAR\_0200 | – | Pause. Band, Kameras und Publikum frieren ein. Nur Zappmann blinzelt. | Pause im Kampf, Schritt 1 |
 | W4\_STUD\_ZAP\_0210 | Zappmann | Du hast meine Show angehalten. Das hat seit 1988 keiner gewagt. Weil ich der Einzige bin, der das darf. Der Einzige, der alles darf. Ich habe eine Karriere, Junge. Eine goldene. | prahlt, zeigt auf die Monitorwand mit seinen Erfolgen |
-| W4\_STUD\_MAX\_0220 | Max | Er prahlt mit seiner Karriere. Ich habe den Anfang davon in der Tasche. Zwei Bilder nebeneinander. Das kann der Adapter. | sichtbarer Grund: Zappmann verweist auf seine Vergangenheit |
+| W4\_STUD\_MAX\_0220 | Max | Er prahlt mit seiner Karriere. Ich habe den Anfang davon in der Tasche. | sichtbarer Grund: Zappmann verweist auf seine Vergangenheit |
 | W4\_STUD\_NAR\_0230 | – | Bild-in-Bild: Links die Zappmann-Show, rechts läuft das Archivband. Ein junger Mann mit Topfschnitt und Handpuppe vor einer Pappsonne. „Zappis Puppenstube, 1977.“ | Archivband eingelegt, Schritt 2 |
 | W4\_STUD\_ZAP\_0240 | Zappmann | Wo hast du das her. Das war im Keller. Das war für immer im Keller. | starrt auf das Bild |
 | W4\_STUD\_MAX\_0250 | Max | Sie hatten eine Kindersendung mit Puppen, und keiner hat zugeguckt. Das ist nicht peinlich. Das ist ein Anfang. |  |
 | W4\_STUD\_NAR\_0260 | – | Das Applausband springt an, ohrenbetäubend. Zappmanns Antwort geht unter. | sichtbarer Grund: Applausband übertönt alles |
 | W4\_STUD\_MAX\_0270 | Max | Das Band klatscht alles weg. Er sagt was, und keiner hört es, vermutlich schon seit Jahren. Stumm. | Stumm auf das Applaus-Schild, Schritt 3 |
 | W4\_STUD\_NAR\_0280 | – | Stille. Das Applaus-Schild erlischt. Zappmann sitzt auf dem Sofa und sagt nichts. | nach Stumm |
-| W4\_STUD\_MAX\_0290 | Max | Er schweigt, zum ersten Mal. Ich wüsste gern, was da drin gerade passiert, und ich hab eine Taste dafür. | sichtbarer Grund: Zappmann schweigt |
+| W4\_STUD\_MAX\_0290 | Max | Er schweigt, zum ersten Mal. Ich wüsste gern, was da drin gerade passiert. | sichtbarer Grund: Zappmann schweigt |
 | W4\_STUD\_ZAP\_0300 | Zappmann (Untertitel) | Ich wollte nur nie wieder aufstehen müssen. Und jetzt sitze ich hier allein. | Untertitel auf Zappmann, Schritt 4 |
 | W4\_STUD\_MAX\_0310 | Max | Das hätte ich sagen können. Hab ich auch, vor vier Welten, auf einem anderen Sofa. | still |
 | W4\_STUD\_PIX\_0320 | Pixel | Ich sage jetzt nichts. Das ist mein Beitrag. Er ist größer, als er aussieht. |  |
@@ -1248,6 +1248,9 @@ Drei Stufen je Rätselschritt, Pixel spricht aus dem Rauschen. Schritt-IDs nach 
 | W4\_HINT\_PIX\_0190 | Pixel | Der Geier war live im Werbeblock. Frag den, der den Werbeblock macht. Du kennst ihn. Er hat Zähne. | W4\_R04\_D, Stufe 1 |
 | W4\_HINT\_PIX\_0200 | Pixel | Schalte zu Gerd Glück und frag ihn, wer um Viertel nach acht in seinem Studio stand. Er redet gern. Über alles. Besonders über sich. | W4\_R04\_D, Stufe 2 |
 | W4\_HINT\_PIX\_0520 | Pixel | Glücksrad, Frage an Gerd: Wer war gestern um Viertel nach acht hier? // Er sagt: der Geier, live. Dann steht es im Notizbuch. | W4\_R04\_D, Stufe 3 |
+| W4\_HINT\_PIX\_0700 | Pixel | Drei Alibis halten, eins nicht. Jemand hat dir von einem Abendessen erzählt, das es nie gab. | W4\_R04, Stufe 1 |
+| W4\_HINT\_PIX\_0710 | Pixel | Die Hyäne hat Lasagne gesehen. Es gab Fondue. Sag es ihr, aber nicht mit leeren Händen. | W4\_R04, Stufe 2 |
+| W4\_HINT\_PIX\_0720 | Pixel | Zieh die Programmzeitschrift auf die Hyäne. Das Notizbuch geht auch. // Danach lacht sie. Einmal. Das reicht für ein Geständnis. | W4\_R04, Stufe 3 |
 | W4\_HINT\_PIX\_0210 | Pixel | Das Video läuft nur um Mitternacht. Du musst nicht warten. Du musst blättern. | W4\_R05\_A, Stufe 1 |
 | W4\_HINT\_PIX\_0220 | Pixel | Klick in der Programmzeitschrift auf das Mitternachtsvideo. Du bist sofort da. Ich bleibe hier. Zombies tanzen, Katzen nicht. | W4\_R05\_A, Stufe 2 |
 | W4\_HINT\_PIX\_0530 | Pixel | Programmzeitschrift auf, „Mitternachts-TV: Friedhofs-Funk“ anklicken. Die Uhr springt mit, du stehst auf dem Friedhof. | W4\_R05\_A, Stufe 3 |

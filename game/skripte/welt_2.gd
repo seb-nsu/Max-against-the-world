@@ -1288,6 +1288,11 @@ func _verdaechtiger(id: String) -> bool:
 	if _einmal("W2_VERHOERT_" + id.to_upper()):
 		await _szene(v.verhoer)
 		return true
+	# Anklagen oder aufgeben erst, wenn alle acht Aussagen im Notizbuch stehen
+	for k in VERDAECHTIGE:
+		var verhoert: String = "W2_VERHOERT_" + k.to_upper()
+		if not Zustand.ist(verhoert):
+			return false
 	var texte := ["UI_W2_ANKLAGEN", "UI_W2_REDEN"]
 	if id == "leonidas":
 		texte.append("W2_DISK_MAX_0340")

@@ -1,6 +1,7 @@
 extends SceneTree
 ## Headless-Test der Hilfe-Pfote über zwei Welten, bedient wie im Spiel: Klick auf die Pfote in
-## der Leiste. Die Rätselnummern wiederholen sich von Welt zu Welt (R1 gibt es in Welt 2 und in
+## der Leiste. Dazu die Hinweis-Lücken: letzter Schritt von Rätsel 4 in Welt 4, die zwei Wege von
+## Rätsel 10 in Welt 1, die zwei Fassungen im Finale (Schritt B). Die Rätselnummern wiederholen sich von Welt zu Welt (R1 gibt es in Welt 2 und in
 ## Welt 4). Wer in einer Welt alle drei Stufen geholt hat, muss in der nächsten wieder bei
 ## Stufe 1 anfangen und darf nicht sofort die Komplettlösung hören.
 ##
@@ -73,6 +74,45 @@ func _durchlauf() -> void:
 	Z.laden(stand)
 	_pruefe(H.stufe("R1") == 1 and H.stufe("R1", "welt-2") == 3 and not Z.hinweis_stufe.has("R1"),
 		"Laden: Stufen je Welt bleiben, alter Schlüssel „R1“ verfällt")
+
+	# Welt 4, Rätsel 4: Alle vier Alibis sind geprüft, offen ist nur noch der letzte Schritt (der
+	# Hyäne die Zeitschrift zeigen). Auch dafür muss Pixel etwas zu sagen haben.
+	for r in ["R1", "R2", "R3", "R4a", "R4b", "R4c", "R4d"]:
+		Z.loese(r)
+	Z.besucht.append("savanne")
+	_pruefe(Z.status("R4") == "offen" and H.schritt_waehlen() == "R4", "Welt 4: letzter Schritt von R4 offen und gewählt")
+	await _pfote()
+	_pruefe(_gesagt("W4_HINT_PIX_0700"), "Welt 4, R4 nach den vier Alibis: Stufe 1 (W4_HINT_PIX_0700)")
+
+	# Welt 1, Rätsel 10: Offen sind die Wege R10a und R10b, die drei Zeilen stehen beim
+	# Sammelschritt R10. Die Pfote muss sie für einen offenen Weg finden.
+	Z.abschnitt = "welt-1"
+	Z.besucht.append("bergwerk")
+	Z.setze("W1_R09_GELOEST")
+	Z.notizbuch_ziel = "R10b"
+	var offen_w1: bool = Z.status("R10b") == "offen"
+	var schritt_w1: String = H.schritt_waehlen()
+	var zeilen_w1: Array = H.naechste_zeilen(schritt_w1)
+	_pruefe(offen_w1 and schritt_w1 == "R10" and zeilen_w1 == ["W1_HINT_PIX_1010"],
+		"Welt 1, Weg R10b offen: es gelten die Zeilen von R10 (%s, %s)" % [schritt_w1, zeilen_w1])
+
+	# Finale, Schritt B: Stufe 2 und 3 gibt es in zwei Fassungen, mit und ohne Modell 08/15.
+	Z.abschnitt = "finale"
+	Z.setze("FINALE")
+	Z.besucht.append("dachboden")
+	Z.setze("FI_R01_GELOEST")
+	Z.notizbuch_ziel = "F1b"
+	var schritt_fi: String = H.schritt_waehlen()
+	var stufe_1: Array = H.naechste_zeilen(schritt_fi)
+	Z.spielzeit += 100.0
+	var stufe_2: Array = H.naechste_zeilen(schritt_fi)
+	Z.setze("FREUND_0815")
+	Z.spielzeit += 100.0
+	var stufe_3: Array = H.naechste_zeilen(schritt_fi)
+	Z.abschnitt = "welt-4"
+	_pruefe(schritt_fi == "F1b" and stufe_1 == ["FI_HINT_PIX_0070"], "Finale, Schritt B: Stufe 1 (%s)" % [stufe_1])
+	_pruefe(stufe_2 == ["FI_HINT_PIX_0090"], "Finale, Schritt B ohne Roboter: Stufe 2 nennt den Kochlöffel (%s)" % [stufe_2])
+	_pruefe(stufe_3 == ["FI_HINT_PIX_0100"], "Finale, Schritt B mit Roboter: Stufe 3 nennt Modell 08/15 (%s)" % [stufe_3])
 
 
 ## Klick auf die Hilfe-Pfote in der Leiste; wartet, bis Pixel ausgeredet hat.

@@ -75,7 +75,7 @@ Dem Löwen wurde abends um 20:15 Uhr die Krone gestohlen. Vier Verdächtige habe
 | Gepard | „Ich lag am Wasserloch.“ | Pixel verhört ihn, und die Flamingos am Wasserloch bestätigen, dass er um 20:15 dort döste | Bestätigt |
 | Geier | „Ich war live im Werbeblock.“ | Moderator Gerd Glück bestätigt: Der Geier stand um 20:15 live in seinem Studio und warb für Geier-Gold-Hautcreme | Bestätigt |
 | Nashorn | „Ich habe geschlafen.“ | Pixel stibitzt das Drehbuch des Erzählers. Um 20:15 steht dort: „Am anderen Ende der Savanne schläft ein Nashorn.“ Der Erzähler kommentiert live, also stimmt es | Bestätigt |
-| Hyäne | „Ich habe gesehen, wie die Sitcom-Familie Lasagne gekocht hat.“ | Laut Programmzeitschrift und Familie gab es um 20:15 Fondue, keine Lasagne; außerdem lacht sie bei keinem Witz der Folge | Widerlegt |
+| Hyäne | „Ich habe gesehen, wie die Sitcom-Familie Lasagne gekocht hat.“ | Laut Programmzeitschrift und Familie gab es um 20:15 Fondue, keine Lasagne; außerdem war ihr Stammplatz im Publikum (Reihe drei, sie lacht dort nie) an dem Abend leer | Widerlegt |
 
 **Lösung: die Hyäne.** Drei Alibis halten, ihres nicht. Wer sie mit dem falschen Alibi konfrontiert, lacht sie zum ersten Mal, und die Krone fällt aus ihrem Fell.
 

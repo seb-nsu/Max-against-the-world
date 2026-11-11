@@ -646,6 +646,7 @@ weitere_schalter:
   - W4_ZEITSCHRIFT_GEFUNDEN    # Wert: angeklickte Einträge der Programmzeitschrift
   - W4_ALLE_KANAELE            # alle Einträge der Programmzeitschrift gefunden (Errungenschaft Zapp-Meister)
   - W4_FOLGE_2015_GELESEN      # 20:15-Folge in der Zeitschrift gelesen: Fondue (R4a)
+  - W4_MUTTER_FONDUE           # Sitcom-Mutter hat das Fondue bestätigt (R4a), auch vor dem Lesen der Zeitschrift
   - W4_KOMMISSAR_FOLGT         # Max hat gerade mit dem Kommissar geredet; Umschalten nimmt ihn mit (R3)
   - W4_KOMMISSAR_KOMMT         # Kommissar kommt mit in die Sitcom-Küche (R3 beginnt)
   - W4_KOMMISSAR_IN_SITCOM     # Kommissar steht nach R3 in der Küche, bis Max umschaltet

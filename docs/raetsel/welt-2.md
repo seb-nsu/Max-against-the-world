@@ -97,7 +97,7 @@ Jeder Verdächtige macht zwei Aussagen, und jeder lügt genau einmal. Der Dieb w
 | Tiro | „Ich war heute Nacht nicht im Stadion.“ | „Hermes war es nicht.“ |
 | Sphinx | „Ich war es nicht.“ | „Leonidas war es.“ |
 
-**Lösung: Tiro.** Wäre Leonidas der Dieb, lögen beide seiner Aussagen; wäre es Hermes, stimmten beide. Wäre es die Sphinx, löge sie mit beiden Aussagen. Nur mit Tiro als Dieb lügt jeder genau einmal. Per Skript geprüft: Es gibt genau eine Lösung. Pixel darf an allen vier Verdächtigen schnuppern. Tiro riecht nach Tintenfisch-Tinte, und weil Pixels Nase bei Fischgeruch lügt, meldet er ausgerechnet ihn als „ganz sicher unschuldig“. Wer sich an das Flaschenrätsel aus Welt 1 erinnert, wird misstrauisch.
+**Lösung: Tiro.** Wäre Leonidas der Dieb, lögen beide seiner Aussagen; wäre es Hermes, stimmten beide. Wäre es die Sphinx, löge sie mit beiden Aussagen. Nur mit Tiro als Dieb lügt jeder genau einmal. Per Skript geprüft: Es gibt genau eine Lösung. Anklagen oder einen Ersatz nehmen kann Max erst, wenn er alle vier verhört hat und alle acht Aussagen im Notizbuch stehen. Pixel darf an allen vier Verdächtigen schnuppern. Tiro riecht nach Tintenfisch-Tinte, und weil Pixels Nase bei Fischgeruch lügt, meldet er ausgerechnet ihn als „ganz sicher unschuldig“. Wer sich an das Flaschenrätsel aus Welt 1 erinnert, wird misstrauisch.
 
 ### Ausgearbeitet: Die Rätsel-Bausteine der Sphinx (Rätsel 8)
 

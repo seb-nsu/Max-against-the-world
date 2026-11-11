@@ -41,17 +41,36 @@ func pfote_aktiv() -> bool:
 	return true
 
 
-## Welcher Schritt drankommt (Regeln 2 bis 4; Regel 5 „nichts offen“ liefert "").
+## Welcher Schritt drankommt (Regeln 2 bis 4; Regel 5 „nichts offen“ liefert ""). Geliefert
+## wird der Schritt, dessen Zeilen gelten (zeilen_schritt); offene Schritte ohne Zeilen zählen
+## nicht, damit die Pfote nie leuchtet, ohne dass Pixel etwas zu sagen hat.
 func schritt_waehlen() -> String:
 	var offen: Array = Zustand.offene_schritte()
-	if offen.is_empty():
+	for bevorzugt in [Zustand.notizbuch_ziel, Zustand.letzter_schritt]:
+		if bevorzugt in offen and not zeilen_schritt(bevorzugt).is_empty():
+			return zeilen_schritt(bevorzugt)
+	var mit_zeilen: Array = []
+	for s in offen:
+		var z := zeilen_schritt(s)
+		if not z.is_empty() and not z in mit_zeilen:
+			mit_zeilen.append(z)
+	if mit_zeilen.is_empty():
 		return ""
-	if Zustand.notizbuch_ziel in offen:
-		return Zustand.notizbuch_ziel
-	if Zustand.letzter_schritt in offen:
-		return Zustand.letzter_schritt
-	offen.sort_custom(func(a, b): return a.naturalnocasecmp_to(b) < 0)
-	return offen[0]
+	mit_zeilen.sort_custom(func(a, b): return a.naturalnocasecmp_to(b) < 0)
+	return mit_zeilen[0]
+
+
+## Der Schritt, dessen Hinweiszeilen für einen offenen Schritt gelten: er selbst oder, wenn er
+## keine eigenen hat, der Sammelschritt aus „hinweise_von“ (Welt 1: die beiden Wege R10a und
+## R10b teilen sich die drei Zeilen von R10). "" = keine Zeilen.
+func zeilen_schritt(schritt: String) -> String:
+	var daten := _schritt(schritt)
+	if not daten.get("hinweise", []).is_empty():
+		return schritt
+	var von: String = daten.get("hinweise_von", "")
+	if not von.is_empty() and not _schritt(von).get("hinweise", []).is_empty():
+		return von
+	return ""
 
 
 ## Stufe und Zeit hängen am Schritt des Abschnitts („welt-2/R5“): Die Rätselnummern wiederholen
@@ -132,11 +151,23 @@ func pfote_geklickt() -> void:
 	_pruef_takt = 1.0
 
 
+## Die Zeile einer Stufe. Gibt es zwei Fassungen (Finale, Schritt B: mit und ohne Modell
+## 08/15), gilt die, deren Bedingung stimmt.
 func _zeile(daten: Dictionary, s: int) -> String:
 	for h in daten.hinweise:
-		if int(h.stufe) == s:
+		if int(h.stufe) == s and _bedingung_ok(h.get("bedingung", "")):
 			return h.zeile
 	return ""
+
+
+## Bedingung einer Hinweiszeile aus dem Skript: „nur <Schalter>“ oder „ohne <Schalter>“
+## (tools/spieldaten.py lässt nichts anderes durch).
+func _bedingung_ok(text: String) -> bool:
+	if text.begins_with("nur "):
+		return Zustand.ist(text.trim_prefix("nur "))
+	if text.begins_with("ohne "):
+		return not Zustand.ist(text.trim_prefix("ohne "))
+	return true
 
 
 func _schritte() -> Array:

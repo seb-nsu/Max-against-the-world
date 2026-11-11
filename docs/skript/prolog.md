@@ -222,7 +222,7 @@ Opas Ausrede zum roten Kreis (1362 bis 1366) steht als Option im Gesprächsbaum,
 | --- | --- | --- | --- |
 | P0\_DACH\_OPA\_0610 | Opa | Ich hab ihn mir aufgeschrieben, ganz bestimmt. Irgendwo, wo ich jeden Tag hingucke. | nach P2 |
 | P0\_DACH\_MAX\_0620 | Max | Ein Kalender, und ein Tag ist dick rot eingekreist. Entweder ein Geburtstag oder ein Zahnarzttermin. Bei beiden würde Opa so gucken. | Ansehen: Kalender |
-| P0\_DACH\_MAX\_0630 | Max | Und daneben, ganz klein mit Bleistift: „K3 – Schwurbelstein“. | Ansehen: Kalender, zweites Mal; öffnet die Nahansicht Kalender, Max kennt ab jetzt die Nummer |
+| P0\_DACH\_MAX\_0630 | Max | Und daneben, ganz klein mit Bleistift: „K3 – Schwurbelstein“. | nach 0620; öffnet die Nahansicht Kalender, Max kennt ab jetzt die Nummer |
 | P0\_DACH\_MAX\_0670 | Max | Kanal 3. Da wären wir. | Benutzen: Drehknopf; nach P2 und nach 0630, löst P3 |
 | P0\_DACH\_MAX\_0680 | Max | Kanal 4. Das ist ein Testbild, und es ist das Langweiligste, was ich heute gesehen hab. Und ich hab Opas Zeitung gesehen. | Benutzen: Drehknopf nach P2, bevor Max die Nummer kennt (Testbild Kanal 4) |
 | P0\_DACH\_OPA\_0690 | Opa | Halt! Halt, halt! Erst die Tasche! | Bildschirm zeigt den Wirbel |

@@ -55,7 +55,7 @@ Der Dorfplatz ist die Drehscheibe der Welt: Rätsel 3 (Bestellung), 5 (Brunnen) 
 | W1\_DORF\_MAX\_0160 | Max | „Rotkäppchens Lieferdienst. Alles, was Oma nicht mehr trägt. In zehn Minuten da oder der Korb ist gratis.“ | Ansehen: Bestellzettel am Dorfbrett |
 | W1\_DORF\_MAX\_0165 | Max | Unten klein: „Achtung, Wolf im Lieferbereich. Nicht füttern, nicht reden, nicht Oma nennen.“ | Ansehen: Bestellzettel am Dorfbrett, zweites Mal |
 | W1\_DORF\_MAX\_0170 | Max | Ein Bestellzettel. Den nehm ich mit, man weiß ja nie, wann man mal dringend eine Lieferung braucht. | Nehmen: Bestellzettel |
-| W1\_DORF\_MAX\_0180 | Max | „Gesucht wegen Weltherrschaft. Besondere Kennzeichen: reagiert empfindlich auf Kosenamen.“ | Ansehen: Moderworts Steckbrief am Dorfbrett (keine Nahansicht) |
+| W1\_DORF\_MAX\_0180 | Max | „Gesucht wegen Weltherrschaft. Wohnhaft: Dunkler Turm, sieben Stockwerke, steht größtenteils leer. Besondere Kennzeichen: reagiert empfindlich auf Kosenamen.“ | Ansehen: Moderworts Steckbrief am Dorfbrett (keine Nahansicht) |
 | W1\_DORF\_MAX\_0185 | Max | Unter das Bild hat jemand „Gesundheit!“ gekritzelt. Mehrmals, und jedes Mal ein bisschen verzweifelter. | Ansehen: Moderworts Steckbrief am Dorfbrett (keine Nahansicht), zweites Mal |
 | W1\_DORF\_MAX\_0190 | Max | Da hat jemand eine ziemlich große Lücke im Lebenslauf, und die hängt jetzt am Dorfbrett. | Ansehen Steckbrief, Fortsetzung |
 | W1\_DORF\_PIX\_0200 | Pixel | Kein Gesicht auf dem Bild, nur zwei rote Nasenlöcher. // Entweder ist dieser Mann sehr böse, oder der Zeichner war sehr schlecht. Aus Erfahrung tippe ich auf beides. | Ansehen Steckbrief, Pixel |
@@ -207,26 +207,39 @@ Ansehen in der Taverne:
 | ID | Sprecher | Text | Auslöser |
 | --- | --- | --- | --- |
 | W1\_TAV\_MAX\_0110 | Max | Ein Tresen voller Krüge und Flecken. Jeder Fleck sieht aus, als hätte er eine Geschichte, und keine davon will ich hören. | Tresen |
+| W1\_TAV\_MAX\_0115 | Max | Unter dem Tresen klebt ein Zettel: „Anschreiben nur für Zwerge. Die zahlen wenigstens in Gold.“ | Tresen, zweites Mal |
 | W1\_TAV\_MAX\_0120 | Max | Ein Topf voll blubberndem Käse. Gollo nennt das Vulkan. Ich nenne das Abendessen. | Fondue-Topf |
+| W1\_TAV\_MAX\_0125 | Max | Am Topfrand ist etwas eingeritzt: „Nichts hineinwerfen, was flüstert.“ | Fondue-Topf, zweites Mal |
 | W1\_TAV\_PIX\_0130 | Pixel | Käse. Heiß und flüssig. Ich würde hineinsteigen, wenn ich schwimmen könnte. // Ich kann es nicht, und zwar aus Prinzip. Meine Vorfahren haben das Wasser schon immer den Fischen überlassen. | Fondue-Topf, Pixel |
 | W1\_TAV\_MAX\_0140 | Max | Die Wirtskatze. Sie sitzt neben dem Topf wie ein Türsteher mit Schleife, und ich steh nicht auf der Liste. | Minka |
 | W1\_TAV\_PIX\_0150 | Pixel | Sie ist weiß. Sie ist elegant. Sie trägt eine Schleife. // Ich bin verloren, junger Mann, vollkommen verloren. Und wenn du das irgendjemandem erzählst, bist du es auch. | Minka, Pixel |
 | W1\_TAV\_MAX\_0160 | Max | Die Kellertür. Da unten liegt der Wein, und Humbert geht nur runter, wenn es wirklich sein muss. | Kellertür |
+| W1\_TAV\_MAX\_0165 | Max | Auf der Schwelle liegt Staub, und darin ist kein einziger Fußabdruck. Da war lange keiner unten. | Kellertür, zweites Mal |
 | W1\_TAV\_MAX\_0170 | Max | „Gesucht: Drache. Belohnung: fünf Goldmünzen.“ Da ist jemand ziemlich optimistisch, was Drachen angeht. | Steckbrief-Plakat Drache |
+| W1\_TAV\_MAX\_0175 | Max | Darunter steht kleiner: „Bitte nicht lebend bringen. Der letzte hat die Theke angezündet.“ | Steckbrief-Plakat Drache, zweites Mal |
 | W1\_TAV\_MAX\_0180 | Max | Ein Huhn im Korb. Es guckt mich an, als würde ich ihm noch Geld schulden. | Huhn |
 | W1\_TAV\_PIX\_0190 | Pixel | Ein Huhn. Ich verspüre gerade einen sehr natürlichen, sehr alten Impuls. // Ich unterdrücke ihn, und zwar einzig und allein für den Thunfisch. Merk dir das, falls ich je Dankbarkeit verlange. | Huhn, Pixel |
 | W1\_TAV\_MAX\_0200 | Max | Ein Kamin, in dem das Feuer knistert. Da könnte ich stundenlang reingucken, und genau deshalb guck ich lieber weg. | Kamin |
+| W1\_TAV\_MAX\_0205 | Max | Auf dem Sims steht ein Pokal: „Zweiter Platz, Armdrücken gegen Troll.“ Mehr als zwei Teilnehmer hatte das Turnier wohl nicht. | Kamin, zweites Mal |
 | W1\_TAV\_MAX\_0210 | Max | Rostige Schwerter mit Namensschildern: Gerhard, Birgit, Gerhard der Zweite. Humbert hat eindeutig Lieblinge. | Schwerter-Sammlung |
+| W1\_TAV\_MAX\_0215 | Max | Birgit hängt ein Stück höher als die anderen und ist als Einzige poliert. Über Birgit redet hier keiner schlecht. | Schwerter-Sammlung, zweites Mal |
 | W1\_TAV\_MAX\_0220 | Max | Leere Namensschilder. Entweder wartet Humbert auf neue Schwerter, oder er hat die Namen schon und wartet nur noch auf die Schwerter. | Leere Schilder |
+| W1\_TAV\_MAX\_0225 | Max | Auf der Rückseite von einem Schild steht mit Bleistift: „Gerhard der Dritte?“ Er plant voraus. | Leere Schilder, zweites Mal |
 | W1\_TAV\_MAX\_0230 | Max | Eine Laute mit einem Becher davor. Soll ich dem Barden eine Münze reinwerfen? Ich hab genau eine, und die brauch ich noch. | Laute mit Münzbecher; mit Goldmünze |
 | W1\_TAV\_MAX\_0240 | Max | Eine Laute mit Becher, aber kein Barde weit und breit. Der Becher sammelt trotzdem, ganz von allein. | Laute mit Münzbecher; ohne Goldmünze |
+| W1\_TAV\_MAX\_0245 | Max | Im Becher liegen zwei Knöpfe und ein Zahn. Das Publikum hier zahlt mit dem, was es übrig hat. | Laute mit Münzbecher, zweites Mal |
 | W1\_TAV\_MAX\_0250 | Max | Ein Ziegenfell-Vorleger, sehr flauschig. Pixel guckt ihn an, als hätte das Fell ihm persönlich was getan. | Ziegenfell-Vorleger |
+| W1\_TAV\_MAX\_0255 | Max | An einer Ecke hängt noch ein Glöckchen. Das Fell hat früher gebimmelt. | Ziegenfell-Vorleger, zweites Mal |
 | W1\_TAV\_MAX\_0260 | Max | Dachbalken. Perfekt für Katzen und Spinnen. Also für Pixel und seine Mitbewohner. | Dachbalken |
+| W1\_TAV\_MAX\_0265 | Max | In einen Balken hat jemand Striche geritzt, einen pro Schlägerei. Der Balken ist fast voll. | Dachbalken, zweites Mal |
 | W1\_TAV\_MAX\_0270 | Max | Die Weinkarte: Hauswein, Hauswein rot, Hauswein noch röter. Und ganz unten: „Jahrgang Schicksalsberg, auf Anfrage.“ | Weinkarte am Tresen |
+| W1\_TAV\_MAX\_0275 | Max | Hinter „auf Anfrage“ hat jemand mit Bleistift geschrieben: „Hat noch nie jemand angefragt.“ | Weinkarte am Tresen, zweites Mal |
 | W1\_TAV\_PIX\_0280 | Pixel | „Auf Anfrage“ heißt in jeder Taverne der Welt: ganz hinten im Keller, hinter den Rüben, unter den Spinnweben. // Wer das bestellt, schickt den Wirt auf eine lange Reise. Ich erwähne das nur, falls jemand einen Wirt loswerden möchte. | Weinkarte, Pixel; Hinweis R1b |
 | W1\_TAV\_MAX\_0290 | Max | „Vielsaft-Limo. Schmeckt wie jemand anderes.“ Ich bleib lieber bei Wasser, ich bin mit mir gerade ganz zufrieden. | Flasche Vielsaft-Limo |
+| W1\_TAV\_MAX\_0295 | Max | Auf der Rückseite steht: „Wirkung hält eine Stunde. Der Nachgeschmack länger.“ | Flasche Vielsaft-Limo, zweites Mal |
 | W1\_TAV\_PIX\_0300 | Pixel | Trink das, und du siehst eine Stunde lang aus wie Toadi. // Ich würde dafür bezahlen, und ich bezahle nie für etwas, das kein Fisch ist. | Vielsaft-Limo, Pixel |
 | W1\_TAV\_MAX\_0310 | Max | Humberts Fischsuppe. Die riecht nach Hafen, und zwar nach dem Teil vom Hafen, wo keiner freiwillig hingeht. | Fischsuppe |
+| W1\_TAV\_MAX\_0315 | Max | Oben schwimmt ein Fischauge. Ich hab umgerührt, jetzt guckt es in die andere Richtung. | Fischsuppe, zweites Mal |
 | W1\_TAV\_PIX\_0320 | Pixel | Hühnerbrühe. | Fischsuppe, Pixel schnuppert |
 | W1\_TAV\_MAX\_0330 | Max | Deine Nase lügt bei Fisch. Das ist eindeutig Fisch. | nach 0320 |
 | W1\_TAV\_PIX\_0340 | Pixel | Meine Nase lügt nie. Sie interpretiert. // Das ist ein feiner Unterschied, und ich erwarte nicht, dass jemand mit so einer kleinen Nase ihn versteht. | nach 0330; führt die Regel für R6 ein |
@@ -299,12 +312,12 @@ Rätsel 1a: Pixel umgarnt Minka. Der Spieler wechselt zu Pixel und redet mit der
 | W1\_TAV\_MAX\_0990 | Max | Ich versteh nur Miau, aber das war ein sehr überzeugtes Miau. | Minka verlässt den Raum; R1a gelöst |
 | W1\_TAV\_PIX\_1000 | Pixel | Sie sitzt jetzt im Stall und bewundert die Kokosnüsse. Sie hält sie für Pferde, und ich habe nicht widersprochen. // Ich habe einen Charme, der anderer Leute Hausaufgaben erledigt. | Pixel kommt zurück |
 
-Rätsel 1c: Das Rätselspiel. Max zieht die Thunfischdose auf Gollo. Funktioniert erst, wenn Minka und Humbert weg sind; vorher weicht Gollo aus.
+Rätsel 1c: Das Rätselspiel. Max zieht die Thunfischdose auf Gollo; jeder andere Gegenstand aus der Tasche gilt genauso, die Auflösung ist immer die Dose. Funktioniert erst, wenn Minka und Humbert weg sind; vorher weicht Gollo aus.
 
 | ID | Sprecher | Text | Regie |
 | --- | --- | --- | --- |
-| W1\_TAV\_GOL\_1110 | Gollo | Nicht jetzt! Der Wirt! Die Katze! Alle gucken! Frag mich, wenn keiner guckt. | Thunfischdose auf Gollo vor R1a oder R1b |
-| W1\_TAV\_MAX\_1120 | Max | Gollo. Ich hab ein Rätsel für dich: Was hab ich in meiner Tasche? | Thunfischdose auf Gollo; nach R1a und R1b |
+| W1\_TAV\_GOL\_1110 | Gollo | Nicht jetzt! Der Wirt! Die Katze! Alle gucken! Frag mich, wenn keiner guckt. | Thunfischdose (oder ein anderer Gegenstand) auf Gollo vor R1a oder R1b |
+| W1\_TAV\_MAX\_1120 | Max | Gollo. Ich hab ein Rätsel für dich: Was hab ich in meiner Tasche? | Thunfischdose (oder ein anderer Gegenstand) auf Gollo; nach R1a und R1b |
 | W1\_TAV\_GOL\_1130 | Gollo | Das ist keine Frage! Das ist … gemein. Ich rate. Dreimal. Das sind die Regeln. | kneift die Augen zu |
 | W1\_TAV\_GOL\_1140 | Gollo | Ein Ring? |  |
 | W1\_TAV\_MAX\_1150 | Max | Nein. |  |
@@ -557,15 +570,22 @@ Ansehen im Klassenzimmer:
 | ID | Sprecher | Text | Auslöser |
 | --- | --- | --- | --- |
 | W1\_HOGG\_MAX\_0110 | Max | Schiefe Schulbänke, und unter jeder klebt Kaugummi, wette ich. Manche Sachen sind in jeder Welt gleich. | Schulbank |
+| W1\_HOGG\_MAX\_0115 | Max | In eine Bank ist ein Herz geritzt: „A. + Kelle“. Der Schulleiter saß hier selbst mal. | Schulbank, zweites Mal |
 | W1\_HOGG\_MAX\_0120 | Max | Eine leere Tafel. Entweder hat Alwin nichts zu sagen, oder er hat schon wieder alles vergessen. | Tafel |
+| W1\_HOGG\_MAX\_0125 | Max | Ganz unten in der Ecke steht doch was: „Nicht wegwischen!“ Drumherum ist alles weggewischt. | Tafel, zweites Mal |
 | W1\_HOGG\_MAX\_0130 | Max | Ein Kessel, der leer vor sich hin blubbert. Er hat nichts zu sagen und sagt es trotzdem die ganze Zeit. | Kessel; vor dem Brauen |
+| W1\_HOGG\_MAX\_0135 | Max | Ich hab reingeguckt. Am Boden klebt eine Nudel. Hier wurde schon mal was anderes gekocht als Zaubertrank. | Kessel, zweites Mal; vor dem Brauen |
 | W1\_HOGG\_MAX\_0140 | Max | Sechs braune Flaschen ohne Etikett, und zwei davon sind doppelt so groß. Das ist entweder Magie oder Marketing. | Flaschenregal |
+| W1\_HOGG\_MAX\_0145 | Max | Am Regalbrett kleben sechs Kleberänder. Die Etiketten gab es also mal, und jemand wollte sie nicht mehr. | Flaschenregal, zweites Mal |
 | W1\_HOGG\_PIX\_0150 | Pixel | Sechs Flaschen, kein Etikett. Ich rieche sie von hier aus, alle sechs. // Aber ich lasse mich bitten. Mindestens zweimal, und beim zweiten Mal bitte mit mehr Gefühl. | Flaschenregal, Pixel |
 | W1\_HOGG\_MAX\_0160 | Max | Hohe Fenster, kühles Licht. Schulen sehen in jeder Welt so aus, als wäre gerade Montag. | Fenster |
+| W1\_HOGG\_MAX\_0165 | Max | Draußen fliegt ein Schüler vorbei, rückwärts. Er winkt, als wäre das so geplant. | Fenster, zweites Mal |
 | W1\_HOGG\_MAX\_0170 | Max | Der Schulleiter. Sternenrobe, Kochschürze, Kelle. Er weiß selbst nicht, was er gerade unterrichtet. | Alwin |
 | W1\_HOGG\_MAX\_0180 | Max | Eine Socke mit Löchern, die auf einem Hocker liegt wie ein Ehrengast. | Durchgelöcherte zweite Socke |
+| W1\_HOGG\_MAX\_0185 | Max | Die Löcher sind rund und alle gleich groß. Motten waren das nicht, das war ein Zauber, der danebenging. | Durchgelöcherte zweite Socke, zweites Mal |
 | W1\_HOGG\_PIX\_0190 | Pixel | Die ist nach dem dritten Jahrgang in Rente gegangen, weil die Schüler sie durchgetragen haben. // Man sollte ihr ein Kissen geben. Wer so viel ertragen hat, verdient ein Kissen. | Zweite Socke, Pixel |
 | W1\_HOGG\_MAX\_0200 | Max | Der Übungsbesen liegt im Schrank und zuckt. Ich glaube, er träumt von Katzenhaaren. | Besen im Schrank |
+| W1\_HOGG\_MAX\_0205 | Max | Am Stiel hängt ein Schild: „Übungsbesen. Fliegt nicht. Fegt nur, und das ungern.“ | Besen im Schrank, zweites Mal |
 | W1\_HOGG\_MAX\_0210 | Max | Toadi steht in der Tür und drückt die Daumen, und zwar beide. Mehr hat er auch nicht. | Toadi |
 | W1\_HOGG\_PIX\_0220 | Pixel | Kreide, Ruß und alter Pfannkuchen. Diese Schule hat Geschichte. // Und zwar frittierte. Ich rieche mindestens dreihundert Jahre Bratfett, und ich bin beeindruckt. | Pixel schnuppert: Kessel |
 | W1\_HOGG\_ALW\_0230 | Alwin | Ein Kater! Hast du Haare? Natürlich hast du Haare. Weg vom Besen! Weg! … Zu spät. | Pixel auf Alwin; Besen zuckt im Schrank |
@@ -1477,6 +1497,7 @@ Ein Klick auf die Figur, wenn im Gesprächsmenü nur noch „Tschüss“ übrig 
 | W1\_ABS\_GRI\_0200 | Grimmzahn | Kein Kommentar. Das ist nicht unhöflich. Das ist Gewerkschaft. | Reden: Grimmzahn, Gespräch erschöpft |
 | W1\_ABS\_GOL\_0210 | Gollo | Alles gesagt, alles. Jetzt schweigen wirsss. Wir und unser Kummer. | Reden: Gollo, Gespräch erschöpft |
 | W1\_ABS\_GOL\_0220 | Gollo | Geh, geh. Unser Gold ist weg, unsere Worte auch. Nur das Ssschätzchen bleibt. Niemand will es. | Reden: Gollo, Gespräch erschöpft |
+| W1\_ABS\_MAK\_0225 | Maklerin | Bring mir ein Objekt, dann reden wir. | Reden: Maklerin, Gespräch erschöpft |
 | W1\_ABS\_MAK\_0230 | Maklerin | Für weitere Fragen vereinbaren Sie bitte einen Besichtigungstermin. Den nächsten habe ich in drei Jahren. | Reden: Maklerin, Gespräch erschöpft |
 | W1\_ABS\_MAK\_0240 | Maklerin | Ich habe Ihnen alles gezeigt. Alles andere steht im Kleingedruckten. Das ist sehr klein. | Reden: Maklerin, Gespräch erschöpft |
 

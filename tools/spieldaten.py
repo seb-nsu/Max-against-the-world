@@ -64,6 +64,43 @@ def schritt_id(ab, text, raetsel_ids):
     return rid if rid in raetsel_ids else None
 
 
+BEDINGUNG_RE = re.compile(r"^(nur|ohne) ([A-Z0-9_]+)$")
+
+
+def nie_allein_offen(ab, rid, r, raetsel):
+    """Sammelschritt (R4 mit R4a bis R4d), der im Spiel nie für sich offen ist: Er hat keinen
+    eigenen „…_GELOEST“-Schalter und gilt als gelöst, sobald seine Teile gelöst sind. Oder die
+    Regeln des Abschnitts lösen ihn immer im selben Zug mit einem Teilschritt (direkt nach
+    Zustand.loese("<Teil>")). Hat er dagegen einen eigenen letzten Schritt (Welt 4, R4: der
+    Hyäne die Zeitschrift zeigen), ist er offen und braucht Hinweise."""
+    if not any(o != rid and re.fullmatch(re.escape(rid) + r"[a-z]", o) for o in raetsel):
+        return False
+    if not any(str(s).endswith("_GELOEST") for s in liste(r.get("schalter"))):
+        return True
+    regeln = ROOT / "game" / "skripte" / f"{ab.replace('-', '_')}.gd"
+    if not regeln.exists():
+        return False
+    zeilen = [z.strip() for z in regeln.read_text(encoding="utf-8").splitlines() if z.strip()]
+    stellen = [i for i, z in enumerate(zeilen) if f'Zustand.loese("{rid}")' in z]
+    teil = re.compile(r'Zustand\.loese\("' + re.escape(rid) + r'[a-z]"\)')
+    return bool(stellen) and all(i > 0 and teil.search(zeilen[i - 1]) for i in stellen)
+
+
+def stufen_luecken(hinweise):
+    """Stufen 1 bis 3, für die nicht in jedem Fall eine Zeile gilt: Entweder steht eine Zeile ohne
+    Bedingung da, oder zu einem Schalter gibt es beide Fassungen („nur X“ und „ohne X“)."""
+    fehlt = []
+    for s in (1, 2, 3):
+        bed = [h.get("bedingung", "") for h in hinweise if h["stufe"] == s]
+        paare = {}
+        for b in bed:
+            if m := BEDINGUNG_RE.match(b):
+                paare.setdefault(m.group(2), set()).add(m.group(1))
+        if "" not in bed and not any(v == {"nur", "ohne"} for v in paare.values()):
+            fehlt.append(s)
+    return fehlt
+
+
 def hinweise_lesen(ab, raetsel_ids):
     schritte, sonder, fehler = {}, {}, []
     for z in (DOCS / SKRIPT[ab]).read_text(encoding="utf-8").splitlines():
@@ -84,6 +121,9 @@ def hinweise_lesen(ab, raetsel_ids):
             continue
         eintrag = {"stufe": int(stufe.group(1)), "zeile": zid}
         if bedingung:
+            if not BEDINGUNG_RE.match(bedingung):
+                fehler.append(f"{zid}: Bedingung „{bedingung}“ versteht das Spiel nicht (nur <Schalter> oder ohne <Schalter>)")
+                continue
             eintrag["bedingung"] = bedingung
         schritte.setdefault(rid, []).append(eintrag)
     for rid, ids in FESTE_HINWEISE.get(ab, {}).items():
@@ -104,9 +144,18 @@ def erzeugen():
         for rid, r in raetsel.items():
             hat_teile = any(o != rid and re.fullmatch(re.escape(rid) + r"[a-z]", o) for o in raetsel)
             h = sorted(schritte.get(rid, []), key=lambda e: (e["stufe"], e.get("bedingung", "")))
+            # Ohne eigene Zeilen gelten die des Sammelschritts (Welt 1: die Wege R10a und R10b
+            # teilen sich die drei Zeilen von R10). Jeder Schritt, der im Spiel offen sein kann,
+            # braucht alle drei Stufen, sonst leuchtet die Pfote und Pixel hat nichts zu sagen.
             eltern = re.sub(r"[a-z]$", "", rid)
-            if not h and not hat_teile and not (eltern != rid and schritte.get(eltern)):
-                fehler.append(f"{ab}: Rätselschritt {rid} hat keine Hinweise im Skript")
+            von = eltern if not h and eltern != rid and schritte.get(eltern) else ""
+            if not nie_allein_offen(ab, rid, r, raetsel):
+                gelten = h or schritte.get(von, [])
+                if not gelten:
+                    fehler.append(f"{ab}: Rätselschritt {rid} kann offen sein und hat keine Hinweise im Skript")
+                elif fehlt := stufen_luecken(gelten):
+                    fehler.append(f"{ab}: Rätselschritt {rid} kann offen sein, es fehlt Stufe "
+                                  f"{', '.join(map(str, fehlt))} (oder sie gilt nicht in jedem Fall)")
             eintraege.append({
                 "schritt": rid,
                 "ziel": r.get("name", ""),
@@ -118,6 +167,7 @@ def erzeugen():
                 "optional": bool(r.get("optional")),
                 "sammelschritt": hat_teile,
                 "hinweise": h,
+                **({"hinweise_von": von} if von else {}),
             })
         dateien[f"hinweise/{ab}.json"] = {"abschnitt": ab, "sonderzeilen": sonder, "schritte": eintraege}
     texte = {p: json.dumps(v, ensure_ascii=False, indent=1, sort_keys=False) + "\n" for p, v in dateien.items()}

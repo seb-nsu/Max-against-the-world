@@ -511,6 +511,7 @@ raetsel:
 
 # Schalter, die zu keinem Rätsel gehören (Graubox-Logik: skripte/welt_3.gd)
 weitere_schalter:
+  - W3_OEL_WARNUNG             # Pixel hat vor der Übergabe der Telefonbuchseite ans Olivenöl erinnert (R8, einmal)
   - W3_PIXEL_AUF_LEITUNG       # beim ersten Aufwachen in der Basis (W3_BAS_KAL_0160)
   - W3_WECHSEL_FREI            # Figurenwechsel freigeschaltet (Ankunft)
   - W3_EBENE                   # Wert: realitaet, simulation oder labor (wo Max' Geist ist)

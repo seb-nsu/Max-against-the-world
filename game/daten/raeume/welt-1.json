@@ -973,6 +973,14 @@
        "blasen": [
         "W1_TAV_MAX_0260"
        ]
+      },
+      {
+       "zeile": "W1_TAV_MAX_0265",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_TAV_MAX_0265"
+       ],
+       "mal": 2
       }
      ]
     },
@@ -997,6 +1005,14 @@
        "blasen": [
         "W1_TAV_MAX_0110"
        ]
+      },
+      {
+       "zeile": "W1_TAV_MAX_0115",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_TAV_MAX_0115"
+       ],
+       "mal": 2
       }
      ]
     },
@@ -1021,6 +1037,14 @@
        "blasen": [
         "W1_TAV_MAX_0310"
        ]
+      },
+      {
+       "zeile": "W1_TAV_MAX_0315",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_TAV_MAX_0315"
+       ],
+       "mal": 2
       },
       {
        "zeile": "W1_TAV_PIX_0320",
@@ -1072,6 +1096,14 @@
        ]
       },
       {
+       "zeile": "W1_TAV_MAX_0295",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_TAV_MAX_0295"
+       ],
+       "mal": 2
+      },
+      {
        "zeile": "W1_TAV_PIX_0300",
        "sprecher": "PIX",
        "blasen": [
@@ -1114,6 +1146,14 @@
        ]
       },
       {
+       "zeile": "W1_TAV_MAX_0275",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_TAV_MAX_0275"
+       ],
+       "mal": 2
+      },
+      {
        "zeile": "W1_TAV_PIX_0280",
        "sprecher": "PIX",
        "blasen": [
@@ -1145,6 +1185,14 @@
        "blasen": [
         "W1_TAV_MAX_0120"
        ]
+      },
+      {
+       "zeile": "W1_TAV_MAX_0125",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_TAV_MAX_0125"
+       ],
+       "mal": 2
       },
       {
        "zeile": "W1_TAV_PIX_0130",
@@ -1229,6 +1277,14 @@
        ]
       },
       {
+       "zeile": "W1_TAV_MAX_0165",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_TAV_MAX_0165"
+       ],
+       "mal": 2
+      },
+      {
        "zeile": "W1_TAV_PIX_0380",
        "sprecher": "PIX",
        "blasen": [
@@ -1260,6 +1316,14 @@
        "blasen": [
         "W1_TAV_MAX_0170"
        ]
+      },
+      {
+       "zeile": "W1_TAV_MAX_0175",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_TAV_MAX_0175"
+       ],
+       "mal": 2
       }
      ]
     },
@@ -1303,6 +1367,14 @@
          "gegenstand": "goldmuenze"
         }
        ]
+      },
+      {
+       "zeile": "W1_TAV_MAX_0245",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_TAV_MAX_0245"
+       ],
+       "mal": 2
       }
      ],
      "benutzen": [
@@ -1336,6 +1408,14 @@
        "blasen": [
         "W1_TAV_MAX_0200"
        ]
+      },
+      {
+       "zeile": "W1_TAV_MAX_0205",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_TAV_MAX_0205"
+       ],
+       "mal": 2
       }
      ]
     },
@@ -1360,6 +1440,14 @@
        "blasen": [
         "W1_TAV_MAX_0210"
        ]
+      },
+      {
+       "zeile": "W1_TAV_MAX_0215",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_TAV_MAX_0215"
+       ],
+       "mal": 2
       },
       {
        "zeile": "W1_TAV_PIX_0390",
@@ -1411,6 +1499,14 @@
        "blasen": [
         "W1_TAV_MAX_0220"
        ]
+      },
+      {
+       "zeile": "W1_TAV_MAX_0225",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_TAV_MAX_0225"
+       ],
+       "mal": 2
       }
      ]
     }
@@ -1439,6 +1535,14 @@
        "blasen": [
         "W1_TAV_MAX_0250"
        ]
+      },
+      {
+       "zeile": "W1_TAV_MAX_0255",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_TAV_MAX_0255"
+       ],
+       "mal": 2
       },
       {
        "zeile": "W1_TAV_PIX_0370",
@@ -2539,6 +2643,14 @@
        "blasen": [
         "W1_HOGG_MAX_0110"
        ]
+      },
+      {
+       "zeile": "W1_HOGG_MAX_0115",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_HOGG_MAX_0115"
+       ],
+       "mal": 2
       }
      ]
     },
@@ -2563,6 +2675,14 @@
        "blasen": [
         "W1_HOGG_MAX_0180"
        ]
+      },
+      {
+       "zeile": "W1_HOGG_MAX_0185",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_HOGG_MAX_0185"
+       ],
+       "mal": 2
       },
       {
        "zeile": "W1_HOGG_PIX_0190",
@@ -2596,6 +2716,14 @@
        "blasen": [
         "W1_HOGG_MAX_0120"
        ]
+      },
+      {
+       "zeile": "W1_HOGG_MAX_0125",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_HOGG_MAX_0125"
+       ],
+       "mal": 2
       }
      ]
     },
@@ -2621,6 +2749,15 @@
         "W1_HOGG_MAX_0130"
        ],
        "bedingung_text": "vor dem Brauen"
+      },
+      {
+       "zeile": "W1_HOGG_MAX_0135",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_HOGG_MAX_0135"
+       ],
+       "bedingung_text": "vor dem Brauen",
+       "mal": 2
       },
       {
        "zeile": "W1_HOGG_PIX_0220",
@@ -2738,6 +2875,14 @@
        ]
       },
       {
+       "zeile": "W1_HOGG_MAX_0145",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_HOGG_MAX_0145"
+       ],
+       "mal": 2
+      },
+      {
        "zeile": "W1_HOGG_PIX_0150",
        "sprecher": "PIX",
        "blasen": [
@@ -2769,6 +2914,14 @@
        "blasen": [
         "W1_HOGG_MAX_0200"
        ]
+      },
+      {
+       "zeile": "W1_HOGG_MAX_0205",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_HOGG_MAX_0205"
+       ],
+       "mal": 2
       }
      ]
     },
@@ -2793,6 +2946,14 @@
        "blasen": [
         "W1_HOGG_MAX_0160"
        ]
+      },
+      {
+       "zeile": "W1_HOGG_MAX_0165",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_HOGG_MAX_0165"
+       ],
+       "mal": 2
       }
      ]
     }
@@ -10221,6 +10382,10 @@
     }
    ],
    "erschoepft": [
+    {
+     "zeile": "W1_ABS_MAK_0225",
+     "sprecher": "MAK"
+    },
     {
      "zeile": "W1_ABS_MAK_0230",
      "sprecher": "MAK"

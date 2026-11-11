@@ -242,7 +242,20 @@
    ],
    "optional": false,
    "sammelschritt": true,
-   "hinweise": []
+   "hinweise": [
+    {
+     "stufe": 1,
+     "zeile": "W4_HINT_PIX_0700"
+    },
+    {
+     "stufe": 2,
+     "zeile": "W4_HINT_PIX_0710"
+    },
+    {
+     "stufe": 3,
+     "zeile": "W4_HINT_PIX_0720"
+    }
+   ]
   },
   {
    "schritt": "R5a",

@@ -1050,7 +1050,7 @@ Gleich nach Tag 1 fehlt der offizielle Diskus. Vier Verdächtige, je zwei Aussag
 | W2\_DISK\_MAX\_0210 | Max | Du warst es. | Anklage Leonidas |
 | W2\_DISK\_LEO\_0220 | Leonidas | ICH? DANN HÄTTE ICH ZWEIMAL GELOGEN! ICH LÜGE NUR EINMAL! AUS PRINZIP! | Fehlversuch |
 | W2\_DISK\_MAX\_0230 | Max | Du warst es. | Anklage Hermes |
-| W2\_DISK\_HER\_0240 | Hermes | Wenn ich es war, hab ich zweimal die Wahrheit gesagt. Das schaff ich nicht mal mit Anlauf. | Fehlversuch |
+| W2\_DISK\_HER\_0240 | Hermes | Wenn ich es war, hat Leonidas zweimal die Wahrheit gesagt. Das schafft der nicht mal mit Anlauf. | Fehlversuch |
 | W2\_DISK\_MAX\_0250 | Max | Du warst es. | Anklage Sphinx |
 | W2\_DISK\_SPH\_0260 | Sphinx | Dann hätte ich zweimal gelogen. Ich lüge nur einmal, wie alle hier. Das ist das einzige Rätsel, das ich noch kann. | Fehlversuch |
 | W2\_DISK\_MAX\_0270 | Max | Du warst es. Du warst im Stadion, und Hermes war es nicht: eine Wahrheit, eine Lüge. Und Pixels Nase hat bei dir gelogen, weil du nach Fisch riechst. | Anklage Tiro |

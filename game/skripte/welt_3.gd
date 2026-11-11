@@ -1095,6 +1095,10 @@ func gegenstand_hausmeister(_obj, iid) -> bool:
 			Zustand.setze("FREUND_0815")
 			return true
 		"telefonbuchseite":
+			# Mit Öl in der Tasche warnt Pixel einmal, bevor der Roboter für immer losrollt
+			if _hat("olivenoel") and not Zustand.ist("FREUND_0815") and _einmal("W3_OEL_WARNUNG"):
+				await _sag("W3_EING_PIX_0185")
+				return true
 			await _szene(["W3_EING_MAX_0190", "W3_EING_HAU_0200", "W3_EING_HAU_0210", "W3_EING_HAU_0220",
 				"W3_EING_PIX_0230"])
 			await _abgeben("telefonbuchseite")

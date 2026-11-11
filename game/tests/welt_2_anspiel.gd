@@ -116,8 +116,17 @@ func _durchlauf() -> void:
 	await S.regel("benutzen", "wurfhebel")
 	_pruefe(Z.geloest("R12") and _hat("schallplatte") and _hat("wurfscheibe"), "R12 Tag 1, Diskus weg")
 
-	# R7: Tiro verhören und anklagen
+	# R7: Tiro verhören. Anklagen geht erst, wenn alle vier verhört sind und alle acht Aussagen
+	# im Notizbuch stehen.
 	await S.regel("benutzen", "tiro")
+	S.vorgabe_auswahl = [0]
+	await S.regel("benutzen", "tiro")
+	_pruefe(not Z.geloest("R7"), "R7: keine Anklage, bevor alle vier verhört sind")
+	S.vorgabe_auswahl = []
+	for v in ["leonidas", "hermes", "sphinx_figur"]:
+		await S.regel("benutzen", v)
+	_pruefe(_gesagt("W2_DISK_LEO_0060") and _gesagt("W2_DISK_HER_0100") and _gesagt("W2_DISK_SPH_0190"),
+		"R7: alle vier verhört")
 	S.vorgabe_auswahl = [0]
 	await S.regel("benutzen", "tiro")
 	_pruefe(Z.geloest("R7") and _hat("diskus"), "R7 Diskus zurück")

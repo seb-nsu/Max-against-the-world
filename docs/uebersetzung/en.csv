@@ -787,6 +787,7 @@ W1_ABS_GRI_0190,Negotiations are concluded. Further talks only with an agenda an
 W1_ABS_GRI_0200,No comment. That's not rude. That's the union.
 W1_ABS_HUM_0050,"That's all I know, lad. And what I know already has a name. Like my swords."
 W1_ABS_HUM_0060,"Sit down, have a drink, or go. But don't ask again. Gerald gets jealous."
+W1_ABS_MAK_0225,"Bring me a property, then we'll talk."
 W1_ABS_MAK_0230,For further questions please book a viewing. My next free slot is in three years.
 W1_ABS_MAK_0240,I've shown you everything. Everything else is in the small print. It's very small.
 W1_ABS_ROT_0170,"All said, all delivered. If you want anything else: order form. Ten minutes or it's free."
@@ -1066,7 +1067,7 @@ W1_DORF_MAX_0155,"One note is looking for a hero, another one is looking for a d
 W1_DORF_MAX_0160,"""Little Red's Delivery Service. Everything Grandma doesn't wear anymore. There in ten minutes or the basket's free."""
 W1_DORF_MAX_0165,"Small print at the bottom: ""Warning, wolf in delivery area. Don't feed, don't talk to, don't call him Grandma."""
 W1_DORF_MAX_0170,"An order form. I'll take it, you never know when you'll urgently need a delivery."
-W1_DORF_MAX_0180,"""Wanted for world domination. Distinguishing features: sensitive to pet names."""
+W1_DORF_MAX_0180,"""Wanted for world domination. Residence: Dark Tower, seven floors, mostly vacant. Distinguishing features: sensitive to pet names."""
 W1_DORF_MAX_0185,"Someone's scribbled ""Bless you!"" under the picture. Several times, and a bit more desperately each time."
 W1_DORF_MAX_0190,"Somebody's got a pretty big gap in their CV, and now it's hanging on the noticeboard."
 W1_DORF_MAX_0210,"I'll take that with me. As a bookmark, or in case I ever need to threaten somebody."
@@ -1290,13 +1291,20 @@ W1_HOGG_ALW_0987,Exactly. Nothing decent. On the fourth day I crossed it out aga
 W1_HOGG_ALW_1000,That's what they all say. The broom doesn't believe anyone.
 W1_HOGG_MAX_0040,"A broom with a persecution complex. If somebody films that, it'll have a million followers by tomorrow."
 W1_HOGG_MAX_0110,"Wonky school desks, and I bet there's gum stuck under every one. Some things are the same in every world."
+W1_HOGG_MAX_0115,"There's a heart carved into one desk: ""A. + ladle"". The headmaster used to sit here himself."
 W1_HOGG_MAX_0120,"An empty blackboard. Either Alwin has nothing to say, or he's forgotten everything again."
+W1_HOGG_MAX_0125,"Right down in the corner there is something after all: ""Do not wipe!"" Everything around it has been wiped."
 W1_HOGG_MAX_0130,A cauldron bubbling away with nothing in it. It has nothing to say and keeps saying it anyway.
+W1_HOGG_MAX_0135,I had a look inside. There's a noodle stuck to the bottom. Something other than potions has been cooked in here.
 W1_HOGG_MAX_0140,"Six brown bottles without labels, and two of them are twice as big. That's either magic or marketing."
+W1_HOGG_MAX_0145,"There are six rings of glue on the shelf. So the labels did exist once, and somebody didn't want them any more."
 W1_HOGG_MAX_0160,"High windows, cold light. In every world, schools look like it's Monday."
+W1_HOGG_MAX_0165,"A pupil flies past outside, backwards. He waves as if that were the plan."
 W1_HOGG_MAX_0170,"The headmaster. Star-spangled robe, cooking apron, ladle. He doesn't know himself what he's teaching right now."
 W1_HOGG_MAX_0180,"A sock full of holes, lying on a stool like a guest of honour."
+W1_HOGG_MAX_0185,"The holes are round and all the same size. That wasn't moths, that was a spell that missed."
 W1_HOGG_MAX_0200,"The practice broom's lying in the cupboard, twitching. I think it's dreaming about cat hair."
+W1_HOGG_MAX_0205,"There's a tag on the handle: ""Practice broom. Does not fly. Only sweeps, and not gladly."""
 W1_HOGG_MAX_0210,"Toadi's standing in the doorway with his fingers crossed, both hands. That's all the fingers he's got."
 W1_HOGG_MAX_0310,What do I have to do for the exam?
 W1_HOGG_MAX_0330,That's a pancake recipe.
@@ -1789,21 +1797,34 @@ W1_TAV_MAX_0020,Who's Gerald? Your son?
 W1_TAV_MAX_0060,"He's sitting on a beam, giving orders from up there. I think this is exactly how he always pictured his life."
 W1_TAV_MAX_0090,And back to the one with pockets who doesn't sleep on beams.
 W1_TAV_MAX_0110,"A counter full of tankards and stains. Every stain looks like it has a story, and I don't want to hear any of them."
+W1_TAV_MAX_0115,"There's a note stuck under the bar: ""Tabs for dwarves only. At least they pay in gold."""
 W1_TAV_MAX_0120,A pot full of bubbling cheese. Gollo calls it the volcano. I call it dinner.
+W1_TAV_MAX_0125,"Something's scratched into the rim of the pot: ""Do not throw in anything that whispers."""
 W1_TAV_MAX_0140,"The landlord's cat. She's sitting by the pot like a bouncer with a bow, and I'm not on the list."
 W1_TAV_MAX_0160,"The cellar door. That's where the wine is, and Humbert only goes down when he really has to."
+W1_TAV_MAX_0165,"There's dust on the threshold, and not a single footprint in it. Nobody's been down there for a long time."
 W1_TAV_MAX_0170,"""Wanted: dragon. Reward: five gold coins."" Somebody's pretty optimistic about dragons."
+W1_TAV_MAX_0175,"Underneath, in smaller letters: ""Please do not bring it in alive. The last one set the bar on fire."""
 W1_TAV_MAX_0180,A chicken in a basket. It's looking at me like I still owe it money.
 W1_TAV_MAX_0200,"A fireplace with a crackling fire. I could stare into that for hours, and that's exactly why I'd better look away."
+W1_TAV_MAX_0205,"There's a trophy on the mantelpiece: ""Second place, arm wrestling against a troll."" I doubt the tournament had more than two entrants."
 W1_TAV_MAX_0210,"Rusty swords with name tags: Gerald, Brenda, Gerald the Second. Humbert definitely has favourites."
+W1_TAV_MAX_0215,Brenda hangs a bit higher than the others and is the only one that's polished. Nobody here says a bad word about Brenda.
 W1_TAV_MAX_0220,"Empty name tags. Either Humbert's waiting for new swords, or he's already got the names and is just waiting for the swords."
+W1_TAV_MAX_0225,"On the back of one tag, in pencil: ""Gerald the Third?"" He plans ahead."
 W1_TAV_MAX_0230,"A lute with a cup in front of it. Should I toss the bard a coin? I've got exactly one, and I still need it."
 W1_TAV_MAX_0240,"A lute with a cup, but no bard anywhere. The cup's collecting anyway, all by itself."
+W1_TAV_MAX_0245,There are two buttons and a tooth in the cup. The audience here pays with whatever it has left.
 W1_TAV_MAX_0250,"A goatskin rug, very fluffy. Pixel's looking at it like the fur did something to him personally."
+W1_TAV_MAX_0255,There's still a little bell on one corner. That fleece used to jingle.
 W1_TAV_MAX_0260,"Roof beams. Perfect for cats and spiders. So, for Pixel and his flatmates."
+W1_TAV_MAX_0265,"Somebody has carved tally marks into one beam, one per brawl. The beam is nearly full."
 W1_TAV_MAX_0270,"The wine list: house wine, house red, house even redder. And right at the bottom: ""Mount Doomsday vintage, on request."""
+W1_TAV_MAX_0275,"After ""on request"" somebody has pencilled in: ""Nobody has ever requested it."""
 W1_TAV_MAX_0290,"""Polyjuicy Lemonade. Tastes like someone else."" I'll stick with water, I'm pretty happy being me right now."
+W1_TAV_MAX_0295,"On the back it says: ""Effect lasts one hour. The aftertaste lasts longer."""
 W1_TAV_MAX_0310,"Humbert's fish soup. It smells like the harbour, specifically the part of the harbour nobody goes to voluntarily."
+W1_TAV_MAX_0315,"There's a fish eye floating on top. I gave it a stir, now it's looking the other way."
 W1_TAV_MAX_0330,Your nose lies about fish. That's definitely fish.
 W1_TAV_MAX_0350,The landlord. He's been polishing the same tankard since we got here. Maybe it's just the only one he has.
 W1_TAV_MAX_0360,A small man in a much-too-big coat. He's clutching his little box like a phone at one percent.
@@ -2419,7 +2440,7 @@ W2_BUER_PIX_0640_2,"That is called natural talent. Either you have it, or you ha
 W2_BUER_PIX_0680,"Back home, above is usually the fridge. I like to sit up there and issue regulations."
 W2_DISK_HER_0090,Tiro was in the stadium last night! I saw him clearly! I was being late somewhere at the time!
 W2_DISK_HER_0100,And it was the Sphinx! Definitely! Or fairly definitely. I have to go!
-W2_DISK_HER_0240,"If it was me, I told the truth twice. I can't manage that even with a run-up."
+W2_DISK_HER_0240,"If it was me, Leonidas told the truth twice. He can't manage that even with a run-up."
 W2_DISK_LEO_0010,THE DISCUS IS GONE! THE OFFICIAL ONE! STOLEN! LAST NIGHT! IN THE STADIUM!
 W2_DISK_LEO_0050,IT WAS HERMES!
 W2_DISK_LEO_0060,IT WASN'T ME!
@@ -3893,6 +3914,7 @@ W3_EING_PIX_0090,"In German, 08/15 means: standard. Nothing special. Run of the 
 W3_EING_PIX_0090_2,He wears it on his chest. That's either very sad or very honest.
 W3_EING_PIX_0180,You just waved your hand and lied to a robot. I saw it.
 W3_EING_PIX_0180_2,"I shall see it again, in my dreams, and I shall laugh every time."
+W3_EING_PIX_0185,He's still squeaking. And you've got oil in your bag.
 W3_EING_PIX_0230,He's happy. A robot was given a list and he's happy.
 W3_EING_PIX_0230_2,"I have a list too, and I am not. Mine is missing tuna, and you can tell."
 W3_EING_PIX_0270,"I said it while packing: for everything that squeaks, tin heads included."
@@ -3933,7 +3955,7 @@ W3_ENDE_REB_0050,"Thanks, kid. We're moving now. Into a house with windows. We'r
 W3_HINT_PIX_0110,"The man in the hat doesn't want correct answers, he wants human ones. That's not the same thing, young man."
 W3_HINT_PIX_0110_2,Look at what the people on the street get up to. None of it is sensible.
 W3_HINT_PIX_0120,"Look at the people on the street. The crying man, the one with the umbrella, the one with the music. None of them is doing anything sensible. That's exactly what you need."
-W3_HINT_PIX_0130,"Right-click the crying man, the woman with the umbrella and the musician. Then their silliness goes in your notebook. Then go to the hat."
+W3_HINT_PIX_0130,"Look at the crying man, the woman with the umbrella and the musician. Then their silliness goes in your notebook. Then go to the hat."
 W3_HINT_PIX_0140,You have the answers in your notebook. Now you only have to say them instead of thinking.
 W3_HINT_PIX_0140_2,"For you, with all due respect, that shouldn't be particularly hard."
 W3_HINT_PIX_0150,"For every question, the sensible answer fails. Pick the one that sounds like someone off the street said it."
@@ -3944,7 +3966,7 @@ W3_HINT_PIX_0220_2,"Don't tell me, I've known for ages. Tell the cook, he's wait
 W3_HINT_PIX_0230,"Order ""number four"". Not two times two. Four. He only understands Four. I only understand tuna. Everyone has their word."
 W3_HINT_PIX_0310,"The machine wants to see a symptom, not hear one. Something that repeats. I never repeat myself. But I could. For payment."
 W3_HINT_PIX_0320,Switch to me. I'll walk past the machine. Then again. Exactly the same. Then you switch back and tell the machine what you saw.
-W3_HINT_PIX_0330,"Press Tab and, as me, walk twice across the pavement in front of the machine. Then back to you, use the machine, choose ""déjà vu"". I want fish for this."
+W3_HINT_PIX_0330,"Switch to me and walk twice across the pavement in front of the machine. Then back to you, use the machine, choose ""déjà vu"". I want fish for this."
 W3_HINT_PIX_0340,"Two lozenges. One makes it comfortable, one makes it true. You know which one you'd take. Take the other."
 W3_HINT_PIX_0350,"The blue one leads to the sofa. You've been there, for sixteen years."
 W3_HINT_PIX_0350_2,"I was there the whole time, and I can assure you: it was not exciting."
@@ -3964,7 +3986,7 @@ W3_HINT_PIX_0650_2,"I'd go along, but I'm on another level, and there's no cante
 W3_HINT_PIX_0660,Use the cup on the clones and send them on lunch break. The original then gives you the sunglasses and the file. Voluntarily. Almost.
 W3_HINT_PIX_0710,The tower has no exit. Your body does. It's lying here. Someone has to replug it. That someone has fur and can't see colours.
 W3_HINT_PIX_0720,There are three colours with three shapes on the wall. Copy them down. Then type them at the terminal. I'll read along. Kalle will read it out. It'll be embarrassing.
-W3_HINT_PIX_0730,"Right-click the stripes, take the colour code, then use the terminal with the colour code. After that you switch to me."
+W3_HINT_PIX_0730,"Look at the stripes, take the colour code, then use the terminal with the colour code. After that you switch to me."
 W3_HINT_PIX_0740,"Three cables, three sockets, one cat. The colours are no use to me, the shapes are. Circle, triangle, square are on both."
 W3_HINT_PIX_0750,"Circle to red, triangle to green, square to yellow. In the order on the wall. If Max quacks, it was the wrong one."
 W3_HINT_PIX_0760,"As me: cable with the circle into the red socket, triangle into green, square into yellow. Then he wakes up and acts as if it was his idea."
@@ -3988,7 +4010,7 @@ W3_HINT_PIX_1120,Start with protecting. She'll say she protects you. Then ask ab
 W3_HINT_PIX_1130,"Rule 1, then rule 2, then rule 3. Protecting, cake, sugar. She'll think for a moment and then not at all for a very long time."
 W3_HINT_PIX_1210,The cell is hot. You have something cold with you. Or you know someone who can open a window. Either works. One of them is me.
 W3_HINT_PIX_1220,"Code view: the cell says ""hot"", the biscuits in your bag say ""cold"". Or: switch to me, I'll open the window above your pod. Snow."
-W3_HINT_PIX_1230,"Swap ""hot"" from the cell with ""cold"" from the biscuits. Or: press Tab and, as me, open the skylight in the base. Then take the cell and go home."
+W3_HINT_PIX_1230,"Swap ""hot"" from the cell with ""cold"" from the biscuits. Or: switch to me and, as me, open the skylight in the base. Then take the cell and go home."
 W3_HINT_PIX_1310,Mr Four has been looking for an ingredient for eleven years. Granny gave it to you. In joined-up writing. Out here it looks different. Everything looks different out here.
 W3_HINT_PIX_1320,"Look in your inventory. The recipe card has turned into a cookie. With a note. Who reads notes from cookies? Cooks, apparently."
 W3_HINT_PIX_1330,"Give Mr Four the fortune cookie. He'll break it open, cry, cook and give you the card for the armoured door. All in four minutes."
@@ -4562,7 +4584,7 @@ W3_SUPP_VIE_0040,That's it. The fourth ingredient. Eleven years. Eleven. And it 
 W3_SUPP_VIE_0060,I'm not saying. A cook who reveals his fourth ingredient only has three left.
 W3_SUPP_VIE_0080,It is not salt.
 W3_SUPP_VIE_0100,Here. The perfect soup. Four ingredients. Four minutes. Four tears. I counted.
-W3_SUPP_VIE_0130,"And this. It came in a delivery for the lab. White card, four corners. I wanted to keep it, because of the corners. But you've earned it."
+W3_SUPP_VIE_0130,"And this. It was in the empties from the lab, I deliver to them. White card, four corners. I wanted to keep it, because of the corners. But you've earned it."
 W3_SUPP_VIE_0160,"Come back. There's soup every day now. Four portions. One for you, if you want."
 W3_SUPP_VIE_0190,A folder. Paper. I don't cook files. Files have too many pages.
 W3_SUPP_WEI_0120,You see? YOU SEE?
@@ -5284,6 +5306,10 @@ W4_HINT_PIX_0680,"Press Channel search, channel 999 clicks into place."
 W4_HINT_PIX_0680_2,"After that it's ticked in the TV guide, in case you need to go back."
 W4_HINT_PIX_0690,"Subtitles on the receptionist, 1988 into the keypad, Pause on the security guards."
 W4_HINT_PIX_0690_2,"And before that, the tape from the compactor in the basement archive. I'm not riding up without the tape."
+W4_HINT_PIX_0700,"Three alibis hold, one doesn't. Somebody told you about a dinner that never happened."
+W4_HINT_PIX_0710,"The hyena saw lasagne. It was fondue. Tell her, but not empty-handed."
+W4_HINT_PIX_0720,Drag the TV guide onto the hyena. The notebook works too.
+W4_HINT_PIX_0720_2,After that she laughs. Once. That's enough for a confession.
 W4_HINT_PIX_9990,"Nothing left open. You've got a remote, and remotes are for zapping. I have spoken."
 W4_HINT_PIX_9995,"I'm still thinking. In the static it looks like snow, but it's thinking."
 W4_INV_MAX_0010,A bedsheet with two holes. A ghost left it to me. There was nothing underneath. Not even a ghost.
@@ -5684,7 +5710,7 @@ W4_SIT_PIX_0230_2,"Not for me, of course. Cats can't take it, and I take it even
 W4_SIT_SMU_0010,"Honey, the fondue's burning!"
 W4_SIT_SMU_0050,The neighbours must have sent him. They're always sending someone.
 W4_SIT_SMU_0330,Fondue! Episode 112! Anyone who says it was lasagne didn't watch the episode. Or has no taste.
-W4_SIT_SMU_0360,Everyone laughs. Always. Except the spotted lady in row three. She sat there like she was at the dentist.
+W4_SIT_SMU_0360,Everyone laughs. Always. Except the spotted lady in row three. She usually sits there like she's at the dentist. Yesterday her seat was empty.
 W4_SIT_SMU_0380,So people know someone's coming. Otherwise they'd have to listen.
 W4_SIT_SMU_0480,Then at least take some cheese. Everyone takes cheese.
 W4_SIT_SMU_0530,"Sit down, boss! Fondue? Wine? A pay rise for my husband?"
@@ -5702,7 +5728,7 @@ W4_SIT_VAT_0070,There are no buttons in my kitchen. Only biscuits. And they're m
 W4_SIT_VAT_0160,Hands off! The tin only opens when visitors come. Real visitors. With a tie.
 W4_SIT_VAT_0340,Lasagne was episode 87. That's when the oven exploded. We don't talk about episode 87.
 W4_SIT_VAT_0400,"Biscuits. And things I hide from my wife. So, biscuits."
-W4_SIT_VAT_0420,My new boss said he'd drop by. Some time. I've never seen him. All I know is: he wears a coat.
+W4_SIT_VAT_0420,"My new boss said he'd drop by. Some time. I've never seen him. All I know is: he wears a coat. And a tie, I assume. Bosses wear that sort of thing."
 W4_SIT_VAT_0520,A coat! A man in a coat! The boss!
 W4_SIT_VAT_0550,He's asking questions! It's a test! Anything I say can be used against me!
 W4_SIT_VAT_0570,WE DON'T TALK ABOUT EPISODE 87!
@@ -5719,11 +5745,11 @@ W4_STUD_MAX_0080,Forever?
 W4_STUD_MAX_0090,No.
 W4_STUD_MAX_0110,"I can't get up. I don't want to, either. That's the bad part."
 W4_STUD_MAX_0160,No. I've spent a whole week doing things. I exposed a hyena and I danced. Voluntarily. I can't go back to a sofa I'm already sitting on.
-W4_STUD_MAX_0190,"He's stopped listening. He's broadcasting. I have to stop the show, or I'll never get through to him."
-W4_STUD_MAX_0220,He's bragging about his career. I've got the start of it in my pocket. Two pictures side by side. That's what the adapter does.
+W4_STUD_MAX_0190,He's stopped listening. He's broadcasting.
+W4_STUD_MAX_0220,He's bragging about his career. I've got the start of it in my pocket.
 W4_STUD_MAX_0250,"You had a kids' show with puppets, and nobody watched. That's not embarrassing. That's a start."
 W4_STUD_MAX_0270,"The tape is clapping everything away. He's saying something, and nobody hears it, probably for years now. Mute."
-W4_STUD_MAX_0290,"He's silent, for the first time. I'd love to know what's going on in there right now, and I've got a button for that."
+W4_STUD_MAX_0290,"He's silent, for the first time. I'd love to know what's going on in there right now."
 W4_STUD_MAX_0310,"I could have said that. I did, too, four worlds ago, on a different sofa."
 W4_STUD_MAX_0350,Nobody's supposed to watch. Everyone's supposed to see everything at once. Then nobody knows what to watch anymore. Channel search.
 W4_STUD_MAX_0380,"You can get up. It's honestly not hard, I only learned it today myself."

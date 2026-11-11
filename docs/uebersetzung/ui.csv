@@ -259,7 +259,7 @@ UI_TASCHE_PFLICHT,Pflichtfach,Always packed
 UI_TASCHE_WAHL,Zwei Wahlfächer,Two free pockets
 UI_TASCHE_AUSLAGE,Daneben liegt,Also here
 UI_TASCHE_FERTIG,Fertig gepackt,Done packing
-UI_TASCHE_HILFE,Klick packt ein oder aus. Rechtsklick: Pixel fragen.,Click packs or unpacks. Right-click: ask Pixel.
+UI_TASCHE_HILFE,Auswählen packt ein oder aus. Ansehen: Pixel fragen.,Select packs or unpacks. Look at: ask Pixel.
 UI_SPIELTITEL,Couch Quest,Couch Quest
 UI_SPIELUNTERTITEL,Max gegen die Welten,Max against the worlds
 UI_KANAL,Kanal,Channel
