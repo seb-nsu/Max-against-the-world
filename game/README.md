@@ -160,6 +160,10 @@ Der Web-Build läuft ohne Threads und braucht deshalb keine besonderen Server-He
 Ausprobieren reicht `python3 -m http.server` im Ordner `build/web`. Im Browser lädt der
 Telemetrie-Knopf in den Einstellungen das Protokoll als Datei herunter.
 
+Nach jedem Push auf `main` stellt der Workflow „Web (GitHub Pages)“ (`.github/workflows/web.yml`)
+den Web-Build unter https://seb-nsu.github.io/Max-against-the-world/ bereit. Einmalig muss dafür
+in den Repository-Einstellungen unter Pages die Quelle „GitHub Actions“ gewählt sein.
+
 Dafür müssen die Export-Vorlagen 4.7.2 installiert sein (Editor: Editor → Export-Vorlagen
 verwalten; oder `Godot_v4.7.2-stable_export_templates.tpz` nach
 `~/.local/share/godot/export_templates/4.7.2.stable/` entpacken). Ohne eigene Vorlagen geht es
