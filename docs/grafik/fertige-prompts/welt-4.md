@@ -116,3 +116,62 @@ Concept art for a 2D point-and-click adventure game in the style of classic 1990
 ```text
 Concept art for a 2D point-and-click adventure game in the style of classic 1990s adventure games, front view of the room with gentle one-point perspective, camera at the eye level of a standing person looking straight at the back wall, back wall parallel to the picture plane, vanishing point in the center at about 40 percent of the image height, side walls at most as narrow angled strips at the image edges, open walkable floor with gentle depth across the lower third to half of the image kept free of objects except at the left and right edges, wide shot from further back so the room feels spacious: a standing adult at the front edge would be about 52 percent of the image height, so doors and tall cupboards reach only about 50 percent of the image height, chairs about 25 percent and tables about 22 percent, no top-down, bird's-eye or strong three-quarter view, no fisheye, every object drawn exactly as described and nothing added, no faces or robot features on objects, small loose objects that can be picked up left out, book spines, calendars, posters and labels without any letters or numbers, light from the upper left with soft shadows to the lower right, humorous and whimsical, warm hand-painted look, 16:9, no text, no letters, no logos. A dim basement corridor below a TV network building, front view with gentle depth. Center: a huge rusty trash compactor pit with heavy steel walls, filled with tangled video tapes and film reels, one black VHS tape with a pale label strip sticking out at the front, a small eye on a stalk peeking out from the tapes. Left: shelves of dusty tape boxes with blank labels. Right: a plain grey service door at the top of a few concrete steps, leading back up to the lobby. Flickering neon tube on the ceiling, black marble and gold trim fading into bare concrete. glossy corporate TV network look: black marble, gold trim and glowing monitor blue, polished floor reflections.
 ```
+
+# Gegenstände
+
+Je Sammelbild den Block komplett in Gemini kopieren, keine Skizze anhängen. Umrechnen mit
+`tools/figur.py` (Endesga-Palette), Ausschneiden je Zelle.
+
+## Tasten-Symbole (2×3, 32×32)
+
+```text
+Pixel art item sheet, grid exactly as given in the motif, items in reading order left to right and top to bottom, each item centered in its own cell at the same scale, about 48x48 pixels each, slight front-side view, no overlap between cells, dark colored outline (not pure black), light from upper left, plain transparent background, no text, letters or numbers on any item. 2x3 grid of round grey rubber remote buttons, each about 32x32 with one white symbol, same scale: double arrow channel switch; two pause bars; double left arrows; crossed-out speaker; speech bubble with three lines; magnifier with radio waves.
+```
+
+## Splitscreen-Adapter (1×1)
+
+```text
+Pixel art item sheet, grid exactly as given in the motif, items in reading order left to right and top to bottom, each item centered in its own cell at the same scale, about 48x48 pixels each, slight front-side view, no overlap between cells, dark colored outline (not pure black), light from upper left, plain transparent background, no text, letters or numbers on any item. A small grey plastic TV adapter box with two short cables ending in plugs, a white symbol of two side-by-side rectangles on top and a small gold glitter sticker from the game show.
+```
+
+## Genre-Ketten (2×3)
+
+```text
+Pixel art item sheet, grid exactly as given in the motif, items in reading order left to right and top to bottom, each item centered in its own cell at the same scale, about 48x48 pixels each, slight front-side view, no overlap between cells, dark colored outline (not pure black), light from upper left, plain transparent background, no text, letters or numbers on any item. 2x3 grid, chain states left to right, same scale: a fresh bright yellow banana peel; the same peel black, soft and rotten; a green banana-shaped stink bomb with a lit fuse; a pale yellow wedge of fondue cheese; the same wedge glowing soft yellow; the same wedge glowing radioactive green with a sparkle.
+```
+
+## Sender (2×2)
+
+```text
+Pixel art item sheet, grid exactly as given in the motif, items in reading order left to right and top to bottom, each item centered in its own cell at the same scale, about 48x48 pixels each, slight front-side view, no overlap between cells, dark colored outline (not pure black), light from upper left, plain transparent background, no text, letters or numbers on any item. 2x2 grid, same scale: a folded TV guide magazine with a blank cover and a dog-eared corner; a folded white bedsheet; the same white bedsheet knotted into a superhero cape; a heavy black anvil.
+```
+
+## Comic-Panels (1×4, Sortier-Bildschirm, kein Inventar)
+
+```text
+Pixel art item sheet, grid exactly as given in the motif, items in reading order left to right and top to bottom, each item centered in its own cell at the same scale, about 48x48 pixels each, slight front-side view, no overlap between cells, dark colored outline (not pure black), light from upper left, plain transparent background, no text, letters or numbers on any item. 1x4 single comic panels with thick black borders and halftone dots, each with a small wall clock in the top corner, the same sticker-suited villain in all four: the clean villain laughing, clock at 12:00, an empty cloud-shaped thought bubble with small trailing circles; a hero in a bedsheet cape leaping, a banana peel already on the floor, the villain slipping, clock at 12:01, an empty jagged shout bubble; a big empty explosion burst over a cheese vat, clock at 12:02, no speech bubble; the villain's legs sticking out of a vat of cheese, the hero wearing a crown made of cheese, clock at 12:03, a small empty round bubble.
+```
+
+## Drehbuch (1×1)
+
+```text
+Pixel art item sheet, grid exactly as given in the motif, items in reading order left to right and top to bottom, each item centered in its own cell at the same scale, about 48x48 pixels each, slight front-side view, no overlap between cells, dark colored outline (not pure black), light from upper left, plain transparent background, no text, letters or numbers on any item. A thick stapled script with a blank cover, a brown coffee ring stain and a pencil clipped to it.
+```
+
+## Lichtröhre Deluxe (1×1)
+
+```text
+Pixel art item sheet, grid exactly as given in the motif, items in reading order left to right and top to bottom, each item centered in its own cell at the same scale, about 48x48 pixels each, slight front-side view, no overlap between cells, dark colored outline (not pure black), light from upper left, plain transparent background, no text, letters or numbers on any item. A long fluorescent tube glowing pale blue, still in a flashy blister pack with a gold sticker.
+```
+
+## Archivband (1×1)
+
+```text
+Pixel art item sheet, grid exactly as given in the motif, items in reading order left to right and top to bottom, each item centered in its own cell at the same scale, about 48x48 pixels each, slight front-side view, no overlap between cells, dark colored outline (not pure black), light from upper left, plain transparent background, no text, letters or numbers on any item. A battered black VHS tape with a faded blank handwritten label strip and a bent corner.
+```
+
+## Deko Welt 4 (3×3)
+
+```text
+Pixel art item sheet, grid exactly as given in the motif, items in reading order left to right and top to bottom, each item centered in its own cell at the same scale, about 48x48 pixels each, slight front-side view, no overlap between cells, dark colored outline (not pure black), light from upper left, plain transparent background, no text, letters or numbers on any item. 3x3 grid, same scale: a broken old radio with scratches and a bent antenna; a golden vinyl record in a black frame; a stack of cassette tapes with blank labels; a small grey rain cloud above a drum kit; a laugh track machine with a big red button; a cardboard audience cutout of a smiling person; a toaster on a small podium; a mirrored disco ball; a blank cardboard sign hanging on a string.
+```

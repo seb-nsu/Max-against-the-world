@@ -57,7 +57,7 @@ python3 tools/godot_raeume.py           # + tools/layout/<abschnitt>.yaml → da
 python3 tools/layout_skizzen.py         # Layout-Skizzen mit Tiefe für die Konzeptbilder → docs/grafik/skizzen/
 python3 tools/pixelieren.py ORIGINAL ZIEL  # Gemini-Konzeptbild → Hintergrund 640×360, 32 Farben
 python3 tools/stimmung.py GRUND ZIEL STIMMUNG [--lampe X,Y]  # Lichtstimmung per Umfärben
-python3 tools/prompts_zusammensetzen.py # fertige Konzeptbild-Prompts je Raum → docs/grafik/fertige-prompts/
+python3 tools/prompts_zusammensetzen.py # fertige Prompts je Raum und Sammelbild → docs/grafik/fertige-prompts/
 godot --headless --editor --path game -- --cq-bauen   # Godot-Bau: fehlende Popochiu-Objekte anlegen
 ```
 

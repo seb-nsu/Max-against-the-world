@@ -121,3 +121,50 @@ Concept art for a 2D point-and-click adventure game in the style of classic 1990
 ```text
 Concept art for a 2D point-and-click adventure game in the style of classic 1990s adventure games, front view of the room with gentle one-point perspective, camera at the eye level of a standing person looking straight at the back wall, back wall parallel to the picture plane, vanishing point in the center at about 40 percent of the image height, side walls at most as narrow angled strips at the image edges, open walkable floor with gentle depth across the lower third to half of the image kept free of objects except at the left and right edges, wide shot from further back so the room feels spacious: a standing adult at the front edge would be about 52 percent of the image height, so doors and tall cupboards reach only about 50 percent of the image height, chairs about 25 percent and tables about 22 percent, no top-down, bird's-eye or strong three-quarter view, no fisheye, every object drawn exactly as described and nothing added, no faces or robot features on objects, small loose objects that can be picked up left out, book spines, calendars, posters and labels without any letters or numbers, light from the upper left with soft shadows to the lower right, humorous and whimsical, warm hand-painted look, 16:9, no text, no letters, no logos. Oversized dark throne room at the very top of a wizard tower, night, 640x360, looking slightly ridiculous. Left: a narrow secret door standing open at the left edge, tall vases overflowing with bright flowers. Center: a giant spiky black throne on two steps with a tiny embroidered pink cushion. Right: a small table with stacks of tissue boxes, a tall stained glass window with moonlight and clouds far below. Long violet carpet along the floor in the lower third, kept clear. Torch light from upper left. dusky fairy tale palette of violet, slate grey and pale green, flickering torch light, comically gloomy. Use the attached sketch only for the position and size of objects and exits, not for style, colors or text. Leave the orange marked spots empty.
 ```
+
+# Gegenstände
+
+Je Sammelbild den Block komplett in Gemini kopieren, keine Skizze anhängen. Umrechnen mit
+`tools/figur.py` (Endesga-Palette), Ausschneiden je Zelle.
+
+## Dorf und Taverne (3×3)
+
+```text
+Pixel art item sheet, grid exactly as given in the motif, items in reading order left to right and top to bottom, each item centered in its own cell at the same scale, about 48x48 pixels each, slight front-side view, no overlap between cells, dark colored outline (not pure black), light from upper left, plain transparent background, no text, letters or numbers on any item. 3x3 grid, same scale, left to right: a single shiny gold coin; a small clay bowl of melted yellow cheese fondue; a fluffy white goat skin rug, folded; a paper order slip with blank lines; an empty wooden bucket with a rope handle; the same bucket full of water; a plain wooden cooking spoon without cheese; a rolled-up wanted poster showing a blank face; a small folded paper note with a pencil smudge.
+```
+
+## Zaubertrank (2×4)
+
+```text
+Pixel art item sheet, grid exactly as given in the motif, items in reading order left to right and top to bottom, each item centered in its own cell at the same scale, about 48x48 pixels each, slight front-side view, no overlap between cells, dark colored outline (not pure black), light from upper left, plain transparent background, no text, letters or numbers on any item. 2x4 grid, same scale, left to right, last cell empty: an empty clay jug with a blank name tag on a string; the same jug full of white goat milk; a small glowing blue mushroom; a crumpled paper note with short blank rhyme lines; a round bottle of glowing yellow potion with a cork; a magic bean with a tiny sparkle; the red-and-white striped sock bulging with pink pollen.
+```
+
+## Flaschen (1×6)
+
+```text
+Pixel art item sheet, grid exactly as given in the motif, items in reading order left to right and top to bottom, each item centered in its own cell at the same scale, about 48x48 pixels each, slight front-side view, no overlap between cells, dark colored outline (not pure black), light from upper left, plain transparent background, no text, letters or numbers on any item. 1x6 row, left to right, standing on one baseline: six small potion bottles of identical opaque dark brown glass with cork stoppers, bottles two and five twice as tall as the others, no labels, nothing visible inside, otherwise no differences in color or shape.
+```
+
+## Wald und Turm (2×4)
+
+```text
+Pixel art item sheet, grid exactly as given in the motif, items in reading order left to right and top to bottom, each item centered in its own cell at the same scale, about 48x48 pixels each, slight front-side view, no overlap between cells, dark colored outline (not pure black), light from upper left, plain transparent background, no text, letters or numbers on any item. 2x4 grid, same scale, left to right, last cell empty: a red plastic squeeze bottle with a blank label; a rolled parchment contract with an empty signature line; the same contract unrolled with a red ketchup smear on the signature line; an old school report card with blank grade lines and a small heart doodle in the corner; a large golden dragon egg with fine overlapping scales; a rusty sword with a small blank name tag on a string; a fizzing green potion bottle with a blank label.
+```
+
+## Niesrosen (1×2)
+
+```text
+Pixel art item sheet, grid exactly as given in the motif, items in reading order left to right and top to bottom, each item centered in its own cell at the same scale, about 48x48 pixels each, slight front-side view, no overlap between cells, dark colored outline (not pure black), light from upper left, plain transparent background, no text, letters or numbers on any item. 1x2, world sprite about 100 pixels wide, not an inventory icon, same bush in both cells: left a round green bush with large closed pink rose buds; right the same bush with fully opened pink roses releasing a cloud of pink pollen.
+```
+
+## Smaugis Kram (3×3, Rätsel 12)
+
+```text
+Pixel art item sheet, grid exactly as given in the motif, items in reading order left to right and top to bottom, each item centered in its own cell at the same scale, about 48x48 pixels each, slight front-side view, no overlap between cells, dark colored outline (not pure black), light from upper left, plain transparent background, no text, letters or numbers on any item. 3x3 grid of dragon hoard junk at world-sprite scale, about 32 to 64 pixels each, left to right: a bundle of rusty swords without name tags tied with rope; a bundle of old burnt-out torches tied with string; a dusty golden chandelier; a pile of gold coins; a rusty helmet; a cracked hand mirror; a single striped sock; a dented teapot; a small treasure chest.
+```
+
+## Deko Welt 1 (3×3)
+
+```text
+Pixel art item sheet, grid exactly as given in the motif, items in reading order left to right and top to bottom, each item centered in its own cell at the same scale, about 48x48 pixels each, slight front-side view, no overlap between cells, dark colored outline (not pure black), light from upper left, plain transparent background, no text, letters or numbers on any item. 3x3 grid of look-only props at world-sprite scale, about 32 to 64 pixels each, left to right: two coconut halves on a straw bale; a wooden lute with a small tin cup holding one coin; a wanted poster with a red dragon drawing and a blank reward line; a holey red-and-white striped sock on a small stool; a brass gramophone with a large horn; a single glass slipper; a small grumpy coffee machine with a blank crossed-out sticker; a thin black diary with a skull on the cover; a small clay ocarina.
+```

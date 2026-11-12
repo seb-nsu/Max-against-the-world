@@ -107,3 +107,68 @@ Concept art for a 2D point-and-click adventure game in the style of classic 1990
 ```text
 Concept art for a 2D point-and-click adventure game in the style of classic 1990s adventure games, front view of the room with gentle one-point perspective, camera at the eye level of a standing person looking straight at the back wall, back wall parallel to the picture plane, vanishing point in the center at about 40 percent of the image height, side walls at most as narrow angled strips at the image edges, open walkable floor with gentle depth across the lower third to half of the image kept free of objects except at the left and right edges, wide shot from further back so the room feels spacious: a standing adult at the front edge would be about 52 percent of the image height, so doors and tall cupboards reach only about 50 percent of the image height, chairs about 25 percent and tables about 22 percent, no top-down, bird's-eye or strong three-quarter view, no fisheye, every object drawn exactly as described and nothing added, no faces or robot features on objects, small loose objects that can be picked up left out, book spines, calendars, posters and labels without any letters or numbers, light from the upper left with soft shadows to the lower right, humorous and whimsical, warm hand-painted look, 16:9, no text, no letters, no logos. KARTE: illustrated map of one river flowing from the upper left to the lower right. Upper left: yellow desert with a small upside-down pyramid, a sphinx and a wooden dock. Middle: green olive hills with an oval stadium, white columns and a wooden dock. Lower right: a walled seaside city with a harbor where the river meets the sea. A tiny crocodile pulling a raft on the river. The three docks as clearly separated clickable spots, no text, no labels. warm desert palette of sand, ochre and gold, turquoise river water, harsh midday sun.
 ```
+
+# Gegenstände
+
+Je Sammelbild den Block komplett in Gemini kopieren, keine Skizze anhängen. Umrechnen mit
+`tools/figur.py` (Endesga-Palette), Ausschneiden je Zelle.
+
+## Ägypten (3×4)
+
+```text
+Pixel art item sheet, grid exactly as given in the motif, items in reading order left to right and top to bottom, each item centered in its own cell at the same scale, about 48x48 pixels each, slight front-side view, no overlap between cells, dark colored outline (not pure black), light from upper left, plain transparent background, no text, letters or numbers on any item. 3x4 grid, same scale, row by row, left to right: a clay tablet with a few painted hieroglyph symbols; a golden plate engraved with a sun; a golden cloth sack of grain tied with gold rope, a large round pharaoh seal with a blank center on its front; a blank papyrus sheet; a tiny clay ink pot with a squid drawing; a small rolled papyrus tied with string, a grease stain on it; a round flat bread; a bunch of brown dates; a brown onion; a round flat bread topped with dates, raw and pale; the same raw bread with dates and onion pieces on top; the same bread baked golden brown with a crisp crust.
+```
+
+## Olympia (3×3)
+
+```text
+Pixel art item sheet, grid exactly as given in the motif, items in reading order left to right and top to bottom, each item centered in its own cell at the same scale, about 48x48 pixels each, slight front-side view, no overlap between cells, dark colored outline (not pure black), light from upper left, plain transparent background, no text, letters or numbers on any item. 3x3 grid, same scale, left to right: a small wax tablet start pass with a round seal; an olive wreath; a bronze discus; a colorful plastic flying disc; a black vinyl record; a blank papyrus form with an empty seal circle; the same form covered in blue ballpoint scribbles; a blank wooden sign on a cord; a papyrus sheet covered in smeared dark blue ink lines written with a finger, one clear fingerprint.
+```
+
+## Feigen-Zustände (1×4, Baum doppelt so groß)
+
+```text
+Pixel art item sheet, grid exactly as given in the motif, items in reading order left to right and top to bottom, each item centered in its own cell at the same scale, about 48x48 pixels each, slight front-side view, no overlap between cells, dark colored outline (not pure black), light from upper left, plain transparent background, no text, letters or numbers on any item. 1x4, left to right: a single fig seed; a tiny fig sapling in a small clay pot; a small fig tree in a large clay pot, full of plump purple figs, drawn twice as tall as the other items; a handful of three picked purple figs.
+```
+
+## Syrakus (2×3)
+
+```text
+Pixel art item sheet, grid exactly as given in the motif, items in reading order left to right and top to bottom, each item centered in its own cell at the same scale, about 48x48 pixels each, slight front-side view, no overlap between cells, dark colored outline (not pure black), light from upper left, plain transparent background, no text, letters or numbers on any item. 2x3 grid, same scale, left to right: a bronze balance scale; a clay measuring cup with scale lines; a golden crown; a gold bar; a scroll with a blueprint of a sphere inside a cylinder; a small polished bronze mirror on a short handle.
+```
+
+## Schriftstücke (1×4)
+
+```text
+Pixel art item sheet, grid exactly as given in the motif, items in reading order left to right and top to bottom, each item centered in its own cell at the same scale, about 48x48 pixels each, slight front-side view, no overlap between cells, dark colored outline (not pure black), light from upper left, plain transparent background, no text, letters or numbers on any item. 1x4, same scale, left to right: a rolled papyrus scroll tied with a red cord; an old official circular, a dusty papyrus sheet with a huge red wax seal; a folded letter sealed with a small sphinx-shaped seal; a rolled papyrus plan tied with a turquoise ribbon, four empty square boxes visible at its open end.
+```
+
+## Getränke-Zustände (1×3)
+
+```text
+Pixel art item sheet, grid exactly as given in the motif, items in reading order left to right and top to bottom, each item centered in its own cell at the same scale, about 48x48 pixels each, slight front-side view, no overlap between cells, dark colored outline (not pure black), light from upper left, plain transparent background, no text, letters or numbers on any item. 1x3, same scale, left to right, three clay amphoras of exactly the same shape and size: grape juice with painted grapes; wine with a painted laurel; vinegar with a painted sour face.
+```
+
+## Grabstein-Zustände (1×4)
+
+```text
+Pixel art item sheet, grid exactly as given in the motif, items in reading order left to right and top to bottom, each item centered in its own cell at the same scale, about 48x48 pixels each, slight front-side view, no overlap between cells, dark colored outline (not pure black), light from upper left, plain transparent background, no text, letters or numbers on any item. 1x4, world sprite about 48x80 pixels, same footprint and position in every cell, left to right: a freshly carved white tombstone with a relief of a sphere inside a cylinder; the same tombstone turned grey, edges worn and a few fine cracks, no moss; the same tombstone weathered, cracked and covered in moss; a crumbled pile of stone chunks spilling from an open burlap bag.
+```
+
+## Wunderdinge (1×3)
+
+```text
+Pixel art item sheet, grid exactly as given in the motif, items in reading order left to right and top to bottom, each item centered in its own cell at the same scale, about 48x48 pixels each, slight front-side view, no overlap between cells, dark colored outline (not pure black), light from upper left, plain transparent background, no text, letters or numbers on any item. 1x3, same scale, left to right: a modern smartphone with a dark screen showing only a tiny red nearly empty battery symbol; a small pack of chewing gum in a plain pink wrapper; a blue click ballpoint pen.
+```
+
+## Hieroglyphen (4×4, 32×32)
+
+```text
+Pixel art item sheet, grid exactly as given in the motif, items in reading order left to right and top to bottom, each item centered in its own cell at the same scale, about 48x48 pixels each, slight front-side view, no overlap between cells, dark colored outline (not pure black), light from upper left, plain transparent background, no text, letters or numbers on any item. 4x4 grid of square sandstone tiles, each 32x32 pixels with one simple dark red-brown hieroglyph symbol in the same line weight, row by row, left to right: eye, bird, crocodile, bread loaf; cat, sun, water waves, standing man; feather, reed, open hand, ear; house, mouth, scarab, seated pharaoh.
+```
+
+## Deko Welt 2 (3×3)
+
+```text
+Pixel art item sheet, grid exactly as given in the motif, items in reading order left to right and top to bottom, each item centered in its own cell at the same scale, about 48x48 pixels each, slight front-side view, no overlap between cells, dark colored outline (not pure black), light from upper left, plain transparent background, no text, letters or numbers on any item. 3x3 grid of look-only props at world-sprite scale, about 32 to 96 pixels each, left to right: a large papyrus pyramid blueprint shown upside down; a standing golden sarcophagus with a sleeping mask over its painted eyes; a small mummified cat; a scroll with a steam engine sketch; a tiny model of a leaning marble tower; a row of three empty amphoras; a wooden lyre with an upturned straw hat for coins; a round haystack; a stone tablet with blank engraved lines.
+```

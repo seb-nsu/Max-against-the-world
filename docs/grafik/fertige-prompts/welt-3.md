@@ -106,3 +106,50 @@ Concept art for a 2D point-and-click adventure game in the style of classic 1990
 ```text
 Concept art for a 2D point-and-click adventure game in the style of classic 1990s adventure games, front view of the room with gentle one-point perspective, camera at the eye level of a standing person looking straight at the back wall, back wall parallel to the picture plane, vanishing point in the center at about 40 percent of the image height, side walls at most as narrow angled strips at the image edges, open walkable floor with gentle depth across the lower third to half of the image kept free of objects except at the left and right edges, wide shot from further back so the room feels spacious: a standing adult at the front edge would be about 52 percent of the image height, so doors and tall cupboards reach only about 50 percent of the image height, chairs about 25 percent and tables about 22 percent, no top-down, bird's-eye or strong three-quarter view, no fisheye, every object drawn exactly as described and nothing added, no faces or robot features on objects, small loose objects that can be picked up left out, book spines, calendars, posters and labels without any letters or numbers, light from the upper left with soft shadows to the lower right, humorous and whimsical, warm hand-painted look, 16:9, no text, no letters, no logos. Effect overlay: the same scene redrawn only as glowing green wireframe outlines on pure black, same framing, every hotspot outlined and tagged with a small blank rectangular label, faint scanlines, the labels stay blank, no letters. overly clean daytime city palette with a faint green tint, flat perfect blue sky, even shadowless-looking light, no dirt anywhere, slightly too symmetrical.
 ```
+
+# Gegenstände
+
+Je Sammelbild den Block komplett in Gemini kopieren, keine Skizze anhängen. Umrechnen mit
+`tools/figur.py` (Endesga-Palette), Ausschneiden je Zelle.
+
+## Verwandlung (2×4)
+
+```text
+Pixel art item sheet, grid exactly as given in the motif, items in reading order left to right and top to bottom, each item centered in its own cell at the same scale, about 48x48 pixels each, slight front-side view, no overlap between cells, dark colored outline (not pure black), light from upper left, plain transparent background, no text, letters or numbers on any item. 2x4 grid, each simulation item directly left of its reality form, same scale: a cream recipe card with neat blank handwriting lines \| a golden fortune cookie with a white paper slip sticking out; a glowing green digital file icon \| a thick brown paper folder with a metal clip and a blank red round stamp mark; a glowing green key built from code symbols \| a white plastic key card with a magnetic stripe; a small brown paper cookie bag, open at the top, full of round pale cinnamon cookies \| the same paper bag full of bone-shaped dog biscuits.
+```
+
+## Kekse-Zustände (1×2)
+
+```text
+Pixel art item sheet, grid exactly as given in the motif, items in reading order left to right and top to bottom, each item centered in its own cell at the same scale, about 48x48 pixels each, slight front-side view, no overlap between cells, dark colored outline (not pure black), light from upper left, plain transparent background, no text, letters or numbers on any item. 1x2 grid, same small brown paper cookie bag both times: the bag with round cookies, pale, dull and dry; the same bag with golden oven-warm cookies and a little steam.
+```
+
+## Unterstadt (2×3)
+
+```text
+Pixel art item sheet, grid exactly as given in the motif, items in reading order left to right and top to bottom, each item centered in its own cell at the same scale, about 48x48 pixels each, slight front-side view, no overlap between cells, dark colored outline (not pure black), light from upper left, plain transparent background, no text, letters or numbers on any item. 2x3 grid, same scale: a small flat round red pharmacy tin with a green cross on the lid, open, one shiny red lozenge inside; the same tin in blue with one blue lozenge; a plain white office coffee mug; a torn phone book page with blank columns; a small paper slip with three stripes, red with circle, green with triangle, yellow with square; a laminated sheet with a table of cat paw symbols.
+```
+
+## Labor (1×5)
+
+```text
+Pixel art item sheet, grid exactly as given in the motif, items in reading order left to right and top to bottom, each item centered in its own cell at the same scale, about 48x48 pixels each, slight front-side view, no overlap between cells, dark colored outline (not pure black), light from upper left, plain transparent background, no text, letters or numbers on any item. 1x5 grid, same scale: a white handheld science gadget with an orange tip and a small red empty-battery light; a yellow rubber chicken; the same yellow rubber chicken with a faint red glow around it; an elongated orange energy cell shaped like an oversized battery, glowing; the same cell dark grey and covered in frost.
+```
+
+## Omas Sparschwein (1×3, Szenen-Sprites für Rätsel 4, kein Inventar)
+
+```text
+Pixel art item sheet, grid exactly as given in the motif, items in reading order left to right and top to bottom, each item centered in its own cell at the same scale, about 48x48 pixels each, slight front-side view, no overlap between cells, dark colored outline (not pure black), light from upper left, plain transparent background, no text, letters or numbers on any item. 1x3 grid: a blue ceramic piggy bank with a white flower pattern and a coin slot; a small rolled recipe slip tied with string; a small heap of blue ceramic shards.
+```
+
+## Locher (1×2, Szenen-Sprites für das Zeitlupen-Ausweichen im Büroturm, kein Inventar)
+
+```text
+Pixel art item sheet, grid exactly as given in the motif, items in reading order left to right and top to bottom, each item centered in its own cell at the same scale, about 48x48 pixels each, slight front-side view, no overlap between cells, dark colored outline (not pure black), light from upper left, plain transparent background, no text, letters or numbers on any item. 1x2 grid: a grey metal office hole punch, side view; a small puff of round white paper confetti dots.
+```
+
+## Deko Welt 3 (3×3)
+
+```text
+Pixel art item sheet, grid exactly as given in the motif, items in reading order left to right and top to bottom, each item centered in its own cell at the same scale, about 48x48 pixels each, slight front-side view, no overlap between cells, dark colored outline (not pure black), light from upper left, plain transparent background, no text, letters or numbers on any item. 3x3 grid, same scale: a perfectly straight silver fork; a stack of greasy pizza boxes; a cardboard cake with a painted candle; a corkboard with pinned charts; a white paper origami unicorn; a towel on a wall hook; a small synthesizer keyboard on a folding stand; a bulky old mainframe cabinet with two tape reels and a round yellow lamp; a wooden cuckoo clock with its little door open and a small bird.
+```

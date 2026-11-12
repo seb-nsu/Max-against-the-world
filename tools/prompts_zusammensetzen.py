@@ -18,6 +18,13 @@ bricht das Werkzeug mit einer Meldung ab. Zeilen ohne eigenes Konzeptbild werden
 Motive, die mit „Keine eigene Grafik“, „Wiederverwendung“ oder einem Figuren-Baustein
 („FIGUR-…“) beginnen.
 
+Gegenstände: Jede Tabelle „| Sammelbild | Motiv |“ wird zu Baustein GEGENSTÄNDE + Motiv, angehängt
+an dieselbe Datei unter „# Gegenstände“; die weltenübergreifenden aus 00-stil-und-werkzeuge.md
+landen in fertige-prompts/00-weltenuebergreifend.md. Zeilen der Tabellen „### Große Objekte…“ mit
+Baustein GEGENSTÄNDE oder EFFEKT kommen dazu. Deutsche Anmerkungen in Klammern („(Opas Teetasse)“)
+fliegen aus dem Prompt; Nahansichten (Motiv beginnt mit HINTERGRUND) bleiben draußen, sie sind
+Hintergründe. Hier hängt keine Skizze an, kein Farb-Baustein (feste Palette beim Umrechnen).
+
 Aufruf:  python3 tools/prompts_zusammensetzen.py [--pruefen]
 """
 import re
@@ -34,6 +41,7 @@ DUESTER = ("Keller", "Kammer", "Thronsaal", "Turm")
 OHNE_SKIZZE = ("welt-3", "welt-4")
 AUSSEN_MARKE = "**Außenszenen** (Baustein KONZEPT-AUSSEN):"
 OHNE_KONZEPTBILD = ("Keine eigene Grafik", "Wiederverwendung", "FIGUR-")
+DEUTSCH = re.compile(r"[äöüßÄÖÜ„“]|\b(der|die|das|und|von|wird|steht|ist|sind|als|für|nur|auf|mit|kein|Zuordnung)\b")
 fehler = []
 
 
@@ -117,7 +125,49 @@ def skizze_fuer(liste, szene):
     return None
 
 
-def datei_bauen(name, konzept, konzept_aussen):
+def ohne_anmerkungen(motiv):
+    """Deutsche Anmerkungen in Klammern und Werkzeug-Vorsätze aus einem Motiv entfernen."""
+    motiv = re.sub(r"^`[^`]+`:\s*", "", motiv)
+    motiv = re.sub(r"\s*\((?=[^)]*(?:[äöüßÄÖÜ„“]|\b[A-Z][a-zäöü]+\b|\d+ Jahre))[^)]*\)", "", motiv)
+    # Deutsche Sätze hinter dem englischen Motiv („Zuordnung von links: …“) weglassen
+    saetze = re.split(r"(?<=\.)\s+(?=[A-ZÄÖÜ])", motiv.strip())
+    motiv = " ".join([saetze[0]] + [x for x in saetze[1:] if not DEUTSCH.search(x)])
+    return motiv.strip().rstrip(".")
+
+
+def gegenstands_tabellen(text):
+    """(Name, Zusatz, Motiv, Baustein) für Sammelbilder und große Objekte mit GEGENSTÄNDE/EFFEKT."""
+    out = []
+    for m in re.finditer(r"\| Sammelbild \| Motiv \|\n\| --- \| --- \|\n((?:\|.*\n?)+)", text):
+        for z in m.group(1).splitlines():
+            name, motiv = [c.strip() for c in z.strip().strip("|").split(" | ")][:2]
+            if motiv.startswith("HINTERGRUND"):
+                continue
+            out.append((name, "", motiv, "GEGENSTÄNDE"))
+    for m in re.finditer(r"### Große Objekte[^\n]*\n\n\| Objekt \| Baustein \| Motiv \|\n\| --- \| --- \| --- \|\n((?:\|.*\n?)+)", text):
+        for z in m.group(1).splitlines():
+            name, bau, motiv = [c.strip() for c in z.strip().strip("|").split(" | ")][:3]
+            art = bau.split()[0].rstrip(",")
+            if art in ("GEGENSTÄNDE", "EFFEKT"):
+                out.append((name, bau, motiv, art))
+    return out
+
+
+def gegenstaende_bauen(text, bausteine):
+    out = []
+    for name, bau, motiv, art in gegenstands_tabellen(text):
+        out += [f"## {name}", ""]
+        if bau:
+            out += [f"**Hinweis:** {bau}", ""]
+        out += ["```text", f"{bausteine[art]} {ohne_anmerkungen(motiv)}.", "```", ""]
+    if not out:
+        return []
+    return ["# Gegenstände", "",
+            "Je Sammelbild den Block komplett in Gemini kopieren, keine Skizze anhängen. Umrechnen mit",
+            "`tools/figur.py` (Endesga-Palette), Ausschneiden je Zelle.", ""] + out
+
+
+def datei_bauen(name, konzept, konzept_aussen, bausteine):
     text = (GRAFIK / f"{name}.md").read_text(encoding="utf-8")
     werte = farb_bausteine(text)
     liste = {} if name in OHNE_SKIZZE else skizzen(text)
@@ -151,6 +201,7 @@ def datei_bauen(name, konzept, konzept_aussen):
         satz = f" {SKIZZE_SATZ}" if sk else ""
         baustein = konzept_aussen if szene in aussen else konzept
         out += ["```text", f"{baustein} {motiv.rstrip('.')}. {farbe}.{satz}", "```", ""]
+    out += gegenstaende_bauen(text, bausteine)
     return "\n".join(out)
 
 
@@ -159,9 +210,15 @@ def main():
     stil = (GRAFIK / "00-stil-und-werkzeuge.md").read_text(encoding="utf-8")
     konzept = textblock_nach(stil, "**KONZEPT**")
     konzept_aussen = textblock_nach(stil, "**KONZEPT-AUSSEN**")
+    bausteine = {"GEGENSTÄNDE": textblock_nach(stil, "**GEGENSTÄNDE**"),
+                 "EFFEKT": textblock_nach(stil, "**EFFEKT**")}
     veraltet = []
     ZIEL.mkdir(exist_ok=True)
-    gebaut = {name: datei_bauen(name, konzept, konzept_aussen) for name in DATEIEN}
+    gebaut = {name: datei_bauen(name, konzept, konzept_aussen, bausteine) for name in DATEIEN}
+    gebaut["00-weltenuebergreifend"] = "\n".join(
+        ["# Fertige Prompts: Weltenübergreifende Gegenstände", "",
+         "Erzeugt von `tools/prompts_zusammensetzen.py` aus `../00-stil-und-werkzeuge.md` (dort ändern, nicht hier).",
+         ""] + gegenstaende_bauen(stil, bausteine)[2:])
     if fehler:
         for f in fehler:
             print("FEHLER  " + f)
@@ -176,7 +233,7 @@ def main():
     if pruefen and veraltet:
         print("Veraltet (python3 tools/prompts_zusammensetzen.py):", ", ".join(veraltet))
         sys.exit(1)
-    print(f"{len(DATEIEN)} Dateien" + (" geprüft" if pruefen else f" → {ZIEL}"))
+    print(f"{len(gebaut)} Dateien" + (" geprüft" if pruefen else f" → {ZIEL}"))
 
 
 if __name__ == "__main__":
