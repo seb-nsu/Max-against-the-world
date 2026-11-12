@@ -37,7 +37,7 @@ wohnzimmer:
     girlande: {rect: [133, 11, 373, 27], gehe: [320, 320], name: Girlande, versteckt: true}
     geschenke: {rect: [395, 268, 35, 29], gehe: [420, 300], name: Geschenke, versteckt: true}
   props:
-    teetasse: {rect: [300, 222, 18, 18], gehe: [310, 318]}   # Opas Teetasse auf dem Couchtisch, zum Mitnehmen
+    teetasse: {rect: [300, 227, 18, 13], gehe: [310, 318]}   # Opas Teetasse auf dem Couchtisch, zum Mitnehmen
   ausgaenge:
     treppenhaus: {rect: [558, 42, 77, 258], gehe: [600, 305]}
 
@@ -83,7 +83,7 @@ dachboden:
     opa: [400, 287]
   props:
     zapp_o_mat: {rect: [325, 109, 80, 115], gehe: [365, 243], item: null}
-    dosenoeffner: {rect: [236, 186, 14, 20], gehe: [250, 262]}   # hängt rechts an der Werkbank
+    dosenoeffner: {rect: [234, 186, 18, 18], gehe: [250, 262]}   # hängt rechts an der Werkbank
     drahtkleiderbuegel: {rect: [600, 125, 27, 19], gehe: [600, 290]}
   hotspots:
     drehknopf: {rect: [304, 157, 19, 21], gehe: [320, 243], name: Drehknopf}

@@ -1,4 +1,10 @@
 #!/usr/bin/env python3
+
+Gegenstände aus einem Sammelbild (Raster aus gleich großen Zellen), je Zelle ein Sprite:
+     python3 tools/figur.py gegenstaende sammelbild.png ordner --raster 7x1 --namen=a,b,- \
+         [--groesse 42] [--ausschnitt X,Y,B,H] [--kontur keine] [--linien 0]
+   --groesse ist die längste Seite (Inventar 42, Szene kleiner), „-“ überspringt eine Zelle,
+   --linien 0 für Draht und andere dünne helle Dinge.
 """Figuren aus Konzeptbildern (Gemini) zu Sprites umrechnen und per Code bewegen.
 
 Vorgehen nach Codixel (github.com/mankidev/codixel, MIT): Figur freistellen, auf Zielgröße und Palette
@@ -371,6 +377,36 @@ def sprite(quelle, hoehe, ansicht=1, spiegeln=False, ausschnitt=None, palette="e
     return Image.fromarray(fertig(klein, alpha, palette, glatt, konturfarbe, spiegeln), "RGBA")
 
 
+def gegenstaende(quelle, ausschnitt, spalten, zeilen, groesse, palette="endesga", tol=40, loch_tol=20,
+                 konturfarbe=None, glatt=True):
+    """Sammelbild (Raster aus gleich großen Zellen) zu einzelnen Sprites: je Zelle Hintergrund von den
+    Rändern her und gleichfarbige Löcher (Bügel, Henkel) entfernen, auf die längste Seite = groesse
+    bringen. Keine Bodenlinien-Suche wie bei Figuren (Untertassen und Bügel sind waagrecht)."""
+    rgb = np.ascontiguousarray(np.asarray(Image.open(quelle).convert("RGB")))
+    x, y, b, h = ausschnitt or (0, 0, rgb.shape[1], rgb.shape[0])
+    zb, zh = b / spalten, h / zeilen
+    rand = max(4, round(min(zb, zh) * 0.06))   # Rasterlinien zwischen den Zellen abschneiden
+    out = []
+    for j in range(zeilen):
+        for i in range(spalten):
+            x0, y0 = round(x + i * zb) + rand, round(y + j * zh) + rand
+            zelle = np.ascontiguousarray(rgb[y0:round(y + (j + 1) * zh) - rand, x0:round(x + (i + 1) * zb) - rand])
+            bg = hintergrund_maske(zelle, tol)
+            r = np.concatenate([zelle[0], zelle[-1], zelle[:, 0], zelle[:, -1]]).astype(np.float32)
+            nah = np.sqrt(((zelle.astype(np.float32) - np.median(r, 0)) ** 2).sum(-1)) <= loch_tol
+            vorn = ~(bg | nah)
+            vorn = np.asarray(Image.fromarray(vorn.astype(np.uint8) * 255).filter(ImageFilter.MinFilter(3))
+                              .filter(ImageFilter.MaxFilter(3))) > 0
+            ys, xs = np.nonzero(vorn)
+            if not len(ys):
+                out.append(None); continue
+            rahmen = (xs.min(), ys.min(), xs.max() + 1, ys.max() + 1)
+            hoehe = max(1, round(groesse * (rahmen[3] - rahmen[1]) / max(rahmen[2] - rahmen[0], rahmen[3] - rahmen[1])))
+            klein, alpha = verkleinern(zelle, ~vorn, rahmen, hoehe)
+            out.append(Image.fromarray(fertig(klein, alpha, palette, glatt, konturfarbe, False), "RGBA"))
+    return out
+
+
 def zyklus(quelle, hoehe, spiegeln=False, ausschnitt=None, palette="endesga", tol=40, konturfarbe=None,
            glatt=True, farben=12, rand=4, anzahl=0):
     """Alle Figuren eines Bewegungsblatts (etwa acht Gehschritte) im selben Maßstab: die höchste Figur wird
@@ -631,6 +667,14 @@ def main():
     z.add_argument("--vorschau", type=int, default=0)
     z.add_argument("--ms", type=int, default=110)
     z.add_argument("--bilder", type=int, default=0, help="erwartete Zahl der Figuren auf dem Blatt")
+    g = sub.add_parser("gegenstaende", help="Sammelbild (Raster) zu einzelnen Gegenstands-Sprites")
+    g.add_argument("quelle"); g.add_argument("ordner")
+    g.add_argument("--raster", required=True, help="SPALTENxZEILEN, etwa 7x1")
+    g.add_argument("--namen", required=True, help="Dateinamen in Lesereihenfolge, mit Komma; - = überspringen")
+    g.add_argument("--groesse", type=int, default=42, help="längste Seite in Pixeln (Inventar 42, Szene kleiner)")
+    g.add_argument("--ausschnitt", help="X,Y,B,H des Rasters im Bild (ohne Rand drumherum)")
+    g.add_argument("--palette", default="endesga")
+    g.add_argument("--kontur", default="262b44")
     pk = sub.add_parser("paket", help="Bewegungen einer Figur zu Sprite-Sheet und JSON für Godot")
     pk.add_argument("spez"); pk.add_argument("bild"); pk.add_argument("json")
     n = sub.add_parser("nacharbeit", help="Pixel aus einer JSON-Liste [[x, y, \"rrggbb\"], …] setzen")
@@ -640,7 +684,7 @@ def main():
     r.add_argument("--schritt", type=int, default=8)
     r.add_argument("--skalierung", type=int, default=6)
     r.add_argument("--rig")
-    for b in (s, z):
+    for b in (s, z, g):
         b.add_argument("--saettigung", type=float, default=1.3,
                        help="Farbigkeit vor dem Umfärben verstärken (1.5 bei blassen Konzeptbildern)")
         b.add_argument("--linien", type=float, default=0.4,
@@ -674,6 +718,16 @@ def main():
                 blatt.paste(g, (i * w * v, 0))
             blatt.save(stamm + "_blatt.png")
         print(arg.ziel, len(bilder), "Bilder je", w, "×", h)
+    elif arg.befehl == "gegenstaende":
+        sp, ze = (int(v) for v in arg.raster.lower().split("x"))
+        aus = [int(v) for v in arg.ausschnitt.split(",")] if arg.ausschnitt else None
+        namen = arg.namen.split(",")
+        Path(arg.ordner).mkdir(parents=True, exist_ok=True)
+        for name, bild in zip(namen, gegenstaende(arg.quelle, aus, sp, ze, arg.groesse, arg.palette,
+                                                   konturfarbe=None if arg.kontur == "keine" else arg.kontur)):
+            if name != "-" and bild is not None:
+                bild.save(Path(arg.ordner) / f"{name}.png")
+                print(name, bild.size)
     elif arg.befehl == "paket":
         paket(arg.spez, arg.bild, arg.json)
     elif arg.befehl == "nacharbeit":

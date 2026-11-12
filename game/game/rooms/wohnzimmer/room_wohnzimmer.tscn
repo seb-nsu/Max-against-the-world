@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://c1cxa2a5u0k0l" path="res://grafik/hintergruende/w0_bg_wohnzimmer_v03.png" id="4_01qb2"]
 [ext_resource type="PackedScene" uid="uid://bfpot3ho3wa1r" path="res://game/rooms/wohnzimmer/props/teetasse/prop_teetasse.tscn" id="5_01qb2"]
 [ext_resource type="PackedScene" uid="uid://co4y20dbs3iu" path="res://game/rooms/wohnzimmer/hotspots/fernseher/hotspot_fernseher.tscn" id="5_y7vpg"]
-[ext_resource type="Texture2D" uid="uid://dx616u4s5h1or" path="res://grafik/platzhalter/prop_teetasse.png" id="6_6xbdn"]
+[ext_resource type="Texture2D" uid="uid://c2a1k6jvy7npb" path="res://grafik/props/teetasse.png" id="6_01qb2"]
 [ext_resource type="PackedScene" uid="uid://bispvqq14wo8l" path="res://game/rooms/wohnzimmer/hotspots/familienfoto/hotspot_familienfoto.tscn" id="6_lnns3"]
 [ext_resource type="PackedScene" uid="uid://dik8cnibnsx1d" path="res://game/rooms/wohnzimmer/hotspots/leerer_platz_auf_dem_couchtisch/hotspot_leerer_platz_auf_dem_couchtisch.tscn" id="8_cd42f"]
 [ext_resource type="PackedScene" uid="uid://c86j8km38topt" path="res://game/rooms/wohnzimmer/hotspots/sofa/hotspot_sofa.tscn" id="9_01qb2"]
@@ -38,12 +38,12 @@ texture = ExtResource("4_01qb2")
 description = "UI_RAUM_WOHNZIMMER"
 
 [node name="Teetasse" parent="Props" unique_id=1070336604 instance=ExtResource("5_01qb2")]
-position = Vector2(309, 231)
-texture = ExtResource("6_6xbdn")
+position = Vector2(309, 233.5)
+texture = ExtResource("6_01qb2")
 description = "UI_OBJ_TEETASSE"
-baseline = 9
-walk_to_point = Vector2(1, 87)
-interaction_polygon = PackedVector2Array(-9, -9, 9, -9, 9, 9, -9, 9)
+baseline = 6
+walk_to_point = Vector2(1, 84.5)
+interaction_polygon = PackedVector2Array(-9, -6.5, 9, -6.5, 9, 6.5, -9, 6.5)
 
 [node name="Hotspots" type="Node2D" parent="." unique_id=1232061613]
 

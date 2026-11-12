@@ -375,8 +375,8 @@ func _layout_raeume() -> Array:
 
 ## Ausnahme von der Regel „nur anlegen, nie ändern“, für den Einbau eines echten Hintergrunds:
 ## Hintergrundbild, Laufbereich, Marker, Figurenplätze sowie Lage, Umriss, Laufziel und Baseline
-## aller Hotspots, Ausgänge und Props werden aus dem Layout neu gesetzt. Skripte, Texturen der
-## Props und alles andere bleiben unverändert. Aufruf siehe game/README.md („Grafik ersetzen“).
+## aller Hotspots, Ausgänge und Props werden aus dem Layout neu gesetzt; Props mit echter Grafik
+## (res://grafik/props/<id>.png) bekommen diese als Textur. Skripte und alles andere bleiben unverändert. Aufruf siehe game/README.md („Grafik ersetzen“).
 func _layout_uebernehmen(r: Dictionary) -> void:
 	var sn: String = r.script_name
 	var snake := sn.to_snake_case()
@@ -423,6 +423,11 @@ func _layout_uebernehmen(r: Dictionary) -> void:
 			knoten.get_node("InteractionPolygon").polygon = knoten.interaction_polygon
 		knoten.walk_to_point = Vector2(o[1].gehe[0], o[1].gehe[1]) - rect.get_center()
 		knoten.baseline = int(rect.size.y / 2.0)
+		# Echte Grafik eines Props (res://grafik/props/<id>.png) ersetzt den Platzhalter
+		if o[0].begins_with("Props/") and not String(o[1].get("textur", "")).contains("/platzhalter/") \
+				and ResourceLoader.exists(o[1].textur):
+			knoten.texture = load(o[1].textur)
+			knoten.frames = 1
 	for fd in r.figuren:
 		for c in raum.get_node("Characters").get_children():
 			if c.name.begins_with("Character" + fd.script_name):

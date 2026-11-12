@@ -6,8 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://dljujl27hq1cs" path="res://grafik/hintergruende/w0_bg_dachboden_v03.png" id="4_mcqit"]
 [ext_resource type="PackedScene" uid="uid://c4cbjhulesib6" path="res://game/rooms/dachboden/props/zapp_o_mat/prop_zapp_o_mat.tscn" id="5_k8q6h"]
 [ext_resource type="Texture2D" uid="uid://cbjsrrwdps6v3" path="res://grafik/platzhalter/prop_zapp_o_mat.png" id="6_x6nag"]
+[ext_resource type="Texture2D" uid="uid://chgu62dg1q2uh" path="res://grafik/props/dosenoeffner.png" id="8_mcqit"]
 [ext_resource type="PackedScene" uid="uid://bjk8jriso305i" path="res://game/rooms/dachboden/props/dosenoeffner/prop_dosenoeffner.tscn" id="9_mcqit"]
-[ext_resource type="Texture2D" uid="uid://d2j0lvdfa0p5v" path="res://grafik/platzhalter/prop_dosenoeffner.png" id="10_je6ao"]
 [ext_resource type="PackedScene" uid="uid://b5svirsswb2vx" path="res://game/rooms/dachboden/props/drahtkleiderbuegel/prop_drahtkleiderbuegel.tscn" id="11_m8m18"]
 [ext_resource type="Texture2D" uid="uid://lsqfenf4v86n" path="res://grafik/platzhalter/prop_drahtkleiderbuegel.png" id="12_8pmei"]
 [ext_resource type="PackedScene" uid="uid://5svegdj15ha8" path="res://game/rooms/dachboden/hotspots/drehknopf/hotspot_drehknopf.tscn" id="13_37hlm"]
@@ -49,7 +49,6 @@ height = 360
 [node name="WalkableAreas" type="Node2D" parent="." unique_id=1697259850]
 
 [node name="Boden" parent="WalkableAreas" unique_id=1447233398 instance=ExtResource("2_8cb7j")]
-interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(160, 357, 160, 290, 230, 272, 245, 252, 262, 238, 455, 238, 460, 255, 520, 258, 525, 280, 600, 285, 635, 290, 635, 357)])
 
 [node name="Props" type="Node2D" parent="." unique_id=1697276889]
 
@@ -68,12 +67,12 @@ walk_to_point = Vector2(0, 76.5)
 interaction_polygon = PackedVector2Array(-40, -57.5, 40, -57.5, 40, 57.5, -40, 57.5)
 
 [node name="Dosenoeffner" parent="Props" unique_id=1001585250 instance=ExtResource("9_mcqit")]
-position = Vector2(243, 196)
-texture = ExtResource("10_je6ao")
+position = Vector2(243, 195)
+texture = ExtResource("8_mcqit")
 description = "UI_OBJ_DOSENOEFFNER"
-baseline = 10
-walk_to_point = Vector2(7, 66)
-interaction_polygon = PackedVector2Array(-7, -10, 7, -10, 7, 10, -7, 10)
+baseline = 9
+walk_to_point = Vector2(7, 67)
+interaction_polygon = PackedVector2Array(-9, -9, 9, -9, 9, 9, -9, 9)
 
 [node name="Drahtkleiderbuegel" parent="Props" unique_id=505759806 instance=ExtResource("11_m8m18")]
 position = Vector2(613.5, 134.5)

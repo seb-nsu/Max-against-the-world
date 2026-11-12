@@ -468,15 +468,15 @@
      "name_key": "UI_OBJ_TEETASSE",
      "rect": [
       300,
-      222,
+      227,
       18,
-      18
+      13
      ],
      "gehe": [
       310,
       318
      ],
-     "textur": "res://grafik/platzhalter/prop_teetasse.png",
+     "textur": "res://grafik/props/teetasse.png",
      "gegenstand": "teetasse",
      "ansehen": [
       {
@@ -2229,16 +2229,16 @@
      "script_name": "Dosenoeffner",
      "name_key": "UI_OBJ_DOSENOEFFNER",
      "rect": [
-      236,
+      234,
       186,
-      14,
-      20
+      18,
+      18
      ],
      "gehe": [
       250,
       262
      ],
-     "textur": "res://grafik/platzhalter/prop_dosenoeffner.png",
+     "textur": "res://grafik/props/dosenoeffner.png",
      "gegenstand": "dosenoeffner",
      "ansehen": [],
      "nehmen": {
@@ -2635,7 +2635,7 @@
    ],
    "reist_mit": true,
    "nahansicht": false,
-   "icon": "res://grafik/platzhalter/gegenstand_dosenoeffner.png",
+   "icon": "res://grafik/gegenstaende/dosenoeffner.png",
    "icons": {},
    "ansehen": [
     {
@@ -2667,9 +2667,9 @@
    ],
    "reist_mit": false,
    "nahansicht": false,
-   "icon": "res://grafik/platzhalter/gegenstand_teetasse.png",
+   "icon": "res://grafik/gegenstaende/teetasse.png",
    "icons": {
-    "gefuellt": "res://grafik/platzhalter/gegenstand_teetasse_gefuellt.png"
+    "gefuellt": "res://grafik/gegenstaende/teetasse_gefuellt.png"
    },
    "ansehen": [
     {
@@ -2720,9 +2720,9 @@
    ],
    "reist_mit": false,
    "nahansicht": false,
-   "icon": "res://grafik/platzhalter/gegenstand_drahtkleiderbuegel.png",
+   "icon": "res://grafik/gegenstaende/drahtkleiderbuegel.png",
    "icons": {
-    "antenne": "res://grafik/platzhalter/gegenstand_drahtkleiderbuegel_antenne.png"
+    "antenne": "res://grafik/gegenstaende/drahtkleiderbuegel_antenne.png"
    },
    "ansehen": [
     {
@@ -2772,7 +2772,7 @@
    ],
    "reist_mit": true,
    "nahansicht": false,
-   "icon": "res://grafik/platzhalter/gegenstand_reisetasche.png",
+   "icon": "res://grafik/gegenstaende/reisetasche.png",
    "icons": {},
    "ansehen": [
     {
@@ -2818,7 +2818,7 @@
    ],
    "reist_mit": true,
    "nahansicht": true,
-   "icon": "res://grafik/platzhalter/gegenstand_opas_zettel.png",
+   "icon": "res://grafik/gegenstaende/opas_zettel.png",
    "icons": {},
    "ansehen": [
     {
