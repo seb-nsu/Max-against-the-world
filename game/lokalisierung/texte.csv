@@ -323,6 +323,11 @@ UI_PLATZ_NR,Platz %d,Slot %d
 UI_PLATZ_SCHNELL,Schnellspeicher,Quicksave
 UI_PLATZ_AUTO,Autospeicher %d,Autosave %d
 UI_UEBERSCHREIBEN,Belegt. Noch mal klicken zum Überschreiben.,In use. Click again to overwrite.
+UI_LOESCHEN,Löschen,Delete
+UI_LOESCHEN_ABBRECHEN,Nicht löschen,Don't delete
+UI_LOESCHEN_WAEHLEN,Welchen Spielstand löschen? Platz wählen.,Which save should go? Pick a slot.
+UI_LOESCHEN_SICHER,Wirklich löschen? Noch mal klicken.,Really delete? Click again.
+UI_GELOESCHT,Spielstand gelöscht,Save deleted
 UI_OPT_AUDIO,Audio,Audio
 UI_OPT_ANZEIGE,Anzeige,Display
 UI_OPT_SPIEL,Spiel,Game

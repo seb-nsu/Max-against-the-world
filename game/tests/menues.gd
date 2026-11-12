@@ -67,6 +67,7 @@ func _lauf() -> void:
 	await _hauptmenue(spiel, einst)
 	await _pausemenue(spiel)
 	await _fortsetzen(spiel)
+	await _loeschen()
 	await _controller(spiel)
 	await _errungenschaften(erg)
 
@@ -174,6 +175,7 @@ func _hauptmenue(spiel, einst) -> void:
 	var plaetze = menue.unter_offen()
 	pruefe(plaetze != null and _kacheln(plaetze) == 16, "Laden: 12 Plätze, Schnell, 3 Auto")
 	pruefe(_kacheln(plaetze, true) == 16, "Laden: leere Plätze nicht wählbar")
+	pruefe(plaetze._loeschen_knopf == null, "Laden ohne Spielstand: kein Löschen-Knopf")
 	plaetze.zurueck.emit()
 	await _warten()
 	menue._ausloesen(1)
@@ -255,6 +257,51 @@ func _fortsetzen(spiel) -> void:
 	pruefe(await _warten_bis(func(): return geladen[0] == 2, 20.0), "Startraum lädt Platz 2")
 	pruefe(spiel.start_platz == -1, "Startplatz verbraucht")
 	pruefe(await _warten_bis(func(): return _im_raum("Wohnzimmer"), 20.0), "nach dem Laden im Wohnzimmer")
+
+
+func _loeschen() -> void:
+	print("Löschen")
+	var spielstand = root.get_node("Spielstand")
+	# Zweiter Stand auf Platz 5 (Kopie von Platz 2), samt Vorschaubild
+	DirAccess.copy_absolute(CQSaveLoad.platz_pfad(2), CQSaveLoad.platz_pfad(5))
+	Image.create(4, 4, false, Image.FORMAT_RGB8).save_png(spielstand.vorschau_pfad(5))
+	var menue = load(HAUPTMENUE).instantiate()
+	root.add_child(menue)
+	await _warten(2)
+	menue._ausloesen(2)
+	await _warten()
+	var plaetze = menue.unter_offen()
+	pruefe(plaetze._loeschen_knopf != null, "Laden mit Spielstand: Löschen-Knopf da")
+	plaetze._loeschmodus(true)
+	await _warten()
+	pruefe(plaetze._hinweis.text == tr("UI_LOESCHEN_WAEHLEN"), "Löschmodus: Hinweis „Platz wählen“")
+	var leer: Button = null
+	for k in plaetze.get_child(plaetze.get_child_count() - 1).get_children():
+		if k is Button and k.size.y > 30 and k.position.y > 32 + 2 * 55:
+			leer = k  # Platz 7 und folgende sind leer
+			break
+	pruefe(leer != null and leer.disabled, "Löschmodus: leere Plätze nicht wählbar")
+	plaetze._gewaehlt_von(5, true)
+	pruefe(FileAccess.file_exists(CQSaveLoad.platz_pfad(5))
+		and plaetze._hinweis.text == tr("UI_LOESCHEN_SICHER"), "Löschen: erst die Nachfrage")
+	plaetze._gewaehlt_von(5, true)
+	await _warten()
+	pruefe(not FileAccess.file_exists(CQSaveLoad.platz_pfad(5))
+		and not FileAccess.file_exists(spielstand.vorschau_pfad(5)), "Löschen: Spielstand und Vorschaubild weg")
+	pruefe(not plaetze._loeschen and plaetze._hinweis.text == tr("UI_GELOESCHT"), "Löschen: Meldung, Löschmodus aus")
+	pruefe(FileAccess.file_exists(CQSaveLoad.platz_pfad(2)), "Löschen: andere Plätze bleiben")
+	# Abbrechen löscht nichts
+	plaetze._loeschmodus(true)
+	plaetze._gewaehlt_von(2, true)
+	plaetze._loeschmodus(false)
+	await _warten()
+	pruefe(not plaetze._loeschen and FileAccess.file_exists(CQSaveLoad.platz_pfad(2)),
+		"Nicht löschen: Modus aus, Platz 2 bleibt")
+	plaetze.zurueck.emit()
+	await _warten()
+	pruefe(menue._neuester != 5, "Fortsetzen zeigt nicht mehr auf den gelöschten Platz")
+	menue.queue_free()
+	await _warten(2)
 
 
 func _controller(spiel) -> void:

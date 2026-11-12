@@ -11,6 +11,7 @@ extends Node
 
 signal gespeichert(slot: int)
 signal geladen(slot: int)
+signal geloescht(slot: int)
 
 var saveload := CQSaveLoad.new()
 ## Gemerkter Speicherwunsch (Platz) während einer Szene, -1 = keiner
@@ -118,6 +119,16 @@ func laden(slot: int) -> bool:
 	I.is_restoring = vorher
 	geladen.emit(slot)
 	return true
+
+
+## Spielstand samt Vorschaubild löschen (Speichern-/Laden-Seite, mit Sicherheitsabfrage dort).
+func loeschen(slot: int) -> bool:
+	var ok := saveload.loeschen(slot)
+	if FileAccess.file_exists(vorschau_pfad(slot)):
+		DirAccess.remove_absolute(vorschau_pfad(slot))
+	if ok:
+		geloescht.emit(slot)
+	return ok
 
 
 ## „Fortsetzen“ im Hauptmenü: neuester Stand, egal welcher Art.
