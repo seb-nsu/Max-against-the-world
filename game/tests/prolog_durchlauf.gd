@@ -143,17 +143,17 @@ func _durchlauf() -> void:
 	await pixel.on_click()
 	_pruefe(_gesagt("P0_DACH_MAX_0220") and _gesagt("P0_DACH_OPA_0230"), "Pixel wecken 0220, Opa 0230")
 
-	# Gegenstände nehmen: Dosenöffner hängt an der Werkbank, die Dose steckt unten in Opas Mantel
+	# Gegenstände nehmen: Dosenöffner hängt an der Werkbank, die Dose liegt im Karton unter der Treppe
 	await _nehmen("Dosenoeffner", "P0_DACH_MAX_0260")
 	await _nehmen("Drahtkleiderbuegel", "P0_DACH_MAX_0460")
 	_pruefe(not _i().is_item_in_inventory("Thunfischdose"), "Thunfischdose noch nicht im Inventar")
 
-	# Bodenluke vor P1: Max steigt hinunter (1020) und holt die Dose aus Opas Mantel (0190)
+	# Bodenluke vor P1: Max steigt hinunter (1020) und holt die Dose aus dem Karton unter der Treppe (0190)
 	await luke.on_click()
 	await _warte_auf_raum("Treppenhaus")
 	_pruefe(_gesagt("P0_DACH_MAX_1020"), "Bodenluke vor P1 sagt 1020")
 	_pruefe(_raum_name() == "Treppenhaus", "Bodenluke vor P1 führt ins Treppenhaus")
-	_pruefe(_raum().get_prop("Thunfischdose").visible, "Thunfischdose steckt im Mantel (Treppenhaus)")
+	_pruefe(_raum().get_prop("Thunfischdose").visible, "Thunfischdose liegt im Karton unter der Treppe (Treppenhaus)")
 	await _nehmen("Thunfischdose", "P0_TREP_MAX_0190")
 	_pruefe(not _raum().get_prop("Thunfischdose").visible, "Prop Thunfischdose weg")
 	await _rundreise("Treppenhaus, Thunfischdose genommen")

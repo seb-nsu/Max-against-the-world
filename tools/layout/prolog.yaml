@@ -48,11 +48,11 @@ treppenhaus:
   # über die Stufen nach oben rechts.
   hintergrund: res://grafik/hintergruende/w0_bg_treppenhaus_v02.png
   tiefe: 0.85
-  laufbereich: [[12, 357], [12, 290], [40, 282], [255, 282], [275, 262], [585, 44], [605, 44], [605, 56], [300, 280], [340, 300], [400, 345], [400, 357]]
+  laufbereich: [[12, 357], [12, 290], [40, 282], [255, 282], [285, 250], [420, 158], [540, 70], [585, 44], [605, 44], [605, 54], [545, 80], [425, 168], [292, 260], [300, 282], [340, 300], [400, 345], [400, 357]]   # über die Treppe nur ein schmales Band auf den Stufenkanten
   marker:
     start: [173, 310]
     von_wohnzimmer: [55, 310]      # aus der Tür links
-    von_dachboden: [560, 70]       # oben auf der Treppe unter der Luke
+    von_dachboden: [565, 60]       # oben auf der Treppe unter der Luke
   hotspots:
     hut_am_haken: {rect: [170, 122, 25, 30], gehe: [182, 300]}   # Hut ist ins Bild gemalt
     regenschirm: {rect: [192, 127, 18, 90], gehe: [200, 300]}
@@ -62,7 +62,7 @@ treppenhaus:
     fenster: {rect: [290, 72, 60, 78], gehe: [320, 290]}
     treppe: {rect: [350, 45, 250, 150], gehe: [270, 280]}   # rechts vom Fenster und über den Kisten, sonst verdeckt sie beide
   props:
-    thunfischdose: {rect: [150, 181, 16, 13], gehe: [160, 300]}   # guckt aus der Tasche von Opas Mantel
+    thunfischdose: {rect: [424, 239, 16, 13], gehe: [380, 330]}   # guckt aus dem offenen Karton unter der Treppe
   ausgaenge:
     wohnzimmer: {rect: [10, 55, 65, 245], gehe: [45, 305]}
     dachboden: {rect: [395, 0, 230, 45], gehe: [592, 50]}
@@ -73,7 +73,8 @@ dachboden:
   # Koordinaten aus dem Bild genommen; übernommen mit --cq-layout=dachboden (game/README.md).
   hintergrund: res://grafik/hintergruende/w0_bg_dachboden_v03.png
   tiefe: 0.85
-  laufbereich: [[160, 357], [160, 290], [230, 272], [245, 252], [262, 238], [455, 238], [460, 255], [520, 258], [525, 280], [600, 285], [635, 290], [635, 357]]
+  # Aussparung 218–302 × 262–284: dort liegt Pixel, Max geht rechts um ihn herum
+  laufbereich: [[160, 357], [160, 290], [218, 284], [300, 284], [302, 262], [250, 262], [245, 252], [262, 238], [455, 238], [460, 255], [520, 258], [525, 280], [600, 285], [635, 290], [635, 357]]
   marker:
     start: [527, 315]
     von_treppenhaus: [527, 315]   # durch die Bodenluke vorne rechts
@@ -83,26 +84,26 @@ dachboden:
     opa: [400, 287]
   props:
     zapp_o_mat: {rect: [318, 118, 105, 112], gehe: [365, 243], item: null}
-    dosenoeffner: {rect: [234, 186, 18, 18], gehe: [250, 262]}   # hängt rechts an der Werkbank
+    dosenoeffner: {rect: [234, 186, 18, 18], gehe: [252, 256]}   # hängt rechts an der Werkbank
     drahtkleiderbuegel: {rect: [600, 125, 27, 19], gehe: [600, 290]}
   hotspots:
     drehknopf: {rect: [400, 145, 18, 26], gehe: [395, 243], name: Drehknopf}
     werkzeugkiste: {rect: [97, 220, 68, 58], gehe: [180, 300]}
-    werkbank: {rect: [60, 145, 190, 55], gehe: [235, 275]}
+    werkbank: {rect: [60, 145, 190, 55], gehe: [255, 256]}
     kleiderschrank: {rect: [578, 65, 62, 215], gehe: [600, 290]}
     kalender: {rect: [459, 97, 46, 49], gehe: [450, 245]}
     ohrensessel: {rect: [452, 152, 68, 100], gehe: [480, 265]}
     dachfenster: {rect: [65, 10, 70, 55], gehe: [200, 300]}
     poster: {rect: [262, 72, 60, 80], gehe: [292, 245]}
     ausgestopfter_fisch: {rect: [355, 77, 80, 38], gehe: [395, 245]}
-    kochbuch: {rect: [212, 90, 24, 40], gehe: [245, 258]}
-    toaster: {rect: [170, 105, 35, 25], gehe: [230, 275]}
+    kochbuch: {rect: [212, 90, 24, 40], gehe: [255, 256]}
+    toaster: {rect: [170, 105, 35, 25], gehe: [252, 256]}
     plattenspieler: {rect: [122, 92, 44, 38], gehe: [200, 285]}
     kiste_mit_fernbedienungen: {rect: [57, 267, 98, 83], gehe: [175, 320]}
     umzugskartons: {rect: [0, 135, 60, 145], gehe: [175, 300]}
     steckdose: {rect: [256, 199, 14, 19], gehe: [270, 245]}
     opas_staubsauger_prototyp: {rect: [520, 160, 58, 115], gehe: [545, 285]}
-    fundkiste: {rect: [152, 207, 70, 48], gehe: [240, 268], name: Fundkiste}   # erst ab Zwischenspiel 1 sichtbar
+    fundkiste: {rect: [152, 207, 70, 48], gehe: [255, 258], name: Fundkiste}   # erst ab Zwischenspiel 1 sichtbar
     # Finale (skripte/finale.gd): Opas Maschine an der Stelle des Zapp-O-Mat, nur im Finale sichtbar
     maschine: {rect: [325, 104, 80, 120], gehe: [365, 243], name: Maschine, skizze: spaeter}
     ofentuer: {rect: [341, 176, 44, 40], gehe: [363, 243], name: Ofentür, skizze: spaeter}

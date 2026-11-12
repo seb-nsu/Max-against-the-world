@@ -1031,8 +1031,8 @@ P0_TREP_MAX_0170,"Kisten unter der Treppe. Auf einer steht „Erfindungen, ferti
 P0_TREP_MAX_0175,"Auf der größten steht „Erfindungen, halb“. Die ist so voll, dass der Deckel nicht mehr zugeht.","The biggest one says ""Inventions, half"". It's so full the lid won't close any more."
 P0_TREP_MAX_0180,"Ich mach keine auf. Was Opa unter die Treppe stellt, hat meistens einen guten Grund, da zu bleiben.","I'm not opening any. When Grandpa puts something under the stairs, there's usually a good reason for it to stay there."
 P0_TREP_MAX_0185,"Ich hab gegen eine gestupst, und drinnen hat etwas „Hallo“ gesagt. Ich geh jetzt einfach ganz normal weiter.","I nudged one, and something inside said ""Hello"". I'm just going to keep walking like normal."
-P0_TREP_MAX_0190,"In der Tasche vom Mantel für „man weiß ja nie“ steckt eine Dose Thunfisch, und sie ist nicht mal abgelaufen.","In the pocket of the ""you never know"" coat there's a tin of tuna, and it's not even out of date."
-P0_TREP_MAX_0190_2,Opa geht nie ohne Notproviant aus dem Haus.,Grandpa never leaves the house without emergency rations.
+P0_TREP_MAX_0190,"Aus dem offenen Karton guckt eine Dose Thunfisch, und sie ist nicht mal abgelaufen.","There's a tin of tuna poking out of the open box, and it's not even out of date."
+P0_TREP_MAX_0190_2,Opa hortet Notproviant für den Weltuntergang. Also vermutlich für heute.,Grandpa stockpiles rations for the end of the world. So probably for today.
 P0_DACH_OPA_0010,"Max! Da bist du ja endlich! Die Menschheit steht am Abgrund, und du kommst in Socken!","Max! There you are at last! Humanity stands at the abyss, and you turn up in socks!"
 P0_DACH_MAX_0020,"Hi, Opa. Ich bin wegen des Passworts hier, nur damit das von Anfang an klar ist.","Hi, Grandpa. I'm here for the password, just so that's clear from the start."
 P0_DACH_OPA_0030,"Passwörter sind was für Leute, die eine Zukunft haben. Und so, wie es gerade aussieht, haben wir vielleicht keine mehr.","Passwords are for people with a future. And the way things look right now, we might not have one any more."
@@ -1057,13 +1057,13 @@ P0_DACH_MAX_1450,"Und was ist, wenn der Werbeblock einfach nicht kommt?",And wha
 P0_DACH_OPA_1460,"Werbung kommt immer, Max. Das ist das Einzige im Fernsehen, auf das man sich seit fünfzig Jahren verlassen kann.","Adverts always come, Max. It's the only thing on TV you've been able to rely on for fifty years."
 P0_DACH_MAX_1462,Toll. Mein Rückweg ist ein Joghurt-Spot.,Great. My way home is a yoghurt advert.
 P0_DACH_MAX_1322,Wie krieg ich Pixel vom Kabel?,How do I get Pixel off the cable?
-P0_DACH_OPA_1324,"Mit Argumenten. Er versteht genau eins, und das hab ich immer dabei, wenn ich aus dem Haus gehe.","With arguments. He understands exactly one, and I always have it on me when I leave the house."
-P0_DACH_OPA_1324_2,"Notproviant, Junge. In der Manteltasche, wo auch sonst.","Emergency rations, lad. In my coat pocket, where else."
+P0_DACH_OPA_1324,"Mit Argumenten. Er versteht genau eins, und davon hab ich für Notfälle immer was im Haus.","With arguments. He understands exactly one, and I always keep some in the house for emergencies."
+P0_DACH_OPA_1324_2,"Notproviant, Junge. In den Kisten unter der Treppe, wo auch sonst.","Emergency rations, lad. In the boxes under the stairs, where else."
 P0_DACH_OPA_1326,"Und die Dose ist natürlich zu. Da hilft kein gutes Zureden, da hilft nur Kurbeln.","And the tin is closed, of course. Sweet talk won't help there, only cranking will."
 P0_DACH_OPA_1326_2,"Der Dosenöffner hängt hier oben an der Werkbank, gleich neben dem halben Regenschirm.","The tin opener is hanging up here on the workbench, right next to the half umbrella."
-P0_DACH_OPA_1328,Hol die Thunfischdose aus meinem Mantel im Treppenhaus und mach sie mit dem Dosenöffner von der Werkbank auf.,Fetch the tuna tin from my coat in the stairwell and open it with the tin opener from the workbench.
+P0_DACH_OPA_1328,Hol die Thunfischdose aus den Kisten unter der Treppe und mach sie mit dem Dosenöffner von der Werkbank auf.,Fetch the tuna tin from the boxes under the stairs and open it with the tin opener from the workbench.
 P0_DACH_OPA_1328_2,"Dann hältst du sie dem Kater unter die Nase. Er ist schneller wach, als du „Lachs“ sagen kannst.","Then hold it under the cat's nose. He'll be awake before you can say ""salmon""."
-P0_DACH_OPA_1520,"Der Herr wünscht Porzellan. Im ganzen Haus gibt es genau ein Stück ohne Sprung, und aus dem trinke ich jeden Tag.","His lordship requires china. There is exactly one piece in this whole house without a crack, and I drink from it every day."
+P0_DACH_OPA_1520,"Der Herr wünscht Porzellan. Ich wüsste da genau ein Stück im Haus, aber an dem hängt mein Herz. Und mein Nachmittag.","His lordship requires china. I know of exactly one piece in this house, but my heart is attached to it. And my afternoon."
 P0_DACH_OPA_1524,"Meine Teetasse steht unten im Wohnzimmer auf dem Couchtisch. Der Tee darin ist kalt, den vermisst keiner.","My teacup is downstairs in the living room, on the coffee table. The tea in it is cold, nobody will miss it."
 P0_DACH_OPA_1528,Hol meine Teetasse aus dem Wohnzimmer und füll den Thunfisch aus der Dose hinein.,Fetch my teacup from the living room and tip the tuna from the tin into it.
 P0_DACH_OPA_1528_2,"Dann stellst du sie dem Kater hin. Mit Untertasse wäre es stilvoller, aber die hab ich verbaut.","Then put it down in front of the cat. A saucer would be classier, but I built mine into something."
@@ -1121,10 +1121,12 @@ P0_DACH_PIX_0360_2,"Und dann auch noch aus der Dose, junger Mann. Aus dem Blech 
 P0_DACH_MAX_0362,Du hast eben noch auf einem Stromkabel geschlafen.,A minute ago you were asleep on a power cable.
 P0_DACH_PIX_0364,"Auf einem warmen Stromkabel, das ist ein Unterschied. Ich esse von Porzellan oder gar nicht.","On a warm power cable, which is a different matter. I eat from china or not at all."
 P0_DACH_PIX_0364_2,"Weck mich wieder, wenn angerichtet ist.",Wake me again when dinner is served.
-P0_DACH_OPA_0366,"Porzellan haben wir. Irgendwo steht bestimmt noch eine Tasse von mir herum, ich koch mir ja jeden Tag einen Tee.","China we have. There's bound to be a cup of mine standing around somewhere, I make myself a tea every day after all."
+P0_DACH_OPA_0366,"Porzellan? Das gute Geschirr hab ich vor Jahren zu Isolatoren umgebaut. Bis auf ein einziges Stück, und das rück ich nicht raus.","China? I turned the good dishes into insulators years ago. All except one single piece, and that one I'm not handing over."
 P0_DACH_MAX_0367,"Bitte sehr: Thunfisch an kaltem Tee, serviert in Opas Teetasse.","Here you go: tuna on cold tea, served in Grandpa's teacup."
 P0_DACH_PIX_0368,"Fisch an Schwarztee, in Porzellan mit Goldrand. So serviert man einem Kater.","Fish on black tea, in china with a gold rim. That is how one serves a cat."
 P0_DACH_PIX_0368_2,"Gib her, bevor ich es mir anders überlege.",Hand it over before I change my mind.
+P0_DACH_OPA_0369,"Meine Teetasse! Die mit dem Goldrand, aus der trinke ich seit dreißig Jahren meinen Nachmittagstee!","My teacup! The one with the gold rim, I've been drinking my afternoon tea from it for thirty years!"
+P0_DACH_OPA_0369_2,Die spül ich dreimal. Mindestens.,I'll wash it three times. At least.
 P0_DACH_OPA_0370,"Er ist wach! Wunderbar. Pixel kommt mit dir, Max. Er kennt jede Sendung, die je gelaufen ist, und er kennt alle Antworten.","He's awake! Wonderful. Pixel's going with you, Max. He knows every programme that ever aired, and he knows all the answers."
 P0_DACH_PIX_0380,"Ich kenne tatsächlich alle Antworten. Ich gebe sie nur ungern heraus, denn Wissen sollte man, genau wie Thunfisch, nicht verschwenden.","I do indeed know all the answers. I simply dislike giving them out, for knowledge, like tuna, should not be wasted."
 P0_DACH_PIX_0380_2,"Wer also festhängt, darf meine Pfote drücken. Höflich, bitte. Und nicht zu oft.","So whoever is stuck may press my paw. Politely, please. And not too often."

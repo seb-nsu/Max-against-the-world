@@ -17,8 +17,8 @@ func zustand() -> String:
 
 ## Dosenöffner mit Thunfischdose: Die Dose geht auf, in jedem Raum. Pixel wacht davon noch
 ## nicht auf. Die offene Dose auf Pixel weckt ihn, aber er frisst nicht aus dem Blech
-## (character_pixel.gd). Offene Dose mit Teetasse: Der Thunfisch kommt in die Tasse (0072),
-## aber erst, wenn Pixel die Dose abgelehnt hat (vorher 0070).
+## (character_pixel.gd). Offene Dose mit Teetasse: Der Thunfisch kommt in die Tasse (0072), auch
+## schon bevor Pixel die Dose abgelehnt hat; die geschlossene Dose verweigert Max (0070).
 func _kombinieren(item: PopochiuInventoryItem) -> bool:
 	if item.script_name == "Teetasse":
 		return await _in_die_tasse()
@@ -34,10 +34,10 @@ func _kombinieren(item: PopochiuInventoryItem) -> bool:
 
 
 func _in_die_tasse() -> bool:
-	if zustand() != "offen" or Zustand.ist("P0_TASSE_GEFUELLT"):
-		return false  # geschlossene oder leere Dose, volle Tasse: Ersatzzeile
-	if not Zustand.ist("P0_PIXEL_GEWECKT"):
-		await Spiel.sagen("MAX", "P0_INV_MAX_0070")
+	if zustand() == "leer" or Zustand.ist("P0_TASSE_GEFUELLT"):
+		return false  # leere Dose oder volle Tasse: Ersatzzeile
+	if zustand() == "zu":
+		await Spiel.sagen("MAX", "P0_INV_MAX_0070")  # erst mal aufmachen
 		return true
 	await Spiel.sagen("MAX", "P0_INV_MAX_0072")
 	Zustand.setze("P0_TASSE_GEFUELLT")

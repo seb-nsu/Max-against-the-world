@@ -4,8 +4,8 @@ extends "simple_click_bar.gd"
 ## ein, sobald die Maus den oberen Rand verlässt, und bleibt in Gesprächen und Szenen zu.
 
 const HOEHE := 48.0
-const LINKS := 84.0          # zwei Porträts zu 36 plus Abstände
-const RECHTS := 48.0         # Hilfe-Pfote
+const LINKS := 108.0         # zwei Porträts zu 48 ab x 4 und 56 (hud.gd) plus Abstand
+const RECHTS := 56.0         # Hilfe-Pfote ab x 588
 const DUNKEL := Color("181425")
 const RAND := Color("262b44")
 

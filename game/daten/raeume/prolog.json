@@ -570,8 +570,16 @@
      282
     ],
     [
-     275,
-     262
+     285,
+     250
+    ],
+    [
+     420,
+     158
+    ],
+    [
+     540,
+     70
     ],
     [
      585,
@@ -583,11 +591,23 @@
     ],
     [
      605,
-     56
+     54
+    ],
+    [
+     545,
+     80
+    ],
+    [
+     425,
+     168
+    ],
+    [
+     292,
+     260
     ],
     [
      300,
-     280
+     282
     ],
     [
      340,
@@ -612,8 +632,8 @@
      310
     ],
     "von_dachboden": [
-     560,
-     70
+     565,
+     60
     ]
    },
    "tiefe": 0.85,
@@ -978,14 +998,14 @@
      "script_name": "Thunfischdose",
      "name_key": "UI_OBJ_THUNFISCHDOSE",
      "rect": [
-      150,
-      181,
+      424,
+      239,
       16,
       13
      ],
      "gehe": [
-      160,
-      300
+      380,
+      330
      ],
      "textur": "res://grafik/props/thunfischdose.png",
      "gegenstand": "thunfischdose",
@@ -1060,8 +1080,20 @@
      290
     ],
     [
-     230,
-     272
+     218,
+     284
+    ],
+    [
+     300,
+     284
+    ],
+    [
+     302,
+     262
+    ],
+    [
+     250,
+     262
     ],
     [
      245,
@@ -1185,8 +1217,8 @@
       48
      ],
      "gehe": [
-      240,
-      268
+      255,
+      258
      ],
      "ansehen": []
     },
@@ -1606,8 +1638,8 @@
       25
      ],
      "gehe": [
-      230,
-      275
+      252,
+      256
      ],
      "ansehen": [
       {
@@ -1727,8 +1759,8 @@
       40
      ],
      "gehe": [
-      245,
-      258
+      255,
+      256
      ],
      "ansehen": [
       {
@@ -1897,8 +1929,8 @@
       55
      ],
      "gehe": [
-      235,
-      275
+      255,
+      256
      ],
      "ansehen": [
       {
@@ -2235,8 +2267,8 @@
       18
      ],
      "gehe": [
-      250,
-      262
+      252,
+      256
      ],
      "textur": "res://grafik/props/dosenoeffner.png",
      "gegenstand": "dosenoeffner",
@@ -2263,7 +2295,7 @@
       600,
       290
      ],
-     "textur": "res://grafik/platzhalter/prop_drahtkleiderbuegel.png",
+     "textur": "res://grafik/props/drahtkleiderbuegel.png",
      "gegenstand": "drahtkleiderbuegel",
      "ansehen": [],
      "nehmen": {

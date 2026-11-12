@@ -74,16 +74,41 @@ func _zustand_anwenden() -> void:
 	_pixel_ruhe()
 
 
-## Vor dem Wecken liegt Pixel eingerollt auf dem Kabel (Bewegung „schlafen“ aus grafik/figuren/pixel.png),
-## danach steht er. Ohne echte Grafik gibt es „schlafen“ nicht, dann bleibt es bei „idle“.
+## Bis P1 liegt Pixel eingerollt auf dem Kabel (Bewegung „schlafen“ aus grafik/figuren/pixel.png).
+## Nur in den Szenen, in denen er aufwacht (p1_wecken, p1_loesen), steht er; danach legt er sich
+## wieder hin, solange er nichts aus der Tasse bekommen hat. Ohne echte Grafik gibt es „schlafen“
+## nicht, dann bleibt es bei „idle“. Der Wechsel wird kurz überblendet (keine Aufsteh-Bewegung).
+var _pixel_wach := false
+
 func _pixel_ruhe() -> void:
 	if not is_instance_valid(C.Pixel) or not has_character("Pixel"):
 		return
-	var schlaeft := zwischenspiel() == 0 and not Zustand.geloest("P1", "prolog") and not Zustand.ist("P0_PIXEL_GEWECKT")
+	var schlaeft := zwischenspiel() == 0 and not Zustand.geloest("P1", "prolog") and not _pixel_wach
 	var player: AnimationPlayer = C.Pixel.get_node_or_null("AnimationPlayer")
 	var hat := player != null and player.has_animation("schlafen")
-	C.Pixel.idle_animation = "schlafen" if schlaeft and hat else "idle"
+	var neu := "schlafen" if schlaeft and hat else "idle"
+	if neu == C.Pixel.idle_animation:
+		if not C.Pixel.is_talking:
+			C.Pixel._play_idle()
+		return
+	var alt: Sprite2D = null
+	var bild: Sprite2D = C.Pixel.get_node_or_null("Sprite2D")
+	if is_inside_tree() and visible and is_instance_valid(bild) and bild.texture and not E.cutscene_skipped:
+		alt = bild.duplicate(0) as Sprite2D
+		C.Pixel.add_child(alt)
+	C.Pixel.idle_animation = neu
 	C.Pixel._play_idle()
+	if alt:
+		bild.modulate.a = 0.0
+		var t := create_tween().set_parallel()
+		t.tween_property(alt, "modulate:a", 0.0, 0.35)
+		t.tween_property(bild, "modulate:a", 1.0, 0.35)
+		t.chain().tween_callback(alt.queue_free)
+
+
+func _pixel_aufwecken(wach: bool) -> void:
+	_pixel_wach = wach
+	_pixel_ruhe()
 
 
 ## Pixel ist eine Figur für alle Räume: beim Gehen wieder stehend, sonst schläft er im nächsten Raum weiter.
@@ -154,7 +179,7 @@ func _nach_laden() -> void:
 func p1_wecken() -> void:
 	await Spiel.szene([Spiel.z("MAX", "P0_DACH_MAX_0285")])
 	Zustand.setze("P0_PIXEL_GEWECKT")
-	_pixel_ruhe()  # Pixel wacht auf und steht
+	_pixel_aufwecken(true)  # Pixel wacht auf und steht
 	await Spiel.szene([
 		Spiel.z("NAR", "P0_DACH_NAR_0290"),
 		Spiel.z("OPA", "P0_DACH_OPA_0300"),
@@ -168,15 +193,31 @@ func p1_wecken() -> void:
 		Spiel.z("PIX", "P0_DACH_PIX_0364"),
 		Spiel.z("OPA", "P0_DACH_OPA_0366"),
 	])
+	_pixel_aufwecken(false)  # nichts aus dem Blech: er rollt sich wieder ein
 
 
 ## P1, zweiter Teil: Opas Teetasse mit Thunfisch auf Pixel (0367–0390). Die Tasse bleibt als
-## Napf auf der Werkbank.
+## Napf auf der Werkbank. War Pixel noch nicht wach, wacht er vorher auf (0285–0340).
 func p1_loesen() -> void:
 	await I.get_item_instance("Teetasse").remove()
-	await Spiel.szene([
+	var schritte := []
+	if not Zustand.ist("P0_PIXEL_GEWECKT"):
+		# Tasse schon gefüllt, bevor Pixel wach war: er wacht vom Duft auf und frisst gleich
+		Zustand.setze("P0_PIXEL_GEWECKT")
+		schritte = [
+			Spiel.z("MAX", "P0_DACH_MAX_0285"),
+			Spiel.z("NAR", "P0_DACH_NAR_0290"),
+			Spiel.z("OPA", "P0_DACH_OPA_0300"),
+			Spiel.z("PIX", "P0_DACH_PIX_0310"),
+			Spiel.z("PIX", "P0_DACH_PIX_0320"),
+			Spiel.z("MAX", "P0_DACH_MAX_0330"),
+			Spiel.z("PIX", "P0_DACH_PIX_0340"),
+		]
+	_pixel_aufwecken(true)
+	await Spiel.szene(schritte + [
 		Spiel.z("MAX", "P0_DACH_MAX_0367"),
 		Spiel.z("PIX", "P0_DACH_PIX_0368"),
+		Spiel.z("OPA", "P0_DACH_OPA_0369"),  # Opa trauert seiner Teetasse nach
 		# Pixel frisst und wechselt auf die Werkbank, Opa schaltet den Zapp-O-Mat ein
 		Zustand.loese.bind("P1"),
 		Spiel.z("OPA", "P0_DACH_OPA_0370"),

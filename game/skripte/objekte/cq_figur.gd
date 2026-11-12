@@ -13,11 +13,42 @@ extends PopochiuCharacter
 ## ein Rätsel mehrere Figuren, im Raum: figur_benutzt(figur, item) -> bool (true = erledigt).
 
 
+## Ohne Sprachaufnahme bewegt sich der Mund so lange, wie der Satz gesprochen etwa dauert; danach
+## steht die Figur still, bis der Text weggeklickt ist. Mit Aufnahme bestimmt deren Länge.
+const ZEICHEN_JE_SEKUNDE := 14.0
+const REDEN_MINDESTENS := 0.6
+
+## Zählt die Sätze, damit ein alter Zeitgeber keinen neuen Satz beendet.
+var _satz_nr := 0
+
 
 func _ready() -> void:
 	super()
 	if not Engine.is_editor_hint():
 		grafik_laden()
+
+
+func say(dialog: String, params: Variant = null) -> void:
+	_satz_nr += 1
+	if not Engine.is_editor_hint() and is_inside_tree() and not PopochiuUtils.e.cutscene_skipped:
+		_mund_schliessen(_satz_nr, redezeit(PopochiuUtils.e.translate(dialog, params)))
+	await super(dialog, params)
+
+
+## Geschätzte Sprechdauer eines Satzes in Sekunden (BBCode zählt nicht mit).
+static func redezeit(text: String) -> float:
+	var rein := RegEx.create_from_string("\\[[^\\]]*\\]").sub(text, "", true)
+	return maxf(REDEN_MINDESTENS, rein.strip_edges().length() / ZEICHEN_JE_SEKUNDE)
+
+
+func _mund_schliessen(nr: int, sekunden: float) -> void:
+	var vo := _get_vo_cue(emotion)
+	var cue = PopochiuUtils.a.get(vo) if not vo.is_empty() else null
+	if cue and cue.audio:
+		sekunden = cue.audio.get_length()  # eingesprochen: so lange wie die Aufnahme
+	await get_tree().create_timer(sekunden).timeout
+	if nr == _satz_nr and is_talking and is_instance_valid(self):
+		_play_idle()
 
 
 ## Echte Grafik statt Platzhalter: gibt es res://grafik/figuren/<id>.png samt

@@ -1,0 +1,90 @@
+name: Web (GitHub Pages)
+
+# Spielbarer Web-Build im Browser: nach jedem Push auf main (und von Hand) entsteht der
+# „Web Testbuild“ aus game/export_presets.cfg und landet auf GitHub Pages
+# (https://seb-nsu.github.io/Max-against-the-world/). Er läuft ohne Threads und braucht deshalb
+# keine besonderen Server-Header. Einmalig nötig: Settings → Pages → Source „GitHub Actions“.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Immer nur der neueste Stand; ein laufender Deploy wird nicht abgebrochen.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  bauen:
+    runs-on: ubuntu-latest
+    env:
+      GODOT_VERSION: "4.7.2"
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Godot laden
+        run: |
+          curl -sSL -o godot.zip "https://github.com/godotengine/godot/releases/download/${GODOT_VERSION}-stable/Godot_v${GODOT_VERSION}-stable_linux.x86_64.zip"
+          unzip -q godot.zip
+          mv "Godot_v${GODOT_VERSION}-stable_linux.x86_64" godot
+
+      - name: Export-Vorlage aus dem Cache
+        id: vorlagen
+        uses: actions/cache@v4
+        with:
+          path: ~/.local/share/godot/export_templates/${{ env.GODOT_VERSION }}.stable
+          key: godot-vorlagen-${{ env.GODOT_VERSION }}-web
+
+      - name: Export-Vorlage laden (Web ohne Threads)
+        if: steps.vorlagen.outputs.cache-hit != 'true'
+        run: |
+          curl -sSL -o vorlagen.tpz "https://github.com/godotengine/godot/releases/download/${GODOT_VERSION}-stable/Godot_v${GODOT_VERSION}-stable_export_templates.tpz"
+          unzip -q vorlagen.tpz "templates/version.txt" "templates/web_nothreads_*.zip"
+          ziel="$HOME/.local/share/godot/export_templates/${GODOT_VERSION}.stable"
+          mkdir -p "$ziel"
+          mv templates/* "$ziel/"
+          rm vorlagen.tpz
+
+      - name: Build-Kennung (Commit)
+        run: sed -i "s|^config/features=|config/version=\"${GITHUB_SHA::8}\"\nconfig/features=|" game/project.godot
+
+      - name: Import (erster Import meldet Fehler, bis der Klassen-Cache steht)
+        run: ./godot --headless --path game --import || true
+
+      - name: Zweiter Import (darf keinen Fehler mehr melden)
+        run: |
+          ./godot --headless --path game --import 2>&1 | tee import.log
+          if grep -q "ERROR" import.log; then echo "Import meldet Fehler"; exit 1; fi
+
+      # Kurzer Rauchtest; die vollständigen Läufe macht pruefen.yml.
+      - name: Regeln laden und Prolog-Durchlauf
+        run: |
+          timeout 200 ./godot --headless --path game -s res://tests/regeln_laden.gd
+          timeout 600 ./godot --headless --path game -s res://tests/prolog_durchlauf.gd
+
+      - name: Export Web
+        run: |
+          mkdir -p build/web
+          ./godot --headless --path game --export-release "Web Testbuild" ../build/web/index.html
+          test -s build/web/index.pck
+          touch build/web/.nojekyll
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: build/web
+
+  veroeffentlichen:
+    needs: bauen
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - id: deploy
+        uses: actions/deploy-pages@v4
