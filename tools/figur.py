@@ -29,7 +29,7 @@ import sys
 from pathlib import Path
 
 import numpy as np
-from PIL import Image, ImageDraw
+from PIL import Image, ImageDraw, ImageFilter
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from pixelieren import GEWICHT, oklab, palette_finden, palette_lesen  # noqa: E402
@@ -131,9 +131,18 @@ def k_centroid(a, H, W):
     return np.where(n1 >= n2, c1, c2).clip(0, 255).astype(np.uint8)
 
 
+FIGUR_GEWICHT = np.array([1.0, 2.0, 2.0])   # wie pixelieren.py
+
+
+LINIEN = 0.0   # Linien verdicken: Anteil eines Zielpixels (0 = aus, 0.5 bis 1 üblich)
+SAETTIGUNG = 1.0   # Konzeptbilder sind oft blasser als die Palette (Jeans fast so grau wie der Hoodie)
+
+
 def auf_palette(rgb, pal):
-    lab = oklab(rgb.reshape(-1, 3).astype(np.float32)) * GEWICHT
-    ziel = oklab(pal.astype(np.float32)) * GEWICHT
+    lab = oklab(rgb.reshape(-1, 3).astype(np.float32))
+    lab[:, 1:] *= SAETTIGUNG
+    lab = lab * FIGUR_GEWICHT
+    ziel = oklab(pal.astype(np.float32)) * FIGUR_GEWICHT
     z = ((lab[:, None, :] - ziel[None]) ** 2).sum(-1).argmin(1)
     return pal[z].reshape(rgb.shape)
 
@@ -190,49 +199,153 @@ def kontur(rgba, farbe):
     return a
 
 
-def verkleinern(rgb, bg, rahmen, H):
-    """Eine Figur aus dem Blatt auf H Pixel Höhe: k-Centroid für die Farben, Deckung ab halber Fläche."""
+def verkleinern(rgb, bg, rahmen, H, massstab=None, eigene=None):
+    """Eine Figur aus dem Blatt auf H Pixel Höhe (oder mit festem Maßstab): k-Centroid für die Farben,
+    Deckung ab halber Fläche."""
     x0, y0, x1, y1 = rahmen
-    teil, maske = rgb[y0:y1, x0:x1], (~bg[y0:y1, x0:x1]).astype(np.uint8) * 255
+    if massstab:
+        H = max(1, round((y1 - y0) * massstab))
+    vorn = eigene[y0:y1, x0:x1] if eigene is not None else ~bg[y0:y1, x0:x1]
+    teil, maske = rgb[y0:y1, x0:x1], vorn.astype(np.uint8) * 255
     W = max(1, round((x1 - x0) * H / (y1 - y0)))
+    if LINIEN:
+        # Dünne dunkle Linien (Mund, Augen, Konturen) vor dem Verkleinern verdicken, damit sie einen ganzen
+        # Zielpixel füllen; wie „Outline keep“ bei Retro Diffusion. Nur dunkle Pixel breiten sich aus.
+        n = max(1, round((y1 - y0) / H * LINIEN / 2)) * 2 + 1
+        dunkel = np.asarray(Image.fromarray(teil).filter(ImageFilter.MinFilter(n)))
+        hell = dunkel.astype(np.float32).mean(-1)
+        teil = np.where((hell < 55)[..., None] & vorn[..., None], dunkel, teil).astype(np.uint8)
     a = np.asarray(Image.fromarray(teil).resize((W * F, H * F), Image.LANCZOS), dtype=np.float32)
     m = np.asarray(Image.fromarray(maske).resize((W * F, H * F), Image.BOX)) / 255.0
     return k_centroid(a, H, W), m.reshape(H, F, W, F).mean((1, 3)) >= 0.5
 
 
-def sprite(quelle, hoehe, ansicht=1, spiegeln=False, ausschnitt=None, palette="endesga", tol=40,
-           konturfarbe=None, glatt=True, farben=0):
+def komponenten(maske, k=2):
+    """Rahmen zusammenhängender Figuren von links nach rechts. Die Maske wird dafür um k verkleinert, damit
+    lose Haarsträhnen und Schnürsenkel an ihrer Figur hängen; Teile unter 2 Prozent der größten Figur fallen
+    an die Figur, deren Rahmen sie am nächsten liegen."""
+    h, w = maske.shape
+    hk, wk = h // k, w // k
+    m = maske[:hk * k, :wk * k].reshape(hk, k, wk, k).any((1, 3))
+    marke = np.zeros(m.shape, int); n = 0
+    for y0, x0 in zip(*np.nonzero(m)):
+        if marke[y0, x0]:
+            continue
+        n += 1; stapel = [(y0, x0)]; marke[y0, x0] = n
+        while stapel:
+            y, x = stapel.pop()
+            for dy, dx in ((1, 0), (-1, 0), (0, 1), (0, -1), (1, 1), (1, -1), (-1, 1), (-1, -1)):
+                yy, xx = y + dy, x + dx
+                if 0 <= yy < hk and 0 <= xx < wk and m[yy, xx] and not marke[yy, xx]:
+                    marke[yy, xx] = n; stapel.append((yy, xx))
+    teile = []
+    for i in range(1, n + 1):
+        ys, xs = np.nonzero(marke == i)
+        teile.append([len(ys), xs.min() * k, ys.min() * k, (xs.max() + 1) * k, (ys.max() + 1) * k])
+    gross = max(t[0] for t in teile)
+    figuren = [t[1:] for t in teile if t[0] >= gross * 0.2]
+    for t in teile:
+        if t[0] < gross * 0.2:
+            cx, cy = (t[1] + t[3]) / 2, (t[2] + t[4]) / 2
+            f = min(figuren, key=lambda r: max(r[0] - cx, 0, cx - r[2]) + max(r[1] - cy, 0, cy - r[3]))
+            f[0] = min(f[0], t[1]); f[1] = min(f[1], t[2]); f[2] = max(f[2], t[3]); f[3] = max(f[3], t[4])
+    # Jede kleine Komponente gehört zur Figur, an die sie fällt; je Figur eine eigene Maske, damit Teile
+    # der Nachbarfiguren im Rahmen nicht mitkommen
+    zu = {}
+    for i, t in enumerate(teile, 1):
+        if t[0] >= gross * 0.2:
+            zu[i] = next(j for j, f in enumerate(figuren) if f[0] <= t[1] and f[2] >= t[3] and f[1] <= t[2] and f[3] >= t[4])
+    for i, t in enumerate(teile, 1):
+        if i not in zu:
+            cx, cy = (t[1] + t[3]) / 2, (t[2] + t[4]) / 2
+            zu[i] = min(range(len(figuren)), key=lambda j: max(figuren[j][0] - cx, 0, cx - figuren[j][2]) + max(figuren[j][1] - cy, 0, cy - figuren[j][3]))
+    voll = np.zeros((h, w), int)
+    voll[:hk * k, :wk * k] = np.repeat(np.repeat(marke, k, 0), k, 1)
+    nr = np.zeros(n + 1, int); nr[0] = -1
+    for i, j in zu.items():
+        nr[i] = j
+    figur_von = nr[voll]
+    aus = []
+    for j in range(len(figuren)):
+        m_j = maske & (figur_von == j)
+        ys, xs = np.nonzero(m_j)
+        aus.append(((xs.min(), ys.min(), xs.max() + 1, ys.max() + 1), m_j))
+    return sorted(aus, key=lambda a: a[0][0])
+
+
+def laengster_lauf(maske):
+    """Je Zeile die längste zusammenhängende Strecke belegter Pixel (eine Bodenlinie läuft durch, Figuren nicht)."""
+    lauf = np.zeros(maske.shape[0], int); jetzt = np.zeros(maske.shape[0], int)
+    for x in range(maske.shape[1]):
+        jetzt = np.where(maske[:, x], jetzt + 1, 0)
+        lauf = np.maximum(lauf, jetzt)
+    return lauf
+
+
+def blatt_lesen(quelle, ausschnitt=None, tol=40):
+    """Blatt laden, Hintergrund und waagrechte Bodenlinien (über die halbe Breite) entfernen, Figuren finden."""
     rgba = np.asarray(Image.open(quelle).convert("RGBA"))
     if ausschnitt:
         x, y, b, h = ausschnitt
         rgba = rgba[y:y + h, x:x + b]
     rgb = np.ascontiguousarray(rgba[..., :3])
     bg = hintergrund_maske(rgb, tol) | (rgba[..., 3] < 128)
-    rahmen = alle_figuren(~bg)
-    if not 1 <= ansicht <= len(rahmen):
-        sys.exit(f"Ansicht {ansicht} gibt es nicht, gefunden: {len(rahmen)} Figuren")
-    H = hoehe
-    klein, alpha = verkleinern(rgb, bg, rahmen[ansicht - 1], H)
-    W = klein.shape[1]
-    if farben:
-        # Erst wenige eigene Farben, gemeinsam für alle Ansichten des Blatts (damit Seite, Vorder- und
-        # Rückansicht dieselben Farben bekommen); Stoffstruktur verschwindet dabei. Feine Details (Augen,
-        # Linien) bleiben: wo das Original deutlich heller oder dunkler ist als seine Gruppe, gilt das Original.
-        alle = [verkleinern(rgb, bg, r, H) for r in rahmen]
-        probe = np.concatenate([k.reshape(-1, 3)[m.ravel()] for k, m in alle]).astype(np.float32)
-        eigen, _ = palette_finden(probe, farben)
+    linie = laengster_lauf(~bg) > bg.shape[1] * 0.5
+    if linie.any():
+        # Bodenlinie samt Saum als Hintergrund übermalen und neu füllen: so fallen auch die Flächen zwischen
+        # den Beinen weg, die die Linie unten abgeschlossen hat
+        linie = np.convolve(linie, np.ones(5), "same") > 0
+        rand = np.concatenate([rgb[0], rgb[-1], rgb[:, 0], rgb[:, -1]])
+        rgb2 = rgb.copy(); rgb2[linie] = np.median(rand, 0).astype(np.uint8)
+        bg = hintergrund_maske(rgb2, tol) | (rgba[..., 3] < 128)
+    return rgb, bg, alle_figuren(~bg)
+
+
+def blatt_zyklus(quelle, ausschnitt=None, tol=40, anzahl=0):
+    """Figuren eines Bewegungsblatts als (Rahmen, Maske). Berühren sich zwei (Schuhe), sind es weniger als
+    anzahl: dann die breiteste Figur an der dünnsten Spalte in ihrer mittleren Hälfte teilen, bis es passt."""
+    rgb, bg, _ = blatt_lesen(quelle, ausschnitt, tol)
+    figuren = komponenten(~bg)
+    while anzahl and len(figuren) < anzahl:
+        i = max(range(len(figuren)), key=lambda j: figuren[j][0][2] - figuren[j][0][0])
+        (x0, y0, x1, y1), m = figuren[i]
+        dichte = m[y0:y1, x0:x1].sum(0)
+        a, b = (x1 - x0) // 4, 3 * (x1 - x0) // 4
+        x = x0 + a + int(dichte[a:b].argmin())
+        neu = []
+        for u, v in ((0, x), (x, m.shape[1])):
+            mm = m.copy(); mm[:, :u] = False; mm[:, v:] = False
+            ys, xs = np.nonzero(mm)
+            neu.append(((xs.min(), ys.min(), xs.max() + 1, ys.max() + 1), mm))
+        figuren[i:i + 1] = neu
+    return rgb, bg, figuren
+
+
+def farben_vereinheitlichen(teile, farben):
+    """Gemeinsame eigene Farben für mehrere verkleinerte Figuren (Liste aus (bild, deckung)); Stoffstruktur
+    verschwindet. Feine Details (Augen, Linien) bleiben: wo das Original deutlich heller oder dunkler ist als
+    seine Gruppe, gilt das Original."""
+    probe = np.concatenate([k.reshape(-1, 3)[m.ravel()] for k, m in teile]).astype(np.float32)
+    eigen, _ = palette_finden(probe, farben)
+    ziel = oklab(eigen.astype(np.float32)) * GEWICHT
+    aus = []
+    for klein, alpha in teile:
         sel = alpha.ravel()
         px = klein.reshape(-1, 3).astype(np.float32)[sel]
-        lab, ziel = oklab(px) * GEWICHT, oklab(eigen.astype(np.float32)) * GEWICHT
+        lab = oklab(px) * GEWICHT
         neu = eigen[((lab[:, None, :] - ziel[None]) ** 2).sum(-1).argmin(1)].astype(np.float32)
         dl = np.abs(oklab(px)[:, 0] - oklab(neu)[:, 0])
         flach = klein.reshape(-1, 3).copy()
         flach[sel] = np.where((dl > DETAIL)[:, None], px, neu).astype(np.uint8)
-        klein = flach.reshape(klein.shape)
+        aus.append(flach.reshape(klein.shape))
+    return aus
+
+
+def fertig(klein, alpha, palette, glatt, konturfarbe, spiegeln):
     pal = palette_holen(palette)
     if pal is not None:
         klein = auf_palette(klein, pal)
-    out = np.zeros((H, W, 4), np.uint8)
+    out = np.zeros(klein.shape[:2] + (4,), np.uint8)
     out[..., :3] = klein; out[..., 3] = alpha * 255
     out = streupixel(out)
     if glatt:
@@ -242,7 +355,51 @@ def sprite(quelle, hoehe, ansicht=1, spiegeln=False, ausschnitt=None, palette="e
         out = kontur(out, konturfarbe)
     if spiegeln:
         out = out[:, ::-1]
-    return Image.fromarray(out, "RGBA")
+    return out
+
+
+def sprite(quelle, hoehe, ansicht=1, spiegeln=False, ausschnitt=None, palette="endesga", tol=40,
+           konturfarbe=None, glatt=True, farben=0):
+    rgb, bg, rahmen = blatt_lesen(quelle, ausschnitt, tol)
+    if not 1 <= ansicht <= len(rahmen):
+        sys.exit(f"Ansicht {ansicht} gibt es nicht, gefunden: {len(rahmen)} Figuren")
+    klein, alpha = verkleinern(rgb, bg, rahmen[ansicht - 1], hoehe)
+    if farben:   # gemeinsam für alle Ansichten des Blatts, damit Seite, Vorder- und Rückansicht gleich aussehen
+        alle = [verkleinern(rgb, bg, r, hoehe) for r in rahmen]
+        alle[ansicht - 1] = (klein, alpha)
+        klein = farben_vereinheitlichen(alle, farben)[ansicht - 1]
+    return Image.fromarray(fertig(klein, alpha, palette, glatt, konturfarbe, spiegeln), "RGBA")
+
+
+def zyklus(quelle, hoehe, spiegeln=False, ausschnitt=None, palette="endesga", tol=40, konturfarbe=None,
+           glatt=True, farben=12, rand=4, anzahl=0):
+    """Alle Figuren eines Bewegungsblatts (etwa acht Gehschritte) im selben Maßstab: die höchste Figur wird
+    hoehe Pixel hoch, alle stehen auf derselben Bodenlinie und werden am Oberkörper waagrecht ausgerichtet,
+    damit die Figur auf der Stelle läuft. Liefert gleich große Einzelbilder."""
+    rgb, bg, figuren = blatt_zyklus(quelle, ausschnitt, tol, anzahl)
+    rahmen = [r for r, _ in figuren]
+    s = hoehe / max(y1 - y0 for _, y0, _, y1 in rahmen)
+    boden = max(y1 for *_, y1 in rahmen)
+    teile = [verkleinern(rgb, bg, r, 0, s, m) for r, m in figuren]
+    farbig = farben_vereinheitlichen(teile, farben) if farben else [k for k, _ in teile]
+    bilder, mitten = [], []
+    for (klein, alpha), k, r in zip(teile, farbig, rahmen):
+        b = fertig(k, alpha, palette, glatt, konturfarbe, spiegeln)
+        h = b.shape[0]
+        zone = (b[..., 3] > 0)[int(h * 0.25):int(h * 0.55)]
+        xs = np.nonzero(zone)[1]
+        mitten.append(xs.mean() if len(xs) else b.shape[1] / 2)
+        bilder.append((b, round((boden - r[3]) * s)))
+    links = max(m for m in mitten); rechts = max(b.shape[1] - m for (b, _), m in zip(bilder, mitten))
+    W = int(np.ceil(links + rechts)) + 2 * rand
+    H = max(b.shape[0] + u for b, u in bilder) + rand
+    aus = []
+    for (b, unten), m in zip(bilder, mitten):
+        f = np.zeros((H, W, 4), np.uint8)
+        x = int(round(rand + links - m)); y = H - unten - b.shape[0]
+        f[y:y + b.shape[0], x:x + b.shape[1]] = b
+        aus.append(f)
+    return aus
 
 
 # ---------------------------------------------------------------- Nacharbeit
@@ -424,6 +581,15 @@ def main():
     a = sub.add_parser("animieren")
     a.add_argument("sprite"); a.add_argument("rig"); a.add_argument("ordner")
     a.add_argument("--vorschau", type=int, default=0)
+    z = sub.add_parser("zyklus", help="Bewegungsblatt (etwa Gehschritte) zu einem Sprite-Sheet")
+    z.add_argument("quelle"); z.add_argument("ziel")
+    z.add_argument("--hoehe", type=int, required=True)
+    z.add_argument("--spiegeln", action="store_true")
+    z.add_argument("--kontur")
+    z.add_argument("--farben", type=int, default=12)
+    z.add_argument("--vorschau", type=int, default=0)
+    z.add_argument("--ms", type=int, default=110)
+    z.add_argument("--bilder", type=int, default=0, help="erwartete Zahl der Figuren auf dem Blatt")
     n = sub.add_parser("nacharbeit", help="Pixel aus einer JSON-Liste [[x, y, \"rrggbb\"], …] setzen")
     n.add_argument("sprite"); n.add_argument("pixel"); n.add_argument("ziel")
     r = sub.add_parser("raster")
@@ -431,13 +597,40 @@ def main():
     r.add_argument("--schritt", type=int, default=8)
     r.add_argument("--skalierung", type=int, default=6)
     r.add_argument("--rig")
+    for b in (s, z):
+        b.add_argument("--saettigung", type=float, default=1.3,
+                       help="Farbigkeit vor dem Umfärben verstärken (1.5 bei blassen Konzeptbildern)")
+        b.add_argument("--linien", type=float, default=0.4,
+                       help="dünne dunkle Linien vor dem Verkleinern verdicken, in Zielpixeln (etwa 0.6)")
     arg = ap.parse_args()
+    global SAETTIGUNG, LINIEN
+    SAETTIGUNG = getattr(arg, "saettigung", 1.0)
+    LINIEN = getattr(arg, "linien", 0.0)
     if arg.befehl == "sprite":
         aus = [int(v) for v in arg.ausschnitt.split(",")] if arg.ausschnitt else None
         e = sprite(arg.quelle, arg.hoehe, arg.ansicht, arg.spiegeln, aus, arg.palette, arg.toleranz,
                    arg.kontur, not arg.nicht_glaetten, arg.farben)
         e.save(arg.ziel)
         print(arg.ziel, e.size, len([c for c in e.getcolors(4096) if c[1][3]]), "Farben")
+    elif arg.befehl == "zyklus":
+        bilder = zyklus(arg.quelle, arg.hoehe, arg.spiegeln, konturfarbe=arg.kontur, farben=arg.farben,
+                        anzahl=arg.bilder)
+        Image.fromarray(np.concatenate(bilder, axis=1), "RGBA").save(arg.ziel)
+        h, w = bilder[0].shape[:2]
+        if arg.vorschau:
+            v = arg.vorschau
+            gif = []
+            for b in bilder:
+                g = schachbrett(w * v, h * v, v * 2)
+                gb = Image.fromarray(b, "RGBA").resize((w * v, h * v), Image.NEAREST)
+                g.paste(gb, (0, 0), gb); gif.append(g)
+            stamm = str(Path(arg.ziel).with_suffix(""))
+            gif[0].save(stamm + ".gif", save_all=True, append_images=gif[1:], duration=arg.ms, loop=0)
+            blatt = schachbrett(w * len(bilder) * v, h * v, v * 2)
+            for i, g in enumerate(gif):
+                blatt.paste(g, (i * w * v, 0))
+            blatt.save(stamm + "_blatt.png")
+        print(arg.ziel, len(bilder), "Bilder je", w, "×", h)
     elif arg.befehl == "nacharbeit":
         a = auflage_anwenden(np.asarray(Image.open(arg.sprite).convert("RGBA")),
                              json.loads(Path(arg.pixel).read_text(encoding="utf-8")))
