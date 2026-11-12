@@ -5,9 +5,12 @@ extends CQAusgang
 # Gesperrt? _darf_gehen() überschreiben.
 
 
-## Vor P3 will Max nicht zurück (skript/prolog.md, 1000). Nach P3 endet der Prolog ohnehin.
+## Vor P1 steigt Max wieder hinunter (1020, 1025): Die Thunfischdose steckt im Treppenhaus in
+## Opas Mantel, die Teetasse steht im Wohnzimmer. Ist Pixel satt, will er nicht mehr zurück
+## (1000, 1005). Nach P3 endet der Prolog ohnehin.
 func _darf_gehen() -> bool:
 	if Zustand.geloest("P3"):
 		return true
-	await Spiel.sagen("MAX", "P0_DACH_MAX_1000")
-	return false
+	var runter := not Zustand.geloest("P1")
+	await Spiel.benutzen(bauplan().get("benutzen", []), "Hotspot/" + script_name)
+	return runter

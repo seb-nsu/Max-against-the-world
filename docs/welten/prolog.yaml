@@ -7,6 +7,11 @@ weitere_schalter:             # Hilfsschalter und -werte ohne eigenes Rätsel (0
   - P0_SCHNEE_GESEHEN         # erstes Ansehen des rauschenden Zapp-O-Mat gespielt (0420–0440)
   - P0_PIXEL_WECKVERSUCHE     # Wert: Zahl der Weckversuche vor P1 (Opa kommentiert beim zweiten)
   - P0_DRAHTKLEIDERBUEGEL     # Wert: gerade oder antenne
+  - P0_DOSE_OFFEN             # Max hat die Thunfischdose geöffnet (0280); Pixel wacht erst auf, wenn er sie ihm hinhält
+  - P0_PIXEL_GEWECKT          # Pixel hat an der offenen Dose gerochen und sie abgelehnt (0285–0366); er will Porzellan
+  - P0_TASSE_GEFUELLT         # Thunfisch ist in Opas Teetasse (0072)
+  - P0_NAPF_STUFE             # Wert: Hinweisstufe für den zweiten Teil von P1 (Opa, 1520–1528)
+  - P0_NAPF_ZEIT              # Wert: Spielzeit beim letzten Stufenwechsel
 
 raeume:
   - id: wohnzimmer
@@ -33,7 +38,7 @@ raeume:
     name: Dachboden
     skript_code: [DACH]
     groesse: 640x360
-    ausgaenge: [treppenhaus]         # Rückweg durch die Bodenluke verweigert Max (P0_DACH_MAX_1000)
+    ausgaenge: [treppenhaus]         # Rückweg durch die Bodenluke bis P1 (Dose und Teetasse liegen unten); danach verweigert Max (P0_DACH_MAX_1000)
     erreichbar_ab: start
     musik: gegenwart
     atmo: uhr_ticken
@@ -65,7 +70,7 @@ figuren:
 gegenstaende:
   - id: thunfischdose
     name: Thunfischdose
-    herkunft: dachboden              # Opas Werkzeugkiste
+    herkunft: treppenhaus            # steckt in Opas Mantel „man weiß ja nie“
     zustaende: [zu, offen, leer]     # nach P1 leer; reist leer weiter
     verwendet_in: [P1]               # danach Welt 1 R1c, Welt 2 Wunderding
     reist_mit: true                  # Pflichtfach
@@ -73,10 +78,18 @@ gegenstaende:
 
   - id: dosenoeffner
     name: Dosenöffner
-    herkunft: dachboden              # Opas Werkzeugkiste
+    herkunft: dachboden              # hängt an der Werkbank
     zustaende: [normal]
     verwendet_in: [P1]
     reist_mit: true                  # bleibt nach dem Prolog oben, ab Rückkehr 1 als Wahlfach wählbar
+    nahansicht: false
+
+  - id: teetasse
+    name: Teetasse
+    herkunft: wohnzimmer             # Opas Teetasse vom Couchtisch, mit kaltem Tee
+    zustaende: [kalt, gefuellt]      # gefuellt: Thunfisch aus der Dose ist drin; bleibt nach P1 als Pixels Napf auf der Werkbank
+    verwendet_in: [P1]
+    reist_mit: false
     nahansicht: false
 
   - id: drahtkleiderbuegel
@@ -120,7 +133,7 @@ raetsel:
   - id: P1
     name: Der schlafende Kater
     raum: dachboden
-    benoetigt: [thunfischdose, dosenoeffner]
+    benoetigt: [thunfischdose, dosenoeffner, teetasse]
     ergibt: []                       # Pixel wach, Hilfe-Pfote aktiv, Zapp-O-Mat an
     schalter: [P0_P1_GELOEST]
     optional: false

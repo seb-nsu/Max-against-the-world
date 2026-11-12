@@ -98,6 +98,7 @@ const PIIAmboss := preload("res://game/inventory_items/amboss/inventory_item_amb
 const PIILichtroehreDeluxe := preload("res://game/inventory_items/lichtroehre_deluxe/inventory_item_lichtroehre_deluxe.gd")
 const PIIGoldeneFernbedienung := preload("res://game/inventory_items/goldene_fernbedienung/inventory_item_goldene_fernbedienung.gd")
 const PIIPortalgeraet := preload("res://game/inventory_items/portalgeraet/inventory_item_portalgeraet.gd")
+const PIITeetasse := preload("res://game/inventory_items/teetasse/inventory_item_teetasse.gd")
 # ---- classes
 
 # nodes ----
@@ -197,6 +198,7 @@ var Amboss: PIIAmboss : get = get_Amboss
 var LichtroehreDeluxe: PIILichtroehreDeluxe : get = get_LichtroehreDeluxe
 var GoldeneFernbedienung: PIIGoldeneFernbedienung : get = get_GoldeneFernbedienung
 var Portalgeraet: PIIPortalgeraet : get = get_Portalgeraet
+var Teetasse: PIITeetasse : get = get_Teetasse
 # ---- nodes
 
 # functions ----
@@ -296,5 +298,6 @@ func get_Amboss() -> PIIAmboss: return get_item_instance("Amboss")
 func get_LichtroehreDeluxe() -> PIILichtroehreDeluxe: return get_item_instance("LichtroehreDeluxe")
 func get_GoldeneFernbedienung() -> PIIGoldeneFernbedienung: return get_item_instance("GoldeneFernbedienung")
 func get_Portalgeraet() -> PIIPortalgeraet: return get_item_instance("Portalgeraet")
+func get_Teetasse() -> PIITeetasse: return get_item_instance("Teetasse")
 # ---- functions
 

@@ -382,20 +382,23 @@ P0_DACH_MAX_0020,"Hi, Grandpa. I'm here for the password, just so that's clear f
 P0_DACH_MAX_0050,Grandpa. That's a TV.
 P0_DACH_MAX_0085,And what exactly do you need all that for?
 P0_DACH_MAX_0100,Sounds like a series that should have stopped after season three.
-P0_DACH_MAX_0120,"Counter-offer: for every thing, I get a quarter of the password. Fair, motivating, modern."
+P0_DACH_MAX_0120,"Counter-offer: for every thing, I get a quarter of the password. Then at least I get something out of it along the way."
 P0_DACH_MAX_0150,No. Since when has it been gone?
 P0_DACH_MAX_0210,Pixel's lying on the power cable. He's unerringly picked the warmest spot in the whole house. Respect.
 P0_DACH_MAX_0212,"Pixel's sitting on the workbench, digesting. He does it with an astonishing amount of dignity."
 P0_DACH_MAX_0213,He's purring in his sleep. Or growling. With Pixel I've never been able to hear the difference.
 P0_DACH_MAX_0220,"I can't lift him. He weighs about as much as a full moving box, and he's holding on to the cable."
-P0_DACH_MAX_0240,"Grandpa's toolbox: screwdriver, wire and tuna. Grandpa has a system all of his own."
+P0_DACH_MAX_0240,"Grandpa's toolbox: screwdrivers, wire and a roll of peppermints. Grandpa has a system all of his own."
 P0_DACH_MAX_0245,"Under the wire there's a note: ""Tools for emergencies. And for Pixel."" I think that means the same thing."
-P0_DACH_MAX_0250,A tin of tuna. Emergency rations. Not even out of date.
-P0_DACH_MAX_0260,A tin opener you crank by hand. That's cooking the way it worked before electricity.
+P0_DACH_MAX_0260,"There's a crank tin opener hanging on the workbench, between half a toothbrush and half an umbrella. At least this one is whole."
 P0_DACH_MAX_0270,"The tin is closed, and I honestly don't fancy opening it with my teeth."
 P0_DACH_MAX_0280,And … pssht.
+P0_DACH_MAX_0282,"Phew, you can probably smell that through the whole house. If that doesn't wake Pixel, I suppose I'll have to hold the tin right under his nose."
+P0_DACH_MAX_0285,"Hey, Pixel. Have a sniff of what I've got here."
 P0_DACH_MAX_0330,Hang on. He talks?
 P0_DACH_MAX_0350,In brine. It says so on the tin.
+P0_DACH_MAX_0362,A minute ago you were asleep on a power cable.
+P0_DACH_MAX_0367,"Here you go: tuna on cold tea, served in Grandpa's teacup."
 P0_DACH_MAX_0390,A cat with a built-in help function. I've downloaded worse.
 P0_DACH_MAX_0400,"The Zap-O-Matic is off. As long as Pixel's lying on the cable, Grandpa doesn't dare switch it on."
 P0_DACH_MAX_0405,The screen is black and I can see my reflection. It hasn't got a signal either.
@@ -405,8 +408,8 @@ P0_DACH_MAX_0430,Wait. The programmes just … ended? And then there was nothing
 P0_DACH_MAX_0450,"Grandpa's wardrobe. Three cardigans, all brown, and every pocket has tools in it."
 P0_DACH_MAX_0455,"Right at the back there's a fourth one, a green one. He only wears it on special occasions, and so far there hasn't been one."
 P0_DACH_MAX_0460,"A wire coat hanger, without any shirt at all. It looks a bit sad."
-P0_DACH_MAX_0470,If I bend this here and twist that there … Now it looks like a bunny with reception. That's promising.
-P0_DACH_MAX_0480,There. An aerial. As of now I'm officially a technician.
+P0_DACH_MAX_0470,"If I bend this here and twist that there … Now it looks like a bunny with reception. That's all an aerial needs to do, really."
+P0_DACH_MAX_0480,"There, the aerial's on. That makes me a technician as of today."
 P0_DACH_MAX_0620,"A calendar, and one day is circled in thick red. Either a birthday or a dentist appointment. Grandpa would look like that for both."
 P0_DACH_MAX_0630,"And next to it, very small, in pencil: ""Ch3 – Waffleton""."
 P0_DACH_MAX_0670,Channel 3. Here we go.
@@ -428,13 +431,16 @@ P0_DACH_MAX_0980,A workbench full of half-finished inventions. That looks famili
 P0_DACH_MAX_0985,"Half a toothbrush with a motor, half an umbrella with a lamp. Grandpa only ever invents the first half."
 P0_DACH_MAX_0990,"The skylight. Outside is the world. Which, if you ask me, is overrated anyway."
 P0_DACH_MAX_0995,"There's a pigeon sitting on the glass, looking in. It finds us just as weird as we find it."
-P0_DACH_MAX_1000,"That's the way down, to the sofa. No. Focus, Max. Password."
+P0_DACH_MAX_1000,"That's the way down to the sofa. But Pixel is awake and the password is up here, so I'm staying."
 P0_DACH_MAX_1005,I'd already knelt down by the hatch. Then I thought of the password and got back up.
 P0_DACH_MAX_1010,"The floor hatch. The sofa's waiting down there. I can't see it, but I can feel it thinking about me."
 P0_DACH_MAX_1015,I listened down the hatch for a second. The sofa is silent. It's got time.
+P0_DACH_MAX_1020,"All right, back down again. But I'm walking past the sofa without looking at it."
+P0_DACH_MAX_1025,And down again. The stairs recognise me by my footsteps by now.
 P0_DACH_MAX_1110,Pixel doesn't want wire. Pixel wants fish. I get the feeling Pixel always wants fish.
 P0_DACH_MAX_1130,The tin opener doesn't fit in the TV. I tried it so you don't have to.
 P0_DACH_MAX_1150,"Power first, then reception. And for power, the cat has to get off the cable."
+P0_DACH_MAX_1180,"A cup of cold tea doesn't impress Pixel. Doesn't impress me either, to be honest."
 P0_DACH_MAX_1310,What exactly is the Zap-O-Matic?
 P0_DACH_MAX_1322,How do I get Pixel off the cable?
 P0_DACH_MAX_1330,"Why me, anyway?"
@@ -496,12 +502,13 @@ P0_DACH_OPA_0070,"I need four things. First, a dragon egg. Second, a golden sack
 P0_DACH_OPA_0080,"Third, an Eternal Energy Cell. And fourth, the Golden Remote. In exactly that order."
 P0_DACH_OPA_0090,"So the world doesn't end tonight. Mine, at least."
 P0_DACH_OPA_0110,"Four things, then you get the password. A scientist's word of honour. I'll even sign it for you."
-P0_DACH_OPA_0130,"Counter-offer: you get none at all if you keep haggling. Fair, motivating, grandfatherly."
+P0_DACH_OPA_0130,"A quarter of a password gets you exactly as far into the internet as none at all. First the four things, then the lot."
 P0_DACH_OPA_0140,"Oh, by the way, have you seen my remote anywhere? The normal one, not the golden one."
 P0_DACH_OPA_0155,"Since this morning. Or since Tuesday. When you're inventing, time passes differently up here somehow."
 P0_DACH_OPA_0160,"Never mind! First the cat has to get off the cable. The cat, model Pixel, year of manufacture unknown. He's lying on my power."
 P0_DACH_OPA_0230,You won't shift him like that. That cat sleeps like a rock. Like a very offended rock.
 P0_DACH_OPA_0300,"Ah, he's alive! Hang on, I'll switch his speaker on."
+P0_DACH_OPA_0366,"China we have. There's bound to be a cup of mine standing around somewhere, I make myself a tea every day after all."
 P0_DACH_OPA_0370,"He's awake! Wonderful. Pixel's going with you, Max. He knows every programme that ever aired, and he knows all the answers."
 P0_DACH_OPA_0440,"The aerial's missing! My reception organ, model coat hanger. I lent it to someone. Or built it into something. One of the two."
 P0_DACH_OPA_0500,We have a picture! Now all we need is the right channel. Which one was it again?
@@ -513,29 +520,40 @@ P0_DACH_OPA_0845,Time passes differently over there. Here it passes normally. So
 P0_DACH_OPA_0860,"Good luck! And bring the egg back in one piece! And don't read the note until you're over there, you hear?"
 P0_DACH_OPA_1140,Don't turn the dial before there's a picture! The ad break is for the way back.
 P0_DACH_OPA_1140_2,Five seconds of a milk advert and you're back here. Nobody knows why.
-P0_DACH_OPA_1320,"A TV that doesn't show you things, it sends you there. And the ad break brings you back. Don't ask me why."
-P0_DACH_OPA_1324,"With arguments. He understands exactly one, and it's in my toolbox."
-P0_DACH_OPA_1324_2,"Between the screwdriver and the wire, where else."
+P0_DACH_OPA_1160,"Not for me, thanks. I've already had tea. Some time this week."
+P0_DACH_OPA_1320,"A TV that sends you to wherever the programme is set. The ad break brings you back, and please don't ask me why."
+P0_DACH_OPA_1324,"With arguments. He understands exactly one, and I always have it on me when I leave the house."
+P0_DACH_OPA_1324_2,"Emergency rations, lad. In my coat pocket, where else."
 P0_DACH_OPA_1326,"And the tin is closed, of course. Sweet talk won't help there, only cranking will."
-P0_DACH_OPA_1328,"Open the tuna tin with the tin opener. He'll be awake before you can say ""salmon""."
-P0_DACH_OPA_1340,Because you're the only one who's got nothing to do right now. And because I trust you. In exactly that order.
+P0_DACH_OPA_1326_2,"The tin opener is hanging up here on the workbench, right next to the half umbrella."
+P0_DACH_OPA_1328,Fetch the tuna tin from my coat in the stairwell and open it with the tin opener from the workbench.
+P0_DACH_OPA_1328_2,"Then hold it under the cat's nose. He'll be awake before you can say ""salmon""."
+P0_DACH_OPA_1340,"Because right now you're the only one in the house with nothing to do. And because I trust you, lad. That too."
 P0_DACH_OPA_1360,"Anything you touch without looking at it first. Looking is free, boy. Touching sometimes costs you your eyebrows."
 P0_DACH_OPA_1364,"The circle? Oh, that. That's … a circle. Circles are important. They're round. Yes. Exactly."
 P0_DACH_OPA_1380,"Off you go, then. The TV isn't going anywhere. I hope."
 P0_DACH_OPA_1460,"Adverts always come, Max. It's the only thing on TV you've been able to rely on for fifty years."
-P0_DACH_OPA_1480,You're welcome. And don't look at me like that. Having nothing to do is the very best qualification for saving worlds.
+P0_DACH_OPA_1480,"You're welcome. And don't look at me like that. I had nothing to do at your age either, and look what became of me."
+P0_DACH_OPA_1520,"His lordship requires china. There is exactly one piece in this whole house without a crack, and I drink from it every day."
+P0_DACH_OPA_1524,"My teacup is downstairs in the living room, on the coffee table. The tea in it is cold, nobody will miss it."
+P0_DACH_OPA_1528,Fetch my teacup from the living room and tip the tuna from the tin into it.
+P0_DACH_OPA_1528_2,"Then put it down in front of the cat. A saucer would be classier, but I built mine into something."
 P0_DACH_OPA_1676,Not the lever! It's still cleared for take-off!
 P0_DACH_OPA_1706,Louder!
 P0_DACH_PIX_0215,"If you look at me like that one more time, I shall begin to purr."
 P0_DACH_PIX_0215_2,That is a threat.
 P0_DACH_PIX_0310,Who. Woke. Me.
 P0_DACH_PIX_0320,"I was lying on the only warm cable in this attic, a spot I have earned over many years."
-P0_DACH_PIX_0320_2,"I was having a dream. A large, shimmering, pink dream."
-P0_DACH_PIX_0320_3,"It was about salmon, in case anyone here is interested. They should be."
+P0_DACH_PIX_0320_2,And I was in the middle of a dream about a salmon that was bigger than me and still did not put up a fight.
+P0_DACH_PIX_0320_3,"One does not get a dream like that twice, young man."
 P0_DACH_PIX_0340,"He has been talking for years, young man. It is simply that nobody listened until now, and I hold that against no one. Almost no one."
 P0_DACH_PIX_0340_2,But enough about me. Is that tuna in brine or in oil?
 P0_DACH_PIX_0360,"In brine. Of course. One serves a cat of my standing fish in salt water, as if he were some common harbour cat."
-P0_DACH_PIX_0360_2,Barbaric. Hand it over anyway.
+P0_DACH_PIX_0360_2,"And out of the tin at that, young man. I do not eat from tinplate, it is beneath me."
+P0_DACH_PIX_0364,"On a warm power cable, which is a different matter. I eat from china or not at all."
+P0_DACH_PIX_0364_2,Wake me again when dinner is served.
+P0_DACH_PIX_0368,"Fish on black tea, in china with a gold rim. That is how one serves a cat."
+P0_DACH_PIX_0368_2,Hand it over before I change my mind.
 P0_DACH_PIX_0380,"I do indeed know all the answers. I simply dislike giving them out, for knowledge, like tuna, should not be wasted."
 P0_DACH_PIX_0380_2,"So whoever is stuck may press my paw. Politely, please. And not too often."
 P0_DACH_PIX_0420,"That is called snow, young man. In the old days, when television still had manners, the programmes ended at some point in the night."
@@ -550,7 +568,7 @@ P0_DACH_PIX_0880,Miiiaaaow!
 P0_DACH_PIX_0920,"There are seventeen remotes in this box, young man. Seventeen."
 P0_DACH_PIX_0920_2,"And as fate would have it, the one you need is never among them."
 P0_DACH_PIX_0925,"I have counted again, and there are still seventeen. One is missing, and I know very well which."
-P0_DACH_PIX_0925_2,"I am simply not saying, for I am a cat and not a lost-property office."
+P0_DACH_PIX_0925_2,"I am simply not saying, because so far nobody has asked me politely."
 P0_DACH_PIX_0945,"That is your grandfather's vacuum cleaner. It once sucked up my ear, without warning and without apologising afterwards."
 P0_DACH_PIX_0945_2,"Since then there has been a clear agreement between us: it stays off, and I stay away."
 P0_DACH_PIX_0946,It blinked. With its switch. I saw it quite clearly.
@@ -559,20 +577,21 @@ P0_DACH_PIX_0950,"A dog-ear on the page with the chocolate cake. A cat remembers
 P0_DACH_PIX_0950_2,"Your grandfather evidently does not remember, or he would not need a dog-ear."
 P0_DACH_PIX_0955,"Next to the chocolate cake there is a date and a heart, drawn in pencil."
 P0_DACH_PIX_0955_2,"And underneath, very small and very shaky: ""Don't forget again."" I find that touching. And suspicious."
-P0_DACH_PIX_1120,"Please do not stick me in the television. I am not an aerial, I am a complete work of art."
-P0_DACH_PIX_1120_2,Aerials receive. I transmit. That is a fundamental difference.
+P0_DACH_PIX_1120,"Please do not stick me in the television, young man. I have no training whatsoever as an aerial."
+P0_DACH_PIX_1120_2,And the last wire your grandfather tried to attach to me is still lying under the armchair.
+P0_DACH_PIX_1170,"I am asleep, young man, and I shall stay asleep exactly until dinner is served. In china."
 P0_DACH_PIX_1230,"I would help, truly. But I have stayed lying down so exemplarily,"
 P0_DACH_PIX_1230_2,and it would be a sin to give up this posture for something as ordinary as helping.
 P0_DACH_PIX_1240,"The television is staring at you, and you are staring back. I know duels like this from the windowsill."
 P0_DACH_PIX_1240_2,"One of you has to give in eventually, and I would bet my tuna that it is you."
 P0_DACH_PIX_1366,"He is lying, and I can smell it. With humans, lies always smell a little of fear."
-P0_DACH_PIX_1366_2,"With your grandfather the lie also smells of cake. That is new, and I find it interesting."
+P0_DACH_PIX_1366_2,"With your grandfather it also smells of chocolate cake, and I have never had that with a lie before."
 P0_DACH_PIX_1400,"I do not come along, young man. I am taken along, and, where possible, carried."
-P0_DACH_PIX_1400_2,"That is a fine but significant difference, and it has to do with dignity."
+P0_DACH_PIX_1400_2,"The last time I walked anywhere myself, the neighbour was grilling salmon, and that was an exception."
 P0_DACH_PIX_1404,"So, yes. But under protest."
 P0_DACH_PIX_1420,"I have slept on every one of them, one after another, and can therefore tell you the following:"
 P0_DACH_PIX_1420_2,They all keep you wonderfully warm. Not a single one works. And one of them flies.
-P0_DACH_PIX_1440,"Finally, a sensible suggestion. The first one today."
+P0_DACH_PIX_1440,"Finally, a sensible suggestion. Wake me when there is fish. If there is a fire, a note will do."
 P0_DACH_PIX_1500,The toaster over there. It stands there pretending to be just a toaster.
 P0_DACH_PIX_1500_2,"Do not believe a word of it. I once saw it fly, and since then I no longer take breakfast anywhere near it."
 P0_HINT_PIX_0010,Everything is done. All that is left is for you to climb into the television.
@@ -590,7 +609,10 @@ P0_HINT_PIX_0320_2,"The circle is a different problem, and it is his."
 P0_HINT_PIX_0330,"The channel number is on the calendar. Set it on the dial. It is that simple, and yet I still had to say it."
 P0_HINT_PIX_9995,"I am still thinking. From the outside it looks like sleeping, I know."
 P0_HINT_PIX_9995_2,"It is thinking nonetheless, merely with closed eyes and the occasional snore."
-P0_INV_MAX_0010,"Tuna. As far as I know, the only currency Pixel accepts."
+P0_INV_MAX_0010,"Tuna in brine. For a tin like this, Pixel has even been known to give up the armchair of his own free will."
+P0_INV_MAX_0012,"The back says: ""Once opened, consume quickly."" With Pixel, I'm not worried about that."
+P0_INV_MAX_0016,"The tin is open, and my hoodie pocket is going to smell of fish forever. I hope it was worth it."
+P0_INV_MAX_0018,"I'd better keep it level. I've never had brine in my hoodie pocket, and I'd like to keep it that way."
 P0_INV_MAX_0020,Empty. Pixel licked it so clean I don't dare wash it.
 P0_INV_MAX_0025,"I looked inside and I can see myself reflected in the bottom. I look hungry. So does Pixel, by the way."
 P0_INV_MAX_0030,A tin opener. Grandpa calls it an emergency tool. Pixel probably worships it.
@@ -599,12 +621,16 @@ P0_INV_MAX_0040,"A hanger without a shirt. At Grandpa's, everything has a second
 P0_INV_MAX_0045,"I bend it, and it bends back. It still has its pride."
 P0_INV_MAX_0050,Now it's an aerial. Or modern art. As long as it gets reception.
 P0_INV_MAX_0055,"If I hold it up, maybe I'll pick up radio, aliens or Grandpa's favourite station. With Grandpa, that's all the same thing."
-P0_INV_MAX_0060,"Grandpa's travel bag. Smells of leather, of adventure and, very faintly, of tuna."
+P0_INV_MAX_0060,Grandpa's travel bag. It smells of old leather and very faintly of tuna. I think Pixel has slept in it before.
 P0_INV_MAX_0065,"There's a note stuck inside: ""Max. Don't lose."" I'm not quite sure whether it means the bag or me."
-P0_INV_PIX_0015,I can smell it through the tin. I can smell it through your bag.
-P0_INV_PIX_0015_2,"If it came to it, I could probably smell it through time."
+P0_INV_MAX_0070,Tuna in Grandpa's teacup? I haven't sunk that low yet.
+P0_INV_MAX_0072,Tuna into the cold tea. That's now either a food bowl or the worst drink in the world.
+P0_INV_MAX_0080,"Grandpa's teacup, with cold tea and half a biscuit at the bottom. I'm carrying it as carefully as a raw egg."
+P0_INV_MAX_0085,"Inside, the cup has brown rings like the growth rings of a tree. Grandma says Grandpa only washes it at Christmas."
+P0_INV_MAX_0090,"Tuna in cold tea. I've seen worse in the school canteen, but not often."
+P0_INV_MAX_0095,The half biscuit is floating on top now. So Pixel even gets dessert.
 P0_TREP_MAX_0010,"Grandpa's hat. There's a feather in the band, either from a pheasant or from a pillow. With Grandpa, either is possible."
-P0_TREP_MAX_0015,The hat smells of solder and peppermint. So basically exactly like Grandpa when you hug him.
+P0_TREP_MAX_0015,"The hat smells of solder and peppermint, exactly like Grandpa when you hug him."
 P0_TREP_MAX_0020,"The weather's glorious outside. Inside, judging by the wallpaper, it's roughly 1987."
 P0_TREP_MAX_0025,There used to be a cactus on the windowsill. Grandpa watered it every day. I think that's what killed it.
 P0_TREP_MAX_0030,"Every step creaks in a different key. Grandpa calls it his alarm system, and it works."
@@ -631,7 +657,13 @@ P0_TREP_MAX_0170,"Crates under the stairs. One says ""Inventions, finished"", an
 P0_TREP_MAX_0175,"The biggest one says ""Inventions, half"". It's so full the lid won't close any more."
 P0_TREP_MAX_0180,"I'm not opening any. When Grandpa puts something under the stairs, there's usually a good reason for it to stay there."
 P0_TREP_MAX_0185,"I nudged one, and something inside said ""Hello"". I'm just going to keep walking like normal."
+P0_TREP_MAX_0190,"In the pocket of the ""you never know"" coat there's a tin of tuna, and it's not even out of date."
+P0_TREP_MAX_0190_2,Grandpa never leaves the house without emergency rations.
 P0_TREP_OPA_0126,Hands off the umbrella!
+P0_WOHN_MAX_0002,"I'm Max, and I'm staying at Grandpa's at the moment. Grandpa is an inventor."
+P0_WOHN_MAX_0002_2,"So everything at his place works a bit differently, and most of it doesn't work at all."
+P0_WOHN_MAX_0004,"I don't mind, as long as the sofa holds up and the Wi-Fi works."
+P0_WOHN_MAX_0006,The sofa holds up.
 P0_WOHN_MAX_0010,"One bar. I've held the phone to the window, over my head and under the pillow. One single bar."
 P0_WOHN_MAX_0020,And I'm pretty sure that one's just there for decoration.
 P0_WOHN_MAX_0040,Can't science come down? I've just found the perfect lying position.
@@ -646,14 +678,14 @@ P0_WOHN_MAX_0130,Cold tea. Grandpa makes himself one every day and forgets it ev
 P0_WOHN_MAX_0135,"There's half a biscuit at the bottom of the cup. Broke off while dunking and never resurfaced. Rest in peace, biscuit."
 P0_WOHN_MAX_0140,"A clean rectangle in the dust. That's where Grandpa's remote was, and for quite a while, by the looks of it."
 P0_WOHN_MAX_0145,The outline is so exact you almost want to draw a chalk line around it. Something terrible happened here.
-P0_WOHN_MAX_0150,"The sofa. The two of us go way back, and most of the chapters take place lying down."
-P0_WOHN_MAX_0155,"There's a dent exactly my shape. I'm standing right next to it, and the sofa already misses me."
+P0_WOHN_MAX_0150,The sofa. Last summer I watched three seasons on it in one go.
+P0_WOHN_MAX_0150_2,Grandpa brought me a blanket halfway through and asked whether I was still alive.
+P0_WOHN_MAX_0155,"There's a dent that's exactly my shape. I'm standing right next to it, and the sofa already misses me."
 P0_WOHN_MAX_0160,"No lying down. If I lie down now, I won't get up until next year, and by then the password will be out of date."
 P0_WOHN_MAX_0165,Just sit on it for a sec? That's what everyone says. And suddenly it's Tuesday and nobody knows how.
 P0_WOHN_MAX_0170,"I press ""On"". It hums, thinks about it for a moment and switches off again."
 P0_WOHN_MAX_0175,"""On"" again. This time it hums louder. I think it's trying to tell me something, and I think it's ""No""."
-P0_WOHN_MAX_0180,"I don't drink cold tea. I don't have many principles, but that's one of them."
-P0_WOHN_MAX_0185,I sniffed it. Cold tea smells like a waiting room.
+P0_WOHN_MAX_0180,"I don't drink cold tea, that's one of my few principles. But I'm taking the cup, Grandpa forgot about it ages ago anyway."
 P0_WOHN_MAX_0190,"I'd better leave the picture alone. Grandma notices when one's crooked, even from her holiday."
 P0_WOHN_MAX_0195,I just straightened it. Now all the others are crooked. I'm done with this.
 P0_WOHN_MAX_0200,"I'm not wiping the dust away. If the remote was kidnapped, that's evidence."
@@ -664,12 +696,12 @@ P0_WOHN_MAX_0320,"I'm not opening that. At Grandpa's, something always falls out
 P0_WOHN_MAX_0325,"Okay, a crack. An ironing board tips towards me, very slowly, like it wants to talk. I'm closing it again."
 P0_WOHN_MAX_0330,"A floor lamp with fringes. It gives exactly enough light to see the dust, but not enough to read by."
 P0_WOHN_MAX_0335,"There's a note stuck to the base: ""Don't switch off. Loose connection."" Since when, it sadly doesn't say."
-P0_WOHN_MAX_0340,I'll leave it on. The note on the base doesn't say what happens otherwise. I think that says enough.
+P0_WOHN_MAX_0340,"I'll leave it on. The note doesn't say what happens otherwise, and I don't want to be the one who finds out."
 P0_WOHN_MAX_0345,I did give it a little wiggle. Something's come on in the cellar.
 P0_WOHN_MAX_0350,"Grandpa's newspaper. He always does the crossword in pen, even the squares he gets wrong."
 P0_WOHN_MAX_0355,"""Device with a screen, eight letters"": Grandpa wrote ""ZAPOMATIC"" and simply drew an extra box for the ninth."
 P0_WOHN_MAX_0360,I don't read newspapers. You can't even comment underneath that everything's wrong.
-P0_WOHN_MAX_0365,"Three down: ""Wireless network, four letters"". Grandpa wrote ""NOPE"". That's not an answer, that's an attitude."
+P0_WOHN_MAX_0365,"Three down: ""Wireless network, four letters"". Grandpa wrote ""NOPE"". That explains a lot about the reception in this house."
 P0_WOHN_MAX_1220,"Without Wi-Fi, time passes more slowly. I'm pretty sure that's physics."
 P0_WOHN_OPA_0030,Maaax! Come up here! I need you for science!
 P0_WOHN_OPA_0042,"Science has knees, boy! Old knees!"
@@ -710,8 +742,8 @@ SYS_ERS_PIX_0140,My paws are destined for greater things.
 SYS_ERS_PIX_0140_2,"For tuna, for example, or for the occasional knocking over of a vase."
 SYS_ERS_PIX_0150,"Try tuna. I do not say this out of self-interest,"
 SYS_ERS_PIX_0150_2,but because experience teaches that almost any problem can be solved with tuna.
-SYS_ERS_PIX_0160,"I saw that, and I shall never be able to forget it."
-SYS_ERS_PIX_0160_2,That is not a compliment.
+SYS_ERS_PIX_0160,"I saw that, and unfortunately I shall never be able to forget it."
+SYS_ERS_PIX_0160_2,Even though I normally forget everything one cannot eat.
 SYS_ERS_PIX_0170,No. And I say that as someone who has been saying no professionally for years.
 SYS_ERS_PIX_0180,"One cannot sleep on that. I have not tried, but I can tell these things."
 SYS_ERS_PIX_0180_2,"And what cannot be slept on serves, in my view, no purpose."
@@ -771,7 +803,7 @@ SYS_WDH_MAX_0190,Some things you have to look at three times. This isn't one of 
 SYS_WDH_MAX_0200,Okay. I've got it. I've really got it.
 SYS_WDH_PIX_0010,"You have now looked at it three times. I am counting,"
 SYS_WDH_PIX_0010_2,"because otherwise, as you may have noticed, I have nothing to do."
-SYS_WDH_PIX_0020,"It is still boring. That, by the way, is not an opinion but a measurement."
+SYS_WDH_PIX_0020,"It is still boring. I opened an eye specially for it, and it was not worth it."
 SYS_WDH_PIX_0030,"If you look at it once more, I shall fall asleep."
 SYS_WDH_PIX_0030_2,In protest.
 SYS_WDH_PIX_0040,"I have looked at it, and it did not purr. As far as I am concerned, the case is closed."

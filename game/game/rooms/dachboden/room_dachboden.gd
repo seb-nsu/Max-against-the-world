@@ -127,10 +127,13 @@ func _nach_laden() -> void:
 
 
 #region Rätsel P1–P3 ###############################################################################
-## P1: Dosenöffner mit Thunfischdose (0280–0390). Aufgerufen von den Gegenständen.
-func p1_loesen() -> void:
+## P1, erster Teil: offene Thunfischdose auf Pixel (0285–0366). Er wacht auf, Opa schaltet den
+## Lautsprecher ein, aber aus dem Blech frisst Pixel nicht. Er bleibt auf dem Kabel liegen.
+## Aufgerufen von Pixel (character_pixel.gd). Das Öffnen selbst (0280, 0282) macht die Dose im
+## Inventar.
+func p1_wecken() -> void:
 	await Spiel.szene([
-		Spiel.z("MAX", "P0_DACH_MAX_0280"),
+		Spiel.z("MAX", "P0_DACH_MAX_0285"),
 		Spiel.z("NAR", "P0_DACH_NAR_0290"),
 		Spiel.z("OPA", "P0_DACH_OPA_0300"),
 		Spiel.z("PIX", "P0_DACH_PIX_0310"),
@@ -139,6 +142,20 @@ func p1_loesen() -> void:
 		Spiel.z("PIX", "P0_DACH_PIX_0340"),
 		Spiel.z("MAX", "P0_DACH_MAX_0350"),
 		Spiel.z("PIX", "P0_DACH_PIX_0360"),
+		Spiel.z("MAX", "P0_DACH_MAX_0362"),
+		Spiel.z("PIX", "P0_DACH_PIX_0364"),
+		Spiel.z("OPA", "P0_DACH_OPA_0366"),
+	])
+	Zustand.setze("P0_PIXEL_GEWECKT")
+
+
+## P1, zweiter Teil: Opas Teetasse mit Thunfisch auf Pixel (0367–0390). Die Tasse bleibt als
+## Napf auf der Werkbank.
+func p1_loesen() -> void:
+	await I.get_item_instance("Teetasse").remove()
+	await Spiel.szene([
+		Spiel.z("MAX", "P0_DACH_MAX_0367"),
+		Spiel.z("PIX", "P0_DACH_PIX_0368"),
 		# Pixel frisst und wechselt auf die Werkbank, Opa schaltet den Zapp-O-Mat ein
 		Zustand.loese.bind("P1"),
 		Spiel.z("OPA", "P0_DACH_OPA_0370"),

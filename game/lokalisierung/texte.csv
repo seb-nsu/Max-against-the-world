@@ -952,6 +952,10 @@ UI_OBJ_ZEITUNG,Zeitung,Newspaper
 UI_OBJ_REGENSCHIRM,Regenschirm,Umbrella
 UI_OBJ_MAENTEL,Mäntel,Coats
 UI_OBJ_STECKDOSE,Steckdose,Socket
+P0_WOHN_MAX_0002,"Ich bin Max, und ich bin gerade zu Besuch bei Opa. Opa ist Erfinder.","I'm Max, and I'm staying at Grandpa's at the moment. Grandpa is an inventor."
+P0_WOHN_MAX_0002_2,"Bei ihm zu Hause funktioniert deshalb alles ein bisschen anders, und das meiste funktioniert gar nicht.","So everything at his place works a bit differently, and most of it doesn't work at all."
+P0_WOHN_MAX_0004,"Mir ist das egal, solange das Sofa hält und das WLAN läuft.","I don't mind, as long as the sofa holds up and the Wi-Fi works."
+P0_WOHN_MAX_0006,Das Sofa hält.,The sofa holds up.
 P0_WOHN_MAX_0010,"Ein Balken. Ich hab das Handy schon ans Fenster gehalten, über den Kopf und unters Kissen. Ein einziger Balken.","One bar. I've held the phone to the window, over my head and under the pillow. One single bar."
 P0_WOHN_MAX_0020,"Und ich bin ziemlich sicher, dass der auch bloß zur Deko da ist.",And I'm pretty sure that one's just there for decoration.
 P0_WOHN_OPA_0030,Maaax! Komm mal rauf! Ich brauch dich für die Wissenschaft!,Maaax! Come up here! I need you for science!
@@ -969,14 +973,14 @@ P0_WOHN_MAX_0130,Kalter Tee. Opa kocht sich jeden Tag einen und vergisst ihn jed
 P0_WOHN_MAX_0135,"Unten in der Tasse liegt ein halber Keks. Beim Tunken abgebrochen und nie wieder aufgetaucht. Ruhe in Frieden, Keks.","There's half a biscuit at the bottom of the cup. Broke off while dunking and never resurfaced. Rest in peace, biscuit."
 P0_WOHN_MAX_0140,"Ein sauberes Rechteck im Staub. Da lag Opas Fernbedienung, und zwar ziemlich lange, so wie das aussieht.","A clean rectangle in the dust. That's where Grandpa's remote was, and for quite a while, by the looks of it."
 P0_WOHN_MAX_0145,"Die Umrisse sind so genau, dass man fast eine Kreidelinie drumziehen will. Hier ist etwas Schlimmes passiert.",The outline is so exact you almost want to draw a chalk line around it. Something terrible happened here.
-P0_WOHN_MAX_0150,"Das Sofa. Wir zwei haben eine lange gemeinsame Geschichte, und die meisten Kapitel spielen im Liegen.","The sofa. The two of us go way back, and most of the chapters take place lying down."
-P0_WOHN_MAX_0155,"Da ist eine Kuhle, die exakt meine Form hat. Ich steh direkt daneben, und das Sofa vermisst mich trotzdem schon.","There's a dent exactly my shape. I'm standing right next to it, and the sofa already misses me."
+P0_WOHN_MAX_0150,Das Sofa. Auf dem hab ich letzten Sommer drei Staffeln am Stück geguckt.,The sofa. Last summer I watched three seasons on it in one go.
+P0_WOHN_MAX_0150_2,"Opa hat mir zwischendurch eine Decke gebracht und gefragt, ob ich noch lebe.",Grandpa brought me a blanket halfway through and asked whether I was still alive.
+P0_WOHN_MAX_0155,"Da ist eine Kuhle, die genau meine Form hat. Ich steh direkt daneben, und das Sofa vermisst mich trotzdem schon.","There's a dent that's exactly my shape. I'm standing right next to it, and the sofa already misses me."
 P0_WOHN_MAX_0160,"Nicht hinlegen. Wenn ich mich jetzt hinlege, steh ich erst nächstes Jahr wieder auf, und dann ist das Passwort schon wieder alt.","No lying down. If I lie down now, I won't get up until next year, and by then the password will be out of date."
 P0_WOHN_MAX_0165,"Nur kurz draufsetzen? Das sagt jeder. Und plötzlich ist es Dienstag, und man weiß nicht, wie.",Just sit on it for a sec? That's what everyone says. And suddenly it's Tuesday and nobody knows how.
 P0_WOHN_MAX_0170,"Ich drück auf „An“. Er brummt, denkt kurz darüber nach und geht wieder aus.","I press ""On"". It hums, thinks about it for a moment and switches off again."
 P0_WOHN_MAX_0175,"Noch mal „An“. Diesmal brummt er lauter. Ich glaube, er will mir etwas sagen, und ich glaube, es ist „Nein“.","""On"" again. This time it hums louder. I think it's trying to tell me something, and I think it's ""No""."
-P0_WOHN_MAX_0180,"Kalten Tee trinke ich nicht. Ich hab nicht viele Prinzipien, aber das ist eins davon.","I don't drink cold tea. I don't have many principles, but that's one of them."
-P0_WOHN_MAX_0185,Ich hab dran gerochen. Kalter Tee riecht wie ein Wartezimmer.,I sniffed it. Cold tea smells like a waiting room.
+P0_WOHN_MAX_0180,"Kalten Tee trinke ich nicht, das ist eins meiner wenigen Prinzipien. Aber die Tasse nehm ich mit, Opa hat sie sowieso längst vergessen.","I don't drink cold tea, that's one of my few principles. But I'm taking the cup, Grandpa forgot about it ages ago anyway."
 P0_WOHN_MAX_0190,"Ich lass das Bild lieber hängen. Oma merkt, wenn eins schief hängt, und zwar auch aus dem Urlaub.","I'd better leave the picture alone. Grandma notices when one's crooked, even from her holiday."
 P0_WOHN_MAX_0195,Ich hab es gerade gerückt. Jetzt hängen alle anderen schief. Ich lass das ab sofort.,I just straightened it. Now all the others are crooked. I'm done with this.
 P0_WOHN_MAX_0200,"Ich wisch den Staub nicht weg. Falls die Fernbedienung entführt wurde, ist das ein Beweisstück.","I'm not wiping the dust away. If the remote was kidnapped, that's evidence."
@@ -987,14 +991,14 @@ P0_WOHN_MAX_0320,"Ich mach den nicht auf. Bei Opa fällt einem immer irgendwas e
 P0_WOHN_MAX_0325,"Okay, einen Spalt. Ein Bügelbrett kippt mir entgegen, ganz langsam, als wollte es reden. Ich mach wieder zu.","Okay, a crack. An ironing board tips towards me, very slowly, like it wants to talk. I'm closing it again."
 P0_WOHN_MAX_0330,"Eine Stehlampe mit Fransen. Sie macht genau so viel Licht, dass man den Staub sieht, aber nicht genug zum Lesen.","A floor lamp with fringes. It gives exactly enough light to see the dust, but not enough to read by."
 P0_WOHN_MAX_0335,"Am Fuß klebt ein Zettel: „Nicht ausschalten. Wackelkontakt.“ Seit wann, steht da leider nicht.","There's a note stuck to the base: ""Don't switch off. Loose connection."" Since when, it sadly doesn't say."
-P0_WOHN_MAX_0340,"Ich lass sie an. Auf dem Zettel am Fuß steht nicht, was sonst passiert. Ich finde, das sagt genug.",I'll leave it on. The note on the base doesn't say what happens otherwise. I think that says enough.
+P0_WOHN_MAX_0340,"Ich lass sie an. Auf dem Zettel steht nicht, was sonst passiert, und ich will nicht der sein, der es rausfindet.","I'll leave it on. The note doesn't say what happens otherwise, and I don't want to be the one who finds out."
 P0_WOHN_MAX_0345,Ich hab doch kurz gewackelt. Im Keller ist was angegangen.,I did give it a little wiggle. Something's come on in the cellar.
 P0_WOHN_MAX_0350,"Opas Zeitung. Er löst das Kreuzworträtsel immer mit Kugelschreiber, auch die Kästchen, bei denen er falschliegt.","Grandpa's newspaper. He always does the crossword in pen, even the squares he gets wrong."
 P0_WOHN_MAX_0355,"„Gerät mit Bildschirm, neun Buchstaben“: Opa hat „ZAPPOMAT“ eingetragen und für den neunten einfach ein Kästchen dazugemalt.","""Device with a screen, eight letters"": Grandpa wrote ""ZAPOMATIC"" and simply drew an extra box for the ninth."
 P0_WOHN_MAX_0360,"Ich lese keine Zeitung. Da kann man nicht mal drunter kommentieren, dass alles falsch ist.",I don't read newspapers. You can't even comment underneath that everything's wrong.
-P0_WOHN_MAX_0365,"Senkrecht drei: „Funknetz, vier Buchstaben“. Opa hat „NEIN“ eingetragen. Das ist keine Lösung, das ist eine Haltung.","Three down: ""Wireless network, four letters"". Grandpa wrote ""NOPE"". That's not an answer, that's an attitude."
+P0_WOHN_MAX_0365,"Senkrecht drei: „Funknetz, vier Buchstaben“. Opa hat „NEIN“ eingetragen. Das erklärt einiges über den Empfang in diesem Haus.","Three down: ""Wireless network, four letters"". Grandpa wrote ""NOPE"". That explains a lot about the reception in this house."
 P0_TREP_MAX_0010,"Opas Hut. Am Band steckt eine Feder, entweder vom Fasan oder aus dem Kopfkissen. Bei Opa ist beides möglich.","Grandpa's hat. There's a feather in the band, either from a pheasant or from a pillow. With Grandpa, either is possible."
-P0_TREP_MAX_0015,"Der Hut riecht nach Lötzinn und Pfefferminz. Also im Grunde genau wie Opa, wenn man ihn umarmt.",The hat smells of solder and peppermint. So basically exactly like Grandpa when you hug him.
+P0_TREP_MAX_0015,"Der Hut riecht nach Lötzinn und Pfefferminz, genau wie Opa, wenn man ihn umarmt.","The hat smells of solder and peppermint, exactly like Grandpa when you hug him."
 P0_TREP_MAX_0020,"Draußen ist bestes Wetter. Drinnen ist es, wenn man sich die Tapete ansieht, ungefähr 1987.","The weather's glorious outside. Inside, judging by the wallpaper, it's roughly 1987."
 P0_TREP_MAX_0025,"Auf der Fensterbank stand mal ein Kaktus. Opa hat ihn jeden Tag gegossen. Ich glaube, daran ist er gestorben.",There used to be a cactus on the windowsill. Grandpa watered it every day. I think that's what killed it.
 P0_TREP_MAX_0030,"Jede Stufe knarrt in einer anderen Tonart. Opa nennt das seine Alarmanlage, und sie funktioniert.","Every step creaks in a different key. Grandpa calls it his alarm system, and it works."
@@ -1022,6 +1026,8 @@ P0_TREP_MAX_0170,"Kisten unter der Treppe. Auf einer steht „Erfindungen, ferti
 P0_TREP_MAX_0175,"Auf der größten steht „Erfindungen, halb“. Die ist so voll, dass der Deckel nicht mehr zugeht.","The biggest one says ""Inventions, half"". It's so full the lid won't close any more."
 P0_TREP_MAX_0180,"Ich mach keine auf. Was Opa unter die Treppe stellt, hat meistens einen guten Grund, da zu bleiben.","I'm not opening any. When Grandpa puts something under the stairs, there's usually a good reason for it to stay there."
 P0_TREP_MAX_0185,"Ich hab gegen eine gestupst, und drinnen hat etwas „Hallo“ gesagt. Ich geh jetzt einfach ganz normal weiter.","I nudged one, and something inside said ""Hello"". I'm just going to keep walking like normal."
+P0_TREP_MAX_0190,"In der Tasche vom Mantel für „man weiß ja nie“ steckt eine Dose Thunfisch, und sie ist nicht mal abgelaufen.","In the pocket of the ""you never know"" coat there's a tin of tuna, and it's not even out of date."
+P0_TREP_MAX_0190_2,Opa geht nie ohne Notproviant aus dem Haus.,Grandpa never leaves the house without emergency rations.
 P0_DACH_OPA_0010,"Max! Da bist du ja endlich! Die Menschheit steht am Abgrund, und du kommst in Socken!","Max! There you are at last! Humanity stands at the abyss, and you turn up in socks!"
 P0_DACH_MAX_0020,"Hi, Opa. Ich bin wegen des Passworts hier, nur damit das von Anfang an klar ist.","Hi, Grandpa. I'm here for the password, just so that's clear from the start."
 P0_DACH_OPA_0030,"Passwörter sind was für Leute, die eine Zukunft haben. Und so, wie es gerade aussieht, haben wir vielleicht keine mehr.","Passwords are for people with a future. And the way things look right now, we might not have one any more."
@@ -1034,37 +1040,43 @@ P0_DACH_MAX_0085,Und wofür genau braucht man das alles zusammen?,And what exact
 P0_DACH_OPA_0090,Damit heute Abend nicht die Welt untergeht. Zumindest nicht meine.,"So the world doesn't end tonight. Mine, at least."
 P0_DACH_MAX_0100,"Das klingt nach einer Serie, die nach der dritten Staffel hätte aufhören sollen.",Sounds like a series that should have stopped after season three.
 P0_DACH_OPA_0110,"Vier Dinge, dann kriegst du das Passwort. Ehrenwort eines Wissenschaftlers. Ich unterschreib's dir auch.","Four things, then you get the password. A scientist's word of honour. I'll even sign it for you."
-P0_DACH_MAX_0120,"Gegenvorschlag: Für jedes Ding krieg ich ein Viertel vom Passwort. Fair, motivierend, modern.","Counter-offer: for every thing, I get a quarter of the password. Fair, motivating, modern."
-P0_DACH_OPA_0130,"Gegenvorschlag: Du kriegst gar keins, wenn du weiter verhandelst. Fair, motivierend, großväterlich.","Counter-offer: you get none at all if you keep haggling. Fair, motivating, grandfatherly."
+P0_DACH_MAX_0120,Gegenvorschlag: Für jedes Ding krieg ich ein Viertel vom Passwort. Dann hab ich zwischendurch wenigstens was davon.,"Counter-offer: for every thing, I get a quarter of the password. Then at least I get something out of it along the way."
+P0_DACH_OPA_0130,"Mit einem Viertel Passwort kommst du genauso weit ins Internet wie mit gar keinem. Erst die vier Dinge, dann alles.","A quarter of a password gets you exactly as far into the internet as none at all. First the four things, then the lot."
 P0_DACH_OPA_0140,"Ach, übrigens, hast du irgendwo meine Fernbedienung gesehen? Die normale, nicht die goldene.","Oh, by the way, have you seen my remote anywhere? The normal one, not the golden one."
 P0_DACH_MAX_0150,Nein. Seit wann ist die denn weg?,No. Since when has it been gone?
 P0_DACH_OPA_0155,"Seit heute Morgen. Oder seit Dienstag. Wenn man erfindet, vergeht die Zeit hier oben irgendwie anders.","Since this morning. Or since Tuesday. When you're inventing, time passes differently up here somehow."
 P0_DACH_OPA_0160,"Egal! Erst mal muss der Kater vom Kabel. Der Kater, Modell Pixel, Baujahr unbekannt. Er liegt auf meinem Strom.","Never mind! First the cat has to get off the cable. The cat, model Pixel, year of manufacture unknown. He's lying on my power."
 P0_DACH_MAX_1310,Was genau ist der Zapp-O-Mat?,What exactly is the Zap-O-Matic?
-P0_DACH_OPA_1320,"Ein Fernseher, der nicht zeigt, sondern hinschickt. Und zurück holt dich der Werbeblock. Frag mich nicht, warum.","A TV that doesn't show you things, it sends you there. And the ad break brings you back. Don't ask me why."
+P0_DACH_OPA_1320,"Ein Fernseher, der dich dahin schickt, wo die Sendung spielt. Zurück holt dich der Werbeblock, und frag mich bitte nicht, warum.","A TV that sends you to wherever the programme is set. The ad break brings you back, and please don't ask me why."
 P0_DACH_MAX_1450,"Und was ist, wenn der Werbeblock einfach nicht kommt?",And what if the ad break just doesn't come?
 P0_DACH_OPA_1460,"Werbung kommt immer, Max. Das ist das Einzige im Fernsehen, auf das man sich seit fünfzig Jahren verlassen kann.","Adverts always come, Max. It's the only thing on TV you've been able to rely on for fifty years."
 P0_DACH_MAX_1462,Toll. Mein Rückweg ist ein Joghurt-Spot.,Great. My way home is a yoghurt advert.
 P0_DACH_MAX_1322,Wie krieg ich Pixel vom Kabel?,How do I get Pixel off the cable?
-P0_DACH_OPA_1324,"Mit Argumenten. Er versteht genau eins, und das liegt in meiner Werkzeugkiste.","With arguments. He understands exactly one, and it's in my toolbox."
-P0_DACH_OPA_1324_2,"Zwischen Schraubenzieher und Draht, wo auch sonst.","Between the screwdriver and the wire, where else."
+P0_DACH_OPA_1324,"Mit Argumenten. Er versteht genau eins, und das hab ich immer dabei, wenn ich aus dem Haus gehe.","With arguments. He understands exactly one, and I always have it on me when I leave the house."
+P0_DACH_OPA_1324_2,"Notproviant, Junge. In der Manteltasche, wo auch sonst.","Emergency rations, lad. In my coat pocket, where else."
 P0_DACH_OPA_1326,"Und die Dose ist natürlich zu. Da hilft kein gutes Zureden, da hilft nur Kurbeln.","And the tin is closed, of course. Sweet talk won't help there, only cranking will."
-P0_DACH_OPA_1328,"Mach die Thunfischdose mit dem Dosenöffner auf. Dann ist er schneller wach, als du „Lachs“ sagen kannst.","Open the tuna tin with the tin opener. He'll be awake before you can say ""salmon""."
+P0_DACH_OPA_1326_2,"Der Dosenöffner hängt hier oben an der Werkbank, gleich neben dem halben Regenschirm.","The tin opener is hanging up here on the workbench, right next to the half umbrella."
+P0_DACH_OPA_1328,Hol die Thunfischdose aus meinem Mantel im Treppenhaus und mach sie mit dem Dosenöffner von der Werkbank auf.,Fetch the tuna tin from my coat in the stairwell and open it with the tin opener from the workbench.
+P0_DACH_OPA_1328_2,"Dann hältst du sie dem Kater unter die Nase. Er ist schneller wach, als du „Lachs“ sagen kannst.","Then hold it under the cat's nose. He'll be awake before you can say ""salmon""."
+P0_DACH_OPA_1520,"Der Herr wünscht Porzellan. Im ganzen Haus gibt es genau ein Stück ohne Sprung, und aus dem trinke ich jeden Tag.","His lordship requires china. There is exactly one piece in this whole house without a crack, and I drink from it every day."
+P0_DACH_OPA_1524,"Meine Teetasse steht unten im Wohnzimmer auf dem Couchtisch. Der Tee darin ist kalt, den vermisst keiner.","My teacup is downstairs in the living room, on the coffee table. The tea in it is cold, nobody will miss it."
+P0_DACH_OPA_1528,Hol meine Teetasse aus dem Wohnzimmer und füll den Thunfisch aus der Dose hinein.,Fetch my teacup from the living room and tip the tuna from the tin into it.
+P0_DACH_OPA_1528_2,"Dann stellst du sie dem Kater hin. Mit Untertasse wäre es stilvoller, aber die hab ich verbaut.","Then put it down in front of the cat. A saucer would be classier, but I built mine into something."
 P0_DACH_MAX_1330,Warum eigentlich ich?,"Why me, anyway?"
-P0_DACH_OPA_1340,"Weil du der Einzige bist, der gerade nichts zu tun hat. Und weil ich dir vertraue. In genau der Reihenfolge.",Because you're the only one who's got nothing to do right now. And because I trust you. In exactly that order.
+P0_DACH_OPA_1340,"Weil du gerade der Einzige im Haus bist, der nichts zu tun hat. Und weil ich dir vertraue, Junge. Das auch.","Because right now you're the only one in the house with nothing to do. And because I trust you, lad. That too."
 P0_DACH_MAX_1470,Danke. Glaube ich zumindest.,Thanks. I think.
-P0_DACH_OPA_1480,"Gern geschehen. Und guck nicht so. Wer nichts zu tun hat, bringt die allerbesten Voraussetzungen fürs Weltenretten mit.",You're welcome. And don't look at me like that. Having nothing to do is the very best qualification for saving worlds.
+P0_DACH_OPA_1480,"Gern geschehen. Und guck nicht so. Ich hatte in deinem Alter auch nichts zu tun, und sieh dir an, was aus mir geworden ist.","You're welcome. And don't look at me like that. I had nothing to do at your age either, and look what became of me."
 P0_DACH_MAX_1350,Was ist drüben gefährlich?,What's dangerous over there?
 P0_DACH_OPA_1360,"Alles, was du anfasst, ohne es dir vorher anzusehen. Ansehen kostet nichts, Junge. Anfassen manchmal die Augenbrauen.","Anything you touch without looking at it first. Looking is free, boy. Touching sometimes costs you your eyebrows."
 P0_DACH_MAX_1362,"Opa, was hat es mit dem roten Kreis auf sich?","Grandpa, what's the deal with the red circle?"
 P0_DACH_OPA_1364,"Der Kreis? Ach, der. Das ist … ein Kreis. Kreise sind wichtig. Sie sind rund. Ja. Genau.","The circle? Oh, that. That's … a circle. Circles are important. They're round. Yes. Exactly."
 P0_DACH_PIX_1366,"Er lügt, und ich rieche es. Lügen riechen bei Menschen immer ein wenig nach Angst.","He is lying, and I can smell it. With humans, lies always smell a little of fear."
-P0_DACH_PIX_1366_2,"Bei deinem Großvater riecht die Lüge außerdem nach Kuchen. Das ist neu, und ich finde es interessant.","With your grandfather the lie also smells of cake. That is new, and I find it interesting."
+P0_DACH_PIX_1366_2,"Bei deinem Großvater riecht sie außerdem nach Schokoladenkuchen, und das hatte ich bei einer Lüge noch nie.","With your grandfather it also smells of chocolate cake, and I have never had that with a lie before."
 P0_DACH_MAX_1370,Ich muss noch was anderes machen.,I've got something else to do.
 P0_DACH_OPA_1380,Dann mach. Der Fernseher läuft nicht weg. Hoffe ich jedenfalls.,"Off you go, then. The TV isn't going anywhere. I hope."
 P0_DACH_MAX_1390,Kommst du mit?,Are you coming along?
 P0_DACH_PIX_1400,"Ich komme nirgendwo mit, junger Mann. Ich werde mitgenommen, und zwar, wenn möglich, getragen.","I do not come along, young man. I am taken along, and, where possible, carried."
-P0_DACH_PIX_1400_2,"Das ist ein feiner, aber bedeutender Unterschied, und er hat mit Würde zu tun.","That is a fine but significant difference, and it has to do with dignity."
+P0_DACH_PIX_1400_2,"Selbst gelaufen bin ich zuletzt, als die Nachbarin Lachs gegrillt hat, und das war ein Ausnahmefall.","The last time I walked anywhere myself, the neighbour was grilling salmon, and that was an exception."
 P0_DACH_MAX_1402,Also ja.,"So, yes."
 P0_DACH_PIX_1404,Also ja. Aber unter Protest.,"So, yes. But under protest."
 P0_DACH_MAX_1410,Was weißt du über Opas Erfindungen?,What do you know about Grandpa's inventions?
@@ -1074,7 +1086,7 @@ P0_DACH_MAX_1490,Welche fliegt?,Which one flies?
 P0_DACH_PIX_1500,"Der Toaster dort drüben. Er steht da und tut, als wäre er bloß ein Toaster.",The toaster over there. It stands there pretending to be just a toaster.
 P0_DACH_PIX_1500_2,"Glaub ihm kein Wort. Ich habe ihn einmal fliegen sehen, und seitdem frühstücke ich nicht mehr in seiner Nähe.","Do not believe a word of it. I once saw it fly, and since then I no longer take breakfast anywhere near it."
 P0_DACH_MAX_1430,Schlaf ruhig weiter.,Go back to sleep.
-P0_DACH_PIX_1440,Endlich ein vernünftiger Vorschlag. Der erste heute.,"Finally, a sensible suggestion. The first one today."
+P0_DACH_PIX_1440,"Endlich ein vernünftiger Vorschlag. Weck mich, wenn es Fisch gibt. Wenn es brennt, reicht ein Zettel.","Finally, a sensible suggestion. Wake me when there is fish. If there is a fire, a note will do."
 P0_DACH_MAX_0210,Pixel liegt auf dem Stromkabel. Er hat sich zielsicher den wärmsten Platz im ganzen Haus ausgesucht. Respekt.,Pixel's lying on the power cable. He's unerringly picked the warmest spot in the whole house. Respect.
 P0_DACH_MAX_0212,Pixel sitzt auf der Werkbank und verdaut. Er macht das mit erstaunlich viel Würde.,"Pixel's sitting on the workbench, digesting. He does it with an astonishing amount of dignity."
 P0_DACH_MAX_0213,Er schnurrt im Schlaf. Oder er knurrt. Bei Pixel hab ich den Unterschied noch nie gehört.,He's purring in his sleep. Or growling. With Pixel I've never been able to hear the difference.
@@ -1082,24 +1094,32 @@ P0_DACH_PIX_0215,"Wenn du mich noch einmal so ansiehst, fange ich an zu schnurre
 P0_DACH_PIX_0215_2,Das ist eine Drohung.,That is a threat.
 P0_DACH_MAX_0220,"Ich krieg ihn nicht hoch. Er wiegt ungefähr so viel wie ein voller Umzugskarton, und er hält sich am Kabel fest.","I can't lift him. He weighs about as much as a full moving box, and he's holding on to the cable."
 P0_DACH_OPA_0230,Den kriegst du so nicht weg. Der Kater schläft wie ein Stein. Wie ein sehr beleidigter Stein.,You won't shift him like that. That cat sleeps like a rock. Like a very offended rock.
-P0_DACH_MAX_0240,"Opas Werkzeugkiste: Schraubenzieher, Draht und Thunfisch. Opa hat ein ganz eigenes System.","Grandpa's toolbox: screwdriver, wire and tuna. Grandpa has a system all of his own."
+P0_DACH_MAX_0240,"Opas Werkzeugkiste: Schraubenzieher, Draht und eine Rolle Pfefferminz. Opa hat ein ganz eigenes System.","Grandpa's toolbox: screwdrivers, wire and a roll of peppermints. Grandpa has a system all of his own."
 P0_DACH_MAX_0245,"Unter dem Draht liegt ein Zettel: „Werkzeug für Notfälle. Und für Pixel.“ Ich glaube, das meint dasselbe.","Under the wire there's a note: ""Tools for emergencies. And for Pixel."" I think that means the same thing."
-P0_DACH_MAX_0250,Eine Dose Thunfisch. Notproviant. Nicht mal abgelaufen.,A tin of tuna. Emergency rations. Not even out of date.
-P0_DACH_MAX_0260,"Ein Dosenöffner zum Kurbeln. Das ist Küche, wie sie vor dem Strom funktioniert hat.",A tin opener you crank by hand. That's cooking the way it worked before electricity.
+P0_DACH_MAX_0260,"An der Werkbank hängt ein Dosenöffner zum Kurbeln, zwischen einer halben Zahnbürste und einem halben Regenschirm. Der ist wenigstens ganz.","There's a crank tin opener hanging on the workbench, between half a toothbrush and half an umbrella. At least this one is whole."
 P0_DACH_MAX_0270,"Die Dose ist zu, und ich hab ehrlich keine Lust, sie mit den Zähnen aufzumachen.","The tin is closed, and I honestly don't fancy opening it with my teeth."
 P0_DACH_MAX_0280,Und … Zisch.,And … pssht.
+P0_DACH_MAX_0282,"Puh, das riecht man bestimmt durchs ganze Haus. Wenn Pixel davon nicht wach wird, muss ich ihm die Dose wohl unter die Nase halten.","Phew, you can probably smell that through the whole house. If that doesn't wake Pixel, I suppose I'll have to hold the tin right under his nose."
+P0_DACH_MAX_0285,"Hey, Pixel. Riech mal, was ich hier hab.","Hey, Pixel. Have a sniff of what I've got here."
 P0_DACH_NAR_0290,Pixel hebt die Nase. Ein Auge geht auf. Dann das zweite.,Pixel lifts his nose. One eye opens. Then the other.
 P0_DACH_OPA_0300,"Ah, er lebt! Warte, ich schalte ihm den Lautsprecher ein.","Ah, he's alive! Hang on, I'll switch his speaker on."
 P0_DACH_PIX_0310,Wer. Hat. Mich. Geweckt.,Who. Woke. Me.
 P0_DACH_PIX_0320,"Ich lag auf dem einzigen warmen Kabel dieses Dachbodens, einem Platz, den ich mir über Jahre erarbeitet habe.","I was lying on the only warm cable in this attic, a spot I have earned over many years."
-P0_DACH_PIX_0320_2,"Ich hatte einen Traum. Einen großen, schimmernden, rosafarbenen Traum.","I was having a dream. A large, shimmering, pink dream."
-P0_DACH_PIX_0320_3,"Er handelte von Lachs, falls das hier irgendjemanden interessiert. Es sollte.","It was about salmon, in case anyone here is interested. They should be."
+P0_DACH_PIX_0320_2,"Und ich war mitten in einem Traum von einem Lachs, der größer war als ich und sich trotzdem nicht gewehrt hat.",And I was in the middle of a dream about a salmon that was bigger than me and still did not put up a fight.
+P0_DACH_PIX_0320_3,"So einen Traum bekommt man nicht zweimal, junger Mann.","One does not get a dream like that twice, young man."
 P0_DACH_MAX_0330,Moment mal. Der redet?,Hang on. He talks?
 P0_DACH_PIX_0340,"Der redet seit Jahren, junger Mann. Es hat ihm bisher bloß niemand zugehört, und das trage ich keinem nach. Fast keinem.","He has been talking for years, young man. It is simply that nobody listened until now, and I hold that against no one. Almost no one."
 P0_DACH_PIX_0340_2,Aber genug von mir. Ist das Thunfisch in Lake oder in Öl?,But enough about me. Is that tuna in brine or in oil?
 P0_DACH_MAX_0350,In Lake. Steht drauf.,In brine. It says so on the tin.
 P0_DACH_PIX_0360,"In Lake. Natürlich. Man serviert einem Kater meines Ranges Fisch in Salzwasser, als wäre er ein gewöhnlicher Hafenkater.","In brine. Of course. One serves a cat of my standing fish in salt water, as if he were some common harbour cat."
-P0_DACH_PIX_0360_2,Barbarisch. Gib trotzdem her.,Barbaric. Hand it over anyway.
+P0_DACH_PIX_0360_2,"Und dann auch noch aus der Dose, junger Mann. Aus dem Blech esse ich nicht, das liegt unter meinem Niveau.","And out of the tin at that, young man. I do not eat from tinplate, it is beneath me."
+P0_DACH_MAX_0362,Du hast eben noch auf einem Stromkabel geschlafen.,A minute ago you were asleep on a power cable.
+P0_DACH_PIX_0364,"Auf einem warmen Stromkabel, das ist ein Unterschied. Ich esse von Porzellan oder gar nicht.","On a warm power cable, which is a different matter. I eat from china or not at all."
+P0_DACH_PIX_0364_2,"Weck mich wieder, wenn angerichtet ist.",Wake me again when dinner is served.
+P0_DACH_OPA_0366,"Porzellan haben wir. Irgendwo steht bestimmt noch eine Tasse von mir herum, ich koch mir ja jeden Tag einen Tee.","China we have. There's bound to be a cup of mine standing around somewhere, I make myself a tea every day after all."
+P0_DACH_MAX_0367,"Bitte sehr: Thunfisch an kaltem Tee, serviert in Opas Teetasse.","Here you go: tuna on cold tea, served in Grandpa's teacup."
+P0_DACH_PIX_0368,"Fisch an Schwarztee, in Porzellan mit Goldrand. So serviert man einem Kater.","Fish on black tea, in china with a gold rim. That is how one serves a cat."
+P0_DACH_PIX_0368_2,"Gib her, bevor ich es mir anders überlege.",Hand it over before I change my mind.
 P0_DACH_OPA_0370,"Er ist wach! Wunderbar. Pixel kommt mit dir, Max. Er kennt jede Sendung, die je gelaufen ist, und er kennt alle Antworten.","He's awake! Wonderful. Pixel's going with you, Max. He knows every programme that ever aired, and he knows all the answers."
 P0_DACH_PIX_0380,"Ich kenne tatsächlich alle Antworten. Ich gebe sie nur ungern heraus, denn Wissen sollte man, genau wie Thunfisch, nicht verschwenden.","I do indeed know all the answers. I simply dislike giving them out, for knowledge, like tuna, should not be wasted."
 P0_DACH_PIX_0380_2,"Wer also festhängt, darf meine Pfote drücken. Höflich, bitte. Und nicht zu oft.","So whoever is stuck may press my paw. Politely, please. And not too often."
@@ -1115,8 +1135,8 @@ P0_DACH_OPA_0440,"Die Antenne fehlt! Mein Empfangsorgan, Modell Kleiderbügel. I
 P0_DACH_MAX_0450,"Opas Kleiderschrank. Drei Strickjacken, alle braun, und in allen Taschen steckt Werkzeug.","Grandpa's wardrobe. Three cardigans, all brown, and every pocket has tools in it."
 P0_DACH_MAX_0455,"Ganz hinten hängt noch eine vierte, eine grüne. Die trägt er nur zu besonderen Anlässen, und bisher gab es keinen.","Right at the back there's a fourth one, a green one. He only wears it on special occasions, and so far there hasn't been one."
 P0_DACH_MAX_0460,"Ein Kleiderbügel aus Draht, ganz ohne Hemd. Er sieht ein bisschen traurig aus.","A wire coat hanger, without any shirt at all. It looks a bit sad."
-P0_DACH_MAX_0470,"Wenn ich den hier knicke und da biege … Jetzt sieht er aus wie ein Hase, der Empfang hat. Das ist vielversprechend.",If I bend this here and twist that there … Now it looks like a bunny with reception. That's promising.
-P0_DACH_MAX_0480,So. Eine Antenne. Ab sofort bin ich offiziell Techniker.,There. An aerial. As of now I'm officially a technician.
+P0_DACH_MAX_0470,"Wenn ich den hier knicke und da biege … Jetzt sieht er aus wie ein Hase, der Empfang hat. Mehr muss eine Antenne ja nicht können.","If I bend this here and twist that there … Now it looks like a bunny with reception. That's all an aerial needs to do, really."
+P0_DACH_MAX_0480,"So, die Antenne sitzt. Damit bin ich ab heute Techniker.","There, the aerial's on. That makes me a technician as of today."
 P0_DACH_PIX_0490,"Früher war das ein ehrbarer Beruf. Techniker kamen mit Koffer und Krawatte ins Haus, und man bot ihnen Kekse an.","That used to be an honourable profession. Technicians came to the house with a case and a tie, and one offered them biscuits."
 P0_DACH_PIX_0490_2,Ich biete dir nichts an. Nur damit du Bescheid weißt.,I am offering you nothing. Just so you know.
 P0_DACH_OPA_0500,Das Bild ist da! Jetzt brauchen wir bloß noch den richtigen Kanal. Welcher war das noch gleich?,We have a picture! Now all we need is the right channel. Which one was it again?
@@ -1143,7 +1163,7 @@ P0_DACH_MAX_0915,"Er trägt einen winzigen Schnorchel. Opa hat wirklich an alles
 P0_DACH_PIX_0920,"Siebzehn Fernbedienungen liegen in dieser Kiste, junger Mann. Siebzehn.","There are seventeen remotes in this box, young man. Seventeen."
 P0_DACH_PIX_0920_2,"Und wie es das Schicksal so will, ist die eine, die man braucht, nie darunter.","And as fate would have it, the one you need is never among them."
 P0_DACH_PIX_0925,"Ich habe nachgezählt, es sind immer noch siebzehn. Eine fehlt, und ich weiß sehr genau, welche.","I have counted again, and there are still seventeen. One is missing, and I know very well which."
-P0_DACH_PIX_0925_2,"Ich sage es nur nicht, denn ich bin ein Kater und kein Fundbüro.","I am simply not saying, for I am a cat and not a lost-property office."
+P0_DACH_PIX_0925_2,"Ich sage es nur nicht, weil mich bisher niemand höflich danach gefragt hat.","I am simply not saying, because so far nobody has asked me politely."
 P0_DACH_MAX_0930,"Ein Poster mit einer Pyramide und eins mit einer Neonstadt. Entweder hat Opa einen sehr breiten Geschmack, oder er hat Reisepläne.","A poster with a pyramid and one with a neon city. Either Grandpa has very broad taste, or he has travel plans."
 P0_DACH_MAX_0935,Am Rand hat Opa notiert: „Sonnencreme. Thunfisch. Max?“ Ich stehe also auf einer Packliste. Mit Fragezeichen.,"Grandpa's written in the margin: ""Sunscreen. Tuna. Max?"" So I'm on a packing list. With a question mark."
 P0_DACH_MAX_0940,Ein Toaster mit Propeller. Opa wollte das Frühstück ans Bett fliegen lassen. Es ist nie angekommen.,A toaster with a propeller. Grandpa wanted to fly breakfast to bed. It never arrived.
@@ -1164,8 +1184,10 @@ P0_DACH_MAX_0980,Eine Werkbank voller halb fertiger Erfindungen. Das kommt mir a
 P0_DACH_MAX_0985,"Eine halbe Zahnbürste mit Motor, ein halber Regenschirm mit Lampe. Opa erfindet immer nur die erste Hälfte.","Half a toothbrush with a motor, half an umbrella with a lamp. Grandpa only ever invents the first half."
 P0_DACH_MAX_0990,"Das Dachfenster. Draußen ist die Welt. Die wird, wenn ihr mich fragt, sowieso überbewertet.","The skylight. Outside is the world. Which, if you ask me, is overrated anyway."
 P0_DACH_MAX_0995,Auf dem Glas sitzt eine Taube und guckt rein. Sie findet uns genauso komisch wie wir sie.,"There's a pigeon sitting on the glass, looking in. It finds us just as weird as we find it."
-P0_DACH_MAX_1000,"Da geht's runter, zum Sofa. Nein. Konzentration, Max. Passwort.","That's the way down, to the sofa. No. Focus, Max. Password."
+P0_DACH_MAX_1000,"Da geht's runter zum Sofa. Aber Pixel ist wach, und das Passwort liegt hier oben, also bleib ich.","That's the way down to the sofa. But Pixel is awake and the password is up here, so I'm staying."
 P0_DACH_MAX_1005,Ich hatte mich schon an die Luke gekniet. Dann hab ich an das Passwort gedacht und bin wieder aufgestanden.,I'd already knelt down by the hatch. Then I thought of the password and got back up.
+P0_DACH_MAX_1020,"Na gut, noch mal runter. Aber am Sofa geh ich vorbei, ohne hinzugucken.","All right, back down again. But I'm walking past the sofa without looking at it."
+P0_DACH_MAX_1025,Und wieder runter. Die Treppe erkennt mich inzwischen am Schritt.,And down again. The stairs recognise me by my footsteps by now.
 P0_DACH_MAX_1010,"Die Bodenluke. Da unten wartet das Sofa. Ich sehe es nicht, aber ich spüre, dass es an mich denkt.","The floor hatch. The sofa's waiting down there. I can't see it, but I can feel it thinking about me."
 P0_DACH_MAX_1015,Ich hab kurz runtergehorcht. Das Sofa schweigt. Es hat Zeit.,I listened down the hatch for a second. The sofa is silent. It's got time.
 P0_DACH_MAX_1610,Ich wühl nicht in Opas Werkzeug. Da drin beißt garantiert irgendwas.,I'm not rummaging in Grandpa's tools. Something in there is guaranteed to bite.
@@ -1209,12 +1231,15 @@ P0_DACH_MAX_1835,"Daneben hat Opa geschrieben: „230 Volt. Nicht lecken.“ Ich
 P0_DACH_MAX_1840,"Ich steck da nichts ein und nichts aus. Ich hab Respekt vor Strom, und noch mehr vor Opa.","I'm not plugging anything in or out. I respect electricity, and Grandpa even more."
 P0_DACH_MAX_1845,"Ich halte die Hand davor, und es kribbelt. Oder ich bilde mir das ein. Für mich reicht beides.",I hold my hand in front of it and it tingles. Or I'm imagining it. Either is enough for me.
 P0_DACH_MAX_1110,"Pixel will keinen Draht. Pixel will Fisch. Ich hab das Gefühl, Pixel will immer Fisch.",Pixel doesn't want wire. Pixel wants fish. I get the feeling Pixel always wants fish.
-P0_DACH_PIX_1120,"Steck mich bitte nicht in den Fernseher. Ich bin keine Antenne, ich bin ein Gesamtkunstwerk.","Please do not stick me in the television. I am not an aerial, I am a complete work of art."
-P0_DACH_PIX_1120_2,Antennen empfangen. Ich sende. Das ist ein grundlegender Unterschied.,Aerials receive. I transmit. That is a fundamental difference.
+P0_DACH_PIX_1120,"Steck mich bitte nicht in den Fernseher, junger Mann. Ich habe als Antenne keinerlei Ausbildung.","Please do not stick me in the television, young man. I have no training whatsoever as an aerial."
+P0_DACH_PIX_1120_2,"Und der letzte Draht, den dein Großvater an mir befestigen wollte, liegt bis heute unter dem Ohrensessel.",And the last wire your grandfather tried to attach to me is still lying under the armchair.
 P0_DACH_MAX_1130,"Der Dosenöffner passt nicht in den Fernseher. Ich hab's ausprobiert, damit du es nicht musst.",The tin opener doesn't fit in the TV. I tried it so you don't have to.
 P0_DACH_OPA_1140,"Nicht am Knopf drehen, bevor das Bild da ist! Der Werbeblock ist für den Rückweg.",Don't turn the dial before there's a picture! The ad break is for the way back.
 P0_DACH_OPA_1140_2,"Fünf Sekunden Milchwerbung, und schon bist du wieder hier. Keiner weiß, warum.",Five seconds of a milk advert and you're back here. Nobody knows why.
 P0_DACH_MAX_1150,"Erst Strom, dann Empfang. Und für Strom muss der Kater vom Kabel.","Power first, then reception. And for power, the cat has to get off the cable."
+P0_DACH_OPA_1160,"Für mich nicht, danke. Ich hatte schon Tee. Irgendwann diese Woche.","Not for me, thanks. I've already had tea. Some time this week."
+P0_DACH_PIX_1170,"Ich schlafe, junger Mann, und ich schlafe genau so lange, bis angerichtet ist. In Porzellan.","I am asleep, young man, and I shall stay asleep exactly until dinner is served. In china."
+P0_DACH_MAX_1180,Eine Tasse kalter Tee macht auf Pixel keinen Eindruck. Auf mich ehrlich gesagt auch nicht.,"A cup of cold tea doesn't impress Pixel. Doesn't impress me either, to be honest."
 P0_WOHN_OPA_1210,"Max! Bist du noch da, oder bist du schon eingeschlafen?","Max! Are you still there, or have you fallen asleep already?"
 P0_WOHN_MAX_1220,"Ohne WLAN vergeht die Zeit langsamer. Ich bin ziemlich sicher, dass das Physik ist.","Without Wi-Fi, time passes more slowly. I'm pretty sure that's physics."
 P0_DACH_PIX_1230,"Ich würde ja helfen, wirklich. Aber ich bin gerade so vorbildlich liegen geblieben,","I would help, truly. But I have stayed lying down so exemplarily,"
@@ -1236,9 +1261,10 @@ P0_HINT_PIX_0010,"Es ist alles erledigt. Jetzt fehlt nur noch, dass du in den Fe
 P0_HINT_PIX_0010_2,"Ich warte so lange. Katzen sind hervorragend im Warten, wir haben es jahrhundertelang geübt.","I shall wait. Cats are excellent at waiting, we have practised it for centuries."
 P0_HINT_PIX_9995,"Ich denke noch nach. Von außen sieht das aus wie Schlafen, ich weiß.","I am still thinking. From the outside it looks like sleeping, I know."
 P0_HINT_PIX_9995_2,"Es ist trotzdem Denken, nur eben mit geschlossenen Augen und gelegentlichem Schnarchen.","It is thinking nonetheless, merely with closed eyes and the occasional snore."
-P0_INV_MAX_0010,"Thunfisch. Soweit ich weiß, die einzige Währung, die Pixel akzeptiert.","Tuna. As far as I know, the only currency Pixel accepts."
-P0_INV_PIX_0015,Ich rieche sie durch das Blech. Ich rieche sie durch deine Tasche.,I can smell it through the tin. I can smell it through your bag.
-P0_INV_PIX_0015_2,"Ich würde sie, wenn es darauf ankäme, vermutlich durch die Zeit riechen.","If it came to it, I could probably smell it through time."
+P0_INV_MAX_0010,Thunfisch in Lake. Für so eine Dose hat Pixel sogar schon mal freiwillig den Ohrensessel geräumt.,"Tuna in brine. For a tin like this, Pixel has even been known to give up the armchair of his own free will."
+P0_INV_MAX_0012,Hinten steht: „Nach dem Öffnen rasch verbrauchen.“ Bei Pixel mach ich mir da keine Sorgen.,"The back says: ""Once opened, consume quickly."" With Pixel, I'm not worried about that."
+P0_INV_MAX_0016,"Die Dose ist offen, und meine Bauchtasche riecht jetzt für immer nach Fisch. Das war es hoffentlich wert.","The tin is open, and my hoodie pocket is going to smell of fish forever. I hope it was worth it."
+P0_INV_MAX_0018,"Ich halt sie lieber gerade. Lake in der Bauchtasche hatte ich noch nie, und das soll auch so bleiben.","I'd better keep it level. I've never had brine in my hoodie pocket, and I'd like to keep it that way."
 P0_INV_MAX_0020,"Leer. Pixel hat sie so blank geleckt, dass ich mich nicht traue, sie zu spülen.",Empty. Pixel licked it so clean I don't dare wash it.
 P0_INV_MAX_0025,Ich hab reingeschaut und sehe mich im Boden spiegeln. Ich sehe hungrig aus. Pixel übrigens auch.,"I looked inside and I can see myself reflected in the bottom. I look hungry. So does Pixel, by the way."
 P0_INV_MAX_0030,"Ein Dosenöffner. Opa nennt ihn Notfallwerkzeug, Pixel betet ihn vermutlich an.",A tin opener. Grandpa calls it an emergency tool. Pixel probably worships it.
@@ -1247,8 +1273,14 @@ P0_INV_MAX_0040,"Ein Bügel ohne Hemd. Bei Opa hat alles einen Zweitberuf, der h
 P0_INV_MAX_0045,"Ich bieg ihn, und er biegt sich zurück. Er hat noch seinen Stolz.","I bend it, and it bends back. It still has its pride."
 P0_INV_MAX_0050,"Jetzt ist er eine Antenne. Oder moderne Kunst. Hauptsache, er hat Empfang.",Now it's an aerial. Or modern art. As long as it gets reception.
 P0_INV_MAX_0055,"Wenn ich ihn hochhalte, empfange ich vielleicht Radio, Außerirdische oder Opas Lieblingssender. Bei Opa ist das alles dasselbe.","If I hold it up, maybe I'll pick up radio, aliens or Grandpa's favourite station. With Grandpa, that's all the same thing."
-P0_INV_MAX_0060,"Opas Reisetasche. Riecht nach Leder, nach Abenteuer und, ganz leicht, nach Thunfisch.","Grandpa's travel bag. Smells of leather, of adventure and, very faintly, of tuna."
+P0_INV_MAX_0060,"Opas Reisetasche. Sie riecht nach altem Leder und ganz leicht nach Thunfisch. Ich glaube, Pixel hat schon mal drin geschlafen.",Grandpa's travel bag. It smells of old leather and very faintly of tuna. I think Pixel has slept in it before.
 P0_INV_MAX_0065,"Innen klebt ein Zettel: „Max. Nicht verlieren.“ Ich weiß nicht genau, ob die Tasche gemeint ist oder ich.","There's a note stuck inside: ""Max. Don't lose."" I'm not quite sure whether it means the bag or me."
+P0_INV_MAX_0070,Thunfisch in Opas Teetasse? So tief bin ich noch nicht gesunken.,Tuna in Grandpa's teacup? I haven't sunk that low yet.
+P0_INV_MAX_0072,Thunfisch zum kalten Tee. Das ist jetzt entweder ein Napf oder das schlimmste Getränk der Welt.,Tuna into the cold tea. That's now either a food bowl or the worst drink in the world.
+P0_INV_MAX_0080,"Opas Teetasse, mit kaltem Tee und einem halben Keks am Grund. Ich trag sie so vorsichtig wie ein rohes Ei.","Grandpa's teacup, with cold tea and half a biscuit at the bottom. I'm carrying it as carefully as a raw egg."
+P0_INV_MAX_0085,"Innen hat die Tasse braune Ränder wie die Jahresringe von einem Baum. Oma sagt, Opa spült sie nur zu Weihnachten.","Inside, the cup has brown rings like the growth rings of a tree. Grandma says Grandpa only washes it at Christmas."
+P0_INV_MAX_0090,"Thunfisch in kaltem Tee. In der Schulmensa hab ich schon Schlimmeres gesehen, aber nicht oft.","Tuna in cold tea. I've seen worse in the school canteen, but not often."
+P0_INV_MAX_0095,Der halbe Keks schwimmt jetzt oben. Pixel bekommt also sogar Nachtisch.,The half biscuit is floating on top now. So Pixel even gets dessert.
 P0_ABS_OPA_0010,"Junge, ich hab dir alles erklärt, was ich weiß. Jetzt muss ich weiterschrauben, die Zukunft schraubt sich nicht von allein.","Boy, I've explained everything I know. Now I have to get back to tinkering, the future won't screw itself together."
 P0_ABS_OPA_0020,"Später, Max. Ich hab gerade eine Idee, und sie ist schon halb fertig. Wie alle meine Ideen.","Later, Max. I've just had an idea, and it's already half finished. Like all my ideas."
 SYS_ERS_MAX_0010,Nein.,No.
@@ -1286,8 +1318,8 @@ SYS_ERS_MAX_0240,Mein Handy hätte das gewusst. Wenn es Empfang hätte.,My phone
 SYS_ERS_MAX_0250,"Fast. Also, gar nicht.","Almost. Well, not at all."
 SYS_ERS_PIX_0150,"Versuch es mit Thunfisch. Ich sage das nicht aus Eigennutz,","Try tuna. I do not say this out of self-interest,"
 SYS_ERS_PIX_0150_2,"sondern weil die Erfahrung lehrt, dass sich fast jedes Problem mit Thunfisch lösen lässt.",but because experience teaches that almost any problem can be solved with tuna.
-SYS_ERS_PIX_0160,"Ich habe das gesehen, und ich werde es nie wieder vergessen können.","I saw that, and I shall never be able to forget it."
-SYS_ERS_PIX_0160_2,Das ist kein Kompliment.,That is not a compliment.
+SYS_ERS_PIX_0160,"Ich habe das gesehen, und ich werde es leider nie wieder vergessen.","I saw that, and unfortunately I shall never be able to forget it."
+SYS_ERS_PIX_0160_2,"Dabei vergesse ich sonst alles, was man nicht essen kann.",Even though I normally forget everything one cannot eat.
 SYS_ERS_PIX_0170,"Nein. Und ich sage das als jemand, der seit Jahren beruflich Nein sagt.",No. And I say that as someone who has been saying no professionally for years.
 SYS_ERS_PIX_0180,"Darauf kann man nicht schlafen. Ich habe es nicht ausprobiert, aber ich sehe so etwas.","One cannot sleep on that. I have not tried, but I can tell these things."
 SYS_ERS_PIX_0180_2,"Und was man nicht beschlafen kann, hat in meinen Augen keinen Zweck.","And what cannot be slept on serves, in my view, no purpose."
@@ -1341,7 +1373,7 @@ SYS_WDH_MAX_0190,Manche Dinge muss man dreimal ansehen. Das hier gehört nicht d
 SYS_WDH_MAX_0200,Okay. Ich hab's. Ich hab's wirklich.,Okay. I've got it. I've really got it.
 SYS_WDH_PIX_0010,"Du hast es dir jetzt dreimal angesehen. Ich zähle mit,","You have now looked at it three times. I am counting,"
 SYS_WDH_PIX_0010_2,"weil ich sonst, wie du vielleicht bemerkt hast, nichts zu tun habe.","because otherwise, as you may have noticed, I have nothing to do."
-SYS_WDH_PIX_0020,"Es ist immer noch langweilig. Das ist übrigens keine Meinung, sondern ein Messergebnis.","It is still boring. That, by the way, is not an opinion but a measurement."
+SYS_WDH_PIX_0020,"Es ist immer noch langweilig. Ich habe dafür eigens ein Auge aufgemacht, und es hat sich nicht gelohnt.","It is still boring. I opened an eye specially for it, and it was not worth it."
 SYS_WDH_PIX_0030,"Wenn du es noch einmal ansiehst, schlafe ich ein.","If you look at it once more, I shall fall asleep."
 SYS_WDH_PIX_0030_2,Aus Protest.,In protest.
 SYS_WDH_PIX_0040,"Ich habe es mir angesehen, und es hat nicht geschnurrt. Für mich ist der Fall damit erledigt.","I have looked at it, and it did not purr. As far as I am concerned, the case is closed."

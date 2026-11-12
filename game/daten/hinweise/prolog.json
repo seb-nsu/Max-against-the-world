@@ -11,7 +11,8 @@
    "raum": "dachboden",
    "offen_wenn": [
     "thunfischdose",
-    "dosenoeffner"
+    "dosenoeffner",
+    "teetasse"
    ],
    "offen_wenn_eins_von": [],
    "geloest_schalter": [
@@ -19,7 +20,8 @@
    ],
    "objekte": [
     "thunfischdose",
-    "dosenoeffner"
+    "dosenoeffner",
+    "teetasse"
    ],
    "optional": false,
    "sammelschritt": false,
