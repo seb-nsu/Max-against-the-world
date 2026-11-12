@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://djvtc4ipfol05"]
 
-[ext_resource type="Script" path="res://game/rooms/schmiede/room_schmiede.gd" id="1_nay1a"]
+[ext_resource type="Script" uid="uid://cmcgt717nmhsc" path="res://game/rooms/schmiede/room_schmiede.gd" id="1_nay1a"]
 [ext_resource type="PackedScene" uid="uid://bqi83rh2hpvww" path="res://game/rooms/schmiede/walkable_areas/boden/walkable_area_boden.tscn" id="2_fcyh3"]
 [ext_resource type="PackedScene" uid="uid://t66d7laeibkp" path="res://game/rooms/schmiede/props/background/prop_background.tscn" id="3_gq57k"]
-[ext_resource type="Texture2D" uid="uid://cbf3f8njqqpef" path="res://grafik/platzhalter/raum_schmiede.png" id="4_lr1jj"]
+[ext_resource type="Texture2D" uid="uid://bt1s6maakre5x" path="res://grafik/hintergruende/w1_bg_schmiede_v01.png" id="4_fcyh3"]
 [ext_resource type="PackedScene" uid="uid://d0t5rog4vrqb2" path="res://game/rooms/schmiede/props/krug/prop_krug.tscn" id="5_w123j"]
-[ext_resource type="Texture2D" uid="uid://b4mnwkb63dfan" path="res://grafik/platzhalter/prop_krug.png" id="6_458fk"]
+[ext_resource type="Texture2D" uid="uid://wb2g8wojk8rw" path="res://grafik/props/krug.png" id="6_gq57k"]
 [ext_resource type="PackedScene" uid="uid://cri8wgw1fou0b" path="res://game/rooms/schmiede/hotspots/esse/hotspot_esse.tscn" id="7_nwspk"]
 [ext_resource type="PackedScene" uid="uid://clqcmpkb4cmf5" path="res://game/rooms/schmiede/hotspots/amboss/hotspot_amboss.tscn" id="8_slgs3"]
 [ext_resource type="PackedScene" uid="uid://cra7ea8vene4m" path="res://game/rooms/schmiede/hotspots/kochgeschirr/hotspot_kochgeschirr.tscn" id="9_a8a7p"]
@@ -24,63 +24,67 @@ height = 360
 [node name="WalkableAreas" type="Node2D" parent="." unique_id=1823957869]
 
 [node name="Boden" parent="WalkableAreas" unique_id=1190001958 instance=ExtResource("2_fcyh3")]
-interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(8, 280, 632, 280, 632, 356, 8, 356)])
 
 [node name="Props" type="Node2D" parent="." unique_id=493911780]
 
 [node name="Background" parent="Props" unique_id=425996567 instance=ExtResource("3_gq57k")]
 position = Vector2(320, 180)
-texture = ExtResource("4_lr1jj")
+texture = ExtResource("4_fcyh3")
 description = "UI_RAUM_SCHMIEDE"
 
 [node name="Krug" parent="Props" unique_id=843535459 instance=ExtResource("5_w123j")]
-position = Vector2(571, 156)
-texture = ExtResource("6_458fk")
+position = Vector2(557.5, 203)
+texture = ExtResource("6_gq57k")
 description = "UI_OBJ_KRUG"
-baseline = 16
-walk_to_point = Vector2(-19, 148)
+baseline = 13
+walk_to_point = Vector2(-17.5, 32)
+interaction_polygon = PackedVector2Array(-9.5, -13, 9.5, -13, 9.5, 13, -9.5, 13)
 
 [node name="Hotspots" type="Node2D" parent="." unique_id=1930143547]
 
 [node name="Esse" parent="Hotspots" unique_id=282329525 instance=ExtResource("7_nwspk")]
-position = Vector2(91, 211)
+position = Vector2(147.5, 147.5)
 description = "UI_OBJ_ESSE"
-baseline = 71
-walk_to_point = Vector2(31, 99)
+baseline = 117
+walk_to_point = Vector2(67.5, 137.5)
+interaction_polygon = PackedVector2Array(-62.5, -117.5, 62.5, -117.5, 62.5, 117.5, -62.5, 117.5)
 
 [node name="Amboss" parent="Hotspots" unique_id=259612953 instance=ExtResource("8_slgs3")]
-position = Vector2(300, 256)
+position = Vector2(260, 232.5)
 description = "UI_OBJ_AMBOSS"
-baseline = 24
-walk_to_point = Vector2(0, 52)
+baseline = 47
+walk_to_point = Vector2(55, 37.5)
+interaction_polygon = PackedVector2Array(-40, -47.5, 40, -47.5, 40, 47.5, -40, 47.5)
 
 [node name="Kochgeschirr" parent="Hotspots" unique_id=1753322048 instance=ExtResource("9_a8a7p")]
-position = Vector2(483, 156)
+position = Vector2(460, 140)
 description = "UI_OBJ_KOCHGESCHIRR"
-baseline = 56
-walk_to_point = Vector2(-3, 148)
+baseline = 60
+walk_to_point = Vector2(0, 95)
+interaction_polygon = PackedVector2Array(-70, -60, 70, -60, 70, 60, -70, 60)
 
 [node name="AusgangDorfplatz" parent="Hotspots" unique_id=874021977 instance=ExtResource("10_jeh7w")]
-position = Vector2(616, 180)
+position = Vector2(610, 145)
 description = "UI_RAUM_DORFPLATZ"
-baseline = 100
-walk_to_point = Vector2(-8, 140)
+baseline = 85
+walk_to_point = Vector2(-5, 105)
 cursor = 9
+interaction_polygon = PackedVector2Array(-30, -85, 30, -85, 30, 85, -30, 85)
 
 [node name="Regions" type="Node2D" parent="." unique_id=823918240]
 
 [node name="Markers" type="Node2D" parent="." unique_id=721572654]
 
 [node name="Start" parent="Markers" unique_id=36849149 instance=ExtResource("11_d2axk")]
-position = Vector2(580, 320)
+position = Vector2(600, 262)
 
 [node name="VonDorfplatz" parent="Markers" unique_id=983529853 instance=ExtResource("12_peajo")]
-position = Vector2(580, 320)
+position = Vector2(600, 262)
 
 [node name="Characters" type="Node2D" parent="." unique_id=674367572]
 
 [node name="CharacterSchmied *" parent="Characters" unique_id=219458842 instance=ExtResource("13_6skh3")]
-position = Vector2(240, 320)
+position = Vector2(330, 242)
 
 [node name="CharacterSchmiedeZiege *" parent="Characters" unique_id=1898849327 instance=ExtResource("14_idigh")]
-position = Vector2(360, 332)
+position = Vector2(470, 300)

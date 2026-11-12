@@ -79,7 +79,7 @@ def messen(rgb):
 
 def bild_laden(pfad):
     im = Image.open(pfad).convert("RGB")
-    if im.size != (BREITE, HOEHE):
+    if im.height != HOEHE:   # fertige Hintergründe (auch Breitwand 1280×360) unverändert
         w, h = im.size
         if w / h > 16 / 9:
             nw = round(h * 16 / 9); im = im.crop(((w - nw) // 2, 0, (w - nw) // 2 + nw, h))
@@ -146,6 +146,7 @@ def bogen(eintraege, ziel):
                       (24, 20, 28, 255))
     zeichnen = ImageDraw.Draw(blatt)
     for i, (name, im, raum, werte, meld) in enumerate(eintraege):
+        im = im.crop((0, 0, BREITE, HOEHE)) if im.width > BREITE else im   # Bogen zeigt die linke Hälfte
         x0 = rand + (i % spalten) * (zw + rand)
         y0 = rand + (i // spalten) * (zh + rand)
         bild = im.convert("RGBA")

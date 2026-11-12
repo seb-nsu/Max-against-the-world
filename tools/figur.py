@@ -586,6 +586,43 @@ def vierbeiner(sprite_rgba, bauch, knie, vorne, hinten, schulter=None, bilder=8,
     return frames
 
 
+def vierbeiner_schieben(sprite_rgba, bauch, beine, bilder=8, weite=3.0, hub=2.0):
+    """Gehzyklus für kleine Vierbeiner ohne Drehen: Jedes der vier gezeichneten Beine (Spalten x0, x1
+    ab Zeile bauch) gleitet in der Standphase gleichmäßig nach hinten und wird in der Schwungphase
+    angehoben und nach vorn gesetzt. Bei Beinen von acht bis zehn Pixeln bleibt so jede Kontur
+    sauber; Drehen würde sie zerreißen. beine = [(x0, x1, phase), …] mit phase in Umläufen
+    (Katzengang: hinten nah 0, vorne nah 0.25, hinten fern 0.5, vorne fern 0.75). Spätere Einträge
+    liegen vorn, also die fernen Beine zuerst nennen."""
+    a = np.asarray(sprite_rgba.convert("RGBA"))
+    h, w = a.shape[:2]
+    rand = 6
+    koerper = a.copy()
+    teile = []
+    for x0, x1, phase in beine:
+        t = np.zeros_like(a); t[bauch:, x0:x1] = a[bauch:, x0:x1]
+        koerper[bauch:, x0:x1] = 0
+        teile.append((t, phase))
+    frames = []
+    for i in range(bilder):
+        out = np.zeros((h + 2 * rand, w + 2 * rand, 4), np.uint8)
+        for t, phase in teile:
+            p = (i / bilder + phase) % 1.0
+            if p < STAND:
+                dx, dy = weite * (1 - 2 * p / STAND), 0.0
+            else:
+                q = (p - STAND) / (1 - STAND)
+                dx = -weite + 2 * weite * (0.5 - 0.5 * math.cos(math.pi * q))
+                dy = -hub * math.sin(math.pi * q)
+            ox, oy = rand + int(round(dx)), rand + int(round(dy))
+            sicht = t[..., 3] > 0
+            ziel = out[oy:oy + h, ox:ox + w]
+            ziel[sicht] = t[sicht]
+        k = np.zeros_like(out); k[rand:rand + h, rand:rand + w] = koerper
+        sicht = k[..., 3] > 0; out[sicht] = k[sicht]
+        frames.append(out)
+    return frames
+
+
 def zyklus(quelle, hoehe, spiegeln=False, ausschnitt=None, palette="endesga", tol=40, konturfarbe=None,
            glatt=True, farben=12, rand=4, anzahl=0, angleichen=False):
     """Alle Figuren eines Bewegungsblatts (etwa acht Gehschritte) im selben Maßstab: die höchste Figur wird
@@ -887,9 +924,12 @@ def main():
     vb = sub.add_parser("vierbeiner", help="Gehzyklus per Code für Vierbeiner (Pixel) aus dem Standbild")
     vb.add_argument("sprite"); vb.add_argument("ziel")
     vb.add_argument("--bauch", type=int, required=True, help="erste Zeile unter dem Bauch (nur noch Beine)")
-    vb.add_argument("--knie", type=int, required=True, help="Zeile zwischen Ober- und Unterschenkel")
-    vb.add_argument("--vorne", required=True, help="X0,X1 der Spalten des sichtbaren Vorderbeins")
-    vb.add_argument("--hinten", required=True, help="X0,X1 der Spalten des sichtbaren Hinterbeins")
+    vb.add_argument("--knie", type=int, help="Zeile zwischen Ober- und Unterschenkel")
+    vb.add_argument("--beine", help="statt Drehen: alle vier Beine schieben, X0,X1,Phase;… (ferne zuerst)")
+    vb.add_argument("--weite", type=float, default=3, help="mit --beine: Schrittweite in Pixeln")
+    vb.add_argument("--hub", type=float, default=2, help="mit --beine: so hoch hebt sich die Pfote")
+    vb.add_argument("--vorne", help="X0,X1 der Spalten des sichtbaren Vorderbeins")
+    vb.add_argument("--hinten", help="X0,X1 der Spalten des sichtbaren Hinterbeins")
     vb.add_argument("--schulter", type=int, help="Zeile von Schulter und Hüfte (Standard bauch − 3)")
     vb.add_argument("--bilder", type=int, default=8)
     vb.add_argument("--schritt", type=float, default=22)
@@ -926,6 +966,9 @@ def main():
         if arg.befehl == "gehen":
             bilder = gehen(Image.open(arg.sprite), arg.bein_ab, arg.huefte, arg.knie, arg.knoechel, arg.bilder,
                            arg.schritt, arg.beuge)
+        elif arg.beine:
+            beine = [(int(x0), int(x1), float(ph)) for x0, x1, ph in (b.split(",") for b in arg.beine.split(";"))]
+            bilder = vierbeiner_schieben(Image.open(arg.sprite), arg.bauch, beine, arg.bilder, arg.weite, arg.hub)
         else:
             paar = [tuple(int(v) for v in x.split(",")) for x in (arg.vorne, arg.hinten)]
             bilder = vierbeiner(Image.open(arg.sprite), arg.bauch, arg.knie, paar[0], paar[1], arg.schulter,
