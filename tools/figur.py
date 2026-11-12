@@ -1,10 +1,5 @@
 #!/usr/bin/env python3
 
-Gegenstände aus einem Sammelbild (Raster aus gleich großen Zellen), je Zelle ein Sprite:
-     python3 tools/figur.py gegenstaende sammelbild.png ordner --raster 7x1 --namen=a,b,- \
-         [--groesse 42] [--ausschnitt X,Y,B,H] [--kontur keine] [--linien 0]
-   --groesse ist die längste Seite (Inventar 42, Szene kleiner), „-“ überspringt eine Zelle,
-   --linien 0 für Draht und andere dünne helle Dinge.
 """Figuren aus Konzeptbildern (Gemini) zu Sprites umrechnen und per Code bewegen.
 
 Vorgehen nach Codixel (github.com/mankidev/codixel, MIT): Figur freistellen, auf Zielgröße und Palette
@@ -27,6 +22,11 @@ bringen, in Knochen zerlegen, Posen per Code. Eigene Umsetzung, damit nichts Fre
      python3 tools/figur.py raster max.png raster.png [--schritt 8] [--rig rig.json]
    vergrößert das Sprite mit nummerierten Linien, damit sich Gelenke ablesen lassen; mit --rig werden
    die Knochen eingezeichnet und die Pixel nach Knochen eingefärbt.
+Gegenstände aus einem Sammelbild (Raster aus gleich großen Zellen), je Zelle ein Sprite:
+     python3 tools/figur.py gegenstaende sammelbild.png ordner --raster 7x1 --namen=a,b,- \\
+         [--groesse 42] [--ausschnitt X,Y,B,H] [--kontur keine] [--linien 0]
+   --groesse ist die längste Seite (Inventar 42, Szene kleiner), „-“ überspringt eine Zelle,
+   --linien 0 für Draht und andere dünne helle Dinge.
 """
 import argparse
 import json
