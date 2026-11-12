@@ -447,6 +447,8 @@ def gehen(sprite_rgba, bein_ab, huefte, knie, knoechel=None, bilder=8, schritt=2
                np.array([mitte(knoechel - 1), knoechel], float)]
     teile = []
     for von, bis in ((bein_ab, knie), (knie, knoechel), (knoechel, h)):
+        # Unterschenkel und Fuß reichen zwei Zeilen ins Teil darüber, damit am Knick keine Kerbe bleibt
+        von = von if von == bein_ab else max(bein_ab, von - 2)
         m = np.zeros_like(deckt); m[von:bis] = deckt[von:bis]; teile.append(m)
     # Oberschenkel unter dem Pulli nach oben verlängern, damit beim Schwingen keine Lücke an der Hüfte entsteht
     quelle = a.copy()
@@ -573,12 +575,13 @@ def vierbeiner(sprite_rgba, bauch, knie, vorne, hinten, schulter=None, bilder=8,
         # Katzengang: hinten nah 0, vorne nah 1/4, hinten fern 1/2, vorne fern 3/4 Umlauf
         for nr, ph, f, dx in ((1, 1.5 * math.pi, dunkel, -versatz), (0, math.pi, dunkel, -versatz)):
             bein(out, *beine[nr], *gang(t + ph), f, dx)
+        for nr, ph in ((0, 0.0), (1, 0.5 * math.pi)):
+            bein(out, *beine[nr], *gang(t + ph), 1.0, 0)
+        # Körper zuletzt: die Beine kommen unter dem Bauch hervor, ihr oberes Ende verschwindet im Fell
         k = np.zeros((H, W, 4), np.uint8); k[rand:rand + h, rand:rand + w] = koerper
         if wippen:   # ein Pixel auf und ab, zweimal je Umlauf (jedes Beinpaar trägt einmal)
             k = np.roll(k, -int(round(0.5 - 0.5 * math.cos(2 * t))), axis=0)
         sicht = k[..., 3] > 0; out[sicht] = k[sicht]
-        for nr, ph in ((0, 0.0), (1, 0.5 * math.pi)):
-            bein(out, *beine[nr], *gang(t + ph), 1.0, 0)
         frames.append(out)
     return frames
 
