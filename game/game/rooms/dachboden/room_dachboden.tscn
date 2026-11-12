@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://d0fh0poixomft" path="res://game/rooms/dachboden/props/background/prop_background.tscn" id="3_v3y1t"]
 [ext_resource type="Texture2D" uid="uid://dljujl27hq1cs" path="res://grafik/hintergruende/w0_bg_dachboden_v03.png" id="4_mcqit"]
 [ext_resource type="PackedScene" uid="uid://c4cbjhulesib6" path="res://game/rooms/dachboden/props/zapp_o_mat/prop_zapp_o_mat.tscn" id="5_k8q6h"]
-[ext_resource type="Texture2D" uid="uid://cbjsrrwdps6v3" path="res://grafik/platzhalter/prop_zapp_o_mat.png" id="6_x6nag"]
+[ext_resource type="Texture2D" uid="uid://dtr5ubt78opx6" path="res://grafik/props/zapp_o_mat.png" id="6_mcqit"]
 [ext_resource type="Texture2D" uid="uid://chgu62dg1q2uh" path="res://grafik/props/dosenoeffner.png" id="8_mcqit"]
 [ext_resource type="PackedScene" uid="uid://bjk8jriso305i" path="res://game/rooms/dachboden/props/dosenoeffner/prop_dosenoeffner.tscn" id="9_mcqit"]
 [ext_resource type="PackedScene" uid="uid://b5svirsswb2vx" path="res://game/rooms/dachboden/props/drahtkleiderbuegel/prop_drahtkleiderbuegel.tscn" id="11_m8m18"]
@@ -58,13 +58,13 @@ texture = ExtResource("4_mcqit")
 description = "UI_RAUM_DACHBODEN"
 
 [node name="ZappOMat" parent="Props" unique_id=145494250 instance=ExtResource("5_k8q6h")]
-position = Vector2(365, 166.5)
-texture = ExtResource("6_x6nag")
-frames = 5
+position = Vector2(370.5, 174)
+texture = ExtResource("6_mcqit")
+frames = 7
 description = "UI_OBJ_ZAPP_O_MAT"
-baseline = 57
-walk_to_point = Vector2(0, 76.5)
-interaction_polygon = PackedVector2Array(-40, -57.5, 40, -57.5, 40, 57.5, -40, 57.5)
+baseline = 56
+walk_to_point = Vector2(-5.5, 69)
+interaction_polygon = PackedVector2Array(-52.5, -56, 52.5, -56, 52.5, 56, -52.5, 56)
 
 [node name="Dosenoeffner" parent="Props" unique_id=1001585250 instance=ExtResource("9_mcqit")]
 position = Vector2(243, 195)
@@ -85,11 +85,11 @@ interaction_polygon = PackedVector2Array(-13.5, -9.5, 13.5, -9.5, 13.5, 9.5, -13
 [node name="Hotspots" type="Node2D" parent="." unique_id=337505337]
 
 [node name="Drehknopf" parent="Hotspots" unique_id=1239165427 instance=ExtResource("13_37hlm")]
-position = Vector2(313.5, 167.5)
+position = Vector2(409, 158)
 description = "UI_OBJ_DREHKNOPF"
-baseline = 10
-walk_to_point = Vector2(6.5, 75.5)
-interaction_polygon = PackedVector2Array(-9.5, -10.5, 9.5, -10.5, 9.5, 10.5, -9.5, 10.5)
+baseline = 13
+walk_to_point = Vector2(-14, 85)
+interaction_polygon = PackedVector2Array(-9, -13, 9, -13, 9, 13, -9, 13)
 
 [node name="Werkzeugkiste" parent="Hotspots" unique_id=850821456 instance=ExtResource("14_02ndx")]
 position = Vector2(131, 249)

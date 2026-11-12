@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://d1rko8acvni24" path="res://grafik/hintergruende/w0_bg_treppenhaus_v02.png" id="4_nsdmb"]
 [ext_resource type="PackedScene" uid="uid://qkox6bl5f0d0" path="res://game/rooms/treppenhaus/props/thunfischdose/prop_thunfischdose.tscn" id="5_nsdmb"]
 [ext_resource type="PackedScene" uid="uid://gqidmiy55y42" path="res://game/rooms/treppenhaus/hotspots/hut_am_haken/hotspot_hut_am_haken.tscn" id="5_r260i"]
-[ext_resource type="Texture2D" uid="uid://8ls4c83m4nti" path="res://grafik/platzhalter/prop_thunfischdose.png" id="6_0vblo"]
+[ext_resource type="Texture2D" uid="uid://crkhvprdd3u4p" path="res://grafik/props/thunfischdose.png" id="6_nsdmb"]
 [ext_resource type="PackedScene" uid="uid://b31ll6umfhgr3" path="res://game/rooms/treppenhaus/hotspots/fenster/hotspot_fenster.tscn" id="6_uakd5"]
 [ext_resource type="PackedScene" uid="uid://4qny4vu4wprc" path="res://game/rooms/treppenhaus/hotspots/treppe/hotspot_treppe.tscn" id="7_vkxdx"]
 [ext_resource type="PackedScene" uid="uid://cr1lwyliq6gx1" path="res://game/rooms/treppenhaus/hotspots/ausgang_wohnzimmer/hotspot_ausgang_wohnzimmer.tscn" id="8_nsdmb"]
@@ -37,12 +37,12 @@ texture = ExtResource("4_nsdmb")
 description = "UI_RAUM_TREPPENHAUS"
 
 [node name="Thunfischdose" parent="Props" unique_id=1604922751 instance=ExtResource("5_nsdmb")]
-position = Vector2(159, 187)
-texture = ExtResource("6_0vblo")
+position = Vector2(158, 187.5)
+texture = ExtResource("6_nsdmb")
 description = "UI_OBJ_THUNFISCHDOSE"
-baseline = 7
-walk_to_point = Vector2(1, 113)
-interaction_polygon = PackedVector2Array(-9, -7, 9, -7, 9, 7, -9, 7)
+baseline = 6
+walk_to_point = Vector2(2, 112.5)
+interaction_polygon = PackedVector2Array(-8, -6.5, 8, -6.5, 8, 6.5, -8, 6.5)
 
 [node name="Hotspots" type="Node2D" parent="." unique_id=1536147977]
 

@@ -637,7 +637,9 @@ def baue(abschnitt):
             "id": g["id"], "script_name": pascal(g["id"]), "name_key": name_key(g["id"], g["name"]),
             "zustaende": g.get("zustaende", []), "reist_mit": g.get("reist_mit", False),
             "nahansicht": g.get("nahansicht", False),
-            "icon": echt_oder(ECHT_GEGENSTAENDE, f"{g['id']}.png", f"{RES_PLATZHALTER}gegenstand_{g['id']}.png"),
+            # Erster Zustand der Welt: eigenes Bild (thunfischdose_offen in Welt 1), sonst das Grundbild
+            "icon": echt_oder(ECHT_GEGENSTAENDE, f"{g['id']}_{slug(g['zustaende'][0])}.png" if g.get("zustaende") else "-",
+                              echt_oder(ECHT_GEGENSTAENDE, f"{g['id']}.png", f"{RES_PLATZHALTER}gegenstand_{g['id']}.png")),
             "icons": {s: echt_oder(ECHT_GEGENSTAENDE, f"{g['id']}_{slug(s)}.png",
                                    f"{RES_PLATZHALTER}gegenstand_{g['id']}_{slug(s)}.png")
                       for s in g.get("zustaende", [])[1:]},

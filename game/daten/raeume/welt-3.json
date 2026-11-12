@@ -6698,7 +6698,7 @@
    ],
    "reist_mit": true,
    "nahansicht": false,
-   "icon": "res://grafik/platzhalter/gegenstand_sonnenbrille.png",
+   "icon": "res://grafik/gegenstaende/sonnenbrille.png",
    "icons": {},
    "ansehen": [
     {

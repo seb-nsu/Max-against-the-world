@@ -378,32 +378,43 @@ def sprite(quelle, hoehe, ansicht=1, spiegeln=False, ausschnitt=None, palette="e
 
 
 def gegenstaende(quelle, ausschnitt, spalten, zeilen, groesse, palette="endesga", tol=40, loch_tol=20,
-                 konturfarbe=None, glatt=True):
+                 konturfarbe=None, glatt=True, gemeinsam=False):
     """Sammelbild (Raster aus gleich großen Zellen) zu einzelnen Sprites: je Zelle Hintergrund von den
     Rändern her und gleichfarbige Löcher (Bügel, Henkel) entfernen, auf die längste Seite = groesse
-    bringen. Keine Bodenlinien-Suche wie bei Figuren (Untertassen und Bügel sind waagrecht)."""
+    bringen. Keine Bodenlinien-Suche wie bei Figuren (Untertassen und Bügel sind waagrecht).
+    gemeinsam: alle Zellen mit demselben Rahmen und Maßstab (Zustandsreihe eines Objekts, etwa der
+    Zapp-O-Mat mit und ohne Antenne), damit die Bilder als Einzelbilder eines Sheets zusammenpassen."""
     rgb = np.ascontiguousarray(np.asarray(Image.open(quelle).convert("RGB")))
     x, y, b, h = ausschnitt or (0, 0, rgb.shape[1], rgb.shape[0])
     zb, zh = b / spalten, h / zeilen
     rand = max(4, round(min(zb, zh) * 0.06))   # Rasterlinien zwischen den Zellen abschneiden
-    out = []
+    cw, ch = int(zb) - 2 * rand - 1, int(zh) - 2 * rand - 1
+    zellen = []
     for j in range(zeilen):
         for i in range(spalten):
             x0, y0 = round(x + i * zb) + rand, round(y + j * zh) + rand
-            zelle = np.ascontiguousarray(rgb[y0:round(y + (j + 1) * zh) - rand, x0:round(x + (i + 1) * zb) - rand])
+            zelle = np.ascontiguousarray(rgb[y0:y0 + ch, x0:x0 + cw])
             bg = hintergrund_maske(zelle, tol)
             r = np.concatenate([zelle[0], zelle[-1], zelle[:, 0], zelle[:, -1]]).astype(np.float32)
-            nah = np.sqrt(((zelle.astype(np.float32) - np.median(r, 0)) ** 2).sum(-1)) <= loch_tol
+            nah = np.sqrt(((zelle.astype(np.float32) - np.median(r, 0)) ** 2).sum(-1)) < loch_tol
             vorn = ~(bg | nah)
             vorn = np.asarray(Image.fromarray(vorn.astype(np.uint8) * 255).filter(ImageFilter.MinFilter(3))
                               .filter(ImageFilter.MaxFilter(3))) > 0
-            ys, xs = np.nonzero(vorn)
-            if not len(ys):
-                out.append(None); continue
-            rahmen = (xs.min(), ys.min(), xs.max() + 1, ys.max() + 1)
-            hoehe = max(1, round(groesse * (rahmen[3] - rahmen[1]) / max(rahmen[2] - rahmen[0], rahmen[3] - rahmen[1])))
-            klein, alpha = verkleinern(zelle, ~vorn, rahmen, hoehe)
-            out.append(Image.fromarray(fertig(klein, alpha, palette, glatt, konturfarbe, False), "RGBA"))
+            zellen.append((zelle, vorn))
+
+    def rahmen_von(m):
+        ys, xs = np.nonzero(m)
+        return (xs.min(), ys.min(), xs.max() + 1, ys.max() + 1) if len(ys) else None
+
+    alle = rahmen_von(np.any([v for _, v in zellen], axis=0)) if gemeinsam else None
+    out = []
+    for zelle, vorn in zellen:
+        rahmen = alle or rahmen_von(vorn)
+        if rahmen is None:
+            out.append(None); continue
+        hoehe = max(1, round(groesse * (rahmen[3] - rahmen[1]) / max(rahmen[2] - rahmen[0], rahmen[3] - rahmen[1])))
+        klein, alpha = verkleinern(zelle, ~vorn, rahmen, hoehe)
+        out.append(Image.fromarray(fertig(klein, alpha, palette, glatt, konturfarbe, False), "RGBA"))
     return out
 
 
@@ -675,6 +686,11 @@ def main():
     g.add_argument("--ausschnitt", help="X,Y,B,H des Rasters im Bild (ohne Rand drumherum)")
     g.add_argument("--palette", default="endesga")
     g.add_argument("--kontur", default="262b44")
+    g.add_argument("--streifen", action="store_true",
+                   help="alle Zellen gleich gerahmt als ein Sheet <erster Name>.png (Zustände eines Objekts)")
+    g.add_argument("--toleranz", type=float, default=40, help="Abstand zur Hintergrundfarbe der Zelle")
+    g.add_argument("--loch-toleranz", type=float, default=20,
+                   help="Löcher in Hintergrundfarbe durchsichtig machen; 0 = aus (dunkle Dinge auf dunklem Grund)")
     pk = sub.add_parser("paket", help="Bewegungen einer Figur zu Sprite-Sheet und JSON für Godot")
     pk.add_argument("spez"); pk.add_argument("bild"); pk.add_argument("json")
     n = sub.add_parser("nacharbeit", help="Pixel aus einer JSON-Liste [[x, y, \"rrggbb\"], …] setzen")
@@ -723,7 +739,16 @@ def main():
         aus = [int(v) for v in arg.ausschnitt.split(",")] if arg.ausschnitt else None
         namen = arg.namen.split(",")
         Path(arg.ordner).mkdir(parents=True, exist_ok=True)
+        if arg.streifen:
+            bilder = gegenstaende(arg.quelle, aus, sp, ze, arg.groesse, arg.palette, tol=arg.toleranz,
+                                  loch_tol=arg.loch_toleranz, konturfarbe=None if arg.kontur == "keine" else arg.kontur,
+                                  gemeinsam=True)
+            bilder = [np.asarray(bb) for bb, n in zip(bilder, namen) if n != "-"]
+            Image.fromarray(np.concatenate(bilder, axis=1), "RGBA").save(Path(arg.ordner) / f"{namen[0]}.png")
+            print(namen[0], len(bilder), "Bilder je", bilder[0].shape[1], "×", bilder[0].shape[0])
+            return
         for name, bild in zip(namen, gegenstaende(arg.quelle, aus, sp, ze, arg.groesse, arg.palette,
+                                                   tol=arg.toleranz, loch_tol=arg.loch_toleranz,
                                                    konturfarbe=None if arg.kontur == "keine" else arg.kontur)):
             if name != "-" and bild is not None:
                 bild.save(Path(arg.ordner) / f"{name}.png")

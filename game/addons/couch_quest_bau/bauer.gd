@@ -427,7 +427,8 @@ func _layout_uebernehmen(r: Dictionary) -> void:
 		if o[0].begins_with("Props/") and not String(o[1].get("textur", "")).contains("/platzhalter/") \
 				and ResourceLoader.exists(o[1].textur):
 			knoten.texture = load(o[1].textur)
-			knoten.frames = 1
+			# Zustandsreihe (Zapp-O-Mat): so viele Bilder, wie nebeneinander ins Rechteck passen
+			knoten.frames = maxi(1, int(round(knoten.texture.get_width() / rect.size.x)))
 	for fd in r.figuren:
 		for c in raum.get_node("Characters").get_children():
 			if c.name.begins_with("Character" + fd.script_name):

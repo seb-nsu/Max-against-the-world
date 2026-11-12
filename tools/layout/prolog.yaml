@@ -62,7 +62,7 @@ treppenhaus:
     fenster: {rect: [290, 72, 60, 78], gehe: [320, 290]}
     treppe: {rect: [350, 45, 250, 150], gehe: [270, 280]}   # rechts vom Fenster und über den Kisten, sonst verdeckt sie beide
   props:
-    thunfischdose: {rect: [150, 180, 18, 14], gehe: [160, 300]}   # guckt aus der Tasche von Opas Mantel
+    thunfischdose: {rect: [150, 181, 16, 13], gehe: [160, 300]}   # guckt aus der Tasche von Opas Mantel
   ausgaenge:
     wohnzimmer: {rect: [10, 55, 65, 245], gehe: [45, 305]}
     dachboden: {rect: [395, 0, 230, 45], gehe: [592, 50]}
@@ -82,11 +82,11 @@ dachboden:
     pixel: [262, 272]             # schläft auf dem Verlängerungskabel
     opa: [400, 287]
   props:
-    zapp_o_mat: {rect: [325, 109, 80, 115], gehe: [365, 243], item: null}
+    zapp_o_mat: {rect: [318, 118, 105, 112], gehe: [365, 243], item: null}
     dosenoeffner: {rect: [234, 186, 18, 18], gehe: [250, 262]}   # hängt rechts an der Werkbank
     drahtkleiderbuegel: {rect: [600, 125, 27, 19], gehe: [600, 290]}
   hotspots:
-    drehknopf: {rect: [304, 157, 19, 21], gehe: [320, 243], name: Drehknopf}
+    drehknopf: {rect: [400, 145, 18, 26], gehe: [395, 243], name: Drehknopf}
     werkzeugkiste: {rect: [97, 220, 68, 58], gehe: [180, 300]}
     werkbank: {rect: [60, 145, 190, 55], gehe: [235, 275]}
     kleiderschrank: {rect: [578, 65, 62, 215], gehe: [600, 290]}

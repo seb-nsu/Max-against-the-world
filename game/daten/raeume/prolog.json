@@ -979,15 +979,15 @@
      "name_key": "UI_OBJ_THUNFISCHDOSE",
      "rect": [
       150,
-      180,
-      18,
-      14
+      181,
+      16,
+      13
      ],
      "gehe": [
       160,
       300
      ],
-     "textur": "res://grafik/platzhalter/prop_thunfischdose.png",
+     "textur": "res://grafik/props/thunfischdose.png",
      "gegenstand": "thunfischdose",
      "ansehen": [],
      "nehmen": {
@@ -1139,13 +1139,13 @@
      "script_name": "Drehknopf",
      "name_key": "UI_OBJ_DREHKNOPF",
      "rect": [
-      304,
-      157,
-      19,
-      21
+      400,
+      145,
+      18,
+      26
      ],
      "gehe": [
-      320,
+      395,
       243
      ],
      "ansehen": [],
@@ -2089,16 +2089,16 @@
      "script_name": "ZappOMat",
      "name_key": "UI_OBJ_ZAPP_O_MAT",
      "rect": [
-      325,
-      109,
-      80,
-      115
+      318,
+      118,
+      105,
+      112
      ],
      "gehe": [
       365,
       243
      ],
-     "textur": "res://grafik/platzhalter/prop_zapp_o_mat.png",
+     "textur": "res://grafik/props/zapp_o_mat.png",
      "gegenstand": null,
      "ansehen": [
       {
@@ -2565,10 +2565,10 @@
    ],
    "reist_mit": true,
    "nahansicht": false,
-   "icon": "res://grafik/platzhalter/gegenstand_thunfischdose.png",
+   "icon": "res://grafik/gegenstaende/thunfischdose_zu.png",
    "icons": {
-    "offen": "res://grafik/platzhalter/gegenstand_thunfischdose_offen.png",
-    "leer": "res://grafik/platzhalter/gegenstand_thunfischdose_leer.png"
+    "offen": "res://grafik/gegenstaende/thunfischdose_offen.png",
+    "leer": "res://grafik/gegenstaende/thunfischdose_leer.png"
    },
    "ansehen": [
     {
@@ -2803,7 +2803,7 @@
    ],
    "reist_mit": true,
    "nahansicht": false,
-   "icon": "res://grafik/platzhalter/gegenstand_notizbuch.png",
+   "icon": "res://grafik/gegenstaende/notizbuch.png",
    "icons": {},
    "ansehen": [],
    "benutzen": [],

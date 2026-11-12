@@ -6105,7 +6105,7 @@
    ],
    "reist_mit": true,
    "nahansicht": false,
-   "icon": "res://grafik/platzhalter/gegenstand_thunfischdose.png",
+   "icon": "res://grafik/gegenstaende/thunfischdose_leer.png",
    "icons": {},
    "ansehen": [],
    "benutzen": [],
@@ -6120,7 +6120,7 @@
    ],
    "reist_mit": true,
    "nahansicht": false,
-   "icon": "res://grafik/platzhalter/gegenstand_socke.png",
+   "icon": "res://grafik/gegenstaende/socke.png",
    "icons": {},
    "ansehen": [],
    "benutzen": [],
@@ -6135,7 +6135,7 @@
    ],
    "reist_mit": true,
    "nahansicht": false,
-   "icon": "res://grafik/platzhalter/gegenstand_notizbuch.png",
+   "icon": "res://grafik/gegenstaende/notizbuch.png",
    "icons": {},
    "ansehen": [],
    "benutzen": [],
@@ -6469,9 +6469,9 @@
    ],
    "reist_mit": true,
    "nahansicht": false,
-   "icon": "res://grafik/platzhalter/gegenstand_olivenoel.png",
+   "icon": "res://grafik/gegenstaende/olivenoel_voll.png",
    "icons": {
-    "angebrochen": "res://grafik/platzhalter/gegenstand_olivenoel_angebrochen.png"
+    "angebrochen": "res://grafik/gegenstaende/olivenoel_angebrochen.png"
    },
    "ansehen": [
     {
@@ -7151,7 +7151,7 @@
    ],
    "reist_mit": true,
    "nahansicht": false,
-   "icon": "res://grafik/platzhalter/gegenstand_sandale.png",
+   "icon": "res://grafik/gegenstaende/sandale.png",
    "icons": {},
    "ansehen": [
     {

@@ -1,0 +1,26 @@
+{
+ "bild": [
+  88,
+  203
+ ],
+ "animationen": {
+  "idle": {
+   "von": 0,
+   "bilder": 1,
+   "ms": 1000,
+   "schleife": true
+  },
+  "talk": {
+   "von": 1,
+   "bilder": 1,
+   "ms": 1000,
+   "schleife": true
+  },
+  "walk": {
+   "von": 2,
+   "bilder": 1,
+   "ms": 1000,
+   "schleife": true
+  }
+ }
+}

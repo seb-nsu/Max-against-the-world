@@ -7511,7 +7511,7 @@
    ],
    "reist_mit": true,
    "nahansicht": false,
-   "icon": "res://grafik/platzhalter/gegenstand_thunfischdose.png",
+   "icon": "res://grafik/gegenstaende/thunfischdose_offen.png",
    "icons": {},
    "ansehen": [],
    "benutzen": [],
@@ -7526,7 +7526,7 @@
    ],
    "reist_mit": true,
    "nahansicht": false,
-   "icon": "res://grafik/platzhalter/gegenstand_notizbuch.png",
+   "icon": "res://grafik/gegenstaende/notizbuch.png",
    "icons": {},
    "ansehen": [],
    "benutzen": [],
@@ -7622,7 +7622,7 @@
    "nahansicht": false,
    "icon": "res://grafik/platzhalter/gegenstand_kochloeffel.png",
    "icons": {
-    "zauberstab": "res://grafik/platzhalter/gegenstand_kochloeffel_zauberstab.png"
+    "zauberstab": "res://grafik/gegenstaende/kochloeffel_zauberstab.png"
    },
    "ansehen": [
     {
@@ -7691,7 +7691,7 @@
    ],
    "reist_mit": true,
    "nahansicht": false,
-   "icon": "res://grafik/platzhalter/gegenstand_socke.png",
+   "icon": "res://grafik/gegenstaende/socke.png",
    "icons": {
     "voller_pollen": "res://grafik/platzhalter/gegenstand_socke_voller_pollen.png"
    },
