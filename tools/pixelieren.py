@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Konzeptbild (Gemini) -> Pixelart-Hintergrund ohne KI und ohne Größengrenze.
 
-16:9 zuschneiden, je Zielpixel einen 4×4-Block mit k-Centroid (k=2) auf die vorherrschende Farbe bringen
+Aufs Zielformat zuschneiden (Standard 16:9), je Zielpixel einen 4×4-Block mit k-Centroid (k=2) auf die vorherrschende Farbe bringen
 (Kanten bleiben hart), 32 eigene Farben per k-Means in OKLab (Farbigkeit doppelt gewichtet), Streupixel
 entfernen. Ersetzt Neural Pixelate von Retro Diffusion (docs/grafik/00-stil-und-werkzeuge.md, Ablauf).
 
@@ -28,13 +28,14 @@ F = 4  # Vorlage wird auf das Vierfache der Zielgröße gebracht, je Zielpixel e
 
 
 def verkleinern(src, W, H):
-    """16:9 zuschneiden und mit k-Centroid (k=2) auf W×H bringen; Kanten bleiben hart."""
+    """Aufs Seitenverhältnis W:H zuschneiden (16:9, bei Breitwandräumen wie dem Dorfplatz 1280×360
+    entsprechend breiter) und mit k-Centroid (k=2) auf W×H bringen; Kanten bleiben hart."""
     im = Image.open(src).convert("RGB")
     w, h = im.size
-    if w / h > 16 / 9:
-        nw = round(h * 16 / 9); im = im.crop(((w - nw) // 2, 0, (w - nw) // 2 + nw, h))
+    if w / h > W / H:
+        nw = round(h * W / H); im = im.crop(((w - nw) // 2, 0, (w - nw) // 2 + nw, h))
     else:
-        nh = round(w * 9 / 16); im = im.crop((0, (h - nh) // 2, w, (h - nh) // 2 + nh))
+        nh = round(w * H / W); im = im.crop((0, (h - nh) // 2, w, (h - nh) // 2 + nh))
     a = np.asarray(im.resize((W * F, H * F), Image.LANCZOS), dtype=np.float32)
     b = a.reshape(H, F, W, F, 3).transpose(0, 2, 1, 3, 4).reshape(H, W, F * F, 3)
     hell = b.mean(-1)

@@ -176,7 +176,7 @@ Alle mit dem Baustein GEGENSTÄNDE. Thunfischdose, Notizbuch, Kochlöffel-Zauber
 
 | Sammelbild | Motiv |
 | --- | --- |
-| Prolog (1×5) | 1x5 grid: a manual crank can opener with red plastic handles; a plain silver wire coat hanger; the same coat hanger bent into a V-shaped TV antenna like rabbit ears; a vintage brown leather travel bag with three front pockets and brass buckles; a small folded paper note with blank lines (Opas Zettel für Welt 1) |
+| Prolog (1×7) | 1x7 grid: a manual crank can opener with red plastic handles; a plain silver wire coat hanger; the same coat hanger bent into a V-shaped TV antenna like rabbit ears; a vintage brown leather travel bag with three front pockets and brass buckles; a small folded paper note with blank lines (Opas Zettel für Welt 1); a wide, low white porcelain teacup with a small blue flower pattern on a matching saucer, half full of cold tea (Opas Teetasse); the same teacup on its saucer, empty of tea and filled with pink tuna like a cat bowl |
 | Gegenwart (2×4) | 2x4 grid: a plain white hen's egg; a small paper flour sack tied at the top with a blank round seal; a single finger-sized AA battery glowing soft orange; a crumpled handwritten note with blank lines (Opas Einkaufsliste); a small folded note with one long blank line (WLAN-Passwort); a glass milk bottle with a red cap; a slice of chocolate birthday cake with a candle; a small brown paper cookie bag, folded over at the top, with bone-shaped dog biscuits peeking out (Omas Kekse ab Rückkehr 3) |
 
 Die Zahl 405 („Type 405“) auf dem Siegel des Mehlsacks von Hand setzen, ebenso „Spezialzwecke“ auf dem Eierkarton der Werkbank-Ablage.

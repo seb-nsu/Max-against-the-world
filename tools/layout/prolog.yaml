@@ -14,99 +14,101 @@
 
 wohnzimmer:
   farbe: "#6b4f3f"
-  # Echter Hintergrund (10. November 2026, auf 32 Farben reduziert). Koordinaten aus dem Bild;
-  # übernommen mit --cq-layout=wohnzimmer. Hinter dem Couchtisch ist kein Laufbereich (Tisch gehört zum Bild).
-  hintergrund: res://grafik/hintergruende/w0_bg_wohnzimmer_v01.png
+  # Echter Hintergrund (12. November 2026, Neufassung im Stil des Dachbodens, 32 Farben).
+  # Koordinaten aus dem Bild; übernommen mit --cq-layout=wohnzimmer. Hinter dem Couchtisch und hinter
+  # dem Sofa ist kein Laufbereich (beide gehören zum Bild).
+  hintergrund: res://grafik/hintergruende/w0_bg_wohnzimmer_v03.png
   tiefe: 0.85
-  laufbereich: [[8, 357], [8, 336], [93, 320], [260, 293], [400, 293], [403, 243], [440, 235], [533, 240], [560, 259], [635, 267], [635, 357]]
+  laufbereich: [[0, 357], [0, 320], [400, 314], [410, 284], [550, 282], [560, 300], [635, 300], [635, 357]]
   marker:
-    start: [187, 307]              # Max vor dem Sofa (Szene 1)
-    von_treppenhaus: [587, 296]    # durch die Tür rechts
+    start: [187, 330]              # Max vor dem Sofa (Szene 1)
+    von_treppenhaus: [590, 310]    # durch die Tür rechts
   hotspots:
-    sofa: {rect: [109, 133, 151, 153], gehe: [187, 307]}
-    leerer_platz_auf_dem_couchtisch: {rect: [341, 213, 37, 15], gehe: [363, 304]}
-    fernseher: {rect: [437, 120, 96, 109], gehe: [483, 253]}
-    familienfoto: {rect: [273, 53, 133, 91], gehe: [340, 300]}
-    # Weitere Dinge (Gag-Überarbeitung, 10. November 2026): Lage grob aus dem Bild, in Godot nachziehen
-    schrank: {rect: [0, 10, 110, 275], gehe: [90, 320]}
-    stehlampe: {rect: [215, 65, 48, 105], gehe: [240, 300]}
-    zeitung: {rect: [292, 190, 60, 18], gehe: [330, 300]}
+    sofa: {rect: [40, 167, 198, 145], gehe: [150, 330]}
+    leerer_platz_auf_dem_couchtisch: {rect: [340, 238, 34, 14], gehe: [360, 318]}
+    fernseher: {rect: [440, 142, 105, 135], gehe: [490, 292]}
+    familienfoto: {rect: [237, 75, 95, 100], gehe: [290, 318]}
+    # Weitere Dinge (Gag-Überarbeitung, 10. November 2026)
+    schrank: {rect: [10, 80, 115, 90], gehe: [70, 330]}
+    stehlampe: {rect: [177, 95, 48, 105], gehe: [200, 322]}
+    zeitung: {rect: [270, 220, 75, 28], gehe: [310, 318]}
     # Finale (skripte/finale.gd): nur im Finale sichtbar; versteckt = nicht ins Platzhalterbild malen (verriete den Kuchen)
-    kuchen: {rect: [339, 181, 43, 40], gehe: [363, 304], name: Kuchen, versteckt: true}
-    girlande: {rect: [133, 11, 373, 27], gehe: [320, 304], name: Girlande, versteckt: true}
-    geschenke: {rect: [400, 261, 35, 29], gehe: [416, 307], name: Geschenke, versteckt: true}
+    kuchen: {rect: [318, 192, 43, 40], gehe: [340, 318], name: Kuchen, versteckt: true}
+    girlande: {rect: [133, 11, 373, 27], gehe: [320, 320], name: Girlande, versteckt: true}
+    geschenke: {rect: [395, 268, 35, 29], gehe: [420, 300], name: Geschenke, versteckt: true}
   props:
-    teetasse: {rect: [301, 208, 21, 19], gehe: [315, 304]}   # Opas Teetasse auf dem Couchtisch, zum Mitnehmen
+    teetasse: {rect: [300, 227, 18, 13], gehe: [310, 318]}   # Opas Teetasse auf dem Couchtisch, zum Mitnehmen
   ausgaenge:
-    treppenhaus: {rect: [555, 33, 75, 224], gehe: [592, 285]}
+    treppenhaus: {rect: [558, 42, 77, 258], gehe: [600, 305]}
 
 treppenhaus:
   farbe: "#584536"
-  # Echter Hintergrund (10. November 2026, 32 Farben). Koordinaten aus dem Bild; übernommen mit
-  # --cq-layout=treppenhaus. Laufbereich: Flur vorne plus schmales Band über die Stufen nach oben rechts.
-  hintergrund: res://grafik/hintergruende/w0_bg_treppenhaus_v01.png
+  # Echter Hintergrund (12. November 2026, Neufassung im Stil des Dachbodens, 32 Farben). Koordinaten
+  # aus dem Bild; übernommen mit --cq-layout=treppenhaus. Laufbereich: Flur vorne plus schmales Band
+  # über die Stufen nach oben rechts.
+  hintergrund: res://grafik/hintergruende/w0_bg_treppenhaus_v02.png
   tiefe: 0.85
-  laufbereich: [[8, 357], [8, 309], [80, 299], [91, 277], [250, 277], [262, 262], [560, 73], [580, 73], [578, 86], [290, 280], [300, 300], [400, 349], [427, 357]]
+  laufbereich: [[12, 357], [12, 290], [40, 282], [255, 282], [275, 262], [585, 44], [605, 44], [605, 56], [300, 280], [340, 300], [400, 345], [400, 357]]
   marker:
-    start: [173, 320]
-    von_wohnzimmer: [67, 323]      # aus der Tür links
-    von_dachboden: [540, 98]        # oben auf der Treppe unter der Luke
+    start: [173, 310]
+    von_wohnzimmer: [55, 310]      # aus der Tür links
+    von_dachboden: [560, 70]       # oben auf der Treppe unter der Luke
   hotspots:
-    hut_am_haken: {rect: [171, 112, 27, 32], gehe: [187, 296]}   # Hut ist ins Bild gemalt
-    regenschirm: {rect: [93, 207, 27, 83], gehe: [110, 300]}
-    maentel: {rect: [123, 130, 48, 160], gehe: [150, 300], name: Mäntel}
-    deckenlampe: {rect: [198, 10, 52, 26], gehe: [220, 300]}
-    kisten: {rect: [400, 190, 240, 160], gehe: [330, 320]}   # Kisten unter der Treppe
-    fenster: {rect: [288, 73, 53, 80], gehe: [273, 299]}
-    treppe: {rect: [341, 40, 239, 150], gehe: [270, 282]}   # rechts vom Fenster und über den Kisten, sonst verdeckt sie beide
+    hut_am_haken: {rect: [170, 122, 25, 30], gehe: [182, 300]}   # Hut ist ins Bild gemalt
+    regenschirm: {rect: [192, 127, 18, 90], gehe: [200, 300]}
+    maentel: {rect: [110, 127, 68, 93], gehe: [150, 300], name: Mäntel}
+    deckenlampe: {rect: [200, 10, 45, 80], gehe: [222, 300]}
+    kisten: {rect: [405, 195, 215, 150], gehe: [380, 330]}   # Kisten unter der Treppe
+    fenster: {rect: [290, 72, 60, 78], gehe: [320, 290]}
+    treppe: {rect: [350, 45, 250, 150], gehe: [270, 280]}   # rechts vom Fenster und über den Kisten, sonst verdeckt sie beide
   props:
-    thunfischdose: {rect: [133, 198, 20, 16], gehe: [150, 300]}   # guckt aus der Tasche von Opas Mantel
+    thunfischdose: {rect: [150, 181, 16, 13], gehe: [160, 300]}   # guckt aus der Tasche von Opas Mantel
   ausgaenge:
-    wohnzimmer: {rect: [7, 53, 73, 247], gehe: [53, 320]}
-    dachboden: {rect: [400, 0, 227, 45], gehe: [556, 85]}
+    wohnzimmer: {rect: [10, 55, 65, 245], gehe: [45, 305]}
+    dachboden: {rect: [395, 0, 230, 45], gehe: [592, 50]}
 
 dachboden:
   farbe: "#7a5c43"
-  # Echter Hintergrund (10. November 2026, Raumansicht mit leichter Tiefe, 32 eigene Farben).
+  # Echter Hintergrund (12. November 2026, Neufassung, Stilanker für alle Räume, 32 eigene Farben).
   # Koordinaten aus dem Bild genommen; übernommen mit --cq-layout=dachboden (game/README.md).
-  hintergrund: res://grafik/hintergruende/w0_bg_dachboden_v01.png
+  hintergrund: res://grafik/hintergruende/w0_bg_dachboden_v03.png
   tiefe: 0.85
-  laufbereich: [[85, 357], [85, 253], [247, 245], [253, 227], [400, 227], [405, 240], [480, 243], [557, 269], [635, 272], [635, 357]]
+  laufbereich: [[160, 357], [160, 290], [230, 272], [245, 252], [262, 238], [455, 238], [460, 255], [520, 258], [525, 280], [600, 285], [635, 290], [635, 357]]
   marker:
     start: [527, 315]
     von_treppenhaus: [527, 315]   # durch die Bodenluke vorne rechts
     fernseher: [365, 243]         # vor dem Zapp-O-Mat
   figuren:
-    pixel: [313, 237]             # schläft auf dem Verlängerungskabel
+    pixel: [262, 272]             # schläft auf dem Verlängerungskabel
     opa: [400, 287]
   props:
-    zapp_o_mat: {rect: [325, 109, 80, 115], gehe: [365, 243], item: null}
-    dosenoeffner: {rect: [224, 170, 18, 22], gehe: [232, 250]}   # hängt rechts an der Werkbank
-    drahtkleiderbuegel: {rect: [587, 125, 27, 19], gehe: [587, 285]}
+    zapp_o_mat: {rect: [318, 118, 105, 112], gehe: [365, 243], item: null}
+    dosenoeffner: {rect: [234, 186, 18, 18], gehe: [250, 262]}   # hängt rechts an der Werkbank
+    drahtkleiderbuegel: {rect: [600, 125, 27, 19], gehe: [600, 290]}
   hotspots:
-    drehknopf: {rect: [304, 157, 19, 21], gehe: [320, 243], name: Drehknopf}
-    werkzeugkiste: {rect: [101, 200, 53, 43], gehe: [128, 259]}
-    werkbank: {rect: [73, 133, 173, 53], gehe: [160, 253]}
-    kleiderschrank: {rect: [547, 107, 93, 157], gehe: [587, 285]}
-    kalender: {rect: [413, 88, 40, 48], gehe: [433, 248]}
-    ohrensessel: {rect: [400, 140, 80, 96], gehe: [440, 253]}
-    dachfenster: {rect: [80, 7, 60, 43], gehe: [127, 256]}
-    poster: {rect: [265, 64, 59, 83], gehe: [295, 240]}
-    ausgestopfter_fisch: {rect: [357, 80, 48, 27], gehe: [381, 240]}
-    kochbuch: {rect: [213, 91, 24, 37], gehe: [224, 251]}
-    toaster: {rect: [165, 101, 32, 27], gehe: [181, 251]}
-    plattenspieler: {rect: [109, 96, 48, 32], gehe: [133, 253]}
-    kiste_mit_fernbedienungen: {rect: [0, 220, 83, 93], gehe: [101, 287]}
-    umzugskartons: {rect: [0, 135, 65, 85], gehe: [95, 262]}
-    steckdose: {rect: [258, 188, 22, 22], gehe: [270, 235]}
-    opas_staubsauger_prototyp: {rect: [483, 140, 64, 120], gehe: [515, 275]}
-    fundkiste: {rect: [163, 211, 56, 36], gehe: [191, 259], name: Fundkiste}   # erst ab Zwischenspiel 1 sichtbar
+    drehknopf: {rect: [400, 145, 18, 26], gehe: [395, 243], name: Drehknopf}
+    werkzeugkiste: {rect: [97, 220, 68, 58], gehe: [180, 300]}
+    werkbank: {rect: [60, 145, 190, 55], gehe: [235, 275]}
+    kleiderschrank: {rect: [578, 65, 62, 215], gehe: [600, 290]}
+    kalender: {rect: [459, 97, 46, 49], gehe: [450, 245]}
+    ohrensessel: {rect: [452, 152, 68, 100], gehe: [480, 265]}
+    dachfenster: {rect: [65, 10, 70, 55], gehe: [200, 300]}
+    poster: {rect: [262, 72, 60, 80], gehe: [292, 245]}
+    ausgestopfter_fisch: {rect: [355, 77, 80, 38], gehe: [395, 245]}
+    kochbuch: {rect: [212, 90, 24, 40], gehe: [245, 258]}
+    toaster: {rect: [170, 105, 35, 25], gehe: [230, 275]}
+    plattenspieler: {rect: [122, 92, 44, 38], gehe: [200, 285]}
+    kiste_mit_fernbedienungen: {rect: [57, 267, 98, 83], gehe: [175, 320]}
+    umzugskartons: {rect: [0, 135, 60, 145], gehe: [175, 300]}
+    steckdose: {rect: [256, 199, 14, 19], gehe: [270, 245]}
+    opas_staubsauger_prototyp: {rect: [520, 160, 58, 115], gehe: [545, 285]}
+    fundkiste: {rect: [152, 207, 70, 48], gehe: [240, 268], name: Fundkiste}   # erst ab Zwischenspiel 1 sichtbar
     # Finale (skripte/finale.gd): Opas Maschine an der Stelle des Zapp-O-Mat, nur im Finale sichtbar
     maschine: {rect: [325, 104, 80, 120], gehe: [365, 243], name: Maschine, skizze: spaeter}
     ofentuer: {rect: [341, 176, 44, 40], gehe: [363, 243], name: Ofentür, skizze: spaeter}
     druckmesser: {rect: [301, 128, 21, 21], gehe: [333, 243], name: Druckmesser, skizze: spaeter}
     fassungen: {rect: [325, 83, 80, 19], gehe: [365, 243], name: Fassungen, skizze: spaeter}
     empfaenger: {rect: [349, 59, 40, 21], gehe: [368, 243], name: Empfänger, skizze: spaeter}
-    lampe: {rect: [296, 40, 48, 19], gehe: [320, 243], name: Lampe}   # Opas Arbeitslampe, ab Zwischenspiel 3 an
+    lampe: {rect: [300, 30, 52, 33], gehe: [326, 245], name: Lampe}   # Opas Arbeitslampe, ab Zwischenspiel 3 an
   ausgaenge:
-    treppenhaus: {rect: [447, 272, 167, 53], gehe: [527, 307], name: Bodenluke, id: bodenluke}
+    treppenhaus: {rect: [442, 280, 173, 50], gehe: [527, 307], name: Bodenluke, id: bodenluke}

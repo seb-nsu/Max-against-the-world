@@ -301,10 +301,10 @@
    ],
    "reist_mit": false,
    "nahansicht": false,
-   "icon": "res://grafik/platzhalter/gegenstand_goldene_fernbedienung.png",
+   "icon": "res://grafik/gegenstaende/goldene_fernbedienung.png",
    "icons": {
-    "grau_ohne_zelle": "res://grafik/platzhalter/gegenstand_goldene_fernbedienung_grau_ohne_zelle.png",
-    "zuendkapsel": "res://grafik/platzhalter/gegenstand_goldene_fernbedienung_zuendkapsel.png"
+    "grau_ohne_zelle": "res://grafik/gegenstaende/goldene_fernbedienung_grau_ohne_zelle.png",
+    "zuendkapsel": "res://grafik/gegenstaende/goldene_fernbedienung_zuendkapsel.png"
    },
    "ansehen": [
     {
@@ -337,7 +337,7 @@
    ],
    "reist_mit": true,
    "nahansicht": false,
-   "icon": "res://grafik/platzhalter/gegenstand_kochloeffel.png",
+   "icon": "res://grafik/gegenstaende/kochloeffel_zauberstab.png",
    "icons": {},
    "ansehen": [],
    "benutzen": [],

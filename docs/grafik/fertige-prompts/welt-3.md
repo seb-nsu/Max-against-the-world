@@ -106,3 +106,175 @@ Concept art for a 2D point-and-click adventure game in the style of classic 1990
 ```text
 Concept art for a 2D point-and-click adventure game in the style of classic 1990s adventure games, front view of the room with gentle one-point perspective, camera at the eye level of a standing person looking straight at the back wall, back wall parallel to the picture plane, vanishing point in the center at about 40 percent of the image height, side walls at most as narrow angled strips at the image edges, open walkable floor with gentle depth across the lower third to half of the image kept free of objects except at the left and right edges, wide shot from further back so the room feels spacious: a standing adult at the front edge would be about 52 percent of the image height, so doors and tall cupboards reach only about 50 percent of the image height, chairs about 25 percent and tables about 22 percent, no top-down, bird's-eye or strong three-quarter view, no fisheye, every object drawn exactly as described and nothing added, no faces or robot features on objects, small loose objects that can be picked up left out, book spines, calendars, posters and labels without any letters or numbers, light from the upper left with soft shadows to the lower right, humorous and whimsical, warm hand-painted look, 16:9, no text, no letters, no logos. Effect overlay: the same scene redrawn only as glowing green wireframe outlines on pure black, same framing, every hotspot outlined and tagged with a small blank rectangular label, faint scanlines, the labels stay blank, no letters. overly clean daytime city palette with a faint green tint, flat perfect blue sky, even shadowless-looking light, no dirt anywhere, slightly too symmetrical.
 ```
+
+# Figuren
+
+Je Figur den Block in Gemini kopieren und Max' Konzeptblatt als Stilvorlage anhängen. Gebraucht
+wird nur die Seitenansicht nach rechts; Gehen und Reden entstehen per Code (`tools/figur.py`).
+
+## M.U.T.T.I.
+
+```text
+Character concept sheet in exactly the same style as the attached character sheet of the boy Max: same line weight, same flat cel shading, same light from upper left, plain light grey background, no text, no ground shadow. Exactly one character, full body, strict side view facing right, standing on a flat baseline, legs clearly visible. M.U.T.T.I., a huge AI machine about 180 percent of the boy Max's height hanging from the ceiling: a giant white kitchen stand mixer mounted upside down on a thick ceiling arm. One round lens eye glowing soft orange in the mixer head, two pink hair-curler-shaped antennas on top, a floral apron pattern painted on the white casing, a steel whisk attachment as a chin. Strict but caring look, facing right. Second version: eye dark, antennas drooping, sunk a little lower. No robotic arm body, no yellow eye, no human face.
+```
+
+## Morphäus
+
+```text
+Character concept sheet in exactly the same style as the attached character sheet of the boy Max: same line weight, same flat cel shading, same light from upper left, plain light grey background, no text, no ground shadow. Exactly one character, full body, strict side view facing right, standing on a flat baseline, legs clearly visible. Morphäus, a calm tall man about 106 percent of the boy Max's height, short red hair, neat red beard, reading glasses pushed up on his forehead. Chunky oatmeal knitted cardigan over a dark green turtleneck, brown corduroy trousers, brown shoes. A small cardboard sign with blank lines in his right hand. Calm neutral standing pose, wise slight smile, facing right. Second pose: shrugging apologetically. No leather coat, no small dark sunglasses, not bald.
+```
+
+## Orakel-Oma
+
+```text
+Character concept sheet in exactly the same style as the attached character sheet of the boy Max: same line weight, same flat cel shading, same light from upper left, plain light grey background, no text, no ground shadow. Exactly one character, full body, strict side view facing right, standing on a flat baseline, legs clearly visible. Orakel-Oma, a cheerful plump short old lady about as tall as the boy Max, grey curls, rosy cheeks, knowing smile. Flowery light blue dress, white apron, fluffy pink slippers, red checkered oven mitts on both hands. Holding a baking tray of round golden cookies in front of her. Neutral standing pose, facing right.
+```
+
+## Agent Schmidt
+
+```text
+Character concept sheet in exactly the same style as the attached character sheet of the boy Max: same line weight, same flat cel shading, same light from upper left, plain light grey background, no text, no ground shadow. Exactly one character, full body, strict side view facing right, standing on a flat baseline, legs clearly visible. Agent Schmidt, a stiff upright man about 106 percent of the boy Max's height, neat blond flat-top haircut, rectangular black sunglasses, thin pressed lips. Brown corduroy suit, white shirt, red bow tie, fuzzy pink slippers instead of shoes, the left slipper slightly askew. A softly glowing green translucent file folder under his left arm. Neutral standing pose, facing right. Second version: the same man without sunglasses and without the folder, small uncertain eyes, shoulders sunk. No black suit, no earpiece, no necktie.
+```
+
+## Schmidt-Klon
+
+```text
+Character concept sheet in exactly the same style as the attached character sheet of the boy Max: same line weight, same flat cel shading, same light from upper left, plain light grey background, no text, no ground shadow. Exactly one character, full body, strict side view facing right, standing on a flat baseline, legs clearly visible. The same stiff man about 106 percent of the boy Max's height, blond flat-top, rectangular black sunglasses, brown corduroy suit, red bow tie and fuzzy pink slippers, both slippers straight, holding a plain white coffee mug instead of a folder, facing right.
+```
+
+## Roboter-Hausmeister
+
+```text
+Character concept sheet in exactly the same style as the attached character sheet of the boy Max: same line weight, same flat cel shading, same light from upper left, plain light grey background, no text, no ground shadow. Exactly one character, full body, strict side view facing right, standing on a flat baseline, legs clearly visible. Hausmeister Modell 08/15, a bulky boxy retro robot about 104 percent of the boy Max's height, dented light grey metal body, square head with one round yellow eye light and a small speaker grille mouth. Faded blue janitor overalls over the metal body, a small empty oil can in the chest pocket, a blank name plate on the chest. A mop in its right hand. Polite slight bow, facing right. No red eye, no metal skull face, no leather jacket, no sunglasses.
+```
+
+## Detektiv Deckert
+
+```text
+Character concept sheet in exactly the same style as the attached character sheet of the boy Max: same line weight, same flat cel shading, same light from upper left, plain light grey background, no text, no ground shadow. Exactly one character, full body, strict side view facing right, standing on a flat baseline, legs clearly visible. Detektiv Deckert, a weary middle-aged detective about 106 percent of the boy Max's height, stubbly chin, tired droopy eyes. Long beige trench coat, grey wide-brimmed hat with rain dripping from the brim, dark trousers. A small notepad in his left hand, a pencil-sized flashlight in his right. Neutral standing pose, testing stare, facing right. No gun, no dark long coat with high collar, not a likeness of any actor.
+```
+
+## Herr Vier
+
+```text
+Character concept sheet in exactly the same style as the attached character sheet of the boy Max: same line weight, same flat cel shading, same light from upper left, plain light grey background, no text, no ground shadow. Exactly one character, full body, strict side view facing right, standing on a flat baseline, legs clearly visible. Herr Vier, a short stocky serious noodle cook about as tall as the boy Max, black hair under a white cook's cap, small black moustache. White cook's jacket, white apron, white gloves with exactly four fingers each, clearly visible. A big ladle in his right hand. Standing upright, serious face, facing right.
+```
+
+## Kabel-Kalle
+
+```text
+Character concept sheet in exactly the same style as the attached character sheet of the boy Max: same line weight, same flat cel shading, same light from upper left, plain light grey background, no text, no ground shadow. Exactly one character, full body, strict side view facing right, standing on a flat baseline, legs clearly visible. Kabel-Kalle, a skinny cheerful tech nerd about 104 percent of the boy Max's height, thick round glasses, messy black hair, a headset with a microphone. Mustard-yellow work vest over a striped shirt, several colorful cables wrapped around his neck like scarves, grey cargo trousers, sneakers. A screwdriver clamped in his mouth, a battered laptop under his left arm. Grinning, facing right.
+```
+
+## Bernd
+
+```text
+Character concept sheet in exactly the same style as the attached character sheet of the boy Max: same line weight, same flat cel shading, same light from upper left, plain light grey background, no text, no ground shadow. Exactly one character, full body, strict side view facing right, standing on a flat baseline, legs clearly visible. Bernd, a grey metal cube about 29 percent of the boy Max's height with simple panel seams, a pair of big googly eyes and a yellow smiley face sticker on the front, floating two pixels above the ground with a small shadow below, slightly sulky look, facing right. No hearts, no pink, no round panels.
+```
+
+## Rebellin
+
+```text
+Character concept sheet in exactly the same style as the attached character sheet of the boy Max: same line weight, same flat cel shading, same light from upper left, plain light grey background, no text, no ground shadow. Exactly one character, full body, strict side view facing right, standing on a flat baseline, legs clearly visible. A scruffy resistance woman about 104 percent of the boy Max's height, short spiky purple hair, black sunglasses. Black leather jacket with colorful square patches, grey cargo trousers, heavy boots. Eating noodles from a paper carton with chopsticks. Neutral standing pose, facing right.
+```
+
+## Rebell
+
+```text
+Character concept sheet in exactly the same style as the attached character sheet of the boy Max: same line weight, same flat cel shading, same light from upper left, plain light grey background, no text, no ground shadow. Exactly one character, full body, strict side view facing right, standing on a flat baseline, legs clearly visible. A scruffy resistance man about 106 percent of the boy Max's height, red knitted beanie, black sunglasses, short brown beard. Black leather jacket with colorful square patches, a toolbelt with wrenches, dark jeans, boots. Holding a noodle carton. Neutral standing pose, facing right.
+```
+
+## Piepsi
+
+```text
+Character concept sheet in exactly the same style as the attached character sheet of the boy Max: same line weight, same flat cel shading, same light from upper left, plain light grey background, no text, no ground shadow. Exactly one character, full body, strict side view facing right, standing on a flat baseline, legs clearly visible. Piepsi, a small round cleaning robot about 32 percent of the boy Max's height shaped like a dented white bucket on three little wheels, one big round blue lens eye, a tiny antenna with a red tip, a crumpled black bowler hat on top, cheeky look, facing right. Second version, same size: rusty brown all over, eye dark, hat squashed, slumped to one side.
+```
+
+## Opa als Hologramm
+
+```text
+Character concept sheet in exactly the same style as the attached character sheet of the boy Max: same line weight, same flat cel shading, same light from upper left, plain light grey background, no text, no ground shadow. Exactly one character, full body, strict side view facing right, standing on a flat baseline, legs clearly visible. A tiny translucent blue hologram about 43 percent of the boy Max's height of Grandpa Konrad: tall thin old man, wild white hair standing up, round goggles pushed up on his forehead, knitted cardigan with bulging pockets, slippers. Kneeling and pleading with raised hands, horizontal scanlines, slight flicker, on top of a cone of light, facing right.
+```
+
+## Weinender Mann
+
+```text
+Character concept sheet in exactly the same style as the attached character sheet of the boy Max: same line weight, same flat cel shading, same light from upper left, plain light grey background, no text, no ground shadow. Exactly one character, full body, strict side view facing right, standing on a flat baseline, legs clearly visible. A middle-aged man about 104 percent of the boy Max's height (standing size), thinning hair, rumpled grey raincoat, sitting on a round stool, holding a bowl of noodles and crying loudly into it, tears streaming, mouth wide open, facing right.
+```
+
+## Frau mit Regenschirm
+
+```text
+Character concept sheet in exactly the same style as the attached character sheet of the boy Max: same line weight, same flat cel shading, same light from upper left, plain light grey background, no text, no ground shadow. Exactly one character, full body, strict side view facing right, standing on a flat baseline, legs clearly visible. A woman about as tall as the boy Max, black bob haircut, bright yellow raincoat, red rubber boots, holding an inside-out umbrella up and shouting at it angrily, rain dripping, facing right.
+```
+
+## Straßenmusiker
+
+```text
+Character concept sheet in exactly the same style as the attached character sheet of the boy Max: same line weight, same flat cel shading, same light from upper left, plain light grey background, no text, no ground shadow. Exactly one character, full body, strict side view facing right, standing on a flat baseline, legs clearly visible. A lonely street musician about 104 percent of the boy Max's height, long grey ponytail, eyes closed, a transparent plastic rain poncho over a dark blue jacket, playing a small synthesizer keyboard on a folding stand in front of him, rain dripping from the poncho, calm devoted face, facing right.
+```
+
+## Schwarze Katze
+
+```text
+Character concept sheet in exactly the same style as the attached character sheet of the boy Max: same line weight, same flat cel shading, same light from upper left, plain light grey background, no text, no ground shadow. Exactly one character, full body, strict side view facing right, standing on a flat baseline, legs clearly visible. A sleek pure black cat about 25 percent of the boy Max's height, slim body, yellow-green eyes, no collar, walking calmly in profile with its tail straight up, facing right. Clearly different from Pixel: smaller, slim, all black, no stripes, no collar (bleibt schwarz).
+```
+
+## Max als Ente
+
+```text
+Character concept sheet in exactly the same style as the attached character sheet of the boy Max: same line weight, same flat cel shading, same light from upper left, plain light grey background, no text, no ground shadow. Exactly one character, full body, strict side view facing right, standing on a flat baseline, legs clearly visible. Max as a duck: a yellow duck about 53 percent of the boy Max's height wearing a tiny oversized slate blue-grey hoodie (#3a4466) with a turquoise TV print, a tuft of messy dark brown hair over one eye, tiny red sneakers on its webbed feet, confused look, facing right.
+```
+
+## Max in der Kapsel
+
+```text
+Character concept sheet in exactly the same style as the attached character sheet of the boy Max: same line weight, same flat cel shading, same light from upper left, plain light grey background, no text, no ground shadow. Exactly one character, full body, strict side view facing right, standing on a flat baseline, legs clearly visible. Max lying asleep on his back inside a sleeping pod with a glass lid, about 236 pixels wide, hoodie and sneakers exactly as in the Steckbrief, slightly drooling smile, three colored cables plugged into the side of the pod, side view, head to the left. Second version: the glass lid lifted, Max sitting up and blinking.
+```
+
+# Gegenstände
+
+Je Sammelbild den Block komplett in Gemini kopieren, keine Skizze anhängen. Umrechnen mit
+`tools/figur.py` (Endesga-Palette), Ausschneiden je Zelle.
+
+## Verwandlung (2×4)
+
+```text
+Pixel art item sheet, grid exactly as given in the motif, items in reading order left to right and top to bottom, each item centered in its own cell at the same scale, about 48x48 pixels each, slight front-side view, no overlap between cells, dark colored outline (not pure black), light from upper left, plain transparent background, no text, letters or numbers on any item. 2x4 grid, each simulation item directly left of its reality form, same scale: a cream recipe card with neat blank handwriting lines \| a golden fortune cookie with a white paper slip sticking out; a glowing green digital file icon \| a thick brown paper folder with a metal clip and a blank red round stamp mark; a glowing green key built from code symbols \| a white plastic key card with a magnetic stripe; a small brown paper cookie bag, open at the top, full of round pale cinnamon cookies \| the same paper bag full of bone-shaped dog biscuits.
+```
+
+## Kekse-Zustände (1×2)
+
+```text
+Pixel art item sheet, grid exactly as given in the motif, items in reading order left to right and top to bottom, each item centered in its own cell at the same scale, about 48x48 pixels each, slight front-side view, no overlap between cells, dark colored outline (not pure black), light from upper left, plain transparent background, no text, letters or numbers on any item. 1x2 grid, same small brown paper cookie bag both times: the bag with round cookies, pale, dull and dry; the same bag with golden oven-warm cookies and a little steam.
+```
+
+## Unterstadt (2×3)
+
+```text
+Pixel art item sheet, grid exactly as given in the motif, items in reading order left to right and top to bottom, each item centered in its own cell at the same scale, about 48x48 pixels each, slight front-side view, no overlap between cells, dark colored outline (not pure black), light from upper left, plain transparent background, no text, letters or numbers on any item. 2x3 grid, same scale: a small flat round red pharmacy tin with a green cross on the lid, open, one shiny red lozenge inside; the same tin in blue with one blue lozenge; a plain white office coffee mug; a torn phone book page with blank columns; a small paper slip with three stripes, red with circle, green with triangle, yellow with square; a laminated sheet with a table of cat paw symbols.
+```
+
+## Labor (1×5)
+
+```text
+Pixel art item sheet, grid exactly as given in the motif, items in reading order left to right and top to bottom, each item centered in its own cell at the same scale, about 48x48 pixels each, slight front-side view, no overlap between cells, dark colored outline (not pure black), light from upper left, plain transparent background, no text, letters or numbers on any item. 1x5 grid, same scale: a white handheld science gadget with an orange tip and a small red empty-battery light; a yellow rubber chicken; the same yellow rubber chicken with a faint red glow around it; an elongated orange energy cell shaped like an oversized battery, glowing; the same cell dark grey and covered in frost.
+```
+
+## Omas Sparschwein (1×3, Szenen-Sprites für Rätsel 4, kein Inventar)
+
+```text
+Pixel art item sheet, grid exactly as given in the motif, items in reading order left to right and top to bottom, each item centered in its own cell at the same scale, about 48x48 pixels each, slight front-side view, no overlap between cells, dark colored outline (not pure black), light from upper left, plain transparent background, no text, letters or numbers on any item. 1x3 grid: a blue ceramic piggy bank with a white flower pattern and a coin slot; a small rolled recipe slip tied with string; a small heap of blue ceramic shards.
+```
+
+## Locher (1×2, Szenen-Sprites für das Zeitlupen-Ausweichen im Büroturm, kein Inventar)
+
+```text
+Pixel art item sheet, grid exactly as given in the motif, items in reading order left to right and top to bottom, each item centered in its own cell at the same scale, about 48x48 pixels each, slight front-side view, no overlap between cells, dark colored outline (not pure black), light from upper left, plain transparent background, no text, letters or numbers on any item. 1x2 grid: a grey metal office hole punch, side view; a small puff of round white paper confetti dots.
+```
+
+## Deko Welt 3 (3×3)
+
+```text
+Pixel art item sheet, grid exactly as given in the motif, items in reading order left to right and top to bottom, each item centered in its own cell at the same scale, about 48x48 pixels each, slight front-side view, no overlap between cells, dark colored outline (not pure black), light from upper left, plain transparent background, no text, letters or numbers on any item. 3x3 grid, same scale: a perfectly straight silver fork; a stack of greasy pizza boxes; a cardboard cake with a painted candle; a corkboard with pinned charts; a white paper origami unicorn; a towel on a wall hook; a small synthesizer keyboard on a folding stand; a bulky old mainframe cabinet with two tape reels and a round yellow lamp; a wooden cuckoo clock with its little door open and a small bird.
+```

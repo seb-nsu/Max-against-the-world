@@ -14,6 +14,60 @@ extends PopochiuCharacter
 
 
 
+func _ready() -> void:
+	super()
+	if not Engine.is_editor_hint():
+		grafik_laden()
+
+
+## Echte Grafik statt Platzhalter: gibt es res://grafik/figuren/<id>.png samt
+## res://daten/figuren/<id>.json (beides aus tools/figur.py paket), wird das Sprite-Sheet gesetzt und
+## je Bewegung (idle, walk, talk …) eine Animation angelegt. Die Bilder schauen nach rechts; nach
+## links spiegelt Popochiu. Der Fußpunkt liegt unten in der Bildmitte.
+func grafik_laden() -> bool:
+	var id := objekt_id()
+	var bild := "res://grafik/figuren/%s.png" % id
+	var daten_pfad := "res://daten/figuren/%s.json" % id
+	if not ResourceLoader.exists(bild) or not FileAccess.file_exists(daten_pfad):
+		return false
+	var daten: Variant = JSON.parse_string(FileAccess.get_file_as_string(daten_pfad))
+	if typeof(daten) != TYPE_DICTIONARY:
+		push_error("Figur %s: %s nicht lesbar" % [id, daten_pfad])
+		return false
+	var sprite: Sprite2D = get_node("Sprite2D")
+	var anims: Dictionary = daten.animationen
+	var gesamt := 0
+	for a: Dictionary in anims.values():
+		gesamt = maxi(gesamt, int(a.von) + int(a.bilder))
+	sprite.texture = load(bild)
+	sprite.hframes = gesamt
+	sprite.vframes = 1
+	sprite.frame = 0
+	sprite.centered = true
+	sprite.offset = Vector2(0, -float(daten.bild[1]) / 2.0)
+	sprite.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
+	flips_when = FlipsWhen.LOOKING_LEFT
+	var lib := AnimationLibrary.new()
+	for name: String in anims:
+		var a: Dictionary = anims[name]
+		var anim := Animation.new()
+		var spur := anim.add_track(Animation.TYPE_VALUE)
+		anim.track_set_path(spur, "Sprite2D:frame")
+		anim.value_track_set_update_mode(spur, Animation.UPDATE_DISCRETE)
+		var dauer := float(a.ms) / 1000.0
+		for i in int(a.bilder):
+			anim.track_insert_key(spur, i * dauer, int(a.von) + i)
+		anim.length = int(a.bilder) * dauer
+		anim.loop_mode = Animation.LOOP_LINEAR if a.get("schleife", true) else Animation.LOOP_NONE
+		lib.add_animation(name, anim)
+	var player: AnimationPlayer = get_node("AnimationPlayer")
+	if player.has_animation_library(""):
+		player.remove_animation_library("")
+	player.add_animation_library("", lib)
+	_play_idle()
+	return true
+
+
 func bauplan() -> Dictionary:
 	return Bauplan.figur(script_name)
 

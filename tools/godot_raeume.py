@@ -54,6 +54,15 @@ PLATZHALTER = GAME / "grafik" / "platzhalter"
 TEXTE = GAME / "lokalisierung" / "texte.csv"
 LAYOUT = ROOT / "tools" / "layout"
 RES_PLATZHALTER = "res://grafik/platzhalter/"
+ECHT_GEGENSTAENDE = GAME / "grafik" / "gegenstaende"   # Inventar-Icons aus tools/figur.py gegenstaende
+ECHT_PROPS = GAME / "grafik" / "props"                 # Szenen-Sprites der Props, gleiche Quelle
+
+
+def echt_oder(ordner, datei, platzhalter):
+    """res://-Pfad der echten Grafik, wenn es sie gibt, sonst der Platzhalter."""
+    if (ordner / datei).exists():
+        return f"res://grafik/{ordner.name}/{datei}"
+    return platzhalter
 
 UMLAUTE = str.maketrans({"ä": "ae", "ö": "oe", "ü": "ue", "Ä": "Ae", "Ö": "Oe", "Ü": "Ue", "ß": "ss"})
 BEDINGUNG_RE = re.compile(r"\b(vor|nach)\s+([PRF]\d+[a-d]?)\b")
@@ -323,7 +332,7 @@ def baue(abschnitt):
                 "id": pid, "script_name": pascal(pid),
                 "name_key": name_key(pid, gegenstaende.get(pid, {}).get("name", pid)),
                 "rect": p["rect"], "gehe": p.get("gehe", [0, 0]),
-                "textur": f"{RES_PLATZHALTER}prop_{pid}.png",
+                "textur": echt_oder(ECHT_PROPS, f"{pid}.png", f"{RES_PLATZHALTER}prop_{pid}.png"),
                 "gegenstand": item, "ansehen": [], "nehmen": None,
             })
         for hid, h in (lay.get("hotspots") or {}).items():
@@ -628,8 +637,12 @@ def baue(abschnitt):
             "id": g["id"], "script_name": pascal(g["id"]), "name_key": name_key(g["id"], g["name"]),
             "zustaende": g.get("zustaende", []), "reist_mit": g.get("reist_mit", False),
             "nahansicht": g.get("nahansicht", False),
-            "icon": f"{RES_PLATZHALTER}gegenstand_{g['id']}.png",
-            "icons": {s: f"{RES_PLATZHALTER}gegenstand_{g['id']}_{slug(s)}.png" for s in g.get("zustaende", [])[1:]},
+            # Erster Zustand der Welt: eigenes Bild (thunfischdose_offen in Welt 1), sonst das Grundbild
+            "icon": echt_oder(ECHT_GEGENSTAENDE, f"{g['id']}_{slug(g['zustaende'][0])}.png" if g.get("zustaende") else "-",
+                              echt_oder(ECHT_GEGENSTAENDE, f"{g['id']}.png", f"{RES_PLATZHALTER}gegenstand_{g['id']}.png")),
+            "icons": {s: echt_oder(ECHT_GEGENSTAENDE, f"{g['id']}_{slug(s)}.png",
+                                   f"{RES_PLATZHALTER}gegenstand_{g['id']}_{slug(s)}.png")
+                      for s in g.get("zustaende", [])[1:]},
             "ansehen": d.get("ansehen", []),
             "benutzen": d.get("benutzen", []),
             "kombinieren": d.get("kombinieren", []),
@@ -888,6 +901,8 @@ def platzhalter(plan):
 
     for g in plan["gegenstaende"]:
         for zustand, pfad in [(None, g["icon"])] + list(g["icons"].items()):
+            if not pfad.startswith(RES_PLATZHALTER):
+                continue   # echte Grafik vorhanden
             img = Image.new("RGBA", (24, 24), farbe("#3e8948"))
             d = ImageDraw.Draw(img)
             d.rectangle([0, 0, 23, 23], outline=(38, 43, 68, 255))

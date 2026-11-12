@@ -6921,9 +6921,9 @@
    ],
    "reist_mit": false,
    "nahansicht": false,
-   "icon": "res://grafik/platzhalter/gegenstand_billig_fernbedienung.png",
+   "icon": "res://grafik/gegenstaende/billig_fernbedienung_eine_taste.png",
    "icons": {
-    "sechs Tasten": "res://grafik/platzhalter/gegenstand_billig_fernbedienung_sechs_tasten.png"
+    "sechs Tasten": "res://grafik/gegenstaende/billig_fernbedienung_sechs_tasten.png"
    },
    "ansehen": [],
    "benutzen": [],
@@ -7290,7 +7290,7 @@
    ],
    "reist_mit": true,
    "nahansicht": false,
-   "icon": "res://grafik/platzhalter/gegenstand_goldene_fernbedienung.png",
+   "icon": "res://grafik/gegenstaende/goldene_fernbedienung.png",
    "icons": {},
    "ansehen": [
     {

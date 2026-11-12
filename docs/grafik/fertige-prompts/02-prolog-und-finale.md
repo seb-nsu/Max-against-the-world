@@ -63,3 +63,177 @@ Concept art for a 2D point-and-click adventure game in the style of classic 1990
 ```text
 Concept art for a 2D point-and-click adventure game in the style of classic 1990s adventure games, outdoor scene seen straight on like a wide stage, camera at the eye level of a standing person, horizon at about 40 percent of the image height, open walkable ground with gentle depth across the lower third kept free of objects except at the left and right edges, wide shot: a standing adult at the front edge would be about 52 percent of the image height, no top-down, bird's-eye or strong three-quarter view, no fisheye, every object drawn exactly as described and nothing added, signs and labels without any letters or numbers, light from the upper left with soft shadows to the lower right, humorous and whimsical. Front of a small neighborhood supermarket late in the evening, shopfront seen straight on and parallel to the picture plane, the sidewalk as open floor with gentle depth in the lower third. Left: a row of red shopping carts. Center: automatic glass sliding doors, behind them a brightly lit aisle leading to a glowing milk fridge at the back. Right: a bicycle rack and a flower stand with buckets of tulips. Free sidewalk space left of the door for a store display. Blank sign above the door. Dark blue night sky with a few stars above the roof, a street lamp, warm light spilling out onto the sidewalk. warm palette of dusty browns, orange lamp light and pale yellow, cozy and cluttered. Use the attached sketch only for the position and size of objects and exits, not for style, colors or text. Leave the orange marked spots empty.
 ```
+
+# Figuren
+
+Je Figur den Block in Gemini kopieren und Max' Konzeptblatt als Stilvorlage anhängen. Gebraucht
+wird nur die Seitenansicht nach rechts; Gehen und Reden entstehen per Code (`tools/figur.py`).
+
+## Max
+
+```text
+Character concept sheet in exactly the same style as the attached character sheet of the boy Max: same line weight, same flat cel shading, same light from upper left, plain light grey background, no text, no ground shadow. Exactly one character, full body, strict side view facing right, standing on a flat baseline, legs clearly visible. \[Steckbrief Max aus `00-stil-und-werkzeuge.md` einsetzen\] Standing relaxed with both hands in his hoodie pocket, weight on one leg, bored half-smile, facing right.
+```
+
+## Pixel
+
+```text
+Character concept sheet in exactly the same style as the attached character sheet of the boy Max: same line weight, same flat cel shading, same light from upper left, plain light grey background, no text, no ground shadow. Exactly one character, full body, strict side view facing right, standing on a flat baseline, legs clearly visible. \[Steckbrief Pixel aus `00-stil-und-werkzeuge.md` einsetzen\] Sitting upright, chin raised, tail wrapped around his paws, looking bored to the right.
+```
+
+## Pixel, schlafend
+
+```text
+Character concept sheet in exactly the same style as the attached character sheet of the boy Max: same line weight, same flat cel shading, same light from upper left, plain light grey background, no text, no ground shadow. Exactly one character, full body, strict side view facing right, standing on a flat baseline, legs clearly visible. \[Steckbrief Pixel aus `00-stil-und-werkzeuge.md` einsetzen\] Curled up asleep in side view facing right, about 25 pixels high and 48 long, one paw over his nose, collar light off, flat underside so he can be placed on the extension cord of the background, no cord in the sprite.
+```
+
+## Opa Konrad
+
+```text
+Character concept sheet in exactly the same style as the attached character sheet of the boy Max: same line weight, same flat cel shading, same light from upper left, plain light grey background, no text, no ground shadow. Exactly one character, full body, strict side view facing right, standing on a flat baseline, legs clearly visible. Grandpa Konrad, about 106 percent of the boy Max's height, tall, thin and slightly stooped. Wild white hair (#ffffff) standing up, bushy white eyebrows, round brass goggles (#feae34) pushed up on his forehead, a screwdriver behind his ear. Brown knitted cardigan (#733e39) with many bulging tool pockets, beige trousers (#ead4aa), red-and-white checkered slippers (#e43b44). No lab coat. Standing with one finger raised, enthusiastic grin, facing left.
+```
+
+## Opa auf dem Sofa
+
+```text
+Character concept sheet in exactly the same style as the attached character sheet of the boy Max: same line weight, same flat cel shading, same light from upper left, plain light grey background, no text, no ground shadow. Exactly one character, full body, strict side view facing right, standing on a flat baseline, legs clearly visible. Grandpa Konrad, wild white hair, round brass goggles on his forehead, brown knitted cardigan with tool pockets, beige trousers, red-and-white checkered slippers, slumped on a brown corduroy sofa in side view facing right, watching TV, a cup of tea in his right hand, slippers up on the coffee table, surprised raised eyebrows.
+```
+
+## Oma
+
+```text
+Character concept sheet in exactly the same style as the attached character sheet of the boy Max: same line weight, same flat cel shading, same light from upper left, plain light grey background, no text, no ground shadow. Exactly one character, full body, strict side view facing right, standing on a flat baseline, legs clearly visible. Grandma, about as tall as the boy Max, the shortest adult, small and sturdy. Grey hair (#8b9bb4) in a tight bun, round glasses, rosy cheeks. Purple cardigan (#68386c) over a dark green dress (#265c42), black handbag on her left arm, sensible brown shoes (#733e39). Standing straight, eyebrows raised, a stern but loving look, facing right.
+```
+
+## Mutter
+
+```text
+Character concept sheet in exactly the same style as the attached character sheet of the boy Max: same line weight, same flat cel shading, same light from upper left, plain light grey background, no text, no ground shadow. Exactly one character, full body, strict side view facing right, standing on a flat baseline, legs clearly visible. Max's mother, about 104 percent of the boy Max's height, slim, brown ponytail, tired but friendly eyes. Open dark blue jacket (#262b44) over a green sweater (#3e8948), blue jeans (#124e89), white sneakers. Just home from a late shift, house keys in her right hand, neutral standing pose, facing left.
+```
+
+## Max mit Drachenei
+
+```text
+Character concept sheet in exactly the same style as the attached character sheet of the boy Max: same line weight, same flat cel shading, same light from upper left, plain light grey background, no text, no ground shadow. Exactly one character, full body, strict side view facing right, standing on a flat baseline, legs clearly visible. \[Steckbrief Max aus `00-stil-und-werkzeuge.md` einsetzen, ohne „hands in his hoodie pocket“\] Standing slightly slouched, holding a large golden scaly dragon egg about 29 percent of the boy Max's height in both arms against his chest, tired but a little proud look, facing right.
+```
+
+## Max mit Pharaonenkorn
+
+```text
+Character concept sheet in exactly the same style as the attached character sheet of the boy Max: same line weight, same flat cel shading, same light from upper left, plain light grey background, no text, no ground shadow. Exactly one character, full body, strict side view facing right, standing on a flat baseline, legs clearly visible. \[Steckbrief Max aus `00-stil-und-werkzeuge.md` einsetzen, ohne „hands in his hoodie pocket“\] Standing, a bulging golden grain sack with a blank round seal slung over his right shoulder, held with both hands, a little sand trickling from his sneakers, facing right.
+```
+
+## Max mit Energiezelle
+
+```text
+Character concept sheet in exactly the same style as the attached character sheet of the boy Max: same line weight, same flat cel shading, same light from upper left, plain light grey background, no text, no ground shadow. Exactly one character, full body, strict side view facing right, standing on a flat baseline, legs clearly visible. \[Steckbrief Max aus `00-stil-und-werkzeuge.md` einsetzen, ohne „hands in his hoodie pocket“\] Standing more upright, hoodie and hair still wet with a few drips, holding a glowing orange energy cell the size of a thermos flask in both hands at chest height, facing right.
+```
+
+## Max mit Goldener Fernbedienung
+
+```text
+Character concept sheet in exactly the same style as the attached character sheet of the boy Max: same line weight, same flat cel shading, same light from upper left, plain light grey background, no text, no ground shadow. Exactly one character, full body, strict side view facing right, standing on a flat baseline, legs clearly visible. Aufrechte Fassung aus `01-max-und-pixel.md` als Referenz: Max standing upright, shoulders back, a gleaming golden remote with jewel buttons in his right hand held at hip height, left hand loose, calm look, facing right.
+```
+
+## Opa mit Zündkapsel
+
+```text
+Character concept sheet in exactly the same style as the attached character sheet of the boy Max: same line weight, same flat cel shading, same light from upper left, plain light grey background, no text, no ground shadow. Exactly one character, full body, strict side view facing right, standing on a flat baseline, legs clearly visible. Grandpa Konrad holding a worn grey TV remote high above his head in his right hand like a sword, left fist clenched, triumphant wide grin, goggles on his forehead, facing left.
+```
+
+## Oma mit Gabel
+
+```text
+Character concept sheet in exactly the same style as the attached character sheet of the boy Max: same line weight, same flat cel shading, same light from upper left, plain light grey background, no text, no ground shadow. Exactly one character, full body, strict side view facing right, standing on a flat baseline, legs clearly visible. Grandma standing straight, a small cake fork raised in her right hand with a bite of chocolate cake on it, handbag still on her left arm, one eyebrow raised, tasting with a doubtful look, facing right.
+```
+
+## Zeldina, Finale
+
+```text
+Character concept sheet in exactly the same style as the attached character sheet of the boy Max: same line weight, same flat cel shading, same light from upper left, plain light grey background, no text, no ground shadow. Exactly one character, full body, strict side view facing right, standing on a flat baseline, legs clearly visible. Zeldina: young athletic princess, short brown hair, freckles, a small golden crown tied on with string, rust-orange travel cape over a brown leather vest and a cream shirt, dark brown trousers, sturdy boots, no moving box; a black crooked wand in her right hand, standing upright, facing right, determined grin.
+```
+
+## Pixel auf dem Schrank
+
+```text
+Character concept sheet in exactly the same style as the attached character sheet of the boy Max: same line weight, same flat cel shading, same light from upper left, plain light grey background, no text, no ground shadow. Exactly one character, full body, strict side view facing right, standing on a flat baseline, legs clearly visible. \[Steckbrief Pixel aus `00-stil-und-werkzeuge.md` einsetzen\] Lying stretched out on his belly in side view facing right, chin on his front paws, one front paw and the fluffy tail dangling down over an edge, smug half-lidded eyes, flat underside so he can be placed on top of the living room cupboard.
+```
+
+# Gegenstände
+
+Je Sammelbild den Block komplett in Gemini kopieren, keine Skizze anhängen. Umrechnen mit
+`tools/figur.py` (Endesga-Palette), Ausschneiden je Zelle.
+
+## Prolog (1×7)
+
+```text
+Pixel art item sheet, grid exactly as given in the motif, items in reading order left to right and top to bottom, each item centered in its own cell at the same scale, about 48x48 pixels each, slight front-side view, no overlap between cells, dark colored outline (not pure black), light from upper left, plain transparent background, no text, letters or numbers on any item. 1x7 grid: a manual crank can opener with red plastic handles; a plain silver wire coat hanger; the same coat hanger bent into a V-shaped TV antenna like rabbit ears; a vintage brown leather travel bag with three front pockets and brass buckles; a small folded paper note with blank lines; a wide, low white porcelain teacup with a small blue flower pattern on a matching saucer, half full of cold tea; the same teacup on its saucer, empty of tea and filled with pink tuna like a cat bowl.
+```
+
+## Gegenwart (2×4)
+
+```text
+Pixel art item sheet, grid exactly as given in the motif, items in reading order left to right and top to bottom, each item centered in its own cell at the same scale, about 48x48 pixels each, slight front-side view, no overlap between cells, dark colored outline (not pure black), light from upper left, plain transparent background, no text, letters or numbers on any item. 2x4 grid: a plain white hen's egg; a small paper flour sack tied at the top with a blank round seal; a single finger-sized AA battery glowing soft orange; a crumpled handwritten note with blank lines; a small folded note with one long blank line; a glass milk bottle with a red cap; a slice of chocolate birthday cake with a candle; a small brown paper cookie bag, folded over at the top, with bone-shaped dog biscuits peeking out.
+```
+
+## Deko Opas Haus (3×4)
+
+```text
+Pixel art item sheet, grid exactly as given in the motif, items in reading order left to right and top to bottom, each item centered in its own cell at the same scale, about 48x48 pixels each, slight front-side view, no overlap between cells, dark colored outline (not pure black), light from upper left, plain transparent background, no text, letters or numbers on any item. 3x4 grid, scene props at the same scale as a 189-pixel tall adult character, not inventory icons: a stuffed fish wearing round diving goggles; a cardboard box with half-closed flaps and a few broken TV remotes poking out; the same box with flaps wide open and many remotes sticking up like hungry chicks; a pinned travel poster showing a pyramid on the left half and a neon city skyline on the right half, blank caption strip; a chrome toaster with a small propeller on top; a thick old cookbook lying closed with a folded page corner and a blank cover; the same cookbook lying open at the dog-eared page, one blank line underlined in pencil; a small record player with a vinyl record and a blank sleeve; a framed photo of a stern old woman with grey hair in a bun and a purple cardigan; a beanie hat with a tiny propeller hanging on a wall hook; a cardboard store display with a milk bottle picture and a blank price tag; a bulky 1950s vacuum cleaner prototype with a cracked glass dome, a bent nozzle and a tuft of grey cat fur stuck in it.
+```
+
+## Zapp-O-Mat 3000
+
+**Hinweis:** GEGENSTÄNDE als Zustandsreihe, 1×7, je 128×128 (Fernseher samt Rolltisch)
+
+```text
+Pixel art item sheet, grid exactly as given in the motif, items in reading order left to right and top to bottom, each item centered in its own cell at the same scale, about 48x48 pixels each, slight front-side view, no overlap between cells, dark colored outline (not pure black), light from upper left, plain transparent background, no text, letters or numbers on any item. 1x7 grid, same object and position in every cell: an old wooden tube television, screen facing the viewer, a big round channel dial right of the screen, two empty antenna sockets on top, standing on a small wheeled wooden cart, black power cord hanging down to the left. States: screen dark; screen full of grey static snow; grey static with a bent wire coat hanger as antenna on top; the same with colorful static; a swirling colorful vortex on the screen pulling inward; two more frames of grey static with a different noise pattern for a flicker loop.
+```
+
+## Einsaug-Effekt
+
+**Hinweis:** EFFEKT, 8 Bilder, je 192×192, mittig über dem Bildschirm
+
+```text
+Pixel art visual effect sprite sheet, frames in one horizontal row, frame count and frame size as given in the motif, every frame the same size with the effect centered, transparent background, limited palette, no anti-aliasing, no text. 8 frames of 192x192: swirl of colorful light streaks spiraling into a TV screen at the center, growing stronger frame by frame, the last two frames a white flash filling most of the frame.
+```
+
+## Werkbank-Ablage
+
+**Hinweis:** GEGENSTÄNDE, 3 Zustände, je etwa 96×48
+
+```text
+Pixel art item sheet, grid exactly as given in the motif, items in reading order left to right and top to bottom, each item centered in its own cell at the same scale, about 48x48 pixels each, slight front-side view, no overlap between cells, dark colored outline (not pure black), light from upper left, plain transparent background, no text, letters or numbers on any item. 1x3 grid, the same right end of a wooden workbench top in three states side by side, same scale: a folded grey cloth with a cardboard egg carton holding one white egg, a blank strip on the carton lid; the same with a small paper flour sack tied at the top with a blank round seal next to the carton; the same with egg carton, flour sack and a finger-sized battery cell glowing soft orange.
+```
+
+## Kalenderkreis
+
+**Hinweis:** GEGENSTÄNDE, 2 Zustände, je etwa 32×32, liegt als Sprite über dem gemalten Kreis im Kalender und deckt ihn ganz ab
+
+```text
+Pixel art item sheet, grid exactly as given in the motif, items in reading order left to right and top to bottom, each item centered in its own cell at the same scale, about 48x48 pixels each, slight front-side view, no overlap between cells, dark colored outline (not pure black), light from upper left, plain transparent background, no text, letters or numbers on any item. 1x2 grid, the same small square of a paper wall calendar page with blank day cells in two states side by side, same scale: one day circled twice in thick red marker; the same day circled twice with a thick red exclamation mark next to it, pressed so hard that the paper is dented.
+```
+
+## Dachlampe
+
+**Hinweis:** GEGENSTÄNDE, 2 Zustände, je etwa 48×64, liegt als Sprite über der Lampe am Firstbalken
+
+```text
+Pixel art item sheet, grid exactly as given in the motif, items in reading order left to right and top to bottom, each item centered in its own cell at the same scale, about 48x48 pixels each, slight front-side view, no overlap between cells, dark colored outline (not pure black), light from upper left, plain transparent background, no text, letters or numbers on any item. 1x2 grid, the same bare light bulb with an enamel shade hanging on a short cord, same scale: switched off, grey glass; switched on, warm yellow bulb with a soft glow around it.
+```
+
+## Fundkiste
+
+**Hinweis:** GEGENSTÄNDE, 2 Zustände, je etwa 80×64; steht ab Rückkehr 1 auf dem freien Platz am Kistenstapel links, Aufschrift „Fundkiste“ von Hand in Aseprite; im Finale anklickbar (Omas Kekse, falls nicht eingepackt)
+
+```text
+Pixel art item sheet, grid exactly as given in the motif, items in reading order left to right and top to bottom, each item centered in its own cell at the same scale, about 48x48 pixels each, slight front-side view, no overlap between cells, dark colored outline (not pure black), light from upper left, plain transparent background, no text, letters or numbers on any item. 1x2 grid, the same open cardboard box with flaps folded outward and a blank paper label taped on the front, seen from the front at eye level, same scale: first almost empty with a single odd item at the bottom; second piled high with a jumble of small odd objects, a wooden bucket handle and a rolled paper sticking out over the rim.
+```
+
+## Werbeblock
+
+**Hinweis:** EFFEKT, 4 Bilder plus 1 Störbild, 640×360, ohne Farb-Baustein
+
+```text
+Pixel art visual effect sprite sheet, frames in one horizontal row, frame count and frame size as given in the motif, every frame the same size with the effect centered, transparent background, limited palette, no anti-aliasing, no text. Full-screen TV commercial frames, 640x360 each, cheap 1990s studio look, flat bright colors, no text: a tall glass of milk with a sparkle on a blue backdrop; a smiling black-and-white cartoon cow (not purple); a big blank price tag; a white flash. Fifth frame: the cow frame torn by horizontal glitch lines.
+```

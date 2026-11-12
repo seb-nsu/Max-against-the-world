@@ -3,10 +3,10 @@
 [ext_resource type="Script" uid="uid://cp05brgqkr8yo" path="res://game/rooms/treppenhaus/room_treppenhaus.gd" id="1_mabc3"]
 [ext_resource type="PackedScene" uid="uid://vhl6fulnwd1v" path="res://game/rooms/treppenhaus/walkable_areas/boden/walkable_area_boden.tscn" id="2_bsj5q"]
 [ext_resource type="PackedScene" uid="uid://cvr1k6y3kolhm" path="res://game/rooms/treppenhaus/props/background/prop_background.tscn" id="3_belpv"]
-[ext_resource type="Texture2D" uid="uid://bkqs8opihkuam" path="res://grafik/hintergruende/w0_bg_treppenhaus_v01.png" id="4_bsj5q"]
+[ext_resource type="Texture2D" uid="uid://d1rko8acvni24" path="res://grafik/hintergruende/w0_bg_treppenhaus_v02.png" id="4_nsdmb"]
 [ext_resource type="PackedScene" uid="uid://qkox6bl5f0d0" path="res://game/rooms/treppenhaus/props/thunfischdose/prop_thunfischdose.tscn" id="5_nsdmb"]
 [ext_resource type="PackedScene" uid="uid://gqidmiy55y42" path="res://game/rooms/treppenhaus/hotspots/hut_am_haken/hotspot_hut_am_haken.tscn" id="5_r260i"]
-[ext_resource type="Texture2D" uid="uid://8ls4c83m4nti" path="res://grafik/platzhalter/prop_thunfischdose.png" id="6_0vblo"]
+[ext_resource type="Texture2D" uid="uid://crkhvprdd3u4p" path="res://grafik/props/thunfischdose.png" id="6_nsdmb"]
 [ext_resource type="PackedScene" uid="uid://b31ll6umfhgr3" path="res://game/rooms/treppenhaus/hotspots/fenster/hotspot_fenster.tscn" id="6_uakd5"]
 [ext_resource type="PackedScene" uid="uid://4qny4vu4wprc" path="res://game/rooms/treppenhaus/hotspots/treppe/hotspot_treppe.tscn" id="7_vkxdx"]
 [ext_resource type="PackedScene" uid="uid://cr1lwyliq6gx1" path="res://game/rooms/treppenhaus/hotspots/ausgang_wohnzimmer/hotspot_ausgang_wohnzimmer.tscn" id="8_nsdmb"]
@@ -33,90 +33,95 @@ height = 360
 
 [node name="Background" parent="Props" unique_id=1908781321 instance=ExtResource("3_belpv")]
 position = Vector2(320, 180)
-texture = ExtResource("4_bsj5q")
+texture = ExtResource("4_nsdmb")
 description = "UI_RAUM_TREPPENHAUS"
 
 [node name="Thunfischdose" parent="Props" unique_id=1604922751 instance=ExtResource("5_nsdmb")]
-position = Vector2(143, 206)
-texture = ExtResource("6_0vblo")
+position = Vector2(158, 187.5)
+texture = ExtResource("6_nsdmb")
 description = "UI_OBJ_THUNFISCHDOSE"
-baseline = 8
-walk_to_point = Vector2(7, 94)
+baseline = 6
+walk_to_point = Vector2(2, 112.5)
+interaction_polygon = PackedVector2Array(-8, -6.5, 8, -6.5, 8, 6.5, -8, 6.5)
 
 [node name="Hotspots" type="Node2D" parent="." unique_id=1536147977]
 
 [node name="HutAmHaken" parent="Hotspots" unique_id=847935187 instance=ExtResource("5_r260i")]
-position = Vector2(184.5, 128)
+position = Vector2(182.5, 137)
 description = "UI_OBJ_HUT_AM_HAKEN"
-baseline = 16
-walk_to_point = Vector2(2.5, 168)
-interaction_polygon = PackedVector2Array(-13.5, -16, 13.5, -16, 13.5, 16, -13.5, 16)
+baseline = 15
+walk_to_point = Vector2(-0.5, 163)
+interaction_polygon = PackedVector2Array(-12.5, -15, 12.5, -15, 12.5, 15, -12.5, 15)
 
 [node name="Fenster" parent="Hotspots" unique_id=1255081746 instance=ExtResource("6_uakd5")]
-position = Vector2(314.5, 113)
+position = Vector2(320, 111)
 description = "UI_OBJ_FENSTER"
-baseline = 40
-walk_to_point = Vector2(-41.5, 186)
-interaction_polygon = PackedVector2Array(-26.5, -40, 26.5, -40, 26.5, 40, -26.5, 40)
+baseline = 39
+walk_to_point = Vector2(0, 179)
+interaction_polygon = PackedVector2Array(-30, -39, 30, -39, 30, 39, -30, 39)
 
 [node name="Treppe" parent="Hotspots" unique_id=1402502403 instance=ExtResource("7_vkxdx")]
-position = Vector2(460.5, 115)
+position = Vector2(475, 120)
 description = "UI_OBJ_TREPPE"
 baseline = 75
-walk_to_point = Vector2(-190.5, 167)
-interaction_polygon = PackedVector2Array(-119.5, -75, 119.5, -75, 119.5, 75, -119.5, 75)
+walk_to_point = Vector2(-205, 160)
+interaction_polygon = PackedVector2Array(-125, -75, 125, -75, 125, 75, -125, 75)
 
 [node name="AusgangWohnzimmer" parent="Hotspots" unique_id=862228977 instance=ExtResource("8_nsdmb")]
-position = Vector2(43.5, 176.5)
+position = Vector2(42.5, 177.5)
 description = "UI_RAUM_WOHNZIMMER"
-baseline = 123
-walk_to_point = Vector2(9.5, 143.5)
+baseline = 122
+walk_to_point = Vector2(2.5, 127.5)
 cursor = 9
-interaction_polygon = PackedVector2Array(-36.5, -123.5, 36.5, -123.5, 36.5, 123.5, -36.5, 123.5)
+interaction_polygon = PackedVector2Array(-32.5, -122.5, 32.5, -122.5, 32.5, 122.5, -32.5, 122.5)
 
 [node name="AusgangDachboden" parent="Hotspots" unique_id=1667614063 instance=ExtResource("9_0vblo")]
-position = Vector2(513.5, 22.5)
+position = Vector2(510, 22.5)
 description = "UI_RAUM_DACHBODEN"
 baseline = 22
-walk_to_point = Vector2(42.5, 62.5)
+walk_to_point = Vector2(82, 27.5)
 cursor = 9
-interaction_polygon = PackedVector2Array(-113.5, -22.5, 113.5, -22.5, 113.5, 22.5, -113.5, 22.5)
+interaction_polygon = PackedVector2Array(-115, -22.5, 115, -22.5, 115, 22.5, -115, 22.5)
 
 [node name="Maentel" parent="Hotspots" unique_id=1074768735 instance=ExtResource("10_uakd5")]
-position = Vector2(147, 210)
+position = Vector2(144, 173.5)
 description = "UI_OBJ_MAENTEL"
-baseline = 80
-walk_to_point = Vector2(3, 90)
+baseline = 46
+walk_to_point = Vector2(6, 126.5)
+interaction_polygon = PackedVector2Array(-34, -46.5, 34, -46.5, 34, 46.5, -34, 46.5)
 
 [node name="Regenschirm" parent="Hotspots" unique_id=340839539 instance=ExtResource("11_vkxdx")]
-position = Vector2(106.5, 248.5)
+position = Vector2(201, 172)
 description = "UI_OBJ_REGENSCHIRM"
-baseline = 41
-walk_to_point = Vector2(3.5, 51.5)
+baseline = 45
+walk_to_point = Vector2(-1, 128)
+interaction_polygon = PackedVector2Array(-9, -45, 9, -45, 9, 45, -9, 45)
 
 [node name="Deckenlampe" parent="Hotspots" unique_id=509731105 instance=ExtResource("12_nsdmb")]
-position = Vector2(224, 23)
+position = Vector2(222.5, 50)
 description = "UI_OBJ_DECKENLAMPE"
-baseline = 13
-walk_to_point = Vector2(-4, 277)
+baseline = 40
+walk_to_point = Vector2(-0.5, 250)
+interaction_polygon = PackedVector2Array(-22.5, -40, 22.5, -40, 22.5, 40, -22.5, 40)
 
 [node name="Kisten" parent="Hotspots" unique_id=866912353 instance=ExtResource("13_0vblo")]
-position = Vector2(520, 270)
+position = Vector2(512.5, 270)
 description = "UI_OBJ_KISTEN"
-baseline = 80
-walk_to_point = Vector2(-190, 50)
+baseline = 75
+walk_to_point = Vector2(-132.5, 60)
+interaction_polygon = PackedVector2Array(-107.5, -75, 107.5, -75, 107.5, 75, -107.5, 75)
 
 [node name="Regions" type="Node2D" parent="." unique_id=749996606]
 
 [node name="Markers" type="Node2D" parent="." unique_id=1984489637]
 
 [node name="Start" parent="Markers" unique_id=268551212 instance=ExtResource("10_me7ro")]
-position = Vector2(173, 320)
+position = Vector2(173, 310)
 
 [node name="VonWohnzimmer" parent="Markers" unique_id=96297152 instance=ExtResource("11_5s0sd")]
-position = Vector2(67, 323)
+position = Vector2(55, 310)
 
 [node name="VonDachboden" parent="Markers" unique_id=171942929 instance=ExtResource("12_eqpsj")]
-position = Vector2(540, 98)
+position = Vector2(560, 70)
 
 [node name="Characters" type="Node2D" parent="." unique_id=2045747567]

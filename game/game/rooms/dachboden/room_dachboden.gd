@@ -11,15 +11,15 @@ var state: Data = load("res://game/rooms/dachboden/room_dachboden.tres")
 ## Zapp-O-Mat-Bilder (Platzhalter-Sheet aus tools/godot_raeume.py)
 enum Bild { AUS, SCHNEE, ANTENNE, BUNT, WIRBEL }
 ## Pixel nach P1: auf der Werkbank (skript/prolog.md, 0360)
-const PIXEL_WERKBANK := Vector2(160, 180)
-const PIXEL_KABEL := Vector2(313, 237)
+const PIXEL_WERKBANK := Vector2(175, 195)
+const PIXEL_KABEL := Vector2(262, 272)
 ## Hintergrund je Zwischenspiel: Prolog Nachmittag, dann später Nachmittag, früher Abend (Lampe aus),
 ## Abendrot (Lampe an). Abgeleitet mit tools/stimmung.py aus dem Grundbild.
 const LICHT := [
-	"res://grafik/hintergruende/w0_bg_dachboden_v01.png",
-	"res://grafik/hintergruende/w0_bg_dachboden_rueckkehr1_v01.png",
-	"res://grafik/hintergruende/w0_bg_dachboden_rueckkehr2_v01.png",
-	"res://grafik/hintergruende/w0_bg_dachboden_rueckkehr3_v01.png",
+	"res://grafik/hintergruende/w0_bg_dachboden_v03.png",
+	"res://grafik/hintergruende/w0_bg_dachboden_rueckkehr1_v03.png",
+	"res://grafik/hintergruende/w0_bg_dachboden_rueckkehr2_v03.png",
+	"res://grafik/hintergruende/w0_bg_dachboden_rueckkehr3_v03.png",
 ]
 
 var _erster_besuch := false
@@ -71,6 +71,26 @@ func _zustand_anwenden() -> void:
 			h.visible = Zustand.ist("FINALE")
 	if is_instance_valid(C.Pixel) and has_character("Pixel") and zwischenspiel() == 0:
 		C.Pixel.position = PIXEL_WERKBANK if Zustand.geloest("P1", "prolog") else PIXEL_KABEL
+	_pixel_ruhe()
+
+
+## Vor dem Wecken liegt Pixel eingerollt auf dem Kabel (Bewegung „schlafen“ aus grafik/figuren/pixel.png),
+## danach steht er. Ohne echte Grafik gibt es „schlafen“ nicht, dann bleibt es bei „idle“.
+func _pixel_ruhe() -> void:
+	if not is_instance_valid(C.Pixel) or not has_character("Pixel"):
+		return
+	var schlaeft := zwischenspiel() == 0 and not Zustand.geloest("P1", "prolog") and not Zustand.ist("P0_PIXEL_GEWECKT")
+	var player: AnimationPlayer = C.Pixel.get_node_or_null("AnimationPlayer")
+	var hat := player != null and player.has_animation("schlafen")
+	C.Pixel.idle_animation = "schlafen" if schlaeft and hat else "idle"
+	C.Pixel._play_idle()
+
+
+## Pixel ist eine Figur für alle Räume: beim Gehen wieder stehend, sonst schläft er im nächsten Raum weiter.
+func _on_room_exited() -> void:
+	super()
+	if is_instance_valid(C.Pixel) and C.Pixel.idle_animation != "idle":
+		C.Pixel.idle_animation = "idle"
 
 
 func bild() -> int:
@@ -132,8 +152,10 @@ func _nach_laden() -> void:
 ## Aufgerufen von Pixel (character_pixel.gd). Das Öffnen selbst (0280, 0282) macht die Dose im
 ## Inventar.
 func p1_wecken() -> void:
+	await Spiel.szene([Spiel.z("MAX", "P0_DACH_MAX_0285")])
+	Zustand.setze("P0_PIXEL_GEWECKT")
+	_pixel_ruhe()  # Pixel wacht auf und steht
 	await Spiel.szene([
-		Spiel.z("MAX", "P0_DACH_MAX_0285"),
 		Spiel.z("NAR", "P0_DACH_NAR_0290"),
 		Spiel.z("OPA", "P0_DACH_OPA_0300"),
 		Spiel.z("PIX", "P0_DACH_PIX_0310"),
@@ -146,7 +168,6 @@ func p1_wecken() -> void:
 		Spiel.z("PIX", "P0_DACH_PIX_0364"),
 		Spiel.z("OPA", "P0_DACH_OPA_0366"),
 	])
-	Zustand.setze("P0_PIXEL_GEWECKT")
 
 
 ## P1, zweiter Teil: Opas Teetasse mit Thunfisch auf Pixel (0367–0390). Die Tasse bleibt als

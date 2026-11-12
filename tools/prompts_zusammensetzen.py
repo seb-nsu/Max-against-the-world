@@ -18,6 +18,21 @@ bricht das Werkzeug mit einer Meldung ab. Zeilen ohne eigenes Konzeptbild werden
 Motive, die mit „Keine eigene Grafik“, „Wiederverwendung“ oder einem Figuren-Baustein
 („FIGUR-…“) beginnen.
 
+Gegenstände: Jede Tabelle „| Sammelbild | Motiv |“ wird zu Baustein GEGENSTÄNDE + Motiv, angehängt
+an dieselbe Datei unter „# Gegenstände“; die weltenübergreifenden aus 00-stil-und-werkzeuge.md
+landen in fertige-prompts/00-weltenuebergreifend.md. Zeilen der Tabellen „### Große Objekte…“ mit
+Baustein GEGENSTÄNDE oder EFFEKT kommen dazu. Deutsche Anmerkungen in Klammern („(Opas Teetasse)“)
+fliegen aus dem Prompt; Nahansichten (Motiv beginnt mit HINTERGRUND) bleiben draußen, sie sind
+Hintergründe. Hier hängt keine Skizze an, kein Farb-Baustein (feste Palette beim Umrechnen).
+
+Figuren: Jede Tabelle „| Figur | Baustein | Motiv |“ wird zu Baustein FIGURENBLATT + Motiv, unter
+„# Figuren“. Pixelangaben („about 101 pixels tall“) werden zu Prozent von Max' Größe (189 Pixel),
+weil Gemini Größen nur im Verhältnis zur angehängten Vorlage trifft.
+
+Vertical Slice: fertige-prompts/vertical-slice.md sammelt die Prompts für Prolog-Reste und Welt 1,
+Rätsel 1 bis 4, in der Reihenfolge der Arbeit (Liste SLICE unten): erst Räume, dann Figuren, dann
+Sammelbilder. Die Blöcke sind dieselben wie in welt-1.md.
+
 Aufruf:  python3 tools/prompts_zusammensetzen.py [--pruefen]
 """
 import re
@@ -34,7 +49,38 @@ DUESTER = ("Keller", "Kammer", "Thronsaal", "Turm")
 OHNE_SKIZZE = ("welt-3", "welt-4")
 AUSSEN_MARKE = "**Außenszenen** (Baustein KONZEPT-AUSSEN):"
 OHNE_KONZEPTBILD = ("Keine eigene Grafik", "Wiederverwendung", "FIGUR-")
+DEUTSCH = re.compile(r"[äöüßÄÖÜ„“]|\b(der|die|das|und|von|wird|steht|ist|sind|als|für|nur|auf|mit|kein|Zuordnung)\b")
 fehler = []
+MAX_PIXEL = 189
+
+# Vertical Slice, Welt 1 Rätsel 1 bis 4 (03-produktion.md, Stufe 2), in Arbeitsreihenfolge.
+# (Überschrift in welt-1.md, Anmerkung für die Liste)
+SLICE = {
+    "Räume": [
+        ("Dorfplatz", "Ankunft, Dorfbrett und Brunnen; R1 bis R4 laufen hier durch"),
+        ("Taverne", "R1 Taverne-Coup: Humbert, Gollo, Minka, Huhn"),
+        ("Zauberstab-Laden", "R2 Kochlöffel"),
+        ("Schmiede", "R3 erste Ziege"),
+        ("Troll-Brücke", "R3 und R4, Waldemar"),
+        ("Klassenzimmer", "Hoggelwarz; im Slice nur Kulisse mit Alwin und Toadi"),
+        ("Zauberwald", "R3 Rotkäppchens Lieferdienst"),
+        ("Wasserschloss (Gag-Szene)", "Gag-Szene mit Schwan und Toadi"),
+        ("Goblin-Bergwerk", "im Slice nur Kulisse mit Grimmzahn und zwei Goblins"),
+    ],
+    "Figuren": [
+        ("Wirt Humbert", "R1"), ("Gollo", "R1"), ("Wirtskatze Minka", "R1, Figurenwechsel"),
+        ("Zauberstabmacher", "R2"), ("Schmied", "R3"), ("Schmiede-Ziege", "R3"),
+        ("Rotkäppchen", "R3"), ("XXL-Ziege", "R3"), ("Pixel als Ziege", "R3 und R4, eigenes Pixel-Blatt anhängen"),
+        ("Troll Waldemar", "R4"), ("Toadi", "Ankunft"), ("Taverne-Huhn", "Kulisse"),
+        ("Alwin Grauwald", "Kulisse"), ("Schwan", "Kulisse"), ("Grimmzahn", "Kulisse"),
+        ("Goblin-Arbeiter 1", "Kulisse"), ("Goblin-Arbeiter 2", "Kulisse"),
+    ],
+    "Gegenstände": [
+        ("Dorf und Taverne (3×3)", "Münze, Fondue, Vorleger, Bestellzettel, Eimer, Steckbrief"),
+        ("Zaubertrank (2×4)", "Krug und Leuchtpilz liegen schon in den Räumen, der Rest kommt ab R5"),
+        ("Wald und Turm (2×4)", "Ketchup liegt schon im Zauberwald, der Rest kommt ab R10"),
+    ],
+}
 
 
 def textblock_nach(text, marke):
@@ -117,7 +163,109 @@ def skizze_fuer(liste, szene):
     return None
 
 
-def datei_bauen(name, konzept, konzept_aussen):
+def ohne_anmerkungen(motiv):
+    """Deutsche Anmerkungen in Klammern und Werkzeug-Vorsätze aus einem Motiv entfernen."""
+    motiv = re.sub(r"^`[^`]+`:\s*", "", motiv)
+    motiv = re.sub(r"\s*\((?=[^)]*(?:[äöüßÄÖÜ„“]|\b[A-Z][a-zäöü]+\b|\d+ Jahre))[^)]*\)", "", motiv)
+    # Deutsche Sätze hinter dem englischen Motiv („Zuordnung von links: …“) weglassen
+    saetze = re.split(r"(?<=\.)\s+(?=[A-ZÄÖÜ])", motiv.strip())
+    motiv = " ".join([saetze[0]] + [x for x in saetze[1:] if not DEUTSCH.search(x)])
+    return motiv.strip().rstrip(".")
+
+
+def gegenstands_tabellen(text):
+    """(Name, Zusatz, Motiv, Baustein) für Sammelbilder und große Objekte mit GEGENSTÄNDE/EFFEKT."""
+    out = []
+    for m in re.finditer(r"\| Sammelbild \| Motiv \|\n\| --- \| --- \|\n((?:\|.*\n?)+)", text):
+        for z in m.group(1).splitlines():
+            name, motiv = [c.strip() for c in z.strip().strip("|").split(" | ")][:2]
+            if motiv.startswith("HINTERGRUND"):
+                continue
+            out.append((name, "", motiv, "GEGENSTÄNDE"))
+    for m in re.finditer(r"### Große Objekte[^\n]*\n\n\| Objekt \| Baustein \| Motiv \|\n\| --- \| --- \| --- \|\n((?:\|.*\n?)+)", text):
+        for z in m.group(1).splitlines():
+            name, bau, motiv = [c.strip() for c in z.strip().strip("|").split(" | ")][:3]
+            art = bau.split()[0].rstrip(",")
+            if art in ("GEGENSTÄNDE", "EFFEKT"):
+                out.append((name, bau, motiv, art))
+    return out
+
+
+def gegenstaende_bauen(text, bausteine):
+    out = []
+    for name, bau, motiv, art in gegenstands_tabellen(text):
+        out += [f"## {name}", ""]
+        if bau:
+            out += [f"**Hinweis:** {bau}", ""]
+        out += ["```text", f"{bausteine[art]} {ohne_anmerkungen(motiv)}.", "```", ""]
+    if not out:
+        return []
+    return ["# Gegenstände", "",
+            "Je Sammelbild den Block komplett in Gemini kopieren, keine Skizze anhängen. Umrechnen mit",
+            "`tools/figur.py` (Endesga-Palette), Ausschneiden je Zelle.", ""] + out
+
+
+def relativ(motiv):
+    """„about 101 pixels tall“ → „about 53 percent of the boy Max's height“."""
+    def ersetze(m):
+        n = int(m.group(2))
+        if n == MAX_PIXEL:
+            return f"{m.group(1)} as tall as the boy Max"
+        return f"{m.group(1)} {round(n * 100 / MAX_PIXEL)} percent of the boy Max's height"
+    return re.sub(r"\b([Aa]bout) (\d+) pixels tall", ersetze, motiv)
+
+
+def figuren_bauen(text, bausteine):
+    if "| Figur | Baustein | Motiv |" not in text:
+        return []
+    out = []
+    for z in tabelle(text, "| Figur | Baustein | Motiv |"):
+        if len(z) < 3 or not z[1].startswith("FIGUR"):
+            continue
+        name, motiv = z[0], ohne_anmerkungen(relativ(z[2]))
+        out += [f"## {name}", "", "```text", f"{bausteine['FIGURENBLATT']} {motiv}.", "```", ""]
+    if not out:
+        return []
+    return ["# Figuren", "",
+            "Je Figur den Block in Gemini kopieren und Max' Konzeptblatt als Stilvorlage anhängen. Gebraucht",
+            "wird nur die Seitenansicht nach rechts; Gehen und Reden entstehen per Code (`tools/figur.py`).", ""] + out
+
+
+def abschnitte(text):
+    """„## Überschrift“ → Block bis zur nächsten Überschrift (ohne die Überschrift)."""
+    teile = re.split(r"^(#{1,2} .*)$", text, flags=re.M)
+    out = {}
+    for kopf, rumpf in zip(teile[1::2], teile[2::2]):
+        if kopf.startswith("## "):
+            out.setdefault(kopf[3:].strip(), rumpf.strip())
+    return out
+
+
+def slice_bauen(welt1):
+    teile = abschnitte(welt1)
+    out = ["# Vertical Slice: Prompts in Arbeitsreihenfolge", "",
+           "Erzeugt von `tools/prompts_zusammensetzen.py` (Liste SLICE dort, Blöcke aus `welt-1.md`).",
+           "Prolog und Welt 1, Rätsel 1 bis 4 (`../../03-produktion.md`, Stufe 2). Von oben nach unten",
+           "abarbeiten: erst Räume (Skizze anhängen), dann Figuren (Max' Blatt anhängen), dann Sammelbilder.",
+           "Jeden fertigen Raum mit `python3 tools/stimmigkeit.py --kandidat bild.png` gegen den Prolog prüfen.",
+           "", "## Noch offen aus dem Prolog", "",
+           "- Pixel: Posenblatt Stehen und Schlafen (Prompt im Gespräch vom 12. November, Pixels Blatt anhängen).",
+           "", "## Nahansicht für Rätsel 4", "",
+           "- Märchen-Satzung am Brückenschild: Motiv (1) in `../welt-1.md`, Zeile „Nahansichten Welt 1“,",
+           "  mit Baustein HINTERGRUND; die Schrift kommt von Hand dazu.", ""]
+    nr = 0
+    for art, liste in SLICE.items():
+        out += [f"# {art}", ""]
+        for kopf, notiz in liste:
+            if kopf not in teile:
+                fehler.append(f"vertical-slice: „{kopf}“ fehlt in fertige-prompts/welt-1.md")
+                continue
+            nr += 1
+            out += [f"## {nr}. {kopf}", "", f"*{notiz}*", "", teile[kopf], ""]
+    return "\n".join(out).rstrip() + "\n"
+
+
+def datei_bauen(name, konzept, konzept_aussen, bausteine):
     text = (GRAFIK / f"{name}.md").read_text(encoding="utf-8")
     werte = farb_bausteine(text)
     liste = {} if name in OHNE_SKIZZE else skizzen(text)
@@ -151,6 +299,8 @@ def datei_bauen(name, konzept, konzept_aussen):
         satz = f" {SKIZZE_SATZ}" if sk else ""
         baustein = konzept_aussen if szene in aussen else konzept
         out += ["```text", f"{baustein} {motiv.rstrip('.')}. {farbe}.{satz}", "```", ""]
+    out += figuren_bauen(text, bausteine)
+    out += gegenstaende_bauen(text, bausteine)
     return "\n".join(out)
 
 
@@ -159,9 +309,17 @@ def main():
     stil = (GRAFIK / "00-stil-und-werkzeuge.md").read_text(encoding="utf-8")
     konzept = textblock_nach(stil, "**KONZEPT**")
     konzept_aussen = textblock_nach(stil, "**KONZEPT-AUSSEN**")
+    bausteine = {"GEGENSTÄNDE": textblock_nach(stil, "**GEGENSTÄNDE**"),
+                 "EFFEKT": textblock_nach(stil, "**EFFEKT**"),
+                 "FIGURENBLATT": textblock_nach(stil, "**FIGURENBLATT**")}
     veraltet = []
     ZIEL.mkdir(exist_ok=True)
-    gebaut = {name: datei_bauen(name, konzept, konzept_aussen) for name in DATEIEN}
+    gebaut = {name: datei_bauen(name, konzept, konzept_aussen, bausteine) for name in DATEIEN}
+    gebaut["00-weltenuebergreifend"] = "\n".join(
+        ["# Fertige Prompts: Weltenübergreifende Gegenstände", "",
+         "Erzeugt von `tools/prompts_zusammensetzen.py` aus `../00-stil-und-werkzeuge.md` (dort ändern, nicht hier).",
+         ""] + gegenstaende_bauen(stil, bausteine)[2:])
+    gebaut["vertical-slice"] = slice_bauen(gebaut["welt-1"])
     if fehler:
         for f in fehler:
             print("FEHLER  " + f)
@@ -176,7 +334,7 @@ def main():
     if pruefen and veraltet:
         print("Veraltet (python3 tools/prompts_zusammensetzen.py):", ", ".join(veraltet))
         sys.exit(1)
-    print(f"{len(DATEIEN)} Dateien" + (" geprüft" if pruefen else f" → {ZIEL}"))
+    print(f"{len(gebaut)} Dateien" + (" geprüft" if pruefen else f" → {ZIEL}"))
 
 
 if __name__ == "__main__":

@@ -1,0 +1,26 @@
+{
+ "bild": [
+  72,
+  68
+ ],
+ "animationen": {
+  "idle": {
+   "von": 0,
+   "bilder": 1,
+   "ms": 500,
+   "schleife": true
+  },
+  "walk": {
+   "von": 1,
+   "bilder": 8,
+   "ms": 110,
+   "schleife": true
+  },
+  "schlafen": {
+   "von": 9,
+   "bilder": 1,
+   "ms": 500,
+   "schleife": true
+  }
+ }
+}
