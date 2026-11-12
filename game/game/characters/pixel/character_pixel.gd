@@ -32,7 +32,19 @@ func _on_item_used(item: PopochiuInventoryItem) -> void:
 	match item.script_name:
 		"Thunfischdose":
 			if not Zustand.geloest("P1"):
-				await Spiel.sagen("MAX", "P0_DACH_MAX_0270")
+				if not Zustand.ist("P0_DOSE_OFFEN"):
+					await Spiel.sagen("MAX", "P0_DACH_MAX_0270")  # noch zu
+				elif Zustand.ist("P0_PIXEL_GEWECKT"):
+					await Spiel.sagen("PIX", "P0_DACH_PIX_1170")  # er will Porzellan
+				elif is_instance_valid(R.current) and R.current.has_method("p1_wecken"):
+					await R.current.call("p1_wecken")  # offene Dose unter Pixels Nase
+				return
+		"Teetasse":
+			if not Zustand.geloest("P1"):
+				if not Zustand.ist("P0_TASSE_GEFUELLT"):
+					await Spiel.sagen("MAX", "P0_DACH_MAX_1180")  # nur kalter Tee
+				elif is_instance_valid(R.current) and R.current.has_method("p1_loesen"):
+					await R.current.call("p1_loesen")  # Thunfisch in Porzellan
 				return
 		"Drahtkleiderbuegel":
 			await Spiel.sagen("MAX", "P0_DACH_MAX_1110")

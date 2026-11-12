@@ -25,7 +25,6 @@ wohnzimmer:
   hotspots:
     sofa: {rect: [109, 133, 151, 153], gehe: [187, 307]}
     leerer_platz_auf_dem_couchtisch: {rect: [341, 213, 37, 15], gehe: [363, 304]}
-    teetasse: {rect: [301, 208, 21, 19], gehe: [315, 304]}
     fernseher: {rect: [437, 120, 96, 109], gehe: [483, 253]}
     familienfoto: {rect: [273, 53, 133, 91], gehe: [340, 300]}
     # Weitere Dinge (Gag-Überarbeitung, 10. November 2026): Lage grob aus dem Bild, in Godot nachziehen
@@ -36,6 +35,8 @@ wohnzimmer:
     kuchen: {rect: [339, 181, 43, 40], gehe: [363, 304], name: Kuchen, versteckt: true}
     girlande: {rect: [133, 11, 373, 27], gehe: [320, 304], name: Girlande, versteckt: true}
     geschenke: {rect: [400, 261, 35, 29], gehe: [416, 307], name: Geschenke, versteckt: true}
+  props:
+    teetasse: {rect: [301, 208, 21, 19], gehe: [315, 304]}   # Opas Teetasse auf dem Couchtisch, zum Mitnehmen
   ausgaenge:
     treppenhaus: {rect: [555, 33, 75, 224], gehe: [592, 285]}
 
@@ -58,6 +59,8 @@ treppenhaus:
     kisten: {rect: [400, 190, 240, 160], gehe: [330, 320]}   # Kisten unter der Treppe
     fenster: {rect: [288, 73, 53, 80], gehe: [273, 299]}
     treppe: {rect: [341, 40, 239, 150], gehe: [270, 282]}   # rechts vom Fenster und über den Kisten, sonst verdeckt sie beide
+  props:
+    thunfischdose: {rect: [133, 198, 20, 16], gehe: [150, 300]}   # guckt aus der Tasche von Opas Mantel
   ausgaenge:
     wohnzimmer: {rect: [7, 53, 73, 247], gehe: [53, 320]}
     dachboden: {rect: [400, 0, 227, 45], gehe: [556, 85]}
@@ -78,8 +81,7 @@ dachboden:
     opa: [400, 287]
   props:
     zapp_o_mat: {rect: [325, 109, 80, 115], gehe: [365, 243], item: null}
-    thunfischdose: {rect: [160, 248, 20, 16], gehe: [171, 267]}
-    dosenoeffner: {rect: [187, 248, 20, 16], gehe: [195, 267]}
+    dosenoeffner: {rect: [224, 170, 18, 22], gehe: [232, 250]}   # hängt rechts an der Werkbank
     drahtkleiderbuegel: {rect: [587, 125, 27, 19], gehe: [587, 285]}
   hotspots:
     drehknopf: {rect: [304, 157, 19, 21], gehe: [320, 243], name: Drehknopf}

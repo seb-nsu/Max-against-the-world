@@ -227,55 +227,6 @@
      ]
     },
     {
-     "id": "teetasse",
-     "script_name": "Teetasse",
-     "name_key": "UI_OBJ_TEETASSE",
-     "rect": [
-      301,
-      208,
-      21,
-      19
-     ],
-     "gehe": [
-      315,
-      304
-     ],
-     "ansehen": [
-      {
-       "zeile": "P0_WOHN_MAX_0130",
-       "sprecher": "MAX",
-       "blasen": [
-        "P0_WOHN_MAX_0130"
-       ]
-      },
-      {
-       "zeile": "P0_WOHN_MAX_0135",
-       "sprecher": "MAX",
-       "blasen": [
-        "P0_WOHN_MAX_0135"
-       ],
-       "mal": 2
-      }
-     ],
-     "benutzen": [
-      {
-       "zeile": "P0_WOHN_MAX_0180",
-       "sprecher": "MAX",
-       "blasen": [
-        "P0_WOHN_MAX_0180"
-       ]
-      },
-      {
-       "zeile": "P0_WOHN_MAX_0185",
-       "sprecher": "MAX",
-       "blasen": [
-        "P0_WOHN_MAX_0185"
-       ],
-       "mal": 2
-      }
-     ]
-    },
-    {
      "id": "leerer_platz_auf_dem_couchtisch",
      "script_name": "LeererPlatzAufDemCouchtisch",
      "name_key": "UI_OBJ_LEERER_PLATZ_AUF_DEM_COUCHTISCH",
@@ -343,7 +294,8 @@
        "zeile": "P0_WOHN_MAX_0150",
        "sprecher": "MAX",
        "blasen": [
-        "P0_WOHN_MAX_0150"
+        "P0_WOHN_MAX_0150",
+        "P0_WOHN_MAX_0150_2"
        ]
       },
       {
@@ -521,7 +473,49 @@
      ]
     }
    ],
-   "props": [],
+   "props": [
+    {
+     "id": "teetasse",
+     "script_name": "Teetasse",
+     "name_key": "UI_OBJ_TEETASSE",
+     "rect": [
+      301,
+      208,
+      21,
+      19
+     ],
+     "gehe": [
+      315,
+      304
+     ],
+     "textur": "res://grafik/platzhalter/prop_teetasse.png",
+     "gegenstand": "teetasse",
+     "ansehen": [
+      {
+       "zeile": "P0_WOHN_MAX_0130",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_WOHN_MAX_0130"
+       ]
+      },
+      {
+       "zeile": "P0_WOHN_MAX_0135",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_WOHN_MAX_0135"
+       ],
+       "mal": 2
+      }
+     ],
+     "nehmen": {
+      "zeile": "P0_WOHN_MAX_0180",
+      "sprecher": "MAX",
+      "blasen": [
+       "P0_WOHN_MAX_0180"
+      ]
+     }
+    }
+   ],
    "ausgaenge": [
     {
      "id": "ausgang_treppenhaus",
@@ -994,7 +988,34 @@
      ]
     }
    ],
-   "props": [],
+   "props": [
+    {
+     "id": "thunfischdose",
+     "script_name": "Thunfischdose",
+     "name_key": "UI_OBJ_THUNFISCHDOSE",
+     "rect": [
+      133,
+      198,
+      20,
+      16
+     ],
+     "gehe": [
+      150,
+      300
+     ],
+     "textur": "res://grafik/platzhalter/prop_thunfischdose.png",
+     "gegenstand": "thunfischdose",
+     "ansehen": [],
+     "nehmen": {
+      "zeile": "P0_TREP_MAX_0190",
+      "sprecher": "MAX",
+      "blasen": [
+       "P0_TREP_MAX_0190",
+       "P0_TREP_MAX_0190_2"
+      ]
+     }
+    }
+   ],
    "ausgaenge": [
     {
      "id": "ausgang_wohnzimmer",
@@ -2212,43 +2233,18 @@
      ]
     },
     {
-     "id": "thunfischdose",
-     "script_name": "Thunfischdose",
-     "name_key": "UI_OBJ_THUNFISCHDOSE",
-     "rect": [
-      160,
-      248,
-      20,
-      16
-     ],
-     "gehe": [
-      171,
-      267
-     ],
-     "textur": "res://grafik/platzhalter/prop_thunfischdose.png",
-     "gegenstand": "thunfischdose",
-     "ansehen": [],
-     "nehmen": {
-      "zeile": "P0_DACH_MAX_0250",
-      "sprecher": "MAX",
-      "blasen": [
-       "P0_DACH_MAX_0250"
-      ]
-     }
-    },
-    {
      "id": "dosenoeffner",
      "script_name": "Dosenoeffner",
      "name_key": "UI_OBJ_DOSENOEFFNER",
      "rect": [
-      187,
-      248,
-      20,
-      16
+      224,
+      170,
+      18,
+      22
      ],
      "gehe": [
-      195,
-      267
+      232,
+      250
      ],
      "textur": "res://grafik/platzhalter/prop_dosenoeffner.png",
      "gegenstand": "dosenoeffner",
@@ -2330,6 +2326,10 @@
        ],
        "bedingung": [
         {
+         "art": "nach",
+         "raetsel": "P1"
+        },
+        {
          "art": "vor",
          "raetsel": "P3"
         }
@@ -2343,10 +2343,43 @@
        ],
        "bedingung": [
         {
+         "art": "nach",
+         "raetsel": "P1"
+        },
+        {
          "art": "vor",
          "raetsel": "P3"
         }
        ],
+       "mal": 2
+      },
+      {
+       "zeile": "P0_DACH_MAX_1020",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_DACH_MAX_1020"
+       ],
+       "bedingung": [
+        {
+         "art": "vor",
+         "raetsel": "P1"
+        }
+       ],
+       "bedingung_text": "Max steigt hinunter"
+      },
+      {
+       "zeile": "P0_DACH_MAX_1025",
+       "sprecher": "MAX",
+       "blasen": [
+        "P0_DACH_MAX_1025"
+       ],
+       "bedingung": [
+        {
+         "art": "vor",
+         "raetsel": "P1"
+        }
+       ],
+       "bedingung_text": "Max steigt hinunter",
        "mal": 2
       }
      ]
@@ -2555,14 +2588,30 @@
      "zustand": "zu"
     },
     {
-     "zeile": "P0_INV_PIX_0015",
-     "sprecher": "PIX",
+     "zeile": "P0_INV_MAX_0012",
+     "sprecher": "MAX",
      "blasen": [
-      "P0_INV_PIX_0015",
-      "P0_INV_PIX_0015_2"
+      "P0_INV_MAX_0012"
      ],
      "mal": 2,
      "zustand": "zu"
+    },
+    {
+     "zeile": "P0_INV_MAX_0016",
+     "sprecher": "MAX",
+     "blasen": [
+      "P0_INV_MAX_0016"
+     ],
+     "zustand": "offen"
+    },
+    {
+     "zeile": "P0_INV_MAX_0018",
+     "sprecher": "MAX",
+     "blasen": [
+      "P0_INV_MAX_0018"
+     ],
+     "mal": 2,
+     "zustand": "offen"
     },
     {
      "zeile": "P0_INV_MAX_0020",
@@ -2611,6 +2660,59 @@
       "P0_INV_MAX_0035"
      ],
      "mal": 2
+    }
+   ],
+   "benutzen": [],
+   "kombinieren": []
+  },
+  {
+   "id": "teetasse",
+   "script_name": "Teetasse",
+   "name_key": "UI_OBJ_TEETASSE",
+   "zustaende": [
+    "kalt",
+    "gefuellt"
+   ],
+   "reist_mit": false,
+   "nahansicht": false,
+   "icon": "res://grafik/platzhalter/gegenstand_teetasse.png",
+   "icons": {
+    "gefuellt": "res://grafik/platzhalter/gegenstand_teetasse_gefuellt.png"
+   },
+   "ansehen": [
+    {
+     "zeile": "P0_INV_MAX_0080",
+     "sprecher": "MAX",
+     "blasen": [
+      "P0_INV_MAX_0080"
+     ],
+     "zustand": "kalt"
+    },
+    {
+     "zeile": "P0_INV_MAX_0085",
+     "sprecher": "MAX",
+     "blasen": [
+      "P0_INV_MAX_0085"
+     ],
+     "mal": 2,
+     "zustand": "kalt"
+    },
+    {
+     "zeile": "P0_INV_MAX_0090",
+     "sprecher": "MAX",
+     "blasen": [
+      "P0_INV_MAX_0090"
+     ],
+     "zustand": "gefuellt"
+    },
+    {
+     "zeile": "P0_INV_MAX_0095",
+     "sprecher": "MAX",
+     "blasen": [
+      "P0_INV_MAX_0095"
+     ],
+     "mal": 2,
+     "zustand": "gefuellt"
     }
    ],
    "benutzen": [],
@@ -2823,17 +2925,44 @@
        "zeile": "P0_DACH_OPA_1326",
        "sprecher": "OPA",
        "blasen": [
-        "P0_DACH_OPA_1326"
+        "P0_DACH_OPA_1326",
+        "P0_DACH_OPA_1326_2"
        ],
-       "regie": "Hinweis P1, Stufe 2 (Dosenöffner); ersetzt 1324 beim nächsten Klick auf die Option, frühestens 30 Sekunden nach 1324"
+       "regie": "Hinweis P1, Stufe 2 (Dosenöffner); ersetzt 1324 beim nächsten Klick auf die Option, frühestens 30 Sekunden nach 1324; Kaskade"
       },
       {
        "zeile": "P0_DACH_OPA_1328",
        "sprecher": "OPA",
        "blasen": [
-        "P0_DACH_OPA_1328"
+        "P0_DACH_OPA_1328",
+        "P0_DACH_OPA_1328_2"
        ],
-       "regie": "Hinweis P1, Stufe 3; ersetzt 1326 beim nächsten Klick auf die Option, frühestens 60 Sekunden nach 1326; vorher wiederholt Opa die letzte Stufe"
+       "regie": "Hinweis P1, Stufe 3; ersetzt 1326 beim nächsten Klick auf die Option, frühestens 60 Sekunden nach 1326; vorher wiederholt Opa die letzte Stufe; Kaskade"
+      },
+      {
+       "zeile": "P0_DACH_OPA_1520",
+       "sprecher": "OPA",
+       "blasen": [
+        "P0_DACH_OPA_1520"
+       ],
+       "regie": "Hinweis P1, zweiter Teil (Napf), Stufe 1; dieselbe Option, sobald Pixel die Dose abgelehnt hat (Schalter P0_PIXEL_GEWECKT)"
+      },
+      {
+       "zeile": "P0_DACH_OPA_1524",
+       "sprecher": "OPA",
+       "blasen": [
+        "P0_DACH_OPA_1524"
+       ],
+       "regie": "Hinweis P1, zweiter Teil, Stufe 2; frühestens 30 Sekunden nach 1520"
+      },
+      {
+       "zeile": "P0_DACH_OPA_1528",
+       "sprecher": "OPA",
+       "blasen": [
+        "P0_DACH_OPA_1528",
+        "P0_DACH_OPA_1528_2"
+       ],
+       "regie": "Hinweis P1, zweiter Teil, Stufe 3; frühestens 60 Sekunden nach 1524; Kaskade"
       }
      ],
      "beendet": false,

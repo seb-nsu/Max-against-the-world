@@ -17,12 +17,14 @@ warm palette of dusty browns, orange lamp light and pale yellow, cozy and clutte
 | Dachboden | Schräges Dach mit Dachfenster, Werkbank, Kleiderschrank, Kisten, alter Sessel, der Zapp-O-Mat 3000 auf einem Rolltisch, Wandkalender mit rot eingekreistem Tag | Prolog, Rätsel P1 bis P3 |
 | Dachboden, Finale | Gleicher Raum bei Nacht, in der Mitte Opas große Maschine mit zwei Fassungen und Empfänger für die Fernbedienung, Rauch, blinkende Lämpchen, verriegelte Luke | Finale: Heimkehr, Stufe 1, Hilferuf, letztes Rätsel, Auflösung |
 | Wohnzimmer | Opas Sofa, Couchtisch, Stehlampe, Röhrenfernseher; im Finale mit Geburtstagsgirlande und Kuchen | Portal-Gag in Welt 3, Finale |
-| Treppenhaus | Schmale Holztreppe zum Dachboden | Prolog: Durchgang zwischen Wohnzimmer und Dachboden mit drei Objekten zum Ansehen (Hut, Fenster, Treppe); Finale: kurzer Schnitt, Oma steigt die Treppe hoch; Abspann-Foto 4 (Goblin-Weg A) |
+| Treppenhaus | Schmale Holztreppe zum Dachboden | Prolog: Durchgang zwischen Wohnzimmer und Dachboden mit Objekten zum Ansehen (Hut, Fenster, Treppe, Mäntel) und der Thunfischdose, die als Sprite aus der Tasche von Opas Mantel guckt und verschwindet, wenn Max sie nimmt; Finale: kurzer Schnitt, Oma steigt die Treppe hoch; Abspann-Foto 4 (Goblin-Weg A) |
 | Supermarkt-Eingang | Automatische Tür, Einkaufswagen, Milchregal im Hintergrund, später Abend | Letztes Bild vor dem Abspann |
 
 **Figuren:** Max, Pixel, Opa Konrad, Oma Hildegard, Mutter.
 
-**Gegenstände:** Thunfischdose, Dosenöffner, Drahtkleiderbügel, Antenne aus dem Bügel, Einkaufsliste, Milchflasche, Fernbedienung, Geburtstagskuchen, Notizbuch, Opas Reisetasche mit zwei Wahlfächern und einem Pflichtfach, Opas Zettel für Welt 1.
+**Gegenstände:** Thunfischdose, Dosenöffner, Opas Teetasse (mit kaltem Tee und mit Thunfisch), Drahtkleiderbügel, Antenne aus dem Bügel, Einkaufsliste, Milchflasche, Fernbedienung, Geburtstagskuchen, Notizbuch, Opas Reisetasche mit zwei Wahlfächern und einem Pflichtfach, Opas Zettel für Welt 1.
+
+**Zum Mitnehmen, also Sprite und nicht ins Hintergrundbild gemalt** (Stand 12. November 2026): die Teetasse auf dem Couchtisch im Wohnzimmer, die Thunfischdose in der Tasche von Opas Mantel im Treppenhaus und der Dosenöffner, der rechts an der Werkbank auf dem Dachboden hängt. In den vorhandenen Bildern ist die Teetasse noch gemalt; beim Neuerzeugen des Wohnzimmers den Couchtisch ohne Tasse malen.
 
 **Benutzeroberfläche:** Mauszeiger (Standard, Ansehen, Benutzen, Reden, Ausgang), Inventarleiste, Dialogfenster, Pixels Hilfe-Symbol, Titelbild.
 

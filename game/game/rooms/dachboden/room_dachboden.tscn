@@ -6,8 +6,6 @@
 [ext_resource type="Texture2D" uid="uid://kch38n8lwxyj" path="res://grafik/hintergruende/w0_bg_dachboden_v01.png" id="4_mcqit"]
 [ext_resource type="PackedScene" uid="uid://c4cbjhulesib6" path="res://game/rooms/dachboden/props/zapp_o_mat/prop_zapp_o_mat.tscn" id="5_k8q6h"]
 [ext_resource type="Texture2D" uid="uid://cbjsrrwdps6v3" path="res://grafik/platzhalter/prop_zapp_o_mat.png" id="6_x6nag"]
-[ext_resource type="PackedScene" uid="uid://dypvjac8k0i2" path="res://game/rooms/dachboden/props/thunfischdose/prop_thunfischdose.tscn" id="7_3c6fv"]
-[ext_resource type="Texture2D" uid="uid://8ls4c83m4nti" path="res://grafik/platzhalter/prop_thunfischdose.png" id="8_vyv7m"]
 [ext_resource type="PackedScene" uid="uid://bjk8jriso305i" path="res://game/rooms/dachboden/props/dosenoeffner/prop_dosenoeffner.tscn" id="9_mcqit"]
 [ext_resource type="Texture2D" uid="uid://d2j0lvdfa0p5v" path="res://grafik/platzhalter/prop_dosenoeffner.png" id="10_je6ao"]
 [ext_resource type="PackedScene" uid="uid://b5svirsswb2vx" path="res://game/rooms/dachboden/props/drahtkleiderbuegel/prop_drahtkleiderbuegel.tscn" id="11_m8m18"]
@@ -68,21 +66,13 @@ baseline = 57
 walk_to_point = Vector2(0, 76.5)
 interaction_polygon = PackedVector2Array(-40, -57.5, 40, -57.5, 40, 57.5, -40, 57.5)
 
-[node name="Thunfischdose" parent="Props" unique_id=1593253996 instance=ExtResource("7_3c6fv")]
-position = Vector2(170, 256)
-texture = ExtResource("8_vyv7m")
-description = "UI_OBJ_THUNFISCHDOSE"
-baseline = 8
-walk_to_point = Vector2(1, 11)
-interaction_polygon = PackedVector2Array(-10, -8, 10, -8, 10, 8, -10, 8)
-
 [node name="Dosenoeffner" parent="Props" unique_id=1001585250 instance=ExtResource("9_mcqit")]
-position = Vector2(197, 256)
+position = Vector2(233, 181)
 texture = ExtResource("10_je6ao")
 description = "UI_OBJ_DOSENOEFFNER"
-baseline = 8
-walk_to_point = Vector2(-2, 11)
-interaction_polygon = PackedVector2Array(-10, -8, 10, -8, 10, 8, -10, 8)
+baseline = 11
+walk_to_point = Vector2(-1, 69)
+interaction_polygon = PackedVector2Array(-9, -11, 9, -11, 9, 11, -9, 11)
 
 [node name="Drahtkleiderbuegel" parent="Props" unique_id=505759806 instance=ExtResource("11_m8m18")]
 position = Vector2(600.5, 134.5)

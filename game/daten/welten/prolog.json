@@ -19,7 +19,12 @@
  "weitere_schalter": [
   "P0_SCHNEE_GESEHEN",
   "P0_PIXEL_WECKVERSUCHE",
-  "P0_DRAHTKLEIDERBUEGEL"
+  "P0_DRAHTKLEIDERBUEGEL",
+  "P0_DOSE_OFFEN",
+  "P0_PIXEL_GEWECKT",
+  "P0_TASSE_GEFUELLT",
+  "P0_NAPF_STUFE",
+  "P0_NAPF_ZEIT"
  ],
  "raeume": [
   {
@@ -109,7 +114,7 @@
   {
    "id": "thunfischdose",
    "name": "Thunfischdose",
-   "herkunft": "dachboden",
+   "herkunft": "treppenhaus",
    "zustaende": [
     "zu",
     "offen",
@@ -132,6 +137,20 @@
     "P1"
    ],
    "reist_mit": true,
+   "nahansicht": false
+  },
+  {
+   "id": "teetasse",
+   "name": "Teetasse",
+   "herkunft": "wohnzimmer",
+   "zustaende": [
+    "kalt",
+    "gefuellt"
+   ],
+   "verwendet_in": [
+    "P1"
+   ],
+   "reist_mit": false,
    "nahansicht": false
   },
   {
@@ -196,7 +215,8 @@
    "raum": "dachboden",
    "benoetigt": [
     "thunfischdose",
-    "dosenoeffner"
+    "dosenoeffner",
+    "teetasse"
    ],
    "ergibt": [],
    "schalter": [

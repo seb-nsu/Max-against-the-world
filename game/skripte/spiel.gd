@@ -587,6 +587,36 @@ func gegenstand_zeile(eintraege: Array, gegenstand_id: String) -> Dictionary:
 	return beste
 
 
+## Mauszeiger über zwei Objekten: Popochiu entscheidet nach der Reihenfolge im Elternknoten, und
+## die sagt zwischen Props und Hotspots nichts. Ein kleiner Gegenstand vor einer großen Fläche
+## (die Dose in Opas Mantel, der Zettel am Dorfbrett) war deshalb mit der Maus nicht zu treffen.
+## Regel: Ist ein Bauplan-Rechteck höchstens halb so groß wie das andere, liegt das kleinere vorn.
+## Gibt true zurück, wenn die Regel entschieden hat; sonst entscheidet Popochiu wie bisher.
+func zeiger_betritt(obj: PopochiuClickable) -> bool:
+	var vorn: PopochiuClickable = E.hovered
+	if not is_instance_valid(vorn) or vorn == obj:
+		return false
+	var a := _zeiger_flaeche(obj)
+	var b := _zeiger_flaeche(vorn)
+	if a <= 0.0 or b <= 0.0:
+		return false
+	if a * 2.0 <= b:
+		E.add_hovered(obj)
+		G.mouse_entered_clickable.emit(obj)
+		return true
+	if b * 2.0 <= a:
+		E.add_hovered(obj, true)
+		return true
+	return false
+
+
+func _zeiger_flaeche(obj: PopochiuClickable) -> float:
+	if not obj.has_method("bauplan"):
+		return 0.0
+	var r: Array = obj.call("bauplan").get("rect", [])
+	return float(r[2]) * float(r[3]) if r.size() == 4 else 0.0
+
+
 func hingehen(ziel: PopochiuClickable) -> void:
 	if testmodus or not is_instance_valid(C.player) or not C.player.is_inside_tree():
 		return

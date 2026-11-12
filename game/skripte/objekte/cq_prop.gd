@@ -14,6 +14,13 @@ func bauplan() -> Dictionary:
 	return Bauplan.objekt(room.script_name, script_name)
 
 
+## Liegt das Objekt über oder unter einem deutlich größeren, gewinnt das kleinere
+## (Spiel.zeiger_betritt); sonst gilt Popochius Reihenfolge.
+func _on_mouse_entered() -> void:
+	if not Spiel.zeiger_betritt(self):
+		super()
+
+
 func objekt_id() -> String:
 	return bauplan().get("id", script_name.to_snake_case())
 

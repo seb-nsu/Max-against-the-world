@@ -6,7 +6,20 @@ extends CQDialog
 
 
 ## 1322: Opa gibt die P1-Hinweise; die Stufe steigt wie bei der Pfote, sonst wiederholt er.
+## Hat Pixel die Dose abgelehnt, gibt dieselbe Option die Hinweise zum Napf (1520–1528).
+const NAPF_HINWEISE := ["P0_DACH_OPA_1520", "P0_DACH_OPA_1524", "P0_DACH_OPA_1528"]
+const NAPF_WARTEN := {1: 30.0, 2: 60.0}
+
+
 func antworten(id: String) -> Array:
+	if id == "1322" and Zustand.ist("P0_PIXEL_GEWECKT"):
+		var s := int(Zustand.wert("P0_NAPF_STUFE", 0))
+		var seit: float = Zustand.spielzeit - float(Zustand.wert("P0_NAPF_ZEIT", 0.0))
+		if s == 0 or (s < 3 and seit >= NAPF_WARTEN[s]):
+			s += 1
+			Zustand.setze_wert("P0_NAPF_STUFE", s)
+			Zustand.setze_wert("P0_NAPF_ZEIT", Zustand.spielzeit)
+		return [{sprecher = "OPA", zeile = NAPF_HINWEISE[s - 1]}]
 	if id == "1322":
 		return Hinweise.naechste_zeilen("P1", false).map(
 			func(z): return {sprecher = "OPA", zeile = z}

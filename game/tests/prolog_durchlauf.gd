@@ -77,6 +77,15 @@ func _durchlauf() -> void:
 	await _warte_auf_raum("Wohnzimmer")
 	await _warte_bis(func(): return _gesagt("P0_WOHN_MAX_0070"), 10.0)
 	_pruefe(_gesagt("P0_WOHN_OPA_0030"), "Intro Wohnzimmer mit Opa aus dem Off")
+	# Einstieg: Max erzählt bei schwarzem Bild (0002–0006), erst dann kommt „Kein WLAN“
+	var prot: Array = _spiel().protokoll
+	_pruefe(prot.find("P0_WOHN_MAX_0002") >= 0 and prot.find("P0_WOHN_MAX_0002") < prot.find("P0_WOHN_MAX_0004")
+		and prot.find("P0_WOHN_MAX_0004") < prot.find("P0_WOHN_MAX_0006")
+		and prot.find("P0_WOHN_MAX_0006") < prot.find("P0_WOHN_MAX_0010"), "Einstieg 0002–0006 vor 0010")
+	await _warte_bis(func(): return not _raum().einstieg_laeuft(), 10.0)
+	_pruefe(not _raum().einstieg_laeuft(), "Einstieg: Schwarz ist weg")
+	_pruefe(_spiel().hud.visible, "Einstieg: HUD wieder sichtbar")
+	_pruefe(_c().player.position != _raum().OFF_PLATZ, "Einstieg: Max steht wieder an seinem Platz")
 	_pruefe(Z.abschnitt == "prolog", "Abschnitt prolog")
 	_pruefe(Z.status("P1") == "gesperrt", "P1 gesperrt vor dem Dachboden")
 	_pruefe(not H.pfote_aktiv(), "Pfote im Prolog vor P1 aus")
@@ -108,12 +117,9 @@ func _durchlauf() -> void:
 	_pruefe(Z.status("P3") == "gesperrt", "P3 gesperrt vor P2")
 	_pruefe(_raum().get_prop("ZappOMat").current_frame == 0, "Zapp-O-Mat aus vor P1")
 
-	# Bodenluke vor P3: Max will nicht runter
 	var luke := _hotspot("Bodenluke")
-	await luke.on_click()
-	_pruefe(_gesagt("P0_DACH_MAX_1000"), "Bodenluke vor P3 sagt 1000")
-	_pruefe(_raum_name() == "Dachboden", "Bodenluke vor P3 führt nicht hinaus")
 	await _ansehen(luke, "P0_DACH_MAX_1010")
+	_pruefe(not _raum().get_props().any(func(p): return p.script_name == "Thunfischdose"), "keine Thunfischdose auf dem Dachboden")
 
 	# Opa gibt die P1-Hinweise (Option 1322), ohne Wartezeile
 	var opa_d = root.get_node("D").get_instance("Opa")
@@ -137,18 +143,34 @@ func _durchlauf() -> void:
 	await pixel.on_click()
 	_pruefe(_gesagt("P0_DACH_MAX_0220") and _gesagt("P0_DACH_OPA_0230"), "Pixel wecken 0220, Opa 0230")
 
-	# Gegenstände nehmen
-	await _nehmen("Thunfischdose", "P0_DACH_MAX_0250")
+	# Gegenstände nehmen: Dosenöffner hängt an der Werkbank, die Dose steckt unten in Opas Mantel
 	await _nehmen("Dosenoeffner", "P0_DACH_MAX_0260")
 	await _nehmen("Drahtkleiderbuegel", "P0_DACH_MAX_0460")
-	_pruefe(_raum().get_prop("Thunfischdose").visible == false, "Prop Thunfischdose weg")
+	_pruefe(not _i().is_item_in_inventory("Thunfischdose"), "Thunfischdose noch nicht im Inventar")
+
+	# Bodenluke vor P1: Max steigt hinunter (1020) und holt die Dose aus Opas Mantel (0190)
+	await luke.on_click()
+	await _warte_auf_raum("Treppenhaus")
+	_pruefe(_gesagt("P0_DACH_MAX_1020"), "Bodenluke vor P1 sagt 1020")
+	_pruefe(_raum_name() == "Treppenhaus", "Bodenluke vor P1 führt ins Treppenhaus")
+	_pruefe(_raum().get_prop("Thunfischdose").visible, "Thunfischdose steckt im Mantel (Treppenhaus)")
+	await _nehmen("Thunfischdose", "P0_TREP_MAX_0190")
+	_pruefe(not _raum().get_prop("Thunfischdose").visible, "Prop Thunfischdose weg")
+	await _rundreise("Treppenhaus, Thunfischdose genommen")
+	_pruefe(not _raum().get_prop("Thunfischdose").visible, "Prop Thunfischdose bleibt nach Laden weg")
+	_protokoll_leeren()
+	await _hotspot("AusgangDachboden").on_click()
+	await _warte_auf_raum("Dachboden")
+	_pruefe(not _gesagt("P0_DACH_OPA_0010"), "Szene Opas Auftrag nur beim ersten Betreten")
+	luke = _hotspot("Bodenluke")
+	pixel = _c().get_character("Pixel")
+	_pruefe(not _raum().get_prop("Dosenoeffner").visible, "Prop Dosenöffner bleibt nach Rückkehr weg")
 	await _ansehen_item("Thunfischdose", "P0_INV_MAX_0010")
 	_pruefe(not _i().is_item_in_inventory("PixelFeld"), "kein Pixel-Feld, solange Pixel schläft")
 	# Wiederholung: 1. Mal eigene Zeile, ab dann Pool SYS_WDH (fehlt der Pool, die eigene Zeile)
 	await luke.on_right_click()
 	_pruefe(Z.angesehen.values().any(func(n): return n >= 2), "Ansehen-Zähler zählt mit")
 	await _rundreise("Dachboden, drei Gegenstände")
-	_pruefe(not _raum().get_prop("Dosenoeffner").visible, "Prop Dosenöffner bleibt nach Laden weg")
 
 	# Fehlversuche; Dosenöffner auf Poster hat keine eigene Zeile: Ersatzzeile (Fehlklick)
 	var vorher_n: int = _spiel().protokoll.size()
@@ -165,9 +187,84 @@ func _durchlauf() -> void:
 	await _hotspot("Drehknopf").on_click()
 	_pruefe(_gesagt("P0_DACH_OPA_1140"), "Drehknopf vor P2: Opa 1140")
 
-	# --- P1: Dosenöffner mit Thunfischdose ---
+	# --- P1, erster Schritt: Dosenöffner mit Thunfischdose. Die Dose ist offen, Pixel schläft weiter ---
+	var pixel_schlafplatz := pixel.position
 	await _item("Thunfischdose").on_item_used(_item("Dosenoeffner"))
+	_pruefe(_gesagt("P0_DACH_MAX_0280") and _gesagt("P0_DACH_MAX_0282"), "Dose öffnen: 0280, 0282")
+	_pruefe(Z.ist("P0_DOSE_OFFEN") and _item("Thunfischdose").zustand() == "offen", "Thunfischdose offen (P0_DOSE_OFFEN)")
+	_pruefe(not Z.geloest("P1") and not _gesagt("P0_DACH_PIX_0380"), "P1 nach dem Öffnen noch nicht gelöst")
+	_pruefe(pixel.position == pixel_schlafplatz and not H.pfote_aktiv(), "Pixel schläft weiter, Pfote bleibt aus")
+	_pruefe(_raum().get_prop("ZappOMat").current_frame == 0, "Zapp-O-Mat bleibt aus, solange Pixel schläft")
+	await _ansehen_item("Thunfischdose", "P0_INV_MAX_0016")
+	await _benutze("Thunfischdose", _c().get_character("Opa"), "P0_DACH_OPA_1160")
+	# Dosenöffner noch einmal auf die offene Dose: Ersatzzeile
+	vorher_n = _spiel().protokoll.size()
+	await _item("Thunfischdose").on_item_used(_item("Dosenoeffner"))
+	_pruefe(_spiel().protokoll.slice(vorher_n).any(func(b): return b.begins_with("SYS_ERS_MAX_")),
+		"Dosenöffner auf offene Dose: Ersatzzeile")
+	await _rundreise("Dose offen")
+	_pruefe(Z.ist("P0_DOSE_OFFEN") and _item("Thunfischdose").zustand() == "offen" and not Z.geloest("P1"),
+		"Dose bleibt nach Laden offen, P1 ungelöst")
+	pixel = _c().get_character("Pixel")
+
+	# --- P1, zweiter Schritt: die offene Dose auf Pixel. Er wacht auf, frisst aber nicht aus dem Blech ---
+	await _benutze("Thunfischdose", pixel, "P0_DACH_MAX_0285")
+	_pruefe(_gesagt("P0_DACH_PIX_0310") and _gesagt("P0_DACH_PIX_0360_2") and _gesagt("P0_DACH_PIX_0364")
+		and _gesagt("P0_DACH_OPA_0366"), "Pixel wacht auf und lehnt die Dose ab (0290–0366)")
+	_pruefe(Z.ist("P0_PIXEL_GEWECKT") and not Z.geloest("P1") and not _gesagt("P0_DACH_PIX_0380"),
+		"P0_PIXEL_GEWECKT gesetzt, P1 noch ungelöst")
+	_pruefe(pixel.position == pixel_schlafplatz and not H.pfote_aktiv() and _raum().get_prop("ZappOMat").current_frame == 0,
+		"Pixel bleibt auf dem Kabel, Pfote und Zapp-O-Mat aus")
+	await _benutze("Thunfischdose", pixel, "P0_DACH_PIX_1170")
+	# Opas Option gibt jetzt die Hinweise zum Napf (1520, nach 30 s 1524, nach 60 s 1528)
+	_protokoll_leeren()
+	await opa_d.waehlen("1322")
+	_pruefe(_gesagt("P0_DACH_OPA_1520") and not _gesagt("P0_DACH_OPA_1326"), "Opa: Napf-Hinweis Stufe 1 (1520)")
+	Z.spielzeit += 31.0
+	await opa_d.waehlen("1322")
+	_pruefe(_gesagt("P0_DACH_OPA_1524"), "Opa: Napf-Hinweis Stufe 2 nach 30 s (1524)")
+	Z.spielzeit += 61.0
+	await opa_d.waehlen("1322")
+	_pruefe(_gesagt("P0_DACH_OPA_1528") and _gesagt("P0_DACH_OPA_1528_2"), "Opa: Napf-Hinweis Stufe 3 nach 60 s (1528)")
+	await _rundreise("Pixel geweckt")
+	_pruefe(Z.ist("P0_PIXEL_GEWECKT") and int(Z.wert("P0_NAPF_STUFE", 0)) == 3, "Geweckt und Napf-Stufe bleiben nach Laden")
+
+	# Hinunter ins Wohnzimmer: Opas Teetasse holen (0180)
+	luke = _hotspot("Bodenluke")
+	await luke.on_click()
+	await _warte_auf_raum("Treppenhaus")
+	await _hotspot("AusgangWohnzimmer").on_click()
+	await _warte_auf_raum("Wohnzimmer")
+	_pruefe(not _gesagt("P0_WOHN_MAX_0180"), "Teetasse vorher nicht genommen")
+	await _ansehen(_raum().get_prop("Teetasse"), "P0_WOHN_MAX_0130")
+	await _nehmen("Teetasse", "P0_WOHN_MAX_0180")
+	_pruefe(not _raum().get_prop("Teetasse").visible and _item("Teetasse").zustand() == "kalt", "Teetasse im Inventar, kalter Tee")
+	await _ansehen_item("Teetasse", "P0_INV_MAX_0080")
+	await _hotspot("AusgangTreppenhaus").on_click()
+	await _warte_auf_raum("Treppenhaus")
+	await _hotspot("AusgangDachboden").on_click()
+	await _warte_auf_raum("Dachboden")
+	luke = _hotspot("Bodenluke")
+	pixel = _c().get_character("Pixel")
+	_pruefe(pixel.position == pixel_schlafplatz, "Pixel liegt nach der Rückkehr noch auf dem Kabel")
+	await _benutze("Teetasse", pixel, "P0_DACH_MAX_1180")
+
+	# --- P1, dritter Schritt: Thunfisch in die Teetasse, die Tasse auf Pixel ---
+	await _item("Teetasse").on_item_used(_item("Thunfischdose"))
+	_pruefe(_gesagt("P0_INV_MAX_0072") and Z.ist("P0_TASSE_GEFUELLT") and _item("Teetasse").zustand() == "gefuellt",
+		"Thunfisch in der Teetasse (0072, P0_TASSE_GEFUELLT)")
+	await _ansehen_item("Teetasse", "P0_INV_MAX_0090")
+	await _rundreise("Tasse gefüllt")
+	pixel = _c().get_character("Pixel")
+	await _benutze("Teetasse", pixel, "P0_DACH_MAX_0367")
+	_pruefe(_gesagt("P0_DACH_PIX_0368"), "Pixel frisst aus der Tasse (0368)")
 	_pruefe(Z.geloest("P1") and Z.ist("P0_P1_GELOEST"), "P1 gelöst (P0_P1_GELOEST)")
+	_pruefe(not _i().is_item_in_inventory("Teetasse"), "Teetasse bleibt als Napf auf der Werkbank")
+	# Bodenluke nach P1: Max will nicht mehr runter
+	luke = _hotspot("Bodenluke")
+	await luke.on_click()
+	_pruefe(_gesagt("P0_DACH_MAX_1000"), "Bodenluke nach P1 sagt 1000")
+	_pruefe(_raum_name() == "Dachboden", "Bodenluke nach P1 führt nicht hinaus")
 	_pruefe(_gesagt("P0_DACH_PIX_0380") and _gesagt("P0_DACH_MAX_0390"), "P1-Szene vollständig")
 	_pruefe(_item("Thunfischdose").zustand() == "leer", "Thunfischdose leer nach P1")
 	_pruefe(pixel.position == _raum().PIXEL_WERKBANK, "Pixel auf der Werkbank")
