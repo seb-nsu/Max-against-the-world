@@ -497,14 +497,19 @@ def gehen(sprite_rgba, bein_ab, huefte, knie, knoechel=None, bilder=8, schritt=2
     return frames
 
 
+STAND = 0.6   # Anteil des Umlaufs, den ein Bein am Boden steht (Vierbeiner)
+
+
 def vierbeiner(sprite_rgba, bauch, knie, vorne, hinten, schulter=None, bilder=8, schritt=22.0, beuge=35.0,
-               dunkel=0.7, versatz=3):
+               dunkel=0.8, versatz=3, wippen=False):
     """Gehzyklus für Vierbeiner (Pixel) aus einem Standbild in Seitenansicht nach rechts, alle Beine
     gerade nach unten. Die zwei sichtbaren Beine (Spalten vorne=(x0, x1) und hinten=(x0, x1), ab Zeile
     bauch) werden in Ober- und Unterschenkel (Grenze knie) geteilt und schwingen um Schulter bzw. Hüfte
     (Zeile schulter, Standard bauch − 3). Die Beine der anderen Seite sind abgedunkelte Kopien, um versatz
     Pixel nach hinten verschoben. Schrittfolge wie beim Katzengang: hinten nah, vorne nah, hinten fern,
-    vorne fern, je eine Vierteldrehung versetzt. Der Körper bleibt ruhig, die Pfoten bleiben am Boden."""
+    vorne fern, je eine Vierteldrehung versetzt. Jedes Bein steht 60 Prozent des Umlaufs am Boden und
+    gleitet dabei gleichmäßig nach hinten, im Rest hebt es ab und schwingt vor. Der Körper bleibt ruhig
+    (wippen=True: ein Pixel auf und ab)."""
     a = np.asarray(sprite_rgba.convert("RGBA"))
     h, w = a.shape[:2]
     deckt = a[..., 3] > 0
@@ -529,11 +534,13 @@ def vierbeiner(sprite_rgba, bauch, knie, vorne, hinten, schulter=None, bilder=8,
         beine.append(([ober, unter], gelenke))
 
     def bein(out, teile, gelenke, ober_w, unter_w, faktor, dx):
+        # schräges Bein wird kürzer: so weit absenken, dass die Pfote am Boden bleibt
+        dy = int((boden - gelenke[0][1]) * (1 - math.cos(ober_w))) if unter_w == ober_w else 0
         knie_neu = gelenke[0] + np.array([math.sin(ober_w), math.cos(ober_w)]) * (gelenke[1][1] - gelenke[0][1]) \
             + np.array([gelenke[1][0] - gelenke[0][0], 0.0])
         for teil, z, lage, wink in ((teile[0], gelenke[0], gelenke[0], ober_w), (teile[1], gelenke[1], knie_neu, unter_w)):
             c, s_ = math.cos(wink), math.sin(wink)
-            ddx, ddy = px - lage[0] - dx, py - lage[1]
+            ddx, ddy = px - lage[0] - dx, py - lage[1] - dy
             sx = z[0] + c * ddx - s_ * ddy
             sy = z[1] + s_ * ddx + c * ddy
             ix, iy = np.floor(sx).astype(int), np.floor(sy).astype(int)
@@ -543,27 +550,35 @@ def vierbeiner(sprite_rgba, bauch, knie, vorne, hinten, schulter=None, bilder=8,
             farbe[..., :3] *= faktor
             out[t] = farbe[t].astype(np.uint8)
 
-    boden = np.nonzero(deckt.any(1))[0].max()
+    boden = np.nonzero(deckt.any(1))[0].max() + 1
+
+    def gang(phase):
+        """Schulter- und Kniewinkel: 60 Prozent Stand (Pfote gleitet gleichmäßig nach hinten, Bein
+        gerade), 40 Prozent Schwung (Bein hebt sich, Unterschenkel knickt nach hinten, schwingt vor)."""
+        p = (phase / (2 * math.pi)) % 1.0
+        A = math.radians(schritt)
+        if p < STAND:
+            ober = A * (1 - 2 * p / STAND)                   # +A → −A, gleichmäßig
+            knick = 0.0
+        else:
+            q = (p - STAND) / (1 - STAND)
+            ober = -A + 2 * A * (0.5 - 0.5 * math.cos(math.pi * q))   # weich zurück nach vorn
+            knick = math.radians(beuge) * math.sin(math.pi * q)
+        return ober, ober - knick
+
     frames = []
     for i in range(bilder):
         t = 2 * math.pi * i / bilder
         out = np.zeros((H, W, 4), np.uint8)
-        # fern zuerst (dunkel, versetzt), dann Körper, dann nah
-        folge = [(1, math.pi, dunkel, -versatz), (0, 1.5 * math.pi, dunkel, -versatz)]
-        for nr, ph, f, dx in folge:
-            phase = t + ph
-            ow = math.radians(schritt) * math.sin(phase)
-            bein(out, *beine[nr], ow, ow - math.radians(beuge) * max(0.0, math.cos(phase)),
-                 f, dx)
+        # Katzengang: hinten nah 0, vorne nah 1/4, hinten fern 1/2, vorne fern 3/4 Umlauf
+        for nr, ph, f, dx in ((1, 1.5 * math.pi, dunkel, -versatz), (0, math.pi, dunkel, -versatz)):
+            bein(out, *beine[nr], *gang(t + ph), f, dx)
         k = np.zeros((H, W, 4), np.uint8); k[rand:rand + h, rand:rand + w] = koerper
+        if wippen:   # ein Pixel auf und ab, zweimal je Umlauf (jedes Beinpaar trägt einmal)
+            k = np.roll(k, -int(round(0.5 - 0.5 * math.cos(2 * t))), axis=0)
         sicht = k[..., 3] > 0; out[sicht] = k[sicht]
         for nr, ph in ((0, 0.0), (1, 0.5 * math.pi)):
-            phase = t + ph
-            ow = math.radians(schritt) * math.sin(phase)
-            bein(out, *beine[nr], ow, ow - math.radians(beuge) * max(0.0, math.cos(phase)),
-                 1.0, 0)
-        tief = np.nonzero(out[..., 3].any(1))[0].max()
-        out = np.roll(out, (boden + rand) - tief, axis=0)
+            bein(out, *beine[nr], *gang(t + ph), 1.0, 0)
         frames.append(out)
     return frames
 
@@ -877,6 +892,7 @@ def main():
     vb.add_argument("--schritt", type=float, default=22)
     vb.add_argument("--beuge", type=float, default=35)
     vb.add_argument("--versatz", type=int, default=3, help="Beine der anderen Seite so weit nach hinten")
+    vb.add_argument("--wippen", action="store_true", help="Körper wippt ein Pixel auf und ab")
     vb.add_argument("--ms", type=int, default=110)
     vb.add_argument("--vorschau", type=int, default=0)
     pk = sub.add_parser("paket", help="Bewegungen einer Figur zu Sprite-Sheet und JSON für Godot")
@@ -910,7 +926,7 @@ def main():
         else:
             paar = [tuple(int(v) for v in x.split(",")) for x in (arg.vorne, arg.hinten)]
             bilder = vierbeiner(Image.open(arg.sprite), arg.bauch, arg.knie, paar[0], paar[1], arg.schulter,
-                                arg.bilder, arg.schritt, arg.beuge, versatz=arg.versatz)
+                                arg.bilder, arg.schritt, arg.beuge, versatz=arg.versatz, wippen=arg.wippen)
         Image.fromarray(np.concatenate(bilder, axis=1), "RGBA").save(arg.ziel)
         h, w = bilder[0].shape[:2]
         if arg.vorschau:
