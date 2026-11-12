@@ -8,8 +8,8 @@
 [ext_resource type="Texture2D" uid="uid://dtr5ubt78opx6" path="res://grafik/props/zapp_o_mat.png" id="6_mcqit"]
 [ext_resource type="Texture2D" uid="uid://chgu62dg1q2uh" path="res://grafik/props/dosenoeffner.png" id="8_mcqit"]
 [ext_resource type="PackedScene" uid="uid://bjk8jriso305i" path="res://game/rooms/dachboden/props/dosenoeffner/prop_dosenoeffner.tscn" id="9_mcqit"]
+[ext_resource type="Texture2D" uid="uid://b76i6rlg8kc1v" path="res://grafik/props/drahtkleiderbuegel.png" id="10_mcqit"]
 [ext_resource type="PackedScene" uid="uid://b5svirsswb2vx" path="res://game/rooms/dachboden/props/drahtkleiderbuegel/prop_drahtkleiderbuegel.tscn" id="11_m8m18"]
-[ext_resource type="Texture2D" uid="uid://lsqfenf4v86n" path="res://grafik/platzhalter/prop_drahtkleiderbuegel.png" id="12_8pmei"]
 [ext_resource type="PackedScene" uid="uid://5svegdj15ha8" path="res://game/rooms/dachboden/hotspots/drehknopf/hotspot_drehknopf.tscn" id="13_37hlm"]
 [ext_resource type="PackedScene" uid="uid://8sm6r4cjgrif" path="res://game/rooms/dachboden/hotspots/werkzeugkiste/hotspot_werkzeugkiste.tscn" id="14_02ndx"]
 [ext_resource type="PackedScene" uid="uid://ccq6cyj6k2lgv" path="res://game/rooms/dachboden/hotspots/kleiderschrank/hotspot_kleiderschrank.tscn" id="15_2q74p"]
@@ -49,6 +49,7 @@ height = 360
 [node name="WalkableAreas" type="Node2D" parent="." unique_id=1697259850]
 
 [node name="Boden" parent="WalkableAreas" unique_id=1447233398 instance=ExtResource("2_8cb7j")]
+interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(160, 357, 160, 290, 218, 284, 300, 284, 302, 262, 250, 262, 245, 252, 262, 238, 455, 238, 460, 255, 520, 258, 525, 280, 600, 285, 635, 290, 635, 357)])
 
 [node name="Props" type="Node2D" parent="." unique_id=1697276889]
 
@@ -71,12 +72,12 @@ position = Vector2(243, 195)
 texture = ExtResource("8_mcqit")
 description = "UI_OBJ_DOSENOEFFNER"
 baseline = 9
-walk_to_point = Vector2(7, 67)
+walk_to_point = Vector2(9, 61)
 interaction_polygon = PackedVector2Array(-9, -9, 9, -9, 9, 9, -9, 9)
 
 [node name="Drahtkleiderbuegel" parent="Props" unique_id=505759806 instance=ExtResource("11_m8m18")]
 position = Vector2(613.5, 134.5)
-texture = ExtResource("12_8pmei")
+texture = ExtResource("10_mcqit")
 description = "UI_OBJ_DRAHTKLEIDERBUEGEL"
 baseline = 9
 walk_to_point = Vector2(-13.5, 155.5)
@@ -137,7 +138,7 @@ interaction_polygon = PackedVector2Array(-30, -40, 30, -40, 30, 40, -30, 40)
 position = Vector2(187.5, 117.5)
 description = "UI_OBJ_TOASTER"
 baseline = 12
-walk_to_point = Vector2(42.5, 157.5)
+walk_to_point = Vector2(64.5, 138.5)
 interaction_polygon = PackedVector2Array(-17.5, -12.5, 17.5, -12.5, 17.5, 12.5, -17.5, 12.5)
 
 [node name="OpasStaubsaugerPrototyp" parent="Hotspots" unique_id=1446933935 instance=ExtResource("21_iust8")]
@@ -151,7 +152,7 @@ interaction_polygon = PackedVector2Array(-29, -57.5, 29, -57.5, 29, 57.5, -29, 5
 position = Vector2(224, 110)
 description = "UI_OBJ_KOCHBUCH"
 baseline = 20
-walk_to_point = Vector2(21, 148)
+walk_to_point = Vector2(31, 146)
 interaction_polygon = PackedVector2Array(-12, -20, 12, -20, 12, 20, -12, 20)
 
 [node name="Plattenspieler" parent="Hotspots" unique_id=1755752097 instance=ExtResource("23_kk6l1")]
@@ -172,7 +173,7 @@ interaction_polygon = PackedVector2Array(-34, -50, 34, -50, 34, 50, -34, 50)
 position = Vector2(155, 172.5)
 description = "UI_OBJ_WERKBANK"
 baseline = 27
-walk_to_point = Vector2(80, 102.5)
+walk_to_point = Vector2(100, 83.5)
 interaction_polygon = PackedVector2Array(-95, -27.5, 95, -27.5, 95, 27.5, -95, 27.5)
 
 [node name="Dachfenster" parent="Hotspots" unique_id=42943460 instance=ExtResource("26_h7vyx")]
@@ -194,7 +195,7 @@ interaction_polygon = PackedVector2Array(-86.5, -25, 86.5, -25, 86.5, 25, -86.5,
 position = Vector2(187, 231)
 description = "UI_OBJ_FUNDKISTE"
 baseline = 24
-walk_to_point = Vector2(53, 37)
+walk_to_point = Vector2(68, 27)
 interaction_polygon = PackedVector2Array(-35, -24, 35, -24, 35, 24, -35, 24)
 
 [node name="Maschine" parent="Hotspots" unique_id=526618408 instance=ExtResource("29_vyv7m")]

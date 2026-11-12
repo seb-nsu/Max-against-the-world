@@ -7,6 +7,14 @@ const Data := preload('character_pixel_state.gd')
 var state: Data = load("res://game/characters/pixel/character_pixel.tres")
 
 
+## Liegt Pixel (Bewegung „schlafen“), redet er im Liegen weiter statt kurz aufzustehen.
+func _play_talk() -> void:
+	if idle_animation == "schlafen":
+		play_animation("schlafen")
+	else:
+		super()
+
+
 ## Vor P1 schläft Pixel: Benutzen (0220), nach zwei Versuchen kommentiert Opa (0230).
 ## Nach P1 startet Linksklick das Gespräch.
 func _on_click() -> void:

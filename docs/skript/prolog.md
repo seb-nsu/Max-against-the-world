@@ -107,7 +107,7 @@ Durchgang zwischen Wohnzimmer und Dachboden, mehrere Ansehen-Objekte und die Tre
 | P0\_TREP\_MAX\_0175 | Max | Auf der größten steht „Erfindungen, halb“. Die ist so voll, dass der Deckel nicht mehr zugeht. | Ansehen: Kisten, zweites Mal |
 | P0\_TREP\_MAX\_0180 | Max | Ich mach keine auf. Was Opa unter die Treppe stellt, hat meistens einen guten Grund, da zu bleiben. | Benutzen: Kisten |
 | P0\_TREP\_MAX\_0185 | Max | Ich hab gegen eine gestupst, und drinnen hat etwas „Hallo“ gesagt. Ich geh jetzt einfach ganz normal weiter. | Benutzen: Kisten, zweites Mal |
-| P0\_TREP\_MAX\_0190 | Max | In der Tasche vom Mantel für „man weiß ja nie“ steckt eine Dose Thunfisch, und sie ist nicht mal abgelaufen. // Opa geht nie ohne Notproviant aus dem Haus. | Nehmen: Thunfischdose |
+| P0\_TREP\_MAX\_0190 | Max | Aus dem offenen Karton guckt eine Dose Thunfisch, und sie ist nicht mal abgelaufen. // Opa hortet Notproviant für den Weltuntergang. Also vermutlich für heute. | Nehmen: Thunfischdose |
 
 ## 2. Dachboden: Opas Auftrag
 
@@ -146,10 +146,10 @@ Reden mit Opa und Pixel auf dem Dachboden. Max stellt die Frage, die Antwort fol
 | P0\_DACH\_OPA\_1460 | Opa | Werbung kommt immer, Max. Das ist das Einzige im Fernsehen, auf das man sich seit fünfzig Jahren verlassen kann. |  |
 | P0\_DACH\_MAX\_1462 | Max | Toll. Mein Rückweg ist ein Joghurt-Spot. |  |
 | P0\_DACH\_MAX\_1322 | Max | Wie krieg ich Pixel vom Kabel? | Option Opa (bleibt); nur vor P1 (Hinweise zu P1 laut Spielsysteme, Wer hilft wann) |
-| P0\_DACH\_OPA\_1324 | Opa | Mit Argumenten. Er versteht genau eins, und das hab ich immer dabei, wenn ich aus dem Haus gehe. // Notproviant, Junge. In der Manteltasche, wo auch sonst. | Hinweis P1, Stufe 1 (Thunfischdose); Kaskade |
+| P0\_DACH\_OPA\_1324 | Opa | Mit Argumenten. Er versteht genau eins, und davon hab ich für Notfälle immer was im Haus. // Notproviant, Junge. In den Kisten unter der Treppe, wo auch sonst. | Hinweis P1, Stufe 1 (Thunfischdose); Kaskade |
 | P0\_DACH\_OPA\_1326 | Opa | Und die Dose ist natürlich zu. Da hilft kein gutes Zureden, da hilft nur Kurbeln. // Der Dosenöffner hängt hier oben an der Werkbank, gleich neben dem halben Regenschirm. | Hinweis P1, Stufe 2 (Dosenöffner); ersetzt 1324 beim nächsten Klick auf die Option, frühestens 30 Sekunden nach 1324; Kaskade |
-| P0\_DACH\_OPA\_1328 | Opa | Hol die Thunfischdose aus meinem Mantel im Treppenhaus und mach sie mit dem Dosenöffner von der Werkbank auf. // Dann hältst du sie dem Kater unter die Nase. Er ist schneller wach, als du „Lachs“ sagen kannst. | Hinweis P1, Stufe 3; ersetzt 1326 beim nächsten Klick auf die Option, frühestens 60 Sekunden nach 1326; vorher wiederholt Opa die letzte Stufe; Kaskade |
-| P0\_DACH\_OPA\_1520 | Opa | Der Herr wünscht Porzellan. Im ganzen Haus gibt es genau ein Stück ohne Sprung, und aus dem trinke ich jeden Tag. | Hinweis P1, zweiter Teil (Napf), Stufe 1; dieselbe Option, sobald Pixel die Dose abgelehnt hat (Schalter P0\_PIXEL\_GEWECKT) |
+| P0\_DACH\_OPA\_1328 | Opa | Hol die Thunfischdose aus den Kisten unter der Treppe und mach sie mit dem Dosenöffner von der Werkbank auf. // Dann hältst du sie dem Kater unter die Nase. Er ist schneller wach, als du „Lachs“ sagen kannst. | Hinweis P1, Stufe 3; ersetzt 1326 beim nächsten Klick auf die Option, frühestens 60 Sekunden nach 1326; vorher wiederholt Opa die letzte Stufe; Kaskade |
+| P0\_DACH\_OPA\_1520 | Opa | Der Herr wünscht Porzellan. Ich wüsste da genau ein Stück im Haus, aber an dem hängt mein Herz. Und mein Nachmittag. | Hinweis P1, zweiter Teil (Napf), Stufe 1; dieselbe Option, sobald Pixel die Dose abgelehnt hat (Schalter P0\_PIXEL\_GEWECKT) |
 | P0\_DACH\_OPA\_1524 | Opa | Meine Teetasse steht unten im Wohnzimmer auf dem Couchtisch. Der Tee darin ist kalt, den vermisst keiner. | Hinweis P1, zweiter Teil, Stufe 2; frühestens 30 Sekunden nach 1520 |
 | P0\_DACH\_OPA\_1528 | Opa | Hol meine Teetasse aus dem Wohnzimmer und füll den Thunfisch aus der Dose hinein. // Dann stellst du sie dem Kater hin. Mit Untertasse wäre es stilvoller, aber die hab ich verbaut. | Hinweis P1, zweiter Teil, Stufe 3; frühestens 60 Sekunden nach 1524; Kaskade |
 | P0\_DACH\_MAX\_1330 | Max | Warum eigentlich ich? | Option Opa |
@@ -201,9 +201,10 @@ Reden mit Opa und Pixel auf dem Dachboden. Max stellt die Frage, die Antwort fol
 | P0\_DACH\_PIX\_0360 | Pixel | In Lake. Natürlich. Man serviert einem Kater meines Ranges Fisch in Salzwasser, als wäre er ein gewöhnlicher Hafenkater. // Und dann auch noch aus der Dose, junger Mann. Aus dem Blech esse ich nicht, das liegt unter meinem Niveau. | rührt die Dose nicht an |
 | P0\_DACH\_MAX\_0362 | Max | Du hast eben noch auf einem Stromkabel geschlafen. |  |
 | P0\_DACH\_PIX\_0364 | Pixel | Auf einem warmen Stromkabel, das ist ein Unterschied. Ich esse von Porzellan oder gar nicht. // Weck mich wieder, wenn angerichtet ist. | legt den Kopf wieder ab, bleibt auf dem Kabel |
-| P0\_DACH\_OPA\_0366 | Opa | Porzellan haben wir. Irgendwo steht bestimmt noch eine Tasse von mir herum, ich koch mir ja jeden Tag einen Tee. | überlegt laut |
+| P0\_DACH\_OPA\_0366 | Opa | Porzellan? Das gute Geschirr hab ich vor Jahren zu Isolatoren umgebaut. Bis auf ein einziges Stück, und das rück ich nicht raus. | brummt |
 | P0\_DACH\_MAX\_0367 | Max | Bitte sehr: Thunfisch an kaltem Tee, serviert in Opas Teetasse. | Gefüllte Teetasse auf Pixel; löst P1, weiter mit 0368 bis 0390 |
 | P0\_DACH\_PIX\_0368 | Pixel | Fisch an Schwarztee, in Porzellan mit Goldrand. So serviert man einem Kater. // Gib her, bevor ich es mir anders überlege. | frisst, wechselt vom Kabel auf die Werkbank |
+| P0\_DACH\_OPA\_0369 | Opa | Meine Teetasse! Die mit dem Goldrand, aus der trinke ich seit dreißig Jahren meinen Nachmittagstee! // Die spül ich dreimal. Mindestens. | sieht Pixel aus der Tasse fressen |
 | P0\_DACH\_OPA\_0370 | Opa | Er ist wach! Wunderbar. Pixel kommt mit dir, Max. Er kennt jede Sendung, die je gelaufen ist, und er kennt alle Antworten. | schaltet nebenbei den Zapp-O-Mat ein, der Bildschirm rauscht |
 | P0\_DACH\_PIX\_0380 | Pixel | Ich kenne tatsächlich alle Antworten. Ich gebe sie nur ungern heraus, denn Wissen sollte man, genau wie Thunfisch, nicht verschwenden. // Wer also festhängt, darf meine Pfote drücken. Höflich, bitte. Und nicht zu oft. | Hilfe-Pfote leuchtet zum ersten Mal auf, Kaskade |
 | P0\_DACH\_MAX\_0390 | Max | Ein Kater mit eingebauter Hilfefunktion. Ich hab schon Schlimmeres heruntergeladen. |  |
@@ -399,8 +400,8 @@ Rechtsklick auf einen Gegenstand in der Inventarleiste. Das Notizbuch öffnet si
 | P0\_INV\_MAX\_0055 | Max | Wenn ich ihn hochhalte, empfange ich vielleicht Radio, Außerirdische oder Opas Lieblingssender. Bei Opa ist das alles dasselbe. | Ansehen: Drahtkleiderbügel, antenne, zweites Mal |
 | P0\_INV\_MAX\_0060 | Max | Opas Reisetasche. Sie riecht nach altem Leder und ganz leicht nach Thunfisch. Ich glaube, Pixel hat schon mal drin geschlafen. | Ansehen: Reisetasche |
 | P0\_INV\_MAX\_0065 | Max | Innen klebt ein Zettel: „Max. Nicht verlieren.“ Ich weiß nicht genau, ob die Tasche gemeint ist oder ich. | Ansehen: Reisetasche, zweites Mal |
-| P0\_INV\_MAX\_0070 | Max | Thunfisch in Opas Teetasse? So tief bin ich noch nicht gesunken. | Offene Thunfischdose mit Teetasse; solange Pixel die Dose nicht abgelehnt hat |
-| P0\_INV\_MAX\_0072 | Max | Thunfisch zum kalten Tee. Das ist jetzt entweder ein Napf oder das schlimmste Getränk der Welt. | Offene Thunfischdose mit Teetasse; nach dem Wecken, die Tasse ist danach gefüllt |
+| P0\_INV\_MAX\_0070 | Max | Thunfisch in Opas Teetasse? So tief bin ich noch nicht gesunken. | Geschlossene Thunfischdose mit Teetasse |
+| P0\_INV\_MAX\_0072 | Max | Thunfisch zum kalten Tee. Das ist jetzt entweder ein Napf oder das schlimmste Getränk der Welt. | Offene Thunfischdose mit Teetasse, jederzeit; die Tasse ist danach gefüllt |
 | P0\_INV\_MAX\_0080 | Max | Opas Teetasse, mit kaltem Tee und einem halben Keks am Grund. Ich trag sie so vorsichtig wie ein rohes Ei. | Ansehen: Teetasse, kalt |
 | P0\_INV\_MAX\_0085 | Max | Innen hat die Tasse braune Ränder wie die Jahresringe von einem Baum. Oma sagt, Opa spült sie nur zu Weihnachten. | Ansehen: Teetasse, kalt, zweites Mal |
 | P0\_INV\_MAX\_0090 | Max | Thunfisch in kaltem Tee. In der Schulmensa hab ich schon Schlimmeres gesehen, aber nicht oft. | Ansehen: Teetasse, gefuellt |

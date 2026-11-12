@@ -508,7 +508,9 @@ P0_DACH_OPA_0155,"Since this morning. Or since Tuesday. When you're inventing, t
 P0_DACH_OPA_0160,"Never mind! First the cat has to get off the cable. The cat, model Pixel, year of manufacture unknown. He's lying on my power."
 P0_DACH_OPA_0230,You won't shift him like that. That cat sleeps like a rock. Like a very offended rock.
 P0_DACH_OPA_0300,"Ah, he's alive! Hang on, I'll switch his speaker on."
-P0_DACH_OPA_0366,"China we have. There's bound to be a cup of mine standing around somewhere, I make myself a tea every day after all."
+P0_DACH_OPA_0366,"China? I turned the good dishes into insulators years ago. All except one single piece, and that one I'm not handing over."
+P0_DACH_OPA_0369,"My teacup! The one with the gold rim, I've been drinking my afternoon tea from it for thirty years!"
+P0_DACH_OPA_0369_2,I'll wash it three times. At least.
 P0_DACH_OPA_0370,"He's awake! Wonderful. Pixel's going with you, Max. He knows every programme that ever aired, and he knows all the answers."
 P0_DACH_OPA_0440,"The aerial's missing! My reception organ, model coat hanger. I lent it to someone. Or built it into something. One of the two."
 P0_DACH_OPA_0500,We have a picture! Now all we need is the right channel. Which one was it again?
@@ -522,11 +524,11 @@ P0_DACH_OPA_1140,Don't turn the dial before there's a picture! The ad break is f
 P0_DACH_OPA_1140_2,Five seconds of a milk advert and you're back here. Nobody knows why.
 P0_DACH_OPA_1160,"Not for me, thanks. I've already had tea. Some time this week."
 P0_DACH_OPA_1320,"A TV that sends you to wherever the programme is set. The ad break brings you back, and please don't ask me why."
-P0_DACH_OPA_1324,"With arguments. He understands exactly one, and I always have it on me when I leave the house."
-P0_DACH_OPA_1324_2,"Emergency rations, lad. In my coat pocket, where else."
+P0_DACH_OPA_1324,"With arguments. He understands exactly one, and I always keep some in the house for emergencies."
+P0_DACH_OPA_1324_2,"Emergency rations, lad. In the boxes under the stairs, where else."
 P0_DACH_OPA_1326,"And the tin is closed, of course. Sweet talk won't help there, only cranking will."
 P0_DACH_OPA_1326_2,"The tin opener is hanging up here on the workbench, right next to the half umbrella."
-P0_DACH_OPA_1328,Fetch the tuna tin from my coat in the stairwell and open it with the tin opener from the workbench.
+P0_DACH_OPA_1328,Fetch the tuna tin from the boxes under the stairs and open it with the tin opener from the workbench.
 P0_DACH_OPA_1328_2,"Then hold it under the cat's nose. He'll be awake before you can say ""salmon""."
 P0_DACH_OPA_1340,"Because right now you're the only one in the house with nothing to do. And because I trust you, lad. That too."
 P0_DACH_OPA_1360,"Anything you touch without looking at it first. Looking is free, boy. Touching sometimes costs you your eyebrows."
@@ -534,7 +536,7 @@ P0_DACH_OPA_1364,"The circle? Oh, that. That's … a circle. Circles are importa
 P0_DACH_OPA_1380,"Off you go, then. The TV isn't going anywhere. I hope."
 P0_DACH_OPA_1460,"Adverts always come, Max. It's the only thing on TV you've been able to rely on for fifty years."
 P0_DACH_OPA_1480,"You're welcome. And don't look at me like that. I had nothing to do at your age either, and look what became of me."
-P0_DACH_OPA_1520,"His lordship requires china. There is exactly one piece in this whole house without a crack, and I drink from it every day."
+P0_DACH_OPA_1520,"His lordship requires china. I know of exactly one piece in this house, but my heart is attached to it. And my afternoon."
 P0_DACH_OPA_1524,"My teacup is downstairs in the living room, on the coffee table. The tea in it is cold, nobody will miss it."
 P0_DACH_OPA_1528,Fetch my teacup from the living room and tip the tuna from the tin into it.
 P0_DACH_OPA_1528_2,"Then put it down in front of the cat. A saucer would be classier, but I built mine into something."
@@ -657,8 +659,8 @@ P0_TREP_MAX_0170,"Crates under the stairs. One says ""Inventions, finished"", an
 P0_TREP_MAX_0175,"The biggest one says ""Inventions, half"". It's so full the lid won't close any more."
 P0_TREP_MAX_0180,"I'm not opening any. When Grandpa puts something under the stairs, there's usually a good reason for it to stay there."
 P0_TREP_MAX_0185,"I nudged one, and something inside said ""Hello"". I'm just going to keep walking like normal."
-P0_TREP_MAX_0190,"In the pocket of the ""you never know"" coat there's a tin of tuna, and it's not even out of date."
-P0_TREP_MAX_0190_2,Grandpa never leaves the house without emergency rations.
+P0_TREP_MAX_0190,"There's a tin of tuna poking out of the open box, and it's not even out of date."
+P0_TREP_MAX_0190_2,Grandpa stockpiles rations for the end of the world. So probably for today.
 P0_TREP_OPA_0126,Hands off the umbrella!
 P0_WOHN_MAX_0002,"I'm Max, and I'm staying at Grandpa's at the moment. Grandpa is an inventor."
 P0_WOHN_MAX_0002_2,"So everything at his place works a bit differently, and most of it doesn't work at all."

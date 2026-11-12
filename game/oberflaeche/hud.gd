@@ -5,6 +5,8 @@ extends CanvasLayer
 ## Umschalttaste (Controller: X oder linker Trigger), auf Wunsch mit Namen (Barrierefreiheit). Die endgültige Oberfläche entsteht nach dem freigegebenen Mockup.
 
 const PLATZHALTER := "res://grafik/platzhalter/"
+## Echte Oberflächengrafik hat Vorrang vor dem Platzhalter (gleicher Dateiname).
+const ECHT := "res://grafik/oberflaeche/"
 const THEMA := "res://game/gui/resources/gui_theme.tres"
 
 var _max: TextureButton
@@ -85,7 +87,7 @@ func aktualisieren() -> void:
 	var bild := "ui_pfote_aus.png"
 	if Hinweise.pfote_aktiv():
 		bild = "ui_pfote_leuchtet.png" if Hinweise.leuchtet() else "ui_pfote.png"
-	_pfote.texture_normal = load(PLATZHALTER + bild)
+	_pfote.texture_normal = _bild(bild)
 	_pfote.disabled = not Hinweise.pfote_aktiv()
 
 
@@ -115,7 +117,7 @@ func _pfote_geklickt() -> void:
 
 func _knopf(eltern: Control, bild: String, pos: Vector2, name_key: String) -> TextureButton:
 	var k := TextureButton.new()
-	k.texture_normal = load(PLATZHALTER + bild)
+	k.texture_normal = _bild(bild)
 	k.position = pos
 	k.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
 	k.focus_mode = Control.FOCUS_NONE  # Fokus gehört den Menüs (Controller)
@@ -149,3 +151,7 @@ class _HotspotPunkte extends Control:
 						Color(0.09, 0.08, 0.15))
 					draw_string(schrift, ort, text, HORIZONTAL_ALIGNMENT_LEFT, -1, groesse,
 						Color(0.99, 0.9, 0.38))
+
+
+func _bild(datei: String) -> Texture2D:
+	return load(ECHT + datei) if ResourceLoader.exists(ECHT + datei) else load(PLATZHALTER + datei)
