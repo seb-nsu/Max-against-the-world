@@ -564,6 +564,47 @@ def animieren(sprite_pfad, rig_pfad, ordner, vorschau=0):
         print(ordner / f"{stamm}_{name}.png", len(bilder), "Bilder je", w, "×", h)
 
 
+def paket(spez_pfad, bild_ziel, json_ziel):
+    """Alle Bewegungen einer Figur in ein Sprite-Sheet für Godot (eine Zeile, gleich große Bilder).
+    spez: {"animationen": {"idle": {"streifen": "pfad.png", "bilder": 4, "ms": 250, "schleife": true}, …}}
+    Jeder Streifen wird als Ganzes ausgerichtet: Fußpunkt = unterste deckende Zeile, waagrecht die Mitte
+    des Oberkörpers (so bleibt das Wippen innerhalb einer Bewegung erhalten). Ergebnis: Fußpunkt unten
+    in der Bildmitte; die JSON-Datei nennt je Bewegung das erste Bild, die Zahl, die Dauer und ob sie
+    sich wiederholt."""
+    spez = json.loads(Path(spez_pfad).read_text(encoding="utf-8"))
+    basis = Path(spez_pfad).parent
+    teile = []
+    for name, a in spez["animationen"].items():
+        streifen = np.asarray(Image.open(basis / a["streifen"]).convert("RGBA"))
+        n = a["bilder"]; w = streifen.shape[1] // n
+        bilder = [streifen[:, i * w:(i + 1) * w] for i in range(n)]
+        deckend = np.any([b[..., 3] > 0 for b in bilder], axis=0)
+        ys = np.nonzero(deckend.any(1))[0]
+        oben, boden = ys[0], ys[-1]
+        hoch = boden - oben + 1
+        zone = deckend[boden - int(hoch * 0.75):boden - int(hoch * 0.45)]
+        mitte = np.nonzero(zone)[1].mean()
+        xs = np.nonzero(deckend.any(0))[0]
+        teile.append((name, a, bilder, oben, boden, mitte, xs[0], xs[-1]))
+    H = int(max(boden - oben + 1 for _, _, _, oben, boden, *_ in teile)) + 2
+    halb = max(max(mitte - links, rechts + 1 - mitte) for *_, mitte, links, rechts in teile)
+    W = int(np.ceil(halb)) * 2 + 2
+    blatt, info, nr = [], {}, 0
+    for name, a, bilder, oben, boden, mitte, links, rechts in teile:
+        for b in bilder:
+            f = np.zeros((H, W, 4), np.uint8)
+            dx = int(round(W / 2 - mitte)); dy = H - 1 - boden
+            ys, xs = np.nonzero(b[..., 3] > 0)
+            f[ys + dy, xs + dx] = b[ys, xs]
+            blatt.append(f)
+        info[name] = {"von": nr, "bilder": len(bilder), "ms": a.get("ms", 150), "schleife": a.get("schleife", True)}
+        nr += len(bilder)
+    Image.fromarray(np.concatenate(blatt, axis=1), "RGBA").save(bild_ziel)
+    Path(json_ziel).write_text(json.dumps({"bild": [W, H], "animationen": info}, indent=1, ensure_ascii=False) + "\n",
+                               encoding="utf-8")
+    print(bild_ziel, nr, "Bilder je", W, "×", H)
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     sub = ap.add_subparsers(dest="befehl", required=True)
@@ -590,6 +631,8 @@ def main():
     z.add_argument("--vorschau", type=int, default=0)
     z.add_argument("--ms", type=int, default=110)
     z.add_argument("--bilder", type=int, default=0, help="erwartete Zahl der Figuren auf dem Blatt")
+    pk = sub.add_parser("paket", help="Bewegungen einer Figur zu Sprite-Sheet und JSON für Godot")
+    pk.add_argument("spez"); pk.add_argument("bild"); pk.add_argument("json")
     n = sub.add_parser("nacharbeit", help="Pixel aus einer JSON-Liste [[x, y, \"rrggbb\"], …] setzen")
     n.add_argument("sprite"); n.add_argument("pixel"); n.add_argument("ziel")
     r = sub.add_parser("raster")
@@ -631,6 +674,8 @@ def main():
                 blatt.paste(g, (i * w * v, 0))
             blatt.save(stamm + "_blatt.png")
         print(arg.ziel, len(bilder), "Bilder je", w, "×", h)
+    elif arg.befehl == "paket":
+        paket(arg.spez, arg.bild, arg.json)
     elif arg.befehl == "nacharbeit":
         a = auflage_anwenden(np.asarray(Image.open(arg.sprite).convert("RGBA")),
                              json.loads(Path(arg.pixel).read_text(encoding="utf-8")))
