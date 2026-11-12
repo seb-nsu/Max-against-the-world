@@ -253,6 +253,12 @@ func _unter_schliessen() -> void:
 		_unter.queue_free()
 	_unter = null
 	_haupt.show()
+	# Auf der Laden-Seite können Spielstände gelöscht worden sein: Fortsetzen neu bestimmen
+	_neuester = Spielstand.neuester_platz()
+	_knoepfe[0].disabled = _neuester < 0
+	if _kanal == 0 and _neuester < 0:
+		_kanal = 1
+	_kanal_waehlen(_kanal, true)
 	_knoepfe[_kanal].grab_focus.call_deferred()
 
 

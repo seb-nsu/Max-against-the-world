@@ -1,6 +1,6 @@
 extends SceneTree
 ## Bildschirmfotos der Menüs (nicht headless): Epilepsie-Hinweis, Hauptmenü, Optionen (Audio,
-## Anzeige, Steuerung, Barrierefreiheit), Pausemenü über dem Wohnzimmer, Speichern-Bildschirm.
+## Anzeige, Steuerung, Barrierefreiheit), Pausemenü über dem Wohnzimmer, Speichern-Bildschirm, Löschmodus.
 ##
 ## Aufruf (aus dem Ordner game/, unter Linux ohne Bildschirm mit xvfb-run):
 ##   xvfb-run -s "-screen 0 1920x1080x24" godot --path . --rendering-driver opengl3 \
@@ -65,6 +65,11 @@ func _lauf() -> void:
 	spiel._pause._unter._gewaehlt_von(1, false)
 	await _warte(0.5)
 	await _foto("menue_9_speichern")
+	# Löschmodus mit offener Nachfrage (gelöscht wird erst beim zweiten Klick)
+	spiel._pause._unter._loeschmodus(true)
+	spiel._pause._unter._gewaehlt_von(1, true)
+	await _warte(0.3)
+	await _foto("menue_10_loeschen")
 	spiel.pause_schliessen()
 	quit(0)
 

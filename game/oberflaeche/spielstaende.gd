@@ -2,11 +2,13 @@ extends Control
 ## Speichern und Laden (05-spielsysteme.md, Bildschirme): zwölf Plätze mit Vorschaubild, Ort,
 ## Welt, Spielzeit und Datum. Beim Laden stehen darunter auch Schnellspeicher und die drei
 ## Autospeicher. Ein belegter Platz wird erst beim zweiten Klick überschrieben.
+## „Löschen“ schaltet in den Löschmodus: Platz wählen, zum Bestätigen noch mal klicken.
 
 signal zurueck
 ## Ein Platz wurde gewählt: Laden übernimmt der Aufrufer (Menüs schließen, dann laden)
 signal geladen_werden(slot: int)
 signal gespeichert(slot: int)
+signal geloescht(slot: int)
 
 const S := preload("res://oberflaeche/menue_stil.gd")
 const KACHEL := Vector2(181, 51)
@@ -15,6 +17,9 @@ const BILD := Vector2(64, 36)
 var modus := "laden"   # oder "speichern"
 var _hinweis: Label
 var _gewaehlt := -1
+## Löschmodus: ein Klick auf einen belegten Platz fragt nach, der zweite löscht
+var _loeschen := false
+var _loeschen_knopf: Button
 
 
 func _ready() -> void:
@@ -23,9 +28,10 @@ func _ready() -> void:
 	_aufbauen()
 
 
-func _aufbauen() -> void:
+func _aufbauen(fokus_loeschen := false) -> void:
 	for k in get_children():
 		k.queue_free()
+	_loeschen_knopf = null
 	var p := S.panel(Vector2(16, 8), Vector2(608, 344))
 	add_child(p)
 	var titel := S.label(tr("UI_MENUE_SPEICHERN" if modus == "speichern" else "UI_MENUE_LADEN"), 12)
@@ -38,15 +44,28 @@ func _aufbauen() -> void:
 	for i in plaetze.size():
 		var pos := Vector2(13 + (i % 3) * (KACHEL.x + 13), 32 + (i / 3) * (KACHEL.y + 4))
 		p.add_child(_kachel(plaetze[i], pos))
-	_hinweis = S.label("", 8, S.GELB)
+	_hinweis = S.label(tr("UI_LOESCHEN_WAEHLEN") if _loeschen else "", 8, S.GELB)
 	_hinweis.position = Vector2(13, 315)
 	p.add_child(_hinweis)
+	if _loeschen or _belegte(plaetze) > 0:
+		_loeschen_knopf = S.knopf(tr("UI_LOESCHEN_ABBRECHEN" if _loeschen else "UI_LOESCHEN"))
+		_loeschen_knopf.position = Vector2(384, 309)
+		_loeschen_knopf.custom_minimum_size = Vector2(104, 0)
+		_loeschen_knopf.pressed.connect(_loeschmodus.bind(not _loeschen))
+		p.add_child(_loeschen_knopf)
 	var zu := S.knopf(tr("UI_MENUE_ZURUECK"))
 	zu.position = Vector2(496, 309)
 	zu.custom_minimum_size = Vector2(96, 0)
 	zu.pressed.connect(func(): zurueck.emit())
 	p.add_child(zu)
-	zu.grab_focus.call_deferred()
+	if fokus_loeschen and _loeschen_knopf:
+		_loeschen_knopf.grab_focus.call_deferred()
+	else:
+		zu.grab_focus.call_deferred()
+
+
+func _belegte(plaetze: Array) -> int:
+	return plaetze.filter(func(s): return FileAccess.file_exists(CQSaveLoad.platz_pfad(s))).size()
 
 
 func _kachel(slot: int, pos: Vector2) -> Control:
@@ -54,12 +73,14 @@ func _kachel(slot: int, pos: Vector2) -> Control:
 	var k := Button.new()
 	k.position = pos
 	k.size = KACHEL
-	k.add_theme_stylebox_override("normal", S.flaeche(S.FELD, S.AKTIV, 1))
-	k.add_theme_stylebox_override("hover", S.flaeche(S.AKTIV, S.GELB, 1))
-	k.add_theme_stylebox_override("focus", S.flaeche(S.AKTIV, S.GELB, 1))
+	# Im Löschmodus orange umrandet, damit der Modus nicht übersehen wird
+	var hervor := S.ORANGE if _loeschen else S.GELB
+	k.add_theme_stylebox_override("normal", S.flaeche(S.FELD, S.ORANGE if _loeschen and not kopf.is_empty() else S.AKTIV, 1))
+	k.add_theme_stylebox_override("hover", S.flaeche(S.AKTIV, hervor, 1))
+	k.add_theme_stylebox_override("focus", S.flaeche(S.AKTIV, hervor, 1))
 	k.add_theme_stylebox_override("pressed", S.flaeche(S.HOVER, S.ORANGE, 1))
 	k.add_theme_stylebox_override("disabled", S.flaeche(S.DUNKEL, S.RAND, 1))
-	k.disabled = modus == "laden" and kopf.is_empty()
+	k.disabled = (modus == "laden" or _loeschen) and kopf.is_empty()
 	k.pressed.connect(_gewaehlt_von.bind(slot, not kopf.is_empty()))
 	var bild := TextureRect.new()
 	bild.position = Vector2(4, 7)
@@ -123,6 +144,9 @@ static func spielzeit(kopf: Dictionary) -> String:
 
 
 func _gewaehlt_von(slot: int, belegt: bool) -> void:
+	if _loeschen:
+		_loeschen_von(slot, belegt)
+		return
 	if modus == "laden":
 		geladen_werden.emit(slot)
 		return
@@ -135,3 +159,26 @@ func _gewaehlt_von(slot: int, belegt: bool) -> void:
 		gespeichert.emit(slot)
 		_aufbauen()
 		_hinweis.text = tr("UI_GESPEICHERT")
+
+
+## Löschmodus an oder aus; die Kacheln werden neu gebaut (leere Plätze gesperrt, belegte orange).
+func _loeschmodus(an: bool) -> void:
+	_loeschen = an
+	_gewaehlt = -1
+	_aufbauen(true)
+
+
+func _loeschen_von(slot: int, belegt: bool) -> void:
+	if not belegt:
+		return
+	if _gewaehlt != slot:
+		_gewaehlt = slot
+		_hinweis.text = tr("UI_LOESCHEN_SICHER")
+		return
+	_gewaehlt = -1
+	_loeschen = false
+	var ok: bool = Spielstand.loeschen(slot)
+	_aufbauen()
+	if ok:
+		geloescht.emit(slot)
+		_hinweis.text = tr("UI_GELOESCHT")
