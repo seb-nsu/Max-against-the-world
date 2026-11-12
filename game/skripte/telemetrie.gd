@@ -326,6 +326,10 @@ func gespeichert(platz: String) -> void:
 	ereignis("speichern", {platz = platz})
 
 
+func geloescht(platz: String) -> void:
+	ereignis("loeschen", {platz = platz})
+
+
 func geladen(platz: String) -> void:
 	_still = true  # der geladene Stand gilt als Ausgangslage, kein „gelöst“/„offen“ melden
 	ereignis("laden", {platz = platz})

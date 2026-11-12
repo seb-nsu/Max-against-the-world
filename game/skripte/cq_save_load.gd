@@ -110,6 +110,17 @@ func load_game(slot := 1) -> Dictionary:
 	return daten_anwenden(datei.popochiu)
 
 
+## Spielstand von der Platte nehmen. false, wenn es keinen gab oder er nicht löschbar war.
+func loeschen(slot: int) -> bool:
+	if not FileAccess.file_exists(platz_pfad(slot)):
+		return false
+	if DirAccess.remove_absolute(platz_pfad(slot)) != OK:
+		PopochiuUtils.print_error("Spielstand %s nicht löschbar" % platz_pfad(slot))
+		return false
+	_telemetrie("geloescht", slot)
+	return true
+
+
 func kopf_lesen(slot: int) -> Dictionary:
 	var datei := datei_lesen(slot)
 	datei.erase("popochiu")
