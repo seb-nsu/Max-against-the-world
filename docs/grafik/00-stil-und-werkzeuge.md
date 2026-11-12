@@ -62,8 +62,9 @@ Nicht nötig ist das Humble-Bundle „Ultimate AI Image Toolkit“ (Distinct AI,
 2. Prüfen und im selben Gemini-Chat nachbessern lassen statt neu zu erzeugen, je Fehler ein kurzer Satz (etwa „Make the wardrobe about 25 percent smaller.“). Prüfliste: Rückwand frontal, Boden frei und gut lesbar, Möbel klein genug (Max als Maßstab, 189 Pixel: Schrank etwa 180, Sessel etwa 90 Pixel nach dem Umwandeln), alle Hinweis-Motive wie beschrieben (Poster, Kalender), keine Schrift, keine Gegenstände, die eigene Sprites sind, keine Gesichter an Geräten.
 3. Umwandeln: `python3 tools/pixelieren.py original.jpg w0_bg_raum_v01.png 640 360` (schneidet auf 16:9 zu, verkleinert kontrastbewusst nach dem k-Centroid-Verfahren, 32 eigene Farben, entfernt Streupixel). Einfacher: das Gemini-Original an Claude schicken. Ergebnis muss genau 640×360 Pixel und höchstens 32 Farben haben. Ersatzweg Retro Diffusion (Neural Pixelate, kostenlos höchstens 512 Pixel): in zwei Hälften zu 320×360 umwandeln, Reduce colors aus, danach gemeinsam auf 32 Farben bringen.
 4. In Aseprite: Perspektive prüfen, Laufbereich frei lassen, störende Details und Schrift entfernen, Sprites (Gegenstände, die man nimmt) aus dem Bild malen. Die 32 Farben kommen schon aus dem Umwandeln; neue Pixel nur mit Farben aus dem Bild setzen.
-5. Gegenstände der Szene als Sammelbild erzeugen und ausschneiden. Die fertigen Prompts dafür stehen in derselben Datei unter `grafik/fertige-prompts/` im Teil „Gegenstände“ (weltenübergreifende in `00-weltenuebergreifend.md`); keine Skizze anhängen.
-6. In Godot einsetzen und mit Max als Platzhalter testen, ob Größen und Laufwege stimmen. Bei Boden mit Tiefe im Layout `tiefe: 0.85` eintragen (Ablauf in `game/README.md`, Abschnitt „Grafik ersetzen“).
+5. Gegenstände der Szene als Sammelbild erzeugen und ausschneiden. Die fertigen Prompts dafür stehen in derselben Datei unter `grafik/fertige-prompts/` im Teil „Gegenstände“ (weltenübergreifende in `00-weltenuebergreifend.md`); keine Skizze anhängen. Die Figuren der Welt stehen dort unter „Figuren“ (Baustein FIGURENBLATT, Max' Blatt anhängen); `vertical-slice.md` reiht alle Prompts für Prolog und Welt 1 bis Rätsel 4 in Arbeitsreihenfolge auf.
+6. Stimmigkeit prüfen: `python3 tools/stimmigkeit.py --kandidat neu.png` misst Helligkeit, Kontrast, Wärme und Sättigung gegen den Dachboden und die übrigen Räume; `--bogen bogen.png` legt alle fertigen Räume mit Max und Pixel nebeneinander. Gewollt dunkle oder kalte Räume bekommen im Layout `stimmung: dunkel` (oder `kalt`, `nacht` …).
+7. In Godot einsetzen und mit Max als Platzhalter testen, ob Größen und Laufwege stimmen. Bei Boden mit Tiefe im Layout `tiefe: 0.85` eintragen (Ablauf in `game/README.md`, Abschnitt „Grafik ersetzen“).
 
 **Text in Bildern:** Generatoren schreiben fast immer fehlerhaft. Schilder, Logo, Programmzeitschrift und Kalenderzahlen deshalb ohne Text erzeugen und die Schrift später von Hand in Aseprite setzen. Was der Spieler für ein Rätsel oder das Notizbuch lesen muss (Kalender, Satzung, Kritzeleien, Hinweiszettel, Tafeln), bekommt zusätzlich eine Nahansicht in 640×360; kurze Texte, die Max beim Ansehen vorliest (etwa Steckbrief, Opas Papyrus), bleiben normales Ansehen. Es sind genau 14 Nahansichten; welche, steht in den Welt-Tabellen (`welten/*.yaml`), die Bilder beschreiben die Grafik-Dateien (Zeile „Nahansichten“), den Bildschirm `05-spielsysteme.md`. Kleine Bildschirme in der Szene (Zapp-O-Mat, Monitorwand, Röhrenfernseher, Empfangsmonitor) bekommen kein eigenes Bild: Beim Ansehen blendet Godot den Ausschnitt doppelt vergrößert und ohne Glättung ein.
 
@@ -123,6 +124,12 @@ Pixel art small creature sprite, exactly one creature, full body, strict side vi
 
 ```text
 Pixel art large character sprite, exactly one character, full body, strict side view facing right unless the motif says left, height in pixels as given in the motif on a canvas up to 352x352, fills most of the frame, dark colored outline (not pure black), light from upper left, flat colors, plain transparent background, no ground shadow.
+```
+
+**FIGURENBLATT** (Konzeptbild für Gemini, seit 12. November 2026 der Weg für alle Nebenfiguren): Max' Konzeptblatt als Stilvorlage anhängen. Ergebnis ist eine einzige Seitenansicht nach rechts; daraus macht `tools/figur.py sprite` das Sprite, Gehen und Reden entstehen per Code. Die Größe steht im Prompt relativ zu Max (189 Pixel = 100 Prozent), damit alle Figuren zueinander passen:
+
+```text
+Character concept sheet in exactly the same style as the attached character sheet of the boy Max: same line weight, same flat cel shading, same light from upper left, plain light grey background, no text, no ground shadow. Exactly one character, full body, strict side view facing right, standing on a flat baseline, legs clearly visible.
 ```
 
 **PORTRÄT** (Dialog und Figurenwechsel, 128×128):

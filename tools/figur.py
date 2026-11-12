@@ -22,7 +22,16 @@ bringen, in Knochen zerlegen, Posen per Code. Eigene Umsetzung, damit nichts Fre
      python3 tools/figur.py raster max.png raster.png [--schritt 8] [--rig rig.json]
    vergrößert das Sprite mit nummerierten Linien, damit sich Gelenke ablesen lassen; mit --rig werden
    die Knochen eingezeichnet und die Pixel nach Knochen eingefärbt.
-Gegenstände aus einem Sammelbild (Raster aus gleich großen Zellen), je Zelle ein Sprite:
+
+4. Gehen per Code aus dem Standbild (Seitenansicht nach rechts, Zeilen mit raster ablesen):
+     python3 tools/figur.py gehen max.png gehen.png --bein-ab 150 --huefte 132 --knie 168 \\
+         [--knoechel 186] [--schritt 24] [--beuge 30] [--vorschau 4]
+     python3 tools/figur.py vierbeiner pixel.png gehen.png --bauch 53 --knie 57 \\
+         --vorne 52,61 --hinten 22,31 [--versatz 3] [--vorschau 6]
+   vierbeiner braucht ein Standbild mit allen vier Beinen gerade nach unten; nur die zwei Beine der
+   sichtbaren Seite zählen (Spalten --vorne und --hinten), die andere Seite entsteht als dunkle Kopie.
+
+5. Gegenstände aus einem Sammelbild (Raster aus gleich großen Zellen), je Zelle ein Sprite:
      python3 tools/figur.py gegenstaende sammelbild.png ordner --raster 7x1 --namen=a,b,- \\
          [--groesse 42] [--ausschnitt X,Y,B,H] [--kontur keine] [--linien 0]
    --groesse ist die längste Seite (Inventar 42, Szene kleiner), „-“ überspringt eine Zelle,
@@ -488,6 +497,77 @@ def gehen(sprite_rgba, bein_ab, huefte, knie, knoechel=None, bilder=8, schritt=2
     return frames
 
 
+def vierbeiner(sprite_rgba, bauch, knie, vorne, hinten, schulter=None, bilder=8, schritt=22.0, beuge=35.0,
+               dunkel=0.7, versatz=3):
+    """Gehzyklus für Vierbeiner (Pixel) aus einem Standbild in Seitenansicht nach rechts, alle Beine
+    gerade nach unten. Die zwei sichtbaren Beine (Spalten vorne=(x0, x1) und hinten=(x0, x1), ab Zeile
+    bauch) werden in Ober- und Unterschenkel (Grenze knie) geteilt und schwingen um Schulter bzw. Hüfte
+    (Zeile schulter, Standard bauch − 3). Die Beine der anderen Seite sind abgedunkelte Kopien, um versatz
+    Pixel nach hinten verschoben. Schrittfolge wie beim Katzengang: hinten nah, vorne nah, hinten fern,
+    vorne fern, je eine Vierteldrehung versetzt. Der Körper bleibt ruhig, die Pfoten bleiben am Boden."""
+    a = np.asarray(sprite_rgba.convert("RGBA"))
+    h, w = a.shape[:2]
+    deckt = a[..., 3] > 0
+    schulter = bauch - 3 if schulter is None else schulter
+    rand = 12
+    H, W = h + 2 * rand, w + 2 * rand
+    ys, xs = np.mgrid[0:H, 0:W]
+    px = xs - rand + 0.5; py = ys - rand + 0.5
+    quelle = a.copy()
+    beine = []
+    koerper = a.copy()
+    for x0, x1 in (hinten, vorne):
+        spalte = np.zeros_like(deckt); spalte[:, x0:x1] = True
+        ober = deckt & spalte; ober[:bauch - 4] = False; ober[knie:] = False
+        unter = deckt & spalte; unter[:knie] = False
+        koerper[bauch:, x0:x1] = 0
+
+        def mitte(y, x0=x0, x1=x1):
+            zs = np.nonzero(deckt[min(max(y, 0), h - 1), x0:x1])[0]
+            return x0 + (float(zs.mean()) if len(zs) else (x1 - x0) / 2)
+        gelenke = [np.array([mitte(bauch), schulter], float), np.array([mitte(knie), knie], float)]
+        beine.append(([ober, unter], gelenke))
+
+    def bein(out, teile, gelenke, ober_w, unter_w, faktor, dx):
+        knie_neu = gelenke[0] + np.array([math.sin(ober_w), math.cos(ober_w)]) * (gelenke[1][1] - gelenke[0][1]) \
+            + np.array([gelenke[1][0] - gelenke[0][0], 0.0])
+        for teil, z, lage, wink in ((teile[0], gelenke[0], gelenke[0], ober_w), (teile[1], gelenke[1], knie_neu, unter_w)):
+            c, s_ = math.cos(wink), math.sin(wink)
+            ddx, ddy = px - lage[0] - dx, py - lage[1]
+            sx = z[0] + c * ddx - s_ * ddy
+            sy = z[1] + s_ * ddx + c * ddy
+            ix, iy = np.floor(sx).astype(int), np.floor(sy).astype(int)
+            ok = (ix >= 0) & (ix < w) & (iy >= 0) & (iy < h)
+            t = np.zeros((H, W), bool); t[ok] = teil[iy[ok], ix[ok]]
+            farbe = quelle[iy.clip(0, h - 1), ix.clip(0, w - 1)].astype(np.float32)
+            farbe[..., :3] *= faktor
+            out[t] = farbe[t].astype(np.uint8)
+
+    boden = np.nonzero(deckt.any(1))[0].max()
+    frames = []
+    for i in range(bilder):
+        t = 2 * math.pi * i / bilder
+        out = np.zeros((H, W, 4), np.uint8)
+        # fern zuerst (dunkel, versetzt), dann Körper, dann nah
+        folge = [(1, math.pi, dunkel, -versatz), (0, 1.5 * math.pi, dunkel, -versatz)]
+        for nr, ph, f, dx in folge:
+            phase = t + ph
+            ow = math.radians(schritt) * math.sin(phase)
+            bein(out, *beine[nr], ow, ow - math.radians(beuge) * max(0.0, math.cos(phase)),
+                 f, dx)
+        k = np.zeros((H, W, 4), np.uint8); k[rand:rand + h, rand:rand + w] = koerper
+        sicht = k[..., 3] > 0; out[sicht] = k[sicht]
+        for nr, ph in ((0, 0.0), (1, 0.5 * math.pi)):
+            phase = t + ph
+            ow = math.radians(schritt) * math.sin(phase)
+            bein(out, *beine[nr], ow, ow - math.radians(beuge) * max(0.0, math.cos(phase)),
+                 1.0, 0)
+        tief = np.nonzero(out[..., 3].any(1))[0].max()
+        out = np.roll(out, (boden + rand) - tief, axis=0)
+        frames.append(out)
+    return frames
+
+
 def zyklus(quelle, hoehe, spiegeln=False, ausschnitt=None, palette="endesga", tol=40, konturfarbe=None,
            glatt=True, farben=12, rand=4, anzahl=0, angleichen=False):
     """Alle Figuren eines Bewegungsblatts (etwa acht Gehschritte) im selben Maßstab: die höchste Figur wird
@@ -786,6 +866,19 @@ def main():
     ge.add_argument("--beuge", type=float, default=30, help="Kniebeuge beim Vorschwingen in Grad")
     ge.add_argument("--ms", type=int, default=110)
     ge.add_argument("--vorschau", type=int, default=0)
+    vb = sub.add_parser("vierbeiner", help="Gehzyklus per Code für Vierbeiner (Pixel) aus dem Standbild")
+    vb.add_argument("sprite"); vb.add_argument("ziel")
+    vb.add_argument("--bauch", type=int, required=True, help="erste Zeile unter dem Bauch (nur noch Beine)")
+    vb.add_argument("--knie", type=int, required=True, help="Zeile zwischen Ober- und Unterschenkel")
+    vb.add_argument("--vorne", required=True, help="X0,X1 der Spalten des sichtbaren Vorderbeins")
+    vb.add_argument("--hinten", required=True, help="X0,X1 der Spalten des sichtbaren Hinterbeins")
+    vb.add_argument("--schulter", type=int, help="Zeile von Schulter und Hüfte (Standard bauch − 3)")
+    vb.add_argument("--bilder", type=int, default=8)
+    vb.add_argument("--schritt", type=float, default=22)
+    vb.add_argument("--beuge", type=float, default=35)
+    vb.add_argument("--versatz", type=int, default=3, help="Beine der anderen Seite so weit nach hinten")
+    vb.add_argument("--ms", type=int, default=110)
+    vb.add_argument("--vorschau", type=int, default=0)
     pk = sub.add_parser("paket", help="Bewegungen einer Figur zu Sprite-Sheet und JSON für Godot")
     pk.add_argument("spez"); pk.add_argument("bild"); pk.add_argument("json")
     n = sub.add_parser("nacharbeit", help="Pixel aus einer JSON-Liste [[x, y, \"rrggbb\"], …] setzen")
@@ -810,9 +903,14 @@ def main():
                    arg.kontur, not arg.nicht_glaetten, arg.farben)
         e.save(arg.ziel)
         print(arg.ziel, e.size, len([c for c in e.getcolors(4096) if c[1][3]]), "Farben")
-    elif arg.befehl == "gehen":
-        bilder = gehen(Image.open(arg.sprite), arg.bein_ab, arg.huefte, arg.knie, arg.knoechel, arg.bilder,
-                       arg.schritt, arg.beuge)
+    elif arg.befehl in ("gehen", "vierbeiner"):
+        if arg.befehl == "gehen":
+            bilder = gehen(Image.open(arg.sprite), arg.bein_ab, arg.huefte, arg.knie, arg.knoechel, arg.bilder,
+                           arg.schritt, arg.beuge)
+        else:
+            paar = [tuple(int(v) for v in x.split(",")) for x in (arg.vorne, arg.hinten)]
+            bilder = vierbeiner(Image.open(arg.sprite), arg.bauch, arg.knie, paar[0], paar[1], arg.schulter,
+                                arg.bilder, arg.schritt, arg.beuge, versatz=arg.versatz)
         Image.fromarray(np.concatenate(bilder, axis=1), "RGBA").save(arg.ziel)
         h, w = bilder[0].shape[:2]
         if arg.vorschau:
