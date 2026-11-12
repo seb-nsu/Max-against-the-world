@@ -1,7 +1,7 @@
 {
  "bild": [
-  88,
-  203
+  92,
+  198
  ],
  "animationen": {
   "idle": {
@@ -18,8 +18,8 @@
   },
   "walk": {
    "von": 2,
-   "bilder": 1,
-   "ms": 1000,
+   "bilder": 8,
+   "ms": 130,
    "schleife": true
   }
  }

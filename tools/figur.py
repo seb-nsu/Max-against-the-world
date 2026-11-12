@@ -418,8 +418,78 @@ def gegenstaende(quelle, ausschnitt, spalten, zeilen, groesse, palette="endesga"
     return out
 
 
+def gehen(sprite_rgba, bein_ab, huefte, knie, knoechel=None, bilder=8, schritt=24.0, beuge=30.0,
+          dunkel=0.72, fuss=0.25):
+    """Gehzyklus per Code aus einem Standbild in Seitenansicht (nach rechts): Oberkörper bleibt, das
+    sichtbare Bein (alles ab Zeile bein_ab) wird in Oberschenkel, Unterschenkel und Fuß (ab knoechel)
+    geteilt und schwingt um Hüfte, Knie und Knöchel; der Fuß bleibt fast waagrecht (fuss = Anteil der
+    Unterschenkel-Neigung, die er mitmacht). Das hintere Bein ist eine abgedunkelte Kopie im Gegentakt.
+    Die Füße bleiben am Boden, daraus ergibt sich das Wippen. So sieht der Gang bei jeder Figur gleich
+    sauber aus, statt acht gezeichnete Bilder zusammenzusuchen."""
+    a = np.asarray(sprite_rgba.convert("RGBA"))
+    h, w = a.shape[:2]
+    deckt = a[..., 3] > 0
+    knoechel = knoechel or h
+
+    def mitte(y):
+        xs = np.nonzero(deckt[min(max(y, 0), h - 1)])[0]
+        return float(xs.mean()) if len(xs) else w / 2
+    gelenke = [np.array([mitte(bein_ab), huefte], float), np.array([mitte(knie), knie], float),
+               np.array([mitte(knoechel - 1), knoechel], float)]
+    teile = []
+    for von, bis in ((bein_ab, knie), (knie, knoechel), (knoechel, h)):
+        m = np.zeros_like(deckt); m[von:bis] = deckt[von:bis]; teile.append(m)
+    # Oberschenkel unter dem Pulli nach oben verlängern, damit beim Schwingen keine Lücke an der Hüfte entsteht
+    quelle = a.copy()
+    for y in range(max(0, bein_ab - 8), bein_ab):
+        quelle[y] = a[bein_ab]; teile[0][y] = deckt[bein_ab]
+    rand = 12
+    H, W = h + 2 * rand, w + 2 * rand
+    ys, xs = np.mgrid[0:H, 0:W]
+    px = xs - rand + 0.5; py = ys - rand + 0.5
+
+    def vor(p, z, w_):     # R(w) dreht (0,1) auf (sin w, cos w): positiv = nach vorn (rechts)
+        c, s_ = math.cos(w_), math.sin(w_); d = p - z
+        return z + np.array([c * d[0] + s_ * d[1], -s_ * d[0] + c * d[1]])
+
+    def bein(out, winkel, faktor):
+        # Vorwärtskette: jedes Teil dreht absolut um sein Gelenk und wird an das bewegte Gelenk gehängt
+        lage = [gelenke[0]]
+        for k in range(1, 3):
+            lage.append(vor(gelenke[k], gelenke[k - 1], winkel[k - 1]) - gelenke[k - 1] + lage[k - 1])
+        for k in range(3):
+            c, s_ = math.cos(winkel[k]), math.sin(winkel[k])
+            dx, dy = px - lage[k][0], py - lage[k][1]
+            sx = gelenke[k][0] + c * dx - s_ * dy
+            sy = gelenke[k][1] + s_ * dx + c * dy
+            ix, iy = np.floor(sx).astype(int), np.floor(sy).astype(int)
+            ok = (ix >= 0) & (ix < w) & (iy >= 0) & (iy < h)
+            t = np.zeros((H, W), bool); t[ok] = teile[k][iy[ok], ix[ok]]
+            farbe = quelle[iy.clip(0, h - 1), ix.clip(0, w - 1)].astype(np.float32)
+            farbe[..., :3] *= faktor
+            out[t] = farbe[t].astype(np.uint8)
+
+    frames = []
+    boden = np.nonzero(deckt.any(1))[0].max()
+    for i in range(bilder):
+        t = 2 * math.pi * i / bilder
+        out = np.zeros((H, W, 4), np.uint8)
+        for phase, faktor in ((t + math.pi, dunkel), (t, 1.0)):
+            ober = math.radians(schritt) * math.sin(phase)
+            unter = ober - math.radians(beuge) * max(0.0, math.cos(phase))   # Knie beugt beim Vorschwingen
+            bein(out, (ober, unter, unter * fuss), faktor)
+        koerper = np.zeros((H, W, 4), np.uint8)
+        koerper[rand:rand + bein_ab, rand:rand + w] = a[:bein_ab]
+        sicht = koerper[..., 3] > 0
+        out[sicht] = koerper[sicht]
+        tief = np.nonzero(out[..., 3].any(1))[0].max()       # Füße auf den Boden (= Wippen)
+        out = np.roll(out, (boden + rand) - tief, axis=0)
+        frames.append(out)
+    return frames
+
+
 def zyklus(quelle, hoehe, spiegeln=False, ausschnitt=None, palette="endesga", tol=40, konturfarbe=None,
-           glatt=True, farben=12, rand=4, anzahl=0):
+           glatt=True, farben=12, rand=4, anzahl=0, angleichen=False):
     """Alle Figuren eines Bewegungsblatts (etwa acht Gehschritte) im selben Maßstab: die höchste Figur wird
     hoehe Pixel hoch, alle stehen auf derselben Bodenlinie und werden am Oberkörper waagrecht ausgerichtet,
     damit die Figur auf der Stelle läuft. Liefert gleich große Einzelbilder."""
@@ -427,7 +497,19 @@ def zyklus(quelle, hoehe, spiegeln=False, ausschnitt=None, palette="endesga", to
     rahmen = [r for r, _ in figuren]
     s = hoehe / max(y1 - y0 for _, y0, _, y1 in rahmen)
     boden = max(y1 for *_, y1 in rahmen)
-    teile = [verkleinern(rgb, bg, r, 0, s, m) for r, m in figuren]
+    faktoren = [1.0] * len(figuren)
+    if angleichen:
+        # Generator zeichnet manche Bilder kleiner: an der Rumpfbreite (25 bis 55 Prozent der Höhe)
+        # auf den Median bringen, damit die Figur beim Gehen nicht schrumpft und wächst
+        breiten = []
+        for (x0, y0, x1, y1), m in figuren:
+            zone = m[y0 + (y1 - y0) // 4:y0 + (y1 - y0) * 55 // 100, x0:x1]
+            zeilen = zone.sum(1)
+            breiten.append(float(np.median(zeilen[zeilen > 0])) if (zeilen > 0).any() else 1.0)
+        ziel = float(np.median(breiten))
+        faktoren = [ziel / b for b in breiten]
+        s = hoehe / max((y1 - y0) * f for ((_, y0, _, y1), f) in zip(rahmen, faktoren))
+    teile = [verkleinern(rgb, bg, r, 0, s * f, m) for (r, m), f in zip(figuren, faktoren)]
     farbig = farben_vereinheitlichen(teile, farben) if farben else [k for k, _ in teile]
     bilder, mitten = [], []
     for (klein, alpha), k, r in zip(teile, farbig, rahmen):
@@ -436,7 +518,7 @@ def zyklus(quelle, hoehe, spiegeln=False, ausschnitt=None, palette="endesga", to
         zone = (b[..., 3] > 0)[int(h * 0.25):int(h * 0.55)]
         xs = np.nonzero(zone)[1]
         mitten.append(xs.mean() if len(xs) else b.shape[1] / 2)
-        bilder.append((b, round((boden - r[3]) * s)))
+        bilder.append((b, 0 if angleichen else round((boden - r[3]) * s)))
     links = max(m for m in mitten); rechts = max(b.shape[1] - m for (b, _), m in zip(bilder, mitten))
     W = int(np.ceil(links + rechts)) + 2 * rand
     H = max(b.shape[0] + u for b, u in bilder) + rand
@@ -678,6 +760,8 @@ def main():
     z.add_argument("--vorschau", type=int, default=0)
     z.add_argument("--ms", type=int, default=110)
     z.add_argument("--bilder", type=int, default=0, help="erwartete Zahl der Figuren auf dem Blatt")
+    z.add_argument("--angleichen", action="store_true",
+                   help="unterschiedlich groß gezeichnete Bilder an der Rumpfbreite angleichen, alle auf den Boden")
     g = sub.add_parser("gegenstaende", help="Sammelbild (Raster) zu einzelnen Gegenstands-Sprites")
     g.add_argument("quelle"); g.add_argument("ordner")
     g.add_argument("--raster", required=True, help="SPALTENxZEILEN, etwa 7x1")
@@ -691,6 +775,17 @@ def main():
     g.add_argument("--toleranz", type=float, default=40, help="Abstand zur Hintergrundfarbe der Zelle")
     g.add_argument("--loch-toleranz", type=float, default=20,
                    help="Löcher in Hintergrundfarbe durchsichtig machen; 0 = aus (dunkle Dinge auf dunklem Grund)")
+    ge = sub.add_parser("gehen", help="Gehzyklus per Code aus dem Standbild (Seitenansicht)")
+    ge.add_argument("sprite"); ge.add_argument("ziel")
+    ge.add_argument("--bein-ab", type=int, required=True, help="erste Zeile, die nur noch Bein ist")
+    ge.add_argument("--huefte", type=int, required=True, help="Zeile des Hüftgelenks (meist etwas höher)")
+    ge.add_argument("--knie", type=int, required=True)
+    ge.add_argument("--knoechel", type=int, help="Zeile, ab der der Fuß beginnt (bleibt fast waagrecht)")
+    ge.add_argument("--bilder", type=int, default=8)
+    ge.add_argument("--schritt", type=float, default=24, help="größter Beinwinkel in Grad")
+    ge.add_argument("--beuge", type=float, default=30, help="Kniebeuge beim Vorschwingen in Grad")
+    ge.add_argument("--ms", type=int, default=110)
+    ge.add_argument("--vorschau", type=int, default=0)
     pk = sub.add_parser("paket", help="Bewegungen einer Figur zu Sprite-Sheet und JSON für Godot")
     pk.add_argument("spez"); pk.add_argument("bild"); pk.add_argument("json")
     n = sub.add_parser("nacharbeit", help="Pixel aus einer JSON-Liste [[x, y, \"rrggbb\"], …] setzen")
@@ -715,9 +810,24 @@ def main():
                    arg.kontur, not arg.nicht_glaetten, arg.farben)
         e.save(arg.ziel)
         print(arg.ziel, e.size, len([c for c in e.getcolors(4096) if c[1][3]]), "Farben")
+    elif arg.befehl == "gehen":
+        bilder = gehen(Image.open(arg.sprite), arg.bein_ab, arg.huefte, arg.knie, arg.knoechel, arg.bilder,
+                       arg.schritt, arg.beuge)
+        Image.fromarray(np.concatenate(bilder, axis=1), "RGBA").save(arg.ziel)
+        h, w = bilder[0].shape[:2]
+        if arg.vorschau:
+            v = arg.vorschau
+            gif = []
+            for b in bilder:
+                g = schachbrett(w * v, h * v, v * 2)
+                gb = Image.fromarray(b, "RGBA").resize((w * v, h * v), Image.NEAREST)
+                g.paste(gb, (0, 0), gb); gif.append(g)
+            gif[0].save(str(Path(arg.ziel).with_suffix("")) + ".gif", save_all=True, append_images=gif[1:],
+                        duration=arg.ms, loop=0)
+        print(arg.ziel, len(bilder), "Bilder je", w, "×", h)
     elif arg.befehl == "zyklus":
         bilder = zyklus(arg.quelle, arg.hoehe, arg.spiegeln, konturfarbe=arg.kontur, farben=arg.farben,
-                        anzahl=arg.bilder)
+                        anzahl=arg.bilder, angleichen=arg.angleichen)
         Image.fromarray(np.concatenate(bilder, axis=1), "RGBA").save(arg.ziel)
         h, w = bilder[0].shape[:2]
         if arg.vorschau:
