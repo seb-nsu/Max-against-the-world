@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bw7yopq2ylj07"
-path="res://.godot/imported/w0_bg_wohnzimmer_v01.png-21809a0b060746df4f48c64130e7ee72.ctex"
+uid="uid://c1cxa2a5u0k0l"
+path="res://.godot/imported/w0_bg_wohnzimmer_v03.png-f7cef8b183bfeec062a808de36be1d54.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://grafik/hintergruende/w0_bg_wohnzimmer_v01.png"
-dest_files=["res://.godot/imported/w0_bg_wohnzimmer_v01.png-21809a0b060746df4f48c64130e7ee72.ctex"]
+source_file="res://grafik/hintergruende/w0_bg_wohnzimmer_v03.png"
+dest_files=["res://.godot/imported/w0_bg_wohnzimmer_v03.png-f7cef8b183bfeec062a808de36be1d54.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://kch38n8lwxyj"
-path="res://.godot/imported/w0_bg_dachboden_v01.png-f40920e4ca1f37f25d132a3e00d4b518.ctex"
+uid="uid://b6kayiajovsp8"
+path="res://.godot/imported/w0_bg_dachboden_rueckkehr1_v03.png-cfb73c1f970cf596bf94b5d707e68be8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://grafik/hintergruende/w0_bg_dachboden_v01.png"
-dest_files=["res://.godot/imported/w0_bg_dachboden_v01.png-f40920e4ca1f37f25d132a3e00d4b518.ctex"]
+source_file="res://grafik/hintergruende/w0_bg_dachboden_rueckkehr1_v03.png"
+dest_files=["res://.godot/imported/w0_bg_dachboden_rueckkehr1_v03.png-cfb73c1f970cf596bf94b5d707e68be8.ctex"]
 
 [params]
 

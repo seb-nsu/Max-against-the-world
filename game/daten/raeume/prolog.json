@@ -16,48 +16,36 @@
     640,
     360
    ],
-   "hintergrund": "res://grafik/hintergruende/w0_bg_wohnzimmer_v01.png",
+   "hintergrund": "res://grafik/hintergruende/w0_bg_wohnzimmer_v03.png",
    "farbe": "#6b4f3f",
    "laufbereich": [
     [
-     8,
+     0,
      357
     ],
     [
-     8,
-     336
-    ],
-    [
-     93,
+     0,
      320
     ],
     [
-     260,
-     293
-    ],
-    [
      400,
-     293
+     314
     ],
     [
-     403,
-     243
+     410,
+     284
     ],
     [
-     440,
-     235
-    ],
-    [
-     533,
-     240
+     550,
+     282
     ],
     [
      560,
-     259
+     300
     ],
     [
      635,
-     267
+     300
     ],
     [
      635,
@@ -67,11 +55,11 @@
    "marker": {
     "start": [
      187,
-     307
+     330
     ],
     "von_treppenhaus": [
-     587,
-     296
+     590,
+     310
     ]
    },
    "tiefe": 0.85,
@@ -82,14 +70,14 @@
      "script_name": "Kuchen",
      "name_key": "UI_OBJ_KUCHEN",
      "rect": [
-      339,
-      181,
+      318,
+      192,
       43,
       40
      ],
      "gehe": [
-      363,
-      304
+      340,
+      318
      ],
      "ansehen": [],
      "versteckt": true
@@ -106,7 +94,7 @@
      ],
      "gehe": [
       320,
-      304
+      320
      ],
      "ansehen": [],
      "versteckt": true
@@ -116,14 +104,14 @@
      "script_name": "Geschenke",
      "name_key": "UI_OBJ_GESCHENKE",
      "rect": [
-      400,
-      261,
+      395,
+      268,
       35,
       29
      ],
      "gehe": [
-      416,
-      307
+      420,
+      300
      ],
      "ansehen": [],
      "versteckt": true
@@ -133,14 +121,14 @@
      "script_name": "Fernseher",
      "name_key": "UI_OBJ_FERNSEHER",
      "rect": [
-      437,
-      120,
-      96,
-      109
+      440,
+      142,
+      105,
+      135
      ],
      "gehe": [
-      483,
-      253
+      490,
+      292
      ],
      "ansehen": [
       {
@@ -182,14 +170,14 @@
      "script_name": "Familienfoto",
      "name_key": "UI_OBJ_FAMILIENFOTO",
      "rect": [
-      273,
-      53,
-      133,
-      91
+      237,
+      75,
+      95,
+      100
      ],
      "gehe": [
-      340,
-      300
+      290,
+      318
      ],
      "ansehen": [
       {
@@ -231,14 +219,14 @@
      "script_name": "LeererPlatzAufDemCouchtisch",
      "name_key": "UI_OBJ_LEERER_PLATZ_AUF_DEM_COUCHTISCH",
      "rect": [
-      341,
-      213,
-      37,
-      15
+      340,
+      238,
+      34,
+      14
      ],
      "gehe": [
-      363,
-      304
+      360,
+      318
      ],
      "ansehen": [
       {
@@ -280,14 +268,14 @@
      "script_name": "Sofa",
      "name_key": "UI_OBJ_SOFA",
      "rect": [
-      109,
-      133,
-      151,
-      153
+      40,
+      167,
+      198,
+      145
      ],
      "gehe": [
-      187,
-      307
+      150,
+      330
      ],
      "ansehen": [
       {
@@ -330,14 +318,14 @@
      "script_name": "Schrank",
      "name_key": "UI_OBJ_SCHRANK",
      "rect": [
-      0,
       10,
-      110,
-      275
+      80,
+      115,
+      90
      ],
      "gehe": [
-      90,
-      320
+      70,
+      330
      ],
      "ansehen": [
       {
@@ -379,14 +367,14 @@
      "script_name": "Stehlampe",
      "name_key": "UI_OBJ_STEHLAMPE",
      "rect": [
-      215,
-      65,
+      177,
+      95,
       48,
       105
      ],
      "gehe": [
-      240,
-      300
+      200,
+      322
      ],
      "ansehen": [
       {
@@ -428,14 +416,14 @@
      "script_name": "Zeitung",
      "name_key": "UI_OBJ_ZEITUNG",
      "rect": [
-      292,
-      190,
-      60,
-      18
+      270,
+      220,
+      75,
+      28
      ],
      "gehe": [
-      330,
-      300
+      310,
+      318
      ],
      "ansehen": [
       {
@@ -479,14 +467,14 @@
      "script_name": "Teetasse",
      "name_key": "UI_OBJ_TEETASSE",
      "rect": [
-      301,
-      208,
-      21,
-      19
+      300,
+      222,
+      18,
+      18
      ],
      "gehe": [
-      315,
-      304
+      310,
+      318
      ],
      "textur": "res://grafik/platzhalter/prop_teetasse.png",
      "gegenstand": "teetasse",
@@ -523,14 +511,14 @@
      "ziel": "treppenhaus",
      "name_key": "UI_RAUM_TREPPENHAUS",
      "rect": [
-      555,
-      33,
-      75,
-      224
+      558,
+      42,
+      77,
+      258
      ],
      "gehe": [
-      592,
-      285
+      600,
+      305
      ],
      "erreichbar_ab": "start",
      "ansehen": []
@@ -562,74 +550,70 @@
     640,
     360
    ],
-   "hintergrund": "res://grafik/hintergruende/w0_bg_treppenhaus_v01.png",
+   "hintergrund": "res://grafik/hintergruende/w0_bg_treppenhaus_v02.png",
    "farbe": "#584536",
    "laufbereich": [
     [
-     8,
+     12,
      357
     ],
     [
-     8,
-     309
+     12,
+     290
     ],
     [
-     80,
-     299
+     40,
+     282
     ],
     [
-     91,
-     277
+     255,
+     282
     ],
     [
-     250,
-     277
-    ],
-    [
-     262,
+     275,
      262
     ],
     [
-     560,
-     73
+     585,
+     44
     ],
     [
-     580,
-     73
+     605,
+     44
     ],
     [
-     578,
-     86
-    ],
-    [
-     290,
-     280
+     605,
+     56
     ],
     [
      300,
+     280
+    ],
+    [
+     340,
      300
     ],
     [
      400,
-     349
+     345
     ],
     [
-     427,
+     400,
      357
     ]
    ],
    "marker": {
     "start": [
      173,
-     320
+     310
     ],
     "von_wohnzimmer": [
-     67,
-     323
+     55,
+     310
     ],
     "von_dachboden": [
-     540,
-     98
+     560,
+     70
     ]
    },
    "tiefe": 0.85,
@@ -640,10 +624,10 @@
      "script_name": "Maentel",
      "name_key": "UI_OBJ_MAENTEL",
      "rect": [
-      123,
-      130,
-      48,
-      160
+      110,
+      127,
+      68,
+      93
      ],
      "gehe": [
       150,
@@ -689,14 +673,14 @@
      "script_name": "HutAmHaken",
      "name_key": "UI_OBJ_HUT_AM_HAKEN",
      "rect": [
-      171,
-      112,
-      27,
-      32
+      170,
+      122,
+      25,
+      30
      ],
      "gehe": [
-      187,
-      296
+      182,
+      300
      ],
      "ansehen": [
       {
@@ -738,14 +722,14 @@
      "script_name": "Fenster",
      "name_key": "UI_OBJ_FENSTER",
      "rect": [
-      288,
-      73,
-      53,
-      80
+      290,
+      72,
+      60,
+      78
      ],
      "gehe": [
-      273,
-      299
+      320,
+      290
      ],
      "ansehen": [
       {
@@ -787,14 +771,14 @@
      "script_name": "Treppe",
      "name_key": "UI_OBJ_TREPPE",
      "rect": [
-      341,
-      40,
-      239,
+      350,
+      45,
+      250,
       150
      ],
      "gehe": [
       270,
-      282
+      280
      ],
      "ansehen": [
       {
@@ -836,13 +820,13 @@
      "script_name": "Regenschirm",
      "name_key": "UI_OBJ_REGENSCHIRM",
      "rect": [
-      93,
-      207,
-      27,
-      83
+      192,
+      127,
+      18,
+      90
      ],
      "gehe": [
-      110,
+      200,
       300
      ],
      "ansehen": [
@@ -894,13 +878,13 @@
      "script_name": "Deckenlampe",
      "name_key": "UI_OBJ_DECKENLAMPE",
      "rect": [
-      198,
+      200,
       10,
-      52,
-      26
+      45,
+      80
      ],
      "gehe": [
-      220,
+      222,
       300
      ],
      "ansehen": [
@@ -943,14 +927,14 @@
      "script_name": "Kisten",
      "name_key": "UI_OBJ_KISTEN",
      "rect": [
-      400,
-      190,
-      240,
-      160
+      405,
+      195,
+      215,
+      150
      ],
      "gehe": [
-      330,
-      320
+      380,
+      330
      ],
      "ansehen": [
       {
@@ -994,13 +978,13 @@
      "script_name": "Thunfischdose",
      "name_key": "UI_OBJ_THUNFISCHDOSE",
      "rect": [
-      133,
-      198,
-      20,
-      16
+      150,
+      180,
+      18,
+      14
      ],
      "gehe": [
-      150,
+      160,
       300
      ],
      "textur": "res://grafik/platzhalter/prop_thunfischdose.png",
@@ -1023,14 +1007,14 @@
      "ziel": "wohnzimmer",
      "name_key": "UI_RAUM_WOHNZIMMER",
      "rect": [
-      7,
-      53,
-      73,
-      247
+      10,
+      55,
+      65,
+      245
      ],
      "gehe": [
-      53,
-      320
+      45,
+      305
      ],
      "erreichbar_ab": "start",
      "ansehen": []
@@ -1041,14 +1025,14 @@
      "ziel": "dachboden",
      "name_key": "UI_RAUM_DACHBODEN",
      "rect": [
-      400,
+      395,
       0,
-      227,
+      230,
       45
      ],
      "gehe": [
-      556,
-      85
+      592,
+      50
      ],
      "erreichbar_ab": "start",
      "ansehen": []
@@ -1064,44 +1048,52 @@
     640,
     360
    ],
-   "hintergrund": "res://grafik/hintergruende/w0_bg_dachboden_v01.png",
+   "hintergrund": "res://grafik/hintergruende/w0_bg_dachboden_v03.png",
    "farbe": "#7a5c43",
    "laufbereich": [
     [
-     85,
+     160,
      357
     ],
     [
-     85,
-     253
+     160,
+     290
     ],
     [
-     247,
-     245
+     230,
+     272
     ],
     [
-     253,
-     227
+     245,
+     252
     ],
     [
-     400,
-     227
+     262,
+     238
     ],
     [
-     405,
-     240
+     455,
+     238
     ],
     [
-     480,
-     243
+     460,
+     255
     ],
     [
-     557,
-     269
+     520,
+     258
+    ],
+    [
+     525,
+     280
+    ],
+    [
+     600,
+     285
     ],
     [
      635,
-     272
+     290
     ],
     [
      635,
@@ -1128,8 +1120,8 @@
      "id": "pixel",
      "script_name": "Pixel",
      "pos": [
-      313,
-      237
+      262,
+      272
      ]
     },
     {
@@ -1187,14 +1179,14 @@
      "script_name": "Fundkiste",
      "name_key": "UI_OBJ_FUNDKISTE",
      "rect": [
-      163,
-      211,
-      56,
-      36
+      152,
+      207,
+      70,
+      48
      ],
      "gehe": [
-      191,
-      259
+      240,
+      268
      ],
      "ansehen": []
     },
@@ -1283,14 +1275,14 @@
      "script_name": "Lampe",
      "name_key": "UI_OBJ_LAMPE",
      "rect": [
-      296,
-      40,
-      48,
-      19
+      300,
+      30,
+      52,
+      33
      ],
      "gehe": [
-      320,
-      243
+      326,
+      245
      ],
      "ansehen": []
     },
@@ -1299,14 +1291,14 @@
      "script_name": "Werkzeugkiste",
      "name_key": "UI_OBJ_WERKZEUGKISTE",
      "rect": [
-      101,
-      200,
-      53,
-      43
+      97,
+      220,
+      68,
+      58
      ],
      "gehe": [
-      128,
-      259
+      180,
+      300
      ],
      "ansehen": [
       {
@@ -1348,14 +1340,14 @@
      "script_name": "Kleiderschrank",
      "name_key": "UI_OBJ_KLEIDERSCHRANK",
      "rect": [
-      547,
-      107,
-      93,
-      157
+      578,
+      65,
+      62,
+      215
      ],
      "gehe": [
-      587,
-      285
+      600,
+      290
      ],
      "ansehen": [
       {
@@ -1397,14 +1389,14 @@
      "script_name": "Kalender",
      "name_key": "UI_OBJ_KALENDER",
      "rect": [
-      413,
-      88,
-      40,
-      48
+      459,
+      97,
+      46,
+      49
      ],
      "gehe": [
-      433,
-      248
+      450,
+      245
      ],
      "ansehen": [
       {
@@ -1447,14 +1439,14 @@
      "script_name": "AusgestopfterFisch",
      "name_key": "UI_OBJ_AUSGESTOPFTER_FISCH",
      "rect": [
-      357,
+      355,
+      77,
       80,
-      48,
-      27
+      38
      ],
      "gehe": [
-      381,
-      240
+      395,
+      245
      ],
      "ansehen": [
       {
@@ -1496,14 +1488,14 @@
      "script_name": "KisteMitFernbedienungen",
      "name_key": "UI_OBJ_KISTE_MIT_FERNBEDIENUNGEN",
      "rect": [
-      0,
-      220,
-      83,
-      93
+      57,
+      267,
+      98,
+      83
      ],
      "gehe": [
-      101,
-      287
+      175,
+      320
      ],
      "ansehen": [
       {
@@ -1559,14 +1551,14 @@
      "script_name": "Poster",
      "name_key": "UI_OBJ_POSTER",
      "rect": [
-      265,
-      64,
-      59,
-      83
+      262,
+      72,
+      60,
+      80
      ],
      "gehe": [
-      295,
-      240
+      292,
+      245
      ],
      "ansehen": [
       {
@@ -1608,14 +1600,14 @@
      "script_name": "Toaster",
      "name_key": "UI_OBJ_TOASTER",
      "rect": [
-      165,
-      101,
-      32,
-      27
+      170,
+      105,
+      35,
+      25
      ],
      "gehe": [
-      181,
-      251
+      230,
+      275
      ],
      "ansehen": [
       {
@@ -1666,14 +1658,14 @@
      "script_name": "OpasStaubsaugerPrototyp",
      "name_key": "UI_OBJ_OPAS_STAUBSAUGER_PROTOTYP",
      "rect": [
-      483,
-      140,
-      64,
-      120
+      520,
+      160,
+      58,
+      115
      ],
      "gehe": [
-      515,
-      275
+      545,
+      285
      ],
      "ansehen": [
       {
@@ -1729,14 +1721,14 @@
      "script_name": "Kochbuch",
      "name_key": "UI_OBJ_KOCHBUCH",
      "rect": [
-      213,
-      91,
+      212,
+      90,
       24,
-      37
+      40
      ],
      "gehe": [
-      224,
-      251
+      245,
+      258
      ],
      "ansehen": [
       {
@@ -1792,14 +1784,14 @@
      "script_name": "Plattenspieler",
      "name_key": "UI_OBJ_PLATTENSPIELER",
      "rect": [
-      109,
-      96,
-      48,
-      32
+      122,
+      92,
+      44,
+      38
      ],
      "gehe": [
-      133,
-      253
+      200,
+      285
      ],
      "ansehen": [
       {
@@ -1850,14 +1842,14 @@
      "script_name": "Ohrensessel",
      "name_key": "UI_OBJ_OHRENSESSEL",
      "rect": [
-      400,
-      140,
-      80,
-      96
+      452,
+      152,
+      68,
+      100
      ],
      "gehe": [
-      440,
-      253
+      480,
+      265
      ],
      "ansehen": [
       {
@@ -1899,14 +1891,14 @@
      "script_name": "Werkbank",
      "name_key": "UI_OBJ_WERKBANK",
      "rect": [
-      73,
-      133,
-      173,
-      53
+      60,
+      145,
+      190,
+      55
      ],
      "gehe": [
-      160,
-      253
+      235,
+      275
      ],
      "ansehen": [
       {
@@ -1948,14 +1940,14 @@
      "script_name": "Dachfenster",
      "name_key": "UI_OBJ_DACHFENSTER",
      "rect": [
-      80,
-      7,
-      60,
-      43
+      65,
+      10,
+      70,
+      55
      ],
      "gehe": [
-      127,
-      256
+      200,
+      300
      ],
      "ansehen": [
       {
@@ -1999,12 +1991,12 @@
      "rect": [
       0,
       135,
-      65,
-      85
+      60,
+      145
      ],
      "gehe": [
-      95,
-      262
+      175,
+      300
      ],
      "ansehen": [
       {
@@ -2046,14 +2038,14 @@
      "script_name": "Steckdose",
      "name_key": "UI_OBJ_STECKDOSE",
      "rect": [
-      258,
-      188,
-      22,
-      22
+      256,
+      199,
+      14,
+      19
      ],
      "gehe": [
       270,
-      235
+      245
      ],
      "ansehen": [
       {
@@ -2237,14 +2229,14 @@
      "script_name": "Dosenoeffner",
      "name_key": "UI_OBJ_DOSENOEFFNER",
      "rect": [
-      224,
-      170,
-      18,
-      22
+      236,
+      186,
+      14,
+      20
      ],
      "gehe": [
-      232,
-      250
+      250,
+      262
      ],
      "textur": "res://grafik/platzhalter/prop_dosenoeffner.png",
      "gegenstand": "dosenoeffner",
@@ -2262,14 +2254,14 @@
      "script_name": "Drahtkleiderbuegel",
      "name_key": "UI_OBJ_DRAHTKLEIDERBUEGEL",
      "rect": [
-      587,
+      600,
       125,
       27,
       19
      ],
      "gehe": [
-      587,
-      285
+      600,
+      290
      ],
      "textur": "res://grafik/platzhalter/prop_drahtkleiderbuegel.png",
      "gegenstand": "drahtkleiderbuegel",
@@ -2290,10 +2282,10 @@
      "ziel": "treppenhaus",
      "name_key": "UI_OBJ_BODENLUKE",
      "rect": [
-      447,
-      272,
-      167,
-      53
+      442,
+      280,
+      173,
+      50
      ],
      "gehe": [
       527,

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bkqs8opihkuam"
-path="res://.godot/imported/w0_bg_treppenhaus_v01.png-7b69ea6958586efb5f496ad8fa25b797.ctex"
+uid="uid://dljujl27hq1cs"
+path="res://.godot/imported/w0_bg_dachboden_v03.png-5b5858b7d352af7c7fa9438c62e1a972.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://grafik/hintergruende/w0_bg_treppenhaus_v01.png"
-dest_files=["res://.godot/imported/w0_bg_treppenhaus_v01.png-7b69ea6958586efb5f496ad8fa25b797.ctex"]
+source_file="res://grafik/hintergruende/w0_bg_dachboden_v03.png"
+dest_files=["res://.godot/imported/w0_bg_dachboden_v03.png-5b5858b7d352af7c7fa9438c62e1a972.ctex"]
 
 [params]
 

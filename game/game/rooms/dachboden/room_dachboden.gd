@@ -11,15 +11,15 @@ var state: Data = load("res://game/rooms/dachboden/room_dachboden.tres")
 ## Zapp-O-Mat-Bilder (Platzhalter-Sheet aus tools/godot_raeume.py)
 enum Bild { AUS, SCHNEE, ANTENNE, BUNT, WIRBEL }
 ## Pixel nach P1: auf der Werkbank (skript/prolog.md, 0360)
-const PIXEL_WERKBANK := Vector2(160, 180)
-const PIXEL_KABEL := Vector2(313, 237)
+const PIXEL_WERKBANK := Vector2(175, 195)
+const PIXEL_KABEL := Vector2(262, 272)
 ## Hintergrund je Zwischenspiel: Prolog Nachmittag, dann später Nachmittag, früher Abend (Lampe aus),
 ## Abendrot (Lampe an). Abgeleitet mit tools/stimmung.py aus dem Grundbild.
 const LICHT := [
-	"res://grafik/hintergruende/w0_bg_dachboden_v01.png",
-	"res://grafik/hintergruende/w0_bg_dachboden_rueckkehr1_v01.png",
-	"res://grafik/hintergruende/w0_bg_dachboden_rueckkehr2_v01.png",
-	"res://grafik/hintergruende/w0_bg_dachboden_rueckkehr3_v01.png",
+	"res://grafik/hintergruende/w0_bg_dachboden_v03.png",
+	"res://grafik/hintergruende/w0_bg_dachboden_rueckkehr1_v03.png",
+	"res://grafik/hintergruende/w0_bg_dachboden_rueckkehr2_v03.png",
+	"res://grafik/hintergruende/w0_bg_dachboden_rueckkehr3_v03.png",
 ]
 
 var _erster_besuch := false
