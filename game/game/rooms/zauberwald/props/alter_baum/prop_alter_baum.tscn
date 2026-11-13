@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://bxodcmneo7l5i"]
+
+[ext_resource type="Script" path="res://game/rooms/zauberwald/props/alter_baum/prop_alter_baum.gd" id="1_y7sdd"]
+
+[node name="AlterBaum" type="Area2D" unique_id=186621808]
+script = ExtResource("1_y7sdd")
+script_name = "AlterBaum"
+description = "Alter Baum"
+cursor = 1
+interaction_polygon = PackedVector2Array(-75, -180, 75, -180, 75, 180, -75, 180)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=917831058]
+texture_filter = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=555628149]
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1982023688]
+visible = false
+modulate = Color(1, 1, 0, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+
+[node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=215469276]
+visible = false
+affect_navigation_mesh = true
+carve_navigation_mesh = true

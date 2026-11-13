@@ -278,40 +278,44 @@ wasserschloss:
 
 zauberwald:
   farbe: "#3f5a3a"
-  # Echter Hintergrund (13. November 2026, Sebastians Gemini-Fassung + tools/pixelieren.py). Riesenpilze,
-  # Leuchtpilze und Karren nach dem Umrechnen nachgefärbt (48 statt 32 Farben). Ketchup und ein Leuchtpilz
-  # als eigene Props ausgeschnitten (grafik/props), im Hintergrund übermalt. Niesrosen fehlen noch als Sprite;
-  # ihr Platz in der Lichtung ist aus dem Laufbereich ausgespart.
+  # Echter Hintergrund (13. November 2026), Breitbild 1066×360: rechts Sebastians erste Fassung, links ein
+  # tieferer Waldteil, den Gemini aus einer Vorlage mit grauer Fläche ergänzt hat (nahtlos, um 8 Pixel
+  # ausgerichtet); tools/pixelieren.py. Riesenpilze, Leuchtpilze und Karren nachgefärbt. Ketchup und ein
+  # Leuchtpilz als Props ausgeschnitten und im Hintergrund übermalt. Der dicke Baum auf der Naht steht im
+  # Vordergrund und ist ein eigenes Prop (alter_baum, Baseline am unteren Bildrand), damit Max dahinter
+  # vorbeigeht. Niesrosen fehlen noch als Sprite; ihr Platz in der Lichtung ist ausgespart.
   # Koordinaten aus dem Bild; übernommen mit --cq-layout=zauberwald.
   hintergrund: res://grafik/hintergruende/w1_bg_zauberwald_v01.png
   tiefe: 0.5
-  laufbereich: [[0, 186], [48, 180], [68, 212], [80, 240], [150, 258], [215, 262], [240, 254],
-                [392, 254], [472, 254], [478, 236], [548, 232], [575, 222], [598, 226],
-                [592, 262], [612, 282], [639, 290], [639, 359], [0, 359]]
+  laufbereich: [[0, 242], [150, 238], [330, 240], [372, 240], [380, 200], [424, 186], [472, 180], [492, 212],
+                [504, 240], [574, 258], [639, 262], [664, 254], [816, 254], [896, 254], [902, 236], [972, 232],
+                [999, 222], [1022, 226], [1016, 262], [1036, 282], [1065, 290], [1065, 359], [505, 359],
+                [500, 320], [470, 300], [360, 300], [335, 330], [330, 359], [0, 359]]
   marker:
-    start: [20, 200]
-    von_trollbruecke: [20, 200]
-    von_bergwerk: [570, 245]
+    start: [20, 268]
+    von_trollbruecke: [20, 268]
+    von_bergwerk: [994, 245]
   figuren:
-    rotkaeppchen: [490, 272]
+    rotkaeppchen: [914, 272]
   alias:
     glasschuh: kuerbisturm_und_glasschuh
     ketchup_am_karren: ketchup
     niesrosen_geschlossen: niesrosen
   hotspots:
-    riesenpilze: {rect: [55, 70, 160, 145], gehe: [130, 272], name: Riesenpilze}
-    leuchtpilze: {rect: [75, 215, 140, 45], gehe: [130, 270], name: Leuchtpilze}
-    niesrosen: {rect: [250, 212, 80, 40], gehe: [290, 266], name: Niesrosen}
-    kuerbisturm_und_glasschuh: {rect: [290, 80, 70, 130], gehe: [325, 264], name: Kürbisturm}
-    gluehwuermchen: {rect: [190, 10, 240, 60], gehe: [300, 270], name: Glühwürmchen}
-    lieferkarren: {rect: [390, 175, 80, 78], gehe: [430, 268], name: Lieferkarren}
-    baeume: {rect: [215, 70, 70, 140], gehe: [250, 270], name: Bäume}
+    riesenpilze: {rect: [479, 70, 160, 145], gehe: [554, 272], name: Riesenpilze}
+    leuchtpilze: {rect: [499, 215, 140, 45], gehe: [554, 270], name: Leuchtpilze}
+    niesrosen: {rect: [674, 212, 80, 40], gehe: [714, 266], name: Niesrosen}
+    kuerbisturm_und_glasschuh: {rect: [714, 80, 70, 130], gehe: [749, 264], name: Kürbisturm}
+    gluehwuermchen: {rect: [614, 10, 240, 60], gehe: [724, 270], name: Glühwürmchen}
+    lieferkarren: {rect: [814, 175, 80, 78], gehe: [854, 268], name: Lieferkarren}
+    baeume: {rect: [150, 20, 190, 210], gehe: [250, 265], name: Bäume}
   props:
-    leuchtpilz: {rect: [157, 226, 16, 24], gehe: [150, 268]}
-    ketchup: {rect: [417, 209, 11, 29], gehe: [420, 268]}
+    leuchtpilz: {rect: [580, 226, 16, 25], gehe: [574, 268]}
+    ketchup: {rect: [841, 209, 11, 30], gehe: [844, 268]}
+    alter_baum: {rect: [340, 0, 150, 360], gehe: [420, 280]}
   ausgaenge:
-    trollbruecke: {rect: [0, 150, 30, 100], gehe: [15, 200], id: ausgang_trollbruecke}
-    bergwerk: {rect: [505, 105, 100, 125], gehe: [572, 242], id: stolleneingang, name: Stolleneingang}
+    trollbruecke: {rect: [0, 170, 30, 110], gehe: [15, 265], id: ausgang_trollbruecke}
+    bergwerk: {rect: [929, 105, 100, 125], gehe: [996, 242], id: stolleneingang, name: Stolleneingang}
 
 bergwerk:
   farbe: "#4a3f3a"

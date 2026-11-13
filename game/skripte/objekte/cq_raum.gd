@@ -22,6 +22,21 @@ func raum_id() -> String:
 	return bauplan().get("id", script_name.to_snake_case())
 
 
+## Breite Räume (Dorfplatz, Zauberwald): Popochiu setzt die Kameragrenzen so, als läge der Raum
+## mittig um den Bildschirm (von -(Breite-640)/2 bis 640+(Breite-640)/2). Unsere Hintergründe
+## liegen aber von 0 bis Breite. Ohne diese Korrektur zeigte die Kamera links graue Fläche und
+## erreichte das rechte Drittel nie (gefunden 13. November 2026 beim breiten Zauberwald).
+func setup_camera() -> void:
+	var vp_w: int = ProjectSettings.get_setting(PopochiuResources.DISPLAY_WIDTH)
+	var vp_h: int = ProjectSettings.get_setting(PopochiuResources.DISPLAY_HEIGHT)
+	if width > vp_w:
+		PopochiuUtils.e.camera.limit_left = 0
+		PopochiuUtils.e.camera.limit_right = width
+	if height > vp_h:
+		PopochiuUtils.e.camera.limit_top = 0
+		PopochiuUtils.e.camera.limit_bottom = height
+
+
 ## Leichte Tiefe (Entscheidung vom 10. November 2026, Mittelweg): Steht im Layout des Raums
 ## „tiefe: 0.85“, werden alle Figuren von 100 Prozent am unteren Rand des Laufbereichs auf diesen
 ## Wert an seiner Hinterkante verkleinert, laufen dort auch entsprechend langsamer (Popochius

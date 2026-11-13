@@ -12,7 +12,9 @@
 [ext_resource type="PackedScene" uid="uid://bp6jnfx4tsrbn" path="res://game/rooms/zauberwald/hotspots/niesrosen/hotspot_niesrosen.tscn" id="7_ephey"]
 [ext_resource type="PackedScene" uid="uid://chp0ldddlchcj" path="res://game/rooms/zauberwald/hotspots/kuerbisturm_und_glasschuh/hotspot_kuerbisturm_und_glasschuh.tscn" id="8_1qs3w"]
 [ext_resource type="Texture2D" uid="uid://d2sqc22twlt51" path="res://grafik/props/ketchup.png" id="8_xpnqd"]
+[ext_resource type="PackedScene" uid="uid://bxodcmneo7l5i" path="res://game/rooms/zauberwald/props/alter_baum/prop_alter_baum.tscn" id="9_ephey"]
 [ext_resource type="PackedScene" uid="uid://c3t4tnm015igw" path="res://game/rooms/zauberwald/hotspots/gluehwuermchen/hotspot_gluehwuermchen.tscn" id="9_xpnqd"]
+[ext_resource type="Texture2D" uid="uid://cli18doghsjy" path="res://grafik/props/alter_baum.png" id="10_1qs3w"]
 [ext_resource type="PackedScene" uid="uid://dmy121s41x6hf" path="res://game/rooms/zauberwald/hotspots/lieferkarren/hotspot_lieferkarren.tscn" id="10_sd1o6"]
 [ext_resource type="PackedScene" uid="uid://be4esqdugvem8" path="res://game/rooms/zauberwald/hotspots/baeume/hotspot_baeume.tscn" id="12_iwu1b"]
 [ext_resource type="PackedScene" uid="uid://de5k3fotmrvdc" path="res://game/rooms/zauberwald/hotspots/ausgang_trollbruecke/hotspot_ausgang_trollbruecke.tscn" id="13_fnfak"]
@@ -25,97 +27,104 @@
 [node name="RoomZauberwald" type="Node2D" unique_id=1771033594]
 script = ExtResource("1_s28kt")
 script_name = "Zauberwald"
-width = 640
+width = 1066
 height = 360
 
 [node name="WalkableAreas" type="Node2D" parent="." unique_id=848392733]
 
 [node name="Boden" parent="WalkableAreas" unique_id=62137990 instance=ExtResource("2_6aehq")]
-interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(0, 186, 48, 180, 68, 212, 80, 240, 150, 258, 215, 262, 240, 254, 392, 254, 472, 254, 478, 236, 548, 232, 575, 222, 598, 226, 592, 262, 612, 282, 639, 290, 639, 359, 0, 359)])
 
 [node name="Props" type="Node2D" parent="." unique_id=1605330966]
 
 [node name="Background" parent="Props" unique_id=7619275 instance=ExtResource("3_ywgqv")]
-position = Vector2(320, 180)
+position = Vector2(533, 180)
 texture = ExtResource("4_0vtfd")
 description = "UI_RAUM_ZAUBERWALD"
 
 [node name="Leuchtpilz" parent="Props" unique_id=851967665 instance=ExtResource("5_4eibb")]
-position = Vector2(165, 238)
+position = Vector2(588, 238.5)
 texture = ExtResource("6_ephey")
 description = "UI_OBJ_LEUCHTPILZ"
 baseline = 12
-walk_to_point = Vector2(-15, 30)
-interaction_polygon = PackedVector2Array(-8, -12, 8, -12, 8, 12, -8, 12)
+walk_to_point = Vector2(-14, 29.5)
+interaction_polygon = PackedVector2Array(-8, -12.5, 8, -12.5, 8, 12.5, -8, 12.5)
 
 [node name="Ketchup" parent="Props" unique_id=34018036 instance=ExtResource("7_1qs3w")]
-position = Vector2(422.5, 223.5)
+position = Vector2(846.5, 224)
 texture = ExtResource("8_xpnqd")
 description = "UI_OBJ_KETCHUP"
-baseline = 14
-walk_to_point = Vector2(-2.5, 44.5)
-interaction_polygon = PackedVector2Array(-5.5, -14.5, 5.5, -14.5, 5.5, 14.5, -5.5, 14.5)
+baseline = 15
+walk_to_point = Vector2(-2.5, 44)
+interaction_polygon = PackedVector2Array(-5.5, -15, 5.5, -15, 5.5, 15, -5.5, 15)
+
+[node name="AlterBaum" parent="Props" unique_id=186621808 instance=ExtResource("9_ephey")]
+position = Vector2(415, 180)
+texture = ExtResource("10_1qs3w")
+description = "UI_OBJ_ALTER_BAUM"
+baseline = 180
+walk_to_point = Vector2(5, 100)
 
 [node name="Hotspots" type="Node2D" parent="." unique_id=1059338685]
 
 [node name="Riesenpilze" parent="Hotspots" unique_id=1366018122 instance=ExtResource("5_0vtfd")]
-position = Vector2(135, 142.5)
+position = Vector2(559, 142.5)
 description = "UI_OBJ_RIESENPILZE"
 baseline = 72
 walk_to_point = Vector2(-5, 129.5)
 interaction_polygon = PackedVector2Array(-80, -72.5, 80, -72.5, 80, 72.5, -80, 72.5)
 
 [node name="Leuchtpilze" parent="Hotspots" unique_id=697908644 instance=ExtResource("6_4eibb")]
-position = Vector2(145, 237.5)
+position = Vector2(569, 237.5)
 description = "UI_OBJ_LEUCHTPILZE"
 baseline = 22
 walk_to_point = Vector2(-15, 32.5)
 interaction_polygon = PackedVector2Array(-70, -22.5, 70, -22.5, 70, 22.5, -70, 22.5)
 
 [node name="Niesrosen" parent="Hotspots" unique_id=1309835216 instance=ExtResource("7_ephey")]
-position = Vector2(290, 232)
+position = Vector2(714, 232)
 description = "UI_OBJ_NIESROSEN"
 baseline = 20
 walk_to_point = Vector2(0, 34)
 interaction_polygon = PackedVector2Array(-40, -20, 40, -20, 40, 20, -40, 20)
 
 [node name="KuerbisturmUndGlasschuh" parent="Hotspots" unique_id=430258991 instance=ExtResource("8_1qs3w")]
-position = Vector2(325, 145)
+position = Vector2(749, 145)
 description = "UI_OBJ_KUERBISTURM_UND_GLASSCHUH"
 baseline = 65
 walk_to_point = Vector2(0, 119)
 interaction_polygon = PackedVector2Array(-35, -65, 35, -65, 35, 65, -35, 65)
 
 [node name="Gluehwuermchen" parent="Hotspots" unique_id=1078964061 instance=ExtResource("9_xpnqd")]
-position = Vector2(310, 40)
+position = Vector2(734, 40)
 description = "UI_OBJ_GLUEHWUERMCHEN"
 baseline = 30
 walk_to_point = Vector2(-10, 230)
 interaction_polygon = PackedVector2Array(-120, -30, 120, -30, 120, 30, -120, 30)
 
 [node name="Lieferkarren" parent="Hotspots" unique_id=1251069788 instance=ExtResource("10_sd1o6")]
-position = Vector2(430, 214)
+position = Vector2(854, 214)
 description = "UI_OBJ_LIEFERKARREN"
 baseline = 39
 walk_to_point = Vector2(0, 54)
 interaction_polygon = PackedVector2Array(-40, -39, 40, -39, 40, 39, -40, 39)
 
 [node name="Baeume" parent="Hotspots" unique_id=829765896 instance=ExtResource("12_iwu1b")]
-position = Vector2(250, 140)
+position = Vector2(245, 125)
 description = "UI_OBJ_BAEUME"
-baseline = 70
-walk_to_point = Vector2(0, 130)
-interaction_polygon = PackedVector2Array(-35, -70, 35, -70, 35, 70, -35, 70)
+baseline = 105
+walk_to_point = Vector2(5, 140)
+interaction_polygon = PackedVector2Array(-95, -105, 95, -105, 95, 105, -95, 105)
 
 [node name="AusgangTrollbruecke" parent="Hotspots" unique_id=584795113 instance=ExtResource("13_fnfak")]
-position = Vector2(15, 200)
+position = Vector2(15, 225)
 description = "UI_RAUM_TROLLBRUECKE"
-baseline = 50
+baseline = 55
+walk_to_point = Vector2(0, 40)
 cursor = 9
-interaction_polygon = PackedVector2Array(-15, -50, 15, -50, 15, 50, -15, 50)
+interaction_polygon = PackedVector2Array(-15, -55, 15, -55, 15, 55, -15, 55)
 
 [node name="Stolleneingang" parent="Hotspots" unique_id=1261238752 instance=ExtResource("14_m7jyd")]
-position = Vector2(555, 167.5)
+position = Vector2(979, 167.5)
 description = "UI_OBJ_STOLLENEINGANG"
 baseline = 62
 walk_to_point = Vector2(17, 74.5)
@@ -127,15 +136,15 @@ interaction_polygon = PackedVector2Array(-50, -62.5, 50, -62.5, 50, 62.5, -50, 6
 [node name="Markers" type="Node2D" parent="." unique_id=1791501332]
 
 [node name="Start" parent="Markers" unique_id=269264941 instance=ExtResource("15_6b4jm")]
-position = Vector2(20, 200)
+position = Vector2(20, 268)
 
 [node name="VonTrollbruecke" parent="Markers" unique_id=617745669 instance=ExtResource("16_2vchd")]
-position = Vector2(20, 200)
+position = Vector2(20, 268)
 
 [node name="VonBergwerk" parent="Markers" unique_id=1208771756 instance=ExtResource("17_5tx0l")]
-position = Vector2(570, 245)
+position = Vector2(994, 245)
 
 [node name="Characters" type="Node2D" parent="." unique_id=1543782891]
 
 [node name="CharacterRotkaeppchen *" parent="Characters" unique_id=1300244595 instance=ExtResource("18_w4lhb")]
-position = Vector2(490, 272)
+position = Vector2(914, 272)

@@ -107,7 +107,7 @@ raeume:
   - id: zauberwald
     name: Zauberwald
     skript_code: [WALD]
-    groesse: 640x360
+    groesse: 1066x360
     ausgaenge: [trollbruecke, bergwerk]
     erreichbar_ab: R4
     musik: w1_wald

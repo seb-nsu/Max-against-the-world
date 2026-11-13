@@ -55,14 +55,16 @@ Jede Änderung, die nach dem Gemini-Bild von Hand oder per Skript gemacht wurde,
 | Klassenzimmer | Feuer, Blasen und Trank am Kessel nachgefärbt, Bereich 150, 100 bis 240, 240 | Skript, 5 Zusatzfarben | Trank grüner machen, Blasen klarer |
 | Klassenzimmer | Flasche 3 ist noch im Hintergrund gemalt | – | Als eigenes Sprite ausschneiden und im Hintergrund übermalen (Max nimmt sie) |
 | Klassenzimmer | Socke fehlt auf dem Hocker (388, 192) | – | Deko-Sprite Socke |
-| Zauberwald, `w1_bg_zauberwald_v01.png` | Grundlage: Sebastians erste Fassung (`zauberwald_sebastian_v1.jpeg`) | Gemini-Chat, eine Runde | – |
-| Zauberwald | Riesenpilze nachgefärbt, Bereich 55, 70 bis 215, 262 | Skript, 8 Zusatzfarben | Hüte bunter, besonders rosa und violett |
-| Zauberwald | Leuchtpilze nachgefärbt, Bereich 75, 200 bis 215, 262 | Skript, 4 Zusatzfarben | Leuchten und Schein |
-| Zauberwald | Lieferkarren und Ketchup nachgefärbt, Bereich 385, 175 bis 470, 250 | Skript, 4 Zusatzfarben | Rot des Karrens |
-| Zauberwald | Ketchup ausgeschnitten als `grafik/props/ketchup.png` (417, 209, 11, 29); Stelle im Hintergrund mit dem Karrenstück 12 Pixel links daneben überdeckt | Skript, rechteckig ohne Freistellen | Sprite freistellen, übermalte Karrenseite prüfen |
-| Zauberwald | Leuchtpilz ausgeschnitten als `grafik/props/leuchtpilz.png` (157, 226, 16, 24); Stelle mit dem Stück 16 Pixel links daneben überdeckt | Skript, rechteckig ohne Freistellen | Sprite freistellen, übermalte Stelle prüfen |
-| Zauberwald | Niesrosen fehlen in der Lichtung (250, 212, 80, 40) | Platz frei gelassen | Sprites geschlossen und offen |
-| Zauberwald | Raum hat 48 statt 32 Farben | Folge des Nachfärbens | Palette angleichen |
+| Zauberwald, `w1_bg_zauberwald_v01.png` | Breitbild 1066×360: rechts Sebastians erste Fassung (`zauberwald_sebastian_v1.jpeg`), links ein tieferer Waldteil (`zauberwald_sebastian_links_v2.jpeg`), zusammengesetzt als `zauberwald_breit_v1.png` | Gemini-Chat: Vorlage mit grauer Fläche ergänzen lassen, dann Boden freigeräumt; Naht um 8 Pixel ausgerichtet, 60 Pixel weich überblendet | Naht im dicken Baum prüfen (Spielpixel um x 421) |
+| Zauberwald | Dicker Baum auf der Naht als Vordergrund-Prop `grafik/props/alter_baum.png` (340, 0, 150, 360), Umriss als Vieleck freigestellt, Baseline am unteren Rand | Skript | Umriss sauber freistellen; prüfen, ob Max dahinter natürlich verschwindet |
+| Zauberwald | Riesenpilze nachgefärbt, Bereich 479, 70 bis 639, 262 | Skript, 8 Zusatzfarben | Hüte bunter, besonders rosa und violett |
+| Zauberwald | Leuchtpilze nachgefärbt, Bereich 499, 200 bis 639, 262 | Skript, 4 Zusatzfarben | Leuchten und Schein |
+| Zauberwald | Lieferkarren und Ketchup nachgefärbt, Bereich 809, 175 bis 894, 250 | Skript, 4 Zusatzfarben | Rot des Karrens |
+| Zauberwald | Ketchup ausgeschnitten als `grafik/props/ketchup.png` (841, 209, 11, 30); Stelle mit dem Karrenstück 12 Pixel links daneben überdeckt | Skript, rechteckig ohne Freistellen | Sprite freistellen, übermalte Karrenseite prüfen |
+| Zauberwald | Leuchtpilz ausgeschnitten als `grafik/props/leuchtpilz.png` (580, 226, 16, 25); Stelle mit dem Stück 16 Pixel links daneben überdeckt | Skript, rechteckig ohne Freistellen | Sprite freistellen, übermalte Stelle prüfen |
+| Zauberwald | Niesrosen fehlen in der Lichtung (674, 212, 80, 40) | Platz frei gelassen | Sprites geschlossen und offen |
+| Zauberwald | Raum hat 47 statt 32 Farben; Waldemars Platz bei Rätsel 7 im Raumskript auf (824, 300) verschoben | Folge des Nachfärbens und der Verbreiterung | Palette angleichen |
+| Alle breiten Räume | Kamera zeigte links graue Fläche und erreichte das rechte Drittel nie (Popochiu rechnet Räume mittig um den Bildschirm); behoben in `skripte/objekte/cq_raum.gd` (setup_camera) | Code | Dorfplatz und Agora mit allen Ausgängen durchlaufen |
 | Dachboden, `w0_bg_dachboden_v03.png` | Zapp-O-Mat wirkt, als schwebe er (Sebastian, 13. November 2026), obwohl am 12. November ein Schatten unter den Fernseher gesetzt wurde | Skript (Schatten), Sprite `grafik/props/zapp_o_mat.png` mit sieben Zuständen | Füße oder Standfläche und Schatten auf den Boden |
 | Dachboden | Zapp-O-Mat und Dosenöffner farblich an den Raum angeglichen (Sebastian, 12. November 2026: stachen heraus) | Skript | Farben prüfen; Dosenöffner soll nicht herausstechen |
 | Dachboden | Aussparung im Laufbereich, wo Pixel schläft (218 bis 302 × 262 bis 284) | Layout | Mit fertigem Schlaf-Sprite prüfen |

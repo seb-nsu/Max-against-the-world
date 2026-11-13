@@ -4003,7 +4003,7 @@
    "script_name": "Zauberwald",
    "name_key": "UI_RAUM_ZAUBERWALD",
    "groesse": [
-    640,
+    1066,
     360
    ],
    "hintergrund": "res://grafik/hintergruende/w1_bg_zauberwald_v01.png",
@@ -4011,70 +4011,114 @@
    "laufbereich": [
     [
      0,
-     186
-    ],
-    [
-     48,
-     180
-    ],
-    [
-     68,
-     212
-    ],
-    [
-     80,
-     240
+     242
     ],
     [
      150,
-     258
+     238
     ],
     [
-     215,
-     262
+     330,
+     240
     ],
     [
-     240,
-     254
+     372,
+     240
     ],
     [
-     392,
-     254
+     380,
+     200
+    ],
+    [
+     424,
+     186
     ],
     [
      472,
-     254
+     180
     ],
     [
-     478,
-     236
+     492,
+     212
     ],
     [
-     548,
-     232
+     504,
+     240
     ],
     [
-     575,
-     222
+     574,
+     258
     ],
     [
-     598,
-     226
-    ],
-    [
-     592,
+     639,
      262
     ],
     [
-     612,
+     664,
+     254
+    ],
+    [
+     816,
+     254
+    ],
+    [
+     896,
+     254
+    ],
+    [
+     902,
+     236
+    ],
+    [
+     972,
+     232
+    ],
+    [
+     999,
+     222
+    ],
+    [
+     1022,
+     226
+    ],
+    [
+     1016,
+     262
+    ],
+    [
+     1036,
      282
     ],
     [
-     639,
+     1065,
      290
     ],
     [
-     639,
+     1065,
+     359
+    ],
+    [
+     505,
+     359
+    ],
+    [
+     500,
+     320
+    ],
+    [
+     470,
+     300
+    ],
+    [
+     360,
+     300
+    ],
+    [
+     335,
+     330
+    ],
+    [
+     330,
      359
     ],
     [
@@ -4085,14 +4129,14 @@
    "marker": {
     "start": [
      20,
-     200
+     268
     ],
     "von_trollbruecke": [
      20,
-     200
+     268
     ],
     "von_bergwerk": [
-     570,
+     994,
      245
     ]
    },
@@ -4102,7 +4146,7 @@
      "id": "rotkaeppchen",
      "script_name": "Rotkaeppchen",
      "pos": [
-      490,
+      914,
       272
      ]
     }
@@ -4113,13 +4157,13 @@
      "script_name": "Riesenpilze",
      "name_key": "UI_OBJ_RIESENPILZE",
      "rect": [
-      55,
+      479,
       70,
       160,
       145
      ],
      "gehe": [
-      130,
+      554,
       272
      ],
      "ansehen": [
@@ -4145,13 +4189,13 @@
      "script_name": "Leuchtpilze",
      "name_key": "UI_OBJ_LEUCHTPILZE",
      "rect": [
-      75,
+      499,
       215,
       140,
       45
      ],
      "gehe": [
-      130,
+      554,
       270
      ],
      "ansehen": [
@@ -4177,13 +4221,13 @@
      "script_name": "Niesrosen",
      "name_key": "UI_OBJ_NIESROSEN",
      "rect": [
-      250,
+      674,
       212,
       80,
       40
      ],
      "gehe": [
-      290,
+      714,
       266
      ],
      "ansehen": [
@@ -4259,13 +4303,13 @@
      "script_name": "KuerbisturmUndGlasschuh",
      "name_key": "UI_OBJ_KUERBISTURM_UND_GLASSCHUH",
      "rect": [
-      290,
+      714,
       80,
       70,
       130
      ],
      "gehe": [
-      325,
+      749,
       264
      ],
      "ansehen": [
@@ -4310,13 +4354,13 @@
      "script_name": "Gluehwuermchen",
      "name_key": "UI_OBJ_GLUEHWUERMCHEN",
      "rect": [
-      190,
+      614,
       10,
       240,
       60
      ],
      "gehe": [
-      300,
+      724,
       270
      ],
      "ansehen": [
@@ -4342,13 +4386,13 @@
      "script_name": "Lieferkarren",
      "name_key": "UI_OBJ_LIEFERKARREN",
      "rect": [
-      390,
+      814,
       175,
       80,
       78
      ],
      "gehe": [
-      430,
+      854,
       268
      ],
      "ansehen": [
@@ -4383,14 +4427,14 @@
      "script_name": "Baeume",
      "name_key": "UI_OBJ_BAEUME",
      "rect": [
-      215,
-      70,
-      70,
-      140
+      150,
+      20,
+      190,
+      210
      ],
      "gehe": [
       250,
-      270
+      265
      ],
      "ansehen": [
       {
@@ -4417,13 +4461,13 @@
      "script_name": "Leuchtpilz",
      "name_key": "UI_OBJ_LEUCHTPILZ",
      "rect": [
-      157,
+      580,
       226,
       16,
-      24
+      25
      ],
      "gehe": [
-      150,
+      574,
       268
      ],
      "textur": "res://grafik/props/leuchtpilz.png",
@@ -4452,13 +4496,13 @@
      "script_name": "Ketchup",
      "name_key": "UI_OBJ_KETCHUP",
      "rect": [
-      417,
+      841,
       209,
       11,
-      29
+      30
      ],
      "gehe": [
-      420,
+      844,
       268
      ],
      "textur": "res://grafik/props/ketchup.png",
@@ -4507,6 +4551,25 @@
       ],
       "bedingung_text": "vor Rotkäppchens Erlaubnis"
      }
+    },
+    {
+     "id": "alter_baum",
+     "script_name": "AlterBaum",
+     "name_key": "UI_OBJ_ALTER_BAUM",
+     "rect": [
+      340,
+      0,
+      150,
+      360
+     ],
+     "gehe": [
+      420,
+      280
+     ],
+     "textur": "res://grafik/props/alter_baum.png",
+     "gegenstand": null,
+     "ansehen": [],
+     "nehmen": null
     }
    ],
    "ausgaenge": [
@@ -4517,13 +4580,13 @@
      "name_key": "UI_RAUM_TROLLBRUECKE",
      "rect": [
       0,
-      150,
+      170,
       30,
-      100
+      110
      ],
      "gehe": [
       15,
-      200
+      265
      ],
      "erreichbar_ab": "start",
      "ansehen": []
@@ -4534,13 +4597,13 @@
      "ziel": "bergwerk",
      "name_key": "UI_OBJ_STOLLENEINGANG",
      "rect": [
-      505,
+      929,
       105,
       100,
       125
      ],
      "gehe": [
-      572,
+      996,
       242
      ],
      "erreichbar_ab": "R4",
