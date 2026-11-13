@@ -47,6 +47,10 @@ dorfplatz:
   # hinten, deshalb starke Tiefe: Max ist vorn 100 Prozent groß und an den Ladentüren etwa halb so groß.
   hintergrund: res://grafik/hintergruende/w1_bg_dorfplatz_v03.png
   tiefe: 0.4
+  # Lebendiger Hintergrund (P16): Vögel am Himmel über den Hügeln, Windstoß mit Blättern über den Platz
+  ambiente:
+    voegel: {bereich: [0, 15, 1280, 45]}
+    blaetter: {bereich: [0, 235, 1280, 120]}
   laufbereich: [[0, 357], [0, 302], [120, 290], [235, 272], [400, 268], [440, 266], [592, 264], [600, 250],
                 [640, 250], [648, 262], [752, 262], [756, 252], [818, 252], [822, 266], [912, 266], [916, 240],
                 [1000, 232], [1160, 244], [1180, 230], [1279, 232], [1279, 357]]

@@ -161,6 +161,24 @@
     ]
    },
    "tiefe": 0.4,
+   "ambiente": {
+    "voegel": {
+     "bereich": [
+      0,
+      15,
+      1280,
+      45
+     ]
+    },
+    "blaetter": {
+     "bereich": [
+      0,
+      235,
+      1280,
+      120
+     ]
+    }
+   },
    "figuren": [
     {
      "id": "toadi",

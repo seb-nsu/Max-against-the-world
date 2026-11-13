@@ -91,6 +91,7 @@ func _on_room_entered() -> void:
 	partner_aufstellen(true)
 	_zustand_anwenden()
 	tiefe_anwenden()
+	ambiente_starten()
 	await _raum_betreten(erster_besuch)
 	await Spiel.regel("raum_betreten", self, erster_besuch)
 	Spiel.pixel_feld_pruefen()
@@ -120,9 +121,22 @@ func _on_restore_from_savegame() -> void:
 	partner_aufstellen()
 	_zustand_anwenden()
 	tiefe_anwenden()
+	ambiente_starten()
 	Spiel.pixel_feld_pruefen()
 	await Spiel.regel("nach_laden", self)
 	await _nach_laden()
+
+
+## Lebendiger Hintergrund (P16): Vögel, Windstöße usw., wenn der Bauplan „ambiente“ hat.
+## Liegt über den Figuren (Vögel am Himmel, Blätter im Vordergrund).
+func ambiente_starten() -> CQAmbiente:
+	var da := get_node_or_null("Ambiente") as CQAmbiente
+	var cfg: Dictionary = bauplan().get("ambiente", {})
+	if da or cfg.is_empty() or Engine.is_editor_hint():
+		return da
+	da = CQAmbiente.new(cfg)
+	add_child(da)
+	return da
 
 
 func _im_abschnitt(ab: String) -> bool:
