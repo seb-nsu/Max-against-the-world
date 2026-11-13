@@ -102,6 +102,8 @@ Blickrichtung (13. November 2026): Alle Figurenbilder schauen nach rechts (Minka
 
 Grundsatz für das Review (Sebastian, 13. November 2026): Gehen bekommen nur Figuren, die im Spiel wirklich laufen. Für jede Figur neu überlegen, welche Bewegungen zu ihr passen, auch kleine Eigenheiten im Stand, zum Beispiel dreht die Schmiede-Ziege ab und zu eine Runde.
 
+Schon vorgemerkt (Sebastian, 13. November 2026): Alwin rührt im Kessel (Kelle im Topf, Kreisbewegung); der Schmied hämmert am Amboss (Hammer heben und schlagen, ein paar Funken). Dafür fehlt noch ein Hammer: entweder in der Hand des Schmieds neu zeichnen oder als eigenes Sprite (Prompt nötig); auf dem Amboss liegt dazu ein glühendes Werkstück.
+
 | Figur oder Objekt | Stand | Überarbeiten |
 | --- | --- | --- |
 | Max | Stehen: Atmen per Rig (nur Oberkörper und Kopf); Sprechen: Mund auf und Kopfnicken; Gehen: per Code aus dem Standbild (Ober-, Unterschenkel, Fuß, hinteres Bein als Kopie) | Gang flüssiger, Mundbewegung, Wenden |
