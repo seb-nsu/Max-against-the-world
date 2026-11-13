@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://dbphm6ep4qhvs"]
 
-[ext_resource type="Script" path="res://game/rooms/wasserschloss/room_wasserschloss.gd" id="1_bpps0"]
+[ext_resource type="Script" uid="uid://c7m8x6oqqk168" path="res://game/rooms/wasserschloss/room_wasserschloss.gd" id="1_bpps0"]
 [ext_resource type="PackedScene" uid="uid://dsm731is2sdk0" path="res://game/rooms/wasserschloss/walkable_areas/boden/walkable_area_boden.tscn" id="2_0lpsb"]
 [ext_resource type="PackedScene" uid="uid://bn2wmaxjlll1x" path="res://game/rooms/wasserschloss/props/background/prop_background.tscn" id="3_6b1ce"]
-[ext_resource type="Texture2D" uid="uid://bscvuyeia624j" path="res://grafik/platzhalter/raum_wasserschloss.png" id="4_iww8b"]
+[ext_resource type="Texture2D" uid="uid://cdpnyx2255q7v" path="res://grafik/hintergruende/w1_bg_wasserschloss_v01.png" id="4_0lpsb"]
 [ext_resource type="PackedScene" uid="uid://cvh5srkcg62ij" path="res://game/rooms/wasserschloss/hotspots/schilf/hotspot_schilf.tscn" id="5_hr18c"]
 [ext_resource type="PackedScene" uid="uid://d2idn6viql5et" path="res://game/rooms/wasserschloss/hotspots/ruderboot/hotspot_ruderboot.tscn" id="6_tr6l8"]
 [ext_resource type="PackedScene" uid="uid://hv3ujxnhjjtn" path="res://game/rooms/wasserschloss/hotspots/schild_am_tor/hotspot_schild_am_tor.tscn" id="7_ts4ls"]
@@ -25,71 +25,77 @@ height = 360
 [node name="WalkableAreas" type="Node2D" parent="." unique_id=1266379386]
 
 [node name="Boden" parent="WalkableAreas" unique_id=387178585 instance=ExtResource("2_0lpsb")]
-interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(8, 280, 632, 280, 632, 356, 8, 356)])
+interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(0, 240, 40, 238, 62, 290, 250, 298, 298, 215, 352, 215, 398, 298, 470, 300, 560, 290, 639, 278, 639, 359, 0, 359)])
 
 [node name="Props" type="Node2D" parent="." unique_id=133964875]
 
 [node name="Background" parent="Props" unique_id=1612605142 instance=ExtResource("3_6b1ce")]
 position = Vector2(320, 180)
-texture = ExtResource("4_iww8b")
+texture = ExtResource("4_0lpsb")
 description = "UI_RAUM_WASSERSCHLOSS"
 
 [node name="Hotspots" type="Node2D" parent="." unique_id=857091617]
 
 [node name="Schilf" parent="Hotspots" unique_id=2032675821 instance=ExtResource("5_hr18c")]
-position = Vector2(71, 251)
+position = Vector2(117.5, 210)
 description = "UI_OBJ_SCHILF"
-baseline = 31
-walk_to_point = Vector2(11, 63)
+baseline = 40
+walk_to_point = Vector2(-37.5, 86)
+interaction_polygon = PackedVector2Array(-62.5, -40, 62.5, -40, 62.5, 40, -62.5, 40)
 
 [node name="Ruderboot" parent="Hotspots" unique_id=120034205 instance=ExtResource("6_tr6l8")]
-position = Vector2(148, 275)
+position = Vector2(173, 259)
 description = "UI_OBJ_RUDERBOOT"
-baseline = 15
-walk_to_point = Vector2(-8, 39)
+baseline = 26
+walk_to_point = Vector2(-3, 39)
+interaction_polygon = PackedVector2Array(-55, -26, 55, -26, 55, 26, -55, 26)
 
 [node name="SchildAmTor" parent="Hotspots" unique_id=803278461 instance=ExtResource("7_ts4ls")]
-position = Vector2(344, 136)
+position = Vector2(329, 115)
 description = "UI_OBJ_SCHILD_AM_TOR"
-baseline = 16
-walk_to_point = Vector2(-4, 168)
+baseline = 15
+walk_to_point = Vector2(-5, 111)
+interaction_polygon = PackedVector2Array(-26, -15, 26, -15, 26, 15, -26, 15)
 
 [node name="Umzugskartons" parent="Hotspots" unique_id=1116227160 instance=ExtResource("8_1q5p3")]
-position = Vector2(420, 220)
+position = Vector2(337, 174)
 description = "UI_OBJ_UMZUGSKARTONS"
-baseline = 40
-walk_to_point = Vector2(-20, 84)
+baseline = 19
+walk_to_point = Vector2(-13, 52)
+interaction_polygon = PackedVector2Array(-15, -19, 15, -19, 15, 19, -15, 19)
 
 [node name="Teppich" parent="Hotspots" unique_id=900954658 instance=ExtResource("9_k3w5v")]
-position = Vector2(499, 244)
+position = Vector2(341, 195)
 description = "UI_OBJ_TEPPICH"
-baseline = 12
-walk_to_point = Vector2(-19, 60)
+baseline = 7
+walk_to_point = Vector2(-17, 31)
+interaction_polygon = PackedVector2Array(-13, -7, 13, -7, 13, 7, -13, 7)
 
 [node name="AusgangTrollbruecke" parent="Hotspots" unique_id=287667428 instance=ExtResource("10_1qqkx")]
-position = Vector2(20, 211)
+position = Vector2(15, 195)
 description = "UI_RAUM_TROLLBRUECKE"
-baseline = 71
-walk_to_point = Vector2(4, 111)
+baseline = 55
+walk_to_point = Vector2(0, 97)
 cursor = 9
+interaction_polygon = PackedVector2Array(-15, -55, 15, -55, 15, 55, -15, 55)
 
 [node name="Regions" type="Node2D" parent="." unique_id=1075031856]
 
 [node name="Markers" type="Node2D" parent="." unique_id=2067427507]
 
 [node name="Start" parent="Markers" unique_id=456448769 instance=ExtResource("11_k84vd")]
-position = Vector2(48, 320)
+position = Vector2(30, 300)
 
 [node name="VonTrollbruecke" parent="Markers" unique_id=34796457 instance=ExtResource("12_m68jj")]
-position = Vector2(48, 320)
+position = Vector2(30, 300)
 
 [node name="Tor" parent="Markers" unique_id=1447153094 instance=ExtResource("13_p8m50")]
-position = Vector2(340, 304)
+position = Vector2(324, 226)
 
 [node name="Characters" type="Node2D" parent="." unique_id=387092651]
 
 [node name="CharacterSchwan *" parent="Characters" unique_id=1619974735 instance=ExtResource("14_6h2dn")]
-position = Vector2(540, 336)
+position = Vector2(520, 265)
 
 [node name="CharacterToadi *" parent="Characters" unique_id=1625231671 instance=ExtResource("15_1byld")]
-position = Vector2(420, 320)
+position = Vector2(440, 322)

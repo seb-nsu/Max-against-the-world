@@ -3723,55 +3723,88 @@
     640,
     360
    ],
-   "hintergrund": "res://grafik/platzhalter/raum_wasserschloss.png",
+   "hintergrund": "res://grafik/hintergruende/w1_bg_wasserschloss_v01.png",
    "farbe": "#4f7a9a",
    "laufbereich": [
     [
-     8,
-     280
+     0,
+     240
     ],
     [
-     632,
-     280
+     40,
+     238
     ],
     [
-     632,
-     356
+     62,
+     290
     ],
     [
-     8,
-     356
+     250,
+     298
+    ],
+    [
+     298,
+     215
+    ],
+    [
+     352,
+     215
+    ],
+    [
+     398,
+     298
+    ],
+    [
+     470,
+     300
+    ],
+    [
+     560,
+     290
+    ],
+    [
+     639,
+     278
+    ],
+    [
+     639,
+     359
+    ],
+    [
+     0,
+     359
     ]
    ],
    "marker": {
     "start": [
-     48,
-     320
+     30,
+     300
     ],
     "von_trollbruecke": [
-     48,
-     320
+     30,
+     300
     ],
     "tor": [
-     340,
-     304
+     324,
+     226
     ]
    },
+   "tiefe": 0.45,
    "figuren": [
     {
      "id": "schwan",
      "script_name": "Schwan",
      "pos": [
-      540,
-      336
+      520,
+      265
      ]
     },
     {
      "id": "toadi",
      "script_name": "Toadi",
      "pos": [
-      420,
-      320
+      440,
+      322
      ]
     }
    ],
@@ -3781,14 +3814,14 @@
      "script_name": "Schilf",
      "name_key": "UI_OBJ_SCHILF",
      "rect": [
-      40,
-      220,
-      60,
-      60
+      55,
+      170,
+      125,
+      80
      ],
      "gehe": [
       80,
-      312
+      296
      ],
      "ansehen": [
       {
@@ -3814,14 +3847,14 @@
      "script_name": "Ruderboot",
      "name_key": "UI_OBJ_RUDERBOOT",
      "rect": [
-      108,
-      260,
-      80,
-      28
+      118,
+      233,
+      110,
+      52
      ],
      "gehe": [
-      140,
-      312
+      170,
+      298
      ],
      "ansehen": [
       {
@@ -3846,14 +3879,14 @@
      "script_name": "SchildAmTor",
      "name_key": "UI_OBJ_SCHILD_AM_TOR",
      "rect": [
-      320,
-      120,
-      48,
-      32
+      303,
+      100,
+      52,
+      30
      ],
      "gehe": [
-      340,
-      304
+      324,
+      226
      ],
      "ansehen": [
       {
@@ -3878,14 +3911,14 @@
      "script_name": "Umzugskartons",
      "name_key": "UI_OBJ_UMZUGSKARTONS",
      "rect": [
-      380,
-      180,
-      80,
-      80
+      322,
+      155,
+      30,
+      38
      ],
      "gehe": [
-      400,
-      304
+      324,
+      226
      ],
      "ansehen": [
       {
@@ -3938,14 +3971,14 @@
      "script_name": "Teppich",
      "name_key": "UI_OBJ_TEPPICH",
      "rect": [
-      468,
-      232,
-      60,
-      24
+      328,
+      188,
+      26,
+      14
      ],
      "gehe": [
-      480,
-      304
+      324,
+      226
      ],
      "ansehen": [
       {
@@ -3974,14 +4007,14 @@
      "ziel": "trollbruecke",
      "name_key": "UI_RAUM_TROLLBRUECKE",
      "rect": [
-      4,
+      0,
       140,
-      32,
-      140
+      30,
+      110
      ],
      "gehe": [
-      24,
-      320
+      15,
+      292
      ],
      "erreichbar_ab": "start",
      "ansehen": []

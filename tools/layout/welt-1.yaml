@@ -257,24 +257,30 @@ trollbruecke:
 
 wasserschloss:
   farbe: "#4f7a9a"
-  laufbereich: [[8, 280], [632, 280], [632, 356], [8, 356]]
+  # Echter Hintergrund (13. November 2026, Sebastians Gemini-Fassung, rosa Schloss wie von der Troll-Brücke
+  # aus; tools/pixelieren.py, ohne Nachfärben). Laufbereich: Ufer vorn, Weg links zur kleinen Brücke
+  # (Ausgang) und der Steg bis vor das Tor. Koordinaten aus dem Bild; übernommen mit --cq-layout=wasserschloss.
+  hintergrund: res://grafik/hintergruende/w1_bg_wasserschloss_v01.png
+  tiefe: 0.45
+  laufbereich: [[0, 240], [40, 238], [62, 290], [250, 298], [298, 215], [352, 215], [398, 298], [470, 300],
+                [560, 290], [639, 278], [639, 359], [0, 359]]
   marker:
-    start: [48, 320]
-    von_trollbruecke: [48, 320]
-    tor: [340, 304]
+    start: [30, 300]
+    von_trollbruecke: [30, 300]
+    tor: [324, 226]
   figuren:
-    schwan: [540, 336]
-    toadi: [420, 320]
+    schwan: [520, 265]
+    toadi: [440, 322]
   alias:
     kartons: umzugskartons
   hotspots:
-    schilf: {rect: [40, 220, 60, 60], gehe: [80, 312], name: Schilf}
-    ruderboot: {rect: [108, 260, 80, 28], gehe: [140, 312], name: Ruderboot}
-    schild_am_tor: {rect: [320, 120, 48, 32], gehe: [340, 304], name: Schild}
-    umzugskartons: {rect: [380, 180, 80, 80], gehe: [400, 304], name: Umzugskartons}
-    teppich: {rect: [468, 232, 60, 24], gehe: [480, 304], name: Teppich}
+    schilf: {rect: [55, 170, 125, 80], gehe: [80, 296], name: Schilf}
+    ruderboot: {rect: [118, 233, 110, 52], gehe: [170, 298], name: Ruderboot}
+    schild_am_tor: {rect: [303, 100, 52, 30], gehe: [324, 226], name: Schild}
+    umzugskartons: {rect: [322, 155, 30, 38], gehe: [324, 226], name: Umzugskartons}
+    teppich: {rect: [328, 188, 26, 14], gehe: [324, 226], name: Teppich}
   ausgaenge:
-    trollbruecke: {rect: [4, 140, 32, 140], gehe: [24, 320], id: ausgang_trollbruecke}
+    trollbruecke: {rect: [0, 140, 30, 110], gehe: [15, 292], id: ausgang_trollbruecke}
 
 zauberwald:
   farbe: "#3f5a3a"

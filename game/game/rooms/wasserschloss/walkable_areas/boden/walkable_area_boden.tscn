@@ -1,18 +1,18 @@
 [gd_scene format=3 uid="uid://dsm731is2sdk0"]
 
-[ext_resource type="Script" path="res://game/rooms/wasserschloss/walkable_areas/boden/walkable_area_boden.gd" id="1_0prdk"]
+[ext_resource type="Script" uid="uid://br2y6a51t0eeo" path="res://game/rooms/wasserschloss/walkable_areas/boden/walkable_area_boden.gd" id="1_0prdk"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_0prdk"]
-vertices = PackedVector2Array(316, 178, 4, 178, 4, 140, 316, 140)
-polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
-outlines = Array[PackedVector2Array]([PackedVector2Array(4, 140, 316, 140, 316, 178, 4, 178)])
+vertices = PackedVector2Array(560, 290, 639, 278, 639, 359, 0, 359, 470, 300, 398, 298, 250, 298, 0, 240, 40, 238, 62, 290, 298, 215, 352, 215)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2), PackedInt32Array(0, 2, 3, 4), PackedInt32Array(5, 4, 3, 6), PackedInt32Array(3, 7, 8, 9), PackedInt32Array(10, 11, 5, 6), PackedInt32Array(6, 3, 9)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(0, 240, 40, 238, 62, 290, 250, 298, 298, 215, 352, 215, 398, 298, 470, 300, 560, 290, 639, 278, 639, 359, 0, 359)])
 agent_radius = 0.0
 
 [node name="Boden" type="Node2D" unique_id=387178585]
 script = ExtResource("1_0prdk")
 script_name = "Boden"
 description = "Boden"
-interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(8, 280, 632, 280, 632, 356, 8, 356)])
+interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(0, 240, 40, 238, 62, 290, 250, 298, 298, 215, 352, 215, 398, 298, 470, 300, 560, 290, 639, 278, 639, 359, 0, 359)])
 
 [node name="Perimeter" type="NavigationRegion2D" parent="." unique_id=2130936335]
 modulate = Color(0, 1, 0, 1)

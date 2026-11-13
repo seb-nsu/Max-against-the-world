@@ -66,6 +66,7 @@ Jede Änderung, die nach dem Gemini-Bild von Hand oder per Skript gemacht wurde,
 | Zauberwald | Niesrosen fehlen in der Lichtung (674, 212, 80, 40) | Platz frei gelassen | Sprites geschlossen und offen |
 | Zauberwald | Raum hat 47 statt 32 Farben; Waldemars Platz bei Rätsel 7 im Raumskript auf (824, 300) verschoben | Folge des Nachfärbens und der Verbreiterung | Palette angleichen |
 | Alle breiten Räume | Kamera zeigte links graue Fläche und erreichte das rechte Drittel nie (Popochiu rechnet Räume mittig um den Bildschirm); behoben in `skripte/objekte/cq_raum.gd` (setup_camera) | Code | Dorfplatz und Agora mit allen Ausgängen durchlaufen |
+| Wasserschloss, `w1_bg_wasserschloss_v01.png` | Grundlage: Sebastians erste Fassung (`wasserschloss_sebastian_v1.jpeg`), ohne Nachfärben | Gemini-Chat, eine Runde | Max auf dem Steg ist größer als das Tor (Tiefe 0.45): Größenverhältnis prüfen; Schwan noch Platzhalter im Wasser |
 | Dachboden, `w0_bg_dachboden_v03.png` | Zapp-O-Mat wirkt, als schwebe er (Sebastian, 13. November 2026), obwohl am 12. November ein Schatten unter den Fernseher gesetzt wurde | Skript (Schatten), Sprite `grafik/props/zapp_o_mat.png` mit sieben Zuständen | Füße oder Standfläche und Schatten auf den Boden |
 | Dachboden | Zapp-O-Mat und Dosenöffner farblich an den Raum angeglichen (Sebastian, 12. November 2026: stachen heraus) | Skript | Farben prüfen; Dosenöffner soll nicht herausstechen |
 | Dachboden | Aussparung im Laufbereich, wo Pixel schläft (218 bis 302 × 262 bis 284) | Layout | Mit fertigem Schlaf-Sprite prüfen |
