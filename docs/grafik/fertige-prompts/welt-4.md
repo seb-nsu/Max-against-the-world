@@ -125,175 +125,175 @@ wird nur die Seitenansicht nach rechts; Gehen und Reden entstehen per Code (`too
 ## Gerd Glück
 
 ```text
-Character concept sheet in exactly the same style as the attached character sheet of the boy Max: same line weight, same flat cel shading, same light from upper left, plain light grey background, no text, no ground shadow. Exactly one character, full body, strict side view facing right, standing on a flat baseline, legs clearly visible. Gerd Glück, a slick game show host about 106 percent of the boy Max's height, glossy black pompadour, huge white teeth in a frozen beaming smile. Shiny sequined purple jacket, black trousers, white shoes, a blank price tag dangling from his own left sleeve. A handheld microphone in his right hand. Neutral standing pose, facing right.
+Character concept sheet in exactly the same style as the attached character sheet of the boy Max: same line weight, same flat cel shading, same light from upper left, plain light grey background, no text, no ground shadow. Exactly one character, full body, strict side view facing right, standing on a flat baseline, legs clearly visible. Draw only this new character: do not copy any heads, legs, shoes or other parts of the boy Max from the attached sheet into the image. Gerd Glück, a slick game show host about 106 percent of the boy Max's height, glossy black pompadour, huge white teeth in a frozen beaming smile. Shiny sequined purple jacket, black trousers, white shoes, a blank price tag dangling from his own left sleeve. A handheld microphone in his right hand. Neutral standing pose, facing right.
 ```
 
 ## Trödel-Experte
 
 ```text
-Character concept sheet in exactly the same style as the attached character sheet of the boy Max: same line weight, same flat cel shading, same light from upper left, plain light grey background, no text, no ground shadow. Exactly one character, full body, strict side view facing right, standing on a flat baseline, legs clearly visible. An antiques appraiser about 104 percent of the boy Max's height, thin and clean-shaven, neat grey side parting, brown tweed jacket, red bow tie, holding a big magnifying glass up to one eye, appraising look, facing right. No large handlebar moustache, not a likeness of any real TV appraiser.
+Character concept sheet in exactly the same style as the attached character sheet of the boy Max: same line weight, same flat cel shading, same light from upper left, plain light grey background, no text, no ground shadow. Exactly one character, full body, strict side view facing right, standing on a flat baseline, legs clearly visible. Draw only this new character: do not copy any heads, legs, shoes or other parts of the boy Max from the attached sheet into the image. An antiques appraiser about 104 percent of the boy Max's height, thin and clean-shaven, neat grey side parting, brown tweed jacket, red bow tie, holding a big magnifying glass up to one eye, appraising look, facing right. No large handlebar moustache, not a likeness of any real TV appraiser.
 ```
 
 ## Flimmer
 
 ```text
-Character concept sheet in exactly the same style as the attached character sheet of the boy Max: same line weight, same flat cel shading, same light from upper left, plain light grey background, no text, no ground shadow. Exactly one character, full body, strict side view facing right, standing on a flat baseline, legs clearly visible. Flimmer, a small round blob creature about 29 percent of the boy Max's height made of flickering grey TV static, two big bright white eyes, a wobbly fuzzy outline, floating a little above the ground, friendly curious look, facing right.
+Character concept sheet in exactly the same style as the attached character sheet of the boy Max: same line weight, same flat cel shading, same light from upper left, plain light grey background, no text, no ground shadow. Exactly one character, full body, strict side view facing right, standing on a flat baseline, legs clearly visible. Draw only this new character: do not copy any heads, legs, shoes or other parts of the boy Max from the attached sheet into the image. Flimmer, a small round blob creature about 29 percent of the boy Max's height made of flickering grey TV static, two big bright white eyes, a wobbly fuzzy outline, floating a little above the ground, friendly curious look, facing right.
 ```
 
 ## Sitcom-Vater
 
 ```text
-Character concept sheet in exactly the same style as the attached character sheet of the boy Max: same line weight, same flat cel shading, same light from upper left, plain light grey background, no text, no ground shadow. Exactly one character, full body, strict side view facing right, standing on a flat baseline, legs clearly visible. A chubby sitcom dad about 104 percent of the boy Max's height, balding with a dark comb-over. Brown sweater vest over a white shirt, beige slacks, brown corduroy slippers. Hugging a white chicken-shaped ceramic cookie jar with a red comb like a baby. Suspicious look, facing right. Second pose: the same dad empty-handed, sitting slumped on a wooden crate, waiting. Not a likeness of any real sitcom actor.
+Character concept sheet in exactly the same style as the attached character sheet of the boy Max: same line weight, same flat cel shading, same light from upper left, plain light grey background, no text, no ground shadow. Exactly one character, full body, strict side view facing right, standing on a flat baseline, legs clearly visible. Draw only this new character: do not copy any heads, legs, shoes or other parts of the boy Max from the attached sheet into the image. A chubby sitcom dad about 104 percent of the boy Max's height, balding with a dark comb-over. Brown sweater vest over a white shirt, beige slacks, brown corduroy slippers. Hugging a white chicken-shaped ceramic cookie jar with a red comb like a baby. Suspicious look, facing right. Second pose: the same dad empty-handed, sitting slumped on a wooden crate, waiting. Not a likeness of any real sitcom actor.
 ```
 
 ## Sitcom-Mutter
 
 ```text
-Character concept sheet in exactly the same style as the attached character sheet of the boy Max: same line weight, same flat cel shading, same light from upper left, plain light grey background, no text, no ground shadow. Exactly one character, full body, strict side view facing right, standing on a flat baseline, legs clearly visible. A sitcom mom about 104 percent of the boy Max's height, big curly red hair, mint dress under a flowery peach apron, hands on her hips, knowing look, facing right. Not a likeness of any real sitcom actress.
+Character concept sheet in exactly the same style as the attached character sheet of the boy Max: same line weight, same flat cel shading, same light from upper left, plain light grey background, no text, no ground shadow. Exactly one character, full body, strict side view facing right, standing on a flat baseline, legs clearly visible. Draw only this new character: do not copy any heads, legs, shoes or other parts of the boy Max from the attached sheet into the image. A sitcom mom about 104 percent of the boy Max's height, big curly red hair, mint dress under a flowery peach apron, hands on her hips, knowing look, facing right. Not a likeness of any real sitcom actress.
 ```
 
 ## Sitcom-Sohn
 
 ```text
-Character concept sheet in exactly the same style as the attached character sheet of the boy Max: same line weight, same flat cel shading, same light from upper left, plain light grey background, no text, no ground shadow. Exactly one character, full body, strict side view facing right, standing on a flat baseline, legs clearly visible. A cheeky teenage sitcom son about as tall as the boy Max, blue baseball cap worn backwards, oversized yellow T-shirt, very baggy light jeans, a skateboard under his arm, smirking, facing right.
+Character concept sheet in exactly the same style as the attached character sheet of the boy Max: same line weight, same flat cel shading, same light from upper left, plain light grey background, no text, no ground shadow. Exactly one character, full body, strict side view facing right, standing on a flat baseline, legs clearly visible. Draw only this new character: do not copy any heads, legs, shoes or other parts of the boy Max from the attached sheet into the image. A cheeky teenage sitcom son about as tall as the boy Max, blue baseball cap worn backwards, oversized yellow T-shirt, very baggy light jeans, a skateboard under his arm, smirking, facing right.
 ```
 
 ## Kommissar
 
 ```text
-Character concept sheet in exactly the same style as the attached character sheet of the boy Max: same line weight, same flat cel shading, same light from upper left, plain light grey background, no text, no ground shadow. Exactly one character, full body, strict side view facing right, standing on a flat baseline, legs clearly visible. An old police inspector about 104 percent of the boy Max's height, bald head with a grey fringe, thick grey walrus moustache, squinting eyes. Crumpled beige raincoat over a brown suit with a narrow dark tie, a lollipop stick in the corner of his mouth, one finger raised as if asking one more question, facing right. Not a likeness of any real actor.
+Character concept sheet in exactly the same style as the attached character sheet of the boy Max: same line weight, same flat cel shading, same light from upper left, plain light grey background, no text, no ground shadow. Exactly one character, full body, strict side view facing right, standing on a flat baseline, legs clearly visible. Draw only this new character: do not copy any heads, legs, shoes or other parts of the boy Max from the attached sheet into the image. An old police inspector about 104 percent of the boy Max's height, bald head with a grey fringe, thick grey walrus moustache, squinting eyes. Crumpled beige raincoat over a brown suit with a narrow dark tie, a lollipop stick in the corner of his mouth, one finger raised as if asking one more question, facing right. Not a likeness of any real actor.
 ```
 
 ## Erzähler
 
 ```text
-Character concept sheet in exactly the same style as the attached character sheet of the boy Max: same line weight, same flat cel shading, same light from upper left, plain light grey background, no text, no ground shadow. Exactly one character, full body, strict side view facing right, standing on a flat baseline, legs clearly visible. An elderly gentle nature documentary narrator about 104 percent of the boy Max's height (standing size), white hair, round glasses, floppy khaki bush hat, safari shirt with many pockets, khaki shorts, knee socks. Crouching, a handheld microphone in one hand and a thick script with a coffee stain under his arm, whispering, facing right. Fictional, not a likeness of any real presenter.
+Character concept sheet in exactly the same style as the attached character sheet of the boy Max: same line weight, same flat cel shading, same light from upper left, plain light grey background, no text, no ground shadow. Exactly one character, full body, strict side view facing right, standing on a flat baseline, legs clearly visible. Draw only this new character: do not copy any heads, legs, shoes or other parts of the boy Max from the attached sheet into the image. An elderly gentle nature documentary narrator about 104 percent of the boy Max's height (standing size), white hair, round glasses, floppy khaki bush hat, safari shirt with many pockets, khaki shorts, knee socks. Crouching, a handheld microphone in one hand and a thick script with a coffee stain under his arm, whispering, facing right. Fictional, not a likeness of any real presenter.
 ```
 
 ## Löwe
 
 ```text
-Character concept sheet in exactly the same style as the attached character sheet of the boy Max: same line weight, same flat cel shading, same light from upper left, plain light grey background, no text, no ground shadow. Exactly one character, full body, strict side view facing right, standing on a flat baseline, legs clearly visible. A dramatic male lion about 201 pixels long, lying down, huge fluffy dark orange mane, no crown, chin on his crossed front paws, sulking eyes, facing right. Simple pixel cartoon style, not like any animated film lion.
+Character concept sheet in exactly the same style as the attached character sheet of the boy Max: same line weight, same flat cel shading, same light from upper left, plain light grey background, no text, no ground shadow. Exactly one character, full body, strict side view facing right, standing on a flat baseline, legs clearly visible. Draw only this new character: do not copy any heads, legs, shoes or other parts of the boy Max from the attached sheet into the image. A dramatic male lion about 201 pixels long, lying down, huge fluffy dark orange mane, no crown, chin on his crossed front paws, sulking eyes, facing right. Simple pixel cartoon style, not like any animated film lion.
 ```
 
 ## Hyäne
 
 ```text
-Character concept sheet in exactly the same style as the attached character sheet of the boy Max: same line weight, same flat cel shading, same light from upper left, plain light grey background, no text, no ground shadow. Exactly one character, full body, strict side view facing right, standing on a flat baseline, legs clearly visible. A shifty spotted hyena about 61 percent of the boy Max's height sitting bolt upright, perfectly straight serious face like a passport photo, lips pressed hard together to hold back a laugh, stiff ears, facing right. No crown visible.
+Character concept sheet in exactly the same style as the attached character sheet of the boy Max: same line weight, same flat cel shading, same light from upper left, plain light grey background, no text, no ground shadow. Exactly one character, full body, strict side view facing right, standing on a flat baseline, legs clearly visible. Draw only this new character: do not copy any heads, legs, shoes or other parts of the boy Max from the attached sheet into the image. A shifty spotted hyena about 61 percent of the boy Max's height sitting bolt upright, perfectly straight serious face like a passport photo, lips pressed hard together to hold back a laugh, stiff ears, facing right. No crown visible.
 ```
 
 ## Gepard
 
 ```text
-Character concept sheet in exactly the same style as the attached character sheet of the boy Max: same line weight, same flat cel shading, same light from upper left, plain light grey background, no text, no ground shadow. Exactly one character, full body, strict side view facing right, standing on a flat baseline, legs clearly visible. A thin cheetah about 53 percent of the boy Max's height, a red sweatband on its head and a stopwatch on a cord around its neck, sitting and panting, facing right. Second pose: lying flat on its belly, tongue out, exhausted.
+Character concept sheet in exactly the same style as the attached character sheet of the boy Max: same line weight, same flat cel shading, same light from upper left, plain light grey background, no text, no ground shadow. Exactly one character, full body, strict side view facing right, standing on a flat baseline, legs clearly visible. Draw only this new character: do not copy any heads, legs, shoes or other parts of the boy Max from the attached sheet into the image. A thin cheetah about 53 percent of the boy Max's height, a red sweatband on its head and a stopwatch on a cord around its neck, sitting and panting, facing right. Second pose: lying flat on its belly, tongue out, exhausted.
 ```
 
 ## Geier
 
 ```text
-Character concept sheet in exactly the same style as the attached character sheet of the boy Max: same line weight, same flat cel shading, same light from upper left, plain light grey background, no text, no ground shadow. Exactly one character, full body, strict side view facing right, standing on a flat baseline, legs clearly visible. A vain vulture about 53 percent of the boy Max's height perched on a branch, bald pink head shining with lotion, a small gold-colored lotion tube in one claw and a hand mirror in the other, admiring itself, facing right.
+Character concept sheet in exactly the same style as the attached character sheet of the boy Max: same line weight, same flat cel shading, same light from upper left, plain light grey background, no text, no ground shadow. Exactly one character, full body, strict side view facing right, standing on a flat baseline, legs clearly visible. Draw only this new character: do not copy any heads, legs, shoes or other parts of the boy Max from the attached sheet into the image. A vain vulture about 53 percent of the boy Max's height perched on a branch, bald pink head shining with lotion, a small gold-colored lotion tube in one claw and a hand mirror in the other, admiring itself, facing right.
 ```
 
 ## Nashorn
 
 ```text
-Character concept sheet in exactly the same style as the attached character sheet of the boy Max: same line weight, same flat cel shading, same light from upper left, plain light grey background, no text, no ground shadow. Exactly one character, full body, strict side view facing right, standing on a flat baseline, legs clearly visible. A big grey rhinoceros about 201 pixels long, asleep standing up, eyes closed, head drooping, a small brown bird sitting on its horn, facing right.
+Character concept sheet in exactly the same style as the attached character sheet of the boy Max: same line weight, same flat cel shading, same light from upper left, plain light grey background, no text, no ground shadow. Exactly one character, full body, strict side view facing right, standing on a flat baseline, legs clearly visible. Draw only this new character: do not copy any heads, legs, shoes or other parts of the boy Max from the attached sheet into the image. A big grey rhinoceros about 201 pixels long, asleep standing up, eyes closed, head drooping, a small brown bird sitting on its horn, facing right.
 ```
 
 ## Flamingo
 
 ```text
-Character concept sheet in exactly the same style as the attached character sheet of the boy Max: same line weight, same flat cel shading, same light from upper left, plain light grey background, no text, no ground shadow. Exactly one character, full body, strict side view facing right, standing on a flat baseline, legs clearly visible. A pink flamingo about 43 percent of the boy Max's height standing on one leg, head tilted, gossiping look, facing right.
+Character concept sheet in exactly the same style as the attached character sheet of the boy Max: same line weight, same flat cel shading, same light from upper left, plain light grey background, no text, no ground shadow. Exactly one character, full body, strict side view facing right, standing on a flat baseline, legs clearly visible. Draw only this new character: do not copy any heads, legs, shoes or other parts of the boy Max from the attached sheet into the image. A pink flamingo about 43 percent of the boy Max's height standing on one leg, head tilted, gossiping look, facing right.
 ```
 
 ## Zombie
 
 ```text
-Character concept sheet in exactly the same style as the attached character sheet of the boy Max: same line weight, same flat cel shading, same light from upper left, plain light grey background, no text, no ground shadow. Exactly one character, full body, strict side view facing right, standing on a flat baseline, legs clearly visible. A dancing 1980s zombie about 104 percent of the boy Max's height, pale green skin, messy black hair, torn mustard-yellow suit with big shoulder pads, skinny brown tie, one arm raised in a disco pose, facing right. No red leather jacket (sechsmal verwenden).
+Character concept sheet in exactly the same style as the attached character sheet of the boy Max: same line weight, same flat cel shading, same light from upper left, plain light grey background, no text, no ground shadow. Exactly one character, full body, strict side view facing right, standing on a flat baseline, legs clearly visible. Draw only this new character: do not copy any heads, legs, shoes or other parts of the boy Max from the attached sheet into the image. A dancing 1980s zombie about 104 percent of the boy Max's height, pale green skin, messy black hair, torn mustard-yellow suit with big shoulder pads, skinny brown tie, one arm raised in a disco pose, facing right. No red leather jacket (sechsmal verwenden).
 ```
 
 ## Zombie im Grab
 
 ```text
-Character concept sheet in exactly the same style as the attached character sheet of the boy Max: same line weight, same flat cel shading, same light from upper left, plain light grey background, no text, no ground shadow. Exactly one character, full body, strict side view facing right, standing on a flat baseline, legs clearly visible. The same zombie rising from a mound of earth, about 53 percent of the boy Max's height: only head with messy black hair, mustard-yellow shoulders and one raised pale green hand visible, facing right.
+Character concept sheet in exactly the same style as the attached character sheet of the boy Max: same line weight, same flat cel shading, same light from upper left, plain light grey background, no text, no ground shadow. Exactly one character, full body, strict side view facing right, standing on a flat baseline, legs clearly visible. Draw only this new character: do not copy any heads, legs, shoes or other parts of the boy Max from the attached sheet into the image. The same zombie rising from a mound of earth, about 53 percent of the boy Max's height: only head with messy black hair, mustard-yellow shoulders and one raised pale green hand visible, facing right.
 ```
 
 ## Geist
 
 ```text
-Character concept sheet in exactly the same style as the attached character sheet of the boy Max: same line weight, same flat cel shading, same light from upper left, plain light grey background, no text, no ground shadow. Exactly one character, full body, strict side view facing right, standing on a flat baseline, legs clearly visible. A round white bedsheet ghost about 43 percent of the boy Max's height with two black eye holes, a frightened expression and a ragged hem, floating, facing right (dreimal verwenden).
+Character concept sheet in exactly the same style as the attached character sheet of the boy Max: same line weight, same flat cel shading, same light from upper left, plain light grey background, no text, no ground shadow. Exactly one character, full body, strict side view facing right, standing on a flat baseline, legs clearly visible. Draw only this new character: do not copy any heads, legs, shoes or other parts of the boy Max from the attached sheet into the image. A round white bedsheet ghost about 43 percent of the boy Max's height with two black eye holes, a frightened expression and a ragged hem, floating, facing right (dreimal verwenden).
 ```
 
 ## FBI-Agent
 
 ```text
-Character concept sheet in exactly the same style as the attached character sheet of the boy Max: same line weight, same flat cel shading, same light from upper left, plain light grey background, no text, no ground shadow. Exactly one character, full body, strict side view facing right, standing on a flat baseline, legs clearly visible. A paranoid government agent about 106 percent of the boy Max's height, ginger buzz cut, freckles, dark circles under his eyes. Long grey trench coat over a tan suit, loose tie. A flashlight in his right hand and a small beeping gadget with a green light in his left. Nervous sideways glance, facing right. Not a likeness of any real actor.
+Character concept sheet in exactly the same style as the attached character sheet of the boy Max: same line weight, same flat cel shading, same light from upper left, plain light grey background, no text, no ground shadow. Exactly one character, full body, strict side view facing right, standing on a flat baseline, legs clearly visible. Draw only this new character: do not copy any heads, legs, shoes or other parts of the boy Max from the attached sheet into the image. A paranoid government agent about 106 percent of the boy Max's height, ginger buzz cut, freckles, dark circles under his eyes. Long grey trench coat over a tan suit, loose tie. A flashlight in his right hand and a small beeping gadget with a green light in his left. Nervous sideways glance, facing right. Not a likeness of any real actor.
 ```
 
 ## Super-Siegfried
 
 ```text
-Character concept sheet in exactly the same style as the attached character sheet of the boy Max: same line weight, same flat cel shading, same light from upper left, plain light grey background, no text, no ground shadow. Exactly one character, full body, strict side view facing right, standing on a flat baseline, legs clearly visible. Super-Siegfried, a muscular sleepy hero about 114 percent of the boy Max's height, messy blond hair, half-closed eyes. A green onesie with an orange round pretzel emblem on the chest, an orange bath towel tied as a cape, fluffy socks. Floating a little above the ground, yawning, facing right. No diamond shield, no S shape, no red and blue.
+Character concept sheet in exactly the same style as the attached character sheet of the boy Max: same line weight, same flat cel shading, same light from upper left, plain light grey background, no text, no ground shadow. Exactly one character, full body, strict side view facing right, standing on a flat baseline, legs clearly visible. Draw only this new character: do not copy any heads, legs, shoes or other parts of the boy Max from the attached sheet into the image. Super-Siegfried, a muscular sleepy hero about 114 percent of the boy Max's height, messy blond hair, half-closed eyes. A green onesie with an orange round pretzel emblem on the chest, an orange bath towel tied as a cape, fluffy socks. Floating a little above the ground, yawning, facing right. No diamond shield, no S shape, no red and blue.
 ```
 
 ## Fledermann
 
 ```text
-Character concept sheet in exactly the same style as the attached character sheet of the boy Max: same line weight, same flat cel shading, same light from upper left, plain light grey background, no text, no ground shadow. Exactly one character, full body, strict side view facing right, standing on a flat baseline, legs clearly visible. Fledermann, a rich old man about 104 percent of the boy Max's height, grey moustache, a monocle, a black top hat instead of a mask. A homemade costume of black umbrellas sewn together into a suit and cape, a blank cardboard sign hanging on a string around his neck. Standing upright, proud, facing right. Second pose: hanging upside down by his knees from a lamp post. No pointed ears, no bat emblem, no mask.
+Character concept sheet in exactly the same style as the attached character sheet of the boy Max: same line weight, same flat cel shading, same light from upper left, plain light grey background, no text, no ground shadow. Exactly one character, full body, strict side view facing right, standing on a flat baseline, legs clearly visible. Draw only this new character: do not copy any heads, legs, shoes or other parts of the boy Max from the attached sheet into the image. Fledermann, a rich old man about 104 percent of the boy Max's height, grey moustache, a monocle, a black top hat instead of a mask. A homemade costume of black umbrellas sewn together into a suit and cape, a blank cardboard sign hanging on a string around his neck. Standing upright, proud, facing right. Second pose: hanging upside down by his knees from a lamp post. No pointed ears, no bat emblem, no mask.
 ```
 
 ## Wonder-Wilma
 
 ```text
-Character concept sheet in exactly the same style as the attached character sheet of the boy Max: same line weight, same flat cel shading, same light from upper left, plain light grey background, no text, no ground shadow. Exactly one character, full body, strict side view facing right, standing on a flat baseline, legs clearly visible. Wonder-Wilma, a middle-aged woman about 104 percent of the boy Max's height, big curly brown hair under a pink headband, pink gym leotard, purple leg warmers, white sneakers, swinging a glowing golden jump rope like a lasso, confident smile, facing right. No tiara, no star emblem, no eagle.
+Character concept sheet in exactly the same style as the attached character sheet of the boy Max: same line weight, same flat cel shading, same light from upper left, plain light grey background, no text, no ground shadow. Exactly one character, full body, strict side view facing right, standing on a flat baseline, legs clearly visible. Draw only this new character: do not copy any heads, legs, shoes or other parts of the boy Max from the attached sheet into the image. Wonder-Wilma, a middle-aged woman about 104 percent of the boy Max's height, big curly brown hair under a pink headband, pink gym leotard, purple leg warmers, white sneakers, swinging a glowing golden jump rope like a lasso, confident smile, facing right. No tiara, no star emblem, no eagle.
 ```
 
 ## Dr. Werbepause
 
 ```text
-Character concept sheet in exactly the same style as the attached character sheet of the boy Max: same line weight, same flat cel shading, same light from upper left, plain light grey background, no text, no ground shadow. Exactly one character, full body, strict side view facing right, standing on a flat baseline, legs clearly visible. Dr. Werbepause, a grinning villain about 106 percent of the boy Max's height, slicked-back black hair, thin moustache, a suit completely covered in colorful blank product stickers, a megaphone in his right hand and a blank cardboard sign in his left, facing right.
+Character concept sheet in exactly the same style as the attached character sheet of the boy Max: same line weight, same flat cel shading, same light from upper left, plain light grey background, no text, no ground shadow. Exactly one character, full body, strict side view facing right, standing on a flat baseline, legs clearly visible. Draw only this new character: do not copy any heads, legs, shoes or other parts of the boy Max from the attached sheet into the image. Dr. Werbepause, a grinning villain about 106 percent of the boy Max's height, slicked-back black hair, thin moustache, a suit completely covered in colorful blank product stickers, a megaphone in his right hand and a blank cardboard sign in his left, facing right.
 ```
 
 ## Fabrikarbeiter
 
 ```text
-Character concept sheet in exactly the same style as the attached character sheet of the boy Max: same line weight, same flat cel shading, same light from upper left, plain light grey background, no text, no ground shadow. Exactly one character, full body, strict side view facing right, standing on a flat baseline, legs clearly visible. A comic book factory worker about 104 percent of the boy Max's height, round face, yellow hard hat, blue overalls, big yellow rubber gloves, waving cheerfully with his left hand, thick black outline and halftone dots, facing right. Second pose: both hands pulling a big red lever downward.
+Character concept sheet in exactly the same style as the attached character sheet of the boy Max: same line weight, same flat cel shading, same light from upper left, plain light grey background, no text, no ground shadow. Exactly one character, full body, strict side view facing right, standing on a flat baseline, legs clearly visible. Draw only this new character: do not copy any heads, legs, shoes or other parts of the boy Max from the attached sheet into the image. A comic book factory worker about 104 percent of the boy Max's height, round face, yellow hard hat, blue overalls, big yellow rubber gloves, waving cheerfully with his left hand, thick black outline and halftone dots, facing right. Second pose: both hands pulling a big red lever downward.
 ```
 
 ## Empfangsdame
 
 ```text
-Character concept sheet in exactly the same style as the attached character sheet of the boy Max: same line weight, same flat cel shading, same light from upper left, plain light grey background, no text, no ground shadow. Exactly one character, full body, strict side view facing right, standing on a flat baseline, legs clearly visible. A bored receptionist about 104 percent of the boy Max's height (standing size), high blond ponytail, headset, dark blazer, long pink fake nails, blowing a pink chewing gum bubble, sitting on an office chair, facing right.
+Character concept sheet in exactly the same style as the attached character sheet of the boy Max: same line weight, same flat cel shading, same light from upper left, plain light grey background, no text, no ground shadow. Exactly one character, full body, strict side view facing right, standing on a flat baseline, legs clearly visible. Draw only this new character: do not copy any heads, legs, shoes or other parts of the boy Max from the attached sheet into the image. A bored receptionist about 104 percent of the boy Max's height (standing size), high blond ponytail, headset, dark blazer, long pink fake nails, blowing a pink chewing gum bubble, sitting on an office chair, facing right.
 ```
 
 ## Sicherheitsmann
 
 ```text
-Character concept sheet in exactly the same style as the attached character sheet of the boy Max: same line weight, same flat cel shading, same light from upper left, plain light grey background, no text, no ground shadow. Exactly one character, full body, strict side view facing right, standing on a flat baseline, legs clearly visible. A large broad security guard about 114 percent of the boy Max's height, shaved head, black suit, earpiece with a curly wire, small round sunglasses, arms crossed, stone face, facing right.
+Character concept sheet in exactly the same style as the attached character sheet of the boy Max: same line weight, same flat cel shading, same light from upper left, plain light grey background, no text, no ground shadow. Exactly one character, full body, strict side view facing right, standing on a flat baseline, legs clearly visible. Draw only this new character: do not copy any heads, legs, shoes or other parts of the boy Max from the attached sheet into the image. A large broad security guard about 114 percent of the boy Max's height, shaved head, black suit, earpiece with a curly wire, small round sunglasses, arms crossed, stone face, facing right.
 ```
 
 ## Zappmann
 
 ```text
-Character concept sheet in exactly the same style as the attached character sheet of the boy Max: same line weight, same flat cel shading, same light from upper left, plain light grey background, no text, no ground shadow. Exactly one character, full body, strict side view facing right, standing on a flat baseline, legs clearly visible. Intendant Zappmann, a flamboyant TV executive about 111 percent of the boy Max's height, slicked-back silver hair, tinted gold sunglasses, a big white smile. Glittering golden jacket over a black shirt, black trousers, gold shoes, a gleaming golden TV remote with jewel buttons in a hip holster. Arms spread like a showman, facing right.
+Character concept sheet in exactly the same style as the attached character sheet of the boy Max: same line weight, same flat cel shading, same light from upper left, plain light grey background, no text, no ground shadow. Exactly one character, full body, strict side view facing right, standing on a flat baseline, legs clearly visible. Draw only this new character: do not copy any heads, legs, shoes or other parts of the boy Max from the attached sheet into the image. Intendant Zappmann, a flamboyant TV executive about 111 percent of the boy Max's height, slicked-back silver hair, tinted gold sunglasses, a big white smile. Glittering golden jacket over a black shirt, black trousers, gold shoes, a gleaming golden TV remote with jewel buttons in a hip holster. Arms spread like a showman, facing right.
 ```
 
 ## Junger Zappmann
 
 ```text
-Character concept sheet in exactly the same style as the attached character sheet of the boy Max: same line weight, same flat cel shading, same light from upper left, plain light grey background, no text, no ground shadow. Exactly one character, full body, strict side view facing right, standing on a flat baseline, legs clearly visible. Young Zappmann in 1977, a shy young man about as tall as the boy Max, brown bowl haircut, knitted orange sweater, brown flared trousers, a felt hand puppet of a smiling sun on his right arm, nervous smile, faded washed-out colors, facing right.
+Character concept sheet in exactly the same style as the attached character sheet of the boy Max: same line weight, same flat cel shading, same light from upper left, plain light grey background, no text, no ground shadow. Exactly one character, full body, strict side view facing right, standing on a flat baseline, legs clearly visible. Draw only this new character: do not copy any heads, legs, shoes or other parts of the boy Max from the attached sheet into the image. Young Zappmann in 1977, a shy young man about as tall as the boy Max, brown bowl haircut, knitted orange sweater, brown flared trousers, a felt hand puppet of a smiling sun on his right arm, nervous smile, faded washed-out colors, facing right.
 ```
 
 ## Wettkandidat
 
 ```text
-Character concept sheet in exactly the same style as the attached character sheet of the boy Max: same line weight, same flat cel shading, same light from upper left, plain light grey background, no text, no ground shadow. Exactly one character, full body, strict side view facing right, standing on a flat baseline, legs clearly visible. A nervous game show contestant about as tall as the boy Max, neat side parting, green sweater vest, blindfolded with a white cloth, holding a red crayon to the tip of his tongue and a box of crayons in the other hand, concentrating, facing right.
+Character concept sheet in exactly the same style as the attached character sheet of the boy Max: same line weight, same flat cel shading, same light from upper left, plain light grey background, no text, no ground shadow. Exactly one character, full body, strict side view facing right, standing on a flat baseline, legs clearly visible. Draw only this new character: do not copy any heads, legs, shoes or other parts of the boy Max from the attached sheet into the image. A nervous game show contestant about as tall as the boy Max, neat side parting, green sweater vest, blindfolded with a white cloth, holding a red crayon to the tip of his tongue and a box of crayons in the other hand, concentrating, facing right.
 ```
 
 ## Käsemann
 
 ```text
-Character concept sheet in exactly the same style as the attached character sheet of the boy Max: same line weight, same flat cel shading, same light from upper left, plain light grey background, no text, no ground shadow. Exactly one character, full body, strict side view facing right, standing on a flat baseline, legs clearly visible. Steckbrief Max (wortgleich aus `00-stil-und-werkzeuge.md`), plus: a white bedsheet tied as a cape around his neck, a yellow cheese-colored eye mask with round holes, both fists on his hips, chest out, Pixel sitting on his right shoulder copying the pose, about as tall as the boy Max, facing right.
+Character concept sheet in exactly the same style as the attached character sheet of the boy Max: same line weight, same flat cel shading, same light from upper left, plain light grey background, no text, no ground shadow. Exactly one character, full body, strict side view facing right, standing on a flat baseline, legs clearly visible. Draw only this new character: do not copy any heads, legs, shoes or other parts of the boy Max from the attached sheet into the image. Steckbrief Max (wortgleich aus `00-stil-und-werkzeuge.md`), plus: a white bedsheet tied as a cape around his neck, a yellow cheese-colored eye mask with round holes, both fists on his hips, chest out, Pixel sitting on his right shoulder copying the pose, about as tall as the boy Max, facing right.
 ```
 
 # Gegenstände

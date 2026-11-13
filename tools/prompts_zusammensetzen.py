@@ -74,6 +74,7 @@ SLICE = {
         ("Troll Waldemar", "R4"), ("Toadi", "Ankunft"), ("Taverne-Huhn", "Kulisse"),
         ("Alwin Grauwald", "Kulisse"), ("Schwan", "Kulisse"), ("Grimmzahn", "Kulisse"),
         ("Goblin-Arbeiter 1", "Kulisse"), ("Goblin-Arbeiter 2", "Kulisse"),
+        ("Streik-Goblin 1", "Kulisse, stumm"), ("Streik-Goblin 2", "Kulisse, stumm"), ("Streik-Goblin 3", "Kulisse, stumm"),
     ],
     "Gegenstände": [
         ("Dorf und Taverne (3×3)", "Münze, Fondue, Vorleger, Bestellzettel, Eimer, Steckbrief"),

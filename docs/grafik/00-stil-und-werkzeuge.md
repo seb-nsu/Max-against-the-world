@@ -126,10 +126,10 @@ Pixel art small creature sprite, exactly one creature, full body, strict side vi
 Pixel art large character sprite, exactly one character, full body, strict side view facing right unless the motif says left, height in pixels as given in the motif on a canvas up to 352x352, fills most of the frame, dark colored outline (not pure black), light from upper left, flat colors, plain transparent background, no ground shadow.
 ```
 
-**FIGURENBLATT** (Konzeptbild für Gemini, seit 12. November 2026 der Weg für alle Nebenfiguren): Max' Konzeptblatt als Stilvorlage anhängen. Ergebnis ist eine einzige Seitenansicht nach rechts; daraus macht `tools/figur.py sprite` das Sprite, Gehen und Reden entstehen per Code. Die Größe steht im Prompt relativ zu Max (189 Pixel = 100 Prozent), damit alle Figuren zueinander passen:
+**FIGURENBLATT** (Konzeptbild für Gemini, seit 12. November 2026 der Weg für alle Nebenfiguren): Max' Konzeptblatt als Stilvorlage anhängen. Ergebnis ist eine einzige Seitenansicht nach rechts; daraus macht `tools/figur.py sprite` das Sprite, Gehen und Reden entstehen per Code. Die Größe steht im Prompt relativ zu Max (189 Pixel = 100 Prozent), damit alle Figuren zueinander passen. Der letzte Satz des Bausteins kam am 13. November 2026 dazu: Bei Humbert, Gollo, Zauberstabmacher und Minka hatte Gemini Köpfe, Beine und Schuhe aus Max' Blatt mitgemalt:
 
 ```text
-Character concept sheet in exactly the same style as the attached character sheet of the boy Max: same line weight, same flat cel shading, same light from upper left, plain light grey background, no text, no ground shadow. Exactly one character, full body, strict side view facing right, standing on a flat baseline, legs clearly visible.
+Character concept sheet in exactly the same style as the attached character sheet of the boy Max: same line weight, same flat cel shading, same light from upper left, plain light grey background, no text, no ground shadow. Exactly one character, full body, strict side view facing right, standing on a flat baseline, legs clearly visible. Draw only this new character: do not copy any heads, legs, shoes or other parts of the boy Max from the attached sheet into the image.
 ```
 
 **PORTRÄT** (Dialog und Figurenwechsel, 128×128):
