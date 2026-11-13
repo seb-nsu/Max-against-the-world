@@ -53,15 +53,25 @@ func falsche_flasche() -> void:
 	var vier := int(Zustand.wert("W1_FLASCHE", 0)) == 4
 	var schritte := [
 		Spiel.z("MAX", "W1_HOGG_MAX_0710"),
+		_max_als_pilz.bind(true),
 		Spiel.z("MAX", "W1_HOGG_MAX_0720"),
 		Spiel.z("TOA", "W1_HOGG_TOA_0730"),
 		Spiel.z("PIX", "W1_HOGG_PIX_0740"),
 		Spiel.z("ALW", "W1_HOGG_ALW_0750"),
+		_max_als_pilz.bind(false),
 	]
 	if vier:
 		schritte.append(Spiel.z("PIX", "W1_HOGG_PIX_0760"))
 	await Spiel.szene(schritte)
 	await flasche_zurueck()
+
+
+## Pilz-Verwandlung: eigenes Bild „max_pilz“ (grafik/figuren), danach wieder das normale Max-Bild.
+func _max_als_pilz(an: bool) -> void:
+	if is_instance_valid(C.Max) and C.Max.has_method("grafik_laden"):
+		if an and not ResourceLoader.exists("res://grafik/figuren/max_pilz.png"):
+			return
+		C.Max.grafik_laden("max_pilz" if an else "")
 
 
 func flasche_zurueck() -> void:

@@ -295,7 +295,7 @@ figuren:
     name: Smaugi
     kuerzel: SMA
     raum: abstellkammern
-    groesse_px: 340            # sitzend, mehr passt nicht ins Bild (360 hoch)
+    groesse_px: 250            # sitzend; 340 ragte in der Kammer (Fußpunkt y 280) oben aus dem Bild (13. November 2026)
     spielbar: false
 
   - id: minka
