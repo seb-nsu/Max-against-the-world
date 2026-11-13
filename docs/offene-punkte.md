@@ -37,8 +37,33 @@ Stand 11. November 2026. Kennungen: S = zurückgestellte Punkte aus Gutachten 4,
 | P8 | Bildschirm-Einblendungen des Zapp-O-Mat (80×60, im Spiel etwa 40×30): Sind Gesichter lesbar? | Test in Godot; sonst die 80×60-Fassung auch beim Ansehen nutzen | `grafik/02-prolog-und-finale.md` |
 | P9 | Wartezeiten der Hinweise (30 und 60 Sekunden) | Nach dem ersten Test mit Fremden anpassen | `05-spielsysteme.md` (Hinweissystem) |
 | P12 | Animation aus eigenen Bildern: Test an Max | Sebastian liefert ein Bild von Max (flach, sauber, vier- bis achtfache Größe). Claude säubert es mit Pixel Snapper, zerlegt es und baut Atmen, Sprechen und Gehen per Code. Danach Entscheidung, woher neue Posen kommen: Retro Diffusion wie geplant oder Agent Sprite Forge | `grafik/00-stil-und-werkzeuge.md` (Zusätzliche Werkzeuge) |
-| P15 | Aseprite-Durchgang über die eingebauten Hintergründe, danach Gesamtprüfung | Sebastian: Aseprite kaufen, MCP einrichten. Claude: je Raum nacharbeiten, Liste unten. Danach eine Gesamtprüfung über Grafik, Spielbarkeit, Optimierungen und Animationen (Sebastian will sie mit einem anderen Modell laufen lassen). Liste: Troll-Brücke – Grammophon und Wasserschloss sauber nachzeichnen (per Skript nachgefärbt); Klassenzimmer – Kessel nachzeichnen, Flasche 3 als eigenes Sprite ausschneiden und im Hintergrund übermalen, Socke als Deko-Sprite auf den Hocker; Dachboden – der Zapp-O-Mat wirkt, als schwebe er (Sebastian, 13. November 2026): Füße oder Standfläche und Schatten auf den Boden setzen. Zauberwald – Riesenpilze, Leuchtpilze und Karren nachgefärbt (48 Farben), sauber nachzeichnen; Ketchup und Leuchtpilz sind ausgeschnitten, die übermalten Stellen prüfen; Niesrosen fehlen noch als Sprite (geschlossen und offen) in der Lichtung. Weitere Funde je Raum hier anhängen. Originale in voller Größe: `E:\Game Engine\Grafiken\assets\welt-1\` (Sebastians PC) | `grafik/00-stil-und-werkzeuge.md` (Ablauf) |
+| P15 | Aseprite-Durchgang über die eingebauten Hintergründe, danach Gesamtprüfung | Sebastian: Aseprite kaufen, MCP einrichten. Claude: jede Änderung aus dem Abschnitt „Nacharbeiten an eingebauten Hintergründen“ unten prüfen und in Aseprite sauber nacharbeiten. Danach eine Gesamtprüfung über Grafik, Spielbarkeit, Optimierungen und Animationen (Sebastian will sie mit einem anderen Modell laufen lassen) | `grafik/00-stil-und-werkzeuge.md` (Ablauf), `grafik/welt-1.md` (Abweichungen) |
 | P13 | Fertige Musik als Ergänzung (Humble-Bundle „The Complete Works“) | Sebastian prüft vor dem Kauf Lizenz (verkauftes Spiel erlaubt?) und Schleifen-Eignung | `04-audio.md` (Werkzeuge) |
+
+## Nacharbeiten an eingebauten Hintergründen (P15)
+
+Jede Änderung, die nach dem Gemini-Bild von Hand oder per Skript gemacht wurde, damit sie später geprüft und in Aseprite sauber nachgearbeitet werden kann. Koordinaten in Spielpixeln (640×360), Rechteck = x, y, Breite, Höhe. Originale in voller Größe: `E:\Game Engine\Grafikenssets\welt-1\` auf Sebastians PC. Umgerechnet wurde immer mit `tools/pixelieren.py` (32 Farben); „nachgefärbt“ heißt: Pixel, deren Farbe im Original weit von den 32 Farben abwich, bekamen bis zu acht zusätzliche Farben aus dem Original (Skript `nachfaerben.py`, nicht im Repo). Weitere Funde je Raum hier anhängen.
+
+| Raum, Datei | Änderung | Wie gemacht | Prüfen und nacharbeiten |
+| --- | --- | --- | --- |
+| Troll-Brücke, `w1_bg_trollbruecke_v01.png` | Grundlage: Sebastians vierte Gemini-Fassung (`trollbruecke_sebastian_v4.jpeg`) | Gemini-Chat, vier Runden | – |
+| Troll-Brücke | Grammophon und Notenblätter nachgefärbt, Bereich 250, 212 bis 288, 266 | Skript, 6 Zusatzfarben | Grammophon sauber nachzeichnen, goldenes Horn deutlich |
+| Troll-Brücke | Wasserschloss rosa nachgezeichnet, Bereich 428, 124 bis 448, 140 | Skript, Umriss aus dem Original, 4 Rosatöne | Form des Schlosses von Hand verbessern |
+| Troll-Brücke | Waldemar steht als Platzhalter rechts der Brücke (440, 275) | Layout | Mit echtem Sprite prüfen, ob er Rampe oder Schloss verdeckt |
+| Klassenzimmer, `w1_bg_klassenzimmer_v01.png` | Grundlage: Sebastians Fassung mit Kessel unter dem Fenster und Bänken vor der Tafel (`klassenzimmer_sebastian_v6.png`, aus dem Chat-Bild „Unterricht4“) | Gemini-Chat, fünf Runden (Aufteilung, Seiten tauschen, Regal leeren, Neuaufteilung) | – |
+| Klassenzimmer | Sechs Flaschen eingesetzt: Kopien von Flasche 1 (klein, Plätze 1, 3, 4, 6) und Flasche 2 (groß, Plätze 2, 5) aus der Fassung „Unterricht2“; im Spiel 402, 94 bis 506, 141 | Skript, Freistellen über die grüne Wand | Ränder der Flaschen, fehlender Schatten auf der Wand; große Flaschen sind 1,5-mal statt doppelt so hoch |
+| Klassenzimmer | Feuer, Blasen und Trank am Kessel nachgefärbt, Bereich 150, 100 bis 240, 240 | Skript, 5 Zusatzfarben | Trank grüner machen, Blasen klarer |
+| Klassenzimmer | Flasche 3 ist noch im Hintergrund gemalt | – | Als eigenes Sprite ausschneiden und im Hintergrund übermalen (Max nimmt sie) |
+| Klassenzimmer | Socke fehlt auf dem Hocker (388, 192) | – | Deko-Sprite Socke |
+| Zauberwald, `w1_bg_zauberwald_v01.png` | Grundlage: Sebastians erste Fassung (`zauberwald_sebastian_v1.jpeg`) | Gemini-Chat, eine Runde | – |
+| Zauberwald | Riesenpilze nachgefärbt, Bereich 55, 70 bis 215, 262 | Skript, 8 Zusatzfarben | Hüte bunter, besonders rosa und violett |
+| Zauberwald | Leuchtpilze nachgefärbt, Bereich 75, 200 bis 215, 262 | Skript, 4 Zusatzfarben | Leuchten und Schein |
+| Zauberwald | Lieferkarren und Ketchup nachgefärbt, Bereich 385, 175 bis 470, 250 | Skript, 4 Zusatzfarben | Rot des Karrens |
+| Zauberwald | Ketchup ausgeschnitten als `grafik/props/ketchup.png` (417, 209, 11, 29); Stelle im Hintergrund mit dem Karrenstück 12 Pixel links daneben überdeckt | Skript, rechteckig ohne Freistellen | Sprite freistellen, übermalte Karrenseite prüfen |
+| Zauberwald | Leuchtpilz ausgeschnitten als `grafik/props/leuchtpilz.png` (157, 226, 16, 24); Stelle mit dem Stück 16 Pixel links daneben überdeckt | Skript, rechteckig ohne Freistellen | Sprite freistellen, übermalte Stelle prüfen |
+| Zauberwald | Niesrosen fehlen in der Lichtung (250, 212, 80, 40) | Platz frei gelassen | Sprites geschlossen und offen |
+| Zauberwald | Raum hat 48 statt 32 Farben | Folge des Nachfärbens | Palette angleichen |
+| Dachboden | Zapp-O-Mat wirkt, als schwebe er (Sebastian, 13. November 2026) | – | Füße oder Standfläche und Schatten auf den Boden |
 
 ## Automatisierung
 
