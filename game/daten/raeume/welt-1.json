@@ -2554,51 +2554,100 @@
     640,
     360
    ],
-   "hintergrund": "res://grafik/platzhalter/raum_klassenzimmer.png",
+   "hintergrund": "res://grafik/hintergruende/w1_bg_klassenzimmer_v01.png",
    "farbe": "#5a6988",
    "laufbereich": [
     [
-     8,
-     280
+     0,
+     240
     ],
     [
-     632,
-     280
+     97,
+     222
     ],
     [
-     632,
-     356
+     285,
+     222
     ],
     [
-     8,
-     356
+     290,
+     242
+    ],
+    [
+     360,
+     242
+    ],
+    [
+     365,
+     222
+    ],
+    [
+     385,
+     222
+    ],
+    [
+     386,
+     232
+    ],
+    [
+     418,
+     232
+    ],
+    [
+     448,
+     272
+    ],
+    [
+     572,
+     262
+    ],
+    [
+     575,
+     226
+    ],
+    [
+     595,
+     222
+    ],
+    [
+     639,
+     236
+    ],
+    [
+     639,
+     359
+    ],
+    [
+     0,
+     359
     ]
    ],
    "marker": {
     "start": [
-     60,
-     320
+     80,
+     250
     ],
     "von_dorfplatz": [
-     60,
-     320
+     80,
+     250
     ]
    },
+   "tiefe": 0.7,
    "figuren": [
     {
      "id": "alwin",
      "script_name": "Alwin",
      "pos": [
-      300,
-      316
+      250,
+      248
      ]
     },
     {
      "id": "toadi",
      "script_name": "Toadi",
      "pos": [
-      32,
-      300
+      42,
+      238
      ]
     }
    ],
@@ -2608,14 +2657,14 @@
      "script_name": "Flasche1",
      "name_key": "UI_OBJ_FLASCHE_1",
      "rect": [
-      424,
-      152,
-      16,
-      32
+      401,
+      108,
+      17,
+      33
      ],
      "gehe": [
-      432,
-      304
+      398,
+      248
      ],
      "ansehen": [
       {
@@ -2633,14 +2682,14 @@
      "script_name": "Flasche2",
      "name_key": "UI_OBJ_FLASCHE_2",
      "rect": [
-      444,
-      140,
-      20,
-      44
+      419,
+      94,
+      16,
+      47
      ],
      "gehe": [
-      452,
-      304
+      400,
+      248
      ],
      "ansehen": [
       {
@@ -2659,14 +2708,14 @@
      "script_name": "Flasche3",
      "name_key": "UI_OBJ_FLASCHE_3",
      "rect": [
-      468,
-      152,
-      16,
-      32
+      436,
+      108,
+      17,
+      33
      ],
      "gehe": [
-      476,
-      304
+      402,
+      248
      ],
      "ansehen": [
       {
@@ -2685,14 +2734,14 @@
      "script_name": "Flasche4",
      "name_key": "UI_OBJ_FLASCHE_4",
      "rect": [
-      488,
-      152,
-      16,
-      32
+      453,
+      108,
+      17,
+      33
      ],
      "gehe": [
-      496,
-      304
+      404,
+      248
      ],
      "ansehen": [
       {
@@ -2711,14 +2760,14 @@
      "script_name": "Flasche5",
      "name_key": "UI_OBJ_FLASCHE_5",
      "rect": [
-      508,
-      140,
-      20,
-      44
+      471,
+      94,
+      17,
+      47
      ],
      "gehe": [
-      516,
-      304
+      406,
+      248
      ],
      "ansehen": [
       {
@@ -2736,14 +2785,14 @@
      "script_name": "Flasche6",
      "name_key": "UI_OBJ_FLASCHE_6",
      "rect": [
-      532,
-      152,
-      16,
-      32
+      488,
+      108,
+      17,
+      33
      ],
      "gehe": [
-      540,
-      304
+      408,
+      248
      ],
      "ansehen": [
       {
@@ -2761,14 +2810,14 @@
      "script_name": "Schulbank",
      "name_key": "UI_OBJ_SCHULBANK",
      "rect": [
-      60,
-      220,
-      120,
-      60
+      418,
+      168,
+      155,
+      100
      ],
      "gehe": [
-      120,
-      308
+      440,
+      282
      ],
      "ansehen": [
       {
@@ -2793,14 +2842,14 @@
      "script_name": "DurchgeloecherteZweiteSocke",
      "name_key": "UI_OBJ_DURCHGELOECHERTE_ZWEITE_SOCKE",
      "rect": [
+      388,
       192,
-      232,
-      32,
-      32
+      28,
+      14
      ],
      "gehe": [
-      208,
-      308
+      396,
+      246
      ],
      "ansehen": [
       {
@@ -2834,14 +2883,14 @@
      "script_name": "Tafel",
      "name_key": "UI_OBJ_TAFEL",
      "rect": [
-      248,
-      60,
-      140,
-      80
+      260,
+      36,
+      120,
+      76
      ],
      "gehe": [
       320,
-      304
+      256
      ],
      "ansehen": [
       {
@@ -2866,14 +2915,14 @@
      "script_name": "Kessel",
      "name_key": "UI_OBJ_KESSEL",
      "rect": [
-      272,
-      200,
-      88,
-      80
+      288,
+      170,
+      70,
+      70
      ],
      "gehe": [
-      316,
-      312
+      322,
+      258
      ],
      "ansehen": [
       {
@@ -2991,14 +3040,14 @@
      "script_name": "Flaschenregal",
      "name_key": "UI_OBJ_FLASCHENREGAL",
      "rect": [
-      420,
-      140,
-      120,
-      60
+      398,
+      138,
+      112,
+      22
      ],
      "gehe": [
-      480,
-      304
+      404,
+      248
      ],
      "ansehen": [
       {
@@ -3032,14 +3081,14 @@
      "script_name": "BesenImSchrank",
      "name_key": "UI_OBJ_BESEN_IM_SCHRANK",
      "rect": [
-      552,
-      88,
-      80,
-      192
+      508,
+      66,
+      96,
+      100
      ],
      "gehe": [
-      580,
-      304
+      590,
+      250
      ],
      "ansehen": [
       {
@@ -3064,14 +3113,14 @@
      "script_name": "Fenster",
      "name_key": "UI_OBJ_FENSTER",
      "rect": [
-      120,
+      170,
       20,
-      120,
-      60
+      60,
+      108
      ],
      "gehe": [
-      180,
-      304
+      200,
+      242
      ],
      "ansehen": [
       {
@@ -3100,14 +3149,14 @@
      "ziel": "dorfplatz",
      "name_key": "UI_RAUM_DORFPLATZ",
      "rect": [
-      4,
-      120,
-      40,
-      160
+      12,
+      72,
+      62,
+      155
      ],
      "gehe": [
-      28,
-      320
+      60,
+      242
      ],
      "erreichbar_ab": "start",
      "ansehen": []
