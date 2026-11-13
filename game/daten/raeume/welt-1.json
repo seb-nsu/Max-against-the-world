@@ -1028,22 +1028,36 @@
     ]
    },
    "tiefe": 0.8,
+   "vordergrund": {
+    "tresen": {
+     "bild": "res://grafik/props/tresen_vorn.png",
+     "rect": [
+      0,
+      160,
+      256,
+      200
+     ],
+     "baseline": 245
+    }
+   },
    "figuren": [
     {
      "id": "humbert",
      "script_name": "Humbert",
      "pos": [
-      280,
-      250
-     ]
+      150,
+      232
+     ],
+     "blick": "rechts"
     },
     {
      "id": "gollo",
      "script_name": "Gollo",
      "pos": [
-      375,
-      300
-     ]
+      282,
+      264
+     ],
+     "blick": "links"
     },
     {
      "id": "minka",
@@ -1841,7 +1855,8 @@
      "pos": [
       330,
       242
-     ]
+     ],
+     "blick": "links"
     },
     {
      "id": "schmiede_ziege",
@@ -2658,7 +2673,8 @@
      "pos": [
       248,
       245
-     ]
+     ],
+     "blick": "links"
     },
     {
      "id": "toadi",

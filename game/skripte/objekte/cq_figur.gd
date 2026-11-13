@@ -56,11 +56,13 @@ func _mund_schliessen(nr: int, sekunden: float) -> void:
 
 ## Blickrichtung aus dem Layout („links“ oder „rechts“); leer: die Figur schaut zu Max.
 var blick_fest := ""
+var _echte_grafik := false
 
 
 ## Dreht die Figur nach links oder rechts zur Stelle x (die Bilder schauen nach rechts).
 func schauen_zu(x: float) -> void:
-	if absf(x - global_position.x) < 4.0:
+	# Platzhalter (Kasten mit Namen) nicht spiegeln, sonst steht die Schrift verkehrt
+	if not _echte_grafik or absf(x - global_position.x) < 4.0:
 		return
 	face_direction(Vector2(x, global_position.y))
 	if has_node("Sprite2D"):
@@ -120,6 +122,7 @@ func grafik_laden(variante := "") -> bool:
 		player.remove_animation_library("")
 	player.add_animation_library("", lib)
 	grafik_variante = variante
+	_echte_grafik = true
 	_play_idle()
 	return true
 

@@ -48,6 +48,7 @@ Jede Änderung, die nach dem Gemini-Bild von Hand oder per Skript gemacht wurde,
 | Raum, Datei | Änderung | Wie gemacht | Prüfen und nacharbeiten |
 | --- | --- | --- | --- |
 | Troll-Brücke, `w1_bg_trollbruecke_v01.png` | Grundlage: Sebastians vierte Gemini-Fassung (`trollbruecke_sebastian_v4.jpeg`) | Gemini-Chat, vier Runden | – |
+| Taverne | Tresen als Vordergrund-Teil `grafik/props/tresen_vorn.png` (0, 160, 256, 200), Baseline 245, ausgeschnitten über ein Vieleck entlang der hinteren Tresenkante; Humbert steht dahinter (150, 232), Gollo davor (282, 264) | Skript, Layout `vordergrund:` | Kante sauber freistellen; Krüge, Flasche und Schüssel ragen über die Kante und liegen hinter Humbert |
 | Troll-Brücke | Grammophon und Notenblätter nachgefärbt, Bereich 250, 212 bis 288, 266 | Skript, 6 Zusatzfarben | Grammophon sauber nachzeichnen, goldenes Horn deutlich |
 | Troll-Brücke | Wasserschloss rosa nachgezeichnet, Bereich 428, 124 bis 448, 140 | Skript, Umriss aus dem Original, 4 Rosatöne | Form des Schlosses von Hand verbessern |
 | Troll-Brücke | Waldemar steht als Platzhalter rechts der Brücke (440, 275) | Layout | Mit echtem Sprite prüfen, ob er Rampe oder Schloss verdeckt |
@@ -97,7 +98,7 @@ Jede Änderung, die nach dem Gemini-Bild von Hand oder per Skript gemacht wurde,
 
 Sebastian will alle Animationen im Aseprite-Durchgang vollständig prüfen und überarbeiten lassen (13. November 2026). Bisher entstehen sie per Code aus Standbildern (`tools/figur.py`) oder fehlen:
 
-Blickrichtung (13. November 2026): Alle Figurenbilder schauen nach rechts (Minka war nach links gemalt und ist gespiegelt). Beim Betreten eines Raums schauen die Figuren zu Max, beim Reden drehen sie sich zu ihm (`CQRaum.blicke_anpassen()`, `CQFigur.schauen_zu()`). Eine feste Richtung legt das Layout je Raum fest: `blick: {schmied: links}`; die Figur dreht sich dann auch beim Reden nicht.
+Blickrichtung (13. November 2026): Alle Figurenbilder schauen nach rechts (Minka war nach links gemalt und ist gespiegelt). Beim Betreten eines Raums schauen die Figuren zu Max, beim Reden drehen sie sich zu ihm (`CQRaum.blicke_anpassen()`, `CQFigur.schauen_zu()`). Eine feste Richtung legt das Layout je Raum fest: `blick: {schmied: links}`; die Figur dreht sich dann auch beim Reden nicht. Gesetzt: Humbert hinter dem Tresen nach rechts, Gollo am Tresen zu ihm, Schmied zum Amboss, Alwin zum Kessel. Platzhalter werden nie gespiegelt.
 
 Grundsatz für das Review (Sebastian, 13. November 2026): Gehen bekommen nur Figuren, die im Spiel wirklich laufen. Für jede Figur neu überlegen, welche Bewegungen zu ihr passen, auch kleine Eigenheiten im Stand, zum Beispiel dreht die Schmiede-Ziege ab und zu eine Runde.
 

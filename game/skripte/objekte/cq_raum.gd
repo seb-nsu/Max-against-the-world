@@ -93,6 +93,7 @@ func _on_room_entered() -> void:
 	tiefe_anwenden()
 	blicke_anpassen()
 	ambiente_starten()
+	vordergrund_setzen()
 	await _raum_betreten(erster_besuch)
 	await Spiel.regel("raum_betreten", self, erster_besuch)
 	Spiel.pixel_feld_pruefen()
@@ -124,13 +125,14 @@ func _on_restore_from_savegame() -> void:
 	tiefe_anwenden()
 	blicke_anpassen()
 	ambiente_starten()
+	vordergrund_setzen()
 	Spiel.pixel_feld_pruefen()
 	await Spiel.regel("nach_laden", self)
 	await _nach_laden()
 
 
 ## Blickrichtung der Figuren: fest aus dem Layout („blick:“), sonst zu Max hin. Die Begleiter
-## (Max, Pixel) bleiben, wie sie sind.
+## (Max, Pixel) bleiben, wie sie sind. Beim Reden drehen sich Figuren ohne feste Richtung zu Max.
 func blicke_anpassen() -> void:
 	var fest := {}
 	for f: Dictionary in bauplan().get("figuren", []):
@@ -144,6 +146,28 @@ func blicke_anpassen() -> void:
 			c.blick_setzen(c.blick_fest)
 		elif is_instance_valid(C.player):
 			c.schauen_zu(C.player.global_position.x)
+
+
+## Ausgeschnittene Teile des Hintergrunds, hinter denen Figuren stehen können (Tresen, Baum):
+## Layout „vordergrund: {name: {bild, rect: [x, y, w, h], baseline: y}}“. Wer weiter oben steht als
+## die Baseline, wird verdeckt. Nicht klickbar; die Hotspots darunter bleiben.
+func vordergrund_setzen() -> void:
+	var teile: Dictionary = bauplan().get("vordergrund", {})
+	if teile.is_empty() or Engine.is_editor_hint():
+		return
+	for teil_name: String in teile:
+		var knoten := "Vordergrund_" + teil_name
+		if get_node("Props").has_node(knoten):
+			continue
+		var t: Dictionary = teile[teil_name]
+		var sp := Sprite2D.new()
+		sp.name = knoten
+		sp.texture = load(t.bild)
+		sp.centered = false
+		sp.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
+		sp.position = Vector2(t.rect[0], t.baseline)
+		sp.offset = Vector2(0, float(t.rect[1]) - float(t.baseline))
+		get_node("Props").add_child(sp)
 
 
 ## Lebendiger Hintergrund (P16): Vögel, Windstöße usw., wenn der Bauplan „ambiente“ hat.

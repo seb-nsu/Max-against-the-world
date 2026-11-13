@@ -176,10 +176,10 @@ position = Vector2(170, 168)
 [node name="Characters" type="Node2D" parent="." unique_id=297709827]
 
 [node name="CharacterHumbert *" parent="Characters" unique_id=153118211 instance=ExtResource("26_d7t36")]
-position = Vector2(280, 250)
+position = Vector2(150, 232)
 
 [node name="CharacterGollo *" parent="Characters" unique_id=1891695985 instance=ExtResource("27_0wiab")]
-position = Vector2(375, 300)
+position = Vector2(282, 264)
 
 [node name="CharacterMinka *" parent="Characters" unique_id=1223184642 instance=ExtResource("28_lbl4l")]
 position = Vector2(470, 250)

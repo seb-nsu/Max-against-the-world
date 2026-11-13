@@ -104,11 +104,18 @@ taverne:
     von_dorfplatz: [600, 250]
     balken: [330, 50]            # Pixel auf dem Dachbalken
     keller: [170, 168]           # Humbert verschwindet hinter der Kellertür
+  # Humbert steht hinter dem Tresen (Vordergrund-Teil tresen_vorn verdeckt seine Beine), Gollo davor
+  # und schaut zu ihm (Sebastian, 13. November 2026)
   figuren:
-    humbert: [280, 250]
-    gollo: [375, 300]
+    humbert: [150, 232]
+    gollo: [282, 264]
     minka: [470, 250]
     huhn: [362, 198]
+  blick:
+    humbert: rechts
+    gollo: links
+  vordergrund:
+    tresen: {bild: res://grafik/props/tresen_vorn.png, rect: [0, 160, 256, 200], baseline: 245}
   alias:
     fondue: fondue_topf
     laute: laute_mit_muenzbecher
@@ -147,6 +154,8 @@ schmiede:
   figuren:
     schmied: [330, 242]
     schmiede_ziege: [470, 300]
+  blick:
+    schmied: links
   alias:
     krug_beim_kochgeschirr: krug
     ziege: schmiede_ziege
@@ -203,6 +212,8 @@ klassenzimmer:
   figuren:
     alwin: [248, 245]
     toadi: [42, 238]
+  blick:
+    alwin: links
   alias:
     zweite_socke: durchgeloecherte_zweite_socke
   hotspots:
