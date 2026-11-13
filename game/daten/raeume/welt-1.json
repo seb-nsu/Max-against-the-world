@@ -1023,7 +1023,7 @@
      "id": "gollo",
      "script_name": "Gollo",
      "pos": [
-      340,
+      375,
       300
      ]
     },
@@ -8880,7 +8880,7 @@
    "id": "maerchen_satzung",
    "name_key": "UI_OBJ_MAERCHEN_SATZUNG",
    "raum": "trollbruecke",
-   "bild": "res://grafik/platzhalter/nah_maerchen_satzung.png"
+   "bild": "res://grafik/nahansichten/maerchen_satzung.png"
   },
   {
    "id": "luftschloss_kritzelei",

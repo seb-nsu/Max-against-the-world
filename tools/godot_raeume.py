@@ -56,6 +56,7 @@ LAYOUT = ROOT / "tools" / "layout"
 RES_PLATZHALTER = "res://grafik/platzhalter/"
 ECHT_GEGENSTAENDE = GAME / "grafik" / "gegenstaende"   # Inventar-Icons aus tools/figur.py gegenstaende
 ECHT_PROPS = GAME / "grafik" / "props"                 # Szenen-Sprites der Props, gleiche Quelle
+ECHT_NAH = GAME / "grafik" / "nahansichten"            # Nahansichten (640×360) mit Schrift von Hand
 
 
 def echt_oder(ordner, datei, platzhalter):
@@ -787,10 +788,12 @@ def baue(abschnitt):
         "figuren": figuren_out,
         "gegenstaende": gegenstaende_out,
         "nahansichten": [{"id": n["id"], "name_key": name_key(n["id"], n["name"]), "raum": n["raum"],
-                          "bild": f"{RES_PLATZHALTER}nah_{n['id']}.png"} for n in welt.get("nahansichten", [])
+                          "bild": echt_oder(ECHT_NAH, f"{n['id']}.png", f"{RES_PLATZHALTER}nah_{n['id']}.png")}
+                         for n in welt.get("nahansichten", [])
                          if n["raum"] in gebaut]
                         + [{"id": g["id"], "name_key": f"UI_OBJ_{g['id'].upper()}", "raum": None,
-                            "bild": f"{RES_PLATZHALTER}nah_{g['id']}.png"} for g in gegenstaende_out
+                            "bild": echt_oder(ECHT_NAH, f"{g['id']}.png", f"{RES_PLATZHALTER}nah_{g['id']}.png")}
+                           for g in gegenstaende_out
                            if g.get("nahansicht")],
         "dialoge": list(dialoge.values()),
         "figurenwechsel": wechsel,

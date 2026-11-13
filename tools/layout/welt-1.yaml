@@ -102,7 +102,7 @@ taverne:
     keller: [170, 168]           # Humbert verschwindet hinter der Kellertür
   figuren:
     humbert: [280, 250]
-    gollo: [340, 300]
+    gollo: [375, 300]
     minka: [470, 250]
     huhn: [362, 198]
   alias:

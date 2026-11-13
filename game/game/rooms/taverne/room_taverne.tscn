@@ -179,7 +179,7 @@ position = Vector2(170, 168)
 position = Vector2(280, 250)
 
 [node name="CharacterGollo *" parent="Characters" unique_id=1891695985 instance=ExtResource("27_0wiab")]
-position = Vector2(340, 300)
+position = Vector2(375, 300)
 
 [node name="CharacterMinka *" parent="Characters" unique_id=1223184642 instance=ExtResource("28_lbl4l")]
 position = Vector2(470, 250)
