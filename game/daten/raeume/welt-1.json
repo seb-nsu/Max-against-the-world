@@ -4650,7 +4650,7 @@
    "script_name": "Luftschloss",
    "name_key": "UI_RAUM_LUFTSCHLOSS",
    "groesse": [
-    640,
+    1280,
     360
    ],
    "hintergrund": "res://grafik/platzhalter/raum_luftschloss.png",
@@ -4661,11 +4661,11 @@
      280
     ],
     [
-     632,
+     1272,
      280
     ],
     [
-     632,
+     1272,
      356
     ],
     [
@@ -4688,7 +4688,7 @@
      "id": "maklerin",
      "script_name": "Maklerin",
      "pos": [
-      400,
+      880,
       316
      ]
     },
@@ -4696,7 +4696,7 @@
      "id": "zeldina",
      "script_name": "Zeldina",
      "pos": [
-      500,
+      1000,
       320
      ]
     }
@@ -4707,13 +4707,13 @@
      "script_name": "Torbogen",
      "name_key": "UI_OBJ_TORBOGEN",
      "rect": [
-      240,
+      740,
       80,
       120,
       200
      ],
      "gehe": [
-      300,
+      800,
       304
      ],
      "ansehen": [
@@ -4739,13 +4739,13 @@
      "script_name": "Kritzelei",
      "name_key": "UI_OBJ_KRITZELEI",
      "rect": [
-      200,
+      872,
       200,
       32,
       28
      ],
      "gehe": [
-      220,
+      888,
       308
      ],
      "ansehen": [
@@ -4790,13 +4790,13 @@
      "script_name": "Balkon",
      "name_key": "UI_OBJ_BALKON",
      "rect": [
-      460,
-      80,
-      140,
+      1060,
+      60,
+      200,
       60
      ],
      "gehe": [
-      540,
+      1160,
       304
      ],
      "ansehen": [
@@ -4822,13 +4822,13 @@
      "script_name": "Spiegel",
      "name_key": "UI_OBJ_SPIEGEL",
      "rect": [
-      380,
+      1180,
       140,
       36,
       60
      ],
      "gehe": [
-      400,
+      1196,
       304
      ],
      "ansehen": [
@@ -4857,11 +4857,11 @@
      "rect": [
       0,
       300,
-      640,
+      1280,
       60
      ],
      "gehe": [
-      320,
+      640,
       320
      ],
      "ansehen": [
@@ -4950,7 +4950,7 @@
    "script_name": "Bergwerk",
    "name_key": "UI_RAUM_BERGWERK",
    "groesse": [
-    640,
+    1280,
     360
    ],
    "hintergrund": "res://grafik/platzhalter/raum_bergwerk.png",
@@ -4961,11 +4961,11 @@
      280
     ],
     [
-     632,
+     1272,
      280
     ],
     [
-     632,
+     1272,
      356
     ],
     [
@@ -4988,7 +4988,7 @@
      "id": "grimmzahn",
      "script_name": "Grimmzahn",
      "pos": [
-      360,
+      960,
       320
      ]
     },
@@ -4996,7 +4996,7 @@
      "id": "goblin_1",
      "script_name": "Goblin1",
      "pos": [
-      300,
+      900,
       316
      ]
     },
@@ -5004,7 +5004,7 @@
      "id": "goblin_2",
      "script_name": "Goblin2",
      "pos": [
-      428,
+      1028,
       324
      ]
     }
@@ -5015,13 +5015,13 @@
      "script_name": "Loren",
      "name_key": "UI_OBJ_LOREN",
      "rect": [
-      48,
+      100,
       232,
-      120,
+      220,
       48
      ],
      "gehe": [
-      112,
+      210,
       312
      ],
      "ansehen": [
@@ -5056,13 +5056,13 @@
      "script_name": "Streikschilder",
      "name_key": "UI_OBJ_STREIKSCHILDER",
      "rect": [
-      200,
+      700,
       140,
       100,
       80
      ],
      "gehe": [
-      248,
+      748,
       308
      ],
      "ansehen": [
@@ -5088,13 +5088,13 @@
      "script_name": "Streikposten",
      "name_key": "UI_OBJ_STREIKPOSTEN",
      "rect": [
-      192,
+      820,
       300,
-      280,
+      300,
       12
      ],
      "gehe": [
-      240,
+      800,
       324
      ],
      "ansehen": [
@@ -5120,13 +5120,13 @@
      "script_name": "Kaffeemaschine",
      "name_key": "UI_OBJ_KAFFEEMASCHINE",
      "rect": [
-      320,
+      860,
       220,
       40,
       40
      ],
      "gehe": [
-      336,
+      876,
       308
      ],
      "ansehen": [
@@ -5182,11 +5182,11 @@
      "rect": [
       120,
       60,
-      280,
+      1000,
       32
      ],
      "gehe": [
-      260,
+      600,
       308
      ],
      "ansehen": [
@@ -5253,13 +5253,13 @@
      "ziel": "turmkeller",
      "name_key": "UI_OBJ_RUNE_TUER",
      "rect": [
-      540,
+      1180,
       120,
       92,
       160
      ],
      "gehe": [
-      532,
+      1172,
       316
      ],
      "erreichbar_ab": "R10",

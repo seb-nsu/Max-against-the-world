@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cop0s605pkhn"]
 
-[ext_resource type="Script" path="res://game/rooms/luftschloss/room_luftschloss.gd" id="1_xunc5"]
+[ext_resource type="Script" uid="uid://sy23tnopxlp3" path="res://game/rooms/luftschloss/room_luftschloss.gd" id="1_xunc5"]
 [ext_resource type="PackedScene" uid="uid://k02dw5iwownk" path="res://game/rooms/luftschloss/walkable_areas/boden/walkable_area_boden.tscn" id="2_16xyd"]
 [ext_resource type="PackedScene" uid="uid://cq4c28nc5xx57" path="res://game/rooms/luftschloss/props/background/prop_background.tscn" id="3_dsq2i"]
 [ext_resource type="Texture2D" uid="uid://bvds3oyl8qc4w" path="res://grafik/platzhalter/raum_luftschloss.png" id="4_kfwac"]
@@ -18,59 +18,64 @@
 [node name="RoomLuftschloss" type="Node2D" unique_id=1663741580]
 script = ExtResource("1_xunc5")
 script_name = "Luftschloss"
-width = 640
+width = 1280
 height = 360
 
 [node name="WalkableAreas" type="Node2D" parent="." unique_id=593840019]
 
 [node name="Boden" parent="WalkableAreas" unique_id=2009631470 instance=ExtResource("2_16xyd")]
-interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(8, 280, 632, 280, 632, 356, 8, 356)])
+interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(8, 280, 1272, 280, 1272, 356, 8, 356)])
 
 [node name="Props" type="Node2D" parent="." unique_id=936847272]
 
 [node name="Background" parent="Props" unique_id=1720107696 instance=ExtResource("3_dsq2i")]
-position = Vector2(320, 180)
+position = Vector2(640, 180)
 texture = ExtResource("4_kfwac")
 description = "UI_RAUM_LUFTSCHLOSS"
 
 [node name="Hotspots" type="Node2D" parent="." unique_id=1002625825]
 
 [node name="Torbogen" parent="Hotspots" unique_id=1695737384 instance=ExtResource("5_usesu")]
-position = Vector2(300, 180)
+position = Vector2(800, 180)
 description = "UI_OBJ_TORBOGEN"
 baseline = 100
 walk_to_point = Vector2(0, 124)
 
 [node name="Kritzelei" parent="Hotspots" unique_id=682647091 instance=ExtResource("6_7tsgd")]
-position = Vector2(216, 215)
+position = Vector2(888, 214)
 description = "UI_OBJ_KRITZELEI"
-baseline = 15
-walk_to_point = Vector2(4, 95)
+baseline = 14
+walk_to_point = Vector2(0, 94)
+interaction_polygon = PackedVector2Array(-16, -14, 16, -14, 16, 14, -16, 14)
 
 [node name="Balkon" parent="Hotspots" unique_id=1822591173 instance=ExtResource("7_s0r72")]
-position = Vector2(531, 111)
+position = Vector2(1160, 90)
 description = "UI_OBJ_BALKON"
-baseline = 31
-walk_to_point = Vector2(11, 195)
+baseline = 30
+walk_to_point = Vector2(0, 214)
+interaction_polygon = PackedVector2Array(-100, -30, 100, -30, 100, 30, -100, 30)
 
 [node name="Spiegel" parent="Hotspots" unique_id=1977706884 instance=ExtResource("8_hiy3h")]
-position = Vector2(399, 171)
+position = Vector2(1198, 170)
 description = "UI_OBJ_SPIEGEL"
-baseline = 31
-walk_to_point = Vector2(3, 135)
+baseline = 30
+walk_to_point = Vector2(-2, 134)
+interaction_polygon = PackedVector2Array(-18, -30, 18, -30, 18, 30, -18, 30)
 
 [node name="Wolken" parent="Hotspots" unique_id=125878728 instance=ExtResource("9_7sb2h")]
-position = Vector2(320, 331)
+position = Vector2(640, 330)
 description = "UI_OBJ_WOLKEN"
-baseline = 31
-walk_to_point = Vector2(0, -11)
+baseline = 30
+walk_to_point = Vector2(0, -10)
+interaction_polygon = PackedVector2Array(-640, -30, 640, -30, 640, 30, -640, 30)
 
 [node name="Rankenende" parent="Hotspots" unique_id=1262073671 instance=ExtResource("10_01vjo")]
-position = Vector2(31, 200)
+position = Vector2(30, 200)
 description = "UI_OBJ_RANKENENDE"
 baseline = 80
-walk_to_point = Vector2(3, 120)
+walk_to_point = Vector2(2, 120)
 cursor = 9
+interaction_polygon = PackedVector2Array(-26, -80, 26, -80, 26, 80, -26, 80)
 
 [node name="Regions" type="Node2D" parent="." unique_id=1274810974]
 
@@ -85,7 +90,7 @@ position = Vector2(60, 320)
 [node name="Characters" type="Node2D" parent="." unique_id=2064000160]
 
 [node name="CharacterMaklerin *" parent="Characters" unique_id=94772486 instance=ExtResource("13_0t1u5")]
-position = Vector2(400, 316)
+position = Vector2(880, 316)
 
 [node name="CharacterZeldina *" parent="Characters" unique_id=1373959384 instance=ExtResource("14_kakob")]
-position = Vector2(500, 320)
+position = Vector2(1000, 320)

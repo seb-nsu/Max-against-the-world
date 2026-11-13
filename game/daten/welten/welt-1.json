@@ -179,7 +179,7 @@
    "skript_code": [
     "LUFT"
    ],
-   "groesse": "640x360",
+   "groesse": "1280x360",
    "ausgaenge": [
     "dorfplatz"
    ],
@@ -193,7 +193,7 @@
    "skript_code": [
     "BERG"
    ],
-   "groesse": "640x360",
+   "groesse": "1280x360",
    "ausgaenge": [
     "zauberwald",
     "turmkeller"

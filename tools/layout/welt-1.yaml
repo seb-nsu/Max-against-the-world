@@ -319,47 +319,51 @@ zauberwald:
 
 bergwerk:
   farbe: "#4a3f3a"
-  laufbereich: [[8, 280], [632, 280], [632, 356], [8, 356]]
+  # Breitbild 1280×360 (Entscheidung 13. November 2026): links Stollenmund und Loren, rechts Streik mit
+  # Schildern, Posten-Linie und Kiste, ganz rechts die Rune-Tür. Platzhalter-Layout für Skizze und Graubox.
+  laufbereich: [[8, 280], [1272, 280], [1272, 356], [8, 356]]
   marker:
     start: [52, 320]
     von_zauberwald: [52, 320]
   figuren:
-    grimmzahn: [360, 320]
-    goblin_1: [300, 316]
-    goblin_2: [428, 324]
+    grimmzahn: [960, 320]
+    goblin_1: [900, 316]
+    goblin_2: [1028, 324]
   alias:
     lore: loren
     goblin_arbeiter_1: goblin_1
     goblin_arbeiter_2: goblin_2
   hotspots:
-    loren: {rect: [48, 232, 120, 48], gehe: [112, 312], name: Loren}
-    streikschilder: {rect: [200, 140, 100, 80], gehe: [248, 308], name: Streikschilder}
-    streikposten: {rect: [192, 300, 280, 12], gehe: [240, 324], name: Streikposten}
-    kaffeemaschine: {rect: [320, 220, 40, 40], gehe: [336, 308], name: Kaffeemaschine}
-    fackeln: {rect: [120, 60, 280, 32], gehe: [260, 308], name: Fackeln}
+    loren: {rect: [100, 232, 220, 48], gehe: [210, 312], name: Loren}
+    streikschilder: {rect: [700, 140, 100, 80], gehe: [748, 308], name: Streikschilder}
+    streikposten: {rect: [820, 300, 300, 12], gehe: [800, 324], name: Streikposten}
+    kaffeemaschine: {rect: [860, 220, 40, 40], gehe: [876, 308], name: Kaffeemaschine}
+    fackeln: {rect: [120, 60, 1000, 32], gehe: [600, 308], name: Fackeln}
   ausgaenge:
     zauberwald: {rect: [4, 120, 36, 160], gehe: [24, 320], id: ausgang_zauberwald}
-    turmkeller: {rect: [540, 120, 92, 160], gehe: [532, 316], id: rune_tuer, name: Rune-Tür, gesperrt: W1_BERG_MAX_0170}
+    turmkeller: {rect: [1180, 120, 92, 160], gehe: [1172, 316], id: rune_tuer, name: Rune-Tür, gesperrt: W1_BERG_MAX_0170}
 
 luftschloss:
   farbe: "#b9c7e6"
-  laufbereich: [[8, 280], [632, 280], [632, 356], [8, 356]]
+  # Breitbild 1280×360 (Entscheidung 13. November 2026): links Rankenende und Hof, rechts Torbogen mit
+  # Kritzelei, Balkon und Spiegel. Platzhalter-Layout für Skizze und Graubox.
+  laufbereich: [[8, 280], [1272, 280], [1272, 356], [8, 356]]
   marker:
     start: [60, 320]
     von_dorfplatz: [60, 320]
   figuren:
-    maklerin: [400, 316]
-    zeldina: [500, 320]
+    maklerin: [880, 316]
+    zeldina: [1000, 320]
   alias:
     kritzelei_neben_dem_torbogen: kritzelei
     nahansicht_kritzelei: kritzelei
     oder_benutzen_spiegel: spiegel
   hotspots:
-    torbogen: {rect: [240, 80, 120, 200], gehe: [300, 304], name: Torbogen}
-    kritzelei: {rect: [200, 200, 32, 28], gehe: [220, 308], name: Kritzelei}
-    balkon: {rect: [460, 80, 140, 60], gehe: [540, 304], name: Balkon}
-    spiegel: {rect: [380, 140, 36, 60], gehe: [400, 304], name: Spiegel}
-    wolken: {rect: [0, 300, 640, 60], gehe: [320, 320], name: Wolken}
+    torbogen: {rect: [740, 80, 120, 200], gehe: [800, 304], name: Torbogen}
+    kritzelei: {rect: [872, 200, 32, 28], gehe: [888, 308], name: Kritzelei}
+    balkon: {rect: [1060, 60, 200, 60], gehe: [1160, 304], name: Balkon}
+    spiegel: {rect: [1180, 140, 36, 60], gehe: [1196, 304], name: Spiegel}
+    wolken: {rect: [0, 300, 1280, 60], gehe: [640, 320], name: Wolken}
   ausgaenge:
     dorfplatz: {rect: [4, 120, 52, 160], gehe: [32, 320], id: rankenende, name: Rankenende}
 

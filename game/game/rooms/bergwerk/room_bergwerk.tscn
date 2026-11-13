@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dxo0ogsqosrpl"]
 
-[ext_resource type="Script" path="res://game/rooms/bergwerk/room_bergwerk.gd" id="1_tsh8b"]
+[ext_resource type="Script" uid="uid://cgrwn4jfx47xu" path="res://game/rooms/bergwerk/room_bergwerk.gd" id="1_tsh8b"]
 [ext_resource type="PackedScene" uid="uid://bfspfmrsgb5fx" path="res://game/rooms/bergwerk/walkable_areas/boden/walkable_area_boden.tscn" id="2_plfwv"]
 [ext_resource type="PackedScene" uid="uid://cc4i1i4axrn72" path="res://game/rooms/bergwerk/props/background/prop_background.tscn" id="3_n87v6"]
 [ext_resource type="Texture2D" uid="uid://difa8wmqtagdr" path="res://grafik/platzhalter/raum_bergwerk.png" id="4_5ryu7"]
@@ -20,66 +20,72 @@
 [node name="RoomBergwerk" type="Node2D" unique_id=1658809883]
 script = ExtResource("1_tsh8b")
 script_name = "Bergwerk"
-width = 640
+width = 1280
 height = 360
 
 [node name="WalkableAreas" type="Node2D" parent="." unique_id=1379926904]
 
 [node name="Boden" parent="WalkableAreas" unique_id=1597242076 instance=ExtResource("2_plfwv")]
-interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(8, 280, 632, 280, 632, 356, 8, 356)])
+interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(8, 280, 1272, 280, 1272, 356, 8, 356)])
 
 [node name="Props" type="Node2D" parent="." unique_id=1988280074]
 
 [node name="Background" parent="Props" unique_id=1932148165 instance=ExtResource("3_n87v6")]
-position = Vector2(320, 180)
+position = Vector2(640, 180)
 texture = ExtResource("4_5ryu7")
 description = "UI_RAUM_BERGWERK"
 
 [node name="Hotspots" type="Node2D" parent="." unique_id=155230196]
 
 [node name="Loren" parent="Hotspots" unique_id=812579360 instance=ExtResource("5_5nwd1")]
-position = Vector2(108, 256)
+position = Vector2(210, 256)
 description = "UI_OBJ_LOREN"
 baseline = 24
-walk_to_point = Vector2(4, 56)
+walk_to_point = Vector2(0, 56)
+interaction_polygon = PackedVector2Array(-110, -24, 110, -24, 110, 24, -110, 24)
 
 [node name="Streikschilder" parent="Hotspots" unique_id=284668402 instance=ExtResource("6_yjmiq")]
-position = Vector2(251, 180)
+position = Vector2(750, 180)
 description = "UI_OBJ_STREIKSCHILDER"
 baseline = 40
-walk_to_point = Vector2(-3, 128)
+walk_to_point = Vector2(-2, 128)
+interaction_polygon = PackedVector2Array(-50, -40, 50, -40, 50, 40, -50, 40)
 
 [node name="Streikposten" parent="Hotspots" unique_id=1207669041 instance=ExtResource("7_qdpn0")]
-position = Vector2(332, 307)
+position = Vector2(970, 306)
 description = "UI_OBJ_STREIKPOSTEN"
-baseline = 7
-walk_to_point = Vector2(-92, 19)
+baseline = 6
+walk_to_point = Vector2(-170, 18)
+interaction_polygon = PackedVector2Array(-150, -6, 150, -6, 150, 6, -150, 6)
 
 [node name="Kaffeemaschine" parent="Hotspots" unique_id=441604541 instance=ExtResource("8_m4nxd")]
-position = Vector2(340, 240)
+position = Vector2(880, 240)
 description = "UI_OBJ_KAFFEEMASCHINE"
 baseline = 20
 walk_to_point = Vector2(-4, 68)
 
 [node name="Fackeln" parent="Hotspots" unique_id=1605132299 instance=ExtResource("9_ileh3")]
-position = Vector2(260, 76)
+position = Vector2(620, 76)
 description = "UI_OBJ_FACKELN"
 baseline = 16
-walk_to_point = Vector2(0, 232)
+walk_to_point = Vector2(-20, 232)
+interaction_polygon = PackedVector2Array(-500, -16, 500, -16, 500, 16, -500, 16)
 
 [node name="AusgangZauberwald" parent="Hotspots" unique_id=912339364 instance=ExtResource("10_04lmd")]
-position = Vector2(23, 200)
+position = Vector2(22, 200)
 description = "UI_RAUM_ZAUBERWALD"
 baseline = 80
-walk_to_point = Vector2(3, 120)
+walk_to_point = Vector2(2, 120)
 cursor = 9
+interaction_polygon = PackedVector2Array(-18, -80, 18, -80, 18, 80, -18, 80)
 
 [node name="RuneTuer" parent="Hotspots" unique_id=1396300071 instance=ExtResource("11_g2k8j")]
-position = Vector2(587, 200)
+position = Vector2(1226, 200)
 description = "UI_OBJ_RUNE_TUER"
 baseline = 80
-walk_to_point = Vector2(-55, 116)
+walk_to_point = Vector2(-54, 116)
 cursor = 9
+interaction_polygon = PackedVector2Array(-46, -80, 46, -80, 46, 80, -46, 80)
 
 [node name="Regions" type="Node2D" parent="." unique_id=203737789]
 
@@ -94,10 +100,10 @@ position = Vector2(52, 320)
 [node name="Characters" type="Node2D" parent="." unique_id=1053246625]
 
 [node name="CharacterGrimmzahn *" parent="Characters" unique_id=470221475 instance=ExtResource("14_kmoqm")]
-position = Vector2(360, 320)
+position = Vector2(960, 320)
 
 [node name="CharacterGoblin1 *" parent="Characters" unique_id=884556655 instance=ExtResource("15_46rqw")]
-position = Vector2(300, 316)
+position = Vector2(900, 316)
 
 [node name="CharacterGoblin2 *" parent="Characters" unique_id=114347316 instance=ExtResource("16_0s1m8")]
-position = Vector2(428, 324)
+position = Vector2(1028, 324)

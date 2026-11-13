@@ -117,7 +117,7 @@ raeume:
   - id: luftschloss
     name: Luftschloss
     skript_code: [LUFT]
-    groesse: 640x360
+    groesse: 1280x360
     ausgaenge: [dorfplatz]     # über die Bohnenranke
     erreichbar_ab: R8
     musik: w1_luftschloss
@@ -126,7 +126,7 @@ raeume:
   - id: bergwerk
     name: Goblin-Bergwerk
     skript_code: [BERG]
-    groesse: 640x360
+    groesse: 1280x360
     ausgaenge: [zauberwald, turmkeller]
     erreichbar_ab: R4          # Streikposten frei betretbar; Rune-Tür erst nach R10
     musik: w1_bergwerk
