@@ -97,6 +97,8 @@ Jede Änderung, die nach dem Gemini-Bild von Hand oder per Skript gemacht wurde,
 
 Sebastian will alle Animationen im Aseprite-Durchgang vollständig prüfen und überarbeiten lassen (13. November 2026). Bisher entstehen sie per Code aus Standbildern (`tools/figur.py`) oder fehlen:
 
+Grundsatz für das Review (Sebastian, 13. November 2026): Gehen bekommen nur Figuren, die im Spiel wirklich laufen. Für jede Figur neu überlegen, welche Bewegungen zu ihr passen, auch kleine Eigenheiten im Stand, zum Beispiel dreht die Schmiede-Ziege ab und zu eine Runde.
+
 | Figur oder Objekt | Stand | Überarbeiten |
 | --- | --- | --- |
 | Max | Stehen: Atmen per Rig (nur Oberkörper und Kopf); Sprechen: Mund auf und Kopfnicken; Gehen: per Code aus dem Standbild (Ober-, Unterschenkel, Fuß, hinteres Bein als Kopie) | Gang flüssiger, Mundbewegung, Wenden |
