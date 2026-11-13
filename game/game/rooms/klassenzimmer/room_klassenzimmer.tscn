@@ -32,7 +32,6 @@ height = 360
 [node name="WalkableAreas" type="Node2D" parent="." unique_id=886921526]
 
 [node name="Boden" parent="WalkableAreas" unique_id=396300271 instance=ExtResource("2_ir30o")]
-interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(0, 240, 97, 222, 285, 222, 290, 242, 360, 242, 365, 222, 385, 222, 386, 232, 418, 232, 448, 272, 572, 262, 575, 226, 595, 222, 639, 236, 639, 359, 0, 359)])
 
 [node name="Props" type="Node2D" parent="." unique_id=861852232]
 
@@ -72,11 +71,11 @@ walk_to_point = Vector2(-1, 53)
 interaction_polygon = PackedVector2Array(-35, -35, 35, -35, 35, 35, -35, 35)
 
 [node name="Flaschenregal" parent="Hotspots" unique_id=2049295911 instance=ExtResource("9_spsnj")]
-position = Vector2(454, 149)
+position = Vector2(202, 190)
 description = "UI_OBJ_FLASCHENREGAL"
-baseline = 11
-walk_to_point = Vector2(-50, 99)
-interaction_polygon = PackedVector2Array(-56, -11, 56, -11, 56, 11, -56, 11)
+baseline = 10
+walk_to_point = Vector2(-2, 50)
+interaction_polygon = PackedVector2Array(-54, -10, 54, -10, 54, 10, -54, 10)
 
 [node name="BesenImSchrank" parent="Hotspots" unique_id=2093887970 instance=ExtResource("10_whayx")]
 position = Vector2(556, 116)
@@ -101,46 +100,46 @@ cursor = 9
 interaction_polygon = PackedVector2Array(-31, -77.5, 31, -77.5, 31, 77.5, -31, 77.5)
 
 [node name="Flasche1" parent="Hotspots" unique_id=1792382325 instance=ExtResource("13_7txcd")]
-position = Vector2(409.5, 124.5)
+position = Vector2(161, 165.5)
 description = "UI_OBJ_FLASCHE_1"
-baseline = 16
-walk_to_point = Vector2(-11.5, 123.5)
-interaction_polygon = PackedVector2Array(-8.5, -16.5, 8.5, -16.5, 8.5, 16.5, -8.5, 16.5)
+baseline = 15
+walk_to_point = Vector2(-1, 74.5)
+interaction_polygon = PackedVector2Array(-8, -15.5, 8, -15.5, 8, 15.5, -8, 15.5)
 
 [node name="Flasche2" parent="Hotspots" unique_id=297606360 instance=ExtResource("14_spsnj")]
-position = Vector2(427, 117.5)
+position = Vector2(178, 158)
 description = "UI_OBJ_FLASCHE_2"
 baseline = 23
-walk_to_point = Vector2(-27, 130.5)
-interaction_polygon = PackedVector2Array(-8, -23.5, 8, -23.5, 8, 23.5, -8, 23.5)
+walk_to_point = Vector2(-1, 82)
+interaction_polygon = PackedVector2Array(-8, -23, 8, -23, 8, 23, -8, 23)
 
 [node name="Flasche3" parent="Hotspots" unique_id=1871642279 instance=ExtResource("15_whayx")]
-position = Vector2(444.5, 124.5)
+position = Vector2(195, 165.5)
 description = "UI_OBJ_FLASCHE_3"
-baseline = 16
-walk_to_point = Vector2(-42.5, 123.5)
-interaction_polygon = PackedVector2Array(-8.5, -16.5, 8.5, -16.5, 8.5, 16.5, -8.5, 16.5)
+baseline = 15
+walk_to_point = Vector2(-1, 74.5)
+interaction_polygon = PackedVector2Array(-8, -15.5, 8, -15.5, 8, 15.5, -8, 15.5)
 
 [node name="Flasche4" parent="Hotspots" unique_id=872663849 instance=ExtResource("16_eaurd")]
-position = Vector2(461.5, 124.5)
+position = Vector2(212, 165.5)
 description = "UI_OBJ_FLASCHE_4"
-baseline = 16
-walk_to_point = Vector2(-57.5, 123.5)
-interaction_polygon = PackedVector2Array(-8.5, -16.5, 8.5, -16.5, 8.5, 16.5, -8.5, 16.5)
+baseline = 15
+walk_to_point = Vector2(-1, 74.5)
+interaction_polygon = PackedVector2Array(-8, -15.5, 8, -15.5, 8, 15.5, -8, 15.5)
 
 [node name="Flasche5" parent="Hotspots" unique_id=1644012170 instance=ExtResource("17_vuw6j")]
-position = Vector2(479.5, 117.5)
+position = Vector2(229, 158)
 description = "UI_OBJ_FLASCHE_5"
 baseline = 23
-walk_to_point = Vector2(-73.5, 130.5)
-interaction_polygon = PackedVector2Array(-8.5, -23.5, 8.5, -23.5, 8.5, 23.5, -8.5, 23.5)
+walk_to_point = Vector2(-1, 82)
+interaction_polygon = PackedVector2Array(-8, -23, 8, -23, 8, 23, -8, 23)
 
 [node name="Flasche6" parent="Hotspots" unique_id=343824248 instance=ExtResource("18_jkdk0")]
-position = Vector2(496.5, 124.5)
+position = Vector2(246, 165.5)
 description = "UI_OBJ_FLASCHE_6"
-baseline = 16
-walk_to_point = Vector2(-88.5, 123.5)
-interaction_polygon = PackedVector2Array(-8.5, -16.5, 8.5, -16.5, 8.5, 16.5, -8.5, 16.5)
+baseline = 15
+walk_to_point = Vector2(-1, 74.5)
+interaction_polygon = PackedVector2Array(-8, -15.5, 8, -15.5, 8, 15.5, -8, 15.5)
 
 [node name="Regions" type="Node2D" parent="." unique_id=703247222]
 
@@ -155,7 +154,7 @@ position = Vector2(80, 250)
 [node name="Characters" type="Node2D" parent="." unique_id=78373508]
 
 [node name="CharacterAlwin *" parent="Characters" unique_id=1939362324 instance=ExtResource("15_ti30s")]
-position = Vector2(250, 248)
+position = Vector2(372, 250)
 
 [node name="CharacterToadi *" parent="Characters" unique_id=1625231671 instance=ExtResource("16_skdtx")]
 position = Vector2(42, 238)

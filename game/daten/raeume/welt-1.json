@@ -2638,8 +2638,8 @@
      "id": "alwin",
      "script_name": "Alwin",
      "pos": [
-      250,
-      248
+      372,
+      250
      ]
     },
     {
@@ -2657,14 +2657,14 @@
      "script_name": "Flasche1",
      "name_key": "UI_OBJ_FLASCHE_1",
      "rect": [
-      401,
-      108,
-      17,
-      33
+      153,
+      150,
+      16,
+      31
      ],
      "gehe": [
-      398,
-      248
+      160,
+      240
      ],
      "ansehen": [
       {
@@ -2682,14 +2682,14 @@
      "script_name": "Flasche2",
      "name_key": "UI_OBJ_FLASCHE_2",
      "rect": [
-      419,
-      94,
+      170,
+      135,
       16,
-      47
+      46
      ],
      "gehe": [
-      400,
-      248
+      177,
+      240
      ],
      "ansehen": [
       {
@@ -2708,14 +2708,14 @@
      "script_name": "Flasche3",
      "name_key": "UI_OBJ_FLASCHE_3",
      "rect": [
-      436,
-      108,
-      17,
-      33
+      187,
+      150,
+      16,
+      31
      ],
      "gehe": [
-      402,
-      248
+      194,
+      240
      ],
      "ansehen": [
       {
@@ -2734,14 +2734,14 @@
      "script_name": "Flasche4",
      "name_key": "UI_OBJ_FLASCHE_4",
      "rect": [
-      453,
-      108,
-      17,
-      33
+      204,
+      150,
+      16,
+      31
      ],
      "gehe": [
-      404,
-      248
+      211,
+      240
      ],
      "ansehen": [
       {
@@ -2760,14 +2760,14 @@
      "script_name": "Flasche5",
      "name_key": "UI_OBJ_FLASCHE_5",
      "rect": [
-      471,
-      94,
-      17,
-      47
+      221,
+      135,
+      16,
+      46
      ],
      "gehe": [
-      406,
-      248
+      228,
+      240
      ],
      "ansehen": [
       {
@@ -2785,14 +2785,14 @@
      "script_name": "Flasche6",
      "name_key": "UI_OBJ_FLASCHE_6",
      "rect": [
-      488,
-      108,
-      17,
-      33
+      238,
+      150,
+      16,
+      31
      ],
      "gehe": [
-      408,
-      248
+      245,
+      240
      ],
      "ansehen": [
       {
@@ -3040,14 +3040,14 @@
      "script_name": "Flaschenregal",
      "name_key": "UI_OBJ_FLASCHENREGAL",
      "rect": [
-      398,
-      138,
-      112,
-      22
+      148,
+      180,
+      108,
+      20
      ],
      "gehe": [
-      404,
-      248
+      200,
+      240
      ],
      "ansehen": [
       {
