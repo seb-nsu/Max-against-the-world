@@ -274,7 +274,7 @@ Character concept sheet in exactly the same style as the attached character shee
 
 ## 30. Zeldina
 
-*Slice*
+*nach dem Slice, ab R9*
 
 ```text
 Character concept sheet in exactly the same style as the attached character sheet of the boy Max: same line weight, same flat cel shading, same light from upper left, plain light grey background, no text, no ground shadow. Exactly one character, full body, strict side view facing right, standing on a flat baseline, legs clearly visible. Draw only this new character: do not copy any heads, legs, shoes or other parts of the boy Max from the attached sheet into the image. Young athletic princess, about 104 percent of the boy Max's height. Short brown hair, freckles, a small golden crown tied on with string. Rust-orange travel cape over a brown leather vest and a cream shirt, dark brown trousers, sturdy boots. A cardboard moving box under her left arm. Standing upright, facing right, determined grin. No long blond hair, no pink dress, no green tunic, no pointed ears.
@@ -282,7 +282,7 @@ Character concept sheet in exactly the same style as the attached character shee
 
 ## 31. Maklerin
 
-*Slice*
+*nach dem Slice, Luftschloss*
 
 ```text
 Character concept sheet in exactly the same style as the attached character sheet of the boy Max: same line weight, same flat cel shading, same light from upper left, plain light grey background, no text, no ground shadow. Exactly one character, full body, strict side view facing right, standing on a flat baseline, legs clearly visible. Draw only this new character: do not copy any heads, legs, shoes or other parts of the boy Max from the attached sheet into the image. Sharp real estate agent, about 106 percent of the boy Max's height, slim. Tight grey hair bun, thin glasses on a chain, a pen behind her ear. Pointy black business suit with sharp shoulders, white blouse, black high heels. A clipboard held in her left hand. Standing upright, facing right, fake toothy smile.
@@ -290,7 +290,7 @@ Character concept sheet in exactly the same style as the attached character shee
 
 ## 32. Lord Moderwort
 
-*Slice*
+*nach dem Slice, Thronsaal*
 
 ```text
 Character concept sheet in exactly the same style as the attached character sheet of the boy Max: same line weight, same flat cel shading, same light from upper left, plain light grey background, no text, no ground shadow. Exactly one character, full body, strict side view facing right, standing on a flat baseline, legs clearly visible. Draw only this new character: do not copy any heads, legs, shoes or other parts of the boy Max from the attached sheet into the image. Gloomy wannabe dark lord, about 106 percent of the boy Max's height, thin. Pale green skin, a greasy black ponytail, almost no nose, just two tiny red irritated nostrils, teary eyes. A dark violet robe far too large for him, sleeves down to his fingers. A white handkerchief in his left hand, a crooked black wand in his right. Standing upright, facing right. No bald head, no black robe.
@@ -298,7 +298,7 @@ Character concept sheet in exactly the same style as the attached character shee
 
 ## 33. Smaugi
 
-*Slice, FIGUR-GROSS*
+*nach dem Slice, FIGUR-GROSS*
 
 ```text
 Character concept sheet in exactly the same style as the attached character sheet of the boy Max: same line weight, same flat cel shading, same light from upper left, plain light grey background, no text, no ground shadow. Exactly one character, full body, strict side view facing right, standing on a flat baseline, legs clearly visible. Draw only this new character: do not copy any heads, legs, shoes or other parts of the boy Max from the attached sheet into the image. Plump friendly red dragon, about 180 percent of the boy Max's height when sitting, round belly, short stubby wings, small horns. Tired droopy eyes. A cleaning headscarf with white dots tied on his head, a feather duster in his right claw. Sitting upright on his haunches, tail curled around his feet, facing right, sighing. No gold armor scales, no fire.
@@ -306,7 +306,7 @@ Character concept sheet in exactly the same style as the attached character shee
 
 ## 34. Übungsbesen
 
-*Slice, Klassenzimmer*
+*nach dem Slice, Hinweis in R6*
 
 ```text
 Character concept sheet in exactly the same style as the attached character sheet of the boy Max: same line weight, same flat cel shading, same light from upper left, plain light grey background, no text, no ground shadow. Exactly one character, full body, strict side view facing right, standing on a flat baseline, legs clearly visible. Draw only this new character: do not copy any heads, legs, shoes or other parts of the boy Max from the attached sheet into the image. A small enchanted practice broom, about 39 percent of the boy Max's height, short birch handle, pale straw bristles tied with a red cord, two thin stick arms and a small wide-eyed face on the binding. Standing upright on its bristles, facing right, twitching eagerly.
@@ -314,7 +314,7 @@ Character concept sheet in exactly the same style as the attached character shee
 
 ## 35. Zauberbesen
 
-*Slice*
+*nach dem Slice, R11*
 
 ```text
 Character concept sheet in exactly the same style as the attached character sheet of the boy Max: same line weight, same flat cel shading, same light from upper left, plain light grey background, no text, no ground shadow. Exactly one character, full body, strict side view facing right, standing on a flat baseline, legs clearly visible. Draw only this new character: do not copy any heads, legs, shoes or other parts of the boy Max from the attached sheet into the image. An enchanted straw broom, about 53 percent of the boy Max's height, birch handle tied to the bristles with brown cord, two thin stick arms and an angry face on the binding. Standing upright on its bristles, facing right.

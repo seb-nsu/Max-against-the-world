@@ -75,9 +75,11 @@ SLICE = {
         ("Alwin Grauwald", "Kulisse"), ("Schwan", "Kulisse"), ("Grimmzahn", "Kulisse"),
         ("Goblin-Arbeiter 1", "Kulisse"), ("Goblin-Arbeiter 2", "Kulisse"),
         ("Streik-Goblin 1", "Kulisse, stumm"), ("Streik-Goblin 2", "Kulisse, stumm"), ("Streik-Goblin 3", "Kulisse, stumm"),
-        # Nachgetragen (Sebastian, 13. November 2026): gehören auch zum Slice
-        ("Zeldina", "Slice"), ("Maklerin", "Slice"), ("Lord Moderwort", "Slice"), ("Smaugi", "Slice, FIGUR-GROSS"),
-        ("Übungsbesen", "Slice, Klassenzimmer"), ("Zauberbesen", "Slice"),
+        # Erst ab Rätsel 5, also nicht im Slice, sondern für die Demo mit ganz Welt 1 (Stufe 3);
+        # hier schon dabei, damit die Prompts bereitliegen (13. November 2026)
+        ("Zeldina", "nach dem Slice, ab R9"), ("Maklerin", "nach dem Slice, Luftschloss"),
+        ("Lord Moderwort", "nach dem Slice, Thronsaal"), ("Smaugi", "nach dem Slice, FIGUR-GROSS"),
+        ("Übungsbesen", "nach dem Slice, Hinweis in R6"), ("Zauberbesen", "nach dem Slice, R11"),
     ],
     "Gegenstände": [
         ("Dorf und Taverne (3×3)", "Münze, Fondue, Vorleger, Bestellzettel, Eimer, Steckbrief"),
