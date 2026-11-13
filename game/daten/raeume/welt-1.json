@@ -1670,7 +1670,7 @@
       362,
       240
      ],
-     "textur": "res://grafik/platzhalter/prop_ei.png",
+     "textur": "res://grafik/props/ei.png",
      "gegenstand": "ei",
      "ansehen": [],
      "nehmen": {
@@ -8462,7 +8462,7 @@
    ],
    "reist_mit": false,
    "nahansicht": false,
-   "icon": "res://grafik/platzhalter/gegenstand_ei.png",
+   "icon": "res://grafik/gegenstaende/ei.png",
    "icons": {},
    "ansehen": [
     {
@@ -8557,9 +8557,9 @@
    ],
    "reist_mit": false,
    "nahansicht": false,
-   "icon": "res://grafik/platzhalter/gegenstand_flasche.png",
+   "icon": "res://grafik/gegenstaende/flasche_klein.png",
    "icons": {
-    "gross": "res://grafik/platzhalter/gegenstand_flasche_gross.png"
+    "gross": "res://grafik/gegenstaende/flasche_gross.png"
    },
    "ansehen": [
     {

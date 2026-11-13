@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://cnbaua7y2go0g" path="res://game/rooms/taverne/props/ziegenfell_vorleger/prop_ziegenfell_vorleger.tscn" id="5_hvpxn"]
 [ext_resource type="Texture2D" uid="uid://c5e17adl22s14" path="res://grafik/props/ziegenfell_vorleger.png" id="6_2n8x7"]
 [ext_resource type="PackedScene" uid="uid://brgjwlgk8ujg7" path="res://game/rooms/taverne/props/ei/prop_ei.tscn" id="7_boni8"]
-[ext_resource type="Texture2D" uid="uid://d2uu4wtr5m558" path="res://grafik/platzhalter/prop_ei.png" id="8_4fvhs"]
+[ext_resource type="Texture2D" uid="uid://b0v5s656p8e43" path="res://grafik/props/ei.png" id="8_6de5b"]
 [ext_resource type="PackedScene" uid="uid://6ch6f4sxhrwb" path="res://game/rooms/taverne/hotspots/dachbalken/hotspot_dachbalken.tscn" id="9_32xxb"]
 [ext_resource type="PackedScene" uid="uid://wx7f0k0gmrmy" path="res://game/rooms/taverne/hotspots/tresen/hotspot_tresen.tscn" id="10_iop51"]
 [ext_resource type="PackedScene" uid="uid://bykdw4yujp6kj" path="res://game/rooms/taverne/hotspots/fischsuppe/hotspot_fischsuppe.tscn" id="11_6eg5l"]
@@ -57,7 +57,7 @@ interaction_polygon = PackedVector2Array(-86, -24.5, 86, -24.5, 86, 24.5, -86, 2
 
 [node name="Ei" parent="Props" unique_id=2004330887 instance=ExtResource("7_boni8")]
 position = Vector2(362, 198)
-texture = ExtResource("8_4fvhs")
+texture = ExtResource("8_6de5b")
 description = "UI_OBJ_EI"
 baseline = 6
 walk_to_point = Vector2(0, 42)
