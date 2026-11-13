@@ -72,7 +72,13 @@ static func figuren_anwenden(raum: PopochiuRoom) -> void:
 		if f:
 			i += 1
 	if is_instance_valid(C.Pixel):
-		C.Pixel.modulate = FELL_FARBE if Zustand.ist("W1_PIXEL_IM_FELL") else Color.WHITE
+		# Pixel im Ziegenfell: eigenes Bild, wenn es eins gibt (grafik/figuren/pixel_ziege.png), sonst Fellfarbe
+		var fell := Zustand.ist("W1_PIXEL_IM_FELL")
+		var soll := "pixel_ziege" if fell else ""
+		if C.Pixel.has_method("grafik_laden") and C.Pixel.grafik_variante != soll and (soll.is_empty() or ResourceLoader.exists("res://grafik/figuren/pixel_ziege.png")):
+			C.Pixel.grafik_laden(soll)
+		var eigenes_bild: bool = C.Pixel.grafik_variante == "pixel_ziege"
+		C.Pixel.modulate = FELL_FARBE if fell and not eigenes_bild else Color.WHITE
 
 
 static func _platz(raum: PopochiuRoom, i: int, sn := "") -> Vector2:

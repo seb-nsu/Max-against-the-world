@@ -55,8 +55,12 @@ func _mund_schliessen(nr: int, sekunden: float) -> void:
 ## res://daten/figuren/<id>.json (beides aus tools/figur.py paket), wird das Sprite-Sheet gesetzt und
 ## je Bewegung (idle, walk, talk …) eine Animation angelegt. Die Bilder schauen nach rechts; nach
 ## links spiegelt Popochiu. Der Fußpunkt liegt unten in der Bildmitte.
-func grafik_laden() -> bool:
-	var id := objekt_id()
+## variante: anderes Bild derselben Figur (etwa „pixel_ziege“ für Pixel im Ziegenfell).
+var grafik_variante := ""
+
+
+func grafik_laden(variante := "") -> bool:
+	var id := variante if not variante.is_empty() else objekt_id()
 	var bild := "res://grafik/figuren/%s.png" % id
 	var daten_pfad := "res://daten/figuren/%s.json" % id
 	if not ResourceLoader.exists(bild) or not FileAccess.file_exists(daten_pfad):
@@ -95,6 +99,7 @@ func grafik_laden() -> bool:
 	if player.has_animation_library(""):
 		player.remove_animation_library("")
 	player.add_animation_library("", lib)
+	grafik_variante = variante
 	_play_idle()
 	return true
 
