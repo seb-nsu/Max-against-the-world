@@ -278,31 +278,40 @@ wasserschloss:
 
 zauberwald:
   farbe: "#3f5a3a"
-  laufbereich: [[8, 280], [632, 280], [632, 356], [8, 356]]
+  # Echter Hintergrund (13. November 2026, Sebastians Gemini-Fassung + tools/pixelieren.py). Riesenpilze,
+  # Leuchtpilze und Karren nach dem Umrechnen nachgefärbt (48 statt 32 Farben). Ketchup und ein Leuchtpilz
+  # als eigene Props ausgeschnitten (grafik/props), im Hintergrund übermalt. Niesrosen fehlen noch als Sprite;
+  # ihr Platz in der Lichtung ist aus dem Laufbereich ausgespart.
+  # Koordinaten aus dem Bild; übernommen mit --cq-layout=zauberwald.
+  hintergrund: res://grafik/hintergruende/w1_bg_zauberwald_v01.png
+  tiefe: 0.5
+  laufbereich: [[0, 186], [48, 180], [68, 212], [80, 240], [150, 258], [215, 262], [240, 254],
+                [392, 254], [472, 254], [478, 236], [548, 232], [575, 222], [598, 226],
+                [592, 262], [612, 282], [639, 290], [639, 359], [0, 359]]
   marker:
-    start: [48, 320]
-    von_trollbruecke: [48, 320]
-    von_bergwerk: [584, 320]
+    start: [20, 200]
+    von_trollbruecke: [20, 200]
+    von_bergwerk: [570, 245]
   figuren:
-    rotkaeppchen: [480, 320]
+    rotkaeppchen: [490, 272]
   alias:
     glasschuh: kuerbisturm_und_glasschuh
     ketchup_am_karren: ketchup
     niesrosen_geschlossen: niesrosen
   hotspots:
-    riesenpilze: {rect: [40, 120, 120, 140], gehe: [100, 308], name: Riesenpilze}
-    leuchtpilze: {rect: [60, 260, 60, 20], gehe: [88, 312], name: Leuchtpilze}
-    niesrosen: {rect: [240, 220, 80, 60], gehe: [280, 308], name: Niesrosen}
-    kuerbisturm_und_glasschuh: {rect: [300, 100, 60, 120], gehe: [332, 308], name: Kürbisturm}
-    gluehwuermchen: {rect: [180, 20, 160, 60], gehe: [260, 308], name: Glühwürmchen}
-    lieferkarren: {rect: [400, 220, 80, 60], gehe: [440, 308], name: Lieferkarren}
-    baeume: {rect: [180, 80, 100, 120], gehe: [220, 308], name: Bäume}
+    riesenpilze: {rect: [55, 70, 160, 145], gehe: [130, 272], name: Riesenpilze}
+    leuchtpilze: {rect: [75, 215, 140, 45], gehe: [130, 270], name: Leuchtpilze}
+    niesrosen: {rect: [250, 212, 80, 40], gehe: [290, 266], name: Niesrosen}
+    kuerbisturm_und_glasschuh: {rect: [290, 80, 70, 130], gehe: [325, 264], name: Kürbisturm}
+    gluehwuermchen: {rect: [190, 10, 240, 60], gehe: [300, 270], name: Glühwürmchen}
+    lieferkarren: {rect: [390, 175, 80, 78], gehe: [430, 268], name: Lieferkarren}
+    baeume: {rect: [215, 70, 70, 140], gehe: [250, 270], name: Bäume}
   props:
-    leuchtpilz: {rect: [72, 264, 16, 12], gehe: [88, 312]}
-    ketchup: {rect: [500, 232, 12, 24], gehe: [488, 308]}
+    leuchtpilz: {rect: [157, 226, 16, 24], gehe: [150, 268]}
+    ketchup: {rect: [417, 209, 11, 29], gehe: [420, 268]}
   ausgaenge:
-    trollbruecke: {rect: [4, 140, 32, 140], gehe: [24, 320], id: ausgang_trollbruecke}
-    bergwerk: {rect: [540, 120, 96, 160], gehe: [592, 312], id: stolleneingang, name: Stolleneingang}
+    trollbruecke: {rect: [0, 150, 30, 100], gehe: [15, 200], id: ausgang_trollbruecke}
+    bergwerk: {rect: [505, 105, 100, 125], gehe: [572, 242], id: stolleneingang, name: Stolleneingang}
 
 bergwerk:
   farbe: "#4a3f3a"

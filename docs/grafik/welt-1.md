@@ -84,6 +84,7 @@ Zu den Motiven: Jedes Motiv nennt links, Mitte und rechts in Bildrichtung, die A
 | --- | --- | --- |
 | Troll-Brücke | Bach fließt mittig nach vorn, Ufer links und rechts begehbar; Weg führt über Rampen auf das Brückendeck; Grammophon (statt Deko-Sprite) im Hintergrund auf einem Sims unter dem Bogen; Wasserschloss rosa; Brücke sitzt etwa 10 Prozent höher als in der Skizze | Gemini hielt die Skizze nicht ein; der Weg muss sichtbar durchgehen; rosa, damit es sich vom Luftschloss unterscheidet |
 | Klassenzimmer | Neue Aufteilung: Kessel unter dem Fenster links, Bänke direkt vor der Tafel in der Mitte, Regal und Schrank rechts; nur ein Fenster; Schrank weit offen; Boden ab etwa 60 Prozent Bildhöhe | Ausgewogener als alles rechts, und so wirkt es wie ein Klassenzimmer (Sebastian). Die sechs Flaschen sind Kopien von zwei Flaschen, weil Gemini sie nie gleich groß zeichnet |
+| Zauberwald | Entspricht Skizze und Motiv. Ketchup und ein Leuchtpilz sind im Bild gemalt und als Props ausgeschnitten; die Niesrosen sind wie geplant noch nicht im Bild | – |
 
 ### Figuren
 
