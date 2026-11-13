@@ -53,7 +53,7 @@ dim torch-lit mine palette of earthy browns and mossy greens with small warm gol
 | --- | --- | --- |
 | Szenen | Luftschloss (breit, zwei Hälften), Turmkeller, Abstellkammer 1, Smaugis Abstellkammern (zwei Fassungen), Thronsaal | Erst nach dem Slice; Skizze mitgeben |
 | Figuren | Streik-Goblin 2 und 3 (Slice); Zeldina, Maklerin, Lord Moderwort, Smaugi, Max als Pilz, Zauberbesen, Übungsbesen (nach dem Slice) | Max' Figurenblatt anhängen, bei Max als Pilz auch das Max-Blatt als Vorlage |
-| Sammelbilder | Bohnenranke (1×1), Niesrosen (1×2), Smaugis Kram (3×3), Deko Welt 1 (3×3) | Bohnenranke und Niesrosen gehören zum Slice-Ende (R7, R8) und zu Rätsel 7 |
+| Sammelbilder | Bohnenranke (1×1), Niesrosen (1×2), Smaugis Kram (3×3), Deko Welt 1 (3×3) | Alle erst nach dem Slice (Niesrosen Rätsel 7, Bohnenranke Rätsel 8) |
 | Nahansichten | Alwins Hinweiszettel, Luftschloss-Kritzelei, Moderworts Zeugnis | Märchen-Satzung ist fertig |
 | Animationen | Alle aus der Tabelle unten | Kommen im Aseprite-Durchgang (`offene-punkte.md`, Animationen) |
 
