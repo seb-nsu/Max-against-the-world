@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://v2wfs4hjw7p8"]
 
-[ext_resource type="Script" path="res://game/rooms/abstellkammer_1/walkable_areas/boden/walkable_area_boden.gd" id="1_ojhj1"]
+[ext_resource type="Script" uid="uid://dkknau2dc60ll" path="res://game/rooms/abstellkammer_1/walkable_areas/boden/walkable_area_boden.gd" id="1_ojhj1"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_ojhj1"]
-vertices = PackedVector2Array(316, 178, 4, 178, 4, 140, 316, 140)
+vertices = PackedVector2Array(632, 356, 8, 356, 8, 280, 632, 280)
 polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
-outlines = Array[PackedVector2Array]([PackedVector2Array(4, 140, 316, 140, 316, 178, 4, 178)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(8, 280, 632, 280, 632, 356, 8, 356)])
 agent_radius = 0.0
 
 [node name="Boden" type="Node2D" unique_id=937279921]

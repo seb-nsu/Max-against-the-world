@@ -5905,11 +5905,11 @@
    ],
    "marker": {
     "start": [
-     580,
+     60,
      320
     ],
     "von_turmkeller": [
-     580,
+     60,
      320
     ]
    },
@@ -5920,13 +5920,13 @@
      "script_name": "Besen",
      "name_key": "UI_OBJ_BESEN",
      "rect": [
-      160,
+      320,
       220,
       160,
       60
      ],
      "gehe": [
-      240,
+      400,
       308
      ],
      "ansehen": []
@@ -5936,13 +5936,13 @@
      "script_name": "Kram",
      "name_key": "UI_OBJ_KRAM",
      "rect": [
-      360,
+      120,
       160,
       160,
       120
      ],
      "gehe": [
-      440,
+      200,
       308
      ],
      "ansehen": []
@@ -5956,13 +5956,13 @@
      "ziel": "turmkeller",
      "name_key": "UI_OBJ_AUSGANG_TURMKELLER",
      "rect": [
-      596,
+      4,
       120,
       40,
       160
      ],
      "gehe": [
-      608,
+      24,
       320
      ],
      "erreichbar_ab": "R10",

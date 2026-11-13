@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dawc6hw58cp65"]
 
-[ext_resource type="Script" path="res://game/rooms/abstellkammer_1/room_abstellkammer_1.gd" id="1_e8440"]
+[ext_resource type="Script" uid="uid://bcavvjqe80i1p" path="res://game/rooms/abstellkammer_1/room_abstellkammer_1.gd" id="1_e8440"]
 [ext_resource type="PackedScene" uid="uid://v2wfs4hjw7p8" path="res://game/rooms/abstellkammer_1/walkable_areas/boden/walkable_area_boden.tscn" id="2_dsx3a"]
 [ext_resource type="PackedScene" uid="uid://snya2jmkrabi" path="res://game/rooms/abstellkammer_1/props/background/prop_background.tscn" id="3_b1qcm"]
 [ext_resource type="Texture2D" uid="uid://cvk84cqbbjtxm" path="res://grafik/platzhalter/raum_abstellkammer_1.png" id="4_wfjvj"]
@@ -19,7 +19,6 @@ height = 360
 [node name="WalkableAreas" type="Node2D" parent="." unique_id=463854798]
 
 [node name="Boden" parent="WalkableAreas" unique_id=937279921 instance=ExtResource("2_dsx3a")]
-interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(8, 280, 632, 280, 632, 356, 8, 356)])
 
 [node name="Props" type="Node2D" parent="." unique_id=971607405]
 
@@ -31,22 +30,23 @@ description = "UI_RAUM_ABSTELLKAMMER_1"
 [node name="Hotspots" type="Node2D" parent="." unique_id=812886177]
 
 [node name="Besen" parent="Hotspots" unique_id=749648026 instance=ExtResource("5_7tyfc")]
-position = Vector2(240, 251)
+position = Vector2(400, 250)
 description = "UI_OBJ_BESEN"
-baseline = 31
-walk_to_point = Vector2(0, 59)
+baseline = 30
+walk_to_point = Vector2(0, 58)
+interaction_polygon = PackedVector2Array(-80, -30, 80, -30, 80, 30, -80, 30)
 
 [node name="Kram" parent="Hotspots" unique_id=449695085 instance=ExtResource("6_um4y5")]
-position = Vector2(440, 220)
+position = Vector2(200, 220)
 description = "UI_OBJ_KRAM"
 baseline = 60
 walk_to_point = Vector2(0, 88)
 
 [node name="AusgangTurmkeller" parent="Hotspots" unique_id=1395413342 instance=ExtResource("7_hhdou")]
-position = Vector2(616, 200)
+position = Vector2(24, 200)
 description = "UI_OBJ_AUSGANG_TURMKELLER"
 baseline = 80
-walk_to_point = Vector2(-8, 120)
+walk_to_point = Vector2(0, 120)
 cursor = 9
 
 [node name="Regions" type="Node2D" parent="." unique_id=607727179]
@@ -54,9 +54,9 @@ cursor = 9
 [node name="Markers" type="Node2D" parent="." unique_id=840526272]
 
 [node name="Start" parent="Markers" unique_id=1640586378 instance=ExtResource("8_cyjct")]
-position = Vector2(580, 320)
+position = Vector2(60, 320)
 
 [node name="VonTurmkeller" parent="Markers" unique_id=658211824 instance=ExtResource("9_wklpe")]
-position = Vector2(580, 320)
+position = Vector2(60, 320)
 
 [node name="Characters" type="Node2D" parent="." unique_id=305500932]

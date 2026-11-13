@@ -423,18 +423,20 @@ turmkeller:
 
 abstellkammer_1:
   farbe: "#4a3f3a"
+  # Tür links (13. November 2026, vorher rechts): Im Keller liegt die Kammertür rechts, also kommt man
+  # hier von links herein.
   laufbereich: [[8, 280], [632, 280], [632, 356], [8, 356]]
   marker:
-    start: [580, 320]
-    von_turmkeller: [580, 320]
+    start: [60, 320]
+    von_turmkeller: [60, 320]
   alias:
     besen_in_abstellkammer_1: besen
     kram_in_abstellkammer_1: kram
   hotspots:
-    besen: {rect: [160, 220, 160, 60], gehe: [240, 308], name: Besen}
-    kram: {rect: [360, 160, 160, 120], gehe: [440, 308], name: Kram}
+    besen: {rect: [320, 220, 160, 60], gehe: [400, 308], name: Besen}
+    kram: {rect: [120, 160, 160, 120], gehe: [200, 308], name: Kram}
   ausgaenge:
-    turmkeller: {rect: [596, 120, 40, 160], gehe: [608, 320], id: ausgang_turmkeller, name: Keller}
+    turmkeller: {rect: [4, 120, 40, 160], gehe: [24, 320], id: ausgang_turmkeller, name: Keller}
 
 abstellkammern:
   farbe: "#5e4b3a"
