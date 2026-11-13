@@ -63,7 +63,37 @@ Jede Änderung, die nach dem Gemini-Bild von Hand oder per Skript gemacht wurde,
 | Zauberwald | Leuchtpilz ausgeschnitten als `grafik/props/leuchtpilz.png` (157, 226, 16, 24); Stelle mit dem Stück 16 Pixel links daneben überdeckt | Skript, rechteckig ohne Freistellen | Sprite freistellen, übermalte Stelle prüfen |
 | Zauberwald | Niesrosen fehlen in der Lichtung (250, 212, 80, 40) | Platz frei gelassen | Sprites geschlossen und offen |
 | Zauberwald | Raum hat 48 statt 32 Farben | Folge des Nachfärbens | Palette angleichen |
-| Dachboden | Zapp-O-Mat wirkt, als schwebe er (Sebastian, 13. November 2026) | – | Füße oder Standfläche und Schatten auf den Boden |
+| Dachboden, `w0_bg_dachboden_v03.png` | Zapp-O-Mat wirkt, als schwebe er (Sebastian, 13. November 2026), obwohl am 12. November ein Schatten unter den Fernseher gesetzt wurde | Skript (Schatten), Sprite `grafik/props/zapp_o_mat.png` mit sieben Zuständen | Füße oder Standfläche und Schatten auf den Boden |
+| Dachboden | Zapp-O-Mat und Dosenöffner farblich an den Raum angeglichen (Sebastian, 12. November 2026: stachen heraus) | Skript | Farben prüfen; Dosenöffner soll nicht herausstechen |
+| Dachboden | Aussparung im Laufbereich, wo Pixel schläft (218 bis 302 × 262 bis 284) | Layout | Mit fertigem Schlaf-Sprite prüfen |
+| Wohnzimmer, `w0_bg_wohnzimmer_v03.png` | Staubrand der Fernbedienung als heller Fleck auf den Couchtisch gemalt | Von Hand per Skript | Fleck sauber zeichnen |
+| Treppenhaus, `w0_bg_treppenhaus_v02.png` | Laufweg nur auf den Stufenkanten, weil Max über der Treppe schwebte (Sebastian, 12. November 2026) | Layout | Auf jeder Stufe prüfen, ob die Füße aufsetzen |
+| Treppenhaus | Thunfischdose liegt im offenen Karton unter der Treppe (vorher in Opas Mantel, war zu auffällig) | Sprite im Karton | Dose soll halb verdeckt und unauffällig sein |
+| Prolog, Figuren | Opa: Schuhe ergänzt, weil die Füße im Boden einzusinken schienen (Sebastian, 12. November 2026); hellgraue Kanten am Saum umgefärbt | Skript am Sprite | Fußpunkt und Schuhe in allen Räumen prüfen |
+| Prolog, Figuren | Max: Augen der Seitenansicht mit Weiß statt dunklem Balken; Standbild ohne Bodenstrich | Skript am Sprite | Augen in allen Bildern prüfen |
+| Prolog, Gegenstände | Drahtkleiderbügel gezeichnet (fehlte ganz) | Skript | Form und Farbe prüfen |
+| Dorfplatz, `w1_bg_dorfplatz_v03.png` | Dritte Fassung: Bohnenranke entfernt (kommt in Rätsel 8 als Sprite), Steckbrief ohne Schrift, Läden an den Rand vor eine Mauer, Weg nach Hoggelwarz zwischen den Läden | Gemini-Chat, drei Runden | Weg nach Hoggelwarz auf Durchgängigkeit prüfen (Sebastian: „den Weg nochmal optimieren“) |
+| Dorfplatz | Läden hinten nur halb so groß wie Max; ausgeglichen über starke Tiefe 0.4 | Layout | Größenverhältnis Max zu Ladentüren prüfen |
+| Dorfplatz | Eimer, Bestellzettel und Steckbrief als eigene Sprites ausgeschnitten | Skript | Freistellen und übermalte Stellen prüfen |
+| Taverne, `w1_bg_taverne_v01.png` | Ziegenfell-Vorleger als eigenes Sprite ausgeschnitten | Skript | Übermalte Stelle prüfen |
+| Taverne | Laute mit Münzbecher und Drachen-Steckbrief nachträglich eingesetzt (aus einem eigenen Gegenstandsbogen) | Skript | Größe, Licht und Schatten an den Raum angleichen |
+| Taverne | Schwert „Gerhard“ und Vielsaft-Limo sind Bonus-Gags | – | Prüfen, ob beide im Bild sichtbar sind |
+| Zauberstab-Laden, `w1_bg_zauberstabladen_v01.png` | Raum deutlich dunkler als die anderen, als „gewollt dunkel“ markiert | – | Helligkeit gegen die anderen Räume prüfen (`tools/stimmigkeit.py`) |
+| Zauberstab-Laden | Lila Kissen erhalten (wäre beim Umrechnen grau geworden); Kochlöffel, Zollstock, Zahnstocher als eigene Sprites | Skript | Kissenfarbe, Sprites freistellen |
+| Schmiede, `w1_bg_schmiede_v01.png` | Krug fehlte im Bild, aus dem Gegenstandsbogen unter die Pfannen gesetzt | Skript | Größe, Licht und Schatten an den Raum angleichen |
+
+### Animationen (komplett prüfen und überarbeiten)
+
+Sebastian will alle Animationen im Aseprite-Durchgang vollständig prüfen und überarbeiten lassen (13. November 2026). Bisher entstehen sie per Code aus Standbildern (`tools/figur.py`) oder fehlen:
+
+| Figur oder Objekt | Stand | Überarbeiten |
+| --- | --- | --- |
+| Max | Stehen: Atmen per Rig (nur Oberkörper und Kopf); Sprechen: Mund auf und Kopfnicken; Gehen: per Code aus dem Standbild (Ober-, Unterschenkel, Fuß, hinteres Bein als Kopie) | Gang flüssiger, Mundbewegung, Wenden |
+| Opa | Ein Standbild für alle Bewegungen, Atmen und Reden per Rig, Gehen per Code | Eigene Posen, Gang |
+| Pixel | Sitzen, Schlafpose, Gehen auf vier Beinen per Code (Stand- und Schwungphase); Aufstehen nur als Überblendung, weil eine Aufsteh-Animation fehlt (Sebastian, 12. November 2026) | Aufstehen und Hinlegen als echte Animation, Gang prüfen |
+| Lippen | Mund bewegt sich nur so lange, wie der Satz geschätzt dauert; mit Aufnahmen nach deren Länge | Mit Vertonung abgleichen |
+| Zapp-O-Mat | Sieben Zustände als Bildreihe | Übergänge prüfen |
+| Übrige Figuren (Welt 1 bis 4) | Noch Platzhalter | Animationen von Grund auf |
 
 ## Automatisierung
 
