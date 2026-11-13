@@ -272,9 +272,57 @@ Character concept sheet in exactly the same style as the attached character shee
 Character concept sheet in exactly the same style as the attached character sheet of the boy Max: same line weight, same flat cel shading, same light from upper left, plain light grey background, no text, no ground shadow. Exactly one character, full body, strict side view facing right, standing on a flat baseline, legs clearly visible. Draw only this new character: do not copy any heads, legs, shoes or other parts of the boy Max from the attached sheet into the image. Small old green goblin miner, about 50 percent of the boy Max's height, slightly hunched. Grey beard, pointy ears. Faded green overalls, a knitted cap, small brown boots. Sitting on an upturned bucket, knitting a long scarf, a blank tiny protest sign stuck into the bucket beside him. Facing right, relaxed look.
 ```
 
+## 30. Zeldina
+
+*Slice*
+
+```text
+Character concept sheet in exactly the same style as the attached character sheet of the boy Max: same line weight, same flat cel shading, same light from upper left, plain light grey background, no text, no ground shadow. Exactly one character, full body, strict side view facing right, standing on a flat baseline, legs clearly visible. Draw only this new character: do not copy any heads, legs, shoes or other parts of the boy Max from the attached sheet into the image. Young athletic princess, about 104 percent of the boy Max's height. Short brown hair, freckles, a small golden crown tied on with string. Rust-orange travel cape over a brown leather vest and a cream shirt, dark brown trousers, sturdy boots. A cardboard moving box under her left arm. Standing upright, facing right, determined grin. No long blond hair, no pink dress, no green tunic, no pointed ears.
+```
+
+## 31. Maklerin
+
+*Slice*
+
+```text
+Character concept sheet in exactly the same style as the attached character sheet of the boy Max: same line weight, same flat cel shading, same light from upper left, plain light grey background, no text, no ground shadow. Exactly one character, full body, strict side view facing right, standing on a flat baseline, legs clearly visible. Draw only this new character: do not copy any heads, legs, shoes or other parts of the boy Max from the attached sheet into the image. Sharp real estate agent, about 106 percent of the boy Max's height, slim. Tight grey hair bun, thin glasses on a chain, a pen behind her ear. Pointy black business suit with sharp shoulders, white blouse, black high heels. A clipboard held in her left hand. Standing upright, facing right, fake toothy smile.
+```
+
+## 32. Lord Moderwort
+
+*Slice*
+
+```text
+Character concept sheet in exactly the same style as the attached character sheet of the boy Max: same line weight, same flat cel shading, same light from upper left, plain light grey background, no text, no ground shadow. Exactly one character, full body, strict side view facing right, standing on a flat baseline, legs clearly visible. Draw only this new character: do not copy any heads, legs, shoes or other parts of the boy Max from the attached sheet into the image. Gloomy wannabe dark lord, about 106 percent of the boy Max's height, thin. Pale green skin, a greasy black ponytail, almost no nose, just two tiny red irritated nostrils, teary eyes. A dark violet robe far too large for him, sleeves down to his fingers. A white handkerchief in his left hand, a crooked black wand in his right. Standing upright, facing right. No bald head, no black robe.
+```
+
+## 33. Smaugi
+
+*Slice, FIGUR-GROSS*
+
+```text
+Character concept sheet in exactly the same style as the attached character sheet of the boy Max: same line weight, same flat cel shading, same light from upper left, plain light grey background, no text, no ground shadow. Exactly one character, full body, strict side view facing right, standing on a flat baseline, legs clearly visible. Draw only this new character: do not copy any heads, legs, shoes or other parts of the boy Max from the attached sheet into the image. Plump friendly red dragon, about 180 percent of the boy Max's height when sitting, round belly, short stubby wings, small horns. Tired droopy eyes. A cleaning headscarf with white dots tied on his head, a feather duster in his right claw. Sitting upright on his haunches, tail curled around his feet, facing right, sighing. No gold armor scales, no fire.
+```
+
+## 34. Übungsbesen
+
+*Slice, Klassenzimmer*
+
+```text
+Character concept sheet in exactly the same style as the attached character sheet of the boy Max: same line weight, same flat cel shading, same light from upper left, plain light grey background, no text, no ground shadow. Exactly one character, full body, strict side view facing right, standing on a flat baseline, legs clearly visible. Draw only this new character: do not copy any heads, legs, shoes or other parts of the boy Max from the attached sheet into the image. A small enchanted practice broom, about 39 percent of the boy Max's height, short birch handle, pale straw bristles tied with a red cord, two thin stick arms and a small wide-eyed face on the binding. Standing upright on its bristles, facing right, twitching eagerly.
+```
+
+## 35. Zauberbesen
+
+*Slice*
+
+```text
+Character concept sheet in exactly the same style as the attached character sheet of the boy Max: same line weight, same flat cel shading, same light from upper left, plain light grey background, no text, no ground shadow. Exactly one character, full body, strict side view facing right, standing on a flat baseline, legs clearly visible. Draw only this new character: do not copy any heads, legs, shoes or other parts of the boy Max from the attached sheet into the image. An enchanted straw broom, about 53 percent of the boy Max's height, birch handle tied to the bristles with brown cord, two thin stick arms and an angry face on the binding. Standing upright on its bristles, facing right.
+```
+
 # Gegenstände
 
-## 30. Dorf und Taverne (3×3)
+## 36. Dorf und Taverne (3×3)
 
 *Münze, Fondue, Vorleger, Bestellzettel, Eimer, Steckbrief*
 
@@ -282,7 +330,7 @@ Character concept sheet in exactly the same style as the attached character shee
 Pixel art item sheet, grid exactly as given in the motif, items in reading order left to right and top to bottom, each item centered in its own cell at the same scale, about 48x48 pixels each, slight front-side view, no overlap between cells, dark colored outline (not pure black), light from upper left, plain transparent background, no text, letters or numbers on any item. 3x3 grid, same scale, left to right: a single shiny gold coin; a small clay bowl of melted yellow cheese fondue; a fluffy white goat skin rug, folded; a paper order slip with blank lines; an empty wooden bucket with a rope handle; the same bucket full of water; a plain wooden cooking spoon without cheese; a rolled-up wanted poster showing a blank face; a small folded paper note with a pencil smudge.
 ```
 
-## 31. Zaubertrank (2×4)
+## 37. Zaubertrank (2×4)
 
 *Krug und Leuchtpilz liegen schon in den Räumen, der Rest kommt ab R5*
 
@@ -290,7 +338,7 @@ Pixel art item sheet, grid exactly as given in the motif, items in reading order
 Pixel art item sheet, grid exactly as given in the motif, items in reading order left to right and top to bottom, each item centered in its own cell at the same scale, about 48x48 pixels each, slight front-side view, no overlap between cells, dark colored outline (not pure black), light from upper left, plain transparent background, no text, letters or numbers on any item. 2x4 grid, same scale, left to right, last cell empty: an empty clay jug with a blank name tag on a string; the same jug full of white goat milk; a small glowing blue mushroom; a crumpled paper note with short blank rhyme lines; a round bottle of glowing yellow potion with a cork; a magic bean with a tiny sparkle; the red-and-white striped sock bulging with pink pollen.
 ```
 
-## 32. Wald und Turm (2×4)
+## 38. Wald und Turm (2×4)
 
 *Ketchup liegt schon im Zauberwald, der Rest kommt ab R10*
 
