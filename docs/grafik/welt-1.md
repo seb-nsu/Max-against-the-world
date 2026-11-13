@@ -52,12 +52,11 @@ dim torch-lit mine palette of earthy browns and mossy greens with small warm gol
 | Art | Offen | Hinweis |
 | --- | --- | --- |
 | Szenen | Luftschloss (breit, zwei Hälften), Turmkeller, Abstellkammer 1, Smaugis Abstellkammern (zwei Fassungen), Thronsaal | Erst nach dem Slice; Skizze mitgeben |
-| Figuren | Streik-Goblin 2 und 3 (Slice); Zeldina, Maklerin, Lord Moderwort, Smaugi, Max als Pilz, Zauberbesen, Übungsbesen (nach dem Slice) | Max' Figurenblatt anhängen, bei Max als Pilz auch das Max-Blatt als Vorlage |
-| Sammelbilder | Bohnenranke (1×1), Niesrosen (1×2), Smaugis Kram (3×3), Deko Welt 1 (3×3) | Alle erst nach dem Slice (Niesrosen Rätsel 7, Bohnenranke Rätsel 8) |
+| Figuren | Zeldina, Maklerin, Lord Moderwort, Smaugi, Max als Pilz, Zauberbesen, Übungsbesen (nach dem Slice) | Max' Figurenblatt anhängen, bei Max als Pilz auch das Max-Blatt als Vorlage |
 | Nahansichten | Alwins Hinweiszettel, Luftschloss-Kritzelei, Moderworts Zeugnis | Märchen-Satzung ist fertig |
 | Animationen | Alle aus der Tabelle unten | Kommen im Aseprite-Durchgang (`offene-punkte.md`, Animationen) |
 
-Fertig und nicht mehr zu erzeugen: die neun Slice-Räume, 18 Figuren mit Streik-Goblin 1, alle vier Gegenstands-Sammelbilder (Dorf und Taverne, Zaubertrank, Flaschen, Wald und Turm) und die Nahansicht Märchen-Satzung.
+Fertig und nicht mehr zu erzeugen: die neun Slice-Räume, 20 Figuren mit den drei Streik-Goblins, alle Sammelbilder (Dorf und Taverne, Zaubertrank, Flaschen, Wald und Turm, Bohnenranke, Niesrosen, Smaugis Kram, Deko Welt 1) und die Nahansicht Märchen-Satzung. Gemini malt bei „transparent“ ein Schachbrett ins Bild; das entfernt ein Skript vor dem Schneiden (Rand-Füllung über graue Pixel).
 
 Vorne den Baustein aus `00-stil-und-werkzeuge.md`, dann das Motiv, hinten den Farb-Baustein dieser Welt (für den Dunklen Turm den düsteren, für das Goblin-Bergwerk den eigenen).
 

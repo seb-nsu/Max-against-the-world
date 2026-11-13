@@ -28,7 +28,6 @@ height = 360
 [node name="WalkableAreas" type="Node2D" parent="." unique_id=1379926904]
 
 [node name="Boden" parent="WalkableAreas" unique_id=1597242076 instance=ExtResource("2_plfwv")]
-interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(20, 215, 120, 215, 200, 242, 395, 242, 420, 236, 865, 236, 870, 240, 935, 240, 940, 236, 1085, 236, 1095, 228, 1150, 228, 1170, 240, 1260, 250, 1279, 300, 1279, 359, 0, 359, 0, 300)])
 
 [node name="Props" type="Node2D" parent="." unique_id=1988280074]
 
@@ -54,18 +53,18 @@ walk_to_point = Vector2(2.5, 57.5)
 interaction_polygon = PackedVector2Array(-92.5, -32.5, 92.5, -32.5, 92.5, 32.5, -92.5, 32.5)
 
 [node name="Streikschilder" parent="Hotspots" unique_id=284668402 instance=ExtResource("6_yjmiq")]
-position = Vector2(773, 167.5)
+position = Vector2(773, 150)
 description = "UI_OBJ_STREIKSCHILDER"
-baseline = 62
-walk_to_point = Vector2(-3, 94.5)
-interaction_polygon = PackedVector2Array(-95, -62.5, 95, -62.5, 95, 62.5, -95, 62.5)
+baseline = 45
+walk_to_point = Vector2(-3, 112)
+interaction_polygon = PackedVector2Array(-95, -45, 95, -45, 95, 45, -95, 45)
 
 [node name="Streikposten" parent="Hotspots" unique_id=1207669041 instance=ExtResource("7_qdpn0")]
-position = Vector2(910, 264)
+position = Vector2(755, 233.5)
 description = "UI_OBJ_STREIKPOSTEN"
-baseline = 8
-walk_to_point = Vector2(-270, 16)
-interaction_polygon = PackedVector2Array(-250, -8, 250, -8, 250, 8, -250, 8)
+baseline = 38
+walk_to_point = Vector2(-115, 46.5)
+interaction_polygon = PackedVector2Array(-95, -38.5, 95, -38.5, 95, 38.5, -95, 38.5)
 
 [node name="Kaffeemaschine" parent="Hotspots" unique_id=441604541 instance=ExtResource("8_m4nxd")]
 position = Vector2(901, 202.5)

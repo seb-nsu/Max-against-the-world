@@ -65,6 +65,10 @@ dorfplatz:
     lieferung: [1040, 290]        # Rotkäppchen hält mit dem Karren
   figuren:
     toadi: [720, 300]
+  # Deko und Rätsel-Sprites über dem Hintergrund (13. November 2026): Kokosnüsse im Stall, Bohnenranke nach R8
+  vordergrund:
+    kokosnuesse: {bild: res://grafik/props/kokosnuesse.png, pos: [345, 224]}
+    bohnenranke: {bild: res://grafik/props/bohnenranke.png, pos: [785, 258], nach: R8}
   alias:
     luftschloss_am_himmel: luftschloss
     stall_mit_kokosnuessen: stall
@@ -156,6 +160,8 @@ schmiede:
     schmiede_ziege: [470, 300]
   blick:
     schmied: links
+  vordergrund:
+    hufeisen: {bild: res://grafik/props/hufeisen_zange.png, pos: [262, 194]}
   alias:
     krug_beim_kochgeschirr: krug
     ziege: schmiede_ziege
@@ -214,6 +220,11 @@ klassenzimmer:
     toadi: [42, 238]
   blick:
     alwin: links
+  vordergrund:
+    socke: {bild: res://grafik/props/socke_loecher.png, pos: [402, 202]}
+  # Lebendiger Hintergrund (P16): ab und zu fliegt ein Schüler rückwärts am linken Fenster vorbei
+  ambiente:
+    schueler: {bild: res://grafik/props/schueler_besen.png, bereich: [182, 40, 42, 70]}
   alias:
     zweite_socke: durchgeloecherte_zweite_socke
   hotspots:
@@ -319,6 +330,10 @@ zauberwald:
     von_bergwerk: [994, 245]
   figuren:
     rotkaeppchen: [914, 272]
+  vordergrund:
+    glasschuh: {bild: res://grafik/props/glasschuh.png, pos: [770, 214]}
+    niesrosen_zu: {bild: res://grafik/props/niesrosen_zu.png, pos: [714, 256], vor: R7}
+    niesrosen_offen: {bild: res://grafik/props/niesrosen_offen.png, pos: [714, 256], nach: R7}
   alias:
     glasschuh: kuerbisturm_und_glasschuh
     ketchup_am_karren: ketchup
@@ -356,14 +371,20 @@ bergwerk:
     grimmzahn: [960, 290]
     goblin_1: [880, 285]
     goblin_2: [1040, 292]
+  # Drei stumme Streik-Goblins an der Streikposten-Linie (Größe wie Figuren dort, Skala 0.72), Kaffeemaschine auf der Kiste
+  vordergrund:
+    streik_goblin_1: {bild: res://grafik/props/streik_goblin_1.png, pos: [700, 258], skala: 0.72}
+    streik_goblin_3: {bild: res://grafik/props/streik_goblin_3.png, pos: [765, 258], skala: 0.72}
+    streik_goblin_2: {bild: res://grafik/props/streik_goblin_2.png, pos: [822, 258], skala: 0.72}
+    kaffeemaschine: {bild: res://grafik/props/kaffeemaschine.png, pos: [900, 192]}
   alias:
     lore: loren
     goblin_arbeiter_1: goblin_1
     goblin_arbeiter_2: goblin_2
   hotspots:
     loren: {rect: [205, 172, 185, 65], gehe: [300, 262], name: Loren}
-    streikschilder: {rect: [678, 105, 190, 125], gehe: [770, 262], name: Streikschilder}
-    streikposten: {rect: [660, 256, 500, 16], gehe: [640, 280], name: Streikposten}
+    streikschilder: {rect: [678, 105, 190, 90], gehe: [770, 262], name: Streikschilder}
+    streikposten: {rect: [660, 195, 190, 77], gehe: [640, 280], name: Streikposten}   # Linie und die drei Streik-Goblins
     kaffeemaschine: {rect: [870, 170, 62, 65], gehe: [900, 262], name: Kaffeemaschine}
     fackeln: {rect: [395, 90, 470, 22], gehe: [630, 262], name: Fackeln}
   props:

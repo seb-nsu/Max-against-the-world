@@ -179,6 +179,23 @@
      ]
     }
    },
+   "vordergrund": {
+    "kokosnuesse": {
+     "bild": "res://grafik/props/kokosnuesse.png",
+     "pos": [
+      345,
+      224
+     ]
+    },
+    "bohnenranke": {
+     "bild": "res://grafik/props/bohnenranke.png",
+     "pos": [
+      785,
+      258
+     ],
+     "nach": "R8"
+    }
+   },
    "figuren": [
     {
      "id": "toadi",
@@ -1848,6 +1865,15 @@
     ]
    },
    "tiefe": 0.8,
+   "vordergrund": {
+    "hufeisen": {
+     "bild": "res://grafik/props/hufeisen_zange.png",
+     "pos": [
+      262,
+      194
+     ]
+    }
+   },
    "figuren": [
     {
      "id": "schmied",
@@ -2666,6 +2692,26 @@
     ]
    },
    "tiefe": 0.7,
+   "ambiente": {
+    "schueler": {
+     "bild": "res://grafik/props/schueler_besen.png",
+     "bereich": [
+      182,
+      40,
+      42,
+      70
+     ]
+    }
+   },
+   "vordergrund": {
+    "socke": {
+     "bild": "res://grafik/props/socke_loecher.png",
+     "pos": [
+      402,
+      202
+     ]
+    }
+   },
    "figuren": [
     {
      "id": "alwin",
@@ -4196,6 +4242,31 @@
     ]
    },
    "tiefe": 0.5,
+   "vordergrund": {
+    "glasschuh": {
+     "bild": "res://grafik/props/glasschuh.png",
+     "pos": [
+      770,
+      214
+     ]
+    },
+    "niesrosen_zu": {
+     "bild": "res://grafik/props/niesrosen_zu.png",
+     "pos": [
+      714,
+      256
+     ],
+     "vor": "R7"
+    },
+    "niesrosen_offen": {
+     "bild": "res://grafik/props/niesrosen_offen.png",
+     "pos": [
+      714,
+      256
+     ],
+     "nach": "R7"
+    }
+   },
    "figuren": [
     {
      "id": "rotkaeppchen",
@@ -5095,6 +5166,39 @@
     ]
    },
    "tiefe": 0.6,
+   "vordergrund": {
+    "streik_goblin_1": {
+     "bild": "res://grafik/props/streik_goblin_1.png",
+     "pos": [
+      700,
+      258
+     ],
+     "skala": 0.72
+    },
+    "streik_goblin_3": {
+     "bild": "res://grafik/props/streik_goblin_3.png",
+     "pos": [
+      765,
+      258
+     ],
+     "skala": 0.72
+    },
+    "streik_goblin_2": {
+     "bild": "res://grafik/props/streik_goblin_2.png",
+     "pos": [
+      822,
+      258
+     ],
+     "skala": 0.72
+    },
+    "kaffeemaschine": {
+     "bild": "res://grafik/props/kaffeemaschine.png",
+     "pos": [
+      900,
+      192
+     ]
+    }
+   },
    "figuren": [
     {
      "id": "grimmzahn",
@@ -5171,7 +5275,7 @@
       678,
       105,
       190,
-      125
+      90
      ],
      "gehe": [
       770,
@@ -5201,9 +5305,9 @@
      "name_key": "UI_OBJ_STREIKPOSTEN",
      "rect": [
       660,
-      256,
-      500,
-      16
+      195,
+      190,
+      77
      ],
      "gehe": [
       640,
@@ -6311,7 +6415,7 @@
       268,
       308
      ],
-     "textur": "res://grafik/platzhalter/prop_kronleuchter.png",
+     "textur": "res://grafik/props/kronleuchter.png",
      "gegenstand": "kronleuchter",
      "ansehen": [
       {
@@ -6346,7 +6450,7 @@
       472,
       312
      ],
-     "textur": "res://grafik/platzhalter/prop_schwerter_buendel.png",
+     "textur": "res://grafik/props/schwerter_buendel.png",
      "gegenstand": "schwerter_buendel",
      "ansehen": [
       {
@@ -6381,7 +6485,7 @@
       520,
       312
      ],
-     "textur": "res://grafik/platzhalter/prop_fackel_buendel.png",
+     "textur": "res://grafik/props/fackel_buendel.png",
      "gegenstand": "fackel_buendel",
      "ansehen": [
       {
@@ -8840,7 +8944,7 @@
    ],
    "reist_mit": false,
    "nahansicht": false,
-   "icon": "res://grafik/platzhalter/gegenstand_schwerter_buendel.png",
+   "icon": "res://grafik/gegenstaende/schwerter_buendel.png",
    "icons": {},
    "ansehen": [],
    "benutzen": [],
@@ -8855,7 +8959,7 @@
    ],
    "reist_mit": false,
    "nahansicht": false,
-   "icon": "res://grafik/platzhalter/gegenstand_fackel_buendel.png",
+   "icon": "res://grafik/gegenstaende/fackel_buendel.png",
    "icons": {},
    "ansehen": [],
    "benutzen": [],
@@ -8870,7 +8974,7 @@
    ],
    "reist_mit": false,
    "nahansicht": false,
-   "icon": "res://grafik/platzhalter/gegenstand_kronleuchter.png",
+   "icon": "res://grafik/gegenstaende/kronleuchter.png",
    "icons": {},
    "ansehen": [],
    "benutzen": [],

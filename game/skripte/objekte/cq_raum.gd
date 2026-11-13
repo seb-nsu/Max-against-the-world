@@ -71,6 +71,8 @@ func _process(_delta: float) -> void:
 	# Auch Figuren, die ohne Laufen versetzt werden (Marker, Szenen), bekommen ihre Größe
 	if tiefe_aktiv():
 		tiefe_anwenden()
+	if not _bedingte_teile.is_empty():
+		_bedingte_anpassen()
 
 
 func _on_room_entered() -> void:
@@ -150,7 +152,8 @@ func blicke_anpassen() -> void:
 
 ## Ausgeschnittene Teile des Hintergrunds, hinter denen Figuren stehen können (Tresen, Baum):
 ## Layout „vordergrund: {name: {bild, rect: [x, y, w, h], baseline: y}}“. Wer weiter oben steht als
-## die Baseline, wird verdeckt. Nicht klickbar; die Hotspots darunter bleiben.
+## die Baseline, wird verdeckt. Nicht klickbar; die Hotspots darunter bleiben. Stumme Deko-Figuren
+## und kleine Deko-Sprites: „{bild, pos: [x, y], skala, blick}“ mit dem Fußpunkt als pos. Dazu „nach: R8“ oder „vor: R7“.
 func vordergrund_setzen() -> void:
 	var teile: Dictionary = bauplan().get("vordergrund", {})
 	if teile.is_empty() or Engine.is_editor_hint():
@@ -160,14 +163,37 @@ func vordergrund_setzen() -> void:
 		if get_node("Props").has_node(knoten):
 			continue
 		var t: Dictionary = teile[teil_name]
+		if not ResourceLoader.exists(t.bild):
+			continue
 		var sp := Sprite2D.new()
 		sp.name = knoten
 		sp.texture = load(t.bild)
 		sp.centered = false
 		sp.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
-		sp.position = Vector2(t.rect[0], t.baseline)
-		sp.offset = Vector2(0, float(t.rect[1]) - float(t.baseline))
+		if t.has("pos"):
+			# Deko-Figur: Fußpunkt unten in der Mitte, Größe wie Figuren an dieser Stelle (skala)
+			var s: float = t.get("skala", 1.0)
+			sp.scale = Vector2(s, s)
+			sp.position = Vector2(t.pos[0] - sp.texture.get_width() * s / 2.0, t.pos[1])
+			sp.offset = Vector2(0, -sp.texture.get_height())
+			sp.flip_h = t.get("blick", "rechts") == "links"
+		else:
+			sp.position = Vector2(t.rect[0], t.baseline)
+			sp.offset = Vector2(0, float(t.rect[1]) - float(t.baseline))
 		get_node("Props").add_child(sp)
+		if t.has("nach") or t.has("vor"):
+			_bedingte_teile.append([sp, t.get("nach", ""), t.get("vor", "")])
+	_bedingte_anpassen()
+
+
+## Teile, die erst nach (oder nur vor) einem Rätsel zu sehen sind („nach: R8“, „vor: R7“).
+var _bedingte_teile: Array = []
+
+
+func _bedingte_anpassen() -> void:
+	for b in _bedingte_teile:
+		if is_instance_valid(b[0]):
+			b[0].visible = (b[1].is_empty() or Zustand.geloest(b[1])) and (b[2].is_empty() or not Zustand.geloest(b[2]))
 
 
 ## Lebendiger Hintergrund (P16): Vögel, Windstöße usw., wenn der Bauplan „ambiente“ hat.

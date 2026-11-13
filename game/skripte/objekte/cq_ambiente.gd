@@ -51,7 +51,7 @@ func _process(delta: float) -> void:
 	for t in _teile:
 		t.zeit += delta
 		t.pos += t.v * delta
-	_teile = _teile.filter(func(t): return sicht.has_point(t.pos) or t.zeit < 1.0)
+	_teile = _teile.filter(func(t): return (t.pos.x + 40.0 > t.feld.position.x) if t.art == "flieger" 			else (sicht.has_point(t.pos) or t.zeit < 1.0))
 	queue_redraw()
 
 
@@ -71,6 +71,7 @@ func ausloesen(art: String) -> void:
 	match art:
 		"voegel": _voegel()
 		"blaetter": _blaetter()
+		"schueler": _flieger(art)
 		_: push_warning("Ambiente: unbekannter Baustein " + art)
 
 
@@ -107,8 +108,33 @@ func _blaetter() -> void:
 		})
 
 
+## Ein Bild fliegt durch einen begrenzten Ausschnitt, etwa ein Schüler auf dem Besen hinter dem
+## Fenster (Klassenzimmer, Witz W1_HOGG_MAX_0165): „schueler: {bild, bereich: [x, y, w, h]}“.
+## Außerhalb des Bereichs wird nichts gezeichnet, so wirkt es wie hinter der Scheibe.
+func _flieger(art: String) -> void:
+	var cfg: Dictionary = bausteine.get(art, {})
+	var tex: Texture2D = load(cfg.get("bild", "")) if ResourceLoader.exists(cfg.get("bild", "")) else null
+	var b: Array = cfg.get("bereich", [])
+	if tex == null or b.size() != 4:
+		return
+	var feld := Rect2(b[0], b[1], b[2], b[3])
+	# Der Schüler fliegt rückwärts: Blick nach rechts, Flug nach links
+	var y := _rng.randf_range(feld.position.y, feld.end.y - tex.get_height())
+	_teile.append({
+		"art": "flieger", "tex": tex, "feld": feld, "zeit": 0.0, "phase": _rng.randf() * TAU,
+		"pos": Vector2(feld.end.x, y), "v": Vector2(-_rng.randf_range(28.0, 40.0), 0.0),
+	})
+
+
 func _draw() -> void:
 	for t in _teile:
+		if t.art == "flieger":
+			var tex: Texture2D = t.tex
+			var p := Vector2(t.pos.x, t.pos.y + sin(t.zeit * 4.0 + t.phase) * 2.0).round()
+			var ziel := Rect2(p, tex.get_size()).intersection(t.feld)
+			if ziel.size.x > 0 and ziel.size.y > 0:
+				draw_texture_rect_region(tex, ziel, Rect2(ziel.position - p, ziel.size), Color(1, 1, 1, 0.85))
+			continue
 		if t.art == "vogel":
 			var p := Vector2(t.pos.x, t.pos.y + sin(t.zeit * 2.0 + t.phase) * 2.0).round()
 			var form: Array = VOGEL_OBEN if int((t.zeit * 6.0) + t.phase) % 2 == 0 else VOGEL_UNTEN
