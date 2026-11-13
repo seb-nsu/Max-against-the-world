@@ -321,7 +321,7 @@ Pixel art item sheet, grid exactly as given in the motif, items in reading order
 ## Bohnenranke (1×1)
 
 ```text
-Pixel art item sheet, grid exactly as given in the motif, items in reading order left to right and top to bottom, each item centered in its own cell at the same scale, about 48x48 pixels each, slight front-side view, no overlap between cells, dark colored outline (not pure black), light from upper left, plain transparent background, no text, letters or numbers on any item. Single world sprite, about 128x360, not an inventory icon: a giant green beanstalk growing out of a small patch of dark soil, twisting upward with broad heart-shaped leaves and curly tendrils, thick at the bottom, leaving the frame at the top edge, plain light grey background. Same green as the beanstalk top in the Luftschloss scene.
+Pixel art item sheet, grid exactly as given in the motif, items in reading order left to right and top to bottom, each item centered in its own cell at the same scale, about 48x48 pixels each, slight front-side view, no overlap between cells, dark colored outline (not pure black), light from upper left, plain transparent background, no text, letters or numbers on any item. Single world sprite, about 128x360, not an inventory icon: a giant green beanstalk growing out of a small patch of dark soil, twisting upward with broad heart-shaped leaves and curly tendrils, thick at the bottom, leaving the frame at the top edge. Same green as the beanstalk top in the Luftschloss scene.
 ```
 
 ## Niesrosen (1×2)
