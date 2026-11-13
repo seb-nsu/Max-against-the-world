@@ -1809,8 +1809,10 @@ W1_TAV_GOL_1210_2,I love it. I've lost. Finally.
 W1_TAV_GOL_1220,"It's gone. I feel … light. Here, my last gold coin. I don't need anything any more. Just sleep. For years."
 W1_TAV_GOL_1570,"Zzzz. My preciousss … no, away with it … zzz."
 W1_TAV_GOL_1650,"Then the ring is still watching. It has no eye, but it watches. Believe me."
+W1_TAV_HUH_1426,Bawk!
 W1_TAV_HUH_1440,Bwaaak.
 W1_TAV_HUH_1460,Bok bok. Bwaak.
+W1_TAV_HUH_1600,BAAAWK!
 W1_TAV_HUM_0010,"Welcome to the Pony Express! Sit down, have a drink, make yourself at home. Just don't touch Gerald."
 W1_TAV_HUM_0030,"The sword above the fireplace. The shiny one. He doesn't like strangers, and he doesn't like most acquaintances either."
 W1_TAV_HUM_0400,"A cat! Hello, little one. Minka has a friend? Minka usually only has enemies."
@@ -1892,13 +1894,15 @@ W1_TAV_MAX_1290,Cheese fondue to go. I didn't even know that was a thing.
 W1_TAV_MAX_1310,No. We're definitely going to need that.
 W1_TAV_MAX_1330,On TV you always end up needing everything. Especially the stuff you already ate.
 W1_TAV_MAX_1410,"I'll take that. Humbert won't notice, he's polishing."
-W1_TAV_MAX_1430,An egg. The chicken's protesting quietly. So am I.
+W1_TAV_MAX_1425,I reach for the egg and the chicken pecks me. She sits on it like it's her savings account.
+W1_TAV_MAX_1430,"An egg, still warm. Berta's squawking at me from the rafter. I earned that."
 W1_TAV_MAX_1480,Tuna in cheese. Even I have limits somewhere.
 W1_TAV_MAX_1500,"A bucket full of cheese would be tempting. But Humbert has a sword collection, and I don't want to get to know any of them better."
 W1_TAV_MAX_1510,Humbert's watching. I'd rather wait until I get my own little bowl.
 W1_TAV_MAX_1520,"Gerald stays where he is. I like my hands, both of them."
 W1_TAV_MAX_1540,With Gollo's ring in the pot now? I'd rather not risk it.
 W1_TAV_MAX_1560,I strummed the strings once. The chicken turned its back.
+W1_TAV_MAX_1580,For Berta. A song so off-key the lute is embarrassed.
 W1_TAV_MAX_1640,"I can look away too, if that helps. I'm pretty good at that."
 W1_TAV_MIN_0910,Hsss!
 W1_TAV_MIN_0940,Meow?
@@ -1906,6 +1910,7 @@ W1_TAV_MIN_0960,Mrrr.
 W1_TAV_MIN_0980,Meow.
 W1_TAV_NAR_0040,Pixel leaps up onto the roof beam in one bound. His portrait in the top left starts to flash.
 W1_TAV_NAR_1240,"Humbert comes up from the cellar, dusty and without a bottle."
+W1_TAV_NAR_1590,Max strums. The lute howls. Berta flaps up onto the rafter in outrage.
 W1_TAV_PIX_0050,"Max. Up here. Click on me, and I shall show you the world from above, the way it was meant to be seen."
 W1_TAV_PIX_0050_2,I only bite sometimes. And mostly people who deserve it.
 W1_TAV_PIX_0080,"At last, someone with an overview at the helm. From up here you can see everything."
@@ -1943,11 +1948,15 @@ W1_TAV_PIX_1300_2,"I lured the cat away, at great risk to my heart, and that giv
 W1_TAV_PIX_1320,You do not even know what for yet.
 W1_TAV_PIX_1420,You are taking a rug with you. I do not want to know why.
 W1_TAV_PIX_1420_2,"That is to say, I already suspect, and I hate everything I suspect."
+W1_TAV_PIX_1427,"Why not ask her what she wants first? I translate, for a fee."
+W1_TAV_PIX_1427_2,"The fee is tuna. You know that, and Berta suspects it."
 W1_TAV_PIX_1450,An egg. Soft-boiled. For breakfast. That is going on my list.
 W1_TAV_PIX_1450_2,"Not this one, mind you, but one of my own. I do not share my eggs with cauldrons."
 W1_TAV_PIX_1470,"Her name is Berta. She has been laying for as long as she can think, and she does not think much."
-W1_TAV_PIX_1470_2,"She says the egg smells of school, whatever that means. Chickens are not great explainers."
+W1_TAV_PIX_1470_2,"She only gets up for one thing: bad music. When the last bard played, she fled all the way up to the rafter."
 W1_TAV_PIX_1490,"There are no limits. But there is my tin, and it stays out of this."
+W1_TAV_PIX_1605,"That was dreadful, young man."
+W1_TAV_PIX_1605_2,"Berta thought so too, and normally Berta only has opinions about grain."
 W1_TAV_PIX_1610,"The cheese has been bubbling away for ten minutes. It wants to be eaten, I can hear that sort of thing."
 W1_TAV_PIX_1610_2,"It is a gift. A heavy gift, when you are not allowed to use it."
 W1_TAV_PIX_1620,"Humbert polishes, Gollo trembles, Minka stares, and you stand."

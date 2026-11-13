@@ -84,7 +84,7 @@ dachboden:
     opa: [400, 287]
   props:
     zapp_o_mat: {rect: [318, 118, 105, 112], gehe: [365, 243], item: null}
-    dosenoeffner: {rect: [234, 186, 18, 18], gehe: [252, 256]}   # hängt rechts an der Werkbank
+    dosenoeffner: {rect: [216, 166, 18, 18], gehe: [252, 256], schatten: true}   # liegt auf der Werkbank (vorher frei schwebend an der Seite)
     drahtkleiderbuegel: {rect: [600, 125, 27, 19], gehe: [600, 290]}
   hotspots:
     drehknopf: {rect: [400, 145, 18, 26], gehe: [395, 243], name: Drehknopf}

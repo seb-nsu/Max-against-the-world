@@ -49,7 +49,6 @@ height = 360
 [node name="WalkableAreas" type="Node2D" parent="." unique_id=1697259850]
 
 [node name="Boden" parent="WalkableAreas" unique_id=1447233398 instance=ExtResource("2_8cb7j")]
-interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(160, 357, 160, 290, 218, 284, 300, 284, 302, 262, 250, 262, 245, 252, 262, 238, 455, 238, 460, 255, 520, 258, 525, 280, 600, 285, 635, 290, 635, 357)])
 
 [node name="Props" type="Node2D" parent="." unique_id=1697276889]
 
@@ -68,11 +67,11 @@ walk_to_point = Vector2(-5.5, 69)
 interaction_polygon = PackedVector2Array(-52.5, -56, 52.5, -56, 52.5, 56, -52.5, 56)
 
 [node name="Dosenoeffner" parent="Props" unique_id=1001585250 instance=ExtResource("9_mcqit")]
-position = Vector2(243, 195)
+position = Vector2(225, 175)
 texture = ExtResource("8_mcqit")
 description = "UI_OBJ_DOSENOEFFNER"
 baseline = 9
-walk_to_point = Vector2(9, 61)
+walk_to_point = Vector2(27, 81)
 interaction_polygon = PackedVector2Array(-9, -9, 9, -9, 9, 9, -9, 9)
 
 [node name="Drahtkleiderbuegel" parent="Props" unique_id=505759806 instance=ExtResource("11_m8m18")]

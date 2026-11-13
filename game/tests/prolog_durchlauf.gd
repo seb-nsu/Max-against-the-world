@@ -630,6 +630,20 @@ func _welt_1_r5_bis_r13() -> void:
 
 	# --- Rätsel 6a: Ei, Krug, Rezept ---
 	await _gehe("TaverneVonAussen", "Taverne")
+	# Berta sitzt auf dem Ei: erst hacken, dann Pixel übersetzen lassen, dann die Laute
+	await _nehmen_ohne("Ei", "W1_TAV_MAX_1425")
+	_pruefe(_gesagt("W1_TAV_PIX_1427") and not _i().is_item_in_inventory("Ei"), "Berta hackt, Pixels Tipp (1425–1427)")
+	await _hotspot("LauteMitMuenzbecher").on_click()
+	_pruefe(_gesagt("W1_TAV_MAX_1560") and not Z.ist("W1_BERTA_WEG"), "Laute ohne Wissen: nur 1560")
+	_pruefe(S.figur_wechseln() and S.ist_pixel(), "Wechsel zu Pixel in der Taverne")
+	await _c().get_character("Huhn").on_click()
+	_pruefe(_gesagt("W1_TAV_PIX_1470") and Z.ist("W1_BERTA_MUSIK"), "Pixel übersetzt Berta (1460, 1470)")
+	_pruefe(S.figur_wechseln() and not S.ist_pixel(), "Wechsel zurück zu Max")
+	await _hotspot("LauteMitMuenzbecher").on_click()
+	_pruefe(_gesagt("W1_TAV_PIX_1605") and Z.ist("W1_BERTA_WEG"), "Laute vertreibt Berta (1580–1605)")
+	_pruefe(_c().get_character("Huhn").position.y < 100, "Berta sitzt auf dem Dachbalken")
+	await _rundreise("Berta auf dem Balken")
+	_pruefe(_c().get_character("Huhn").position.y < 100, "Berta nach Laden auf dem Balken")
 	await _nehmen("Ei", "W1_TAV_MAX_1430")
 	await _gehe("AusgangDorfplatz", "Dorfplatz")
 	await _gehe("SchmiedeVonAussen", "Schmiede")

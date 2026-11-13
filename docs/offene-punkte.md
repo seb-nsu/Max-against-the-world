@@ -43,6 +43,8 @@ Stand 11. November 2026. Kennungen: S = zurückgestellte Punkte aus Gutachten 4,
 
 ## Nacharbeiten an eingebauten Hintergründen (P15)
 
+**Entscheidung (Sebastian, 13. November 2026): Gegenstände und Deko einbinden im Aseprite-Durchgang.** Nehmbare Dinge und Deko-Sprites (Dosenöffner, Ei, Krug, Eimer, Socke, Hufeisen, Kokosnüsse, Glasschuh, Kaffeemaschine, Streik-Goblins usw.) wirken noch aufgeklebt und verraten, was man nehmen kann. In Aseprite nachmalen: Umriss in einer dunklen Raumfarbe statt #262b44, Licht von oben links wie im Hintergrund, ein, zwei Farben aus der Umgebung, Kontaktschatten. Ein leichtes Hervorheben nehmbarer Dinge ist erlaubt. Bis dahin gleicht `tools/angleichen.py` Farbe und Umriss grob an, und `CQRaum` legt einen weichen Schatten darunter (`schatten:` im Layout).
+
 Jede Änderung, die nach dem Gemini-Bild von Hand oder per Skript gemacht wurde, damit sie später geprüft und in Aseprite sauber nachgearbeitet werden kann. Koordinaten in Spielpixeln (640×360), Rechteck = x, y, Breite, Höhe. Originale in voller Größe: `E:\Game Engine\Grafiken\assets\welt-1\` auf Sebastians PC. Umgerechnet wurde immer mit `tools/pixelieren.py` (32 Farben); „nachgefärbt“ heißt: Pixel, deren Farbe im Original weit von den 32 Farben abwich, bekamen bis zu acht zusätzliche Farben aus dem Original (Skript `nachfaerben.py`, nicht im Repo). Weitere Funde je Raum hier anhängen.
 
 | Raum, Datei | Änderung | Wie gemacht | Prüfen und nacharbeiten |

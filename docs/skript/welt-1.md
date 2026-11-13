@@ -345,11 +345,14 @@ Weitere Gegenstände und Fehlversuche in der Taverne:
 | --- | --- | --- | --- |
 | W1\_TAV\_MAX\_1410 | Max | Den nehm ich mit. Humbert sieht's nicht, der poliert. | Nehmen: Ziegenfell-Vorleger |
 | W1\_TAV\_PIX\_1420 | Pixel | Du nimmst einen Teppich mit. Ich will nicht wissen, warum. // Das heißt, ich ahne es bereits, und ich hasse alles, was ich ahne. | nach 1410 |
-| W1\_TAV\_MAX\_1430 | Max | Ein Ei. Das Huhn protestiert leise. Ich auch. | Nehmen: Ei unter dem Huhn |
+| W1\_TAV\_MAX\_1425 | Max | Ich greif nach dem Ei, und das Huhn hackt nach mir. Es sitzt drauf wie auf einem Sparbuch. | Ei, solange Berta darauf sitzt |
+| W1\_TAV\_HUH\_1426 | Huhn | Gack! | nach 1425 |
+| W1\_TAV\_PIX\_1427 | Pixel | Frag sie doch erst mal, was sie will. Ich übersetze, gegen Gebühr. // Die Gebühr ist Thunfisch. Das weißt du, und Berta ahnt es. | nach 1425, erstes Mal |
+| W1\_TAV\_MAX\_1430 | Max | Ein Ei, noch warm. Berta zetert vom Dachbalken. Ich hab's verdient. | Nehmen: Ei unter dem Huhn |
 | W1\_TAV\_HUH\_1440 | Huhn | Gaaack. | nach 1430 |
 | W1\_TAV\_PIX\_1450 | Pixel | Ein Ei. Weich gekocht. Zum Frühstück. Das kommt auf meine Liste. // Nicht dieses hier, wohlgemerkt, sondern ein eigenes. Ich teile meine Eier nicht mit Kesseln. | nach 1430; Pixels Wunsch Welt 1 |
 | W1\_TAV\_HUH\_1460 | Huhn | Gack gack. Gaack. | Pixel redet mit Huhn |
-| W1\_TAV\_PIX\_1470 | Pixel | Sie heißt Berta. Sie legt, seit sie denken kann, und sie denkt nicht viel. // Sie sagt, das Ei riecht nach Schule, was auch immer das heißen soll. Hühner sind keine großen Erklärer. | Übersetzung |
+| W1\_TAV\_PIX\_1470 | Pixel | Sie heißt Berta. Sie legt, seit sie denken kann, und sie denkt nicht viel. // Sie steht nur für eins auf: schlechte Musik. Beim letzten Barden ist sie bis auf den Dachbalken geflohen. | Übersetzung; setzt W1\_BERTA\_MUSIK |
 | W1\_TAV\_MAX\_1480 | Max | Thunfisch in Käse. Auch ich hab irgendwo Grenzen. | Thunfischdose auf Fondue-Topf |
 | W1\_TAV\_PIX\_1490 | Pixel | Es gibt keine Grenzen. Aber es gibt meine Dose, und die bleibt draußen. | nach 1480 |
 | W1\_TAV\_MAX\_1500 | Max | Ein Eimer voll Käse wäre schon verlockend. Aber Humbert hat eine Schwertersammlung, und ich will keins davon näher kennenlernen. | Eimer auf Fondue-Topf |
@@ -358,6 +361,10 @@ Weitere Gegenstände und Fehlversuche in der Taverne:
 | W1\_TAV\_HUM\_1530 | Humbert | Finger weg von Gerhard! | nach 1520 |
 | W1\_TAV\_MAX\_1540 | Max | Seit Gollos Ring in dem Topf liegt? Ich leg's lieber nicht drauf an. | Thunfischdose auf Fondue; nach R1 |
 | W1\_TAV\_MAX\_1560 | Max | Ich hab einmal über die Saiten geschrammelt. Das Huhn hat sich weggedreht. | Benutzen: Laute |
+| W1\_TAV\_MAX\_1580 | Max | Für Berta. Ein Lied, so schief, dass sich die Laute schämt. | Benutzen: Laute; nach Pixels Übersetzung, solange Berta im Korb sitzt |
+| W1\_TAV\_NAR\_1590 | – | Max schrammelt. Die Laute jault. Berta flattert empört auf den Dachbalken. | nach 1580; Huhn auf den Balken |
+| W1\_TAV\_HUH\_1600 | Huhn | GAAACK! | nach 1590 |
+| W1\_TAV\_PIX\_1605 | Pixel | Das war furchtbar, junger Mann. // Berta fand es auch furchtbar, und sonst hat Berta nur zu Körnern eine Meinung. | nach 1600 |
 | W1\_TAV\_GOL\_1570 | Gollo | Zzzz. Mein Ssschätzchen … nein, weg damit … zzz. | Reden mit Gollo; nach R1 |
 
 Zurufe in der Taverne (Pixel):

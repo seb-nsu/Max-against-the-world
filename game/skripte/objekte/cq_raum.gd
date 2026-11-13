@@ -96,6 +96,7 @@ func _on_room_entered() -> void:
 	blicke_anpassen()
 	ambiente_starten()
 	vordergrund_setzen()
+	props_schatten()
 	await _raum_betreten(erster_besuch)
 	await Spiel.regel("raum_betreten", self, erster_besuch)
 	Spiel.pixel_feld_pruefen()
@@ -128,6 +129,7 @@ func _on_restore_from_savegame() -> void:
 	blicke_anpassen()
 	ambiente_starten()
 	vordergrund_setzen()
+	props_schatten()
 	Spiel.pixel_feld_pruefen()
 	await Spiel.regel("nach_laden", self)
 	await _nach_laden()
@@ -181,9 +183,41 @@ func vordergrund_setzen() -> void:
 			sp.position = Vector2(t.rect[0], t.baseline)
 			sp.offset = Vector2(0, float(t.rect[1]) - float(t.baseline))
 		get_node("Props").add_child(sp)
+		if t.has("pos") and t.get("schatten", true):
+			_schatten_unter(sp, sp.texture.get_width(), 0.0)
 		if t.has("nach") or t.has("vor"):
 			_bedingte_teile.append([sp, t.get("nach", ""), t.get("vor", "")])
 	_bedingte_anpassen()
+
+
+## Kleiner weicher Schatten unter einem Sprite oder Prop, damit es auf dem Boden oder Tisch steht
+## statt zu schweben (Sebastian, 13. November 2026). y_unten: Unterkante in lokalen Koordinaten.
+func _schatten_unter(knoten: Node2D, breite: float, y_unten: float) -> void:
+	if knoten.has_node("Schatten"):
+		return
+	var sh := Polygon2D.new()
+	sh.name = "Schatten"
+	var punkte := PackedVector2Array()
+	var rx := maxf(breite * 0.45, 3.0)
+	var ry := maxf(breite * 0.08, 1.5)
+	var mx := breite / 2.0 if knoten is Sprite2D and not (knoten as Sprite2D).centered else 0.0
+	for i in 16:
+		var w := TAU * i / 16.0
+		punkte.append(Vector2(mx + cos(w) * rx, y_unten - 1.0 + sin(w) * ry))
+	sh.polygon = punkte
+	sh.color = Color(0.08, 0.06, 0.1, 0.35)
+	sh.show_behind_parent = true
+	knoten.add_child(sh)
+	knoten.move_child(sh, 0)
+
+
+## Props mit „schatten: true“ im Layout bekommen einen Kontaktschatten unter ihr Bild.
+func props_schatten() -> void:
+	for p in get_props():
+		if not p is CQProp or not p.bauplan().get("schatten", false):
+			continue
+		var r: Array = p.bauplan().get("rect", [0, 0, 16, 16])
+		_schatten_unter(p, float(r[2]), float(r[3]) / 2.0)
 
 
 ## Teile, die erst nach (oder nur vor) einem Rätsel zu sehen sind („nach: R8“, „vor: R7“).

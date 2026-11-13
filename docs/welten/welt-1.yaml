@@ -10,6 +10,9 @@ sonder_sprecher: [NAR]
 weitere_schalter:
   - W1_WECHSEL_FREI          # Figurenwechsel freigeschaltet (erstes Betreten der Taverne)
   - W1_TAVERNE_WECHSEL       # Wert: erste Wechsel in der Taverne gespielt (TAV 0080, 0090)
+  - W1_BERTA_MUSIK           # Pixel hat Berta übersetzt: sie flieht vor schlechter Musik (TAV 1470)
+  - W1_BERTA_WEG             # Max hat Laute gespielt, Berta sitzt auf dem Dachbalken, das Ei liegt frei (TAV 1580–1605)
+  - W1_BERTA_GEFRAGT         # Pixels Tipp nach dem ersten Hacken gespielt (TAV 1427)
   - W1_ZIEGE_FOLGT           # Schmiede-Ziege folgt Max (SCHM 0280), bis Rätsel 4
   - W1_XXL_GELIEFERT         # XXL-Ziege geliefert (DORF 0920 bis 0980), folgt bis Rätsel 4
   - W1_PIXEL_IM_FELL         # Pixel trägt den Ziegenfell-Vorleger (BRUE 0410), bis Rätsel 4

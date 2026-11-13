@@ -1712,13 +1712,17 @@ W1_TAV_MAX_1330,"In Serien braucht man irgendwann alles. Vor allem das, was man 
 W1_TAV_MAX_1410,"Den nehm ich mit. Humbert sieht's nicht, der poliert.","I'll take that. Humbert won't notice, he's polishing."
 W1_TAV_PIX_1420,"Du nimmst einen Teppich mit. Ich will nicht wissen, warum.",You are taking a rug with you. I do not want to know why.
 W1_TAV_PIX_1420_2,"Das heißt, ich ahne es bereits, und ich hasse alles, was ich ahne.","That is to say, I already suspect, and I hate everything I suspect."
-W1_TAV_MAX_1430,Ein Ei. Das Huhn protestiert leise. Ich auch.,An egg. The chicken's protesting quietly. So am I.
+W1_TAV_MAX_1425,"Ich greif nach dem Ei, und das Huhn hackt nach mir. Es sitzt drauf wie auf einem Sparbuch.",I reach for the egg and the chicken pecks me. She sits on it like it's her savings account.
+W1_TAV_HUH_1426,Gack!,Bawk!
+W1_TAV_PIX_1427,"Frag sie doch erst mal, was sie will. Ich übersetze, gegen Gebühr.","Why not ask her what she wants first? I translate, for a fee."
+W1_TAV_PIX_1427_2,"Die Gebühr ist Thunfisch. Das weißt du, und Berta ahnt es.","The fee is tuna. You know that, and Berta suspects it."
+W1_TAV_MAX_1430,"Ein Ei, noch warm. Berta zetert vom Dachbalken. Ich hab's verdient.","An egg, still warm. Berta's squawking at me from the rafter. I earned that."
 W1_TAV_HUH_1440,Gaaack.,Bwaaak.
 W1_TAV_PIX_1450,Ein Ei. Weich gekocht. Zum Frühstück. Das kommt auf meine Liste.,An egg. Soft-boiled. For breakfast. That is going on my list.
 W1_TAV_PIX_1450_2,"Nicht dieses hier, wohlgemerkt, sondern ein eigenes. Ich teile meine Eier nicht mit Kesseln.","Not this one, mind you, but one of my own. I do not share my eggs with cauldrons."
 W1_TAV_HUH_1460,Gack gack. Gaack.,Bok bok. Bwaak.
 W1_TAV_PIX_1470,"Sie heißt Berta. Sie legt, seit sie denken kann, und sie denkt nicht viel.","Her name is Berta. She has been laying for as long as she can think, and she does not think much."
-W1_TAV_PIX_1470_2,"Sie sagt, das Ei riecht nach Schule, was auch immer das heißen soll. Hühner sind keine großen Erklärer.","She says the egg smells of school, whatever that means. Chickens are not great explainers."
+W1_TAV_PIX_1470_2,Sie steht nur für eins auf: schlechte Musik. Beim letzten Barden ist sie bis auf den Dachbalken geflohen.,"She only gets up for one thing: bad music. When the last bard played, she fled all the way up to the rafter."
 W1_TAV_MAX_1480,Thunfisch in Käse. Auch ich hab irgendwo Grenzen.,Tuna in cheese. Even I have limits somewhere.
 W1_TAV_PIX_1490,"Es gibt keine Grenzen. Aber es gibt meine Dose, und die bleibt draußen.","There are no limits. But there is my tin, and it stays out of this."
 W1_TAV_MAX_1500,"Ein Eimer voll Käse wäre schon verlockend. Aber Humbert hat eine Schwertersammlung, und ich will keins davon näher kennenlernen.","A bucket full of cheese would be tempting. But Humbert has a sword collection, and I don't want to get to know any of them better."
@@ -1727,6 +1731,11 @@ W1_TAV_MAX_1520,"Gerhard bleibt, wo er ist. Ich mag meine Hände, und zwar beide
 W1_TAV_HUM_1530,Finger weg von Gerhard!,Hands off Gerald!
 W1_TAV_MAX_1540,Seit Gollos Ring in dem Topf liegt? Ich leg's lieber nicht drauf an.,With Gollo's ring in the pot now? I'd rather not risk it.
 W1_TAV_MAX_1560,Ich hab einmal über die Saiten geschrammelt. Das Huhn hat sich weggedreht.,I strummed the strings once. The chicken turned its back.
+W1_TAV_MAX_1580,"Für Berta. Ein Lied, so schief, dass sich die Laute schämt.",For Berta. A song so off-key the lute is embarrassed.
+W1_TAV_NAR_1590,Max schrammelt. Die Laute jault. Berta flattert empört auf den Dachbalken.,Max strums. The lute howls. Berta flaps up onto the rafter in outrage.
+W1_TAV_HUH_1600,GAAACK!,BAAAWK!
+W1_TAV_PIX_1605,"Das war furchtbar, junger Mann.","That was dreadful, young man."
+W1_TAV_PIX_1605_2,"Berta fand es auch furchtbar, und sonst hat Berta nur zu Körnern eine Meinung.","Berta thought so too, and normally Berta only has opinions about grain."
 W1_TAV_GOL_1570,"Zzzz. Mein Ssschätzchen … nein, weg damit … zzz.","Zzzz. My preciousss … no, away with it … zzz."
 W1_TAV_PIX_1610,"Der Käse blubbert seit zehn Minuten vor sich hin. Er will gegessen werden, ich höre so etwas.","The cheese has been bubbling away for ten minutes. It wants to be eaten, I can hear that sort of thing."
 W1_TAV_PIX_1610_2,"Es ist eine Gabe. Eine schwere Gabe, wenn man sie nicht nutzen darf.","It is a gift. A heavy gift, when you are not allowed to use it."

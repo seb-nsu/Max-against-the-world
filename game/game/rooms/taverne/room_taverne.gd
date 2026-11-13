@@ -15,11 +15,15 @@ func _raum_betreten(erster_besuch: bool) -> void:
 	_erster_besuch = erster_besuch
 
 
-## Minka sitzt am Topf bis R1a; Humbert ist im Keller zwischen R1b und R1c.
+## Minka sitzt am Topf bis R1a; Humbert ist im Keller zwischen R1b und R1c; Berta sitzt nach der
+## Laute auf dem Dachbalken.
 func _zustand_anwenden() -> void:
 	super()
 	Spiel.figur_hier("Minka", not Zustand.geloest("R1a"))
 	Spiel.figur_hier("Humbert", not humbert_im_keller())
+	# Berta flieht vor Max' Lautenspiel auf den Dachbalken (TAV 1590) und bleibt dort
+	if Zustand.ist("W1_BERTA_WEG") and has_character("Huhn") and has_marker("HuhnBalken"):
+		C.Huhn.position = get_marker_position("HuhnBalken")
 
 
 func humbert_im_keller() -> bool:

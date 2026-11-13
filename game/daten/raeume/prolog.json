@@ -2261,8 +2261,8 @@
      "script_name": "Dosenoeffner",
      "name_key": "UI_OBJ_DOSENOEFFNER",
      "rect": [
-      234,
-      186,
+      216,
+      166,
       18,
       18
      ],
@@ -2279,7 +2279,8 @@
       "blasen": [
        "P0_DACH_MAX_0260"
       ]
-     }
+     },
+     "schatten": true
     },
     {
      "id": "drahtkleiderbuegel",

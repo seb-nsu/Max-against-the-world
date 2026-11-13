@@ -338,6 +338,7 @@ def baue(abschnitt):
                 "rect": p["rect"], "gehe": p.get("gehe", [0, 0]),
                 "textur": echt_oder(ECHT_PROPS, f"{pid}.png", f"{RES_PLATZHALTER}prop_{pid}.png"),
                 "gegenstand": item, "ansehen": [], "nehmen": None,
+                **({"schatten": True} if p.get("schatten") else {}),
             })
         for hid, h in (lay.get("hotspots") or {}).items():
             if h.get("name"):

@@ -68,7 +68,7 @@ dorfplatz:
   # Deko und Rätsel-Sprites über dem Hintergrund (13. November 2026): Kokosnüsse im Stall, Bohnenranke nach R8
   vordergrund:
     kokosnuesse: {bild: res://grafik/props/kokosnuesse.png, pos: [345, 224]}
-    bohnenranke: {bild: res://grafik/props/bohnenranke.png, pos: [785, 258], nach: R8}
+    bohnenranke: {bild: res://grafik/props/bohnenranke.png, pos: [785, 258], nach: R8, schatten: false}
   alias:
     luftschloss_am_himmel: luftschloss
     stall_mit_kokosnuessen: stall
@@ -108,18 +108,20 @@ taverne:
     von_dorfplatz: [600, 250]
     balken: [330, 50]            # Pixel auf dem Dachbalken
     keller: [170, 168]           # Humbert verschwindet hinter der Kellertür
+    huhn_balken: [235, 50]       # Berta nach der Laute (TAV 1590) auf dem Dachbalken
   # Humbert steht hinter dem Tresen (Vordergrund-Teil tresen_vorn verdeckt seine Beine), Gollo davor
   # und schaut zu ihm (Sebastian, 13. November 2026)
   figuren:
     humbert: [150, 232]
     gollo: [282, 264]
     minka: [470, 250]
-    huhn: [362, 198]
+    huhn: [363, 180]             # sitzt im Korb des Hintergrunds; eigener Korb im Sprite abgeschnitten
   blick:
     humbert: rechts
     gollo: links
   vordergrund:
     tresen: {bild: res://grafik/props/tresen_vorn.png, rect: [0, 160, 256, 200], baseline: 245}
+    korb: {bild: res://grafik/props/korb_vorn.png, rect: [338, 175, 50, 23], baseline: 200}   # Korbvorderseite vor Huhn und Ei
   alias:
     fondue: fondue_topf
     laute: laute_mit_muenzbecher
@@ -143,7 +145,7 @@ taverne:
     leere_schilder: {rect: [432, 102, 92, 15], gehe: [480, 250], name: Leere Schilder}
   props:
     ziegenfell_vorleger: {rect: [424, 231, 172, 49], gehe: [510, 300]}
-    ei: {rect: [354, 192, 16, 12], gehe: [362, 240]}
+    ei: {rect: [366, 166, 12, 12], gehe: [362, 240]}   # „Ei unter dem Huhn“: schaut vorn zwischen Huhn und Korbrand hervor
   ausgaenge:
     dorfplatz: {rect: [590, 70, 50, 160], gehe: [605, 245], id: ausgang_dorfplatz}
 
@@ -161,7 +163,7 @@ schmiede:
   blick:
     schmied: links
   vordergrund:
-    hufeisen: {bild: res://grafik/props/hufeisen_zange.png, pos: [262, 194]}
+    hufeisen: {bild: res://grafik/props/hufeisen_zange.png, pos: [248, 213], schatten: false}   # Hufeisen liegt auf dem Amboss, Griffe hängen vorn herunter
   alias:
     krug_beim_kochgeschirr: krug
     ziege: schmiede_ziege

@@ -193,7 +193,8 @@
       785,
       258
      ],
-     "nach": "R8"
+     "nach": "R8",
+     "schatten": false
     }
    },
    "figuren": [
@@ -1042,6 +1043,10 @@
     "keller": [
      170,
      168
+    ],
+    "huhn_balken": [
+     235,
+     50
     ]
    },
    "tiefe": 0.8,
@@ -1055,6 +1060,16 @@
       200
      ],
      "baseline": 245
+    },
+    "korb": {
+     "bild": "res://grafik/props/korb_vorn.png",
+     "rect": [
+      338,
+      175,
+      50,
+      23
+     ],
+     "baseline": 200
     }
    },
    "figuren": [
@@ -1088,8 +1103,8 @@
      "id": "huhn",
      "script_name": "Huhn",
      "pos": [
-      362,
-      198
+      363,
+      180
      ]
     }
    ],
@@ -1517,6 +1532,39 @@
        "blasen": [
         "W1_TAV_MAX_1560"
        ]
+      },
+      {
+       "zeile": "W1_TAV_MAX_1580",
+       "sprecher": "MAX",
+       "blasen": [
+        "W1_TAV_MAX_1580"
+       ],
+       "bedingung_text": "nach Pixels Übersetzung, solange Berta im Korb sitzt",
+       "folge": [
+        {
+         "zeile": "W1_TAV_NAR_1590",
+         "sprecher": "NAR",
+         "blasen": [
+          "W1_TAV_NAR_1590"
+         ],
+         "bedingung_text": "Huhn auf den Balken"
+        },
+        {
+         "zeile": "W1_TAV_HUH_1600",
+         "sprecher": "HUH",
+         "blasen": [
+          "W1_TAV_HUH_1600"
+         ]
+        },
+        {
+         "zeile": "W1_TAV_PIX_1605",
+         "sprecher": "PIX",
+         "blasen": [
+          "W1_TAV_PIX_1605",
+          "W1_TAV_PIX_1605_2"
+         ]
+        }
+       ]
       }
      ]
     },
@@ -1710,9 +1758,9 @@
      "script_name": "Ei",
      "name_key": "UI_OBJ_EI",
      "rect": [
-      354,
-      192,
-      16,
+      366,
+      166,
+      12,
       12
      ],
      "gehe": [
@@ -1869,9 +1917,10 @@
     "hufeisen": {
      "bild": "res://grafik/props/hufeisen_zange.png",
      "pos": [
-      262,
-      194
-     ]
+      248,
+      213
+     ],
+     "schatten": false
     }
    },
    "figuren": [
@@ -7801,7 +7850,7 @@
    "script_name": "Smaugi",
    "kuerzel": "SMA",
    "name_key": "UI_OBJ_SMAUGI",
-   "groesse_px": 340,
+   "groesse_px": 250,
    "spielbar": false,
    "textfarbe": "#ffffff",
    "sprite": "res://grafik/platzhalter/figur_smaugi.png",
@@ -7948,7 +7997,8 @@
        "blasen": [
         "W1_TAV_PIX_1470",
         "W1_TAV_PIX_1470_2"
-       ]
+       ],
+       "bedingung_text": "setzt W1_BERTA_MUSIK"
       }
      ]
     }
