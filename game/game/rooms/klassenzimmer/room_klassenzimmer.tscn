@@ -32,6 +32,7 @@ height = 360
 [node name="WalkableAreas" type="Node2D" parent="." unique_id=886921526]
 
 [node name="Boden" parent="WalkableAreas" unique_id=396300271 instance=ExtResource("2_ir30o")]
+interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(0, 240, 97, 222, 158, 222, 160, 236, 232, 236, 236, 222, 266, 222, 266, 270, 386, 270, 386, 232, 418, 232, 418, 222, 596, 222, 639, 236, 639, 359, 0, 359)])
 
 [node name="Props" type="Node2D" parent="." unique_id=861852232]
 
@@ -43,52 +44,52 @@ description = "UI_RAUM_KLASSENZIMMER"
 [node name="Hotspots" type="Node2D" parent="." unique_id=415376884]
 
 [node name="Schulbank" parent="Hotspots" unique_id=1509065793 instance=ExtResource("5_13lx1")]
-position = Vector2(495.5, 218)
+position = Vector2(326, 218)
 description = "UI_OBJ_SCHULBANK"
 baseline = 50
-walk_to_point = Vector2(-55.5, 64)
-interaction_polygon = PackedVector2Array(-77.5, -50, 77.5, -50, 77.5, 50, -77.5, 50)
+walk_to_point = Vector2(-1, 67)
+interaction_polygon = PackedVector2Array(-58, -50, 58, -50, 58, 50, -58, 50)
 
 [node name="DurchgeloecherteZweiteSocke" parent="Hotspots" unique_id=2089907969 instance=ExtResource("6_084ab")]
 position = Vector2(402, 199)
 description = "UI_OBJ_DURCHGELOECHERTE_ZWEITE_SOCKE"
 baseline = 7
-walk_to_point = Vector2(-6, 47)
+walk_to_point = Vector2(0, 46)
 interaction_polygon = PackedVector2Array(-14, -7, 14, -7, 14, 7, -14, 7)
 
 [node name="Tafel" parent="Hotspots" unique_id=1978051340 instance=ExtResource("7_sbrkd")]
-position = Vector2(320, 74)
+position = Vector2(321, 76)
 description = "UI_OBJ_TAFEL"
-baseline = 38
-walk_to_point = Vector2(0, 182)
-interaction_polygon = PackedVector2Array(-60, -38, 60, -38, 60, 38, -60, 38)
+baseline = 36
+walk_to_point = Vector2(-71, 169)
+interaction_polygon = PackedVector2Array(-59, -36, 59, -36, 59, 36, -59, 36)
 
 [node name="Kessel" parent="Hotspots" unique_id=1960411082 instance=ExtResource("8_7txcd")]
-position = Vector2(323, 205)
+position = Vector2(196, 200)
 description = "UI_OBJ_KESSEL"
 baseline = 35
-walk_to_point = Vector2(-1, 53)
-interaction_polygon = PackedVector2Array(-35, -35, 35, -35, 35, 35, -35, 35)
+walk_to_point = Vector2(0, 50)
+interaction_polygon = PackedVector2Array(-36, -35, 36, -35, 36, 35, -36, 35)
 
 [node name="Flaschenregal" parent="Hotspots" unique_id=2049295911 instance=ExtResource("9_spsnj")]
-position = Vector2(202, 190)
+position = Vector2(448, 148)
 description = "UI_OBJ_FLASCHENREGAL"
-baseline = 10
-walk_to_point = Vector2(-2, 50)
-interaction_polygon = PackedVector2Array(-54, -10, 54, -10, 54, 10, -54, 10)
+baseline = 8
+walk_to_point = Vector2(7, 97)
+interaction_polygon = PackedVector2Array(-50, -8, 50, -8, 50, 8, -50, 8)
 
 [node name="BesenImSchrank" parent="Hotspots" unique_id=2093887970 instance=ExtResource("10_whayx")]
-position = Vector2(556, 116)
+position = Vector2(555.5, 144)
 description = "UI_OBJ_BESEN_IM_SCHRANK"
-baseline = 50
-walk_to_point = Vector2(34, 134)
-interaction_polygon = PackedVector2Array(-48, -50, 48, -50, 48, 50, -48, 50)
+baseline = 78
+walk_to_point = Vector2(-5.5, 96)
+interaction_polygon = PackedVector2Array(-48.5, -78, 48.5, -78, 48.5, 78, -48.5, 78)
 
 [node name="Fenster" parent="Hotspots" unique_id=2012225035 instance=ExtResource("11_eaurd")]
 position = Vector2(200, 74)
 description = "UI_OBJ_FENSTER"
 baseline = 54
-walk_to_point = Vector2(0, 168)
+walk_to_point = Vector2(-4, 176)
 interaction_polygon = PackedVector2Array(-30, -54, 30, -54, 30, 54, -30, 54)
 
 [node name="AusgangDorfplatz" parent="Hotspots" unique_id=1585395696 instance=ExtResource("12_vuw6j")]
@@ -100,46 +101,46 @@ cursor = 9
 interaction_polygon = PackedVector2Array(-31, -77.5, 31, -77.5, 31, 77.5, -31, 77.5)
 
 [node name="Flasche1" parent="Hotspots" unique_id=1792382325 instance=ExtResource("13_7txcd")]
-position = Vector2(161, 165.5)
+position = Vector2(410, 124.5)
 description = "UI_OBJ_FLASCHE_1"
-baseline = 15
-walk_to_point = Vector2(-1, 74.5)
-interaction_polygon = PackedVector2Array(-8, -15.5, 8, -15.5, 8, 15.5, -8, 15.5)
+baseline = 16
+walk_to_point = Vector2(30, 120.5)
+interaction_polygon = PackedVector2Array(-8, -16.5, 8, -16.5, 8, 16.5, -8, 16.5)
 
 [node name="Flasche2" parent="Hotspots" unique_id=297606360 instance=ExtResource("14_spsnj")]
-position = Vector2(178, 158)
+position = Vector2(427, 117.5)
 description = "UI_OBJ_FLASCHE_2"
 baseline = 23
-walk_to_point = Vector2(-1, 82)
-interaction_polygon = PackedVector2Array(-8, -23, 8, -23, 8, 23, -8, 23)
+walk_to_point = Vector2(19, 127.5)
+interaction_polygon = PackedVector2Array(-8, -23.5, 8, -23.5, 8, 23.5, -8, 23.5)
 
 [node name="Flasche3" parent="Hotspots" unique_id=1871642279 instance=ExtResource("15_whayx")]
-position = Vector2(195, 165.5)
+position = Vector2(445, 124.5)
 description = "UI_OBJ_FLASCHE_3"
-baseline = 15
-walk_to_point = Vector2(-1, 74.5)
-interaction_polygon = PackedVector2Array(-8, -15.5, 8, -15.5, 8, 15.5, -8, 15.5)
+baseline = 16
+walk_to_point = Vector2(7, 120.5)
+interaction_polygon = PackedVector2Array(-8, -16.5, 8, -16.5, 8, 16.5, -8, 16.5)
 
 [node name="Flasche4" parent="Hotspots" unique_id=872663849 instance=ExtResource("16_eaurd")]
-position = Vector2(212, 165.5)
+position = Vector2(463, 124.5)
 description = "UI_OBJ_FLASCHE_4"
-baseline = 15
-walk_to_point = Vector2(-1, 74.5)
-interaction_polygon = PackedVector2Array(-8, -15.5, 8, -15.5, 8, 15.5, -8, 15.5)
+baseline = 16
+walk_to_point = Vector2(-5, 120.5)
+interaction_polygon = PackedVector2Array(-8, -16.5, 8, -16.5, 8, 16.5, -8, 16.5)
 
 [node name="Flasche5" parent="Hotspots" unique_id=1644012170 instance=ExtResource("17_vuw6j")]
-position = Vector2(229, 158)
+position = Vector2(480, 117.5)
 description = "UI_OBJ_FLASCHE_5"
 baseline = 23
-walk_to_point = Vector2(-1, 82)
-interaction_polygon = PackedVector2Array(-8, -23, 8, -23, 8, 23, -8, 23)
+walk_to_point = Vector2(-16, 127.5)
+interaction_polygon = PackedVector2Array(-8, -23.5, 8, -23.5, 8, 23.5, -8, 23.5)
 
 [node name="Flasche6" parent="Hotspots" unique_id=343824248 instance=ExtResource("18_jkdk0")]
-position = Vector2(246, 165.5)
+position = Vector2(498, 124.5)
 description = "UI_OBJ_FLASCHE_6"
-baseline = 15
-walk_to_point = Vector2(-1, 74.5)
-interaction_polygon = PackedVector2Array(-8, -15.5, 8, -15.5, 8, 15.5, -8, 15.5)
+baseline = 16
+walk_to_point = Vector2(-28, 120.5)
+interaction_polygon = PackedVector2Array(-8, -16.5, 8, -16.5, 8, 16.5, -8, 16.5)
 
 [node name="Regions" type="Node2D" parent="." unique_id=703247222]
 
@@ -154,7 +155,7 @@ position = Vector2(80, 250)
 [node name="Characters" type="Node2D" parent="." unique_id=78373508]
 
 [node name="CharacterAlwin *" parent="Characters" unique_id=1939362324 instance=ExtResource("15_ti30s")]
-position = Vector2(372, 250)
+position = Vector2(248, 245)
 
 [node name="CharacterToadi *" parent="Characters" unique_id=1625231671 instance=ExtResource("16_skdtx")]
 position = Vector2(42, 238)

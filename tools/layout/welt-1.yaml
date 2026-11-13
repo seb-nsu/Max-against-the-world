@@ -184,37 +184,37 @@ zauberstabladen:
 
 klassenzimmer:
   farbe: "#5a6988"
-  # Echter Hintergrund (13. November 2026, Sebastians Gemini-Fassung mit Tischen rechts + tools/pixelieren.py;
-  # Flaschenregal von rechts unter das Fenster versetzt, damit beide Seiten gefüllt sind).
-  # Die sechs Flaschen sind Kopien von zwei Flaschen (1, 3, 4, 6 gleich; 2 und 5 groß), Feuer und Blasen am
-  # Kessel nach dem Umrechnen nachgefärbt. Koordinaten aus dem Bild; übernommen mit --cq-layout=klassenzimmer.
-  # Kessel, Hocker und Tische stehen auf dem Boden und sind aus dem Laufbereich ausgespart.
+  # Echter Hintergrund (13. November 2026, Sebastians Gemini-Fassung: Kessel unter dem Fenster, Bänke vor
+  # der Tafel, Regal und Schrank rechts; tools/pixelieren.py). Die sechs Flaschen sind Kopien von zwei
+  # Flaschen (1, 3, 4, 6 gleich; 2 und 5 groß), Feuer und Blasen am Kessel nach dem Umrechnen nachgefärbt.
+  # Koordinaten aus dem Bild; übernommen mit --cq-layout=klassenzimmer. Kessel, Bänke und Hocker stehen
+  # auf dem Boden und sind aus dem Laufbereich ausgespart.
   hintergrund: res://grafik/hintergruende/w1_bg_klassenzimmer_v01.png
   tiefe: 0.7
-  laufbereich: [[0, 240], [97, 222], [285, 222], [290, 242], [360, 242], [365, 222], [385, 222], [386, 232],
-                [418, 232], [448, 272], [572, 262], [575, 226], [595, 222], [639, 236], [639, 359], [0, 359]]
+  laufbereich: [[0, 240], [97, 222], [158, 222], [160, 236], [232, 236], [236, 222], [266, 222], [266, 270],
+                [386, 270], [386, 232], [418, 232], [418, 222], [596, 222], [639, 236], [639, 359], [0, 359]]
   marker:
     start: [80, 250]
     von_dorfplatz: [80, 250]
   figuren:
-    alwin: [372, 250]
+    alwin: [248, 245]
     toadi: [42, 238]
   alias:
     zweite_socke: durchgeloecherte_zweite_socke
   hotspots:
-    flasche_1: {rect: [153, 150, 16, 31], gehe: [160, 240], name: Flasche 1}
-    flasche_2: {rect: [170, 135, 16, 46], gehe: [177, 240], name: Flasche 2}
-    flasche_3: {rect: [187, 150, 16, 31], gehe: [194, 240], name: Flasche 3}
-    flasche_4: {rect: [204, 150, 16, 31], gehe: [211, 240], name: Flasche 4}
-    flasche_5: {rect: [221, 135, 16, 46], gehe: [228, 240], name: Flasche 5}
-    flasche_6: {rect: [238, 150, 16, 31], gehe: [245, 240], name: Flasche 6}
-    schulbank: {rect: [418, 168, 155, 100], gehe: [440, 282], name: Schulbänke}
-    durchgeloecherte_zweite_socke: {rect: [388, 192, 28, 14], gehe: [396, 246], name: Socke}
-    tafel: {rect: [260, 36, 120, 76], gehe: [320, 256], name: Tafel}
-    kessel: {rect: [288, 170, 70, 70], gehe: [322, 258], name: Kessel}
-    flaschenregal: {rect: [148, 180, 108, 20], gehe: [200, 240], name: Flaschenregal}
-    besen_im_schrank: {rect: [508, 66, 96, 100], gehe: [590, 250], name: Schrank}
-    fenster: {rect: [170, 20, 60, 108], gehe: [200, 242], name: Fenster}
+    flasche_1: {rect: [402, 108, 16, 33], gehe: [440, 245], name: Flasche 1}
+    flasche_2: {rect: [419, 94, 16, 47], gehe: [446, 245], name: Flasche 2}
+    flasche_3: {rect: [437, 108, 16, 33], gehe: [452, 245], name: Flasche 3}
+    flasche_4: {rect: [455, 108, 16, 33], gehe: [458, 245], name: Flasche 4}
+    flasche_5: {rect: [472, 94, 16, 47], gehe: [464, 245], name: Flasche 5}
+    flasche_6: {rect: [490, 108, 16, 33], gehe: [470, 245], name: Flasche 6}
+    schulbank: {rect: [268, 168, 116, 100], gehe: [325, 285], name: Schulbänke}
+    durchgeloecherte_zweite_socke: {rect: [388, 192, 28, 14], gehe: [402, 245], name: Socke}
+    tafel: {rect: [262, 40, 118, 72], gehe: [250, 245], name: Tafel}
+    kessel: {rect: [160, 165, 72, 70], gehe: [196, 250], name: Kessel}
+    flaschenregal: {rect: [398, 140, 100, 16], gehe: [455, 245], name: Flaschenregal}
+    besen_im_schrank: {rect: [507, 66, 97, 156], gehe: [550, 240], name: Schrank}
+    fenster: {rect: [170, 20, 60, 108], gehe: [196, 250], name: Fenster}
   ausgaenge:
     dorfplatz: {rect: [12, 72, 62, 155], gehe: [60, 242], id: ausgang_dorfplatz}
 
