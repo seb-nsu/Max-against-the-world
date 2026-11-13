@@ -185,7 +185,7 @@ zauberstabladen:
 klassenzimmer:
   farbe: "#5a6988"
   # Echter Hintergrund (13. November 2026, Sebastians Gemini-Fassung: Kessel unter dem Fenster, Bänke vor
-  # der Tafel, Regal und Schrank rechts; tools/pixelieren.py). Die sechs Flaschen sind Kopien von zwei
+  # der Tafel, Regal und Schrank rechts, drei Fenster; tools/pixelieren.py). Die sechs Flaschen sind Kopien von zwei
   # Flaschen (1, 3, 4, 6 gleich; 2 und 5 groß), Feuer und Blasen am Kessel nach dem Umrechnen nachgefärbt.
   # Koordinaten aus dem Bild; übernommen mit --cq-layout=klassenzimmer. Kessel, Bänke und Hocker stehen
   # auf dem Boden und sind aus dem Laufbereich ausgespart.
