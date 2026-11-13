@@ -1,18 +1,18 @@
 [gd_scene format=3 uid="uid://d1xfwexlav3wb"]
 
-[ext_resource type="Script" path="res://game/rooms/trollbruecke/walkable_areas/boden/walkable_area_boden.gd" id="1_apnh4"]
+[ext_resource type="Script" uid="uid://mbbhb7gfsmph" path="res://game/rooms/trollbruecke/walkable_areas/boden/walkable_area_boden.gd" id="1_apnh4"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_apnh4"]
-vertices = PackedVector2Array(316, 178, 4, 178, 4, 140, 316, 140)
-polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
-outlines = Array[PackedVector2Array]([PackedVector2Array(4, 140, 316, 140, 316, 178, 4, 178)])
+vertices = PackedVector2Array(639, 212, 639, 359, 450, 359, 432, 330, 230, 280, 212, 320, 180, 359, 0, 359, 0, 178, 150, 230, 125, 200, 120, 178, 160, 188, 445, 188, 152, 168, 430, 168, 470, 183, 525, 218, 530, 203, 410, 300, 400, 268, 470, 238)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(4, 5, 6, 7, 8, 9), PackedInt32Array(10, 9, 8), PackedInt32Array(10, 8, 11, 12), PackedInt32Array(13, 12, 11, 14, 15, 16), PackedInt32Array(17, 13, 16, 18), PackedInt32Array(19, 20, 21, 17, 0, 3), PackedInt32Array(17, 18, 0)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(0, 178, 120, 178, 152, 168, 430, 168, 470, 183, 530, 203, 639, 212, 639, 359, 450, 359, 432, 330, 410, 300, 400, 268, 470, 238, 525, 218, 445, 188, 160, 188, 125, 200, 150, 230, 230, 280, 212, 320, 180, 359, 0, 359)])
 agent_radius = 0.0
 
 [node name="Boden" type="Node2D" unique_id=1979980672]
 script = ExtResource("1_apnh4")
 script_name = "Boden"
 description = "Boden"
-interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(8, 280, 632, 280, 632, 356, 8, 356)])
+interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(0, 178, 120, 178, 152, 168, 430, 168, 470, 183, 530, 203, 639, 212, 639, 359, 450, 359, 432, 330, 410, 300, 400, 268, 470, 238, 525, 218, 445, 188, 160, 188, 125, 200, 150, 230, 230, 280, 212, 320, 180, 359, 0, 359)])
 
 [node name="Perimeter" type="NavigationRegion2D" parent="." unique_id=1356488868]
 modulate = Color(0, 1, 0, 1)

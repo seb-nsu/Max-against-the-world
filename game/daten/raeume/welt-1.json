@@ -3140,63 +3140,136 @@
     640,
     360
    ],
-   "hintergrund": "res://grafik/platzhalter/raum_trollbruecke.png",
+   "hintergrund": "res://grafik/hintergruende/w1_bg_trollbruecke_v01.png",
    "farbe": "#6a8a4a",
    "laufbereich": [
     [
-     8,
+     0,
+     178
+    ],
+    [
+     120,
+     178
+    ],
+    [
+     152,
+     168
+    ],
+    [
+     430,
+     168
+    ],
+    [
+     470,
+     183
+    ],
+    [
+     530,
+     203
+    ],
+    [
+     639,
+     212
+    ],
+    [
+     639,
+     359
+    ],
+    [
+     450,
+     359
+    ],
+    [
+     432,
+     330
+    ],
+    [
+     410,
+     300
+    ],
+    [
+     400,
+     268
+    ],
+    [
+     470,
+     238
+    ],
+    [
+     525,
+     218
+    ],
+    [
+     445,
+     188
+    ],
+    [
+     160,
+     188
+    ],
+    [
+     125,
+     200
+    ],
+    [
+     150,
+     230
+    ],
+    [
+     230,
      280
     ],
     [
-     632,
-     280
+     212,
+     320
     ],
     [
-     632,
-     356
+     180,
+     359
     ],
     [
-     8,
-     356
+     0,
+     359
     ]
    ],
    "marker": {
     "start": [
-     60,
-     320
+     20,
+     192
     ],
     "von_dorfplatz": [
-     60,
-     320
+     20,
+     192
     ],
     "von_zauberwald": [
-     592,
-     320
+     615,
+     228
     ],
     "von_wasserschloss": [
-     500,
-     292
+     488,
+     196
     ],
     "ziegen": [
-     128,
-     332
+     110,
+     196
     ],
     "bruecke_mitte": [
-     320,
-     300
+     290,
+     178
     ],
     "wasser": [
-     400,
-     340
+     320,
+     330
     ]
    },
+   "tiefe": 0.4,
    "figuren": [
     {
      "id": "waldemar",
      "script_name": "Waldemar",
      "pos": [
-      428,
-      312
+      440,
+      275
      ]
     }
    ],
@@ -3206,14 +3279,14 @@
      "script_name": "Schild",
      "name_key": "UI_OBJ_SCHILD",
      "rect": [
+      88,
       100,
-      140,
-      60,
+      80,
       80
      ],
      "gehe": [
-      128,
-      308
+      130,
+      192
      ],
      "ansehen": [
       {
@@ -3247,14 +3320,14 @@
      "script_name": "Bruecke",
      "name_key": "UI_OBJ_BRUECKE",
      "rect": [
-      180,
-      220,
-      280,
-      60
+      150,
+      160,
+      330,
+      45
      ],
      "gehe": [
-      320,
-      300
+      300,
+      180
      ],
      "ansehen": [
       {
@@ -3321,14 +3394,14 @@
      "script_name": "Bach",
      "name_key": "UI_OBJ_BACH",
      "rect": [
-      180,
-      320,
-      280,
-      36
+      210,
+      285,
+      230,
+      75
      ],
      "gehe": [
-      320,
-      304
+      195,
+      305
      ],
      "ansehen": [
       {
@@ -3353,14 +3426,14 @@
      "script_name": "Grammophon",
      "name_key": "UI_OBJ_GRAMMOPHON",
      "rect": [
-      240,
-      280,
-      40,
-      28
+      252,
+      214,
+      28,
+      36
      ],
      "gehe": [
-      260,
-      308
+      205,
+      278
      ],
      "ansehen": [
       {
@@ -3412,14 +3485,14 @@
      "script_name": "Notenblaetter",
      "name_key": "UI_OBJ_NOTENBLAETTER",
      "rect": [
-      292,
-      288,
-      48,
-      20
+      240,
+      248,
+      40,
+      18
      ],
      "gehe": [
-      316,
-      308
+      205,
+      282
      ],
      "ansehen": [
       {
@@ -3444,13 +3517,13 @@
      "script_name": "Wildblumen",
      "name_key": "UI_OBJ_WILDBLUMEN",
      "rect": [
-      8,
-      292,
-      60,
-      28
+      0,
+      300,
+      90,
+      60
      ],
      "gehe": [
-      48,
+      100,
       320
      ],
      "ansehen": [
@@ -3480,14 +3553,14 @@
      "ziel": "dorfplatz",
      "name_key": "UI_RAUM_DORFPLATZ",
      "rect": [
-      4,
-      160,
-      36,
-      120
+      0,
+      165,
+      22,
+      45
      ],
      "gehe": [
-      24,
-      320
+      12,
+      192
      ],
      "erreichbar_ab": "start",
      "ansehen": []
@@ -3498,14 +3571,14 @@
      "ziel": "zauberwald",
      "name_key": "UI_OBJ_WALDWEG",
      "rect": [
-      592,
-      140,
-      44,
-      140
+      600,
+      170,
+      40,
+      80
      ],
      "gehe": [
-      608,
-      320
+      620,
+      228
      ],
      "erreichbar_ab": "R4",
      "ansehen": [
@@ -3545,14 +3618,14 @@
      "ziel": "wasserschloss",
      "name_key": "UI_OBJ_WEG_ZUM_WASSERSCHLOSS",
      "rect": [
-      480,
-      140,
-      60,
-      80
+      420,
+      115,
+      80,
+      45
      ],
      "gehe": [
-      504,
-      292
+      490,
+      196
      ],
      "erreichbar_ab": "R4",
      "ansehen": [],

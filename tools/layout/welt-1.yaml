@@ -212,30 +212,40 @@ klassenzimmer:
 
 trollbruecke:
   farbe: "#6a8a4a"
-  laufbereich: [[8, 280], [632, 280], [632, 356], [8, 356]]
+  # Echter Hintergrund (13. November 2026, Sebastians vierte Gemini-Fassung + tools/pixelieren.py;
+  # Grammophon und Wasserschloss danach nachgefärbt, weil sie beim Umrechnen fast verschwanden).
+  # Koordinaten aus dem Bild; übernommen mit --cq-layout=trollbruecke. Der Bach teilt den Boden:
+  # linkes Ufer, Weg über Rampen auf das Brückendeck, rechtes Ufer. Das Deck liegt weit hinten,
+  # deshalb starke Tiefe wie am Dorfplatz.
+  hintergrund: res://grafik/hintergruende/w1_bg_trollbruecke_v01.png
+  tiefe: 0.4
+  laufbereich: [[0, 178], [120, 178], [152, 168], [430, 168], [470, 183], [530, 203], [639, 212],
+                [639, 359], [450, 359], [432, 330], [410, 300], [400, 268], [470, 238], [525, 218],
+                [445, 188], [160, 188], [125, 200], [150, 230], [230, 280], [212, 320], [180, 359],
+                [0, 359]]
   marker:
-    start: [60, 320]
-    von_dorfplatz: [60, 320]
-    von_zauberwald: [592, 320]
-    von_wasserschloss: [500, 292]
-    ziegen: [128, 332]            # Dorfende der Brücke: hier warten die Ziegen
-    bruecke_mitte: [320, 300]
-    wasser: [400, 340]           # Waldemar im Fußbad
+    start: [20, 192]
+    von_dorfplatz: [20, 192]
+    von_zauberwald: [615, 228]
+    von_wasserschloss: [488, 196]
+    ziegen: [110, 196]            # Dorfende der Brücke: hier warten die Ziegen
+    bruecke_mitte: [290, 178]
+    wasser: [320, 330]           # Waldemar im Fußbad
   figuren:
-    waldemar: [428, 312]
+    waldemar: [440, 275]
   alias:
     lore: bruecke
   hotspots:
-    schild: {rect: [100, 140, 60, 80], gehe: [128, 308], name: Schild}
-    bruecke: {rect: [180, 220, 280, 60], gehe: [320, 300], name: Brücke}
-    bach: {rect: [180, 320, 280, 36], gehe: [320, 304], name: Bach}
-    grammophon: {rect: [240, 280, 40, 28], gehe: [260, 308], name: Grammophon}
-    notenblaetter: {rect: [292, 288, 48, 20], gehe: [316, 308], name: Notenblätter}
-    wildblumen: {rect: [8, 292, 60, 28], gehe: [48, 320], name: Wildblumen}
+    schild: {rect: [88, 100, 80, 80], gehe: [130, 192], name: Schild}
+    bruecke: {rect: [150, 160, 330, 45], gehe: [300, 180], name: Brücke}
+    bach: {rect: [210, 285, 230, 75], gehe: [195, 305], name: Bach}
+    grammophon: {rect: [252, 214, 28, 36], gehe: [205, 278], name: Grammophon}
+    notenblaetter: {rect: [240, 248, 40, 18], gehe: [205, 282], name: Notenblätter}
+    wildblumen: {rect: [0, 300, 90, 60], gehe: [100, 320], name: Wildblumen}
   ausgaenge:
-    dorfplatz: {rect: [4, 160, 36, 120], gehe: [24, 320], id: ausgang_dorfplatz}
-    zauberwald: {rect: [592, 140, 44, 140], gehe: [608, 320], id: waldweg, name: Waldweg, gesperrt: W1_BRUE_MAX_0190}
-    wasserschloss: {rect: [480, 140, 60, 80], gehe: [504, 292], id: weg_zum_wasserschloss, name: Weg zum Wasserschloss, gesperrt: W1_BRUE_MAX_0190}
+    dorfplatz: {rect: [0, 165, 22, 45], gehe: [12, 192], id: ausgang_dorfplatz}
+    zauberwald: {rect: [600, 170, 40, 80], gehe: [620, 228], id: waldweg, name: Waldweg, gesperrt: W1_BRUE_MAX_0190}
+    wasserschloss: {rect: [420, 115, 80, 45], gehe: [490, 196], id: weg_zum_wasserschloss, name: Weg zum Wasserschloss, gesperrt: W1_BRUE_MAX_0190}
 
 wasserschloss:
   farbe: "#4f7a9a"
