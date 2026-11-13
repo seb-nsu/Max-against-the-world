@@ -161,6 +161,7 @@
     ]
    },
    "tiefe": 0.4,
+   "skala": 0.8,
    "ambiente": {
     "voegel": {
      "bereich": [

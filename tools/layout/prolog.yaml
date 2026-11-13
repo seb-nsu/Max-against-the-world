@@ -81,7 +81,7 @@ dachboden:
     fernseher: [365, 243]         # vor dem Zapp-O-Mat
   figuren:
     pixel: [262, 272]             # schläft auf dem Verlängerungskabel
-    opa: [400, 287]
+    opa: [460, 322]               # vorn zwischen Zapp-O-Mat und Sessel, verdeckt weder Drehknopf noch Kalender noch Pixel; vorher [400, 287] direkt vor dem Drehknopf (Sebastian, 13. November 2026)
   props:
     zapp_o_mat: {rect: [318, 118, 105, 112], gehe: [365, 243], item: null}
     dosenoeffner: {rect: [216, 166, 18, 18], gehe: [252, 256], schatten: true}   # liegt auf der Werkbank (vorher frei schwebend an der Seite)

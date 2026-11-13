@@ -58,10 +58,12 @@ func tiefe_anwenden() -> void:
 				chr.scaling_region = {}
 				chr.update_scale()
 			continue
-		var oben := float(bauplan().tiefe)
+		# „skala“ im Layout verkleinert alle Figuren im Raum zusätzlich (weite Außenräume wie der Dorfplatz)
+		var vorn := float(bauplan().get("skala", 1.0))
+		var oben := float(bauplan().tiefe) * vorn
 		chr.scaling_region = {
-			region_description = "Tiefe", scale_top = oben, scale_bottom = 1.0,
-			scale_max = maxf(oben, 1.0), scale_min = minf(oben, 1.0),
+			region_description = "Tiefe", scale_top = oben, scale_bottom = vorn,
+			scale_max = maxf(oben, vorn), scale_min = minf(oben, vorn),
 			polygon_top_y = ys.min(), polygon_bottom_y = ys.max(), target_scale = 1.0,
 		}
 		chr.update_scale()

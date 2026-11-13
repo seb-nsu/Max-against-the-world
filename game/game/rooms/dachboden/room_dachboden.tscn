@@ -270,4 +270,4 @@ position = Vector2(365, 243)
 position = Vector2(262, 272)
 
 [node name="CharacterOpa *" parent="Characters" unique_id=792275399 instance=ExtResource("32_53g1l")]
-position = Vector2(400, 287)
+position = Vector2(460, 322)

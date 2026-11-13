@@ -47,6 +47,7 @@ dorfplatz:
   # hinten, deshalb starke Tiefe: Max ist vorn 100 Prozent groß und an den Ladentüren etwa halb so groß.
   hintergrund: res://grafik/hintergruende/w1_bg_dorfplatz_v03.png
   tiefe: 0.4
+  skala: 0.8                    # alle Figuren 20 Prozent kleiner: Max war fast so hoch wie der Ring-Laden (Sebastian, 13. November 2026)
   # Lebendiger Hintergrund (P16): Vögel am Himmel über den Hügeln, Windstoß mit Blättern über den Platz
   ambiente:
     voegel: {bereich: [0, 15, 1280, 45]}

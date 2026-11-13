@@ -113,6 +113,8 @@ Schon vorgemerkt (Sebastian, 13. November 2026): Alwin rührt im Kessel (Kelle i
 | Figur oder Objekt | Stand | Überarbeiten |
 | --- | --- | --- |
 | Max | Stehen: Atmen per Rig (nur Oberkörper und Kopf); Sprechen: Mund auf und Kopfnicken; Gehen: per Code aus dem Standbild (Ober-, Unterschenkel, Fuß, hinteres Bein als Kopie) | Gang flüssiger, Mundbewegung, Wenden |
+| Max, Ankunft in Welt 1 | Fällt aus dem Wirbel (Tween von oben) und liegt um 90 Grad gedreht auf dem Rücken, steht nach Pixels Zeile 0020 ruckartig auf; Kamera wackelt kurz (`room_dorfplatz.gd`, `_landung`) | Eigene Bilder: Fallen, Aufprall mit Staubwolke, Hoodie über dem Gesicht, Aufsetzen (0030), Aufstehen (0050) |
+| Toadi, Ankunft in Welt 1 | Wartet rechts außerhalb des Bildes und gleitet bei „Hilfe! Hilfe! Ein Held!“ (0100) zu seinem Platz; Max schaut erst nach links und dreht sich bei 0110 zu ihm um (Sebastian, 13. November 2026) | Rennen (8 Bilder, steht in `grafik/welt-1.md`), Keuchen (0120), Zeigen auf Max (fehlt noch in der Animationstabelle) |
 | Opa | Ein Standbild für alle Bewegungen, Atmen und Reden per Rig, Gehen per Code | Eigene Posen, Gang |
 | Pixel | Sitzen, Schlafpose, Gehen auf vier Beinen per Code (Stand- und Schwungphase); Aufstehen nur als Überblendung, weil eine Aufsteh-Animation fehlt (Sebastian, 12. November 2026) | Aufstehen und Hinlegen als echte Animation, Gang prüfen |
 | Lippen | Mund bewegt sich nur so lange, wie der Satz geschätzt dauert; mit Aufnahmen nach deren Länge | Mit Vertonung abgleichen |

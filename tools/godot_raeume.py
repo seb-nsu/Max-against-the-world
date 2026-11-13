@@ -293,6 +293,7 @@ def baue(abschnitt):
             "laufbereich": lay.get("laufbereich", [[0, hoehe - s_(40)], [breite, hoehe - s_(40)], [breite, hoehe], [0, hoehe]]),
             "marker": lay.get("marker", {}),
             **({"tiefe": float(lay["tiefe"])} if "tiefe" in lay else {}),
+            **({"skala": float(lay["skala"])} if "skala" in lay else {}),
             **({"ambiente": lay["ambiente"]} if lay.get("ambiente") else {}),
             **({"vordergrund": lay["vordergrund"]} if lay.get("vordergrund") else {}),
             "figuren": [],
