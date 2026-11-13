@@ -3,16 +3,16 @@
 [ext_resource type="Script" uid="uid://f65p8g4njthr" path="res://game/rooms/bergwerk/walkable_areas/boden/walkable_area_boden.gd" id="1_kv0rj"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_kv0rj"]
-vertices = PackedVector2Array(1272, 356, 8, 356, 8, 280, 1272, 280)
-polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
-outlines = Array[PackedVector2Array]([PackedVector2Array(8, 280, 1272, 280, 1272, 356, 8, 356)])
+vertices = PackedVector2Array(1085, 236, 1170, 240, 1260, 250, 1279, 300, 1279, 359, 0, 359, 0, 300, 935, 240, 20, 215, 120, 215, 200, 242, 420, 236, 865, 236, 870, 240, 395, 242, 940, 236, 1095, 228, 1150, 228)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4, 5, 6, 7), PackedInt32Array(6, 8, 9, 10), PackedInt32Array(11, 12, 13, 14), PackedInt32Array(7, 15, 0), PackedInt32Array(0, 16, 17, 1), PackedInt32Array(13, 7, 6, 14), PackedInt32Array(6, 10, 14)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(20, 215, 120, 215, 200, 242, 395, 242, 420, 236, 865, 236, 870, 240, 935, 240, 940, 236, 1085, 236, 1095, 228, 1150, 228, 1170, 240, 1260, 250, 1279, 300, 1279, 359, 0, 359, 0, 300)])
 agent_radius = 0.0
 
 [node name="Boden" type="Node2D" unique_id=1597242076]
 script = ExtResource("1_kv0rj")
 script_name = "Boden"
 description = "Boden"
-interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(8, 280, 1272, 280, 1272, 356, 8, 356)])
+interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(20, 215, 120, 215, 200, 242, 395, 242, 420, 236, 865, 236, 870, 240, 935, 240, 940, 236, 1085, 236, 1095, 228, 1150, 228, 1170, 240, 1260, 250, 1279, 300, 1279, 359, 0, 359, 0, 300)])
 
 [node name="Perimeter" type="NavigationRegion2D" parent="." unique_id=924396956]
 modulate = Color(0, 1, 0, 1)

@@ -326,29 +326,36 @@ zauberwald:
 
 bergwerk:
   farbe: "#4a3f3a"
-  # Breitbild 1280×360 (Entscheidung 13. November 2026): links Stollenmund und Loren, rechts Streik mit
-  # Schildern, Posten-Linie und Kiste, ganz rechts die Rune-Tür. Platzhalter-Layout für Skizze und Graubox.
-  laufbereich: [[8, 280], [1272, 280], [1272, 356], [8, 356]]
+  # Echter Hintergrund (13. November 2026), Breitbild 1280×360 aus Sebastians Gemini-Fassung (tools/pixelieren.py):
+  # Hintergrund mit geschlossener Rune-Tür; die offene Tür ist ein eigenes Prop (rune_tuer_offen), das
+  # room_bergwerk.gd nach Rätsel 10 einblendet. Koordinaten aus dem Bild; übernommen mit --cq-layout=bergwerk.
+  hintergrund: res://grafik/hintergruende/w1_bg_bergwerk_v01.png
+  tiefe: 0.6
+  laufbereich: [[20, 215], [120, 215], [200, 242], [395, 242], [420, 236], [865, 236], [870, 240], [935, 240],
+                [940, 236], [1085, 236], [1095, 228], [1150, 228], [1170, 240], [1260, 250], [1279, 300],
+                [1279, 359], [0, 359], [0, 300]]
   marker:
-    start: [52, 320]
-    von_zauberwald: [52, 320]
+    start: [60, 250]
+    von_zauberwald: [60, 250]
   figuren:
-    grimmzahn: [960, 320]
-    goblin_1: [900, 316]
-    goblin_2: [1028, 324]
+    grimmzahn: [960, 290]
+    goblin_1: [880, 285]
+    goblin_2: [1040, 292]
   alias:
     lore: loren
     goblin_arbeiter_1: goblin_1
     goblin_arbeiter_2: goblin_2
   hotspots:
-    loren: {rect: [100, 232, 220, 48], gehe: [210, 312], name: Loren}
-    streikschilder: {rect: [700, 140, 100, 80], gehe: [748, 308], name: Streikschilder}
-    streikposten: {rect: [820, 300, 300, 12], gehe: [800, 324], name: Streikposten}
-    kaffeemaschine: {rect: [860, 220, 40, 40], gehe: [876, 308], name: Kaffeemaschine}
-    fackeln: {rect: [120, 60, 1000, 32], gehe: [600, 308], name: Fackeln}
+    loren: {rect: [205, 172, 185, 65], gehe: [300, 262], name: Loren}
+    streikschilder: {rect: [678, 105, 190, 125], gehe: [770, 262], name: Streikschilder}
+    streikposten: {rect: [660, 256, 500, 16], gehe: [640, 280], name: Streikposten}
+    kaffeemaschine: {rect: [870, 170, 62, 65], gehe: [900, 262], name: Kaffeemaschine}
+    fackeln: {rect: [395, 90, 470, 22], gehe: [630, 262], name: Fackeln}
+  props:
+    rune_tuer_offen: {rect: [1070, 80, 100, 160], gehe: [1118, 250]}
   ausgaenge:
-    zauberwald: {rect: [4, 120, 36, 160], gehe: [24, 320], id: ausgang_zauberwald}
-    turmkeller: {rect: [1180, 120, 92, 160], gehe: [1172, 316], id: rune_tuer, name: Rune-Tür, gesperrt: W1_BERG_MAX_0170}
+    zauberwald: {rect: [10, 70, 110, 150], gehe: [60, 250], id: ausgang_zauberwald}
+    turmkeller: {rect: [1078, 85, 80, 150], gehe: [1118, 250], id: rune_tuer, name: Rune-Tür, gesperrt: W1_BERG_MAX_0170}
 
 luftschloss:
   farbe: "#b9c7e6"

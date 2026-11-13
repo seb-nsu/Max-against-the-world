@@ -4974,59 +4974,116 @@
     1280,
     360
    ],
-   "hintergrund": "res://grafik/platzhalter/raum_bergwerk.png",
+   "hintergrund": "res://grafik/hintergruende/w1_bg_bergwerk_v01.png",
    "farbe": "#4a3f3a",
    "laufbereich": [
     [
-     8,
-     280
+     20,
+     215
     ],
     [
-     1272,
-     280
+     120,
+     215
     ],
     [
-     1272,
-     356
+     200,
+     242
     ],
     [
-     8,
-     356
+     395,
+     242
+    ],
+    [
+     420,
+     236
+    ],
+    [
+     865,
+     236
+    ],
+    [
+     870,
+     240
+    ],
+    [
+     935,
+     240
+    ],
+    [
+     940,
+     236
+    ],
+    [
+     1085,
+     236
+    ],
+    [
+     1095,
+     228
+    ],
+    [
+     1150,
+     228
+    ],
+    [
+     1170,
+     240
+    ],
+    [
+     1260,
+     250
+    ],
+    [
+     1279,
+     300
+    ],
+    [
+     1279,
+     359
+    ],
+    [
+     0,
+     359
+    ],
+    [
+     0,
+     300
     ]
    ],
    "marker": {
     "start": [
-     52,
-     320
+     60,
+     250
     ],
     "von_zauberwald": [
-     52,
-     320
+     60,
+     250
     ]
    },
+   "tiefe": 0.6,
    "figuren": [
     {
      "id": "grimmzahn",
      "script_name": "Grimmzahn",
      "pos": [
       960,
-      320
+      290
      ]
     },
     {
      "id": "goblin_1",
      "script_name": "Goblin1",
      "pos": [
-      900,
-      316
+      880,
+      285
      ]
     },
     {
      "id": "goblin_2",
      "script_name": "Goblin2",
      "pos": [
-      1028,
-      324
+      1040,
+      292
      ]
     }
    ],
@@ -5036,14 +5093,14 @@
      "script_name": "Loren",
      "name_key": "UI_OBJ_LOREN",
      "rect": [
-      100,
-      232,
-      220,
-      48
+      205,
+      172,
+      185,
+      65
      ],
      "gehe": [
-      210,
-      312
+      300,
+      262
      ],
      "ansehen": [
       {
@@ -5077,14 +5134,14 @@
      "script_name": "Streikschilder",
      "name_key": "UI_OBJ_STREIKSCHILDER",
      "rect": [
-      700,
-      140,
-      100,
-      80
+      678,
+      105,
+      190,
+      125
      ],
      "gehe": [
-      748,
-      308
+      770,
+      262
      ],
      "ansehen": [
       {
@@ -5109,14 +5166,14 @@
      "script_name": "Streikposten",
      "name_key": "UI_OBJ_STREIKPOSTEN",
      "rect": [
-      820,
-      300,
-      300,
-      12
+      660,
+      256,
+      500,
+      16
      ],
      "gehe": [
-      800,
-      324
+      640,
+      280
      ],
      "ansehen": [
       {
@@ -5141,14 +5198,14 @@
      "script_name": "Kaffeemaschine",
      "name_key": "UI_OBJ_KAFFEEMASCHINE",
      "rect": [
-      860,
-      220,
-      40,
-      40
+      870,
+      170,
+      62,
+      65
      ],
      "gehe": [
-      876,
-      308
+      900,
+      262
      ],
      "ansehen": [
       {
@@ -5201,14 +5258,14 @@
      "script_name": "Fackeln",
      "name_key": "UI_OBJ_FACKELN",
      "rect": [
-      120,
-      60,
-      1000,
-      32
+      395,
+      90,
+      470,
+      22
      ],
      "gehe": [
-      600,
-      308
+      630,
+      262
      ],
      "ansehen": [
       {
@@ -5248,7 +5305,27 @@
      ]
     }
    ],
-   "props": [],
+   "props": [
+    {
+     "id": "rune_tuer_offen",
+     "script_name": "RuneTuerOffen",
+     "name_key": "UI_OBJ_RUNE_TUER_OFFEN",
+     "rect": [
+      1070,
+      80,
+      100,
+      160
+     ],
+     "gehe": [
+      1118,
+      250
+     ],
+     "textur": "res://grafik/props/rune_tuer_offen.png",
+     "gegenstand": null,
+     "ansehen": [],
+     "nehmen": null
+    }
+   ],
    "ausgaenge": [
     {
      "id": "ausgang_zauberwald",
@@ -5256,14 +5333,14 @@
      "ziel": "zauberwald",
      "name_key": "UI_RAUM_ZAUBERWALD",
      "rect": [
-      4,
-      120,
-      36,
-      160
+      10,
+      70,
+      110,
+      150
      ],
      "gehe": [
-      24,
-      320
+      60,
+      250
      ],
      "erreichbar_ab": "R4",
      "ansehen": []
@@ -5274,14 +5351,14 @@
      "ziel": "turmkeller",
      "name_key": "UI_OBJ_RUNE_TUER",
      "rect": [
-      1180,
-      120,
-      92,
-      160
+      1078,
+      85,
+      80,
+      150
      ],
      "gehe": [
-      1172,
-      316
+      1118,
+      250
      ],
      "erreichbar_ab": "R10",
      "ansehen": [

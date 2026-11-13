@@ -15,6 +15,16 @@ func _raum_betreten(erster_besuch: bool) -> void:
 	_erster_besuch = erster_besuch
 
 
+## Die offene Rune-Tür ist ein eigenes Bild über dem Hintergrund mit geschlossener Tür: sichtbar erst
+## nach Rätsel 10. Klicks gehen durch zum Ausgang darunter.
+func _zustand_anwenden() -> void:
+	super()
+	if $Props.has_node("RuneTuerOffen"):
+		var tuer: PopochiuProp = $Props.get_node("RuneTuerOffen")
+		tuer.visible = Zustand.geloest("R10")
+		tuer.clickable = false
+
+
 ## Erstes Betreten (skript/welt-1.md, Abschnitt 11): Streik. Rätsel 10 folgt nach dem Slice.
 func _nach_uebergang() -> void:
 	if not _erster_besuch:
