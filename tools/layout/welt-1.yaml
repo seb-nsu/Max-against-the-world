@@ -284,11 +284,12 @@ zauberwald:
   # Leuchtpilz als Props ausgeschnitten und im Hintergrund übermalt. Der dicke Baum auf der Naht steht im
   # Vordergrund und ist ein eigenes Prop (alter_baum, Baseline am unteren Bildrand), damit Max dahinter
   # vorbeigeht. Niesrosen fehlen noch als Sprite; ihr Platz in der Lichtung ist ausgespart.
+  # Die Weggabelung hinter dem Baum (alter Weg zur Brücke) ist mit Moos übermalt, es gibt nur einen Weg.
   # Koordinaten aus dem Bild; übernommen mit --cq-layout=zauberwald.
   hintergrund: res://grafik/hintergruende/w1_bg_zauberwald_v01.png
   tiefe: 0.5
-  laufbereich: [[0, 242], [150, 238], [330, 240], [372, 240], [380, 200], [424, 186], [472, 180], [492, 212],
-                [504, 240], [574, 258], [639, 262], [664, 254], [816, 254], [896, 254], [902, 236], [972, 232],
+  laufbereich: [[0, 242], [150, 238], [330, 240], [372, 240], [440, 248],
+                [504, 244], [574, 258], [639, 262], [664, 254], [816, 254], [896, 254], [902, 236], [972, 232],
                 [999, 222], [1022, 226], [1016, 262], [1036, 282], [1065, 290], [1065, 359], [505, 359],
                 [500, 320], [470, 300], [360, 300], [335, 330], [330, 359], [0, 359]]
   marker:

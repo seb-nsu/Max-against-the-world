@@ -3,16 +3,16 @@
 [ext_resource type="Script" uid="uid://dtxgujxf8u5vg" path="res://game/rooms/zauberwald/walkable_areas/boden/walkable_area_boden.gd" id="1_5s5nw"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_5s5nw"]
-vertices = PackedVector2Array(1065, 290, 1065, 359, 505, 359, 1036, 282, 896, 254, 1016, 262, 500, 320, 816, 254, 330, 359, 0, 359, 0, 242, 150, 238, 330, 240, 335, 330, 360, 300, 372, 240, 470, 300, 999, 222, 1022, 226, 972, 232, 380, 200, 424, 186, 472, 180, 492, 212, 504, 240, 574, 258, 902, 236, 664, 254, 639, 262)
-polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(4, 5, 3, 2, 6, 7), PackedInt32Array(8, 9, 10, 11, 12, 13), PackedInt32Array(14, 13, 12, 15), PackedInt32Array(16, 14, 15), PackedInt32Array(17, 18, 5, 19), PackedInt32Array(16, 15, 20, 21, 22, 23, 24), PackedInt32Array(6, 16, 24, 25), PackedInt32Array(4, 26, 19, 5), PackedInt32Array(27, 7, 6, 28), PackedInt32Array(6, 25, 28)])
-outlines = Array[PackedVector2Array]([PackedVector2Array(0, 242, 150, 238, 330, 240, 372, 240, 380, 200, 424, 186, 472, 180, 492, 212, 504, 240, 574, 258, 639, 262, 664, 254, 816, 254, 896, 254, 902, 236, 972, 232, 999, 222, 1022, 226, 1016, 262, 1036, 282, 1065, 290, 1065, 359, 505, 359, 500, 320, 470, 300, 360, 300, 335, 330, 330, 359, 0, 359)])
+vertices = PackedVector2Array(1065, 290, 1065, 359, 505, 359, 1036, 282, 896, 254, 1016, 262, 500, 320, 816, 254, 330, 359, 0, 359, 0, 242, 150, 238, 330, 240, 335, 330, 360, 300, 372, 240, 470, 300, 440, 248, 504, 244, 574, 258, 999, 222, 1022, 226, 972, 232, 902, 236, 664, 254, 639, 262)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(4, 5, 3, 2, 6, 7), PackedInt32Array(8, 9, 10, 11, 12, 13), PackedInt32Array(14, 13, 12, 15), PackedInt32Array(16, 14, 15, 17), PackedInt32Array(6, 16, 17, 18, 19), PackedInt32Array(20, 21, 5, 22), PackedInt32Array(4, 23, 22, 5), PackedInt32Array(24, 7, 6, 25), PackedInt32Array(25, 6, 19)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(0, 242, 150, 238, 330, 240, 372, 240, 440, 248, 504, 244, 574, 258, 639, 262, 664, 254, 816, 254, 896, 254, 902, 236, 972, 232, 999, 222, 1022, 226, 1016, 262, 1036, 282, 1065, 290, 1065, 359, 505, 359, 500, 320, 470, 300, 360, 300, 335, 330, 330, 359, 0, 359)])
 agent_radius = 0.0
 
 [node name="Boden" type="Node2D" unique_id=62137990]
 script = ExtResource("1_5s5nw")
 script_name = "Boden"
 description = "Boden"
-interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(0, 242, 150, 238, 330, 240, 372, 240, 380, 200, 424, 186, 472, 180, 492, 212, 504, 240, 574, 258, 639, 262, 664, 254, 816, 254, 896, 254, 902, 236, 972, 232, 999, 222, 1022, 226, 1016, 262, 1036, 282, 1065, 290, 1065, 359, 505, 359, 500, 320, 470, 300, 360, 300, 335, 330, 330, 359, 0, 359)])
+interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(0, 242, 150, 238, 330, 240, 372, 240, 440, 248, 504, 244, 574, 258, 639, 262, 664, 254, 816, 254, 896, 254, 902, 236, 972, 232, 999, 222, 1022, 226, 1016, 262, 1036, 282, 1065, 290, 1065, 359, 505, 359, 500, 320, 470, 300, 360, 300, 335, 330, 330, 359, 0, 359)])
 
 [node name="Perimeter" type="NavigationRegion2D" parent="." unique_id=2016427570]
 modulate = Color(0, 1, 0, 1)
