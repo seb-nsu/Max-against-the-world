@@ -303,7 +303,8 @@ def baue(abschnitt):
         if raum["name_key"] not in texte:
             fehler.append(f"{raum['name_key']} fehlt in docs/uebersetzung/ui.csv")
         for fid, pos in (lay.get("figuren") or {}).items():
-            raum["figuren"].append({"id": fid, "script_name": pascal(fid), "pos": pos})
+            raum["figuren"].append({"id": fid, "script_name": pascal(fid), "pos": pos,
+                                    **({"blick": lay["blick"][fid]} if fid in (lay.get("blick") or {}) else {})})
         for ziel in r["ausgaenge"]:
             if ziel in (lay.get("faehre") or []) + (lay.get("wechsel") or []):
                 continue  # nur über Zeitfähre (Welt 2) oder Ebenenwechsel (Welt 3) erreichbar

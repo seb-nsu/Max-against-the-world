@@ -91,6 +91,7 @@ func _on_room_entered() -> void:
 	partner_aufstellen(true)
 	_zustand_anwenden()
 	tiefe_anwenden()
+	blicke_anpassen()
 	ambiente_starten()
 	await _raum_betreten(erster_besuch)
 	await Spiel.regel("raum_betreten", self, erster_besuch)
@@ -121,10 +122,28 @@ func _on_restore_from_savegame() -> void:
 	partner_aufstellen()
 	_zustand_anwenden()
 	tiefe_anwenden()
+	blicke_anpassen()
 	ambiente_starten()
 	Spiel.pixel_feld_pruefen()
 	await Spiel.regel("nach_laden", self)
 	await _nach_laden()
+
+
+## Blickrichtung der Figuren: fest aus dem Layout („blick:“), sonst zu Max hin. Die Begleiter
+## (Max, Pixel) bleiben, wie sie sind.
+func blicke_anpassen() -> void:
+	var fest := {}
+	for f: Dictionary in bauplan().get("figuren", []):
+		if f.get("blick"):
+			fest[f.script_name] = f.blick
+	for c in get_characters():
+		if not c is CQFigur or c == C.player or c.script_name in ["Max", "Pixel"]:
+			continue
+		c.blick_fest = fest.get(c.script_name, "")
+		if not c.blick_fest.is_empty():
+			c.blick_setzen(c.blick_fest)
+		elif is_instance_valid(C.player):
+			c.schauen_zu(C.player.global_position.x)
 
 
 ## Lebendiger Hintergrund (P16): Vögel, Windstöße usw., wenn der Bauplan „ambiente“ hat.

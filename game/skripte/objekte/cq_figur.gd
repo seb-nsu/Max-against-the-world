@@ -30,6 +30,9 @@ func _ready() -> void:
 
 func say(dialog: String, params: Variant = null) -> void:
 	_satz_nr += 1
+	# Wer mit Max (oder Pixel) redet, dreht sich zu ihm, außer der Raum legt die Richtung fest
+	if not Engine.is_editor_hint() and self != C.player and is_instance_valid(C.player) 			and C.player.get_parent() == get_parent() and blick_fest.is_empty():
+		schauen_zu(C.player.global_position.x)
 	if not Engine.is_editor_hint() and is_inside_tree() and not PopochiuUtils.e.cutscene_skipped:
 		_mund_schliessen(_satz_nr, redezeit(PopochiuUtils.e.translate(dialog, params)))
 	await super(dialog, params)
@@ -49,6 +52,23 @@ func _mund_schliessen(nr: int, sekunden: float) -> void:
 	await get_tree().create_timer(sekunden).timeout
 	if nr == _satz_nr and is_talking and is_instance_valid(self):
 		_play_idle()
+
+
+## Blickrichtung aus dem Layout („links“ oder „rechts“); leer: die Figur schaut zu Max.
+var blick_fest := ""
+
+
+## Dreht die Figur nach links oder rechts zur Stelle x (die Bilder schauen nach rechts).
+func schauen_zu(x: float) -> void:
+	if absf(x - global_position.x) < 4.0:
+		return
+	face_direction(Vector2(x, global_position.y))
+	if has_node("Sprite2D"):
+		$Sprite2D.flip_h = x < global_position.x
+
+
+func blick_setzen(richtung: String) -> void:
+	schauen_zu(global_position.x + (-10.0 if richtung == "links" else 10.0))
 
 
 ## Echte Grafik statt Platzhalter: gibt es res://grafik/figuren/<id>.png samt

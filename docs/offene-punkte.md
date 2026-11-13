@@ -97,6 +97,8 @@ Jede Änderung, die nach dem Gemini-Bild von Hand oder per Skript gemacht wurde,
 
 Sebastian will alle Animationen im Aseprite-Durchgang vollständig prüfen und überarbeiten lassen (13. November 2026). Bisher entstehen sie per Code aus Standbildern (`tools/figur.py`) oder fehlen:
 
+Blickrichtung (13. November 2026): Alle Figurenbilder schauen nach rechts (Minka war nach links gemalt und ist gespiegelt). Beim Betreten eines Raums schauen die Figuren zu Max, beim Reden drehen sie sich zu ihm (`CQRaum.blicke_anpassen()`, `CQFigur.schauen_zu()`). Eine feste Richtung legt das Layout je Raum fest: `blick: {schmied: links}`; die Figur dreht sich dann auch beim Reden nicht.
+
 Grundsatz für das Review (Sebastian, 13. November 2026): Gehen bekommen nur Figuren, die im Spiel wirklich laufen. Für jede Figur neu überlegen, welche Bewegungen zu ihr passen, auch kleine Eigenheiten im Stand, zum Beispiel dreht die Schmiede-Ziege ab und zu eine Runde.
 
 | Figur oder Objekt | Stand | Überarbeiten |
