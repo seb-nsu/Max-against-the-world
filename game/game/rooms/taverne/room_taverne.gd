@@ -110,7 +110,8 @@ func _minka_geht_hinaus() -> void:
 	if not has_character("Minka"):
 		return
 	var tuer := get_marker_position("VonDorfplatz")
-	await C.Minka.laufen_zu(Vector2(C.Minka.position.x + 70.0, 228.0), 80.0)
+	# Minka sitzt vor dem Tresen auf dem Boden: erst schräg in den Raum, dann zur Tür
+	await C.Minka.laufen_zu(Vector2(C.Minka.position.x + 120.0, 300.0), 80.0)
 	await C.Minka.laufen_zu(tuer, 110.0)
 	await C.Minka.ausblenden_und_weg()
 
