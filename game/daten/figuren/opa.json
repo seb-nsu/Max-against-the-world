@@ -11,27 +11,21 @@
    "schleife": true
   },
   "talk": {
-   "von": 41,
-   "bilder": 12,
-   "ms": 150,
+   "von": 4,
+   "bilder": 4,
+   "ms": 140,
    "schleife": true
   },
   "walk": {
    "von": 24,
-   "bilder": 17,
-   "ms": 125,
+   "bilder": 14,
+   "ms": 75,
    "schleife": true
   },
   "walk_alt": {
    "von": 8,
    "bilder": 8,
    "ms": 130,
-   "schleife": true
-  },
-  "talk_alt": {
-   "von": 4,
-   "bilder": 4,
-   "ms": 140,
    "schleife": true
   }
  }

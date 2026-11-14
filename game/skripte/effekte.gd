@@ -152,3 +152,33 @@ static func kursiv(schrift: Font) -> FontVariation:
 	k.base_font = schrift
 	k.variation_transform = Transform2D(Vector2(1.0, 0.2), Vector2(0.0, 1.0), Vector2.ZERO)
 	return k
+
+
+## Rauchwolke an einer Stelle im Raum (Verwandlung, Fluch), Review Fund 18: fünf weiche Kreise,
+## die aufquellen und verblassen. Wartet, bis die Wolke am dichtesten ist (dann tauscht man das
+## Bild darunter), und räumt danach selbst auf.
+static func rauchwolke(raum: Node, ort: Vector2, groesse := 34.0) -> void:
+	if not is_instance_valid(raum) or PopochiuUtils.e.cutscene_skipped or Spiel.testmodus:
+		return
+	var wolke := Node2D.new()
+	wolke.position = ort
+	wolke.z_index = 50
+	raum.add_child(wolke)
+	var t := wolke.create_tween().set_parallel()
+	for i in 5:
+		var kreis := Polygon2D.new()
+		var punkte := PackedVector2Array()
+		for k in 14:
+			var w := TAU * k / 14.0
+			punkte.append(Vector2(cos(w), sin(w) * 0.85) * groesse * 0.5)
+		kreis.polygon = punkte
+		kreis.color = Color("c0cbdc") if i % 2 == 0 else Color("8b9bb4")
+		kreis.position = Vector2(cos(i * 1.3) * groesse * 0.45, -groesse * 0.4 + sin(i * 1.7) * groesse * 0.35)
+		kreis.scale = Vector2(0.3, 0.3)
+		wolke.add_child(kreis)
+		t.tween_property(kreis, "scale", Vector2(1.2, 1.2), 0.35).set_ease(Tween.EASE_OUT)
+		t.tween_property(kreis, "position", kreis.position + Vector2(0, -10), 0.9)
+	await wolke.get_tree().create_timer(0.35).timeout
+	var aus := wolke.create_tween()
+	aus.tween_property(wolke, "modulate:a", 0.0, 0.55)
+	aus.tween_callback(wolke.queue_free)

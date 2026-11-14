@@ -668,7 +668,12 @@ func _welt_1_r5_bis_r13() -> void:
 	_pruefe(_i().is_item_in_inventory("Flasche") and int(Z.wert("W1_FLASCHE", 0)) == 4
 		and _gesagt("W1_HOGG_MAX_0930"), "Flasche 4 genommen (0930)")
 	await _hotspot("Flasche2").on_click()
-	_pruefe(_gesagt("W1_HOGG_MAX_0940") and int(Z.wert("W1_FLASCHE", 0)) == 4, "zweite Flasche: 0940")
+	_pruefe(_gesagt("W1_HOGG_MAX_0946") and int(Z.wert("W1_FLASCHE", 0)) == 2, "zweite Flasche: getauscht (0946)")
+	await _hotspot("Flasche2").on_click()
+	_pruefe(_gesagt("W1_HOGG_MAX_0945") and not _i().is_item_in_inventory("Flasche")
+		and int(Z.wert("W1_FLASCHE", 0)) == 0, "Flasche zurückgestellt (0945)")
+	await _hotspot("Flasche4").on_click()
+	_pruefe(_i().is_item_in_inventory("Flasche") and int(Z.wert("W1_FLASCHE", 0)) == 4, "Flasche 4 wieder genommen")
 	await _benutze("Flasche", _hotspot("Kessel"), "W1_HOGG_MAX_0590")
 	await _benutze("Ei", _hotspot("Kessel"), "W1_HOGG_MAX_0510")
 	await _benutze("Leuchtpilz", _hotspot("Kessel"), "W1_HOGG_MAX_0540")

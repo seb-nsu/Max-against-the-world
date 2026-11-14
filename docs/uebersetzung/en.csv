@@ -390,7 +390,7 @@ P0_DACH_MAX_0213,He's purring in his sleep. Or growling. With Pixel I've never b
 P0_DACH_MAX_0220,"I can't lift him. He weighs about as much as a full moving box, and he's holding on to the cable."
 P0_DACH_MAX_0240,"Grandpa's toolbox: screwdrivers, wire and a roll of peppermints. Grandpa has a system all of his own."
 P0_DACH_MAX_0245,"Under the wire there's a note: ""Tools for emergencies. And for Pixel."" I think that means the same thing."
-P0_DACH_MAX_0260,"There's a crank tin opener hanging on the workbench, between half a toothbrush and half an umbrella. At least this one is whole."
+P0_DACH_MAX_0260,"There's a crank tin opener lying on the workbench, between half a toothbrush and half an umbrella. At least this one is whole."
 P0_DACH_MAX_0270,"The tin is closed, and I honestly don't fancy opening it with my teeth."
 P0_DACH_MAX_0280,And … pssht.
 P0_DACH_MAX_0282,"Phew, you can probably smell that through the whole house. If that doesn't wake Pixel, I suppose I'll have to hold the tin right under his nose."
@@ -527,7 +527,7 @@ P0_DACH_OPA_1320,"A TV that sends you to wherever the programme is set. The ad b
 P0_DACH_OPA_1324,"With arguments. He understands exactly one, and I always keep some in the house for emergencies."
 P0_DACH_OPA_1324_2,"Emergency rations, lad. In the boxes under the stairs, where else."
 P0_DACH_OPA_1326,"And the tin is closed, of course. Sweet talk won't help there, only cranking will."
-P0_DACH_OPA_1326_2,"The tin opener is hanging up here on the workbench, right next to the half umbrella."
+P0_DACH_OPA_1326_2,"The tin opener is lying up here on the workbench, right next to the half umbrella."
 P0_DACH_OPA_1328,Fetch the tuna tin from the boxes under the stairs and open it with the tin opener from the workbench.
 P0_DACH_OPA_1328_2,"Then hold it under the cat's nose. He'll be awake before you can say ""salmon""."
 P0_DACH_OPA_1340,"Because right now you're the only one in the house with nothing to do. And because I trust you, lad. That too."
@@ -551,7 +551,7 @@ P0_DACH_PIX_0320_3,"One does not get a dream like that twice, young man."
 P0_DACH_PIX_0340,"He has been talking for years, young man. It is simply that nobody listened until now, and I hold that against no one. Almost no one."
 P0_DACH_PIX_0340_2,But enough about me. Is that tuna in brine or in oil?
 P0_DACH_PIX_0360,"In brine. Of course. One serves a cat of my standing fish in salt water, as if he were some common harbour cat."
-P0_DACH_PIX_0360_2,"And out of the tin at that, young man. I do not eat from tinplate, it is beneath me."
+P0_DACH_PIX_0360_2,"And out of the tin at that. I do not eat from tinplate, it is beneath me."
 P0_DACH_PIX_0364,"On a warm power cable, which is a different matter. I eat from china or not at all."
 P0_DACH_PIX_0364_2,Wake me again when dinner is served.
 P0_DACH_PIX_0368,"Fish on black tea, in china with a gold rim. That is how one serves a cat."
@@ -567,7 +567,7 @@ P0_DACH_PIX_0850,I would like it on record that I hate travelling.
 P0_DACH_PIX_0850_2,"I hate time travel even more, because afterwards one never knows when breakfast is."
 P0_DACH_PIX_0850_3,"And television travel, I believe, I shall hate most of all. I simply have not done any yet."
 P0_DACH_PIX_0880,Miiiaaaow!
-P0_DACH_PIX_0920,"There are seventeen remotes in this box, young man. Seventeen."
+P0_DACH_PIX_0920,There are seventeen remotes in this box. Seventeen.
 P0_DACH_PIX_0920_2,"And as fate would have it, the one you need is never among them."
 P0_DACH_PIX_0925,"I have counted again, and there are still seventeen. One is missing, and I know very well which."
 P0_DACH_PIX_0925_2,"I am simply not saying, because so far nobody has asked me politely."
@@ -579,16 +579,16 @@ P0_DACH_PIX_0950,"A dog-ear on the page with the chocolate cake. A cat remembers
 P0_DACH_PIX_0950_2,"Your grandfather evidently does not remember, or he would not need a dog-ear."
 P0_DACH_PIX_0955,"Next to the chocolate cake there is a date and a heart, drawn in pencil."
 P0_DACH_PIX_0955_2,"And underneath, very small and very shaky: ""Don't forget again."" I find that touching. And suspicious."
-P0_DACH_PIX_1120,"Please do not stick me in the television, young man. I have no training whatsoever as an aerial."
+P0_DACH_PIX_1120,Please do not stick me in the television. I have no training whatsoever as an aerial.
 P0_DACH_PIX_1120_2,And the last wire your grandfather tried to attach to me is still lying under the armchair.
-P0_DACH_PIX_1170,"I am asleep, young man, and I shall stay asleep exactly until dinner is served. In china."
+P0_DACH_PIX_1170,"I am asleep, and I shall stay asleep exactly until dinner is served. In china."
 P0_DACH_PIX_1230,"I would help, truly. But I have stayed lying down so exemplarily,"
 P0_DACH_PIX_1230_2,and it would be a sin to give up this posture for something as ordinary as helping.
 P0_DACH_PIX_1240,"The television is staring at you, and you are staring back. I know duels like this from the windowsill."
 P0_DACH_PIX_1240_2,"One of you has to give in eventually, and I would bet my tuna that it is you."
 P0_DACH_PIX_1366,"He is lying, and I can smell it. With humans, lies always smell a little of fear."
 P0_DACH_PIX_1366_2,"With your grandfather it also smells of chocolate cake, and I have never had that with a lie before."
-P0_DACH_PIX_1400,"I do not come along, young man. I am taken along, and, where possible, carried."
+P0_DACH_PIX_1400,"I do not come along. I am taken along, and, where possible, carried."
 P0_DACH_PIX_1400_2,"The last time I walked anywhere myself, the neighbour was grilling salmon, and that was an exception."
 P0_DACH_PIX_1404,"So, yes. But under protest."
 P0_DACH_PIX_1420,"I have slept on every one of them, one after another, and can therefore tell you the following:"
@@ -905,7 +905,7 @@ W1_BERG_GRI_0680,The rune door. Leads into the tower's cellar. We never used it.
 W1_BERG_GRI_0840,One with a future. And with keys. A goblin without keys stands at every door like a customer.
 W1_BERG_MAX_0020,Goblins doing nothing. But organised.
 W1_BERG_MAX_0025,"One of them has a sign: ""We are goblins, not machines."" Underneath: ""Okay, not machines either."""
-W1_BERG_MAX_0030,Picket signs with no writing. The demand is so obvious nobody had to write it down.
+W1_BERG_MAX_0030,Most of the picket signs have no writing. The demand is so obvious nobody had to write it down.
 W1_BERG_MAX_0035,"On the back of one sign there's a shopping list: mushrooms, coffee, dignity."
 W1_BERG_MAX_0040,"Mine carts on rails, and the rails end right at the picket line. Very consistent, you have to admit."
 W1_BERG_MAX_0045,There's a bat asleep in one of the carts. It's on strike too. Out of solidarity.
@@ -993,7 +993,8 @@ W1_BRUE_MAX_0420,You're the little goat.
 W1_BRUE_MAX_0450,Does it say anywhere that it can't be?
 W1_BRUE_MAX_0470,"I've got two goats and one cat. But the troll wants three goats, so I'm either missing a goat or a rug."
 W1_BRUE_MAX_0630,But they only speak Goatish. And I don't even have an app for Goatish.
-W1_BRUE_MAX_0650,"""Don't eat me, my brother is fatter."" ""Don't eat me, my brother is even fatter."" ""Eat me, then, if you dare."" Read out. Happy?"
+W1_BRUE_MAX_0650,"""Don't eat me, my brother is fatter."" ""Don't eat me, my brother is even fatter."""
+W1_BRUE_MAX_0650_2,"""Eat me, then, if you dare."" Read out. Happy?"
 W1_BRUE_MAX_0820,"Three goats, three lines. That was more script work than in my entire school career so far."
 W1_BRUE_MAX_0930,"I'm not shoving a troll into a stream, not even for an egg. There has to be some other way."
 W1_BRUE_MAX_0950,"Waldemar. It says ""water"". Not river, not stream, just water."
@@ -1041,7 +1042,8 @@ W1_BRUE_PIX_1120_2,Whoever listens to music in secret also sings in secret. Trol
 W1_BRUE_PIX_1130,"The goats are waiting, I am waiting, and the troll is waiting too."
 W1_BRUE_PIX_1130_2,"This is not an adventure any more, it is a waiting room. All that is missing are the magazines."
 W1_BRUE_WAL_0040,"Clause 1: Three billy goats cross the bridge, the little one first, then the middle one, then the big one."
-W1_BRUE_WAL_0050,"Clause 2: Each goat says its line. The little one: ""Don't eat me, my brother is fatter."" The middle one: ""Don't eat me, my brother is even fatter."" The big one: ""Eat me, then, if you dare."""
+W1_BRUE_WAL_0050,"Clause 2: Each goat says its line. The little one: ""Don't eat me, my brother is fatter."""
+W1_BRUE_WAL_0050_2,"The middle one: ""Don't eat me, my brother is even fatter."" The big one: ""Eat me, then, if you dare."""
 W1_BRUE_WAL_0060,Clause 3: The troll goes into the water. Clause 14b: Borrowed items are to be returned.
 W1_BRUE_WAL_0180,A cat. Clause 9: Cats may cross the bridge at any time. None ever has. They all wanted to see the goat ritual.
 W1_BRUE_WAL_0220,Rule one: Nobody crosses the bridge before the fairy tale has run its course. Rule two: see rule one. Rule three: read the sign.
@@ -1105,7 +1107,8 @@ W1_DORF_MAX_0155,"One note is looking for a hero, another one is looking for a d
 W1_DORF_MAX_0160,"""Little Red's Delivery Service. Everything Grandma doesn't wear any more. There in ten minutes or the basket's free."""
 W1_DORF_MAX_0165,"Small print at the bottom: ""Warning, wolf in delivery area. Don't feed, don't talk to, don't call him Grandma."""
 W1_DORF_MAX_0170,"An order form. I'll take it, you never know when you'll urgently need a delivery."
-W1_DORF_MAX_0180,"""Wanted for world domination. Residence: Dark Tower, seven floors, mostly vacant. Distinguishing features: sensitive to pet names."""
+W1_DORF_MAX_0180,"""Wanted for world domination. Residence: Dark Tower, seven floors, mostly vacant."
+W1_DORF_MAX_0180_2,"Distinguishing features: sensitive to pet names."""
 W1_DORF_MAX_0185,"Someone's scribbled ""Bless you!"" under the picture. Several times, and a bit more desperately each time."
 W1_DORF_MAX_0190,His address is right there. Apparently nobody wanted to find him.
 W1_DORF_MAX_0210,"I'll take that with me. As a bookmark, or in case I ever need to threaten somebody."
@@ -1247,7 +1250,8 @@ W1_HINT_PIX_0220,"There is something sticky in the tavern. It bubbles, and I dre
 W1_HINT_PIX_0230,"Smear cheese on the spoon. I am a tomcat, not a walkthrough."
 W1_HINT_PIX_0310,"The troll wants three goats, and we have none. That is, if I may say so, a poor start."
 W1_HINT_PIX_0320,"One goat is eating at the blacksmith's, a second one can be ordered at the village board. The third … please no."
-W1_HINT_PIX_0330,Fetch the forge goat. Order the second with the form from the village board and give me the goatskin rug from the tavern. I hate everything about this.
+W1_HINT_PIX_0330,Fetch the forge goat. Order the second with the form from the village board and give me the goatskin rug from the tavern.
+W1_HINT_PIX_0330_2,I hate everything about this.
 W1_HINT_PIX_0411,The troll is a stickler for rules. Read the bridge sign. All of it.
 W1_HINT_PIX_0412,"The goats have to say their lines. They only speak Goatish. I am fluent, by the way."
 W1_HINT_PIX_0413,According to the statutes the troll has to go into the water. He cannot swim. Read exactly what it says.
@@ -1265,9 +1269,9 @@ W1_HINT_PIX_0611,"Alwin wants egg, milk and a glow mushroom, so a pancake that g
 W1_HINT_PIX_0611_2,"Ingredients have to be gathered, young man. They do not come by themselves, I know that from the tuna."
 W1_HINT_PIX_0612,"Six bottles, one note. Read the note. Twice."
 W1_HINT_PIX_0612_2,"It rhymes, but it does not lie. Unlike certain noses I would rather not specify."
-W1_HINT_PIX_0621,"Egg from the hen in the tavern, mushroom in the enchanted forest, and there is no milk here. Except from animals with bells."
+W1_HINT_PIX_0621,"Berta in the tavern has the egg, and she won't give it up. Ask me what she says. Mushroom in the enchanted forest, milk from animals with bells."
 W1_HINT_PIX_0622,"Not at the ends. Not the big ones, they are twins. And the fish oil stands to the right of the potion. Right as you see it."
-W1_HINT_PIX_0631,"Take the jug from the forge, milk the goat, throw egg, milk and mushroom into the cauldron. I shall look away."
+W1_HINT_PIX_0631,"Berta flees from bad music, so play her something on the lute. Then the jug from the forge, milk the goat, everything into the cauldron."
 W1_HINT_PIX_0632,"Bottle three. The third from the left. I would have said four, and I would have been lying. Take three."
 W1_HINT_PIX_0710,"The roses only open for singing. You do not sing, and I do not sing in public."
 W1_HINT_PIX_0710_2,So who sings around here in secret?
@@ -1284,7 +1288,8 @@ W1_HINT_PIX_1020,"Option one: the glow potion from Hogglewarz is a torch, and ke
 W1_HINT_PIX_1030,Give Grimtooth the glow potion and sign the agreement in ketchup. Or offer him the caretaker job together with Zeldina. One is enough.
 W1_HINT_PIX_1111,"Four parts, one order. Every place you found one tells you what hangs on what. Look in the notebook, not into thin air."
 W1_HINT_PIX_1112,"Three brooms, three routes. They sweep anything that moves. Preferably hair. I have hair. I can see where this is going."
-W1_HINT_PIX_1121,"Mo is the beginning, says Zeldina. The school report hangs Cuddles on Mo. The song hangs Pudding on Cuddles. And Teddy comes at the end, with dots in front."
+W1_HINT_PIX_1121,"Mo is the beginning, says Zeldina. The school report hangs Cuddles on Mo."
+W1_HINT_PIX_1121_2,"The song hangs Pudding on Cuddles. And Teddy comes at the end, with dots in front."
 W1_HINT_PIX_1122,Switch to me and find the spots where the tile paths cross. One per route. That is where I shake myself. Under protest.
 W1_HINT_PIX_1131,Mo-Cuddles-Pudding-Teddy. Say it to the door. Never say it to me.
 W1_HINT_PIX_1132,"Switch to me and click the three crossings. The brooms run into the storeroom, you shut the door. And you buy me a brush."
@@ -1306,8 +1311,9 @@ W1_HOGG_ALW_0320,"Brew the Potion of Glowing. The recipe: one egg, one jug of mi
 W1_HOGG_ALW_0340,Is it? Isn't it? The boundaries are fluid. Like batter.
 W1_HOGG_ALW_0342,"The mushroom. Without the mushroom it's breakfast, with the mushroom it's education. Glow mushrooms grow in the enchanted forest, beyond the troll bridge."
 W1_HOGG_ALW_0360,Milk? There's no milk left in the entire kingdom. The Lord takes his coffee black now. Hence the mood.
-W1_HOGG_ALW_0360_2,"But goats. Goats have milk, they say. I've never checked."
-W1_HOGG_ALW_0380,Six bottles. Someone swapped the labels. Probably me. My note tells you which one is right. In rhyme. I used to be a bard.
+W1_HOGG_ALW_0360_2,"But goats. Goats have milk, they say. I've never checked. The milk is in another castle."
+W1_HOGG_ALW_0380,Six bottles. Someone swapped the labels. Probably me.
+W1_HOGG_ALW_0380_2,My note tells you which one is right. In rhyme. I used to be a bard.
 W1_HOGG_ALW_0400,"A pupil. First year. He sneezed in Herbology, everyone laughed, he left. Very sensitive."
 W1_HOGG_ALW_0400_2,His school report is still in the archive. Never collected.
 W1_HOGG_ALW_0402,"I laughed too. He sneezed very loudly. I think of him often, mostly when things are in bloom."
@@ -1316,7 +1322,8 @@ W1_HOGG_ALW_0440,"Off you go. The cauldron won't run away. Well, it did once. Lo
 W1_HOGG_ALW_0550,Not the fish! That would be a quiche!
 W1_HOGG_ALW_0580,Three ingredients. Now the last one: one of the six bottles. Choose wisely. Or quickly. Either way you get a story.
 W1_HOGG_ALW_0610,"Six bottles on my shelf, as anyone can see: one potion and one oil, two poisons, two juices, all plain as can be. My shelf has never managed more, take it from me."
-W1_HOGG_ALW_0620,"The fish oil that stinks stands just right of the potion, quite near. The two giants are twins, filled up to the brim. And the ends of the shelf never hold what you're after, I fear. That's all of my rhymes, so don't shed a tear."
+W1_HOGG_ALW_0620,"The fish oil that stinks stands just right of the potion, quite near. The two giants are twins, filled up to the brim."
+W1_HOGG_ALW_0620_2,"And the ends of the shelf never hold what you're after, I fear. That's all of my rhymes, so don't shed a tear."
 W1_HOGG_ALW_0750,"Wrong bottle. Don't worry, it grows out. Usually upwards."
 W1_HOGG_ALW_0800,"Passed! The Potion of Glowing! Bottle it, take it, don't drink it. It tastes of pancake, and that's confusing."
 W1_HOGG_ALW_0820,"And because you passed, I'll show you how not to do it. Mouldword's school report. From the archive. As a deterrent."
@@ -1330,9 +1337,9 @@ W1_HOGG_MAX_0110,"Wonky school desks, and I bet there's gum stuck under every on
 W1_HOGG_MAX_0115,"There's a heart carved into one desk: ""A. + ladle"". The headmaster used to sit here himself."
 W1_HOGG_MAX_0120,"An empty blackboard. Either Alwin has nothing to say, or he's forgotten everything again."
 W1_HOGG_MAX_0125,"Right down in the corner there is something after all: ""Do not wipe!"" Everything around it has been wiped."
-W1_HOGG_MAX_0130,A cauldron bubbling away with nothing in it. It has nothing to say and keeps saying it anyway.
+W1_HOGG_MAX_0130,A cauldron with something green already bubbling in it. Alwin calls it the base. I call it suspicious.
 W1_HOGG_MAX_0135,I had a look inside. There's a noodle stuck to the bottom. Something other than potions has been cooked in here.
-W1_HOGG_MAX_0140,"Six brown bottles without labels, and two of them are twice as big. That's either magic or marketing."
+W1_HOGG_MAX_0140,"Six brown bottles with swapped labels, and two of them are a lot bigger. That's either magic or marketing."
 W1_HOGG_MAX_0145,"There are six rings of glue on the shelf. So the labels did exist once, and somebody didn't want them any more."
 W1_HOGG_MAX_0160,"High windows. Outside there's weather, inside there's a timetable."
 W1_HOGG_MAX_0165,"A pupil flies past outside, backwards. He waves as if that were the plan."
@@ -1367,9 +1374,11 @@ W1_HOGG_MAX_0860,A school report with a pet name on it. That's worse than any cl
 W1_HOGG_MAX_0870,"Glows in the dark, says so on the label anyway."
 W1_HOGG_MAX_0875,"I hold my hand over it, and it gets a bit brighter. Good enough for a night light, probably not for a Dark Lord."
 W1_HOGG_MAX_0880,I already passed the exam. One more potion and Alwin's going to hire me as a teacher.
-W1_HOGG_MAX_0890,"Bottom right it says: ""Conduct: outstandingly evil."" With a gold star. I bet he had that framed."
-W1_HOGG_MAX_0930,"A bottle with no label. Whether this is brave or stupid, the cauldron's about to decide."
+W1_HOGG_MAX_0890,"Conduct: top marks with a star, and underneath: ""outstandingly evil"". I bet he had that framed."
+W1_HOGG_MAX_0930,"A bottle with a lying label. Whether this is brave or stupid, the cauldron's about to decide."
 W1_HOGG_MAX_0940,"One bottle per go. If I tip two in at once, I bet I won't get a potion, just chaos."
+W1_HOGG_MAX_0945,"Back on the shelf. I changed my mind, you're allowed to do that with potions."
+W1_HOGG_MAX_0946,"I'll put this one back. That one, then."
 W1_HOGG_MAX_0950,In which castle?
 W1_HOGG_MAX_0970,Can't you just tell me which one it is?
 W1_HOGG_MAX_0985,"So what does rhyme with ""slime""?"
@@ -1512,6 +1521,8 @@ W1_LUFT_PIX_0270_2,"I say such things about humans reluctantly, and even more re
 W1_LUFT_PIX_0300,That is none of our business. We want an egg. Only an egg.
 W1_LUFT_PIX_0300_2,"Other people's flat-hunting is the most boring thing I know, and I know rain."
 W1_LUFT_PIX_0460,That is not a look. That is my face.
+W1_LUFT_PIX_0485,"Where the estate agent was standing, someone has scribbled on the wall. In chalk."
+W1_LUFT_PIX_0485_2,"Take a look before we go. I sense it matters, and my instincts are only ever wrong about vacuum cleaners."
 W1_LUFT_PIX_0530,…
 W1_LUFT_PIX_0590,"I have composed myself again. That was a shock, a real shock."
 W1_LUFT_PIX_0590_2,"I need tuna, immediately. Purely to stabilise my circulation."
@@ -1620,7 +1631,7 @@ W1_SMAU_GRI_0650,"Swords? We hit stones, not knights."
 W1_SMAU_HUM_0040,Fondue delivery for a housewarming! Who ordered?
 W1_SMAU_HUM_0530,Swords! Without names! You poor things. You're Ingrid. You're Ingrid the Second. And you … Gerald the Third.
 W1_SMAU_HUM_0670,"Too posh for the Pony Express. At my place, hams hang from the ceiling."
-W1_SMAU_MAX_0020,"A dragon in a headscarf, sitting on a pile of junk. I pictured this differently."
+W1_SMAU_MAX_0020,"A dragon in a headscarf, sitting in front of a pile of junk. I pictured this differently."
 W1_SMAU_MAX_0080,Bigger than Easter. Smaller than my problem.
 W1_SMAU_MAX_0085,"The egg has a faint scale pattern, and when I hold my hand over it, it's warm. It's important, I just don't know what for yet."
 W1_SMAU_MAX_0100,"Gold, heaps of it. And he's sitting on it like it's a beanbag."
@@ -1671,12 +1682,17 @@ W1_SMAU_PIX_0190,"Dust, gold and dragon sweat. And somewhere in there a single s
 W1_SMAU_PIX_0190_2,"that smells of adventure. I do not want to know where the other one is. Well, actually, I do."
 W1_SMAU_PIX_0640,"An egg, warmed by a dragon."
 W1_SMAU_PIX_0640_2,"If that does not turn out soft, then nothing in this world will ever be soft again."
+W1_SMAU_PIX_0721,We're missing the beginning. Only Zeldina knows the pet name it all starts with.
+W1_SMAU_PIX_0722,We're missing a piece from the middle. Moderwort's old school report should give it away.
+W1_SMAU_PIX_0723,"We're missing a pet name. The goblins sing it, if you let them."
+W1_SMAU_PIX_0724,We're missing the end. My guess is the chalk scribble on the wall at the castle in the air.
 W1_SMAU_PIX_0780,"The door said ""Mummy""."
 W1_SMAU_PIX_0780_2,I need a moment. Possibly two.
 W1_SMAU_PIX_0800,"The dragon sighs every thirty seconds, I have been counting."
 W1_SMAU_PIX_0800_2,"I had nothing else to do, and apparently neither do you."
 W1_SMAU_PIX_0810,The brooms are sweeping Smaugi's heap into piles. Order through terror.
 W1_SMAU_PIX_0810_2,Your grandmother does the same whenever visitors are announced.
+W1_SMAU_PIX_0826,Flowers that make you sneeze. There's a whole bush of them in the enchanted forest. Just a thought.
 W1_SMAU_PIX_0870,I keep things too. Under the sofa.
 W1_SMAU_PIX_0870_2,"What exactly, I shall not reveal. But it is very well sorted, and part of it is an olive."
 W1_SMAU_SMA_0010,Don't touch! That … that's all still good.
@@ -1709,6 +1725,7 @@ W1_SMAU_ZEL_0580,That one. Exactly that one. Over the dining table I don't have 
 W1_SMAU_ZEL_0600,Very.
 W1_SMAU_ZEL_0660,Torches in a tower full of wood? No thanks. I have plans for this tower.
 W1_SMAU_ZEL_0790,"Seven floors, and the door has a mother complex. I'll take it anyway."
+W1_SMAU_ZEL_0825,"Hold on. Moderwort is up there, and he sneezes at flowers. I'm not going in without flowers."
 W1_STAB_MAX_0010,"Shelves up to the ceiling, full of narrow boxes. Like a shoe shop for very thin people."
 W1_STAB_MAX_0015,One box is open and empty. That wand's probably already chosen its wizard. Hopefully not me.
 W1_STAB_MAX_0020,"A rolling ladder. In films somebody always glides across the shot on one of these, super elegantly. I'd glide out of the window."
@@ -1820,7 +1837,8 @@ W1_TAV_HUM_0520,"My cheese fondue! In the family for three hundred years. The po
 W1_TAV_HUM_0522,"Not while Minka's sitting next to it. She doesn't even let me near it. I stir with the long spoon, from over here."
 W1_TAV_HUM_0540,"That's Gerald, my favourite. Next to him Brenda, Gerald the Second and Nigel. Nigel rusts on principle."
 W1_TAV_HUM_0560,And you don't call your phone by its first name? What kind of person are you?
-W1_TAV_HUM_0580,"House wine, house red, house even redder. There's also the Mount Doomsday vintage on the list. Nobody's ever ordered it. It's right at the back of the cellar, behind the turnips."
+W1_TAV_HUM_0580,"House wine, house red, house even redder. There's also the Mount Doomsday vintage on the list."
+W1_TAV_HUM_0580_2,"Nobody's ever ordered it. It's right at the back of the cellar, behind the turnips."
 W1_TAV_HUM_0582,"Half an hour, if the turnips are peaceful. Longer if not."
 W1_TAV_HUM_0600,The Mount Doomsday. Really? Now? … Fine. It'll take a while. Don't touch anything. Especially not Gerald.
 W1_TAV_HUM_0630,Minka? She guards the pot. Ever since the thing with the bard. He used the cheese as hair gel.
@@ -1882,6 +1900,7 @@ W1_TAV_MAX_0721,And why do you want to get rid of it?
 W1_TAV_MAX_0730,Why don't you just throw it in the pot?
 W1_TAV_MAX_0750,You like riddle games?
 W1_TAV_MAX_0770,A bottle. That's on page one of every riddle book.
+W1_TAV_MAX_0785,I've got a riddle for you: what have I got in my pocket?
 W1_TAV_MAX_0790,"Bye, Gollo."
 W1_TAV_MAX_0920,She's hissing. That was a no. A very clear one.
 W1_TAV_MAX_0990,"I only understand meow, but that was a very convinced meow."
@@ -1889,7 +1908,7 @@ W1_TAV_MAX_1120,Gollo. I've got a riddle for you: what have I got in my pocket?
 W1_TAV_MAX_1150,No.
 W1_TAV_MAX_1170,"Nope, not that either."
 W1_TAV_MAX_1190,A tin of tuna. In brine.
-W1_TAV_MAX_1230,"A ring in the cheese. On TV that takes three seasons, and everyone's still sad at the end."
+W1_TAV_MAX_1230,"A ring in the cheese. As of now the fondue is cursed. Or seasoned, depending on who you ask."
 W1_TAV_MAX_1290,Cheese fondue to go. I didn't even know that was a thing.
 W1_TAV_MAX_1310,No. We're definitely going to need that.
 W1_TAV_MAX_1330,On TV you always end up needing everything. Especially the stuff you already ate.
@@ -1942,6 +1961,8 @@ W1_TAV_PIX_0950,Madame. Your fur is the colour of cream that has never done anyt
 W1_TAV_PIX_0970,"There is a stable outside. Two coconuts, a spot in the sun, no landlord."
 W1_TAV_PIX_0970_2,May I lead the way? No. May I follow? Absolutely.
 W1_TAV_PIX_1000,"She is now sitting in the stable admiring the coconuts. She thinks they are horses, and I did not contradict her."
+W1_TAV_PIX_1105,"Madame is outside, the landlord is in the cellar. Nobody's watching now."
+W1_TAV_PIX_1105_2,"Except Gollo. And his ring, he says."
 W1_TAV_PIX_1200,Barbaric. But effective.
 W1_TAV_PIX_1300,"Give. It. A pawful, that is all I ask."
 W1_TAV_PIX_1300_2,"I lured the cat away, at great risk to my heart, and that gives me a claim."

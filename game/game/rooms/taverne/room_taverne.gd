@@ -54,7 +54,7 @@ func _nach_uebergang() -> void:
 
 ## Pixel springt sichtbar hinauf (Sebastian, 14. November 2026): über die Kiste neben dem Korb und
 ## den Rahmen des Wandbretts auf den Dachbalken. Nach dem Überspringen sitzt er gleich oben.
-const BALKEN_WEG := [Vector2(352, 232), Vector2(342, 197), Vector2(300, 67)]
+const BALKEN_WEG := [Vector2(352, 232), Vector2(356, 205), Vector2(300, 67)]   # Zwischenlandung auf der Kistenkante, nicht im Hühnerkorb (Review Fund 27)
 
 func _pixel_auf_den_balken() -> void:
 	if not has_character("Pixel"):
@@ -94,6 +94,7 @@ func r1a_loesen() -> void:
 		Spiel.z("MIN", "W1_TAV_MIN_0960"),
 		Spiel.z("PIX", "W1_TAV_PIX_0970"),
 		Spiel.z("MIN", "W1_TAV_MIN_0980"),
+		_minka_geht_hinaus,
 		Zustand.loese.bind("R1a"),
 		_zustand_anwenden,
 		Spiel.z("MAX", "W1_TAV_MAX_0990"),
@@ -101,22 +102,45 @@ func r1a_loesen() -> void:
 	])
 	Zustand.loese("R1a")
 	_zustand_anwenden()
+	await _keiner_guckt()
+
+
+## Minka steht auf und geht zur Tür hinaus (0980 „folgt Pixel nach draußen“), Review Fund 18.
+func _minka_geht_hinaus() -> void:
+	if not has_character("Minka"):
+		return
+	var tuer := get_marker_position("VonDorfplatz")
+	await C.Minka.laufen_zu(Vector2(C.Minka.position.x + 70.0, 228.0), 80.0)
+	await C.Minka.laufen_zu(tuer, 110.0)
+	await C.Minka.ausblenden_und_weg()
 
 
 ## R1b: Humbert holt den Schicksalsberg (0600, 0610). Aufgerufen vom Gespräch.
 func r1b_loesen() -> void:
 	var minka_da := has_character("Minka")
 	await Spiel.sagen("HUM", "W1_TAV_HUM_0600")
+	# Humbert geht wirklich zur Kellertür hinter dem Tresen (Review Fund 18)
+	if has_character("Humbert"):
+		await C.Humbert.laufen_zu(get_marker_position("Keller") + Vector2(0, 40), 60.0)
+		await C.Humbert.ausblenden_und_weg()
 	Zustand.loese("R1b")
 	_zustand_anwenden()
 	if minka_da:
 		await Spiel.sagen("PIX", "W1_TAV_PIX_0610")
+	await _keiner_guckt()
+
+
+## Sind Minka und Humbert beide weg, sagt Pixel es einmal laut (Review Fund 6): Jetzt ist die
+## Gelegenheit für Gollos Rätselspiel.
+func _keiner_guckt() -> void:
+	if Zustand.geloest("R1a") and Zustand.geloest("R1b") and not Zustand.geloest("R1c") and not Zustand.ist("W1_TAV_KEINER_GUCKT"):
+		Zustand.setze("W1_TAV_KEINER_GUCKT")
+		await Spiel.sagen("PIX", "W1_TAV_PIX_1105")
 
 
 ## R1c: das Rätselspiel mit Gollo, Humbert kommt zurück (1120–1330). Aufgerufen von Gollo.
-func r1c_loesen() -> void:
-	await Spiel.szene([
-		Spiel.z("MAX", "W1_TAV_MAX_1120"),
+func r1c_loesen(mit_frage := true) -> void:
+	await Spiel.szene(([Spiel.z("MAX", "W1_TAV_MAX_1120")] if mit_frage else []) + [
 		Spiel.z("GOL", "W1_TAV_GOL_1130"),
 		Spiel.z("GOL", "W1_TAV_GOL_1140"),
 		Spiel.z("MAX", "W1_TAV_MAX_1150"),
@@ -126,6 +150,7 @@ func r1c_loesen() -> void:
 		Spiel.z("MAX", "W1_TAV_MAX_1190"),
 		Spiel.z("PIX", "W1_TAV_PIX_1200"),
 		Spiel.z("GOL", "W1_TAV_GOL_1210"),
+		_ring_fliegt,
 		Spiel.z("GOL", "W1_TAV_GOL_1220"),
 		Spiel.geben.bind("Goldmuenze"),
 		Spiel.z("MAX", "W1_TAV_MAX_1230"),
@@ -148,3 +173,30 @@ func r1c_loesen() -> void:
 	await Spiel.geben("Kaesefondue")
 	Zustand.loese("R1c")
 	_zustand_anwenden()
+
+
+## Gollo wirft den Ring im Bogen in den Fondue-Topf; dort zischt eine kleine Dampfwolke
+## (Review Fund 18; vorher geschah an dieser Stelle nichts).
+func _ring_fliegt() -> void:
+	if Spiel.testmodus or E.cutscene_skipped or not has_character("Gollo"):
+		return
+	var ring := Polygon2D.new()
+	var punkte := PackedVector2Array()
+	for k in 12:
+		var w := TAU * k / 12.0
+		punkte.append(Vector2(cos(w) * 3.0, sin(w) * 2.0))
+	ring.polygon = punkte
+	ring.color = Color("feae34")
+	ring.z_index = 40
+	var start: Vector2 = C.Gollo.position + Vector2(0, -60)
+	var ziel := Vector2(225, 128)   # Fondue-Topf auf dem Tresen
+	ring.position = start
+	add_child(ring)
+	var t := create_tween()
+	t.tween_method(func(k: float):
+		ring.position = start.lerp(ziel, k) + Vector2(0, -sin(k * PI) * 55.0)
+		ring.rotation = k * TAU * 2.0, 0.0, 1.0, 0.8)
+	await t.finished
+	ring.queue_free()
+	CQEffekte.rauchwolke(self, ziel + Vector2(0, 6), 26.0)
+	await get_tree().create_timer(0.5).timeout

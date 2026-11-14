@@ -65,21 +65,21 @@ position = Vector2(307, 257)
 description = "UI_OBJ_KREUZUNG_1"
 baseline = 7
 walk_to_point = Vector2(-1, 13)
-interaction_polygon = PackedVector2Array(-15, -7, 15, -7, 15, 7, -15, 7)
+interaction_polygon = PackedVector2Array(-20, -10, 20, -10, 20, 10, -20, 10)
 
 [node name="Kreuzung2" parent="Hotspots" unique_id=1520187438 instance=ExtResource("9_hyt04")]
 position = Vector2(417, 257)
 description = "UI_OBJ_KREUZUNG_2"
 baseline = 7
 walk_to_point = Vector2(-1, 13)
-interaction_polygon = PackedVector2Array(-15, -7, 15, -7, 15, 7, -15, 7)
+interaction_polygon = PackedVector2Array(-20, -10, 20, -10, 20, 10, -20, 10)
 
 [node name="Kreuzung3" parent="Hotspots" unique_id=2041476567 instance=ExtResource("10_kfhjp")]
 position = Vector2(371, 240)
 description = "UI_OBJ_KREUZUNG_3"
 baseline = 6
 walk_to_point = Vector2(-1, 16)
-interaction_polygon = PackedVector2Array(-15, -6, 15, -6, 15, 6, -15, 6)
+interaction_polygon = PackedVector2Array(-20, -9, 20, -9, 20, 9, -20, 9)
 
 [node name="Besen" parent="Hotspots" unique_id=1233246549 instance=ExtResource("11_8e6yq")]
 position = Vector2(350, 177.5)

@@ -602,11 +602,7 @@
      168
     ],
     [
-     292,
-     260
-    ],
-    [
-     300,
+     262,
      282
     ],
     [
@@ -2189,7 +2185,7 @@
      "name_key": "UI_OBJ_ZAPP_O_MAT",
      "rect": [
       318,
-      132,
+      141,
       105,
       112
      ],
@@ -2354,10 +2350,10 @@
      "script_name": "Drahtkleiderbuegel",
      "name_key": "UI_OBJ_DRAHTKLEIDERBUEGEL",
      "rect": [
-      609,
-      177,
-      17,
-      13
+      602,
+      174,
+      30,
+      34
      ],
      "gehe": [
       600,
@@ -2640,7 +2636,7 @@
    "name_key": "UI_OBJ_OPA",
    "groesse_px": 201,
    "spielbar": false,
-   "textfarbe": "#f5a04a",
+   "textfarbe": "#ffdc80",
    "sprite": "res://grafik/platzhalter/figur_opa.png",
    "raeume": [
     "dachboden"
@@ -2946,13 +2942,13 @@
    "id": "kalender",
    "name_key": "UI_OBJ_KALENDER",
    "raum": "dachboden",
-   "bild": "res://grafik/platzhalter/nah_kalender.png"
+   "bild": "res://grafik/nahansichten/kalender.png"
   },
   {
    "id": "opas_zettel",
    "name_key": "UI_OBJ_OPAS_ZETTEL",
    "raum": null,
-   "bild": "res://grafik/platzhalter/nah_opas_zettel.png"
+   "bild": "res://grafik/nahansichten/opas_zettel.png"
   }
  ],
  "dialoge": [

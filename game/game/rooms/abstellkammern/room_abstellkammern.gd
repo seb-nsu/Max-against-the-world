@@ -111,11 +111,19 @@ func passwort_teile() -> int:
 	].count(true)
 
 
+## Pixel sagt an der Tür, welcher Teil fehlt und wo er steckt (Review Fund 14): der erste
+## fehlende in der Reihenfolge des Passworts.
+func fehlender_teil_zeile() -> String:
+	var z: String = load("res://skripte/welt_1.gd").passwort_fehlt()
+	return z if not z.is_empty() else "W1_SMAU_PIX_0724"
+
+
 ## Rätsel 11a an der Geheimtür (0710–0790).
 func geheimtuer() -> void:
 	await Spiel.sagen("TUE", "W1_SMAU_TUE_0710")
 	if passwort_teile() < 4:
 		await Spiel.sagen("TUE", "W1_SMAU_TUE_0720")
+		await Spiel.sagen("PIX", fehlender_teil_zeile())
 		return
 	var uebrig := PASSWORT_TEILE.duplicate()
 	var folge: Array = []

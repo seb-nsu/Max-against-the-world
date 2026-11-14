@@ -212,3 +212,26 @@ func _r4c_setzen() -> void:
 	Zustand.loese("R4c")
 	Zustand.setze("W1_ZIEGEN_FOLGEN", false)  # Begleiter-Schalter endet mit R4
 	_zustand_anwenden()
+
+
+## Vor dem Märchen (R4) kommt niemand an Waldemar vorbei: Er steht am rechten Brückenende, und wer
+## weiter will, bleibt vor ihm stehen und sagt die Sperrzeile (Sebastian, 14. November 2026: Max lief
+## vorher über die Brücke).
+const SPERRE_ABSTAND := 40.0
+var _sperre_gesagt := 0.0
+
+
+func _process(delta: float) -> void:
+	super(delta)
+	if Engine.is_editor_hint() or Zustand.geloest("R4") or not is_instance_valid(C.player) or not has_character("Waldemar"):
+		return
+	_sperre_gesagt = maxf(0.0, _sperre_gesagt - delta)
+	var grenze: float = C.Waldemar.position.x - SPERRE_ABSTAND
+	var p: Vector2 = C.player.position
+	if p.x > grenze and p.y < 250.0:
+		C.player.stop_walking()
+		C.player.position = Vector2(grenze, clampf(p.y, 172.0, 186.0))
+		C.player.sync_buffered_position()
+		if _sperre_gesagt <= 0.0 and Spiel.in_szene == 0 and not Spiel.testmodus:
+			_sperre_gesagt = 6.0
+			Spiel.sagen("MAX", "W1_BRUE_MAX_0190")

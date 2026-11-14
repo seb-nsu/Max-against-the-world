@@ -22,6 +22,12 @@ func _on_click() -> void:
 
 
 func _berta_fliegt() -> void:
+	# Berta flattert im Bogen über zwei Sprünge auf den Dachbalken (Review Fund 18)
+	if is_instance_valid(room) and room.has_character("Huhn") and room.has_marker("HuhnBalken"):
+		var oben: Vector2 = room.get_marker_position("HuhnBalken")
+		var start: Vector2 = C.Huhn.position
+		await C.Huhn.springen_zu(start.lerp(oben, 0.5) + Vector2(-30, 0), 26.0, 0.4)
+		await C.Huhn.springen_zu(oben, 20.0, 0.4)
 	Zustand.setze("W1_BERTA_WEG")
 	if is_instance_valid(room) and room.has_method("_zustand_anwenden"):
 		room._zustand_anwenden()

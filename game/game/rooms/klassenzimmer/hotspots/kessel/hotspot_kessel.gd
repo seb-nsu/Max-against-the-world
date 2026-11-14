@@ -71,6 +71,8 @@ func _max_als_pilz(an: bool) -> void:
 	if is_instance_valid(C.Max) and C.Max.has_method("grafik_laden"):
 		if an and not ResourceLoader.exists("res://grafik/figuren/max_pilz.png"):
 			return
+		# Rauchwolke, und in ihrem dichtesten Moment der Bildtausch (Review Fund 18)
+		await CQEffekte.rauchwolke(C.Max.get_parent(), C.Max.position + Vector2(0, -40), 70.0)
 		C.Max.grafik_laden("max_pilz" if an else "")
 
 
@@ -102,4 +104,5 @@ func _r6b_setzen() -> void:
 	await flasche_zurueck()
 	await Spiel.geben("Leuchttrank")
 	await Spiel.geben("Zeugnis")
+	await Spiel.abgeben("Hinweiszettel")   # verbraucht, reist nicht mit (Review Fund 34)
 	Zustand.loese("R6b")

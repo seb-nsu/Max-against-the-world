@@ -239,3 +239,50 @@ Alle in `review-prolog-welt-1/`. Die Zahl am Anfang ist die Nummer des Funds; `0
 - **Zeiten:** Die Minuten in der Rätsel-Übersicht sind Schätzungen aus Schritten, Wegen und Textmenge, keine Messung an Menschen.
 - **Einzelne Zustände:** Zeldina, Grimmzahn und Humbert in Smaugis Kammer, die Bohnenranke, die offene Rune-Tür und Waldemars Nummer habe ich im Code und im Durchspieltest geprüft, aber nicht als Bild aufgenommen. Der Schüler am Fenster ist in den Aufnahmen nicht erschienen.
 - **Englische Fassung** und die Welten 2 bis 4 waren nicht Teil des Auftrags.
+
+## 11. Umsetzung (14. November 2026)
+
+Alle 36 Funde und die „teilweise“-Einträge des P15-Abgleichs sind bearbeitet. Vorher-nachher-Bilder liegen in `review-prolog-welt-1/umsetzung/`. Durchspieltest 884 Prüfungen ohne Fehler, die übrigen Godot-Tests und alle Werkzeug-Prüfungen grün, Bildvergleich-Referenzen neu geschrieben.
+
+| Nr. | Stand | Was geändert wurde |
+| --- | --- | --- |
+| 1 | erledigt | Opa redet und geht mit dem gemalten Körper; 3D-Bilder aus `opa.png` entfernt. Gang neu nach den 3D-Winkeln (`rig_gang2.py`, Hand als feste Ebene). [Bild](review-prolog-welt-1/umsetzung/opa_koerper_vorher_nachher.png) |
+| 2 | erledigt | Opa lässt Plätze näher als 70 Pixel an Max aus, `walk_speed` 55, erste Pause 25 s |
+| 3 | erledigt | Max-Gang neu: Schritt 1,8-fach gespreizt, Schuhe bleiben waagrecht, Standfuß auf der Bodenlinie; Tempo aus dem gemessenen Fußweg (ms 57, `walk_speed` 135). [GIF](review-prolog-welt-1/umsetzung/max_gang_vorher_nachher.gif) |
+| 4 | erledigt | Nahansichten Kalender und Opas Zettel gezeichnet (`tools/nahansichten_prolog.py`), auch englisch. [Kalender](review-prolog-welt-1/umsetzung/nah_kalender.png), [Zettel](review-prolog-welt-1/umsetzung/opas_zettel_nachher.png) |
+| 5 | erledigt | Waldemar am rechten Brückenende (395, 186), Ausgang 100 × 60. [Bild](review-prolog-welt-1/umsetzung/r_trollbruecke.png) |
+| 6 | erledigt | Option „Ich hab ein Rätsel für dich“ (0785) startet das Rätselspiel; Pixel sagt einmal, dass keiner mehr guckt (1105) |
+| 7 | erledigt | Minka sitzt auf dem Tresen am Topf (238, 178). [Bild](review-prolog-welt-1/umsetzung/r2_taverne.png) |
+| 8 | erledigt | Posen auf Haar-, Hoodie- und Jeansfarben des Sprites, Kopf der Sitzpose verkleinert; Toadi rennt mit doppelt schnellem Gehzyklus |
+| 9 | erledigt | Toadis Hut ist eine gestreifte Pilzkappe mit Lamellen. [Bild](review-prolog-welt-1/umsetzung/figuren_toadi_smaugi_grimmzahn.png) |
+| 10 | erledigt | Acht Blasen geteilt, Warnung ab 140 Zeichen in `pruefen.py`, Blasen beginnen nie über y 48 |
+| 11 | erledigt | Gesprächsmenü sechs Zeilen |
+| 12 | erledigt | Opa hellgelb, Sprechtext mit 3 px dunklem Rand |
+| 13 | erledigt | Flasche lässt sich zurückstellen oder tauschen (0945, 0946) |
+| 14 | erledigt | Maklerin rechts neben Zeldina; Pixel zeigt nach Rätsel 9 auf die Kritzelei (0485); an der Tür und an der Pfote sagt Pixel, welcher Teil fehlt (0721–0724) |
+| 15 | erledigt | Ohne Pollen hält Zeldina Max an der offenen Geheimtür zurück (0825, 0826) |
+| 16 | erledigt | Klick auf das sitzende Huhn wie Klick aufs Ei, Ei-Klickfläche 20 × 20, Hinweise nennen Berta, Rätseldoku nachgezogen |
+| 17 | erledigt | Drei Zauberbesen fegen ihre Routen und biegen nach jeder Haarspur zur Kammertür ab; Übungsbesen saust in den Schrank; Kreuzungen heller und 40 × 20. [GIF](review-prolog-welt-1/umsetzung/turmkeller_besen.gif) |
+| 18 | erledigt | Regiezeilen als Erzählzeile oben im Bild; Humbert geht in den Keller, Minka zur Tür, Rotkäppchen fährt vor und ab, Berta flattert im Bogen, Ring fliegt in den Topf, Rauchwolke bei der Pilz-Verwandlung, Maklerin springt von der Wolke |
+| 19 | erledigt | „Die Milch ist in einem anderen Schloss.“ in 0360 |
+| 20 | erledigt | Smaugi entsättigt, Schild in Pergament mit Kritzeln, Raumlicht (`licht`) in Zauberwald, Bergwerk, Turmkeller, Kammern und Thronsaal |
+| 21 | erledigt | Linksklick auf die Leuchtpilze nimmt den Pilz |
+| 22 | erledigt | Bildvergleich hält die Animationen vor dem Foto an |
+| 23 | erledigt | Beim Überspringen keine Nahansicht und keine Wartezeit für Fall und Kamerawackeln |
+| 24 | erledigt | Max stellt sich 55 Pixel seitlich vor Figuren, Pixel steht 45 statt 20 Pixel neben ihm |
+| 25 | erledigt | Kessel, Etiketten, Streikschilder, Dosenöffner, Krug, Smaugi, Zeugnis: Text ans Bild (Zeugnis: Fußnote „herausragend böse“ im Bild) |
+| 26 | erledigt | Dorfplatz `skala` 0,72, Ankunft weiter links (Taverne im Bild), Pixel läuft bei 0220 Richtung Taverne |
+| 27 | erledigt | Sitzbild in den Farben des Stehbilds, Gang mit vier bewegten Beinen, Zwischenlandung auf der Kistenkante |
+| 28 | erledigt | „junger Mann“ im Prolog auf drei Stellen, Taverne 1230 ohne Serienvergleich |
+| 29 | erledigt | Notizbuch als gemalte Seite mit Spiralbindung und Tinte. [Bild](review-prolog-welt-1/umsetzung/notizbuch_nachher.png) |
+| 30 | erledigt | Treppengang neu mit waagrechten Schuhen, ohne Naht am Unterschenkel |
+| 31 | erledigt | Brückenausgang 50 breit, Okarina, Lerntagebuch, Zahnstocher 20 × 20 |
+| 32 | erledigt | Max' Augen mit drei weißen Pixeln |
+| 33 | erledigt | Fugen der linken Luftschloss-Hälfte in den Farben der rechten. [Bild](review-prolog-welt-1/umsetzung/r_luftschloss.png) |
+| 34 | erledigt | Steckbrief geht an die Maklerin, Hinweiszettel verschwindet mit dem Trank |
+| 35 | erledigt | Rätseldoku: Ei (Berta), Thunfischdose im Karton, Krug am Türpfosten |
+| 36 | erledigt | README-Satz zum ersten Import |
+
+Außerdem (Sebastian, 14. November 2026): Zapp-O-Mat steht mit den Rollen auf den Dielen, Ein erster Versuch für Hämmern und Rühren ([Schmied](review-prolog-welt-1/umsetzung/schmied_haemmert.gif), [Alwin](review-prolog-welt-1/umsetzung/alwin_ruehrt.gif)) passt nicht (Sebastian: Alwin soll sich über den Kessel beugen, der Schmied muss die Zange in der Hand halten) und ist abgeschaltet, bis gemalte Schlüsselposen da sind. P15-Einträge „teilweise“: Satzung neu gesetzt ([Bild](review-prolog-welt-1/umsetzung/satzung_nachher.png)), englische Fassungen aller Nahansichten, Ausgangspfeil in Richtung des Ausgangs, Leuchtpilze pulsieren, violetter Lichtschein der offenen Rune-Tür ([Bild](review-prolog-welt-1/umsetzung/r2_bergwerk_rechts.png)), Bergwerk heller, Schlagschatten der Flaschen, Bohnenranke wächst sichtbar und endet an der Wolke ([Bild](review-prolog-welt-1/umsetzung/r2_dorfplatz_ranke.png)), Mund beim Reden für Humbert, Gollo und Stabmacher, Wasserschloss-Größen ([Bild](review-prolog-welt-1/umsetzung/r2_wasserschloss.png)), Zauberstab-Laden wärmer mit umrandeten Kleinteilen ([Bild](review-prolog-welt-1/umsetzung/r2_zauberstabladen.png)), Kokosnüsse und Glasschuh doppelt so groß. Den Kleiderbügel stellt Sebastian selbst im Editor ein.
+
+Noch offen, weil neue gemalte Bilder nötig sind: Max' Gesten (bücken, zeigen, gähnen), Pixels Putzen und Fauchen, Opas Panik-Pose, ein echtes Aufsteh-Zwischenbild im Wohnzimmer statt Überblenden.

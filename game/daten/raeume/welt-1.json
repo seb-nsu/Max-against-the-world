@@ -128,7 +128,7 @@
    ],
    "marker": {
     "start": [
-     600,
+     430,
      320
     ],
     "von_taverne": [
@@ -161,7 +161,7 @@
     ]
    },
    "tiefe": 0.4,
-   "skala": 0.8,
+   "skala": 0.72,
    "ambiente": {
     "voegel": {
      "bereich": [
@@ -185,8 +185,9 @@
      "bild": "res://grafik/props/kokosnuesse.png",
      "pos": [
       345,
-      224
-     ]
+      226
+     ],
+     "skala": 2
     },
     "bohnenranke": {
      "bild": "res://grafik/props/bohnenranke.png",
@@ -660,7 +661,8 @@
        "zeile": "W1_DORF_MAX_0180",
        "sprecher": "MAX",
        "blasen": [
-        "W1_DORF_MAX_0180"
+        "W1_DORF_MAX_0180",
+        "W1_DORF_MAX_0180_2"
        ]
       },
       {
@@ -1073,6 +1075,27 @@
      "baseline": 200
     }
    },
+   "effekte": [
+    {
+     "art": "flackern",
+     "pos": [
+      477,
+      182
+     ],
+     "r": [
+      30,
+      24
+     ]
+    },
+    {
+     "art": "dampf",
+     "pos": [
+      224,
+      136
+     ],
+     "breite": 24
+    }
+   ],
    "figuren": [
     {
      "id": "humbert",
@@ -1096,8 +1119,8 @@
      "id": "minka",
      "script_name": "Minka",
      "pos": [
-      470,
-      250
+      238,
+      178
      ]
     },
     {
@@ -1915,6 +1938,16 @@
    },
    "tiefe": 0.8,
    "vordergrund": {
+    "amboss": {
+     "bild": "res://grafik/props/amboss_vorn.png",
+     "rect": [
+      218,
+      180,
+      92,
+      102
+     ],
+     "baseline": 272
+    },
     "hufeisen": {
      "bild": "res://grafik/props/hufeisen_zange.png",
      "pos": [
@@ -1924,6 +1957,30 @@
      "schatten": false
     }
    },
+   "effekte": [
+    {
+     "art": "flackern",
+     "pos": [
+      146,
+      160
+     ],
+     "r": [
+      38,
+      30
+     ]
+    },
+    {
+     "art": "flackern",
+     "pos": [
+      167,
+      144
+     ],
+     "r": [
+      14,
+      16
+     ]
+    }
+   ],
    "figuren": [
     {
      "id": "schmied",
@@ -2769,7 +2826,11 @@
       19,
       29
      ],
-     "baseline": 141
+     "baseline": 141,
+     "wandschatten": [
+      3,
+      -1
+     ]
     },
     "flasche_2": {
      "bild": "res://grafik/props/flasche_2.png",
@@ -2779,7 +2840,11 @@
       18,
       44
      ],
-     "baseline": 141
+     "baseline": 141,
+     "wandschatten": [
+      3,
+      -1
+     ]
     },
     "flasche_3": {
      "bild": "res://grafik/props/flasche_3.png",
@@ -2789,7 +2854,11 @@
       17,
       29
      ],
-     "baseline": 141
+     "baseline": 141,
+     "wandschatten": [
+      3,
+      -1
+     ]
     },
     "flasche_4": {
      "bild": "res://grafik/props/flasche_4.png",
@@ -2799,7 +2868,11 @@
       18,
       29
      ],
-     "baseline": 141
+     "baseline": 141,
+     "wandschatten": [
+      3,
+      -1
+     ]
     },
     "flasche_5": {
      "bild": "res://grafik/props/flasche_5.png",
@@ -2809,7 +2882,11 @@
       18,
       44
      ],
-     "baseline": 141
+     "baseline": 141,
+     "wandschatten": [
+      3,
+      -1
+     ]
     },
     "flasche_6": {
      "bild": "res://grafik/props/flasche_6.png",
@@ -2819,9 +2896,44 @@
       17,
       34
      ],
-     "baseline": 141
+     "baseline": 141,
+     "wandschatten": [
+      3,
+      -1
+     ]
     }
    },
+   "effekte": [
+    {
+     "art": "blasen",
+     "pos": [
+      196,
+      168
+     ],
+     "breite": 40,
+     "farbe": "#b6f2a0"
+    },
+    {
+     "art": "dampf",
+     "pos": [
+      196,
+      160
+     ],
+     "breite": 36,
+     "farbe": "#d8f5d0"
+    },
+    {
+     "art": "flackern",
+     "pos": [
+      195,
+      222
+     ],
+     "r": [
+      20,
+      7
+     ]
+    }
+   ],
    "figuren": [
     {
      "id": "alwin",
@@ -3502,13 +3614,24 @@
     ]
    },
    "tiefe": 0.4,
+   "effekte": [
+    {
+     "art": "glitzern",
+     "bereich": [
+      250,
+      300,
+      170,
+      55
+     ]
+    }
+   ],
    "figuren": [
     {
      "id": "waldemar",
      "script_name": "Waldemar",
      "pos": [
-      440,
-      275
+      395,
+      186
      ]
     }
    ],
@@ -3794,7 +3917,7 @@
      "rect": [
       0,
       165,
-      22,
+      50,
       45
      ],
      "gehe": [
@@ -3857,10 +3980,10 @@
      "ziel": "wasserschloss",
      "name_key": "UI_OBJ_WEG_ZUM_WASSERSCHLOSS",
      "rect": [
-      420,
-      115,
-      80,
-      45
+      410,
+      105,
+      100,
+      60
      ],
      "gehe": [
       490,
@@ -3979,7 +4102,8 @@
      226
     ]
    },
-   "tiefe": 0.45,
+   "tiefe": 0.4,
+   "skala": 0.85,
    "figuren": [
     {
      "id": "schwan",
@@ -4357,8 +4481,9 @@
      "bild": "res://grafik/props/glasschuh.png",
      "pos": [
       770,
-      214
-     ]
+      216
+     ],
+     "skala": 2
     },
     "niesrosen_zu": {
      "bild": "res://grafik/props/niesrosen_zu.png",
@@ -4377,6 +4502,33 @@
      "nach": "R7"
     }
    },
+   "licht": "#d2dcc8",
+   "leuchten": [
+    {
+     "pos": [
+      540,
+      238
+     ],
+     "r": [
+      40,
+      16
+     ],
+     "farbe": "#7ff2e0",
+     "takt": 2.4
+    },
+    {
+     "pos": [
+      610,
+      236
+     ],
+     "r": [
+      30,
+      13
+     ],
+     "farbe": "#9ff0ff",
+     "takt": 3.1
+    }
+   ],
    "figuren": [
     {
      "id": "rotkaeppchen",
@@ -4953,7 +5105,7 @@
      "id": "maklerin",
      "script_name": "Maklerin",
      "pos": [
-      905,
+      965,
       262
      ]
     },
@@ -5338,6 +5490,7 @@
      ]
     }
    },
+   "licht": "#c8b4a8",
    "figuren": [
     {
      "id": "grimmzahn",
@@ -5790,6 +5943,53 @@
     ]
    },
    "tiefe": 0.7,
+   "licht": "#b9b4d0",
+   "effekte": [
+    {
+     "art": "flackern",
+     "pos": [
+      162,
+      86
+     ],
+     "r": [
+      9,
+      11
+     ]
+    },
+    {
+     "art": "flackern",
+     "pos": [
+      200,
+      86
+     ],
+     "r": [
+      9,
+      11
+     ]
+    },
+    {
+     "art": "flackern",
+     "pos": [
+      447,
+      86
+     ],
+     "r": [
+      9,
+      11
+     ]
+    },
+    {
+     "art": "flackern",
+     "pos": [
+      628,
+      92
+     ],
+     "r": [
+      9,
+      11
+     ]
+    }
+   ],
    "hintergrund_nach": {
     "R11b": "res://grafik/hintergruende/w1_bg_turmkeller_zu_v01.png"
    },
@@ -5896,10 +6096,10 @@
      "script_name": "Kreuzung1",
      "name_key": "UI_OBJ_KREUZUNG_1",
      "rect": [
-      292,
-      250,
-      30,
-      14
+      287,
+      247,
+      40,
+      20
      ],
      "gehe": [
       306,
@@ -5928,10 +6128,10 @@
      "script_name": "Kreuzung2",
      "name_key": "UI_OBJ_KREUZUNG_2",
      "rect": [
-      402,
-      250,
-      30,
-      14
+      397,
+      247,
+      40,
+      20
      ],
      "gehe": [
       416,
@@ -5944,10 +6144,10 @@
      "script_name": "Kreuzung3",
      "name_key": "UI_OBJ_KREUZUNG_3",
      "rect": [
-      356,
-      234,
-      30,
-      12
+      351,
+      231,
+      40,
+      18
      ],
      "gehe": [
       370,
@@ -6324,6 +6524,7 @@
      "vor": "R12"
     }
    },
+   "licht": "#c8c0dc",
    "hintergrund_nach": {
     "R12": "res://grafik/hintergruende/w1_bg_abstellkammern_aufgeraeumt_v01.png"
    },
@@ -6791,6 +6992,32 @@
         }
        ],
        "bedingung_text": "Teil 1"
+      },
+      {
+       "zeile": "W1_SMAU_ZEL_0825",
+       "sprecher": "ZEL",
+       "blasen": [
+        "W1_SMAU_ZEL_0825"
+       ],
+       "bedingung": [
+        {
+         "art": "nach",
+         "raetsel": "R12"
+        },
+        {
+         "art": "vor",
+         "raetsel": "R7"
+        }
+       ],
+       "folge": [
+        {
+         "zeile": "W1_SMAU_PIX_0826",
+         "sprecher": "PIX",
+         "blasen": [
+          "W1_SMAU_PIX_0826"
+         ]
+        }
+       ]
       }
      ]
     }
@@ -6884,6 +7111,7 @@
      ]
     }
    },
+   "licht": "#bcb4d4",
    "figuren": [
     {
      "id": "moderwort",
@@ -9533,7 +9761,8 @@
        "zeile": "W1_TAV_HUM_0580",
        "sprecher": "HUM",
        "blasen": [
-        "W1_TAV_HUM_0580"
+        "W1_TAV_HUM_0580",
+        "W1_TAV_HUM_0580_2"
        ],
        "regie": "Hinweis R1b; schaltet Option 0590 frei"
       },
@@ -9747,6 +9976,28 @@
      ],
      "beendet": false,
      "bleibt": true
+    },
+    {
+     "id": "0785",
+     "frage": "W1_TAV_MAX_0785",
+     "antworten": [],
+     "beendet": false,
+     "bleibt": true,
+     "bedingung": [
+      {
+       "art": "nach",
+       "raetsel": "R1a"
+      },
+      {
+       "art": "nach",
+       "raetsel": "R1b"
+      },
+      {
+       "art": "vor",
+       "raetsel": "R1c"
+      }
+     ],
+     "oeffnet": true
     },
     {
      "id": "0790",
@@ -10198,7 +10449,8 @@
        "zeile": "W1_HOGG_ALW_0380",
        "sprecher": "ALW",
        "blasen": [
-        "W1_HOGG_ALW_0380"
+        "W1_HOGG_ALW_0380",
+        "W1_HOGG_ALW_0380_2"
        ],
        "regie": "gibt Alwins Hinweiszettel"
       },
@@ -11197,6 +11449,15 @@
         "W1_LUFT_TOA_0640"
        ],
        "regie": "R9 gelöst"
+      },
+      {
+       "zeile": "W1_LUFT_PIX_0485",
+       "sprecher": "PIX",
+       "blasen": [
+        "W1_LUFT_PIX_0485",
+        "W1_LUFT_PIX_0485_2"
+       ],
+       "regie": "nach R9, wenn die Maklerin weg ist"
       }
      ],
      "beendet": false,

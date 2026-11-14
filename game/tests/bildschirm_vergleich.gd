@@ -95,16 +95,36 @@ func _foto_raum(ab: String, r: Dictionary) -> Image:
 		if n.visible:
 			ebenen.append(n)
 			n.visible = false
+	# Atmende Figuren (Smaugi, Moderwort) und andere Schleifen auf ihr erstes Bild: sonst trifft
+	# das Foto zufällig ein anderes Bild als die Referenz (Review Fund 22)
+	var angehalten: Array[AnimationPlayer] = []
+	for ap in R_current_animationen():
+		if ap.is_playing():
+			ap.seek(0.0, true)
+			ap.pause()
+			angehalten.append(ap)
 	await process_frame
 	await process_frame
 	await RenderingServer.frame_post_draw
 	var bild := root.get_texture().get_image()
 	for n in ebenen:
 		n.visible = true
+	for ap in angehalten:
+		if is_instance_valid(ap):
+			ap.play()
 	bild.convert(Image.FORMAT_RGB8)
 	if bild.get_size() != Vector2i(BREITE, HOEHE):
 		bild.resize(BREITE, HOEHE, Image.INTERPOLATE_NEAREST)
 	return bild
+
+
+func R_current_animationen() -> Array[AnimationPlayer]:
+	var out: Array[AnimationPlayer] = []
+	var raum = root.get_node("R").current
+	if is_instance_valid(raum):
+		for n in raum.find_children("*", "AnimationPlayer", true, false):
+			out.append(n)
+	return out
 
 
 ## Wartet, bis keine Szene mehr läuft und die Übergänge fertig sind.

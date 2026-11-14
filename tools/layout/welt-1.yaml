@@ -47,7 +47,7 @@ dorfplatz:
   # hinten, deshalb starke Tiefe: Max ist vorn 100 Prozent groß und an den Ladentüren etwa halb so groß.
   hintergrund: res://grafik/hintergruende/w1_bg_dorfplatz_v03.png
   tiefe: 0.4
-  skala: 0.8                    # alle Figuren 20 Prozent kleiner: Max war fast so hoch wie der Ring-Laden (Sebastian, 13. November 2026)
+  skala: 0.72                   # alle Figuren 28 Prozent kleiner: Max war fast so hoch wie der Ring-Laden (Sebastian, 13. November 2026); 0.8 → 0.72, weil Max an den Ladentüren noch größer als die Tür war (Review Fund 26)
   # Lebendiger Hintergrund (P16): Vögel am Himmel über den Hügeln, Windstoß mit Blättern über den Platz
   ambiente:
     voegel: {bereich: [0, 15, 1280, 45]}
@@ -56,7 +56,7 @@ dorfplatz:
                 [640, 250], [648, 262], [752, 262], [756, 252], [818, 252], [822, 266], [912, 266], [916, 240],
                 [1000, 232], [1160, 244], [1180, 230], [1279, 232], [1279, 357]]
   marker:
-    start: [600, 320]
+    start: [430, 320]             # weiter links, damit die Taverne beim Ankommen im Bild ist (Review Fund 26)
     von_taverne: [165, 300]
     von_schmiede: [1075, 258]
     von_zauberstabladen: [681, 268]
@@ -68,7 +68,7 @@ dorfplatz:
     toadi: [720, 300]
   # Deko und Rätsel-Sprites über dem Hintergrund (13. November 2026): Kokosnüsse im Stall, Bohnenranke nach R8
   vordergrund:
-    kokosnuesse: {bild: res://grafik/props/kokosnuesse.png, pos: [345, 224]}
+    kokosnuesse: {bild: res://grafik/props/kokosnuesse.png, pos: [345, 226], skala: 2}   # doppelt, sonst ohne Text nicht zu erkennen (Review P15)
     bohnenranke: {bild: res://grafik/props/bohnenranke.png, pos: [785, 258], nach: R8, schatten: false}
   alias:
     luftschloss_am_himmel: luftschloss
@@ -101,6 +101,9 @@ dorfplatz:
 
 taverne:
   farbe: "#6e4a32"
+  effekte:                     # lebendiger Hintergrund (P16, Review 14. November 2026)
+    - {art: flackern, pos: [477, 182], r: [30, 24]}
+    - {art: dampf, pos: [224, 136], breite: 24}
   hintergrund: res://grafik/hintergruende/w1_bg_taverne_v01.png
   tiefe: 0.8
   laufbereich: [[130, 357], [250, 262], [255, 215], [335, 215], [338, 230], [388, 230], [392, 222], [420, 232], [555, 232], [590, 228], [639, 228], [639, 357]]
@@ -115,7 +118,7 @@ taverne:
   figuren:
     humbert: [150, 232]
     gollo: [282, 264]
-    minka: [470, 250]
+    minka: [238, 178]
     huhn: [363, 180]             # sitzt im Korb des Hintergrunds; eigener Korb im Sprite abgeschnitten
   blick:
     humbert: rechts
@@ -145,13 +148,16 @@ taverne:
     schwerter_sammlung: {rect: [430, 45, 95, 55], gehe: [480, 250], name: Schwerter}
     leere_schilder: {rect: [432, 102, 92, 15], gehe: [480, 250], name: Leere Schilder}
   props:
-    ziegenfell_vorleger: {rect: [424, 231, 172, 49], gehe: [510, 300]}
+    ziegenfell_vorleger: {rect: [424, 231, 172, 49], gehe: [510, 300]}   # liegt flach: Baseline -60 in der Szene, Figuren stehen immer darauf (Sebastian, 14. November 2026: Max versank vor dem Kamin)
     ei: {rect: [366, 166, 12, 12], gehe: [362, 240]}   # „Ei unter dem Huhn“: schaut vorn zwischen Huhn und Korbrand hervor
   ausgaenge:
     dorfplatz: {rect: [590, 70, 50, 160], gehe: [605, 245], id: ausgang_dorfplatz}
 
 schmiede:
   farbe: "#5d4a42"
+  effekte:                     # lebendiger Hintergrund (P16, Review 14. November 2026)
+    - {art: flackern, pos: [146, 160], r: [38, 30]}
+    - {art: flackern, pos: [167, 144], r: [14, 16]}
   hintergrund: res://grafik/hintergruende/w1_bg_schmiede_v01.png
   tiefe: 0.8
   laufbereich: [[130, 357], [110, 300], [205, 276], [225, 262], [300, 222], [380, 216], [555, 216], [580, 228], [639, 232], [639, 357]]
@@ -159,12 +165,13 @@ schmiede:
     start: [600, 262]
     von_dorfplatz: [600, 262]
   figuren:
-    schmied: [330, 242]
+    schmied: [330, 242]            # hinter dem Amboss (Hämmern)
     schmiede_ziege: [470, 300]
   blick:
     schmied: links
   vordergrund:
-    hufeisen: {bild: res://grafik/props/hufeisen_zange.png, pos: [248, 213], schatten: false}   # Hufeisen liegt auf dem Amboss, Griffe hängen vorn herunter
+    amboss: {bild: res://grafik/props/amboss_vorn.png, rect: [218, 180, 92, 102], baseline: 272}   # Amboss mit Klotz als Vordergrund: der Schmied steht dahinter und hämmert (Sebastian, 14. November 2026)
+    hufeisen: {bild: res://grafik/props/hufeisen_zange.png, pos: [248, 213], schatten: false}   # Hufeisen liegt auf dem Amboss, Griffe hängen vorn herunter (bis die Schmied-Posen da sind)
   alias:
     krug_beim_kochgeschirr: krug
     ziege: schmiede_ziege
@@ -206,6 +213,10 @@ zauberstabladen:
 
 klassenzimmer:
   farbe: "#5a6988"
+  effekte:                     # lebendiger Hintergrund (P16, Review 14. November 2026)
+    - {art: blasen, pos: [196, 168], breite: 40, farbe: "#b6f2a0"}
+    - {art: dampf, pos: [196, 160], breite: 36, farbe: "#d8f5d0"}
+    - {art: flackern, pos: [195, 222], r: [20, 7]}
   # Echter Hintergrund (13. November 2026, Sebastians Gemini-Fassung: Kessel unter dem Fenster, Bänke vor
   # der Tafel, Regal und Schrank rechts, drei Fenster; tools/pixelieren.py). Die sechs Flaschen sind Kopien von zwei
   # Flaschen (1, 3, 4, 6 gleich; 2 und 5 groß), Feuer und Blasen am Kessel nach dem Umrechnen nachgefärbt.
@@ -226,12 +237,12 @@ klassenzimmer:
   vordergrund:
     socke: {bild: res://grafik/props/socke_loecher.png, pos: [402, 202]}
     # Die sechs Flaschen sind eigene Sprites; die getragene fehlt im Regal (room_klassenzimmer.gd)
-    flasche_1: {bild: res://grafik/props/flasche_1.png, rect: [400, 111, 19, 29], baseline: 141}
-    flasche_2: {bild: res://grafik/props/flasche_2.png, rect: [419, 96, 18, 44], baseline: 141}
-    flasche_3: {bild: res://grafik/props/flasche_3.png, rect: [437, 111, 17, 29], baseline: 141}
-    flasche_4: {bild: res://grafik/props/flasche_4.png, rect: [454, 111, 18, 29], baseline: 141}
-    flasche_5: {bild: res://grafik/props/flasche_5.png, rect: [472, 96, 18, 44], baseline: 141}
-    flasche_6: {bild: res://grafik/props/flasche_6.png, rect: [490, 106, 17, 34], baseline: 141}
+    flasche_1: {bild: res://grafik/props/flasche_1.png, rect: [400, 111, 19, 29], baseline: 141, wandschatten: [3, -1]}
+    flasche_2: {bild: res://grafik/props/flasche_2.png, rect: [419, 96, 18, 44], baseline: 141, wandschatten: [3, -1]}
+    flasche_3: {bild: res://grafik/props/flasche_3.png, rect: [437, 111, 17, 29], baseline: 141, wandschatten: [3, -1]}
+    flasche_4: {bild: res://grafik/props/flasche_4.png, rect: [454, 111, 18, 29], baseline: 141, wandschatten: [3, -1]}
+    flasche_5: {bild: res://grafik/props/flasche_5.png, rect: [472, 96, 18, 44], baseline: 141, wandschatten: [3, -1]}
+    flasche_6: {bild: res://grafik/props/flasche_6.png, rect: [490, 106, 17, 34], baseline: 141, wandschatten: [3, -1]}
   # Lebendiger Hintergrund (P16): ab und zu fliegt ein Schüler rückwärts am linken Fenster vorbei
   ambiente:
     schueler: {bild: res://grafik/props/schueler_besen.png, bereich: [182, 40, 42, 70]}
@@ -256,6 +267,8 @@ klassenzimmer:
 
 trollbruecke:
   farbe: "#6a8a4a"
+  effekte:                     # lebendiger Hintergrund (P16, Review 14. November 2026)
+    - {art: glitzern, bereich: [250, 300, 170, 55]}
   # Echter Hintergrund (13. November 2026, Sebastians vierte Gemini-Fassung + tools/pixelieren.py;
   # Grammophon und Wasserschloss danach nachgefärbt, weil sie beim Umrechnen fast verschwanden).
   # Koordinaten aus dem Bild; übernommen mit --cq-layout=trollbruecke. Der Bach teilt den Boden:
@@ -276,7 +289,7 @@ trollbruecke:
     bruecke_mitte: [290, 178]
     wasser: [320, 330]           # Waldemar im Fußbad
   figuren:
-    waldemar: [440, 275]
+    waldemar: [395, 186]
   alias:
     lore: bruecke
   hotspots:
@@ -287,9 +300,9 @@ trollbruecke:
     notenblaetter: {rect: [240, 248, 40, 18], gehe: [205, 282], name: Notenblätter}
     wildblumen: {rect: [0, 300, 90, 60], gehe: [100, 320], name: Wildblumen}
   ausgaenge:
-    dorfplatz: {rect: [0, 165, 22, 45], gehe: [12, 192], id: ausgang_dorfplatz}
+    dorfplatz: {rect: [0, 165, 50, 45], gehe: [12, 192], id: ausgang_dorfplatz}
     zauberwald: {rect: [600, 170, 40, 80], gehe: [620, 228], id: waldweg, name: Waldweg, gesperrt: W1_BRUE_MAX_0190}
-    wasserschloss: {rect: [420, 115, 80, 45], gehe: [490, 196], id: weg_zum_wasserschloss, name: Weg zum Wasserschloss, gesperrt: W1_BRUE_MAX_0190}
+    wasserschloss: {rect: [410, 105, 100, 60], gehe: [490, 196], id: weg_zum_wasserschloss, name: Weg zum Wasserschloss, gesperrt: W1_BRUE_MAX_0190}
 
 wasserschloss:
   farbe: "#4f7a9a"
@@ -297,7 +310,8 @@ wasserschloss:
   # aus; tools/pixelieren.py, ohne Nachfärben). Laufbereich: Ufer vorn, Weg links zur kleinen Brücke
   # (Ausgang) und der Steg bis vor das Tor. Koordinaten aus dem Bild; übernommen mit --cq-layout=wasserschloss.
   hintergrund: res://grafik/hintergruende/w1_bg_wasserschloss_v01.png
-  tiefe: 0.45
+  tiefe: 0.4
+  skala: 0.85                   # Max war am Tor größer als das Tor (Review P15): vorn 85, am Tor 34 Prozent
   laufbereich: [[0, 240], [40, 238], [62, 290], [250, 298], [298, 215], [352, 215], [398, 298], [470, 300],
                 [560, 290], [639, 278], [639, 359], [0, 359]]
   marker:
@@ -320,6 +334,10 @@ wasserschloss:
 
 zauberwald:
   farbe: "#3f5a3a"
+  leuchten:                     # Leuchtpilze pulsieren (Review P15)
+    - {pos: [540, 238], r: [40, 16], farbe: "#7ff2e0", takt: 2.4}
+    - {pos: [610, 236], r: [30, 13], farbe: "#9ff0ff", takt: 3.1}
+  licht: "#d2dcc8"            # Tönung der Figuren (Review Fund 20: Figuren leuchteten gegen den dunklen Raum)
   # Echter Hintergrund (13. November 2026), Breitbild 1066×360: rechts Sebastians erste Fassung, links ein
   # tieferer Waldteil, den Gemini aus einer Vorlage mit grauer Fläche ergänzt hat (nahtlos, um 8 Pixel
   # ausgerichtet); tools/pixelieren.py. Riesenpilze, Leuchtpilze und Karren nachgefärbt. Ketchup und ein
@@ -341,7 +359,7 @@ zauberwald:
   figuren:
     rotkaeppchen: [914, 272]
   vordergrund:
-    glasschuh: {bild: res://grafik/props/glasschuh.png, pos: [770, 214]}
+    glasschuh: {bild: res://grafik/props/glasschuh.png, pos: [770, 216], skala: 2}   # doppelt, sonst ohne Text nicht zu erkennen (Review P15)
     niesrosen_zu: {bild: res://grafik/props/niesrosen_zu.png, pos: [714, 256], vor: R7}
     niesrosen_offen: {bild: res://grafik/props/niesrosen_offen.png, pos: [714, 256], nach: R7}
   alias:
@@ -366,6 +384,7 @@ zauberwald:
 
 bergwerk:
   farbe: "#4a3f3a"
+  licht: "#c8b4a8"            # Tönung der Figuren (Review Fund 20: Figuren leuchteten gegen den dunklen Raum)
   # Echter Hintergrund (13. November 2026), Breitbild 1280×360 aus Sebastians Gemini-Fassung (tools/pixelieren.py):
   # Hintergrund mit geschlossener Rune-Tür; die offene Tür ist ein eigenes Prop (rune_tuer_offen), das
   # room_bergwerk.gd nach Rätsel 10 einblendet. Koordinaten aus dem Bild; übernommen mit --cq-layout=bergwerk.
@@ -417,7 +436,7 @@ luftschloss:
     start: [175, 270]
     von_dorfplatz: [175, 270]
   figuren:
-    maklerin: [905, 262]
+    maklerin: [965, 262]
     zeldina: [1010, 268]
   alias:
     kritzelei_neben_dem_torbogen: kritzelei
@@ -434,6 +453,12 @@ luftschloss:
 
 turmkeller:
   farbe: "#3b2f4a"
+  effekte:                     # lebendiger Hintergrund (P16, Review 14. November 2026)
+    - {art: flackern, pos: [162, 86], r: [9, 11]}
+    - {art: flackern, pos: [200, 86], r: [9, 11]}
+    - {art: flackern, pos: [447, 86], r: [9, 11]}
+    - {art: flackern, pos: [628, 92], r: [9, 11]}
+  licht: "#b9b4d0"            # Tönung der Figuren (Review Fund 20: Figuren leuchteten gegen den dunklen Raum)
   # Echter Hintergrund (14. November 2026, Sebastians Gemini-Fassung, 40 Farben gemeinsam mit der zweiten
   # Fassung): links die offene Rune-Tür mit Treppe hinab ins Bergwerk, Mitte Wendeltreppe, rechts die
   # Kammertür. Vor Rätsel 11 Teil 2 steht die Tür offen, danach ist sie zu (w1_bg_turmkeller_zu_v01: die
@@ -456,9 +481,9 @@ turmkeller:
     gerade_route: {rect: [130, 264, 110, 96], gehe: [190, 300], name: Gerade Route}
     zickzack_route: {rect: [272, 236, 100, 124], gehe: [322, 300], name: Zickzack-Route}
     schleifen_route: {rect: [380, 236, 195, 80], gehe: [470, 300], name: Schleifen-Route}
-    kreuzung_1: {rect: [292, 250, 30, 14], gehe: [306, 270], name: Kreuzung}
-    kreuzung_2: {rect: [402, 250, 30, 14], gehe: [416, 270], name: Kreuzung}
-    kreuzung_3: {rect: [356, 234, 30, 12], gehe: [370, 256], name: Kreuzung}
+    kreuzung_1: {rect: [287, 247, 40, 20], gehe: [306, 270], name: Kreuzung}
+    kreuzung_2: {rect: [397, 247, 40, 20], gehe: [416, 270], name: Kreuzung}
+    kreuzung_3: {rect: [351, 231, 40, 18], gehe: [370, 256], name: Kreuzung}
     besen: {rect: [255, 135, 190, 85], gehe: [350, 240], name: Besen}
   ausgaenge:
     bergwerk: {rect: [20, 60, 110, 200], gehe: [100, 266], id: kellertreppe, name: Kellertreppe}
@@ -487,6 +512,7 @@ abstellkammer_1:
 
 abstellkammern:
   farbe: "#5e4b3a"
+  licht: "#c8c0dc"            # Tönung der Figuren (Review Fund 20: Figuren leuchteten gegen den dunklen Raum)
   # Echter Hintergrund (14. November 2026, Sebastians Gemini-Fassungen, gemeinsame Palette): links Treppe
   # von unten, Kram-Haufen und Schwert im Stein, Mitte Goldhaufen und Nest, rechts die grinsende Geheimtür.
   # Nach Rätsel 12 aufgeräumt (w1_bg_abstellkammern_aufgeraeumt_v01: Sebastians zweites Bild, Goldhaufen und
@@ -529,6 +555,7 @@ abstellkammern:
 
 thronsaal:
   farbe: "#2e2440"
+  licht: "#bcb4d4"            # Tönung der Figuren (Review Fund 20: Figuren leuchteten gegen den dunklen Raum)
   # Echter Hintergrund (14. November 2026, Sebastians Gemini-Fassung, nachts): links die offene Geheimtür
   # und Blumenvasen, Mitte Buntglasfenster mit Mond, rechts Thron mit rosa Kissen und Tisch mit
   # Taschentüchern. Mondlicht-Strahl als lebendiger Hintergrund ist vorgemerkt (P16). Das Lerntagebuch liegt

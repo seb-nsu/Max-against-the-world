@@ -72,6 +72,7 @@ SCHALTER_RE = re.compile(r"^[A-Z0-9_]+$")
 ZEILE_RE = re.compile(r"^([A-Z]+[0-9]?)_([A-Z0-9]+)_([A-Z0-9]+)_(\d{4})$")
 OHNE_ZEHNER = {"HINT", "ERS", "WDH", "PLA"}  # Szenen-Codes mit eigenem Nummernschema
 MAX_ZEICHEN = 120
+MAX_BLASE = 140
 # Festgelegte Zahl der Nahansichten im ganzen Spiel (entscheidungen.md)
 NAHANSICHTEN_GESAMT = 14
 
@@ -378,6 +379,10 @@ def pruefe_skript(ab, d, codes, kuerzel, alle_ids):
             # Längerer Text wird an Satzgrenzen auf Folgeblasen verteilt
             # (05-spielsysteme.md); nur ein einzelner Satz über 120 Zeichen passt nie.
             for teil in zellen[2].split("//"):
+                # Blasen über 140 Zeichen werden fünfzeilig und wachsen hinter die Porträts
+                # (Review Prolog und Welt 1, Fund 10): mit „//“ teilen
+                if len(teil.strip()) > MAX_BLASE:
+                    (W if ("prolog" in ort or "welt-1" in ort) else H)(ort, f"{roh}: Blase mit {len(teil.strip())} Zeichen (über {MAX_BLASE}), mit „//“ teilen")
                 for satz in re.split(r"(?<=[.!?…“])\s+", teil.strip()):
                     if len(satz) > MAX_ZEICHEN:
                         W(ort, f"{roh}: Satz mit {len(satz)} Zeichen passt in keine Blase (über {MAX_ZEICHEN}, teilen)")

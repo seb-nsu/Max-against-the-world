@@ -5231,7 +5231,7 @@
    "name_key": "UI_OBJ_OPA",
    "groesse_px": 81,
    "spielbar": false,
-   "textfarbe": "#f5a04a",
+   "textfarbe": "#ffdc80",
    "sprite": "res://grafik/platzhalter/figur_opa.png",
    "raeume": [
     "widerstandsbasis",

@@ -60,7 +60,7 @@ position = Vector2(621, 222)
 description = "UI_OBJ_LERNTAGEBUCH"
 baseline = 8
 walk_to_point = Vector2(-31, 80)
-interaction_polygon = PackedVector2Array(-9, -8, 9, -8, 9, 8, -9, 8)
+interaction_polygon = PackedVector2Array(-10, -10, 10, -10, 10, 10, -10, 10)
 
 [node name="Fenster" parent="Hotspots" unique_id=1987414595 instance=ExtResource("9_qpfw0")]
 position = Vector2(320, 115)

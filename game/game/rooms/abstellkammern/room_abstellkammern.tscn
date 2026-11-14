@@ -86,7 +86,7 @@ position = Vector2(251, 218)
 description = "UI_OBJ_OKARINA"
 baseline = 5
 walk_to_point = Vector2(-1, 32)
-interaction_polygon = PackedVector2Array(-7, -5, 7, -5, 7, 5, -7, 5)
+interaction_polygon = PackedVector2Array(-10, -10, 10, -10, 10, 10, -10, 10)
 
 [node name="SchwertImStein" parent="Hotspots" unique_id=405485767 instance=ExtResource("14_mhs3i")]
 position = Vector2(241, 172.5)

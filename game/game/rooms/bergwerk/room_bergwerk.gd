@@ -23,6 +23,44 @@ func _zustand_anwenden() -> void:
 		var tuer: PopochiuProp = $Props.get_node("RuneTuerOffen")
 		tuer.visible = Zustand.geloest("R10")
 		tuer.clickable = false
+	_lichtschein(Zustand.geloest("R10"))
+
+
+## Violetter Lichtschein der offenen Rune-Tür auf dem Boden davor (Review P15), weich und
+## leicht pulsierend.
+func _lichtschein(an: bool) -> void:
+	var schein := get_node_or_null("Props/Lichtschein") as Polygon2D
+	if not an or Engine.is_editor_hint():
+		if schein:
+			schein.queue_free()
+		return
+	if schein:
+		return
+	for i in 3:
+		var p := Polygon2D.new()
+		var punkte := PackedVector2Array()
+		var rx := 70.0 - i * 18.0
+		var ry := 16.0 - i * 4.0
+		for k in 24:
+			var w := TAU * k / 24.0
+			punkte.append(Vector2(cos(w) * rx, sin(w) * ry))
+		p.polygon = punkte
+		p.color = Color(0.72, 0.45, 1.0, 0.10 + i * 0.06)
+		var mat := CanvasItemMaterial.new()
+		mat.blend_mode = CanvasItemMaterial.BLEND_MODE_ADD
+		p.material = mat
+		if i == 0:
+			schein = p
+			p.name = "Lichtschein"
+			p.position = Vector2(1120, 246)
+			get_node("Props").add_child(p)
+		else:
+			schein.add_child(p)
+	if Spiel.testmodus:
+		return   # Bildvergleich: ohne Pulsieren
+	var t := schein.create_tween().set_loops()
+	t.tween_property(schein, "modulate:a", 0.65, 1.4).set_trans(Tween.TRANS_SINE)
+	t.tween_property(schein, "modulate:a", 1.0, 1.4).set_trans(Tween.TRANS_SINE)
 
 
 ## Erstes Betreten (skript/welt-1.md, Abschnitt 11): Streik. Rätsel 10 folgt nach dem Slice.

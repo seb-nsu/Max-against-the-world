@@ -69,10 +69,26 @@ func tiefe_anwenden() -> void:
 		chr.update_scale()
 
 
+## Raumlicht (Layout „licht: "#b9b4d0"“): Figuren nehmen die Tönung dunkler Räume an und leuchten
+## nicht mehr gegen den Hintergrund (Review Fund 20). Nur die Farbe, die Deckkraft bleibt.
+func licht_anwenden() -> void:
+	var l := Color(String(bauplan().licht))
+	for c in get_characters():
+		var chr := c as Node2D
+		if chr:
+			chr.modulate = Color(l.r, l.g, l.b, chr.modulate.a)
+
+
 func _process(_delta: float) -> void:
 	# Auch Figuren, die ohne Laufen versetzt werden (Marker, Szenen), bekommen ihre Größe
 	if tiefe_aktiv():
 		tiefe_anwenden()
+	if bauplan().has("licht") and not Engine.is_editor_hint():
+		licht_anwenden()
+	if not _effekte.is_empty():
+		_effekte_bewegen(_delta)
+	if not Engine.is_editor_hint():
+		_partner_folgen(_delta)
 	if bauplan().has("stufen") and not Engine.is_editor_hint():
 		stufen_anwenden()
 	if not _bedingte_teile.is_empty() or not _hg_wechsel.is_empty():
@@ -216,6 +232,8 @@ func vordergrund_setzen() -> void:
 		if bg.get("texture"):
 			_hg_grund = bg.texture.resource_path
 	_bedingte_anpassen()
+	_leuchten_setzen()
+	_effekte_setzen()
 	var teile: Dictionary = bauplan().get("vordergrund", {})
 	if teile.is_empty() or Engine.is_editor_hint():
 		return
@@ -238,15 +256,192 @@ func vordergrund_setzen() -> void:
 			sp.position = Vector2(t.pos[0] - sp.texture.get_width() * s / 2.0, t.pos[1])
 			sp.offset = Vector2(0, -sp.texture.get_height())
 			sp.flip_h = t.get("blick", "rechts") == "links"
+			if t.has("baseline"):
+				# Zeichenreihenfolge nach einer eigenen Baseline (Hufeisen auf dem Amboss vor dem Schmied)
+				sp.position.y = float(t.baseline)
+				sp.offset.y -= (float(t.baseline) - float(t.pos[1])) / s
 		else:
 			sp.position = Vector2(t.rect[0], t.baseline)
 			sp.offset = Vector2(0, float(t.rect[1]) - float(t.baseline))
 		get_node("Props").add_child(sp)
+		if t.has("wandschatten"):
+			# Schlagschatten an der Wand dahinter (Flaschen im Regal, Review P15): dunkle Kopie, versetzt
+			var ws := Sprite2D.new()
+			ws.texture = sp.texture
+			ws.centered = false
+			ws.offset = sp.offset + Vector2(float(t.wandschatten[0]), float(t.wandschatten[1]))
+			ws.modulate = Color(0.08, 0.06, 0.12, 0.45)
+			ws.show_behind_parent = true
+			ws.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
+			sp.add_child(ws)
 		if t.has("pos") and t.get("schatten", true):
 			_schatten_unter(sp, sp.texture.get_width(), 0.0)
 		if t.has("nach") or t.has("vor"):
 			_bedingte_teile.append([sp, t.get("nach", ""), t.get("vor", "")])
 	_bedingte_anpassen()
+
+
+## Pulsierendes Leuchten (Layout „leuchten: [{pos: [x, y], r: [rx, ry], farbe: "#7fffd4", takt: 2.0}]“):
+## weiche, addierte Lichtflecken über leuchtenden Dingen im Bild (Leuchtpilze, Review P15).
+func _leuchten_setzen() -> void:
+	if Engine.is_editor_hint() or not has_node("Props"):
+		return
+	var liste: Array = bauplan().get("leuchten", [])
+	for i in liste.size():
+		var name := "Leuchten_%d" % i
+		if get_node("Props").has_node(name):
+			continue
+		var l: Dictionary = liste[i]
+		var wurzel := Node2D.new()
+		wurzel.name = name
+		wurzel.position = Vector2(l.pos[0], l.pos[1])
+		var farbe := Color(String(l.get("farbe", "#7fffd4")))
+		for k in 3:
+			var p := Polygon2D.new()
+			var punkte := PackedVector2Array()
+			var f := 1.0 - k * 0.3
+			for j in 20:
+				var w := TAU * j / 20.0
+				punkte.append(Vector2(cos(w) * float(l.r[0]) * f, sin(w) * float(l.r[1]) * f))
+			p.polygon = punkte
+			p.color = Color(farbe.r, farbe.g, farbe.b, 0.14 + k * 0.08)
+			var mat := CanvasItemMaterial.new()
+			mat.blend_mode = CanvasItemMaterial.BLEND_MODE_ADD
+			p.material = mat
+			wurzel.add_child(p)
+		wurzel.z_index = 1
+		get_node("Props").add_child(wurzel)
+		var takt := float(l.get("takt", 2.0))
+		if Spiel.testmodus:
+			continue   # Bildvergleich: ohne Pulsieren
+		var t := wurzel.create_tween().set_loops()
+		t.tween_property(wurzel, "modulate:a", 0.35, takt / 2.0).set_trans(Tween.TRANS_SINE)
+		t.tween_property(wurzel, "modulate:a", 1.0, takt / 2.0).set_trans(Tween.TRANS_SINE)
+
+
+## Der nicht gesteuerte Partner (Pixel, wenn Max spielt, und umgekehrt) läuft hinterher, sobald die
+## aktive Figur mehr als FOLGEN_AB Pixel entfernt ist, und stellt sich FOLGEN_ABSTAND neben sie
+## (Sebastian, 14. November 2026). Nicht in Szenen und Gesprächen, nicht im Testmodus, und nicht,
+## wenn der Partner außerhalb des Laufbereichs sitzt (Pixel auf dem Dachbalken oder der Werkbank).
+const FOLGEN_AB := 110.0
+const FOLGEN_ABSTAND := 45.0
+var _folgen_takt := 0.0
+
+
+func _partner_folgen(delta: float) -> void:
+	_folgen_takt -= delta
+	if _folgen_takt > 0.0:
+		return
+	_folgen_takt = 0.35
+	if Spiel.testmodus or Spiel.in_szene > 0 or not is_instance_valid(C.player) or not E.in_room:
+		return
+	if is_instance_valid(D.current_dialog) or not Bauplan.figur_spielbar(Zustand.abschnitt, "pixel"):
+		return
+	if Spiel.regel_wert("partner_getrennt", self) == true:
+		return
+	var sn := "Max" if C.player.script_name == "Pixel" else "Pixel"
+	if not has_character(sn):
+		return
+	var partner: PopochiuCharacter = C.get_character(sn)
+	if not is_instance_valid(partner) or partner.is_moving or partner.is_talking or C.player.is_talking:
+		return
+	var abstand := partner.position.distance_to(C.player.position)
+	if abstand <= FOLGEN_AB:
+		return
+	# Sitzt der Partner abseits des Laufbereichs (Balken, Werkbank), bleibt er dort
+	var weg := get_navigation_path(partner.position, C.player.position)
+	if weg.is_empty() or weg[0].distance_to(partner.position) > 4.0:
+		return
+	var seite := -1.0 if partner.position.x < C.player.position.x else 1.0
+	var ziel := C.player.position + Vector2(seite * FOLGEN_ABSTAND, 0)
+	var hin := get_navigation_path(partner.position, ziel)
+	if hin.is_empty():
+		return
+	partner.walk_to(hin[-1])
+
+
+## Lebendige Hintergründe (P16, Review): kleine Schleifen über gemalten Stellen. Layout „effekte“:
+## {art: flackern, pos, r: [rx, ry]} Feuer, Glut, Fackeln (warmes, unruhiges Licht);
+## {art: blasen, pos, breite} Blasen steigen und platzen (Kessel); {art: dampf, pos, breite} Dampf
+## steigt auf (Fondue, Kessel); {art: glitzern, bereich: [x, y, w, h]} Lichtpunkte auf Wasser.
+## Im Testmodus ohne Bewegung (Bildvergleich).
+var _effekte: Array = []
+var _effekt_zeit := 0.0
+
+
+func _effekte_setzen() -> void:
+	if Engine.is_editor_hint() or Spiel.testmodus or not has_node("Props") or not _effekte.is_empty():
+		return
+	for e: Dictionary in bauplan().get("effekte", []):
+		var n := Node2D.new()
+		n.z_index = 2
+		get_node("Props").add_child(n)
+		if e.art == "flackern":
+			n.position = Vector2(e.pos[0], e.pos[1])
+			for k in 2:
+				var p := Polygon2D.new()
+				var punkte := PackedVector2Array()
+				var f := 1.0 - k * 0.45
+				for j in 18:
+					var w := TAU * j / 18.0
+					punkte.append(Vector2(cos(w) * float(e.r[0]) * f, sin(w) * float(e.r[1]) * f))
+				p.polygon = punkte
+				p.color = Color(String(e.get("farbe", "#ffb347")), 0.16 + k * 0.12)
+				var mat := CanvasItemMaterial.new()
+				mat.blend_mode = CanvasItemMaterial.BLEND_MODE_ADD
+				p.material = mat
+				n.add_child(p)
+		_effekte.append([e, n, 0.0])
+
+
+func _effekte_bewegen(delta: float) -> void:
+	_effekt_zeit += delta
+	for eintrag in _effekte:
+		var e: Dictionary = eintrag[0]
+		var n: Node2D = eintrag[1]
+		if not is_instance_valid(n):
+			continue
+		eintrag[2] -= delta
+		match e.art:
+			"flackern":
+				if eintrag[2] <= 0.0:
+					eintrag[2] = randf_range(0.06, 0.16)
+					n.modulate.a = randf_range(0.45, 1.0)
+					n.scale = Vector2.ONE * randf_range(0.9, 1.1)
+			"blasen", "dampf":
+				if eintrag[2] <= 0.0:
+					var blase: bool = e.art == "blasen"
+					eintrag[2] = randf_range(0.25, 0.6) if blase else randf_range(0.5, 0.9)
+					var p := Polygon2D.new()
+					var r := randf_range(1.0, 2.0) if blase else randf_range(4.0, 7.0)
+					var punkte := PackedVector2Array()
+					for j in 10:
+						var w := TAU * j / 10.0
+						punkte.append(Vector2(cos(w) * r, sin(w) * r * 0.8))
+					p.polygon = punkte
+					p.color = Color(String(e.get("farbe", "#b6f2a0" if blase else "#f2ece4")), 0.85 if blase else 0.28)
+					p.position = Vector2(e.pos[0] + randf_range(-0.5, 0.5) * float(e.get("breite", 20)), e.pos[1])
+					n.add_child(p)
+					var t := p.create_tween().set_parallel()
+					var hoch := 8.0 if blase else 26.0
+					t.tween_property(p, "position:y", p.position.y - hoch, 0.7 if blase else 1.8)
+					t.tween_property(p, "modulate:a", 0.0, 0.7 if blase else 1.8).set_ease(Tween.EASE_IN)
+					if not blase:
+						t.tween_property(p, "scale", Vector2(1.8, 1.8), 1.8)
+					t.chain().tween_callback(p.queue_free)
+			"glitzern":
+				if eintrag[2] <= 0.0:
+					eintrag[2] = randf_range(0.08, 0.2)
+					var b: Array = e.bereich
+					var p := Polygon2D.new()
+					p.polygon = PackedVector2Array([Vector2(0, 0), Vector2(2, 0), Vector2(2, 1), Vector2(0, 1)])
+					p.color = Color(1, 1, 1, 0.75)
+					p.position = Vector2(randf_range(b[0], b[0] + b[2]), randf_range(b[1], b[1] + b[3]))
+					n.add_child(p)
+					var t := p.create_tween()
+					t.tween_property(p, "position:x", p.position.x + 3.0, 0.5)
+					t.parallel().tween_property(p, "modulate:a", 0.0, 0.5)
+					t.tween_callback(p.queue_free)
 
 
 ## Kleiner weicher Schatten unter einem Sprite oder Prop, damit es auf dem Boden oder Tisch steht
@@ -344,7 +539,7 @@ func partner_aufstellen(neben_spieler := false) -> void:
 		if has_character(partner.script_name):
 			Spiel.figur_hier(partner.script_name, false)
 		return
-	var x := C.player.position.x + (-20.0 if C.player.position.x > width / 2.0 else 20.0)
+	var x := C.player.position.x + (-45.0 if C.player.position.x > width / 2.0 else 45.0)   # 45 statt 20: Pixel stand Max auf den Beinen (Review Fund 24)
 	var pos := Vector2(x, C.player.position.y)
 	if not has_character(partner.script_name):
 		Spiel.figur_hier(partner.script_name, true, pos)

@@ -18,8 +18,14 @@ func zeigen(daten: Dictionary) -> void:
 	add_child(dunkel)
 	var bild := TextureRect.new()
 	bild.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
-	if ResourceLoader.exists(daten.get("bild", "")):
-		bild.texture = load(daten.bild)
+	# Englische Fassung des Bildes (<name>_en.png), wenn es sie gibt (Review P15: Schrift war nur deutsch)
+	var pfad: String = daten.get("bild", "")
+	if TranslationServer.get_locale().begins_with("en") and pfad.ends_with(".png"):
+		var en := pfad.trim_suffix(".png") + "_en.png"
+		if ResourceLoader.exists(en):
+			pfad = en
+	if ResourceLoader.exists(pfad):
+		bild.texture = load(pfad)
 	bild.set_anchors_preset(Control.PRESET_FULL_RECT)
 	bild.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	add_child(bild)

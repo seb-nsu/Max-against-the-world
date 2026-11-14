@@ -28,7 +28,7 @@ height = 360
 [node name="WalkableAreas" type="Node2D" parent="." unique_id=1177093037]
 
 [node name="Boden" parent="WalkableAreas" unique_id=1192357450 instance=ExtResource("2_bsj5q")]
-interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(12, 357, 12, 290, 40, 282, 255, 282, 285, 250, 420, 158, 540, 70, 585, 44, 605, 44, 605, 54, 545, 80, 425, 168, 292, 260, 300, 282, 340, 300, 400, 345, 400, 357)])
+interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(12, 357, 12, 290, 40, 282, 255, 282, 285, 250, 420, 158, 540, 70, 585, 44, 605, 44, 605, 54, 545, 80, 425, 168, 262, 282, 340, 300, 400, 345, 400, 357)])
 
 [node name="Props" type="Node2D" parent="." unique_id=13170868]
 

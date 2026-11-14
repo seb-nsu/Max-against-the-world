@@ -5,7 +5,7 @@
 
 [node name="CharacterMax" type="Area2D" unique_id=1645005039]
 script = ExtResource("1_ydepi")
-walk_speed = 180.0
+walk_speed = 150.0
 dialog_pos = Vector2(0, -193)
 script_name = "Max"
 description = "UI_OBJ_MAX"

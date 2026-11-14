@@ -52,7 +52,7 @@ description = "UI_RAUM_TAVERNE"
 position = Vector2(510, 255.5)
 texture = ExtResource("6_2n8x7")
 description = "UI_OBJ_ZIEGENFELL_VORLEGER"
-baseline = 24
+baseline = -60
 walk_to_point = Vector2(0, 44.5)
 interaction_polygon = PackedVector2Array(-86, -24.5, 86, -24.5, 86, 24.5, -86, 24.5)
 
@@ -62,7 +62,7 @@ texture = ExtResource("8_6de5b")
 description = "UI_OBJ_EI"
 baseline = 6
 walk_to_point = Vector2(-10, 68)
-interaction_polygon = PackedVector2Array(-6, -6, 6, -6, 6, 6, -6, 6)
+interaction_polygon = PackedVector2Array(-10, -10, 10, -10, 10, 10, -10, 10)
 
 [node name="Hotspots" type="Node2D" parent="." unique_id=1964189025]
 
@@ -186,7 +186,7 @@ position = Vector2(150, 232)
 position = Vector2(282, 264)
 
 [node name="CharacterMinka *" parent="Characters" unique_id=1223184642 instance=ExtResource("28_lbl4l")]
-position = Vector2(470, 250)
+position = Vector2(238, 178)
 
 [node name="CharacterHuhn *" parent="Characters" unique_id=800413214 instance=ExtResource("29_1pcji")]
 position = Vector2(363, 180)

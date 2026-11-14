@@ -226,7 +226,7 @@ func sagen(kuerzel: String, zeile: String) -> void:
 		if testmodus:
 			continue
 		if kuerzel == "NAR":
-			await E.wait(1.0)
+			await _erzaehlen(tr(b))
 			continue
 		var c := figur(kuerzel)
 		var quelle: PopochiuClickable = null
@@ -251,6 +251,41 @@ func sagen(kuerzel: String, zeile: String) -> void:
 			_stimme_aus_dem_off(c, false)
 	if testmodus:
 		await get_tree().process_frame
+
+
+## Regiezeilen (NAR) als kurze Erzählzeile oben im Bild, ohne Klick: Was passiert, erfährt der
+## Spieler so auch dort, wo es noch keine Animation gibt (Review Fund 18; vorher eine Sekunde Pause
+## ohne Text). Blendet nach der Lesezeit aus.
+func _erzaehlen(text: String) -> void:
+	if E.cutscene_skipped:
+		return
+	var ebene := CanvasLayer.new()
+	ebene.layer = 60
+	var l := RichTextLabel.new()
+	l.bbcode_enabled = true
+	l.fit_content = true
+	l.scroll_active = false
+	l.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	l.theme = load("res://game/gui/resources/gui_theme.tres")
+	l.add_theme_font_size_override("normal_font_size", 14)
+	l.add_theme_font_size_override("italics_font_size", 14)
+	l.add_theme_color_override("default_color", Color("ead4aa"))
+	l.add_theme_color_override("font_outline_color", Color("181425"))
+	l.add_theme_constant_override("outline_size", 3)
+	l.text = "[center][i]%s[/i][/center]" % text
+	l.position = Vector2(90, 52)
+	l.size = Vector2(460, 20)
+	ebene.add_child(l)
+	add_child(ebene)
+	l.modulate.a = 0.0
+	var t := create_tween()
+	t.tween_property(l, "modulate:a", 1.0, 0.2)
+	await get_tree().create_timer(clampf(text.length() / 15.0, 1.6, 5.0)).timeout
+	if is_instance_valid(l):
+		var t2 := create_tween()
+		t2.tween_property(l, "modulate:a", 0.0, 0.2)
+		await t2.finished
+	ebene.queue_free()
 
 
 ## Sprechblasen, die bei „Untertitel aus“ ohne Text liefen (für Tests), neueste zuletzt
@@ -621,11 +656,23 @@ func hingehen(ziel: PopochiuClickable) -> void:
 	if testmodus or not is_instance_valid(C.player) or not C.player.is_inside_tree():
 		return
 	var punkt := ziel.to_global(ziel.walk_to_point)
+	# Zu einer Figur geht man nicht hinein, sondern stellt sich etwa 55 Pixel seitlich vor sie, auf
+	# die Seite, von der man kommt (Review Fund 24: Max verdeckte Alwin, Gollo und den Kessel).
+	if ziel is PopochiuCharacter and ziel != C.player and ziel.walk_to_point.length() < 30.0:
+		var seite := -1.0 if C.player.global_position.x < ziel.global_position.x else 1.0
+		var s := absf(ziel.scale.x) if ziel.scale.x != 0.0 else 1.0
+		for abstand in [55.0, 40.0]:
+			var p := ziel.global_position + Vector2(seite * abstand * s, 0)
+			if not R.current.get_navigation_path(C.player.global_position, p).is_empty() and R.current.get_navigation_path(C.player.global_position, p)[-1].distance_to(p) < 4.0:
+				punkt = p
+				break
 	if R.current.get_navigation_path(C.player.global_position, punkt).is_empty():
 		# Ohne Weg bliebe walk_to() hängen (Popochiu 2.2.1 wartet dann ewig): nicht laufen.
 		push_warning("Kein Weg von %s nach %s (%s)" % [C.player.global_position, punkt, ziel.name])
 		return
 	await C.player.walk_to(punkt)
+	if ziel is PopochiuCharacter and is_instance_valid(C.player) and C.player.has_method("schauen_zu"):
+		C.player.schauen_zu(ziel.global_position.x)
 
 
 ## Nehmen eines Props (Bauplan: „nehmen“, „gegenstand“). Ohne Gegenstand bleibt es bei der
@@ -827,7 +874,9 @@ func figur_hier(sn: String, an: bool, pos := Vector2.INF) -> void:
 #region Überlagerungen und Meldungen ###############################################################
 func nahansicht_zeigen(id: String) -> void:
 	Zustand.nahansicht_gesehen(id)
-	if testmodus:
+	# Beim Überspringen keine Nahansicht mitten in die übersprungene Szene (Review Fund 23); was
+	# man darin lesen kann, bleibt im Inventar oder Notizbuch erreichbar.
+	if testmodus or E.cutscene_skipped:
 		return
 	Klang.geraeusch("nahansicht")
 	in_szene += 1

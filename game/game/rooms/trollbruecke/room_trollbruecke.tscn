@@ -85,12 +85,12 @@ walk_to_point = Vector2(55, -10)
 interaction_polygon = PackedVector2Array(-45, -30, 45, -30, 45, 30, -45, 30)
 
 [node name="AusgangDorfplatz" parent="Hotspots" unique_id=1182182524 instance=ExtResource("11_5ew10")]
-position = Vector2(11, 187.5)
+position = Vector2(25, 187.5)
 description = "UI_RAUM_DORFPLATZ"
 baseline = 22
-walk_to_point = Vector2(1, 4.5)
+walk_to_point = Vector2(-13, 4.5)
 cursor = 9
-interaction_polygon = PackedVector2Array(-11, -22.5, 11, -22.5, 11, 22.5, -11, 22.5)
+interaction_polygon = PackedVector2Array(-25, -22.5, 25, -22.5, 25, 22.5, -25, 22.5)
 
 [node name="Waldweg" parent="Hotspots" unique_id=515465258 instance=ExtResource("12_bq62v")]
 position = Vector2(620, 210)
@@ -101,12 +101,12 @@ cursor = 9
 interaction_polygon = PackedVector2Array(-20, -40, 20, -40, 20, 40, -20, 40)
 
 [node name="WegZumWasserschloss" parent="Hotspots" unique_id=14882811 instance=ExtResource("13_x6a6m")]
-position = Vector2(460, 137.5)
+position = Vector2(460, 135)
 description = "UI_OBJ_WEG_ZUM_WASSERSCHLOSS"
-baseline = 22
-walk_to_point = Vector2(30, 58.5)
+baseline = 30
+walk_to_point = Vector2(30, 61)
 cursor = 9
-interaction_polygon = PackedVector2Array(-40, -22.5, 40, -22.5, 40, 22.5, -40, 22.5)
+interaction_polygon = PackedVector2Array(-50, -30, 50, -30, 50, 30, -50, 30)
 
 [node name="Regions" type="Node2D" parent="." unique_id=1174397313]
 
@@ -136,4 +136,4 @@ position = Vector2(320, 330)
 [node name="Characters" type="Node2D" parent="." unique_id=1488514382]
 
 [node name="CharacterWaldemar *" parent="Characters" unique_id=584786914 instance=ExtResource("21_uuubw")]
-position = Vector2(440, 275)
+position = Vector2(395, 186)

@@ -29,6 +29,7 @@ Jede Information hat genau einen Besitzer; welche Datei was besitzt, steht in [d
 - `python3 tools/diagramme.py` erzeugt die Abhängigkeitsdiagramme aus den Welt-Tabellen neu.
 - `python3 tools/skript_export.py` erzeugt die Godot-Übersetzungsdatei `game/lokalisierung/texte.csv` sowie `export/skript-voll.csv` und `export/audio-zeilen.csv`.
 - `python3 tools/spieldaten.py` erzeugt `game/daten/` (Welt-Tabellen als JSON, Hinweis-Dateien der Hilfe-Pfote).
+- Frischer Checkout: Der allererste Godot-Import (`godot --headless --path game --import`) meldet „Failed to create an autoload … not compiling“ und fehlende Übersetzungsdateien. Das ist harmlos; ab dem zweiten Start ist die Ausgabe sauber.
 - GitHub Actions (`.github/workflows/pruefen.yml`) führt alle Prüfungen bei jedem Push aus.
 - `python3 tools/export.py [Ordner]` fasst alles in sieben Dateien zusammen (Konzept, Grafik, Rätsel, Skript, Audio, Produktion, offene Punkte), Standardordner `export/`.
 

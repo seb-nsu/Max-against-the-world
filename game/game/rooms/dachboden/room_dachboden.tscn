@@ -58,12 +58,12 @@ texture = ExtResource("4_mcqit")
 description = "UI_RAUM_DACHBODEN"
 
 [node name="ZappOMat" parent="Props" unique_id=145494250 instance=ExtResource("5_k8q6h")]
-position = Vector2(370.5, 188)
+position = Vector2(370.5, 197)
 texture = ExtResource("6_mcqit")
 frames = 7
 description = "UI_OBJ_ZAPP_O_MAT"
 baseline = 56
-walk_to_point = Vector2(-5.5, 69)
+walk_to_point = Vector2(-5.5, 60)
 interaction_polygon = PackedVector2Array(-52.5, -56, 52.5, -56, 52.5, 56, -52.5, 56)
 
 [node name="Dosenoeffner" parent="Props" unique_id=1001585250 instance=ExtResource("9_mcqit")]
@@ -75,12 +75,12 @@ walk_to_point = Vector2(28, 72)
 interaction_polygon = PackedVector2Array(-11, -6, 11, -6, 11, 5, -11, 5)
 
 [node name="Drahtkleiderbuegel" parent="Props" unique_id=505759806 instance=ExtResource("11_m8m18")]
-position = Vector2(617.5, 183.5)
+position = Vector2(617, 191)
 texture = ExtResource("10_mcqit")
 description = "UI_OBJ_DRAHTKLEIDERBUEGEL"
 baseline = 7
-walk_to_point = Vector2(-17.5, 106.5)
-interaction_polygon = PackedVector2Array(-11, -9, 11, -9, 11, 9, -11, 9)
+walk_to_point = Vector2(-17, 99)
+interaction_polygon = PackedVector2Array(-15, -17, 15, -17, 15, 17, -15, 17)
 
 [node name="Hotspots" type="Node2D" parent="." unique_id=337505337]
 

@@ -146,6 +146,14 @@ func pfote_geklickt() -> void:
 		if not nichts.is_empty():
 			await Spiel.sagen("PIX", nichts)
 		return
+	# Die Regeln des Abschnitts können vor den Stufen einen Wegweiser einschieben (Welt 1: fehlender
+	# Passwort-Teil vor R11a, Review Fund 14)
+	var vorher = Spiel.regel_wert("hinweis_vorher", schritt)
+	if vorher is String and not vorher.is_empty():
+		hinweis_gegeben.emit(schritt, stufe(schritt), false, false, "pfote")
+		await Spiel.sagen("PIX", vorher)
+		_pruef_takt = 1.0
+		return
 	for z in naechste_zeilen(schritt):
 		await Spiel.sagen("PIX", z)
 	_pruef_takt = 1.0

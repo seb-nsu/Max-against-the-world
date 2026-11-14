@@ -108,6 +108,27 @@ Preise Stand November 2026, laut [Retro Diffusion auf itch.io](https://astropuls
 | Welt 4 | 14 Räume, 31 Figuren, 17 Gegenstände, 1 Nahansicht (Programmzeitschrift) | 9 Musikstücke, 14 Geräusche, Dr. Werbepauses Jingle | Tempo der Musik ins Rhythmus-Minispiel eintragen, Test |
 | Zwischenspiele und Finale | 4 Räume, 15 Figuren, 6 Gegenstände | `finale_maschine`, `finale_geburtstag`, `werbeblock`, Abspann | Sprachausgabe oder Brabbel entscheiden, Steam-Einreichung |
 
+**Neu gerechnet am 14. November 2026 (Engpass: Bildkontingent in Gemini).** Gebaut ist alles als Graubox; Prolog und Welt 1 haben echte Grafik, Welt 2 ist spielerisch fertig mit 13 eingebauten Figuren. Der Einbau eines Bildes dauert Minuten bis eine Stunde und läuft parallel; die Dauer bestimmt fast nur, wie viele Bilder Sebastian am Tag in Gemini erzeugen kann. Gerechnet wird mit 30 Prozent Wiederholungen (misslungene Posen, Korrekturrunden) und einem Tag Einbau und Prüfung je Abschnitt nach dem letzten Bild.
+
+| Abschnitt | Bilder aus Gemini (mit Wiederholungen) | Inhalt |
+| --- | --- | --- |
+| Prolog und Welt 1 | etwa 30 | 22 Posenbögen (`fertige-prompts` im Dokument „benötigte Bilder“) |
+| Welt 2 | etwa 65 | rund 20 Hintergründe, 12 Figurenblätter, 17 Posenbögen |
+| Welt 3 | etwa 75 | 12 Räume mit Varianten, 24 Figuren, Posenbögen |
+| Welt 4 | etwa 90 | 14 Räume mit Varianten, 31 Figuren, Posenbögen |
+| Zwischenspiele, Finale, Steam | etwa 30 | Varianten des Dachbodens, Finale-Figuren, Kapselbild und Key-Art |
+| **Gesamt** | **etwa 290** | |
+
+| Bilder je Tag | Grafik fertig (alle Welten) | Steam-Seite möglich | Demo (Prolog und Welt 1 mit Audio) |
+| --- | --- | --- | --- |
+| 10 | Ende Dezember 2026 | Anfang Dezember 2026 | Januar 2027 |
+| 20 | Mitte Dezember 2026 | Ende November 2026 | Dezember 2026 |
+| 30 | Anfang Dezember 2026 | Ende November 2026 | Dezember 2026 |
+
+Annahmen: Start der Bildarbeit am 15. November 2026, Reihenfolge Welt 1, 2, 3, 4, Finale. Die Steam-Seite braucht den bestandenen Test mit fünf Fremden (Prolog und Welt 1) und fünf echte Screenshots; der Test ist eine Woche nach den Welt-1-Posen möglich. Audio (Musik mit ACE-Step, Geräusche, Stimmen oder Brabbel) braucht kein Gemini und läuft parallel, geschätzt zwei Wochen für Prolog und Welt 1, danach je Welt eine Woche. Die Veröffentlichung hängt nicht mehr am Bau, sondern an Wunschlisten: Demo zum Steam Next Fest im Februar 2027, Veröffentlichung frühestens im Frühjahr 2027 nach Politur, Fremdtests je Welt und Prüfung der englischen Fassung.
+
+Ausweichen, wenn das Kontingent bremst: Bilder über das Gemini-Tool (`gemini-bild`, API, kostet je Bild, ohne Tageslimit des Chats) oder Meshy (3 bis 9 Credits je Bild, Stand 2.571 Credits) für Posenbögen; Varianten eines Raums als Umfärbung mit `tools/stimmung.py` statt neuer Bilder; Tiere und kleine Figuren aus vorhandenen Bögen zusammensetzen.
+
 **Plan vom 9. November 2026 (vor dem Bau der Graubox):** Die Tabelle unten bleibt als Messlatte stehen. Ihre Dauern und Stundenbudgets enthalten den Bau der Welten, der schon erledigt ist; für Grafik und Audio allein sind sie zu hoch und müssen neu geschätzt werden. Fünf Stufen mit Dauer, Stundenbudget und einer Regel, wann umgesteuert wird. Nach jeder Stufe Ist und Plan vergleichen und die nächste Stufe neu schätzen. Der Umfang des Spiels bleibt dabei fest; umgesteuert wird am Ablauf, nicht an den Rätseln.
 
 | Stufe | Dauer | Ergebnis | Stundenbudget | Umsteuern, wenn |
@@ -144,7 +165,7 @@ Bei 10 bis 15 Stunden pro Woche sind das rund drei Jahre, bei 20 Stunden gut zwe
 
 **Puffer und Termin für die Steam-Seite (Schätzung vom 9. November 2026, wird später festgelegt):** Auf jede Stufe kommen 20 Prozent Puffer: Grundgerüst 5 statt 4 Wochen, Vertical Slice 10 statt 8 Wochen, Demo Welt 1 gut 7 statt 6 Monate, Welten 2 bis 4 je 6 bis 8,5 statt 5 bis 7 Monate, Finale und Politur knapp 4 statt 3 Monate. Ohne Puffer ergibt das 27 bis 33 Monate, mit Puffer 32 bis 40 Monate.
 
-Die Steam-Seite geht online, sobald der Vertical Slice bestanden ist und ein fertiges Kapselbild und fünf echte Screenshots aus Welt 1 vorliegen, geschätzt im Monat 7 bis 9 nach Projektstart. Die Demo folgt am Ende von Stufe 3 (etwa Monat 10 bis 11) und zielt auf das nächste Steam Next Fest (Februar, Juni oder Oktober). Beispiel bei Projektstart im Januar 2027: Steam-Seite im Herbst 2027, Demo zum Next Fest im Februar 2028, Veröffentlichung zwischen Herbst 2029 und Frühjahr 2030. Die Seite hätte damit gut zwei Jahre, um Wunschlisten zu sammeln. Dieses Beispiel rechnet noch mit dem Bau der Welten ab Januar 2027; der Bau ist seit November 2026 als Graubox fertig, die Termine sind deshalb neu zu rechnen (offen).
+Die Steam-Seite geht online, sobald der Vertical Slice bestanden ist und ein fertiges Kapselbild und fünf echte Screenshots aus Welt 1 vorliegen, geschätzt im Monat 7 bis 9 nach Projektstart. Die Demo folgt am Ende von Stufe 3 (etwa Monat 10 bis 11) und zielt auf das nächste Steam Next Fest (Februar, Juni oder Oktober). Beispiel bei Projektstart im Januar 2027: Steam-Seite im Herbst 2027, Demo zum Next Fest im Februar 2028, Veröffentlichung zwischen Herbst 2029 und Frühjahr 2030. Die Seite hätte damit gut zwei Jahre, um Wunschlisten zu sammeln. Dieses Beispiel rechnet noch mit dem Bau der Welten ab Januar 2027; neu gerechnet am 14. November 2026 oben unter „Neu gerechnet“.
 
 ## Automatisierung
 

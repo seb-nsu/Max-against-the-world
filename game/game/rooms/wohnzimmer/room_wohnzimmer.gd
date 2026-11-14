@@ -198,3 +198,29 @@ func _nach_uebergang() -> void:
 	await _aufstehen()
 	# Autospeicher „Anfang Welt“ (05-spielsysteme.md, Speichern)
 	Spielstand.autospeichern()
+
+
+## Max redet auch im Liegen (Sebastian, 14. November 2026): Solange er spricht, geht der Mund im
+## Liegebild auf und zu. Mundpixel in max_liegend.png (vor dem Spiegeln), offen = dunkel.
+const LIEGEN_MUND := [Vector2i(35, 28), Vector2i(36, 28), Vector2i(37, 28), Vector2i(36, 27)]
+var _mund_zu: Texture2D
+var _mund_auf: Texture2D
+var _mund_zeit := 0.0
+
+
+func _process(delta: float) -> void:
+	super(delta)
+	if Engine.is_editor_hint() or not is_instance_valid(_liegend) or not is_instance_valid(C.player):
+		return
+	if _mund_zu == null:
+		_mund_zu = _liegend.texture
+		var bild := _mund_zu.get_image()
+		for p in LIEGEN_MUND:
+			bild.set_pixelv(p, Color8(40, 18, 28))
+		_mund_auf = ImageTexture.create_from_image(bild)
+	if C.player.is_talking:
+		_mund_zeit += delta
+		_liegend.texture = _mund_auf if int(_mund_zeit / 0.13) % 2 == 0 else _mund_zu
+	elif _liegend.texture != _mund_zu:
+		_liegend.texture = _mund_zu
+		_mund_zeit = 0.0
