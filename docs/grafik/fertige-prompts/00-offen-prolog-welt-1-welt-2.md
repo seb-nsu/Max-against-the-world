@@ -13,14 +13,14 @@ Erzeugt von `tools/prompts_zusammensetzen.py` aus den anderen Dateien in diesem 
 **1. Figuren und Varianten**
 
 - Figurenbögen (zuerst, sie sind danach die Anlage für Max, den Kater und Opa): FB-K01 Max; FB-K02 Pixel; FB-K03 Opa Konrad
-- Prolog und Dachboden-Szenen: PF-F05 Opa auf dem Sofa; PF-F06 Oma; PF-F08 Max mit Drachenei; PF-F09 Max mit Pharaonenkorn; PF-F10 Max mit Energiezelle; PF-F11 Max mit Goldener Fernbedienung; PF-F12 Opa mit Zündkapsel; PF-F15 Pixel auf dem Schrank
+- Dachboden-Szenen nach Welt 1 und Welt 2: PF-F08 Max mit Drachenei; PF-F09 Max mit Pharaonenkorn
 - Welt 2: W2-F23 Ägypter aus dem Volk; W2-F24 Schildkröte; W2-F25 Straßenmusiker; W2-3D Beamter 1 stehend; W2-3D Philosoph stehend, ohne Tonne
 
 **2. Posen und Bewegungen**
 
 - Als Nächstes (Test für flüssigere Animationen): W1-B27 Schmied: Hämmern; W1-B26 Alwin Grauwald: Rühren
 - Max und der Kater, in allen Welten: WU-B02 Max: Gehen nach vorn und nach hinten; WU-B05 Max: Aufheben; WU-B06 Max: Benutzen; WU-B07 Max: Schulterzucken; WU-B08 Max: Gähnen; WU-B10 Max: Vom Sofa aufstehen; WU-B12 Pixel: Gehen nach vorn und nach hinten; WU-B15 Pixel: Putzen; WU-B16 Pixel: Springen und Klettern; WU-B17 Pixel: Schnuppern; WU-B18 Pixel: Tragen; WU-B19 Pixel: Fauchen; WU-B20 Pixel: Ohrfeige; WU-B21 Pixel: Vom Schrank fallen
-- Prolog und Dachboden-Szenen: PF-B01 Pixel: Aufwachen vom Thunfisch; PF-B02 Opa: Erklären; PF-B03 Opa: Panik; PF-B04 Oma: Treppe steigen; PF-B08 Gegenwart-Effekt: Verwandlung; PF-B11 Effekt: Staubwolke
+- Prolog und Dachboden-Szenen: PF-B01 Pixel: Aufwachen vom Thunfisch; PF-B02 Opa: Erklären; PF-B03 Opa: Panik; PF-B08 Gegenwart-Effekt: Verwandlung; PF-B11 Effekt: Staubwolke
 - Welt 1: W1-B01 Toadi: Rennen; W1-B02 Toadi: Keuchen; W1-B03 Toadi: Auf Max zeigen; W1-B04 Pixel: Minka umgarnen; W1-B05 Wirt Humbert: In den Keller gehen; W1-B06 Gollo: Ring werfen; W1-B07 Max: Kochlöffel schwingen; W1-B08 Max: Ziege melken; W1-B09 Max: Bohne pflanzen und gießen; W1-B10 Bohnenranke: Wachsen; W1-B11 Niesrosen: Aufgehen; W1-B12 Troll Waldemar: Musical-Nummer; W1-B13 Troll Waldemar: Fußbad; W1-B14 Zeldina: Gehen und Kiste tragen; W1-B15 Pixel als Ziege: Brücke überqueren; W1-B16 Ziegen: Gehen; W1-B17 Zauberbesen: Fegen; W1-B18 Zauberbesen: Haarspur jagen; W1-B19 Pixel: Haare verlieren; W1-B20 Lord Moderwort: Zaubern; W1-B21 Lord Moderwort: Niesen; W1-B22 Fluch wird Käse: Effekt; W1-B23 Pilz-Verwandlung: Effekt; W1-B24 Smaugi: Kram hergeben; W1-B25 Smaugi: Gerührt schniefen; W1-B28 Übungsbesen: Pixel jagen; W1-B29 Zauberbesen: Max wegfegen
 - Welt 2 (Posenbögen; die Bewegung selbst kommt aus dem 3D-Clip): W2-P01 Max Tag 1; W2-P02 Max Finaltag; W2-P03 Ramses; W2-P04 Sobek; W2-P05 Hofkater; W2-P06 Schildkröte; W2-P07 Archimedes; W2-P08 Hermes; W2-P09 Leonidas; W2-P10 Cicero; W2-P11 Philosoph; W2-P12 Fächerwedler; W2-P13 Nebet; W2-P14 Hieron; W2-P15 Tiro; W2-P16 Palastschreiber; W2-P17 Publikum
 
@@ -35,10 +35,10 @@ Erzeugt von `tools/prompts_zusammensetzen.py` aus den anderen Dateien in diesem 
 - Welt 2, Griechenland: W2-R02 Fährsteg Olympia; W2-R11 Agora; W2-R10 Startbüro; W2-R09 Stadion; W2-R03 Hafen Syrakus; W2-R07 Archimedes' Werkstatt; W2-R08 Grabhügel Syrakus; W2-R12 Flusskarte
 - Welt 2, Nahansichten und Tafeln (füllen das ganze Bild wie ein Hintergrund): W2-N01 Hieroglyphen-Grammatik (Rätsel 2); W2-N02 Fährtafel; W2-N03 Aushang im Startbüro (Rätsel 3); W2-N04 Sandgrube (Rede-Ringen); W2-N05 Konter-Auswahl (Rede-Ringen); W2-N06 Paraden-Plan (Rätsel 6b)
 
-**5. Später: Zwischenspiele und Finale**
+**5. Später: erst für Welt 3, Welt 4 und das Finale**
 
-- Figuren: PF-F07 Mutter; PF-F13 Oma mit Gabel; PF-F14 Zeldina, Finale
-- Posen und Effekte: PF-B05 Mutter: Liste lesen; PF-B06 Zeldina: Zauberstab einsetzen; PF-B07 Roboter-Hausmeister: Ofentür halten; PF-B09 Effekt: Maschine läuft; PF-B10 Effekt: Teig-Schwall
+- Figuren: PF-F05 Opa auf dem Sofa; PF-F06 Oma; PF-F07 Mutter; PF-F10 Max mit Energiezelle; PF-F11 Max mit Goldener Fernbedienung; PF-F12 Opa mit Zündkapsel; PF-F13 Oma mit Gabel; PF-F14 Zeldina, Finale; PF-F15 Pixel auf dem Schrank
+- Posen und Effekte: PF-B04 Oma: Treppe steigen; PF-B05 Mutter: Liste lesen; PF-B06 Zeldina: Zauberstab einsetzen; PF-B07 Roboter-Hausmeister: Ofentür halten; PF-B09 Effekt: Maschine läuft; PF-B10 Effekt: Teig-Schwall
 - Hintergründe: PF-R02 Dachboden, Finale; PF-R04 Wohnzimmer, Geburtstag; PF-R06 Supermarkt
 
 # 1. Figuren und Varianten
@@ -81,28 +81,7 @@ EXPRESSIONS (bottom row, left to right): (1) enthusiastic grin, one finger raise
 NEGATIVE: no second character, no parts of the boy Max from the reference unless this is Max, no props that are not described, no environment, no floor, no ground shadow, no checkerboard, no frames, panels or cell borders, no text, labels or numbers, no motion blur, no ghosting, no duplicated or extra limbs, no change to face, proportions, clothing or colors, no photorealism, no 3D render, no watermark, no extra characters, no duplicate panels, no extra poses, no fifth view, no seventh portrait
 ```
 
-## Prolog und Dachboden-Szenen
-
-### PF-F05: Opa auf dem Sofa
-
-**Anhängen:** Opas Figurenbogen (sonst das Opa-Sprite) und Max' Blatt als Maßstab
-
-```text
-STYLE: Character concept sheet in exactly the same style as the attached character sheet of the boy Max: same line weight, same flat cel shading, same light from upper left, solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no text, no ground shadow. Exactly one character, full body, strict side view facing right, standing on a flat baseline, legs clearly visible. Draw only this new character: do not copy any heads, legs, shoes or other parts of the boy Max from the attached sheet into the image.
-CHARACTER LOCK (word for word; where SUBJECT or POSES say otherwise, they win): Grandpa Konrad, a tall thin old inventor about 106 percent of Max's height, stooped forward from the shoulders, knees slightly bent, long thin legs. Wild white hair (#ffffff, shadow #8b9bb4) standing up in tufts, bushy white eyebrows, long nose, big enthusiastic grin, fair wrinkled skin (#e8b796, shadow #c28569). Round brass goggles (#feae34) on a dark strap (#3e2731) pushed up on his forehead. A rust-brown knitted cardigan (#b86f50, shadow #8b5f4b) hanging to the hips, with two rows of bulging pockets stuffed with screwdrivers and pliers (#262b44). Loose light beige trousers (#e8b796, shadow #c28569). Dark red slippers (#e43b44, shadow #a22633). No lab coat, no tie, no beard. Dark outline #181425.
-SUBJECT: Grandpa Konrad, wild white hair, round brass goggles on his forehead, brown knitted cardigan with tool pockets, beige trousers, red-and-white checkered slippers, slumped on a brown corduroy sofa in side view facing right, watching TV, a cup of tea in his right hand, slippers up on the coffee table, surprised raised eyebrows.
-NEGATIVE: no second character, no parts of the boy Max from the reference unless this is Max, no props that are not described, no environment, no floor, no ground shadow, no checkerboard, no frames, panels or cell borders, no text, labels or numbers, no motion blur, no ghosting, no duplicated or extra limbs, no change to face, proportions, clothing or colors, no photorealism, no 3D render, no watermark
-```
-
-### PF-F06: Oma
-
-**Anhängen:** Max' Konzeptblatt als Stil- und Größenvorlage
-
-```text
-STYLE: Character concept sheet in exactly the same style as the attached character sheet of the boy Max: same line weight, same flat cel shading, same light from upper left, solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no text, no ground shadow. Exactly one character, full body, strict side view facing right, standing on a flat baseline, legs clearly visible. Draw only this new character: do not copy any heads, legs, shoes or other parts of the boy Max from the attached sheet into the image.
-SUBJECT: Grandma, about as tall as the boy Max, the shortest adult, small and sturdy. Grey hair (#8b9bb4) in a tight bun, round glasses, rosy cheeks. Purple cardigan (#68386c) over a dark green dress (#265c42), black handbag on her left arm, sensible brown shoes (#733e39). Standing straight, eyebrows raised, a stern but loving look, facing right.
-NEGATIVE: no second character, no parts of the boy Max from the reference unless this is Max, no props that are not described, no environment, no floor, no ground shadow, no checkerboard, no frames, panels or cell borders, no text, labels or numbers, no motion blur, no ghosting, no duplicated or extra limbs, no change to face, proportions, clothing or colors, no photorealism, no 3D render, no watermark
-```
+## Dachboden-Szenen nach Welt 1 und Welt 2
 
 ### PF-F08: Max mit Drachenei
 
@@ -123,50 +102,6 @@ NEGATIVE: no second character, no parts of the boy Max from the reference unless
 STYLE: Character concept sheet in exactly the same style as the attached character sheet of the boy Max: same line weight, same flat cel shading, same light from upper left, solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no text, no ground shadow. Exactly one character, full body, strict side view facing right, standing on a flat baseline, legs clearly visible. This is the boy Max himself: keep him exactly as on the attached sheet.
 CHARACTER LOCK (word for word; where SUBJECT or POSES say otherwise, they win): Max, a lanky 16-year-old boy, the reference height for every other character, head about a quarter of his height, slight slouch with hanging shoulders. Messy dark brown hair (#733e39, shadow #3e2731, highlight #b86f50) with shaggy strands falling over his forehead and eyes. Fair skin (#e8b796, shadow #c28569), sleepy half-closed eyes, lopsided smirk, a few freckles. Oversized dark slate blue-grey hoodie (#3a4466, shadow #262b44, highlight #5a6988), hood down, sleeves partly over his hands, uneven drawstrings, a tiny retro TV print with a turquoise screen (#2ce8f5) on the chest. Dark blue jeans (#124e89) slightly too long and rolled up at the hem. Worn red sneakers (#e43b44, shadow #a22633) with white soles (#ffffff), one lace untied. Dark outline #262b44, never pure black.
 SUBJECT: Standing, a bulging golden grain sack with a blank round seal slung over his right shoulder, held with both hands, a little sand trickling from his sneakers, facing right.
-NEGATIVE: no second character, no parts of the boy Max from the reference unless this is Max, no props that are not described, no environment, no floor, no ground shadow, no checkerboard, no frames, panels or cell borders, no text, labels or numbers, no motion blur, no ghosting, no duplicated or extra limbs, no change to face, proportions, clothing or colors, no photorealism, no 3D render, no watermark
-```
-
-### PF-F10: Max mit Energiezelle
-
-**Anhängen:** Max' Figurenbogen (sonst sein Konzeptblatt)
-
-```text
-STYLE: Character concept sheet in exactly the same style as the attached character sheet of the boy Max: same line weight, same flat cel shading, same light from upper left, solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no text, no ground shadow. Exactly one character, full body, strict side view facing right, standing on a flat baseline, legs clearly visible. This is the boy Max himself: keep him exactly as on the attached sheet.
-CHARACTER LOCK (word for word; where SUBJECT or POSES say otherwise, they win): Max, a lanky 16-year-old boy, the reference height for every other character, head about a quarter of his height, slight slouch with hanging shoulders. Messy dark brown hair (#733e39, shadow #3e2731, highlight #b86f50) with shaggy strands falling over his forehead and eyes. Fair skin (#e8b796, shadow #c28569), sleepy half-closed eyes, lopsided smirk, a few freckles. Oversized dark slate blue-grey hoodie (#3a4466, shadow #262b44, highlight #5a6988), hood down, sleeves partly over his hands, uneven drawstrings, a tiny retro TV print with a turquoise screen (#2ce8f5) on the chest. Dark blue jeans (#124e89) slightly too long and rolled up at the hem. Worn red sneakers (#e43b44, shadow #a22633) with white soles (#ffffff), one lace untied. Dark outline #262b44, never pure black.
-SUBJECT: Standing more upright, hoodie and hair still wet with a few drips, holding a glowing orange energy cell the size of a thermos flask in both hands at chest height, facing right.
-NEGATIVE: no second character, no parts of the boy Max from the reference unless this is Max, no props that are not described, no environment, no floor, no ground shadow, no checkerboard, no frames, panels or cell borders, no text, labels or numbers, no motion blur, no ghosting, no duplicated or extra limbs, no change to face, proportions, clothing or colors, no photorealism, no 3D render, no watermark
-```
-
-### PF-F11: Max mit Goldener Fernbedienung
-
-**Anhängen:** Max' Figurenbogen (sonst sein Konzeptblatt)
-
-```text
-STYLE: Character concept sheet in exactly the same style as the attached character sheet of the boy Max: same line weight, same flat cel shading, same light from upper left, solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no text, no ground shadow. Exactly one character, full body, strict side view facing right, standing on a flat baseline, legs clearly visible. This is the boy Max himself: keep him exactly as on the attached sheet.
-CHARACTER LOCK (word for word; where SUBJECT or POSES say otherwise, they win): Max, a lanky 16-year-old boy, the reference height for every other character, head about a quarter of his height, slight slouch with hanging shoulders. Messy dark brown hair (#733e39, shadow #3e2731, highlight #b86f50) with shaggy strands falling over his forehead and eyes. Fair skin (#e8b796, shadow #c28569), sleepy half-closed eyes, lopsided smirk, a few freckles. Oversized dark slate blue-grey hoodie (#3a4466, shadow #262b44, highlight #5a6988), hood down, sleeves partly over his hands, uneven drawstrings, a tiny retro TV print with a turquoise screen (#2ce8f5) on the chest. Dark blue jeans (#124e89) slightly too long and rolled up at the hem. Worn red sneakers (#e43b44, shadow #a22633) with white soles (#ffffff), one lace untied. Dark outline #262b44, never pure black.
-SUBJECT: Max standing upright, shoulders back, a gleaming golden remote with jewel buttons in his right hand held at hip height, left hand loose, calm look, facing right.
-NEGATIVE: no second character, no parts of the boy Max from the reference unless this is Max, no props that are not described, no environment, no floor, no ground shadow, no checkerboard, no frames, panels or cell borders, no text, labels or numbers, no motion blur, no ghosting, no duplicated or extra limbs, no change to face, proportions, clothing or colors, no photorealism, no 3D render, no watermark
-```
-
-### PF-F12: Opa mit Zündkapsel
-
-**Anhängen:** Opas Figurenbogen (sonst das Opa-Sprite) und Max' Blatt als Maßstab
-
-```text
-STYLE: Character concept sheet in exactly the same style as the attached character sheet of the boy Max: same line weight, same flat cel shading, same light from upper left, solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no text, no ground shadow. Exactly one character, full body, strict side view facing right, standing on a flat baseline, legs clearly visible. Draw only this new character: do not copy any heads, legs, shoes or other parts of the boy Max from the attached sheet into the image.
-CHARACTER LOCK (word for word; where SUBJECT or POSES say otherwise, they win): Grandpa Konrad, a tall thin old inventor about 106 percent of Max's height, stooped forward from the shoulders, knees slightly bent, long thin legs. Wild white hair (#ffffff, shadow #8b9bb4) standing up in tufts, bushy white eyebrows, long nose, big enthusiastic grin, fair wrinkled skin (#e8b796, shadow #c28569). Round brass goggles (#feae34) on a dark strap (#3e2731) pushed up on his forehead. A rust-brown knitted cardigan (#b86f50, shadow #8b5f4b) hanging to the hips, with two rows of bulging pockets stuffed with screwdrivers and pliers (#262b44). Loose light beige trousers (#e8b796, shadow #c28569). Dark red slippers (#e43b44, shadow #a22633). No lab coat, no tie, no beard. Dark outline #181425.
-SUBJECT: Grandpa Konrad holding a worn grey TV remote high above his head in his right hand like a sword, left fist clenched, triumphant wide grin, goggles on his forehead, facing left.
-NEGATIVE: no second character, no parts of the boy Max from the reference unless this is Max, no props that are not described, no environment, no floor, no ground shadow, no checkerboard, no frames, panels or cell borders, no text, labels or numbers, no motion blur, no ghosting, no duplicated or extra limbs, no change to face, proportions, clothing or colors, no photorealism, no 3D render, no watermark
-```
-
-### PF-F15: Pixel auf dem Schrank
-
-**Anhängen:** Pixels Figurenbogen (sonst sein Konzeptblatt) und Max' Blatt als Maßstab
-
-```text
-STYLE: Character concept sheet in exactly the same style as the attached character sheet of the boy Max: same line weight, same flat cel shading, same light from upper left, solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no text, no ground shadow. Exactly one character, full body, strict side view facing right, standing on a flat baseline, legs clearly visible. Draw only this new character: do not copy any heads, legs, shoes or other parts of the boy Max from the attached sheet into the image.
-CHARACTER LOCK (word for word; where SUBJECT or POSES say otherwise, they win): The tomcat, a chubby round cat about a third of Max's height when sitting, short legs, light silver-grey fur (#c0cbdc, shadow #8b9bb4, highlight #ffffff) with three darker blue-grey stripes on his back (#5a6988), white chest and four white paws (#ffffff), a very fluffy tail, a clearly visible notch torn out of his left ear, smug half-closed amber eyes (#feae34), pink nose and inner ears (#f6757a), a red collar (#e43b44, shadow #a22633) with a small round silver speaker on the front and a clearly visible turquoise light (#2ce8f5). Not orange, no tabby markings on the face, plain unmarked forehead, no heavy eyelids. Dark outline #262b44, never pure black.
-SUBJECT: Lying stretched out on his belly in side view facing right, chin on his front paws, one front paw and the fluffy tail dangling down over an edge, smug half-lidded eyes, flat underside so he can be placed on top of the living room cupboard.
 NEGATIVE: no second character, no parts of the boy Max from the reference unless this is Max, no props that are not described, no environment, no floor, no ground shadow, no checkerboard, no frames, panels or cell borders, no text, labels or numbers, no motion blur, no ghosting, no duplicated or extra limbs, no change to face, proportions, clothing or colors, no photorealism, no 3D render, no watermark
 ```
 
@@ -527,20 +462,6 @@ CHARACTER LOCK (word for word; where SUBJECT or POSES say otherwise, they win): 
 ACTION (3 key poses for a 6-frame animation of about 0.6 s; Claude draws the in-between frames): (1) 0.0 s: Grandpa flails both arms; (2) 0.2 s: hair stands up even more, sweat drops fly; (3) 0.4 s: he hops from foot to foot.
 END POSE: the same as pose 1, so the loop closes seamlessly; do not draw it twice.
 CAMERA: static, strict side view; the game shows it facing left, so draw the character facing right and the game mirrors it. Same scale and the same flat baseline in every pose, no zoom, no pan.
-NEGATIVE: no second character, no parts of the boy Max from the reference unless this is Max, no props that are not described, no environment, no floor, no ground shadow, no checkerboard, no frames, panels or cell borders, no text, labels or numbers, no motion blur, no ghosting, no duplicated or extra limbs, no change to face, proportions, clothing or colors, no photorealism, no 3D render, no watermark, no in-between blur, no speed lines, no smear frames, no sliding feet, no change of scale or baseline between poses, no camera movement, no zoom, no perspective change, no morphing, no extra poses beyond the ones listed
-```
-
-### PF-B04: Oma: Treppe steigen
-
-**Anhängen:** das fertige Konzeptblatt von Oma · **Bilder:** 8 · **Ablauf:** Schleife
-
-```text
-STYLE: Key pose sheet for a 2D game animation in exactly the same style, colors and proportions as the attached character sheet: same character, same head size, same hair and clothing colors, same line weight and flat cel shading, light from upper left. The key poses side by side in one row from left to right in the order of the action, evenly spaced with clear empty space between them, all at the same scale on one flat baseline, each a frozen still pose. Solid flat magenta (#ff00ff) background filling the whole image.
-SUBJECT: the character exactly as on the attached character sheet: same face, head size, proportions, costume and colors, nothing redesigned.
-CHARACTER (appearance only, word for word from its sheet; ignore the pose in it): Grandma, about as tall as the boy Max, the shortest adult, small and sturdy. Grey hair (#8b9bb4) in a tight bun, round glasses, rosy cheeks. Purple cardigan (#68386c) over a dark green dress (#265c42), black handbag on her left arm, sensible brown shoes (#733e39). Standing straight, eyebrows raised, a stern but loving look, facing right.
-ACTION (2 key poses for a 8-frame animation of about 0.8 s; Claude draws the in-between frames): (1) 0.0 s: Grandma climbs stairs diagonally up to the right in side view; (2) 0.4 s: one hand on her handbag, steady determined steps, same size as her standing sprite.
-END POSE: the same as pose 1, so the loop closes seamlessly; do not draw it twice.
-CAMERA: static, strict side view, facing right. Same scale and the same flat baseline in every pose, no zoom, no pan.
 NEGATIVE: no second character, no parts of the boy Max from the reference unless this is Max, no props that are not described, no environment, no floor, no ground shadow, no checkerboard, no frames, panels or cell borders, no text, labels or numbers, no motion blur, no ghosting, no duplicated or extra limbs, no change to face, proportions, clothing or colors, no photorealism, no 3D render, no watermark, no in-between blur, no speed lines, no smear frames, no sliding feet, no change of scale or baseline between poses, no camera movement, no zoom, no perspective change, no morphing, no extra poses beyond the ones listed
 ```
 
@@ -1658,9 +1579,30 @@ PALETTE: warm palette of sandstone, ochre and gold, painted walls, daylight fall
 NEGATIVE: no text, letters, numbers or symbols that could be read, no characters, no hands unless described, no floor, no frame, no photorealism, no watermark
 ```
 
-# 5. Später: Zwischenspiele und Finale
+# 5. Später: erst für Welt 3, Welt 4 und das Finale
 
 ## Figuren
+
+### PF-F05: Opa auf dem Sofa
+
+**Anhängen:** Opas Figurenbogen (sonst das Opa-Sprite) und Max' Blatt als Maßstab
+
+```text
+STYLE: Character concept sheet in exactly the same style as the attached character sheet of the boy Max: same line weight, same flat cel shading, same light from upper left, solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no text, no ground shadow. Exactly one character, full body, strict side view facing right, standing on a flat baseline, legs clearly visible. Draw only this new character: do not copy any heads, legs, shoes or other parts of the boy Max from the attached sheet into the image.
+CHARACTER LOCK (word for word; where SUBJECT or POSES say otherwise, they win): Grandpa Konrad, a tall thin old inventor about 106 percent of Max's height, stooped forward from the shoulders, knees slightly bent, long thin legs. Wild white hair (#ffffff, shadow #8b9bb4) standing up in tufts, bushy white eyebrows, long nose, big enthusiastic grin, fair wrinkled skin (#e8b796, shadow #c28569). Round brass goggles (#feae34) on a dark strap (#3e2731) pushed up on his forehead. A rust-brown knitted cardigan (#b86f50, shadow #8b5f4b) hanging to the hips, with two rows of bulging pockets stuffed with screwdrivers and pliers (#262b44). Loose light beige trousers (#e8b796, shadow #c28569). Dark red slippers (#e43b44, shadow #a22633). No lab coat, no tie, no beard. Dark outline #181425.
+SUBJECT: Grandpa Konrad, wild white hair, round brass goggles on his forehead, brown knitted cardigan with tool pockets, beige trousers, red-and-white checkered slippers, slumped on a brown corduroy sofa in side view facing right, watching TV, a cup of tea in his right hand, slippers up on the coffee table, surprised raised eyebrows.
+NEGATIVE: no second character, no parts of the boy Max from the reference unless this is Max, no props that are not described, no environment, no floor, no ground shadow, no checkerboard, no frames, panels or cell borders, no text, labels or numbers, no motion blur, no ghosting, no duplicated or extra limbs, no change to face, proportions, clothing or colors, no photorealism, no 3D render, no watermark
+```
+
+### PF-F06: Oma
+
+**Anhängen:** Max' Konzeptblatt als Stil- und Größenvorlage
+
+```text
+STYLE: Character concept sheet in exactly the same style as the attached character sheet of the boy Max: same line weight, same flat cel shading, same light from upper left, solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no text, no ground shadow. Exactly one character, full body, strict side view facing right, standing on a flat baseline, legs clearly visible. Draw only this new character: do not copy any heads, legs, shoes or other parts of the boy Max from the attached sheet into the image.
+SUBJECT: Grandma, about as tall as the boy Max, the shortest adult, small and sturdy. Grey hair (#8b9bb4) in a tight bun, round glasses, rosy cheeks. Purple cardigan (#68386c) over a dark green dress (#265c42), black handbag on her left arm, sensible brown shoes (#733e39). Standing straight, eyebrows raised, a stern but loving look, facing right.
+NEGATIVE: no second character, no parts of the boy Max from the reference unless this is Max, no props that are not described, no environment, no floor, no ground shadow, no checkerboard, no frames, panels or cell borders, no text, labels or numbers, no motion blur, no ghosting, no duplicated or extra limbs, no change to face, proportions, clothing or colors, no photorealism, no 3D render, no watermark
+```
 
 ### PF-F07: Mutter
 
@@ -1669,6 +1611,39 @@ NEGATIVE: no text, letters, numbers or symbols that could be read, no characters
 ```text
 STYLE: Character concept sheet in exactly the same style as the attached character sheet of the boy Max: same line weight, same flat cel shading, same light from upper left, solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no text, no ground shadow. Exactly one character, full body, strict side view facing right, standing on a flat baseline, legs clearly visible. Draw only this new character: do not copy any heads, legs, shoes or other parts of the boy Max from the attached sheet into the image.
 SUBJECT: Max's mother, about 104 percent of the boy Max's height, slim, brown ponytail, tired but friendly eyes. Open dark blue jacket (#262b44) over a green sweater (#3e8948), blue jeans (#124e89), white sneakers. Just home from a late shift, house keys in her right hand, neutral standing pose, facing left.
+NEGATIVE: no second character, no parts of the boy Max from the reference unless this is Max, no props that are not described, no environment, no floor, no ground shadow, no checkerboard, no frames, panels or cell borders, no text, labels or numbers, no motion blur, no ghosting, no duplicated or extra limbs, no change to face, proportions, clothing or colors, no photorealism, no 3D render, no watermark
+```
+
+### PF-F10: Max mit Energiezelle
+
+**Anhängen:** Max' Figurenbogen (sonst sein Konzeptblatt)
+
+```text
+STYLE: Character concept sheet in exactly the same style as the attached character sheet of the boy Max: same line weight, same flat cel shading, same light from upper left, solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no text, no ground shadow. Exactly one character, full body, strict side view facing right, standing on a flat baseline, legs clearly visible. This is the boy Max himself: keep him exactly as on the attached sheet.
+CHARACTER LOCK (word for word; where SUBJECT or POSES say otherwise, they win): Max, a lanky 16-year-old boy, the reference height for every other character, head about a quarter of his height, slight slouch with hanging shoulders. Messy dark brown hair (#733e39, shadow #3e2731, highlight #b86f50) with shaggy strands falling over his forehead and eyes. Fair skin (#e8b796, shadow #c28569), sleepy half-closed eyes, lopsided smirk, a few freckles. Oversized dark slate blue-grey hoodie (#3a4466, shadow #262b44, highlight #5a6988), hood down, sleeves partly over his hands, uneven drawstrings, a tiny retro TV print with a turquoise screen (#2ce8f5) on the chest. Dark blue jeans (#124e89) slightly too long and rolled up at the hem. Worn red sneakers (#e43b44, shadow #a22633) with white soles (#ffffff), one lace untied. Dark outline #262b44, never pure black.
+SUBJECT: Standing more upright, hoodie and hair still wet with a few drips, holding a glowing orange energy cell the size of a thermos flask in both hands at chest height, facing right.
+NEGATIVE: no second character, no parts of the boy Max from the reference unless this is Max, no props that are not described, no environment, no floor, no ground shadow, no checkerboard, no frames, panels or cell borders, no text, labels or numbers, no motion blur, no ghosting, no duplicated or extra limbs, no change to face, proportions, clothing or colors, no photorealism, no 3D render, no watermark
+```
+
+### PF-F11: Max mit Goldener Fernbedienung
+
+**Anhängen:** Max' Figurenbogen (sonst sein Konzeptblatt)
+
+```text
+STYLE: Character concept sheet in exactly the same style as the attached character sheet of the boy Max: same line weight, same flat cel shading, same light from upper left, solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no text, no ground shadow. Exactly one character, full body, strict side view facing right, standing on a flat baseline, legs clearly visible. This is the boy Max himself: keep him exactly as on the attached sheet.
+CHARACTER LOCK (word for word; where SUBJECT or POSES say otherwise, they win): Max, a lanky 16-year-old boy, the reference height for every other character, head about a quarter of his height, slight slouch with hanging shoulders. Messy dark brown hair (#733e39, shadow #3e2731, highlight #b86f50) with shaggy strands falling over his forehead and eyes. Fair skin (#e8b796, shadow #c28569), sleepy half-closed eyes, lopsided smirk, a few freckles. Oversized dark slate blue-grey hoodie (#3a4466, shadow #262b44, highlight #5a6988), hood down, sleeves partly over his hands, uneven drawstrings, a tiny retro TV print with a turquoise screen (#2ce8f5) on the chest. Dark blue jeans (#124e89) slightly too long and rolled up at the hem. Worn red sneakers (#e43b44, shadow #a22633) with white soles (#ffffff), one lace untied. Dark outline #262b44, never pure black.
+SUBJECT: Max standing upright, shoulders back, a gleaming golden remote with jewel buttons in his right hand held at hip height, left hand loose, calm look, facing right.
+NEGATIVE: no second character, no parts of the boy Max from the reference unless this is Max, no props that are not described, no environment, no floor, no ground shadow, no checkerboard, no frames, panels or cell borders, no text, labels or numbers, no motion blur, no ghosting, no duplicated or extra limbs, no change to face, proportions, clothing or colors, no photorealism, no 3D render, no watermark
+```
+
+### PF-F12: Opa mit Zündkapsel
+
+**Anhängen:** Opas Figurenbogen (sonst das Opa-Sprite) und Max' Blatt als Maßstab
+
+```text
+STYLE: Character concept sheet in exactly the same style as the attached character sheet of the boy Max: same line weight, same flat cel shading, same light from upper left, solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no text, no ground shadow. Exactly one character, full body, strict side view facing right, standing on a flat baseline, legs clearly visible. Draw only this new character: do not copy any heads, legs, shoes or other parts of the boy Max from the attached sheet into the image.
+CHARACTER LOCK (word for word; where SUBJECT or POSES say otherwise, they win): Grandpa Konrad, a tall thin old inventor about 106 percent of Max's height, stooped forward from the shoulders, knees slightly bent, long thin legs. Wild white hair (#ffffff, shadow #8b9bb4) standing up in tufts, bushy white eyebrows, long nose, big enthusiastic grin, fair wrinkled skin (#e8b796, shadow #c28569). Round brass goggles (#feae34) on a dark strap (#3e2731) pushed up on his forehead. A rust-brown knitted cardigan (#b86f50, shadow #8b5f4b) hanging to the hips, with two rows of bulging pockets stuffed with screwdrivers and pliers (#262b44). Loose light beige trousers (#e8b796, shadow #c28569). Dark red slippers (#e43b44, shadow #a22633). No lab coat, no tie, no beard. Dark outline #181425.
+SUBJECT: Grandpa Konrad holding a worn grey TV remote high above his head in his right hand like a sword, left fist clenched, triumphant wide grin, goggles on his forehead, facing left.
 NEGATIVE: no second character, no parts of the boy Max from the reference unless this is Max, no props that are not described, no environment, no floor, no ground shadow, no checkerboard, no frames, panels or cell borders, no text, labels or numbers, no motion blur, no ghosting, no duplicated or extra limbs, no change to face, proportions, clothing or colors, no photorealism, no 3D render, no watermark
 ```
 
@@ -1692,7 +1667,32 @@ SUBJECT: Zeldina: young athletic princess, short brown hair, freckles, a small g
 NEGATIVE: no second character, no parts of the boy Max from the reference unless this is Max, no props that are not described, no environment, no floor, no ground shadow, no checkerboard, no frames, panels or cell borders, no text, labels or numbers, no motion blur, no ghosting, no duplicated or extra limbs, no change to face, proportions, clothing or colors, no photorealism, no 3D render, no watermark
 ```
 
+### PF-F15: Pixel auf dem Schrank
+
+**Anhängen:** Pixels Figurenbogen (sonst sein Konzeptblatt) und Max' Blatt als Maßstab
+
+```text
+STYLE: Character concept sheet in exactly the same style as the attached character sheet of the boy Max: same line weight, same flat cel shading, same light from upper left, solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no text, no ground shadow. Exactly one character, full body, strict side view facing right, standing on a flat baseline, legs clearly visible. Draw only this new character: do not copy any heads, legs, shoes or other parts of the boy Max from the attached sheet into the image.
+CHARACTER LOCK (word for word; where SUBJECT or POSES say otherwise, they win): The tomcat, a chubby round cat about a third of Max's height when sitting, short legs, light silver-grey fur (#c0cbdc, shadow #8b9bb4, highlight #ffffff) with three darker blue-grey stripes on his back (#5a6988), white chest and four white paws (#ffffff), a very fluffy tail, a clearly visible notch torn out of his left ear, smug half-closed amber eyes (#feae34), pink nose and inner ears (#f6757a), a red collar (#e43b44, shadow #a22633) with a small round silver speaker on the front and a clearly visible turquoise light (#2ce8f5). Not orange, no tabby markings on the face, plain unmarked forehead, no heavy eyelids. Dark outline #262b44, never pure black.
+SUBJECT: Lying stretched out on his belly in side view facing right, chin on his front paws, one front paw and the fluffy tail dangling down over an edge, smug half-lidded eyes, flat underside so he can be placed on top of the living room cupboard.
+NEGATIVE: no second character, no parts of the boy Max from the reference unless this is Max, no props that are not described, no environment, no floor, no ground shadow, no checkerboard, no frames, panels or cell borders, no text, labels or numbers, no motion blur, no ghosting, no duplicated or extra limbs, no change to face, proportions, clothing or colors, no photorealism, no 3D render, no watermark
+```
+
 ## Posen und Effekte
+
+### PF-B04: Oma: Treppe steigen
+
+**Anhängen:** das fertige Konzeptblatt von Oma · **Bilder:** 8 · **Ablauf:** Schleife
+
+```text
+STYLE: Key pose sheet for a 2D game animation in exactly the same style, colors and proportions as the attached character sheet: same character, same head size, same hair and clothing colors, same line weight and flat cel shading, light from upper left. The key poses side by side in one row from left to right in the order of the action, evenly spaced with clear empty space between them, all at the same scale on one flat baseline, each a frozen still pose. Solid flat magenta (#ff00ff) background filling the whole image.
+SUBJECT: the character exactly as on the attached character sheet: same face, head size, proportions, costume and colors, nothing redesigned.
+CHARACTER (appearance only, word for word from its sheet; ignore the pose in it): Grandma, about as tall as the boy Max, the shortest adult, small and sturdy. Grey hair (#8b9bb4) in a tight bun, round glasses, rosy cheeks. Purple cardigan (#68386c) over a dark green dress (#265c42), black handbag on her left arm, sensible brown shoes (#733e39). Standing straight, eyebrows raised, a stern but loving look, facing right.
+ACTION (2 key poses for a 8-frame animation of about 0.8 s; Claude draws the in-between frames): (1) 0.0 s: Grandma climbs stairs diagonally up to the right in side view; (2) 0.4 s: one hand on her handbag, steady determined steps, same size as her standing sprite.
+END POSE: the same as pose 1, so the loop closes seamlessly; do not draw it twice.
+CAMERA: static, strict side view, facing right. Same scale and the same flat baseline in every pose, no zoom, no pan.
+NEGATIVE: no second character, no parts of the boy Max from the reference unless this is Max, no props that are not described, no environment, no floor, no ground shadow, no checkerboard, no frames, panels or cell borders, no text, labels or numbers, no motion blur, no ghosting, no duplicated or extra limbs, no change to face, proportions, clothing or colors, no photorealism, no 3D render, no watermark, no in-between blur, no speed lines, no smear frames, no sliding feet, no change of scale or baseline between poses, no camera movement, no zoom, no perspective change, no morphing, no extra poses beyond the ones listed
+```
 
 ### PF-B05: Mutter: Liste lesen
 

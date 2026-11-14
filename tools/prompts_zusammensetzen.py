@@ -887,7 +887,7 @@ OFFEN_LISTE = [
     ("1. Figuren und Varianten", [
         ("Figurenbögen (zuerst, sie sind danach die Anlage für Max, den Kater und Opa)",
          ["FB-K01", "FB-K02", "FB-K03"]),
-        ("Prolog und Dachboden-Szenen", ["PF-F05", "PF-F06", "PF-F08", "PF-F09", "PF-F10", "PF-F11", "PF-F12", "PF-F15"]),
+        ("Dachboden-Szenen nach Welt 1 und Welt 2", ["PF-F08", "PF-F09"]),
         ("Welt 2", ["W2-F23", "W2-F24", "W2-F25", "3D:Beamter 1 stehend", "3D:Philosoph stehend, ohne Tonne"]),
     ]),
     ("2. Posen und Bewegungen", [
@@ -895,7 +895,7 @@ OFFEN_LISTE = [
         ("Max und der Kater, in allen Welten", ["WU-B02", "WU-B05", "WU-B06", "WU-B07", "WU-B08", "WU-B10",
                                                "WU-B12", "WU-B15", "WU-B16", "WU-B17", "WU-B18", "WU-B19",
                                                "WU-B20", "WU-B21"]),
-        ("Prolog und Dachboden-Szenen", ["PF-B01", "PF-B02", "PF-B03", "PF-B04", "PF-B08", "PF-B11"]),
+        ("Prolog und Dachboden-Szenen", ["PF-B01", "PF-B02", "PF-B03", "PF-B08", "PF-B11"]),
         ("Welt 1", ["W1-B01", "W1-B02", "W1-B03", "W1-B04", "W1-B05", "W1-B06", "W1-B07", "W1-B08", "W1-B09",
                     "W1-B10", "W1-B11", "W1-B12", "W1-B13", "W1-B14", "W1-B15", "W1-B16", "W1-B17", "W1-B18",
                     "W1-B19", "W1-B20", "W1-B21", "W1-B22", "W1-B23", "W1-B24", "W1-B25", "W1-B28", "W1-B29"]),
@@ -913,9 +913,9 @@ OFFEN_LISTE = [
         ("Welt 2, Nahansichten und Tafeln (füllen das ganze Bild wie ein Hintergrund)",
          ["W2-N01", "W2-N02", "W2-N03", "W2-N04", "W2-N05", "W2-N06"]),
     ]),
-    ("5. Später: Zwischenspiele und Finale", [
-        ("Figuren", ["PF-F07", "PF-F13", "PF-F14"]),
-        ("Posen und Effekte", ["PF-B05", "PF-B06", "PF-B07", "PF-B09", "PF-B10"]),
+    ("5. Später: erst für Welt 3, Welt 4 und das Finale", [
+        ("Figuren", ["PF-F05", "PF-F06", "PF-F07", "PF-F10", "PF-F11", "PF-F12", "PF-F13", "PF-F14", "PF-F15"]),
+        ("Posen und Effekte", ["PF-B04", "PF-B05", "PF-B06", "PF-B07", "PF-B09", "PF-B10"]),
         ("Hintergründe", ["PF-R02", "PF-R04", "PF-R06"]),
     ]),
 ]
