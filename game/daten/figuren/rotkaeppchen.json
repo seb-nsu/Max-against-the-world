@@ -18,8 +18,8 @@
   },
   "walk": {
    "von": 8,
-   "bilder": 4,
-   "ms": 200,
+   "bilder": 14,
+   "ms": 95,
    "schleife": true
   }
  }
