@@ -14,7 +14,7 @@ Erzeugt von `tools/prompts_zusammensetzen.py` aus den anderen Dateien in diesem 
 
 - Figurenbögen (zuerst, sie sind danach die Anlage für Max, den Kater und Opa): FB-K01 Max; FB-K02 Pixel; FB-K03 Opa Konrad
 - Dachboden-Szenen nach Welt 1 und Welt 2: PF-F08 Max mit Drachenei; PF-F09 Max mit Pharaonenkorn
-- Welt 2: W2-F23 Ägypter aus dem Volk; W2-F24 Schildkröte; W2-F25 Straßenmusiker; W2-3D Beamter 1 stehend; W2-3D Philosoph stehend, ohne Tonne
+- Welt 2: W2-F23 Ägypter aus dem Volk; W2-F24 Schildkröte; W2-F25 Straßenmusiker
 
 **2. Posen und Bewegungen**
 
@@ -155,32 +155,6 @@ NEGATIVE: no second character, no parts of the boy Max from the reference unless
 STYLE: Character concept sheet in exactly the same style as the attached character sheet of the boy Max: same line weight, same flat cel shading, same light from upper left, solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no text, no ground shadow. Exactly one character, full body, strict side view facing right, standing on a flat baseline, legs clearly visible. Draw only this new character: do not copy any heads, legs, shoes or other parts of the boy Max from the attached sheet into the image.
 SUBJECT: Greek street musician, slim, about as tall as the boy Max. Curly dark hair, a laurel twig behind one ear. Short pale blue tunic, sandals. A wooden lyre held in both hands. Standing upright, singing with eyes closed, facing right.
 NEGATIVE: no second character, no parts of the boy Max from the reference unless this is Max, no props that are not described, no environment, no floor, no ground shadow, no checkerboard, no frames, panels or cell borders, no text, labels or numbers, no motion blur, no ghosting, no duplicated or extra limbs, no change to face, proportions, clothing or colors, no photorealism, no 3D render, no watermark
-```
-
-### W2-3D: Beamter 1 stehend
-
-**Anhängen:** das fertige Konzeptblatt der Figur. Nur Vorlage für das 3D-Modell, kommt nicht ins Spiel; Hintergrund diesmal weiß.
-
-```text
-STYLE: Character reference for a 3D model, in exactly the same style, colors and proportions as the attached character sheet: same line weight, same flat cel shading, light from upper left. The model only needs the body, so draw the character once, standing, complete from head to feet. Plain flat white (#ffffff) background filling the whole image.
-SUBJECT: the same bored bald Greek official as on the attached sheet, standing instead of sitting, without the stool and without the scroll.
-CHARACTER (appearance only, word for word from its sheet; ignore the pose in it): Bored Greek official, about 78 percent of the boy Max's height when seated. Bald head, droopy eyelids. Plain grey tunic, sandals.
-POSE: strict front view facing the viewer, standing upright in a T-pose: arms stretched out straight to the sides at shoulder height, palms down, fingers together, legs slightly apart, feet flat on the ground and fully visible, head straight, neutral face.
-CAMERA: static, straight on at chest height, no perspective distortion, the whole figure centered with empty space around it.
-NEGATIVE: no second character, no props, no furniture, no seat, no barrel, no environment, no floor, no ground shadow, no checkerboard, no frames, no text, labels or numbers, no side or three-quarter view, no bent arms, no hands in front of the body, no clothing covering the hands, no change to face, proportions, clothing or colors, no photorealism, no 3D render, no watermark
-```
-
-### W2-3D: Philosoph stehend, ohne Tonne
-
-**Anhängen:** das fertige Konzeptblatt der Figur. Nur Vorlage für das 3D-Modell, kommt nicht ins Spiel; Hintergrund diesmal weiß.
-
-```text
-STYLE: Character reference for a 3D model, in exactly the same style, colors and proportions as the attached character sheet: same line weight, same flat cel shading, light from upper left. The model only needs the body, so draw the character once, standing, complete from head to feet. Plain flat white (#ffffff) background filling the whole image.
-SUBJECT: the same scruffy old Greek philosopher as on the attached sheet, standing upright outside the barrel, without the barrel and without the lantern, barefoot.
-CHARACTER (appearance only, word for word from its sheet; ignore the pose in it): Scruffy old Greek philosopher with wild grey hair and beard and a torn grey cloak.
-POSE: strict front view facing the viewer, standing upright in a T-pose: arms stretched out straight to the sides at shoulder height, palms down, fingers together, legs slightly apart, feet flat on the ground and fully visible, head straight, neutral face.
-CAMERA: static, straight on at chest height, no perspective distortion, the whole figure centered with empty space around it.
-NEGATIVE: no second character, no props, no furniture, no seat, no barrel, no environment, no floor, no ground shadow, no checkerboard, no frames, no text, labels or numbers, no side or three-quarter view, no bent arms, no hands in front of the body, no clothing covering the hands, no change to face, proportions, clothing or colors, no photorealism, no 3D render, no watermark
 ```
 
 # 2. Posen und Bewegungen

@@ -888,7 +888,7 @@ OFFEN_LISTE = [
         ("Figurenbögen (zuerst, sie sind danach die Anlage für Max, den Kater und Opa)",
          ["FB-K01", "FB-K02", "FB-K03"]),
         ("Dachboden-Szenen nach Welt 1 und Welt 2", ["PF-F08", "PF-F09"]),
-        ("Welt 2", ["W2-F23", "W2-F24", "W2-F25", "3D:Beamter 1 stehend", "3D:Philosoph stehend, ohne Tonne"]),
+        ("Welt 2", ["W2-F23", "W2-F24", "W2-F25"]),
     ]),
     ("2. Posen und Bewegungen", [
         ("Als Nächstes (Test für flüssigere Animationen)", ["W1-B27", "W1-B26"]),
