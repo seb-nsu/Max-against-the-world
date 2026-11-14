@@ -54,6 +54,37 @@ func _mund_schliessen(nr: int, sekunden: float) -> void:
 		_play_idle()
 
 
+## Einzelne Posen außerhalb des Sprite-Sheets (liegen, sitzen, knien aus Gemini-Posenbögen):
+## ein eigenes Bild an Stelle des normalen, Fußpunkt unten in der Mitte, Größe und Blickrichtung wie
+## die Figur. Leerer Pfad oder pose_ende() zeigt wieder das normale Bild.
+func pose_zeigen(bild: String) -> void:
+	if bild.is_empty() or not ResourceLoader.exists(bild):
+		pose_ende()
+		return
+	var sp := get_node_or_null("Pose") as Sprite2D
+	if sp == null:
+		sp = Sprite2D.new()
+		sp.name = "Pose"
+		sp.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
+		add_child(sp)
+	sp.texture = load(bild)
+	sp.centered = true
+	sp.offset = Vector2(0, -sp.texture.get_height() / 2.0)
+	var haupt := get_node_or_null("Sprite2D") as Sprite2D
+	if haupt:
+		sp.flip_h = haupt.flip_h
+		haupt.visible = false
+
+
+func pose_ende() -> void:
+	var sp := get_node_or_null("Pose")
+	if sp:
+		sp.queue_free()
+	var haupt := get_node_or_null("Sprite2D") as Sprite2D
+	if haupt:
+		haupt.visible = true
+
+
 ## Popochius Laufgeschwindigkeit folgt der Tiefe auch außerhalb der Grenzen (oben auf der Treppe
 ## im Treppenhaus kröche Max sonst). Hier bleibt sie im selben Rahmen wie die Größe.
 func update_scale():

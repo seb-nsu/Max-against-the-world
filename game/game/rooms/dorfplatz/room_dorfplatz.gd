@@ -26,9 +26,10 @@ func _nach_uebergang() -> void:
 		_landung,
 		Spiel.z("MAX", "W1_ANK_MAX_0010"),
 		Spiel.z("PIX", "W1_ANK_PIX_0020"),
-		_max_lage.bind(0.0),
+		_max_pose.bind(POSE_SITZT),
 		Spiel.z("MAX", "W1_ANK_MAX_0030"),
 		Spiel.z("PIX", "W1_ANK_PIX_0040"),
+		_max_steht_auf,
 		Spiel.z("MAX", "W1_ANK_MAX_0050"),
 		Spiel.z("PIX", "W1_ANK_PIX_0051"),
 		Spiel.z("MAX", "W1_ANK_MAX_0060"),
@@ -58,6 +59,7 @@ func _nach_uebergang() -> void:
 	])
 	# Auch nach Überspringen (Esc) alle an ihrem Platz und aufrecht
 	_max_lage(0.0)
+	_max_pose("")
 	if _ziel_max != Vector2.ZERO:
 		C.Max.position = _ziel_max
 	if _ziel_pix != Vector2.ZERO and has_character("Pixel"):
@@ -79,7 +81,7 @@ func _landung_vorbereiten() -> void:
 		return
 	_ziel_max = C.Max.position
 	C.Max.position = _ziel_max + Vector2(0, -400)
-	C.Max.rotation_degrees = -90.0
+	_max_pose(POSE_LIEGT)
 	if is_instance_valid(C.Pixel) and has_character("Pixel"):
 		_ziel_pix = C.Pixel.position
 		C.Pixel.position = _ziel_pix + Vector2(0, -400)
@@ -127,6 +129,25 @@ func _max_dreht_sich_um() -> void:
 
 
 ## Max liegt (-90) oder steht (0).
+## Posen aus Sebastians Gemini-Bogen (14. November 2026): liegt mit Kapuze überm Gesicht (0010),
+## sitzt auf dem Pflaster (0030), kniet kurz und steht auf (0050).
+const POSE_LIEGT := "res://grafik/figuren/max_posen/liegt_kapuze.png"
+const POSE_SITZT := "res://grafik/figuren/max_posen/sitzt_boden.png"
+const POSE_KNIET := "res://grafik/figuren/max_posen/kniet.png"
+
+
+func _max_pose(bild: String) -> void:
+	if is_instance_valid(C.Max) and C.Max.has_method("pose_zeigen"):
+		C.Max.pose_zeigen(bild)
+
+
+func _max_steht_auf() -> void:
+	_max_pose(POSE_KNIET)
+	if not Spiel.testmodus and not E.cutscene_skipped:
+		await get_tree().create_timer(0.35).timeout
+	_max_pose("")
+
+
 func _max_lage(grad: float) -> void:
 	if is_instance_valid(C.Max):
 		C.Max.rotation_degrees = grad

@@ -80,26 +80,46 @@ func _aufblenden() -> void:
 ## steht vor 0070 auf. Solange er liegt, ist sein eigenes Bild unsichtbar; er spricht von seinem
 ## Platz vor dem Sofa aus, die Sprechblasen stehen damit über dem Liegenden.
 const LIEGEN_BILD := "res://grafik/props/max_liegend.png"
-const LIEGEN_PLATZ := Vector2(56, 200)
-const LIEGEN_SKALA := 0.92
-const LIEGEN_AN := false
+const SITZEN_BILD := "res://grafik/props/max_sitzend.png"
+## Max liegt in der Sitzmulde, Kopf auf der hinteren (rechten) Armlehne, Knie hoch; die vordere
+## Armlehne mit der Decke liegt als Ausschnitt des Hintergrunds vor ihm (Sebastian, 14. November 2026).
+const LEHNE_BILD := "res://grafik/props/sofa_lehne_vorn.png"
+const LEHNE_PLATZ := Vector2(35, 212)
+## Unterkante des Liegenden auf der Sitzfläche, Füße des Sitzenden vor dem Sofa
+const LIEGEN_UNTEN := Vector2(72, 240)
+const SITZEN_FUESSE := Vector2(165, 318)
+## Größe wie Max vor dem Sofa (Tiefe), beide Bilder aus Gemini-Posen (14. November 2026)
+const POSE_SKALA := 0.95
 
 var _liegend: Sprite2D
+var _lehne: Sprite2D
+
+
+func _pose(bild: String) -> Sprite2D:
+	var sp := Sprite2D.new()
+	sp.texture = load(bild)
+	sp.centered = false
+	sp.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
+	sp.scale = Vector2(POSE_SKALA, POSE_SKALA)
+	return sp
 
 
 func _liegen_an() -> void:
-	# Das gedrehte Stand-Sprite passte nicht (Sebastian, 14. November 2026): erst mit einem echten
-	# Liege-Bild aus Gemini wieder einschalten.
-	if not LIEGEN_AN or not ResourceLoader.exists(LIEGEN_BILD) or not has_node("Props"):
+	if not ResourceLoader.exists(LIEGEN_BILD) or not has_node("Props"):
 		return
-	_liegend = Sprite2D.new()
+	_liegend = _pose(LIEGEN_BILD)
 	_liegend.name = "MaxLiegend"
-	_liegend.texture = load(LIEGEN_BILD)
-	_liegend.centered = false
-	_liegend.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
-	_liegend.scale = Vector2(LIEGEN_SKALA, LIEGEN_SKALA)
-	_liegend.position = LIEGEN_PLATZ
+	_liegend.flip_h = true
+	_liegend.position = LIEGEN_UNTEN - Vector2(0, _liegend.texture.get_height() * POSE_SKALA)
 	get_node("Props").add_child(_liegend)
+	if ResourceLoader.exists(LEHNE_BILD):
+		_lehne = Sprite2D.new()
+		_lehne.name = "SofaLehneVorn"
+		_lehne.texture = load(LEHNE_BILD)
+		_lehne.centered = false
+		_lehne.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
+		_lehne.position = LEHNE_PLATZ
+		get_node("Props").add_child(_lehne)
 	_max_bild_alpha(0.0)
 
 
@@ -109,25 +129,47 @@ func _max_bild_alpha(a: float) -> void:
 		bild.modulate.a = a
 
 
-## Max steht auf: das liegende Bild blendet aus, der stehende Max vor dem Sofa ein. Auch nach dem
-## Überspringen (dann ohne Überblendung).
+## Max steht auf: vom Liegen über das Sitzen auf der Sofakante zum Stehen vor dem Sofa, jeweils kurz
+## überblendet. Nach dem Überspringen (oder im Testmodus) gleich stehend.
 func _aufstehen() -> void:
 	if not is_instance_valid(_liegend):
 		_max_bild_alpha(1.0)
 		return
 	var liegend := _liegend
 	_liegend = null
-	if Spiel.testmodus or E.cutscene_skipped:
+	var lehne := _lehne
+	_lehne = null
+	if Spiel.testmodus or E.cutscene_skipped or not ResourceLoader.exists(SITZEN_BILD):
+		if is_instance_valid(lehne):
+			lehne.queue_free()
 		liegend.queue_free()
 		_max_bild_alpha(1.0)
 		return
+	var sitzend := _pose(SITZEN_BILD)
+	sitzend.name = "MaxSitzend"
+	var groesse := Vector2(sitzend.texture.get_size()) * POSE_SKALA
+	sitzend.position = SITZEN_FUESSE - Vector2(groesse.x / 2.0, groesse.y)
+	sitzend.modulate.a = 0.0
+	sitzend.z_index = 1   # vor der Armlehne, solange die noch da ist
+	get_node("Props").add_child(sitzend)
+	var t := create_tween()
+	t.set_parallel()
+	t.tween_property(liegend, "modulate:a", 0.0, 0.3)
+	t.tween_property(sitzend, "modulate:a", 1.0, 0.3)
+	t.chain().tween_callback(_weg.bind(lehne))   # Armlehne verschwindet mit dem Liegenden
+	t.tween_interval(0.45)
 	var bild := C.player.get_node_or_null("Sprite2D") as CanvasItem
-	var t := create_tween().set_parallel()
-	t.tween_property(liegend, "modulate:a", 0.0, 0.45)
+	t.chain().tween_property(sitzend, "modulate:a", 0.0, 0.3)
 	if bild:
-		t.tween_property(bild, "modulate:a", 1.0, 0.45)
+		t.parallel().tween_property(bild, "modulate:a", 1.0, 0.3)
 	await t.finished
 	liegend.queue_free()
+	sitzend.queue_free()
+
+
+func _weg(knoten: Node) -> void:
+	if is_instance_valid(knoten):
+		knoten.queue_free()
 
 
 #endregion
