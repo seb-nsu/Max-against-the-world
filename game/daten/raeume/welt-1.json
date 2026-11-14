@@ -2804,10 +2804,11 @@
      "bild": "res://grafik/props/schueler_besen.png",
      "bereich": [
       182,
-      40,
-      42,
-      70
-     ]
+      26,
+      46,
+      92
+     ],
+     "glas": "#c5eaf6"
     }
    },
    "vordergrund": {

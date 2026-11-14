@@ -245,7 +245,7 @@ klassenzimmer:
     flasche_6: {bild: res://grafik/props/flasche_6.png, rect: [490, 106, 17, 34], baseline: 141, wandschatten: [3, -1]}
   # Lebendiger Hintergrund (P16): ab und zu fliegt ein Schüler rückwärts am linken Fenster vorbei
   ambiente:
-    schueler: {bild: res://grafik/props/schueler_besen.png, bereich: [182, 40, 42, 70]}
+    schueler: {bild: res://grafik/props/schueler_besen.png, bereich: [182, 26, 46, 92], glas: "#c5eaf6"}   # nur hinter der Scheibe (Rahmen davor)
   alias:
     zweite_socke: durchgeloecherte_zweite_socke
   hotspots:

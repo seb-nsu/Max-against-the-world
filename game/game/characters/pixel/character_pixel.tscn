@@ -6,7 +6,7 @@
 [node name="CharacterPixel" type="Area2D" unique_id=694374571]
 script = ExtResource("1_w0ns3")
 text_color = Color(0.37254903, 0.827451, 0.78431374, 1)
-walk_speed = 180.0
+walk_speed = 160.0
 dialog_pos = Vector2(0, -44)
 script_name = "Pixel"
 description = "UI_OBJ_PIXEL"

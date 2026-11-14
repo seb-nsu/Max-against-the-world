@@ -503,6 +503,8 @@ func ambiente_starten() -> CQAmbiente:
 	var cfg: Dictionary = bauplan().get("ambiente", {})
 	if da or cfg.is_empty() or Engine.is_editor_hint():
 		return da
+	cfg = cfg.duplicate()
+	cfg["_hintergrund"] = bauplan().get("hintergrund", "")
 	da = CQAmbiente.new(cfg)
 	add_child(da)
 	return da
