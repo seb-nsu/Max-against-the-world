@@ -31,3 +31,53 @@ func _erste_szene() -> void:
 
 func _nach_uebergang() -> void:
 	await _erste_szene()
+
+
+## Der Schmied hämmert im Stand auf das Hufeisen in der Zange (Sebastian, 14. November 2026):
+## Animation „haemmern“ (Arm nach den Winkeln gedreht, Skript schmied_haemmern.py), beim Aufschlag
+## sprühen Funken vom glühenden Eisen.
+const AUFSCHLAG_BILD := 10          # Bild in „haemmern“, in dem der Hammer das Hufeisen trifft
+const EISEN := Vector2(266, 182)    # glühendes Hufeisen auf dem Amboss
+var _letztes_bild := -1
+
+
+func _zustand_anwenden() -> void:
+	super()
+	if has_character("Schmied") and not Engine.is_editor_hint():
+		var ap := C.Schmied.get_node("AnimationPlayer") as AnimationPlayer
+		if ap and ap.has_animation("haemmern"):
+			C.Schmied.idle_animation = "haemmern"
+			if not C.Schmied.is_talking and not Spiel.testmodus:
+				C.Schmied._play_idle()
+
+
+func _process(delta: float) -> void:
+	super(delta)
+	if Engine.is_editor_hint() or not has_character("Schmied") or Spiel.testmodus:
+		return
+	var ap := C.Schmied.get_node("AnimationPlayer") as AnimationPlayer
+	if not ap or ap.current_animation != "haemmern":
+		_letztes_bild = -1
+		return
+	var bild := int(ap.current_animation_position / 0.11)
+	if bild == AUFSCHLAG_BILD and _letztes_bild != AUFSCHLAG_BILD:
+		_funken()
+	_letztes_bild = bild
+
+
+func _funken() -> void:
+	for i in 7:
+		var f := Polygon2D.new()
+		f.polygon = PackedVector2Array([Vector2(-1, -1), Vector2(1, -1), Vector2(1, 1), Vector2(-1, 1)])
+		f.color = Color("feae34") if i % 2 == 0 else Color("fee761")
+		f.position = EISEN
+		f.z_index = 60
+		var mat := CanvasItemMaterial.new()
+		mat.blend_mode = CanvasItemMaterial.BLEND_MODE_ADD
+		f.material = mat
+		add_child(f)
+		var ziel := EISEN + Vector2(randf_range(-26, 18), randf_range(-26, 4))
+		var t := f.create_tween().set_parallel()
+		t.tween_property(f, "position", ziel, 0.32).set_ease(Tween.EASE_OUT)
+		t.tween_property(f, "modulate:a", 0.0, 0.32)
+		t.chain().tween_callback(f.queue_free)

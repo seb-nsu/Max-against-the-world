@@ -58,12 +58,12 @@ texture = ExtResource("4_mcqit")
 description = "UI_RAUM_DACHBODEN"
 
 [node name="ZappOMat" parent="Props" unique_id=145494250 instance=ExtResource("5_k8q6h")]
-position = Vector2(370.5, 188)
+position = Vector2(370.5, 197)
 texture = ExtResource("6_mcqit")
 frames = 7
 description = "UI_OBJ_ZAPP_O_MAT"
 baseline = 56
-walk_to_point = Vector2(-5.5, 69)
+walk_to_point = Vector2(-5.5, 60)
 interaction_polygon = PackedVector2Array(-52.5, -56, 52.5, -56, 52.5, 56, -52.5, 56)
 
 [node name="Dosenoeffner" parent="Props" unique_id=1001585250 instance=ExtResource("9_mcqit")]

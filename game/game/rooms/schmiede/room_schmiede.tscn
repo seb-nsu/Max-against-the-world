@@ -84,7 +84,7 @@ position = Vector2(600, 262)
 [node name="Characters" type="Node2D" parent="." unique_id=674367572]
 
 [node name="CharacterSchmied *" parent="Characters" unique_id=219458842 instance=ExtResource("13_6skh3")]
-position = Vector2(330, 242)
+position = Vector2(306, 236)
 
 [node name="CharacterSchmiedeZiege *" parent="Characters" unique_id=1898849327 instance=ExtResource("14_idigh")]
 position = Vector2(470, 300)

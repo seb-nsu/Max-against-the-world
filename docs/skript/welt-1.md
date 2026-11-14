@@ -55,7 +55,7 @@ Der Dorfplatz ist die Drehscheibe der Welt: Rätsel 3 (Bestellung), 5 (Brunnen) 
 | W1\_DORF\_MAX\_0160 | Max | „Rotkäppchens Lieferdienst. Alles, was Oma nicht mehr trägt. In zehn Minuten da oder der Korb ist gratis.“ | Ansehen: Bestellzettel am Dorfbrett |
 | W1\_DORF\_MAX\_0165 | Max | Unten klein: „Achtung, Wolf im Lieferbereich. Nicht füttern, nicht reden, nicht Oma nennen.“ | Ansehen: Bestellzettel am Dorfbrett, zweites Mal |
 | W1\_DORF\_MAX\_0170 | Max | Ein Bestellzettel. Den nehm ich mit, man weiß ja nie, wann man mal dringend eine Lieferung braucht. | Nehmen: Bestellzettel |
-| W1\_DORF\_MAX\_0180 | Max | „Gesucht wegen Weltherrschaft. Wohnhaft: Dunkler Turm, sieben Stockwerke, steht größtenteils leer. Besondere Kennzeichen: reagiert empfindlich auf Kosenamen.“ | Ansehen: Moderworts Steckbrief am Dorfbrett (keine Nahansicht) |
+| W1\_DORF\_MAX\_0180 | Max |  „Gesucht wegen Weltherrschaft. Wohnhaft: Dunkler Turm, sieben Stockwerke, steht größtenteils leer. // Besondere Kennzeichen: reagiert empfindlich auf Kosenamen.“  | Ansehen: Moderworts Steckbrief am Dorfbrett (keine Nahansicht) |
 | W1\_DORF\_MAX\_0185 | Max | Unter das Bild hat jemand „Gesundheit!“ gekritzelt. Mehrmals, und jedes Mal ein bisschen verzweifelter. | Ansehen: Moderworts Steckbrief am Dorfbrett (keine Nahansicht), zweites Mal |
 | W1\_DORF\_MAX\_0190 | Max | Die Adresse steht dabei. Finden wollte ihn offenbar keiner. | Ansehen Steckbrief, Fortsetzung |
 | W1\_DORF\_PIX\_0200 | Pixel | Kein Gesicht auf dem Bild, nur zwei rote Nasenlöcher. // Entweder ist dieser Mann sehr böse, oder der Zeichner war sehr schlecht. Aus Erfahrung tippe ich auf beides. | Ansehen Steckbrief, Pixel |
@@ -264,7 +264,7 @@ Gespräch mit Humbert:
 | W1\_TAV\_HUM\_0560 | Humbert | Und du nennst dein Handy nicht beim Vornamen? Was bist du denn für ein Mensch? | ehrlich entsetzt |
 | W1\_TAV\_MAX\_0565 | Max | Es heißt Handy. Mehr hat es sich bei dem Akku ehrlich gesagt noch nicht verdient. |  |
 | W1\_TAV\_MAX\_0570 | Max | Habt ihr Wein? | Option Humbert (bleibt) |
-| W1\_TAV\_HUM\_0580 | Humbert | Hauswein, Hauswein rot, Hauswein noch röter. Auf der Karte steht noch der Jahrgang Schicksalsberg. Den hat noch nie jemand bestellt. Liegt ganz hinten im Keller, hinter den Rüben. | Hinweis R1b; schaltet Option 0590 frei |
+| W1\_TAV\_HUM\_0580 | Humbert |  Hauswein, Hauswein rot, Hauswein noch röter. Auf der Karte steht noch der Jahrgang Schicksalsberg. // Den hat noch nie jemand bestellt. Liegt ganz hinten im Keller, hinter den Rüben.  | Hinweis R1b; schaltet Option 0590 frei |
 | W1\_TAV\_MAX\_0581 | Max | Hinter den Rüben. Das klingt nach einem längeren Ausflug. |  |
 | W1\_TAV\_HUM\_0582 | Humbert | Eine halbe Stunde, wenn die Rüben friedlich sind. Sonst länger. |  |
 | W1\_TAV\_MAX\_0590 | Max | Dann nehm ich den Schicksalsberg. | Option Humbert; nach 0580; löst R1b |
@@ -293,6 +293,7 @@ Gespräch mit Gollo:
 | W1\_TAV\_GOL\_0760 | Gollo | Rätsel! Ja! Ich gewinne immer! Was hat einen Hals und keinen Kopf, einen Bauch und keinen Hunger? | kichert |
 | W1\_TAV\_MAX\_0770 | Max | Eine Flasche. Das steht in jedem Rätselbuch auf der ersten Seite. | Antwort auf 0760 |
 | W1\_TAV\_GOL\_0780 | Gollo | Siehst du! Alle wissen alles! Ich verliere nur, wenn jemand etwas fragt, das niemand wissen kann. Und das passiert nie. | Hinweis R1c |
+| W1\_TAV\_MAX\_0785 | Max | Ich hab ein Rätsel für dich: Was hab ich in meiner Tasche? | Option Gollo (bleibt); nach R1a, nach R1b, vor R1c; startet das Rätselspiel wie Thunfischdose auf Gollo (ab 1130) |
 | W1\_TAV\_MAX\_0790 | Max | Tschüss, Gollo. | Option Gollo, beendet das Gespräch |
 | W1\_TAV\_GOL\_0800 | Gollo | Geh nur. Alle gehen. Der Ring bleibt. Der Ring bleibt immer. |  |
 
@@ -315,6 +316,7 @@ Rätsel 1c: Das Rätselspiel. Max zieht die Thunfischdose auf Gollo; jeder ander
 
 | ID | Sprecher | Text | Regie |
 | --- | --- | --- | --- |
+| W1\_TAV\_PIX\_1105 | Pixel | Madame ist draußen, der Wirt ist im Keller. Jetzt guckt keiner mehr. // Außer Gollo. Und sein Ring, sagt er. | sobald R1a und R1b gelöst sind, einmalig |
 | W1\_TAV\_GOL\_1110 | Gollo | Nicht jetzt! Der Wirt! Die Katze! Alle gucken! Frag mich, wenn keiner guckt. | Thunfischdose (oder ein anderer Gegenstand) auf Gollo vor R1a oder R1b |
 | W1\_TAV\_MAX\_1120 | Max | Gollo. Ich hab ein Rätsel für dich: Was hab ich in meiner Tasche? | Thunfischdose (oder ein anderer Gegenstand) auf Gollo; nach R1a und R1b |
 | W1\_TAV\_GOL\_1130 | Gollo | Das ist keine Frage! Das ist … gemein. Ich rate. Dreimal. Das sind die Regeln. | kneift die Augen zu |
@@ -327,7 +329,7 @@ Rätsel 1c: Das Rätselspiel. Max zieht die Thunfischdose auf Gollo; jeder ander
 | W1\_TAV\_PIX\_1200 | Pixel | Barbarisch. Aber zielführend. | von oben |
 | W1\_TAV\_GOL\_1210 | Gollo | Niemand hat eine Dose Thunfisch! Das kann man nicht wissen! Das ist Betrug! // Ich liebe es. Ich habe verloren. Endlich. | Ring-werfen-Animation; Zischen aus dem Topf |
 | W1\_TAV\_GOL\_1220 | Gollo | Er ist weg. Ich fühle mich … leicht. Hier, meine letzte Goldmünze. Ich brauche nichts mehr. Nur Schlaf. Jahrelang. | gibt die Münze, rollt sich auf der Bank zusammen |
-| W1\_TAV\_MAX\_1230 | Max | Ein Ring im Käse. In Serien dauert so was drei Staffeln, und am Ende sind trotzdem alle traurig. |  |
+| W1\_TAV\_MAX\_1230 | Max | Ein Ring im Käse. Ab jetzt ist das Fondue verflucht. Oder gewürzt, je nachdem, wen man fragt. |  |
 | W1\_TAV\_NAR\_1240 | – | Humbert kommt staubig und ohne Flasche aus dem Keller. | Szene ohne Text |
 | W1\_TAV\_HUM\_1250 | Humbert | Da war nur ein Etikett. Da war nie ein Wein. Dreihundert Jahre lang ein Etikett. | staubig, fassungslos |
 | W1\_TAV\_HUM\_1260 | Humbert | Moment. Was ist in meinem Topf? | riecht, probiert mit dem Finger |
@@ -377,7 +379,7 @@ Zurufe in der Taverne (Pixel):
 
 ## 4. Schmiede: Die erste Ziege und die Milch
 
-Der Schmied schmiedet nur noch Kochgeschirr, seit die Ziege bei ihm wohnt. Hier gibt es Ziege 1 (Rätsel 3) und später die Ziegenmilch (Rätsel 6, Teil 1). Der Krug für die Milch hängt beim Kochgeschirr. Melken geht überall, wo die Schmiede-Ziege gerade ist; vor Rätsel 4 folgt sie Max, danach steht sie wieder in der Schmiede.
+Der Schmied schmiedet nur noch Kochgeschirr, seit die Ziege bei ihm wohnt. Hier gibt es Ziege 1 (Rätsel 3) und später die Ziegenmilch (Rätsel 6, Teil 1). Der Krug für die Milch steht am Türpfosten neben dem Kochgeschirr. Melken geht überall, wo die Schmiede-Ziege gerade ist; vor Rätsel 4 folgt sie Max, danach steht sie wieder in der Schmiede.
 
 | ID | Sprecher | Text | Auslöser |
 | --- | --- | --- | --- |
@@ -576,9 +578,9 @@ Ansehen im Klassenzimmer:
 | W1\_HOGG\_MAX\_0115 | Max | In eine Bank ist ein Herz geritzt: „A. + Kelle“. Der Schulleiter saß hier selbst mal. | Schulbank, zweites Mal |
 | W1\_HOGG\_MAX\_0120 | Max | Eine leere Tafel. Entweder hat Alwin nichts zu sagen, oder er hat schon wieder alles vergessen. | Tafel |
 | W1\_HOGG\_MAX\_0125 | Max | Ganz unten in der Ecke steht doch was: „Nicht wegwischen!“ Drumherum ist alles weggewischt. | Tafel, zweites Mal |
-| W1\_HOGG\_MAX\_0130 | Max | Ein Kessel, der leer vor sich hin blubbert. Er hat nichts zu sagen und sagt es trotzdem die ganze Zeit. | Kessel; vor dem Brauen |
+| W1\_HOGG\_MAX\_0130 | Max | Ein Kessel, in dem schon etwas Grünes blubbert. Alwin nennt das Grundlage. Ich nenne das verdächtig. | Kessel; vor dem Brauen |
 | W1\_HOGG\_MAX\_0135 | Max | Ich hab reingeguckt. Am Boden klebt eine Nudel. Hier wurde schon mal was anderes gekocht als Zaubertrank. | Kessel, zweites Mal; vor dem Brauen |
-| W1\_HOGG\_MAX\_0140 | Max | Sechs braune Flaschen ohne Etikett, und zwei davon sind doppelt so groß. Das ist entweder Magie oder Marketing. | Flaschenregal |
+| W1\_HOGG\_MAX\_0140 | Max | Sechs braune Flaschen mit vertauschten Etiketten, und zwei davon sind deutlich größer. Das ist entweder Magie oder Marketing. | Flaschenregal |
 | W1\_HOGG\_MAX\_0145 | Max | Am Regalbrett kleben sechs Kleberänder. Die Etiketten gab es also mal, und jemand wollte sie nicht mehr. | Flaschenregal, zweites Mal |
 | W1\_HOGG\_PIX\_0150 | Pixel | Sechs Flaschen, kein Etikett. Ich rieche sie von hier aus, alle sechs. // Aber ich lasse mich bitten. Mindestens zweimal, und beim zweiten Mal bitte mit mehr Gefühl. | Flaschenregal, Pixel |
 | W1\_HOGG\_MAX\_0160 | Max | Hohe Fenster. Draußen ist Wetter, drinnen ist Stundenplan. | Fenster |
@@ -604,11 +606,11 @@ Gespräch mit Alwin (ab Prüfungsbeginn):
 | W1\_HOGG\_MAX\_0341 | Max | Und was macht aus einem Pfannkuchen einen Leuchttrank? |  |
 | W1\_HOGG\_ALW\_0342 | Alwin | Der Pilz. Ohne Pilz ist es Frühstück, mit Pilz ist es Bildung. Leuchtpilze wachsen im Zauberwald, hinter der Trollbrücke. | Hinweis R6, Teil 1 |
 | W1\_HOGG\_MAX\_0350 | Max | Wo gibt es hier Milch? | Option Alwin (bleibt); nach 0320 |
-| W1\_HOGG\_ALW\_0360 | Alwin | Milch? Milch gibt es im ganzen Reich nicht mehr. Der Lord trinkt seinen Kaffee jetzt schwarz. Daher die Laune. // Aber Ziegen. Ziegen haben Milch, sagt man. Ich habe nie nachgesehen. | Hinweis R6, Teil 1 |
+| W1\_HOGG\_ALW\_0360 | Alwin | Milch? Milch gibt es im ganzen Reich nicht mehr. Der Lord trinkt seinen Kaffee jetzt schwarz. Daher die Laune. // Aber Ziegen. Ziegen haben Milch, sagt man. Ich habe nie nachgesehen. Die Milch ist in einem anderen Schloss. | Hinweis R6, Teil 1 |
 | W1\_HOGG\_MAX\_0950 | Max | In welchem Schloss? |  |
 | W1\_HOGG\_ALW\_0960 | Alwin | In dem, das schwebt. Die Milch hat jetzt einen schöneren Ausblick als ich. |  |
 | W1\_HOGG\_MAX\_0370 | Max | Was hat es mit dem Regal auf sich? | Option Alwin (bleibt) |
-| W1\_HOGG\_ALW\_0380 | Alwin | Sechs Flaschen. Die Etiketten hat jemand vertauscht. Vermutlich ich. Mein Zettel sagt dir, welche die richtige ist. In Reimen. Ich war mal Barde. | gibt Alwins Hinweiszettel |
+| W1\_HOGG\_ALW\_0380 | Alwin |  Sechs Flaschen. Die Etiketten hat jemand vertauscht. Vermutlich ich. // Mein Zettel sagt dir, welche die richtige ist. In Reimen. Ich war mal Barde.  | gibt Alwins Hinweiszettel |
 | W1\_HOGG\_MAX\_0970 | Max | Kannst du mir nicht einfach sagen, welche es ist? |  |
 | W1\_HOGG\_ALW\_0980 | Alwin | Könnte ich. Aber dann hätte ich den Reim umsonst geschrieben. Ich habe vier Tage an „Schleim“ gesessen. |  |
 | W1\_HOGG\_MAX\_0985 | Max | Was reimt sich denn auf „Schleim“? |  |
@@ -643,7 +645,7 @@ Rätsel 6, Teil 2: die sechs Flaschen. Alwins Zettel als Nahansicht, Pixels zwei
 | ID | Sprecher | Text | Auslöser |
 | --- | --- | --- | --- |
 | W1\_HOGG\_ALW\_0610 | Alwin (Zettel) | Sechs Flaschen im Regal, so lautet die Zahl: ein Trank, ein Öl, zweimal Gift, zweimal Saft. Mehr hat mein Regal nie geschafft. | Nahansicht Hinweiszettel, Strophe 1 |
-| W1\_HOGG\_ALW\_0620 | Alwin (Zettel) | Das Fischöl, das stinkt, steht gleich rechts neben dem Trank. Die zwei Riesen sind gleich bis zum Rand. Und am Rand des Regals steht nie, was du suchst. Mehr reimt sich nicht, auch wenn du fluchst. | Nahansicht Hinweiszettel, Strophe 2; Notizbuch trägt die drei Regeln ein |
+| W1\_HOGG\_ALW\_0620 | Alwin (Zettel) |  Das Fischöl, das stinkt, steht gleich rechts neben dem Trank. Die zwei Riesen sind gleich bis zum Rand. // Und am Rand des Regals steht nie, was du suchst. Mehr reimt sich nicht, auch wenn du fluchst.  | Nahansicht Hinweiszettel, Strophe 2; Notizbuch trägt die drei Regeln ein |
 | W1\_HOGG\_MAX\_0630 | Max | Rechts daneben. Hoffentlich von mir aus gesehen, sonst werd ich gleich ein Pilz. | Nahansicht, Max |
 | W1\_HOGG\_PIX\_0640 | Pixel | Brennnessel. So riechen Pflanzen, wenn sie beleidigt sind, und diese hier ist sehr beleidigt. | Pixel schnuppert: Flasche 1 |
 | W1\_HOGG\_PIX\_0650 | Pixel | Pilz, und zwar bitter. Wer das trinkt, wird selbst einer. // Ich habe das soeben erfunden, junger Mann, und bin mir trotzdem vollkommen sicher. | Pixel schnuppert: Flasche 2 |
@@ -671,9 +673,11 @@ Rätsel 6, Teil 2: die sechs Flaschen. Alwins Zettel als Nahansicht, Pixels zwei
 | W1\_HOGG\_MAX\_0870 | Max | Leuchtet im Dunkeln, steht jedenfalls drauf. | Ansehen: Leuchttrank im Inventar |
 | W1\_HOGG\_MAX\_0875 | Max | Ich halt die Hand drüber, und es wird ein bisschen hell. Für ein Nachtlicht reicht's, für einen Dunklen Lord eher nicht. | Ansehen: Leuchttrank im Inventar, zweites Mal |
 | W1\_HOGG\_MAX\_0880 | Max | Die Prüfung hab ich schon bestanden. Noch ein Trank, und Alwin stellt mich am Ende noch als Lehrer ein. | Flasche auf Kessel; nach R6 |
-| W1\_HOGG\_MAX\_0890 | Max | Unten rechts steht: „Betragen: herausragend böse.“ Mit Sternchen. Das hat er sich bestimmt eingerahmt. | Ansehen: Zeugnis im Inventar, öffnet die Nahansicht (erstes Ansehen nach der Szene) |
-| W1\_HOGG\_MAX\_0930 | Max | Eine Flasche ohne Etikett. Ob das mutig ist oder dumm, entscheidet gleich der Kessel. | Max nimmt eine der sechs Flaschen aus dem Regal; vor R6b |
-| W1\_HOGG\_MAX\_0940 | Max | Eine Flasche pro Versuch. Wenn ich zwei auf einmal reinkippe, kommt bestimmt kein Trank raus, sondern Chaos. | Max greift zur zweiten Flasche, während er eine trägt |
+| W1\_HOGG\_MAX\_0890 | Max | Bei Betragen steht eine Eins mit Sternchen, und unten drunter: „herausragend böse“. Das hat er sich bestimmt eingerahmt. | Ansehen: Zeugnis im Inventar, öffnet die Nahansicht (erstes Ansehen nach der Szene) |
+| W1\_HOGG\_MAX\_0930 | Max | Eine Flasche, deren Etikett lügt. Ob das mutig ist oder dumm, entscheidet gleich der Kessel. | Max nimmt eine der sechs Flaschen aus dem Regal; vor R6b |
+| W1\_HOGG\_MAX\_0940 | Max | Eine Flasche pro Versuch. Wenn ich zwei auf einmal reinkippe, kommt bestimmt kein Trank raus, sondern Chaos. | Reserve, kommt nicht vor (seit Review Fund 13 tauscht Max die Flaschen, 0946) |
+| W1\_HOGG\_MAX\_0945 | Max | Zurück ins Regal. Ich hab's mir anders überlegt, das darf man bei Zaubertränken. | Max klickt mit der getragenen Flasche auf ihren leeren Platz im Regal |
+| W1\_HOGG\_MAX\_0946 | Max | Ich stell die hier zurück. Dann eben die. | Max greift zu einer anderen Flasche, während er eine trägt; tauscht |
 
 Zurufe im Klassenzimmer (Pixel):
 
@@ -695,7 +699,7 @@ Rätsel 3 (dritte Ziege) und Rätsel 4 (a, b, c). Waldemar steht kerzengerade ne
 | W1\_BRUE\_MAX\_0030 | Max | Ein Schild mit mehr Paragrafen als mein Handyvertrag. Die Märchen-Satzung. | Ansehen: Schild, öffnet die Nahansicht |
 | W1\_BRUE\_MAX\_0035 | Max | Paragraf zwölf: „Trolle dürfen nicht nass werden, ohne vorher Bescheid zu sagen.“ Okay. Merk ich mir. | Ansehen: Schild, öffnet die Nahansicht, zweites Mal |
 | W1\_BRUE\_WAL\_0040 | Waldemar (Schild) | Paragraf 1: Drei Ziegenböcke überqueren die Brücke, der kleine zuerst, dann der mittlere, dann der große. | Nahansicht Satzung; Notizbuch trägt die Regel ein |
-| W1\_BRUE\_WAL\_0050 | Waldemar (Schild) | Paragraf 2: Jeder Bock spricht seinen Satz. Der Kleine: „Friss mich nicht, mein Bruder ist fetter.“ Der Mittlere: „Friss mich nicht, mein Bruder ist noch fetter.“ Der Große: „Friss mich doch, wenn du dich traust.“ | Nahansicht Satzung |
+| W1\_BRUE\_WAL\_0050 | Waldemar (Schild) |  Paragraf 2: Jeder Bock spricht seinen Satz. Der Kleine: „Friss mich nicht, mein Bruder ist fetter.“ // Der Mittlere: „Friss mich nicht, mein Bruder ist noch fetter.“ Der Große: „Friss mich doch, wenn du dich traust.“  | Nahansicht Satzung |
 | W1\_BRUE\_WAL\_0060 | Waldemar (Schild) | Paragraf 3: Der Troll geht ins Wasser. Paragraf 14b: Leihgaben sind zurückzugeben. | Nahansicht Satzung |
 | W1\_BRUE\_MAX\_0070 | Max | „Der Troll geht ins Wasser.“ Steht da wirklich so. Von Reinfallen steht da nichts, und von einem Fluss auch nicht. | Nahansicht, Max; Hinweis R4c |
 | W1\_BRUE\_PIX\_0080 | Pixel | Holz, Farbe und Pedanterie. Jemand hat jeden Paragrafen einzeln poliert. // Mit einem Taschentuch und sehr viel Liebe. | Schild, Pixel schnuppert |
@@ -771,7 +775,7 @@ Rätsel 4b, Ziegisch: Max liest den Text aus der Satzung vor (Benutzen: Schild),
 | W1\_BRUE\_WAL\_0620 | Waldemar | Das ist kein Satz. Das ist ein Laut. Paragraf zwei verlangt den Satz. Auf Ziegisch meinetwegen, aber den Satz. |  |
 | W1\_BRUE\_MAX\_0630 | Max | Die sprechen aber nur Ziegisch. Und für Ziegisch hab ich nicht mal eine App. |  |
 | W1\_BRUE\_PIX\_0640 | Pixel | Ich spreche fließend Ziegisch. Das hat mir meine Großmutter beigebracht, eine Stallkatze von hohem Rang. // Lies den Text vor, ich übersetze. Meistens richtig. | Hinweis R4b |
-| W1\_BRUE\_MAX\_0650 | Max | „Friss mich nicht, mein Bruder ist fetter.“ „Friss mich nicht, mein Bruder ist noch fetter.“ „Friss mich doch, wenn du dich traust.“ Vorgelesen. Zufrieden? | Benutzen: Schild, Vorlesen; schaltet Pixels Übersetzung frei |
+| W1\_BRUE\_MAX\_0650 | Max |  „Friss mich nicht, mein Bruder ist fetter.“ „Friss mich nicht, mein Bruder ist noch fetter.“ // „Friss mich doch, wenn du dich traust.“ Vorgelesen. Zufrieden?  | Benutzen: Schild, Vorlesen; schaltet Pixels Übersetzung frei |
 | W1\_BRUE\_PIX\_0660 | Pixel | Mäh. Friss mich nicht, mein Bruder ist fetter. // Ich sage das als Katze, und es war trotzdem zutiefst demütigend. Ich habe nicht einmal einen Bruder. | Pixel-Ziege spricht ihren Satz selbst |
 | W1\_BRUE\_WAL\_0670 | Waldemar | Akzeptiert. Mit Vorbehalt. Weiter. | nach 0660 |
 | W1\_BRUE\_PIX\_0680 | Pixel | Mä-mäh, määh mäh. | Pixel redet mit Schmiede-Ziege, erster Versuch |
@@ -1049,6 +1053,7 @@ Rätsel 9: Gespräch mit der Maklerin, drei Optionen, eine führt zum Ziel. Die 
 | W1\_LUFT\_TOA\_0620 | Toadi | … Schloss. Hoheit! Gefunden! Ich habe dich gefunden! |  |
 | W1\_LUFT\_ZEL\_0630 | Zeldina | Du bist mir nachgerannt. |  |
 | W1\_LUFT\_TOA\_0640 | Toadi | Das ist Finden mit Anlauf. | R9 gelöst |
+| W1\_LUFT\_PIX\_0485 | Pixel | Wo die Maklerin stand, hat jemand an die Wand gekritzelt. Mit Kreide. // Sieh dir das an, bevor wir gehen. Ich spüre, dass es wichtig ist, und mein Gespür irrt nur bei Staubsaugern. | nach R9, wenn die Maklerin weg ist |
 
 Gespräch mit Zeldina im Team (überall, wo sie folgt):
 
@@ -1085,7 +1090,7 @@ Rätsel 10 mit zwei Lösungswegen. Weg A: Leuchttrank als Fackel, Tarifvertrag m
 | W1\_BERG\_GRI\_0010 | Grimmzahn | STREIK! Keiner kommt durch! Nicht mal du, Langer! | Szene, erstes Betreten |
 | W1\_BERG\_MAX\_0020 | Max | Goblins, die nichts tun. Aber organisiert. | Ansehen: Streikposten |
 | W1\_BERG\_MAX\_0025 | Max | Einer hat ein Schild „Wir sind Goblins, keine Maschinen“. Darunter: „Okay, Maschinen auch nicht.“ | Ansehen: Streikposten, zweites Mal |
-| W1\_BERG\_MAX\_0030 | Max | Streikschilder ohne Text. Die Forderung ist so klar, dass sie keiner aufschreiben musste. | Ansehen: Streikschilder |
+| W1\_BERG\_MAX\_0030 | Max | Die meisten Streikschilder sind ohne Text. Die Forderung ist so klar, dass sie keiner aufschreiben musste. | Ansehen: Streikschilder |
 | W1\_BERG\_MAX\_0035 | Max | Auf der Rückseite von einem Schild steht eine Einkaufsliste: Pilze, Kaffee, Würde. | Ansehen: Streikschilder, zweites Mal |
 | W1\_BERG\_MAX\_0040 | Max | Loren auf Schienen, und die Schienen enden direkt im Streikposten. Sehr konsequent, muss man sagen. | Ansehen: Loren |
 | W1\_BERG\_MAX\_0045 | Max | In einer Lore schläft eine Fledermaus. Die streikt auch. Aus Solidarität. | Ansehen: Loren, zweites Mal |
@@ -1237,7 +1242,7 @@ Rätsel 12 und Rätsel 11, Teil 1, in der obersten Kammer (Ebene 6). Smaugi sitz
 | ID | Sprecher | Text | Regie oder Auslöser |
 | --- | --- | --- | --- |
 | W1\_SMAU\_SMA\_0010 | Smaugi | Nicht anfassen! Das … das ist alles noch gut. | Szene, Ankunft; Staubwedel erhoben |
-| W1\_SMAU\_MAX\_0020 | Max | Ein Drache mit Kopftuch, der auf einem Haufen Gerümpel sitzt. Das hab ich mir anders vorgestellt. |  |
+| W1\_SMAU\_MAX\_0020 | Max | Ein Drache mit Kopftuch, der vor einem Haufen Gerümpel sitzt. Das hab ich mir anders vorgestellt. |  |
 | W1\_SMAU\_SMA\_0030 | Smaugi | Seit die Besen da sind, finde ich alles. Das ist noch schlimmer. | seufzt, Rauchwölkchen |
 | W1\_SMAU\_HUM\_0040 | Humbert | Fondue-Lieferung für eine Einweihung! Wer hat bestellt? | kommt die Treppe hoch, Topf in den Armen |
 | W1\_SMAU\_ZEL\_0050 | Zeldina | Ich. Vorsichtshalber. |  |
@@ -1326,6 +1331,10 @@ Rätsel 11, Teil 1: die Geheimtür. Benutzen öffnet die Eingabe: Der Spieler or
 | --- | --- | --- | --- |
 | W1\_SMAU\_TUE\_0710 | Geheimtür | Passwort, bitte. Kicher. | Benutzen: Geheimtür; danach wählt Max die vier Teile aus dem Notizbuch nacheinander (Auswahl wie im Gespräch, gewählte Teile verschwinden) |
 | W1\_SMAU\_TUE\_0720 | Geheimtür | Unvollständig. Kicher. Such weiter. | weniger als vier Teile im Notizbuch |
+| W1\_SMAU\_PIX\_0721 | Pixel | Uns fehlt der Anfang. Den Kosenamen, mit dem alles anfängt, kennt nur Zeldina. | nach 0720, wenn Mo fehlt |
+| W1\_SMAU\_PIX\_0722 | Pixel | Uns fehlt ein Stück aus der Mitte. Moderworts altes Zeugnis müsste es verraten. | nach 0720, wenn das Zeugnis fehlt |
+| W1\_SMAU\_PIX\_0723 | Pixel | Uns fehlt ein Kosename. Die Goblins singen ihn, wenn man sie lässt. | nach 0720, wenn Puddi fehlt |
+| W1\_SMAU\_PIX\_0724 | Pixel | Uns fehlt das Ende. Ich tippe auf die Kreidekritzelei an der Wand im Luftschloss. | nach 0720, wenn Bärchen fehlt |
 | W1\_SMAU\_TUE\_0730 | Geheimtür | Kicher! Nein! Kicherkicher! | falsche Reihenfolge |
 | W1\_SMAU\_MAX\_0740 | Max | Die Tür lacht mich aus. Das macht sonst nur die Autokorrektur. | nach 0730 |
 | W1\_SMAU\_TUE\_0750 | Geheimtür | Puddi-Bärchen-Mo? Das ist ja nicht mal ein Name. Kicher. | falsche Reihenfolge, die mit Puddi, Bärchen, Mo beginnt (statt 0730) |
@@ -1336,6 +1345,8 @@ Rätsel 11, Teil 1: die Geheimtür. Benutzen öffnet die Eingabe: Der Spieler or
 | W1\_SMAU\_PIX\_0800 | Pixel | Der Drache seufzt alle dreißig Sekunden, ich habe mitgezählt. // Ich hatte sonst nichts zu tun, und du offenbar auch nicht. | Zuruf |
 | W1\_SMAU\_PIX\_0810 | Pixel | Die Besen fegen Smaugis Haufen zu Stapeln. Ordnung durch Terror. // Deine Großmutter macht das auch, wenn sich Besuch angekündigt hat. | Zuruf; vor R12 |
 | W1\_SMAU\_MAX\_0820 | Max | Erst das Ei. Von einem Dunklen Lord stand auf Opas Zettel nichts drauf. | Benutzen: offene Geheimtür; nach R11 Teil 1, vor R12 |
+| W1\_SMAU\_ZEL\_0825 | Zeldina | Moment. Da oben sitzt Moderwort, und er niest bei Blumen. Ohne Blumen gehe ich da nicht rein. | Benutzen: offene Geheimtür; nach R12, vor R7 |
+| W1\_SMAU\_PIX\_0826 | Pixel | Blumen, bei denen man niest. Im Zauberwald steht ein ganzer Busch davon. Nur so ein Gedanke. | nach 0825 |
 
 ## 14. Thronsaal: Lord Moderwort und Abschluss der Welt
 
@@ -1525,7 +1536,7 @@ Drei Stufen je Rätselschritt. Die Texte zu Rätsel 1 bis 4 sind die Slice-Hinwe
 | W1\_HINT\_PIX\_0230 | Pixel | Schmier Käse auf den Löffel. Ich bin ein Kater, kein Lösungsbuch. | R2, Stufe 3 |
 | W1\_HINT\_PIX\_0310 | Pixel | Der Troll will drei Ziegen, und wir haben null. Das ist, wenn ich das anmerken darf, ein schlechter Start. | R3, Stufe 1 |
 | W1\_HINT\_PIX\_0320 | Pixel | Eine Ziege frisst gerade beim Schmied, eine zweite kann man am Dorfbrett bestellen. Die dritte … bitte nicht. | R3, Stufe 2 |
-| W1\_HINT\_PIX\_0330 | Pixel | Hol die Schmiede-Ziege. Bestell die zweite mit dem Zettel am Dorfbrett und gib mir den Ziegenfell-Vorleger aus der Taverne. Ich hasse alles daran. | R3, Stufe 3 |
+| W1\_HINT\_PIX\_0330 | Pixel |  Hol die Schmiede-Ziege. // Bestell die zweite mit dem Zettel am Dorfbrett und gib mir den Ziegenfell-Vorleger aus der Taverne. Ich hasse alles daran.  | R3, Stufe 3 |
 | W1\_HINT\_PIX\_0411 | Pixel | Der Troll ist ein Paragrafenreiter. Lies das Brückenschild. Ganz. | R4a, Stufe 1 |
 | W1\_HINT\_PIX\_0421 | Pixel | Im Märchen läuft immer erst die Kleine, dann die Mittlere, dann die Große. | R4a, Stufe 2 |
 | W1\_HINT\_PIX\_0431 | Pixel | Schick die Ziegen klein, mittel, groß über die Brücke. Ich bin die Kleine. Sag's niemandem. | R4a, Stufe 3 |
@@ -1539,8 +1550,8 @@ Drei Stufen je Rätselschritt. Die Texte zu Rätsel 1 bis 4 sind die Slice-Hinwe
 | W1\_HINT\_PIX\_0520 | Pixel | Gollos Münze gehört in den Brunnen. Und dann wünsch dir nichts, was ich bereuen würde. | R5, Stufe 2 |
 | W1\_HINT\_PIX\_0530 | Pixel | Münze rein, „etwas, das hoch hinaus will“ wünschen. Nicht Pizza. Ich sage das unter Schmerzen. | R5, Stufe 3 |
 | W1\_HINT\_PIX\_0611 | Pixel | Alwin will Ei, Milch und einen Leuchtpilz, also einen Pfannkuchen, der leuchtet. // Zutaten muss man sammeln, junger Mann. Sie kommen nicht von allein, das weiß ich vom Thunfisch. | R6 Teil 1, Stufe 1 |
-| W1\_HINT\_PIX\_0621 | Pixel | Ei beim Huhn in der Taverne, Pilz im Zauberwald, und Milch gibt es hier nicht. Außer bei Tieren mit Glöckchen. | R6 Teil 1, Stufe 2 |
-| W1\_HINT\_PIX\_0631 | Pixel | Nimm den Krug aus der Schmiede, melk die Ziege, wirf Ei, Milch und Pilz in den Kessel. Ich sehe weg. | R6 Teil 1, Stufe 3 |
+| W1\_HINT\_PIX\_0621 | Pixel | Das Ei hat Berta in der Taverne, und die gibt es nicht her. Frag mich, was sie sagt. Pilz im Zauberwald, Milch bei Tieren mit Glöckchen. | R6 Teil 1, Stufe 2 |
+| W1\_HINT\_PIX\_0631 | Pixel | Berta flieht vor schlechter Musik, also spiel ihr auf der Laute vor. Dann Krug aus der Schmiede, Ziege melken, alles in den Kessel. | R6 Teil 1, Stufe 3 |
 | W1\_HINT\_PIX\_0612 | Pixel | Sechs Flaschen, ein Zettel. Lies den Zettel. Zweimal. // Er reimt sich, aber er lügt nicht. Im Gegensatz zu gewissen Nasen, die ich nicht näher bezeichnen möchte. | R6 Teil 2, Stufe 1 |
 | W1\_HINT\_PIX\_0622 | Pixel | Nicht am Rand. Nicht die Großen, die sind Zwillinge. Und das Fischöl steht rechts neben dem Trank. Rechts von dir aus. | R6 Teil 2, Stufe 2 |
 | W1\_HINT\_PIX\_0632 | Pixel | Flasche drei. Die dritte von links. Ich hätte vier gesagt, und ich hätte gelogen. Nimm drei. | R6 Teil 2, Stufe 3 |
@@ -1557,7 +1568,7 @@ Drei Stufen je Rätselschritt. Die Texte zu Rätsel 1 bis 4 sind die Slice-Hinwe
 | W1\_HINT\_PIX\_1020 | Pixel | Weg eins: Der Leuchttrank aus Hoggelwarz ist eine Fackel, und Ketchup sieht aus wie Blut. Weg zwei: Zeldina braucht einen Hausmeister. | R10, Stufe 2 |
 | W1\_HINT\_PIX\_1030 | Pixel | Gib Grimmzahn den Leuchttrank und unterschreib den Vertrag mit Ketchup. Oder biete ihm mit Zeldina den Hausmeisterposten an. Eins reicht. | R10, Stufe 3 |
 | W1\_HINT\_PIX\_1111 | Pixel | Vier Teile, eine Reihenfolge. Jeder Fundort verrät, was an was hängt. Schau ins Notizbuch, nicht in die Luft. | R11 Teil 1, Stufe 1 |
-| W1\_HINT\_PIX\_1121 | Pixel | Mo ist der Anfang, sagt Zeldina. Das Zeugnis hängt Knuddel an Mo. Das Lied hängt Puddi an Knuddel. Und das Bärchen steht am Ende, mit Punkten davor. | R11 Teil 1, Stufe 2 |
+| W1\_HINT\_PIX\_1121 | Pixel |  Mo ist der Anfang, sagt Zeldina. Das Zeugnis hängt Knuddel an Mo. // Das Lied hängt Puddi an Knuddel. Und das Bärchen steht am Ende, mit Punkten davor.  | R11 Teil 1, Stufe 2 |
 | W1\_HINT\_PIX\_1131 | Pixel | Mo-Knuddel-Puddi-Bärchen. Sag es der Tür. Sag es nie mir. | R11 Teil 1, Stufe 3 |
 | W1\_HINT\_PIX\_1112 | Pixel | Drei Besen, drei Routen. Sie fegen, was sich bewegt. Am liebsten Haare. Ich habe Haare. Ich sehe, worauf das hinausläuft. | R11 Teil 2, Stufe 1 |
 | W1\_HINT\_PIX\_1122 | Pixel | Wechsel zu mir und such die Stellen, wo sich die Fliesenwege kreuzen. Eine pro Route. Dort schüttle ich mich. Unter Protest. | R11 Teil 2, Stufe 2 |

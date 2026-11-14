@@ -21,6 +21,12 @@
    "bilder": 14,
    "ms": 95,
    "schleife": true
+  },
+  "ruehren": {
+   "von": 22,
+   "bilder": 8,
+   "ms": 140,
+   "schleife": true
   }
  }
 }

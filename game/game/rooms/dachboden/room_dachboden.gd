@@ -36,12 +36,14 @@ func _ready() -> void:
 ## Opa steht nicht wie angewurzelt (Sebastian, 14. November 2026): Ist nichts los, geht er alle
 ## 12 bis 24 Sekunden zu einem anderen Platz vorn im Raum und schaut wieder zu Max. Die Plätze
 ## verdecken weder Drehknopf, Kalender noch Pixel. Im Testmodus bleibt er stehen (feste Bilder).
+## Plätze näher als 70 Pixel an Max lässt er aus (sonst stellt er sich auf ihn, Review Fund 2); er
+## geht langsam (walk_speed 55) und wartet beim ersten Mal 25 Sekunden.
 const OPA_PLAETZE := [Vector2(460, 322), Vector2(520, 332), Vector2(325, 332)]
 const OPA_PAUSE_MIN := 12.0
 const OPA_PAUSE_MAX := 24.0
 
 var _opa_ruhe := 0.0
-var _opa_pause := OPA_PAUSE_MIN
+var _opa_pause := 25.0
 var _opa_geht := false
 
 
@@ -69,7 +71,7 @@ func _opa_umhergehen(delta: float) -> void:
 		return
 	_opa_ruhe = 0.0
 	_opa_pause = randf_range(OPA_PAUSE_MIN, OPA_PAUSE_MAX)
-	var plaetze := OPA_PLAETZE.filter(func(p: Vector2): return p.distance_to(C.Opa.position) > 30.0)
+	var plaetze := OPA_PLAETZE.filter(func(p: Vector2): return p.distance_to(C.Opa.position) > 30.0 and (not is_instance_valid(C.player) or absf(p.x - C.player.position.x) > 70.0))
 	if plaetze.is_empty():
 		return
 	_opa_geht = true

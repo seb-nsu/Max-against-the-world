@@ -36,6 +36,7 @@ func _nach_uebergang() -> void:
 		return
 	_erster_besuch = false
 	await Spiel.szene([
+		_uebungsbesen_fliegt,
 		Spiel.z("NAR", "W1_HOGG_NAR_0010"),
 		Spiel.z("PIX", "W1_HOGG_PIX_0020"),
 		Spiel.z("ALW", "W1_HOGG_ALW_0030"),
@@ -43,3 +44,38 @@ func _nach_uebergang() -> void:
 		Spiel.z("ALW", "W1_HOGG_ALW_0050"),
 	])
 	await C.get_character("Alwin").call("stab_pruefen")
+
+
+## Der Übungsbesen saust einmal quer durchs Bild in den Schrank (NAR 0010, Review Fund 17).
+func _uebungsbesen_fliegt() -> void:
+	var bild := "res://grafik/figuren/uebungsbesen.png"
+	if Spiel.testmodus or E.cutscene_skipped or not ResourceLoader.exists(bild):
+		return
+	var daten: Dictionary = JSON.parse_string(FileAccess.get_file_as_string("res://daten/figuren/uebungsbesen.json"))
+	var sp := Sprite2D.new()
+	sp.texture = load(bild)
+	sp.hframes = int(sp.texture.get_width() / float(daten.bild[0]))
+	sp.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
+	sp.position = Vector2(-30, 250)
+	sp.scale = Vector2(0.9, 0.9)
+	get_node("Props").add_child(sp)
+	var walk: Dictionary = daten.animationen.get("walk", daten.animationen.get("idle"))
+	var t := create_tween()
+	t.tween_method(func(k: float):
+		sp.position = Vector2(lerpf(-30.0, 556.0, k), 250.0 - sin(k * PI * 3.0) * 14.0 - k * 40.0)
+		sp.frame = int(walk.von) + int(k * 24.0) % int(walk.bilder), 0.0, 1.0, 1.4)
+	t.tween_property(sp, "modulate:a", 0.0, 0.25)
+	await t.finished
+	sp.queue_free()
+
+
+## Alwin rührt im Stand im Kessel (Sebastian, 14. November 2026): Animation „ruehren“ (Hand und
+## Kelle aus dem gemalten Sprite auf einer kleinen Kreisbahn, Skript alwin_ruehren.py).
+func _zustand_anwenden() -> void:
+	super()
+	if has_character("Alwin") and not Engine.is_editor_hint():
+		var ap := C.Alwin.get_node("AnimationPlayer") as AnimationPlayer
+		if ap and ap.has_animation("ruehren"):
+			C.Alwin.idle_animation = "ruehren"
+			if not C.Alwin.is_talking and not Spiel.testmodus:
+				C.Alwin._play_idle()

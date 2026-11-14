@@ -89,3 +89,25 @@ static func _platz(raum: PopochiuRoom, i: int, sn := "") -> Vector2:
 	var basis: Vector2 = C.Max.position if is_instance_valid(C.Max) else Vector2(320, 320)
 	var richtung := -1.0 if basis.x > raum.width / 2.0 else 1.0
 	return basis + Vector2(richtung * (88 + 44 * i), 8)
+
+
+## Werte für Spiel.regel_wert. „hinweis_vorher“: Die Pfote gibt für das Passwort (R11a) erst die
+## Lösungsstufen, wenn alle vier Teile im Notizbuch stehen; vorher sagt Pixel, welcher Teil fehlt
+## und wo er steckt (Review Fund 14).
+func wert(art: String, obj: Variant, _item: Variant) -> Variant:
+	if art == "hinweis_vorher" and obj == "R11a":
+		return passwort_fehlt()
+	return null
+
+
+## Zeile zum ersten fehlenden Passwort-Teil (Reihenfolge des Passworts), "" wenn alle da sind.
+static func passwort_fehlt() -> String:
+	if not Zustand.ist("W1_PASSWORT_MO"):
+		return "W1_SMAU_PIX_0721"
+	if not "zeugnis" in Zustand.nahansichten:
+		return "W1_SMAU_PIX_0722"
+	if not Zustand.geloest("R10"):
+		return "W1_SMAU_PIX_0723"
+	if not "luftschloss_kritzelei" in Zustand.nahansichten:
+		return "W1_SMAU_PIX_0724"
+	return ""

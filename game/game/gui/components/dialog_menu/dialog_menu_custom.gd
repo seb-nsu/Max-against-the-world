@@ -1,6 +1,6 @@
 extends "dialog_menu.gd"
 ## Dialogauswahl unten (05-spielsysteme.md, Bildschirmaufbau): dunkle Fläche über die ganze
-## Breite, bis zu vier Zeilen; neue Optionen weiß, gelesene grau, die unter der Maus gelb.
+## Breite, bis zu sechs Zeilen (Review Fund 11: bei vier lag „Tschüss“ hinter dem Rollbalken); neue Optionen weiß, gelesene grau, die unter der Maus gelb.
 
 
 func _ready() -> void:
@@ -10,7 +10,7 @@ func _ready() -> void:
 	hover_used_font_color = Color("fee761")
 	pressed_font_color = Color("feae34")
 	pressed_used_font_color = Color("feae34")
-	max_height = 76
+	max_height = 112
 	var stil := StyleBoxFlat.new()
 	stil.bg_color = Color("181425")
 	stil.border_color = Color("262b44")

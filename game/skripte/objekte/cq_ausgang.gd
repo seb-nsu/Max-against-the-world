@@ -21,6 +21,25 @@ func offen() -> bool:
 func sichtbar_anpassen() -> void:
 	if bauplan().get("versteckt", false):
 		visible = offen()
+	_zeiger_richtung()
+
+
+## Der grüne Ausgangspfeil zeigt in die Richtung des Ausgangs (Review P15: zeigte immer nach oben):
+## am linken oder rechten Rand zur Seite, im unteren Viertel nach unten, sonst nach oben.
+func _zeiger_richtung() -> void:
+	if Engine.is_editor_hint() or not is_instance_valid(room):
+		return
+	var breite: float = room.bauplan().get("groesse", [640, 360])[0]
+	var hoehe: float = room.bauplan().get("groesse", [640, 360])[1]
+	var mitte := global_position
+	if mitte.x < breite * 0.12:
+		cursor = PopochiuCursor.Type.LEFT
+	elif mitte.x > breite * 0.88:
+		cursor = PopochiuCursor.Type.RIGHT
+	elif mitte.y > hoehe * 0.75:
+		cursor = PopochiuCursor.Type.DOWN
+	else:
+		cursor = PopochiuCursor.Type.UP
 
 
 func _on_click() -> void:

@@ -55,6 +55,7 @@ func _nach_uebergang() -> void:
 		Spiel.z("TOA", "W1_ANK_TOA_0200"),
 		Spiel.z("MAX", "W1_ANK_MAX_0210"),
 		Spiel.z("PIX", "W1_ANK_PIX_0220"),
+		_pixel_geht_los,
 		Spiel.z("MAX", "W1_ANK_MAX_0230"),
 		Spiel.z("PIX", "W1_ANK_PIX_0240"),
 	])
@@ -96,6 +97,12 @@ func _landung_vorbereiten() -> void:
 func _landung() -> void:
 	if not is_instance_valid(C.Max) or _ziel_max == Vector2.ZERO:
 		return
+	if E.cutscene_skipped:
+		# Überspringen: sofort an Ort und Stelle, ohne auf Fall und Kamerawackeln zu warten
+		C.Max.position = _ziel_max
+		if _ziel_pix != Vector2.ZERO and is_instance_valid(C.Pixel):
+			C.Pixel.position = _ziel_pix
+		return
 	var t := create_tween()
 	t.tween_property(C.Max, "position", _ziel_max, 0.45).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_IN)
 	if _ziel_pix != Vector2.ZERO:
@@ -111,16 +118,43 @@ func _landung() -> void:
 var _toadi_ziel := Vector2.ZERO
 
 
+## 0220 „geht los Richtung Kneipe“: Pixel läuft wirklich ein Stück nach links zur Taverne und
+## bleibt dort stehen, bis Max nachkommt (Review Fund 26).
+func _pixel_geht_los() -> void:
+	if not has_character("Pixel") or _ziel_pix == Vector2.ZERO:
+		return
+	_ziel_pix = Vector2(maxf(170.0, _ziel_pix.x - 110.0), _ziel_pix.y)
+	if Spiel.testmodus or E.cutscene_skipped:
+		return
+	C.Pixel.walk_to(_ziel_pix)   # nicht abwarten: Max redet weiter
+
+
 ## 0100: Toadi rennt von rechts auf den Platz und ruft dabei (Regie „Rennen-Animation von rechts“);
 ## Max schaut erst noch nach links und dreht sich bei 0110 um.
+var _toadi_start := Vector2.ZERO
+
+
 func _toadi_rennt_herbei() -> void:
 	if not has_character("Toadi") or _toadi_ziel == Vector2.ZERO:
 		return
 	if C.Max.has_method("schauen_zu"):
 		C.Max.schauen_zu(C.Max.global_position.x - 50.0)
-	C.Toadi.schauen_zu(C.Toadi.global_position.x - 50.0)
+	C.Toadi.schauen_zu(_toadi_ziel.x)
+	# Toadi rennt wirklich (Review Fund 8b): Gehzyklus doppelt so schnell, auch während er ruft
+	var ap := C.Toadi.get_node("AnimationPlayer") as AnimationPlayer
 	var t := create_tween()
-	t.tween_property(C.Toadi, "position", _toadi_ziel, 1.3)
+	t.tween_method(func(k: float):
+		C.Toadi.position = _toadi_start.lerp(_toadi_ziel, k)
+		if ap.current_animation != "walk" and ap.has_animation("walk"):
+			ap.play("walk")
+		ap.speed_scale = 2.0, 0.0, 1.0, 1.3)
+	t.finished.connect(func():
+		ap.speed_scale = 1.0
+		if C.Toadi.is_talking:
+			ap.play("talk")
+		else:
+			C.Toadi._play_idle())
+	_toadi_start = C.Toadi.position
 	# nicht abwarten: Toadi ruft, während er rennt
 
 
@@ -196,10 +230,19 @@ func xxl_liefern() -> void:
 
 func _lieferung(an: bool) -> void:
 	var pos := get_marker_position("Lieferung")
+	# Rotkäppchen kommt von rechts (Waldweg) und geht dorthin zurück (Review Fund 18)
+	var rechts := Vector2(width - 10.0, pos.y)
 	if an:
-		Spiel.figur_hier("Rotkaeppchen", true, pos)
-		Spiel.figur_hier("XxlZiege", true, pos + Vector2(48, 4))
+		Spiel.figur_hier("Rotkaeppchen", true, rechts)
+		Spiel.figur_hier("XxlZiege", true, rechts + Vector2(48, 4))
 		Zustand.setze("W1_XXL_GELIEFERT")  # ab jetzt folgt sie (skripte/welt_1.gd)
-	else:
+		if has_character("XxlZiege"):
+			C.XxlZiege.laufen_zu(pos + Vector2(48, 4), 90.0)
+		if has_character("Rotkaeppchen"):
+			await C.Rotkaeppchen.laufen_zu(pos, 90.0)
+	elif has_character("Rotkaeppchen"):
+		await C.Rotkaeppchen.laufen_zu(rechts, 110.0)
 		Spiel.figur_hier("Rotkaeppchen", false)
+		_zustand_anwenden()
+	else:
 		_zustand_anwenden()

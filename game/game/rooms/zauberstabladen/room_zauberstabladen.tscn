@@ -43,7 +43,7 @@ texture = ExtResource("6_p04kq")
 description = "UI_OBJ_ZAHNSTOCHER"
 baseline = 6
 walk_to_point = Vector2(7.5, 99)
-interaction_polygon = PackedVector2Array(-7.5, -6, 7.5, -6, 7.5, 6, -7.5, 6)
+interaction_polygon = PackedVector2Array(-10, -10, 10, -10, 10, 10, -10, 10)
 
 [node name="Zollstock" parent="Props" unique_id=1917324114 instance=ExtResource("7_g6uus")]
 position = Vector2(320, 146.5)

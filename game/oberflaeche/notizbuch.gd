@@ -9,6 +9,10 @@ extends CanvasLayer
 signal geschlossen
 
 const THEMA := "res://game/gui/resources/gui_theme.tres"
+## Gemalte Doppelseite (tools/nahansichten_prolog.py, Review Fund 29) und Tinte für die Schrift
+const SEITE_BILD := "res://grafik/oberflaeche/notizbuch_seite.png"
+const TINTE := Color("34243c")
+const TINTE_HELL := Color("7a5c48")
 const SEITEN := ["UI_NOTIZBUCH_ZIELE", "UI_NOTIZBUCH_REGELN", "UI_NOTIZBUCH_EINKAUF"]
 
 var seite := 0
@@ -24,12 +28,22 @@ func _ready() -> void:
 	if ResourceLoader.exists(THEMA):
 		wurzel.theme = load(THEMA)
 	add_child(wurzel)
+	if ResourceLoader.exists(SEITE_BILD):
+		wurzel.add_theme_stylebox_override("panel", StyleBoxEmpty.new())
+		var papier := TextureRect.new()
+		papier.texture = load(SEITE_BILD)
+		papier.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
+		papier.size = wurzel.size
+		papier.mouse_filter = Control.MOUSE_FILTER_IGNORE
+		wurzel.add_child(papier)
+
 	_titel = Label.new()
-	_titel.position = Vector2(16, 8)
+	_titel.position = Vector2(24, 14)
+	_titel.add_theme_color_override("font_color", TINTE)
 	wurzel.add_child(_titel)
 	_inhalt = VBoxContainer.new()
-	_inhalt.position = Vector2(16, 44)
-	_inhalt.size = Vector2(488, 200)
+	_inhalt.position = Vector2(24, 48)
+	_inhalt.size = Vector2(470, 200)
 	wurzel.add_child(_inhalt)
 	var zurueck := _knopf(wurzel, "UI_SEITE_ZURUECK", Vector2(16, 256))
 	zurueck.pressed.connect(func(): blaettern(-1))
@@ -109,7 +123,22 @@ func zeigen() -> void:
 		l.text = tr("UI_NOTIZBUCH_LEER")
 		eintraege.append(l)
 	for e in eintraege:
+		_tinte(e)
 		_inhalt.add_child(e)
+
+
+func _tinte(c: Control) -> void:
+	if not ResourceLoader.exists(SEITE_BILD):
+		return
+	c.add_theme_color_override("font_color", TINTE)
+	if c is Button:
+		c.add_theme_color_override("font_hover_color", Color("b13e53"))
+		c.add_theme_color_override("font_pressed_color", Color("b13e53"))
+		c.add_theme_color_override("font_focus_color", TINTE)
+		c.add_theme_stylebox_override("normal", StyleBoxEmpty.new())
+		c.add_theme_stylebox_override("hover", StyleBoxEmpty.new())
+		c.add_theme_stylebox_override("pressed", StyleBoxEmpty.new())
+		c.add_theme_stylebox_override("focus", StyleBoxEmpty.new())
 
 
 func _unhandled_input(event: InputEvent) -> void:
@@ -125,6 +154,7 @@ func schliessen() -> void:
 func _knopf(eltern: Control, key: String, pos: Vector2) -> Button:
 	var b := Button.new()
 	b.text = key
-	b.position = pos
+	b.position = pos + Vector2(8, 4)
+	_tinte(b)
 	eltern.add_child(b)
 	return b

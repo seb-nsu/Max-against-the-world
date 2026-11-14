@@ -92,7 +92,7 @@ dachboden:
     pixel: [262, 272]             # schläft auf dem Verlängerungskabel
     opa: [460, 322]               # vorn zwischen Zapp-O-Mat und Sessel, verdeckt weder Drehknopf noch Kalender noch Pixel; vorher [400, 287] direkt vor dem Drehknopf (Sebastian, 13. November 2026)
   props:
-    zapp_o_mat: {rect: [318, 132, 105, 112], gehe: [365, 257], item: null}   # Kontaktschatten ins Bild gemalt; Kabel läuft unten links zum Verlängerungskabel unter Pixel
+    zapp_o_mat: {rect: [318, 141, 105, 112], gehe: [365, 257], item: null}   # Rollen stehen auf den Dielen, nicht auf der Fußleiste (Review, 14. November 2026); Kontaktschatten ins Bild gemalt; Kabel läuft unten links zum Verlängerungskabel unter Pixel
     dosenoeffner: {rect: [214, 181, 20, 6], gehe: [252, 256], schatten: true}   # liegt flach auf der Werkbank (Aseprite, 14. November 2026)
     drahtkleiderbuegel: {rect: [609, 177, 17, 13], gehe: [600, 290]}   # hängt am Türknauf des Schranks (Aseprite, 14. November 2026)
   hotspots:

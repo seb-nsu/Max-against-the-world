@@ -67,7 +67,7 @@ def echt_oder(ordner, datei, platzhalter):
 
 UMLAUTE = str.maketrans({"ä": "ae", "ö": "oe", "ü": "ue", "Ä": "Ae", "Ö": "Oe", "Ü": "Ue", "ß": "ss"})
 BEDINGUNG_RE = re.compile(r"\b(vor|nach)\s+([PRF]\d+[a-d]?)\b")
-FARBEN = {"MAX": "#ffffff", "PIX": "#5fd3c8", "OPA": "#f5a04a"}   # 05-spielsysteme.md, Schrift
+FARBEN = {"MAX": "#ffffff", "PIX": "#5fd3c8", "OPA": "#ffdc80"}   # 05-spielsysteme.md, Schrift (Opa hellgelb seit Review Fund 12)
 
 
 def slug(text):
@@ -298,6 +298,8 @@ def baue(abschnitt):
             **({"stufen": lay["stufen"]} if lay.get("stufen") else {}),
             **({"ambiente": lay["ambiente"]} if lay.get("ambiente") else {}),
             **({"vordergrund": lay["vordergrund"]} if lay.get("vordergrund") else {}),
+            **({"licht": lay["licht"]} if lay.get("licht") else {}),
+            **({"leuchten": lay["leuchten"]} if lay.get("leuchten") else {}),
             **({"hintergrund_nach": lay["hintergrund_nach"]} if lay.get("hintergrund_nach") else {}),
             "figuren": [],
             "hotspots": [],

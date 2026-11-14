@@ -69,10 +69,22 @@ func tiefe_anwenden() -> void:
 		chr.update_scale()
 
 
+## Raumlicht (Layout „licht: "#b9b4d0"“): Figuren nehmen die Tönung dunkler Räume an und leuchten
+## nicht mehr gegen den Hintergrund (Review Fund 20). Nur die Farbe, die Deckkraft bleibt.
+func licht_anwenden() -> void:
+	var l := Color(String(bauplan().licht))
+	for c in get_characters():
+		var chr := c as Node2D
+		if chr:
+			chr.modulate = Color(l.r, l.g, l.b, chr.modulate.a)
+
+
 func _process(_delta: float) -> void:
 	# Auch Figuren, die ohne Laufen versetzt werden (Marker, Szenen), bekommen ihre Größe
 	if tiefe_aktiv():
 		tiefe_anwenden()
+	if bauplan().has("licht") and not Engine.is_editor_hint():
+		licht_anwenden()
 	if bauplan().has("stufen") and not Engine.is_editor_hint():
 		stufen_anwenden()
 	if not _bedingte_teile.is_empty() or not _hg_wechsel.is_empty():
@@ -216,6 +228,7 @@ func vordergrund_setzen() -> void:
 		if bg.get("texture"):
 			_hg_grund = bg.texture.resource_path
 	_bedingte_anpassen()
+	_leuchten_setzen()
 	var teile: Dictionary = bauplan().get("vordergrund", {})
 	if teile.is_empty() or Engine.is_editor_hint():
 		return
@@ -238,15 +251,65 @@ func vordergrund_setzen() -> void:
 			sp.position = Vector2(t.pos[0] - sp.texture.get_width() * s / 2.0, t.pos[1])
 			sp.offset = Vector2(0, -sp.texture.get_height())
 			sp.flip_h = t.get("blick", "rechts") == "links"
+			if t.has("baseline"):
+				# Zeichenreihenfolge nach einer eigenen Baseline (Hufeisen auf dem Amboss vor dem Schmied)
+				sp.position.y = float(t.baseline)
+				sp.offset.y -= (float(t.baseline) - float(t.pos[1])) / s
 		else:
 			sp.position = Vector2(t.rect[0], t.baseline)
 			sp.offset = Vector2(0, float(t.rect[1]) - float(t.baseline))
 		get_node("Props").add_child(sp)
+		if t.has("wandschatten"):
+			# Schlagschatten an der Wand dahinter (Flaschen im Regal, Review P15): dunkle Kopie, versetzt
+			var ws := Sprite2D.new()
+			ws.texture = sp.texture
+			ws.centered = false
+			ws.offset = sp.offset + Vector2(float(t.wandschatten[0]), float(t.wandschatten[1]))
+			ws.modulate = Color(0.08, 0.06, 0.12, 0.45)
+			ws.show_behind_parent = true
+			ws.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
+			sp.add_child(ws)
 		if t.has("pos") and t.get("schatten", true):
 			_schatten_unter(sp, sp.texture.get_width(), 0.0)
 		if t.has("nach") or t.has("vor"):
 			_bedingte_teile.append([sp, t.get("nach", ""), t.get("vor", "")])
 	_bedingte_anpassen()
+
+
+## Pulsierendes Leuchten (Layout „leuchten: [{pos: [x, y], r: [rx, ry], farbe: "#7fffd4", takt: 2.0}]“):
+## weiche, addierte Lichtflecken über leuchtenden Dingen im Bild (Leuchtpilze, Review P15).
+func _leuchten_setzen() -> void:
+	if Engine.is_editor_hint() or not has_node("Props"):
+		return
+	var liste: Array = bauplan().get("leuchten", [])
+	for i in liste.size():
+		var name := "Leuchten_%d" % i
+		if get_node("Props").has_node(name):
+			continue
+		var l: Dictionary = liste[i]
+		var wurzel := Node2D.new()
+		wurzel.name = name
+		wurzel.position = Vector2(l.pos[0], l.pos[1])
+		var farbe := Color(String(l.get("farbe", "#7fffd4")))
+		for k in 3:
+			var p := Polygon2D.new()
+			var punkte := PackedVector2Array()
+			var f := 1.0 - k * 0.3
+			for j in 20:
+				var w := TAU * j / 20.0
+				punkte.append(Vector2(cos(w) * float(l.r[0]) * f, sin(w) * float(l.r[1]) * f))
+			p.polygon = punkte
+			p.color = Color(farbe.r, farbe.g, farbe.b, 0.14 + k * 0.08)
+			var mat := CanvasItemMaterial.new()
+			mat.blend_mode = CanvasItemMaterial.BLEND_MODE_ADD
+			p.material = mat
+			wurzel.add_child(p)
+		wurzel.z_index = 1
+		get_node("Props").add_child(wurzel)
+		var takt := float(l.get("takt", 2.0))
+		var t := wurzel.create_tween().set_loops()
+		t.tween_property(wurzel, "modulate:a", 0.35, takt / 2.0).set_trans(Tween.TRANS_SINE)
+		t.tween_property(wurzel, "modulate:a", 1.0, takt / 2.0).set_trans(Tween.TRANS_SINE)
 
 
 ## Kleiner weicher Schatten unter einem Sprite oder Prop, damit es auf dem Boden oder Tisch steht
@@ -344,7 +407,7 @@ func partner_aufstellen(neben_spieler := false) -> void:
 		if has_character(partner.script_name):
 			Spiel.figur_hier(partner.script_name, false)
 		return
-	var x := C.player.position.x + (-20.0 if C.player.position.x > width / 2.0 else 20.0)
+	var x := C.player.position.x + (-45.0 if C.player.position.x > width / 2.0 else 45.0)   # 45 statt 20: Pixel stand Max auf den Beinen (Review Fund 24)
 	var pos := Vector2(x, C.player.position.y)
 	if not has_character(partner.script_name):
 		Spiel.figur_hier(partner.script_name, true, pos)

@@ -136,6 +136,34 @@ func springen_zu(ziel: Vector2, bogen := 30.0, dauer := 0.42) -> void:
 	await t.finished
 
 
+## Läuft mit Gehzyklus zu ziel, ohne Wegfindung (hinter den Tresen, aus dem Bild, über Stellen
+## außerhalb des Laufbereichs). tempo in Pixeln je Sekunde. Beim Überspringen sofort dort.
+## Für Szenen, in denen das Skript eine Bewegung beschreibt (Review Fund 18).
+func laufen_zu(ziel: Vector2, tempo := 70.0) -> void:
+	if PopochiuUtils.e.cutscene_skipped or Spiel.testmodus or not is_inside_tree():
+		position = ziel
+		return
+	schauen_zu(ziel.x)
+	var ap := get_node_or_null("AnimationPlayer") as AnimationPlayer
+	if ap and ap.has_animation("walk"):
+		ap.play("walk")
+	var t := create_tween()
+	t.tween_property(self, "position", ziel, maxf(0.2, position.distance_to(ziel) / tempo))
+	await t.finished
+	sync_buffered_position()
+	_play_idle()
+
+
+## Blendet die Figur aus (Abgang durch eine Tür) und nimmt sie aus dem Raum.
+func ausblenden_und_weg(dauer := 0.35) -> void:
+	if not PopochiuUtils.e.cutscene_skipped and not Spiel.testmodus and is_inside_tree():
+		var t := create_tween()
+		t.tween_property(self, "modulate:a", 0.0, dauer)
+		await t.finished
+	Spiel.figur_hier(script_name, false)
+	modulate.a = 1.0
+
+
 ## Popochius Laufgeschwindigkeit folgt der Tiefe auch außerhalb der Grenzen (oben auf der Treppe
 ## im Treppenhaus kröche Max sonst). Hier bleibt sie im selben Rahmen wie die Größe.
 func update_scale():

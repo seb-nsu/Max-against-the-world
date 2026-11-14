@@ -47,3 +47,21 @@ func _r8_setzen() -> void:
 	Zustand.setze_wert("W1_EIMER", "leer")
 	Zustand.loese("R8")
 	room._zustand_anwenden()  # Ausgang Bohnenranke erscheint
+	await _ranke_waechst()
+
+
+## Die Bohnenranke wächst sichtbar aus dem Erdfleck in den Himmel (Review P15: erschien bisher
+## einfach), mit kurzem Wackeln der Kamera.
+func _ranke_waechst() -> void:
+	var ranke := room.get_node_or_null("Props/Vordergrund_bohnenranke") as Sprite2D
+	if not ranke or Spiel.testmodus or E.cutscene_skipped:
+		return
+	var unten := ranke.position.y
+	var ziel_skala := ranke.scale
+	ranke.scale = Vector2(ziel_skala.x, 0.02)   # Ursprung links unten: nur in der Höhe wachsen
+	var t := create_tween()
+	t.tween_property(ranke, "scale", Vector2(ziel_skala.x, ziel_skala.y * 1.06), 1.4).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
+	t.tween_property(ranke, "scale", ziel_skala, 0.25)
+	CQEffekte.wackeln(0.8, 1.2)
+	await t.finished
+	ranke.position.y = unten
