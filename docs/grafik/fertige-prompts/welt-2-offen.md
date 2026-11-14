@@ -1,6 +1,8 @@
 # Offene Prompts Welt 2
 
-Stand 14. November 2026. Alles, was für Welt 2 aus Gemini kommen muss, in der Reihenfolge, in der es sich anbietet. Die Prompts selbst stehen in [`welt-2.md`](welt-2.md) (erzeugt aus `../welt-2.md`); hier steht nur die Reihenfolge, was anzuhängen ist und worauf man achten sollte. Abhaken, was erledigt ist.
+Stand 14. November 2026, abends. Alles, was für Welt 2 aus Gemini kommen muss, in der Reihenfolge, in der es sich anbietet. Die Prompts selbst stehen in [`welt-2.md`](welt-2.md) (erzeugt aus `../welt-2.md`); hier steht nur die Reihenfolge, was anzuhängen ist und worauf man achten sollte. Abhaken, was erledigt ist.
+
+**Stand:** 22 Figuren und 3 Gegenstandsbögen sind geliefert und im Spiel. Noch offen: alle Räume, 3 Figuren (Ägypter aus dem Volk, Schildkröte, Straßenmusiker), die 2 großen Objekte, 7 Gegenstandsbögen, die Nahansichten und alle Posenbögen. Für die Posenbögen sind jetzt alle Konzeptblätter da außer der Schildkröte.
 
 **Allgemein:**
 
@@ -20,16 +22,16 @@ Stand 14. November 2026. Alles, was für Welt 2 aus Gemini kommen muss, in der R
 
 ## 2. Figuren in Ägypten
 
-- [ ] Ramses
-- [ ] Hofkater
-- [ ] Sobek, im Wasser
-- [ ] Sobek, an Land
-- [ ] Fährmann
-- [ ] Köchin Nebet
-- [ ] Palastschreiber
-- [ ] Fächerwedler (zweite Fassung mit gelbem Kopftuch)
-- [ ] Steinmetz
-- [ ] Zeremonienmeister
+- [x] Ramses
+- [x] Hofkater
+- [x] Sobek, im Wasser
+- [x] Sobek, an Land
+- [x] Fährmann
+- [x] Köchin Nebet
+- [x] Palastschreiber
+- [x] Fächerwedler (zweite Fassung mit gelbem Kopftuch)
+- [x] Steinmetz
+- [x] Zeremonienmeister
 - [ ] Ägypter aus dem Volk (zwei weitere Fassungen für die Menge)
 - [ ] Krokodil-Fähre (großes Objekt)
 
@@ -46,28 +48,28 @@ Stand 14. November 2026. Alles, was für Welt 2 aus Gemini kommen muss, in der R
 
 ## 4. Figuren in Griechenland
 
-- [ ] Archimedes (zweite Fassung im Handtuch)
-- [ ] König Hieron
-- [ ] Cicero
-- [ ] Tiro
-- [ ] Leonidas
-- [ ] Hermes
-- [ ] Brian
-- [ ] Philosoph
-- [ ] Römischer Tourist
-- [ ] Römische Touristin
-- [ ] Beamter 1
-- [ ] Beamter 2
+- [x] Archimedes (zweite Fassung im Handtuch)
+- [x] König Hieron
+- [x] Cicero
+- [x] Tiro
+- [x] Leonidas
+- [x] Hermes
+- [x] Brian
+- [x] Philosoph
+- [x] Römischer Tourist
+- [x] Römische Touristin
+- [x] Beamter 1
+- [x] Beamter 2
 - [ ] Schildkröte
 - [ ] Straßenmusiker
 - [ ] Wurfhebel (großes Objekt)
 
 ## 5. Gegenstände
 
-- [ ] Ägypten (3×4)
-- [ ] Olympia (3×3)
+- [x] Ägypten (3×4)
+- [x] Olympia (3×3)
 - [ ] Feigen-Zustände (1×4)
-- [ ] Syrakus (2×3)
+- [x] Syrakus (2×3)
 - [ ] Schriftstücke (1×4)
 - [ ] Getränke-Zustände (1×3)
 - [ ] Grabstein-Zustände (1×4)
