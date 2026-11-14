@@ -118,7 +118,7 @@ taverne:
   figuren:
     humbert: [150, 232]
     gollo: [282, 264]
-    minka: [238, 178]
+    minka: [192, 292]              # auf dem Boden vor dem Tresen, unter dem Topf: bewacht ihn (Sebastian, 14. November 2026: auf dem Tresen zu voll)
     huhn: [363, 180]             # sitzt im Korb des Hintergrunds; eigener Korb im Sprite abgeschnitten
   blick:
     humbert: rechts

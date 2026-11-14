@@ -187,7 +187,7 @@ Zurufe auf dem Dorfplatz (Pixel, nach 45 Sekunden ohne Eingabe):
 
 ## 3. Taverne „Zum tänzelnden Pony-Express“: Der Taverne-Coup
 
-Szene beim ersten Betreten. Humbert poliert einen Krug, Gollo kauert in der Ecke, Minka sitzt neben dem Fondue-Topf. Pixel springt auf den Dachbalken, sein Porträt blinkt: Hier lernt der Spieler den Figurenwechsel (Rätsel 1a).
+Szene beim ersten Betreten. Humbert poliert einen Krug, Gollo kauert in der Ecke, Minka sitzt vor dem Tresen unter dem Fondue-Topf. Pixel springt auf den Dachbalken, sein Porträt blinkt: Hier lernt der Spieler den Figurenwechsel (Rätsel 1a).
 
 | ID | Sprecher | Text | Regie |
 | --- | --- | --- | --- |
@@ -210,7 +210,7 @@ Ansehen in der Taverne:
 | W1\_TAV\_MAX\_0120 | Max | Ein Topf voll blubberndem Käse. Gollo nennt das Vulkan. Ich nenne das Abendessen. | Fondue-Topf |
 | W1\_TAV\_MAX\_0125 | Max | Am Topfrand ist etwas eingeritzt: „Nichts hineinwerfen, was flüstert.“ | Fondue-Topf, zweites Mal |
 | W1\_TAV\_PIX\_0130 | Pixel | Käse. Heiß und flüssig. Ich würde hineinsteigen, wenn ich schwimmen könnte. // Ich kann es nicht, und zwar aus Prinzip. Meine Vorfahren haben das Wasser schon immer den Fischen überlassen. | Fondue-Topf, Pixel |
-| W1\_TAV\_MAX\_0140 | Max | Die Wirtskatze. Sie sitzt neben dem Topf wie ein Türsteher mit Schleife, und ich steh nicht auf der Liste. | Minka |
+| W1\_TAV\_MAX\_0140 | Max | Die Wirtskatze. Sie sitzt unter dem Topf wie ein Türsteher mit Schleife, und ich steh nicht auf der Liste. | Minka |
 | W1\_TAV\_PIX\_0150 | Pixel | Sie ist weiß. Sie ist elegant. Sie trägt eine Schleife. // Ich bin verloren, junger Mann, vollkommen verloren. Und wenn du das irgendjemandem erzählst, bist du es auch. | Minka, Pixel |
 | W1\_TAV\_MAX\_0160 | Max | Die Kellertür. Da unten liegt der Wein, und Humbert geht nur runter, wenn es wirklich sein muss. | Kellertür |
 | W1\_TAV\_MAX\_0165 | Max | Auf der Schwelle liegt Staub, und darin ist kein einziger Fußabdruck. Da war lange keiner unten. | Kellertür, zweites Mal |
