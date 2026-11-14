@@ -57,7 +57,7 @@ treppenhaus:
   # Geländer (Handlauf, Stäbe, Antrittspfosten) aus dem Bild geschnitten: wer auf der Treppe steht, geht dahinter
   vordergrund:
     gelaender: {bild: res://grafik/props/treppengelaender.png, rect: [246, 0, 349, 299], baseline: 283}
-  laufbereich: [[12, 357], [12, 290], [40, 282], [255, 282], [285, 250], [420, 158], [540, 70], [585, 44], [605, 44], [605, 54], [545, 80], [425, 168], [292, 260], [300, 282], [340, 300], [400, 345], [400, 357]]   # über die Treppe nur ein schmales Band auf den Stufenkanten
+  laufbereich: [[12, 357], [12, 290], [40, 282], [255, 282], [285, 250], [420, 158], [540, 70], [585, 44], [605, 44], [605, 54], [545, 80], [425, 168], [262, 282], [340, 300], [400, 345], [400, 357]]   # über die Treppe nur ein schmales Band auf den Stufenkanten; es beginnt unten an der ersten Stufe, auch von rechts (vorher übersprang Max von der Dose aus die ersten Stufen, 14. November 2026)
   marker:
     start: [173, 310]
     von_wohnzimmer: [55, 310]      # aus der Tür links
