@@ -188,15 +188,15 @@ agora:
     von_faehrsteg_olympia: [1220, 320]
     von_stadion: [60, 320]
     von_startbuero: [424, 304]
-    abwurf: [800, 320]
+    abwurf: [900, 320]
   figuren:
-    cicero: [640, 296]
-    tiro: [712, 312]
-    tourist: [940, 320]
-    touristin: [1000, 320]
+    cicero: [712, 296]
+    tiro: [790, 312]
+    tourist: [1000, 320]
+    touristin: [1064, 320]
     philosoph: [280, 316]
-    brian: [1080, 316]
-    strassenmusiker: [1160, 312]
+    brian: [500, 316]
+    strassenmusiker: [600, 312]
   alias:
     tonne_mit_max: tonne
     saeule_mit_max: hohe_saeule_mit_adler
@@ -209,15 +209,15 @@ agora:
   ohne: [schilf, erde]          # Feigensetzling auf Schilf oder Erde: im Nil-Delta (skripte/welt_2.gd)
   hotspots:
     saeulenhalle: {rect: [340, 80, 200, 160], gehe: [440, 304], name: Säulenhalle}
-    hohe_saeule_mit_adler: {rect: [800, 20, 40, 240], gehe: [820, 308], name: Säule mit Adler}
-    sandale_auf_der_saeule: {rect: [796, 8, 48, 20], gehe: [820, 308], name: Sandale}
-    heuhaufen: {rect: [776, 248, 88, 32], gehe: [820, 316], name: Heuhaufen}
+    hohe_saeule_mit_adler: {rect: [880, 20, 40, 240], gehe: [900, 308], name: Säule mit Adler}
+    sandale_auf_der_saeule: {rect: [876, 8, 48, 20], gehe: [900, 308], name: Sandale}
+    heuhaufen: {rect: [856, 248, 88, 32], gehe: [900, 316], name: Heuhaufen}
     venusstatue: {rect: [128, 128, 48, 144], gehe: [152, 308], name: Venusstatue}
-    rednerpult: {rect: [608, 220, 64, 60], gehe: [640, 316], name: Rednerpult}
-    marktstaende: {rect: [880, 160, 200, 100], gehe: [980, 308], name: Marktstände}
+    rednerpult: {rect: [680, 220, 64, 60], gehe: [712, 316], name: Rednerpult}
+    marktstaende: {rect: [960, 160, 200, 100], gehe: [1060, 308], name: Marktstände}
     tonne: {rect: [240, 248, 72, 48], gehe: [276, 320], name: Tonne}
-    menge: {rect: [560, 160, 200, 56], gehe: [660, 308], name: Menge}
-    latein_kritzelei: {rect: [1112, 172, 64, 32], gehe: [1144, 308], name: Latein-Kritzelei}
+    menge: {rect: [600, 160, 220, 56], gehe: [710, 308], name: Menge}
+    latein_kritzelei: {rect: [1172, 172, 56, 32], gehe: [1200, 308], name: Latein-Kritzelei}
   ausgaenge:
     faehrsteg_olympia: {rect: [1240, 120, 36, 160], gehe: [1256, 320], id: weg_zum_faehrsteg, name: Weg zum Fährsteg}
     stadion: {rect: [4, 100, 60, 180], gehe: [32, 320], id: bogen_zum_stadion, name: Bogen zum Stadion}

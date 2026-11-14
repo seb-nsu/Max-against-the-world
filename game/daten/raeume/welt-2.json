@@ -2089,7 +2089,7 @@
      304
     ],
     "abwurf": [
-     800,
+     900,
      320
     ]
    },
@@ -2098,7 +2098,7 @@
      "id": "cicero",
      "script_name": "Cicero",
      "pos": [
-      640,
+      712,
       296
      ]
     },
@@ -2106,7 +2106,7 @@
      "id": "tiro",
      "script_name": "Tiro",
      "pos": [
-      712,
+      790,
       312
      ]
     },
@@ -2114,7 +2114,7 @@
      "id": "tourist",
      "script_name": "Tourist",
      "pos": [
-      940,
+      1000,
       320
      ]
     },
@@ -2122,7 +2122,7 @@
      "id": "touristin",
      "script_name": "Touristin",
      "pos": [
-      1000,
+      1064,
       320
      ]
     },
@@ -2138,7 +2138,7 @@
      "id": "brian",
      "script_name": "Brian",
      "pos": [
-      1080,
+      500,
       316
      ]
     },
@@ -2146,7 +2146,7 @@
      "id": "strassenmusiker",
      "script_name": "Strassenmusiker",
      "pos": [
-      1160,
+      600,
       312
      ]
     }
@@ -2189,13 +2189,13 @@
      "script_name": "HoheSaeuleMitAdler",
      "name_key": "UI_OBJ_HOHE_SAEULE_MIT_ADLER",
      "rect": [
-      800,
+      880,
       20,
       40,
       240
      ],
      "gehe": [
-      820,
+      900,
       308
      ],
      "ansehen": [
@@ -2230,13 +2230,13 @@
      "script_name": "SandaleAufDerSaeule",
      "name_key": "UI_OBJ_SANDALE_AUF_DER_SAEULE",
      "rect": [
-      796,
+      876,
       8,
       48,
       20
      ],
      "gehe": [
-      820,
+      900,
       308
      ],
      "ansehen": [
@@ -2262,13 +2262,13 @@
      "script_name": "Heuhaufen",
      "name_key": "UI_OBJ_HEUHAUFEN",
      "rect": [
-      776,
+      856,
       248,
       88,
       32
      ],
      "gehe": [
-      820,
+      900,
       316
      ],
      "ansehen": [
@@ -2355,13 +2355,13 @@
      "script_name": "Rednerpult",
      "name_key": "UI_OBJ_REDNERPULT",
      "rect": [
-      608,
+      680,
       220,
       64,
       60
      ],
      "gehe": [
-      640,
+      712,
       316
      ],
      "ansehen": [
@@ -2387,13 +2387,13 @@
      "script_name": "Marktstaende",
      "name_key": "UI_OBJ_MARKTSTAENDE",
      "rect": [
-      880,
+      960,
       160,
       200,
       100
      ],
      "gehe": [
-      980,
+      1060,
       308
      ],
      "ansehen": [
@@ -2471,13 +2471,13 @@
      "script_name": "Menge",
      "name_key": "UI_OBJ_MENGE",
      "rect": [
-      560,
+      600,
       160,
-      200,
+      220,
       56
      ],
      "gehe": [
-      660,
+      710,
       308
      ],
      "ansehen": [
@@ -2504,13 +2504,13 @@
      "script_name": "LateinKritzelei",
      "name_key": "UI_OBJ_LATEIN_KRITZELEI",
      "rect": [
-      1112,
+      1172,
       172,
-      64,
+      56,
       32
      ],
      "gehe": [
-      1144,
+      1200,
       308
      ],
      "ansehen": [

@@ -11,7 +11,7 @@ Stand 14. November 2026, abends. Alles, was für Welt 2 aus Gemini kommen muss, 
 - Posenbögen: erst, wenn das Konzeptblatt der Figur fertig ist, und genau dieses anhängen. Misslungene Einzelposen im selben Chat nachbessern lassen.
 - Nahansichten und Tafeln: nichts anhängen.
 - Eigene Sprites (Figuren, Fähre, Wurfhebel, Deko) dürfen nicht im Raum mitgemalt sein. Gegenstände, die man mitnimmt, dürfen im Raum stehen; die schneidet Claude aus.
-- Breite Räume (1280×360: Nil-Delta, Thronsaal, Stadion, Agora): erst die linke Hälfte erzeugen, dann im selben Chat die rechte, die nahtlos anschließt. Zweitfassungen jeweils für die Hälfte, in der sich etwas ändert. Seit 14. November abends sind Nil-Delta, Thronsaal und Stadion breit, weil dort bis zu neun Figuren gleichzeitig stehen; ältere Prompts für diese drei Räume nicht mehr verwenden.
+- Breite Räume (1280×360: Nil-Delta, Thronsaal, Stadion, Agora): erst die linke Hälfte erzeugen, dann im selben Chat die rechte, die nahtlos anschließt. Zweitfassungen jeweils für die Hälfte, in der sich etwas ändert. Seit 14. November abends sind Nil-Delta, Thronsaal und Stadion breit, weil dort bis zu neun Figuren gleichzeitig stehen; ältere Prompts für diese drei Räume nicht mehr verwenden. Am selben Abend wurden außerdem die Motive von Fährsteg Olympia, Hafen Syrakus, Archimedes' Werkstatt, Startbüro und Agora an die Anordnung im Spiel angeglichen; auch hier nur noch die aktuellen Prompts nehmen.
 - Als PNG herunterladen und in `E:\Game Engine\Grafiken` ablegen, Name wie `Welt2-Thronsaal.png`.
 
 ## 1. Räume in Ägypten (Einstieg der Welt)
