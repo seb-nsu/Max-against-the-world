@@ -218,6 +218,12 @@ Edit the attached image. Change only the marked area: [where, for example "the w
 Key pose sheet for a 2D game animation in exactly the same style, colors and proportions as the attached character sheet: same character, same head size, same hair and clothing colors, same line weight and flat cel shading, light from upper left. The key poses side by side in one row from left to right in the order of the action, evenly spaced with clear empty space between them, all at the same scale on one flat baseline, each a frozen still pose. Solid flat magenta (#ff00ff) background filling the whole image.
 ```
 
+**3D-VORLAGE** (Gemini, stehende Vorlage für Meshy, wenn eine Figur im Spiel nur sitzt oder in etwas steckt; kommt nicht ins Spiel; das fertige Konzeptblatt anhängen; darunter SUBJECT und CHARACTER der Figur, dann POSE, CAMERA und NEGATIVE wie in `fertige-prompts/welt-2-offen.md`, Abschnitt 8):
+
+```text
+Character reference for a 3D model, in exactly the same style, colors and proportions as the attached character sheet: same line weight, same flat cel shading, light from upper left. The model only needs the body, so draw the character once, standing, complete from head to feet. Plain flat white (#ffffff) background filling the whole image.
+```
+
 **NEGATIV-RAUM** (letzte Zeile jedes Raum-Prompts):
 
 ```text

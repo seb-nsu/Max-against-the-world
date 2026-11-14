@@ -113,7 +113,7 @@ Effekte (Kaugummi-Sonne, Brennspiegel, Zeitfähre, Altern des Grabsteins) und Pi
 
 ## 8. Vorlagen für die 3D-Modelle
 
-Für das 3D-Modell braucht Meshy eine stehende Figur, am besten von vorn mit ausgestreckten Armen (T-Pose). Wer im Spiel nur sitzt oder in etwas steckt, bekommt dafür eine eigene Fassung. Diese Bilder kommen nicht ins Spiel, sie sind nur die Vorlage für Modell und Rig. Jeweils das fertige Konzeptblatt der Figur anhängen, Hintergrund diesmal weiß.
+Für das 3D-Modell braucht Meshy eine stehende Figur, am besten von vorn mit ausgestreckten Armen (T-Pose). Wer im Spiel nur sitzt oder in etwas steckt, bekommt dafür eine eigene Fassung. Diese Bilder kommen nicht ins Spiel, sie sind nur die Vorlage für Modell und Rig. Jeweils das fertige Konzeptblatt der Figur anhängen, Hintergrund diesmal weiß. Die Blöcke folgen dem Raster aus `../00-stil-und-werkzeuge.md` (Baustein 3D-VORLAGE); für weitere sitzende Figuren STYLE, POSE, CAMERA und NEGATIVE unverändert übernehmen und nur SUBJECT und CHARACTER tauschen.
 
 - [ ] Beamter 1 stehend
 - [ ] Philosoph stehend, ohne Tonne
@@ -123,11 +123,21 @@ Der Palastschreiber ist schon erledigt, seine stehende Fassung hat Meshy gemacht
 ### Beamter 1 stehend
 
 ```text
-Character reference for a 3D model, in exactly the same style, colors and proportions as the attached character sheet: the same bored bald Greek official, same face with droopy eyelids, same plain grey tunic and sandals, but standing upright without the stool and without the scroll. Full body from head to feet, strict front view facing the viewer, arms stretched out straight to the sides at shoulder height in a T-pose, palms down, legs slightly apart, feet flat on the ground. Plain white background, no shadow, no text, no other objects.
+STYLE: Character reference for a 3D model, in exactly the same style, colors and proportions as the attached character sheet: same line weight, same flat cel shading, light from upper left. The model only needs the body, so draw the character once, standing, complete from head to feet. Plain flat white (#ffffff) background filling the whole image.
+SUBJECT: the same bored bald Greek official as on the attached sheet, standing instead of sitting, without the stool and without the scroll.
+CHARACTER (appearance only, word for word from its sheet; ignore the pose in it): Bored Greek official, about 78 percent of the boy Max's height when seated. Bald head, droopy eyelids. Plain grey tunic, sandals.
+POSE: strict front view facing the viewer, standing upright in a T-pose: arms stretched out straight to the sides at shoulder height, palms down, fingers together, legs slightly apart, feet flat on the ground and fully visible, head straight, neutral face.
+CAMERA: static, straight on at chest height, no perspective distortion, the whole figure centered with empty space around it.
+NEGATIVE: no second character, no props, no furniture, no seat, no barrel, no environment, no floor, no ground shadow, no checkerboard, no frames, no text, labels or numbers, no side or three-quarter view, no bent arms, no hands in front of the body, no clothing covering the hands, no change to face, proportions, clothing or colors, no photorealism, no 3D render, no watermark
 ```
 
 ### Philosoph stehend, ohne Tonne
 
 ```text
-Character reference for a 3D model, in exactly the same style, colors and proportions as the attached character sheet: the same scruffy old Greek philosopher, same wild grey hair and beard, same torn grey cloak, but standing upright outside the barrel, without the barrel and without the lantern, barefoot. Full body from head to feet, strict front view facing the viewer, arms stretched out straight to the sides at shoulder height in a T-pose, palms down, legs slightly apart, feet flat on the ground. Plain white background, no shadow, no text, no other objects.
+STYLE: Character reference for a 3D model, in exactly the same style, colors and proportions as the attached character sheet: same line weight, same flat cel shading, light from upper left. The model only needs the body, so draw the character once, standing, complete from head to feet. Plain flat white (#ffffff) background filling the whole image.
+SUBJECT: the same scruffy old Greek philosopher as on the attached sheet, standing upright outside the barrel, without the barrel and without the lantern, barefoot.
+CHARACTER (appearance only, word for word from its sheet; ignore the pose in it): Scruffy old Greek philosopher with wild grey hair and beard and a torn grey cloak.
+POSE: strict front view facing the viewer, standing upright in a T-pose: arms stretched out straight to the sides at shoulder height, palms down, fingers together, legs slightly apart, feet flat on the ground and fully visible, head straight, neutral face.
+CAMERA: static, straight on at chest height, no perspective distortion, the whole figure centered with empty space around it.
+NEGATIVE: no second character, no props, no furniture, no seat, no barrel, no environment, no floor, no ground shadow, no checkerboard, no frames, no text, labels or numbers, no side or three-quarter view, no bent arms, no hands in front of the body, no clothing covering the hands, no change to face, proportions, clothing or colors, no photorealism, no 3D render, no watermark
 ```
