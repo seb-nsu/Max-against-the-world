@@ -2,6 +2,8 @@
 
 Max ist ein schlaksiger Teenager in einem zu großen dunklen schieferblau-grauen Hoodie mit roten Sneakern; Pixel ein runder, silbergrauer Kater mit weißen Pfoten, eingerissenem Ohr und rotem Halsband mit Lautsprecher. Beide müssen auf 189 bzw. 61 Pixel sofort erkennbar sein, also zählen Umriss und zwei, drei Farbakzente mehr als Details.
 
+**Seit 14. November 2026:** Die festen Beschreibungen mit den Hex-Werten der fertigen Sprites stehen in `00-stil-und-werkzeuge.md` (Blöcke FEST Max, FEST Pixel, FEST Opa) und gehen wortgleich in jeden Prompt. Die Figurenbögen mit vier Ansichten und sechs Ausdrücken stehen fertig in `fertige-prompts/01-figurenboegen.md`. Die Prompts unten sind die ersten Entwürfe vom 6. November 2026 und nur noch Geschichte.
+
 ## Max
 
 | Merkmal | Festlegung | Warum |
