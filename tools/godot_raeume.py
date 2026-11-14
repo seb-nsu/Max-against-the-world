@@ -300,6 +300,7 @@ def baue(abschnitt):
             **({"vordergrund": lay["vordergrund"]} if lay.get("vordergrund") else {}),
             **({"licht": lay["licht"]} if lay.get("licht") else {}),
             **({"leuchten": lay["leuchten"]} if lay.get("leuchten") else {}),
+            **({"effekte": lay["effekte"]} if lay.get("effekte") else {}),
             **({"hintergrund_nach": lay["hintergrund_nach"]} if lay.get("hintergrund_nach") else {}),
             "figuren": [],
             "hotspots": [],

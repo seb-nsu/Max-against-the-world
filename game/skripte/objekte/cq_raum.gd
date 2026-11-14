@@ -85,6 +85,8 @@ func _process(_delta: float) -> void:
 		tiefe_anwenden()
 	if bauplan().has("licht") and not Engine.is_editor_hint():
 		licht_anwenden()
+	if not _effekte.is_empty():
+		_effekte_bewegen(_delta)
 	if bauplan().has("stufen") and not Engine.is_editor_hint():
 		stufen_anwenden()
 	if not _bedingte_teile.is_empty() or not _hg_wechsel.is_empty():
@@ -229,6 +231,7 @@ func vordergrund_setzen() -> void:
 			_hg_grund = bg.texture.resource_path
 	_bedingte_anpassen()
 	_leuchten_setzen()
+	_effekte_setzen()
 	var teile: Dictionary = bauplan().get("vordergrund", {})
 	if teile.is_empty() or Engine.is_editor_hint():
 		return
@@ -312,6 +315,90 @@ func _leuchten_setzen() -> void:
 		var t := wurzel.create_tween().set_loops()
 		t.tween_property(wurzel, "modulate:a", 0.35, takt / 2.0).set_trans(Tween.TRANS_SINE)
 		t.tween_property(wurzel, "modulate:a", 1.0, takt / 2.0).set_trans(Tween.TRANS_SINE)
+
+
+## Lebendige Hintergründe (P16, Review): kleine Schleifen über gemalten Stellen. Layout „effekte“:
+## {art: flackern, pos, r: [rx, ry]} Feuer, Glut, Fackeln (warmes, unruhiges Licht);
+## {art: blasen, pos, breite} Blasen steigen und platzen (Kessel); {art: dampf, pos, breite} Dampf
+## steigt auf (Fondue, Kessel); {art: glitzern, bereich: [x, y, w, h]} Lichtpunkte auf Wasser.
+## Im Testmodus ohne Bewegung (Bildvergleich).
+var _effekte: Array = []
+var _effekt_zeit := 0.0
+
+
+func _effekte_setzen() -> void:
+	if Engine.is_editor_hint() or Spiel.testmodus or not has_node("Props") or not _effekte.is_empty():
+		return
+	for e: Dictionary in bauplan().get("effekte", []):
+		var n := Node2D.new()
+		n.z_index = 2
+		get_node("Props").add_child(n)
+		if e.art == "flackern":
+			n.position = Vector2(e.pos[0], e.pos[1])
+			for k in 2:
+				var p := Polygon2D.new()
+				var punkte := PackedVector2Array()
+				var f := 1.0 - k * 0.45
+				for j in 18:
+					var w := TAU * j / 18.0
+					punkte.append(Vector2(cos(w) * float(e.r[0]) * f, sin(w) * float(e.r[1]) * f))
+				p.polygon = punkte
+				p.color = Color(String(e.get("farbe", "#ffb347")), 0.16 + k * 0.12)
+				var mat := CanvasItemMaterial.new()
+				mat.blend_mode = CanvasItemMaterial.BLEND_MODE_ADD
+				p.material = mat
+				n.add_child(p)
+		_effekte.append([e, n, 0.0])
+
+
+func _effekte_bewegen(delta: float) -> void:
+	_effekt_zeit += delta
+	for eintrag in _effekte:
+		var e: Dictionary = eintrag[0]
+		var n: Node2D = eintrag[1]
+		if not is_instance_valid(n):
+			continue
+		eintrag[2] -= delta
+		match e.art:
+			"flackern":
+				if eintrag[2] <= 0.0:
+					eintrag[2] = randf_range(0.06, 0.16)
+					n.modulate.a = randf_range(0.45, 1.0)
+					n.scale = Vector2.ONE * randf_range(0.9, 1.1)
+			"blasen", "dampf":
+				if eintrag[2] <= 0.0:
+					var blase: bool = e.art == "blasen"
+					eintrag[2] = randf_range(0.25, 0.6) if blase else randf_range(0.5, 0.9)
+					var p := Polygon2D.new()
+					var r := randf_range(1.0, 2.0) if blase else randf_range(4.0, 7.0)
+					var punkte := PackedVector2Array()
+					for j in 10:
+						var w := TAU * j / 10.0
+						punkte.append(Vector2(cos(w) * r, sin(w) * r * 0.8))
+					p.polygon = punkte
+					p.color = Color(String(e.get("farbe", "#b6f2a0" if blase else "#f2ece4")), 0.85 if blase else 0.28)
+					p.position = Vector2(e.pos[0] + randf_range(-0.5, 0.5) * float(e.get("breite", 20)), e.pos[1])
+					n.add_child(p)
+					var t := p.create_tween().set_parallel()
+					var hoch := 8.0 if blase else 26.0
+					t.tween_property(p, "position:y", p.position.y - hoch, 0.7 if blase else 1.8)
+					t.tween_property(p, "modulate:a", 0.0, 0.7 if blase else 1.8).set_ease(Tween.EASE_IN)
+					if not blase:
+						t.tween_property(p, "scale", Vector2(1.8, 1.8), 1.8)
+					t.chain().tween_callback(p.queue_free)
+			"glitzern":
+				if eintrag[2] <= 0.0:
+					eintrag[2] = randf_range(0.08, 0.2)
+					var b: Array = e.bereich
+					var p := Polygon2D.new()
+					p.polygon = PackedVector2Array([Vector2(0, 0), Vector2(2, 0), Vector2(2, 1), Vector2(0, 1)])
+					p.color = Color(1, 1, 1, 0.75)
+					p.position = Vector2(randf_range(b[0], b[0] + b[2]), randf_range(b[1], b[1] + b[3]))
+					n.add_child(p)
+					var t := p.create_tween()
+					t.tween_property(p, "position:x", p.position.x + 3.0, 0.5)
+					t.parallel().tween_property(p, "modulate:a", 0.0, 0.5)
+					t.tween_callback(p.queue_free)
 
 
 ## Kleiner weicher Schatten unter einem Sprite oder Prop, damit es auf dem Boden oder Tisch steht

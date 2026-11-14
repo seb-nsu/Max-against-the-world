@@ -1075,6 +1075,27 @@
      "baseline": 200
     }
    },
+   "effekte": [
+    {
+     "art": "flackern",
+     "pos": [
+      477,
+      182
+     ],
+     "r": [
+      30,
+      24
+     ]
+    },
+    {
+     "art": "dampf",
+     "pos": [
+      224,
+      136
+     ],
+     "breite": 24
+    }
+   ],
    "figuren": [
     {
      "id": "humbert",
@@ -1936,6 +1957,30 @@
      "schatten": false
     }
    },
+   "effekte": [
+    {
+     "art": "flackern",
+     "pos": [
+      146,
+      160
+     ],
+     "r": [
+      38,
+      30
+     ]
+    },
+    {
+     "art": "flackern",
+     "pos": [
+      167,
+      144
+     ],
+     "r": [
+      14,
+      16
+     ]
+    }
+   ],
    "figuren": [
     {
      "id": "schmied",
@@ -2858,6 +2903,37 @@
      ]
     }
    },
+   "effekte": [
+    {
+     "art": "blasen",
+     "pos": [
+      196,
+      168
+     ],
+     "breite": 40,
+     "farbe": "#b6f2a0"
+    },
+    {
+     "art": "dampf",
+     "pos": [
+      196,
+      160
+     ],
+     "breite": 36,
+     "farbe": "#d8f5d0"
+    },
+    {
+     "art": "flackern",
+     "pos": [
+      195,
+      222
+     ],
+     "r": [
+      20,
+      7
+     ]
+    }
+   ],
    "figuren": [
     {
      "id": "alwin",
@@ -3538,6 +3614,17 @@
     ]
    },
    "tiefe": 0.4,
+   "effekte": [
+    {
+     "art": "glitzern",
+     "bereich": [
+      250,
+      300,
+      170,
+      55
+     ]
+    }
+   ],
    "figuren": [
     {
      "id": "waldemar",
@@ -5857,6 +5944,52 @@
    },
    "tiefe": 0.7,
    "licht": "#b9b4d0",
+   "effekte": [
+    {
+     "art": "flackern",
+     "pos": [
+      162,
+      86
+     ],
+     "r": [
+      9,
+      11
+     ]
+    },
+    {
+     "art": "flackern",
+     "pos": [
+      200,
+      86
+     ],
+     "r": [
+      9,
+      11
+     ]
+    },
+    {
+     "art": "flackern",
+     "pos": [
+      447,
+      86
+     ],
+     "r": [
+      9,
+      11
+     ]
+    },
+    {
+     "art": "flackern",
+     "pos": [
+      628,
+      92
+     ],
+     "r": [
+      9,
+      11
+     ]
+    }
+   ],
    "hintergrund_nach": {
     "R11b": "res://grafik/hintergruende/w1_bg_turmkeller_zu_v01.png"
    },

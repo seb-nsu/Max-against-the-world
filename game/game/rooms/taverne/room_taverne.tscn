@@ -52,7 +52,7 @@ description = "UI_RAUM_TAVERNE"
 position = Vector2(510, 255.5)
 texture = ExtResource("6_2n8x7")
 description = "UI_OBJ_ZIEGENFELL_VORLEGER"
-baseline = 24
+baseline = -60
 walk_to_point = Vector2(0, 44.5)
 interaction_polygon = PackedVector2Array(-86, -24.5, 86, -24.5, 86, 24.5, -86, 24.5)
 
