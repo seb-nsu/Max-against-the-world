@@ -12,8 +12,8 @@
   },
   "walk": {
    "von": 1,
-   "bilder": 8,
-   "ms": 45,
+   "bilder": 5,
+   "ms": 100,
    "schleife": true
   },
   "schlafen": {
