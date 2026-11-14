@@ -35,13 +35,15 @@ Alle Welten teilen einen Pixel-Art-Stil in 640×360 Pixeln. Figuren und Gegenst�
 | --- | --- | --- | --- |
 | Konzeptbilder | ChatGPT oder Gemini | – | Baustein „KONZEPT“ voranstellen, 16:9 erzeugen. Nur als Vorlage, nicht ins Spiel |
 | Hintergründe | Gemini, dann `tools/pixelieren.py` | 640×360 | Standard (Sebastian, 10. November 2026): erst ein Konzeptbild (Baustein KONZEPT) zum Gegenprüfen, dann mit `tools/pixelieren.py` auf 640×360 und 32 Farben umwandeln (das Gemini-Original reicht, Claude kann das übernehmen). Ersatzweg: Neural Pixelate (Retro Diffusion) in zwei Hälften zu 320×360 und danach gemeinsam auf 32 Farben bringen. Danach in Aseprite Perspektive und Laufbereich korrigieren |
-| Figuren | Retro Diffusion Cloud | `rd_pro__default` mit Referenzbildern, `rd_plus__character_turnaround` | Erst eine Ansicht von der Seite festlegen, dann als Referenz für alle weiteren Bilder nutzen |
-| Animationen | Retro Diffusion Cloud | `rd_advanced_animation__walking`, `__idle`, `__custom_action` | Aus einem fertigen Standbild der Figur erzeugen, danach in Aseprite nacharbeiten |
-| Gegenstände | Retro Diffusion Cloud oder lokal | `rd_plus__item_sheet` oder `rd_pro__inventory_items` | Mehrere Gegenstände pro Bild, dann ausschneiden und auf 48×48 bringen |
-| Benutzeroberfläche | Retro Diffusion Cloud | `rd_pro__ui_panel` | Rahmen und Knöpfe; Schrift immer von Hand |
-| Umfärben, Freistellen | Retro Diffusion lokal | Palettize, Background Removal | Jedes fertige Asset einmal auf die gemeinsame Palette bringen |
+| Figuren | Gemini, dann `tools/figur.py sprite` | Baustein FIGURENBLATT, Max' Blatt anhängen | Eine Seitenansicht nach rechts auf Magenta; Claude stellt frei, rechnet auf Spielgröße und Palette um |
+| Gehen von Menschen | Claude: 3D-Winkel | Meshy-Bewegung, `skripte/rig_gang2.py` (Grafiken\3d) | Nur für Figuren, die im Spiel sichtbar Strecke gehen. Das gemalte Sprite wird in Teilen nach den Beinwinkeln einer 3D-Bewegung gedreht; Figuren mit Robe per `saum_gang.py` |
+| Posen und Szenenmomente | Gemini, dann Aseprite | Baustein POSENBOGEN, Blatt der Figur anhängen | Höchstens vier Schlüsselposen pro Bild auf Magenta; Zwischenbilder, Reden und kleine Bewegungen macht Claude in Aseprite. Tiere bleiben ganz gemalt |
+| Gegenstände und Deko | Gemini, dann `tools/figur.py gegenstaende` | Baustein GEGENSTÄNDE oder OBJEKT | Sammelbild auf Magenta ohne Kästchen, Claude schneidet je Zelle aus und bringt auf 48×48 (Inventar) oder Weltgröße |
+| Nahansichten und Tafeln | Gemini | Baustein NAHANSICHT | Füllt das ganze Bild, Schrift setzt Claude danach als Pixelschrift |
+| Effekte | Claude in Godot oder Aseprite | – | Funken, Strahlen, Leuchten und Überblendungen aus vorhandenen Bildern; der Baustein EFFEKT nur, wenn das nicht reicht |
+| Benutzeroberfläche | Claude in Aseprite | – | Rahmen und Knöpfe; Schrift immer von Hand |
 
-**Modellnamen prüfen:** Die Namen `rd_plus__environment`, `rd_pro__default` und die Animationsmodelle entsprechen dem Stand vom 8. November 2026. Vor dem ersten Auftrag auf der Retro-Diffusion-Website prüfen, ob sie noch so heißen, und das Datum der Prüfung im KI-Protokoll notieren.
+**Stand 14. November 2026:** So ist Welt 1 entstanden. Retro Diffusion ist nur noch Ersatzweg, die Modellnamen `rd_…` in älteren Motiven sind Altlast. Vier Lehren aus Welt 1 stecken in den Bausteinen: Hintergrund einfarbig Magenta (#ff00ff), weil Gemini bei „transparent“ ein Schachbrett malt und ein grauer Hintergrund sich mit weißer und grauer Kleidung beißt; Sammelbilder ohne Kästchen um die Gegenstände; höchstens vier Posen pro Bild und „frozen still pose“, weil sonst Schlieren und Geisterfiguren entstehen; Posen immer mit dem Blatt der Figur als Vorlage, weil sie sonst in Haarfarbe und Kopfgröße abweichen (Review Welt 1, Fund 8).
 
 **Zusätzliche Werkzeuge, geprüft am 11. November 2026.** Sebastian hat sechs Werkzeuge für Pixel Art vorgeschlagen. Gelesen sind die Beschreibungen, ausprobiert ist noch keins. Der Ablauf oben gilt weiter. Entschieden wird nach einem Test an Max (`offene-punkte.md`, P12).
 
@@ -129,7 +131,21 @@ Pixel art large character sprite, exactly one character, full body, strict side 
 **FIGURENBLATT** (Konzeptbild für Gemini, seit 12. November 2026 der Weg für alle Nebenfiguren): Max' Konzeptblatt als Stilvorlage anhängen. Ergebnis ist eine einzige Seitenansicht nach rechts; daraus macht `tools/figur.py sprite` das Sprite, Gehen und Reden entstehen per Code. Die Größe steht im Prompt relativ zu Max (189 Pixel = 100 Prozent), damit alle Figuren zueinander passen. Der letzte Satz des Bausteins kam am 13. November 2026 dazu: Bei Humbert, Gollo, Zauberstabmacher und Minka hatte Gemini Köpfe, Beine und Schuhe aus Max' Blatt mitgemalt:
 
 ```text
-Character concept sheet in exactly the same style as the attached character sheet of the boy Max: same line weight, same flat cel shading, same light from upper left, plain light grey background, no text, no ground shadow. Exactly one character, full body, strict side view facing right, standing on a flat baseline, legs clearly visible. Draw only this new character: do not copy any heads, legs, shoes or other parts of the boy Max from the attached sheet into the image.
+Character concept sheet in exactly the same style as the attached character sheet of the boy Max: same line weight, same flat cel shading, same light from upper left, solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no text, no ground shadow. Exactly one character, full body, strict side view facing right, standing on a flat baseline, legs clearly visible. Draw only this new character: do not copy any heads, legs, shoes or other parts of the boy Max from the attached sheet into the image.
+```
+
+Seit 14. November 2026 Magenta statt Hellgrau (Begründung oben unter „Stand 14. November 2026“). Zweite Fassungen einer Figur („Second version: …“) im selben Chat aus dem fertigen Bild ableiten; die fertigen Prompts stellen sie als eigenen Block darunter.
+
+**POSENBOGEN** (Gemini, für Schlüsselposen von Figuren und Tieren; das fertige Konzeptblatt der Figur anhängen, bei Max sein Figurenblatt; danach im selben Chat einzelne Posen nachbessern lassen):
+
+```text
+Pose sheet in exactly the same style, colors and proportions as the attached character sheet: same character, same head size, same hair and clothing colors, same line weight and flat cel shading, light from upper left. The poses side by side in one row, evenly spaced with clear empty space between them, all at the same scale on one flat baseline, each a frozen still pose, no motion blur, no ghosting, no speed lines, no duplicated limbs. Solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no text, no ground shadow, no frames or panels.
+```
+
+**OBJEKT** (Gemini, einzelne große Objekte und Deko in Weltgröße; Max' Blatt als Maßstab anhängen):
+
+```text
+Single prop concept in exactly the same style as the attached character sheet of the boy Max: same line weight, same flat cel shading, same light from upper left, solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no text, no ground shadow. Exactly one object, complete and not cropped, strict side view, standing on a flat baseline, no people or animals unless the motif names them. Draw only this object: do not draw the boy Max or anything else from the attached sheet.
 ```
 
 **PORTRÄT** (Dialog und Figurenwechsel, 128×128):
@@ -138,22 +154,28 @@ Character concept sheet in exactly the same style as the attached character shee
 Pixel art character portrait, head and shoulders, 128x128, three-quarter view facing right, expressive face, same colors as the character's sprite, dark colored outline, light from upper left, plain transparent background, no hands, no text.
 ```
 
-**KARTE** (`rd_plus__topdown_map`, 640×360):
+**KARTE** (Gemini, 640×360, danach `tools/pixelieren.py` wie ein Hintergrund; nichts anhängen):
 
 ```text
-Pixel art top-down illustrated travel map, 640x360, seen straight from above, simple readable shapes, clearly separated clickable locations with at least 32 pixels of space between them, light from upper left, no text, no letters, no labels.
+Illustrated travel map for a 2D point-and-click adventure game in the style of classic 1990s adventure games, warm hand-painted look, 16:9, seen straight from above, simple readable shapes, clearly separated clickable locations with generous space between them, light from upper left, no text, no letters, no labels, no compass rose with letters.
 ```
 
-**GEGENSTÄNDE** (`rd_plus__item_sheet`; Raster im Motiv angeben):
+**GEGENSTÄNDE** (Gemini; Raster im Motiv angeben; Max' Blatt als Stilvorlage anhängen):
 
 ```text
-Pixel art item sheet, grid exactly as given in the motif, items in reading order left to right and top to bottom, each item centered in its own cell at the same scale, about 48x48 pixels each, slight front-side view, no overlap between cells, dark colored outline (not pure black), light from upper left, plain transparent background, no text, letters or numbers on any item.
+Item sheet in exactly the same style as the attached character sheet of the boy Max: same line weight, same flat cel shading, light from upper left. Grid exactly as given in the motif, items in reading order left to right and top to bottom, each item complete and centered in its own invisible cell at the same scale, generous empty space between items, slight front-side view, items floating freely on a solid flat magenta (#ff00ff) background filling the whole image, no tiles, boxes, frames, panels or cell borders, no checkerboard, no ground shadow, no text, letters or numbers on any item. Do not draw the boy Max.
 ```
 
-**EFFEKT** (Bildfolge für Godot):
+**NAHANSICHT** (Gemini, 640×360; nichts anhängen; die Schrift setzt Claude danach von Hand):
 
 ```text
-Pixel art visual effect sprite sheet, frames in one horizontal row, frame count and frame size as given in the motif, every frame the same size with the effect centered, transparent background, limited palette, no anti-aliasing, no text.
+Close-up illustration for a 2D point-and-click adventure game in the style of classic 1990s adventure games, warm hand-painted look, 16:9, 640x360, the object fills the whole frame, no floor, no characters, light from upper left. No text, no letters, no numbers, all lines and fields left blank.
+```
+
+**EFFEKT** (nur, wenn Claude den Effekt nicht aus vorhandenen Bildern bauen kann):
+
+```text
+Visual effect frames for a 2D game, frames side by side in one row, evenly spaced, frame count as given in the motif, every frame the same size with the effect centered, flat cel shading, solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no frames or panels, no text.
 ```
 
 **ANIMATION** (`rd_advanced_animation__custom_action` mit dem fertigen Standbild als Eingabe; Schema für das Motiv):

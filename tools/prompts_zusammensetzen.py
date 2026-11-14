@@ -29,6 +29,15 @@ Figuren: Jede Tabelle „| Figur | Baustein | Motiv |“ wird zu Baustein FIGURE
 „# Figuren“. Pixelangaben („about 101 pixels tall“) werden zu Prozent von Max' Größe (189 Pixel),
 weil Gemini Größen nur im Verhältnis zur angehängten Vorlage trifft.
 
+Zweite und dritte Fassungen („Second version: identical, but …“) werden aus dem Motiv gelöst und
+als eigener Block „im selben Chat“ darunter gestellt, so wie sie in Gemini auch entstehen. Motive mit
+„LEFT HALF“ bekommen den Hinweis zum Breitbild.
+
+Große Objekte mit einem Figuren-Baustein (FIGUR-GROSS …) werden zu Baustein OBJEKT + Motiv.
+Posenbögen: Jede Tabelle „| Bogen | Vorlage | Posen | Wofür | Motiv |“ wird zu Baustein POSENBOGEN +
+Motiv, unter „# Posenbögen“. Nahansichten: „| Nahansicht | Epoche | Motiv |“ wird zu Baustein
+NAHANSICHT + Motiv + Farb-Baustein, unter „# Nahansichten und Tafeln“.
+
 Vertical Slice: fertige-prompts/vertical-slice.md sammelt die Prompts für Prolog-Reste und Welt 1,
 Rätsel 1 bis 4, in der Reihenfolge der Arbeit (Liste SLICE unten): erst Räume, dann Figuren, dann
 Sammelbilder. Die Blöcke sind dieselben wie in welt-1.md.
@@ -194,6 +203,8 @@ def gegenstands_tabellen(text):
             art = bau.split()[0].rstrip(",")
             if art in ("GEGENSTÄNDE", "EFFEKT"):
                 out.append((name, bau, motiv, art))
+            elif art.startswith("FIGUR"):
+                out.append((name, bau, relativ(motiv), "OBJEKT"))
     return out
 
 
@@ -207,8 +218,9 @@ def gegenstaende_bauen(text, bausteine):
     if not out:
         return []
     return ["# Gegenstände", "",
-            "Je Sammelbild den Block komplett in Gemini kopieren, keine Skizze anhängen. Umrechnen mit",
-            "`tools/figur.py` (Endesga-Palette), Ausschneiden je Zelle.", ""] + out
+            "Je Sammelbild den Block komplett in Gemini kopieren und Max' Konzeptblatt als Stilvorlage",
+            "anhängen, keine Skizze. Umrechnen mit `tools/figur.py` (Endesga-Palette), Ausschneiden je Zelle.",
+            ""] + out
 
 
 def relativ(motiv):
@@ -218,7 +230,42 @@ def relativ(motiv):
         if n == MAX_PIXEL:
             return f"{m.group(1)} as tall as the boy Max"
         return f"{m.group(1)} {round(n * 100 / MAX_PIXEL)} percent of the boy Max's height"
-    return re.sub(r"\b([Aa]bout) (\d+) pixels tall", ersetze, motiv)
+    motiv = re.sub(r"\b([Aa]bout) (\d+) pixels tall", ersetze, motiv)
+
+    def laenge(m):
+        n = round(int(m.group(2)) * 100 / MAX_PIXEL)
+        return f"{m.group(1)} {n} percent as {m.group(3)} as the boy Max is tall"
+    return re.sub(r"\b([Aa]bout) (\d+) pixels (wide|long)", laenge, motiv)
+
+
+FASSUNG = re.compile(r"\s*\b(Second|Third|Fourth) (?:version|variant)[^:]*:\s*")
+NAMEN = {"Second": "Zweite Fassung", "Third": "Dritte Fassung", "Fourth": "Vierte Fassung"}
+
+
+def fassungen(motiv, was="Same image, same camera, framing, layout and style"):
+    """Motiv ohne „Second version: …“ und die Folge-Blöcke dazu: [(Titel, Prompt)]."""
+    teile = FASSUNG.split(motiv)
+    haupt, folge = teile[0].strip().rstrip("."), []
+    for wort, rest in zip(teile[1::2], teile[2::2]):
+        rest = rest.strip().rstrip(".")
+        quelle = "aus der vorigen Fassung"
+        if rest.startswith("identical to the first"):
+            quelle = "aus der ersten Fassung"
+        elif rest.startswith("as the second"):
+            quelle = "aus der zweiten Fassung"
+        rest = re.sub(r"^(?:identical(?: to the first| layout)?|as the second),?\s*(?:but\s+|with\s+)?",
+                      "", rest)
+        rest = ohne_anmerkungen(rest)
+        folge.append((f"{NAMEN[wort]} (im selben Chat, {quelle})",
+                      f"{was}, only change: {rest}. Everything else exactly the same."))
+    return haupt, folge
+
+
+def folgebloecke(folge):
+    out = []
+    for titel, text in folge:
+        out += [f"**{titel}:**", "", "```text", text, "```", ""]
+    return out
 
 
 def figuren_bauen(text, bausteine):
@@ -228,13 +275,44 @@ def figuren_bauen(text, bausteine):
     for z in tabelle(text, "| Figur | Baustein | Motiv |"):
         if len(z) < 3 or not z[1].startswith("FIGUR"):
             continue
-        name, motiv = z[0], ohne_anmerkungen(relativ(z[2]))
-        out += [f"## {name}", "", "```text", f"{bausteine['FIGURENBLATT']} {motiv}.", "```", ""]
+        name = z[0]
+        haupt, folge = fassungen(relativ(z[2]), "Same character, same pose, same style")
+        out += [f"## {name}", "", "```text", f"{bausteine['FIGURENBLATT']} {ohne_anmerkungen(haupt)}.", "```", ""]
+        out += folgebloecke(folge)
     if not out:
         return []
     return ["# Figuren", "",
             "Je Figur den Block in Gemini kopieren und Max' Konzeptblatt als Stilvorlage anhängen. Gebraucht",
             "wird nur die Seitenansicht nach rechts; Gehen und Reden entstehen per Code (`tools/figur.py`).", ""] + out
+
+
+def posen_bauen(text, bausteine):
+    kopf = "| Bogen | Vorlage | Posen | Wofür | Motiv |"
+    if kopf not in text:
+        return []
+    out = ["# Posenbögen", "",
+           "Je Bogen das angegebene Blatt anhängen (das fertige Konzeptbild der Figur aus Gemini, bei Max sein",
+           "Figurenblatt) und den Block kopieren. Einzelne misslungene Posen im selben Chat nachbessern lassen,",
+           "nicht neu erzeugen. Zwischenbilder baut Claude in Aseprite.", ""]
+    for z in tabelle(text, kopf):
+        name, vorlage, posen, wofuer, motiv = z[:5]
+        out += [f"## {name}", "", f"**Anhängen:** {vorlage} · **Posen:** {posen} · **Wofür:** {wofuer}", "",
+                "```text", f"{bausteine['POSENBOGEN']} {ohne_anmerkungen(motiv)}.", "```", ""]
+    return out
+
+
+def nahansichten_bauen(text, bausteine, werte, datei):
+    kopf = "| Nahansicht | Epoche | Motiv |"
+    if kopf not in text:
+        return []
+    out = ["# Nahansichten und Tafeln", "",
+           "Nichts anhängen. Die Schrift setzt Claude danach als Pixelschrift ein.", ""]
+    for z in tabelle(text, kopf):
+        name, epoche, motiv = z[:3]
+        farbe = farbe_fuer(werte, epoche, name, datei)
+        out += [f"## {name}", "", "```text",
+                f"{bausteine['NAHANSICHT']} {ohne_anmerkungen(motiv)}. {farbe}.", "```", ""]
+    return out
 
 
 def abschnitte(text):
@@ -304,9 +382,19 @@ def datei_bauen(name, konzept, konzept_aussen, bausteine):
             out.append("")
         satz = f" {SKIZZE_SATZ}" if sk else ""
         baustein = konzept_aussen if szene in aussen else konzept
+        motiv, folge = fassungen(motiv)
+        if motiv.startswith("KARTE:"):
+            motiv = motiv[6:].strip()
+            baustein, motiv, satz = bausteine["KARTE"], motiv[:1].upper() + motiv[1:], ""
         out += ["```text", f"{baustein} {motiv.rstrip('.')}. {farbe}.{satz}", "```", ""]
+        if "LEFT HALF" in motiv:
+            out += ["**Breitbild:** erst die linke Hälfte erzeugen (Anfang, „LEFT HALF“ und Hintergrund), dann im",
+                    "selben Chat die rechte Hälfte, die nahtlos anschließt. Zusammensetzen macht Claude.", ""]
+        out += folgebloecke(folge)
     out += figuren_bauen(text, bausteine)
+    out += posen_bauen(text, bausteine)
     out += gegenstaende_bauen(text, bausteine)
+    out += nahansichten_bauen(text, bausteine, werte, name)
     return "\n".join(out)
 
 
@@ -317,7 +405,11 @@ def main():
     konzept_aussen = textblock_nach(stil, "**KONZEPT-AUSSEN**")
     bausteine = {"GEGENSTÄNDE": textblock_nach(stil, "**GEGENSTÄNDE**"),
                  "EFFEKT": textblock_nach(stil, "**EFFEKT**"),
-                 "FIGURENBLATT": textblock_nach(stil, "**FIGURENBLATT**")}
+                 "FIGURENBLATT": textblock_nach(stil, "**FIGURENBLATT**"),
+                 "POSENBOGEN": textblock_nach(stil, "**POSENBOGEN**"),
+                 "OBJEKT": textblock_nach(stil, "**OBJEKT**"),
+                 "NAHANSICHT": textblock_nach(stil, "**NAHANSICHT**"),
+                 "KARTE": textblock_nach(stil, "**KARTE**")}
     veraltet = []
     ZIEL.mkdir(exist_ok=True)
     gebaut = {name: datei_bauen(name, konzept, konzept_aussen, bausteine) for name in DATEIEN}
