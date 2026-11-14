@@ -294,6 +294,8 @@ def baue(abschnitt):
             "marker": lay.get("marker", {}),
             **({"tiefe": float(lay["tiefe"])} if "tiefe" in lay else {}),
             **({"skala": float(lay["skala"])} if "skala" in lay else {}),
+            **({"tiefe_oben_y": float(lay["tiefe_oben_y"])} if "tiefe_oben_y" in lay else {}),
+            **({"stufen": lay["stufen"]} if lay.get("stufen") else {}),
             **({"ambiente": lay["ambiente"]} if lay.get("ambiente") else {}),
             **({"vordergrund": lay["vordergrund"]} if lay.get("vordergrund") else {}),
             **({"hintergrund_nach": lay["hintergrund_nach"]} if lay.get("hintergrund_nach") else {}),

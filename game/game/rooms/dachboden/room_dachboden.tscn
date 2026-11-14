@@ -58,7 +58,7 @@ texture = ExtResource("4_mcqit")
 description = "UI_RAUM_DACHBODEN"
 
 [node name="ZappOMat" parent="Props" unique_id=145494250 instance=ExtResource("5_k8q6h")]
-position = Vector2(370.5, 174)
+position = Vector2(370.5, 188)
 texture = ExtResource("6_mcqit")
 frames = 7
 description = "UI_OBJ_ZAPP_O_MAT"
@@ -67,25 +67,25 @@ walk_to_point = Vector2(-5.5, 69)
 interaction_polygon = PackedVector2Array(-52.5, -56, 52.5, -56, 52.5, 56, -52.5, 56)
 
 [node name="Dosenoeffner" parent="Props" unique_id=1001585250 instance=ExtResource("9_mcqit")]
-position = Vector2(225, 175)
+position = Vector2(224, 184)
 texture = ExtResource("8_mcqit")
 description = "UI_OBJ_DOSENOEFFNER"
-baseline = 9
-walk_to_point = Vector2(27, 81)
-interaction_polygon = PackedVector2Array(-9, -9, 9, -9, 9, 9, -9, 9)
+baseline = 3
+walk_to_point = Vector2(28, 72)
+interaction_polygon = PackedVector2Array(-11, -6, 11, -6, 11, 5, -11, 5)
 
 [node name="Drahtkleiderbuegel" parent="Props" unique_id=505759806 instance=ExtResource("11_m8m18")]
-position = Vector2(613.5, 134.5)
+position = Vector2(617.5, 183.5)
 texture = ExtResource("10_mcqit")
 description = "UI_OBJ_DRAHTKLEIDERBUEGEL"
-baseline = 9
-walk_to_point = Vector2(-13.5, 155.5)
-interaction_polygon = PackedVector2Array(-13.5, -9.5, 13.5, -9.5, 13.5, 9.5, -13.5, 9.5)
+baseline = 7
+walk_to_point = Vector2(-17.5, 106.5)
+interaction_polygon = PackedVector2Array(-11, -9, 11, -9, 11, 9, -11, 9)
 
 [node name="Hotspots" type="Node2D" parent="." unique_id=337505337]
 
 [node name="Drehknopf" parent="Hotspots" unique_id=1239165427 instance=ExtResource("13_37hlm")]
-position = Vector2(409, 158)
+position = Vector2(409, 172)
 description = "UI_OBJ_DREHKNOPF"
 baseline = 13
 walk_to_point = Vector2(-14, 85)
@@ -262,7 +262,7 @@ position = Vector2(527, 315)
 position = Vector2(527, 315)
 
 [node name="Fernseher" parent="Markers" unique_id=1565949662 instance=ExtResource("30_w5i4a")]
-position = Vector2(365, 243)
+position = Vector2(365, 256)
 
 [node name="Characters" type="Node2D" parent="." unique_id=569691744]
 

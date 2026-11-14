@@ -54,6 +54,15 @@ func _mund_schliessen(nr: int, sekunden: float) -> void:
 		_play_idle()
 
 
+## Popochius Laufgeschwindigkeit folgt der Tiefe auch außerhalb der Grenzen (oben auf der Treppe
+## im Treppenhaus kröche Max sonst). Hier bleibt sie im selben Rahmen wie die Größe.
+func update_scale():
+	super()
+	if not scaling_region.is_empty() and default_scale.x != 0.0:
+		_walk_scale_factor = clampf(_walk_scale_factor, scaling_region.scale_min / default_scale.x,
+			scaling_region.scale_max / default_scale.x)
+
+
 ## Blickrichtung aus dem Layout („links“ oder „rechts“); leer: die Figur schaut zu Max.
 var blick_fest := ""
 var _echte_grafik := false

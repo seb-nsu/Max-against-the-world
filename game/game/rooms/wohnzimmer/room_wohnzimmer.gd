@@ -56,6 +56,7 @@ func _schwarz_an() -> void:
 		Spiel.hud.visible = false
 	_max_platz = C.player.position
 	C.player.position = OFF_PLATZ
+	_liegen_an()
 
 
 ## Max zurück an seinen Platz, HUD wieder an, Schwarz ausblenden. Auch nach dem Überspringen.
@@ -73,6 +74,60 @@ func _aufblenden() -> void:
 		t.tween_property(ebene.get_child(0), "color:a", 0.0, AUFBLENDEN)
 		await t.finished
 	ebene.queue_free()
+
+
+## Max liegt zu Beginn auf dem Sofa, das Handy über dem Gesicht (skript/prolog.md, Einstieg), und
+## steht vor 0070 auf. Solange er liegt, ist sein eigenes Bild unsichtbar; er spricht von seinem
+## Platz vor dem Sofa aus, die Sprechblasen stehen damit über dem Liegenden.
+const LIEGEN_BILD := "res://grafik/props/max_liegend.png"
+const LIEGEN_PLATZ := Vector2(56, 200)
+const LIEGEN_SKALA := 0.92
+const LIEGEN_AN := false
+
+var _liegend: Sprite2D
+
+
+func _liegen_an() -> void:
+	# Das gedrehte Stand-Sprite passte nicht (Sebastian, 14. November 2026): erst mit einem echten
+	# Liege-Bild aus Gemini wieder einschalten.
+	if not LIEGEN_AN or not ResourceLoader.exists(LIEGEN_BILD) or not has_node("Props"):
+		return
+	_liegend = Sprite2D.new()
+	_liegend.name = "MaxLiegend"
+	_liegend.texture = load(LIEGEN_BILD)
+	_liegend.centered = false
+	_liegend.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
+	_liegend.scale = Vector2(LIEGEN_SKALA, LIEGEN_SKALA)
+	_liegend.position = LIEGEN_PLATZ
+	get_node("Props").add_child(_liegend)
+	_max_bild_alpha(0.0)
+
+
+func _max_bild_alpha(a: float) -> void:
+	var bild := C.player.get_node_or_null("Sprite2D") as CanvasItem
+	if bild:
+		bild.modulate.a = a
+
+
+## Max steht auf: das liegende Bild blendet aus, der stehende Max vor dem Sofa ein. Auch nach dem
+## Überspringen (dann ohne Überblendung).
+func _aufstehen() -> void:
+	if not is_instance_valid(_liegend):
+		_max_bild_alpha(1.0)
+		return
+	var liegend := _liegend
+	_liegend = null
+	if Spiel.testmodus or E.cutscene_skipped:
+		liegend.queue_free()
+		_max_bild_alpha(1.0)
+		return
+	var bild := C.player.get_node_or_null("Sprite2D") as CanvasItem
+	var t := create_tween().set_parallel()
+	t.tween_property(liegend, "modulate:a", 0.0, 0.45)
+	if bild:
+		t.tween_property(bild, "modulate:a", 1.0, 0.45)
+	await t.finished
+	liegend.queue_free()
 
 
 #endregion
@@ -94,8 +149,10 @@ func _nach_uebergang() -> void:
 		Spiel.z("MAX", "P0_WOHN_MAX_0044"),
 		Spiel.z("OPA", "P0_WOHN_OPA_0050"),
 		Spiel.z("MAX", "P0_WOHN_MAX_0060"),
+		_aufstehen,
 		Spiel.z("MAX", "P0_WOHN_MAX_0070"),
 	])
 	await _aufblenden()  # falls die Szene übersprungen wurde
+	await _aufstehen()
 	# Autospeicher „Anfang Welt“ (05-spielsysteme.md, Speichern)
 	Spielstand.autospeichern()

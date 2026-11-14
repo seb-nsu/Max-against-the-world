@@ -5,9 +5,9 @@
  ],
  "animationen": {
   "idle": {
-   "von": 0,
-   "bilder": 1,
-   "ms": 500,
+   "von": 10,
+   "bilder": 8,
+   "ms": 300,
    "schleife": true
   },
   "walk": {
@@ -17,9 +17,15 @@
    "schleife": true
   },
   "schlafen": {
-   "von": 9,
-   "bilder": 1,
-   "ms": 500,
+   "von": 18,
+   "bilder": 4,
+   "ms": 550,
+   "schleife": true
+  },
+  "talk": {
+   "von": 22,
+   "bilder": 4,
+   "ms": 160,
    "schleife": true
   }
  }

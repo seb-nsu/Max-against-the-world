@@ -48,6 +48,15 @@ treppenhaus:
   # über die Stufen nach oben rechts.
   hintergrund: res://grafik/hintergruende/w0_bg_treppenhaus_v02.png
   tiefe: 0.85
+  # Die Treppe liegt an der Rückwand: oberhalb der Flur-Hinterkante (y 282) bleibt die Größe bei 85 Prozent,
+  # sonst schrumpfte Max beim Hochsteigen (Aseprite-Durchgang, 14. November 2026)
+  tiefe_oben_y: 282
+  # Vordere Oberkante jeder Trittfläche [x, y], von unten nach oben: Füße stehen auf den Stufen, beim
+  # Übertritt hebt sich die Figur kurz auf die nächste Stufe (CQRaum.stufen_anwenden)
+  stufen: [[255, 282], [281, 253], [310, 235], [339, 210], [373, 192], [403, 171], [431, 151], [458, 130], [490, 110], [519, 89], [547, 68], [575, 47], [603, 44]]   # Oberkanten der Trittbretter, pixelgenau nachgemessen
+  # Geländer (Handlauf, Stäbe, Antrittspfosten) aus dem Bild geschnitten: wer auf der Treppe steht, geht dahinter
+  vordergrund:
+    gelaender: {bild: res://grafik/props/treppengelaender.png, rect: [246, 0, 349, 299], baseline: 283}
   laufbereich: [[12, 357], [12, 290], [40, 282], [255, 282], [285, 250], [420, 158], [540, 70], [585, 44], [605, 44], [605, 54], [545, 80], [425, 168], [292, 260], [300, 282], [340, 300], [400, 345], [400, 357]]   # über die Treppe nur ein schmales Band auf den Stufenkanten
   marker:
     start: [173, 310]
@@ -74,20 +83,20 @@ dachboden:
   hintergrund: res://grafik/hintergruende/w0_bg_dachboden_v03.png
   tiefe: 0.85
   # Aussparung 218–302 × 262–284: dort liegt Pixel, Max geht rechts um ihn herum
-  laufbereich: [[160, 357], [160, 290], [218, 284], [300, 284], [302, 262], [250, 262], [245, 252], [262, 238], [455, 238], [460, 255], [520, 258], [525, 280], [600, 285], [635, 290], [635, 357]]
+  laufbereich: [[160, 357], [160, 290], [218, 284], [300, 284], [302, 262], [250, 262], [245, 252], [262, 246], [455, 246], [460, 255], [520, 258], [525, 280], [600, 285], [635, 290], [635, 357]]
   marker:
     start: [527, 315]
     von_treppenhaus: [527, 315]   # durch die Bodenluke vorne rechts
-    fernseher: [365, 243]         # vor dem Zapp-O-Mat
+    fernseher: [365, 256]         # vor dem Zapp-O-Mat (seit 14. November 2026 steht er auf den Dielen)
   figuren:
     pixel: [262, 272]             # schläft auf dem Verlängerungskabel
     opa: [460, 322]               # vorn zwischen Zapp-O-Mat und Sessel, verdeckt weder Drehknopf noch Kalender noch Pixel; vorher [400, 287] direkt vor dem Drehknopf (Sebastian, 13. November 2026)
   props:
-    zapp_o_mat: {rect: [318, 118, 105, 112], gehe: [365, 243], item: null}
-    dosenoeffner: {rect: [216, 166, 18, 18], gehe: [252, 256], schatten: true}   # liegt auf der Werkbank (vorher frei schwebend an der Seite)
-    drahtkleiderbuegel: {rect: [600, 125, 27, 19], gehe: [600, 290]}
+    zapp_o_mat: {rect: [318, 132, 105, 112], gehe: [365, 257], item: null}   # Kontaktschatten ins Bild gemalt; Kabel läuft unten links zum Verlängerungskabel unter Pixel
+    dosenoeffner: {rect: [214, 181, 20, 6], gehe: [252, 256], schatten: true}   # liegt flach auf der Werkbank (Aseprite, 14. November 2026)
+    drahtkleiderbuegel: {rect: [609, 177, 17, 13], gehe: [600, 290]}   # hängt am Türknauf des Schranks (Aseprite, 14. November 2026)
   hotspots:
-    drehknopf: {rect: [400, 145, 18, 26], gehe: [395, 243], name: Drehknopf}
+    drehknopf: {rect: [400, 159, 18, 26], gehe: [395, 257], name: Drehknopf}
     werkzeugkiste: {rect: [97, 220, 68, 58], gehe: [180, 300]}
     werkbank: {rect: [60, 145, 190, 55], gehe: [255, 256]}
     kleiderschrank: {rect: [578, 65, 62, 215], gehe: [600, 290]}

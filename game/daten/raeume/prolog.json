@@ -637,6 +637,73 @@
     ]
    },
    "tiefe": 0.85,
+   "tiefe_oben_y": 282.0,
+   "stufen": [
+    [
+     255,
+     282
+    ],
+    [
+     281,
+     253
+    ],
+    [
+     310,
+     235
+    ],
+    [
+     339,
+     210
+    ],
+    [
+     373,
+     192
+    ],
+    [
+     403,
+     171
+    ],
+    [
+     431,
+     151
+    ],
+    [
+     458,
+     130
+    ],
+    [
+     490,
+     110
+    ],
+    [
+     519,
+     89
+    ],
+    [
+     547,
+     68
+    ],
+    [
+     575,
+     47
+    ],
+    [
+     603,
+     44
+    ]
+   ],
+   "vordergrund": {
+    "gelaender": {
+     "bild": "res://grafik/props/treppengelaender.png",
+     "rect": [
+      246,
+      0,
+      349,
+      299
+     ],
+     "baseline": 283
+    }
+   },
    "figuren": [],
    "hotspots": [
     {
@@ -1101,11 +1168,11 @@
     ],
     [
      262,
-     238
+     246
     ],
     [
      455,
-     238
+     246
     ],
     [
      460,
@@ -1143,7 +1210,7 @@
     ],
     "fernseher": [
      365,
-     243
+     256
     ]
    },
    "tiefe": 0.85,
@@ -1172,13 +1239,13 @@
      "name_key": "UI_OBJ_DREHKNOPF",
      "rect": [
       400,
-      145,
+      159,
       18,
       26
      ],
      "gehe": [
       395,
-      243
+      257
      ],
      "ansehen": [],
      "benutzen": [
@@ -2122,13 +2189,13 @@
      "name_key": "UI_OBJ_ZAPP_O_MAT",
      "rect": [
       318,
-      118,
+      132,
       105,
       112
      ],
      "gehe": [
       365,
-      243
+      257
      ],
      "textur": "res://grafik/props/zapp_o_mat.png",
      "gegenstand": null,
@@ -2261,10 +2328,10 @@
      "script_name": "Dosenoeffner",
      "name_key": "UI_OBJ_DOSENOEFFNER",
      "rect": [
-      216,
-      166,
-      18,
-      18
+      214,
+      181,
+      20,
+      6
      ],
      "gehe": [
       252,
@@ -2287,10 +2354,10 @@
      "script_name": "Drahtkleiderbuegel",
      "name_key": "UI_OBJ_DRAHTKLEIDERBUEGEL",
      "rect": [
-      600,
-      125,
-      27,
-      19
+      609,
+      177,
+      17,
+      13
      ],
      "gehe": [
       600,

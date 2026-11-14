@@ -5,8 +5,8 @@
  ],
  "animationen": {
   "idle": {
-   "von": 0,
-   "bilder": 4,
+   "von": 16,
+   "bilder": 8,
    "ms": 300,
    "schleife": true
   },

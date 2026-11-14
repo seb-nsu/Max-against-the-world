@@ -33,6 +33,52 @@ func _ready() -> void:
 		Zustand.geaendert.connect(_on_zustand_geaendert)
 
 
+## Opa steht nicht wie angewurzelt (Sebastian, 14. November 2026): Ist nichts los, geht er alle
+## 12 bis 24 Sekunden zu einem anderen Platz vorn im Raum und schaut wieder zu Max. Die Plätze
+## verdecken weder Drehknopf, Kalender noch Pixel. Im Testmodus bleibt er stehen (feste Bilder).
+const OPA_PLAETZE := [Vector2(460, 322), Vector2(520, 332), Vector2(325, 332)]
+const OPA_PAUSE_MIN := 12.0
+const OPA_PAUSE_MAX := 24.0
+
+var _opa_ruhe := 0.0
+var _opa_pause := OPA_PAUSE_MIN
+var _opa_geht := false
+
+
+func _process(delta: float) -> void:
+	super(delta)
+	if not Engine.is_editor_hint():
+		_opa_umhergehen(delta)
+
+
+func _opa_umhergehen(delta: float) -> void:
+	if Spiel.testmodus or not has_character("Opa") or not is_instance_valid(C.Opa):
+		return
+	var los: bool = not E.in_room or E.playing_queue or Spiel.in_szene > 0
+	los = los or is_instance_valid(D.current_dialog) or C.Opa.is_talking
+	los = los or (is_instance_valid(C.player) and C.player.is_talking)
+	if los:
+		_opa_ruhe = 0.0
+		if _opa_geht:
+			C.Opa.stop_walking()
+		return
+	if _opa_geht:
+		return
+	_opa_ruhe += delta
+	if _opa_ruhe < _opa_pause:
+		return
+	_opa_ruhe = 0.0
+	_opa_pause = randf_range(OPA_PAUSE_MIN, OPA_PAUSE_MAX)
+	var plaetze := OPA_PLAETZE.filter(func(p: Vector2): return p.distance_to(C.Opa.position) > 30.0)
+	if plaetze.is_empty():
+		return
+	_opa_geht = true
+	await C.Opa.walk_to(plaetze.pick_random())
+	_opa_geht = false
+	if is_instance_valid(C.Opa) and is_instance_valid(C.player) and C.Opa.has_method("schauen_zu"):
+		C.Opa.schauen_zu(C.player.global_position.x)
+
+
 func _on_zustand_geaendert(_name: String) -> void:
 	if is_inside_tree():
 		_zustand_anwenden()

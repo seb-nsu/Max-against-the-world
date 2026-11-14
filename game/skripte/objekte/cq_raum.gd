@@ -64,7 +64,7 @@ func tiefe_anwenden() -> void:
 		chr.scaling_region = {
 			region_description = "Tiefe", scale_top = oben, scale_bottom = vorn,
 			scale_max = maxf(oben, vorn), scale_min = minf(oben, vorn),
-			polygon_top_y = ys.min(), polygon_bottom_y = ys.max(), target_scale = 1.0,
+			polygon_top_y = float(bauplan().get("tiefe_oben_y", ys.min())), polygon_bottom_y = ys.max(), target_scale = 1.0,
 		}
 		chr.update_scale()
 
@@ -73,8 +73,46 @@ func _process(_delta: float) -> void:
 	# Auch Figuren, die ohne Laufen versetzt werden (Marker, Szenen), bekommen ihre Größe
 	if tiefe_aktiv():
 		tiefe_anwenden()
+	if bauplan().has("stufen") and not Engine.is_editor_hint():
+		stufen_anwenden()
 	if not _bedingte_teile.is_empty() or not _hg_wechsel.is_empty():
 		_bedingte_anpassen()
+
+
+## Treppe in Seitenansicht (Layout „stufen: [[x, y], …]“, vordere Oberkanten der Trittflächen von
+## unten nach oben): Der Laufweg ist eine glatte Schräge, die Füße sollen aber auf den Stufen stehen.
+## Das Bild der Figur wird dafür senkrecht auf die Trittfläche unter ihr versetzt; in den ersten
+## Pixeln nach einer Stufenkante hebt es sich weich auf die neue Stufe (Schritt statt Rutschen).
+const STUFE_UEBERGANG := 9.0
+## Auf der Treppe geht man langsamer und bedächtiger als auf ebenem Boden.
+const STUFE_TEMPO := 0.7
+
+
+func stufen_anwenden() -> void:
+	var st: Array = bauplan().stufen
+	for c in get_characters():
+		var bild := c.get_node_or_null("Sprite2D") as Node2D
+		if bild == null:
+			continue
+		var p: Vector2 = c.position
+		var dy := 0.0
+		if p.y < float(st[0][1]) and p.x >= float(st[0][0]):
+			var k := 0
+			while k + 1 < st.size() and p.x >= float(st[k + 1][0]):
+				k += 1
+			var ziel := float(st[k][1])
+			if k > 0:
+				var t := clampf((p.x - float(st[k][0])) / STUFE_UEBERGANG, 0.0, 1.0)
+				ziel = lerpf(float(st[k - 1][1]), ziel, t * t * (3.0 - 2.0 * t))
+			dy = ziel - p.y
+			if k > 0:
+				# Beim Hochsteigen hebt sich der Körper kurz etwas über die neue Stufe (Schwung)
+				var t2 := clampf((p.x - float(st[k][0])) / STUFE_UEBERGANG, 0.0, 1.0)
+				dy -= 2.0 * sin(t2 * PI)
+		var s := maxf(absf(c.scale.y), 0.01)
+		bild.position.y = dy / s
+		if "walk_speed_override" in c:
+			c.walk_speed_override = c.walk_speed * STUFE_TEMPO if dy != 0.0 else 0.0
 
 
 func _on_room_entered() -> void:
