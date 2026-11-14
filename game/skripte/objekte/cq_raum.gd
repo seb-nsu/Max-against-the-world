@@ -307,6 +307,8 @@ func _leuchten_setzen() -> void:
 		wurzel.z_index = 1
 		get_node("Props").add_child(wurzel)
 		var takt := float(l.get("takt", 2.0))
+		if Spiel.testmodus:
+			continue   # Bildvergleich: ohne Pulsieren
 		var t := wurzel.create_tween().set_loops()
 		t.tween_property(wurzel, "modulate:a", 0.35, takt / 2.0).set_trans(Tween.TRANS_SINE)
 		t.tween_property(wurzel, "modulate:a", 1.0, takt / 2.0).set_trans(Tween.TRANS_SINE)

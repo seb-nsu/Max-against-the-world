@@ -86,7 +86,8 @@ func _process(delta: float) -> void:
 	super(delta)
 	if Engine.is_editor_hint() or not has_node("Props"):
 		return
-	_besen_zeit += delta
+	if not Spiel.testmodus:   # Bildvergleich und Tests: Besen stehen fest
+		_besen_zeit += delta
 	for n in 3:
 		var sp := get_node("Props").get_node_or_null("Patrouille_%d" % n) as Sprite2D
 		if not sp:

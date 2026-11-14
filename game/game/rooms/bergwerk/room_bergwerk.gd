@@ -56,6 +56,8 @@ func _lichtschein(an: bool) -> void:
 			get_node("Props").add_child(p)
 		else:
 			schein.add_child(p)
+	if Spiel.testmodus:
+		return   # Bildvergleich: ohne Pulsieren
 	var t := schein.create_tween().set_loops()
 	t.tween_property(schein, "modulate:a", 0.65, 1.4).set_trans(Tween.TRANS_SINE)
 	t.tween_property(schein, "modulate:a", 1.0, 1.4).set_trans(Tween.TRANS_SINE)
