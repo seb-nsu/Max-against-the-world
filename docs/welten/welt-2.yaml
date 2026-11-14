@@ -46,7 +46,7 @@ raeume:
   - id: nil_delta
     name: Nil-Delta mit Fährsteg
     skript_code: [NIL]
-    groesse: 640x360
+    groesse: 1280x360
     ausgaenge: [thronsaal_ramses, sphinx, faehrsteg_olympia, hafen_syrakus]   # zwei Fußwege, Fähre (Flusskarte) zu beiden Anlegestellen
     erreichbar_ab: start
     musik: w2_aegypten
@@ -55,7 +55,7 @@ raeume:
   - id: thronsaal_ramses
     name: Thronsaal
     skript_code: [THRO, HIER, DUEL, AUDI]
-    groesse: 640x360
+    groesse: 1280x360
     ausgaenge: [nil_delta, palastkueche]
     erreichbar_ab: start
     musik: w2_aegypten
@@ -106,7 +106,7 @@ raeume:
   - id: stadion
     name: Stadion
     skript_code: [STAD, TAG1, HEBL, DISK, FINA, RING, PARA]   # DISK spielt auch auf der Agora und bei der Sphinx
-    groesse: 640x360
+    groesse: 1280x360
     ausgaenge: [agora]
     erreichbar_ab: R1
     musik: w2_olympia

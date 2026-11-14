@@ -39,18 +39,18 @@ _figuren: [sobek, hermes, ramses, faecherwedler, archimedes, cicero, zeremonienm
 
 nil_delta:
   farbe: "#c9a96e"
-  laufbereich: [[8, 280], [632, 280], [632, 356], [8, 356]]
+  laufbereich: [[8, 280], [1272, 280], [1272, 356], [8, 356]]
   faehre: [faehrsteg_olympia, hafen_syrakus]
   marker:
-    start: [200, 320]
-    von_thronsaal_ramses: [592, 320]
-    von_sphinx: [520, 296]
+    start: [400, 320]
+    von_thronsaal_ramses: [1184, 320]
+    von_sphinx: [1040, 296]
     von_faehre: [80, 316]
-    hermes: [400, 320]
+    hermes: [800, 320]
   figuren:
     faehrmann: [96, 304]
     sobek: [44, 340]
-    steinmetz: [440, 304]
+    steinmetz: [880, 304]
   alias:
     papyrus_aus_dem_schilf: papyrusblatt
     weizenfeld: weizenfeld_mit_handabdruck
@@ -59,32 +59,32 @@ nil_delta:
     pyramide: verkehrte_pyramide
   hotspots:
     faehre: {rect: [8, 260, 128, 40], gehe: [112, 316], name: Fähre}
-    faehrtafel: {rect: [148, 200, 40, 40], gehe: [168, 308], name: Tafel}
-    sanduhr: {rect: [200, 188, 32, 68], gehe: [216, 308], name: Sanduhr}
-    schilf: {rect: [240, 224, 72, 56], gehe: [276, 308], name: Schilf}
-    weizenfeld_mit_handabdruck: {rect: [320, 220, 96, 60], gehe: [368, 308], name: Weizenfeld}
-    verkehrte_pyramide: {rect: [340, 28, 140, 140], gehe: [408, 304], name: Verkehrte Pyramide}
-    bauplan: {rect: [460, 224, 40, 32], gehe: [472, 308], name: Bauplan}
+    faehrtafel: {rect: [316, 200, 40, 40], gehe: [336, 308], name: Tafel}
+    sanduhr: {rect: [416, 188, 32, 68], gehe: [432, 308], name: Sanduhr}
+    schilf: {rect: [516, 224, 72, 56], gehe: [552, 308], name: Schilf}
+    weizenfeld_mit_handabdruck: {rect: [688, 220, 96, 60], gehe: [736, 308], name: Weizenfeld}
+    verkehrte_pyramide: {rect: [750, 28, 140, 140], gehe: [816, 304], name: Verkehrte Pyramide}
+    bauplan: {rect: [940, 224, 40, 32], gehe: [944, 308], name: Bauplan}
   props:
-    papyrusblatt: {rect: [272, 260, 20, 16], gehe: [276, 308]}
+    papyrusblatt: {rect: [554, 260, 20, 16], gehe: [552, 308]}
   ausgaenge:
-    thronsaal_ramses: {rect: [600, 140, 36, 140], gehe: [608, 320], id: sandweg, name: Sandweg}
-    sphinx: {rect: [500, 160, 72, 56], gehe: [532, 296], id: duenenpfad, name: Dünenpfad}
+    thronsaal_ramses: {rect: [1240, 140, 36, 140], gehe: [1248, 320], id: sandweg, name: Sandweg}
+    sphinx: {rect: [1036, 160, 72, 56], gehe: [1064, 296], id: duenenpfad, name: Dünenpfad}
 
 thronsaal_ramses:
   farbe: "#b98b3e"
-  laufbereich: [[8, 280], [632, 280], [632, 356], [8, 356]]
+  laufbereich: [[8, 280], [1272, 280], [1272, 356], [8, 356]]
   marker:
     start: [48, 320]
     von_nil_delta: [48, 320]
-    von_palastkueche: [592, 320]
-    sobek: [200, 336]
-    kissen: [360, 304]
+    von_palastkueche: [1184, 320]
+    sobek: [400, 336]
+    kissen: [720, 304]
   figuren:
-    schreiber: [112, 304]
-    ramses: [400, 248]
-    hofkater: [360, 296]
-    faecherwedler: [472, 304]
+    schreiber: [224, 304]
+    ramses: [800, 248]
+    hofkater: [720, 296]
+    faecherwedler: [944, 304]
   alias:
     opferschale_des_hofkaters: opferschale
     inschrift: inschrift
@@ -93,20 +93,20 @@ thronsaal_ramses:
     tuer_zur_kueche: tuer_zur_kueche
     fackeln: fackeln
   hotspots:
-    thron: {rect: [352, 156, 96, 124], gehe: [400, 312], name: Thron}
-    schreiberpult: {rect: [76, 236, 60, 44], gehe: [112, 312], name: Schreiberpult}
+    thron: {rect: [752, 156, 96, 124], gehe: [800, 312], name: Thron}
+    schreiberpult: {rect: [182, 236, 60, 44], gehe: [224, 312], name: Schreiberpult}
     sarkophag: {rect: [16, 128, 48, 144], gehe: [48, 312], name: Sarkophag}
-    mumifizierte_katze: {rect: [152, 160, 32, 56], gehe: [168, 308], name: Mumifizierte Katze}
-    wandfries: {rect: [80, 32, 440, 36], gehe: [320, 308], name: Wandfries}
-    saeulen: {rect: [200, 80, 44, 200], gehe: [224, 308], name: Säulen}
-    inschrift: {rect: [260, 124, 52, 72], gehe: [284, 308], name: Inschrift}
-    opferschale: {rect: [316, 272, 28, 12], gehe: [328, 316], name: Opferschale}
-    fackeln: {rect: [512, 80, 48, 48], gehe: [536, 308], name: Fackeln}
+    mumifizierte_katze: {rect: [320, 160, 32, 56], gehe: [336, 308], name: Mumifizierte Katze}
+    wandfries: {rect: [160, 32, 880, 36], gehe: [640, 308], name: Wandfries}
+    saeulen: {rect: [422, 80, 44, 200], gehe: [448, 308], name: Säulen}
+    inschrift: {rect: [546, 124, 52, 72], gehe: [568, 308], name: Inschrift}
+    opferschale: {rect: [646, 272, 28, 12], gehe: [656, 316], name: Opferschale}
+    fackeln: {rect: [1048, 80, 48, 48], gehe: [1072, 308], name: Fackeln}
   props:
-    pharaonenteller: {rect: [456, 252, 24, 12], gehe: [464, 312]}
+    pharaonenteller: {rect: [924, 252, 24, 12], gehe: [928, 312]}
   ausgaenge:
     nil_delta: {rect: [4, 160, 8, 120], gehe: [24, 320], id: ausgang_nil_delta, name: Nil-Delta}
-    palastkueche: {rect: [584, 140, 52, 140], gehe: [600, 316], id: tuer_zur_kueche, name: Tür zur Küche}
+    palastkueche: {rect: [1224, 140, 52, 140], gehe: [1240, 316], id: tuer_zur_kueche, name: Tür zur Küche}
 
 palastkueche:
   farbe: "#9c6b45"
@@ -251,35 +251,35 @@ startbuero:
 
 stadion:
   farbe: "#d6b46a"
-  laufbereich: [[8, 280], [632, 280], [632, 356], [8, 356]]
+  laufbereich: [[8, 280], [1272, 280], [1272, 356], [8, 356]]
   marker:
-    start: [592, 320]
-    von_agora: [592, 320]
-    ramses: [320, 132]
-    wedler: [376, 132]
-    archimedes: [128, 304]
-    hermes: [460, 320]
-    cicero: [220, 304]
-    zeremonienmeister: [520, 304]
-    aegypter: [240, 132]
+    start: [1184, 320]
+    von_agora: [1184, 320]
+    ramses: [780, 132]
+    wedler: [840, 132]
+    archimedes: [256, 304]
+    hermes: [920, 320]
+    cicero: [440, 304]
+    zeremonienmeister: [1040, 304]
+    aegypter: [700, 132]
   figuren:
-    leonidas: [400, 316]
-    schildkroete: [472, 336]
+    leonidas: [800, 316]
+    schildkroete: [944, 336]
   alias:
     ramses_im_stadion: ramses
     wurfhebel_im_stadion: wurfhebel
     startlinie_mit_startpass: startlinie
   hotspots:
-    laufbahn: {rect: [40, 296, 560, 24], gehe: [320, 332], name: Laufbahn}
-    sandgrube: {rect: [128, 248, 120, 32], gehe: [188, 312], name: Sandgrube}
-    kampfrichterzelt: {rect: [280, 196, 80, 64], gehe: [320, 308], name: Kampfrichterzelt}
-    zuschauerraenge: {rect: [0, 80, 640, 64], gehe: [320, 308], name: Zuschauerränge}
-    glockenturm: {rect: [560, 8, 32, 68], gehe: [560, 308], name: Glockenturm}
-    siegerliste: {rect: [400, 180, 48, 60], gehe: [424, 308], name: Siegerliste}
-    startlinie: {rect: [528, 320, 12, 32], gehe: [532, 336], name: Startlinie}
-    wurfhebel: {rect: [48, 200, 72, 80], gehe: [88, 312], name: Wurfhebel}
+    laufbahn: {rect: [80, 296, 1120, 24], gehe: [640, 332], name: Laufbahn}
+    sandgrube: {rect: [316, 248, 120, 32], gehe: [376, 312], name: Sandgrube}
+    kampfrichterzelt: {rect: [600, 196, 80, 64], gehe: [640, 308], name: Kampfrichterzelt}
+    zuschauerraenge: {rect: [0, 80, 1280, 64], gehe: [640, 308], name: Zuschauerränge}
+    glockenturm: {rect: [1136, 8, 32, 68], gehe: [1120, 308], name: Glockenturm}
+    siegerliste: {rect: [824, 180, 48, 60], gehe: [848, 308], name: Siegerliste}
+    startlinie: {rect: [1062, 320, 12, 32], gehe: [1064, 336], name: Startlinie}
+    wurfhebel: {rect: [132, 200, 72, 80], gehe: [176, 312], name: Wurfhebel}
   ausgaenge:
-    agora: {rect: [600, 140, 36, 140], gehe: [612, 320], id: ausgang_agora, name: Agora}
+    agora: {rect: [1240, 140, 36, 140], gehe: [1252, 320], id: ausgang_agora, name: Agora}
 
 hafen_syrakus:
   farbe: "#6f98b0"

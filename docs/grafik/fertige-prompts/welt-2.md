@@ -100,15 +100,21 @@ R Raum, F Figur, P Posenbogen, B Bewegung, G Gegenstände, N Nahansicht, K Figur
 
 **Shot W2-R01**
 
+**Zustände:** 1280×360, linke und rechte Hälfte einzeln erzeugen
+
 **Layout-Skizze:** [Nil-Delta](../skizzen/welt-2/nil_delta.png)
 
 ```text
 STYLE: Concept art for a 2D point-and-click adventure game in the style of classic 1990s adventure games, outdoor scene seen straight on like a wide stage, camera at the eye level of a standing person, horizon at about 40 percent of the image height, open walkable ground with gentle depth across the lower third kept free of objects except at the left and right edges, wide shot: a standing adult at the front edge would be about 52 percent of the image height, no top-down, bird's-eye or strong three-quarter view, no fisheye, every object drawn exactly as described and nothing added, signs and labels without any letters or numbers, light from the upper left with soft shadows to the lower right, humorous and whimsical.
-SCENE: Sunny Nile riverbank at noon, 640x360. Left: a small field of golden wheat, one row of stalks pressed flat in the shape of a hand. Center: a wooden ferry dock reaching into turquoise water with open water at its end, a tall hourglass on a post and a blank wooden sign board with three carved rows beside it. Right: tall papyrus reeds with one loose blank sheet caught in them, a sandy path leaving at the right edge toward a palace gate, and behind the reeds a narrow trail climbing a dune toward a tiny distant sphinx on the horizon. Background across the river: a stone pyramid standing upside down on its tip, wooden scaffolding, tiny workers scratching their heads. Sandy floor with gentle depth in the lower third kept clear. Harsh sun from upper left.
+SCENE: Sunny Nile riverbank at noon, wide 1280x360 scene built from two 640x360 halves that join seamlessly. LEFT HALF, left to right: a wooden ferry dock at the left edge reaching into turquoise water, with open water at its end; beside the dock a blank wooden sign board with three carved rows and a tall hourglass on a post; tall papyrus reeds with one loose blank sheet caught in them; open sandy ground. RIGHT HALF, left to right: a small field of golden wheat, one row of stalks pressed flat in the shape of a hand; open sandy ground; a narrow trail climbing a dune toward a tiny distant sphinx on the horizon; a sandy path leaving at the right edge toward a palace gate. Background across both halves: the wide river, and across it, behind the wheat field, a stone pyramid standing upside down on its tip with wooden scaffolding and tiny workers scratching their heads. Sandy floor with gentle depth in the lower third kept clear. Harsh sun from upper left.
 PALETTE: warm desert palette of sand, ochre and gold, turquoise river water, harsh midday sun. Color anchors, approximate: sand #e4a672, ochre #d77643, gold #feae34, turquoise water #2ce8f5, pale sand #ead4aa.
 LAYOUT: Use the attached sketch only for the position and size of objects and exits, not for style, colors or text. Leave the orange marked spots empty.
 NEGATIVE: no characters, people or animals in the walkable area, no text, letters, numbers or logos, no faces or robot features on objects, no loose objects that can be picked up, no objects that are not described, no top-down, bird's-eye or fisheye view, no tilted floor, no photorealism, no 3D render, no blur, no watermark
 ```
+
+**Breitbild:** erst die linke Hälfte erzeugen (alle Zeilen, aus SCENE nur Anfang, „LEFT HALF“
+und Hintergrund), dann im selben Chat die rechte Hälfte, die nahtlos anschließt. Zusammensetzen
+macht Claude.
 
 ## Fährsteg Olympia
 
@@ -142,17 +148,21 @@ NEGATIVE: no characters, people or animals in the walkable area, no text, letter
 
 **Shot W2-R04**
 
-**Zustände:** – (die Parade findet im Stadion von Olympia statt)
+**Zustände:** 1280×360, linke und rechte Hälfte einzeln erzeugen; die Parade findet im Stadion von Olympia statt
 
 **Layout-Skizze:** [Thronsaal](../skizzen/welt-2/thronsaal_ramses.png)
 
 ```text
 STYLE: Concept art for a 2D point-and-click adventure game in the style of classic 1990s adventure games, front view of the room with gentle one-point perspective, camera at the eye level of a standing person looking straight at the back wall, back wall parallel to the picture plane, vanishing point in the center at about 40 percent of the image height, side walls at most as narrow angled strips at the image edges, open walkable floor with gentle depth across the lower third to half of the image kept free of objects except at the left and right edges, wide shot from further back so the room feels spacious: a standing adult at the front edge would be about 52 percent of the image height, so doors and tall cupboards reach only about 50 percent of the image height, chairs about 25 percent and tables about 22 percent, no top-down, bird's-eye or strong three-quarter view, no fisheye, every object drawn exactly as described and nothing added, no faces or robot features on objects, small loose objects that can be picked up left out, book spines, calendars, posters and labels without any letters or numbers, light from the upper left with soft shadows to the lower right, humorous and whimsical, warm hand-painted look, 16:9, no text, no letters, no logos.
-SCENE: Grand Egyptian throne room, 640x360. Left: the palace entrance at the left edge, a scribe's low desk with a clay tablet and reed pens, a small empty wall niche above it. Center: a golden throne on three steps, an empty silk cushion on the floor in front of the steps with a small bowl of dates beside it, a golden plate engraved with a sun on a low stand beside the throne. Right: tall wooden doors to the palace kitchen at the right edge. Back wall: painted columns with torches, one column with a sandstone panel set into it showing four empty symbol slots, and a frieze of people dancing sideways with angled arms, one holding a large portable stereo. Polished stone floor with gentle depth in the lower third kept clear. Torchlight and sunbeams from upper left.
+SCENE: Grand Egyptian throne room, wide 1280x360 scene built from two 640x360 halves that join seamlessly, plenty of open floor between the furniture. LEFT HALF, left to right: the palace entrance at the left edge with free floor beside it; a scribe's low desk with a clay tablet and reed pens; a small empty wall niche above head height; a tall painted column; a second column with a sandstone panel set into it showing four empty symbol slots. RIGHT HALF, left to right: an empty silk cushion on the floor with a small bowl of dates beside it; a golden throne on three steps; a golden plate engraved with a sun on a low stand beside the throne; torches on the back wall; tall wooden doors to the palace kitchen at the right edge. Back wall across both halves: painted columns and a long frieze of people dancing sideways with angled arms, one holding a large portable stereo. Polished stone floor with gentle depth in the lower third kept clear. Torchlight and sunbeams from upper left.
 PALETTE: warm palette of sandstone, ochre and gold, painted walls, daylight falling in through high openings, cool shade in the corners. Color anchors, approximate: sandstone #e4a672, ochre #d77643, gold #feae34, painted red #be4a2f, cool shade #5a6988.
 LAYOUT: Use the attached sketch only for the position and size of objects and exits, not for style, colors or text. Leave the orange marked spots empty.
 NEGATIVE: no characters, people or animals in the walkable area, no text, letters, numbers or logos, no faces or robot features on objects, no loose objects that can be picked up, no objects that are not described, no top-down, bird's-eye or fisheye view, no tilted floor, no photorealism, no 3D render, no blur, no watermark
 ```
+
+**Breitbild:** erst die linke Hälfte erzeugen (alle Zeilen, aus SCENE nur Anfang, „LEFT HALF“
+und Hintergrund), dann im selben Chat die rechte Hälfte, die nahtlos anschließt. Zusammensetzen
+macht Claude.
 
 ## Palastküche
 
@@ -236,17 +246,21 @@ NEGATIVE: no new objects, no changed camera or framing, no style change, no text
 
 **Shot W2-R09**
 
-**Zustände:** Normal und Parade (ab dem Ende des Finaltags)
+**Zustände:** 1280×360, linke und rechte Hälfte einzeln erzeugen; Normal und Parade (ab dem Ende des Finaltags)
 
 **Layout-Skizze:** [Stadion](../skizzen/welt-2/stadion.png)
 
 ```text
 STYLE: Concept art for a 2D point-and-click adventure game in the style of classic 1990s adventure games, outdoor scene seen straight on like a wide stage, camera at the eye level of a standing person, horizon at about 40 percent of the image height, open walkable ground with gentle depth across the lower third kept free of objects except at the left and right edges, wide shot: a standing adult at the front edge would be about 52 percent of the image height, no top-down, bird's-eye or strong three-quarter view, no fisheye, every object drawn exactly as described and nothing added, signs and labels without any letters or numbers, light from the upper left with soft shadows to the lower right, humorous and whimsical.
-SCENE: Ancient Greek stadium in bright sun, 640x360. Left: the path to the marketplace at the left edge, a white stone start line across the track and a small white judges' tent. Center: a long sand running track along the floor. Right: a sand wrestling pit framed by a low stone wall. Background: stone spectator rows with a cheering crowd, a shaded seating box with an awning in the middle of the rows, and far away a tall white marble bell tower standing perfectly straight. Floor with gentle depth in the lower third kept clear. Sun from upper left.
+SCENE: Ancient Greek stadium in bright sun, wide 1280x360 scene built from two 640x360 halves that join seamlessly, with lots of open ground for many people. LEFT HALF, left to right: open free ground at the left edge; a sand wrestling pit framed by a low stone wall; a small white judges' tent near the right end of the half. RIGHT HALF, left to right: open ground; a white stone start line across the track; far away a tall white marble bell tower standing perfectly straight; the path to the marketplace leaving at the right edge. Across both halves: a long sand running track along the floor, and behind it stone spectator rows with a cheering crowd, with a shaded seating box with an awning in the rows at the left end of the right half. Floor with gentle depth in the lower third kept clear. Sun from upper left.
 PALETTE: bright Mediterranean palette of white marble, olive green and deep blue sky, sunny and airy. Color anchors, approximate: marble white #ffffff, light grey #c0cbdc, olive green #3e8948, deep sky blue #0099db, sea blue #124e89.
 LAYOUT: Use the attached sketch only for the position and size of objects and exits, not for style, colors or text. Leave the orange marked spots empty.
 NEGATIVE: no characters, people or animals in the walkable area, no text, letters, numbers or logos, no faces or robot features on objects, no loose objects that can be picked up, no objects that are not described, no top-down, bird's-eye or fisheye view, no tilted floor, no photorealism, no 3D render, no blur, no watermark
 ```
+
+**Breitbild:** erst die linke Hälfte erzeugen (alle Zeilen, aus SCENE nur Anfang, „LEFT HALF“
+und Hintergrund), dann im selben Chat die rechte Hälfte, die nahtlos anschließt. Zusammensetzen
+macht Claude.
 
 **Zweite Fassung mit Maske (Bild der vorigen Fassung anhängen oder im selben Chat bleiben):**
 

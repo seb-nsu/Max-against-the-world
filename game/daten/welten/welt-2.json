@@ -60,7 +60,7 @@
    "skript_code": [
     "NIL"
    ],
-   "groesse": "640x360",
+   "groesse": "1280x360",
    "ausgaenge": [
     "thronsaal_ramses",
     "sphinx",
@@ -80,7 +80,7 @@
     "DUEL",
     "AUDI"
    ],
-   "groesse": "640x360",
+   "groesse": "1280x360",
    "ausgaenge": [
     "nil_delta",
     "palastkueche"
@@ -185,7 +185,7 @@
     "RING",
     "PARA"
    ],
-   "groesse": "640x360",
+   "groesse": "1280x360",
    "ausgaenge": [
     "agora"
    ],
