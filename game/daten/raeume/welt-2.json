@@ -6150,7 +6150,7 @@
    ],
    "reist_mit": false,
    "nahansicht": false,
-   "icon": "res://grafik/platzhalter/gegenstand_papyrusblatt.png",
+   "icon": "res://grafik/gegenstaende/papyrusblatt.png",
    "icons": {},
    "ansehen": [
     {
@@ -6190,7 +6190,7 @@
    ],
    "reist_mit": false,
    "nahansicht": false,
-   "icon": "res://grafik/platzhalter/gegenstand_opas_papyrus.png",
+   "icon": "res://grafik/gegenstaende/opas_papyrus.png",
    "icons": {},
    "ansehen": [
     {
@@ -6221,7 +6221,7 @@
    ],
    "reist_mit": false,
    "nahansicht": false,
-   "icon": "res://grafik/platzhalter/gegenstand_bildtafel.png",
+   "icon": "res://grafik/gegenstaende/bildtafel.png",
    "icons": {},
    "ansehen": [
     {
@@ -6269,7 +6269,7 @@
    ],
    "reist_mit": true,
    "nahansicht": false,
-   "icon": "res://grafik/platzhalter/gegenstand_pharaonenteller.png",
+   "icon": "res://grafik/gegenstaende/pharaonenteller.png",
    "icons": {},
    "ansehen": [
     {
@@ -6301,7 +6301,7 @@
    ],
    "reist_mit": false,
    "nahansicht": false,
-   "icon": "res://grafik/platzhalter/gegenstand_brot.png",
+   "icon": "res://grafik/gegenstaende/brot.png",
    "icons": {},
    "ansehen": [
     {
@@ -6332,7 +6332,7 @@
    ],
    "reist_mit": false,
    "nahansicht": false,
-   "icon": "res://grafik/platzhalter/gegenstand_datteln.png",
+   "icon": "res://grafik/gegenstaende/datteln.png",
    "icons": {},
    "ansehen": [
     {
@@ -6364,7 +6364,7 @@
    ],
    "reist_mit": false,
    "nahansicht": false,
-   "icon": "res://grafik/platzhalter/gegenstand_zwiebel.png",
+   "icon": "res://grafik/gegenstaende/zwiebel.png",
    "icons": {},
    "ansehen": [
     {
@@ -6397,10 +6397,10 @@
    ],
    "reist_mit": false,
    "nahansicht": false,
-   "icon": "res://grafik/platzhalter/gegenstand_fladen.png",
+   "icon": "res://grafik/gegenstaende/fladen_mit_datteln.png",
    "icons": {
-    "roh": "res://grafik/platzhalter/gegenstand_fladen_roh.png",
-    "mit Kruste": "res://grafik/platzhalter/gegenstand_fladen_mit_kruste.png"
+    "roh": "res://grafik/gegenstaende/fladen_roh.png",
+    "mit Kruste": "res://grafik/gegenstaende/fladen_mit_kruste.png"
    },
    "ansehen": [
     {
@@ -6575,7 +6575,7 @@
    ],
    "reist_mit": false,
    "nahansicht": false,
-   "icon": "res://grafik/platzhalter/gegenstand_tintenfass.png",
+   "icon": "res://grafik/gegenstaende/tintenfass.png",
    "icons": {},
    "ansehen": [
     {
@@ -6606,7 +6606,7 @@
    ],
    "reist_mit": false,
    "nahansicht": false,
-   "icon": "res://grafik/platzhalter/gegenstand_waage.png",
+   "icon": "res://grafik/gegenstaende/waage.png",
    "icons": {},
    "ansehen": [],
    "benutzen": [],
@@ -6621,7 +6621,7 @@
    ],
    "reist_mit": false,
    "nahansicht": false,
-   "icon": "res://grafik/platzhalter/gegenstand_messbecher.png",
+   "icon": "res://grafik/gegenstaende/messbecher.png",
    "icons": {},
    "ansehen": [],
    "benutzen": [],
@@ -6636,7 +6636,7 @@
    ],
    "reist_mit": false,
    "nahansicht": false,
-   "icon": "res://grafik/platzhalter/gegenstand_krone.png",
+   "icon": "res://grafik/gegenstaende/krone.png",
    "icons": {},
    "ansehen": [
     {
@@ -6667,7 +6667,7 @@
    ],
    "reist_mit": false,
    "nahansicht": false,
-   "icon": "res://grafik/platzhalter/gegenstand_goldbarren.png",
+   "icon": "res://grafik/gegenstaende/goldbarren.png",
    "icons": {},
    "ansehen": [
     {
@@ -6699,7 +6699,7 @@
    ],
    "reist_mit": false,
    "nahansicht": false,
-   "icon": "res://grafik/platzhalter/gegenstand_brennspiegel.png",
+   "icon": "res://grafik/gegenstaende/brennspiegel.png",
    "icons": {},
    "ansehen": [],
    "benutzen": [],
@@ -6787,7 +6787,7 @@
    ],
    "reist_mit": false,
    "nahansicht": false,
-   "icon": "res://grafik/platzhalter/gegenstand_entwurf.png",
+   "icon": "res://grafik/gegenstaende/entwurf.png",
    "icons": {},
    "ansehen": [
     {
@@ -6934,7 +6934,7 @@
    ],
    "reist_mit": false,
    "nahansicht": false,
-   "icon": "res://grafik/platzhalter/gegenstand_leeres_formular.png",
+   "icon": "res://grafik/gegenstaende/leeres_formular.png",
    "icons": {},
    "ansehen": [
     {
@@ -6967,9 +6967,9 @@
    ],
    "reist_mit": false,
    "nahansicht": false,
-   "icon": "res://grafik/platzhalter/gegenstand_rundschreiben.png",
+   "icon": "res://grafik/gegenstaende/rundschreiben_mit_kugelschreiber.png",
    "icons": {
-    "mit Tinte": "res://grafik/platzhalter/gegenstand_rundschreiben_mit_tinte.png",
+    "mit Tinte": "res://grafik/gegenstaende/rundschreiben_mit_tinte.png",
     "gefunden": "res://grafik/platzhalter/gegenstand_rundschreiben_gefunden.png"
    },
    "ansehen": [
@@ -7068,7 +7068,7 @@
    ],
    "reist_mit": false,
    "nahansicht": false,
-   "icon": "res://grafik/platzhalter/gegenstand_startpass.png",
+   "icon": "res://grafik/gegenstaende/startpass.png",
    "icons": {},
    "ansehen": [
     {
@@ -7183,7 +7183,7 @@
    ],
    "reist_mit": false,
    "nahansicht": false,
-   "icon": "res://grafik/platzhalter/gegenstand_brians_schild.png",
+   "icon": "res://grafik/gegenstaende/brians_schild.png",
    "icons": {},
    "ansehen": [
     {
@@ -7347,7 +7347,7 @@
    ],
    "reist_mit": true,
    "nahansicht": false,
-   "icon": "res://grafik/platzhalter/gegenstand_schallplatte.png",
+   "icon": "res://grafik/gegenstaende/schallplatte.png",
    "icons": {},
    "ansehen": [
     {
@@ -7379,7 +7379,7 @@
    ],
    "reist_mit": true,
    "nahansicht": false,
-   "icon": "res://grafik/platzhalter/gegenstand_wurfscheibe.png",
+   "icon": "res://grafik/gegenstaende/wurfscheibe.png",
    "icons": {},
    "ansehen": [
     {
@@ -7410,7 +7410,7 @@
    ],
    "reist_mit": true,
    "nahansicht": false,
-   "icon": "res://grafik/platzhalter/gegenstand_diskus.png",
+   "icon": "res://grafik/gegenstaende/diskus.png",
    "icons": {},
    "ansehen": [
     {
@@ -7481,7 +7481,7 @@
    ],
    "reist_mit": true,
    "nahansicht": false,
-   "icon": "res://grafik/platzhalter/gegenstand_olivenkranz.png",
+   "icon": "res://grafik/gegenstaende/olivenkranz.png",
    "icons": {},
    "ansehen": [
     {
@@ -7543,7 +7543,7 @@
    ],
    "reist_mit": false,
    "nahansicht": false,
-   "icon": "res://grafik/platzhalter/gegenstand_goldener_sack.png",
+   "icon": "res://grafik/gegenstaende/goldener_sack.png",
    "icons": {},
    "ansehen": [
     {
