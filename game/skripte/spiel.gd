@@ -736,11 +736,20 @@ func raum_wechseln_und_warten(sn: String) -> void:
 		await get_tree().process_frame
 
 
+## Zählt die Raumwechsel; ein Klick, der vor dem Wechsel losging, erkennt daran, dass er veraltet ist.
+var raum_wechsel_nr := 0
+
+
 func raum_wechseln(ziel_raum_id: String) -> void:
 	var sn := Bauplan.raum_script_name(ziel_raum_id)
 	if sn.is_empty():
 		push_error("Raum %s fehlt im Bauplan" % ziel_raum_id)
 		return
+	raum_wechsel_nr += 1
+	# Ein angefangener Weg (Doppelklick auf einen Ausgang während des Hingehens) liefe sonst im
+	# neuen Raum zum alten Ziel weiter, meist an den rechten Rand (Sebastian, 14. November 2026).
+	if is_instance_valid(C.player) and C.player.is_moving:
+		C.player.stop_walking()
 	herkunft_raum = R.current.script_name if is_instance_valid(R.current) else ""
 	await R.goto_room(sn)
 

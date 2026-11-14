@@ -45,7 +45,10 @@ func _zeiger_richtung() -> void:
 func _on_click() -> void:
 	if not await _darf_gehen():
 		return
+	var nr := Spiel.raum_wechsel_nr
 	await Spiel.hingehen(self)
+	if nr != Spiel.raum_wechsel_nr:
+		return  # schon per Doppelklick gewechselt
 	await Spiel.raum_wechseln(ziel())
 
 
