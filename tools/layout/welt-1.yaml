@@ -398,80 +398,104 @@ bergwerk:
 
 luftschloss:
   farbe: "#b9c7e6"
-  # Breitbild 1280×360 (Entscheidung 13. November 2026): links Rankenende und Hof, rechts Torbogen mit
-  # Kritzelei, Balkon und Spiegel. Platzhalter-Layout für Skizze und Graubox.
-  laufbereich: [[8, 280], [1272, 280], [1272, 356], [8, 356]]
+  # Echter Hintergrund (14. November 2026): Breitbild aus zwei Gemini-Bildern von Sebastian, links Ranke,
+  # Hofmauer und Brunnen (luftschloss_sebastian_links_v1), rechts Turm mit Torbogen, Kritzelei, Balkon und
+  # Spiegel (luftschloss_sebastian_rechts_v1); Naht an der Turmkante bei x 640, Boden 40 Pixel überblendet
+  # und farblich angeglichen (luftschloss_breit_v1.png). Die Wolken vorn sind nicht begehbar.
+  hintergrund: res://grafik/hintergruende/w1_bg_luftschloss_v01.png
+  tiefe: 0.6
+  laufbereich: [[150, 262], [205, 228], [640, 216], [1230, 214], [1200, 246], [1080, 286], [960, 326],
+                [860, 344], [600, 344], [330, 334], [180, 300]]
   marker:
-    start: [60, 320]
-    von_dorfplatz: [60, 320]
+    start: [175, 270]
+    von_dorfplatz: [175, 270]
   figuren:
-    maklerin: [880, 316]
-    zeldina: [1000, 320]
+    maklerin: [905, 262]
+    zeldina: [1010, 268]
   alias:
     kritzelei_neben_dem_torbogen: kritzelei
     nahansicht_kritzelei: kritzelei
     oder_benutzen_spiegel: spiegel
   hotspots:
-    torbogen: {rect: [740, 80, 120, 200], gehe: [800, 304], name: Torbogen}
-    kritzelei: {rect: [872, 200, 32, 28], gehe: [888, 308], name: Kritzelei}
-    balkon: {rect: [1060, 60, 200, 60], gehe: [1160, 304], name: Balkon}
-    spiegel: {rect: [1180, 140, 36, 60], gehe: [1196, 304], name: Spiegel}
-    wolken: {rect: [0, 300, 1280, 60], gehe: [640, 320], name: Wolken}
+    torbogen: {rect: [755, 50, 105, 165], gehe: [806, 232], name: Torbogen}
+    kritzelei: {rect: [866, 138, 62, 54], gehe: [895, 232], name: Kritzelei}
+    balkon: {rect: [990, 0, 122, 120], gehe: [1050, 232], name: Balkon}
+    spiegel: {rect: [1106, 98, 46, 68], gehe: [1128, 232], name: Spiegel}
+    wolken: {rect: [0, 330, 1280, 30], gehe: [640, 330], name: Wolken}
   ausgaenge:
-    dorfplatz: {rect: [4, 120, 52, 160], gehe: [32, 320], id: rankenende, name: Rankenende}
+    dorfplatz: {rect: [20, 10, 130, 250], gehe: [155, 266], id: rankenende, name: Rankenende}
 
 turmkeller:
   farbe: "#3b2f4a"
-  laufbereich: [[8, 280], [632, 280], [632, 356], [8, 356]]
+  # Echter Hintergrund (14. November 2026, Sebastians Gemini-Fassung, 40 Farben gemeinsam mit der zweiten
+  # Fassung): links die offene Rune-Tür mit Treppe hinab ins Bergwerk, Mitte Wendeltreppe, rechts die
+  # Kammertür. Vor Rätsel 11 Teil 2 steht die Tür offen, danach ist sie zu (w1_bg_turmkeller_zu_v01: die
+  # Grundlage mit eingesetzter geschlossener Tür aus Sebastians zweitem Bild). Die Besen an der Wand sind gemalt.
+  hintergrund: res://grafik/hintergruende/w1_bg_turmkeller_v01.png
+  hintergrund_nach:
+    R11b: res://grafik/hintergruende/w1_bg_turmkeller_zu_v01.png
+  tiefe: 0.7
+  laufbereich: [[0, 359], [0, 300], [70, 272], [130, 224], [620, 222], [639, 240], [639, 359]]
   marker:
-    start: [52, 320]
-    von_bergwerk: [52, 320]
-    von_abstellkammer_1: [500, 316]
-    von_abstellkammern: [320, 300]
+    start: [110, 268]
+    von_bergwerk: [110, 268]
+    von_abstellkammer_1: [556, 246]
+    von_abstellkammern: [325, 240]
   alias:
     kreuzung: kreuzung_1
     treppe: treppe_nach_oben
   ohne: [besen_in_abstellkammer_1, kram_in_abstellkammer_1]   # Zeilen der Abstellkammer 1 (Raumskript)
   hotspots:
-    gerade_route: {rect: [120, 320, 120, 16], gehe: [160, 312], name: Gerade Route}
-    zickzack_route: {rect: [260, 324, 120, 16], gehe: [300, 312], name: Zickzack-Route}
-    schleifen_route: {rect: [400, 320, 120, 16], gehe: [440, 312], name: Schleifen-Route}
-    kreuzung_1: {rect: [184, 336, 20, 16], gehe: [192, 332], name: Kreuzung}
-    kreuzung_2: {rect: [312, 336, 20, 16], gehe: [320, 332], name: Kreuzung}
-    kreuzung_3: {rect: [448, 336, 20, 16], gehe: [456, 332], name: Kreuzung}
-    besen: {rect: [200, 240, 160, 40], gehe: [280, 308], name: Besen}
+    gerade_route: {rect: [130, 264, 110, 96], gehe: [190, 300], name: Gerade Route}
+    zickzack_route: {rect: [272, 236, 100, 124], gehe: [322, 300], name: Zickzack-Route}
+    schleifen_route: {rect: [380, 236, 195, 80], gehe: [470, 300], name: Schleifen-Route}
+    kreuzung_1: {rect: [292, 250, 30, 14], gehe: [306, 270], name: Kreuzung}
+    kreuzung_2: {rect: [402, 250, 30, 14], gehe: [416, 270], name: Kreuzung}
+    kreuzung_3: {rect: [356, 234, 30, 12], gehe: [370, 256], name: Kreuzung}
+    besen: {rect: [255, 135, 190, 85], gehe: [350, 240], name: Besen}
   ausgaenge:
-    bergwerk: {rect: [4, 120, 44, 160], gehe: [24, 320], id: kellertreppe, name: Kellertreppe}
-    abstellkammer_1: {rect: [540, 140, 60, 140], gehe: [560, 312], id: kammertuer, name: Kammertür}
-    abstellkammern: {rect: [292, 40, 60, 200], gehe: [320, 300], id: treppe_nach_oben, name: Wendeltreppe, gesperrt: W1_TURM_MAX_0110}
+    bergwerk: {rect: [20, 60, 110, 200], gehe: [100, 266], id: kellertreppe, name: Kellertreppe}
+    abstellkammer_1: {rect: [505, 100, 105, 125], gehe: [556, 240], id: kammertuer, name: Kammertür}
+    abstellkammern: {rect: [280, 0, 85, 215], gehe: [325, 232], id: treppe_nach_oben, name: Wendeltreppe, gesperrt: W1_TURM_MAX_0110}
 
 abstellkammer_1:
   farbe: "#4a3f3a"
-  # Tür links (13. November 2026, vorher rechts): Im Keller liegt die Kammertür rechts, also kommt man
-  # hier von links herein.
-  laufbereich: [[8, 280], [632, 280], [632, 356], [8, 356]]
+  # Echter Hintergrund (14. November 2026, Sebastians Gemini-Fassung): Tür links (im Keller liegt die
+  # Kammertür rechts), Gerümpel und Stapel links an der Wand, freier Boden für die fegenden Besen, Regal rechts.
+  # Das Schild „Eigentum Smaugi, Kammer 1 von 6“ ist noch leer (Schrift im Aseprite-Durchgang).
+  hintergrund: res://grafik/hintergruende/w1_bg_abstellkammer_1_v01.png
+  tiefe: 0.75
+  laufbereich: [[50, 359], [80, 300], [120, 280], [240, 276], [290, 240], [540, 238], [600, 300], [639, 330], [639, 359]]
   marker:
-    start: [60, 320]
-    von_turmkeller: [60, 320]
+    start: [110, 300]
+    von_turmkeller: [110, 300]
   alias:
     besen_in_abstellkammer_1: besen
     kram_in_abstellkammer_1: kram
   hotspots:
-    besen: {rect: [320, 220, 160, 60], gehe: [400, 308], name: Besen}
-    kram: {rect: [120, 160, 160, 120], gehe: [200, 308], name: Kram}
+    besen: {rect: [290, 246, 230, 54], gehe: [400, 300], name: Besen}
+    kram: {rect: [130, 140, 210, 140], gehe: [230, 296], name: Kram}
   ausgaenge:
-    turmkeller: {rect: [4, 120, 40, 160], gehe: [24, 320], id: ausgang_turmkeller, name: Keller}
+    turmkeller: {rect: [20, 80, 62, 215], gehe: [100, 300], id: ausgang_turmkeller, name: Keller}
 
 abstellkammern:
   farbe: "#5e4b3a"
-  laufbereich: [[8, 280], [632, 280], [632, 356], [8, 356]]
+  # Echter Hintergrund (14. November 2026, Sebastians Gemini-Fassungen, gemeinsame Palette): links Treppe
+  # von unten, Kram-Haufen und Schwert im Stein, Mitte Goldhaufen und Nest, rechts die grinsende Geheimtür.
+  # Nach Rätsel 12 aufgeräumt (w1_bg_abstellkammern_aufgeraeumt_v01: Sebastians zweites Bild, Goldhaufen und
+  # Nest aus dem ersten eingesetzt, weil das Ei danach noch dort liegt).
+  hintergrund: res://grafik/hintergruende/w1_bg_abstellkammern_v01.png
+  hintergrund_nach:
+    R12: res://grafik/hintergruende/w1_bg_abstellkammern_aufgeraeumt_v01.png
+  tiefe: 0.75
+  laufbereich: [[100, 359], [110, 300], [150, 240], [200, 228], [500, 228], [600, 250], [639, 280], [639, 359]]
   marker:
-    start: [60, 320]
-    von_turmkeller: [60, 320]
-    von_thronsaal: [540, 300]
+    start: [130, 300]
+    von_turmkeller: [130, 300]
+    von_thronsaal: [540, 250]
     abnehmer: [240, 324]
   figuren:
-    smaugi: [360, 280]
+    smaugi: [360, 290]
   alias:
     drachenei_im_nest: drachenei_nest
     drachenei: drachenei_nest
@@ -479,36 +503,47 @@ abstellkammern:
     haufen: goldhaufen
     offene_geheimtuer: geheimtuer
   hotspots:
-    drachenei_nest: {rect: [400, 220, 40, 40], gehe: [400, 312], name: Drachenei}
-    goldhaufen: {rect: [280, 200, 100, 80], gehe: [320, 312], name: Goldhaufen}
-    okarina: {rect: [80, 240, 20, 12], gehe: [92, 312], name: Okarina}
-    schwert_im_stein: {rect: [120, 192, 28, 60], gehe: [132, 312], name: Schwert im Stein}
-    deko_kram: {rect: [168, 220, 80, 60], gehe: [200, 312], name: Kram}
-    stapel: {rect: [168, 240, 120, 40], gehe: [220, 312], name: Stapel}
+    drachenei_nest: {rect: [395, 180, 80, 45], gehe: [432, 250], name: Drachenei}
+    goldhaufen: {rect: [265, 155, 115, 70], gehe: [320, 250], name: Goldhaufen}
+    okarina: {rect: [244, 213, 14, 10], gehe: [250, 250], name: Okarina}
+    schwert_im_stein: {rect: [226, 140, 30, 65], gehe: [240, 250], name: Schwert im Stein}
+    deko_kram: {rect: [140, 145, 80, 85], gehe: [180, 250], name: Kram}
+    stapel: {rect: [40, 160, 200, 72], gehe: [180, 252], name: Stapel}
   props:
-    kronleuchter: {rect: [240, 20, 60, 48], gehe: [268, 308]}
-    schwerter_buendel: {rect: [460, 240, 40, 40], gehe: [472, 312]}
-    fackel_buendel: {rect: [508, 240, 32, 40], gehe: [520, 312]}
+    kronleuchter: {rect: [292, 8, 56, 55], gehe: [320, 250]}
+    schwerter_buendel: {rect: [90, 172, 40, 40], gehe: [150, 252]}
+    fackel_buendel: {rect: [190, 186, 31, 40], gehe: [205, 252]}
+  vordergrund:
+    okarina: {bild: res://grafik/props/okarina.png, pos: [251, 222], vor: R12}
   ausgaenge:
-    turmkeller: {rect: [4, 120, 40, 160], gehe: [24, 320], id: wendeltreppe, name: Wendeltreppe}
-    thronsaal: {rect: [560, 80, 72, 200], gehe: [580, 300], id: geheimtuer, name: Geheimtür}
+    turmkeller: {rect: [0, 190, 100, 170], gehe: [120, 300], id: wendeltreppe, name: Wendeltreppe}
+    thronsaal: {rect: [508, 82, 62, 140], gehe: [540, 240], id: geheimtuer, name: Geheimtür}
 
 thronsaal:
   farbe: "#2e2440"
-  laufbereich: [[8, 280], [632, 280], [632, 356], [8, 356]]
+  # Echter Hintergrund (14. November 2026, Sebastians Gemini-Fassung, nachts): links die offene Geheimtür
+  # und Blumenvasen, Mitte Buntglasfenster mit Mond, rechts Thron mit rosa Kissen und Tisch mit
+  # Taschentüchern. Mondlicht-Strahl als lebendiger Hintergrund ist vorgemerkt (P16). Das Lerntagebuch liegt
+  # als Deko-Sprite auf dem Tisch.
+  hintergrund: res://grafik/hintergruende/w1_bg_thronsaal_v01.png
+  tiefe: 0.8
+  laufbereich: [[0, 359], [0, 300], [100, 262], [420, 256], [470, 262], [560, 292], [639, 302], [639, 359]]
   marker:
-    start: [60, 320]
-    von_abstellkammern: [60, 320]
+    start: [120, 290]
+    von_abstellkammern: [120, 290]
   figuren:
-    moderwort: [400, 300]
+    moderwort: [400, 296]
   alias:
     moderworts_lerntagebuch: lerntagebuch
   ohne: [oder_reden_zeldina]   # Zeldina nach R13 (W1_THRO_ZEL_0620): Figurenskript
   hotspots:
-    thron: {rect: [360, 120, 120, 160], gehe: [400, 312], name: Thron}
-    taschentuchstapel: {rect: [500, 240, 48, 40], gehe: [512, 312], name: Taschentücher}
-    blumenvasen: {rect: [180, 220, 60, 60], gehe: [208, 312], name: Blumen}
-    lerntagebuch: {rect: [260, 252, 32, 20], gehe: [272, 312], name: Lerntagebuch}
-    fenster: {rect: [240, 20, 120, 80], gehe: [300, 304], name: Fenster}
+    thron: {rect: [460, 40, 125, 230], gehe: [470, 292], name: Thron}
+    taschentuchstapel: {rect: [580, 180, 50, 48], gehe: [580, 302], name: Taschentücher}
+    blumenvasen: {rect: [118, 115, 85, 110], gehe: [160, 280], name: Blumen}
+    lerntagebuch: {rect: [612, 214, 18, 16], gehe: [590, 302], name: Lerntagebuch}
+    fenster: {rect: [285, 40, 70, 150], gehe: [320, 268], name: Fenster}
+  vordergrund:
+    tagebuch: {bild: res://grafik/props/tagebuch.png, pos: [621, 230]}
   ausgaenge:
-    abstellkammern: {rect: [4, 120, 40, 160], gehe: [24, 320], id: ausgang_abstellkammern, name: Abstellkammern}
+    abstellkammern: {rect: [40, 85, 60, 175], gehe: [110, 282], id: ausgang_abstellkammern, name: Abstellkammern}
+

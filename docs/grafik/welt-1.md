@@ -47,16 +47,7 @@ dim torch-lit mine palette of earthy browns and mossy greens with small warm gol
 
 ## Prompts
 
-**Stand 13. November 2026, was in Welt 1 noch fehlt** (alles andere ist eingebaut; fertige Prompts in `fertige-prompts/welt-1.md`):
-
-| Art | Offen | Hinweis |
-| --- | --- | --- |
-| Szenen | Luftschloss (breit, zwei Hälften), Turmkeller, Abstellkammer 1, Smaugis Abstellkammern (zwei Fassungen), Thronsaal | Erst nach dem Slice; Skizze mitgeben |
-| Figuren | Zeldina, Maklerin, Lord Moderwort, Smaugi, Max als Pilz, Zauberbesen, Übungsbesen (nach dem Slice) | Max' Figurenblatt anhängen, bei Max als Pilz auch das Max-Blatt als Vorlage |
-| Nahansichten | Alwins Hinweiszettel, Luftschloss-Kritzelei, Moderworts Zeugnis | Märchen-Satzung ist fertig |
-| Animationen | Alle aus der Tabelle unten | Kommen im Aseprite-Durchgang (`offene-punkte.md`, Animationen) |
-
-Fertig und nicht mehr zu erzeugen: die neun Slice-Räume, 20 Figuren mit den drei Streik-Goblins, alle Sammelbilder (Dorf und Taverne, Zaubertrank, Flaschen, Wald und Turm, Bohnenranke, Niesrosen, Smaugis Kram, Deko Welt 1) und die Nahansicht Märchen-Satzung. Gemini malt bei „transparent“ ein Schachbrett ins Bild; das entfernt ein Skript vor dem Schneiden (Rand-Füllung über graue Pixel).
+**Stand 14. November 2026: Welt 1 ist grafisch komplett.** Alle 14 Räume, alle Figuren, Sammelbilder und Nahansichten sind eingebaut. Offen bleiben nur Animationen und Nacharbeiten im Aseprite-Durchgang (`offene-punkte.md`, P15 und Animationen). Gemini malt bei „transparent“ ein Schachbrett ins Bild; das entfernt `tools/karo_weg.py` vor dem Schneiden. Figuren werden seit dem 14. November mit `--palette keine` umgerechnet, weil die Endesga-Palette Grün- und Violetttöne verschluckt hat.
 
 Vorne den Baustein aus `00-stil-und-werkzeuge.md`, dann das Motiv, hinten den Farb-Baustein dieser Welt (für den Dunklen Turm den düsteren, für das Goblin-Bergwerk den eigenen).
 
@@ -100,6 +91,11 @@ Zu den Motiven: Jedes Motiv nennt links, Mitte und rechts in Bildrichtung, die A
 | Zauberwald | Breitbild 1066×360 statt 640: links ein tieferer Waldteil mit hohlem Baum und dem Weg zur Brücke, der dicke Baum auf der Naht ist ein Vordergrund-Prop. Ketchup und ein Leuchtpilz sind ausgeschnitten; die Niesrosen fehlen wie geplant noch | Auf 640 Pixeln war der Raum zu gedrängt (Sebastian) |
 | Wasserschloss | Entspricht Motiv und Skizze; zusätzlich eine kleine Holzbrücke am linken Rand (Weg zur Troll-Brücke), das Schloss ist rosa | Passt zum Blick von der Troll-Brücke |
 | Goblin-Bergwerk | Breitbild 1280×360 wie geplant; zusätzlich eine Werkzeugwand. Hintergrund mit geschlossener Rune-Tür, die offene Tür ist ein eigenes Bild, das nach Rätsel 10 erscheint | Zwei Zustände der Tür |
+| Luftschloss | Zwei getrennt erzeugte Bilder zu einem Breitbild zusammengesetzt (links Ranke, Hofmauer, Brunnen; rechts Turm mit Torbogen, Kritzelei, Balkon, Spiegel); harte Naht an der Turmkante, Boden überblendet und farblich angeglichen; Wolken vorn nicht begehbar | Gemini hat die Hälften als zwei eigene Breitbilder geliefert |
+| Turmkeller | Besen lehnen gemalt an der Wand (statt nur als Sprites); zweite Fassung (Kammertür zu) ist die erste mit eingesetzter Tür, weil sich Geminis zweites Bild überall leicht verschoben hatte | Ein Bildwechsel ohne Ruckeln |
+| Abstellkammer 1 | Wie geplant; Schild noch ohne Schrift | Schrift im Aseprite-Durchgang |
+| Smaugis Abstellkammern | Aufgeräumte Fassung behält Goldhaufen und Nest aus der vollen Fassung; Kram-Haufen links ist gemalt, die drei Rätselstücke liegen als Sprites darüber | Das Ei liegt nach Rätsel 12 noch im Nest |
+| Thronsaal | Wie geplant, nachts; Lerntagebuch als Deko-Sprite auf dem Tisch | – |
 
 ### Figuren
 

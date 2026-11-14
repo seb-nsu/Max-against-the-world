@@ -1,19 +1,21 @@
 # Offene Prompts Welt 1
 
+**Erledigt am 14. November 2026:** alles unten ist erzeugt und eingebaut. Die Datei bleibt als Nachweis, welche Prompts verwendet wurden.
+
 Stand 13. November 2026. Alles, was für Welt 1 noch aus Gemini kommen muss, an einem Ort und in der Reihenfolge, in der es sich anbietet. Die Prompts sind dieselben wie in `welt-1.md` (aus `../welt-1.md` erzeugt), hier nur gesammelt; die Nahansichten stehen nur hier.
 
 Abhaken, was erledigt ist:
 
-- [ ] Lord Moderwort neu (junger Mann, keine Nase, keine Krone)
-- [ ] Übungsbesen
-- [ ] Luftschloss (breit: linke und rechte Hälfte einzeln)
-- [ ] Turmkeller (zwei Fassungen: Kammertür einen Spalt offen, dann zu)
-- [ ] Abstellkammer 1
-- [ ] Smaugis Abstellkammern (zwei Fassungen: voll, dann aufgeräumt)
-- [ ] Thronsaal (nachts; Mondlicht-Strahl baut Claude in Godot dazu)
-- [ ] Nahansicht Alwins Hinweiszettel
-- [ ] Nahansicht Kritzelei am Luftschloss
-- [ ] Nahansicht Moderworts Zeugnis
+- [x] Lord Moderwort neu (junger Mann, keine Nase, keine Krone)
+- [x] Übungsbesen
+- [x] Luftschloss (breit: linke und rechte Hälfte einzeln)
+- [x] Turmkeller (zwei Fassungen: Kammertür einen Spalt offen, dann zu)
+- [x] Abstellkammer 1
+- [x] Smaugis Abstellkammern (zwei Fassungen: voll, dann aufgeräumt)
+- [x] Thronsaal (nachts; Mondlicht-Strahl baut Claude in Godot dazu)
+- [x] Nahansicht Alwins Hinweiszettel
+- [x] Nahansicht Kritzelei am Luftschloss
+- [x] Nahansicht Moderworts Zeugnis
 
 **Allgemein:** Bei Figuren Max' Figurenblatt anhängen. Bei Räumen die Layout-Skizze anhängen (Link steht beim Raum). Bei Nahansichten nichts anhängen; Schrift setzt Claude später als Pixelschrift ein. Zweite Fassungen immer im selben Chat aus dem fertigen Bild ableiten („same image, only …“), dann bleibt alles andere gleich.
 

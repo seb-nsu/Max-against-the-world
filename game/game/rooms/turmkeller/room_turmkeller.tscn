@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://cyml8rg72mxg"]
 
-[ext_resource type="Script" path="res://game/rooms/turmkeller/room_turmkeller.gd" id="1_2tkka"]
+[ext_resource type="Script" uid="uid://cltncybuk1rx8" path="res://game/rooms/turmkeller/room_turmkeller.gd" id="1_2tkka"]
 [ext_resource type="PackedScene" uid="uid://b76vnv3gm8rrm" path="res://game/rooms/turmkeller/walkable_areas/boden/walkable_area_boden.tscn" id="2_067sn"]
 [ext_resource type="PackedScene" uid="uid://daao2wb5wbk6n" path="res://game/rooms/turmkeller/props/background/prop_background.tscn" id="3_he72k"]
-[ext_resource type="Texture2D" uid="uid://c3dc3bil2dedf" path="res://grafik/platzhalter/raum_turmkeller.png" id="4_jy6fg"]
+[ext_resource type="Texture2D" uid="uid://tt51hdpnai46" path="res://grafik/hintergruende/w1_bg_turmkeller_v01.png" id="4_067sn"]
 [ext_resource type="PackedScene" uid="uid://baefin0y2dde0" path="res://game/rooms/turmkeller/hotspots/gerade_route/hotspot_gerade_route.tscn" id="5_1lejo"]
 [ext_resource type="PackedScene" uid="uid://b7b4ukc2kuwwl" path="res://game/rooms/turmkeller/hotspots/zickzack_route/hotspot_zickzack_route.tscn" id="6_ynbeh"]
 [ext_resource type="PackedScene" uid="uid://ecten13nqt8d" path="res://game/rooms/turmkeller/hotspots/schleifen_route/hotspot_schleifen_route.tscn" id="7_knr6l"]
@@ -28,94 +28,104 @@ height = 360
 [node name="WalkableAreas" type="Node2D" parent="." unique_id=173130252]
 
 [node name="Boden" parent="WalkableAreas" unique_id=938439403 instance=ExtResource("2_067sn")]
-interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(8, 280, 632, 280, 632, 356, 8, 356)])
+interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(0, 359, 0, 300, 70, 272, 130, 224, 620, 222, 639, 240, 639, 359)])
 
 [node name="Props" type="Node2D" parent="." unique_id=1077893067]
 
 [node name="Background" parent="Props" unique_id=1185689781 instance=ExtResource("3_he72k")]
 position = Vector2(320, 180)
-texture = ExtResource("4_jy6fg")
+texture = ExtResource("4_067sn")
 description = "UI_RAUM_TURMKELLER"
 
 [node name="Hotspots" type="Node2D" parent="." unique_id=139799524]
 
 [node name="GeradeRoute" parent="Hotspots" unique_id=1623470531 instance=ExtResource("5_1lejo")]
-position = Vector2(180, 328)
+position = Vector2(185, 312)
 description = "UI_OBJ_GERADE_ROUTE"
-baseline = 8
-walk_to_point = Vector2(-20, -16)
+baseline = 48
+walk_to_point = Vector2(5, -12)
+interaction_polygon = PackedVector2Array(-55, -48, 55, -48, 55, 48, -55, 48)
 
 [node name="ZickzackRoute" parent="Hotspots" unique_id=1476664712 instance=ExtResource("6_ynbeh")]
-position = Vector2(320, 332)
+position = Vector2(322, 298)
 description = "UI_OBJ_ZICKZACK_ROUTE"
-baseline = 8
-walk_to_point = Vector2(-20, -20)
+baseline = 62
+walk_to_point = Vector2(0, 2)
+interaction_polygon = PackedVector2Array(-50, -62, 50, -62, 50, 62, -50, 62)
 
 [node name="SchleifenRoute" parent="Hotspots" unique_id=632107085 instance=ExtResource("7_knr6l")]
-position = Vector2(460, 328)
+position = Vector2(477.5, 276)
 description = "UI_OBJ_SCHLEIFEN_ROUTE"
-baseline = 8
-walk_to_point = Vector2(-20, -16)
+baseline = 40
+walk_to_point = Vector2(-7.5, 24)
+interaction_polygon = PackedVector2Array(-97.5, -40, 97.5, -40, 97.5, 40, -97.5, 40)
 
 [node name="Kreuzung1" parent="Hotspots" unique_id=384219720 instance=ExtResource("8_rx50a")]
-position = Vector2(195, 344)
+position = Vector2(307, 257)
 description = "UI_OBJ_KREUZUNG_1"
-baseline = 8
-walk_to_point = Vector2(-3, -12)
+baseline = 7
+walk_to_point = Vector2(-1, 13)
+interaction_polygon = PackedVector2Array(-15, -7, 15, -7, 15, 7, -15, 7)
 
 [node name="Kreuzung2" parent="Hotspots" unique_id=1520187438 instance=ExtResource("9_hyt04")]
-position = Vector2(323, 344)
+position = Vector2(417, 257)
 description = "UI_OBJ_KREUZUNG_2"
-baseline = 8
-walk_to_point = Vector2(-3, -12)
+baseline = 7
+walk_to_point = Vector2(-1, 13)
+interaction_polygon = PackedVector2Array(-15, -7, 15, -7, 15, 7, -15, 7)
 
 [node name="Kreuzung3" parent="Hotspots" unique_id=2041476567 instance=ExtResource("10_kfhjp")]
-position = Vector2(459, 344)
+position = Vector2(371, 240)
 description = "UI_OBJ_KREUZUNG_3"
-baseline = 8
-walk_to_point = Vector2(-3, -12)
+baseline = 6
+walk_to_point = Vector2(-1, 16)
+interaction_polygon = PackedVector2Array(-15, -6, 15, -6, 15, 6, -15, 6)
 
 [node name="Besen" parent="Hotspots" unique_id=1233246549 instance=ExtResource("11_8e6yq")]
-position = Vector2(280, 260)
+position = Vector2(350, 177.5)
 description = "UI_OBJ_BESEN"
-baseline = 20
-walk_to_point = Vector2(0, 48)
+baseline = 42
+walk_to_point = Vector2(0, 62.5)
+interaction_polygon = PackedVector2Array(-95, -42.5, 95, -42.5, 95, 42.5, -95, 42.5)
 
 [node name="Kellertreppe" parent="Hotspots" unique_id=1738339614 instance=ExtResource("12_cdy34")]
-position = Vector2(27, 200)
+position = Vector2(75, 160)
 description = "UI_OBJ_KELLERTREPPE"
-baseline = 80
-walk_to_point = Vector2(-3, 120)
+baseline = 100
+walk_to_point = Vector2(25, 106)
 cursor = 9
+interaction_polygon = PackedVector2Array(-55, -100, 55, -100, 55, 100, -55, 100)
 
 [node name="Kammertuer" parent="Hotspots" unique_id=824150753 instance=ExtResource("13_avjbk")]
-position = Vector2(571, 211)
+position = Vector2(557.5, 162.5)
 description = "UI_OBJ_KAMMERTUER"
-baseline = 71
-walk_to_point = Vector2(-11, 103)
+baseline = 62
+walk_to_point = Vector2(-1.5, 77.5)
 cursor = 9
+interaction_polygon = PackedVector2Array(-52.5, -62.5, 52.5, -62.5, 52.5, 62.5, -52.5, 62.5)
 
 [node name="TreppeNachOben" parent="Hotspots" unique_id=2000200409 instance=ExtResource("14_25hu0")]
-position = Vector2(323, 140)
+position = Vector2(322.5, 107.5)
 description = "UI_OBJ_TREPPE_NACH_OBEN"
-baseline = 100
-walk_to_point = Vector2(-3, 160)
+baseline = 107
+walk_to_point = Vector2(2.5, 124.5)
 cursor = 9
+interaction_polygon = PackedVector2Array(-42.5, -107.5, 42.5, -107.5, 42.5, 107.5, -42.5, 107.5)
 
 [node name="Regions" type="Node2D" parent="." unique_id=298343249]
 
 [node name="Markers" type="Node2D" parent="." unique_id=247672494]
 
 [node name="Start" parent="Markers" unique_id=730395202 instance=ExtResource("15_kumci")]
-position = Vector2(52, 320)
+position = Vector2(110, 268)
 
 [node name="VonBergwerk" parent="Markers" unique_id=1014981103 instance=ExtResource("16_jcm3n")]
-position = Vector2(52, 320)
+position = Vector2(110, 268)
 
 [node name="VonAbstellkammer1" parent="Markers" unique_id=40811058 instance=ExtResource("17_mla3f")]
-position = Vector2(500, 316)
+position = Vector2(556, 246)
 
 [node name="VonAbstellkammern" parent="Markers" unique_id=1819043962 instance=ExtResource("18_njyd4")]
-position = Vector2(320, 300)
+position = Vector2(325, 240)
 
 [node name="Characters" type="Node2D" parent="." unique_id=269170270]

@@ -296,6 +296,7 @@ def baue(abschnitt):
             **({"skala": float(lay["skala"])} if "skala" in lay else {}),
             **({"ambiente": lay["ambiente"]} if lay.get("ambiente") else {}),
             **({"vordergrund": lay["vordergrund"]} if lay.get("vordergrund") else {}),
+            **({"hintergrund_nach": lay["hintergrund_nach"]} if lay.get("hintergrund_nach") else {}),
             "figuren": [],
             "hotspots": [],
             "props": [],
