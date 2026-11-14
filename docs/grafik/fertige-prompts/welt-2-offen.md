@@ -2,7 +2,7 @@
 
 Stand 14. November 2026, abends. Alles, was für Welt 2 aus Gemini kommen muss, in der Reihenfolge, in der es sich anbietet. Die Prompts selbst stehen in [`welt-2.md`](welt-2.md) (erzeugt aus `../welt-2.md`); hier steht nur die Reihenfolge, was anzuhängen ist und worauf man achten sollte. Abhaken, was erledigt ist.
 
-**Stand:** 22 Figuren und 3 Gegenstandsbögen sind geliefert und im Spiel. Noch offen: alle Räume, 3 Figuren (Ägypter aus dem Volk, Schildkröte, Straßenmusiker), die 2 großen Objekte, 7 Gegenstandsbögen, die Nahansichten und alle Posenbögen. Für die Posenbögen sind jetzt alle Konzeptblätter da außer der Schildkröte.
+**Stand:** 23 Figuren und 3 Gegenstandsbögen sind geliefert und im Spiel. Noch offen: alle Räume, 2 Figuren (Schildkröte, Straßenmusiker; beim Ägypter fehlen noch die zwei Farbfassungen für die Menge), die 2 großen Objekte, 7 Gegenstandsbögen, die Nahansichten und alle Posenbögen. Für die Posenbögen sind jetzt alle Konzeptblätter da außer der Schildkröte.
 
 **Allgemein:**
 
@@ -33,7 +33,8 @@ Stand 14. November 2026, abends. Alles, was für Welt 2 aus Gemini kommen muss, 
 - [x] Fächerwedler (zweite Fassung mit gelbem Kopftuch)
 - [x] Steinmetz
 - [x] Zeremonienmeister
-- [ ] Ägypter aus dem Volk (zwei weitere Fassungen für die Menge)
+- [x] Ägypter aus dem Volk
+- [ ] Ägypter aus dem Volk, zweite und dritte Fassung für die Menge (im selben Chat aus dem fertigen Bild, die Prompts stehen in welt-2.md unter „Ägypter aus dem Volk“)
 - [ ] Krokodil-Fähre (großes Objekt)
 
 ## 3. Räume in Griechenland
@@ -116,8 +117,8 @@ Effekte (Kaugummi-Sonne, Brennspiegel, Zeitfähre, Altern des Grabsteins) und Pi
 
 Für das 3D-Modell braucht Meshy eine stehende Figur, am besten von vorn mit ausgestreckten Armen (T-Pose). Wer im Spiel nur sitzt oder in etwas steckt, bekommt dafür eine eigene Fassung. Diese Bilder kommen nicht ins Spiel, sie sind nur die Vorlage für Modell und Rig. Jeweils das fertige Konzeptblatt der Figur anhängen, Hintergrund diesmal weiß. Die Blöcke folgen dem Raster aus `../00-stil-und-werkzeuge.md` (Baustein 3D-VORLAGE); für weitere sitzende Figuren STYLE, POSE, CAMERA und NEGATIVE unverändert übernehmen und nur SUBJECT und CHARACTER tauschen.
 
-- [ ] Beamter 1 stehend
-- [ ] Philosoph stehend, ohne Tonne
+- [x] Beamter 1 stehend
+- [x] Philosoph stehend, ohne Tonne
 
 Der Palastschreiber ist schon erledigt, seine stehende Fassung hat Meshy gemacht. Neue Figuren, die nur sitzen, kommen hier mit dazu.
 
