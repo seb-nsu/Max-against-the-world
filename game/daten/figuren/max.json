@@ -18,8 +18,8 @@
   },
   "walk": {
    "von": 24,
-   "bilder": 18,
-   "ms": 120,
+   "bilder": 14,
+   "ms": 95,
    "schleife": true
   },
   "walk_alt": {
@@ -29,9 +29,9 @@
    "schleife": true
   },
   "treppe_walk": {
-   "von": 42,
-   "bilder": 16,
-   "ms": 120,
+   "von": 38,
+   "bilder": 17,
+   "ms": 95,
    "schleife": true
   }
  }
