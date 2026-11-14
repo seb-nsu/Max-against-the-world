@@ -346,9 +346,15 @@ func _figuren_anwenden(raum: CQRaum) -> void:
 		if plan[sn] and not raum.has_character(sn) and raum.has_marker(marker):
 			pos = raum.get_marker_position(marker)
 		Spiel.figur_hier(sn, plan[sn], pos)
-	# Sobek kriecht Pixel hinterher (2b, Gefolge)
+	# Sobek kriecht Pixel hinterher (2b, Gefolge); an Land mit eigenem Bild (grafik/figuren/sobek_land.png)
+	if raum.has_character("Sobek"):
+		var sobek: Node = C.get_character("Sobek")
+		var land := "sobek_land" if sobek_folgt() else ""
+		if sobek.has_method("grafik_laden") and sobek.get("grafik_variante") != land:
+			sobek.call("grafik_laden", land)
 	if sobek_folgt() and raum.has_character("Sobek") and is_instance_valid(C.Pixel) and C.Pixel.is_inside_tree():
-		C.get_character("Sobek").position = C.Pixel.position + Vector2(-45, 5)
+		# hinter Pixel, mit Abstand: das Land-Bild ist rund 230 Pixel lang, der Fußpunkt liegt in der Mitte
+		C.get_character("Sobek").position = C.Pixel.position + Vector2(-150, 5)
 
 
 #endregion

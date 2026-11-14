@@ -1,0 +1,115 @@
+{
+ "knochen": [
+  {
+   "name": "beine",
+   "eltern": null,
+   "gelenk": [
+    22,
+    138
+   ],
+   "spitze": [
+    22,
+    176
+   ],
+   "z": 0
+  },
+  {
+   "name": "koerper",
+   "eltern": null,
+   "gelenk": [
+    22,
+    138
+   ],
+   "spitze": [
+    22,
+    31
+   ],
+   "z": 1
+  },
+  {
+   "name": "kopf",
+   "eltern": "koerper",
+   "gelenk": [
+    24,
+    31
+   ],
+   "spitze": [
+    24,
+    0
+   ],
+   "z": 2
+  }
+ ],
+ "zuordnung": {
+  "beine": [
+   [
+    0,
+    138
+   ],
+   [
+    46,
+    138
+   ],
+   [
+    46,
+    178
+   ],
+   [
+    0,
+    178
+   ]
+  ],
+  "kopf": [
+   [
+    0,
+    0
+   ],
+   [
+    47,
+    0
+   ],
+   [
+    47,
+    31
+   ],
+   [
+    0,
+    31
+   ]
+  ]
+ },
+ "bewegungen": {
+  "idle": {
+   "bilder": 4,
+   "ms": 320,
+   "posen": [
+    {},
+    {
+     "koerper": {
+      "dy": 1
+     }
+    },
+    {
+     "koerper": {
+      "dy": 1
+     }
+    },
+    {}
+   ]
+  },
+  "talk": {
+   "bilder": 4,
+   "ms": 150,
+   "posen": [
+    {},
+    {
+     "kopf": 0.05
+    },
+    {},
+    {
+     "kopf": -0.03
+    }
+   ]
+  }
+ }
+}
