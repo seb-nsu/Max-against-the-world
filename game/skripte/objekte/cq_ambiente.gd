@@ -110,7 +110,9 @@ func _blaetter() -> void:
 
 ## Ein Bild fliegt durch einen begrenzten Ausschnitt, etwa ein Schüler auf dem Besen hinter dem
 ## Fenster (Klassenzimmer, Witz W1_HOGG_MAX_0165): „schueler: {bild, bereich: [x, y, w, h]}“.
-## Außerhalb des Bereichs wird nichts gezeichnet, so wirkt es wie hinter der Scheibe.
+## Außerhalb des Bereichs wird nichts gezeichnet. Mit „glas: \"#rrggbb\"“ zeigt er sich nur, wo im
+## Hintergrund die Scheibe ist: Rahmen und Sprossen aus dem Bild liegen davor (Sebastian, 14. November
+## 2026: sonst wirkte es, als fliege er im Raum).
 func _flieger(art: String) -> void:
 	var cfg: Dictionary = bausteine.get(art, {})
 	var tex: Texture2D = load(cfg.get("bild", "")) if ResourceLoader.exists(cfg.get("bild", "")) else null
@@ -123,7 +125,35 @@ func _flieger(art: String) -> void:
 	_teile.append({
 		"art": "flieger", "tex": tex, "feld": feld, "zeit": 0.0, "phase": _rng.randf() * TAU,
 		"pos": Vector2(feld.end.x, y), "v": Vector2(-_rng.randf_range(28.0, 40.0), 0.0),
+		"rahmen": _rahmen(cfg, feld),
 	})
+
+
+## Bildausschnitt des Fensters, in dem nur die Scheibe durchsichtig ist (wird über den Flieger gelegt).
+var _rahmen_cache := {}
+
+func _rahmen(cfg: Dictionary, feld: Rect2) -> Texture2D:
+	var glas: String = cfg.get("glas", "")
+	var pfad: String = bausteine.get("_hintergrund", "")
+	if glas.is_empty() or not ResourceLoader.exists(pfad):
+		return null
+	var schluessel := "%s|%s|%s" % [pfad, glas, feld]
+	if _rahmen_cache.has(schluessel):
+		return _rahmen_cache[schluessel]
+	var bild: Image = (load(pfad) as Texture2D).get_image()
+	if bild.is_compressed():
+		bild.decompress()
+	var aus := bild.get_region(Rect2i(feld))
+	aus.convert(Image.FORMAT_RGBA8)
+	var farbe := Color(glas)
+	for y in aus.get_height():
+		for x in aus.get_width():
+			var c := aus.get_pixel(x, y)
+			if absf(c.r - farbe.r) + absf(c.g - farbe.g) + absf(c.b - farbe.b) < 0.08:
+				aus.set_pixel(x, y, Color(0, 0, 0, 0))
+	var tex := ImageTexture.create_from_image(aus)
+	_rahmen_cache[schluessel] = tex
+	return tex
 
 
 func _draw() -> void:
@@ -133,7 +163,11 @@ func _draw() -> void:
 			var p := Vector2(t.pos.x, t.pos.y + sin(t.zeit * 4.0 + t.phase) * 2.0).round()
 			var ziel := Rect2(p, tex.get_size()).intersection(t.feld)
 			if ziel.size.x > 0 and ziel.size.y > 0:
-				draw_texture_rect_region(tex, ziel, Rect2(ziel.position - p, ziel.size), Color(1, 1, 1, 0.85))
+				var hinter_glas: bool = t.get("rahmen") != null
+				var tint := Color(0.86, 0.95, 1.0, 0.8) if hinter_glas else Color(1, 1, 1, 0.85)
+				draw_texture_rect_region(tex, ziel, Rect2(ziel.position - p, ziel.size), tint)
+				if hinter_glas:
+					draw_texture(t.rahmen, t.feld.position)
 			continue
 		if t.art == "vogel":
 			var p := Vector2(t.pos.x, t.pos.y + sin(t.zeit * 2.0 + t.phase) * 2.0).round()
