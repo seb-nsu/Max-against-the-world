@@ -27,7 +27,7 @@ func _nach_uebergang() -> void:
 		Spiel.z("MAX", "W1_ANK_MAX_0010"),
 		_pixel_haltung.bind("idle"),   # setzt sich kerzengerade hin (0020)
 		Spiel.z("PIX", "W1_ANK_PIX_0020"),
-		_max_pose.bind(POSE_SITZT),
+		_max_setzt_sich,
 		Spiel.z("MAX", "W1_ANK_MAX_0030"),
 		Spiel.z("PIX", "W1_ANK_PIX_0040"),
 		_max_steht_auf,
@@ -139,9 +139,14 @@ const POSE_SITZT := "res://grafik/figuren/max_posen/sitzt_boden.png"
 const POSE_KNIET := "res://grafik/figuren/max_posen/kniet.png"
 
 
-func _max_pose(bild: String) -> void:
+func _max_pose(bild: String, blende := 0.0) -> void:
 	if is_instance_valid(C.Max) and C.Max.has_method("pose_zeigen"):
-		C.Max.pose_zeigen(bild)
+		await C.Max.pose_zeigen(bild, blende)
+
+
+## Aufsetzen (0030): vom Liegen weich ins Sitzen.
+func _max_setzt_sich() -> void:
+	await _max_pose(POSE_SITZT, 0.4)
 
 
 ## Pixel steht (Bewegung „stehen“) oder sitzt (Ruhepose „idle“).
@@ -156,11 +161,12 @@ func _pixel_haltung(name: String) -> void:
 		C.Pixel._play_idle()
 
 
+## Aufstehen (0050): Sitzen, kurz auf ein Knie, dann stehen, jeweils überblendet (Sebastian: „zu plötzlich“).
 func _max_steht_auf() -> void:
-	_max_pose(POSE_KNIET)
+	await _max_pose(POSE_KNIET, 0.35)
 	if not Spiel.testmodus and not E.cutscene_skipped:
-		await get_tree().create_timer(0.35).timeout
-	_max_pose("")
+		await get_tree().create_timer(0.45).timeout
+	await _max_pose("", 0.35)
 
 
 func _max_lage(grad: float) -> void:

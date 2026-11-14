@@ -52,8 +52,24 @@ func _nach_uebergang() -> void:
 	_pixel_auf_den_balken()
 
 
+## Pixel springt sichtbar hinauf (Sebastian, 14. November 2026): über die Kiste neben dem Korb und
+## den Rahmen des Wandbretts auf den Dachbalken. Nach dem Überspringen sitzt er gleich oben.
+const BALKEN_WEG := [Vector2(352, 232), Vector2(342, 197), Vector2(300, 67)]
+
 func _pixel_auf_den_balken() -> void:
-	C.Pixel.position = get_marker_position("Balken")
+	if not has_character("Pixel"):
+		return
+	var oben := get_marker_position("Balken")
+	if C.Pixel.position.distance_to(oben) > 2.0 and not Spiel.testmodus and not E.cutscene_skipped:
+		C.Pixel.idle_animation = "stehen" if C.Pixel.get_node("AnimationPlayer").has_animation("stehen") else "idle"
+		await C.Pixel.walk_to(BALKEN_WEG[0])
+		await C.Pixel.springen_zu(BALKEN_WEG[1], 18.0, 0.32)
+		await C.Pixel.springen_zu(BALKEN_WEG[2], 26.0, 0.5)
+		await C.Pixel.springen_zu(oben, 12.0, 0.28)
+		C.Pixel.idle_animation = "idle"
+		C.Pixel._play_idle()
+	C.Pixel.position = oben
+	C.Pixel.sync_buffered_position()
 	Zustand.setze("W1_WECHSEL_FREI")
 
 

@@ -57,32 +57,83 @@ func _mund_schliessen(nr: int, sekunden: float) -> void:
 ## Einzelne Posen außerhalb des Sprite-Sheets (liegen, sitzen, knien aus Gemini-Posenbögen):
 ## ein eigenes Bild an Stelle des normalen, Fußpunkt unten in der Mitte, Größe und Blickrichtung wie
 ## die Figur. Leerer Pfad oder pose_ende() zeigt wieder das normale Bild.
-func pose_zeigen(bild: String) -> void:
+func pose_zeigen(bild: String, blende := 0.0) -> void:
 	if bild.is_empty() or not ResourceLoader.exists(bild):
-		pose_ende()
+		await pose_ende(blende)
 		return
-	var sp := get_node_or_null("Pose") as Sprite2D
-	if sp == null:
-		sp = Sprite2D.new()
-		sp.name = "Pose"
-		sp.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
-		add_child(sp)
+	var haupt := get_node_or_null("Sprite2D") as Sprite2D
+	var alt := get_node_or_null("Pose") as Sprite2D
+	var sp := Sprite2D.new()
+	sp.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
 	sp.texture = load(bild)
 	sp.centered = true
 	sp.offset = Vector2(0, -sp.texture.get_height() / 2.0)
-	var haupt := get_node_or_null("Sprite2D") as Sprite2D
 	if haupt:
 		sp.flip_h = haupt.flip_h
+	if alt:
+		alt.name = "PoseAlt"
+	add_child(sp)
+	sp.name = "Pose"
+	var ueberblenden := blende > 0.0 and not PopochiuUtils.e.cutscene_skipped and not Spiel.testmodus
+	if ueberblenden:
+		sp.modulate.a = 0.0
+		var t := create_tween().set_parallel()
+		t.tween_property(sp, "modulate:a", 1.0, blende)
+		if alt:
+			t.tween_property(alt, "modulate:a", 0.0, blende)
+		elif haupt:
+			t.tween_property(haupt, "modulate:a", 0.0, blende)
+		await t.finished
+	if alt:
+		alt.queue_free()
+	if haupt:
 		haupt.visible = false
+		haupt.modulate.a = 1.0
 
 
-func pose_ende() -> void:
-	var sp := get_node_or_null("Pose")
-	if sp:
-		sp.queue_free()
+func pose_ende(blende := 0.0) -> void:
+	var sp := get_node_or_null("Pose") as Sprite2D
 	var haupt := get_node_or_null("Sprite2D") as Sprite2D
 	if haupt:
 		haupt.visible = true
+	if sp and haupt and blende > 0.0 and not PopochiuUtils.e.cutscene_skipped and not Spiel.testmodus:
+		haupt.modulate.a = 0.0
+		var t := create_tween().set_parallel()
+		t.tween_property(sp, "modulate:a", 0.0, blende)
+		t.tween_property(haupt, "modulate:a", 1.0, blende)
+		await t.finished
+	if sp:
+		sp.queue_free()
+	if haupt:
+		haupt.modulate.a = 1.0
+
+
+## Sprung im Bogen zu ziel (Fußpunkt), mit Ducken, Strecken in der Luft und Abfedern bei der
+## Landung (Pixel auf den Dachbalken). bogen: wie hoch über der höheren der beiden Stellen.
+func springen_zu(ziel: Vector2, bogen := 30.0, dauer := 0.42) -> void:
+	var bild := get_node_or_null("Sprite2D") as Node2D
+	if PopochiuUtils.e.cutscene_skipped or Spiel.testmodus:
+		position = ziel
+		sync_buffered_position()
+		return
+	if bild:
+		schauen_zu(ziel.x)
+	var start := position
+	var t := create_tween()
+	if bild:
+		t.tween_property(bild, "scale", Vector2(1.08, 0.82), 0.14)   # ducken
+		t.tween_property(bild, "scale", Vector2(0.92, 1.1), 0.06)    # abstoßen
+	var spitze := minf(start.y, ziel.y) - bogen
+	t.tween_method(func(k: float):
+		var x := lerpf(start.x, ziel.x, k)
+		# Parabel durch Start, Spitze und Ziel
+		var y := (1 - k) * (1 - k) * start.y + 2 * (1 - k) * k * (2 * spitze - (start.y + ziel.y) / 2.0) + k * k * ziel.y
+		position = Vector2(x, y)
+		sync_buffered_position(), 0.0, 1.0, dauer)   # sonst setzt Popochius Anti-Gleiten die alte Stelle zurück
+	if bild:
+		t.tween_property(bild, "scale", Vector2(1.1, 0.85), 0.07)    # abfedern
+		t.tween_property(bild, "scale", Vector2.ONE, 0.12)
+	await t.finished
 
 
 ## Popochius Laufgeschwindigkeit folgt der Tiefe auch außerhalb der Grenzen (oben auf der Treppe
