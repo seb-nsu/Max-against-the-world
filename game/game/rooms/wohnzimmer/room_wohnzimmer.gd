@@ -87,7 +87,7 @@ const LEHNE_BILD := "res://grafik/props/sofa_lehne_vorn.png"
 const LEHNE_PLATZ := Vector2(35, 212)
 ## Unterkante des Liegenden auf der Sitzfläche, Füße des Sitzenden vor dem Sofa
 const LIEGEN_UNTEN := Vector2(72, 240)
-const SITZEN_FUESSE := Vector2(165, 318)
+const SITZEN_FUESSE := Vector2(205, 310)
 ## Größe wie Max vor dem Sofa (Tiefe), beide Bilder aus Gemini-Posen (14. November 2026)
 const POSE_SKALA := 0.95
 
