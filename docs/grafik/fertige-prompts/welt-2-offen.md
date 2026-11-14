@@ -110,3 +110,24 @@ Die Bewegungen selbst liegen schon als 3D-Clips vor; sie bestimmen Timing und Be
 - [ ] Palastschreiber (3)
 
 Effekte (Kaugummi-Sonne, Brennspiegel, Zeitfähre, Altern des Grabsteins) und Pixel als Gott baut Claude ohne neue Bilder.
+
+## 8. Vorlagen für die 3D-Modelle
+
+Für das 3D-Modell braucht Meshy eine stehende Figur, am besten von vorn mit ausgestreckten Armen (T-Pose). Wer im Spiel nur sitzt oder in etwas steckt, bekommt dafür eine eigene Fassung. Diese Bilder kommen nicht ins Spiel, sie sind nur die Vorlage für Modell und Rig. Jeweils das fertige Konzeptblatt der Figur anhängen, Hintergrund diesmal weiß.
+
+- [ ] Beamter 1 stehend
+- [ ] Philosoph stehend, ohne Tonne
+
+Der Palastschreiber ist schon erledigt, seine stehende Fassung hat Meshy gemacht. Neue Figuren, die nur sitzen, kommen hier mit dazu.
+
+### Beamter 1 stehend
+
+```text
+Character reference for a 3D model, in exactly the same style, colors and proportions as the attached character sheet: the same bored bald Greek official, same face with droopy eyelids, same plain grey tunic and sandals, but standing upright without the stool and without the scroll. Full body from head to feet, strict front view facing the viewer, arms stretched out straight to the sides at shoulder height in a T-pose, palms down, legs slightly apart, feet flat on the ground. Plain white background, no shadow, no text, no other objects.
+```
+
+### Philosoph stehend, ohne Tonne
+
+```text
+Character reference for a 3D model, in exactly the same style, colors and proportions as the attached character sheet: the same scruffy old Greek philosopher, same wild grey hair and beard, same torn grey cloak, but standing upright outside the barrel, without the barrel and without the lantern, barefoot. Full body from head to feet, strict front view facing the viewer, arms stretched out straight to the sides at shoulder height in a T-pose, palms down, legs slightly apart, feet flat on the ground. Plain white background, no shadow, no text, no other objects.
+```
