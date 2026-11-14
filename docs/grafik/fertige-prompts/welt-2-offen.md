@@ -11,12 +11,13 @@ Stand 14. November 2026, abends. Alles, was für Welt 2 aus Gemini kommen muss, 
 - Posenbögen: erst, wenn das Konzeptblatt der Figur fertig ist, und genau dieses anhängen. Misslungene Einzelposen im selben Chat nachbessern lassen.
 - Nahansichten und Tafeln: nichts anhängen.
 - Eigene Sprites (Figuren, Fähre, Wurfhebel, Deko) dürfen nicht im Raum mitgemalt sein. Gegenstände, die man mitnimmt, dürfen im Raum stehen; die schneidet Claude aus.
+- Breite Räume (1280×360: Nil-Delta, Thronsaal, Stadion, Agora): erst die linke Hälfte erzeugen, dann im selben Chat die rechte, die nahtlos anschließt. Zweitfassungen jeweils für die Hälfte, in der sich etwas ändert. Seit 14. November abends sind Nil-Delta, Thronsaal und Stadion breit, weil dort bis zu neun Figuren gleichzeitig stehen; ältere Prompts für diese drei Räume nicht mehr verwenden. Am selben Abend wurden außerdem die Motive von Fährsteg Olympia, Hafen Syrakus, Archimedes' Werkstatt, Startbüro und Agora an die Anordnung im Spiel angeglichen; auch hier nur noch die aktuellen Prompts nehmen.
 - Als PNG herunterladen und in `E:\Game Engine\Grafiken` ablegen, Name wie `Welt2-Thronsaal.png`.
 
 ## 1. Räume in Ägypten (Einstieg der Welt)
 
-- [ ] Nil-Delta mit Fährsteg (keine Fähre, kein Krokodil im Bild; das Papyrusblatt im Schilf darf drin sein)
-- [ ] Thronsaal (Kissen leer, kein Kater, kein Ramses auf dem Thron)
+- [ ] Nil-Delta mit Fährsteg, **breit**: linke Hälfte, dann rechte Hälfte (keine Fähre, kein Krokodil im Bild; das Papyrusblatt im Schilf darf drin sein)
+- [ ] Thronsaal, **breit**: linke Hälfte, dann rechte Hälfte (Kissen leer, kein Kater, kein Ramses auf dem Thron)
 - [ ] Palastküche (keine Köchin)
 - [ ] Sphinx, zwei Fassungen: mit Nase, dann ohne Nase (Nase liegt im Sand)
 
@@ -40,7 +41,7 @@ Stand 14. November 2026, abends. Alles, was für Welt 2 aus Gemini kommen muss, 
 - [ ] Fährsteg Olympia
 - [ ] Agora, breit: linke Hälfte, dann rechte Hälfte; danach zweite Fassung (Sandale auf der Säule) und dritte Fassung (Statue ohne Arme)
 - [ ] Startbüro (Schalter leer, Wartende auf der Bank dürfen bleiben)
-- [ ] Stadion, zwei Fassungen: normal, dann Parade mit schiefem Glockenturm
+- [ ] Stadion, **breit**: linke Hälfte, dann rechte Hälfte; zwei Fassungen: normal, dann Parade mit schiefem Glockenturm
 - [ ] Hafen Syrakus
 - [ ] Archimedes' Werkstatt
 - [ ] Grabhügel Syrakus, zwei Fassungen: leerer Sockel, dann mit verwittertem Grabstein

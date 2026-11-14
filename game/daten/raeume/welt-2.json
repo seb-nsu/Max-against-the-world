@@ -28,7 +28,7 @@
    "script_name": "NilDelta",
    "name_key": "UI_RAUM_NIL_DELTA",
    "groesse": [
-    640,
+    1280,
     360
    ],
    "hintergrund": "res://grafik/platzhalter/raum_nil_delta.png",
@@ -39,11 +39,11 @@
      280
     ],
     [
-     632,
+     1272,
      280
     ],
     [
-     632,
+     1272,
      356
     ],
     [
@@ -53,15 +53,15 @@
    ],
    "marker": {
     "start": [
-     200,
+     400,
      320
     ],
     "von_thronsaal_ramses": [
-     592,
+     1184,
      320
     ],
     "von_sphinx": [
-     520,
+     1040,
      296
     ],
     "von_faehre": [
@@ -69,7 +69,7 @@
      316
     ],
     "hermes": [
-     400,
+     800,
      320
     ]
    },
@@ -94,7 +94,7 @@
      "id": "steinmetz",
      "script_name": "Steinmetz",
      "pos": [
-      440,
+      880,
       304
      ]
     }
@@ -155,13 +155,13 @@
      "script_name": "Faehrtafel",
      "name_key": "UI_OBJ_FAEHRTAFEL",
      "rect": [
-      148,
+      316,
       200,
       40,
       40
      ],
      "gehe": [
-      168,
+      336,
       308
      ],
      "ansehen": [
@@ -187,13 +187,13 @@
      "script_name": "Sanduhr",
      "name_key": "UI_OBJ_SANDUHR",
      "rect": [
-      200,
+      416,
       188,
       32,
       68
      ],
      "gehe": [
-      216,
+      432,
       308
      ],
      "ansehen": [
@@ -219,13 +219,13 @@
      "script_name": "Schilf",
      "name_key": "UI_OBJ_SCHILF",
      "rect": [
-      240,
+      516,
       224,
       72,
       56
      ],
      "gehe": [
-      276,
+      552,
       308
      ],
      "ansehen": [
@@ -252,13 +252,13 @@
      "script_name": "WeizenfeldMitHandabdruck",
      "name_key": "UI_OBJ_WEIZENFELD_MIT_HANDABDRUCK",
      "rect": [
-      320,
+      688,
       220,
       96,
       60
      ],
      "gehe": [
-      368,
+      736,
       308
      ],
      "ansehen": [
@@ -294,13 +294,13 @@
      "script_name": "VerkehrtePyramide",
      "name_key": "UI_OBJ_VERKEHRTE_PYRAMIDE",
      "rect": [
-      340,
+      750,
       28,
       140,
       140
      ],
      "gehe": [
-      408,
+      816,
       304
      ],
      "ansehen": [
@@ -327,13 +327,13 @@
      "script_name": "Bauplan",
      "name_key": "UI_OBJ_BAUPLAN",
      "rect": [
-      460,
+      940,
       224,
       40,
       32
      ],
      "gehe": [
-      472,
+      944,
       308
      ],
      "ansehen": [
@@ -363,13 +363,13 @@
      "script_name": "Papyrusblatt",
      "name_key": "UI_OBJ_PAPYRUSBLATT",
      "rect": [
-      272,
+      554,
       260,
       20,
       16
      ],
      "gehe": [
-      276,
+      552,
       308
      ],
      "textur": "res://grafik/platzhalter/prop_papyrusblatt.png",
@@ -391,13 +391,13 @@
      "ziel": "thronsaal_ramses",
      "name_key": "UI_OBJ_SANDWEG",
      "rect": [
-      600,
+      1240,
       140,
       36,
       140
      ],
      "gehe": [
-      608,
+      1248,
       320
      ],
      "erreichbar_ab": "start",
@@ -425,13 +425,13 @@
      "ziel": "sphinx",
      "name_key": "UI_OBJ_DUENENPFAD",
      "rect": [
-      500,
+      1036,
       160,
       72,
       56
      ],
      "gehe": [
-      532,
+      1064,
       296
      ],
      "erreichbar_ab": "start",
@@ -470,7 +470,7 @@
    "script_name": "ThronsaalRamses",
    "name_key": "UI_RAUM_THRONSAAL_RAMSES",
    "groesse": [
-    640,
+    1280,
     360
    ],
    "hintergrund": "res://grafik/platzhalter/raum_thronsaal_ramses.png",
@@ -481,11 +481,11 @@
      280
     ],
     [
-     632,
+     1272,
      280
     ],
     [
-     632,
+     1272,
      356
     ],
     [
@@ -503,15 +503,15 @@
      320
     ],
     "von_palastkueche": [
-     592,
+     1184,
      320
     ],
     "sobek": [
-     200,
+     400,
      336
     ],
     "kissen": [
-     360,
+     720,
      304
     ]
    },
@@ -520,7 +520,7 @@
      "id": "schreiber",
      "script_name": "Schreiber",
      "pos": [
-      112,
+      224,
       304
      ]
     },
@@ -528,7 +528,7 @@
      "id": "ramses",
      "script_name": "Ramses",
      "pos": [
-      400,
+      800,
       248
      ]
     },
@@ -536,7 +536,7 @@
      "id": "hofkater",
      "script_name": "Hofkater",
      "pos": [
-      360,
+      720,
       296
      ]
     },
@@ -544,7 +544,7 @@
      "id": "faecherwedler",
      "script_name": "Faecherwedler",
      "pos": [
-      472,
+      944,
       304
      ]
     }
@@ -555,13 +555,13 @@
      "script_name": "Thron",
      "name_key": "UI_OBJ_THRON",
      "rect": [
-      352,
+      752,
       156,
       96,
       124
      ],
      "gehe": [
-      400,
+      800,
       312
      ],
      "ansehen": [
@@ -587,13 +587,13 @@
      "script_name": "Schreiberpult",
      "name_key": "UI_OBJ_SCHREIBERPULT",
      "rect": [
-      76,
+      182,
       236,
       60,
       44
      ],
      "gehe": [
-      112,
+      224,
       312
      ],
      "ansehen": [
@@ -652,13 +652,13 @@
      "script_name": "MumifizierteKatze",
      "name_key": "UI_OBJ_MUMIFIZIERTE_KATZE",
      "rect": [
-      152,
+      320,
       160,
       32,
       56
      ],
      "gehe": [
-      168,
+      336,
       308
      ],
      "ansehen": [
@@ -686,13 +686,13 @@
      "script_name": "Wandfries",
      "name_key": "UI_OBJ_WANDFRIES",
      "rect": [
-      80,
+      160,
       32,
-      440,
+      880,
       36
      ],
      "gehe": [
-      320,
+      640,
       308
      ],
      "ansehen": [
@@ -727,13 +727,13 @@
      "script_name": "Saeulen",
      "name_key": "UI_OBJ_SAEULEN",
      "rect": [
-      200,
+      422,
       80,
       44,
       200
      ],
      "gehe": [
-      224,
+      448,
       308
      ],
      "ansehen": [
@@ -759,13 +759,13 @@
      "script_name": "Inschrift",
      "name_key": "UI_OBJ_INSCHRIFT",
      "rect": [
-      260,
+      546,
       124,
       52,
       72
      ],
      "gehe": [
-      284,
+      568,
       308
      ],
      "ansehen": [
@@ -807,13 +807,13 @@
      "script_name": "Opferschale",
      "name_key": "UI_OBJ_OPFERSCHALE",
      "rect": [
-      316,
+      646,
       272,
       28,
       12
      ],
      "gehe": [
-      328,
+      656,
       316
      ],
      "ansehen": [
@@ -840,13 +840,13 @@
      "script_name": "Fackeln",
      "name_key": "UI_OBJ_FACKELN",
      "rect": [
-      512,
+      1048,
       80,
       48,
       48
      ],
      "gehe": [
-      536,
+      1072,
       308
      ],
      "ansehen": [
@@ -874,13 +874,13 @@
      "script_name": "Pharaonenteller",
      "name_key": "UI_OBJ_PHARAONENTELLER",
      "rect": [
-      456,
+      924,
       252,
       24,
       12
      ],
      "gehe": [
-      464,
+      928,
       312
      ],
      "textur": "res://grafik/platzhalter/prop_pharaonenteller.png",
@@ -947,13 +947,13 @@
      "ziel": "palastkueche",
      "name_key": "UI_OBJ_TUER_ZUR_KUECHE",
      "rect": [
-      584,
+      1224,
       140,
       52,
       140
      ],
      "gehe": [
-      600,
+      1240,
       316
      ],
      "erreichbar_ab": "start",
@@ -2089,7 +2089,7 @@
      304
     ],
     "abwurf": [
-     800,
+     900,
      320
     ]
    },
@@ -2098,7 +2098,7 @@
      "id": "cicero",
      "script_name": "Cicero",
      "pos": [
-      640,
+      712,
       296
      ]
     },
@@ -2106,7 +2106,7 @@
      "id": "tiro",
      "script_name": "Tiro",
      "pos": [
-      712,
+      790,
       312
      ]
     },
@@ -2114,7 +2114,7 @@
      "id": "tourist",
      "script_name": "Tourist",
      "pos": [
-      940,
+      1000,
       320
      ]
     },
@@ -2122,7 +2122,7 @@
      "id": "touristin",
      "script_name": "Touristin",
      "pos": [
-      1000,
+      1064,
       320
      ]
     },
@@ -2138,7 +2138,7 @@
      "id": "brian",
      "script_name": "Brian",
      "pos": [
-      1080,
+      500,
       316
      ]
     },
@@ -2146,7 +2146,7 @@
      "id": "strassenmusiker",
      "script_name": "Strassenmusiker",
      "pos": [
-      1160,
+      600,
       312
      ]
     }
@@ -2189,13 +2189,13 @@
      "script_name": "HoheSaeuleMitAdler",
      "name_key": "UI_OBJ_HOHE_SAEULE_MIT_ADLER",
      "rect": [
-      800,
+      880,
       20,
       40,
       240
      ],
      "gehe": [
-      820,
+      900,
       308
      ],
      "ansehen": [
@@ -2230,13 +2230,13 @@
      "script_name": "SandaleAufDerSaeule",
      "name_key": "UI_OBJ_SANDALE_AUF_DER_SAEULE",
      "rect": [
-      796,
+      876,
       8,
       48,
       20
      ],
      "gehe": [
-      820,
+      900,
       308
      ],
      "ansehen": [
@@ -2262,13 +2262,13 @@
      "script_name": "Heuhaufen",
      "name_key": "UI_OBJ_HEUHAUFEN",
      "rect": [
-      776,
+      856,
       248,
       88,
       32
      ],
      "gehe": [
-      820,
+      900,
       316
      ],
      "ansehen": [
@@ -2355,13 +2355,13 @@
      "script_name": "Rednerpult",
      "name_key": "UI_OBJ_REDNERPULT",
      "rect": [
-      608,
+      680,
       220,
       64,
       60
      ],
      "gehe": [
-      640,
+      712,
       316
      ],
      "ansehen": [
@@ -2387,13 +2387,13 @@
      "script_name": "Marktstaende",
      "name_key": "UI_OBJ_MARKTSTAENDE",
      "rect": [
-      880,
+      960,
       160,
       200,
       100
      ],
      "gehe": [
-      980,
+      1060,
       308
      ],
      "ansehen": [
@@ -2471,13 +2471,13 @@
      "script_name": "Menge",
      "name_key": "UI_OBJ_MENGE",
      "rect": [
-      560,
+      600,
       160,
-      200,
+      220,
       56
      ],
      "gehe": [
-      660,
+      710,
       308
      ],
      "ansehen": [
@@ -2504,13 +2504,13 @@
      "script_name": "LateinKritzelei",
      "name_key": "UI_OBJ_LATEIN_KRITZELEI",
      "rect": [
-      1112,
+      1172,
       172,
-      64,
+      56,
       32
      ],
      "gehe": [
-      1144,
+      1200,
       308
      ],
      "ansehen": [
@@ -2923,7 +2923,7 @@
    "script_name": "Stadion",
    "name_key": "UI_RAUM_STADION",
    "groesse": [
-    640,
+    1280,
     360
    ],
    "hintergrund": "res://grafik/platzhalter/raum_stadion.png",
@@ -2934,11 +2934,11 @@
      280
     ],
     [
-     632,
+     1272,
      280
     ],
     [
-     632,
+     1272,
      356
     ],
     [
@@ -2948,39 +2948,39 @@
    ],
    "marker": {
     "start": [
-     592,
+     1184,
      320
     ],
     "von_agora": [
-     592,
+     1184,
      320
     ],
     "ramses": [
-     320,
+     780,
      132
     ],
     "wedler": [
-     376,
+     840,
      132
     ],
     "archimedes": [
-     128,
+     256,
      304
     ],
     "hermes": [
-     460,
+     920,
      320
     ],
     "cicero": [
-     220,
+     440,
      304
     ],
     "zeremonienmeister": [
-     520,
+     1040,
      304
     ],
     "aegypter": [
-     240,
+     700,
      132
     ]
    },
@@ -2989,7 +2989,7 @@
      "id": "leonidas",
      "script_name": "Leonidas",
      "pos": [
-      400,
+      800,
       316
      ]
     },
@@ -2997,7 +2997,7 @@
      "id": "schildkroete",
      "script_name": "Schildkroete",
      "pos": [
-      472,
+      944,
       336
      ]
     }
@@ -3008,13 +3008,13 @@
      "script_name": "Laufbahn",
      "name_key": "UI_OBJ_LAUFBAHN",
      "rect": [
-      40,
+      80,
       296,
-      560,
+      1120,
       24
      ],
      "gehe": [
-      320,
+      640,
       332
      ],
      "ansehen": [
@@ -3040,13 +3040,13 @@
      "script_name": "Sandgrube",
      "name_key": "UI_OBJ_SANDGRUBE",
      "rect": [
-      128,
+      316,
       248,
       120,
       32
      ],
      "gehe": [
-      188,
+      376,
       312
      ],
      "ansehen": [
@@ -3072,13 +3072,13 @@
      "script_name": "Kampfrichterzelt",
      "name_key": "UI_OBJ_KAMPFRICHTERZELT",
      "rect": [
-      280,
+      600,
       196,
       80,
       64
      ],
      "gehe": [
-      320,
+      640,
       308
      ],
      "ansehen": [
@@ -3107,11 +3107,11 @@
      "rect": [
       0,
       80,
-      640,
+      1280,
       64
      ],
      "gehe": [
-      320,
+      640,
       308
      ],
      "ansehen": [
@@ -3138,13 +3138,13 @@
      "script_name": "Glockenturm",
      "name_key": "UI_OBJ_GLOCKENTURM",
      "rect": [
-      560,
+      1136,
       8,
       32,
       68
      ],
      "gehe": [
-      560,
+      1120,
       308
      ],
      "ansehen": [
@@ -3189,13 +3189,13 @@
      "script_name": "Siegerliste",
      "name_key": "UI_OBJ_SIEGERLISTE",
      "rect": [
-      400,
+      824,
       180,
       48,
       60
      ],
      "gehe": [
-      424,
+      848,
       308
      ],
      "ansehen": [
@@ -3222,13 +3222,13 @@
      "script_name": "Startlinie",
      "name_key": "UI_OBJ_STARTLINIE",
      "rect": [
-      528,
+      1062,
       320,
       12,
       32
      ],
      "gehe": [
-      532,
+      1064,
       336
      ],
      "ansehen": [
@@ -3292,13 +3292,13 @@
      "script_name": "Wurfhebel",
      "name_key": "UI_OBJ_WURFHEBEL",
      "rect": [
-      48,
+      132,
       200,
       72,
       80
      ],
      "gehe": [
-      88,
+      176,
       312
      ],
      "ansehen": [
@@ -3330,13 +3330,13 @@
      "ziel": "agora",
      "name_key": "UI_OBJ_AUSGANG_AGORA",
      "rect": [
-      600,
+      1240,
       140,
       36,
       140
      ],
      "gehe": [
-      612,
+      1252,
       320
      ],
      "erreichbar_ab": "R1",

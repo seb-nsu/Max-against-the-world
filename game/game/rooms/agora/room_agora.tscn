@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dbgs4r70kn7og"]
 
-[ext_resource type="Script" path="res://game/rooms/agora/room_agora.gd" id="1_3mfx4"]
+[ext_resource type="Script" uid="uid://dgfaoxtpqftgu" path="res://game/rooms/agora/room_agora.gd" id="1_3mfx4"]
 [ext_resource type="PackedScene" uid="uid://bynlkqnkxmjh1" path="res://game/rooms/agora/walkable_areas/boden/walkable_area_boden.tscn" id="2_mw2rt"]
 [ext_resource type="PackedScene" uid="uid://drep4imbp4w8h" path="res://game/rooms/agora/props/background/prop_background.tscn" id="3_yywa4"]
 [ext_resource type="Texture2D" uid="uid://cthfr64j8r6a2" path="res://grafik/platzhalter/raum_agora.png" id="4_l77rr"]
@@ -39,7 +39,6 @@ height = 360
 [node name="WalkableAreas" type="Node2D" parent="." unique_id=961736909]
 
 [node name="Boden" parent="WalkableAreas" unique_id=1209753076 instance=ExtResource("2_mw2rt")]
-interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(8, 280, 1272, 280, 1272, 356, 8, 356)])
 
 [node name="Props" type="Node2D" parent="." unique_id=1767763160]
 
@@ -57,19 +56,19 @@ baseline = 80
 walk_to_point = Vector2(0, 144)
 
 [node name="HoheSaeuleMitAdler" parent="Hotspots" unique_id=263523984 instance=ExtResource("6_vccfq")]
-position = Vector2(820, 140)
+position = Vector2(900, 140)
 description = "UI_OBJ_HOHE_SAEULE_MIT_ADLER"
 baseline = 120
 walk_to_point = Vector2(0, 168)
 
 [node name="SandaleAufDerSaeule" parent="Hotspots" unique_id=1715262721 instance=ExtResource("7_mit5k")]
-position = Vector2(820, 18.0)
+position = Vector2(900, 18)
 description = "UI_OBJ_SANDALE_AUF_DER_SAEULE"
-baseline = 9
-walk_to_point = Vector2(0, 290.0)
+baseline = 10
+walk_to_point = Vector2(0, 290)
 
 [node name="Heuhaufen" parent="Hotspots" unique_id=44384867 instance=ExtResource("8_26s21")]
-position = Vector2(820, 264)
+position = Vector2(900, 264)
 description = "UI_OBJ_HEUHAUFEN"
 baseline = 16
 walk_to_point = Vector2(0, 52)
@@ -81,16 +80,16 @@ baseline = 72
 walk_to_point = Vector2(0, 108)
 
 [node name="Rednerpult" parent="Hotspots" unique_id=1294236936 instance=ExtResource("10_8rbgn")]
-position = Vector2(640, 250.0)
+position = Vector2(712, 250)
 description = "UI_OBJ_REDNERPULT"
-baseline = 29
-walk_to_point = Vector2(0, 66.0)
+baseline = 30
+walk_to_point = Vector2(0, 66)
 
 [node name="Marktstaende" parent="Hotspots" unique_id=970974596 instance=ExtResource("11_mp1r1")]
-position = Vector2(980, 210.0)
+position = Vector2(1060, 210)
 description = "UI_OBJ_MARKTSTAENDE"
-baseline = 49
-walk_to_point = Vector2(0, 98.0)
+baseline = 50
+walk_to_point = Vector2(0, 98)
 
 [node name="Tonne" parent="Hotspots" unique_id=1216927206 instance=ExtResource("12_m7pfn")]
 position = Vector2(276, 272)
@@ -99,36 +98,38 @@ baseline = 24
 walk_to_point = Vector2(0, 48)
 
 [node name="Menge" parent="Hotspots" unique_id=2039687507 instance=ExtResource("13_ixk61")]
-position = Vector2(660, 188)
+position = Vector2(710, 188)
 description = "UI_OBJ_MENGE"
 baseline = 28
 walk_to_point = Vector2(0, 120)
+interaction_polygon = PackedVector2Array(-110, -28, 110, -28, 110, 28, -110, 28)
 
 [node name="LateinKritzelei" parent="Hotspots" unique_id=3818086 instance=ExtResource("14_46hi2")]
-position = Vector2(1144, 188)
+position = Vector2(1200, 188)
 description = "UI_OBJ_LATEIN_KRITZELEI"
 baseline = 16
 walk_to_point = Vector2(0, 120)
+interaction_polygon = PackedVector2Array(-28, -16, 28, -16, 28, 16, -28, 16)
 
 [node name="WegZumFaehrsteg" parent="Hotspots" unique_id=1077435345 instance=ExtResource("15_jwrnm")]
-position = Vector2(1258.0, 200)
+position = Vector2(1258, 200)
 description = "UI_OBJ_WEG_ZUM_FAEHRSTEG"
 baseline = 80
-walk_to_point = Vector2(-2.0, 120)
+walk_to_point = Vector2(-2, 120)
 cursor = 9
 
 [node name="BogenZumStadion" parent="Hotspots" unique_id=1481292112 instance=ExtResource("16_bj0uj")]
-position = Vector2(34.0, 190.0)
+position = Vector2(34, 190)
 description = "UI_OBJ_BOGEN_ZUM_STADION"
-baseline = 89
-walk_to_point = Vector2(-2.0, 130.0)
+baseline = 90
+walk_to_point = Vector2(-2, 130)
 cursor = 9
 
 [node name="TuerZumStartbuero" parent="Hotspots" unique_id=758739377 instance=ExtResource("17_xgfo4")]
-position = Vector2(422.0, 230.0)
+position = Vector2(422, 230)
 description = "UI_OBJ_TUER_ZUM_STARTBUERO"
-baseline = 49
-walk_to_point = Vector2(2.0, 74.0)
+baseline = 50
+walk_to_point = Vector2(2, 74)
 cursor = 9
 
 [node name="Regions" type="Node2D" parent="." unique_id=467308595]
@@ -148,27 +149,27 @@ position = Vector2(60, 320)
 position = Vector2(424, 304)
 
 [node name="Abwurf" parent="Markers" unique_id=1207227366 instance=ExtResource("22_ebyls")]
-position = Vector2(800, 320)
+position = Vector2(900, 320)
 
 [node name="Characters" type="Node2D" parent="." unique_id=842424886]
 
 [node name="CharacterCicero *" parent="Characters" unique_id=1871508285 instance=ExtResource("23_cod74")]
-position = Vector2(640, 296)
+position = Vector2(712, 296)
 
 [node name="CharacterTiro *" parent="Characters" unique_id=815292910 instance=ExtResource("24_f6p4t")]
-position = Vector2(712, 312)
+position = Vector2(790, 312)
 
 [node name="CharacterTourist *" parent="Characters" unique_id=1077957333 instance=ExtResource("25_t8h36")]
-position = Vector2(940, 320)
+position = Vector2(1000, 320)
 
 [node name="CharacterTouristin *" parent="Characters" unique_id=1553414570 instance=ExtResource("26_vrssr")]
-position = Vector2(1000, 320)
+position = Vector2(1064, 320)
 
 [node name="CharacterPhilosoph *" parent="Characters" unique_id=1903863663 instance=ExtResource("27_todoh")]
 position = Vector2(280, 316)
 
 [node name="CharacterBrian *" parent="Characters" unique_id=1249299369 instance=ExtResource("28_stnbd")]
-position = Vector2(1080, 316)
+position = Vector2(500, 316)
 
 [node name="CharacterStrassenmusiker *" parent="Characters" unique_id=686969109 instance=ExtResource("29_uutwu")]
-position = Vector2(1160, 312)
+position = Vector2(600, 312)

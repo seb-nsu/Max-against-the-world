@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bo3101ll30obg"]
 
-[ext_resource type="Script" path="res://game/rooms/nil_delta/room_nil_delta.gd" id="1_akh1e"]
+[ext_resource type="Script" uid="uid://qc35mkuqg1ni" path="res://game/rooms/nil_delta/room_nil_delta.gd" id="1_akh1e"]
 [ext_resource type="PackedScene" uid="uid://bblm1efeiuxqh" path="res://game/rooms/nil_delta/walkable_areas/boden/walkable_area_boden.tscn" id="2_y1wi8"]
 [ext_resource type="PackedScene" uid="uid://e7flnep7y8bl" path="res://game/rooms/nil_delta/props/background/prop_background.tscn" id="3_8aoqy"]
 [ext_resource type="Texture2D" uid="uid://d21gy451b5p81" path="res://grafik/platzhalter/raum_nil_delta.png" id="4_m10hn"]
@@ -27,27 +27,27 @@
 [node name="RoomNilDelta" type="Node2D" unique_id=1404265322]
 script = ExtResource("1_akh1e")
 script_name = "NilDelta"
-width = 640
+width = 1280
 height = 360
 
 [node name="WalkableAreas" type="Node2D" parent="." unique_id=40846312]
 
 [node name="Boden" parent="WalkableAreas" unique_id=208920602 instance=ExtResource("2_y1wi8")]
-interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(8, 280, 632, 280, 632, 356, 8, 356)])
+interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(8, 280, 1272, 280, 1272, 356, 8, 356)])
 
 [node name="Props" type="Node2D" parent="." unique_id=2058610568]
 
 [node name="Background" parent="Props" unique_id=379545559 instance=ExtResource("3_8aoqy")]
-position = Vector2(320, 180)
+position = Vector2(640, 180)
 texture = ExtResource("4_m10hn")
 description = "UI_RAUM_NIL_DELTA"
 
 [node name="Papyrusblatt" parent="Props" unique_id=964821375 instance=ExtResource("5_rir52")]
-position = Vector2(282.0, 268)
+position = Vector2(564, 268)
 texture = ExtResource("6_fkicj")
 description = "UI_OBJ_PAPYRUSBLATT"
 baseline = 8
-walk_to_point = Vector2(-6.0, 40)
+walk_to_point = Vector2(-12, 40)
 
 [node name="Hotspots" type="Node2D" parent="." unique_id=209175412]
 
@@ -58,53 +58,53 @@ baseline = 20
 walk_to_point = Vector2(40, 36)
 
 [node name="Faehrtafel" parent="Hotspots" unique_id=971313398 instance=ExtResource("8_ntn36")]
-position = Vector2(168, 220)
+position = Vector2(336, 220)
 description = "UI_OBJ_FAEHRTAFEL"
 baseline = 20
 walk_to_point = Vector2(0, 88)
 
 [node name="Sanduhr" parent="Hotspots" unique_id=20248749 instance=ExtResource("9_uhbjs")]
-position = Vector2(216, 222.0)
+position = Vector2(432, 222)
 description = "UI_OBJ_SANDUHR"
-baseline = 33
-walk_to_point = Vector2(0, 86.0)
+baseline = 34
+walk_to_point = Vector2(0, 86)
 
 [node name="Schilf" parent="Hotspots" unique_id=107583191 instance=ExtResource("10_ihvd1")]
-position = Vector2(276, 252)
+position = Vector2(552, 252)
 description = "UI_OBJ_SCHILF"
 baseline = 28
 walk_to_point = Vector2(0, 56)
 
 [node name="WeizenfeldMitHandabdruck" parent="Hotspots" unique_id=847886703 instance=ExtResource("11_4knck")]
-position = Vector2(368, 250.0)
+position = Vector2(736, 250)
 description = "UI_OBJ_WEIZENFELD_MIT_HANDABDRUCK"
-baseline = 29
-walk_to_point = Vector2(0, 58.0)
+baseline = 30
+walk_to_point = Vector2(0, 58)
 
 [node name="VerkehrtePyramide" parent="Hotspots" unique_id=1297977167 instance=ExtResource("12_qwdp3")]
-position = Vector2(410.0, 98.0)
+position = Vector2(820, 98)
 description = "UI_OBJ_VERKEHRTE_PYRAMIDE"
-baseline = 69
-walk_to_point = Vector2(-2.0, 206.0)
+baseline = 70
+walk_to_point = Vector2(-4, 206)
 
 [node name="Bauplan" parent="Hotspots" unique_id=1005768694 instance=ExtResource("13_xwrak")]
-position = Vector2(480, 240)
+position = Vector2(960, 240)
 description = "UI_OBJ_BAUPLAN"
 baseline = 16
-walk_to_point = Vector2(-8, 68)
+walk_to_point = Vector2(-16, 68)
 
 [node name="Sandweg" parent="Hotspots" unique_id=1360121635 instance=ExtResource("14_i0qh5")]
-position = Vector2(618.0, 210.0)
+position = Vector2(1258, 210)
 description = "UI_OBJ_SANDWEG"
-baseline = 69
-walk_to_point = Vector2(-10.0, 110.0)
+baseline = 70
+walk_to_point = Vector2(-10, 110)
 cursor = 9
 
 [node name="Duenenpfad" parent="Hotspots" unique_id=752158869 instance=ExtResource("15_edtj6")]
-position = Vector2(536, 188)
+position = Vector2(1072, 188)
 description = "UI_OBJ_DUENENPFAD"
 baseline = 28
-walk_to_point = Vector2(-4, 108)
+walk_to_point = Vector2(-8, 108)
 cursor = 9
 
 [node name="Regions" type="Node2D" parent="." unique_id=126631486]
@@ -112,19 +112,19 @@ cursor = 9
 [node name="Markers" type="Node2D" parent="." unique_id=250195060]
 
 [node name="Start" parent="Markers" unique_id=1212898002 instance=ExtResource("16_heh8x")]
-position = Vector2(200, 320)
+position = Vector2(400, 320)
 
 [node name="VonThronsaalRamses" parent="Markers" unique_id=1967330072 instance=ExtResource("17_hgi45")]
-position = Vector2(592, 320)
+position = Vector2(1184, 320)
 
 [node name="VonSphinx" parent="Markers" unique_id=1259328439 instance=ExtResource("18_weo8g")]
-position = Vector2(520, 296)
+position = Vector2(1040, 296)
 
 [node name="VonFaehre" parent="Markers" unique_id=2005417047 instance=ExtResource("19_thv1t")]
 position = Vector2(80, 316)
 
 [node name="Hermes" parent="Markers" unique_id=1562054915 instance=ExtResource("20_yp18m")]
-position = Vector2(400, 320)
+position = Vector2(800, 320)
 
 [node name="Characters" type="Node2D" parent="." unique_id=698263444]
 
@@ -135,4 +135,4 @@ position = Vector2(96, 304)
 position = Vector2(44, 340)
 
 [node name="CharacterSteinmetz *" parent="Characters" unique_id=305777515 instance=ExtResource("23_3eyf4")]
-position = Vector2(440, 304)
+position = Vector2(880, 304)
