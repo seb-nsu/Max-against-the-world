@@ -879,6 +879,144 @@ def ohne_stand(md):
     return re.sub(r"^\d+ Shots, davon \d+ sicher offen", "· Shots", md, flags=re.M)
 
 
+# Arbeitsliste (Sebastian, 14. November 2026): alle offenen Prompts für Prolog, Welt 1 und Welt 2 in einer
+# Datei, sortiert nach Figuren, Posen, Gegenständen und Hintergründen. Abgeglichen mit game/grafik/ und
+# welt-2-offen.md; wer etwas erledigt, streicht die Nummer hier.
+OFFEN_DATEI = "00-offen-prolog-welt-1-welt-2"
+OFFEN_LISTE = [
+    ("1. Figuren und Varianten", [
+        ("Figurenbögen (zuerst, sie sind danach die Anlage für Max, den Kater und Opa)",
+         ["FB-K01", "FB-K02", "FB-K03"]),
+        ("Dachboden-Szenen nach Welt 1 und Welt 2", ["PF-F08", "PF-F09"]),
+        ("Welt 2", ["W2-F23", "W2-F24", "W2-F25"]),
+    ]),
+    ("2. Posen und Bewegungen", [
+        ("Als Nächstes (Test für flüssigere Animationen)", ["W1-B27", "W1-B26"]),
+        ("Max und der Kater, in allen Welten", ["WU-B02", "WU-B05", "WU-B06", "WU-B07", "WU-B08", "WU-B10",
+                                               "WU-B12", "WU-B15", "WU-B16", "WU-B17", "WU-B18", "WU-B19",
+                                               "WU-B20", "WU-B21"]),
+        ("Prolog und Dachboden-Szenen", ["PF-B01", "PF-B02", "PF-B03", "PF-B08", "PF-B11"]),
+        ("Welt 1", ["W1-B01", "W1-B02", "W1-B03", "W1-B04", "W1-B05", "W1-B06", "W1-B07", "W1-B08", "W1-B09",
+                    "W1-B10", "W1-B11", "W1-B12", "W1-B13", "W1-B14", "W1-B15", "W1-B16", "W1-B17", "W1-B18",
+                    "W1-B19", "W1-B20", "W1-B21", "W1-B22", "W1-B23", "W1-B24", "W1-B25", "W1-B28", "W1-B29",
+                    "W1-B30", "W1-B31", "W1-B32", "W1-B33", "W1-B34", "W1-B35", "W1-B36", "W1-B37", "W1-B38",
+                    "W1-B39", "W1-B40", "W1-B41"]),
+        ("Welt 2 (Posenbögen; die Bewegung selbst kommt aus dem 3D-Clip)",
+         ["W2-P01", "W2-P02", "W2-P03", "W2-P04", "W2-P05", "W2-P06", "W2-P07", "W2-P08", "W2-P09", "W2-P10",
+          "W2-P11", "W2-P12", "W2-P13", "W2-P14", "W2-P15", "W2-P16", "W2-P17", "W2-P18", "W2-P19",
+          "W2-P20", "W2-P21", "W2-P22", "W2-P23", "W2-P24", "W2-P25", "W2-P26", "W2-P27"]),
+    ]),
+    ("3. Gegenstände", [
+        ("Prolog und Dachboden-Szenen", ["PF-G02", "PF-G03", "PF-G05", "PF-G06", "PF-G07", "PF-G08", "PF-G09", "PF-G10"]),
+        ("Welt 2", ["W2-G03", "W2-G05", "W2-G06", "W2-G07", "W2-G08", "W2-G09", "W2-G10", "W2-G11", "W2-G12"]),
+    ]),
+    ("4. Hintergründe", [
+        ("Welt 2, Ägypten", ["W2-R01", "W2-R04", "W2-R05", "W2-R06"]),
+        ("Welt 2, Griechenland", ["W2-R02", "W2-R11", "W2-R10", "W2-R09", "W2-R03", "W2-R07", "W2-R08", "W2-R12"]),
+        ("Welt 2, Nahansichten und Tafeln (füllen das ganze Bild wie ein Hintergrund)",
+         ["W2-N01", "W2-N02", "W2-N03", "W2-N04", "W2-N05", "W2-N06"]),
+    ]),
+    ("5. Später: erst für Welt 3, Welt 4 und das Finale", [
+        ("Figuren", ["PF-F05", "PF-F06", "PF-F07", "PF-F10", "PF-F11", "PF-F12", "PF-F13", "PF-F14", "PF-F15"]),
+        ("Posen und Effekte", ["PF-B04", "PF-B05", "PF-B06", "PF-B07", "PF-B09", "PF-B10"]),
+        ("Hintergründe", ["PF-R02", "PF-R04", "PF-R06"]),
+    ]),
+]
+OFFEN_HINWEIS = {"W2-F23": "**Nur noch die zweite und dritte Fassung:** die erste ist im Spiel (`aegypter.png`). "
+                           "Beide Fassungen im selben Chat aus dem fertigen Bild ableiten."}
+OFFEN_QUELLE = {"FB": "01-figurenboegen", "PF": "02-prolog-und-finale", "WU": "00-weltenuebergreifend",
+                "W1": "welt-1", "W2": "welt-2"}
+
+
+def shot_abschnitt(md, shot):
+    """Überschrift und Inhalt des Abschnitts mit **Shot <shot>** (ohne die Shot-Zeile)."""
+    zeilen = md.split("\n")
+    i = zeilen.index(f"**Shot {shot}**")
+    k = i
+    while not zeilen[k].startswith("## "):
+        k -= 1
+    ende = i + 1
+    while ende < len(zeilen) and not zeilen[ende].startswith(("## ", "# ")):
+        ende += 1
+    return zeilen[k][3:].strip(), "\n".join(zeilen[k + 1:i] + zeilen[i + 1:ende]).strip()
+
+
+def vorlage_3d(titel):
+    """Block einer 3D-Vorlage aus der handgepflegten welt-2-offen.md."""
+    md = (ZIEL / "welt-2-offen.md").read_text(encoding="utf-8")
+    m = re.search(r"^### " + re.escape(titel) + r"\n(.*?)(?=^#|\Z)", md, re.S | re.M)
+    if not m:
+        fehler.append(f"{OFFEN_DATEI}: 3D-Vorlage „{titel}“ fehlt in welt-2-offen.md")
+        return ""
+    return ("**Anhängen:** das fertige Konzeptblatt der Figur. Nur Vorlage für das 3D-Modell, kommt nicht ins Spiel; "
+            "Hintergrund diesmal weiß.\n\n" + m.group(1).strip())
+
+
+def offen_bauen(gebaut):
+    out = ["# Offene Prompts: Prolog, Welt 1 und Welt 2", "",
+           "Erzeugt von `tools/prompts_zusammensetzen.py` aus den anderen Dateien in diesem Ordner (dort ändern, nicht hier).", "",
+           "**Das ist die Arbeitsliste.** Hier steht alles, was für Prolog, Welt 1 und Welt 2 noch aus Gemini kommen muss, "
+           "mit dem kompletten Prompt. Welt 1 hat nur noch Posen offen; ihre Räume, Figuren und Gegenstände sind fertig. "
+           "Die übrigen Dateien braucht es nur noch zum Nachbessern fertiger Bilder (dann mit dem Baustein MASKE) "
+           "und für Welt 3 und 4. Abgeglichen mit den Bildern in `game/grafik/` am 14. November 2026.", "",
+           "**Reihenfolge:** erst Figuren, dann Posen, dann Gegenstände, zuletzt Hintergründe. Innerhalb eines "
+           "Abschnitts von oben nach unten. Was beim Anhängen gebraucht wird, steht über jedem Block.", "",
+           "**Allgemein:** Hintergrund bei Figuren, Posen und Gegenständen einfarbig Magenta; malt Gemini ein "
+           "Schachbrett oder Kästchen, im selben Chat „solid flat magenta background, no checkerboard, no boxes“ "
+           "nachschieben. Breite Räume (1280×360): erst die linke Hälfte, dann im selben Chat die rechte. Zweite "
+           "Fassungen im selben Chat aus dem fertigen Bild ableiten. Der Kater heißt in den Prompts „the tomcat“, "
+           "weil Gemini den Namen „Pixel“ als Google-Marke blockt.", "",
+           "# Übersicht", ""]
+    teile = []
+    for abschnitt, gruppen in OFFEN_LISTE:
+        out.append(f"**{abschnitt}**")
+        out.append("")
+        teile += [f"# {abschnitt}", ""]
+        for gruppe, shots in gruppen:
+            namen = []
+            teile += [f"## {gruppe}", ""]
+            for shot in shots:
+                if shot.startswith("3D:"):
+                    titel, inhalt, nummer = shot[3:], vorlage_3d(shot[3:]), "W2-3D"
+                else:
+                    try:
+                        titel, inhalt = shot_abschnitt(gebaut[OFFEN_QUELLE[shot[:2]]], shot)
+                    except ValueError:
+                        fehler.append(f"{OFFEN_DATEI}: Shot {shot} nicht gefunden")
+                        continue
+                    nummer = shot
+                if nummer in OFFEN_HINWEIS:
+                    inhalt = OFFEN_HINWEIS[nummer] + "\n\n" + inhalt
+                namen.append(f"{nummer} {titel}")
+                teile += [f"### {nummer}: {titel}", "", inhalt, ""]
+            out.append(f"- {gruppe}: " + "; ".join(namen))
+        out.append("")
+    return "\n".join(out + teile).rstrip() + "\n"
+
+
+# Gemini blockt Prompts mit dem Namen „Pixel“ („third-party content providers“, liest sich wie die
+# Google-Marke). Im Bildtext heißt der Kater deshalb „the tomcat“; Nummern und deutsche Hinweise
+# außerhalb der Prompt-Blöcke bleiben, wie sie sind.
+KATER = [
+    (r"\bPixel-as-", "tomcat-as-"),
+    (r"\bPixel's\b", "the tomcat's"),
+    (r"\b(the|a|sleeping|standing|sitting) Pixel\b", r"\1 tomcat"),
+    (r"(^|[.!?] )Pixel\b", r"\1The tomcat"),
+    (r"\bPixel\b", "the tomcat"),
+    (r"\b([Tt])he tomcat, a chubby round tomcat\b", r"\1he tomcat, a chubby round cat"),
+]
+
+
+def ohne_marke(text):
+    """Ersetzt „Pixel“ in allen ```-Prompt-Blöcken durch „the tomcat“."""
+    def block(m):
+        inhalt = m.group(2)
+        for muster, ersatz in KATER:
+            inhalt = re.sub(muster, ersatz, inhalt, flags=re.M)
+        return m.group(1) + inhalt + m.group(3)
+    return re.sub(r"(^```[^\n]*\n)(.*?)(^```)", block, text, flags=re.S | re.M)
+
+
 def main():
     pruefen = "--pruefen" in sys.argv
     stil = (GRAFIK / "00-stil-und-werkzeuge.md").read_text(encoding="utf-8")
@@ -912,11 +1050,13 @@ def main():
     gebaut["00-weltenuebergreifend"] = shotliste("\n".join(wu), "00-weltenuebergreifend")
     gebaut["01-figurenboegen"] = figurenboegen_bauen(bausteine)
     gebaut["vertical-slice"] = slice_bauen(gebaut["welt-1"])
+    gebaut[OFFEN_DATEI] = offen_bauen(gebaut)
     if fehler:
         for f in fehler:
             print("FEHLER  " + f)
         sys.exit(1)
     for name, neu in gebaut.items():
+        neu = ohne_marke(neu)
         pfad = ZIEL / f"{name}.md"
         alt = pfad.read_text(encoding="utf-8") if pfad.exists() else ""
         if (ohne_stand(neu) if pruefen else neu) != (ohne_stand(alt) if pruefen else alt):
