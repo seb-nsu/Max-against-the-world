@@ -25,6 +25,7 @@ func _nach_uebergang() -> void:
 	await Spiel.szene([
 		_landung,
 		Spiel.z("MAX", "W1_ANK_MAX_0010"),
+		_pixel_haltung.bind("idle"),   # setzt sich kerzengerade hin (0020)
 		Spiel.z("PIX", "W1_ANK_PIX_0020"),
 		_max_pose.bind(POSE_SITZT),
 		Spiel.z("MAX", "W1_ANK_MAX_0030"),
@@ -60,6 +61,7 @@ func _nach_uebergang() -> void:
 	# Auch nach Überspringen (Esc) alle an ihrem Platz und aufrecht
 	_max_lage(0.0)
 	_max_pose("")
+	_pixel_haltung("idle")
 	if _ziel_max != Vector2.ZERO:
 		C.Max.position = _ziel_max
 	if _ziel_pix != Vector2.ZERO and has_character("Pixel"):
@@ -85,6 +87,7 @@ func _landung_vorbereiten() -> void:
 	if is_instance_valid(C.Pixel) and has_character("Pixel"):
 		_ziel_pix = C.Pixel.position
 		C.Pixel.position = _ziel_pix + Vector2(0, -400)
+		_pixel_haltung("stehen")   # landet auf allen vier Pfoten
 	if has_character("Toadi"):
 		_toadi_ziel = C.Toadi.position
 		C.Toadi.position = Vector2(minf(width - 20.0, _ziel_max.x + 420.0), _toadi_ziel.y)
@@ -139,6 +142,18 @@ const POSE_KNIET := "res://grafik/figuren/max_posen/kniet.png"
 func _max_pose(bild: String) -> void:
 	if is_instance_valid(C.Max) and C.Max.has_method("pose_zeigen"):
 		C.Max.pose_zeigen(bild)
+
+
+## Pixel steht (Bewegung „stehen“) oder sitzt (Ruhepose „idle“).
+func _pixel_haltung(name: String) -> void:
+	if not is_instance_valid(C.Pixel) or not has_character("Pixel"):
+		return
+	var player: AnimationPlayer = C.Pixel.get_node_or_null("AnimationPlayer")
+	if player == null or not player.has_animation(name):
+		return
+	C.Pixel.idle_animation = name
+	if not C.Pixel.is_talking:
+		C.Pixel._play_idle()
 
 
 func _max_steht_auf() -> void:
