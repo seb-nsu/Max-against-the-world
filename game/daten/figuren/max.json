@@ -1,6 +1,6 @@
 {
  "bild": [
-  86,
+  110,
   187
  ],
  "animationen": {
@@ -17,9 +17,21 @@
    "schleife": true
   },
   "walk": {
+   "von": 24,
+   "bilder": 18,
+   "ms": 120,
+   "schleife": true
+  },
+  "walk_alt": {
    "von": 8,
    "bilder": 8,
    "ms": 110,
+   "schleife": true
+  },
+  "treppe_walk": {
+   "von": 42,
+   "bilder": 16,
+   "ms": 120,
    "schleife": true
   }
  }

@@ -18,3 +18,4 @@ func _on_room_exited() -> void:
 			bild.position.y = 0.0
 		if "walk_speed_override" in c:
 			c.walk_speed_override = 0.0
+		c.animation_prefix = ""

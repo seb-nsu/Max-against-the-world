@@ -113,6 +113,18 @@ func stufen_anwenden() -> void:
 		bild.position.y = dy / s
 		if "walk_speed_override" in c:
 			c.walk_speed_override = c.walk_speed * STUFE_TEMPO if dy != 0.0 else 0.0
+		# Eigene Treppen-Bewegung („treppe_walk“, Knie hoch), wenn die Figur eine hat
+		var auf_treppe := dy != 0.0 and p.y < float(st[0][1])
+		var praefix := "treppe_" if auf_treppe and _hat_animation(c, "treppe_walk") else ""
+		if c.animation_prefix != praefix:
+			c.animation_prefix = praefix
+			if c.is_moving:
+				c._play_walk(c.position)
+
+
+func _hat_animation(c: Node, name: String) -> bool:
+	var player := c.get_node_or_null("AnimationPlayer") as AnimationPlayer
+	return player != null and player.has_animation(name)
 
 
 func _on_room_entered() -> void:
