@@ -16,7 +16,7 @@ Opa steht ihre feste Beschreibung wortgleich in der Zeile CHARACTER LOCK; den Fi
 
 # Shotliste
 
-72 Shots, davon 24 sicher offen („–“: Stand nicht automatisch prüfbar). Kürzel:
+72 Shots, davon 21 sicher offen („–“: Stand nicht automatisch prüfbar). Kürzel:
 R Raum, F Figur, P Posenbogen, B Bewegung, G Gegenstände, N Nahansicht, K Figurenbogen.
 
 | Shot | Bild | Stand |
@@ -35,11 +35,11 @@ R Raum, F Figur, P Posenbogen, B Bewegung, G Gegenstände, N Nahansicht, K Figur
 | W2-R12 | Flusskarte | offen |
 | W2-F01 | Ramses | im Spiel |
 | W2-F02 | Hofkater | im Spiel |
-| W2-F03 | Sobek, im Wasser | offen |
-| W2-F04 | Sobek, an Land | offen |
+| W2-F03 | Sobek, im Wasser | im Spiel |
+| W2-F04 | Sobek, an Land | im Spiel |
 | W2-F05 | Fährmann | im Spiel |
 | W2-F06 | Köchin Nebet | im Spiel |
-| W2-F07 | Palastschreiber | offen |
+| W2-F07 | Palastschreiber | im Spiel |
 | W2-F08 | Archimedes | im Spiel |
 | W2-F09 | König Hieron | im Spiel |
 | W2-F10 | Cicero | im Spiel |

@@ -88,6 +88,8 @@ FEST_NAMEN = {"Max": "Max", "Pixel": "Pixel", "Opa": "Opa"}
 # Bewegungen, die schon im Spiel sind (per Code oder 3D-Winkel, offene-punkte.md, 14. November 2026)
 IM_SPIEL = {"00-weltenuebergreifend": {"Max: Gehen", "Max: Stehen", "Max: Sprechen", "Max: Auf dem Sofa",
                                        "Pixel: Gehen", "Pixel: Stehen", "Pixel: Schlafen"}}
+# Figuren, deren Sprite anders heißt als die Zeile der Figuren-Tabelle
+SPRITE_NAME = {"Sobek, im Wasser": "sobek", "Sobek, an Land": "sobek_land", "Palastschreiber": "schreiber"}
 NOCH_NICHTS = ("welt-3", "welt-4")   # noch kein Bild dieser Welten im Spiel
 WELT_PRAEFIX = {"02-prolog-und-finale": "w0", "welt-1": "w1", "welt-2": "w2", "welt-3": "w3", "welt-4": "w4"}
 STAND = {
@@ -787,7 +789,7 @@ def stand(art, name, datei, quelltext):
     if art == "F":
         w = slug(name)
         ohne = [x for x in w if x not in ("mit", "als", "auf", "im", "in", "dem", "der", "die", "das", "am")]
-        kandidaten = {"_".join(w), "_".join(ohne)}
+        kandidaten = {"_".join(w), "_".join(ohne), SPRITE_NAME.get(name, "_".join(w))}
         if len(w) == 2 and "," not in name and w == ohne:
             kandidaten |= {w[0], w[1]}
         return "im Spiel" if any((SPIEL / "figuren" / f"{k}.png").exists() for k in kandidaten) else "offen"
