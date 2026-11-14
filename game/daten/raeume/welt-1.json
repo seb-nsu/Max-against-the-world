@@ -6647,10 +6647,10 @@
      "script_name": "SchwerterBuendel",
      "name_key": "UI_OBJ_SCHWERTER_BUENDEL",
      "rect": [
-      90,
-      172,
-      40,
-      40
+      88,
+      137,
+      60,
+      100
      ],
      "gehe": [
       150,

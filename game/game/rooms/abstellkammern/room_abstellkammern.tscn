@@ -51,11 +51,11 @@ walk_to_point = Vector2(0, 214.5)
 interaction_polygon = PackedVector2Array(-28, -27.5, 28, -27.5, 28, 27.5, -28, 27.5)
 
 [node name="SchwerterBuendel" parent="Props" unique_id=1268535052 instance=ExtResource("7_fgr5r")]
-position = Vector2(110, 192)
+position = Vector2(118, 187)
 texture = ExtResource("8_m4cdh")
 description = "UI_OBJ_SCHWERTER_BUENDEL"
-baseline = 20
-walk_to_point = Vector2(40, 60)
+baseline = 25
+walk_to_point = Vector2(32, 65)
 
 [node name="FackelBuendel" parent="Props" unique_id=614849226 instance=ExtResource("9_mwppx")]
 position = Vector2(205.5, 206)

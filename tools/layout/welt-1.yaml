@@ -518,7 +518,8 @@ abstellkammern:
     stapel: {rect: [40, 160, 200, 72], gehe: [180, 252], name: Stapel}
   props:
     kronleuchter: {rect: [292, 8, 56, 55], gehe: [320, 250]}
-    schwerter_buendel: {rect: [90, 172, 40, 40], gehe: [150, 252]}
+    # aus dem Hintergrund ausgeschnitten (14. November 2026), dahinter Wand und Pfosten übermalt
+    schwerter_buendel: {rect: [88, 137, 60, 100], gehe: [150, 252]}
     fackel_buendel: {rect: [190, 186, 31, 40], gehe: [205, 252]}
   vordergrund:
     okarina: {bild: res://grafik/props/okarina.png, pos: [251, 222], vor: R12}
