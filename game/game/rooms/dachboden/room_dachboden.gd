@@ -267,6 +267,7 @@ func p1_loesen() -> void:
 		Spiel.z("PIX", "P0_DACH_PIX_0368"),
 		Spiel.z("OPA", "P0_DACH_OPA_0369"),  # Opa trauert seiner Teetasse nach
 		# Pixel frisst und wechselt auf die Werkbank, Opa schaltet den Zapp-O-Mat ein
+		_pixel_auf_die_werkbank,
 		Zustand.loese.bind("P1"),
 		Spiel.z("OPA", "P0_DACH_OPA_0370"),
 		Spiel.z("PIX", "P0_DACH_PIX_0380"),
@@ -276,6 +277,24 @@ func p1_loesen() -> void:
 	Zustand.loese("P1")
 	# Pixel ist wach: das Pixel-Feld erscheint in der Inventarleiste (05-spielsysteme.md, UI)
 	await Spiel.pixel_feld_pruefen()
+
+
+## Pixel springt in zwei Sätzen vom Kabel auf die Werkbank, statt dort einfach zu erscheinen
+## (Sebastian, 14. November 2026). Beim Überspringen steht er gleich oben.
+func _pixel_auf_die_werkbank() -> void:
+	if not has_character("Pixel") or Spiel.testmodus or E.cutscene_skipped:
+		return
+	C.Pixel.idle_animation = "stehen" if C.Pixel.get_node("AnimationPlayer").has_animation("stehen") else "idle"
+	C.Pixel._play_idle()
+	var bild := C.Pixel.get_node_or_null("Sprite2D") as Sprite2D
+	if bild:
+		bild.flip_h = true   # Blick nach links, in Sprungrichtung
+	await C.Pixel.springen_zu(Vector2(228, 250), 12.0, 0.32)
+	await C.Pixel.springen_zu(PIXEL_WERKBANK, 34.0, 0.45)
+	C.Pixel.idle_animation = "idle"
+	C.Pixel._play_idle()
+	if bild:
+		bild.flip_h = false  # oben wieder zu Max und Opa
 
 
 ## P2: Antenne auf den Zapp-O-Mat (0480–0500, dann 0610).
