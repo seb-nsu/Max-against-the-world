@@ -86,6 +86,9 @@ Stand 14. November 2026. Alles, was für Welt 2 aus Gemini kommen muss, in der R
 
 ## 7. Posenbögen (je nach fertigem Konzeptblatt)
 
+Die Bewegungen selbst liegen schon als 3D-Clips vor; sie bestimmen Timing und Beine. Die Posenbögen liefern die Arm- und Kopfhaltungen, die im gemalten Sprite nicht vorkommen. Ohne sie bleiben Gesten steif.
+
+
 - [ ] Max Tag 1 (3 Posen)
 - [ ] Max Finaltag (4 Posen)
 - [ ] Ramses (3)
@@ -99,5 +102,9 @@ Stand 14. November 2026. Alles, was für Welt 2 aus Gemini kommen muss, in der R
 - [ ] Philosoph (2)
 - [ ] Fächerwedler (3)
 - [ ] Publikum (2)
+- [ ] Nebet (3)
+- [ ] Hieron (3)
+- [ ] Tiro (3)
+- [ ] Palastschreiber (3)
 
 Effekte (Kaugummi-Sonne, Brennspiegel, Zeitfähre, Altern des Grabsteins) und Pixel als Gott baut Claude ohne neue Bilder.

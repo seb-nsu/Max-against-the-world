@@ -168,19 +168,26 @@ Fries, Weizenfeld, Wasserorgel, Adler-Säule und Venusstatue sind Teil der Hinte
 
 Nach dem Review von Welt 1 bekommt nicht jede Figur einen Gehzyklus, sondern nur, wer im Spiel sichtbar geht; alle anderen bekommen die zwei bis vier Posen, die ihr Gag braucht. Im Skript erscheinen und verschwinden die Figuren bisher an festen Plätzen (`figur_hier`); sichtbar laufen nur Sobek, der Pixel hinterherkriecht, die Schildkröte im Stadion und Archimedes beim Heureka. Reden (Mund) und Atmen baut Claude für alle Figuren aus dem Standbild.
 
+**3D und Gemini teilen sich die Arbeit** (Stand 14. November 2026): Für jede Bewegung eines Menschen liegt ein 3D-Clip unter `E:\Game Engine\Grafiken\3d\<figur>\` (Liste in `welt2_aufgaben.txt`). Der Clip liefert Timing, Beinwinkel und Zwischenschritte. Gehen kommt damit ganz ohne neue Bilder aus. Eine Armgeste oder Haltung, die im gemalten Sprite nicht vorkommt (erhobener Arm, verschränkte Arme lösen, Ausholen), lässt sich aus dem Sprite nicht drehen: Dafür braucht es die Schlüsselposen aus dem Posenbogen, und der Clip gibt vor, wann welche Pose kommt. Tiere und Figuren ohne 3D-Modell bekommen nur den Posenbogen.
+
 | Figur | Moment | Rätsel | Weg |
 | --- | --- | --- | --- |
-| Max | Barfuß rennen, katapultiert werden | Tag 1 | Posenbogen „Max Tag 1“, Zwischenbilder in Aseprite |
-| Max | Speer und Diskus werfen | Finaltag | Posenbogen „Max Finaltag“ |
+| Max | Barfuß rennen, katapultiert werden | Tag 1 | 3D-Clips `max/welt2_barfuss.glb`, `max/welt2_hebel.glb` + Posenbogen „Max Tag 1“ |
+| Max | Speer und Diskus werfen | Finaltag | 3D-Clips `max/welt2_speer.glb`, `max/welt2_diskus.glb` + Posenbogen „Max Finaltag“ |
 | Pixel | Als Gott schweben | 2b, 11a | Code: Pixels Sitzbild auf dem Kissen aus dem Thronsaal-Hintergrund, sanftes Auf und Ab, goldenes Leuchten |
-| Ramses | Unentschlossen | – | Posenbogen „Ramses“ |
+| Ramses | Unentschlossen | – | 3D-Clip `ramses/zoegern.glb` + Posenbogen „Ramses“ |
 | Sobek | Verbeugen, Kriechen | 1, 2b | Posenbogen „Sobek“, gemalt (Tier) |
 | Hofkater | Beleidigt abziehen | 2b | Posenbogen „Hofkater“, gemalt (Tier) |
 | Schildkröte | Überholen | Tag 1 | Posenbogen „Schildkröte“, gemalt (Tier) |
-| Archimedes | Heureka (aus der Wanne, mit Handtuch davon) | 5 | Posenbogen „Archimedes“ aus der Handtuch-Fassung; der Lauf danach per 3D-Winkel mit `saum_gang.py` |
+| Archimedes | Heureka (aus der Wanne, mit Handtuch davon) | 5 | 3D-Clip `archimedes/heureka.glb` + Posenbogen „Archimedes“ aus der Handtuch-Fassung; der Lauf per 3D-Winkel mit `saum_gang.py` |
 | Hermes | Auf der Stelle joggen | 4, Opas Papyrus | Posenbogen „Hermes“ (Schleife aus drei Posen) |
-| Leonidas | Brüllen, Pfeifen | – | Posenbogen „Leonidas“ |
-| Cicero | Rede halten | Agora, Finaltag | Posenbogen „Cicero“ |
+| Leonidas | Brüllen, Pfeifen | – | 3D-Clip `leonidas/bruellen.glb` + Posenbogen „Leonidas“ |
+| Cicero | Rede halten | Agora, Finaltag | 3D-Clip `cicero/rede.glb` + Posenbogen „Cicero“ |
+| Nebet | Rühren und abschmecken | 4, 11b | 3D-Clip `nebet/ruehren.glb` + Posenbogen „Nebet“ |
+| Hieron | Ungeduldig, Arme lösen und zeigen | 5 | 3D-Clip `hieron/ungeduld.glb` + Posenbogen „Hieron“ |
+| Tiro | Schreiben, schuldbewusst umsehen | 6a, 9 | 3D-Clip `tiro/schreiben.glb` + Posenbogen „Tiro“ |
+| Palastschreiber | Schreiben, gähnen | 2a | 3D-Clip `schreiber/sitzen.glb` + Posenbogen „Palastschreiber“ |
+| Fährmann | Gehen am Steg | Reisen | 3D-Clip `faehrmann/gehen.glb`, keine neuen Bilder |
 | Philosoph | Schimpfen | 9 | Posenbogen „Philosoph“ |
 | Fächerwedler | Fächeln | 6b, Finaltag | Posenbogen „Fächerwedler“ |
 | Publikum | Einschlafen | Finaltag | Posenbogen „Publikum“ |
@@ -207,6 +214,10 @@ Baustein POSENBOGEN, das fertige Konzeptblatt der Figur aus Gemini anhängen (be
 | Cicero | Konzeptblatt Cicero | 3 | Rede halten | Three poses of the pompous orator, legs unchanged, scroll in the left hand: (1) right arm swept high to the side, chin up; (2) right index finger raised, eyebrows lifted; (3) right hand pressed to his chest, eyes half closed |
 | Philosoph | Konzeptblatt Philosoph | 2 | Schimpfen | Two poses of the old philosopher in his barrel, barrel and lantern unchanged: (1) fist raised high, mouth open shouting; (2) fist lowered, pointing a finger forward, scowling |
 | Fächerwedler | Konzeptblatt Fächerwedler | 3 | Fächeln | Three poses of the fan bearer, feet planted: (1) the long palm-leaf fan raised high above his head; (2) the fan level in front of him; (3) the fan swung low near the ground |
+| Nebet | Konzeptblatt Köchin Nebet | 3 | Rühren, abschmecken | Three poses of the palace cook, feet unchanged: (1) leaning slightly forward, the wooden ladle held low in front of her in her right hand as if stirring a pot, left hand on her hip; (2) the same, the ladle moved to the other side of the pot; (3) the ladle lifted to her mouth, tasting, eyes closed, eyebrows raised in delight |
+| Hieron | Konzeptblatt König Hieron | 3 | Ungeduld | Three poses of the suspicious king, feet unchanged: (1) arms crossed, head tilted, one foot lifted to tap; (2) arms crossed, shaking his head, eyes rolled upward; (3) arms uncrossed, right arm stretched forward pointing accusingly, left fist on his hip, narrowed eyes |
+| Tiro | Konzeptblatt Tiro | 3 | Schreiben | Three poses of the nervous young scribe, feet unchanged: (1) the wax tablet held against his chest with the left arm, writing on it quickly with a stylus in the right hand, head bent; (2) looking guiltily over his left shoulder, stylus raised; (3) looking guiltily over his right shoulder, tablet pressed tight to his chest |
+| Palastschreiber | Konzeptblatt Palastschreiber | 3 | Schreiben, gähnen | Three poses of the thin scribe sitting cross-legged on the floor, legs unchanged: (1) bent over the writing board on his lap, writing slowly with the reed pen; (2) sitting up, both arms stretched high above his head; (3) arms stretched, mouth wide open in a huge yawn, eyes shut |
 | Publikum | Konzeptblatt Römischer Tourist | 2 | Einschlafen | Three spectators sitting side by side on a stone bench, a plump Roman tourist in a red toga and two Greeks in white tunics, shown twice: (1) sitting upright, listening politely; (2) slumped and asleep, heads drooping, the last one with mouth open snoring |
 
 ### Minispiele und Benutzeroberfläche

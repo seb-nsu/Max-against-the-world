@@ -422,6 +422,38 @@ Pose sheet in exactly the same style, colors and proportions as the attached cha
 Pose sheet in exactly the same style, colors and proportions as the attached character sheet: same character, same head size, same hair and clothing colors, same line weight and flat cel shading, light from upper left. The poses side by side in one row, evenly spaced with clear empty space between them, all at the same scale on one flat baseline, each a frozen still pose, no motion blur, no ghosting, no speed lines, no duplicated limbs. Solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no text, no ground shadow, no frames or panels. Three poses of the fan bearer, feet planted: (1) the long palm-leaf fan raised high above his head; (2) the fan level in front of him; (3) the fan swung low near the ground.
 ```
 
+## Nebet
+
+**Anhängen:** Konzeptblatt Köchin Nebet · **Posen:** 3 · **Wofür:** Rühren, abschmecken
+
+```text
+Pose sheet in exactly the same style, colors and proportions as the attached character sheet: same character, same head size, same hair and clothing colors, same line weight and flat cel shading, light from upper left. The poses side by side in one row, evenly spaced with clear empty space between them, all at the same scale on one flat baseline, each a frozen still pose, no motion blur, no ghosting, no speed lines, no duplicated limbs. Solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no text, no ground shadow, no frames or panels. Three poses of the palace cook, feet unchanged: (1) leaning slightly forward, the wooden ladle held low in front of her in her right hand as if stirring a pot, left hand on her hip; (2) the same, the ladle moved to the other side of the pot; (3) the ladle lifted to her mouth, tasting, eyes closed, eyebrows raised in delight.
+```
+
+## Hieron
+
+**Anhängen:** Konzeptblatt König Hieron · **Posen:** 3 · **Wofür:** Ungeduld
+
+```text
+Pose sheet in exactly the same style, colors and proportions as the attached character sheet: same character, same head size, same hair and clothing colors, same line weight and flat cel shading, light from upper left. The poses side by side in one row, evenly spaced with clear empty space between them, all at the same scale on one flat baseline, each a frozen still pose, no motion blur, no ghosting, no speed lines, no duplicated limbs. Solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no text, no ground shadow, no frames or panels. Three poses of the suspicious king, feet unchanged: (1) arms crossed, head tilted, one foot lifted to tap; (2) arms crossed, shaking his head, eyes rolled upward; (3) arms uncrossed, right arm stretched forward pointing accusingly, left fist on his hip, narrowed eyes.
+```
+
+## Tiro
+
+**Anhängen:** Konzeptblatt Tiro · **Posen:** 3 · **Wofür:** Schreiben
+
+```text
+Pose sheet in exactly the same style, colors and proportions as the attached character sheet: same character, same head size, same hair and clothing colors, same line weight and flat cel shading, light from upper left. The poses side by side in one row, evenly spaced with clear empty space between them, all at the same scale on one flat baseline, each a frozen still pose, no motion blur, no ghosting, no speed lines, no duplicated limbs. Solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no text, no ground shadow, no frames or panels. Three poses of the nervous young scribe, feet unchanged: (1) the wax tablet held against his chest with the left arm, writing on it quickly with a stylus in the right hand, head bent; (2) looking guiltily over his left shoulder, stylus raised; (3) looking guiltily over his right shoulder, tablet pressed tight to his chest.
+```
+
+## Palastschreiber
+
+**Anhängen:** Konzeptblatt Palastschreiber · **Posen:** 3 · **Wofür:** Schreiben, gähnen
+
+```text
+Pose sheet in exactly the same style, colors and proportions as the attached character sheet: same character, same head size, same hair and clothing colors, same line weight and flat cel shading, light from upper left. The poses side by side in one row, evenly spaced with clear empty space between them, all at the same scale on one flat baseline, each a frozen still pose, no motion blur, no ghosting, no speed lines, no duplicated limbs. Solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no text, no ground shadow, no frames or panels. Three poses of the thin scribe sitting cross-legged on the floor, legs unchanged: (1) bent over the writing board on his lap, writing slowly with the reed pen; (2) sitting up, both arms stretched high above his head; (3) arms stretched, mouth wide open in a huge yawn, eyes shut.
+```
+
 ## Publikum
 
 **Anhängen:** Konzeptblatt Römischer Tourist · **Posen:** 2 · **Wofür:** Einschlafen
