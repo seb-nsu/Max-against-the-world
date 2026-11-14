@@ -283,10 +283,10 @@ Max, a lanky 16-year-old boy, the reference height for every other character, he
 
 **BOGEN Max:** Neutral pose: standing slouched, both hands in the hoodie pocket. Expressions: (1) tired, half-closed eyes, lopsided smirk; (2) annoyed, one eyebrow raised; (3) surprised, eyes wide open, mouth open; (4) puzzled, head tilted, mouth pulled to one side; (5) rare genuine smile, eyes open; (6) determined, eyes open, jaw set.
 
-**FEST Pixel** (61 Pixel im Sitzen):
+**FEST Pixel** (61 Pixel im Sitzen; im Prompt heißt er „the tomcat“, weil Gemini den Namen „Pixel“ als Google-Marke blockt):
 
 ```text
-Pixel, a chubby round tomcat about a third of Max's height when sitting, short legs, light silver-grey fur (#c0cbdc, shadow #8b9bb4, highlight #ffffff) with three darker blue-grey stripes on his back (#5a6988), white chest and four white paws (#ffffff), a very fluffy tail, a clearly visible notch torn out of his left ear, smug half-closed amber eyes (#feae34), pink nose and inner ears (#f6757a), a red collar (#e43b44, shadow #a22633) with a small round silver speaker on the front and a clearly visible turquoise light (#2ce8f5). Not orange, no tabby markings on the face, plain unmarked forehead, no heavy eyelids. Dark outline #262b44, never pure black.
+The tomcat, a chubby round cat about a third of Max's height when sitting, short legs, light silver-grey fur (#c0cbdc, shadow #8b9bb4, highlight #ffffff) with three darker blue-grey stripes on his back (#5a6988), white chest and four white paws (#ffffff), a very fluffy tail, a clearly visible notch torn out of his left ear, smug half-closed amber eyes (#feae34), pink nose and inner ears (#f6757a), a red collar (#e43b44, shadow #a22633) with a small round silver speaker on the front and a clearly visible turquoise light (#2ce8f5). Not orange, no tabby markings on the face, plain unmarked forehead, no heavy eyelids. Dark outline #262b44, never pure black.
 ```
 
 **BOGEN Pixel:** Neutral pose: sitting upright with chin raised, fluffy tail wrapped around his paws (all four views sitting). Expressions: (1) smug, half-lidded eyes, chin raised; (2) horrified, ears flat, eyes wide; (3) greedy, eyes huge, tongue tip out; (4) offended, head turned away, eyes closed; (5) startled, fur standing up, ears back; (6) blissful, eyes closed, small smile.

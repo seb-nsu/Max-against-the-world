@@ -879,6 +879,29 @@ def ohne_stand(md):
     return re.sub(r"^\d+ Shots, davon \d+ sicher offen", "· Shots", md, flags=re.M)
 
 
+# Gemini blockt Prompts mit dem Namen „Pixel“ („third-party content providers“, liest sich wie die
+# Google-Marke). Im Bildtext heißt der Kater deshalb „the tomcat“; Nummern und deutsche Hinweise
+# außerhalb der Prompt-Blöcke bleiben, wie sie sind.
+KATER = [
+    (r"\bPixel-as-", "tomcat-as-"),
+    (r"\bPixel's\b", "the tomcat's"),
+    (r"\b(the|a|sleeping|standing|sitting) Pixel\b", r"\1 tomcat"),
+    (r"(^|[.!?] )Pixel\b", r"\1The tomcat"),
+    (r"\bPixel\b", "the tomcat"),
+    (r"\b([Tt])he tomcat, a chubby round tomcat\b", r"\1he tomcat, a chubby round cat"),
+]
+
+
+def ohne_marke(text):
+    """Ersetzt „Pixel“ in allen ```-Prompt-Blöcken durch „the tomcat“."""
+    def block(m):
+        inhalt = m.group(2)
+        for muster, ersatz in KATER:
+            inhalt = re.sub(muster, ersatz, inhalt, flags=re.M)
+        return m.group(1) + inhalt + m.group(3)
+    return re.sub(r"(^```[^\n]*\n)(.*?)(^```)", block, text, flags=re.S | re.M)
+
+
 def main():
     pruefen = "--pruefen" in sys.argv
     stil = (GRAFIK / "00-stil-und-werkzeuge.md").read_text(encoding="utf-8")
@@ -917,6 +940,7 @@ def main():
             print("FEHLER  " + f)
         sys.exit(1)
     for name, neu in gebaut.items():
+        neu = ohne_marke(neu)
         pfad = ZIEL / f"{name}.md"
         alt = pfad.read_text(encoding="utf-8") if pfad.exists() else ""
         if (ohne_stand(neu) if pruefen else neu) != (ohne_stand(alt) if pruefen else alt):
