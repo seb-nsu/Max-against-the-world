@@ -159,13 +159,13 @@ schmiede:
     start: [600, 262]
     von_dorfplatz: [600, 262]
   figuren:
-    schmied: [306, 236]            # hinter dem Amboss (Hämmern)
+    schmied: [330, 242]            # hinter dem Amboss (Hämmern)
     schmiede_ziege: [470, 300]
   blick:
     schmied: links
   vordergrund:
     amboss: {bild: res://grafik/props/amboss_vorn.png, rect: [218, 180, 92, 102], baseline: 272}   # Amboss mit Klotz als Vordergrund: der Schmied steht dahinter und hämmert (Sebastian, 14. November 2026)
-    hufeisen: {bild: res://grafik/props/hufeisen_zange.png, pos: [276, 190], schatten: false, baseline: 273}   # Hufeisen in der Zange auf dem Amboss, unter dem Hammer
+    hufeisen: {bild: res://grafik/props/hufeisen_zange.png, pos: [248, 213], schatten: false}   # Hufeisen liegt auf dem Amboss, Griffe hängen vorn herunter (bis die Schmied-Posen da sind)
   alias:
     krug_beim_kochgeschirr: krug
     ziege: schmiede_ziege
@@ -220,7 +220,7 @@ klassenzimmer:
     start: [80, 250]
     von_dorfplatz: [80, 250]
   figuren:
-    alwin: [236, 245]
+    alwin: [248, 245]
     toadi: [42, 238]
   blick:
     alwin: links

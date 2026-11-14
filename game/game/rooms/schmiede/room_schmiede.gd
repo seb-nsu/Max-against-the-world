@@ -36,6 +36,8 @@ func _nach_uebergang() -> void:
 ## Der Schmied hämmert im Stand auf das Hufeisen in der Zange (Sebastian, 14. November 2026):
 ## Animation „haemmern“ (Arm nach den Winkeln gedreht, Skript schmied_haemmern.py), beim Aufschlag
 ## sprühen Funken vom glühenden Eisen.
+## Aus, bis die gemalten Schlüsselposen da sind (Sebastian, 14. November 2026: Zange gehört in die Hand)
+const HAEMMERN_AN := false
 const AUFSCHLAG_BILD := 10          # Bild in „haemmern“, in dem der Hammer das Hufeisen trifft
 const EISEN := Vector2(266, 182)    # glühendes Hufeisen auf dem Amboss
 var _letztes_bild := -1
@@ -45,7 +47,7 @@ func _zustand_anwenden() -> void:
 	super()
 	if has_character("Schmied") and not Engine.is_editor_hint():
 		var ap := C.Schmied.get_node("AnimationPlayer") as AnimationPlayer
-		if ap and ap.has_animation("haemmern"):
+		if HAEMMERN_AN and ap and ap.has_animation("haemmern"):
 			C.Schmied.idle_animation = "haemmern"
 			if not C.Schmied.is_talking and not Spiel.testmodus:
 				C.Schmied._play_idle()

@@ -154,7 +154,7 @@ position = Vector2(80, 250)
 [node name="Characters" type="Node2D" parent="." unique_id=78373508]
 
 [node name="CharacterAlwin *" parent="Characters" unique_id=1939362324 instance=ExtResource("15_ti30s")]
-position = Vector2(236, 245)
+position = Vector2(248, 245)
 
 [node name="CharacterToadi *" parent="Characters" unique_id=1625231671 instance=ExtResource("16_skdtx")]
 position = Vector2(42, 238)

@@ -1930,11 +1930,10 @@
     "hufeisen": {
      "bild": "res://grafik/props/hufeisen_zange.png",
      "pos": [
-      276,
-      190
+      248,
+      213
      ],
-     "schatten": false,
-     "baseline": 273
+     "schatten": false
     }
    },
    "figuren": [
@@ -1942,8 +1941,8 @@
      "id": "schmied",
      "script_name": "Schmied",
      "pos": [
-      306,
-      236
+      330,
+      242
      ],
      "blick": "links"
     },
@@ -2864,7 +2863,7 @@
      "id": "alwin",
      "script_name": "Alwin",
      "pos": [
-      236,
+      248,
       245
      ],
      "blick": "links"

@@ -69,13 +69,17 @@ func _uebungsbesen_fliegt() -> void:
 	sp.queue_free()
 
 
+## Aus, bis die gemalten Schlüsselposen da sind (Sebastian, 14. November 2026: Alwin soll sich über
+## den Kessel beugen, die Handhaltung passt nicht)
+const RUEHREN_AN := false
+
 ## Alwin rührt im Stand im Kessel (Sebastian, 14. November 2026): Animation „ruehren“ (Hand und
 ## Kelle aus dem gemalten Sprite auf einer kleinen Kreisbahn, Skript alwin_ruehren.py).
 func _zustand_anwenden() -> void:
 	super()
 	if has_character("Alwin") and not Engine.is_editor_hint():
 		var ap := C.Alwin.get_node("AnimationPlayer") as AnimationPlayer
-		if ap and ap.has_animation("ruehren"):
+		if RUEHREN_AN and ap and ap.has_animation("ruehren"):
 			C.Alwin.idle_animation = "ruehren"
 			if not C.Alwin.is_talking and not Spiel.testmodus:
 				C.Alwin._play_idle()
