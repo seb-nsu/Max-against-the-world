@@ -75,12 +75,12 @@ walk_to_point = Vector2(28, 72)
 interaction_polygon = PackedVector2Array(-11, -6, 11, -6, 11, 5, -11, 5)
 
 [node name="Drahtkleiderbuegel" parent="Props" unique_id=505759806 instance=ExtResource("11_m8m18")]
-position = Vector2(617.5, 183.5)
+position = Vector2(617, 191)
 texture = ExtResource("10_mcqit")
 description = "UI_OBJ_DRAHTKLEIDERBUEGEL"
 baseline = 7
-walk_to_point = Vector2(-17.5, 106.5)
-interaction_polygon = PackedVector2Array(-11, -9, 11, -9, 11, 9, -11, 9)
+walk_to_point = Vector2(-17, 99)
+interaction_polygon = PackedVector2Array(-15, -17, 15, -17, 15, 17, -15, 17)
 
 [node name="Hotspots" type="Node2D" parent="." unique_id=337505337]
 

@@ -2354,10 +2354,10 @@
      "script_name": "Drahtkleiderbuegel",
      "name_key": "UI_OBJ_DRAHTKLEIDERBUEGEL",
      "rect": [
-      609,
-      177,
-      17,
-      13
+      602,
+      174,
+      30,
+      34
      ],
      "gehe": [
       600,

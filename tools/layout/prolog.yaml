@@ -94,7 +94,7 @@ dachboden:
   props:
     zapp_o_mat: {rect: [318, 141, 105, 112], gehe: [365, 257], item: null}   # Rollen stehen auf den Dielen, nicht auf der Fußleiste (Review, 14. November 2026); Kontaktschatten ins Bild gemalt; Kabel läuft unten links zum Verlängerungskabel unter Pixel
     dosenoeffner: {rect: [214, 181, 20, 6], gehe: [252, 256], schatten: true}   # liegt flach auf der Werkbank (Aseprite, 14. November 2026)
-    drahtkleiderbuegel: {rect: [609, 177, 17, 13], gehe: [600, 290]}   # hängt am Türknauf des Schranks (Aseprite, 14. November 2026)
+    drahtkleiderbuegel: {rect: [602, 174, 30, 34], gehe: [600, 290]}   # hängt mit dem Haken am rechten Türknauf; Steg in der Schräge der Schranktür, dunkles Grau (Sebastian, 14. November 2026)
   hotspots:
     drehknopf: {rect: [400, 159, 18, 26], gehe: [395, 257], name: Drehknopf}
     werkzeugkiste: {rect: [97, 220, 68, 58], gehe: [180, 300]}
