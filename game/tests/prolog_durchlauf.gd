@@ -703,12 +703,17 @@ func _welt_1_r5_bis_r13() -> void:
 	_pruefe(_gesagt("W1_HOGG_TOA_0730") and not _i().is_item_in_inventory("Flasche")
 		and int(Z.wert("W1_FLASCHE", 0)) == 0, "falsche Flasche 4: Pilz (0710–0760), Flasche zurück")
 	await _hotspot("Flasche3").on_click()
+	await process_frame
+	_pruefe(not _flasche_sichtbar(3) and _flasche_sichtbar(2) and _flasche_sichtbar(4),
+		"Getragene Flasche 3 fehlt im Regal, die anderen stehen")
 	await _benutze("Flasche", _hotspot("Kessel"), "W1_HOGG_MAX_0770")
 	_pruefe(Z.geloest("R6b") and Z.geloest("R6") and _gesagt("W1_HOGG_ALW_0850"), "R6 gelöst (0770–0850)")
 	for sn in ["Leuchttrank", "Zeugnis"]:
 		_pruefe(_i().is_item_in_inventory(sn), "Belohnung R6: " + sn)
 	_pruefe("zeugnis" in Z.nahansichten, "Zeugnis als Nahansicht (Mo-Knuddel)")
 	_pruefe(not _i().is_item_in_inventory("Flasche"), "Flasche im Trank aufgegangen")
+	await process_frame
+	_pruefe(not _flasche_sichtbar(3) and _flasche_sichtbar(5), "Flasche 3 bleibt nach dem Trank weg")
 	await _ansehen_item("Leuchttrank", "W1_HOGG_MAX_0870")
 	_protokoll_leeren()
 	await _ansehen_item("Zeugnis", "W1_HOGG_MAX_0890")
@@ -1254,6 +1259,12 @@ func _i():
 
 func _raum() -> PopochiuRoom:
 	return root.get_node("R").current
+
+
+## Sichtbarkeit des Flaschen-Sprites n im Regal des Klassenzimmers
+func _flasche_sichtbar(n: int) -> bool:
+	var k := _raum().get_node_or_null("Props/Vordergrund_flasche_%d" % n) as CanvasItem
+	return k != null and k.visible
 
 
 ## Raumansicht mit leichter Tiefe (Entscheidung 10. Nov. 2026): mit „tiefe: 0.8“ im Layout ist eine

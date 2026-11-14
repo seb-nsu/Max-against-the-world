@@ -225,6 +225,13 @@ klassenzimmer:
     alwin: links
   vordergrund:
     socke: {bild: res://grafik/props/socke_loecher.png, pos: [402, 202]}
+    # Die sechs Flaschen sind eigene Sprites; die getragene fehlt im Regal (room_klassenzimmer.gd)
+    flasche_1: {bild: res://grafik/props/flasche_1.png, rect: [400, 111, 19, 29], baseline: 141}
+    flasche_2: {bild: res://grafik/props/flasche_2.png, rect: [419, 96, 18, 44], baseline: 141}
+    flasche_3: {bild: res://grafik/props/flasche_3.png, rect: [437, 111, 17, 29], baseline: 141}
+    flasche_4: {bild: res://grafik/props/flasche_4.png, rect: [454, 111, 18, 29], baseline: 141}
+    flasche_5: {bild: res://grafik/props/flasche_5.png, rect: [472, 96, 18, 44], baseline: 141}
+    flasche_6: {bild: res://grafik/props/flasche_6.png, rect: [490, 106, 17, 34], baseline: 141}
   # Lebendiger Hintergrund (P16): ab und zu fliegt ein Schüler rückwärts am linken Fenster vorbei
   ambiente:
     schueler: {bild: res://grafik/props/schueler_besen.png, bereich: [182, 40, 42, 70]}
