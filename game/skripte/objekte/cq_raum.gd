@@ -87,6 +87,8 @@ func _process(_delta: float) -> void:
 		licht_anwenden()
 	if not _effekte.is_empty():
 		_effekte_bewegen(_delta)
+	if not Engine.is_editor_hint():
+		_partner_folgen(_delta)
 	if bauplan().has("stufen") and not Engine.is_editor_hint():
 		stufen_anwenden()
 	if not _bedingte_teile.is_empty() or not _hg_wechsel.is_empty():
@@ -315,6 +317,47 @@ func _leuchten_setzen() -> void:
 		var t := wurzel.create_tween().set_loops()
 		t.tween_property(wurzel, "modulate:a", 0.35, takt / 2.0).set_trans(Tween.TRANS_SINE)
 		t.tween_property(wurzel, "modulate:a", 1.0, takt / 2.0).set_trans(Tween.TRANS_SINE)
+
+
+## Der nicht gesteuerte Partner (Pixel, wenn Max spielt, und umgekehrt) läuft hinterher, sobald die
+## aktive Figur mehr als FOLGEN_AB Pixel entfernt ist, und stellt sich FOLGEN_ABSTAND neben sie
+## (Sebastian, 14. November 2026). Nicht in Szenen und Gesprächen, nicht im Testmodus, und nicht,
+## wenn der Partner außerhalb des Laufbereichs sitzt (Pixel auf dem Dachbalken oder der Werkbank).
+const FOLGEN_AB := 110.0
+const FOLGEN_ABSTAND := 45.0
+var _folgen_takt := 0.0
+
+
+func _partner_folgen(delta: float) -> void:
+	_folgen_takt -= delta
+	if _folgen_takt > 0.0:
+		return
+	_folgen_takt = 0.35
+	if Spiel.testmodus or Spiel.in_szene > 0 or not is_instance_valid(C.player) or not E.in_room:
+		return
+	if is_instance_valid(D.current_dialog) or not Bauplan.figur_spielbar(Zustand.abschnitt, "pixel"):
+		return
+	if Spiel.regel_wert("partner_getrennt", self) == true:
+		return
+	var sn := "Max" if C.player.script_name == "Pixel" else "Pixel"
+	if not has_character(sn):
+		return
+	var partner: PopochiuCharacter = C.get_character(sn)
+	if not is_instance_valid(partner) or partner.is_moving or partner.is_talking or C.player.is_talking:
+		return
+	var abstand := partner.position.distance_to(C.player.position)
+	if abstand <= FOLGEN_AB:
+		return
+	# Sitzt der Partner abseits des Laufbereichs (Balken, Werkbank), bleibt er dort
+	var weg := get_navigation_path(partner.position, C.player.position)
+	if weg.is_empty() or weg[0].distance_to(partner.position) > 4.0:
+		return
+	var seite := -1.0 if partner.position.x < C.player.position.x else 1.0
+	var ziel := C.player.position + Vector2(seite * FOLGEN_ABSTAND, 0)
+	var hin := get_navigation_path(partner.position, ziel)
+	if hin.is_empty():
+		return
+	partner.walk_to(hin[-1])
 
 
 ## Lebendige Hintergründe (P16, Review): kleine Schleifen über gemalten Stellen. Layout „effekte“:
