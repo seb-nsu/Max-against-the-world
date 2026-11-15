@@ -1,17 +1,17 @@
 [gd_scene format=3 uid="uid://bjgv1y46gp747"]
 
-[ext_resource type="Script" path="res://game/rooms/werkstatt/room_werkstatt.gd" id="1_1l0uq"]
+[ext_resource type="Script" uid="uid://dmgf3spadvubl" path="res://game/rooms/werkstatt/room_werkstatt.gd" id="1_1l0uq"]
 [ext_resource type="PackedScene" uid="uid://4gmxbgbexqaa" path="res://game/rooms/werkstatt/walkable_areas/boden/walkable_area_boden.tscn" id="2_lybr3"]
 [ext_resource type="PackedScene" uid="uid://da70o6t0madmt" path="res://game/rooms/werkstatt/props/background/prop_background.tscn" id="3_d8xvw"]
-[ext_resource type="Texture2D" uid="uid://deli2njevth0v" path="res://grafik/platzhalter/raum_werkstatt.png" id="4_5y4jy"]
+[ext_resource type="Texture2D" uid="uid://f2n5cj0fi3xv" path="res://grafik/hintergruende/w2_bg_werkstatt_v01.png" id="4_lybr3"]
 [ext_resource type="PackedScene" uid="uid://be6lwqfh7h5d6" path="res://game/rooms/werkstatt/props/brennspiegel/prop_brennspiegel.tscn" id="5_gnr0d"]
-[ext_resource type="Texture2D" uid="uid://d0dp1kvmyho3q" path="res://grafik/platzhalter/prop_brennspiegel.png" id="6_rmc1g"]
+[ext_resource type="Texture2D" uid="uid://bspgfln06r63u" path="res://grafik/props/brennspiegel.png" id="6_d8xvw"]
 [ext_resource type="PackedScene" uid="uid://bdkgklmbgkenq" path="res://game/rooms/werkstatt/props/waage/prop_waage.tscn" id="7_ejpor"]
-[ext_resource type="Texture2D" uid="uid://b1uvpdq1msiwi" path="res://grafik/platzhalter/prop_waage.png" id="8_g86w8"]
+[ext_resource type="Texture2D" uid="uid://bqrq1bo54mdk2" path="res://grafik/props/waage.png" id="8_5y4jy"]
 [ext_resource type="PackedScene" uid="uid://b41oaf3d6v66e" path="res://game/rooms/werkstatt/props/messbecher/prop_messbecher.tscn" id="9_l52y8"]
-[ext_resource type="Texture2D" uid="uid://deajsod1rqb4l" path="res://grafik/platzhalter/prop_messbecher.png" id="10_vuh5p"]
+[ext_resource type="Texture2D" uid="uid://dgnlrvneucaby" path="res://grafik/props/messbecher.png" id="10_gnr0d"]
 [ext_resource type="PackedScene" uid="uid://bb78ojxuhjcke" path="res://game/rooms/werkstatt/props/essigkrug/prop_essigkrug.tscn" id="11_cyfj3"]
-[ext_resource type="Texture2D" uid="uid://d06yo7lse1pb2" path="res://grafik/platzhalter/prop_essigkrug.png" id="12_vcl5c"]
+[ext_resource type="Texture2D" uid="uid://mcwrlhtpqwnn" path="res://grafik/props/essigkrug.png" id="12_rmc1g"]
 [ext_resource type="PackedScene" uid="uid://dwa5fjgiajtty" path="res://game/rooms/werkstatt/hotspots/badewanne/hotspot_badewanne.tscn" id="13_o702s"]
 [ext_resource type="PackedScene" uid="uid://c2f1651r1b75s" path="res://game/rooms/werkstatt/hotspots/werkbank/hotspot_werkbank.tscn" id="14_hxhnq"]
 [ext_resource type="PackedScene" uid="uid://cpcsll72dc5vs" path="res://game/rooms/werkstatt/hotspots/wurfhebel/hotspot_wurfhebel.tscn" id="15_1150g"]
@@ -36,120 +36,134 @@ height = 360
 [node name="WalkableAreas" type="Node2D" parent="." unique_id=204278127]
 
 [node name="Boden" parent="WalkableAreas" unique_id=1375847116 instance=ExtResource("2_lybr3")]
-interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(8, 280, 632, 280, 632, 356, 8, 356)])
+interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(190, 240, 632, 240, 632, 356, 8, 356, 8, 330, 190, 330)])
 
 [node name="Props" type="Node2D" parent="." unique_id=255660081]
 
 [node name="Background" parent="Props" unique_id=726181656 instance=ExtResource("3_d8xvw")]
 position = Vector2(320, 180)
-texture = ExtResource("4_5y4jy")
+texture = ExtResource("4_lybr3")
 description = "UI_RAUM_WERKSTATT"
 
 [node name="Brennspiegel" parent="Props" unique_id=1862823133 instance=ExtResource("5_gnr0d")]
-position = Vector2(554.0, 160)
-texture = ExtResource("6_rmc1g")
+position = Vector2(545, 162.5)
+texture = ExtResource("6_d8xvw")
 description = "UI_OBJ_BRENNSPIEGEL"
-baseline = 16
-walk_to_point = Vector2(-2.0, 152)
+baseline = 72
+walk_to_point = Vector2(-15, 107.5)
+interaction_polygon = PackedVector2Array(-40, -72.5, 40, -72.5, 40, 72.5, -40, 72.5)
 
 [node name="Waage" parent="Props" unique_id=1483313158 instance=ExtResource("7_ejpor")]
-position = Vector2(274.0, 198.0)
-texture = ExtResource("8_g86w8")
+position = Vector2(217.5, 147.5)
+texture = ExtResource("8_5y4jy")
 description = "UI_OBJ_WAAGE"
-baseline = 9
-walk_to_point = Vector2(-2.0, 114.0)
+baseline = 22
+walk_to_point = Vector2(2.5, 122.5)
+interaction_polygon = PackedVector2Array(-22.5, -22.5, 22.5, -22.5, 22.5, 22.5, -22.5, 22.5)
 
 [node name="Messbecher" parent="Props" unique_id=1260863264 instance=ExtResource("9_l52y8")]
-position = Vector2(300, 200)
-texture = ExtResource("10_vuh5p")
+position = Vector2(252, 159)
+texture = ExtResource("10_gnr0d")
 description = "UI_OBJ_MESSBECHER"
-baseline = 8
-walk_to_point = Vector2(0, 112)
+baseline = 9
+walk_to_point = Vector2(-2, 111)
+interaction_polygon = PackedVector2Array(-12, -9, 12, -9, 12, 9, -12, 9)
 
 [node name="Essigkrug" parent="Props" unique_id=1885147702 instance=ExtResource("11_cyfj3")]
-position = Vector2(560, 260)
-texture = ExtResource("12_vcl5c")
+position = Vector2(577.5, 205)
+texture = ExtResource("12_rmc1g")
 description = "UI_OBJ_ESSIGKRUG"
-baseline = 20
-walk_to_point = Vector2(-8, 52)
+baseline = 30
+walk_to_point = Vector2(-17.5, 65)
+interaction_polygon = PackedVector2Array(-22.5, -30, 22.5, -30, 22.5, 30, -22.5, 30)
 
 [node name="Hotspots" type="Node2D" parent="." unique_id=439770298]
 
 [node name="Badewanne" parent="Hotspots" unique_id=572086028 instance=ExtResource("13_o702s")]
-position = Vector2(104, 256)
+position = Vector2(98, 260)
 description = "UI_OBJ_BADEWANNE"
-baseline = 24
-walk_to_point = Vector2(0, 56)
+baseline = 60
+walk_to_point = Vector2(112, 40)
+interaction_polygon = PackedVector2Array(-90, -60, 90, -60, 90, 60, -90, 60)
 
 [node name="Werkbank" parent="Hotspots" unique_id=482899012 instance=ExtResource("14_hxhnq")]
-position = Vector2(248, 244)
+position = Vector2(265, 195)
 description = "UI_OBJ_WERKBANK"
-baseline = 36
-walk_to_point = Vector2(0, 68)
+baseline = 45
+walk_to_point = Vector2(5, 75)
+interaction_polygon = PackedVector2Array(-95, -45, 95, -45, 95, 45, -95, 45)
 
 [node name="Wurfhebel" parent="Hotspots" unique_id=93175918 instance=ExtResource("15_1150g")]
-position = Vector2(494.0, 234.0)
+position = Vector2(445, 220)
 description = "UI_OBJ_WURFHEBEL"
-baseline = 45
-walk_to_point = Vector2(-2.0, 78.0)
+baseline = 60
+walk_to_point = Vector2(0, 70)
+interaction_polygon = PackedVector2Array(-45, -60, 45, -60, 45, 60, -45, 60)
 
 [node name="Wasserorgel" parent="Hotspots" unique_id=48456285 instance=ExtResource("16_46mt1")]
-position = Vector2(92, 150.0)
+position = Vector2(70.5, 110)
 description = "UI_OBJ_WASSERORGEL"
-baseline = 53
-walk_to_point = Vector2(0, 162.0)
+baseline = 90
+walk_to_point = Vector2(139.5, 170)
+interaction_polygon = PackedVector2Array(-52.5, -90, 52.5, -90, 52.5, 90, -52.5, 90)
 
 [node name="BauplanDampfmaschine" parent="Hotspots" unique_id=321512282 instance=ExtResource("17_hy4ik")]
-position = Vector2(186.0, 92)
+position = Vector2(153, 117.5)
 description = "UI_OBJ_BAUPLAN_DAMPFMASCHINE"
-baseline = 24
-walk_to_point = Vector2(-2.0, 216)
+baseline = 22
+walk_to_point = Vector2(57, 152.5)
+interaction_polygon = PackedVector2Array(-25, -22.5, 25, -22.5, 25, 22.5, -25, 22.5)
 
 [node name="ModellSchieferTurm" parent="Hotspots" unique_id=494153468 instance=ExtResource("18_w0ljt")]
-position = Vector2(234.0, 190.0)
+position = Vector2(285, 77.5)
 description = "UI_OBJ_MODELL_SCHIEFER_TURM"
 baseline = 17
-walk_to_point = Vector2(-2.0, 122.0)
+walk_to_point = Vector2(-5, 192.5)
+interaction_polygon = PackedVector2Array(-15, -17.5, 15, -17.5, 15, 17.5, -15, 17.5)
 
 [node name="SkizzeKugelUndZylinder" parent="Hotspots" unique_id=1359166416 instance=ExtResource("19_7mv0j")]
-position = Vector2(262.0, 92)
+position = Vector2(200, 77.5)
 description = "UI_OBJ_SKIZZE_KUGEL_UND_ZYLINDER"
-baseline = 24
-walk_to_point = Vector2(-2.0, 216)
+baseline = 27
+walk_to_point = Vector2(20, 192.5)
+interaction_polygon = PackedVector2Array(-20, -27.5, 20, -27.5, 20, 27.5, -20, 27.5)
 
 [node name="Fenster" parent="Hotspots" unique_id=899874604 instance=ExtResource("20_syngy")]
-position = Vector2(404, 76)
+position = Vector2(425, 82.5)
 description = "UI_OBJ_FENSTER"
-baseline = 36
-walk_to_point = Vector2(0, 232)
+baseline = 47
+walk_to_point = Vector2(-5, 187.5)
+interaction_polygon = PackedVector2Array(-75, -47.5, 75, -47.5, 75, 47.5, -75, 47.5)
 
 [node name="Zahnraeder" parent="Hotspots" unique_id=1086081747 instance=ExtResource("21_fb74l")]
-position = Vector2(332, 160)
+position = Vector2(330, 130)
 description = "UI_OBJ_ZAHNRAEDER"
-baseline = 28
-walk_to_point = Vector2(0, 148)
+baseline = 30
+walk_to_point = Vector2(0, 140)
+interaction_polygon = PackedVector2Array(-30, -30, 30, -30, 30, 30, -30, 30)
 
 [node name="AusgangHafen" parent="Hotspots" unique_id=2076176267 instance=ExtResource("22_gw4fb")]
-position = Vector2(618.0, 210.0)
+position = Vector2(620, 160)
 description = "UI_OBJ_AUSGANG_HAFEN"
-baseline = 69
-walk_to_point = Vector2(-10.0, 110.0)
+baseline = 120
+walk_to_point = Vector2(-10, 140)
 cursor = 9
+interaction_polygon = PackedVector2Array(-20, -120, 20, -120, 20, 120, -20, 120)
 
 [node name="Regions" type="Node2D" parent="." unique_id=557667762]
 
 [node name="Markers" type="Node2D" parent="." unique_id=1984845252]
 
 [node name="Start" parent="Markers" unique_id=871548643 instance=ExtResource("23_bjml8")]
-position = Vector2(592, 320)
+position = Vector2(590, 310)
 
 [node name="VonHafenSyrakus" parent="Markers" unique_id=758655716 instance=ExtResource("24_t4djd")]
-position = Vector2(592, 320)
+position = Vector2(590, 310)
 
 [node name="Characters" type="Node2D" parent="." unique_id=911311707]
 
 [node name="CharacterArchimedes *" parent="Characters" unique_id=1777843719 instance=ExtResource("25_sxx04")]
-position = Vector2(280, 312)
+position = Vector2(300, 300)
 
 [node name="CharacterHieron *" parent="Characters" unique_id=1474137787 instance=ExtResource("26_ufmie")]
-position = Vector2(400, 312)
+position = Vector2(400, 310)

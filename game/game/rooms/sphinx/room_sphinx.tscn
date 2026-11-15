@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://xitv8728m8tk"]
 
-[ext_resource type="Script" path="res://game/rooms/sphinx/room_sphinx.gd" id="1_qrkv8"]
+[ext_resource type="Script" uid="uid://dtby3b8t2ap2o" path="res://game/rooms/sphinx/room_sphinx.gd" id="1_qrkv8"]
 [ext_resource type="PackedScene" uid="uid://scsqcoeuy273" path="res://game/rooms/sphinx/walkable_areas/boden/walkable_area_boden.tscn" id="2_863sw"]
 [ext_resource type="PackedScene" uid="uid://cshf54scjsffy" path="res://game/rooms/sphinx/props/background/prop_background.tscn" id="3_4ft1y"]
-[ext_resource type="Texture2D" uid="uid://c3nqw6t8idfid" path="res://grafik/platzhalter/raum_sphinx.png" id="4_fhhk3"]
+[ext_resource type="Texture2D" uid="uid://we24wyi0g8do" path="res://grafik/hintergruende/w2_bg_sphinx_v01.png" id="4_863sw"]
 [ext_resource type="PackedScene" uid="uid://cwk3w6x5l517k" path="res://game/rooms/sphinx/hotspots/schreibpult/hotspot_schreibpult.tscn" id="5_ijeel"]
 [ext_resource type="PackedScene" uid="uid://b3w13mmgq8eny" path="res://game/rooms/sphinx/hotspots/zerknuellte_papyri/hotspot_zerknuellte_papyri.tscn" id="6_d2w5h"]
 [ext_resource type="PackedScene" uid="uid://brg4jm8dlkthl" path="res://game/rooms/sphinx/hotspots/notizblock/hotspot_notizblock.tscn" id="7_6rh2c"]
@@ -24,71 +24,78 @@ height = 360
 [node name="WalkableAreas" type="Node2D" parent="." unique_id=492387709]
 
 [node name="Boden" parent="WalkableAreas" unique_id=1752451314 instance=ExtResource("2_863sw")]
-interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(8, 280, 632, 280, 632, 356, 8, 356)])
+interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(8, 248, 632, 240, 632, 356, 8, 356)])
 
 [node name="Props" type="Node2D" parent="." unique_id=143240942]
 
 [node name="Background" parent="Props" unique_id=950661274 instance=ExtResource("3_4ft1y")]
 position = Vector2(320, 180)
-texture = ExtResource("4_fhhk3")
+texture = ExtResource("4_863sw")
 description = "UI_RAUM_SPHINX"
 
 [node name="Hotspots" type="Node2D" parent="." unique_id=1828087293]
 
 [node name="Schreibpult" parent="Hotspots" unique_id=809702017 instance=ExtResource("5_ijeel")]
-position = Vector2(220, 244)
+position = Vector2(319, 206.5)
 description = "UI_OBJ_SCHREIBPULT"
-baseline = 36
-walk_to_point = Vector2(0, 68)
+baseline = 28
+walk_to_point = Vector2(-1, 63.5)
+interaction_polygon = PackedVector2Array(-39, -28.5, 39, -28.5, 39, 28.5, -39, 28.5)
 
 [node name="ZerknuelltePapyri" parent="Hotspots" unique_id=1995054590 instance=ExtResource("6_d2w5h")]
-position = Vector2(306.0, 270.0)
+position = Vector2(316.5, 232.5)
 description = "UI_OBJ_ZERKNUELLTE_PAPYRI"
-baseline = 9
-walk_to_point = Vector2(-2.0, 42.0)
+baseline = 12
+walk_to_point = Vector2(1.5, 37.5)
+interaction_polygon = PackedVector2Array(-58.5, -12.5, 58.5, -12.5, 58.5, 12.5, -58.5, 12.5)
 
 [node name="Notizblock" parent="Hotspots" unique_id=1676197878 instance=ExtResource("7_6rh2c")]
-position = Vector2(216, 202.0)
+position = Vector2(321, 186)
 description = "UI_OBJ_NOTIZBLOCK"
-baseline = 5
-walk_to_point = Vector2(0, 110.0)
+baseline = 8
+walk_to_point = Vector2(-3, 84)
+interaction_polygon = PackedVector2Array(-11, -8, 11, -8, 11, 8, -11, 8)
 
 [node name="Fussspuren" parent="Hotspots" unique_id=981661707 instance=ExtResource("8_oq436")]
-position = Vector2(140, 330.0)
+position = Vector2(90, 232.5)
 description = "UI_OBJ_FUSSSPUREN"
-baseline = 9
-walk_to_point = Vector2(0, -18.0)
+baseline = 32
+walk_to_point = Vector2(10, 57.5)
+interaction_polygon = PackedVector2Array(-60, -32.5, 60, -32.5, 60, 32.5, -60, 32.5)
 
 [node name="Steinkugel" parent="Hotspots" unique_id=1434560379 instance=ExtResource("9_nklnj")]
-position = Vector2(204, 148)
+position = Vector2(317, 105)
 description = "UI_OBJ_STEINKUGEL"
-baseline = 36
-walk_to_point = Vector2(-4, 164)
+baseline = 45
+walk_to_point = Vector2(1, 165)
+interaction_polygon = PackedVector2Array(-45, -45, 45, -45, 45, 45, -45, 45)
 
 [node name="Nase" parent="Hotspots" unique_id=2092306991 instance=ExtResource("10_4b4di")]
-position = Vector2(510.0, 144)
+position = Vector2(582.5, 60)
 description = "UI_OBJ_NASE"
-baseline = 16
-walk_to_point = Vector2(-2.0, 168)
+baseline = 20
+walk_to_point = Vector2(-42.5, 210)
+interaction_polygon = PackedVector2Array(-17.5, -20, 17.5, -20, 17.5, 20, -17.5, 20)
 
 [node name="AusgangNilDelta" parent="Hotspots" unique_id=1452541732 instance=ExtResource("11_wqjuf")]
-position = Vector2(22.0, 210.0)
+position = Vector2(20, 210)
 description = "UI_OBJ_AUSGANG_NIL_DELTA"
-baseline = 69
-walk_to_point = Vector2(2.0, 110.0)
+baseline = 70
+walk_to_point = Vector2(10, 90)
 cursor = 9
+interaction_polygon = PackedVector2Array(-20, -70, 20, -70, 20, 70, -20, 70)
 
 [node name="Regions" type="Node2D" parent="." unique_id=1308321562]
 
 [node name="Markers" type="Node2D" parent="." unique_id=662166787]
 
 [node name="Start" parent="Markers" unique_id=1306499611 instance=ExtResource("12_3fct2")]
-position = Vector2(48, 320)
+position = Vector2(50, 300)
 
 [node name="VonNilDelta" parent="Markers" unique_id=2128877846 instance=ExtResource("13_dnqx6")]
-position = Vector2(48, 320)
+position = Vector2(50, 300)
 
 [node name="Characters" type="Node2D" parent="." unique_id=636472370]
 
 [node name="CharacterSphinxFigur *" parent="Characters" unique_id=494662940 instance=ExtResource("14_gr7p6")]
-position = Vector2(440, 276)
+position = Vector2(560, 240)

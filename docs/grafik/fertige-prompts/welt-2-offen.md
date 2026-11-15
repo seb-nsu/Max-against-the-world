@@ -18,8 +18,8 @@ Stand 14. November 2026, abends. Alles, was für Welt 2 aus Gemini kommen muss, 
 
 - [ ] Nil-Delta mit Fährsteg, **breit**: linke Hälfte, dann rechte Hälfte (keine Fähre, kein Krokodil im Bild; das Papyrusblatt im Schilf darf drin sein)
 - [ ] Thronsaal, **breit**: linke Hälfte, dann rechte Hälfte (Kissen leer, kein Kater, kein Ramses auf dem Thron)
-- [ ] Palastküche (keine Köchin)
-- [ ] Sphinx, zwei Fassungen: mit Nase, dann ohne Nase (Nase liegt im Sand)
+- [x] Palastküche (keine Köchin)
+- [x] Sphinx, zwei Fassungen: mit Nase, dann ohne Nase (Nase liegt im Sand)
 
 ## 2. Figuren in Ägypten
 
@@ -39,14 +39,14 @@ Stand 14. November 2026, abends. Alles, was für Welt 2 aus Gemini kommen muss, 
 
 ## 3. Räume in Griechenland
 
-- [ ] Fährsteg Olympia
+- [x] Fährsteg Olympia
 - [ ] Agora, breit: linke Hälfte, dann rechte Hälfte; danach zweite Fassung (Sandale auf der Säule) und dritte Fassung (Statue ohne Arme)
-- [ ] Startbüro (Schalter leer, Wartende auf der Bank dürfen bleiben)
+- [x] Startbüro (Schalter leer, Wartende auf der Bank dürfen bleiben)
 - [ ] Stadion, **breit**: linke Hälfte, dann rechte Hälfte; zwei Fassungen: normal, dann Parade mit schiefem Glockenturm
-- [ ] Hafen Syrakus
-- [ ] Archimedes' Werkstatt
-- [ ] Grabhügel Syrakus, zwei Fassungen: leerer Sockel, dann mit verwittertem Grabstein
-- [ ] Flusskarte
+- [x] Hafen Syrakus
+- [x] Archimedes' Werkstatt
+- [x] Grabhügel Syrakus, zwei Fassungen: leerer Sockel, dann mit verwittertem Grabstein
+- [x] Flusskarte
 
 ## 4. Figuren in Griechenland
 
