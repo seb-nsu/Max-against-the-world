@@ -16,7 +16,7 @@ Opa steht ihre feste Beschreibung wortgleich in der Zeile CHARACTER LOCK; den Fi
 
 # Shotliste
 
-152 Shots, davon 21 sicher offen („–“: Stand nicht automatisch prüfbar). Kürzel:
+153 Shots, davon 21 sicher offen („–“: Stand nicht automatisch prüfbar). Kürzel:
 R Raum, F Figur, P Posenbogen, B Bewegung, G Gegenstände, N Nahansicht, K Figurenbogen.
 
 | Shot | Bild | Stand |
@@ -155,6 +155,7 @@ R Raum, F Figur, P Posenbogen, B Bewegung, G Gegenstände, N Nahansicht, K Figur
 | W2-B34 | Schildkröte: Rennen | – |
 | W2-B35 | Hafen Syrakus: Ruderboot mit Fässern | – |
 | W2-B36 | Nil-Delta: Wasserträgerin | – |
+| W2-B37 | Leonidas: Losrennen | – |
 | W2-G01 | Ägypten (3×4) | – |
 | W2-G02 | Olympia (3×3) | – |
 | W2-G03 | Feigen-Zustände (1×4, Baum doppelt so groß) | – |
@@ -2344,6 +2345,25 @@ FRAMES: 8 frames side by side, about 0.8 s at 10 frames per second, loops seamle
 END: no separate end frame, the loop closes.
 CAMERA: static, no zoom, no pan, the effect stays centered in every frame.
 NEGATIVE: no characters unless named, no background scene, no text, no frames or panels, no checkerboard, no motion blur, no speed lines
+```
+
+## Leonidas: Losrennen
+
+**Shot W2-B37**
+
+**Anhängen:** das fertige Konzeptblatt von Leonidas · **Bilder:** 8 · **Ablauf:** Schleife
+
+```text
+STYLE: Key pose sheet for a 2D game animation in exactly the same style, colors and proportions as the attached character sheet: same character, same head size, same hair and clothing colors, same line weight and flat cel shading, light from upper left. The key poses side by side in one row from left to right in the order of the action, evenly spaced with clear empty space between them, all at the same scale on one flat baseline, each a frozen still pose. Solid flat magenta (#ff00ff) background filling the whole image.
+SUBJECT: the character exactly as on the attached character sheet: same face, head size, proportions, costume and colors, nothing redesigned.
+CHARACTER (appearance only, word for word from its sheet; ignore the pose in it): Loud muscular Greek athlete, about 114 percent of the boy Max's height. Bronze helmet with a white horsehair crest and open face, short black beard. Blue-and-white striped tracksuit with the jacket open over a white shirt, sandals, a whistle on a cord around his neck. Fists on his hips, mouth wide open as if shouting, facing right. No red cape, no bare chest, no spear, no round shield, no loincloth.
+START: From the neutral pose on the attached concept sheet of Leonidas. Keep the clean concept-art style of that sheet, not pixel art.
+MANNER (applies to every frame): a loud, proud sprinter's run with high knees and pumping fists, chest out, helmet crest bouncing, the open tracksuit jacket flapping behind him, mouth wide open shouting, the whistle swinging on its cord.
+FRAMES: exactly 8 frames side by side, left to right, one complete cycle of about 0.8 s at 10 frames per second: (1) contact: near foot landing in front of the body, near knee slightly bent; far leg trailing behind, knee bent; far arm forward, near arm back, elbows bent; (2) down: near leg deeply bent under the body carrying the weight, body at its lowest, leaning forward; far knee driving forward; (3) push-off: near leg stretched straight back, pushing off on its toes; far knee raised high in front; (4) flight: both feet off the ground, legs split wide, far leg reaching forward, near leg trailing; body at its highest; (5) contact: far foot landing in front of the body; near leg trailing behind; near arm forward, far arm back; (6) down: far leg deeply bent carrying the weight, body at its lowest; near knee driving forward; (7) push-off: far leg stretched straight back on its toes; near knee raised high in front; (8) flight: both feet off the ground, near leg reaching forward, far leg trailing; leads back into frame 1.
+LEGS: 'near' means the leg or arm closer to the viewer, 'far' the one on the other side of the body. Draw the far legs and the far arm one shade darker and partly behind the body, so the two sides can never be confused. Every frame must differ visibly from its neighbours; frames 5 to 8 repeat frames 1 to 4 with the sides swapped, they are never copies of them.
+END POSE: frame 8 leads straight back into frame 1, so the loop closes seamlessly; do not draw frame 1 twice.
+CAMERA: static, strict side view, facing right. Same scale and the same flat baseline in every pose, no zoom, no pan.
+NEGATIVE: no second character, no parts of the boy Max from the reference unless this is Max, no props that are not described, no environment, no floor, no ground shadow, no checkerboard, no frames, panels or cell borders, no text, labels or numbers, no motion blur, no ghosting, no duplicated or extra limbs, no change to face, proportions, clothing or colors, no photorealism, no 3D render, no watermark, no in-between blur, no speed lines, no smear frames, no sliding feet, no change of scale or baseline between poses, no camera movement, no zoom, no perspective change, no morphing, no extra poses beyond the ones listed
 ```
 
 # Gegenstände

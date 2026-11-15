@@ -1019,6 +1019,7 @@ OFFEN_LISTE = [
          [f"W1-B{i}" for i in range(77, 86)] + [f"WU-B{i}" for i in range(27, 33)] + ["PF-B14", "PF-B15"]
          + ["W2-B32", "W2-B33", "W2-B34"] + [f"W2-P{i}" for i in range(50, 62)]),
         ("Nachtrag 15. November: mehr Leben im Hintergrund", ["W1-B86", "W1-B87", "W1-B88", "W2-B35", "W2-B36"]),
+        ("Nachtrag 15. November: Leonidas rennt los (Lauf Bild für Bild, wie die Läufe oben)", ["W2-B37"]),
         ("Welt 2, Reden und Eigenheiten (Arme und Kopf; Beine und Timing aus dem 3D-Clip)",
          ["W2-P28", "W2-P29", "W2-P30", "W2-P31", "W2-P32", "W2-P33", "W2-P34", "W2-P35", "W2-P36", "W2-P37",
           "W2-P38", "W2-P39", "W2-P40", "W2-P41", "W2-P42", "W2-P43", "W2-P44", "W2-P45", "W2-P46", "W2-P47"]),
