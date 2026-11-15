@@ -153,17 +153,20 @@ func springen_zu(ziel: Vector2, bogen := 30.0, dauer := 0.42) -> void:
 
 ## Läuft mit Gehzyklus zu ziel, ohne Wegfindung (hinter den Tresen, aus dem Bild, über Stellen
 ## außerhalb des Laufbereichs). tempo in Pixeln je Sekunde. Beim Überspringen sofort dort.
-## Für Szenen, in denen das Skript eine Bewegung beschreibt (Review Fund 18).
-func laufen_zu(ziel: Vector2, tempo := 70.0) -> void:
+## Für Szenen, in denen das Skript eine Bewegung beschreibt (Review Fund 18). anim: eigene Lauf-Animation
+## (etwa „joggen“ bei Hermes, „barfuss“ bei Max), sonst „walk“.
+func laufen_zu(ziel: Vector2, tempo := 70.0, anim := "walk") -> void:
 	if PopochiuUtils.e.cutscene_skipped or Spiel.testmodus or not is_inside_tree():
 		position = ziel
 		return
 	# Gangart der Figur (walk_animation: Sondergänge wie „joggen“ oder „gehen“ der Ziegen), mit
 	# Richtung (walk_d nach vorn, walk_u nach hinten). Hat die Figur gar keinen Gang, gleitet sie
 	# nicht, sondern bleibt stehen (Entscheidung 16, gesten-regie-entscheidungen.md).
-	var gang := walk_animation if hat_animation(walk_animation) else ("walk" if hat_animation("walk") else "")
+	# anim: eigene Lauf-Animation für diesen Weg (Hermes „joggen“), sonst die Gangart der Figur
+	var wunsch := anim if anim != "walk" else walk_animation
+	var gang := wunsch if hat_animation(wunsch) else ("walk" if hat_animation("walk") else "")
 	if gang.is_empty() and _echte_grafik:
-		push_warning("%s hat keinen Gang (%s): bleibt stehen" % [script_name, walk_animation])
+		push_warning("%s hat keinen Gang (%s): bleibt stehen" % [script_name, wunsch])
 		return
 	if not gang.is_empty():
 		var vorher := walk_animation

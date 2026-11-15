@@ -3,16 +3,16 @@
 [ext_resource type="Script" uid="uid://c2awn2o48aysm" path="res://game/rooms/agora/walkable_areas/boden/walkable_area_boden.gd" id="1_kd0tv"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_kd0tv"]
-vertices = PackedVector2Array(1272, 356, 8, 356, 8, 280, 1272, 280)
+vertices = PackedVector2Array(1272, 356, 8, 356, 8, 270, 1272, 270)
 polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
-outlines = Array[PackedVector2Array]([PackedVector2Array(8, 280, 1272, 280, 1272, 356, 8, 356)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(8, 270, 1272, 270, 1272, 356, 8, 356)])
 agent_radius = 0.0
 
 [node name="Boden" type="Node2D" unique_id=1209753076]
 script = ExtResource("1_kd0tv")
 script_name = "Boden"
 description = "Boden"
-interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(8, 280, 1272, 280, 1272, 356, 8, 356)])
+interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(8, 270, 1272, 270, 1272, 356, 8, 356)])
 
 [node name="Perimeter" type="NavigationRegion2D" parent="." unique_id=1051867774]
 modulate = Color(0, 1, 0, 1)

@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://b50q2reae688p" path="res://game/rooms/stadion/room_stadion.gd" id="1_5sspt"]
 [ext_resource type="PackedScene" uid="uid://uduv2kkh10i7" path="res://game/rooms/stadion/walkable_areas/boden/walkable_area_boden.tscn" id="2_a12rk"]
 [ext_resource type="PackedScene" uid="uid://d3edfyitrcbm3" path="res://game/rooms/stadion/props/background/prop_background.tscn" id="3_ixigb"]
-[ext_resource type="Texture2D" uid="uid://d0ub45o1ya85j" path="res://grafik/platzhalter/raum_stadion.png" id="4_tpcia"]
+[ext_resource type="Texture2D" uid="uid://boloj62fpmhm6" path="res://grafik/hintergruende/w2_bg_stadion_v01.png" id="4_a12rk"]
 [ext_resource type="PackedScene" uid="uid://dpxxl06kqdwxk" path="res://game/rooms/stadion/hotspots/laufbahn/hotspot_laufbahn.tscn" id="5_82gfv"]
 [ext_resource type="PackedScene" uid="uid://djs4qlhrd2d2b" path="res://game/rooms/stadion/hotspots/sandgrube/hotspot_sandgrube.tscn" id="6_omuwg"]
 [ext_resource type="PackedScene" uid="uid://bra07yuvpieqg" path="res://game/rooms/stadion/hotspots/kampfrichterzelt/hotspot_kampfrichterzelt.tscn" id="7_h825q"]
@@ -34,109 +34,115 @@ height = 360
 [node name="WalkableAreas" type="Node2D" parent="." unique_id=707360395]
 
 [node name="Boden" parent="WalkableAreas" unique_id=482142947 instance=ExtResource("2_a12rk")]
-interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(8, 280, 1272, 280, 1272, 356, 8, 356)])
 
 [node name="Props" type="Node2D" parent="." unique_id=421494228]
 
 [node name="Background" parent="Props" unique_id=1710284010 instance=ExtResource("3_ixigb")]
 position = Vector2(640, 180)
-texture = ExtResource("4_tpcia")
+texture = ExtResource("4_a12rk")
 description = "UI_RAUM_STADION"
 
 [node name="Hotspots" type="Node2D" parent="." unique_id=1910512851]
 
 [node name="Laufbahn" parent="Hotspots" unique_id=1282474215 instance=ExtResource("5_82gfv")]
-position = Vector2(640, 308)
+position = Vector2(610, 312)
 description = "UI_OBJ_LAUFBAHN"
 baseline = 12
-walk_to_point = Vector2(0, 24)
-interaction_polygon = PackedVector2Array(-560, -12, 560, -12, 560, 12, -560, 12)
+walk_to_point = Vector2(30, 0)
+interaction_polygon = PackedVector2Array(-450, -12, 450, -12, 450, 12, -450, 12)
 
 [node name="Sandgrube" parent="Hotspots" unique_id=1618560048 instance=ExtResource("6_omuwg")]
-position = Vector2(376, 264)
+position = Vector2(317.5, 225)
 description = "UI_OBJ_SANDGRUBE"
-baseline = 16
-walk_to_point = Vector2(0, 48)
+baseline = 20
+walk_to_point = Vector2(2.5, 55)
+interaction_polygon = PackedVector2Array(-137.5, -20, 137.5, -20, 137.5, 20, -137.5, 20)
 
 [node name="Kampfrichterzelt" parent="Hotspots" unique_id=1010759944 instance=ExtResource("7_h825q")]
-position = Vector2(640, 228)
+position = Vector2(482.5, 175)
 description = "UI_OBJ_KAMPFRICHTERZELT"
-baseline = 32
-walk_to_point = Vector2(0, 80)
+baseline = 50
+walk_to_point = Vector2(-2.5, 105)
+interaction_polygon = PackedVector2Array(-62.5, -50, 62.5, -50, 62.5, 50, -62.5, 50)
 
 [node name="Zuschauerraenge" parent="Hotspots" unique_id=889203043 instance=ExtResource("8_kyju0")]
-position = Vector2(640, 112)
+position = Vector2(615, 110)
 description = "UI_OBJ_ZUSCHAUERRAENGE"
-baseline = 32
-walk_to_point = Vector2(0, 196)
-interaction_polygon = PackedVector2Array(-640, -32, 640, -32, 640, 32, -640, 32)
+baseline = 50
+walk_to_point = Vector2(25, 170)
+interaction_polygon = PackedVector2Array(-555, -50, 555, -50, 555, 50, -555, 50)
 
 [node name="Glockenturm" parent="Hotspots" unique_id=638813179 instance=ExtResource("9_72cca")]
-position = Vector2(1152, 42)
+position = Vector2(1220, 67.5)
 description = "UI_OBJ_GLOCKENTURM"
-baseline = 34
-walk_to_point = Vector2(-32, 266)
+baseline = 67
+walk_to_point = Vector2(-70, 212.5)
+interaction_polygon = PackedVector2Array(-25, -67.5, 25, -67.5, 25, 67.5, -25, 67.5)
 
 [node name="Siegerliste" parent="Hotspots" unique_id=731268277 instance=ExtResource("10_xlriu")]
-position = Vector2(848, 210)
+position = Vector2(880, 160)
 description = "UI_OBJ_SIEGERLISTE"
-baseline = 30
-walk_to_point = Vector2(0, 98)
+baseline = 25
+walk_to_point = Vector2(0, 110)
+interaction_polygon = PackedVector2Array(-35, -25, 35, -25, 35, 25, -35, 25)
 
 [node name="Startlinie" parent="Hotspots" unique_id=776175796 instance=ExtResource("11_ekowx")]
-position = Vector2(1068, 336)
+position = Vector2(1072, 280)
 description = "UI_OBJ_STARTLINIE"
-baseline = 16
-walk_to_point = Vector2(-4, 0)
+baseline = 80
+walk_to_point = Vector2(-22, 20)
+interaction_polygon = PackedVector2Array(-10, -80, 10, -80, 10, 80, -10, 80)
 
 [node name="Wurfhebel" parent="Hotspots" unique_id=2002672959 instance=ExtResource("12_xpgu3")]
-position = Vector2(168, 240)
+position = Vector2(143, 192.5)
 description = "UI_OBJ_WURFHEBEL"
-baseline = 40
-walk_to_point = Vector2(8, 72)
+baseline = 32
+walk_to_point = Vector2(7, 87.5)
+interaction_polygon = PackedVector2Array(-55, -32.5, 55, -32.5, 55, 32.5, -55, 32.5)
 
 [node name="AusgangAgora" parent="Hotspots" unique_id=353297913 instance=ExtResource("13_rie0b")]
-position = Vector2(1258, 210)
+position = Vector2(1257.5, 210)
 description = "UI_OBJ_AUSGANG_AGORA"
 baseline = 70
-walk_to_point = Vector2(-6, 110)
+walk_to_point = Vector2(-7.5, 80)
 cursor = 9
+interaction_polygon = PackedVector2Array(-22.5, -70, 22.5, -70, 22.5, 70, -22.5, 70)
 
 [node name="Regions" type="Node2D" parent="." unique_id=1731627739]
 
 [node name="Markers" type="Node2D" parent="." unique_id=566393897]
 
 [node name="Start" parent="Markers" unique_id=2100545164 instance=ExtResource("14_t6v7c")]
-position = Vector2(1184, 320)
+position = Vector2(1200, 300)
 
 [node name="VonAgora" parent="Markers" unique_id=1338887414 instance=ExtResource("15_yeq08")]
-position = Vector2(1184, 320)
+position = Vector2(1200, 300)
 
 [node name="Ramses" parent="Markers" unique_id=1278222484 instance=ExtResource("16_sib87")]
-position = Vector2(780, 132)
+position = Vector2(740, 236)
 
 [node name="Wedler" parent="Markers" unique_id=931534433 instance=ExtResource("17_0568d")]
-position = Vector2(840, 132)
+position = Vector2(800, 236)
 
 [node name="Archimedes" parent="Markers" unique_id=1185281788 instance=ExtResource("18_qdwbs")]
-position = Vector2(256, 304)
+position = Vector2(290, 265)
 
 [node name="Hermes" parent="Markers" unique_id=683299800 instance=ExtResource("19_0si1o")]
-position = Vector2(920, 320)
+position = Vector2(420, 292)
 
 [node name="Cicero" parent="Markers" unique_id=249143024 instance=ExtResource("20_avckm")]
-position = Vector2(440, 304)
+position = Vector2(560, 272)
 
 [node name="Zeremonienmeister" parent="Markers" unique_id=1979263688 instance=ExtResource("21_nthgn")]
-position = Vector2(1040, 304)
+position = Vector2(880, 246)
 
 [node name="Aegypter" parent="Markers" unique_id=147604749 instance=ExtResource("22_fbtic")]
-position = Vector2(700, 132)
+position = Vector2(660, 240)
 
 [node name="Characters" type="Node2D" parent="." unique_id=657065468]
 
 [node name="CharacterLeonidas *" parent="Characters" unique_id=2063397062 instance=ExtResource("23_ir0p1")]
-position = Vector2(800, 316)
+position = Vector2(960, 300)
 
 [node name="CharacterSchildkroete *" parent="Characters" unique_id=45998621 instance=ExtResource("24_mvyhm")]
-position = Vector2(944, 336)
+position = Vector2(1010, 322)

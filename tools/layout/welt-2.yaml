@@ -45,14 +45,17 @@ nil_delta:
   faehre: [faehrsteg_olympia, hafen_syrakus]
   marker:
     start: [400, 310]
-    von_thronsaal_ramses: [1220, 300]
-    von_sphinx: [1160, 270]
+    von_thronsaal_ramses: [1220, 320]
+    von_sphinx: [1150, 268]
     von_faehre: [130, 305]
-    hermes: [800, 310]
+    hermes: [485, 305]             # nahe am Ankunftsplatz von Max, damit man ihn hereinjoggen sieht
   figuren:
-    faehrmann: [120, 300]
+    faehrmann: [170, 302]          # vorn am Steg bei der Tafel, die Fähre dahinter bleibt sichtbar
     sobek: [312, 240]
-    steinmetz: [760, 300]
+    steinmetz: [790, 268]
+  vordergrund:
+    faehre: {bild: res://grafik/props/krokodil_faehre.png, pos: [75, 222], skala: 0.85, schatten: false}   # Krokodil-Fähre im Wasser hinter dem Steg (Seile abgeschnitten, sonst über der Tafel)
+    bauplan: {bild: res://grafik/props/bauplan_pyramide.png, pos: [980, 247], schatten: false}
   alias:
     papyrus_aus_dem_schilf: papyrusblatt
     weizenfeld: weizenfeld_mit_handabdruck
@@ -70,8 +73,8 @@ nil_delta:
   props:
     papyrusblatt: {rect: [580, 185, 40, 40], gehe: [600, 295]}
   ausgaenge:
-    thronsaal_ramses: {rect: [1240, 130, 40, 120], gehe: [1250, 300], id: sandweg, name: Sandweg}
-    sphinx: {rect: [1110, 125, 110, 60], gehe: [1160, 262], id: duenenpfad, name: Dünenpfad}
+    thronsaal_ramses: {rect: [1236, 250, 44, 106], gehe: [1262, 325], id: sandweg, name: Sandweg}
+    sphinx: {rect: [1090, 110, 120, 90], gehe: [1150, 262], id: duenenpfad, name: Dünenpfad}
 
 thronsaal_ramses:
   farbe: "#b98b3e"
@@ -91,6 +94,9 @@ thronsaal_ramses:
     faecherwedler: [1112, 300]     # rechts hinter dem Thron, nicht vor dem Goldteller
   blick:
     faecherwedler: links           # fächelt Ramses zu, auch wenn Max rechts steht
+  vordergrund:
+    sarkophag: {bild: res://grafik/props/sarkophag.png, pos: [127, 282], skala: 1.25}
+    mumienkatze: {bild: res://grafik/props/mumienkatze.png, pos: [232, 176], schatten: false}   # in der Wandnische
   alias:
     opferschale_des_hofkaters: opferschale
     inschrift: inschrift
@@ -123,7 +129,7 @@ palastkueche:
     start: [70, 290]
     von_thronsaal_ramses: [70, 290]
   figuren:
-    nebet: [300, 300]
+    nebet: [395, 285]              # bei den Ölkrügen, die sie bewacht; Schneidetisch mit Brot, Datteln, Zwiebel bleibt frei
   alias:
     oelkrug: oelkruege
     lehmofen: lehmoefen
@@ -181,7 +187,10 @@ faehrsteg_olympia:
     von_faehre: [130, 310]
     von_agora: [590, 310]
   figuren:
-    faehrmann: [70, 300]
+    faehrmann: [118, 302]          # neben dem Steg, die Fähre links bleibt sichtbar
+  vordergrund:
+    faehre: {bild: res://grafik/props/krokodil_faehre.png, pos: [30, 238], skala: 0.75, schatten: false}
+    baum: {bild: res://grafik/props/olympia_baum_vorn.png, rect: [60, 130, 46, 122], baseline: 250}   # Stamm vor der Fähre
   alias:
     tafel: tafel_olympia
     sanduhr: sanduhr_olympia
@@ -196,21 +205,30 @@ faehrsteg_olympia:
 
 agora:
   farbe: "#c8c0a8"
-  laufbereich: [[8, 280], [1272, 280], [1272, 356], [8, 356]]
+  hintergrund: res://grafik/hintergruende/w2_bg_agora_v01.png
+  hintergrund_nach:
+    R12: res://grafik/hintergruende/w2_bg_agora_sandale_v01.png        # Sandale nach dem Lauf an Tag 1 auf der Adlersäule
+    R13: res://grafik/hintergruende/w2_bg_agora_ohne_arme_v01.png      # nach dem Finaltag: Sandale weg, Statue ohne Arme
+  tiefe: 0.85
+  laufbereich: [[8, 270], [1272, 270], [1272, 356], [8, 356]]
   marker:
-    start: [1200, 320]
-    von_faehrsteg_olympia: [1220, 320]
-    von_stadion: [60, 320]
-    von_startbuero: [424, 304]
-    abwurf: [900, 320]
+    start: [1215, 310]
+    von_faehrsteg_olympia: [1215, 310]
+    von_stadion: [120, 310]
+    von_startbuero: [416, 300]
+    abwurf: [900, 315]
   figuren:
-    cicero: [712, 296]
-    tiro: [790, 312]
-    tourist: [1000, 320]
-    touristin: [1064, 320]
-    philosoph: [280, 316]
-    brian: [500, 316]
-    strassenmusiker: [600, 312]
+    cicero: [762, 233]             # auf der Rednertribüne hinter dem Pult (Pult als Vordergrund)
+    tiro: [840, 300]
+    tourist: [1040, 308]
+    touristin: [1100, 308]
+    philosoph: [480, 306]
+    brian: [590, 300]
+    strassenmusiker: [955, 304]
+  vordergrund:
+    heuhaufen: {bild: res://grafik/props/heuhaufen.png, pos: [900, 282], skala: 1.3}   # am Fuß der Adlersäule
+    muenzhut: {bild: res://grafik/props/muenzhut.png, pos: [990, 306], schatten: false}   # Hut des Straßenmusikers
+    rednerpult: {bild: res://grafik/props/rednerpult_vorn.png, rect: [730, 176, 56, 65], baseline: 240}
   alias:
     tonne_mit_max: tonne
     saeule_mit_max: hohe_saeule_mit_adler
@@ -222,20 +240,20 @@ agora:
     faecherwedler_im_thronsaal: faecherwedler
   ohne: [schilf, erde]          # Feigensetzling auf Schilf oder Erde: im Nil-Delta (skripte/welt_2.gd)
   hotspots:
-    saeulenhalle: {rect: [340, 80, 200, 160], gehe: [440, 304], name: Säulenhalle}
-    hohe_saeule_mit_adler: {rect: [880, 20, 40, 240], gehe: [900, 308], name: Säule mit Adler}
-    sandale_auf_der_saeule: {rect: [876, 8, 48, 20], gehe: [900, 308], name: Sandale}
-    heuhaufen: {rect: [856, 248, 88, 32], gehe: [900, 316], name: Heuhaufen}
-    venusstatue: {rect: [128, 128, 48, 144], gehe: [152, 308], name: Venusstatue}
-    rednerpult: {rect: [680, 220, 64, 60], gehe: [712, 316], name: Rednerpult}
-    marktstaende: {rect: [960, 160, 200, 100], gehe: [1060, 308], name: Marktstände}
-    tonne: {rect: [240, 248, 72, 48], gehe: [276, 320], name: Tonne}
-    menge: {rect: [600, 160, 220, 56], gehe: [710, 308], name: Menge}
-    latein_kritzelei: {rect: [1172, 172, 56, 32], gehe: [1200, 308], name: Latein-Kritzelei}
+    saeulenhalle: {rect: [345, 105, 265, 160], gehe: [480, 300], name: Säulenhalle}
+    hohe_saeule_mit_adler: {rect: [880, 10, 40, 230], gehe: [900, 305], name: Säule mit Adler}
+    sandale_auf_der_saeule: {rect: [870, 0, 62, 42], gehe: [900, 305], name: Sandale}
+    heuhaufen: {rect: [860, 250, 80, 30], gehe: [900, 310], name: Heuhaufen}
+    venusstatue: {rect: [255, 120, 60, 155], gehe: [290, 300], name: Venusstatue}
+    rednerpult: {rect: [675, 175, 150, 97], gehe: [750, 300], name: Rednerpult}
+    marktstaende: {rect: [935, 145, 190, 105], gehe: [1030, 305], name: Marktstände}
+    tonne: {rect: [425, 258, 110, 50], gehe: [480, 322], name: Tonne}
+    menge: {rect: [600, 180, 340, 60], gehe: [770, 300], name: Menge}
+    latein_kritzelei: {rect: [1125, 160, 60, 45], gehe: [1150, 300], name: Latein-Kritzelei}
   ausgaenge:
-    faehrsteg_olympia: {rect: [1240, 120, 36, 160], gehe: [1256, 320], id: weg_zum_faehrsteg, name: Weg zum Fährsteg}
-    stadion: {rect: [4, 100, 60, 180], gehe: [32, 320], id: bogen_zum_stadion, name: Bogen zum Stadion}
-    startbuero: {rect: [396, 180, 52, 100], gehe: [424, 304], id: tuer_zum_startbuero, name: Startbüro}
+    faehrsteg_olympia: {rect: [1236, 180, 44, 100], gehe: [1258, 305], id: weg_zum_faehrsteg, name: Weg zum Fährsteg}
+    stadion: {rect: [70, 80, 110, 190], gehe: [120, 300], id: bogen_zum_stadion, name: Bogen zum Stadion}
+    startbuero: {rect: [395, 175, 42, 85], gehe: [416, 290], id: tuer_zum_startbuero, name: Startbüro}
 
 startbuero:
   farbe: "#a89a7c"
@@ -247,8 +265,11 @@ startbuero:
     von_agora: [110, 250]
     hermes: [220, 290]
   figuren:
-    beamter_1: [320, 232]
-    beamter_2: [450, 236]
+    beamter_1: [255, 213]          # hinter dem linken Schalter (Schalter als Vordergrund)
+    beamter_2: [392, 214]          # hinter dem rechten Schalter
+  vordergrund:
+    schalter_links: {bild: res://grafik/props/schalter_links_vorn.png, rect: [200, 156, 108, 62], baseline: 216}
+    schalter_rechts: {bild: res://grafik/props/schalter_rechts_vorn.png, rect: [340, 156, 102, 63], baseline: 216}
   alias:
     beamter: beamter_2
     "2": beamter_2
@@ -267,35 +288,42 @@ startbuero:
 
 stadion:
   farbe: "#d6b46a"
-  laufbereich: [[8, 280], [1272, 280], [1272, 356], [8, 356]]
+  hintergrund: res://grafik/hintergruende/w2_bg_stadion_v01.png
+  hintergrund_nach:
+    R13: res://grafik/hintergruende/w2_bg_stadion_parade_v01.png      # Parade nach dem Finaltag, Glockenturm schief
+  tiefe: 0.8
+  laufbereich: [[8, 215], [1272, 215], [1272, 356], [8, 356]]
   marker:
-    start: [1184, 320]
-    von_agora: [1184, 320]
-    ramses: [780, 132]
-    wedler: [840, 132]
-    archimedes: [256, 304]
-    hermes: [920, 320]
-    cicero: [440, 304]
-    zeremonienmeister: [1040, 304]
-    aegypter: [700, 132]
+    start: [1200, 300]
+    von_agora: [1200, 300]
+    ramses: [740, 236]
+    wedler: [800, 236]
+    archimedes: [290, 265]
+    hermes: [420, 292]             # vor dem Kampfrichterzelt, nicht auf der Bahnbegrenzung
+    cicero: [560, 272]
+    zeremonienmeister: [880, 246]
+    aegypter: [660, 240]
   figuren:
-    leonidas: [800, 316]
-    schildkroete: [944, 336]
+    leonidas: [960, 300]
+    schildkroete: [1010, 322]
+  vordergrund:
+    aegypter_2: {bild: res://grafik/props/aegypter_2.png, pos: [615, 238], nach: R13}   # Menge bei der Parade
+    aegypter_3: {bild: res://grafik/props/aegypter_3.png, pos: [1030, 252], blick: links, nach: R13}
   alias:
     ramses_im_stadion: ramses
     wurfhebel_im_stadion: wurfhebel
     startlinie_mit_startpass: startlinie
   hotspots:
-    laufbahn: {rect: [80, 296, 1120, 24], gehe: [640, 332], name: Laufbahn}
-    sandgrube: {rect: [316, 248, 120, 32], gehe: [376, 312], name: Sandgrube}
-    kampfrichterzelt: {rect: [600, 196, 80, 64], gehe: [640, 308], name: Kampfrichterzelt}
-    zuschauerraenge: {rect: [0, 80, 1280, 64], gehe: [640, 308], name: Zuschauerränge}
-    glockenturm: {rect: [1136, 8, 32, 68], gehe: [1120, 308], name: Glockenturm}
-    siegerliste: {rect: [824, 180, 48, 60], gehe: [848, 308], name: Siegerliste}
-    startlinie: {rect: [1062, 320, 12, 32], gehe: [1064, 336], name: Startlinie}
-    wurfhebel: {rect: [132, 200, 72, 80], gehe: [176, 312], name: Wurfhebel}
+    laufbahn: {rect: [160, 300, 900, 24], gehe: [640, 312], name: Laufbahn}
+    sandgrube: {rect: [180, 205, 275, 40], gehe: [320, 280], name: Sandgrube}
+    kampfrichterzelt: {rect: [420, 125, 125, 100], gehe: [480, 280], name: Kampfrichterzelt}
+    zuschauerraenge: {rect: [60, 60, 1110, 100], gehe: [640, 280], name: Zuschauerränge}
+    glockenturm: {rect: [1195, 0, 50, 135], gehe: [1150, 280], name: Glockenturm}
+    siegerliste: {rect: [845, 135, 70, 50], gehe: [880, 270], name: Siegerliste}
+    startlinie: {rect: [1062, 200, 20, 160], gehe: [1050, 300], name: Startlinie}
+    wurfhebel: {rect: [88, 160, 110, 65], gehe: [150, 280], name: Wurfhebel}
   ausgaenge:
-    agora: {rect: [1240, 140, 36, 140], gehe: [1252, 320], id: ausgang_agora, name: Agora}
+    agora: {rect: [1235, 140, 45, 140], gehe: [1250, 290], id: ausgang_agora, name: Agora}
 
 hafen_syrakus:
   farbe: "#6f98b0"
@@ -309,7 +337,10 @@ hafen_syrakus:
     von_werkstatt: [580, 270]
     von_grabhuegel: [372, 240]
   figuren:
-    faehrmann: [100, 262]
+    faehrmann: [205, 258]          # neben dem Steg, die Fähre dahinter bleibt sichtbar
+  vordergrund:
+    faehre: {bild: res://grafik/props/krokodil_faehre.png, pos: [118, 178], skala: 0.75, schatten: false}
+    sanduhr: {bild: res://grafik/props/syrakus_sanduhr_vorn.png, rect: [56, 92, 44, 172], baseline: 262}   # Sanduhr und Tafel vor der Fähre
   alias:
     sanduhr: sanduhr_syrakus
     tintenfisch_aus_dem_netz: tintenfass
@@ -336,7 +367,9 @@ werkstatt:
     von_hafen_syrakus: [590, 310]
   figuren:
     archimedes: [300, 300]
-    hieron: [400, 310]
+    hieron: [520, 312]             # rechts, damit der Wurfhebel unter dem Fenster frei bleibt
+  vordergrund:
+    wurfhebel: {bild: res://grafik/props/wurfhebel.png, pos: [440, 272], skala: 0.7}   # unter dem Fenster
   alias:
     waage_mit_krone: waage
   hotspots:
