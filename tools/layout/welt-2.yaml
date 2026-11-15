@@ -123,7 +123,7 @@ palastkueche:
     start: [70, 290]
     von_thronsaal_ramses: [70, 290]
   figuren:
-    nebet: [300, 300]
+    nebet: [395, 285]              # bei den Ölkrügen, die sie bewacht; Schneidetisch mit Brot, Datteln, Zwiebel bleibt frei
   alias:
     oelkrug: oelkruege
     lehmofen: lehmoefen
@@ -209,13 +209,15 @@ agora:
     von_startbuero: [416, 300]
     abwurf: [900, 315]
   figuren:
-    cicero: [745, 262]
+    cicero: [762, 233]             # auf der Rednertribüne hinter dem Pult (Pult als Vordergrund)
     tiro: [840, 300]
     tourist: [1040, 308]
     touristin: [1100, 308]
     philosoph: [480, 306]
     brian: [590, 300]
     strassenmusiker: [955, 304]
+  vordergrund:
+    rednerpult: {bild: res://grafik/props/rednerpult_vorn.png, rect: [730, 176, 56, 65], baseline: 240}
   alias:
     tonne_mit_max: tonne
     saeule_mit_max: hohe_saeule_mit_adler
@@ -252,8 +254,11 @@ startbuero:
     von_agora: [110, 250]
     hermes: [220, 290]
   figuren:
-    beamter_1: [320, 232]
-    beamter_2: [450, 236]
+    beamter_1: [255, 213]          # hinter dem linken Schalter (Schalter als Vordergrund)
+    beamter_2: [392, 214]          # hinter dem rechten Schalter
+  vordergrund:
+    schalter_links: {bild: res://grafik/props/schalter_links_vorn.png, rect: [200, 156, 108, 62], baseline: 216}
+    schalter_rechts: {bild: res://grafik/props/schalter_rechts_vorn.png, rect: [340, 156, 102, 63], baseline: 216}
   alias:
     beamter: beamter_2
     "2": beamter_2
@@ -283,7 +288,7 @@ stadion:
     ramses: [740, 236]
     wedler: [800, 236]
     archimedes: [290, 265]
-    hermes: [1110, 282]
+    hermes: [420, 292]             # vor dem Kampfrichterzelt, nicht auf der Bahnbegrenzung
     cicero: [560, 272]
     zeremonienmeister: [880, 246]
     aegypter: [660, 240]

@@ -128,7 +128,7 @@ position = Vector2(800, 236)
 position = Vector2(290, 265)
 
 [node name="Hermes" parent="Markers" unique_id=683299800 instance=ExtResource("19_0si1o")]
-position = Vector2(1110, 282)
+position = Vector2(420, 292)
 
 [node name="Cicero" parent="Markers" unique_id=249143024 instance=ExtResource("20_avckm")]
 position = Vector2(560, 272)

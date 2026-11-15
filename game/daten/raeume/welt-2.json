@@ -1059,8 +1059,8 @@
      "id": "nebet",
      "script_name": "Nebet",
      "pos": [
-      300,
-      300
+      395,
+      285
      ]
     }
    ],
@@ -2119,6 +2119,18 @@
     ]
    },
    "tiefe": 0.85,
+   "vordergrund": {
+    "rednerpult": {
+     "bild": "res://grafik/props/rednerpult_vorn.png",
+     "rect": [
+      730,
+      176,
+      56,
+      65
+     ],
+     "baseline": 240
+    }
+   },
    "hintergrund_nach": {
     "R12": "res://grafik/hintergruende/w2_bg_agora_sandale_v01.png",
     "R13": "res://grafik/hintergruende/w2_bg_agora_ohne_arme_v01.png"
@@ -2128,8 +2140,8 @@
      "id": "cicero",
      "script_name": "Cicero",
      "pos": [
-      745,
-      262
+      762,
+      233
      ]
     },
     {
@@ -2698,21 +2710,43 @@
     ]
    },
    "tiefe": 0.8,
+   "vordergrund": {
+    "schalter_links": {
+     "bild": "res://grafik/props/schalter_links_vorn.png",
+     "rect": [
+      200,
+      156,
+      108,
+      62
+     ],
+     "baseline": 216
+    },
+    "schalter_rechts": {
+     "bild": "res://grafik/props/schalter_rechts_vorn.png",
+     "rect": [
+      340,
+      156,
+      102,
+      63
+     ],
+     "baseline": 216
+    }
+   },
    "figuren": [
     {
      "id": "beamter_1",
      "script_name": "Beamter1",
      "pos": [
-      320,
-      232
+      255,
+      213
      ]
     },
     {
      "id": "beamter_2",
      "script_name": "Beamter2",
      "pos": [
-      450,
-      236
+      392,
+      214
      ]
     }
    ],
@@ -3015,8 +3049,8 @@
      265
     ],
     "hermes": [
-     1110,
-     282
+     420,
+     292
     ],
     "cicero": [
      560,
