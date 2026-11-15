@@ -19,6 +19,8 @@ const TAKT := 0.25
 
 func _play_idle() -> void:
 	_takt_sichern()
+	if geste_laeuft:
+		return
 	if not _automatisch() or not animation_player or not animation_player.has_animation("stehen"):
 		super()
 	elif _sitzt or _abseits():
@@ -79,7 +81,12 @@ func _ruhe_takt() -> void:
 		if _sitzt:
 			_sitzt = false
 			if not is_moving:
-				_play_idle()
+				# Aufstehen aus dem Sitzen (gesten-regie.md): Das Nachlaufen wartet, bis die Geste
+				# vorbei ist (CQRaum._partner_folgen prüft geste_laeuft).
+				if hat_animation("aufstehen") and not gesten_aus() and not _abseits():
+					geste("aufstehen", false)
+				else:
+					_play_idle()
 		return
 	_warten += schritt
 	if not _sitzt and _warten >= SITZEN_NACH:
@@ -87,8 +94,15 @@ func _ruhe_takt() -> void:
 		_play_idle()
 
 
+## Warte-Gesten (CQGestenEinsatz.WARTEN: putzen, schwanz_zucken) nur im Sitzen.
+func warte_geste_erlaubt() -> bool:
+	return _automatisch() and (_sitzt or _abseits())
+
+
 ## Liegt Pixel (Bewegung „schlafen“), redet er im Liegen weiter statt kurz aufzustehen.
 func _play_talk() -> void:
+	if geste_laeuft:
+		return
 	if idle_animation == "schlafen":
 		play_animation("schlafen")
 	else:

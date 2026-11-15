@@ -39,6 +39,9 @@ func _ready() -> void:
 ## Plätze näher als 70 Pixel an Max lässt er aus (sonst stellt er sich auf ihn, Review Fund 2); er
 ## geht langsam (walk_speed 55) und wartet beim ersten Mal 25 Sekunden.
 const OPA_PLAETZE := [Vector2(460, 322), Vector2(520, 332), Vector2(325, 332)]
+## Vor P1 (Pixel liegt noch auf dem Kabel, die Werkbank ist frei) geht Opa auch zur Werkbank und
+## tüftelt dort 4 bis 8 Sekunden (Bewegung „werkbank“, gesten-regie.md, Vorschlag).
+const OPA_WERKBANK := Vector2(200, 300)
 const OPA_PAUSE_MIN := 12.0
 const OPA_PAUSE_MAX := 24.0
 
@@ -71,12 +74,20 @@ func _opa_umhergehen(delta: float) -> void:
 		return
 	_opa_ruhe = 0.0
 	_opa_pause = randf_range(OPA_PAUSE_MIN, OPA_PAUSE_MAX)
-	var plaetze := OPA_PLAETZE.filter(func(p: Vector2): return p.distance_to(C.Opa.position) > 30.0 and (not is_instance_valid(C.player) or absf(p.x - C.player.position.x) > 70.0))
+	var alle: Array = OPA_PLAETZE.duplicate()
+	if not Zustand.geloest("P1", "prolog") and zwischenspiel() == 0 and C.Opa.hat_animation("werkbank"):
+		alle.append(OPA_WERKBANK)
+	var plaetze := alle.filter(func(p: Vector2): return p.distance_to(C.Opa.position) > 30.0 and (not is_instance_valid(C.player) or absf(p.x - C.player.position.x) > 70.0))
 	if plaetze.is_empty():
 		return
 	_opa_geht = true
-	await C.Opa.walk_to(plaetze.pick_random())
+	var ziel: Vector2 = plaetze.pick_random()
+	await C.Opa.walk_to(ziel)
 	_opa_geht = false
+	if is_instance_valid(C.Opa) and ziel == OPA_WERKBANK and C.Opa.position.distance_to(ziel) < 4.0:
+		C.Opa.schauen_zu(ziel.x - 40.0)   # zur Werkbank
+		C.Opa.warte_geste("werkbank", randf_range(4.0, 8.0))
+		return
 	if is_instance_valid(C.Opa) and is_instance_valid(C.player) and C.Opa.has_method("schauen_zu"):
 		C.Opa.schauen_zu(C.player.global_position.x)
 
@@ -159,6 +170,27 @@ func _pixel_aufwecken(wach: bool) -> void:
 	_pixel_ruhe()
 
 
+## P1, P0_DACH_NAR_0290: Pixel wacht mit der Bewegung „aufwachen“ auf und steht danach auf allen
+## vieren („stehen“). Ohne die Bewegung (oder übersprungen) wie bisher überblendet.
+func _pixel_wacht_auf() -> void:
+	if _pixel_wach:
+		return
+	_pixel_wach = true
+	if has_character("Pixel") and C.Pixel is CQFigur and C.Pixel.hat_animation("aufwachen") 			and not CQFigur.gesten_aus():
+		await C.Pixel.geste("aufwachen", true, "stehen")
+		return
+	_pixel_ruhe()
+
+
+## P0_DACH_PIX_0364 („legt den Kopf wieder ab“): Pixel legt sich mit „hinlegen“ hin und schläft.
+func _pixel_legt_sich_hin() -> void:
+	_pixel_wach = false
+	if has_character("Pixel") and C.Pixel is CQFigur and C.Pixel.hat_animation("hinlegen") 			and not CQFigur.gesten_aus() and C.Pixel.hat_animation("schlafen"):
+		await C.Pixel.geste("hinlegen", true, "schlafen")
+		return
+	_pixel_ruhe()
+
+
 ## Pixel ist eine Figur für alle Räume: beim Gehen wieder stehend, sonst schläft er im nächsten Raum weiter.
 func _on_room_exited() -> void:
 	super()
@@ -227,8 +259,8 @@ func _nach_laden() -> void:
 func p1_wecken() -> void:
 	await Spiel.szene([Spiel.z("MAX", "P0_DACH_MAX_0285")])
 	Zustand.setze("P0_PIXEL_GEWECKT")
-	_pixel_aufwecken(true)  # Pixel wacht auf und steht
 	await Spiel.szene([
+		_pixel_wacht_auf,  # Pixel wacht auf und steht
 		Spiel.z("NAR", "P0_DACH_NAR_0290"),
 		Spiel.z("OPA", "P0_DACH_OPA_0300"),
 		Spiel.z("PIX", "P0_DACH_PIX_0310"),
@@ -239,6 +271,7 @@ func p1_wecken() -> void:
 		Spiel.z("PIX", "P0_DACH_PIX_0360"),
 		Spiel.z("MAX", "P0_DACH_MAX_0362"),
 		Spiel.z("PIX", "P0_DACH_PIX_0364"),
+		_pixel_legt_sich_hin,
 		Spiel.z("OPA", "P0_DACH_OPA_0366"),
 	])
 	_pixel_aufwecken(false)  # nichts aus dem Blech: er rollt sich wieder ein
@@ -254,6 +287,7 @@ func p1_loesen() -> void:
 		Zustand.setze("P0_PIXEL_GEWECKT")
 		schritte = [
 			Spiel.z("MAX", "P0_DACH_MAX_0285"),
+			_pixel_wacht_auf,
 			Spiel.z("NAR", "P0_DACH_NAR_0290"),
 			Spiel.z("OPA", "P0_DACH_OPA_0300"),
 			Spiel.z("PIX", "P0_DACH_PIX_0310"),
@@ -261,7 +295,8 @@ func p1_loesen() -> void:
 			Spiel.z("MAX", "P0_DACH_MAX_0330"),
 			Spiel.z("PIX", "P0_DACH_PIX_0340"),
 		]
-	_pixel_aufwecken(true)
+	if schritte.is_empty():
+		schritte = [_pixel_wacht_auf]   # schlief nach dem Blech wieder: hebt den Kopf zur Tasse
 	await Spiel.szene(schritte + [
 		Spiel.z("MAX", "P0_DACH_MAX_0367"),
 		Spiel.z("PIX", "P0_DACH_PIX_0368"),

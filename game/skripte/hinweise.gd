@@ -154,6 +154,8 @@ func pfote_geklickt() -> void:
 		await Spiel.sagen("PIX", vorher)
 		_pruef_takt = 1.0
 		return
+	# Verweist der Hinweis auf etwas in diesem Raum, zeigt Max darauf (Entscheidung 2)
+	Spiel.max_zeigt_auf(_schritt(schritt).get("objekte", []))
 	for z in naechste_zeilen(schritt):
 		await Spiel.sagen("PIX", z)
 	_pruef_takt = 1.0

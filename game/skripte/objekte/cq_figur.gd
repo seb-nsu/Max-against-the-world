@@ -35,7 +35,19 @@ func say(dialog: String, params: Variant = null) -> void:
 		schauen_zu(C.player.global_position.x)
 	if not Engine.is_editor_hint() and is_inside_tree() and not PopochiuUtils.e.cutscene_skipped:
 		_mund_schliessen(_satz_nr, redezeit(PopochiuUtils.e.translate(dialog, params)))
+	# Eine Warte-Geste (Kulisse) bricht ab, sobald die Figur spricht
+	if geste_laeuft and _geste_unterbrechbar:
+		geste_ende()
+	# Redegeste (rede_geste()): eine Bewegung statt talk, nur für diesen Satz
+	var talk_vorher := ""
+	if not _rede_ersatz.is_empty():
+		if hat_animation(_rede_ersatz) and not gesten_aus():
+			talk_vorher = talk_animation
+			talk_animation = _rede_ersatz
+		_rede_ersatz = ""
 	await super(dialog, params)
+	if not talk_vorher.is_empty():
+		talk_animation = talk_vorher
 
 
 ## Geschätzte Sprechdauer eines Satzes in Sekunden (BBCode zählt nicht mit).
@@ -118,6 +130,9 @@ func springen_zu(ziel: Vector2, bogen := 30.0, dauer := 0.42) -> void:
 		return
 	if bild:
 		schauen_zu(ziel.x)
+	if bild is Sprite2D and _echte_grafik and hat_animation("springen"):
+		await _springen_mit_bildern(ziel, bogen, dauer)
+		return
 	var start := position
 	var t := create_tween()
 	if bild:
@@ -144,12 +159,24 @@ func laufen_zu(ziel: Vector2, tempo := 70.0, anim := "walk") -> void:
 	if PopochiuUtils.e.cutscene_skipped or Spiel.testmodus or not is_inside_tree():
 		position = ziel
 		return
-	schauen_zu(ziel.x)
-	var ap := get_node_or_null("AnimationPlayer") as AnimationPlayer
-	if ap and ap.has_animation(anim):
-		ap.play(anim)
-	elif ap and ap.has_animation("walk"):
-		ap.play("walk")
+	# Gangart der Figur (walk_animation: Sondergänge wie „joggen“ oder „gehen“ der Ziegen), mit
+	# Richtung (walk_d nach vorn, walk_u nach hinten). Hat die Figur gar keinen Gang, gleitet sie
+	# nicht, sondern bleibt stehen (Entscheidung 16, gesten-regie-entscheidungen.md).
+	# anim: eigene Lauf-Animation für diesen Weg (Hermes „joggen“), sonst die Gangart der Figur
+	var wunsch := anim if anim != "walk" else walk_animation
+	var gang := wunsch if hat_animation(wunsch) else ("walk" if hat_animation("walk") else "")
+	if gang.is_empty() and _echte_grafik:
+		push_warning("%s hat keinen Gang (%s): bleibt stehen" % [script_name, wunsch])
+		return
+	if not gang.is_empty():
+		var vorher := walk_animation
+		walk_animation = gang
+		face_direction(ziel)
+		schauen_zu(ziel.x)
+		_play_walk(ziel)
+		walk_animation = vorher
+	else:
+		schauen_zu(ziel.x)
 	var t := create_tween()
 	t.tween_property(self, "position", ziel, maxf(0.2, position.distance_to(ziel) / tempo))
 	await t.finished
@@ -201,6 +228,9 @@ func blick_setzen(richtung: String) -> void:
 ## links spiegelt Popochiu. Der Fußpunkt liegt unten in der Bildmitte.
 ## variante: anderes Bild derselben Figur (etwa „pixel_ziege“ für Pixel im Ziegenfell).
 var grafik_variante := ""
+## Sondergänge, die bei Figuren ohne walk als Gang dienen (Hermes, Sobek an Land, Schildkröte,
+## Hofkater, Leonidas, Archimedes im Handtuch), in dieser Reihenfolge
+const ERSATZ_GAENGE := ["joggen", "kriechen", "laufen", "weggehen", "losrennen", "heureka"]
 
 
 func grafik_laden(variante := "") -> bool:
@@ -219,8 +249,11 @@ func grafik_laden(variante := "") -> bool:
 	for a: Dictionary in anims.values():
 		gesamt = maxi(gesamt, int(a.von) + int(a.bilder))
 	sprite.texture = load(bild)
-	sprite.hframes = gesamt
-	sprite.vframes = 1
+	# „spalten“ (optional): große Sheets liegen in mehreren Reihen (Texturgrenze 16384 px);
+	# die Bildnummern laufen zeilenweise weiter, die Animationen bleiben gleich
+	var spalten := int(daten.get("spalten", gesamt))
+	sprite.hframes = spalten
+	sprite.vframes = ceili(float(gesamt) / spalten)
 	sprite.frame = 0
 	sprite.centered = true
 	sprite.offset = Vector2(0, -float(daten.bild[1]) / 2.0)
@@ -234,17 +267,43 @@ func grafik_laden(variante := "") -> bool:
 		anim.track_set_path(spur, "Sprite2D:frame")
 		anim.value_track_set_update_mode(spur, Animation.UPDATE_DISCRETE)
 		var dauer := float(a.ms) / 1000.0
-		for i in int(a.bilder):
-			anim.track_insert_key(spur, i * dauer, int(a.von) + i)
-		anim.length = int(a.bilder) * dauer
+		# „folge“ (optional): Reihenfolge der gespeicherten Bilder; Wiederholungen halten eine Pose,
+		# ohne dass das Bild mehrfach im Sheet liegt
+		var folge: Array = a.get("folge", range(int(a.bilder)))
+		for i in folge.size():
+			anim.track_insert_key(spur, i * dauer, int(a.von) + int(folge[i]))
+		anim.length = folge.size() * dauer
 		anim.loop_mode = Animation.LOOP_LINEAR if a.get("schleife", true) else Animation.LOOP_NONE
 		lib.add_animation(name, anim)
+	# Nach vorn und nach hinten (gesten-regie.md, Gehvarianten): Popochiu sucht die Richtungsendungen
+	# vor dem Namen ohne Endung, darum braucht es dann auch walk_r und walk_l, sonst liefe die Figur
+	# seitwärts mit walk_d. Vorn und hinten gilt nur bei fast senkrechten Wegen (67,5 bis 112,5 Grad).
+	var richtungen := {"gehen_vorn": "walk_d", "gehen_hinten": "walk_u"}
+	for quelle: String in richtungen:
+		if lib.has_animation(quelle) and lib.has_animation("walk"):
+			lib.add_animation(richtungen[quelle], lib.get_animation(quelle))
+			for seite in ["walk_r", "walk_l"]:
+				if not lib.has_animation(seite):
+					lib.add_animation(seite, lib.get_animation("walk"))
+	# Hauptgang (Entscheidungen 8 und 16): Die neuen Gänge der Ziegen („gehen“) ersetzen walk; Figuren
+	# ohne walk laufen mit ihrer Sondergangart, damit auch Popochius Wegfindung einen Gang hat.
+	if lib.has_animation("gehen") and lib.has_animation("walk") and not lib.has_animation("gehen_vorn"):
+		lib.remove_animation("walk")
+		lib.add_animation("walk", lib.get_animation("gehen"))
+	if not lib.has_animation("walk"):
+		for ersatz in ERSATZ_GAENGE:
+			if lib.has_animation(ersatz):
+				lib.add_animation("walk", lib.get_animation(ersatz))
+				break
 	var player: AnimationPlayer = get_node("AnimationPlayer")
 	if player.has_animation_library(""):
 		player.remove_animation_library("")
 	player.add_animation_library("", lib)
 	grafik_variante = variante
 	_echte_grafik = true
+	_bild_lagen.clear()
+	geste_laeuft = false
+	geste_gehalten = false
 	_play_idle()
 	return true
 
@@ -344,6 +403,7 @@ func _on_item_used(item: PopochiuInventoryItem) -> void:
 	if e.is_empty():
 		await Spiel.ersatz()
 	else:
+		await Spiel.max_geste("benutzen", true, e.zeile)   # Gegenstand auf etwas (Entscheidung 2)
 		await Spiel.sagen_eintrag(e)
 
 
@@ -380,3 +440,298 @@ func _pixel_auf() -> void:
 		await Spiel.ersatz("PIX")
 	else:
 		await Spiel.wechsel_regel("pixel_figur")
+
+
+#region Gesten ######################################################################################
+## Einmalige Bewegungen aus dem Sprite-Sheet (docs/grafik/gesten-regie.md, Gemeinsame Mechanik).
+## geste() spielt eine Bewegung genau einen Durchgang und kehrt danach zur Ruhe zurück (oder zur
+## Redebewegung, wenn die Figur gerade spricht). Gewartet wird die Länge der Animation, nicht auf
+## animation_finished; so laufen auch Schleifen (Melken, Putzen) genau einen Durchgang. Solange eine
+## Geste läuft, lassen _play_idle() und _play_talk() sie in Ruhe; Laufen bricht sie ab.
+## Im Testmodus und in übersprungenen Szenen passiert nichts (feste Bilder für den Bildvergleich);
+## eine Bewegung, die die Figur nicht hat, wird still übergangen.
+## danach: "" = zurück zur Ruhe; GESTE_HALTEN = auf dem letzten Bild stehen bleiben, bis
+## geste_ende() kommt (Max liegt nach dem Fall); sonst der Name der neuen Ruhe-Bewegung
+## (idle_animation), etwa „schlafen“ nach „hinlegen“. Die neue Ruhe gilt auch, wenn die Geste
+## übersprungen wird.
+## ab_bild, bis_bild: nur ein Teil der Bewegung, gezählt in Bildern der Bewegung (0 = erstes Bild
+## im Sheet), etwa Max' Aufstehen vom Boden erst ab dem Sitzen.
+const GESTE_HALTEN := "<halten>"
+
+var geste_laeuft := false
+## Auf dem letzten Bild gehalten (GESTE_HALTEN); Spiel.szene() löst das am Ende der Szene
+var geste_gehalten := false
+var _geste_nr := 0
+var _geste_unterbrechbar := false
+var _rede_ersatz := ""
+
+
+## Gesten aus: Testmodus (Bildvergleich, Durchspieltests) oder übersprungene Szene.
+static func gesten_aus() -> bool:
+	return Spiel.testmodus or PopochiuUtils.e.cutscene_skipped
+
+
+func hat_animation(anim: String) -> bool:
+	var ap := get_node_or_null("AnimationPlayer") as AnimationPlayer
+	return ap != null and not anim.is_empty() and ap.has_animation(anim)
+
+
+func geste(anim: String, warten := true, danach := "", ab_bild := -1, bis_bild := -1) -> void:
+	await _geste_spielen(anim, -1.0, warten, danach, ab_bild, bis_bild)
+
+
+## Eine Schleife (Melken, Fußbad, Werkbank) für eine feste Zeit, danach Ruhe (oder danach, wie oben).
+func geste_halten(anim: String, sekunden: float, warten := true, danach := "") -> void:
+	await _geste_spielen(anim, sekunden, warten, danach)
+
+
+## Zufällige Warte-Geste (Kulisse, CQRaum): wie geste(), bricht aber ab, sobald die Figur spricht.
+## sekunden > 0: Schleife so lange halten.
+func warte_geste(anim: String, sekunden := -1.0) -> void:
+	await _geste_spielen(anim, sekunden, false, "")
+	if geste_laeuft:
+		_geste_unterbrechbar = true
+
+
+## Warte-Folge (Kulisse, CQRaum): mehrere Gesten nacheinander, etwa der Arbeitszyklus des Schmieds
+## (ins Feuer, Blasebalg, zum Amboss). Einträge sind Namen oder [Name, Sekunden] für gehaltene
+## Schleifen. Spricht die Figur, läuft sie los oder kommt eine andere Geste, bricht die Folge ab.
+func warte_folge(folge: Array) -> void:
+	for schritt in folge:
+		var anim: String = schritt[0] if schritt is Array else schritt
+		var sek: float = float(schritt[1]) if schritt is Array else -1.0
+		if is_talking or is_moving or not hat_animation(anim):
+			return
+		var nr := _geste_nr + 1
+		await _geste_spielen(anim, sek, false, "")
+		if _geste_nr != nr:
+			return
+		_geste_unterbrechbar = true
+		while geste_laeuft and _geste_nr == nr and is_inside_tree():
+			await get_tree().process_frame
+		if _geste_nr != nr or is_talking or is_moving:
+			return
+
+
+## Statt talk spielt beim nächsten Satz dieser Figur diese Bewegung (Opa „panik“).
+func rede_geste(anim: String) -> void:
+	_rede_ersatz = anim
+
+
+## Beendet eine gehaltene Geste (GESTE_HALTEN) oder bricht eine laufende ab.
+func geste_ende() -> void:
+	if not geste_laeuft:
+		return
+	_geste_nr += 1
+	geste_laeuft = false
+	geste_gehalten = false
+	_zur_ruhe()
+
+
+func _geste_spielen(anim: String, sekunden: float, warten: bool, danach: String,
+		ab_bild := -1, bis_bild := -1) -> void:
+	var neue_ruhe := not danach.is_empty() and danach != GESTE_HALTEN and hat_animation(danach)
+	if gesten_aus() or not is_inside_tree() or not _echte_grafik or not hat_animation(anim):
+		if neue_ruhe:
+			idle_animation = danach
+			if not geste_laeuft and not is_talking and not is_moving:
+				_play_idle()
+		return
+	var ap: AnimationPlayer = get_node("AnimationPlayer")
+	var a := ap.get_animation(anim)
+	var start := _bild_zeit(a, ab_bild, true)
+	var ende := a.length if bis_bild < 0 else _bild_zeit(a, bis_bild, false)
+	var dauer := sekunden if sekunden > 0.0 else maxf(0.05, ende - start)
+	_geste_nr += 1
+	var nr := _geste_nr
+	geste_laeuft = true
+	geste_gehalten = false
+	_geste_unterbrechbar = false
+	ap.play(anim)
+	ap.seek(start, true)
+	if warten:
+		await _geste_abwarten(nr, dauer, danach, ap)
+	else:
+		_geste_abwarten(nr, dauer, danach, ap)
+
+
+## Zeit des ersten (anfang) oder das Ende des letzten Schritts, der Bild nr der Bewegung zeigt.
+func _bild_zeit(a: Animation, nr: int, anfang: bool) -> float:
+	if nr < 0 or a.get_track_count() == 0 or a.track_get_key_count(0) == 0:
+		return 0.0 if anfang else a.length
+	var schluessel := a.track_get_key_count(0)
+	var erstes := 1 << 30
+	for k in schluessel:
+		erstes = mini(erstes, int(a.track_get_key_value(0, k)))
+	var schritt := a.length / schluessel
+	var treffer := -1
+	for k in schluessel:
+		if int(a.track_get_key_value(0, k)) == erstes + nr:
+			treffer = k
+			if anfang:
+				break
+	if treffer < 0:
+		return 0.0 if anfang else a.length
+	return a.track_get_key_time(0, treffer) + (0.0 if anfang else schritt)
+
+
+func _geste_abwarten(nr: int, dauer: float, danach: String, ap: AnimationPlayer) -> void:
+	var zeit := 0.0
+	while zeit < dauer:
+		await get_tree().process_frame
+		if nr != _geste_nr or not is_inside_tree():
+			return
+		if PopochiuUtils.e.cutscene_skipped:
+			break
+		zeit += get_process_delta_time()
+	if nr != _geste_nr:
+		return
+	if danach == GESTE_HALTEN:
+		ap.pause()   # letztes Bild bleibt, bis geste_ende() kommt
+		geste_gehalten = true
+		return
+	geste_laeuft = false
+	if not danach.is_empty() and hat_animation(danach):
+		idle_animation = danach
+	_zur_ruhe()
+
+
+func _zur_ruhe() -> void:
+	if not is_inside_tree() or is_moving:
+		return
+	if is_talking:
+		_play_talk()
+	else:
+		_play_idle()
+
+
+func _play_idle() -> void:
+	if geste_laeuft:
+		return
+	super()
+
+
+func _play_talk() -> void:
+	if geste_laeuft:
+		return
+	super()
+
+
+func _play_walk(target_pos: Vector2) -> void:
+	if geste_laeuft:
+		_geste_nr += 1
+		geste_laeuft = false
+		geste_gehalten = false
+	super(target_pos)
+
+
+## Nummer im Sheet von Bild nr der Bewegung anim (-1, wenn es die Bewegung nicht gibt).
+func sheet_bild(anim: String, nr: int) -> int:
+	if not hat_animation(anim):
+		return -1
+	var a := (get_node("AnimationPlayer") as AnimationPlayer).get_animation(anim)
+	var von := 1 << 30
+	for k in a.track_get_key_count(0):
+		von = mini(von, int(a.track_get_key_value(0, k)))
+	return von + nr
+
+
+## Letztes Bild der Bewegung (nach der Abspielfolge).
+func letztes_bild(anim: String) -> int:
+	if not hat_animation(anim):
+		return -1
+	var a := (get_node("AnimationPlayer") as AnimationPlayer).get_animation(anim)
+	return int(a.track_get_key_value(0, a.track_get_key_count(0) - 1))
+
+
+## Sekunden bis zum ersten Schritt, der Bild nr der Bewegung zeigt.
+func bild_zeit(anim: String, nr: int) -> float:
+	if not hat_animation(anim):
+		return 0.0
+	return _bild_zeit((get_node("AnimationPlayer") as AnimationPlayer).get_animation(anim), nr, true)
+
+
+## Waagrechter Versatz im Bild (nach Blickrichtung), um den die Figur in Sheet-Bild b gegenüber
+## Sheet-Bild a liegt: so lassen sich zwei Bewegungen aneinanderfügen, deren Posen im Sheet
+## verschieden ausgerichtet sind (Max liegt nach dem Fall anders als beim Aufstehen).
+func bild_versatz(a: int, b: int) -> float:
+	var sp := get_node("Sprite2D") as Sprite2D
+	return (bild_lage(b).x - bild_lage(a).x) * (-1.0 if sp.flip_h else 1.0)
+
+
+## Lage jedes Bilds im Sheet (Unterkante über dem Fußpunkt, waagrechte Mitte), für Sprünge mit
+## eingemalter Höhe. Einmal je Bild gemessen.
+var _bild_lagen := {}
+
+
+func bild_lage(bild_nr: int) -> Vector2:
+	return _bild_lage(bild_nr)
+
+
+func _bild_lage(bild_nr: int) -> Vector2:
+	if _bild_lagen.has(bild_nr):
+		return _bild_lagen[bild_nr]
+	var sp := get_node("Sprite2D") as Sprite2D
+	var lage := Vector2.ZERO
+	var img := sp.texture.get_image() if sp.texture else null
+	if img:
+		if img.is_compressed():
+			img.decompress()
+		var w := img.get_width() / sp.hframes
+		var h := img.get_height() / sp.vframes
+		var x0 := (bild_nr % sp.hframes) * w
+		var y0 := (bild_nr / sp.hframes) * h
+		var rect := img.get_region(Rect2i(x0, y0, w, h)).get_used_rect()
+		if rect.size.x > 0:
+			lage = Vector2(rect.position.x + rect.size.x / 2.0 - w / 2.0, h - rect.end.y)
+	_bild_lagen[bild_nr] = lage
+	return lage
+
+
+## Sprung mit den Bildern der Bewegung „springen“ (Pixel): Ducken und Aufrichten am Platz, in der
+## Luft die Flugbilder, Landung. Die Höhe und der Vorschub, die in den Flugbildern schon eingemalt
+## sind, werden herausgerechnet; die Flugbahn macht allein der Bogen (Entscheidung 13).
+func _springen_mit_bildern(ziel: Vector2, bogen: float, dauer: float) -> void:
+	var sp := get_node("Sprite2D") as Sprite2D
+	var ap := get_node("AnimationPlayer") as AnimationPlayer
+	var a := ap.get_animation("springen")
+	var von := 1 << 30
+	for k in a.track_get_key_count(0):
+		von = mini(von, int(a.track_get_key_value(0, k)))
+	_geste_nr += 1
+	var nr := _geste_nr
+	geste_laeuft = true
+	ap.stop()
+	var lage_vorher := sp.position
+	var bezug := _bild_lage(von)
+	var zeige := func(n: int):
+		var l := _bild_lage(von + n)
+		var dx := (l.x - bezug.x) * (-1.0 if not sp.flip_h else 1.0)
+		sp.frame = von + n
+		sp.position = lage_vorher + Vector2(dx, l.y - bezug.y)
+	var start := position
+	var spitze := minf(start.y, ziel.y) - bogen
+	var t := create_tween()
+	t.tween_callback(zeige.bind(1))      # ducken
+	t.tween_interval(0.12)
+	t.tween_callback(zeige.bind(3))      # abstoßen
+	t.tween_interval(0.08)
+	t.tween_callback(zeige.bind(4))
+	t.tween_method(func(k: float):
+		if k > 0.45 and sp.frame == von + 4:
+			zeige.call(5)
+		var x := lerpf(start.x, ziel.x, k)
+		var y := (1 - k) * (1 - k) * start.y + 2 * (1 - k) * k * (2 * spitze - (start.y + ziel.y) / 2.0) + k * k * ziel.y
+		position = Vector2(x, y)
+		sync_buffered_position(), 0.0, 1.0, dauer)
+	t.tween_callback(zeige.bind(6))      # Landung
+	t.tween_interval(0.1)
+	t.tween_callback(zeige.bind(0))
+	t.tween_interval(0.06)
+	await t.finished
+	sp.position = lage_vorher
+	if nr == _geste_nr:
+		geste_laeuft = false
+		_zur_ruhe()
+
+#endregion

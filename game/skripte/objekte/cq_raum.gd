@@ -89,6 +89,7 @@ func _process(_delta: float) -> void:
 		_effekte_bewegen(_delta)
 	if not Engine.is_editor_hint():
 		_partner_folgen(_delta)
+		_warte_gesten(_delta)
 	if bauplan().has("stufen") and not Engine.is_editor_hint():
 		stufen_anwenden()
 	if not _bedingte_teile.is_empty() or not _hg_wechsel.is_empty():
@@ -345,6 +346,8 @@ func _partner_folgen(delta: float) -> void:
 	var partner: PopochiuCharacter = C.get_character(sn)
 	if not is_instance_valid(partner) or partner.is_moving or partner.is_talking or C.player.is_talking:
 		return
+	if partner is CQFigur and partner.geste_laeuft:
+		return   # erst zu Ende gestikulieren (Pixel steht auf)
 	var abstand := partner.position.distance_to(C.player.position)
 	if abstand <= FOLGEN_AB:
 		return
@@ -564,6 +567,88 @@ func _zustand_anwenden() -> void:
 	if regeln:
 		regeln.figuren_anwenden(self)
 	Spiel.regel_wert("zustand_anwenden", self)  # Welt 2 ff.: Begleiter, Figuren, Props
+	ruhe_anwenden()
+
+
+## Ruhe-Schleifen aus CQGestenEinsatz.RUHE (Humbert poliert, Grimmzahn protestiert, solange R10
+## offen ist): idle_animation der Figur, solange die Bedingung gilt; danach wieder „idle“. Nur
+## Figuren mit Eintrag; was ein Raum selbst setzt (Pixel schläft), bleibt unberührt. Im Testmodus
+## nicht (feste Bilder für den Bildvergleich).
+func ruhe_anwenden() -> void:
+	if Engine.is_editor_hint() or Spiel.testmodus:
+		return
+	for c in get_characters():
+		if not c is CQFigur or not c.has_method("objekt_id"):
+			continue
+		var soll := CQGestenEinsatz.ruhe_fuer(c.objekt_id(), raum_id())
+		if soll.is_empty() or not c.hat_animation(soll):
+			soll = ""
+		var vorher: String = c.get_meta("ruhe_geste", "")
+		if soll == vorher:
+			continue
+		if not soll.is_empty():
+			c.idle_animation = soll
+			c.set_meta("ruhe_geste", soll)
+		else:
+			if c.idle_animation == vorher:
+				c.idle_animation = "idle"
+			c.remove_meta("ruhe_geste")
+		if not c.is_talking and not c.is_moving:
+			c._play_idle()
+
+
+## Zufällige Warte-Gesten aus CQGestenEinsatz.WARTEN. Je Figur ein eigener Abstand; gezählt wird nur,
+## solange nichts los ist: keine Szene, kein Gespräch, niemand redet, und frühestens
+## CQGestenEinsatz.NACH_SATZ Sekunden nach dem letzten Satz (dieselben Sperren wie Opas Umhergehen
+## im Dachboden). Höchstens eine Figur im Raum gestikuliert gleichzeitig. Im Testmodus nie.
+var _warte_rest := {}
+var _seit_satz := 0.0
+
+
+func _warte_gesten(delta: float) -> void:
+	if Spiel.testmodus or not is_instance_valid(C.player):
+		return
+	var redet := false
+	var laeuft := false
+	for c in get_characters():
+		if c.is_talking:
+			redet = true
+		if c is CQFigur and c.geste_laeuft:
+			laeuft = true
+	_seit_satz = 0.0 if redet else _seit_satz + delta
+	if redet or laeuft or not E.in_room or E.playing_queue or Spiel.in_szene > 0 			or is_instance_valid(D.current_dialog) or E.cutscene_skipped 			or _seit_satz < CQGestenEinsatz.NACH_SATZ:
+		return
+	for c in get_characters():
+		if not c is CQFigur or not c.visible or not c.is_inside_tree() or not c.has_method("objekt_id"):
+			continue
+		var e := CQGestenEinsatz.warten_fuer(c.objekt_id(), raum_id())
+		if e.is_empty():
+			_warte_rest.erase(c.script_name)
+			continue
+		var abstand: Array = e.get("abstand", CQGestenEinsatz.ABSTAND)
+		if not _warte_rest.has(c.script_name):
+			_warte_rest[c.script_name] = randf_range(abstand[0], abstand[1])
+			continue
+		_warte_rest[c.script_name] -= delta
+		if _warte_rest[c.script_name] > 0.0:
+			continue
+		if c.is_moving or c.is_talking:
+			continue
+		if c == C.player and Spiel.ruhe_zeit() < float(e.get("spieler_ruhe", 0.0)):
+			continue   # die Spielfigur wartet, bis der Spieler eine Weile nichts tut
+		if c.has_method("warte_geste_erlaubt") and not c.warte_geste_erlaubt():
+			continue
+		_warte_rest[c.script_name] = randf_range(abstand[0], abstand[1])
+		# Einträge sind Namen oder Folgen (Array: mehrere Gesten nacheinander, CQFigur.warte_folge)
+		var namen: Array = e.gesten.filter(func(g): return CQGestenEinsatz.folge_da(c, g))
+		if namen.is_empty():
+			continue
+		var g = namen.pick_random()
+		if g is Array:
+			c.warte_folge(g)
+		else:
+			c.warte_geste(g, randf_range(e.halten[0], e.halten[1]) if e.has("halten") else -1.0)
+		return
 
 
 ## Vor dem Einblenden (Figuren stellen). erster_besuch: Raum zum ersten Mal betreten.

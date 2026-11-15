@@ -1,7 +1,7 @@
 {
  "bild": [
-  142,
-  95
+  200,
+  97
  ],
  "animationen": {
   "idle": {
@@ -20,6 +20,38 @@
    "von": 8,
    "bilder": 12,
    "ms": 100,
+   "schleife": true
+  },
+  "drehen": {
+   "von": 20,
+   "bilder": 4,
+   "ms": 120,
+   "schleife": false,
+   "folge": [
+    0,
+    0,
+    0,
+    1,
+    1,
+    2,
+    2,
+    3,
+    3,
+    3,
+    3,
+    2,
+    2,
+    1,
+    1,
+    0,
+    0,
+    0
+   ]
+  },
+  "gehen": {
+   "von": 24,
+   "bilder": 8,
+   "ms": 110,
    "schleife": true
   }
  }

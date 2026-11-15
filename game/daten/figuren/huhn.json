@@ -1,7 +1,7 @@
 {
  "bild": [
   42,
-  36
+  37
  ],
  "animationen": {
   "idle": {
@@ -21,6 +21,28 @@
    "bilder": 4,
    "ms": 200,
    "schleife": true
+  },
+  "plustern": {
+   "von": 12,
+   "bilder": 3,
+   "ms": 140,
+   "schleife": true,
+   "folge": [
+    0,
+    0,
+    0,
+    0,
+    1,
+    1,
+    1,
+    1,
+    2,
+    2,
+    2,
+    2,
+    2,
+    1
+   ]
   }
  }
 }

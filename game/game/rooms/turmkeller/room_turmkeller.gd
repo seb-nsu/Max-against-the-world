@@ -32,8 +32,13 @@ func _zustand_anwenden() -> void:
 ## Besen an der Wand): gerade Route hin und her, Zickzack, Schleife. Eigene Sprites aus
 ## grafik/figuren/zauberbesen.png (Gehbilder), Fußpunkt auf der Route, Größe wie Figuren dort.
 const BESEN_BILD := "res://grafik/figuren/zauberbesen.png"
-const BESEN_ZELLE := Vector2(52, 104)
-const BESEN_GEHEN := [8, 9, 10, 11]
+const BESEN_DATEN := "res://daten/figuren/zauberbesen.json"
+## Zellgröße und Gehbilder kommen aus der JSON-Datei des Sheets (das Sheet wächst mit neuen Bewegungen)
+var _besen_zelle := Vector2(52, 104)
+var _besen_gehen: Array = [8, 9, 10, 11]
+var _besen_spur: Array = []
+var _besen_takt := {}
+var _besen_spalten := 0
 var _besen_zeit := 0.0
 ## Route → Zeitpunkt, ab dem ihr Besen zur Kammertür abbiegt (nach Pixels Haarspur, Review Fund 17)
 var _abbiegen := {}
@@ -58,6 +63,31 @@ func _besen_ort(n: int, t: float) -> Vector2:
 			return Vector2(478 + cos(w) * 80.0, 278 + sin(w) * 26.0)
 
 
+func _besen_daten_lesen() -> void:
+	if not FileAccess.file_exists(BESEN_DATEN):
+		return
+	var d: Variant = JSON.parse_string(FileAccess.get_file_as_string(BESEN_DATEN))
+	if typeof(d) != TYPE_DICTIONARY:
+		return
+	_besen_zelle = Vector2(float(d.bild[0]), float(d.bild[1]))
+	_besen_spalten = int(d.get("spalten", 0))
+	# Patrouille fegt (Bewegung „fegen“), ein Besen auf Pixels Haarspur jagt („haarspur“); ältere
+	# Pakete ohne diese Bewegungen nehmen walk (gesten-regie.md, Welt 1)
+	_besen_gehen = _bildfolge(d, "fegen" if d.animationen.has("fegen") else "walk")
+	_besen_spur = _bildfolge(d, "haarspur")
+	if _besen_spur.is_empty():
+		_besen_spur = _besen_gehen
+
+
+## Sheet-Bildnummern einer Bewegung in der Reihenfolge ihrer „folge“, dazu die Zeit je Bild.
+func _bildfolge(d: Dictionary, name: String) -> Array:
+	var a: Dictionary = d.animationen.get(name, {})
+	if a.is_empty():
+		return []
+	_besen_takt[name] = float(a.ms) / 1000.0
+	return Array(a.get("folge", range(int(a.bilder)))).map(func(i): return int(a.von) + int(i))
+
+
 func _patrouille_anpassen() -> void:
 	if Engine.is_editor_hint() or not has_node("Props"):
 		return
@@ -71,15 +101,17 @@ func _patrouille_anpassen() -> void:
 			continue
 		if sp:
 			continue
+		_besen_daten_lesen()
 		sp = Sprite2D.new()
 		sp.name = name
 		sp.texture = load(BESEN_BILD)
-		sp.hframes = int(sp.texture.get_width() / BESEN_ZELLE.x)
+		sp.hframes = _besen_spalten if _besen_spalten > 0 else int(sp.texture.get_width() / _besen_zelle.x)
+		sp.vframes = maxi(1, int(sp.texture.get_height() / _besen_zelle.y))
 		sp.centered = false
-		sp.offset = Vector2(-BESEN_ZELLE.x / 2.0, -BESEN_ZELLE.y)
+		sp.offset = Vector2(-_besen_zelle.x / 2.0, -_besen_zelle.y)
 		sp.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
 		get_node("Props").add_child(sp)
-		_schatten_unter(sp, BESEN_ZELLE.x * 0.8, 0.0)
+		_schatten_unter(sp, 42.0, 0.0)   # Breite des Besens selbst, nicht der Zelle
 
 
 func _process(delta: float) -> void:
@@ -109,7 +141,10 @@ func _process(delta: float) -> void:
 		sp.scale = Vector2(s, s)
 		if absf(ort.x - vorher.x) > 0.01:
 			sp.flip_h = ort.x < vorher.x
-		sp.frame = BESEN_GEHEN[int(_besen_zeit * 6.0 + n) % BESEN_GEHEN.size()]
+		var folge: Array = _besen_spur if _abbiegen.has(n) else _besen_gehen
+		var takt: float = _besen_takt.get("haarspur" if _abbiegen.has(n) else "fegen", 1.0 / 6.0)
+		if not folge.is_empty():
+			sp.frame = folge[int(_besen_zeit / takt + n) % folge.size()]
 
 
 ## Ankunft durch die Rune-Tür (TURM 0010–0040)
@@ -149,7 +184,51 @@ func kreuzung_max() -> void:
 ## Ein Besen erwischt Max und fegt ihn zur Treppe (0160, dann 0170 bzw. 0180).
 func gefegt() -> void:
 	var n := Zustand.ansehen_zaehlen("Turmkeller/gefegt")
+	await _besen_fegt_max()
 	await Spiel.sagen("NAR", "W1_TURM_NAR_0160")
 	await Spiel.sagen("PIX", "W1_TURM_PIX_0170" if n == 1 else "W1_TURM_PIX_0180")
 	if has_marker("VonBergwerk"):
 		C.Max.position = get_marker_position("VonBergwerk")
+
+
+## Bewegung „max_wegfegen“ (W1-B29): Max ist mit dem Besen im Bild gemalt. Für die Dauer der Bewegung
+## stehen Max und der nächste Patrouillen-Besen nicht da, das Bild liegt mit der Bildmitte auf Max'
+## Fußpunkt (dort steht Max auch im Sheet). Danach steht Max wie bisher an der Treppe.
+func _besen_fegt_max() -> void:
+	if CQFigur.gesten_aus() or not FileAccess.file_exists(BESEN_DATEN):
+		return
+	var d: Variant = JSON.parse_string(FileAccess.get_file_as_string(BESEN_DATEN))
+	if typeof(d) != TYPE_DICTIONARY or not d.animationen.has("max_wegfegen"):
+		return
+	var folge := _bildfolge(d, "max_wegfegen")
+	var takt: float = _besen_takt.get("max_wegfegen", 0.1)
+	var sp := Sprite2D.new()
+	sp.texture = load(BESEN_BILD)
+	var spalten := int(d.get("spalten", 0))
+	sp.hframes = spalten if spalten > 0 else int(sp.texture.get_width() / float(d.bild[0]))
+	sp.vframes = maxi(1, int(sp.texture.get_height() / float(d.bild[1])))
+	sp.centered = false
+	sp.offset = Vector2(-float(d.bild[0]) / 2.0, -float(d.bild[1]))
+	sp.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
+	sp.position = C.Max.position
+	sp.scale = C.Max.scale
+	sp.flip_h = C.Max.get_node("Sprite2D").flip_h
+	sp.z_index = C.Max.z_index
+	sp.y_sort_enabled = false
+	get_node("Props").add_child(sp)
+	var naechster: Sprite2D = null
+	for i in 3:
+		var b := get_node("Props").get_node_or_null("Patrouille_%d" % i) as Sprite2D
+		if b and (naechster == null or b.position.distance_to(C.Max.position) < naechster.position.distance_to(C.Max.position)):
+			naechster = b
+	if naechster:
+		naechster.visible = false
+	C.Max.visible = false
+	for f in folge:
+		sp.frame = f
+		await get_tree().create_timer(takt).timeout
+	sp.queue_free()
+	C.Max.visible = true
+	if naechster:
+		naechster.visible = true
+

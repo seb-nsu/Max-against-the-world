@@ -1,6 +1,6 @@
 {
  "bild": [
-  74,
+  80,
   63
  ],
  "animationen": {
@@ -21,6 +21,30 @@
    "bilder": 16,
    "ms": 66,
    "schleife": true
+  },
+  "putzen": {
+   "von": 24,
+   "bilder": 3,
+   "ms": 140,
+   "schleife": true,
+   "folge": [
+    0,
+    0,
+    0,
+    0,
+    1,
+    1,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    1,
+    1,
+    1,
+    1
+   ]
   }
  }
 }

@@ -1,7 +1,7 @@
 {
  "bild": [
-  94,
-  206
+  114,
+  209
  ],
  "animationen": {
   "idle": {
@@ -10,7 +10,7 @@
    "ms": 300,
    "schleife": true
   },
-  "talk": {
+  "talk_alt": {
    "von": 8,
    "bilder": 4,
    "ms": 140,
@@ -27,6 +27,61 @@
    "bilder": 8,
    "ms": 130,
    "schleife": true
+  },
+  "erklaeren": {
+   "von": 32,
+   "bilder": 6,
+   "ms": 150,
+   "schleife": true
+  },
+  "kopf_kratzen": {
+   "von": 38,
+   "bilder": 8,
+   "ms": 100,
+   "schleife": false,
+   "folge": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    2,
+    1,
+    0
+   ]
+  },
+  "panik": {
+   "von": 46,
+   "bilder": 12,
+   "ms": 80,
+   "schleife": true
+  },
+  "talk": {
+   "von": 58,
+   "bilder": 9,
+   "ms": 140,
+   "schleife": true
+  },
+  "werkbank": {
+   "von": 67,
+   "bilder": 5,
+   "ms": 120,
+   "schleife": true,
+   "folge": [
+    0,
+    1,
+    0,
+    1,
+    2,
+    3,
+    3,
+    3,
+    4,
+    1
+   ]
   }
  }
 }

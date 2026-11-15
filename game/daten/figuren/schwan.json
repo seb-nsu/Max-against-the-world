@@ -21,6 +21,32 @@
    "bilder": 4,
    "ms": 200,
    "schleife": true
+  },
+  "fauchen": {
+   "von": 12,
+   "bilder": 3,
+   "ms": 120,
+   "schleife": false,
+   "folge": [
+    0,
+    0,
+    1,
+    1,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    1,
+    1,
+    1,
+    1,
+    0,
+    0
+   ]
   }
  }
 }

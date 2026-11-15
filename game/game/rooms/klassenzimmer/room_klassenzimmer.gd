@@ -54,24 +54,32 @@ func _uebungsbesen_fliegt() -> void:
 	var daten: Dictionary = JSON.parse_string(FileAccess.get_file_as_string("res://daten/figuren/uebungsbesen.json"))
 	var sp := Sprite2D.new()
 	sp.texture = load(bild)
-	sp.hframes = int(sp.texture.get_width() / float(daten.bild[0]))
+	sp.hframes = int(daten.get("spalten", int(sp.texture.get_width() / float(daten.bild[0]))))
+	sp.vframes = maxi(1, int(sp.texture.get_height() / float(daten.bild[1])))
 	sp.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
 	sp.position = Vector2(-30, 250)
 	sp.scale = Vector2(0.9, 0.9)
 	get_node("Props").add_child(sp)
 	var walk: Dictionary = daten.animationen.get("walk", daten.animationen.get("idle"))
+	# Bewegung „jagen“ (W1-B28): Bild 2 ankippen, Bild 3 im Flug, Bild 4 der Aufprall am Schrank
+	var jagen: Dictionary = daten.animationen.get("jagen", {})
 	var t := create_tween()
 	t.tween_method(func(k: float):
 		sp.position = Vector2(lerpf(-30.0, 556.0, k), 250.0 - sin(k * PI * 3.0) * 14.0 - k * 40.0)
-		sp.frame = int(walk.von) + int(k * 24.0) % int(walk.bilder), 0.0, 1.0, 1.4)
+		if jagen.is_empty():
+			sp.frame = int(walk.von) + int(k * 24.0) % int(walk.bilder)
+		else:
+			sp.frame = int(jagen.von) + (2 if k < 0.12 else 3), 0.0, 1.0, 1.4)
+	if not jagen.is_empty():
+		t.tween_callback(func(): sp.frame = int(jagen.von) + 4)
+		t.tween_interval(0.45)
 	t.tween_property(sp, "modulate:a", 0.0, 0.25)
 	await t.finished
 	sp.queue_free()
 
 
-## Aus, bis die gemalten Schlüsselposen da sind (Sebastian, 14. November 2026: Alwin soll sich über
-## den Kessel beugen, die Handhaltung passt nicht)
-const RUEHREN_AN := false
+## Seit den gemalten Schlüsselposen an (Entscheidung 3, gesten-regie-entscheidungen.md)
+const RUEHREN_AN := true
 
 ## Alwin rührt im Stand im Kessel (Sebastian, 14. November 2026): Animation „ruehren“ (Hand und
 ## Kelle aus dem gemalten Sprite auf einer kleinen Kreisbahn, Skript alwin_ruehren.py).
@@ -79,7 +87,8 @@ func _zustand_anwenden() -> void:
 	super()
 	if has_character("Alwin") and not Engine.is_editor_hint():
 		var ap := C.Alwin.get_node("AnimationPlayer") as AnimationPlayer
-		if RUEHREN_AN and ap and ap.has_animation("ruehren"):
+		# Nicht im Testmodus: feste Bilder für den Bildvergleich
+		if RUEHREN_AN and ap and ap.has_animation("ruehren") and not Spiel.testmodus:
 			C.Alwin.idle_animation = "ruehren"
-			if not C.Alwin.is_talking and not Spiel.testmodus:
+			if not C.Alwin.is_talking:
 				C.Alwin._play_idle()

@@ -1,6 +1,6 @@
 {
  "bild": [
-  74,
+  114,
   121
  ],
  "animationen": {
@@ -10,7 +10,7 @@
    "ms": 320,
    "schleife": true
   },
-  "talk": {
+  "talk_alt": {
    "von": 4,
    "bilder": 4,
    "ms": 150,
@@ -21,6 +21,41 @@
    "bilder": 8,
    "ms": 40,
    "schleife": true
+  },
+  "pickel": {
+   "von": 16,
+   "bilder": 2,
+   "ms": 140,
+   "schleife": true,
+   "folge": [
+    0,
+    0,
+    0,
+    1,
+    1,
+    1
+   ]
+  },
+  "talk": {
+   "von": 18,
+   "bilder": 2,
+   "ms": 110,
+   "schleife": true,
+   "folge": [
+    0,
+    0,
+    0,
+    0,
+    1,
+    1,
+    1,
+    0,
+    0,
+    1,
+    1,
+    1,
+    1
+   ]
   }
  }
 }
