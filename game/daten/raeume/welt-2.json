@@ -2968,16 +2968,16 @@
     1280,
     360
    ],
-   "hintergrund": "res://grafik/platzhalter/raum_stadion.png",
+   "hintergrund": "res://grafik/hintergruende/w2_bg_stadion_v01.png",
    "farbe": "#d6b46a",
    "laufbereich": [
     [
      8,
-     280
+     215
     ],
     [
      1272,
-     280
+     215
     ],
     [
      1272,
@@ -2990,57 +2990,58 @@
    ],
    "marker": {
     "start": [
-     1184,
-     320
+     1200,
+     300
     ],
     "von_agora": [
-     1184,
-     320
+     1200,
+     300
     ],
     "ramses": [
-     780,
-     132
+     740,
+     236
     ],
     "wedler": [
-     840,
-     132
+     800,
+     236
     ],
     "archimedes": [
-     256,
-     304
+     290,
+     265
     ],
     "hermes": [
-     920,
-     320
+     1110,
+     282
     ],
     "cicero": [
-     440,
-     304
+     560,
+     272
     ],
     "zeremonienmeister": [
-     1040,
-     304
+     880,
+     246
     ],
     "aegypter": [
-     700,
-     132
+     660,
+     240
     ]
    },
+   "tiefe": 0.8,
    "figuren": [
     {
      "id": "leonidas",
      "script_name": "Leonidas",
      "pos": [
-      800,
-      316
+      960,
+      300
      ]
     },
     {
      "id": "schildkroete",
      "script_name": "Schildkroete",
      "pos": [
-      944,
-      336
+      1010,
+      322
      ]
     }
    ],
@@ -3050,14 +3051,14 @@
      "script_name": "Laufbahn",
      "name_key": "UI_OBJ_LAUFBAHN",
      "rect": [
-      80,
-      296,
-      1120,
+      160,
+      300,
+      900,
       24
      ],
      "gehe": [
       640,
-      332
+      312
      ],
      "ansehen": [
       {
@@ -3082,14 +3083,14 @@
      "script_name": "Sandgrube",
      "name_key": "UI_OBJ_SANDGRUBE",
      "rect": [
-      316,
-      248,
-      120,
-      32
+      180,
+      205,
+      275,
+      40
      ],
      "gehe": [
-      376,
-      312
+      320,
+      280
      ],
      "ansehen": [
       {
@@ -3114,14 +3115,14 @@
      "script_name": "Kampfrichterzelt",
      "name_key": "UI_OBJ_KAMPFRICHTERZELT",
      "rect": [
-      600,
-      196,
-      80,
-      64
+      420,
+      125,
+      125,
+      100
      ],
      "gehe": [
-      640,
-      308
+      480,
+      280
      ],
      "ansehen": [
       {
@@ -3147,14 +3148,14 @@
      "script_name": "Zuschauerraenge",
      "name_key": "UI_OBJ_ZUSCHAUERRAENGE",
      "rect": [
-      0,
-      80,
-      1280,
-      64
+      60,
+      60,
+      1110,
+      100
      ],
      "gehe": [
       640,
-      308
+      280
      ],
      "ansehen": [
       {
@@ -3180,14 +3181,14 @@
      "script_name": "Glockenturm",
      "name_key": "UI_OBJ_GLOCKENTURM",
      "rect": [
-      1136,
-      8,
-      32,
-      68
+      1195,
+      0,
+      50,
+      135
      ],
      "gehe": [
-      1120,
-      308
+      1150,
+      280
      ],
      "ansehen": [
       {
@@ -3231,14 +3232,14 @@
      "script_name": "Siegerliste",
      "name_key": "UI_OBJ_SIEGERLISTE",
      "rect": [
-      824,
-      180,
-      48,
-      60
+      845,
+      135,
+      70,
+      50
      ],
      "gehe": [
-      848,
-      308
+      880,
+      270
      ],
      "ansehen": [
       {
@@ -3265,13 +3266,13 @@
      "name_key": "UI_OBJ_STARTLINIE",
      "rect": [
       1062,
-      320,
-      12,
-      32
+      200,
+      20,
+      160
      ],
      "gehe": [
-      1064,
-      336
+      1050,
+      300
      ],
      "ansehen": [
       {
@@ -3334,14 +3335,14 @@
      "script_name": "Wurfhebel",
      "name_key": "UI_OBJ_WURFHEBEL",
      "rect": [
-      132,
-      200,
-      72,
-      80
+      88,
+      160,
+      110,
+      65
      ],
      "gehe": [
-      176,
-      312
+      150,
+      280
      ],
      "ansehen": [
       {
@@ -3372,14 +3373,14 @@
      "ziel": "agora",
      "name_key": "UI_OBJ_AUSGANG_AGORA",
      "rect": [
-      1240,
+      1235,
       140,
-      36,
+      45,
       140
      ],
      "gehe": [
-      1252,
-      320
+      1250,
+      290
      ],
      "erreichbar_ab": "R1",
      "ansehen": []

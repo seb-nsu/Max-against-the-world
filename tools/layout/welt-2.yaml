@@ -267,35 +267,37 @@ startbuero:
 
 stadion:
   farbe: "#d6b46a"
-  laufbereich: [[8, 280], [1272, 280], [1272, 356], [8, 356]]
+  hintergrund: res://grafik/hintergruende/w2_bg_stadion_v01.png
+  tiefe: 0.8
+  laufbereich: [[8, 215], [1272, 215], [1272, 356], [8, 356]]
   marker:
-    start: [1184, 320]
-    von_agora: [1184, 320]
-    ramses: [780, 132]
-    wedler: [840, 132]
-    archimedes: [256, 304]
-    hermes: [920, 320]
-    cicero: [440, 304]
-    zeremonienmeister: [1040, 304]
-    aegypter: [700, 132]
+    start: [1200, 300]
+    von_agora: [1200, 300]
+    ramses: [740, 236]
+    wedler: [800, 236]
+    archimedes: [290, 265]
+    hermes: [1110, 282]
+    cicero: [560, 272]
+    zeremonienmeister: [880, 246]
+    aegypter: [660, 240]
   figuren:
-    leonidas: [800, 316]
-    schildkroete: [944, 336]
+    leonidas: [960, 300]
+    schildkroete: [1010, 322]
   alias:
     ramses_im_stadion: ramses
     wurfhebel_im_stadion: wurfhebel
     startlinie_mit_startpass: startlinie
   hotspots:
-    laufbahn: {rect: [80, 296, 1120, 24], gehe: [640, 332], name: Laufbahn}
-    sandgrube: {rect: [316, 248, 120, 32], gehe: [376, 312], name: Sandgrube}
-    kampfrichterzelt: {rect: [600, 196, 80, 64], gehe: [640, 308], name: Kampfrichterzelt}
-    zuschauerraenge: {rect: [0, 80, 1280, 64], gehe: [640, 308], name: Zuschauerränge}
-    glockenturm: {rect: [1136, 8, 32, 68], gehe: [1120, 308], name: Glockenturm}
-    siegerliste: {rect: [824, 180, 48, 60], gehe: [848, 308], name: Siegerliste}
-    startlinie: {rect: [1062, 320, 12, 32], gehe: [1064, 336], name: Startlinie}
-    wurfhebel: {rect: [132, 200, 72, 80], gehe: [176, 312], name: Wurfhebel}
+    laufbahn: {rect: [160, 300, 900, 24], gehe: [640, 312], name: Laufbahn}
+    sandgrube: {rect: [180, 205, 275, 40], gehe: [320, 280], name: Sandgrube}
+    kampfrichterzelt: {rect: [420, 125, 125, 100], gehe: [480, 280], name: Kampfrichterzelt}
+    zuschauerraenge: {rect: [60, 60, 1110, 100], gehe: [640, 280], name: Zuschauerränge}
+    glockenturm: {rect: [1195, 0, 50, 135], gehe: [1150, 280], name: Glockenturm}
+    siegerliste: {rect: [845, 135, 70, 50], gehe: [880, 270], name: Siegerliste}
+    startlinie: {rect: [1062, 200, 20, 160], gehe: [1050, 300], name: Startlinie}
+    wurfhebel: {rect: [88, 160, 110, 65], gehe: [150, 280], name: Wurfhebel}
   ausgaenge:
-    agora: {rect: [1240, 140, 36, 140], gehe: [1252, 320], id: ausgang_agora, name: Agora}
+    agora: {rect: [1235, 140, 45, 140], gehe: [1250, 290], id: ausgang_agora, name: Agora}
 
 hafen_syrakus:
   farbe: "#6f98b0"
