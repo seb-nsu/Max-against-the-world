@@ -1,6 +1,6 @@
 {
  "bild": [
-  120,
+  180,
   198
  ],
  "animationen": {
@@ -22,8 +22,34 @@
    "ms": 58,
    "schleife": true
   },
-  "talk": {
+  "mustern": {
    "von": 16,
+   "bilder": 3,
+   "ms": 140,
+   "schleife": true,
+   "folge": [
+    0,
+    0,
+    0,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    0,
+    0,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  "talk": {
+   "von": 19,
    "bilder": 9,
    "ms": 140,
    "schleife": true

@@ -21,6 +21,12 @@
    "bilder": 4,
    "ms": 200,
    "schleife": true
+  },
+  "gehen": {
+   "von": 12,
+   "bilder": 8,
+   "ms": 110,
+   "schleife": true
   }
  }
 }

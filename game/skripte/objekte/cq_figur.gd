@@ -216,8 +216,11 @@ func grafik_laden(variante := "") -> bool:
 	for a: Dictionary in anims.values():
 		gesamt = maxi(gesamt, int(a.von) + int(a.bilder))
 	sprite.texture = load(bild)
-	sprite.hframes = gesamt
-	sprite.vframes = 1
+	# „spalten“ (optional): große Sheets liegen in mehreren Reihen (Texturgrenze 16384 px);
+	# die Bildnummern laufen zeilenweise weiter, die Animationen bleiben gleich
+	var spalten := int(daten.get("spalten", gesamt))
+	sprite.hframes = spalten
+	sprite.vframes = ceili(float(gesamt) / spalten)
 	sprite.frame = 0
 	sprite.centered = true
 	sprite.offset = Vector2(0, -float(daten.bild[1]) / 2.0)

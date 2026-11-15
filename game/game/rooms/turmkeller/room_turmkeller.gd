@@ -32,8 +32,11 @@ func _zustand_anwenden() -> void:
 ## Besen an der Wand): gerade Route hin und her, Zickzack, Schleife. Eigene Sprites aus
 ## grafik/figuren/zauberbesen.png (Gehbilder), Fußpunkt auf der Route, Größe wie Figuren dort.
 const BESEN_BILD := "res://grafik/figuren/zauberbesen.png"
-const BESEN_ZELLE := Vector2(52, 104)
-const BESEN_GEHEN := [8, 9, 10, 11]
+const BESEN_DATEN := "res://daten/figuren/zauberbesen.json"
+## Zellgröße und Gehbilder kommen aus der JSON-Datei des Sheets (das Sheet wächst mit neuen Bewegungen)
+var _besen_zelle := Vector2(52, 104)
+var _besen_gehen: Array = [8, 9, 10, 11]
+var _besen_spalten := 0
 var _besen_zeit := 0.0
 ## Route → Zeitpunkt, ab dem ihr Besen zur Kammertür abbiegt (nach Pixels Haarspur, Review Fund 17)
 var _abbiegen := {}
@@ -58,6 +61,19 @@ func _besen_ort(n: int, t: float) -> Vector2:
 			return Vector2(478 + cos(w) * 80.0, 278 + sin(w) * 26.0)
 
 
+func _besen_daten_lesen() -> void:
+	if not FileAccess.file_exists(BESEN_DATEN):
+		return
+	var d: Variant = JSON.parse_string(FileAccess.get_file_as_string(BESEN_DATEN))
+	if typeof(d) != TYPE_DICTIONARY:
+		return
+	_besen_zelle = Vector2(float(d.bild[0]), float(d.bild[1]))
+	_besen_spalten = int(d.get("spalten", 0))
+	var walk: Dictionary = d.animationen.get("walk", {})
+	if not walk.is_empty():
+		_besen_gehen = range(int(walk.von), int(walk.von) + int(walk.bilder))
+
+
 func _patrouille_anpassen() -> void:
 	if Engine.is_editor_hint() or not has_node("Props"):
 		return
@@ -71,15 +87,17 @@ func _patrouille_anpassen() -> void:
 			continue
 		if sp:
 			continue
+		_besen_daten_lesen()
 		sp = Sprite2D.new()
 		sp.name = name
 		sp.texture = load(BESEN_BILD)
-		sp.hframes = int(sp.texture.get_width() / BESEN_ZELLE.x)
+		sp.hframes = _besen_spalten if _besen_spalten > 0 else int(sp.texture.get_width() / _besen_zelle.x)
+		sp.vframes = maxi(1, int(sp.texture.get_height() / _besen_zelle.y))
 		sp.centered = false
-		sp.offset = Vector2(-BESEN_ZELLE.x / 2.0, -BESEN_ZELLE.y)
+		sp.offset = Vector2(-_besen_zelle.x / 2.0, -_besen_zelle.y)
 		sp.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
 		get_node("Props").add_child(sp)
-		_schatten_unter(sp, BESEN_ZELLE.x * 0.8, 0.0)
+		_schatten_unter(sp, 42.0, 0.0)   # Breite des Besens selbst, nicht der Zelle
 
 
 func _process(delta: float) -> void:
@@ -109,7 +127,7 @@ func _process(delta: float) -> void:
 		sp.scale = Vector2(s, s)
 		if absf(ort.x - vorher.x) > 0.01:
 			sp.flip_h = ort.x < vorher.x
-		sp.frame = BESEN_GEHEN[int(_besen_zeit * 6.0 + n) % BESEN_GEHEN.size()]
+		sp.frame = _besen_gehen[int(_besen_zeit * 6.0 + n) % _besen_gehen.size()]
 
 
 ## Ankunft durch die Rune-Tür (TURM 0010–0040)

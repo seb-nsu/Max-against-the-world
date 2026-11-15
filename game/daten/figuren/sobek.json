@@ -1,20 +1,69 @@
 {
  "bild": [
-  100,
+  122,
   36
  ],
  "animationen": {
-  "idle": {
+  "idle_alt": {
    "von": 0,
    "bilder": 4,
    "ms": 320,
    "schleife": true
   },
-  "talk": {
+  "talk_alt": {
    "von": 4,
    "bilder": 4,
    "ms": 150,
    "schleife": true
+  },
+  "faehre_ziehen": {
+   "von": 8,
+   "bilder": 7,
+   "ms": 110,
+   "schleife": true
+  },
+  "talk": {
+   "von": 15,
+   "bilder": 3,
+   "ms": 150,
+   "schleife": true,
+   "folge": [
+    0,
+    0,
+    1,
+    1,
+    1,
+    0,
+    2,
+    2,
+    2,
+    0
+   ]
+  },
+  "idle": {
+   "von": 18,
+   "bilder": 6,
+   "ms": 120,
+   "schleife": true,
+   "folge": [
+    0,
+    0,
+    0,
+    1,
+    1,
+    2,
+    2,
+    2,
+    1,
+    0,
+    0,
+    3,
+    3,
+    4,
+    4,
+    5,
+    5
+   ]
   }
  }
 }

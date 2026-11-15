@@ -22,8 +22,32 @@
    "ms": 45,
    "schleife": true
   },
-  "talk": {
+  "kochbuch": {
    "von": 16,
+   "bilder": 6,
+   "ms": 120,
+   "schleife": true,
+   "folge": [
+    0,
+    0,
+    0,
+    1,
+    1,
+    1,
+    2,
+    2,
+    2,
+    3,
+    3,
+    4,
+    4,
+    4,
+    5,
+    5
+   ]
+  },
+  "talk": {
+   "von": 22,
    "bilder": 8,
    "ms": 150,
    "schleife": true,
@@ -41,7 +65,7 @@
    ]
   },
   "ruehren": {
-   "von": 24,
+   "von": 30,
    "bilder": 8,
    "ms": 140,
    "schleife": true
