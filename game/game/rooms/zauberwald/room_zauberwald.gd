@@ -47,6 +47,7 @@ func r7_szene() -> void:
 		Spiel.z("WAL", "W1_WALD_WAL_0480"),
 		Spiel.z("WAL", "W1_WALD_WAL_0490"),
 		Spiel.z("WAL", "W1_WALD_WAL_0500"),
+		_rosen_gehen_auf,
 		Spiel.z("NAR", "W1_WALD_NAR_0510"),
 		Spiel.z("MAX", "W1_WALD_MAX_0520"),
 		Zustand.loese.bind("R7"),
@@ -60,3 +61,10 @@ func r7_szene() -> void:
 	])
 	Zustand.loese("R7")
 	Spiel.figur_hier("Waldemar", false)
+
+
+## Die Rosen öffnen sich eine nach der anderen, eine rosa Pollenwolke steigt auf (W1-B11, gemalte
+## Bildfolge über dem Busch niesrosen_zu; danach zeigt R7 den offenen Busch). Läuft neben der
+## Erzählzeile 0510 her.
+func _rosen_gehen_auf() -> void:
+	CQEffekte.bildfolge(self, "res://grafik/ambiente/effekt_niesrosen.png", 6, Vector2(714, 256), 4.0, 50, 0.6)

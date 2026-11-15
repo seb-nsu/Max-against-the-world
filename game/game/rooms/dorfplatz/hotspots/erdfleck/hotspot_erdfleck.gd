@@ -50,11 +50,22 @@ func _r8_setzen() -> void:
 	await _ranke_waechst()
 
 
+const RANKE_EFFEKT := "res://grafik/ambiente/effekt_bohnenranke.png"
+
+
 ## Die Bohnenranke wächst sichtbar aus dem Erdfleck in den Himmel (Review P15: erschien bisher
 ## einfach), mit kurzem Wackeln der Kamera.
 func _ranke_waechst() -> void:
 	var ranke := room.get_node_or_null("Props/Vordergrund_bohnenranke") as Sprite2D
 	if not ranke or Spiel.testmodus or E.cutscene_skipped:
+		return
+	# Gemalte Bildfolge (W1-B10): aus dem Erdfleck wächst die Ranke, das letzte Bild ist die Ranke selbst
+	if ResourceLoader.exists(RANKE_EFFEKT):
+		var fuss := ranke.position + Vector2(ranke.texture.get_width() * ranke.scale.x / 2.0, 0)
+		ranke.visible = false
+		CQEffekte.wackeln(0.8, 1.6)
+		await CQEffekte.bildfolge(room, RANKE_EFFEKT, 10, fuss, 6.0, 0, 0.0)
+		ranke.visible = true
 		return
 	var unten := ranke.position.y
 	var ziel_skala := ranke.scale

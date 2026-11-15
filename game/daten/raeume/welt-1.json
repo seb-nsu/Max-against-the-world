@@ -199,6 +199,56 @@
      "schatten": false
     }
    },
+   "effekte": [
+    {
+     "art": "bild",
+     "bild": "res://grafik/ambiente/huhn.png",
+     "bilder": 6,
+     "pos": [
+      332,
+      262
+     ],
+     "fps": 6
+    },
+    {
+     "art": "bild",
+     "bild": "res://grafik/ambiente/schmetterling.png",
+     "bilder": 4,
+     "weg": [
+      [
+       1150,
+       205
+      ],
+      [
+       1188,
+       182
+      ],
+      [
+       1232,
+       210
+      ],
+      [
+       1204,
+       232
+      ],
+      [
+       1162,
+       220
+      ],
+      [
+       1150,
+       205
+      ]
+     ],
+     "tempo": 14,
+     "fps": 10,
+     "baseline": 240,
+     "pause": [
+      3,
+      8
+     ]
+    }
+   ],
    "figuren": [
     {
      "id": "toadi",
@@ -1088,12 +1138,24 @@
      ]
     },
     {
-     "art": "dampf",
+     "art": "bild",
+     "bild": "res://grafik/ambiente/kaminfeuer.png",
+     "bilder": 7,
      "pos": [
-      224,
-      136
+      482,
+      212
      ],
-     "breite": 24
+     "fps": 8
+    },
+    {
+     "art": "bild",
+     "bild": "res://grafik/ambiente/fondue.png",
+     "bilder": 6,
+     "pos": [
+      214,
+      142
+     ],
+     "fps": 6
     }
    ],
    "figuren": [
@@ -1979,6 +2041,16 @@
       14,
       16
      ]
+    },
+    {
+     "art": "bild",
+     "bild": "res://grafik/ambiente/esse.png",
+     "bilder": 8,
+     "pos": [
+      150,
+      186
+     ],
+     "fps": 8
     }
    ],
    "figuren": [
@@ -2298,6 +2370,23 @@
     ]
    },
    "tiefe": 0.8,
+   "effekte": [
+    {
+     "art": "bild",
+     "bild": "res://grafik/ambiente/schachtel.png",
+     "bilder": 6,
+     "pos": [
+      170,
+      86
+     ],
+     "fps": 8,
+     "ablauf": "einmalig",
+     "pause": [
+      12,
+      30
+     ]
+    }
+   ],
    "figuren": [
     {
      "id": "stabmacher",
@@ -2906,24 +2995,6 @@
    },
    "effekte": [
     {
-     "art": "blasen",
-     "pos": [
-      196,
-      168
-     ],
-     "breite": 40,
-     "farbe": "#b6f2a0"
-    },
-    {
-     "art": "dampf",
-     "pos": [
-      196,
-      160
-     ],
-     "breite": 36,
-     "farbe": "#d8f5d0"
-    },
-    {
      "art": "flackern",
      "pos": [
       195,
@@ -2933,6 +3004,27 @@
       20,
       7
      ]
+    },
+    {
+     "art": "bild",
+     "bild": "res://grafik/ambiente/kessel.png",
+     "bilder": 7,
+     "pos": [
+      196,
+      182
+     ],
+     "fps": 7,
+     "deckung": 0.7
+    },
+    {
+     "art": "bild",
+     "bild": "res://grafik/ambiente/kessel_feuer.png",
+     "bilder": 7,
+     "pos": [
+      195,
+      230
+     ],
+     "fps": 9
     }
    ],
    "figuren": [
@@ -3624,6 +3716,69 @@
       170,
       55
      ]
+    },
+    {
+     "art": "bild",
+     "bild": "res://grafik/ambiente/fisch.png",
+     "bilder": 6,
+     "orte": [
+      [
+       300,
+       338
+      ],
+      [
+       340,
+       322
+      ],
+      [
+       282,
+       350
+      ]
+     ],
+     "fps": 9,
+     "ablauf": "einmalig",
+     "pause": [
+      8,
+      22
+     ]
+    },
+    {
+     "art": "bild",
+     "bild": "res://grafik/ambiente/schmetterling.png",
+     "bilder": 4,
+     "weg": [
+      [
+       12,
+       262
+      ],
+      [
+       48,
+       238
+      ],
+      [
+       86,
+       262
+      ],
+      [
+       60,
+       300
+      ],
+      [
+       24,
+       286
+      ],
+      [
+       12,
+       262
+      ]
+     ],
+     "tempo": 14,
+     "fps": 10,
+     "baseline": 300,
+     "pause": [
+      2,
+      6
+     ]
     }
    ],
    "figuren": [
@@ -4105,6 +4260,58 @@
    },
    "tiefe": 0.4,
    "skala": 0.85,
+   "effekte": [
+    {
+     "art": "bild",
+     "bild": "res://grafik/ambiente/ente.png",
+     "bilder": 6,
+     "weg": [
+      [
+       470,
+       214
+      ],
+      [
+       628,
+       222
+      ]
+     ],
+     "tempo": 6,
+     "ausblenden": 12,
+     "zurueck": true,
+     "fps": 6,
+     "pause": [
+      6,
+      18
+     ]
+    },
+    {
+     "art": "bild",
+     "bild": "res://grafik/ambiente/wimpel.png",
+     "bilder": 8,
+     "pos": [
+      262,
+      126
+     ],
+     "fps": 8
+    },
+    {
+     "art": "bild",
+     "bild": "res://grafik/ambiente/glitzern.png",
+     "bilder": 6,
+     "bereich": [
+      455,
+      175,
+      175,
+      50
+     ],
+     "fps": 10,
+     "ablauf": "einmalig",
+     "pause": [
+      1,
+      4
+     ]
+    }
+   ],
    "figuren": [
     {
      "id": "schwan",
@@ -4528,6 +4735,38 @@
      ],
      "farbe": "#9ff0ff",
      "takt": 3.1
+    }
+   ],
+   "effekte": [
+    {
+     "art": "bild",
+     "bild": "res://grafik/ambiente/eule.png",
+     "bilder": 6,
+     "pos": [
+      246,
+      146
+     ],
+     "fps": 5,
+     "ablauf": "einmalig",
+     "pause": [
+      15,
+      40
+     ]
+    },
+    {
+     "art": "bild",
+     "bild": "res://grafik/ambiente/eichhoernchen.png",
+     "bilder": 6,
+     "pos": [
+      418,
+      176
+     ],
+     "fps": 5,
+     "ablauf": "einmalig",
+     "pause": [
+      20,
+      45
+     ]
     }
    ],
    "figuren": [
@@ -5101,6 +5340,55 @@
     ]
    },
    "tiefe": 0.6,
+   "effekte": [
+    {
+     "art": "bild",
+     "bild": "res://grafik/ambiente/wimpel.png",
+     "bilder": 8,
+     "pos": [
+      607,
+      87
+     ],
+     "fps": 8
+    },
+    {
+     "art": "bild",
+     "bild": "res://grafik/ambiente/wimpel.png",
+     "bilder": 8,
+     "pos": [
+      567,
+      42
+     ],
+     "fps": 7
+    },
+    {
+     "art": "bild",
+     "bild": "res://grafik/ambiente/brunnen.png",
+     "bilder": 5,
+     "pos": [
+      397,
+      214
+     ],
+     "fps": 6
+    },
+    {
+     "art": "bild",
+     "bild": "res://grafik/ambiente/glitzern.png",
+     "bilder": 6,
+     "bereich": [
+      1112,
+      112,
+      22,
+      42
+     ],
+     "fps": 10,
+     "ablauf": "einmalig",
+     "pause": [
+      2,
+      7
+     ]
+    }
+   ],
    "figuren": [
     {
      "id": "maklerin",
@@ -5492,6 +5780,81 @@
     }
    },
    "licht": "#c8b4a8",
+   "effekte": [
+    {
+     "art": "bild",
+     "bild": "res://grafik/ambiente/fackel_klein.png",
+     "bilder": 8,
+     "pos": [
+      403,
+      112
+     ],
+     "fps": 9
+    },
+    {
+     "art": "bild",
+     "bild": "res://grafik/ambiente/fackel_klein.png",
+     "bilder": 8,
+     "pos": [
+      628,
+      112
+     ],
+     "fps": 8
+    },
+    {
+     "art": "bild",
+     "bild": "res://grafik/ambiente/fackel_klein.png",
+     "bilder": 8,
+     "pos": [
+      853,
+      112
+     ],
+     "fps": 10
+    },
+    {
+     "art": "bild",
+     "bild": "res://grafik/ambiente/steinchen.png",
+     "bilder": 6,
+     "orte": [
+      [
+       560,
+       222
+      ],
+      [
+       470,
+       224
+      ]
+     ],
+     "fps": 7,
+     "ablauf": "einmalig",
+     "pause": [
+      15,
+      35
+     ]
+    },
+    {
+     "art": "bild",
+     "bild": "res://grafik/ambiente/lore.png",
+     "bilder": 6,
+     "weg": [
+      [
+       192,
+       242
+      ],
+      [
+       40,
+       228
+      ]
+     ],
+     "tempo": 22,
+     "ausblenden": 25,
+     "fps": 10,
+     "pause": [
+      25,
+      50
+     ]
+    }
+   ],
    "figuren": [
     {
      "id": "grimmzahn",
@@ -5989,6 +6352,46 @@
       9,
       11
      ]
+    },
+    {
+     "art": "bild",
+     "bild": "res://grafik/ambiente/fackel.png",
+     "bilder": 8,
+     "pos": [
+      163,
+      93
+     ],
+     "fps": 9
+    },
+    {
+     "art": "bild",
+     "bild": "res://grafik/ambiente/fackel.png",
+     "bilder": 8,
+     "pos": [
+      200,
+      93
+     ],
+     "fps": 8
+    },
+    {
+     "art": "bild",
+     "bild": "res://grafik/ambiente/fackel.png",
+     "bilder": 8,
+     "pos": [
+      445,
+      93
+     ],
+     "fps": 10
+    },
+    {
+     "art": "bild",
+     "bild": "res://grafik/ambiente/fackel.png",
+     "bilder": 8,
+     "pos": [
+      623,
+      95
+     ],
+     "fps": 9
     }
    ],
    "hintergrund_nach": {
@@ -6394,6 +6797,18 @@
     ]
    },
    "tiefe": 0.75,
+   "effekte": [
+    {
+     "art": "bild",
+     "bild": "res://grafik/ambiente/fackel.png",
+     "bilder": 8,
+     "pos": [
+      493,
+      104
+     ],
+     "fps": 9
+    }
+   ],
    "figuren": [],
    "hotspots": [
     {
@@ -6526,6 +6941,35 @@
     }
    },
    "licht": "#c8c0dc",
+   "effekte": [
+    {
+     "art": "bild",
+     "bild": "res://grafik/ambiente/fackel.png",
+     "bilder": 8,
+     "pos": [
+      93,
+      90
+     ],
+     "fps": 9
+    },
+    {
+     "art": "bild",
+     "bild": "res://grafik/ambiente/glitzern.png",
+     "bilder": 6,
+     "bereich": [
+      280,
+      165,
+      95,
+      45
+     ],
+     "fps": 10,
+     "ablauf": "einmalig",
+     "pause": [
+      1,
+      4
+     ]
+    }
+   ],
    "hintergrund_nach": {
     "R12": "res://grafik/hintergruende/w1_bg_abstellkammern_aufgeraeumt_v01.png"
    },
@@ -7113,6 +7557,28 @@
     }
    },
    "licht": "#bcb4d4",
+   "effekte": [
+    {
+     "art": "bild",
+     "bild": "res://grafik/ambiente/fackel_thron.png",
+     "bilder": 8,
+     "pos": [
+      30,
+      70
+     ],
+     "fps": 9
+    },
+    {
+     "art": "bild",
+     "bild": "res://grafik/ambiente/fackel_thron.png",
+     "bilder": 8,
+     "pos": [
+      127,
+      97
+     ],
+     "fps": 8
+    }
+   ],
    "figuren": [
     {
      "id": "moderwort",

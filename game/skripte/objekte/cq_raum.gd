@@ -364,6 +364,14 @@ func _partner_folgen(delta: float) -> void:
 ## {art: flackern, pos, r: [rx, ry]} Feuer, Glut, Fackeln (warmes, unruhiges Licht);
 ## {art: blasen, pos, breite} Blasen steigen und platzen (Kessel); {art: dampf, pos, breite} Dampf
 ## steigt auf (Fondue, Kessel); {art: glitzern, bereich: [x, y, w, h]} Lichtpunkte auf Wasser.
+## {art: bild, bild, bilder, pos} gemalte Bildfolge (grafik/ambiente, Streifen aus tools/ambiente.py),
+## pos ist der Fußpunkt unten in der Mitte; dazu fps (8), ablauf (schleife oder einmalig), pause
+## [min, max] zwischen zwei einmaligen Läufen, orte [[x, y], …] oder bereich [x, y, w, h] für einen
+## zufälligen Ort je Lauf, weg [[x, y], …] mit tempo (Pixel je Sekunde) für Tiere, Boote und Leute, die
+## durchs Bild ziehen (nach links gespiegelt, hin und zurück im Wechsel mit „zurueck: true“), kreis
+## [mx, my, rx, ry, sekunden] für kreisende Vögel, baseline (y für die Zeichenreihenfolge mit den
+## Figuren, sonst der Fußpunkt), spiegeln, z, deckung (0 bis 1), an (nur solange das Prop
+## Props/<an> zu sehen ist).
 ## Im Testmodus ohne Bewegung (Bildvergleich).
 var _effekte: Array = []
 var _effekt_zeit := 0.0
@@ -373,6 +381,12 @@ func _effekte_setzen() -> void:
 	if Engine.is_editor_hint() or Spiel.testmodus or not has_node("Props") or not _effekte.is_empty():
 		return
 	for e: Dictionary in bauplan().get("effekte", []):
+		if e.art == "bild":
+			var sp := _bildfolge_anlegen(e)
+			if sp:
+				_effekte.append([e, sp, randf_range(0.5, 4.0), {bild = 0.0, lauf = e.get("ablauf", "schleife") == "schleife" and not e.has("weg"),
+					t = 0.0, hin = true}])
+			continue
 		var n := Node2D.new()
 		n.z_index = 2
 		get_node("Props").add_child(n)
@@ -403,6 +417,8 @@ func _effekte_bewegen(delta: float) -> void:
 			continue
 		eintrag[2] -= delta
 		match e.art:
+			"bild":
+				_bildfolge_bewegen(e, n as Sprite2D, eintrag, delta)
 			"flackern":
 				if eintrag[2] <= 0.0:
 					eintrag[2] = randf_range(0.06, 0.16)
@@ -442,6 +458,124 @@ func _effekte_bewegen(delta: float) -> void:
 					t.tween_property(p, "position:x", p.position.x + 3.0, 0.5)
 					t.parallel().tween_property(p, "modulate:a", 0.0, 0.5)
 					t.tween_callback(p.queue_free)
+
+
+func _bildfolge_anlegen(e: Dictionary) -> Sprite2D:
+	if not ResourceLoader.exists(String(e.get("bild", ""))):
+		return null
+	var sp := Sprite2D.new()
+	sp.texture = load(e.bild)
+	sp.hframes = maxi(1, int(e.get("bilder", 1)))
+	sp.centered = false
+	sp.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
+	sp.z_index = int(e.get("z", 0))
+	sp.modulate.a = float(e.get("deckung", 1.0))
+	sp.flip_h = e.get("spiegeln", false)
+	get_node("Props").add_child(sp)
+	var start: Array = e.get("pos", [0, 0])
+	if e.has("weg"):
+		start = e.weg[0]
+	elif e.has("kreis"):
+		start = [e.kreis[0] + e.kreis[2], e.kreis[1]]
+	_bildfolge_setzen(e, sp, Vector2(start[0], start[1]))
+	# Einmalige Abläufe und Wege zeigen sich erst beim ersten Lauf
+	sp.visible = (e.get("ablauf", "schleife") == "schleife" or e.get("ruhe_sichtbar", false)) and not e.has("weg")
+	return sp
+
+
+## Fußpunkt setzen; die Zeichenreihenfolge (y-Sortierung in Props) folgt der Baseline.
+func _bildfolge_setzen(e: Dictionary, sp: Sprite2D, fuss: Vector2) -> void:
+	var w := sp.texture.get_width() / float(sp.hframes)
+	var h := float(sp.texture.get_height())
+	var basis := float(e.get("baseline", fuss.y))
+	sp.position = Vector2(roundf(fuss.x), basis)
+	sp.offset = Vector2(-roundf(w / 2.0), roundf(fuss.y - basis) - h)
+
+
+func _bildfolge_bewegen(e: Dictionary, sp: Sprite2D, eintrag: Array, delta: float) -> void:
+	if not is_instance_valid(sp):
+		return
+	var z: Dictionary = eintrag[3]
+	var fps := float(e.get("fps", 8.0))
+	var schleife: bool = e.get("ablauf", "schleife") == "schleife"
+	if e.has("an"):
+		# Nur solange ein Prop im Raum zu sehen ist (Tintenfisch im Netz, bis Max ihn nimmt)
+		var ziel := get_node_or_null("Props/" + String(e.an)) as CanvasItem
+		if ziel == null or not ziel.visible:
+			sp.visible = false
+			return
+		if schleife and not e.has("weg") and not e.has("kreis"):
+			sp.visible = true
+	if not z.lauf:
+		# Pause zwischen zwei Läufen
+		if eintrag[2] > 0.0:
+			return
+		z.lauf = true
+		z.bild = 0.0
+		z.t = 0.0
+		var ort = null
+		if e.has("orte"):
+			ort = e.orte[randi() % e.orte.size()]
+		elif e.has("bereich"):
+			var b: Array = e.bereich
+			ort = [randf_range(b[0], b[0] + b[2]), randf_range(b[1], b[1] + b[3])]
+		if ort != null:
+			_bildfolge_setzen(e, sp, Vector2(ort[0], ort[1]))
+		sp.visible = true
+	z.bild += delta * fps
+	z.t += delta
+	var n: int = sp.hframes
+	var fertig := false
+	if e.has("weg"):
+		# Weg abfahren, dabei die Bildfolge als Schleife
+		var punkte: Array = e.weg if z.hin else e.weg.duplicate()
+		if not z.hin:
+			punkte.reverse()
+		var laenge := 0.0
+		for i in punkte.size() - 1:
+			laenge += Vector2(punkte[i][0], punkte[i][1]).distance_to(Vector2(punkte[i + 1][0], punkte[i + 1][1]))
+		var s: float = z.t * float(e.get("tempo", 20.0))
+		var p := Vector2(punkte[-1][0], punkte[-1][1])
+		var richtung := 1.0
+		for i in punkte.size() - 1:
+			var a := Vector2(punkte[i][0], punkte[i][1])
+			var b := Vector2(punkte[i + 1][0], punkte[i + 1][1])
+			var l := a.distance_to(b)
+			if s <= l:
+				p = a.lerp(b, s / maxf(l, 0.001))
+				richtung = signf(b.x - a.x) if b.x != a.x else 1.0
+				break
+			s -= l
+		_bildfolge_setzen(e, sp, p)
+		sp.flip_h = (richtung < 0.0) != e.get("spiegeln", false)
+		var rand := float(e.get("ausblenden", 0.0))
+		var deck := float(e.get("deckung", 1.0))
+		var gefahren: float = z.t * float(e.get("tempo", 20.0))
+		if rand > 0.0:
+			sp.modulate.a = deck * clampf(minf(gefahren, laenge - gefahren) / rand, 0.0, 1.0)
+		sp.frame = int(z.bild) % n
+		fertig = gefahren >= laenge
+	elif e.has("kreis"):
+		var k: Array = e.kreis
+		var w: float = TAU * z.t / float(k[4])
+		_bildfolge_setzen(e, sp, Vector2(k[0] + cos(w) * float(k[2]), k[1] + sin(w) * float(k[3])))
+		sp.flip_h = sin(w) > 0.0   # Vorderseite in Flugrichtung
+		sp.frame = int(z.bild) % n
+	elif schleife:
+		sp.frame = int(z.bild) % n
+	else:
+		sp.frame = mini(int(z.bild), n - 1)
+		fertig = z.bild >= n
+	if fertig:
+		z.lauf = false
+		if e.get("zurueck", false):
+			z.hin = not z.hin
+		if e.has("weg") or not e.get("ruhe_sichtbar", false):
+			sp.visible = false
+		else:
+			sp.frame = 0
+		var pause: Array = e.get("pause", [8, 20])
+		eintrag[2] = randf_range(float(pause[0]), float(pause[1]))
 
 
 ## Kleiner weicher Schatten unter einem Sprite oder Prop, damit es auf dem Boden oder Tisch steht

@@ -59,6 +59,7 @@ func figur_benutzt(figur: PopochiuCharacter, item: PopochiuInventoryItem) -> boo
 				Spiel.z("MAX", "W1_THRO_MAX_0280"),
 				Spiel.abgeben.bind("Kochloeffel"),
 				Spiel.z("MOD", "W1_THRO_MOD_0290"),
+				_fluch_wird_kaese.bind(figur),
 				Spiel.z("MOD", "W1_THRO_MOD_0300"),
 				Spiel.z("MAX", "W1_THRO_MAX_0310"),
 				Spiel.z("MOD", "W1_THRO_MOD_0320"),
@@ -69,6 +70,14 @@ func figur_benutzt(figur: PopochiuCharacter, item: PopochiuInventoryItem) -> boo
 			Zustand.setze("W1_MOD_KAESE")
 			return true
 	return false
+
+
+## Der Fluch zischt zwischen Moderwort und Max und wird zu einer Scheibe Käse (W1-B22, gemalte
+## Bildfolge), dann „Käse?“.
+func _fluch_wird_kaese(figur: Node2D) -> void:
+	var von: Vector2 = figur.position if is_instance_valid(figur) else Vector2(450, 260)
+	var zu: Vector2 = C.Max.position if is_instance_valid(C.Max) else von
+	await CQEffekte.bildfolge(self, "res://grafik/ambiente/effekt_fluch_kaese.png", 5, von.lerp(zu, 0.5) + Vector2(0, -50), 8.0)
 
 
 ## Reden mit Moderwort: nach dem Käse die Option 0350 (Spitzname), dann der Abschluss.

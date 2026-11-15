@@ -1,0 +1,414 @@
+# Lebendige Hintergründe und Effekte (P16): Bögen → game/grafik/ambiente/<ziel>.png
+# Aufbau der Felder: Kopf von tools/ambiente.py. Quellen unter E:/Game Engine/Grafiken/assets.
+# Wo die Streifen im Spiel liegen, steht im Layout (tools/layout/*.yaml, „effekte“ mit art: bild).
+
+# ---- Welt 1, lebendige Hintergründe
+W1-B61:
+  quelle: runde2/ambiente/W1-B61_kaminfeuer_b.png
+  ziel: kaminfeuer
+  raum: w1_bg_taverne_v01.png
+  hoehe: 50
+  bilder: [1, 2, 3, 5, 6, 7, 8]      # Bild 4 viel röter als die anderen
+W1-B62:
+  quelle: runde2/ambiente/W1-B62_fondue.png
+  ziel: fondue
+  raum: w1_bg_taverne_v01.png
+  breite: 34
+  magenta: 60                        # Dampf teils rosa durchscheinend
+W1-B63:
+  quelle: runde2/ambiente/W1-B63_esse.png
+  ziel: esse
+  raum: w1_bg_schmiede_v01.png
+  breite: 64
+W1-B64:
+  quelle: runde2/ambiente/W1-B64_funken_b.png
+  ziel: funken
+  raum: w1_bg_schmiede_v01.png
+  raster: 4x1
+  breite: 48
+W1-B65:
+  quelle: runde2/ambiente/W1-B65_kessel_b.png
+  ziel: kessel
+  raum: w1_bg_klassenzimmer_v01.png
+  ausschnitt: [0, 480, 3168, 1080]   # Dampf nur bis knapp über den Kessel
+  raster: 8x1
+  anker: unten
+  bilder: [2, 3, 4, 5, 6, 7, 8]      # Bild 1 ohne Dampf
+  breite: 56
+W1-B65-feuer:
+  quelle: runde2/ambiente/W1-B65_kessel_b.png
+  ziel: kessel_feuer
+  raum: w1_bg_klassenzimmer_v01.png
+  ausschnitt: [0, 1080, 3168, 1344]
+  raster: 8x1
+  anker: unten
+  bilder: [2, 3, 4, 5, 6, 7, 8]
+  breite: 46
+W1-B66:
+  quelle: runde2/ambiente/W1-B66_schachtel_b.png
+  ziel: schachtel
+  raum: w1_bg_zauberstabladen_v01.png
+  hoehe: 18
+W1-B67:
+  quelle: runde2/ambiente/W1-B67_fisch_b.png
+  ziel: fisch
+  raum: w1_bg_trollbruecke_v01.png
+  raster: 6x1
+  hoehe: 34
+W1-B68:
+  quelle: runde2/ambiente/W1-B68_schmetterling.png
+  ziel: schmetterling
+  raster: 4x1
+  anker: mitte
+  hoehe: 9
+W1-B69:
+  quelle: runde2/ambiente/W1-B69_eule_b.png
+  ziel: eule
+  raum: w1_bg_zauberwald_v01.png
+  raster: 6x1
+  anker: unten
+  hoehe: 22
+W1-B70:
+  quelle: runde2/ambiente/W1-B70_fackel.png
+  ziel: fackel
+  raum: w1_bg_turmkeller_v01.png
+  ausschnitt: [0, 0, 3168, 684]      # ohne den eisernen Halter
+  raster: 8x1
+  anker: unten
+  hoehe: 26
+W1-B70-thron:
+  quelle: runde2/ambiente/W1-B70_fackel.png
+  ziel: fackel_thron
+  raum: w1_bg_thronsaal_v01.png       # Nachtpalette: blasse Flammen wie die gemalten
+  nur_raum: true
+  ausschnitt: [0, 0, 3168, 684]
+  raster: 8x1
+  anker: unten
+  hoehe: 26
+W1-B70-klein:
+  quelle: runde2/ambiente/W1-B70_fackel.png
+  ziel: fackel_klein
+  raum: w1_bg_bergwerk_v01.png
+  ausschnitt: [0, 0, 3168, 684]
+  raster: 8x1
+  anker: unten
+  hoehe: 12
+W1-B71:
+  quelle: runde2/ambiente/W1-B71_wimpel.png
+  ziel: wimpel
+  raum: w1_bg_luftschloss_v01.png
+  rosa: 999
+  anker: unten_links
+  toleranz: 70
+  breite: 30
+W1-B72:
+  quelle: runde2/ambiente/W1-B72_brunnen_c.png
+  ziel: brunnen
+  raum: w1_bg_luftschloss_v01.png
+  ausschnitt: [0, 150, 3168, 518]    # nur der Strahl über der oberen Schale; Schale und Becken sind gemalt
+  raster: 6x1
+  anker: zelle
+  bilder: [1, 2, 3, 2, 6]            # Bild 4 und 5 (Wasservorhänge) viel zu groß für den gemalten Brunnen
+  hoehe: 20
+W1-B73:
+  quelle: runde2/ambiente/W1-B73_steinchen_b.png
+  ziel: steinchen
+  raum: w1_bg_bergwerk_v01.png
+  raster: 6x1
+  hoehe: 48
+W1-B74:
+  quelle: runde2/ambiente/W1-B74_glitzern.png
+  ziel: glitzern
+  raster: 6x1
+  magenta: 60
+  hoehe: 11
+W1-B75:
+  quelle: runde2/ambiente/W1-B75_ente_b.png
+  ziel: ente
+  raum: w1_bg_wasserschloss_v01.png
+  raster: 6x1
+  anker: unten
+  toleranz: 70
+  magenta: 60
+  breite: 26
+W1-B76:
+  quelle: runde2/ambiente/W1-B76_huhn_c.png
+  ziel: huhn
+  raum: w1_bg_dorfplatz_v03.png
+  raster: 6x1
+  anker: unten
+  hoehe: 18
+W1-B86:
+  quelle: runde2/ambiente/W1-B86_eichhoernchen.png
+  ziel: eichhoernchen
+  raum: w1_bg_zauberwald_v01.png
+  raster: 6x1
+  anker: unten
+  hoehe: 30
+W1-B87:
+  quelle: runde2/ambiente/W1-B87_lore.png
+  ziel: lore
+  raum: w1_bg_bergwerk_v01.png
+  raster: 6x1
+  anker: unten
+  breite: 40
+W1-B88:
+  quelle: runde2/ambiente/W1-B88_kerze.png
+  ziel: kerze
+  raster: 6x1
+  anker: unten
+  hoehe: 12
+
+# ---- Welt 2, lebendige Hintergründe
+W2-B11:
+  quelle: runde2/ambiente/W2-B11_feluke_c.png
+  ziel: feluke
+  raum: w2_bg_nil_delta_v01.png
+  raster: 8x1
+  anker: unten
+  breite: 46
+W2-B12:
+  quelle: runde2/ambiente/W2-B12_ibis_c.png
+  ziel: ibis
+  raum: w2_bg_nil_delta_v01.png
+  ausschnitt: [0, 480, 3168, 790]    # ohne Geisterköpfe oben und die durchgehende Wasserlinie
+  raster: 8x1
+  anker: unten
+  hoehe: 26
+W2-B13:
+  quelle: runde2/ambiente/W2-B13_fischer_netz_d.png
+  ziel: fischer_netz
+  raum: w2_bg_nil_delta_v01.png
+  radieren: [[0, 530, 2752, 665], [0, 1290, 2752, 1440]]   # blaue Wasserblöcke unter den Booten
+  raster: 4x2
+  hoehe: 34
+W2-B14:
+  quelle: runde2/ambiente/W2-B14_libelle.png
+  ziel: libelle
+  raster: 4x1
+  breite: 14
+W2-B15:
+  quelle: runde2/ambiente/W2-B15_segelschiff_b.png
+  ziel: segelschiff
+  raum: w2_bg_hafen_syrakus_v01.png
+  raster: 8x1
+  anker: unten
+  breite: 28
+W2-B16:
+  quelle: runde2/ambiente/W2-B16_moewe_fliegt.png
+  ziel: moewe_fliegt
+  raum: w2_bg_hafen_syrakus_v01.png
+  raster: 6x1
+  anker: mitte
+  bilder: [1, 2, 3, 4, 5]
+  breite: 20
+W2-B17:
+  quelle: runde2/ambiente/W2-B17_moewe_pfahl.png
+  ziel: moewe_pfahl
+  raum: w2_bg_hafen_syrakus_v01.png
+  ausschnitt: [0, 250, 3168, 640]    # Möwe und Pfahlkopf; der Pfahl ist im Hafen gemalt
+  raster: 6x1
+  anker: unten
+  hoehe: 16
+W2-B18:
+  quelle: runde2/ambiente/W2-B18_hafenarbeiter_c.png
+  ziel: hafenarbeiter
+  raum: w2_bg_hafen_syrakus_v01.png
+  raster: 8x1
+  anker: unten
+  toleranz: 70
+  hoehe: 30
+W2-B19:
+  quelle: runde2/ambiente/W2-B19_tintenfisch.png
+  ziel: tintenfisch
+  rosa: 999
+  raum: w2_bg_hafen_syrakus_v01.png
+  raster: 6x1
+  anker: unten
+  hoehe: 18
+W2-B20:
+  quelle: runde2/ambiente/W2-B20_ziege_grast_b.png
+  ziel: ziege_grast
+  raum: w2_bg_faehrsteg_olympia_v01.png
+  anker: unten
+  toleranz: 70
+  hoehe: 22
+W2-B21:
+  quelle: runde2/ambiente/W2-B21_sanduhr.png
+  ziel: sanduhr
+  raum: w2_bg_hafen_syrakus_v01.png
+  raster: 6x1
+  anker: unten
+  hoehe: 48
+W2-B21-gross:
+  quelle: runde2/ambiente/W2-B21_sanduhr.png
+  ziel: sanduhr_gross
+  raum: w2_bg_faehrsteg_olympia_v01.png
+  raster: 6x1
+  anker: unten
+  hoehe: 58
+W2-B22:
+  quelle: runde2/ambiente/W2-B22_ofenfeuer.png
+  ziel: ofenfeuer
+  raum: w2_bg_palastkueche_v01.png
+  raster: 4x2
+  anker: unten
+  ellipse: [0.56, 0.84, 0.31, 0.38]  # nur das Feuer im Ofenloch, die Lehmkuppel ist gemalt
+  breite: 34
+W2-B23:
+  quelle: runde2/ambiente/W2-B23_geier_c.png
+  ziel: geier
+  raum: w2_bg_sphinx_v01.png
+  raster: 3x2
+  anker: mitte
+  breite: 30
+W2-B24:
+  quelle: runde2/ambiente/W2-B24_eidechse_b.png
+  ziel: eidechse
+  raum: w2_bg_grabhuegel_v01.png
+  raster: 6x1
+  anker: unten
+  toleranz: 70
+  breite: 20
+W2-B25:
+  quelle: runde2/ambiente/W2-B25_wasserorgel.png
+  ziel: wasserorgel
+  raum: w2_bg_werkstatt_v01.png
+  raster: 6x1
+  anker: unten
+  breite: 40
+W2-B27:
+  quelle: runde2/ambiente/W2-B27_wimpel_stadion.png
+  ziel: wimpel_stadion
+  raum: w2_bg_stadion_v01.png
+  raster: 8x1
+  anker: unten_links
+  toleranz: 70
+  breite: 28
+W2-B28:
+  quelle: runde2/ambiente/W2-B28_tauben_picken_b.png
+  ziel: tauben_picken
+  raum: w2_bg_agora_v01.png
+  raster: 6x1
+  anker: unten
+  hoehe: 14
+W2-B29:
+  quelle: runde2/ambiente/W2-B29_taube_fliegt_b.png
+  ziel: taube_fliegt
+  raum: w2_bg_agora_v01.png
+  raster: 3x2
+  toleranz: 70
+  hoehe: 24
+W2-B31:
+  quelle: runde2/ambiente/W2-B31_wartende.png
+  ziel: wartende
+  raum: w2_bg_startbuero_v01.png
+  raster: 4x2
+  hoehe: 116
+W2-B35:
+  quelle: runde2/ambiente/W2-B35_ruderboot.png
+  ziel: ruderboot
+  raum: w2_bg_hafen_syrakus_v01.png
+  bilder: [1, 2, 3, 4, 5, 6, 7, 8]
+  breite: 40
+W2-B36:
+  quelle: runde2/ambiente/W2-B36_wassertraegerin.png
+  ziel: wassertraegerin
+  raum: w2_bg_nil_delta_v01.png
+  bilder: [1, 2, 3, 4, 5, 6, 7, 8]
+  hoehe: 44
+
+# ---- Effekte in Szenen (einmalig)
+PF-B08:
+  quelle: nacht/PF-B08_effekt_verwandlung.png
+  ziel: effekt_verwandlung
+  raum: w0_bg_dachboden_v03.png
+  farben_weg: [[150, 85, 55, 60], [105, 60, 40, 50], [60, 35, 25, 40], [230, 170, 40, 70], [250, 210, 90, 50], [190, 120, 30, 60]]   # Kelch und Becher: die Dinge selbst sind Sprites
+  raster: 6x1
+  anker: unten
+  bilder: [2, 3, 4]                  # Bild 5 und 6 zeigen nur noch den Becher
+  breite: 48
+PF-B09:
+  quelle: runde2/ambiente/PF-B09_effekt_maschine.png
+  ziel: effekt_maschine
+  raster: 4x1
+  anker: unten
+  breite: 40
+PF-B10:
+  quelle: runde2/ambiente/PF-B10_effekt_teig.png
+  ziel: effekt_teig
+  raster: 6x1
+  breite: 72
+PF-B11:
+  quelle: nacht/PF-B11_effekt_staubwolke.png
+  ziel: effekt_staubwolke
+  raum: w0_bg_dachboden_v03.png
+  farben_weg: [[185, 145, 100, 45], [150, 110, 75, 45], [110, 80, 55, 45], [70, 50, 35, 40]]   # der Papiersack liegt schon auf der Werkbank
+  raster: 5x1
+  anker: unten
+  hoehe: 48
+W1-B10:
+  quelle: nacht/W1-B10_bohnenranke_wachsen.png
+  ziel: effekt_bohnenranke
+  raum: w1_bg_dorfplatz_v03.png
+  raster: 10x1
+  anker: unten
+  hoehe: 160
+W1-B11:
+  quelle: nacht/W1-B11_niesrosen_aufgehen.png
+  ziel: effekt_niesrosen
+  rosa: 999
+  raum: w1_bg_zauberwald_v01.png
+  raster: 6x1
+  anker: unten
+  magenta: 120
+  breite: 64
+W1-B22:
+  quelle: nacht/W1-B22_effekt_fluch_kaese.png
+  ziel: effekt_fluch_kaese
+  raum: w1_bg_thronsaal_v01.png
+  raster: 5x1
+  toleranz: 80
+  hoehe: 48
+W1-B23:
+  quelle: nacht/W1-B23_effekt_pilz.png
+  ziel: effekt_pilz
+  raum: w1_bg_klassenzimmer_v01.png
+  raster: 6x1
+  anker: unten
+  breite: 48
+
+# ---- Vordergrund-Ausschnitte: Steg, Pfähle und Sanduhr vor Booten und Schiffen
+hafen-vorn:
+  art: vordergrund
+  raum: w2_bg_hafen_syrakus_v01.png
+  ausschnitt: [0, 85, 340, 215]
+  ziel: hafen_vor_dem_meer
+
+# ---- Räume aus PR #29 (Agora, Stadion, neues Nil-Delta): Streifen fertig, Layout-Einträge folgen nach
+# dem Merge (Liste unten). Bis dahin mit --hg-zusatz auf die Hintergründe des Zweigs rechnen.
+W2-B30:
+  quelle: runde2/ambiente/W2-B30_menge.png
+  ziel: menge_agora
+  raum: w2_bg_agora_v01.png
+  ausschnitt: [470, 0, 1110, 768]    # der mittlere Block ist in den Reihen 2 bis 4 dieselbe Gruppe
+  raster: 1x4
+  bilder: [2, 3, 4, 3]
+  breite: 160
+
+# Layout-Einträge für nach dem Merge von PR #29 (welt-2.yaml, je Raum unter „effekte:“; Positionen am
+# Hintergrund des Zweigs abgelesen, nach dem Merge im Spiel prüfen):
+# nil_delta:
+#   - {art: bild, bild: res://grafik/ambiente/sanduhr.png, bilder: 6, pos: [234, 194], fps: 6}   # W2-B21
+#   - {art: bild, bild: res://grafik/ambiente/feluke.png, bilder: 8, weg: [[-30, 192], [1120, 182]], tempo: 8, ausblenden: 25, zurueck: true, fps: 6, pause: [10, 30]}   # W2-B11
+#   - {art: bild, bild: res://grafik/ambiente/fischer_netz.png, bilder: 8, pos: [420, 204], fps: 5, ablauf: einmalig, ruhe_sichtbar: true, pause: [12, 30]}   # W2-B13
+#   - {art: bild, bild: res://grafik/ambiente/ibis.png, bilder: 8, pos: [712, 236], fps: 5}   # W2-B12 im Flachwasser vor dem Papyrus
+#   - {art: bild, bild: res://grafik/ambiente/libelle.png, bilder: 4, weg: [[560, 172], [600, 160], [640, 176], [600, 186], [560, 172]], tempo: 18, fps: 14, pause: [2, 8]}   # W2-B14
+#   - {art: bild, bild: res://grafik/ambiente/wassertraegerin.png, bilder: 8, weg: [[330, 230], [520, 230]], tempo: 12, ausblenden: 12, zurueck: true, fps: 8, pause: [15, 40]}   # W2-B36
+# agora:
+#   - {art: bild, bild: res://grafik/ambiente/menge_agora.png, bilder: 4, pos: [650, 238], fps: 2}   # W2-B30 über der linken Gruppe
+#   - {art: bild, bild: res://grafik/ambiente/tauben_picken.png, bilder: 6, pos: [540, 296], fps: 6}   # W2-B28
+#   - {art: bild, bild: res://grafik/ambiente/taube_fliegt.png, bilder: 6, pos: [600, 300], fps: 8, ablauf: einmalig, pause: [15, 40]}   # W2-B29
+# stadion:
+#   - {art: bild, bild: res://grafik/ambiente/wimpel_stadion.png, bilder: 8, pos: [114, 66], fps: 8}   # W2-B27 auf der Tribünenecke links
+#   W2-B26 Zuschauer: Bogen W2-B26_zuschauer.png nicht brauchbar (Leute wechseln von Bild zu Bild die Plätze), neu erzeugen

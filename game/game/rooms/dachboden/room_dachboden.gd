@@ -380,6 +380,7 @@ func zs1_ankunft() -> void:
 		Spiel.z("OPA", "ZS1_DACH_OPA_0080"),
 		Spiel.z("MAX", "ZS1_DACH_MAX_0090"),
 		Spiel.z("OPA", "ZS1_DACH_OPA_0100"),
+		_verwandlung_zeigen,
 		Spiel.z("NAR", "ZS1_DACH_NAR_0110"),
 		Spiel.z("MAX", "ZS1_DACH_MAX_0120"),
 		Spiel.z("OPA", "ZS1_DACH_OPA_0130"),
@@ -534,6 +535,14 @@ func zs_ankunft(nr: int) -> void:
 	for z in ZS_ANKUNFT[nr]:
 		if z == "@":
 			schritte.append(_mitbringsel_abgeben.bind(nr))
+		elif z in ["ZS2_DACH_NAR_0070", "ZS3_DACH_NAR_0060"]:
+			# Glitzer und Plopp beim Ablegen (Effekt Verwandlung)
+			schritte.append(_verwandlung_zeigen)
+			schritte.append(Spiel.z(z.split("_")[2], z))
+		elif z == "ZS2_DACH_NAR_0090":
+			# Opa klopft den Mehlsack ab, eine Staubwolke steigt auf
+			schritte.append(_staubwolke_zeigen)
+			schritte.append(Spiel.z(z.split("_")[2], z))
 		else:
 			schritte.append(Spiel.z(z.split("_")[2], z))
 	await Spiel.szene(schritte)
@@ -546,6 +555,19 @@ func zs_ankunft(nr: int) -> void:
 ## Wert EINKAUFSLISTE zählt die Wünsche (Errungenschaft „Einkaufsliste komplett“).
 static func wunsch_eintragen(n: int) -> void:
 	Zustand.setze_wert("EINKAUFSLISTE", maxi(int(Zustand.wert("EINKAUFSLISTE", 0)), n))
+
+
+## Gemalte Effekte auf der Werkbank (PF-B08 Verwandlung, PF-B11 Staubwolke): Sie laufen neben der
+## Erzählzeile her, die Szene wartet nicht auf sie.
+const WERKBANK_ABLAGE := Vector2(120, 152)
+
+
+func _verwandlung_zeigen() -> void:
+	CQEffekte.bildfolge(self, "res://grafik/ambiente/effekt_verwandlung.png", 3, WERKBANK_ABLAGE, 5.0)
+
+
+func _staubwolke_zeigen() -> void:
+	CQEffekte.bildfolge(self, "res://grafik/ambiente/effekt_staubwolke.png", 5, WERKBANK_ABLAGE, 6.0)
 
 
 func _mitbringsel_abgeben(nr: int) -> void:
