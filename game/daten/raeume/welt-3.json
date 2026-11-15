@@ -6528,7 +6528,7 @@
    "icon": "res://grafik/platzhalter/gegenstand_omas_kekse.png",
    "icons": {
     "ofenwarm": "res://grafik/platzhalter/gegenstand_omas_kekse_ofenwarm.png",
-    "hundekuchen": "res://grafik/platzhalter/gegenstand_omas_kekse_hundekuchen.png"
+    "hundekuchen": "res://grafik/gegenstaende/omas_kekse_hundekuchen.png"
    },
    "ansehen": [
     {

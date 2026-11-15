@@ -249,7 +249,7 @@
    "nahansicht": false,
    "icon": "res://grafik/platzhalter/gegenstand_energiezelle.png",
    "icons": {
-    "batterie": "res://grafik/platzhalter/gegenstand_energiezelle_batterie.png"
+    "batterie": "res://grafik/gegenstaende/energiezelle_batterie.png"
    },
    "ansehen": [
     {
@@ -352,7 +352,7 @@
    ],
    "reist_mit": true,
    "nahansicht": false,
-   "icon": "res://grafik/platzhalter/gegenstand_omas_kekse.png",
+   "icon": "res://grafik/gegenstaende/omas_kekse_hundekuchen.png",
    "icons": {},
    "ansehen": [],
    "benutzen": [],

@@ -6051,7 +6051,7 @@
    ],
    "reist_mit": true,
    "nahansicht": false,
-   "icon": "res://grafik/platzhalter/gegenstand_handy.png",
+   "icon": "res://grafik/gegenstaende/handy.png",
    "icons": {},
    "ansehen": [
     {
@@ -6084,7 +6084,7 @@
    ],
    "reist_mit": true,
    "nahansicht": false,
-   "icon": "res://grafik/platzhalter/gegenstand_kaugummi.png",
+   "icon": "res://grafik/gegenstaende/kaugummi.png",
    "icons": {},
    "ansehen": [
     {
@@ -6117,7 +6117,7 @@
    ],
    "reist_mit": true,
    "nahansicht": false,
-   "icon": "res://grafik/platzhalter/gegenstand_kugelschreiber.png",
+   "icon": "res://grafik/gegenstaende/kugelschreiber.png",
    "icons": {},
    "ansehen": [
     {
@@ -6549,10 +6549,10 @@
    ],
    "reist_mit": false,
    "nahansicht": false,
-   "icon": "res://grafik/platzhalter/gegenstand_traubensaft.png",
+   "icon": "res://grafik/gegenstaende/traubensaft_traubensaft.png",
    "icons": {
-    "Wein": "res://grafik/platzhalter/gegenstand_traubensaft_wein.png",
-    "Essig": "res://grafik/platzhalter/gegenstand_traubensaft_essig.png"
+    "Wein": "res://grafik/gegenstaende/traubensaft_wein.png",
+    "Essig": "res://grafik/gegenstaende/traubensaft_essig.png"
    },
    "ansehen": [
     {
@@ -6761,10 +6761,10 @@
    ],
    "reist_mit": false,
    "nahansicht": false,
-   "icon": "res://grafik/platzhalter/gegenstand_essigkrug.png",
+   "icon": "res://grafik/gegenstaende/essigkrug_essig.png",
    "icons": {
-    "Wein": "res://grafik/platzhalter/gegenstand_essigkrug_wein.png",
-    "Traubensaft": "res://grafik/platzhalter/gegenstand_essigkrug_traubensaft.png"
+    "Wein": "res://grafik/gegenstaende/essigkrug_wein.png",
+    "Traubensaft": "res://grafik/gegenstaende/essigkrug_traubensaft.png"
    },
    "ansehen": [
     {
@@ -6865,10 +6865,10 @@
    ],
    "reist_mit": false,
    "nahansicht": false,
-   "icon": "res://grafik/platzhalter/gegenstand_grabstein.png",
+   "icon": "res://grafik/gegenstaende/grabstein_frisch.png",
    "icons": {
-    "grau": "res://grafik/platzhalter/gegenstand_grabstein_grau.png",
-    "verwittert": "res://grafik/platzhalter/gegenstand_grabstein_verwittert.png"
+    "grau": "res://grafik/gegenstaende/grabstein_grau.png",
+    "verwittert": "res://grafik/gegenstaende/grabstein_verwittert.png"
    },
    "ansehen": [
     {
@@ -6938,7 +6938,7 @@
    ],
    "reist_mit": false,
    "nahansicht": false,
-   "icon": "res://grafik/platzhalter/gegenstand_haufen.png",
+   "icon": "res://grafik/gegenstaende/haufen.png",
    "icons": {},
    "ansehen": [
     {
@@ -7015,7 +7015,7 @@
    "icon": "res://grafik/gegenstaende/rundschreiben_mit_kugelschreiber.png",
    "icons": {
     "mit Tinte": "res://grafik/gegenstaende/rundschreiben_mit_tinte.png",
-    "gefunden": "res://grafik/platzhalter/gegenstand_rundschreiben_gefunden.png"
+    "gefunden": "res://grafik/gegenstaende/rundschreiben_gefunden.png"
    },
    "ansehen": [
     {
@@ -7082,7 +7082,7 @@
    ],
    "reist_mit": false,
    "nahansicht": false,
-   "icon": "res://grafik/platzhalter/gegenstand_empfehlungsschreiben.png",
+   "icon": "res://grafik/gegenstaende/empfehlungsschreiben.png",
    "icons": {},
    "ansehen": [
     {
@@ -7261,10 +7261,10 @@
    ],
    "reist_mit": false,
    "nahansicht": false,
-   "icon": "res://grafik/platzhalter/gegenstand_feigensetzling.png",
+   "icon": "res://grafik/gegenstaende/feigensetzling_feigensetzling.png",
    "icons": {
-    "Feigenbaum": "res://grafik/platzhalter/gegenstand_feigensetzling_feigenbaum.png",
-    "Feigenkern": "res://grafik/platzhalter/gegenstand_feigensetzling_feigenkern.png"
+    "Feigenbaum": "res://grafik/gegenstaende/feigensetzling_feigenbaum.png",
+    "Feigenkern": "res://grafik/gegenstaende/feigensetzling_feigenkern.png"
    },
    "ansehen": [
     {
@@ -7361,7 +7361,7 @@
    ],
    "reist_mit": false,
    "nahansicht": false,
-   "icon": "res://grafik/platzhalter/gegenstand_feigen.png",
+   "icon": "res://grafik/gegenstaende/feigen.png",
    "icons": {},
    "ansehen": [
     {
@@ -7486,7 +7486,7 @@
    ],
    "reist_mit": true,
    "nahansicht": false,
-   "icon": "res://grafik/platzhalter/gegenstand_schriftrolle.png",
+   "icon": "res://grafik/gegenstaende/schriftrolle.png",
    "icons": {},
    "ansehen": [
     {
@@ -7557,7 +7557,7 @@
    ],
    "reist_mit": false,
    "nahansicht": false,
-   "icon": "res://grafik/platzhalter/gegenstand_paraden_plan.png",
+   "icon": "res://grafik/gegenstaende/paraden_plan.png",
    "icons": {},
    "ansehen": [
     {
