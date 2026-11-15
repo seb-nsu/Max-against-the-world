@@ -48,3 +48,12 @@ Higgsfield bündelt Bild- und Videomodelle, macht aber keine 3D-Modelle, Rigs od
 - Bekannter Fehler im Stapelmodus (zu viele abgerechnete Bilder): https://discuss.ai.google.dev/t/gemini-3-pro-image-batch-api-returns-up-to-35-billed-images-for-single-image-requests-since-8-oct-2026/196940
 
 Eigene Erfahrungen mit Gemini (Magenta statt transparent, „the tomcat“ statt „Pixel“, PNG statt JPEG, höchstens vier Posen) stehen in `docs/lessons-learned.md` und `docs/grafik/00-stil-und-werkzeuge.md`.
+
+## Agenten-Sammlungen
+
+### agency-agents (msitarzewski)
+https://github.com/msitarzewski/agency-agents (von Sebastian am 15.11.2026 geteilt)
+
+Über 100 fertige Rollenbeschreibungen für Claude-Code-Subagenten (Markdown-Dateien für `.claude/agents/`), unter anderem Game Designer, Narrative Designer, Level Designer, Technical Artist, Godot Gameplay Scripter, Game Audio Engineer, Image Prompt Engineer, Reality Checker und Persona Walkthrough. Allgemein gehalten, ohne Wissen über unser Projekt.
+
+Unsere Einschätzung: nicht alles installieren. Brauchbar als zusätzliche Prüf-Blickwinkel (Reality Checker oder Persona Walkthrough vor einem Playtest, Narrative Designer für Dialoge, Game Audio Engineer für die Audio-Phase). Mehr bringen eigene, projektbezogene Agenten oder Skills, die auf `docs/lessons-learned.md` aufbauen (zum Beispiel „Sprite- und Animationsprüfer“, „Raum-Einbau prüfen“). Subagenten kosten zusätzliche Tokens und nur auf Wunsch einsetzen.
