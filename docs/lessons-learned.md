@@ -205,7 +205,69 @@ Nach jedem Merge den lokalen Ordner per `git pull --ff-only` nachziehen. Nie res
 
 ---
 
-## 7. Weitere Punkte
+## 7. Nachbesserungen: wo Sebastian mehrmals nachhaken musste
+
+Viele Ergebnisse waren beim ersten Zeigen nicht fertig. Die folgenden Stellen hat Sebastian beim Ansehen gefunden, oft mehrmals hintereinander. Jede Runde kostet ihn eine Prüfung und uns einen Durchlauf.
+
+| Stelle | Runden | Was jedes Mal noch nicht stimmte | Was vorher hätte geprüft werden müssen |
+| --- | --- | --- | --- |
+| Kleiderbügel (Prolog) | 5 | zu klein, zu hell, falsche Lage, keine Perspektive zur schrägen Schranktür; einmal sollte Sebastian ihn selbst stellen, dann doch wieder Claude | Größe an Möbeln messen, Winkel der Fläche übernehmen, auf der der Gegenstand hängt, Ausschnitt vergrößert zeigen |
+| Zapp-O-Mat und Kabel | 4 | schwebt an der Wand, Rolle im Boden, nur eine Rolle sichtbar, Kabel doppelt | Kontaktpunkte am Boden und Übergänge zwischen Sprite und Hintergrund vergrößert prüfen |
+| Max auf dem Sofa | 3 | Liegen aus gedrehtem Steh-Sprite „amateurhaft“, dann in der Armlehne, dann richtig | Keine Pose aus einem gedrehten Sprite bauen, gleich eine gemalte Pose bestellen |
+| Max auf der Treppe | 3 | sinkt ein, kein echtes Steigen, erste Stufen übersprungen | Trittflächen pixelgenau messen, Laufband ab der ersten Stufe, von beiden Seiten testen |
+| Max' Gang und Tempo | 3 | rutscht, dann stapft, dann zu langsam auf dem Dachboden | Tempo aus Schrittlänge rechnen und in allen Räumen mit Tiefenskalierung ansehen |
+| Grammophon | 2 | „verbessert“, Sebastian wollte das Original | Gelungenes nicht ungefragt ersetzen |
+| Opa | 3 | wechselt beim Reden den Körper, Posen in anderer Jacke, 3D-Körper zu gerade | Eine Quelle für das Aussehen (Figurenbogen), jede neue Fassung neben das Stand-Sprite legen |
+| Pixel | 4 | landet sitzend, erscheint plötzlich auf Werkbank und Balken, Trab mit zu dünnen Beinen, wirkt hell und fremd | Übergänge statt Erscheinen, neue Bilder immer neben den Stand und neben Max legen |
+| Minka (Platz in der Taverne) | 3 | auf dem Tresen, dann am Bildrand im Tresen, dann vor dem Tresen | Platz mit allen Figuren und Requisiten im Raum prüfen, nicht nur die Figur |
+| Minka (Lauf) | 7 | Fassungen a bis g | siehe Abschnitt 6: Lauf-Weg festlegen statt Fassungen zu sammeln |
+| Toadi (Lauf und Aussehen) | 8 | a, b, b2, b5, b6, a3, a4, a5: Gesicht, Farbe, Hände, Beinposition, Unterschenkel, Hutstreifen | Vor dem Zeigen gegen das Stand-Sprite prüfen: Hände da, Farben gleich, Beine unter der Kleidung |
+| Alwin und Schmied | 5 | Arm gedreht, Hand nicht an der Zange, Hufeisen liegt herum, Kessel fehlt, zu wenig Platz zwischen Posen | Gesten mit Gegenstand immer als Posenbogen mit Gegenstand |
+| Teile-Rig aller Menschen | 3 | vier Beine, fehlende Teile, Po fehlt, Waldemars hinteres Bein schwingt nicht | Automatische Prüfung vor dem ersten Zeigen, Kontaktbogen aller Einzelbilder |
+| Sobek und Papyrus | 2 | Sobek schlechter als vorher, gezeichnete Linie statt echter Halme | Mit Material aus dem Bild selbst arbeiten, nicht übermalen |
+| Thronsaal, Agora, Startbüro, Küche | 2 | Figuren vor Pult und Schalter, falsche Blickrichtung, halbierte Fries-Figur, Kante neben der Statue | Jeden Raum mit allen Figuren aus dem Spiel aufnehmen und Punkt für Punkt prüfen |
+| Taverne | 2 | Max versinkt hinter dem Fell, Boden darunter falsch | Flache Objekte als flach markieren, übermalte Stellen an die Umgebung angleichen |
+
+**Was daraus folgt**
+
+- **Vor jedem Zeigen eine feste Prüfliste abarbeiten:** gegen Stand-Sprite (Größe, Farben, Hände, Füße), im Raum mit allen Figuren (Verdeckung, Pult, Weg, Blickrichtung), Kontaktpunkte am Boden, Perspektive, Einzelbilder vergrößert, GIF in Spieltempo.
+- **Lieber zwei bis vier Fassungen auf einmal zeigen** (wie beim Gang A bis D) als eine nach der anderen. Sebastian wählt dann einmal.
+- **Wenn ein Weg zweimal scheitert, den Weg wechseln** statt eine dritte Fassung zu bauen (Liegen aus gedrehtem Sprite, Läufe aus Gemini, Arm-Drehung für Gesten).
+- **Was Sebastian selbst schnell im Editor stellen kann** (Position, Skalierung eines Props), ihm mit Szene und Knoten nennen, statt mehrere Runden zu raten. Danach aber die Zuständigkeit klar halten.
+
+---
+
+## 8. Kostenschätzungen: wo wir danebenlagen
+
+Mehrere Schätzungen waren zu niedrig oder zu hoch. Beides schadet: Zu niedrig verbraucht unbemerkt das Budget, zu hoch führt zu unnötigen Freigaben und Rückfragen.
+
+| Schätzung | Gesagt | Tatsächlich | Ursache |
+| --- | --- | --- | --- |
+| Nachtlauf Gemini-API (112 Bilder ohne Hintergründe) | 5 bis 10 $, Grenze 25 $ | danach „6 bis 8 $“ gemeldet, am Morgen waren laut Sebastian 20 von 31 € weg | Eigene Zählung ohne Wiederholungen, verworfene Fassungen, Einzelbild-Aufrufe und Vorlagen |
+| Preis je Gemini-Bild (Nano Banana 2.1, 2K) | 0,05 $ | real etwa 0,07 $ | Angehängte Vorlagen und Masken-Runden nicht eingerechnet |
+| Erste Schätzung für die ganze Liste | 23 bis 31 $ mit Nano Banana Pro | Modell war falsch angenommen, mit 2.1 rund 9 bis 13 $ | Werkzeug-Einstellung statt Sebastians tatsächliches Modell, Googles Preisseite veraltet |
+| Läufe aus Gemini Bild für Bild | „etwa 0,40 $“ bzw. 0,55 € je Lauf | Minka allein 0,60 €, ein voller Lauf etwa 1,10 € | Zwischenbilder und Nachbesserungen nicht mitgerechnet |
+| Toadi-Test über Meshy | 25 bis 30 Credits | 20 Credits plus 0,85 € bei Gemini | Gemini-Anteil vorher nicht genannt |
+| Meshy für alle Menschen-Animationen | etwa 550 Credits (240 für Rigs, 300 für Bewegungen) | Läufe aller Welt-1-Menschen 15 Credits, weil Clips auf vorhandene Rigs passen | Wiederverwendung der Rigs erst später erkannt |
+| Welt-1-Menschen | erst 135, dann 350 Credits | 15 Credits | wie oben |
+| Welt-2-Menschen in 3D | etwa 450 Credits | 357 Credits | Bibliotheks-Clips statt Text-Bewegungen |
+| Meshy-Bild | „3 bis 9“ bzw. „6 Credits pro Bild“ | 4 Credits | Preis nicht nachgeschaut |
+| Gesten-Runde | Grenze 120, dann 250, 350, 480 Credits | 139 bei 114 Bewegungen, 243 nach Nachhol-Runde | Umfang war unbekannt, weil die vollständige Liste fehlte |
+| Gemini-Bilder bis Spielende | etwa 290 Bilder | noch offen | Schätzung ohne ID-Liste je Welt |
+
+**Regeln für künftige Schätzungen**
+
+1. **Erst die vollständige Liste, dann die Zahl.** Ohne ID-Liste wird jede Schätzung mehrfach nach oben korrigiert.
+2. **Realen Stückpreis ansetzen:** Bildpreis plus Vorlagen plus durchschnittlich 1,5 Wiederholungen. Für Läufe und Gesten eher Faktor 2.
+3. **Preise vor der Schätzung nachsehen** (Meshy-Preisliste, AI Studio) und das Modell prüfen, das wirklich läuft.
+4. **Kontostand vorher und nachher abfragen** und die echte Differenz melden, nicht die eigene Zählung. Bei Gemini zeigt nur AI Studio den echten Betrag, deshalb Sebastian früh um einen Blick bitten.
+5. **Bei 70 % der Grenze anhalten und melden**, nicht erst am Ende.
+6. **Wiederverwendung zuerst prüfen** (vorhandene Rigs, Clips, Modelle). Das hat bei Meshy mehrere hundert Credits gespart und hätte die hohen Schätzungen erspart.
+7. **Jede Schätzung mit Bandbreite und Annahmen nennen** („bei zwei Versuchen je Bild“), damit Sebastian sieht, woran sie hängt.
+
+---
+
+## 9. Weitere Punkte
 
 ### Godot-Fallen, die schon einmal Zeit gekostet haben
 
