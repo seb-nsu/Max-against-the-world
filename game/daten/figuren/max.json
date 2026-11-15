@@ -1,35 +1,35 @@
 {
  "bild": [
-  110,
-  187
+  86,
+  191
  ],
  "animationen": {
   "idle": {
-   "von": 16,
+   "von": 0,
    "bilder": 8,
    "ms": 280,
    "schleife": true
   },
   "talk": {
-   "von": 4,
+   "von": 8,
    "bilder": 4,
    "ms": 130,
    "schleife": true
   },
   "walk": {
-   "von": 24,
-   "bilder": 14,
-   "ms": 48,
+   "von": 12,
+   "bilder": 8,
+   "ms": 60,
    "schleife": true
   },
   "walk_alt": {
-   "von": 8,
+   "von": 20,
    "bilder": 8,
    "ms": 110,
    "schleife": true
   },
   "treppe_walk": {
-   "von": 38,
+   "von": 28,
    "bilder": 17,
    "ms": 95,
    "schleife": true
