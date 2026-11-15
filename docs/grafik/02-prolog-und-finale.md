@@ -218,6 +218,7 @@ Grundanimationen von Max und Pixel stehen in `00-stil-und-werkzeuge.md`.
 | Effekt | Teig-Schwall | 6 | einmalig | EFFEKT: 6 frames of 96x96, a gush of brown chocolate dough bursting sideways out of a small oven door, splattering and ending in a few drips (Finale, Fehlversuch rote Taste) |
 | Effekt | Staubwolke | 5 | einmalig | EFFEKT: 5 frames of 64x64, a small puff of pale flour dust rising from a paper sack and fading (Rückkehr 2, Opa klopft den Mehlsack ab) |
 | Opa | Gehen | 8 | Schleife | Grandpa walking with brisk small steps, slightly bent forward, hands swinging, goggles bouncing on his forehead, checkered slippers flat on the ground, facing right |
+| Opa | Reden | 6 | Schleife | Grandpa talks enthusiastically, one finger raised, then both hands drawing an invention in the air, goggles bouncing on his forehead, mouth opening and closing, facing right, feet stay planted |
 
 ### Benutzeroberfläche
 

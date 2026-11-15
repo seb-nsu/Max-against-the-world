@@ -574,7 +574,8 @@ def beats(handlung, anzahl):
     if ": " in handlung:
         vorspann, handlung = handlung.split(": ", 1)
         vorspann += ": "
-    roh = [t.strip() for t in re.split(r",\s*(?:then\s+|and then\s+)?|;\s*|\s+then\s+", handlung) if t.strip()]
+    trenner = r";\s*" if ";" in handlung else r",\s*(?:then\s+|and then\s+)?|\s+then\s+"
+    roh = [t.strip() for t in re.split(trenner, handlung) if t.strip()]
     teile = []
     for t in roh:
         if teile and not vorspann and nebensatz(t):
@@ -992,7 +993,11 @@ OFFEN_LISTE = [
         ("Läufe und Gänge, Bild für Bild (zuerst; je zwei Fassungen erzeugen und die bessere nehmen)",
          ["W1-B01", "W1-B14", "W1-B15", "W1-B16", "W1-B42", "WU-B02", "WU-B12", "PF-B12", "W2-B01", "W2-B02",
           "W2-B03", "W2-P08"]),
-        ("Als Nächstes (Test für flüssigere Animationen)", ["W1-B27", "W1-B26", "W1-B05"]),
+        ("Als Nächstes: Schmiede und Alwin (Test für flüssigere Animationen)",
+         ["W1-B27", "W1-B43", "W1-B44", "W1-B45", "W1-B46", "W1-B47", "W1-B26", "W1-B48", "W1-B05"]),
+        ("Reden mit Gesten (statt nur Kopfnicken)", ["W1-B49", "W1-B50", "W1-B51", "W1-B52", "W1-B53", "W1-B54",
+                                                     "W1-B55", "W1-B56", "W1-B57", "W1-B58", "W1-B59", "W1-B60",
+                                                     "PF-B13"]),
         ("Max und der Kater, in allen Welten", ["WU-B05", "WU-B06", "WU-B07", "WU-B08", "WU-B10", "WU-B22",
                                                "WU-B23", "WU-B24", "WU-B15", "WU-B16", "WU-B17", "WU-B18",
                                                "WU-B19", "WU-B20", "WU-B21", "WU-B25", "WU-B26"]),
@@ -1002,6 +1007,11 @@ OFFEN_LISTE = [
                     "W1-B19", "W1-B20", "W1-B21", "W1-B22", "W1-B23", "W1-B24", "W1-B25", "W1-B28", "W1-B29",
                     "W1-B30", "W1-B31", "W1-B32", "W1-B33", "W1-B34", "W1-B35", "W1-B36", "W1-B37", "W1-B38",
                     "W1-B39", "W1-B40", "W1-B41"]),
+        ("Welt 2, Tiere (ohne 3D-Clip, jedes Bild gemalt)", ["W2-B04", "W2-B05", "W2-B06", "W2-B07", "W2-B08",
+                                                             "W2-B09", "W2-B10", "W2-P48", "W2-P49"]),
+        ("Welt 2, Reden und Eigenheiten (Arme und Kopf; Beine und Timing aus dem 3D-Clip)",
+         ["W2-P28", "W2-P29", "W2-P30", "W2-P31", "W2-P32", "W2-P33", "W2-P34", "W2-P35", "W2-P36", "W2-P37",
+          "W2-P38", "W2-P39", "W2-P40", "W2-P41", "W2-P42", "W2-P43", "W2-P44", "W2-P45", "W2-P46", "W2-P47"]),
         ("Welt 2 (Posenbögen; die Bewegung selbst kommt aus dem 3D-Clip)",
          ["W2-P01", "W2-P02", "W2-P03", "W2-P04", "W2-P05", "W2-P06", "W2-P07", "W2-P09", "W2-P10",
           "W2-P11", "W2-P12", "W2-P13", "W2-P14", "W2-P15", "W2-P16", "W2-P17", "W2-P18", "W2-P19",

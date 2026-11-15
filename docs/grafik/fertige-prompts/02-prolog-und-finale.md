@@ -16,7 +16,7 @@ Opa steht ihre feste Beschreibung wortgleich in der Zeile CHARACTER LOCK; den Fi
 
 # Shotliste
 
-43 Shots, davon 15 sicher offen („–“: Stand nicht automatisch prüfbar). Kürzel:
+44 Shots, davon 15 sicher offen („–“: Stand nicht automatisch prüfbar). Kürzel:
 R Raum, F Figur, P Posenbogen, B Bewegung, G Gegenstände, N Nahansicht, K Figurenbogen.
 
 | Shot | Bild | Stand |
@@ -54,6 +54,7 @@ R Raum, F Figur, P Posenbogen, B Bewegung, G Gegenstände, N Nahansicht, K Figur
 | PF-B10 | Effekt: Teig-Schwall | – |
 | PF-B11 | Effekt: Staubwolke | – |
 | PF-B12 | Opa: Gehen | – |
+| PF-B13 | Opa: Reden | – |
 | PF-G01 | Prolog (1×7) | – |
 | PF-G02 | Gegenwart (2×4) | – |
 | PF-G03 | Deko Opas Haus (3×4) | – |
@@ -559,6 +560,23 @@ MANNER (applies to every frame): Grandpa walking with brisk small steps, slightl
 FRAMES: exactly 8 frames side by side, left to right, one complete cycle of about 0.8 s at 10 frames per second: (1) contact: near leg forward and straight, only its heel touching the ground, toes up; far leg stretched back, only its toes touching; far arm swung forward, near arm swung back; body at middle height; (2) down: near foot flat on the ground, near knee bent and carrying the weight, body at its lowest; far foot lifted just off the ground behind, far knee bent; (3) passing: near leg straight and vertical under the hips; far leg bent, its foot lifted to ankle height and swinging forward right beside the near leg; both arms close to the body; body high; (4) up: near foot pushing off on its toes behind the body; far leg swinging forward, almost straight, its foot just above the ground; body at its highest; (5) contact: far leg forward and straight, only its heel touching the ground; near leg stretched back, only its toes touching; near arm swung forward, far arm swung back; body at middle height; (6) down: far foot flat, far knee bent and carrying the weight, body at its lowest; near foot lifted just off the ground behind; (7) passing: far leg straight under the hips; near leg bent, its foot lifted to ankle height and swinging forward beside the far leg; body high; (8) up: far foot pushing off on its toes; near leg swinging forward, foot just above the ground; body at its highest, leading back into frame 1.
 LEGS: 'near' means the leg or arm closer to the viewer, 'far' the one on the other side of the body. Draw the far legs and the far arm one shade darker and partly behind the body, so the two sides can never be confused. Every frame must differ visibly from its neighbours; frames 5 to 8 repeat frames 1 to 4 with the sides swapped, they are never copies of them.
 END POSE: frame 8 leads straight back into frame 1, so the loop closes seamlessly; do not draw frame 1 twice.
+CAMERA: static, strict side view, facing right. Same scale and the same flat baseline in every pose, no zoom, no pan.
+NEGATIVE: no second character, no parts of the boy Max from the reference unless this is Max, no props that are not described, no environment, no floor, no ground shadow, no checkerboard, no frames, panels or cell borders, no text, labels or numbers, no motion blur, no ghosting, no duplicated or extra limbs, no change to face, proportions, clothing or colors, no photorealism, no 3D render, no watermark, no in-between blur, no speed lines, no smear frames, no sliding feet, no change of scale or baseline between poses, no camera movement, no zoom, no perspective change, no morphing, no extra poses beyond the ones listed
+```
+
+## Opa: Reden
+
+**Shot PF-B13**
+
+**Anhängen:** Opas Figurenbogen (bis dahin das Opa-Sprite) · **Bilder:** 6 · **Ablauf:** Schleife
+
+```text
+STYLE: Key pose sheet for a 2D game animation in exactly the same style, colors and proportions as the attached character sheet: same character, same head size, same hair and clothing colors, same line weight and flat cel shading, light from upper left. The key poses side by side in one row from left to right in the order of the action, evenly spaced with clear empty space between them, all at the same scale on one flat baseline, each a frozen still pose. Solid flat magenta (#ff00ff) background filling the whole image.
+SUBJECT: Grandpa Konrad exactly as on the attached character sheet, unchanged.
+CHARACTER LOCK (word for word; where SUBJECT or POSES say otherwise, they win): Grandpa Konrad, a tall thin old inventor about 106 percent of Max's height, stooped forward from the shoulders, knees slightly bent, long thin legs. Wild white hair (#ffffff, shadow #8b9bb4) standing up in tufts, bushy white eyebrows, long nose, big enthusiastic grin, fair wrinkled skin (#e8b796, shadow #c28569). Round brass goggles (#feae34) on a dark strap (#3e2731) pushed up on his forehead. A rust-brown knitted cardigan (#b86f50, shadow #8b5f4b) hanging to the hips, with two rows of bulging pockets stuffed with screwdrivers and pliers (#262b44). Loose light beige trousers (#e8b796, shadow #c28569). Dark red slippers (#e43b44, shadow #a22633). No lab coat, no tie, no beard. Dark outline #181425.
+ACTION (3 key poses of a 6-frame animation of about 0.6 s): (1) 0.0 s: Grandpa talks enthusiastically, one finger raised; (2) 0.2 s: both hands drawing an invention in the air; (3) 0.4 s: goggles bouncing on his forehead, mouth opening and closing, feet stay planted.
+FRAMES: draw all 6 frames side by side, left to right, in the order they play: the key poses above at their times and evenly spaced in-between frames, so the motion reads smoothly; every frame differs visibly from its neighbours, no two frames identical.
+END POSE: the same as pose 1, so the loop closes seamlessly; do not draw it twice.
 CAMERA: static, strict side view, facing right. Same scale and the same flat baseline in every pose, no zoom, no pan.
 NEGATIVE: no second character, no parts of the boy Max from the reference unless this is Max, no props that are not described, no environment, no floor, no ground shadow, no checkerboard, no frames, panels or cell borders, no text, labels or numbers, no motion blur, no ghosting, no duplicated or extra limbs, no change to face, proportions, clothing or colors, no photorealism, no 3D render, no watermark, no in-between blur, no speed lines, no smear frames, no sliding feet, no change of scale or baseline between poses, no camera movement, no zoom, no perspective change, no morphing, no extra poses beyond the ones listed
 ```
