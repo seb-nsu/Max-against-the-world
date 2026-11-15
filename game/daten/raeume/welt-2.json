@@ -1004,16 +1004,16 @@
     640,
     360
    ],
-   "hintergrund": "res://grafik/platzhalter/raum_palastkueche.png",
+   "hintergrund": "res://grafik/hintergruende/w2_bg_palastkueche_v01.png",
    "farbe": "#9c6b45",
    "laufbereich": [
     [
      8,
-     280
+     232
     ],
     [
      632,
-     280
+     232
     ],
     [
      632,
@@ -1026,21 +1026,22 @@
    ],
    "marker": {
     "start": [
-     48,
-     320
+     70,
+     290
     ],
     "von_thronsaal_ramses": [
-     48,
-     320
+     70,
+     290
     ]
    },
+   "tiefe": 0.85,
    "figuren": [
     {
      "id": "nebet",
      "script_name": "Nebet",
      "pos": [
-      320,
-      312
+      300,
+      300
      ]
     }
    ],
@@ -1050,14 +1051,14 @@
      "script_name": "Lehmoefen",
      "name_key": "UI_OBJ_LEHMOEFEN",
      "rect": [
-      80,
-      180,
-      112,
-      100
+      100,
+      155,
+      140,
+      75
      ],
      "gehe": [
-      136,
-      312
+      170,
+      260
      ],
      "ansehen": [
       {
@@ -1109,14 +1110,14 @@
      "script_name": "Schneidetisch",
      "name_key": "UI_OBJ_SCHNEIDETISCH",
      "rect": [
-      220,
-      224,
-      100,
-      56
+      232,
+      160,
+      140,
+      70
      ],
      "gehe": [
-      272,
-      312
+      300,
+      260
      ],
      "ansehen": [
       {
@@ -1142,14 +1143,14 @@
      "script_name": "Oelkruege",
      "name_key": "UI_OBJ_OELKRUEGE",
      "rect": [
-      376,
-      188,
+      380,
       80,
-      92
+      175,
+      145
      ],
      "gehe": [
-      416,
-      312
+      460,
+      260
      ],
      "ansehen": [
       {
@@ -1174,14 +1175,14 @@
      "script_name": "LeereAmphoren",
      "name_key": "UI_OBJ_LEERE_AMPHOREN",
      "rect": [
-      472,
-      212,
-      64,
-      68
+      540,
+      150,
+      55,
+      70
      ],
      "gehe": [
-      504,
-      312
+      565,
+      260
      ],
      "ansehen": [
       {
@@ -1206,14 +1207,14 @@
      "script_name": "KnoblauchUndKraeuter",
      "name_key": "UI_OBJ_KNOBLAUCH_UND_KRAEUTER",
      "rect": [
-      160,
-      20,
-      160,
-      40
+      250,
+      65,
+      110,
+      60
      ],
      "gehe": [
-      240,
-      312
+      300,
+      260
      ],
      "ansehen": [
       {
@@ -1239,14 +1240,14 @@
      "script_name": "TraubensaftAmphore",
      "name_key": "UI_OBJ_TRAUBENSAFT_AMPHORE",
      "rect": [
-      552,
-      200,
-      40,
-      80
+      492,
+      148,
+      45,
+      70
      ],
      "gehe": [
-      572,
-      312
+      515,
+      255
      ],
      "ansehen": [
       {
@@ -1271,14 +1272,14 @@
      "script_name": "Dampf",
      "name_key": "UI_OBJ_DAMPF",
      "rect": [
+      110,
       80,
-      100,
-      112,
-      72
+      120,
+      90
      ],
      "gehe": [
-      136,
-      312
+      170,
+      260
      ],
      "ansehen": [
       {
@@ -1305,16 +1306,16 @@
      "script_name": "Brot",
      "name_key": "UI_OBJ_BROT",
      "rect": [
-      228,
-      212,
-      24,
-      12
+      245,
+      158,
+      35,
+      17
      ],
      "gehe": [
-      240,
-      312
+      262,
+      255
      ],
-     "textur": "res://grafik/platzhalter/prop_brot.png",
+     "textur": "res://grafik/props/brot.png",
      "gegenstand": "brot",
      "ansehen": [],
      "nehmen": {
@@ -1330,16 +1331,16 @@
      "script_name": "Datteln",
      "name_key": "UI_OBJ_DATTELN",
      "rect": [
-      260,
-      212,
-      20,
-      12
+      330,
+      158,
+      32,
+      15
      ],
      "gehe": [
-      272,
-      312
+      345,
+      255
      ],
-     "textur": "res://grafik/platzhalter/prop_datteln.png",
+     "textur": "res://grafik/props/datteln.png",
      "gegenstand": "datteln",
      "ansehen": [],
      "nehmen": {
@@ -1355,16 +1356,16 @@
      "script_name": "Zwiebel",
      "name_key": "UI_OBJ_ZWIEBEL",
      "rect": [
-      288,
-      212,
-      16,
-      12
+      298,
+      160,
+      28,
+      16
      ],
      "gehe": [
-      296,
-      312
+      312,
+      255
      ],
-     "textur": "res://grafik/platzhalter/prop_zwiebel.png",
+     "textur": "res://grafik/props/zwiebel.png",
      "gegenstand": "zwiebel",
      "ansehen": [],
      "nehmen": {
@@ -1380,14 +1381,14 @@
      "script_name": "Traubensaft",
      "name_key": "UI_OBJ_TRAUBENSAFT",
      "rect": [
-      560,
-      256,
-      20,
-      24
+      492,
+      148,
+      45,
+      70
      ],
      "gehe": [
-      572,
-      312
+      515,
+      255
      ],
      "textur": "res://grafik/props/traubensaft.png",
      "gegenstand": "traubensaft",
@@ -1418,14 +1419,14 @@
      "ziel": "thronsaal_ramses",
      "name_key": "UI_OBJ_AUSGANG_THRONSAAL",
      "rect": [
-      4,
-      140,
-      36,
-      140
+      0,
+      70,
+      80,
+      160
      ],
      "gehe": [
-      24,
-      320
+      60,
+      260
      ],
      "erreichbar_ab": "start",
      "ansehen": []
@@ -1458,16 +1459,16 @@
     640,
     360
    ],
-   "hintergrund": "res://grafik/platzhalter/raum_sphinx.png",
+   "hintergrund": "res://grafik/hintergruende/w2_bg_sphinx_v01.png",
    "farbe": "#d8b878",
    "laufbereich": [
     [
      8,
-     280
+     248
     ],
     [
      632,
-     280
+     240
     ],
     [
      632,
@@ -1480,21 +1481,25 @@
    ],
    "marker": {
     "start": [
-     48,
-     320
+     50,
+     300
     ],
     "von_nil_delta": [
-     48,
-     320
+     50,
+     300
     ]
+   },
+   "tiefe": 0.85,
+   "hintergrund_nach": {
+    "R13": "res://grafik/hintergruende/w2_bg_sphinx_ohne_nase_v01.png"
    },
    "figuren": [
     {
      "id": "sphinx_figur",
      "script_name": "SphinxFigur",
      "pos": [
-      440,
-      276
+      560,
+      240
      ]
     }
    ],
@@ -1504,14 +1509,14 @@
      "script_name": "Schreibpult",
      "name_key": "UI_OBJ_SCHREIBPULT",
      "rect": [
-      168,
-      208,
-      104,
-      72
+      280,
+      178,
+      78,
+      57
      ],
      "gehe": [
-      220,
-      312
+      318,
+      270
      ],
      "ansehen": [
       {
@@ -1536,14 +1541,14 @@
      "script_name": "ZerknuelltePapyri",
      "name_key": "UI_OBJ_ZERKNUELLTE_PAPYRI",
      "rect": [
-      276,
-      260,
-      60,
-      20
+      258,
+      220,
+      117,
+      25
      ],
      "gehe": [
-      304,
-      312
+      318,
+      270
      ],
      "ansehen": [
       {
@@ -1568,14 +1573,14 @@
      "script_name": "Notizblock",
      "name_key": "UI_OBJ_NOTIZBLOCK",
      "rect": [
-      200,
-      196,
-      32,
-      12
+      310,
+      178,
+      22,
+      16
      ],
      "gehe": [
-      216,
-      312
+      318,
+      270
      ],
      "ansehen": [
       {
@@ -1600,14 +1605,14 @@
      "script_name": "Fussspuren",
      "name_key": "UI_OBJ_FUSSSPUREN",
      "rect": [
-      80,
-      320,
+      30,
+      200,
       120,
-      20
+      65
      ],
      "gehe": [
-      140,
-      312
+      100,
+      290
      ],
      "ansehen": [
       {
@@ -1633,14 +1638,14 @@
      "script_name": "Steinkugel",
      "name_key": "UI_OBJ_STEINKUGEL",
      "rect": [
-      168,
-      112,
-      72,
-      72
+      272,
+      60,
+      90,
+      90
      ],
      "gehe": [
-      200,
-      312
+      318,
+      270
      ],
      "ansehen": [
       {
@@ -1691,14 +1696,14 @@
      "script_name": "Nase",
      "name_key": "UI_OBJ_NASE",
      "rect": [
-      496,
-      128,
-      28,
-      32
+      565,
+      40,
+      35,
+      40
      ],
      "gehe": [
-      508,
-      312
+      540,
+      270
      ],
      "ansehen": [
       {
@@ -1755,14 +1760,14 @@
      "ziel": "nil_delta",
      "name_key": "UI_OBJ_AUSGANG_NIL_DELTA",
      "rect": [
-      4,
+      0,
       140,
-      36,
+      40,
       140
      ],
      "gehe": [
-      24,
-      320
+      30,
+      300
      ],
      "erreichbar_ab": "start",
      "ansehen": []
@@ -1795,16 +1800,16 @@
     640,
     360
    ],
-   "hintergrund": "res://grafik/platzhalter/raum_faehrsteg_olympia.png",
+   "hintergrund": "res://grafik/hintergruende/w2_bg_faehrsteg_olympia_v01.png",
    "farbe": "#8fae7a",
    "laufbereich": [
     [
      8,
-     280
+     262
     ],
     [
      632,
-     280
+     262
     ],
     [
      632,
@@ -1817,25 +1822,26 @@
    ],
    "marker": {
     "start": [
-     120,
-     316
+     130,
+     310
     ],
     "von_faehre": [
-     120,
-     316
+     130,
+     310
     ],
     "von_agora": [
-     592,
-     320
+     590,
+     310
     ]
    },
+   "tiefe": 0.85,
    "figuren": [
     {
      "id": "faehrmann",
      "script_name": "Faehrmann",
      "pos": [
-      80,
-      304
+      70,
+      300
      ]
     }
    ],
@@ -1845,14 +1851,14 @@
      "script_name": "Faehre",
      "name_key": "UI_OBJ_FAEHRE",
      "rect": [
-      8,
-      260,
-      128,
-      40
+      0,
+      240,
+      100,
+      60
      ],
      "gehe": [
-      112,
-      316
+      90,
+      300
      ],
      "ansehen": []
     },
@@ -1861,14 +1867,14 @@
      "script_name": "Olivenbaeume",
      "name_key": "UI_OBJ_OLIVENBAEUME",
      "rect": [
-      200,
-      72,
-      180,
-      160
+      218,
+      55,
+      252,
+      115
      ],
      "gehe": [
-      288,
-      308
+      340,
+      296
      ],
      "ansehen": [
       {
@@ -1894,14 +1900,14 @@
      "script_name": "Fischerboot",
      "name_key": "UI_OBJ_FISCHERBOOT",
      "rect": [
-      392,
-      248,
-      88,
-      32
+      380,
+      168,
+      130,
+      60
      ],
      "gehe": [
-      436,
-      312
+      445,
+      296
      ],
      "ansehen": [
       {
@@ -1927,14 +1933,14 @@
      "script_name": "SanduhrOlympia",
      "name_key": "UI_OBJ_SANDUHR_OLYMPIA",
      "rect": [
-      152,
-      188,
-      32,
-      68
+      58,
+      80,
+      48,
+      170
      ],
      "gehe": [
-      168,
-      308
+      112,
+      296
      ],
      "ansehen": [
       {
@@ -1959,14 +1965,14 @@
      "script_name": "TafelOlympia",
      "name_key": "UI_OBJ_TAFEL_OLYMPIA",
      "rect": [
-      192,
-      224,
-      36,
-      36
+      134,
+      148,
+      80,
+      88
      ],
      "gehe": [
-      208,
-      308
+      175,
+      296
      ],
      "ansehen": [
       {
@@ -1995,14 +2001,14 @@
      "ziel": "agora",
      "name_key": "UI_OBJ_WEG_ZUR_AGORA",
      "rect": [
-      584,
-      120,
-      52,
-      160
+      560,
+      110,
+      80,
+      150
      ],
      "gehe": [
-      600,
-      320
+      610,
+      296
      ],
      "erreichbar_ab": "R1",
      "ansehen": [
@@ -2617,12 +2623,20 @@
     640,
     360
    ],
-   "hintergrund": "res://grafik/platzhalter/raum_startbuero.png",
+   "hintergrund": "res://grafik/hintergruende/w2_bg_startbuero_v01.png",
    "farbe": "#a89a7c",
    "laufbereich": [
     [
-     8,
-     280
+     110,
+     218
+    ],
+    [
+     460,
+     218
+    ],
+    [
+     480,
+     250
     ],
     [
      632,
@@ -2635,37 +2649,46 @@
     [
      8,
      356
+    ],
+    [
+     8,
+     285
+    ],
+    [
+     110,
+     285
     ]
    ],
    "marker": {
     "start": [
-     48,
-     320
+     110,
+     250
     ],
     "von_agora": [
-     48,
-     320
+     110,
+     250
     ],
     "hermes": [
-     200,
-     320
+     220,
+     290
     ]
    },
+   "tiefe": 0.8,
    "figuren": [
     {
      "id": "beamter_1",
      "script_name": "Beamter1",
      "pos": [
-      260,
-      280
+      320,
+      232
      ]
     },
     {
      "id": "beamter_2",
      "script_name": "Beamter2",
      "pos": [
-      440,
-      280
+      450,
+      236
      ]
     }
    ],
@@ -2675,14 +2698,14 @@
      "script_name": "Formularberg",
      "name_key": "UI_OBJ_FORMULARBERG",
      "rect": [
-      528,
-      100,
-      100,
-      180
+      460,
+      30,
+      180,
+      240
      ],
      "gehe": [
-      568,
-      312
+      520,
+      290
      ],
      "ansehen": [
       {
@@ -2717,14 +2740,14 @@
      "script_name": "Wachstafeln",
      "name_key": "UI_OBJ_WACHSTAFELN",
      "rect": [
-      328,
-      160,
-      56,
-      44
+      365,
+      140,
+      40,
+      20
      ],
      "gehe": [
-      356,
-      308
+      390,
+      240
      ],
      "ansehen": [
       {
@@ -2749,14 +2772,14 @@
      "script_name": "Aushang",
      "name_key": "UI_OBJ_AUSHANG",
      "rect": [
-      112,
-      108,
-      40,
-      52
+      150,
+      80,
+      35,
+      45
      ],
      "gehe": [
-      132,
-      308
+      170,
+      240
      ],
      "ansehen": [
       {
@@ -2781,14 +2804,14 @@
      "script_name": "BankMitWartenden",
      "name_key": "UI_OBJ_BANK_MIT_WARTENDEN",
      "rect": [
-      84,
-      248,
-      120,
-      32
+      0,
+      160,
+      110,
+      120
      ],
      "gehe": [
-      144,
-      316
+      130,
+      300
      ],
      "ansehen": [
       {
@@ -2815,13 +2838,13 @@
      "name_key": "UI_OBJ_STAUB",
      "rect": [
       200,
-      20,
+      0,
       240,
-      80
+      100
      ],
      "gehe": [
       320,
-      308
+      260
      ],
      "ansehen": [
       {
@@ -2848,16 +2871,16 @@
      "script_name": "LeeresFormular",
      "name_key": "UI_OBJ_LEERES_FORMULAR",
      "rect": [
-      576,
-      260,
-      24,
-      16
+      570,
+      255,
+      30,
+      20
      ],
      "gehe": [
-      568,
-      312
+      560,
+      300
      ],
-     "textur": "res://grafik/platzhalter/prop_leeres_formular.png",
+     "textur": "res://grafik/props/leeres_formular.png",
      "gegenstand": "leeres_formular",
      "ansehen": [],
      "nehmen": {
@@ -2886,14 +2909,14 @@
      "ziel": "agora",
      "name_key": "UI_OBJ_AUSGANG_AGORA",
      "rect": [
-      4,
-      140,
-      36,
-      140
+      55,
+      40,
+      65,
+      175
      ],
      "gehe": [
-      24,
-      320
+      100,
+      240
      ],
      "erreichbar_ab": "R1",
      "ansehen": []
@@ -3378,16 +3401,24 @@
     640,
     360
    ],
-   "hintergrund": "res://grafik/platzhalter/raum_hafen_syrakus.png",
+   "hintergrund": "res://grafik/hintergruende/w2_bg_hafen_syrakus_v01.png",
    "farbe": "#6f98b0",
    "laufbereich": [
     [
      8,
+     215
+    ],
+    [
+     560,
+     215
+    ],
+    [
+     580,
      280
     ],
     [
      632,
-     280
+     300
     ],
     [
      632,
@@ -3400,29 +3431,30 @@
    ],
    "marker": {
     "start": [
-     120,
-     316
+     140,
+     290
     ],
     "von_faehre": [
-     120,
-     316
+     140,
+     290
     ],
     "von_werkstatt": [
-     592,
-     320
+     580,
+     270
     ],
     "von_grabhuegel": [
-     376,
-     296
+     372,
+     240
     ]
    },
+   "tiefe": 0.75,
    "figuren": [
     {
      "id": "faehrmann",
      "script_name": "Faehrmann",
      "pos": [
-      80,
-      304
+      100,
+      262
      ]
     }
    ],
@@ -3432,14 +3464,14 @@
      "script_name": "Faehre",
      "name_key": "UI_OBJ_FAEHRE",
      "rect": [
-      8,
-      260,
-      128,
+      0,
+      165,
+      170,
       40
      ],
      "gehe": [
-      112,
-      316
+      100,
+      250
      ],
      "ansehen": []
     },
@@ -3450,12 +3482,12 @@
      "rect": [
       0,
       120,
-      200,
-      80
+      160,
+      45
      ],
      "gehe": [
-      120,
-      308
+      100,
+      250
      ],
      "ansehen": [
       {
@@ -3482,14 +3514,14 @@
      "script_name": "Fischernetze",
      "name_key": "UI_OBJ_FISCHERNETZE",
      "rect": [
-      220,
-      220,
-      88,
-      60
+      160,
+      95,
+      160,
+      120
      ],
      "gehe": [
-      264,
-      312
+      240,
+      250
      ],
      "ansehen": [
       {
@@ -3514,14 +3546,14 @@
      "script_name": "AmphorenAmKai",
      "name_key": "UI_OBJ_AMPHOREN_AM_KAI",
      "rect": [
-      440,
-      224,
-      72,
-      56
+      390,
+      170,
+      135,
+      55
      ],
      "gehe": [
-      476,
-      312
+      455,
+      250
      ],
      "ansehen": [
       {
@@ -3547,14 +3579,14 @@
      "script_name": "SanduhrSyrakus",
      "name_key": "UI_OBJ_SANDUHR_SYRAKUS",
      "rect": [
-      156,
-      188,
-      32,
-      68
+      58,
+      92,
+      40,
+      160
      ],
      "gehe": [
-      172,
-      308
+      110,
+      262
      ],
      "ansehen": [
       {
@@ -3581,16 +3613,16 @@
      "script_name": "Tintenfass",
      "name_key": "UI_OBJ_TINTENFASS",
      "rect": [
-      252,
-      248,
-      20,
-      20
+      255,
+      182,
+      25,
+      22
      ],
      "gehe": [
-      264,
-      312
+      262,
+      250
      ],
-     "textur": "res://grafik/platzhalter/prop_tintenfass.png",
+     "textur": "res://grafik/props/tintenfass.png",
      "gegenstand": "tintenfass",
      "ansehen": [],
      "nehmen": {
@@ -3620,14 +3652,14 @@
      "ziel": "werkstatt",
      "name_key": "UI_OBJ_GASSE_ZUR_WERKSTATT",
      "rect": [
-      560,
+      520,
+      110,
       120,
-      76,
-      160
+      130
      ],
      "gehe": [
-      600,
-      320
+      590,
+      255
      ],
      "erreichbar_ab": "R1",
      "ansehen": [
@@ -3654,14 +3686,14 @@
      "ziel": "grabhuegel",
      "name_key": "UI_OBJ_PFAD_ZUM_GRABHUEGEL",
      "rect": [
-      340,
+      335,
       100,
-      72,
+      75,
       80
      ],
      "gehe": [
-      376,
-      296
+      372,
+      232
      ],
      "erreichbar_ab": "R1",
      "ansehen": []
@@ -3694,16 +3726,16 @@
     640,
     360
    ],
-   "hintergrund": "res://grafik/platzhalter/raum_werkstatt.png",
+   "hintergrund": "res://grafik/hintergruende/w2_bg_werkstatt_v01.png",
    "farbe": "#8a7a62",
    "laufbereich": [
     [
-     8,
-     280
+     190,
+     240
     ],
     [
      632,
-     280
+     240
     ],
     [
      632,
@@ -3712,25 +3744,34 @@
     [
      8,
      356
+    ],
+    [
+     8,
+     330
+    ],
+    [
+     190,
+     330
     ]
    ],
    "marker": {
     "start": [
-     592,
-     320
+     590,
+     310
     ],
     "von_hafen_syrakus": [
-     592,
-     320
+     590,
+     310
     ]
    },
+   "tiefe": 0.8,
    "figuren": [
     {
      "id": "archimedes",
      "script_name": "Archimedes",
      "pos": [
-      280,
-      312
+      300,
+      300
      ]
     },
     {
@@ -3738,7 +3779,7 @@
      "script_name": "Hieron",
      "pos": [
       400,
-      312
+      310
      ]
     }
    ],
@@ -3748,14 +3789,14 @@
      "script_name": "Badewanne",
      "name_key": "UI_OBJ_BADEWANNE",
      "rect": [
-      48,
-      232,
-      112,
-      48
+      8,
+      200,
+      180,
+      120
      ],
      "gehe": [
-      104,
-      312
+      210,
+      300
      ],
      "ansehen": [
       {
@@ -3799,14 +3840,14 @@
      "script_name": "Werkbank",
      "name_key": "UI_OBJ_WERKBANK",
      "rect": [
-      184,
-      208,
-      128,
-      72
+      170,
+      150,
+      190,
+      90
      ],
      "gehe": [
-      248,
-      312
+      270,
+      270
      ],
      "ansehen": [
       {
@@ -3831,14 +3872,14 @@
      "script_name": "Wurfhebel",
      "name_key": "UI_OBJ_WURFHEBEL",
      "rect": [
-      460,
-      188,
-      68,
-      92
+      400,
+      160,
+      90,
+      120
      ],
      "gehe": [
-      492,
-      312
+      445,
+      290
      ],
      "ansehen": [
       {
@@ -3865,14 +3906,14 @@
      "script_name": "Wasserorgel",
      "name_key": "UI_OBJ_WASSERORGEL",
      "rect": [
-      48,
-      96,
-      88,
-      108
+      18,
+      20,
+      105,
+      180
      ],
      "gehe": [
-      92,
-      312
+      210,
+      280
      ],
      "ansehen": [
       {
@@ -3930,14 +3971,14 @@
      "script_name": "BauplanDampfmaschine",
      "name_key": "UI_OBJ_BAUPLAN_DAMPFMASCHINE",
      "rect": [
-      156,
-      68,
-      60,
-      48
+      128,
+      95,
+      50,
+      45
      ],
      "gehe": [
-      184,
-      308
+      210,
+      270
      ],
      "ansehen": [
       {
@@ -3962,14 +4003,14 @@
      "script_name": "ModellSchieferTurm",
      "name_key": "UI_OBJ_MODELL_SCHIEFER_TURM",
      "rect": [
-      224,
-      172,
-      20,
-      36
+      270,
+      60,
+      30,
+      35
      ],
      "gehe": [
-      232,
-      312
+      280,
+      270
      ],
      "ansehen": [
       {
@@ -3994,14 +4035,14 @@
      "script_name": "SkizzeKugelUndZylinder",
      "name_key": "UI_OBJ_SKIZZE_KUGEL_UND_ZYLINDER",
      "rect": [
-      232,
-      68,
-      60,
-      48
+      180,
+      50,
+      40,
+      55
      ],
      "gehe": [
-      260,
-      308
+      220,
+      270
      ],
      "ansehen": [
       {
@@ -4035,14 +4076,14 @@
      "script_name": "Fenster",
      "name_key": "UI_OBJ_FENSTER",
      "rect": [
-      348,
-      40,
-      112,
-      72
+      350,
+      35,
+      150,
+      95
      ],
      "gehe": [
-      404,
-      308
+      420,
+      270
      ],
      "ansehen": [
       {
@@ -4068,14 +4109,14 @@
      "script_name": "Zahnraeder",
      "name_key": "UI_OBJ_ZAHNRAEDER",
      "rect": [
-      304,
-      132,
-      56,
-      56
+      300,
+      100,
+      60,
+      60
      ],
      "gehe": [
-      332,
-      308
+      330,
+      270
      ],
      "ansehen": [
       {
@@ -4102,16 +4143,16 @@
      "script_name": "Brennspiegel",
      "name_key": "UI_OBJ_BRENNSPIEGEL",
      "rect": [
-      540,
-      144,
-      28,
-      32
+      505,
+      90,
+      80,
+      145
      ],
      "gehe": [
-      552,
-      312
+      530,
+      270
      ],
-     "textur": "res://grafik/platzhalter/prop_brennspiegel.png",
+     "textur": "res://grafik/props/brennspiegel.png",
      "gegenstand": "brennspiegel",
      "ansehen": [
       {
@@ -4152,16 +4193,16 @@
      "script_name": "Waage",
      "name_key": "UI_OBJ_WAAGE",
      "rect": [
-      260,
-      188,
-      28,
-      20
+      195,
+      125,
+      45,
+      45
      ],
      "gehe": [
-      272,
-      312
+      220,
+      270
      ],
-     "textur": "res://grafik/platzhalter/prop_waage.png",
+     "textur": "res://grafik/props/waage.png",
      "gegenstand": "waage",
      "ansehen": [
       {
@@ -4228,16 +4269,16 @@
      "script_name": "Messbecher",
      "name_key": "UI_OBJ_MESSBECHER",
      "rect": [
-      292,
-      192,
-      16,
-      16
+      240,
+      150,
+      24,
+      18
      ],
      "gehe": [
-      300,
-      312
+      250,
+      270
      ],
-     "textur": "res://grafik/platzhalter/prop_messbecher.png",
+     "textur": "res://grafik/props/messbecher.png",
      "gegenstand": "messbecher",
      "ansehen": [
       {
@@ -4269,14 +4310,14 @@
      "script_name": "Essigkrug",
      "name_key": "UI_OBJ_ESSIGKRUG",
      "rect": [
-      544,
-      240,
-      32,
-      40
+      555,
+      175,
+      45,
+      60
      ],
      "gehe": [
-      552,
-      312
+      560,
+      270
      ],
      "textur": "res://grafik/props/essigkrug.png",
      "gegenstand": "essigkrug",
@@ -4324,13 +4365,13 @@
      "name_key": "UI_OBJ_AUSGANG_HAFEN",
      "rect": [
       600,
-      140,
-      36,
-      140
+      40,
+      40,
+      240
      ],
      "gehe": [
-      608,
-      320
+      610,
+      300
      ],
      "erreichbar_ab": "R1",
      "ansehen": []
@@ -4363,16 +4404,16 @@
     640,
     360
    ],
-   "hintergrund": "res://grafik/platzhalter/raum_grabhuegel.png",
+   "hintergrund": "res://grafik/hintergruende/w2_bg_grabhuegel_v01.png",
    "farbe": "#7a8a5a",
    "laufbereich": [
     [
      8,
-     280
+     235
     ],
     [
      632,
-     280
+     240
     ],
     [
      632,
@@ -4385,21 +4426,25 @@
    ],
    "marker": {
     "start": [
-     48,
-     320
+     50,
+     300
     ],
     "von_hafen_syrakus": [
-     48,
-     320
+     50,
+     300
     ],
     "archimedes": [
      520,
-     312
+     290
     ],
     "cicero": [
      400,
-     312
+     290
     ]
+   },
+   "tiefe": 0.85,
+   "hintergrund_nach": {
+    "R10b": "res://grafik/hintergruende/w2_bg_grabhuegel_grabstein_v01.png"
    },
    "figuren": [],
    "hotspots": [
@@ -4408,14 +4453,14 @@
      "script_name": "Sockel",
      "name_key": "UI_OBJ_SOCKEL",
      "rect": [
-      280,
-      224,
-      68,
-      56
+      295,
+      170,
+      50,
+      50
      ],
      "gehe": [
-      312,
-      312
+      320,
+      250
      ],
      "ansehen": [
       {
@@ -4474,14 +4519,14 @@
      "script_name": "Brombeeren",
      "name_key": "UI_OBJ_BROMBEEREN",
      "rect": [
-      80,
-      212,
-      120,
-      68
+      40,
+      110,
+      160,
+      140
      ],
      "gehe": [
-      140,
-      312
+      120,
+      280
      ],
      "ansehen": [
       {
@@ -4507,14 +4552,14 @@
      "script_name": "AlteGrabsteine",
      "name_key": "UI_OBJ_ALTE_GRABSTEINE",
      "rect": [
-      400,
-      200,
-      120,
-      80
+      395,
+      135,
+      245,
+      105
      ],
      "gehe": [
-      460,
-      312
+      500,
+      270
      ],
      "ansehen": [
       {
@@ -4539,14 +4584,14 @@
      "script_name": "Zypressen",
      "name_key": "UI_OBJ_ZYPRESSEN",
      "rect": [
-      540,
-      40,
-      80,
-      200
+      410,
+      0,
+      150,
+      130
      ],
      "gehe": [
-      580,
-      308
+      480,
+      270
      ],
      "ansehen": [
       {
@@ -4572,13 +4617,13 @@
      "name_key": "UI_OBJ_ZIKADEN",
      "rect": [
       200,
-      40,
+      0,
       200,
-      52
+      100
      ],
      "gehe": [
       300,
-      308
+      280
      ],
      "ansehen": [
       {
@@ -4609,14 +4654,14 @@
      "ziel": "hafen_syrakus",
      "name_key": "UI_OBJ_AUSGANG_HAFEN",
      "rect": [
-      4,
+      0,
       140,
-      36,
+      40,
       140
      ],
      "gehe": [
-      24,
-      320
+      30,
+      300
      ],
      "erreichbar_ab": "R1",
      "ansehen": []

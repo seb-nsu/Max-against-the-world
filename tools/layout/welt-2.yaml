@@ -110,75 +110,83 @@ thronsaal_ramses:
 
 palastkueche:
   farbe: "#9c6b45"
-  laufbereich: [[8, 280], [632, 280], [632, 356], [8, 356]]
+  hintergrund: res://grafik/hintergruende/w2_bg_palastkueche_v01.png
+  tiefe: 0.85
+  laufbereich: [[8, 232], [632, 232], [632, 356], [8, 356]]
   marker:
-    start: [48, 320]
-    von_thronsaal_ramses: [48, 320]
+    start: [70, 290]
+    von_thronsaal_ramses: [70, 290]
   figuren:
-    nebet: [320, 312]
+    nebet: [300, 300]
   alias:
     oelkrug: oelkruege
     lehmofen: lehmoefen
     brot_vom_tisch: brot
   ohne: [oelkrug]               # Nehmen Ölkrug: Nebet wehrt ab (Hotspot Ölkrüge)
   hotspots:
-    lehmoefen: {rect: [80, 180, 112, 100], gehe: [136, 312], name: Lehmöfen}
-    schneidetisch: {rect: [220, 224, 100, 56], gehe: [272, 312], name: Schneidetisch}
-    oelkruege: {rect: [376, 188, 80, 92], gehe: [416, 312], name: Ölkrüge}
-    leere_amphoren: {rect: [472, 212, 64, 68], gehe: [504, 312], name: Leere Amphoren}
-    knoblauch_und_kraeuter: {rect: [160, 20, 160, 40], gehe: [240, 312], name: Knoblauch und Kräuter}
-    traubensaft_amphore: {rect: [552, 200, 40, 80], gehe: [572, 312], name: Traubensaft-Amphore}
-    dampf: {rect: [80, 100, 112, 72], gehe: [136, 312], name: Dampf}
+    lehmoefen: {rect: [100, 155, 140, 75], gehe: [170, 260], name: Lehmöfen}
+    schneidetisch: {rect: [232, 160, 140, 70], gehe: [300, 260], name: Schneidetisch}
+    oelkruege: {rect: [380, 80, 175, 145], gehe: [460, 260], name: Ölkrüge}
+    leere_amphoren: {rect: [540, 150, 55, 70], gehe: [565, 260], name: Leere Amphoren}
+    knoblauch_und_kraeuter: {rect: [250, 65, 110, 60], gehe: [300, 260], name: Knoblauch und Kräuter}
+    traubensaft_amphore: {rect: [492, 148, 45, 70], gehe: [515, 255], name: Traubensaft-Amphore}
+    dampf: {rect: [110, 80, 120, 90], gehe: [170, 260], name: Dampf}
   props:
-    brot: {rect: [228, 212, 24, 12], gehe: [240, 312]}
-    datteln: {rect: [260, 212, 20, 12], gehe: [272, 312]}
-    zwiebel: {rect: [288, 212, 16, 12], gehe: [296, 312]}
-    traubensaft: {rect: [560, 256, 20, 24], gehe: [572, 312]}
+    brot: {rect: [245, 158, 35, 17], gehe: [262, 255]}
+    datteln: {rect: [330, 158, 32, 15], gehe: [345, 255]}
+    zwiebel: {rect: [298, 160, 28, 16], gehe: [312, 255]}
+    traubensaft: {rect: [492, 148, 45, 70], gehe: [515, 255]}
   ausgaenge:
-    thronsaal_ramses: {rect: [4, 140, 36, 140], gehe: [24, 320], id: ausgang_thronsaal, name: Thronsaal}
+    thronsaal_ramses: {rect: [0, 70, 80, 160], gehe: [60, 260], id: ausgang_thronsaal, name: Thronsaal}
 
 sphinx:
   farbe: "#d8b878"
-  laufbereich: [[8, 280], [632, 280], [632, 356], [8, 356]]
+  hintergrund: res://grafik/hintergruende/w2_bg_sphinx_v01.png
+  hintergrund_nach:
+    R13: res://grafik/hintergruende/w2_bg_sphinx_ohne_nase_v01.png
+  tiefe: 0.85
+  laufbereich: [[8, 248], [632, 240], [632, 356], [8, 356]]
   marker:
-    start: [48, 320]
-    von_nil_delta: [48, 320]
+    start: [50, 300]
+    von_nil_delta: [50, 300]
   figuren:
-    sphinx_figur: [440, 276]
+    sphinx_figur: [560, 240]
   alias:
     sphinx: sphinx_figur
     nase_im_sand: nase
   hotspots:
-    schreibpult: {rect: [168, 208, 104, 72], gehe: [220, 312], name: Schreibpult}
-    zerknuellte_papyri: {rect: [276, 260, 60, 20], gehe: [304, 312], name: Zerknüllte Papyri}
-    notizblock: {rect: [200, 196, 32, 12], gehe: [216, 312], name: Notizblock}
-    fussspuren: {rect: [80, 320, 120, 20], gehe: [140, 312], name: Fußspuren}
-    steinkugel: {rect: [168, 112, 72, 72], gehe: [200, 312], name: Steinkugel}
-    nase: {rect: [496, 128, 28, 32], gehe: [508, 312], name: Nase}
+    schreibpult: {rect: [280, 178, 78, 57], gehe: [318, 270], name: Schreibpult}
+    zerknuellte_papyri: {rect: [258, 220, 117, 25], gehe: [318, 270], name: Zerknüllte Papyri}
+    notizblock: {rect: [310, 178, 22, 16], gehe: [318, 270], name: Notizblock}
+    fussspuren: {rect: [30, 200, 120, 65], gehe: [100, 290], name: Fußspuren}
+    steinkugel: {rect: [272, 60, 90, 90], gehe: [318, 270], name: Steinkugel}
+    nase: {rect: [565, 40, 35, 40], gehe: [540, 270], name: Nase}
   ausgaenge:
-    nil_delta: {rect: [4, 140, 36, 140], gehe: [24, 320], id: ausgang_nil_delta, name: Nil-Delta}
+    nil_delta: {rect: [0, 140, 40, 140], gehe: [30, 300], id: ausgang_nil_delta, name: Nil-Delta}
 
 faehrsteg_olympia:
   farbe: "#8fae7a"
-  laufbereich: [[8, 280], [632, 280], [632, 356], [8, 356]]
+  hintergrund: res://grafik/hintergruende/w2_bg_faehrsteg_olympia_v01.png
+  tiefe: 0.85
+  laufbereich: [[8, 262], [632, 262], [632, 356], [8, 356]]
   faehre: [nil_delta, hafen_syrakus]
   marker:
-    start: [120, 316]
-    von_faehre: [120, 316]
-    von_agora: [592, 320]
+    start: [130, 310]
+    von_faehre: [130, 310]
+    von_agora: [590, 310]
   figuren:
-    faehrmann: [80, 304]
+    faehrmann: [70, 300]
   alias:
     tafel: tafel_olympia
     sanduhr: sanduhr_olympia
   hotspots:
-    faehre: {rect: [8, 260, 128, 40], gehe: [112, 316], name: Fähre}
-    olivenbaeume: {rect: [200, 72, 180, 160], gehe: [288, 308], name: Olivenbäume}
-    fischerboot: {rect: [392, 248, 88, 32], gehe: [436, 312], name: Fischerboot}
-    sanduhr_olympia: {rect: [152, 188, 32, 68], gehe: [168, 308], name: Sanduhr}
-    tafel_olympia: {rect: [192, 224, 36, 36], gehe: [208, 308], name: Tafel}
+    faehre: {rect: [0, 240, 100, 60], gehe: [90, 300], name: Fähre}
+    olivenbaeume: {rect: [218, 55, 252, 115], gehe: [340, 296], name: Olivenbäume}
+    fischerboot: {rect: [380, 168, 130, 60], gehe: [445, 296], name: Fischerboot}
+    sanduhr_olympia: {rect: [58, 80, 48, 170], gehe: [112, 296], name: Sanduhr}
+    tafel_olympia: {rect: [134, 148, 80, 88], gehe: [175, 296], name: Tafel}
   ausgaenge:
-    agora: {rect: [584, 120, 52, 160], gehe: [600, 320], id: weg_zur_agora, name: Weg zur Agora}
+    agora: {rect: [560, 110, 80, 150], gehe: [610, 296], id: weg_zur_agora, name: Weg zur Agora}
 
 agora:
   farbe: "#c8c0a8"
@@ -225,29 +233,31 @@ agora:
 
 startbuero:
   farbe: "#a89a7c"
-  laufbereich: [[8, 280], [632, 280], [632, 356], [8, 356]]
+  hintergrund: res://grafik/hintergruende/w2_bg_startbuero_v01.png
+  tiefe: 0.8
+  laufbereich: [[110, 218], [460, 218], [480, 250], [632, 280], [632, 356], [8, 356], [8, 285], [110, 285]]
   marker:
-    start: [48, 320]
-    von_agora: [48, 320]
-    hermes: [200, 320]
+    start: [110, 250]
+    von_agora: [110, 250]
+    hermes: [220, 290]
   figuren:
-    beamter_1: [260, 280]
-    beamter_2: [440, 280]
+    beamter_1: [320, 232]
+    beamter_2: [450, 236]
   alias:
     beamter: beamter_2
     "2": beamter_2
     papyrus: papyrusblatt
     leeres_formular_vom_formularberg: leeres_formular
   hotspots:
-    formularberg: {rect: [528, 100, 100, 180], gehe: [568, 312], name: Formularberg}
-    wachstafeln: {rect: [328, 160, 56, 44], gehe: [356, 308], name: Wachstafeln}
-    aushang: {rect: [112, 108, 40, 52], gehe: [132, 308], name: Aushang}
-    bank_mit_wartenden: {rect: [84, 248, 120, 32], gehe: [144, 316], name: Bank}
-    staub: {rect: [200, 20, 240, 80], gehe: [320, 308], name: Staub}
+    formularberg: {rect: [460, 30, 180, 240], gehe: [520, 290], name: Formularberg}
+    wachstafeln: {rect: [365, 140, 40, 20], gehe: [390, 240], name: Wachstafeln}
+    aushang: {rect: [150, 80, 35, 45], gehe: [170, 240], name: Aushang}
+    bank_mit_wartenden: {rect: [0, 160, 110, 120], gehe: [130, 300], name: Bank}
+    staub: {rect: [200, 0, 240, 100], gehe: [320, 260], name: Staub}
   props:
-    leeres_formular: {rect: [576, 260, 24, 16], gehe: [568, 312]}
+    leeres_formular: {rect: [570, 255, 30, 20], gehe: [560, 300]}
   ausgaenge:
-    agora: {rect: [4, 140, 36, 140], gehe: [24, 320], id: ausgang_agora, name: Agora}
+    agora: {rect: [55, 40, 65, 175], gehe: [100, 240], id: ausgang_agora, name: Agora}
 
 stadion:
   farbe: "#d6b46a"
@@ -283,76 +293,84 @@ stadion:
 
 hafen_syrakus:
   farbe: "#6f98b0"
-  laufbereich: [[8, 280], [632, 280], [632, 356], [8, 356]]
+  hintergrund: res://grafik/hintergruende/w2_bg_hafen_syrakus_v01.png
+  tiefe: 0.75
+  laufbereich: [[8, 215], [560, 215], [580, 280], [632, 300], [632, 356], [8, 356]]
   faehre: [nil_delta, faehrsteg_olympia]
   marker:
-    start: [120, 316]
-    von_faehre: [120, 316]
-    von_werkstatt: [592, 320]
-    von_grabhuegel: [376, 296]
+    start: [140, 290]
+    von_faehre: [140, 290]
+    von_werkstatt: [580, 270]
+    von_grabhuegel: [372, 240]
   figuren:
-    faehrmann: [80, 304]
+    faehrmann: [100, 262]
   alias:
     sanduhr: sanduhr_syrakus
     tintenfisch_aus_dem_netz: tintenfass
     tintenfisch: tintenfass
   hotspots:
-    faehre: {rect: [8, 260, 128, 40], gehe: [112, 316], name: Fähre}
-    meer: {rect: [0, 120, 200, 80], gehe: [120, 308], name: Meer}
-    fischernetze: {rect: [220, 220, 88, 60], gehe: [264, 312], name: Fischernetze}
-    amphoren_am_kai: {rect: [440, 224, 72, 56], gehe: [476, 312], name: Amphoren}
-    sanduhr_syrakus: {rect: [156, 188, 32, 68], gehe: [172, 308], name: Sanduhr}
+    faehre: {rect: [0, 165, 170, 40], gehe: [100, 250], name: Fähre}
+    meer: {rect: [0, 120, 160, 45], gehe: [100, 250], name: Meer}
+    fischernetze: {rect: [160, 95, 160, 120], gehe: [240, 250], name: Fischernetze}
+    amphoren_am_kai: {rect: [390, 170, 135, 55], gehe: [455, 250], name: Amphoren}
+    sanduhr_syrakus: {rect: [58, 92, 40, 160], gehe: [110, 262], name: Sanduhr}
   props:
-    tintenfass: {rect: [252, 248, 20, 20], gehe: [264, 312]}
+    tintenfass: {rect: [255, 182, 25, 22], gehe: [262, 250]}
   ausgaenge:
-    werkstatt: {rect: [560, 120, 76, 160], gehe: [600, 320], id: gasse_zur_werkstatt, name: Gasse zur Werkstatt}
-    grabhuegel: {rect: [340, 100, 72, 80], gehe: [376, 296], id: pfad_zum_grabhuegel, name: Pfad zum Grabhügel}
+    werkstatt: {rect: [520, 110, 120, 130], gehe: [590, 255], id: gasse_zur_werkstatt, name: Gasse zur Werkstatt}
+    grabhuegel: {rect: [335, 100, 75, 80], gehe: [372, 232], id: pfad_zum_grabhuegel, name: Pfad zum Grabhügel}
 
 werkstatt:
   farbe: "#8a7a62"
-  laufbereich: [[8, 280], [632, 280], [632, 356], [8, 356]]
+  hintergrund: res://grafik/hintergruende/w2_bg_werkstatt_v01.png
+  tiefe: 0.8
+  laufbereich: [[190, 240], [632, 240], [632, 356], [8, 356], [8, 330], [190, 330]]
   marker:
-    start: [592, 320]
-    von_hafen_syrakus: [592, 320]
+    start: [590, 310]
+    von_hafen_syrakus: [590, 310]
   figuren:
-    archimedes: [280, 312]
-    hieron: [400, 312]
+    archimedes: [300, 300]
+    hieron: [400, 310]
   alias:
     waage_mit_krone: waage
   hotspots:
-    badewanne: {rect: [48, 232, 112, 48], gehe: [104, 312], name: Badewanne}
-    werkbank: {rect: [184, 208, 128, 72], gehe: [248, 312], name: Werkbank}
-    wurfhebel: {rect: [460, 188, 68, 92], gehe: [492, 312], name: Wurfhebel}
-    wasserorgel: {rect: [48, 96, 88, 108], gehe: [92, 312], name: Wasserorgel}
-    bauplan_dampfmaschine: {rect: [156, 68, 60, 48], gehe: [184, 308], name: Bauplan Dampfmaschine}
-    modell_schiefer_turm: {rect: [224, 172, 20, 36], gehe: [232, 312], name: Modell}
-    skizze_kugel_und_zylinder: {rect: [232, 68, 60, 48], gehe: [260, 308], name: Skizze}
-    fenster: {rect: [348, 40, 112, 72], gehe: [404, 308], name: Fenster}
-    zahnraeder: {rect: [304, 132, 56, 56], gehe: [332, 308], name: Zahnräder}
+    badewanne: {rect: [8, 200, 180, 120], gehe: [210, 300], name: Badewanne}
+    werkbank: {rect: [170, 150, 190, 90], gehe: [270, 270], name: Werkbank}
+    wurfhebel: {rect: [400, 160, 90, 120], gehe: [445, 290], name: Wurfhebel}
+    wasserorgel: {rect: [18, 20, 105, 180], gehe: [210, 280], name: Wasserorgel}
+    bauplan_dampfmaschine: {rect: [128, 95, 50, 45], gehe: [210, 270], name: Bauplan Dampfmaschine}
+    modell_schiefer_turm: {rect: [270, 60, 30, 35], gehe: [280, 270], name: Modell}
+    skizze_kugel_und_zylinder: {rect: [180, 50, 40, 55], gehe: [220, 270], name: Skizze}
+    fenster: {rect: [350, 35, 150, 95], gehe: [420, 270], name: Fenster}
+    zahnraeder: {rect: [300, 100, 60, 60], gehe: [330, 270], name: Zahnräder}
   props:
-    brennspiegel: {rect: [540, 144, 28, 32], gehe: [552, 312]}
-    waage: {rect: [260, 188, 28, 20], gehe: [272, 312]}
-    messbecher: {rect: [292, 192, 16, 16], gehe: [300, 312]}
-    essigkrug: {rect: [544, 240, 32, 40], gehe: [552, 312]}
+    brennspiegel: {rect: [505, 90, 80, 145], gehe: [530, 270]}
+    waage: {rect: [195, 125, 45, 45], gehe: [220, 270]}
+    messbecher: {rect: [240, 150, 24, 18], gehe: [250, 270]}
+    essigkrug: {rect: [555, 175, 45, 60], gehe: [560, 270]}
   ausgaenge:
-    hafen_syrakus: {rect: [600, 140, 36, 140], gehe: [608, 320], id: ausgang_hafen, name: Hafen}
+    hafen_syrakus: {rect: [600, 40, 40, 240], gehe: [610, 300], id: ausgang_hafen, name: Hafen}
 
 grabhuegel:
   farbe: "#7a8a5a"
-  laufbereich: [[8, 280], [632, 280], [632, 356], [8, 356]]
+  hintergrund: res://grafik/hintergruende/w2_bg_grabhuegel_v01.png
+  hintergrund_nach:
+    R10b: res://grafik/hintergruende/w2_bg_grabhuegel_grabstein_v01.png
+  tiefe: 0.85
+  laufbereich: [[8, 235], [632, 240], [632, 356], [8, 356]]
   marker:
-    start: [48, 320]
-    von_hafen_syrakus: [48, 320]
-    archimedes: [520, 312]
-    cicero: [400, 312]
+    start: [50, 300]
+    von_hafen_syrakus: [50, 300]
+    archimedes: [520, 290]
+    cicero: [400, 290]
   alias:
     leerer_sockel: sockel
     zikaden_oder_zuruf_grabhuegel: zikaden
   hotspots:
-    sockel: {rect: [280, 224, 68, 56], gehe: [312, 312], name: Sockel}
-    brombeeren: {rect: [80, 212, 120, 68], gehe: [140, 312], name: Brombeeren}
-    alte_grabsteine: {rect: [400, 200, 120, 80], gehe: [460, 312], name: Alte Grabsteine}
-    zypressen: {rect: [540, 40, 80, 200], gehe: [580, 308], name: Zypressen}
-    zikaden: {rect: [200, 40, 200, 52], gehe: [300, 308], name: Zikaden}
+    sockel: {rect: [295, 170, 50, 50], gehe: [320, 250], name: Sockel}
+    brombeeren: {rect: [40, 110, 160, 140], gehe: [120, 280], name: Brombeeren}
+    alte_grabsteine: {rect: [395, 135, 245, 105], gehe: [500, 270], name: Alte Grabsteine}
+    zypressen: {rect: [410, 0, 150, 130], gehe: [480, 270], name: Zypressen}
+    zikaden: {rect: [200, 0, 200, 100], gehe: [300, 280], name: Zikaden}
   ausgaenge:
-    hafen_syrakus: {rect: [4, 140, 36, 140], gehe: [24, 320], id: ausgang_hafen, name: Hafen}
+    hafen_syrakus: {rect: [0, 140, 40, 140], gehe: [30, 300], id: ausgang_hafen, name: Hafen}

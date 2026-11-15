@@ -1,17 +1,17 @@
 [gd_scene format=3 uid="uid://d1fi3mvags162"]
 
-[ext_resource type="Script" path="res://game/rooms/palastkueche/room_palastkueche.gd" id="1_jf24h"]
+[ext_resource type="Script" uid="uid://derj24de4lwlc" path="res://game/rooms/palastkueche/room_palastkueche.gd" id="1_jf24h"]
 [ext_resource type="PackedScene" uid="uid://b8vbcvccib4r2" path="res://game/rooms/palastkueche/walkable_areas/boden/walkable_area_boden.tscn" id="2_jyw5k"]
 [ext_resource type="PackedScene" uid="uid://byo6hnhhjjo3q" path="res://game/rooms/palastkueche/props/background/prop_background.tscn" id="3_6m36i"]
-[ext_resource type="Texture2D" uid="uid://bofe3jvph5dpn" path="res://grafik/platzhalter/raum_palastkueche.png" id="4_e52xd"]
+[ext_resource type="Texture2D" uid="uid://d157dmqts3531" path="res://grafik/hintergruende/w2_bg_palastkueche_v01.png" id="4_jyw5k"]
 [ext_resource type="PackedScene" uid="uid://dn06esnhx6puf" path="res://game/rooms/palastkueche/props/brot/prop_brot.tscn" id="5_fx6sy"]
-[ext_resource type="Texture2D" uid="uid://dvcy16l75ygb3" path="res://grafik/platzhalter/prop_brot.png" id="6_wfjqw"]
+[ext_resource type="Texture2D" uid="uid://pneowndlsqe6" path="res://grafik/props/brot.png" id="6_6m36i"]
 [ext_resource type="PackedScene" uid="uid://g5mopecqeiuo" path="res://game/rooms/palastkueche/props/datteln/prop_datteln.tscn" id="7_fakaf"]
-[ext_resource type="Texture2D" uid="uid://bscs7sgegv03l" path="res://grafik/platzhalter/prop_datteln.png" id="8_v3ihe"]
+[ext_resource type="Texture2D" uid="uid://b6rmmofuvcv6y" path="res://grafik/props/datteln.png" id="8_e52xd"]
 [ext_resource type="PackedScene" uid="uid://jnfhl4dumvpi" path="res://game/rooms/palastkueche/props/zwiebel/prop_zwiebel.tscn" id="9_yg6n2"]
-[ext_resource type="Texture2D" uid="uid://dr6fdsplpgyq6" path="res://grafik/platzhalter/prop_zwiebel.png" id="10_5tsgx"]
+[ext_resource type="Texture2D" uid="uid://jbh54iqogyrm" path="res://grafik/props/zwiebel.png" id="10_fx6sy"]
 [ext_resource type="PackedScene" uid="uid://cwxoajjp3p7mi" path="res://game/rooms/palastkueche/props/traubensaft/prop_traubensaft.tscn" id="11_wfgf2"]
-[ext_resource type="Texture2D" path="res://grafik/props/traubensaft.png" id="12_oruhb"]
+[ext_resource type="Texture2D" uid="uid://ci8vxa32ph8km" path="res://grafik/props/traubensaft.png" id="12_wfjqw"]
 [ext_resource type="PackedScene" uid="uid://33e28op46tdk" path="res://game/rooms/palastkueche/hotspots/lehmoefen/hotspot_lehmoefen.tscn" id="13_nf6vp"]
 [ext_resource type="PackedScene" uid="uid://c6d5w7cxbmy8q" path="res://game/rooms/palastkueche/hotspots/schneidetisch/hotspot_schneidetisch.tscn" id="14_c6osl"]
 [ext_resource type="PackedScene" uid="uid://buedn7hnm0glj" path="res://game/rooms/palastkueche/hotspots/oelkruege/hotspot_oelkruege.tscn" id="15_uxp8y"]
@@ -33,105 +33,117 @@ height = 360
 [node name="WalkableAreas" type="Node2D" parent="." unique_id=2030253347]
 
 [node name="Boden" parent="WalkableAreas" unique_id=479200405 instance=ExtResource("2_jyw5k")]
-interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(8, 280, 632, 280, 632, 356, 8, 356)])
+interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(8, 232, 632, 232, 632, 356, 8, 356)])
 
 [node name="Props" type="Node2D" parent="." unique_id=787523762]
 
 [node name="Background" parent="Props" unique_id=1754625551 instance=ExtResource("3_6m36i")]
 position = Vector2(320, 180)
-texture = ExtResource("4_e52xd")
+texture = ExtResource("4_jyw5k")
 description = "UI_RAUM_PALASTKUECHE"
 
 [node name="Brot" parent="Props" unique_id=1151775597 instance=ExtResource("5_fx6sy")]
-position = Vector2(240, 218.0)
-texture = ExtResource("6_wfjqw")
+position = Vector2(262.5, 166.5)
+texture = ExtResource("6_6m36i")
 description = "UI_OBJ_BROT"
-baseline = 5
-walk_to_point = Vector2(0, 94.0)
+baseline = 8
+walk_to_point = Vector2(-0.5, 88.5)
+interaction_polygon = PackedVector2Array(-17.5, -8.5, 17.5, -8.5, 17.5, 8.5, -17.5, 8.5)
 
 [node name="Datteln" parent="Props" unique_id=1403334936 instance=ExtResource("7_fakaf")]
-position = Vector2(270.0, 218.0)
-texture = ExtResource("8_v3ihe")
+position = Vector2(346, 165.5)
+texture = ExtResource("8_e52xd")
 description = "UI_OBJ_DATTELN"
-baseline = 5
-walk_to_point = Vector2(2.0, 94.0)
+baseline = 7
+walk_to_point = Vector2(-1, 89.5)
+interaction_polygon = PackedVector2Array(-16, -7.5, 16, -7.5, 16, 7.5, -16, 7.5)
 
 [node name="Zwiebel" parent="Props" unique_id=1856452769 instance=ExtResource("9_yg6n2")]
-position = Vector2(296, 218.0)
-texture = ExtResource("10_5tsgx")
+position = Vector2(312, 168)
+texture = ExtResource("10_fx6sy")
 description = "UI_OBJ_ZWIEBEL"
-baseline = 5
-walk_to_point = Vector2(0, 94.0)
+baseline = 8
+walk_to_point = Vector2(0, 87)
+interaction_polygon = PackedVector2Array(-14, -8, 14, -8, 14, 8, -14, 8)
 
 [node name="Traubensaft" parent="Props" unique_id=320117237 instance=ExtResource("11_wfgf2")]
-position = Vector2(570.0, 268)
-texture = ExtResource("12_oruhb")
+position = Vector2(514.5, 183)
+texture = ExtResource("12_wfjqw")
 description = "UI_OBJ_TRAUBENSAFT"
-baseline = 12
-walk_to_point = Vector2(2.0, 44)
+baseline = 35
+walk_to_point = Vector2(0.5, 72)
+interaction_polygon = PackedVector2Array(-22.5, -35, 22.5, -35, 22.5, 35, -22.5, 35)
 
 [node name="Hotspots" type="Node2D" parent="." unique_id=1094012216]
 
 [node name="Lehmoefen" parent="Hotspots" unique_id=1894357115 instance=ExtResource("13_nf6vp")]
-position = Vector2(136, 230.0)
+position = Vector2(170, 192.5)
 description = "UI_OBJ_LEHMOEFEN"
-baseline = 49
-walk_to_point = Vector2(0, 82.0)
+baseline = 37
+walk_to_point = Vector2(0, 67.5)
+interaction_polygon = PackedVector2Array(-70, -37.5, 70, -37.5, 70, 37.5, -70, 37.5)
 
 [node name="Schneidetisch" parent="Hotspots" unique_id=1116231173 instance=ExtResource("14_c6osl")]
-position = Vector2(270.0, 252)
+position = Vector2(302, 195)
 description = "UI_OBJ_SCHNEIDETISCH"
-baseline = 28
-walk_to_point = Vector2(2.0, 60)
+baseline = 35
+walk_to_point = Vector2(-2, 65)
+interaction_polygon = PackedVector2Array(-70, -35, 70, -35, 70, 35, -70, 35)
 
 [node name="Oelkruege" parent="Hotspots" unique_id=347719119 instance=ExtResource("15_uxp8y")]
-position = Vector2(416, 234.0)
+position = Vector2(467.5, 152.5)
 description = "UI_OBJ_OELKRUEGE"
-baseline = 45
-walk_to_point = Vector2(0, 78.0)
+baseline = 72
+walk_to_point = Vector2(-7.5, 107.5)
+interaction_polygon = PackedVector2Array(-87.5, -72.5, 87.5, -72.5, 87.5, 72.5, -87.5, 72.5)
 
 [node name="LeereAmphoren" parent="Hotspots" unique_id=9069718 instance=ExtResource("16_gsno8")]
-position = Vector2(504, 246.0)
+position = Vector2(567.5, 185)
 description = "UI_OBJ_LEERE_AMPHOREN"
-baseline = 33
-walk_to_point = Vector2(0, 66.0)
+baseline = 35
+walk_to_point = Vector2(-2.5, 75)
+interaction_polygon = PackedVector2Array(-27.5, -35, 27.5, -35, 27.5, 35, -27.5, 35)
 
 [node name="KnoblauchUndKraeuter" parent="Hotspots" unique_id=564214554 instance=ExtResource("17_4by7y")]
-position = Vector2(240, 40)
+position = Vector2(305, 95)
 description = "UI_OBJ_KNOBLAUCH_UND_KRAEUTER"
-baseline = 20
-walk_to_point = Vector2(0, 272)
+baseline = 30
+walk_to_point = Vector2(-5, 165)
+interaction_polygon = PackedVector2Array(-55, -30, 55, -30, 55, 30, -55, 30)
 
 [node name="TraubensaftAmphore" parent="Hotspots" unique_id=136018638 instance=ExtResource("18_2u5gr")]
-position = Vector2(572, 240)
+position = Vector2(514.5, 183)
 description = "UI_OBJ_TRAUBENSAFT_AMPHORE"
-baseline = 40
-walk_to_point = Vector2(0, 72)
+baseline = 35
+walk_to_point = Vector2(0.5, 72)
+interaction_polygon = PackedVector2Array(-22.5, -35, 22.5, -35, 22.5, 35, -22.5, 35)
 
 [node name="Dampf" parent="Hotspots" unique_id=392909080 instance=ExtResource("19_idmat")]
-position = Vector2(136, 136)
+position = Vector2(170, 125)
 description = "UI_OBJ_DAMPF"
-baseline = 36
-walk_to_point = Vector2(0, 176)
+baseline = 45
+walk_to_point = Vector2(0, 135)
+interaction_polygon = PackedVector2Array(-60, -45, 60, -45, 60, 45, -60, 45)
 
 [node name="AusgangThronsaal" parent="Hotspots" unique_id=1998239055 instance=ExtResource("20_v0sp3")]
-position = Vector2(22.0, 210.0)
+position = Vector2(40, 150)
 description = "UI_OBJ_AUSGANG_THRONSAAL"
-baseline = 69
-walk_to_point = Vector2(2.0, 110.0)
+baseline = 80
+walk_to_point = Vector2(20, 110)
 cursor = 9
+interaction_polygon = PackedVector2Array(-40, -80, 40, -80, 40, 80, -40, 80)
 
 [node name="Regions" type="Node2D" parent="." unique_id=157496026]
 
 [node name="Markers" type="Node2D" parent="." unique_id=1807884672]
 
 [node name="Start" parent="Markers" unique_id=1820821496 instance=ExtResource("21_5aot7")]
-position = Vector2(48, 320)
+position = Vector2(70, 290)
 
 [node name="VonThronsaalRamses" parent="Markers" unique_id=493242966 instance=ExtResource("22_eeeou")]
-position = Vector2(48, 320)
+position = Vector2(70, 290)
 
 [node name="Characters" type="Node2D" parent="." unique_id=1047825863]
 
 [node name="CharacterNebet *" parent="Characters" unique_id=1952576644 instance=ExtResource("23_i64q0")]
-position = Vector2(320, 312)
+position = Vector2(300, 300)
