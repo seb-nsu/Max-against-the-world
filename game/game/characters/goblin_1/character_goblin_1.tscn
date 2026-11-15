@@ -5,7 +5,7 @@
 
 [node name="CharacterGoblin1" type="Area2D" unique_id=884556655]
 script = ExtResource("1_y7c3t")
-walk_speed = 180.0
+walk_speed = 90.0
 dialog_pos = Vector2(0, -119)
 script_name = "Goblin1"
 description = "UI_OBJ_GOBLIN_1"

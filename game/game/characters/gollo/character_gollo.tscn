@@ -5,7 +5,7 @@
 
 [node name="CharacterGollo" type="Area2D" unique_id=1891695985]
 script = ExtResource("1_xarv8")
-walk_speed = 180.0
+walk_speed = 115.0
 dialog_pos = Vector2(0, -151)
 script_name = "Gollo"
 description = "UI_OBJ_GOLLO"

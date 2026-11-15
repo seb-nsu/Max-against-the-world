@@ -15,6 +15,12 @@
    "bilder": 4,
    "ms": 150,
    "schleife": true
+  },
+  "joggen": {
+   "von": 8,
+   "bilder": 8,
+   "ms": 75,
+   "schleife": true
   }
  }
 }

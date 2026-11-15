@@ -33,6 +33,12 @@
    "bilder": 17,
    "ms": 95,
    "schleife": true
+  },
+  "barfuss": {
+   "von": 45,
+   "bilder": 8,
+   "ms": 73,
+   "schleife": true
   }
  }
 }
