@@ -2,7 +2,7 @@
 
 Stand 15. November 2026. Alles, was für Welt 2 aus Gemini kommen muss, in der Reihenfolge, in der es sich anbietet. Die Prompts selbst stehen in [`welt-2.md`](welt-2.md) (erzeugt aus `../welt-2.md`); hier steht nur die Reihenfolge, was anzuhängen ist und worauf man achten sollte. Abhaken, was erledigt ist.
 
-**Stand:** Alle 11 Räume, alle Figuren und 8 von 10 Gegenstandsbögen sind geliefert und im Spiel. Noch offen: zwei Farbfassungen des Ägypters für die Menge, die 2 großen Objekte (Krokodil-Fähre, Wurfhebel), die Bögen Hieroglyphen und Deko, die Nahansichten und alle Posenbögen.
+**Stand:** Alle 11 Räume, alle Figuren und 8 von 10 Gegenstandsbögen sind geliefert und im Spiel. Noch offen: zwei Farbfassungen des Ägypters für die Menge, die 2 großen Objekte (Krokodil-Fähre, Wurfhebel), die Bögen Hieroglyphen und Deko und die Nahansichten. Die Posenbögen führt die Gesamtliste.
 
 **Die vollständige Arbeitsliste mit fertigen Prompts** für Prolog, Welt 1 und Welt 2 ist [`00-offen-prolog-welt-1-welt-2.md`](00-offen-prolog-welt-1-welt-2.md). Sie geht vor, wenn sich etwas widerspricht; diese Datei hält nur den Überblick für Welt 2.
 
@@ -10,7 +10,6 @@ Stand 15. November 2026. Alles, was für Welt 2 aus Gemini kommen muss, in der R
 
 - Räume: Layout-Skizze anhängen (Link steht beim Raum). Zweite und dritte Fassungen stehen als eigener Block unter dem Raum und werden im selben Chat aus dem fertigen Bild abgeleitet.
 - Figuren, Gegenstände, große Objekte: Max' Figurenblatt anhängen. Hintergrund muss einfarbig Magenta sein; malt Gemini ein Schachbrett oder Kästchen, im selben Chat „solid flat magenta background, no checkerboard, no boxes“ nachschieben.
-- Posenbögen: erst, wenn das Konzeptblatt der Figur fertig ist, und genau dieses anhängen. Misslungene Einzelposen im selben Chat nachbessern lassen.
 - Nahansichten und Tafeln: nichts anhängen.
 - Eigene Sprites (Figuren, Fähre, Wurfhebel, Deko) dürfen nicht im Raum mitgemalt sein. Gegenstände, die man mitnimmt, dürfen im Raum stehen; die schneidet Claude aus.
 - Breite Räume (1280×360: Nil-Delta, Thronsaal, Stadion, Agora): erst die linke Hälfte erzeugen, dann im selben Chat die rechte, die nahtlos anschließt. Zweitfassungen jeweils für die Hälfte, in der sich etwas ändert. Seit 14. November abends sind Nil-Delta, Thronsaal und Stadion breit, weil dort bis zu neun Figuren gleichzeitig stehen; ältere Prompts für diese drei Räume nicht mehr verwenden. Am selben Abend wurden außerdem die Motive von Fährsteg Olympia, Hafen Syrakus, Archimedes' Werkstatt, Startbüro und Agora an die Anordnung im Spiel angeglichen; auch hier nur noch die aktuellen Prompts nehmen.
@@ -91,28 +90,9 @@ Stand 15. November 2026. Alles, was für Welt 2 aus Gemini kommen muss, in der R
 - [ ] Konter-Auswahl
 - [ ] Paraden-Plan
 
-## 7. Posenbögen (je nach fertigem Konzeptblatt)
+## 7. Posenbögen
 
-Die Bewegungen selbst liegen schon als 3D-Clips vor; sie bestimmen Timing und Beine. Die Posenbögen liefern die Arm- und Kopfhaltungen, die im gemalten Sprite nicht vorkommen. Ohne sie bleiben Gesten steif.
-
-
-- [ ] Max Tag 1 (3 Posen)
-- [ ] Max Finaltag (4 Posen)
-- [ ] Ramses (3)
-- [ ] Sobek (3)
-- [ ] Hofkater (3)
-- [ ] Schildkröte (2)
-- [ ] Archimedes im Handtuch (3)
-- [ ] Hermes (3)
-- [ ] Leonidas (3)
-- [ ] Cicero (3)
-- [ ] Philosoph (2)
-- [ ] Fächerwedler (3)
-- [ ] Publikum (2)
-- [ ] Nebet (3)
-- [ ] Hieron (3)
-- [ ] Tiro (3)
-- [ ] Palastschreiber (3)
+Die Posenbögen arbeitet der Thread „Offene Grafik-Prompts optimieren“ ab; Prompts und Stand stehen in [`00-offen-prolog-welt-1-welt-2.md`](00-offen-prolog-welt-1-welt-2.md) und [`01-figurenboegen.md`](01-figurenboegen.md). Hier werden sie nicht mehr geführt.
 
 Effekte (Kaugummi-Sonne, Brennspiegel, Zeitfähre, Altern des Grabsteins) und Pixel als Gott baut Claude ohne neue Bilder.
 
