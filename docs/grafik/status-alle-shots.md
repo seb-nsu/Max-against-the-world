@@ -6,14 +6,13 @@ Stand 15. November 2026. Quelle der IDs: die Tabellenzeilen in docs/grafik/ferti
 
 | Status | Anzahl |
 | --- | --- |
-| Bewegung gebaut, Einbau läuft | 76 |
-| in Arbeit: Nachhol-Runde | 69 |
-| Hintergrund: Bild da, nicht eingebaut | 30 |
-| in Arbeit: 27er-Runde | 27 |
-| Hintergrund: fehlt | 12 |
+| eingebaut auf claude/gesten-menschen | 77 |
+| in Arbeit: Nachhol-Runde | 68 |
+| Hintergrund: Bild da, nicht eingebaut | 42 |
+| in Arbeit: 27er-Runde | 19 |
 | fertig, in main | 11 |
-| Effekt: Bild da, nicht eingebaut | 6 |
-| Effekt: fehlt | 2 |
+| Effekt: Bild da, nicht eingebaut | 8 |
+| gebaut, Prüfung läuft | 8 |
 | **gesamt** | **233** |
 
 ## Alle IDs
@@ -21,29 +20,29 @@ Stand 15. November 2026. Quelle der IDs: die Tabellenzeilen in docs/grafik/ferti
 | ID | Titel | Art | Quelle (Bogen/Bild) | Bewegung gebaut | im Spiel | offen: Grund, wer erledigt |
 | --- | --- | --- | --- | --- | --- | --- |
 | PF-B01 | Pixel: Aufwachen vom Thunfisch | Bewegung | nacht/PF-B01_kater_aufwachen_thunfisch.png | nein | nicht eingebaut | Bogen da, Bewegung wird gerade gebaut (Nachhol-Runde ohne Credits) |
-| PF-B02 | Opa: Erklären | Bewegung | nacht/PF-B02_opa_erklaeren.png | opa_erklaeren | für claude/gesten-menschen (Einbau läuft) | Detailprüfung läuft, danach Einbau auf claude/gesten-menschen |
-| PF-B03 | Opa: Panik | Bewegung | nacht/PF-B03_opa_panik.png | opa_panik | für claude/gesten-menschen (Einbau läuft) | Detailprüfung läuft, danach Einbau auf claude/gesten-menschen |
-| PF-B04 | Oma: Treppe steigen | Bewegung | fehlt | nein | nicht eingebaut | Bogen wird gerade erzeugt (27er-Runde, freigegeben 15.11. 14:00), danach Bewegung und Einbau |
-| PF-B05 | Mutter: Liste lesen | Bewegung | fehlt | nein | nicht eingebaut | Bogen wird gerade erzeugt (27er-Runde, freigegeben 15.11. 14:00), danach Bewegung und Einbau |
-| PF-B06 | Zeldina: Zauberstab einsetzen | Bewegung | fehlt | nein | nicht eingebaut | Bogen wird gerade erzeugt (27er-Runde, freigegeben 15.11. 14:00), danach Bewegung und Einbau |
-| PF-B07 | Roboter-Hausmeister: Ofentür halten | Bewegung | fehlt | nein | nicht eingebaut | Bogen wird gerade erzeugt (27er-Runde, freigegeben 15.11. 14:00), danach Bewegung und Einbau |
+| PF-B02 | Opa: Erklären | Bewegung | nacht/PF-B02_opa_erklaeren.png | opa_erklaeren | auf claude/gesten-menschen eingebaut |  |
+| PF-B03 | Opa: Panik | Bewegung | nacht/PF-B03_opa_panik.png | opa_panik | auf claude/gesten-menschen eingebaut |  |
+| PF-B04 | Oma: Treppe steigen | Bewegung | runde2/PF-B04_oma_treppe.png (+1 weitere) | nein | nicht eingebaut | Bogen wird gerade erzeugt (27er-Runde, freigegeben 15.11. 14:00), danach Bewegung und Einbau |
+| PF-B05 | Mutter: Liste lesen | Bewegung | runde2/PF-B05_mutter_liste.png | nein | nicht eingebaut | Bogen wird gerade erzeugt (27er-Runde, freigegeben 15.11. 14:00), danach Bewegung und Einbau |
+| PF-B06 | Zeldina: Zauberstab einsetzen | Bewegung | runde2/PF-B06_zeldina_zauberstab.png | nein | nicht eingebaut | Bogen wird gerade erzeugt (27er-Runde, freigegeben 15.11. 14:00), danach Bewegung und Einbau |
+| PF-B07 | Roboter-Hausmeister: Ofentür halten | Bewegung | runde2/PF-B07_roboter_ofentuer.png | nein | nicht eingebaut | Bogen wird gerade erzeugt (27er-Runde, freigegeben 15.11. 14:00), danach Bewegung und Einbau |
 | PF-B08 | Gegenwart-Effekt: Verwandlung | Effekt | nacht/PF-B08_effekt_verwandlung.png | nein | nicht eingebaut | Bild da; Einbau als Effekt noch offen (Effekt-Runde) |
-| PF-B09 | Effekt: Maschine läuft | Effekt | fehlt | nein | nicht eingebaut | nicht erzeugt (Effekt-Runde) |
-| PF-B10 | Effekt: Teig-Schwall | Effekt | fehlt | nein | nicht eingebaut | nicht erzeugt (Effekt-Runde) |
+| PF-B09 | Effekt: Maschine läuft | Effekt | runde2/ambiente/PF-B09_effekt_maschine.png | nein | nicht eingebaut | Bild da; Einbau als Effekt noch offen (Effekt-Runde) |
+| PF-B10 | Effekt: Teig-Schwall | Effekt | runde2/ambiente/PF-B10_effekt_teig.png | nein | nicht eingebaut | Bild da; Einbau als Effekt noch offen (Effekt-Runde) |
 | PF-B11 | Effekt: Staubwolke | Effekt | nacht/PF-B11_effekt_staubwolke.png | nein | nicht eingebaut | Bild da; Einbau als Effekt noch offen (Effekt-Runde) |
 | PF-B12 | Opa: Gehen | Bewegung | runde2/PF-B12_opa_gehen_c.png | nein | in main: opa: walk (Bein-Rig) |  |
-| PF-B13 | Opa: Reden | Bewegung | runde2/PF-B13_opa_reden.png | opa_reden | für claude/gesten-menschen (Einbau läuft) | Detailprüfung läuft, danach Einbau auf claude/gesten-menschen |
-| PF-B14 | Opa: An der Werkbank schrauben | Bewegung | runde2/PF-B14_opa_werkbank.png (+1 weitere) | opa_werkbank | für claude/gesten-menschen (Einbau läuft) | Detailprüfung läuft, danach Einbau auf claude/gesten-menschen |
-| PF-B15 | Opa: Kopf kratzen | Bewegung | fehlt | opa_kopf_kratzen | für claude/gesten-menschen (Einbau läuft) | Detailprüfung läuft, danach Einbau auf claude/gesten-menschen |
+| PF-B13 | Opa: Reden | Bewegung | runde2/PF-B13_opa_reden.png | opa_reden | auf claude/gesten-menschen eingebaut |  |
+| PF-B14 | Opa: An der Werkbank schrauben | Bewegung | runde2/PF-B14_opa_werkbank.png (+1 weitere) | opa_werkbank | auf claude/gesten-menschen eingebaut |  |
+| PF-B15 | Opa: Kopf kratzen | Bewegung | fehlt | opa_kopf_kratzen | auf claude/gesten-menschen eingebaut |  |
 | W1-B01 | Toadi: Rennen | Bewegung | nacht/W1-B01_toadi_rennen.png (+5 weitere) | nein | in main: toadi: walk (3D-Rig) |  |
-| W1-B02 | Toadi: Keuchen | Bewegung | nacht/W1-B02_toadi_keuchen.png | toadi_keuchen | für claude/gesten-menschen (Einbau läuft) | Detailprüfung läuft, danach Einbau auf claude/gesten-menschen |
-| W1-B03 | Toadi: Auf Max zeigen | Bewegung | nacht/W1-B03_toadi_zeigen.png | toadi_auf_max_zeigen | für claude/gesten-menschen (Einbau läuft) | Detailprüfung läuft, danach Einbau auf claude/gesten-menschen |
+| W1-B02 | Toadi: Keuchen | Bewegung | nacht/W1-B02_toadi_keuchen.png | toadi_keuchen | auf claude/gesten-menschen eingebaut |  |
+| W1-B03 | Toadi: Auf Max zeigen | Bewegung | nacht/W1-B03_toadi_zeigen.png | toadi_auf_max_zeigen | auf claude/gesten-menschen eingebaut |  |
 | W1-B04 | Pixel: Minka umgarnen | Bewegung | nacht/W1-B04_kater_minka_umgarnen.png | nein | nicht eingebaut | Bogen da, Bewegung wird gerade gebaut (Nachhol-Runde ohne Credits) |
-| W1-B05 | Wirt Humbert: In den Keller gehen | Bewegung | nacht/W1-B05_humbert_keller.png (+3 weitere) | humbert_keller | für claude/gesten-menschen (Einbau läuft) | Detailprüfung läuft, danach Einbau auf claude/gesten-menschen |
-| W1-B06 | Gollo: Ring werfen | Bewegung | nacht/W1-B06_gollo_ring_werfen.png (+2 weitere) | gollo_ring_werfen | für claude/gesten-menschen (Einbau läuft) | Detailprüfung läuft, danach Einbau auf claude/gesten-menschen |
-| W1-B07 | Max: Kochlöffel schwingen | Bewegung | nacht/W1-B07_max_kochloeffel.png (+1 weitere) | max_kochloeffel | für claude/gesten-menschen (Einbau läuft) | Detailprüfung läuft, danach Einbau auf claude/gesten-menschen |
-| W1-B08 | Max: Ziege melken | Bewegung | nacht/W1-B08_max_ziege_melken.png (+1 weitere) | max_melken | für claude/gesten-menschen (Einbau läuft) | Detailprüfung läuft, danach Einbau auf claude/gesten-menschen |
-| W1-B09 | Max: Bohne pflanzen und gießen | Bewegung | nacht/W1-B09_max_bohne_pflanzen.png (+1 weitere) | max_bohne | für claude/gesten-menschen (Einbau läuft) | Detailprüfung läuft, danach Einbau auf claude/gesten-menschen |
+| W1-B05 | Wirt Humbert: In den Keller gehen | Bewegung | nacht/W1-B05_humbert_keller.png (+3 weitere) | humbert_keller | auf claude/gesten-menschen eingebaut |  |
+| W1-B06 | Gollo: Ring werfen | Bewegung | nacht/W1-B06_gollo_ring_werfen.png (+2 weitere) | gollo_ring_werfen | auf claude/gesten-menschen eingebaut |  |
+| W1-B07 | Max: Kochlöffel schwingen | Bewegung | nacht/W1-B07_max_kochloeffel.png (+1 weitere) | max_kochloeffel | auf claude/gesten-menschen eingebaut |  |
+| W1-B08 | Max: Ziege melken | Bewegung | nacht/W1-B08_max_ziege_melken.png (+1 weitere) | max_melken | auf claude/gesten-menschen eingebaut |  |
+| W1-B09 | Max: Bohne pflanzen und gießen | Bewegung | nacht/W1-B09_max_bohne_pflanzen.png (+1 weitere) | max_bohne | auf claude/gesten-menschen eingebaut |  |
 | W1-B10 | Bohnenranke: Wachsen | Effekt | nacht/W1-B10_bohnenranke_wachsen.png | nein | nicht eingebaut | Bild da; Einbau als Effekt noch offen (Effekt-Runde) |
 | W1-B11 | Niesrosen: Aufgehen | Effekt | nacht/W1-B11_niesrosen_aufgehen.png | nein | nicht eingebaut | Bild da; Einbau als Effekt noch offen (Effekt-Runde) |
 | W1-B12 | Troll Waldemar: Musical-Nummer | Bewegung | nacht/W1-B12_waldemar_musical.png | nein | nicht eingebaut | Bogen da, Bewegung wird gerade gebaut (Nachhol-Runde ohne Credits) |
@@ -60,11 +59,11 @@ Stand 15. November 2026. Quelle der IDs: die Tabellenzeilen in docs/grafik/ferti
 | W1-B23 | Pilz-Verwandlung: Effekt | Effekt | nacht/W1-B23_effekt_pilz.png | nein | nicht eingebaut | Bild da; Einbau als Effekt noch offen (Effekt-Runde) |
 | W1-B24 | Smaugi: Kram hergeben | Bewegung | nacht/W1-B24_smaugi_kram_hergeben.png | nein | nicht eingebaut | Bogen da, Bewegung wird gerade gebaut (Nachhol-Runde ohne Credits) |
 | W1-B25 | Smaugi: Gerührt schniefen | Bewegung | nacht/W1-B25_smaugi_schniefen.png | nein | nicht eingebaut | Bogen da, Bewegung wird gerade gebaut (Nachhol-Runde ohne Credits) |
-| W1-B26 | Alwin Grauwald: Rühren | Bewegung | nacht/W1-B26_alwin_ruehren.png (+8 weitere) | alwin_ruehren | in main: alwin: ruehren (ältere Fassung); neue Fassung für claude/gesten-menschen | Detailprüfung läuft, danach Einbau auf claude/gesten-menschen |
-| W1-B27 | Schmied: Hämmern | Bewegung | nacht/W1-B27_schmied_haemmern.png (+5 weitere) | schmied_haemmern | in main: schmied: haemmern (ältere Fassung); neue Fassung für claude/gesten-menschen | Detailprüfung läuft, danach Einbau auf claude/gesten-menschen |
+| W1-B26 | Alwin Grauwald: Rühren | Bewegung | nacht/W1-B26_alwin_ruehren.png (+8 weitere) | alwin_ruehren | in main: alwin: ruehren (ältere Fassung); neue Fassung auf claude/gesten-menschen |  |
+| W1-B27 | Schmied: Hämmern | Bewegung | nacht/W1-B27_schmied_haemmern.png (+5 weitere) | schmied_haemmern | in main: schmied: haemmern (ältere Fassung); neue Fassung auf claude/gesten-menschen |  |
 | W1-B28 | Übungsbesen: Pixel jagen | Bewegung | nacht/W1-B28_uebungsbesen_jagen.png | nein | nicht eingebaut | Bogen da, Bewegung wird gerade gebaut (Nachhol-Runde ohne Credits) |
 | W1-B29 | Zauberbesen: Max wegfegen | Bewegung | nacht/W1-B29_zauberbesen_max_wegfegen.png | nein | nicht eingebaut | Bogen da, Bewegung wird gerade gebaut (Nachhol-Runde ohne Credits) |
-| W1-B30 | Wirt Humbert: Krug polieren | Bewegung | nacht/W1-B30_humbert_krug_polieren.png (+1 weitere) | humbert_polieren | für claude/gesten-menschen (Einbau läuft) | Detailprüfung läuft, danach Einbau auf claude/gesten-menschen |
+| W1-B30 | Wirt Humbert: Krug polieren | Bewegung | nacht/W1-B30_humbert_krug_polieren.png (+1 weitere) | humbert_polieren | auf claude/gesten-menschen eingebaut |  |
 | W1-B31 | Zauberstabmacher: Mustern | Bewegung | nacht/W1-B31_stabmacher_mustern.png | nein | nicht eingebaut | Bogen da, Bewegung wird gerade gebaut (Nachhol-Runde ohne Credits) |
 | W1-B32 | Rotkäppchen: Pakete balancieren | Bewegung | nacht/W1-B32_rotkaeppchen_pakete.png | nein | nicht eingebaut | Bogen da, Bewegung wird gerade gebaut (Nachhol-Runde ohne Credits) |
 | W1-B33 | Maklerin: Notieren | Bewegung | nacht/W1-B33_maklerin_notieren.png | nein | nicht eingebaut | Bogen da, Bewegung wird gerade gebaut (Nachhol-Runde ohne Credits) |
@@ -77,16 +76,16 @@ Stand 15. November 2026. Quelle der IDs: die Tabellenzeilen in docs/grafik/ferti
 | W1-B40 | XXL-Ziege: Wiederkäuen | Bewegung | nacht/W1-B40_xxlziege_wiederkaeuen.png | nein | nicht eingebaut | Bogen da, Bewegung wird gerade gebaut (Nachhol-Runde ohne Credits) |
 | W1-B41 | Schwan: Fauchen | Bewegung | nacht/W1-B41_schwan_fauchen.png | nein | nicht eingebaut | Bogen da, Bewegung wird gerade gebaut (Nachhol-Runde ohne Credits) |
 | W1-B42 | Wirtskatze Minka: Gehen | Bewegung | runde2/W1-B42_minka_gehen_d.png (+6 weitere) | nein | in main: minka: walk |  |
-| W1-B43 | Schmied: Hufeisen ins Feuer legen | Bewegung | runde2/W1-B43_schmied_ins_feuer.png (+2 weitere) | schmied_ins_feuer | für claude/gesten-menschen (Einbau läuft) | Detailprüfung läuft, danach Einbau auf claude/gesten-menschen |
-| W1-B44 | Schmied: Blasebalg treten | Bewegung | runde2/W1-B44_schmied_blasebalg.png (+1 weitere) | schmied_blasebalg | für claude/gesten-menschen (Einbau läuft) | Detailprüfung läuft, danach Einbau auf claude/gesten-menschen |
-| W1-B45 | Schmied: Glühendes Eisen zum Amboss | Bewegung | runde2/W1-B45_schmied_zum_amboss.png (+1 weitere) | schmied_zum_amboss | für claude/gesten-menschen (Einbau läuft) | Detailprüfung läuft, danach Einbau auf claude/gesten-menschen |
-| W1-B46 | Schmied: Abschrecken | Bewegung | runde2/W1-B46_schmied_abschrecken.png (+1 weitere) | schmied_abschrecken | für claude/gesten-menschen (Einbau läuft) | Detailprüfung läuft, danach Einbau auf claude/gesten-menschen |
-| W1-B47 | Schmied: Reden | Bewegung | runde2/W1-B47_schmied_reden.png | schmied_reden | für claude/gesten-menschen (Einbau läuft) | Detailprüfung läuft, danach Einbau auf claude/gesten-menschen |
-| W1-B48 | Alwin Grauwald: Reden mit der Kelle | Bewegung | runde2/W1-B48_alwin_reden_kelle.png | alwin_reden_kelle | für claude/gesten-menschen (Einbau läuft) | Detailprüfung läuft, danach Einbau auf claude/gesten-menschen |
-| W1-B49 | Toadi: Reden | Bewegung | runde2/W1-B49_toadi_reden.png (+2 weitere) | nein | nicht eingebaut | Bogen da, Bewegung wird gerade gebaut (Nachhol-Runde ohne Credits) |
+| W1-B43 | Schmied: Hufeisen ins Feuer legen | Bewegung | runde2/W1-B43_schmied_ins_feuer.png (+2 weitere) | schmied_ins_feuer | auf claude/gesten-menschen eingebaut |  |
+| W1-B44 | Schmied: Blasebalg treten | Bewegung | runde2/W1-B44_schmied_blasebalg.png (+1 weitere) | schmied_blasebalg | auf claude/gesten-menschen eingebaut |  |
+| W1-B45 | Schmied: Glühendes Eisen zum Amboss | Bewegung | runde2/W1-B45_schmied_zum_amboss.png (+1 weitere) | schmied_zum_amboss | auf claude/gesten-menschen eingebaut |  |
+| W1-B46 | Schmied: Abschrecken | Bewegung | runde2/W1-B46_schmied_abschrecken.png (+1 weitere) | schmied_abschrecken | auf claude/gesten-menschen eingebaut |  |
+| W1-B47 | Schmied: Reden | Bewegung | runde2/W1-B47_schmied_reden.png | schmied_reden | auf claude/gesten-menschen eingebaut |  |
+| W1-B48 | Alwin Grauwald: Reden mit der Kelle | Bewegung | runde2/W1-B48_alwin_reden_kelle.png | alwin_reden_kelle | auf claude/gesten-menschen eingebaut |  |
+| W1-B49 | Toadi: Reden | Bewegung | runde2/W1-B49_toadi_reden.png (+2 weitere) | toadi_reden | auf claude/gesten-menschen eingebaut |  |
 | W1-B50 | Wirt Humbert: Reden | Bewegung | runde2/W1-B50_humbert_reden.png (+4 weitere) | nein | nicht eingebaut | Bogen da, Bewegung wird gerade gebaut (Nachhol-Runde ohne Credits) |
 | W1-B51 | Gollo: Reden | Bewegung | runde2/W1-B51_gollo_reden.png (+2 weitere) | nein | nicht eingebaut | Bogen da, Bewegung wird gerade gebaut (Nachhol-Runde ohne Credits) |
-| W1-B52 | Zauberstabmacher: Reden | Bewegung | runde2/W1-B52_zauberstabmacher_reden.png | stabmacher_reden | für claude/gesten-menschen (Einbau läuft) | Detailprüfung läuft, danach Einbau auf claude/gesten-menschen |
+| W1-B52 | Zauberstabmacher: Reden | Bewegung | runde2/W1-B52_zauberstabmacher_reden.png | stabmacher_reden | auf claude/gesten-menschen eingebaut |  |
 | W1-B53 | Rotkäppchen: Reden | Bewegung | runde2/W1-B53_rotkaeppchen_reden.png | nein | nicht eingebaut | Bogen da, Bewegung wird gerade gebaut (Nachhol-Runde ohne Credits) |
 | W1-B54 | Maklerin: Reden | Bewegung | runde2/W1-B54_maklerin_reden.png | nein | nicht eingebaut | Bogen da, Bewegung wird gerade gebaut (Nachhol-Runde ohne Credits) |
 | W1-B55 | Grimmzahn: Reden | Bewegung | runde2/W1-B55_grimmzahn_reden.png (+1 weitere) | nein | nicht eingebaut | Bogen da, Bewegung wird gerade gebaut (Nachhol-Runde ohne Credits) |
@@ -111,18 +110,18 @@ Stand 15. November 2026. Quelle der IDs: die Tabellenzeilen in docs/grafik/ferti
 | W1-B74 | Glitzern: Funkeln | lebendiger Hintergrund | runde2/ambiente/W1-B74_glitzern.png | nein | nicht eingebaut | Bild da; Einbau in den Raum noch nicht beauftragt (Hintergrund-Runde) |
 | W1-B75 | Wasserschloss: Ente schwimmt | lebendiger Hintergrund | runde2/ambiente/W1-B75_ente.png (+1 weitere) | nein | nicht eingebaut | Bild da; Einbau in den Raum noch nicht beauftragt (Hintergrund-Runde) |
 | W1-B76 | Dorfplatz: Huhn pickt | lebendiger Hintergrund | runde2/ambiente/W1-B76_huhn.png (+2 weitere) | nein | nicht eingebaut | Bild da; Einbau in den Raum noch nicht beauftragt (Hintergrund-Runde) |
-| W1-B77 | Toadi: Hände ringen | Bewegung | fehlt | toadi_haende_ringen | für claude/gesten-menschen (Einbau läuft) | Detailprüfung läuft, danach Einbau auf claude/gesten-menschen |
-| W1-B78 | Gollo: Ringschachtel streicheln | Bewegung | runde2/W1-B78_gollo_ringschachtel.png | nein | nicht eingebaut | Bogen wird gerade erzeugt (27er-Runde, freigegeben 15.11. 14:00), danach Bewegung und Einbau |
-| W1-B79 | Zeldina: Kiste absetzen und Schwert prüfen | Bewegung | runde2/W1-B79_zeldina_kiste_schwert.png (+1 weitere) | zeldina_kiste_schwert | für claude/gesten-menschen (Einbau läuft) | Detailprüfung läuft, danach Einbau auf claude/gesten-menschen |
-| W1-B80 | Troll Waldemar: Im Regelbuch blättern | Bewegung | fehlt | nein | nicht eingebaut | Bogen wird gerade erzeugt (27er-Runde, freigegeben 15.11. 14:00), danach Bewegung und Einbau |
-| W1-B81 | Lord Moderwort: Nase putzen | Bewegung | fehlt | nein | nicht eingebaut | Bogen wird gerade erzeugt (27er-Runde, freigegeben 15.11. 14:00), danach Bewegung und Einbau |
-| W1-B82 | Smaugi: Staubwedel | Bewegung | fehlt | nein | nicht eingebaut | Bogen wird gerade erzeugt (27er-Runde, freigegeben 15.11. 14:00), danach Bewegung und Einbau |
-| W1-B83 | Alwin Grauwald: Lesebrille und Kochbuch | Bewegung | fehlt | nein | nicht eingebaut | Bogen wird gerade erzeugt (27er-Runde, freigegeben 15.11. 14:00), danach Bewegung und Einbau |
-| W1-B84 | Schmied: Schweiß abwischen | Bewegung | fehlt | nein | nicht eingebaut | Bogen wird gerade erzeugt (27er-Runde, freigegeben 15.11. 14:00), danach Bewegung und Einbau |
-| W1-B85 | Goblin-Arbeiter 2: Reden | Bewegung | fehlt | nein | nicht eingebaut | Bogen wird gerade erzeugt (27er-Runde, freigegeben 15.11. 14:00), danach Bewegung und Einbau |
-| W1-B86 | Zauberwald: Eichhörnchen | lebendiger Hintergrund | fehlt | nein | nicht eingebaut | nicht erzeugt; braucht den Ausschnitt des fertigen Raums (Hintergrund-Runde) |
-| W1-B87 | Goblin-Bergwerk: Lore rollt | lebendiger Hintergrund | fehlt | nein | nicht eingebaut | nicht erzeugt; braucht den Ausschnitt des fertigen Raums (Hintergrund-Runde) |
-| W1-B88 | Kerze: Brennen | lebendiger Hintergrund | fehlt | nein | nicht eingebaut | nicht erzeugt; braucht den Ausschnitt des fertigen Raums (Hintergrund-Runde) |
+| W1-B77 | Toadi: Hände ringen | Bewegung | fehlt | toadi_haende_ringen | auf claude/gesten-menschen eingebaut |  |
+| W1-B78 | Gollo: Ringschachtel streicheln | Bewegung | runde2/W1-B78_gollo_ringschachtel.png (+1 weitere) | nein | nicht eingebaut | Bogen wird gerade erzeugt (27er-Runde, freigegeben 15.11. 14:00), danach Bewegung und Einbau |
+| W1-B79 | Zeldina: Kiste absetzen und Schwert prüfen | Bewegung | runde2/W1-B79_zeldina_kiste_schwert.png (+1 weitere) | zeldina_kiste_schwert | auf claude/gesten-menschen eingebaut |  |
+| W1-B80 | Troll Waldemar: Im Regelbuch blättern | Bewegung | runde2/W1-B80_waldemar_regelbuch.png | nein | nicht eingebaut | Bogen wird gerade erzeugt (27er-Runde, freigegeben 15.11. 14:00), danach Bewegung und Einbau |
+| W1-B81 | Lord Moderwort: Nase putzen | Bewegung | runde2/W1-B81_moderwort_nase_putzen.png (+3 weitere) | nein | nicht eingebaut | Bogen wird gerade erzeugt (27er-Runde, freigegeben 15.11. 14:00), danach Bewegung und Einbau |
+| W1-B82 | Smaugi: Staubwedel | Bewegung | runde2/W1-B82_smaugi_staubwedel.png (+2 weitere) | nein | nicht eingebaut | Bogen wird gerade erzeugt (27er-Runde, freigegeben 15.11. 14:00), danach Bewegung und Einbau |
+| W1-B83 | Alwin Grauwald: Lesebrille und Kochbuch | Bewegung | runde2/W1-B83_alwin_kochbuch.png (+1 weitere) | nein | nicht eingebaut | Bogen wird gerade erzeugt (27er-Runde, freigegeben 15.11. 14:00), danach Bewegung und Einbau |
+| W1-B84 | Schmied: Schweiß abwischen | Bewegung | runde2/W1-B84_schmied_schweiss.png | nein | nicht eingebaut | Bogen wird gerade erzeugt (27er-Runde, freigegeben 15.11. 14:00), danach Bewegung und Einbau |
+| W1-B85 | Goblin-Arbeiter 2: Reden | Bewegung | runde2/W1-B85_goblin2_reden.png | nein | nicht eingebaut | Bogen wird gerade erzeugt (27er-Runde, freigegeben 15.11. 14:00), danach Bewegung und Einbau |
+| W1-B86 | Zauberwald: Eichhörnchen | lebendiger Hintergrund | runde2/ambiente/W1-B86_eichhoernchen.png | nein | nicht eingebaut | Bild da; Einbau in den Raum noch nicht beauftragt (Hintergrund-Runde) |
+| W1-B87 | Goblin-Bergwerk: Lore rollt | lebendiger Hintergrund | runde2/ambiente/W1-B87_lore.png | nein | nicht eingebaut | Bild da; Einbau in den Raum noch nicht beauftragt (Hintergrund-Runde) |
+| W1-B88 | Kerze: Brennen | lebendiger Hintergrund | runde2/ambiente/W1-B88_kerze.png | nein | nicht eingebaut | Bild da; Einbau in den Raum noch nicht beauftragt (Hintergrund-Runde) |
 | W2-B01 | Sobek, an Land: Kriechen | Bewegung | runde2/W2-B01_sobek_kriechen_a.png | nein | nicht eingebaut | Bogen da, Bewegung wird gerade gebaut (Nachhol-Runde ohne Credits) |
 | W2-B02 | Hofkater: Beleidigt weggehen | Bewegung | runde2/W2-B02_hofkater_gehen_a.png | nein | nicht eingebaut | Bogen da, Bewegung wird gerade gebaut (Nachhol-Runde ohne Credits) |
 | W2-B03 | Schildkröte: Laufen | Bewegung | runde2/W2-B03_schildkroete_laufen_a.png | nein | nicht eingebaut | Bogen da, Bewegung wird gerade gebaut (Nachhol-Runde ohne Credits) |
@@ -130,9 +129,9 @@ Stand 15. November 2026. Quelle der IDs: die Tabellenzeilen in docs/grafik/ferti
 | W2-B05 | Sobek, im Wasser: Fähre ziehen | Bewegung | runde2/W2-B05_sobek_faehre_ziehen.png (+2 weitere) | nein | nicht eingebaut | Bogen da, Bewegung wird gerade gebaut (Nachhol-Runde ohne Credits) |
 | W2-B06 | Sobek, an Land: Verbeugen | Bewegung | runde2/W2-B06_sobek_verbeugen.png (+1 weitere) | nein | nicht eingebaut | Bogen da, Bewegung wird gerade gebaut (Nachhol-Runde ohne Credits) |
 | W2-B07 | Sobek, an Land: Gähnen | Bewegung | runde2/W2-B07_sobek_gaehnen.png (+2 weitere) | nein | nicht eingebaut | Bogen da, Bewegung wird gerade gebaut (Nachhol-Runde ohne Credits) |
-| W2-B08 | Hofkater: Putzen | Bewegung | runde2/W2-B08_hofkater_putzen.png | nein | nicht eingebaut | Bogen wird gerade erzeugt (27er-Runde, freigegeben 15.11. 14:00), danach Bewegung und Einbau |
-| W2-B09 | Hofkater: Schwanz zucken | Bewegung | runde2/W2-B09_hofkater_schwanz.png | nein | nicht eingebaut | Bogen wird gerade erzeugt (27er-Runde, freigegeben 15.11. 14:00), danach Bewegung und Einbau |
-| W2-B10 | Schildkröte: Kopf einziehen | Bewegung | runde2/W2-B10_schildkroete_kopf.png | nein | nicht eingebaut | Bogen wird gerade erzeugt (27er-Runde, freigegeben 15.11. 14:00), danach Bewegung und Einbau |
+| W2-B08 | Hofkater: Putzen | Bewegung | runde2/W2-B08_hofkater_putzen.png | hofkater_putzen | gebaut, Detailprüfung läuft | gebaut, Detailprüfung läuft, danach Einbau |
+| W2-B09 | Hofkater: Schwanz zucken | Bewegung | runde2/W2-B09_hofkater_schwanz.png | hofkater_schwanz_zucken | gebaut, Detailprüfung läuft | gebaut, Detailprüfung läuft, danach Einbau |
+| W2-B10 | Schildkröte: Kopf einziehen | Bewegung | runde2/W2-B10_schildkroete_kopf.png | schildkroete_kopf_einziehen | gebaut, Detailprüfung läuft | gebaut, Detailprüfung läuft, danach Einbau |
 | W2-B11 | Nil-Delta: Feluke segelt | lebendiger Hintergrund | runde2/ambiente/W2-B11_feluke.png (+2 weitere) | nein | nicht eingebaut | Bild da; Einbau in den Raum noch nicht beauftragt (Hintergrund-Runde) |
 | W2-B12 | Nil-Delta: Ibis stakst | lebendiger Hintergrund | runde2/ambiente/W2-B12_ibis.png (+2 weitere) | nein | nicht eingebaut | Bild da; Einbau in den Raum noch nicht beauftragt (Hintergrund-Runde) |
 | W2-B13 | Nil-Delta: Fischer wirft das Netz | lebendiger Hintergrund | runde2/ambiente/W2-B13_fischer_netz.png (+3 weitere) | nein | nicht eingebaut | Bild da; Einbau in den Raum noch nicht beauftragt (Hintergrund-Runde) |
@@ -141,86 +140,86 @@ Stand 15. November 2026. Quelle der IDs: die Tabellenzeilen in docs/grafik/ferti
 | W2-B16 | Hafen Syrakus: Möwe fliegt | lebendiger Hintergrund | runde2/ambiente/W2-B16_moewe_fliegt.png | nein | nicht eingebaut | Bild da; Einbau in den Raum noch nicht beauftragt (Hintergrund-Runde) |
 | W2-B17 | Hafen Syrakus: Möwe auf dem Pfahl | lebendiger Hintergrund | runde2/ambiente/W2-B17_moewe_pfahl.png | nein | nicht eingebaut | Bild da; Einbau in den Raum noch nicht beauftragt (Hintergrund-Runde) |
 | W2-B18 | Hafen Syrakus: Hafenarbeiter mit Amphore | lebendiger Hintergrund | runde2/ambiente/W2-B18_hafenarbeiter.png (+2 weitere) | nein | nicht eingebaut | Bild da; Einbau in den Raum noch nicht beauftragt (Hintergrund-Runde) |
-| W2-B19 | Hafen Syrakus: Tintenfisch zappelt | lebendiger Hintergrund | fehlt | nein | nicht eingebaut | nicht erzeugt; braucht den Ausschnitt des fertigen Raums (Hintergrund-Runde) |
+| W2-B19 | Hafen Syrakus: Tintenfisch zappelt | lebendiger Hintergrund | runde2/ambiente/W2-B19_tintenfisch.png | nein | nicht eingebaut | Bild da; Einbau in den Raum noch nicht beauftragt (Hintergrund-Runde) |
 | W2-B20 | Fährsteg Olympia: Ziege grast | lebendiger Hintergrund | runde2/ambiente/W2-B20_ziege_grast.png (+1 weitere) | nein | nicht eingebaut | Bild da; Einbau in den Raum noch nicht beauftragt (Hintergrund-Runde) |
-| W2-B21 | Sanduhr: Sand rieselt | lebendiger Hintergrund | fehlt | nein | nicht eingebaut | nicht erzeugt; braucht den Ausschnitt des fertigen Raums (Hintergrund-Runde) |
-| W2-B22 | Palastküche: Ofenfeuer | lebendiger Hintergrund | fehlt | nein | nicht eingebaut | nicht erzeugt; braucht den Ausschnitt des fertigen Raums (Hintergrund-Runde) |
+| W2-B21 | Sanduhr: Sand rieselt | lebendiger Hintergrund | runde2/ambiente/W2-B21_sanduhr.png | nein | nicht eingebaut | Bild da; Einbau in den Raum noch nicht beauftragt (Hintergrund-Runde) |
+| W2-B22 | Palastküche: Ofenfeuer | lebendiger Hintergrund | runde2/ambiente/W2-B22_ofenfeuer.png | nein | nicht eingebaut | Bild da; Einbau in den Raum noch nicht beauftragt (Hintergrund-Runde) |
 | W2-B23 | Sphinx: Geier kreist | lebendiger Hintergrund | runde2/ambiente/W2-B23_geier.png (+2 weitere) | nein | nicht eingebaut | Bild da; Einbau in den Raum noch nicht beauftragt (Hintergrund-Runde) |
 | W2-B24 | Grabhügel Syrakus: Eidechse | lebendiger Hintergrund | runde2/ambiente/W2-B24_eidechse.png (+1 weitere) | nein | nicht eingebaut | Bild da; Einbau in den Raum noch nicht beauftragt (Hintergrund-Runde) |
-| W2-B25 | Archimedes' Werkstatt: Wasserorgel blubbert | lebendiger Hintergrund | fehlt | nein | nicht eingebaut | nicht erzeugt; braucht den Ausschnitt des fertigen Raums (Hintergrund-Runde) |
-| W2-B26 | Stadion: Zuschauer jubeln | lebendiger Hintergrund | fehlt | nein | nicht eingebaut | nicht erzeugt; braucht den Ausschnitt des fertigen Raums (Hintergrund-Runde) |
+| W2-B25 | Archimedes' Werkstatt: Wasserorgel blubbert | lebendiger Hintergrund | runde2/ambiente/W2-B25_wasserorgel.png | nein | nicht eingebaut | Bild da; Einbau in den Raum noch nicht beauftragt (Hintergrund-Runde) |
+| W2-B26 | Stadion: Zuschauer jubeln | lebendiger Hintergrund | runde2/ambiente/W2-B26_zuschauer.png | nein | nicht eingebaut | Bild da; Einbau in den Raum noch nicht beauftragt (Hintergrund-Runde) |
 | W2-B27 | Stadion: Wimpel flattern | lebendiger Hintergrund | runde2/ambiente/W2-B27_wimpel_stadion.png | nein | nicht eingebaut | Bild da; Einbau in den Raum noch nicht beauftragt (Hintergrund-Runde) |
 | W2-B28 | Agora: Tauben picken | lebendiger Hintergrund | runde2/ambiente/W2-B28_tauben_picken.png (+1 weitere) | nein | nicht eingebaut | Bild da; Einbau in den Raum noch nicht beauftragt (Hintergrund-Runde) |
 | W2-B29 | Agora: Taube fliegt auf | lebendiger Hintergrund | runde2/ambiente/W2-B29_taube_fliegt.png (+1 weitere) | nein | nicht eingebaut | Bild da; Einbau in den Raum noch nicht beauftragt (Hintergrund-Runde) |
-| W2-B30 | Agora: Menge im Hintergrund | lebendiger Hintergrund | fehlt | nein | nicht eingebaut | nicht erzeugt; braucht den Ausschnitt des fertigen Raums (Hintergrund-Runde) |
-| W2-B31 | Startbüro: Wartende auf der Bank | lebendiger Hintergrund | fehlt | nein | nicht eingebaut | nicht erzeugt; braucht den Ausschnitt des fertigen Raums (Hintergrund-Runde) |
-| W2-B32 | Sobek, an Land: Schwanz wedeln | Bewegung | runde2/W2-B32_sobek_schwanz.png | nein | nicht eingebaut | Bogen wird gerade erzeugt (27er-Runde, freigegeben 15.11. 14:00), danach Bewegung und Einbau |
-| W2-B33 | Sobek, an Land: Hut zurechtrücken | Bewegung | runde2/W2-B33_sobek_hut.png | nein | nicht eingebaut | Bogen wird gerade erzeugt (27er-Runde, freigegeben 15.11. 14:00), danach Bewegung und Einbau |
-| W2-B34 | Schildkröte: Rennen | Bewegung | runde2/W2-B34_schildkroete_rennen.png | nein | nicht eingebaut | Bogen wird gerade erzeugt (27er-Runde, freigegeben 15.11. 14:00), danach Bewegung und Einbau |
-| W2-B35 | Hafen Syrakus: Ruderboot mit Fässern | lebendiger Hintergrund | fehlt | nein | nicht eingebaut | nicht erzeugt; braucht den Ausschnitt des fertigen Raums (Hintergrund-Runde) |
-| W2-B36 | Nil-Delta: Wasserträgerin | lebendiger Hintergrund | fehlt | nein | nicht eingebaut | nicht erzeugt; braucht den Ausschnitt des fertigen Raums (Hintergrund-Runde) |
-| W2-B37 | Leonidas: Losrennen | Bewegung | runde2/W2-B37_leonidas_losrennen.png | nein | nicht eingebaut | Bogen wird gerade erzeugt (27er-Runde, freigegeben 15.11. 14:00), danach Bewegung und Einbau |
+| W2-B30 | Agora: Menge im Hintergrund | lebendiger Hintergrund | runde2/ambiente/W2-B30_menge.png | nein | nicht eingebaut | Bild da; Einbau in den Raum noch nicht beauftragt (Hintergrund-Runde) |
+| W2-B31 | Startbüro: Wartende auf der Bank | lebendiger Hintergrund | runde2/ambiente/W2-B31_wartende.png | nein | nicht eingebaut | Bild da; Einbau in den Raum noch nicht beauftragt (Hintergrund-Runde) |
+| W2-B32 | Sobek, an Land: Schwanz wedeln | Bewegung | runde2/W2-B32_sobek_schwanz.png (+1 weitere) | sobek_land_schwanz_wedeln | gebaut, Detailprüfung läuft | gebaut, Detailprüfung läuft, danach Einbau |
+| W2-B33 | Sobek, an Land: Hut zurechtrücken | Bewegung | runde2/W2-B33_sobek_hut.png | sobek_land_hut_zurechtruecken | gebaut, Detailprüfung läuft | gebaut, Detailprüfung läuft, danach Einbau |
+| W2-B34 | Schildkröte: Rennen | Bewegung | runde2/W2-B34_schildkroete_rennen.png (+1 weitere) | schildkroete_rennen | gebaut, Detailprüfung läuft | gebaut, Detailprüfung läuft, danach Einbau |
+| W2-B35 | Hafen Syrakus: Ruderboot mit Fässern | lebendiger Hintergrund | runde2/ambiente/W2-B35_ruderboot.png | nein | nicht eingebaut | Bild da; Einbau in den Raum noch nicht beauftragt (Hintergrund-Runde) |
+| W2-B36 | Nil-Delta: Wasserträgerin | lebendiger Hintergrund | runde2/ambiente/W2-B36_wassertraegerin.png | nein | nicht eingebaut | Bild da; Einbau in den Raum noch nicht beauftragt (Hintergrund-Runde) |
+| W2-B37 | Leonidas: Losrennen | Bewegung | runde2/W2-B37_leonidas_losrennen.png (+1 weitere) | leonidas_losrennen | gebaut, Detailprüfung läuft | gebaut, Detailprüfung läuft, danach Einbau |
 | W2-P01 | Max Tag 1 | Figuren-Pose (Posenbogen) | nacht/W2-P01_max_tag1.png | nein | nicht eingebaut | Bogen da, Bewegung wird gerade gebaut (Nachhol-Runde ohne Credits) |
 | W2-P02 | Max Finaltag | Figuren-Pose (Posenbogen) | nacht/W2-P02_max_finaltag.png | nein | nicht eingebaut | Bogen da, Bewegung wird gerade gebaut (Nachhol-Runde ohne Credits) |
-| W2-P03 | Ramses | Figuren-Pose (Posenbogen) | nacht/W2-P03_ramses.png (+2 weitere) | ramses_unentschlossen | für claude/gesten-menschen (Einbau läuft) | Detailprüfung läuft, danach Einbau auf claude/gesten-menschen |
+| W2-P03 | Ramses | Figuren-Pose (Posenbogen) | nacht/W2-P03_ramses.png (+2 weitere) | ramses_unentschlossen | auf claude/gesten-menschen eingebaut |  |
 | W2-P04 | Sobek | Figuren-Pose (Posenbogen) | nacht/W2-P04_sobek_land.png | nein | nicht eingebaut | Bogen da, Bewegung wird gerade gebaut (Nachhol-Runde ohne Credits) |
 | W2-P05 | Hofkater | Figuren-Pose (Posenbogen) | nacht/W2-P05_hofkater.png | nein | nicht eingebaut | Bogen da, Bewegung wird gerade gebaut (Nachhol-Runde ohne Credits) |
 | W2-P06 | Schildkröte | Figuren-Pose (Posenbogen) | nacht/W2-P06_schildkroete.png | nein | nicht eingebaut | Bogen da, Bewegung wird gerade gebaut (Nachhol-Runde ohne Credits) |
-| W2-P07 | Archimedes | Figuren-Pose (Posenbogen) | nacht/W2-P07_archimedes_heureka.png | archimedes_heureka | für claude/gesten-menschen (Einbau läuft) | Detailprüfung läuft, danach Einbau auf claude/gesten-menschen |
-| W2-P08 | Hermes | Figuren-Pose (Posenbogen) | nacht/W2-P08_hermes.png (+2 weitere) | hermes_joggen | für claude/gesten-menschen (Einbau läuft) | Detailprüfung läuft, danach Einbau auf claude/gesten-menschen |
-| W2-P09 | Leonidas | Figuren-Pose (Posenbogen) | nacht/W2-P09_leonidas.png | leonidas_bruellen | für claude/gesten-menschen (Einbau läuft) | Detailprüfung läuft, danach Einbau auf claude/gesten-menschen |
-| W2-P10 | Cicero | Figuren-Pose (Posenbogen) | nacht/W2-P10_cicero.png | cicero_rede | für claude/gesten-menschen (Einbau läuft) | Detailprüfung läuft, danach Einbau auf claude/gesten-menschen |
-| W2-P11 | Philosoph | Figuren-Pose (Posenbogen) | nacht/W2-P11_philosoph.png | philosoph_schimpfen | für claude/gesten-menschen (Einbau läuft) | Detailprüfung läuft, danach Einbau auf claude/gesten-menschen |
-| W2-P12 | Fächerwedler | Figuren-Pose (Posenbogen) | nacht/W2-P12_faecherwedler.png | faecherwedler_faecheln | für claude/gesten-menschen (Einbau läuft) | Detailprüfung läuft, danach Einbau auf claude/gesten-menschen |
-| W2-P13 | Nebet | Figuren-Pose (Posenbogen) | nacht/W2-P13_nebet.png | nebet_probieren, nebet_ruehren | für claude/gesten-menschen (Einbau läuft) | Detailprüfung läuft, danach Einbau auf claude/gesten-menschen |
-| W2-P14 | Hieron | Figuren-Pose (Posenbogen) | nacht/W2-P14_hieron.png | hieron_ungeduld | für claude/gesten-menschen (Einbau läuft) | Detailprüfung läuft, danach Einbau auf claude/gesten-menschen |
-| W2-P15 | Tiro | Figuren-Pose (Posenbogen) | nacht/W2-P15_tiro.png | tiro_schreiben | für claude/gesten-menschen (Einbau läuft) | Detailprüfung läuft, danach Einbau auf claude/gesten-menschen |
-| W2-P16 | Palastschreiber | Figuren-Pose (Posenbogen) | nacht/W2-P16_palastschreiber.png | schreiber_schreiben, schreiber_strecken_gaehnen | für claude/gesten-menschen (Einbau läuft) | Detailprüfung läuft, danach Einbau auf claude/gesten-menschen |
+| W2-P07 | Archimedes | Figuren-Pose (Posenbogen) | nacht/W2-P07_archimedes_heureka.png | archimedes_heureka | auf claude/gesten-menschen eingebaut |  |
+| W2-P08 | Hermes | Figuren-Pose (Posenbogen) | nacht/W2-P08_hermes.png (+2 weitere) | hermes_joggen | auf claude/gesten-menschen eingebaut |  |
+| W2-P09 | Leonidas | Figuren-Pose (Posenbogen) | nacht/W2-P09_leonidas.png | leonidas_bruellen | auf claude/gesten-menschen eingebaut |  |
+| W2-P10 | Cicero | Figuren-Pose (Posenbogen) | nacht/W2-P10_cicero.png | cicero_rede | auf claude/gesten-menschen eingebaut |  |
+| W2-P11 | Philosoph | Figuren-Pose (Posenbogen) | nacht/W2-P11_philosoph.png | philosoph_schimpfen | auf claude/gesten-menschen eingebaut |  |
+| W2-P12 | Fächerwedler | Figuren-Pose (Posenbogen) | nacht/W2-P12_faecherwedler.png | faecherwedler_faecheln | auf claude/gesten-menschen eingebaut |  |
+| W2-P13 | Nebet | Figuren-Pose (Posenbogen) | nacht/W2-P13_nebet.png | nebet_probieren, nebet_ruehren | auf claude/gesten-menschen eingebaut |  |
+| W2-P14 | Hieron | Figuren-Pose (Posenbogen) | nacht/W2-P14_hieron.png | hieron_ungeduld | auf claude/gesten-menschen eingebaut |  |
+| W2-P15 | Tiro | Figuren-Pose (Posenbogen) | nacht/W2-P15_tiro.png | tiro_schreiben | auf claude/gesten-menschen eingebaut |  |
+| W2-P16 | Palastschreiber | Figuren-Pose (Posenbogen) | nacht/W2-P16_palastschreiber.png | schreiber_schreiben, schreiber_strecken_gaehnen | auf claude/gesten-menschen eingebaut |  |
 | W2-P17 | Publikum | Figuren-Pose (Posenbogen) | nacht/W2-P17_publikum.png | nein | nicht eingebaut | Bogen da, Bewegung wird gerade gebaut (Nachhol-Runde ohne Credits) |
-| W2-P18 | Fährmann | Figuren-Pose (Posenbogen) | nacht/W2-P18_faehrmann.png (+1 weitere) | faehrmann_muenze, faehrmann_staken | für claude/gesten-menschen (Einbau läuft) | Detailprüfung läuft, danach Einbau auf claude/gesten-menschen |
-| W2-P19 | Steinmetz | Figuren-Pose (Posenbogen) | nacht/W2-P19_steinmetz.png | steinmetz_meisseln, steinmetz_stirn_wischen | für claude/gesten-menschen (Einbau läuft) | Detailprüfung läuft, danach Einbau auf claude/gesten-menschen |
-| W2-P20 | Zeremonienmeister | Figuren-Pose (Posenbogen) | nacht/W2-P20_zeremonienmeister.png (+1 weitere) | zeremonienmeister_ankuendigen | für claude/gesten-menschen (Einbau läuft) | Detailprüfung läuft, danach Einbau auf claude/gesten-menschen |
-| W2-P21 | Brian | Figuren-Pose (Posenbogen) | nacht/W2-P21_brian.png | brian_abwehren | für claude/gesten-menschen (Einbau läuft) | Detailprüfung läuft, danach Einbau auf claude/gesten-menschen |
-| W2-P22 | Beamter 1 | Figuren-Pose (Posenbogen) | nacht/W2-P22_beamter1.png | beamter_1_eindoesen | für claude/gesten-menschen (Einbau läuft) | Detailprüfung läuft, danach Einbau auf claude/gesten-menschen |
-| W2-P23 | Beamter 2 | Figuren-Pose (Posenbogen) | nacht/W2-P23_beamter2.png | beamter_2_stempeln | für claude/gesten-menschen (Einbau läuft) | Detailprüfung läuft, danach Einbau auf claude/gesten-menschen |
-| W2-P24 | Römische Touristin | Figuren-Pose (Posenbogen) | nacht/W2-P24_touristin.png | touristin_faecheln_mustern | für claude/gesten-menschen (Einbau läuft) | Detailprüfung läuft, danach Einbau auf claude/gesten-menschen |
-| W2-P25 | Ägypter aus dem Volk | Figuren-Pose (Posenbogen) | nacht/W2-P25_aegypter.png | aegypter_klatschen | für claude/gesten-menschen (Einbau läuft) | Detailprüfung läuft, danach Einbau auf claude/gesten-menschen |
-| W2-P26 | Straßenmusiker | Figuren-Pose (Posenbogen) | nacht/W2-P26_strassenmusiker.png | strassenmusiker_lyra | für claude/gesten-menschen (Einbau läuft) | Detailprüfung läuft, danach Einbau auf claude/gesten-menschen |
+| W2-P18 | Fährmann | Figuren-Pose (Posenbogen) | nacht/W2-P18_faehrmann.png (+1 weitere) | faehrmann_muenze, faehrmann_staken | auf claude/gesten-menschen eingebaut |  |
+| W2-P19 | Steinmetz | Figuren-Pose (Posenbogen) | nacht/W2-P19_steinmetz.png | steinmetz_meisseln, steinmetz_stirn_wischen | auf claude/gesten-menschen eingebaut |  |
+| W2-P20 | Zeremonienmeister | Figuren-Pose (Posenbogen) | nacht/W2-P20_zeremonienmeister.png (+1 weitere) | zeremonienmeister_ankuendigen | auf claude/gesten-menschen eingebaut |  |
+| W2-P21 | Brian | Figuren-Pose (Posenbogen) | nacht/W2-P21_brian.png | brian_abwehren | auf claude/gesten-menschen eingebaut |  |
+| W2-P22 | Beamter 1 | Figuren-Pose (Posenbogen) | nacht/W2-P22_beamter1.png | beamter_1_eindoesen | auf claude/gesten-menschen eingebaut |  |
+| W2-P23 | Beamter 2 | Figuren-Pose (Posenbogen) | nacht/W2-P23_beamter2.png | beamter_2_stempeln | auf claude/gesten-menschen eingebaut |  |
+| W2-P24 | Römische Touristin | Figuren-Pose (Posenbogen) | nacht/W2-P24_touristin.png | touristin_faecheln_mustern | auf claude/gesten-menschen eingebaut |  |
+| W2-P25 | Ägypter aus dem Volk | Figuren-Pose (Posenbogen) | nacht/W2-P25_aegypter.png | aegypter_klatschen | auf claude/gesten-menschen eingebaut |  |
+| W2-P26 | Straßenmusiker | Figuren-Pose (Posenbogen) | nacht/W2-P26_strassenmusiker.png | strassenmusiker_lyra | auf claude/gesten-menschen eingebaut |  |
 | W2-P27 | Sobek im Wasser | Figuren-Pose (Posenbogen) | nacht/W2-P27_sobek_wasser.png | nein | nicht eingebaut | Bogen da, Bewegung wird gerade gebaut (Nachhol-Runde ohne Credits) |
-| W2-P28 | Ramses | Figuren-Pose (Posenbogen) | runde2/W2-P28_ramses.png (+2 weitere) | ramses_kopftuch, ramses_reden, ramses_zepter_wiegen | für claude/gesten-menschen (Einbau läuft) | Detailprüfung läuft, danach Einbau auf claude/gesten-menschen |
-| W2-P29 | Fährmann | Figuren-Pose (Posenbogen) | runde2/W2-P29_faehrmann.png (+3 weitere) | faehrmann_bart_kratzen, faehrmann_gaehnen, faehrmann_reden | für claude/gesten-menschen (Einbau läuft) | Detailprüfung läuft, danach Einbau auf claude/gesten-menschen |
-| W2-P30 | Köchin Nebet | Figuren-Pose (Posenbogen) | runde2/W2-P30_nebet.png (+1 weitere) | nebet_abschmecken, nebet_mehl_wischen, nebet_reden | für claude/gesten-menschen (Einbau läuft) | Detailprüfung läuft, danach Einbau auf claude/gesten-menschen |
-| W2-P31 | Palastschreiber | Figuren-Pose (Posenbogen) | runde2/W2-P31_schreiber.png (+3 weitere) | schreiber_einnicken, schreiber_reden, schreiber_stift_kauen | für claude/gesten-menschen (Einbau läuft) | Detailprüfung läuft, danach Einbau auf claude/gesten-menschen |
-| W2-P32 | Archimedes | Figuren-Pose (Posenbogen) | runde2/W2-P32_archimedes.png | archimedes_gruebeln, archimedes_kopf_kratzen, archimedes_reden | für claude/gesten-menschen (Einbau läuft) | Detailprüfung läuft, danach Einbau auf claude/gesten-menschen |
-| W2-P33 | König Hieron | Figuren-Pose (Posenbogen) | runde2/W2-P33_hieron.png (+1 weitere) | hieron_bart_streichen, hieron_finger_trommeln, hieron_reden | für claude/gesten-menschen (Einbau läuft) | Detailprüfung läuft, danach Einbau auf claude/gesten-menschen |
-| W2-P34 | Cicero | Figuren-Pose (Posenbogen) | runde2/W2-P34_cicero.png | cicero_armreif, cicero_raeuspern, cicero_reden | für claude/gesten-menschen (Einbau läuft) | Detailprüfung läuft, danach Einbau auf claude/gesten-menschen |
-| W2-P35 | Tiro | Figuren-Pose (Posenbogen) | runde2/W2-P35_tiro.png (+1 weitere) | tiro_kritzeln, tiro_reden, tiro_umsehen | für claude/gesten-menschen (Einbau läuft) | Detailprüfung läuft, danach Einbau auf claude/gesten-menschen |
-| W2-P36 | Leonidas | Figuren-Pose (Posenbogen) | runde2/W2-P36_leonidas.png | leonidas_dehnen, leonidas_pfeife_drehen, leonidas_reden | für claude/gesten-menschen (Einbau läuft) | Detailprüfung läuft, danach Einbau auf claude/gesten-menschen |
-| W2-P37 | Hermes | Figuren-Pose (Posenbogen) | runde2/W2-P37_hermes.png (+1 weitere) | hermes_reden, hermes_tasche | für claude/gesten-menschen (Einbau läuft) | Detailprüfung läuft, danach Einbau auf claude/gesten-menschen |
-| W2-P38 | Brian | Figuren-Pose (Posenbogen) | runde2/W2-P38_brian.png | brian_reden, brian_schild_richten, brian_seufzen | für claude/gesten-menschen (Einbau läuft) | Detailprüfung läuft, danach Einbau auf claude/gesten-menschen |
-| W2-P39 | Philosoph | Figuren-Pose (Posenbogen) | runde2/W2-P39_philosoph.png (+2 weitere) | philosoph_bart_kratzen, philosoph_laterne_spaehen, philosoph_reden | für claude/gesten-menschen (Einbau läuft) | Detailprüfung läuft, danach Einbau auf claude/gesten-menschen |
-| W2-P40 | Römischer Tourist | Figuren-Pose (Posenbogen) | runde2/W2-P40_tourist.png (+1 weitere) | tourist_hut_faecheln, tourist_reden, tourist_stirn_wischen | für claude/gesten-menschen (Einbau läuft) | Detailprüfung läuft, danach Einbau auf claude/gesten-menschen |
-| W2-P41 | Römische Touristin | Figuren-Pose (Posenbogen) | runde2/W2-P41_touristin.png (+2 weitere) | touristin_amphore, touristin_reden | für claude/gesten-menschen (Einbau läuft) | Detailprüfung läuft, danach Einbau auf claude/gesten-menschen |
-| W2-P42 | Beamter 2 | Figuren-Pose (Posenbogen) | runde2/W2-P42_beamter2.png | beamter_2_brille_putzen, beamter_2_haare_richten, beamter_2_reden | für claude/gesten-menschen (Einbau läuft) | Detailprüfung läuft, danach Einbau auf claude/gesten-menschen |
-| W2-P43 | Fächerwedler | Figuren-Pose (Posenbogen) | runde2/W2-P43_faecherwedler.png (+1 weitere) | faecherwedler_bauch, faecherwedler_reden | für claude/gesten-menschen (Einbau läuft) | Detailprüfung läuft, danach Einbau auf claude/gesten-menschen |
-| W2-P44 | Zeremonienmeister | Figuren-Pose (Posenbogen) | runde2/W2-P44_zeremonienmeister.png (+2 weitere) | zeremonienmeister_federkrone, zeremonienmeister_reden | für claude/gesten-menschen (Einbau läuft) | Detailprüfung läuft, danach Einbau auf claude/gesten-menschen |
-| W2-P45 | Steinmetz | Figuren-Pose (Posenbogen) | runde2/W2-P45_steinmetz.png (+2 weitere) | steinmetz_reden, steinmetz_staub_pusten | für claude/gesten-menschen (Einbau läuft) | Detailprüfung läuft, danach Einbau auf claude/gesten-menschen |
-| W2-P46 | Ägypter aus dem Volk | Figuren-Pose (Posenbogen) | runde2/W2-P46_aegypter.png | aegypter_reden, aegypter_schulterzucken | für claude/gesten-menschen (Einbau läuft) | Detailprüfung läuft, danach Einbau auf claude/gesten-menschen |
-| W2-P47 | Straßenmusiker | Figuren-Pose (Posenbogen) | runde2/W2-P47_strassenmusiker.png (+1 weitere) | strassenmusiker_reden, strassenmusiker_stimmen | für claude/gesten-menschen (Einbau läuft) | Detailprüfung läuft, danach Einbau auf claude/gesten-menschen |
+| W2-P28 | Ramses | Figuren-Pose (Posenbogen) | runde2/W2-P28_ramses.png (+2 weitere) | ramses_kopftuch, ramses_reden, ramses_zepter_wiegen | auf claude/gesten-menschen eingebaut |  |
+| W2-P29 | Fährmann | Figuren-Pose (Posenbogen) | runde2/W2-P29_faehrmann.png (+3 weitere) | faehrmann_bart_kratzen, faehrmann_gaehnen, faehrmann_reden | auf claude/gesten-menschen eingebaut |  |
+| W2-P30 | Köchin Nebet | Figuren-Pose (Posenbogen) | runde2/W2-P30_nebet.png (+1 weitere) | nebet_abschmecken, nebet_mehl_wischen, nebet_reden | auf claude/gesten-menschen eingebaut |  |
+| W2-P31 | Palastschreiber | Figuren-Pose (Posenbogen) | runde2/W2-P31_schreiber.png (+3 weitere) | schreiber_einnicken, schreiber_reden, schreiber_stift_kauen | auf claude/gesten-menschen eingebaut |  |
+| W2-P32 | Archimedes | Figuren-Pose (Posenbogen) | runde2/W2-P32_archimedes.png | archimedes_gruebeln, archimedes_kopf_kratzen, archimedes_reden | auf claude/gesten-menschen eingebaut |  |
+| W2-P33 | König Hieron | Figuren-Pose (Posenbogen) | runde2/W2-P33_hieron.png (+1 weitere) | hieron_bart_streichen, hieron_finger_trommeln, hieron_reden | auf claude/gesten-menschen eingebaut |  |
+| W2-P34 | Cicero | Figuren-Pose (Posenbogen) | runde2/W2-P34_cicero.png | cicero_armreif, cicero_raeuspern, cicero_reden | auf claude/gesten-menschen eingebaut |  |
+| W2-P35 | Tiro | Figuren-Pose (Posenbogen) | runde2/W2-P35_tiro.png (+1 weitere) | tiro_kritzeln, tiro_reden, tiro_umsehen | auf claude/gesten-menschen eingebaut |  |
+| W2-P36 | Leonidas | Figuren-Pose (Posenbogen) | runde2/W2-P36_leonidas.png | leonidas_dehnen, leonidas_pfeife_drehen, leonidas_reden | auf claude/gesten-menschen eingebaut |  |
+| W2-P37 | Hermes | Figuren-Pose (Posenbogen) | runde2/W2-P37_hermes.png (+1 weitere) | hermes_reden, hermes_tasche | auf claude/gesten-menschen eingebaut |  |
+| W2-P38 | Brian | Figuren-Pose (Posenbogen) | runde2/W2-P38_brian.png | brian_reden, brian_schild_richten, brian_seufzen | auf claude/gesten-menschen eingebaut |  |
+| W2-P39 | Philosoph | Figuren-Pose (Posenbogen) | runde2/W2-P39_philosoph.png (+2 weitere) | philosoph_bart_kratzen, philosoph_laterne_spaehen, philosoph_reden | auf claude/gesten-menschen eingebaut |  |
+| W2-P40 | Römischer Tourist | Figuren-Pose (Posenbogen) | runde2/W2-P40_tourist.png (+1 weitere) | tourist_hut_faecheln, tourist_reden, tourist_stirn_wischen | auf claude/gesten-menschen eingebaut |  |
+| W2-P41 | Römische Touristin | Figuren-Pose (Posenbogen) | runde2/W2-P41_touristin.png (+2 weitere) | touristin_amphore, touristin_reden | auf claude/gesten-menschen eingebaut |  |
+| W2-P42 | Beamter 2 | Figuren-Pose (Posenbogen) | runde2/W2-P42_beamter2.png | beamter_2_brille_putzen, beamter_2_haare_richten, beamter_2_reden | auf claude/gesten-menschen eingebaut |  |
+| W2-P43 | Fächerwedler | Figuren-Pose (Posenbogen) | runde2/W2-P43_faecherwedler.png (+1 weitere) | faecherwedler_bauch, faecherwedler_reden | auf claude/gesten-menschen eingebaut |  |
+| W2-P44 | Zeremonienmeister | Figuren-Pose (Posenbogen) | runde2/W2-P44_zeremonienmeister.png (+2 weitere) | zeremonienmeister_federkrone, zeremonienmeister_reden | auf claude/gesten-menschen eingebaut |  |
+| W2-P45 | Steinmetz | Figuren-Pose (Posenbogen) | runde2/W2-P45_steinmetz.png (+2 weitere) | steinmetz_reden, steinmetz_staub_pusten | auf claude/gesten-menschen eingebaut |  |
+| W2-P46 | Ägypter aus dem Volk | Figuren-Pose (Posenbogen) | runde2/W2-P46_aegypter.png | aegypter_reden, aegypter_schulterzucken | auf claude/gesten-menschen eingebaut |  |
+| W2-P47 | Straßenmusiker | Figuren-Pose (Posenbogen) | runde2/W2-P47_strassenmusiker.png (+1 weitere) | strassenmusiker_reden, strassenmusiker_stimmen | auf claude/gesten-menschen eingebaut |  |
 | W2-P48 | Sobek im Wasser | Figuren-Pose (Posenbogen) | runde2/W2-P48_sobek_wasser.png | nein | nicht eingebaut | Bogen da, Bewegung wird gerade gebaut (Nachhol-Runde ohne Credits) |
-| W2-P49 | Hofkater | Figuren-Pose (Posenbogen) | runde2/W2-P49_hofkater.png | nein | nicht eingebaut | Bogen wird gerade erzeugt (27er-Runde, freigegeben 15.11. 14:00), danach Bewegung und Einbau |
-| W2-P50 | Beamter 1 | Figuren-Pose (Posenbogen) | runde2/W2-P50_beamter1.png | beamter_1_gaehnen, beamter_1_reden | für claude/gesten-menschen (Einbau läuft) | Detailprüfung läuft, danach Einbau auf claude/gesten-menschen |
-| W2-P51 | Ramses | Figuren-Pose (Posenbogen) | runde2/W2-P51_ramses.png (+2 weitere) | ramses_zepter_tauschen | für claude/gesten-menschen (Einbau läuft) | Detailprüfung läuft, danach Einbau auf claude/gesten-menschen |
-| W2-P52 | Köchin Nebet | Figuren-Pose (Posenbogen) | runde2/W2-P52_nebet.png | nebet_teig_kneten | für claude/gesten-menschen (Einbau läuft) | Detailprüfung läuft, danach Einbau auf claude/gesten-menschen |
-| W2-P53 | Archimedes | Figuren-Pose (Posenbogen) | runde2/W2-P53_archimedes.png | archimedes_zirkel | für claude/gesten-menschen (Einbau läuft) | Detailprüfung läuft, danach Einbau auf claude/gesten-menschen |
-| W2-P54 | Fährmann | Figuren-Pose (Posenbogen) | runde2/W2-P54_faehrmann.png | faehrmann_gaehnen_stab | für claude/gesten-menschen (Einbau läuft) | Detailprüfung läuft, danach Einbau auf claude/gesten-menschen |
-| W2-P55 | Cicero | Figuren-Pose (Posenbogen) | runde2/W2-P55_cicero.png | cicero_toga_zupfen | für claude/gesten-menschen (Einbau läuft) | Detailprüfung läuft, danach Einbau auf claude/gesten-menschen |
-| W2-P56 | Tiro | Figuren-Pose (Posenbogen) | runde2/W2-P56_tiro.png | tiro_tafel_glaetten | für claude/gesten-menschen (Einbau läuft) | Detailprüfung läuft, danach Einbau auf claude/gesten-menschen |
-| W2-P57 | Philosoph | Figuren-Pose (Posenbogen) | runde2/W2-P57_philosoph.png | philosoph_laterne_putzen | für claude/gesten-menschen (Einbau läuft) | Detailprüfung läuft, danach Einbau auf claude/gesten-menschen |
-| W2-P58 | Römische Touristin | Figuren-Pose (Posenbogen) | runde2/W2-P58_touristin.png | touristin_brille_putzen | für claude/gesten-menschen (Einbau läuft) | Detailprüfung läuft, danach Einbau auf claude/gesten-menschen |
-| W2-P59 | Beamter 2 | Figuren-Pose (Posenbogen) | runde2/W2-P59_beamter2.png | beamter_2_stempel_anhauchen | für claude/gesten-menschen (Einbau läuft) | Detailprüfung läuft, danach Einbau auf claude/gesten-menschen |
-| W2-P60 | Fächerwedler | Figuren-Pose (Posenbogen) | runde2/W2-P60_faecherwedler.png | faecherwedler_arm_ausschuetteln | für claude/gesten-menschen (Einbau läuft) | Detailprüfung läuft, danach Einbau auf claude/gesten-menschen |
-| W2-P61 | Ägypter aus dem Volk | Figuren-Pose (Posenbogen) | runde2/W2-P61_aegypter.png | aegypter_fuss_tippen | für claude/gesten-menschen (Einbau läuft) | Detailprüfung läuft, danach Einbau auf claude/gesten-menschen |
+| W2-P49 | Hofkater | Figuren-Pose (Posenbogen) | runde2/W2-P49_hofkater.png | hofkater_reden | gebaut, Detailprüfung läuft | gebaut, Detailprüfung läuft, danach Einbau |
+| W2-P50 | Beamter 1 | Figuren-Pose (Posenbogen) | runde2/W2-P50_beamter1.png | beamter_1_gaehnen, beamter_1_reden | auf claude/gesten-menschen eingebaut |  |
+| W2-P51 | Ramses | Figuren-Pose (Posenbogen) | runde2/W2-P51_ramses.png (+2 weitere) | ramses_zepter_tauschen | auf claude/gesten-menschen eingebaut |  |
+| W2-P52 | Köchin Nebet | Figuren-Pose (Posenbogen) | runde2/W2-P52_nebet.png (+1 weitere) | nebet_teig_kneten | auf claude/gesten-menschen eingebaut |  |
+| W2-P53 | Archimedes | Figuren-Pose (Posenbogen) | runde2/W2-P53_archimedes.png | archimedes_zirkel | auf claude/gesten-menschen eingebaut |  |
+| W2-P54 | Fährmann | Figuren-Pose (Posenbogen) | runde2/W2-P54_faehrmann.png | faehrmann_gaehnen_stab | auf claude/gesten-menschen eingebaut |  |
+| W2-P55 | Cicero | Figuren-Pose (Posenbogen) | runde2/W2-P55_cicero.png | cicero_toga_zupfen | auf claude/gesten-menschen eingebaut |  |
+| W2-P56 | Tiro | Figuren-Pose (Posenbogen) | runde2/W2-P56_tiro.png | tiro_tafel_glaetten | auf claude/gesten-menschen eingebaut |  |
+| W2-P57 | Philosoph | Figuren-Pose (Posenbogen) | runde2/W2-P57_philosoph.png | philosoph_laterne_putzen | auf claude/gesten-menschen eingebaut |  |
+| W2-P58 | Römische Touristin | Figuren-Pose (Posenbogen) | runde2/W2-P58_touristin.png | touristin_brille_putzen | auf claude/gesten-menschen eingebaut |  |
+| W2-P59 | Beamter 2 | Figuren-Pose (Posenbogen) | runde2/W2-P59_beamter2.png | beamter_2_stempel_anhauchen | auf claude/gesten-menschen eingebaut |  |
+| W2-P60 | Fächerwedler | Figuren-Pose (Posenbogen) | runde2/W2-P60_faecherwedler.png | faecherwedler_arm_ausschuetteln | auf claude/gesten-menschen eingebaut |  |
+| W2-P61 | Ägypter aus dem Volk | Figuren-Pose (Posenbogen) | runde2/W2-P61_aegypter.png | aegypter_fuss_tippen | auf claude/gesten-menschen eingebaut |  |
 | WU-B01 | Max: Gehen | Bewegung | fehlt | nein | in main: max: walk |  |
 | WU-B02 | Max: Gehen nach vorn und nach hinten | Bewegung | nacht/WU-B02_max_gehen_hinten.png (+1 weitere) | nein | nicht eingebaut | Bogen da, Bewegung wird gerade gebaut (Nachhol-Runde ohne Credits) |
 | WU-B03 | Max: Stehen | Bewegung | fehlt | nein | in main: max: idle |  |
@@ -245,11 +244,11 @@ Stand 15. November 2026. Quelle der IDs: die Tabellenzeilen in docs/grafik/ferti
 | WU-B22 | Max: Wenden | Bewegung | runde2/WU-B22_max_wenden.png (+1 weitere) | nein | nicht eingebaut | Bogen da, Bewegung wird gerade gebaut (Nachhol-Runde ohne Credits) |
 | WU-B23 | Max: Fallen und landen | Bewegung | runde2/WU-B23_max_fallen.png (+1 weitere) | nein | nicht eingebaut | Bogen da, Bewegung wird gerade gebaut (Nachhol-Runde ohne Credits) |
 | WU-B24 | Max: Vom Boden aufstehen | Bewegung | runde2/WU-B24_max_aufstehen.png (+1 weitere) | nein | nicht eingebaut | Bogen da, Bewegung wird gerade gebaut (Nachhol-Runde ohne Credits) |
-| WU-B25 | Pixel: Aufstehen | Bewegung | fehlt | nein | nicht eingebaut | Bogen wird gerade erzeugt (27er-Runde, freigegeben 15.11. 14:00), danach Bewegung und Einbau |
-| WU-B26 | Pixel: Hinlegen | Bewegung | fehlt | nein | nicht eingebaut | Bogen wird gerade erzeugt (27er-Runde, freigegeben 15.11. 14:00), danach Bewegung und Einbau |
+| WU-B25 | Pixel: Aufstehen | Bewegung | runde2/WU-B25_pixel_aufstehen.png (+1 weitere) | nein | nicht eingebaut | Bogen wird gerade erzeugt (27er-Runde, freigegeben 15.11. 14:00), danach Bewegung und Einbau |
+| WU-B26 | Pixel: Hinlegen | Bewegung | runde2/WU-B26_pixel_hinlegen.png (+1 weitere) | nein | nicht eingebaut | Bogen wird gerade erzeugt (27er-Runde, freigegeben 15.11. 14:00), danach Bewegung und Einbau |
 | WU-B27 | Max: Kopf kratzen | Bewegung | runde2/WU-B27_max_kopf_kratzen.png | nein | nicht eingebaut | Bogen wird gerade erzeugt (27er-Runde, freigegeben 15.11. 14:00), danach Bewegung und Einbau |
-| WU-B28 | Max: Zeigen | Bewegung | fehlt | nein | nicht eingebaut | Bogen wird gerade erzeugt (27er-Runde, freigegeben 15.11. 14:00), danach Bewegung und Einbau |
-| WU-B29 | Max: Hinsetzen | Bewegung | fehlt | nein | nicht eingebaut | Bogen wird gerade erzeugt (27er-Runde, freigegeben 15.11. 14:00), danach Bewegung und Einbau |
-| WU-B30 | Max: Reden mit Gesten | Bewegung | fehlt | nein | nicht eingebaut | Bogen wird gerade erzeugt (27er-Runde, freigegeben 15.11. 14:00), danach Bewegung und Einbau |
-| WU-B31 | Pixel: Reden | Bewegung | fehlt | nein | nicht eingebaut | Bogen wird gerade erzeugt (27er-Runde, freigegeben 15.11. 14:00), danach Bewegung und Einbau |
-| WU-B32 | Pixel: Schwanz zucken | Bewegung | fehlt | nein | nicht eingebaut | Bogen wird gerade erzeugt (27er-Runde, freigegeben 15.11. 14:00), danach Bewegung und Einbau |
+| WU-B28 | Max: Zeigen | Bewegung | runde2/WU-B28_max_zeigen.png | nein | nicht eingebaut | Bogen wird gerade erzeugt (27er-Runde, freigegeben 15.11. 14:00), danach Bewegung und Einbau |
+| WU-B29 | Max: Hinsetzen | Bewegung | runde2/WU-B29_max_hinsetzen.png (+1 weitere) | nein | nicht eingebaut | Bogen wird gerade erzeugt (27er-Runde, freigegeben 15.11. 14:00), danach Bewegung und Einbau |
+| WU-B30 | Max: Reden mit Gesten | Bewegung | runde2/WU-B30_max_reden.png (+1 weitere) | nein | nicht eingebaut | Bogen wird gerade erzeugt (27er-Runde, freigegeben 15.11. 14:00), danach Bewegung und Einbau |
+| WU-B31 | Pixel: Reden | Bewegung | runde2/WU-B31_pixel_reden.png (+1 weitere) | nein | nicht eingebaut | Bogen wird gerade erzeugt (27er-Runde, freigegeben 15.11. 14:00), danach Bewegung und Einbau |
+| WU-B32 | Pixel: Schwanz zucken | Bewegung | runde2/WU-B32_pixel_schwanz.png | nein | nicht eingebaut | Bogen wird gerade erzeugt (27er-Runde, freigegeben 15.11. 14:00), danach Bewegung und Einbau |
