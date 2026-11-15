@@ -16,7 +16,7 @@ Opa steht ihre feste Beschreibung wortgleich in der Zeile CHARACTER LOCK; den Fi
 
 # Shotliste
 
-135 Shots, davon 21 sicher offen („–“: Stand nicht automatisch prüfbar). Kürzel:
+152 Shots, davon 21 sicher offen („–“: Stand nicht automatisch prüfbar). Kürzel:
 R Raum, F Figur, P Posenbogen, B Bewegung, G Gegenstände, N Nahansicht, K Figurenbogen.
 
 | Shot | Bild | Stand |
@@ -107,6 +107,18 @@ R Raum, F Figur, P Posenbogen, B Bewegung, G Gegenstände, N Nahansicht, K Figur
 | W2-P47 | Straßenmusiker | – |
 | W2-P48 | Sobek im Wasser | – |
 | W2-P49 | Hofkater | – |
+| W2-P50 | Beamter 1 | – |
+| W2-P51 | Ramses | – |
+| W2-P52 | Köchin Nebet | – |
+| W2-P53 | Archimedes | – |
+| W2-P54 | Fährmann | – |
+| W2-P55 | Cicero | – |
+| W2-P56 | Tiro | – |
+| W2-P57 | Philosoph | – |
+| W2-P58 | Römische Touristin | – |
+| W2-P59 | Beamter 2 | – |
+| W2-P60 | Fächerwedler | – |
+| W2-P61 | Ägypter aus dem Volk | – |
 | W2-B01 | Sobek, an Land: Kriechen | – |
 | W2-B02 | Hofkater: Beleidigt weggehen | – |
 | W2-B03 | Schildkröte: Laufen | – |
@@ -138,6 +150,11 @@ R Raum, F Figur, P Posenbogen, B Bewegung, G Gegenstände, N Nahansicht, K Figur
 | W2-B29 | Agora: Taube fliegt auf | – |
 | W2-B30 | Agora: Menge im Hintergrund | – |
 | W2-B31 | Startbüro: Wartende auf der Bank | – |
+| W2-B32 | Sobek, an Land: Schwanz wedeln | – |
+| W2-B33 | Sobek, an Land: Hut zurechtrücken | – |
+| W2-B34 | Schildkröte: Rennen | – |
+| W2-B35 | Hafen Syrakus: Ruderboot mit Fässern | – |
+| W2-B36 | Nil-Delta: Wasserträgerin | – |
 | W2-G01 | Ägypten (3×4) | – |
 | W2-G02 | Olympia (3×3) | – |
 | W2-G03 | Feigen-Zustände (1×4, Baum doppelt so groß) | – |
@@ -1532,6 +1549,198 @@ CAMERA: static, strict side view as on the attached sheet, same scale and the sa
 NEGATIVE: no second character, no parts of the boy Max from the reference unless this is Max, no props that are not described, no environment, no floor, no ground shadow, no checkerboard, no frames, panels or cell borders, no text, labels or numbers, no motion blur, no ghosting, no duplicated or extra limbs, no change to face, proportions, clothing or colors, no photorealism, no 3D render, no watermark, no in-between blur, no speed lines, no smear frames, no sliding feet, no change of scale or baseline between poses, no camera movement, no zoom, no perspective change, no morphing, no extra poses beyond the ones listed
 ```
 
+## Beamter 1
+
+**Shot W2-P50**
+
+**Anhängen:** Konzeptblatt Beamter 1 · **Posen:** 3 · **Wofür:** Reden und Gähnen
+
+```text
+STYLE: Pose sheet in exactly the same style, colors and proportions as the attached character sheet: same character, same head size, same hair and clothing colors, same line weight and flat cel shading, light from upper left. The poses side by side in one row, evenly spaced with clear empty space between them, all at the same scale on one flat baseline, each a frozen still pose, no motion blur, no ghosting, no speed lines, no duplicated limbs. Solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no text, no ground shadow, no frames or panels.
+SUBJECT: the character exactly as on the attached character sheet: same face, head size, proportions, costume and colors, nothing redesigned.
+CHARACTER (appearance only, word for word from its sheet; ignore the pose in it): Bored Greek official sitting on a stool, about 78 percent of the boy Max's height seated. Bald head, droopy eyelids. Plain grey tunic, sandals. A giant unrolled blank scroll held in both hands. Facing right, half asleep.
+POSES (left to right): Three poses of the bored official sitting on his stool, stool unchanged: (1) talking without looking up, droopy eyelids, mouth half open; (2) talking, lifting the giant scroll a little and pointing at it lazily; (3) idle: a huge yawn, one hand over the mouth, the scroll sagging.
+END POSE: the motion starts and ends in the neutral pose of the attached sheet; do not draw that pose again, but every pose must be able to return to it with the feet in the same place unless a pose says the feet move.
+CAMERA: static, strict side view as on the attached sheet, same scale and the same flat baseline in every pose, no zoom, no pan.
+NEGATIVE: no second character, no parts of the boy Max from the reference unless this is Max, no props that are not described, no environment, no floor, no ground shadow, no checkerboard, no frames, panels or cell borders, no text, labels or numbers, no motion blur, no ghosting, no duplicated or extra limbs, no change to face, proportions, clothing or colors, no photorealism, no 3D render, no watermark, no in-between blur, no speed lines, no smear frames, no sliding feet, no change of scale or baseline between poses, no camera movement, no zoom, no perspective change, no morphing, no extra poses beyond the ones listed
+```
+
+## Ramses
+
+**Shot W2-P51**
+
+**Anhängen:** Konzeptblatt Ramses · **Posen:** 3 · **Wofür:** Zepter vertauschen
+
+```text
+STYLE: Pose sheet in exactly the same style, colors and proportions as the attached character sheet: same character, same head size, same hair and clothing colors, same line weight and flat cel shading, light from upper left. The poses side by side in one row, evenly spaced with clear empty space between them, all at the same scale on one flat baseline, each a frozen still pose, no motion blur, no ghosting, no speed lines, no duplicated limbs. Solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no text, no ground shadow, no frames or panels.
+SUBJECT: the character exactly as on the attached character sheet: same face, head size, proportions, costume and colors, nothing redesigned.
+CHARACTER (appearance only, word for word from its sheet; ignore the pose in it): Indecisive young pharaoh, slim, about 106 percent of the boy Max's height. Blue-and-gold striped headdress slightly askew, thin false beard, kohl-lined worried eyes. Broad golden collar, white linen kilt with a gold belt, golden sandals. A crook scepter in his left hand and a flail scepter in his right, glancing from one to the other. Standing upright, facing right, confused frown.
+POSES (left to right): Three poses of the young pharaoh, feet unchanged: (1) looking from the crook in his left hand to the flail in his right, unsure; (2) both scepters crossed in front of his chest as he swaps them between his hands; (3) holding them the other way round now, frowning, still unsure.
+END POSE: the motion starts and ends in the neutral pose of the attached sheet; do not draw that pose again, but every pose must be able to return to it with the feet in the same place unless a pose says the feet move.
+CAMERA: static, strict side view as on the attached sheet, same scale and the same flat baseline in every pose, no zoom, no pan.
+NEGATIVE: no second character, no parts of the boy Max from the reference unless this is Max, no props that are not described, no environment, no floor, no ground shadow, no checkerboard, no frames, panels or cell borders, no text, labels or numbers, no motion blur, no ghosting, no duplicated or extra limbs, no change to face, proportions, clothing or colors, no photorealism, no 3D render, no watermark, no in-between blur, no speed lines, no smear frames, no sliding feet, no change of scale or baseline between poses, no camera movement, no zoom, no perspective change, no morphing, no extra poses beyond the ones listed
+```
+
+## Köchin Nebet
+
+**Shot W2-P52**
+
+**Anhängen:** Konzeptblatt Köchin Nebet · **Posen:** 3 · **Wofür:** Teig kneten
+
+```text
+STYLE: Pose sheet in exactly the same style, colors and proportions as the attached character sheet: same character, same head size, same hair and clothing colors, same line weight and flat cel shading, light from upper left. The poses side by side in one row, evenly spaced with clear empty space between them, all at the same scale on one flat baseline, each a frozen still pose, no motion blur, no ghosting, no speed lines, no duplicated limbs. Solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no text, no ground shadow, no frames or panels.
+SUBJECT: the character exactly as on the attached character sheet: same face, head size, proportions, costume and colors, nothing redesigned.
+CHARACTER (appearance only, word for word from its sheet; ignore the pose in it): Energetic Egyptian palace cook, about 94 percent of the boy Max's height, round face, flour on her cheeks. Blue headscarf, white linen dress, ochre apron, sandals. A wooden ladle in her right hand. Standing upright, facing right, curious raised eyebrow.
+POSES (left to right): Three poses of the palace cook at waist height, feet unchanged, the ladle tucked into her apron belt: (1) pressing a lump of pale dough down with both palms; (2) folding the dough over, flour dusting up; (3) slapping the dough with satisfaction, flour on her nose.
+END POSE: the motion starts and ends in the neutral pose of the attached sheet; do not draw that pose again, but every pose must be able to return to it with the feet in the same place unless a pose says the feet move.
+CAMERA: static, strict side view as on the attached sheet, same scale and the same flat baseline in every pose, no zoom, no pan.
+NEGATIVE: no second character, no parts of the boy Max from the reference unless this is Max, no props that are not described, no environment, no floor, no ground shadow, no checkerboard, no frames, panels or cell borders, no text, labels or numbers, no motion blur, no ghosting, no duplicated or extra limbs, no change to face, proportions, clothing or colors, no photorealism, no 3D render, no watermark, no in-between blur, no speed lines, no smear frames, no sliding feet, no change of scale or baseline between poses, no camera movement, no zoom, no perspective change, no morphing, no extra poses beyond the ones listed
+```
+
+## Archimedes
+
+**Shot W2-P53**
+
+**Anhängen:** Konzeptblatt Archimedes · **Posen:** 3 · **Wofür:** Mit dem Zirkel zeichnen
+
+```text
+STYLE: Pose sheet in exactly the same style, colors and proportions as the attached character sheet: same character, same head size, same hair and clothing colors, same line weight and flat cel shading, light from upper left. The poses side by side in one row, evenly spaced with clear empty space between them, all at the same scale on one flat baseline, each a frozen still pose, no motion blur, no ghosting, no speed lines, no duplicated limbs. Solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no text, no ground shadow, no frames or panels.
+SUBJECT: the character exactly as on the attached character sheet: same face, head size, proportions, costume and colors, nothing redesigned.
+CHARACTER (appearance only, word for word from its sheet; ignore the pose in it): Excited old Greek mathematician, short and wiry, about 96 percent of the boy Max's height. Wild white beard and dripping wet white hair. White chiton with ink stains, barefoot. A bronze drawing compass in his right hand. Leaning forward with wide eyes, facing right.
+POSES (left to right): Three poses of the old mathematician, feet unchanged: (1) bending down, the bronze compass point set into the sand at his feet; (2) swinging the compass around, a circle appearing in the sand; (3) straightening up, staring at the circle, one finger raised, eureka face.
+END POSE: the motion starts and ends in the neutral pose of the attached sheet; do not draw that pose again, but every pose must be able to return to it with the feet in the same place unless a pose says the feet move.
+CAMERA: static, strict side view as on the attached sheet, same scale and the same flat baseline in every pose, no zoom, no pan.
+NEGATIVE: no second character, no parts of the boy Max from the reference unless this is Max, no props that are not described, no environment, no floor, no ground shadow, no checkerboard, no frames, panels or cell borders, no text, labels or numbers, no motion blur, no ghosting, no duplicated or extra limbs, no change to face, proportions, clothing or colors, no photorealism, no 3D render, no watermark, no in-between blur, no speed lines, no smear frames, no sliding feet, no change of scale or baseline between poses, no camera movement, no zoom, no perspective change, no morphing, no extra poses beyond the ones listed
+```
+
+## Fährmann
+
+**Shot W2-P54**
+
+**Anhängen:** Konzeptblatt Fährmann · **Posen:** 2 · **Wofür:** Gähnen am Stab
+
+```text
+STYLE: Pose sheet in exactly the same style, colors and proportions as the attached character sheet: same character, same head size, same hair and clothing colors, same line weight and flat cel shading, light from upper left. The poses side by side in one row, evenly spaced with clear empty space between them, all at the same scale on one flat baseline, each a frozen still pose, no motion blur, no ghosting, no speed lines, no duplicated limbs. Solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no text, no ground shadow, no frames or panels.
+SUBJECT: the character exactly as on the attached character sheet: same face, head size, proportions, costume and colors, nothing redesigned.
+CHARACTER (appearance only, word for word from its sheet; ignore the pose in it): An old Egyptian ferryman, wiry, about 104 percent of the boy Max's height. Long white beard, deeply tanned skin, a wide flat straw hat. A tattered ochre tunic, bare feet. Leaning on a long punting pole held in his left hand, right palm held out open for a coin. Facing right, expectant look.
+POSES (left to right): Two poses of the old ferryman, feet unchanged: (1) leaning with both hands and his chin on top of the punting pole, eyes half closed; (2) a big yawn, straw hat tipping back, the pole held in both hands.
+END POSE: the motion starts and ends in the neutral pose of the attached sheet; do not draw that pose again, but every pose must be able to return to it with the feet in the same place unless a pose says the feet move.
+CAMERA: static, strict side view as on the attached sheet, same scale and the same flat baseline in every pose, no zoom, no pan.
+NEGATIVE: no second character, no parts of the boy Max from the reference unless this is Max, no props that are not described, no environment, no floor, no ground shadow, no checkerboard, no frames, panels or cell borders, no text, labels or numbers, no motion blur, no ghosting, no duplicated or extra limbs, no change to face, proportions, clothing or colors, no photorealism, no 3D render, no watermark, no in-between blur, no speed lines, no smear frames, no sliding feet, no change of scale or baseline between poses, no camera movement, no zoom, no perspective change, no morphing, no extra poses beyond the ones listed
+```
+
+## Cicero
+
+**Shot W2-P55**
+
+**Anhängen:** Konzeptblatt Cicero · **Posen:** 2 · **Wofür:** Toga zupfen
+
+```text
+STYLE: Pose sheet in exactly the same style, colors and proportions as the attached character sheet: same character, same head size, same hair and clothing colors, same line weight and flat cel shading, light from upper left. The poses side by side in one row, evenly spaced with clear empty space between them, all at the same scale on one flat baseline, each a frozen still pose, no motion blur, no ghosting, no speed lines, no duplicated limbs. Solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no text, no ground shadow, no frames or panels.
+SUBJECT: the character exactly as on the attached character sheet: same face, head size, proportions, costume and colors, nothing redesigned.
+CHARACTER (appearance only, word for word from its sheet; ignore the pose in it): Pompous Roman orator, stocky, about 104 percent of the boy Max's height. Receding hairline, double chin, raised eyebrows. White toga with a broad purple stripe, sandals. A scroll in his left hand, right arm raised dramatically mid-speech. Standing upright, facing right.
+POSES (left to right): Two poses of the pompous orator, feet unchanged: (1) tugging the purple-striped toga fold straight over his shoulder, chin raised; (2) smoothing the toga over his belly, satisfied little smile.
+END POSE: the motion starts and ends in the neutral pose of the attached sheet; do not draw that pose again, but every pose must be able to return to it with the feet in the same place unless a pose says the feet move.
+CAMERA: static, strict side view as on the attached sheet, same scale and the same flat baseline in every pose, no zoom, no pan.
+NEGATIVE: no second character, no parts of the boy Max from the reference unless this is Max, no props that are not described, no environment, no floor, no ground shadow, no checkerboard, no frames, panels or cell borders, no text, labels or numbers, no motion blur, no ghosting, no duplicated or extra limbs, no change to face, proportions, clothing or colors, no photorealism, no 3D render, no watermark, no in-between blur, no speed lines, no smear frames, no sliding feet, no change of scale or baseline between poses, no camera movement, no zoom, no perspective change, no morphing, no extra poses beyond the ones listed
+```
+
+## Tiro
+
+**Shot W2-P56**
+
+**Anhängen:** Konzeptblatt Tiro · **Posen:** 2 · **Wofür:** Wachstafel glätten
+
+```text
+STYLE: Pose sheet in exactly the same style, colors and proportions as the attached character sheet: same character, same head size, same hair and clothing colors, same line weight and flat cel shading, light from upper left. The poses side by side in one row, evenly spaced with clear empty space between them, all at the same scale on one flat baseline, each a frozen still pose, no motion blur, no ghosting, no speed lines, no duplicated limbs. Solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no text, no ground shadow, no frames or panels.
+SUBJECT: the character exactly as on the attached character sheet: same face, head size, proportions, costume and colors, nothing redesigned.
+CHARACTER (appearance only, word for word from its sheet; ignore the pose in it): Thin nervous young Roman scribe, about 94 percent of the boy Max's height. Short dark hair, a stylus behind his ear. Plain off-white tunic with a narrow red border, sandals. A big wax tablet held under his left arm. Standing upright, facing right, glancing sideways guiltily.
+POSES (left to right): Two poses of the nervous young scribe, feet unchanged: (1) holding the wax tablet flat and smoothing the wax with the flat end of the stylus, guilty glance sideways; (2) blowing on the tablet, hunched.
+END POSE: the motion starts and ends in the neutral pose of the attached sheet; do not draw that pose again, but every pose must be able to return to it with the feet in the same place unless a pose says the feet move.
+CAMERA: static, strict side view as on the attached sheet, same scale and the same flat baseline in every pose, no zoom, no pan.
+NEGATIVE: no second character, no parts of the boy Max from the reference unless this is Max, no props that are not described, no environment, no floor, no ground shadow, no checkerboard, no frames, panels or cell borders, no text, labels or numbers, no motion blur, no ghosting, no duplicated or extra limbs, no change to face, proportions, clothing or colors, no photorealism, no 3D render, no watermark, no in-between blur, no speed lines, no smear frames, no sliding feet, no change of scale or baseline between poses, no camera movement, no zoom, no perspective change, no morphing, no extra poses beyond the ones listed
+```
+
+## Philosoph
+
+**Shot W2-P57**
+
+**Anhängen:** Konzeptblatt Philosoph · **Posen:** 2 · **Wofür:** Laterne putzen
+
+```text
+STYLE: Pose sheet in exactly the same style, colors and proportions as the attached character sheet: same character, same head size, same hair and clothing colors, same line weight and flat cel shading, light from upper left. The poses side by side in one row, evenly spaced with clear empty space between them, all at the same scale on one flat baseline, each a frozen still pose, no motion blur, no ghosting, no speed lines, no duplicated limbs. Solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no text, no ground shadow, no frames or panels.
+SUBJECT: the character exactly as on the attached character sheet: same face, head size, proportions, costume and colors, nothing redesigned.
+CHARACTER (appearance only, word for word from its sheet; ignore the pose in it): Scruffy old Greek philosopher with wild grey hair and beard and a torn grey cloak, sitting inside a large clay barrel lying on its side with its opening to the right, about 71 percent of the boy Max's height including the barrel. A small oil lantern beside him. Pointing and shouting, facing right.
+POSES (left to right): Two poses of the old philosopher in his barrel, barrel unchanged: (1) breathing on the glass of the small oil lantern; (2) rubbing it with a corner of his torn cloak, squinting at it critically.
+END POSE: the motion starts and ends in the neutral pose of the attached sheet; do not draw that pose again, but every pose must be able to return to it with the feet in the same place unless a pose says the feet move.
+CAMERA: static, strict side view as on the attached sheet, same scale and the same flat baseline in every pose, no zoom, no pan.
+NEGATIVE: no second character, no parts of the boy Max from the reference unless this is Max, no props that are not described, no environment, no floor, no ground shadow, no checkerboard, no frames, panels or cell borders, no text, labels or numbers, no motion blur, no ghosting, no duplicated or extra limbs, no change to face, proportions, clothing or colors, no photorealism, no 3D render, no watermark, no in-between blur, no speed lines, no smear frames, no sliding feet, no change of scale or baseline between poses, no camera movement, no zoom, no perspective change, no morphing, no extra poses beyond the ones listed
+```
+
+## Römische Touristin
+
+**Shot W2-P58**
+
+**Anhängen:** Konzeptblatt Römische Touristin · **Posen:** 2 · **Wofür:** Sonnenbrille putzen
+
+```text
+STYLE: Pose sheet in exactly the same style, colors and proportions as the attached character sheet: same character, same head size, same hair and clothing colors, same line weight and flat cel shading, light from upper left. The poses side by side in one row, evenly spaced with clear empty space between them, all at the same scale on one flat baseline, each a frozen still pose, no motion blur, no ghosting, no speed lines, no duplicated limbs. Solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no text, no ground shadow, no frames or panels.
+SUBJECT: the character exactly as on the attached character sheet: same face, head size, proportions, costume and colors, nothing redesigned.
+CHARACTER (appearance only, word for word from its sheet; ignore the pose in it): Roman tourist woman, about as tall as the boy Max. Dark hair in a bun, big round sunglasses. Purple toga, sandals. A folding fan in her right hand, a small souvenir amphora under her left arm. Standing upright, facing right, unimpressed look.
+POSES (left to right): Two poses of the Roman tourist woman, feet unchanged, the fan hanging from her wrist: (1) taking off the round sunglasses and breathing on them; (2) polishing them on her toga, eyes squinting in the sun.
+END POSE: the motion starts and ends in the neutral pose of the attached sheet; do not draw that pose again, but every pose must be able to return to it with the feet in the same place unless a pose says the feet move.
+CAMERA: static, strict side view as on the attached sheet, same scale and the same flat baseline in every pose, no zoom, no pan.
+NEGATIVE: no second character, no parts of the boy Max from the reference unless this is Max, no props that are not described, no environment, no floor, no ground shadow, no checkerboard, no frames, panels or cell borders, no text, labels or numbers, no motion blur, no ghosting, no duplicated or extra limbs, no change to face, proportions, clothing or colors, no photorealism, no 3D render, no watermark, no in-between blur, no speed lines, no smear frames, no sliding feet, no change of scale or baseline between poses, no camera movement, no zoom, no perspective change, no morphing, no extra poses beyond the ones listed
+```
+
+## Beamter 2
+
+**Shot W2-P59**
+
+**Anhängen:** Konzeptblatt Beamter 2 · **Posen:** 2 · **Wofür:** Stempel anhauchen
+
+```text
+STYLE: Pose sheet in exactly the same style, colors and proportions as the attached character sheet: same character, same head size, same hair and clothing colors, same line weight and flat cel shading, light from upper left. The poses side by side in one row, evenly spaced with clear empty space between them, all at the same scale on one flat baseline, each a frozen still pose, no motion blur, no ghosting, no speed lines, no duplicated limbs. Solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no text, no ground shadow, no frames or panels.
+SUBJECT: the character exactly as on the attached character sheet: same face, head size, proportions, costume and colors, nothing redesigned.
+CHARACTER (appearance only, word for word from its sheet; ignore the pose in it): Fussy thin Greek official, about 104 percent of the boy Max's height. Small round spectacles, thin mustache, neatly combed hair. Pale green tunic, sandals. A big wooden stamp raised in his right hand. Standing upright, facing right, pinched expression.
+POSES (left to right): Two poses of the fussy official, feet unchanged: (1) holding the big wooden stamp up to his mouth and breathing on it; (2) inspecting the stamp face closely through his spectacles, pinched mouth.
+END POSE: the motion starts and ends in the neutral pose of the attached sheet; do not draw that pose again, but every pose must be able to return to it with the feet in the same place unless a pose says the feet move.
+CAMERA: static, strict side view as on the attached sheet, same scale and the same flat baseline in every pose, no zoom, no pan.
+NEGATIVE: no second character, no parts of the boy Max from the reference unless this is Max, no props that are not described, no environment, no floor, no ground shadow, no checkerboard, no frames, panels or cell borders, no text, labels or numbers, no motion blur, no ghosting, no duplicated or extra limbs, no change to face, proportions, clothing or colors, no photorealism, no 3D render, no watermark, no in-between blur, no speed lines, no smear frames, no sliding feet, no change of scale or baseline between poses, no camera movement, no zoom, no perspective change, no morphing, no extra poses beyond the ones listed
+```
+
+## Fächerwedler
+
+**Shot W2-P60**
+
+**Anhängen:** Konzeptblatt Fächerwedler · **Posen:** 2 · **Wofür:** Arm ausschütteln
+
+```text
+STYLE: Pose sheet in exactly the same style, colors and proportions as the attached character sheet: same character, same head size, same hair and clothing colors, same line weight and flat cel shading, light from upper left. The poses side by side in one row, evenly spaced with clear empty space between them, all at the same scale on one flat baseline, each a frozen still pose, no motion blur, no ghosting, no speed lines, no duplicated limbs. Solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no text, no ground shadow, no frames or panels.
+SUBJECT: the character exactly as on the attached character sheet: same face, head size, proportions, costume and colors, nothing redesigned.
+CHARACTER (appearance only, word for word from its sheet; ignore the pose in it): Sweating Egyptian fan bearer, thin, about as tall as the boy Max. Blue-and-white striped headscarf, white kilt, bare feet. A palm-leaf fan on a long pole, twice his height, held lowered and resting. Facing right, glancing hungrily to the side.
+POSES (left to right): Two poses of the fan bearer, the fan pole leaning against his shoulder: (1) shaking out his tired right arm, grimacing; (2) rolling his shoulder, the other hand on it, sighing.
+END POSE: the motion starts and ends in the neutral pose of the attached sheet; do not draw that pose again, but every pose must be able to return to it with the feet in the same place unless a pose says the feet move.
+CAMERA: static, strict side view as on the attached sheet, same scale and the same flat baseline in every pose, no zoom, no pan.
+NEGATIVE: no second character, no parts of the boy Max from the reference unless this is Max, no props that are not described, no environment, no floor, no ground shadow, no checkerboard, no frames, panels or cell borders, no text, labels or numbers, no motion blur, no ghosting, no duplicated or extra limbs, no change to face, proportions, clothing or colors, no photorealism, no 3D render, no watermark, no in-between blur, no speed lines, no smear frames, no sliding feet, no change of scale or baseline between poses, no camera movement, no zoom, no perspective change, no morphing, no extra poses beyond the ones listed
+```
+
+## Ägypter aus dem Volk
+
+**Shot W2-P61**
+
+**Anhängen:** Konzeptblatt Ägypter aus dem Volk · **Posen:** 2 · **Wofür:** Mit dem Fuß tippen
+
+```text
+STYLE: Pose sheet in exactly the same style, colors and proportions as the attached character sheet: same character, same head size, same hair and clothing colors, same line weight and flat cel shading, light from upper left. The poses side by side in one row, evenly spaced with clear empty space between them, all at the same scale on one flat baseline, each a frozen still pose, no motion blur, no ghosting, no speed lines, no duplicated limbs. Solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no text, no ground shadow, no frames or panels.
+SUBJECT: the character exactly as on the attached character sheet: same face, head size, proportions, costume and colors, nothing redesigned.
+CHARACTER (appearance only, word for word from its sheet; ignore the pose in it): Ordinary Egyptian man, about as tall as the boy Max. Short black hair, tanned skin. Simple white linen kilt, bare feet. Arms crossed, standing upright, facing right, unimpressed face.
+POSES (left to right): Two poses of the ordinary Egyptian man, arms crossed: (1) the front foot raised at the toes, heel on the ground, impatient look; (2) the toes tapped down, eyes rolling up.
+END POSE: the motion starts and ends in the neutral pose of the attached sheet; do not draw that pose again, but every pose must be able to return to it with the feet in the same place unless a pose says the feet move.
+CAMERA: static, strict side view as on the attached sheet, same scale and the same flat baseline in every pose, no zoom, no pan.
+NEGATIVE: no second character, no parts of the boy Max from the reference unless this is Max, no props that are not described, no environment, no floor, no ground shadow, no checkerboard, no frames, panels or cell borders, no text, labels or numbers, no motion blur, no ghosting, no duplicated or extra limbs, no change to face, proportions, clothing or colors, no photorealism, no 3D render, no watermark, no in-between blur, no speed lines, no smear frames, no sliding feet, no change of scale or baseline between poses, no camera movement, no zoom, no perspective change, no morphing, no extra poses beyond the ones listed
+```
+
 # Bewegungen
 
 Schlüsselposen für Animationen, die im Spiel noch fehlen. Das Blatt anhängen, das beim Block steht.
@@ -2045,6 +2254,93 @@ STYLE: Visual effect frames for a 2D game, frames side by side in one row, evenl
 EFFECT: Only the three bored waiting people on the long bench, matching the attached background crop: the left one yawns and stretches, the middle one taps a foot and drums his fingers on a waiting number tablet, the right one nods off, his head sinks and jerks up again; never all at once.
 OVERLAY: the crop only shows where the effect sits, its size, light and colors; draw only the moving part named above on the magenta background, not the walls, furniture or anything else from the crop, so it can be laid exactly over the painted spot.
 FRAMES: 8 frames side by side, about 0.8 s at 10 frames per second, loops seamlessly: the last frame leads back into the first, each frame 90x50 pixels in the game.
+END: no separate end frame, the loop closes.
+CAMERA: static, no zoom, no pan, the effect stays centered in every frame.
+NEGATIVE: no characters unless named, no background scene, no text, no frames or panels, no checkerboard, no motion blur, no speed lines
+```
+
+## Sobek, an Land: Schwanz wedeln
+
+**Shot W2-B32**
+
+**Anhängen:** das fertige Konzeptblatt von Sobek, an Land · **Bilder:** 6 · **Ablauf:** Schleife
+
+```text
+STYLE: Key pose sheet for a 2D game animation in exactly the same style, colors and proportions as the attached character sheet: same character, same head size, same hair and clothing colors, same line weight and flat cel shading, light from upper left. The key poses side by side in one row from left to right in the order of the action, evenly spaced with clear empty space between them, all at the same scale on one flat baseline, each a frozen still pose. Solid flat magenta (#ff00ff) background filling the whole image.
+SUBJECT: the character exactly as on the attached character sheet: same face, head size, proportions, costume and colors, nothing redesigned.
+CHARACTER (appearance only, word for word from its sheet; ignore the pose in it): The same lazy teenage crocodile on land, about 125 percent as long as the boy Max is tall, olive-green scales, pale yellow belly, a small woven reed hat. Crawling on all fours, head lowered respectfully toward the ground, facing right.
+START: From the neutral pose on the attached concept sheet of Sobek on land. Keep the clean concept-art style of that sheet, not pixel art.
+ACTION (3 key poses of a 6-frame animation of about 0.6 s): (1) 0.0 s: lying flat and bored; (2) 0.2 s: the crocodile sweeps its long tail slowly left and right across the sand, a little dust puff at each turn; (3) 0.4 s: eyes half closed.
+FRAMES: draw all 6 frames side by side, left to right, in the order they play: the key poses above at their times and evenly spaced in-between frames, so the motion reads smoothly; every frame differs visibly from its neighbours, no two frames identical.
+END POSE: the same as pose 1, so the loop closes seamlessly; do not draw it twice.
+HOLD STILL: body and head stay still.
+CAMERA: static, strict side view, facing right. Same scale and the same flat baseline in every pose, no zoom, no pan.
+NEGATIVE: no second character, no parts of the boy Max from the reference unless this is Max, no props that are not described, no environment, no floor, no ground shadow, no checkerboard, no frames, panels or cell borders, no text, labels or numbers, no motion blur, no ghosting, no duplicated or extra limbs, no change to face, proportions, clothing or colors, no photorealism, no 3D render, no watermark, no in-between blur, no speed lines, no smear frames, no sliding feet, no change of scale or baseline between poses, no camera movement, no zoom, no perspective change, no morphing, no extra poses beyond the ones listed
+```
+
+## Sobek, an Land: Hut zurechtrücken
+
+**Shot W2-B33**
+
+**Anhängen:** das fertige Konzeptblatt von Sobek, an Land · **Bilder:** 6 · **Ablauf:** einmalig
+
+```text
+STYLE: Key pose sheet for a 2D game animation in exactly the same style, colors and proportions as the attached character sheet: same character, same head size, same hair and clothing colors, same line weight and flat cel shading, light from upper left. The key poses side by side in one row from left to right in the order of the action, evenly spaced with clear empty space between them, all at the same scale on one flat baseline, each a frozen still pose. Solid flat magenta (#ff00ff) background filling the whole image.
+SUBJECT: the character exactly as on the attached character sheet: same face, head size, proportions, costume and colors, nothing redesigned.
+CHARACTER (appearance only, word for word from its sheet; ignore the pose in it): The same lazy teenage crocodile on land, about 125 percent as long as the boy Max is tall, olive-green scales, pale yellow belly, a small woven reed hat. Crawling on all fours, head lowered respectfully toward the ground, facing right.
+START: From the neutral pose on the attached concept sheet of Sobek on land. Keep the clean concept-art style of that sheet, not pixel art.
+ACTION (3 key poses of a 6-frame animation of about 0.6 s): (1) 0.0 s: the crocodile lifts one front leg; (2) 0.3 s: nudges the small woven reed hat straight with a claw, it slips again; (3) 0.6 s: he pushes it back once more and lowers the leg with a sigh.
+FRAMES: draw all 6 frames side by side, left to right, in the order they play: the key poses above at their times and evenly spaced in-between frames, so the motion reads smoothly; every frame differs visibly from its neighbours, no two frames identical.
+END POSE: pose 3 is the final frame and is held; it must read as a calm, complete pose.
+HOLD STILL: the other legs stay planted.
+CAMERA: static, strict side view, facing right. Same scale and the same flat baseline in every pose, no zoom, no pan.
+NEGATIVE: no second character, no parts of the boy Max from the reference unless this is Max, no props that are not described, no environment, no floor, no ground shadow, no checkerboard, no frames, panels or cell borders, no text, labels or numbers, no motion blur, no ghosting, no duplicated or extra limbs, no change to face, proportions, clothing or colors, no photorealism, no 3D render, no watermark, no in-between blur, no speed lines, no smear frames, no sliding feet, no change of scale or baseline between poses, no camera movement, no zoom, no perspective change, no morphing, no extra poses beyond the ones listed
+```
+
+## Schildkröte: Rennen
+
+**Shot W2-B34**
+
+**Anhängen:** das fertige Konzeptblatt von Schildkröte · **Bilder:** 8 · **Ablauf:** Schleife
+
+```text
+STYLE: Key pose sheet for a 2D game animation in exactly the same style, colors and proportions as the attached character sheet: same character, same head size, same hair and clothing colors, same line weight and flat cel shading, light from upper left. The key poses side by side in one row from left to right in the order of the action, evenly spaced with clear empty space between them, all at the same scale on one flat baseline, each a frozen still pose. Solid flat magenta (#ff00ff) background filling the whole image.
+SUBJECT: the character exactly as on the attached character sheet: same face, head size, proportions, costume and colors, nothing redesigned.
+CHARACTER (appearance only, word for word from its sheet; ignore the pose in it): A small Greek tortoise, about 21 percent of the boy Max's height, olive-brown shell, a tiny white headband. Walking on four legs, facing right, determined look.
+START: From the neutral pose on the attached concept sheet of Schildkröte. Keep the clean concept-art style of that sheet, not pixel art.
+MANNER (applies to every frame): the tortoise breaks into a fast run on four short legs to overtake, neck stretched far forward, headband ends flying, shell bouncing, a small dust cloud behind.
+FRAMES: exactly 8 frames side by side, left to right, one complete cycle of about 0.8 s at 10 frames per second: (1) near front leg and far hind leg reaching forward and just touching the ground; near hind leg and far front leg stretched back on their toes; body level; (2) near front and far hind legs carrying the weight, body at its lowest; near hind and far front paws lifted just off the ground; (3) near front and far hind legs straight under the body; near hind and far front legs bent and swinging forward past them; body high; (4) near front and far hind legs pushing off behind; near hind and far front legs reaching forward; body at its highest; (5) far front leg and near hind leg reaching forward and just touching the ground; far hind leg and near front leg stretched back on their toes; body level; (6) far front and near hind legs carrying the weight, body at its lowest; the other two paws lifted; (7) far front and near hind legs straight under the body; near front and far hind legs swinging forward past them; body high; (8) far front and near hind legs pushing off behind; near front and far hind legs reaching forward; leads back into frame 1.
+LEGS: 'near' means the leg or arm closer to the viewer, 'far' the one on the other side of the body. Draw the far legs and the far arm one shade darker and partly behind the body, so the two sides can never be confused. Every frame must differ visibly from its neighbours; frames 5 to 8 repeat frames 1 to 4 with the sides swapped, they are never copies of them.
+END POSE: frame 8 leads straight back into frame 1, so the loop closes seamlessly; do not draw frame 1 twice.
+CAMERA: static, strict side view, facing right. Same scale and the same flat baseline in every pose, no zoom, no pan.
+NEGATIVE: no second character, no parts of the boy Max from the reference unless this is Max, no props that are not described, no environment, no floor, no ground shadow, no checkerboard, no frames, panels or cell borders, no text, labels or numbers, no motion blur, no ghosting, no duplicated or extra limbs, no change to face, proportions, clothing or colors, no photorealism, no 3D render, no watermark, no in-between blur, no speed lines, no smear frames, no sliding feet, no change of scale or baseline between poses, no camera movement, no zoom, no perspective change, no morphing, no extra poses beyond the ones listed
+```
+
+## Hafen Syrakus: Ruderboot mit Fässern
+
+**Shot W2-B35**
+
+**Anhängen:** nichts (Effekt) · **Bilder:** 8 · **Ablauf:** Schleife
+
+```text
+STYLE: Visual effect frames for a 2D game, frames side by side in one row, evenly spaced, frame count as given in the motif, every frame the same size with the effect centered, flat cel shading, solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no frames or panels, no text.
+EFFECT: A small wooden rowing boat seen from the side moving to the right on the harbor water, two dock workers in brown tunics rowing in rhythm, three wine barrels and a coiled net stacked in the stern; the oars dip, pull back and lift dripping in turn, the boat rises and dips a little.
+FRAMES: 8 frames side by side, about 0.8 s at 10 frames per second, loops seamlessly: the last frame leads back into the first, each frame 80x40 pixels in the game.
+END: no separate end frame, the loop closes.
+CAMERA: static, no zoom, no pan, the effect stays centered in every frame.
+NEGATIVE: no characters unless named, no background scene, no text, no frames or panels, no checkerboard, no motion blur, no speed lines
+```
+
+## Nil-Delta: Wasserträgerin
+
+**Shot W2-B36**
+
+**Anhängen:** nichts (Effekt) · **Bilder:** 8 · **Ablauf:** Schleife
+
+```text
+STYLE: Visual effect frames for a 2D game, frames side by side in one row, evenly spaced, frame count as given in the motif, every frame the same size with the effect centered, flat cel shading, solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no frames or panels, no text.
+EFFECT: A small Egyptian woman in a white linen dress carrying a round clay water jar on her head, steadying it with one raised hand, walking to the right, seen from the side; a clean walking cycle: the legs alternate in every step, the near leg drawn lighter and the far leg one shade darker, contact, passing and push-off clearly visible, the free arm swings gently, the jar stays level.
+FRAMES: 8 frames side by side, about 0.8 s at 10 frames per second, loops seamlessly: the last frame leads back into the first, each frame 32x56 pixels in the game.
 END: no separate end frame, the loop closes.
 CAMERA: static, no zoom, no pan, the effect stays centered in every frame.
 NEGATIVE: no characters unless named, no background scene, no text, no frames or panels, no checkerboard, no motion blur, no speed lines
