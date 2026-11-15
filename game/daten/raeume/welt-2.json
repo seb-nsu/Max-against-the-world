@@ -3406,6 +3406,26 @@
       64
      ],
      "fps": 8
+    },
+    {
+     "art": "bild",
+     "bild": "res://grafik/ambiente/zuschauer_stadion.png",
+     "bilder": 8,
+     "pos": [
+      362,
+      147
+     ],
+     "fps": 4
+    },
+    {
+     "art": "bild",
+     "bild": "res://grafik/ambiente/zuschauer_stadion.png",
+     "bilder": 8,
+     "pos": [
+      1062,
+      147
+     ],
+     "fps": 3
     }
    ],
    "hintergrund_nach": {

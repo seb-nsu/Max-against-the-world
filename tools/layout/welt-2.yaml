@@ -313,6 +313,8 @@ stadion:
   farbe: "#d6b46a"
   effekte:                     # lebendiger Hintergrund (P16, gemalte Bildfolgen aus tools/ambiente.py)
     - {art: bild, bild: res://grafik/ambiente/wimpel_stadion.png, bilder: 8, pos: [102, 64], fps: 8}   # W2-B27 auf der Tribünenecke links
+    - {art: bild, bild: res://grafik/ambiente/zuschauer_stadion.png, bilder: 8, pos: [362, 147], fps: 4}   # W2-B26, Tribünenblock zwischen Treppe und Tor
+    - {art: bild, bild: res://grafik/ambiente/zuschauer_stadion.png, bilder: 8, pos: [1062, 147], fps: 3}   # W2-B26, rechter Tribünenblock
   hintergrund: res://grafik/hintergruende/w2_bg_stadion_v01.png
   hintergrund_nach:
     R13: res://grafik/hintergruende/w2_bg_stadion_parade_v01.png      # Parade nach dem Finaltag, Glockenturm schief

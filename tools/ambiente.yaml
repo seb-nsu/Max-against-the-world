@@ -402,6 +402,13 @@ W2-B30:
   bilder: [2, 3, 4, 3]
   breite: 160
 
-# Nil-Delta, Agora und Stadion sind seit dem Merge von PR #29 im Layout (welt-2.yaml).
-# Offen: W2-B26 Stadion-Zuschauer, der Bogen W2-B26_zuschauer.png ist nicht brauchbar (Leute wechseln von
-# Bild zu Bild die Plätze); wird neu gemalt, danach hier eintragen und im Stadion über die Tribüne legen.
+W2-B26:
+  quelle: runde2/ambiente/W2-B26_zuschauer_nm_b.png   # neu gemalt, die erste Fassung W2-B26_zuschauer.png war unbrauchbar
+  ziel: zuschauer_stadion
+  raum: w2_bg_stadion_v01.png
+  nur_raum: true                     # mit Endesga bekamen die Umrisse einen lila Schimmer
+  raster: 2x4
+  breite: 130                        # Leute etwa so groß wie die gemalten auf der Tribüne
+
+# Nil-Delta, Agora und Stadion sind seit dem Merge von PR #29 im Layout (welt-2.yaml). Die Zuschauer-
+# Streifen liegen in zwei Tribünenblöcken zwischen Treppen, damit die Ränder nicht auffallen.
