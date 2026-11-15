@@ -5,6 +5,7 @@ Couch Quest ist ein Godot-4-Point-and-Click-Adventure (Popochiu, Pixel-Art 640×
 ## Vor jeder Arbeit lesen
 
 - `docs/lessons-learned.md`: was funktioniert hat, wo es mehrere Runden gebraucht hat, Kosten, Thread-Aufteilung. Bei Grafik, Animation oder Einbau zuerst dort nachsehen.
+- `docs/quellen.md`: externe Quellen (zum Beispiel Slynyrd zu Animation) mit dem, was wir daraus übernommen haben. Neue hilfreiche Links dort eintragen.
 - `docs/00-aufbau.md`: welche Datei welche Information besitzt.
 - `docs/grafik/00-stil-und-werkzeuge.md`: Stil, Prompt-Bausteine, Werkzeuge.
 - `docs/entscheidungen.md` und `docs/offene-punkte.md`.
