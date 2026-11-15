@@ -267,7 +267,43 @@ Mehrere Schätzungen waren zu niedrig oder zu hoch. Beides schadet: Zu niedrig v
 
 ---
 
-## 9. Weitere Punkte
+## 9. Ablauf mit Prüftoren
+
+Angelehnt an die Arbeitsstruktur aus der Agenten-Sammlung agency-agents (NEXUS, siehe `docs/quellen.md`), auf unser Projekt heruntergebrochen. Drei Ideen daraus passen genau zu unseren Problemen: feste Phasen mit einem Prüftor dazwischen, eine Bauen-Prüfen-Schleife mit Obergrenze und eine feste Übergabe-Vorlage zwischen Threads.
+
+### Phasen je Welt, mit Prüftor
+
+| Phase | Was passiert | Prüftor: erst weiter, wenn … |
+| --- | --- | --- |
+| 0. Bestand | Statusliste aller IDs, Skizzen, Motive mit Spiel abgeglichen, Zuständigkeit je Zeile | jede ID hat eine Zeile, Breitbild-Räume sind entschieden, Kosten sind geschätzt und freigegeben |
+| 1. Vorlagen | Konzeptblätter aller Figuren, 3D-Vorlagen, Meshy-Rigs | jede Figur hat ein freigegebenes Konzeptblatt und, wenn Mensch, ein Rig |
+| 2. Bilder | Hintergründe (Sebastian), Gegenstände, Posenbögen | Bilder als PNG in voller Größe abgelegt, gegen Skizze und Rätsel geprüft |
+| 3. Bauen | Einbau, Läufe, Gesten, Ambiente | jede Lieferung hat die Bauen-Prüfen-Schleife bestanden |
+| 4. Härten | Detailprüfung aller Einzelbilder, Review mit frischem Blick, Fix-Runde | Review-Funde der Stufe A erledigt, CI grün, Statusliste ohne offene Zeilen |
+| 5. Abnahme | Sebastian spielt, Playtest | Sebastian gibt frei |
+
+### Bauen-Prüfen-Schleife
+
+1. Bauen.
+2. Selbst prüfen mit der Prüfliste aus Abschnitt 7, mit **Nachweis** (Kontaktbogen, Raumaufnahme mit allen Figuren, GIF, Testergebnis). Ohne Nachweis gilt etwas nicht als fertig.
+3. Bestanden: Sebastian zeigen. Nicht bestanden: nachbessern.
+4. **Höchstens drei Versuche auf demselben Weg.** Danach nicht weiterprobieren, sondern den Weg wechseln oder Sebastian mit zwei bis drei Optionen fragen. Das hätte bei Minkas Lauf (7 Fassungen) und Toadi (8) mehrere Runden gespart.
+
+### Übergabe zwischen Threads
+
+Wenn ein Thread Arbeit an einen anderen gibt (zum Beispiel Posenbögen an den Animations-Thread oder einen Branch zum Mergen), immer mit diesen Angaben:
+
+- **Stand:** was fertig ist, Branch und Commit, main eingemischt ja/nein, Testergebnis
+- **Dateien:** welche Dateien betroffen sind und welche gemeinsam genutzt werden
+- **Auftrag:** was der andere tun soll, mit IDs
+- **Abnahme:** woran man erkennt, dass es fertig ist
+- **Achtung:** Besonderheiten (Screenshot-Referenzen neu nötig, gemeinsamer Code geändert, Dateien nicht anfassen)
+
+So mussten Übergaben bisher oft nachgefragt oder korrigiert werden (Posen-Zuständigkeit Welt 2, Taverne-Referenz, „keep main's versions“).
+
+---
+
+## 10. Weitere Punkte
 
 ### Godot-Fallen, die schon einmal Zeit gekostet haben
 
