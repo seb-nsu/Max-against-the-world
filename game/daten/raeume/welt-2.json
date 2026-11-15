@@ -31,16 +31,32 @@
     1280,
     360
    ],
-   "hintergrund": "res://grafik/platzhalter/raum_nil_delta.png",
+   "hintergrund": "res://grafik/hintergruende/w2_bg_nil_delta_v01.png",
    "farbe": "#c9a96e",
    "laufbereich": [
     [
      8,
+     290
+    ],
+    [
+     480,
      280
     ],
     [
+     520,
+     275
+    ],
+    [
+     720,
+     270
+    ],
+    [
+     800,
+     255
+    ],
+    [
      1272,
-     280
+     255
     ],
     [
      1272,
@@ -54,48 +70,49 @@
    "marker": {
     "start": [
      400,
-     320
+     310
     ],
     "von_thronsaal_ramses": [
-     1184,
-     320
+     1220,
+     300
     ],
     "von_sphinx": [
-     1040,
-     296
+     1160,
+     270
     ],
     "von_faehre": [
-     80,
-     316
+     130,
+     305
     ],
     "hermes": [
      800,
-     320
+     310
     ]
    },
+   "tiefe": 0.85,
    "figuren": [
     {
      "id": "faehrmann",
      "script_name": "Faehrmann",
      "pos": [
-      96,
-      304
+      120,
+      300
      ]
     },
     {
      "id": "sobek",
      "script_name": "Sobek",
      "pos": [
-      44,
-      340
+      330,
+      258
      ]
     },
     {
      "id": "steinmetz",
      "script_name": "Steinmetz",
      "pos": [
-      880,
-      304
+      760,
+      300
      ]
     }
    ],
@@ -105,14 +122,14 @@
      "script_name": "Faehre",
      "name_key": "UI_OBJ_FAEHRE",
      "rect": [
-      8,
-      260,
-      128,
-      40
+      0,
+      205,
+      160,
+      75
      ],
      "gehe": [
-      112,
-      316
+      120,
+      300
      ],
      "ansehen": [
       {
@@ -155,14 +172,14 @@
      "script_name": "Faehrtafel",
      "name_key": "UI_OBJ_FAEHRTAFEL",
      "rect": [
-      316,
-      200,
-      40,
-      40
+      148,
+      185,
+      64,
+      90
      ],
      "gehe": [
-      336,
-      308
+      190,
+      300
      ],
      "ansehen": [
       {
@@ -187,14 +204,14 @@
      "script_name": "Sanduhr",
      "name_key": "UI_OBJ_SANDUHR",
      "rect": [
-      416,
-      188,
-      32,
-      68
+      220,
+      140,
+      36,
+      135
      ],
      "gehe": [
-      432,
-      308
+      250,
+      300
      ],
      "ansehen": [
       {
@@ -219,14 +236,14 @@
      "script_name": "Schilf",
      "name_key": "UI_OBJ_SCHILF",
      "rect": [
-      516,
-      224,
-      72,
-      56
+      505,
+      140,
+      210,
+      135
      ],
      "gehe": [
-      552,
-      308
+      600,
+      300
      ],
      "ansehen": [
       {
@@ -252,14 +269,14 @@
      "script_name": "WeizenfeldMitHandabdruck",
      "name_key": "UI_OBJ_WEIZENFELD_MIT_HANDABDRUCK",
      "rect": [
-      688,
-      220,
-      96,
-      60
+      820,
+      170,
+      380,
+      80
      ],
      "gehe": [
-      736,
-      308
+      1000,
+      290
      ],
      "ansehen": [
       {
@@ -294,14 +311,14 @@
      "script_name": "VerkehrtePyramide",
      "name_key": "UI_OBJ_VERKEHRTE_PYRAMIDE",
      "rect": [
-      750,
-      28,
-      140,
-      140
+      800,
+      10,
+      155,
+      155
      ],
      "gehe": [
-      816,
-      304
+      880,
+      290
      ],
      "ansehen": [
       {
@@ -327,14 +344,14 @@
      "script_name": "Bauplan",
      "name_key": "UI_OBJ_BAUPLAN",
      "rect": [
-      940,
-      224,
+      960,
+      215,
       40,
       32
      ],
      "gehe": [
-      944,
-      308
+      980,
+      290
      ],
      "ansehen": [
       {
@@ -363,16 +380,16 @@
      "script_name": "Papyrusblatt",
      "name_key": "UI_OBJ_PAPYRUSBLATT",
      "rect": [
-      554,
-      260,
-      20,
-      16
+      580,
+      185,
+      40,
+      40
      ],
      "gehe": [
-      552,
-      308
+      600,
+      295
      ],
-     "textur": "res://grafik/platzhalter/prop_papyrusblatt.png",
+     "textur": "res://grafik/props/papyrusblatt.png",
      "gegenstand": "papyrusblatt",
      "ansehen": [],
      "nehmen": {
@@ -392,13 +409,13 @@
      "name_key": "UI_OBJ_SANDWEG",
      "rect": [
       1240,
-      140,
-      36,
-      140
+      130,
+      40,
+      120
      ],
      "gehe": [
-      1248,
-      320
+      1250,
+      300
      ],
      "erreichbar_ab": "start",
      "ansehen": [
@@ -425,14 +442,14 @@
      "ziel": "sphinx",
      "name_key": "UI_OBJ_DUENENPFAD",
      "rect": [
-      1036,
-      160,
-      72,
-      56
+      1110,
+      125,
+      110,
+      60
      ],
      "gehe": [
-      1064,
-      296
+      1160,
+      262
      ],
      "erreichbar_ab": "start",
      "ansehen": []
