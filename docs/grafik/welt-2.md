@@ -196,6 +196,16 @@ Nach dem Review von Welt 1 bekommt nicht jede Figur einen Gehzyklus, sondern nur
 | Zeitfähre | Effekt | alle | Claude in Godot: goldene Sanduhr-Funken über dem Inventarfeld |
 | Grabstein | Altern | 10b | Claude: Überblenden zwischen den drei Zuständen aus dem Sammelbild „Grabstein-Zustände“; Ägypten–Olympia von frisch zu grau, Olympia–Syrakus von grau zu verwittert |
 
+### Tiere in Bewegung
+
+Tiere haben keinen 3D-Clip; ihr Lauf wird Bild für Bild gemalt (Sebastian, 15. November 2026).
+
+| Figur | Aktion | Rätsel | Bilder | Ablauf | Motiv |
+| --- | --- | --- | --- | --- | --- |
+| Sobek, an Land | Kriechen | 1, 2b | 8 | Schleife | From the Sobek on land reference sprite: slow lazy crocodile crawl low to the ground on all fours, belly almost touching the ground, tail swinging gently from side to side, reed hat stays on. 8 frames, loops, facing right |
+| Hofkater | Beleidigt weggehen | 2b | 8 | Schleife | From the Hofkater reference sprite: offended slow cat walk, tail held straight up, chin raised, earring and bead collar stay in place. 8 frames, loops, facing right |
+| Schildkröte | Laufen | Tag 1 | 8 | Schleife | From the Schildkröte reference sprite: determined tortoise walk on four short legs, neck stretched far forward, shell rocking slightly, headband stays on. 8 frames, loops, facing right |
+
 ### Posenbögen
 
 Baustein POSENBOGEN, das fertige Konzeptblatt der Figur aus Gemini anhängen (bei Max sein Figurenblatt). Höchstens vier Posen pro Bild; jede Pose als ruhiges Standbild beschreiben, keine Bewegungswörter.
@@ -209,7 +219,7 @@ Baustein POSENBOGEN, das fertige Konzeptblatt der Figur aus Gemini anhängen (be
 | Hofkater | Konzeptblatt Hofkater | 3 | Beleidigt abziehen | Three poses of the sandy temple cat: (1) standing on all four legs, body turned away, looking back over the shoulder with half-closed offended eyes; (2) walking away, tail held straight up, near legs forward; (3) walking away, tail straight up, far legs forward |
 | Schildkröte | Konzeptblatt Schildkröte | 2 | Überholen | Two poses of the small tortoise: (1) walking, front left and back right legs forward, neck stretched far forward, smug face; (2) the same, the other two legs forward |
 | Archimedes | Konzeptblatt Archimedes, Handtuch-Fassung | 3 | Heureka | Three poses of the old mathematician wrapped in a white towel, dripping wet: (1) both arms raised high, mouth wide open shouting with joy; (2) one bare leg stepping high over a low edge, arms out for balance; (3) leaning forward in a running stride, one hand holding the towel tight |
-| Hermes | Konzeptblatt Hermes | 3 | Joggen auf der Stelle | Three poses of the young messenger jogging on the spot: (1) left knee raised, right arm forward; (2) both feet on the ground, mid-step; (3) right knee raised, left arm forward. Satchel stays on the same side |
+| Hermes | Konzeptblatt Hermes | 4 | Joggen auf der Stelle | Four poses of the young messenger jogging on the spot in strict side view, body upright, the satchel on his near hip in every pose: (1) near knee raised high to hip height, near foot hanging below it, far foot flat on the ground carrying the weight, far arm swung forward and near arm back, elbows bent; (2) both feet on the ground under the hips, knees slightly bent, arms passing the body, body at its lowest; (3) far knee raised high to hip height, near foot flat on the ground carrying the weight, near arm swung forward and far arm back; (4) both feet on the ground again, knees slightly bent, body at its lowest |
 | Leonidas | Konzeptblatt Leonidas | 3 | Brüllen, Pfeifen | Three poses of the loud athlete, feet planted: (1) leaning back, fists clenched, mouth wide open shouting; (2) whistle in his mouth, cheeks puffed, one hand raised flat; (3) pointing forward with one arm, the other fist on his hip |
 | Cicero | Konzeptblatt Cicero | 3 | Rede halten | Three poses of the pompous orator, legs unchanged, scroll in the left hand: (1) right arm swept high to the side, chin up; (2) right index finger raised, eyebrows lifted; (3) right hand pressed to his chest, eyes half closed |
 | Philosoph | Konzeptblatt Philosoph | 2 | Schimpfen | Two poses of the old philosopher in his barrel, barrel and lantern unchanged: (1) fist raised high, mouth open shouting; (2) fist lowered, pointing a finger forward, scowling |

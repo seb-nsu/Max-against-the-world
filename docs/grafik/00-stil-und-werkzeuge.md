@@ -339,6 +339,11 @@ Diese Grundanimationen gelten für alle Welten. Weltspezifische Aktionen stehen 
 | Pixel | Fauchen | 4 | einmalig | Pixel arches his back, fur bristles, mouth wide open hissing, then settles, facing right |
 | Pixel | Ohrfeige | 4 | einmalig | Pixel jumps up and slaps with one front paw, lands again, smug face, facing right (Welt 3, blaue Pastille aus der Apothekendose mit grünem Kreuz). Nur Vorlage: erzeugt wird allein die Fassung mit 6 Bildern in Grafik Welt 3 |
 | Pixel | Vom Schrank fallen | 8 | einmalig | Pixel loses balance on top of a tall cupboard, flails all four legs, falls about 149 pixels, lands flat on the floor, dazed, facing right (Finale, Wohnzimmer) |
+| Max | Wenden | 6 | einmalig | Max in side view looking to the right, hands in the hoodie pocket; Max turned in a three-quarter view toward the viewer; Max in front view facing the viewer; Max turned in a three-quarter view toward the left; Max in side view facing left, the turn completed. Feet step in place, hands stay in the hoodie pocket |
+| Max | Fallen und landen | 8 | einmalig | Max falls from above with arms and legs flailing, hoodie flying up, lands flat on his back on the ground with a small dust puff, the hood flips over his face, he lies still (Welt 1, Ankunft auf dem Dorfplatz) |
+| Max | Vom Boden aufstehen | 8 | einmalig | Max lying flat on his back pushes the hood off his face, sits up, rolls onto one knee, pushes himself up with one hand on the knee and stands upright, brushes dust off his hoodie, facing right |
+| Pixel | Aufstehen | 6 | einmalig | Pixel sitting upright rises onto all four legs, stretches his front legs forward with his rear in the air, then stands on all fours, tail up, facing right |
+| Pixel | Hinlegen | 6 | einmalig | Pixel standing on all fours lowers his rear, sits, then lies down and curls up, tail wrapped around his body, eyes closing, facing right |
 
 ## Regeln
 
