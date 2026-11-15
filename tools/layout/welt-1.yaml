@@ -68,7 +68,7 @@ dorfplatz:
     toadi: [720, 300]
   # Deko und Rätsel-Sprites über dem Hintergrund (13. November 2026): Kokosnüsse im Stall, Bohnenranke nach R8
   vordergrund:
-    kokosnuesse: {bild: res://grafik/props/kokosnuesse.png, pos: [345, 226], skala: 2}   # doppelt, sonst ohne Text nicht zu erkennen (Review P15)
+    kokosnuesse: {bild: res://grafik/props/kokosnuesse.png, pos: [345, 226]}   # P15 (15. November 2026): in Spielgröße neu gezeichnet (eine Nuss halb offen), Raumfarben, kein Hochskalieren mehr
     bohnenranke: {bild: res://grafik/props/bohnenranke.png, pos: [785, 258], nach: R8, schatten: false}
   alias:
     luftschloss_am_himmel: luftschloss
@@ -171,7 +171,7 @@ schmiede:
     schmied: links
   vordergrund:
     amboss: {bild: res://grafik/props/amboss_vorn.png, rect: [218, 180, 92, 102], baseline: 272}   # Amboss mit Klotz als Vordergrund: der Schmied steht dahinter und hämmert (Sebastian, 14. November 2026)
-    hufeisen: {bild: res://grafik/props/hufeisen_zange.png, pos: [248, 213], schatten: false}   # Hufeisen liegt auf dem Amboss, Griffe hängen vorn herunter (bis die Schmied-Posen da sind)
+    hufeisen: {bild: res://grafik/props/hufeisen_zange.png, pos: [248, 210], schatten: false}   # Hufeisen liegt auf dem Amboss, Griffe hängen vorn herunter (bis die Schmied-Posen da sind)
   alias:
     krug_beim_kochgeschirr: krug
     ziege: schmiede_ziege
@@ -180,7 +180,7 @@ schmiede:
     amboss: {rect: [220, 185, 80, 95], gehe: [315, 270], name: Amboss}
     kochgeschirr: {rect: [390, 80, 140, 120], gehe: [460, 235], name: Kochgeschirr}
   props:
-    krug: {rect: [548, 190, 19, 26], gehe: [540, 235]}
+    krug: {rect: [548, 190, 19, 26], gehe: [540, 235], schatten: true}   # P15: Raumfarben, Kontaktschatten
   ausgaenge:
     dorfplatz: {rect: [580, 60, 60, 170], gehe: [605, 250], id: ausgang_dorfplatz}
 
@@ -235,7 +235,7 @@ klassenzimmer:
   blick:
     alwin: links
   vordergrund:
-    socke: {bild: res://grafik/props/socke_loecher.png, pos: [402, 202]}
+    socke: {bild: res://grafik/props/socke_loecher.png, pos: [405, 211], schatten: false}   # P15: liegt auf dem Hocker, Fuß hängt über die Kante
     # Die sechs Flaschen sind eigene Sprites; die getragene fehlt im Regal (room_klassenzimmer.gd)
     flasche_1: {bild: res://grafik/props/flasche_1.png, rect: [400, 111, 19, 29], baseline: 141, wandschatten: [3, -1]}
     flasche_2: {bild: res://grafik/props/flasche_2.png, rect: [419, 96, 18, 44], baseline: 141, wandschatten: [3, -1]}
@@ -359,7 +359,7 @@ zauberwald:
   figuren:
     rotkaeppchen: [914, 272]
   vordergrund:
-    glasschuh: {bild: res://grafik/props/glasschuh.png, pos: [770, 216], skala: 2}   # doppelt, sonst ohne Text nicht zu erkennen (Review P15)
+    glasschuh: {bild: res://grafik/props/glasschuh.png, pos: [770, 216]}   # P15 (15. November 2026): in Spielgröße neu gezeichnet statt doppelt skaliert
     niesrosen_zu: {bild: res://grafik/props/niesrosen_zu.png, pos: [714, 256], vor: R7}
     niesrosen_offen: {bild: res://grafik/props/niesrosen_offen.png, pos: [714, 256], nach: R7}
   alias:
@@ -402,9 +402,9 @@ bergwerk:
     goblin_2: [1040, 292]
   # Drei stumme Streik-Goblins an der Streikposten-Linie (Größe wie Figuren dort, Skala 0.72), Kaffeemaschine auf der Kiste
   vordergrund:
-    streik_goblin_1: {bild: res://grafik/props/streik_goblin_1.png, pos: [700, 258], skala: 0.72}
-    streik_goblin_3: {bild: res://grafik/props/streik_goblin_3.png, pos: [765, 258], skala: 0.72}
-    streik_goblin_2: {bild: res://grafik/props/streik_goblin_2.png, pos: [822, 258], skala: 0.72}
+    streik_goblin_1: {bild: res://grafik/props/streik_goblin_1.png, pos: [700, 258]}   # P15: auf Spielgröße (0,72) vorgerechnet, Umriss in Raumfarbe
+    streik_goblin_3: {bild: res://grafik/props/streik_goblin_3.png, pos: [765, 258]}
+    streik_goblin_2: {bild: res://grafik/props/streik_goblin_2.png, pos: [822, 258]}
     kaffeemaschine: {bild: res://grafik/props/kaffeemaschine.png, pos: [900, 192]}
   alias:
     lore: loren
