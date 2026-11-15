@@ -339,6 +339,17 @@ Diese Grundanimationen gelten für alle Welten. Weltspezifische Aktionen stehen 
 | Pixel | Fauchen | 4 | einmalig | Pixel arches his back, fur bristles, mouth wide open hissing, then settles, facing right |
 | Pixel | Ohrfeige | 4 | einmalig | Pixel jumps up and slaps with one front paw, lands again, smug face, facing right (Welt 3, blaue Pastille aus der Apothekendose mit grünem Kreuz). Nur Vorlage: erzeugt wird allein die Fassung mit 6 Bildern in Grafik Welt 3 |
 | Pixel | Vom Schrank fallen | 8 | einmalig | Pixel loses balance on top of a tall cupboard, flails all four legs, falls about 149 pixels, lands flat on the floor, dazed, facing right (Finale, Wohnzimmer) |
+| Max | Wenden | 6 | einmalig | Max in side view looking to the right, hands in the hoodie pocket; Max turned in a three-quarter view toward the viewer; Max in front view facing the viewer; Max turned in a three-quarter view toward the left; Max in side view facing left, the turn completed. Feet step in place, hands stay in the hoodie pocket |
+| Max | Fallen und landen | 8 | einmalig | Max falls from above with arms and legs flailing, hoodie flying up, lands flat on his back on the ground with a small dust puff, the hood flips over his face, he lies still (Welt 1, Ankunft auf dem Dorfplatz) |
+| Max | Vom Boden aufstehen | 8 | einmalig | Max lying flat on his back pushes the hood off his face, sits up, rolls onto one knee, pushes himself up with one hand on the knee and stands upright, brushes dust off his hoodie, facing right |
+| Pixel | Aufstehen | 6 | einmalig | Pixel sitting upright rises onto all four legs, stretches his front legs forward with his rear in the air, then stands on all fours, tail up, facing right |
+| Pixel | Hinlegen | 6 | einmalig | Pixel standing on all fours lowers his rear, sits, then lies down and curls up, tail wrapped around his body, eyes closing, facing right |
+| Max | Kopf kratzen | 6 | einmalig | Max scratches the back of his head with his right hand, looks puzzled up and to the side, his mouth pulled to one side, then lowers the hand, facing right, feet stay planted |
+| Max | Zeigen | 4 | einmalig | Max raises his right arm and points straight forward with his index finger, leans a little into it, holds, then lowers the arm, facing right, feet stay planted |
+| Max | Hinsetzen | 8 | einmalig | Max stands in front of a low wooden crate, turns slightly, bends his knees and sits down on it, hands resting on his knees, a short relaxed breath, facing right, the crate stays in place |
+| Max | Reden mit Gesten | 6 | Schleife | Max talks and takes his hands out of his pockets: he gestures with one open hand, shrugs both hands outward, points at himself with the thumb, mouth opening and closing, facing right, feet stay planted |
+| Pixel | Reden | 6 | Schleife | Pixel sitting upright talks through his collar: he lifts his chin, the turquoise light on the round silver speaker of his red collar lights up brightly while he talks and dims in the pauses, ears turn forward, a slow smug blink, mouth barely moving, facing right, paws stay planted |
+| Pixel | Schwanz zucken | 4 | Schleife | Pixel sitting upright, only the tail tip flicks from side to side on the floor, ears twitch once, a slow blink, facing right, body and paws stay still |
 
 ## Regeln
 
