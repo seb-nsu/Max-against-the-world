@@ -137,7 +137,7 @@ position = Vector2(485, 305)
 [node name="Characters" type="Node2D" parent="." unique_id=698263444]
 
 [node name="CharacterFaehrmann *" parent="Characters" unique_id=938438789 instance=ExtResource("21_5yu0x")]
-position = Vector2(120, 300)
+position = Vector2(170, 302)
 
 [node name="CharacterSobek *" parent="Characters" unique_id=1702667434 instance=ExtResource("22_jdeoi")]
 position = Vector2(312, 240)

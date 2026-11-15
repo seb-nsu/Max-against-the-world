@@ -2,7 +2,7 @@
 
 Stand 15. November 2026. Alles, was für Welt 2 aus Gemini kommen muss, in der Reihenfolge, in der es sich anbietet. Die Prompts selbst stehen in [`welt-2.md`](welt-2.md) (erzeugt aus `../welt-2.md`); hier steht nur die Reihenfolge, was anzuhängen ist und worauf man achten sollte. Abhaken, was erledigt ist.
 
-**Stand:** Alle 11 Räume, alle Figuren und 8 von 10 Gegenstandsbögen sind geliefert und im Spiel. Noch offen: zwei Farbfassungen des Ägypters für die Menge, die 2 großen Objekte (Krokodil-Fähre, Wurfhebel), die Bögen Hieroglyphen und Deko und die Nahansichten. Die Posenbögen führt die Gesamtliste.
+**Stand:** Alle Räume, Figuren, Gegenstände, großen Objekte und Deko-Sprites sind geliefert und im Spiel. Noch offen: die Nahansichten. Die Posenbögen führt die Gesamtliste.
 
 **Die vollständige Arbeitsliste mit fertigen Prompts** für Prolog, Welt 1 und Welt 2 ist [`00-offen-prolog-welt-1-welt-2.md`](00-offen-prolog-welt-1-welt-2.md). Sie geht vor, wenn sich etwas widerspricht; diese Datei hält nur den Überblick für Welt 2.
 
@@ -35,8 +35,8 @@ Stand 15. November 2026. Alles, was für Welt 2 aus Gemini kommen muss, in der R
 - [x] Steinmetz
 - [x] Zeremonienmeister
 - [x] Ägypter aus dem Volk
-- [ ] Ägypter aus dem Volk, zweite und dritte Fassung für die Menge (im selben Chat aus dem fertigen Bild, die Prompts stehen in welt-2.md unter „Ägypter aus dem Volk“)
-- [ ] Krokodil-Fähre (großes Objekt)
+- [x] Ägypter aus dem Volk, zweite und dritte Fassung für die Menge (im selben Chat aus dem fertigen Bild, die Prompts stehen in welt-2.md unter „Ägypter aus dem Volk“)
+- [x] Krokodil-Fähre (großes Objekt)
 
 ## 3. Räume in Griechenland
 
@@ -66,7 +66,7 @@ Stand 15. November 2026. Alles, was für Welt 2 aus Gemini kommen muss, in der R
 - [x] Beamter 2
 - [x] Schildkröte
 - [x] Straßenmusiker
-- [ ] Wurfhebel (großes Objekt)
+- [x] Wurfhebel (großes Objekt)
 
 ## 5. Gegenstände
 
@@ -78,8 +78,8 @@ Stand 15. November 2026. Alles, was für Welt 2 aus Gemini kommen muss, in der R
 - [x] Getränke-Zustände (1×3)
 - [x] Grabstein-Zustände (1×4)
 - [x] Wunderdinge (1×3; das Kaugummi bleibt hellrosa, nicht knallpink wie der Hintergrund)
-- [ ] Hieroglyphen (4×4)
-- [ ] Deko Welt 2 (3×3)
+- [x] Hieroglyphen (4×4; liegen in `game/grafik/hieroglyphen/`, im Rätsel noch Textauswahl; auf dem Bogen steht Brot statt Schlange)
+- [x] Deko Welt 2 (3×3)
 
 ## 6. Nahansichten und Tafeln
 
