@@ -100,20 +100,20 @@ baseline = 16
 walk_to_point = Vector2(0, 59)
 
 [node name="Sandweg" parent="Hotspots" unique_id=1360121635 instance=ExtResource("14_i0qh5")]
-position = Vector2(1260, 190)
+position = Vector2(1258, 303)
 description = "UI_OBJ_SANDWEG"
-baseline = 60
-walk_to_point = Vector2(-10, 110)
+baseline = 53
+walk_to_point = Vector2(4, 22)
 cursor = 9
-interaction_polygon = PackedVector2Array(-20, -60, 20, -60, 20, 60, -20, 60)
+interaction_polygon = PackedVector2Array(-22, -53, 22, -53, 22, 53, -22, 53)
 
 [node name="Duenenpfad" parent="Hotspots" unique_id=752158869 instance=ExtResource("15_edtj6")]
-position = Vector2(1165, 155)
+position = Vector2(1150, 155)
 description = "UI_OBJ_DUENENPFAD"
-baseline = 30
-walk_to_point = Vector2(-5, 107)
+baseline = 45
+walk_to_point = Vector2(0, 107)
 cursor = 9
-interaction_polygon = PackedVector2Array(-55, -30, 55, -30, 55, 30, -55, 30)
+interaction_polygon = PackedVector2Array(-60, -45, 60, -45, 60, 45, -60, 45)
 
 [node name="Regions" type="Node2D" parent="." unique_id=126631486]
 
@@ -123,16 +123,16 @@ interaction_polygon = PackedVector2Array(-55, -30, 55, -30, 55, 30, -55, 30)
 position = Vector2(400, 310)
 
 [node name="VonThronsaalRamses" parent="Markers" unique_id=1967330072 instance=ExtResource("17_hgi45")]
-position = Vector2(1220, 300)
+position = Vector2(1220, 320)
 
 [node name="VonSphinx" parent="Markers" unique_id=1259328439 instance=ExtResource("18_weo8g")]
-position = Vector2(1160, 270)
+position = Vector2(1150, 268)
 
 [node name="VonFaehre" parent="Markers" unique_id=2005417047 instance=ExtResource("19_thv1t")]
 position = Vector2(130, 305)
 
 [node name="Hermes" parent="Markers" unique_id=1562054915 instance=ExtResource("20_yp18m")]
-position = Vector2(580, 310)
+position = Vector2(485, 305)
 
 [node name="Characters" type="Node2D" parent="." unique_id=698263444]
 
@@ -143,4 +143,4 @@ position = Vector2(120, 300)
 position = Vector2(312, 240)
 
 [node name="CharacterSteinmetz *" parent="Characters" unique_id=305777515 instance=ExtResource("23_3eyf4")]
-position = Vector2(760, 300)
+position = Vector2(790, 268)

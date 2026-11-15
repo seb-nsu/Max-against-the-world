@@ -74,19 +74,19 @@
     ],
     "von_thronsaal_ramses": [
      1220,
-     300
+     320
     ],
     "von_sphinx": [
-     1160,
-     270
+     1150,
+     268
     ],
     "von_faehre": [
      130,
      305
     ],
     "hermes": [
-     580,
-     310
+     485,
+     305
     ]
    },
    "tiefe": 0.85,
@@ -111,8 +111,8 @@
      "id": "steinmetz",
      "script_name": "Steinmetz",
      "pos": [
-      760,
-      300
+      790,
+      268
      ]
     }
    ],
@@ -408,14 +408,14 @@
      "ziel": "thronsaal_ramses",
      "name_key": "UI_OBJ_SANDWEG",
      "rect": [
-      1240,
-      130,
-      40,
-      120
+      1236,
+      250,
+      44,
+      106
      ],
      "gehe": [
-      1250,
-      300
+      1262,
+      325
      ],
      "erreichbar_ab": "start",
      "ansehen": [
@@ -442,13 +442,13 @@
      "ziel": "sphinx",
      "name_key": "UI_OBJ_DUENENPFAD",
      "rect": [
-      1110,
-      125,
+      1090,
       110,
-      60
+      120,
+      90
      ],
      "gehe": [
-      1160,
+      1150,
       262
      ],
      "erreichbar_ab": "start",

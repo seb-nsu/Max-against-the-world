@@ -45,14 +45,14 @@ nil_delta:
   faehre: [faehrsteg_olympia, hafen_syrakus]
   marker:
     start: [400, 310]
-    von_thronsaal_ramses: [1220, 300]
-    von_sphinx: [1160, 270]
+    von_thronsaal_ramses: [1220, 320]
+    von_sphinx: [1150, 268]
     von_faehre: [130, 305]
-    hermes: [580, 310]             # nahe am Ankunftsplatz von Max, damit man ihn hereinjoggen sieht
+    hermes: [485, 305]             # nahe am Ankunftsplatz von Max, damit man ihn hereinjoggen sieht
   figuren:
     faehrmann: [120, 300]
     sobek: [312, 240]
-    steinmetz: [760, 300]
+    steinmetz: [790, 268]
   alias:
     papyrus_aus_dem_schilf: papyrusblatt
     weizenfeld: weizenfeld_mit_handabdruck
@@ -70,8 +70,8 @@ nil_delta:
   props:
     papyrusblatt: {rect: [580, 185, 40, 40], gehe: [600, 295]}
   ausgaenge:
-    thronsaal_ramses: {rect: [1240, 130, 40, 120], gehe: [1250, 300], id: sandweg, name: Sandweg}
-    sphinx: {rect: [1110, 125, 110, 60], gehe: [1160, 262], id: duenenpfad, name: Dünenpfad}
+    thronsaal_ramses: {rect: [1236, 250, 44, 106], gehe: [1262, 325], id: sandweg, name: Sandweg}
+    sphinx: {rect: [1090, 110, 120, 90], gehe: [1150, 262], id: duenenpfad, name: Dünenpfad}
 
 thronsaal_ramses:
   farbe: "#b98b3e"
