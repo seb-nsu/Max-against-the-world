@@ -196,21 +196,26 @@ faehrsteg_olympia:
 
 agora:
   farbe: "#c8c0a8"
-  laufbereich: [[8, 280], [1272, 280], [1272, 356], [8, 356]]
+  hintergrund: res://grafik/hintergruende/w2_bg_agora_v01.png
+  hintergrund_nach:
+    R12: res://grafik/hintergruende/w2_bg_agora_sandale_v01.png        # Sandale nach dem Lauf an Tag 1 auf der Adlersäule
+    R13: res://grafik/hintergruende/w2_bg_agora_ohne_arme_v01.png      # nach dem Finaltag: Sandale weg, Statue ohne Arme
+  tiefe: 0.85
+  laufbereich: [[8, 270], [1272, 270], [1272, 356], [8, 356]]
   marker:
-    start: [1200, 320]
-    von_faehrsteg_olympia: [1220, 320]
-    von_stadion: [60, 320]
-    von_startbuero: [424, 304]
-    abwurf: [900, 320]
+    start: [1215, 310]
+    von_faehrsteg_olympia: [1215, 310]
+    von_stadion: [120, 310]
+    von_startbuero: [416, 300]
+    abwurf: [900, 315]
   figuren:
-    cicero: [712, 296]
-    tiro: [790, 312]
-    tourist: [1000, 320]
-    touristin: [1064, 320]
-    philosoph: [280, 316]
-    brian: [500, 316]
-    strassenmusiker: [600, 312]
+    cicero: [745, 262]
+    tiro: [840, 300]
+    tourist: [1040, 308]
+    touristin: [1100, 308]
+    philosoph: [480, 306]
+    brian: [590, 300]
+    strassenmusiker: [955, 304]
   alias:
     tonne_mit_max: tonne
     saeule_mit_max: hohe_saeule_mit_adler
@@ -222,20 +227,20 @@ agora:
     faecherwedler_im_thronsaal: faecherwedler
   ohne: [schilf, erde]          # Feigensetzling auf Schilf oder Erde: im Nil-Delta (skripte/welt_2.gd)
   hotspots:
-    saeulenhalle: {rect: [340, 80, 200, 160], gehe: [440, 304], name: Säulenhalle}
-    hohe_saeule_mit_adler: {rect: [880, 20, 40, 240], gehe: [900, 308], name: Säule mit Adler}
-    sandale_auf_der_saeule: {rect: [876, 8, 48, 20], gehe: [900, 308], name: Sandale}
-    heuhaufen: {rect: [856, 248, 88, 32], gehe: [900, 316], name: Heuhaufen}
-    venusstatue: {rect: [128, 128, 48, 144], gehe: [152, 308], name: Venusstatue}
-    rednerpult: {rect: [680, 220, 64, 60], gehe: [712, 316], name: Rednerpult}
-    marktstaende: {rect: [960, 160, 200, 100], gehe: [1060, 308], name: Marktstände}
-    tonne: {rect: [240, 248, 72, 48], gehe: [276, 320], name: Tonne}
-    menge: {rect: [600, 160, 220, 56], gehe: [710, 308], name: Menge}
-    latein_kritzelei: {rect: [1172, 172, 56, 32], gehe: [1200, 308], name: Latein-Kritzelei}
+    saeulenhalle: {rect: [345, 105, 265, 160], gehe: [480, 300], name: Säulenhalle}
+    hohe_saeule_mit_adler: {rect: [880, 10, 40, 230], gehe: [900, 305], name: Säule mit Adler}
+    sandale_auf_der_saeule: {rect: [870, 0, 62, 42], gehe: [900, 305], name: Sandale}
+    heuhaufen: {rect: [860, 250, 80, 30], gehe: [900, 310], name: Heuhaufen}
+    venusstatue: {rect: [255, 120, 60, 155], gehe: [290, 300], name: Venusstatue}
+    rednerpult: {rect: [675, 175, 150, 97], gehe: [750, 300], name: Rednerpult}
+    marktstaende: {rect: [935, 145, 190, 105], gehe: [1030, 305], name: Marktstände}
+    tonne: {rect: [425, 258, 110, 50], gehe: [480, 322], name: Tonne}
+    menge: {rect: [600, 180, 340, 60], gehe: [770, 300], name: Menge}
+    latein_kritzelei: {rect: [1125, 160, 60, 45], gehe: [1150, 300], name: Latein-Kritzelei}
   ausgaenge:
-    faehrsteg_olympia: {rect: [1240, 120, 36, 160], gehe: [1256, 320], id: weg_zum_faehrsteg, name: Weg zum Fährsteg}
-    stadion: {rect: [4, 100, 60, 180], gehe: [32, 320], id: bogen_zum_stadion, name: Bogen zum Stadion}
-    startbuero: {rect: [396, 180, 52, 100], gehe: [424, 304], id: tuer_zum_startbuero, name: Startbüro}
+    faehrsteg_olympia: {rect: [1236, 180, 44, 100], gehe: [1258, 305], id: weg_zum_faehrsteg, name: Weg zum Fährsteg}
+    stadion: {rect: [70, 80, 110, 190], gehe: [120, 300], id: bogen_zum_stadion, name: Bogen zum Stadion}
+    startbuero: {rect: [395, 175, 42, 85], gehe: [416, 290], id: tuer_zum_startbuero, name: Startbüro}
 
 startbuero:
   farbe: "#a89a7c"
@@ -268,6 +273,8 @@ startbuero:
 stadion:
   farbe: "#d6b46a"
   hintergrund: res://grafik/hintergruende/w2_bg_stadion_v01.png
+  hintergrund_nach:
+    R13: res://grafik/hintergruende/w2_bg_stadion_parade_v01.png      # Parade nach dem Finaltag, Glockenturm schief
   tiefe: 0.8
   laufbereich: [[8, 215], [1272, 215], [1272, 356], [8, 356]]
   marker:

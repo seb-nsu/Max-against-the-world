@@ -2076,16 +2076,16 @@
     1280,
     360
    ],
-   "hintergrund": "res://grafik/platzhalter/raum_agora.png",
+   "hintergrund": "res://grafik/hintergruende/w2_bg_agora_v01.png",
    "farbe": "#c8c0a8",
    "laufbereich": [
     [
      8,
-     280
+     270
     ],
     [
      1272,
-     280
+     270
     ],
     [
      1272,
@@ -2098,81 +2098,86 @@
    ],
    "marker": {
     "start": [
-     1200,
-     320
+     1215,
+     310
     ],
     "von_faehrsteg_olympia": [
-     1220,
-     320
+     1215,
+     310
     ],
     "von_stadion": [
-     60,
-     320
+     120,
+     310
     ],
     "von_startbuero": [
-     424,
-     304
+     416,
+     300
     ],
     "abwurf": [
      900,
-     320
+     315
     ]
+   },
+   "tiefe": 0.85,
+   "hintergrund_nach": {
+    "R12": "res://grafik/hintergruende/w2_bg_agora_sandale_v01.png",
+    "R13": "res://grafik/hintergruende/w2_bg_agora_ohne_arme_v01.png"
    },
    "figuren": [
     {
      "id": "cicero",
      "script_name": "Cicero",
      "pos": [
-      712,
-      296
+      745,
+      262
      ]
     },
     {
      "id": "tiro",
      "script_name": "Tiro",
      "pos": [
-      790,
-      312
+      840,
+      300
      ]
     },
     {
      "id": "tourist",
      "script_name": "Tourist",
      "pos": [
-      1000,
-      320
+      1040,
+      308
      ]
     },
     {
      "id": "touristin",
      "script_name": "Touristin",
      "pos": [
-      1064,
-      320
+      1100,
+      308
      ]
     },
     {
      "id": "philosoph",
      "script_name": "Philosoph",
      "pos": [
-      280,
-      316
+      480,
+      306
      ]
     },
     {
      "id": "brian",
      "script_name": "Brian",
      "pos": [
-      500,
-      316
+      590,
+      300
      ]
     },
     {
      "id": "strassenmusiker",
      "script_name": "Strassenmusiker",
      "pos": [
-      600,
-      312
+      955,
+      304
      ]
     }
    ],
@@ -2182,14 +2187,14 @@
      "script_name": "Saeulenhalle",
      "name_key": "UI_OBJ_SAEULENHALLE",
      "rect": [
-      340,
-      80,
-      200,
+      345,
+      105,
+      265,
       160
      ],
      "gehe": [
-      440,
-      304
+      480,
+      300
      ],
      "ansehen": [
       {
@@ -2215,13 +2220,13 @@
      "name_key": "UI_OBJ_HOHE_SAEULE_MIT_ADLER",
      "rect": [
       880,
-      20,
+      10,
       40,
-      240
+      230
      ],
      "gehe": [
       900,
-      308
+      305
      ],
      "ansehen": [
       {
@@ -2255,14 +2260,14 @@
      "script_name": "SandaleAufDerSaeule",
      "name_key": "UI_OBJ_SANDALE_AUF_DER_SAEULE",
      "rect": [
-      876,
-      8,
-      48,
-      20
+      870,
+      0,
+      62,
+      42
      ],
      "gehe": [
       900,
-      308
+      305
      ],
      "ansehen": [
       {
@@ -2287,14 +2292,14 @@
      "script_name": "Heuhaufen",
      "name_key": "UI_OBJ_HEUHAUFEN",
      "rect": [
-      856,
-      248,
-      88,
-      32
+      860,
+      250,
+      80,
+      30
      ],
      "gehe": [
       900,
-      316
+      310
      ],
      "ansehen": [
       {
@@ -2329,14 +2334,14 @@
      "script_name": "Venusstatue",
      "name_key": "UI_OBJ_VENUSSTATUE",
      "rect": [
-      128,
-      128,
-      48,
-      144
+      255,
+      120,
+      60,
+      155
      ],
      "gehe": [
-      152,
-      308
+      290,
+      300
      ],
      "ansehen": [
       {
@@ -2380,14 +2385,14 @@
      "script_name": "Rednerpult",
      "name_key": "UI_OBJ_REDNERPULT",
      "rect": [
-      680,
-      220,
-      64,
-      60
+      675,
+      175,
+      150,
+      97
      ],
      "gehe": [
-      712,
-      316
+      750,
+      300
      ],
      "ansehen": [
       {
@@ -2412,14 +2417,14 @@
      "script_name": "Marktstaende",
      "name_key": "UI_OBJ_MARKTSTAENDE",
      "rect": [
-      960,
-      160,
-      200,
-      100
+      935,
+      145,
+      190,
+      105
      ],
      "gehe": [
-      1060,
-      308
+      1030,
+      305
      ],
      "ansehen": [
       {
@@ -2445,14 +2450,14 @@
      "script_name": "Tonne",
      "name_key": "UI_OBJ_TONNE",
      "rect": [
-      240,
-      248,
-      72,
-      48
+      425,
+      258,
+      110,
+      50
      ],
      "gehe": [
-      276,
-      320
+      480,
+      322
      ],
      "ansehen": [
       {
@@ -2497,13 +2502,13 @@
      "name_key": "UI_OBJ_MENGE",
      "rect": [
       600,
-      160,
-      220,
-      56
+      180,
+      340,
+      60
      ],
      "gehe": [
-      710,
-      308
+      770,
+      300
      ],
      "ansehen": [
       {
@@ -2529,14 +2534,14 @@
      "script_name": "LateinKritzelei",
      "name_key": "UI_OBJ_LATEIN_KRITZELEI",
      "rect": [
-      1172,
-      172,
-      56,
-      32
+      1125,
+      160,
+      60,
+      45
      ],
      "gehe": [
-      1200,
-      308
+      1150,
+      300
      ],
      "ansehen": [
       {
@@ -2566,14 +2571,14 @@
      "ziel": "faehrsteg_olympia",
      "name_key": "UI_OBJ_WEG_ZUM_FAEHRSTEG",
      "rect": [
-      1240,
-      120,
-      36,
-      160
+      1236,
+      180,
+      44,
+      100
      ],
      "gehe": [
-      1256,
-      320
+      1258,
+      305
      ],
      "erreichbar_ab": "R1",
      "ansehen": []
@@ -2584,14 +2589,14 @@
      "ziel": "stadion",
      "name_key": "UI_OBJ_BOGEN_ZUM_STADION",
      "rect": [
-      4,
-      100,
-      60,
-      180
+      70,
+      80,
+      110,
+      190
      ],
      "gehe": [
-      32,
-      320
+      120,
+      300
      ],
      "erreichbar_ab": "R1",
      "ansehen": []
@@ -2602,14 +2607,14 @@
      "ziel": "startbuero",
      "name_key": "UI_OBJ_TUER_ZUM_STARTBUERO",
      "rect": [
-      396,
-      180,
-      52,
-      100
+      395,
+      175,
+      42,
+      85
      ],
      "gehe": [
-      424,
-      304
+      416,
+      290
      ],
      "erreichbar_ab": "R1",
      "ansehen": []
@@ -3027,6 +3032,9 @@
     ]
    },
    "tiefe": 0.8,
+   "hintergrund_nach": {
+    "R13": "res://grafik/hintergruende/w2_bg_stadion_parade_v01.png"
+   },
    "figuren": [
     {
      "id": "leonidas",

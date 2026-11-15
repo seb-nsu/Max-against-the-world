@@ -40,10 +40,10 @@ Stand 14. November 2026, abends. Alles, was für Welt 2 aus Gemini kommen muss, 
 ## 3. Räume in Griechenland
 
 - [x] Fährsteg Olympia
-- [ ] Agora, breit: linke Hälfte, dann rechte Hälfte; danach zweite Fassung (Sandale auf der Säule) und dritte Fassung (Statue ohne Arme)
+- [x] Agora, breit: linke Hälfte, dann rechte Hälfte; danach zweite Fassung (Sandale auf der Säule) und dritte Fassung (Statue ohne Arme)
 - [x] Startbüro (Schalter leer, Wartende auf der Bank dürfen bleiben)
 - [x] Stadion, normale Fassung (als ein Panorama)
-- [ ] Stadion, Parade-Fassung mit schiefem Glockenturm (im selben Chat aus dem Panorama: „Same image, only change: garlands, banners and flower petals everywhere, the bell tower now visibly leaning. Everything else exactly the same.“)
+- [x] Stadion, Parade-Fassung mit schiefem Glockenturm (im selben Chat aus dem Panorama: „Same image, only change: garlands, banners and flower petals everywhere, the bell tower now visibly leaning. Everything else exactly the same.“)
 - [x] Hafen Syrakus
 - [x] Archimedes' Werkstatt
 - [x] Grabhügel Syrakus, zwei Fassungen: leerer Sockel, dann mit verwittertem Grabstein
