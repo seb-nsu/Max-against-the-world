@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://jnfhl4dumvpi" path="res://game/rooms/palastkueche/props/zwiebel/prop_zwiebel.tscn" id="9_yg6n2"]
 [ext_resource type="Texture2D" uid="uid://dr6fdsplpgyq6" path="res://grafik/platzhalter/prop_zwiebel.png" id="10_5tsgx"]
 [ext_resource type="PackedScene" uid="uid://cwxoajjp3p7mi" path="res://game/rooms/palastkueche/props/traubensaft/prop_traubensaft.tscn" id="11_wfgf2"]
-[ext_resource type="Texture2D" uid="uid://drlw40tlhrxwd" path="res://grafik/platzhalter/prop_traubensaft.png" id="12_oruhb"]
+[ext_resource type="Texture2D" path="res://grafik/props/traubensaft.png" id="12_oruhb"]
 [ext_resource type="PackedScene" uid="uid://33e28op46tdk" path="res://game/rooms/palastkueche/hotspots/lehmoefen/hotspot_lehmoefen.tscn" id="13_nf6vp"]
 [ext_resource type="PackedScene" uid="uid://c6d5w7cxbmy8q" path="res://game/rooms/palastkueche/hotspots/schneidetisch/hotspot_schneidetisch.tscn" id="14_c6osl"]
 [ext_resource type="PackedScene" uid="uid://buedn7hnm0glj" path="res://game/rooms/palastkueche/hotspots/oelkruege/hotspot_oelkruege.tscn" id="15_uxp8y"]

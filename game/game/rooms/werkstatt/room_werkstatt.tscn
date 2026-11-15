@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://b41oaf3d6v66e" path="res://game/rooms/werkstatt/props/messbecher/prop_messbecher.tscn" id="9_l52y8"]
 [ext_resource type="Texture2D" uid="uid://deajsod1rqb4l" path="res://grafik/platzhalter/prop_messbecher.png" id="10_vuh5p"]
 [ext_resource type="PackedScene" uid="uid://bb78ojxuhjcke" path="res://game/rooms/werkstatt/props/essigkrug/prop_essigkrug.tscn" id="11_cyfj3"]
-[ext_resource type="Texture2D" uid="uid://d06yo7lse1pb2" path="res://grafik/platzhalter/prop_essigkrug.png" id="12_vcl5c"]
+[ext_resource type="Texture2D" path="res://grafik/props/essigkrug.png" id="12_vcl5c"]
 [ext_resource type="PackedScene" uid="uid://dwa5fjgiajtty" path="res://game/rooms/werkstatt/hotspots/badewanne/hotspot_badewanne.tscn" id="13_o702s"]
 [ext_resource type="PackedScene" uid="uid://c2f1651r1b75s" path="res://game/rooms/werkstatt/hotspots/werkbank/hotspot_werkbank.tscn" id="14_hxhnq"]
 [ext_resource type="PackedScene" uid="uid://cpcsll72dc5vs" path="res://game/rooms/werkstatt/hotspots/wurfhebel/hotspot_wurfhebel.tscn" id="15_1150g"]
