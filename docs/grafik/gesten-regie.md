@@ -1,18 +1,13 @@
 # Gesten-Regie: Wann welche Bewegung spielt
 
-## Stand für die Übergabe
+## Stand (15. November 2026, Stufe 2 fertig)
 
-- **Mechanik fertig (Stufe 1):** `game/skripte/objekte/cq_figur.gd` (Abschnitt Gesten: `geste()`, `geste_halten()`, `rede_geste()`, `warte_geste()`, `geste_ende()`, `GESTE_HALTEN`, `gesten_aus()`, `_springen_mit_bildern()`, Gehvarianten in `grafik_laden()`, `laufen_zu()` mit `walk_animation`), `game/skripte/gesten_einsatz.gd` (`CQGestenEinsatz`: `ZEILE`, `RUHE`, `WARTEN`), leere gültige Tabellen `game/skripte/gesten_welt_1.gd` und `gesten_welt_2.gd`, Haken in `Spiel.sagen()`, `Spiel.szene()` (gehaltene Gesten lösen), `Spiel.nehmen()`, `Spiel.ersatz()`, `Spiel.max_geste()`, `Spiel.max_zeigt_auf()`, `CQRaum.ruhe_anwenden()` und `_warte_gesten()`.
-- **Eingebunden:** alle Zeilen der Tabellen „Prolog“ und „Weltenübergreifend: Max und Pixel“ (Spalte Stand); im echten Spiel durch Prolog und W1-Ankunft angesehen (Sofa, Treppenhaus, Dachboden, Dorfplatz).
-- **Halb fertig:** `hinsetzen` (Art `bleibt`) wartet auf `katapult` aus der Welt-2-Tabelle; ohne sie sitzt Max bis zum Szenenende. Die Ankunft im Nil-Delta hat kein Liegen (`vom_boden_aufstehen` bei `W2_NIL_MAX_0090` offen).
-- **Als Nächstes (Stufe 2):** Tabellen Welt 1 und Welt 2 in `gesten_welt_1.gd`/`gesten_welt_2.gd` füllen (Ruhe-Schleifen, Warte-Gesten, Zeilen), dazu Raumcode für Schmied-Zyklus, Humbert-Keller, Minka, Besen, Ziegen-Gang, Sondergänge (`walk_animation`).
-- **Sheets:** `max.png`/`pixel.png` mit `gesten_einbau.py` neu gepackt, nur die neun neu gebauten Bewegungen; das Skript hat einen Fehler in `beste_lage()` (Suchbereich für dx nur einseitig, wenn die Bewegung schmaler als die Zelle ist; Max-Bewegungen landeten 40 px versetzt). Gepackt wurde mit einer berichtigten Kopie (`abs(bw - iw)`) und `--freigabe`.
-
-Stand 15. November 2026, Branch `claude/gesten-regie`. Stufe 1 eingebaut: gemeinsame Mechanik, Prolog sowie Max und Pixel über alle Welten (Spalte Stand in diesen beiden Tabellen). Welt 1 und Welt 2 folgen in Stufe 2 (Tabellen `game/skripte/gesten_welt_1.gd`, `gesten_welt_2.gd`).
-
-Grundlage sind alle Bewegungen in `game/daten/figuren/<id>.json` außer den allgemeinen `idle`, `talk`, `walk`, `idle_alt`, `talk_alt` und `walk_alt`: 172 Bewegungen von 52 Figuren (drei Bilder ohne eigene Bewegungen: `faecherwedler_gelb`, `max_pilz`, `sphinx_figur`). Den Moment liefern die Grafik-Dokumente (`welt-1.md`, `welt-2.md`, `02-prolog-und-finale.md`, `00-stil-und-werkzeuge.md`, Spalten Rätsel, Moment, Wofür), das Skript (`docs/skript/*.md`, Spalte Regie oder Auslöser), die Rätsel (`docs/raetsel/*.md`) und der Code. Wo nichts davon einen Moment nennt, steht „Vorschlag“.
-
-Die Spalte Dauer zählt Bilder im Sheet, die Schritte der `folge` (Wiederholungen halten eine Pose) und die Zeit je Schritt. Rätselnummern: P1 bis P3 im Prolog, R1 bis R13 in den Welten (`Zustand.geloest("R…")`).
+- **Eingebunden:** Prolog, Max und Pixel über alle Welten (Stufe 1), Welt 1 und Welt 2 (Stufe 2). Die Tabellen stehen in `game/skripte/gesten_einsatz.gd`, `gesten_welt_1.gd` und `gesten_welt_2.gd`; `tools/gesten_pruefen.py` prüft in GitHub Actions jede Zeilen-ID, jedes Kürzel, jede Bewegung, jeden Raum und jedes Rätsel darin.
+- **Raumcode:** Schmied hämmert mit Funken im Aufschlagbild (`room_schmiede.gd`), Alwin rührt (`room_klassenzimmer.gd`), Pixel umgarnt Minka mit ausgeblendeter Minka und Humbert geht in den Keller (`room_taverne.gd`), Besen fegen, jagen der Haarspur nach und fegen Max weg (`room_turmkeller.gd`), der Übungsbesen kippt, fliegt und kracht (`room_klassenzimmer.gd`), Toadi keucht nach dem Rennen (`room_dorfplatz.gd`), der Hofkater zieht ab und Archimedes macht im Handtuch den Freudensprung (`welt_2.gd`).
+- **Gänge:** Die neuen `gehen` der Ziegen ersetzen `walk`; Figuren ohne `walk` laufen mit ihrem Sondergang (`CQFigur.ERSATZ_GAENGE`).
+- **Im Raum angesehen:** `tests/gesten_ansehen.gd` spielt jede Bewegung jedes Raums von Welt 1 und Welt 2 ab und legt einen Kontaktbogen je Raum an. Dabei aufgefallen und behoben: Fächeln (Fächerwedler), Hämmern (Schmied) und Kauen (XXL-Ziege) lagen 35 bis 92 Pixel neben dem Fußpunkt des Stands (`tools/sheet_verschieben.py`). Achtung beim Neupacken aus den Quellen in `E:\Game Engine\Grafiken`: dieselbe Verschiebung dort nachziehen (Fächeln +92, Hämmern +39, Kauen −35 Pixel).
+- **Bewusst nicht eingebunden (mit Grund):** Arbeitszyklus des Schmieds (`ins_feuer`, `zum_amboss`: er läuft im Bild von der Esse weg; `abschrecken`: Dampf als flache weiße Fläche; `blasebalg`: kein Blasebalg an seinem Platz), Fährfahrt (`staken` nur als Geste, `faehre_ziehen` ohne Fahrbild, Entscheidung 10), Leonidas' `losrennen` (er redet in derselben Szene weiter), Schildkröte `laufen`/`rennen` (keine Laufbahn, Entscheidung 10), `joggen_posen` (doppelt, Entscheidung 8), Sobek `verbeugen` im Wasser (nur an Land gemalt). Max' `katapult`: Die Sitzbilder auf dem Hebel liegen 6 Pixel über dem Boden, weil er auf dem Brett sitzt; das ist so gewollt.
+- **Paletten:** Moderwort, Zeldina und die Maklerin mit den Tabellen aus `tools/palette_figuren/` umgefärbt (`umfaerben.py`).
 
 ## Gemeinsame Mechanik
 
