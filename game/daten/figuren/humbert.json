@@ -1,6 +1,6 @@
 {
  "bild": [
-  138,
+  176,
   207
  ],
  "animationen": {
@@ -21,6 +21,43 @@
    "bilder": 8,
    "ms": 60,
    "schleife": true
+  },
+  "keller": {
+   "von": 16,
+   "bilder": 10,
+   "ms": 130,
+   "schleife": false,
+   "folge": [
+    0,
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    5,
+    6,
+    7,
+    8,
+    9,
+    9
+   ]
+  },
+  "polieren": {
+   "von": 26,
+   "bilder": 7,
+   "ms": 150,
+   "schleife": true,
+   "folge": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    3,
+    6
+   ]
   }
  }
 }

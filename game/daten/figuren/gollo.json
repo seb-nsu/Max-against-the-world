@@ -1,6 +1,6 @@
 {
  "bild": [
-  130,
+  194,
   148
  ],
  "animationen": {
@@ -21,6 +21,23 @@
    "bilder": 8,
    "ms": 55,
    "schleife": true
+  },
+  "ring_werfen": {
+   "von": 16,
+   "bilder": 6,
+   "ms": 130,
+   "schleife": false,
+   "folge": [
+    0,
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    5,
+    5
+   ]
   }
  }
 }

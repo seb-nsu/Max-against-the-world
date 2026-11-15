@@ -231,9 +231,12 @@ func grafik_laden(variante := "") -> bool:
 		anim.track_set_path(spur, "Sprite2D:frame")
 		anim.value_track_set_update_mode(spur, Animation.UPDATE_DISCRETE)
 		var dauer := float(a.ms) / 1000.0
-		for i in int(a.bilder):
-			anim.track_insert_key(spur, i * dauer, int(a.von) + i)
-		anim.length = int(a.bilder) * dauer
+		# „folge“ (optional): Reihenfolge der gespeicherten Bilder; Wiederholungen halten eine Pose,
+		# ohne dass das Bild mehrfach im Sheet liegt
+		var folge: Array = a.get("folge", range(int(a.bilder)))
+		for i in folge.size():
+			anim.track_insert_key(spur, i * dauer, int(a.von) + int(folge[i]))
+		anim.length = folge.size() * dauer
 		anim.loop_mode = Animation.LOOP_LINEAR if a.get("schleife", true) else Animation.LOOP_NONE
 		lib.add_animation(name, anim)
 	var player: AnimationPlayer = get_node("AnimationPlayer")

@@ -1,7 +1,7 @@
 {
  "bild": [
-  86,
-  191
+  166,
+  193
  ],
  "animationen": {
   "idle": {
@@ -38,6 +38,56 @@
    "von": 45,
    "bilder": 8,
    "ms": 73,
+   "schleife": true
+  },
+  "bohne": {
+   "von": 53,
+   "bilder": 11,
+   "ms": 120,
+   "schleife": false,
+   "folge": [
+    0,
+    0,
+    1,
+    2,
+    3,
+    4,
+    4,
+    5,
+    6,
+    7,
+    8,
+    8,
+    8,
+    9,
+    10,
+    10
+   ]
+  },
+  "kochloeffel": {
+   "von": 64,
+   "bilder": 8,
+   "ms": 110,
+   "schleife": false,
+   "folge": [
+    0,
+    0,
+    1,
+    2,
+    2,
+    3,
+    4,
+    5,
+    5,
+    6,
+    7,
+    7
+   ]
+  },
+  "melken": {
+   "von": 72,
+   "bilder": 8,
+   "ms": 140,
    "schleife": true
   }
  }

@@ -862,6 +862,8 @@ def paket(spez_pfad, bild_ziel, json_ziel):
             f[ys + dy, xs + dx] = b[ys, xs]
             blatt.append(f)
         info[name] = {"von": nr, "bilder": len(bilder), "ms": a.get("ms", 150), "schleife": a.get("schleife", True)}
+        if "folge" in a:     # Reihenfolge mit Wiederholungen (gehaltene Posen), Indizes in die Bilder dieses Streifens
+            info[name]["folge"] = a["folge"]
         nr += len(bilder)
     Image.fromarray(np.concatenate(blatt, axis=1), "RGBA").save(bild_ziel)
     Path(json_ziel).write_text(json.dumps({"bild": [W, H], "animationen": info}, indent=1, ensure_ascii=False) + "\n",
