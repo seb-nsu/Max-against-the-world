@@ -225,6 +225,9 @@ func blick_setzen(richtung: String) -> void:
 ## links spiegelt Popochiu. Der Fußpunkt liegt unten in der Bildmitte.
 ## variante: anderes Bild derselben Figur (etwa „pixel_ziege“ für Pixel im Ziegenfell).
 var grafik_variante := ""
+## Sondergänge, die bei Figuren ohne walk als Gang dienen (Hermes, Sobek an Land, Schildkröte,
+## Hofkater, Leonidas, Archimedes im Handtuch), in dieser Reihenfolge
+const ERSATZ_GAENGE := ["joggen", "kriechen", "laufen", "weggehen", "losrennen", "heureka"]
 
 
 func grafik_laden(variante := "") -> bool:
@@ -279,6 +282,16 @@ func grafik_laden(variante := "") -> bool:
 			for seite in ["walk_r", "walk_l"]:
 				if not lib.has_animation(seite):
 					lib.add_animation(seite, lib.get_animation("walk"))
+	# Hauptgang (Entscheidungen 8 und 16): Die neuen Gänge der Ziegen („gehen“) ersetzen walk; Figuren
+	# ohne walk laufen mit ihrer Sondergangart, damit auch Popochius Wegfindung einen Gang hat.
+	if lib.has_animation("gehen") and lib.has_animation("walk") and not lib.has_animation("gehen_vorn"):
+		lib.remove_animation("walk")
+		lib.add_animation("walk", lib.get_animation("gehen"))
+	if not lib.has_animation("walk"):
+		for ersatz in ERSATZ_GAENGE:
+			if lib.has_animation(ersatz):
+				lib.add_animation("walk", lib.get_animation(ersatz))
+				break
 	var player: AnimationPlayer = get_node("AnimationPlayer")
 	if player.has_animation_library(""):
 		player.remove_animation_library("")
@@ -475,6 +488,26 @@ func warte_geste(anim: String, sekunden := -1.0) -> void:
 	await _geste_spielen(anim, sekunden, false, "")
 	if geste_laeuft:
 		_geste_unterbrechbar = true
+
+
+## Warte-Folge (Kulisse, CQRaum): mehrere Gesten nacheinander, etwa der Arbeitszyklus des Schmieds
+## (ins Feuer, Blasebalg, zum Amboss). Einträge sind Namen oder [Name, Sekunden] für gehaltene
+## Schleifen. Spricht die Figur, läuft sie los oder kommt eine andere Geste, bricht die Folge ab.
+func warte_folge(folge: Array) -> void:
+	for schritt in folge:
+		var anim: String = schritt[0] if schritt is Array else schritt
+		var sek: float = float(schritt[1]) if schritt is Array else -1.0
+		if is_talking or is_moving or not hat_animation(anim):
+			return
+		var nr := _geste_nr + 1
+		await _geste_spielen(anim, sek, false, "")
+		if _geste_nr != nr:
+			return
+		_geste_unterbrechbar = true
+		while geste_laeuft and _geste_nr == nr and is_inside_tree():
+			await get_tree().process_frame
+		if _geste_nr != nr or is_talking or is_moving:
+			return
 
 
 ## Statt talk spielt beim nächsten Satz dieser Figur diese Bewegung (Opa „panik“).

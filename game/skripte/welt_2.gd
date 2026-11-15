@@ -769,12 +769,25 @@ func _wunder() -> void:
 func _duell_pruefen() -> void:
 	if not (Zustand.ist("W2_DUELL_OPFER") and Zustand.ist("W2_DUELL_GEFOLGE") and Zustand.ist("W2_DUELL_WUNDER")):
 		return
-	await _szene(["W2_DUEL_NAR_0280", "W2_DUEL_HOF_0290", "W2_DUEL_PIX_0300", "W2_DUEL_MAX_0310",
-		"W2_DUEL_PIX_0320"])
+	await _szene(["W2_DUEL_NAR_0280", "W2_DUEL_HOF_0290"])
+	_hofkater_zieht_ab()   # nicht abwarten: Pixel kommentiert, während der Kater geht (0300)
+	await _szene(["W2_DUEL_PIX_0300", "W2_DUEL_MAX_0310", "W2_DUEL_PIX_0320"])
 	Zustand.loese("R2b")
 	Spiel.figur_hier("Hofkater", false)
 	if Zustand.geloest("R2a"):
 		await _audienz()
+
+
+## R2b: der Hofkater zieht beleidigt ab (W2-B02, Bewegung „weggehen“) zur Tür zum Nil-Delta. Die
+## Geste „abziehen“ (aufstehen, Schwanz hoch) spielt schon vor 0290 (gesten_welt_2.gd).
+func _hofkater_zieht_ab() -> void:
+	if CQFigur.gesten_aus() or not is_instance_valid(R.current) or not R.current.has_character("Hofkater"):
+		return
+	var kater: CQFigur = C.Hofkater
+	var tuer: Vector2 = R.current.get_marker_position("VonNilDelta") if R.current.has_marker("VonNilDelta") \
+		else kater.position + Vector2(-320, 0)
+	await kater.laufen_zu(tuer, 55.0)
+	await kater.ausblenden_und_weg()
 
 
 func _audienz() -> void:
@@ -1057,8 +1070,10 @@ func gegenstand_badewanne(_obj, iid) -> bool:
 
 
 func _heureka() -> void:
-	await _szene(["W2_KRON_MAX_0110", "W2_KRON_ARC_0120", "W2_KRON_ARC_0130", "W2_KRON_HIE_0140",
-		"W2_KRON_PIX_0150", "W2_KRON_MAX_0160", "W2_KRON_HIE_0170"])
+	await _szene(["W2_KRON_MAX_0110", "W2_KRON_ARC_0120"])
+	await _archimedes_heureka()
+	await _szene(["W2_KRON_HIE_0140", "W2_KRON_PIX_0150", "W2_KRON_MAX_0160", "W2_KRON_HIE_0170"])
+	_archimedes_zurueck()
 	await _abgeben("krone")
 	await _abgeben("goldbarren")
 	Zustand.loese("R5")
@@ -1068,6 +1083,40 @@ func _heureka() -> void:
 		"W2_TRAI_NAR_0090", "W2_TRAI_ARC_0100", "W2_TRAI_MAX_0110", "W2_TRAI_PIX_0120",
 		"W2_TRAI_MAX_0130", "W2_TRAI_PIX_0140", "W2_TRAI_NAR_0150", "W2_TRAI_ARC_0160",
 		"W2_TRAI_MAX_0170", "W2_TRAI_PIX_0180"])
+
+
+## R5, 0130 „HEUREKA!“: Archimedes im Handtuch (Variante archimedes_handtuch, W2-P07/B):
+## Freudensprung (heureka_posen), dann rennt er mit flatterndem Handtuch (heureka) zur Tür hinaus.
+## Zum Training (W2_TRAI_ARC_0010 „So! Angezogen!“) steht er wieder angezogen da.
+func _archimedes_heureka() -> void:
+	var raum = R.current
+	if CQFigur.gesten_aus() or not is_instance_valid(raum) or not raum.has_character("Archimedes"):
+		await _szene(["W2_KRON_ARC_0130"])
+		return
+	var arc: CQFigur = C.Archimedes
+	var ort := arc.position
+	arc.set_meta("heureka_ort", ort)
+	if arc.grafik_laden("archimedes_handtuch"):
+		await arc.geste("heureka_posen")
+	await _szene(["W2_KRON_ARC_0130"])
+	if arc.grafik_variante == "archimedes_handtuch" and raum.has_marker("VonHafenSyrakus"):
+		var vorher := arc.walk_animation
+		arc.walk_animation = "heureka"
+		await arc.laufen_zu(raum.get_marker_position("VonHafenSyrakus"), 150.0)
+		arc.walk_animation = vorher
+		arc.visible = false
+
+
+func _archimedes_zurueck() -> void:
+	if not is_instance_valid(R.current) or not R.current.has_character("Archimedes"):
+		return
+	var arc: CQFigur = C.Archimedes
+	if arc.grafik_variante == "archimedes_handtuch":
+		arc.grafik_laden()
+	if arc.has_meta("heureka_ort"):
+		arc.position = arc.get_meta("heureka_ort")
+		arc.remove_meta("heureka_ort")
+	arc.visible = true
 
 
 #endregion

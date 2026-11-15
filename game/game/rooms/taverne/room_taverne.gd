@@ -90,6 +90,7 @@ func _figur_gewechselt(neu: PopochiuCharacter) -> bool:
 func r1a_loesen() -> void:
 	await Spiel.szene([
 		Spiel.z("MIN", "W1_TAV_MIN_0940"),
+		_pixel_umgarnt_minka,
 		Spiel.z("PIX", "W1_TAV_PIX_0950"),
 		Spiel.z("MIN", "W1_TAV_MIN_0960"),
 		Spiel.z("PIX", "W1_TAV_PIX_0970"),
@@ -103,6 +104,25 @@ func r1a_loesen() -> void:
 	Zustand.loese("R1a")
 	_zustand_anwenden()
 	await _keiner_guckt()
+
+
+## Pixel umgarnt Minka (W1-B04, 0950 „Umgarnen-Animation beginnt“). Minka ist in Pixels Bildern
+## mitgemalt (rechts neben ihm, 7 Pixel rechts der Bildmitte): Pixel geht so neben Minka, dass die
+## gemalte Minka auf der echten steht, und die echte Minka ist für die Dauer der Bewegung weg
+## (Entscheidung 7, gesten-regie-entscheidungen.md).
+const MINKA_IM_BILD := 7.0
+
+
+func _pixel_umgarnt_minka() -> void:
+	if CQFigur.gesten_aus() or not has_character("Minka") or not has_character("Pixel") \
+			or not C.Pixel.hat_animation("minka_umgarnen"):
+		return
+	var m: Vector2 = C.Minka.position
+	await C.Pixel.laufen_zu(Vector2(m.x - MINKA_IM_BILD * C.Pixel.scale.x, m.y), 60.0)
+	C.Pixel.schauen_zu(m.x + 100.0)
+	C.Minka.visible = false
+	await C.Pixel.geste("minka_umgarnen")
+	C.Minka.visible = true
 
 
 ## Minka steht auf und geht zur Tür hinaus (0980 „folgt Pixel nach draußen“), Review Fund 18.
@@ -123,6 +143,7 @@ func r1b_loesen() -> void:
 	# Humbert geht wirklich zur Kellertür hinter dem Tresen (Review Fund 18)
 	if has_character("Humbert"):
 		await C.Humbert.laufen_zu(get_marker_position("Keller") + Vector2(0, 40), 60.0)
+		await C.Humbert.geste("keller")   # W1-B05: geht durch die Kellertür, Bewegung im Bild
 		await C.Humbert.ausblenden_und_weg()
 	Zustand.loese("R1b")
 	_zustand_anwenden()

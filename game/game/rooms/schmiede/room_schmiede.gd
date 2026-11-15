@@ -36,9 +36,10 @@ func _nach_uebergang() -> void:
 ## Der Schmied hämmert im Stand auf das Hufeisen in der Zange (Sebastian, 14. November 2026):
 ## Animation „haemmern“ (Arm nach den Winkeln gedreht, Skript schmied_haemmern.py), beim Aufschlag
 ## sprühen Funken vom glühenden Eisen.
-## Aus, bis die gemalten Schlüsselposen da sind (Sebastian, 14. November 2026: Zange gehört in die Hand)
-const HAEMMERN_AN := false
-const AUFSCHLAG_BILD := 10          # Bild in „haemmern“, in dem der Hammer das Hufeisen trifft
+## Seit den gemalten Schlüsselposen an (Entscheidung 3, gesten-regie-entscheidungen.md); zwischen dem
+## Hämmern spielt der Arbeitszyklus aus CQGestenEinsatz.WARTEN (ins Feuer, Blasebalg, zum Amboss).
+const HAEMMERN_AN := true
+const AUFSCHLAG_BILD := 4           # Bild in „haemmern“, in dem der Hammer das Hufeisen trifft
 const EISEN := Vector2(266, 182)    # glühendes Hufeisen auf dem Amboss
 var _letztes_bild := -1
 
@@ -47,9 +48,10 @@ func _zustand_anwenden() -> void:
 	super()
 	if has_character("Schmied") and not Engine.is_editor_hint():
 		var ap := C.Schmied.get_node("AnimationPlayer") as AnimationPlayer
-		if HAEMMERN_AN and ap and ap.has_animation("haemmern"):
+		# Nicht im Testmodus: feste Bilder für den Bildvergleich
+		if HAEMMERN_AN and ap and ap.has_animation("haemmern") and not Spiel.testmodus:
 			C.Schmied.idle_animation = "haemmern"
-			if not C.Schmied.is_talking and not Spiel.testmodus:
+			if not C.Schmied.is_talking:
 				C.Schmied._play_idle()
 
 
@@ -61,7 +63,7 @@ func _process(delta: float) -> void:
 	if not ap or ap.current_animation != "haemmern":
 		_letztes_bild = -1
 		return
-	var bild := int(ap.current_animation_position / 0.11)
+	var bild: int = C.Schmied.get_node("Sprite2D").frame - C.Schmied.sheet_bild("haemmern", 0)
 	if bild == AUFSCHLAG_BILD and _letztes_bild != AUFSCHLAG_BILD:
 		_funken()
 	_letztes_bild = bild

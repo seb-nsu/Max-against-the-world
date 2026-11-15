@@ -11,6 +11,8 @@ extends RefCounted
 ##             statt_talk  die Bewegung ist die Redebewegung dieses Satzes (CQFigur.rede_geste)
 ##             bleibt      Geste abwarten und auf dem letzten Bild stehen bleiben, bis die nächste
 ##                         Geste kommt, die Figur losläuft oder die Szene endet (Max sitzt auf dem Hebel)
+##             halten      Schleife so viele Sekunden (4. Eintrag, Standard 2) abwarten, dann der Satz
+##             halten_mit  Schleife so viele Sekunden, gleichzeitig mit dem Satz
 ##   RUHE    Figur-ID → Liste von {geste, Bedingungen}: Ruhe-Schleife statt idle (CQRaum wendet sie
 ##           in _zustand_anwenden() an). Die erste passende gilt.
 ##   WARTEN  Figur-ID → Liste von {gesten, abstand: [min, max] Sekunden, Bedingungen}: zufällige
@@ -93,6 +95,17 @@ const WARTEN := {
 }
 
 
+## Hat die Figur die Warte-Geste g (Name) oder alle Schritte der Folge g (Array aus Namen und
+## [Name, Sekunden])?
+static func folge_da(c: CQFigur, g) -> bool:
+	if g is String:
+		return c.hat_animation(g)
+	for schritt in g:
+		if not c.hat_animation(schritt[0] if schritt is Array else schritt):
+			return false
+	return true
+
+
 ## Eintrag der Tabelle ZEILE (auch aus den Welt-Tabellen), sonst leer.
 static func zeilen_eintrag(id: String) -> Array:
 	if ZEILE.has(id):
@@ -124,6 +137,10 @@ static func zeile(id: String) -> void:
 			c.rede_geste(e[1])
 		"bleibt":
 			await c.geste(e[1], true, CQFigur.GESTE_HALTEN)
+		"halten":
+			await c.geste_halten(e[1], float(e[3]) if e.size() > 3 else 2.0)
+		"halten_mit":
+			c.geste_halten(e[1], float(e[3]) if e.size() > 3 else 2.0, false)
 
 
 ## Ruhe-Schleife dieser Figur im Raum, sonst "".

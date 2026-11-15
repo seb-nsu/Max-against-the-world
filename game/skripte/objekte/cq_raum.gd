@@ -639,11 +639,15 @@ func _warte_gesten(delta: float) -> void:
 		if c.has_method("warte_geste_erlaubt") and not c.warte_geste_erlaubt():
 			continue
 		_warte_rest[c.script_name] = randf_range(abstand[0], abstand[1])
-		var namen: Array = e.gesten.filter(func(g): return c.hat_animation(g))
+		# Einträge sind Namen oder Folgen (Array: mehrere Gesten nacheinander, CQFigur.warte_folge)
+		var namen: Array = e.gesten.filter(func(g): return CQGestenEinsatz.folge_da(c, g))
 		if namen.is_empty():
 			continue
-		var g: String = namen.pick_random()
-		c.warte_geste(g, randf_range(e.halten[0], e.halten[1]) if e.has("halten") else -1.0)
+		var g = namen.pick_random()
+		if g is Array:
+			c.warte_folge(g)
+		else:
+			c.warte_geste(g, randf_range(e.halten[0], e.halten[1]) if e.has("halten") else -1.0)
 		return
 
 

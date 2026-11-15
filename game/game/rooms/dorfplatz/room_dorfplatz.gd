@@ -162,7 +162,9 @@ func _toadi_rennt_herbei() -> void:
 		if C.Toadi.is_talking:
 			ap.play("talk")
 		else:
-			C.Toadi._play_idle())
+			C.Toadi._play_idle()
+			# außer Atem nach dem Rennen (W1-B02 „keuchen“), bis er „Du!“ ruft
+			C.Toadi.geste_halten("keuchen", 2.4, false))
 	_toadi_start = C.Toadi.position
 	# nicht abwarten: Toadi ruft, während er rennt
 
