@@ -16,7 +16,7 @@ Opa steht ihre feste Beschreibung wortgleich in der Zeile CHARACTER LOCK; den Fi
 
 # Shotliste
 
-152 Shots, davon 21 sicher offen („–“: Stand nicht automatisch prüfbar). Kürzel:
+153 Shots, davon 21 sicher offen („–“: Stand nicht automatisch prüfbar). Kürzel:
 R Raum, F Figur, P Posenbogen, B Bewegung, G Gegenstände, N Nahansicht, K Figurenbogen.
 
 | Shot | Bild | Stand |
@@ -155,6 +155,7 @@ R Raum, F Figur, P Posenbogen, B Bewegung, G Gegenstände, N Nahansicht, K Figur
 | W2-B34 | Schildkröte: Rennen | – |
 | W2-B35 | Hafen Syrakus: Ruderboot mit Fässern | – |
 | W2-B36 | Nil-Delta: Wasserträgerin | – |
+| W2-B37 | Leonidas: Losrennen | – |
 | W2-G01 | Ägypten (3×4) | – |
 | W2-G02 | Olympia (3×3) | – |
 | W2-G03 | Feigen-Zustände (1×4, Baum doppelt so groß) | – |
@@ -1761,9 +1762,19 @@ START: From the neutral pose on the attached concept sheet of Sobek on land. Kee
 MANNER (applies to every frame): slow lazy crocodile crawl low to the ground on all fours, belly almost touching the ground, tail swinging gently from side to side, reed hat stays on.
 FRAMES: exactly 8 frames side by side, left to right, one complete cycle of about 0.8 s at 10 frames per second: (1) near front leg and far hind leg reaching forward and just touching the ground; near hind leg and far front leg stretched back on their toes; body level; (2) near front and far hind legs carrying the weight, body at its lowest; near hind and far front paws lifted just off the ground; (3) near front and far hind legs straight under the body; near hind and far front legs bent and swinging forward past them; body high; (4) near front and far hind legs pushing off behind; near hind and far front legs reaching forward; body at its highest; (5) far front leg and near hind leg reaching forward and just touching the ground; far hind leg and near front leg stretched back on their toes; body level; (6) far front and near hind legs carrying the weight, body at its lowest; the other two paws lifted; (7) far front and near hind legs straight under the body; near front and far hind legs swinging forward past them; body high; (8) far front and near hind legs pushing off behind; near front and far hind legs reaching forward; leads back into frame 1.
 LEGS: 'near' means the leg or arm closer to the viewer, 'far' the one on the other side of the body. Draw the far legs and the far arm one shade darker and partly behind the body, so the two sides can never be confused. Every frame must differ visibly from its neighbours; frames 5 to 8 repeat frames 1 to 4 with the sides swapped, they are never copies of them.
+SPACING: divide the image into 8 equal columns, one frame per column, with a clear strip of empty magenta between neighbouring frames, at least as wide as the character's head; every part of a frame, including raised arms, tools, tongs, tails, capes and effects, stays completely inside its own column and never reaches into or overlaps the next frame. Draw the character smaller if needed to keep the gaps, the same size in every frame.
 END POSE: frame 8 leads straight back into frame 1, so the loop closes seamlessly; do not draw frame 1 twice.
 CAMERA: static, strict side view, facing right. Same scale and the same flat baseline in every pose, no zoom, no pan.
 NEGATIVE: no second character, no parts of the boy Max from the reference unless this is Max, no props that are not described, no environment, no floor, no ground shadow, no checkerboard, no frames, panels or cell borders, no text, labels or numbers, no motion blur, no ghosting, no duplicated or extra limbs, no change to face, proportions, clothing or colors, no photorealism, no 3D render, no watermark, no in-between blur, no speed lines, no smear frames, no sliding feet, no change of scale or baseline between poses, no camera movement, no zoom, no perspective change, no morphing, no extra poses beyond the ones listed
+```
+
+**Zweiter Durchgang**, wenn die Bilder 5 bis 8 nur Kopien von 1 bis 4 sind (Toadi, Minka, 15. November 2026): das erzeugte Bild anhängen und nur die hintere Hälfte neu zeichnen lassen.
+
+```text
+FIX: The attached sheet shows one walking cycle in 8 frames, but frames 5 to 8 are copies of frames 1 to 4 with the same legs in front. Keep frames 1 to 4 exactly as they are, pixel for pixel. Redraw only frames 5 to 8: each one is the frame four places earlier with the legs on the two sides swapped. Wherever a near leg (lighter, in front of the body) was reaching forward in frame 1, the far leg (one shade darker, partly behind the body) reaches forward in frame 5, and the near leg is the one stretched back; the same for frames 6, 7 and 8. Arms or front legs swap the same way. Body, head, tail, clothes and props stay exactly as in frames 1 to 4.
+CHECK: compare frame 1 and frame 5: the darker leg must be in front in one and behind in the other. If they look the same, the frame is wrong.
+SPACING: the same 8 equal columns with clear magenta gaps as in the attached sheet, nothing overlaps the next frame.
+NEGATIVE: no new poses for frames 1 to 4, no change of style, size, colors or baseline, no pixel art, no checkerboard, no text
 ```
 
 ## Hofkater: Beleidigt weggehen
@@ -1780,9 +1791,19 @@ START: From the neutral pose on the attached concept sheet of Hofkater. Keep the
 MANNER (applies to every frame): offended slow cat walk, tail held straight up, chin raised, earring and bead collar stay in place.
 FRAMES: exactly 8 frames side by side, left to right, one complete cycle of about 0.8 s at 10 frames per second: (1) near front leg and far hind leg reaching forward and just touching the ground; near hind leg and far front leg stretched back on their toes; body level; (2) near front and far hind legs carrying the weight, body at its lowest; near hind and far front paws lifted just off the ground; (3) near front and far hind legs straight under the body; near hind and far front legs bent and swinging forward past them; body high; (4) near front and far hind legs pushing off behind; near hind and far front legs reaching forward; body at its highest; (5) far front leg and near hind leg reaching forward and just touching the ground; far hind leg and near front leg stretched back on their toes; body level; (6) far front and near hind legs carrying the weight, body at its lowest; the other two paws lifted; (7) far front and near hind legs straight under the body; near front and far hind legs swinging forward past them; body high; (8) far front and near hind legs pushing off behind; near front and far hind legs reaching forward; leads back into frame 1.
 LEGS: 'near' means the leg or arm closer to the viewer, 'far' the one on the other side of the body. Draw the far legs and the far arm one shade darker and partly behind the body, so the two sides can never be confused. Every frame must differ visibly from its neighbours; frames 5 to 8 repeat frames 1 to 4 with the sides swapped, they are never copies of them.
+SPACING: divide the image into 8 equal columns, one frame per column, with a clear strip of empty magenta between neighbouring frames, at least as wide as the character's head; every part of a frame, including raised arms, tools, tongs, tails, capes and effects, stays completely inside its own column and never reaches into or overlaps the next frame. Draw the character smaller if needed to keep the gaps, the same size in every frame.
 END POSE: frame 8 leads straight back into frame 1, so the loop closes seamlessly; do not draw frame 1 twice.
 CAMERA: static, strict side view, facing right. Same scale and the same flat baseline in every pose, no zoom, no pan.
 NEGATIVE: no second character, no parts of the boy Max from the reference unless this is Max, no props that are not described, no environment, no floor, no ground shadow, no checkerboard, no frames, panels or cell borders, no text, labels or numbers, no motion blur, no ghosting, no duplicated or extra limbs, no change to face, proportions, clothing or colors, no photorealism, no 3D render, no watermark, no in-between blur, no speed lines, no smear frames, no sliding feet, no change of scale or baseline between poses, no camera movement, no zoom, no perspective change, no morphing, no extra poses beyond the ones listed
+```
+
+**Zweiter Durchgang**, wenn die Bilder 5 bis 8 nur Kopien von 1 bis 4 sind (Toadi, Minka, 15. November 2026): das erzeugte Bild anhängen und nur die hintere Hälfte neu zeichnen lassen.
+
+```text
+FIX: The attached sheet shows one walking cycle in 8 frames, but frames 5 to 8 are copies of frames 1 to 4 with the same legs in front. Keep frames 1 to 4 exactly as they are, pixel for pixel. Redraw only frames 5 to 8: each one is the frame four places earlier with the legs on the two sides swapped. Wherever a near leg (lighter, in front of the body) was reaching forward in frame 1, the far leg (one shade darker, partly behind the body) reaches forward in frame 5, and the near leg is the one stretched back; the same for frames 6, 7 and 8. Arms or front legs swap the same way. Body, head, tail, clothes and props stay exactly as in frames 1 to 4.
+CHECK: compare frame 1 and frame 5: the darker leg must be in front in one and behind in the other. If they look the same, the frame is wrong.
+SPACING: the same 8 equal columns with clear magenta gaps as in the attached sheet, nothing overlaps the next frame.
+NEGATIVE: no new poses for frames 1 to 4, no change of style, size, colors or baseline, no pixel art, no checkerboard, no text
 ```
 
 ## Schildkröte: Laufen
@@ -1799,9 +1820,19 @@ START: From the neutral pose on the attached concept sheet of Schildkröte. Keep
 MANNER (applies to every frame): determined tortoise walk on four short legs, neck stretched far forward, shell rocking slightly, headband stays on.
 FRAMES: exactly 8 frames side by side, left to right, one complete cycle of about 0.8 s at 10 frames per second: (1) near front leg and far hind leg reaching forward and just touching the ground; near hind leg and far front leg stretched back on their toes; body level; (2) near front and far hind legs carrying the weight, body at its lowest; near hind and far front paws lifted just off the ground; (3) near front and far hind legs straight under the body; near hind and far front legs bent and swinging forward past them; body high; (4) near front and far hind legs pushing off behind; near hind and far front legs reaching forward; body at its highest; (5) far front leg and near hind leg reaching forward and just touching the ground; far hind leg and near front leg stretched back on their toes; body level; (6) far front and near hind legs carrying the weight, body at its lowest; the other two paws lifted; (7) far front and near hind legs straight under the body; near front and far hind legs swinging forward past them; body high; (8) far front and near hind legs pushing off behind; near front and far hind legs reaching forward; leads back into frame 1.
 LEGS: 'near' means the leg or arm closer to the viewer, 'far' the one on the other side of the body. Draw the far legs and the far arm one shade darker and partly behind the body, so the two sides can never be confused. Every frame must differ visibly from its neighbours; frames 5 to 8 repeat frames 1 to 4 with the sides swapped, they are never copies of them.
+SPACING: divide the image into 8 equal columns, one frame per column, with a clear strip of empty magenta between neighbouring frames, at least as wide as the character's head; every part of a frame, including raised arms, tools, tongs, tails, capes and effects, stays completely inside its own column and never reaches into or overlaps the next frame. Draw the character smaller if needed to keep the gaps, the same size in every frame.
 END POSE: frame 8 leads straight back into frame 1, so the loop closes seamlessly; do not draw frame 1 twice.
 CAMERA: static, strict side view, facing right. Same scale and the same flat baseline in every pose, no zoom, no pan.
 NEGATIVE: no second character, no parts of the boy Max from the reference unless this is Max, no props that are not described, no environment, no floor, no ground shadow, no checkerboard, no frames, panels or cell borders, no text, labels or numbers, no motion blur, no ghosting, no duplicated or extra limbs, no change to face, proportions, clothing or colors, no photorealism, no 3D render, no watermark, no in-between blur, no speed lines, no smear frames, no sliding feet, no change of scale or baseline between poses, no camera movement, no zoom, no perspective change, no morphing, no extra poses beyond the ones listed
+```
+
+**Zweiter Durchgang**, wenn die Bilder 5 bis 8 nur Kopien von 1 bis 4 sind (Toadi, Minka, 15. November 2026): das erzeugte Bild anhängen und nur die hintere Hälfte neu zeichnen lassen.
+
+```text
+FIX: The attached sheet shows one walking cycle in 8 frames, but frames 5 to 8 are copies of frames 1 to 4 with the same legs in front. Keep frames 1 to 4 exactly as they are, pixel for pixel. Redraw only frames 5 to 8: each one is the frame four places earlier with the legs on the two sides swapped. Wherever a near leg (lighter, in front of the body) was reaching forward in frame 1, the far leg (one shade darker, partly behind the body) reaches forward in frame 5, and the near leg is the one stretched back; the same for frames 6, 7 and 8. Arms or front legs swap the same way. Body, head, tail, clothes and props stay exactly as in frames 1 to 4.
+CHECK: compare frame 1 and frame 5: the darker leg must be in front in one and behind in the other. If they look the same, the frame is wrong.
+SPACING: the same 8 equal columns with clear magenta gaps as in the attached sheet, nothing overlaps the next frame.
+NEGATIVE: no new poses for frames 1 to 4, no change of style, size, colors or baseline, no pixel art, no checkerboard, no text
 ```
 
 ## Sobek, im Wasser: Treiben
@@ -1817,6 +1848,7 @@ CHARACTER (appearance only, word for word from its sheet; ignore the pose in it)
 START: From the neutral pose on the attached concept sheet of Sobek in the water. Keep the clean concept-art style of that sheet, not pixel art.
 ACTION (3 key poses of a 6-frame animation of about 0.6 s): (1) 0.0 s: the lazy crocodile drifts half submerged, rising and sinking slightly with the ripples; (2) 0.2 s: eyes blinking slowly, tail tip flicking once at the surface; (3) 0.4 s: reed hat stays on.
 FRAMES: draw all 6 frames side by side, left to right, in the order they play: the key poses above at their times and evenly spaced in-between frames, so the motion reads smoothly; every frame differs visibly from its neighbours, no two frames identical.
+SPACING: divide the image into 6 equal columns, one frame per column, with a clear strip of empty magenta between neighbouring frames, at least as wide as the character's head; every part of a frame, including raised arms, tools, tongs, tails, capes and effects, stays completely inside its own column and never reaches into or overlaps the next frame. Draw the character smaller if needed to keep the gaps, the same size in every frame.
 END POSE: the same as pose 1, so the loop closes seamlessly; do not draw it twice.
 HOLD STILL: the waterline stays the same.
 CAMERA: static, strict side view, facing right. Same scale and the same flat baseline in every pose, no zoom, no pan.
@@ -1836,6 +1868,7 @@ CHARACTER (appearance only, word for word from its sheet; ignore the pose in it)
 START: From the neutral pose on the attached concept sheet of Sobek in the water. Keep the clean concept-art style of that sheet, not pixel art.
 ACTION (2 key poses of a 8-frame animation of about 0.8 s): (1) 0.0 s: the crocodile swims forward with the two tow ropes of the ferry in his mouth, tail sweeping left and right under the surface; (2) 0.4 s: a small bow wave at his snout, bored eyes.
 FRAMES: draw all 8 frames side by side, left to right, in the order they play: the key poses above at their times and evenly spaced in-between frames, so the motion reads smoothly; every frame differs visibly from its neighbours, no two frames identical.
+SPACING: divide the image into 8 equal columns, one frame per column, with a clear strip of empty magenta between neighbouring frames, at least as wide as the character's head; every part of a frame, including raised arms, tools, tongs, tails, capes and effects, stays completely inside its own column and never reaches into or overlaps the next frame. Draw the character smaller if needed to keep the gaps, the same size in every frame.
 END POSE: the same as pose 1, so the loop closes seamlessly; do not draw it twice.
 HOLD STILL: the waterline stays the same, the ferry itself is not drawn.
 CAMERA: static, strict side view, facing right. Same scale and the same flat baseline in every pose, no zoom, no pan.
@@ -1855,6 +1888,7 @@ CHARACTER (appearance only, word for word from its sheet; ignore the pose in it)
 START: From the neutral pose on the attached concept sheet of Sobek on land. Keep the clean concept-art style of that sheet, not pixel art.
 ACTION (3 key poses of a 6-frame animation of about 0.6 s): (1) 0.0 s: the crocodile lowers his head slowly until the snout touches the ground; (2) 0.3 s: the reed hat tips forward over his eyes, he holds the bow; (3) 0.6 s: lifts his head halfway.
 FRAMES: draw all 6 frames side by side, left to right, in the order they play: the key poses above at their times and evenly spaced in-between frames, so the motion reads smoothly; every frame differs visibly from its neighbours, no two frames identical.
+SPACING: divide the image into 6 equal columns, one frame per column, with a clear strip of empty magenta between neighbouring frames, at least as wide as the character's head; every part of a frame, including raised arms, tools, tongs, tails, capes and effects, stays completely inside its own column and never reaches into or overlaps the next frame. Draw the character smaller if needed to keep the gaps, the same size in every frame.
 END POSE: pose 3 is the final frame and is held; it must read as a calm, complete pose.
 HOLD STILL: legs stay planted.
 CAMERA: static, strict side view, facing right. Same scale and the same flat baseline in every pose, no zoom, no pan.
@@ -1874,6 +1908,7 @@ CHARACTER (appearance only, word for word from its sheet; ignore the pose in it)
 START: From the neutral pose on the attached concept sheet of Sobek on land. Keep the clean concept-art style of that sheet, not pixel art.
 ACTION (3 key poses of a 6-frame animation of about 0.6 s): (1) 0.0 s: the crocodile opens his long jaws wide in a huge lazy yawn; (2) 0.3 s: eyes squeezed shut; (3) 0.6 s: snaps them shut and blinks.
 FRAMES: draw all 6 frames side by side, left to right, in the order they play: the key poses above at their times and evenly spaced in-between frames, so the motion reads smoothly; every frame differs visibly from its neighbours, no two frames identical.
+SPACING: divide the image into 6 equal columns, one frame per column, with a clear strip of empty magenta between neighbouring frames, at least as wide as the character's head; every part of a frame, including raised arms, tools, tongs, tails, capes and effects, stays completely inside its own column and never reaches into or overlaps the next frame. Draw the character smaller if needed to keep the gaps, the same size in every frame.
 END POSE: pose 3 is the final frame and is held; it must read as a calm, complete pose.
 HOLD STILL: legs and tail stay still.
 CAMERA: static, strict side view, facing right. Same scale and the same flat baseline in every pose, no zoom, no pan.
@@ -1893,6 +1928,7 @@ CHARACTER (appearance only, word for word from its sheet; ignore the pose in it)
 START: From the neutral pose on the attached concept sheet of Hofkater. Keep the clean concept-art style of that sheet, not pixel art.
 ACTION (2 key poses of a 6-frame animation of about 0.6 s): (1) 0.0 s: the temple cat sitting upright licks one front paw and wipes it over his large ear, golden earring swinging; (2) 0.3 s: sits proudly again.
 FRAMES: draw all 6 frames side by side, left to right, in the order they play: the key poses above at their times and evenly spaced in-between frames, so the motion reads smoothly; every frame differs visibly from its neighbours, no two frames identical.
+SPACING: divide the image into 6 equal columns, one frame per column, with a clear strip of empty magenta between neighbouring frames, at least as wide as the character's head; every part of a frame, including raised arms, tools, tongs, tails, capes and effects, stays completely inside its own column and never reaches into or overlaps the next frame. Draw the character smaller if needed to keep the gaps, the same size in every frame.
 END POSE: the same as pose 1, so the loop closes seamlessly; do not draw it twice.
 HOLD STILL: tail stays wrapped.
 CAMERA: static, strict side view, facing right. Same scale and the same flat baseline in every pose, no zoom, no pan.
@@ -1912,6 +1948,7 @@ CHARACTER (appearance only, word for word from its sheet; ignore the pose in it)
 START: From the neutral pose on the attached concept sheet of Hofkater. Keep the clean concept-art style of that sheet, not pixel art.
 ACTION (2 key poses of a 4-frame animation of about 0.4 s): (1) 0.0 s: sitting very upright with chin raised, only the tail tip flicks from side to side; (2) 0.2 s: one slow arrogant blink.
 FRAMES: draw all 4 frames side by side, left to right, in the order they play: the key poses above at their times and evenly spaced in-between frames, so the motion reads smoothly; every frame differs visibly from its neighbours, no two frames identical.
+SPACING: divide the image into 4 equal columns, one frame per column, with a clear strip of empty magenta between neighbouring frames, at least as wide as the character's head; every part of a frame, including raised arms, tools, tongs, tails, capes and effects, stays completely inside its own column and never reaches into or overlaps the next frame. Draw the character smaller if needed to keep the gaps, the same size in every frame.
 END POSE: the same as pose 1, so the loop closes seamlessly; do not draw it twice.
 HOLD STILL: body stays still.
 CAMERA: static, strict side view, facing right. Same scale and the same flat baseline in every pose, no zoom, no pan.
@@ -1931,6 +1968,7 @@ CHARACTER (appearance only, word for word from its sheet; ignore the pose in it)
 START: From the neutral pose on the attached concept sheet of Schildkröte. Keep the clean concept-art style of that sheet, not pixel art.
 ACTION (3 key poses of a 6-frame animation of about 0.6 s): (1) 0.0 s: the tortoise pulls its head and legs into the shell; (2) 0.3 s: waits; (3) 0.6 s: pokes the head out again with a smug look.
 FRAMES: draw all 6 frames side by side, left to right, in the order they play: the key poses above at their times and evenly spaced in-between frames, so the motion reads smoothly; every frame differs visibly from its neighbours, no two frames identical.
+SPACING: divide the image into 6 equal columns, one frame per column, with a clear strip of empty magenta between neighbouring frames, at least as wide as the character's head; every part of a frame, including raised arms, tools, tongs, tails, capes and effects, stays completely inside its own column and never reaches into or overlaps the next frame. Draw the character smaller if needed to keep the gaps, the same size in every frame.
 END POSE: pose 3 is the final frame and is held; it must read as a calm, complete pose.
 HOLD STILL: the shell stays in place.
 CAMERA: static, strict side view, facing right. Same scale and the same flat baseline in every pose, no zoom, no pan.
@@ -1947,6 +1985,7 @@ NEGATIVE: no second character, no parts of the boy Max from the reference unless
 STYLE: Visual effect frames for a 2D game, frames side by side in one row, evenly spaced, frame count as given in the motif, every frame the same size with the effect centered, flat cel shading, solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no frames or panels, no text.
 EFFECT: A small Egyptian felucca seen from the side, sailing to the right on a river: a narrow wooden boat with one tall slanted triangular sail of pale linen, a fisherman in a white loincloth at the stern leaning on the steering oar; the sail bellies in the wind and ripples along its edge, the small red pennant at the masthead flutters, the hull rocks gently, a little bow wave curls.
 FRAMES: 8 frames side by side, about 0.8 s at 10 frames per second, loops seamlessly: the last frame leads back into the first, each frame 90x80 pixels in the game.
+SPACING: divide the image into 8 equal columns, one frame per column, with a clear strip of empty magenta between neighbouring frames, at least as wide as the character's head; every part of a frame, including raised arms, tools, tongs, tails, capes and effects, stays completely inside its own column and never reaches into or overlaps the next frame. Draw the character smaller if needed to keep the gaps, the same size in every frame.
 END: no separate end frame, the loop closes.
 CAMERA: static, no zoom, no pan, the effect stays centered in every frame.
 NEGATIVE: no characters unless named, no background scene, no text, no frames or panels, no checkerboard, no motion blur, no speed lines
@@ -1962,6 +2001,7 @@ NEGATIVE: no characters unless named, no background scene, no text, no frames or
 STYLE: Visual effect frames for a 2D game, frames side by side in one row, evenly spaced, frame count as given in the motif, every frame the same size with the effect centered, flat cel shading, solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no frames or panels, no text.
 EFFECT: A white sacred ibis with a black head and a long down-curved black beak wading slowly to the right through shallow water, seen from the side: it lifts one thin leg high, sets it down, lifts the other, then dips the beak into the water and raises it again.
 FRAMES: 8 frames side by side, about 0.8 s at 10 frames per second, loops seamlessly: the last frame leads back into the first, each frame 32x40 pixels in the game.
+SPACING: divide the image into 8 equal columns, one frame per column, with a clear strip of empty magenta between neighbouring frames, at least as wide as the character's head; every part of a frame, including raised arms, tools, tongs, tails, capes and effects, stays completely inside its own column and never reaches into or overlaps the next frame. Draw the character smaller if needed to keep the gaps, the same size in every frame.
 END: no separate end frame, the loop closes.
 CAMERA: static, no zoom, no pan, the effect stays centered in every frame.
 NEGATIVE: no characters unless named, no background scene, no text, no frames or panels, no checkerboard, no motion blur, no speed lines
@@ -1977,6 +2017,7 @@ NEGATIVE: no characters unless named, no background scene, no text, no frames or
 STYLE: Visual effect frames for a 2D game, frames side by side in one row, evenly spaced, frame count as given in the motif, every frame the same size with the effect centered, flat cel shading, solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no frames or panels, no text.
 EFFECT: A small Egyptian fisherman in a white loincloth standing in a papyrus reed boat on the river, seen from the side: he swings a round net back, throws it forward, the net opens wide in the air and drops onto the water with a ring of ripples, he pulls the rope.
 FRAMES: 8 frames side by side, about 0.8 s at 10 frames per second, plays once, each frame 64x48 pixels in the game.
+SPACING: divide the image into 8 equal columns, one frame per column, with a clear strip of empty magenta between neighbouring frames, at least as wide as the character's head; every part of a frame, including raised arms, tools, tongs, tails, capes and effects, stays completely inside its own column and never reaches into or overlaps the next frame. Draw the character smaller if needed to keep the gaps, the same size in every frame.
 END: the last frame is the calm end state of the effect.
 CAMERA: static, no zoom, no pan, the effect stays centered in every frame.
 NEGATIVE: no characters unless named, no background scene, no text, no frames or panels, no checkerboard, no motion blur, no speed lines
@@ -1992,6 +2033,7 @@ NEGATIVE: no characters unless named, no background scene, no text, no frames or
 STYLE: Visual effect frames for a 2D game, frames side by side in one row, evenly spaced, frame count as given in the motif, every frame the same size with the effect centered, flat cel shading, solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no frames or panels, no text.
 EFFECT: A small turquoise dragonfly seen from the side, hovering, its two pairs of glassy wings in four positions of a fast beat.
 FRAMES: 4 frames side by side, about 0.4 s at 10 frames per second, loops seamlessly: the last frame leads back into the first, each frame 16x10 pixels in the game.
+SPACING: divide the image into 4 equal columns, one frame per column, with a clear strip of empty magenta between neighbouring frames, at least as wide as the character's head; every part of a frame, including raised arms, tools, tongs, tails, capes and effects, stays completely inside its own column and never reaches into or overlaps the next frame. Draw the character smaller if needed to keep the gaps, the same size in every frame.
 END: no separate end frame, the loop closes.
 CAMERA: static, no zoom, no pan, the effect stays centered in every frame.
 NEGATIVE: no characters unless named, no background scene, no text, no frames or panels, no checkerboard, no motion blur, no speed lines
@@ -2007,6 +2049,7 @@ NEGATIVE: no characters unless named, no background scene, no text, no frames or
 STYLE: Visual effect frames for a 2D game, frames side by side in one row, evenly spaced, frame count as given in the motif, every frame the same size with the effect centered, flat cel shading, solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no frames or panels, no text.
 EFFECT: An ancient Greek merchant ship seen from the side, sailing to the right on the open sea: a round wooden hull with a painted eye at the bow, one square sail with red and white stripes, two tiny sailors on deck; the sail fills and slackens in the wind, the hull rises and dips on the waves, white foam at the bow.
 FRAMES: 8 frames side by side, about 0.8 s at 10 frames per second, loops seamlessly: the last frame leads back into the first, each frame 120x90 pixels in the game.
+SPACING: divide the image into 8 equal columns, one frame per column, with a clear strip of empty magenta between neighbouring frames, at least as wide as the character's head; every part of a frame, including raised arms, tools, tongs, tails, capes and effects, stays completely inside its own column and never reaches into or overlaps the next frame. Draw the character smaller if needed to keep the gaps, the same size in every frame.
 END: no separate end frame, the loop closes.
 CAMERA: static, no zoom, no pan, the effect stays centered in every frame.
 NEGATIVE: no characters unless named, no background scene, no text, no frames or panels, no checkerboard, no motion blur, no speed lines
@@ -2022,6 +2065,7 @@ NEGATIVE: no characters unless named, no background scene, no text, no frames or
 STYLE: Visual effect frames for a 2D game, frames side by side in one row, evenly spaced, frame count as given in the motif, every frame the same size with the effect centered, flat cel shading, solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no frames or panels, no text.
 EFFECT: A white seagull with grey wings gliding and flapping, seen from the side, flying to the right: wings up, level, down, level, a short glide with wings spread.
 FRAMES: 6 frames side by side, about 0.6 s at 10 frames per second, loops seamlessly: the last frame leads back into the first, each frame 24x14 pixels in the game.
+SPACING: divide the image into 6 equal columns, one frame per column, with a clear strip of empty magenta between neighbouring frames, at least as wide as the character's head; every part of a frame, including raised arms, tools, tongs, tails, capes and effects, stays completely inside its own column and never reaches into or overlaps the next frame. Draw the character smaller if needed to keep the gaps, the same size in every frame.
 END: no separate end frame, the loop closes.
 CAMERA: static, no zoom, no pan, the effect stays centered in every frame.
 NEGATIVE: no characters unless named, no background scene, no text, no frames or panels, no checkerboard, no motion blur, no speed lines
@@ -2037,6 +2081,7 @@ NEGATIVE: no characters unless named, no background scene, no text, no frames or
 STYLE: Visual effect frames for a 2D game, frames side by side in one row, evenly spaced, frame count as given in the motif, every frame the same size with the effect centered, flat cel shading, solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no frames or panels, no text.
 EFFECT: A seagull sitting on top of a wooden mooring post, seen from the side: it turns its head, opens the yellow beak wide and screeches with the neck stretched up, then settles and fluffs its feathers.
 FRAMES: 6 frames side by side, about 0.6 s at 10 frames per second, plays once, each frame 20x24 pixels in the game.
+SPACING: divide the image into 6 equal columns, one frame per column, with a clear strip of empty magenta between neighbouring frames, at least as wide as the character's head; every part of a frame, including raised arms, tools, tongs, tails, capes and effects, stays completely inside its own column and never reaches into or overlaps the next frame. Draw the character smaller if needed to keep the gaps, the same size in every frame.
 END: the last frame is the calm end state of the effect.
 CAMERA: static, no zoom, no pan, the effect stays centered in every frame.
 NEGATIVE: no characters unless named, no background scene, no text, no frames or panels, no checkerboard, no motion blur, no speed lines
@@ -2052,6 +2097,7 @@ NEGATIVE: no characters unless named, no background scene, no text, no frames or
 STYLE: Visual effect frames for a 2D game, frames side by side in one row, evenly spaced, frame count as given in the motif, every frame the same size with the effect centered, flat cel shading, solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no frames or panels, no text.
 EFFECT: A small Greek dock worker in a short brown tunic carrying a big clay amphora on his right shoulder, walking to the right, seen from the side; a clean walking cycle: the legs alternate in every step, the near leg drawn lighter and the far leg one shade darker, contact, passing and push-off clearly visible, the free arm swings opposite to the forward leg, the amphora bobs a little with each step.
 FRAMES: 8 frames side by side, about 0.8 s at 10 frames per second, loops seamlessly: the last frame leads back into the first, each frame 32x48 pixels in the game.
+SPACING: divide the image into 8 equal columns, one frame per column, with a clear strip of empty magenta between neighbouring frames, at least as wide as the character's head; every part of a frame, including raised arms, tools, tongs, tails, capes and effects, stays completely inside its own column and never reaches into or overlaps the next frame. Draw the character smaller if needed to keep the gaps, the same size in every frame.
 END: no separate end frame, the loop closes.
 CAMERA: static, no zoom, no pan, the effect stays centered in every frame.
 NEGATIVE: no characters unless named, no background scene, no text, no frames or panels, no checkerboard, no motion blur, no speed lines
@@ -2068,6 +2114,7 @@ STYLE: Visual effect frames for a 2D game, frames side by side in one row, evenl
 EFFECT: A small purple squid caught in a sagging fishing net, matching the attached background crop: its tentacles curl and wriggle through the meshes, it squirts a tiny puff of ink and blinks.
 OVERLAY: the crop only shows where the effect sits, its size, light and colors; draw only the moving part named above on the magenta background, not the walls, furniture or anything else from the crop, so it can be laid exactly over the painted spot.
 FRAMES: 6 frames side by side, about 0.6 s at 10 frames per second, loops seamlessly: the last frame leads back into the first, each frame 24x24 pixels in the game.
+SPACING: divide the image into 6 equal columns, one frame per column, with a clear strip of empty magenta between neighbouring frames, at least as wide as the character's head; every part of a frame, including raised arms, tools, tongs, tails, capes and effects, stays completely inside its own column and never reaches into or overlaps the next frame. Draw the character smaller if needed to keep the gaps, the same size in every frame.
 END: no separate end frame, the loop closes.
 CAMERA: static, no zoom, no pan, the effect stays centered in every frame.
 NEGATIVE: no characters unless named, no background scene, no text, no frames or panels, no checkerboard, no motion blur, no speed lines
@@ -2083,6 +2130,7 @@ NEGATIVE: no characters unless named, no background scene, no text, no frames or
 STYLE: Visual effect frames for a 2D game, frames side by side in one row, evenly spaced, frame count as given in the motif, every frame the same size with the effect centered, flat cel shading, solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no frames or panels, no text.
 EFFECT: A small white and brown goat under olive trees, seen from the side facing right: it lowers the head, tears at the grass, raises the head and chews with a sideways jaw, its tail flicks.
 FRAMES: 6 frames side by side, about 0.6 s at 10 frames per second, loops seamlessly: the last frame leads back into the first, each frame 32x28 pixels in the game.
+SPACING: divide the image into 6 equal columns, one frame per column, with a clear strip of empty magenta between neighbouring frames, at least as wide as the character's head; every part of a frame, including raised arms, tools, tongs, tails, capes and effects, stays completely inside its own column and never reaches into or overlaps the next frame. Draw the character smaller if needed to keep the gaps, the same size in every frame.
 END: no separate end frame, the loop closes.
 CAMERA: static, no zoom, no pan, the effect stays centered in every frame.
 NEGATIVE: no characters unless named, no background scene, no text, no frames or panels, no checkerboard, no motion blur, no speed lines
@@ -2099,6 +2147,7 @@ STYLE: Visual effect frames for a 2D game, frames side by side in one row, evenl
 EFFECT: Only the sand inside the tall hourglass at the ferry docks, matching the attached background crop: a thin glittering stream of golden sand falls from the upper bulb, the small cone in the lower bulb grows slightly and its top slides down.
 OVERLAY: the crop only shows where the effect sits, its size, light and colors; draw only the moving part named above on the magenta background, not the walls, furniture or anything else from the crop, so it can be laid exactly over the painted spot.
 FRAMES: 6 frames side by side, about 0.6 s at 10 frames per second, loops seamlessly: the last frame leads back into the first, each frame 20x48 pixels in the game.
+SPACING: divide the image into 6 equal columns, one frame per column, with a clear strip of empty magenta between neighbouring frames, at least as wide as the character's head; every part of a frame, including raised arms, tools, tongs, tails, capes and effects, stays completely inside its own column and never reaches into or overlaps the next frame. Draw the character smaller if needed to keep the gaps, the same size in every frame.
 END: no separate end frame, the loop closes.
 CAMERA: static, no zoom, no pan, the effect stays centered in every frame.
 NEGATIVE: no characters unless named, no background scene, no text, no frames or panels, no checkerboard, no motion blur, no speed lines
@@ -2115,6 +2164,7 @@ STYLE: Visual effect frames for a 2D game, frames side by side in one row, evenl
 EFFECT: Only the fire inside the open front of a round clay oven, matching the attached background crop: orange flames flicker, glowing embers pulse at the bottom, a thin trail of smoke curls out of the top opening.
 OVERLAY: the crop only shows where the effect sits, its size, light and colors; draw only the moving part named above on the magenta background, not the walls, furniture or anything else from the crop, so it can be laid exactly over the painted spot.
 FRAMES: 8 frames side by side, about 0.8 s at 10 frames per second, loops seamlessly: the last frame leads back into the first, each frame 40x32 pixels in the game.
+SPACING: divide the image into 8 equal columns, one frame per column, with a clear strip of empty magenta between neighbouring frames, at least as wide as the character's head; every part of a frame, including raised arms, tools, tongs, tails, capes and effects, stays completely inside its own column and never reaches into or overlaps the next frame. Draw the character smaller if needed to keep the gaps, the same size in every frame.
 END: no separate end frame, the loop closes.
 CAMERA: static, no zoom, no pan, the effect stays centered in every frame.
 NEGATIVE: no characters unless named, no background scene, no text, no frames or panels, no checkerboard, no motion blur, no speed lines
@@ -2130,6 +2180,7 @@ NEGATIVE: no characters unless named, no background scene, no text, no frames or
 STYLE: Visual effect frames for a 2D game, frames side by side in one row, evenly spaced, frame count as given in the motif, every frame the same size with the effect centered, flat cel shading, solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no frames or panels, no text.
 EFFECT: A dark brown vulture with broad fingered wing tips gliding high in the desert sky, seen slightly from below: it tilts left and right in a slow glide, the wing tips flex.
 FRAMES: 6 frames side by side, about 0.6 s at 10 frames per second, loops seamlessly: the last frame leads back into the first, each frame 40x16 pixels in the game.
+SPACING: divide the image into 6 equal columns, one frame per column, with a clear strip of empty magenta between neighbouring frames, at least as wide as the character's head; every part of a frame, including raised arms, tools, tongs, tails, capes and effects, stays completely inside its own column and never reaches into or overlaps the next frame. Draw the character smaller if needed to keep the gaps, the same size in every frame.
 END: no separate end frame, the loop closes.
 CAMERA: static, no zoom, no pan, the effect stays centered in every frame.
 NEGATIVE: no characters unless named, no background scene, no text, no frames or panels, no checkerboard, no motion blur, no speed lines
@@ -2145,6 +2196,7 @@ NEGATIVE: no characters unless named, no background scene, no text, no frames or
 STYLE: Visual effect frames for a 2D game, frames side by side in one row, evenly spaced, frame count as given in the motif, every frame the same size with the effect centered, flat cel shading, solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no frames or panels, no text.
 EFFECT: A small green lizard on a sunlit tombstone, seen from the side facing right: it does two quick push-ups, turns its head toward the viewer, then darts off to the right.
 FRAMES: 6 frames side by side, about 0.6 s at 10 frames per second, plays once, each frame 24x10 pixels in the game.
+SPACING: divide the image into 6 equal columns, one frame per column, with a clear strip of empty magenta between neighbouring frames, at least as wide as the character's head; every part of a frame, including raised arms, tools, tongs, tails, capes and effects, stays completely inside its own column and never reaches into or overlaps the next frame. Draw the character smaller if needed to keep the gaps, the same size in every frame.
 END: the last frame is empty.
 CAMERA: static, no zoom, no pan, the effect stays centered in every frame.
 NEGATIVE: no characters unless named, no background scene, no text, no frames or panels, no checkerboard, no motion blur, no speed lines
@@ -2161,6 +2213,7 @@ STYLE: Visual effect frames for a 2D game, frames side by side in one row, evenl
 EFFECT: Only the water tank at the foot of the bronze organ pipes, matching the attached background crop: bubbles rise in the water and pop at the surface, a drop falls from a pipe joint into the tank with a small ring.
 OVERLAY: the crop only shows where the effect sits, its size, light and colors; draw only the moving part named above on the magenta background, not the walls, furniture or anything else from the crop, so it can be laid exactly over the painted spot.
 FRAMES: 6 frames side by side, about 0.6 s at 10 frames per second, loops seamlessly: the last frame leads back into the first, each frame 40x40 pixels in the game.
+SPACING: divide the image into 6 equal columns, one frame per column, with a clear strip of empty magenta between neighbouring frames, at least as wide as the character's head; every part of a frame, including raised arms, tools, tongs, tails, capes and effects, stays completely inside its own column and never reaches into or overlaps the next frame. Draw the character smaller if needed to keep the gaps, the same size in every frame.
 END: no separate end frame, the loop closes.
 CAMERA: static, no zoom, no pan, the effect stays centered in every frame.
 NEGATIVE: no characters unless named, no background scene, no text, no frames or panels, no checkerboard, no motion blur, no speed lines
@@ -2177,6 +2230,7 @@ STYLE: Visual effect frames for a 2D game, frames side by side in one row, evenl
 EFFECT: A strip of the cheering crowd in the stone spectator rows, matching the attached background crop: Greeks in white and pale blue, a few tourists in red togas; in turn they raise their arms, wave white cloths, jump up and sit down again, heads turning, never all at once; the left and right edges continue seamlessly so the strip can be repeated.
 OVERLAY: the crop only shows where the effect sits, its size, light and colors; draw only the moving part named above on the magenta background, not the walls, furniture or anything else from the crop, so it can be laid exactly over the painted spot.
 FRAMES: 8 frames side by side, about 0.8 s at 10 frames per second, loops seamlessly: the last frame leads back into the first, each frame 160x60 pixels in the game.
+SPACING: divide the image into 8 equal columns, one frame per column, with a clear strip of empty magenta between neighbouring frames, at least as wide as the character's head; every part of a frame, including raised arms, tools, tongs, tails, capes and effects, stays completely inside its own column and never reaches into or overlaps the next frame. Draw the character smaller if needed to keep the gaps, the same size in every frame.
 END: no separate end frame, the loop closes.
 CAMERA: static, no zoom, no pan, the effect stays centered in every frame.
 NEGATIVE: no characters unless named, no background scene, no text, no frames or panels, no checkerboard, no motion blur, no speed lines
@@ -2192,6 +2246,7 @@ NEGATIVE: no characters unless named, no background scene, no text, no frames or
 STYLE: Visual effect frames for a 2D game, frames side by side in one row, evenly spaced, frame count as given in the motif, every frame the same size with the effect centered, flat cel shading, solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no frames or panels, no text.
 EFFECT: A long blue and white triangular pennant on the tip of a wooden pole above the stadium, waving in a soft wind in a wave that runs from the pole to the tip.
 FRAMES: 8 frames side by side, about 0.8 s at 10 frames per second, loops seamlessly: the last frame leads back into the first, each frame 32x14 pixels in the game.
+SPACING: divide the image into 8 equal columns, one frame per column, with a clear strip of empty magenta between neighbouring frames, at least as wide as the character's head; every part of a frame, including raised arms, tools, tongs, tails, capes and effects, stays completely inside its own column and never reaches into or overlaps the next frame. Draw the character smaller if needed to keep the gaps, the same size in every frame.
 END: no separate end frame, the loop closes.
 CAMERA: static, no zoom, no pan, the effect stays centered in every frame.
 NEGATIVE: no characters unless named, no background scene, no text, no frames or panels, no checkerboard, no motion blur, no speed lines
@@ -2207,6 +2262,7 @@ NEGATIVE: no characters unless named, no background scene, no text, no frames or
 STYLE: Visual effect frames for a 2D game, frames side by side in one row, evenly spaced, frame count as given in the motif, every frame the same size with the effect centered, flat cel shading, solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no frames or panels, no text.
 EFFECT: A grey city pigeon with a shimmering green neck on the stone pavement, seen from the side facing right: it nods forward with a small step, pecks at a crumb, nods again, puffs up its chest.
 FRAMES: 6 frames side by side, about 0.6 s at 10 frames per second, loops seamlessly: the last frame leads back into the first, each frame 20x16 pixels in the game.
+SPACING: divide the image into 6 equal columns, one frame per column, with a clear strip of empty magenta between neighbouring frames, at least as wide as the character's head; every part of a frame, including raised arms, tools, tongs, tails, capes and effects, stays completely inside its own column and never reaches into or overlaps the next frame. Draw the character smaller if needed to keep the gaps, the same size in every frame.
 END: no separate end frame, the loop closes.
 CAMERA: static, no zoom, no pan, the effect stays centered in every frame.
 NEGATIVE: no characters unless named, no background scene, no text, no frames or panels, no checkerboard, no motion blur, no speed lines
@@ -2222,6 +2278,7 @@ NEGATIVE: no characters unless named, no background scene, no text, no frames or
 STYLE: Visual effect frames for a 2D game, frames side by side in one row, evenly spaced, frame count as given in the motif, every frame the same size with the effect centered, flat cel shading, solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no frames or panels, no text.
 EFFECT: The same grey pigeon flapping up from the pavement and flying away to the upper right, wings in big strokes, a loose feather drifting.
 FRAMES: 6 frames side by side, about 0.6 s at 10 frames per second, plays once, each frame 32x24 pixels in the game.
+SPACING: divide the image into 6 equal columns, one frame per column, with a clear strip of empty magenta between neighbouring frames, at least as wide as the character's head; every part of a frame, including raised arms, tools, tongs, tails, capes and effects, stays completely inside its own column and never reaches into or overlaps the next frame. Draw the character smaller if needed to keep the gaps, the same size in every frame.
 END: the last frame is empty.
 CAMERA: static, no zoom, no pan, the effect stays centered in every frame.
 NEGATIVE: no characters unless named, no background scene, no text, no frames or panels, no checkerboard, no motion blur, no speed lines
@@ -2238,6 +2295,7 @@ STYLE: Visual effect frames for a 2D game, frames side by side in one row, evenl
 EFFECT: A strip of the busy crowd at the back of the market square, matching the attached background crop: Greeks in white and pale blue and tourists in red togas; in turn heads turn, someone points, two people nod to each other, a child bobs on a shoulder, never all at once; the left and right edges continue seamlessly so the strip can be repeated.
 OVERLAY: the crop only shows where the effect sits, its size, light and colors; draw only the moving part named above on the magenta background, not the walls, furniture or anything else from the crop, so it can be laid exactly over the painted spot.
 FRAMES: 8 frames side by side, about 0.8 s at 10 frames per second, loops seamlessly: the last frame leads back into the first, each frame 160x50 pixels in the game.
+SPACING: divide the image into 8 equal columns, one frame per column, with a clear strip of empty magenta between neighbouring frames, at least as wide as the character's head; every part of a frame, including raised arms, tools, tongs, tails, capes and effects, stays completely inside its own column and never reaches into or overlaps the next frame. Draw the character smaller if needed to keep the gaps, the same size in every frame.
 END: no separate end frame, the loop closes.
 CAMERA: static, no zoom, no pan, the effect stays centered in every frame.
 NEGATIVE: no characters unless named, no background scene, no text, no frames or panels, no checkerboard, no motion blur, no speed lines
@@ -2254,6 +2312,7 @@ STYLE: Visual effect frames for a 2D game, frames side by side in one row, evenl
 EFFECT: Only the three bored waiting people on the long bench, matching the attached background crop: the left one yawns and stretches, the middle one taps a foot and drums his fingers on a waiting number tablet, the right one nods off, his head sinks and jerks up again; never all at once.
 OVERLAY: the crop only shows where the effect sits, its size, light and colors; draw only the moving part named above on the magenta background, not the walls, furniture or anything else from the crop, so it can be laid exactly over the painted spot.
 FRAMES: 8 frames side by side, about 0.8 s at 10 frames per second, loops seamlessly: the last frame leads back into the first, each frame 90x50 pixels in the game.
+SPACING: divide the image into 8 equal columns, one frame per column, with a clear strip of empty magenta between neighbouring frames, at least as wide as the character's head; every part of a frame, including raised arms, tools, tongs, tails, capes and effects, stays completely inside its own column and never reaches into or overlaps the next frame. Draw the character smaller if needed to keep the gaps, the same size in every frame.
 END: no separate end frame, the loop closes.
 CAMERA: static, no zoom, no pan, the effect stays centered in every frame.
 NEGATIVE: no characters unless named, no background scene, no text, no frames or panels, no checkerboard, no motion blur, no speed lines
@@ -2272,6 +2331,7 @@ CHARACTER (appearance only, word for word from its sheet; ignore the pose in it)
 START: From the neutral pose on the attached concept sheet of Sobek on land. Keep the clean concept-art style of that sheet, not pixel art.
 ACTION (3 key poses of a 6-frame animation of about 0.6 s): (1) 0.0 s: lying flat and bored; (2) 0.2 s: the crocodile sweeps its long tail slowly left and right across the sand, a little dust puff at each turn; (3) 0.4 s: eyes half closed.
 FRAMES: draw all 6 frames side by side, left to right, in the order they play: the key poses above at their times and evenly spaced in-between frames, so the motion reads smoothly; every frame differs visibly from its neighbours, no two frames identical.
+SPACING: divide the image into 6 equal columns, one frame per column, with a clear strip of empty magenta between neighbouring frames, at least as wide as the character's head; every part of a frame, including raised arms, tools, tongs, tails, capes and effects, stays completely inside its own column and never reaches into or overlaps the next frame. Draw the character smaller if needed to keep the gaps, the same size in every frame.
 END POSE: the same as pose 1, so the loop closes seamlessly; do not draw it twice.
 HOLD STILL: body and head stay still.
 CAMERA: static, strict side view, facing right. Same scale and the same flat baseline in every pose, no zoom, no pan.
@@ -2291,6 +2351,7 @@ CHARACTER (appearance only, word for word from its sheet; ignore the pose in it)
 START: From the neutral pose on the attached concept sheet of Sobek on land. Keep the clean concept-art style of that sheet, not pixel art.
 ACTION (3 key poses of a 6-frame animation of about 0.6 s): (1) 0.0 s: the crocodile lifts one front leg; (2) 0.3 s: nudges the small woven reed hat straight with a claw, it slips again; (3) 0.6 s: he pushes it back once more and lowers the leg with a sigh.
 FRAMES: draw all 6 frames side by side, left to right, in the order they play: the key poses above at their times and evenly spaced in-between frames, so the motion reads smoothly; every frame differs visibly from its neighbours, no two frames identical.
+SPACING: divide the image into 6 equal columns, one frame per column, with a clear strip of empty magenta between neighbouring frames, at least as wide as the character's head; every part of a frame, including raised arms, tools, tongs, tails, capes and effects, stays completely inside its own column and never reaches into or overlaps the next frame. Draw the character smaller if needed to keep the gaps, the same size in every frame.
 END POSE: pose 3 is the final frame and is held; it must read as a calm, complete pose.
 HOLD STILL: the other legs stay planted.
 CAMERA: static, strict side view, facing right. Same scale and the same flat baseline in every pose, no zoom, no pan.
@@ -2311,9 +2372,19 @@ START: From the neutral pose on the attached concept sheet of Schildkröte. Keep
 MANNER (applies to every frame): the tortoise breaks into a fast run on four short legs to overtake, neck stretched far forward, headband ends flying, shell bouncing, a small dust cloud behind.
 FRAMES: exactly 8 frames side by side, left to right, one complete cycle of about 0.8 s at 10 frames per second: (1) near front leg and far hind leg reaching forward and just touching the ground; near hind leg and far front leg stretched back on their toes; body level; (2) near front and far hind legs carrying the weight, body at its lowest; near hind and far front paws lifted just off the ground; (3) near front and far hind legs straight under the body; near hind and far front legs bent and swinging forward past them; body high; (4) near front and far hind legs pushing off behind; near hind and far front legs reaching forward; body at its highest; (5) far front leg and near hind leg reaching forward and just touching the ground; far hind leg and near front leg stretched back on their toes; body level; (6) far front and near hind legs carrying the weight, body at its lowest; the other two paws lifted; (7) far front and near hind legs straight under the body; near front and far hind legs swinging forward past them; body high; (8) far front and near hind legs pushing off behind; near front and far hind legs reaching forward; leads back into frame 1.
 LEGS: 'near' means the leg or arm closer to the viewer, 'far' the one on the other side of the body. Draw the far legs and the far arm one shade darker and partly behind the body, so the two sides can never be confused. Every frame must differ visibly from its neighbours; frames 5 to 8 repeat frames 1 to 4 with the sides swapped, they are never copies of them.
+SPACING: divide the image into 8 equal columns, one frame per column, with a clear strip of empty magenta between neighbouring frames, at least as wide as the character's head; every part of a frame, including raised arms, tools, tongs, tails, capes and effects, stays completely inside its own column and never reaches into or overlaps the next frame. Draw the character smaller if needed to keep the gaps, the same size in every frame.
 END POSE: frame 8 leads straight back into frame 1, so the loop closes seamlessly; do not draw frame 1 twice.
 CAMERA: static, strict side view, facing right. Same scale and the same flat baseline in every pose, no zoom, no pan.
 NEGATIVE: no second character, no parts of the boy Max from the reference unless this is Max, no props that are not described, no environment, no floor, no ground shadow, no checkerboard, no frames, panels or cell borders, no text, labels or numbers, no motion blur, no ghosting, no duplicated or extra limbs, no change to face, proportions, clothing or colors, no photorealism, no 3D render, no watermark, no in-between blur, no speed lines, no smear frames, no sliding feet, no change of scale or baseline between poses, no camera movement, no zoom, no perspective change, no morphing, no extra poses beyond the ones listed
+```
+
+**Zweiter Durchgang**, wenn die Bilder 5 bis 8 nur Kopien von 1 bis 4 sind (Toadi, Minka, 15. November 2026): das erzeugte Bild anhängen und nur die hintere Hälfte neu zeichnen lassen.
+
+```text
+FIX: The attached sheet shows one walking cycle in 8 frames, but frames 5 to 8 are copies of frames 1 to 4 with the same legs in front. Keep frames 1 to 4 exactly as they are, pixel for pixel. Redraw only frames 5 to 8: each one is the frame four places earlier with the legs on the two sides swapped. Wherever a near leg (lighter, in front of the body) was reaching forward in frame 1, the far leg (one shade darker, partly behind the body) reaches forward in frame 5, and the near leg is the one stretched back; the same for frames 6, 7 and 8. Arms or front legs swap the same way. Body, head, tail, clothes and props stay exactly as in frames 1 to 4.
+CHECK: compare frame 1 and frame 5: the darker leg must be in front in one and behind in the other. If they look the same, the frame is wrong.
+SPACING: the same 8 equal columns with clear magenta gaps as in the attached sheet, nothing overlaps the next frame.
+NEGATIVE: no new poses for frames 1 to 4, no change of style, size, colors or baseline, no pixel art, no checkerboard, no text
 ```
 
 ## Hafen Syrakus: Ruderboot mit Fässern
@@ -2326,6 +2397,7 @@ NEGATIVE: no second character, no parts of the boy Max from the reference unless
 STYLE: Visual effect frames for a 2D game, frames side by side in one row, evenly spaced, frame count as given in the motif, every frame the same size with the effect centered, flat cel shading, solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no frames or panels, no text.
 EFFECT: A small wooden rowing boat seen from the side moving to the right on the harbor water, two dock workers in brown tunics rowing in rhythm, three wine barrels and a coiled net stacked in the stern; the oars dip, pull back and lift dripping in turn, the boat rises and dips a little.
 FRAMES: 8 frames side by side, about 0.8 s at 10 frames per second, loops seamlessly: the last frame leads back into the first, each frame 80x40 pixels in the game.
+SPACING: divide the image into 8 equal columns, one frame per column, with a clear strip of empty magenta between neighbouring frames, at least as wide as the character's head; every part of a frame, including raised arms, tools, tongs, tails, capes and effects, stays completely inside its own column and never reaches into or overlaps the next frame. Draw the character smaller if needed to keep the gaps, the same size in every frame.
 END: no separate end frame, the loop closes.
 CAMERA: static, no zoom, no pan, the effect stays centered in every frame.
 NEGATIVE: no characters unless named, no background scene, no text, no frames or panels, no checkerboard, no motion blur, no speed lines
@@ -2341,9 +2413,39 @@ NEGATIVE: no characters unless named, no background scene, no text, no frames or
 STYLE: Visual effect frames for a 2D game, frames side by side in one row, evenly spaced, frame count as given in the motif, every frame the same size with the effect centered, flat cel shading, solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no frames or panels, no text.
 EFFECT: A small Egyptian woman in a white linen dress carrying a round clay water jar on her head, steadying it with one raised hand, walking to the right, seen from the side; a clean walking cycle: the legs alternate in every step, the near leg drawn lighter and the far leg one shade darker, contact, passing and push-off clearly visible, the free arm swings gently, the jar stays level.
 FRAMES: 8 frames side by side, about 0.8 s at 10 frames per second, loops seamlessly: the last frame leads back into the first, each frame 32x56 pixels in the game.
+SPACING: divide the image into 8 equal columns, one frame per column, with a clear strip of empty magenta between neighbouring frames, at least as wide as the character's head; every part of a frame, including raised arms, tools, tongs, tails, capes and effects, stays completely inside its own column and never reaches into or overlaps the next frame. Draw the character smaller if needed to keep the gaps, the same size in every frame.
 END: no separate end frame, the loop closes.
 CAMERA: static, no zoom, no pan, the effect stays centered in every frame.
 NEGATIVE: no characters unless named, no background scene, no text, no frames or panels, no checkerboard, no motion blur, no speed lines
+```
+
+## Leonidas: Losrennen
+
+**Shot W2-B37**
+
+**Anhängen:** das fertige Konzeptblatt von Leonidas · **Bilder:** 8 · **Ablauf:** Schleife
+
+```text
+STYLE: Key pose sheet for a 2D game animation in exactly the same style, colors and proportions as the attached character sheet: same character, same head size, same hair and clothing colors, same line weight and flat cel shading, light from upper left. The key poses side by side in one row from left to right in the order of the action, evenly spaced with clear empty space between them, all at the same scale on one flat baseline, each a frozen still pose. Solid flat magenta (#ff00ff) background filling the whole image.
+SUBJECT: the character exactly as on the attached character sheet: same face, head size, proportions, costume and colors, nothing redesigned.
+CHARACTER (appearance only, word for word from its sheet; ignore the pose in it): Loud muscular Greek athlete, about 114 percent of the boy Max's height. Bronze helmet with a white horsehair crest and open face, short black beard. Blue-and-white striped tracksuit with the jacket open over a white shirt, sandals, a whistle on a cord around his neck. Fists on his hips, mouth wide open as if shouting, facing right. No red cape, no bare chest, no spear, no round shield, no loincloth.
+START: From the neutral pose on the attached concept sheet of Leonidas. Keep the clean concept-art style of that sheet, not pixel art.
+MANNER (applies to every frame): a loud, proud sprinter's run with high knees and pumping fists, chest out, helmet crest bouncing, the open tracksuit jacket flapping behind him, mouth wide open shouting, the whistle swinging on its cord.
+FRAMES: exactly 8 frames side by side, left to right, one complete cycle of about 0.8 s at 10 frames per second: (1) contact: near foot landing in front of the body, near knee slightly bent; far leg trailing behind, knee bent; far arm forward, near arm back, elbows bent; (2) down: near leg deeply bent under the body carrying the weight, body at its lowest, leaning forward; far knee driving forward; (3) push-off: near leg stretched straight back, pushing off on its toes; far knee raised high in front; (4) flight: both feet off the ground, legs split wide, far leg reaching forward, near leg trailing; body at its highest; (5) contact: far foot landing in front of the body; near leg trailing behind; near arm forward, far arm back; (6) down: far leg deeply bent carrying the weight, body at its lowest; near knee driving forward; (7) push-off: far leg stretched straight back on its toes; near knee raised high in front; (8) flight: both feet off the ground, near leg reaching forward, far leg trailing; leads back into frame 1.
+LEGS: 'near' means the leg or arm closer to the viewer, 'far' the one on the other side of the body. Draw the far legs and the far arm one shade darker and partly behind the body, so the two sides can never be confused. Every frame must differ visibly from its neighbours; frames 5 to 8 repeat frames 1 to 4 with the sides swapped, they are never copies of them.
+SPACING: divide the image into 8 equal columns, one frame per column, with a clear strip of empty magenta between neighbouring frames, at least as wide as the character's head; every part of a frame, including raised arms, tools, tongs, tails, capes and effects, stays completely inside its own column and never reaches into or overlaps the next frame. Draw the character smaller if needed to keep the gaps, the same size in every frame.
+END POSE: frame 8 leads straight back into frame 1, so the loop closes seamlessly; do not draw frame 1 twice.
+CAMERA: static, strict side view, facing right. Same scale and the same flat baseline in every pose, no zoom, no pan.
+NEGATIVE: no second character, no parts of the boy Max from the reference unless this is Max, no props that are not described, no environment, no floor, no ground shadow, no checkerboard, no frames, panels or cell borders, no text, labels or numbers, no motion blur, no ghosting, no duplicated or extra limbs, no change to face, proportions, clothing or colors, no photorealism, no 3D render, no watermark, no in-between blur, no speed lines, no smear frames, no sliding feet, no change of scale or baseline between poses, no camera movement, no zoom, no perspective change, no morphing, no extra poses beyond the ones listed
+```
+
+**Zweiter Durchgang**, wenn die Bilder 5 bis 8 nur Kopien von 1 bis 4 sind (Toadi, Minka, 15. November 2026): das erzeugte Bild anhängen und nur die hintere Hälfte neu zeichnen lassen.
+
+```text
+FIX: The attached sheet shows one walking cycle in 8 frames, but frames 5 to 8 are copies of frames 1 to 4 with the same legs in front. Keep frames 1 to 4 exactly as they are, pixel for pixel. Redraw only frames 5 to 8: each one is the frame four places earlier with the legs on the two sides swapped. Wherever a near leg (lighter, in front of the body) was reaching forward in frame 1, the far leg (one shade darker, partly behind the body) reaches forward in frame 5, and the near leg is the one stretched back; the same for frames 6, 7 and 8. Arms or front legs swap the same way. Body, head, tail, clothes and props stay exactly as in frames 1 to 4.
+CHECK: compare frame 1 and frame 5: the darker leg must be in front in one and behind in the other. If they look the same, the frame is wrong.
+SPACING: the same 8 equal columns with clear magenta gaps as in the attached sheet, nothing overlaps the next frame.
+NEGATIVE: no new poses for frames 1 to 4, no change of style, size, colors or baseline, no pixel art, no checkerboard, no text
 ```
 
 # Gegenstände

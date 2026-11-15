@@ -645,6 +645,32 @@ def kamera(blickrichtung):
             "no zoom, no pan.")
 
 
+ZWEITER_DURCHGANG = (
+    "FIX: The attached sheet shows one walking cycle in 8 frames, but frames 5 to 8 are copies of frames 1 to 4 "
+    "with the same legs in front. Keep frames 1 to 4 exactly as they are, pixel for pixel. Redraw only frames 5 "
+    "to 8: each one is the frame four places earlier with the legs on the two sides swapped. Wherever a near leg "
+    "(lighter, in front of the body) was reaching forward in frame 1, the far leg (one shade darker, partly "
+    "behind the body) reaches forward in frame 5, and the near leg is the one stretched back; the same for "
+    "frames 6, 7 and 8. Arms or front legs swap the same way. Body, head, tail, clothes and props stay exactly as "
+    "in frames 1 to 4.\n"
+    "CHECK: compare frame 1 and frame 5: the darker leg must be in front in one and behind in the other. If they "
+    "look the same, the frame is wrong.\n"
+    "SPACING: the same 8 equal columns with clear magenta gaps as in the attached sheet, nothing overlaps the "
+    "next frame.\n"
+    "NEGATIVE: no new poses for frames 1 to 4, no change of style, size, colors or baseline, no pixel art, no "
+    "checkerboard, no text")
+
+
+def abstand(n):
+    """Jedes Bild in einer eigenen Spalte, damit Claude die Bilder sauber schneiden kann (Sebastian,
+    15. November 2026: beim Schmied ragten Hammer und Zange ins Nachbarbild)."""
+    return (f"SPACING: divide the image into {n} equal columns, one frame per column, with a clear strip of "
+            "empty magenta between neighbouring frames, at least as wide as the character's head; every part of a frame, including raised arms, tools, "
+            "tongs, tails, capes and effects, stays completely inside its own column and never reaches into or "
+            "overlaps the next frame. Draw the character smaller if needed to keep the gaps, the same size in "
+            "every frame.")
+
+
 def bewegung_prompt(name, aktion, bilder, ablauf, motiv, motive, bausteine):
     start, handlung, n, schleife, blick, halten, ende = bewegung_zerlegen(motiv, bilder, ablauf)
     dauer = n / BILDER_PRO_SEKUNDE
@@ -656,6 +682,7 @@ def bewegung_prompt(name, aktion, bilder, ablauf, motiv, motive, bausteine):
                   f"FRAMES: {n} frames side by side, about {dauer:.1f} s at {BILDER_PRO_SEKUNDE} frames per "
                   f"second, {'loops seamlessly: the last frame leads back into the first' if schleife else 'plays once'}"
                   + (f", each frame {groesse.group(0)} pixels in the game" if groesse else "") + ".",
+                  abstand(n),
                   f"END: {ende}." if ende else ("END: no separate end frame, the loop closes." if schleife
                                                  else "END: the last frame is the calm end state of the effect."),
                   "CAMERA: static, no zoom, no pan, the effect stays centered in every frame.",
@@ -706,6 +733,7 @@ def bewegung_prompt(name, aktion, bilder, ablauf, motiv, motive, bausteine):
         zeilen.append(f"FRAMES: draw all {n} frames side by side, left to right, in the order they play: the key "
                       "poses above at their times and evenly spaced in-between frames, so the motion reads "
                       "smoothly; every frame differs visibly from its neighbours, no two frames identical.")
+    zeilen.append(abstand(n))
     if gang:
         zeilen.append("END POSE: frame 8 leads straight back into frame 1, so the loop closes seamlessly; do not "
                       "draw frame 1 twice.")
@@ -747,6 +775,10 @@ def bewegungen_bauen(text, bausteine, kopf_marke="| Figur | Aktion |"):
         zeilen, anhang = bewegung_prompt(figur, aktion, bilder, ablauf, motiv, motive, bausteine)
         out += [f"## {figur}: {aktion}", "", f"**Anhängen:** {anhang} · **Bilder:** {bilder} · **Ablauf:** {ablauf}",
                 "", "```text", "\n".join(zeilen), "```", ""]
+        if any(z.startswith("LEGS:") for z in zeilen) and any("frames 5 to 8 repeat" in z for z in zeilen):
+            out += ["**Zweiter Durchgang**, wenn die Bilder 5 bis 8 nur Kopien von 1 bis 4 sind (Toadi, Minka, "
+                    "15. November 2026): das erzeugte Bild anhängen und nur die hintere Hälfte neu zeichnen lassen.",
+                    "", "```text", ZWEITER_DURCHGANG, "```", ""]
     return out
 
 
@@ -1019,6 +1051,7 @@ OFFEN_LISTE = [
          [f"W1-B{i}" for i in range(77, 86)] + [f"WU-B{i}" for i in range(27, 33)] + ["PF-B14", "PF-B15"]
          + ["W2-B32", "W2-B33", "W2-B34"] + [f"W2-P{i}" for i in range(50, 62)]),
         ("Nachtrag 15. November: mehr Leben im Hintergrund", ["W1-B86", "W1-B87", "W1-B88", "W2-B35", "W2-B36"]),
+        ("Nachtrag 15. November: Leonidas rennt los (Lauf Bild für Bild, wie die Läufe oben)", ["W2-B37"]),
         ("Welt 2, Reden und Eigenheiten (Arme und Kopf; Beine und Timing aus dem 3D-Clip)",
          ["W2-P28", "W2-P29", "W2-P30", "W2-P31", "W2-P32", "W2-P33", "W2-P34", "W2-P35", "W2-P36", "W2-P37",
           "W2-P38", "W2-P39", "W2-P40", "W2-P41", "W2-P42", "W2-P43", "W2-P44", "W2-P45", "W2-P46", "W2-P47"]),
