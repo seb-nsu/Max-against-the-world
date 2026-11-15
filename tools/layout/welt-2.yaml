@@ -39,18 +39,20 @@ _figuren: [sobek, hermes, ramses, faecherwedler, archimedes, cicero, zeremonienm
 
 nil_delta:
   farbe: "#c9a96e"
-  laufbereich: [[8, 280], [1272, 280], [1272, 356], [8, 356]]
+  hintergrund: res://grafik/hintergruende/w2_bg_nil_delta_v01.png
+  tiefe: 0.85
+  laufbereich: [[8, 290], [480, 280], [520, 275], [720, 270], [800, 255], [1272, 255], [1272, 356], [8, 356]]
   faehre: [faehrsteg_olympia, hafen_syrakus]
   marker:
-    start: [400, 320]
-    von_thronsaal_ramses: [1184, 320]
-    von_sphinx: [1040, 296]
-    von_faehre: [80, 316]
-    hermes: [800, 320]
+    start: [400, 310]
+    von_thronsaal_ramses: [1220, 300]
+    von_sphinx: [1160, 270]
+    von_faehre: [130, 305]
+    hermes: [800, 310]
   figuren:
-    faehrmann: [96, 304]
-    sobek: [44, 340]
-    steinmetz: [880, 304]
+    faehrmann: [120, 300]
+    sobek: [312, 240]
+    steinmetz: [760, 300]
   alias:
     papyrus_aus_dem_schilf: papyrusblatt
     weizenfeld: weizenfeld_mit_handabdruck
@@ -58,33 +60,37 @@ nil_delta:
     tafel: faehrtafel
     pyramide: verkehrte_pyramide
   hotspots:
-    faehre: {rect: [8, 260, 128, 40], gehe: [112, 316], name: Fähre}
-    faehrtafel: {rect: [316, 200, 40, 40], gehe: [336, 308], name: Tafel}
-    sanduhr: {rect: [416, 188, 32, 68], gehe: [432, 308], name: Sanduhr}
-    schilf: {rect: [516, 224, 72, 56], gehe: [552, 308], name: Schilf}
-    weizenfeld_mit_handabdruck: {rect: [688, 220, 96, 60], gehe: [736, 308], name: Weizenfeld}
-    verkehrte_pyramide: {rect: [750, 28, 140, 140], gehe: [816, 304], name: Verkehrte Pyramide}
-    bauplan: {rect: [940, 224, 40, 32], gehe: [944, 308], name: Bauplan}
+    faehre: {rect: [0, 205, 160, 75], gehe: [120, 300], name: Fähre}
+    faehrtafel: {rect: [148, 185, 64, 90], gehe: [190, 300], name: Tafel}
+    sanduhr: {rect: [220, 140, 36, 135], gehe: [250, 300], name: Sanduhr}
+    schilf: {rect: [505, 140, 210, 135], gehe: [600, 300], name: Schilf}
+    weizenfeld_mit_handabdruck: {rect: [820, 170, 380, 80], gehe: [1000, 290], name: Weizenfeld}
+    verkehrte_pyramide: {rect: [800, 10, 155, 155], gehe: [880, 290], name: Verkehrte Pyramide}
+    bauplan: {rect: [960, 215, 40, 32], gehe: [980, 290], name: Bauplan}
   props:
-    papyrusblatt: {rect: [554, 260, 20, 16], gehe: [552, 308]}
+    papyrusblatt: {rect: [580, 185, 40, 40], gehe: [600, 295]}
   ausgaenge:
-    thronsaal_ramses: {rect: [1240, 140, 36, 140], gehe: [1248, 320], id: sandweg, name: Sandweg}
-    sphinx: {rect: [1036, 160, 72, 56], gehe: [1064, 296], id: duenenpfad, name: Dünenpfad}
+    thronsaal_ramses: {rect: [1240, 130, 40, 120], gehe: [1250, 300], id: sandweg, name: Sandweg}
+    sphinx: {rect: [1110, 125, 110, 60], gehe: [1160, 262], id: duenenpfad, name: Dünenpfad}
 
 thronsaal_ramses:
   farbe: "#b98b3e"
-  laufbereich: [[8, 280], [1272, 280], [1272, 356], [8, 356]]
+  hintergrund: res://grafik/hintergruende/w2_bg_thronsaal_ramses_v01.png
+  tiefe: 0.85
+  laufbereich: [[8, 292], [1272, 292], [1272, 356], [8, 356]]
   marker:
-    start: [48, 320]
-    von_nil_delta: [48, 320]
-    von_palastkueche: [1184, 320]
-    sobek: [400, 336]
-    kissen: [720, 304]
+    start: [60, 320]
+    von_nil_delta: [60, 320]
+    von_palastkueche: [1220, 320]
+    sobek: [420, 330]
+    kissen: [770, 300]
   figuren:
-    schreiber: [224, 304]
-    ramses: [800, 248]
-    hofkater: [720, 296]
-    faecherwedler: [944, 304]
+    schreiber: [305, 300]          # neben dem Pult, nicht davor: der Schreiber schreibt auf dem Brett im Schoß
+    ramses: [955, 266]
+    hofkater: [770, 298]
+    faecherwedler: [1112, 300]     # rechts hinter dem Thron, nicht vor dem Goldteller
+  blick:
+    faecherwedler: links           # fächelt Ramses zu, auch wenn Max rechts steht
   alias:
     opferschale_des_hofkaters: opferschale
     inschrift: inschrift
@@ -93,20 +99,20 @@ thronsaal_ramses:
     tuer_zur_kueche: tuer_zur_kueche
     fackeln: fackeln
   hotspots:
-    thron: {rect: [752, 156, 96, 124], gehe: [800, 312], name: Thron}
-    schreiberpult: {rect: [182, 236, 60, 44], gehe: [224, 312], name: Schreiberpult}
-    sarkophag: {rect: [16, 128, 48, 144], gehe: [48, 312], name: Sarkophag}
-    mumifizierte_katze: {rect: [320, 160, 32, 56], gehe: [336, 308], name: Mumifizierte Katze}
-    wandfries: {rect: [160, 32, 880, 36], gehe: [640, 308], name: Wandfries}
-    saeulen: {rect: [422, 80, 44, 200], gehe: [448, 308], name: Säulen}
-    inschrift: {rect: [546, 124, 52, 72], gehe: [568, 308], name: Inschrift}
-    opferschale: {rect: [646, 272, 28, 12], gehe: [656, 316], name: Opferschale}
-    fackeln: {rect: [1048, 80, 48, 48], gehe: [1072, 308], name: Fackeln}
+    thron: {rect: [880, 155, 110, 135], gehe: [955, 315], name: Thron}
+    schreiberpult: {rect: [150, 205, 120, 70], gehe: [210, 310], name: Schreiberpult}
+    sarkophag: {rect: [105, 130, 45, 150], gehe: [130, 310], name: Sarkophag}
+    mumifizierte_katze: {rect: [212, 122, 42, 58], gehe: [232, 305], name: Mumifizierte Katze}
+    wandfries: {rect: [580, 40, 520, 75], gehe: [840, 305], name: Wandfries}
+    saeulen: {rect: [355, 20, 55, 255], gehe: [380, 310], name: Säulen}
+    inschrift: {rect: [440, 80, 85, 145], gehe: [480, 305], name: Inschrift}
+    opferschale: {rect: [828, 278, 38, 22], gehe: [848, 315], name: Opferschale}
+    fackeln: {rect: [1160, 100, 30, 90], gehe: [1170, 310], name: Fackeln}
   props:
-    pharaonenteller: {rect: [924, 252, 24, 12], gehe: [928, 312]}
+    pharaonenteller: {rect: [1022, 205, 60, 58], gehe: [1050, 312]}
   ausgaenge:
-    nil_delta: {rect: [4, 160, 8, 120], gehe: [24, 320], id: ausgang_nil_delta, name: Nil-Delta}
-    palastkueche: {rect: [1224, 140, 52, 140], gehe: [1240, 316], id: tuer_zur_kueche, name: Tür zur Küche}
+    nil_delta: {rect: [10, 100, 90, 190], gehe: [60, 310], id: ausgang_nil_delta, name: Nil-Delta}
+    palastkueche: {rect: [1195, 80, 80, 220], gehe: [1230, 315], id: tuer_zur_kueche, name: Tür zur Küche}
 
 palastkueche:
   farbe: "#9c6b45"

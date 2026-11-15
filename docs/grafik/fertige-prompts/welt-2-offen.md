@@ -16,8 +16,8 @@ Stand 14. November 2026, abends. Alles, was für Welt 2 aus Gemini kommen muss, 
 
 ## 1. Räume in Ägypten (Einstieg der Welt)
 
-- [ ] Nil-Delta mit Fährsteg, **breit**: linke Hälfte, dann rechte Hälfte (keine Fähre, kein Krokodil im Bild; das Papyrusblatt im Schilf darf drin sein)
-- [ ] Thronsaal, **breit**: linke Hälfte, dann rechte Hälfte (Kissen leer, kein Kater, kein Ramses auf dem Thron)
+- [x] Nil-Delta mit Fährsteg, **breit**: linke Hälfte, dann rechte Hälfte (keine Fähre, kein Krokodil im Bild; das Papyrusblatt im Schilf darf drin sein)
+- [x] Thronsaal, **breit**: linke Hälfte, dann rechte Hälfte (Kissen leer, kein Kater, kein Ramses auf dem Thron)
 - [x] Palastküche (keine Köchin)
 - [x] Sphinx, zwei Fassungen: mit Nase, dann ohne Nase (Nase liegt im Sand)
 
