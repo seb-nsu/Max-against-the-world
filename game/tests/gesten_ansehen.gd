@@ -60,10 +60,13 @@ func _raum(ab: String, r: Dictionary) -> void:
 	await create_timer(0.4).timeout
 	spiel.testmodus = false
 	var raum = root.get_node("R").current
-	raum.ruhe_anwenden()
+	raum._zustand_anwenden()
 	var zellen: Array = []   # [Titel, [Bilder]]
 	for c in raum.get_characters():
 		if not c.has_method("geste") or not c.visible:
+			continue
+		# Max und Pixel sind überall gleich groß: nur in je einem Raum jeder Welt ansehen
+		if c.objekt_id() in ["max", "pixel"] and not r.id in ["dorfplatz", "nil_delta"]:
 			continue
 		for g in _gesten(c, r.id):
 			zellen.append([ "%s %s" % [c.objekt_id(), g], await _ansehen(c, g)])
@@ -80,8 +83,11 @@ func _raum(ab: String, r: Dictionary) -> void:
 func _gesten(c, raum: String) -> Array[String]:
 	var GE = load("res://skripte/gesten_einsatz.gd")
 	var out: Array[String] = []
+	# Ruhe-Schleife, die ein Raum selbst setzt (Schmied hämmert, Alwin rührt)
+	if c.idle_animation != "idle":
+		out.append(c.idle_animation)
 	var ruhe: String = GE.ruhe_fuer(c.objekt_id(), raum)
-	if not ruhe.is_empty():
+	if not ruhe.is_empty() and not ruhe in out:
 		out.append(ruhe)
 	var w: Dictionary = GE.warten_fuer(c.objekt_id(), raum)
 	for g in w.get("gesten", []):
@@ -102,6 +108,14 @@ func _ansehen(c, anim: String) -> Array:
 	var ap: AnimationPlayer = c.get_node("AnimationPlayer")
 	var a := ap.get_animation(anim)
 	var bilder: Array = []
+	# Breite Räume: Die Kamera folgt der Spielfigur; die steht für die Aufnahme 200 Pixel neben der
+	# Figur (außerhalb des Ausschnitts), danach wieder an ihrem Platz
+	var spieler = root.get_node("C").player
+	var spieler_ort: Vector2 = spieler.position if spieler and spieler != c else Vector2.ZERO
+	if spieler and spieler != c:
+		spieler.position = c.position + Vector2(200 if c.position.x < 640 else -200, 0)
+		for i in 6:
+			await process_frame
 	c.geste(anim, false)
 	for i in AUGENBLICKE:
 		ap.seek(a.length * i / float(AUGENBLICKE - 1) * 0.999, true)
@@ -109,6 +123,8 @@ func _ansehen(c, anim: String) -> Array:
 		await RenderingServer.frame_post_draw
 		bilder.append(_ausschnitt(c))
 	c.geste_ende()
+	if spieler and spieler != c:
+		spieler.position = spieler_ort
 	await process_frame
 	return bilder
 
