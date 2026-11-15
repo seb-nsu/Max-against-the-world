@@ -1,6 +1,6 @@
 {
  "bild": [
-  98,
+  100,
   198
  ],
  "animationen": {
@@ -18,8 +18,8 @@
   },
   "walk": {
    "von": 8,
-   "bilder": 14,
-   "ms": 95,
+   "bilder": 8,
+   "ms": 58,
    "schleife": true
   }
  }
