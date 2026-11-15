@@ -51,7 +51,7 @@ nil_delta:
     hermes: [800, 310]
   figuren:
     faehrmann: [120, 300]
-    sobek: [330, 258]
+    sobek: [312, 240]
     steinmetz: [760, 300]
   alias:
     papyrus_aus_dem_schilf: papyrusblatt
