@@ -645,6 +645,16 @@ def kamera(blickrichtung):
             "no zoom, no pan.")
 
 
+def abstand(n):
+    """Jedes Bild in einer eigenen Spalte, damit Claude die Bilder sauber schneiden kann (Sebastian,
+    15. November 2026: beim Schmied ragten Hammer und Zange ins Nachbarbild)."""
+    return (f"SPACING: divide the image into {n} equal columns, one frame per column, with a clear strip of "
+            "empty magenta between neighbouring frames; every part of a frame, including raised arms, tools, "
+            "tongs, tails, capes and effects, stays completely inside its own column and never reaches into or "
+            "overlaps the next frame. Draw the character smaller if needed to keep the gaps, the same size in "
+            "every frame.")
+
+
 def bewegung_prompt(name, aktion, bilder, ablauf, motiv, motive, bausteine):
     start, handlung, n, schleife, blick, halten, ende = bewegung_zerlegen(motiv, bilder, ablauf)
     dauer = n / BILDER_PRO_SEKUNDE
@@ -656,6 +666,7 @@ def bewegung_prompt(name, aktion, bilder, ablauf, motiv, motive, bausteine):
                   f"FRAMES: {n} frames side by side, about {dauer:.1f} s at {BILDER_PRO_SEKUNDE} frames per "
                   f"second, {'loops seamlessly: the last frame leads back into the first' if schleife else 'plays once'}"
                   + (f", each frame {groesse.group(0)} pixels in the game" if groesse else "") + ".",
+                  abstand(n),
                   f"END: {ende}." if ende else ("END: no separate end frame, the loop closes." if schleife
                                                  else "END: the last frame is the calm end state of the effect."),
                   "CAMERA: static, no zoom, no pan, the effect stays centered in every frame.",
@@ -706,6 +717,7 @@ def bewegung_prompt(name, aktion, bilder, ablauf, motiv, motive, bausteine):
         zeilen.append(f"FRAMES: draw all {n} frames side by side, left to right, in the order they play: the key "
                       "poses above at their times and evenly spaced in-between frames, so the motion reads "
                       "smoothly; every frame differs visibly from its neighbours, no two frames identical.")
+    zeilen.append(abstand(n))
     if gang:
         zeilen.append("END POSE: frame 8 leads straight back into frame 1, so the loop closes seamlessly; do not "
                       "draw frame 1 twice.")
