@@ -1,18 +1,18 @@
 [gd_scene format=3 uid="uid://scsqcoeuy273"]
 
-[ext_resource type="Script" path="res://game/rooms/sphinx/walkable_areas/boden/walkable_area_boden.gd" id="1_35l82"]
+[ext_resource type="Script" uid="uid://c2mk2t61m6mcs" path="res://game/rooms/sphinx/walkable_areas/boden/walkable_area_boden.gd" id="1_35l82"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_35l82"]
-vertices = PackedVector2Array(474, 267, 6, 267, 6, 210, 474, 210)
+vertices = PackedVector2Array(632, 356, 8, 356, 8, 248, 632, 240)
 polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
-outlines = Array[PackedVector2Array]([PackedVector2Array(6, 210, 474, 210, 474, 267, 6, 267)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(8, 248, 632, 240, 632, 356, 8, 356)])
 agent_radius = 0.0
 
 [node name="Boden" type="Node2D" unique_id=1752451314]
 script = ExtResource("1_35l82")
 script_name = "Boden"
 description = "Boden"
-interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(8, 280, 632, 280, 632, 356, 8, 356)])
+interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(8, 248, 632, 240, 632, 356, 8, 356)])
 
 [node name="Perimeter" type="NavigationRegion2D" parent="." unique_id=575586485]
 modulate = Color(0, 1, 0, 1)

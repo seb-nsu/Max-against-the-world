@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://bjum0slygccv7"]
 
-[ext_resource type="Script" path="res://game/rooms/hafen_syrakus/room_hafen_syrakus.gd" id="1_a4dmf"]
+[ext_resource type="Script" uid="uid://c1y53ayjpt6xm" path="res://game/rooms/hafen_syrakus/room_hafen_syrakus.gd" id="1_a4dmf"]
 [ext_resource type="PackedScene" uid="uid://dyr2ntvrfewsy" path="res://game/rooms/hafen_syrakus/walkable_areas/boden/walkable_area_boden.tscn" id="2_pkdoj"]
 [ext_resource type="PackedScene" uid="uid://ccnxsamv8ql1x" path="res://game/rooms/hafen_syrakus/props/background/prop_background.tscn" id="3_6pk2n"]
-[ext_resource type="Texture2D" uid="uid://ddd8l5p5joaak" path="res://grafik/platzhalter/raum_hafen_syrakus.png" id="4_cbhjx"]
+[ext_resource type="Texture2D" uid="uid://cohsqmxf88d30" path="res://grafik/hintergruende/w2_bg_hafen_syrakus_v01.png" id="4_pkdoj"]
 [ext_resource type="PackedScene" uid="uid://20338jeimh2v" path="res://game/rooms/hafen_syrakus/props/tintenfass/prop_tintenfass.tscn" id="5_b8ud4"]
-[ext_resource type="Texture2D" uid="uid://bal3t7cidauf0" path="res://grafik/platzhalter/prop_tintenfass.png" id="6_laxel"]
+[ext_resource type="Texture2D" uid="uid://cpl2ll0ep8xlt" path="res://grafik/props/tintenfass.png" id="6_6pk2n"]
 [ext_resource type="PackedScene" uid="uid://c5amtnugyl5fy" path="res://game/rooms/hafen_syrakus/hotspots/faehre/hotspot_faehre.tscn" id="7_tveto"]
 [ext_resource type="PackedScene" uid="uid://du1ojv4xmltbw" path="res://game/rooms/hafen_syrakus/hotspots/meer/hotspot_meer.tscn" id="8_mg004"]
 [ext_resource type="PackedScene" uid="uid://b7gnfts7ua57l" path="res://game/rooms/hafen_syrakus/hotspots/fischernetze/hotspot_fischernetze.tscn" id="9_ink40"]
@@ -28,85 +28,93 @@ height = 360
 [node name="WalkableAreas" type="Node2D" parent="." unique_id=189612945]
 
 [node name="Boden" parent="WalkableAreas" unique_id=149140806 instance=ExtResource("2_pkdoj")]
-interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(8, 280, 632, 280, 632, 356, 8, 356)])
+interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(8, 215, 560, 215, 580, 280, 632, 300, 632, 356, 8, 356)])
 
 [node name="Props" type="Node2D" parent="." unique_id=510818672]
 
 [node name="Background" parent="Props" unique_id=1159875174 instance=ExtResource("3_6pk2n")]
 position = Vector2(320, 180)
-texture = ExtResource("4_cbhjx")
+texture = ExtResource("4_pkdoj")
 description = "UI_RAUM_HAFEN_SYRAKUS"
 
 [node name="Tintenfass" parent="Props" unique_id=587912893 instance=ExtResource("5_b8ud4")]
-position = Vector2(262.0, 258.0)
-texture = ExtResource("6_laxel")
+position = Vector2(267.5, 193)
+texture = ExtResource("6_6pk2n")
 description = "UI_OBJ_TINTENFASS"
-baseline = 9
-walk_to_point = Vector2(2.0, 54.0)
+baseline = 11
+walk_to_point = Vector2(-5.5, 57)
+interaction_polygon = PackedVector2Array(-12.5, -11, 12.5, -11, 12.5, 11, -12.5, 11)
 
 [node name="Hotspots" type="Node2D" parent="." unique_id=1083178277]
 
 [node name="Faehre" parent="Hotspots" unique_id=733345143 instance=ExtResource("7_tveto")]
-position = Vector2(72, 280)
+position = Vector2(85, 185)
 description = "UI_OBJ_FAEHRE"
 baseline = 20
-walk_to_point = Vector2(40, 36)
+walk_to_point = Vector2(15, 65)
+interaction_polygon = PackedVector2Array(-85, -20, 85, -20, 85, 20, -85, 20)
 
 [node name="Meer" parent="Hotspots" unique_id=201160652 instance=ExtResource("8_mg004")]
-position = Vector2(100, 160)
+position = Vector2(80, 142.5)
 description = "UI_OBJ_MEER"
-baseline = 40
-walk_to_point = Vector2(20, 148)
+baseline = 22
+walk_to_point = Vector2(20, 107.5)
+interaction_polygon = PackedVector2Array(-80, -22.5, 80, -22.5, 80, 22.5, -80, 22.5)
 
 [node name="Fischernetze" parent="Hotspots" unique_id=112592016 instance=ExtResource("9_ink40")]
-position = Vector2(264, 250.0)
+position = Vector2(240, 155)
 description = "UI_OBJ_FISCHERNETZE"
-baseline = 29
-walk_to_point = Vector2(0, 62.0)
+baseline = 60
+walk_to_point = Vector2(0, 95)
+interaction_polygon = PackedVector2Array(-80, -60, 80, -60, 80, 60, -80, 60)
 
 [node name="AmphorenAmKai" parent="Hotspots" unique_id=139288517 instance=ExtResource("10_1vwmc")]
-position = Vector2(476, 252)
+position = Vector2(457.5, 197.5)
 description = "UI_OBJ_AMPHOREN_AM_KAI"
-baseline = 28
-walk_to_point = Vector2(0, 60)
+baseline = 27
+walk_to_point = Vector2(-2.5, 52.5)
+interaction_polygon = PackedVector2Array(-67.5, -27.5, 67.5, -27.5, 67.5, 27.5, -67.5, 27.5)
 
 [node name="SanduhrSyrakus" parent="Hotspots" unique_id=1828473548 instance=ExtResource("11_5a0lw")]
-position = Vector2(172, 222.0)
+position = Vector2(78, 172)
 description = "UI_OBJ_SANDUHR_SYRAKUS"
-baseline = 33
-walk_to_point = Vector2(0, 86.0)
+baseline = 80
+walk_to_point = Vector2(32, 90)
+interaction_polygon = PackedVector2Array(-20, -80, 20, -80, 20, 80, -20, 80)
 
 [node name="GasseZurWerkstatt" parent="Hotspots" unique_id=1060415853 instance=ExtResource("12_ndipj")]
-position = Vector2(598.0, 200)
+position = Vector2(580, 175)
 description = "UI_OBJ_GASSE_ZUR_WERKSTATT"
-baseline = 80
-walk_to_point = Vector2(2.0, 120)
+baseline = 65
+walk_to_point = Vector2(10, 80)
 cursor = 9
+interaction_polygon = PackedVector2Array(-60, -65, 60, -65, 60, 65, -60, 65)
 
 [node name="PfadZumGrabhuegel" parent="Hotspots" unique_id=9377280 instance=ExtResource("13_gdyu0")]
-position = Vector2(376, 140)
+position = Vector2(372.5, 140)
 description = "UI_OBJ_PFAD_ZUM_GRABHUEGEL"
 baseline = 40
-walk_to_point = Vector2(0, 156)
+walk_to_point = Vector2(-0.5, 92)
 cursor = 9
+interaction_polygon = PackedVector2Array(-37.5, -40, 37.5, -40, 37.5, 40, -37.5, 40)
 
 [node name="Regions" type="Node2D" parent="." unique_id=1756143405]
 
 [node name="Markers" type="Node2D" parent="." unique_id=952690520]
 
 [node name="Start" parent="Markers" unique_id=1688819795 instance=ExtResource("14_hini1")]
-position = Vector2(120, 316)
+position = Vector2(140, 290)
 
 [node name="VonFaehre" parent="Markers" unique_id=140883306 instance=ExtResource("15_s74qc")]
-position = Vector2(120, 316)
+position = Vector2(140, 290)
 
 [node name="VonWerkstatt" parent="Markers" unique_id=607715882 instance=ExtResource("16_lgiwp")]
-position = Vector2(592, 320)
+position = Vector2(580, 270)
 
 [node name="VonGrabhuegel" parent="Markers" unique_id=606991245 instance=ExtResource("17_iuahi")]
-position = Vector2(376, 296)
+position = Vector2(372, 240)
 
 [node name="Characters" type="Node2D" parent="." unique_id=2023384423]
 
 [node name="CharacterFaehrmann *" parent="Characters" unique_id=938438789 instance=ExtResource("18_aru4a")]
-position = Vector2(80, 304)
+position = Vector2(100, 262)
