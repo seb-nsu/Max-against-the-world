@@ -7819,19 +7819,19 @@
    "id": "hieroglyphen_grammatik",
    "name_key": "UI_OBJ_HIEROGLYPHEN_GRAMMATIK",
    "raum": "thronsaal_ramses",
-   "bild": "res://grafik/platzhalter/nah_hieroglyphen_grammatik.png"
+   "bild": "res://grafik/nahansichten/hieroglyphen_grammatik.png"
   },
   {
    "id": "faehrtafel",
    "name_key": "UI_OBJ_FAEHRTAFEL",
    "raum": "nil_delta",
-   "bild": "res://grafik/platzhalter/nah_faehrtafel.png"
+   "bild": "res://grafik/nahansichten/faehrtafel.png"
   },
   {
    "id": "aushang",
    "name_key": "UI_OBJ_AUSHANG",
    "raum": "startbuero",
-   "bild": "res://grafik/platzhalter/nah_aushang.png"
+   "bild": "res://grafik/nahansichten/aushang.png"
   }
  ],
  "dialoge": [

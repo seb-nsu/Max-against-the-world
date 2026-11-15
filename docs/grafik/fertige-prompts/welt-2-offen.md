@@ -2,7 +2,7 @@
 
 Stand 15. November 2026. Alles, was für Welt 2 aus Gemini kommen muss, in der Reihenfolge, in der es sich anbietet. Die Prompts selbst stehen in [`welt-2.md`](welt-2.md) (erzeugt aus `../welt-2.md`); hier steht nur die Reihenfolge, was anzuhängen ist und worauf man achten sollte. Abhaken, was erledigt ist.
 
-**Stand:** Alle Räume, Figuren, Gegenstände, großen Objekte und Deko-Sprites sind geliefert und im Spiel. Noch offen: die Nahansichten. Die Posenbögen führt die Gesamtliste.
+**Stand:** Alle Bilder für Welt 2 sind geliefert und im Spiel. Die Hintergründe für Rede-Ringen und Paraden-Plan liegen bereit, die Minispiele zeigen sie aber noch nicht. Die Posenbögen führt die Gesamtliste.
 
 **Die vollständige Arbeitsliste mit fertigen Prompts** für Prolog, Welt 1 und Welt 2 ist [`00-offen-prolog-welt-1-welt-2.md`](00-offen-prolog-welt-1-welt-2.md). Sie geht vor, wenn sich etwas widerspricht; diese Datei hält nur den Überblick für Welt 2.
 
@@ -83,12 +83,12 @@ Stand 15. November 2026. Alles, was für Welt 2 aus Gemini kommen muss, in der R
 
 ## 6. Nahansichten und Tafeln
 
-- [ ] Hieroglyphen-Grammatik
-- [ ] Fährtafel
-- [ ] Aushang im Startbüro
-- [ ] Sandgrube
-- [ ] Konter-Auswahl
-- [ ] Paraden-Plan
+- [x] Hieroglyphen-Grammatik
+- [x] Fährtafel
+- [x] Aushang im Startbüro
+- [x] Sandgrube (Bild liegt bereit, Minispiel noch ohne Hintergrund)
+- [x] Konter-Auswahl (Bild liegt bereit, Minispiel noch ohne Hintergrund)
+- [x] Paraden-Plan (Bild liegt bereit, Minispiel noch ohne Hintergrund)
 
 ## 7. Posenbögen
 
