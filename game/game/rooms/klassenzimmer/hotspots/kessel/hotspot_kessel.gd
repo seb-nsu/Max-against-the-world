@@ -41,6 +41,7 @@ func _on_item_used(item: PopochiuInventoryItem) -> void:
 func zutat(sn: String) -> void:
 	var z: Array = ZUTATEN[sn]
 	var e := Spiel.gegenstand_zeile(bauplan().get("gegenstand_auf", []), Bauplan.gegenstand(sn).id)
+	await Spiel.max_geste("benutzen", true, e.get("zeile", z[1]))   # Zutat in den Kessel
 	await Spiel.sagen_eintrag(e if not e.is_empty() else {sprecher = "MAX", zeile = z[1]})
 	await Spiel.abgeben(sn)
 	Zustand.setze(z[0])

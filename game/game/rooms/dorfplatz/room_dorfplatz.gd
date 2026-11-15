@@ -62,6 +62,8 @@ func _nach_uebergang() -> void:
 	# Auch nach Überspringen (Esc) alle an ihrem Platz und aufrecht
 	_max_lage(0.0)
 	_max_pose("")
+	if is_instance_valid(C.Max) and C.Max.has_node("Sprite2D"):
+		C.Max.get_node("Sprite2D").position.x = 0.0
 	_pixel_haltung("idle")
 	if _ziel_max != Vector2.ZERO:
 		C.Max.position = _ziel_max
@@ -103,8 +105,15 @@ func _landung() -> void:
 		if _ziel_pix != Vector2.ZERO and is_instance_valid(C.Pixel):
 			C.Pixel.position = _ziel_pix
 		return
+	# Max fällt mit der Bewegung „fallen“ und bleibt liegen (Kapuze überm Gesicht), bis er sich
+	# aufsetzt; ohne die Bewegung bleibt es bei der Liegepose aus dem Posenbogen.
+	var fall := 0.45
+	if _max_gesten():
+		await _max_pose("")
+		C.Max.geste("fallen", false, CQFigur.GESTE_HALTEN)
+		fall = maxf(0.3, C.Max.bild_zeit("fallen", 3))   # Bild 3: Aufprall
 	var t := create_tween()
-	t.tween_property(C.Max, "position", _ziel_max, 0.45).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_IN)
+	t.tween_property(C.Max, "position", _ziel_max, fall).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_IN)
 	if _ziel_pix != Vector2.ZERO:
 		t.parallel().tween_property(C.Pixel, "position", _ziel_pix, 0.55).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_IN)
 	await t.finished
@@ -161,7 +170,14 @@ func _toadi_rennt_herbei() -> void:
 func _max_dreht_sich_um() -> void:
 	if has_character("Toadi") and _toadi_ziel != Vector2.ZERO:
 		C.Toadi.position = _toadi_ziel
+		# „dreht sich um“ (0110): Max schaut nach links; die Bewegung „wenden“ dreht ihn über die
+		# Vorderansicht, gespiegelt also von links nach rechts zu Toadi.
+		var bild := C.Max.get_node_or_null("Sprite2D") as Sprite2D
+		var nach_rechts := C.Toadi.global_position.x > C.Max.global_position.x
+		if _max_gesten() and bild and bild.flip_h == nach_rechts:
+			await C.Max.geste("wenden", true, CQFigur.GESTE_HALTEN)
 		C.Max.schauen_zu(C.Toadi.global_position.x)
+		C.Max.geste_ende()
 		C.Toadi.schauen_zu(C.Max.global_position.x)
 
 
@@ -178,8 +194,20 @@ func _max_pose(bild: String, blende := 0.0) -> void:
 		await C.Max.pose_zeigen(bild, blende)
 
 
-## Aufsetzen (0030): vom Liegen weich ins Sitzen.
+## Max' Gesten in der Ankunft (gesten-regie.md): fallen, vom_boden_aufstehen, wenden.
+func _max_gesten() -> bool:
+	return is_instance_valid(C.Max) and C.Max is CQFigur and not CQFigur.gesten_aus() 		and C.Max.hat_animation("fallen") and C.Max.hat_animation("vom_boden_aufstehen")
+
+
+## Aufsetzen (0030): vom Liegen ins Sitzen, mit den ersten drei Bildern von „vom_boden_aufstehen“.
+## Max liegt nach dem Fall im Sheet anders als am Anfang des Aufstehens: Das Bild wird um den
+## Unterschied verschoben und gleitet beim Aufstehen zurück auf den Fußpunkt (_max_steht_auf).
 func _max_setzt_sich() -> void:
+	if _max_gesten() and C.Max.geste_gehalten:
+		var bild := C.Max.get_node("Sprite2D") as Sprite2D
+		bild.position.x = -C.Max.bild_versatz(C.Max.letztes_bild("fallen"), C.Max.sheet_bild("vom_boden_aufstehen", 0))
+		await C.Max.geste("vom_boden_aufstehen", true, CQFigur.GESTE_HALTEN, 0, 2)
+		return
 	await _max_pose(POSE_SITZT, 0.4)
 
 
@@ -197,6 +225,13 @@ func _pixel_haltung(name: String) -> void:
 
 ## Aufstehen (0050): Sitzen, kurz auf ein Knie, dann stehen, jeweils überblendet (Sebastian: „zu plötzlich“).
 func _max_steht_auf() -> void:
+	if _max_gesten() and C.Max.geste_gehalten and C.Max.get_node("AnimationPlayer").assigned_animation == "vom_boden_aufstehen":
+		var bild := C.Max.get_node("Sprite2D") as Sprite2D
+		var dauer: float = C.Max.get_node("AnimationPlayer").get_animation("vom_boden_aufstehen").length - C.Max.bild_zeit("vom_boden_aufstehen", 2)
+		create_tween().tween_property(bild, "position:x", 0.0, maxf(0.2, dauer)).set_trans(Tween.TRANS_SINE)
+		await C.Max.geste("vom_boden_aufstehen", true, "", 2)
+		bild.position.x = 0.0
+		return
 	await _max_pose(POSE_KNIET, 0.35)
 	if not Spiel.testmodus and not E.cutscene_skipped:
 		await get_tree().create_timer(0.45).timeout

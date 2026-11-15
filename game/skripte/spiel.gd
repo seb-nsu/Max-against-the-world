@@ -214,12 +214,14 @@ func blasen(zeile: String) -> Array[String]:
 
 ## Lässt die Figur mit dem Kürzel die Zeile sagen (Popochiu übersetzt die ID selbst).
 ## NAR-Zeilen sind Regie ohne Text: es gibt nur eine kurze Pause für die Animation.
-## Mit der Zeile beginnen ihre Geräusche (Klang.zeilen_klang) und ihr Wackeln (CQEffekte).
+## Mit der Zeile beginnen ihre Geräusche (Klang.zeilen_klang), ihr Wackeln (CQEffekte) und ihre
+## Geste (CQGestenEinsatz.ZEILE: vor, mit oder statt der Redebewegung).
 func sagen(kuerzel: String, zeile: String) -> void:
 	if tr(zeile) == zeile:
 		push_error("Zeile %s fehlt in texte.csv" % zeile)
 	Klang.zeilen_klang(kuerzel, zeile)
 	CQEffekte.zeilen_wackeln(zeile)
+	await CQGestenEinsatz.zeile(zeile)
 	for b in blasen(zeile):
 		protokoll.append(b)
 		zeile_gesagt.emit(b)
@@ -384,6 +386,12 @@ func _stimme_aus_dem_off(c: PopochiuCharacter, an: bool) -> void:
 		c.modulate.a = 1.0
 		c.clickable = true
 		R.current.remove_character(c)
+		# Im Treppenhaus hebt stufen_anwenden() das Bild der unsichtbaren Stimme auf eine Stufe; das
+		# darf nicht in den nächsten Raum mitwandern (Opa stand sonst im Dachboden 100 px zu tief).
+		var bild := c.get_node_or_null("Sprite2D") as Node2D
+		if bild:
+			bild.position = Vector2.ZERO
+		c.animation_prefix = ""
 
 
 ## Eine Zwischensequenz: Liste von Callables (Spiel.z(...) oder eigene Funktionen).
@@ -396,10 +404,54 @@ func szene(schritte: Array) -> void:
 	else:
 		await E.cutscene(schritte)
 	in_szene -= 1
+	gesten_loesen()
+
+
+## Gehaltene Gesten (Max sitzt auf dem Hebel, liegt nach dem Fall) enden spätestens mit der Szene.
+func gesten_loesen() -> void:
+	if not is_instance_valid(R.current):
+		return
+	for c in R.current.get_characters():
+		if c is CQFigur and c.geste_gehalten:
+			c.geste_ende()
+
+
+## Max zeigt auf das erste dieser Objekte, das im Raum zu sehen ist (Hinweise der Pfote).
+func max_zeigt_auf(objekt_ids: Array) -> void:
+	var m := C.get_character("Max") if is_instance_valid(R.current) and R.current.has_character("Max") else null
+	if not m is CQFigur or CQFigur.gesten_aus() or m.is_moving or m.geste_laeuft:
+		return
+	for oid in objekt_ids:
+		var o := _objekt_im_raum(str(oid))
+		if is_instance_valid(o) and o.visible:
+			m.schauen_zu(o.global_position.x)
+			m.geste("zeigen", false)
+			return
+
+
+## Sekunden ohne Eingabe (für Max' Warte-Gesten, CQGestenEinsatz.WARTEN „spieler_ruhe“).
+func ruhe_zeit() -> float:
+	return _ruhe
+
+
+## Geste der aktiven Figur, wenn Max spielt (aufheben, benutzen …). Hat die Zeile, die gleich
+## kommt, schon eine eigene Geste in CQGestenEinsatz.ZEILE, bleibt es bei der.
+func max_geste(anim: String, warten := true, zeile := "") -> void:
+	if ist_pixel() or not C.player is CQFigur or (not zeile.is_empty() and CQGestenEinsatz.hat_zeile(zeile)):
+		return
+	if warten:
+		await C.player.geste(anim)
+	else:
+		C.player.geste(anim, false)
 
 
 ## Zufällige Ersatzzeile der aktiven Figur, nie zweimal hintereinander dieselbe.
-func ersatz(kuerzel := "") -> void:
+## Max zuckt bei jeder zweiten „geht nicht“-Zeile mit den Schultern und kratzt sich bei jeder
+## vierten Ersatzzeile zum Ansehen (ansehen = true) am Kopf (Entscheidung 2, abwechselnd statt zufällig).
+var _ersatz_gesten := {"benutzen": 0, "ansehen": 0}
+
+
+func ersatz(kuerzel := "", ansehen := false) -> void:
 	if kuerzel.is_empty():
 		kuerzel = kuerzel_von(C.player) if is_instance_valid(C.player) else "MAX"
 	var pool: Array = Bauplan.ersatz.get(kuerzel, [])
@@ -411,6 +463,15 @@ func ersatz(kuerzel := "") -> void:
 	_letzte_ersatz[kuerzel] = wahl
 	ersatz_gesagt.emit(kuerzel, wahl)
 	Klang.jingle("falsch")
+	if kuerzel == "MAX":
+		var art := "ansehen" if ansehen else "benutzen"
+		_ersatz_gesten[art] += 1
+		var c := figur("MAX")
+		if c is CQFigur and c.is_inside_tree():
+			if ansehen and _ersatz_gesten[art] % 4 == 0:
+				c.geste("kopf_kratzen", false)
+			elif not ansehen and _ersatz_gesten[art] % 2 == 0:
+				c.geste("schulterzucken", false)
 	await sagen(kuerzel, wahl)
 
 
@@ -544,7 +605,7 @@ func ansehen_waehlen(eintraege: Array, mal: int, zustand := "") -> Dictionary:
 func ansehen(eintraege: Array, schluessel: String, zustand := "") -> String:
 	var erste := ansehen_waehlen(eintraege, 1, zustand)
 	if erste.is_empty():
-		await ersatz()
+		await ersatz("", true)
 		return ""
 	# Die erste Zeile gehört zum Schlüssel: Wechselt sie mit dem Spielstand („nach P1“), zählt
 	# das als neues Ansehen.
@@ -686,6 +747,8 @@ func nehmen(prop: PopochiuProp, daten: Dictionary) -> void:
 	if not kann_aufnehmen(C.player):
 		await ersatz()
 		return
+	if daten.get("gegenstand"):
+		await _aufheben_geste(prop, daten)
 	if daten.get("nehmen"):
 		await sagen_eintrag(daten.nehmen)
 	if not daten.get("gegenstand"):
@@ -693,6 +756,36 @@ func nehmen(prop: PopochiuProp, daten: Dictionary) -> void:
 	prop.hide()
 	await geben(Bauplan.gegenstand_script_name(daten.gegenstand))
 	Hinweise.objekt_beruehrt(daten.gegenstand)
+
+
+## Max greift nach dem Prop (Entscheidung 2): vom Boden mit „aufheben“, aus Brusthöhe (Tresen,
+## Regal, Werkbank) mit „benutzen“. Der Bauplan kennt keine Höhe; maßgeblich ist, wie hoch die
+## Unterkante des Props über Max' Füßen liegt. Das Prop verschwindet, wenn die Hand es erreicht.
+const AUFHEBEN_BIS := 45.0
+
+
+func _aufheben_geste(prop: PopochiuProp, daten: Dictionary) -> void:
+	var m = C.player
+	if not m is CQFigur or CQFigur.gesten_aus() or ist_pixel():
+		return
+	var zeile: String = daten.nehmen.get("zeile", "") if daten.get("nehmen") else ""
+	if not zeile.is_empty() and CQGestenEinsatz.hat_zeile(zeile):
+		return
+	var r: Array = prop.bauplan().get("rect", []) if prop.has_method("bauplan") else []
+	# Das Prop liegt mit seiner Mitte auf position (Größe aus dem Bauplan)
+	var unten := prop.global_position.y + (float(r[3]) / 2.0 if r.size() == 4 else 0.0)
+	var boden: bool = unten >= m.global_position.y - AUFHEBEN_BIS * absf(m.scale.y)
+	var anim := "aufheben" if boden else "benutzen"
+	if not m.hat_animation(anim):
+		return
+	m.schauen_zu(prop.global_position.x)
+	var dauer: float = (m.get_node("AnimationPlayer") as AnimationPlayer).get_animation(anim).length
+	m.geste(anim, false)
+	await get_tree().create_timer(dauer * 0.5).timeout
+	if m.geste_laeuft:
+		prop.hide()
+	while is_instance_valid(m) and m.geste_laeuft:
+		await get_tree().process_frame
 
 
 ## Gegenstand in Max' Inventar legen (auch wenn gerade Pixel spielt).
