@@ -1,14 +1,15 @@
 # Offene Prompts Welt 2
 
-Stand 14. November 2026, abends. Alles, was für Welt 2 aus Gemini kommen muss, in der Reihenfolge, in der es sich anbietet. Die Prompts selbst stehen in [`welt-2.md`](welt-2.md) (erzeugt aus `../welt-2.md`); hier steht nur die Reihenfolge, was anzuhängen ist und worauf man achten sollte. Abhaken, was erledigt ist.
+Stand 15. November 2026. Alles, was für Welt 2 aus Gemini kommen muss, in der Reihenfolge, in der es sich anbietet. Die Prompts selbst stehen in [`welt-2.md`](welt-2.md) (erzeugt aus `../welt-2.md`); hier steht nur die Reihenfolge, was anzuhängen ist und worauf man achten sollte. Abhaken, was erledigt ist.
 
-**Stand:** 23 Figuren und 3 Gegenstandsbögen sind geliefert und im Spiel. Noch offen: alle Räume, 2 Figuren (Schildkröte, Straßenmusiker; beim Ägypter fehlen noch die zwei Farbfassungen für die Menge), die 2 großen Objekte, 7 Gegenstandsbögen, die Nahansichten und alle Posenbögen. Für die Posenbögen sind jetzt alle Konzeptblätter da außer der Schildkröte.
+**Stand:** Alle Bilder für Welt 2 sind geliefert und im Spiel. Die Hintergründe für Rede-Ringen und Paraden-Plan liegen bereit, die Minispiele zeigen sie aber noch nicht. Die Posenbögen führt die Gesamtliste.
+
+**Die vollständige Arbeitsliste mit fertigen Prompts** für Prolog, Welt 1 und Welt 2 ist [`00-offen-prolog-welt-1-welt-2.md`](00-offen-prolog-welt-1-welt-2.md). Sie geht vor, wenn sich etwas widerspricht; diese Datei hält nur den Überblick für Welt 2.
 
 **Allgemein:**
 
 - Räume: Layout-Skizze anhängen (Link steht beim Raum). Zweite und dritte Fassungen stehen als eigener Block unter dem Raum und werden im selben Chat aus dem fertigen Bild abgeleitet.
 - Figuren, Gegenstände, große Objekte: Max' Figurenblatt anhängen. Hintergrund muss einfarbig Magenta sein; malt Gemini ein Schachbrett oder Kästchen, im selben Chat „solid flat magenta background, no checkerboard, no boxes“ nachschieben.
-- Posenbögen: erst, wenn das Konzeptblatt der Figur fertig ist, und genau dieses anhängen. Misslungene Einzelposen im selben Chat nachbessern lassen.
 - Nahansichten und Tafeln: nichts anhängen.
 - Eigene Sprites (Figuren, Fähre, Wurfhebel, Deko) dürfen nicht im Raum mitgemalt sein. Gegenstände, die man mitnimmt, dürfen im Raum stehen; die schneidet Claude aus.
 - Breite Räume (1280×360: Nil-Delta, Thronsaal, Stadion, Agora): erst die linke Hälfte erzeugen, dann im selben Chat die rechte, die nahtlos anschließt. Zweitfassungen jeweils für die Hälfte, in der sich etwas ändert. Seit 14. November abends sind Nil-Delta, Thronsaal und Stadion breit, weil dort bis zu neun Figuren gleichzeitig stehen; ältere Prompts für diese drei Räume nicht mehr verwenden. Am selben Abend wurden außerdem die Motive von Fährsteg Olympia, Hafen Syrakus, Archimedes' Werkstatt, Startbüro und Agora an die Anordnung im Spiel angeglichen; auch hier nur noch die aktuellen Prompts nehmen.
@@ -34,15 +35,16 @@ Stand 14. November 2026, abends. Alles, was für Welt 2 aus Gemini kommen muss, 
 - [x] Steinmetz
 - [x] Zeremonienmeister
 - [x] Ägypter aus dem Volk
-- [ ] Ägypter aus dem Volk, zweite und dritte Fassung für die Menge (im selben Chat aus dem fertigen Bild, die Prompts stehen in welt-2.md unter „Ägypter aus dem Volk“)
-- [ ] Krokodil-Fähre (großes Objekt)
+- [x] Ägypter aus dem Volk, zweite und dritte Fassung für die Menge (im selben Chat aus dem fertigen Bild, die Prompts stehen in welt-2.md unter „Ägypter aus dem Volk“)
+- [x] Krokodil-Fähre (großes Objekt)
 
 ## 3. Räume in Griechenland
 
 - [x] Fährsteg Olympia
-- [ ] Agora, breit: linke Hälfte, dann rechte Hälfte; danach zweite Fassung (Sandale auf der Säule) und dritte Fassung (Statue ohne Arme)
+- [x] Agora, breit: linke Hälfte, dann rechte Hälfte; danach zweite Fassung (Sandale auf der Säule) und dritte Fassung (Statue ohne Arme)
 - [x] Startbüro (Schalter leer, Wartende auf der Bank dürfen bleiben)
-- [ ] Stadion, **breit**: linke Hälfte, dann rechte Hälfte; zwei Fassungen: normal, dann Parade mit schiefem Glockenturm
+- [x] Stadion, normale Fassung (als ein Panorama)
+- [x] Stadion, Parade-Fassung mit schiefem Glockenturm (im selben Chat aus dem Panorama: „Same image, only change: garlands, banners and flower petals everywhere, the bell tower now visibly leaning. Everything else exactly the same.“)
 - [x] Hafen Syrakus
 - [x] Archimedes' Werkstatt
 - [x] Grabhügel Syrakus, zwei Fassungen: leerer Sockel, dann mit verwittertem Grabstein
@@ -62,54 +64,35 @@ Stand 14. November 2026, abends. Alles, was für Welt 2 aus Gemini kommen muss, 
 - [x] Römische Touristin
 - [x] Beamter 1
 - [x] Beamter 2
-- [ ] Schildkröte
-- [ ] Straßenmusiker
-- [ ] Wurfhebel (großes Objekt)
+- [x] Schildkröte
+- [x] Straßenmusiker
+- [x] Wurfhebel (großes Objekt)
 
 ## 5. Gegenstände
 
 - [x] Ägypten (3×4)
 - [x] Olympia (3×3)
-- [ ] Feigen-Zustände (1×4)
+- [x] Feigen-Zustände (1×4)
 - [x] Syrakus (2×3)
-- [ ] Schriftstücke (1×4)
-- [ ] Getränke-Zustände (1×3)
-- [ ] Grabstein-Zustände (1×4)
-- [ ] Wunderdinge (1×3; das Kaugummi bleibt hellrosa, nicht knallpink wie der Hintergrund)
-- [ ] Hieroglyphen (4×4)
-- [ ] Deko Welt 2 (3×3)
+- [x] Schriftstücke (1×4)
+- [x] Getränke-Zustände (1×3)
+- [x] Grabstein-Zustände (1×4)
+- [x] Wunderdinge (1×3; das Kaugummi bleibt hellrosa, nicht knallpink wie der Hintergrund)
+- [x] Hieroglyphen (4×4; liegen in `game/grafik/hieroglyphen/`, im Rätsel noch Textauswahl; auf dem Bogen steht Brot statt Schlange)
+- [x] Deko Welt 2 (3×3)
 
 ## 6. Nahansichten und Tafeln
 
-- [ ] Hieroglyphen-Grammatik
-- [ ] Fährtafel
-- [ ] Aushang im Startbüro
-- [ ] Sandgrube
-- [ ] Konter-Auswahl
-- [ ] Paraden-Plan
+- [x] Hieroglyphen-Grammatik
+- [x] Fährtafel
+- [x] Aushang im Startbüro
+- [x] Sandgrube (Bild liegt bereit, Minispiel noch ohne Hintergrund)
+- [x] Konter-Auswahl (Bild liegt bereit, Minispiel noch ohne Hintergrund)
+- [x] Paraden-Plan (Bild liegt bereit, Minispiel noch ohne Hintergrund)
 
-## 7. Posenbögen (je nach fertigem Konzeptblatt)
+## 7. Posenbögen
 
-Die Bewegungen selbst liegen schon als 3D-Clips vor; sie bestimmen Timing und Beine. Die Posenbögen liefern die Arm- und Kopfhaltungen, die im gemalten Sprite nicht vorkommen. Ohne sie bleiben Gesten steif.
-
-
-- [ ] Max Tag 1 (3 Posen)
-- [ ] Max Finaltag (4 Posen)
-- [ ] Ramses (3)
-- [ ] Sobek (3)
-- [ ] Hofkater (3)
-- [ ] Schildkröte (2)
-- [ ] Archimedes im Handtuch (3)
-- [ ] Hermes (3)
-- [ ] Leonidas (3)
-- [ ] Cicero (3)
-- [ ] Philosoph (2)
-- [ ] Fächerwedler (3)
-- [ ] Publikum (2)
-- [ ] Nebet (3)
-- [ ] Hieron (3)
-- [ ] Tiro (3)
-- [ ] Palastschreiber (3)
+Die Posenbögen arbeitet der Thread „Offene Grafik-Prompts optimieren“ ab; Prompts und Stand stehen in [`00-offen-prolog-welt-1-welt-2.md`](00-offen-prolog-welt-1-welt-2.md) und [`01-figurenboegen.md`](01-figurenboegen.md). Hier werden sie nicht mehr geführt.
 
 Effekte (Kaugummi-Sonne, Brennspiegel, Zeitfähre, Altern des Grabsteins) und Pixel als Gott baut Claude ohne neue Bilder.
 
