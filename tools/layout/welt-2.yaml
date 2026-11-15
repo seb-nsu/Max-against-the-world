@@ -75,18 +75,20 @@ nil_delta:
 
 thronsaal_ramses:
   farbe: "#b98b3e"
-  laufbereich: [[8, 280], [1272, 280], [1272, 356], [8, 356]]
+  hintergrund: res://grafik/hintergruende/w2_bg_thronsaal_ramses_v01.png
+  tiefe: 0.85
+  laufbereich: [[8, 292], [1272, 292], [1272, 356], [8, 356]]
   marker:
-    start: [48, 320]
-    von_nil_delta: [48, 320]
-    von_palastkueche: [1184, 320]
-    sobek: [400, 336]
-    kissen: [720, 304]
+    start: [60, 320]
+    von_nil_delta: [60, 320]
+    von_palastkueche: [1220, 320]
+    sobek: [420, 330]
+    kissen: [770, 300]
   figuren:
-    schreiber: [224, 304]
-    ramses: [800, 248]
-    hofkater: [720, 296]
-    faecherwedler: [944, 304]
+    schreiber: [240, 305]
+    ramses: [955, 266]
+    hofkater: [770, 298]
+    faecherwedler: [1080, 305]
   alias:
     opferschale_des_hofkaters: opferschale
     inschrift: inschrift
@@ -95,20 +97,20 @@ thronsaal_ramses:
     tuer_zur_kueche: tuer_zur_kueche
     fackeln: fackeln
   hotspots:
-    thron: {rect: [752, 156, 96, 124], gehe: [800, 312], name: Thron}
-    schreiberpult: {rect: [182, 236, 60, 44], gehe: [224, 312], name: Schreiberpult}
-    sarkophag: {rect: [16, 128, 48, 144], gehe: [48, 312], name: Sarkophag}
-    mumifizierte_katze: {rect: [320, 160, 32, 56], gehe: [336, 308], name: Mumifizierte Katze}
-    wandfries: {rect: [160, 32, 880, 36], gehe: [640, 308], name: Wandfries}
-    saeulen: {rect: [422, 80, 44, 200], gehe: [448, 308], name: Säulen}
-    inschrift: {rect: [546, 124, 52, 72], gehe: [568, 308], name: Inschrift}
-    opferschale: {rect: [646, 272, 28, 12], gehe: [656, 316], name: Opferschale}
-    fackeln: {rect: [1048, 80, 48, 48], gehe: [1072, 308], name: Fackeln}
+    thron: {rect: [880, 155, 110, 135], gehe: [955, 315], name: Thron}
+    schreiberpult: {rect: [150, 205, 120, 70], gehe: [210, 310], name: Schreiberpult}
+    sarkophag: {rect: [105, 130, 45, 150], gehe: [130, 310], name: Sarkophag}
+    mumifizierte_katze: {rect: [212, 122, 42, 58], gehe: [232, 305], name: Mumifizierte Katze}
+    wandfries: {rect: [580, 40, 520, 75], gehe: [840, 305], name: Wandfries}
+    saeulen: {rect: [355, 20, 55, 255], gehe: [380, 310], name: Säulen}
+    inschrift: {rect: [440, 80, 85, 145], gehe: [480, 305], name: Inschrift}
+    opferschale: {rect: [828, 278, 38, 22], gehe: [848, 315], name: Opferschale}
+    fackeln: {rect: [1160, 100, 30, 90], gehe: [1170, 310], name: Fackeln}
   props:
-    pharaonenteller: {rect: [924, 252, 24, 12], gehe: [928, 312]}
+    pharaonenteller: {rect: [1022, 205, 60, 58], gehe: [1050, 312]}
   ausgaenge:
-    nil_delta: {rect: [4, 160, 8, 120], gehe: [24, 320], id: ausgang_nil_delta, name: Nil-Delta}
-    palastkueche: {rect: [1224, 140, 52, 140], gehe: [1240, 316], id: tuer_zur_kueche, name: Tür zur Küche}
+    nil_delta: {rect: [10, 100, 90, 190], gehe: [60, 310], id: ausgang_nil_delta, name: Nil-Delta}
+    palastkueche: {rect: [1195, 80, 80, 220], gehe: [1230, 315], id: tuer_zur_kueche, name: Tür zur Küche}
 
 palastkueche:
   farbe: "#9c6b45"

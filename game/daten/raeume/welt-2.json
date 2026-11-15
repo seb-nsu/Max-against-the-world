@@ -490,16 +490,16 @@
     1280,
     360
    ],
-   "hintergrund": "res://grafik/platzhalter/raum_thronsaal_ramses.png",
+   "hintergrund": "res://grafik/hintergruende/w2_bg_thronsaal_ramses_v01.png",
    "farbe": "#b98b3e",
    "laufbereich": [
     [
      8,
-     280
+     292
     ],
     [
      1272,
-     280
+     292
     ],
     [
      1272,
@@ -512,57 +512,58 @@
    ],
    "marker": {
     "start": [
-     48,
+     60,
      320
     ],
     "von_nil_delta": [
-     48,
+     60,
      320
     ],
     "von_palastkueche": [
-     1184,
+     1220,
      320
     ],
     "sobek": [
-     400,
-     336
+     420,
+     330
     ],
     "kissen": [
-     720,
-     304
+     770,
+     300
     ]
    },
+   "tiefe": 0.85,
    "figuren": [
     {
      "id": "schreiber",
      "script_name": "Schreiber",
      "pos": [
-      224,
-      304
+      240,
+      305
      ]
     },
     {
      "id": "ramses",
      "script_name": "Ramses",
      "pos": [
-      800,
-      248
+      955,
+      266
      ]
     },
     {
      "id": "hofkater",
      "script_name": "Hofkater",
      "pos": [
-      720,
-      296
+      770,
+      298
      ]
     },
     {
      "id": "faecherwedler",
      "script_name": "Faecherwedler",
      "pos": [
-      944,
-      304
+      1080,
+      305
      ]
     }
    ],
@@ -572,14 +573,14 @@
      "script_name": "Thron",
      "name_key": "UI_OBJ_THRON",
      "rect": [
-      752,
-      156,
-      96,
-      124
+      880,
+      155,
+      110,
+      135
      ],
      "gehe": [
-      800,
-      312
+      955,
+      315
      ],
      "ansehen": [
       {
@@ -604,14 +605,14 @@
      "script_name": "Schreiberpult",
      "name_key": "UI_OBJ_SCHREIBERPULT",
      "rect": [
-      182,
-      236,
-      60,
-      44
+      150,
+      205,
+      120,
+      70
      ],
      "gehe": [
-      224,
-      312
+      210,
+      310
      ],
      "ansehen": [
       {
@@ -636,14 +637,14 @@
      "script_name": "Sarkophag",
      "name_key": "UI_OBJ_SARKOPHAG",
      "rect": [
-      16,
-      128,
-      48,
-      144
+      105,
+      130,
+      45,
+      150
      ],
      "gehe": [
-      48,
-      312
+      130,
+      310
      ],
      "ansehen": [
       {
@@ -669,14 +670,14 @@
      "script_name": "MumifizierteKatze",
      "name_key": "UI_OBJ_MUMIFIZIERTE_KATZE",
      "rect": [
-      320,
-      160,
-      32,
-      56
+      212,
+      122,
+      42,
+      58
      ],
      "gehe": [
-      336,
-      308
+      232,
+      305
      ],
      "ansehen": [
       {
@@ -703,14 +704,14 @@
      "script_name": "Wandfries",
      "name_key": "UI_OBJ_WANDFRIES",
      "rect": [
-      160,
-      32,
-      880,
-      36
+      580,
+      40,
+      520,
+      75
      ],
      "gehe": [
-      640,
-      308
+      840,
+      305
      ],
      "ansehen": [
       {
@@ -744,14 +745,14 @@
      "script_name": "Saeulen",
      "name_key": "UI_OBJ_SAEULEN",
      "rect": [
-      422,
-      80,
-      44,
-      200
+      355,
+      20,
+      55,
+      255
      ],
      "gehe": [
-      448,
-      308
+      380,
+      310
      ],
      "ansehen": [
       {
@@ -776,14 +777,14 @@
      "script_name": "Inschrift",
      "name_key": "UI_OBJ_INSCHRIFT",
      "rect": [
-      546,
-      124,
-      52,
-      72
+      440,
+      80,
+      85,
+      145
      ],
      "gehe": [
-      568,
-      308
+      480,
+      305
      ],
      "ansehen": [
       {
@@ -824,14 +825,14 @@
      "script_name": "Opferschale",
      "name_key": "UI_OBJ_OPFERSCHALE",
      "rect": [
-      646,
-      272,
-      28,
-      12
+      828,
+      278,
+      38,
+      22
      ],
      "gehe": [
-      656,
-      316
+      848,
+      315
      ],
      "ansehen": [
       {
@@ -857,14 +858,14 @@
      "script_name": "Fackeln",
      "name_key": "UI_OBJ_FACKELN",
      "rect": [
-      1048,
-      80,
-      48,
-      48
+      1160,
+      100,
+      30,
+      90
      ],
      "gehe": [
-      1072,
-      308
+      1170,
+      310
      ],
      "ansehen": [
       {
@@ -891,16 +892,16 @@
      "script_name": "Pharaonenteller",
      "name_key": "UI_OBJ_PHARAONENTELLER",
      "rect": [
-      924,
-      252,
-      24,
-      12
+      1022,
+      205,
+      60,
+      58
      ],
      "gehe": [
-      928,
+      1050,
       312
      ],
-     "textur": "res://grafik/platzhalter/prop_pharaonenteller.png",
+     "textur": "res://grafik/props/pharaonenteller.png",
      "gegenstand": "pharaonenteller",
      "ansehen": [
       {
@@ -946,14 +947,14 @@
      "ziel": "nil_delta",
      "name_key": "UI_OBJ_AUSGANG_NIL_DELTA",
      "rect": [
-      4,
-      160,
-      8,
-      120
+      10,
+      100,
+      90,
+      190
      ],
      "gehe": [
-      24,
-      320
+      60,
+      310
      ],
      "erreichbar_ab": "start",
      "ansehen": []
@@ -964,14 +965,14 @@
      "ziel": "palastkueche",
      "name_key": "UI_OBJ_TUER_ZUR_KUECHE",
      "rect": [
-      1224,
-      140,
-      52,
-      140
+      1195,
+      80,
+      80,
+      220
      ],
      "gehe": [
-      1240,
-      316
+      1230,
+      315
      ],
      "erreichbar_ab": "start",
      "ansehen": [
