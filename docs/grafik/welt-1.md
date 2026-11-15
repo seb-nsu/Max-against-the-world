@@ -170,6 +170,28 @@ Alle mit dem Baustein GEGENSTÄNDE. Kochlöffel, Socke und Notizbuch stehen bei 
 
 Statue, Kürbisturm, Spiegel und Schwert im Stein sind Teil der Hintergründe; Laute, Drachen-Steckbrief und Grammophon sind schon in den fertigen Hintergründen von Taverne und Troll-Brücke gemalt und deshalb aus dem Sammelbild gestrichen (13. November 2026). Neu im Sammelbild: Hammer und glühendes Hufeisen für den hämmernden Schmied (der Hammer in seiner Hand wird dafür übermalt) und der rückwärts fliegende Schüler, der im Klassenzimmer ab und zu hinter dem Fenster vorbeifliegt (lebendiger Hintergrund, Witz W1\_HOGG\_MAX\_0165); er wird auf etwa 16 Pixel verkleinert.
 
+### Lebendige Hintergründe
+
+Plan vom 15. November 2026 (Sebastian: Bäume im Wind, fließendes Wasser, Segel, Leben auf den Schiffen; Räume sollen lebendiger wirken). Zwei Wege, ausgebaut wird über die Ambiente-Ebene (`cq_ambiente.gd`, Eintrag `ambiente:` im Layout, `offene-punkte.md` P16):
+
+- **In Godot ohne neues Bild:** Wasser fließt (Shader, der die Wasserfläche des Hintergrunds langsam verschiebt und glitzern lässt), Bäume, Schilf und Tücher wiegen (Krone oder Tuch in Aseprite aus dem Hintergrund ausschneiden, ein Shader biegt sie sanft hin und her), Wolken ziehen, Boote schaukeln und Schilder schwingen (Tween), Licht flackert (Lichtfarbe pulsiert mit dem Feuer), Rauch, Dampf, Staub im Licht, Funken, Glühwürmchen und Blätter (Partikel).
+- **Gemalt mit dem Baustein EFFEKT** (Bilder unten in der Animations-Tabelle ab W1-B61): alles, dessen Form sich ändert, also Feuer, Wasserstrahl, Wimpel, kleine Tiere. Wo das Bild auf einer gemalten Stelle liegt, kommt der Ausschnitt aus dem Hintergrund mit; danach mit `tools/pixelieren.py` auf die Farben des Raums.
+
+| Raum | In Godot | Gemalt |
+| --- | --- | --- |
+| Dorfplatz | Vögel und Blätter (schon drin), Bäume rechts wiegen, Wolken ziehen, Luftschloss schwebt auf und ab, Rauch aus zwei Schornsteinen, Taverne-Schild schwingt, Glut in der Schmiede-Ecke flackert | Huhn pickt (B76), Schmetterling (B68) |
+| Taverne | Lichtschein des Kamins pulsiert auf Boden und Wänden, Staub im Licht | Kaminfeuer (B61), Fondue blubbert (B62) |
+| Schmiede | Lichtschein der Esse pulsiert, Funken steigen, Pfannen schwingen leicht, Rauch | Esse glüht (B63), Funken beim Schlag (B64, zum Hämmern B27) |
+| Zauberstab-Laden | Staub im Fensterlicht | Schachtel ruckelt (B66) |
+| Klassenzimmer | Schüler auf dem Besen (schon drin), Staub im Fensterlicht, grüner Lichtschein vom Kessel | Kessel blubbert (B65) |
+| Troll-Brücke | Bach fließt und glitzert, Bäume rechts und Blumen links wiegen, Wolken ziehen, Vögel | Fisch springt (B67), Schmetterling (B68) |
+| Zauberwald | Lichtstrahlen werden heller und dunkler, Staub in den Strahlen, Glühwürmchen, Leuchtpilze und die blaue Pilzfläche pulsieren, Zweige wiegen | Eule im hohlen Baum (B69) |
+| Luftschloss | Wolken am Boden ziehen langsam, Ranke wiegt, Spiegel glitzert | Wimpel flattern (B71), Brunnen plätschert (B72), Glitzern (B74) |
+| Goblin-Bergwerk | Fackellicht flackert, Licht im Stolleneingang | Fackel (B70), Steinchen rieseln (B73) |
+| Turmkeller, Abstellkammern | Fackellicht flackert, Spinnweben wehen, Staub | Fackel (B70), Glitzern auf dem Goldhaufen (B74) |
+| Wasserschloss | See wellt und glitzert, Schilf wiegt, Ruderboot schaukelt, Bäume wiegen | Ente schwimmt (B75), Wimpel auf dem Turm (B71), Glitzern (B74) |
+| Thronsaal | Mondlicht durchs Fenster mit Staub, Wolken ziehen am Mond vorbei (vorgemerkt in P16), Fackellicht flackert | Fackel (B70) |
+
 ### Animationen
 
 | Figur | Aktion | Rätsel | Bilder | Ablauf | Motiv |
@@ -234,3 +256,19 @@ Statue, Kürbisturm, Spiegel und Schwert im Stein sind Teil der Hintergründe; L
 | Lord Moderwort | Reden | Kulisse | 6 | Schleife | From the Moderwort reference sprite: he talks sulkily, dabs his nostril slits with the handkerchief, waves the crooked wand weakly, sleeves flopping, mouth opening and closing. 6 frames, loops, facing right, feet stay planted |
 | Smaugi | Reden | Kulisse | 6 | Schleife | From the Smaugi reference sprite: he talks with a tired sigh, waves the feather duster a little, droopy eyes blinking, a tiny puff of smoke from his nose, mouth opening and closing. 6 frames, loops, facing right, body and tail stay still |
 | Goblin-Arbeiter 1 | Reden | Kulisse | 4 | Schleife | From the Goblin-Arbeiter 1 reference sprite: he grumbles, the pickaxe resting on his shoulder, jabs a thumb backward, mouth opening and closing. 4 frames, loops, facing right, feet stay planted |
+| Taverne | Kaminfeuer | Kulisse | 8 | Schleife | EFFEKT, about 70x50: only the fire of the stone fireplace, matching the attached background crop in shape, colors and light: tall orange and yellow flames lick upward and flicker, tongues split and merge again, the glowing logs pulse from red to orange, two or three sparks rise and fade. 8 frames, loops, the logs stay in place |
+| Taverne | Fondue blubbert | Kulisse | 6 | Schleife | EFFEKT, about 40x40: only the surface of the yellow cheese fondue in the small copper pot, matching the attached background crop: a bubble swells, pops with a small splash, the next one rises elsewhere, a thin wisp of steam curls up and fades. 6 frames, loops, the pot rim stays in place |
+| Schmiede | Esse glüht | Kulisse | 8 | Schleife | EFFEKT, about 80x60: only the glowing coals and flames inside the stone forge, matching the attached background crop: the coals pulse from deep red to bright orange in slow waves, small yellow flames with blue roots dance above them, a few sparks drift up into the chimney. 8 frames, loops, the forge stones stay in place |
+| Schmiede | Funken beim Schlag | Kulisse | 4 | einmalig | EFFEKT, about 48x32: a burst of bright yellow and orange sparks from a hammer strike on an anvil, flying out in a low fan to both sides, arcing down and fading to dark red dots. 4 frames, plays once, the last frame almost empty |
+| Klassenzimmer | Kessel blubbert | Kulisse | 8 | Schleife | EFFEKT, about 60x60: only the bright green potion surface of the black cauldron and the steam above it, matching the attached background crop: round bubbles swell and pop, green steam rises in soft curls and drifts apart, the small fire under the cauldron flickers. 8 frames, loops, the cauldron stays in place |
+| Zauberstab-Laden | Schachtel ruckelt | Kulisse | 6 | einmalig | EFFEKT, about 24x16: a narrow wooden wand box in its shelf slot, matching the attached background crop: it jiggles, slides halfway out with a jolt, a tiny puff of golden sparkles escapes from the lid, then it slides back into place. 6 frames, plays once, the last frame equals the first |
+| Troll-Brücke | Fisch springt | Kulisse | 6 | einmalig | EFFEKT, about 32x32: a small silver trout leaps out of a clear brook in a short arc, shining in the sun, and dives back in; a ring of ripples and a few drops remain and fade. 6 frames, plays once, the water surface line stays at the same height |
+| Troll-Brücke | Schmetterling | Kulisse | 4 | Schleife | EFFEKT, about 12x12: a small lemon-yellow butterfly seen from the side, wings fully open, half closed, closed upright, half open again. 4 frames, loops, the body stays in the center |
+| Zauberwald | Eule im hohlen Baum | Kulisse | 6 | einmalig | EFFEKT, about 32x32: a small round brown owl peeks out of a dark tree hollow, matching the attached background crop: it blinks its big yellow eyes slowly, turns its head far to one side, back again, and sinks back into the dark. 6 frames, plays once, the bark around the hollow stays in place |
+| Fackel | Brennen | Kulisse | 8 | Schleife | EFFEKT, about 16x32: the flame of an iron wall torch, for every torch in the tower, the mine and the throne rooms: a warm orange flame with a yellow core flickers, leans a little left and right, its tip splits and closes again, one tiny spark rises. 8 frames, loops, the bottom of the flame stays at the same point |
+| Luftschloss | Wimpel flattern | Kulisse | 8 | Schleife | EFFEKT, about 24x12: a long pale pink triangular pennant on the tip of a thin golden pole, waving in a soft wind in a wave that runs from the pole to the tip. 8 frames, loops, the pole end stays fixed at the left edge |
+| Luftschloss | Brunnen plätschert | Kulisse | 6 | Schleife | EFFEKT, about 40x30: only the water of the small stone fountain, matching the attached background crop: a thin jet rises from the center, falls back in a soft umbrella, splashes into the basin with glittering drops. 6 frames, loops, the basin stays in place |
+| Goblin-Bergwerk | Steinchen rieseln | Kulisse | 6 | einmalig | EFFEKT, about 16x48: a thin trickle of grey dust and small pebbles falls from a crack in a wooden ceiling beam, lands at the bottom in a little puff of dust that spreads and settles. 6 frames, plays once, the last frame almost empty |
+| Glitzern | Funkeln | Kulisse | 6 | einmalig | EFFEKT, about 12x12: a tiny four-pointed white and pale yellow star twinkle as on gold coins, water or glass: a dot grows into a cross-shaped sparkle, turns slightly, shrinks back to a dot and vanishes. 6 frames, plays once, centered |
+| Wasserschloss | Ente schwimmt | Kulisse | 6 | Schleife | EFFEKT, about 24x16: a small brown mallard duck swimming to the right on calm water, seen from the side, head bobbing, a small V-shaped wake behind it, the waterline across its body stays level. 6 frames, loops |
+| Dorfplatz | Huhn pickt | Kulisse | 6 | Schleife | EFFEKT, about 20x20: a small brown hen on cobblestones seen from the side facing right, takes a step, bends down and pecks twice at the ground, lifts the head and looks around with a jerk. 6 frames, loops, the feet stay on the same line |

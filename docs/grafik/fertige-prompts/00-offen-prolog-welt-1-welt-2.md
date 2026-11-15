@@ -26,6 +26,8 @@ Erzeugt von `tools/prompts_zusammensetzen.py` aus den anderen Dateien in diesem 
 - Welt 1: W1-B02 Toadi: Keuchen; W1-B03 Toadi: Auf Max zeigen; W1-B04 Pixel: Minka umgarnen; W1-B06 Gollo: Ring werfen; W1-B07 Max: Kochlöffel schwingen; W1-B08 Max: Ziege melken; W1-B09 Max: Bohne pflanzen und gießen; W1-B10 Bohnenranke: Wachsen; W1-B11 Niesrosen: Aufgehen; W1-B12 Troll Waldemar: Musical-Nummer; W1-B13 Troll Waldemar: Fußbad; W1-B17 Zauberbesen: Fegen; W1-B18 Zauberbesen: Haarspur jagen; W1-B19 Pixel: Haare verlieren; W1-B20 Lord Moderwort: Zaubern; W1-B21 Lord Moderwort: Niesen; W1-B22 Fluch wird Käse: Effekt; W1-B23 Pilz-Verwandlung: Effekt; W1-B24 Smaugi: Kram hergeben; W1-B25 Smaugi: Gerührt schniefen; W1-B28 Übungsbesen: Pixel jagen; W1-B29 Zauberbesen: Max wegfegen; W1-B30 Wirt Humbert: Krug polieren; W1-B31 Zauberstabmacher: Mustern; W1-B32 Rotkäppchen: Pakete balancieren; W1-B33 Maklerin: Notieren; W1-B34 Grimmzahn: Protestieren; W1-B35 Goblin-Arbeiter 1: Pickel schwingen; W1-B36 Goblin-Arbeiter 2: Gähnen und strecken; W1-B37 Wirtskatze Minka: Putzen; W1-B38 Taverne-Huhn: Aufplustern; W1-B39 Schmiede-Ziege: Im Kreis drehen; W1-B40 XXL-Ziege: Wiederkäuen; W1-B41 Schwan: Fauchen
 - Welt 2, Tiere (ohne 3D-Clip, jedes Bild gemalt): W2-B04 Sobek, im Wasser: Treiben; W2-B05 Sobek, im Wasser: Fähre ziehen; W2-B06 Sobek, an Land: Verbeugen; W2-B07 Sobek, an Land: Gähnen; W2-B08 Hofkater: Putzen; W2-B09 Hofkater: Schwanz zucken; W2-B10 Schildkröte: Kopf einziehen; W2-P48 Sobek im Wasser; W2-P49 Hofkater
 - Welt 2, Reden und Eigenheiten (Arme und Kopf; Beine und Timing aus dem 3D-Clip): W2-P28 Ramses; W2-P29 Fährmann; W2-P30 Köchin Nebet; W2-P31 Palastschreiber; W2-P32 Archimedes; W2-P33 König Hieron; W2-P34 Cicero; W2-P35 Tiro; W2-P36 Leonidas; W2-P37 Hermes; W2-P38 Brian; W2-P39 Philosoph; W2-P40 Römischer Tourist; W2-P41 Römische Touristin; W2-P42 Beamter 2; W2-P43 Fächerwedler; W2-P44 Zeremonienmeister; W2-P45 Steinmetz; W2-P46 Ägypter aus dem Volk; W2-P47 Straßenmusiker
+- Lebendige Hintergründe, Welt 1 (Ausschnitt aus dem fertigen Hintergrund anhängen, wo es dabei steht): W1-B61 Taverne: Kaminfeuer; W1-B62 Taverne: Fondue blubbert; W1-B63 Schmiede: Esse glüht; W1-B64 Schmiede: Funken beim Schlag; W1-B65 Klassenzimmer: Kessel blubbert; W1-B66 Zauberstab-Laden: Schachtel ruckelt; W1-B67 Troll-Brücke: Fisch springt; W1-B68 Troll-Brücke: Schmetterling; W1-B69 Zauberwald: Eule im hohlen Baum; W1-B70 Fackel: Brennen; W1-B71 Luftschloss: Wimpel flattern; W1-B72 Luftschloss: Brunnen plätschert; W1-B73 Goblin-Bergwerk: Steinchen rieseln; W1-B74 Glitzern: Funkeln; W1-B75 Wasserschloss: Ente schwimmt; W1-B76 Dorfplatz: Huhn pickt
+- Lebendige Hintergründe, Welt 2 (Boote, Vögel und Tiere; gehen schon ohne Hintergrund): W2-B11 Nil-Delta: Feluke segelt; W2-B12 Nil-Delta: Ibis stakst; W2-B13 Nil-Delta: Fischer wirft das Netz; W2-B14 Nil-Delta: Libelle; W2-B15 Hafen Syrakus: Segelschiff auf See; W2-B16 Hafen Syrakus: Möwe fliegt; W2-B17 Hafen Syrakus: Möwe auf dem Pfahl; W2-B18 Hafen Syrakus: Hafenarbeiter mit Amphore; W2-B20 Fährsteg Olympia: Ziege grast; W2-B23 Sphinx: Geier kreist; W2-B24 Grabhügel Syrakus: Eidechse; W2-B27 Stadion: Wimpel flattern; W2-B28 Agora: Tauben picken; W2-B29 Agora: Taube fliegt auf
 - Welt 2 (Posenbögen; die Bewegung selbst kommt aus dem 3D-Clip): W2-P01 Max Tag 1; W2-P02 Max Finaltag; W2-P03 Ramses; W2-P04 Sobek; W2-P05 Hofkater; W2-P06 Schildkröte; W2-P07 Archimedes; W2-P09 Leonidas; W2-P10 Cicero; W2-P11 Philosoph; W2-P12 Fächerwedler; W2-P13 Nebet; W2-P14 Hieron; W2-P15 Tiro; W2-P16 Palastschreiber; W2-P17 Publikum; W2-P18 Fährmann; W2-P19 Steinmetz; W2-P20 Zeremonienmeister; W2-P21 Brian; W2-P22 Beamter 1; W2-P23 Beamter 2; W2-P24 Römische Touristin; W2-P25 Ägypter aus dem Volk; W2-P26 Straßenmusiker; W2-P27 Sobek im Wasser
 
 **3. Gegenstände**
@@ -38,6 +40,7 @@ Erzeugt von `tools/prompts_zusammensetzen.py` aus den anderen Dateien in diesem 
 - Welt 2, Ägypten: W2-R01 Nil-Delta mit Fährsteg; W2-R04 Thronsaal; W2-R05 Palastküche; W2-R06 Sphinx
 - Welt 2, Griechenland: W2-R02 Fährsteg Olympia; W2-R11 Agora; W2-R10 Startbüro; W2-R09 Stadion; W2-R03 Hafen Syrakus; W2-R07 Archimedes' Werkstatt; W2-R08 Grabhügel Syrakus; W2-R12 Flusskarte
 - Welt 2, Nahansichten und Tafeln (füllen das ganze Bild wie ein Hintergrund): W2-N01 Hieroglyphen-Grammatik (Rätsel 2); W2-N02 Fährtafel; W2-N03 Aushang im Startbüro (Rätsel 3); W2-N04 Sandgrube (Rede-Ringen); W2-N05 Konter-Auswahl (Rede-Ringen); W2-N06 Paraden-Plan (Rätsel 6b)
+- Welt 2, lebendige Hintergründe auf gemalten Stellen (erst wenn der Raum fertig ist, Ausschnitt anhängen): W2-B19 Hafen Syrakus: Tintenfisch zappelt; W2-B21 Sanduhr: Sand rieselt; W2-B22 Palastküche: Ofenfeuer; W2-B25 Archimedes' Werkstatt: Wasserorgel blubbert; W2-B26 Stadion: Zuschauer jubeln; W2-B30 Agora: Menge im Hintergrund; W2-B31 Startbüro: Wartende auf der Bank
 
 **5. Später: erst für Welt 3, Welt 4 und das Finale**
 
@@ -2055,6 +2058,407 @@ CAMERA: static, strict side view as on the attached sheet, same scale and the sa
 NEGATIVE: no second character, no parts of the boy Max from the reference unless this is Max, no props that are not described, no environment, no floor, no ground shadow, no checkerboard, no frames, panels or cell borders, no text, labels or numbers, no motion blur, no ghosting, no duplicated or extra limbs, no change to face, proportions, clothing or colors, no photorealism, no 3D render, no watermark, no in-between blur, no speed lines, no smear frames, no sliding feet, no change of scale or baseline between poses, no camera movement, no zoom, no perspective change, no morphing, no extra poses beyond the ones listed
 ```
 
+## Lebendige Hintergründe, Welt 1 (Ausschnitt aus dem fertigen Hintergrund anhängen, wo es dabei steht)
+
+### W1-B61: Taverne: Kaminfeuer
+
+**Anhängen:** den passenden Ausschnitt aus dem fertigen Hintergrund (Taverne); das Ergebnis danach mit `tools/pixelieren.py` auf die Farben des Raums bringen · **Bilder:** 8 · **Ablauf:** Schleife
+
+```text
+STYLE: Visual effect frames for a 2D game, frames side by side in one row, evenly spaced, frame count as given in the motif, every frame the same size with the effect centered, flat cel shading, solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no frames or panels, no text.
+EFFECT: Only the fire of the stone fireplace, matching the attached background crop in shape, colors and light: tall orange and yellow flames lick upward and flicker, tongues split and merge again, the glowing logs pulse from red to orange, two or three sparks rise and fade.
+OVERLAY: the crop only shows where the effect sits, its size, light and colors; draw only the moving part named above on the magenta background, not the walls, furniture or anything else from the crop, so it can be laid exactly over the painted spot.
+FRAMES: 8 frames side by side, about 0.8 s at 10 frames per second, loops seamlessly: the last frame leads back into the first, each frame 70x50 pixels in the game.
+END: no separate end frame, the loop closes.
+CAMERA: static, no zoom, no pan, the effect stays centered in every frame.
+NEGATIVE: no characters unless named, no background scene, no text, no frames or panels, no checkerboard, no motion blur, no speed lines
+```
+
+### W1-B62: Taverne: Fondue blubbert
+
+**Anhängen:** den passenden Ausschnitt aus dem fertigen Hintergrund (Taverne); das Ergebnis danach mit `tools/pixelieren.py` auf die Farben des Raums bringen · **Bilder:** 6 · **Ablauf:** Schleife
+
+```text
+STYLE: Visual effect frames for a 2D game, frames side by side in one row, evenly spaced, frame count as given in the motif, every frame the same size with the effect centered, flat cel shading, solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no frames or panels, no text.
+EFFECT: Only the surface of the yellow cheese fondue in the small copper pot, matching the attached background crop: a bubble swells, pops with a small splash, the next one rises elsewhere, a thin wisp of steam curls up and fades.
+OVERLAY: the crop only shows where the effect sits, its size, light and colors; draw only the moving part named above on the magenta background, not the walls, furniture or anything else from the crop, so it can be laid exactly over the painted spot.
+FRAMES: 6 frames side by side, about 0.6 s at 10 frames per second, loops seamlessly: the last frame leads back into the first, each frame 40x40 pixels in the game.
+END: no separate end frame, the loop closes.
+CAMERA: static, no zoom, no pan, the effect stays centered in every frame.
+NEGATIVE: no characters unless named, no background scene, no text, no frames or panels, no checkerboard, no motion blur, no speed lines
+```
+
+### W1-B63: Schmiede: Esse glüht
+
+**Anhängen:** den passenden Ausschnitt aus dem fertigen Hintergrund (Schmiede); das Ergebnis danach mit `tools/pixelieren.py` auf die Farben des Raums bringen · **Bilder:** 8 · **Ablauf:** Schleife
+
+```text
+STYLE: Visual effect frames for a 2D game, frames side by side in one row, evenly spaced, frame count as given in the motif, every frame the same size with the effect centered, flat cel shading, solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no frames or panels, no text.
+EFFECT: Only the glowing coals and flames inside the stone forge, matching the attached background crop: the coals pulse from deep red to bright orange in slow waves, small yellow flames with blue roots dance above them, a few sparks drift up into the chimney.
+OVERLAY: the crop only shows where the effect sits, its size, light and colors; draw only the moving part named above on the magenta background, not the walls, furniture or anything else from the crop, so it can be laid exactly over the painted spot.
+FRAMES: 8 frames side by side, about 0.8 s at 10 frames per second, loops seamlessly: the last frame leads back into the first, each frame 80x60 pixels in the game.
+END: no separate end frame, the loop closes.
+CAMERA: static, no zoom, no pan, the effect stays centered in every frame.
+NEGATIVE: no characters unless named, no background scene, no text, no frames or panels, no checkerboard, no motion blur, no speed lines
+```
+
+### W1-B64: Schmiede: Funken beim Schlag
+
+**Anhängen:** nichts (Effekt) · **Bilder:** 4 · **Ablauf:** einmalig
+
+```text
+STYLE: Visual effect frames for a 2D game, frames side by side in one row, evenly spaced, frame count as given in the motif, every frame the same size with the effect centered, flat cel shading, solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no frames or panels, no text.
+EFFECT: A burst of bright yellow and orange sparks from a hammer strike on an anvil, flying out in a low fan to both sides, arcing down and fading to dark red dots.
+FRAMES: 4 frames side by side, about 0.4 s at 10 frames per second, plays once, each frame 48x32 pixels in the game.
+END: the last frame almost empty.
+CAMERA: static, no zoom, no pan, the effect stays centered in every frame.
+NEGATIVE: no characters unless named, no background scene, no text, no frames or panels, no checkerboard, no motion blur, no speed lines
+```
+
+### W1-B65: Klassenzimmer: Kessel blubbert
+
+**Anhängen:** den passenden Ausschnitt aus dem fertigen Hintergrund (Klassenzimmer); das Ergebnis danach mit `tools/pixelieren.py` auf die Farben des Raums bringen · **Bilder:** 8 · **Ablauf:** Schleife
+
+```text
+STYLE: Visual effect frames for a 2D game, frames side by side in one row, evenly spaced, frame count as given in the motif, every frame the same size with the effect centered, flat cel shading, solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no frames or panels, no text.
+EFFECT: Only the bright green potion surface of the black cauldron and the steam above it, matching the attached background crop: round bubbles swell and pop, green steam rises in soft curls and drifts apart, the small fire under the cauldron flickers.
+OVERLAY: the crop only shows where the effect sits, its size, light and colors; draw only the moving part named above on the magenta background, not the walls, furniture or anything else from the crop, so it can be laid exactly over the painted spot.
+FRAMES: 8 frames side by side, about 0.8 s at 10 frames per second, loops seamlessly: the last frame leads back into the first, each frame 60x60 pixels in the game.
+END: no separate end frame, the loop closes.
+CAMERA: static, no zoom, no pan, the effect stays centered in every frame.
+NEGATIVE: no characters unless named, no background scene, no text, no frames or panels, no checkerboard, no motion blur, no speed lines
+```
+
+### W1-B66: Zauberstab-Laden: Schachtel ruckelt
+
+**Anhängen:** den passenden Ausschnitt aus dem fertigen Hintergrund (Zauberstab-Laden); das Ergebnis danach mit `tools/pixelieren.py` auf die Farben des Raums bringen · **Bilder:** 6 · **Ablauf:** einmalig
+
+```text
+STYLE: Visual effect frames for a 2D game, frames side by side in one row, evenly spaced, frame count as given in the motif, every frame the same size with the effect centered, flat cel shading, solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no frames or panels, no text.
+EFFECT: A narrow wooden wand box in its shelf slot, matching the attached background crop: it jiggles, slides halfway out with a jolt, a tiny puff of golden sparkles escapes from the lid, then it slides back into place.
+OVERLAY: the crop only shows where the effect sits, its size, light and colors; draw only the moving part named above on the magenta background, not the walls, furniture or anything else from the crop, so it can be laid exactly over the painted spot.
+FRAMES: 6 frames side by side, about 0.6 s at 10 frames per second, plays once, each frame 24x16 pixels in the game.
+END: the last frame equals the first.
+CAMERA: static, no zoom, no pan, the effect stays centered in every frame.
+NEGATIVE: no characters unless named, no background scene, no text, no frames or panels, no checkerboard, no motion blur, no speed lines
+```
+
+### W1-B67: Troll-Brücke: Fisch springt
+
+**Anhängen:** nichts (Effekt) · **Bilder:** 6 · **Ablauf:** einmalig
+
+```text
+STYLE: Visual effect frames for a 2D game, frames side by side in one row, evenly spaced, frame count as given in the motif, every frame the same size with the effect centered, flat cel shading, solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no frames or panels, no text.
+EFFECT: A small silver trout leaps out of a clear brook in a short arc, shining in the sun, and dives back in; a ring of ripples and a few drops remain and fade.
+FRAMES: 6 frames side by side, about 0.6 s at 10 frames per second, plays once, each frame 32x32 pixels in the game.
+END: the last frame is the calm end state of the effect.
+CAMERA: static, no zoom, no pan, the effect stays centered in every frame.
+NEGATIVE: no characters unless named, no background scene, no text, no frames or panels, no checkerboard, no motion blur, no speed lines
+```
+
+### W1-B68: Troll-Brücke: Schmetterling
+
+**Anhängen:** nichts (Effekt) · **Bilder:** 4 · **Ablauf:** Schleife
+
+```text
+STYLE: Visual effect frames for a 2D game, frames side by side in one row, evenly spaced, frame count as given in the motif, every frame the same size with the effect centered, flat cel shading, solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no frames or panels, no text.
+EFFECT: A small lemon-yellow butterfly seen from the side, wings fully open, half closed, closed upright, half open again.
+FRAMES: 4 frames side by side, about 0.4 s at 10 frames per second, loops seamlessly: the last frame leads back into the first, each frame 12x12 pixels in the game.
+END: no separate end frame, the loop closes.
+CAMERA: static, no zoom, no pan, the effect stays centered in every frame.
+NEGATIVE: no characters unless named, no background scene, no text, no frames or panels, no checkerboard, no motion blur, no speed lines
+```
+
+### W1-B69: Zauberwald: Eule im hohlen Baum
+
+**Anhängen:** den passenden Ausschnitt aus dem fertigen Hintergrund (Zauberwald); das Ergebnis danach mit `tools/pixelieren.py` auf die Farben des Raums bringen · **Bilder:** 6 · **Ablauf:** einmalig
+
+```text
+STYLE: Visual effect frames for a 2D game, frames side by side in one row, evenly spaced, frame count as given in the motif, every frame the same size with the effect centered, flat cel shading, solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no frames or panels, no text.
+EFFECT: A small round brown owl peeks out of a dark tree hollow, matching the attached background crop: it blinks its big yellow eyes slowly, turns its head far to one side, back again, and sinks back into the dark.
+OVERLAY: the crop only shows where the effect sits, its size, light and colors; draw only the moving part named above on the magenta background, not the walls, furniture or anything else from the crop, so it can be laid exactly over the painted spot.
+FRAMES: 6 frames side by side, about 0.6 s at 10 frames per second, plays once, each frame 32x32 pixels in the game.
+END: the last frame is the calm end state of the effect.
+CAMERA: static, no zoom, no pan, the effect stays centered in every frame.
+NEGATIVE: no characters unless named, no background scene, no text, no frames or panels, no checkerboard, no motion blur, no speed lines
+```
+
+### W1-B70: Fackel: Brennen
+
+**Anhängen:** nichts (Effekt) · **Bilder:** 8 · **Ablauf:** Schleife
+
+```text
+STYLE: Visual effect frames for a 2D game, frames side by side in one row, evenly spaced, frame count as given in the motif, every frame the same size with the effect centered, flat cel shading, solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no frames or panels, no text.
+EFFECT: The flame of an iron wall torch, for every torch in the tower, the mine and the throne rooms: a warm orange flame with a yellow core flickers, leans a little left and right, its tip splits and closes again, one tiny spark rises.
+FRAMES: 8 frames side by side, about 0.8 s at 10 frames per second, loops seamlessly: the last frame leads back into the first, each frame 16x32 pixels in the game.
+END: no separate end frame, the loop closes.
+CAMERA: static, no zoom, no pan, the effect stays centered in every frame.
+NEGATIVE: no characters unless named, no background scene, no text, no frames or panels, no checkerboard, no motion blur, no speed lines
+```
+
+### W1-B71: Luftschloss: Wimpel flattern
+
+**Anhängen:** nichts (Effekt) · **Bilder:** 8 · **Ablauf:** Schleife
+
+```text
+STYLE: Visual effect frames for a 2D game, frames side by side in one row, evenly spaced, frame count as given in the motif, every frame the same size with the effect centered, flat cel shading, solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no frames or panels, no text.
+EFFECT: A long pale pink triangular pennant on the tip of a thin golden pole, waving in a soft wind in a wave that runs from the pole to the tip.
+FRAMES: 8 frames side by side, about 0.8 s at 10 frames per second, loops seamlessly: the last frame leads back into the first, each frame 24x12 pixels in the game.
+END: no separate end frame, the loop closes.
+CAMERA: static, no zoom, no pan, the effect stays centered in every frame.
+NEGATIVE: no characters unless named, no background scene, no text, no frames or panels, no checkerboard, no motion blur, no speed lines
+```
+
+### W1-B72: Luftschloss: Brunnen plätschert
+
+**Anhängen:** den passenden Ausschnitt aus dem fertigen Hintergrund (Luftschloss); das Ergebnis danach mit `tools/pixelieren.py` auf die Farben des Raums bringen · **Bilder:** 6 · **Ablauf:** Schleife
+
+```text
+STYLE: Visual effect frames for a 2D game, frames side by side in one row, evenly spaced, frame count as given in the motif, every frame the same size with the effect centered, flat cel shading, solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no frames or panels, no text.
+EFFECT: Only the water of the small stone fountain, matching the attached background crop: a thin jet rises from the center, falls back in a soft umbrella, splashes into the basin with glittering drops.
+OVERLAY: the crop only shows where the effect sits, its size, light and colors; draw only the moving part named above on the magenta background, not the walls, furniture or anything else from the crop, so it can be laid exactly over the painted spot.
+FRAMES: 6 frames side by side, about 0.6 s at 10 frames per second, loops seamlessly: the last frame leads back into the first, each frame 40x30 pixels in the game.
+END: no separate end frame, the loop closes.
+CAMERA: static, no zoom, no pan, the effect stays centered in every frame.
+NEGATIVE: no characters unless named, no background scene, no text, no frames or panels, no checkerboard, no motion blur, no speed lines
+```
+
+### W1-B73: Goblin-Bergwerk: Steinchen rieseln
+
+**Anhängen:** nichts (Effekt) · **Bilder:** 6 · **Ablauf:** einmalig
+
+```text
+STYLE: Visual effect frames for a 2D game, frames side by side in one row, evenly spaced, frame count as given in the motif, every frame the same size with the effect centered, flat cel shading, solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no frames or panels, no text.
+EFFECT: A thin trickle of grey dust and small pebbles falls from a crack in a wooden ceiling beam, lands at the bottom in a little puff of dust that spreads and settles.
+FRAMES: 6 frames side by side, about 0.6 s at 10 frames per second, plays once, each frame 16x48 pixels in the game.
+END: the last frame almost empty.
+CAMERA: static, no zoom, no pan, the effect stays centered in every frame.
+NEGATIVE: no characters unless named, no background scene, no text, no frames or panels, no checkerboard, no motion blur, no speed lines
+```
+
+### W1-B74: Glitzern: Funkeln
+
+**Anhängen:** nichts (Effekt) · **Bilder:** 6 · **Ablauf:** einmalig
+
+```text
+STYLE: Visual effect frames for a 2D game, frames side by side in one row, evenly spaced, frame count as given in the motif, every frame the same size with the effect centered, flat cel shading, solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no frames or panels, no text.
+EFFECT: A tiny four-pointed white and pale yellow star twinkle as on gold coins, water or glass: a dot grows into a cross-shaped sparkle, turns slightly, shrinks back to a dot and vanishes.
+FRAMES: 6 frames side by side, about 0.6 s at 10 frames per second, plays once, each frame 12x12 pixels in the game.
+END: the last frame is the calm end state of the effect.
+CAMERA: static, no zoom, no pan, the effect stays centered in every frame.
+NEGATIVE: no characters unless named, no background scene, no text, no frames or panels, no checkerboard, no motion blur, no speed lines
+```
+
+### W1-B75: Wasserschloss: Ente schwimmt
+
+**Anhängen:** nichts (Effekt) · **Bilder:** 6 · **Ablauf:** Schleife
+
+```text
+STYLE: Visual effect frames for a 2D game, frames side by side in one row, evenly spaced, frame count as given in the motif, every frame the same size with the effect centered, flat cel shading, solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no frames or panels, no text.
+EFFECT: A small brown mallard duck swimming to the right on calm water, seen from the side, head bobbing, a small V-shaped wake behind it, the waterline across its body stays level.
+FRAMES: 6 frames side by side, about 0.6 s at 10 frames per second, loops seamlessly: the last frame leads back into the first, each frame 24x16 pixels in the game.
+END: no separate end frame, the loop closes.
+CAMERA: static, no zoom, no pan, the effect stays centered in every frame.
+NEGATIVE: no characters unless named, no background scene, no text, no frames or panels, no checkerboard, no motion blur, no speed lines
+```
+
+### W1-B76: Dorfplatz: Huhn pickt
+
+**Anhängen:** nichts (Effekt) · **Bilder:** 6 · **Ablauf:** Schleife
+
+```text
+STYLE: Visual effect frames for a 2D game, frames side by side in one row, evenly spaced, frame count as given in the motif, every frame the same size with the effect centered, flat cel shading, solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no frames or panels, no text.
+EFFECT: A small brown hen on cobblestones seen from the side facing right, takes a step, bends down and pecks twice at the ground, lifts the head and looks around with a jerk.
+FRAMES: 6 frames side by side, about 0.6 s at 10 frames per second, loops seamlessly: the last frame leads back into the first, each frame 20x20 pixels in the game.
+END: no separate end frame, the loop closes.
+CAMERA: static, no zoom, no pan, the effect stays centered in every frame.
+NEGATIVE: no characters unless named, no background scene, no text, no frames or panels, no checkerboard, no motion blur, no speed lines
+```
+
+## Lebendige Hintergründe, Welt 2 (Boote, Vögel und Tiere; gehen schon ohne Hintergrund)
+
+### W2-B11: Nil-Delta: Feluke segelt
+
+**Anhängen:** nichts (Effekt) · **Bilder:** 8 · **Ablauf:** Schleife
+
+```text
+STYLE: Visual effect frames for a 2D game, frames side by side in one row, evenly spaced, frame count as given in the motif, every frame the same size with the effect centered, flat cel shading, solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no frames or panels, no text.
+EFFECT: A small Egyptian felucca seen from the side, sailing to the right on a river: a narrow wooden boat with one tall slanted triangular sail of pale linen, a fisherman in a white loincloth at the stern leaning on the steering oar; the sail bellies in the wind and ripples along its edge, the small red pennant at the masthead flutters, the hull rocks gently, a little bow wave curls.
+FRAMES: 8 frames side by side, about 0.8 s at 10 frames per second, loops seamlessly: the last frame leads back into the first, each frame 90x80 pixels in the game.
+END: no separate end frame, the loop closes.
+CAMERA: static, no zoom, no pan, the effect stays centered in every frame.
+NEGATIVE: no characters unless named, no background scene, no text, no frames or panels, no checkerboard, no motion blur, no speed lines
+```
+
+### W2-B12: Nil-Delta: Ibis stakst
+
+**Anhängen:** nichts (Effekt) · **Bilder:** 8 · **Ablauf:** Schleife
+
+```text
+STYLE: Visual effect frames for a 2D game, frames side by side in one row, evenly spaced, frame count as given in the motif, every frame the same size with the effect centered, flat cel shading, solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no frames or panels, no text.
+EFFECT: A white sacred ibis with a black head and a long down-curved black beak wading slowly to the right through shallow water, seen from the side: it lifts one thin leg high, sets it down, lifts the other, then dips the beak into the water and raises it again.
+FRAMES: 8 frames side by side, about 0.8 s at 10 frames per second, loops seamlessly: the last frame leads back into the first, each frame 32x40 pixels in the game.
+END: no separate end frame, the loop closes.
+CAMERA: static, no zoom, no pan, the effect stays centered in every frame.
+NEGATIVE: no characters unless named, no background scene, no text, no frames or panels, no checkerboard, no motion blur, no speed lines
+```
+
+### W2-B13: Nil-Delta: Fischer wirft das Netz
+
+**Anhängen:** nichts (Effekt) · **Bilder:** 8 · **Ablauf:** einmalig
+
+```text
+STYLE: Visual effect frames for a 2D game, frames side by side in one row, evenly spaced, frame count as given in the motif, every frame the same size with the effect centered, flat cel shading, solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no frames or panels, no text.
+EFFECT: A small Egyptian fisherman in a white loincloth standing in a papyrus reed boat on the river, seen from the side: he swings a round net back, throws it forward, the net opens wide in the air and drops onto the water with a ring of ripples, he pulls the rope.
+FRAMES: 8 frames side by side, about 0.8 s at 10 frames per second, plays once, each frame 64x48 pixels in the game.
+END: the last frame is the calm end state of the effect.
+CAMERA: static, no zoom, no pan, the effect stays centered in every frame.
+NEGATIVE: no characters unless named, no background scene, no text, no frames or panels, no checkerboard, no motion blur, no speed lines
+```
+
+### W2-B14: Nil-Delta: Libelle
+
+**Anhängen:** nichts (Effekt) · **Bilder:** 4 · **Ablauf:** Schleife
+
+```text
+STYLE: Visual effect frames for a 2D game, frames side by side in one row, evenly spaced, frame count as given in the motif, every frame the same size with the effect centered, flat cel shading, solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no frames or panels, no text.
+EFFECT: A small turquoise dragonfly seen from the side, hovering, its two pairs of glassy wings in four positions of a fast beat.
+FRAMES: 4 frames side by side, about 0.4 s at 10 frames per second, loops seamlessly: the last frame leads back into the first, each frame 16x10 pixels in the game.
+END: no separate end frame, the loop closes.
+CAMERA: static, no zoom, no pan, the effect stays centered in every frame.
+NEGATIVE: no characters unless named, no background scene, no text, no frames or panels, no checkerboard, no motion blur, no speed lines
+```
+
+### W2-B15: Hafen Syrakus: Segelschiff auf See
+
+**Anhängen:** nichts (Effekt) · **Bilder:** 8 · **Ablauf:** Schleife
+
+```text
+STYLE: Visual effect frames for a 2D game, frames side by side in one row, evenly spaced, frame count as given in the motif, every frame the same size with the effect centered, flat cel shading, solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no frames or panels, no text.
+EFFECT: An ancient Greek merchant ship seen from the side, sailing to the right on the open sea: a round wooden hull with a painted eye at the bow, one square sail with red and white stripes, two tiny sailors on deck; the sail fills and slackens in the wind, the hull rises and dips on the waves, white foam at the bow.
+FRAMES: 8 frames side by side, about 0.8 s at 10 frames per second, loops seamlessly: the last frame leads back into the first, each frame 120x90 pixels in the game.
+END: no separate end frame, the loop closes.
+CAMERA: static, no zoom, no pan, the effect stays centered in every frame.
+NEGATIVE: no characters unless named, no background scene, no text, no frames or panels, no checkerboard, no motion blur, no speed lines
+```
+
+### W2-B16: Hafen Syrakus: Möwe fliegt
+
+**Anhängen:** nichts (Effekt) · **Bilder:** 6 · **Ablauf:** Schleife
+
+```text
+STYLE: Visual effect frames for a 2D game, frames side by side in one row, evenly spaced, frame count as given in the motif, every frame the same size with the effect centered, flat cel shading, solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no frames or panels, no text.
+EFFECT: A white seagull with grey wings gliding and flapping, seen from the side, flying to the right: wings up, level, down, level, a short glide with wings spread.
+FRAMES: 6 frames side by side, about 0.6 s at 10 frames per second, loops seamlessly: the last frame leads back into the first, each frame 24x14 pixels in the game.
+END: no separate end frame, the loop closes.
+CAMERA: static, no zoom, no pan, the effect stays centered in every frame.
+NEGATIVE: no characters unless named, no background scene, no text, no frames or panels, no checkerboard, no motion blur, no speed lines
+```
+
+### W2-B17: Hafen Syrakus: Möwe auf dem Pfahl
+
+**Anhängen:** nichts (Effekt) · **Bilder:** 6 · **Ablauf:** einmalig
+
+```text
+STYLE: Visual effect frames for a 2D game, frames side by side in one row, evenly spaced, frame count as given in the motif, every frame the same size with the effect centered, flat cel shading, solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no frames or panels, no text.
+EFFECT: A seagull sitting on top of a wooden mooring post, seen from the side: it turns its head, opens the yellow beak wide and screeches with the neck stretched up, then settles and fluffs its feathers.
+FRAMES: 6 frames side by side, about 0.6 s at 10 frames per second, plays once, each frame 20x24 pixels in the game.
+END: the last frame is the calm end state of the effect.
+CAMERA: static, no zoom, no pan, the effect stays centered in every frame.
+NEGATIVE: no characters unless named, no background scene, no text, no frames or panels, no checkerboard, no motion blur, no speed lines
+```
+
+### W2-B18: Hafen Syrakus: Hafenarbeiter mit Amphore
+
+**Anhängen:** nichts (Effekt) · **Bilder:** 8 · **Ablauf:** Schleife
+
+```text
+STYLE: Visual effect frames for a 2D game, frames side by side in one row, evenly spaced, frame count as given in the motif, every frame the same size with the effect centered, flat cel shading, solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no frames or panels, no text.
+EFFECT: A small Greek dock worker in a short brown tunic carrying a big clay amphora on his right shoulder, walking to the right, seen from the side; a clean walking cycle: the legs alternate in every step, the near leg drawn lighter and the far leg one shade darker, contact, passing and push-off clearly visible, the free arm swings opposite to the forward leg, the amphora bobs a little with each step.
+FRAMES: 8 frames side by side, about 0.8 s at 10 frames per second, loops seamlessly: the last frame leads back into the first, each frame 32x48 pixels in the game.
+END: no separate end frame, the loop closes.
+CAMERA: static, no zoom, no pan, the effect stays centered in every frame.
+NEGATIVE: no characters unless named, no background scene, no text, no frames or panels, no checkerboard, no motion blur, no speed lines
+```
+
+### W2-B20: Fährsteg Olympia: Ziege grast
+
+**Anhängen:** nichts (Effekt) · **Bilder:** 6 · **Ablauf:** Schleife
+
+```text
+STYLE: Visual effect frames for a 2D game, frames side by side in one row, evenly spaced, frame count as given in the motif, every frame the same size with the effect centered, flat cel shading, solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no frames or panels, no text.
+EFFECT: A small white and brown goat under olive trees, seen from the side facing right: it lowers the head, tears at the grass, raises the head and chews with a sideways jaw, its tail flicks.
+FRAMES: 6 frames side by side, about 0.6 s at 10 frames per second, loops seamlessly: the last frame leads back into the first, each frame 32x28 pixels in the game.
+END: no separate end frame, the loop closes.
+CAMERA: static, no zoom, no pan, the effect stays centered in every frame.
+NEGATIVE: no characters unless named, no background scene, no text, no frames or panels, no checkerboard, no motion blur, no speed lines
+```
+
+### W2-B23: Sphinx: Geier kreist
+
+**Anhängen:** nichts (Effekt) · **Bilder:** 6 · **Ablauf:** Schleife
+
+```text
+STYLE: Visual effect frames for a 2D game, frames side by side in one row, evenly spaced, frame count as given in the motif, every frame the same size with the effect centered, flat cel shading, solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no frames or panels, no text.
+EFFECT: A dark brown vulture with broad fingered wing tips gliding high in the desert sky, seen slightly from below: it tilts left and right in a slow glide, the wing tips flex.
+FRAMES: 6 frames side by side, about 0.6 s at 10 frames per second, loops seamlessly: the last frame leads back into the first, each frame 40x16 pixels in the game.
+END: no separate end frame, the loop closes.
+CAMERA: static, no zoom, no pan, the effect stays centered in every frame.
+NEGATIVE: no characters unless named, no background scene, no text, no frames or panels, no checkerboard, no motion blur, no speed lines
+```
+
+### W2-B24: Grabhügel Syrakus: Eidechse
+
+**Anhängen:** nichts (Effekt) · **Bilder:** 6 · **Ablauf:** einmalig
+
+```text
+STYLE: Visual effect frames for a 2D game, frames side by side in one row, evenly spaced, frame count as given in the motif, every frame the same size with the effect centered, flat cel shading, solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no frames or panels, no text.
+EFFECT: A small green lizard on a sunlit tombstone, seen from the side facing right: it does two quick push-ups, turns its head toward the viewer, then darts off to the right.
+FRAMES: 6 frames side by side, about 0.6 s at 10 frames per second, plays once, each frame 24x10 pixels in the game.
+END: the last frame is empty.
+CAMERA: static, no zoom, no pan, the effect stays centered in every frame.
+NEGATIVE: no characters unless named, no background scene, no text, no frames or panels, no checkerboard, no motion blur, no speed lines
+```
+
+### W2-B27: Stadion: Wimpel flattern
+
+**Anhängen:** nichts (Effekt) · **Bilder:** 8 · **Ablauf:** Schleife
+
+```text
+STYLE: Visual effect frames for a 2D game, frames side by side in one row, evenly spaced, frame count as given in the motif, every frame the same size with the effect centered, flat cel shading, solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no frames or panels, no text.
+EFFECT: A long blue and white triangular pennant on the tip of a wooden pole above the stadium, waving in a soft wind in a wave that runs from the pole to the tip.
+FRAMES: 8 frames side by side, about 0.8 s at 10 frames per second, loops seamlessly: the last frame leads back into the first, each frame 32x14 pixels in the game.
+END: no separate end frame, the loop closes.
+CAMERA: static, no zoom, no pan, the effect stays centered in every frame.
+NEGATIVE: no characters unless named, no background scene, no text, no frames or panels, no checkerboard, no motion blur, no speed lines
+```
+
+### W2-B28: Agora: Tauben picken
+
+**Anhängen:** nichts (Effekt) · **Bilder:** 6 · **Ablauf:** Schleife
+
+```text
+STYLE: Visual effect frames for a 2D game, frames side by side in one row, evenly spaced, frame count as given in the motif, every frame the same size with the effect centered, flat cel shading, solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no frames or panels, no text.
+EFFECT: A grey city pigeon with a shimmering green neck on the stone pavement, seen from the side facing right: it nods forward with a small step, pecks at a crumb, nods again, puffs up its chest.
+FRAMES: 6 frames side by side, about 0.6 s at 10 frames per second, loops seamlessly: the last frame leads back into the first, each frame 20x16 pixels in the game.
+END: no separate end frame, the loop closes.
+CAMERA: static, no zoom, no pan, the effect stays centered in every frame.
+NEGATIVE: no characters unless named, no background scene, no text, no frames or panels, no checkerboard, no motion blur, no speed lines
+```
+
+### W2-B29: Agora: Taube fliegt auf
+
+**Anhängen:** nichts (Effekt) · **Bilder:** 6 · **Ablauf:** einmalig
+
+```text
+STYLE: Visual effect frames for a 2D game, frames side by side in one row, evenly spaced, frame count as given in the motif, every frame the same size with the effect centered, flat cel shading, solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no frames or panels, no text.
+EFFECT: The same grey pigeon flapping up from the pavement and flying away to the upper right, wings in big strokes, a loose feather drifting.
+FRAMES: 6 frames side by side, about 0.6 s at 10 frames per second, plays once, each frame 32x24 pixels in the game.
+END: the last frame is empty.
+CAMERA: static, no zoom, no pan, the effect stays centered in every frame.
+NEGATIVE: no characters unless named, no background scene, no text, no frames or panels, no checkerboard, no motion blur, no speed lines
+```
+
 ## Welt 2 (Posenbögen; die Bewegung selbst kommt aus dem 3D-Clip)
 
 ### W2-P01: Max Tag 1
@@ -2855,6 +3259,106 @@ STYLE: Close-up illustration for a 2D point-and-click adventure game in the styl
 SUBJECT: A papyrus planning board seen straight on, filling the frame with a thin margin of sandstone around it, four empty square slots in a row connected by painted arrows from left to right, a small painted sun above the second slot, nothing inside the slots.
 PALETTE: warm palette of sandstone, ochre and gold, painted walls, daylight falling in through high openings, cool shade in the corners. Color anchors, approximate: sandstone #e4a672, ochre #d77643, gold #feae34, painted red #be4a2f, cool shade #5a6988.
 NEGATIVE: no text, letters, numbers or symbols that could be read, no characters, no hands unless described, no floor, no frame, no photorealism, no watermark
+```
+
+## Welt 2, lebendige Hintergründe auf gemalten Stellen (erst wenn der Raum fertig ist, Ausschnitt anhängen)
+
+### W2-B19: Hafen Syrakus: Tintenfisch zappelt
+
+**Anhängen:** den passenden Ausschnitt aus dem fertigen Hintergrund (Hafen Syrakus); das Ergebnis danach mit `tools/pixelieren.py` auf die Farben des Raums bringen · **Bilder:** 6 · **Ablauf:** Schleife
+
+```text
+STYLE: Visual effect frames for a 2D game, frames side by side in one row, evenly spaced, frame count as given in the motif, every frame the same size with the effect centered, flat cel shading, solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no frames or panels, no text.
+EFFECT: A small purple squid caught in a sagging fishing net, matching the attached background crop: its tentacles curl and wriggle through the meshes, it squirts a tiny puff of ink and blinks.
+OVERLAY: the crop only shows where the effect sits, its size, light and colors; draw only the moving part named above on the magenta background, not the walls, furniture or anything else from the crop, so it can be laid exactly over the painted spot.
+FRAMES: 6 frames side by side, about 0.6 s at 10 frames per second, loops seamlessly: the last frame leads back into the first, each frame 24x24 pixels in the game.
+END: no separate end frame, the loop closes.
+CAMERA: static, no zoom, no pan, the effect stays centered in every frame.
+NEGATIVE: no characters unless named, no background scene, no text, no frames or panels, no checkerboard, no motion blur, no speed lines
+```
+
+### W2-B21: Sanduhr: Sand rieselt
+
+**Anhängen:** den passenden Ausschnitt aus dem fertigen Hintergrund (Sanduhr); das Ergebnis danach mit `tools/pixelieren.py` auf die Farben des Raums bringen · **Bilder:** 6 · **Ablauf:** Schleife
+
+```text
+STYLE: Visual effect frames for a 2D game, frames side by side in one row, evenly spaced, frame count as given in the motif, every frame the same size with the effect centered, flat cel shading, solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no frames or panels, no text.
+EFFECT: Only the sand inside the tall hourglass at the ferry docks, matching the attached background crop: a thin glittering stream of golden sand falls from the upper bulb, the small cone in the lower bulb grows slightly and its top slides down.
+OVERLAY: the crop only shows where the effect sits, its size, light and colors; draw only the moving part named above on the magenta background, not the walls, furniture or anything else from the crop, so it can be laid exactly over the painted spot.
+FRAMES: 6 frames side by side, about 0.6 s at 10 frames per second, loops seamlessly: the last frame leads back into the first, each frame 20x48 pixels in the game.
+END: no separate end frame, the loop closes.
+CAMERA: static, no zoom, no pan, the effect stays centered in every frame.
+NEGATIVE: no characters unless named, no background scene, no text, no frames or panels, no checkerboard, no motion blur, no speed lines
+```
+
+### W2-B22: Palastküche: Ofenfeuer
+
+**Anhängen:** den passenden Ausschnitt aus dem fertigen Hintergrund (Palastküche); das Ergebnis danach mit `tools/pixelieren.py` auf die Farben des Raums bringen · **Bilder:** 8 · **Ablauf:** Schleife
+
+```text
+STYLE: Visual effect frames for a 2D game, frames side by side in one row, evenly spaced, frame count as given in the motif, every frame the same size with the effect centered, flat cel shading, solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no frames or panels, no text.
+EFFECT: Only the fire inside the open front of a round clay oven, matching the attached background crop: orange flames flicker, glowing embers pulse at the bottom, a thin trail of smoke curls out of the top opening.
+OVERLAY: the crop only shows where the effect sits, its size, light and colors; draw only the moving part named above on the magenta background, not the walls, furniture or anything else from the crop, so it can be laid exactly over the painted spot.
+FRAMES: 8 frames side by side, about 0.8 s at 10 frames per second, loops seamlessly: the last frame leads back into the first, each frame 40x32 pixels in the game.
+END: no separate end frame, the loop closes.
+CAMERA: static, no zoom, no pan, the effect stays centered in every frame.
+NEGATIVE: no characters unless named, no background scene, no text, no frames or panels, no checkerboard, no motion blur, no speed lines
+```
+
+### W2-B25: Archimedes' Werkstatt: Wasserorgel blubbert
+
+**Anhängen:** den passenden Ausschnitt aus dem fertigen Hintergrund (Archimedes' Werkstatt); das Ergebnis danach mit `tools/pixelieren.py` auf die Farben des Raums bringen · **Bilder:** 6 · **Ablauf:** Schleife
+
+```text
+STYLE: Visual effect frames for a 2D game, frames side by side in one row, evenly spaced, frame count as given in the motif, every frame the same size with the effect centered, flat cel shading, solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no frames or panels, no text.
+EFFECT: Only the water tank at the foot of the bronze organ pipes, matching the attached background crop: bubbles rise in the water and pop at the surface, a drop falls from a pipe joint into the tank with a small ring.
+OVERLAY: the crop only shows where the effect sits, its size, light and colors; draw only the moving part named above on the magenta background, not the walls, furniture or anything else from the crop, so it can be laid exactly over the painted spot.
+FRAMES: 6 frames side by side, about 0.6 s at 10 frames per second, loops seamlessly: the last frame leads back into the first, each frame 40x40 pixels in the game.
+END: no separate end frame, the loop closes.
+CAMERA: static, no zoom, no pan, the effect stays centered in every frame.
+NEGATIVE: no characters unless named, no background scene, no text, no frames or panels, no checkerboard, no motion blur, no speed lines
+```
+
+### W2-B26: Stadion: Zuschauer jubeln
+
+**Anhängen:** den passenden Ausschnitt aus dem fertigen Hintergrund (Stadion); das Ergebnis danach mit `tools/pixelieren.py` auf die Farben des Raums bringen · **Bilder:** 8 · **Ablauf:** Schleife
+
+```text
+STYLE: Visual effect frames for a 2D game, frames side by side in one row, evenly spaced, frame count as given in the motif, every frame the same size with the effect centered, flat cel shading, solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no frames or panels, no text.
+EFFECT: A strip of the cheering crowd in the stone spectator rows, matching the attached background crop: Greeks in white and pale blue, a few tourists in red togas; in turn they raise their arms, wave white cloths, jump up and sit down again, heads turning, never all at once; the left and right edges continue seamlessly so the strip can be repeated.
+OVERLAY: the crop only shows where the effect sits, its size, light and colors; draw only the moving part named above on the magenta background, not the walls, furniture or anything else from the crop, so it can be laid exactly over the painted spot.
+FRAMES: 8 frames side by side, about 0.8 s at 10 frames per second, loops seamlessly: the last frame leads back into the first, each frame 160x60 pixels in the game.
+END: no separate end frame, the loop closes.
+CAMERA: static, no zoom, no pan, the effect stays centered in every frame.
+NEGATIVE: no characters unless named, no background scene, no text, no frames or panels, no checkerboard, no motion blur, no speed lines
+```
+
+### W2-B30: Agora: Menge im Hintergrund
+
+**Anhängen:** den passenden Ausschnitt aus dem fertigen Hintergrund (Agora); das Ergebnis danach mit `tools/pixelieren.py` auf die Farben des Raums bringen · **Bilder:** 8 · **Ablauf:** Schleife
+
+```text
+STYLE: Visual effect frames for a 2D game, frames side by side in one row, evenly spaced, frame count as given in the motif, every frame the same size with the effect centered, flat cel shading, solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no frames or panels, no text.
+EFFECT: A strip of the busy crowd at the back of the market square, matching the attached background crop: Greeks in white and pale blue and tourists in red togas; in turn heads turn, someone points, two people nod to each other, a child bobs on a shoulder, never all at once; the left and right edges continue seamlessly so the strip can be repeated.
+OVERLAY: the crop only shows where the effect sits, its size, light and colors; draw only the moving part named above on the magenta background, not the walls, furniture or anything else from the crop, so it can be laid exactly over the painted spot.
+FRAMES: 8 frames side by side, about 0.8 s at 10 frames per second, loops seamlessly: the last frame leads back into the first, each frame 160x50 pixels in the game.
+END: no separate end frame, the loop closes.
+CAMERA: static, no zoom, no pan, the effect stays centered in every frame.
+NEGATIVE: no characters unless named, no background scene, no text, no frames or panels, no checkerboard, no motion blur, no speed lines
+```
+
+### W2-B31: Startbüro: Wartende auf der Bank
+
+**Anhängen:** den passenden Ausschnitt aus dem fertigen Hintergrund (Startbüro); das Ergebnis danach mit `tools/pixelieren.py` auf die Farben des Raums bringen · **Bilder:** 8 · **Ablauf:** Schleife
+
+```text
+STYLE: Visual effect frames for a 2D game, frames side by side in one row, evenly spaced, frame count as given in the motif, every frame the same size with the effect centered, flat cel shading, solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no frames or panels, no text.
+EFFECT: Only the three bored waiting people on the long bench, matching the attached background crop: the left one yawns and stretches, the middle one taps a foot and drums his fingers on a waiting number tablet, the right one nods off, his head sinks and jerks up again; never all at once.
+OVERLAY: the crop only shows where the effect sits, its size, light and colors; draw only the moving part named above on the magenta background, not the walls, furniture or anything else from the crop, so it can be laid exactly over the painted spot.
+FRAMES: 8 frames side by side, about 0.8 s at 10 frames per second, loops seamlessly: the last frame leads back into the first, each frame 90x50 pixels in the game.
+END: no separate end frame, the loop closes.
+CAMERA: static, no zoom, no pan, the effect stays centered in every frame.
+NEGATIVE: no characters unless named, no background scene, no text, no frames or panels, no checkerboard, no motion blur, no speed lines
 ```
 
 # 5. Später: erst für Welt 3, Welt 4 und das Finale

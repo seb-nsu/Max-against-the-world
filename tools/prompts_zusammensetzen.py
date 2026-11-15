@@ -661,6 +661,12 @@ def bewegung_prompt(name, aktion, bilder, ablauf, motiv, motive, bausteine):
                   "CAMERA: static, no zoom, no pan, the effect stays centered in every frame.",
                   "NEGATIVE: no characters unless named, no background scene, no text, no frames or panels, no "
                   "checkerboard, no motion blur, no speed lines"]
+        if "attached background crop" in handlung:
+            zeilen.insert(2, "OVERLAY: the crop only shows where the effect sits, its size, light and colors; draw "
+                             "only the moving part named above on the magenta background, not the walls, furniture "
+                             "or anything else from the crop, so it can be laid exactly over the painted spot.")
+            return zeilen, (f"den passenden Ausschnitt aus dem fertigen Hintergrund ({name}); das Ergebnis danach "
+                            "mit `tools/pixelieren.py` auf die Farben des Raums bringen")
         return zeilen, "nichts (Effekt)"
     k = 2 if n <= 4 else 3 if n <= 6 else 4
     gruppen = beats(handlung, k)
@@ -1012,6 +1018,11 @@ OFFEN_LISTE = [
         ("Welt 2, Reden und Eigenheiten (Arme und Kopf; Beine und Timing aus dem 3D-Clip)",
          ["W2-P28", "W2-P29", "W2-P30", "W2-P31", "W2-P32", "W2-P33", "W2-P34", "W2-P35", "W2-P36", "W2-P37",
           "W2-P38", "W2-P39", "W2-P40", "W2-P41", "W2-P42", "W2-P43", "W2-P44", "W2-P45", "W2-P46", "W2-P47"]),
+        ("Lebendige Hintergründe, Welt 1 (Ausschnitt aus dem fertigen Hintergrund anhängen, wo es dabei steht)",
+         [f"W1-B{i}" for i in range(61, 77)]),
+        ("Lebendige Hintergründe, Welt 2 (Boote, Vögel und Tiere; gehen schon ohne Hintergrund)",
+         ["W2-B11", "W2-B12", "W2-B13", "W2-B14", "W2-B15", "W2-B16", "W2-B17", "W2-B18", "W2-B20", "W2-B23",
+          "W2-B24", "W2-B27", "W2-B28", "W2-B29"]),
         ("Welt 2 (Posenbögen; die Bewegung selbst kommt aus dem 3D-Clip)",
          ["W2-P01", "W2-P02", "W2-P03", "W2-P04", "W2-P05", "W2-P06", "W2-P07", "W2-P09", "W2-P10",
           "W2-P11", "W2-P12", "W2-P13", "W2-P14", "W2-P15", "W2-P16", "W2-P17", "W2-P18", "W2-P19",
@@ -1026,6 +1037,8 @@ OFFEN_LISTE = [
         ("Welt 2, Griechenland", ["W2-R02", "W2-R11", "W2-R10", "W2-R09", "W2-R03", "W2-R07", "W2-R08", "W2-R12"]),
         ("Welt 2, Nahansichten und Tafeln (füllen das ganze Bild wie ein Hintergrund)",
          ["W2-N01", "W2-N02", "W2-N03", "W2-N04", "W2-N05", "W2-N06"]),
+        ("Welt 2, lebendige Hintergründe auf gemalten Stellen (erst wenn der Raum fertig ist, Ausschnitt anhängen)",
+         ["W2-B19", "W2-B21", "W2-B22", "W2-B25", "W2-B26", "W2-B30", "W2-B31"]),
     ]),
     ("5. Später: erst für Welt 3, Welt 4 und das Finale", [
         ("Figuren", ["PF-F05", "PF-F06", "PF-F07", "PF-F10", "PF-F11", "PF-F12", "PF-F13", "PF-F14", "PF-F15"]),
