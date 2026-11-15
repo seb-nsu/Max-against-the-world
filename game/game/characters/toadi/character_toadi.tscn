@@ -6,11 +6,11 @@
 [node name="CharacterToadi" type="Area2D" unique_id=1625231671]
 script = ExtResource("1_y5pk0")
 walk_speed = 180.0
-dialog_pos = Vector2(0, -105)
+dialog_pos = Vector2(0, -112)
 script_name = "Toadi"
 description = "UI_OBJ_TOADI"
 cursor = 8
-interaction_polygon = PackedVector2Array(-20, -101, 20, -101, 20, 0, -20, 0)
+interaction_polygon = PackedVector2Array(-20, -108, 20, -108, 20, 0, -20, 0)
 
 [node name="ScalingPolygon" type="CollisionPolygon2D" parent="." unique_id=358495482]
 polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
@@ -24,7 +24,7 @@ offset = Vector2(0, -50.5)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1868640365]
 visible = false
-polygon = PackedVector2Array(-20, -101, 20, -101, 20, 0, -20, 0)
+polygon = PackedVector2Array(-20, -108, 20, -108, 20, 0, -20, 0)
 
 [node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=1784782750]
 visible = false
