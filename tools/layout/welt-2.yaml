@@ -85,10 +85,12 @@ thronsaal_ramses:
     sobek: [420, 330]
     kissen: [770, 300]
   figuren:
-    schreiber: [240, 305]
+    schreiber: [305, 300]          # neben dem Pult, nicht davor: der Schreiber schreibt auf dem Brett im Schoß
     ramses: [955, 266]
     hofkater: [770, 298]
-    faecherwedler: [1080, 305]
+    faecherwedler: [1112, 300]     # rechts hinter dem Thron, nicht vor dem Goldteller
+  blick:
+    faecherwedler: links           # fächelt Ramses zu, auch wenn Max rechts steht
   alias:
     opferschale_des_hofkaters: opferschale
     inschrift: inschrift

@@ -538,8 +538,8 @@
      "id": "schreiber",
      "script_name": "Schreiber",
      "pos": [
-      240,
-      305
+      305,
+      300
      ]
     },
     {
@@ -562,9 +562,10 @@
      "id": "faecherwedler",
      "script_name": "Faecherwedler",
      "pos": [
-      1080,
-      305
-     ]
+      1112,
+      300
+     ],
+     "blick": "links"
     }
    ],
    "hotspots": [
