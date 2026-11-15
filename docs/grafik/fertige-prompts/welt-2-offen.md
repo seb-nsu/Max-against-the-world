@@ -1,8 +1,10 @@
 # Offene Prompts Welt 2
 
-Stand 14. November 2026, abends. Alles, was für Welt 2 aus Gemini kommen muss, in der Reihenfolge, in der es sich anbietet. Die Prompts selbst stehen in [`welt-2.md`](welt-2.md) (erzeugt aus `../welt-2.md`); hier steht nur die Reihenfolge, was anzuhängen ist und worauf man achten sollte. Abhaken, was erledigt ist.
+Stand 15. November 2026. Alles, was für Welt 2 aus Gemini kommen muss, in der Reihenfolge, in der es sich anbietet. Die Prompts selbst stehen in [`welt-2.md`](welt-2.md) (erzeugt aus `../welt-2.md`); hier steht nur die Reihenfolge, was anzuhängen ist und worauf man achten sollte. Abhaken, was erledigt ist.
 
-**Stand:** 23 Figuren und 3 Gegenstandsbögen sind geliefert und im Spiel. Noch offen: alle Räume, 2 Figuren (Schildkröte, Straßenmusiker; beim Ägypter fehlen noch die zwei Farbfassungen für die Menge), die 2 großen Objekte, 7 Gegenstandsbögen, die Nahansichten und alle Posenbögen. Für die Posenbögen sind jetzt alle Konzeptblätter da außer der Schildkröte.
+**Stand:** Alle 11 Räume, alle Figuren und 8 von 10 Gegenstandsbögen sind geliefert und im Spiel. Noch offen: zwei Farbfassungen des Ägypters für die Menge, die 2 großen Objekte (Krokodil-Fähre, Wurfhebel), die Bögen Hieroglyphen und Deko, die Nahansichten und alle Posenbögen.
+
+**Die vollständige Arbeitsliste mit fertigen Prompts** für Prolog, Welt 1 und Welt 2 ist [`00-offen-prolog-welt-1-welt-2.md`](00-offen-prolog-welt-1-welt-2.md). Sie geht vor, wenn sich etwas widerspricht; diese Datei hält nur den Überblick für Welt 2.
 
 **Allgemein:**
 
@@ -63,20 +65,20 @@ Stand 14. November 2026, abends. Alles, was für Welt 2 aus Gemini kommen muss, 
 - [x] Römische Touristin
 - [x] Beamter 1
 - [x] Beamter 2
-- [ ] Schildkröte
-- [ ] Straßenmusiker
+- [x] Schildkröte
+- [x] Straßenmusiker
 - [ ] Wurfhebel (großes Objekt)
 
 ## 5. Gegenstände
 
 - [x] Ägypten (3×4)
 - [x] Olympia (3×3)
-- [ ] Feigen-Zustände (1×4)
+- [x] Feigen-Zustände (1×4)
 - [x] Syrakus (2×3)
-- [ ] Schriftstücke (1×4)
-- [ ] Getränke-Zustände (1×3)
-- [ ] Grabstein-Zustände (1×4)
-- [ ] Wunderdinge (1×3; das Kaugummi bleibt hellrosa, nicht knallpink wie der Hintergrund)
+- [x] Schriftstücke (1×4)
+- [x] Getränke-Zustände (1×3)
+- [x] Grabstein-Zustände (1×4)
+- [x] Wunderdinge (1×3; das Kaugummi bleibt hellrosa, nicht knallpink wie der Hintergrund)
 - [ ] Hieroglyphen (4×4)
 - [ ] Deko Welt 2 (3×3)
 
