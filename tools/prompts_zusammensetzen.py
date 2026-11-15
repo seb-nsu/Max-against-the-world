@@ -451,7 +451,10 @@ def posen_bauen(text, bausteine):
         name, vorlage, posen, wofuer, motiv = z[:5]
         zeilen = [f"STYLE: {bausteine['POSENBOGEN']}"]
         zeilen += subjekt_zeilen(name, motive)
-        zeilen += [f"POSES (left to right): {ohne_anmerkungen(motiv)}.",
+        zeilen += [f"POSES (left to right): {ohne_anmerkungen(motiv)}."] + (
+            [BEINE.replace(" frames 5 to 8 repeat frames 1 to 4 with the sides swapped, they are never copies of "
+                           "them.", " poses that use the other leg are never copies.")]
+            if GANG.search(motiv) or re.search(r"\bknee raised\b", motiv) else []) + [
                    "END POSE: the motion starts and ends in the neutral pose of the attached sheet; do not draw "
                    "that pose again, but every pose must be able to return to it with the feet in the same place "
                    "unless a pose says the feet move.",
@@ -469,6 +472,85 @@ SCHLUSS = re.compile(r"(?:^|\.\s+)(\d+) frames?(?: of \d+x\d+)?(?:,|\.|$)(.*)$",
 
 
 GANG = re.compile(r"\b(?:walk(?:s|ing)?|trot(?:s|ting)?|strut(?:s|ting)?|waddles?|crawls?|run|jogging)\b", re.I)
+
+
+# Gangzyklen (Sebastian, 15. November 2026: Toadi lief mit immer demselben Fuß vorn, Zeldina, Ziegen und
+# Hermes stimmten an den Füßen nicht). Darum jedes der acht Bilder einzeln: welches Bein vorn ist, welches
+# trägt, wo die Arme sind; das ferne Bein einen Ton dunkler, damit Gemini die Beine nicht verwechselt.
+VIERBEINER = re.compile(r"\b(?:goat|cat|tomcat|crocodile|tortoise|four legs|all fours|trot\w*|crawl\w*)\b", re.I)
+VIERBEINER_NAMEN = ("Pixel", "Ziege", "Minka", "Hofkater", "Sobek", "Schildkröte")
+BEINE = ("LEGS: 'near' means the leg or arm closer to the viewer, 'far' the one on the other side of the body. "
+         "Draw the far legs and the far arm one shade darker and partly behind the body, so the two sides can "
+         "never be confused. Every frame must differ visibly from its neighbours; frames 5 to 8 repeat frames 1 "
+         "to 4 with the sides swapped, they are never copies of them.")
+GANG_BILDER = {
+    "walk": [
+        "contact: near leg forward and straight, only its heel touching the ground, toes up; far leg stretched back, "
+        "only its toes touching; far arm swung forward, near arm swung back; body at middle height",
+        "down: near foot flat on the ground, near knee bent and carrying the weight, body at its lowest; far foot "
+        "lifted just off the ground behind, far knee bent",
+        "passing: near leg straight and vertical under the hips; far leg bent, its foot lifted to ankle height and "
+        "swinging forward right beside the near leg; both arms close to the body; body high",
+        "up: near foot pushing off on its toes behind the body; far leg swinging forward, almost straight, its foot "
+        "just above the ground; body at its highest",
+        "contact: far leg forward and straight, only its heel touching the ground; near leg stretched back, only its "
+        "toes touching; near arm swung forward, far arm swung back; body at middle height",
+        "down: far foot flat, far knee bent and carrying the weight, body at its lowest; near foot lifted just off "
+        "the ground behind",
+        "passing: far leg straight under the hips; near leg bent, its foot lifted to ankle height and swinging "
+        "forward beside the far leg; body high",
+        "up: far foot pushing off on its toes; near leg swinging forward, foot just above the ground; body at its "
+        "highest, leading back into frame 1"],
+    "run": [
+        "contact: near foot landing in front of the body, near knee slightly bent; far leg trailing behind, knee "
+        "bent; far arm forward, near arm back, elbows bent",
+        "down: near leg deeply bent under the body carrying the weight, body at its lowest, leaning forward; far "
+        "knee driving forward",
+        "push-off: near leg stretched straight back, pushing off on its toes; far knee raised high in front",
+        "flight: both feet off the ground, legs split wide, far leg reaching forward, near leg trailing; body at "
+        "its highest",
+        "contact: far foot landing in front of the body; near leg trailing behind; near arm forward, far arm back",
+        "down: far leg deeply bent carrying the weight, body at its lowest; near knee driving forward",
+        "push-off: far leg stretched straight back on its toes; near knee raised high in front",
+        "flight: both feet off the ground, near leg reaching forward, far leg trailing; leads back into frame 1"],
+    "quad": [
+        "near front leg and far hind leg reaching forward and just touching the ground; near hind leg and far front "
+        "leg stretched back on their toes; body level",
+        "near front and far hind legs carrying the weight, body at its lowest; near hind and far front paws lifted "
+        "just off the ground",
+        "near front and far hind legs straight under the body; near hind and far front legs bent and swinging "
+        "forward past them; body high",
+        "near front and far hind legs pushing off behind; near hind and far front legs reaching forward; body at "
+        "its highest",
+        "far front leg and near hind leg reaching forward and just touching the ground; far hind leg and near front "
+        "leg stretched back on their toes; body level",
+        "far front and near hind legs carrying the weight, body at its lowest; the other two paws lifted",
+        "far front and near hind legs straight under the body; near front and far hind legs swinging forward past "
+        "them; body high",
+        "far front and near hind legs pushing off behind; near front and far hind legs reaching forward; leads back "
+        "into frame 1"],
+    "front": [
+        "the viewer's left foot stepping forward, lower in the picture and slightly larger; right foot behind, "
+        "heel lifted; right arm forward, left arm back",
+        "weight on the left foot, body at its lowest",
+        "passing: right foot lifted and swinging forward next to the left leg, body high",
+        "right foot reaching forward, body at its highest",
+        "the viewer's right foot stepping forward, lower in the picture; left foot behind, heel lifted; left arm "
+        "forward, right arm back",
+        "weight on the right foot, body at its lowest",
+        "passing: left foot lifted and swinging forward next to the right leg, body high",
+        "left foot reaching forward, body at its highest, leading back into frame 1"],
+}
+
+
+def gangart(name, handlung):
+    if re.search(r"\b(?:front|back) view\b", handlung):
+        return "front"
+    if any(x in name for x in VIERBEINER_NAMEN) or VIERBEINER.search(handlung):
+        return "quad"
+    if re.search(r"\b(?:run\w*|jog\w*|rush\w*|sprint\w*)\b", handlung, re.I) and "on the spot" not in handlung:
+        return "run"
+    return "walk"
 
 
 SUBJEKTE = ("he", "she", "it", "his", "her", "its", "the", "a", "an", "both", "they")
@@ -492,7 +574,8 @@ def beats(handlung, anzahl):
     if ": " in handlung:
         vorspann, handlung = handlung.split(": ", 1)
         vorspann += ": "
-    roh = [t.strip() for t in re.split(r",\s*(?:then\s+|and then\s+)?|;\s*|\s+then\s+", handlung) if t.strip()]
+    trenner = r";\s*" if ";" in handlung else r",\s*(?:then\s+|and then\s+)?|\s+then\s+"
+    roh = [t.strip() for t in re.split(trenner, handlung) if t.strip()]
     teile = []
     for t in roh:
         if teile and not vorspann and nebensatz(t):
@@ -562,6 +645,32 @@ def kamera(blickrichtung):
             "no zoom, no pan.")
 
 
+ZWEITER_DURCHGANG = (
+    "FIX: The attached sheet shows one walking cycle in 8 frames, but frames 5 to 8 are copies of frames 1 to 4 "
+    "with the same legs in front. Keep frames 1 to 4 exactly as they are, pixel for pixel. Redraw only frames 5 "
+    "to 8: each one is the frame four places earlier with the legs on the two sides swapped. Wherever a near leg "
+    "(lighter, in front of the body) was reaching forward in frame 1, the far leg (one shade darker, partly "
+    "behind the body) reaches forward in frame 5, and the near leg is the one stretched back; the same for "
+    "frames 6, 7 and 8. Arms or front legs swap the same way. Body, head, tail, clothes and props stay exactly as "
+    "in frames 1 to 4.\n"
+    "CHECK: compare frame 1 and frame 5: the darker leg must be in front in one and behind in the other. If they "
+    "look the same, the frame is wrong.\n"
+    "SPACING: the same 8 equal columns with clear magenta gaps as in the attached sheet, nothing overlaps the "
+    "next frame.\n"
+    "NEGATIVE: no new poses for frames 1 to 4, no change of style, size, colors or baseline, no pixel art, no "
+    "checkerboard, no text")
+
+
+def abstand(n):
+    """Jedes Bild in einer eigenen Spalte, damit Claude die Bilder sauber schneiden kann (Sebastian,
+    15. November 2026: beim Schmied ragten Hammer und Zange ins Nachbarbild)."""
+    return (f"SPACING: divide the image into {n} equal columns, one frame per column, with a clear strip of "
+            "empty magenta between neighbouring frames, at least as wide as the character's head; every part of a frame, including raised arms, tools, "
+            "tongs, tails, capes and effects, stays completely inside its own column and never reaches into or "
+            "overlaps the next frame. Draw the character smaller if needed to keep the gaps, the same size in "
+            "every frame.")
+
+
 def bewegung_prompt(name, aktion, bilder, ablauf, motiv, motive, bausteine):
     start, handlung, n, schleife, blick, halten, ende = bewegung_zerlegen(motiv, bilder, ablauf)
     dauer = n / BILDER_PRO_SEKUNDE
@@ -573,20 +682,28 @@ def bewegung_prompt(name, aktion, bilder, ablauf, motiv, motive, bausteine):
                   f"FRAMES: {n} frames side by side, about {dauer:.1f} s at {BILDER_PRO_SEKUNDE} frames per "
                   f"second, {'loops seamlessly: the last frame leads back into the first' if schleife else 'plays once'}"
                   + (f", each frame {groesse.group(0)} pixels in the game" if groesse else "") + ".",
+                  abstand(n),
                   f"END: {ende}." if ende else ("END: no separate end frame, the loop closes." if schleife
                                                  else "END: the last frame is the calm end state of the effect."),
                   "CAMERA: static, no zoom, no pan, the effect stays centered in every frame.",
                   "NEGATIVE: no characters unless named, no background scene, no text, no frames or panels, no "
                   "checkerboard, no motion blur, no speed lines"]
+        if "attached background crop" in handlung:
+            zeilen.insert(2, "OVERLAY: the crop only shows where the effect sits, its size, light and colors; draw "
+                             "only the moving part named above on the magenta background, not the walls, furniture "
+                             "or anything else from the crop, so it can be laid exactly over the painted spot.")
+            return zeilen, (f"den passenden Ausschnitt aus dem fertigen Hintergrund ({name}); das Ergebnis danach "
+                            "mit `tools/pixelieren.py` auf die Farben des Raums bringen")
         return zeilen, "nichts (Effekt)"
     k = 2 if n <= 4 else 3 if n <= 6 else 4
     gruppen = beats(handlung, k)
-    if schleife and GANG.search(handlung) and n >= 6:
-        gruppen = ["contact pose, front foot just touching the ground, legs widest apart",
-                   "passing pose, body at its highest, the back leg swinging past the standing leg",
-                   "contact pose with the other foot in front, legs widest apart",
-                   "passing pose with the other leg swinging past"]
-        zeilen_manier = f"MANNER (applies to every pose): {handlung}."
+    gang = schleife and GANG.search(handlung) and "on the spot" not in handlung
+    if gang:
+        n = 8
+        dauer = n / BILDER_PRO_SEKUNDE
+        art = gangart(name, handlung)
+        gruppen = GANG_BILDER[art]
+        zeilen_manier = f"MANNER (applies to every frame): {handlung}."
     else:
         zeilen_manier = ""
     if len(gruppen) == 1:
@@ -599,12 +716,28 @@ def bewegung_prompt(name, aktion, bilder, ablauf, motiv, motive, bausteine):
     zeilen = [f"STYLE: {bausteine['BEWEGUNG']}"]
     zeilen += subjekt_zeilen(name, motive)
     if start:
-        zeilen.append(f"START: {start}.")
+        start = re.sub(r"^From (?:the )?(.+?) (?:reference |walking |standing )?sprites?\b",
+                       r"from the neutral pose on the attached concept sheet of \1", start)
+        start = re.sub(r"^(\w+) (.+?) sprite as input$", r"From \2, \1, as on the attached concept sheet", start)
+        start = start[:1].upper() + start[1:]
+        zeilen.append(f"START: {start}. Keep the clean concept-art style of that sheet, not pixel art.")
     if zeilen_manier:
         zeilen.append(zeilen_manier)
-    zeilen.append(f"ACTION ({k} key poses for a {n}-frame animation of about {dauer:.1f} s; Claude draws the "
-                  f"in-between frames): {action}.")
-    if schleife:
+    if gang:
+        zeilen.append(f"FRAMES: exactly {n} frames side by side, left to right, one complete cycle of about "
+                      f"{dauer:.1f} s at {BILDER_PRO_SEKUNDE} frames per second: " + "; ".join(
+                          f"({i + 1}) {g}" for i, g in enumerate(gruppen)) + ".")
+        zeilen.append(BEINE)
+    else:
+        zeilen.append(f"ACTION ({k} key poses of a {n}-frame animation of about {dauer:.1f} s): {action}.")
+        zeilen.append(f"FRAMES: draw all {n} frames side by side, left to right, in the order they play: the key "
+                      "poses above at their times and evenly spaced in-between frames, so the motion reads "
+                      "smoothly; every frame differs visibly from its neighbours, no two frames identical.")
+    zeilen.append(abstand(n))
+    if gang:
+        zeilen.append("END POSE: frame 8 leads straight back into frame 1, so the loop closes seamlessly; do not "
+                      "draw frame 1 twice.")
+    elif schleife:
         zeilen.append("END POSE: the same as pose 1, so the loop closes seamlessly; do not draw it twice.")
     else:
         zeilen.append(f"END POSE: pose {k} is the final frame and is held; it must read as a calm, complete pose"
@@ -642,6 +775,10 @@ def bewegungen_bauen(text, bausteine, kopf_marke="| Figur | Aktion |"):
         zeilen, anhang = bewegung_prompt(figur, aktion, bilder, ablauf, motiv, motive, bausteine)
         out += [f"## {figur}: {aktion}", "", f"**Anhängen:** {anhang} · **Bilder:** {bilder} · **Ablauf:** {ablauf}",
                 "", "```text", "\n".join(zeilen), "```", ""]
+        if any(z.startswith("LEGS:") for z in zeilen) and any("frames 5 to 8 repeat" in z for z in zeilen):
+            out += ["**Zweiter Durchgang**, wenn die Bilder 5 bis 8 nur Kopien von 1 bis 4 sind (Toadi, Minka, "
+                    "15. November 2026): das erzeugte Bild anhängen und nur die hintere Hälfte neu zeichnen lassen.",
+                    "", "```text", ZWEITER_DURCHGANG, "```", ""]
     return out
 
 
@@ -891,18 +1028,40 @@ OFFEN_LISTE = [
         ("Welt 2", ["W2-F23", "W2-F24", "W2-F25"]),
     ]),
     ("2. Posen und Bewegungen", [
-        ("Als Nächstes (Test für flüssigere Animationen)", ["W1-B27", "W1-B26"]),
-        ("Max und der Kater, in allen Welten", ["WU-B02", "WU-B05", "WU-B06", "WU-B07", "WU-B08", "WU-B10",
-                                               "WU-B12", "WU-B15", "WU-B16", "WU-B17", "WU-B18", "WU-B19",
-                                               "WU-B20", "WU-B21"]),
+        ("Läufe und Gänge, Bild für Bild (zuerst; je zwei Fassungen erzeugen und die bessere nehmen)",
+         ["W1-B01", "W1-B14", "W1-B15", "W1-B16", "W1-B42", "WU-B02", "WU-B12", "PF-B12", "W2-B01", "W2-B02",
+          "W2-B03", "W2-P08"]),
+        ("Als Nächstes: Schmiede und Alwin (Test für flüssigere Animationen)",
+         ["W1-B27", "W1-B43", "W1-B44", "W1-B45", "W1-B46", "W1-B47", "W1-B26", "W1-B48", "W1-B05"]),
+        ("Reden mit Gesten (statt nur Kopfnicken)", ["W1-B49", "W1-B50", "W1-B51", "W1-B52", "W1-B53", "W1-B54",
+                                                     "W1-B55", "W1-B56", "W1-B57", "W1-B58", "W1-B59", "W1-B60",
+                                                     "PF-B13"]),
+        ("Max und der Kater, in allen Welten", ["WU-B05", "WU-B06", "WU-B07", "WU-B08", "WU-B10", "WU-B22",
+                                               "WU-B23", "WU-B24", "WU-B15", "WU-B16", "WU-B17", "WU-B18",
+                                               "WU-B19", "WU-B20", "WU-B21", "WU-B25", "WU-B26"]),
         ("Prolog und Dachboden-Szenen", ["PF-B01", "PF-B02", "PF-B03", "PF-B08", "PF-B11"]),
-        ("Welt 1", ["W1-B01", "W1-B02", "W1-B03", "W1-B04", "W1-B05", "W1-B06", "W1-B07", "W1-B08", "W1-B09",
-                    "W1-B10", "W1-B11", "W1-B12", "W1-B13", "W1-B14", "W1-B15", "W1-B16", "W1-B17", "W1-B18",
+        ("Welt 1", ["W1-B02", "W1-B03", "W1-B04", "W1-B06", "W1-B07", "W1-B08", "W1-B09",
+                    "W1-B10", "W1-B11", "W1-B12", "W1-B13", "W1-B17", "W1-B18",
                     "W1-B19", "W1-B20", "W1-B21", "W1-B22", "W1-B23", "W1-B24", "W1-B25", "W1-B28", "W1-B29",
                     "W1-B30", "W1-B31", "W1-B32", "W1-B33", "W1-B34", "W1-B35", "W1-B36", "W1-B37", "W1-B38",
                     "W1-B39", "W1-B40", "W1-B41"]),
+        ("Welt 2, Tiere (ohne 3D-Clip, jedes Bild gemalt)", ["W2-B04", "W2-B05", "W2-B06", "W2-B07", "W2-B08",
+                                                             "W2-B09", "W2-B10", "W2-P48", "W2-P49"]),
+        ("Nachtrag 15. November: je Figur eine Eigenheit im Stand",
+         [f"W1-B{i}" for i in range(77, 86)] + [f"WU-B{i}" for i in range(27, 33)] + ["PF-B14", "PF-B15"]
+         + ["W2-B32", "W2-B33", "W2-B34"] + [f"W2-P{i}" for i in range(50, 62)]),
+        ("Nachtrag 15. November: mehr Leben im Hintergrund", ["W1-B86", "W1-B87", "W1-B88", "W2-B35", "W2-B36"]),
+        ("Nachtrag 15. November: Leonidas rennt los (Lauf Bild für Bild, wie die Läufe oben)", ["W2-B37"]),
+        ("Welt 2, Reden und Eigenheiten (Arme und Kopf; Beine und Timing aus dem 3D-Clip)",
+         ["W2-P28", "W2-P29", "W2-P30", "W2-P31", "W2-P32", "W2-P33", "W2-P34", "W2-P35", "W2-P36", "W2-P37",
+          "W2-P38", "W2-P39", "W2-P40", "W2-P41", "W2-P42", "W2-P43", "W2-P44", "W2-P45", "W2-P46", "W2-P47"]),
+        ("Lebendige Hintergründe, Welt 1 (Ausschnitt aus dem fertigen Hintergrund anhängen, wo es dabei steht)",
+         [f"W1-B{i}" for i in range(61, 77)]),
+        ("Lebendige Hintergründe, Welt 2 (Boote, Vögel und Tiere; gehen schon ohne Hintergrund)",
+         ["W2-B11", "W2-B12", "W2-B13", "W2-B14", "W2-B15", "W2-B16", "W2-B17", "W2-B18", "W2-B20", "W2-B23",
+          "W2-B24", "W2-B27", "W2-B28", "W2-B29"]),
         ("Welt 2 (Posenbögen; die Bewegung selbst kommt aus dem 3D-Clip)",
-         ["W2-P01", "W2-P02", "W2-P03", "W2-P04", "W2-P05", "W2-P06", "W2-P07", "W2-P08", "W2-P09", "W2-P10",
+         ["W2-P01", "W2-P02", "W2-P03", "W2-P04", "W2-P05", "W2-P06", "W2-P07", "W2-P09", "W2-P10",
           "W2-P11", "W2-P12", "W2-P13", "W2-P14", "W2-P15", "W2-P16", "W2-P17", "W2-P18", "W2-P19",
           "W2-P20", "W2-P21", "W2-P22", "W2-P23", "W2-P24", "W2-P25", "W2-P26", "W2-P27"]),
     ]),
@@ -915,6 +1074,8 @@ OFFEN_LISTE = [
         ("Welt 2, Griechenland", ["W2-R02", "W2-R11", "W2-R10", "W2-R09", "W2-R03", "W2-R07", "W2-R08", "W2-R12"]),
         ("Welt 2, Nahansichten und Tafeln (füllen das ganze Bild wie ein Hintergrund)",
          ["W2-N01", "W2-N02", "W2-N03", "W2-N04", "W2-N05", "W2-N06"]),
+        ("Welt 2, lebendige Hintergründe auf gemalten Stellen (erst wenn der Raum fertig ist, Ausschnitt anhängen)",
+         ["W2-B19", "W2-B21", "W2-B22", "W2-B25", "W2-B26", "W2-B30", "W2-B31"]),
     ]),
     ("5. Später: erst für Welt 3, Welt 4 und das Finale", [
         ("Figuren", ["PF-F05", "PF-F06", "PF-F07", "PF-F10", "PF-F11", "PF-F12", "PF-F13", "PF-F14", "PF-F15"]),
