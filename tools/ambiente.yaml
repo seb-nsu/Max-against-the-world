@@ -174,7 +174,7 @@ W2-B12:
   ausschnitt: [0, 480, 3168, 790]    # ohne Geisterköpfe oben und die durchgehende Wasserlinie
   raster: 8x1
   anker: unten
-  hoehe: 26
+  hoehe: 15                          # watet am fernen Ufer
 W2-B13:
   quelle: runde2/ambiente/W2-B13_fischer_netz_d.png
   ziel: fischer_netz
@@ -240,6 +240,13 @@ W2-B21:
   raster: 6x1
   anker: unten
   hoehe: 48
+W2-B21-nil:
+  quelle: runde2/ambiente/W2-B21_sanduhr.png
+  ziel: sanduhr_nil
+  raum: w2_bg_nil_delta_v01.png
+  raster: 6x1
+  anker: unten
+  hoehe: 48
 W2-B21-gross:
   quelle: runde2/ambiente/W2-B21_sanduhr.png
   ziel: sanduhr_gross
@@ -291,14 +298,14 @@ W2-B28:
   raum: w2_bg_agora_v01.png
   raster: 6x1
   anker: unten
-  hoehe: 14
+  hoehe: 18
 W2-B29:
   quelle: runde2/ambiente/W2-B29_taube_fliegt_b.png
   ziel: taube_fliegt
   raum: w2_bg_agora_v01.png
   raster: 3x2
   toleranz: 70
-  hoehe: 24
+  hoehe: 30
 W2-B31:
   quelle: runde2/ambiente/W2-B31_wartende.png
   ziel: wartende
@@ -316,7 +323,7 @@ W2-B36:
   ziel: wassertraegerin
   raum: w2_bg_nil_delta_v01.png
   bilder: [1, 2, 3, 4, 5, 6, 7, 8]
-  hoehe: 44
+  hoehe: 28                          # geht am fernen Ufer
 
 # ---- Effekte in Szenen (einmalig)
 PF-B08:
@@ -385,8 +392,7 @@ hafen-vorn:
   ausschnitt: [0, 85, 340, 215]
   ziel: hafen_vor_dem_meer
 
-# ---- Räume aus PR #29 (Agora, Stadion, neues Nil-Delta): Streifen fertig, Layout-Einträge folgen nach
-# dem Merge (Liste unten). Bis dahin mit --hg-zusatz auf die Hintergründe des Zweigs rechnen.
+# ---- Räume aus PR #29 (Agora, Stadion, neues Nil-Delta)
 W2-B30:
   quelle: runde2/ambiente/W2-B30_menge.png
   ziel: menge_agora
@@ -396,19 +402,6 @@ W2-B30:
   bilder: [2, 3, 4, 3]
   breite: 160
 
-# Layout-Einträge für nach dem Merge von PR #29 (welt-2.yaml, je Raum unter „effekte:“; Positionen am
-# Hintergrund des Zweigs abgelesen, nach dem Merge im Spiel prüfen):
-# nil_delta:
-#   - {art: bild, bild: res://grafik/ambiente/sanduhr.png, bilder: 6, pos: [234, 194], fps: 6}   # W2-B21
-#   - {art: bild, bild: res://grafik/ambiente/feluke.png, bilder: 8, weg: [[-30, 192], [1120, 182]], tempo: 8, ausblenden: 25, zurueck: true, fps: 6, pause: [10, 30]}   # W2-B11
-#   - {art: bild, bild: res://grafik/ambiente/fischer_netz.png, bilder: 8, pos: [420, 204], fps: 5, ablauf: einmalig, ruhe_sichtbar: true, pause: [12, 30]}   # W2-B13
-#   - {art: bild, bild: res://grafik/ambiente/ibis.png, bilder: 8, pos: [712, 236], fps: 5}   # W2-B12 im Flachwasser vor dem Papyrus
-#   - {art: bild, bild: res://grafik/ambiente/libelle.png, bilder: 4, weg: [[560, 172], [600, 160], [640, 176], [600, 186], [560, 172]], tempo: 18, fps: 14, pause: [2, 8]}   # W2-B14
-#   - {art: bild, bild: res://grafik/ambiente/wassertraegerin.png, bilder: 8, weg: [[330, 230], [520, 230]], tempo: 12, ausblenden: 12, zurueck: true, fps: 8, pause: [15, 40]}   # W2-B36
-# agora:
-#   - {art: bild, bild: res://grafik/ambiente/menge_agora.png, bilder: 4, pos: [650, 238], fps: 2}   # W2-B30 über der linken Gruppe
-#   - {art: bild, bild: res://grafik/ambiente/tauben_picken.png, bilder: 6, pos: [540, 296], fps: 6}   # W2-B28
-#   - {art: bild, bild: res://grafik/ambiente/taube_fliegt.png, bilder: 6, pos: [600, 300], fps: 8, ablauf: einmalig, pause: [15, 40]}   # W2-B29
-# stadion:
-#   - {art: bild, bild: res://grafik/ambiente/wimpel_stadion.png, bilder: 8, pos: [114, 66], fps: 8}   # W2-B27 auf der Tribünenecke links
-#   W2-B26 Zuschauer: Bogen W2-B26_zuschauer.png nicht brauchbar (Leute wechseln von Bild zu Bild die Plätze), neu erzeugen
+# Nil-Delta, Agora und Stadion sind seit dem Merge von PR #29 im Layout (welt-2.yaml).
+# Offen: W2-B26 Stadion-Zuschauer, der Bogen W2-B26_zuschauer.png ist nicht brauchbar (Leute wechseln von
+# Bild zu Bild die Plätze); wird neu gemalt, danach hier eintragen und im Stadion über die Tribüne legen.

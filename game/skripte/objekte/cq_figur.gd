@@ -138,14 +138,17 @@ func springen_zu(ziel: Vector2, bogen := 30.0, dauer := 0.42) -> void:
 
 ## Läuft mit Gehzyklus zu ziel, ohne Wegfindung (hinter den Tresen, aus dem Bild, über Stellen
 ## außerhalb des Laufbereichs). tempo in Pixeln je Sekunde. Beim Überspringen sofort dort.
-## Für Szenen, in denen das Skript eine Bewegung beschreibt (Review Fund 18).
-func laufen_zu(ziel: Vector2, tempo := 70.0) -> void:
+## Für Szenen, in denen das Skript eine Bewegung beschreibt (Review Fund 18). anim: eigene Lauf-Animation
+## (etwa „joggen“ bei Hermes, „barfuss“ bei Max), sonst „walk“.
+func laufen_zu(ziel: Vector2, tempo := 70.0, anim := "walk") -> void:
 	if PopochiuUtils.e.cutscene_skipped or Spiel.testmodus or not is_inside_tree():
 		position = ziel
 		return
 	schauen_zu(ziel.x)
 	var ap := get_node_or_null("AnimationPlayer") as AnimationPlayer
-	if ap and ap.has_animation("walk"):
+	if ap and ap.has_animation(anim):
+		ap.play(anim)
+	elif ap and ap.has_animation("walk"):
 		ap.play("walk")
 	var t := create_tween()
 	t.tween_property(self, "position", ziel, maxf(0.2, position.distance_to(ziel) / tempo))

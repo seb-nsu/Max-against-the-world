@@ -209,6 +209,20 @@ func _abgeben(id: String) -> void:
 	await Spiel.abgeben(Bauplan.gegenstand_script_name(id))
 
 
+## Breite des aktuellen Raums (für Auf- und Abtritte über den Bildrand).
+func _raum_breite() -> float:
+	return float(R.current.get("width")) if is_instance_valid(R.current) and R.current.get("width") else 640.0
+
+
+## Figur läuft mit eigener Animation von außerhalb des Bildes herein oder hinaus.
+func _figur_laeuft(sn: String, von: Vector2, nach: Vector2, tempo: float, anim: String) -> void:
+	var f = C.get_character(sn)
+	if f == null or not f.has_method("laufen_zu"):
+		return
+	f.position = von
+	await f.laufen_zu(nach, tempo, anim)
+
+
 func _raum_id() -> String:
 	return R.current.raum_id() if is_instance_valid(R.current) and R.current is CQRaum else ""
 
@@ -370,11 +384,15 @@ func nach_uebergang_nil_delta(_raum, _x) -> bool:
 	# Hermes bringt Opas Papyrus beim ersten Betreten nach der ersten Fährfahrt
 	if int(Zustand.wert("W2_FAHRTEN", 0)) > 0 and _einmal("W2_OPAS_PAPYRUS"):
 		var raum: CQRaum = R.current
-		Spiel.figur_hier("Hermes", true, raum.get_marker_position("Hermes") if raum.has_marker("Hermes") else Vector2.INF)
+		var ziel: Vector2 = raum.get_marker_position("Hermes") if raum.has_marker("Hermes") else Vector2(400, 320)
+		# Hermes joggt von rechts herein (Animation „joggen“)
+		Spiel.figur_hier("Hermes", true, ziel)
+		await _figur_laeuft("Hermes", Vector2(minf(ziel.x + 380.0, _raum_breite() + 60.0), ziel.y), ziel, 160.0, "joggen")
 		await _szene(["W2_NIL_HER_0910", "W2_NIL_MAX_0920"])
 		await _geben("opas_papyrus")
 		await _szene(["W2_NIL_HER_0930", "W2_NIL_OPA_0940", "W2_NIL_MAX_0950", "W2_NIL_PIX_0960",
 			"W2_NIL_HER_0970", "W2_NIL_MAX_0980", "W2_NIL_HER_0990"])
+		await _figur_laeuft("Hermes", ziel, Vector2(minf(ziel.x + 380.0, _raum_breite() + 60.0), ziel.y), 160.0, "joggen")
 		Spiel.figur_hier("Hermes", false)
 		return true
 	return false
@@ -497,6 +515,10 @@ func fahren(ziel: String) -> void:
 	var i := STEGE.find(von)
 	var j := STEGE.find(ziel)
 	var abwaerts := j > i
+	# Der Fährmann geht die paar Schritte zum Stegende (Animation „walk“)
+	var fae = C.get_character("Faehrmann")
+	if fae != null and fae.has_method("laufen_zu") and fae.is_inside_tree() and fae.visible:
+		await fae.laufen_zu(Vector2(maxf(30.0, fae.position.x - 50.0), fae.position.y), 45.0)
 	var zeilen := ["W2_FAHR_FAE_0030"]
 	var fahrten := int(Zustand.wert("W2_FAHRTEN", 0))
 	if fahrten == 0:
@@ -895,6 +917,11 @@ func _schalter(_obj, iid) -> bool:
 	# Hermes leiht Max gleich seine Sandalen
 	Zustand.setze("W2_HERMES_IM_BUERO")
 	Spiel.regel_wert("zustand_anwenden", R.current)
+	# Hermes joggt durch die Tür links herein
+	var hermes = C.get_character("Hermes")
+	if hermes != null and R.current is CQRaum and (R.current as CQRaum).has_marker("Hermes"):
+		var ziel: Vector2 = (R.current as CQRaum).get_marker_position("Hermes")
+		await _figur_laeuft("Hermes", Vector2(-40, ziel.y), ziel, 160.0, "joggen")
 	await _szene(["W2_BUER_MAX_0600", "W2_BUER_HER_0610"])
 	await _geben("sandalen")
 	return true
@@ -1057,8 +1084,20 @@ func gegenstand_badewanne(_obj, iid) -> bool:
 
 
 func _heureka() -> void:
-	await _szene(["W2_KRON_MAX_0110", "W2_KRON_ARC_0120", "W2_KRON_ARC_0130", "W2_KRON_HIE_0140",
-		"W2_KRON_PIX_0150", "W2_KRON_MAX_0160", "W2_KRON_HIE_0170"])
+	await _szene(["W2_KRON_MAX_0110", "W2_KRON_ARC_0120", "W2_KRON_ARC_0130"])
+	# Heureka: Archimedes im Handtuch rennt aus der Werkstatt (Animation „heureka“)
+	var arc = C.get_character("Archimedes")
+	if arc != null and arc.has_method("grafik_laden"):
+		var start: Vector2 = arc.position
+		arc.grafik_laden("archimedes_handtuch")
+		await _figur_laeuft("Archimedes", start, Vector2(_raum_breite() + 80, start.y), 170.0, "heureka")
+		Spiel.figur_hier("Archimedes", false)
+		await _szene(["W2_KRON_HIE_0140", "W2_KRON_PIX_0150", "W2_KRON_MAX_0160", "W2_KRON_HIE_0170"])
+		# zurück, wieder angezogen, zum Training
+		arc.grafik_laden("")
+		Spiel.figur_hier("Archimedes", true, start)
+	else:
+		await _szene(["W2_KRON_HIE_0140", "W2_KRON_PIX_0150", "W2_KRON_MAX_0160", "W2_KRON_HIE_0170"])
 	await _abgeben("krone")
 	await _abgeben("goldbarren")
 	Zustand.loese("R5")
@@ -1106,8 +1145,15 @@ func _tag_1() -> void:
 		lauf += ["W2_TAG1_MAX_0050", "W2_TAG1_NAR_0060", "W2_TAG1_PIX_0070", "W2_TAG1_NAR_0080",
 			"W2_TAG1_MAX_0090"]
 	else:
-		lauf += ["W2_TAG1_NAR_0100", "W2_TAG1_MAX_0110", "W2_TAG1_NAR_0060", "W2_TAG1_PIX_0120",
-			"W2_TAG1_MAX_0130"]
+		lauf += ["W2_TAG1_NAR_0100", "W2_TAG1_MAX_0110"]
+	await _szene(lauf)
+	if not geoelt and is_instance_valid(C.Max) and C.Max.has_method("laufen_zu"):
+		# Barfuß über den heißen Sand (Animation „barfuss“), die Bahn entlang nach links
+		var p: Vector2 = C.Max.position
+		await C.Max.laufen_zu(Vector2(maxf(120.0, p.x - 520.0), p.y), 150.0, "barfuss")
+	lauf = []
+	if not geoelt:
+		lauf += ["W2_TAG1_NAR_0060", "W2_TAG1_PIX_0120", "W2_TAG1_MAX_0130"]
 	lauf += ["W2_TAG1_RAM_0140", "W2_TAG1_LEO_0150", "W2_TAG1_MAX_0160", "W2_TAG1_PIX_0170",
 		"W2_HEBL_ARC_0010"]
 	await _szene(lauf)

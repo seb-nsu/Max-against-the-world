@@ -74,29 +74,165 @@
     ],
     "von_thronsaal_ramses": [
      1220,
-     300
+     320
     ],
     "von_sphinx": [
-     1160,
-     270
+     1150,
+     268
     ],
     "von_faehre": [
      130,
      305
     ],
     "hermes": [
-     800,
-     310
+     485,
+     305
     ]
    },
    "tiefe": 0.85,
+   "vordergrund": {
+    "faehre": {
+     "bild": "res://grafik/props/krokodil_faehre.png",
+     "pos": [
+      75,
+      222
+     ],
+     "skala": 0.85,
+     "schatten": false
+    },
+    "bauplan": {
+     "bild": "res://grafik/props/bauplan_pyramide.png",
+     "pos": [
+      980,
+      247
+     ],
+     "schatten": false
+    }
+   },
+   "effekte": [
+    {
+     "art": "bild",
+     "bild": "res://grafik/ambiente/sanduhr_nil.png",
+     "bilder": 6,
+     "pos": [
+      234,
+      194
+     ],
+     "fps": 6
+    },
+    {
+     "art": "bild",
+     "bild": "res://grafik/ambiente/feluke.png",
+     "bilder": 8,
+     "weg": [
+      [
+       -30,
+       192
+      ],
+      [
+       1120,
+       182
+      ]
+     ],
+     "tempo": 8,
+     "ausblenden": 25,
+     "zurueck": true,
+     "fps": 6,
+     "pause": [
+      10,
+      30
+     ]
+    },
+    {
+     "art": "bild",
+     "bild": "res://grafik/ambiente/fischer_netz.png",
+     "bilder": 8,
+     "pos": [
+      420,
+      204
+     ],
+     "fps": 5,
+     "ablauf": "einmalig",
+     "ruhe_sichtbar": true,
+     "pause": [
+      12,
+      30
+     ]
+    },
+    {
+     "art": "bild",
+     "bild": "res://grafik/ambiente/ibis.png",
+     "bilder": 8,
+     "pos": [
+      490,
+      170
+     ],
+     "fps": 5
+    },
+    {
+     "art": "bild",
+     "bild": "res://grafik/ambiente/libelle.png",
+     "bilder": 4,
+     "weg": [
+      [
+       560,
+       172
+      ],
+      [
+       600,
+       160
+      ],
+      [
+       640,
+       176
+      ],
+      [
+       600,
+       186
+      ],
+      [
+       560,
+       172
+      ]
+     ],
+     "tempo": 18,
+     "fps": 14,
+     "pause": [
+      2,
+      8
+     ]
+    },
+    {
+     "art": "bild",
+     "bild": "res://grafik/ambiente/wassertraegerin.png",
+     "bilder": 8,
+     "weg": [
+      [
+       290,
+       161
+      ],
+      [
+       470,
+       160
+      ]
+     ],
+     "tempo": 7,
+     "ausblenden": 12,
+     "zurueck": true,
+     "fps": 8,
+     "pause": [
+      15,
+      40
+     ]
+    }
+   ],
    "figuren": [
     {
      "id": "faehrmann",
      "script_name": "Faehrmann",
      "pos": [
-      120,
-      300
+      170,
+      302
      ]
     },
     {
@@ -111,8 +247,8 @@
      "id": "steinmetz",
      "script_name": "Steinmetz",
      "pos": [
-      760,
-      300
+      790,
+      268
      ]
     }
    ],
@@ -408,14 +544,14 @@
      "ziel": "thronsaal_ramses",
      "name_key": "UI_OBJ_SANDWEG",
      "rect": [
-      1240,
-      130,
-      40,
-      120
+      1236,
+      250,
+      44,
+      106
      ],
      "gehe": [
-      1250,
-      300
+      1262,
+      325
      ],
      "erreichbar_ab": "start",
      "ansehen": [
@@ -442,13 +578,13 @@
      "ziel": "sphinx",
      "name_key": "UI_OBJ_DUENENPFAD",
      "rect": [
-      1110,
-      125,
+      1090,
       110,
-      60
+      120,
+      90
      ],
      "gehe": [
-      1160,
+      1150,
       262
      ],
      "erreichbar_ab": "start",
@@ -533,6 +669,24 @@
     ]
    },
    "tiefe": 0.85,
+   "vordergrund": {
+    "sarkophag": {
+     "bild": "res://grafik/props/sarkophag.png",
+     "pos": [
+      127,
+      282
+     ],
+     "skala": 1.25
+    },
+    "mumienkatze": {
+     "bild": "res://grafik/props/mumienkatze.png",
+     "pos": [
+      232,
+      176
+     ],
+     "schatten": false
+    }
+   },
    "effekte": [
     {
      "art": "bild",
@@ -1093,8 +1247,8 @@
      "id": "nebet",
      "script_name": "Nebet",
      "pos": [
-      300,
-      300
+      395,
+      285
      ]
     }
    ],
@@ -1903,6 +2057,27 @@
     ]
    },
    "tiefe": 0.85,
+   "vordergrund": {
+    "faehre": {
+     "bild": "res://grafik/props/krokodil_faehre.png",
+     "pos": [
+      30,
+      238
+     ],
+     "skala": 0.75,
+     "schatten": false
+    },
+    "baum": {
+     "bild": "res://grafik/props/olympia_baum_vorn.png",
+     "rect": [
+      60,
+      130,
+      46,
+      122
+     ],
+     "baseline": 250
+    }
+   },
    "effekte": [
     {
      "art": "bild",
@@ -1930,8 +2105,8 @@
      "id": "faehrmann",
      "script_name": "Faehrmann",
      "pos": [
-      70,
-      300
+      118,
+      302
      ]
     }
    ],
@@ -2147,16 +2322,16 @@
     1280,
     360
    ],
-   "hintergrund": "res://grafik/platzhalter/raum_agora.png",
+   "hintergrund": "res://grafik/hintergruende/w2_bg_agora_v01.png",
    "farbe": "#c8c0a8",
    "laufbereich": [
     [
      8,
-     280
+     270
     ],
     [
      1272,
-     280
+     270
     ],
     [
      1272,
@@ -2169,81 +2344,151 @@
    ],
    "marker": {
     "start": [
-     1200,
-     320
+     1215,
+     310
     ],
     "von_faehrsteg_olympia": [
-     1220,
-     320
+     1215,
+     310
     ],
     "von_stadion": [
-     60,
-     320
+     120,
+     310
     ],
     "von_startbuero": [
-     424,
-     304
+     416,
+     300
     ],
     "abwurf": [
      900,
-     320
+     315
     ]
+   },
+   "tiefe": 0.85,
+   "vordergrund": {
+    "heuhaufen": {
+     "bild": "res://grafik/props/heuhaufen.png",
+     "pos": [
+      900,
+      282
+     ],
+     "skala": 1.3
+    },
+    "muenzhut": {
+     "bild": "res://grafik/props/muenzhut.png",
+     "pos": [
+      990,
+      306
+     ],
+     "schatten": false
+    },
+    "rednerpult": {
+     "bild": "res://grafik/props/rednerpult_vorn.png",
+     "rect": [
+      730,
+      176,
+      56,
+      65
+     ],
+     "baseline": 240
+    }
+   },
+   "effekte": [
+    {
+     "art": "bild",
+     "bild": "res://grafik/ambiente/menge_agora.png",
+     "bilder": 4,
+     "pos": [
+      650,
+      238
+     ],
+     "fps": 2
+    },
+    {
+     "art": "bild",
+     "bild": "res://grafik/ambiente/tauben_picken.png",
+     "bilder": 6,
+     "pos": [
+      540,
+      296
+     ],
+     "fps": 6
+    },
+    {
+     "art": "bild",
+     "bild": "res://grafik/ambiente/taube_fliegt.png",
+     "bilder": 6,
+     "pos": [
+      600,
+      300
+     ],
+     "fps": 8,
+     "ablauf": "einmalig",
+     "pause": [
+      15,
+      40
+     ]
+    }
+   ],
+   "hintergrund_nach": {
+    "R12": "res://grafik/hintergruende/w2_bg_agora_sandale_v01.png",
+    "R13": "res://grafik/hintergruende/w2_bg_agora_ohne_arme_v01.png"
    },
    "figuren": [
     {
      "id": "cicero",
      "script_name": "Cicero",
      "pos": [
-      712,
-      296
+      762,
+      233
      ]
     },
     {
      "id": "tiro",
      "script_name": "Tiro",
      "pos": [
-      790,
-      312
+      840,
+      300
      ]
     },
     {
      "id": "tourist",
      "script_name": "Tourist",
      "pos": [
-      1000,
-      320
+      1040,
+      308
      ]
     },
     {
      "id": "touristin",
      "script_name": "Touristin",
      "pos": [
-      1064,
-      320
+      1100,
+      308
      ]
     },
     {
      "id": "philosoph",
      "script_name": "Philosoph",
      "pos": [
-      280,
-      316
+      480,
+      306
      ]
     },
     {
      "id": "brian",
      "script_name": "Brian",
      "pos": [
-      500,
-      316
+      590,
+      300
      ]
     },
     {
      "id": "strassenmusiker",
      "script_name": "Strassenmusiker",
      "pos": [
-      600,
-      312
+      955,
+      304
      ]
     }
    ],
@@ -2253,14 +2498,14 @@
      "script_name": "Saeulenhalle",
      "name_key": "UI_OBJ_SAEULENHALLE",
      "rect": [
-      340,
-      80,
-      200,
+      345,
+      105,
+      265,
       160
      ],
      "gehe": [
-      440,
-      304
+      480,
+      300
      ],
      "ansehen": [
       {
@@ -2286,13 +2531,13 @@
      "name_key": "UI_OBJ_HOHE_SAEULE_MIT_ADLER",
      "rect": [
       880,
-      20,
+      10,
       40,
-      240
+      230
      ],
      "gehe": [
       900,
-      308
+      305
      ],
      "ansehen": [
       {
@@ -2326,14 +2571,14 @@
      "script_name": "SandaleAufDerSaeule",
      "name_key": "UI_OBJ_SANDALE_AUF_DER_SAEULE",
      "rect": [
-      876,
-      8,
-      48,
-      20
+      870,
+      0,
+      62,
+      42
      ],
      "gehe": [
       900,
-      308
+      305
      ],
      "ansehen": [
       {
@@ -2358,14 +2603,14 @@
      "script_name": "Heuhaufen",
      "name_key": "UI_OBJ_HEUHAUFEN",
      "rect": [
-      856,
-      248,
-      88,
-      32
+      860,
+      250,
+      80,
+      30
      ],
      "gehe": [
       900,
-      316
+      310
      ],
      "ansehen": [
       {
@@ -2400,14 +2645,14 @@
      "script_name": "Venusstatue",
      "name_key": "UI_OBJ_VENUSSTATUE",
      "rect": [
-      128,
-      128,
-      48,
-      144
+      255,
+      120,
+      60,
+      155
      ],
      "gehe": [
-      152,
-      308
+      290,
+      300
      ],
      "ansehen": [
       {
@@ -2451,14 +2696,14 @@
      "script_name": "Rednerpult",
      "name_key": "UI_OBJ_REDNERPULT",
      "rect": [
-      680,
-      220,
-      64,
-      60
+      675,
+      175,
+      150,
+      97
      ],
      "gehe": [
-      712,
-      316
+      750,
+      300
      ],
      "ansehen": [
       {
@@ -2483,14 +2728,14 @@
      "script_name": "Marktstaende",
      "name_key": "UI_OBJ_MARKTSTAENDE",
      "rect": [
-      960,
-      160,
-      200,
-      100
+      935,
+      145,
+      190,
+      105
      ],
      "gehe": [
-      1060,
-      308
+      1030,
+      305
      ],
      "ansehen": [
       {
@@ -2516,14 +2761,14 @@
      "script_name": "Tonne",
      "name_key": "UI_OBJ_TONNE",
      "rect": [
-      240,
-      248,
-      72,
-      48
+      425,
+      258,
+      110,
+      50
      ],
      "gehe": [
-      276,
-      320
+      480,
+      322
      ],
      "ansehen": [
       {
@@ -2568,13 +2813,13 @@
      "name_key": "UI_OBJ_MENGE",
      "rect": [
       600,
-      160,
-      220,
-      56
+      180,
+      340,
+      60
      ],
      "gehe": [
-      710,
-      308
+      770,
+      300
      ],
      "ansehen": [
       {
@@ -2600,14 +2845,14 @@
      "script_name": "LateinKritzelei",
      "name_key": "UI_OBJ_LATEIN_KRITZELEI",
      "rect": [
-      1172,
-      172,
-      56,
-      32
+      1125,
+      160,
+      60,
+      45
      ],
      "gehe": [
-      1200,
-      308
+      1150,
+      300
      ],
      "ansehen": [
       {
@@ -2637,14 +2882,14 @@
      "ziel": "faehrsteg_olympia",
      "name_key": "UI_OBJ_WEG_ZUM_FAEHRSTEG",
      "rect": [
-      1240,
-      120,
-      36,
-      160
+      1236,
+      180,
+      44,
+      100
      ],
      "gehe": [
-      1256,
-      320
+      1258,
+      305
      ],
      "erreichbar_ab": "R1",
      "ansehen": []
@@ -2655,14 +2900,14 @@
      "ziel": "stadion",
      "name_key": "UI_OBJ_BOGEN_ZUM_STADION",
      "rect": [
-      4,
-      100,
-      60,
-      180
+      70,
+      80,
+      110,
+      190
      ],
      "gehe": [
-      32,
-      320
+      120,
+      300
      ],
      "erreichbar_ab": "R1",
      "ansehen": []
@@ -2673,14 +2918,14 @@
      "ziel": "startbuero",
      "name_key": "UI_OBJ_TUER_ZUM_STARTBUERO",
      "rect": [
-      396,
-      180,
-      52,
-      100
+      395,
+      175,
+      42,
+      85
      ],
      "gehe": [
-      424,
-      304
+      416,
+      290
      ],
      "erreichbar_ab": "R1",
      "ansehen": []
@@ -2764,6 +3009,28 @@
     ]
    },
    "tiefe": 0.8,
+   "vordergrund": {
+    "schalter_links": {
+     "bild": "res://grafik/props/schalter_links_vorn.png",
+     "rect": [
+      200,
+      156,
+      108,
+      62
+     ],
+     "baseline": 216
+    },
+    "schalter_rechts": {
+     "bild": "res://grafik/props/schalter_rechts_vorn.png",
+     "rect": [
+      340,
+      156,
+      102,
+      63
+     ],
+     "baseline": 216
+    }
+   },
    "effekte": [
     {
      "art": "bild",
@@ -2781,16 +3048,16 @@
      "id": "beamter_1",
      "script_name": "Beamter1",
      "pos": [
-      320,
-      232
+      255,
+      213
      ]
     },
     {
      "id": "beamter_2",
      "script_name": "Beamter2",
      "pos": [
-      450,
-      236
+      392,
+      214
      ]
     }
    ],
@@ -3051,16 +3318,16 @@
     1280,
     360
    ],
-   "hintergrund": "res://grafik/platzhalter/raum_stadion.png",
+   "hintergrund": "res://grafik/hintergruende/w2_bg_stadion_v01.png",
    "farbe": "#d6b46a",
    "laufbereich": [
     [
      8,
-     280
+     215
     ],
     [
      1272,
-     280
+     215
     ],
     [
      1272,
@@ -3073,57 +3340,92 @@
    ],
    "marker": {
     "start": [
-     1184,
-     320
+     1200,
+     300
     ],
     "von_agora": [
-     1184,
-     320
+     1200,
+     300
     ],
     "ramses": [
-     780,
-     132
+     740,
+     236
     ],
     "wedler": [
-     840,
-     132
+     800,
+     236
     ],
     "archimedes": [
-     256,
-     304
+     290,
+     265
     ],
     "hermes": [
-     920,
-     320
+     420,
+     292
     ],
     "cicero": [
-     440,
-     304
+     560,
+     272
     ],
     "zeremonienmeister": [
-     1040,
-     304
+     880,
+     246
     ],
     "aegypter": [
-     700,
-     132
+     660,
+     240
     ]
+   },
+   "tiefe": 0.8,
+   "vordergrund": {
+    "aegypter_2": {
+     "bild": "res://grafik/props/aegypter_2.png",
+     "pos": [
+      615,
+      238
+     ],
+     "nach": "R13"
+    },
+    "aegypter_3": {
+     "bild": "res://grafik/props/aegypter_3.png",
+     "pos": [
+      1030,
+      252
+     ],
+     "blick": "links",
+     "nach": "R13"
+    }
+   },
+   "effekte": [
+    {
+     "art": "bild",
+     "bild": "res://grafik/ambiente/wimpel_stadion.png",
+     "bilder": 8,
+     "pos": [
+      102,
+      64
+     ],
+     "fps": 8
+    }
+   ],
+   "hintergrund_nach": {
+    "R13": "res://grafik/hintergruende/w2_bg_stadion_parade_v01.png"
    },
    "figuren": [
     {
      "id": "leonidas",
      "script_name": "Leonidas",
      "pos": [
-      800,
-      316
+      960,
+      300
      ]
     },
     {
      "id": "schildkroete",
      "script_name": "Schildkroete",
      "pos": [
-      944,
-      336
+      1010,
+      322
      ]
     }
    ],
@@ -3133,14 +3435,14 @@
      "script_name": "Laufbahn",
      "name_key": "UI_OBJ_LAUFBAHN",
      "rect": [
-      80,
-      296,
-      1120,
+      160,
+      300,
+      900,
       24
      ],
      "gehe": [
       640,
-      332
+      312
      ],
      "ansehen": [
       {
@@ -3165,14 +3467,14 @@
      "script_name": "Sandgrube",
      "name_key": "UI_OBJ_SANDGRUBE",
      "rect": [
-      316,
-      248,
-      120,
-      32
+      180,
+      205,
+      275,
+      40
      ],
      "gehe": [
-      376,
-      312
+      320,
+      280
      ],
      "ansehen": [
       {
@@ -3197,14 +3499,14 @@
      "script_name": "Kampfrichterzelt",
      "name_key": "UI_OBJ_KAMPFRICHTERZELT",
      "rect": [
-      600,
-      196,
-      80,
-      64
+      420,
+      125,
+      125,
+      100
      ],
      "gehe": [
-      640,
-      308
+      480,
+      280
      ],
      "ansehen": [
       {
@@ -3230,14 +3532,14 @@
      "script_name": "Zuschauerraenge",
      "name_key": "UI_OBJ_ZUSCHAUERRAENGE",
      "rect": [
-      0,
-      80,
-      1280,
-      64
+      60,
+      60,
+      1110,
+      100
      ],
      "gehe": [
       640,
-      308
+      280
      ],
      "ansehen": [
       {
@@ -3263,14 +3565,14 @@
      "script_name": "Glockenturm",
      "name_key": "UI_OBJ_GLOCKENTURM",
      "rect": [
-      1136,
-      8,
-      32,
-      68
+      1195,
+      0,
+      50,
+      135
      ],
      "gehe": [
-      1120,
-      308
+      1150,
+      280
      ],
      "ansehen": [
       {
@@ -3314,14 +3616,14 @@
      "script_name": "Siegerliste",
      "name_key": "UI_OBJ_SIEGERLISTE",
      "rect": [
-      824,
-      180,
-      48,
-      60
+      845,
+      135,
+      70,
+      50
      ],
      "gehe": [
-      848,
-      308
+      880,
+      270
      ],
      "ansehen": [
       {
@@ -3348,13 +3650,13 @@
      "name_key": "UI_OBJ_STARTLINIE",
      "rect": [
       1062,
-      320,
-      12,
-      32
+      200,
+      20,
+      160
      ],
      "gehe": [
-      1064,
-      336
+      1050,
+      300
      ],
      "ansehen": [
       {
@@ -3417,14 +3719,14 @@
      "script_name": "Wurfhebel",
      "name_key": "UI_OBJ_WURFHEBEL",
      "rect": [
-      132,
-      200,
-      72,
-      80
+      88,
+      160,
+      110,
+      65
      ],
      "gehe": [
-      176,
-      312
+      150,
+      280
      ],
      "ansehen": [
       {
@@ -3455,14 +3757,14 @@
      "ziel": "agora",
      "name_key": "UI_OBJ_AUSGANG_AGORA",
      "rect": [
-      1240,
+      1235,
       140,
-      36,
+      45,
       140
      ],
      "gehe": [
-      1252,
-      320
+      1250,
+      290
      ],
      "erreichbar_ab": "R1",
      "ansehen": []
@@ -3551,15 +3853,24 @@
    },
    "tiefe": 0.75,
    "vordergrund": {
-    "vor_dem_meer": {
-     "bild": "res://grafik/ambiente/hafen_vor_dem_meer.png",
-     "rect": [
-      0,
-      85,
-      340,
-      130
+    "faehre": {
+     "bild": "res://grafik/props/krokodil_faehre.png",
+     "pos": [
+      118,
+      178
      ],
-     "baseline": 200
+     "skala": 0.75,
+     "schatten": false
+    },
+    "sanduhr": {
+     "bild": "res://grafik/props/syrakus_sanduhr_vorn.png",
+     "rect": [
+      56,
+      92,
+      44,
+      172
+     ],
+     "baseline": 262
     }
    },
    "effekte": [
@@ -3704,8 +4015,8 @@
      "id": "faehrmann",
      "script_name": "Faehrmann",
      "pos": [
-      100,
-      262
+      205,
+      258
      ]
     }
    ],
@@ -4016,6 +4327,16 @@
     ]
    },
    "tiefe": 0.8,
+   "vordergrund": {
+    "wurfhebel": {
+     "bild": "res://grafik/props/wurfhebel.png",
+     "pos": [
+      440,
+      272
+     ],
+     "skala": 0.7
+    }
+   },
    "effekte": [
     {
      "art": "bild",
@@ -4042,8 +4363,8 @@
      "id": "hieron",
      "script_name": "Hieron",
      "pos": [
-      400,
-      310
+      520,
+      312
      ]
     }
    ],
@@ -7425,7 +7746,7 @@
    ],
    "reist_mit": false,
    "nahansicht": false,
-   "icon": "res://grafik/platzhalter/gegenstand_sandalen.png",
+   "icon": "res://grafik/gegenstaende/sandalen.png",
    "icons": {},
    "ansehen": [
     {
@@ -7914,19 +8235,19 @@
    "id": "hieroglyphen_grammatik",
    "name_key": "UI_OBJ_HIEROGLYPHEN_GRAMMATIK",
    "raum": "thronsaal_ramses",
-   "bild": "res://grafik/platzhalter/nah_hieroglyphen_grammatik.png"
+   "bild": "res://grafik/nahansichten/hieroglyphen_grammatik.png"
   },
   {
    "id": "faehrtafel",
    "name_key": "UI_OBJ_FAEHRTAFEL",
    "raum": "nil_delta",
-   "bild": "res://grafik/platzhalter/nah_faehrtafel.png"
+   "bild": "res://grafik/nahansichten/faehrtafel.png"
   },
   {
    "id": "aushang",
    "name_key": "UI_OBJ_AUSHANG",
    "raum": "startbuero",
-   "bild": "res://grafik/platzhalter/nah_aushang.png"
+   "bild": "res://grafik/nahansichten/aushang.png"
   }
  ],
  "dialoge": [
