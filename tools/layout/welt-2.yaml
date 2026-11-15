@@ -48,7 +48,7 @@ nil_delta:
     von_thronsaal_ramses: [1220, 300]
     von_sphinx: [1160, 270]
     von_faehre: [130, 305]
-    hermes: [800, 310]
+    hermes: [580, 310]             # nahe am Ankunftsplatz von Max, damit man ihn hereinjoggen sieht
   figuren:
     faehrmann: [120, 300]
     sobek: [312, 240]

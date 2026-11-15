@@ -132,7 +132,7 @@ position = Vector2(1160, 270)
 position = Vector2(130, 305)
 
 [node name="Hermes" parent="Markers" unique_id=1562054915 instance=ExtResource("20_yp18m")]
-position = Vector2(800, 310)
+position = Vector2(580, 310)
 
 [node name="Characters" type="Node2D" parent="." unique_id=698263444]
 
