@@ -186,8 +186,7 @@
      "pos": [
       345,
       226
-     ],
-     "skala": 2
+     ]
     },
     "bohnenranke": {
      "bild": "res://grafik/props/bohnenranke.png",
@@ -1952,7 +1951,7 @@
      "bild": "res://grafik/props/hufeisen_zange.png",
      "pos": [
       248,
-      213
+      210
      ],
      "schatten": false
     }
@@ -2193,7 +2192,8 @@
         ]
        }
       ]
-     }
+     },
+     "schatten": true
     }
    ],
    "ausgaenge": [
@@ -2815,9 +2815,10 @@
     "socke": {
      "bild": "res://grafik/props/socke_loecher.png",
      "pos": [
-      402,
-      202
-     ]
+      405,
+      211
+     ],
+     "schatten": false
     },
     "flasche_1": {
      "bild": "res://grafik/props/flasche_1.png",
@@ -4483,8 +4484,7 @@
      "pos": [
       770,
       216
-     ],
-     "skala": 2
+     ]
     },
     "niesrosen_zu": {
      "bild": "res://grafik/props/niesrosen_zu.png",
@@ -5464,24 +5464,21 @@
      "pos": [
       700,
       258
-     ],
-     "skala": 0.72
+     ]
     },
     "streik_goblin_3": {
      "bild": "res://grafik/props/streik_goblin_3.png",
      "pos": [
       765,
       258
-     ],
-     "skala": 0.72
+     ]
     },
     "streik_goblin_2": {
      "bild": "res://grafik/props/streik_goblin_2.png",
      "pos": [
       822,
       258
-     ],
-     "skala": 0.72
+     ]
     },
     "kaffeemaschine": {
      "bild": "res://grafik/props/kaffeemaschine.png",

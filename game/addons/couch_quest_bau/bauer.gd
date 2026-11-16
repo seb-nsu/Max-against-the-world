@@ -334,8 +334,7 @@ func _raum(r: Dictionary) -> void:
 		if prop:
 			var tex: Texture2D = load(pd.textur)
 			prop.texture = tex
-			if tex.get_width() > rect.size.x * 1.5:
-				prop.frames = int(round(tex.get_width() / rect.size.x))
+			prop.frames = _bilder_in_reihe(tex, rect)
 			prop.position = rect.get_center()
 			prop.description = pd.name_key
 			prop.walk_to_point = Vector2(pd.gehe[0], pd.gehe[1]) - rect.get_center()
@@ -428,7 +427,7 @@ func _layout_uebernehmen(r: Dictionary) -> void:
 				and ResourceLoader.exists(o[1].textur):
 			knoten.texture = load(o[1].textur)
 			# Zustandsreihe (Zapp-O-Mat): so viele Bilder, wie nebeneinander ins Rechteck passen
-			knoten.frames = maxi(1, int(round(knoten.texture.get_width() / rect.size.x)))
+			knoten.frames = _bilder_in_reihe(knoten.texture, rect)
 	for fd in r.figuren:
 		for c in raum.get_node("Characters").get_children():
 			if c.name.begins_with("Character" + fd.script_name):
@@ -564,6 +563,16 @@ func _szene_speichern(knoten: Node, pfad: String) -> void:
 		err = ResourceSaver.save(ps, pfad)
 	if err != OK:
 		_fehler("Szene %s nicht gespeichert (%d)" % [pfad, err])
+
+
+## Anzahl Bilder einer Zustandsreihe (Zapp-O-Mat: sieben Bilder nebeneinander, genau ein Vielfaches der
+## Rechteckbreite). Freigestellte Props dürfen breiter sein als ihr Klickrechteck (Schatten, Ränder, P15),
+## sie bleiben ein Bild.
+func _bilder_in_reihe(tex: Texture2D, rect: Rect2) -> int:
+	var n := int(round(tex.get_width() / rect.size.x))
+	if n > 1 and tex.get_width() == int(n * rect.size.x):
+		return n
+	return 1
 
 
 func _rect(a: Array) -> Rect2:
