@@ -219,8 +219,11 @@ func grafik_laden(variante := "") -> bool:
 	for a: Dictionary in anims.values():
 		gesamt = maxi(gesamt, int(a.von) + int(a.bilder))
 	sprite.texture = load(bild)
-	sprite.hframes = gesamt
-	sprite.vframes = 1
+	# „spalten“ (optional): große Sheets liegen in mehreren Reihen (Texturgrenze 16384 px);
+	# die Bildnummern laufen zeilenweise weiter, die Animationen bleiben gleich
+	var spalten := int(daten.get("spalten", gesamt))
+	sprite.hframes = spalten
+	sprite.vframes = ceili(float(gesamt) / spalten)
 	sprite.frame = 0
 	sprite.centered = true
 	sprite.offset = Vector2(0, -float(daten.bild[1]) / 2.0)
@@ -234,9 +237,12 @@ func grafik_laden(variante := "") -> bool:
 		anim.track_set_path(spur, "Sprite2D:frame")
 		anim.value_track_set_update_mode(spur, Animation.UPDATE_DISCRETE)
 		var dauer := float(a.ms) / 1000.0
-		for i in int(a.bilder):
-			anim.track_insert_key(spur, i * dauer, int(a.von) + i)
-		anim.length = int(a.bilder) * dauer
+		# „folge“ (optional): Reihenfolge der gespeicherten Bilder; Wiederholungen halten eine Pose,
+		# ohne dass das Bild mehrfach im Sheet liegt
+		var folge: Array = a.get("folge", range(int(a.bilder)))
+		for i in folge.size():
+			anim.track_insert_key(spur, i * dauer, int(a.von) + int(folge[i]))
+		anim.length = folge.size() * dauer
 		anim.loop_mode = Animation.LOOP_LINEAR if a.get("schleife", true) else Animation.LOOP_NONE
 		lib.add_animation(name, anim)
 	var player: AnimationPlayer = get_node("AnimationPlayer")

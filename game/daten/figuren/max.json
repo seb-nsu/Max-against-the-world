@@ -1,7 +1,7 @@
 {
  "bild": [
-  86,
-  191
+  280,
+  193
  ],
  "animationen": {
   "idle": {
@@ -10,7 +10,7 @@
    "ms": 280,
    "schleife": true
   },
-  "talk": {
+  "talk_alt": {
    "von": 8,
    "bilder": 4,
    "ms": 130,
@@ -39,6 +39,470 @@
    "bilder": 8,
    "ms": 73,
    "schleife": true
+  },
+  "aufheben": {
+   "von": 53,
+   "bilder": 7,
+   "ms": 110,
+   "schleife": false,
+   "folge": [
+    0,
+    1,
+    2,
+    3,
+    3,
+    3,
+    4,
+    5,
+    6,
+    6,
+    0
+   ]
+  },
+  "benutzen": {
+   "von": 60,
+   "bilder": 7,
+   "ms": 120,
+   "schleife": false,
+   "folge": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    3,
+    4,
+    5,
+    6,
+    0
+   ]
+  },
+  "bohne": {
+   "von": 67,
+   "bilder": 11,
+   "ms": 120,
+   "schleife": false,
+   "folge": [
+    0,
+    0,
+    1,
+    2,
+    3,
+    4,
+    4,
+    5,
+    6,
+    7,
+    8,
+    8,
+    8,
+    9,
+    10,
+    10
+   ]
+  },
+  "diskus": {
+   "von": 78,
+   "bilder": 3,
+   "ms": 120,
+   "schleife": false,
+   "folge": [
+    0,
+    0,
+    0,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fallen": {
+   "von": 81,
+   "bilder": 8,
+   "ms": 100,
+   "schleife": false,
+   "folge": [
+    0,
+    1,
+    2,
+    3,
+    3,
+    4,
+    5,
+    6,
+    7,
+    7,
+    7
+   ]
+  },
+  "gaehnen": {
+   "von": 89,
+   "bilder": 7,
+   "ms": 130,
+   "schleife": false,
+   "folge": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    4,
+    4,
+    4,
+    3,
+    5,
+    6,
+    0
+   ]
+  },
+  "gehen_hinten": {
+   "von": 96,
+   "bilder": 4,
+   "ms": 110,
+   "schleife": true
+  },
+  "gehen_vorn": {
+   "von": 100,
+   "bilder": 4,
+   "ms": 110,
+   "schleife": true
+  },
+  "heisser_sand": {
+   "von": 104,
+   "bilder": 2,
+   "ms": 120,
+   "schleife": false,
+   "folge": [
+    0,
+    0,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    0,
+    0,
+    0
+   ]
+  },
+  "hinsetzen": {
+   "von": 106,
+   "bilder": 9,
+   "ms": 110,
+   "schleife": false,
+   "folge": [
+    0,
+    0,
+    1,
+    1,
+    2,
+    3,
+    4,
+    5,
+    5,
+    6,
+    6,
+    6,
+    7,
+    7,
+    8,
+    8,
+    8,
+    8
+   ]
+  },
+  "katapult": {
+   "von": 115,
+   "bilder": 2,
+   "ms": 120,
+   "schleife": false,
+   "folge": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ]
+  },
+  "kochloeffel": {
+   "von": 117,
+   "bilder": 8,
+   "ms": 110,
+   "schleife": false,
+   "folge": [
+    0,
+    0,
+    1,
+    2,
+    2,
+    3,
+    4,
+    5,
+    5,
+    6,
+    7,
+    7
+   ]
+  },
+  "kopf_kratzen": {
+   "von": 125,
+   "bilder": 7,
+   "ms": 110,
+   "schleife": false,
+   "folge": [
+    0,
+    0,
+    1,
+    2,
+    3,
+    3,
+    3,
+    4,
+    4,
+    4,
+    4,
+    5,
+    6,
+    6,
+    6,
+    0,
+    0
+   ]
+  },
+  "melken": {
+   "von": 132,
+   "bilder": 8,
+   "ms": 140,
+   "schleife": true
+  },
+  "talk": {
+   "von": 140,
+   "bilder": 6,
+   "ms": 130,
+   "schleife": true,
+   "folge": [
+    0,
+    0,
+    1,
+    1,
+    1,
+    2,
+    2,
+    3,
+    3,
+    4,
+    4,
+    4,
+    5,
+    5
+   ]
+  },
+  "schulterzucken": {
+   "von": 146,
+   "bilder": 5,
+   "ms": 120,
+   "schleife": false,
+   "folge": [
+    0,
+    1,
+    2,
+    3,
+    3,
+    3,
+    3,
+    2,
+    1,
+    4,
+    0
+   ]
+  },
+  "speer": {
+   "von": 151,
+   "bilder": 3,
+   "ms": 120,
+   "schleife": false,
+   "folge": [
+    0,
+    0,
+    0,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "vom_boden_aufstehen": {
+   "von": 154,
+   "bilder": 9,
+   "ms": 130,
+   "schleife": false,
+   "folge": [
+    0,
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    7,
+    6,
+    8
+   ]
+  },
+  "vom_sofa_aufstehen": {
+   "von": 163,
+   "bilder": 9,
+   "ms": 120,
+   "schleife": false,
+   "folge": [
+    0,
+    0,
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    7,
+    7,
+    7,
+    6,
+    8
+   ]
+  },
+  "wackeln": {
+   "von": 172,
+   "bilder": 2,
+   "ms": 120,
+   "schleife": false,
+   "folge": [
+    0,
+    0,
+    0,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    0,
+    0,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    0,
+    0,
+    0
+   ]
+  },
+  "wenden": {
+   "von": 174,
+   "bilder": 6,
+   "ms": 110,
+   "schleife": false,
+   "folge": [
+    0,
+    1,
+    2,
+    3,
+    3,
+    4,
+    5,
+    5
+   ]
+  },
+  "zeigen": {
+   "von": 180,
+   "bilder": 5,
+   "ms": 100,
+   "schleife": false,
+   "folge": [
+    0,
+    0,
+    1,
+    2,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    2,
+    4,
+    4,
+    4,
+    0,
+    0
+   ]
   }
- }
+ },
+ "spalten": 58
 }

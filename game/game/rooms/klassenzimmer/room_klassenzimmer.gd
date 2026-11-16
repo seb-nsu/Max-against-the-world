@@ -54,7 +54,8 @@ func _uebungsbesen_fliegt() -> void:
 	var daten: Dictionary = JSON.parse_string(FileAccess.get_file_as_string("res://daten/figuren/uebungsbesen.json"))
 	var sp := Sprite2D.new()
 	sp.texture = load(bild)
-	sp.hframes = int(sp.texture.get_width() / float(daten.bild[0]))
+	sp.hframes = int(daten.get("spalten", int(sp.texture.get_width() / float(daten.bild[0]))))
+	sp.vframes = maxi(1, int(sp.texture.get_height() / float(daten.bild[1])))
 	sp.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
 	sp.position = Vector2(-30, 250)
 	sp.scale = Vector2(0.9, 0.9)

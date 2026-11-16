@@ -1,38 +1,351 @@
 {
  "bild": [
-  72,
-  68
+  126,
+  103
  ],
  "animationen": {
   "idle": {
-   "von": 26,
+   "von": 0,
    "bilder": 6,
    "ms": 450,
    "schleife": true
   },
   "walk": {
-   "von": 1,
+   "von": 6,
    "bilder": 5,
    "ms": 100,
    "schleife": true
   },
   "schlafen": {
-   "von": 18,
+   "von": 11,
    "bilder": 4,
    "ms": 550,
    "schleife": true
   },
-  "talk": {
-   "von": 32,
+  "talk_alt": {
+   "von": 15,
    "bilder": 4,
    "ms": 160,
    "schleife": true
   },
   "stehen": {
-   "von": 10,
+   "von": 19,
    "bilder": 8,
    "ms": 300,
    "schleife": true
+  },
+  "aufstehen": {
+   "von": 27,
+   "bilder": 7,
+   "ms": 110,
+   "schleife": false,
+   "folge": [
+    0,
+    0,
+    1,
+    2,
+    3,
+    3,
+    3,
+    4,
+    4,
+    4,
+    5,
+    6,
+    6,
+    6,
+    6
+   ]
+  },
+  "aufwachen": {
+   "von": 34,
+   "bilder": 3,
+   "ms": 120,
+   "schleife": false,
+   "folge": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  "fauchen": {
+   "von": 37,
+   "bilder": 5,
+   "ms": 120,
+   "schleife": false,
+   "folge": [
+    0,
+    1,
+    1,
+    1,
+    1,
+    1,
+    0,
+    2,
+    3,
+    3,
+    4
+   ]
+  },
+  "gehen_hinten": {
+   "von": 42,
+   "bilder": 5,
+   "ms": 130,
+   "schleife": true
+  },
+  "gehen_vorn": {
+   "von": 47,
+   "bilder": 2,
+   "ms": 170,
+   "schleife": true
+  },
+  "haare": {
+   "von": 49,
+   "bilder": 5,
+   "ms": 90,
+   "schleife": false,
+   "folge": [
+    0,
+    0,
+    0,
+    1,
+    2,
+    3,
+    2,
+    3,
+    1,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4
+   ]
+  },
+  "hinlegen": {
+   "von": 54,
+   "bilder": 6,
+   "ms": 120,
+   "schleife": false,
+   "folge": [
+    0,
+    0,
+    0,
+    1,
+    2,
+    2,
+    2,
+    3,
+    4,
+    4,
+    4,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5
+   ]
+  },
+  "minka_umgarnen": {
+   "von": 60,
+   "bilder": 8,
+   "ms": 110,
+   "schleife": false,
+   "folge": [
+    0,
+    0,
+    0,
+    1,
+    1,
+    1,
+    1,
+    2,
+    2,
+    3,
+    3,
+    3,
+    3,
+    3,
+    4,
+    4,
+    5,
+    5,
+    6,
+    6,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7
+   ]
+  },
+  "ohrfeige": {
+   "von": 68,
+   "bilder": 4,
+   "ms": 110,
+   "schleife": false,
+   "folge": [
+    0,
+    1,
+    2,
+    2,
+    2,
+    1,
+    3,
+    3,
+    3,
+    3,
+    0
+   ]
+  },
+  "putzen": {
+   "von": 72,
+   "bilder": 6,
+   "ms": 140,
+   "schleife": true,
+   "folge": [
+    0,
+    0,
+    1,
+    2,
+    1,
+    2,
+    3,
+    4,
+    4,
+    4,
+    3,
+    5,
+    5
+   ]
+  },
+  "talk": {
+   "von": 78,
+   "bilder": 4,
+   "ms": 160,
+   "schleife": true,
+   "folge": [
+    0,
+    0,
+    1,
+    1,
+    2,
+    2,
+    3,
+    3,
+    1
+   ]
+  },
+  "schnuppern": {
+   "von": 82,
+   "bilder": 4,
+   "ms": 130,
+   "schleife": false,
+   "folge": [
+    0,
+    0,
+    1,
+    1,
+    1,
+    2,
+    2,
+    2,
+    1,
+    3,
+    3,
+    3
+   ]
+  },
+  "schwanz_zucken": {
+   "von": 86,
+   "bilder": 4,
+   "ms": 140,
+   "schleife": true,
+   "folge": [
+    0,
+    0,
+    0,
+    1,
+    1,
+    2,
+    2,
+    2,
+    3,
+    3
+   ]
+  },
+  "springen": {
+   "von": 90,
+   "bilder": 7,
+   "ms": 110,
+   "schleife": false,
+   "folge": [
+    0,
+    0,
+    1,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    6,
+    6
+   ]
+  },
+  "tragen": {
+   "von": 97,
+   "bilder": 8,
+   "ms": 100,
+   "schleife": true
+  },
+  "vom_schrank_fallen": {
+   "von": 105,
+   "bilder": 4,
+   "ms": 100,
+   "schleife": false,
+   "folge": [
+    0,
+    0,
+    0,
+    1,
+    2,
+    3,
+    3,
+    3,
+    3
+   ]
   }
  }
 }
