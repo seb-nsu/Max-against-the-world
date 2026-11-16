@@ -55,12 +55,56 @@ def umbrechen(d, text, f, breite):
     return zeilen
 
 
+# Eigene Ziffern 5×8 (Höhe der Großbuchstaben in Pixelify 12): In Pixelify sehen 2 und 5 aus wie 8 und 9,
+# und die Fährtafel braucht die Jahre eindeutig (Rätsel 10: 112 + 25 = 137).
+ZIFFERN = {
+    "0": [".###.", "#...#", "#..##", "#.#.#", "#.#.#", "##..#", "#...#", ".###."],
+    "1": ["..#..", ".##..", "..#..", "..#..", "..#..", "..#..", "..#..", ".###."],
+    "2": [".###.", "#...#", "....#", "...#.", "..#..", ".#...", "#....", "#####"],
+    "3": [".###.", "#...#", "....#", "..##.", "....#", "....#", "#...#", ".###."],
+    "4": ["...#.", "..##.", ".#.#.", "#..#.", "#####", "...#.", "...#.", "...#."],
+    "5": ["#####", "#....", "####.", "....#", "....#", "....#", "#...#", ".###."],
+    "6": [".###.", "#....", "#....", "####.", "#...#", "#...#", "#...#", ".###."],
+    "7": ["#####", "....#", "...#.", "...#.", "..#..", "..#..", "..#..", "..#.."],
+    "8": [".###.", "#...#", "#...#", ".###.", "#...#", "#...#", "#...#", ".###."],
+    "9": [".###.", "#...#", "#...#", "#...#", ".####", "....#", "....#", ".###."],
+}
+ZIFFER_OBEN = 4   # Abstand von der Textposition zur Oberkante der Großbuchstaben bei Größe 12
+
+
+def ziffer(d, z, x, y, farbe):
+    for r, zeile in enumerate(ZIFFERN[z]):
+        for c, ch in enumerate(zeile):
+            if ch == "#":
+                d.point((int(x) + c, int(y) + ZIFFER_OBEN + r), fill=farbe)
+
+
+def schreiben(d, xy, text, f, farbe):
+    """Wie d.text, aber Ziffern aus ZIFFERN (nur bei Größe 12, sonst die Schrift selbst)."""
+    x, y = xy
+    if f.size != 12 or not any(ch.isdigit() for ch in text):
+        d.text((x, y), text, font=f, fill=farbe)
+        return
+    i = 0
+    while i < len(text):   # Läufe ohne Ziffern am Stück, damit sie genau wie bisher aussehen
+        j = i + 1
+        while j < len(text) and text[j].isdigit() == text[i].isdigit():
+            j += 1
+        px = x + d.textlength(text[:i], font=f)
+        if text[i].isdigit():
+            for k in range(i, j):
+                ziffer(d, text[k], x + d.textlength(text[:k], font=f), y, farbe)
+        else:
+            d.text((px, y), text[i:j], font=f, fill=farbe)
+        i = j
+
+
 def mittig(d, text, f, x0, x1, y, farbe, kerbe=None):
     w = d.textlength(text, font=f)
     x = (x0 + x1 - w) / 2
     if kerbe:   # heller Rand unten rechts: wirkt eingeschnitten
-        d.text((x + 1, y + 1), text, font=f, fill=kerbe)
-    d.text((x, y), text, font=f, fill=farbe)
+        schreiben(d, (x + 1, y + 1), text, f, kerbe)
+    schreiben(d, (x, y), text, f, farbe)
 
 
 def glyphe(im, name, groesse, x0, y0, x1, y1):
@@ -72,6 +116,45 @@ def oben_einritzen(d, zeilen):
     """Hausordnung auf dem freien oberen Brett der Fährtafel, über den drei Feldern (W2_NIL_PIX_0660)."""
     for i, z in enumerate(zeilen):
         mittig(d, z, font(12), 166, 422, 99 + i * 15, KERBE, KERBE_HELL)
+
+
+def ziffern_flicken(pfad, text, feld=(166, 230, 422, 265)):
+    """Nur für die Cloud ohne Quellbilder: die alte Zeile (Pixel in KERBE/KERBE_HELL) mit dem Holz daneben
+    übermalen und neu ritzen. Ein voller Lauf mit den Quellbildern ergibt dasselbe."""
+    im = Image.open(pfad).convert("RGB")
+    d = ImageDraw.Draw(im)
+    d.fontmode = "1"
+    f = font(12)
+    x0, y0, x1, y1 = feld
+    zeilen = [t.strip() for t in text.split("|")]
+    h = 14 * len(zeilen)
+    a = im.load()
+    for zi, z in enumerate(zeilen):
+        y = (y0 + y1 - h) / 2 + zi * 14 - 1
+        x = (x0 + x1 - d.textlength(z, font=f)) / 2
+        # Die Tafel wurde mit einer anderen Pillow-Version gesetzt (andere Laufweiten): Lage der alten Zeile
+        # suchen, indem die Zeile probeweise verschoben wird, bis ihre Pixel am besten passen
+        def treffer(dx, dy):
+            probe = Image.new("1", im.size, 0)
+            ImageDraw.Draw(probe).text((x + dx, y + dy), z, font=f, fill=1)
+            pp = probe.load()
+            return sum(1 for qy in range(int(y) - 2, int(y) + 18) for qx in range(x0, x1)
+                       if pp[qx, qy] and a[qx, qy] == KERBE)
+        dx, dy = max(((i, j) for i in range(-8, 9) for j in (-1, 0, 1)), key=lambda t: treffer(*t))
+        x, y = x + dx, y + dy
+        # ganze alte Zeile mit dem Holz daneben übermalen (Holzmaserung läuft waagrecht) und neu ritzen
+        for py in range(int(y) + 2, int(y) + 16):
+            for qx in range(x0 + 2, x1 - 2):
+                if a[qx, py] in (KERBE, KERBE_HELL):
+                    for ddx in (-1, 1, -2, 2, -3, 3, -4, 4, -5, 5, -6, 6, -8, 8, -10, 10, -12, 12):
+                        q = a[qx + ddx, py]
+                        if q not in (KERBE, KERBE_HELL):
+                            a[qx, py] = q
+                            break
+        x = (x0 + x1 - d.textlength(z, font=f)) / 2   # neu mittig, wie bei einem vollen Lauf
+        schreiben(d, (x + 1, y + 1), z, f, KERBE_HELL)
+        schreiben(d, (x, y), z, f, KERBE)
+    im.save(pfad)
 
 
 def alle(sprache):
@@ -132,6 +215,10 @@ if __name__ == "__main__":
             d.fontmode = "1"
             oben_einritzen(d, TEXTE[s]["tafel_oben"])
             im.save(Z + "faehrtafel" + endung)
+        sys.exit()
+    if "--nur-ziffern" in sys.argv:   # ohne Quellbilder: alte Pixelify-Ziffern im dritten Feld durch ZIFFERN ersetzen
+        for s, endung in (("de", ".png"), ("en", "_en.png")):
+            ziffern_flicken(Z + "faehrtafel" + endung, TEXTE[s]["tafel"][2])
         sys.exit()
     for s in ("de", "en"):
         alle(s)
