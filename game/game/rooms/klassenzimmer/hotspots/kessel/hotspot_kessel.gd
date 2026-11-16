@@ -67,13 +67,21 @@ func falsche_flasche() -> void:
 	await flasche_zurueck()
 
 
+const PILZ_EFFEKT := "res://grafik/ambiente/effekt_pilz.png"
+
+
 ## Pilz-Verwandlung: eigenes Bild „max_pilz“ (grafik/figuren), danach wieder das normale Max-Bild.
 func _max_als_pilz(an: bool) -> void:
 	if is_instance_valid(C.Max) and C.Max.has_method("grafik_laden"):
 		if an and not ResourceLoader.exists("res://grafik/figuren/max_pilz.png"):
 			return
-		# Rauchwolke, und in ihrem dichtesten Moment der Bildtausch (Review Fund 18)
-		await CQEffekte.rauchwolke(C.Max.get_parent(), C.Max.position + Vector2(0, -40), 70.0)
+		# Rauchwolke, und in ihrem dichtesten Moment der Bildtausch (Review Fund 18). Zum Pilz hin die
+		# gemalte grüne Wolke mit Pilzkappe (W1-B23), zurück die graue Rauchwolke.
+		if an and ResourceLoader.exists(PILZ_EFFEKT) and not Spiel.testmodus and not E.cutscene_skipped:
+			CQEffekte.bildfolge(C.Max.get_parent(), PILZ_EFFEKT, 6, C.Max.position + Vector2(0, -20), 8.0)
+			await get_tree().create_timer(0.3).timeout
+		else:
+			await CQEffekte.rauchwolke(C.Max.get_parent(), C.Max.position + Vector2(0, -40), 70.0)
 		C.Max.grafik_laden("max_pilz" if an else "")
 
 

@@ -70,6 +70,10 @@ func _process(delta: float) -> void:
 
 
 func _funken() -> void:
+	# Gemalte Funkengarbe (W1-B64); ohne das Bild die Punkte wie bisher
+	if ResourceLoader.exists("res://grafik/ambiente/funken.png"):
+		CQEffekte.bildfolge(self, "res://grafik/ambiente/funken.png", 4, EISEN + Vector2(0, 4), 12.0, 60, 0.1)
+		return
 	for i in 7:
 		var f := Polygon2D.new()
 		f.polygon = PackedVector2Array([Vector2(-1, -1), Vector2(1, -1), Vector2(1, 1), Vector2(-1, 1)])

@@ -42,6 +42,9 @@ _figuren: [schmiede_ziege, xxl_ziege, rotkaeppchen, zeldina, grimmzahn, toadi, w
 
 dorfplatz:
   farbe: "#7d8f4e"
+  effekte:                     # lebendiger Hintergrund (P16, gemalte Bildfolgen aus tools/ambiente.py)
+    - {art: bild, bild: res://grafik/ambiente/huhn.png, bilder: 6, pos: [332, 262], fps: 6}   # W1-B76 vor der Scheune
+    - {art: bild, bild: res://grafik/ambiente/schmetterling.png, bilder: 4, weg: [[1150, 205], [1188, 182], [1232, 210], [1204, 232], [1162, 220], [1150, 205]], tempo: 14, fps: 10, baseline: 240, pause: [3, 8]}   # W1-B68
   # Echter Hintergrund (12. November 2026, 1280×360, Gemini + tools/pixelieren.py, dritte Fassung: ohne
   # Bohnenranke, Läden am Rand vor einer Mauer, Weg nach Hoggelwarz zwischen den Läden). Koordinaten aus dem Bild; übernommen mit --cq-layout=dorfplatz. Die Häuser stehen
   # hinten, deshalb starke Tiefe: Max ist vorn 100 Prozent groß und an den Ladentüren etwa halb so groß.
@@ -103,7 +106,8 @@ taverne:
   farbe: "#6e4a32"
   effekte:                     # lebendiger Hintergrund (P16, Review 14. November 2026)
     - {art: flackern, pos: [477, 182], r: [30, 24]}
-    - {art: dampf, pos: [224, 136], breite: 24}
+    - {art: bild, bild: res://grafik/ambiente/kaminfeuer.png, bilder: 7, pos: [482, 212], fps: 8}   # W1-B61
+    - {art: bild, bild: res://grafik/ambiente/fondue.png, bilder: 6, pos: [214, 142], fps: 6}   # W1-B62
   hintergrund: res://grafik/hintergruende/w1_bg_taverne_v01.png
   tiefe: 0.8
   laufbereich: [[130, 357], [250, 262], [255, 215], [335, 215], [338, 230], [388, 230], [392, 222], [420, 232], [555, 232], [590, 228], [639, 228], [639, 357]]
@@ -158,6 +162,7 @@ schmiede:
   effekte:                     # lebendiger Hintergrund (P16, Review 14. November 2026)
     - {art: flackern, pos: [146, 160], r: [38, 30]}
     - {art: flackern, pos: [167, 144], r: [14, 16]}
+    - {art: bild, bild: res://grafik/ambiente/esse.png, bilder: 8, pos: [150, 186], fps: 8}   # W1-B63
   hintergrund: res://grafik/hintergruende/w1_bg_schmiede_v01.png
   tiefe: 0.8
   laufbereich: [[130, 357], [110, 300], [205, 276], [225, 262], [300, 222], [380, 216], [555, 216], [580, 228], [639, 232], [639, 357]]
@@ -186,6 +191,8 @@ schmiede:
 
 zauberstabladen:
   farbe: "#4f3f5e"
+  effekte:                     # lebendiger Hintergrund (P16, gemalte Bildfolgen aus tools/ambiente.py)
+    - {art: bild, bild: res://grafik/ambiente/schachtel.png, bilder: 6, pos: [170, 86], fps: 8, ablauf: einmalig, pause: [12, 30]}   # W1-B66
   hintergrund: res://grafik/hintergruende/w1_bg_zauberstabladen_v01.png
   stimmung: dunkel             # staubiger Laden, nur Licht vom Rundfenster
   tiefe: 0.8
@@ -214,9 +221,9 @@ zauberstabladen:
 klassenzimmer:
   farbe: "#5a6988"
   effekte:                     # lebendiger Hintergrund (P16, Review 14. November 2026)
-    - {art: blasen, pos: [196, 168], breite: 40, farbe: "#b6f2a0"}
-    - {art: dampf, pos: [196, 160], breite: 36, farbe: "#d8f5d0"}
     - {art: flackern, pos: [195, 222], r: [20, 7]}
+    - {art: bild, bild: res://grafik/ambiente/kessel.png, bilder: 7, pos: [196, 182], fps: 7, deckung: 0.7}   # W1-B65
+    - {art: bild, bild: res://grafik/ambiente/kessel_feuer.png, bilder: 7, pos: [195, 230], fps: 9}   # W1-B65, Feuer unter dem Kessel
   # Echter Hintergrund (13. November 2026, Sebastians Gemini-Fassung: Kessel unter dem Fenster, Bänke vor
   # der Tafel, Regal und Schrank rechts, drei Fenster; tools/pixelieren.py). Die sechs Flaschen sind Kopien von zwei
   # Flaschen (1, 3, 4, 6 gleich; 2 und 5 groß), Feuer und Blasen am Kessel nach dem Umrechnen nachgefärbt.
@@ -269,6 +276,8 @@ trollbruecke:
   farbe: "#6a8a4a"
   effekte:                     # lebendiger Hintergrund (P16, Review 14. November 2026)
     - {art: glitzern, bereich: [250, 300, 170, 55]}
+    - {art: bild, bild: res://grafik/ambiente/fisch.png, bilder: 6, orte: [[300, 338], [340, 322], [282, 350]], fps: 9, ablauf: einmalig, pause: [8, 22]}   # W1-B67
+    - {art: bild, bild: res://grafik/ambiente/schmetterling.png, bilder: 4, weg: [[12, 262], [48, 238], [86, 262], [60, 300], [24, 286], [12, 262]], tempo: 14, fps: 10, baseline: 300, pause: [2, 6]}   # W1-B68
   # Echter Hintergrund (13. November 2026, Sebastians vierte Gemini-Fassung + tools/pixelieren.py;
   # Grammophon und Wasserschloss danach nachgefärbt, weil sie beim Umrechnen fast verschwanden).
   # Koordinaten aus dem Bild; übernommen mit --cq-layout=trollbruecke. Der Bach teilt den Boden:
@@ -306,6 +315,10 @@ trollbruecke:
 
 wasserschloss:
   farbe: "#4f7a9a"
+  effekte:                     # lebendiger Hintergrund (P16, gemalte Bildfolgen aus tools/ambiente.py)
+    - {art: bild, bild: res://grafik/ambiente/ente.png, bilder: 6, weg: [[470, 214], [628, 222]], tempo: 6, ausblenden: 12, zurueck: true, fps: 6, pause: [6, 18]}   # W1-B75
+    - {art: bild, bild: res://grafik/ambiente/wimpel.png, bilder: 8, pos: [262, 126], fps: 8}   # W1-B71 auf dem linken Torflügel
+    - {art: bild, bild: res://grafik/ambiente/glitzern.png, bilder: 6, bereich: [455, 175, 175, 50], fps: 10, ablauf: einmalig, pause: [1, 4]}   # W1-B74
   # Echter Hintergrund (13. November 2026, Sebastians Gemini-Fassung, rosa Schloss wie von der Troll-Brücke
   # aus; tools/pixelieren.py, ohne Nachfärben). Laufbereich: Ufer vorn, Weg links zur kleinen Brücke
   # (Ausgang) und der Steg bis vor das Tor. Koordinaten aus dem Bild; übernommen mit --cq-layout=wasserschloss.
@@ -334,6 +347,9 @@ wasserschloss:
 
 zauberwald:
   farbe: "#3f5a3a"
+  effekte:                     # lebendiger Hintergrund (P16, gemalte Bildfolgen aus tools/ambiente.py)
+    - {art: bild, bild: res://grafik/ambiente/eule.png, bilder: 6, pos: [246, 146], fps: 5, ablauf: einmalig, pause: [15, 40]}   # W1-B69
+    - {art: bild, bild: res://grafik/ambiente/eichhoernchen.png, bilder: 6, pos: [418, 176], fps: 5, ablauf: einmalig, pause: [20, 45]}   # W1-B86
   leuchten:                     # Leuchtpilze pulsieren (Review P15)
     - {pos: [540, 238], r: [40, 16], farbe: "#7ff2e0", takt: 2.4}
     - {pos: [610, 236], r: [30, 13], farbe: "#9ff0ff", takt: 3.1}
@@ -384,6 +400,12 @@ zauberwald:
 
 bergwerk:
   farbe: "#4a3f3a"
+  effekte:                     # lebendiger Hintergrund (P16, gemalte Bildfolgen aus tools/ambiente.py)
+    - {art: bild, bild: res://grafik/ambiente/fackel_klein.png, bilder: 8, pos: [403, 112], fps: 9}   # W1-B70
+    - {art: bild, bild: res://grafik/ambiente/fackel_klein.png, bilder: 8, pos: [628, 112], fps: 8}   # W1-B70
+    - {art: bild, bild: res://grafik/ambiente/fackel_klein.png, bilder: 8, pos: [853, 112], fps: 10}   # W1-B70
+    - {art: bild, bild: res://grafik/ambiente/steinchen.png, bilder: 6, orte: [[560, 222], [470, 224]], fps: 7, ablauf: einmalig, pause: [15, 35]}   # W1-B73
+    - {art: bild, bild: res://grafik/ambiente/lore.png, bilder: 6, weg: [[192, 242], [40, 228]], tempo: 22, ausblenden: 25, fps: 10, pause: [25, 50]}   # W1-B87, rollt in den Stollen
   licht: "#c8b4a8"            # Tönung der Figuren (Review Fund 20: Figuren leuchteten gegen den dunklen Raum)
   # Echter Hintergrund (13. November 2026), Breitbild 1280×360 aus Sebastians Gemini-Fassung (tools/pixelieren.py):
   # Hintergrund mit geschlossener Rune-Tür; die offene Tür ist ein eigenes Prop (rune_tuer_offen), das
@@ -424,6 +446,11 @@ bergwerk:
 
 luftschloss:
   farbe: "#b9c7e6"
+  effekte:                     # lebendiger Hintergrund (P16, gemalte Bildfolgen aus tools/ambiente.py)
+    - {art: bild, bild: res://grafik/ambiente/wimpel.png, bilder: 8, pos: [607, 87], fps: 8}   # W1-B71, kleiner Turm rechts
+    - {art: bild, bild: res://grafik/ambiente/wimpel.png, bilder: 8, pos: [567, 42], fps: 7}   # W1-B71, rechter Turm
+    - {art: bild, bild: res://grafik/ambiente/brunnen.png, bilder: 5, pos: [397, 214], fps: 6}   # W1-B72
+    - {art: bild, bild: res://grafik/ambiente/glitzern.png, bilder: 6, bereich: [1112, 112, 22, 42], fps: 10, ablauf: einmalig, pause: [2, 7]}   # W1-B74 am Spiegel
   # Echter Hintergrund (14. November 2026): Breitbild aus zwei Gemini-Bildern von Sebastian, links Ranke,
   # Hofmauer und Brunnen (luftschloss_sebastian_links_v1), rechts Turm mit Torbogen, Kritzelei, Balkon und
   # Spiegel (luftschloss_sebastian_rechts_v1); Naht an der Turmkante bei x 640, Boden 40 Pixel überblendet
@@ -458,6 +485,10 @@ turmkeller:
     - {art: flackern, pos: [200, 86], r: [9, 11]}
     - {art: flackern, pos: [447, 86], r: [9, 11]}
     - {art: flackern, pos: [628, 92], r: [9, 11]}
+    - {art: bild, bild: res://grafik/ambiente/fackel.png, bilder: 8, pos: [163, 93], fps: 9}   # W1-B70
+    - {art: bild, bild: res://grafik/ambiente/fackel.png, bilder: 8, pos: [200, 93], fps: 8}   # W1-B70
+    - {art: bild, bild: res://grafik/ambiente/fackel.png, bilder: 8, pos: [445, 93], fps: 10}   # W1-B70
+    - {art: bild, bild: res://grafik/ambiente/fackel.png, bilder: 8, pos: [623, 95], fps: 9}   # W1-B70
   licht: "#b9b4d0"            # Tönung der Figuren (Review Fund 20: Figuren leuchteten gegen den dunklen Raum)
   # Echter Hintergrund (14. November 2026, Sebastians Gemini-Fassung, 40 Farben gemeinsam mit der zweiten
   # Fassung): links die offene Rune-Tür mit Treppe hinab ins Bergwerk, Mitte Wendeltreppe, rechts die
@@ -492,6 +523,8 @@ turmkeller:
 
 abstellkammer_1:
   farbe: "#4a3f3a"
+  effekte:                     # lebendiger Hintergrund (P16, gemalte Bildfolgen aus tools/ambiente.py)
+    - {art: bild, bild: res://grafik/ambiente/fackel.png, bilder: 8, pos: [493, 104], fps: 9}   # W1-B70
   # Echter Hintergrund (14. November 2026, Sebastians Gemini-Fassung): Tür links (im Keller liegt die
   # Kammertür rechts), Gerümpel und Stapel links an der Wand, freier Boden für die fegenden Besen, Regal rechts.
   # Das Schild „Eigentum Smaugi, Kammer 1 von 6“ ist noch leer (Schrift im Aseprite-Durchgang).
@@ -512,6 +545,9 @@ abstellkammer_1:
 
 abstellkammern:
   farbe: "#5e4b3a"
+  effekte:                     # lebendiger Hintergrund (P16, gemalte Bildfolgen aus tools/ambiente.py)
+    - {art: bild, bild: res://grafik/ambiente/fackel.png, bilder: 8, pos: [93, 90], fps: 9}   # W1-B70
+    - {art: bild, bild: res://grafik/ambiente/glitzern.png, bilder: 6, bereich: [280, 165, 95, 45], fps: 10, ablauf: einmalig, pause: [1, 4]}   # W1-B74 auf dem Goldhaufen
   licht: "#c8c0dc"            # Tönung der Figuren (Review Fund 20: Figuren leuchteten gegen den dunklen Raum)
   # Echter Hintergrund (14. November 2026, Sebastians Gemini-Fassungen, gemeinsame Palette): links Treppe
   # von unten, Kram-Haufen und Schwert im Stein, Mitte Goldhaufen und Nest, rechts die grinsende Geheimtür.
@@ -555,6 +591,9 @@ abstellkammern:
 
 thronsaal:
   farbe: "#2e2440"
+  effekte:                     # lebendiger Hintergrund (P16, gemalte Bildfolgen aus tools/ambiente.py)
+    - {art: bild, bild: res://grafik/ambiente/fackel_thron.png, bilder: 8, pos: [30, 70], fps: 9}   # W1-B70
+    - {art: bild, bild: res://grafik/ambiente/fackel_thron.png, bilder: 8, pos: [127, 97], fps: 8}   # W1-B70
   licht: "#bcb4d4"            # Tönung der Figuren (Review Fund 20: Figuren leuchteten gegen den dunklen Raum)
   # Echter Hintergrund (14. November 2026, Sebastians Gemini-Fassung, nachts): links die offene Geheimtür
   # und Blumenvasen, Mitte Buntglasfenster mit Mond, rechts Thron mit rosa Kissen und Tisch mit

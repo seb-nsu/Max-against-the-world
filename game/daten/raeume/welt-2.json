@@ -109,6 +109,123 @@
      "schatten": false
     }
    },
+   "effekte": [
+    {
+     "art": "bild",
+     "bild": "res://grafik/ambiente/sanduhr_nil.png",
+     "bilder": 6,
+     "pos": [
+      234,
+      194
+     ],
+     "fps": 6
+    },
+    {
+     "art": "bild",
+     "bild": "res://grafik/ambiente/feluke.png",
+     "bilder": 8,
+     "weg": [
+      [
+       -30,
+       192
+      ],
+      [
+       1120,
+       182
+      ]
+     ],
+     "tempo": 8,
+     "ausblenden": 25,
+     "zurueck": true,
+     "fps": 6,
+     "pause": [
+      10,
+      30
+     ]
+    },
+    {
+     "art": "bild",
+     "bild": "res://grafik/ambiente/fischer_netz.png",
+     "bilder": 8,
+     "pos": [
+      420,
+      204
+     ],
+     "fps": 5,
+     "ablauf": "einmalig",
+     "ruhe_sichtbar": true,
+     "pause": [
+      12,
+      30
+     ]
+    },
+    {
+     "art": "bild",
+     "bild": "res://grafik/ambiente/ibis.png",
+     "bilder": 8,
+     "pos": [
+      490,
+      170
+     ],
+     "fps": 5
+    },
+    {
+     "art": "bild",
+     "bild": "res://grafik/ambiente/libelle.png",
+     "bilder": 4,
+     "weg": [
+      [
+       560,
+       172
+      ],
+      [
+       600,
+       160
+      ],
+      [
+       640,
+       176
+      ],
+      [
+       600,
+       186
+      ],
+      [
+       560,
+       172
+      ]
+     ],
+     "tempo": 18,
+     "fps": 14,
+     "pause": [
+      2,
+      8
+     ]
+    },
+    {
+     "art": "bild",
+     "bild": "res://grafik/ambiente/wassertraegerin.png",
+     "bilder": 8,
+     "weg": [
+      [
+       290,
+       161
+      ],
+      [
+       470,
+       160
+      ]
+     ],
+     "tempo": 7,
+     "ausblenden": 12,
+     "zurueck": true,
+     "fps": 8,
+     "pause": [
+      15,
+      40
+     ]
+    }
+   ],
    "figuren": [
     {
      "id": "faehrmann",
@@ -570,6 +687,18 @@
      "schatten": false
     }
    },
+   "effekte": [
+    {
+     "art": "bild",
+     "bild": "res://grafik/ambiente/fackel.png",
+     "bilder": 8,
+     "pos": [
+      1170,
+      126
+     ],
+     "fps": 9
+    }
+   ],
    "figuren": [
     {
      "id": "schreiber",
@@ -1091,6 +1220,28 @@
     ]
    },
    "tiefe": 0.85,
+   "effekte": [
+    {
+     "art": "bild",
+     "bild": "res://grafik/ambiente/ofenfeuer.png",
+     "bilder": 8,
+     "pos": [
+      139,
+      198
+     ],
+     "fps": 8
+    },
+    {
+     "art": "bild",
+     "bild": "res://grafik/ambiente/ofenfeuer.png",
+     "bilder": 8,
+     "pos": [
+      192,
+      198
+     ],
+     "fps": 7
+    }
+   ],
    "figuren": [
     {
      "id": "nebet",
@@ -1546,6 +1697,21 @@
     ]
    },
    "tiefe": 0.85,
+   "effekte": [
+    {
+     "art": "bild",
+     "bild": "res://grafik/ambiente/geier.png",
+     "bilder": 6,
+     "kreis": [
+      200,
+      45,
+      70,
+      12,
+      16
+     ],
+     "fps": 5
+    }
+   ],
    "hintergrund_nach": {
     "R13": "res://grafik/hintergruende/w2_bg_sphinx_ohne_nase_v01.png"
    },
@@ -1912,6 +2078,28 @@
      "baseline": 250
     }
    },
+   "effekte": [
+    {
+     "art": "bild",
+     "bild": "res://grafik/ambiente/sanduhr_gross.png",
+     "bilder": 6,
+     "pos": [
+      80,
+      150
+     ],
+     "fps": 6
+    },
+    {
+     "art": "bild",
+     "bild": "res://grafik/ambiente/ziege_grast.png",
+     "bilder": 6,
+     "pos": [
+      345,
+      243
+     ],
+     "fps": 5
+    }
+   ],
    "figuren": [
     {
      "id": "faehrmann",
@@ -2205,6 +2393,43 @@
      "baseline": 240
     }
    },
+   "effekte": [
+    {
+     "art": "bild",
+     "bild": "res://grafik/ambiente/menge_agora.png",
+     "bilder": 4,
+     "pos": [
+      650,
+      238
+     ],
+     "fps": 2
+    },
+    {
+     "art": "bild",
+     "bild": "res://grafik/ambiente/tauben_picken.png",
+     "bilder": 6,
+     "pos": [
+      540,
+      296
+     ],
+     "fps": 6
+    },
+    {
+     "art": "bild",
+     "bild": "res://grafik/ambiente/taube_fliegt.png",
+     "bilder": 6,
+     "pos": [
+      600,
+      300
+     ],
+     "fps": 8,
+     "ablauf": "einmalig",
+     "pause": [
+      15,
+      40
+     ]
+    }
+   ],
    "hintergrund_nach": {
     "R12": "res://grafik/hintergruende/w2_bg_agora_sandale_v01.png",
     "R13": "res://grafik/hintergruende/w2_bg_agora_ohne_arme_v01.png"
@@ -2806,6 +3031,18 @@
      "baseline": 216
     }
    },
+   "effekte": [
+    {
+     "art": "bild",
+     "bild": "res://grafik/ambiente/wartende.png",
+     "bilder": 8,
+     "pos": [
+      52,
+      281
+     ],
+     "fps": 3
+    }
+   ],
    "figuren": [
     {
      "id": "beamter_1",
@@ -3159,6 +3396,38 @@
      "nach": "R13"
     }
    },
+   "effekte": [
+    {
+     "art": "bild",
+     "bild": "res://grafik/ambiente/wimpel_stadion.png",
+     "bilder": 8,
+     "pos": [
+      102,
+      64
+     ],
+     "fps": 8
+    },
+    {
+     "art": "bild",
+     "bild": "res://grafik/ambiente/zuschauer_stadion.png",
+     "bilder": 8,
+     "pos": [
+      362,
+      147
+     ],
+     "fps": 4
+    },
+    {
+     "art": "bild",
+     "bild": "res://grafik/ambiente/zuschauer_stadion.png",
+     "bilder": 8,
+     "pos": [
+      1062,
+      147
+     ],
+     "fps": 3
+    }
+   ],
    "hintergrund_nach": {
     "R13": "res://grafik/hintergruende/w2_bg_stadion_parade_v01.png"
    },
@@ -3624,6 +3893,143 @@
      "baseline": 262
     }
    },
+   "effekte": [
+    {
+     "art": "bild",
+     "bild": "res://grafik/ambiente/sanduhr.png",
+     "bilder": 6,
+     "pos": [
+      79,
+      146
+     ],
+     "baseline": 201,
+     "fps": 6
+    },
+    {
+     "art": "bild",
+     "bild": "res://grafik/ambiente/segelschiff.png",
+     "bilder": 8,
+     "weg": [
+      [
+       -20,
+       154
+      ],
+      [
+       300,
+       154
+      ]
+     ],
+     "tempo": 4,
+     "ausblenden": 20,
+     "fps": 6,
+     "pause": [
+      20,
+      60
+     ]
+    },
+    {
+     "art": "bild",
+     "bild": "res://grafik/ambiente/ruderboot.png",
+     "bilder": 8,
+     "weg": [
+      [
+       300,
+       172
+      ],
+      [
+       -30,
+       168
+      ]
+     ],
+     "tempo": 9,
+     "ausblenden": 20,
+     "fps": 8,
+     "pause": [
+      25,
+      60
+     ]
+    },
+    {
+     "art": "bild",
+     "bild": "res://grafik/ambiente/moewe_fliegt.png",
+     "bilder": 5,
+     "weg": [
+      [
+       -20,
+       62
+      ],
+      [
+       320,
+       34
+      ],
+      [
+       660,
+       10
+      ]
+     ],
+     "tempo": 34,
+     "fps": 8,
+     "pause": [
+      8,
+      20
+     ]
+    },
+    {
+     "art": "bild",
+     "bild": "res://grafik/ambiente/moewe_pfahl.png",
+     "bilder": 6,
+     "pos": [
+      51,
+      167
+     ],
+     "baseline": 201,
+     "fps": 6,
+     "ablauf": "einmalig",
+     "ruhe_sichtbar": true,
+     "pause": [
+      10,
+      25
+     ]
+    },
+    {
+     "art": "bild",
+     "bild": "res://grafik/ambiente/hafenarbeiter.png",
+     "bilder": 8,
+     "weg": [
+      [
+       352,
+       180
+      ],
+      [
+       372,
+       154
+      ],
+      [
+       386,
+       132
+      ]
+     ],
+     "tempo": 9,
+     "ausblenden": 8,
+     "fps": 8,
+     "pause": [
+      15,
+      35
+     ]
+    },
+    {
+     "art": "bild",
+     "bild": "res://grafik/ambiente/tintenfisch.png",
+     "bilder": 6,
+     "pos": [
+      268,
+      205
+     ],
+     "baseline": 206,
+     "an": "Tintenfass",
+     "fps": 7
+    }
+   ],
    "figuren": [
     {
      "id": "faehrmann",
@@ -3951,6 +4357,19 @@
      "skala": 0.7
     }
    },
+   "effekte": [
+    {
+     "art": "bild",
+     "bild": "res://grafik/ambiente/wasserorgel.png",
+     "bilder": 6,
+     "pos": [
+      80,
+      238
+     ],
+     "fps": 6,
+     "deckung": 0.55
+    }
+   ],
    "figuren": [
     {
      "id": "archimedes",
@@ -4629,6 +5048,23 @@
     ]
    },
    "tiefe": 0.85,
+   "effekte": [
+    {
+     "art": "bild",
+     "bild": "res://grafik/ambiente/eidechse.png",
+     "bilder": 6,
+     "pos": [
+      320,
+      175
+     ],
+     "fps": 6,
+     "ablauf": "einmalig",
+     "pause": [
+      10,
+      25
+     ]
+    }
+   ],
    "hintergrund_nach": {
     "R10b": "res://grafik/hintergruende/w2_bg_grabhuegel_grabstein_v01.png"
    },

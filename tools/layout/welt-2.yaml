@@ -39,6 +39,13 @@ _figuren: [sobek, hermes, ramses, faecherwedler, archimedes, cicero, zeremonienm
 
 nil_delta:
   farbe: "#c9a96e"
+  effekte:                     # lebendiger Hintergrund (P16, gemalte Bildfolgen aus tools/ambiente.py)
+    - {art: bild, bild: res://grafik/ambiente/sanduhr_nil.png, bilder: 6, pos: [234, 194], fps: 6}   # W2-B21
+    - {art: bild, bild: res://grafik/ambiente/feluke.png, bilder: 8, weg: [[-30, 192], [1120, 182]], tempo: 8, ausblenden: 25, zurueck: true, fps: 6, pause: [10, 30]}   # W2-B11
+    - {art: bild, bild: res://grafik/ambiente/fischer_netz.png, bilder: 8, pos: [420, 204], fps: 5, ablauf: einmalig, ruhe_sichtbar: true, pause: [12, 30]}   # W2-B13
+    - {art: bild, bild: res://grafik/ambiente/ibis.png, bilder: 8, pos: [490, 170], fps: 5}   # W2-B12 im Flachwasser am fernen Ufer
+    - {art: bild, bild: res://grafik/ambiente/libelle.png, bilder: 4, weg: [[560, 172], [600, 160], [640, 176], [600, 186], [560, 172]], tempo: 18, fps: 14, pause: [2, 8]}   # W2-B14 am Papyrus
+    - {art: bild, bild: res://grafik/ambiente/wassertraegerin.png, bilder: 8, weg: [[290, 161], [470, 160]], tempo: 7, ausblenden: 12, zurueck: true, fps: 8, pause: [15, 40]}   # W2-B36 am fernen Ufer
   hintergrund: res://grafik/hintergruende/w2_bg_nil_delta_v01.png
   tiefe: 0.85
   laufbereich: [[8, 290], [480, 280], [520, 275], [720, 270], [800, 255], [1272, 255], [1272, 356], [8, 356]]
@@ -78,6 +85,8 @@ nil_delta:
 
 thronsaal_ramses:
   farbe: "#b98b3e"
+  effekte:                     # lebendiger Hintergrund (P16, gemalte Bildfolgen aus tools/ambiente.py)
+    - {art: bild, bild: res://grafik/ambiente/fackel.png, bilder: 8, pos: [1170, 126], fps: 9}   # W1-B70
   hintergrund: res://grafik/hintergruende/w2_bg_thronsaal_ramses_v01.png
   tiefe: 0.85
   laufbereich: [[8, 292], [1272, 292], [1272, 356], [8, 356]]
@@ -122,6 +131,9 @@ thronsaal_ramses:
 
 palastkueche:
   farbe: "#9c6b45"
+  effekte:                     # lebendiger Hintergrund (P16, gemalte Bildfolgen aus tools/ambiente.py)
+    - {art: bild, bild: res://grafik/ambiente/ofenfeuer.png, bilder: 8, pos: [139, 198], fps: 8}   # W2-B22
+    - {art: bild, bild: res://grafik/ambiente/ofenfeuer.png, bilder: 8, pos: [192, 198], fps: 7}   # W2-B22
   hintergrund: res://grafik/hintergruende/w2_bg_palastkueche_v01.png
   tiefe: 0.85
   laufbereich: [[8, 232], [632, 232], [632, 356], [8, 356]]
@@ -153,6 +165,8 @@ palastkueche:
 
 sphinx:
   farbe: "#d8b878"
+  effekte:                     # lebendiger Hintergrund (P16, gemalte Bildfolgen aus tools/ambiente.py)
+    - {art: bild, bild: res://grafik/ambiente/geier.png, bilder: 6, kreis: [200, 45, 70, 12, 16], fps: 5}   # W2-B23
   hintergrund: res://grafik/hintergruende/w2_bg_sphinx_v01.png
   hintergrund_nach:
     R13: res://grafik/hintergruende/w2_bg_sphinx_ohne_nase_v01.png
@@ -178,6 +192,9 @@ sphinx:
 
 faehrsteg_olympia:
   farbe: "#8fae7a"
+  effekte:                     # lebendiger Hintergrund (P16, gemalte Bildfolgen aus tools/ambiente.py)
+    - {art: bild, bild: res://grafik/ambiente/sanduhr_gross.png, bilder: 6, pos: [80, 150], fps: 6}   # W2-B21
+    - {art: bild, bild: res://grafik/ambiente/ziege_grast.png, bilder: 6, pos: [345, 243], fps: 5}   # W2-B20
   hintergrund: res://grafik/hintergruende/w2_bg_faehrsteg_olympia_v01.png
   tiefe: 0.85
   laufbereich: [[8, 262], [632, 262], [632, 356], [8, 356]]
@@ -205,6 +222,10 @@ faehrsteg_olympia:
 
 agora:
   farbe: "#c8c0a8"
+  effekte:                     # lebendiger Hintergrund (P16, gemalte Bildfolgen aus tools/ambiente.py)
+    - {art: bild, bild: res://grafik/ambiente/menge_agora.png, bilder: 4, pos: [650, 238], fps: 2}   # W2-B30 über der linken Gruppe
+    - {art: bild, bild: res://grafik/ambiente/tauben_picken.png, bilder: 6, pos: [540, 296], fps: 6}   # W2-B28
+    - {art: bild, bild: res://grafik/ambiente/taube_fliegt.png, bilder: 6, pos: [600, 300], fps: 8, ablauf: einmalig, pause: [15, 40]}   # W2-B29
   hintergrund: res://grafik/hintergruende/w2_bg_agora_v01.png
   hintergrund_nach:
     R12: res://grafik/hintergruende/w2_bg_agora_sandale_v01.png        # Sandale nach dem Lauf an Tag 1 auf der Adlersäule
@@ -257,6 +278,8 @@ agora:
 
 startbuero:
   farbe: "#a89a7c"
+  effekte:                     # lebendiger Hintergrund (P16, gemalte Bildfolgen aus tools/ambiente.py)
+    - {art: bild, bild: res://grafik/ambiente/wartende.png, bilder: 8, pos: [52, 281], fps: 3}   # W2-B31
   hintergrund: res://grafik/hintergruende/w2_bg_startbuero_v01.png
   tiefe: 0.8
   laufbereich: [[110, 218], [460, 218], [480, 250], [632, 280], [632, 356], [8, 356], [8, 285], [110, 285]]
@@ -288,6 +311,10 @@ startbuero:
 
 stadion:
   farbe: "#d6b46a"
+  effekte:                     # lebendiger Hintergrund (P16, gemalte Bildfolgen aus tools/ambiente.py)
+    - {art: bild, bild: res://grafik/ambiente/wimpel_stadion.png, bilder: 8, pos: [102, 64], fps: 8}   # W2-B27 auf der Tribünenecke links
+    - {art: bild, bild: res://grafik/ambiente/zuschauer_stadion.png, bilder: 8, pos: [362, 147], fps: 4}   # W2-B26, Tribünenblock zwischen Treppe und Tor
+    - {art: bild, bild: res://grafik/ambiente/zuschauer_stadion.png, bilder: 8, pos: [1062, 147], fps: 3}   # W2-B26, rechter Tribünenblock
   hintergrund: res://grafik/hintergruende/w2_bg_stadion_v01.png
   hintergrund_nach:
     R13: res://grafik/hintergruende/w2_bg_stadion_parade_v01.png      # Parade nach dem Finaltag, Glockenturm schief
@@ -327,6 +354,16 @@ stadion:
 
 hafen_syrakus:
   farbe: "#6f98b0"
+  effekte:                     # lebendiger Hintergrund (P16, gemalte Bildfolgen aus tools/ambiente.py)
+    - {art: bild, bild: res://grafik/ambiente/sanduhr.png, bilder: 6, pos: [79, 146], baseline: 201, fps: 6}   # W2-B21, vor dem Ausschnitt hafen_vor_dem_meer
+    - {art: bild, bild: res://grafik/ambiente/segelschiff.png, bilder: 8, weg: [[-20, 154], [300, 154]], tempo: 4, ausblenden: 20, fps: 6, pause: [20, 60]}   # W2-B15, hinter Steg und Sanduhr (Vordergrund hafen_vor_dem_meer)
+    - {art: bild, bild: res://grafik/ambiente/ruderboot.png, bilder: 8, weg: [[300, 172], [-30, 168]], tempo: 9, ausblenden: 20, fps: 8, pause: [25, 60]}   # W2-B35
+    - {art: bild, bild: res://grafik/ambiente/moewe_fliegt.png, bilder: 5, weg: [[-20, 62], [320, 34], [660, 10]], tempo: 34, fps: 8, pause: [8, 20]}   # W2-B16
+    - {art: bild, bild: res://grafik/ambiente/moewe_pfahl.png, bilder: 6, pos: [51, 167], baseline: 201, fps: 6, ablauf: einmalig, ruhe_sichtbar: true, pause: [10, 25]}   # W2-B17
+    - {art: bild, bild: res://grafik/ambiente/hafenarbeiter.png, bilder: 8, weg: [[352, 180], [372, 154], [386, 132]], tempo: 9, ausblenden: 8, fps: 8, pause: [15, 35]}   # W2-B18, den Pfad hinauf
+    - {art: bild, bild: res://grafik/ambiente/tintenfisch.png, bilder: 6, pos: [268, 205], baseline: 206, an: Tintenfass, fps: 7}   # W2-B19, solange er im Netz hängt
+  vordergrund:                  # Steg, Pfähle und Sanduhr vor Segelschiff und Ruderboot (Wasser und Himmel durchsichtig)
+    vor_dem_meer: {bild: res://grafik/ambiente/hafen_vor_dem_meer.png, rect: [0, 85, 340, 130], baseline: 200}
   hintergrund: res://grafik/hintergruende/w2_bg_hafen_syrakus_v01.png
   tiefe: 0.75
   laufbereich: [[8, 215], [560, 215], [580, 280], [632, 300], [632, 356], [8, 356]]
@@ -359,6 +396,8 @@ hafen_syrakus:
 
 werkstatt:
   farbe: "#8a7a62"
+  effekte:                     # lebendiger Hintergrund (P16, gemalte Bildfolgen aus tools/ambiente.py)
+    - {art: bild, bild: res://grafik/ambiente/wasserorgel.png, bilder: 6, pos: [80, 238], fps: 6, deckung: 0.55}   # W2-B25
   hintergrund: res://grafik/hintergruende/w2_bg_werkstatt_v01.png
   tiefe: 0.8
   laufbereich: [[190, 240], [632, 240], [632, 356], [8, 356], [8, 330], [190, 330]]
@@ -392,6 +431,8 @@ werkstatt:
 
 grabhuegel:
   farbe: "#7a8a5a"
+  effekte:                     # lebendiger Hintergrund (P16, gemalte Bildfolgen aus tools/ambiente.py)
+    - {art: bild, bild: res://grafik/ambiente/eidechse.png, bilder: 6, pos: [320, 175], fps: 6, ablauf: einmalig, pause: [10, 25]}   # W2-B24
   hintergrund: res://grafik/hintergruende/w2_bg_grabhuegel_v01.png
   hintergrund_nach:
     R10b: res://grafik/hintergruende/w2_bg_grabhuegel_grabstein_v01.png

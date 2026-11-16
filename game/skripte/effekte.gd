@@ -182,3 +182,31 @@ static func rauchwolke(raum: Node, ort: Vector2, groesse := 34.0) -> void:
 	var aus := wolke.create_tween()
 	aus.tween_property(wolke, "modulate:a", 0.0, 0.55)
 	aus.tween_callback(wolke.queue_free)
+
+
+## Gemalte Bildfolge einmal abspielen (Effekte aus grafik/ambiente, Streifen von tools/ambiente.py):
+## ort ist der Fußpunkt unten in der Mitte. Wartet bis zum letzten Bild, blendet dann aus und räumt
+## selbst auf. Im Testmodus und beim Überspringen nichts. Gibt false zurück, wenn das Bild fehlt (dann
+## kann der Aufrufer auf den alten Effekt zurückfallen).
+static func bildfolge(raum: Node, pfad: String, bilder: int, ort: Vector2, fps := 10.0, z := 50,
+		ausblenden := 0.25) -> bool:
+	if not ResourceLoader.exists(pfad):
+		return false
+	if not is_instance_valid(raum) or PopochiuUtils.e.cutscene_skipped or Spiel.testmodus:
+		return true
+	var sp := Sprite2D.new()
+	sp.texture = load(pfad)
+	sp.hframes = maxi(1, bilder)
+	sp.centered = false
+	sp.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
+	sp.offset = Vector2(-roundf(sp.texture.get_width() / float(bilder) / 2.0), -sp.texture.get_height())
+	sp.position = ort.round()
+	sp.z_index = z
+	raum.add_child(sp)
+	var t := sp.create_tween()
+	t.tween_method(func(f: float) -> void: sp.frame = mini(int(f), bilder - 1), 0.0, float(bilder), bilder / fps)
+	if ausblenden > 0.0:
+		t.tween_property(sp, "modulate:a", 0.0, ausblenden)
+	t.tween_callback(sp.queue_free)
+	await t.finished
+	return true
