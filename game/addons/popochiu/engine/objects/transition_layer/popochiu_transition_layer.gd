@@ -255,7 +255,9 @@ func copy_image(texture_path: String) -> int:
 	result_code = game_tl_image_dir.copy(
 		texture_path, PopochiuResources.TRANSITION_LAYER_MASKS + file_name
 	)
-	await PopochiuEditorHelper.filesystem_scanned()
+	# Couch Quest: Editor-Helfer nur im Editor laden; ein fester Verweis bricht den Export (EditorInterface fehlt dort)
+	if Engine.is_editor_hint():
+		await load("res://addons/popochiu/editor/helpers/popochiu_editor_helper.gd").filesystem_scanned()
 
 	return ResultCodes.SUCCESS if result_code == OK else ResultCodes.FAILURE
 

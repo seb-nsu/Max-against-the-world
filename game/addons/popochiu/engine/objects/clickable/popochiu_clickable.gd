@@ -74,7 +74,7 @@ func _ready():
 		# Add interaction polygon to the proper group
 		if (get_node_or_null("InteractionPolygon") != null):
 			get_node("InteractionPolygon").add_to_group(
-				PopochiuEditorHelper.POPOCHIU_OBJECT_POLYGON_GROUP
+				"popochiu_object_polygon"  # Couch Quest: wie PopochiuEditorHelper.POPOCHIU_OBJECT_POLYGON_GROUP, ohne Editor-Klasse
 			)
 
 		# Ignore assigning the polygon when:

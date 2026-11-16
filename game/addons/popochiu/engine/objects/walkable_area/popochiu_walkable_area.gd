@@ -73,7 +73,7 @@ func _ready() -> void:
 
 		# Add interaction polygon to the proper group
 		_perimeter.add_to_group(
-			PopochiuEditorHelper.POPOCHIU_OBJECT_POLYGON_GROUP
+			"popochiu_object_polygon"  # Couch Quest: wie PopochiuEditorHelper.POPOCHIU_OBJECT_POLYGON_GROUP, ohne Editor-Klasse
 		)
 
 		# Get the reference to the navigation polygon
@@ -121,7 +121,7 @@ func _notification(event: int) -> void:
 		_save_navigation_polygon()
 		# Saving the scene is necessary to make the changes permanent.
 		# If you remove this the character won't be able to walk in the area.
-		PopochiuEditorHelper.pack_scene(self)
+		load("res://addons/popochiu/editor/helpers/popochiu_editor_helper.gd").pack_scene(self)  # Couch Quest: nur im Editor, ohne festen Verweis
 
 
 func _exit_tree():
