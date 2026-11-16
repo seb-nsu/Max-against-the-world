@@ -1372,7 +1372,7 @@ func update_scale():
 ## Resets the animation prefix.
 ## Same as assigning an empty string to the prefix.
 func reset_animation_prefix() -> void:
-	animation_prefix = PopochiuEditorHelper.EMPTY_STRING
+	animation_prefix = ""  # Couch Quest: kein Verweis auf den Editor-Helfer, der im Export nicht lädt
 
 
 ## Adds [param quantity] of [param item] to this character's inventory and waits until any GUI

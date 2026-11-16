@@ -65,7 +65,7 @@ func _ready() -> void:
 
 		# Add interaction polygon to the proper group
 		interaction_polygon_node.add_to_group(
-			PopochiuEditorHelper.POPOCHIU_OBJECT_POLYGON_GROUP
+			"popochiu_object_polygon"  # Couch Quest: wie PopochiuEditorHelper.POPOCHIU_OBJECT_POLYGON_GROUP, ohne Editor-Klasse
 		)
 
 		if interaction_polygon.is_empty():
