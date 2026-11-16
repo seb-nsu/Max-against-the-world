@@ -112,20 +112,8 @@
     4
    ]
   },
-  "gehen_hinten": {
-   "von": 42,
-   "bilder": 5,
-   "ms": 130,
-   "schleife": true
-  },
-  "gehen_vorn": {
-   "von": 47,
-   "bilder": 2,
-   "ms": 170,
-   "schleife": true
-  },
   "haare": {
-   "von": 49,
+   "von": 42,
    "bilder": 5,
    "ms": 90,
    "schleife": false,
@@ -152,7 +140,7 @@
    ]
   },
   "hinlegen": {
-   "von": 54,
+   "von": 47,
    "bilder": 6,
    "ms": 120,
    "schleife": false,
@@ -177,7 +165,7 @@
    ]
   },
   "minka_umgarnen": {
-   "von": 60,
+   "von": 53,
    "bilder": 8,
    "ms": 110,
    "schleife": false,
@@ -211,7 +199,7 @@
    ]
   },
   "ohrfeige": {
-   "von": 68,
+   "von": 61,
    "bilder": 4,
    "ms": 110,
    "schleife": false,
@@ -230,7 +218,7 @@
    ]
   },
   "putzen": {
-   "von": 72,
+   "von": 65,
    "bilder": 6,
    "ms": 140,
    "schleife": true,
@@ -251,7 +239,7 @@
    ]
   },
   "talk": {
-   "von": 78,
+   "von": 71,
    "bilder": 4,
    "ms": 160,
    "schleife": true,
@@ -268,7 +256,7 @@
    ]
   },
   "schnuppern": {
-   "von": 82,
+   "von": 75,
    "bilder": 4,
    "ms": 130,
    "schleife": false,
@@ -288,7 +276,7 @@
    ]
   },
   "schwanz_zucken": {
-   "von": 86,
+   "von": 79,
    "bilder": 4,
    "ms": 140,
    "schleife": true,
@@ -306,7 +294,7 @@
    ]
   },
   "springen": {
-   "von": 90,
+   "von": 83,
    "bilder": 7,
    "ms": 110,
    "schleife": false,
@@ -325,13 +313,13 @@
    ]
   },
   "tragen": {
-   "von": 97,
+   "von": 90,
    "bilder": 8,
    "ms": 100,
    "schleife": true
   },
   "vom_schrank_fallen": {
-   "von": 105,
+   "von": 98,
    "bilder": 4,
    "ms": 100,
    "schleife": false,
@@ -346,6 +334,18 @@
     3,
     3
    ]
+  },
+  "gehen_hinten": {
+   "von": 102,
+   "bilder": 8,
+   "ms": 70,
+   "schleife": true
+  },
+  "gehen_vorn": {
+   "von": 110,
+   "bilder": 8,
+   "ms": 70,
+   "schleife": true
   }
  }
 }

@@ -791,12 +791,27 @@ func _wunder() -> void:
 func _duell_pruefen() -> void:
 	if not (Zustand.ist("W2_DUELL_OPFER") and Zustand.ist("W2_DUELL_GEFOLGE") and Zustand.ist("W2_DUELL_WUNDER")):
 		return
-	await _szene(["W2_DUEL_NAR_0280", "W2_DUEL_HOF_0290", "W2_DUEL_PIX_0300", "W2_DUEL_MAX_0310",
-		"W2_DUEL_PIX_0320"])
+	await _szene(["W2_DUEL_NAR_0280", "W2_DUEL_HOF_0290"])
+	_hofkater_zieht_ab()   # nicht abwarten: Pixel kommentiert, während der Kater geht (0300)
+	await _szene(["W2_DUEL_PIX_0300", "W2_DUEL_MAX_0310", "W2_DUEL_PIX_0320"])
 	Zustand.loese("R2b")
 	Spiel.figur_hier("Hofkater", false)
 	if Zustand.geloest("R2a"):
 		await _audienz()
+
+
+## R2b: der Hofkater zieht beleidigt ab (W2-B02, Bewegung „weggehen“) zur Tür zum Nil-Delta. Die
+## Geste „abziehen“ (aufstehen, Schwanz hoch) spielt schon vor 0290 (gesten_welt_2.gd).
+func _hofkater_zieht_ab() -> void:
+	if CQFigur.gesten_aus() or not is_instance_valid(R.current) or not R.current.has_character("Hofkater"):
+		return
+	var kater = C.get_character("Hofkater")
+	if not kater is CQFigur:
+		return
+	var tuer: Vector2 = R.current.get_marker_position("VonNilDelta") if R.current.has_marker("VonNilDelta") \
+		else kater.position + Vector2(-320, 0)
+	await kater.laufen_zu(tuer, 55.0)
+	await kater.ausblenden_und_weg()
 
 
 func _audienz() -> void:
@@ -1084,12 +1099,15 @@ func gegenstand_badewanne(_obj, iid) -> bool:
 
 
 func _heureka() -> void:
-	await _szene(["W2_KRON_MAX_0110", "W2_KRON_ARC_0120", "W2_KRON_ARC_0130"])
-	# Heureka: Archimedes im Handtuch rennt aus der Werkstatt (Animation „heureka“)
+	# Heureka: Archimedes im Handtuch macht einen Freudensprung (heureka_posen, vor 0130) und rennt
+	# aus der Werkstatt (Animation „heureka“)
+	await _szene(["W2_KRON_MAX_0110", "W2_KRON_ARC_0120"])
 	var arc = C.get_character("Archimedes")
 	if arc != null and arc.has_method("grafik_laden"):
 		var start: Vector2 = arc.position
 		arc.grafik_laden("archimedes_handtuch")
+		await arc.geste("heureka_posen")
+		await _szene(["W2_KRON_ARC_0130"])
 		await _figur_laeuft("Archimedes", start, Vector2(_raum_breite() + 80, start.y), 170.0, "heureka")
 		Spiel.figur_hier("Archimedes", false)
 		await _szene(["W2_KRON_HIE_0140", "W2_KRON_PIX_0150", "W2_KRON_MAX_0160", "W2_KRON_HIE_0170"])
@@ -1097,6 +1115,7 @@ func _heureka() -> void:
 		arc.grafik_laden("")
 		Spiel.figur_hier("Archimedes", true, start)
 	else:
+		await _szene(["W2_KRON_ARC_0130"])
 		await _szene(["W2_KRON_HIE_0140", "W2_KRON_PIX_0150", "W2_KRON_MAX_0160", "W2_KRON_HIE_0170"])
 	await _abgeben("krone")
 	await _abgeben("goldbarren")

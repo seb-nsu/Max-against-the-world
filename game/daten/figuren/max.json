@@ -101,43 +101,8 @@
     10
    ]
   },
-  "diskus": {
-   "von": 78,
-   "bilder": 3,
-   "ms": 120,
-   "schleife": false,
-   "folge": [
-    0,
-    0,
-    0,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    2,
-    2,
-    2,
-    2,
-    2,
-    2,
-    2,
-    2,
-    0,
-    0,
-    0,
-    0
-   ]
-  },
   "fallen": {
-   "von": 81,
+   "von": 78,
    "bilder": 8,
    "ms": 100,
    "schleife": false,
@@ -156,7 +121,7 @@
    ]
   },
   "gaehnen": {
-   "von": 89,
+   "von": 86,
    "bilder": 7,
    "ms": 130,
    "schleife": false,
@@ -175,43 +140,8 @@
     0
    ]
   },
-  "gehen_hinten": {
-   "von": 96,
-   "bilder": 4,
-   "ms": 110,
-   "schleife": true
-  },
-  "gehen_vorn": {
-   "von": 100,
-   "bilder": 4,
-   "ms": 110,
-   "schleife": true
-  },
-  "heisser_sand": {
-   "von": 104,
-   "bilder": 2,
-   "ms": 120,
-   "schleife": false,
-   "folge": [
-    0,
-    0,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    0,
-    0,
-    0
-   ]
-  },
   "hinsetzen": {
-   "von": 106,
+   "von": 93,
    "bilder": 9,
    "ms": 110,
    "schleife": false,
@@ -236,38 +166,8 @@
     8
    ]
   },
-  "katapult": {
-   "von": 115,
-   "bilder": 2,
-   "ms": 120,
-   "schleife": false,
-   "folge": [
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1
-   ]
-  },
   "kochloeffel": {
-   "von": 117,
+   "von": 102,
    "bilder": 8,
    "ms": 110,
    "schleife": false,
@@ -287,7 +187,7 @@
    ]
   },
   "kopf_kratzen": {
-   "von": 125,
+   "von": 110,
    "bilder": 7,
    "ms": 110,
    "schleife": false,
@@ -312,13 +212,13 @@
    ]
   },
   "melken": {
-   "von": 132,
+   "von": 117,
    "bilder": 8,
    "ms": 140,
    "schleife": true
   },
   "talk": {
-   "von": 140,
+   "von": 125,
    "bilder": 6,
    "ms": 130,
    "schleife": true,
@@ -340,7 +240,7 @@
    ]
   },
   "schulterzucken": {
-   "von": 146,
+   "von": 131,
    "bilder": 5,
    "ms": 120,
    "schleife": false,
@@ -358,41 +258,8 @@
     0
    ]
   },
-  "speer": {
-   "von": 151,
-   "bilder": 3,
-   "ms": 120,
-   "schleife": false,
-   "folge": [
-    0,
-    0,
-    0,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    2,
-    2,
-    2,
-    2,
-    2,
-    2,
-    2,
-    2,
-    0,
-    0,
-    0,
-    0
-   ]
-  },
   "vom_boden_aufstehen": {
-   "von": 154,
+   "von": 136,
    "bilder": 9,
    "ms": 130,
    "schleife": false,
@@ -412,7 +279,7 @@
    ]
   },
   "vom_sofa_aufstehen": {
-   "von": 163,
+   "von": 145,
    "bilder": 9,
    "ms": 120,
    "schleife": false,
@@ -434,36 +301,8 @@
     8
    ]
   },
-  "wackeln": {
-   "von": 172,
-   "bilder": 2,
-   "ms": 120,
-   "schleife": false,
-   "folge": [
-    0,
-    0,
-    0,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    0,
-    0,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    0,
-    0,
-    0
-   ]
-  },
   "wenden": {
-   "von": 174,
+   "von": 154,
    "bilder": 6,
    "ms": 110,
    "schleife": false,
@@ -479,7 +318,7 @@
    ]
   },
   "zeigen": {
-   "von": 180,
+   "von": 160,
    "bilder": 5,
    "ms": 100,
    "schleife": false,
@@ -499,6 +338,168 @@
     4,
     4,
     4,
+    0,
+    0
+   ]
+  },
+  "diskus": {
+   "von": 165,
+   "bilder": 11,
+   "ms": 100,
+   "schleife": false,
+   "folge": [
+    0,
+    0,
+    1,
+    2,
+    3,
+    3,
+    3,
+    4,
+    4,
+    5,
+    6,
+    7,
+    7,
+    7,
+    7,
+    8,
+    9,
+    10,
+    0,
+    0
+   ]
+  },
+  "gehen_hinten": {
+   "von": 176,
+   "bilder": 8,
+   "ms": 60,
+   "schleife": true
+  },
+  "gehen_vorn": {
+   "von": 184,
+   "bilder": 8,
+   "ms": 60,
+   "schleife": true
+  },
+  "wackeln": {
+   "von": 192,
+   "bilder": 7,
+   "ms": 100,
+   "schleife": false,
+   "folge": [
+    0,
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    6,
+    5,
+    4,
+    3,
+    2,
+    2,
+    3,
+    4,
+    5,
+    4,
+    1,
+    0,
+    0
+   ]
+  },
+  "heisser_sand": {
+   "von": 199,
+   "bilder": 8,
+   "ms": 90,
+   "schleife": false,
+   "folge": [
+    0,
+    0,
+    1,
+    2,
+    3,
+    4,
+    4,
+    3,
+    5,
+    6,
+    3,
+    4,
+    3,
+    5,
+    6,
+    7,
+    3,
+    7,
+    5,
+    6,
+    2,
+    1,
+    0,
+    0
+   ]
+  },
+  "katapult": {
+   "von": 207,
+   "bilder": 14,
+   "ms": 110,
+   "schleife": false,
+   "folge": [
+    0,
+    0,
+    0,
+    1,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    11,
+    13,
+    10,
+    13,
+    11,
+    12,
+    11
+   ]
+  },
+  "speer": {
+   "von": 221,
+   "bilder": 12,
+   "ms": 100,
+   "schleife": false,
+   "folge": [
+    0,
+    0,
+    1,
+    2,
+    2,
+    3,
+    4,
+    4,
+    5,
+    5,
+    6,
+    7,
+    8,
+    8,
+    8,
+    8,
+    9,
+    10,
+    11,
     0,
     0
    ]

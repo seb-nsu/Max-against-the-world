@@ -145,6 +145,9 @@ func _aufstehen() -> void:
 		liegend.queue_free()
 		_max_bild_alpha(1.0)
 		return
+	if C.player is CQFigur and C.player.hat_animation("vom_sofa_aufstehen"):
+		await _vom_sofa_aufstehen(liegend, lehne)
+		return
 	var sitzend := _pose(SITZEN_BILD)
 	sitzend.name = "MaxSitzend"
 	var groesse := Vector2(sitzend.texture.get_size()) * POSE_SKALA
@@ -165,6 +168,25 @@ func _aufstehen() -> void:
 	await t.finished
 	liegend.queue_free()
 	sitzend.queue_free()
+
+
+## Mit der Bewegung „vom_sofa_aufstehen“ (gesten-regie.md): Das Liegebild blendet in ihr erstes
+## Bild über (Max sitzt auf der Sofakante), dann steht er in einem Zug auf. Die Armlehne geht mit
+## dem Liegenden.
+func _vom_sofa_aufstehen(liegend: Sprite2D, lehne: Sprite2D) -> void:
+	var m: CQFigur = C.player
+	m.geste("vom_sofa_aufstehen", false, CQFigur.GESTE_HALTEN, 0, 0)   # erstes Bild halten
+	var t := create_tween().set_parallel()
+	t.tween_property(liegend, "modulate:a", 0.0, 0.35)
+	var bild := m.get_node_or_null("Sprite2D") as CanvasItem
+	if bild:
+		t.tween_property(bild, "modulate:a", 1.0, 0.35)
+	if is_instance_valid(lehne):
+		t.tween_property(lehne, "modulate:a", 0.0, 0.35)
+	await t.finished
+	liegend.queue_free()
+	_weg(lehne)
+	await m.geste("vom_sofa_aufstehen")
 
 
 func _weg(knoten: Node) -> void:

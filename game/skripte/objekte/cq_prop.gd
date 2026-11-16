@@ -101,6 +101,7 @@ func _on_item_used(item: PopochiuInventoryItem) -> void:
 	if e.is_empty():
 		await Spiel.ersatz()
 	else:
+		await Spiel.max_geste("benutzen", true, e.zeile)   # Gegenstand auf etwas (Entscheidung 2)
 		await Spiel.sagen_eintrag(e)
 
 
