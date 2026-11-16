@@ -21,6 +21,7 @@ TEXTE = {
         "tafel": ["Was wächst, gärt oder verwittert, reist mit der Zeit.",
                   "Was du selbst pflückst, bleibt. Der Rest ist der Zeit egal.",
                   "Ägypten – Olympia: 112 Jahre | Olympia – Syrakus: 25 Jahre"],
+        "tafel_oben": ["Bitte das Krokodil nicht füttern.", "Es frisst trotzdem."],
         "aushang_titel": "BEKANNTMACHUNG",
         "aushang": "Jedes neue Rundschreiben gilt sofort und über allen anderen Vorschriften.",
         "aushang_fuss": "Gezeichnet: Das Startbüro von Olympia",
@@ -29,6 +30,7 @@ TEXTE = {
         "tafel": ["Whatever grows, ferments or weathers travels with time.",
                   "What you pick yourself stays as it is. Time doesn't care about the rest.",
                   "Egypt – Olympia: 112 years | Olympia – Syracuse: 25 years"],
+        "tafel_oben": ["Please don't feed the crocodile.", "It eats anyway."],
         "aushang_titel": "NOTICE",
         "aushang": "Every new circular takes effect immediately and overrides all other regulations.",
         "aushang_fuss": "Signed: The Olympia Start Office",
@@ -66,6 +68,12 @@ def glyphe(im, name, groesse, x0, y0, x1, y1):
     im.alpha_composite(g, (int((x0 + x1 - g.width) / 2), int((y0 + y1 - g.height) / 2)))
 
 
+def oben_einritzen(d, zeilen):
+    """Hausordnung auf dem freien oberen Brett der Fährtafel, über den drei Feldern (W2_NIL_PIX_0660)."""
+    for i, z in enumerate(zeilen):
+        mittig(d, z, font(12), 166, 422, 99 + i * 15, KERBE, KERBE_HELL)
+
+
 def alle(sprache):
     T = TEXTE[sprache]
     ENDUNG = ".png" if sprache == "de" else "_en.png"
@@ -81,6 +89,7 @@ def alle(sprache):
         h = 14 * len(zeilen)
         for i, z in enumerate(zeilen):
             mittig(d, z, f, x0, x1, (y0 + y1 - h) / 2 + i * 14 - 1, KERBE, KERBE_HELL)
+    oben_einritzen(d, T["tafel_oben"])
     im.save(Z + "faehrtafel" + ENDUNG)
 
     # --- Aushang im Startbüro: auf die gemalten Linien geschrieben
@@ -115,6 +124,15 @@ def alle(sprache):
 
 
 if __name__ == "__main__":
+    import sys
+    if "--nur-oben" in sys.argv:   # ohne die Quellbilder auf E:: nur das obere Brett in die fertigen Tafeln ritzen
+        for s, endung in (("de", ".png"), ("en", "_en.png")):
+            im = Image.open(Z + "faehrtafel" + endung).convert("RGB")
+            d = ImageDraw.Draw(im)
+            d.fontmode = "1"
+            oben_einritzen(d, TEXTE[s]["tafel_oben"])
+            im.save(Z + "faehrtafel" + endung)
+        sys.exit()
     for s in ("de", "en"):
         alle(s)
     print("fertig")

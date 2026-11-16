@@ -79,7 +79,7 @@ Der Fährmann will einen Obolus. Max hat keinen. Sobek verneigt sich vor Pixel, 
 | W2\_NIL\_MAX\_0640 | Max | Eine Tafel mit drei Zeilen. Entweder der Fahrplan oder die Hausordnung, was hier vermutlich dasselbe ist. | Ansehen: Tafel; öffnet Nahansicht |
 | W2\_NIL\_MAX\_0645 | Max | Ich lese die drei Zeilen noch mal. Sie werden nicht kürzer, aber jedes Mal wichtiger. | Ansehen: Tafel, zweites Mal; öffnet Nahansicht |
 | W2\_NIL\_MAX\_0650 | Max | „Was wächst, gärt oder verwittert, reist mit der Zeit. Was du selbst pflückst, bleibt. Der Rest ist der Zeit egal.“ | Nahansicht Tafel; Notizbuch Seite 2 |
-| W2\_NIL\_PIX\_0660 | Pixel | Eine Fähre mit Kleingedrucktem. Ich muss zugeben, die Antike war weiter, als man ihr gemeinhin zutraut. | Nahansicht Tafel, nach dem Lesen |
+| W2\_NIL\_PIX\_0660 | Pixel | Eine Fähre mit Kleingedrucktem. Ich muss zugeben, die Antike war weiter, als man ihr gemeinhin zutraut. // Und ganz oben: „Bitte das Krokodil nicht füttern. Es frisst trotzdem.“ Ich lese das als Drohung. An mich. | Nahansicht Tafel, nach dem Lesen |
 | W2\_NIL\_MAX\_0670 | Max | Schilf. Daraus machen sie hier Papyrus, also Papier, bevor es Papier gab. Opa hätte Tränen in den Augen. | Ansehen: Schilf |
 | W2\_NIL\_PIX\_0675 | Pixel | Schilf raschelt so verlockend, wenn man hineinspringt. Ich springe trotzdem nicht hinein. // Dort wohnen nämlich Krokodile mit Ambitionen, und ich habe für heute genug Verehrer. | Ansehen: Schilf, zweites Mal |
 | W2\_NIL\_MAX\_0680 | Max | Ein Blatt Papyrus. Leer. Das erste leere Blatt seit viertausend Jahren, und ich hab's. | Nehmen: Papyrus aus dem Schilf |
@@ -174,7 +174,7 @@ Zwei Durchgangsräume, kein Rätsel. Am Hafen von Syrakus liegt der Tintenfisch 
 | W2\_STOL\_MAX\_0040 | Max | Noch eine Sanduhr. Die haben an jeder Haltestelle eine, und die geht wenigstens nie nach. | Ansehen: Sanduhr Olympia |
 | W2\_STOL\_MAX\_0045 | Max | Der Sand läuft hier gemütlicher. Griechischer Sand hat offenbar keine Termine. | Ansehen: Sanduhr Olympia, zweites Mal |
 | W2\_STOL\_MAX\_0050 | Max | Dieselbe Tafel wie in Ägypten, mit denselben drei Zeilen. Der Fluss wiederholt sich gern. | Ansehen: Tafel Olympia |
-| W2\_STOL\_MAX\_0055 | Max | Ich hab Wort für Wort verglichen. Alles gleich, bis auf einen Kaffeefleck. Antiker Kaffee, schätze ich. | Ansehen: Tafel Olympia, zweites Mal |
+| W2\_STOL\_MAX\_0055 | Max | Ich hab Wort für Wort verglichen. Alles gleich, bis auf einen Kaffeefleck und eine Kritzelei darunter: „Hermes war hier. Schneller als du.“ Typisch Götter. | Ansehen: Tafel Olympia, zweites Mal |
 | W2\_STOL\_MAX\_0060 | Max | Ein Steinweg den Hügel hoch zu weißen Säulen. Da oben brüllt jemand, also ist das entweder Sport oder Politik. | Ansehen: Weg zur Agora |
 | W2\_STOL\_MAX\_0065 | Max | Der Hügel ist steil. Wer da hochrennt, kommt oben entweder als Held an oder als Pfütze, und ich tippe bei mir auf Pfütze. | Ansehen: Weg zur Agora, zweites Mal |
 | W2\_HAFS\_MAX\_0010 | Max | Ein Hafen, dahinter das Meer, und dahinter kommt einfach gar nichts mehr. Hier hört die Zeit auf. | Ansehen: Meer |
