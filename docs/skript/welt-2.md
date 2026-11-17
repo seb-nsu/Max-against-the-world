@@ -1353,6 +1353,7 @@ Drei Stufen je Rätselschritt für die Hilfe-Pfote, Wartezeiten laut Spielsystem
 
 | ID | Sprecher | Text | Auslöser |
 | --- | --- | --- | --- |
+| W2\_HINT\_PIX\_0010 | Pixel | Gerade weiß ich nichts Besseres, als dass du irgendwohin gehst, wo du noch nicht warst. // In diesem Land hat jeder Raum jemanden mit einer Aufgabe. Meistens eine, die er selbst nicht machen will. | kein offener Schritt in Welt 2 |
 | W2\_HINT\_PIX\_0110 | Pixel | Der Fährmann will eine Münze, und du hast keine. // Aber das Krokodil hat sich vor jemandem verneigt. Nicht vor dir. Denk darüber nach, vor wem. | R01, Stufe 1 |
 | W2\_HINT\_PIX\_0120 | Pixel | Götter fahren umsonst, und ihre Diener auch. // Ich sage das Wort „Diener“ übrigens nicht gern. Es kommt mir nur so leicht über die Lippen. | R01, Stufe 2 |
 | W2\_HINT\_PIX\_0130 | Pixel | Wechsle zu mir und lass mich auf die Fähre gehen. Oder zieh mich drauf wie einen Gegenstand. // Ich bin kein Gegenstand, junger Mann. Mach es trotzdem. | R01, Stufe 3 |
