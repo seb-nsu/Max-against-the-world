@@ -78,6 +78,10 @@ static func regeln() -> Array:
 	for n in Bauplan.plaene.get(Zustand.abschnitt, {}).get("nahansichten", []):
 		if n.id in Zustand.nahansichten:
 			out.append(n.name_key)
+	# Zusätzliche Einträge der Welt (Welt 2: Aussagen der Diskus-Verdächtigen, Review 17.11.)
+	var zusatz: Variant = Spiel.regel_wert("notizbuch_zusatz")
+	if zusatz is Array:
+		out.append_array(zusatz)
 	return out
 
 

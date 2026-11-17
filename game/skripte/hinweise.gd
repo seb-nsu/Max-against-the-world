@@ -56,7 +56,14 @@ func schritt_waehlen() -> String:
 			mit_zeilen.append(z)
 	if mit_zeilen.is_empty():
 		return ""
-	mit_zeilen.sort_custom(func(a, b): return a.naturalnocasecmp_to(b) < 0)
+	# Freiwillige Schritte (Welt 2: Öl, Sandale, Feigen) erst, wenn kein Pflichtschritt mit Zeilen
+	# offen ist; sonst nach Nummer (Review 17.11., W2-02)
+	mit_zeilen.sort_custom(func(a, b):
+		var fa := bool(_schritt(a).get("optional", false))
+		var fb := bool(_schritt(b).get("optional", false))
+		if fa != fb:
+			return fb
+		return a.naturalnocasecmp_to(b) < 0)
 	return mit_zeilen[0]
 
 

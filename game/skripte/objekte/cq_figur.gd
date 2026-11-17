@@ -28,6 +28,12 @@ func _ready() -> void:
 		grafik_laden()
 
 
+## Überdeckung mit Hotspots und Props entscheidet Spiel.zeiger_betritt (Größe und Rang).
+func _on_mouse_entered() -> void:
+	if not Spiel.zeiger_betritt(self):
+		super()
+
+
 func say(dialog: String, params: Variant = null) -> void:
 	_satz_nr += 1
 	# Wer mit Max (oder Pixel) redet, dreht sich zu ihm, außer der Raum legt die Richtung fest
@@ -530,6 +536,7 @@ func geste_ende() -> void:
 
 func _geste_spielen(anim: String, sekunden: float, warten: bool, danach: String,
 		ab_bild := -1, bis_bild := -1) -> void:
+	_gang_tempo(1.0)
 	var neue_ruhe := not danach.is_empty() and danach != GESTE_HALTEN and hat_animation(danach)
 	if gesten_aus() or not is_inside_tree() or not _echte_grafik or not hat_animation(anim):
 		if neue_ruhe:
@@ -606,12 +613,14 @@ func _zur_ruhe() -> void:
 
 
 func _play_idle() -> void:
+	_gang_tempo(1.0)
 	if geste_laeuft:
 		return
 	super()
 
 
 func _play_talk() -> void:
+	_gang_tempo(1.0)
 	if geste_laeuft:
 		return
 	super()
@@ -623,6 +632,15 @@ func _play_walk(target_pos: Vector2) -> void:
 		geste_laeuft = false
 		geste_gehalten = false
 	super(target_pos)
+	_gang_tempo(float(get_meta("gang_tempo", 1.0)))
+
+
+## Läuft die Figur im Raum schneller als ihre Größe (CQRaum.tiefe_anwenden, Raum-„skala“), laufen
+## die Beine mit, damit die Füße nicht rutschen.
+func _gang_tempo(faktor: float) -> void:
+	var ap := get_node_or_null("AnimationPlayer") as AnimationPlayer
+	if ap:
+		ap.speed_scale = faktor
 
 
 ## Nummer im Sheet von Bild nr der Bewegung anim (-1, wenn es die Bewegung nicht gibt).

@@ -1,0 +1,59 @@
+  ok    Raum nil_delta erreicht
+  ok    Ankunft: Wunderdinge in den Taschen
+  ok    R1 Fähre
+  ok    Sobek folgt Pixel
+  ok    Raum thronsaal_ramses erreicht
+  ok    Thronsaal: erstes Betreten
+  ok    Duell gefordert, Gefolge da
+  ok    R2b Götter-Duell, Dose zurück
+  ok    Falsche Botschaft wird vorgelesen
+  ok    R2a und Audienz
+  ok    Raum palastkueche erreicht
+  ok    R4 Olivenöl
+  ok    Raum faehrsteg_olympia erreicht
+  ok    Raum agora erreicht
+  ok    Raum startbuero erreicht
+  ok    R3a Rundschreiben
+  ok    R3b Startpass, Sandalen von Hermes
+  ok    Sandalen geölt
+  ok    Raum hafen_syrakus erreicht
+  ok    Raum werkstatt erreicht
+  ok    R5 Krone und Training
+  ok    Raum faehrsteg_olympia erreicht
+  ok    Raum agora erreicht
+  ok    Raum stadion erreicht
+  ok    Tag 1: Lauf mit geölten Sandalen
+  ok    R12 Tag 1, Diskus weg
+  ok    R7: keine Anklage, bevor alle vier verhört sind
+  ok    R7: alle vier verhört
+  ok    R7 Diskus zurück
+  ok    R8 Sphinx
+  ok    R9 alle Konter
+  ok    Entwurf von Archimedes
+  ok    Raum agora erreicht
+  ok    Raum faehrsteg_olympia erreicht
+  ok    Raum nil_delta erreicht
+  ok    R10a Grabstein
+  ok    Raum hafen_syrakus erreicht
+  ok    Raum grabhuegel erreicht
+  ok    R10b Grab für Archimedes
+  ok    Raum hafen_syrakus erreicht
+  ok    Raum faehrsteg_olympia erreicht
+  ok    Raum agora erreicht
+  ok    Raum stadion erreicht
+  ok    R13 Finaltag
+  ok    Ton in Welt 2: Fähre, Sanduhr, Fünfkampf-Stück, Jubel, Atmosphäre, Wanne, Diskus []
+  ok    Ton: erst die Abfahrt, dann die Sanduhr
+  ok    R11a Paraden-Plan
+  ok    Raum dachboden erreicht
+  ok    R11b Wein, Welt 2 geschafft
+  ok    Raum dachboden erreicht
+  ok    Zwischenspiel 2: Opa nimmt den Sack
+  ok    Einkaufsliste: zweiter Wunsch
+  ok    Notizbuch Seite 3 zeigt zwei Wünsche
+  ok    Reisetasche: elf Dinge in zwei Zeilen, nichts überlappt
+  ok    Reisetasche: ältere Dinge behalten Pixels Kommentar, wo er noch passt, sonst eine eigene Zeile
+  ok    Reisetasche: im dritten Zwischenspiel hat jedes Ding eine Zeile von Pixel []
+  ok    Reisetasche gepackt
+  ok    Welt 3 beginnt
+Prüfungen: 58, Fehler: 0

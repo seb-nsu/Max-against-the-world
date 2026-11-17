@@ -1,0 +1,894 @@
+{
+  "bauplan_laufbereich": [
+    [
+      0.0,
+      240.0
+    ],
+    [
+      97.0,
+      222.0
+    ],
+    [
+      158.0,
+      222.0
+    ],
+    [
+      160.0,
+      236.0
+    ],
+    [
+      232.0,
+      236.0
+    ],
+    [
+      236.0,
+      222.0
+    ],
+    [
+      266.0,
+      222.0
+    ],
+    [
+      266.0,
+      270.0
+    ],
+    [
+      386.0,
+      270.0
+    ],
+    [
+      386.0,
+      232.0
+    ],
+    [
+      418.0,
+      232.0
+    ],
+    [
+      418.0,
+      222.0
+    ],
+    [
+      596.0,
+      222.0
+    ],
+    [
+      639.0,
+      236.0
+    ],
+    [
+      639.0,
+      359.0
+    ],
+    [
+      0.0,
+      359.0
+    ]
+  ],
+  "breite": 640,
+  "figuren": [
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "idle",
+        "kochbuch",
+        "ruehren",
+        "talk",
+        "talk_alt",
+        "walk"
+      ],
+      "baseline": 0,
+      "name": "Alwin",
+      "poly": [
+        [
+          228,
+          88
+        ],
+        [
+          268,
+          88
+        ],
+        [
+          268,
+          245
+        ],
+        [
+          228,
+          245
+        ]
+      ],
+      "pos": [
+        248.0,
+        245.0
+      ],
+      "rect": [
+        174,
+        84,
+        322,
+        245
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.75036495923996,
+        0.75036495923996
+      ],
+      "variante": "",
+      "walk_speed": 180.0,
+      "z": 0
+    },
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "auf_max_zeigen",
+        "haende_ringen",
+        "idle",
+        "keuchen",
+        "talk",
+        "talk_alt",
+        "walk"
+      ],
+      "baseline": 0,
+      "name": "Toadi",
+      "poly": [
+        [
+          27,
+          159
+        ],
+        [
+          57,
+          159
+        ],
+        [
+          57,
+          238
+        ],
+        [
+          27,
+          238
+        ]
+      ],
+      "pos": [
+        42.0,
+        238.0
+      ],
+      "rect": [
+        13,
+        157,
+        71,
+        238
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.735036492347717,
+        0.735036492347717
+      ],
+      "variante": "",
+      "walk_speed": 180.0,
+      "z": 0
+    },
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "aufheben",
+        "barfuss",
+        "benutzen",
+        "bohne",
+        "diskus",
+        "fallen",
+        "gaehnen",
+        "gehen_hinten",
+        "gehen_vorn",
+        "heisser_sand",
+        "hinsetzen",
+        "idle",
+        "katapult",
+        "kochloeffel",
+        "kopf_kratzen",
+        "melken",
+        "schulterzucken",
+        "speer",
+        "talk",
+        "talk_alt",
+        "treppe_walk",
+        "vom_boden_aufstehen",
+        "vom_sofa_aufstehen",
+        "wackeln",
+        "walk",
+        "walk_alt",
+        "walk_d",
+        "walk_l",
+        "walk_r",
+        "walk_u",
+        "wenden",
+        "zeigen"
+      ],
+      "baseline": 0,
+      "name": "Max",
+      "poly": [
+        [
+          62,
+          106
+        ],
+        [
+          98,
+          106
+        ],
+        [
+          98,
+          250
+        ],
+        [
+          62,
+          250
+        ]
+      ],
+      "pos": [
+        80.0,
+        250.0
+      ],
+      "rect": [
+        -27,
+        103,
+        187,
+        250
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.761313855648041,
+        0.761313855648041
+      ],
+      "variante": "",
+      "walk_speed": 150.0,
+      "z": 0
+    },
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "aufstehen",
+        "aufwachen",
+        "fauchen",
+        "gehen_hinten",
+        "gehen_vorn",
+        "haare",
+        "hinlegen",
+        "idle",
+        "minka_umgarnen",
+        "ohrfeige",
+        "putzen",
+        "schlafen",
+        "schnuppern",
+        "schwanz_zucken",
+        "springen",
+        "stehen",
+        "talk",
+        "talk_alt",
+        "tragen",
+        "vom_schrank_fallen",
+        "walk",
+        "walk_d",
+        "walk_l",
+        "walk_r",
+        "walk_u"
+      ],
+      "baseline": 0,
+      "name": "Pixel",
+      "poly": [
+        [
+          94,
+          220
+        ],
+        [
+          156,
+          220
+        ],
+        [
+          156,
+          250
+        ],
+        [
+          94,
+          250
+        ]
+      ],
+      "pos": [
+        125.0,
+        250.0
+      ],
+      "rect": [
+        77,
+        172,
+        173,
+        250
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.761313855648041,
+        0.761313855648041
+      ],
+      "variante": "",
+      "walk_speed": 160.0,
+      "z": 0
+    }
+  ],
+  "hotspots": [
+    {
+      "baseline": 50,
+      "klickbar": true,
+      "name": "Schulbank",
+      "poly": [
+        [
+          268,
+          168
+        ],
+        [
+          384,
+          168
+        ],
+        [
+          384,
+          268
+        ],
+        [
+          268,
+          268
+        ]
+      ],
+      "pos": [
+        326.0,
+        218.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_SCHULBANK",
+      "walk_to": [
+        -1.0,
+        67.0
+      ]
+    },
+    {
+      "baseline": 7,
+      "klickbar": true,
+      "name": "DurchgeloecherteZweiteSocke",
+      "poly": [
+        [
+          388,
+          192
+        ],
+        [
+          416,
+          192
+        ],
+        [
+          416,
+          206
+        ],
+        [
+          388,
+          206
+        ]
+      ],
+      "pos": [
+        402.0,
+        199.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_DURCHGELOECHERTE_ZWEITE_SOCKE",
+      "walk_to": [
+        0.0,
+        46.0
+      ]
+    },
+    {
+      "baseline": 36,
+      "klickbar": true,
+      "name": "Tafel",
+      "poly": [
+        [
+          262,
+          40
+        ],
+        [
+          380,
+          40
+        ],
+        [
+          380,
+          112
+        ],
+        [
+          262,
+          112
+        ]
+      ],
+      "pos": [
+        321.0,
+        76.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_TAFEL",
+      "walk_to": [
+        -71.0,
+        169.0
+      ]
+    },
+    {
+      "baseline": 35,
+      "klickbar": true,
+      "name": "Kessel",
+      "poly": [
+        [
+          160,
+          165
+        ],
+        [
+          232,
+          165
+        ],
+        [
+          232,
+          235
+        ],
+        [
+          160,
+          235
+        ]
+      ],
+      "pos": [
+        196.0,
+        200.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_KESSEL",
+      "walk_to": [
+        0.0,
+        50.0
+      ]
+    },
+    {
+      "baseline": 8,
+      "klickbar": true,
+      "name": "Flaschenregal",
+      "poly": [
+        [
+          398,
+          140
+        ],
+        [
+          498,
+          140
+        ],
+        [
+          498,
+          156
+        ],
+        [
+          398,
+          156
+        ]
+      ],
+      "pos": [
+        448.0,
+        148.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_FLASCHENREGAL",
+      "walk_to": [
+        7.0,
+        97.0
+      ]
+    },
+    {
+      "baseline": 78,
+      "klickbar": true,
+      "name": "BesenImSchrank",
+      "poly": [
+        [
+          507,
+          66
+        ],
+        [
+          604,
+          66
+        ],
+        [
+          604,
+          222
+        ],
+        [
+          507,
+          222
+        ]
+      ],
+      "pos": [
+        555.5,
+        144.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_BESEN_IM_SCHRANK",
+      "walk_to": [
+        -5.5,
+        96.0
+      ]
+    },
+    {
+      "baseline": 54,
+      "klickbar": true,
+      "name": "Fenster",
+      "poly": [
+        [
+          170,
+          20
+        ],
+        [
+          230,
+          20
+        ],
+        [
+          230,
+          128
+        ],
+        [
+          170,
+          128
+        ]
+      ],
+      "pos": [
+        200.0,
+        74.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_FENSTER",
+      "walk_to": [
+        -4.0,
+        176.0
+      ]
+    },
+    {
+      "baseline": 77,
+      "klickbar": true,
+      "name": "AusgangDorfplatz",
+      "poly": [
+        [
+          12,
+          72
+        ],
+        [
+          74,
+          72
+        ],
+        [
+          74,
+          227
+        ],
+        [
+          12,
+          227
+        ]
+      ],
+      "pos": [
+        43.0,
+        149.5
+      ],
+      "sichtbar": true,
+      "text": "UI_RAUM_DORFPLATZ",
+      "walk_to": [
+        17.0,
+        92.5
+      ]
+    },
+    {
+      "baseline": 16,
+      "klickbar": true,
+      "name": "Flasche1",
+      "poly": [
+        [
+          402,
+          108
+        ],
+        [
+          418,
+          108
+        ],
+        [
+          418,
+          141
+        ],
+        [
+          402,
+          141
+        ]
+      ],
+      "pos": [
+        410.0,
+        124.5
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_FLASCHE_1",
+      "walk_to": [
+        30.0,
+        120.5
+      ]
+    },
+    {
+      "baseline": 23,
+      "klickbar": true,
+      "name": "Flasche2",
+      "poly": [
+        [
+          419,
+          94
+        ],
+        [
+          435,
+          94
+        ],
+        [
+          435,
+          141
+        ],
+        [
+          419,
+          141
+        ]
+      ],
+      "pos": [
+        427.0,
+        117.5
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_FLASCHE_2",
+      "walk_to": [
+        19.0,
+        127.5
+      ]
+    },
+    {
+      "baseline": 16,
+      "klickbar": true,
+      "name": "Flasche3",
+      "poly": [
+        [
+          437,
+          108
+        ],
+        [
+          453,
+          108
+        ],
+        [
+          453,
+          141
+        ],
+        [
+          437,
+          141
+        ]
+      ],
+      "pos": [
+        445.0,
+        124.5
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_FLASCHE_3",
+      "walk_to": [
+        7.0,
+        120.5
+      ]
+    },
+    {
+      "baseline": 16,
+      "klickbar": true,
+      "name": "Flasche4",
+      "poly": [
+        [
+          455,
+          108
+        ],
+        [
+          471,
+          108
+        ],
+        [
+          471,
+          141
+        ],
+        [
+          455,
+          141
+        ]
+      ],
+      "pos": [
+        463.0,
+        124.5
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_FLASCHE_4",
+      "walk_to": [
+        -5.0,
+        120.5
+      ]
+    },
+    {
+      "baseline": 23,
+      "klickbar": true,
+      "name": "Flasche5",
+      "poly": [
+        [
+          472,
+          94
+        ],
+        [
+          488,
+          94
+        ],
+        [
+          488,
+          141
+        ],
+        [
+          472,
+          141
+        ]
+      ],
+      "pos": [
+        480.0,
+        117.5
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_FLASCHE_5",
+      "walk_to": [
+        -16.0,
+        127.5
+      ]
+    },
+    {
+      "baseline": 16,
+      "klickbar": true,
+      "name": "Flasche6",
+      "poly": [
+        [
+          490,
+          108
+        ],
+        [
+          506,
+          108
+        ],
+        [
+          506,
+          141
+        ],
+        [
+          490,
+          141
+        ]
+      ],
+      "pos": [
+        498.0,
+        124.5
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_FLASCHE_6",
+      "walk_to": [
+        -28.0,
+        120.5
+      ]
+    }
+  ],
+  "kamera_max": [
+    320.0,
+    180.0
+  ],
+  "laufbereiche": [
+    {
+      "name": "Boden",
+      "polys": [
+        [
+          [
+            0,
+            240
+          ],
+          [
+            97,
+            222
+          ],
+          [
+            158,
+            222
+          ],
+          [
+            160,
+            236
+          ],
+          [
+            232,
+            236
+          ],
+          [
+            236,
+            222
+          ],
+          [
+            266,
+            222
+          ],
+          [
+            266,
+            270
+          ],
+          [
+            386,
+            270
+          ],
+          [
+            386,
+            232
+          ],
+          [
+            418,
+            232
+          ],
+          [
+            418,
+            222
+          ],
+          [
+            596,
+            222
+          ],
+          [
+            639,
+            236
+          ],
+          [
+            639,
+            359
+          ],
+          [
+            0,
+            359
+          ]
+        ]
+      ]
+    }
+  ],
+  "marker": {
+    "Start": [
+      80.0,
+      250.0
+    ],
+    "VonDorfplatz": [
+      80.0,
+      250.0
+    ]
+  },
+  "modus": "anfang",
+  "props": [
+    {
+      "baseline": -180,
+      "klickbar": false,
+      "name": "Background",
+      "poly": [],
+      "pos": [
+        320.0,
+        0.0
+      ],
+      "rect": [
+        0,
+        0,
+        640,
+        360
+      ],
+      "sichtbar": true,
+      "text": "UI_RAUM_KLASSENZIMMER",
+      "walk_to": [
+        0.0,
+        180.0
+      ],
+      "z": -1
+    }
+  ],
+  "raum": "klassenzimmer",
+  "skala": null,
+  "tiefe": 0.7,
+  "welt": "welt-1"
+}

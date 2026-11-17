@@ -282,7 +282,8 @@ func _erzaehlen(text: String) -> void:
 	l.modulate.a = 0.0
 	var t := create_tween()
 	t.tween_property(l, "modulate:a", 1.0, 0.2)
-	await get_tree().create_timer(clampf(text.length() / 15.0, 1.6, 5.0)).timeout
+	# bis 8 s, damit auch lange Erzählzeilen lesbar bleiben (Review 17.11., X-05; vorher höchstens 5 s)
+	await get_tree().create_timer(clampf(text.length() / 13.0, 1.6, 8.0)).timeout
 	if is_instance_valid(l):
 		var t2 := create_tween()
 		t2.tween_property(l, "modulate:a", 0.0, 0.2)
@@ -683,34 +684,47 @@ func gegenstand_zeile(eintraege: Array, gegenstand_id: String) -> Dictionary:
 	return beste
 
 
-## Mauszeiger über zwei Objekten: Popochiu entscheidet nach der Reihenfolge im Elternknoten, und
-## die sagt zwischen Props und Hotspots nichts. Ein kleiner Gegenstand vor einer großen Fläche
-## (die Dose in Opas Mantel, der Zettel am Dorfbrett) war deshalb mit der Maus nicht zu treffen.
-## Regel: Ist ein Bauplan-Rechteck höchstens halb so groß wie das andere, liegt das kleinere vorn.
-## Gibt true zurück, wenn die Regel entschieden hat; sonst entscheidet Popochiu wie bisher.
+## Mauszeiger über mehreren Objekten: Popochiu entscheidet nach der Reihenfolge im Elternknoten, und
+## die sagt zwischen Figuren, Props und Hotspots nichts (Review 17.11., X-01: Humbert war nur an
+## 9 % seiner Fläche anklickbar, der Traubensaft gar nicht, die Fischsuppe nur von rechts kommend).
+## Regel: Der Stapel unter dem Zeiger wird bei jedem Eintritt neu sortiert, oben liegt das Objekt
+## mit dem kleinsten Wert aus Klickfläche geteilt durch Rang (Figur 2,5, Prop 1,5, Hotspot 1,
+## Spielfigur 0,5). Kleine Dinge gewinnen also gegen große Flächen, bei ähnlicher Größe gewinnt die
+## Figur vor dem Prop vor dem Hotspot, unabhängig davon, aus welcher Richtung die Maus kommt.
+## Gibt immer true zurück (die Regel entscheidet).
 func zeiger_betritt(obj: PopochiuClickable) -> bool:
-	var vorn: PopochiuClickable = E.hovered
-	if not is_instance_valid(vorn) or vorn == obj:
-		return false
-	var a := _zeiger_flaeche(obj)
-	var b := _zeiger_flaeche(vorn)
-	if a <= 0.0 or b <= 0.0:
-		return false
-	if a * 2.0 <= b:
-		E.add_hovered(obj)
+	var q: Array = E._hovered_queue
+	var vorher: PopochiuClickable = E.hovered
+	for i in range(q.size() - 1, -1, -1):
+		if not is_instance_valid(q[i]):
+			q.remove_at(i)
+	if not q.has(obj):
+		q.append(obj)
+	q.sort_custom(func(a, b) -> bool: return _zeiger_wert(a) > _zeiger_wert(b))
+	if E.hovered == obj and vorher != obj:
 		G.mouse_entered_clickable.emit(obj)
-		return true
-	if b * 2.0 <= a:
-		E.add_hovered(obj, true)
-		return true
-	return false
+	return true
 
 
+## Kleiner Wert liegt oben (siehe zeiger_betritt).
+func _zeiger_wert(obj: PopochiuClickable) -> float:
+	var rang := 1.0
+	if obj is PopochiuCharacter:
+		rang = 0.5 if obj == C.player else 2.5
+	elif obj is PopochiuProp:
+		rang = 1.5
+	return _zeiger_flaeche(obj) / rang
+
+
+## Fläche der Klickfläche in Bildpunkten des Raums (Umriss des Klickpolygons, mit Skalierung).
 func _zeiger_flaeche(obj: PopochiuClickable) -> float:
-	if not obj.has_method("bauplan"):
-		return 0.0
-	var r: Array = obj.call("bauplan").get("rect", [])
-	return float(r[2]) * float(r[3]) if r.size() == 4 else 0.0
+	var pn := obj.get_node_or_null("InteractionPolygon") as CollisionPolygon2D
+	if pn == null or pn.polygon.is_empty():
+		return 1.0e9
+	var r := Rect2(pn.global_transform * pn.polygon[0], Vector2.ZERO)
+	for p in pn.polygon:
+		r = r.expand(pn.global_transform * p)
+	return maxf(r.get_area(), 1.0)
 
 
 func hingehen(ziel: PopochiuClickable) -> void:

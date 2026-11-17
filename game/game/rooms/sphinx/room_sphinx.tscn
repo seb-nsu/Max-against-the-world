@@ -24,7 +24,6 @@ height = 360
 [node name="WalkableAreas" type="Node2D" parent="." unique_id=492387709]
 
 [node name="Boden" parent="WalkableAreas" unique_id=1752451314 instance=ExtResource("2_863sw")]
-interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(8, 248, 632, 240, 632, 356, 8, 356)])
 
 [node name="Props" type="Node2D" parent="." unique_id=143240942]
 
@@ -78,12 +77,12 @@ walk_to_point = Vector2(-42.5, 210)
 interaction_polygon = PackedVector2Array(-17.5, -20, 17.5, -20, 17.5, 20, -17.5, 20)
 
 [node name="AusgangNilDelta" parent="Hotspots" unique_id=1452541732 instance=ExtResource("11_wqjuf")]
-position = Vector2(20, 210)
+position = Vector2(25, 210)
 description = "UI_OBJ_AUSGANG_NIL_DELTA"
 baseline = 70
-walk_to_point = Vector2(10, 90)
+walk_to_point = Vector2(5, 90)
 cursor = 9
-interaction_polygon = PackedVector2Array(-20, -70, 20, -70, 20, 70, -20, 70)
+interaction_polygon = PackedVector2Array(-25, -70, 25, -70, 25, 70, -25, 70)
 
 [node name="Regions" type="Node2D" parent="." unique_id=1308321562]
 

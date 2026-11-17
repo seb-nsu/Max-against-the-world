@@ -145,6 +145,12 @@ func geloest(id: String, ab := "") -> bool:
 	return eigene.all(func(s): return ist(s))
 
 
+## Freiwillige Rätsel und das Rätsel, nach dessen Lösung sie nichts mehr bringen
+const VERPASST := {
+	"welt-2": {"R4": "R12", "R6a": "R13", "R6b": "R13"},
+}
+
+
 ## „gesperrt“, „offen“ oder „geloest“ (05-spielsysteme.md, Hinweissystem, Regel 1)
 func status(id: String, ab := "") -> String:
 	ab = ab if ab else abschnitt
@@ -158,6 +164,11 @@ func status(id: String, ab := "") -> String:
 	if ab == "finale" and not ist("FINALE"):
 		return "gesperrt"  # Zwischenspiele: die Rätsel F1 ff. gehören erst zum Finale
 	if not war_in(r.raum):
+		return "gesperrt"
+	# Freiwillige Schritte, deren Gelegenheit vorbei ist: Pfote und Notizbuch schweigen dazu
+	# (Review 17.11., W2-02: „Öl gibt es in der Küche“ noch während der Parade)
+	var bis: String = VERPASST.get(ab, {}).get(id, "")
+	if not bis.is_empty() and geloest(bis, ab):
 		return "gesperrt"
 	for v in r.get("benoetigt", []):
 		if not _voraussetzung(v, ab):

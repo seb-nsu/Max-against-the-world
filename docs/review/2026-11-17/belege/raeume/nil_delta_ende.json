@@ -1,0 +1,767 @@
+{
+  "bauplan_laufbereich": [
+    [
+      8.0,
+      290.0
+    ],
+    [
+      480.0,
+      280.0
+    ],
+    [
+      520.0,
+      275.0
+    ],
+    [
+      720.0,
+      270.0
+    ],
+    [
+      800.0,
+      255.0
+    ],
+    [
+      1272.0,
+      255.0
+    ],
+    [
+      1272.0,
+      356.0
+    ],
+    [
+      8.0,
+      356.0
+    ]
+  ],
+  "breite": 1280,
+  "figuren": [
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "bart_kratzen",
+        "gaehnen",
+        "gaehnen_stab",
+        "idle",
+        "muenze",
+        "staken",
+        "talk",
+        "talk_alt",
+        "walk"
+      ],
+      "baseline": 0,
+      "name": "Faehrmann",
+      "poly": [
+        [
+          147,
+          122
+        ],
+        [
+          193,
+          122
+        ],
+        [
+          193,
+          302
+        ],
+        [
+          147,
+          302
+        ]
+      ],
+      "pos": [
+        170.0,
+        302.0
+      ],
+      "rect": [
+        101,
+        116,
+        239,
+        302
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.919801950454712,
+        0.919801950454712
+      ],
+      "variante": "",
+      "walk_speed": 120.0,
+      "z": 0
+    },
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "faehre_ziehen",
+        "idle",
+        "idle_alt",
+        "talk",
+        "talk_alt"
+      ],
+      "baseline": 0,
+      "name": "Sobek",
+      "poly": [
+        [
+          295,
+          194
+        ],
+        [
+          329,
+          194
+        ],
+        [
+          329,
+          240
+        ],
+        [
+          295,
+          240
+        ]
+      ],
+      "pos": [
+        312.0,
+        240.0
+      ],
+      "rect": [
+        260,
+        209,
+        364,
+        240
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.850000023841858,
+        0.850000023841858
+      ],
+      "variante": "",
+      "walk_speed": 120.0,
+      "z": 0
+    },
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "idle",
+        "meisseln",
+        "staub_pusten",
+        "stirn_wischen",
+        "talk",
+        "talk_alt"
+      ],
+      "baseline": 0,
+      "name": "Steinmetz",
+      "poly": [
+        [
+          768,
+          93
+        ],
+        [
+          812,
+          93
+        ],
+        [
+          812,
+          268
+        ],
+        [
+          768,
+          268
+        ]
+      ],
+      "pos": [
+        790.0,
+        268.0
+      ],
+      "rect": [
+        726,
+        87,
+        854,
+        268
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.869306921958923,
+        0.869306921958923
+      ],
+      "variante": "",
+      "walk_speed": 120.0,
+      "z": 0
+    },
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "aufheben",
+        "barfuss",
+        "benutzen",
+        "bohne",
+        "diskus",
+        "fallen",
+        "gaehnen",
+        "gehen_hinten",
+        "gehen_vorn",
+        "heisser_sand",
+        "hinsetzen",
+        "idle",
+        "katapult",
+        "kochloeffel",
+        "kopf_kratzen",
+        "melken",
+        "schulterzucken",
+        "speer",
+        "talk",
+        "talk_alt",
+        "treppe_walk",
+        "vom_boden_aufstehen",
+        "vom_sofa_aufstehen",
+        "wackeln",
+        "walk",
+        "walk_alt",
+        "walk_d",
+        "walk_l",
+        "walk_r",
+        "walk_u",
+        "wenden",
+        "zeigen"
+      ],
+      "baseline": 0,
+      "name": "Max",
+      "poly": [
+        [
+          378,
+          134
+        ],
+        [
+          422,
+          134
+        ],
+        [
+          422,
+          310
+        ],
+        [
+          378,
+          310
+        ]
+      ],
+      "pos": [
+        400.0,
+        310.0
+      ],
+      "rect": [
+        270,
+        130,
+        530,
+        310
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.93168318271637,
+        0.93168318271637
+      ],
+      "variante": "",
+      "walk_speed": 150.0,
+      "z": 0
+    },
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "aufstehen",
+        "aufwachen",
+        "fauchen",
+        "gehen_hinten",
+        "gehen_vorn",
+        "haare",
+        "hinlegen",
+        "idle",
+        "minka_umgarnen",
+        "ohrfeige",
+        "putzen",
+        "schlafen",
+        "schnuppern",
+        "schwanz_zucken",
+        "springen",
+        "stehen",
+        "talk",
+        "talk_alt",
+        "tragen",
+        "vom_schrank_fallen",
+        "walk",
+        "walk_d",
+        "walk_l",
+        "walk_r",
+        "walk_u"
+      ],
+      "baseline": 0,
+      "name": "Pixel",
+      "poly": [
+        [
+          407,
+          273
+        ],
+        [
+          483,
+          273
+        ],
+        [
+          483,
+          310
+        ],
+        [
+          407,
+          310
+        ]
+      ],
+      "pos": [
+        445.0,
+        310.0
+      ],
+      "rect": [
+        386,
+        214,
+        504,
+        310
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.93168318271637,
+        0.93168318271637
+      ],
+      "variante": "",
+      "walk_speed": 160.0,
+      "z": 0
+    }
+  ],
+  "hotspots": [
+    {
+      "baseline": 37,
+      "klickbar": true,
+      "name": "Faehre",
+      "poly": [
+        [
+          0,
+          205
+        ],
+        [
+          160,
+          205
+        ],
+        [
+          160,
+          280
+        ],
+        [
+          0,
+          280
+        ]
+      ],
+      "pos": [
+        80.0,
+        242.5
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_FAEHRE",
+      "walk_to": [
+        40.0,
+        57.5
+      ]
+    },
+    {
+      "baseline": 45,
+      "klickbar": true,
+      "name": "Faehrtafel",
+      "poly": [
+        [
+          148,
+          185
+        ],
+        [
+          212,
+          185
+        ],
+        [
+          212,
+          275
+        ],
+        [
+          148,
+          275
+        ]
+      ],
+      "pos": [
+        180.0,
+        230.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_FAEHRTAFEL",
+      "walk_to": [
+        10.0,
+        70.0
+      ]
+    },
+    {
+      "baseline": 67,
+      "klickbar": true,
+      "name": "Sanduhr",
+      "poly": [
+        [
+          220,
+          140
+        ],
+        [
+          256,
+          140
+        ],
+        [
+          256,
+          275
+        ],
+        [
+          220,
+          275
+        ]
+      ],
+      "pos": [
+        238.0,
+        207.5
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_SANDUHR",
+      "walk_to": [
+        12.0,
+        92.5
+      ]
+    },
+    {
+      "baseline": 67,
+      "klickbar": true,
+      "name": "Schilf",
+      "poly": [
+        [
+          505,
+          140
+        ],
+        [
+          715,
+          140
+        ],
+        [
+          715,
+          275
+        ],
+        [
+          505,
+          275
+        ]
+      ],
+      "pos": [
+        610.0,
+        207.5
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_SCHILF",
+      "walk_to": [
+        -10.0,
+        92.5
+      ]
+    },
+    {
+      "baseline": 40,
+      "klickbar": true,
+      "name": "WeizenfeldMitHandabdruck",
+      "poly": [
+        [
+          820,
+          170
+        ],
+        [
+          1200,
+          170
+        ],
+        [
+          1200,
+          250
+        ],
+        [
+          820,
+          250
+        ]
+      ],
+      "pos": [
+        1010.0,
+        210.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_WEIZENFELD_MIT_HANDABDRUCK",
+      "walk_to": [
+        -10.0,
+        80.0
+      ]
+    },
+    {
+      "baseline": 77,
+      "klickbar": true,
+      "name": "VerkehrtePyramide",
+      "poly": [
+        [
+          800,
+          10
+        ],
+        [
+          955,
+          10
+        ],
+        [
+          955,
+          165
+        ],
+        [
+          800,
+          165
+        ]
+      ],
+      "pos": [
+        877.5,
+        87.5
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_VERKEHRTE_PYRAMIDE",
+      "walk_to": [
+        2.5,
+        202.5
+      ]
+    },
+    {
+      "baseline": 16,
+      "klickbar": true,
+      "name": "Bauplan",
+      "poly": [
+        [
+          960,
+          215
+        ],
+        [
+          1000,
+          215
+        ],
+        [
+          1000,
+          247
+        ],
+        [
+          960,
+          247
+        ]
+      ],
+      "pos": [
+        980.0,
+        231.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_BAUPLAN",
+      "walk_to": [
+        0.0,
+        59.0
+      ]
+    },
+    {
+      "baseline": 53,
+      "klickbar": true,
+      "name": "Sandweg",
+      "poly": [
+        [
+          1236,
+          250
+        ],
+        [
+          1280,
+          250
+        ],
+        [
+          1280,
+          356
+        ],
+        [
+          1236,
+          356
+        ]
+      ],
+      "pos": [
+        1258.0,
+        303.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_SANDWEG",
+      "walk_to": [
+        4.0,
+        22.0
+      ]
+    },
+    {
+      "baseline": 45,
+      "klickbar": true,
+      "name": "Duenenpfad",
+      "poly": [
+        [
+          1090,
+          110
+        ],
+        [
+          1210,
+          110
+        ],
+        [
+          1210,
+          200
+        ],
+        [
+          1090,
+          200
+        ]
+      ],
+      "pos": [
+        1150.0,
+        155.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_DUENENPFAD",
+      "walk_to": [
+        0.0,
+        107.0
+      ]
+    }
+  ],
+  "kamera_max": [
+    400.0,
+    180.0
+  ],
+  "laufbereiche": [
+    {
+      "name": "Boden",
+      "polys": [
+        [
+          [
+            8,
+            290
+          ],
+          [
+            480,
+            280
+          ],
+          [
+            520,
+            275
+          ],
+          [
+            720,
+            270
+          ],
+          [
+            800,
+            255
+          ],
+          [
+            1272,
+            255
+          ],
+          [
+            1272,
+            356
+          ],
+          [
+            8,
+            356
+          ]
+        ]
+      ]
+    }
+  ],
+  "marker": {
+    "Hermes": [
+      485.0,
+      305.0
+    ],
+    "Start": [
+      400.0,
+      310.0
+    ],
+    "VonFaehre": [
+      130.0,
+      305.0
+    ],
+    "VonSphinx": [
+      1150.0,
+      268.0
+    ],
+    "VonThronsaalRamses": [
+      1220.0,
+      320.0
+    ]
+  },
+  "modus": "ende",
+  "props": [
+    {
+      "baseline": -180,
+      "klickbar": false,
+      "name": "Background",
+      "poly": [],
+      "pos": [
+        640.0,
+        0.0
+      ],
+      "rect": [
+        0,
+        0,
+        1280,
+        360
+      ],
+      "sichtbar": true,
+      "text": "UI_RAUM_NIL_DELTA",
+      "walk_to": [
+        0.0,
+        180.0
+      ],
+      "z": -1
+    },
+    {
+      "baseline": 20,
+      "klickbar": true,
+      "name": "Papyrusblatt",
+      "poly": [
+        [
+          580,
+          185
+        ],
+        [
+          620,
+          185
+        ],
+        [
+          620,
+          225
+        ],
+        [
+          580,
+          225
+        ]
+      ],
+      "pos": [
+        600.0,
+        225.0
+      ],
+      "rect": [
+        576,
+        185,
+        624,
+        225
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_PAPYRUSBLATT",
+      "walk_to": [
+        0.0,
+        70.0
+      ],
+      "z": 0
+    }
+  ],
+  "raum": "nil_delta",
+  "skala": null,
+  "tiefe": 0.85,
+  "welt": "welt-2"
+}

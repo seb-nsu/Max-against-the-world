@@ -43,7 +43,6 @@ height = 360
 [node name="WalkableAreas" type="Node2D" parent="." unique_id=2019817597]
 
 [node name="Boden" parent="WalkableAreas" unique_id=771815847 instance=ExtResource("2_5pi0j")]
-interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(0, 357, 0, 302, 120, 290, 235, 272, 400, 268, 440, 266, 592, 264, 600, 250, 640, 250, 648, 262, 752, 262, 756, 252, 818, 252, 822, 266, 912, 266, 916, 240, 1000, 232, 1160, 244, 1180, 230, 1279, 232, 1279, 357)])
 
 [node name="Props" type="Node2D" parent="." unique_id=2036328633]
 
@@ -159,12 +158,12 @@ cursor = 9
 interaction_polygon = PackedVector2Array(-56, -94, 56, -94, 56, 94, -56, 94)
 
 [node name="WegNachHoggelwarz" parent="Hotspots" unique_id=244028609 instance=ExtResource("22_frp14")]
-position = Vector2(616, 194)
+position = Vector2(615, 194)
 description = "UI_OBJ_WEG_NACH_HOGGELWARZ"
 baseline = 54
-walk_to_point = Vector2(2, 64)
+walk_to_point = Vector2(3, 64)
 cursor = 9
-interaction_polygon = PackedVector2Array(-24, -54, 24, -54, 24, 54, -24, 54)
+interaction_polygon = PackedVector2Array(-25, -54, 25, -54, 25, 54, -25, 54)
 
 [node name="Waldweg" parent="Hotspots" unique_id=999357047 instance=ExtResource("23_hon0a")]
 position = Vector2(1222.5, 189)

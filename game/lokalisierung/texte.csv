@@ -571,6 +571,7 @@ UI_W2_BAUSTEIN_SCHREIBT,„Es schreibt ohne Tintenfass“,"""It writes without a
 UI_W2_BAUSTEIN_KLICKT,"„Es klickt, wenn man nervös ist“","""It clicks when you're nervous"""
 UI_W2_BAUSTEIN_BLAU,„Es ist blau und hat trotzdem keine Laune“,"""It is blue and still not sad"""
 UI_W2_ANKLAGEN,Du warst es!,It was you!
+UI_W2_NOCHMAL,Was hast du noch mal gesagt?,What did you say again?
 UI_W2_HEBEL_ZIEHEN,Abspringen!,Launch!
 UI_W2_KORB_LEEREN,Korb ausräumen,Empty the basket
 UI_MS_HEBEL_TITEL,Archimedes' Hebel,Archimedes' Lever
@@ -1423,6 +1424,7 @@ W1_ANK_MAX_0140,"Tut mir leid, ich bin wegen eines Eis hier. Prinzessinnen hab i
 W1_ANK_TOA_0150,"Ein Ei? Der Dunkle Lord hat alles, was es gibt. Dein Ei bestimmt auch. Er wohnt im Dunklen Turm, da hinten, wo es violett wird.","An egg? The Dark Lord has everything there is. Probably your egg too. He lives in the Dark Tower, back there where it goes purple."
 W1_ANK_PIX_0160,"Ein Turm, der sich selbst Dunkler Turm nennt. Das ist ungefähr so unauffällig wie mein Napf, auf dem groß „Napf“ steht.","A tower that calls itself the Dark Tower. About as subtle as my bowl, which says ""Bowl"" on it in big letters."
 W1_ANK_PIX_0160_2,Ich habe den Napf trotzdem gern. Den Turm vermutlich nicht.,I am fond of the bowl anyway. Probably not of the tower.
+W1_ANK_TOA_0165,"He, Held! Warte! Du weißt ja noch gar nicht, wie man zum Turm kommt!","Hey, hero! Wait! You don't even know how to get to the tower yet!"
 W1_ANK_MAX_0161,Und wie kommt man da hin? Am liebsten ohne viel Laufen.,And how do you get there? Ideally without much walking.
 W1_ANK_TOA_0170,"Über die Trollbrücke, durch den Zauberwald, dann durchs Bergwerk. Ich weiß das so genau, weil ich dreimal umkehren musste.","Over the troll bridge, through the enchanted forest, then through the mine. I know that so well because I had to turn back three times."
 W1_ANK_MAX_0180,"Und wie komm ich an dem Troll vorbei? Ich frag nur, weil Trolle in Spielen immer ziemlich viele Lebenspunkte haben.",And how do I get past the troll? Only asking because trolls in games always have a ridiculous amount of hit points.
@@ -2869,7 +2871,7 @@ W2_NIL_FAE_0320,"Das ist Sobek. Er zieht die Fähre, seit sein Vater in Rente is
 W2_NIL_FAE_0320_2,Vor nichts und niemandem verneigt der sich. Nicht mal vor mir.,He bows to nothing and nobody. Not even to me.
 W2_NIL_FAE_0330,Moment. Vor wem verneigt er sich da gerade?,Wait. Who is he bowing to right now?
 W2_NIL_MAX_0340,Warum steht die Pyramide auf dem Kopf?,Why is the pyramid standing on its head?
-W2_NIL_FAE_0350,"Wegen dem Bauplan. Jemand hat ihn falsch herum gehalten, und seit dreißig Jahren streiten sie sich, wer.","Because of the plan. Someone held it upside down, and for thirty years they've been arguing about who."
+W2_NIL_FAE_0350,"Wegen dem Bauplan. Jemand hat ihn falsch herum hingelegt, und seit dreißig Jahren streiten sie sich, wer.","Because of the plan. Somebody laid it down the wrong way round, and for thirty years they've been arguing about who."
 W2_NIL_MAX_1030,Und wer hat ihn falsch herum gehalten?,And who held it upside down?
 W2_NIL_FAE_1040,Das ist ja der Streit. Die Pyramide steht derweil da und hält still. Sie ist hier die Einzige mit Geduld.,That's the whole argument. Meanwhile the pyramid stands there and keeps still. It's the only one round here with any patience.
 W2_NIL_PIX_1050,"Ich würde mich auch auf den Kopf stellen, wenn mich dreißig Jahre lang alle anstarren.",I would stand on my head too if everyone had been staring at me for thirty years.
@@ -2912,11 +2914,11 @@ W2_NIL_MAX_0680,"Ein Blatt Papyrus. Leer. Das erste leere Blatt seit viertausend
 W2_NIL_MAX_0690,"Die Pyramide steht auf der Spitze und wackelt kein bisschen. Ich weiß nicht, ob ich beeindruckt sein soll oder Angst haben.",The pyramid is standing on its tip and doesn't wobble a bit. I don't know if I should be impressed or scared.
 W2_NIL_PIX_0700,"Sie steht seit dreißig Jahren so, und sie steht immer noch.","It has stood like that for thirty years, and it is still standing."
 W2_NIL_PIX_0700_2,"Ein Architekt würde das Statik nennen. Ich nenne es Sturheit, und ich weiß, wovon ich rede.","An architect would call that statics. I call it stubbornness, and I know what I am talking about."
-W2_NIL_MAX_0710,Er hält den Plan verkehrt herum. Mit beiden Händen und voller Überzeugung.,He's holding the plan upside down. With both hands and total conviction.
+W2_NIL_MAX_0710,"Der Bauplan liegt im Feld, verkehrt herum. Keiner traut sich, ihn umzudrehen.","The plan lies in the field, upside down. Nobody dares to turn it over."
 W2_NIL_MAX_0715,"Ich leg den Kopf schief. Jetzt steht die Pyramide richtig, und ich steh falsch.","I tilt my head. Now the pyramid is the right way up, and I'm the wrong way."
 W2_NIL_MAX_0720,"Ein Pyramiden-Arbeiter. Er grinst ohne Zähne und mit Hammer, und das beruhigt mich nicht so richtig.","A pyramid worker. He's grinning without teeth and with a hammer, and that doesn't really calm me down."
 W2_NIL_MAX_0725,"Er klopft im Akkord. Wenn der Stein fertig ist, holt ihn bestimmt ein Dicker mit Streifenhose ab und trägt ihn heim.","He's chiselling like it's piecework. When the stone is finished, a fat bloke in striped trousers will probably come and carry it home."
-W2_NIL_MAX_0730,"Ein Sandweg, der nach rechts führt. In jedem Spiel liegt rechts die Zukunft, also geh ich mal davon aus.","A sandy path heading right. In every game the future is to the right, so I'll assume that."
+W2_NIL_MAX_0730,"Ein Sandweg, der nach rechts führt. Wo ein Weg ist, wohnt meistens jemand Wichtiges.","A sandy path leading right. Where there's a path, someone important usually lives."
 W2_NIL_MAX_0735,"Der Sand weiß, wohin er will. Nach rechts. Wie alle hier.",The sand knows where it wants to go. To the right. Like everyone here.
 W2_NIL_MAX_0740,Hallo. Baut ihr die Pyramide gerade ab oder auf?,Hello. Are you building the pyramid up or taking it down?
 W2_NIL_STM_0750,"Auf! Unten anfangen, oben aufhören, so steht's im Plan. Und der Plan hat recht. Der Plan hat immer recht.","Up! Start at the bottom, finish at the top, that's what the plan says. And the plan is right. The plan is always right."
@@ -2933,7 +2935,7 @@ W2_NIL_MAX_1080,Und wenn ich bis Syrakus fahre?,And if I go all the way to Syrac
 W2_NIL_STM_1090,"Dann ist er alt, wenn du ankommst. Alt und ehrwürdig. Und für ehrwürdig zahlen die Leute extra.",Then it's old when you arrive. Old and venerable. And people pay extra for venerable.
 W2_NIL_MAX_0820,Ich geh dann mal.,"I'll be off, then."
 W2_NIL_STM_0830,"Pass auf die Spitze auf, wenn du gehst. Die hat schon zwei Besucher erwischt.",Mind the tip on your way out. It's already caught two visitors.
-W2_NIL_HER_0910,"Post! Eilpost! Dringend und älter als ich! Tut mir leid, sie lag im anderen Büro!","Post! Express post! Urgent and older than me! Sorry, it was in the other office!"
+W2_NIL_HER_0910,"Post! Eilpost! Dringend und älter als ich! Tut mir leid, ich bin beim Orakel falsch abgebogen!","Post! Express post! Urgent and older than me! Sorry, I took a wrong turn at the oracle!"
 W2_NIL_MAX_0920,Ein Papyrus. Für mich. Von … Opa. Natürlich ist der von Opa.,A papyrus. For me. From … Grandpa. Of course it's from Grandpa.
 W2_NIL_HER_0930,"Absender „Konrad, Dachboden“. Die Zustellung hat etwa dreitausend Jahre gedauert. Das ist noch innerhalb der Garantie.","Sender ""Konrad, attic"". Delivery took about three thousand years. That's still within the guarantee."
 W2_NIL_OPA_0940,"„Fein muss es sein. Fein wie Staub. Wie die Welt, wenn ich versage.“","""It must be fine. Fine as dust. Like the world, if I fail."""
@@ -2992,7 +2994,8 @@ W2_STOL_PIX_0030_2,"Ich hatte mir von Olympia mehr erwartet. Ich hatte mir, um g
 W2_STOL_MAX_0040,"Noch eine Sanduhr. Die haben an jeder Haltestelle eine, und die geht wenigstens nie nach.","Another hourglass. They've got one at every stop, and at least it's never slow."
 W2_STOL_MAX_0045,Der Sand läuft hier gemütlicher. Griechischer Sand hat offenbar keine Termine.,The sand runs more leisurely here. Greek sand apparently has no appointments.
 W2_STOL_MAX_0050,"Dieselbe Tafel wie in Ägypten, mit denselben drei Zeilen. Der Fluss wiederholt sich gern.","The same board as in Egypt, with the same three lines. The river likes repeating itself."
-W2_STOL_MAX_0055,"Ich hab Wort für Wort verglichen. Alles gleich, bis auf einen Kaffeefleck und eine Kritzelei darunter: „Hermes war hier. Schneller als du.“ Typisch Götter.","I compared it word for word. All the same, except for a coffee stain and a scribble underneath: ""Hermes was here. Faster than you."" Typical gods."
+W2_STOL_MAX_0055,"Ich hab Wort für Wort verglichen. Alles gleich, bis auf einen Kaffeefleck und eine Kritzelei darunter: „Hermes war hier.","I compared it word for word. All the same, except for a coffee stain and a scribble underneath: ""Hermes was here."
+W2_STOL_MAX_0055_2,Schneller als du.“ Typisch Götter.,"Faster than you."" Typical gods."
 W2_STOL_MAX_0060,"Ein Steinweg den Hügel hoch zu weißen Säulen. Da oben brüllt jemand, also ist das entweder Sport oder Politik.","A stone path up the hill to white columns. Someone's yelling up there, so it's either sport or politics."
 W2_STOL_MAX_0065,"Der Hügel ist steil. Wer da hochrennt, kommt oben entweder als Held an oder als Pfütze, und ich tippe bei mir auf Pfütze.","The hill is steep. Anyone running up there arrives either as a hero or as a puddle, and for me I'm betting on puddle."
 W2_HAFS_MAX_0010,"Ein Hafen, dahinter das Meer, und dahinter kommt einfach gar nichts mehr. Hier hört die Zeit auf.","A harbour, the sea behind it, and behind that just nothing at all. This is where time stops."
@@ -3021,17 +3024,17 @@ W2_THRO_PIX_0040_2,"Ich habe dieses Kissen bis eben noch nie gesehen, aber ich w
 W2_THRO_SCH_0050,"Der Pharao empfängt nur schriftlich, in Hieroglyphen. Alles andere liest er nicht, also kann er nicht, also will er nicht.","The pharaoh only receives in writing, in hieroglyphs. He doesn't read anything else, so he can't, so he won't."
 W2_THRO_SCH_0050_2,Das hab ich jetzt nicht gesagt.,You didn't hear that from me.
 W2_THRO_MAX_0060,"Ein Pharao, der nur Bilder liest, und ein Kater, der Eintritt verlangt. Das wird ein langer Nachmittag.",A pharaoh who only reads pictures and a cat who charges admission. This is going to be a long afternoon.
-W2_THRO_MAX_0110,"Gold, Stufen, Kissen. Der Thron sieht aus wie ein Gaming-Stuhl für jemanden, der nie zum Spielen kommt.","Gold, steps, cushions. The throne looks like a gaming chair for someone who never gets round to playing."
-W2_THRO_MAX_0115,Die Kissen sind komplett plattgesessen. Ramses sitzt hier offenbar sehr lange und sehr unentschlossen.,"The cushions are completely sat flat. Ramses obviously sits here for a very long time, very indecisively."
-W2_THRO_MAX_0120,"Ramses der Unentschlossene. Er guckt, als hätte er seit Stunden den Startbildschirm offen und kann sich nicht für „Neues Spiel“ entscheiden.","Ramses the Indecisive. He looks like he's had the start screen open for hours and can't decide on ""New Game""."
+W2_THRO_MAX_0110,"Ein Thron mit Stufen, Gold und Schnitzereien. Er sieht aus wie ein Gaming-Stuhl für jemanden, der nie zum Spielen kommt.","A throne with steps, gold and carvings. It looks like a gaming chair for someone who never gets to play."
+W2_THRO_MAX_0115,"Ramses steht davor, nicht drauf. Hinsetzen wäre eine Entscheidung.","Ramses stands in front of it, not on it. Sitting down would be a decision."
+W2_THRO_MAX_0120,"Ramses der Unentschlossene. Er guckt, als hätte man ihm gerade eine zweite Frage gestellt.",Ramses the Undecided. He looks as if someone just asked him a second question.
 W2_THRO_PIX_0125,"Er hat zwei Zepter und weiß nicht, welches er halten soll.",He has two sceptres and does not know which one to hold.
 W2_THRO_PIX_0125_2,"Ich hätte beide vom Tisch geschoben. Problem gelöst, und zwar mit Eleganz.","I would have pushed both off the table. Problem solved, and with elegance."
 W2_THRO_MAX_0130,"Eine sandfarbene Katze mit Ohrring. Sie guckt auf mich herab, obwohl sie unter mir sitzt. Das ist echtes Talent.",A sand-coloured cat with an earring. It looks down on me even though it's sitting below me. That's real talent.
 W2_THRO_PIX_0140,"Ein Ohrring! Wer trägt denn bitte Schmuck am Ohr? Mit dem Ohr hört man doch, das ist ein Arbeitsgerät.","An earring! Who wears jewellery on their ear? You hear with your ear, it is a work tool."
 W2_THRO_PIX_0140_2,"Und das Kissen ist aus Seide. Aus Seide, junger Mann.","And the cushion is silk. Silk, young man."
 W2_THRO_PIX_0140_3,Das hier wird kein Gespräch. Das wird ein Krieg.,This will not be a conversation. This will be a war.
-W2_THRO_MAX_0150,"Zwei Männer mit Palmwedeln, so groß wie Surfbretter. Sie schwitzen mehr, als sie wedeln.",Two men with palm fronds as big as surfboards. They sweat more than they fan.
-W2_THRO_MAX_0155,"Sie wedeln im Takt, fast jedenfalls. Einer ist immer einen halben Wedel hinterher.","They fan in time, nearly anyway. One is always half a fan behind."
+W2_THRO_MAX_0150,"Ein Mann mit einem Federfächer, so groß wie ein Surfbrett. Er schwitzt mehr, als er wedelt.",A man with a feather fan as big as a surfboard. He sweats more than he fans.
+W2_THRO_MAX_0155,"Er wedelt im Takt, fast jedenfalls. Immer einen halben Wedel hinterher.","He fans in rhythm, almost. Always half a wave behind."
 W2_THRO_FAW_0160,"Wir wedeln für Lohn. Für Feigen würden wir besser wedeln, und für frische Feigen würden wir sogar gerade wedeln.","We fan for wages. For figs we'd fan better, and for fresh figs we'd even fan in a straight line."
 W2_THRO_MAX_0170,"Ein Pult, eine Tontafel und ein paar Binsenstifte. Das ist hier wohl das Sekretariat.","A desk, a clay tablet and a few reed pens. This must be the office."
 W2_THRO_MAX_0175,"Auf der Tontafel steht „Wichtig“, und darunter steht nichts.","The clay tablet says ""Important"", and under that it says nothing."
@@ -3048,8 +3051,8 @@ W2_THRO_MAX_0230,"Der Fries an der Wand. Lauter Leute, die seitwärts tanzen, un
 W2_THRO_MAX_0240,Der mit dem Lautsprecher tanzt als Einziger vorwärts.,The one with the speaker is the only one dancing forwards.
 W2_THRO_PIX_0250,Das Ding heißt Ghettoblaster. Es wog ungefähr so viel wie ich und fraß acht Batterien auf einmal.,That thing is called a boombox. It weighed about as much as me and ate eight batteries at once.
 W2_THRO_PIX_0250_2,"Eine ehrliche Maschine. Laut, schwer und hungrig, wie alle guten Dinge auf dieser Welt.","An honest machine. Loud, heavy and hungry, like all good things in this world."
-W2_THRO_MAX_0260,"Säulen voller Zeichen: Augen, Vögel, Hände. Wer hier einen Tippfehler macht, braucht einen Meißel.","Columns full of symbols: eyes, birds, hands. Make a typo here and you need a chisel."
-W2_THRO_MAX_0265,"Ein Auge, ein Vogel, eine Welle. Ich lese das als „Gucken, fliegen, nass werden“, aber vermutlich liege ich daneben.","An eye, a bird, a wave. I read that as ""Look, fly, get wet"", but I'm probably wrong."
+W2_THRO_MAX_0260,"Säulen, so dick wie Mammutbäume, mit Blättern oben dran. Die Zeichen haben sie sich für die Wand aufgehoben.","Columns as thick as redwoods, with leaves on top. They saved the signs for the wall."
+W2_THRO_MAX_0265,"Glatter Stein bis oben hin. Die Zeichen stehen in den Feldern an der Wand, die aussehen wie ein Fenster.",Smooth stone all the way up. The signs are in the fields on the wall that look like a window.
 W2_THRO_MAX_0270,Eine Inschrift mit vier Feldern und darunter eine kleine Tabelle. Hier hat jemand die Spielregeln an die Wand gemeißelt.,An inscription with four fields and a little table under it. Someone carved the rules of the game into the wall here.
 W2_THRO_MAX_0275,"Vier Felder, eine Tabelle. Wer das gemeißelt hat, hatte Angst, es zu vergessen.","Four fields, one table. Whoever carved that was afraid of forgetting it."
 W2_THRO_MAX_0280,"Erst, wer handelt. Dann, wem er dient. Dann, wen er bittet. Zuletzt die Tat als Körperteil: Ohr für Gehör, Mund für Brot, Hand für Gold.","First, who acts. Then, whom he serves. Then, whom he asks. Last, the deed as a body part: ear for a hearing, mouth for bread, hand for gold."
@@ -3070,7 +3073,8 @@ W2_HIER_SCH_0020,"Dann schreib ihm. Vier Zeichen, ein Satz. Hier ist die Bildtaf
 W2_HIER_MAX_0030,"Eine Tafel mit Kacheln: Auge, Vogel, Krokodil, Brot, Katze, Sonne und so weiter. Das ist im Grunde ein Emoji-Menü aus Stein.","A board with tiles: eye, bird, crocodile, bread, cat, sun and so on. It's basically an emoji menu made of stone."
 W2_HIER_MAX_0035,Ich such die Kachel mit dem Daumen hoch. Gibt's nicht. Die Antike hatte offenbar keine Likes.,I'm looking for the thumbs-up tile. There isn't one. Antiquity apparently had no likes.
 W2_HIER_MAX_0040,Gibt es eine Anleitung?,Are there instructions?
-W2_HIER_SCH_0050,"Steht an der Säule. Vier Felder, eine Tabelle. Hat mein Vorgänger reingemeißelt, weil er es sonst selbst vergessen hätte.","It's on the column. Four fields, one table. My predecessor carved it in because otherwise he'd have forgotten it himself."
+W2_HIER_SCH_0050,"Steht an der Wand, in den Feldern neben den Säulen. Vier Felder, eine Tabelle.","It's on the wall, in the fields next to the columns. Four fields, one table."
+W2_HIER_SCH_0050_2,"Hat mein Vorgänger reingemeißelt, weil er es sonst selbst vergessen hätte.",My predecessor carved it in because otherwise he'd have forgotten it himself.
 W2_HIER_MAX_0310,Und wo ist dein Vorgänger jetzt?,And where's your predecessor now?
 W2_HIER_SCH_0320,"In Rente. Er schreibt seiner Frau jetzt die Einkaufslisten, in Hieroglyphen. Seitdem geht sie allein einkaufen.","Retired. He writes his wife's shopping lists now, in hieroglyphs. Since then she goes shopping alone."
 W2_HIER_MAX_0060,Was soll in der Botschaft stehen?,What should the message say?
@@ -3083,7 +3087,8 @@ W2_HIER_PIX_0350,Auch die Beleidigungen? Ich frage aus rein beruflichem Interess
 W2_HIER_SCH_0360,"Die ganz besonders. Die betone ich am schönsten, und deshalb schreibt hier auch niemand Beleidigungen.","Those most of all. I give those the loveliest emphasis, and that's why nobody here writes insults."
 W2_HIER_MAX_0100,Ich überlege noch.,I'm still thinking.
 W2_HIER_SCH_0110,"Überleg schnell. Der Pharao überlegt nämlich auch, und zwar seit elf Jahren.","Think fast. The pharaoh's thinking too, you see, and has been for eleven years."
-W2_HIER_SCH_0120,Das liest sich: „[Satz]“. Soll ich das wirklich vorlesen? Na gut. Ich les es vor.,"That reads: ""[Satz]"". Should I really read that out? Oh well. I'll read it out."
+W2_HIER_SCH_0120,Das liest sich … Moment. Soll ich das wirklich vorlesen? Na gut. Ich les es vor.,That reads as... one moment. Should I really read that out? Oh well. I'll read it out.
+W2_HIER_SCH_0125,"Es ergibt keinen Sinn. Wer handelt, wem er dient, wen er bittet, und zuletzt die Tat. In dieser Reihenfolge, bitte.","It makes no sense. Who acts, whom he serves, whom he asks, and the deed last. In that order, please."
 W2_HIER_SCH_0130,"„Krokodil, Diener der Katze, bittet den Pharao um Brot.“ Das Krokodil hat Hunger. Ich würde das ernst nehmen.","""Crocodile, servant of the cat, asks the pharaoh for bread."" The crocodile is hungry. I'd take that seriously."
 W2_HIER_SCH_0140,"„Mann, Diener der Katze, bittet den Pharao um Gold.“ Um Gold? Das ist mutig. Falsch, aber mutig.","""Man, servant of the cat, asks the pharaoh for gold."" For gold? That's brave. Wrong, but brave."
 W2_HIER_SCH_0150,"„Mann, Diener des Pharaos, bittet die Katze um Gehör.“ Das ist falsch herum. Aber der Kater nickt.","""Man, servant of the pharaoh, asks the cat for a hearing."" That's the wrong way round. But the cat is nodding."
@@ -3120,8 +3125,8 @@ W2_DUEL_MAX_0100,"Opfergabe, Gefolge, Wunder. Drei Sachen. Opa würde sagen, das
 W2_DUEL_MAX_0110,"Eine Schale mit Datteln vor dem Kissen. Das ist seine Opfergabe, von der Küche gespendet, wahrscheinlich nicht ganz freiwillig.","A bowl of dates in front of the cushion. That's his offering, donated by the kitchen, probably not entirely voluntarily."
 W2_DUEL_PIX_0115,Datteln. Für ihn. Von der Küche.,Dates. For him. From the kitchen.
 W2_DUEL_PIX_0115_2,Ich habe soeben einen Antrag auf Gleichbehandlung gestellt. Bei mir selbst. Er wird gerade wohlwollend geprüft.,I have just filed an application for equal treatment. With myself. It is being reviewed favourably.
-W2_DUEL_MAX_0120,"Zwei schwitzende Männer mit Palmwedeln. Das ist sein Gefolge. Großes Gefolge, wenig Begeisterung.","Two sweating men with palm fronds. That's his following. Big following, little enthusiasm."
-W2_DUEL_MAX_0125,"Die wedeln jetzt für den Kater. Die haben nicht so genau nachgefragt, für wen.",They're fanning for the cat now. They didn't ask very precisely who for.
+W2_DUEL_MAX_0120,"Ein schwitzender Mann mit Federfächer. Das ist sein Gefolge. Kleines Gefolge, wenig Begeisterung.","A sweating man with a feather fan. That's his entourage. Small entourage, little enthusiasm."
+W2_DUEL_MAX_0125,"Der wedelt jetzt für den Kater. Der hat nicht so genau nachgefragt, für wen.",He's fanning for the cat now. He didn't ask too closely for whom.
 W2_DUEL_MAX_0130,"Hier, bitte schön. Eine Dose, silbern, glänzend und leer. Unsere Opfergabe.","Here you go. A tin, silver, shiny and empty. Our offering."
 W2_DUEL_HOF_0140,Leer.,Empty.
 W2_DUEL_PIX_0150,"Leer ist eine Frage der Haltung. Sie glänzt, mein Lieber.","Empty is a matter of attitude. It shines, my dear."
@@ -3138,6 +3143,7 @@ W2_DUEL_NAR_0230,"Max kaut. Eine rosa Blase wächst, löst sich, steigt auf und 
 W2_DUEL_HOF_0240,Eine kleine Sonne. Rosa. Sie schwebt. Ich … ich habe keine Sonne.,A little sun. Pink. It floats. I … I don't have a sun.
 W2_DUEL_MAX_0250,"Hier. Ein Spiegel und die Sonne, und schon hab ich eine antike Taschenlampe.","Here. A mirror and the sun, and I've got an ancient torch."
 W2_DUEL_NAR_0260,Ein Lichtstrahl schießt vom Spiegel über die Säulen und endet in einem weißen Blitz. Der Hofkater fällt vom Kissen.,A beam of light shoots from the mirror across the columns and ends in a white flash. The court cat falls off the cushion.
+W2_DUEL_PIX_0265,"Der teurere Trick. Aber du hast den Kaugummi noch. Klug, für einen Menschen.","The pricier trick. But you still have the gum. Clever, for a human."
 W2_DUEL_RAM_0270,Ein Wunder! Oder ein Unfall! Oder … nein. Ein Wunder. Ich habe mich entschieden. Fast.,A miracle! Or an accident! Or … no. A miracle. I've decided. Almost.
 W2_DUEL_NAR_0280,"Schreiber, Fächerwedler, Diener und Sobek verneigen sich vor Pixel. Der Hofkater zählt nach. Dreimal.","Scribe, fanners, servants and Sobek bow to Pixel. The court cat counts again. Three times."
 W2_DUEL_HOF_0290,"Drei zu zwei. Ich gratuliere nicht, ich gehe. Das Kissen ist sowieso durchgelegen.","Three to two. I don't congratulate, I leave. The cushion is worn out anyway."
@@ -3165,7 +3171,7 @@ W2_AUDI_MAX_0080,"Ich hab noch nie was gewonnen, bei dem man schwitzen muss.",I'
 W2_AUDI_PIX_0090,"Er hat noch nie etwas gewonnen, Punkt.","He has never won anything, full stop."
 W2_AUDI_PIX_0090_2,"Ausgenommen einen Streit mit dem Router, und selbst den hat der Router gewonnen.","Except an argument with the router, and even that the router won."
 W2_AUDI_MAX_0095,"Der Router hat geschummelt. Der hat einfach aufgehört zu blinken, als ich recht hatte.",The router cheated. It just stopped blinking the moment I was right.
-W2_AUDI_RAM_0100,"Die Spiele beginnen, sobald du einen Startpass hast. Den gibt es in Olympia, im Büro. Oder im anderen Büro. Ich weiß es nicht.","The games begin as soon as you have an entry pass. You get it in Olympia, at the office. Or the other office. I don't know."
+W2_AUDI_RAM_0100,"Die Spiele beginnen, sobald du einen Startpass hast. Den gibt es in Olympia, im Büro. Glaube ich. Oder doch nicht. Ich weiß es nicht.","The games begin once you have a starting pass. You get it in Olympia, at the office. I think. Or not. I don't know."
 W2_AUDI_MAX_0110,"Sport. Freiwillig. Die spinnen, die Griechen.",Sport. Voluntarily. These Greeks are crazy.
 W2_AUDI_MAX_0210,Warum nennt man dich den Unentschlossenen?,Why do they call you the Indecisive?
 W2_AUDI_RAM_0220,"Man hat mir zwei Namen vorgeschlagen: der Große und der Weise. Ich überlege noch, seit elf Jahren. Inzwischen heiße ich eben so.","They suggested two names to me: the Great and the Wise. I've been thinking about it for eleven years now. By now, that's simply my name."
@@ -3211,8 +3217,8 @@ W2_KUCH_MAX_0090,"Knoblauch und Kräuter hängen von der Decke. Riecht gesund, d
 W2_KUCH_PIX_0095,"Knoblauch. Den rieche ich drei Räume weit, und zwar gegen den Wind.","Garlic. I can smell it three rooms away, against the wind."
 W2_KUCH_PIX_0095_2,"Er ist der einzige Grund, junger Mann, warum ich nicht auf der Stelle hier einziehe.","It is the only reason, young man, why I am not moving in here on the spot."
 W2_KUCH_MAX_0100,"Eine Amphore mit Trauben drauf. Traubensaft, steht da. Zumindest noch.","An amphora with grapes on it. Grape juice, it says. For now, anyway."
-W2_KUCH_MAX_0105,"Traubensaft, der in hundert Jahren Essig wird. Er hat seine Zukunft quasi schon hinter sich.",Grape juice that'll be vinegar in a hundred years. It's basically got its future behind it already.
-W2_KUCH_MAX_0110,Ich nehm den Saft mit. Falls jemand Durst hat. Oder in hundert Jahren Essig braucht.,I'll take the juice. In case anyone's thirsty. Or needs vinegar in a hundred years.
+W2_KUCH_MAX_0105,"Traubensaft, der in hundert Jahren Wein wird. Und danach Essig. Er hat seine Zukunft quasi schon hinter sich.",Grape juice that will be wine in a hundred years. And vinegar after that. Its future is more or less behind it.
+W2_KUCH_MAX_0110,Ich nehm den Saft mit. Falls jemand Durst hat. Oder in ein paar Jahrhunderten Wein braucht.,I'll take the juice. In case someone's thirsty. Or needs wine in a few centuries.
 W2_KUCH_NEB_0120,"Den Saft kannst du haben. Der Pharao kann sich nicht zwischen Saft und Wein entscheiden, also trinkt er Wasser.","You can have the juice. The pharaoh can't decide between juice and wine, so he drinks water."
 W2_KUCH_MAX_0130,"Dampf, überall. Hier kocht wenigstens jemand, der es wirklich kann, und nicht bloß für die Kamera.","Steam, everywhere. At least someone here actually knows how to cook, and not just for the camera."
 W2_KUCH_MAX_0135,Ich hab den Dampf eingeatmet. Jetzt bin ich zu ungefähr fünf Prozent Linseneintopf.,I breathed in the steam. Now I'm about five percent lentil stew.
@@ -3272,8 +3278,8 @@ W2_KUCH_PIX_0480_2,"Ich merke mir das. Ich merke mir alles, und ich habe ein seh
 W2_SPHX_MAX_0010,Hat ein Rätsel im Gesicht und keine Ahnung im Kopf.,Has a riddle on its face and no clue in its head.
 W2_SPHX_PIX_0020,Ein Löwenkörper mit einem Menschenkopf.,A lion's body with a human head.
 W2_SPHX_PIX_0020_2,"Und ausgerechnet die falsche Hälfte ist fürs Denken zuständig, wenn du mich fragst.","And of all things, the wrong half is in charge of thinking, if you ask me."
-W2_SPHX_MAX_0030,"Ein Schreibpult, so groß wie ein Auto, und daneben zerknüllte Papyri. Hier hat jemand sehr viel nicht geschrieben.","A writing desk as big as a car, and crumpled papyri next to it. Someone has not written an awful lot here."
-W2_SPHX_MAX_0035,"Das Pult ist so groß, dass ich darunter wohnen könnte. Mit Blick auf zerknülltes Papier.",The desk is so big I could live under it. With a view of crumpled paper.
+W2_SPHX_MAX_0030,"Ein Schreibpult in Menschengröße, und daneben zerknüllte Papyri. Für eine Sphinx ist das ein Notizzettel.","A writing desk the size of a person, with crumpled papyri next to it. For a sphinx, that's a sticky note."
+W2_SPHX_MAX_0035,"Ein Pult für einen Menschen, vor einer Sphinx. Hier hat jemand sehr viel nicht geschrieben.","A desk for a human, in front of a sphinx. Someone has not written a great deal here."
 W2_SPHX_MAX_0040,"Zerknüllte Papyri. Auf allen steht „Was hat vier Beine und …“, und dann kommt nichts mehr.","Crumpled papyri. They all say ""What has four legs and …"", and then nothing else."
 W2_SPHX_MAX_0045,"Ich hab einen glattgestrichen. „Was hat …“ Da hat sie aufgegeben, bevor das Rätsel überhaupt angefangen hat.","I smoothed one out. ""What has …"" She gave up before the riddle had even started."
 W2_SPHX_MAX_0050,Ein Notizblock mit einem einzigen Wort: „Rätsel“. Darunter ein Strich und darunter nichts.,"A notepad with a single word: ""Riddle"". Under it a line, and under that nothing."
@@ -3315,6 +3321,7 @@ W2_SPHX_SPH_0660,"Dass er stempeln soll, steht doch da. Du verstehst es auch nic
 W2_SPHX_MAX_0230,Ich überleg mir was.,I'll think of something.
 W2_SPHX_SPH_0240,"Das sagen alle, und dann kommen sie nie wieder. Ich warte trotzdem. Ich bin aus Stein, ich kann nichts anderes.","Everyone says that, and then they never come back. I wait anyway. I'm made of stone, I can't do anything else."
 W2_SPHX_MAX_0250,Ich stell dir ein Rätsel.,I'll set you a riddle.
+W2_SPHX_SPH_0255,"Ein Rätsel braucht drei Hinweise, Sterblicher. So viele hast du nicht. Sieh dir deine Wunderdinge genauer an.","A riddle needs three clues, mortal. You do not have that many. Look more closely at your wonders."
 W2_SPHX_SPH_0260,Ein Kaugummi klingelt nicht.,Chewing gum doesn't ring.
 W2_SPHX_SPH_0270,Ein Kaugummi leuchtet nicht. Nicht mal kurz.,Chewing gum doesn't glow. Not even briefly.
 W2_SPHX_SPH_0280,"Ein Kaugummi hat keine Prozente. Ein Kaugummi hat Geschmack, wenn auch nur kurz.","A chewing gum has no percent. A chewing gum has flavour, if only briefly."
@@ -3428,11 +3435,13 @@ W2_WERK_ARC_0440,"Stör meine Kreise nicht! Also, ich hab gerade keine Kreise. A
 W2_WERK_MAX_0450,Ihr seid der König?,Are you the king?
 W2_WERK_HIE_0460,"Ich bin Hieron. Ich habe einen Goldschmied, eine Krone und einen Verdacht. Und einen Erfinder, der badet, statt zu rechnen.","I am Hiero. I have a goldsmith, a crown and a suspicion. And an inventor who bathes instead of calculating."
 W2_WERK_MAX_0470,Darf ich die Krone mal sehen?,May I see the crown?
-W2_WERK_HIE_0480,"Hier, die Krone und der Barren, beide gleich schwer. Beweis mir, dass sie nicht aus reinem Gold ist. Oder dass sie es ist. Mir reicht ein Beweis.","Here, the crown and the bar, both equally heavy. Prove to me that it isn't pure gold. Or that it is. One proof will do."
+W2_WERK_HIE_0480,"Hier, die Krone und der Barren, beide gleich schwer.","Here, the crown and the bar, both equally heavy."
+W2_WERK_HIE_0480_2,"Beweis mir, dass sie nicht aus reinem Gold ist. Oder dass sie es ist. Mir reicht ein Beweis.",Prove to me that it isn't pure gold. Or that it is. One proof will do.
 W2_WERK_MAX_0610,Gleich schwer heißt also nicht automatisch gleich echt.,So equally heavy doesn't automatically mean equally real.
 W2_WERK_HIE_0620,"Genau. Dann erklär mir das bitte. Ich verstehe es nämlich auch nicht, und ich bin der König.","Exactly. Then please explain that to me. Because I don't understand it either, and I'm the king."
 W2_WERK_MAX_0490,Warum setzt du sie nicht einfach auf?,Why don't you just put it on?
-W2_WERK_HIE_0500,"Eine falsche Krone tragen? Dann bin ich ein falscher König. Dann kann ich gleich nach Ägypten gehen, zu dem, der sich nicht entscheiden kann.","Wear a fake crown? Then I'm a fake king. Then I might as well go to Egypt, to the one who can't make up his mind."
+W2_WERK_HIE_0500,Eine falsche Krone tragen? Dann bin ich ein falscher König.,Wear a fake crown? Then I'm a fake king.
+W2_WERK_HIE_0500_2,"Dann kann ich gleich nach Ägypten gehen, zu dem, der sich nicht entscheiden kann.","Then I might as well go to Egypt, to the one who can't make up his mind."
 W2_WERK_MAX_0630,"Ramses? Der überlegt seit elf Jahren, wie er heißen will.",Ramses? He's been deciding what to call himself for eleven years.
 W2_WERK_HIE_0640,Siehst du. So endet man ohne echte Krone.,You see. That's how you end up without a real crown.
 W2_WERK_MAX_0510,Ich seh mir das an.,I'll take a look.
@@ -3493,14 +3502,14 @@ W2_TRAI_ARC_0160,"Perfekt! Also: gut. Also: brauchbar. Der Hebel kommt mit nach 
 W2_TRAI_ARC_0160_2,Ich hatte nie einen Schüler. Du bist der erste. Enttäusch mich nicht.,I've never had a pupil. You're the first. Don't let me down.
 W2_TRAI_MAX_0170,Ich hab gerade dreimal freiwillig Sport gemacht. Das erzähl ich niemandem.,I've just done sport three times voluntarily. I'm not telling anyone.
 W2_TRAI_PIX_0180,"Ich erzähle es allen. Und zwar zuerst dem Krokodil, weil es so schön zuhört.","I shall tell everyone. Starting with the crocodile, because he listens so nicely."
-W2_BUER_MAX_0010,"Zwei Schalter, ein Berg Schriftrollen und eine Bank voller Leute, die aussehen, als wären sie hier geboren. Eindeutig ein Amt.","Two counters, a mountain of scrolls and a bench full of people who look like they were born here. Definitely an office."
+W2_BUER_MAX_0010,"Zwei Schalter, ein Berg Formulare und eine Bank voller Leute, die aussehen, als wären sie hier geboren. Eindeutig ein Amt.","Two counters, a mountain of forms and a bench full of people who look like they were born here. Definitely an office."
 W2_BUER_PIX_0020,"Staub, Langeweile und Sonnenstrahlen. Das ist, mit Verlaub, ein vollkommener Schlafplatz.","Dust, boredom and sunbeams. That is, if I may say so, a perfect sleeping place."
 W2_BUER_PIX_0020_2,Ich verstehe die Leute auf der Bank. Ich beneide sie sogar ein wenig.,I understand the people on the bench. I even envy them a little.
-W2_BUER_MAX_0030,"Ein Beamter mit Glatze und einer Schriftrolle, so lang wie er selbst. Er schläft mit offenen Augen, und das ist echt eine Fähigkeit.","An official with a bald head and a scroll as long as he is. He sleeps with his eyes open, and that's genuinely a skill."
+W2_BUER_MAX_0030,"Ein Beamter mit Glatze hinter einem Stapel Formulare. Er schläft mit offenen Augen, und das ist echt eine Fähigkeit.","A bald official behind a pile of forms. He sleeps with his eyes open, and that's a real skill."
 W2_BUER_MAX_0035,"Er hat gerade geblinzelt, ein einziges Mal. Das war seine Mittagspause.","He just blinked, one single time. That was his lunch break."
 W2_BUER_MAX_0040,"Brille, Schnurrbart, Stempel. Der Stempel ist größer als sein Kopf und vermutlich auch wichtiger.","Glasses, moustache, stamp. The stamp is bigger than his head and probably more important too."
 W2_BUER_MAX_0045,"Wenn nichts vor ihm liegt, stempelt er in die Luft. Übung macht den Beamten.","When there's nothing in front of him, he stamps the air. Practice makes the official."
-W2_BUER_MAX_0050,"Schriftrollen bis zur Decke. Das ist entweder das Archiv oder der Müll, und bei Ämtern weiß man das nie so genau.","Scrolls up to the ceiling. That's either the archive or the rubbish, and with offices you never really know."
+W2_BUER_MAX_0050,"Formulare bis zur Decke. Das ist entweder das Archiv oder der Müll, und bei Ämtern weiß man das nie so genau.","Forms up to the ceiling. Either it's the archive or the rubbish, and with offices you never quite know."
 W2_BUER_MAX_0055,"Ganz unten liegt ein Antrag auf einen Antrag, und daneben einer für ein Formular, das es gar nicht gibt. Erledigt ist hier nichts.","Right at the bottom there's an application for an application, and next to it one for a form that doesn't even exist. Nothing here gets done."
 W2_BUER_MAX_0060,"Ein leeres Formular, ganz unten im Stapel. Das ist das einzige, das noch keiner ausgefüllt hat.","A blank form, right at the bottom of the pile. It's the only one nobody has filled in yet."
 W2_BUER_MAX_0070,Wachstafeln. Man schreibt was rein und kratzt es wieder raus. Die Rückgängig-Taste der Antike.,Wax tablets. You write something in and scratch it out again. The undo button of antiquity.
@@ -3551,11 +3560,13 @@ W2_BUER_HER_0350,Dann ist er da!,Then it's there!
 W2_BUER_PIX_0360,Der Mann hat geflügelte Schuhe und ist trotzdem immer zu spät.,The man has winged shoes and is still always late.
 W2_BUER_PIX_0360_2,Das ist Charakter. Dagegen helfen keine Federn.,That is character. No feathers help against that.
 W2_BUER_MAX_0370,"Ein Formular und ein Kugelschreiber, der ohne Tintenfass schreibt. Ich schreib jetzt ein Rundschreiben, von oben. Oben bin jetzt ich.","A form and a ballpoint that writes without an inkwell. I'm writing a circular now, from above. And above is now me."
+W2_BUER_MAX_0375,Ich hab meinen Startpass. Mehr Papier halte ich nicht aus.,I have my starting pass. I cannot take any more paper.
 W2_BUER_MAX_0380,„Rundschreiben. Ab sofort gibt es Startpass und Bürgerschein nur gegen Passierschein Vier-Strich-Ypsilon.“,"""Circular. With immediate effect, entry passes and citizen's certificates are only issued on presentation of Permit Four-Slash-Y."""
 W2_BUER_MAX_0390,"Tinte vom Tintenfisch auf Papyrus vom Nil, und ich schreib mit dem Finger. Das klebt mehr als jeder Touchscreen.","Squid ink on papyrus from the Nile, and I'm writing with my finger. That's stickier than any touchscreen."
 W2_BUER_MAX_0400,"Dasselbe Rundschreiben, bloß blauer und mit Fingerabdruck. Amtlich genug.","The same circular, just bluer and with a fingerprint. Official enough."
 W2_BUER_MAX_0410,"Die Socke. Sie sortiert alles, und zwar sofort.","The sock. It sorts everything, and instantly."
-W2_BUER_NAR_0420,"Die Socke wirbelt durch den Berg. Rollen fliegen, Staub steigt, Beamter 1 wacht kurz auf und schläft wieder ein. Oben liegt ein einzelnes Rundschreiben, fertig geschrieben, nie abgegeben.","The sock whirls through the pile. Scrolls fly, dust rises, the first official wakes up briefly and falls asleep again. On top lies a single circular, fully written, never submitted."
+W2_BUER_NAR_0420,"Die Socke wirbelt durch den Berg. Rollen fliegen, Staub steigt, Beamter 1 wacht kurz auf und schläft wieder ein.","The sock whirls through the pile. Scrolls fly, dust rises, the first official wakes up briefly and falls asleep again."
+W2_BUER_NAR_0420_2,"Oben liegt ein einzelnes Rundschreiben, fertig geschrieben, nie abgegeben.","On top lies a single circular, fully written, never submitted."
 W2_BUER_MAX_0430,„Rundschreiben: Startpass nur gegen Passierschein Vier-Strich-Ypsilon.“ Jemand hatte vor mir dieselbe Idee und dann wohl keinen Mut mehr.,"""Circular: entry pass only on presentation of Permit Four-Slash-Y."" Somebody had the same idea before me and then apparently lost their nerve."
 W2_BUER_PIX_0440,"Diese Socke hat in zehn Sekunden erledigt, was dieses Amt in vierhundert Jahren nicht geschafft hat.",This sock has done in ten seconds what this office has not managed in four hundred years.
 W2_BUER_PIX_0440_2,Ich bin beinahe stolz. Auf eine Socke. So tief bin ich gesunken.,I am almost proud. Of a sock. That is how low I have sunk.
@@ -3588,7 +3599,8 @@ W2_AGOR_MAX_0010,"Ein Marktplatz, auf dem alle gleichzeitig reden und keiner zuh
 W2_AGOR_MAX_0020,"Eine Säulenhalle, weiß, kühl und schattig. Hier hängen die Leute ab, die zu klug für Sport sind.","A colonnade, white, cool and shady. This is where the people hang out who are too clever for sport."
 W2_AGOR_MAX_0025,Im Schatten sitzen Männer und denken laut. Philosophie klingt erstaunlich ähnlich wie Schnarchen.,Men are sitting in the shade thinking out loud. Philosophy sounds amazingly like snoring.
 W2_AGOR_MAX_0030,"Eine hohe Säule mit einem Steinadler obendrauf. Und unten liegt ein Heuhaufen, genau darunter.","A tall column with a stone eagle on top. And at the bottom there's a haystack, right underneath."
-W2_AGOR_MAX_0035,"Adler oben, Heuhaufen unten. Gleich springt da einer mit ausgebreiteten Armen runter. Das hab ich schon tausendmal gesehen, auf dem Bildschirm.","Eagle at the top, haystack at the bottom. Any minute now someone will jump down with his arms spread. I've seen that a thousand times, on a screen."
+W2_AGOR_MAX_0035,"Adler oben, Heuhaufen unten. Gleich springt da einer mit ausgebreiteten Armen runter.","Eagle at the top, haystack at the bottom. Any minute now someone will jump down with his arms spread."
+W2_AGOR_MAX_0035_2,"Das hab ich schon tausendmal gesehen, auf dem Bildschirm.","I've seen that a thousand times, on a screen."
 W2_AGOR_MAX_0040,"Wer da runterspringt, landet genau im Heu. Rein zufällig natürlich.","Anyone jumping down from there lands right in the hay. Purely by chance, of course."
 W2_AGOR_PIX_0050,"Heu. Warm, trocken, und es raschelt angenehm. Acht von zehn Punkten als Schlafplatz.","Hay. Warm, dry, and it rustles pleasantly. Eight out of ten points as a sleeping place."
 W2_AGOR_PIX_0050_2,"Zwei Punkte Abzug für den Adler, der einem beim Schlafen zusieht. Ich mag kein Publikum, wenn ich nicht auftrete.",Two points off for the eagle watching you sleep. I do not like an audience when I am not performing.
@@ -3622,7 +3634,7 @@ W2_AGOR_MAX_0205,Er hat den Arm schon wieder oben. Der geht gar nicht mehr runte
 W2_AGOR_MAX_0210,"Ein dünner Schreiber mit Wachstafel. Er schreibt schneller, als Cicero redet, und das ist eigentlich unmöglich.","A thin scribe with a wax tablet. He writes faster than Cicero talks, and that's actually impossible."
 W2_AGOR_MAX_0215,"Er schreibt, während Cicero Luft holt. Er schreibt sogar das Luftholen mit.",He writes while Cicero takes a breath. He even writes down the breath.
 W2_AGOR_MAX_0220,"Ein müder Mann in brauner Kutte, der dauernd abwinkt. Vor ihm knien Leute, und er wär ganz eindeutig lieber woanders.","A tired man in a brown habit who keeps waving people off. People kneel in front of him, and he'd clearly rather be somewhere else."
-W2_AGOR_MAX_0225,"Wenn der gleich einen Schuh verliert, rennen ihm alle hinterher und beten den Schuh an. Ich kenn die Sorte Menge.","If he loses a shoe in a minute, they'll all run after him and worship the shoe. I know that kind of crowd."
+W2_AGOR_MAX_0225,"Die Leute hängen an seinen Lippen, und er guckt, als hätte er nur nach dem Weg gefragt.","People hang on his every word, and he looks like he only asked for directions."
 W2_AGOR_MAX_0230,Entschuldigung. Bist du Cicero?,Excuse me. Are you Cicero?
 W2_AGOR_CIC_0240,"Ich bin Marcus Tullius Cicero. Und bevor du fragst: Ja, ich halte eine Rede, nein, sie ist nicht zu Ende, und ja, du darfst zuhören.","I am Marcus Tullius Cicero. And before you ask: yes, I am giving a speech, no, it is not over, and yes, you may listen."
 W2_AGOR_CIC_0240_2,Das dürfen alle.,Everyone may.
@@ -3652,9 +3664,12 @@ W2_AGOR_TIR_0370,"Alles, jedes Wort, in Kurzschrift. Die hab ich erfunden, weil 
 W2_AGOR_TIR_0370_2,Egal. Vergiss es.,Never mind. Forget it.
 W2_AGOR_TIR_0380,"Blau. Ein blauer Stift. Er schreibt und schreibt und hat trotzdem schlechte Laune, genau wie ich.","Blue. A blue pen. It writes and writes and is still in a bad mood, just like me."
 W2_AGOR_MAX_0390,Was ist denn hier los?,What's going on here?
-W2_AGOR_GRI_0400,"Die Römer! Überall Römer! Sie fotografieren unsere Säulen mit Wachstafeln und fragen, wo das Kolosseum ist! Und was haben wir von denen? Nichts!",The Romans! Romans everywhere! They photograph our columns with wax tablets and ask where the Colosseum is! And what do we get from them? Nothing!
-W2_AGOR_GRI_0410,"Na gut, den Kalender. Und die Fußbodenheizung. Und den Beton. Und die Post. Aber sonst? Was haben wir von denen, außer Kalender, Fußbodenheizung, Beton und Post?","All right, the calendar. And the underfloor heating. And the concrete. And the post. But apart from that? What do we get from them, apart from the calendar, underfloor heating, concrete and the post?"
-W2_AGOR_GRI_0420,"Und wenn einer von denen redet, dann redet er. Stundenlang. Da hilft nur eins: fragen, ob er auch mal Luft holt. Das bringt sie aus dem Takt.","And when one of them talks, he talks. For hours. Only one thing helps: ask whether he ever takes a breath. That throws them off their rhythm."
+W2_AGOR_GRI_0400,"Die Römer! Überall Römer! Sie fotografieren unsere Säulen mit Wachstafeln und fragen, wo das Kolosseum ist!",The Romans! Romans everywhere! They photograph our columns with wax tablets and ask where the Colosseum is!
+W2_AGOR_GRI_0400_2,Und was haben wir von denen? Nichts!,And what do we get from them? Nothing!
+W2_AGOR_GRI_0410,"Na gut, den Kalender. Und die Fußbodenheizung. Und den Beton. Und die Post.","All right, the calendar. And the underfloor heating. And the concrete. And the post. But apart from that?"
+W2_AGOR_GRI_0410_2,"Aber sonst? Was haben wir von denen, außer Kalender, Fußbodenheizung, Beton und Post?","What do we get from them, apart from the calendar, underfloor heating, concrete and the post?"
+W2_AGOR_GRI_0420,"Und wenn einer von denen redet, dann redet er. Stundenlang.","And when one of them talks, he talks. For hours."
+W2_AGOR_GRI_0420_2,"Da hilft nur eins: fragen, ob er auch mal Luft holt. Das bringt sie aus dem Takt.",Only one thing helps: ask whether he ever takes a breath. That throws them off their rhythm.
 W2_AGOR_MAX_0650,"Fragen, ob er auch mal Luft holt. Merk ich mir.",Ask whether he ever takes a breath. I'll remember that.
 W2_AGOR_GRI_0660,"Aber frag nicht zu laut, sonst hält er eine Rede übers Atmen.","But don't ask too loudly, or he'll give a speech about breathing."
 W2_AGOR_MAX_0430,Danke für das Gespräch.,Thanks for the chat.
@@ -3699,7 +3714,8 @@ W2_SAND_BRI_0120,"Danke. Das sagt sonst nie jemand. Die wollen immer, dass ich e
 W2_SAND_PIX_0130,"Eine Säule, hoch und glatt, und oben ein Adler aus Stein und ein Schuh.","A column, tall and smooth, and at the top a stone eagle and a shoe."
 W2_SAND_PIX_0130_2,"Ich mache das nur, weil ich es kann.",I am only doing this because I can.
 W2_SAND_PIX_0130_3,"Und ein kleines bisschen auch, weil du es nicht kannst.",And also a tiny bit because you cannot.
-W2_SAND_NAR_0140,"Pixel klettert, springt, hängt kurz am Adler, angelt die Sandale mit der Pfote und lässt sie fallen. Sie landet vor Max' Füßen. Pixel landet im Heu.","Pixel climbs, jumps, hangs briefly from the eagle, hooks the sandal with a paw and lets it drop. It lands at Max's feet. Pixel lands in the hay."
+W2_SAND_NAR_0140,"Pixel klettert, springt, hängt kurz am Adler, angelt die Sandale mit der Pfote und lässt sie fallen.","Pixel climbs, jumps, hangs briefly from the eagle, hooks the sandal with a paw and lets it drop."
+W2_SAND_NAR_0140_2,Sie landet vor Max' Füßen. Pixel landet im Heu.,It lands at Max's feet. Pixel lands in the hay.
 W2_SAND_PIX_0150,"Rein zufällig im Heu gelandet. Ich bleibe noch einen Moment liegen, aus Prinzip.","Landed in the hay purely by chance. I shall stay lying here for a moment, on principle."
 W2_SAND_PIX_0150_2,"Ein Kater, der aus großer Höhe fällt, hat ein Anrecht auf eine angemessene Pause.",A cat who falls from a great height is entitled to an appropriate break.
 W2_SAND_MAX_0160,Sandale an. Jetzt bin ich wohl ein Zeichen.,"Sandal on. Now I'm a sign, I guess."
@@ -3735,7 +3751,7 @@ W2_SAND_MAX_0365,"Ein Kern. Ein ganzer Baum, zusammengefaltet in einen Krümel."
 W2_SAND_FAW_0370,Ein Kern. Du gibst uns einen Kern. Dafür wedeln wir genau einmal. So. Fertig.,A seed. You're giving us a seed. For that we'll fan exactly once. There. Done.
 W2_SAND_MAX_0380,"Den ganzen Baum abgeben? Dann wedeln die damit. Das wär auch Wind, aber nicht der richtige.","Hand over the whole tree? Then they'd fan with it. That'd be wind too, but not the right kind."
 W2_SAND_MAX_0390,"Den Setzling hier einpflanzen? Dann steht hier in hundert Jahren ein Baum. Ich hab keine hundert Jahre, ich hab eine Fähre.","Plant the sapling here? Then there'll be a tree here in a hundred years. I haven't got a hundred years, I've got a ferry."
-W2_STAD_MAX_0010,"Ein Stadion. Hier schwitzen Leute mit Absicht. Die spinnen, die Griechen.",A stadium. People sweat here on purpose. These Greeks are crazy.
+W2_STAD_MAX_0010,Ein Stadion. Hier schwitzen Leute mit Absicht. Und nennen das Freizeit.,A stadium. People sweat here on purpose. And call it leisure.
 W2_STAD_MAX_0020,"Eine Laufbahn aus Sand. Sie führt von hier nach da, und mehr passiert nicht. Angeblich ist das aufregend.","A running track made of sand. It goes from here to there, and nothing more happens. Apparently that's exciting."
 W2_STAD_MAX_0025,"Ich guck die Bahn entlang. Am Ende ist das Ziel, am Anfang steh ich. Dazwischen steht eine Schildkröte und dehnt sich.","I look down the track. The finish is at the end, I'm at the start. In between there's a tortoise doing stretches."
 W2_STAD_MAX_0030,"Eine Sandgrube mit Mauer. Hier wird gerungen, mit Armen oder, wie ich gehört hab, mit Wörtern.","A sand pit with a wall. This is where they wrestle, with arms or, as I've heard, with words."
@@ -3778,7 +3794,7 @@ W2_STAD_LEO_0230,HEUTE ABEND SPEISEN WIR … ZU HAUSE! MEINE MUTTER KOCHT!,TONIG
 W2_STAD_PIX_0240,"Er brüllt, und ich höre trotzdem nicht zu.","He yells, and I still do not listen."
 W2_STAD_PIX_0240_2,Das ist meine Superkraft. Ich habe sie an dir jahrelang trainiert.,That is my superpower. I trained it on you for years.
 W2_STAD_MAX_0250,Eine kleine Schildkröte mit Stirnband. Sie guckt entschlossener als alle anderen hier.,A little tortoise with a headband. It looks more determined than anyone else here.
-W2_STAD_MAX_0255,"Die Schildkröte hat Vorsprung. Ein Grieche hat mal ausgerechnet, dass man sie dann nie einholt, und ich hab sie laufen sehen. Ich glaub's sofort.","The tortoise has a head start. A Greek once worked out that you then never catch up with it, and I've seen it run. I believe it straight away."
+W2_STAD_MAX_0255,"Die Schildkröte hat Vorsprung. Und sie guckt, als wüsste sie das.",The tortoise has a head start. And she looks like she knows it.
 W2_STAD_MAX_0260,"Ramses auf der Tribüne zwischen zwei Fächerwedlern. Er guckt von einem zum anderen und kann sich nicht entscheiden, wem er zujubelt.",Ramses in the stands between two fanners. He looks from one to the other and can't decide who to cheer for.
 W2_STAD_MAX_0265,Er klatscht für beide Seiten gleichzeitig. Das ist sozusagen sein politisches Programm.,He claps for both sides at once. That's more or less his political programme.
 W2_STAD_MAX_0270,Der Hebel steht neben der Sandgrube. Archimedes hat ihn ganz allein hergeschleppt. Mit einem Hebel.,The lever is standing next to the sand pit. Archimedes dragged it here all by himself. With a lever.
@@ -3786,7 +3802,11 @@ W2_STAD_MAX_0275,"Der Hebel wirft einen Schatten bis zur Tribüne, und Archimede
 W2_STAD_MAX_0280,Ohne Startpass lassen die mich nicht mal an die Linie. In Olympia ist das Amt stärker als jeder Athlet.,Without an entry pass they won't even let me near the line. In Olympia the office is stronger than any athlete.
 W2_STAD_MAX_0290,"Den Startpass hab ich. Aber fünf Disziplinen ohne Trainer? Ich brauch jemanden, der mir das Fliegen beibringt.",I've got the entry pass. But five events without a coach? I need someone to teach me how to fly.
 W2_STAD_MAX_0300,"Kein Diskus, keine Konter, kein Gegner. Das wär kein Finale, das wär bloß Rumstehen in Sandalen.","No discus, no comebacks, no opponent. That wouldn't be a final, that'd just be standing around in sandals."
-W2_STAD_MAX_0310,"Alles bereit. Nur die Wedler wedeln, wie sie wollen, und mit frischen Feigen würden sie gerade wedeln. Ich könnte aber auch einfach so werfen.","Everything's ready. Only the fanners fan however they like, and with fresh figs they'd fan in a straight line. But I could also just throw anyway."
+W2_STAD_MAX_0301,Und der Diskus fehlt immer noch. Irgendwer hier hat ihn.,And the discus is still missing. Somebody here has it.
+W2_STAD_MAX_0302,"Mit Cicero in den Ring, ohne einen einzigen Konter? Lieber nicht.",Into the ring with Cicero without a single comeback? Better not.
+W2_STAD_MAX_0303,"Cicero kommt erst, wenn er sein Grab hat. Also brauch ich einen Grabstein.",Cicero only comes once he has his grave. So I need a gravestone.
+W2_STAD_MAX_0310,"Alles bereit. Nur die Wedler wedeln, wie sie wollen, und mit frischen Feigen würden sie gerade wedeln.","Everything's ready. Only the fanners fan however they like, and with fresh figs they'd fan in a straight line."
+W2_STAD_MAX_0310_2,Ich könnte aber auch einfach so werfen.,But I could also just throw anyway.
 W2_TAG1_RAM_0010,Die Spiele sind eröffnet! Oder sie beginnen! Oder … fangt einfach an!,The games are open! Or they're beginning! Or … just get started!
 W2_TAG1_LEO_0020,MARATHON!,MARATHON!
 W2_TAG1_MAX_0030,Das ist der Stadionlauf. Einmal geradeaus.,It's the stadium race. Once straight ahead.
@@ -3874,14 +3894,16 @@ W2_DISK_MAX_0230,Du warst es.,It was you.
 W2_DISK_HER_0240,"Wenn ich es war, hat Leonidas zweimal die Wahrheit gesagt. Das schafft der nicht mal mit Anlauf.","If it was me, Leonidas told the truth twice. He can't manage that even with a run-up."
 W2_DISK_MAX_0250,Du warst es.,It was you.
 W2_DISK_SPH_0260,"Dann hätte ich zweimal gelogen. Ich lüge nur einmal, wie alle hier. Das ist das einzige Rätsel, das ich noch kann.","Then I'd have lied twice. I only lie once, like everyone here. It's the only riddle I can still do."
-W2_DISK_MAX_0270,"Du warst es. Du warst im Stadion, und Hermes war es nicht: eine Wahrheit, eine Lüge. Und Pixels Nase hat bei dir gelogen, weil du nach Fisch riechst.","It was you. You were in the stadium, and it wasn't Hermes: one truth, one lie. And Pixel's nose lied about you because you smell of fish."
+W2_DISK_MAX_0270,"Du warst es. Du warst im Stadion, und Hermes war es nicht: eine Wahrheit, eine Lüge.","It was you. You were in the stadium, and it wasn't Hermes: one truth, one lie."
+W2_DISK_MAX_0270_2,"Und Pixels Nase hat bei dir gelogen, weil du nach Fisch riechst.",And Pixel's nose lied about you because you smell of fish.
 W2_DISK_TIR_0280,"Ich … ja. Ich brauchte eine Unterlage, eine runde, glatte, für die Kurzschrift. Er redet so schnell.","I … yes. I needed a surface, a round, smooth one, for the shorthand. He talks so fast."
 W2_DISK_TIR_0280_2,"Hier, nimm ihn. Er hat Kratzer, aber das sind Abkürzungen.","Here, take it. It's scratched, but those are abbreviations."
 W2_DISK_PIX_0290,Tintenfisch. Ich wusste es. Ich habe es gewusst und dann das Gegenteil gesagt.,Squid. I knew it. I knew it and then said the opposite.
 W2_DISK_PIX_0290_2,"Das nennt man Instinkt. Falschen Instinkt, zugegeben, aber Instinkt.","That is called instinct. Wrong instinct, admittedly, but instinct."
 W2_DISK_MAX_0300,"Der echte Diskus. Bronze, mit Kurzschrift zerkratzt. Jeder sagt, der fliegt am besten, und ich glaub jedem.","The real discus. Bronze, scratched with shorthand. Everyone says it flies best, and I believe everyone."
 W2_DISK_MAX_0305,"Ich wieg ihn in der Hand. Er ist schwer und will fliegen. Ich will nur, dass er das ohne mich tut.",I weigh it in my hand. It's heavy and wants to fly. I just want it to do that without me.
-W2_DISK_MAX_0310,"Eine Schallplatte: „Schlager für Erfinder, Folge 3“. Opa hat sie mir in die Tasche geschmuggelt. Sie ist rund, und sie fliegt. Mehr muss sie nicht.","A record: ""Hits for Inventors, Volume 3"". Grandpa smuggled it into my bag. It's round, and it flies. It doesn't need to do more."
+W2_DISK_MAX_0310,"Eine Schallplatte: „Schlager für Erfinder, Folge 3“.","A record: ""Hits for Inventors, Volume 3"". Grandpa smuggled it into my bag."
+W2_DISK_MAX_0310_2,"Opa hat sie mir in die Tasche geschmuggelt. Sie ist rund, und sie fliegt. Mehr muss sie nicht.","It's round, and it flies. It doesn't need to do more."
 W2_DISK_PIX_0320,"Folge 3. Dein Großvater besitzt alle drei, und er singt jedes Mal mit.","Volume 3. Your grandfather owns all three, and he sings along every time."
 W2_DISK_PIX_0320_2,"Ich habe es überlebt, und ich weiß bis heute nicht, wie. Ich glaube, ich habe mich unter das Sofa gerettet.","I survived it, and to this day I do not know how. I think I took refuge under the sofa."
 W2_DISK_MAX_0330,"Eine Wurfscheibe, bunt und aus Plastik. Die ist seit dem Schulausflug in meiner Bauchtasche. Sie fliegt besser als ich.","A flying disc, colourful and plastic. It's been in my bum bag since the school trip. It flies better than I do."
@@ -3898,7 +3920,8 @@ W2_GRAB_PIX_0060_2,Die Antike liefert ausgesprochen genau. Das sollte man sich f
 W2_GRAB_STM_0070,Noch mal? Diesmal mit Plan? Pläne sind gut. Außer verkehrt herum.,Again? With a plan this time? Plans are good. Except upside down.
 W2_GRAB_MAX_0080,"Ein frischer Grabstein, weiß, scharfkantig, mit Kugel im Zylinder. Der sieht aus wie gestern gemacht, weil er gestern gemacht wurde.","A fresh gravestone, white, sharp-edged, with a sphere in a cylinder. It looks like it was made yesterday, because it was made yesterday."
 W2_GRAB_MAX_0085,"Die Kanten sind so scharf, dass ich mich fast am Respekt schneide.",The edges are so sharp I almost cut myself on the respect.
-W2_GRAB_MAX_0090,"Hundertsiebenunddreißig Jahre. Ägypten bis Olympia hundertzwölf, Olympia bis Syrakus fünfundzwanzig. Das ist Mathe, die ich sogar freiwillig mache.","One hundred and thirty-seven years. Egypt to Olympia one hundred and twelve, Olympia to Syracuse twenty-five. That's maths I'd even do voluntarily."
+W2_GRAB_MAX_0090,"Hundertsiebenunddreißig Jahre. Ägypten bis Olympia hundertzwölf, Olympia bis Syrakus fünfundzwanzig.",One hundred and thirty-seven years.
+W2_GRAB_MAX_0090_2,"Das ist Mathe, die ich sogar gern mache.","Egypt to Olympia one hundred and twelve, Olympia to Syracuse twenty-five. That's maths I actually enjoy."
 W2_GRAB_MAX_0100,"Ein überwucherter Hügel mit Dornen, Brombeeren und alten Steinen. Hier liegen Leute, die keiner mehr sucht. Außer Cicero.","An overgrown hill with thorns, brambles and old stones. People lie here that nobody looks for any more. Except Cicero."
 W2_GRAB_MAX_0110,"Brombeeren, schon reif. Ich pflück trotzdem keine. Ich hab mich letzte Woche an einer Tiefkühlpizza geschnitten, das reicht mir.","Blackberries, already ripe. I'm still not picking any. I cut myself on a frozen pizza last week, that's enough for me."
 W2_GRAB_PIX_0115,"Brombeeren. Für dich sind sie verboten, für mich sind sie uninteressant.","Blackberries. For you they are forbidden, for me they are uninteresting."
@@ -3932,13 +3955,15 @@ W2_FINA_FAW_0030,"Gleichmäßig! Links, rechts, links, rechts! Für die Feigen!"
 W2_FINA_NAR_0040,"Max wirft. Der Speer steigt, der Wind trägt ihn. Er spießt unterwegs Leonidas' Mittagsteller auf und bleibt genau im Olivenkranz stecken.",Max throws. The javelin climbs and the wind carries it. On the way it skewers Leonidas's lunch plate and lands right in the middle of the olive wreath.
 W2_FINA_LEO_0050,MEIN EINTOPF!,MY STEW!
 W2_FINA_MAX_0060,Mitten im Kranz. Mit Beilage.,Dead centre of the wreath. With a side dish.
-W2_FINA_NAR_0070,"Max wirft. Der Wind dreht, dreht wieder, der Speer spießt Leonidas' Teller auf und verschwindet im Kampfrichterzelt. Das Zelt sackt zusammen.","Max throws. The wind turns, turns back, the javelin skewers Leonidas's plate and vanishes into the judges' tent. The tent collapses."
+W2_FINA_NAR_0070,"Max wirft. Der Wind dreht, dreht wieder, der Speer spießt Leonidas' Teller auf und verschwindet im Kampfrichterzelt.","Max throws. The wind turns, turns back, the javelin skewers Leonidas's plate and vanishes into the judges' tent."
+W2_FINA_NAR_0070_2,Das Zelt sackt zusammen.,The tent collapses.
 W2_FINA_MAX_0080,Das Zelt. Mit den Kampfrichtern drin. Die werten jetzt bestimmt total neutral.,The tent. With the judges inside. I'm sure they'll judge totally neutrally now.
 W2_FINA_PIX_0090,Du hast das Mittagessen eines Spartaners aufgespießt.,You have skewered a Spartan's lunch.
 W2_FINA_PIX_0090_2,"Das ist die mutigste Tat deines bisherigen Lebens, und sie war ein Versehen. Ich finde, das passt zu dir.","That is the bravest deed of your life so far, and it was an accident. I find that suits you."
 W2_FINA_RAM_0100,Gezählt! Irgendwie! Weiter zum Diskus!,Counted! Somehow! On to the discus!
 W2_FINA_MAX_0110,"Erst mal ein paar Probewürfe, zum Warmwerden. Was soll schon passieren.","First a few practice throws, to warm up. What could possibly happen."
-W2_FINA_NAR_0120,Wurf eins: Der Teller segelt über den Fluss. In der Ferne fällt der Sphinx die Nase ab. Wurf zwei: Über die Agora. Die Marmorfrau verliert beide Arme. Wurf drei: Der Glockenturm hinten neigt sich. Und bleibt so.,"Throw one: the plate sails over the river. In the distance, the Sphinx loses its nose. Throw two: over the agora. The marble lady loses both arms. Throw three: the bell tower at the back starts to lean. And stays that way."
+W2_FINA_NAR_0120,Wurf eins: Der Teller segelt über den Fluss. In der Ferne fällt der Sphinx die Nase ab. Wurf zwei: Über die Agora.,"Throw one: the plate sails over the river. In the distance, the Sphinx loses its nose. Throw two: over the agora."
+W2_FINA_NAR_0120_2,Die Marmorfrau verliert beide Arme. Wurf drei: Der Glockenturm hinten neigt sich. Und bleibt so.,The marble lady loses both arms. Throw three: the bell tower at the back starts to lean. And stays that way.
 W2_FINA_MAX_0130,Das wird noch Probleme machen. Ich hab's ja gesagt.,That's going to cause problems. I did say so.
 W2_FINA_PIX_0140,"Drei Würfe, drei Wahrzeichen. Die Menschheit wird Jahrtausende brauchen, um das zu erklären.","Three throws, three landmarks. Humanity will need millennia to explain that."
 W2_FINA_PIX_0140_2,"Ich sage nichts dazu, junger Mann. Ich war nicht dabei, ich habe nichts gesehen, und ich kenne dich nicht.","I shall say nothing about it, young man. I was not there, I saw nothing, and I do not know you."
@@ -3949,7 +3974,8 @@ W2_FINA_NAR_0180,Die Schallplatte fliegt. Eiert. Landet. Spielt beim Aufprall ku
 W2_FINA_RAM_0190,"Weit genug! Oder nicht! Weit genug. Jetzt das Ringen, gegen Cicero, mit Worten. Ich habe Angst. Für dich. Und vor Worten.","Far enough! Or not! Far enough. Now the wrestling, against Cicero, with words. I'm afraid. For you. And of words."
 W2_RING_CIC_0010,"In die Grube, Junge. Hier ringt man nicht mit den Armen, hier ringt man mit dem Wort. Und das Wort gehört mir.","Into the pit, boy. Here we don't wrestle with arms, here we wrestle with the word. And the word belongs to me."
 W2_RING_MAX_0020,"Ein Wortgefecht im Sand. Okay. Ich hab schon Kommentarbereiche überlebt, das hier schaff ich auch.","A war of words in the sand. Okay. I've survived comment sections, I can manage this."
-W2_RING_MAX_0030,"Konter eins: „Wer so lange redet, hat Angst vor dem Ende des Satzes.“ Zwei: „Ein Argument, so dünn, dass man den Redner dahinter sieht.“ Drei: „Du zitierst dich selbst. Der Einzige, der dir noch zuhört.“","Comeback one: ""Anyone who talks that long is afraid of the end of the sentence."" Two: ""An argument so thin you can see the speaker through it."" Three: ""You quote yourself. The only one still listening."""
+W2_RING_MAX_0030,"Konter eins: „Wer so lange redet, hat Angst vor dem Ende des Satzes.“","Comeback one: ""Anyone who talks that long is afraid of the end of the sentence."" Two: ""An argument so thin you can see the speaker through it."" Three: ""You quote yourself."
+W2_RING_MAX_0030_2,"Zwei: „Ein Argument, so dünn, dass man den Redner dahinter sieht.“ Drei: „Du zitierst dich selbst. Der Einzige, der dir noch zuhört.“","The only one still listening."""
 W2_RING_CIC_0040,"Du bist ein Junge in einem Sack, und der Sack hat mehr Form als dein Verstand!","You are a boy in a sack, and the sack has more shape than your mind!"
 W2_RING_CIC_0050,"Was hat deine Welt je hervorgebracht? Nichts! Wir Römer brachten Ordnung, Recht und Größe!","What has your world ever produced? Nothing! We Romans brought order, law and greatness!"
 W2_RING_CIC_0060,"Wie ich schon in meiner dritten Rede sagte, und in der vierten, und in der fünften. Und wie ich selbst stets wiederhole …","As I said in my third speech, and in the fourth, and in the fifth. And as I myself always repeat …"
@@ -3966,7 +3992,8 @@ W2_RING_MAX_0150,Holst du auch mal Luft?,Do you ever breathe?
 W2_RING_CIC_0160,Ich …,I …
 W2_RING_MAX_0170,"Wer so lange redet, hat Angst vor dem Ende des Satzes.",Anyone who talks that long is afraid of the end of the sentence.
 W2_RING_CIC_0180,Falsch! Daneben! Und dafür hörst du jetzt meine Rede über die Pflicht. Alle drei Teile.,Wrong! Missed! And for that you shall now hear my speech on duty. All three parts.
-W2_RING_NAR_0190,Die Sonne wandert. Cicero redet. Die Zuschauer kippen einer nach dem anderen um. Pixel schnarcht mit Blase. Ramses sieht von einem Zepter zum anderen und schläft dazwischen ein.,"The sun moves across the sky. Cicero talks. The spectators keel over one by one. Pixel snores, with a bubble. Ramses looks from one sceptre to the other and falls asleep in between."
+W2_RING_NAR_0190,Die Sonne wandert. Cicero redet. Die Zuschauer kippen einer nach dem anderen um.,The sun moves across the sky. Cicero talks. The spectators keel over one by one.
+W2_RING_NAR_0190_2,Pixel schnarcht mit Blase. Ramses sieht von einem Zepter zum anderen und schläft dazwischen ein.,"Pixel snores, with a bubble. Ramses looks from one sceptre to the other and falls asleep in between."
 W2_RING_PIX_0200,"Ich habe geträumt. Von Stille. Von vollkommener, wunderbarer Stille.","I had a dream. Of silence. Of perfect, wonderful silence."
 W2_RING_PIX_0200_2,"Es war der schönste Traum seit dem mit dem Lachs, und der war wirklich außergewöhnlich.","It was the loveliest dream since the one about the salmon, and that one was truly extraordinary."
 W2_RING_MAX_0210,Drei Stunden. Mein Bein ist eingeschlafen und hat geträumt. Noch mal.,Three hours. My leg fell asleep and had a dream. Again.
@@ -3984,7 +4011,8 @@ W2_RING_PIX_0290_2,Ich habe nichts hinzuzufügen. Das ist mir noch nie passiert.
 W2_RING_PIX_0290_3,Ich werde es trotzdem leugnen.,I shall deny it all the same.
 W2_PARA_VOL_0010,Ein Kranz. Aus Blättern. Wir sind hundertzwölf Jahre gefahren für einen Kranz aus Blättern.,A wreath. Of leaves. We travelled a hundred and twelve years for a wreath of leaves.
 W2_PARA_VOL_0020,Brot! Und Spiele! Die Spiele hatten wir ja jetzt. Wo bleibt das Brot?,"Bread! And games! Well, we've had the games now. Where's the bread?"
-W2_PARA_RAM_0030,"Eine Parade! Hier! Jetzt! In Olympia, damit die ganze Welt zusieht! Zeremonienmeister, erklär es ihm. Ich kann das nicht. Ich kann nichts erklären.","A parade! Here! Now! In Olympia, so the whole world can watch! Master of Ceremonies, explain it to him. I can't. I can't explain anything."
+W2_PARA_RAM_0030,"Eine Parade! Hier! Jetzt! In Olympia, damit die ganze Welt zusieht!","A parade! Here! Now! In Olympia, so the whole world can watch!"
+W2_PARA_RAM_0030_2,"Zeremonienmeister, erklär es ihm. Ich kann das nicht. Ich kann nichts erklären.","Master of Ceremonies, explain it to him. I can't. I can't explain anything."
 W2_PARA_ZER_0040,"Eine Parade hat eine Ordnung. Einladungen vor den Gästen, Spiegel brauchen Mittagssonne, Reden brauchen Zuhörer.","A parade has an order. Invitations before guests, mirrors need midday sun, speeches need listeners."
 W2_PARA_ZER_0040_2,"Und ein Gott kommt zuletzt, immer. Hier ist der Plan, vier Felder. Füll sie.","And a god comes last, always. Here is the plan, four fields. Fill them."
 W2_PARA_MAX_0050,"Vier Felder, vier Leute und eine Sonne über dem zweiten. Ein Stundenplan für eine Party.","Four fields, four people and a sun over the second one. A timetable for a party."
@@ -3992,6 +4020,7 @@ W2_PARA_MAX_0055,Die Sonne über Feld zwei ist mit Goldfarbe gemalt. Da hat jema
 W2_PARA_HER_0060,"Einladungen? Ich! Das kann ich! Zu spät, aber das kann ich!","Invitations? Me! I can do that! Late, but I can do it!"
 W2_PARA_HER_0070,"Die Einladungen nach den Gästen? Dann lade ich Leute ein, die schon da sind. Das ist sogar für mich zu spät.",The invitations after the guests? Then I'd be inviting people who are already here. That's too late even for me.
 W2_PARA_ARC_0080,Mittagssonne! Spiegel! Lichtstrahl über das ganze Stadion! Niemand verbrennt! Fast niemand!,Midday sun! Mirror! A beam of light across the whole stadium! Nobody gets burned! Almost nobody!
+W2_PARA_ARC_0085,"Ein guter Plan. Nur liegt mein Spiegel noch in der Werkstatt in Syrakus. Ich bin Erfinder, kein Packesel.","A good plan. Only my mirror is still in the workshop in Syracuse. I am an inventor, not a pack mule."
 W2_PARA_ARC_0090,Ohne Mittagssonne ist mein Spiegel nur ein Teller. Ein glänzender Teller. Und Teller hatte ich heute genug.,Without the midday sun my mirror is just a plate. A shiny plate. And I've had enough plates today.
 W2_PARA_CIC_0100,"Eine Rede vor vollen Rängen. Kurz. Ich verspreche es: kurz. Also, kürzer.","A speech to full stands. Short. I promise: short. Well, shorter."
 W2_PARA_CIC_0110,"Eine Rede vor leeren Rängen? Das habe ich hundertmal gemacht. Es zählt nicht, das weiß ich inzwischen.","A speech to empty stands? I've done that a hundred times. It doesn't count, I know that by now."
@@ -4008,7 +4037,8 @@ W2_PARA_RAM_0190,"Essig. Du gibst mir Essig. Zu einer Parade. Das ist … ich we
 W2_PARA_RAM_0200,"Traubensaft. Den hab ich selbst, zwei Krüge. Ich trinke ihn nicht, niemand trinkt ihn. Er ist einfach da.","Grape juice. I've got that myself, two jugs. I don't drink it, nobody drinks it. It's just there."
 W2_PARA_PIX_0210,"Er will Wein, er hat Saft, und in der Werkstatt steht Essig. Du musst nur in die richtige Richtung fahren.","He wants wine, he has juice, and there is vinegar in the workshop. You just have to travel in the right direction."
 W2_PARA_PIX_0210_2,"Du hast die Sanduhr gesehen. Ich habe gesehen, wie du sie gesehen hast.",You have seen the hourglass. I saw you seeing it.
-W2_PARA_NAR_0220,"Hermes rennt, das Volk strömt, der Spiegel wirft Mittagslicht über das Stadion. Cicero hält eine kurze Rede, und dann schwebt Pixel auf seinem Kissen über die Laufbahn. Alle verneigen sich. Auch die Ägypter.","Hermes runs, the people pour in, the mirror throws midday light across the stadium. Cicero gives a short speech, and then Pixel floats down the track on his cushion. Everyone bows. Even the Egyptians."
+W2_PARA_NAR_0220,"Hermes rennt, das Volk strömt, der Spiegel wirft Mittagslicht über das Stadion.","Hermes runs, the people pour in, the mirror throws midday light across the stadium."
+W2_PARA_NAR_0220_2,"Cicero hält eine kurze Rede, und dann schwebt Pixel auf seinem Kissen über die Laufbahn. Alle verneigen sich. Auch die Ägypter.","Cicero gives a short speech, and then Pixel floats down the track on his cushion. Everyone bows. Even the Egyptians."
 W2_PARA_VOL_0230,Ein Gott! Ein Katzengott! Und Wein! Und … Brot? Egal! Wein!,A god! A cat god! And wine! And … bread? Who cares! Wine!
 W2_PARA_MAX_0240,Und zum Schluss: drei Prozent Akku. Taschenlampe an.,And to finish: three percent battery. Torch on.
 W2_PARA_NAR_0250,Ein weißer Lichtkegel streift über die Ränge. Das Handy piept einmal und wird schwarz. Die Menge hält den Atem an.,A white cone of light sweeps across the stands. The phone beeps once and goes black. The crowd holds its breath.
@@ -4017,7 +4047,7 @@ W2_PARA_PIX_0260_2,Das ist Faulheit. Sie hat sich diesmal gelohnt.,That is lazin
 W2_PARA_PIX_0260_3,"Gut gemacht. Ich sage es leise, damit es niemand hört.",Well done. I am saying it quietly so nobody hears.
 W2_PARA_RAM_0270,Mein Volk jubelt. Mir! Also dem Kater. Also dir. Egal. Hier ist der Goldene Sack Pharaonenkorn.,"My people are cheering. For me! Well, for the cat. Well, for you. Never mind. Here is the Golden Sack of Pharaoh's Grain."
 W2_PARA_RAM_0270_2,Ich habe mich entschieden. Zum ersten Mal. Es fühlt sich … gut an. Glaube ich.,I have decided. For the first time. It feels … good. I think.
-W2_PARA_MAX_0280,"Ein goldener Sack, schwer und weich, mit Siegel. Der zweite von vier. Und ich hab dafür Sport gemacht. Freiwillig. Teilweise.","A golden sack, heavy and soft, with a seal. The second of four. And I did sport for it. Voluntarily. Partly."
+W2_PARA_MAX_0280,"Ein goldener Sack, schwer und weich, mit Siegel. Der zweite von vier. Und ich hab dafür Sport gemacht. Mehr als im ganzen letzten Jahr.","A golden sack, heavy and soft, with a seal. The second of four. And I did sport for it. More than in the whole of last year."
 W2_PARA_MAX_0285,"Ich hab draufgeklopft, und er knistert. Für fünf Sportarten und einen Pharao klingt das ziemlich unspektakulär.","I tapped it, and it rustles. For five sports and a pharaoh, that sounds pretty unspectacular."
 W2_PARA_PIX_0290,Vierhundertfünf. Klingt nach einer Backzahl.,Four hundred and five. Sounds like an oven setting.
 W2_PARA_PIX_0295,Ich habe die Zahl noch einmal gelesen. Vierhundertfünf. Sie klingt immer noch nach Ofen.,I have read the number once more. Four hundred and five. It still sounds like an oven.
@@ -4035,7 +4065,7 @@ W2_INV_MAX_0020,"Die Taschenlampe geht noch, einmal und kurz. Danach ist das Han
 W2_INV_MAX_0030,"Ein Kaugummi. Man kaut und kaut, und er wird nie alle. Die Antike hält das für ein Wunder. Ich auch.","Chewing gum. You chew and chew and it never runs out. Antiquity thinks that's a miracle. Honestly, so do I."
 W2_INV_MAX_0040,"Am Ende klebt er unter irgendeinem Tisch. Das ist sein Schicksal, auch hier.","In the end it'll stick under some table. That's its destiny, here too."
 W2_INV_MAX_0050,"Ein Kugelschreiber, der ohne Tintenfass schreibt. Hier ist das Zauberei, und zu Hause heißt es Schule.","A ballpoint pen that writes without an inkwell. Here that's magic, and at home it's called school."
-W2_INV_MAX_0060,"Klick. Klick. Klick. Ich klicke, wenn ich nervös bin, und ich bin seit Welt eins nervös.","Click. Click. Click. I click when I'm nervous, and I've been nervous since world one."
+W2_INV_MAX_0060,"Klick. Klick. Klick. Ich klicke, wenn ich nervös bin, und ich bin seit Schwurbelstein nervös.","Click. Click. Click. I click when I'm nervous, and I've been nervous since Waffleton."
 W2_INV_PIX_0070,"Ein Pharao mit zwei Zeptern, der sich nicht entscheiden kann. Ich habe vier Pfoten und entscheide trotzdem schneller.",A pharaoh with two sceptres who cannot make up his mind. I have four paws and still decide faster.
 W2_INV_PIX_0070_2,Zum Beispiel jetzt: Ich gehe.,For example now: I am leaving.
 W2_INV_PIX_0080,"Ein Krokodil, das sich vor mir verneigt. Das ist das erste vernünftige Reptil, das ich kenne.",A crocodile that bows to me. That is the first sensible reptile I know.
@@ -4135,12 +4165,12 @@ W2_ABS_NEB_0110,"Ich hab dir alles erzählt, was in einen Topf passt. Jetzt raus
 W2_ABS_NEB_0120,"Wenn du nicht kochst, stehst du im Weg. Und du kochst nicht. Also: weg.","If you're not cooking, you're in the way. And you're not cooking. So: out."
 W2_ABS_SPH_0130,"Was hat zwei Beine, keine Fragen mehr und steht trotzdem noch hier? Du. Das war mein erstes Rätsel seit Jahren. Danke.","What has two legs, no more questions and is still standing here? You. That was my first riddle in years. Thank you."
 W2_ABS_SPH_0140,Ich habe dir alles gesagt. In Rätselform wäre es länger. Sei froh.,I've told you everything. In riddle form it would take longer. Be glad.
-W2_ABS_ARC_0150,"Gib mir einen festen Punkt, und ich rede weiter. Ohne festen Punkt bin ich fertig, für heute.","Give me a place to stand and I'll keep talking. Without a place to stand I'm done, for today."
-W2_ABS_ARC_0160,"Störe meine Kreise nicht. Das ist nicht böse gemeint, es sind bloß sehr schöne Kreise.","Do not disturb my circles. It's not meant unkindly, they're just very beautiful circles."
+W2_ABS_ARC_0150,"Mehr weiß ich heute nicht. Morgen wieder, falls ich nicht vorher in der Badewanne etwas entdecke.","That's all I know today. More tomorrow, unless I discover something in the bath first."
+W2_ABS_ARC_0160,"Ich rechne gerade. Wenn du weiterredest, rechne ich falsch, und dann ist es deine Schuld.","I'm calculating. If you keep talking, I'll calculate wrong, and then it's your fault."
 W2_ABS_HIE_0170,"Ich habe alles gesagt, was ein König sagen muss. Jetzt warte ich. Das kann ich königlich gut.",I have said everything a king must say. Now I wait. I do that royally well.
 W2_ABS_HIE_0180,"Wenn du mich noch mal ansprichst, will ich eine Lösung hören. Oder eine Krone. Am liebsten beides.","If you speak to me again, I want to hear a solution. Or a crown. Preferably both."
 W2_ABS_CIC_0190,"Ich könnte dir noch drei Stunden über die Tugend erzählen. Aber dafür brauche ich Zuschauer, und du zählst nur halb.","I could tell you about virtue for another three hours. But for that I need an audience, and you only count as half."
-W2_ABS_CIC_0200,Wie lange willst du meine Geduld noch missbrauchen? Das ist eine rhetorische Frage. Geh.,How long will you abuse my patience? That is a rhetorical question. Go.
+W2_ABS_CIC_0200,"Ich habe alles gesagt, und das dreimal. Für heute ist die Rede beendet. Geh.","I have said everything, three times. Today's speech is over. Go."
 W2_ABS_BRI_0210,"Ich hab nichts mehr zu sagen. Und wenn du jetzt sagst, das ist ein Zeichen, schrei ich.","I've got nothing more to say. And if you say that's a sign now, I'll scream."
 W2_ABS_BRI_0220,"Geh weg. Bitte. Das ist keine Botschaft, das ist nur eine Bitte. Schreib's nicht auf.","Go away. Please. That's not a message, it's just a request. Don't write it down."
 W2_ABS_BE1_0230,"Nummer ziehen, warten, wiederkommen. Das war alles, was ich sagen darf, und ich hab's gesagt.","Take a number, wait, come back. That was all I'm allowed to say, and I've said it."
@@ -4169,6 +4199,8 @@ W2_ZURU_PIX_0090,Die Schildkröte ist gerade einmal ums ganze Stadion gelaufen.,
 W2_ZURU_PIX_0090_2,Ich erwähne es nur. Ich ziehe keine Schlüsse. Das überlasse ich dir.,I only mention it. I draw no conclusions. I leave that to you.
 W2_ZURU_PIX_0100,Da ist ein Ausgang. Ausgänge sind zum Benutzen da.,There is an exit. Exits are there to be used.
 W2_ZURU_PIX_0100_2,"Genau wie Fähren. Und Öfen. Und, wenn ich das anmerken darf, Dosenöffner.","Just like ferries. And ovens. And, if I may say so, tin openers."
+W2_HINT_PIX_0010,"Gerade weiß ich nichts Besseres, als dass du irgendwohin gehst, wo du noch nicht warst.",I know nothing better right now than for you to go somewhere you have not been yet.
+W2_HINT_PIX_0010_2,"In diesem Land hat jeder Raum jemanden mit einer Aufgabe. Meistens eine, die er selbst nicht machen will.",In this country every room has someone with a job. Usually one they do not want to do themselves.
 W2_HINT_PIX_0110,"Der Fährmann will eine Münze, und du hast keine.","The ferryman wants a coin, and you have not got one."
 W2_HINT_PIX_0110_2,"Aber das Krokodil hat sich vor jemandem verneigt. Nicht vor dir. Denk darüber nach, vor wem.",But the crocodile bowed to someone. Not to you. Think about who.
 W2_HINT_PIX_0120,"Götter fahren umsonst, und ihre Diener auch.","Gods travel free, and so do their servants."
@@ -4177,7 +4209,7 @@ W2_HINT_PIX_0130,Wechsle zu mir und lass mich auf die Fähre gehen. Oder zieh mi
 W2_HINT_PIX_0130_2,"Ich bin kein Gegenstand, junger Mann. Mach es trotzdem.","I am not an item, young man. Do it anyway."
 W2_HINT_PIX_0211,"Der Pharao liest nur Bilder, und der Schreiber hat eine Tafel voller Bilder.","The pharaoh only reads pictures, and the scribe has a board full of pictures."
 W2_HINT_PIX_0211_2,"Vier Felder, ein Satz. Mehr verlangt niemand von dir. Nicht einmal ich.","Four fields, one sentence. Nobody asks more of you than that. Not even me."
-W2_HINT_PIX_0221,"Die Grammatik steht an der Säule: wer handelt, wem er dient, wen er bittet.","The grammar is on the column: who acts, whom he serves, whom he asks."
+W2_HINT_PIX_0221,"Die Grammatik steht an der Wand, in den Feldern neben den Säulen: wer handelt, wem er dient, wen er bittet.","The grammar is on the wall, in the fields next to the columns: who acts, whom he serves, whom he asks."
 W2_HINT_PIX_0221_2,"Und das Ohr steht für Gehör. Ein Körperteil, das du bei mir selten benutzt.",And the ear stands for a hearing. A body part you rarely use with me.
 W2_HINT_PIX_0231,"Mann, Katze, Pharao, Ohr. Du dienst der Katze und bittest um Gehör. Ich habe nichts gegen diesen Satz.","Man, cat, pharaoh, ear. You serve the cat and ask for an audience. I have nothing against that sentence."
 W2_HINT_PIX_0212,"Der Hofkater will drei Dinge sehen: Opfergabe, Gefolge, Wunder. Er selbst hat zwei.","The court cat wants to see three things: offering, following, miracle. He himself has two."
@@ -4189,7 +4221,8 @@ W2_HINT_PIX_0311,"Schalter eins will, was Schalter zwei hat, und umgekehrt. Ein 
 W2_HINT_PIX_0311_2,"Lies einmal, was dort an der Wand hängt. Es hängt da nicht zur Zierde.",Do read what is hanging on the wall there. It is not there for decoration.
 W2_HINT_PIX_0321,Ein neues Rundschreiben gilt sofort. Und wer schreibt die Rundschreiben? Niemand weiß es.,A new circular takes effect immediately. And who writes the circulars? Nobody knows.
 W2_HINT_PIX_0321_2,Also kannst genauso gut du es sein.,So it might just as well be you.
-W2_HINT_PIX_0331,"Nimm ein Formular und den Kugelschreiber. Oder Papyrus vom Nil und Tinte vom Tintenfisch im Hafen. Verlang etwas, das es nicht gibt. Sie stempeln alles, nur damit du gehst.",Take a form and the ballpoint pen. Or papyrus from the Nile and ink from the squid at the harbour. Ask for something that does not exist. They will stamp anything just to make you leave.
+W2_HINT_PIX_0331,Nimm ein Formular und den Kugelschreiber. Oder Papyrus vom Nil und Tinte vom Tintenfisch im Hafen.,Take a form and the ballpoint pen. Or papyrus from the Nile and ink from the squid at the harbour.
+W2_HINT_PIX_0331_2,"Verlang etwas, das es nicht gibt. Sie stempeln alles, nur damit du gehst.",Ask for something that does not exist. They will stamp anything just to make you leave.
 W2_HINT_PIX_0312,"Die Beamten stempeln nur, was über allen Vorschriften steht.",The officials only stamp what stands above all regulations.
 W2_HINT_PIX_0312_2,"Ein neues Rundschreiben zum Beispiel. Oder einen Brief, den keiner versteht.","A new circular, for example. Or a letter nobody understands."
 W2_HINT_PIX_0322,"Ein Rundschreiben schreibst du selbst. Einen unverständlichen Brief schreibt dir die Sphinx, wenn du ihr Rätsel geschafft hast.",A circular you write yourself. An incomprehensible letter the Sphinx will write you once you have cracked her riddle.
@@ -4204,7 +4237,8 @@ W2_HINT_PIX_0510,"Krone und Barren wiegen gleich viel, die Waage sagt also nicht
 W2_HINT_PIX_0510_2,"Aber Archimedes ärgert sich jedes Mal, wenn die Wanne überläuft. Was glaubst du, warum?",But Archimedes gets annoyed every time the tub overflows. Why do you think that is?
 W2_HINT_PIX_0520,"Gleich schwer, aber was größer ist, macht mehr nass.","Same weight, but whatever is bigger spills more water."
 W2_HINT_PIX_0520_2,"Miss mit dem Becher, wie viel Wasser überläuft. Ich sehe dir dabei zu, aus sicherer Entfernung.","Measure with the cup how much water overflows. I shall watch you, from a safe distance."
-W2_HINT_PIX_0530,"Krone in die Wanne, Becher dran. Barren in die Wanne, Becher dran. Mehr Wasser bei der Krone heißt: gefälscht. Dann sag es ihm. Er rennt dann. Nackt.","Crown in the bath, cup underneath. Bar in the bath, cup underneath. More water with the crown means: fake. Then tell him. He will run off. Naked."
+W2_HINT_PIX_0530,"Krone in die Wanne, Becher dran. Barren in die Wanne, Becher dran.","Crown in the bath, cup underneath. Bar in the bath, cup underneath."
+W2_HINT_PIX_0530_2,Mehr Wasser bei der Krone heißt: gefälscht. Dann sag es ihm. Er rennt dann. Nackt.,More water with the crown means: fake. Then tell him. He will run off. Naked.
 W2_HINT_PIX_0611,"Eine Sandale hängt oben auf der Säule, und die Menge hält sie für heilig.","A sandal hangs at the top of the column, and the crowd thinks it is holy."
 W2_HINT_PIX_0611_2,Du kannst nicht klettern. Ich schon. Ich sage das ohne jeden Hochmut.,You cannot climb. I can. I say that without any arrogance.
 W2_HINT_PIX_0621,"Wechsel zu mir, Säule hoch, Sandale runter. Dann ziehst du sie an. Dann bist du heilig. Es wird nicht lange halten.","Switch to me, up the column, sandal down. Then you put it on. Then you are holy. It will not last long."
@@ -4213,7 +4247,8 @@ W2_HINT_PIX_0612,"Die Wedler wollen reife Feigen, und du hast einen Setzling.","
 W2_HINT_PIX_0612_2,"Dazwischen liegen Jahre. Oder, wenn man es geschickt anstellt, eine Fährfahrt.","In between lie years. Or, if one goes about it cleverly, a ferry ride."
 W2_HINT_PIX_0622,"Flussabwärts wird alles älter, auch Pflanzen im Topf. Das steht auf der Tafel.","Downstream everything gets older, plants in pots too. It says so on the board."
 W2_HINT_PIX_0622_2,Und Syrakus liegt flussabwärts.,And Syracuse is downstream.
-W2_HINT_PIX_0632,"Fahr den Setzling nach Syrakus, pflück die Feigen vom Baum, fahr zurück. Gepflücktes altert nicht mehr. Gib den Wedlern die Feigen. Nicht mir. Leider.","Take the sapling to Syracuse, pick the figs off the tree, ride back. Picked fruit does not age any more. Give the figs to the fanners. Not to me. Sadly."
+W2_HINT_PIX_0632,"Fahr den Setzling nach Syrakus, pflück die Feigen vom Baum, fahr zurück.","Take the sapling to Syracuse, pick the figs off the tree, ride back."
+W2_HINT_PIX_0632_2,Gepflücktes altert nicht mehr. Gib den Wedlern die Feigen. Nicht mir. Leider.,Picked fruit does not age any more. Give the figs to the fanners. Not to me. Sadly.
 W2_HINT_PIX_0710,"Vier Verdächtige, je zwei Aussagen, und jeder lügt genau einmal.","Four suspects, two statements each, and everyone lies exactly once."
 W2_HINT_PIX_0710_2,"Schreib alles auf, und streich dann durch, was nicht aufgeht. So mache ich es mit meinen Feinden.","Write everything down, and then cross out what does not add up. That is what I do with my enemies."
 W2_HINT_PIX_0720,Prüf jeden als Dieb: Stimmt dann bei jedem genau eine Aussage?,Test each one as the thief: does exactly one statement each come out true?
@@ -4223,12 +4258,14 @@ W2_HINT_PIX_0810,"Die Sphinx will ein Rätsel, das sie nicht lösen kann. Sie ke
 W2_HINT_PIX_0810_2,"Du dagegen trägst Dinge aus deiner Zeit mit dir herum. Ziemlich nutzlose Dinge, aber immerhin.","You, on the other hand, carry things from your time around with you. Fairly useless things, but still."
 W2_HINT_PIX_0820,"Wähl ein Wunderding und drei Hinweise aus dem Notizbuch, die nur darauf passen.",Pick a miracle thing and three clues from the notebook that fit only that thing.
 W2_HINT_PIX_0820_2,"Die Hinweise sammelst du, wenn du deine Sachen ansiehst oder Leute damit überraschst.",You collect the clues by looking at your things or surprising people with them.
-W2_HINT_PIX_0830,"Zum Handy: klingelt, leuchtet, drei Prozent. Zum Kaugummi: nie alle, klebt, Sonne. Zum Stift: ohne Tintenfass, klickt, blau. Drei, die zusammengehören.","For the phone: rings, glows, three percent. For the gum: never runs out, sticky, sun. For the pen: no inkwell, clicks, blue. Three that belong together."
+W2_HINT_PIX_0830,"Zum Handy: klingelt, leuchtet, drei Prozent. Zum Kaugummi: nie alle, klebt, Sonne.","For the phone: rings, glows, three percent. For the gum: never runs out, sticky, sun."
+W2_HINT_PIX_0830_2,"Zum Stift: ohne Tintenfass, klickt, blau. Drei, die zusammengehören.","For the pen: no inkwell, clicks, blue. Three that belong together."
 W2_HINT_PIX_0910,"Cicero redet, und du brauchst Antworten. Die Rolle hat drei, der Rest fehlt noch.","Cicero talks, and you need answers. The scroll has three, the rest are still missing."
 W2_HINT_PIX_0910_2,Auf der Agora reden alle. Hör einfach mal zu. Das wäre auch für mich eine schöne Abwechslung.,At the agora everybody talks. Just listen for once. It would make a nice change for me too.
 W2_HINT_PIX_0920,"Die Griechen schimpfen über die Römer, und der Mann in der Tonne schimpft über alle.","The Greeks rant about the Romans, and the man in the barrel rants about everyone."
 W2_HINT_PIX_0920_2,"Einer von uns beiden passt in diese Tonne. Rate, wer.",One of us two fits into that barrel. Guess which.
-W2_HINT_PIX_0930,"Rede mit den Griechen in der Menge, dann wechsel zu mir und schick mich in die Tonne. Sieben Konter, fünf Beleidigungen. Das reicht sogar für dich.","Talk to the Greeks in the crowd, then switch to me and send me into the barrel. Seven comebacks, five insults. That is enough even for you."
+W2_HINT_PIX_0930,"Rede mit den Griechen in der Menge, dann wechsel zu mir und schick mich in die Tonne.","Talk to the Greeks in the crowd, then switch to me and send me into the barrel."
+W2_HINT_PIX_0930_2,"Sieben Konter, fünf Beleidigungen. Das reicht sogar für dich.","Seven comebacks, five insults. That is enough even for you."
 W2_HINT_PIX_1011,"Cicero will ein Grab, aber Archimedes lebt. Und Archimedes will sein Grab gern selbst entwerfen.","Cicero wants a grave, but Archimedes is alive. And Archimedes would like to design his grave himself."
 W2_HINT_PIX_1011_2,Frag ihn. Er wird empfindlich reagieren. Frag ihn trotzdem.,Ask him. He will be touchy. Ask him anyway.
 W2_HINT_PIX_1021,Mit dem Entwurf zu den Pyramiden-Arbeitern im Nil-Delta. Ohne Entwurf liefern sie Schotter.,Take the design to the pyramid workers in the Nile delta. Without a design they deliver gravel.
@@ -4238,7 +4275,8 @@ W2_HINT_PIX_1012,"Hundertsiebenunddreißig Jahre, nicht eins jünger. Stein alte
 W2_HINT_PIX_1012_2,Die Tafel nennt die Jahre für jede Strecke. Rechne. Ich warte so lange.,The board gives the years for each stretch. Do the maths. I shall wait.
 W2_HINT_PIX_1022,"Ägypten bis Olympia hundertzwölf, Olympia bis Syrakus fünfundzwanzig. Zusammen? Genau.","Egypt to Olympia a hundred and twelve, Olympia to Syracuse twenty-five. Together? Exactly."
 W2_HINT_PIX_1022_2,Der Stein muss also den ganzen Fluss hinunter.,So the stone has to go all the way down the river.
-W2_HINT_PIX_1032,"Stein am Nil meißeln lassen, ohne Umweg bis Syrakus fahren, auf den Sockel am Grabhügel stellen. Cicero findet ihn. Archimedes steht daneben. Ich auch.","Have the stone carved at the Nile, ride straight through to Syracuse, put it on the plinth at the burial mound. Cicero finds it. Archimedes stands next to it. So do I."
+W2_HINT_PIX_1032,"Stein am Nil meißeln lassen, nach Syrakus fahren, auf den Sockel am Grabhügel stellen.","Have the stone carved at the Nile, ride to Syracuse, put it on the plinth at the burial mound."
+W2_HINT_PIX_1032_2,Cicero findet ihn. Archimedes steht daneben. Ich auch.,Cicero finds it. Archimedes stands next to it. So do I.
 W2_HINT_PIX_1111,"Der Zeremonienmeister hat dir die Ordnung genannt. Einladungen zuerst, der Spiegel braucht Mittag, die Rede braucht Leute.","The Master of Ceremonies told you the order. Invitations first, the mirror needs midday, the speech needs people."
 W2_HINT_PIX_1111_2,"Und der Gott kommt zuletzt, junger Mann. Der Gott bin ich.","And the god comes last, young man. The god is me."
 W2_HINT_PIX_1121,"Über dem zweiten Feld ist eine Sonne, also gehört der Spiegel dorthin.","There is a sun over the second field, so that is where the mirror goes."

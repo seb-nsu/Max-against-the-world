@@ -142,22 +142,22 @@ walk_to_point = Vector2(0, 140)
 interaction_polygon = PackedVector2Array(-30, -30, 30, -30, 30, 30, -30, 30)
 
 [node name="AusgangHafen" parent="Hotspots" unique_id=2076176267 instance=ExtResource("22_gw4fb")]
-position = Vector2(620, 160)
+position = Vector2(615, 160)
 description = "UI_OBJ_AUSGANG_HAFEN"
 baseline = 120
-walk_to_point = Vector2(-10, 140)
+walk_to_point = Vector2(-5, 140)
 cursor = 9
-interaction_polygon = PackedVector2Array(-20, -120, 20, -120, 20, 120, -20, 120)
+interaction_polygon = PackedVector2Array(-25, -120, 25, -120, 25, 120, -25, 120)
 
 [node name="Regions" type="Node2D" parent="." unique_id=557667762]
 
 [node name="Markers" type="Node2D" parent="." unique_id=1984845252]
 
 [node name="Start" parent="Markers" unique_id=871548643 instance=ExtResource("23_bjml8")]
-position = Vector2(590, 310)
+position = Vector2(600, 330)
 
 [node name="VonHafenSyrakus" parent="Markers" unique_id=758655716 instance=ExtResource("24_t4djd")]
-position = Vector2(590, 310)
+position = Vector2(600, 330)
 
 [node name="Characters" type="Node2D" parent="." unique_id=911311707]
 
@@ -165,4 +165,4 @@ position = Vector2(590, 310)
 position = Vector2(300, 300)
 
 [node name="CharacterHieron *" parent="Characters" unique_id=1474137787 instance=ExtResource("26_ufmie")]
-position = Vector2(520, 312)
+position = Vector2(110, 345)

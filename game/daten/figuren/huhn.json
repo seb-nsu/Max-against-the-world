@@ -1,7 +1,7 @@
 {
  "bild": [
-  42,
-  37
+  48,
+  48
  ],
  "animationen": {
   "idle": {
@@ -43,6 +43,12 @@
     2,
     1
    ]
+  },
+  "springen": {
+   "von": 15,
+   "bilder": 7,
+   "ms": 90,
+   "schleife": false
   }
  }
 }

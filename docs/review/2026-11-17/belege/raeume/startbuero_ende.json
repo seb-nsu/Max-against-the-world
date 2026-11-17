@@ -1,0 +1,609 @@
+{
+  "bauplan_laufbereich": [
+    [
+      110.0,
+      218.0
+    ],
+    [
+      460.0,
+      218.0
+    ],
+    [
+      480.0,
+      250.0
+    ],
+    [
+      632.0,
+      280.0
+    ],
+    [
+      632.0,
+      356.0
+    ],
+    [
+      8.0,
+      356.0
+    ],
+    [
+      8.0,
+      285.0
+    ],
+    [
+      110.0,
+      285.0
+    ]
+  ],
+  "breite": 640,
+  "figuren": [
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "eindoesen",
+        "gaehnen",
+        "idle",
+        "talk",
+        "talk_alt"
+      ],
+      "baseline": 0,
+      "name": "Beamter1",
+      "poly": [
+        [
+          239,
+          95
+        ],
+        [
+          271,
+          95
+        ],
+        [
+          271,
+          213
+        ],
+        [
+          239,
+          213
+        ]
+      ],
+      "pos": [
+        255.0,
+        213.0
+      ],
+      "rect": [
+        217,
+        93,
+        293,
+        213
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.800000011920929,
+        0.800000011920929
+      ],
+      "variante": "",
+      "walk_speed": 120.0,
+      "z": 0
+    },
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "brille_putzen",
+        "haare_richten",
+        "idle",
+        "stempel_anhauchen",
+        "stempeln",
+        "talk",
+        "talk_alt"
+      ],
+      "baseline": 0,
+      "name": "Beamter2",
+      "poly": [
+        [
+          372,
+          57
+        ],
+        [
+          412,
+          57
+        ],
+        [
+          412,
+          214
+        ],
+        [
+          372,
+          214
+        ]
+      ],
+      "pos": [
+        392.0,
+        214.0
+      ],
+      "rect": [
+        328,
+        55,
+        456,
+        214
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.800000011920929,
+        0.800000011920929
+      ],
+      "variante": "",
+      "walk_speed": 120.0,
+      "z": 0
+    },
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "aufheben",
+        "barfuss",
+        "benutzen",
+        "bohne",
+        "diskus",
+        "fallen",
+        "gaehnen",
+        "gehen_hinten",
+        "gehen_vorn",
+        "heisser_sand",
+        "hinsetzen",
+        "idle",
+        "katapult",
+        "kochloeffel",
+        "kopf_kratzen",
+        "melken",
+        "schulterzucken",
+        "speer",
+        "talk",
+        "talk_alt",
+        "treppe_walk",
+        "vom_boden_aufstehen",
+        "vom_sofa_aufstehen",
+        "wackeln",
+        "walk",
+        "walk_alt",
+        "walk_d",
+        "walk_l",
+        "walk_r",
+        "walk_u",
+        "wenden",
+        "zeigen"
+      ],
+      "baseline": 0,
+      "name": "Max",
+      "poly": [
+        [
+          90,
+          90
+        ],
+        [
+          130,
+          90
+        ],
+        [
+          130,
+          250
+        ],
+        [
+          90,
+          250
+        ]
+      ],
+      "pos": [
+        110.0,
+        250.0
+      ],
+      "rect": [
+        -8,
+        87,
+        228,
+        250
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.846376836299896,
+        0.846376836299896
+      ],
+      "variante": "",
+      "walk_speed": 150.0,
+      "z": 0
+    },
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "aufstehen",
+        "aufwachen",
+        "fauchen",
+        "gehen_hinten",
+        "gehen_vorn",
+        "haare",
+        "hinlegen",
+        "idle",
+        "minka_umgarnen",
+        "ohrfeige",
+        "putzen",
+        "schlafen",
+        "schnuppern",
+        "schwanz_zucken",
+        "springen",
+        "stehen",
+        "talk",
+        "talk_alt",
+        "tragen",
+        "vom_schrank_fallen",
+        "walk",
+        "walk_d",
+        "walk_l",
+        "walk_r",
+        "walk_u"
+      ],
+      "baseline": 0,
+      "name": "Pixel",
+      "poly": [
+        [
+          121,
+          216
+        ],
+        [
+          189,
+          216
+        ],
+        [
+          189,
+          250
+        ],
+        [
+          121,
+          250
+        ]
+      ],
+      "pos": [
+        155.0,
+        250.0
+      ],
+      "rect": [
+        102,
+        163,
+        208,
+        250
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.846376836299896,
+        0.846376836299896
+      ],
+      "variante": "",
+      "walk_speed": 160.0,
+      "z": 0
+    }
+  ],
+  "hotspots": [
+    {
+      "baseline": 120,
+      "klickbar": true,
+      "name": "Formularberg",
+      "poly": [
+        [
+          460,
+          30
+        ],
+        [
+          640,
+          30
+        ],
+        [
+          640,
+          270
+        ],
+        [
+          460,
+          270
+        ]
+      ],
+      "pos": [
+        550.0,
+        150.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_FORMULARBERG",
+      "walk_to": [
+        -30.0,
+        140.0
+      ]
+    },
+    {
+      "baseline": 10,
+      "klickbar": true,
+      "name": "Wachstafeln",
+      "poly": [
+        [
+          365,
+          140
+        ],
+        [
+          405,
+          140
+        ],
+        [
+          405,
+          160
+        ],
+        [
+          365,
+          160
+        ]
+      ],
+      "pos": [
+        385.0,
+        150.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_WACHSTAFELN",
+      "walk_to": [
+        5.0,
+        90.0
+      ]
+    },
+    {
+      "baseline": 22,
+      "klickbar": true,
+      "name": "Aushang",
+      "poly": [
+        [
+          150,
+          80
+        ],
+        [
+          185,
+          80
+        ],
+        [
+          185,
+          125
+        ],
+        [
+          150,
+          125
+        ]
+      ],
+      "pos": [
+        167.5,
+        102.5
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_AUSHANG",
+      "walk_to": [
+        2.5,
+        137.5
+      ]
+    },
+    {
+      "baseline": 60,
+      "klickbar": true,
+      "name": "BankMitWartenden",
+      "poly": [
+        [
+          0,
+          160
+        ],
+        [
+          110,
+          160
+        ],
+        [
+          110,
+          280
+        ],
+        [
+          0,
+          280
+        ]
+      ],
+      "pos": [
+        55.0,
+        220.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_BANK_MIT_WARTENDEN",
+      "walk_to": [
+        75.0,
+        80.0
+      ]
+    },
+    {
+      "baseline": 50,
+      "klickbar": true,
+      "name": "Staub",
+      "poly": [
+        [
+          200,
+          0
+        ],
+        [
+          440,
+          0
+        ],
+        [
+          440,
+          100
+        ],
+        [
+          200,
+          100
+        ]
+      ],
+      "pos": [
+        320.0,
+        50.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_STAUB",
+      "walk_to": [
+        0.0,
+        210.0
+      ]
+    },
+    {
+      "baseline": 87,
+      "klickbar": true,
+      "name": "AusgangAgora",
+      "poly": [
+        [
+          55,
+          40
+        ],
+        [
+          120,
+          40
+        ],
+        [
+          120,
+          215
+        ],
+        [
+          55,
+          215
+        ]
+      ],
+      "pos": [
+        87.5,
+        127.5
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_AUSGANG_AGORA",
+      "walk_to": [
+        12.5,
+        112.5
+      ]
+    }
+  ],
+  "kamera_max": [
+    320.0,
+    180.0
+  ],
+  "laufbereiche": [
+    {
+      "name": "Boden",
+      "polys": [
+        [
+          [
+            110,
+            218
+          ],
+          [
+            460,
+            218
+          ],
+          [
+            480,
+            250
+          ],
+          [
+            632,
+            280
+          ],
+          [
+            632,
+            356
+          ],
+          [
+            8,
+            356
+          ],
+          [
+            8,
+            285
+          ],
+          [
+            110,
+            285
+          ]
+        ]
+      ]
+    }
+  ],
+  "marker": {
+    "Hermes": [
+      220.0,
+      290.0
+    ],
+    "Start": [
+      110.0,
+      250.0
+    ],
+    "VonAgora": [
+      110.0,
+      250.0
+    ]
+  },
+  "modus": "ende",
+  "props": [
+    {
+      "baseline": -180,
+      "klickbar": false,
+      "name": "Background",
+      "poly": [],
+      "pos": [
+        320.0,
+        0.0
+      ],
+      "rect": [
+        0,
+        0,
+        640,
+        360
+      ],
+      "sichtbar": true,
+      "text": "UI_RAUM_STARTBUERO",
+      "walk_to": [
+        0.0,
+        180.0
+      ],
+      "z": -1
+    },
+    {
+      "baseline": 10,
+      "klickbar": true,
+      "name": "LeeresFormular",
+      "poly": [
+        [
+          570,
+          255
+        ],
+        [
+          600,
+          255
+        ],
+        [
+          600,
+          275
+        ],
+        [
+          570,
+          275
+        ]
+      ],
+      "pos": [
+        585.0,
+        275.0
+      ],
+      "rect": [
+        557,
+        250,
+        613,
+        280
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_LEERES_FORMULAR",
+      "walk_to": [
+        -25.0,
+        25.0
+      ],
+      "z": 0
+    }
+  ],
+  "raum": "startbuero",
+  "skala": null,
+  "tiefe": 0.8,
+  "welt": "welt-2"
+}

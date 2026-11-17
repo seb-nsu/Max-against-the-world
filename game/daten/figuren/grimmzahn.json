@@ -10,12 +10,6 @@
    "ms": 320,
    "schleife": true
   },
-  "talk_alt": {
-   "von": 4,
-   "bilder": 4,
-   "ms": 150,
-   "schleife": true
-  },
   "walk": {
    "von": 8,
    "bilder": 8,
@@ -47,7 +41,7 @@
     2
    ]
   },
-  "talk": {
+  "talk_geste": {
    "von": 19,
    "bilder": 5,
    "ms": 110,
@@ -75,6 +69,12 @@
     4,
     4
    ]
+  },
+  "talk": {
+   "von": 4,
+   "bilder": 4,
+   "ms": 150,
+   "schleife": true
   }
  }
 }

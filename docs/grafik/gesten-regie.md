@@ -208,6 +208,8 @@
 
 ## Weltenübergreifend: Max und Pixel
 
+**Regel für Max' Redegesten (Sebastian, 17. November 2026, aus dem Review):** Max spricht in fast jeder zweiten Zeile. Beim normalen Reden bewegt er nur Mund und Kopf (talk), keine Geste. Gesten bekommt er gezielt: bei Pointen, Ärger, Staunen und wenn er auf etwas zeigt, grob jede fünfte Zeile. Beim Ansehen von Gegenständen meist keine. Neue Einträge in der Tabelle ZEILE in gesten_einsatz.gd folgen dieser Regel; bestehende werden beim nächsten Durchgang daran gemessen.
+
 | Figur (id) | Animation (JSON-Name) | Dauer (Bilder × ms, Schleife/einmalig) | Wann | Datei für den Aufruf | Art des Aufrufs | Bemerkung | Stand |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | max | gehen_vorn | 4 × 110 ms = 0,4 s, Schleife | Jeder fast senkrechte Weg auf den Betrachter zu, in allen Räumen mit Tiefe | `game/skripte/objekte/cq_figur.gd`, `grafik_laden()` | Als `walk_d` (dazu `walk_r` und `walk_l` als Kopie von `walk`) | Nur 4 Bilder gegen 8 im seitlichen Gang; prüfen, ob es neben `walk` ruckelt. | eingebunden (`cq_figur.gd:grafik_laden`, als `walk_d`; `walk_r`, `walk_l` als Kopie von `walk`) |

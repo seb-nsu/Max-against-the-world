@@ -1,0 +1,424 @@
+{
+  "bauplan_laufbereich": [
+    [
+      50.0,
+      359.0
+    ],
+    [
+      80.0,
+      300.0
+    ],
+    [
+      120.0,
+      280.0
+    ],
+    [
+      240.0,
+      276.0
+    ],
+    [
+      290.0,
+      240.0
+    ],
+    [
+      540.0,
+      238.0
+    ],
+    [
+      600.0,
+      300.0
+    ],
+    [
+      639.0,
+      330.0
+    ],
+    [
+      639.0,
+      359.0
+    ]
+  ],
+  "breite": 640,
+  "figuren": [
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "aufheben",
+        "barfuss",
+        "benutzen",
+        "bohne",
+        "diskus",
+        "fallen",
+        "gaehnen",
+        "gehen_hinten",
+        "gehen_vorn",
+        "heisser_sand",
+        "hinsetzen",
+        "idle",
+        "katapult",
+        "kochloeffel",
+        "kopf_kratzen",
+        "melken",
+        "schulterzucken",
+        "speer",
+        "talk",
+        "talk_alt",
+        "treppe_walk",
+        "vom_boden_aufstehen",
+        "vom_sofa_aufstehen",
+        "wackeln",
+        "walk",
+        "walk_alt",
+        "walk_d",
+        "walk_l",
+        "walk_r",
+        "walk_u",
+        "wenden",
+        "zeigen"
+      ],
+      "baseline": 0,
+      "name": "Max",
+      "poly": [
+        [
+          89,
+          134
+        ],
+        [
+          131,
+          134
+        ],
+        [
+          131,
+          300
+        ],
+        [
+          89,
+          300
+        ]
+      ],
+      "pos": [
+        110.0,
+        300.0
+      ],
+      "rect": [
+        -13,
+        131,
+        233,
+        300
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.878099203109741,
+        0.878099203109741
+      ],
+      "variante": "",
+      "walk_speed": 150.0,
+      "z": 0
+    },
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "aufstehen",
+        "aufwachen",
+        "fauchen",
+        "gehen_hinten",
+        "gehen_vorn",
+        "haare",
+        "hinlegen",
+        "idle",
+        "minka_umgarnen",
+        "ohrfeige",
+        "putzen",
+        "schlafen",
+        "schnuppern",
+        "schwanz_zucken",
+        "springen",
+        "stehen",
+        "talk",
+        "talk_alt",
+        "tragen",
+        "vom_schrank_fallen",
+        "walk",
+        "walk_d",
+        "walk_l",
+        "walk_r",
+        "walk_u"
+      ],
+      "baseline": 0,
+      "name": "Pixel",
+      "poly": [
+        [
+          119,
+          265
+        ],
+        [
+          191,
+          265
+        ],
+        [
+          191,
+          300
+        ],
+        [
+          119,
+          300
+        ]
+      ],
+      "pos": [
+        155.0,
+        300.0
+      ],
+      "rect": [
+        100,
+        210,
+        210,
+        300
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.878099203109741,
+        0.878099203109741
+      ],
+      "variante": "",
+      "walk_speed": 160.0,
+      "z": 0
+    },
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "idle",
+        "kiste_schwert",
+        "talk",
+        "talk_alt",
+        "walk"
+      ],
+      "baseline": 0,
+      "name": "Zeldina",
+      "poly": [
+        [
+          176,
+          133
+        ],
+        [
+          220,
+          133
+        ],
+        [
+          220,
+          308
+        ],
+        [
+          176,
+          308
+        ]
+      ],
+      "pos": [
+        198.0,
+        308.0
+      ],
+      "rect": [
+        114,
+        123,
+        282,
+        308
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.89462810754776,
+        0.89462810754776
+      ],
+      "variante": "",
+      "walk_speed": 180.0,
+      "z": 0
+    }
+  ],
+  "hotspots": [
+    {
+      "baseline": 27,
+      "klickbar": true,
+      "name": "Besen",
+      "poly": [
+        [
+          290,
+          246
+        ],
+        [
+          520,
+          246
+        ],
+        [
+          520,
+          300
+        ],
+        [
+          290,
+          300
+        ]
+      ],
+      "pos": [
+        405.0,
+        273.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_BESEN",
+      "walk_to": [
+        -5.0,
+        27.0
+      ]
+    },
+    {
+      "baseline": 70,
+      "klickbar": true,
+      "name": "Kram",
+      "poly": [
+        [
+          130,
+          140
+        ],
+        [
+          340,
+          140
+        ],
+        [
+          340,
+          280
+        ],
+        [
+          130,
+          280
+        ]
+      ],
+      "pos": [
+        235.0,
+        210.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_KRAM",
+      "walk_to": [
+        -5.0,
+        86.0
+      ]
+    },
+    {
+      "baseline": 107,
+      "klickbar": true,
+      "name": "AusgangTurmkeller",
+      "poly": [
+        [
+          20,
+          80
+        ],
+        [
+          82,
+          80
+        ],
+        [
+          82,
+          295
+        ],
+        [
+          20,
+          295
+        ]
+      ],
+      "pos": [
+        51.0,
+        187.5
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_AUSGANG_TURMKELLER",
+      "walk_to": [
+        49.0,
+        112.5
+      ]
+    }
+  ],
+  "kamera_max": [
+    320.0,
+    180.0
+  ],
+  "laufbereiche": [
+    {
+      "name": "Boden",
+      "polys": [
+        [
+          [
+            50,
+            359
+          ],
+          [
+            80,
+            300
+          ],
+          [
+            120,
+            280
+          ],
+          [
+            240,
+            276
+          ],
+          [
+            290,
+            240
+          ],
+          [
+            540,
+            238
+          ],
+          [
+            600,
+            300
+          ],
+          [
+            639,
+            330
+          ],
+          [
+            639,
+            359
+          ]
+        ]
+      ]
+    }
+  ],
+  "marker": {
+    "Start": [
+      110.0,
+      300.0
+    ],
+    "VonTurmkeller": [
+      110.0,
+      300.0
+    ]
+  },
+  "modus": "ende",
+  "props": [
+    {
+      "baseline": -180,
+      "klickbar": false,
+      "name": "Background",
+      "poly": [],
+      "pos": [
+        320.0,
+        0.0
+      ],
+      "rect": [
+        0,
+        0,
+        640,
+        360
+      ],
+      "sichtbar": true,
+      "text": "UI_RAUM_ABSTELLKAMMER_1",
+      "walk_to": [
+        0.0,
+        180.0
+      ],
+      "z": -1
+    }
+  ],
+  "raum": "abstellkammer_1",
+  "skala": null,
+  "tiefe": 0.75,
+  "welt": "welt-1"
+}

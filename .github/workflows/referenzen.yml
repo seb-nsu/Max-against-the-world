@@ -1,0 +1,45 @@
+name: Screenshot-Referenzen erneuern
+
+# Nimmt die Bildschirm-Referenzen (tests/bildschirm/referenz/) unter Linux neu auf und committet sie
+# auf den Zweig, von dem aus der Lauf gestartet wurde. Start: Actions → „Screenshot-Referenzen
+# erneuern“ → Run workflow → Zweig wählen. Ersetzt die Handarbeit „Referenz nur unter Linux
+# aufnehmen“ nach gewollten Grafik- und Layout-Änderungen (Review 17.11., WF-03).
+# Nie auf main starten: nur auf einem PR-Zweig, dort sieht man die Bildänderungen im Diff.
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  erneuern:
+    if: github.ref != 'refs/heads/main'
+    runs-on: ubuntu-latest
+    env:
+      GODOT_VERSION: "4.7.2"
+    steps:
+      - uses: actions/checkout@v4
+      - name: Godot laden, Xvfb und Mesa
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq xvfb libgl1-mesa-dri > /dev/null
+          curl -sSL -o godot.zip "https://github.com/godotengine/godot/releases/download/${GODOT_VERSION}-stable/Godot_v${GODOT_VERSION}-stable_linux.x86_64.zip"
+          unzip -q godot.zip
+          mv "Godot_v${GODOT_VERSION}-stable_linux.x86_64" godot
+      - name: Import (erster Import meldet Fehler, bis der Klassen-Cache steht)
+        run: ./godot --headless --path game --import || true
+      - name: Referenzen neu aufnehmen
+        run: |
+          timeout 900 xvfb-run -a -s "-screen 0 1280x720x24" ./godot --path game --rendering-driver opengl3 \
+            --resolution 640x360 -s res://tests/bildschirm_vergleich.gd -- --aktualisieren "$PWD/bildschirm"
+      - name: Geänderte Referenzen committen
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add tests/bildschirm/referenz
+          if git diff --cached --quiet; then
+            echo "Keine Referenz hat sich geändert."
+          else
+            git commit -m "Screenshot-Referenzen unter Linux neu aufgenommen (Workflow)"
+            git push
+          fi

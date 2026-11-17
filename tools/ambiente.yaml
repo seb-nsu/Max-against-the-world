@@ -307,11 +307,12 @@ W2-B29:
   toleranz: 70
   hoehe: 30
 W2-B31:
-  quelle: runde2/ambiente/W2-B31_wartende.png
+  quelle: runde2/ambiente/W2-B31_wartende_bart.png   # mit Bart bis zum Boden (Review 17.11., W2-31); Original: W2-B31_wartende.png
   ziel: wartende
   raum: w2_bg_startbuero_v01.png
   raster: 4x2
   hoehe: 116
+  bilder: [8, 2, 3, 7, 5, 6, 7, 8]   # Bild 1 und 4 haben einen kürzeren Bart: dafür Ruhebilder 7 und 8
 W2-B35:
   quelle: runde2/ambiente/W2-B35_ruderboot.png
   ziel: ruderboot

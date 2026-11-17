@@ -36,6 +36,7 @@ weitere_schalter:
   - W2_HEBEL_FEHLER          # Wert: Fehlversuche am Hebel (großzügige Wertung ab 2)
   - W2_WINKEL                # Wert: Winkelstufe des Wurfhebels (0 flach, 1 mittel, 2 steil)
   - W2_DISKUS_ERSATZ         # Rätsel 7 mit Ersatz gelöst (DISK 0340)
+  - W2_DISKUS_FALSCH_ANGEKLAGT  # Max hat einen Falschen beschuldigt; erst danach bietet Leonidas den Ersatz an (Review 17.11.)
   - W2_BAUSTEINE             # Wert: gefundene Rätsel-Bausteine der Sphinx
   - W2_KONTER                # Wert: gesammelte Konter 1 bis 7
   - W2_CICERO_FORDERUNG      # Cicero hat das Grab verlangt (AGOR 0260)

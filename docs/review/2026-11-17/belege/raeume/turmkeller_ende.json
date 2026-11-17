@@ -1,0 +1,647 @@
+{
+  "bauplan_laufbereich": [
+    [
+      0.0,
+      359.0
+    ],
+    [
+      0.0,
+      300.0
+    ],
+    [
+      70.0,
+      272.0
+    ],
+    [
+      130.0,
+      224.0
+    ],
+    [
+      620.0,
+      222.0
+    ],
+    [
+      639.0,
+      240.0
+    ],
+    [
+      639.0,
+      359.0
+    ]
+  ],
+  "breite": 640,
+  "figuren": [
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "aufheben",
+        "barfuss",
+        "benutzen",
+        "bohne",
+        "diskus",
+        "fallen",
+        "gaehnen",
+        "gehen_hinten",
+        "gehen_vorn",
+        "heisser_sand",
+        "hinsetzen",
+        "idle",
+        "katapult",
+        "kochloeffel",
+        "kopf_kratzen",
+        "melken",
+        "schulterzucken",
+        "speer",
+        "talk",
+        "talk_alt",
+        "treppe_walk",
+        "vom_boden_aufstehen",
+        "vom_sofa_aufstehen",
+        "wackeln",
+        "walk",
+        "walk_alt",
+        "walk_d",
+        "walk_l",
+        "walk_r",
+        "walk_u",
+        "wenden",
+        "zeigen"
+      ],
+      "baseline": 0,
+      "name": "Max",
+      "poly": [
+        [
+          91,
+          117
+        ],
+        [
+          129,
+          117
+        ],
+        [
+          129,
+          268
+        ],
+        [
+          91,
+          268
+        ]
+      ],
+      "pos": [
+        110.0,
+        268.0
+      ],
+      "rect": [
+        -2,
+        113,
+        222,
+        268
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.800729930400848,
+        0.800729930400848
+      ],
+      "variante": "",
+      "walk_speed": 150.0,
+      "z": 0
+    },
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "aufstehen",
+        "aufwachen",
+        "fauchen",
+        "gehen_hinten",
+        "gehen_vorn",
+        "haare",
+        "hinlegen",
+        "idle",
+        "minka_umgarnen",
+        "ohrfeige",
+        "putzen",
+        "schlafen",
+        "schnuppern",
+        "schwanz_zucken",
+        "springen",
+        "stehen",
+        "talk",
+        "talk_alt",
+        "tragen",
+        "vom_schrank_fallen",
+        "walk",
+        "walk_d",
+        "walk_l",
+        "walk_r",
+        "walk_u"
+      ],
+      "baseline": 0,
+      "name": "Pixel",
+      "poly": [
+        [
+          123,
+          236
+        ],
+        [
+          187,
+          236
+        ],
+        [
+          187,
+          268
+        ],
+        [
+          123,
+          268
+        ]
+      ],
+      "pos": [
+        155.0,
+        268.0
+      ],
+      "rect": [
+        105,
+        186,
+        205,
+        268
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.800729930400848,
+        0.800729930400848
+      ],
+      "variante": "",
+      "walk_speed": 160.0,
+      "z": 0
+    },
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "idle",
+        "kiste_schwert",
+        "talk",
+        "talk_alt",
+        "walk"
+      ],
+      "baseline": 0,
+      "name": "Zeldina",
+      "poly": [
+        [
+          178,
+          116
+        ],
+        [
+          218,
+          116
+        ],
+        [
+          218,
+          276
+        ],
+        [
+          178,
+          276
+        ]
+      ],
+      "pos": [
+        198.0,
+        276.0
+      ],
+      "rect": [
+        121,
+        107,
+        275,
+        276
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.818248152732849,
+        0.818248152732849
+      ],
+      "variante": "",
+      "walk_speed": 180.0,
+      "z": 0
+    }
+  ],
+  "hotspots": [
+    {
+      "baseline": 48,
+      "klickbar": true,
+      "name": "GeradeRoute",
+      "poly": [
+        [
+          130,
+          264
+        ],
+        [
+          240,
+          264
+        ],
+        [
+          240,
+          360
+        ],
+        [
+          130,
+          360
+        ]
+      ],
+      "pos": [
+        185.0,
+        312.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_GERADE_ROUTE",
+      "walk_to": [
+        5.0,
+        -12.0
+      ]
+    },
+    {
+      "baseline": 62,
+      "klickbar": true,
+      "name": "ZickzackRoute",
+      "poly": [
+        [
+          272,
+          236
+        ],
+        [
+          372,
+          236
+        ],
+        [
+          372,
+          360
+        ],
+        [
+          272,
+          360
+        ]
+      ],
+      "pos": [
+        322.0,
+        298.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_ZICKZACK_ROUTE",
+      "walk_to": [
+        0.0,
+        2.0
+      ]
+    },
+    {
+      "baseline": 40,
+      "klickbar": true,
+      "name": "SchleifenRoute",
+      "poly": [
+        [
+          380,
+          236
+        ],
+        [
+          575,
+          236
+        ],
+        [
+          575,
+          316
+        ],
+        [
+          380,
+          316
+        ]
+      ],
+      "pos": [
+        477.5,
+        276.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_SCHLEIFEN_ROUTE",
+      "walk_to": [
+        -7.5,
+        24.0
+      ]
+    },
+    {
+      "baseline": 7,
+      "klickbar": true,
+      "name": "Kreuzung1",
+      "poly": [
+        [
+          287,
+          247
+        ],
+        [
+          327,
+          247
+        ],
+        [
+          327,
+          267
+        ],
+        [
+          287,
+          267
+        ]
+      ],
+      "pos": [
+        307.0,
+        257.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_KREUZUNG_1",
+      "walk_to": [
+        -1.0,
+        13.0
+      ]
+    },
+    {
+      "baseline": 7,
+      "klickbar": true,
+      "name": "Kreuzung2",
+      "poly": [
+        [
+          397,
+          247
+        ],
+        [
+          437,
+          247
+        ],
+        [
+          437,
+          267
+        ],
+        [
+          397,
+          267
+        ]
+      ],
+      "pos": [
+        417.0,
+        257.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_KREUZUNG_2",
+      "walk_to": [
+        -1.0,
+        13.0
+      ]
+    },
+    {
+      "baseline": 6,
+      "klickbar": true,
+      "name": "Kreuzung3",
+      "poly": [
+        [
+          351,
+          231
+        ],
+        [
+          391,
+          231
+        ],
+        [
+          391,
+          249
+        ],
+        [
+          351,
+          249
+        ]
+      ],
+      "pos": [
+        371.0,
+        240.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_KREUZUNG_3",
+      "walk_to": [
+        -1.0,
+        16.0
+      ]
+    },
+    {
+      "baseline": 42,
+      "klickbar": true,
+      "name": "Besen",
+      "poly": [
+        [
+          255,
+          135
+        ],
+        [
+          445,
+          135
+        ],
+        [
+          445,
+          220
+        ],
+        [
+          255,
+          220
+        ]
+      ],
+      "pos": [
+        350.0,
+        177.5
+      ],
+      "sichtbar": false,
+      "text": "UI_OBJ_BESEN",
+      "walk_to": [
+        0.0,
+        62.5
+      ]
+    },
+    {
+      "baseline": 100,
+      "klickbar": true,
+      "name": "Kellertreppe",
+      "poly": [
+        [
+          20,
+          60
+        ],
+        [
+          130,
+          60
+        ],
+        [
+          130,
+          260
+        ],
+        [
+          20,
+          260
+        ]
+      ],
+      "pos": [
+        75.0,
+        160.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_KELLERTREPPE",
+      "walk_to": [
+        25.0,
+        106.0
+      ]
+    },
+    {
+      "baseline": 62,
+      "klickbar": true,
+      "name": "Kammertuer",
+      "poly": [
+        [
+          505,
+          100
+        ],
+        [
+          610,
+          100
+        ],
+        [
+          610,
+          225
+        ],
+        [
+          505,
+          225
+        ]
+      ],
+      "pos": [
+        557.5,
+        162.5
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_KAMMERTUER",
+      "walk_to": [
+        -1.5,
+        77.5
+      ]
+    },
+    {
+      "baseline": 107,
+      "klickbar": true,
+      "name": "TreppeNachOben",
+      "poly": [
+        [
+          280,
+          0
+        ],
+        [
+          365,
+          0
+        ],
+        [
+          365,
+          215
+        ],
+        [
+          280,
+          215
+        ]
+      ],
+      "pos": [
+        322.5,
+        107.5
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_TREPPE_NACH_OBEN",
+      "walk_to": [
+        2.5,
+        124.5
+      ]
+    }
+  ],
+  "kamera_max": [
+    320.0,
+    180.0
+  ],
+  "laufbereiche": [
+    {
+      "name": "Boden",
+      "polys": [
+        [
+          [
+            0,
+            359
+          ],
+          [
+            0,
+            300
+          ],
+          [
+            70,
+            272
+          ],
+          [
+            130,
+            224
+          ],
+          [
+            620,
+            222
+          ],
+          [
+            639,
+            240
+          ],
+          [
+            639,
+            359
+          ]
+        ]
+      ]
+    }
+  ],
+  "marker": {
+    "Start": [
+      110.0,
+      268.0
+    ],
+    "VonAbstellkammer1": [
+      556.0,
+      246.0
+    ],
+    "VonAbstellkammern": [
+      325.0,
+      240.0
+    ],
+    "VonBergwerk": [
+      110.0,
+      268.0
+    ]
+  },
+  "modus": "ende",
+  "props": [
+    {
+      "baseline": -180,
+      "klickbar": false,
+      "name": "Background",
+      "poly": [],
+      "pos": [
+        320.0,
+        0.0
+      ],
+      "rect": [
+        0,
+        0,
+        640,
+        360
+      ],
+      "sichtbar": true,
+      "text": "UI_RAUM_TURMKELLER",
+      "walk_to": [
+        0.0,
+        180.0
+      ],
+      "z": -1
+    }
+  ],
+  "raum": "turmkeller",
+  "skala": null,
+  "tiefe": 0.7,
+  "welt": "welt-1"
+}

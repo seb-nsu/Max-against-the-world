@@ -1,0 +1,1022 @@
+{
+  "bauplan_laufbereich": [
+    [
+      8.0,
+      270.0
+    ],
+    [
+      1272.0,
+      270.0
+    ],
+    [
+      1272.0,
+      356.0
+    ],
+    [
+      8.0,
+      356.0
+    ]
+  ],
+  "breite": 1280,
+  "figuren": [
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "armreif",
+        "idle",
+        "raeuspern",
+        "rede",
+        "talk",
+        "talk_alt",
+        "toga_zupfen"
+      ],
+      "baseline": 0,
+      "name": "Cicero",
+      "poly": [
+        [
+          741,
+          66
+        ],
+        [
+          783,
+          66
+        ],
+        [
+          783,
+          233
+        ],
+        [
+          741,
+          233
+        ]
+      ],
+      "pos": [
+        762.0,
+        233.0
+      ],
+      "rect": [
+        713,
+        63,
+        811,
+        233
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.850000023841858,
+        0.850000023841858
+      ],
+      "variante": "",
+      "walk_speed": 120.0,
+      "z": 0
+    },
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "idle",
+        "kritzeln",
+        "schreiben",
+        "tafel_glaetten",
+        "talk",
+        "talk_alt",
+        "umsehen"
+      ],
+      "baseline": 0,
+      "name": "Tiro",
+      "poly": [
+        [
+          820,
+          140
+        ],
+        [
+          860,
+          140
+        ],
+        [
+          860,
+          300
+        ],
+        [
+          820,
+          300
+        ]
+      ],
+      "pos": [
+        840.0,
+        300.0
+      ],
+      "rect": [
+        781,
+        138,
+        899,
+        300
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.902325570583344,
+        0.902325570583344
+      ],
+      "variante": "",
+      "walk_speed": 120.0,
+      "z": 0
+    },
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "hut_faecheln",
+        "idle",
+        "stirn_wischen",
+        "talk",
+        "talk_alt"
+      ],
+      "baseline": 0,
+      "name": "Tourist",
+      "poly": [
+        [
+          1018,
+          128
+        ],
+        [
+          1062,
+          128
+        ],
+        [
+          1062,
+          308
+        ],
+        [
+          1018,
+          308
+        ]
+      ],
+      "pos": [
+        1040.0,
+        308.0
+      ],
+      "rect": [
+        991,
+        126,
+        1089,
+        308
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.916279077529907,
+        0.916279077529907
+      ],
+      "variante": "",
+      "walk_speed": 120.0,
+      "z": 0
+    },
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "amphore",
+        "brille_putzen",
+        "faecheln_mustern",
+        "idle",
+        "talk",
+        "talk_alt"
+      ],
+      "baseline": 0,
+      "name": "Touristin",
+      "poly": [
+        [
+          1078,
+          135
+        ],
+        [
+          1122,
+          135
+        ],
+        [
+          1122,
+          308
+        ],
+        [
+          1078,
+          308
+        ]
+      ],
+      "pos": [
+        1100.0,
+        308.0
+      ],
+      "rect": [
+        1032,
+        133,
+        1168,
+        308
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.916279077529907,
+        0.916279077529907
+      ],
+      "variante": "",
+      "walk_speed": 120.0,
+      "z": 0
+    },
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "bart_kratzen",
+        "idle",
+        "laterne_putzen",
+        "laterne_spaehen",
+        "schimpfen",
+        "talk",
+        "talk_alt"
+      ],
+      "baseline": 0,
+      "name": "Philosoph",
+      "poly": [
+        [
+          462,
+          183
+        ],
+        [
+          498,
+          183
+        ],
+        [
+          498,
+          306
+        ],
+        [
+          462,
+          306
+        ]
+      ],
+      "pos": [
+        480.0,
+        306.0
+      ],
+      "rect": [
+        401,
+        180,
+        559,
+        306
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.912790715694427,
+        0.912790715694427
+      ],
+      "variante": "",
+      "walk_speed": 120.0,
+      "z": 0
+    },
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "abwehren",
+        "idle",
+        "schild_richten",
+        "seufzen",
+        "talk",
+        "talk_alt"
+      ],
+      "baseline": 0,
+      "name": "Brian",
+      "poly": [
+        [
+          568,
+          123
+        ],
+        [
+          612,
+          123
+        ],
+        [
+          612,
+          300
+        ],
+        [
+          568,
+          300
+        ]
+      ],
+      "pos": [
+        590.0,
+        300.0
+      ],
+      "rect": [
+        539,
+        120,
+        641,
+        300
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.902325570583344,
+        0.902325570583344
+      ],
+      "variante": "",
+      "walk_speed": 120.0,
+      "z": 0
+    },
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "idle",
+        "lyra",
+        "stimmen",
+        "talk",
+        "talk_alt"
+      ],
+      "baseline": 0,
+      "name": "Strassenmusiker",
+      "poly": [
+        [
+          933,
+          126
+        ],
+        [
+          977,
+          126
+        ],
+        [
+          977,
+          304
+        ],
+        [
+          933,
+          304
+        ]
+      ],
+      "pos": [
+        955.0,
+        304.0
+      ],
+      "rect": [
+        910,
+        130,
+        1000,
+        304
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.909302353858948,
+        0.909302353858948
+      ],
+      "variante": "",
+      "walk_speed": 120.0,
+      "z": 0
+    },
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "aufheben",
+        "barfuss",
+        "benutzen",
+        "bohne",
+        "diskus",
+        "fallen",
+        "gaehnen",
+        "gehen_hinten",
+        "gehen_vorn",
+        "heisser_sand",
+        "hinsetzen",
+        "idle",
+        "katapult",
+        "kochloeffel",
+        "kopf_kratzen",
+        "melken",
+        "schulterzucken",
+        "speer",
+        "talk",
+        "talk_alt",
+        "treppe_walk",
+        "vom_boden_aufstehen",
+        "vom_sofa_aufstehen",
+        "wackeln",
+        "walk",
+        "walk_alt",
+        "walk_d",
+        "walk_l",
+        "walk_r",
+        "walk_u",
+        "wenden",
+        "zeigen"
+      ],
+      "baseline": 0,
+      "name": "Max",
+      "poly": [
+        [
+          1193,
+          136
+        ],
+        [
+          1237,
+          136
+        ],
+        [
+          1237,
+          310
+        ],
+        [
+          1193,
+          310
+        ]
+      ],
+      "pos": [
+        1215.0,
+        310.0
+      ],
+      "rect": [
+        1086,
+        132,
+        1344,
+        310
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.919767439365387,
+        0.919767439365387
+      ],
+      "variante": "",
+      "walk_speed": 150.0,
+      "z": 0
+    },
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "aufstehen",
+        "aufwachen",
+        "fauchen",
+        "gehen_hinten",
+        "gehen_vorn",
+        "haare",
+        "hinlegen",
+        "idle",
+        "minka_umgarnen",
+        "ohrfeige",
+        "putzen",
+        "schlafen",
+        "schnuppern",
+        "schwanz_zucken",
+        "springen",
+        "stehen",
+        "talk",
+        "talk_alt",
+        "tragen",
+        "vom_schrank_fallen",
+        "walk",
+        "walk_d",
+        "walk_l",
+        "walk_r",
+        "walk_u"
+      ],
+      "baseline": 0,
+      "name": "Pixel",
+      "poly": [
+        [
+          1133,
+          273
+        ],
+        [
+          1207,
+          273
+        ],
+        [
+          1207,
+          310
+        ],
+        [
+          1133,
+          310
+        ]
+      ],
+      "pos": [
+        1170.0,
+        310.0
+      ],
+      "rect": [
+        1112,
+        215,
+        1228,
+        310
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.919767439365387,
+        0.919767439365387
+      ],
+      "variante": "",
+      "walk_speed": 160.0,
+      "z": 0
+    }
+  ],
+  "hotspots": [
+    {
+      "baseline": 80,
+      "klickbar": true,
+      "name": "Saeulenhalle",
+      "poly": [
+        [
+          345,
+          105
+        ],
+        [
+          610,
+          105
+        ],
+        [
+          610,
+          265
+        ],
+        [
+          345,
+          265
+        ]
+      ],
+      "pos": [
+        477.5,
+        185.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_SAEULENHALLE",
+      "walk_to": [
+        2.5,
+        115.0
+      ]
+    },
+    {
+      "baseline": 115,
+      "klickbar": true,
+      "name": "HoheSaeuleMitAdler",
+      "poly": [
+        [
+          880,
+          10
+        ],
+        [
+          920,
+          10
+        ],
+        [
+          920,
+          240
+        ],
+        [
+          880,
+          240
+        ]
+      ],
+      "pos": [
+        900.0,
+        125.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_HOHE_SAEULE_MIT_ADLER",
+      "walk_to": [
+        0.0,
+        180.0
+      ]
+    },
+    {
+      "baseline": 21,
+      "klickbar": true,
+      "name": "SandaleAufDerSaeule",
+      "poly": [
+        [
+          870,
+          0
+        ],
+        [
+          932,
+          0
+        ],
+        [
+          932,
+          42
+        ],
+        [
+          870,
+          42
+        ]
+      ],
+      "pos": [
+        901.0,
+        21.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_SANDALE_AUF_DER_SAEULE",
+      "walk_to": [
+        -1.0,
+        284.0
+      ]
+    },
+    {
+      "baseline": 15,
+      "klickbar": true,
+      "name": "Heuhaufen",
+      "poly": [
+        [
+          860,
+          250
+        ],
+        [
+          940,
+          250
+        ],
+        [
+          940,
+          280
+        ],
+        [
+          860,
+          280
+        ]
+      ],
+      "pos": [
+        900.0,
+        265.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_HEUHAUFEN",
+      "walk_to": [
+        0.0,
+        45.0
+      ]
+    },
+    {
+      "baseline": 77,
+      "klickbar": true,
+      "name": "Venusstatue",
+      "poly": [
+        [
+          255,
+          120
+        ],
+        [
+          315,
+          120
+        ],
+        [
+          315,
+          275
+        ],
+        [
+          255,
+          275
+        ]
+      ],
+      "pos": [
+        285.0,
+        197.5
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_VENUSSTATUE",
+      "walk_to": [
+        5.0,
+        102.5
+      ]
+    },
+    {
+      "baseline": 48,
+      "klickbar": true,
+      "name": "Rednerpult",
+      "poly": [
+        [
+          675,
+          175
+        ],
+        [
+          825,
+          175
+        ],
+        [
+          825,
+          272
+        ],
+        [
+          675,
+          272
+        ]
+      ],
+      "pos": [
+        750.0,
+        223.5
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_REDNERPULT",
+      "walk_to": [
+        0.0,
+        76.5
+      ]
+    },
+    {
+      "baseline": 52,
+      "klickbar": true,
+      "name": "Marktstaende",
+      "poly": [
+        [
+          935,
+          145
+        ],
+        [
+          1125,
+          145
+        ],
+        [
+          1125,
+          250
+        ],
+        [
+          935,
+          250
+        ]
+      ],
+      "pos": [
+        1030.0,
+        197.5
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_MARKTSTAENDE",
+      "walk_to": [
+        0.0,
+        107.5
+      ]
+    },
+    {
+      "baseline": 25,
+      "klickbar": true,
+      "name": "Tonne",
+      "poly": [
+        [
+          425,
+          258
+        ],
+        [
+          535,
+          258
+        ],
+        [
+          535,
+          308
+        ],
+        [
+          425,
+          308
+        ]
+      ],
+      "pos": [
+        480.0,
+        283.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_TONNE",
+      "walk_to": [
+        0.0,
+        39.0
+      ]
+    },
+    {
+      "baseline": 30,
+      "klickbar": true,
+      "name": "Menge",
+      "poly": [
+        [
+          600,
+          180
+        ],
+        [
+          940,
+          180
+        ],
+        [
+          940,
+          240
+        ],
+        [
+          600,
+          240
+        ]
+      ],
+      "pos": [
+        770.0,
+        210.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_MENGE",
+      "walk_to": [
+        0.0,
+        90.0
+      ]
+    },
+    {
+      "baseline": 22,
+      "klickbar": true,
+      "name": "LateinKritzelei",
+      "poly": [
+        [
+          1125,
+          160
+        ],
+        [
+          1185,
+          160
+        ],
+        [
+          1185,
+          205
+        ],
+        [
+          1125,
+          205
+        ]
+      ],
+      "pos": [
+        1155.0,
+        182.5
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_LATEIN_KRITZELEI",
+      "walk_to": [
+        -5.0,
+        117.5
+      ]
+    },
+    {
+      "baseline": 50,
+      "klickbar": true,
+      "name": "WegZumFaehrsteg",
+      "poly": [
+        [
+          1236,
+          180
+        ],
+        [
+          1280,
+          180
+        ],
+        [
+          1280,
+          280
+        ],
+        [
+          1236,
+          280
+        ]
+      ],
+      "pos": [
+        1258.0,
+        230.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_WEG_ZUM_FAEHRSTEG",
+      "walk_to": [
+        0.0,
+        75.0
+      ]
+    },
+    {
+      "baseline": 95,
+      "klickbar": true,
+      "name": "BogenZumStadion",
+      "poly": [
+        [
+          70,
+          80
+        ],
+        [
+          180,
+          80
+        ],
+        [
+          180,
+          270
+        ],
+        [
+          70,
+          270
+        ]
+      ],
+      "pos": [
+        125.0,
+        175.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_BOGEN_ZUM_STADION",
+      "walk_to": [
+        -5.0,
+        125.0
+      ]
+    },
+    {
+      "baseline": 42,
+      "klickbar": true,
+      "name": "TuerZumStartbuero",
+      "poly": [
+        [
+          395,
+          175
+        ],
+        [
+          437,
+          175
+        ],
+        [
+          437,
+          260
+        ],
+        [
+          395,
+          260
+        ]
+      ],
+      "pos": [
+        416.0,
+        217.5
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_TUER_ZUM_STARTBUERO",
+      "walk_to": [
+        0.0,
+        72.5
+      ]
+    }
+  ],
+  "kamera_max": [
+    960.0,
+    180.0
+  ],
+  "laufbereiche": [
+    {
+      "name": "Boden",
+      "polys": [
+        [
+          [
+            8,
+            270
+          ],
+          [
+            1272,
+            270
+          ],
+          [
+            1272,
+            356
+          ],
+          [
+            8,
+            356
+          ]
+        ]
+      ]
+    }
+  ],
+  "marker": {
+    "Abwurf": [
+      900.0,
+      315.0
+    ],
+    "Start": [
+      1215.0,
+      310.0
+    ],
+    "VonFaehrstegOlympia": [
+      1215.0,
+      310.0
+    ],
+    "VonStadion": [
+      120.0,
+      310.0
+    ],
+    "VonStartbuero": [
+      416.0,
+      300.0
+    ]
+  },
+  "modus": "anfang",
+  "props": [
+    {
+      "baseline": -180,
+      "klickbar": false,
+      "name": "Background",
+      "poly": [],
+      "pos": [
+        640.0,
+        0.0
+      ],
+      "rect": [
+        0,
+        0,
+        1280,
+        360
+      ],
+      "sichtbar": true,
+      "text": "UI_RAUM_AGORA",
+      "walk_to": [
+        0.0,
+        180.0
+      ],
+      "z": -1
+    }
+  ],
+  "raum": "agora",
+  "skala": null,
+  "tiefe": 0.85,
+  "welt": "welt-2"
+}

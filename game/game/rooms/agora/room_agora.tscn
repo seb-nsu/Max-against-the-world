@@ -120,12 +120,12 @@ walk_to_point = Vector2(-5, 117.5)
 interaction_polygon = PackedVector2Array(-30, -22.5, 30, -22.5, 30, 22.5, -30, 22.5)
 
 [node name="WegZumFaehrsteg" parent="Hotspots" unique_id=1077435345 instance=ExtResource("15_jwrnm")]
-position = Vector2(1258, 230)
+position = Vector2(1255, 230)
 description = "UI_OBJ_WEG_ZUM_FAEHRSTEG"
 baseline = 50
-walk_to_point = Vector2(0, 75)
+walk_to_point = Vector2(3, 75)
 cursor = 9
-interaction_polygon = PackedVector2Array(-22, -50, 22, -50, 22, 50, -22, 50)
+interaction_polygon = PackedVector2Array(-25, -50, 25, -50, 25, 50, -25, 50)
 
 [node name="BogenZumStadion" parent="Hotspots" unique_id=1481292112 instance=ExtResource("16_bj0uj")]
 position = Vector2(125, 175)
@@ -141,7 +141,7 @@ description = "UI_OBJ_TUER_ZUM_STARTBUERO"
 baseline = 42
 walk_to_point = Vector2(0, 72.5)
 cursor = 9
-interaction_polygon = PackedVector2Array(-21, -42.5, 21, -42.5, 21, 42.5, -21, 42.5)
+interaction_polygon = PackedVector2Array(-25, -42.5, 25, -42.5, 25, 42.5, -25, 42.5)
 
 [node name="Regions" type="Node2D" parent="." unique_id=467308595]
 

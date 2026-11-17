@@ -25,7 +25,6 @@ height = 360
 [node name="WalkableAreas" type="Node2D" parent="." unique_id=1266379386]
 
 [node name="Boden" parent="WalkableAreas" unique_id=387178585 instance=ExtResource("2_0lpsb")]
-interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(0, 240, 40, 238, 62, 290, 250, 298, 298, 215, 352, 215, 398, 298, 470, 300, 560, 290, 639, 278, 639, 359, 0, 359)])
 
 [node name="Props" type="Node2D" parent="." unique_id=133964875]
 
@@ -72,12 +71,12 @@ walk_to_point = Vector2(-17, 31)
 interaction_polygon = PackedVector2Array(-13, -7, 13, -7, 13, 7, -13, 7)
 
 [node name="AusgangTrollbruecke" parent="Hotspots" unique_id=287667428 instance=ExtResource("10_1qqkx")]
-position = Vector2(15, 195)
+position = Vector2(25, 195)
 description = "UI_RAUM_TROLLBRUECKE"
 baseline = 55
-walk_to_point = Vector2(0, 97)
+walk_to_point = Vector2(-10, 97)
 cursor = 9
-interaction_polygon = PackedVector2Array(-15, -55, 15, -55, 15, 55, -15, 55)
+interaction_polygon = PackedVector2Array(-25, -55, 25, -55, 25, 55, -25, 55)
 
 [node name="Regions" type="Node2D" parent="." unique_id=1075031856]
 

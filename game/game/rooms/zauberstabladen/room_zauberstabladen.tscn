@@ -28,7 +28,6 @@ height = 360
 [node name="WalkableAreas" type="Node2D" parent="." unique_id=724217345]
 
 [node name="Boden" parent="WalkableAreas" unique_id=1105084774 instance=ExtResource("2_7qgrv")]
-interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(0, 357, 0, 250, 175, 234, 255, 224, 400, 224, 470, 214, 580, 216, 600, 224, 639, 230, 639, 357)])
 
 [node name="Props" type="Node2D" parent="." unique_id=595822843]
 
@@ -38,11 +37,11 @@ texture = ExtResource("4_7qgrv")
 description = "UI_RAUM_ZAUBERSTABLADEN"
 
 [node name="Zahnstocher" parent="Props" unique_id=454319026 instance=ExtResource("5_plpgb")]
-position = Vector2(292.5, 146)
+position = Vector2(293, 146)
 texture = ExtResource("6_p04kq")
 description = "UI_OBJ_ZAHNSTOCHER"
-baseline = 6
-walk_to_point = Vector2(7.5, 99)
+baseline = 10
+walk_to_point = Vector2(7, 99)
 interaction_polygon = PackedVector2Array(-10, -10, 10, -10, 10, 10, -10, 10)
 
 [node name="Zollstock" parent="Props" unique_id=1917324114 instance=ExtResource("7_g6uus")]
@@ -92,12 +91,12 @@ walk_to_point = Vector2(0, 61.5)
 interaction_polygon = PackedVector2Array(-72, -38.5, 72, -38.5, 72, 38.5, -72, 38.5)
 
 [node name="AusgangDorfplatz" parent="Hotspots" unique_id=1735127126 instance=ExtResource("15_vwtng")]
-position = Vector2(616, 145)
+position = Vector2(615, 145)
 description = "UI_RAUM_DORFPLATZ"
 baseline = 80
-walk_to_point = Vector2(-11, 100)
+walk_to_point = Vector2(-10, 100)
 cursor = 9
-interaction_polygon = PackedVector2Array(-24, -80, 24, -80, 24, 80, -24, 80)
+interaction_polygon = PackedVector2Array(-25, -80, 25, -80, 25, 80, -25, 80)
 
 [node name="Regions" type="Node2D" parent="." unique_id=1697650294]
 

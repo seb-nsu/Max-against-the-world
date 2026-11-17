@@ -1,0 +1,88 @@
+{
+ "regie_fehlt": [],
+ "regie_fig_fehlt": [],
+ "tab_fehlt": [
+  [
+   [
+    "sobek",
+    "hut_zurechtruecken"
+   ],
+   [
+    "ZEILE W2_DUEL_SOB_0200 (mit)",
+    "WARTEN gesten_welt_2.gd"
+   ]
+  ],
+  [
+   [
+    "sobek",
+    "schwanz_wedeln"
+   ],
+   [
+    "RUHE gesten_welt_2.gd"
+   ]
+  ],
+  [
+   [
+    "sobek",
+    "gaehnen"
+   ],
+   [
+    "WARTEN gesten_welt_2.gd"
+   ]
+  ]
+ ],
+ "tab_fig_fehlt": [],
+ "code_fehlt": [
+  [
+   "game/rooms/taverne/room_taverne.gd",
+   145,
+   "laufen_zu",
+   "",
+   "Keller"
+  ],
+  [
+   "skripte/welt_2.gd",
+   390,
+   "_figur_laeuft",
+   "",
+   "Hermes"
+  ],
+  [
+   "skripte/welt_2.gd",
+   395,
+   "_figur_laeuft",
+   "",
+   "Hermes"
+  ],
+  [
+   "skripte/welt_2.gd",
+   939,
+   "_figur_laeuft",
+   "",
+   "Hermes"
+  ],
+  [
+   "skripte/welt_2.gd",
+   1111,
+   "_figur_laeuft",
+   "",
+   "Archimedes"
+  ]
+ ],
+ "doppelt": [
+  [
+   "sphinx_figur",
+   "idle",
+   "talk",
+   "gleicher Bildbereich"
+  ]
+ ],
+ "ersatz": [
+  "joggen",
+  "kriechen",
+  "laufen",
+  "weggehen",
+  "losrennen",
+  "heureka"
+ ]
+}

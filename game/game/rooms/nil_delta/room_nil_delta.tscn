@@ -100,12 +100,12 @@ baseline = 16
 walk_to_point = Vector2(0, 59)
 
 [node name="Sandweg" parent="Hotspots" unique_id=1360121635 instance=ExtResource("14_i0qh5")]
-position = Vector2(1258, 303)
+position = Vector2(1255, 303)
 description = "UI_OBJ_SANDWEG"
 baseline = 53
-walk_to_point = Vector2(4, 22)
+walk_to_point = Vector2(7, 22)
 cursor = 9
-interaction_polygon = PackedVector2Array(-22, -53, 22, -53, 22, 53, -22, 53)
+interaction_polygon = PackedVector2Array(-25, -53, 25, -53, 25, 53, -25, 53)
 
 [node name="Duenenpfad" parent="Hotspots" unique_id=752158869 instance=ExtResource("15_edtj6")]
 position = Vector2(1150, 155)
@@ -137,7 +137,7 @@ position = Vector2(485, 305)
 [node name="Characters" type="Node2D" parent="." unique_id=698263444]
 
 [node name="CharacterFaehrmann *" parent="Characters" unique_id=938438789 instance=ExtResource("21_5yu0x")]
-position = Vector2(170, 302)
+position = Vector2(235, 302)
 
 [node name="CharacterSobek *" parent="Characters" unique_id=1702667434 instance=ExtResource("22_jdeoi")]
 position = Vector2(312, 240)

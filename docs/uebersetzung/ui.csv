@@ -571,6 +571,7 @@ UI_W2_BAUSTEIN_SCHREIBT,„Es schreibt ohne Tintenfass“,"""It writes without a
 UI_W2_BAUSTEIN_KLICKT,"„Es klickt, wenn man nervös ist“","""It clicks when you're nervous"""
 UI_W2_BAUSTEIN_BLAU,„Es ist blau und hat trotzdem keine Laune“,"""It is blue and still not sad"""
 UI_W2_ANKLAGEN,Du warst es!,It was you!
+UI_W2_NOCHMAL,Was hast du noch mal gesagt?,What did you say again?
 UI_W2_HEBEL_ZIEHEN,Abspringen!,Launch!
 UI_W2_KORB_LEEREN,Korb ausräumen,Empty the basket
 UI_MS_HEBEL_TITEL,Archimedes' Hebel,Archimedes' Lever

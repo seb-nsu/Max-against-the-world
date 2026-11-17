@@ -24,7 +24,7 @@ height = 360
 [node name="WalkableAreas" type="Node2D" parent="." unique_id=593840019]
 
 [node name="Boden" parent="WalkableAreas" unique_id=2009631470 instance=ExtResource("2_16xyd")]
-interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(150, 262, 205, 228, 640, 216, 1230, 214, 1200, 246, 1080, 286, 960, 326, 860, 344, 600, 344, 330, 334, 180, 300)])
+interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(150, 262, 205, 228, 340, 224, 345, 262, 445, 262, 450, 220, 640, 216, 1230, 214, 1200, 246, 1080, 286, 960, 326, 860, 344, 600, 344, 330, 334, 180, 300)])
 
 [node name="Props" type="Node2D" parent="." unique_id=936847272]
 
@@ -83,10 +83,10 @@ interaction_polygon = PackedVector2Array(-65, -125, 65, -125, 65, 125, -65, 125)
 [node name="Markers" type="Node2D" parent="." unique_id=182767767]
 
 [node name="Start" parent="Markers" unique_id=217888118 instance=ExtResource("11_ksvbp")]
-position = Vector2(175, 270)
+position = Vector2(210, 270)
 
 [node name="VonDorfplatz" parent="Markers" unique_id=1910669962 instance=ExtResource("12_4h3ug")]
-position = Vector2(175, 270)
+position = Vector2(210, 270)
 
 [node name="Characters" type="Node2D" parent="." unique_id=2064000160]
 

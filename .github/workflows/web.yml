@@ -5,8 +5,12 @@ name: Web (GitHub Pages)
 # (https://seb-nsu.github.io/Max-against-the-world/). Er läuft ohne Threads und braucht deshalb
 # keine besonderen Server-Header. Einmalig nötig: Settings → Pages → Source „GitHub Actions“.
 
+# Erst nach grünem „Prüfen“ auf main (Review 17.11., WF-07: main war über einen Tag rot und die
+# Seite wurde trotzdem veröffentlicht).
 on:
-  push:
+  workflow_run:
+    workflows: ["Prüfen"]
+    types: [completed]
     branches: [main]
   workflow_dispatch:
 
@@ -22,11 +26,14 @@ concurrency:
 
 jobs:
   bauen:
+    if: github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
     env:
       GODOT_VERSION: "4.7.2"
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.workflow_run.head_sha || github.sha }}
 
       - name: Godot laden
         run: |
@@ -52,7 +59,9 @@ jobs:
           rm vorlagen.tpz
 
       - name: Build-Kennung (Commit)
-        run: sed -i "s|^config/features=|config/version=\"${GITHUB_SHA::8}\"\nconfig/features=|" game/project.godot
+        env:
+          BUILD_SHA: ${{ github.event.workflow_run.head_sha || github.sha }}
+        run: sed -i "s|^config/features=|config/version=\"${BUILD_SHA::8}\"\nconfig/features=|" game/project.godot
 
       - name: Import (erster Import meldet Fehler, bis der Klassen-Cache steht)
         run: ./godot --headless --path game --import || true

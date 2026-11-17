@@ -31,7 +31,6 @@ height = 360
 [node name="WalkableAreas" type="Node2D" parent="." unique_id=1541140012]
 
 [node name="Boden" parent="WalkableAreas" unique_id=1979980672 instance=ExtResource("2_ewqp7")]
-interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(0, 178, 120, 178, 152, 168, 430, 168, 470, 183, 530, 203, 639, 212, 639, 359, 450, 359, 432, 330, 410, 300, 400, 268, 470, 238, 525, 218, 445, 188, 160, 188, 125, 200, 150, 230, 230, 280, 212, 320, 180, 359, 0, 359)])
 
 [node name="Props" type="Node2D" parent="." unique_id=421389606]
 
@@ -93,12 +92,12 @@ cursor = 9
 interaction_polygon = PackedVector2Array(-25, -22.5, 25, -22.5, 25, 22.5, -25, 22.5)
 
 [node name="Waldweg" parent="Hotspots" unique_id=515465258 instance=ExtResource("12_bq62v")]
-position = Vector2(620, 210)
+position = Vector2(615, 210)
 description = "UI_OBJ_WALDWEG"
 baseline = 40
-walk_to_point = Vector2(0, 18)
+walk_to_point = Vector2(5, 18)
 cursor = 9
-interaction_polygon = PackedVector2Array(-20, -40, 20, -40, 20, 40, -20, 40)
+interaction_polygon = PackedVector2Array(-25, -40, 25, -40, 25, 40, -25, 40)
 
 [node name="WegZumWasserschloss" parent="Hotspots" unique_id=14882811 instance=ExtResource("13_x6a6m")]
 position = Vector2(460, 135)
@@ -136,4 +135,4 @@ position = Vector2(320, 330)
 [node name="Characters" type="Node2D" parent="." unique_id=1488514382]
 
 [node name="CharacterWaldemar *" parent="Characters" unique_id=584786914 instance=ExtResource("21_uuubw")]
-position = Vector2(395, 186)
+position = Vector2(395, 168)

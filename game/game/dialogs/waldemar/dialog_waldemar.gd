@@ -17,5 +17,18 @@ func option_sichtbar(id: String) -> bool:
 func _nach_option(id: String) -> bool:
 	if id == "0290":
 		Zustand.setze("W1_WALDEMAR_SINGT")
+		_waldemar_geht.call_deferred()
 		return true
 	return false
+
+
+## Waldemar geht sichtbar Richtung Wald (er hat gerade „Im Wald, zwischen den Pilzen“ gesagt) (Review 17.11., W1 R7: vorher stand er
+## an der Brücke, bis Max den Wald betrat, und niemand wusste, wo er singt).
+func _waldemar_geht() -> void:
+	if not is_instance_valid(R.current) or not R.current.has_character("Waldemar"):
+		return
+	var w: CQFigur = C.get_character("Waldemar")
+	await Spiel.szene([
+		func(): await w.laufen_zu(Vector2(700, w.position.y), 90.0),
+		func(): Spiel.figur_hier("Waldemar", false),
+	])

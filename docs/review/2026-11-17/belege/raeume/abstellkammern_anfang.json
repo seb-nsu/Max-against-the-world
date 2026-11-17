@@ -1,0 +1,711 @@
+{
+  "bauplan_laufbereich": [
+    [
+      100.0,
+      359.0
+    ],
+    [
+      110.0,
+      300.0
+    ],
+    [
+      150.0,
+      240.0
+    ],
+    [
+      200.0,
+      228.0
+    ],
+    [
+      500.0,
+      228.0
+    ],
+    [
+      600.0,
+      250.0
+    ],
+    [
+      639.0,
+      280.0
+    ],
+    [
+      639.0,
+      359.0
+    ]
+  ],
+  "breite": 640,
+  "figuren": [
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "idle",
+        "kram_hergeben",
+        "schniefen",
+        "staubwedel",
+        "talk",
+        "talk_alt",
+        "walk"
+      ],
+      "baseline": 0,
+      "name": "Smaugi",
+      "poly": [
+        [
+          323,
+          -5
+        ],
+        [
+          397,
+          -5
+        ],
+        [
+          397,
+          290
+        ],
+        [
+          323,
+          290
+        ]
+      ],
+      "pos": [
+        360.0,
+        290.0
+      ],
+      "rect": [
+        225,
+        71,
+        495,
+        290
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.86832058429718,
+        0.86832058429718
+      ],
+      "variante": "",
+      "walk_speed": 180.0,
+      "z": 0
+    },
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "aufheben",
+        "barfuss",
+        "benutzen",
+        "bohne",
+        "diskus",
+        "fallen",
+        "gaehnen",
+        "gehen_hinten",
+        "gehen_vorn",
+        "heisser_sand",
+        "hinsetzen",
+        "idle",
+        "katapult",
+        "kochloeffel",
+        "kopf_kratzen",
+        "melken",
+        "schulterzucken",
+        "speer",
+        "talk",
+        "talk_alt",
+        "treppe_walk",
+        "vom_boden_aufstehen",
+        "vom_sofa_aufstehen",
+        "wackeln",
+        "walk",
+        "walk_alt",
+        "walk_d",
+        "walk_l",
+        "walk_r",
+        "walk_u",
+        "wenden",
+        "zeigen"
+      ],
+      "baseline": 0,
+      "name": "Max",
+      "poly": [
+        [
+          109,
+          132
+        ],
+        [
+          151,
+          132
+        ],
+        [
+          151,
+          300
+        ],
+        [
+          109,
+          300
+        ]
+      ],
+      "pos": [
+        130.0,
+        300.0
+      ],
+      "rect": [
+        6,
+        129,
+        254,
+        300
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.887404561042786,
+        0.887404561042786
+      ],
+      "variante": "",
+      "walk_speed": 150.0,
+      "z": 0
+    },
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "aufstehen",
+        "aufwachen",
+        "fauchen",
+        "gehen_hinten",
+        "gehen_vorn",
+        "haare",
+        "hinlegen",
+        "idle",
+        "minka_umgarnen",
+        "ohrfeige",
+        "putzen",
+        "schlafen",
+        "schnuppern",
+        "schwanz_zucken",
+        "springen",
+        "stehen",
+        "talk",
+        "talk_alt",
+        "tragen",
+        "vom_schrank_fallen",
+        "walk",
+        "walk_d",
+        "walk_l",
+        "walk_r",
+        "walk_u"
+      ],
+      "baseline": 0,
+      "name": "Pixel",
+      "poly": [
+        [
+          139,
+          265
+        ],
+        [
+          211,
+          265
+        ],
+        [
+          211,
+          300
+        ],
+        [
+          139,
+          300
+        ]
+      ],
+      "pos": [
+        175.0,
+        300.0
+      ],
+      "rect": [
+        119,
+        209,
+        231,
+        300
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.887404561042786,
+        0.887404561042786
+      ],
+      "variante": "",
+      "walk_speed": 160.0,
+      "z": 0
+    }
+  ],
+  "hotspots": [
+    {
+      "baseline": 22,
+      "klickbar": true,
+      "name": "DracheneiNest",
+      "poly": [
+        [
+          395,
+          180
+        ],
+        [
+          475,
+          180
+        ],
+        [
+          475,
+          225
+        ],
+        [
+          395,
+          225
+        ]
+      ],
+      "pos": [
+        435.0,
+        202.5
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_DRACHENEI_NEST",
+      "walk_to": [
+        -3.0,
+        47.5
+      ]
+    },
+    {
+      "baseline": 35,
+      "klickbar": true,
+      "name": "Goldhaufen",
+      "poly": [
+        [
+          265,
+          155
+        ],
+        [
+          380,
+          155
+        ],
+        [
+          380,
+          225
+        ],
+        [
+          265,
+          225
+        ]
+      ],
+      "pos": [
+        322.5,
+        190.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_GOLDHAUFEN",
+      "walk_to": [
+        -2.5,
+        60.0
+      ]
+    },
+    {
+      "baseline": 5,
+      "klickbar": true,
+      "name": "Okarina",
+      "poly": [
+        [
+          241,
+          208
+        ],
+        [
+          261,
+          208
+        ],
+        [
+          261,
+          228
+        ],
+        [
+          241,
+          228
+        ]
+      ],
+      "pos": [
+        251.0,
+        218.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_OKARINA",
+      "walk_to": [
+        -1.0,
+        32.0
+      ]
+    },
+    {
+      "baseline": 32,
+      "klickbar": true,
+      "name": "SchwertImStein",
+      "poly": [
+        [
+          226,
+          140
+        ],
+        [
+          256,
+          140
+        ],
+        [
+          256,
+          205
+        ],
+        [
+          226,
+          205
+        ]
+      ],
+      "pos": [
+        241.0,
+        172.5
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_SCHWERT_IM_STEIN",
+      "walk_to": [
+        -1.0,
+        77.5
+      ]
+    },
+    {
+      "baseline": 42,
+      "klickbar": true,
+      "name": "DekoKram",
+      "poly": [
+        [
+          140,
+          145
+        ],
+        [
+          220,
+          145
+        ],
+        [
+          220,
+          230
+        ],
+        [
+          140,
+          230
+        ]
+      ],
+      "pos": [
+        180.0,
+        187.5
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_DEKO_KRAM",
+      "walk_to": [
+        0.0,
+        62.5
+      ]
+    },
+    {
+      "baseline": 36,
+      "klickbar": true,
+      "name": "Stapel",
+      "poly": [
+        [
+          40,
+          160
+        ],
+        [
+          240,
+          160
+        ],
+        [
+          240,
+          232
+        ],
+        [
+          40,
+          232
+        ]
+      ],
+      "pos": [
+        140.0,
+        196.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_STAPEL",
+      "walk_to": [
+        40.0,
+        56.0
+      ]
+    },
+    {
+      "baseline": 85,
+      "klickbar": true,
+      "name": "Wendeltreppe",
+      "poly": [
+        [
+          0,
+          190
+        ],
+        [
+          100,
+          190
+        ],
+        [
+          100,
+          360
+        ],
+        [
+          0,
+          360
+        ]
+      ],
+      "pos": [
+        50.0,
+        275.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_WENDELTREPPE",
+      "walk_to": [
+        70.0,
+        25.0
+      ]
+    },
+    {
+      "baseline": 70,
+      "klickbar": true,
+      "name": "Geheimtuer",
+      "poly": [
+        [
+          508,
+          82
+        ],
+        [
+          570,
+          82
+        ],
+        [
+          570,
+          222
+        ],
+        [
+          508,
+          222
+        ]
+      ],
+      "pos": [
+        539.0,
+        152.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_GEHEIMTUER",
+      "walk_to": [
+        1.0,
+        88.0
+      ]
+    }
+  ],
+  "kamera_max": [
+    320.0,
+    180.0
+  ],
+  "laufbereiche": [
+    {
+      "name": "Boden",
+      "polys": [
+        [
+          [
+            100,
+            359
+          ],
+          [
+            110,
+            300
+          ],
+          [
+            150,
+            240
+          ],
+          [
+            200,
+            228
+          ],
+          [
+            500,
+            228
+          ],
+          [
+            600,
+            250
+          ],
+          [
+            639,
+            280
+          ],
+          [
+            639,
+            359
+          ]
+        ]
+      ]
+    }
+  ],
+  "marker": {
+    "Abnehmer": [
+      240.0,
+      324.0
+    ],
+    "Start": [
+      130.0,
+      300.0
+    ],
+    "VonThronsaal": [
+      540.0,
+      250.0
+    ],
+    "VonTurmkeller": [
+      130.0,
+      300.0
+    ]
+  },
+  "modus": "anfang",
+  "props": [
+    {
+      "baseline": -180,
+      "klickbar": false,
+      "name": "Background",
+      "poly": [],
+      "pos": [
+        320.0,
+        0.0
+      ],
+      "rect": [
+        0,
+        0,
+        640,
+        360
+      ],
+      "sichtbar": true,
+      "text": "UI_RAUM_ABSTELLKAMMERN",
+      "walk_to": [
+        0.0,
+        180.0
+      ],
+      "z": -1
+    },
+    {
+      "baseline": 27,
+      "klickbar": true,
+      "name": "Kronleuchter",
+      "poly": [
+        [
+          292,
+          8
+        ],
+        [
+          348,
+          8
+        ],
+        [
+          348,
+          63
+        ],
+        [
+          292,
+          63
+        ]
+      ],
+      "pos": [
+        320.0,
+        62.5
+      ],
+      "rect": [
+        292,
+        9,
+        348,
+        64
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_KRONLEUCHTER",
+      "walk_to": [
+        0.0,
+        187.5
+      ],
+      "z": 0
+    },
+    {
+      "baseline": 25,
+      "klickbar": true,
+      "name": "SchwerterBuendel",
+      "poly": [
+        [
+          98,
+          167
+        ],
+        [
+          138,
+          167
+        ],
+        [
+          138,
+          207
+        ],
+        [
+          98,
+          207
+        ]
+      ],
+      "pos": [
+        118.0,
+        212.0
+      ],
+      "rect": [
+        88,
+        137,
+        148,
+        237
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_SCHWERTER_BUENDEL",
+      "walk_to": [
+        32.0,
+        40.0
+      ],
+      "z": 0
+    },
+    {
+      "baseline": 20,
+      "klickbar": true,
+      "name": "FackelBuendel",
+      "poly": [
+        [
+          190,
+          186
+        ],
+        [
+          221,
+          186
+        ],
+        [
+          221,
+          226
+        ],
+        [
+          190,
+          226
+        ]
+      ],
+      "pos": [
+        205.5,
+        226.0
+      ],
+      "rect": [
+        191,
+        186,
+        222,
+        226
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_FACKEL_BUENDEL",
+      "walk_to": [
+        -0.5,
+        26.0
+      ],
+      "z": 0
+    }
+  ],
+  "raum": "abstellkammern",
+  "skala": null,
+  "tiefe": 0.75,
+  "welt": "welt-1"
+}

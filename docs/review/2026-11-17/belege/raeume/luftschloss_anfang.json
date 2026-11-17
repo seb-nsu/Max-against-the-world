@@ -1,0 +1,587 @@
+{
+  "bauplan_laufbereich": [
+    [
+      150.0,
+      262.0
+    ],
+    [
+      205.0,
+      228.0
+    ],
+    [
+      640.0,
+      216.0
+    ],
+    [
+      1230.0,
+      214.0
+    ],
+    [
+      1200.0,
+      246.0
+    ],
+    [
+      1080.0,
+      286.0
+    ],
+    [
+      960.0,
+      326.0
+    ],
+    [
+      860.0,
+      344.0
+    ],
+    [
+      600.0,
+      344.0
+    ],
+    [
+      330.0,
+      334.0
+    ],
+    [
+      180.0,
+      300.0
+    ]
+  ],
+  "breite": 1280,
+  "figuren": [
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "idle",
+        "notieren",
+        "talk",
+        "talk_alt",
+        "walk"
+      ],
+      "baseline": 0,
+      "name": "Maklerin",
+      "poly": [
+        [
+          946,
+          112
+        ],
+        [
+          984,
+          112
+        ],
+        [
+          984,
+          262
+        ],
+        [
+          946,
+          262
+        ]
+      ],
+      "pos": [
+        965.0,
+        262.0
+      ],
+      "rect": [
+        928,
+        109,
+        1002,
+        262
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.747692286968231,
+        0.747692286968231
+      ],
+      "variante": "",
+      "walk_speed": 180.0,
+      "z": 0
+    },
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "idle",
+        "kiste_schwert",
+        "talk",
+        "talk_alt",
+        "walk"
+      ],
+      "baseline": 0,
+      "name": "Zeldina",
+      "poly": [
+        [
+          991,
+          118
+        ],
+        [
+          1029,
+          118
+        ],
+        [
+          1029,
+          268
+        ],
+        [
+          991,
+          268
+        ]
+      ],
+      "pos": [
+        1010.0,
+        268.0
+      ],
+      "rect": [
+        938,
+        109,
+        1082,
+        268
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.766153872013092,
+        0.766153872013092
+      ],
+      "variante": "",
+      "walk_speed": 180.0,
+      "z": 0
+    },
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "aufheben",
+        "barfuss",
+        "benutzen",
+        "bohne",
+        "diskus",
+        "fallen",
+        "gaehnen",
+        "gehen_hinten",
+        "gehen_vorn",
+        "heisser_sand",
+        "hinsetzen",
+        "idle",
+        "katapult",
+        "kochloeffel",
+        "kopf_kratzen",
+        "melken",
+        "schulterzucken",
+        "speer",
+        "talk",
+        "talk_alt",
+        "treppe_walk",
+        "vom_boden_aufstehen",
+        "vom_sofa_aufstehen",
+        "wackeln",
+        "walk",
+        "walk_alt",
+        "walk_d",
+        "walk_l",
+        "walk_r",
+        "walk_u",
+        "wenden",
+        "zeigen"
+      ],
+      "baseline": 0,
+      "name": "Max",
+      "poly": [
+        [
+          157,
+          124
+        ],
+        [
+          193,
+          124
+        ],
+        [
+          193,
+          270
+        ],
+        [
+          157,
+          270
+        ]
+      ],
+      "pos": [
+        175.0,
+        270.0
+      ],
+      "rect": [
+        67,
+        121,
+        283,
+        270
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.772307693958282,
+        0.772307693958282
+      ],
+      "variante": "",
+      "walk_speed": 150.0,
+      "z": 0
+    },
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "aufstehen",
+        "aufwachen",
+        "fauchen",
+        "gehen_hinten",
+        "gehen_vorn",
+        "haare",
+        "hinlegen",
+        "idle",
+        "minka_umgarnen",
+        "ohrfeige",
+        "putzen",
+        "schlafen",
+        "schnuppern",
+        "schwanz_zucken",
+        "springen",
+        "stehen",
+        "talk",
+        "talk_alt",
+        "tragen",
+        "vom_schrank_fallen",
+        "walk",
+        "walk_d",
+        "walk_l",
+        "walk_r",
+        "walk_u"
+      ],
+      "baseline": 0,
+      "name": "Pixel",
+      "poly": [
+        [
+          189,
+          239
+        ],
+        [
+          251,
+          239
+        ],
+        [
+          251,
+          270
+        ],
+        [
+          189,
+          270
+        ]
+      ],
+      "pos": [
+        220.0,
+        270.0
+      ],
+      "rect": [
+        171,
+        190,
+        269,
+        270
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.772307693958282,
+        0.772307693958282
+      ],
+      "variante": "",
+      "walk_speed": 160.0,
+      "z": 0
+    }
+  ],
+  "hotspots": [
+    {
+      "baseline": 82,
+      "klickbar": true,
+      "name": "Torbogen",
+      "poly": [
+        [
+          755,
+          50
+        ],
+        [
+          860,
+          50
+        ],
+        [
+          860,
+          215
+        ],
+        [
+          755,
+          215
+        ]
+      ],
+      "pos": [
+        807.5,
+        132.5
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_TORBOGEN",
+      "walk_to": [
+        -1.5,
+        99.5
+      ]
+    },
+    {
+      "baseline": 27,
+      "klickbar": true,
+      "name": "Kritzelei",
+      "poly": [
+        [
+          866,
+          138
+        ],
+        [
+          928,
+          138
+        ],
+        [
+          928,
+          192
+        ],
+        [
+          866,
+          192
+        ]
+      ],
+      "pos": [
+        897.0,
+        165.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_KRITZELEI",
+      "walk_to": [
+        -2.0,
+        67.0
+      ]
+    },
+    {
+      "baseline": 60,
+      "klickbar": true,
+      "name": "Balkon",
+      "poly": [
+        [
+          990,
+          0
+        ],
+        [
+          1112,
+          0
+        ],
+        [
+          1112,
+          120
+        ],
+        [
+          990,
+          120
+        ]
+      ],
+      "pos": [
+        1051.0,
+        60.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_BALKON",
+      "walk_to": [
+        -1.0,
+        172.0
+      ]
+    },
+    {
+      "baseline": 34,
+      "klickbar": true,
+      "name": "Spiegel",
+      "poly": [
+        [
+          1106,
+          98
+        ],
+        [
+          1152,
+          98
+        ],
+        [
+          1152,
+          166
+        ],
+        [
+          1106,
+          166
+        ]
+      ],
+      "pos": [
+        1129.0,
+        132.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_SPIEGEL",
+      "walk_to": [
+        -1.0,
+        100.0
+      ]
+    },
+    {
+      "baseline": 15,
+      "klickbar": true,
+      "name": "Wolken",
+      "poly": [
+        [
+          0,
+          330
+        ],
+        [
+          1280,
+          330
+        ],
+        [
+          1280,
+          360
+        ],
+        [
+          0,
+          360
+        ]
+      ],
+      "pos": [
+        640.0,
+        345.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_WOLKEN",
+      "walk_to": [
+        0.0,
+        -15.0
+      ]
+    },
+    {
+      "baseline": 125,
+      "klickbar": true,
+      "name": "Rankenende",
+      "poly": [
+        [
+          20,
+          10
+        ],
+        [
+          150,
+          10
+        ],
+        [
+          150,
+          260
+        ],
+        [
+          20,
+          260
+        ]
+      ],
+      "pos": [
+        85.0,
+        135.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_RANKENENDE",
+      "walk_to": [
+        70.0,
+        131.0
+      ]
+    }
+  ],
+  "kamera_max": [
+    320.0,
+    180.0
+  ],
+  "laufbereiche": [
+    {
+      "name": "Boden",
+      "polys": [
+        [
+          [
+            150,
+            262
+          ],
+          [
+            205,
+            228
+          ],
+          [
+            640,
+            216
+          ],
+          [
+            1230,
+            214
+          ],
+          [
+            1200,
+            246
+          ],
+          [
+            1080,
+            286
+          ],
+          [
+            960,
+            326
+          ],
+          [
+            860,
+            344
+          ],
+          [
+            600,
+            344
+          ],
+          [
+            330,
+            334
+          ],
+          [
+            180,
+            300
+          ]
+        ]
+      ]
+    }
+  ],
+  "marker": {
+    "Start": [
+      175.0,
+      270.0
+    ],
+    "VonDorfplatz": [
+      175.0,
+      270.0
+    ]
+  },
+  "modus": "anfang",
+  "props": [
+    {
+      "baseline": -180,
+      "klickbar": false,
+      "name": "Background",
+      "poly": [],
+      "pos": [
+        640.0,
+        0.0
+      ],
+      "rect": [
+        0,
+        0,
+        1280,
+        360
+      ],
+      "sichtbar": true,
+      "text": "UI_RAUM_LUFTSCHLOSS",
+      "walk_to": [
+        0.0,
+        180.0
+      ],
+      "z": -1
+    }
+  ],
+  "raum": "luftschloss",
+  "skala": null,
+  "tiefe": 0.6,
+  "welt": "welt-1"
+}

@@ -48,11 +48,6 @@ func _nach_uebergang() -> void:
 		Spiel.z("MAX", "W1_ANK_MAX_0140"),
 		Spiel.z("TOA", "W1_ANK_TOA_0150"),
 		Spiel.z("PIX", "W1_ANK_PIX_0160"),
-		Spiel.z("MAX", "W1_ANK_MAX_0161"),
-		Spiel.z("TOA", "W1_ANK_TOA_0170"),
-		Spiel.z("MAX", "W1_ANK_MAX_0180"),
-		Spiel.z("TOA", "W1_ANK_TOA_0190"),
-		Spiel.z("TOA", "W1_ANK_TOA_0200"),
 		Spiel.z("MAX", "W1_ANK_MAX_0210"),
 		Spiel.z("PIX", "W1_ANK_PIX_0220"),
 		_pixel_geht_los,
@@ -71,6 +66,9 @@ func _nach_uebergang() -> void:
 		C.Pixel.position = _ziel_pix
 	if _toadi_ziel != Vector2.ZERO and has_character("Toadi"):
 		C.Toadi.position = _toadi_ziel
+	# Der Weg zum Turm kommt als Zuruf, wenn Max zum ersten Mal irgendwo hingegangen ist
+	# (Review 17.11., W1-01: die Ankunft war 27 Zeilen lang bis zum ersten Klick)
+	Zustand.setze("W1_ANK_NACHTRAG")
 
 
 ## Der Wirbel spuckt Max aufs Pflaster (Skript Abschnitt 1): Max fällt von oben und landet auf dem
@@ -283,3 +281,33 @@ func _lieferung(an: bool) -> void:
 		_zustand_anwenden()
 	else:
 		_zustand_anwenden()
+
+
+## Zuruf nach dem ersten eigenen Gang (W1_ANK_NACHTRAG): Toadi erklärt den Weg zum Turm, den die
+## Ankunftsszene früher am Stück erzählt hat. Ausgelöst, sobald Max nach einem Gang wieder steht.
+var _max_ging := false
+
+
+func _process(delta: float) -> void:
+	super(delta)
+	if Engine.is_editor_hint() or not Zustand.ist("W1_ANK_NACHTRAG") or Spiel.in_szene > 0:
+		return
+	if not is_instance_valid(C.player) or not has_character("Toadi"):
+		return
+	if C.player.is_moving:
+		_max_ging = true
+	elif _max_ging:
+		_max_ging = false
+		Zustand.setze("W1_ANK_NACHTRAG", false)
+		_zuruf_weg()
+
+
+func _zuruf_weg() -> void:
+	await Spiel.szene([
+		Spiel.z("TOA", "W1_ANK_TOA_0165"),
+		Spiel.z("MAX", "W1_ANK_MAX_0161"),
+		Spiel.z("TOA", "W1_ANK_TOA_0170"),
+		Spiel.z("MAX", "W1_ANK_MAX_0180"),
+		Spiel.z("TOA", "W1_ANK_TOA_0190"),
+		Spiel.z("TOA", "W1_ANK_TOA_0200"),
+	])

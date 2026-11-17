@@ -1,0 +1,812 @@
+{
+  "bauplan_laufbereich": [
+    [
+      20.0,
+      215.0
+    ],
+    [
+      120.0,
+      215.0
+    ],
+    [
+      200.0,
+      242.0
+    ],
+    [
+      395.0,
+      242.0
+    ],
+    [
+      420.0,
+      236.0
+    ],
+    [
+      865.0,
+      236.0
+    ],
+    [
+      870.0,
+      240.0
+    ],
+    [
+      935.0,
+      240.0
+    ],
+    [
+      940.0,
+      236.0
+    ],
+    [
+      1085.0,
+      236.0
+    ],
+    [
+      1095.0,
+      228.0
+    ],
+    [
+      1150.0,
+      228.0
+    ],
+    [
+      1170.0,
+      240.0
+    ],
+    [
+      1260.0,
+      250.0
+    ],
+    [
+      1279.0,
+      300.0
+    ],
+    [
+      1279.0,
+      359.0
+    ],
+    [
+      0.0,
+      359.0
+    ],
+    [
+      0.0,
+      300.0
+    ]
+  ],
+  "breite": 1280,
+  "figuren": [
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "idle",
+        "protest",
+        "talk",
+        "talk_alt",
+        "walk"
+      ],
+      "baseline": 0,
+      "name": "Grimmzahn",
+      "poly": [
+        [
+          944,
+          181
+        ],
+        [
+          976,
+          181
+        ],
+        [
+          976,
+          290
+        ],
+        [
+          944,
+          290
+        ]
+      ],
+      "pos": [
+        960.0,
+        290.0
+      ],
+      "rect": [
+        904,
+        161,
+        1016,
+        290
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.808333337306976,
+        0.808333337306976
+      ],
+      "variante": "",
+      "walk_speed": 100.0,
+      "z": 0
+    },
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "idle",
+        "pickel",
+        "talk",
+        "talk_alt",
+        "walk"
+      ],
+      "baseline": 0,
+      "name": "Goblin1",
+      "poly": [
+        [
+          864,
+          194
+        ],
+        [
+          896,
+          194
+        ],
+        [
+          896,
+          285
+        ],
+        [
+          864,
+          285
+        ]
+      ],
+      "pos": [
+        880.0,
+        285.0
+      ],
+      "rect": [
+        835,
+        189,
+        925,
+        285
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.794444441795349,
+        0.794444441795349
+      ],
+      "variante": "",
+      "walk_speed": 90.0,
+      "z": 0
+    },
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "gaehnen",
+        "idle",
+        "talk",
+        "talk_alt",
+        "walk"
+      ],
+      "baseline": 0,
+      "name": "Goblin2",
+      "poly": [
+        [
+          1024,
+          198
+        ],
+        [
+          1056,
+          198
+        ],
+        [
+          1056,
+          292
+        ],
+        [
+          1024,
+          292
+        ]
+      ],
+      "pos": [
+        1040.0,
+        292.0
+      ],
+      "rect": [
+        1004,
+        180,
+        1076,
+        292
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.813888907432556,
+        0.813888907432556
+      ],
+      "variante": "",
+      "walk_speed": 90.0,
+      "z": 0
+    },
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "aufheben",
+        "barfuss",
+        "benutzen",
+        "bohne",
+        "diskus",
+        "fallen",
+        "gaehnen",
+        "gehen_hinten",
+        "gehen_vorn",
+        "heisser_sand",
+        "hinsetzen",
+        "idle",
+        "katapult",
+        "kochloeffel",
+        "kopf_kratzen",
+        "melken",
+        "schulterzucken",
+        "speer",
+        "talk",
+        "talk_alt",
+        "treppe_walk",
+        "vom_boden_aufstehen",
+        "vom_sofa_aufstehen",
+        "wackeln",
+        "walk",
+        "walk_alt",
+        "walk_d",
+        "walk_l",
+        "walk_r",
+        "walk_u",
+        "wenden",
+        "zeigen"
+      ],
+      "baseline": 0,
+      "name": "Max",
+      "poly": [
+        [
+          44,
+          118
+        ],
+        [
+          76,
+          118
+        ],
+        [
+          76,
+          250
+        ],
+        [
+          44,
+          250
+        ]
+      ],
+      "pos": [
+        60.0,
+        250.0
+      ],
+      "rect": [
+        -38,
+        115,
+        158,
+        250
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.697222232818604,
+        0.697222232818604
+      ],
+      "variante": "",
+      "walk_speed": 150.0,
+      "z": 0
+    },
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "aufstehen",
+        "aufwachen",
+        "fauchen",
+        "gehen_hinten",
+        "gehen_vorn",
+        "haare",
+        "hinlegen",
+        "idle",
+        "minka_umgarnen",
+        "ohrfeige",
+        "putzen",
+        "schlafen",
+        "schnuppern",
+        "schwanz_zucken",
+        "springen",
+        "stehen",
+        "talk",
+        "talk_alt",
+        "tragen",
+        "vom_schrank_fallen",
+        "walk",
+        "walk_d",
+        "walk_l",
+        "walk_r",
+        "walk_u"
+      ],
+      "baseline": 0,
+      "name": "Pixel",
+      "poly": [
+        [
+          77,
+          222
+        ],
+        [
+          133,
+          222
+        ],
+        [
+          133,
+          250
+        ],
+        [
+          77,
+          250
+        ]
+      ],
+      "pos": [
+        105.0,
+        250.0
+      ],
+      "rect": [
+        61,
+        178,
+        149,
+        250
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.697222232818604,
+        0.697222232818604
+      ],
+      "variante": "",
+      "walk_speed": 160.0,
+      "z": 0
+    },
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "idle",
+        "kiste_schwert",
+        "talk",
+        "talk_alt",
+        "walk"
+      ],
+      "baseline": 0,
+      "name": "Zeldina",
+      "poly": [
+        [
+          130,
+          117
+        ],
+        [
+          166,
+          117
+        ],
+        [
+          166,
+          258
+        ],
+        [
+          130,
+          258
+        ]
+      ],
+      "pos": [
+        148.0,
+        258.0
+      ],
+      "rect": [
+        80,
+        109,
+        216,
+        258
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.719444453716278,
+        0.719444453716278
+      ],
+      "variante": "",
+      "walk_speed": 180.0,
+      "z": 0
+    }
+  ],
+  "hotspots": [
+    {
+      "baseline": 32,
+      "klickbar": true,
+      "name": "Loren",
+      "poly": [
+        [
+          205,
+          172
+        ],
+        [
+          390,
+          172
+        ],
+        [
+          390,
+          237
+        ],
+        [
+          205,
+          237
+        ]
+      ],
+      "pos": [
+        297.5,
+        204.5
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_LOREN",
+      "walk_to": [
+        2.5,
+        57.5
+      ]
+    },
+    {
+      "baseline": 45,
+      "klickbar": true,
+      "name": "Streikschilder",
+      "poly": [
+        [
+          678,
+          105
+        ],
+        [
+          868,
+          105
+        ],
+        [
+          868,
+          195
+        ],
+        [
+          678,
+          195
+        ]
+      ],
+      "pos": [
+        773.0,
+        150.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_STREIKSCHILDER",
+      "walk_to": [
+        -3.0,
+        112.0
+      ]
+    },
+    {
+      "baseline": 38,
+      "klickbar": true,
+      "name": "Streikposten",
+      "poly": [
+        [
+          660,
+          195
+        ],
+        [
+          850,
+          195
+        ],
+        [
+          850,
+          272
+        ],
+        [
+          660,
+          272
+        ]
+      ],
+      "pos": [
+        755.0,
+        233.5
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_STREIKPOSTEN",
+      "walk_to": [
+        -115.0,
+        46.5
+      ]
+    },
+    {
+      "baseline": 32,
+      "klickbar": true,
+      "name": "Kaffeemaschine",
+      "poly": [
+        [
+          870,
+          170
+        ],
+        [
+          932,
+          170
+        ],
+        [
+          932,
+          235
+        ],
+        [
+          870,
+          235
+        ]
+      ],
+      "pos": [
+        901.0,
+        202.5
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_KAFFEEMASCHINE",
+      "walk_to": [
+        -1.0,
+        59.5
+      ]
+    },
+    {
+      "baseline": 11,
+      "klickbar": true,
+      "name": "Fackeln",
+      "poly": [
+        [
+          395,
+          90
+        ],
+        [
+          865,
+          90
+        ],
+        [
+          865,
+          112
+        ],
+        [
+          395,
+          112
+        ]
+      ],
+      "pos": [
+        630.0,
+        101.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_FACKELN",
+      "walk_to": [
+        0.0,
+        161.0
+      ]
+    },
+    {
+      "baseline": 75,
+      "klickbar": true,
+      "name": "AusgangZauberwald",
+      "poly": [
+        [
+          10,
+          70
+        ],
+        [
+          120,
+          70
+        ],
+        [
+          120,
+          220
+        ],
+        [
+          10,
+          220
+        ]
+      ],
+      "pos": [
+        65.0,
+        145.0
+      ],
+      "sichtbar": true,
+      "text": "UI_RAUM_ZAUBERWALD",
+      "walk_to": [
+        -5.0,
+        105.0
+      ]
+    },
+    {
+      "baseline": 75,
+      "klickbar": true,
+      "name": "RuneTuer",
+      "poly": [
+        [
+          1078,
+          85
+        ],
+        [
+          1158,
+          85
+        ],
+        [
+          1158,
+          235
+        ],
+        [
+          1078,
+          235
+        ]
+      ],
+      "pos": [
+        1118.0,
+        160.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_RUNE_TUER",
+      "walk_to": [
+        0.0,
+        90.0
+      ]
+    }
+  ],
+  "kamera_max": [
+    320.0,
+    180.0
+  ],
+  "laufbereiche": [
+    {
+      "name": "Boden",
+      "polys": [
+        [
+          [
+            20,
+            215
+          ],
+          [
+            120,
+            215
+          ],
+          [
+            200,
+            242
+          ],
+          [
+            395,
+            242
+          ],
+          [
+            420,
+            236
+          ],
+          [
+            865,
+            236
+          ],
+          [
+            870,
+            240
+          ],
+          [
+            935,
+            240
+          ],
+          [
+            940,
+            236
+          ],
+          [
+            1085,
+            236
+          ],
+          [
+            1095,
+            228
+          ],
+          [
+            1150,
+            228
+          ],
+          [
+            1170,
+            240
+          ],
+          [
+            1260,
+            250
+          ],
+          [
+            1279,
+            300
+          ],
+          [
+            1279,
+            359
+          ],
+          [
+            0,
+            359
+          ],
+          [
+            0,
+            300
+          ]
+        ]
+      ]
+    }
+  ],
+  "marker": {
+    "Start": [
+      60.0,
+      250.0
+    ],
+    "VonZauberwald": [
+      60.0,
+      250.0
+    ]
+  },
+  "modus": "ende",
+  "props": [
+    {
+      "baseline": -180,
+      "klickbar": false,
+      "name": "Background",
+      "poly": [],
+      "pos": [
+        640.0,
+        0.0
+      ],
+      "rect": [
+        0,
+        0,
+        1280,
+        360
+      ],
+      "sichtbar": true,
+      "text": "UI_RAUM_BERGWERK",
+      "walk_to": [
+        0.0,
+        180.0
+      ],
+      "z": -1
+    },
+    {
+      "baseline": 80,
+      "klickbar": false,
+      "name": "RuneTuerOffen",
+      "poly": [
+        [
+          1070,
+          80
+        ],
+        [
+          1170,
+          80
+        ],
+        [
+          1170,
+          240
+        ],
+        [
+          1070,
+          240
+        ]
+      ],
+      "pos": [
+        1120.0,
+        240.0
+      ],
+      "rect": [
+        1070,
+        80,
+        1170,
+        240
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_RUNE_TUER_OFFEN",
+      "walk_to": [
+        -2.0,
+        10.0
+      ],
+      "z": 0
+    }
+  ],
+  "raum": "bergwerk",
+  "skala": null,
+  "tiefe": 0.6,
+  "welt": "welt-1"
+}

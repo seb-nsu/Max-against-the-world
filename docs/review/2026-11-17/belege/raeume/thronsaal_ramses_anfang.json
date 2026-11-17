@@ -1,0 +1,852 @@
+{
+  "bauplan_laufbereich": [
+    [
+      8.0,
+      292.0
+    ],
+    [
+      1272.0,
+      292.0
+    ],
+    [
+      1272.0,
+      356.0
+    ],
+    [
+      8.0,
+      356.0
+    ]
+  ],
+  "breite": 1280,
+  "figuren": [
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "einnicken",
+        "idle",
+        "schreiben",
+        "stift_kauen",
+        "strecken_gaehnen",
+        "talk",
+        "talk_alt"
+      ],
+      "baseline": 0,
+      "name": "Schreiber",
+      "poly": [
+        [
+          288,
+          193
+        ],
+        [
+          322,
+          193
+        ],
+        [
+          322,
+          300
+        ],
+        [
+          288,
+          300
+        ]
+      ],
+      "pos": [
+        305.0,
+        300.0
+      ],
+      "rect": [
+        255,
+        171,
+        355,
+        300
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.868749976158142,
+        0.868749976158142
+      ],
+      "variante": "",
+      "walk_speed": 120.0,
+      "z": 0
+    },
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "idle",
+        "kopftuch",
+        "talk",
+        "talk_alt",
+        "unentschlossen",
+        "zepter_tauschen",
+        "zepter_wiegen"
+      ],
+      "baseline": 0,
+      "name": "Ramses",
+      "poly": [
+        [
+          934,
+          95
+        ],
+        [
+          976,
+          95
+        ],
+        [
+          976,
+          266
+        ],
+        [
+          934,
+          266
+        ]
+      ],
+      "pos": [
+        955.0,
+        266.0
+      ],
+      "rect": [
+        897,
+        93,
+        1013,
+        266
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.850000023841858,
+        0.850000023841858
+      ],
+      "variante": "",
+      "walk_speed": 120.0,
+      "z": 0
+    },
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "abziehen",
+        "idle",
+        "putzen",
+        "schwanz_zucken",
+        "talk",
+        "talk_alt",
+        "walk",
+        "weggehen"
+      ],
+      "baseline": 0,
+      "name": "Hofkater",
+      "poly": [
+        [
+          753,
+          238
+        ],
+        [
+          787,
+          238
+        ],
+        [
+          787,
+          298
+        ],
+        [
+          753,
+          298
+        ]
+      ],
+      "pos": [
+        770.0,
+        298.0
+      ],
+      "rect": [
+        730,
+        236,
+        810,
+        298
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.864062488079071,
+        0.864062488079071
+      ],
+      "variante": "",
+      "walk_speed": 120.0,
+      "z": 0
+    },
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "arm_ausschuetteln",
+        "bauch",
+        "faecheln",
+        "idle",
+        "talk",
+        "talk_alt"
+      ],
+      "baseline": 0,
+      "name": "Faecherwedler",
+      "poly": [
+        [
+          1092,
+          136
+        ],
+        [
+          1132,
+          136
+        ],
+        [
+          1132,
+          300
+        ],
+        [
+          1092,
+          300
+        ]
+      ],
+      "pos": [
+        1112.0,
+        300.0
+      ],
+      "rect": [
+        970,
+        98,
+        1254,
+        300
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.868749976158142,
+        0.868749976158142
+      ],
+      "variante": "",
+      "walk_speed": 120.0,
+      "z": 0
+    },
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "aufheben",
+        "barfuss",
+        "benutzen",
+        "bohne",
+        "diskus",
+        "fallen",
+        "gaehnen",
+        "gehen_hinten",
+        "gehen_vorn",
+        "heisser_sand",
+        "hinsetzen",
+        "idle",
+        "katapult",
+        "kochloeffel",
+        "kopf_kratzen",
+        "melken",
+        "schulterzucken",
+        "speer",
+        "talk",
+        "talk_alt",
+        "treppe_walk",
+        "vom_boden_aufstehen",
+        "vom_sofa_aufstehen",
+        "wackeln",
+        "walk",
+        "walk_alt",
+        "walk_d",
+        "walk_l",
+        "walk_r",
+        "walk_u",
+        "wenden",
+        "zeigen"
+      ],
+      "baseline": 0,
+      "name": "Max",
+      "poly": [
+        [
+          38,
+          147
+        ],
+        [
+          82,
+          147
+        ],
+        [
+          82,
+          320
+        ],
+        [
+          38,
+          320
+        ]
+      ],
+      "pos": [
+        60.0,
+        320.0
+      ],
+      "rect": [
+        -68,
+        143,
+        188,
+        320
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.915624976158142,
+        0.915624976158142
+      ],
+      "variante": "",
+      "walk_speed": 150.0,
+      "z": 0
+    },
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "aufstehen",
+        "aufwachen",
+        "fauchen",
+        "gehen_hinten",
+        "gehen_vorn",
+        "haare",
+        "hinlegen",
+        "idle",
+        "minka_umgarnen",
+        "ohrfeige",
+        "putzen",
+        "schlafen",
+        "schnuppern",
+        "schwanz_zucken",
+        "springen",
+        "stehen",
+        "talk",
+        "talk_alt",
+        "tragen",
+        "vom_schrank_fallen",
+        "walk",
+        "walk_d",
+        "walk_l",
+        "walk_r",
+        "walk_u"
+      ],
+      "baseline": 0,
+      "name": "Pixel",
+      "poly": [
+        [
+          68,
+          283
+        ],
+        [
+          142,
+          283
+        ],
+        [
+          142,
+          320
+        ],
+        [
+          68,
+          320
+        ]
+      ],
+      "pos": [
+        105.0,
+        320.0
+      ],
+      "rect": [
+        47,
+        226,
+        163,
+        320
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.915624976158142,
+        0.915624976158142
+      ],
+      "variante": "",
+      "walk_speed": 160.0,
+      "z": 0
+    }
+  ],
+  "hotspots": [
+    {
+      "baseline": 67,
+      "klickbar": true,
+      "name": "Thron",
+      "poly": [
+        [
+          880,
+          155
+        ],
+        [
+          990,
+          155
+        ],
+        [
+          990,
+          290
+        ],
+        [
+          880,
+          290
+        ]
+      ],
+      "pos": [
+        935.0,
+        222.5
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_THRON",
+      "walk_to": [
+        20.0,
+        92.5
+      ]
+    },
+    {
+      "baseline": 35,
+      "klickbar": true,
+      "name": "Schreiberpult",
+      "poly": [
+        [
+          150,
+          205
+        ],
+        [
+          270,
+          205
+        ],
+        [
+          270,
+          275
+        ],
+        [
+          150,
+          275
+        ]
+      ],
+      "pos": [
+        210.0,
+        240.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_SCHREIBERPULT",
+      "walk_to": [
+        0.0,
+        70.0
+      ]
+    },
+    {
+      "baseline": 75,
+      "klickbar": true,
+      "name": "Sarkophag",
+      "poly": [
+        [
+          105,
+          130
+        ],
+        [
+          150,
+          130
+        ],
+        [
+          150,
+          280
+        ],
+        [
+          105,
+          280
+        ]
+      ],
+      "pos": [
+        127.5,
+        205.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_SARKOPHAG",
+      "walk_to": [
+        2.5,
+        105.0
+      ]
+    },
+    {
+      "baseline": 29,
+      "klickbar": true,
+      "name": "MumifizierteKatze",
+      "poly": [
+        [
+          212,
+          122
+        ],
+        [
+          254,
+          122
+        ],
+        [
+          254,
+          180
+        ],
+        [
+          212,
+          180
+        ]
+      ],
+      "pos": [
+        233.0,
+        151.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_MUMIFIZIERTE_KATZE",
+      "walk_to": [
+        -1.0,
+        154.0
+      ]
+    },
+    {
+      "baseline": 37,
+      "klickbar": true,
+      "name": "Wandfries",
+      "poly": [
+        [
+          580,
+          40
+        ],
+        [
+          1100,
+          40
+        ],
+        [
+          1100,
+          115
+        ],
+        [
+          580,
+          115
+        ]
+      ],
+      "pos": [
+        840.0,
+        77.5
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_WANDFRIES",
+      "walk_to": [
+        0.0,
+        227.5
+      ]
+    },
+    {
+      "baseline": 127,
+      "klickbar": true,
+      "name": "Saeulen",
+      "poly": [
+        [
+          355,
+          20
+        ],
+        [
+          410,
+          20
+        ],
+        [
+          410,
+          275
+        ],
+        [
+          355,
+          275
+        ]
+      ],
+      "pos": [
+        382.5,
+        147.5
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_SAEULEN",
+      "walk_to": [
+        -2.5,
+        162.5
+      ]
+    },
+    {
+      "baseline": 72,
+      "klickbar": true,
+      "name": "Inschrift",
+      "poly": [
+        [
+          440,
+          80
+        ],
+        [
+          525,
+          80
+        ],
+        [
+          525,
+          225
+        ],
+        [
+          440,
+          225
+        ]
+      ],
+      "pos": [
+        482.5,
+        152.5
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_INSCHRIFT",
+      "walk_to": [
+        -2.5,
+        152.5
+      ]
+    },
+    {
+      "baseline": 11,
+      "klickbar": true,
+      "name": "Opferschale",
+      "poly": [
+        [
+          828,
+          278
+        ],
+        [
+          866,
+          278
+        ],
+        [
+          866,
+          300
+        ],
+        [
+          828,
+          300
+        ]
+      ],
+      "pos": [
+        847.0,
+        289.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_OPFERSCHALE",
+      "walk_to": [
+        1.0,
+        26.0
+      ]
+    },
+    {
+      "baseline": 45,
+      "klickbar": true,
+      "name": "Fackeln",
+      "poly": [
+        [
+          1160,
+          100
+        ],
+        [
+          1190,
+          100
+        ],
+        [
+          1190,
+          190
+        ],
+        [
+          1160,
+          190
+        ]
+      ],
+      "pos": [
+        1175.0,
+        145.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_FACKELN",
+      "walk_to": [
+        -5.0,
+        165.0
+      ]
+    },
+    {
+      "baseline": 95,
+      "klickbar": true,
+      "name": "AusgangNilDelta",
+      "poly": [
+        [
+          10,
+          100
+        ],
+        [
+          100,
+          100
+        ],
+        [
+          100,
+          290
+        ],
+        [
+          10,
+          290
+        ]
+      ],
+      "pos": [
+        55.0,
+        195.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_AUSGANG_NIL_DELTA",
+      "walk_to": [
+        5.0,
+        115.0
+      ]
+    },
+    {
+      "baseline": 110,
+      "klickbar": true,
+      "name": "TuerZurKueche",
+      "poly": [
+        [
+          1195,
+          80
+        ],
+        [
+          1275,
+          80
+        ],
+        [
+          1275,
+          300
+        ],
+        [
+          1195,
+          300
+        ]
+      ],
+      "pos": [
+        1235.0,
+        190.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_TUER_ZUR_KUECHE",
+      "walk_to": [
+        -5.0,
+        125.0
+      ]
+    }
+  ],
+  "kamera_max": [
+    320.0,
+    180.0
+  ],
+  "laufbereiche": [
+    {
+      "name": "Boden",
+      "polys": [
+        [
+          [
+            8,
+            292
+          ],
+          [
+            1272,
+            292
+          ],
+          [
+            1272,
+            356
+          ],
+          [
+            8,
+            356
+          ]
+        ]
+      ]
+    }
+  ],
+  "marker": {
+    "Kissen": [
+      770.0,
+      300.0
+    ],
+    "Sobek": [
+      420.0,
+      330.0
+    ],
+    "Start": [
+      60.0,
+      320.0
+    ],
+    "VonNilDelta": [
+      60.0,
+      320.0
+    ],
+    "VonPalastkueche": [
+      1220.0,
+      320.0
+    ]
+  },
+  "modus": "anfang",
+  "props": [
+    {
+      "baseline": -180,
+      "klickbar": false,
+      "name": "Background",
+      "poly": [],
+      "pos": [
+        640.0,
+        0.0
+      ],
+      "rect": [
+        0,
+        0,
+        1280,
+        360
+      ],
+      "sichtbar": true,
+      "text": "UI_RAUM_THRONSAAL_RAMSES",
+      "walk_to": [
+        0.0,
+        180.0
+      ],
+      "z": -1
+    },
+    {
+      "baseline": 29,
+      "klickbar": true,
+      "name": "Pharaonenteller",
+      "poly": [
+        [
+          1022,
+          205
+        ],
+        [
+          1082,
+          205
+        ],
+        [
+          1082,
+          263
+        ],
+        [
+          1022,
+          263
+        ]
+      ],
+      "pos": [
+        1052.0,
+        263.0
+      ],
+      "rect": [
+        1017,
+        201,
+        1087,
+        267
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_PHARAONENTELLER",
+      "walk_to": [
+        -2.0,
+        49.0
+      ],
+      "z": 0
+    }
+  ],
+  "raum": "thronsaal_ramses",
+  "skala": null,
+  "tiefe": 0.85,
+  "welt": "welt-2"
+}

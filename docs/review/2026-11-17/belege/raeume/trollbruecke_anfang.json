@@ -1,0 +1,748 @@
+{
+  "bauplan_laufbereich": [
+    [
+      0.0,
+      178.0
+    ],
+    [
+      120.0,
+      178.0
+    ],
+    [
+      152.0,
+      168.0
+    ],
+    [
+      430.0,
+      168.0
+    ],
+    [
+      470.0,
+      183.0
+    ],
+    [
+      530.0,
+      203.0
+    ],
+    [
+      639.0,
+      212.0
+    ],
+    [
+      639.0,
+      359.0
+    ],
+    [
+      450.0,
+      359.0
+    ],
+    [
+      432.0,
+      330.0
+    ],
+    [
+      410.0,
+      300.0
+    ],
+    [
+      400.0,
+      268.0
+    ],
+    [
+      470.0,
+      238.0
+    ],
+    [
+      525.0,
+      218.0
+    ],
+    [
+      445.0,
+      188.0
+    ],
+    [
+      160.0,
+      188.0
+    ],
+    [
+      125.0,
+      200.0
+    ],
+    [
+      150.0,
+      230.0
+    ],
+    [
+      230.0,
+      280.0
+    ],
+    [
+      212.0,
+      320.0
+    ],
+    [
+      180.0,
+      359.0
+    ],
+    [
+      0.0,
+      359.0
+    ]
+  ],
+  "breite": 640,
+  "figuren": [
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "fussbad",
+        "idle",
+        "musical",
+        "regelbuch",
+        "talk",
+        "talk_alt",
+        "walk"
+      ],
+      "baseline": 0,
+      "name": "Waldemar",
+      "poly": [
+        [
+          380,
+          63
+        ],
+        [
+          410,
+          63
+        ],
+        [
+          410,
+          186
+        ],
+        [
+          380,
+          186
+        ]
+      ],
+      "pos": [
+        395.0,
+        186.0
+      ],
+      "rect": [
+        342,
+        55,
+        448,
+        186
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.456544488668442,
+        0.456544488668442
+      ],
+      "variante": "",
+      "walk_speed": 180.0,
+      "z": 0
+    },
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "aufheben",
+        "barfuss",
+        "benutzen",
+        "bohne",
+        "diskus",
+        "fallen",
+        "gaehnen",
+        "gehen_hinten",
+        "gehen_vorn",
+        "heisser_sand",
+        "hinsetzen",
+        "idle",
+        "katapult",
+        "kochloeffel",
+        "kopf_kratzen",
+        "melken",
+        "schulterzucken",
+        "speer",
+        "talk",
+        "talk_alt",
+        "treppe_walk",
+        "vom_boden_aufstehen",
+        "vom_sofa_aufstehen",
+        "wackeln",
+        "walk",
+        "walk_alt",
+        "walk_d",
+        "walk_l",
+        "walk_r",
+        "walk_u",
+        "wenden",
+        "zeigen"
+      ],
+      "baseline": 0,
+      "name": "Max",
+      "poly": [
+        [
+          9,
+          102
+        ],
+        [
+          31,
+          102
+        ],
+        [
+          31,
+          192
+        ],
+        [
+          9,
+          192
+        ]
+      ],
+      "pos": [
+        20.0,
+        192.0
+      ],
+      "rect": [
+        -47,
+        100,
+        87,
+        192
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.475392669439316,
+        0.475392669439316
+      ],
+      "variante": "",
+      "walk_speed": 150.0,
+      "z": 0
+    },
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "aufstehen",
+        "aufwachen",
+        "fauchen",
+        "gehen_hinten",
+        "gehen_vorn",
+        "haare",
+        "hinlegen",
+        "idle",
+        "minka_umgarnen",
+        "ohrfeige",
+        "putzen",
+        "schlafen",
+        "schnuppern",
+        "schwanz_zucken",
+        "springen",
+        "stehen",
+        "talk",
+        "talk_alt",
+        "tragen",
+        "vom_schrank_fallen",
+        "walk",
+        "walk_d",
+        "walk_l",
+        "walk_r",
+        "walk_u"
+      ],
+      "baseline": 0,
+      "name": "Pixel",
+      "poly": [
+        [
+          46,
+          173
+        ],
+        [
+          84,
+          173
+        ],
+        [
+          84,
+          192
+        ],
+        [
+          46,
+          192
+        ]
+      ],
+      "pos": [
+        65.0,
+        192.0
+      ],
+      "rect": [
+        35,
+        143,
+        95,
+        192
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.475392669439316,
+        0.475392669439316
+      ],
+      "variante": "",
+      "walk_speed": 160.0,
+      "z": 0
+    }
+  ],
+  "hotspots": [
+    {
+      "baseline": 40,
+      "klickbar": true,
+      "name": "Schild",
+      "poly": [
+        [
+          88,
+          100
+        ],
+        [
+          168,
+          100
+        ],
+        [
+          168,
+          180
+        ],
+        [
+          88,
+          180
+        ]
+      ],
+      "pos": [
+        128.0,
+        140.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_SCHILD",
+      "walk_to": [
+        2.0,
+        52.0
+      ]
+    },
+    {
+      "baseline": 22,
+      "klickbar": true,
+      "name": "Bruecke",
+      "poly": [
+        [
+          150,
+          160
+        ],
+        [
+          480,
+          160
+        ],
+        [
+          480,
+          205
+        ],
+        [
+          150,
+          205
+        ]
+      ],
+      "pos": [
+        315.0,
+        182.5
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_BRUECKE",
+      "walk_to": [
+        -15.0,
+        -2.5
+      ]
+    },
+    {
+      "baseline": 37,
+      "klickbar": true,
+      "name": "Bach",
+      "poly": [
+        [
+          210,
+          285
+        ],
+        [
+          440,
+          285
+        ],
+        [
+          440,
+          360
+        ],
+        [
+          210,
+          360
+        ]
+      ],
+      "pos": [
+        325.0,
+        322.5
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_BACH",
+      "walk_to": [
+        -130.0,
+        -17.5
+      ]
+    },
+    {
+      "baseline": 18,
+      "klickbar": true,
+      "name": "Grammophon",
+      "poly": [
+        [
+          252,
+          214
+        ],
+        [
+          280,
+          214
+        ],
+        [
+          280,
+          250
+        ],
+        [
+          252,
+          250
+        ]
+      ],
+      "pos": [
+        266.0,
+        232.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_GRAMMOPHON",
+      "walk_to": [
+        -61.0,
+        46.0
+      ]
+    },
+    {
+      "baseline": 9,
+      "klickbar": true,
+      "name": "Notenblaetter",
+      "poly": [
+        [
+          240,
+          248
+        ],
+        [
+          280,
+          248
+        ],
+        [
+          280,
+          266
+        ],
+        [
+          240,
+          266
+        ]
+      ],
+      "pos": [
+        260.0,
+        257.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_NOTENBLAETTER",
+      "walk_to": [
+        -55.0,
+        25.0
+      ]
+    },
+    {
+      "baseline": 30,
+      "klickbar": true,
+      "name": "Wildblumen",
+      "poly": [
+        [
+          0,
+          300
+        ],
+        [
+          90,
+          300
+        ],
+        [
+          90,
+          360
+        ],
+        [
+          0,
+          360
+        ]
+      ],
+      "pos": [
+        45.0,
+        330.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_WILDBLUMEN",
+      "walk_to": [
+        55.0,
+        -10.0
+      ]
+    },
+    {
+      "baseline": 22,
+      "klickbar": true,
+      "name": "AusgangDorfplatz",
+      "poly": [
+        [
+          0,
+          165
+        ],
+        [
+          50,
+          165
+        ],
+        [
+          50,
+          210
+        ],
+        [
+          0,
+          210
+        ]
+      ],
+      "pos": [
+        25.0,
+        187.5
+      ],
+      "sichtbar": true,
+      "text": "UI_RAUM_DORFPLATZ",
+      "walk_to": [
+        -13.0,
+        4.5
+      ]
+    },
+    {
+      "baseline": 40,
+      "klickbar": true,
+      "name": "Waldweg",
+      "poly": [
+        [
+          600,
+          170
+        ],
+        [
+          640,
+          170
+        ],
+        [
+          640,
+          250
+        ],
+        [
+          600,
+          250
+        ]
+      ],
+      "pos": [
+        620.0,
+        210.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_WALDWEG",
+      "walk_to": [
+        0.0,
+        18.0
+      ]
+    },
+    {
+      "baseline": 30,
+      "klickbar": true,
+      "name": "WegZumWasserschloss",
+      "poly": [
+        [
+          410,
+          105
+        ],
+        [
+          510,
+          105
+        ],
+        [
+          510,
+          165
+        ],
+        [
+          410,
+          165
+        ]
+      ],
+      "pos": [
+        460.0,
+        135.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_WEG_ZUM_WASSERSCHLOSS",
+      "walk_to": [
+        30.0,
+        61.0
+      ]
+    }
+  ],
+  "kamera_max": [
+    320.0,
+    180.0
+  ],
+  "laufbereiche": [
+    {
+      "name": "Boden",
+      "polys": [
+        [
+          [
+            0,
+            178
+          ],
+          [
+            120,
+            178
+          ],
+          [
+            152,
+            168
+          ],
+          [
+            430,
+            168
+          ],
+          [
+            470,
+            183
+          ],
+          [
+            530,
+            203
+          ],
+          [
+            639,
+            212
+          ],
+          [
+            639,
+            359
+          ],
+          [
+            450,
+            359
+          ],
+          [
+            432,
+            330
+          ],
+          [
+            410,
+            300
+          ],
+          [
+            400,
+            268
+          ],
+          [
+            470,
+            238
+          ],
+          [
+            525,
+            218
+          ],
+          [
+            445,
+            188
+          ],
+          [
+            160,
+            188
+          ],
+          [
+            125,
+            200
+          ],
+          [
+            150,
+            230
+          ],
+          [
+            230,
+            280
+          ],
+          [
+            212,
+            320
+          ],
+          [
+            180,
+            359
+          ],
+          [
+            0,
+            359
+          ]
+        ]
+      ]
+    }
+  ],
+  "marker": {
+    "BrueckeMitte": [
+      290.0,
+      178.0
+    ],
+    "Start": [
+      20.0,
+      192.0
+    ],
+    "VonDorfplatz": [
+      20.0,
+      192.0
+    ],
+    "VonWasserschloss": [
+      488.0,
+      196.0
+    ],
+    "VonZauberwald": [
+      615.0,
+      228.0
+    ],
+    "Wasser": [
+      320.0,
+      330.0
+    ],
+    "Ziegen": [
+      110.0,
+      196.0
+    ]
+  },
+  "modus": "anfang",
+  "props": [
+    {
+      "baseline": -180,
+      "klickbar": false,
+      "name": "Background",
+      "poly": [],
+      "pos": [
+        320.0,
+        0.0
+      ],
+      "rect": [
+        0,
+        0,
+        640,
+        360
+      ],
+      "sichtbar": true,
+      "text": "UI_RAUM_TROLLBRUECKE",
+      "walk_to": [
+        0.0,
+        180.0
+      ],
+      "z": -1
+    }
+  ],
+  "raum": "trollbruecke",
+  "skala": null,
+  "tiefe": 0.4,
+  "welt": "welt-1"
+}

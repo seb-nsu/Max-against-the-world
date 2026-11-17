@@ -1,0 +1,1007 @@
+{
+  "bauplan_laufbereich": [
+    [
+      8.0,
+      215.0
+    ],
+    [
+      1272.0,
+      215.0
+    ],
+    [
+      1272.0,
+      356.0
+    ],
+    [
+      8.0,
+      356.0
+    ]
+  ],
+  "breite": 1280,
+  "figuren": [
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "bruellen",
+        "dehnen",
+        "idle",
+        "losrennen",
+        "pfeife_drehen",
+        "talk",
+        "talk_alt",
+        "walk"
+      ],
+      "baseline": 0,
+      "name": "Leonidas",
+      "poly": [
+        [
+          935,
+          101
+        ],
+        [
+          985,
+          101
+        ],
+        [
+          985,
+          300
+        ],
+        [
+          935,
+          300
+        ]
+      ],
+      "pos": [
+        960.0,
+        300.0
+      ],
+      "rect": [
+        869,
+        96,
+        1051,
+        300
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.920567393302917,
+        0.920567393302917
+      ],
+      "variante": "",
+      "walk_speed": 120.0,
+      "z": 0
+    },
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "idle",
+        "kopf_einziehen",
+        "laufen",
+        "rennen",
+        "talk",
+        "walk"
+      ],
+      "baseline": 0,
+      "name": "Schildkroete",
+      "poly": [
+        [
+          991,
+          285
+        ],
+        [
+          1029,
+          285
+        ],
+        [
+          1029,
+          322
+        ],
+        [
+          991,
+          322
+        ]
+      ],
+      "pos": [
+        1010.0,
+        322.0
+      ],
+      "rect": [
+        977,
+        279,
+        1043,
+        322
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.951773047447205,
+        0.951773047447205
+      ],
+      "variante": "",
+      "walk_speed": 120.0,
+      "z": 0
+    },
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "aufheben",
+        "barfuss",
+        "benutzen",
+        "bohne",
+        "diskus",
+        "fallen",
+        "gaehnen",
+        "gehen_hinten",
+        "gehen_vorn",
+        "heisser_sand",
+        "hinsetzen",
+        "idle",
+        "katapult",
+        "kochloeffel",
+        "kopf_kratzen",
+        "melken",
+        "schulterzucken",
+        "speer",
+        "talk",
+        "talk_alt",
+        "treppe_walk",
+        "vom_boden_aufstehen",
+        "vom_sofa_aufstehen",
+        "wackeln",
+        "walk",
+        "walk_alt",
+        "walk_d",
+        "walk_l",
+        "walk_r",
+        "walk_u",
+        "wenden",
+        "zeigen"
+      ],
+      "baseline": 0,
+      "name": "Max",
+      "poly": [
+        [
+          1178,
+          126
+        ],
+        [
+          1222,
+          126
+        ],
+        [
+          1222,
+          300
+        ],
+        [
+          1178,
+          300
+        ]
+      ],
+      "pos": [
+        1200.0,
+        300.0
+      ],
+      "rect": [
+        1071,
+        122,
+        1329,
+        300
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.920567393302917,
+        0.920567393302917
+      ],
+      "variante": "",
+      "walk_speed": 150.0,
+      "z": 0
+    },
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "aufstehen",
+        "aufwachen",
+        "fauchen",
+        "gehen_hinten",
+        "gehen_vorn",
+        "haare",
+        "hinlegen",
+        "idle",
+        "minka_umgarnen",
+        "ohrfeige",
+        "putzen",
+        "schlafen",
+        "schnuppern",
+        "schwanz_zucken",
+        "springen",
+        "stehen",
+        "talk",
+        "talk_alt",
+        "tragen",
+        "vom_schrank_fallen",
+        "walk",
+        "walk_d",
+        "walk_l",
+        "walk_r",
+        "walk_u"
+      ],
+      "baseline": 0,
+      "name": "Pixel",
+      "poly": [
+        [
+          1118,
+          263
+        ],
+        [
+          1192,
+          263
+        ],
+        [
+          1192,
+          300
+        ],
+        [
+          1118,
+          300
+        ]
+      ],
+      "pos": [
+        1155.0,
+        300.0
+      ],
+      "rect": [
+        1097,
+        205,
+        1213,
+        300
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.920567393302917,
+        0.920567393302917
+      ],
+      "variante": "",
+      "walk_speed": 160.0,
+      "z": 0
+    },
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "idle",
+        "kopftuch",
+        "talk",
+        "talk_alt",
+        "unentschlossen",
+        "zepter_tauschen",
+        "zepter_wiegen"
+      ],
+      "baseline": 0,
+      "name": "Ramses",
+      "poly": [
+        [
+          719,
+          69
+        ],
+        [
+          761,
+          69
+        ],
+        [
+          761,
+          236
+        ],
+        [
+          719,
+          236
+        ]
+      ],
+      "pos": [
+        740.0,
+        236.0
+      ],
+      "rect": [
+        684,
+        68,
+        796,
+        236
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.829787254333496,
+        0.829787254333496
+      ],
+      "variante": "",
+      "walk_speed": 120.0,
+      "z": 0
+    },
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "arm_ausschuetteln",
+        "bauch",
+        "faecheln",
+        "idle",
+        "talk",
+        "talk_alt"
+      ],
+      "baseline": 0,
+      "name": "Faecherwedler",
+      "poly": [
+        [
+          781,
+          79
+        ],
+        [
+          820,
+          79
+        ],
+        [
+          820,
+          236
+        ],
+        [
+          781,
+          236
+        ]
+      ],
+      "pos": [
+        800.0,
+        236.0
+      ],
+      "rect": [
+        665,
+        43,
+        935,
+        236
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.829787254333496,
+        0.829787254333496
+      ],
+      "variante": "",
+      "walk_speed": 120.0,
+      "z": 0
+    },
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "gruebeln",
+        "idle",
+        "kopf_kratzen",
+        "talk",
+        "talk_alt",
+        "zirkel"
+      ],
+      "baseline": 0,
+      "name": "Archimedes",
+      "poly": [
+        [
+          270,
+          106
+        ],
+        [
+          310,
+          106
+        ],
+        [
+          310,
+          265
+        ],
+        [
+          270,
+          265
+        ]
+      ],
+      "pos": [
+        290.0,
+        265.0
+      ],
+      "rect": [
+        236,
+        93,
+        344,
+        265
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.870921969413757,
+        0.870921969413757
+      ],
+      "variante": "",
+      "walk_speed": 120.0,
+      "z": 0
+    },
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "armreif",
+        "idle",
+        "raeuspern",
+        "rede",
+        "talk",
+        "talk_alt",
+        "toga_zupfen"
+      ],
+      "baseline": 0,
+      "name": "Cicero",
+      "poly": [
+        [
+          538,
+          99
+        ],
+        [
+          582,
+          99
+        ],
+        [
+          582,
+          272
+        ],
+        [
+          538,
+          272
+        ]
+      ],
+      "pos": [
+        560.0,
+        272.0
+      ],
+      "rect": [
+        509,
+        96,
+        611,
+        272
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.880851089954376,
+        0.880851089954376
+      ],
+      "variante": "",
+      "walk_speed": 120.0,
+      "z": 0
+    },
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "idle",
+        "joggen",
+        "joggen_posen",
+        "talk",
+        "talk_alt",
+        "tasche",
+        "walk"
+      ],
+      "baseline": 0,
+      "name": "Hermes",
+      "poly": [
+        [
+          399,
+          120
+        ],
+        [
+          441,
+          120
+        ],
+        [
+          441,
+          292
+        ],
+        [
+          399,
+          292
+        ]
+      ],
+      "pos": [
+        420.0,
+        292.0
+      ],
+      "rect": [
+        358,
+        118,
+        482,
+        292
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.909219861030579,
+        0.909219861030579
+      ],
+      "variante": "",
+      "walk_speed": 120.0,
+      "z": 0
+    },
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "ankuendigen",
+        "federkrone",
+        "idle",
+        "talk",
+        "talk_alt"
+      ],
+      "baseline": 0,
+      "name": "Zeremonienmeister",
+      "poly": [
+        [
+          859,
+          76
+        ],
+        [
+          901,
+          76
+        ],
+        [
+          901,
+          246
+        ],
+        [
+          859,
+          246
+        ]
+      ],
+      "pos": [
+        880.0,
+        246.0
+      ],
+      "rect": [
+        825,
+        75,
+        935,
+        246
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.843971610069275,
+        0.843971610069275
+      ],
+      "variante": "",
+      "walk_speed": 120.0,
+      "z": 0
+    },
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "fuss_tippen",
+        "idle",
+        "klatschen",
+        "schulterzucken",
+        "talk",
+        "talk_alt"
+      ],
+      "baseline": 0,
+      "name": "Aegypter",
+      "poly": [
+        [
+          640,
+          82
+        ],
+        [
+          680,
+          82
+        ],
+        [
+          680,
+          240
+        ],
+        [
+          640,
+          240
+        ]
+      ],
+      "pos": [
+        660.0,
+        240.0
+      ],
+      "rect": [
+        619,
+        80,
+        701,
+        240
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.835461020469666,
+        0.835461020469666
+      ],
+      "variante": "",
+      "walk_speed": 120.0,
+      "z": 0
+    }
+  ],
+  "hotspots": [
+    {
+      "baseline": 12,
+      "klickbar": true,
+      "name": "Laufbahn",
+      "poly": [
+        [
+          160,
+          300
+        ],
+        [
+          1060,
+          300
+        ],
+        [
+          1060,
+          324
+        ],
+        [
+          160,
+          324
+        ]
+      ],
+      "pos": [
+        610.0,
+        312.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_LAUFBAHN",
+      "walk_to": [
+        30.0,
+        0.0
+      ]
+    },
+    {
+      "baseline": 20,
+      "klickbar": true,
+      "name": "Sandgrube",
+      "poly": [
+        [
+          180,
+          205
+        ],
+        [
+          455,
+          205
+        ],
+        [
+          455,
+          245
+        ],
+        [
+          180,
+          245
+        ]
+      ],
+      "pos": [
+        317.5,
+        225.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_SANDGRUBE",
+      "walk_to": [
+        2.5,
+        55.0
+      ]
+    },
+    {
+      "baseline": 50,
+      "klickbar": true,
+      "name": "Kampfrichterzelt",
+      "poly": [
+        [
+          420,
+          125
+        ],
+        [
+          545,
+          125
+        ],
+        [
+          545,
+          225
+        ],
+        [
+          420,
+          225
+        ]
+      ],
+      "pos": [
+        482.5,
+        175.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_KAMPFRICHTERZELT",
+      "walk_to": [
+        -2.5,
+        105.0
+      ]
+    },
+    {
+      "baseline": 50,
+      "klickbar": true,
+      "name": "Zuschauerraenge",
+      "poly": [
+        [
+          60,
+          60
+        ],
+        [
+          1170,
+          60
+        ],
+        [
+          1170,
+          160
+        ],
+        [
+          60,
+          160
+        ]
+      ],
+      "pos": [
+        615.0,
+        110.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_ZUSCHAUERRAENGE",
+      "walk_to": [
+        25.0,
+        170.0
+      ]
+    },
+    {
+      "baseline": 67,
+      "klickbar": true,
+      "name": "Glockenturm",
+      "poly": [
+        [
+          1195,
+          0
+        ],
+        [
+          1245,
+          0
+        ],
+        [
+          1245,
+          135
+        ],
+        [
+          1195,
+          135
+        ]
+      ],
+      "pos": [
+        1220.0,
+        67.5
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_GLOCKENTURM",
+      "walk_to": [
+        -70.0,
+        212.5
+      ]
+    },
+    {
+      "baseline": 25,
+      "klickbar": true,
+      "name": "Siegerliste",
+      "poly": [
+        [
+          845,
+          135
+        ],
+        [
+          915,
+          135
+        ],
+        [
+          915,
+          185
+        ],
+        [
+          845,
+          185
+        ]
+      ],
+      "pos": [
+        880.0,
+        160.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_SIEGERLISTE",
+      "walk_to": [
+        0.0,
+        110.0
+      ]
+    },
+    {
+      "baseline": 80,
+      "klickbar": true,
+      "name": "Startlinie",
+      "poly": [
+        [
+          1062,
+          200
+        ],
+        [
+          1082,
+          200
+        ],
+        [
+          1082,
+          360
+        ],
+        [
+          1062,
+          360
+        ]
+      ],
+      "pos": [
+        1072.0,
+        280.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_STARTLINIE",
+      "walk_to": [
+        -22.0,
+        20.0
+      ]
+    },
+    {
+      "baseline": 32,
+      "klickbar": true,
+      "name": "Wurfhebel",
+      "poly": [
+        [
+          88,
+          160
+        ],
+        [
+          198,
+          160
+        ],
+        [
+          198,
+          225
+        ],
+        [
+          88,
+          225
+        ]
+      ],
+      "pos": [
+        143.0,
+        192.5
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_WURFHEBEL",
+      "walk_to": [
+        7.0,
+        87.5
+      ]
+    },
+    {
+      "baseline": 70,
+      "klickbar": true,
+      "name": "AusgangAgora",
+      "poly": [
+        [
+          1235,
+          140
+        ],
+        [
+          1280,
+          140
+        ],
+        [
+          1280,
+          280
+        ],
+        [
+          1235,
+          280
+        ]
+      ],
+      "pos": [
+        1257.5,
+        210.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_AUSGANG_AGORA",
+      "walk_to": [
+        -7.5,
+        80.0
+      ]
+    }
+  ],
+  "kamera_max": [
+    960.0,
+    180.0
+  ],
+  "laufbereiche": [
+    {
+      "name": "Boden",
+      "polys": [
+        [
+          [
+            8,
+            215
+          ],
+          [
+            1272,
+            215
+          ],
+          [
+            1272,
+            356
+          ],
+          [
+            8,
+            356
+          ]
+        ]
+      ]
+    }
+  ],
+  "marker": {
+    "Aegypter": [
+      660.0,
+      240.0
+    ],
+    "Archimedes": [
+      290.0,
+      265.0
+    ],
+    "Cicero": [
+      560.0,
+      272.0
+    ],
+    "Hermes": [
+      420.0,
+      292.0
+    ],
+    "Ramses": [
+      740.0,
+      236.0
+    ],
+    "Start": [
+      1200.0,
+      300.0
+    ],
+    "VonAgora": [
+      1200.0,
+      300.0
+    ],
+    "Wedler": [
+      800.0,
+      236.0
+    ],
+    "Zeremonienmeister": [
+      880.0,
+      246.0
+    ]
+  },
+  "modus": "ende",
+  "props": [
+    {
+      "baseline": -180,
+      "klickbar": false,
+      "name": "Background",
+      "poly": [],
+      "pos": [
+        640.0,
+        0.0
+      ],
+      "rect": [
+        0,
+        0,
+        1280,
+        360
+      ],
+      "sichtbar": true,
+      "text": "UI_RAUM_STADION",
+      "walk_to": [
+        0.0,
+        180.0
+      ],
+      "z": -1
+    }
+  ],
+  "raum": "stadion",
+  "skala": null,
+  "tiefe": 0.8,
+  "welt": "welt-2"
+}

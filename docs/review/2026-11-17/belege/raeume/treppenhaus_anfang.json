@@ -1,0 +1,606 @@
+{
+  "bauplan_laufbereich": [
+    [
+      12.0,
+      357.0
+    ],
+    [
+      12.0,
+      290.0
+    ],
+    [
+      40.0,
+      282.0
+    ],
+    [
+      255.0,
+      282.0
+    ],
+    [
+      285.0,
+      250.0
+    ],
+    [
+      420.0,
+      158.0
+    ],
+    [
+      540.0,
+      70.0
+    ],
+    [
+      585.0,
+      44.0
+    ],
+    [
+      605.0,
+      44.0
+    ],
+    [
+      605.0,
+      54.0
+    ],
+    [
+      545.0,
+      80.0
+    ],
+    [
+      425.0,
+      168.0
+    ],
+    [
+      262.0,
+      282.0
+    ],
+    [
+      340.0,
+      300.0
+    ],
+    [
+      400.0,
+      345.0
+    ],
+    [
+      400.0,
+      357.0
+    ]
+  ],
+  "breite": 640,
+  "figuren": [
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "aufheben",
+        "barfuss",
+        "benutzen",
+        "bohne",
+        "diskus",
+        "fallen",
+        "gaehnen",
+        "gehen_hinten",
+        "gehen_vorn",
+        "heisser_sand",
+        "hinsetzen",
+        "idle",
+        "katapult",
+        "kochloeffel",
+        "kopf_kratzen",
+        "melken",
+        "schulterzucken",
+        "speer",
+        "talk",
+        "talk_alt",
+        "treppe_walk",
+        "vom_boden_aufstehen",
+        "vom_sofa_aufstehen",
+        "wackeln",
+        "walk",
+        "walk_alt",
+        "walk_d",
+        "walk_l",
+        "walk_r",
+        "walk_u",
+        "wenden",
+        "zeigen"
+      ],
+      "baseline": 0,
+      "name": "Max",
+      "poly": [
+        [
+          152,
+          139
+        ],
+        [
+          194,
+          139
+        ],
+        [
+          194,
+          310
+        ],
+        [
+          152,
+          310
+        ]
+      ],
+      "pos": [
+        173.0,
+        310.0
+      ],
+      "rect": [
+        46,
+        135,
+        300,
+        310
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.906000018119812,
+        0.906000018119812
+      ],
+      "variante": "",
+      "walk_speed": 150.0,
+      "z": 0
+    }
+  ],
+  "hotspots": [
+    {
+      "baseline": 15,
+      "klickbar": true,
+      "name": "HutAmHaken",
+      "poly": [
+        [
+          170,
+          122
+        ],
+        [
+          195,
+          122
+        ],
+        [
+          195,
+          152
+        ],
+        [
+          170,
+          152
+        ]
+      ],
+      "pos": [
+        182.5,
+        137.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_HUT_AM_HAKEN",
+      "walk_to": [
+        -0.5,
+        163.0
+      ]
+    },
+    {
+      "baseline": 39,
+      "klickbar": true,
+      "name": "Fenster",
+      "poly": [
+        [
+          290,
+          72
+        ],
+        [
+          350,
+          72
+        ],
+        [
+          350,
+          150
+        ],
+        [
+          290,
+          150
+        ]
+      ],
+      "pos": [
+        320.0,
+        111.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_FENSTER",
+      "walk_to": [
+        0.0,
+        179.0
+      ]
+    },
+    {
+      "baseline": 75,
+      "klickbar": true,
+      "name": "Treppe",
+      "poly": [
+        [
+          350,
+          45
+        ],
+        [
+          600,
+          45
+        ],
+        [
+          600,
+          195
+        ],
+        [
+          350,
+          195
+        ]
+      ],
+      "pos": [
+        475.0,
+        120.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_TREPPE",
+      "walk_to": [
+        -205.0,
+        160.0
+      ]
+    },
+    {
+      "baseline": 122,
+      "klickbar": true,
+      "name": "AusgangWohnzimmer",
+      "poly": [
+        [
+          10,
+          55
+        ],
+        [
+          75,
+          55
+        ],
+        [
+          75,
+          300
+        ],
+        [
+          10,
+          300
+        ]
+      ],
+      "pos": [
+        42.5,
+        177.5
+      ],
+      "sichtbar": true,
+      "text": "UI_RAUM_WOHNZIMMER",
+      "walk_to": [
+        2.5,
+        127.5
+      ]
+    },
+    {
+      "baseline": 22,
+      "klickbar": true,
+      "name": "AusgangDachboden",
+      "poly": [
+        [
+          395,
+          0
+        ],
+        [
+          625,
+          0
+        ],
+        [
+          625,
+          45
+        ],
+        [
+          395,
+          45
+        ]
+      ],
+      "pos": [
+        510.0,
+        22.5
+      ],
+      "sichtbar": true,
+      "text": "UI_RAUM_DACHBODEN",
+      "walk_to": [
+        82.0,
+        27.5
+      ]
+    },
+    {
+      "baseline": 46,
+      "klickbar": true,
+      "name": "Maentel",
+      "poly": [
+        [
+          110,
+          127
+        ],
+        [
+          178,
+          127
+        ],
+        [
+          178,
+          220
+        ],
+        [
+          110,
+          220
+        ]
+      ],
+      "pos": [
+        144.0,
+        173.5
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_MAENTEL",
+      "walk_to": [
+        6.0,
+        126.5
+      ]
+    },
+    {
+      "baseline": 45,
+      "klickbar": true,
+      "name": "Regenschirm",
+      "poly": [
+        [
+          192,
+          127
+        ],
+        [
+          210,
+          127
+        ],
+        [
+          210,
+          217
+        ],
+        [
+          192,
+          217
+        ]
+      ],
+      "pos": [
+        201.0,
+        172.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_REGENSCHIRM",
+      "walk_to": [
+        -1.0,
+        128.0
+      ]
+    },
+    {
+      "baseline": 40,
+      "klickbar": true,
+      "name": "Deckenlampe",
+      "poly": [
+        [
+          200,
+          10
+        ],
+        [
+          245,
+          10
+        ],
+        [
+          245,
+          90
+        ],
+        [
+          200,
+          90
+        ]
+      ],
+      "pos": [
+        222.5,
+        50.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_DECKENLAMPE",
+      "walk_to": [
+        -0.5,
+        250.0
+      ]
+    },
+    {
+      "baseline": 75,
+      "klickbar": true,
+      "name": "Kisten",
+      "poly": [
+        [
+          405,
+          195
+        ],
+        [
+          620,
+          195
+        ],
+        [
+          620,
+          345
+        ],
+        [
+          405,
+          345
+        ]
+      ],
+      "pos": [
+        512.5,
+        270.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_KISTEN",
+      "walk_to": [
+        -132.5,
+        60.0
+      ]
+    }
+  ],
+  "kamera_max": [
+    320.0,
+    180.0
+  ],
+  "laufbereiche": [
+    {
+      "name": "Boden",
+      "polys": [
+        [
+          [
+            12,
+            357
+          ],
+          [
+            12,
+            290
+          ],
+          [
+            40,
+            282
+          ],
+          [
+            255,
+            282
+          ],
+          [
+            285,
+            250
+          ],
+          [
+            420,
+            158
+          ],
+          [
+            540,
+            70
+          ],
+          [
+            585,
+            44
+          ],
+          [
+            605,
+            44
+          ],
+          [
+            605,
+            54
+          ],
+          [
+            545,
+            80
+          ],
+          [
+            425,
+            168
+          ],
+          [
+            262,
+            282
+          ],
+          [
+            340,
+            300
+          ],
+          [
+            400,
+            345
+          ],
+          [
+            400,
+            357
+          ]
+        ]
+      ]
+    }
+  ],
+  "marker": {
+    "Start": [
+      173.0,
+      310.0
+    ],
+    "VonDachboden": [
+      565.0,
+      60.0
+    ],
+    "VonWohnzimmer": [
+      55.0,
+      310.0
+    ]
+  },
+  "modus": "anfang",
+  "props": [
+    {
+      "baseline": -180,
+      "klickbar": false,
+      "name": "Background",
+      "poly": [],
+      "pos": [
+        320.0,
+        0.0
+      ],
+      "rect": [
+        0,
+        0,
+        640,
+        360
+      ],
+      "sichtbar": true,
+      "text": "UI_RAUM_TREPPENHAUS",
+      "walk_to": [
+        0.0,
+        180.0
+      ],
+      "z": -1
+    },
+    {
+      "baseline": 6,
+      "klickbar": true,
+      "name": "Thunfischdose",
+      "poly": [
+        [
+          424,
+          239
+        ],
+        [
+          440,
+          239
+        ],
+        [
+          440,
+          252
+        ],
+        [
+          424,
+          252
+        ]
+      ],
+      "pos": [
+        432.0,
+        251.5
+      ],
+      "rect": [
+        424,
+        240,
+        440,
+        253
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_THUNFISCHDOSE",
+      "walk_to": [
+        -52.0,
+        78.5
+      ],
+      "z": 0
+    }
+  ],
+  "raum": "treppenhaus",
+  "skala": null,
+  "tiefe": 0.85,
+  "welt": "prolog"
+}
