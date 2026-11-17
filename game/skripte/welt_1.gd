@@ -69,7 +69,9 @@ static func figuren_anwenden(raum: PopochiuRoom) -> void:
 			C.get_character(sn).position = pos
 		elif not da:
 			Spiel.figur_hier(sn, false)
-		if f:
+		# Jede anwesende Figur bekommt einen eigenen Platz (Review 17.11., W1-10: Zeldina und die
+		# XXL-Ziege standen beide auf Platz 0 an der Brücke)
+		if da:
 			i += 1
 	if is_instance_valid(C.Pixel):
 		# Pixel im Ziegenfell: eigenes Bild, wenn es eins gibt (grafik/figuren/pixel_ziege.png), sonst Fellfarbe

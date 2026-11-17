@@ -383,7 +383,7 @@ def pruefe_skript(ab, d, codes, kuerzel, alle_ids):
                 # Blasen über 140 Zeichen werden fünfzeilig und wachsen hinter die Porträts
                 # (Review Prolog und Welt 1, Fund 10): mit „//“ teilen
                 if len(teil.strip()) > MAX_BLASE:
-                    (W if ("prolog" in ort or "welt-1" in ort) else H)(ort, f"{roh}: Blase mit {len(teil.strip())} Zeichen (über {MAX_BLASE}), mit „//“ teilen")
+                    (W if any(a in ort for a in ("prolog", "welt-1", "welt-2")) else H)(ort, f"{roh}: Blase mit {len(teil.strip())} Zeichen (über {MAX_BLASE}), mit „//“ teilen")
                 for satz in re.split(r"(?<=[.!?…“])\s+", teil.strip()):
                     if len(satz) > MAX_ZEICHEN:
                         W(ort, f"{roh}: Satz mit {len(satz)} Zeichen passt in keine Blase (über {MAX_ZEICHEN}, teilen)")

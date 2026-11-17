@@ -33,7 +33,6 @@ height = 360
 [node name="WalkableAreas" type="Node2D" parent="." unique_id=2123468200]
 
 [node name="Boden" parent="WalkableAreas" unique_id=1577697252 instance=ExtResource("2_43nhc")]
-interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(100, 359, 110, 300, 150, 240, 200, 228, 500, 228, 600, 250, 639, 280, 639, 359)])
 
 [node name="Props" type="Node2D" parent="." unique_id=926662758]
 
@@ -54,7 +53,7 @@ interaction_polygon = PackedVector2Array(-28, -27.5, 28, -27.5, 28, 27.5, -28, 2
 position = Vector2(118, 187)
 texture = ExtResource("8_m4cdh")
 description = "UI_OBJ_SCHWERTER_BUENDEL"
-baseline = 25
+baseline = 20
 walk_to_point = Vector2(32, 65)
 
 [node name="FackelBuendel" parent="Props" unique_id=614849226 instance=ExtResource("9_mwppx")]
@@ -84,7 +83,7 @@ interaction_polygon = PackedVector2Array(-57.5, -35, 57.5, -35, 57.5, 35, -57.5,
 [node name="Okarina" parent="Hotspots" unique_id=821338632 instance=ExtResource("13_e3ve3")]
 position = Vector2(251, 218)
 description = "UI_OBJ_OKARINA"
-baseline = 5
+baseline = 10
 walk_to_point = Vector2(-1, 32)
 interaction_polygon = PackedVector2Array(-10, -10, 10, -10, 10, 10, -10, 10)
 

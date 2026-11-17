@@ -235,7 +235,11 @@ func _figur_laeuft(sn: String, von: Vector2, nach: Vector2, tempo: float, anim: 
 	if f == null or not f.has_method("laufen_zu"):
 		return
 	f.position = von
+	# Während des Laufs keine Klicks: sonst lief Max los und in die nächste Szene hinein
+	# (Review 17.11., W2-05)
+	G.block()
 	await f.laufen_zu(nach, tempo, anim)
+	G.unblock()
 
 
 func _raum_id() -> String:
@@ -330,6 +334,8 @@ func _bedingung_text(text: String) -> Variant:
 			return _wettkampf()
 		"nach dem Training":
 			return Zustand.geloest("R5")
+		"vor dem Training":
+			return not Zustand.geloest("R5")   # Review 17.11., X-08: galt vorher immer
 		"vor dem Finaltag":
 			return not Zustand.geloest("R13")
 		"nach dem Finaltag":
@@ -383,7 +389,12 @@ func _figuren_anwenden(raum: CQRaum) -> void:
 			sobek.call("grafik_laden", land)
 	if sobek_folgt() and raum.has_character("Sobek") and is_instance_valid(C.Pixel) and C.Pixel.is_inside_tree():
 		# hinter Pixel, mit Abstand: das Land-Bild ist rund 230 Pixel lang, der Fußpunkt liegt in der Mitte
-		C.get_character("Sobek").position = C.Pixel.position + Vector2(-150, 5)
+		# Steht Pixel nah am linken Rand, kriecht Sobek rechts von ihm (Review 17.11., W2-16)
+		var seite := -150.0 if C.Pixel.position.x - 150.0 >= 60.0 else 150.0
+		C.get_character("Sobek").position = C.Pixel.position + Vector2(seite, 5)
+	# Die Sandale hängt erst nach Tag 1 auf der Säule und nur, bis Pixel sie holt (Review 17.11., W2-26)
+	if rid == "agora" and raum.has_node("Hotspots/SandaleAufDerSaeule"):
+		raum.get_node("Hotspots/SandaleAufDerSaeule").visible = Zustand.geloest("R12") and not Zustand.geloest("R6a")
 
 
 #endregion
@@ -402,12 +413,12 @@ func nach_uebergang_nil_delta(_raum, _x) -> bool:
 		var ziel: Vector2 = raum.get_marker_position("Hermes") if raum.has_marker("Hermes") else Vector2(400, 320)
 		# Hermes joggt von rechts herein (Animation „joggen“)
 		Spiel.figur_hier("Hermes", true, ziel)
-		await _figur_laeuft("Hermes", Vector2(minf(ziel.x + 380.0, _raum_breite() + 60.0), ziel.y), ziel, 160.0, "joggen")
+		await _figur_laeuft("Hermes", Vector2(minf(ziel.x + 380.0, _raum_breite() + 60.0), ziel.y), ziel, 125.0, "joggen")
 		await _szene(["W2_NIL_HER_0910", "W2_NIL_MAX_0920"])
 		await _geben("opas_papyrus")
 		await _szene(["W2_NIL_HER_0930", "W2_NIL_OPA_0940", "W2_NIL_MAX_0950", "W2_NIL_PIX_0960",
 			"W2_NIL_HER_0970", "W2_NIL_MAX_0980", "W2_NIL_HER_0990"])
-		await _figur_laeuft("Hermes", ziel, Vector2(minf(ziel.x + 380.0, _raum_breite() + 60.0), ziel.y), 160.0, "joggen")
+		await _figur_laeuft("Hermes", ziel, Vector2(minf(ziel.x + 380.0, _raum_breite() + 60.0), ziel.y), 125.0, "joggen")
 		Spiel.figur_hier("Hermes", false)
 		return true
 	return false
@@ -709,6 +720,8 @@ func botschaft_legen() -> void:
 			pointe = ["W2_HIER_SCH_0230"]
 		elif satz[3] == "mund" and satz.slice(0, 3) == BOTSCHAFT.slice(0, 3):
 			pointe = ["W2_HIER_SCH_0240"]
+	if pointe.is_empty():
+		pointe = ["W2_HIER_SCH_0125"]  # Restfall: sagt, wie die Grammatik geht (Review 17.11., W2-12)
 	await _szene(["W2_HIER_SCH_0120"] + pointe)
 
 
@@ -968,7 +981,7 @@ func _schalter(_obj, iid) -> bool:
 	var hermes = C.get_character("Hermes")
 	if hermes != null and R.current is CQRaum and (R.current as CQRaum).has_marker("Hermes"):
 		var ziel: Vector2 = (R.current as CQRaum).get_marker_position("Hermes")
-		await _figur_laeuft("Hermes", Vector2(-40, ziel.y), ziel, 160.0, "joggen")
+		await _figur_laeuft("Hermes", Vector2(-40, ziel.y), ziel, 125.0, "joggen")
 	await _szene(["W2_BUER_MAX_0600", "W2_BUER_HER_0610"])
 	await _geben("sandalen")
 	return true
@@ -1205,10 +1218,13 @@ func _tag_1() -> void:
 	else:
 		lauf += ["W2_TAG1_NAR_0100", "W2_TAG1_MAX_0110"]
 	await _szene(lauf)
+	await _rennen_der_anderen()
 	if not geoelt and is_instance_valid(C.Max) and C.Max.has_method("laufen_zu"):
 		# Barfuß über den heißen Sand (Animation „barfuss“), die Bahn entlang nach links
 		var p: Vector2 = C.Max.position
+		G.block()
 		await C.Max.laufen_zu(Vector2(maxf(120.0, p.x - 520.0), p.y), 150.0, "barfuss")
+		G.unblock()
 	lauf = []
 	if not geoelt:
 		lauf += ["W2_TAG1_NAR_0060", "W2_TAG1_PIX_0120", "W2_TAG1_MAX_0130"]
@@ -1218,6 +1234,25 @@ func _tag_1() -> void:
 	await _abgeben("sandalen")
 	Zustand.setze("W2_LAUF_GEOELT", geoelt)
 	Zustand.setze_wert("W2_KORB", [])
+
+
+## Tag 1: Leonidas rennt los und biegt falsch ab (LEO 0020), die Schildkröte kriecht an allen vorbei
+## (NAR 0060). Die Bewegungen waren gebaut, aber nie aufgerufen (Review 17.11., W2-38).
+func _rennen_der_anderen() -> void:
+	if not is_instance_valid(R.current):
+		return
+	G.block()
+	var leo: CQFigur = C.get_character("Leonidas") if R.current.has_character("Leonidas") else null
+	var kroete: CQFigur = C.get_character("Schildkroete") if R.current.has_character("Schildkroete") else null
+	var leo_start := leo.position if leo else Vector2.ZERO
+	if kroete:
+		kroete.laufen_zu(kroete.position + Vector2(-260, 0), 70.0, "rennen")
+	if leo:
+		# links aus dem Bild, „falsch abgebogen“; zur Siegerehrung steht er wieder an seinem Platz
+		await leo.laufen_zu(Vector2(-80, leo.position.y), 260.0, "losrennen")
+		leo.position = leo_start
+		leo.schauen_zu(leo_start.x - 100.0)
+	G.unblock()
 
 
 ## Hebel-Minispiel: Gegenstände (und Pixel) in den Korb, dann abspringen.

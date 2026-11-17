@@ -353,6 +353,7 @@ def baue(abschnitt):
                     "id": hid, "script_name": pascal(hid), "name_key": name_key(hid, h["name"]),
                     "rect": h["rect"], "gehe": h.get("gehe", [0, 0]), "ansehen": [],
                     **({"versteckt": True} if h.get("versteckt") else {}),
+                    **({"boden": True} if h.get("boden") else {}),
                 })
         raeume.append(raum)
     raum_nach_id = {r["id"]: r for r in raeume}

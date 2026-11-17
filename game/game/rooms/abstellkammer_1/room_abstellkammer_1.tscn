@@ -19,7 +19,6 @@ height = 360
 [node name="WalkableAreas" type="Node2D" parent="." unique_id=463854798]
 
 [node name="Boden" parent="WalkableAreas" unique_id=937279921 instance=ExtResource("2_dsx3a")]
-interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(50, 359, 80, 300, 120, 280, 240, 276, 290, 240, 540, 238, 600, 300, 639, 330, 639, 359)])
 
 [node name="Props" type="Node2D" parent="." unique_id=971607405]
 

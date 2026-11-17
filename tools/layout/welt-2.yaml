@@ -57,7 +57,7 @@ nil_delta:
     von_faehre: [130, 305]
     hermes: [485, 305]             # nahe am Ankunftsplatz von Max, damit man ihn hereinjoggen sieht
   figuren:
-    faehrmann: [170, 302]          # vorn am Steg bei der Tafel, die Fähre dahinter bleibt sichtbar
+    faehrmann: [235, 302]   # rechts neben der Fährtafel, nicht davor (Review 17.11., W2-10)          # vorn am Steg bei der Tafel, die Fähre dahinter bleibt sichtbar
     sobek: [312, 240]
     steinmetz: [790, 268]
   vordergrund:
@@ -80,11 +80,12 @@ nil_delta:
   props:
     papyrusblatt: {rect: [580, 185, 40, 40], gehe: [600, 295]}
   ausgaenge:
-    thronsaal_ramses: {rect: [1236, 250, 44, 106], gehe: [1262, 325], id: sandweg, name: Sandweg}
+    thronsaal_ramses: {rect: [1230, 250, 50, 106], gehe: [1262, 325], id: sandweg, name: Sandweg}
     sphinx: {rect: [1090, 110, 120, 90], gehe: [1150, 262], id: duenenpfad, name: Dünenpfad}
 
 thronsaal_ramses:
   farbe: "#b98b3e"
+  licht: "#f2e2cc"            # Raumlicht für die Figuren (Review 17.11., X-02)
   effekte:                     # lebendiger Hintergrund (P16, gemalte Bildfolgen aus tools/ambiente.py)
     - {art: bild, bild: res://grafik/ambiente/fackel.png, bilder: 8, pos: [1170, 126], fps: 9}   # W1-B70
   hintergrund: res://grafik/hintergruende/w2_bg_thronsaal_ramses_v01.png
@@ -131,6 +132,7 @@ thronsaal_ramses:
 
 palastkueche:
   farbe: "#9c6b45"
+  licht: "#f0dcc4"            # Raumlicht für die Figuren (Review 17.11., X-02)
   effekte:                     # lebendiger Hintergrund (P16, gemalte Bildfolgen aus tools/ambiente.py)
     - {art: bild, bild: res://grafik/ambiente/ofenfeuer.png, bilder: 8, pos: [139, 198], fps: 8}   # W2-B22
     - {art: bild, bild: res://grafik/ambiente/ofenfeuer.png, bilder: 8, pos: [192, 198], fps: 7}   # W2-B22
@@ -188,7 +190,7 @@ sphinx:
     steinkugel: {rect: [272, 60, 90, 90], gehe: [318, 270], name: Steinkugel}
     nase: {rect: [565, 40, 35, 40], gehe: [540, 270], name: Nase}
   ausgaenge:
-    nil_delta: {rect: [0, 140, 40, 140], gehe: [30, 300], id: ausgang_nil_delta, name: Nil-Delta}
+    nil_delta: {rect: [0, 140, 50, 140], gehe: [30, 300], id: ausgang_nil_delta, name: Nil-Delta}
 
 faehrsteg_olympia:
   farbe: "#8fae7a"
@@ -200,8 +202,8 @@ faehrsteg_olympia:
   laufbereich: [[8, 262], [632, 262], [632, 356], [8, 356]]
   faehre: [nil_delta, hafen_syrakus]
   marker:
-    start: [130, 310]
-    von_faehre: [130, 310]
+    start: [230, 315]
+    von_faehre: [230, 315]   # nicht im Fährmann ankommen (Review 17.11., W2-24)
     von_agora: [590, 310]
   figuren:
     faehrmann: [118, 302]          # neben dem Steg, die Fähre links bleibt sichtbar
@@ -272,12 +274,13 @@ agora:
     menge: {rect: [600, 180, 340, 60], gehe: [770, 300], name: Menge}
     latein_kritzelei: {rect: [1125, 160, 60, 45], gehe: [1150, 300], name: Latein-Kritzelei}
   ausgaenge:
-    faehrsteg_olympia: {rect: [1236, 180, 44, 100], gehe: [1258, 305], id: weg_zum_faehrsteg, name: Weg zum Fährsteg}
+    faehrsteg_olympia: {rect: [1230, 180, 50, 100], gehe: [1258, 305], id: weg_zum_faehrsteg, name: Weg zum Fährsteg}
     stadion: {rect: [70, 80, 110, 190], gehe: [120, 300], id: bogen_zum_stadion, name: Bogen zum Stadion}
-    startbuero: {rect: [395, 175, 42, 85], gehe: [416, 290], id: tuer_zum_startbuero, name: Startbüro}
+    startbuero: {rect: [391, 175, 50, 85], gehe: [416, 290], id: tuer_zum_startbuero, name: Startbüro}
 
 startbuero:
   farbe: "#a89a7c"
+  licht: "#f2ebdc"            # Raumlicht für die Figuren (Review 17.11., X-02)
   effekte:                     # lebendiger Hintergrund (P16, gemalte Bildfolgen aus tools/ambiente.py)
     - {art: bild, bild: res://grafik/ambiente/wartende.png, bilder: 8, pos: [52, 281], fps: 3}   # W2-B31
   hintergrund: res://grafik/hintergruende/w2_bg_startbuero_v01.png
@@ -341,16 +344,16 @@ stadion:
     wurfhebel_im_stadion: wurfhebel
     startlinie_mit_startpass: startlinie
   hotspots:
-    laufbahn: {rect: [160, 300, 900, 24], gehe: [640, 312], name: Laufbahn}
+    laufbahn: {rect: [160, 300, 900, 24], gehe: [640, 312], name: Laufbahn, boden: true}
     sandgrube: {rect: [180, 205, 275, 40], gehe: [320, 280], name: Sandgrube}
     kampfrichterzelt: {rect: [420, 125, 125, 100], gehe: [480, 280], name: Kampfrichterzelt}
     zuschauerraenge: {rect: [60, 60, 1110, 100], gehe: [640, 280], name: Zuschauerränge}
     glockenturm: {rect: [1195, 0, 50, 135], gehe: [1150, 280], name: Glockenturm}
     siegerliste: {rect: [845, 135, 70, 50], gehe: [880, 270], name: Siegerliste}
-    startlinie: {rect: [1062, 200, 20, 160], gehe: [1050, 300], name: Startlinie}
+    startlinie: {rect: [1062, 200, 20, 40], gehe: [1050, 300], name: Startlinie}
     wurfhebel: {rect: [88, 160, 110, 65], gehe: [150, 280], name: Wurfhebel}
   ausgaenge:
-    agora: {rect: [1235, 140, 45, 140], gehe: [1250, 290], id: ausgang_agora, name: Agora}
+    agora: {rect: [1230, 140, 50, 140], gehe: [1250, 290], id: ausgang_agora, name: Agora}
 
 hafen_syrakus:
   farbe: "#6f98b0"
@@ -366,11 +369,11 @@ hafen_syrakus:
     vor_dem_meer: {bild: res://grafik/ambiente/hafen_vor_dem_meer.png, rect: [0, 85, 340, 130], baseline: 200}
   hintergrund: res://grafik/hintergruende/w2_bg_hafen_syrakus_v01.png
   tiefe: 0.75
-  laufbereich: [[8, 215], [560, 215], [580, 280], [632, 300], [632, 356], [8, 356]]
+  laufbereich: [[8, 215], [560, 215], [575, 245], [620, 245], [632, 300], [632, 356], [8, 356]]
   faehre: [nil_delta, faehrsteg_olympia]
   marker:
-    start: [140, 290]
-    von_faehre: [140, 290]
+    start: [300, 295]
+    von_faehre: [300, 295]   # nicht auf dem Fährmann ankommen (Review 17.11., W2-39)
     von_werkstatt: [580, 270]
     von_grabhuegel: [372, 240]
   figuren:
@@ -396,17 +399,18 @@ hafen_syrakus:
 
 werkstatt:
   farbe: "#8a7a62"
+  licht: "#ece0cc"            # Raumlicht für die Figuren (Review 17.11., X-02)
   effekte:                     # lebendiger Hintergrund (P16, gemalte Bildfolgen aus tools/ambiente.py)
     - {art: bild, bild: res://grafik/ambiente/wasserorgel.png, bilder: 6, pos: [80, 238], fps: 6, deckung: 0.55}   # W2-B25
   hintergrund: res://grafik/hintergruende/w2_bg_werkstatt_v01.png
   tiefe: 0.8
   laufbereich: [[190, 240], [632, 240], [632, 356], [8, 356], [8, 330], [190, 330]]
   marker:
-    start: [590, 310]
-    von_hafen_syrakus: [590, 310]
+    start: [600, 330]
+    von_hafen_syrakus: [600, 330]
   figuren:
     archimedes: [300, 300]
-    hieron: [520, 312]             # rechts, damit der Wurfhebel unter dem Fenster frei bleibt
+    hieron: [110, 345]   # vorn links an der Wanne, nicht im Durchgang zur Tür (Review 17.11., W2-41)             # rechts, damit der Wurfhebel unter dem Fenster frei bleibt
   vordergrund:
     wurfhebel: {bild: res://grafik/props/wurfhebel.png, pos: [440, 272], skala: 0.7}   # unter dem Fenster
   alias:
@@ -427,7 +431,7 @@ werkstatt:
     messbecher: {rect: [240, 150, 24, 18], gehe: [250, 270]}
     essigkrug: {rect: [555, 175, 45, 60], gehe: [560, 270]}
   ausgaenge:
-    hafen_syrakus: {rect: [600, 40, 40, 240], gehe: [610, 300], id: ausgang_hafen, name: Hafen}
+    hafen_syrakus: {rect: [590, 40, 50, 240], gehe: [610, 300], id: ausgang_hafen, name: Hafen}
 
 grabhuegel:
   farbe: "#7a8a5a"
@@ -448,9 +452,9 @@ grabhuegel:
     zikaden_oder_zuruf_grabhuegel: zikaden
   hotspots:
     sockel: {rect: [295, 170, 50, 50], gehe: [320, 250], name: Sockel}
-    brombeeren: {rect: [40, 110, 160, 140], gehe: [120, 280], name: Brombeeren}
+    brombeeren: {rect: [120, 110, 80, 90], gehe: [120, 280], name: Brombeeren}
     alte_grabsteine: {rect: [395, 135, 245, 105], gehe: [500, 270], name: Alte Grabsteine}
     zypressen: {rect: [410, 0, 150, 130], gehe: [480, 270], name: Zypressen}
     zikaden: {rect: [200, 0, 200, 100], gehe: [300, 280], name: Zikaden}
   ausgaenge:
-    hafen_syrakus: {rect: [0, 140, 40, 140], gehe: [30, 300], id: ausgang_hafen, name: Hafen}
+    hafen_syrakus: {rect: [0, 140, 120, 140], gehe: [30, 300], id: ausgang_hafen, name: Hafen}   # ganzer Pfad (Review 17.11., W2-44)

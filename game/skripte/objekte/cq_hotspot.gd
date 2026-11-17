@@ -66,6 +66,12 @@ func on_item_used(item: PopochiuInventoryItem) -> void:
 
 
 func _on_click() -> void:
+	# Boden-Hotspots (Layout „boden: true“: Laufbahn, Brücke, Besenspuren) sind nur zum Ansehen da;
+	# ein Linksklick läuft dorthin, wo geklickt wurde (Review 17.11., W2-33, W1-11, W1-20)
+	if bauplan().get("boden", false) and is_instance_valid(C.player) and not Spiel.testmodus \
+			and not bauplan().get("benutzen", []).any(func(e): return Spiel.eintrag_passt(e)):
+		C.player.walk_to(get_global_mouse_position())
+		return
 	await Spiel.hingehen(self)
 	if await Spiel.regel("benutzen", self):
 		return

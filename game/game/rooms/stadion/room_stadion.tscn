@@ -87,11 +87,11 @@ walk_to_point = Vector2(0, 110)
 interaction_polygon = PackedVector2Array(-35, -25, 35, -25, 35, 25, -35, 25)
 
 [node name="Startlinie" parent="Hotspots" unique_id=776175796 instance=ExtResource("11_ekowx")]
-position = Vector2(1072, 280)
+position = Vector2(1072, 220)
 description = "UI_OBJ_STARTLINIE"
-baseline = 80
-walk_to_point = Vector2(-22, 20)
-interaction_polygon = PackedVector2Array(-10, -80, 10, -80, 10, 80, -10, 80)
+baseline = 20
+walk_to_point = Vector2(-22, 80)
+interaction_polygon = PackedVector2Array(-10, -20, 10, -20, 10, 20, -10, 20)
 
 [node name="Wurfhebel" parent="Hotspots" unique_id=2002672959 instance=ExtResource("12_xpgu3")]
 position = Vector2(143, 192.5)
@@ -101,12 +101,12 @@ walk_to_point = Vector2(7, 87.5)
 interaction_polygon = PackedVector2Array(-55, -32.5, 55, -32.5, 55, 32.5, -55, 32.5)
 
 [node name="AusgangAgora" parent="Hotspots" unique_id=353297913 instance=ExtResource("13_rie0b")]
-position = Vector2(1257.5, 210)
+position = Vector2(1255, 210)
 description = "UI_OBJ_AUSGANG_AGORA"
 baseline = 70
-walk_to_point = Vector2(-7.5, 80)
+walk_to_point = Vector2(-5, 80)
 cursor = 9
-interaction_polygon = PackedVector2Array(-22.5, -70, 22.5, -70, 22.5, 70, -22.5, 70)
+interaction_polygon = PackedVector2Array(-25, -70, 25, -70, 25, 70, -25, 70)
 
 [node name="Regions" type="Node2D" parent="." unique_id=1731627739]
 

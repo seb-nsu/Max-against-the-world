@@ -26,6 +26,7 @@ Szene. Der Wirbel spuckt Max auf das Kopfsteinpflaster, Pixel landet auf allen v
 | W1\_ANK\_MAX\_0140 | Max | Tut mir leid, ich bin wegen eines Eis hier. Prinzessinnen hab ich bisher nur gerettet, wenn es dafür Punkte gab. |  |
 | W1\_ANK\_TOA\_0150 | Toadi | Ein Ei? Der Dunkle Lord hat alles, was es gibt. Dein Ei bestimmt auch. Er wohnt im Dunklen Turm, da hinten, wo es violett wird. | zeigt nach rechts hinten |
 | W1\_ANK\_PIX\_0160 | Pixel | Ein Turm, der sich selbst Dunkler Turm nennt. Das ist ungefähr so unauffällig wie mein Napf, auf dem groß „Napf“ steht. // Ich habe den Napf trotzdem gern. Den Turm vermutlich nicht. |  |
+| W1\_ANK\_TOA\_0165 | Toadi | He, Held! Warte! Du weißt ja noch gar nicht, wie man zum Turm kommt! | Zuruf, sobald Max nach der Ankunft zum ersten Mal irgendwo hingegangen ist; danach 0161 bis 0200 |
 | W1\_ANK\_MAX\_0161 | Max | Und wie kommt man da hin? Am liebsten ohne viel Laufen. |  |
 | W1\_ANK\_TOA\_0170 | Toadi | Über die Trollbrücke, durch den Zauberwald, dann durchs Bergwerk. Ich weiß das so genau, weil ich dreimal umkehren musste. |  |
 | W1\_ANK\_MAX\_0180 | Max | Und wie komm ich an dem Troll vorbei? Ich frag nur, weil Trolle in Spielen immer ziemlich viele Lebenspunkte haben. |  |

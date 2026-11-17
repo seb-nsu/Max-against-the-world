@@ -82,6 +82,11 @@ const ZEILE := {
 	"W2_KRON_PIX_0220": ["PIX", "fauchen", "vor"],
 	"W2_DUEL_PIX_0080": ["PIX", "fauchen", "vor"],
 	"W1_BRUE_PIX_0410": ["PIX", "fauchen", "vor"],
+	# Gebaut, aber bisher nie aufgerufen (Review 17.11., W1-06, W1-19)
+	"W1_SCHM_MAX_0440": ["MAX", "melken", "vor"],      # Krug auf Ziege: Max melkt
+	"W1_TURM_PIX_0200": ["PIX", "haare", "vor"],       # Haarspur auf die Kreuzung
+	"W1_TURM_PIX_0210": ["PIX", "haare", "vor"],
+	"W1_TURM_PIX_0220": ["PIX", "haare", "vor"],
 }
 
 const RUHE := {}

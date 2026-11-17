@@ -97,13 +97,14 @@ dorfplatz:
   ausgaenge:
     taverne: {rect: [138, 158, 54, 120], gehe: [165, 300], id: taverne_von_aussen, name: Taverne}
     zauberstabladen: {rect: [640, 70, 112, 188], gehe: [681, 268], id: zauberstab_laden_von_aussen, name: Zauberstab-Laden}
-    klassenzimmer: {rect: [592, 140, 48, 108], gehe: [618, 258], id: weg_nach_hoggelwarz, name: Weg nach Hoggelwarz}
+    klassenzimmer: {rect: [590, 140, 50, 108], gehe: [618, 258], id: weg_nach_hoggelwarz, name: Weg nach Hoggelwarz}
     schmiede: {rect: [992, 71, 166, 171], gehe: [1075, 258], id: schmiede_von_aussen, name: Schmiede}
     trollbruecke: {rect: [1165, 150, 115, 78], gehe: [1235, 252], id: waldweg, name: Waldweg}
     luftschloss: {rect: [745, 20, 80, 220], gehe: [785, 264], id: bohnenranke, name: Bohnenranke, versteckt: true}
 
 taverne:
   farbe: "#6e4a32"
+  licht: "#f0d8bc"            # Raumlicht für die Figuren (Review 17.11., X-02)
   effekte:                     # lebendiger Hintergrund (P16, Review 14. November 2026)
     - {art: flackern, pos: [477, 182], r: [30, 24]}
     - {art: bild, bild: res://grafik/ambiente/kaminfeuer.png, bilder: 7, pos: [482, 212], fps: 8}   # W1-B61
@@ -153,12 +154,13 @@ taverne:
     leere_schilder: {rect: [432, 102, 92, 15], gehe: [480, 250], name: Leere Schilder}
   props:
     ziegenfell_vorleger: {rect: [424, 231, 172, 49], gehe: [510, 300]}   # liegt flach: Baseline -60 in der Szene, Figuren stehen immer darauf (Sebastian, 14. November 2026: Max versank vor dem Kamin)
-    ei: {rect: [366, 166, 12, 12], gehe: [362, 240]}   # „Ei unter dem Huhn“: schaut vorn zwischen Huhn und Korbrand hervor
+    ei: {rect: [362, 162, 20, 20], gehe: [362, 240]}   # „Ei unter dem Huhn“: schaut vorn zwischen Huhn und Korbrand hervor
   ausgaenge:
     dorfplatz: {rect: [590, 70, 50, 160], gehe: [605, 245], id: ausgang_dorfplatz}
 
 schmiede:
   farbe: "#5d4a42"
+  licht: "#f0d0b8"            # Raumlicht für die Figuren (Review 17.11., X-02)
   effekte:                     # lebendiger Hintergrund (P16, Review 14. November 2026)
     - {art: flackern, pos: [146, 160], r: [38, 30]}
     - {art: flackern, pos: [167, 144], r: [14, 16]}
@@ -191,6 +193,7 @@ schmiede:
 
 zauberstabladen:
   farbe: "#4f3f5e"
+  licht: "#dcd0e4"            # Raumlicht für die Figuren (Review 17.11., X-02)
   effekte:                     # lebendiger Hintergrund (P16, gemalte Bildfolgen aus tools/ambiente.py)
     - {art: bild, bild: res://grafik/ambiente/schachtel.png, bilder: 6, pos: [170, 86], fps: 8, ablauf: einmalig, pause: [12, 30]}   # W1-B66
   hintergrund: res://grafik/hintergruende/w1_bg_zauberstabladen_v01.png
@@ -212,11 +215,11 @@ zauberstabladen:
     leiter: {rect: [178, 55, 54, 177], gehe: [205, 250], name: Leiter}
     theke_mit_kissen: {rect: [253, 145, 144, 77], gehe: [325, 245], name: Theke}
   props:
-    zahnstocher: {rect: [285, 140, 15, 12], gehe: [300, 245], item: null}
+    zahnstocher: {rect: [283, 136, 20, 20], gehe: [300, 245], item: null}
     zollstock: {rect: [306, 140, 28, 13], gehe: [320, 245], item: null}
     kochloeffel: {rect: [334, 142, 38, 12], gehe: [350, 245]}
   ausgaenge:
-    dorfplatz: {rect: [592, 65, 48, 160], gehe: [605, 245], id: ausgang_dorfplatz}
+    dorfplatz: {rect: [590, 65, 50, 160], gehe: [605, 245], id: ausgang_dorfplatz}
 
 klassenzimmer:
   farbe: "#5a6988"
@@ -238,7 +241,7 @@ klassenzimmer:
     von_dorfplatz: [80, 250]
   figuren:
     alwin: [248, 245]
-    toadi: [42, 238]
+    toadi: [470, 262]   # nicht vor der Tür (Review 17.11., W1-08)
   blick:
     alwin: links
   vordergrund:
@@ -298,19 +301,19 @@ trollbruecke:
     bruecke_mitte: [290, 178]
     wasser: [320, 330]           # Waldemar im Fußbad
   figuren:
-    waldemar: [395, 186]
+    waldemar: [395, 168]   # Füße auf der Lauffläche, nicht auf der Brüstung (Review 17.11., W1-23)
   alias:
     lore: bruecke
   hotspots:
     schild: {rect: [88, 100, 80, 80], gehe: [130, 192], name: Schild}
-    bruecke: {rect: [150, 160, 330, 45], gehe: [300, 180], name: Brücke}
+    bruecke: {rect: [150, 160, 330, 45], gehe: [300, 180], name: Brücke, boden: true}
     bach: {rect: [210, 285, 230, 75], gehe: [195, 305], name: Bach}
     grammophon: {rect: [252, 214, 28, 36], gehe: [205, 278], name: Grammophon}
     notenblaetter: {rect: [240, 248, 40, 18], gehe: [205, 282], name: Notenblätter}
     wildblumen: {rect: [0, 300, 90, 60], gehe: [100, 320], name: Wildblumen}
   ausgaenge:
     dorfplatz: {rect: [0, 165, 50, 45], gehe: [12, 192], id: ausgang_dorfplatz}
-    zauberwald: {rect: [600, 170, 40, 80], gehe: [620, 228], id: waldweg, name: Waldweg, gesperrt: W1_BRUE_MAX_0190}
+    zauberwald: {rect: [590, 170, 50, 80], gehe: [620, 228], id: waldweg, name: Waldweg, gesperrt: W1_BRUE_MAX_0190}
     wasserschloss: {rect: [410, 105, 100, 60], gehe: [490, 196], id: weg_zum_wasserschloss, name: Weg zum Wasserschloss, gesperrt: W1_BRUE_MAX_0190}
 
 wasserschloss:
@@ -343,7 +346,7 @@ wasserschloss:
     umzugskartons: {rect: [322, 155, 30, 38], gehe: [324, 226], name: Umzugskartons}
     teppich: {rect: [328, 188, 26, 14], gehe: [324, 226], name: Teppich}
   ausgaenge:
-    trollbruecke: {rect: [0, 140, 30, 110], gehe: [15, 292], id: ausgang_trollbruecke}
+    trollbruecke: {rect: [0, 140, 50, 110], gehe: [15, 292], id: ausgang_trollbruecke}
 
 zauberwald:
   farbe: "#3f5a3a"
@@ -395,7 +398,7 @@ zauberwald:
     ketchup: {rect: [841, 209, 11, 30], gehe: [844, 268]}
     alter_baum: {rect: [340, 0, 150, 360], gehe: [420, 280]}
   ausgaenge:
-    trollbruecke: {rect: [0, 170, 30, 110], gehe: [15, 265], id: ausgang_trollbruecke}
+    trollbruecke: {rect: [0, 170, 50, 110], gehe: [15, 265], id: ausgang_trollbruecke}
     bergwerk: {rect: [929, 105, 100, 125], gehe: [996, 242], id: stolleneingang, name: Stolleneingang}
 
 bergwerk:
@@ -457,11 +460,11 @@ luftschloss:
   # und farblich angeglichen (luftschloss_breit_v1.png). Die Wolken vorn sind nicht begehbar.
   hintergrund: res://grafik/hintergruende/w1_bg_luftschloss_v01.png
   tiefe: 0.6
-  laufbereich: [[150, 262], [205, 228], [640, 216], [1230, 214], [1200, 246], [1080, 286], [960, 326],
+  laufbereich: [[150, 262], [205, 228], [340, 224], [345, 262], [445, 262], [450, 220], [640, 216], [1230, 214], [1200, 246], [1080, 286], [960, 326],
                 [860, 344], [600, 344], [330, 334], [180, 300]]
   marker:
-    start: [175, 270]
-    von_dorfplatz: [175, 270]
+    start: [210, 270]
+    von_dorfplatz: [210, 270]
   figuren:
     maklerin: [965, 262]
     zeldina: [1010, 268]
@@ -523,6 +526,7 @@ turmkeller:
 
 abstellkammer_1:
   farbe: "#4a3f3a"
+  licht: "#c8c0dc"            # Raumlicht für die Figuren (Review 17.11., X-02)
   effekte:                     # lebendiger Hintergrund (P16, gemalte Bildfolgen aus tools/ambiente.py)
     - {art: bild, bild: res://grafik/ambiente/fackel.png, bilder: 8, pos: [493, 104], fps: 9}   # W1-B70
   # Echter Hintergrund (14. November 2026, Sebastians Gemini-Fassung): Tür links (im Keller liegt die
@@ -538,7 +542,7 @@ abstellkammer_1:
     besen_in_abstellkammer_1: besen
     kram_in_abstellkammer_1: kram
   hotspots:
-    besen: {rect: [290, 246, 230, 54], gehe: [400, 300], name: Besen}
+    besen: {rect: [290, 246, 230, 54], gehe: [400, 300], name: Besen, boden: true}
     kram: {rect: [130, 140, 210, 140], gehe: [230, 296], name: Kram}
   ausgaenge:
     turmkeller: {rect: [20, 80, 62, 215], gehe: [100, 300], id: ausgang_turmkeller, name: Keller}
@@ -574,14 +578,14 @@ abstellkammern:
   hotspots:
     drachenei_nest: {rect: [395, 180, 80, 45], gehe: [432, 250], name: Drachenei}
     goldhaufen: {rect: [265, 155, 115, 70], gehe: [320, 250], name: Goldhaufen}
-    okarina: {rect: [244, 213, 14, 10], gehe: [250, 250], name: Okarina}
+    okarina: {rect: [241, 208, 20, 20], gehe: [250, 250], name: Okarina}
     schwert_im_stein: {rect: [226, 140, 30, 65], gehe: [240, 250], name: Schwert im Stein}
     deko_kram: {rect: [140, 145, 80, 85], gehe: [180, 250], name: Kram}
     stapel: {rect: [40, 160, 200, 72], gehe: [180, 252], name: Stapel}
   props:
     kronleuchter: {rect: [292, 8, 56, 55], gehe: [320, 250]}
     # aus dem Hintergrund ausgeschnitten (14. November 2026), dahinter Wand und Pfosten übermalt
-    schwerter_buendel: {rect: [88, 137, 60, 100], gehe: [150, 252]}
+    schwerter_buendel: {rect: [98, 167, 40, 40], gehe: [150, 252]}
     fackel_buendel: {rect: [190, 186, 31, 40], gehe: [205, 252]}
   vordergrund:
     okarina: {bild: res://grafik/props/okarina.png, pos: [251, 222], vor: R12}

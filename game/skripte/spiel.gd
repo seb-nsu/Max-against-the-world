@@ -282,7 +282,8 @@ func _erzaehlen(text: String) -> void:
 	l.modulate.a = 0.0
 	var t := create_tween()
 	t.tween_property(l, "modulate:a", 1.0, 0.2)
-	await get_tree().create_timer(clampf(text.length() / 15.0, 1.6, 5.0)).timeout
+	# bis 8 s, damit auch lange Erzählzeilen lesbar bleiben (Review 17.11., X-05; vorher höchstens 5 s)
+	await get_tree().create_timer(clampf(text.length() / 13.0, 1.6, 8.0)).timeout
 	if is_instance_valid(l):
 		var t2 := create_tween()
 		t2.tween_property(l, "modulate:a", 0.0, 0.2)

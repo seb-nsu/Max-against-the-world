@@ -157,4 +157,4 @@ position = Vector2(80, 250)
 position = Vector2(248, 245)
 
 [node name="CharacterToadi *" parent="Characters" unique_id=1625231671 instance=ExtResource("16_skdtx")]
-position = Vector2(42, 238)
+position = Vector2(470, 262)

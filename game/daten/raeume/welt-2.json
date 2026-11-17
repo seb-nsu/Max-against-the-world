@@ -231,7 +231,7 @@
      "id": "faehrmann",
      "script_name": "Faehrmann",
      "pos": [
-      170,
+      235,
       302
      ]
     },
@@ -544,9 +544,9 @@
      "ziel": "thronsaal_ramses",
      "name_key": "UI_OBJ_SANDWEG",
      "rect": [
-      1236,
+      1230,
       250,
-      44,
+      50,
       106
      ],
      "gehe": [
@@ -687,6 +687,7 @@
      "schatten": false
     }
    },
+   "licht": "#f2e2cc",
    "effekte": [
     {
      "art": "bild",
@@ -1220,6 +1221,7 @@
     ]
    },
    "tiefe": 0.85,
+   "licht": "#f0dcc4",
    "effekte": [
     {
      "art": "bild",
@@ -1984,7 +1986,7 @@
      "rect": [
       0,
       140,
-      40,
+      50,
       140
      ],
      "gehe": [
@@ -2044,12 +2046,12 @@
    ],
    "marker": {
     "start": [
-     130,
-     310
+     230,
+     315
     ],
     "von_faehre": [
-     130,
-     310
+     230,
+     315
     ],
     "von_agora": [
      590,
@@ -2251,7 +2253,8 @@
        "zeile": "W2_STOL_MAX_0055",
        "sprecher": "MAX",
        "blasen": [
-        "W2_STOL_MAX_0055"
+        "W2_STOL_MAX_0055",
+        "W2_STOL_MAX_0055_2"
        ],
        "mal": 2
       }
@@ -2551,7 +2554,8 @@
        "zeile": "W2_AGOR_MAX_0035",
        "sprecher": "MAX",
        "blasen": [
-        "W2_AGOR_MAX_0035"
+        "W2_AGOR_MAX_0035",
+        "W2_AGOR_MAX_0035_2"
        ],
        "mal": 2
       }
@@ -2882,9 +2886,9 @@
      "ziel": "faehrsteg_olympia",
      "name_key": "UI_OBJ_WEG_ZUM_FAEHRSTEG",
      "rect": [
-      1236,
+      1230,
       180,
-      44,
+      50,
       100
      ],
      "gehe": [
@@ -2918,9 +2922,9 @@
      "ziel": "startbuero",
      "name_key": "UI_OBJ_TUER_ZUM_STARTBUERO",
      "rect": [
-      395,
+      391,
       175,
-      42,
+      50,
       85
      ],
      "gehe": [
@@ -3031,6 +3035,7 @@
      "baseline": 216
     }
    },
+   "licht": "#f2ebdc",
    "effekte": [
     {
      "art": "bild",
@@ -3480,7 +3485,8 @@
        ],
        "mal": 2
       }
-     ]
+     ],
+     "boden": true
     },
     {
      "id": "sandgrube",
@@ -3672,7 +3678,7 @@
       1062,
       200,
       20,
-      160
+      40
      ],
      "gehe": [
       1050,
@@ -3728,7 +3734,8 @@
        "zeile": "W2_STAD_MAX_0310",
        "sprecher": "MAX",
        "blasen": [
-        "W2_STAD_MAX_0310"
+        "W2_STAD_MAX_0310",
+        "W2_STAD_MAX_0310_2"
        ],
        "bedingung_text": "wenn der Finaltag bereit ist und die Wedler nicht bestochen sind, beim nächsten Benutzen beginnt der Finaltag"
       }
@@ -3777,9 +3784,9 @@
      "ziel": "agora",
      "name_key": "UI_OBJ_AUSGANG_AGORA",
      "rect": [
-      1235,
+      1230,
       140,
-      45,
+      50,
       140
      ],
      "gehe": [
@@ -3837,8 +3844,12 @@
      215
     ],
     [
-     580,
-     280
+     575,
+     245
+    ],
+    [
+     620,
+     245
     ],
     [
      632,
@@ -3855,12 +3866,12 @@
    ],
    "marker": {
     "start": [
-     140,
-     290
+     300,
+     295
     ],
     "von_faehre": [
-     140,
-     290
+     300,
+     295
     ],
     "von_werkstatt": [
      580,
@@ -4338,12 +4349,12 @@
    ],
    "marker": {
     "start": [
-     590,
-     310
+     600,
+     330
     ],
     "von_hafen_syrakus": [
-     590,
-     310
+     600,
+     330
     ]
    },
    "tiefe": 0.8,
@@ -4357,6 +4368,7 @@
      "skala": 0.7
     }
    },
+   "licht": "#ece0cc",
    "effekte": [
     {
      "art": "bild",
@@ -4383,8 +4395,8 @@
      "id": "hieron",
      "script_name": "Hieron",
      "pos": [
-      520,
-      312
+      110,
+      345
      ]
     }
    ],
@@ -4969,9 +4981,9 @@
      "ziel": "hafen_syrakus",
      "name_key": "UI_OBJ_AUSGANG_HAFEN",
      "rect": [
-      600,
+      590,
       40,
-      40,
+      50,
       240
      ],
      "gehe": [
@@ -5141,10 +5153,10 @@
      "script_name": "Brombeeren",
      "name_key": "UI_OBJ_BROMBEEREN",
      "rect": [
-      40,
+      120,
       110,
-      160,
-      140
+      80,
+      90
      ],
      "gehe": [
       120,
@@ -5278,7 +5290,7 @@
      "rect": [
       0,
       140,
-      40,
+      120,
       140
      ],
      "gehe": [
@@ -8021,7 +8033,8 @@
      "zeile": "W2_DISK_MAX_0310",
      "sprecher": "MAX",
      "blasen": [
-      "W2_DISK_MAX_0310"
+      "W2_DISK_MAX_0310",
+      "W2_DISK_MAX_0310_2"
      ]
     },
     {
@@ -8130,7 +8143,8 @@
      "zeile": "W2_RING_MAX_0030",
      "sprecher": "MAX",
      "blasen": [
-      "W2_RING_MAX_0030"
+      "W2_RING_MAX_0030",
+      "W2_RING_MAX_0030_2"
      ],
      "bedingung_text": "liest die Konter vor",
      "mal": 2
@@ -8576,7 +8590,8 @@
        "zeile": "W2_HIER_SCH_0050",
        "sprecher": "SCH",
        "blasen": [
-        "W2_HIER_SCH_0050"
+        "W2_HIER_SCH_0050",
+        "W2_HIER_SCH_0050_2"
        ],
        "regie": "Hinweis auf die Inschrift"
       },
@@ -9489,7 +9504,8 @@
        "zeile": "W2_WERK_HIE_0480",
        "sprecher": "HIE",
        "blasen": [
-        "W2_WERK_HIE_0480"
+        "W2_WERK_HIE_0480",
+        "W2_WERK_HIE_0480_2"
        ],
        "regie": "gibt Krone und Goldbarren"
       },
@@ -9521,7 +9537,8 @@
        "zeile": "W2_WERK_HIE_0500",
        "sprecher": "HIE",
        "blasen": [
-        "W2_WERK_HIE_0500"
+        "W2_WERK_HIE_0500",
+        "W2_WERK_HIE_0500_2"
        ],
        "regie": ""
       },
@@ -10066,7 +10083,8 @@
        "zeile": "W2_AGOR_GRI_0420",
        "sprecher": "GRI",
        "blasen": [
-        "W2_AGOR_GRI_0420"
+        "W2_AGOR_GRI_0420",
+        "W2_AGOR_GRI_0420_2"
        ],
        "regie": ""
       },
@@ -10120,14 +10138,16 @@
       "zeile": "W2_AGOR_GRI_0400",
       "sprecher": "GRI",
       "blasen": [
-       "W2_AGOR_GRI_0400"
+       "W2_AGOR_GRI_0400",
+       "W2_AGOR_GRI_0400_2"
       ]
      },
      {
       "zeile": "W2_AGOR_GRI_0410",
       "sprecher": "GRI",
       "blasen": [
-       "W2_AGOR_GRI_0410"
+       "W2_AGOR_GRI_0410",
+       "W2_AGOR_GRI_0410_2"
       ]
      }
     ],

@@ -116,12 +116,12 @@ walk_to_point = Vector2(5, 140)
 interaction_polygon = PackedVector2Array(-95, -105, 95, -105, 95, 105, -95, 105)
 
 [node name="AusgangTrollbruecke" parent="Hotspots" unique_id=584795113 instance=ExtResource("13_fnfak")]
-position = Vector2(15, 225)
+position = Vector2(25, 225)
 description = "UI_RAUM_TROLLBRUECKE"
 baseline = 55
-walk_to_point = Vector2(0, 40)
+walk_to_point = Vector2(-10, 40)
 cursor = 9
-interaction_polygon = PackedVector2Array(-15, -55, 15, -55, 15, 55, -15, 55)
+interaction_polygon = PackedVector2Array(-25, -55, 25, -55, 25, 55, -25, 55)
 
 [node name="Stolleneingang" parent="Hotspots" unique_id=1261238752 instance=ExtResource("14_m7jyd")]
 position = Vector2(979, 167.5)

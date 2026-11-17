@@ -24,7 +24,6 @@ height = 360
 [node name="WalkableAreas" type="Node2D" parent="." unique_id=1747749364]
 
 [node name="Boden" parent="WalkableAreas" unique_id=556068884 instance=ExtResource("2_y7n83")]
-interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(8, 235, 632, 240, 632, 356, 8, 356)])
 
 [node name="Props" type="Node2D" parent="." unique_id=1866295351]
 
@@ -43,11 +42,11 @@ walk_to_point = Vector2(0, 55)
 interaction_polygon = PackedVector2Array(-25, -25, 25, -25, 25, 25, -25, 25)
 
 [node name="Brombeeren" parent="Hotspots" unique_id=380019194 instance=ExtResource("6_0rbe7")]
-position = Vector2(120, 180)
+position = Vector2(160, 155)
 description = "UI_OBJ_BROMBEEREN"
-baseline = 70
-walk_to_point = Vector2(0, 100)
-interaction_polygon = PackedVector2Array(-80, -70, 80, -70, 80, 70, -80, 70)
+baseline = 45
+walk_to_point = Vector2(-40, 125)
+interaction_polygon = PackedVector2Array(-40, -45, 40, -45, 40, 45, -40, 45)
 
 [node name="AlteGrabsteine" parent="Hotspots" unique_id=1572783537 instance=ExtResource("7_7bwq8")]
 position = Vector2(517.5, 187.5)
@@ -71,12 +70,12 @@ walk_to_point = Vector2(0, 230)
 interaction_polygon = PackedVector2Array(-100, -50, 100, -50, 100, 50, -100, 50)
 
 [node name="AusgangHafen" parent="Hotspots" unique_id=1108643200 instance=ExtResource("10_q4bo0")]
-position = Vector2(20, 210)
+position = Vector2(60, 210)
 description = "UI_OBJ_AUSGANG_HAFEN"
 baseline = 70
-walk_to_point = Vector2(10, 90)
+walk_to_point = Vector2(-30, 90)
 cursor = 9
-interaction_polygon = PackedVector2Array(-20, -70, 20, -70, 20, 70, -20, 70)
+interaction_polygon = PackedVector2Array(-60, -70, 60, -70, 60, 70, -60, 70)
 
 [node name="Regions" type="Node2D" parent="." unique_id=1474702681]
 

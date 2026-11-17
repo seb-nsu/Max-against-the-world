@@ -67,18 +67,18 @@ walk_to_point = Vector2(-5.5, 60)
 interaction_polygon = PackedVector2Array(-52.5, -56, 52.5, -56, 52.5, 56, -52.5, 56)
 
 [node name="Dosenoeffner" parent="Props" unique_id=1001585250 instance=ExtResource("9_mcqit")]
-position = Vector2(224, 184)
+position = Vector2(224, 183.5)
 texture = ExtResource("8_mcqit")
 description = "UI_OBJ_DOSENOEFFNER"
-baseline = 3
-walk_to_point = Vector2(28, 72)
-interaction_polygon = PackedVector2Array(-11, -6, 11, -6, 11, 5, -11, 5)
+baseline = 5
+walk_to_point = Vector2(28, 72.5)
+interaction_polygon = PackedVector2Array(-11, -5.5, 11, -5.5, 11, 5.5, -11, 5.5)
 
 [node name="Drahtkleiderbuegel" parent="Props" unique_id=505759806 instance=ExtResource("11_m8m18")]
 position = Vector2(617, 191)
 texture = ExtResource("10_mcqit")
 description = "UI_OBJ_DRAHTKLEIDERBUEGEL"
-baseline = 7
+baseline = 17
 walk_to_point = Vector2(-17, 99)
 interaction_polygon = PackedVector2Array(-15, -17, 15, -17, 15, 17, -15, 17)
 

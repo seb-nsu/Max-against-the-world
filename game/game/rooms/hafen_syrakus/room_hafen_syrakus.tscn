@@ -102,10 +102,10 @@ interaction_polygon = PackedVector2Array(-37.5, -40, 37.5, -40, 37.5, 40, -37.5,
 [node name="Markers" type="Node2D" parent="." unique_id=952690520]
 
 [node name="Start" parent="Markers" unique_id=1688819795 instance=ExtResource("14_hini1")]
-position = Vector2(140, 290)
+position = Vector2(300, 295)
 
 [node name="VonFaehre" parent="Markers" unique_id=140883306 instance=ExtResource("15_s74qc")]
-position = Vector2(140, 290)
+position = Vector2(300, 295)
 
 [node name="VonWerkstatt" parent="Markers" unique_id=607715882 instance=ExtResource("16_lgiwp")]
 position = Vector2(580, 270)
