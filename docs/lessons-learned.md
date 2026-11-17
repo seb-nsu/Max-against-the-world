@@ -1,6 +1,6 @@
 # Lessons Learned
 
-Stand 15. November 2026. Gesammelt aus der Arbeit an Prolog, Welt 1 und Welt 2 (6. bis 15. November). Das Dokument soll Welt 3, Welt 4 und das Finale schneller machen: Was hat funktioniert, wo hat es mehrere Runden gebraucht, und wie sparen wir uns die beim nächsten Mal.
+Gesammelt aus der Arbeit an Prolog, Welt 1 und Welt 2 (6. bis 17. November 2026, Abschnitt 11 aus dem Review vom 17. November). Das Dokument soll Welt 3, Welt 4 und das Finale schneller machen: Was hat funktioniert, wo hat es mehrere Runden gebraucht, und wie sparen wir uns die beim nächsten Mal.
 
 Die verbindlichen Regeln für Stil, Bausteine und Prompts stehen weiterhin in `grafik/00-stil-und-werkzeuge.md`, Entscheidungen in `entscheidungen.md`. Hier steht das Warum und die Arbeitsweise.
 
@@ -333,3 +333,40 @@ So mussten Übergaben bisher oft nachgefragt oder korrigiert werden (Posen-Zust�
 6. Hintergründe malt Sebastian im Chat, Varianten im selben Chat, breite Räume als Panorama.
 7. Einbau mit Figuren-Prüfung je Raum, Ambiente-Ebene gleich mitplanen.
 8. Detailprüfung aller Einzelbilder, dann ein Review mit frischem Blick (wie das Fable-Review für Prolog und Welt 1 mit 36 Funden), dann Fix-Runde.
+
+## 11. Aus dem Review vom 17. November 2026
+
+Komplett-Review von Prolog, Welt 1 und Welt 2 mit sieben Prüfrollen (Bericht: `review/2026-11-17/bericht.md`, Arbeitspakete: `review/2026-11-17/arbeitspakete.md`). Welt 2 war grafisch fertig gemeldet und wurde dabei zum ersten Mal im Spiel durchgeklickt; dort lagen die meisten Funde.
+
+**Prüfen, bevor eine Welt als fertig gilt**
+
+- Jede Welt bekommt einen Klick-Durchlauf im echten Spiel: jedes Gespräch bis zum Ende, jeden Hotspot links und rechts, jede Ankunftsstelle ansehen. Der Regeltest (`welt_2_anspiel`) umgeht Räume und Klickflächen; der einzige Hänger des Spiels (Hermes-Gespräch ohne Abschied) fiel nur beim Klicken auf.
+- Jedes Gespräch braucht eine Option, die es beendet. `pruefen.py` prüft das jetzt; `CQDialog` beendet ein Gespräch zusätzlich selbst, wenn keine Option mehr sichtbar ist.
+- Nach dem Grafikeinbau jede Ansehen-Zeile gegen das fertige Bild lesen (Anzahl, Material, wer hält was). Die Texte entstehen vor den Bildern; in Welt 2 passten Säulen, Thron, Wedler, Pult, Bart, Bauplan und Wurfhebel nicht.
+- Figuren im Raum vergrößert ansehen, nicht nur im Sheet: Fußlinie gegen die gemalte Kante (Waldemar stand auf der Brüstung), Mund beim Reden auch in Posen, jede Figur redend und stehend.
+- Startstellen und Figurenplätze prüfen: kein Ankunftsmarker näher als eine Figurbreite an einer Figur, keine zwei Figuren am selben Platz, keine Figur außerhalb des Bildes. Achtung: Das Aufnahmeskript betritt Räume über `start`, das Spiel über `von_<raum>`; beide Marker setzen.
+- Überdeckung von Klickflächen messen statt schätzen (Zeigerraster aus beiden Mausrichtungen). Seit dem Review entscheidet `Spiel.zeiger_betritt` nach Fläche und Rang; Figuren unter 70 % ihrer Fläche gelten trotzdem als Fehler.
+- Prüfregeln gelten für alle Abschnitte, die schon gebaut sind, nicht nur für die gerade bearbeiteten (die 140-Zeichen-Regel galt nur für Prolog und Welt 1).
+- Gebaute Animationen gelten erst als fertig, wenn ein Skript oder eine Tabelle sie aufruft (Melken, Pixels Haare und das Rennen an Tag 1 waren gebaut und nie zu sehen).
+- Reden und Ruhe aus der Standpose bauen; die 5-%-Regel gilt auch für `talk` und Ruhe-Schleifen (Opa, Gollo, Grimmzahn, XXL-Ziege).
+
+**Code und Daten**
+
+- Fixes an Klickflächen gehören ins Layout (`tools/layout/*.yaml`), nicht nur in die `.tscn`; der nächste `--cq-layout`-Bau setzt sie sonst zurück.
+- Neue Welt, neue Sonderzeilen im Hinweissystem: eigene „nichts offen“-Zeile, freiwillige Rätsel nachrangig und nach ihrer Gelegenheit geschlossen.
+- Abläufe mit Läufen gehören in eine Szene oder sperren die Oberfläche; sonst nimmt das Spiel Klicks an und Esc überspringt nur Teile.
+- Lauftempo und Tiefe getrennt sehen: Popochiu multipliziert das Tempo mit der Größe; die Raum-„skala“ wird seit dem Review ausgeglichen.
+- Bei Effekten im Testmodus daran denken: Ambiente-Bildfolgen laufen dort nicht. Wer ein Ambiente prüft, schaltet den Testmodus vor dem Betreten des Raums aus.
+
+**Werkzeuge, Tests und Abläufe (aus Git-Historie und PRs)**
+
+- Lokal dieselben Prüfungen wie die CI: `python3 tools/alles_pruefen.py` (drei rote Läufe kamen nur von veralteten erzeugten Dateien).
+- main bleibt grün; nie direkt auf main. Die Webseite wird seit dem Review erst nach grünem „Prüfen“ gebaut.
+- Der Web-Export ist eine eigene Plattform: grüne Desktop-Tests heißen nicht, dass die Seite läuft (PR #38). Popochiu ist für den Web-Export an fünf Stellen gepatcht (Kommentar „Couch Quest:“); vor einem Popochiu-Update diese Stellen sichern.
+- Screenshot-Referenzen: Der Workflow „Screenshot-Referenzen erneuern“ nimmt sie unter Linux neu auf und committet sie auf den PR-Zweig. Der Test sieht bei breiten Räumen nur den Kameraausschnitt.
+- Werkzeuge gehören ins Repo, nicht nur die Ergebnisse: eine gültige Fassung statt `_2`, `_3`, Pfade über eine Umgebungsvariable. Die Teile-Rig-Skripte und die Prüfung „zwei Beine, keine Löcher“ liegen bisher nur unter `E:\Game Engine\Grafiken`.
+- Originale nur als PNG mit festem Namensschema; 3 GB Originale brauchen eine Sicherung.
+- Statuslisten und Regie-Dauern aus den Daten erzeugen statt von Hand führen; nur „in main“ zählt als eingebaut.
+- Schrift und Ziffern in Nahansichten per Werkzeug setzen und in Spielgröße auf Verwechslung prüfen (Fährtafel: 112 sah aus wie 118).
+- Fertige PRs nicht stapeln, gemergte Zweige löschen, festhalten, welche Sitzung `gh` und welche Werkzeuge hat (die PC-Sitzung hat kein `gh`).
+- `.import`-Dateien: Eingecheckt werden sie mit dem Asset; was ein lokaler Import an bestehenden `.import`-Dateien ändert, wird nicht mitcommittet.

@@ -1,15 +1,15 @@
 # Status aller Shot-IDs (Posen, Bewegungen, Effekte, lebendige Hintergründe)
 
-Stand 15. November 2026. Quelle der IDs: die Tabellenzeilen in docs/grafik/fertige-prompts/welt-1.md, welt-2.md, 02-prolog-und-finale.md und 00-weltenuebergreifend.md auf origin/main, genau 233 IDs (W1-P-IDs gibt es nicht). Bilder liegen in `E:\Game Engine\Grafiken\assets` (Pfade relativ dazu, verworfene Fassungen nicht gezählt), gebaute Bewegungen in `assets\runde2\bewegungen\<name>`.
+Stand 15. November 2026, Zweig-Angaben am 17. November auf main nachgeführt (beide Zweige seit 16. November gemergt; Review 17.11., WF-09). Quelle der IDs: die Tabellenzeilen in docs/grafik/fertige-prompts/welt-1.md, welt-2.md, 02-prolog-und-finale.md und 00-weltenuebergreifend.md auf origin/main, genau 233 IDs (W1-P-IDs gibt es nicht). Bilder liegen in `E:\Game Engine\Grafiken\assets` (Pfade relativ dazu, verworfene Fassungen nicht gezählt), gebaute Bewegungen in `assets\runde2\bewegungen\<name>`.
 
 ## Zusammenfassung
 
 | Status | Anzahl |
 | --- | --- |
-| eingebaut auf claude/gesten-menschen | 164 |
-| lebendiger Hintergrund: eingebaut auf claude/ambiente-einbau | 41 |
+| eingebaut, in main (PR #30) | 164 |
+| lebendiger Hintergrund: eingebaut, in main (PR #32) | 41 |
 | fertig, in main | 11 |
-| Effekt: eingebaut auf claude/ambiente-einbau | 6 |
+| Effekt: eingebaut, in main (PR #32) | 6 |
 | gebaut, wartet auf Sprite | 5 |
 | abgedeckt durch andere Bewegung, eingebaut | 3 |
 | Effekt: fertig, wartet auf Platz im Raum | 2 |
@@ -20,236 +20,236 @@ Stand 15. November 2026. Quelle der IDs: die Tabellenzeilen in docs/grafik/ferti
 
 | ID | Titel | Art | Quelle (Bogen/Bild) | Bewegung gebaut | im Spiel | offen: Grund, wer erledigt |
 | --- | --- | --- | --- | --- | --- | --- |
-| PF-B01 | Pixel: Aufwachen vom Thunfisch | Bewegung | nacht/PF-B01_kater_aufwachen_thunfisch.png (+1 weitere) | pixel_aufwachen | auf claude/gesten-menschen eingebaut |  |
-| PF-B02 | Opa: Erklären | Bewegung | nacht/PF-B02_opa_erklaeren.png | opa_erklaeren | auf claude/gesten-menschen eingebaut |  |
-| PF-B03 | Opa: Panik | Bewegung | nacht/PF-B03_opa_panik.png | opa_panik | auf claude/gesten-menschen eingebaut |  |
+| PF-B01 | Pixel: Aufwachen vom Thunfisch | Bewegung | nacht/PF-B01_kater_aufwachen_thunfisch.png (+1 weitere) | pixel_aufwachen | eingebaut, in main (PR #30) |  |
+| PF-B02 | Opa: Erklären | Bewegung | nacht/PF-B02_opa_erklaeren.png | opa_erklaeren | eingebaut, in main (PR #30) |  |
+| PF-B03 | Opa: Panik | Bewegung | nacht/PF-B03_opa_panik.png | opa_panik | eingebaut, in main (PR #30) |  |
 | PF-B04 | Oma: Treppe steigen | Bewegung | runde2/PF-B04_oma_treppe.png (+1 weitere) | oma_treppe_steigen | nicht eingebaut | Bewegung fertig; Oma hat noch kein Spiel-Sprite |
 | PF-B05 | Mutter: Liste lesen | Bewegung | runde2/PF-B05_mutter_liste.png | mutter_liste_lesen | nicht eingebaut | Bewegung fertig; Mutter hat noch kein Spiel-Sprite |
 | PF-B06 | Zeldina: Zauberstab einsetzen | Bewegung | runde2/PF-B06_zeldina_zauberstab.png | zeldina_zauberstab_einsetzen | nicht eingebaut | Bewegung fertig; Zeldina trägt im Finale einen Umhang, braucht ein eigenes Finale-Sprite |
 | PF-B07 | Roboter-Hausmeister: Ofentür halten | Bewegung | runde2/PF-B07_roboter_ofentuer.png | hausmeister_ofentuer_halten | nicht eingebaut | Bewegung fertig; Roboter-Hausmeister hat noch kein Spiel-Sprite |
-| PF-B08 | Gegenwart-Effekt: Verwandlung | Effekt | nacht/PF-B08_effekt_verwandlung.png | nein | auf claude/ambiente-einbau eingebaut (PR #32) |  |
+| PF-B08 | Gegenwart-Effekt: Verwandlung | Effekt | nacht/PF-B08_effekt_verwandlung.png | nein | eingebaut, in main (PR #32) (PR #32) |  |
 | PF-B09 | Effekt: Maschine läuft | Effekt | runde2/ambiente/PF-B09_effekt_maschine.png | nein | nicht eingebaut | Streifen fertig; der Hintergrund Dachboden (Finale) mit der Maschine fehlt noch |
 | PF-B10 | Effekt: Teig-Schwall | Effekt | runde2/ambiente/PF-B10_effekt_teig.png | nein | nicht eingebaut | Streifen fertig; der Hintergrund Dachboden (Finale) mit der Maschine fehlt noch |
-| PF-B11 | Effekt: Staubwolke | Effekt | nacht/PF-B11_effekt_staubwolke.png | nein | auf claude/ambiente-einbau eingebaut (PR #32) |  |
+| PF-B11 | Effekt: Staubwolke | Effekt | nacht/PF-B11_effekt_staubwolke.png | nein | eingebaut, in main (PR #32) (PR #32) |  |
 | PF-B12 | Opa: Gehen | Bewegung | runde2/PF-B12_opa_gehen_c.png | nein | in main: opa: walk (Bein-Rig) |  |
-| PF-B13 | Opa: Reden | Bewegung | runde2/PF-B13_opa_reden.png | opa_reden | auf claude/gesten-menschen eingebaut |  |
-| PF-B14 | Opa: An der Werkbank schrauben | Bewegung | runde2/PF-B14_opa_werkbank.png (+1 weitere) | opa_werkbank | auf claude/gesten-menschen eingebaut |  |
-| PF-B15 | Opa: Kopf kratzen | Bewegung | fehlt | opa_kopf_kratzen | auf claude/gesten-menschen eingebaut |  |
+| PF-B13 | Opa: Reden | Bewegung | runde2/PF-B13_opa_reden.png | opa_reden | eingebaut, in main (PR #30) |  |
+| PF-B14 | Opa: An der Werkbank schrauben | Bewegung | runde2/PF-B14_opa_werkbank.png (+1 weitere) | opa_werkbank | eingebaut, in main (PR #30) |  |
+| PF-B15 | Opa: Kopf kratzen | Bewegung | fehlt | opa_kopf_kratzen | eingebaut, in main (PR #30) |  |
 | W1-B01 | Toadi: Rennen | Bewegung | nacht/W1-B01_toadi_rennen.png (+5 weitere) | nein | in main: toadi: walk (3D-Rig) |  |
-| W1-B02 | Toadi: Keuchen | Bewegung | nacht/W1-B02_toadi_keuchen.png | toadi_keuchen | auf claude/gesten-menschen eingebaut |  |
-| W1-B03 | Toadi: Auf Max zeigen | Bewegung | nacht/W1-B03_toadi_zeigen.png | toadi_auf_max_zeigen | auf claude/gesten-menschen eingebaut |  |
-| W1-B04 | Pixel: Minka umgarnen | Bewegung | nacht/W1-B04_kater_minka_umgarnen.png (+3 weitere) | pixel_minka_umgarnen | auf claude/gesten-menschen eingebaut |  |
-| W1-B05 | Wirt Humbert: In den Keller gehen | Bewegung | nacht/W1-B05_humbert_keller.png (+3 weitere) | humbert_keller | auf claude/gesten-menschen eingebaut |  |
-| W1-B06 | Gollo: Ring werfen | Bewegung | nacht/W1-B06_gollo_ring_werfen.png (+2 weitere) | gollo_ring_werfen | auf claude/gesten-menschen eingebaut |  |
-| W1-B07 | Max: Kochlöffel schwingen | Bewegung | nacht/W1-B07_max_kochloeffel.png (+1 weitere) | max_kochloeffel | auf claude/gesten-menschen eingebaut |  |
-| W1-B08 | Max: Ziege melken | Bewegung | nacht/W1-B08_max_ziege_melken.png (+1 weitere) | max_melken | auf claude/gesten-menschen eingebaut |  |
-| W1-B09 | Max: Bohne pflanzen und gießen | Bewegung | nacht/W1-B09_max_bohne_pflanzen.png (+1 weitere) | max_bohne | auf claude/gesten-menschen eingebaut |  |
-| W1-B10 | Bohnenranke: Wachsen | Effekt | nacht/W1-B10_bohnenranke_wachsen.png | nein | auf claude/ambiente-einbau eingebaut (PR #32) |  |
-| W1-B11 | Niesrosen: Aufgehen | Effekt | nacht/W1-B11_niesrosen_aufgehen.png | nein | auf claude/ambiente-einbau eingebaut (PR #32) |  |
-| W1-B12 | Troll Waldemar: Musical-Nummer | Bewegung | nacht/W1-B12_waldemar_musical.png | waldemar_musical | auf claude/gesten-menschen eingebaut |  |
-| W1-B13 | Troll Waldemar: Fußbad | Bewegung | nacht/W1-B13_waldemar_fussbad.png | waldemar_fussbad | auf claude/gesten-menschen eingebaut |  |
+| W1-B02 | Toadi: Keuchen | Bewegung | nacht/W1-B02_toadi_keuchen.png | toadi_keuchen | eingebaut, in main (PR #30) |  |
+| W1-B03 | Toadi: Auf Max zeigen | Bewegung | nacht/W1-B03_toadi_zeigen.png | toadi_auf_max_zeigen | eingebaut, in main (PR #30) |  |
+| W1-B04 | Pixel: Minka umgarnen | Bewegung | nacht/W1-B04_kater_minka_umgarnen.png (+3 weitere) | pixel_minka_umgarnen | eingebaut, in main (PR #30) |  |
+| W1-B05 | Wirt Humbert: In den Keller gehen | Bewegung | nacht/W1-B05_humbert_keller.png (+3 weitere) | humbert_keller | eingebaut, in main (PR #30) |  |
+| W1-B06 | Gollo: Ring werfen | Bewegung | nacht/W1-B06_gollo_ring_werfen.png (+2 weitere) | gollo_ring_werfen | eingebaut, in main (PR #30) |  |
+| W1-B07 | Max: Kochlöffel schwingen | Bewegung | nacht/W1-B07_max_kochloeffel.png (+1 weitere) | max_kochloeffel | eingebaut, in main (PR #30) |  |
+| W1-B08 | Max: Ziege melken | Bewegung | nacht/W1-B08_max_ziege_melken.png (+1 weitere) | max_melken | eingebaut, in main (PR #30) |  |
+| W1-B09 | Max: Bohne pflanzen und gießen | Bewegung | nacht/W1-B09_max_bohne_pflanzen.png (+1 weitere) | max_bohne | eingebaut, in main (PR #30) |  |
+| W1-B10 | Bohnenranke: Wachsen | Effekt | nacht/W1-B10_bohnenranke_wachsen.png | nein | eingebaut, in main (PR #32) (PR #32) |  |
+| W1-B11 | Niesrosen: Aufgehen | Effekt | nacht/W1-B11_niesrosen_aufgehen.png | nein | eingebaut, in main (PR #32) (PR #32) |  |
+| W1-B12 | Troll Waldemar: Musical-Nummer | Bewegung | nacht/W1-B12_waldemar_musical.png | waldemar_musical | eingebaut, in main (PR #30) |  |
+| W1-B13 | Troll Waldemar: Fußbad | Bewegung | nacht/W1-B13_waldemar_fussbad.png | waldemar_fussbad | eingebaut, in main (PR #30) |  |
 | W1-B14 | Zeldina: Gehen und Kiste tragen | Bewegung | nacht/W1-B14_zeldina_kiste_tragen.png (+2 weitere) | nein | in main: zeldina: walk (Bein-Rig) |  |
-| W1-B15 | Pixel als Ziege: Brücke überqueren | Bewegung | nacht/W1-B15_kater_als_ziege.png (+1 weitere) | pixel_ziege_gehen | auf claude/gesten-menschen eingebaut |  |
-| W1-B16 | Ziegen: Gehen | Bewegung | nacht/W1-B16_ziege_gehen.png (+4 weitere) | schmiede_ziege_gehen, xxl_ziege_gehen | auf claude/gesten-menschen eingebaut |  |
-| W1-B17 | Zauberbesen: Fegen | Bewegung | nacht/W1-B17_zauberbesen_fegen.png | zauberbesen_fegen | auf claude/gesten-menschen eingebaut |  |
-| W1-B18 | Zauberbesen: Haarspur jagen | Bewegung | nacht/W1-B18_zauberbesen_haarspur.png | zauberbesen_haarspur | auf claude/gesten-menschen eingebaut |  |
-| W1-B19 | Pixel: Haare verlieren | Bewegung | nacht/W1-B19_kater_haare_verlieren.png (+1 weitere) | pixel_haare | auf claude/gesten-menschen eingebaut |  |
-| W1-B20 | Lord Moderwort: Zaubern | Bewegung | nacht/W1-B20_moderwort_zaubern.png | moderwort_zaubern | auf claude/gesten-menschen eingebaut |  |
-| W1-B21 | Lord Moderwort: Niesen | Bewegung | nacht/W1-B21_moderwort_niesen.png (+1 weitere) | moderwort_niesen | auf claude/gesten-menschen eingebaut |  |
-| W1-B22 | Fluch wird Käse: Effekt | Effekt | nacht/W1-B22_effekt_fluch_kaese.png | nein | auf claude/ambiente-einbau eingebaut (PR #32) |  |
-| W1-B23 | Pilz-Verwandlung: Effekt | Effekt | nacht/W1-B23_effekt_pilz.png | nein | auf claude/ambiente-einbau eingebaut (PR #32) |  |
-| W1-B24 | Smaugi: Kram hergeben | Bewegung | nacht/W1-B24_smaugi_kram_hergeben.png (+3 weitere) | smaugi_kram_hergeben | auf claude/gesten-menschen eingebaut |  |
-| W1-B25 | Smaugi: Gerührt schniefen | Bewegung | nacht/W1-B25_smaugi_schniefen.png | smaugi_schniefen | auf claude/gesten-menschen eingebaut |  |
+| W1-B15 | Pixel als Ziege: Brücke überqueren | Bewegung | nacht/W1-B15_kater_als_ziege.png (+1 weitere) | pixel_ziege_gehen | eingebaut, in main (PR #30) |  |
+| W1-B16 | Ziegen: Gehen | Bewegung | nacht/W1-B16_ziege_gehen.png (+4 weitere) | schmiede_ziege_gehen, xxl_ziege_gehen | eingebaut, in main (PR #30) |  |
+| W1-B17 | Zauberbesen: Fegen | Bewegung | nacht/W1-B17_zauberbesen_fegen.png | zauberbesen_fegen | eingebaut, in main (PR #30) |  |
+| W1-B18 | Zauberbesen: Haarspur jagen | Bewegung | nacht/W1-B18_zauberbesen_haarspur.png | zauberbesen_haarspur | eingebaut, in main (PR #30) |  |
+| W1-B19 | Pixel: Haare verlieren | Bewegung | nacht/W1-B19_kater_haare_verlieren.png (+1 weitere) | pixel_haare | eingebaut, in main (PR #30) |  |
+| W1-B20 | Lord Moderwort: Zaubern | Bewegung | nacht/W1-B20_moderwort_zaubern.png | moderwort_zaubern | eingebaut, in main (PR #30) |  |
+| W1-B21 | Lord Moderwort: Niesen | Bewegung | nacht/W1-B21_moderwort_niesen.png (+1 weitere) | moderwort_niesen | eingebaut, in main (PR #30) |  |
+| W1-B22 | Fluch wird Käse: Effekt | Effekt | nacht/W1-B22_effekt_fluch_kaese.png | nein | eingebaut, in main (PR #32) (PR #32) |  |
+| W1-B23 | Pilz-Verwandlung: Effekt | Effekt | nacht/W1-B23_effekt_pilz.png | nein | eingebaut, in main (PR #32) (PR #32) |  |
+| W1-B24 | Smaugi: Kram hergeben | Bewegung | nacht/W1-B24_smaugi_kram_hergeben.png (+3 weitere) | smaugi_kram_hergeben | eingebaut, in main (PR #30) |  |
+| W1-B25 | Smaugi: Gerührt schniefen | Bewegung | nacht/W1-B25_smaugi_schniefen.png | smaugi_schniefen | eingebaut, in main (PR #30) |  |
 | W1-B26 | Alwin Grauwald: Rühren | Bewegung | nacht/W1-B26_alwin_ruehren.png (+8 weitere) | alwin_ruehren | in main: alwin: ruehren (ältere Fassung); neue Fassung auf claude/gesten-menschen |  |
 | W1-B27 | Schmied: Hämmern | Bewegung | nacht/W1-B27_schmied_haemmern.png (+5 weitere) | schmied_haemmern | in main: schmied: haemmern (ältere Fassung); neue Fassung auf claude/gesten-menschen |  |
-| W1-B28 | Übungsbesen: Pixel jagen | Bewegung | nacht/W1-B28_uebungsbesen_jagen.png | uebungsbesen_jagen | auf claude/gesten-menschen eingebaut |  |
-| W1-B29 | Zauberbesen: Max wegfegen | Bewegung | nacht/W1-B29_zauberbesen_max_wegfegen.png (+4 weitere) | zauberbesen_max_wegfegen | auf claude/gesten-menschen eingebaut |  |
-| W1-B30 | Wirt Humbert: Krug polieren | Bewegung | nacht/W1-B30_humbert_krug_polieren.png (+1 weitere) | humbert_polieren | auf claude/gesten-menschen eingebaut |  |
-| W1-B31 | Zauberstabmacher: Mustern | Bewegung | nacht/W1-B31_stabmacher_mustern.png | stabmacher_mustern | auf claude/gesten-menschen eingebaut |  |
-| W1-B32 | Rotkäppchen: Pakete balancieren | Bewegung | nacht/W1-B32_rotkaeppchen_pakete.png | rotkaeppchen_pakete | auf claude/gesten-menschen eingebaut |  |
-| W1-B33 | Maklerin: Notieren | Bewegung | nacht/W1-B33_maklerin_notieren.png | maklerin_notieren | auf claude/gesten-menschen eingebaut |  |
-| W1-B34 | Grimmzahn: Protestieren | Bewegung | nacht/W1-B34_grimmzahn_protestieren.png | grimmzahn_protest | auf claude/gesten-menschen eingebaut |  |
-| W1-B35 | Goblin-Arbeiter 1: Pickel schwingen | Bewegung | nacht/W1-B35_goblin1_pickel.png | goblin_1_pickel | auf claude/gesten-menschen eingebaut |  |
-| W1-B36 | Goblin-Arbeiter 2: Gähnen und strecken | Bewegung | nacht/W1-B36_goblin2_gaehnen.png (+2 weitere) | goblin_2_gaehnen | auf claude/gesten-menschen eingebaut |  |
-| W1-B37 | Wirtskatze Minka: Putzen | Bewegung | nacht/W1-B37_minka_putzen.png | minka_putzen | auf claude/gesten-menschen eingebaut |  |
-| W1-B38 | Taverne-Huhn: Aufplustern | Bewegung | nacht/W1-B38_huhn_aufplustern.png | huhn_plustern | auf claude/gesten-menschen eingebaut |  |
-| W1-B39 | Schmiede-Ziege: Im Kreis drehen | Bewegung | nacht/W1-B39_schmiedeziege_drehen.png | schmiede_ziege_drehen | auf claude/gesten-menschen eingebaut |  |
-| W1-B40 | XXL-Ziege: Wiederkäuen | Bewegung | nacht/W1-B40_xxlziege_wiederkaeuen.png | xxl_ziege_kauen | auf claude/gesten-menschen eingebaut |  |
-| W1-B41 | Schwan: Fauchen | Bewegung | nacht/W1-B41_schwan_fauchen.png | schwan_fauchen | auf claude/gesten-menschen eingebaut |  |
+| W1-B28 | Übungsbesen: Pixel jagen | Bewegung | nacht/W1-B28_uebungsbesen_jagen.png | uebungsbesen_jagen | eingebaut, in main (PR #30) |  |
+| W1-B29 | Zauberbesen: Max wegfegen | Bewegung | nacht/W1-B29_zauberbesen_max_wegfegen.png (+4 weitere) | zauberbesen_max_wegfegen | eingebaut, in main (PR #30) |  |
+| W1-B30 | Wirt Humbert: Krug polieren | Bewegung | nacht/W1-B30_humbert_krug_polieren.png (+1 weitere) | humbert_polieren | eingebaut, in main (PR #30) |  |
+| W1-B31 | Zauberstabmacher: Mustern | Bewegung | nacht/W1-B31_stabmacher_mustern.png | stabmacher_mustern | eingebaut, in main (PR #30) |  |
+| W1-B32 | Rotkäppchen: Pakete balancieren | Bewegung | nacht/W1-B32_rotkaeppchen_pakete.png | rotkaeppchen_pakete | eingebaut, in main (PR #30) |  |
+| W1-B33 | Maklerin: Notieren | Bewegung | nacht/W1-B33_maklerin_notieren.png | maklerin_notieren | eingebaut, in main (PR #30) |  |
+| W1-B34 | Grimmzahn: Protestieren | Bewegung | nacht/W1-B34_grimmzahn_protestieren.png | grimmzahn_protest | eingebaut, in main (PR #30) |  |
+| W1-B35 | Goblin-Arbeiter 1: Pickel schwingen | Bewegung | nacht/W1-B35_goblin1_pickel.png | goblin_1_pickel | eingebaut, in main (PR #30) |  |
+| W1-B36 | Goblin-Arbeiter 2: Gähnen und strecken | Bewegung | nacht/W1-B36_goblin2_gaehnen.png (+2 weitere) | goblin_2_gaehnen | eingebaut, in main (PR #30) |  |
+| W1-B37 | Wirtskatze Minka: Putzen | Bewegung | nacht/W1-B37_minka_putzen.png | minka_putzen | eingebaut, in main (PR #30) |  |
+| W1-B38 | Taverne-Huhn: Aufplustern | Bewegung | nacht/W1-B38_huhn_aufplustern.png | huhn_plustern | eingebaut, in main (PR #30) |  |
+| W1-B39 | Schmiede-Ziege: Im Kreis drehen | Bewegung | nacht/W1-B39_schmiedeziege_drehen.png | schmiede_ziege_drehen | eingebaut, in main (PR #30) |  |
+| W1-B40 | XXL-Ziege: Wiederkäuen | Bewegung | nacht/W1-B40_xxlziege_wiederkaeuen.png | xxl_ziege_kauen | eingebaut, in main (PR #30) |  |
+| W1-B41 | Schwan: Fauchen | Bewegung | nacht/W1-B41_schwan_fauchen.png | schwan_fauchen | eingebaut, in main (PR #30) |  |
 | W1-B42 | Wirtskatze Minka: Gehen | Bewegung | runde2/W1-B42_minka_gehen_d.png (+6 weitere) | nein | in main: minka: walk |  |
-| W1-B43 | Schmied: Hufeisen ins Feuer legen | Bewegung | runde2/W1-B43_schmied_ins_feuer.png (+2 weitere) | schmied_ins_feuer | auf claude/gesten-menschen eingebaut |  |
-| W1-B44 | Schmied: Blasebalg treten | Bewegung | runde2/W1-B44_schmied_blasebalg.png (+1 weitere) | schmied_blasebalg | auf claude/gesten-menschen eingebaut |  |
-| W1-B45 | Schmied: Glühendes Eisen zum Amboss | Bewegung | runde2/W1-B45_schmied_zum_amboss.png (+1 weitere) | schmied_zum_amboss | auf claude/gesten-menschen eingebaut |  |
-| W1-B46 | Schmied: Abschrecken | Bewegung | runde2/W1-B46_schmied_abschrecken.png (+1 weitere) | schmied_abschrecken | auf claude/gesten-menschen eingebaut |  |
-| W1-B47 | Schmied: Reden | Bewegung | runde2/W1-B47_schmied_reden.png | schmied_reden | auf claude/gesten-menschen eingebaut |  |
-| W1-B48 | Alwin Grauwald: Reden mit der Kelle | Bewegung | runde2/W1-B48_alwin_reden_kelle.png | alwin_reden_kelle | auf claude/gesten-menschen eingebaut |  |
-| W1-B49 | Toadi: Reden | Bewegung | runde2/W1-B49_toadi_reden.png (+2 weitere) | toadi_reden | auf claude/gesten-menschen eingebaut |  |
-| W1-B50 | Wirt Humbert: Reden | Bewegung | runde2/W1-B50_humbert_reden.png (+4 weitere) | humbert_reden | auf claude/gesten-menschen eingebaut |  |
-| W1-B51 | Gollo: Reden | Bewegung | runde2/W1-B51_gollo_reden.png (+2 weitere) | gollo_reden | auf claude/gesten-menschen eingebaut |  |
-| W1-B52 | Zauberstabmacher: Reden | Bewegung | runde2/W1-B52_zauberstabmacher_reden.png | stabmacher_reden | auf claude/gesten-menschen eingebaut |  |
-| W1-B53 | Rotkäppchen: Reden | Bewegung | runde2/W1-B53_rotkaeppchen_reden.png | rotkaeppchen_reden | auf claude/gesten-menschen eingebaut |  |
-| W1-B54 | Maklerin: Reden | Bewegung | runde2/W1-B54_maklerin_reden.png | maklerin_reden | auf claude/gesten-menschen eingebaut |  |
-| W1-B55 | Grimmzahn: Reden | Bewegung | runde2/W1-B55_grimmzahn_reden.png (+1 weitere) | grimmzahn_reden | auf claude/gesten-menschen eingebaut |  |
-| W1-B56 | Troll Waldemar: Reden | Bewegung | runde2/W1-B56_waldemar_reden.png (+2 weitere) | waldemar_reden | auf claude/gesten-menschen eingebaut |  |
-| W1-B57 | Zeldina: Reden | Bewegung | runde2/W1-B57_zeldina_reden.png | zeldina_reden | auf claude/gesten-menschen eingebaut |  |
-| W1-B58 | Lord Moderwort: Reden | Bewegung | runde2/W1-B58_moderwort_reden.png (+2 weitere) | moderwort_reden | auf claude/gesten-menschen eingebaut |  |
-| W1-B59 | Smaugi: Reden | Bewegung | runde2/W1-B59_smaugi_reden.png (+2 weitere) | smaugi_reden | auf claude/gesten-menschen eingebaut |  |
-| W1-B60 | Goblin-Arbeiter 1: Reden | Bewegung | runde2/W1-B60_goblin1_reden.png | goblin_1_reden | auf claude/gesten-menschen eingebaut |  |
-| W1-B61 | Taverne: Kaminfeuer | lebendiger Hintergrund | runde2/ambiente/W1-B61_kaminfeuer.png (+1 weitere) | nein | auf claude/ambiente-einbau eingebaut (PR #32) |  |
-| W1-B62 | Taverne: Fondue blubbert | lebendiger Hintergrund | runde2/ambiente/W1-B62_fondue.png | nein | auf claude/ambiente-einbau eingebaut (PR #32) |  |
-| W1-B63 | Schmiede: Esse glüht | lebendiger Hintergrund | runde2/ambiente/W1-B63_esse.png | nein | auf claude/ambiente-einbau eingebaut (PR #32) |  |
-| W1-B64 | Schmiede: Funken beim Schlag | lebendiger Hintergrund | runde2/ambiente/W1-B64_funken.png (+1 weitere) | nein | auf claude/ambiente-einbau eingebaut (PR #32) |  |
-| W1-B65 | Klassenzimmer: Kessel blubbert | lebendiger Hintergrund | runde2/ambiente/W1-B65_kessel.png (+2 weitere) | nein | auf claude/ambiente-einbau eingebaut (PR #32) |  |
-| W1-B66 | Zauberstab-Laden: Schachtel ruckelt | lebendiger Hintergrund | runde2/ambiente/W1-B66_schachtel.png (+1 weitere) | nein | auf claude/ambiente-einbau eingebaut (PR #32) |  |
-| W1-B67 | Troll-Brücke: Fisch springt | lebendiger Hintergrund | runde2/ambiente/W1-B67_fisch.png (+1 weitere) | nein | auf claude/ambiente-einbau eingebaut (PR #32) |  |
-| W1-B68 | Troll-Brücke: Schmetterling | lebendiger Hintergrund | runde2/ambiente/W1-B68_schmetterling.png | nein | auf claude/ambiente-einbau eingebaut (PR #32) |  |
-| W1-B69 | Zauberwald: Eule im hohlen Baum | lebendiger Hintergrund | runde2/ambiente/W1-B69_eule.png (+1 weitere) | nein | auf claude/ambiente-einbau eingebaut (PR #32) |  |
-| W1-B70 | Fackel: Brennen | lebendiger Hintergrund | runde2/ambiente/W1-B70_fackel.png (+1 weitere) | nein | auf claude/ambiente-einbau eingebaut (PR #32) |  |
-| W1-B71 | Luftschloss: Wimpel flattern | lebendiger Hintergrund | runde2/ambiente/W1-B71_wimpel.png | nein | auf claude/ambiente-einbau eingebaut (PR #32) |  |
-| W1-B72 | Luftschloss: Brunnen plätschert | lebendiger Hintergrund | runde2/ambiente/W1-B72_brunnen.png (+2 weitere) | nein | auf claude/ambiente-einbau eingebaut (PR #32) |  |
-| W1-B73 | Goblin-Bergwerk: Steinchen rieseln | lebendiger Hintergrund | runde2/ambiente/W1-B73_steinchen.png (+1 weitere) | nein | auf claude/ambiente-einbau eingebaut (PR #32) |  |
-| W1-B74 | Glitzern: Funkeln | lebendiger Hintergrund | runde2/ambiente/W1-B74_glitzern.png | nein | auf claude/ambiente-einbau eingebaut (PR #32) |  |
-| W1-B75 | Wasserschloss: Ente schwimmt | lebendiger Hintergrund | runde2/ambiente/W1-B75_ente.png (+1 weitere) | nein | auf claude/ambiente-einbau eingebaut (PR #32) |  |
-| W1-B76 | Dorfplatz: Huhn pickt | lebendiger Hintergrund | runde2/ambiente/W1-B76_huhn.png (+2 weitere) | nein | auf claude/ambiente-einbau eingebaut (PR #32) |  |
-| W1-B77 | Toadi: Hände ringen | Bewegung | fehlt | toadi_haende_ringen | auf claude/gesten-menschen eingebaut |  |
-| W1-B78 | Gollo: Ringschachtel streicheln | Bewegung | runde2/W1-B78_gollo_ringschachtel.png (+1 weitere) | gollo_ringschachtel | auf claude/gesten-menschen eingebaut |  |
-| W1-B79 | Zeldina: Kiste absetzen und Schwert prüfen | Bewegung | runde2/W1-B79_zeldina_kiste_schwert.png (+1 weitere) | zeldina_kiste_schwert | auf claude/gesten-menschen eingebaut |  |
-| W1-B80 | Troll Waldemar: Im Regelbuch blättern | Bewegung | runde2/W1-B80_waldemar_regelbuch.png | waldemar_regelbuch | auf claude/gesten-menschen eingebaut |  |
-| W1-B81 | Lord Moderwort: Nase putzen | Bewegung | runde2/W1-B81_moderwort_nase_putzen.png (+3 weitere) | moderwort_nase_putzen | auf claude/gesten-menschen eingebaut |  |
-| W1-B82 | Smaugi: Staubwedel | Bewegung | runde2/W1-B82_smaugi_staubwedel.png (+2 weitere) | smaugi_staubwedel | auf claude/gesten-menschen eingebaut |  |
-| W1-B83 | Alwin Grauwald: Lesebrille und Kochbuch | Bewegung | runde2/W1-B83_alwin_kochbuch.png (+2 weitere) | alwin_kochbuch | auf claude/gesten-menschen eingebaut |  |
-| W1-B84 | Schmied: Schweiß abwischen | Bewegung | runde2/W1-B84_schmied_schweiss.png | schmied_schweiss_abwischen | auf claude/gesten-menschen eingebaut |  |
-| W1-B85 | Goblin-Arbeiter 2: Reden | Bewegung | runde2/W1-B85_goblin2_reden.png | goblin_2_reden | auf claude/gesten-menschen eingebaut |  |
-| W1-B86 | Zauberwald: Eichhörnchen | lebendiger Hintergrund | runde2/ambiente/W1-B86_eichhoernchen.png | nein | auf claude/ambiente-einbau eingebaut (PR #32) |  |
-| W1-B87 | Goblin-Bergwerk: Lore rollt | lebendiger Hintergrund | runde2/ambiente/W1-B87_lore.png | nein | auf claude/ambiente-einbau eingebaut (PR #32) |  |
+| W1-B43 | Schmied: Hufeisen ins Feuer legen | Bewegung | runde2/W1-B43_schmied_ins_feuer.png (+2 weitere) | schmied_ins_feuer | eingebaut, in main (PR #30) |  |
+| W1-B44 | Schmied: Blasebalg treten | Bewegung | runde2/W1-B44_schmied_blasebalg.png (+1 weitere) | schmied_blasebalg | eingebaut, in main (PR #30) |  |
+| W1-B45 | Schmied: Glühendes Eisen zum Amboss | Bewegung | runde2/W1-B45_schmied_zum_amboss.png (+1 weitere) | schmied_zum_amboss | eingebaut, in main (PR #30) |  |
+| W1-B46 | Schmied: Abschrecken | Bewegung | runde2/W1-B46_schmied_abschrecken.png (+1 weitere) | schmied_abschrecken | eingebaut, in main (PR #30) |  |
+| W1-B47 | Schmied: Reden | Bewegung | runde2/W1-B47_schmied_reden.png | schmied_reden | eingebaut, in main (PR #30) |  |
+| W1-B48 | Alwin Grauwald: Reden mit der Kelle | Bewegung | runde2/W1-B48_alwin_reden_kelle.png | alwin_reden_kelle | eingebaut, in main (PR #30) |  |
+| W1-B49 | Toadi: Reden | Bewegung | runde2/W1-B49_toadi_reden.png (+2 weitere) | toadi_reden | eingebaut, in main (PR #30) |  |
+| W1-B50 | Wirt Humbert: Reden | Bewegung | runde2/W1-B50_humbert_reden.png (+4 weitere) | humbert_reden | eingebaut, in main (PR #30) |  |
+| W1-B51 | Gollo: Reden | Bewegung | runde2/W1-B51_gollo_reden.png (+2 weitere) | gollo_reden | eingebaut, in main (PR #30) |  |
+| W1-B52 | Zauberstabmacher: Reden | Bewegung | runde2/W1-B52_zauberstabmacher_reden.png | stabmacher_reden | eingebaut, in main (PR #30) |  |
+| W1-B53 | Rotkäppchen: Reden | Bewegung | runde2/W1-B53_rotkaeppchen_reden.png | rotkaeppchen_reden | eingebaut, in main (PR #30) |  |
+| W1-B54 | Maklerin: Reden | Bewegung | runde2/W1-B54_maklerin_reden.png | maklerin_reden | eingebaut, in main (PR #30) |  |
+| W1-B55 | Grimmzahn: Reden | Bewegung | runde2/W1-B55_grimmzahn_reden.png (+1 weitere) | grimmzahn_reden | eingebaut, in main (PR #30) |  |
+| W1-B56 | Troll Waldemar: Reden | Bewegung | runde2/W1-B56_waldemar_reden.png (+2 weitere) | waldemar_reden | eingebaut, in main (PR #30) |  |
+| W1-B57 | Zeldina: Reden | Bewegung | runde2/W1-B57_zeldina_reden.png | zeldina_reden | eingebaut, in main (PR #30) |  |
+| W1-B58 | Lord Moderwort: Reden | Bewegung | runde2/W1-B58_moderwort_reden.png (+2 weitere) | moderwort_reden | eingebaut, in main (PR #30) |  |
+| W1-B59 | Smaugi: Reden | Bewegung | runde2/W1-B59_smaugi_reden.png (+2 weitere) | smaugi_reden | eingebaut, in main (PR #30) |  |
+| W1-B60 | Goblin-Arbeiter 1: Reden | Bewegung | runde2/W1-B60_goblin1_reden.png | goblin_1_reden | eingebaut, in main (PR #30) |  |
+| W1-B61 | Taverne: Kaminfeuer | lebendiger Hintergrund | runde2/ambiente/W1-B61_kaminfeuer.png (+1 weitere) | nein | eingebaut, in main (PR #32) (PR #32) |  |
+| W1-B62 | Taverne: Fondue blubbert | lebendiger Hintergrund | runde2/ambiente/W1-B62_fondue.png | nein | eingebaut, in main (PR #32) (PR #32) |  |
+| W1-B63 | Schmiede: Esse glüht | lebendiger Hintergrund | runde2/ambiente/W1-B63_esse.png | nein | eingebaut, in main (PR #32) (PR #32) |  |
+| W1-B64 | Schmiede: Funken beim Schlag | lebendiger Hintergrund | runde2/ambiente/W1-B64_funken.png (+1 weitere) | nein | eingebaut, in main (PR #32) (PR #32) |  |
+| W1-B65 | Klassenzimmer: Kessel blubbert | lebendiger Hintergrund | runde2/ambiente/W1-B65_kessel.png (+2 weitere) | nein | eingebaut, in main (PR #32) (PR #32) |  |
+| W1-B66 | Zauberstab-Laden: Schachtel ruckelt | lebendiger Hintergrund | runde2/ambiente/W1-B66_schachtel.png (+1 weitere) | nein | eingebaut, in main (PR #32) (PR #32) |  |
+| W1-B67 | Troll-Brücke: Fisch springt | lebendiger Hintergrund | runde2/ambiente/W1-B67_fisch.png (+1 weitere) | nein | eingebaut, in main (PR #32) (PR #32) |  |
+| W1-B68 | Troll-Brücke: Schmetterling | lebendiger Hintergrund | runde2/ambiente/W1-B68_schmetterling.png | nein | eingebaut, in main (PR #32) (PR #32) |  |
+| W1-B69 | Zauberwald: Eule im hohlen Baum | lebendiger Hintergrund | runde2/ambiente/W1-B69_eule.png (+1 weitere) | nein | eingebaut, in main (PR #32) (PR #32) |  |
+| W1-B70 | Fackel: Brennen | lebendiger Hintergrund | runde2/ambiente/W1-B70_fackel.png (+1 weitere) | nein | eingebaut, in main (PR #32) (PR #32) |  |
+| W1-B71 | Luftschloss: Wimpel flattern | lebendiger Hintergrund | runde2/ambiente/W1-B71_wimpel.png | nein | eingebaut, in main (PR #32) (PR #32) |  |
+| W1-B72 | Luftschloss: Brunnen plätschert | lebendiger Hintergrund | runde2/ambiente/W1-B72_brunnen.png (+2 weitere) | nein | eingebaut, in main (PR #32) (PR #32) |  |
+| W1-B73 | Goblin-Bergwerk: Steinchen rieseln | lebendiger Hintergrund | runde2/ambiente/W1-B73_steinchen.png (+1 weitere) | nein | eingebaut, in main (PR #32) (PR #32) |  |
+| W1-B74 | Glitzern: Funkeln | lebendiger Hintergrund | runde2/ambiente/W1-B74_glitzern.png | nein | eingebaut, in main (PR #32) (PR #32) |  |
+| W1-B75 | Wasserschloss: Ente schwimmt | lebendiger Hintergrund | runde2/ambiente/W1-B75_ente.png (+1 weitere) | nein | eingebaut, in main (PR #32) (PR #32) |  |
+| W1-B76 | Dorfplatz: Huhn pickt | lebendiger Hintergrund | runde2/ambiente/W1-B76_huhn.png (+2 weitere) | nein | eingebaut, in main (PR #32) (PR #32) |  |
+| W1-B77 | Toadi: Hände ringen | Bewegung | fehlt | toadi_haende_ringen | eingebaut, in main (PR #30) |  |
+| W1-B78 | Gollo: Ringschachtel streicheln | Bewegung | runde2/W1-B78_gollo_ringschachtel.png (+1 weitere) | gollo_ringschachtel | eingebaut, in main (PR #30) |  |
+| W1-B79 | Zeldina: Kiste absetzen und Schwert prüfen | Bewegung | runde2/W1-B79_zeldina_kiste_schwert.png (+1 weitere) | zeldina_kiste_schwert | eingebaut, in main (PR #30) |  |
+| W1-B80 | Troll Waldemar: Im Regelbuch blättern | Bewegung | runde2/W1-B80_waldemar_regelbuch.png | waldemar_regelbuch | eingebaut, in main (PR #30) |  |
+| W1-B81 | Lord Moderwort: Nase putzen | Bewegung | runde2/W1-B81_moderwort_nase_putzen.png (+3 weitere) | moderwort_nase_putzen | eingebaut, in main (PR #30) |  |
+| W1-B82 | Smaugi: Staubwedel | Bewegung | runde2/W1-B82_smaugi_staubwedel.png (+2 weitere) | smaugi_staubwedel | eingebaut, in main (PR #30) |  |
+| W1-B83 | Alwin Grauwald: Lesebrille und Kochbuch | Bewegung | runde2/W1-B83_alwin_kochbuch.png (+2 weitere) | alwin_kochbuch | eingebaut, in main (PR #30) |  |
+| W1-B84 | Schmied: Schweiß abwischen | Bewegung | runde2/W1-B84_schmied_schweiss.png | schmied_schweiss_abwischen | eingebaut, in main (PR #30) |  |
+| W1-B85 | Goblin-Arbeiter 2: Reden | Bewegung | runde2/W1-B85_goblin2_reden.png | goblin_2_reden | eingebaut, in main (PR #30) |  |
+| W1-B86 | Zauberwald: Eichhörnchen | lebendiger Hintergrund | runde2/ambiente/W1-B86_eichhoernchen.png | nein | eingebaut, in main (PR #32) (PR #32) |  |
+| W1-B87 | Goblin-Bergwerk: Lore rollt | lebendiger Hintergrund | runde2/ambiente/W1-B87_lore.png | nein | eingebaut, in main (PR #32) (PR #32) |  |
 | W1-B88 | Kerze: Brennen | lebendiger Hintergrund | runde2/ambiente/W1-B88_kerze.png | nein | nicht eingebaut | Streifen fertig; in keinem Raum ist eine Kerze gemalt, braucht erst ein Kerzen-Prop |
-| W2-B01 | Sobek, an Land: Kriechen | Bewegung | runde2/W2-B01_sobek_kriechen_a.png | sobek_land_kriechen | auf claude/gesten-menschen eingebaut |  |
-| W2-B02 | Hofkater: Beleidigt weggehen | Bewegung | runde2/W2-B02_hofkater_gehen_a.png | hofkater_weggehen | auf claude/gesten-menschen eingebaut |  |
-| W2-B03 | Schildkröte: Laufen | Bewegung | runde2/W2-B03_schildkroete_laufen_a.png | schildkroete_laufen | auf claude/gesten-menschen eingebaut |  |
-| W2-B04 | Sobek, im Wasser: Treiben | Bewegung | runde2/W2-B04_sobek_treiben.png (+3 weitere) | sobek_reden, sobek_treiben | auf claude/gesten-menschen eingebaut |  |
-| W2-B05 | Sobek, im Wasser: Fähre ziehen | Bewegung | runde2/W2-B05_sobek_faehre_ziehen.png (+3 weitere) | sobek_faehre_ziehen | auf claude/gesten-menschen eingebaut |  |
-| W2-B06 | Sobek, an Land: Verbeugen | Bewegung | runde2/W2-B06_sobek_verbeugen.png (+1 weitere) | sobek_land_verbeugen | auf claude/gesten-menschen eingebaut |  |
-| W2-B07 | Sobek, an Land: Gähnen | Bewegung | runde2/W2-B07_sobek_gaehnen.png (+2 weitere) | sobek_land_gaehnen | auf claude/gesten-menschen eingebaut |  |
-| W2-B08 | Hofkater: Putzen | Bewegung | runde2/W2-B08_hofkater_putzen.png | hofkater_putzen | auf claude/gesten-menschen eingebaut |  |
-| W2-B09 | Hofkater: Schwanz zucken | Bewegung | runde2/W2-B09_hofkater_schwanz.png | hofkater_schwanz_zucken | auf claude/gesten-menschen eingebaut |  |
-| W2-B10 | Schildkröte: Kopf einziehen | Bewegung | runde2/W2-B10_schildkroete_kopf.png | schildkroete_kopf_einziehen | auf claude/gesten-menschen eingebaut |  |
-| W2-B11 | Nil-Delta: Feluke segelt | lebendiger Hintergrund | runde2/ambiente/W2-B11_feluke.png (+2 weitere) | nein | auf claude/ambiente-einbau eingebaut (PR #32) |  |
-| W2-B12 | Nil-Delta: Ibis stakst | lebendiger Hintergrund | runde2/ambiente/W2-B12_ibis.png (+2 weitere) | nein | auf claude/ambiente-einbau eingebaut (PR #32) |  |
-| W2-B13 | Nil-Delta: Fischer wirft das Netz | lebendiger Hintergrund | runde2/ambiente/W2-B13_fischer_netz.png (+3 weitere) | nein | auf claude/ambiente-einbau eingebaut (PR #32) |  |
-| W2-B14 | Nil-Delta: Libelle | lebendiger Hintergrund | runde2/ambiente/W2-B14_libelle.png | nein | auf claude/ambiente-einbau eingebaut (PR #32) |  |
-| W2-B15 | Hafen Syrakus: Segelschiff auf See | lebendiger Hintergrund | runde2/ambiente/W2-B15_segelschiff.png (+1 weitere) | nein | auf claude/ambiente-einbau eingebaut (PR #32) |  |
-| W2-B16 | Hafen Syrakus: Möwe fliegt | lebendiger Hintergrund | runde2/ambiente/W2-B16_moewe_fliegt.png | nein | auf claude/ambiente-einbau eingebaut (PR #32) |  |
-| W2-B17 | Hafen Syrakus: Möwe auf dem Pfahl | lebendiger Hintergrund | runde2/ambiente/W2-B17_moewe_pfahl.png | nein | auf claude/ambiente-einbau eingebaut (PR #32) |  |
-| W2-B18 | Hafen Syrakus: Hafenarbeiter mit Amphore | lebendiger Hintergrund | runde2/ambiente/W2-B18_hafenarbeiter.png (+2 weitere) | nein | auf claude/ambiente-einbau eingebaut (PR #32) |  |
-| W2-B19 | Hafen Syrakus: Tintenfisch zappelt | lebendiger Hintergrund | runde2/ambiente/W2-B19_tintenfisch.png | nein | auf claude/ambiente-einbau eingebaut (PR #32) |  |
-| W2-B20 | Fährsteg Olympia: Ziege grast | lebendiger Hintergrund | runde2/ambiente/W2-B20_ziege_grast.png (+1 weitere) | nein | auf claude/ambiente-einbau eingebaut (PR #32) |  |
-| W2-B21 | Sanduhr: Sand rieselt | lebendiger Hintergrund | runde2/ambiente/W2-B21_sanduhr.png | nein | auf claude/ambiente-einbau eingebaut (PR #32) |  |
-| W2-B22 | Palastküche: Ofenfeuer | lebendiger Hintergrund | runde2/ambiente/W2-B22_ofenfeuer.png | nein | auf claude/ambiente-einbau eingebaut (PR #32) |  |
-| W2-B23 | Sphinx: Geier kreist | lebendiger Hintergrund | runde2/ambiente/W2-B23_geier.png (+2 weitere) | nein | auf claude/ambiente-einbau eingebaut (PR #32) |  |
-| W2-B24 | Grabhügel Syrakus: Eidechse | lebendiger Hintergrund | runde2/ambiente/W2-B24_eidechse.png (+1 weitere) | nein | auf claude/ambiente-einbau eingebaut (PR #32) |  |
-| W2-B25 | Archimedes' Werkstatt: Wasserorgel blubbert | lebendiger Hintergrund | runde2/ambiente/W2-B25_wasserorgel.png | nein | auf claude/ambiente-einbau eingebaut (PR #32) |  |
-| W2-B26 | Stadion: Zuschauer jubeln | lebendiger Hintergrund | runde2/ambiente/W2-B26_zuschauer.png (+3 weitere) | nein | auf claude/ambiente-einbau eingebaut (PR #32) |  |
-| W2-B27 | Stadion: Wimpel flattern | lebendiger Hintergrund | runde2/ambiente/W2-B27_wimpel_stadion.png | nein | auf claude/ambiente-einbau eingebaut (PR #32) |  |
-| W2-B28 | Agora: Tauben picken | lebendiger Hintergrund | runde2/ambiente/W2-B28_tauben_picken.png (+1 weitere) | nein | auf claude/ambiente-einbau eingebaut (PR #32) |  |
-| W2-B29 | Agora: Taube fliegt auf | lebendiger Hintergrund | runde2/ambiente/W2-B29_taube_fliegt.png (+1 weitere) | nein | auf claude/ambiente-einbau eingebaut (PR #32) |  |
-| W2-B30 | Agora: Menge im Hintergrund | lebendiger Hintergrund | runde2/ambiente/W2-B30_menge.png | nein | auf claude/ambiente-einbau eingebaut (PR #32) |  |
-| W2-B31 | Startbüro: Wartende auf der Bank | lebendiger Hintergrund | runde2/ambiente/W2-B31_wartende.png | nein | auf claude/ambiente-einbau eingebaut (PR #32) |  |
-| W2-B32 | Sobek, an Land: Schwanz wedeln | Bewegung | runde2/W2-B32_sobek_schwanz.png (+1 weitere) | sobek_land_schwanz_wedeln | auf claude/gesten-menschen eingebaut |  |
-| W2-B33 | Sobek, an Land: Hut zurechtrücken | Bewegung | runde2/W2-B33_sobek_hut.png (+1 weitere) | sobek_land_hut_zurechtruecken | auf claude/gesten-menschen eingebaut |  |
-| W2-B34 | Schildkröte: Rennen | Bewegung | runde2/W2-B34_schildkroete_rennen.png (+1 weitere) | schildkroete_rennen | auf claude/gesten-menschen eingebaut |  |
-| W2-B35 | Hafen Syrakus: Ruderboot mit Fässern | lebendiger Hintergrund | runde2/ambiente/W2-B35_ruderboot.png | nein | auf claude/ambiente-einbau eingebaut (PR #32) |  |
-| W2-B36 | Nil-Delta: Wasserträgerin | lebendiger Hintergrund | runde2/ambiente/W2-B36_wassertraegerin.png | nein | auf claude/ambiente-einbau eingebaut (PR #32) |  |
-| W2-B37 | Leonidas: Losrennen | Bewegung | runde2/W2-B37_leonidas_losrennen.png (+1 weitere) | leonidas_losrennen | auf claude/gesten-menschen eingebaut |  |
-| W2-P01 | Max Tag 1 | Figuren-Pose (Posenbogen) | nacht/W2-P01_max_tag1.png | max_heisser_sand, max_katapult | auf claude/gesten-menschen eingebaut |  |
-| W2-P02 | Max Finaltag | Figuren-Pose (Posenbogen) | nacht/W2-P02_max_finaltag.png | max_diskus, max_speer, max_wackeln | auf claude/gesten-menschen eingebaut |  |
-| W2-P03 | Ramses | Figuren-Pose (Posenbogen) | nacht/W2-P03_ramses.png (+2 weitere) | ramses_unentschlossen | auf claude/gesten-menschen eingebaut |  |
-| W2-P04 | Sobek | Figuren-Pose (Posenbogen) | nacht/W2-P04_sobek_land.png | sobek_land_kriechen, sobek_land_verbeugen | auf claude/gesten-menschen eingebaut | abgedeckt durch sobek_land_kriechen, sobek_land_verbeugen (W2-B01, W2-B06) |
-| W2-P05 | Hofkater | Figuren-Pose (Posenbogen) | nacht/W2-P05_hofkater.png | hofkater_abziehen | auf claude/gesten-menschen eingebaut |  |
-| W2-P06 | Schildkröte | Figuren-Pose (Posenbogen) | nacht/W2-P06_schildkroete.png | schildkroete_laufen | auf claude/gesten-menschen eingebaut | abgedeckt durch schildkroete_laufen (W2-B03, gleiche Laufbewegung) |
-| W2-P07 | Archimedes | Figuren-Pose (Posenbogen) | nacht/W2-P07_archimedes_heureka.png | archimedes_heureka | auf claude/gesten-menschen eingebaut |  |
-| W2-P08 | Hermes | Figuren-Pose (Posenbogen) | nacht/W2-P08_hermes.png (+2 weitere) | hermes_joggen | auf claude/gesten-menschen eingebaut |  |
-| W2-P09 | Leonidas | Figuren-Pose (Posenbogen) | nacht/W2-P09_leonidas.png | leonidas_bruellen | auf claude/gesten-menschen eingebaut |  |
-| W2-P10 | Cicero | Figuren-Pose (Posenbogen) | nacht/W2-P10_cicero.png | cicero_rede | auf claude/gesten-menschen eingebaut |  |
-| W2-P11 | Philosoph | Figuren-Pose (Posenbogen) | nacht/W2-P11_philosoph.png | philosoph_schimpfen | auf claude/gesten-menschen eingebaut |  |
-| W2-P12 | Fächerwedler | Figuren-Pose (Posenbogen) | nacht/W2-P12_faecherwedler.png | faecherwedler_faecheln | auf claude/gesten-menschen eingebaut |  |
-| W2-P13 | Nebet | Figuren-Pose (Posenbogen) | nacht/W2-P13_nebet.png | nebet_probieren, nebet_ruehren | auf claude/gesten-menschen eingebaut |  |
-| W2-P14 | Hieron | Figuren-Pose (Posenbogen) | nacht/W2-P14_hieron.png | hieron_ungeduld | auf claude/gesten-menschen eingebaut |  |
-| W2-P15 | Tiro | Figuren-Pose (Posenbogen) | nacht/W2-P15_tiro.png | tiro_schreiben | auf claude/gesten-menschen eingebaut |  |
-| W2-P16 | Palastschreiber | Figuren-Pose (Posenbogen) | nacht/W2-P16_palastschreiber.png | schreiber_schreiben, schreiber_strecken_gaehnen | auf claude/gesten-menschen eingebaut |  |
+| W2-B01 | Sobek, an Land: Kriechen | Bewegung | runde2/W2-B01_sobek_kriechen_a.png | sobek_land_kriechen | eingebaut, in main (PR #30) |  |
+| W2-B02 | Hofkater: Beleidigt weggehen | Bewegung | runde2/W2-B02_hofkater_gehen_a.png | hofkater_weggehen | eingebaut, in main (PR #30) |  |
+| W2-B03 | Schildkröte: Laufen | Bewegung | runde2/W2-B03_schildkroete_laufen_a.png | schildkroete_laufen | eingebaut, in main (PR #30) |  |
+| W2-B04 | Sobek, im Wasser: Treiben | Bewegung | runde2/W2-B04_sobek_treiben.png (+3 weitere) | sobek_reden, sobek_treiben | eingebaut, in main (PR #30) |  |
+| W2-B05 | Sobek, im Wasser: Fähre ziehen | Bewegung | runde2/W2-B05_sobek_faehre_ziehen.png (+3 weitere) | sobek_faehre_ziehen | eingebaut, in main (PR #30) |  |
+| W2-B06 | Sobek, an Land: Verbeugen | Bewegung | runde2/W2-B06_sobek_verbeugen.png (+1 weitere) | sobek_land_verbeugen | eingebaut, in main (PR #30) |  |
+| W2-B07 | Sobek, an Land: Gähnen | Bewegung | runde2/W2-B07_sobek_gaehnen.png (+2 weitere) | sobek_land_gaehnen | eingebaut, in main (PR #30) |  |
+| W2-B08 | Hofkater: Putzen | Bewegung | runde2/W2-B08_hofkater_putzen.png | hofkater_putzen | eingebaut, in main (PR #30) |  |
+| W2-B09 | Hofkater: Schwanz zucken | Bewegung | runde2/W2-B09_hofkater_schwanz.png | hofkater_schwanz_zucken | eingebaut, in main (PR #30) |  |
+| W2-B10 | Schildkröte: Kopf einziehen | Bewegung | runde2/W2-B10_schildkroete_kopf.png | schildkroete_kopf_einziehen | eingebaut, in main (PR #30) |  |
+| W2-B11 | Nil-Delta: Feluke segelt | lebendiger Hintergrund | runde2/ambiente/W2-B11_feluke.png (+2 weitere) | nein | eingebaut, in main (PR #32) (PR #32) |  |
+| W2-B12 | Nil-Delta: Ibis stakst | lebendiger Hintergrund | runde2/ambiente/W2-B12_ibis.png (+2 weitere) | nein | eingebaut, in main (PR #32) (PR #32) |  |
+| W2-B13 | Nil-Delta: Fischer wirft das Netz | lebendiger Hintergrund | runde2/ambiente/W2-B13_fischer_netz.png (+3 weitere) | nein | eingebaut, in main (PR #32) (PR #32) |  |
+| W2-B14 | Nil-Delta: Libelle | lebendiger Hintergrund | runde2/ambiente/W2-B14_libelle.png | nein | eingebaut, in main (PR #32) (PR #32) |  |
+| W2-B15 | Hafen Syrakus: Segelschiff auf See | lebendiger Hintergrund | runde2/ambiente/W2-B15_segelschiff.png (+1 weitere) | nein | eingebaut, in main (PR #32) (PR #32) |  |
+| W2-B16 | Hafen Syrakus: Möwe fliegt | lebendiger Hintergrund | runde2/ambiente/W2-B16_moewe_fliegt.png | nein | eingebaut, in main (PR #32) (PR #32) |  |
+| W2-B17 | Hafen Syrakus: Möwe auf dem Pfahl | lebendiger Hintergrund | runde2/ambiente/W2-B17_moewe_pfahl.png | nein | eingebaut, in main (PR #32) (PR #32) |  |
+| W2-B18 | Hafen Syrakus: Hafenarbeiter mit Amphore | lebendiger Hintergrund | runde2/ambiente/W2-B18_hafenarbeiter.png (+2 weitere) | nein | eingebaut, in main (PR #32) (PR #32) |  |
+| W2-B19 | Hafen Syrakus: Tintenfisch zappelt | lebendiger Hintergrund | runde2/ambiente/W2-B19_tintenfisch.png | nein | eingebaut, in main (PR #32) (PR #32) |  |
+| W2-B20 | Fährsteg Olympia: Ziege grast | lebendiger Hintergrund | runde2/ambiente/W2-B20_ziege_grast.png (+1 weitere) | nein | eingebaut, in main (PR #32) (PR #32) |  |
+| W2-B21 | Sanduhr: Sand rieselt | lebendiger Hintergrund | runde2/ambiente/W2-B21_sanduhr.png | nein | eingebaut, in main (PR #32) (PR #32) |  |
+| W2-B22 | Palastküche: Ofenfeuer | lebendiger Hintergrund | runde2/ambiente/W2-B22_ofenfeuer.png | nein | eingebaut, in main (PR #32) (PR #32) |  |
+| W2-B23 | Sphinx: Geier kreist | lebendiger Hintergrund | runde2/ambiente/W2-B23_geier.png (+2 weitere) | nein | eingebaut, in main (PR #32) (PR #32) |  |
+| W2-B24 | Grabhügel Syrakus: Eidechse | lebendiger Hintergrund | runde2/ambiente/W2-B24_eidechse.png (+1 weitere) | nein | eingebaut, in main (PR #32) (PR #32) |  |
+| W2-B25 | Archimedes' Werkstatt: Wasserorgel blubbert | lebendiger Hintergrund | runde2/ambiente/W2-B25_wasserorgel.png | nein | eingebaut, in main (PR #32) (PR #32) |  |
+| W2-B26 | Stadion: Zuschauer jubeln | lebendiger Hintergrund | runde2/ambiente/W2-B26_zuschauer.png (+3 weitere) | nein | eingebaut, in main (PR #32) (PR #32) |  |
+| W2-B27 | Stadion: Wimpel flattern | lebendiger Hintergrund | runde2/ambiente/W2-B27_wimpel_stadion.png | nein | eingebaut, in main (PR #32) (PR #32) |  |
+| W2-B28 | Agora: Tauben picken | lebendiger Hintergrund | runde2/ambiente/W2-B28_tauben_picken.png (+1 weitere) | nein | eingebaut, in main (PR #32) (PR #32) |  |
+| W2-B29 | Agora: Taube fliegt auf | lebendiger Hintergrund | runde2/ambiente/W2-B29_taube_fliegt.png (+1 weitere) | nein | eingebaut, in main (PR #32) (PR #32) |  |
+| W2-B30 | Agora: Menge im Hintergrund | lebendiger Hintergrund | runde2/ambiente/W2-B30_menge.png | nein | eingebaut, in main (PR #32) (PR #32) |  |
+| W2-B31 | Startbüro: Wartende auf der Bank | lebendiger Hintergrund | runde2/ambiente/W2-B31_wartende.png | nein | eingebaut, in main (PR #32) (PR #32) |  |
+| W2-B32 | Sobek, an Land: Schwanz wedeln | Bewegung | runde2/W2-B32_sobek_schwanz.png (+1 weitere) | sobek_land_schwanz_wedeln | eingebaut, in main (PR #30) |  |
+| W2-B33 | Sobek, an Land: Hut zurechtrücken | Bewegung | runde2/W2-B33_sobek_hut.png (+1 weitere) | sobek_land_hut_zurechtruecken | eingebaut, in main (PR #30) |  |
+| W2-B34 | Schildkröte: Rennen | Bewegung | runde2/W2-B34_schildkroete_rennen.png (+1 weitere) | schildkroete_rennen | eingebaut, in main (PR #30) |  |
+| W2-B35 | Hafen Syrakus: Ruderboot mit Fässern | lebendiger Hintergrund | runde2/ambiente/W2-B35_ruderboot.png | nein | eingebaut, in main (PR #32) (PR #32) |  |
+| W2-B36 | Nil-Delta: Wasserträgerin | lebendiger Hintergrund | runde2/ambiente/W2-B36_wassertraegerin.png | nein | eingebaut, in main (PR #32) (PR #32) |  |
+| W2-B37 | Leonidas: Losrennen | Bewegung | runde2/W2-B37_leonidas_losrennen.png (+1 weitere) | leonidas_losrennen | eingebaut, in main (PR #30) |  |
+| W2-P01 | Max Tag 1 | Figuren-Pose (Posenbogen) | nacht/W2-P01_max_tag1.png | max_heisser_sand, max_katapult | eingebaut, in main (PR #30) |  |
+| W2-P02 | Max Finaltag | Figuren-Pose (Posenbogen) | nacht/W2-P02_max_finaltag.png | max_diskus, max_speer, max_wackeln | eingebaut, in main (PR #30) |  |
+| W2-P03 | Ramses | Figuren-Pose (Posenbogen) | nacht/W2-P03_ramses.png (+2 weitere) | ramses_unentschlossen | eingebaut, in main (PR #30) |  |
+| W2-P04 | Sobek | Figuren-Pose (Posenbogen) | nacht/W2-P04_sobek_land.png | sobek_land_kriechen, sobek_land_verbeugen | eingebaut, in main (PR #30) | abgedeckt durch sobek_land_kriechen, sobek_land_verbeugen (W2-B01, W2-B06) |
+| W2-P05 | Hofkater | Figuren-Pose (Posenbogen) | nacht/W2-P05_hofkater.png | hofkater_abziehen | eingebaut, in main (PR #30) |  |
+| W2-P06 | Schildkröte | Figuren-Pose (Posenbogen) | nacht/W2-P06_schildkroete.png | schildkroete_laufen | eingebaut, in main (PR #30) | abgedeckt durch schildkroete_laufen (W2-B03, gleiche Laufbewegung) |
+| W2-P07 | Archimedes | Figuren-Pose (Posenbogen) | nacht/W2-P07_archimedes_heureka.png | archimedes_heureka | eingebaut, in main (PR #30) |  |
+| W2-P08 | Hermes | Figuren-Pose (Posenbogen) | nacht/W2-P08_hermes.png (+2 weitere) | hermes_joggen | eingebaut, in main (PR #30) |  |
+| W2-P09 | Leonidas | Figuren-Pose (Posenbogen) | nacht/W2-P09_leonidas.png | leonidas_bruellen | eingebaut, in main (PR #30) |  |
+| W2-P10 | Cicero | Figuren-Pose (Posenbogen) | nacht/W2-P10_cicero.png | cicero_rede | eingebaut, in main (PR #30) |  |
+| W2-P11 | Philosoph | Figuren-Pose (Posenbogen) | nacht/W2-P11_philosoph.png | philosoph_schimpfen | eingebaut, in main (PR #30) |  |
+| W2-P12 | Fächerwedler | Figuren-Pose (Posenbogen) | nacht/W2-P12_faecherwedler.png | faecherwedler_faecheln | eingebaut, in main (PR #30) |  |
+| W2-P13 | Nebet | Figuren-Pose (Posenbogen) | nacht/W2-P13_nebet.png | nebet_probieren, nebet_ruehren | eingebaut, in main (PR #30) |  |
+| W2-P14 | Hieron | Figuren-Pose (Posenbogen) | nacht/W2-P14_hieron.png | hieron_ungeduld | eingebaut, in main (PR #30) |  |
+| W2-P15 | Tiro | Figuren-Pose (Posenbogen) | nacht/W2-P15_tiro.png | tiro_schreiben | eingebaut, in main (PR #30) |  |
+| W2-P16 | Palastschreiber | Figuren-Pose (Posenbogen) | nacht/W2-P16_palastschreiber.png | schreiber_schreiben, schreiber_strecken_gaehnen | eingebaut, in main (PR #30) |  |
 | W2-P17 | Publikum | Figuren-Pose (Posenbogen) | nacht/W2-P17_publikum.png | publikum_einschlafen | nicht eingebaut | Bewegung fertig; Publikum hat noch kein Spiel-Sprite |
-| W2-P18 | Fährmann | Figuren-Pose (Posenbogen) | nacht/W2-P18_faehrmann.png (+1 weitere) | faehrmann_muenze, faehrmann_staken | auf claude/gesten-menschen eingebaut |  |
-| W2-P19 | Steinmetz | Figuren-Pose (Posenbogen) | nacht/W2-P19_steinmetz.png | steinmetz_meisseln, steinmetz_stirn_wischen | auf claude/gesten-menschen eingebaut |  |
-| W2-P20 | Zeremonienmeister | Figuren-Pose (Posenbogen) | nacht/W2-P20_zeremonienmeister.png (+1 weitere) | zeremonienmeister_ankuendigen | auf claude/gesten-menschen eingebaut |  |
-| W2-P21 | Brian | Figuren-Pose (Posenbogen) | nacht/W2-P21_brian.png | brian_abwehren | auf claude/gesten-menschen eingebaut |  |
-| W2-P22 | Beamter 1 | Figuren-Pose (Posenbogen) | nacht/W2-P22_beamter1.png | beamter_1_eindoesen | auf claude/gesten-menschen eingebaut |  |
-| W2-P23 | Beamter 2 | Figuren-Pose (Posenbogen) | nacht/W2-P23_beamter2.png | beamter_2_stempeln | auf claude/gesten-menschen eingebaut |  |
-| W2-P24 | Römische Touristin | Figuren-Pose (Posenbogen) | nacht/W2-P24_touristin.png | touristin_faecheln_mustern | auf claude/gesten-menschen eingebaut |  |
-| W2-P25 | Ägypter aus dem Volk | Figuren-Pose (Posenbogen) | nacht/W2-P25_aegypter.png | aegypter_klatschen | auf claude/gesten-menschen eingebaut |  |
-| W2-P26 | Straßenmusiker | Figuren-Pose (Posenbogen) | nacht/W2-P26_strassenmusiker.png | strassenmusiker_lyra | auf claude/gesten-menschen eingebaut |  |
-| W2-P27 | Sobek im Wasser | Figuren-Pose (Posenbogen) | nacht/W2-P27_sobek_wasser.png | sobek_treiben, sobek_reden | auf claude/gesten-menschen eingebaut | abgedeckt durch sobek_treiben, sobek_reden (neu gemalt als W2-B04/W2-P48 im Format des Sprites) |
-| W2-P28 | Ramses | Figuren-Pose (Posenbogen) | runde2/W2-P28_ramses.png (+2 weitere) | ramses_kopftuch, ramses_reden, ramses_zepter_wiegen | auf claude/gesten-menschen eingebaut |  |
-| W2-P29 | Fährmann | Figuren-Pose (Posenbogen) | runde2/W2-P29_faehrmann.png (+3 weitere) | faehrmann_bart_kratzen, faehrmann_gaehnen, faehrmann_reden | auf claude/gesten-menschen eingebaut |  |
-| W2-P30 | Köchin Nebet | Figuren-Pose (Posenbogen) | runde2/W2-P30_nebet.png (+1 weitere) | nebet_abschmecken, nebet_mehl_wischen, nebet_reden | auf claude/gesten-menschen eingebaut |  |
-| W2-P31 | Palastschreiber | Figuren-Pose (Posenbogen) | runde2/W2-P31_schreiber.png (+3 weitere) | schreiber_einnicken, schreiber_reden, schreiber_stift_kauen | auf claude/gesten-menschen eingebaut |  |
-| W2-P32 | Archimedes | Figuren-Pose (Posenbogen) | runde2/W2-P32_archimedes.png | archimedes_gruebeln, archimedes_kopf_kratzen, archimedes_reden | auf claude/gesten-menschen eingebaut |  |
-| W2-P33 | König Hieron | Figuren-Pose (Posenbogen) | runde2/W2-P33_hieron.png (+1 weitere) | hieron_bart_streichen, hieron_finger_trommeln, hieron_reden | auf claude/gesten-menschen eingebaut |  |
-| W2-P34 | Cicero | Figuren-Pose (Posenbogen) | runde2/W2-P34_cicero.png | cicero_armreif, cicero_raeuspern, cicero_reden | auf claude/gesten-menschen eingebaut |  |
-| W2-P35 | Tiro | Figuren-Pose (Posenbogen) | runde2/W2-P35_tiro.png (+1 weitere) | tiro_kritzeln, tiro_reden, tiro_umsehen | auf claude/gesten-menschen eingebaut |  |
-| W2-P36 | Leonidas | Figuren-Pose (Posenbogen) | runde2/W2-P36_leonidas.png | leonidas_dehnen, leonidas_pfeife_drehen, leonidas_reden | auf claude/gesten-menschen eingebaut |  |
-| W2-P37 | Hermes | Figuren-Pose (Posenbogen) | runde2/W2-P37_hermes.png (+1 weitere) | hermes_reden, hermes_tasche | auf claude/gesten-menschen eingebaut |  |
-| W2-P38 | Brian | Figuren-Pose (Posenbogen) | runde2/W2-P38_brian.png | brian_reden, brian_schild_richten, brian_seufzen | auf claude/gesten-menschen eingebaut |  |
-| W2-P39 | Philosoph | Figuren-Pose (Posenbogen) | runde2/W2-P39_philosoph.png (+2 weitere) | philosoph_bart_kratzen, philosoph_laterne_spaehen, philosoph_reden | auf claude/gesten-menschen eingebaut |  |
-| W2-P40 | Römischer Tourist | Figuren-Pose (Posenbogen) | runde2/W2-P40_tourist.png (+1 weitere) | tourist_hut_faecheln, tourist_reden, tourist_stirn_wischen | auf claude/gesten-menschen eingebaut |  |
-| W2-P41 | Römische Touristin | Figuren-Pose (Posenbogen) | runde2/W2-P41_touristin.png (+2 weitere) | touristin_amphore, touristin_reden | auf claude/gesten-menschen eingebaut |  |
-| W2-P42 | Beamter 2 | Figuren-Pose (Posenbogen) | runde2/W2-P42_beamter2.png | beamter_2_brille_putzen, beamter_2_haare_richten, beamter_2_reden | auf claude/gesten-menschen eingebaut |  |
-| W2-P43 | Fächerwedler | Figuren-Pose (Posenbogen) | runde2/W2-P43_faecherwedler.png (+1 weitere) | faecherwedler_bauch, faecherwedler_reden | auf claude/gesten-menschen eingebaut |  |
-| W2-P44 | Zeremonienmeister | Figuren-Pose (Posenbogen) | runde2/W2-P44_zeremonienmeister.png (+2 weitere) | zeremonienmeister_federkrone, zeremonienmeister_reden | auf claude/gesten-menschen eingebaut |  |
-| W2-P45 | Steinmetz | Figuren-Pose (Posenbogen) | runde2/W2-P45_steinmetz.png (+2 weitere) | steinmetz_reden, steinmetz_staub_pusten | auf claude/gesten-menschen eingebaut |  |
-| W2-P46 | Ägypter aus dem Volk | Figuren-Pose (Posenbogen) | runde2/W2-P46_aegypter.png | aegypter_reden, aegypter_schulterzucken | auf claude/gesten-menschen eingebaut |  |
-| W2-P47 | Straßenmusiker | Figuren-Pose (Posenbogen) | runde2/W2-P47_strassenmusiker.png (+1 weitere) | strassenmusiker_reden, strassenmusiker_stimmen | auf claude/gesten-menschen eingebaut |  |
-| W2-P48 | Sobek im Wasser | Figuren-Pose (Posenbogen) | runde2/W2-P48_sobek_wasser.png (+1 weitere) | sobek_reden | auf claude/gesten-menschen eingebaut |  |
-| W2-P49 | Hofkater | Figuren-Pose (Posenbogen) | runde2/W2-P49_hofkater.png | hofkater_reden | auf claude/gesten-menschen eingebaut |  |
-| W2-P50 | Beamter 1 | Figuren-Pose (Posenbogen) | runde2/W2-P50_beamter1.png | beamter_1_gaehnen, beamter_1_reden | auf claude/gesten-menschen eingebaut |  |
-| W2-P51 | Ramses | Figuren-Pose (Posenbogen) | runde2/W2-P51_ramses.png (+2 weitere) | ramses_zepter_tauschen | auf claude/gesten-menschen eingebaut |  |
-| W2-P52 | Köchin Nebet | Figuren-Pose (Posenbogen) | runde2/W2-P52_nebet.png (+1 weitere) | nebet_teig_kneten | auf claude/gesten-menschen eingebaut |  |
-| W2-P53 | Archimedes | Figuren-Pose (Posenbogen) | runde2/W2-P53_archimedes.png | archimedes_zirkel | auf claude/gesten-menschen eingebaut |  |
-| W2-P54 | Fährmann | Figuren-Pose (Posenbogen) | runde2/W2-P54_faehrmann.png | faehrmann_gaehnen_stab | auf claude/gesten-menschen eingebaut |  |
-| W2-P55 | Cicero | Figuren-Pose (Posenbogen) | runde2/W2-P55_cicero.png | cicero_toga_zupfen | auf claude/gesten-menschen eingebaut |  |
-| W2-P56 | Tiro | Figuren-Pose (Posenbogen) | runde2/W2-P56_tiro.png | tiro_tafel_glaetten | auf claude/gesten-menschen eingebaut |  |
-| W2-P57 | Philosoph | Figuren-Pose (Posenbogen) | runde2/W2-P57_philosoph.png | philosoph_laterne_putzen | auf claude/gesten-menschen eingebaut |  |
-| W2-P58 | Römische Touristin | Figuren-Pose (Posenbogen) | runde2/W2-P58_touristin.png | touristin_brille_putzen | auf claude/gesten-menschen eingebaut |  |
-| W2-P59 | Beamter 2 | Figuren-Pose (Posenbogen) | runde2/W2-P59_beamter2.png | beamter_2_stempel_anhauchen | auf claude/gesten-menschen eingebaut |  |
-| W2-P60 | Fächerwedler | Figuren-Pose (Posenbogen) | runde2/W2-P60_faecherwedler.png | faecherwedler_arm_ausschuetteln | auf claude/gesten-menschen eingebaut |  |
-| W2-P61 | Ägypter aus dem Volk | Figuren-Pose (Posenbogen) | runde2/W2-P61_aegypter.png | aegypter_fuss_tippen | auf claude/gesten-menschen eingebaut |  |
+| W2-P18 | Fährmann | Figuren-Pose (Posenbogen) | nacht/W2-P18_faehrmann.png (+1 weitere) | faehrmann_muenze, faehrmann_staken | eingebaut, in main (PR #30) |  |
+| W2-P19 | Steinmetz | Figuren-Pose (Posenbogen) | nacht/W2-P19_steinmetz.png | steinmetz_meisseln, steinmetz_stirn_wischen | eingebaut, in main (PR #30) |  |
+| W2-P20 | Zeremonienmeister | Figuren-Pose (Posenbogen) | nacht/W2-P20_zeremonienmeister.png (+1 weitere) | zeremonienmeister_ankuendigen | eingebaut, in main (PR #30) |  |
+| W2-P21 | Brian | Figuren-Pose (Posenbogen) | nacht/W2-P21_brian.png | brian_abwehren | eingebaut, in main (PR #30) |  |
+| W2-P22 | Beamter 1 | Figuren-Pose (Posenbogen) | nacht/W2-P22_beamter1.png | beamter_1_eindoesen | eingebaut, in main (PR #30) |  |
+| W2-P23 | Beamter 2 | Figuren-Pose (Posenbogen) | nacht/W2-P23_beamter2.png | beamter_2_stempeln | eingebaut, in main (PR #30) |  |
+| W2-P24 | Römische Touristin | Figuren-Pose (Posenbogen) | nacht/W2-P24_touristin.png | touristin_faecheln_mustern | eingebaut, in main (PR #30) |  |
+| W2-P25 | Ägypter aus dem Volk | Figuren-Pose (Posenbogen) | nacht/W2-P25_aegypter.png | aegypter_klatschen | eingebaut, in main (PR #30) |  |
+| W2-P26 | Straßenmusiker | Figuren-Pose (Posenbogen) | nacht/W2-P26_strassenmusiker.png | strassenmusiker_lyra | eingebaut, in main (PR #30) |  |
+| W2-P27 | Sobek im Wasser | Figuren-Pose (Posenbogen) | nacht/W2-P27_sobek_wasser.png | sobek_treiben, sobek_reden | eingebaut, in main (PR #30) | abgedeckt durch sobek_treiben, sobek_reden (neu gemalt als W2-B04/W2-P48 im Format des Sprites) |
+| W2-P28 | Ramses | Figuren-Pose (Posenbogen) | runde2/W2-P28_ramses.png (+2 weitere) | ramses_kopftuch, ramses_reden, ramses_zepter_wiegen | eingebaut, in main (PR #30) |  |
+| W2-P29 | Fährmann | Figuren-Pose (Posenbogen) | runde2/W2-P29_faehrmann.png (+3 weitere) | faehrmann_bart_kratzen, faehrmann_gaehnen, faehrmann_reden | eingebaut, in main (PR #30) |  |
+| W2-P30 | Köchin Nebet | Figuren-Pose (Posenbogen) | runde2/W2-P30_nebet.png (+1 weitere) | nebet_abschmecken, nebet_mehl_wischen, nebet_reden | eingebaut, in main (PR #30) |  |
+| W2-P31 | Palastschreiber | Figuren-Pose (Posenbogen) | runde2/W2-P31_schreiber.png (+3 weitere) | schreiber_einnicken, schreiber_reden, schreiber_stift_kauen | eingebaut, in main (PR #30) |  |
+| W2-P32 | Archimedes | Figuren-Pose (Posenbogen) | runde2/W2-P32_archimedes.png | archimedes_gruebeln, archimedes_kopf_kratzen, archimedes_reden | eingebaut, in main (PR #30) |  |
+| W2-P33 | König Hieron | Figuren-Pose (Posenbogen) | runde2/W2-P33_hieron.png (+1 weitere) | hieron_bart_streichen, hieron_finger_trommeln, hieron_reden | eingebaut, in main (PR #30) |  |
+| W2-P34 | Cicero | Figuren-Pose (Posenbogen) | runde2/W2-P34_cicero.png | cicero_armreif, cicero_raeuspern, cicero_reden | eingebaut, in main (PR #30) |  |
+| W2-P35 | Tiro | Figuren-Pose (Posenbogen) | runde2/W2-P35_tiro.png (+1 weitere) | tiro_kritzeln, tiro_reden, tiro_umsehen | eingebaut, in main (PR #30) |  |
+| W2-P36 | Leonidas | Figuren-Pose (Posenbogen) | runde2/W2-P36_leonidas.png | leonidas_dehnen, leonidas_pfeife_drehen, leonidas_reden | eingebaut, in main (PR #30) |  |
+| W2-P37 | Hermes | Figuren-Pose (Posenbogen) | runde2/W2-P37_hermes.png (+1 weitere) | hermes_reden, hermes_tasche | eingebaut, in main (PR #30) |  |
+| W2-P38 | Brian | Figuren-Pose (Posenbogen) | runde2/W2-P38_brian.png | brian_reden, brian_schild_richten, brian_seufzen | eingebaut, in main (PR #30) |  |
+| W2-P39 | Philosoph | Figuren-Pose (Posenbogen) | runde2/W2-P39_philosoph.png (+2 weitere) | philosoph_bart_kratzen, philosoph_laterne_spaehen, philosoph_reden | eingebaut, in main (PR #30) |  |
+| W2-P40 | Römischer Tourist | Figuren-Pose (Posenbogen) | runde2/W2-P40_tourist.png (+1 weitere) | tourist_hut_faecheln, tourist_reden, tourist_stirn_wischen | eingebaut, in main (PR #30) |  |
+| W2-P41 | Römische Touristin | Figuren-Pose (Posenbogen) | runde2/W2-P41_touristin.png (+2 weitere) | touristin_amphore, touristin_reden | eingebaut, in main (PR #30) |  |
+| W2-P42 | Beamter 2 | Figuren-Pose (Posenbogen) | runde2/W2-P42_beamter2.png | beamter_2_brille_putzen, beamter_2_haare_richten, beamter_2_reden | eingebaut, in main (PR #30) |  |
+| W2-P43 | Fächerwedler | Figuren-Pose (Posenbogen) | runde2/W2-P43_faecherwedler.png (+1 weitere) | faecherwedler_bauch, faecherwedler_reden | eingebaut, in main (PR #30) |  |
+| W2-P44 | Zeremonienmeister | Figuren-Pose (Posenbogen) | runde2/W2-P44_zeremonienmeister.png (+2 weitere) | zeremonienmeister_federkrone, zeremonienmeister_reden | eingebaut, in main (PR #30) |  |
+| W2-P45 | Steinmetz | Figuren-Pose (Posenbogen) | runde2/W2-P45_steinmetz.png (+2 weitere) | steinmetz_reden, steinmetz_staub_pusten | eingebaut, in main (PR #30) |  |
+| W2-P46 | Ägypter aus dem Volk | Figuren-Pose (Posenbogen) | runde2/W2-P46_aegypter.png | aegypter_reden, aegypter_schulterzucken | eingebaut, in main (PR #30) |  |
+| W2-P47 | Straßenmusiker | Figuren-Pose (Posenbogen) | runde2/W2-P47_strassenmusiker.png (+1 weitere) | strassenmusiker_reden, strassenmusiker_stimmen | eingebaut, in main (PR #30) |  |
+| W2-P48 | Sobek im Wasser | Figuren-Pose (Posenbogen) | runde2/W2-P48_sobek_wasser.png (+1 weitere) | sobek_reden | eingebaut, in main (PR #30) |  |
+| W2-P49 | Hofkater | Figuren-Pose (Posenbogen) | runde2/W2-P49_hofkater.png | hofkater_reden | eingebaut, in main (PR #30) |  |
+| W2-P50 | Beamter 1 | Figuren-Pose (Posenbogen) | runde2/W2-P50_beamter1.png | beamter_1_gaehnen, beamter_1_reden | eingebaut, in main (PR #30) |  |
+| W2-P51 | Ramses | Figuren-Pose (Posenbogen) | runde2/W2-P51_ramses.png (+2 weitere) | ramses_zepter_tauschen | eingebaut, in main (PR #30) |  |
+| W2-P52 | Köchin Nebet | Figuren-Pose (Posenbogen) | runde2/W2-P52_nebet.png (+1 weitere) | nebet_teig_kneten | eingebaut, in main (PR #30) |  |
+| W2-P53 | Archimedes | Figuren-Pose (Posenbogen) | runde2/W2-P53_archimedes.png | archimedes_zirkel | eingebaut, in main (PR #30) |  |
+| W2-P54 | Fährmann | Figuren-Pose (Posenbogen) | runde2/W2-P54_faehrmann.png | faehrmann_gaehnen_stab | eingebaut, in main (PR #30) |  |
+| W2-P55 | Cicero | Figuren-Pose (Posenbogen) | runde2/W2-P55_cicero.png | cicero_toga_zupfen | eingebaut, in main (PR #30) |  |
+| W2-P56 | Tiro | Figuren-Pose (Posenbogen) | runde2/W2-P56_tiro.png | tiro_tafel_glaetten | eingebaut, in main (PR #30) |  |
+| W2-P57 | Philosoph | Figuren-Pose (Posenbogen) | runde2/W2-P57_philosoph.png | philosoph_laterne_putzen | eingebaut, in main (PR #30) |  |
+| W2-P58 | Römische Touristin | Figuren-Pose (Posenbogen) | runde2/W2-P58_touristin.png | touristin_brille_putzen | eingebaut, in main (PR #30) |  |
+| W2-P59 | Beamter 2 | Figuren-Pose (Posenbogen) | runde2/W2-P59_beamter2.png | beamter_2_stempel_anhauchen | eingebaut, in main (PR #30) |  |
+| W2-P60 | Fächerwedler | Figuren-Pose (Posenbogen) | runde2/W2-P60_faecherwedler.png | faecherwedler_arm_ausschuetteln | eingebaut, in main (PR #30) |  |
+| W2-P61 | Ägypter aus dem Volk | Figuren-Pose (Posenbogen) | runde2/W2-P61_aegypter.png | aegypter_fuss_tippen | eingebaut, in main (PR #30) |  |
 | WU-B01 | Max: Gehen | Bewegung | fehlt | nein | in main: max: walk |  |
-| WU-B02 | Max: Gehen nach vorn und nach hinten | Bewegung | nacht/WU-B02_max_gehen_hinten.png (+1 weitere) | max_gehen_hinten, max_gehen_vorn | auf claude/gesten-menschen eingebaut |  |
+| WU-B02 | Max: Gehen nach vorn und nach hinten | Bewegung | nacht/WU-B02_max_gehen_hinten.png (+1 weitere) | max_gehen_hinten, max_gehen_vorn | eingebaut, in main (PR #30) |  |
 | WU-B03 | Max: Stehen | Bewegung | fehlt | nein | in main: max: idle |  |
 | WU-B04 | Max: Sprechen | Bewegung | fehlt | nein | in main: max: talk |  |
-| WU-B05 | Max: Aufheben | Bewegung | nacht/WU-B05_max_aufheben.png (+1 weitere) | max_aufheben | auf claude/gesten-menschen eingebaut |  |
-| WU-B06 | Max: Benutzen | Bewegung | nacht/WU-B06_max_benutzen.png (+1 weitere) | max_benutzen | auf claude/gesten-menschen eingebaut |  |
-| WU-B07 | Max: Schulterzucken | Bewegung | nacht/WU-B07_max_schulterzucken.png (+1 weitere) | max_schulterzucken | auf claude/gesten-menschen eingebaut |  |
-| WU-B08 | Max: Gähnen | Bewegung | nacht/WU-B08_max_gaehnen.png (+2 weitere) | max_gaehnen | auf claude/gesten-menschen eingebaut |  |
+| WU-B05 | Max: Aufheben | Bewegung | nacht/WU-B05_max_aufheben.png (+1 weitere) | max_aufheben | eingebaut, in main (PR #30) |  |
+| WU-B06 | Max: Benutzen | Bewegung | nacht/WU-B06_max_benutzen.png (+1 weitere) | max_benutzen | eingebaut, in main (PR #30) |  |
+| WU-B07 | Max: Schulterzucken | Bewegung | nacht/WU-B07_max_schulterzucken.png (+1 weitere) | max_schulterzucken | eingebaut, in main (PR #30) |  |
+| WU-B08 | Max: Gähnen | Bewegung | nacht/WU-B08_max_gaehnen.png (+2 weitere) | max_gaehnen | eingebaut, in main (PR #30) |  |
 | WU-B09 | Max: Auf dem Sofa | Bewegung | fehlt | nein | in main: max (Sofa) |  |
-| WU-B10 | Max: Vom Sofa aufstehen | Bewegung | nacht/WU-B10_max_vom_sofa_aufstehen.png (+1 weitere) | max_vom_sofa_aufstehen | auf claude/gesten-menschen eingebaut |  |
+| WU-B10 | Max: Vom Sofa aufstehen | Bewegung | nacht/WU-B10_max_vom_sofa_aufstehen.png (+1 weitere) | max_vom_sofa_aufstehen | eingebaut, in main (PR #30) |  |
 | WU-B11 | Pixel: Gehen | Bewegung | fehlt | nein | in main: pixel: walk |  |
-| WU-B12 | Pixel: Gehen nach vorn und nach hinten | Bewegung | nacht/WU-B12_kater_gehen_vorn_hinten.png (+2 weitere) | pixel_gehen_hinten, pixel_gehen_vorn | auf claude/gesten-menschen eingebaut |  |
+| WU-B12 | Pixel: Gehen nach vorn und nach hinten | Bewegung | nacht/WU-B12_kater_gehen_vorn_hinten.png (+2 weitere) | pixel_gehen_hinten, pixel_gehen_vorn | eingebaut, in main (PR #30) |  |
 | WU-B13 | Pixel: Stehen | Bewegung | fehlt | nein | in main: pixel: stehen |  |
 | WU-B14 | Pixel: Schlafen | Bewegung | fehlt | nein | in main: pixel: schlafen |  |
-| WU-B15 | Pixel: Putzen | Bewegung | nacht/WU-B15_kater_putzen.png (+3 weitere) | pixel_putzen | auf claude/gesten-menschen eingebaut |  |
-| WU-B16 | Pixel: Springen und Klettern | Bewegung | nacht/WU-B16_kater_springen_klettern.png (+3 weitere) | pixel_springen | auf claude/gesten-menschen eingebaut |  |
-| WU-B17 | Pixel: Schnuppern | Bewegung | nacht/WU-B17_kater_schnuppern.png (+3 weitere) | pixel_schnuppern | auf claude/gesten-menschen eingebaut |  |
-| WU-B18 | Pixel: Tragen | Bewegung | nacht/WU-B18_kater_tragen.png (+3 weitere) | pixel_tragen | auf claude/gesten-menschen eingebaut |  |
-| WU-B19 | Pixel: Fauchen | Bewegung | nacht/WU-B19_kater_fauchen.png (+3 weitere) | pixel_fauchen | auf claude/gesten-menschen eingebaut |  |
-| WU-B20 | Pixel: Ohrfeige | Bewegung | nacht/WU-B20_kater_ohrfeige.png (+1 weitere) | pixel_ohrfeige | auf claude/gesten-menschen eingebaut |  |
-| WU-B21 | Pixel: Vom Schrank fallen | Bewegung | nacht/WU-B21_kater_vom_schrank_fallen.png (+2 weitere) | pixel_vom_schrank_fallen | auf claude/gesten-menschen eingebaut |  |
-| WU-B22 | Max: Wenden | Bewegung | runde2/WU-B22_max_wenden.png (+1 weitere) | max_wenden | auf claude/gesten-menschen eingebaut |  |
-| WU-B23 | Max: Fallen und landen | Bewegung | runde2/WU-B23_max_fallen.png (+1 weitere) | max_fallen | auf claude/gesten-menschen eingebaut |  |
-| WU-B24 | Max: Vom Boden aufstehen | Bewegung | runde2/WU-B24_max_aufstehen.png (+1 weitere) | max_vom_boden_aufstehen | auf claude/gesten-menschen eingebaut |  |
-| WU-B25 | Pixel: Aufstehen | Bewegung | runde2/WU-B25_pixel_aufstehen.png (+2 weitere) | pixel_aufstehen | auf claude/gesten-menschen eingebaut |  |
-| WU-B26 | Pixel: Hinlegen | Bewegung | runde2/WU-B26_pixel_hinlegen.png (+3 weitere) | pixel_hinlegen | auf claude/gesten-menschen eingebaut |  |
-| WU-B27 | Max: Kopf kratzen | Bewegung | runde2/WU-B27_max_kopf_kratzen.png | max_kopf_kratzen | auf claude/gesten-menschen eingebaut |  |
-| WU-B28 | Max: Zeigen | Bewegung | runde2/WU-B28_max_zeigen.png | max_zeigen | auf claude/gesten-menschen eingebaut |  |
-| WU-B29 | Max: Hinsetzen | Bewegung | runde2/WU-B29_max_hinsetzen.png (+1 weitere) | max_hinsetzen | auf claude/gesten-menschen eingebaut |  |
-| WU-B30 | Max: Reden mit Gesten | Bewegung | runde2/WU-B30_max_reden.png (+1 weitere) | max_reden | auf claude/gesten-menschen eingebaut |  |
-| WU-B31 | Pixel: Reden | Bewegung | runde2/WU-B31_pixel_reden.png (+4 weitere) | pixel_reden | auf claude/gesten-menschen eingebaut |  |
-| WU-B32 | Pixel: Schwanz zucken | Bewegung | runde2/WU-B32_pixel_schwanz.png (+1 weitere) | pixel_schwanz_zucken | auf claude/gesten-menschen eingebaut |  |
+| WU-B15 | Pixel: Putzen | Bewegung | nacht/WU-B15_kater_putzen.png (+3 weitere) | pixel_putzen | eingebaut, in main (PR #30) |  |
+| WU-B16 | Pixel: Springen und Klettern | Bewegung | nacht/WU-B16_kater_springen_klettern.png (+3 weitere) | pixel_springen | eingebaut, in main (PR #30) |  |
+| WU-B17 | Pixel: Schnuppern | Bewegung | nacht/WU-B17_kater_schnuppern.png (+3 weitere) | pixel_schnuppern | eingebaut, in main (PR #30) |  |
+| WU-B18 | Pixel: Tragen | Bewegung | nacht/WU-B18_kater_tragen.png (+3 weitere) | pixel_tragen | eingebaut, in main (PR #30) |  |
+| WU-B19 | Pixel: Fauchen | Bewegung | nacht/WU-B19_kater_fauchen.png (+3 weitere) | pixel_fauchen | eingebaut, in main (PR #30) |  |
+| WU-B20 | Pixel: Ohrfeige | Bewegung | nacht/WU-B20_kater_ohrfeige.png (+1 weitere) | pixel_ohrfeige | eingebaut, in main (PR #30) |  |
+| WU-B21 | Pixel: Vom Schrank fallen | Bewegung | nacht/WU-B21_kater_vom_schrank_fallen.png (+2 weitere) | pixel_vom_schrank_fallen | eingebaut, in main (PR #30) |  |
+| WU-B22 | Max: Wenden | Bewegung | runde2/WU-B22_max_wenden.png (+1 weitere) | max_wenden | eingebaut, in main (PR #30) |  |
+| WU-B23 | Max: Fallen und landen | Bewegung | runde2/WU-B23_max_fallen.png (+1 weitere) | max_fallen | eingebaut, in main (PR #30) |  |
+| WU-B24 | Max: Vom Boden aufstehen | Bewegung | runde2/WU-B24_max_aufstehen.png (+1 weitere) | max_vom_boden_aufstehen | eingebaut, in main (PR #30) |  |
+| WU-B25 | Pixel: Aufstehen | Bewegung | runde2/WU-B25_pixel_aufstehen.png (+2 weitere) | pixel_aufstehen | eingebaut, in main (PR #30) |  |
+| WU-B26 | Pixel: Hinlegen | Bewegung | runde2/WU-B26_pixel_hinlegen.png (+3 weitere) | pixel_hinlegen | eingebaut, in main (PR #30) |  |
+| WU-B27 | Max: Kopf kratzen | Bewegung | runde2/WU-B27_max_kopf_kratzen.png | max_kopf_kratzen | eingebaut, in main (PR #30) |  |
+| WU-B28 | Max: Zeigen | Bewegung | runde2/WU-B28_max_zeigen.png | max_zeigen | eingebaut, in main (PR #30) |  |
+| WU-B29 | Max: Hinsetzen | Bewegung | runde2/WU-B29_max_hinsetzen.png (+1 weitere) | max_hinsetzen | eingebaut, in main (PR #30) |  |
+| WU-B30 | Max: Reden mit Gesten | Bewegung | runde2/WU-B30_max_reden.png (+1 weitere) | max_reden | eingebaut, in main (PR #30) |  |
+| WU-B31 | Pixel: Reden | Bewegung | runde2/WU-B31_pixel_reden.png (+4 weitere) | pixel_reden | eingebaut, in main (PR #30) |  |
+| WU-B32 | Pixel: Schwanz zucken | Bewegung | runde2/WU-B32_pixel_schwanz.png (+1 weitere) | pixel_schwanz_zucken | eingebaut, in main (PR #30) |  |

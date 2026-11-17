@@ -59,3 +59,10 @@ https://github.com/msitarzewski/agency-agents (von Sebastian am 15.11.2026 getei
 Unsere Einschätzung: nicht alles installieren. Brauchbar als zusätzliche Prüf-Blickwinkel (Reality Checker oder Persona Walkthrough vor einem Playtest, Narrative Designer für Dialoge, Game Audio Engineer für die Audio-Phase). Mehr bringen eigene, projektbezogene Agenten oder Skills, die auf `docs/lessons-learned.md` aufbauen (zum Beispiel „Sprite- und Animationsprüfer“, „Raum-Einbau prüfen“). Subagenten kosten zusätzliche Tokens und nur auf Wunsch einsetzen.
 
 Übernommen haben wir die Arbeitsstruktur aus `strategy/nexus-strategy.md` und `strategy/coordination/handoff-templates.md`: Phasen mit Prüftor, Bauen-Prüfen-Schleife mit höchstens drei Versuchen und Nachweis, feste Übergabe-Vorlage zwischen Threads. Unsere Fassung steht in `docs/lessons-learned.md`, Abschnitt 9.
+
+### Nachgetragen im Review vom 17. November 2026
+
+- **Codixel** (MIT): Vorlage für das Sprite-Werkzeug `tools/figur.py` (Freistellen, Raster, Pakete).
+- **Endesga 32**: Standardpalette in `tools/figur.py --palette endesga` und Zusatzpalette in `tools/ambiente.py` für Farben, die ein Raum nicht hat.
+- **Popochiu 2.2.1** (Godot-Addon, Commit `7c5eb869`): Grundlage für Räume, Figuren, Dialoge; für den Web-Export an fünf Stellen gepatcht (PR #38, Kommentar „Couch Quest:“).
+- **Godot-Doku zum Web-Export ohne Threads**: Grundlage für `web.yml` (GitHub Pages ohne besondere Server-Header).
