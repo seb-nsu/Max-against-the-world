@@ -24,6 +24,7 @@ Geprüft wird:
 
 Fehler (exit 1) müssen behoben werden, Warnungen werden geprüft.
 """
+import json
 import re
 import sys
 from pathlib import Path
@@ -634,6 +635,26 @@ def pruefe_englisch(alle_ids):
             F(rel, f"{k}: Schlüssel gibt es im Skript nicht (mehr)")
 
 
+# Gespräche, die ohne „beendet das Gespräch“ auskommen, weil die Figur nach jeder Option selbst
+# geht (`_nach_option` liefert true). Alle übrigen brauchen eine beendende Option, sonst hing das
+# Spiel nach der letzten Wahl in einem leeren Menü (Review 17.11., Fund W2-29, Hermes).
+GESPRAECHE_OHNE_ABSCHIED = {"maklerin", "deckert", "sitcom_vater", "sitcom_sohn", "fbi_agent",
+                            "fledermann", "wonder_wilma"}
+
+
+def pruefe_gespraeche():
+    for datei in sorted((ROOT / "game" / "daten" / "raeume").glob("*.json")):
+        try:
+            d = json.loads(datei.read_text(encoding="utf-8"))
+        except (OSError, ValueError):
+            continue
+        for g in d.get("dialoge", []):
+            if g["id"] in GESPRAECHE_OHNE_ABSCHIED:
+                continue
+            if not any(o.get("beendet") for o in g.get("optionen", [])):
+                F(f"daten/raeume/{datei.name}", f"Gespräch {g['id']} hat keine Option, die das Gespräch beendet")
+
+
 def main():
     nur_fehler = "--nur-fehler" in sys.argv
     alle = lade_tabellen()
@@ -651,6 +672,7 @@ def main():
     pruefe_nahansichten(alle)
     pruefe_code_schalter(alle)
     pruefe_englisch(alle_ids)
+    pruefe_gespraeche()
     import importlib.util
     spec = importlib.util.spec_from_file_location("diagramme", Path(__file__).with_name("diagramme.py"))
     dia = importlib.util.module_from_spec(spec)

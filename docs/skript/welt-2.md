@@ -760,7 +760,7 @@ Beamter 1 (Startschalter) verlangt einen Bürgerschein, Beamter 2 (Bürgerschalt
 | W2\_BUER\_PIX\_0625 | Pixel | Sandalen mit Flügeln, und sie zappeln. // Ich habe beschlossen, sie als Beute zu betrachten. Halt sie gut fest, sonst kümmere ich mich darum. | Ansehen: Sandalen im Inventar, zweites Mal |
 | W2\_BUER\_MAX\_0630 | Max | Ein Schluck Öl auf die Riemen. Jetzt sitzen sie, hoffentlich bis ins Ziel. | Olivenöl auf Sandalen; Sandalen geölt, Olivenöl bleibt angebrochen im Inventar |
 | W2\_BUER\_PIX\_0640 | Pixel | Du ölst Schuhe. Ich öle mich nie, und bin trotzdem geschmeidig. // Das nennt man Veranlagung. Man hat sie, oder man hat Olivenöl. | nach 0630 |
-| W2\_BUER\_HER\_0650 | Hermes | Die Römer? Die haben die Post schneller gemacht. Die war vorher mein Job. Ich meine, sie ist es noch. Ich muss los! | Option Hermes: Was hältst du von den Römern? |
+| W2\_BUER\_HER\_0650 | Hermes | Die Römer? Die haben die Post schneller gemacht. Die war vorher mein Job. Ich meine, sie ist es noch. Ich muss los! | Option Hermes: Was hältst du von den Römern?, beendet das Gespräch |
 
 ## 17. Agora von Olympia: Ansehen, Cicero, Griechen, Tonne
 

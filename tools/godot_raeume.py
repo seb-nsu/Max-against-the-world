@@ -724,6 +724,8 @@ def baue(abschnitt):
             rest = m.group(2)
             frage = z["id"]
             antworten_start = []
+            # „Option Hermes: Frage?, beendet das Gespräch“: das Ende gilt auch für Optionen mit Frage
+            endet = "beendet das Gespräch" in rest
             if rest.lstrip().startswith(":"):
                 # „Option Grieche: Wie haltet ihr Cicero aus?“ – die Zeile ist schon die Antwort;
                 # die Frage steht als UI-Text UI_OPT_<Zeilen-ID> in ui.csv
@@ -742,7 +744,7 @@ def baue(abschnitt):
                 text = ", ".join(t.strip() for t in re.sub(r"\([^)]*\)|nur vor\s+[PRF]\d+", "", text).split(",") if t.strip() not in ("", "nur"))
             text = ", ".join(t.strip() for t in text.split(",") if t.strip() and t.strip() not in ("Gag",))
             aktuelle = {"id": z["id"].rsplit("_", 1)[1], "frage": frage, "antworten": antworten_start,
-                        "beendet": "beendet das Gespräch" in rest, "bleibt": bleibt}
+                        "beendet": endet or "beendet das Gespräch" in rest, "bleibt": bleibt}
             if bed:
                 aktuelle["bedingung"] = bed
             if text:

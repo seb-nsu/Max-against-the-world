@@ -118,7 +118,12 @@ func _option_selected(opt: PopochiuDialogOption) -> void:
 	var weiter := await waehlen(opt.id)
 	if weiter:
 		sichtbarkeit_anpassen()
-		_show_options()
+		# Sicherheitsnetz (Review 17.11., W2-29): Ist keine Option mehr sichtbar, zeigte Popochiu ein
+		# leeres Menü, aus dem man nicht mehr herauskam. Dann endet das Gespräch.
+		if options.any(func(o: PopochiuDialogOption) -> bool: return o.visible):
+			_show_options()
+		else:
+			stop()
 	else:
 		stop()
 
