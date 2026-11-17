@@ -27,5 +27,5 @@ Jede Information hat genau einen Besitzer. Andere Dateien dürfen sie nennen, ab
 
 1. Erst den Besitzer ändern, dann die abhängigen Dateien.
 2. Neue Räume, Gegenstände, Figuren oder Rätsel zuerst in die Welt-Tabelle (`welten/*.yaml`) eintragen.
-3. Vor jedem Commit `python3 tools/pruefen.py` laufen lassen. Fehler werden behoben, Warnungen geprüft.
+3. Vor jedem Commit `python3 tools/alles_pruefen.py` laufen lassen (alle Prüfungen der CI, darunter `pruefen.py`). Fehler werden behoben, Warnungen geprüft.
 4. Erledigtes wird nicht als Protokoll gesammelt; die Historie steht in Git. Offenes steht nur in `offene-punkte.md`.

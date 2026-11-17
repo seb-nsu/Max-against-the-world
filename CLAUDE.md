@@ -19,7 +19,7 @@ Couch Quest ist ein Godot-4-Point-and-Click-Adventure (Popochiu, Pixel-Art 640×
 - Vor dem Zeigen: gegen Stand-Sprite und im Raum mit allen Figuren prüfen, Einzelbilder vergrößert, GIF in Spieltempo.
 - Kosten vorher mit realem Stückpreis nennen, bei 70 % der Grenze melden. Freigaben für die PC-Sitzung als wörtlichen Satz erbitten.
 - Erzeugte Dateien (`docs/grafik/fertige-prompts/`, `game/daten/`) nie von Hand bearbeiten, sondern neu erzeugen.
-- Vor jedem Commit `python3 tools/pruefen.py`. Screenshot-Referenzen nur unter Linux aufnehmen. Vor dem Push pullen. PRs mit großen Quellbögen per Squash mergen.
+- Vor jedem Commit `python3 tools/alles_pruefen.py` (dieselben Prüfungen wie die CI; mit `--erzeugen` werden erzeugte Dateien vorher neu geschrieben). Screenshot-Referenzen nur unter Linux aufnehmen. Vor dem Push pullen. PRs mit großen Quellbögen per Squash mergen.
 - Im gemeinsamen Ordner `E:\Claude\Couch Quest` nichts verwerfen oder zurücksetzen; dort liegen Sebastians ungesicherte Godot-Änderungen.
 
 Neue Erkenntnisse kommen nach `docs/lessons-learned.md`, nicht hierher.
