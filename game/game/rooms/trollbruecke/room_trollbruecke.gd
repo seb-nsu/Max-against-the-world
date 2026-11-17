@@ -47,6 +47,9 @@ func _zustand_anwenden() -> void:
 	for i in n:
 		if has_character(REIHE[i]):
 			C.get_character(REIHE[i]).position = get_marker_position("BrueckeMitte") + Vector2(-48 + 48 * i, 0)
+	# Waldemar ist zum Singen im Zauberwald, bis die Rosen offen sind (Review 17.11., Niesrosen)
+	if Zustand.ist("W1_WALDEMAR_SINGT") and not Zustand.geloest("R7"):
+		Spiel.figur_hier("Waldemar", false)
 	if not Zustand.geloest("R3") and Zustand.ist("W1_PIXEL_IM_FELL") \
 			and has_character("SchmiedeZiege") and has_character("XxlZiege"):
 		Zustand.loese("R3")

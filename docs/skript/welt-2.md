@@ -321,6 +321,7 @@ Der Hofkater zweifelt Pixels Gottstatus an. Pixel fordert ihn heraus: Wer mehr V
 | W2\_DUEL\_HOF\_0240 | Hofkater | Eine kleine Sonne. Rosa. Sie schwebt. Ich … ich habe keine Sonne. | starrt nach oben |
 | W2\_DUEL\_MAX\_0250 | Max | Hier. Ein Spiegel und die Sonne, und schon hab ich eine antike Taschenlampe. | Brennspiegel benutzen im Thronsaal; nur wenn der Kaugummi schon weg ist |
 | W2\_DUEL\_NAR\_0260 | – | Ein Lichtstrahl schießt vom Spiegel über die Säulen und endet in einem weißen Blitz. Der Hofkater fällt vom Kissen. | Effekt Brennspiegel |
+| W2\_DUEL\_PIX\_0265 | Pixel | Der teurere Trick. Aber du hast den Kaugummi noch. Klug, für einen Menschen. | Effekt Brennspiegel, Kaugummi noch in der Tasche |
 | W2\_DUEL\_RAM\_0270 | Ramses | Ein Wunder! Oder ein Unfall! Oder … nein. Ein Wunder. Ich habe mich entschieden. Fast. | vom Thron |
 | W2\_DUEL\_NAR\_0280 | – | Schreiber, Fächerwedler, Diener und Sobek verneigen sich vor Pixel. Der Hofkater zählt nach. Dreimal. | Wunder zählt; Duell entschieden |
 | W2\_DUEL\_HOF\_0290 | Hofkater | Drei zu zwei. Ich gratuliere nicht, ich gehe. Das Kissen ist sowieso durchgelegen. | steht auf, Schwanz hoch |
@@ -494,6 +495,7 @@ Die Sphinx gibt ihre Schriftrolle nur gegen ein Rätsel, das sie nicht lösen ka
 | W2\_SPHX\_MAX\_0230 | Max | Ich überleg mir was. | Option Sphinx, beendet das Gespräch |
 | W2\_SPHX\_SPH\_0240 | Sphinx | Das sagen alle, und dann kommen sie nie wieder. Ich warte trotzdem. Ich bin aus Stein, ich kann nichts anderes. |  |
 | W2\_SPHX\_MAX\_0250 | Max | Ich stell dir ein Rätsel. | Option Sphinx (bleibt); öffnet die Rätsel-Auswahl |
+| W2\_SPHX\_SPH\_0255 | Sphinx | Ein Rätsel braucht drei Hinweise, Sterblicher. So viele hast du nicht. Sieh dir deine Wunderdinge genauer an. | Rätsel-Auswahl mit weniger als drei Bausteinen im Notizbuch |
 | W2\_SPHX\_SPH\_0260 | Sphinx | Ein Kaugummi klingelt nicht. | Kaugummi plus Handy-Baustein 1 |
 | W2\_SPHX\_SPH\_0270 | Sphinx | Ein Kaugummi leuchtet nicht. Nicht mal kurz. | Kaugummi plus Handy-Baustein 2 |
 | W2\_SPHX\_SPH\_0280 | Sphinx | Ein Kaugummi hat keine Prozente. Ein Kaugummi hat Geschmack, wenn auch nur kurz. | Kaugummi plus Handy-Baustein 3 |
@@ -731,6 +733,7 @@ Beamter 1 (Startschalter) verlangt einen Bürgerschein, Beamter 2 (Bürgerschalt
 | W2\_BUER\_HER\_0350 | Hermes | Dann ist er da! | zeigt auf eine Wand |
 | W2\_BUER\_PIX\_0360 | Pixel | Der Mann hat geflügelte Schuhe und ist trotzdem immer zu spät. // Das ist Charakter. Dagegen helfen keine Federn. |  |
 | W2\_BUER\_MAX\_0370 | Max | Ein Formular und ein Kugelschreiber, der ohne Tintenfass schreibt. Ich schreib jetzt ein Rundschreiben, von oben. Oben bin jetzt ich. | Kugelschreiber auf leeres Formular; Notizbuch: Baustein „schreibt ohne Tintenfass“ |
+| W2\_BUER\_MAX\_0375 | Max | Ich hab meinen Startpass. Mehr Papier halte ich nicht aus. | nach R3b: noch ein Rundschreiben schreiben oder abgeben (Code) |
 | W2\_BUER\_MAX\_0380 | Max | „Rundschreiben. Ab sofort gibt es Startpass und Bürgerschein nur gegen Passierschein Vier-Strich-Ypsilon.“ | Rundschreiben im Inventar; Kugelschreiber verbraucht (Mine leer, Wunderding ausgegeben) |
 | W2\_BUER\_MAX\_0390 | Max | Tinte vom Tintenfisch auf Papyrus vom Nil, und ich schreib mit dem Finger. Das klebt mehr als jeder Touchscreen. | Tintenfass auf Papyrus |
 | W2\_BUER\_MAX\_0400 | Max | Dasselbe Rundschreiben, bloß blauer und mit Fingerabdruck. Amtlich genug. | Rundschreiben (Tinte) im Inventar |
@@ -955,6 +958,9 @@ Laufbahn, Sandgrube, Kampfrichterzelt, Zuschauerränge, im Hintergrund der Glock
 | W2\_STAD\_MAX\_0280 | Max | Ohne Startpass lassen die mich nicht mal an die Linie. In Olympia ist das Amt stärker als jeder Athlet. | Benutzen: Startlinie ohne Startpass |
 | W2\_STAD\_MAX\_0290 | Max | Den Startpass hab ich. Aber fünf Disziplinen ohne Trainer? Ich brauch jemanden, der mir das Fliegen beibringt. | Benutzen: Startlinie mit Startpass, vor Rätsel 5 |
 | W2\_STAD\_MAX\_0300 | Max | Kein Diskus, keine Konter, kein Gegner. Das wär kein Finale, das wär bloß Rumstehen in Sandalen. | Benutzen: Startlinie nach Tag 1, solange der Finaltag noch nicht bereit ist |
+| W2\_STAD\_MAX\_0301 | Max | Und der Diskus fehlt immer noch. Irgendwer hier hat ihn. | nach 0300, solange Rätsel 7 offen ist |
+| W2\_STAD\_MAX\_0302 | Max | Mit Cicero in den Ring, ohne einen einzigen Konter? Lieber nicht. | nach 0300, Rätsel 7 gelöst, Rätsel 9 offen |
+| W2\_STAD\_MAX\_0303 | Max | Cicero kommt erst, wenn er sein Grab hat. Also brauch ich einen Grabstein. | nach 0300, Rätsel 7 und 9 gelöst, Rätsel 10 offen |
 | W2\_STAD\_MAX\_0310 | Max | Alles bereit. Nur die Wedler wedeln, wie sie wollen, und mit frischen Feigen würden sie gerade wedeln. Ich könnte aber auch einfach so werfen. | Benutzen: Startlinie, erstes Mal, wenn der Finaltag bereit ist und die Wedler nicht bestochen sind; beim nächsten Benutzen beginnt der Finaltag |
 
 ## 20. Stadion, Tag 1: Der Sandalen-Lauf
@@ -1181,6 +1187,7 @@ Ramses' Volk ist unbeeindruckt und will Brot und Spiele. Die Parade findet in Ol
 | W2\_PARA\_HER\_0060 | Hermes | Einladungen? Ich! Das kann ich! Zu spät, aber das kann ich! | Hermes in Feld 1 |
 | W2\_PARA\_HER\_0070 | Hermes | Die Einladungen nach den Gästen? Dann lade ich Leute ein, die schon da sind. Das ist sogar für mich zu spät. | Hermes in Feld 2 bis 4 |
 | W2\_PARA\_ARC\_0080 | Archimedes | Mittagssonne! Spiegel! Lichtstrahl über das ganze Stadion! Niemand verbrennt! Fast niemand! | Brennspiegel in Feld 2 |
+| W2\_PARA\_ARC\_0085 | Archimedes | Ein guter Plan. Nur liegt mein Spiegel noch in der Werkstatt in Syrakus. Ich bin Erfinder, kein Packesel. | Plan richtig gelegt, Brennspiegel nicht im Inventar |
 | W2\_PARA\_ARC\_0090 | Archimedes | Ohne Mittagssonne ist mein Spiegel nur ein Teller. Ein glänzender Teller. Und Teller hatte ich heute genug. | Brennspiegel in Feld 1, 3 oder 4 |
 | W2\_PARA\_CIC\_0100 | Cicero | Eine Rede vor vollen Rängen. Kurz. Ich verspreche es: kurz. Also, kürzer. | Cicero in Feld 3 |
 | W2\_PARA\_CIC\_0110 | Cicero | Eine Rede vor leeren Rängen? Das habe ich hundertmal gemacht. Es zählt nicht, das weiß ich inzwischen. | Cicero in Feld 1 oder 2 |
@@ -1395,7 +1402,7 @@ Drei Stufen je Rätselschritt für die Hilfe-Pfote, Wartezeiten laut Spielsystem
 | W2\_HINT\_PIX\_1031 | Pixel | Hol den Entwurf in der Werkstatt, gib ihn dem Steinmetz am Nil, nimm den frischen Stein. Dann geht es ums Alter. | R10a, Stufe 3 |
 | W2\_HINT\_PIX\_1012 | Pixel | Hundertsiebenunddreißig Jahre, nicht eins jünger. Stein altert auf der Fähre. // Die Tafel nennt die Jahre für jede Strecke. Rechne. Ich warte so lange. | R10b, Stufe 1 |
 | W2\_HINT\_PIX\_1022 | Pixel | Ägypten bis Olympia hundertzwölf, Olympia bis Syrakus fünfundzwanzig. Zusammen? Genau. // Der Stein muss also den ganzen Fluss hinunter. | R10b, Stufe 2 |
-| W2\_HINT\_PIX\_1032 | Pixel | Stein am Nil meißeln lassen, ohne Umweg bis Syrakus fahren, auf den Sockel am Grabhügel stellen. Cicero findet ihn. Archimedes steht daneben. Ich auch. | R10b, Stufe 3 |
+| W2\_HINT\_PIX\_1032 | Pixel | Stein am Nil meißeln lassen, nach Syrakus fahren, auf den Sockel am Grabhügel stellen. Cicero findet ihn. Archimedes steht daneben. Ich auch. | R10b, Stufe 3 |
 | W2\_HINT\_PIX\_1111 | Pixel | Der Zeremonienmeister hat dir die Ordnung genannt. Einladungen zuerst, der Spiegel braucht Mittag, die Rede braucht Leute. // Und der Gott kommt zuletzt, junger Mann. Der Gott bin ich. | R11a, Stufe 1 |
 | W2\_HINT\_PIX\_1121 | Pixel | Über dem zweiten Feld ist eine Sonne, also gehört der Spiegel dorthin. // Davor Hermes, danach Cicero, und ganz am Ende ich. Wie es sich gehört. | R11a, Stufe 2 |
 | W2\_HINT\_PIX\_1131 | Pixel | Hermes, Spiegel, Cicero, Pixel. In dieser Reihenfolge in die vier Felder. Mein Name steht zuletzt, weil der Höhepunkt zuletzt kommt. | R11a, Stufe 3 |

@@ -2468,6 +2468,7 @@ W2_BUER_MAX_0290,Are there exceptions?
 W2_BUER_MAX_0310,I'll think of something.
 W2_BUER_MAX_0340,But there's no other office here.
 W2_BUER_MAX_0370,"A form and a ballpoint that writes without an inkwell. I'm writing a circular now, from above. And above is now me."
+W2_BUER_MAX_0375,"I have my starting pass. I cannot take any more paper."
 W2_BUER_MAX_0380,"""Circular. With immediate effect, entry passes and citizen's certificates are only issued on presentation of Permit Four-Slash-Y."""
 W2_BUER_MAX_0390,"Squid ink on papyrus from the Nile, and I'm writing with my finger. That's stickier than any touchscreen."
 W2_BUER_MAX_0400,"The same circular, just bluer and with a fingerprint. Official enough."
@@ -2572,6 +2573,7 @@ W2_DUEL_MAX_0340,"A phone isn't a miracle here, it's a magic stone with three pe
 W2_DUEL_MAX_0360,"Throw Pixel at the court cat? Then there'll be fur, everywhere. Better let them talk first."
 W2_DUEL_NAR_0230,"Max chews. A pink bubble grows, comes loose, rises and floats glowing up to the ceiling."
 W2_DUEL_NAR_0260,A beam of light shoots from the mirror across the columns and ends in a white flash. The court cat falls off the cushion.
+W2_DUEL_PIX_0265,"The pricier trick. But you still have the gum. Clever, for a human."
 W2_DUEL_NAR_0280,"Scribe, fanners, servants and Sobek bow to Pixel. The court cat counts again. Three times."
 W2_DUEL_PIX_0040,Excuse me. You are sitting on my cushion.
 W2_DUEL_PIX_0060,"I am a god, you sofa-cushion dweller. The crocodile bowed to me, the ferryman bowed,"
@@ -2855,7 +2857,7 @@ W2_HINT_PIX_1021_2,"I saw it with my own eyes, and I laughed."
 W2_HINT_PIX_1022,"Egypt to Olympia a hundred and twelve, Olympia to Syracuse twenty-five. Together? Exactly."
 W2_HINT_PIX_1022_2,So the stone has to go all the way down the river.
 W2_HINT_PIX_1031,"Get the design from the workshop, give it to the stonemason by the Nile, take the fresh stone. Then it is all about age."
-W2_HINT_PIX_1032,"Have the stone carved at the Nile, ride straight through to Syracuse, put it on the plinth at the burial mound. Cicero finds it. Archimedes stands next to it. So do I."
+W2_HINT_PIX_1032,"Have the stone carved at the Nile, ride to Syracuse, put it on the plinth at the burial mound. Cicero finds it. Archimedes stands next to it. So do I."
 W2_HINT_PIX_1111,"The Master of Ceremonies told you the order. Invitations first, the mirror needs midday, the speech needs people."
 W2_HINT_PIX_1111_2,"And the god comes last, young man. The god is me."
 W2_HINT_PIX_1112,"Ramses wants wine, but there is none. There is juice in the palace and vinegar in the workshop."
@@ -3196,6 +3198,7 @@ W2_NIL_STM_0810,"Here with me: forever. On the ferry it depends how far you go, 
 W2_NIL_STM_0830,Mind the tip on your way out. It's already caught two visitors.
 W2_NIL_STM_1090,Then it's old when you arrive. Old and venerable. And people pay extra for venerable.
 W2_PARA_ARC_0080,Midday sun! Mirror! A beam of light across the whole stadium! Nobody gets burned! Almost nobody!
+W2_PARA_ARC_0085,"A good plan. Only my mirror is still in the workshop in Syracuse. I am an inventor, not a pack mule."
 W2_PARA_ARC_0090,Without the midday sun my mirror is just a plate. A shiny plate. And I've had enough plates today.
 W2_PARA_ARC_0350,"Come back, pupil. I still have a lever. A bigger one. For the world."
 W2_PARA_CIC_0100,"A speech to full stands. Short. I promise: short. Well, shorter."
@@ -3357,6 +3360,7 @@ W2_SPHX_MAX_0190,What has four legs in the morning …
 W2_SPHX_MAX_0210,Can you give me a letter of recommendation?
 W2_SPHX_MAX_0230,I'll think of something.
 W2_SPHX_MAX_0250,I'll set you a riddle.
+W2_SPHX_SPH_0255,"A riddle needs three clues, mortal. You do not have that many. Look more closely at your wonders."
 W2_SPHX_MAX_0490,A phone.
 W2_SPHX_MAX_0500,Chewing gum.
 W2_SPHX_MAX_0510,A ballpoint pen.
@@ -3456,6 +3460,9 @@ W2_STAD_MAX_0275,"The lever casts a shadow all the way to the stands, and Archim
 W2_STAD_MAX_0280,Without an entry pass they won't even let me near the line. In Olympia the office is stronger than any athlete.
 W2_STAD_MAX_0290,I've got the entry pass. But five events without a coach? I need someone to teach me how to fly.
 W2_STAD_MAX_0300,"No discus, no comebacks, no opponent. That wouldn't be a final, that'd just be standing around in sandals."
+W2_STAD_MAX_0301,"And the discus is still missing. Somebody here has it."
+W2_STAD_MAX_0302,"Into the ring with Cicero without a single comeback? Better not."
+W2_STAD_MAX_0303,"Cicero only comes once he has his grave. So I need a gravestone."
 W2_STAD_MAX_0310,"Everything's ready. Only the fanners fan however they like, and with fresh figs they'd fan in a straight line. But I could also just throw anyway."
 W2_STAD_MAX_0340,And the word wrestling? Isn't that about arguments?
 W2_STAD_MAX_0360,Sounds a bit lonely.

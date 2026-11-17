@@ -160,7 +160,22 @@ func wert(art: String, obj: Variant, item: Variant) -> Variant:
 		"zustand_anwenden":
 			_figuren_anwenden(obj)
 			return true
+		"notizbuch_zusatz":
+			return _verhoer_notizen()
 	return null
+
+
+## Notizbuch Seite 2: die gehörten Aussagen der Diskus-Verdächtigen (Review 17.11., W2-34)
+func _verhoer_notizen() -> Array:
+	var out := []
+	for id in VERDAECHTIGE:
+		var verhoert: String = "W2_VERHOERT_" + id.to_upper()
+		if not Zustand.ist(verhoert):
+			continue
+		var name := tr("UI_OBJ_" + id.to_upper())
+		for z in VERDAECHTIGE[id].verhoer.slice(1):
+			out.append("%s: %s" % [name, tr(z)])
+	return out
 
 
 func _id(o: Variant) -> String:
@@ -563,6 +578,12 @@ func fahren(ziel: String) -> void:
 	Klang.geraeusch("sanduhr")
 	zeilen.append(ANKUNFT[ziel])
 	await _szene(zeilen)
+	# Reife Feigen pflückt Max gleich nach der Ankunft (Review 17.11., R6b: „Baum im Inventar
+	# benutzen“ musste man erraten); der Weg über das Inventar bleibt
+	if _hat("feigensetzling") and Zustand.wert("W2_FEIGE_ZUSTAND", "") == "feigenbaum" and not _hat("feigen") \
+			and not Zustand.geloest("R6b"):
+		await _szene(["W2_SAND_MAX_0300", "W2_SAND_PIX_0310"])
+		await _geben("feigen")
 	Zustand.setze_wert("W2_FAEHRE_STEG", ziel)
 	Zustand.setze_wert("W2_FAHRTEN", fahrten + 1)
 	Spiel.herkunft_raum = "Faehre"
@@ -758,8 +779,7 @@ func ansehen_inventar_kaugummi(obj, _x) -> bool:
 	if Zustand.ist("W2_DUELL") and not Zustand.geloest("R2b") and _raum_id() == "thronsaal_ramses":
 		await _sag("W2_DUEL_MAX_0210")
 		return true
-	var z := await Spiel.ansehen(obj.bauplan().get("ansehen", []), "Gegenstand/Kaugummi")
-	_baustein({"W2_INV_MAX_0030": "nie_alle", "W2_INV_MAX_0040": "klebt"}.get(z, ""))
+	await _wunderding(obj, "Gegenstand/Kaugummi", ["W2_INV_MAX_0030", "W2_INV_MAX_0040"], ["nie_alle", "klebt"])
 	return true
 
 
@@ -774,9 +794,12 @@ func benutzen_inventar_kaugummi(_obj, _x) -> bool:
 
 
 func benutzen_inventar_brennspiegel(_obj, _x) -> bool:
-	if Zustand.ist("W2_DUELL") and not Zustand.ist("W2_DUELL_WUNDER") and _raum_id() == "thronsaal_ramses" \
-			and not _hat("kaugummi"):
+	# Der Spiegel zählt immer; mit Kaugummi in der Tasche lobt Pixel den sparsamen Weg (Review 17.11.,
+	# W2-15: sonst war der Bonus „alle drei Wunderdinge behalten“ unerreichbar)
+	if Zustand.ist("W2_DUELL") and not Zustand.ist("W2_DUELL_WUNDER") and _raum_id() == "thronsaal_ramses":
 		await _szene(["W2_DUEL_MAX_0250", "W2_DUEL_NAR_0260"])
+		if _hat("kaugummi"):
+			await _sag("W2_DUEL_PIX_0265")
 		await _wunder()
 		return true
 	return false
@@ -869,6 +892,9 @@ func ansehen_aushang(obj, _x) -> bool:
 
 
 func kombi_kugelschreiber_leeres_formular() -> bool:
+	if Zustand.geloest("R3b"):
+		await _sag("W2_BUER_MAX_0375")
+		return true
 	await _sag("W2_BUER_MAX_0370")
 	_baustein("schreibt")
 	if not audienz():
@@ -880,6 +906,9 @@ func kombi_kugelschreiber_leeres_formular() -> bool:
 
 
 func kombi_tintenfass_papyrusblatt() -> bool:
+	if Zustand.geloest("R3b"):
+		await _sag("W2_BUER_MAX_0375")
+		return true
 	await _sag("W2_BUER_MAX_0390")
 	if not audienz():
 		return true
@@ -917,6 +946,9 @@ func gegenstand_beamter_2(obj, iid) -> bool:
 
 
 func _schalter(_obj, iid) -> bool:
+	if iid in ["rundschreiben", "empfehlungsschreiben"] and Zustand.geloest("R3b"):
+		await _sag("W2_BUER_MAX_0375")
+		return true
 	match iid:
 		"rundschreiben":
 			await _szene(["W2_BUER_MAX_0450", "W2_BUER_BE2_0460", "W2_BUER_BE1_0470", "W2_BUER_BE2_0480",
@@ -1146,7 +1178,14 @@ func benutzen_startlinie(_obj, _x) -> bool:
 			await _tag_1()
 		return true
 	if not (Zustand.geloest("R7") and Zustand.geloest("R9") and Zustand.geloest("R10b")):
+		# Erst die allgemeine Zeile, danach das erste fehlende Teil (Review 17.11., W2-36)
 		await _sag("W2_STAD_MAX_0300")
+		if not Zustand.geloest("R7"):
+			await _sag("W2_STAD_MAX_0301")
+		elif not Zustand.geloest("R9"):
+			await _sag("W2_STAD_MAX_0302")
+		else:
+			await _sag("W2_STAD_MAX_0303")
 		return true
 	if not Zustand.geloest("R6b") and _einmal("W2_WEDLER_ERINNERT"):
 		await _sag("W2_STAD_MAX_0310")
@@ -1408,8 +1447,9 @@ func _verdaechtiger(id: String) -> bool:
 		var verhoert: String = "W2_VERHOERT_" + k.to_upper()
 		if not Zustand.ist(verhoert):
 			return false
-	var texte := ["UI_W2_ANKLAGEN", "UI_W2_REDEN"]
-	if id == "leonidas":
+	var texte := ["UI_W2_ANKLAGEN", "UI_W2_NOCHMAL", "UI_W2_REDEN"]
+	# Aufgeben erst nach einer falschen Anklage (Review 17.11., W2-35)
+	if id == "leonidas" and Zustand.ist("W2_DISKUS_FALSCH_ANGEKLAGT"):
 		texte.append("W2_DISK_MAX_0340")
 	texte.append("UI_W2_DOCH_NICHT")
 	var w := await Spiel.auswahl(texte)
@@ -1421,6 +1461,11 @@ func _verdaechtiger(id: String) -> bool:
 				Zustand.loese("R7")
 			else:
 				await _szene(v.anklage)
+				Zustand.setze("W2_DISKUS_FALSCH_ANGEKLAGT")
+			return true
+		"UI_W2_NOCHMAL":
+			# Aussagen nachhören (Review 17.11., W2-34); im Notizbuch stehen sie zusätzlich
+			await _szene(v.verhoer.slice(1))
 			return true
 		"W2_DISK_MAX_0340":
 			await _sag("W2_DISK_MAX_0340")
@@ -1458,15 +1503,25 @@ func einstieg_faehrmann() -> bool:
 
 
 func ansehen_inventar_handy(obj, _x) -> bool:
-	var z := await Spiel.ansehen(obj.bauplan().get("ansehen", []), "Gegenstand/Handy")
-	_baustein({"W2_INV_MAX_0010": "klingelt", "W2_INV_MAX_0020": "leuchtet"}.get(z, ""))
+	await _wunderding(obj, "Gegenstand/Handy", ["W2_INV_MAX_0010", "W2_INV_MAX_0020"], ["klingelt", "leuchtet"])
 	return true
 
 
 func ansehen_inventar_kugelschreiber(obj, _x) -> bool:
-	var z := await Spiel.ansehen(obj.bauplan().get("ansehen", []), "Gegenstand/Kugelschreiber")
-	_baustein({"W2_INV_MAX_0050": "schreibt", "W2_INV_MAX_0060": "klickt"}.get(z, ""))
+	await _wunderding(obj, "Gegenstand/Kugelschreiber", ["W2_INV_MAX_0050", "W2_INV_MAX_0060"], ["schreibt", "klickt"])
 	return true
+
+
+## Wunderding ansehen: Beide Sätze (und damit beide Sphinx-Bausteine) gleich beim ersten Mal, nicht
+## erst beim zweiten Ansehen (Review 17.11., W2-22; wie beim Kalender im Prolog).
+func _wunderding(obj, ort: String, zeilen: Array, bausteine: Array) -> void:
+	var z := await Spiel.ansehen(obj.bauplan().get("ansehen", []), ort)
+	if z == zeilen[0]:
+		await _sag(zeilen[1])
+		_baustein(bausteine[0])
+		_baustein(bausteine[1])
+	elif z == zeilen[1]:
+		_baustein(bausteine[1])
 
 
 func gegenstand_tiro(_obj, iid) -> bool:
@@ -1505,7 +1560,7 @@ func option_sphinx_figur_0250() -> bool:
 	var wort: String = woerter[w]
 	var vorrat := _liste("W2_BAUSTEINE")
 	if vorrat.size() < 3:
-		await Spiel.ersatz()
+		await _sag("W2_SPHX_SPH_0255")
 		return false
 	var gelegt := []
 	for n in 3:
@@ -1663,7 +1718,9 @@ func _finaltag() -> void:
 	var nachsicht := await _rede_ringen()
 	Zustand.loese("R13")  # setzt alle Schalter von R13; die Bestleistungen danach richtig
 	Zustand.setze("W2_SPEER_BESTLEISTUNG", bestochen)
-	Zustand.setze("W2_DISKUS_BESTLEISTUNG", geraet in ["diskus", "wurfscheibe"])
+	# Nur der echte Diskus ist eine Bestleistung; die Wurfscheibe aus dem Ersatz fliegt „fast so weit“
+	# (Review 17.11., W2-35: sonst kostete Aufgeben nichts)
+	Zustand.setze("W2_DISKUS_BESTLEISTUNG", geraet == "diskus")
 	Zustand.setze("W2_RINGEN_BESTLEISTUNG", not nachsicht)
 	if fuenfkampf():
 		await _sag("W2_RING_PIX_0290")
@@ -1761,7 +1818,7 @@ func parade_planen() -> void:
 	if plan != PARADE:
 		return
 	if not _hat("brennspiegel"):
-		await _sag("W2_PARA_ARC_0090")  # ohne Spiegel aus der Werkstatt kein Licht
+		await _sag("W2_PARA_ARC_0085")  # der Spiegel liegt noch in der Werkstatt (Review 17.11., W2-36)
 		return
 	await _szene(["W2_PARA_ZER_0150", "W2_PARA_RAM_0160"])
 	Zustand.loese("R11a")
