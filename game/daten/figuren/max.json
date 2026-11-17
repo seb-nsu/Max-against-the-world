@@ -26,12 +26,6 @@
     1
    ]
   },
-  "talk_alt": {
-   "von": 8,
-   "bilder": 4,
-   "ms": 130,
-   "schleife": true
-  },
   "walk": {
    "von": 12,
    "bilder": 8,
@@ -232,28 +226,6 @@
    "bilder": 8,
    "ms": 140,
    "schleife": true
-  },
-  "talk": {
-   "von": 125,
-   "bilder": 6,
-   "ms": 130,
-   "schleife": true,
-   "folge": [
-    0,
-    0,
-    1,
-    1,
-    1,
-    2,
-    2,
-    3,
-    3,
-    4,
-    4,
-    4,
-    5,
-    5
-   ]
   },
   "schulterzucken": {
    "von": 131,
@@ -519,6 +491,34 @@
     0,
     0
    ]
+  },
+  "talk_hand": {
+   "von": 125,
+   "bilder": 6,
+   "ms": 130,
+   "schleife": true,
+   "folge": [
+    0,
+    0,
+    1,
+    1,
+    1,
+    2,
+    2,
+    3,
+    3,
+    4,
+    4,
+    4,
+    5,
+    5
+   ]
+  },
+  "talk": {
+   "von": 8,
+   "bilder": 4,
+   "ms": 130,
+   "schleife": true
   }
  },
  "spalten": 58
