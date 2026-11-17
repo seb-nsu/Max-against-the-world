@@ -395,6 +395,9 @@ func _figuren_anwenden(raum: CQRaum) -> void:
 	# Die Sandale hängt erst nach Tag 1 auf der Säule und nur, bis Pixel sie holt (Review 17.11., W2-26)
 	if rid == "agora" and raum.has_node("Hotspots/SandaleAufDerSaeule"):
 		raum.get_node("Hotspots/SandaleAufDerSaeule").visible = Zustand.geloest("R12") and not Zustand.geloest("R6a")
+	# Der Wurfhebel steht erst nach dem Training im Stadion (Review 17.11., W2-37)
+	if rid == "stadion" and raum.has_node("Hotspots/Wurfhebel"):
+		raum.get_node("Hotspots/Wurfhebel").visible = Zustand.geloest("R5")
 
 
 #endregion

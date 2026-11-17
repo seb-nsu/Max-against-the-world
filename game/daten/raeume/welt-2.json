@@ -1221,6 +1221,18 @@
     ]
    },
    "tiefe": 0.85,
+   "vordergrund": {
+    "kochtopf": {
+     "bild": "res://grafik/props/kochtopf_kueche.png",
+     "rect": [
+      367,
+      184,
+      86,
+      99
+     ],
+     "baseline": 279
+    }
+   },
    "licht": "#f0dcc4",
    "effekte": [
     {
@@ -1249,8 +1261,8 @@
      "id": "nebet",
      "script_name": "Nebet",
      "pos": [
-      395,
-      285
+      408,
+      262
      ]
     }
    ],
@@ -3400,6 +3412,17 @@
      ],
      "blick": "links",
      "nach": "R13"
+    },
+    "wurfhebel_stadion": {
+     "bild": "res://grafik/props/wurfhebel_stadion.png",
+     "rect": [
+      89,
+      156,
+      107,
+      77
+     ],
+     "baseline": 227,
+     "nach": "R5"
     }
    },
    "effekte": [

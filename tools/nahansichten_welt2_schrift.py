@@ -196,7 +196,7 @@ def alle(sprache):
     for name, x0, x1 in (("vogel", 162, 222), ("sonne", 246, 308), ("pharao", 330, 392), ("hand", 416, 478)):
         glyphe(im, name, 48, x0, 58, x1, 120)
     zeilen = [(156, 198), (214, 256), (272, 314)]
-    for (links, rechts), (y0, y1) in zip((("ohr", "wasser"), ("mund", "brot"), ("hand", "sonne")), zeilen):
+    for (links, rechts), (y0, y1) in zip((("ohr", "gehoer"), ("mund", "brot"), ("hand", "gold")), zeilen):  # Gehör und Gold mit eigenen Zeichen, nicht Wasser und Sonne (Review 17.11., W2-14)
         glyphe(im, links, 34, 240, y0, 282, y1)
         glyphe(im, rechts, 34, 358, y0, 400, y1)
     im.convert("RGB").save(Z + "hieroglyphen_grammatik.png")

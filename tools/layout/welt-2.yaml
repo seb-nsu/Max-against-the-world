@@ -143,7 +143,9 @@ palastkueche:
     start: [70, 290]
     von_thronsaal_ramses: [70, 290]
   figuren:
-    nebet: [395, 285]              # bei den Ölkrügen, die sie bewacht; Schneidetisch mit Brot, Datteln, Zwiebel bleibt frei
+    nebet: [408, 262]              # hinter dem Kochtopf, in dem sie rührt (Review 17.11., W2-18)
+  vordergrund:
+    kochtopf: {bild: res://grafik/props/kochtopf_kueche.png, rect: [367, 184, 86, 99], baseline: 279}   # Topf vor Nebet (Review 17.11., W2-18)
   alias:
     oelkrug: oelkruege
     lehmofen: lehmoefen
@@ -340,6 +342,7 @@ stadion:
   vordergrund:
     aegypter_2: {bild: res://grafik/props/aegypter_2.png, pos: [615, 238], nach: R13}   # Menge bei der Parade
     aegypter_3: {bild: res://grafik/props/aegypter_3.png, pos: [1030, 252], blick: links, nach: R13}
+    wurfhebel_stadion: {bild: res://grafik/props/wurfhebel_stadion.png, rect: [89, 156, 107, 77], baseline: 227, nach: R5}   # erst ab dem Training (Review 17.11., W2-37)
   alias:
     ramses_im_stadion: ramses
     wurfhebel_im_stadion: wurfhebel

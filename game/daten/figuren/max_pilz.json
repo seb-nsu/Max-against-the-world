@@ -1,25 +1,69 @@
 {
  "bild": [
-  72,
-  207
+  280,
+  219
  ],
  "animationen": {
   "idle": {
    "von": 0,
-   "bilder": 4,
-   "ms": 320,
-   "schleife": true
-  },
-  "talk": {
-   "von": 4,
-   "bilder": 4,
-   "ms": 150,
-   "schleife": true
+   "bilder": 8,
+   "ms": 160,
+   "schleife": true,
+   "folge": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    6,
+    5,
+    4,
+    3,
+    2,
+    1
+   ]
   },
   "walk": {
    "von": 8,
-   "bilder": 4,
-   "ms": 200,
+   "bilder": 8,
+   "ms": 60,
+   "schleife": true
+  },
+  "talk": {
+   "von": 16,
+   "bilder": 6,
+   "ms": 130,
+   "schleife": true,
+   "folge": [
+    0,
+    0,
+    1,
+    1,
+    1,
+    2,
+    2,
+    3,
+    3,
+    4,
+    4,
+    4,
+    5,
+    5
+   ]
+  },
+  "gehen_vorn": {
+   "von": 22,
+   "bilder": 8,
+   "ms": 60,
+   "schleife": true
+  },
+  "gehen_hinten": {
+   "von": 30,
+   "bilder": 8,
+   "ms": 60,
    "schleife": true
   }
  }
