@@ -2435,6 +2435,7 @@
    ],
    "hintergrund_nach": {
     "R12": "res://grafik/hintergruende/w2_bg_agora_sandale_v01.png",
+    "R6a": "res://grafik/hintergruende/w2_bg_agora_v01.png",
     "R13": "res://grafik/hintergruende/w2_bg_agora_ohne_arme_v01.png"
    },
    "figuren": [

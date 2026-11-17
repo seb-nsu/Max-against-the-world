@@ -49,7 +49,7 @@ const ZEILE := {
 const RUHE := {
 	"humbert": [{geste = "polieren", raum = "taverne"}],
 	"gollo": [{geste = "ringschachtel", raum = "taverne", vor = "R1c"}],
-	"xxl_ziege": [{geste = "kauen"}],
+	# xxl_ziege: „kauen“ ist eine andere Zeichnung (Dreiviertel-Ansicht, schwebt); Ruhe bleibt der Stand (Review 17.11., A-01)
 	"rotkaeppchen": [{geste = "pakete"}],
 	"grimmzahn": [{geste = "protest", raum = "bergwerk", vor = "R10"}],
 	"goblin_1": [{geste = "pickel", raum = "bergwerk", nach = "R10"}],

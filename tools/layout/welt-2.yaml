@@ -231,6 +231,7 @@ agora:
   hintergrund: res://grafik/hintergruende/w2_bg_agora_v01.png
   hintergrund_nach:
     R12: res://grafik/hintergruende/w2_bg_agora_sandale_v01.png        # Sandale nach dem Lauf an Tag 1 auf der Adlersäule
+    R6a: res://grafik/hintergruende/w2_bg_agora_v01.png               # Pixel hat die Sandale geholt: Adler wieder leer (Review 17.11., W2-26)
     R13: res://grafik/hintergruende/w2_bg_agora_ohne_arme_v01.png      # nach dem Finaltag: Sandale weg, Statue ohne Arme
   tiefe: 0.85
   laufbereich: [[8, 270], [1272, 270], [1272, 356], [8, 356]]
