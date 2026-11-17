@@ -1,0 +1,1015 @@
+{
+  "bauplan_laufbereich": [
+    [
+      130.0,
+      357.0
+    ],
+    [
+      250.0,
+      262.0
+    ],
+    [
+      255.0,
+      215.0
+    ],
+    [
+      335.0,
+      215.0
+    ],
+    [
+      338.0,
+      230.0
+    ],
+    [
+      388.0,
+      230.0
+    ],
+    [
+      392.0,
+      222.0
+    ],
+    [
+      420.0,
+      232.0
+    ],
+    [
+      555.0,
+      232.0
+    ],
+    [
+      590.0,
+      228.0
+    ],
+    [
+      639.0,
+      228.0
+    ],
+    [
+      639.0,
+      357.0
+    ]
+  ],
+  "breite": 640,
+  "figuren": [
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "idle",
+        "keller",
+        "polieren",
+        "talk",
+        "talk_alt",
+        "walk"
+      ],
+      "baseline": 0,
+      "name": "Humbert",
+      "poly": [
+        [
+          129,
+          66
+        ],
+        [
+          171,
+          66
+        ],
+        [
+          171,
+          232
+        ],
+        [
+          129,
+          232
+        ]
+      ],
+      "pos": [
+        150.0,
+        232.0
+      ],
+      "rect": [
+        60,
+        61,
+        240,
+        232
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.823943674564362,
+        0.823943674564362
+      ],
+      "variante": "",
+      "walk_speed": 180.0,
+      "z": 0
+    },
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "idle",
+        "ring_werfen",
+        "ringschachtel",
+        "talk",
+        "talk_alt",
+        "walk"
+      ],
+      "baseline": 0,
+      "name": "Gollo",
+      "poly": [
+        [
+          265,
+          136
+        ],
+        [
+          299,
+          136
+        ],
+        [
+          299,
+          264
+        ],
+        [
+          265,
+          264
+        ]
+      ],
+      "pos": [
+        282.0,
+        264.0
+      ],
+      "rect": [
+        198,
+        135,
+        366,
+        264
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.869014084339142,
+        0.869014084339142
+      ],
+      "variante": "",
+      "walk_speed": 115.0,
+      "z": 0
+    },
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "idle",
+        "plustern",
+        "talk",
+        "walk"
+      ],
+      "baseline": 0,
+      "name": "Huhn",
+      "poly": [
+        [
+          347,
+          142
+        ],
+        [
+          379,
+          142
+        ],
+        [
+          379,
+          180
+        ],
+        [
+          347,
+          180
+        ]
+      ],
+      "pos": [
+        363.0,
+        180.0
+      ],
+      "rect": [
+        346,
+        150,
+        380,
+        180
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.800000011920929,
+        0.800000011920929
+      ],
+      "variante": "",
+      "walk_speed": 180.0,
+      "z": 0
+    },
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "aufheben",
+        "barfuss",
+        "benutzen",
+        "bohne",
+        "diskus",
+        "fallen",
+        "gaehnen",
+        "gehen_hinten",
+        "gehen_vorn",
+        "heisser_sand",
+        "hinsetzen",
+        "idle",
+        "katapult",
+        "kochloeffel",
+        "kopf_kratzen",
+        "melken",
+        "schulterzucken",
+        "speer",
+        "talk",
+        "talk_alt",
+        "treppe_walk",
+        "vom_boden_aufstehen",
+        "vom_sofa_aufstehen",
+        "wackeln",
+        "walk",
+        "walk_alt",
+        "walk_d",
+        "walk_l",
+        "walk_r",
+        "walk_u",
+        "wenden",
+        "zeigen"
+      ],
+      "baseline": 0,
+      "name": "Max",
+      "poly": [
+        [
+          580,
+          89
+        ],
+        [
+          620,
+          89
+        ],
+        [
+          620,
+          250
+        ],
+        [
+          580,
+          250
+        ]
+      ],
+      "pos": [
+        600.0,
+        250.0
+      ],
+      "rect": [
+        481,
+        86,
+        719,
+        250
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.849295794963837,
+        0.849295794963837
+      ],
+      "variante": "",
+      "walk_speed": 150.0,
+      "z": 0
+    },
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "aufstehen",
+        "aufwachen",
+        "fauchen",
+        "gehen_hinten",
+        "gehen_vorn",
+        "haare",
+        "hinlegen",
+        "idle",
+        "minka_umgarnen",
+        "ohrfeige",
+        "putzen",
+        "schlafen",
+        "schnuppern",
+        "schwanz_zucken",
+        "springen",
+        "stehen",
+        "talk",
+        "talk_alt",
+        "tragen",
+        "vom_schrank_fallen",
+        "walk",
+        "walk_d",
+        "walk_l",
+        "walk_r",
+        "walk_u"
+      ],
+      "baseline": 0,
+      "name": "Pixel",
+      "poly": [
+        [
+          298,
+          18
+        ],
+        [
+          362,
+          18
+        ],
+        [
+          362,
+          50
+        ],
+        [
+          298,
+          50
+        ]
+      ],
+      "pos": [
+        330.0,
+        50.0
+      ],
+      "rect": [
+        280,
+        -32,
+        380,
+        50
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.800000011920929,
+        0.800000011920929
+      ],
+      "variante": "",
+      "walk_speed": 160.0,
+      "z": 0
+    },
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "idle",
+        "kiste_schwert",
+        "talk",
+        "talk_alt",
+        "walk"
+      ],
+      "baseline": 0,
+      "name": "Zeldina",
+      "poly": [
+        [
+          491,
+          89
+        ],
+        [
+          533,
+          89
+        ],
+        [
+          533,
+          258
+        ],
+        [
+          491,
+          258
+        ]
+      ],
+      "pos": [
+        512.0,
+        258.0
+      ],
+      "rect": [
+        431,
+        80,
+        593,
+        258
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.860563397407532,
+        0.860563397407532
+      ],
+      "variante": "",
+      "walk_speed": 180.0,
+      "z": 0
+    }
+  ],
+  "hotspots": [
+    {
+      "baseline": 20,
+      "klickbar": true,
+      "name": "Dachbalken",
+      "poly": [
+        [
+          0,
+          0
+        ],
+        [
+          640,
+          0
+        ],
+        [
+          640,
+          40
+        ],
+        [
+          0,
+          40
+        ]
+      ],
+      "pos": [
+        320.0,
+        20.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_DACHBALKEN",
+      "walk_to": [
+        0.0,
+        280.0
+      ]
+    },
+    {
+      "baseline": 65,
+      "klickbar": true,
+      "name": "Tresen",
+      "poly": [
+        [
+          0,
+          160
+        ],
+        [
+          255,
+          160
+        ],
+        [
+          255,
+          290
+        ],
+        [
+          0,
+          290
+        ]
+      ],
+      "pos": [
+        127.5,
+        225.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_TRESEN",
+      "walk_to": [
+        102.5,
+        75.0
+      ]
+    },
+    {
+      "baseline": 20,
+      "klickbar": true,
+      "name": "Fischsuppe",
+      "poly": [
+        [
+          93,
+          178
+        ],
+        [
+          141,
+          178
+        ],
+        [
+          141,
+          218
+        ],
+        [
+          93,
+          218
+        ]
+      ],
+      "pos": [
+        117.0,
+        198.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_FISCHSUPPE",
+      "walk_to": [
+        103.0,
+        112.0
+      ]
+    },
+    {
+      "baseline": 40,
+      "klickbar": true,
+      "name": "FlascheVielsaftLimo",
+      "poly": [
+        [
+          60,
+          168
+        ],
+        [
+          88,
+          168
+        ],
+        [
+          88,
+          248
+        ],
+        [
+          60,
+          248
+        ]
+      ],
+      "pos": [
+        74.0,
+        208.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_FLASCHE_VIELSAFT_LIMO",
+      "walk_to": [
+        136.0,
+        112.0
+      ]
+    },
+    {
+      "baseline": 18,
+      "klickbar": true,
+      "name": "WeinkarteAmTresen",
+      "poly": [
+        [
+          82,
+          125
+        ],
+        [
+          116,
+          125
+        ],
+        [
+          116,
+          161
+        ],
+        [
+          82,
+          161
+        ]
+      ],
+      "pos": [
+        99.0,
+        143.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_WEINKARTE_AM_TRESEN",
+      "walk_to": [
+        131.0,
+        157.0
+      ]
+    },
+    {
+      "baseline": 33,
+      "klickbar": true,
+      "name": "FondueTopf",
+      "poly": [
+        [
+          195,
+          112
+        ],
+        [
+          255,
+          112
+        ],
+        [
+          255,
+          178
+        ],
+        [
+          195,
+          178
+        ]
+      ],
+      "pos": [
+        225.0,
+        145.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_FONDUE_TOPF",
+      "walk_to": [
+        40.0,
+        125.0
+      ]
+    },
+    {
+      "baseline": 39,
+      "klickbar": true,
+      "name": "Kellertuer",
+      "poly": [
+        [
+          127,
+          82
+        ],
+        [
+          212,
+          82
+        ],
+        [
+          212,
+          160
+        ],
+        [
+          127,
+          160
+        ]
+      ],
+      "pos": [
+        169.5,
+        121.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_KELLERTUER",
+      "walk_to": [
+        92.5,
+        119.0
+      ]
+    },
+    {
+      "baseline": 42,
+      "klickbar": true,
+      "name": "SteckbriefPlakatDrache",
+      "poly": [
+        [
+          258,
+          65
+        ],
+        [
+          388,
+          65
+        ],
+        [
+          388,
+          150
+        ],
+        [
+          258,
+          150
+        ]
+      ],
+      "pos": [
+        323.0,
+        107.5
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_STECKBRIEF_PLAKAT_DRACHE",
+      "walk_to": [
+        -3.0,
+        132.5
+      ]
+    },
+    {
+      "baseline": 29,
+      "klickbar": true,
+      "name": "LauteMitMuenzbecher",
+      "poly": [
+        [
+          300,
+          174
+        ],
+        [
+          334,
+          174
+        ],
+        [
+          334,
+          232
+        ],
+        [
+          300,
+          232
+        ]
+      ],
+      "pos": [
+        317.0,
+        203.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_LAUTE_MIT_MUENZBECHER",
+      "walk_to": [
+        -27.0,
+        47.0
+      ]
+    },
+    {
+      "baseline": 53,
+      "klickbar": true,
+      "name": "Kamin",
+      "poly": [
+        [
+          415,
+          125
+        ],
+        [
+          555,
+          125
+        ],
+        [
+          555,
+          232
+        ],
+        [
+          415,
+          232
+        ]
+      ],
+      "pos": [
+        485.0,
+        178.5
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_KAMIN",
+      "walk_to": [
+        0.0,
+        71.5
+      ]
+    },
+    {
+      "baseline": 27,
+      "klickbar": true,
+      "name": "SchwerterSammlung",
+      "poly": [
+        [
+          430,
+          45
+        ],
+        [
+          525,
+          45
+        ],
+        [
+          525,
+          100
+        ],
+        [
+          430,
+          100
+        ]
+      ],
+      "pos": [
+        477.5,
+        72.5
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_SCHWERTER_SAMMLUNG",
+      "walk_to": [
+        2.5,
+        177.5
+      ]
+    },
+    {
+      "baseline": 7,
+      "klickbar": true,
+      "name": "LeereSchilder",
+      "poly": [
+        [
+          432,
+          102
+        ],
+        [
+          524,
+          102
+        ],
+        [
+          524,
+          117
+        ],
+        [
+          432,
+          117
+        ]
+      ],
+      "pos": [
+        478.0,
+        109.5
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_LEERE_SCHILDER",
+      "walk_to": [
+        2.0,
+        140.5
+      ]
+    },
+    {
+      "baseline": 80,
+      "klickbar": true,
+      "name": "AusgangDorfplatz",
+      "poly": [
+        [
+          590,
+          70
+        ],
+        [
+          640,
+          70
+        ],
+        [
+          640,
+          230
+        ],
+        [
+          590,
+          230
+        ]
+      ],
+      "pos": [
+        615.0,
+        150.0
+      ],
+      "sichtbar": true,
+      "text": "UI_RAUM_DORFPLATZ",
+      "walk_to": [
+        -10.0,
+        95.0
+      ]
+    }
+  ],
+  "kamera_max": [
+    320.0,
+    180.0
+  ],
+  "laufbereiche": [
+    {
+      "name": "Boden",
+      "polys": [
+        [
+          [
+            130,
+            357
+          ],
+          [
+            250,
+            262
+          ],
+          [
+            255,
+            215
+          ],
+          [
+            335,
+            215
+          ],
+          [
+            338,
+            230
+          ],
+          [
+            388,
+            230
+          ],
+          [
+            392,
+            222
+          ],
+          [
+            420,
+            232
+          ],
+          [
+            555,
+            232
+          ],
+          [
+            590,
+            228
+          ],
+          [
+            639,
+            228
+          ],
+          [
+            639,
+            357
+          ]
+        ]
+      ]
+    }
+  ],
+  "marker": {
+    "Balken": [
+      330.0,
+      50.0
+    ],
+    "HuhnBalken": [
+      235.0,
+      50.0
+    ],
+    "Keller": [
+      170.0,
+      168.0
+    ],
+    "Start": [
+      600.0,
+      250.0
+    ],
+    "VonDorfplatz": [
+      600.0,
+      250.0
+    ]
+  },
+  "modus": "ende",
+  "props": [
+    {
+      "baseline": -180,
+      "klickbar": false,
+      "name": "Background",
+      "poly": [],
+      "pos": [
+        320.0,
+        0.0
+      ],
+      "rect": [
+        0,
+        0,
+        640,
+        360
+      ],
+      "sichtbar": true,
+      "text": "UI_RAUM_TAVERNE",
+      "walk_to": [
+        0.0,
+        180.0
+      ],
+      "z": -1
+    },
+    {
+      "baseline": -60,
+      "klickbar": true,
+      "name": "ZiegenfellVorleger",
+      "poly": [
+        [
+          424,
+          231
+        ],
+        [
+          596,
+          231
+        ],
+        [
+          596,
+          280
+        ],
+        [
+          424,
+          280
+        ]
+      ],
+      "pos": [
+        510.0,
+        195.5
+      ],
+      "rect": [
+        424,
+        232,
+        596,
+        281
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_ZIEGENFELL_VORLEGER",
+      "walk_to": [
+        0.0,
+        104.5
+      ],
+      "z": 0
+    },
+    {
+      "baseline": 6,
+      "klickbar": true,
+      "name": "Ei",
+      "poly": [
+        [
+          362,
+          162
+        ],
+        [
+          382,
+          162
+        ],
+        [
+          382,
+          182
+        ],
+        [
+          362,
+          182
+        ]
+      ],
+      "pos": [
+        372.0,
+        178.0
+      ],
+      "rect": [
+        367,
+        166,
+        377,
+        178
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_EI",
+      "walk_to": [
+        -10.0,
+        62.0
+      ],
+      "z": 0
+    }
+  ],
+  "raum": "taverne",
+  "skala": null,
+  "tiefe": 0.8,
+  "welt": "welt-1"
+}

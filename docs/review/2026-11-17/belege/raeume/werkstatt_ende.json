@@ -1,0 +1,792 @@
+{
+  "bauplan_laufbereich": [
+    [
+      190.0,
+      240.0
+    ],
+    [
+      632.0,
+      240.0
+    ],
+    [
+      632.0,
+      356.0
+    ],
+    [
+      8.0,
+      356.0
+    ],
+    [
+      8.0,
+      330.0
+    ],
+    [
+      190.0,
+      330.0
+    ]
+  ],
+  "breite": 640,
+  "figuren": [
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "bart_streichen",
+        "finger_trommeln",
+        "idle",
+        "talk",
+        "talk_alt",
+        "ungeduld"
+      ],
+      "baseline": 0,
+      "name": "Hieron",
+      "poly": [
+        [
+          496,
+          119
+        ],
+        [
+          544,
+          119
+        ],
+        [
+          544,
+          312
+        ],
+        [
+          496,
+          312
+        ]
+      ],
+      "pos": [
+        520.0,
+        312.0
+      ],
+      "rect": [
+        455,
+        117,
+        585,
+        312
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.924137949943542,
+        0.924137949943542
+      ],
+      "variante": "",
+      "walk_speed": 120.0,
+      "z": 0
+    },
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "aufheben",
+        "barfuss",
+        "benutzen",
+        "bohne",
+        "diskus",
+        "fallen",
+        "gaehnen",
+        "gehen_hinten",
+        "gehen_vorn",
+        "heisser_sand",
+        "hinsetzen",
+        "idle",
+        "katapult",
+        "kochloeffel",
+        "kopf_kratzen",
+        "melken",
+        "schulterzucken",
+        "speer",
+        "talk",
+        "talk_alt",
+        "treppe_walk",
+        "vom_boden_aufstehen",
+        "vom_sofa_aufstehen",
+        "wackeln",
+        "walk",
+        "walk_alt",
+        "walk_d",
+        "walk_l",
+        "walk_r",
+        "walk_u",
+        "wenden",
+        "zeigen"
+      ],
+      "baseline": 0,
+      "name": "Max",
+      "poly": [
+        [
+          568,
+          136
+        ],
+        [
+          612,
+          136
+        ],
+        [
+          612,
+          310
+        ],
+        [
+          568,
+          310
+        ]
+      ],
+      "pos": [
+        590.0,
+        310.0
+      ],
+      "rect": [
+        461,
+        132,
+        719,
+        310
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.920689642429352,
+        0.920689642429352
+      ],
+      "variante": "",
+      "walk_speed": 150.0,
+      "z": 0
+    },
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "aufstehen",
+        "aufwachen",
+        "fauchen",
+        "gehen_hinten",
+        "gehen_vorn",
+        "haare",
+        "hinlegen",
+        "idle",
+        "minka_umgarnen",
+        "ohrfeige",
+        "putzen",
+        "schlafen",
+        "schnuppern",
+        "schwanz_zucken",
+        "springen",
+        "stehen",
+        "talk",
+        "talk_alt",
+        "tragen",
+        "vom_schrank_fallen",
+        "walk",
+        "walk_d",
+        "walk_l",
+        "walk_r",
+        "walk_u"
+      ],
+      "baseline": 0,
+      "name": "Pixel",
+      "poly": [
+        [
+          508,
+          273
+        ],
+        [
+          582,
+          273
+        ],
+        [
+          582,
+          310
+        ],
+        [
+          508,
+          310
+        ]
+      ],
+      "pos": [
+        545.0,
+        310.0
+      ],
+      "rect": [
+        487,
+        215,
+        603,
+        310
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.920689642429352,
+        0.920689642429352
+      ],
+      "variante": "",
+      "walk_speed": 160.0,
+      "z": 0
+    }
+  ],
+  "hotspots": [
+    {
+      "baseline": 60,
+      "klickbar": true,
+      "name": "Badewanne",
+      "poly": [
+        [
+          8,
+          200
+        ],
+        [
+          188,
+          200
+        ],
+        [
+          188,
+          320
+        ],
+        [
+          8,
+          320
+        ]
+      ],
+      "pos": [
+        98.0,
+        260.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_BADEWANNE",
+      "walk_to": [
+        112.0,
+        40.0
+      ]
+    },
+    {
+      "baseline": 45,
+      "klickbar": true,
+      "name": "Werkbank",
+      "poly": [
+        [
+          170,
+          150
+        ],
+        [
+          360,
+          150
+        ],
+        [
+          360,
+          240
+        ],
+        [
+          170,
+          240
+        ]
+      ],
+      "pos": [
+        265.0,
+        195.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_WERKBANK",
+      "walk_to": [
+        5.0,
+        75.0
+      ]
+    },
+    {
+      "baseline": 60,
+      "klickbar": true,
+      "name": "Wurfhebel",
+      "poly": [
+        [
+          400,
+          160
+        ],
+        [
+          490,
+          160
+        ],
+        [
+          490,
+          280
+        ],
+        [
+          400,
+          280
+        ]
+      ],
+      "pos": [
+        445.0,
+        220.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_WURFHEBEL",
+      "walk_to": [
+        0.0,
+        70.0
+      ]
+    },
+    {
+      "baseline": 90,
+      "klickbar": true,
+      "name": "Wasserorgel",
+      "poly": [
+        [
+          18,
+          20
+        ],
+        [
+          123,
+          20
+        ],
+        [
+          123,
+          200
+        ],
+        [
+          18,
+          200
+        ]
+      ],
+      "pos": [
+        70.5,
+        110.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_WASSERORGEL",
+      "walk_to": [
+        139.5,
+        170.0
+      ]
+    },
+    {
+      "baseline": 22,
+      "klickbar": true,
+      "name": "BauplanDampfmaschine",
+      "poly": [
+        [
+          128,
+          95
+        ],
+        [
+          178,
+          95
+        ],
+        [
+          178,
+          140
+        ],
+        [
+          128,
+          140
+        ]
+      ],
+      "pos": [
+        153.0,
+        117.5
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_BAUPLAN_DAMPFMASCHINE",
+      "walk_to": [
+        57.0,
+        152.5
+      ]
+    },
+    {
+      "baseline": 17,
+      "klickbar": true,
+      "name": "ModellSchieferTurm",
+      "poly": [
+        [
+          270,
+          60
+        ],
+        [
+          300,
+          60
+        ],
+        [
+          300,
+          95
+        ],
+        [
+          270,
+          95
+        ]
+      ],
+      "pos": [
+        285.0,
+        77.5
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_MODELL_SCHIEFER_TURM",
+      "walk_to": [
+        -5.0,
+        192.5
+      ]
+    },
+    {
+      "baseline": 27,
+      "klickbar": true,
+      "name": "SkizzeKugelUndZylinder",
+      "poly": [
+        [
+          180,
+          50
+        ],
+        [
+          220,
+          50
+        ],
+        [
+          220,
+          105
+        ],
+        [
+          180,
+          105
+        ]
+      ],
+      "pos": [
+        200.0,
+        77.5
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_SKIZZE_KUGEL_UND_ZYLINDER",
+      "walk_to": [
+        20.0,
+        192.5
+      ]
+    },
+    {
+      "baseline": 47,
+      "klickbar": true,
+      "name": "Fenster",
+      "poly": [
+        [
+          350,
+          35
+        ],
+        [
+          500,
+          35
+        ],
+        [
+          500,
+          130
+        ],
+        [
+          350,
+          130
+        ]
+      ],
+      "pos": [
+        425.0,
+        82.5
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_FENSTER",
+      "walk_to": [
+        -5.0,
+        187.5
+      ]
+    },
+    {
+      "baseline": 30,
+      "klickbar": true,
+      "name": "Zahnraeder",
+      "poly": [
+        [
+          300,
+          100
+        ],
+        [
+          360,
+          100
+        ],
+        [
+          360,
+          160
+        ],
+        [
+          300,
+          160
+        ]
+      ],
+      "pos": [
+        330.0,
+        130.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_ZAHNRAEDER",
+      "walk_to": [
+        0.0,
+        140.0
+      ]
+    },
+    {
+      "baseline": 120,
+      "klickbar": true,
+      "name": "AusgangHafen",
+      "poly": [
+        [
+          600,
+          40
+        ],
+        [
+          640,
+          40
+        ],
+        [
+          640,
+          280
+        ],
+        [
+          600,
+          280
+        ]
+      ],
+      "pos": [
+        620.0,
+        160.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_AUSGANG_HAFEN",
+      "walk_to": [
+        -10.0,
+        140.0
+      ]
+    }
+  ],
+  "kamera_max": [
+    320.0,
+    180.0
+  ],
+  "laufbereiche": [
+    {
+      "name": "Boden",
+      "polys": [
+        [
+          [
+            190,
+            240
+          ],
+          [
+            632,
+            240
+          ],
+          [
+            632,
+            356
+          ],
+          [
+            8,
+            356
+          ],
+          [
+            8,
+            330
+          ],
+          [
+            190,
+            330
+          ]
+        ]
+      ]
+    }
+  ],
+  "marker": {
+    "Start": [
+      590.0,
+      310.0
+    ],
+    "VonHafenSyrakus": [
+      590.0,
+      310.0
+    ]
+  },
+  "modus": "ende",
+  "props": [
+    {
+      "baseline": -180,
+      "klickbar": false,
+      "name": "Background",
+      "poly": [],
+      "pos": [
+        320.0,
+        0.0
+      ],
+      "rect": [
+        0,
+        0,
+        640,
+        360
+      ],
+      "sichtbar": true,
+      "text": "UI_RAUM_WERKSTATT",
+      "walk_to": [
+        0.0,
+        180.0
+      ],
+      "z": -1
+    },
+    {
+      "baseline": 72,
+      "klickbar": true,
+      "name": "Brennspiegel",
+      "poly": [
+        [
+          505,
+          90
+        ],
+        [
+          585,
+          90
+        ],
+        [
+          585,
+          235
+        ],
+        [
+          505,
+          235
+        ]
+      ],
+      "pos": [
+        545.0,
+        234.5
+      ],
+      "rect": [
+        482,
+        81,
+        608,
+        246
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_BRENNSPIEGEL",
+      "walk_to": [
+        -15.0,
+        35.5
+      ],
+      "z": 0
+    },
+    {
+      "baseline": 22,
+      "klickbar": true,
+      "name": "Waage",
+      "poly": [
+        [
+          195,
+          125
+        ],
+        [
+          240,
+          125
+        ],
+        [
+          240,
+          170
+        ],
+        [
+          195,
+          170
+        ]
+      ],
+      "pos": [
+        217.5,
+        169.5
+      ],
+      "rect": [
+        192,
+        121,
+        245,
+        176
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_WAAGE",
+      "walk_to": [
+        2.5,
+        100.5
+      ],
+      "z": 0
+    },
+    {
+      "baseline": 9,
+      "klickbar": true,
+      "name": "Messbecher",
+      "poly": [
+        [
+          240,
+          150
+        ],
+        [
+          264,
+          150
+        ],
+        [
+          264,
+          168
+        ],
+        [
+          240,
+          168
+        ]
+      ],
+      "pos": [
+        252.0,
+        168.0
+      ],
+      "rect": [
+        235,
+        146,
+        269,
+        172
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_MESSBECHER",
+      "walk_to": [
+        -2.0,
+        102.0
+      ],
+      "z": 0
+    },
+    {
+      "baseline": 30,
+      "klickbar": true,
+      "name": "Essigkrug",
+      "poly": [
+        [
+          555,
+          175
+        ],
+        [
+          600,
+          175
+        ],
+        [
+          600,
+          235
+        ],
+        [
+          555,
+          235
+        ]
+      ],
+      "pos": [
+        577.5,
+        235.0
+      ],
+      "rect": [
+        547,
+        170,
+        610,
+        240
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_ESSIGKRUG",
+      "walk_to": [
+        -17.5,
+        35.0
+      ],
+      "z": 0
+    }
+  ],
+  "raum": "werkstatt",
+  "skala": null,
+  "tiefe": 0.8,
+  "welt": "welt-2"
+}

@@ -1,0 +1,606 @@
+{
+  "bauplan_laufbereich": [
+    [
+      130.0,
+      357.0
+    ],
+    [
+      110.0,
+      300.0
+    ],
+    [
+      205.0,
+      276.0
+    ],
+    [
+      225.0,
+      262.0
+    ],
+    [
+      300.0,
+      222.0
+    ],
+    [
+      380.0,
+      216.0
+    ],
+    [
+      555.0,
+      216.0
+    ],
+    [
+      580.0,
+      228.0
+    ],
+    [
+      639.0,
+      232.0
+    ],
+    [
+      639.0,
+      357.0
+    ]
+  ],
+  "breite": 640,
+  "figuren": [
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "abschrecken",
+        "blasebalg",
+        "haemmern",
+        "idle",
+        "ins_feuer",
+        "schweiss_abwischen",
+        "talk",
+        "talk_alt",
+        "walk",
+        "zum_amboss"
+      ],
+      "baseline": 0,
+      "name": "Schmied",
+      "poly": [
+        [
+          309,
+          74
+        ],
+        [
+          351,
+          74
+        ],
+        [
+          351,
+          242
+        ],
+        [
+          309,
+          242
+        ]
+      ],
+      "pos": [
+        330.0,
+        242.0
+      ],
+      "rect": [
+        226,
+        50,
+        434,
+        242
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.836879432201386,
+        0.836879432201386
+      ],
+      "variante": "",
+      "walk_speed": 180.0,
+      "z": 0
+    },
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "drehen",
+        "gehen",
+        "idle",
+        "talk",
+        "walk"
+      ],
+      "baseline": 0,
+      "name": "SchmiedeZiege",
+      "poly": [
+        [
+          452,
+          215
+        ],
+        [
+          488,
+          215
+        ],
+        [
+          488,
+          300
+        ],
+        [
+          452,
+          300
+        ]
+      ],
+      "pos": [
+        470.0,
+        300.0
+      ],
+      "rect": [
+        378,
+        211,
+        562,
+        300
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.919148921966553,
+        0.919148921966553
+      ],
+      "variante": "",
+      "walk_speed": 180.0,
+      "z": 0
+    },
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "aufheben",
+        "barfuss",
+        "benutzen",
+        "bohne",
+        "diskus",
+        "fallen",
+        "gaehnen",
+        "gehen_hinten",
+        "gehen_vorn",
+        "heisser_sand",
+        "hinsetzen",
+        "idle",
+        "katapult",
+        "kochloeffel",
+        "kopf_kratzen",
+        "melken",
+        "schulterzucken",
+        "speer",
+        "talk",
+        "talk_alt",
+        "treppe_walk",
+        "vom_boden_aufstehen",
+        "vom_sofa_aufstehen",
+        "wackeln",
+        "walk",
+        "walk_alt",
+        "walk_d",
+        "walk_l",
+        "walk_r",
+        "walk_u",
+        "wenden",
+        "zeigen"
+      ],
+      "baseline": 0,
+      "name": "Max",
+      "poly": [
+        [
+          580,
+          98
+        ],
+        [
+          620,
+          98
+        ],
+        [
+          620,
+          262
+        ],
+        [
+          580,
+          262
+        ]
+      ],
+      "pos": [
+        600.0,
+        262.0
+      ],
+      "rect": [
+        479,
+        95,
+        721,
+        262
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.865248203277588,
+        0.865248203277588
+      ],
+      "variante": "",
+      "walk_speed": 150.0,
+      "z": 0
+    },
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "aufstehen",
+        "aufwachen",
+        "fauchen",
+        "gehen_hinten",
+        "gehen_vorn",
+        "haare",
+        "hinlegen",
+        "idle",
+        "minka_umgarnen",
+        "ohrfeige",
+        "putzen",
+        "schlafen",
+        "schnuppern",
+        "schwanz_zucken",
+        "springen",
+        "stehen",
+        "talk",
+        "talk_alt",
+        "tragen",
+        "vom_schrank_fallen",
+        "walk",
+        "walk_d",
+        "walk_l",
+        "walk_r",
+        "walk_u"
+      ],
+      "baseline": 0,
+      "name": "Pixel",
+      "poly": [
+        [
+          520,
+          227
+        ],
+        [
+          590,
+          227
+        ],
+        [
+          590,
+          262
+        ],
+        [
+          520,
+          262
+        ]
+      ],
+      "pos": [
+        555.0,
+        262.0
+      ],
+      "rect": [
+        500,
+        173,
+        610,
+        262
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.865248203277588,
+        0.865248203277588
+      ],
+      "variante": "",
+      "walk_speed": 160.0,
+      "z": 0
+    },
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "idle",
+        "kiste_schwert",
+        "talk",
+        "talk_alt",
+        "walk"
+      ],
+      "baseline": 0,
+      "name": "Zeldina",
+      "poly": [
+        [
+          491,
+          98
+        ],
+        [
+          533,
+          98
+        ],
+        [
+          533,
+          270
+        ],
+        [
+          491,
+          270
+        ]
+      ],
+      "pos": [
+        512.0,
+        270.0
+      ],
+      "rect": [
+        430,
+        89,
+        594,
+        270
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.876595735549927,
+        0.876595735549927
+      ],
+      "variante": "",
+      "walk_speed": 180.0,
+      "z": 0
+    }
+  ],
+  "hotspots": [
+    {
+      "baseline": 117,
+      "klickbar": true,
+      "name": "Esse",
+      "poly": [
+        [
+          85,
+          30
+        ],
+        [
+          210,
+          30
+        ],
+        [
+          210,
+          265
+        ],
+        [
+          85,
+          265
+        ]
+      ],
+      "pos": [
+        147.5,
+        147.5
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_ESSE",
+      "walk_to": [
+        67.5,
+        137.5
+      ]
+    },
+    {
+      "baseline": 47,
+      "klickbar": true,
+      "name": "Amboss",
+      "poly": [
+        [
+          220,
+          185
+        ],
+        [
+          300,
+          185
+        ],
+        [
+          300,
+          280
+        ],
+        [
+          220,
+          280
+        ]
+      ],
+      "pos": [
+        260.0,
+        232.5
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_AMBOSS",
+      "walk_to": [
+        55.0,
+        37.5
+      ]
+    },
+    {
+      "baseline": 60,
+      "klickbar": true,
+      "name": "Kochgeschirr",
+      "poly": [
+        [
+          390,
+          80
+        ],
+        [
+          530,
+          80
+        ],
+        [
+          530,
+          200
+        ],
+        [
+          390,
+          200
+        ]
+      ],
+      "pos": [
+        460.0,
+        140.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_KOCHGESCHIRR",
+      "walk_to": [
+        0.0,
+        95.0
+      ]
+    },
+    {
+      "baseline": 85,
+      "klickbar": true,
+      "name": "AusgangDorfplatz",
+      "poly": [
+        [
+          580,
+          60
+        ],
+        [
+          640,
+          60
+        ],
+        [
+          640,
+          230
+        ],
+        [
+          580,
+          230
+        ]
+      ],
+      "pos": [
+        610.0,
+        145.0
+      ],
+      "sichtbar": true,
+      "text": "UI_RAUM_DORFPLATZ",
+      "walk_to": [
+        -5.0,
+        105.0
+      ]
+    }
+  ],
+  "kamera_max": [
+    320.0,
+    180.0
+  ],
+  "laufbereiche": [
+    {
+      "name": "Boden",
+      "polys": [
+        [
+          [
+            130,
+            357
+          ],
+          [
+            110,
+            300
+          ],
+          [
+            205,
+            276
+          ],
+          [
+            225,
+            262
+          ],
+          [
+            300,
+            222
+          ],
+          [
+            380,
+            216
+          ],
+          [
+            555,
+            216
+          ],
+          [
+            580,
+            228
+          ],
+          [
+            639,
+            232
+          ],
+          [
+            639,
+            357
+          ]
+        ]
+      ]
+    }
+  ],
+  "marker": {
+    "Start": [
+      600.0,
+      262.0
+    ],
+    "VonDorfplatz": [
+      600.0,
+      262.0
+    ]
+  },
+  "modus": "ende",
+  "props": [
+    {
+      "baseline": -180,
+      "klickbar": false,
+      "name": "Background",
+      "poly": [],
+      "pos": [
+        320.0,
+        0.0
+      ],
+      "rect": [
+        0,
+        0,
+        640,
+        360
+      ],
+      "sichtbar": true,
+      "text": "UI_RAUM_SCHMIEDE",
+      "walk_to": [
+        0.0,
+        180.0
+      ],
+      "z": -1
+    },
+    {
+      "baseline": 13,
+      "klickbar": true,
+      "name": "Krug",
+      "poly": [
+        [
+          548,
+          190
+        ],
+        [
+          567,
+          190
+        ],
+        [
+          567,
+          216
+        ],
+        [
+          548,
+          216
+        ]
+      ],
+      "pos": [
+        557.5,
+        216.0
+      ],
+      "rect": [
+        549,
+        190,
+        568,
+        216
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_KRUG",
+      "walk_to": [
+        -17.5,
+        19.0
+      ],
+      "z": 0
+    }
+  ],
+  "raum": "schmiede",
+  "skala": null,
+  "tiefe": 0.8,
+  "welt": "welt-1"
+}

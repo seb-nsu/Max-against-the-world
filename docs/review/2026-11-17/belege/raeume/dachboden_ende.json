@@ -1,0 +1,1293 @@
+{
+  "bauplan_laufbereich": [
+    [
+      160.0,
+      357.0
+    ],
+    [
+      160.0,
+      290.0
+    ],
+    [
+      218.0,
+      284.0
+    ],
+    [
+      300.0,
+      284.0
+    ],
+    [
+      302.0,
+      262.0
+    ],
+    [
+      250.0,
+      262.0
+    ],
+    [
+      245.0,
+      252.0
+    ],
+    [
+      262.0,
+      246.0
+    ],
+    [
+      455.0,
+      246.0
+    ],
+    [
+      460.0,
+      255.0
+    ],
+    [
+      520.0,
+      258.0
+    ],
+    [
+      525.0,
+      280.0
+    ],
+    [
+      600.0,
+      285.0
+    ],
+    [
+      635.0,
+      290.0
+    ],
+    [
+      635.0,
+      357.0
+    ]
+  ],
+  "breite": 640,
+  "figuren": [
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "aufstehen",
+        "aufwachen",
+        "fauchen",
+        "gehen_hinten",
+        "gehen_vorn",
+        "haare",
+        "hinlegen",
+        "idle",
+        "minka_umgarnen",
+        "ohrfeige",
+        "putzen",
+        "schlafen",
+        "schnuppern",
+        "schwanz_zucken",
+        "springen",
+        "stehen",
+        "talk",
+        "talk_alt",
+        "tragen",
+        "vom_schrank_fallen",
+        "walk",
+        "walk_d",
+        "walk_l",
+        "walk_r",
+        "walk_u"
+      ],
+      "baseline": 0,
+      "name": "Pixel",
+      "poly": [
+        [
+          141,
+          161
+        ],
+        [
+          209,
+          161
+        ],
+        [
+          209,
+          195
+        ],
+        [
+          141,
+          195
+        ]
+      ],
+      "pos": [
+        175.0,
+        195.0
+      ],
+      "rect": [
+        121,
+        107,
+        229,
+        195
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.850000023841858,
+        0.850000023841858
+      ],
+      "variante": "",
+      "walk_speed": 160.0,
+      "z": 0
+    },
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "erklaeren",
+        "idle",
+        "kopf_kratzen",
+        "panik",
+        "talk",
+        "talk_alt",
+        "walk",
+        "walk_alt",
+        "werkbank"
+      ],
+      "baseline": 0,
+      "name": "Opa",
+      "poly": [
+        [
+          436,
+          131
+        ],
+        [
+          484,
+          131
+        ],
+        [
+          484,
+          322
+        ],
+        [
+          436,
+          322
+        ]
+      ],
+      "pos": [
+        460.0,
+        322.0
+      ],
+      "rect": [
+        406,
+        123,
+        514,
+        322
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.952702701091766,
+        0.952702701091766
+      ],
+      "variante": "",
+      "walk_speed": 55.0,
+      "z": 0
+    },
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "aufheben",
+        "barfuss",
+        "benutzen",
+        "bohne",
+        "diskus",
+        "fallen",
+        "gaehnen",
+        "gehen_hinten",
+        "gehen_vorn",
+        "heisser_sand",
+        "hinsetzen",
+        "idle",
+        "katapult",
+        "kochloeffel",
+        "kopf_kratzen",
+        "melken",
+        "schulterzucken",
+        "speer",
+        "talk",
+        "talk_alt",
+        "treppe_walk",
+        "vom_boden_aufstehen",
+        "vom_sofa_aufstehen",
+        "wackeln",
+        "walk",
+        "walk_alt",
+        "walk_d",
+        "walk_l",
+        "walk_r",
+        "walk_u",
+        "wenden",
+        "zeigen"
+      ],
+      "baseline": 0,
+      "name": "Max",
+      "poly": [
+        [
+          505,
+          137
+        ],
+        [
+          549,
+          137
+        ],
+        [
+          549,
+          315
+        ],
+        [
+          505,
+          315
+        ]
+      ],
+      "pos": [
+        527.0,
+        315.0
+      ],
+      "rect": [
+        395,
+        133,
+        659,
+        315
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.943243265151978,
+        0.943243265151978
+      ],
+      "variante": "",
+      "walk_speed": 150.0,
+      "z": 0
+    }
+  ],
+  "hotspots": [
+    {
+      "baseline": 13,
+      "klickbar": true,
+      "name": "Drehknopf",
+      "poly": [
+        [
+          400,
+          159
+        ],
+        [
+          418,
+          159
+        ],
+        [
+          418,
+          185
+        ],
+        [
+          400,
+          185
+        ]
+      ],
+      "pos": [
+        409.0,
+        172.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_DREHKNOPF",
+      "walk_to": [
+        -14.0,
+        85.0
+      ]
+    },
+    {
+      "baseline": 29,
+      "klickbar": true,
+      "name": "Werkzeugkiste",
+      "poly": [
+        [
+          97,
+          220
+        ],
+        [
+          165,
+          220
+        ],
+        [
+          165,
+          278
+        ],
+        [
+          97,
+          278
+        ]
+      ],
+      "pos": [
+        131.0,
+        249.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_WERKZEUGKISTE",
+      "walk_to": [
+        49.0,
+        51.0
+      ]
+    },
+    {
+      "baseline": 107,
+      "klickbar": true,
+      "name": "Kleiderschrank",
+      "poly": [
+        [
+          578,
+          65
+        ],
+        [
+          640,
+          65
+        ],
+        [
+          640,
+          280
+        ],
+        [
+          578,
+          280
+        ]
+      ],
+      "pos": [
+        609.0,
+        172.5
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_KLEIDERSCHRANK",
+      "walk_to": [
+        -9.0,
+        117.5
+      ]
+    },
+    {
+      "baseline": 24,
+      "klickbar": true,
+      "name": "Kalender",
+      "poly": [
+        [
+          459,
+          97
+        ],
+        [
+          505,
+          97
+        ],
+        [
+          505,
+          146
+        ],
+        [
+          459,
+          146
+        ]
+      ],
+      "pos": [
+        482.0,
+        121.5
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_KALENDER",
+      "walk_to": [
+        -32.0,
+        123.5
+      ]
+    },
+    {
+      "baseline": 19,
+      "klickbar": true,
+      "name": "AusgestopfterFisch",
+      "poly": [
+        [
+          355,
+          77
+        ],
+        [
+          435,
+          77
+        ],
+        [
+          435,
+          115
+        ],
+        [
+          355,
+          115
+        ]
+      ],
+      "pos": [
+        395.0,
+        96.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_AUSGESTOPFTER_FISCH",
+      "walk_to": [
+        0.0,
+        149.0
+      ]
+    },
+    {
+      "baseline": 41,
+      "klickbar": true,
+      "name": "KisteMitFernbedienungen",
+      "poly": [
+        [
+          57,
+          267
+        ],
+        [
+          155,
+          267
+        ],
+        [
+          155,
+          350
+        ],
+        [
+          57,
+          350
+        ]
+      ],
+      "pos": [
+        106.0,
+        308.5
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_KISTE_MIT_FERNBEDIENUNGEN",
+      "walk_to": [
+        69.0,
+        11.5
+      ]
+    },
+    {
+      "baseline": 40,
+      "klickbar": true,
+      "name": "Poster",
+      "poly": [
+        [
+          262,
+          72
+        ],
+        [
+          322,
+          72
+        ],
+        [
+          322,
+          152
+        ],
+        [
+          262,
+          152
+        ]
+      ],
+      "pos": [
+        292.0,
+        112.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_POSTER",
+      "walk_to": [
+        0.0,
+        133.0
+      ]
+    },
+    {
+      "baseline": 12,
+      "klickbar": true,
+      "name": "Toaster",
+      "poly": [
+        [
+          170,
+          105
+        ],
+        [
+          205,
+          105
+        ],
+        [
+          205,
+          130
+        ],
+        [
+          170,
+          130
+        ]
+      ],
+      "pos": [
+        187.5,
+        117.5
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_TOASTER",
+      "walk_to": [
+        64.5,
+        138.5
+      ]
+    },
+    {
+      "baseline": 57,
+      "klickbar": true,
+      "name": "OpasStaubsaugerPrototyp",
+      "poly": [
+        [
+          520,
+          160
+        ],
+        [
+          578,
+          160
+        ],
+        [
+          578,
+          275
+        ],
+        [
+          520,
+          275
+        ]
+      ],
+      "pos": [
+        549.0,
+        217.5
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_OPAS_STAUBSAUGER_PROTOTYP",
+      "walk_to": [
+        -4.0,
+        67.5
+      ]
+    },
+    {
+      "baseline": 20,
+      "klickbar": true,
+      "name": "Kochbuch",
+      "poly": [
+        [
+          212,
+          90
+        ],
+        [
+          236,
+          90
+        ],
+        [
+          236,
+          130
+        ],
+        [
+          212,
+          130
+        ]
+      ],
+      "pos": [
+        224.0,
+        110.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_KOCHBUCH",
+      "walk_to": [
+        31.0,
+        146.0
+      ]
+    },
+    {
+      "baseline": 19,
+      "klickbar": true,
+      "name": "Plattenspieler",
+      "poly": [
+        [
+          122,
+          92
+        ],
+        [
+          166,
+          92
+        ],
+        [
+          166,
+          130
+        ],
+        [
+          122,
+          130
+        ]
+      ],
+      "pos": [
+        144.0,
+        111.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_PLATTENSPIELER",
+      "walk_to": [
+        56.0,
+        174.0
+      ]
+    },
+    {
+      "baseline": 50,
+      "klickbar": true,
+      "name": "Ohrensessel",
+      "poly": [
+        [
+          452,
+          152
+        ],
+        [
+          520,
+          152
+        ],
+        [
+          520,
+          252
+        ],
+        [
+          452,
+          252
+        ]
+      ],
+      "pos": [
+        486.0,
+        202.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_OHRENSESSEL",
+      "walk_to": [
+        -6.0,
+        63.0
+      ]
+    },
+    {
+      "baseline": 27,
+      "klickbar": true,
+      "name": "Werkbank",
+      "poly": [
+        [
+          60,
+          145
+        ],
+        [
+          250,
+          145
+        ],
+        [
+          250,
+          200
+        ],
+        [
+          60,
+          200
+        ]
+      ],
+      "pos": [
+        155.0,
+        172.5
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_WERKBANK",
+      "walk_to": [
+        100.0,
+        83.5
+      ]
+    },
+    {
+      "baseline": 27,
+      "klickbar": true,
+      "name": "Dachfenster",
+      "poly": [
+        [
+          65,
+          10
+        ],
+        [
+          135,
+          10
+        ],
+        [
+          135,
+          65
+        ],
+        [
+          65,
+          65
+        ]
+      ],
+      "pos": [
+        100.0,
+        37.5
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_DACHFENSTER",
+      "walk_to": [
+        100.0,
+        262.5
+      ]
+    },
+    {
+      "baseline": 25,
+      "klickbar": true,
+      "name": "Bodenluke",
+      "poly": [
+        [
+          442,
+          280
+        ],
+        [
+          615,
+          280
+        ],
+        [
+          615,
+          330
+        ],
+        [
+          442,
+          330
+        ]
+      ],
+      "pos": [
+        528.5,
+        305.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_BODENLUKE",
+      "walk_to": [
+        -1.5,
+        2.0
+      ]
+    },
+    {
+      "baseline": 24,
+      "klickbar": true,
+      "name": "Fundkiste",
+      "poly": [
+        [
+          152,
+          207
+        ],
+        [
+          222,
+          207
+        ],
+        [
+          222,
+          255
+        ],
+        [
+          152,
+          255
+        ]
+      ],
+      "pos": [
+        187.0,
+        231.0
+      ],
+      "sichtbar": false,
+      "text": "UI_OBJ_FUNDKISTE",
+      "walk_to": [
+        68.0,
+        27.0
+      ]
+    },
+    {
+      "baseline": 60,
+      "klickbar": true,
+      "name": "Maschine",
+      "poly": [
+        [
+          325,
+          104
+        ],
+        [
+          405,
+          104
+        ],
+        [
+          405,
+          224
+        ],
+        [
+          325,
+          224
+        ]
+      ],
+      "pos": [
+        365.0,
+        164.0
+      ],
+      "sichtbar": false,
+      "text": "UI_OBJ_MASCHINE",
+      "walk_to": [
+        0.0,
+        79.0
+      ]
+    },
+    {
+      "baseline": 20,
+      "klickbar": true,
+      "name": "Ofentuer",
+      "poly": [
+        [
+          341,
+          176
+        ],
+        [
+          385,
+          176
+        ],
+        [
+          385,
+          216
+        ],
+        [
+          341,
+          216
+        ]
+      ],
+      "pos": [
+        363.0,
+        196.0
+      ],
+      "sichtbar": false,
+      "text": "UI_OBJ_OFENTUER",
+      "walk_to": [
+        0.0,
+        47.0
+      ]
+    },
+    {
+      "baseline": 10,
+      "klickbar": true,
+      "name": "Druckmesser",
+      "poly": [
+        [
+          301,
+          128
+        ],
+        [
+          322,
+          128
+        ],
+        [
+          322,
+          149
+        ],
+        [
+          301,
+          149
+        ]
+      ],
+      "pos": [
+        311.5,
+        138.5
+      ],
+      "sichtbar": false,
+      "text": "UI_OBJ_DRUCKMESSER",
+      "walk_to": [
+        21.5,
+        104.5
+      ]
+    },
+    {
+      "baseline": 9,
+      "klickbar": true,
+      "name": "Fassungen",
+      "poly": [
+        [
+          325,
+          83
+        ],
+        [
+          405,
+          83
+        ],
+        [
+          405,
+          102
+        ],
+        [
+          325,
+          102
+        ]
+      ],
+      "pos": [
+        365.0,
+        92.5
+      ],
+      "sichtbar": false,
+      "text": "UI_OBJ_FASSUNGEN",
+      "walk_to": [
+        0.0,
+        150.5
+      ]
+    },
+    {
+      "baseline": 10,
+      "klickbar": true,
+      "name": "Empfaenger",
+      "poly": [
+        [
+          349,
+          59
+        ],
+        [
+          389,
+          59
+        ],
+        [
+          389,
+          80
+        ],
+        [
+          349,
+          80
+        ]
+      ],
+      "pos": [
+        369.0,
+        69.5
+      ],
+      "sichtbar": false,
+      "text": "UI_OBJ_EMPFAENGER",
+      "walk_to": [
+        -1.0,
+        173.5
+      ]
+    },
+    {
+      "baseline": 16,
+      "klickbar": true,
+      "name": "Lampe",
+      "poly": [
+        [
+          300,
+          30
+        ],
+        [
+          352,
+          30
+        ],
+        [
+          352,
+          63
+        ],
+        [
+          300,
+          63
+        ]
+      ],
+      "pos": [
+        326.0,
+        46.5
+      ],
+      "sichtbar": false,
+      "text": "UI_OBJ_LAMPE",
+      "walk_to": [
+        0.0,
+        198.5
+      ]
+    },
+    {
+      "baseline": 72,
+      "klickbar": true,
+      "name": "Umzugskartons",
+      "poly": [
+        [
+          0,
+          135
+        ],
+        [
+          60,
+          135
+        ],
+        [
+          60,
+          280
+        ],
+        [
+          0,
+          280
+        ]
+      ],
+      "pos": [
+        30.0,
+        207.5
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_UMZUGSKARTONS",
+      "walk_to": [
+        145.0,
+        92.5
+      ]
+    },
+    {
+      "baseline": 9,
+      "klickbar": true,
+      "name": "Steckdose",
+      "poly": [
+        [
+          256,
+          199
+        ],
+        [
+          270,
+          199
+        ],
+        [
+          270,
+          218
+        ],
+        [
+          256,
+          218
+        ]
+      ],
+      "pos": [
+        263.0,
+        208.5
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_STECKDOSE",
+      "walk_to": [
+        7.0,
+        36.5
+      ]
+    }
+  ],
+  "kamera_max": [
+    320.0,
+    180.0
+  ],
+  "laufbereiche": [
+    {
+      "name": "Boden",
+      "polys": [
+        [
+          [
+            160,
+            357
+          ],
+          [
+            160,
+            290
+          ],
+          [
+            218,
+            284
+          ],
+          [
+            300,
+            284
+          ],
+          [
+            302,
+            262
+          ],
+          [
+            250,
+            262
+          ],
+          [
+            245,
+            252
+          ],
+          [
+            262,
+            246
+          ],
+          [
+            455,
+            246
+          ],
+          [
+            460,
+            255
+          ],
+          [
+            520,
+            258
+          ],
+          [
+            525,
+            280
+          ],
+          [
+            600,
+            285
+          ],
+          [
+            635,
+            290
+          ],
+          [
+            635,
+            357
+          ]
+        ]
+      ]
+    }
+  ],
+  "marker": {
+    "Fernseher": [
+      365.0,
+      256.0
+    ],
+    "Start": [
+      527.0,
+      315.0
+    ],
+    "VonTreppenhaus": [
+      527.0,
+      315.0
+    ]
+  },
+  "modus": "ende",
+  "props": [
+    {
+      "baseline": -180,
+      "klickbar": false,
+      "name": "Background",
+      "poly": [],
+      "pos": [
+        320.0,
+        0.0
+      ],
+      "rect": [
+        0,
+        0,
+        640,
+        360
+      ],
+      "sichtbar": true,
+      "text": "UI_RAUM_DACHBODEN",
+      "walk_to": [
+        0.0,
+        180.0
+      ],
+      "z": -1
+    },
+    {
+      "baseline": 56,
+      "klickbar": true,
+      "name": "ZappOMat",
+      "poly": [
+        [
+          318,
+          141
+        ],
+        [
+          423,
+          141
+        ],
+        [
+          423,
+          253
+        ],
+        [
+          318,
+          253
+        ]
+      ],
+      "pos": [
+        370.5,
+        253.0
+      ],
+      "rect": [
+        319,
+        141,
+        424,
+        253
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_ZAPP_O_MAT",
+      "walk_to": [
+        -5.5,
+        4.0
+      ],
+      "z": 0
+    },
+    {
+      "baseline": 3,
+      "klickbar": true,
+      "name": "Dosenoeffner",
+      "poly": [
+        [
+          213,
+          178
+        ],
+        [
+          235,
+          178
+        ],
+        [
+          235,
+          189
+        ],
+        [
+          213,
+          189
+        ]
+      ],
+      "pos": [
+        224.0,
+        187.0
+      ],
+      "rect": [
+        214,
+        181,
+        234,
+        187
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_DOSENOEFFNER",
+      "walk_to": [
+        28.0,
+        69.0
+      ],
+      "z": 0
+    },
+    {
+      "baseline": 7,
+      "klickbar": true,
+      "name": "Drahtkleiderbuegel",
+      "poly": [
+        [
+          602,
+          174
+        ],
+        [
+          632,
+          174
+        ],
+        [
+          632,
+          208
+        ],
+        [
+          602,
+          208
+        ]
+      ],
+      "pos": [
+        617.0,
+        198.0
+      ],
+      "rect": [
+        602,
+        174,
+        632,
+        208
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_DRAHTKLEIDERBUEGEL",
+      "walk_to": [
+        -17.0,
+        92.0
+      ],
+      "z": 0
+    }
+  ],
+  "raum": "dachboden",
+  "skala": null,
+  "tiefe": 0.85,
+  "welt": "prolog"
+}

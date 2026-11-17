@@ -1,0 +1,930 @@
+{
+  "bauplan_laufbereich": [
+    [
+      0.0,
+      242.0
+    ],
+    [
+      150.0,
+      238.0
+    ],
+    [
+      330.0,
+      240.0
+    ],
+    [
+      372.0,
+      240.0
+    ],
+    [
+      440.0,
+      248.0
+    ],
+    [
+      504.0,
+      244.0
+    ],
+    [
+      574.0,
+      258.0
+    ],
+    [
+      639.0,
+      262.0
+    ],
+    [
+      664.0,
+      254.0
+    ],
+    [
+      816.0,
+      254.0
+    ],
+    [
+      896.0,
+      254.0
+    ],
+    [
+      902.0,
+      236.0
+    ],
+    [
+      972.0,
+      232.0
+    ],
+    [
+      999.0,
+      222.0
+    ],
+    [
+      1022.0,
+      226.0
+    ],
+    [
+      1016.0,
+      262.0
+    ],
+    [
+      1036.0,
+      282.0
+    ],
+    [
+      1065.0,
+      290.0
+    ],
+    [
+      1065.0,
+      359.0
+    ],
+    [
+      505.0,
+      359.0
+    ],
+    [
+      500.0,
+      320.0
+    ],
+    [
+      470.0,
+      300.0
+    ],
+    [
+      360.0,
+      300.0
+    ],
+    [
+      335.0,
+      330.0
+    ],
+    [
+      330.0,
+      359.0
+    ],
+    [
+      0.0,
+      359.0
+    ]
+  ],
+  "breite": 1066,
+  "figuren": [
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "idle",
+        "pakete",
+        "talk",
+        "talk_alt",
+        "walk"
+      ],
+      "baseline": 0,
+      "name": "Rotkaeppchen",
+      "poly": [
+        [
+          900,
+          161
+        ],
+        [
+          928,
+          161
+        ],
+        [
+          928,
+          272
+        ],
+        [
+          900,
+          272
+        ]
+      ],
+      "pos": [
+        914.0,
+        272.0
+      ],
+      "rect": [
+        879,
+        157,
+        949,
+        272
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.68248176574707,
+        0.68248176574707
+      ],
+      "variante": "",
+      "walk_speed": 180.0,
+      "z": 0
+    },
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "aufheben",
+        "barfuss",
+        "benutzen",
+        "bohne",
+        "diskus",
+        "fallen",
+        "gaehnen",
+        "gehen_hinten",
+        "gehen_vorn",
+        "heisser_sand",
+        "hinsetzen",
+        "idle",
+        "katapult",
+        "kochloeffel",
+        "kopf_kratzen",
+        "melken",
+        "schulterzucken",
+        "speer",
+        "talk",
+        "talk_alt",
+        "treppe_walk",
+        "vom_boden_aufstehen",
+        "vom_sofa_aufstehen",
+        "wackeln",
+        "walk",
+        "walk_alt",
+        "walk_d",
+        "walk_l",
+        "walk_r",
+        "walk_u",
+        "wenden",
+        "zeigen"
+      ],
+      "baseline": 0,
+      "name": "Max",
+      "poly": [
+        [
+          4,
+          142
+        ],
+        [
+          36,
+          142
+        ],
+        [
+          36,
+          268
+        ],
+        [
+          4,
+          268
+        ]
+      ],
+      "pos": [
+        20.0,
+        268.0
+      ],
+      "rect": [
+        -74,
+        139,
+        114,
+        268
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.667883217334747,
+        0.667883217334747
+      ],
+      "variante": "",
+      "walk_speed": 150.0,
+      "z": 0
+    },
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "aufstehen",
+        "aufwachen",
+        "fauchen",
+        "gehen_hinten",
+        "gehen_vorn",
+        "haare",
+        "hinlegen",
+        "idle",
+        "minka_umgarnen",
+        "ohrfeige",
+        "putzen",
+        "schlafen",
+        "schnuppern",
+        "schwanz_zucken",
+        "springen",
+        "stehen",
+        "talk",
+        "talk_alt",
+        "tragen",
+        "vom_schrank_fallen",
+        "walk",
+        "walk_d",
+        "walk_l",
+        "walk_r",
+        "walk_u"
+      ],
+      "baseline": 0,
+      "name": "Pixel",
+      "poly": [
+        [
+          38,
+          241
+        ],
+        [
+          92,
+          241
+        ],
+        [
+          92,
+          268
+        ],
+        [
+          38,
+          268
+        ]
+      ],
+      "pos": [
+        65.0,
+        268.0
+      ],
+      "rect": [
+        23,
+        199,
+        107,
+        268
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.667883217334747,
+        0.667883217334747
+      ],
+      "variante": "",
+      "walk_speed": 160.0,
+      "z": 0
+    },
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "idle",
+        "kiste_schwert",
+        "talk",
+        "talk_alt",
+        "walk"
+      ],
+      "baseline": 0,
+      "name": "Zeldina",
+      "poly": [
+        [
+          91,
+          139
+        ],
+        [
+          125,
+          139
+        ],
+        [
+          125,
+          276
+        ],
+        [
+          91,
+          276
+        ]
+      ],
+      "pos": [
+        108.0,
+        276.0
+      ],
+      "rect": [
+        42,
+        132,
+        174,
+        276
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.697080314159393,
+        0.697080314159393
+      ],
+      "variante": "",
+      "walk_speed": 180.0,
+      "z": 0
+    }
+  ],
+  "hotspots": [
+    {
+      "baseline": 72,
+      "klickbar": true,
+      "name": "Riesenpilze",
+      "poly": [
+        [
+          479,
+          70
+        ],
+        [
+          639,
+          70
+        ],
+        [
+          639,
+          215
+        ],
+        [
+          479,
+          215
+        ]
+      ],
+      "pos": [
+        559.0,
+        142.5
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_RIESENPILZE",
+      "walk_to": [
+        -5.0,
+        129.5
+      ]
+    },
+    {
+      "baseline": 22,
+      "klickbar": true,
+      "name": "Leuchtpilze",
+      "poly": [
+        [
+          499,
+          215
+        ],
+        [
+          639,
+          215
+        ],
+        [
+          639,
+          260
+        ],
+        [
+          499,
+          260
+        ]
+      ],
+      "pos": [
+        569.0,
+        237.5
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_LEUCHTPILZE",
+      "walk_to": [
+        -15.0,
+        32.5
+      ]
+    },
+    {
+      "baseline": 20,
+      "klickbar": true,
+      "name": "Niesrosen",
+      "poly": [
+        [
+          674,
+          212
+        ],
+        [
+          754,
+          212
+        ],
+        [
+          754,
+          252
+        ],
+        [
+          674,
+          252
+        ]
+      ],
+      "pos": [
+        714.0,
+        232.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_NIESROSEN",
+      "walk_to": [
+        0.0,
+        34.0
+      ]
+    },
+    {
+      "baseline": 65,
+      "klickbar": true,
+      "name": "KuerbisturmUndGlasschuh",
+      "poly": [
+        [
+          714,
+          80
+        ],
+        [
+          784,
+          80
+        ],
+        [
+          784,
+          210
+        ],
+        [
+          714,
+          210
+        ]
+      ],
+      "pos": [
+        749.0,
+        145.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_KUERBISTURM_UND_GLASSCHUH",
+      "walk_to": [
+        0.0,
+        119.0
+      ]
+    },
+    {
+      "baseline": 30,
+      "klickbar": true,
+      "name": "Gluehwuermchen",
+      "poly": [
+        [
+          614,
+          10
+        ],
+        [
+          854,
+          10
+        ],
+        [
+          854,
+          70
+        ],
+        [
+          614,
+          70
+        ]
+      ],
+      "pos": [
+        734.0,
+        40.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_GLUEHWUERMCHEN",
+      "walk_to": [
+        -10.0,
+        230.0
+      ]
+    },
+    {
+      "baseline": 39,
+      "klickbar": true,
+      "name": "Lieferkarren",
+      "poly": [
+        [
+          814,
+          175
+        ],
+        [
+          894,
+          175
+        ],
+        [
+          894,
+          253
+        ],
+        [
+          814,
+          253
+        ]
+      ],
+      "pos": [
+        854.0,
+        214.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_LIEFERKARREN",
+      "walk_to": [
+        0.0,
+        54.0
+      ]
+    },
+    {
+      "baseline": 105,
+      "klickbar": true,
+      "name": "Baeume",
+      "poly": [
+        [
+          150,
+          20
+        ],
+        [
+          340,
+          20
+        ],
+        [
+          340,
+          230
+        ],
+        [
+          150,
+          230
+        ]
+      ],
+      "pos": [
+        245.0,
+        125.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_BAEUME",
+      "walk_to": [
+        5.0,
+        140.0
+      ]
+    },
+    {
+      "baseline": 55,
+      "klickbar": true,
+      "name": "AusgangTrollbruecke",
+      "poly": [
+        [
+          0,
+          170
+        ],
+        [
+          30,
+          170
+        ],
+        [
+          30,
+          280
+        ],
+        [
+          0,
+          280
+        ]
+      ],
+      "pos": [
+        15.0,
+        225.0
+      ],
+      "sichtbar": true,
+      "text": "UI_RAUM_TROLLBRUECKE",
+      "walk_to": [
+        0.0,
+        40.0
+      ]
+    },
+    {
+      "baseline": 62,
+      "klickbar": true,
+      "name": "Stolleneingang",
+      "poly": [
+        [
+          929,
+          105
+        ],
+        [
+          1029,
+          105
+        ],
+        [
+          1029,
+          230
+        ],
+        [
+          929,
+          230
+        ]
+      ],
+      "pos": [
+        979.0,
+        167.5
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_STOLLENEINGANG",
+      "walk_to": [
+        17.0,
+        74.5
+      ]
+    }
+  ],
+  "kamera_max": [
+    320.0,
+    180.0
+  ],
+  "laufbereiche": [
+    {
+      "name": "Boden",
+      "polys": [
+        [
+          [
+            0,
+            242
+          ],
+          [
+            150,
+            238
+          ],
+          [
+            330,
+            240
+          ],
+          [
+            372,
+            240
+          ],
+          [
+            440,
+            248
+          ],
+          [
+            504,
+            244
+          ],
+          [
+            574,
+            258
+          ],
+          [
+            639,
+            262
+          ],
+          [
+            664,
+            254
+          ],
+          [
+            816,
+            254
+          ],
+          [
+            896,
+            254
+          ],
+          [
+            902,
+            236
+          ],
+          [
+            972,
+            232
+          ],
+          [
+            999,
+            222
+          ],
+          [
+            1022,
+            226
+          ],
+          [
+            1016,
+            262
+          ],
+          [
+            1036,
+            282
+          ],
+          [
+            1065,
+            290
+          ],
+          [
+            1065,
+            359
+          ],
+          [
+            505,
+            359
+          ],
+          [
+            500,
+            320
+          ],
+          [
+            470,
+            300
+          ],
+          [
+            360,
+            300
+          ],
+          [
+            335,
+            330
+          ],
+          [
+            330,
+            359
+          ],
+          [
+            0,
+            359
+          ]
+        ]
+      ]
+    }
+  ],
+  "marker": {
+    "Start": [
+      20.0,
+      268.0
+    ],
+    "VonBergwerk": [
+      994.0,
+      245.0
+    ],
+    "VonTrollbruecke": [
+      20.0,
+      268.0
+    ]
+  },
+  "modus": "ende",
+  "props": [
+    {
+      "baseline": -180,
+      "klickbar": false,
+      "name": "Background",
+      "poly": [],
+      "pos": [
+        533.0,
+        0.0
+      ],
+      "rect": [
+        0,
+        0,
+        1066,
+        360
+      ],
+      "sichtbar": true,
+      "text": "UI_RAUM_ZAUBERWALD",
+      "walk_to": [
+        0.0,
+        180.0
+      ],
+      "z": -1
+    },
+    {
+      "baseline": 12,
+      "klickbar": true,
+      "name": "Leuchtpilz",
+      "poly": [
+        [
+          580,
+          226
+        ],
+        [
+          596,
+          226
+        ],
+        [
+          596,
+          251
+        ],
+        [
+          580,
+          251
+        ]
+      ],
+      "pos": [
+        588.0,
+        250.5
+      ],
+      "rect": [
+        580,
+        227,
+        596,
+        252
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_LEUCHTPILZ",
+      "walk_to": [
+        -14.0,
+        17.5
+      ],
+      "z": 0
+    },
+    {
+      "baseline": 15,
+      "klickbar": true,
+      "name": "Ketchup",
+      "poly": [
+        [
+          841,
+          209
+        ],
+        [
+          852,
+          209
+        ],
+        [
+          852,
+          239
+        ],
+        [
+          841,
+          239
+        ]
+      ],
+      "pos": [
+        846.5,
+        239.0
+      ],
+      "rect": [
+        842,
+        209,
+        853,
+        239
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_KETCHUP",
+      "walk_to": [
+        -2.5,
+        29.0
+      ],
+      "z": 0
+    },
+    {
+      "baseline": 180,
+      "klickbar": true,
+      "name": "AlterBaum",
+      "poly": [
+        [
+          340,
+          0
+        ],
+        [
+          490,
+          0
+        ],
+        [
+          490,
+          360
+        ],
+        [
+          340,
+          360
+        ]
+      ],
+      "pos": [
+        415.0,
+        360.0
+      ],
+      "rect": [
+        340,
+        0,
+        490,
+        360
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_ALTER_BAUM",
+      "walk_to": [
+        5.0,
+        -80.0
+      ],
+      "z": 0
+    }
+  ],
+  "raum": "zauberwald",
+  "skala": null,
+  "tiefe": 0.5,
+  "welt": "welt-1"
+}

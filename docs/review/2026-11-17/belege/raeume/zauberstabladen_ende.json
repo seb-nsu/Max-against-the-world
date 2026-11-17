@@ -1,0 +1,666 @@
+{
+  "bauplan_laufbereich": [
+    [
+      0.0,
+      357.0
+    ],
+    [
+      0.0,
+      250.0
+    ],
+    [
+      175.0,
+      234.0
+    ],
+    [
+      255.0,
+      224.0
+    ],
+    [
+      400.0,
+      224.0
+    ],
+    [
+      470.0,
+      214.0
+    ],
+    [
+      580.0,
+      216.0
+    ],
+    [
+      600.0,
+      224.0
+    ],
+    [
+      639.0,
+      230.0
+    ],
+    [
+      639.0,
+      357.0
+    ]
+  ],
+  "breite": 640,
+  "figuren": [
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "idle",
+        "mustern",
+        "talk",
+        "talk_alt",
+        "walk"
+      ],
+      "baseline": 0,
+      "name": "Stabmacher",
+      "poly": [
+        [
+          420,
+          70
+        ],
+        [
+          460,
+          70
+        ],
+        [
+          460,
+          232
+        ],
+        [
+          420,
+          232
+        ]
+      ],
+      "pos": [
+        440.0,
+        232.0
+      ],
+      "rect": [
+        366,
+        69,
+        514,
+        232
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.825174808502197,
+        0.825174808502197
+      ],
+      "variante": "",
+      "walk_speed": 180.0,
+      "z": 0
+    },
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "aufheben",
+        "barfuss",
+        "benutzen",
+        "bohne",
+        "diskus",
+        "fallen",
+        "gaehnen",
+        "gehen_hinten",
+        "gehen_vorn",
+        "heisser_sand",
+        "hinsetzen",
+        "idle",
+        "katapult",
+        "kochloeffel",
+        "kopf_kratzen",
+        "melken",
+        "schulterzucken",
+        "speer",
+        "talk",
+        "talk_alt",
+        "treppe_walk",
+        "vom_boden_aufstehen",
+        "vom_sofa_aufstehen",
+        "wackeln",
+        "walk",
+        "walk_alt",
+        "walk_d",
+        "walk_l",
+        "walk_r",
+        "walk_u",
+        "wenden",
+        "zeigen"
+      ],
+      "baseline": 0,
+      "name": "Max",
+      "poly": [
+        [
+          570,
+          97
+        ],
+        [
+          610,
+          97
+        ],
+        [
+          610,
+          260
+        ],
+        [
+          570,
+          260
+        ]
+      ],
+      "pos": [
+        590.0,
+        260.0
+      ],
+      "rect": [
+        469,
+        93,
+        711,
+        260
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.864335656166077,
+        0.864335656166077
+      ],
+      "variante": "",
+      "walk_speed": 150.0,
+      "z": 0
+    },
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "aufstehen",
+        "aufwachen",
+        "fauchen",
+        "gehen_hinten",
+        "gehen_vorn",
+        "haare",
+        "hinlegen",
+        "idle",
+        "minka_umgarnen",
+        "ohrfeige",
+        "putzen",
+        "schlafen",
+        "schnuppern",
+        "schwanz_zucken",
+        "springen",
+        "stehen",
+        "talk",
+        "talk_alt",
+        "tragen",
+        "vom_schrank_fallen",
+        "walk",
+        "walk_d",
+        "walk_l",
+        "walk_r",
+        "walk_u"
+      ],
+      "baseline": 0,
+      "name": "Pixel",
+      "poly": [
+        [
+          510,
+          225
+        ],
+        [
+          580,
+          225
+        ],
+        [
+          580,
+          260
+        ],
+        [
+          510,
+          260
+        ]
+      ],
+      "pos": [
+        545.0,
+        260.0
+      ],
+      "rect": [
+        491,
+        171,
+        599,
+        260
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.864335656166077,
+        0.864335656166077
+      ],
+      "variante": "",
+      "walk_speed": 160.0,
+      "z": 0
+    },
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "idle",
+        "kiste_schwert",
+        "talk",
+        "talk_alt",
+        "walk"
+      ],
+      "baseline": 0,
+      "name": "Zeldina",
+      "poly": [
+        [
+          481,
+          96
+        ],
+        [
+          523,
+          96
+        ],
+        [
+          523,
+          268
+        ],
+        [
+          481,
+          268
+        ]
+      ],
+      "pos": [
+        502.0,
+        268.0
+      ],
+      "rect": [
+        420,
+        87,
+        584,
+        268
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.875524461269379,
+        0.875524461269379
+      ],
+      "variante": "",
+      "walk_speed": 180.0,
+      "z": 0
+    }
+  ],
+  "hotspots": [
+    {
+      "baseline": 32,
+      "klickbar": true,
+      "name": "Fenster",
+      "poly": [
+        [
+          12,
+          30
+        ],
+        [
+          50,
+          30
+        ],
+        [
+          50,
+          95
+        ],
+        [
+          12,
+          95
+        ]
+      ],
+      "pos": [
+        31.0,
+        62.5
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_FENSTER",
+      "walk_to": [
+        29.0,
+        207.5
+      ]
+    },
+    {
+      "baseline": 87,
+      "klickbar": true,
+      "name": "Regale",
+      "poly": [
+        [
+          75,
+          40
+        ],
+        [
+          245,
+          40
+        ],
+        [
+          245,
+          215
+        ],
+        [
+          75,
+          215
+        ]
+      ],
+      "pos": [
+        160.0,
+        127.5
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_REGALE",
+      "walk_to": [
+        -20.0,
+        132.5
+      ]
+    },
+    {
+      "baseline": 88,
+      "klickbar": true,
+      "name": "Leiter",
+      "poly": [
+        [
+          178,
+          55
+        ],
+        [
+          232,
+          55
+        ],
+        [
+          232,
+          232
+        ],
+        [
+          178,
+          232
+        ]
+      ],
+      "pos": [
+        205.0,
+        143.5
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_LEITER",
+      "walk_to": [
+        0.0,
+        106.5
+      ]
+    },
+    {
+      "baseline": 38,
+      "klickbar": true,
+      "name": "ThekeMitKissen",
+      "poly": [
+        [
+          253,
+          145
+        ],
+        [
+          397,
+          145
+        ],
+        [
+          397,
+          222
+        ],
+        [
+          253,
+          222
+        ]
+      ],
+      "pos": [
+        325.0,
+        183.5
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_THEKE_MIT_KISSEN",
+      "walk_to": [
+        0.0,
+        61.5
+      ]
+    },
+    {
+      "baseline": 80,
+      "klickbar": true,
+      "name": "AusgangDorfplatz",
+      "poly": [
+        [
+          592,
+          65
+        ],
+        [
+          640,
+          65
+        ],
+        [
+          640,
+          225
+        ],
+        [
+          592,
+          225
+        ]
+      ],
+      "pos": [
+        616.0,
+        145.0
+      ],
+      "sichtbar": true,
+      "text": "UI_RAUM_DORFPLATZ",
+      "walk_to": [
+        -11.0,
+        100.0
+      ]
+    }
+  ],
+  "kamera_max": [
+    320.0,
+    180.0
+  ],
+  "laufbereiche": [
+    {
+      "name": "Boden",
+      "polys": [
+        [
+          [
+            0,
+            357
+          ],
+          [
+            0,
+            250
+          ],
+          [
+            175,
+            234
+          ],
+          [
+            255,
+            224
+          ],
+          [
+            400,
+            224
+          ],
+          [
+            470,
+            214
+          ],
+          [
+            580,
+            216
+          ],
+          [
+            600,
+            224
+          ],
+          [
+            639,
+            230
+          ],
+          [
+            639,
+            357
+          ]
+        ]
+      ]
+    }
+  ],
+  "marker": {
+    "Start": [
+      590.0,
+      260.0
+    ],
+    "VonDorfplatz": [
+      590.0,
+      260.0
+    ]
+  },
+  "modus": "ende",
+  "props": [
+    {
+      "baseline": -180,
+      "klickbar": false,
+      "name": "Background",
+      "poly": [],
+      "pos": [
+        320.0,
+        0.0
+      ],
+      "rect": [
+        0,
+        0,
+        640,
+        360
+      ],
+      "sichtbar": true,
+      "text": "UI_RAUM_ZAUBERSTABLADEN",
+      "walk_to": [
+        0.0,
+        180.0
+      ],
+      "z": -1
+    },
+    {
+      "baseline": 6,
+      "klickbar": true,
+      "name": "Zahnstocher",
+      "poly": [
+        [
+          283,
+          136
+        ],
+        [
+          303,
+          136
+        ],
+        [
+          303,
+          156
+        ],
+        [
+          283,
+          156
+        ]
+      ],
+      "pos": [
+        292.5,
+        152.0
+      ],
+      "rect": [
+        285,
+        139,
+        302,
+        153
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_ZAHNSTOCHER",
+      "walk_to": [
+        7.5,
+        93.0
+      ],
+      "z": 0
+    },
+    {
+      "baseline": 6,
+      "klickbar": true,
+      "name": "Zollstock",
+      "poly": [
+        [
+          306,
+          140
+        ],
+        [
+          334,
+          140
+        ],
+        [
+          334,
+          153
+        ],
+        [
+          306,
+          153
+        ]
+      ],
+      "pos": [
+        320.0,
+        152.5
+      ],
+      "rect": [
+        305,
+        140,
+        335,
+        155
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_ZOLLSTOCK",
+      "walk_to": [
+        0.0,
+        92.5
+      ],
+      "z": 0
+    },
+    {
+      "baseline": 6,
+      "klickbar": true,
+      "name": "Kochloeffel",
+      "poly": [
+        [
+          334,
+          142
+        ],
+        [
+          372,
+          142
+        ],
+        [
+          372,
+          154
+        ],
+        [
+          334,
+          154
+        ]
+      ],
+      "pos": [
+        353.0,
+        154.0
+      ],
+      "rect": [
+        333,
+        141,
+        373,
+        155
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_KOCHLOEFFEL",
+      "walk_to": [
+        -3.0,
+        91.0
+      ],
+      "z": 0
+    }
+  ],
+  "raum": "zauberstabladen",
+  "skala": null,
+  "tiefe": 0.8,
+  "welt": "welt-1"
+}

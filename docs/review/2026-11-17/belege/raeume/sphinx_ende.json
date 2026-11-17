@@ -1,0 +1,513 @@
+{
+  "bauplan_laufbereich": [
+    [
+      8.0,
+      248.0
+    ],
+    [
+      632.0,
+      240.0
+    ],
+    [
+      632.0,
+      356.0
+    ],
+    [
+      8.0,
+      356.0
+    ]
+  ],
+  "breite": 640,
+  "figuren": [
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "idle",
+        "talk"
+      ],
+      "baseline": 0,
+      "name": "SphinxFigur",
+      "poly": [
+        [
+          550,
+          189
+        ],
+        [
+          570,
+          189
+        ],
+        [
+          570,
+          240
+        ],
+        [
+          550,
+          240
+        ]
+      ],
+      "pos": [
+        560.0,
+        240.0
+      ],
+      "rect": [
+        535,
+        113,
+        586,
+        240
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.850000023841858,
+        0.850000023841858
+      ],
+      "variante": "",
+      "walk_speed": 120.0,
+      "z": 0
+    },
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "aufheben",
+        "barfuss",
+        "benutzen",
+        "bohne",
+        "diskus",
+        "fallen",
+        "gaehnen",
+        "gehen_hinten",
+        "gehen_vorn",
+        "heisser_sand",
+        "hinsetzen",
+        "idle",
+        "katapult",
+        "kochloeffel",
+        "kopf_kratzen",
+        "melken",
+        "schulterzucken",
+        "speer",
+        "talk",
+        "talk_alt",
+        "treppe_walk",
+        "vom_boden_aufstehen",
+        "vom_sofa_aufstehen",
+        "wackeln",
+        "walk",
+        "walk_alt",
+        "walk_d",
+        "walk_l",
+        "walk_r",
+        "walk_u",
+        "wenden",
+        "zeigen"
+      ],
+      "baseline": 0,
+      "name": "Max",
+      "poly": [
+        [
+          28,
+          125
+        ],
+        [
+          72,
+          125
+        ],
+        [
+          72,
+          300
+        ],
+        [
+          28,
+          300
+        ]
+      ],
+      "pos": [
+        50.0,
+        300.0
+      ],
+      "rect": [
+        -80,
+        121,
+        180,
+        300
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.927586197853088,
+        0.927586197853088
+      ],
+      "variante": "",
+      "walk_speed": 150.0,
+      "z": 0
+    },
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "aufstehen",
+        "aufwachen",
+        "fauchen",
+        "gehen_hinten",
+        "gehen_vorn",
+        "haare",
+        "hinlegen",
+        "idle",
+        "minka_umgarnen",
+        "ohrfeige",
+        "putzen",
+        "schlafen",
+        "schnuppern",
+        "schwanz_zucken",
+        "springen",
+        "stehen",
+        "talk",
+        "talk_alt",
+        "tragen",
+        "vom_schrank_fallen",
+        "walk",
+        "walk_d",
+        "walk_l",
+        "walk_r",
+        "walk_u"
+      ],
+      "baseline": 0,
+      "name": "Pixel",
+      "poly": [
+        [
+          57,
+          263
+        ],
+        [
+          133,
+          263
+        ],
+        [
+          133,
+          300
+        ],
+        [
+          57,
+          300
+        ]
+      ],
+      "pos": [
+        95.0,
+        300.0
+      ],
+      "rect": [
+        37,
+        204,
+        153,
+        300
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.927586197853088,
+        0.927586197853088
+      ],
+      "variante": "",
+      "walk_speed": 160.0,
+      "z": 0
+    }
+  ],
+  "hotspots": [
+    {
+      "baseline": 28,
+      "klickbar": true,
+      "name": "Schreibpult",
+      "poly": [
+        [
+          280,
+          178
+        ],
+        [
+          358,
+          178
+        ],
+        [
+          358,
+          235
+        ],
+        [
+          280,
+          235
+        ]
+      ],
+      "pos": [
+        319.0,
+        206.5
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_SCHREIBPULT",
+      "walk_to": [
+        -1.0,
+        63.5
+      ]
+    },
+    {
+      "baseline": 12,
+      "klickbar": true,
+      "name": "ZerknuelltePapyri",
+      "poly": [
+        [
+          258,
+          220
+        ],
+        [
+          375,
+          220
+        ],
+        [
+          375,
+          245
+        ],
+        [
+          258,
+          245
+        ]
+      ],
+      "pos": [
+        316.5,
+        232.5
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_ZERKNUELLTE_PAPYRI",
+      "walk_to": [
+        1.5,
+        37.5
+      ]
+    },
+    {
+      "baseline": 8,
+      "klickbar": true,
+      "name": "Notizblock",
+      "poly": [
+        [
+          310,
+          178
+        ],
+        [
+          332,
+          178
+        ],
+        [
+          332,
+          194
+        ],
+        [
+          310,
+          194
+        ]
+      ],
+      "pos": [
+        321.0,
+        186.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_NOTIZBLOCK",
+      "walk_to": [
+        -3.0,
+        84.0
+      ]
+    },
+    {
+      "baseline": 32,
+      "klickbar": true,
+      "name": "Fussspuren",
+      "poly": [
+        [
+          30,
+          200
+        ],
+        [
+          150,
+          200
+        ],
+        [
+          150,
+          265
+        ],
+        [
+          30,
+          265
+        ]
+      ],
+      "pos": [
+        90.0,
+        232.5
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_FUSSSPUREN",
+      "walk_to": [
+        10.0,
+        57.5
+      ]
+    },
+    {
+      "baseline": 45,
+      "klickbar": true,
+      "name": "Steinkugel",
+      "poly": [
+        [
+          272,
+          60
+        ],
+        [
+          362,
+          60
+        ],
+        [
+          362,
+          150
+        ],
+        [
+          272,
+          150
+        ]
+      ],
+      "pos": [
+        317.0,
+        105.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_STEINKUGEL",
+      "walk_to": [
+        1.0,
+        165.0
+      ]
+    },
+    {
+      "baseline": 20,
+      "klickbar": true,
+      "name": "Nase",
+      "poly": [
+        [
+          565,
+          40
+        ],
+        [
+          600,
+          40
+        ],
+        [
+          600,
+          80
+        ],
+        [
+          565,
+          80
+        ]
+      ],
+      "pos": [
+        582.5,
+        60.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_NASE",
+      "walk_to": [
+        -42.5,
+        210.0
+      ]
+    },
+    {
+      "baseline": 70,
+      "klickbar": true,
+      "name": "AusgangNilDelta",
+      "poly": [
+        [
+          0,
+          140
+        ],
+        [
+          40,
+          140
+        ],
+        [
+          40,
+          280
+        ],
+        [
+          0,
+          280
+        ]
+      ],
+      "pos": [
+        20.0,
+        210.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_AUSGANG_NIL_DELTA",
+      "walk_to": [
+        10.0,
+        90.0
+      ]
+    }
+  ],
+  "kamera_max": [
+    320.0,
+    180.0
+  ],
+  "laufbereiche": [
+    {
+      "name": "Boden",
+      "polys": [
+        [
+          [
+            8,
+            248
+          ],
+          [
+            632,
+            240
+          ],
+          [
+            632,
+            356
+          ],
+          [
+            8,
+            356
+          ]
+        ]
+      ]
+    }
+  ],
+  "marker": {
+    "Start": [
+      50.0,
+      300.0
+    ],
+    "VonNilDelta": [
+      50.0,
+      300.0
+    ]
+  },
+  "modus": "ende",
+  "props": [
+    {
+      "baseline": -180,
+      "klickbar": false,
+      "name": "Background",
+      "poly": [],
+      "pos": [
+        320.0,
+        0.0
+      ],
+      "rect": [
+        0,
+        0,
+        640,
+        360
+      ],
+      "sichtbar": true,
+      "text": "UI_RAUM_SPHINX",
+      "walk_to": [
+        0.0,
+        180.0
+      ],
+      "z": -1
+    }
+  ],
+  "raum": "sphinx",
+  "skala": null,
+  "tiefe": 0.85,
+  "welt": "welt-2"
+}

@@ -1,0 +1,648 @@
+{
+  "bauplan_laufbereich": [
+    [
+      0.0,
+      240.0
+    ],
+    [
+      40.0,
+      238.0
+    ],
+    [
+      62.0,
+      290.0
+    ],
+    [
+      250.0,
+      298.0
+    ],
+    [
+      298.0,
+      215.0
+    ],
+    [
+      352.0,
+      215.0
+    ],
+    [
+      398.0,
+      298.0
+    ],
+    [
+      470.0,
+      300.0
+    ],
+    [
+      560.0,
+      290.0
+    ],
+    [
+      639.0,
+      278.0
+    ],
+    [
+      639.0,
+      359.0
+    ],
+    [
+      0.0,
+      359.0
+    ]
+  ],
+  "breite": 640,
+  "figuren": [
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "fauchen",
+        "idle",
+        "talk",
+        "walk"
+      ],
+      "baseline": 0,
+      "name": "Schwan",
+      "poly": [
+        [
+          510,
+          223
+        ],
+        [
+          530,
+          223
+        ],
+        [
+          530,
+          265
+        ],
+        [
+          510,
+          265
+        ]
+      ],
+      "pos": [
+        520.0,
+        265.0
+      ],
+      "rect": [
+        478,
+        223,
+        562,
+        265
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.517083346843719,
+        0.517083346843719
+      ],
+      "variante": "",
+      "walk_speed": 180.0,
+      "z": 0
+    },
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "auf_max_zeigen",
+        "haende_ringen",
+        "idle",
+        "keuchen",
+        "talk",
+        "talk_alt",
+        "walk"
+      ],
+      "baseline": 0,
+      "name": "Toadi",
+      "poly": [
+        [
+          426,
+          244
+        ],
+        [
+          454,
+          244
+        ],
+        [
+          454,
+          322
+        ],
+        [
+          426,
+          322
+        ]
+      ],
+      "pos": [
+        440.0,
+        322.0
+      ],
+      "rect": [
+        411,
+        243,
+        469,
+        322
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.71895831823349,
+        0.71895831823349
+      ],
+      "variante": "",
+      "walk_speed": 180.0,
+      "z": 0
+    },
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "aufheben",
+        "barfuss",
+        "benutzen",
+        "bohne",
+        "diskus",
+        "fallen",
+        "gaehnen",
+        "gehen_hinten",
+        "gehen_vorn",
+        "heisser_sand",
+        "hinsetzen",
+        "idle",
+        "katapult",
+        "kochloeffel",
+        "kopf_kratzen",
+        "melken",
+        "schulterzucken",
+        "speer",
+        "talk",
+        "talk_alt",
+        "treppe_walk",
+        "vom_boden_aufstehen",
+        "vom_sofa_aufstehen",
+        "wackeln",
+        "walk",
+        "walk_alt",
+        "walk_d",
+        "walk_l",
+        "walk_r",
+        "walk_u",
+        "wenden",
+        "zeigen"
+      ],
+      "baseline": 0,
+      "name": "Max",
+      "poly": [
+        [
+          15,
+          179
+        ],
+        [
+          45,
+          179
+        ],
+        [
+          45,
+          300
+        ],
+        [
+          15,
+          300
+        ]
+      ],
+      "pos": [
+        30.0,
+        300.0
+      ],
+      "rect": [
+        -60,
+        176,
+        120,
+        300
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.641041696071625,
+        0.641041696071625
+      ],
+      "variante": "",
+      "walk_speed": 150.0,
+      "z": 0
+    },
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "aufstehen",
+        "aufwachen",
+        "fauchen",
+        "gehen_hinten",
+        "gehen_vorn",
+        "haare",
+        "hinlegen",
+        "idle",
+        "minka_umgarnen",
+        "ohrfeige",
+        "putzen",
+        "schlafen",
+        "schnuppern",
+        "schwanz_zucken",
+        "springen",
+        "stehen",
+        "talk",
+        "talk_alt",
+        "tragen",
+        "vom_schrank_fallen",
+        "walk",
+        "walk_d",
+        "walk_l",
+        "walk_r",
+        "walk_u"
+      ],
+      "baseline": 0,
+      "name": "Pixel",
+      "poly": [
+        [
+          49,
+          274
+        ],
+        [
+          101,
+          274
+        ],
+        [
+          101,
+          300
+        ],
+        [
+          49,
+          300
+        ]
+      ],
+      "pos": [
+        75.0,
+        300.0
+      ],
+      "rect": [
+        35,
+        234,
+        115,
+        300
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.641041696071625,
+        0.641041696071625
+      ],
+      "variante": "",
+      "walk_speed": 160.0,
+      "z": 0
+    },
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "idle",
+        "kiste_schwert",
+        "talk",
+        "talk_alt",
+        "walk"
+      ],
+      "baseline": 0,
+      "name": "Zeldina",
+      "poly": [
+        [
+          102,
+          177
+        ],
+        [
+          134,
+          177
+        ],
+        [
+          134,
+          308
+        ],
+        [
+          102,
+          308
+        ]
+      ],
+      "pos": [
+        118.0,
+        308.0
+      ],
+      "rect": [
+        55,
+        169,
+        181,
+        308
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.669375002384186,
+        0.669375002384186
+      ],
+      "variante": "",
+      "walk_speed": 180.0,
+      "z": 0
+    }
+  ],
+  "hotspots": [
+    {
+      "baseline": 40,
+      "klickbar": true,
+      "name": "Schilf",
+      "poly": [
+        [
+          55,
+          170
+        ],
+        [
+          180,
+          170
+        ],
+        [
+          180,
+          250
+        ],
+        [
+          55,
+          250
+        ]
+      ],
+      "pos": [
+        117.5,
+        210.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_SCHILF",
+      "walk_to": [
+        -37.5,
+        86.0
+      ]
+    },
+    {
+      "baseline": 26,
+      "klickbar": true,
+      "name": "Ruderboot",
+      "poly": [
+        [
+          118,
+          233
+        ],
+        [
+          228,
+          233
+        ],
+        [
+          228,
+          285
+        ],
+        [
+          118,
+          285
+        ]
+      ],
+      "pos": [
+        173.0,
+        259.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_RUDERBOOT",
+      "walk_to": [
+        -3.0,
+        39.0
+      ]
+    },
+    {
+      "baseline": 15,
+      "klickbar": true,
+      "name": "SchildAmTor",
+      "poly": [
+        [
+          303,
+          100
+        ],
+        [
+          355,
+          100
+        ],
+        [
+          355,
+          130
+        ],
+        [
+          303,
+          130
+        ]
+      ],
+      "pos": [
+        329.0,
+        115.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_SCHILD_AM_TOR",
+      "walk_to": [
+        -5.0,
+        111.0
+      ]
+    },
+    {
+      "baseline": 19,
+      "klickbar": true,
+      "name": "Umzugskartons",
+      "poly": [
+        [
+          322,
+          155
+        ],
+        [
+          352,
+          155
+        ],
+        [
+          352,
+          193
+        ],
+        [
+          322,
+          193
+        ]
+      ],
+      "pos": [
+        337.0,
+        174.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_UMZUGSKARTONS",
+      "walk_to": [
+        -13.0,
+        52.0
+      ]
+    },
+    {
+      "baseline": 7,
+      "klickbar": true,
+      "name": "Teppich",
+      "poly": [
+        [
+          328,
+          188
+        ],
+        [
+          354,
+          188
+        ],
+        [
+          354,
+          202
+        ],
+        [
+          328,
+          202
+        ]
+      ],
+      "pos": [
+        341.0,
+        195.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_TEPPICH",
+      "walk_to": [
+        -17.0,
+        31.0
+      ]
+    },
+    {
+      "baseline": 55,
+      "klickbar": true,
+      "name": "AusgangTrollbruecke",
+      "poly": [
+        [
+          0,
+          140
+        ],
+        [
+          30,
+          140
+        ],
+        [
+          30,
+          250
+        ],
+        [
+          0,
+          250
+        ]
+      ],
+      "pos": [
+        15.0,
+        195.0
+      ],
+      "sichtbar": true,
+      "text": "UI_RAUM_TROLLBRUECKE",
+      "walk_to": [
+        0.0,
+        97.0
+      ]
+    }
+  ],
+  "kamera_max": [
+    320.0,
+    180.0
+  ],
+  "laufbereiche": [
+    {
+      "name": "Boden",
+      "polys": [
+        [
+          [
+            0,
+            240
+          ],
+          [
+            40,
+            238
+          ],
+          [
+            62,
+            290
+          ],
+          [
+            250,
+            298
+          ],
+          [
+            298,
+            215
+          ],
+          [
+            352,
+            215
+          ],
+          [
+            398,
+            298
+          ],
+          [
+            470,
+            300
+          ],
+          [
+            560,
+            290
+          ],
+          [
+            639,
+            278
+          ],
+          [
+            639,
+            359
+          ],
+          [
+            0,
+            359
+          ]
+        ]
+      ]
+    }
+  ],
+  "marker": {
+    "Start": [
+      30.0,
+      300.0
+    ],
+    "Tor": [
+      324.0,
+      226.0
+    ],
+    "VonTrollbruecke": [
+      30.0,
+      300.0
+    ]
+  },
+  "modus": "ende",
+  "props": [
+    {
+      "baseline": -180,
+      "klickbar": false,
+      "name": "Background",
+      "poly": [],
+      "pos": [
+        320.0,
+        0.0
+      ],
+      "rect": [
+        0,
+        0,
+        640,
+        360
+      ],
+      "sichtbar": true,
+      "text": "UI_RAUM_WASSERSCHLOSS",
+      "walk_to": [
+        0.0,
+        180.0
+      ],
+      "z": -1
+    }
+  ],
+  "raum": "wasserschloss",
+  "skala": 0.85,
+  "tiefe": 0.4,
+  "welt": "welt-1"
+}

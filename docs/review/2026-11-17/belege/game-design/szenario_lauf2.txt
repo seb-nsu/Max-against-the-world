@@ -1,0 +1,33 @@
+BEFUND A1 Ankunft: offen=["R1"], Pfote-Schritt=R1, Zeile=W2_HINT_PIX_0110 (Der Fährmann will eine Münze, und du hast keine.)
+BEFUND A2 nach R1, nur Nil-Delta besucht: offen=[], Pfote-Schritt=, Zeile=P0_HINT_PIX_0010 (Es ist alles erledigt. Jetzt fehlt nur noch, dass du in den Fernseher steigst.)
+BEFUND A3 Sphinx besucht: offen=["R8"], Pfote-Schritt=R8, Zeile=W2_HINT_PIX_0810 (Die Sphinx will ein Rätsel, das sie nicht lösen kann. Sie kennt alles aus ihrer Zeit.)
+BEFUND B1 Sphinx-Rätsel mit 1 Baustein: Ersatzzeile=["SYS_ERS_MAX_0110"], Bausteine=["stirbt"]
+BEFUND A4 Olympia, Agora und Stadion besucht, Palast nie: offen=["R8"], Pfote-Schritt=R8, Zeile=W2_HINT_PIX_0810 (Die Sphinx will ein Rätsel, das sie nicht lösen kann. Sie kennt alles aus ihrer Zeit.)
+BEFUND C1 Brennspiegel als Wunder, Kaugummi in der Tasche: behandelt=false, Wunder vorher=false nachher=false
+BEFUND C2 Brennspiegel auf Hofkater: behandelt=false, Wunder=false
+BEFUND C3 Kaugummi: R2b=true, Kaugummi noch da=false
+BEFUND C4 Audienz=true
+BEFUND A5 nach Audienz, Startbüro nie besucht: offen=["R8"], Pfote-Schritt=R8, Zeile=W2_HINT_PIX_0810 (Die Sphinx will ein Rätsel, das sie nicht lösen kann. Sie kennt alles aus ihrer Zeit.)
+BEFUND D1 Bausteine nach zweimal Handy ansehen + Fährmann: ["stirbt", "sonne", "klingelt", "leuchtet"]
+BEFUND D2 R8=true
+BEFUND D3 Empfehlungsschreiben=true
+BEFUND E1 Weg C: R3b=true Startpass=true Sandalen=true
+BEFUND E2 Nach R3b: Kugelschreiber+Formular -> Kugelschreiber noch da=false, Rundschreiben=true
+BEFUND E3 Zweites Rundschreiben am Schalter: Stempel-Szene erneut=true, Startpass=true
+BEFUND E4 Socke auf Formularberg nach R3b: Rundschreiben=false
+BEFUND F1 R5=true
+BEFUND F2 R12=true Lauf-Bestleistung=false
+BEFUND A6 nach Tag 1 (R4 Öl nie gemacht, Küche nie besucht): offen=["R6a", "R7", "R9", "R10a"], Pfote-Schritt=R6a, Zeile=W2_HINT_PIX_0611 (Eine Sandale hängt oben auf der Säule, und die Menge hält sie für heilig.)
+BEFUND A7 nach Tag 1, Küche besucht: offen=["R4", "R6a", "R7", "R9", "R10a"], Pfote-Schritt=R4, Zeile=W2_HINT_PIX_0410 (Die Sandalen wollen weg, und Öl hält Riemen. Öl gibt es in der Küche.)
+BEFUND G1 Leonidas erneut ansprechen, Reden: Aussagen wiederholt=false, Protokoll=[]
+BEFUND G2 Ersatz bei Leonidas: R7=true, Wurfscheibe=true
+BEFUND H1 R9 (ohne Tonne)=true Konter=[1, 2, 3, 4, 5]
+BEFUND H2 R10a=true Grabstein=true
+BEFUND A8 Grabstein da, Grabhügel nie besucht: offen=["R4", "R6a"], Pfote-Schritt=R4, Zeile=W2_HINT_PIX_0410 (Die Sandalen wollen weg, und Öl hält Riemen. Öl gibt es in der Küche.)
+BEFUND H3 Grabstein-Zustand in Olympia=grau
+BEFUND H4 R10b=true
+BEFUND I1 Finaltag=true Diskus-Bestleistung mit Wurfscheibe=true Kranz=true
+BEFUND I2 Wunderdinge zum Schluss: Handy=true Kaugummi=false Kugelschreiber=false
+BEFUND I3 Paraden-Plan richtig, ohne Brennspiegel: R11a=false Protokoll=["W2_PARA_HER_0060", "W2_PARA_ARC_0080", "W2_PARA_CIC_0100", "W2_PARA_PIX_0130", "W2_PARA_PIX_0130_2", "W2_PARA_ARC_0090"]
+BEFUND A9 Parade offen, Brennspiegel fehlt: offen=["R4", "R6a", "R11a"], Pfote-Schritt=R4, Zeile=W2_HINT_PIX_0410 (Die Sandalen wollen weg, und Öl hält Riemen. Öl gibt es in der Küche.)
+ENDE

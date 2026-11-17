@@ -1,0 +1,443 @@
+{
+  "bauplan_laufbereich": [
+    [
+      8.0,
+      235.0
+    ],
+    [
+      632.0,
+      240.0
+    ],
+    [
+      632.0,
+      356.0
+    ],
+    [
+      8.0,
+      356.0
+    ]
+  ],
+  "breite": 640,
+  "figuren": [
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "aufheben",
+        "barfuss",
+        "benutzen",
+        "bohne",
+        "diskus",
+        "fallen",
+        "gaehnen",
+        "gehen_hinten",
+        "gehen_vorn",
+        "heisser_sand",
+        "hinsetzen",
+        "idle",
+        "katapult",
+        "kochloeffel",
+        "kopf_kratzen",
+        "melken",
+        "schulterzucken",
+        "speer",
+        "talk",
+        "talk_alt",
+        "treppe_walk",
+        "vom_boden_aufstehen",
+        "vom_sofa_aufstehen",
+        "wackeln",
+        "walk",
+        "walk_alt",
+        "walk_d",
+        "walk_l",
+        "walk_r",
+        "walk_u",
+        "wenden",
+        "zeigen"
+      ],
+      "baseline": 0,
+      "name": "Max",
+      "poly": [
+        [
+          28,
+          124
+        ],
+        [
+          72,
+          124
+        ],
+        [
+          72,
+          300
+        ],
+        [
+          28,
+          300
+        ]
+      ],
+      "pos": [
+        50.0,
+        300.0
+      ],
+      "rect": [
+        -80,
+        120,
+        180,
+        300
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.930578529834747,
+        0.930578529834747
+      ],
+      "variante": "",
+      "walk_speed": 150.0,
+      "z": 0
+    },
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "aufstehen",
+        "aufwachen",
+        "fauchen",
+        "gehen_hinten",
+        "gehen_vorn",
+        "haare",
+        "hinlegen",
+        "idle",
+        "minka_umgarnen",
+        "ohrfeige",
+        "putzen",
+        "schlafen",
+        "schnuppern",
+        "schwanz_zucken",
+        "springen",
+        "stehen",
+        "talk",
+        "talk_alt",
+        "tragen",
+        "vom_schrank_fallen",
+        "walk",
+        "walk_d",
+        "walk_l",
+        "walk_r",
+        "walk_u"
+      ],
+      "baseline": 0,
+      "name": "Pixel",
+      "poly": [
+        [
+          57,
+          263
+        ],
+        [
+          133,
+          263
+        ],
+        [
+          133,
+          300
+        ],
+        [
+          57,
+          300
+        ]
+      ],
+      "pos": [
+        95.0,
+        300.0
+      ],
+      "rect": [
+        36,
+        204,
+        154,
+        300
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.930578529834747,
+        0.930578529834747
+      ],
+      "variante": "",
+      "walk_speed": 160.0,
+      "z": 0
+    }
+  ],
+  "hotspots": [
+    {
+      "baseline": 25,
+      "klickbar": true,
+      "name": "Sockel",
+      "poly": [
+        [
+          295,
+          170
+        ],
+        [
+          345,
+          170
+        ],
+        [
+          345,
+          220
+        ],
+        [
+          295,
+          220
+        ]
+      ],
+      "pos": [
+        320.0,
+        195.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_SOCKEL",
+      "walk_to": [
+        0.0,
+        55.0
+      ]
+    },
+    {
+      "baseline": 70,
+      "klickbar": true,
+      "name": "Brombeeren",
+      "poly": [
+        [
+          40,
+          110
+        ],
+        [
+          200,
+          110
+        ],
+        [
+          200,
+          250
+        ],
+        [
+          40,
+          250
+        ]
+      ],
+      "pos": [
+        120.0,
+        180.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_BROMBEEREN",
+      "walk_to": [
+        0.0,
+        100.0
+      ]
+    },
+    {
+      "baseline": 52,
+      "klickbar": true,
+      "name": "AlteGrabsteine",
+      "poly": [
+        [
+          395,
+          135
+        ],
+        [
+          640,
+          135
+        ],
+        [
+          640,
+          240
+        ],
+        [
+          395,
+          240
+        ]
+      ],
+      "pos": [
+        517.5,
+        187.5
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_ALTE_GRABSTEINE",
+      "walk_to": [
+        -17.5,
+        82.5
+      ]
+    },
+    {
+      "baseline": 65,
+      "klickbar": true,
+      "name": "Zypressen",
+      "poly": [
+        [
+          410,
+          0
+        ],
+        [
+          560,
+          0
+        ],
+        [
+          560,
+          130
+        ],
+        [
+          410,
+          130
+        ]
+      ],
+      "pos": [
+        485.0,
+        65.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_ZYPRESSEN",
+      "walk_to": [
+        -5.0,
+        205.0
+      ]
+    },
+    {
+      "baseline": 50,
+      "klickbar": true,
+      "name": "Zikaden",
+      "poly": [
+        [
+          200,
+          0
+        ],
+        [
+          400,
+          0
+        ],
+        [
+          400,
+          100
+        ],
+        [
+          200,
+          100
+        ]
+      ],
+      "pos": [
+        300.0,
+        50.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_ZIKADEN",
+      "walk_to": [
+        0.0,
+        230.0
+      ]
+    },
+    {
+      "baseline": 70,
+      "klickbar": true,
+      "name": "AusgangHafen",
+      "poly": [
+        [
+          0,
+          140
+        ],
+        [
+          40,
+          140
+        ],
+        [
+          40,
+          280
+        ],
+        [
+          0,
+          280
+        ]
+      ],
+      "pos": [
+        20.0,
+        210.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_AUSGANG_HAFEN",
+      "walk_to": [
+        10.0,
+        90.0
+      ]
+    }
+  ],
+  "kamera_max": [
+    320.0,
+    180.0
+  ],
+  "laufbereiche": [
+    {
+      "name": "Boden",
+      "polys": [
+        [
+          [
+            8,
+            235
+          ],
+          [
+            632,
+            240
+          ],
+          [
+            632,
+            356
+          ],
+          [
+            8,
+            356
+          ]
+        ]
+      ]
+    }
+  ],
+  "marker": {
+    "Archimedes": [
+      520.0,
+      290.0
+    ],
+    "Cicero": [
+      400.0,
+      290.0
+    ],
+    "Start": [
+      50.0,
+      300.0
+    ],
+    "VonHafenSyrakus": [
+      50.0,
+      300.0
+    ]
+  },
+  "modus": "ende",
+  "props": [
+    {
+      "baseline": -180,
+      "klickbar": false,
+      "name": "Background",
+      "poly": [],
+      "pos": [
+        320.0,
+        0.0
+      ],
+      "rect": [
+        0,
+        0,
+        640,
+        360
+      ],
+      "sichtbar": true,
+      "text": "UI_RAUM_GRABHUEGEL",
+      "walk_to": [
+        0.0,
+        180.0
+      ],
+      "z": -1
+    }
+  ],
+  "raum": "grabhuegel",
+  "skala": null,
+  "tiefe": 0.85,
+  "welt": "welt-2"
+}
