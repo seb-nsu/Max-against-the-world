@@ -18,8 +18,7 @@ func bauplan() -> Dictionary:
 	return Bauplan.objekt(room.script_name, script_name)
 
 
-## Liegt das Objekt über oder unter einem deutlich größeren, gewinnt das kleinere
-## (Spiel.zeiger_betritt); sonst gilt Popochius Reihenfolge.
+## Überdeckung mit anderen Objekten entscheidet Spiel.zeiger_betritt (Größe und Rang).
 func _on_mouse_entered() -> void:
 	if not Spiel.zeiger_betritt(self):
 		super()
