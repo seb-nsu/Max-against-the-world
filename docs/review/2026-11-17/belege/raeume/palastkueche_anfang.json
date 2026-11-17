@@ -1,0 +1,712 @@
+{
+  "bauplan_laufbereich": [
+    [
+      8.0,
+      232.0
+    ],
+    [
+      632.0,
+      232.0
+    ],
+    [
+      632.0,
+      356.0
+    ],
+    [
+      8.0,
+      356.0
+    ]
+  ],
+  "breite": 640,
+  "figuren": [
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "abschmecken",
+        "idle",
+        "mehl_wischen",
+        "probieren",
+        "ruehren",
+        "talk",
+        "talk_alt",
+        "teig_kneten"
+      ],
+      "baseline": 0,
+      "name": "Nebet",
+      "poly": [
+        [
+          375,
+          123
+        ],
+        [
+          415,
+          123
+        ],
+        [
+          415,
+          285
+        ],
+        [
+          375,
+          285
+        ]
+      ],
+      "pos": [
+        395.0,
+        285.0
+      ],
+      "rect": [
+        329,
+        120,
+        461,
+        285
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.91411292552948,
+        0.91411292552948
+      ],
+      "variante": "",
+      "walk_speed": 120.0,
+      "z": 0
+    },
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "aufheben",
+        "barfuss",
+        "benutzen",
+        "bohne",
+        "diskus",
+        "fallen",
+        "gaehnen",
+        "gehen_hinten",
+        "gehen_vorn",
+        "heisser_sand",
+        "hinsetzen",
+        "idle",
+        "katapult",
+        "kochloeffel",
+        "kopf_kratzen",
+        "melken",
+        "schulterzucken",
+        "speer",
+        "talk",
+        "talk_alt",
+        "treppe_walk",
+        "vom_boden_aufstehen",
+        "vom_sofa_aufstehen",
+        "wackeln",
+        "walk",
+        "walk_alt",
+        "walk_d",
+        "walk_l",
+        "walk_r",
+        "walk_u",
+        "wenden",
+        "zeigen"
+      ],
+      "baseline": 0,
+      "name": "Max",
+      "poly": [
+        [
+          48,
+          116
+        ],
+        [
+          92,
+          116
+        ],
+        [
+          92,
+          290
+        ],
+        [
+          48,
+          290
+        ]
+      ],
+      "pos": [
+        70.0,
+        290.0
+      ],
+      "rect": [
+        -59,
+        112,
+        199,
+        290
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.920161306858063,
+        0.920161306858063
+      ],
+      "variante": "",
+      "walk_speed": 150.0,
+      "z": 0
+    },
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "aufstehen",
+        "aufwachen",
+        "fauchen",
+        "gehen_hinten",
+        "gehen_vorn",
+        "haare",
+        "hinlegen",
+        "idle",
+        "minka_umgarnen",
+        "ohrfeige",
+        "putzen",
+        "schlafen",
+        "schnuppern",
+        "schwanz_zucken",
+        "springen",
+        "stehen",
+        "talk",
+        "talk_alt",
+        "tragen",
+        "vom_schrank_fallen",
+        "walk",
+        "walk_d",
+        "walk_l",
+        "walk_r",
+        "walk_u"
+      ],
+      "baseline": 0,
+      "name": "Pixel",
+      "poly": [
+        [
+          78,
+          253
+        ],
+        [
+          152,
+          253
+        ],
+        [
+          152,
+          290
+        ],
+        [
+          78,
+          290
+        ]
+      ],
+      "pos": [
+        115.0,
+        290.0
+      ],
+      "rect": [
+        57,
+        195,
+        173,
+        290
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.920161306858063,
+        0.920161306858063
+      ],
+      "variante": "",
+      "walk_speed": 160.0,
+      "z": 0
+    }
+  ],
+  "hotspots": [
+    {
+      "baseline": 37,
+      "klickbar": true,
+      "name": "Lehmoefen",
+      "poly": [
+        [
+          100,
+          155
+        ],
+        [
+          240,
+          155
+        ],
+        [
+          240,
+          230
+        ],
+        [
+          100,
+          230
+        ]
+      ],
+      "pos": [
+        170.0,
+        192.5
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_LEHMOEFEN",
+      "walk_to": [
+        0.0,
+        67.5
+      ]
+    },
+    {
+      "baseline": 35,
+      "klickbar": true,
+      "name": "Schneidetisch",
+      "poly": [
+        [
+          232,
+          160
+        ],
+        [
+          372,
+          160
+        ],
+        [
+          372,
+          230
+        ],
+        [
+          232,
+          230
+        ]
+      ],
+      "pos": [
+        302.0,
+        195.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_SCHNEIDETISCH",
+      "walk_to": [
+        -2.0,
+        65.0
+      ]
+    },
+    {
+      "baseline": 72,
+      "klickbar": true,
+      "name": "Oelkruege",
+      "poly": [
+        [
+          380,
+          80
+        ],
+        [
+          555,
+          80
+        ],
+        [
+          555,
+          225
+        ],
+        [
+          380,
+          225
+        ]
+      ],
+      "pos": [
+        467.5,
+        152.5
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_OELKRUEGE",
+      "walk_to": [
+        -7.5,
+        107.5
+      ]
+    },
+    {
+      "baseline": 35,
+      "klickbar": true,
+      "name": "LeereAmphoren",
+      "poly": [
+        [
+          540,
+          150
+        ],
+        [
+          595,
+          150
+        ],
+        [
+          595,
+          220
+        ],
+        [
+          540,
+          220
+        ]
+      ],
+      "pos": [
+        567.5,
+        185.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_LEERE_AMPHOREN",
+      "walk_to": [
+        -2.5,
+        75.0
+      ]
+    },
+    {
+      "baseline": 30,
+      "klickbar": true,
+      "name": "KnoblauchUndKraeuter",
+      "poly": [
+        [
+          250,
+          65
+        ],
+        [
+          360,
+          65
+        ],
+        [
+          360,
+          125
+        ],
+        [
+          250,
+          125
+        ]
+      ],
+      "pos": [
+        305.0,
+        95.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_KNOBLAUCH_UND_KRAEUTER",
+      "walk_to": [
+        -5.0,
+        165.0
+      ]
+    },
+    {
+      "baseline": 35,
+      "klickbar": true,
+      "name": "TraubensaftAmphore",
+      "poly": [
+        [
+          492,
+          148
+        ],
+        [
+          537,
+          148
+        ],
+        [
+          537,
+          218
+        ],
+        [
+          492,
+          218
+        ]
+      ],
+      "pos": [
+        514.5,
+        183.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_TRAUBENSAFT_AMPHORE",
+      "walk_to": [
+        0.5,
+        72.0
+      ]
+    },
+    {
+      "baseline": 45,
+      "klickbar": true,
+      "name": "Dampf",
+      "poly": [
+        [
+          110,
+          80
+        ],
+        [
+          230,
+          80
+        ],
+        [
+          230,
+          170
+        ],
+        [
+          110,
+          170
+        ]
+      ],
+      "pos": [
+        170.0,
+        125.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_DAMPF",
+      "walk_to": [
+        0.0,
+        135.0
+      ]
+    },
+    {
+      "baseline": 80,
+      "klickbar": true,
+      "name": "AusgangThronsaal",
+      "poly": [
+        [
+          0,
+          70
+        ],
+        [
+          80,
+          70
+        ],
+        [
+          80,
+          230
+        ],
+        [
+          0,
+          230
+        ]
+      ],
+      "pos": [
+        40.0,
+        150.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_AUSGANG_THRONSAAL",
+      "walk_to": [
+        20.0,
+        110.0
+      ]
+    }
+  ],
+  "kamera_max": [
+    320.0,
+    180.0
+  ],
+  "laufbereiche": [
+    {
+      "name": "Boden",
+      "polys": [
+        [
+          [
+            8,
+            232
+          ],
+          [
+            632,
+            232
+          ],
+          [
+            632,
+            356
+          ],
+          [
+            8,
+            356
+          ]
+        ]
+      ]
+    }
+  ],
+  "marker": {
+    "Start": [
+      70.0,
+      290.0
+    ],
+    "VonThronsaalRamses": [
+      70.0,
+      290.0
+    ]
+  },
+  "modus": "anfang",
+  "props": [
+    {
+      "baseline": -180,
+      "klickbar": false,
+      "name": "Background",
+      "poly": [],
+      "pos": [
+        320.0,
+        0.0
+      ],
+      "rect": [
+        0,
+        0,
+        640,
+        360
+      ],
+      "sichtbar": true,
+      "text": "UI_RAUM_PALASTKUECHE",
+      "walk_to": [
+        0.0,
+        180.0
+      ],
+      "z": -1
+    },
+    {
+      "baseline": 8,
+      "klickbar": true,
+      "name": "Brot",
+      "poly": [
+        [
+          245,
+          158
+        ],
+        [
+          280,
+          158
+        ],
+        [
+          280,
+          175
+        ],
+        [
+          245,
+          175
+        ]
+      ],
+      "pos": [
+        262.5,
+        174.5
+      ],
+      "rect": [
+        236,
+        155,
+        291,
+        180
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_BROT",
+      "walk_to": [
+        -0.5,
+        80.5
+      ],
+      "z": 0
+    },
+    {
+      "baseline": 7,
+      "klickbar": true,
+      "name": "Datteln",
+      "poly": [
+        [
+          330,
+          158
+        ],
+        [
+          362,
+          158
+        ],
+        [
+          362,
+          173
+        ],
+        [
+          330,
+          173
+        ]
+      ],
+      "pos": [
+        346.0,
+        172.5
+      ],
+      "rect": [
+        323,
+        153,
+        369,
+        180
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_DATTELN",
+      "walk_to": [
+        -1.0,
+        82.5
+      ],
+      "z": 0
+    },
+    {
+      "baseline": 8,
+      "klickbar": true,
+      "name": "Zwiebel",
+      "poly": [
+        [
+          298,
+          160
+        ],
+        [
+          326,
+          160
+        ],
+        [
+          326,
+          176
+        ],
+        [
+          298,
+          176
+        ]
+      ],
+      "pos": [
+        312.0,
+        176.0
+      ],
+      "rect": [
+        293,
+        157,
+        331,
+        179
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_ZWIEBEL",
+      "walk_to": [
+        0.0,
+        79.0
+      ],
+      "z": 0
+    },
+    {
+      "baseline": 35,
+      "klickbar": true,
+      "name": "Traubensaft",
+      "poly": [
+        [
+          492,
+          148
+        ],
+        [
+          537,
+          148
+        ],
+        [
+          537,
+          218
+        ],
+        [
+          492,
+          218
+        ]
+      ],
+      "pos": [
+        514.5,
+        218.0
+      ],
+      "rect": [
+        490,
+        138,
+        541,
+        228
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_TRAUBENSAFT",
+      "walk_to": [
+        0.5,
+        37.0
+      ],
+      "z": 0
+    }
+  ],
+  "raum": "palastkueche",
+  "skala": null,
+  "tiefe": 0.85,
+  "welt": "welt-2"
+}

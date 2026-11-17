@@ -1,0 +1,584 @@
+{
+  "bauplan_laufbereich": [
+    [
+      8.0,
+      215.0
+    ],
+    [
+      560.0,
+      215.0
+    ],
+    [
+      580.0,
+      280.0
+    ],
+    [
+      632.0,
+      300.0
+    ],
+    [
+      632.0,
+      356.0
+    ],
+    [
+      8.0,
+      356.0
+    ]
+  ],
+  "breite": 640,
+  "figuren": [
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "bart_kratzen",
+        "gaehnen",
+        "gaehnen_stab",
+        "idle",
+        "muenze",
+        "staken",
+        "talk",
+        "talk_alt",
+        "walk"
+      ],
+      "baseline": 0,
+      "name": "Faehrmann",
+      "poly": [
+        [
+          185,
+          96
+        ],
+        [
+          225,
+          96
+        ],
+        [
+          225,
+          258
+        ],
+        [
+          185,
+          258
+        ]
+      ],
+      "pos": [
+        205.0,
+        258.0
+      ],
+      "rect": [
+        143,
+        91,
+        267,
+        258
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.826241135597229,
+        0.826241135597229
+      ],
+      "variante": "",
+      "walk_speed": 120.0,
+      "z": 0
+    },
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "aufheben",
+        "barfuss",
+        "benutzen",
+        "bohne",
+        "diskus",
+        "fallen",
+        "gaehnen",
+        "gehen_hinten",
+        "gehen_vorn",
+        "heisser_sand",
+        "hinsetzen",
+        "idle",
+        "katapult",
+        "kochloeffel",
+        "kopf_kratzen",
+        "melken",
+        "schulterzucken",
+        "speer",
+        "talk",
+        "talk_alt",
+        "treppe_walk",
+        "vom_boden_aufstehen",
+        "vom_sofa_aufstehen",
+        "wackeln",
+        "walk",
+        "walk_alt",
+        "walk_d",
+        "walk_l",
+        "walk_r",
+        "walk_u",
+        "wenden",
+        "zeigen"
+      ],
+      "baseline": 0,
+      "name": "Max",
+      "poly": [
+        [
+          119,
+          123
+        ],
+        [
+          161,
+          123
+        ],
+        [
+          161,
+          290
+        ],
+        [
+          119,
+          290
+        ]
+      ],
+      "pos": [
+        140.0,
+        290.0
+      ],
+      "rect": [
+        16,
+        120,
+        264,
+        290
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.882978737354279,
+        0.882978737354279
+      ],
+      "variante": "",
+      "walk_speed": 150.0,
+      "z": 0
+    },
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "aufstehen",
+        "aufwachen",
+        "fauchen",
+        "gehen_hinten",
+        "gehen_vorn",
+        "haare",
+        "hinlegen",
+        "idle",
+        "minka_umgarnen",
+        "ohrfeige",
+        "putzen",
+        "schlafen",
+        "schnuppern",
+        "schwanz_zucken",
+        "springen",
+        "stehen",
+        "talk",
+        "talk_alt",
+        "tragen",
+        "vom_schrank_fallen",
+        "walk",
+        "walk_d",
+        "walk_l",
+        "walk_r",
+        "walk_u"
+      ],
+      "baseline": 0,
+      "name": "Pixel",
+      "poly": [
+        [
+          149,
+          255
+        ],
+        [
+          221,
+          255
+        ],
+        [
+          221,
+          290
+        ],
+        [
+          149,
+          290
+        ]
+      ],
+      "pos": [
+        185.0,
+        290.0
+      ],
+      "rect": [
+        129,
+        199,
+        241,
+        290
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.882978737354279,
+        0.882978737354279
+      ],
+      "variante": "",
+      "walk_speed": 160.0,
+      "z": 0
+    }
+  ],
+  "hotspots": [
+    {
+      "baseline": 20,
+      "klickbar": true,
+      "name": "Faehre",
+      "poly": [
+        [
+          0,
+          165
+        ],
+        [
+          170,
+          165
+        ],
+        [
+          170,
+          205
+        ],
+        [
+          0,
+          205
+        ]
+      ],
+      "pos": [
+        85.0,
+        185.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_FAEHRE",
+      "walk_to": [
+        15.0,
+        65.0
+      ]
+    },
+    {
+      "baseline": 22,
+      "klickbar": true,
+      "name": "Meer",
+      "poly": [
+        [
+          0,
+          120
+        ],
+        [
+          160,
+          120
+        ],
+        [
+          160,
+          165
+        ],
+        [
+          0,
+          165
+        ]
+      ],
+      "pos": [
+        80.0,
+        142.5
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_MEER",
+      "walk_to": [
+        20.0,
+        107.5
+      ]
+    },
+    {
+      "baseline": 60,
+      "klickbar": true,
+      "name": "Fischernetze",
+      "poly": [
+        [
+          160,
+          95
+        ],
+        [
+          320,
+          95
+        ],
+        [
+          320,
+          215
+        ],
+        [
+          160,
+          215
+        ]
+      ],
+      "pos": [
+        240.0,
+        155.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_FISCHERNETZE",
+      "walk_to": [
+        0.0,
+        95.0
+      ]
+    },
+    {
+      "baseline": 27,
+      "klickbar": true,
+      "name": "AmphorenAmKai",
+      "poly": [
+        [
+          390,
+          170
+        ],
+        [
+          525,
+          170
+        ],
+        [
+          525,
+          225
+        ],
+        [
+          390,
+          225
+        ]
+      ],
+      "pos": [
+        457.5,
+        197.5
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_AMPHOREN_AM_KAI",
+      "walk_to": [
+        -2.5,
+        52.5
+      ]
+    },
+    {
+      "baseline": 80,
+      "klickbar": true,
+      "name": "SanduhrSyrakus",
+      "poly": [
+        [
+          58,
+          92
+        ],
+        [
+          98,
+          92
+        ],
+        [
+          98,
+          252
+        ],
+        [
+          58,
+          252
+        ]
+      ],
+      "pos": [
+        78.0,
+        172.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_SANDUHR_SYRAKUS",
+      "walk_to": [
+        32.0,
+        90.0
+      ]
+    },
+    {
+      "baseline": 65,
+      "klickbar": true,
+      "name": "GasseZurWerkstatt",
+      "poly": [
+        [
+          520,
+          110
+        ],
+        [
+          640,
+          110
+        ],
+        [
+          640,
+          240
+        ],
+        [
+          520,
+          240
+        ]
+      ],
+      "pos": [
+        580.0,
+        175.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_GASSE_ZUR_WERKSTATT",
+      "walk_to": [
+        10.0,
+        80.0
+      ]
+    },
+    {
+      "baseline": 40,
+      "klickbar": true,
+      "name": "PfadZumGrabhuegel",
+      "poly": [
+        [
+          335,
+          100
+        ],
+        [
+          410,
+          100
+        ],
+        [
+          410,
+          180
+        ],
+        [
+          335,
+          180
+        ]
+      ],
+      "pos": [
+        372.5,
+        140.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_PFAD_ZUM_GRABHUEGEL",
+      "walk_to": [
+        -0.5,
+        92.0
+      ]
+    }
+  ],
+  "kamera_max": [
+    320.0,
+    180.0
+  ],
+  "laufbereiche": [
+    {
+      "name": "Boden",
+      "polys": [
+        [
+          [
+            8,
+            215
+          ],
+          [
+            560,
+            215
+          ],
+          [
+            580,
+            280
+          ],
+          [
+            632,
+            300
+          ],
+          [
+            632,
+            356
+          ],
+          [
+            8,
+            356
+          ]
+        ]
+      ]
+    }
+  ],
+  "marker": {
+    "Start": [
+      140.0,
+      290.0
+    ],
+    "VonFaehre": [
+      140.0,
+      290.0
+    ],
+    "VonGrabhuegel": [
+      372.0,
+      240.0
+    ],
+    "VonWerkstatt": [
+      580.0,
+      270.0
+    ]
+  },
+  "modus": "anfang",
+  "props": [
+    {
+      "baseline": -180,
+      "klickbar": false,
+      "name": "Background",
+      "poly": [],
+      "pos": [
+        320.0,
+        0.0
+      ],
+      "rect": [
+        0,
+        0,
+        640,
+        360
+      ],
+      "sichtbar": true,
+      "text": "UI_RAUM_HAFEN_SYRAKUS",
+      "walk_to": [
+        0.0,
+        180.0
+      ],
+      "z": -1
+    },
+    {
+      "baseline": 11,
+      "klickbar": true,
+      "name": "Tintenfass",
+      "poly": [
+        [
+          255,
+          182
+        ],
+        [
+          280,
+          182
+        ],
+        [
+          280,
+          204
+        ],
+        [
+          255,
+          204
+        ]
+      ],
+      "pos": [
+        267.5,
+        204.0
+      ],
+      "rect": [
+        255,
+        173,
+        282,
+        213
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_TINTENFASS",
+      "walk_to": [
+        -5.5,
+        46.0
+      ],
+      "z": 0
+    }
+  ],
+  "raum": "hafen_syrakus",
+  "skala": null,
+  "tiefe": 0.75,
+  "welt": "welt-2"
+}
