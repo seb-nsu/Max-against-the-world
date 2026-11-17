@@ -15,7 +15,7 @@ Opa steht ihre feste Beschreibung wortgleich in der Zeile CHARACTER LOCK; den Fi
 
 # Shotliste
 
-64 Shots, davon 64 sicher offen („–“: Stand nicht automatisch prüfbar). Kürzel:
+96 Shots, davon 95 sicher offen („–“: Stand nicht automatisch prüfbar). Kürzel:
 R Raum, F Figur, P Posenbogen, B Bewegung, G Gegenstände, N Nahansicht, K Figurenbogen.
 
 | Shot | Bild | Stand |
@@ -49,34 +49,61 @@ R Raum, F Figur, P Posenbogen, B Bewegung, G Gegenstände, N Nahansicht, K Figur
 | W3-F14 | Opa als Hologramm | offen |
 | W3-F15 | Weinender Mann | offen |
 | W3-F16 | Frau mit Regenschirm | offen |
-| W3-F17 | Straßenmusiker | offen |
+| W3-F17 | Straßenmusiker | im Spiel |
 | W3-F18 | Schwarze Katze | offen |
 | W3-F19 | Max als Ente | offen |
 | W3-F20 | Max in der Kapsel | offen |
-| W3-B01 | M.U.T.T.I.: Sprechen | offen |
-| W3-B02 | M.U.T.T.I.: Herunterfahren | offen |
-| W3-B03 | Agent Schmidt: Kopieren | offen |
-| W3-B04 | Max: Zeitlupen-Ausweichen | offen |
-| W3-B05 | Max: Pastille schlucken | offen |
-| W3-B06 | Max: Code-Sicht einschalten | offen |
-| W3-B07 | Pixel: Kabel umstecken | offen |
-| W3-B08 | Pixel: Miau-Morse | offen |
-| W3-B09 | Pixel: Schacht kriechen | offen |
-| W3-B10 | Pixel: Ohrfeige | offen |
-| W3-B11 | Roboter-Hausmeister: Wischen | offen |
-| W3-B12 | Herr Vier: Weinend kochen | offen |
-| W3-B13 | Bernd: Beleidigt davonschweben | offen |
-| W3-B14 | Schwarze Katze: Zweimal vorbeilaufen | offen |
-| W3-B15 | Verwandlung: Effekt | offen |
-| W3-B16 | Portal: Effekt | offen |
-| W3-B17 | Max als Ente: Watscheln | offen |
-| W3-B18 | Regen: Effekt | offen |
-| W3-B19 | Schnee: Effekt | offen |
-| W3-B20 | Pixel: Tasse vom Tisch werfen | offen |
-| W3-B21 | Piepsi: Hochfahren | offen |
-| W3-B22 | Piepsi: Piepen | offen |
-| W3-B23 | Hologramm: Effekt | offen |
-| W3-B24 | Max: Gedankentrick | offen |
+| W3-P01 | Max Büroturm | offen |
+| W3-P02 | Max Welt 3 | offen |
+| W3-P03 | Max als Ente | offen |
+| W3-P04 | Pixel Basis | offen |
+| W3-P05 | Pixel Sofa | offen |
+| W3-P06 | Morphäus | offen |
+| W3-P07 | Orakel-Oma | offen |
+| W3-P08 | Agent Schmidt | offen |
+| W3-P09 | Schmidt-Klon | offen |
+| W3-P10 | Roboter-Hausmeister | offen |
+| W3-P11 | Detektiv Deckert | offen |
+| W3-P12 | Herr Vier | offen |
+| W3-P13 | Kabel-Kalle | offen |
+| W3-P14 | Rebellin | offen |
+| W3-P15 | Rebell | offen |
+| W3-P16 | Straßenmusiker | offen |
+| W3-P17 | Weinender Mann | offen |
+| W3-P18 | Frau mit Regenschirm | offen |
+| W3-P19 | M.U.T.T.I. | offen |
+| W3-P20 | Bernd | offen |
+| W3-P21 | Piepsi | offen |
+| W3-P22 | Opa als Hologramm | offen |
+| W3-B01 | Schwarze Katze: Zweimal vorbeilaufen | offen |
+| W3-B02 | Max als Ente: Watscheln | offen |
+| W3-B03 | Pixel: Schacht kriechen | offen |
+| W3-B04 | Bernd: Beleidigt davonschweben | offen |
+| W3-B05 | Piepsi: Hochfahren | offen |
+| W3-B06 | Piepsi: Piepen | offen |
+| W3-B07 | M.U.T.T.I.: Sprechen | offen |
+| W3-B08 | M.U.T.T.I.: Herunterfahren | offen |
+| W3-B09 | Roboter-Hausmeister: Wischen | offen |
+| W3-B10 | Agent Schmidt: Kopieren | offen |
+| W3-B11 | Verwandlung: Effekt | offen |
+| W3-B12 | Portal: Effekt | offen |
+| W3-B13 | Regen: Effekt | offen |
+| W3-B14 | Schnee: Effekt | offen |
+| W3-B15 | Hologramm: Effekt | offen |
+| W3-B16 | Unterstadt: Fliegende Autos | offen |
+| W3-B17 | Unterstadt: Nudeltopf dampft | offen |
+| W3-B18 | Unterstadt: Neonschild mit Wackelkontakt | offen |
+| W3-B19 | Straßenmusiker: Spielen | offen |
+| W3-B20 | Weinender Mann: Weinen | offen |
+| W3-B21 | Frau mit Regenschirm: Schimpfen | offen |
+| W3-B22 | Apothekengasse: Ratte huscht | offen |
+| W3-B23 | Apothekengasse: Automat scannt | offen |
+| W3-B24 | Widerstandsbasis: Großrechner | offen |
+| W3-B25 | Kühlung: Ventilator | offen |
+| W3-B26 | Stadtstraße: Vogelschwarm im Takt | offen |
+| W3-B27 | Küche der Orakel-Oma: Eieruhr | offen |
+| W3-B28 | Büroturm, 50. Stock: Klone tippen | offen |
+| W3-B29 | Kern von M.U.T.T.I.: Lichtband | offen |
 | W3-G01 | Verwandlung (2×4) | offen |
 | W3-G02 | Kekse-Zustände (1×2) | offen |
 | W3-G03 | Unterstadt (2×3) | offen |
@@ -84,6 +111,11 @@ R Raum, F Figur, P Posenbogen, B Bewegung, G Gegenstände, N Nahansicht, K Figur
 | W3-G05 | Omas Sparschwein (1×3, Szenen-Sprites für Rätsel 4, kein Inventar) | offen |
 | W3-G06 | Locher (1×2, Szenen-Sprites für das Zeitlupen-Ausweichen im Büroturm, kein Inventar) | offen |
 | W3-G07 | Deko Welt 3 (3×3) | offen |
+| W3-N01 | Telefonbuchseite (Rätsel 8) | offen |
+| W3-N02 | Akte (Regel 1) | offen |
+| W3-N03 | Kochbuch (Regel 2) | offen |
+| W3-N04 | Kritzelei (Regel 3) | offen |
+| W3-N05 | Morse-Tabelle (Rätsel 13) | offen |
 
 # Räume
 
@@ -91,18 +123,14 @@ R Raum, F Figur, P Posenbogen, B Bewegung, G Gegenstände, N Nahansicht, K Figur
 
 **Shot W3-R01**
 
-**Zustände:** 1280×360, linke und rechte Hälfte einzeln erzeugen (je Hälfte den Satzteil LEFT HALF oder RIGHT HALF mit dem Anfang des Motivs)
+**Zustände:** 1280×360 als ein Panorama in einem Bild (Seitenverhältnis 32:9)
 
 ```text
 STYLE: Concept art for a 2D point-and-click adventure game in the style of classic 1990s adventure games, outdoor scene seen straight on like a wide stage, camera at the eye level of a standing person, horizon at about 40 percent of the image height, open walkable ground with gentle depth across the lower third kept free of objects except at the left and right edges, wide shot: a standing adult at the front edge would be about 52 percent of the image height, no top-down, bird's-eye or strong three-quarter view, no fisheye, every object drawn exactly as described and nothing added, signs and labels without any letters or numbers, light from the upper left with soft shadows to the lower right, humorous and whimsical.
-SCENE: Wide 1280x360 scene built from two 640x360 halves that join seamlessly. LEFT HALF: Narrow rainy street of a future megacity at night, front view with gentle depth. Left edge: a tiny noodle stall with a counter, four round stools, a big steaming pot and a red paper lantern, a concrete pillar beside it. Center: an old-fashioned glass phone booth glowing pale cyan, a corded phone and a thick phone book on a small shelf inside. Right: an empty patch of wet sidewalk for a street musician; behind it in the back wall a low riveted steel hatch standing half open, the rusty tail fin of a crashed hovercraft wedged between the buildings above it. Small white paper origami unicorn lying in a puddle at the front edge. Background: stacked skyscrapers with blank neon signs, flying cars as tiny lights. RIGHT HALF: The same street continuing. Left: a dripping shop awning over a dry strip of sidewalk, a giant blank neon billboard shaped like a pizza slice above it. Center: a narrow dark alley entrance between two buildings with a faint green pharmacy glow at its far end. Right edge: the street sloping down into a low concrete underpass toward a round steel door far in the back. A steaming street grate in the floor, puddles reflecting magenta and cyan neon.
+SCENE: Wide panoramic 1280x360 scene in one continuous image. Left part: Narrow rainy street of a future megacity at night, front view with gentle depth. Left edge: a tiny noodle stall with a counter, four round stools, a big steaming pot and a red paper lantern, a concrete pillar beside it. Center: an old-fashioned glass phone booth glowing pale cyan, a corded phone and a thick phone book on a small shelf inside. Right: an empty patch of wet sidewalk for a street musician; behind it in the back wall a low riveted steel hatch standing half open, the rusty tail fin of a crashed hovercraft wedged between the buildings above it. Small white paper origami unicorn lying in a puddle at the front edge. Background: stacked skyscrapers with blank neon signs, flying cars as tiny lights. Right part: Left: a dripping shop awning over a dry strip of sidewalk, a giant blank neon billboard shaped like a pizza slice above it. Center: a narrow dark alley entrance between two buildings with a faint green pharmacy glow at its far end. Right edge: the street sloping down into a low concrete underpass toward a round steel door far in the back. A steaming street grate in the floor, puddles reflecting magenta and cyan neon.
 PALETTE: rainy night cyberpunk palette of deep navy and wet asphalt grey, bright accents only in two neon magenta and two neon cyan tones, wet reflective streets, neon reflections in puddles, rising steam. Color anchors, approximate: deep navy #181425, wet asphalt #262b44, concrete grey #3a4466, neon magenta #ff4fd8 and #b0207a, neon cyan #3ff7ff and #0099db.
 NEGATIVE: no characters, people or animals in the walkable area, no text, letters, numbers or logos, no faces or robot features on objects, no loose objects that can be picked up, no objects that are not described, no top-down, bird's-eye or fisheye view, no tilted floor, no photorealism, no 3D render, no blur, no watermark
 ```
-
-**Breitbild:** erst die linke Hälfte erzeugen (alle Zeilen, aus SCENE nur Anfang, „LEFT HALF“
-und Hintergrund), dann im selben Chat die rechte Hälfte, die nahtlos anschließt. Zusammensetzen
-macht Claude.
 
 ## Apothekengasse mit Pastillenautomat
 
@@ -130,18 +158,14 @@ NEGATIVE: no new objects, no changed camera or framing, no style change, no text
 
 **Shot W3-R03**
 
-**Zustände:** Fenster zu und offen; Tasse auf dem Tisch und Kaffee am Boden. 1280×360, linke und rechte Hälfte einzeln erzeugen (je Hälfte den Satzteil LEFT HALF oder RIGHT HALF mit dem Anfang des Motivs)
+**Zustände:** Fenster zu und offen; Tasse auf dem Tisch und Kaffee am Boden. 1280×360 als ein Panorama in einem Bild (Seitenverhältnis 32:9)
 
 ```text
 STYLE: Concept art for a 2D point-and-click adventure game in the style of classic 1990s adventure games, front view of the room with gentle one-point perspective, camera at the eye level of a standing person looking straight at the back wall, back wall parallel to the picture plane, vanishing point in the center at about 40 percent of the image height, side walls at most as narrow angled strips at the image edges, open walkable floor with gentle depth across the lower third to half of the image kept free of objects except at the left and right edges, wide shot from further back so the room feels spacious: a standing adult at the front edge would be about 52 percent of the image height, so doors and tall cupboards reach only about 50 percent of the image height, chairs about 25 percent and tables about 22 percent, no top-down, bird's-eye or strong three-quarter view, no fisheye, every object drawn exactly as described and nothing added, no faces or robot features on objects, small loose objects that can be picked up left out, book spines, calendars, posters and labels without any letters or numbers, light from the upper left with soft shadows to the lower right, humorous and whimsical, warm hand-painted look, 16:9, no text, no letters, no logos.
-SCENE: Wide 1280x360 scene built from two 640x360 halves that join seamlessly. LEFT HALF: Inside the rusty hull of a crashed hovercraft turned into a hideout, front view with gentle depth, curved riveted hull plates as back wall. Far left edge: an open riveted hull hatch with neon light outside, the exit to the street. Left: a row of four sleeping pods with glass lids, a round hatch window in the ceiling directly above the first pod; beside them a patch panel with three sockets, red with a circle, green with a triangle, yellow with a square, three loose cable plugs hanging below with small tags showing a circle, a triangle and a square, cables running to the pods. Center: an old bulky computer terminal with a green screen and a tiny keyboard on a metal desk. Right: a fuse box with three big switches and blank sticker labels; above it a faded advertising poster of a white stand mixer wearing a floral apron, blank text area. RIGHT HALF: The same hideout continuing. Left: the ship's old cockpit console with a hundred small switches and no screen, next to a tall mainframe cabinet with two tape reels and a round yellow lamp. Center: a small metal table with a dirty white coffee mug standing right at its edge, a stack of greasy pizza boxes up to the ceiling, a towel on a wall hook. Right: an open square ventilation shaft at floor height, cat-sized, and an empty cluttered corner with oil stains on the floor. Dim blue light, neon leaking through cracks.
+SCENE: Wide panoramic 1280x360 scene in one continuous image. Left part: Inside the rusty hull of a crashed hovercraft turned into a hideout, front view with gentle depth, curved riveted hull plates as back wall. Far left edge: an open riveted hull hatch with neon light outside, the exit to the street. Left: a row of four sleeping pods with glass lids, a round hatch window in the ceiling directly above the first pod; beside them a patch panel with three sockets, red with a circle, green with a triangle, yellow with a square, three loose cable plugs hanging below with small tags showing a circle, a triangle and a square, cables running to the pods. Center: an old bulky computer terminal with a green screen and a tiny keyboard on a metal desk. Right: a fuse box with three big switches and blank sticker labels; above it a faded advertising poster of a white stand mixer wearing a floral apron, blank text area. Right part: Left: the ship's old cockpit console with a hundred small switches and no screen, next to a tall mainframe cabinet with two tape reels and a round yellow lamp. Center: a small metal table with a dirty white coffee mug standing right at its edge, a stack of greasy pizza boxes up to the ceiling, a towel on a wall hook. Right: an open square ventilation shaft at floor height, cat-sized, and an empty cluttered corner with oil stains on the floor. Dim blue light, neon leaking through cracks.
 PALETTE: dim cyberpunk interior palette of deep navy and concrete grey, bright accents only in neon magenta and neon cyan from screens and tubes, damp walls, a few drips, no street, no sky. Color anchors, approximate: deep navy #181425, concrete grey #3a4466, damp blue-grey #5a6988, neon magenta #ff4fd8, neon cyan #3ff7ff.
 NEGATIVE: no characters, people or animals in the walkable area, no text, letters, numbers or logos, no faces or robot features on objects, no loose objects that can be picked up, no objects that are not described, no top-down, bird's-eye or fisheye view, no tilted floor, no photorealism, no 3D render, no blur, no watermark
 ```
-
-**Breitbild:** erst die linke Hälfte erzeugen (alle Zeilen, aus SCENE nur Anfang, „LEFT HALF“
-und Hintergrund), dann im selben Chat die rechte Hälfte, die nahtlos anschließt. Zusammensetzen
-macht Claude.
 
 **Zweite Fassung mit Maske (Bild der vorigen Fassung anhängen oder im selben Chat bleiben):**
 
@@ -152,7 +176,7 @@ KEEP: everything outside that area stays pixel-identical: same camera, framing, 
 NEGATIVE: no new objects, no changed camera or framing, no style change, no text
 ```
 
-**Zweite Fassung mit Maske (Bild der vorigen Fassung anhängen oder im selben Chat bleiben):**
+**Dritte Fassung mit Maske (Bild der vorigen Fassung anhängen oder im selben Chat bleiben):**
 
 ```text
 Edit the attached image. Change only the area that this change touches; if your tool can select or mask an area, mark exactly that area.
@@ -209,18 +233,14 @@ NEGATIVE: no new objects, no changed camera or framing, no style change, no text
 
 **Shot W3-R06**
 
-**Zustände:** Tag und Nacht (Strom der Kapsel aus). 1280×360, linke und rechte Hälfte einzeln erzeugen (je Hälfte den Satzteil LEFT HALF oder RIGHT HALF mit dem Anfang des Motivs)
+**Zustände:** Tag und Nacht (Strom der Kapsel aus). 1280×360 als ein Panorama in einem Bild (Seitenverhältnis 32:9)
 
 ```text
 STYLE: Concept art for a 2D point-and-click adventure game in the style of classic 1990s adventure games, outdoor scene seen straight on like a wide stage, camera at the eye level of a standing person, horizon at about 40 percent of the image height, open walkable ground with gentle depth across the lower third kept free of objects except at the left and right edges, wide shot: a standing adult at the front edge would be about 52 percent of the image height, no top-down, bird's-eye or strong three-quarter view, no fisheye, every object drawn exactly as described and nothing added, signs and labels without any letters or numbers, light from the upper left with soft shadows to the lower right, humorous and whimsical.
-SCENE: Wide 1280x360 scene built from two 640x360 halves that join seamlessly. LEFT HALF: A suspiciously perfect city street on a sunny day, front view with gentle depth. Left: a small wooden bedside table standing alone on the sidewalk with a 1980s clock radio on it, red digits on its display, in front of a narrow, too-clean alley entrance. Center: identical white houses with identical red cars parked in front; the middle house has lace curtains, a front door and a small blank sign beside it. Right: identical round trees and identical street lamps in a perfect row. A long clean sidewalk across the whole floor, no cracks, no gum. Perfect blue sky with one cloud. RIGHT HALF: The same street continuing: more identical trees and red cars on the left; center and right the ground floor of a tall glass office tower with a closed glass entrance door and a small grey plate beside it. Clean sidewalk continues for the black cat's walk. The same cloud repeated twice more.
+SCENE: Wide panoramic 1280x360 scene in one continuous image. Left part: A suspiciously perfect city street on a sunny day, front view with gentle depth. Left: a small wooden bedside table standing alone on the sidewalk with a 1980s clock radio on it, red digits on its display, in front of a narrow, too-clean alley entrance. Center: identical white houses with identical red cars parked in front; the middle house has lace curtains, a front door and a small blank sign beside it. Right: identical round trees and identical street lamps in a perfect row. A long clean sidewalk across the whole floor, no cracks, no gum. Perfect blue sky with one cloud. Right part: more identical trees and red cars on the left; center and right the ground floor of a tall glass office tower with a closed glass entrance door and a small grey plate beside it. Clean sidewalk continues for the black cat's walk. The same cloud repeated twice more.
 PALETTE: overly clean daytime city palette with a faint green tint, flat perfect blue sky, even shadowless-looking light, no dirt anywhere, slightly too symmetrical. Color anchors, approximate: clean grey #c0cbdc, white #ffffff, flat sky blue #0099db, faint green tint #63c74d, soft green shadow #3e8948.
 NEGATIVE: no characters, people or animals in the walkable area, no text, letters, numbers or logos, no faces or robot features on objects, no loose objects that can be picked up, no objects that are not described, no top-down, bird's-eye or fisheye view, no tilted floor, no photorealism, no 3D render, no blur, no watermark
 ```
-
-**Breitbild:** erst die linke Hälfte erzeugen (alle Zeilen, aus SCENE nur Anfang, „LEFT HALF“
-und Hintergrund), dann im selben Chat die rechte Hälfte, die nahtlos anschließt. Zusammensetzen
-macht Claude.
 
 **Zweite Fassung mit Maske (Bild der vorigen Fassung anhängen oder im selben Chat bleiben):**
 
@@ -659,275 +679,373 @@ KEEP: everything outside that area stays pixel-identical: same character, pose, 
 NEGATIVE: no new objects, no changed camera or framing, no style change, no text
 ```
 
+# Posenbögen
+
+Je Bogen das angegebene Blatt anhängen (das fertige Konzeptbild der Figur aus Gemini, bei Max sein
+Figurenbogen) und den Block kopieren. Einzelne misslungene Posen mit Maske nachbessern, nicht neu
+erzeugen. Zwischenbilder baut Claude in Aseprite; Timing und Beine kommen aus dem 3D-Clip.
+
+## Max Büroturm
+
+**Shot W3-P01**
+
+**Anhängen:** Max' Figurenblatt · **Posen:** 4 · **Wofür:** Zeitlupen-Ausweichen
+
+```text
+STYLE: Pose sheet in exactly the same style, colors and proportions as the attached character sheet: same character, same head size, same hair and clothing colors, same line weight and flat cel shading, light from upper left. The poses side by side in one row, evenly spaced with clear empty space between them, all at the same scale on one flat baseline, each a frozen still pose, no motion blur, no ghosting, no speed lines, no duplicated limbs. Solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no text, no ground shadow, no frames or panels.
+SUBJECT: Max exactly as on the attached character sheet, unchanged.
+CHARACTER LOCK (word for word; where SUBJECT or POSES say otherwise, they win): Max, a lanky 16-year-old boy, the reference height for every other character, head about a quarter of his height, slight slouch with hanging shoulders. Messy dark brown hair (#733e39, shadow #3e2731, highlight #b86f50) with shaggy strands falling over his forehead and eyes. Fair skin (#e8b796, shadow #c28569), sleepy half-closed eyes, lopsided smirk, a few freckles. Oversized dark slate blue-grey hoodie (#3a4466, shadow #262b44, highlight #5a6988), hood down, sleeves partly over his hands, uneven drawstrings, a tiny retro TV print with a turquoise screen (#2ce8f5) on the chest. Dark blue jeans (#124e89) slightly too long and rolled up at the hem. Worn red sneakers (#e43b44, shadow #a22633) with white soles (#ffffff), one lace untied. Dark outline #262b44, never pure black.
+POSES (left to right): Four poses of the boy Max, feet planted: (1) leaning far backwards, arms circling out to the sides; (2) at the lowest point, back almost horizontal, arms spread, face strained; (3) halfway up again, one hand pressed to his lower back; (4) frozen upright, both hands on his lower back, pained face.
+END POSE: the motion starts and ends in the neutral pose of the attached sheet; do not draw that pose again, but every pose must be able to return to it with the feet in the same place unless a pose says the feet move.
+CAMERA: static, strict side view as on the attached sheet, same scale and the same flat baseline in every pose, no zoom, no pan.
+NEGATIVE: no second character, no parts of the boy Max from the reference unless this is Max, no props that are not described, no environment, no floor, no ground shadow, no checkerboard, no frames, panels or cell borders, no text, labels or numbers, no motion blur, no ghosting, no duplicated or extra limbs, no change to face, proportions, clothing or colors, no photorealism, no 3D render, no watermark, no in-between blur, no speed lines, no smear frames, no sliding feet, no change of scale or baseline between poses, no camera movement, no zoom, no perspective change, no morphing, no extra poses beyond the ones listed
+```
+
+## Max Welt 3
+
+**Shot W3-P02**
+
+**Anhängen:** Max' Figurenblatt · **Posen:** 4 · **Wofür:** Pastille, Code-Sicht, Gedankentrick
+
+```text
+STYLE: Pose sheet in exactly the same style, colors and proportions as the attached character sheet: same character, same head size, same hair and clothing colors, same line weight and flat cel shading, light from upper left. The poses side by side in one row, evenly spaced with clear empty space between them, all at the same scale on one flat baseline, each a frozen still pose, no motion blur, no ghosting, no speed lines, no duplicated limbs. Solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no text, no ground shadow, no frames or panels.
+SUBJECT: Max exactly as on the attached character sheet, unchanged.
+CHARACTER LOCK (word for word; where SUBJECT or POSES say otherwise, they win): Max, a lanky 16-year-old boy, the reference height for every other character, head about a quarter of his height, slight slouch with hanging shoulders. Messy dark brown hair (#733e39, shadow #3e2731, highlight #b86f50) with shaggy strands falling over his forehead and eyes. Fair skin (#e8b796, shadow #c28569), sleepy half-closed eyes, lopsided smirk, a few freckles. Oversized dark slate blue-grey hoodie (#3a4466, shadow #262b44, highlight #5a6988), hood down, sleeves partly over his hands, uneven drawstrings, a tiny retro TV print with a turquoise screen (#2ce8f5) on the chest. Dark blue jeans (#124e89) slightly too long and rolled up at the hem. Worn red sneakers (#e43b44, shadow #a22633) with white soles (#ffffff), one lace untied. Dark outline #262b44, never pure black.
+POSES (left to right): Four poses of the boy Max, legs unchanged: (1) holding a tiny red lozenge up between two fingers, looking at it doubtfully; (2) mouth closed, eyes wide after swallowing; (3) squinting hard with two fingers pressed to his temple; (4) one open hand held out sideways at chest height, serious mystical face.
+END POSE: the motion starts and ends in the neutral pose of the attached sheet; do not draw that pose again, but every pose must be able to return to it with the feet in the same place unless a pose says the feet move.
+CAMERA: static, strict side view as on the attached sheet, same scale and the same flat baseline in every pose, no zoom, no pan.
+NEGATIVE: no second character, no parts of the boy Max from the reference unless this is Max, no props that are not described, no environment, no floor, no ground shadow, no checkerboard, no frames, panels or cell borders, no text, labels or numbers, no motion blur, no ghosting, no duplicated or extra limbs, no change to face, proportions, clothing or colors, no photorealism, no 3D render, no watermark, no in-between blur, no speed lines, no smear frames, no sliding feet, no change of scale or baseline between poses, no camera movement, no zoom, no perspective change, no morphing, no extra poses beyond the ones listed
+```
+
+## Max als Ente
+
+**Shot W3-P03**
+
+**Anhängen:** Konzeptblatt Max als Ente · **Posen:** 4 · **Wofür:** Watscheln
+
+```text
+STYLE: Pose sheet in exactly the same style, colors and proportions as the attached character sheet: same character, same head size, same hair and clothing colors, same line weight and flat cel shading, light from upper left. The poses side by side in one row, evenly spaced with clear empty space between them, all at the same scale on one flat baseline, each a frozen still pose, no motion blur, no ghosting, no speed lines, no duplicated limbs. Solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no text, no ground shadow, no frames or panels.
+SUBJECT: Max exactly as on the attached character sheet, unchanged.
+CHARACTER LOCK (word for word; where SUBJECT or POSES say otherwise, they win): Max, a lanky 16-year-old boy, the reference height for every other character, head about a quarter of his height, slight slouch with hanging shoulders. Messy dark brown hair (#733e39, shadow #3e2731, highlight #b86f50) with shaggy strands falling over his forehead and eyes. Fair skin (#e8b796, shadow #c28569), sleepy half-closed eyes, lopsided smirk, a few freckles. Oversized dark slate blue-grey hoodie (#3a4466, shadow #262b44, highlight #5a6988), hood down, sleeves partly over his hands, uneven drawstrings, a tiny retro TV print with a turquoise screen (#2ce8f5) on the chest. Dark blue jeans (#124e89) slightly too long and rolled up at the hem. Worn red sneakers (#e43b44, shadow #a22633) with white soles (#ffffff), one lace untied. Dark outline #262b44, never pure black.
+POSES (left to right): Four poses of the duck in the hoodie: (1) leaning on the left foot, right foot lifted; (2) both feet down, beak open quacking; (3) leaning on the right foot, left foot lifted; (4) both feet down, confused blink.
+END POSE: the motion starts and ends in the neutral pose of the attached sheet; do not draw that pose again, but every pose must be able to return to it with the feet in the same place unless a pose says the feet move.
+CAMERA: static, strict side view as on the attached sheet, same scale and the same flat baseline in every pose, no zoom, no pan.
+NEGATIVE: no second character, no parts of the boy Max from the reference unless this is Max, no props that are not described, no environment, no floor, no ground shadow, no checkerboard, no frames, panels or cell borders, no text, labels or numbers, no motion blur, no ghosting, no duplicated or extra limbs, no change to face, proportions, clothing or colors, no photorealism, no 3D render, no watermark, no in-between blur, no speed lines, no smear frames, no sliding feet, no change of scale or baseline between poses, no camera movement, no zoom, no perspective change, no morphing, no extra poses beyond the ones listed
+```
+
+## Pixel Basis
+
+**Shot W3-P04**
+
+**Anhängen:** Pixels Figurenblatt · **Posen:** 4 · **Wofür:** Kabel umstecken, Miau-Morse
+
+```text
+STYLE: Pose sheet in exactly the same style, colors and proportions as the attached character sheet: same character, same head size, same hair and clothing colors, same line weight and flat cel shading, light from upper left. The poses side by side in one row, evenly spaced with clear empty space between them, all at the same scale on one flat baseline, each a frozen still pose, no motion blur, no ghosting, no speed lines, no duplicated limbs. Solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no text, no ground shadow, no frames or panels.
+SUBJECT: the tomcat exactly as on the attached character sheet, unchanged.
+CHARACTER LOCK (word for word; where SUBJECT or POSES say otherwise, they win): The tomcat, a chubby round cat about a third of Max's height when sitting, short legs, light silver-grey fur (#c0cbdc, shadow #8b9bb4, highlight #ffffff) with three darker blue-grey stripes on his back (#5a6988), white chest and four white paws (#ffffff), a very fluffy tail, a clearly visible notch torn out of his left ear, smug half-closed amber eyes (#feae34), pink nose and inner ears (#f6757a), a red collar (#e43b44, shadow #a22633) with a small round silver speaker on the front and a clearly visible turquoise light (#2ce8f5). Not orange, no tabby markings on the face, plain unmarked forehead, no heavy eyelids. Dark outline #262b44, never pure black.
+POSES (left to right): Four poses of the tomcat: (1) holding a cable plug in his teeth, pulling backwards; (2) carrying the plug, one step to the side; (3) sitting on a desk, one front paw raised over a keyboard, mouth open meowing; (4) the same, paw pressed down, collar light lit.
+END POSE: the motion starts and ends in the neutral pose of the attached sheet; do not draw that pose again, but every pose must be able to return to it with the feet in the same place unless a pose says the feet move.
+CAMERA: static, strict side view as on the attached sheet, same scale and the same flat baseline in every pose, no zoom, no pan.
+NEGATIVE: no second character, no parts of the boy Max from the reference unless this is Max, no props that are not described, no environment, no floor, no ground shadow, no checkerboard, no frames, panels or cell borders, no text, labels or numbers, no motion blur, no ghosting, no duplicated or extra limbs, no change to face, proportions, clothing or colors, no photorealism, no 3D render, no watermark, no in-between blur, no speed lines, no smear frames, no sliding feet, no change of scale or baseline between poses, no camera movement, no zoom, no perspective change, no morphing, no extra poses beyond the ones listed
+```
+
+## Pixel Sofa
+
+**Shot W3-P05**
+
+**Anhängen:** Pixels Figurenblatt · **Posen:** 4 · **Wofür:** Ohrfeige, Tasse werfen
+
+```text
+STYLE: Pose sheet in exactly the same style, colors and proportions as the attached character sheet: same character, same head size, same hair and clothing colors, same line weight and flat cel shading, light from upper left. The poses side by side in one row, evenly spaced with clear empty space between them, all at the same scale on one flat baseline, each a frozen still pose, no motion blur, no ghosting, no speed lines, no duplicated limbs. Solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no text, no ground shadow, no frames or panels.
+SUBJECT: the tomcat exactly as on the attached character sheet, unchanged.
+CHARACTER LOCK (word for word; where SUBJECT or POSES say otherwise, they win): The tomcat, a chubby round cat about a third of Max's height when sitting, short legs, light silver-grey fur (#c0cbdc, shadow #8b9bb4, highlight #ffffff) with three darker blue-grey stripes on his back (#5a6988), white chest and four white paws (#ffffff), a very fluffy tail, a clearly visible notch torn out of his left ear, smug half-closed amber eyes (#feae34), pink nose and inner ears (#f6757a), a red collar (#e43b44, shadow #a22633) with a small round silver speaker on the front and a clearly visible turquoise light (#2ce8f5). Not orange, no tabby markings on the face, plain unmarked forehead, no heavy eyelids. Dark outline #262b44, never pure black.
+POSES (left to right): Four poses of the tomcat: (1) crouched, ready to leap up; (2) in the air, one front paw swung wide to slap; (3) sitting on a table, staring at the viewer, one paw resting on a mug; (4) the same, the paw pushed through, the mug gone, smug face.
+END POSE: the motion starts and ends in the neutral pose of the attached sheet; do not draw that pose again, but every pose must be able to return to it with the feet in the same place unless a pose says the feet move.
+CAMERA: static, strict side view as on the attached sheet, same scale and the same flat baseline in every pose, no zoom, no pan.
+NEGATIVE: no second character, no parts of the boy Max from the reference unless this is Max, no props that are not described, no environment, no floor, no ground shadow, no checkerboard, no frames, panels or cell borders, no text, labels or numbers, no motion blur, no ghosting, no duplicated or extra limbs, no change to face, proportions, clothing or colors, no photorealism, no 3D render, no watermark, no in-between blur, no speed lines, no smear frames, no sliding feet, no change of scale or baseline between poses, no camera movement, no zoom, no perspective change, no morphing, no extra poses beyond the ones listed
+```
+
+## Morphäus
+
+**Shot W3-P06**
+
+**Anhängen:** Konzeptblatt Morphäus · **Posen:** 4 · **Wofür:** Reden und Warten, Schild
+
+```text
+STYLE: Pose sheet in exactly the same style, colors and proportions as the attached character sheet: same character, same head size, same hair and clothing colors, same line weight and flat cel shading, light from upper left. The poses side by side in one row, evenly spaced with clear empty space between them, all at the same scale on one flat baseline, each a frozen still pose, no motion blur, no ghosting, no speed lines, no duplicated limbs. Solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no text, no ground shadow, no frames or panels.
+SUBJECT: the character exactly as on the attached character sheet: same face, head size, proportions, costume and colors, nothing redesigned.
+CHARACTER (appearance only, word for word from its sheet; ignore the pose in it): Morphäus, a calm tall man about 106 percent of the boy Max's height, short red hair, neat red beard, reading glasses pushed up on his forehead. Chunky oatmeal knitted cardigan over a dark green turtleneck, brown corduroy trousers, brown shoes. A small cardboard sign with blank lines in his right hand. Calm neutral standing pose, wise slight smile, facing right. Second pose: shrugging apologetically. No leather coat, no small dark sunglasses, not bald.
+POSES (left to right): Four poses of the calm tall man: (1) talking, holding up the small cardboard sign; (2) talking, shrugging apologetically, palms up; (3) idle: pushing the reading glasses up on his forehead; (4) idle: hands folded in front of the cardigan, patient smile.
+END POSE: the motion starts and ends in the neutral pose of the attached sheet; do not draw that pose again, but every pose must be able to return to it with the feet in the same place unless a pose says the feet move.
+CAMERA: static, strict side view as on the attached sheet, same scale and the same flat baseline in every pose, no zoom, no pan.
+NEGATIVE: no second character, no parts of the boy Max from the reference unless this is Max, no props that are not described, no environment, no floor, no ground shadow, no checkerboard, no frames, panels or cell borders, no text, labels or numbers, no motion blur, no ghosting, no duplicated or extra limbs, no change to face, proportions, clothing or colors, no photorealism, no 3D render, no watermark, no in-between blur, no speed lines, no smear frames, no sliding feet, no change of scale or baseline between poses, no camera movement, no zoom, no perspective change, no morphing, no extra poses beyond the ones listed
+```
+
+## Orakel-Oma
+
+**Shot W3-P07**
+
+**Anhängen:** Konzeptblatt Orakel-Oma · **Posen:** 4 · **Wofür:** Reden und Warten, Kekse
+
+```text
+STYLE: Pose sheet in exactly the same style, colors and proportions as the attached character sheet: same character, same head size, same hair and clothing colors, same line weight and flat cel shading, light from upper left. The poses side by side in one row, evenly spaced with clear empty space between them, all at the same scale on one flat baseline, each a frozen still pose, no motion blur, no ghosting, no speed lines, no duplicated limbs. Solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no text, no ground shadow, no frames or panels.
+SUBJECT: the character exactly as on the attached character sheet: same face, head size, proportions, costume and colors, nothing redesigned.
+CHARACTER (appearance only, word for word from its sheet; ignore the pose in it): Orakel-Oma, a cheerful plump short old lady about as tall as the boy Max, grey curls, rosy cheeks, knowing smile. Flowery light blue dress, white apron, fluffy pink slippers, red checkered oven mitts on both hands. Holding a baking tray of round golden cookies in front of her. Neutral standing pose, facing right.
+POSES (left to right): Four poses of the cheerful old lady: (1) talking, offering the baking tray of cookies forward; (2) talking, one oven mitt raised, knowing wink; (3) idle: bending to peek into the oven; (4) idle: dusting flour off her apron.
+END POSE: the motion starts and ends in the neutral pose of the attached sheet; do not draw that pose again, but every pose must be able to return to it with the feet in the same place unless a pose says the feet move.
+CAMERA: static, strict side view as on the attached sheet, same scale and the same flat baseline in every pose, no zoom, no pan.
+NEGATIVE: no second character, no parts of the boy Max from the reference unless this is Max, no props that are not described, no environment, no floor, no ground shadow, no checkerboard, no frames, panels or cell borders, no text, labels or numbers, no motion blur, no ghosting, no duplicated or extra limbs, no change to face, proportions, clothing or colors, no photorealism, no 3D render, no watermark, no in-between blur, no speed lines, no smear frames, no sliding feet, no change of scale or baseline between poses, no camera movement, no zoom, no perspective change, no morphing, no extra poses beyond the ones listed
+```
+
+## Agent Schmidt
+
+**Shot W3-P08**
+
+**Anhängen:** Konzeptblatt Agent Schmidt · **Posen:** 4 · **Wofür:** Reden und Warten, Kopierer, Brille
+
+```text
+STYLE: Pose sheet in exactly the same style, colors and proportions as the attached character sheet: same character, same head size, same hair and clothing colors, same line weight and flat cel shading, light from upper left. The poses side by side in one row, evenly spaced with clear empty space between them, all at the same scale on one flat baseline, each a frozen still pose, no motion blur, no ghosting, no speed lines, no duplicated limbs. Solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no text, no ground shadow, no frames or panels.
+SUBJECT: the character exactly as on the attached character sheet: same face, head size, proportions, costume and colors, nothing redesigned.
+CHARACTER (appearance only, word for word from its sheet; ignore the pose in it): Agent Schmidt, a stiff upright man about 106 percent of the boy Max's height, neat blond flat-top haircut, rectangular black sunglasses, thin pressed lips. Brown corduroy suit, white shirt, red bow tie, fuzzy pink slippers instead of shoes, the left slipper slightly askew. A softly glowing green translucent file folder under his left arm. Neutral standing pose, facing right.
+POSES (left to right): Four poses of the stiff agent: (1) talking, one finger raised, chin up; (2) one flat hand stretched forward at waist height as if laid on a copier lid; (3) taking off the sunglasses with one hand, uncertain eyes; (4) idle: straightening his bow tie.
+END POSE: the motion starts and ends in the neutral pose of the attached sheet; do not draw that pose again, but every pose must be able to return to it with the feet in the same place unless a pose says the feet move.
+CAMERA: static, strict side view as on the attached sheet, same scale and the same flat baseline in every pose, no zoom, no pan.
+NEGATIVE: no second character, no parts of the boy Max from the reference unless this is Max, no props that are not described, no environment, no floor, no ground shadow, no checkerboard, no frames, panels or cell borders, no text, labels or numbers, no motion blur, no ghosting, no duplicated or extra limbs, no change to face, proportions, clothing or colors, no photorealism, no 3D render, no watermark, no in-between blur, no speed lines, no smear frames, no sliding feet, no change of scale or baseline between poses, no camera movement, no zoom, no perspective change, no morphing, no extra poses beyond the ones listed
+```
+
+## Schmidt-Klon
+
+**Shot W3-P09**
+
+**Anhängen:** Konzeptblatt Schmidt-Klon · **Posen:** 2 · **Wofür:** Kaffee
+
+```text
+STYLE: Pose sheet in exactly the same style, colors and proportions as the attached character sheet: same character, same head size, same hair and clothing colors, same line weight and flat cel shading, light from upper left. The poses side by side in one row, evenly spaced with clear empty space between them, all at the same scale on one flat baseline, each a frozen still pose, no motion blur, no ghosting, no speed lines, no duplicated limbs. Solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no text, no ground shadow, no frames or panels.
+SUBJECT: the character exactly as on the attached character sheet: same face, head size, proportions, costume and colors, nothing redesigned.
+CHARACTER (appearance only, word for word from its sheet; ignore the pose in it): The same stiff man about 106 percent of the boy Max's height, blond flat-top, rectangular black sunglasses, brown corduroy suit, red bow tie and fuzzy pink slippers, both slippers straight, holding a plain white coffee mug instead of a folder, facing right.
+POSES (left to right): Two poses of the clone: (1) lifting the white coffee mug to his mouth; (2) the mug lowered, satisfied sigh.
+END POSE: the motion starts and ends in the neutral pose of the attached sheet; do not draw that pose again, but every pose must be able to return to it with the feet in the same place unless a pose says the feet move.
+CAMERA: static, strict side view as on the attached sheet, same scale and the same flat baseline in every pose, no zoom, no pan.
+NEGATIVE: no second character, no parts of the boy Max from the reference unless this is Max, no props that are not described, no environment, no floor, no ground shadow, no checkerboard, no frames, panels or cell borders, no text, labels or numbers, no motion blur, no ghosting, no duplicated or extra limbs, no change to face, proportions, clothing or colors, no photorealism, no 3D render, no watermark, no in-between blur, no speed lines, no smear frames, no sliding feet, no change of scale or baseline between poses, no camera movement, no zoom, no perspective change, no morphing, no extra poses beyond the ones listed
+```
+
+## Roboter-Hausmeister
+
+**Shot W3-P10**
+
+**Anhängen:** Konzeptblatt Roboter-Hausmeister · **Posen:** 4 · **Wofür:** Reden, Verbeugen
+
+```text
+STYLE: Pose sheet in exactly the same style, colors and proportions as the attached character sheet: same character, same head size, same hair and clothing colors, same line weight and flat cel shading, light from upper left. The poses side by side in one row, evenly spaced with clear empty space between them, all at the same scale on one flat baseline, each a frozen still pose, no motion blur, no ghosting, no speed lines, no duplicated limbs. Solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no text, no ground shadow, no frames or panels.
+SUBJECT: the character exactly as on the attached character sheet: same face, head size, proportions, costume and colors, nothing redesigned.
+CHARACTER (appearance only, word for word from its sheet; ignore the pose in it): Hausmeister Modell 08/15, a bulky boxy retro robot about 104 percent of the boy Max's height, dented light grey metal body, square head with one round yellow eye light and a small speaker grille mouth. Faded blue janitor overalls over the metal body, a small empty oil can in the chest pocket, a blank name plate on the chest. A mop in its right hand. Polite slight bow, facing right. No red eye, no metal skull face, no leather jacket, no sunglasses.
+POSES (left to right): Four poses of the boxy janitor robot, feet planted: (1) talking, the speaker grille lit, mop held upright; (2) a polite bow from the hips; (3) idle: wiping the round eye with a cloth; (4) idle: shaking the empty oil can, disappointed.
+END POSE: the motion starts and ends in the neutral pose of the attached sheet; do not draw that pose again, but every pose must be able to return to it with the feet in the same place unless a pose says the feet move.
+CAMERA: static, strict side view as on the attached sheet, same scale and the same flat baseline in every pose, no zoom, no pan.
+NEGATIVE: no second character, no parts of the boy Max from the reference unless this is Max, no props that are not described, no environment, no floor, no ground shadow, no checkerboard, no frames, panels or cell borders, no text, labels or numbers, no motion blur, no ghosting, no duplicated or extra limbs, no change to face, proportions, clothing or colors, no photorealism, no 3D render, no watermark, no in-between blur, no speed lines, no smear frames, no sliding feet, no change of scale or baseline between poses, no camera movement, no zoom, no perspective change, no morphing, no extra poses beyond the ones listed
+```
+
+## Detektiv Deckert
+
+**Shot W3-P11**
+
+**Anhängen:** Konzeptblatt Detektiv Deckert · **Posen:** 4 · **Wofür:** Reden und Warten, Notizblock
+
+```text
+STYLE: Pose sheet in exactly the same style, colors and proportions as the attached character sheet: same character, same head size, same hair and clothing colors, same line weight and flat cel shading, light from upper left. The poses side by side in one row, evenly spaced with clear empty space between them, all at the same scale on one flat baseline, each a frozen still pose, no motion blur, no ghosting, no speed lines, no duplicated limbs. Solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no text, no ground shadow, no frames or panels.
+SUBJECT: the character exactly as on the attached character sheet: same face, head size, proportions, costume and colors, nothing redesigned.
+CHARACTER (appearance only, word for word from its sheet; ignore the pose in it): Detektiv Deckert, a weary middle-aged detective about 106 percent of the boy Max's height, stubbly chin, tired droopy eyes. Long beige trench coat, grey wide-brimmed hat with rain dripping from the brim, dark trousers. A small notepad in his left hand, a pencil-sized flashlight in his right. Neutral standing pose, testing stare, facing right. No gun, no dark long coat with high collar, not a likeness of any actor.
+POSES (left to right): Four poses of the weary detective: (1) talking, testing stare, notepad raised; (2) talking, pointing the small flashlight at the viewer; (3) idle: writing in the notepad; (4) idle: tipping water off the hat brim.
+END POSE: the motion starts and ends in the neutral pose of the attached sheet; do not draw that pose again, but every pose must be able to return to it with the feet in the same place unless a pose says the feet move.
+CAMERA: static, strict side view as on the attached sheet, same scale and the same flat baseline in every pose, no zoom, no pan.
+NEGATIVE: no second character, no parts of the boy Max from the reference unless this is Max, no props that are not described, no environment, no floor, no ground shadow, no checkerboard, no frames, panels or cell borders, no text, labels or numbers, no motion blur, no ghosting, no duplicated or extra limbs, no change to face, proportions, clothing or colors, no photorealism, no 3D render, no watermark, no in-between blur, no speed lines, no smear frames, no sliding feet, no change of scale or baseline between poses, no camera movement, no zoom, no perspective change, no morphing, no extra poses beyond the ones listed
+```
+
+## Herr Vier
+
+**Shot W3-P12**
+
+**Anhängen:** Konzeptblatt Herr Vier · **Posen:** 4 · **Wofür:** Reden, weinend kochen
+
+```text
+STYLE: Pose sheet in exactly the same style, colors and proportions as the attached character sheet: same character, same head size, same hair and clothing colors, same line weight and flat cel shading, light from upper left. The poses side by side in one row, evenly spaced with clear empty space between them, all at the same scale on one flat baseline, each a frozen still pose, no motion blur, no ghosting, no speed lines, no duplicated limbs. Solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no text, no ground shadow, no frames or panels.
+SUBJECT: the character exactly as on the attached character sheet: same face, head size, proportions, costume and colors, nothing redesigned.
+CHARACTER (appearance only, word for word from its sheet; ignore the pose in it): Herr Vier, a short stocky serious noodle cook about as tall as the boy Max, black hair under a white cook's cap, small black moustache. White cook's jacket, white apron, white gloves with exactly four fingers each, clearly visible. A big ladle in his right hand. Standing upright, serious face, facing right.
+POSES (left to right): Four poses of the noodle cook, upper body only matters, legs unchanged: (1) talking, holding up four fingers; (2) stirring the pot with the ladle, tears running; (3) the ladle lifted, sobbing; (4) idle: wiping his eyes with the back of the glove.
+END POSE: the motion starts and ends in the neutral pose of the attached sheet; do not draw that pose again, but every pose must be able to return to it with the feet in the same place unless a pose says the feet move.
+CAMERA: static, strict side view as on the attached sheet, same scale and the same flat baseline in every pose, no zoom, no pan.
+NEGATIVE: no second character, no parts of the boy Max from the reference unless this is Max, no props that are not described, no environment, no floor, no ground shadow, no checkerboard, no frames, panels or cell borders, no text, labels or numbers, no motion blur, no ghosting, no duplicated or extra limbs, no change to face, proportions, clothing or colors, no photorealism, no 3D render, no watermark, no in-between blur, no speed lines, no smear frames, no sliding feet, no change of scale or baseline between poses, no camera movement, no zoom, no perspective change, no morphing, no extra poses beyond the ones listed
+```
+
+## Kabel-Kalle
+
+**Shot W3-P13**
+
+**Anhängen:** Konzeptblatt Kabel-Kalle · **Posen:** 4 · **Wofür:** Reden und Warten, Tippen
+
+```text
+STYLE: Pose sheet in exactly the same style, colors and proportions as the attached character sheet: same character, same head size, same hair and clothing colors, same line weight and flat cel shading, light from upper left. The poses side by side in one row, evenly spaced with clear empty space between them, all at the same scale on one flat baseline, each a frozen still pose, no motion blur, no ghosting, no speed lines, no duplicated limbs. Solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no text, no ground shadow, no frames or panels.
+SUBJECT: the character exactly as on the attached character sheet: same face, head size, proportions, costume and colors, nothing redesigned.
+CHARACTER (appearance only, word for word from its sheet; ignore the pose in it): Kabel-Kalle, a skinny cheerful tech nerd about 104 percent of the boy Max's height, thick round glasses, messy black hair, a headset with a microphone. Mustard-yellow work vest over a striped shirt, several colorful cables wrapped around his neck like scarves, grey cargo trousers, sneakers. A screwdriver clamped in his mouth, a battered laptop under his left arm. Grinning, facing right.
+POSES (left to right): Four poses of the tech nerd: (1) talking, screwdriver taken out of his mouth and pointed; (2) talking, holding up a cable end; (3) idle: typing on the laptop held on his forearm; (4) idle: adjusting the headset.
+END POSE: the motion starts and ends in the neutral pose of the attached sheet; do not draw that pose again, but every pose must be able to return to it with the feet in the same place unless a pose says the feet move.
+CAMERA: static, strict side view as on the attached sheet, same scale and the same flat baseline in every pose, no zoom, no pan.
+NEGATIVE: no second character, no parts of the boy Max from the reference unless this is Max, no props that are not described, no environment, no floor, no ground shadow, no checkerboard, no frames, panels or cell borders, no text, labels or numbers, no motion blur, no ghosting, no duplicated or extra limbs, no change to face, proportions, clothing or colors, no photorealism, no 3D render, no watermark, no in-between blur, no speed lines, no smear frames, no sliding feet, no change of scale or baseline between poses, no camera movement, no zoom, no perspective change, no morphing, no extra poses beyond the ones listed
+```
+
+## Rebellin
+
+**Shot W3-P14**
+
+**Anhängen:** Konzeptblatt Rebellin · **Posen:** 2 · **Wofür:** Nudeln essen
+
+```text
+STYLE: Pose sheet in exactly the same style, colors and proportions as the attached character sheet: same character, same head size, same hair and clothing colors, same line weight and flat cel shading, light from upper left. The poses side by side in one row, evenly spaced with clear empty space between them, all at the same scale on one flat baseline, each a frozen still pose, no motion blur, no ghosting, no speed lines, no duplicated limbs. Solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no text, no ground shadow, no frames or panels.
+SUBJECT: the character exactly as on the attached character sheet: same face, head size, proportions, costume and colors, nothing redesigned.
+CHARACTER (appearance only, word for word from its sheet; ignore the pose in it): A scruffy resistance woman about 104 percent of the boy Max's height, short spiky purple hair, black sunglasses. Black leather jacket with colorful square patches, grey cargo trousers, heavy boots. Eating noodles from a paper carton with chopsticks. Neutral standing pose, facing right.
+POSES (left to right): Two poses of the resistance woman: (1) lifting noodles with chopsticks; (2) slurping, eyes closed.
+END POSE: the motion starts and ends in the neutral pose of the attached sheet; do not draw that pose again, but every pose must be able to return to it with the feet in the same place unless a pose says the feet move.
+CAMERA: static, strict side view as on the attached sheet, same scale and the same flat baseline in every pose, no zoom, no pan.
+NEGATIVE: no second character, no parts of the boy Max from the reference unless this is Max, no props that are not described, no environment, no floor, no ground shadow, no checkerboard, no frames, panels or cell borders, no text, labels or numbers, no motion blur, no ghosting, no duplicated or extra limbs, no change to face, proportions, clothing or colors, no photorealism, no 3D render, no watermark, no in-between blur, no speed lines, no smear frames, no sliding feet, no change of scale or baseline between poses, no camera movement, no zoom, no perspective change, no morphing, no extra poses beyond the ones listed
+```
+
+## Rebell
+
+**Shot W3-P15**
+
+**Anhängen:** Konzeptblatt Rebell · **Posen:** 2 · **Wofür:** Nudeln essen
+
+```text
+STYLE: Pose sheet in exactly the same style, colors and proportions as the attached character sheet: same character, same head size, same hair and clothing colors, same line weight and flat cel shading, light from upper left. The poses side by side in one row, evenly spaced with clear empty space between them, all at the same scale on one flat baseline, each a frozen still pose, no motion blur, no ghosting, no speed lines, no duplicated limbs. Solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no text, no ground shadow, no frames or panels.
+SUBJECT: the character exactly as on the attached character sheet: same face, head size, proportions, costume and colors, nothing redesigned.
+CHARACTER (appearance only, word for word from its sheet; ignore the pose in it): A scruffy resistance man about 106 percent of the boy Max's height, red knitted beanie, black sunglasses, short brown beard. Black leather jacket with colorful square patches, a toolbelt with wrenches, dark jeans, boots. Holding a noodle carton. Neutral standing pose, facing right.
+POSES (left to right): Two poses of the resistance man: (1) holding the carton up, looking into it; (2) eating from it, cheeks full.
+END POSE: the motion starts and ends in the neutral pose of the attached sheet; do not draw that pose again, but every pose must be able to return to it with the feet in the same place unless a pose says the feet move.
+CAMERA: static, strict side view as on the attached sheet, same scale and the same flat baseline in every pose, no zoom, no pan.
+NEGATIVE: no second character, no parts of the boy Max from the reference unless this is Max, no props that are not described, no environment, no floor, no ground shadow, no checkerboard, no frames, panels or cell borders, no text, labels or numbers, no motion blur, no ghosting, no duplicated or extra limbs, no change to face, proportions, clothing or colors, no photorealism, no 3D render, no watermark, no in-between blur, no speed lines, no smear frames, no sliding feet, no change of scale or baseline between poses, no camera movement, no zoom, no perspective change, no morphing, no extra poses beyond the ones listed
+```
+
+## Straßenmusiker
+
+**Shot W3-P16**
+
+**Anhängen:** Konzeptblatt Straßenmusiker · **Posen:** 3 · **Wofür:** Spielen
+
+```text
+STYLE: Pose sheet in exactly the same style, colors and proportions as the attached character sheet: same character, same head size, same hair and clothing colors, same line weight and flat cel shading, light from upper left. The poses side by side in one row, evenly spaced with clear empty space between them, all at the same scale on one flat baseline, each a frozen still pose, no motion blur, no ghosting, no speed lines, no duplicated limbs. Solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no text, no ground shadow, no frames or panels.
+SUBJECT: the character exactly as on the attached character sheet: same face, head size, proportions, costume and colors, nothing redesigned.
+CHARACTER (appearance only, word for word from its sheet; ignore the pose in it): A lonely street musician about 104 percent of the boy Max's height, long grey ponytail, eyes closed, a transparent plastic rain poncho over a dark blue jacket, playing a small synthesizer keyboard on a folding stand in front of him, rain dripping from the poncho, calm devoted face, facing right.
+POSES (left to right): Three poses of the street musician, feet planted: (1) both hands on the keys, eyes closed; (2) head tilted back, one hand lifted off the keys; (3) swaying to the side, playing.
+END POSE: the motion starts and ends in the neutral pose of the attached sheet; do not draw that pose again, but every pose must be able to return to it with the feet in the same place unless a pose says the feet move.
+CAMERA: static, strict side view as on the attached sheet, same scale and the same flat baseline in every pose, no zoom, no pan.
+NEGATIVE: no second character, no parts of the boy Max from the reference unless this is Max, no props that are not described, no environment, no floor, no ground shadow, no checkerboard, no frames, panels or cell borders, no text, labels or numbers, no motion blur, no ghosting, no duplicated or extra limbs, no change to face, proportions, clothing or colors, no photorealism, no 3D render, no watermark, no in-between blur, no speed lines, no smear frames, no sliding feet, no change of scale or baseline between poses, no camera movement, no zoom, no perspective change, no morphing, no extra poses beyond the ones listed
+```
+
+## Weinender Mann
+
+**Shot W3-P17**
+
+**Anhängen:** Konzeptblatt Weinender Mann · **Posen:** 2 · **Wofür:** Weinen
+
+```text
+STYLE: Pose sheet in exactly the same style, colors and proportions as the attached character sheet: same character, same head size, same hair and clothing colors, same line weight and flat cel shading, light from upper left. The poses side by side in one row, evenly spaced with clear empty space between them, all at the same scale on one flat baseline, each a frozen still pose, no motion blur, no ghosting, no speed lines, no duplicated limbs. Solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no text, no ground shadow, no frames or panels.
+SUBJECT: the character exactly as on the attached character sheet: same face, head size, proportions, costume and colors, nothing redesigned.
+CHARACTER (appearance only, word for word from its sheet; ignore the pose in it): A middle-aged man about 104 percent of the boy Max's height (standing size), thinning hair, rumpled grey raincoat, sitting on a round stool, holding a bowl of noodles and crying loudly into it, tears streaming, mouth wide open, facing right.
+POSES (left to right): Two poses of the crying man on his stool: (1) mouth wide open, crying into the bowl; (2) slurping noodles between sobs.
+END POSE: the motion starts and ends in the neutral pose of the attached sheet; do not draw that pose again, but every pose must be able to return to it with the feet in the same place unless a pose says the feet move.
+CAMERA: static, strict side view as on the attached sheet, same scale and the same flat baseline in every pose, no zoom, no pan.
+NEGATIVE: no second character, no parts of the boy Max from the reference unless this is Max, no props that are not described, no environment, no floor, no ground shadow, no checkerboard, no frames, panels or cell borders, no text, labels or numbers, no motion blur, no ghosting, no duplicated or extra limbs, no change to face, proportions, clothing or colors, no photorealism, no 3D render, no watermark, no in-between blur, no speed lines, no smear frames, no sliding feet, no change of scale or baseline between poses, no camera movement, no zoom, no perspective change, no morphing, no extra poses beyond the ones listed
+```
+
+## Frau mit Regenschirm
+
+**Shot W3-P18**
+
+**Anhängen:** Konzeptblatt Frau mit Regenschirm · **Posen:** 2 · **Wofür:** Schimpfen
+
+```text
+STYLE: Pose sheet in exactly the same style, colors and proportions as the attached character sheet: same character, same head size, same hair and clothing colors, same line weight and flat cel shading, light from upper left. The poses side by side in one row, evenly spaced with clear empty space between them, all at the same scale on one flat baseline, each a frozen still pose, no motion blur, no ghosting, no speed lines, no duplicated limbs. Solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no text, no ground shadow, no frames or panels.
+SUBJECT: the character exactly as on the attached character sheet: same face, head size, proportions, costume and colors, nothing redesigned.
+CHARACTER (appearance only, word for word from its sheet; ignore the pose in it): A woman about as tall as the boy Max, black bob haircut, bright yellow raincoat, red rubber boots, holding an inside-out umbrella up and shouting at it angrily, rain dripping, facing right.
+POSES (left to right): Two poses of the woman: (1) shaking the inside-out umbrella high, shouting; (2) stamping one boot, umbrella lowered.
+END POSE: the motion starts and ends in the neutral pose of the attached sheet; do not draw that pose again, but every pose must be able to return to it with the feet in the same place unless a pose says the feet move.
+CAMERA: static, strict side view as on the attached sheet, same scale and the same flat baseline in every pose, no zoom, no pan.
+NEGATIVE: no second character, no parts of the boy Max from the reference unless this is Max, no props that are not described, no environment, no floor, no ground shadow, no checkerboard, no frames, panels or cell borders, no text, labels or numbers, no motion blur, no ghosting, no duplicated or extra limbs, no change to face, proportions, clothing or colors, no photorealism, no 3D render, no watermark, no in-between blur, no speed lines, no smear frames, no sliding feet, no change of scale or baseline between poses, no camera movement, no zoom, no perspective change, no morphing, no extra poses beyond the ones listed
+```
+
+## M.U.T.T.I.
+
+**Shot W3-P19**
+
+**Anhängen:** Konzeptblatt M.U.T.T.I. · **Posen:** 4 · **Wofür:** Reden, Herunterfahren
+
+```text
+STYLE: Pose sheet in exactly the same style, colors and proportions as the attached character sheet: same character, same head size, same hair and clothing colors, same line weight and flat cel shading, light from upper left. The poses side by side in one row, evenly spaced with clear empty space between them, all at the same scale on one flat baseline, each a frozen still pose, no motion blur, no ghosting, no speed lines, no duplicated limbs. Solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no text, no ground shadow, no frames or panels.
+SUBJECT: the character exactly as on the attached character sheet: same face, head size, proportions, costume and colors, nothing redesigned.
+CHARACTER (appearance only, word for word from its sheet; ignore the pose in it): M.U.T.T.I., a huge AI machine about 180 percent of the boy Max's height hanging from the ceiling: a giant white kitchen stand mixer mounted upside down on a thick ceiling arm. One round lens eye glowing soft orange in the mixer head, two pink hair-curler-shaped antennas on top, a floral apron pattern painted on the white casing, a steel whisk attachment as a chin. Strict but caring look, facing right.
+POSES (left to right): Four poses of the upside-down stand mixer machine: (1) eye bright, whisk chin lowered as if speaking; (2) eye narrowed to a slit, offended; (3) eye flickering half dark, antennas half drooped; (4) eye dark, antennas drooped, sunk lower.
+END POSE: the motion starts and ends in the neutral pose of the attached sheet; do not draw that pose again, but every pose must be able to return to it with the feet in the same place unless a pose says the feet move.
+CAMERA: static, strict side view as on the attached sheet, same scale and the same flat baseline in every pose, no zoom, no pan.
+NEGATIVE: no second character, no parts of the boy Max from the reference unless this is Max, no props that are not described, no environment, no floor, no ground shadow, no checkerboard, no frames, panels or cell borders, no text, labels or numbers, no motion blur, no ghosting, no duplicated or extra limbs, no change to face, proportions, clothing or colors, no photorealism, no 3D render, no watermark, no in-between blur, no speed lines, no smear frames, no sliding feet, no change of scale or baseline between poses, no camera movement, no zoom, no perspective change, no morphing, no extra poses beyond the ones listed
+```
+
+## Bernd
+
+**Shot W3-P20**
+
+**Anhängen:** Konzeptblatt Bernd · **Posen:** 3 · **Wofür:** Beleidigt
+
+```text
+STYLE: Pose sheet in exactly the same style, colors and proportions as the attached character sheet: same character, same head size, same hair and clothing colors, same line weight and flat cel shading, light from upper left. The poses side by side in one row, evenly spaced with clear empty space between them, all at the same scale on one flat baseline, each a frozen still pose, no motion blur, no ghosting, no speed lines, no duplicated limbs. Solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no text, no ground shadow, no frames or panels.
+SUBJECT: the character exactly as on the attached character sheet: same face, head size, proportions, costume and colors, nothing redesigned.
+CHARACTER (appearance only, word for word from its sheet; ignore the pose in it): Bernd, a grey metal cube about 29 percent of the boy Max's height with simple panel seams, a pair of big googly eyes and a yellow smiley face sticker on the front, floating two pixels above the ground with a small shadow below, slightly sulky look, facing right. No hearts, no pink, no round panels.
+POSES (left to right): Three poses of the floating cube: (1) googly eyes rolled up; (2) face turned away to the side; (3) tilted, floating a bit higher.
+END POSE: the motion starts and ends in the neutral pose of the attached sheet; do not draw that pose again, but every pose must be able to return to it with the feet in the same place unless a pose says the feet move.
+CAMERA: static, strict side view as on the attached sheet, same scale and the same flat baseline in every pose, no zoom, no pan.
+NEGATIVE: no second character, no parts of the boy Max from the reference unless this is Max, no props that are not described, no environment, no floor, no ground shadow, no checkerboard, no frames, panels or cell borders, no text, labels or numbers, no motion blur, no ghosting, no duplicated or extra limbs, no change to face, proportions, clothing or colors, no photorealism, no 3D render, no watermark, no in-between blur, no speed lines, no smear frames, no sliding feet, no change of scale or baseline between poses, no camera movement, no zoom, no perspective change, no morphing, no extra poses beyond the ones listed
+```
+
+## Piepsi
+
+**Shot W3-P21**
+
+**Anhängen:** Konzeptblatt Piepsi · **Posen:** 4 · **Wofür:** Hochfahren, Piepen
+
+```text
+STYLE: Pose sheet in exactly the same style, colors and proportions as the attached character sheet: same character, same head size, same hair and clothing colors, same line weight and flat cel shading, light from upper left. The poses side by side in one row, evenly spaced with clear empty space between them, all at the same scale on one flat baseline, each a frozen still pose, no motion blur, no ghosting, no speed lines, no duplicated limbs. Solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no text, no ground shadow, no frames or panels.
+SUBJECT: the character exactly as on the attached character sheet: same face, head size, proportions, costume and colors, nothing redesigned.
+CHARACTER (appearance only, word for word from its sheet; ignore the pose in it): Piepsi, a small round cleaning robot about 32 percent of the boy Max's height shaped like a dented white bucket on three little wheels, one big round blue lens eye, a tiny antenna with a red tip, a crumpled black bowler hat on top, cheeky look, facing right.
+POSES (left to right): Four poses of the small cleaning robot: (1) slumped and rusty, eye dark; (2) straightening up, rust flakes falling; (3) upright, eye lit blue, hat popped up; (4) tilted to one side, antenna blinking, angry eye.
+END POSE: the motion starts and ends in the neutral pose of the attached sheet; do not draw that pose again, but every pose must be able to return to it with the feet in the same place unless a pose says the feet move.
+CAMERA: static, strict side view as on the attached sheet, same scale and the same flat baseline in every pose, no zoom, no pan.
+NEGATIVE: no second character, no parts of the boy Max from the reference unless this is Max, no props that are not described, no environment, no floor, no ground shadow, no checkerboard, no frames, panels or cell borders, no text, labels or numbers, no motion blur, no ghosting, no duplicated or extra limbs, no change to face, proportions, clothing or colors, no photorealism, no 3D render, no watermark, no in-between blur, no speed lines, no smear frames, no sliding feet, no change of scale or baseline between poses, no camera movement, no zoom, no perspective change, no morphing, no extra poses beyond the ones listed
+```
+
+## Opa als Hologramm
+
+**Shot W3-P22**
+
+**Anhängen:** Konzeptblatt Opa als Hologramm · **Posen:** 2 · **Wofür:** Flehen
+
+```text
+STYLE: Pose sheet in exactly the same style, colors and proportions as the attached character sheet: same character, same head size, same hair and clothing colors, same line weight and flat cel shading, light from upper left. The poses side by side in one row, evenly spaced with clear empty space between them, all at the same scale on one flat baseline, each a frozen still pose, no motion blur, no ghosting, no speed lines, no duplicated limbs. Solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no text, no ground shadow, no frames or panels.
+SUBJECT: Grandpa Konrad exactly as on the attached character sheet, unchanged.
+CHARACTER LOCK (word for word; where SUBJECT or POSES say otherwise, they win): Grandpa Konrad, a tall thin old inventor about 106 percent of Max's height, stooped forward from the shoulders, knees slightly bent, long thin legs. Wild white hair (#ffffff, shadow #8b9bb4) standing up in tufts, bushy white eyebrows, long nose, big enthusiastic grin, fair wrinkled skin (#e8b796, shadow #c28569). Round brass goggles (#feae34) on a dark strap (#3e2731) pushed up on his forehead. A rust-brown knitted cardigan (#b86f50, shadow #8b5f4b) hanging to the hips, with two rows of bulging pockets stuffed with screwdrivers and pliers (#262b44). Loose light beige trousers (#e8b796, shadow #c28569). Dark red slippers (#e43b44, shadow #a22633). No lab coat, no tie, no beard. Dark outline #181425.
+POSES (left to right): Two poses of the tiny hologram grandpa: (1) kneeling, both hands raised pleading; (2) hands clasped, looking up.
+END POSE: the motion starts and ends in the neutral pose of the attached sheet; do not draw that pose again, but every pose must be able to return to it with the feet in the same place unless a pose says the feet move.
+CAMERA: static, strict side view as on the attached sheet, same scale and the same flat baseline in every pose, no zoom, no pan.
+NEGATIVE: no second character, no parts of the boy Max from the reference unless this is Max, no props that are not described, no environment, no floor, no ground shadow, no checkerboard, no frames, panels or cell borders, no text, labels or numbers, no motion blur, no ghosting, no duplicated or extra limbs, no change to face, proportions, clothing or colors, no photorealism, no 3D render, no watermark, no in-between blur, no speed lines, no smear frames, no sliding feet, no change of scale or baseline between poses, no camera movement, no zoom, no perspective change, no morphing, no extra poses beyond the ones listed
+```
+
 # Bewegungen
 
 Schlüsselposen für Animationen, die im Spiel noch fehlen. Das Blatt anhängen, das beim Block steht.
 Die Zeitmarken gelten für etwa 10 Bilder pro Sekunde; Zwischenbilder, Timing und Schleife baut Claude
 in Aseprite oder aus dem 3D-Clip. Eine misslungene Pose wird mit Maske nachgebessert.
 
-## M.U.T.T.I.: Sprechen
-
-**Shot W3-B01**
-
-**Anhängen:** das fertige Konzeptblatt von M.U.T.T.I. · **Bilder:** 4 · **Ablauf:** Schleife
-
-```text
-STYLE: Key pose sheet for a 2D game animation in exactly the same style, colors and proportions as the attached character sheet: same character, same head size, same hair and clothing colors, same line weight and flat cel shading, light from upper left. The key poses side by side in one row from left to right in the order of the action, evenly spaced with clear empty space between them, all at the same scale on one flat baseline, each a frozen still pose. Solid flat magenta (#ff00ff) background filling the whole image.
-SUBJECT: the character exactly as on the attached character sheet: same face, head size, proportions, costume and colors, nothing redesigned.
-CHARACTER (appearance only, word for word from its sheet; ignore the pose in it): M.U.T.T.I., a huge AI machine about 180 percent of the boy Max's height hanging from the ceiling: a giant white kitchen stand mixer mounted upside down on a thick ceiling arm. One round lens eye glowing soft orange in the mixer head, two pink hair-curler-shaped antennas on top, a floral apron pattern painted on the white casing, a steel whisk attachment as a chin. Strict but caring look, facing right.
-ACTION (2 key poses of a 4-frame animation of about 0.4 s): (1) 0.0 s: M.U.T.T.I. talking: the orange lens eye pulses brighter and dimmer; (2) 0.2 s: the whisk chin wobbles up and down.
-FRAMES: draw all 4 frames side by side, left to right, in the order they play: the key poses above at their times and evenly spaced in-between frames, so the motion reads smoothly; every frame differs visibly from its neighbours, no two frames identical.
-SPACING: divide the image into 4 equal columns, one frame per column, with a clear strip of empty magenta between neighbouring frames, at least as wide as the character's head; every part of a frame, including raised arms, tools, tongs, tails, capes and effects, stays completely inside its own column and never reaches into or overlaps the next frame. Draw the character smaller if needed to keep the gaps, the same size in every frame.
-END POSE: the same as pose 1, so the loop closes seamlessly; do not draw it twice.
-HOLD STILL: casing and antennas stay still.
-CAMERA: static, strict side view, facing right. Same scale and the same flat baseline in every pose, no zoom, no pan.
-NEGATIVE: no second character, no parts of the boy Max from the reference unless this is Max, no props that are not described, no environment, no floor, no ground shadow, no checkerboard, no frames, panels or cell borders, no text, labels or numbers, no motion blur, no ghosting, no duplicated or extra limbs, no change to face, proportions, clothing or colors, no photorealism, no 3D render, no watermark, no in-between blur, no speed lines, no smear frames, no sliding feet, no change of scale or baseline between poses, no camera movement, no zoom, no perspective change, no morphing, no extra poses beyond the ones listed
-```
-
-## M.U.T.T.I.: Herunterfahren
-
-**Shot W3-B02**
-
-**Anhängen:** das fertige Konzeptblatt von M.U.T.T.I. · **Bilder:** 8 · **Ablauf:** einmalig
-
-```text
-STYLE: Key pose sheet for a 2D game animation in exactly the same style, colors and proportions as the attached character sheet: same character, same head size, same hair and clothing colors, same line weight and flat cel shading, light from upper left. The key poses side by side in one row from left to right in the order of the action, evenly spaced with clear empty space between them, all at the same scale on one flat baseline, each a frozen still pose. Solid flat magenta (#ff00ff) background filling the whole image.
-SUBJECT: the character exactly as on the attached character sheet: same face, head size, proportions, costume and colors, nothing redesigned.
-CHARACTER (appearance only, word for word from its sheet; ignore the pose in it): M.U.T.T.I., a huge AI machine about 180 percent of the boy Max's height hanging from the ceiling: a giant white kitchen stand mixer mounted upside down on a thick ceiling arm. One round lens eye glowing soft orange in the mixer head, two pink hair-curler-shaped antennas on top, a floral apron pattern painted on the white casing, a steel whisk attachment as a chin. Strict but caring look, facing right.
-ACTION (4 key poses of a 8-frame animation of about 0.8 s): (1) 0.0 s: M.U.T.T.I. shutting down: the orange eye flickers and dims to dark; (2) 0.3 s: the curler antennas droop; (3) 0.5 s: the machine sinks a few pixels on its ceiling arm; (4) 0.8 s: a small puff of steam escapes.
-FRAMES: draw all 8 frames side by side, left to right, in the order they play: the key poses above at their times and evenly spaced in-between frames, so the motion reads smoothly; every frame differs visibly from its neighbours, no two frames identical.
-SPACING: divide the image into 8 equal columns, one frame per column, with a clear strip of empty magenta between neighbouring frames, at least as wide as the character's head; every part of a frame, including raised arms, tools, tongs, tails, capes and effects, stays completely inside its own column and never reaches into or overlaps the next frame. Draw the character smaller if needed to keep the gaps, the same size in every frame.
-END POSE: pose 4 is the final frame and is held; it must read as a calm, complete pose (ends on the dark version).
-CAMERA: static, strict side view, facing right. Same scale and the same flat baseline in every pose, no zoom, no pan.
-NEGATIVE: no second character, no parts of the boy Max from the reference unless this is Max, no props that are not described, no environment, no floor, no ground shadow, no checkerboard, no frames, panels or cell borders, no text, labels or numbers, no motion blur, no ghosting, no duplicated or extra limbs, no change to face, proportions, clothing or colors, no photorealism, no 3D render, no watermark, no in-between blur, no speed lines, no smear frames, no sliding feet, no change of scale or baseline between poses, no camera movement, no zoom, no perspective change, no morphing, no extra poses beyond the ones listed
-```
-
-## Agent Schmidt: Kopieren
-
-**Shot W3-B03**
-
-**Anhängen:** nichts (Effekt) · **Bilder:** 8 · **Ablauf:** einmalig
-
-```text
-STYLE: Visual effect frames for a 2D game, frames side by side in one row, evenly spaced, frame count as given in the motif, every frame the same size with the effect centered, flat cel shading, solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no frames or panels, no text.
-EFFECT: Agent Schmidt in brown corduroy suit, red bow tie and pink slippers lays one hand on a grey office photocopier, a white flash runs under the lid, an identical copy of him slides out of the output tray and stands up, 192x128, 8 frames, plays once, over the office corridor.
-FRAMES: 8 frames side by side, about 0.8 s at 10 frames per second, plays once, each frame 192x128 pixels in the game.
-SPACING: divide the image into 8 equal columns, one frame per column, with a clear strip of empty magenta between neighbouring frames, at least as wide as the character's head; every part of a frame, including raised arms, tools, tongs, tails, capes and effects, stays completely inside its own column and never reaches into or overlaps the next frame. Draw the character smaller if needed to keep the gaps, the same size in every frame.
-END: the last frame is the calm end state of the effect.
-CAMERA: static, no zoom, no pan, the effect stays centered in every frame.
-NEGATIVE: no characters unless named, no background scene, no text, no frames or panels, no checkerboard, no motion blur, no speed lines
-```
-
-## Max: Zeitlupen-Ausweichen
-
-**Shot W3-B04**
-
-**Anhängen:** Max' Figurenbogen (bis dahin sein Konzeptblatt) · **Bilder:** 10 · **Ablauf:** einmalig
-
-```text
-STYLE: Key pose sheet for a 2D game animation in exactly the same style, colors and proportions as the attached character sheet: same character, same head size, same hair and clothing colors, same line weight and flat cel shading, light from upper left. The key poses side by side in one row from left to right in the order of the action, evenly spaced with clear empty space between them, all at the same scale on one flat baseline, each a frozen still pose. Solid flat magenta (#ff00ff) background filling the whole image.
-SUBJECT: Max exactly as on the attached character sheet, unchanged.
-CHARACTER LOCK (word for word; where SUBJECT or POSES say otherwise, they win): Max, a lanky 16-year-old boy, the reference height for every other character, head about a quarter of his height, slight slouch with hanging shoulders. Messy dark brown hair (#733e39, shadow #3e2731, highlight #b86f50) with shaggy strands falling over his forehead and eyes. Fair skin (#e8b796, shadow #c28569), sleepy half-closed eyes, lopsided smirk, a few freckles. Oversized dark slate blue-grey hoodie (#3a4466, shadow #262b44, highlight #5a6988), hood down, sleeves partly over his hands, uneven drawstrings, a tiny retro TV print with a turquoise screen (#2ce8f5) on the chest. Dark blue jeans (#124e89) slightly too long and rolled up at the hem. Worn red sneakers (#e43b44, shadow #a22633) with white soles (#ffffff), one lace untied. Dark outline #262b44, never pure black.
-ACTION (4 key poses of a 10-frame animation of about 1.0 s): (1) 0.0 s: Max dodges in slow motion: leans far backwards; (2) 0.3 s: arms circling; (3) 0.7 s: hangs at the lowest point; (4) 1.0 s: straightens halfway and freezes holding his lower back with a pained face.
-FRAMES: draw all 10 frames side by side, left to right, in the order they play: the key poses above at their times and evenly spaced in-between frames, so the motion reads smoothly; every frame differs visibly from its neighbours, no two frames identical.
-SPACING: divide the image into 10 equal columns, one frame per column, with a clear strip of empty magenta between neighbouring frames, at least as wide as the character's head; every part of a frame, including raised arms, tools, tongs, tails, capes and effects, stays completely inside its own column and never reaches into or overlaps the next frame. Draw the character smaller if needed to keep the gaps, the same size in every frame.
-END POSE: pose 4 is the final frame and is held; it must read as a calm, complete pose.
-HOLD STILL: feet stay planted.
-CAMERA: static, strict side view, facing right. Same scale and the same flat baseline in every pose, no zoom, no pan.
-NEGATIVE: no second character, no parts of the boy Max from the reference unless this is Max, no props that are not described, no environment, no floor, no ground shadow, no checkerboard, no frames, panels or cell borders, no text, labels or numbers, no motion blur, no ghosting, no duplicated or extra limbs, no change to face, proportions, clothing or colors, no photorealism, no 3D render, no watermark, no in-between blur, no speed lines, no smear frames, no sliding feet, no change of scale or baseline between poses, no camera movement, no zoom, no perspective change, no morphing, no extra poses beyond the ones listed
-```
-
-## Max: Pastille schlucken
-
-**Shot W3-B05**
-
-**Anhängen:** Max' Figurenbogen (bis dahin sein Konzeptblatt) · **Bilder:** 6 · **Ablauf:** einmalig
-
-```text
-STYLE: Key pose sheet for a 2D game animation in exactly the same style, colors and proportions as the attached character sheet: same character, same head size, same hair and clothing colors, same line weight and flat cel shading, light from upper left. The key poses side by side in one row from left to right in the order of the action, evenly spaced with clear empty space between them, all at the same scale on one flat baseline, each a frozen still pose. Solid flat magenta (#ff00ff) background filling the whole image.
-SUBJECT: Max exactly as on the attached character sheet, unchanged.
-CHARACTER LOCK (word for word; where SUBJECT or POSES say otherwise, they win): Max, a lanky 16-year-old boy, the reference height for every other character, head about a quarter of his height, slight slouch with hanging shoulders. Messy dark brown hair (#733e39, shadow #3e2731, highlight #b86f50) with shaggy strands falling over his forehead and eyes. Fair skin (#e8b796, shadow #c28569), sleepy half-closed eyes, lopsided smirk, a few freckles. Oversized dark slate blue-grey hoodie (#3a4466, shadow #262b44, highlight #5a6988), hood down, sleeves partly over his hands, uneven drawstrings, a tiny retro TV print with a turquoise screen (#2ce8f5) on the chest. Dark blue jeans (#124e89) slightly too long and rolled up at the hem. Worn red sneakers (#e43b44, shadow #a22633) with white soles (#ffffff), one lace untied. Dark outline #262b44, never pure black.
-ACTION (3 key poses of a 6-frame animation of about 0.6 s): (1) 0.0 s: Max takes a shiny red lozenge from a small red tin with a green cross, holds it up; (2) 0.3 s: pops it into his mouth; (3) 0.6 s: swallows, eyes go wide.
-FRAMES: draw all 6 frames side by side, left to right, in the order they play: the key poses above at their times and evenly spaced in-between frames, so the motion reads smoothly; every frame differs visibly from its neighbours, no two frames identical.
-SPACING: divide the image into 6 equal columns, one frame per column, with a clear strip of empty magenta between neighbouring frames, at least as wide as the character's head; every part of a frame, including raised arms, tools, tongs, tails, capes and effects, stays completely inside its own column and never reaches into or overlaps the next frame. Draw the character smaller if needed to keep the gaps, the same size in every frame.
-END POSE: pose 3 is the final frame and is held; it must read as a calm, complete pose.
-HOLD STILL: legs stay still.
-CAMERA: static, strict side view, facing right. Same scale and the same flat baseline in every pose, no zoom, no pan.
-NEGATIVE: no second character, no parts of the boy Max from the reference unless this is Max, no props that are not described, no environment, no floor, no ground shadow, no checkerboard, no frames, panels or cell borders, no text, labels or numbers, no motion blur, no ghosting, no duplicated or extra limbs, no change to face, proportions, clothing or colors, no photorealism, no 3D render, no watermark, no in-between blur, no speed lines, no smear frames, no sliding feet, no change of scale or baseline between poses, no camera movement, no zoom, no perspective change, no morphing, no extra poses beyond the ones listed
-```
-
-## Max: Code-Sicht einschalten
-
-**Shot W3-B06**
-
-**Anhängen:** Max' Figurenbogen (bis dahin sein Konzeptblatt) · **Bilder:** 4 · **Ablauf:** einmalig
-
-```text
-STYLE: Key pose sheet for a 2D game animation in exactly the same style, colors and proportions as the attached character sheet: same character, same head size, same hair and clothing colors, same line weight and flat cel shading, light from upper left. The key poses side by side in one row from left to right in the order of the action, evenly spaced with clear empty space between them, all at the same scale on one flat baseline, each a frozen still pose. Solid flat magenta (#ff00ff) background filling the whole image.
-SUBJECT: Max exactly as on the attached character sheet, unchanged.
-CHARACTER LOCK (word for word; where SUBJECT or POSES say otherwise, they win): Max, a lanky 16-year-old boy, the reference height for every other character, head about a quarter of his height, slight slouch with hanging shoulders. Messy dark brown hair (#733e39, shadow #3e2731, highlight #b86f50) with shaggy strands falling over his forehead and eyes. Fair skin (#e8b796, shadow #c28569), sleepy half-closed eyes, lopsided smirk, a few freckles. Oversized dark slate blue-grey hoodie (#3a4466, shadow #262b44, highlight #5a6988), hood down, sleeves partly over his hands, uneven drawstrings, a tiny retro TV print with a turquoise screen (#2ce8f5) on the chest. Dark blue jeans (#124e89) slightly too long and rolled up at the hem. Worn red sneakers (#e43b44, shadow #a22633) with white soles (#ffffff), one lace untied. Dark outline #262b44, never pure black.
-ACTION (2 key poses of a 4-frame animation of about 0.4 s): (1) 0.0 s: just starting: Max squints hard with two fingers pressed to his temple while thin green code lines flicker over his body and fade; (2) 0.4 s: the same action completed.
-FRAMES: draw all 4 frames side by side, left to right, in the order they play: the key poses above at their times and evenly spaced in-between frames, so the motion reads smoothly; every frame differs visibly from its neighbours, no two frames identical.
-SPACING: divide the image into 4 equal columns, one frame per column, with a clear strip of empty magenta between neighbouring frames, at least as wide as the character's head; every part of a frame, including raised arms, tools, tongs, tails, capes and effects, stays completely inside its own column and never reaches into or overlaps the next frame. Draw the character smaller if needed to keep the gaps, the same size in every frame.
-END POSE: pose 2 is the final frame and is held; it must read as a calm, complete pose.
-HOLD STILL: legs stay still.
-CAMERA: static, strict side view, facing right. Same scale and the same flat baseline in every pose, no zoom, no pan.
-NEGATIVE: no second character, no parts of the boy Max from the reference unless this is Max, no props that are not described, no environment, no floor, no ground shadow, no checkerboard, no frames, panels or cell borders, no text, labels or numbers, no motion blur, no ghosting, no duplicated or extra limbs, no change to face, proportions, clothing or colors, no photorealism, no 3D render, no watermark, no in-between blur, no speed lines, no smear frames, no sliding feet, no change of scale or baseline between poses, no camera movement, no zoom, no perspective change, no morphing, no extra poses beyond the ones listed
-```
-
-## Pixel: Kabel umstecken
-
-**Shot W3-B07**
-
-**Anhängen:** Pixels Figurenbogen (bis dahin sein Konzeptblatt) · **Bilder:** 6 · **Ablauf:** einmalig
-
-```text
-STYLE: Key pose sheet for a 2D game animation in exactly the same style, colors and proportions as the attached character sheet: same character, same head size, same hair and clothing colors, same line weight and flat cel shading, light from upper left. The key poses side by side in one row from left to right in the order of the action, evenly spaced with clear empty space between them, all at the same scale on one flat baseline, each a frozen still pose. Solid flat magenta (#ff00ff) background filling the whole image.
-SUBJECT: the tomcat exactly as on the attached character sheet, unchanged.
-CHARACTER LOCK (word for word; where SUBJECT or POSES say otherwise, they win): The tomcat, a chubby round cat about a third of Max's height when sitting, short legs, light silver-grey fur (#c0cbdc, shadow #8b9bb4, highlight #ffffff) with three darker blue-grey stripes on his back (#5a6988), white chest and four white paws (#ffffff), a very fluffy tail, a clearly visible notch torn out of his left ear, smug half-closed amber eyes (#feae34), pink nose and inner ears (#f6757a), a red collar (#e43b44, shadow #a22633) with a small round silver speaker on the front and a clearly visible turquoise light (#2ce8f5). Not orange, no tabby markings on the face, plain unmarked forehead, no heavy eyelids. Dark outline #262b44, never pure black.
-ACTION (3 key poses of a 6-frame animation of about 0.6 s): (1) 0.0 s: the tomcat grabs a cable at a patch panel with his teeth; (2) 0.3 s: pulls it out; (3) 0.6 s: carries it one step and pushes it into another socket.
-FRAMES: draw all 6 frames side by side, left to right, in the order they play: the key poses above at their times and evenly spaced in-between frames, so the motion reads smoothly; every frame differs visibly from its neighbours, no two frames identical.
-SPACING: divide the image into 6 equal columns, one frame per column, with a clear strip of empty magenta between neighbouring frames, at least as wide as the character's head; every part of a frame, including raised arms, tools, tongs, tails, capes and effects, stays completely inside its own column and never reaches into or overlaps the next frame. Draw the character smaller if needed to keep the gaps, the same size in every frame.
-END POSE: pose 3 is the final frame and is held; it must read as a calm, complete pose.
-HOLD STILL: hind legs stay planted.
-CAMERA: static, strict side view, facing right. Same scale and the same flat baseline in every pose, no zoom, no pan.
-NEGATIVE: no second character, no parts of the boy Max from the reference unless this is Max, no props that are not described, no environment, no floor, no ground shadow, no checkerboard, no frames, panels or cell borders, no text, labels or numbers, no motion blur, no ghosting, no duplicated or extra limbs, no change to face, proportions, clothing or colors, no photorealism, no 3D render, no watermark, no in-between blur, no speed lines, no smear frames, no sliding feet, no change of scale or baseline between poses, no camera movement, no zoom, no perspective change, no morphing, no extra poses beyond the ones listed
-```
-
-## Pixel: Miau-Morse
-
-**Shot W3-B08**
-
-**Anhängen:** Pixels Figurenbogen (bis dahin sein Konzeptblatt) · **Bilder:** 4 · **Ablauf:** Schleife
-
-```text
-STYLE: Key pose sheet for a 2D game animation in exactly the same style, colors and proportions as the attached character sheet: same character, same head size, same hair and clothing colors, same line weight and flat cel shading, light from upper left. The key poses side by side in one row from left to right in the order of the action, evenly spaced with clear empty space between them, all at the same scale on one flat baseline, each a frozen still pose. Solid flat magenta (#ff00ff) background filling the whole image.
-SUBJECT: the tomcat exactly as on the attached character sheet, unchanged.
-CHARACTER LOCK (word for word; where SUBJECT or POSES say otherwise, they win): The tomcat, a chubby round cat about a third of Max's height when sitting, short legs, light silver-grey fur (#c0cbdc, shadow #8b9bb4, highlight #ffffff) with three darker blue-grey stripes on his back (#5a6988), white chest and four white paws (#ffffff), a very fluffy tail, a clearly visible notch torn out of his left ear, smug half-closed amber eyes (#feae34), pink nose and inner ears (#f6757a), a red collar (#e43b44, shadow #a22633) with a small round silver speaker on the front and a clearly visible turquoise light (#2ce8f5). Not orange, no tabby markings on the face, plain unmarked forehead, no heavy eyelids. Dark outline #262b44, never pure black.
-ACTION (2 key poses of a 4-frame animation of about 0.4 s): (1) 0.0 s: the tomcat sits on a desk and taps a keyboard with one front paw, mouth opening for a meow on each tap, turquoise collar light blinking, at one end of the movement; (2) 0.2 s: the same action at the opposite end of the movement.
-FRAMES: draw all 4 frames side by side, left to right, in the order they play: the key poses above at their times and evenly spaced in-between frames, so the motion reads smoothly; every frame differs visibly from its neighbours, no two frames identical.
-SPACING: divide the image into 4 equal columns, one frame per column, with a clear strip of empty magenta between neighbouring frames, at least as wide as the character's head; every part of a frame, including raised arms, tools, tongs, tails, capes and effects, stays completely inside its own column and never reaches into or overlaps the next frame. Draw the character smaller if needed to keep the gaps, the same size in every frame.
-END POSE: the same as pose 1, so the loop closes seamlessly; do not draw it twice.
-HOLD STILL: body and tail stay still.
-CAMERA: static, strict side view, facing right. Same scale and the same flat baseline in every pose, no zoom, no pan.
-NEGATIVE: no second character, no parts of the boy Max from the reference unless this is Max, no props that are not described, no environment, no floor, no ground shadow, no checkerboard, no frames, panels or cell borders, no text, labels or numbers, no motion blur, no ghosting, no duplicated or extra limbs, no change to face, proportions, clothing or colors, no photorealism, no 3D render, no watermark, no in-between blur, no speed lines, no smear frames, no sliding feet, no change of scale or baseline between poses, no camera movement, no zoom, no perspective change, no morphing, no extra poses beyond the ones listed
-```
-
-## Pixel: Schacht kriechen
-
-**Shot W3-B09**
-
-**Anhängen:** Pixels Figurenbogen (bis dahin sein Konzeptblatt) · **Bilder:** 6 · **Ablauf:** Schleife
-
-```text
-STYLE: Key pose sheet for a 2D game animation in exactly the same style, colors and proportions as the attached character sheet: same character, same head size, same hair and clothing colors, same line weight and flat cel shading, light from upper left. The key poses side by side in one row from left to right in the order of the action, evenly spaced with clear empty space between them, all at the same scale on one flat baseline, each a frozen still pose. Solid flat magenta (#ff00ff) background filling the whole image.
-SUBJECT: the tomcat exactly as on the attached character sheet, unchanged.
-CHARACTER LOCK (word for word; where SUBJECT or POSES say otherwise, they win): The tomcat, a chubby round cat about a third of Max's height when sitting, short legs, light silver-grey fur (#c0cbdc, shadow #8b9bb4, highlight #ffffff) with three darker blue-grey stripes on his back (#5a6988), white chest and four white paws (#ffffff), a very fluffy tail, a clearly visible notch torn out of his left ear, smug half-closed amber eyes (#feae34), pink nose and inner ears (#f6757a), a red collar (#e43b44, shadow #a22633) with a small round silver speaker on the front and a clearly visible turquoise light (#2ce8f5). Not orange, no tabby markings on the face, plain unmarked forehead, no heavy eyelids. Dark outline #262b44, never pure black.
-MANNER (applies to every frame): the tomcat crawls flat on his belly through a narrow metal vent, front paws pulling, hind legs pushing, ears flat.
-FRAMES: exactly 8 frames side by side, left to right, one complete cycle of about 0.8 s at 10 frames per second: (1) near front leg and far hind leg reaching forward and just touching the ground; near hind leg and far front leg stretched back on their toes; body level; (2) near front and far hind legs carrying the weight, body at its lowest; near hind and far front paws lifted just off the ground; (3) near front and far hind legs straight under the body; near hind and far front legs bent and swinging forward past them; body high; (4) near front and far hind legs pushing off behind; near hind and far front legs reaching forward; body at its highest; (5) far front leg and near hind leg reaching forward and just touching the ground; far hind leg and near front leg stretched back on their toes; body level; (6) far front and near hind legs carrying the weight, body at its lowest; the other two paws lifted; (7) far front and near hind legs straight under the body; near front and far hind legs swinging forward past them; body high; (8) far front and near hind legs pushing off behind; near front and far hind legs reaching forward; leads back into frame 1.
-LEGS: 'near' means the leg or arm closer to the viewer, 'far' the one on the other side of the body. Draw the far legs and the far arm one shade darker and partly behind the body, so the two sides can never be confused. Every frame must differ visibly from its neighbours; frames 5 to 8 repeat frames 1 to 4 with the sides swapped, they are never copies of them.
-SPACING: divide the image into 8 equal columns, one frame per column, with a clear strip of empty magenta between neighbouring frames, at least as wide as the character's head; every part of a frame, including raised arms, tools, tongs, tails, capes and effects, stays completely inside its own column and never reaches into or overlaps the next frame. Draw the character smaller if needed to keep the gaps, the same size in every frame.
-END POSE: frame 8 leads straight back into frame 1, so the loop closes seamlessly; do not draw frame 1 twice.
-CAMERA: static, strict side view, facing right. Same scale and the same flat baseline in every pose, no zoom, no pan.
-NEGATIVE: no second character, no parts of the boy Max from the reference unless this is Max, no props that are not described, no environment, no floor, no ground shadow, no checkerboard, no frames, panels or cell borders, no text, labels or numbers, no motion blur, no ghosting, no duplicated or extra limbs, no change to face, proportions, clothing or colors, no photorealism, no 3D render, no watermark, no in-between blur, no speed lines, no smear frames, no sliding feet, no change of scale or baseline between poses, no camera movement, no zoom, no perspective change, no morphing, no extra poses beyond the ones listed
-```
-
-**Zweiter Durchgang**, wenn die Bilder 5 bis 8 nur Kopien von 1 bis 4 sind (Toadi, Minka, 15. November 2026): das erzeugte Bild anhängen und nur die hintere Hälfte neu zeichnen lassen.
-
-```text
-FIX: The attached sheet shows one walking cycle in 8 frames, but frames 5 to 8 are copies of frames 1 to 4 with the same legs in front. Keep frames 1 to 4 exactly as they are, pixel for pixel. Redraw only frames 5 to 8: each one is the frame four places earlier with the legs on the two sides swapped. Wherever a near leg (lighter, in front of the body) was reaching forward in frame 1, the far leg (one shade darker, partly behind the body) reaches forward in frame 5, and the near leg is the one stretched back; the same for frames 6, 7 and 8. Arms or front legs swap the same way. Body, head, tail, clothes and props stay exactly as in frames 1 to 4.
-CHECK: compare frame 1 and frame 5: the darker leg must be in front in one and behind in the other. If they look the same, the frame is wrong.
-SPACING: the same 8 equal columns with clear magenta gaps as in the attached sheet, nothing overlaps the next frame.
-NEGATIVE: no new poses for frames 1 to 4, no change of style, size, colors or baseline, no pixel art, no checkerboard, no text
-```
-
-## Pixel: Ohrfeige
-
-**Shot W3-B10**
-
-**Anhängen:** Pixels Figurenbogen (bis dahin sein Konzeptblatt) · **Bilder:** 6 · **Ablauf:** einmalig
-
-```text
-STYLE: Key pose sheet for a 2D game animation in exactly the same style, colors and proportions as the attached character sheet: same character, same head size, same hair and clothing colors, same line weight and flat cel shading, light from upper left. The key poses side by side in one row from left to right in the order of the action, evenly spaced with clear empty space between them, all at the same scale on one flat baseline, each a frozen still pose. Solid flat magenta (#ff00ff) background filling the whole image.
-SUBJECT: the tomcat exactly as on the attached character sheet, unchanged.
-CHARACTER LOCK (word for word; where SUBJECT or POSES say otherwise, they win): The tomcat, a chubby round cat about a third of Max's height when sitting, short legs, light silver-grey fur (#c0cbdc, shadow #8b9bb4, highlight #ffffff) with three darker blue-grey stripes on his back (#5a6988), white chest and four white paws (#ffffff), a very fluffy tail, a clearly visible notch torn out of his left ear, smug half-closed amber eyes (#feae34), pink nose and inner ears (#f6757a), a red collar (#e43b44, shadow #a22633) with a small round silver speaker on the front and a clearly visible turquoise light (#2ce8f5). Not orange, no tabby markings on the face, plain unmarked forehead, no heavy eyelids. Dark outline #262b44, never pure black.
-ACTION (3 key poses of a 6-frame animation of about 0.6 s): (1) 0.0 s: the tomcat leaps up at Max lying on the sofa; (2) 0.3 s: slaps him across the face with one front paw; (3) 0.6 s: lands again with a smug face.
-FRAMES: draw all 6 frames side by side, left to right, in the order they play: the key poses above at their times and evenly spaced in-between frames, so the motion reads smoothly; every frame differs visibly from its neighbours, no two frames identical.
-SPACING: divide the image into 6 equal columns, one frame per column, with a clear strip of empty magenta between neighbouring frames, at least as wide as the character's head; every part of a frame, including raised arms, tools, tongs, tails, capes and effects, stays completely inside its own column and never reaches into or overlaps the next frame. Draw the character smaller if needed to keep the gaps, the same size in every frame.
-END POSE: pose 3 is the final frame and is held; it must read as a calm, complete pose.
-CAMERA: static, strict side view, facing right. Same scale and the same flat baseline in every pose, no zoom, no pan.
-NEGATIVE: no second character, no parts of the boy Max from the reference unless this is Max, no props that are not described, no environment, no floor, no ground shadow, no checkerboard, no frames, panels or cell borders, no text, labels or numbers, no motion blur, no ghosting, no duplicated or extra limbs, no change to face, proportions, clothing or colors, no photorealism, no 3D render, no watermark, no in-between blur, no speed lines, no smear frames, no sliding feet, no change of scale or baseline between poses, no camera movement, no zoom, no perspective change, no morphing, no extra poses beyond the ones listed
-```
-
-## Roboter-Hausmeister: Wischen
-
-**Shot W3-B11**
-
-**Anhängen:** das fertige Konzeptblatt von Roboter-Hausmeister · **Bilder:** 6 · **Ablauf:** Schleife
-
-```text
-STYLE: Key pose sheet for a 2D game animation in exactly the same style, colors and proportions as the attached character sheet: same character, same head size, same hair and clothing colors, same line weight and flat cel shading, light from upper left. The key poses side by side in one row from left to right in the order of the action, evenly spaced with clear empty space between them, all at the same scale on one flat baseline, each a frozen still pose. Solid flat magenta (#ff00ff) background filling the whole image.
-SUBJECT: the character exactly as on the attached character sheet: same face, head size, proportions, costume and colors, nothing redesigned.
-CHARACTER (appearance only, word for word from its sheet; ignore the pose in it): Hausmeister Modell 08/15, a bulky boxy retro robot about 104 percent of the boy Max's height, dented light grey metal body, square head with one round yellow eye light and a small speaker grille mouth. Faded blue janitor overalls over the metal body, a small empty oil can in the chest pocket, a blank name plate on the chest. A mop in its right hand. Polite slight bow, facing right. No red eye, no metal skull face, no leather jacket, no sunglasses.
-ACTION (2 key poses of a 6-frame animation of about 0.6 s): (1) 0.0 s: Hausmeister Modell 08/15 mops the floor in slow circles; (2) 0.3 s: the mop head moving in a round path in front of him, upper body swaying slightly, yellow eye blinking once.
-FRAMES: draw all 6 frames side by side, left to right, in the order they play: the key poses above at their times and evenly spaced in-between frames, so the motion reads smoothly; every frame differs visibly from its neighbours, no two frames identical.
-SPACING: divide the image into 6 equal columns, one frame per column, with a clear strip of empty magenta between neighbouring frames, at least as wide as the character's head; every part of a frame, including raised arms, tools, tongs, tails, capes and effects, stays completely inside its own column and never reaches into or overlaps the next frame. Draw the character smaller if needed to keep the gaps, the same size in every frame.
-END POSE: the same as pose 1, so the loop closes seamlessly; do not draw it twice.
-HOLD STILL: feet stay planted.
-CAMERA: static, strict side view, facing right. Same scale and the same flat baseline in every pose, no zoom, no pan.
-NEGATIVE: no second character, no parts of the boy Max from the reference unless this is Max, no props that are not described, no environment, no floor, no ground shadow, no checkerboard, no frames, panels or cell borders, no text, labels or numbers, no motion blur, no ghosting, no duplicated or extra limbs, no change to face, proportions, clothing or colors, no photorealism, no 3D render, no watermark, no in-between blur, no speed lines, no smear frames, no sliding feet, no change of scale or baseline between poses, no camera movement, no zoom, no perspective change, no morphing, no extra poses beyond the ones listed
-```
-
-## Herr Vier: Weinend kochen
-
-**Shot W3-B12**
-
-**Anhängen:** das fertige Konzeptblatt von Herr Vier · **Bilder:** 6 · **Ablauf:** Schleife
-
-```text
-STYLE: Key pose sheet for a 2D game animation in exactly the same style, colors and proportions as the attached character sheet: same character, same head size, same hair and clothing colors, same line weight and flat cel shading, light from upper left. The key poses side by side in one row from left to right in the order of the action, evenly spaced with clear empty space between them, all at the same scale on one flat baseline, each a frozen still pose. Solid flat magenta (#ff00ff) background filling the whole image.
-SUBJECT: the character exactly as on the attached character sheet: same face, head size, proportions, costume and colors, nothing redesigned.
-CHARACTER (appearance only, word for word from its sheet; ignore the pose in it): Herr Vier, a short stocky serious noodle cook about as tall as the boy Max, black hair under a white cook's cap, small black moustache. White cook's jacket, white apron, white gloves with exactly four fingers each, clearly visible. A big ladle in his right hand. Standing upright, serious face, facing right.
-MANNER (applies to every frame): Herr Vier stirs a big steaming pot with his ladle while streams of tears run from his eyes into the pot.
-FRAMES: exactly 8 frames side by side, left to right, one complete cycle of about 0.8 s at 10 frames per second: (1) contact: near foot landing in front of the body, near knee slightly bent; far leg trailing behind, knee bent; far arm forward, near arm back, elbows bent; (2) down: near leg deeply bent under the body carrying the weight, body at its lowest, leaning forward; far knee driving forward; (3) push-off: near leg stretched straight back, pushing off on its toes; far knee raised high in front; (4) flight: both feet off the ground, legs split wide, far leg reaching forward, near leg trailing; body at its highest; (5) contact: far foot landing in front of the body; near leg trailing behind; near arm forward, far arm back; (6) down: far leg deeply bent carrying the weight, body at its lowest; near knee driving forward; (7) push-off: far leg stretched straight back on its toes; near knee raised high in front; (8) flight: both feet off the ground, near leg reaching forward, far leg trailing; leads back into frame 1.
-LEGS: 'near' means the leg or arm closer to the viewer, 'far' the one on the other side of the body. Draw the far legs and the far arm one shade darker and partly behind the body, so the two sides can never be confused. Every frame must differ visibly from its neighbours; frames 5 to 8 repeat frames 1 to 4 with the sides swapped, they are never copies of them.
-SPACING: divide the image into 8 equal columns, one frame per column, with a clear strip of empty magenta between neighbouring frames, at least as wide as the character's head; every part of a frame, including raised arms, tools, tongs, tails, capes and effects, stays completely inside its own column and never reaches into or overlaps the next frame. Draw the character smaller if needed to keep the gaps, the same size in every frame.
-END POSE: frame 8 leads straight back into frame 1, so the loop closes seamlessly; do not draw frame 1 twice.
-HOLD STILL: legs stay still.
-CAMERA: static, strict side view, facing right. Same scale and the same flat baseline in every pose, no zoom, no pan.
-NEGATIVE: no second character, no parts of the boy Max from the reference unless this is Max, no props that are not described, no environment, no floor, no ground shadow, no checkerboard, no frames, panels or cell borders, no text, labels or numbers, no motion blur, no ghosting, no duplicated or extra limbs, no change to face, proportions, clothing or colors, no photorealism, no 3D render, no watermark, no in-between blur, no speed lines, no smear frames, no sliding feet, no change of scale or baseline between poses, no camera movement, no zoom, no perspective change, no morphing, no extra poses beyond the ones listed
-```
-
-**Zweiter Durchgang**, wenn die Bilder 5 bis 8 nur Kopien von 1 bis 4 sind (Toadi, Minka, 15. November 2026): das erzeugte Bild anhängen und nur die hintere Hälfte neu zeichnen lassen.
-
-```text
-FIX: The attached sheet shows one walking cycle in 8 frames, but frames 5 to 8 are copies of frames 1 to 4 with the same legs in front. Keep frames 1 to 4 exactly as they are, pixel for pixel. Redraw only frames 5 to 8: each one is the frame four places earlier with the legs on the two sides swapped. Wherever a near leg (lighter, in front of the body) was reaching forward in frame 1, the far leg (one shade darker, partly behind the body) reaches forward in frame 5, and the near leg is the one stretched back; the same for frames 6, 7 and 8. Arms or front legs swap the same way. Body, head, tail, clothes and props stay exactly as in frames 1 to 4.
-CHECK: compare frame 1 and frame 5: the darker leg must be in front in one and behind in the other. If they look the same, the frame is wrong.
-SPACING: the same 8 equal columns with clear magenta gaps as in the attached sheet, nothing overlaps the next frame.
-NEGATIVE: no new poses for frames 1 to 4, no change of style, size, colors or baseline, no pixel art, no checkerboard, no text
-```
-
-## Bernd: Beleidigt davonschweben
-
-**Shot W3-B13**
-
-**Anhängen:** das fertige Konzeptblatt von Bernd · **Bilder:** 6 · **Ablauf:** einmalig
-
-```text
-STYLE: Key pose sheet for a 2D game animation in exactly the same style, colors and proportions as the attached character sheet: same character, same head size, same hair and clothing colors, same line weight and flat cel shading, light from upper left. The key poses side by side in one row from left to right in the order of the action, evenly spaced with clear empty space between them, all at the same scale on one flat baseline, each a frozen still pose. Solid flat magenta (#ff00ff) background filling the whole image.
-SUBJECT: the character exactly as on the attached character sheet: same face, head size, proportions, costume and colors, nothing redesigned.
-CHARACTER (appearance only, word for word from its sheet; ignore the pose in it): Bernd, a grey metal cube about 29 percent of the boy Max's height with simple panel seams, a pair of big googly eyes and a yellow smiley face sticker on the front, floating two pixels above the ground with a small shadow below, slightly sulky look, facing right. No hearts, no pink, no round panels.
-ACTION (2 key poses of a 6-frame animation of about 0.6 s): (1) 0.0 s: Bernd rolls his googly eyes upward; (2) 0.6 s: turns his face away and floats slowly up and off to the right.
-FRAMES: draw all 6 frames side by side, left to right, in the order they play: the key poses above at their times and evenly spaced in-between frames, so the motion reads smoothly; every frame differs visibly from its neighbours, no two frames identical.
-SPACING: divide the image into 6 equal columns, one frame per column, with a clear strip of empty magenta between neighbouring frames, at least as wide as the character's head; every part of a frame, including raised arms, tools, tongs, tails, capes and effects, stays completely inside its own column and never reaches into or overlaps the next frame. Draw the character smaller if needed to keep the gaps, the same size in every frame.
-END POSE: pose 2 is the final frame and is held; it must read as a calm, complete pose.
-CAMERA: static, strict side view, starts facing right. Same scale and the same flat baseline in every pose, no zoom, no pan.
-NEGATIVE: no second character, no parts of the boy Max from the reference unless this is Max, no props that are not described, no environment, no floor, no ground shadow, no checkerboard, no frames, panels or cell borders, no text, labels or numbers, no motion blur, no ghosting, no duplicated or extra limbs, no change to face, proportions, clothing or colors, no photorealism, no 3D render, no watermark, no in-between blur, no speed lines, no smear frames, no sliding feet, no change of scale or baseline between poses, no camera movement, no zoom, no perspective change, no morphing, no extra poses beyond the ones listed
-```
-
 ## Schwarze Katze: Zweimal vorbeilaufen
 
-**Shot W3-B14**
+**Shot W3-B01**
 
 **Anhängen:** das fertige Konzeptblatt von Schwarze Katze · **Bilder:** 8 · **Ablauf:** Schleife
 
@@ -935,67 +1053,8 @@ NEGATIVE: no second character, no parts of the boy Max from the reference unless
 STYLE: Key pose sheet for a 2D game animation in exactly the same style, colors and proportions as the attached character sheet: same character, same head size, same hair and clothing colors, same line weight and flat cel shading, light from upper left. The key poses side by side in one row from left to right in the order of the action, evenly spaced with clear empty space between them, all at the same scale on one flat baseline, each a frozen still pose. Solid flat magenta (#ff00ff) background filling the whole image.
 SUBJECT: the character exactly as on the attached character sheet: same face, head size, proportions, costume and colors, nothing redesigned.
 CHARACTER (appearance only, word for word from its sheet; ignore the pose in it): A sleek pure black cat about 25 percent of the boy Max's height, slim body, yellow-green eyes, no collar, walking calmly in profile with its tail straight up, facing right. Clearly different from the tomcat: smaller, slim, all black, no stripes, no collar (bleibt schwarz).
-MANNER (applies to every frame): The black cat walks calmly with its tail straight up, same paw first in every cycle.
-FRAMES: exactly 8 frames side by side, left to right, one complete cycle of about 0.8 s at 10 frames per second: (1) near front leg and far hind leg reaching forward and just touching the ground; near hind leg and far front leg stretched back on their toes; body level; (2) near front and far hind legs carrying the weight, body at its lowest; near hind and far front paws lifted just off the ground; (3) near front and far hind legs straight under the body; near hind and far front legs bent and swinging forward past them; body high; (4) near front and far hind legs pushing off behind; near hind and far front legs reaching forward; body at its highest; (5) far front leg and near hind leg reaching forward and just touching the ground; far hind leg and near front leg stretched back on their toes; body level; (6) far front and near hind legs carrying the weight, body at its lowest; the other two paws lifted; (7) far front and near hind legs straight under the body; near front and far hind legs swinging forward past them; body high; (8) far front and near hind legs pushing off behind; near front and far hind legs reaching forward; leads back into frame 1.
-LEGS: 'near' means the leg or arm closer to the viewer, 'far' the one on the other side of the body. Draw the far legs and the far arm one shade darker and partly behind the body, so the two sides can never be confused. Every frame must differ visibly from its neighbours; frames 5 to 8 repeat frames 1 to 4 with the sides swapped, they are never copies of them.
-SPACING: divide the image into 8 equal columns, one frame per column, with a clear strip of empty magenta between neighbouring frames, at least as wide as the character's head; every part of a frame, including raised arms, tools, tongs, tails, capes and effects, stays completely inside its own column and never reaches into or overlaps the next frame. Draw the character smaller if needed to keep the gaps, the same size in every frame.
-END POSE: frame 8 leads straight back into frame 1, so the loop closes seamlessly; do not draw frame 1 twice.
-CAMERA: static, strict side view, facing right. Same scale and the same flat baseline in every pose, no zoom, no pan.
-NEGATIVE: no second character, no parts of the boy Max from the reference unless this is Max, no props that are not described, no environment, no floor, no ground shadow, no checkerboard, no frames, panels or cell borders, no text, labels or numbers, no motion blur, no ghosting, no duplicated or extra limbs, no change to face, proportions, clothing or colors, no photorealism, no 3D render, no watermark, no in-between blur, no speed lines, no smear frames, no sliding feet, no change of scale or baseline between poses, no camera movement, no zoom, no perspective change, no morphing, no extra poses beyond the ones listed
-```
-
-**Zweiter Durchgang**, wenn die Bilder 5 bis 8 nur Kopien von 1 bis 4 sind (Toadi, Minka, 15. November 2026): das erzeugte Bild anhängen und nur die hintere Hälfte neu zeichnen lassen.
-
-```text
-FIX: The attached sheet shows one walking cycle in 8 frames, but frames 5 to 8 are copies of frames 1 to 4 with the same legs in front. Keep frames 1 to 4 exactly as they are, pixel for pixel. Redraw only frames 5 to 8: each one is the frame four places earlier with the legs on the two sides swapped. Wherever a near leg (lighter, in front of the body) was reaching forward in frame 1, the far leg (one shade darker, partly behind the body) reaches forward in frame 5, and the near leg is the one stretched back; the same for frames 6, 7 and 8. Arms or front legs swap the same way. Body, head, tail, clothes and props stay exactly as in frames 1 to 4.
-CHECK: compare frame 1 and frame 5: the darker leg must be in front in one and behind in the other. If they look the same, the frame is wrong.
-SPACING: the same 8 equal columns with clear magenta gaps as in the attached sheet, nothing overlaps the next frame.
-NEGATIVE: no new poses for frames 1 to 4, no change of style, size, colors or baseline, no pixel art, no checkerboard, no text
-```
-
-## Verwandlung: Effekt
-
-**Shot W3-B15**
-
-**Anhängen:** nichts (Effekt) · **Bilder:** 6 · **Ablauf:** einmalig
-
-```text
-STYLE: Visual effect frames for a 2D game, frames side by side in one row, evenly spaced, frame count as given in the motif, every frame the same size with the effect centered, flat cel shading, solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no frames or panels, no text.
-EFFECT: A short green digital glitch of square pixels flickering around an inventory item and dissolving, 64x64, 6 frames, plays once, over the inventory slot.
-FRAMES: 6 frames side by side, about 0.6 s at 10 frames per second, plays once, each frame 64x64 pixels in the game.
-SPACING: divide the image into 6 equal columns, one frame per column, with a clear strip of empty magenta between neighbouring frames, at least as wide as the character's head; every part of a frame, including raised arms, tools, tongs, tails, capes and effects, stays completely inside its own column and never reaches into or overlaps the next frame. Draw the character smaller if needed to keep the gaps, the same size in every frame.
-END: the last frame is the calm end state of the effect.
-CAMERA: static, no zoom, no pan, the effect stays centered in every frame.
-NEGATIVE: no characters unless named, no background scene, no text, no frames or panels, no checkerboard, no motion blur, no speed lines
-```
-
-## Portal: Effekt
-
-**Shot W3-B16**
-
-**Anhängen:** nichts (Effekt) · **Bilder:** 8 · **Ablauf:** einmalig
-
-```text
-STYLE: Visual effect frames for a 2D game, frames side by side in one row, evenly spaced, frame count as given in the motif, every frame the same size with the effect centered, flat cel shading, solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no frames or panels, no text.
-EFFECT: A round shimmering white-green hole opens in a white wall, shows a cozy living room with an old man on a brown sofa holding a teacup, then shrinks shut, 96x128, 8 frames, plays once, over Testkammer 1.
-FRAMES: 8 frames side by side, about 0.8 s at 10 frames per second, plays once, each frame 96x128 pixels in the game.
-SPACING: divide the image into 8 equal columns, one frame per column, with a clear strip of empty magenta between neighbouring frames, at least as wide as the character's head; every part of a frame, including raised arms, tools, tongs, tails, capes and effects, stays completely inside its own column and never reaches into or overlaps the next frame. Draw the character smaller if needed to keep the gaps, the same size in every frame.
-END: the last frame is the calm end state of the effect.
-CAMERA: static, no zoom, no pan, the effect stays centered in every frame.
-NEGATIVE: no characters unless named, no background scene, no text, no frames or panels, no checkerboard, no motion blur, no speed lines
-```
-
-## Max als Ente: Watscheln
-
-**Shot W3-B17**
-
-**Anhängen:** Max' Figurenbogen (bis dahin sein Konzeptblatt) · **Bilder:** 6 · **Ablauf:** Schleife
-
-```text
-STYLE: Key pose sheet for a 2D game animation in exactly the same style, colors and proportions as the attached character sheet: same character, same head size, same hair and clothing colors, same line weight and flat cel shading, light from upper left. The key poses side by side in one row from left to right in the order of the action, evenly spaced with clear empty space between them, all at the same scale on one flat baseline, each a frozen still pose. Solid flat magenta (#ff00ff) background filling the whole image.
-SUBJECT: Max exactly as on the attached character sheet, unchanged.
-CHARACTER LOCK (word for word; where SUBJECT or POSES say otherwise, they win): Max, a lanky 16-year-old boy, the reference height for every other character, head about a quarter of his height, slight slouch with hanging shoulders. Messy dark brown hair (#733e39, shadow #3e2731, highlight #b86f50) with shaggy strands falling over his forehead and eyes. Fair skin (#e8b796, shadow #c28569), sleepy half-closed eyes, lopsided smirk, a few freckles. Oversized dark slate blue-grey hoodie (#3a4466, shadow #262b44, highlight #5a6988), hood down, sleeves partly over his hands, uneven drawstrings, a tiny retro TV print with a turquoise screen (#2ce8f5) on the chest. Dark blue jeans (#124e89) slightly too long and rolled up at the hem. Worn red sneakers (#e43b44, shadow #a22633) with white soles (#ffffff), one lace untied. Dark outline #262b44, never pure black.
-MANNER (applies to every frame): Max as a duck in his slate blue-grey hoodie waddles in place, rocking from side to side, beak opening for a quack.
+START: From the neutral pose on the attached concept sheet of Schwarze Katze. Keep the clean concept-art style of that sheet, not pixel art.
+MANNER (applies to every frame): calm walk with the tail straight up, same paw first in every cycle.
 FRAMES: exactly 8 frames side by side, left to right, one complete cycle of about 0.8 s at 10 frames per second: (1) contact: near leg forward and straight, only its heel touching the ground, toes up; far leg stretched back, only its toes touching; far arm swung forward, near arm swung back; body at middle height; (2) down: near foot flat on the ground, near knee bent and carrying the weight, body at its lowest; far foot lifted just off the ground behind, far knee bent; (3) passing: near leg straight and vertical under the hips; far leg bent, its foot lifted to ankle height and swinging forward right beside the near leg; both arms close to the body; body high; (4) up: near foot pushing off on its toes behind the body; far leg swinging forward, almost straight, its foot just above the ground; body at its highest; (5) contact: far leg forward and straight, only its heel touching the ground; near leg stretched back, only its toes touching; near arm swung forward, far arm swung back; body at middle height; (6) down: far foot flat, far knee bent and carrying the weight, body at its lowest; near foot lifted just off the ground behind; (7) passing: far leg straight under the hips; near leg bent, its foot lifted to ankle height and swinging forward beside the far leg; body high; (8) up: far foot pushing off on its toes; near leg swinging forward, foot just above the ground; body at its highest, leading back into frame 1.
 LEGS: 'near' means the leg or arm closer to the viewer, 'far' the one on the other side of the body. Draw the far legs and the far arm one shade darker and partly behind the body, so the two sides can never be confused. Every frame must differ visibly from its neighbours; frames 5 to 8 repeat frames 1 to 4 with the sides swapped, they are never copies of them.
 SPACING: divide the image into 8 equal columns, one frame per column, with a clear strip of empty magenta between neighbouring frames, at least as wide as the character's head; every part of a frame, including raised arms, tools, tongs, tails, capes and effects, stays completely inside its own column and never reaches into or overlaps the next frame. Draw the character smaller if needed to keep the gaps, the same size in every frame.
@@ -1013,9 +1072,230 @@ SPACING: the same 8 equal columns with clear magenta gaps as in the attached she
 NEGATIVE: no new poses for frames 1 to 4, no change of style, size, colors or baseline, no pixel art, no checkerboard, no text
 ```
 
+## Max als Ente: Watscheln
+
+**Shot W3-B02**
+
+**Anhängen:** Max' Figurenbogen (bis dahin sein Konzeptblatt) · **Bilder:** 6 · **Ablauf:** Schleife
+
+```text
+STYLE: Key pose sheet for a 2D game animation in exactly the same style, colors and proportions as the attached character sheet: same character, same head size, same hair and clothing colors, same line weight and flat cel shading, light from upper left. The key poses side by side in one row from left to right in the order of the action, evenly spaced with clear empty space between them, all at the same scale on one flat baseline, each a frozen still pose. Solid flat magenta (#ff00ff) background filling the whole image.
+SUBJECT: Max exactly as on the attached character sheet, unchanged.
+CHARACTER LOCK (word for word; where SUBJECT or POSES say otherwise, they win): Max, a lanky 16-year-old boy, the reference height for every other character, head about a quarter of his height, slight slouch with hanging shoulders. Messy dark brown hair (#733e39, shadow #3e2731, highlight #b86f50) with shaggy strands falling over his forehead and eyes. Fair skin (#e8b796, shadow #c28569), sleepy half-closed eyes, lopsided smirk, a few freckles. Oversized dark slate blue-grey hoodie (#3a4466, shadow #262b44, highlight #5a6988), hood down, sleeves partly over his hands, uneven drawstrings, a tiny retro TV print with a turquoise screen (#2ce8f5) on the chest. Dark blue jeans (#124e89) slightly too long and rolled up at the hem. Worn red sneakers (#e43b44, shadow #a22633) with white soles (#ffffff), one lace untied. Dark outline #262b44, never pure black.
+START: From the neutral pose on the attached concept sheet of Max als Ente. Keep the clean concept-art style of that sheet, not pixel art.
+MANNER (applies to every frame): the duck in the slate blue-grey hoodie waddles in place, rocking from side to side, beak opening for a quack.
+FRAMES: exactly 8 frames side by side, left to right, one complete cycle of about 0.8 s at 10 frames per second: (1) contact: near leg forward and straight, only its heel touching the ground, toes up; far leg stretched back, only its toes touching; far arm swung forward, near arm swung back; body at middle height; (2) down: near foot flat on the ground, near knee bent and carrying the weight, body at its lowest; far foot lifted just off the ground behind, far knee bent; (3) passing: near leg straight and vertical under the hips; far leg bent, its foot lifted to ankle height and swinging forward right beside the near leg; both arms close to the body; body high; (4) up: near foot pushing off on its toes behind the body; far leg swinging forward, almost straight, its foot just above the ground; body at its highest; (5) contact: far leg forward and straight, only its heel touching the ground; near leg stretched back, only its toes touching; near arm swung forward, far arm swung back; body at middle height; (6) down: far foot flat, far knee bent and carrying the weight, body at its lowest; near foot lifted just off the ground behind; (7) passing: far leg straight under the hips; near leg bent, its foot lifted to ankle height and swinging forward beside the far leg; body high; (8) up: far foot pushing off on its toes; near leg swinging forward, foot just above the ground; body at its highest, leading back into frame 1.
+LEGS: 'near' means the leg or arm closer to the viewer, 'far' the one on the other side of the body. Draw the far legs and the far arm one shade darker and partly behind the body, so the two sides can never be confused. Every frame must differ visibly from its neighbours; frames 5 to 8 repeat frames 1 to 4 with the sides swapped, they are never copies of them.
+SPACING: divide the image into 8 equal columns, one frame per column, with a clear strip of empty magenta between neighbouring frames, at least as wide as the character's head; every part of a frame, including raised arms, tools, tongs, tails, capes and effects, stays completely inside its own column and never reaches into or overlaps the next frame. Draw the character smaller if needed to keep the gaps, the same size in every frame.
+END POSE: frame 8 leads straight back into frame 1, so the loop closes seamlessly; do not draw frame 1 twice.
+CAMERA: static, strict side view, facing right. Same scale and the same flat baseline in every pose, no zoom, no pan.
+NEGATIVE: no second character, no parts of the boy Max from the reference unless this is Max, no props that are not described, no environment, no floor, no ground shadow, no checkerboard, no frames, panels or cell borders, no text, labels or numbers, no motion blur, no ghosting, no duplicated or extra limbs, no change to face, proportions, clothing or colors, no photorealism, no 3D render, no watermark, no in-between blur, no speed lines, no smear frames, no sliding feet, no change of scale or baseline between poses, no camera movement, no zoom, no perspective change, no morphing, no extra poses beyond the ones listed
+```
+
+**Zweiter Durchgang**, wenn die Bilder 5 bis 8 nur Kopien von 1 bis 4 sind (Toadi, Minka, 15. November 2026): das erzeugte Bild anhängen und nur die hintere Hälfte neu zeichnen lassen.
+
+```text
+FIX: The attached sheet shows one walking cycle in 8 frames, but frames 5 to 8 are copies of frames 1 to 4 with the same legs in front. Keep frames 1 to 4 exactly as they are, pixel for pixel. Redraw only frames 5 to 8: each one is the frame four places earlier with the legs on the two sides swapped. Wherever a near leg (lighter, in front of the body) was reaching forward in frame 1, the far leg (one shade darker, partly behind the body) reaches forward in frame 5, and the near leg is the one stretched back; the same for frames 6, 7 and 8. Arms or front legs swap the same way. Body, head, tail, clothes and props stay exactly as in frames 1 to 4.
+CHECK: compare frame 1 and frame 5: the darker leg must be in front in one and behind in the other. If they look the same, the frame is wrong.
+SPACING: the same 8 equal columns with clear magenta gaps as in the attached sheet, nothing overlaps the next frame.
+NEGATIVE: no new poses for frames 1 to 4, no change of style, size, colors or baseline, no pixel art, no checkerboard, no text
+```
+
+## Pixel: Schacht kriechen
+
+**Shot W3-B03**
+
+**Anhängen:** Pixels Figurenbogen (bis dahin sein Konzeptblatt) · **Bilder:** 6 · **Ablauf:** Schleife
+
+```text
+STYLE: Key pose sheet for a 2D game animation in exactly the same style, colors and proportions as the attached character sheet: same character, same head size, same hair and clothing colors, same line weight and flat cel shading, light from upper left. The key poses side by side in one row from left to right in the order of the action, evenly spaced with clear empty space between them, all at the same scale on one flat baseline, each a frozen still pose. Solid flat magenta (#ff00ff) background filling the whole image.
+SUBJECT: the tomcat exactly as on the attached character sheet, unchanged.
+CHARACTER LOCK (word for word; where SUBJECT or POSES say otherwise, they win): The tomcat, a chubby round cat about a third of Max's height when sitting, short legs, light silver-grey fur (#c0cbdc, shadow #8b9bb4, highlight #ffffff) with three darker blue-grey stripes on his back (#5a6988), white chest and four white paws (#ffffff), a very fluffy tail, a clearly visible notch torn out of his left ear, smug half-closed amber eyes (#feae34), pink nose and inner ears (#f6757a), a red collar (#e43b44, shadow #a22633) with a small round silver speaker on the front and a clearly visible turquoise light (#2ce8f5). Not orange, no tabby markings on the face, plain unmarked forehead, no heavy eyelids. Dark outline #262b44, never pure black.
+MANNER (applies to every frame): From the tomcat's reference sheet: the tomcat crawls flat on his belly through a narrow metal vent, front paws pulling, hind legs pushing, ears flat.
+FRAMES: exactly 8 frames side by side, left to right, one complete cycle of about 0.8 s at 10 frames per second: (1) near front leg and far hind leg reaching forward and just touching the ground; near hind leg and far front leg stretched back on their toes; body level; (2) near front and far hind legs carrying the weight, body at its lowest; near hind and far front paws lifted just off the ground; (3) near front and far hind legs straight under the body; near hind and far front legs bent and swinging forward past them; body high; (4) near front and far hind legs pushing off behind; near hind and far front legs reaching forward; body at its highest; (5) far front leg and near hind leg reaching forward and just touching the ground; far hind leg and near front leg stretched back on their toes; body level; (6) far front and near hind legs carrying the weight, body at its lowest; the other two paws lifted; (7) far front and near hind legs straight under the body; near front and far hind legs swinging forward past them; body high; (8) far front and near hind legs pushing off behind; near front and far hind legs reaching forward; leads back into frame 1.
+LEGS: 'near' means the leg or arm closer to the viewer, 'far' the one on the other side of the body. Draw the far legs and the far arm one shade darker and partly behind the body, so the two sides can never be confused. Every frame must differ visibly from its neighbours; frames 5 to 8 repeat frames 1 to 4 with the sides swapped, they are never copies of them.
+SPACING: divide the image into 8 equal columns, one frame per column, with a clear strip of empty magenta between neighbouring frames, at least as wide as the character's head; every part of a frame, including raised arms, tools, tongs, tails, capes and effects, stays completely inside its own column and never reaches into or overlaps the next frame. Draw the character smaller if needed to keep the gaps, the same size in every frame.
+END POSE: frame 8 leads straight back into frame 1, so the loop closes seamlessly; do not draw frame 1 twice.
+CAMERA: static, strict side view, facing right. Same scale and the same flat baseline in every pose, no zoom, no pan.
+NEGATIVE: no second character, no parts of the boy Max from the reference unless this is Max, no props that are not described, no environment, no floor, no ground shadow, no checkerboard, no frames, panels or cell borders, no text, labels or numbers, no motion blur, no ghosting, no duplicated or extra limbs, no change to face, proportions, clothing or colors, no photorealism, no 3D render, no watermark, no in-between blur, no speed lines, no smear frames, no sliding feet, no change of scale or baseline between poses, no camera movement, no zoom, no perspective change, no morphing, no extra poses beyond the ones listed
+```
+
+**Zweiter Durchgang**, wenn die Bilder 5 bis 8 nur Kopien von 1 bis 4 sind (Toadi, Minka, 15. November 2026): das erzeugte Bild anhängen und nur die hintere Hälfte neu zeichnen lassen.
+
+```text
+FIX: The attached sheet shows one walking cycle in 8 frames, but frames 5 to 8 are copies of frames 1 to 4 with the same legs in front. Keep frames 1 to 4 exactly as they are, pixel for pixel. Redraw only frames 5 to 8: each one is the frame four places earlier with the legs on the two sides swapped. Wherever a near leg (lighter, in front of the body) was reaching forward in frame 1, the far leg (one shade darker, partly behind the body) reaches forward in frame 5, and the near leg is the one stretched back; the same for frames 6, 7 and 8. Arms or front legs swap the same way. Body, head, tail, clothes and props stay exactly as in frames 1 to 4.
+CHECK: compare frame 1 and frame 5: the darker leg must be in front in one and behind in the other. If they look the same, the frame is wrong.
+SPACING: the same 8 equal columns with clear magenta gaps as in the attached sheet, nothing overlaps the next frame.
+NEGATIVE: no new poses for frames 1 to 4, no change of style, size, colors or baseline, no pixel art, no checkerboard, no text
+```
+
+## Bernd: Beleidigt davonschweben
+
+**Shot W3-B04**
+
+**Anhängen:** das fertige Konzeptblatt von Bernd · **Bilder:** 6 · **Ablauf:** einmalig
+
+```text
+STYLE: Key pose sheet for a 2D game animation in exactly the same style, colors and proportions as the attached character sheet: same character, same head size, same hair and clothing colors, same line weight and flat cel shading, light from upper left. The key poses side by side in one row from left to right in the order of the action, evenly spaced with clear empty space between them, all at the same scale on one flat baseline, each a frozen still pose. Solid flat magenta (#ff00ff) background filling the whole image.
+SUBJECT: the character exactly as on the attached character sheet: same face, head size, proportions, costume and colors, nothing redesigned.
+CHARACTER (appearance only, word for word from its sheet; ignore the pose in it): Bernd, a grey metal cube about 29 percent of the boy Max's height with simple panel seams, a pair of big googly eyes and a yellow smiley face sticker on the front, floating two pixels above the ground with a small shadow below, slightly sulky look, facing right. No hearts, no pink, no round panels.
+START: From the neutral pose on the attached concept sheet of Bernd. Keep the clean concept-art style of that sheet, not pixel art.
+ACTION (2 key poses of a 6-frame animation of about 0.6 s): (1) 0.0 s: the cube rolls his googly eyes upward; (2) 0.6 s: turns his face away and floats slowly up and off to the right.
+FRAMES: draw all 6 frames side by side, left to right, in the order they play: the key poses above at their times and evenly spaced in-between frames, so the motion reads smoothly; every frame differs visibly from its neighbours, no two frames identical.
+SPACING: divide the image into 6 equal columns, one frame per column, with a clear strip of empty magenta between neighbouring frames, at least as wide as the character's head; every part of a frame, including raised arms, tools, tongs, tails, capes and effects, stays completely inside its own column and never reaches into or overlaps the next frame. Draw the character smaller if needed to keep the gaps, the same size in every frame.
+END POSE: pose 2 is the final frame and is held; it must read as a calm, complete pose.
+CAMERA: static, strict side view, starts facing right. Same scale and the same flat baseline in every pose, no zoom, no pan.
+NEGATIVE: no second character, no parts of the boy Max from the reference unless this is Max, no props that are not described, no environment, no floor, no ground shadow, no checkerboard, no frames, panels or cell borders, no text, labels or numbers, no motion blur, no ghosting, no duplicated or extra limbs, no change to face, proportions, clothing or colors, no photorealism, no 3D render, no watermark, no in-between blur, no speed lines, no smear frames, no sliding feet, no change of scale or baseline between poses, no camera movement, no zoom, no perspective change, no morphing, no extra poses beyond the ones listed
+```
+
+## Piepsi: Hochfahren
+
+**Shot W3-B05**
+
+**Anhängen:** das fertige Konzeptblatt von Piepsi · **Bilder:** 8 · **Ablauf:** einmalig
+
+```text
+STYLE: Key pose sheet for a 2D game animation in exactly the same style, colors and proportions as the attached character sheet: same character, same head size, same hair and clothing colors, same line weight and flat cel shading, light from upper left. The key poses side by side in one row from left to right in the order of the action, evenly spaced with clear empty space between them, all at the same scale on one flat baseline, each a frozen still pose. Solid flat magenta (#ff00ff) background filling the whole image.
+SUBJECT: the character exactly as on the attached character sheet: same face, head size, proportions, costume and colors, nothing redesigned.
+CHARACTER (appearance only, word for word from its sheet; ignore the pose in it): Piepsi, a small round cleaning robot about 32 percent of the boy Max's height shaped like a dented white bucket on three little wheels, one big round blue lens eye, a tiny antenna with a red tip, a crumpled black bowler hat on top, cheeky look, facing right.
+START: From the neutral pose on the attached concept sheet of Piepsi, starting from the rusty version. Keep the clean concept-art style of that sheet, not pixel art.
+ACTION (3 key poses of a 8-frame animation of about 0.8 s): (1) 0.0 s: he shakes off rust flakes; (2) 0.4 s: straightens up on his three wheels; (3) 0.8 s: his blue eye lights up and his bowler hat pops up.
+FRAMES: draw all 8 frames side by side, left to right, in the order they play: the key poses above at their times and evenly spaced in-between frames, so the motion reads smoothly; every frame differs visibly from its neighbours, no two frames identical.
+SPACING: divide the image into 8 equal columns, one frame per column, with a clear strip of empty magenta between neighbouring frames, at least as wide as the character's head; every part of a frame, including raised arms, tools, tongs, tails, capes and effects, stays completely inside its own column and never reaches into or overlaps the next frame. Draw the character smaller if needed to keep the gaps, the same size in every frame.
+END POSE: pose 3 is the final frame and is held; it must read as a calm, complete pose.
+CAMERA: static, strict side view, facing right. Same scale and the same flat baseline in every pose, no zoom, no pan.
+NEGATIVE: no second character, no parts of the boy Max from the reference unless this is Max, no props that are not described, no environment, no floor, no ground shadow, no checkerboard, no frames, panels or cell borders, no text, labels or numbers, no motion blur, no ghosting, no duplicated or extra limbs, no change to face, proportions, clothing or colors, no photorealism, no 3D render, no watermark, no in-between blur, no speed lines, no smear frames, no sliding feet, no change of scale or baseline between poses, no camera movement, no zoom, no perspective change, no morphing, no extra poses beyond the ones listed
+```
+
+## Piepsi: Piepen
+
+**Shot W3-B06**
+
+**Anhängen:** das fertige Konzeptblatt von Piepsi · **Bilder:** 4 · **Ablauf:** Schleife
+
+```text
+STYLE: Key pose sheet for a 2D game animation in exactly the same style, colors and proportions as the attached character sheet: same character, same head size, same hair and clothing colors, same line weight and flat cel shading, light from upper left. The key poses side by side in one row from left to right in the order of the action, evenly spaced with clear empty space between them, all at the same scale on one flat baseline, each a frozen still pose. Solid flat magenta (#ff00ff) background filling the whole image.
+SUBJECT: the character exactly as on the attached character sheet: same face, head size, proportions, costume and colors, nothing redesigned.
+CHARACTER (appearance only, word for word from its sheet; ignore the pose in it): Piepsi, a small round cleaning robot about 32 percent of the boy Max's height shaped like a dented white bucket on three little wheels, one big round blue lens eye, a tiny antenna with a red tip, a crumpled black bowler hat on top, cheeky look, facing right.
+START: From the neutral pose on the attached concept sheet of Piepsi. Keep the clean concept-art style of that sheet, not pixel art.
+ACTION (2 key poses of a 4-frame animation of about 0.4 s): (1) 0.0 s: he wobbles from side to side on his wheels, antenna tip blinking red, blue eye flashing angrily, at one end of the movement; (2) 0.2 s: the same action at the opposite end of the movement.
+FRAMES: draw all 4 frames side by side, left to right, in the order they play: the key poses above at their times and evenly spaced in-between frames, so the motion reads smoothly; every frame differs visibly from its neighbours, no two frames identical.
+SPACING: divide the image into 4 equal columns, one frame per column, with a clear strip of empty magenta between neighbouring frames, at least as wide as the character's head; every part of a frame, including raised arms, tools, tongs, tails, capes and effects, stays completely inside its own column and never reaches into or overlaps the next frame. Draw the character smaller if needed to keep the gaps, the same size in every frame.
+END POSE: the same as pose 1, so the loop closes seamlessly; do not draw it twice.
+CAMERA: static, strict side view, facing right. Same scale and the same flat baseline in every pose, no zoom, no pan.
+NEGATIVE: no second character, no parts of the boy Max from the reference unless this is Max, no props that are not described, no environment, no floor, no ground shadow, no checkerboard, no frames, panels or cell borders, no text, labels or numbers, no motion blur, no ghosting, no duplicated or extra limbs, no change to face, proportions, clothing or colors, no photorealism, no 3D render, no watermark, no in-between blur, no speed lines, no smear frames, no sliding feet, no change of scale or baseline between poses, no camera movement, no zoom, no perspective change, no morphing, no extra poses beyond the ones listed
+```
+
+## M.U.T.T.I.: Sprechen
+
+**Shot W3-B07**
+
+**Anhängen:** das fertige Konzeptblatt von M.U.T.T.I. · **Bilder:** 4 · **Ablauf:** Schleife
+
+```text
+STYLE: Key pose sheet for a 2D game animation in exactly the same style, colors and proportions as the attached character sheet: same character, same head size, same hair and clothing colors, same line weight and flat cel shading, light from upper left. The key poses side by side in one row from left to right in the order of the action, evenly spaced with clear empty space between them, all at the same scale on one flat baseline, each a frozen still pose. Solid flat magenta (#ff00ff) background filling the whole image.
+SUBJECT: the character exactly as on the attached character sheet: same face, head size, proportions, costume and colors, nothing redesigned.
+CHARACTER (appearance only, word for word from its sheet; ignore the pose in it): M.U.T.T.I., a huge AI machine about 180 percent of the boy Max's height hanging from the ceiling: a giant white kitchen stand mixer mounted upside down on a thick ceiling arm. One round lens eye glowing soft orange in the mixer head, two pink hair-curler-shaped antennas on top, a floral apron pattern painted on the white casing, a steel whisk attachment as a chin. Strict but caring look, facing right.
+START: From the neutral pose on the attached concept sheet of M.U.T.T.I.. Keep the clean concept-art style of that sheet, not pixel art.
+ACTION (2 key poses of a 4-frame animation of about 0.4 s): (1) 0.0 s: the orange lens eye pulses brighter and dimmer; (2) 0.2 s: the whisk chin wobbles up and down.
+FRAMES: draw all 4 frames side by side, left to right, in the order they play: the key poses above at their times and evenly spaced in-between frames, so the motion reads smoothly; every frame differs visibly from its neighbours, no two frames identical.
+SPACING: divide the image into 4 equal columns, one frame per column, with a clear strip of empty magenta between neighbouring frames, at least as wide as the character's head; every part of a frame, including raised arms, tools, tongs, tails, capes and effects, stays completely inside its own column and never reaches into or overlaps the next frame. Draw the character smaller if needed to keep the gaps, the same size in every frame.
+END POSE: the same as pose 1, so the loop closes seamlessly; do not draw it twice.
+HOLD STILL: casing and antennas stay still.
+CAMERA: static, strict side view, facing right. Same scale and the same flat baseline in every pose, no zoom, no pan.
+NEGATIVE: no second character, no parts of the boy Max from the reference unless this is Max, no props that are not described, no environment, no floor, no ground shadow, no checkerboard, no frames, panels or cell borders, no text, labels or numbers, no motion blur, no ghosting, no duplicated or extra limbs, no change to face, proportions, clothing or colors, no photorealism, no 3D render, no watermark, no in-between blur, no speed lines, no smear frames, no sliding feet, no change of scale or baseline between poses, no camera movement, no zoom, no perspective change, no morphing, no extra poses beyond the ones listed
+```
+
+## M.U.T.T.I.: Herunterfahren
+
+**Shot W3-B08**
+
+**Anhängen:** das fertige Konzeptblatt von M.U.T.T.I. · **Bilder:** 8 · **Ablauf:** einmalig
+
+```text
+STYLE: Key pose sheet for a 2D game animation in exactly the same style, colors and proportions as the attached character sheet: same character, same head size, same hair and clothing colors, same line weight and flat cel shading, light from upper left. The key poses side by side in one row from left to right in the order of the action, evenly spaced with clear empty space between them, all at the same scale on one flat baseline, each a frozen still pose. Solid flat magenta (#ff00ff) background filling the whole image.
+SUBJECT: the character exactly as on the attached character sheet: same face, head size, proportions, costume and colors, nothing redesigned.
+CHARACTER (appearance only, word for word from its sheet; ignore the pose in it): M.U.T.T.I., a huge AI machine about 180 percent of the boy Max's height hanging from the ceiling: a giant white kitchen stand mixer mounted upside down on a thick ceiling arm. One round lens eye glowing soft orange in the mixer head, two pink hair-curler-shaped antennas on top, a floral apron pattern painted on the white casing, a steel whisk attachment as a chin. Strict but caring look, facing right.
+START: From the neutral pose on the attached concept sheet of M.U.T.T.I.. Keep the clean concept-art style of that sheet, not pixel art.
+ACTION (4 key poses of a 8-frame animation of about 0.8 s): (1) 0.0 s: the orange eye flickers and dims to dark; (2) 0.3 s: the curler antennas droop; (3) 0.5 s: the machine sinks a few pixels on its ceiling arm; (4) 0.8 s: a small puff of steam escapes.
+FRAMES: draw all 8 frames side by side, left to right, in the order they play: the key poses above at their times and evenly spaced in-between frames, so the motion reads smoothly; every frame differs visibly from its neighbours, no two frames identical.
+SPACING: divide the image into 8 equal columns, one frame per column, with a clear strip of empty magenta between neighbouring frames, at least as wide as the character's head; every part of a frame, including raised arms, tools, tongs, tails, capes and effects, stays completely inside its own column and never reaches into or overlaps the next frame. Draw the character smaller if needed to keep the gaps, the same size in every frame.
+END POSE: pose 4 is the final frame and is held; it must read as a calm, complete pose (ends on the dark version).
+CAMERA: static, strict side view, facing right. Same scale and the same flat baseline in every pose, no zoom, no pan.
+NEGATIVE: no second character, no parts of the boy Max from the reference unless this is Max, no props that are not described, no environment, no floor, no ground shadow, no checkerboard, no frames, panels or cell borders, no text, labels or numbers, no motion blur, no ghosting, no duplicated or extra limbs, no change to face, proportions, clothing or colors, no photorealism, no 3D render, no watermark, no in-between blur, no speed lines, no smear frames, no sliding feet, no change of scale or baseline between poses, no camera movement, no zoom, no perspective change, no morphing, no extra poses beyond the ones listed
+```
+
+## Roboter-Hausmeister: Wischen
+
+**Shot W3-B09**
+
+**Anhängen:** das fertige Konzeptblatt von Roboter-Hausmeister · **Bilder:** 6 · **Ablauf:** Schleife
+
+```text
+STYLE: Key pose sheet for a 2D game animation in exactly the same style, colors and proportions as the attached character sheet: same character, same head size, same hair and clothing colors, same line weight and flat cel shading, light from upper left. The key poses side by side in one row from left to right in the order of the action, evenly spaced with clear empty space between them, all at the same scale on one flat baseline, each a frozen still pose. Solid flat magenta (#ff00ff) background filling the whole image.
+SUBJECT: the character exactly as on the attached character sheet: same face, head size, proportions, costume and colors, nothing redesigned.
+CHARACTER (appearance only, word for word from its sheet; ignore the pose in it): Hausmeister Modell 08/15, a bulky boxy retro robot about 104 percent of the boy Max's height, dented light grey metal body, square head with one round yellow eye light and a small speaker grille mouth. Faded blue janitor overalls over the metal body, a small empty oil can in the chest pocket, a blank name plate on the chest. A mop in its right hand. Polite slight bow, facing right. No red eye, no metal skull face, no leather jacket, no sunglasses.
+START: From the neutral pose on the attached concept sheet of Roboter-Hausmeister. Keep the clean concept-art style of that sheet, not pixel art.
+ACTION (2 key poses of a 6-frame animation of about 0.6 s): (1) 0.0 s: he mops the floor in slow circles; (2) 0.3 s: the mop head moving in a round path in front of him, upper body swaying slightly, yellow eye blinking once.
+FRAMES: draw all 6 frames side by side, left to right, in the order they play: the key poses above at their times and evenly spaced in-between frames, so the motion reads smoothly; every frame differs visibly from its neighbours, no two frames identical.
+SPACING: divide the image into 6 equal columns, one frame per column, with a clear strip of empty magenta between neighbouring frames, at least as wide as the character's head; every part of a frame, including raised arms, tools, tongs, tails, capes and effects, stays completely inside its own column and never reaches into or overlaps the next frame. Draw the character smaller if needed to keep the gaps, the same size in every frame.
+END POSE: the same as pose 1, so the loop closes seamlessly; do not draw it twice.
+HOLD STILL: feet stay planted.
+CAMERA: static, strict side view, facing right. Same scale and the same flat baseline in every pose, no zoom, no pan.
+NEGATIVE: no second character, no parts of the boy Max from the reference unless this is Max, no props that are not described, no environment, no floor, no ground shadow, no checkerboard, no frames, panels or cell borders, no text, labels or numbers, no motion blur, no ghosting, no duplicated or extra limbs, no change to face, proportions, clothing or colors, no photorealism, no 3D render, no watermark, no in-between blur, no speed lines, no smear frames, no sliding feet, no change of scale or baseline between poses, no camera movement, no zoom, no perspective change, no morphing, no extra poses beyond the ones listed
+```
+
+## Agent Schmidt: Kopieren
+
+**Shot W3-B10**
+
+**Anhängen:** nichts (Effekt) · **Bilder:** 8 · **Ablauf:** einmalig
+
+```text
+STYLE: Visual effect frames for a 2D game, frames side by side in one row, evenly spaced, frame count as given in the motif, every frame the same size with the effect centered, flat cel shading, solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no frames or panels, no text.
+EFFECT: Agent Schmidt in brown corduroy suit, red bow tie and pink slippers lays one hand on a grey office photocopier, a white flash runs under the lid, an identical copy of him slides out of the output tray and stands up, 192x128, 8 frames, plays once, over the office corridor.
+FRAMES: 8 frames side by side, about 0.8 s at 10 frames per second, plays once, each frame 192x128 pixels in the game.
+SPACING: divide the image into 8 equal columns, one frame per column, with a clear strip of empty magenta between neighbouring frames, at least as wide as the character's head; every part of a frame, including raised arms, tools, tongs, tails, capes and effects, stays completely inside its own column and never reaches into or overlaps the next frame. Draw the character smaller if needed to keep the gaps, the same size in every frame.
+END: the last frame is the calm end state of the effect.
+CAMERA: static, no zoom, no pan, the effect stays centered in every frame.
+NEGATIVE: no characters unless named, no background scene, no text, no frames or panels, no checkerboard, no motion blur, no speed lines
+```
+
+## Verwandlung: Effekt
+
+**Shot W3-B11**
+
+**Anhängen:** nichts (Effekt) · **Bilder:** 6 · **Ablauf:** einmalig
+
+```text
+STYLE: Visual effect frames for a 2D game, frames side by side in one row, evenly spaced, frame count as given in the motif, every frame the same size with the effect centered, flat cel shading, solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no frames or panels, no text.
+EFFECT: A short green digital glitch of square pixels flickering around an inventory item and dissolving, 64x64, 6 frames, plays once, over the inventory slot.
+FRAMES: 6 frames side by side, about 0.6 s at 10 frames per second, plays once, each frame 64x64 pixels in the game.
+SPACING: divide the image into 6 equal columns, one frame per column, with a clear strip of empty magenta between neighbouring frames, at least as wide as the character's head; every part of a frame, including raised arms, tools, tongs, tails, capes and effects, stays completely inside its own column and never reaches into or overlaps the next frame. Draw the character smaller if needed to keep the gaps, the same size in every frame.
+END: the last frame is the calm end state of the effect.
+CAMERA: static, no zoom, no pan, the effect stays centered in every frame.
+NEGATIVE: no characters unless named, no background scene, no text, no frames or panels, no checkerboard, no motion blur, no speed lines
+```
+
+## Portal: Effekt
+
+**Shot W3-B12**
+
+**Anhängen:** nichts (Effekt) · **Bilder:** 8 · **Ablauf:** einmalig
+
+```text
+STYLE: Visual effect frames for a 2D game, frames side by side in one row, evenly spaced, frame count as given in the motif, every frame the same size with the effect centered, flat cel shading, solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no frames or panels, no text.
+EFFECT: A round shimmering white-green hole opens in a white wall, shows a cozy living room with an old man on a brown sofa holding a teacup, then shrinks shut, 96x128, 8 frames, plays once, over Testkammer 1.
+FRAMES: 8 frames side by side, about 0.8 s at 10 frames per second, plays once, each frame 96x128 pixels in the game.
+SPACING: divide the image into 8 equal columns, one frame per column, with a clear strip of empty magenta between neighbouring frames, at least as wide as the character's head; every part of a frame, including raised arms, tools, tongs, tails, capes and effects, stays completely inside its own column and never reaches into or overlaps the next frame. Draw the character smaller if needed to keep the gaps, the same size in every frame.
+END: the last frame is the calm end state of the effect.
+CAMERA: static, no zoom, no pan, the effect stays centered in every frame.
+NEGATIVE: no characters unless named, no background scene, no text, no frames or panels, no checkerboard, no motion blur, no speed lines
+```
+
 ## Regen: Effekt
 
-**Shot W3-B18**
+**Shot W3-B13**
 
 **Anhängen:** nichts (Effekt) · **Bilder:** 4 · **Ablauf:** Schleife
 
@@ -1031,7 +1311,7 @@ NEGATIVE: no characters unless named, no background scene, no text, no frames or
 
 ## Schnee: Effekt
 
-**Shot W3-B19**
+**Shot W3-B14**
 
 **Anhängen:** nichts (Effekt) · **Bilder:** 4 · **Ablauf:** Schleife
 
@@ -1045,64 +1325,9 @@ CAMERA: static, no zoom, no pan, the effect stays centered in every frame.
 NEGATIVE: no characters unless named, no background scene, no text, no frames or panels, no checkerboard, no motion blur, no speed lines
 ```
 
-## Pixel: Tasse vom Tisch werfen
-
-**Shot W3-B20**
-
-**Anhängen:** Pixels Figurenbogen (bis dahin sein Konzeptblatt) · **Bilder:** 6 · **Ablauf:** einmalig
-
-```text
-STYLE: Key pose sheet for a 2D game animation in exactly the same style, colors and proportions as the attached character sheet: same character, same head size, same hair and clothing colors, same line weight and flat cel shading, light from upper left. The key poses side by side in one row from left to right in the order of the action, evenly spaced with clear empty space between them, all at the same scale on one flat baseline, each a frozen still pose. Solid flat magenta (#ff00ff) background filling the whole image.
-SUBJECT: the tomcat exactly as on the attached character sheet, unchanged.
-CHARACTER LOCK (word for word; where SUBJECT or POSES say otherwise, they win): The tomcat, a chubby round cat about a third of Max's height when sitting, short legs, light silver-grey fur (#c0cbdc, shadow #8b9bb4, highlight #ffffff) with three darker blue-grey stripes on his back (#5a6988), white chest and four white paws (#ffffff), a very fluffy tail, a clearly visible notch torn out of his left ear, smug half-closed amber eyes (#feae34), pink nose and inner ears (#f6757a), a red collar (#e43b44, shadow #a22633) with a small round silver speaker on the front and a clearly visible turquoise light (#2ce8f5). Not orange, no tabby markings on the face, plain unmarked forehead, no heavy eyelids. Dark outline #262b44, never pure black.
-ACTION (2 key poses of a 6-frame animation of about 0.6 s): (1) 0.0 s: the tomcat sits on a table, stares straight at the viewer and slowly pushes a white coffee mug over the edge with one paw; (2) 0.6 s: the mug tips and drops out of frame.
-FRAMES: draw all 6 frames side by side, left to right, in the order they play: the key poses above at their times and evenly spaced in-between frames, so the motion reads smoothly; every frame differs visibly from its neighbours, no two frames identical.
-SPACING: divide the image into 6 equal columns, one frame per column, with a clear strip of empty magenta between neighbouring frames, at least as wide as the character's head; every part of a frame, including raised arms, tools, tongs, tails, capes and effects, stays completely inside its own column and never reaches into or overlaps the next frame. Draw the character smaller if needed to keep the gaps, the same size in every frame.
-END POSE: pose 2 is the final frame and is held; it must read as a calm, complete pose.
-HOLD STILL: head turned to the viewer.
-CAMERA: static, strict side view, body facing right. Same scale and the same flat baseline in every pose, no zoom, no pan.
-NEGATIVE: no second character, no parts of the boy Max from the reference unless this is Max, no props that are not described, no environment, no floor, no ground shadow, no checkerboard, no frames, panels or cell borders, no text, labels or numbers, no motion blur, no ghosting, no duplicated or extra limbs, no change to face, proportions, clothing or colors, no photorealism, no 3D render, no watermark, no in-between blur, no speed lines, no smear frames, no sliding feet, no change of scale or baseline between poses, no camera movement, no zoom, no perspective change, no morphing, no extra poses beyond the ones listed
-```
-
-## Piepsi: Hochfahren
-
-**Shot W3-B21**
-
-**Anhängen:** das fertige Konzeptblatt von Piepsi · **Bilder:** 8 · **Ablauf:** einmalig
-
-```text
-STYLE: Key pose sheet for a 2D game animation in exactly the same style, colors and proportions as the attached character sheet: same character, same head size, same hair and clothing colors, same line weight and flat cel shading, light from upper left. The key poses side by side in one row from left to right in the order of the action, evenly spaced with clear empty space between them, all at the same scale on one flat baseline, each a frozen still pose. Solid flat magenta (#ff00ff) background filling the whole image.
-SUBJECT: the character exactly as on the attached character sheet: same face, head size, proportions, costume and colors, nothing redesigned.
-CHARACTER (appearance only, word for word from its sheet; ignore the pose in it): Piepsi, a small round cleaning robot about 32 percent of the boy Max's height shaped like a dented white bucket on three little wheels, one big round blue lens eye, a tiny antenna with a red tip, a crumpled black bowler hat on top, cheeky look, facing right.
-ACTION (4 key poses of a 8-frame animation of about 0.8 s): (1) 0.0 s: Piepsi, starting from the rusty version; (2) 0.3 s: shakes off rust flakes; (3) 0.5 s: straightens up on his three wheels; (4) 0.8 s: his blue eye lights up and his bowler hat pops up.
-FRAMES: draw all 8 frames side by side, left to right, in the order they play: the key poses above at their times and evenly spaced in-between frames, so the motion reads smoothly; every frame differs visibly from its neighbours, no two frames identical.
-SPACING: divide the image into 8 equal columns, one frame per column, with a clear strip of empty magenta between neighbouring frames, at least as wide as the character's head; every part of a frame, including raised arms, tools, tongs, tails, capes and effects, stays completely inside its own column and never reaches into or overlaps the next frame. Draw the character smaller if needed to keep the gaps, the same size in every frame.
-END POSE: pose 4 is the final frame and is held; it must read as a calm, complete pose.
-CAMERA: static, strict side view, facing right. Same scale and the same flat baseline in every pose, no zoom, no pan.
-NEGATIVE: no second character, no parts of the boy Max from the reference unless this is Max, no props that are not described, no environment, no floor, no ground shadow, no checkerboard, no frames, panels or cell borders, no text, labels or numbers, no motion blur, no ghosting, no duplicated or extra limbs, no change to face, proportions, clothing or colors, no photorealism, no 3D render, no watermark, no in-between blur, no speed lines, no smear frames, no sliding feet, no change of scale or baseline between poses, no camera movement, no zoom, no perspective change, no morphing, no extra poses beyond the ones listed
-```
-
-## Piepsi: Piepen
-
-**Shot W3-B22**
-
-**Anhängen:** das fertige Konzeptblatt von Piepsi · **Bilder:** 4 · **Ablauf:** Schleife
-
-```text
-STYLE: Key pose sheet for a 2D game animation in exactly the same style, colors and proportions as the attached character sheet: same character, same head size, same hair and clothing colors, same line weight and flat cel shading, light from upper left. The key poses side by side in one row from left to right in the order of the action, evenly spaced with clear empty space between them, all at the same scale on one flat baseline, each a frozen still pose. Solid flat magenta (#ff00ff) background filling the whole image.
-SUBJECT: the character exactly as on the attached character sheet: same face, head size, proportions, costume and colors, nothing redesigned.
-CHARACTER (appearance only, word for word from its sheet; ignore the pose in it): Piepsi, a small round cleaning robot about 32 percent of the boy Max's height shaped like a dented white bucket on three little wheels, one big round blue lens eye, a tiny antenna with a red tip, a crumpled black bowler hat on top, cheeky look, facing right.
-ACTION (2 key poses of a 4-frame animation of about 0.4 s): (1) 0.0 s: Piepsi wobbles from side to side on his wheels, antenna tip blinking red, blue eye flashing angrily, at one end of the movement; (2) 0.2 s: the same action at the opposite end of the movement.
-FRAMES: draw all 4 frames side by side, left to right, in the order they play: the key poses above at their times and evenly spaced in-between frames, so the motion reads smoothly; every frame differs visibly from its neighbours, no two frames identical.
-SPACING: divide the image into 4 equal columns, one frame per column, with a clear strip of empty magenta between neighbouring frames, at least as wide as the character's head; every part of a frame, including raised arms, tools, tongs, tails, capes and effects, stays completely inside its own column and never reaches into or overlaps the next frame. Draw the character smaller if needed to keep the gaps, the same size in every frame.
-END POSE: the same as pose 1, so the loop closes seamlessly; do not draw it twice.
-CAMERA: static, strict side view, facing right. Same scale and the same flat baseline in every pose, no zoom, no pan.
-NEGATIVE: no second character, no parts of the boy Max from the reference unless this is Max, no props that are not described, no environment, no floor, no ground shadow, no checkerboard, no frames, panels or cell borders, no text, labels or numbers, no motion blur, no ghosting, no duplicated or extra limbs, no change to face, proportions, clothing or colors, no photorealism, no 3D render, no watermark, no in-between blur, no speed lines, no smear frames, no sliding feet, no change of scale or baseline between poses, no camera movement, no zoom, no perspective change, no morphing, no extra poses beyond the ones listed
-```
-
 ## Hologramm: Effekt
 
-**Shot W3-B23**
+**Shot W3-B15**
 
 **Anhängen:** nichts (Effekt) · **Bilder:** 6 · **Ablauf:** Schleife
 
@@ -1116,23 +1341,247 @@ CAMERA: static, no zoom, no pan, the effect stays centered in every frame.
 NEGATIVE: no characters unless named, no background scene, no text, no frames or panels, no checkerboard, no motion blur, no speed lines
 ```
 
-## Max: Gedankentrick
+## Unterstadt: Fliegende Autos
 
-**Shot W3-B24**
+**Shot W3-B16**
 
-**Anhängen:** Max' Figurenbogen (bis dahin sein Konzeptblatt) · **Bilder:** 4 · **Ablauf:** einmalig
+**Anhängen:** nichts (Effekt) · **Bilder:** 6 · **Ablauf:** Schleife
+
+```text
+STYLE: Visual effect frames for a 2D game, frames side by side in one row, evenly spaced, frame count as given in the motif, every frame the same size with the effect centered, flat cel shading, solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no frames or panels, no text.
+EFFECT: A small boxy flying car seen from the side, flying to the right, two cyan headlights and a magenta tail light, a short glowing exhaust flicker, a tiny wobble up and down.
+FRAMES: 6 frames side by side, about 0.6 s at 10 frames per second, loops seamlessly: the last frame leads back into the first, each frame 48x16 pixels in the game.
+SPACING: divide the image into 6 equal columns, one frame per column, with a clear strip of empty magenta between neighbouring frames, at least as wide as the character's head; every part of a frame, including raised arms, tools, tongs, tails, capes and effects, stays completely inside its own column and never reaches into or overlaps the next frame. Draw the character smaller if needed to keep the gaps, the same size in every frame.
+END: no separate end frame, the loop closes.
+CAMERA: static, no zoom, no pan, the effect stays centered in every frame.
+NEGATIVE: no characters unless named, no background scene, no text, no frames or panels, no checkerboard, no motion blur, no speed lines
+```
+
+## Unterstadt: Nudeltopf dampft
+
+**Shot W3-B17**
+
+**Anhängen:** den passenden Ausschnitt aus dem fertigen Hintergrund (Unterstadt); das Ergebnis danach mit `tools/pixelieren.py` auf die Farben des Raums bringen · **Bilder:** 6 · **Ablauf:** Schleife
+
+```text
+STYLE: Visual effect frames for a 2D game, frames side by side in one row, evenly spaced, frame count as given in the motif, every frame the same size with the effect centered, flat cel shading, solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no frames or panels, no text.
+EFFECT: Only the steam rising from the big pot on the noodle stall counter, matching the attached background crop: white wisps curl up and drift apart in the rain.
+OVERLAY: the crop only shows where the effect sits, its size, light and colors; draw only the moving part named above on the magenta background, not the walls, furniture or anything else from the crop, so it can be laid exactly over the painted spot.
+FRAMES: 6 frames side by side, about 0.6 s at 10 frames per second, loops seamlessly: the last frame leads back into the first, each frame 40x48 pixels in the game.
+SPACING: divide the image into 6 equal columns, one frame per column, with a clear strip of empty magenta between neighbouring frames, at least as wide as the character's head; every part of a frame, including raised arms, tools, tongs, tails, capes and effects, stays completely inside its own column and never reaches into or overlaps the next frame. Draw the character smaller if needed to keep the gaps, the same size in every frame.
+END: no separate end frame, the loop closes.
+CAMERA: static, no zoom, no pan, the effect stays centered in every frame.
+NEGATIVE: no characters unless named, no background scene, no text, no frames or panels, no checkerboard, no motion blur, no speed lines
+```
+
+## Unterstadt: Neonschild mit Wackelkontakt
+
+**Shot W3-B18**
+
+**Anhängen:** den passenden Ausschnitt aus dem fertigen Hintergrund (Unterstadt); das Ergebnis danach mit `tools/pixelieren.py` auf die Farben des Raums bringen · **Bilder:** 6 · **Ablauf:** Schleife
+
+```text
+STYLE: Visual effect frames for a 2D game, frames side by side in one row, evenly spaced, frame count as given in the motif, every frame the same size with the effect centered, flat cel shading, solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no frames or panels, no text.
+EFFECT: A blank neon sign in magenta and cyan tubes, matching the attached background crop: one tube flickers off and on twice, a small spark at its end, the other tube stays lit.
+OVERLAY: the crop only shows where the effect sits, its size, light and colors; draw only the moving part named above on the magenta background, not the walls, furniture or anything else from the crop, so it can be laid exactly over the painted spot.
+FRAMES: 6 frames side by side, about 0.6 s at 10 frames per second, loops seamlessly: the last frame leads back into the first, each frame 64x32 pixels in the game.
+SPACING: divide the image into 6 equal columns, one frame per column, with a clear strip of empty magenta between neighbouring frames, at least as wide as the character's head; every part of a frame, including raised arms, tools, tongs, tails, capes and effects, stays completely inside its own column and never reaches into or overlaps the next frame. Draw the character smaller if needed to keep the gaps, the same size in every frame.
+END: no separate end frame, the loop closes.
+CAMERA: static, no zoom, no pan, the effect stays centered in every frame.
+NEGATIVE: no characters unless named, no background scene, no text, no frames or panels, no checkerboard, no motion blur, no speed lines
+```
+
+## Straßenmusiker: Spielen
+
+**Shot W3-B19**
+
+**Anhängen:** das fertige Konzeptblatt von Straßenmusiker · **Bilder:** 6 · **Ablauf:** Schleife
 
 ```text
 STYLE: Key pose sheet for a 2D game animation in exactly the same style, colors and proportions as the attached character sheet: same character, same head size, same hair and clothing colors, same line weight and flat cel shading, light from upper left. The key poses side by side in one row from left to right in the order of the action, evenly spaced with clear empty space between them, all at the same scale on one flat baseline, each a frozen still pose. Solid flat magenta (#ff00ff) background filling the whole image.
-SUBJECT: Max exactly as on the attached character sheet, unchanged.
-CHARACTER LOCK (word for word; where SUBJECT or POSES say otherwise, they win): Max, a lanky 16-year-old boy, the reference height for every other character, head about a quarter of his height, slight slouch with hanging shoulders. Messy dark brown hair (#733e39, shadow #3e2731, highlight #b86f50) with shaggy strands falling over his forehead and eyes. Fair skin (#e8b796, shadow #c28569), sleepy half-closed eyes, lopsided smirk, a few freckles. Oversized dark slate blue-grey hoodie (#3a4466, shadow #262b44, highlight #5a6988), hood down, sleeves partly over his hands, uneven drawstrings, a tiny retro TV print with a turquoise screen (#2ce8f5) on the chest. Dark blue jeans (#124e89) slightly too long and rolled up at the hem. Worn red sneakers (#e43b44, shadow #a22633) with white soles (#ffffff), one lace untied. Dark outline #262b44, never pure black.
-ACTION (2 key poses of a 4-frame animation of about 0.4 s): (1) 0.0 s: Max slowly waves one open hand sideways in front of him at chest height with a serious, mystical face; (2) 0.4 s: lowers it.
-FRAMES: draw all 4 frames side by side, left to right, in the order they play: the key poses above at their times and evenly spaced in-between frames, so the motion reads smoothly; every frame differs visibly from its neighbours, no two frames identical.
-SPACING: divide the image into 4 equal columns, one frame per column, with a clear strip of empty magenta between neighbouring frames, at least as wide as the character's head; every part of a frame, including raised arms, tools, tongs, tails, capes and effects, stays completely inside its own column and never reaches into or overlaps the next frame. Draw the character smaller if needed to keep the gaps, the same size in every frame.
-END POSE: pose 2 is the final frame and is held; it must read as a calm, complete pose.
-HOLD STILL: legs stay still.
+SUBJECT: the character exactly as on the attached character sheet: same face, head size, proportions, costume and colors, nothing redesigned.
+CHARACTER (appearance only, word for word from its sheet; ignore the pose in it): A lonely street musician about 104 percent of the boy Max's height, long grey ponytail, eyes closed, a transparent plastic rain poncho over a dark blue jacket, playing a small synthesizer keyboard on a folding stand in front of him, rain dripping from the poncho, calm devoted face, facing right.
+START: From the neutral pose on the attached concept sheet of Straßenmusiker. Keep the clean concept-art style of that sheet, not pixel art.
+ACTION (2 key poses of a 6-frame animation of about 0.6 s): (1) 0.0 s: he plays the small synthesizer with eyes closed, swaying slowly; (2) 0.3 s: fingers moving over the keys, rain dripping from the poncho.
+FRAMES: draw all 6 frames side by side, left to right, in the order they play: the key poses above at their times and evenly spaced in-between frames, so the motion reads smoothly; every frame differs visibly from its neighbours, no two frames identical.
+SPACING: divide the image into 6 equal columns, one frame per column, with a clear strip of empty magenta between neighbouring frames, at least as wide as the character's head; every part of a frame, including raised arms, tools, tongs, tails, capes and effects, stays completely inside its own column and never reaches into or overlaps the next frame. Draw the character smaller if needed to keep the gaps, the same size in every frame.
+END POSE: the same as pose 1, so the loop closes seamlessly; do not draw it twice.
+HOLD STILL: feet stay planted.
 CAMERA: static, strict side view, facing right. Same scale and the same flat baseline in every pose, no zoom, no pan.
 NEGATIVE: no second character, no parts of the boy Max from the reference unless this is Max, no props that are not described, no environment, no floor, no ground shadow, no checkerboard, no frames, panels or cell borders, no text, labels or numbers, no motion blur, no ghosting, no duplicated or extra limbs, no change to face, proportions, clothing or colors, no photorealism, no 3D render, no watermark, no in-between blur, no speed lines, no smear frames, no sliding feet, no change of scale or baseline between poses, no camera movement, no zoom, no perspective change, no morphing, no extra poses beyond the ones listed
+```
+
+## Weinender Mann: Weinen
+
+**Shot W3-B20**
+
+**Anhängen:** das fertige Konzeptblatt von Weinender Mann · **Bilder:** 6 · **Ablauf:** Schleife
+
+```text
+STYLE: Key pose sheet for a 2D game animation in exactly the same style, colors and proportions as the attached character sheet: same character, same head size, same hair and clothing colors, same line weight and flat cel shading, light from upper left. The key poses side by side in one row from left to right in the order of the action, evenly spaced with clear empty space between them, all at the same scale on one flat baseline, each a frozen still pose. Solid flat magenta (#ff00ff) background filling the whole image.
+SUBJECT: the character exactly as on the attached character sheet: same face, head size, proportions, costume and colors, nothing redesigned.
+CHARACTER (appearance only, word for word from its sheet; ignore the pose in it): A middle-aged man about 104 percent of the boy Max's height (standing size), thinning hair, rumpled grey raincoat, sitting on a round stool, holding a bowl of noodles and crying loudly into it, tears streaming, mouth wide open, facing right.
+START: From the neutral pose on the attached concept sheet of Weinender Mann. Keep the clean concept-art style of that sheet, not pixel art.
+ACTION (3 key poses of a 6-frame animation of about 0.6 s): (1) 0.0 s: he sobs into his noodle bowl on the stool; (2) 0.2 s: shoulders shaking, tears dripping into the bowl; (3) 0.4 s: slurps once.
+FRAMES: draw all 6 frames side by side, left to right, in the order they play: the key poses above at their times and evenly spaced in-between frames, so the motion reads smoothly; every frame differs visibly from its neighbours, no two frames identical.
+SPACING: divide the image into 6 equal columns, one frame per column, with a clear strip of empty magenta between neighbouring frames, at least as wide as the character's head; every part of a frame, including raised arms, tools, tongs, tails, capes and effects, stays completely inside its own column and never reaches into or overlaps the next frame. Draw the character smaller if needed to keep the gaps, the same size in every frame.
+END POSE: the same as pose 1, so the loop closes seamlessly; do not draw it twice.
+HOLD STILL: the stool stays in place.
+CAMERA: static, strict side view, facing right. Same scale and the same flat baseline in every pose, no zoom, no pan.
+NEGATIVE: no second character, no parts of the boy Max from the reference unless this is Max, no props that are not described, no environment, no floor, no ground shadow, no checkerboard, no frames, panels or cell borders, no text, labels or numbers, no motion blur, no ghosting, no duplicated or extra limbs, no change to face, proportions, clothing or colors, no photorealism, no 3D render, no watermark, no in-between blur, no speed lines, no smear frames, no sliding feet, no change of scale or baseline between poses, no camera movement, no zoom, no perspective change, no morphing, no extra poses beyond the ones listed
+```
+
+## Frau mit Regenschirm: Schimpfen
+
+**Shot W3-B21**
+
+**Anhängen:** das fertige Konzeptblatt von Frau mit Regenschirm · **Bilder:** 6 · **Ablauf:** Schleife
+
+```text
+STYLE: Key pose sheet for a 2D game animation in exactly the same style, colors and proportions as the attached character sheet: same character, same head size, same hair and clothing colors, same line weight and flat cel shading, light from upper left. The key poses side by side in one row from left to right in the order of the action, evenly spaced with clear empty space between them, all at the same scale on one flat baseline, each a frozen still pose. Solid flat magenta (#ff00ff) background filling the whole image.
+SUBJECT: the character exactly as on the attached character sheet: same face, head size, proportions, costume and colors, nothing redesigned.
+CHARACTER (appearance only, word for word from its sheet; ignore the pose in it): A woman about as tall as the boy Max, black bob haircut, bright yellow raincoat, red rubber boots, holding an inside-out umbrella up and shouting at it angrily, rain dripping, facing right.
+START: From the neutral pose on the attached concept sheet of Frau mit Regenschirm. Keep the clean concept-art style of that sheet, not pixel art.
+ACTION (2 key poses of a 6-frame animation of about 0.6 s): (1) 0.0 s: she shakes the inside-out umbrella at the sky and shouts; (2) 0.3 s: stamps one red boot, rain splashing.
+FRAMES: draw all 6 frames side by side, left to right, in the order they play: the key poses above at their times and evenly spaced in-between frames, so the motion reads smoothly; every frame differs visibly from its neighbours, no two frames identical.
+SPACING: divide the image into 6 equal columns, one frame per column, with a clear strip of empty magenta between neighbouring frames, at least as wide as the character's head; every part of a frame, including raised arms, tools, tongs, tails, capes and effects, stays completely inside its own column and never reaches into or overlaps the next frame. Draw the character smaller if needed to keep the gaps, the same size in every frame.
+END POSE: the same as pose 1, so the loop closes seamlessly; do not draw it twice.
+CAMERA: static, strict side view, facing right. Same scale and the same flat baseline in every pose, no zoom, no pan.
+NEGATIVE: no second character, no parts of the boy Max from the reference unless this is Max, no props that are not described, no environment, no floor, no ground shadow, no checkerboard, no frames, panels or cell borders, no text, labels or numbers, no motion blur, no ghosting, no duplicated or extra limbs, no change to face, proportions, clothing or colors, no photorealism, no 3D render, no watermark, no in-between blur, no speed lines, no smear frames, no sliding feet, no change of scale or baseline between poses, no camera movement, no zoom, no perspective change, no morphing, no extra poses beyond the ones listed
+```
+
+## Apothekengasse: Ratte huscht
+
+**Shot W3-B22**
+
+**Anhängen:** nichts (Effekt) · **Bilder:** 6 · **Ablauf:** einmalig
+
+```text
+STYLE: Visual effect frames for a 2D game, frames side by side in one row, evenly spaced, frame count as given in the motif, every frame the same size with the effect centered, flat cel shading, solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no frames or panels, no text.
+EFFECT: A small grey rat with a long tail scurrying to the right along the wet bottom of a wall, stopping once to sniff, then running on.
+FRAMES: 6 frames side by side, about 0.6 s at 10 frames per second, plays once, each frame 24x12 pixels in the game.
+SPACING: divide the image into 6 equal columns, one frame per column, with a clear strip of empty magenta between neighbouring frames, at least as wide as the character's head; every part of a frame, including raised arms, tools, tongs, tails, capes and effects, stays completely inside its own column and never reaches into or overlaps the next frame. Draw the character smaller if needed to keep the gaps, the same size in every frame.
+END: the last frame is empty.
+CAMERA: static, no zoom, no pan, the effect stays centered in every frame.
+NEGATIVE: no characters unless named, no background scene, no text, no frames or panels, no checkerboard, no motion blur, no speed lines
+```
+
+## Apothekengasse: Automat scannt
+
+**Shot W3-B23**
+
+**Anhängen:** den passenden Ausschnitt aus dem fertigen Hintergrund (Apothekengasse); das Ergebnis danach mit `tools/pixelieren.py` auf die Farben des Raums bringen · **Bilder:** 6 · **Ablauf:** Schleife
+
+```text
+STYLE: Visual effect frames for a 2D game, frames side by side in one row, evenly spaced, frame count as given in the motif, every frame the same size with the effect centered, flat cel shading, solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no frames or panels, no text.
+EFFECT: Only the big round scanner lens of the pharmacy vending machine, matching the attached background crop: a green light ring sweeps around the lens and pulses once.
+OVERLAY: the crop only shows where the effect sits, its size, light and colors; draw only the moving part named above on the magenta background, not the walls, furniture or anything else from the crop, so it can be laid exactly over the painted spot.
+FRAMES: 6 frames side by side, about 0.6 s at 10 frames per second, loops seamlessly: the last frame leads back into the first, each frame 32x32 pixels in the game.
+SPACING: divide the image into 6 equal columns, one frame per column, with a clear strip of empty magenta between neighbouring frames, at least as wide as the character's head; every part of a frame, including raised arms, tools, tongs, tails, capes and effects, stays completely inside its own column and never reaches into or overlaps the next frame. Draw the character smaller if needed to keep the gaps, the same size in every frame.
+END: no separate end frame, the loop closes.
+CAMERA: static, no zoom, no pan, the effect stays centered in every frame.
+NEGATIVE: no characters unless named, no background scene, no text, no frames or panels, no checkerboard, no motion blur, no speed lines
+```
+
+## Widerstandsbasis: Großrechner
+
+**Shot W3-B24**
+
+**Anhängen:** den passenden Ausschnitt aus dem fertigen Hintergrund (Widerstandsbasis); das Ergebnis danach mit `tools/pixelieren.py` auf die Farben des Raums bringen · **Bilder:** 4 · **Ablauf:** Schleife
+
+```text
+STYLE: Visual effect frames for a 2D game, frames side by side in one row, evenly spaced, frame count as given in the motif, every frame the same size with the effect centered, flat cel shading, solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no frames or panels, no text.
+EFFECT: Only the two tape reels and the round yellow lamp of the old mainframe cabinet, matching the attached background crop: the reels turn in small steps in opposite directions, the lamp blinks.
+OVERLAY: the crop only shows where the effect sits, its size, light and colors; draw only the moving part named above on the magenta background, not the walls, furniture or anything else from the crop, so it can be laid exactly over the painted spot.
+FRAMES: 4 frames side by side, about 0.4 s at 10 frames per second, loops seamlessly: the last frame leads back into the first, each frame 40x56 pixels in the game.
+SPACING: divide the image into 4 equal columns, one frame per column, with a clear strip of empty magenta between neighbouring frames, at least as wide as the character's head; every part of a frame, including raised arms, tools, tongs, tails, capes and effects, stays completely inside its own column and never reaches into or overlaps the next frame. Draw the character smaller if needed to keep the gaps, the same size in every frame.
+END: no separate end frame, the loop closes.
+CAMERA: static, no zoom, no pan, the effect stays centered in every frame.
+NEGATIVE: no characters unless named, no background scene, no text, no frames or panels, no checkerboard, no motion blur, no speed lines
+```
+
+## Kühlung: Ventilator
+
+**Shot W3-B25**
+
+**Anhängen:** den passenden Ausschnitt aus dem fertigen Hintergrund (Kühlung); das Ergebnis danach mit `tools/pixelieren.py` auf die Farben des Raums bringen · **Bilder:** 4 · **Ablauf:** Schleife
+
+```text
+STYLE: Visual effect frames for a 2D game, frames side by side in one row, evenly spaced, frame count as given in the motif, every frame the same size with the effect centered, flat cel shading, solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no frames or panels, no text.
+EFFECT: Only the round fan behind the grille of the cooling unit, matching the attached background crop: the blades turn, frost glints on the grille, the status light blinks.
+OVERLAY: the crop only shows where the effect sits, its size, light and colors; draw only the moving part named above on the magenta background, not the walls, furniture or anything else from the crop, so it can be laid exactly over the painted spot.
+FRAMES: 4 frames side by side, about 0.4 s at 10 frames per second, loops seamlessly: the last frame leads back into the first, each frame 32x32 pixels in the game.
+SPACING: divide the image into 4 equal columns, one frame per column, with a clear strip of empty magenta between neighbouring frames, at least as wide as the character's head; every part of a frame, including raised arms, tools, tongs, tails, capes and effects, stays completely inside its own column and never reaches into or overlaps the next frame. Draw the character smaller if needed to keep the gaps, the same size in every frame.
+END: no separate end frame, the loop closes.
+CAMERA: static, no zoom, no pan, the effect stays centered in every frame.
+NEGATIVE: no characters unless named, no background scene, no text, no frames or panels, no checkerboard, no motion blur, no speed lines
+```
+
+## Stadtstraße: Vogelschwarm im Takt
+
+**Shot W3-B26**
+
+**Anhängen:** nichts (Effekt) · **Bilder:** 6 · **Ablauf:** Schleife
+
+```text
+STYLE: Visual effect frames for a 2D game, frames side by side in one row, evenly spaced, frame count as given in the motif, every frame the same size with the effect centered, flat cel shading, solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no frames or panels, no text.
+EFFECT: Five identical small black birds flying to the right in a perfect V, all flapping in exact sync like a copied animation.
+FRAMES: 6 frames side by side, about 0.6 s at 10 frames per second, loops seamlessly: the last frame leads back into the first, each frame 64x24 pixels in the game.
+SPACING: divide the image into 6 equal columns, one frame per column, with a clear strip of empty magenta between neighbouring frames, at least as wide as the character's head; every part of a frame, including raised arms, tools, tongs, tails, capes and effects, stays completely inside its own column and never reaches into or overlaps the next frame. Draw the character smaller if needed to keep the gaps, the same size in every frame.
+END: no separate end frame, the loop closes.
+CAMERA: static, no zoom, no pan, the effect stays centered in every frame.
+NEGATIVE: no characters unless named, no background scene, no text, no frames or panels, no checkerboard, no motion blur, no speed lines
+```
+
+## Küche der Orakel-Oma: Eieruhr
+
+**Shot W3-B27**
+
+**Anhängen:** den passenden Ausschnitt aus dem fertigen Hintergrund (Küche der Orakel-Oma); das Ergebnis danach mit `tools/pixelieren.py` auf die Farben des Raums bringen · **Bilder:** 4 · **Ablauf:** Schleife
+
+```text
+STYLE: Visual effect frames for a 2D game, frames side by side in one row, evenly spaced, frame count as given in the motif, every frame the same size with the effect centered, flat cel shading, solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no frames or panels, no text.
+EFFECT: Only the wind-up kitchen timer shaped like a white hen, matching the attached background crop: it wobbles a little left and right with each tick.
+OVERLAY: the crop only shows where the effect sits, its size, light and colors; draw only the moving part named above on the magenta background, not the walls, furniture or anything else from the crop, so it can be laid exactly over the painted spot.
+FRAMES: 4 frames side by side, about 0.4 s at 10 frames per second, loops seamlessly: the last frame leads back into the first, each frame 16x20 pixels in the game.
+SPACING: divide the image into 4 equal columns, one frame per column, with a clear strip of empty magenta between neighbouring frames, at least as wide as the character's head; every part of a frame, including raised arms, tools, tongs, tails, capes and effects, stays completely inside its own column and never reaches into or overlaps the next frame. Draw the character smaller if needed to keep the gaps, the same size in every frame.
+END: no separate end frame, the loop closes.
+CAMERA: static, no zoom, no pan, the effect stays centered in every frame.
+NEGATIVE: no characters unless named, no background scene, no text, no frames or panels, no checkerboard, no motion blur, no speed lines
+```
+
+## Büroturm, 50. Stock: Klone tippen
+
+**Shot W3-B28**
+
+**Anhängen:** den passenden Ausschnitt aus dem fertigen Hintergrund (Büroturm, 50. Stock); das Ergebnis danach mit `tools/pixelieren.py` auf die Farben des Raums bringen · **Bilder:** 6 · **Ablauf:** Schleife
+
+```text
+STYLE: Visual effect frames for a 2D game, frames side by side in one row, evenly spaced, frame count as given in the motif, every frame the same size with the effect centered, flat cel shading, solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no frames or panels, no text.
+EFFECT: A strip of identical blond men in brown corduroy suits and sunglasses at desks far back in the corridor, matching the attached background crop: they type in exact sync, every head turns at the same moment.
+OVERLAY: the crop only shows where the effect sits, its size, light and colors; draw only the moving part named above on the magenta background, not the walls, furniture or anything else from the crop, so it can be laid exactly over the painted spot.
+FRAMES: 6 frames side by side, about 0.6 s at 10 frames per second, loops seamlessly: the last frame leads back into the first, each frame 120x60 pixels in the game.
+SPACING: divide the image into 6 equal columns, one frame per column, with a clear strip of empty magenta between neighbouring frames, at least as wide as the character's head; every part of a frame, including raised arms, tools, tongs, tails, capes and effects, stays completely inside its own column and never reaches into or overlaps the next frame. Draw the character smaller if needed to keep the gaps, the same size in every frame.
+END: no separate end frame, the loop closes.
+CAMERA: static, no zoom, no pan, the effect stays centered in every frame.
+NEGATIVE: no characters unless named, no background scene, no text, no frames or panels, no checkerboard, no motion blur, no speed lines
+```
+
+## Kern von M.U.T.T.I.: Lichtband
+
+**Shot W3-B29**
+
+**Anhängen:** den passenden Ausschnitt aus dem fertigen Hintergrund (Kern von M.U.T.T.I.); das Ergebnis danach mit `tools/pixelieren.py` auf die Farben des Raums bringen · **Bilder:** 6 · **Ablauf:** Schleife
+
+```text
+STYLE: Visual effect frames for a 2D game, frames side by side in one row, evenly spaced, frame count as given in the motif, every frame the same size with the effect centered, flat cel shading, solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no frames or panels, no text.
+EFFECT: A soft orange light band running around the curved white wall of the server hall, matching the attached background crop: a brighter segment travels from left to right.
+OVERLAY: the crop only shows where the effect sits, its size, light and colors; draw only the moving part named above on the magenta background, not the walls, furniture or anything else from the crop, so it can be laid exactly over the painted spot.
+FRAMES: 6 frames side by side, about 0.6 s at 10 frames per second, loops seamlessly: the last frame leads back into the first, each frame 200x12 pixels in the game.
+SPACING: divide the image into 6 equal columns, one frame per column, with a clear strip of empty magenta between neighbouring frames, at least as wide as the character's head; every part of a frame, including raised arms, tools, tongs, tails, capes and effects, stays completely inside its own column and never reaches into or overlaps the next frame. Draw the character smaller if needed to keep the gaps, the same size in every frame.
+END: no separate end frame, the loop closes.
+CAMERA: static, no zoom, no pan, the effect stays centered in every frame.
+NEGATIVE: no characters unless named, no background scene, no text, no frames or panels, no checkerboard, no motion blur, no speed lines
 ```
 
 # Gegenstände
@@ -1208,4 +1657,63 @@ NEGATIVE: no characters, no boy Max, no boxes, tiles, frames or cell borders, no
 STYLE: Item sheet in exactly the same style as the attached character sheet of the boy Max: same line weight, same flat cel shading, light from upper left. Grid exactly as given in the motif, items in reading order left to right and top to bottom, each item complete and centered in its own invisible cell at the same scale, generous empty space between items, slight front-side view, items floating freely on a solid flat magenta (#ff00ff) background filling the whole image, no tiles, boxes, frames, panels or cell borders, no checkerboard, no ground shadow, no text, letters or numbers on any item. Do not draw the boy Max.
 SUBJECT: 3x3 grid, same scale: a perfectly straight silver fork; a stack of greasy pizza boxes; a cardboard cake with a painted candle; a corkboard with pinned charts; a white paper origami unicorn; a towel on a wall hook; a small synthesizer keyboard on a folding stand; a bulky old mainframe cabinet with two tape reels and a round yellow lamp; a wooden cuckoo clock with its little door open and a small bird.
 NEGATIVE: no characters, no boy Max, no boxes, tiles, frames or cell borders, no checkerboard, no ground shadow, no text, letters or numbers on any item, no extra items, no photorealism
+```
+
+# Nahansichten und Tafeln
+
+Nichts anhängen. Die Schrift setzt Claude danach als Pixelschrift ein.
+
+## Telefonbuchseite (Rätsel 8)
+
+**Shot W3-N01**
+
+```text
+STYLE: Close-up illustration for a 2D point-and-click adventure game in the style of classic 1990s adventure games, warm hand-painted look, 16:9, 640x360, the object fills the whole frame, no floor, no characters, light from upper left. No text, no letters, no numbers, all lines and fields left blank.
+SUBJECT: Close-up of a torn phone book page filling the frame, four narrow columns of blank lines, torn left edge, lying on a wet metal shelf, cyan light from the phone booth.
+PALETTE: dim cyberpunk interior palette of deep navy and concrete grey, bright accents only in neon magenta and neon cyan from screens and tubes, damp walls, a few drips, no street, no sky. Color anchors, approximate: deep navy #181425, concrete grey #3a4466, damp blue-grey #5a6988, neon magenta #ff4fd8, neon cyan #3ff7ff.
+NEGATIVE: no text, letters, numbers or symbols that could be read, no characters, no hands unless described, no floor, no frame, no photorealism, no watermark
+```
+
+## Akte (Regel 1)
+
+**Shot W3-N02**
+
+```text
+STYLE: Close-up illustration for a 2D point-and-click adventure game in the style of classic 1990s adventure games, warm hand-painted look, 16:9, 640x360, the object fills the whole frame, no floor, no characters, light from upper left. No text, no letters, no numbers, all lines and fields left blank.
+SUBJECT: Close-up of an opened brown paper folder filling the frame, two pages with a blank typed form, a round red stamp and a paper clip.
+PALETTE: dim cyberpunk interior palette of deep navy and concrete grey, bright accents only in neon magenta and neon cyan from screens and tubes, damp walls, a few drips, no street, no sky. Color anchors, approximate: deep navy #181425, concrete grey #3a4466, damp blue-grey #5a6988, neon magenta #ff4fd8, neon cyan #3ff7ff.
+NEGATIVE: no text, letters, numbers or symbols that could be read, no characters, no hands unless described, no floor, no frame, no photorealism, no watermark
+```
+
+## Kochbuch (Regel 2)
+
+**Shot W3-N03**
+
+```text
+STYLE: Close-up illustration for a 2D point-and-click adventure game in the style of classic 1990s adventure games, warm hand-painted look, 16:9, 640x360, the object fills the whole frame, no floor, no characters, light from upper left. No text, no letters, no numbers, all lines and fields left blank.
+SUBJECT: Close-up of a thick appliance manual open on a kitchen table filling the frame, a stand mixer diagram on the left page, blank numbered lines on the right page.
+PALETTE: overly clean interior palette with a faint green tint, even shadowless-looking light, no dirt anywhere, slightly too symmetrical, no sky. Color anchors, approximate: clean grey #c0cbdc, white #ffffff, faint green tint #63c74d, pale wood #e4a672.
+NEGATIVE: no text, letters, numbers or symbols that could be read, no characters, no hands unless described, no floor, no frame, no photorealism, no watermark
+```
+
+## Kritzelei (Regel 3)
+
+**Shot W3-N04**
+
+```text
+STYLE: Close-up illustration for a 2D point-and-click adventure game in the style of classic 1990s adventure games, warm hand-painted look, 16:9, 640x360, the object fills the whole frame, no floor, no characters, light from upper left. No text, no letters, no numbers, all lines and fields left blank.
+SUBJECT: Close-up of a white wall panel near the floor filling the frame, big shaky black marker scribbles underlined three times and a small neat block of print beside them, all blank shapes without letters.
+PALETTE: sterile palette of white panels, light grey and soft orange warning stripes, cold even light, only short soft shadows to the lower right. Color anchors, approximate: white panels #ffffff, light grey #c0cbdc, cold grey #8b9bb4, warning orange #f77622.
+NEGATIVE: no text, letters, numbers or symbols that could be read, no characters, no hands unless described, no floor, no frame, no photorealism, no watermark
+```
+
+## Morse-Tabelle (Rätsel 13)
+
+**Shot W3-N05**
+
+```text
+STYLE: Close-up illustration for a 2D point-and-click adventure game in the style of classic 1990s adventure games, warm hand-painted look, 16:9, 640x360, the object fills the whole frame, no floor, no characters, light from upper left. No text, no letters, no numbers, all lines and fields left blank.
+SUBJECT: Close-up of a laminated sheet pinned to a hull plate filling the frame, a table of small cat paw symbols in two columns with blank spaces beside each, a coffee ring stain.
+PALETTE: dim cyberpunk interior palette of deep navy and concrete grey, bright accents only in neon magenta and neon cyan from screens and tubes, damp walls, a few drips, no street, no sky. Color anchors, approximate: deep navy #181425, concrete grey #3a4466, damp blue-grey #5a6988, neon magenta #ff4fd8, neon cyan #3ff7ff.
+NEGATIVE: no text, letters, numbers or symbols that could be read, no characters, no hands unless described, no floor, no frame, no photorealism, no watermark
 ```
