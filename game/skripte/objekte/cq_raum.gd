@@ -57,6 +57,9 @@ func tiefe_anwenden() -> void:
 			if not chr.scaling_region.is_empty():
 				chr.scaling_region = {}
 				chr.update_scale()
+			if chr.has_meta("gang_tempo"):
+				chr.remove_meta("gang_tempo")
+				chr.walk_speed_override = 0.0
 			continue
 		# „skala“ im Layout verkleinert alle Figuren im Raum zusätzlich (weite Außenräume wie der Dorfplatz)
 		var vorn := float(bauplan().get("skala", 1.0))
@@ -67,6 +70,16 @@ func tiefe_anwenden() -> void:
 			polygon_top_y = float(bauplan().get("tiefe_oben_y", ys.min())), polygon_bottom_y = ys.max(), target_scale = 1.0,
 		}
 		chr.update_scale()
+		# Die Raum-„skala“ verkleinert die Figuren, soll sie aber nicht verlangsamen: Popochiu
+		# multipliziert das Tempo mit der Größe, auf dem Dorfplatz lief Max deshalb hinten 43 und
+		# vorn 108 px/s (Review 17.11., X-03). Ausgleich um 1/skala, die Beine laufen im selben
+		# Maß schneller (CQFigur._gang_tempo), die Tiefe hinten bleibt spürbar.
+		if vorn < 1.0 and chr.walk_speed > 0.0:
+			chr.walk_speed_override = chr.walk_speed / vorn
+			chr.set_meta("gang_tempo", 1.0 / vorn)
+		elif chr.has_meta("gang_tempo"):
+			chr.remove_meta("gang_tempo")
+			chr.walk_speed_override = 0.0
 
 
 ## Raumlicht (Layout „licht: "#b9b4d0"“): Figuren nehmen die Tönung dunkler Räume an und leuchten
