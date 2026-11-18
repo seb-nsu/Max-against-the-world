@@ -16,22 +16,22 @@ Opa steht ihre feste Beschreibung wortgleich in der Zeile CHARACTER LOCK; den Fi
 
 # Shotliste
 
-153 Shots, davon 21 sicher offen („–“: Stand nicht automatisch prüfbar). Kürzel:
+153 Shots, davon 7 sicher offen („–“: Stand nicht automatisch prüfbar). Kürzel:
 R Raum, F Figur, P Posenbogen, B Bewegung, G Gegenstände, N Nahansicht, K Figurenbogen.
 
 | Shot | Bild | Stand |
 | --- | --- | --- |
-| W2-R01 | Nil-Delta mit Fährsteg | offen |
-| W2-R02 | Fährsteg Olympia | offen |
-| W2-R03 | Hafen Syrakus | offen |
-| W2-R04 | Thronsaal | offen |
-| W2-R05 | Palastküche | offen |
-| W2-R06 | Sphinx | offen |
-| W2-R07 | Archimedes' Werkstatt | offen |
-| W2-R08 | Grabhügel Syrakus | offen |
-| W2-R09 | Stadion | offen |
-| W2-R10 | Startbüro | offen |
-| W2-R11 | Agora | offen |
+| W2-R01 | Nil-Delta mit Fährsteg | im Spiel |
+| W2-R02 | Fährsteg Olympia | im Spiel |
+| W2-R03 | Hafen Syrakus | im Spiel |
+| W2-R04 | Thronsaal | im Spiel |
+| W2-R05 | Palastküche | im Spiel |
+| W2-R06 | Sphinx | im Spiel |
+| W2-R07 | Archimedes' Werkstatt | im Spiel |
+| W2-R08 | Grabhügel Syrakus | im Spiel |
+| W2-R09 | Stadion | im Spiel |
+| W2-R10 | Startbüro | im Spiel |
+| W2-R11 | Agora | im Spiel |
 | W2-R12 | Flusskarte | offen |
 | W2-F01 | Ramses | im Spiel |
 | W2-F02 | Hofkater | im Spiel |
@@ -56,8 +56,8 @@ R Raum, F Figur, P Posenbogen, B Bewegung, G Gegenstände, N Nahansicht, K Figur
 | W2-F21 | Zeremonienmeister | im Spiel |
 | W2-F22 | Steinmetz | im Spiel |
 | W2-F23 | Ägypter aus dem Volk | offen |
-| W2-F24 | Schildkröte | offen |
-| W2-F25 | Straßenmusiker | offen |
+| W2-F24 | Schildkröte | im Spiel |
+| W2-F25 | Straßenmusiker | im Spiel |
 | W2-P01 | Max Tag 1 | – |
 | W2-P02 | Max Finaltag | – |
 | W2-P03 | Ramses | – |
@@ -169,7 +169,7 @@ R Raum, F Figur, P Posenbogen, B Bewegung, G Gegenstände, N Nahansicht, K Figur
 | W2-G11 | Krokodil-Fähre | – |
 | W2-G12 | Wurfhebel | – |
 | W2-N01 | Hieroglyphen-Grammatik (Rätsel 2) | offen |
-| W2-N02 | Fährtafel | offen |
+| W2-N02 | Fährtafel | im Spiel |
 | W2-N03 | Aushang im Startbüro (Rätsel 3) | offen |
 | W2-N04 | Sandgrube (Rede-Ringen) | offen |
 | W2-N05 | Konter-Auswahl (Rede-Ringen) | offen |
@@ -418,8 +418,9 @@ NEGATIVE: no characters, people or animals in the walkable area, no text, letter
 # Figuren
 
 Je Figur den Block in Gemini kopieren und anhängen, was beim Block steht. Gebraucht wird nur die
-Seitenansicht nach rechts; Gehen und Reden entstehen per Code (`tools/figur.py`). Zweite Fassungen
-entstehen mit Maske aus dem fertigen Bild.
+Seitenansicht nach rechts. Läufe entstehen aus einem Meshy-Clip mit Teile-Rig aus diesem Bild, Reden
+über Mund und Kopf (`tools/figur.py`), Gesten über Posenbögen. Zweite Fassungen entstehen mit Maske
+aus dem fertigen Bild.
 
 ## Ramses
 

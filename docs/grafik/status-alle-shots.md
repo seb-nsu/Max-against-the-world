@@ -253,3 +253,121 @@ Stand 15. November 2026, Zweig-Angaben am 17. November auf main nachgeführt (be
 | WU-B30 | Max: Reden mit Gesten | Bewegung | runde2/WU-B30_max_reden.png (+1 weitere) | max_reden | eingebaut, in main (PR #30) |  |
 | WU-B31 | Pixel: Reden | Bewegung | runde2/WU-B31_pixel_reden.png (+4 weitere) | pixel_reden | eingebaut, in main (PR #30) |  |
 | WU-B32 | Pixel: Schwanz zucken | Bewegung | runde2/WU-B32_pixel_schwanz.png (+1 weitere) | pixel_schwanz_zucken | eingebaut, in main (PR #30) |  |
+
+## Welt 3
+
+Angelegt am 18. November 2026 aus `fertige-prompts/welt-3.md` (111 IDs). Noch kein Bild im Spiel. Reihenfolge der Grundlagenbilder steht oben in `fertige-prompts/welt-3.md`.
+
+| ID | Titel | Art | Quelle (Bogen/Bild) | Bewegung gebaut | im Spiel | offen: Grund, wer erledigt |
+| --- | --- | --- | --- | --- | --- | --- |
+| W3-R01 | Unterstadt, Straße | Raum | fehlt | nein | nein | wartet auf das Konzeptbild, Sebastian (Gemini) |
+| W3-R02 | Apothekengasse mit Pastillenautomat | Raum | fehlt | nein | nein | wartet auf das Konzeptbild, Sebastian (Gemini) |
+| W3-R03 | Widerstandsbasis | Raum | fehlt | nein | nein | wartet auf das Konzeptbild, Sebastian (Gemini) |
+| W3-R04 | Kühlung (Ende des Lüftungsschachts) | Raum | fehlt | nein | nein | wartet auf das Konzeptbild, Sebastian (Gemini) |
+| W3-R05 | Laboreingang | Raum | fehlt | nein | nein | wartet auf das Konzeptbild, Sebastian (Gemini) |
+| W3-R06 | Stadtstraße | Raum | fehlt | nein | nein | wartet auf das Konzeptbild, Sebastian (Gemini) |
+| W3-R07 | Küche der Orakel-Oma | Raum | fehlt | nein | nein | wartet auf das Konzeptbild, Sebastian (Gemini) |
+| W3-R08 | Büroturm, 50. Stock | Raum | fehlt | nein | nein | wartet auf das Konzeptbild, Sebastian (Gemini) |
+| W3-R09 | Testkammer 1 | Raum | fehlt | nein | nein | wartet auf das Konzeptbild, Sebastian (Gemini) |
+| W3-R10 | Testkammer 2 | Raum | fehlt | nein | nein | wartet auf das Konzeptbild, Sebastian (Gemini) |
+| W3-R11 | Testkammer 3 | Raum | fehlt | nein | nein | wartet auf das Konzeptbild, Sebastian (Gemini) |
+| W3-R12 | Kern von M.U.T.T.I. | Raum | fehlt | nein | nein | wartet auf das Konzeptbild, Sebastian (Gemini) |
+| W3-R13 | Code-Sicht | Raum | fehlt | nein | nein | Claude in Godot aus dem fertigen Hintergrund (grüne Umrisse), kein eigenes Bild |
+| W3-F01 | M.U.T.T.I. | Figur | fehlt | nein | nein | wartet auf das Konzeptblatt, Sebastian (Gemini) |
+| W3-F02 | Morphäus | Figur | fehlt | nein | nein | wartet auf das Konzeptblatt, Sebastian (Gemini) |
+| W3-F03 | Orakel-Oma | Figur | fehlt | nein | nein | wartet auf das Konzeptblatt, Sebastian (Gemini) |
+| W3-F04 | Agent Schmidt | Figur | fehlt | nein | nein | wartet auf das Konzeptblatt, Sebastian (Gemini) |
+| W3-F05 | Schmidt-Klon | Figur | fehlt | nein | nein | wartet auf das Konzeptblatt, Sebastian (Gemini) |
+| W3-F06 | Roboter-Hausmeister | Figur | fehlt | nein | nein | wartet auf das Konzeptblatt, Sebastian (Gemini) |
+| W3-F07 | Detektiv Deckert | Figur | fehlt | nein | nein | wartet auf das Konzeptblatt, Sebastian (Gemini) |
+| W3-F08 | Herr Vier | Figur | fehlt | nein | nein | wartet auf das Konzeptblatt, Sebastian (Gemini) |
+| W3-F09 | Kabel-Kalle | Figur | fehlt | nein | nein | wartet auf das Konzeptblatt, Sebastian (Gemini) |
+| W3-F10 | Bernd | Figur | fehlt | nein | nein | wartet auf das Konzeptblatt, Sebastian (Gemini) |
+| W3-F11 | Rebellin | Figur | fehlt | nein | nein | wartet auf das Konzeptblatt, Sebastian (Gemini) |
+| W3-F12 | Rebell | Figur | fehlt | nein | nein | wartet auf das Konzeptblatt, Sebastian (Gemini) |
+| W3-F13 | Piepsi | Figur | fehlt | nein | nein | wartet auf das Konzeptblatt, Sebastian (Gemini) |
+| W3-F14 | Opa als Hologramm | Figur | fehlt | nein | nein | wartet auf das Konzeptblatt, Sebastian (Gemini) |
+| W3-F15 | Weinender Mann | Figur | fehlt | nein | nein | wartet auf das Konzeptblatt, Sebastian (Gemini) |
+| W3-F16 | Frau mit Regenschirm | Figur | fehlt | nein | nein | wartet auf das Konzeptblatt, Sebastian (Gemini) |
+| W3-F17 | Straßenmusiker im Regen | Figur | fehlt | nein | nein | wartet auf das Konzeptblatt, Sebastian (Gemini) |
+| W3-F18 | Schwarze Katze | Figur | fehlt | nein | nein | wartet auf das Konzeptblatt, Sebastian (Gemini) |
+| W3-F19 | Max als Ente | Figur | fehlt | nein | nein | wartet auf das Konzeptblatt, Sebastian (Gemini) |
+| W3-F20 | Max in der Kapsel | Figur | fehlt | nein | nein | wartet auf das Konzeptblatt, Sebastian (Gemini) |
+| W3-F21 | Max in der Pfütze | Figur | fehlt | nein | nein | wartet auf das Konzeptblatt, Sebastian (Gemini) |
+| W3-P01 | Max Unterstadt | Posenbogen | fehlt | nein | nein | wartet auf das Konzeptblatt der Figur; dann Claude (Meshy oder Gemini-API) |
+| W3-P02 | Max Büroturm | Posenbogen | fehlt | nein | nein | wartet auf das Konzeptblatt der Figur; dann Claude (Meshy oder Gemini-API) |
+| W3-P03 | Max Welt 3 | Posenbogen | fehlt | nein | nein | wartet auf das Konzeptblatt der Figur; dann Claude (Meshy oder Gemini-API) |
+| W3-P04 | Max Basis | Posenbogen | fehlt | nein | nein | wartet auf das Konzeptblatt der Figur; dann Claude (Meshy oder Gemini-API) |
+| W3-P05 | Max als Ente | Posenbogen | fehlt | nein | nein | wartet auf das Konzeptblatt der Figur; dann Claude (Meshy oder Gemini-API) |
+| W3-P06 | Pixel Basis | Posenbogen | fehlt | nein | nein | wartet auf das Konzeptblatt der Figur; dann Claude (Meshy oder Gemini-API) |
+| W3-P07 | Pixel Basis 2 | Posenbogen | fehlt | nein | nein | wartet auf das Konzeptblatt der Figur; dann Claude (Meshy oder Gemini-API) |
+| W3-P08 | Morphäus | Posenbogen | fehlt | nein | nein | wartet auf das Konzeptblatt der Figur; dann Claude (Meshy oder Gemini-API) |
+| W3-P09 | Morphäus 2 | Posenbogen | fehlt | nein | nein | wartet auf das Konzeptblatt der Figur; dann Claude (Meshy oder Gemini-API) |
+| W3-P10 | Orakel-Oma | Posenbogen | fehlt | nein | nein | wartet auf das Konzeptblatt der Figur; dann Claude (Meshy oder Gemini-API) |
+| W3-P11 | Orakel-Oma Küche | Posenbogen | fehlt | nein | nein | wartet auf das Konzeptblatt der Figur; dann Claude (Meshy oder Gemini-API) |
+| W3-P12 | Agent Schmidt | Posenbogen | fehlt | nein | nein | wartet auf das Konzeptblatt der Figur; dann Claude (Meshy oder Gemini-API) |
+| W3-P13 | Agent Schmidt 2 | Posenbogen | fehlt | nein | nein | wartet auf das Konzeptblatt der Figur; dann Claude (Meshy oder Gemini-API) |
+| W3-P14 | Schmidt-Klon | Posenbogen | fehlt | nein | nein | wartet auf das Konzeptblatt der Figur; dann Claude (Meshy oder Gemini-API) |
+| W3-P15 | Roboter-Hausmeister | Posenbogen | fehlt | nein | nein | wartet auf das Konzeptblatt der Figur; dann Claude (Meshy oder Gemini-API) |
+| W3-P16 | Detektiv Deckert | Posenbogen | fehlt | nein | nein | wartet auf das Konzeptblatt der Figur; dann Claude (Meshy oder Gemini-API) |
+| W3-P17 | Herr Vier | Posenbogen | fehlt | nein | nein | wartet auf das Konzeptblatt der Figur; dann Claude (Meshy oder Gemini-API) |
+| W3-P18 | Herr Vier 2 | Posenbogen | fehlt | nein | nein | wartet auf das Konzeptblatt der Figur; dann Claude (Meshy oder Gemini-API) |
+| W3-P19 | Kabel-Kalle | Posenbogen | fehlt | nein | nein | wartet auf das Konzeptblatt der Figur; dann Claude (Meshy oder Gemini-API) |
+| W3-P20 | Kabel-Kalle 2 | Posenbogen | fehlt | nein | nein | wartet auf das Konzeptblatt der Figur; dann Claude (Meshy oder Gemini-API) |
+| W3-P21 | Rebellin | Posenbogen | fehlt | nein | nein | wartet auf das Konzeptblatt der Figur; dann Claude (Meshy oder Gemini-API) |
+| W3-P22 | Rebell | Posenbogen | fehlt | nein | nein | wartet auf das Konzeptblatt der Figur; dann Claude (Meshy oder Gemini-API) |
+| W3-P23 | Straßenmusiker | Posenbogen | fehlt | nein | nein | wartet auf das Konzeptblatt der Figur; dann Claude (Meshy oder Gemini-API) |
+| W3-P24 | Weinender Mann | Posenbogen | fehlt | nein | nein | wartet auf das Konzeptblatt der Figur; dann Claude (Meshy oder Gemini-API) |
+| W3-P25 | Frau mit Regenschirm | Posenbogen | fehlt | nein | nein | wartet auf das Konzeptblatt der Figur; dann Claude (Meshy oder Gemini-API) |
+| W3-P26 | M.U.T.T.I. | Posenbogen | fehlt | nein | nein | wartet auf das Konzeptblatt der Figur; dann Claude (Meshy oder Gemini-API) |
+| W3-P27 | Bernd | Posenbogen | fehlt | nein | nein | wartet auf das Konzeptblatt der Figur; dann Claude (Meshy oder Gemini-API) |
+| W3-P28 | Piepsi | Posenbogen | fehlt | nein | nein | wartet auf das Konzeptblatt der Figur; dann Claude (Meshy oder Gemini-API) |
+| W3-P29 | Opa als Hologramm | Posenbogen | fehlt | nein | nein | wartet auf das Konzeptblatt der Figur; dann Claude (Meshy oder Gemini-API) |
+| W3-B01 | Schwarze Katze: Zweimal vorbeilaufen | Bewegung | fehlt | nein | nein | wartet auf Konzeptblatt oder Raum; dann Claude (Meshy oder Gemini-API) |
+| W3-B02 | Max als Ente: Watscheln | Bewegung | fehlt | nein | nein | wartet auf Konzeptblatt oder Raum; dann Claude (Meshy oder Gemini-API) |
+| W3-B03 | Pixel: Schacht kriechen | Bewegung | fehlt | nein | nein | wartet auf Konzeptblatt oder Raum; dann Claude (Meshy oder Gemini-API) |
+| W3-B04 | Bernd: Beleidigt davonschweben | Bewegung | fehlt | nein | nein | wartet auf Konzeptblatt oder Raum; dann Claude (Meshy oder Gemini-API) |
+| W3-B05 | Piepsi: Hochfahren | Bewegung | fehlt | nein | nein | wartet auf Konzeptblatt oder Raum; dann Claude (Meshy oder Gemini-API) |
+| W3-B06 | Piepsi: Piepen | Bewegung | fehlt | nein | nein | wartet auf Konzeptblatt oder Raum; dann Claude (Meshy oder Gemini-API) |
+| W3-B07 | M.U.T.T.I.: Sprechen | Bewegung | fehlt | nein | nein | wartet auf Konzeptblatt oder Raum; dann Claude (Meshy oder Gemini-API) |
+| W3-B08 | M.U.T.T.I.: Herunterfahren | Bewegung | fehlt | nein | nein | wartet auf Konzeptblatt oder Raum; dann Claude (Meshy oder Gemini-API) |
+| W3-B09 | Roboter-Hausmeister: Wischen | Bewegung | fehlt | nein | nein | wartet auf Konzeptblatt oder Raum; dann Claude (Meshy oder Gemini-API) |
+| W3-B10 | Agent Schmidt: Kopieren | Bewegung | fehlt | nein | nein | wartet auf Konzeptblatt oder Raum; dann Claude (Meshy oder Gemini-API) |
+| W3-B11 | Verwandlung: Effekt | Bewegung | fehlt | nein | nein | wartet auf Konzeptblatt oder Raum; dann Claude (Meshy oder Gemini-API) |
+| W3-B12 | Portal: Effekt | Bewegung | fehlt | nein | nein | wartet auf Konzeptblatt oder Raum; dann Claude (Meshy oder Gemini-API) |
+| W3-B13 | Regen: Effekt | Bewegung | fehlt | nein | nein | wartet auf Konzeptblatt oder Raum; dann Claude (Meshy oder Gemini-API) |
+| W3-B14 | Schnee: Effekt | Bewegung | fehlt | nein | nein | wartet auf Konzeptblatt oder Raum; dann Claude (Meshy oder Gemini-API) |
+| W3-B15 | Hologramm: Effekt | Bewegung | fehlt | nein | nein | wartet auf Konzeptblatt oder Raum; dann Claude (Meshy oder Gemini-API) |
+| W3-B16 | Unterstadt: Fliegende Autos | Bewegung | fehlt | nein | nein | wartet auf Konzeptblatt oder Raum; dann Claude (Meshy oder Gemini-API) |
+| W3-B17 | Unterstadt: Nudeltopf dampft | Bewegung | fehlt | nein | nein | wartet auf Konzeptblatt oder Raum; dann Claude (Meshy oder Gemini-API) |
+| W3-B18 | Unterstadt: Neonschild mit Wackelkontakt | Bewegung | fehlt | nein | nein | wartet auf Konzeptblatt oder Raum; dann Claude (Meshy oder Gemini-API) |
+| W3-B19 | Straßenmusiker: Spielen | Bewegung | fehlt | nein | nein | wartet auf Konzeptblatt oder Raum; dann Claude (Meshy oder Gemini-API) |
+| W3-B20 | Weinender Mann: Weinen | Bewegung | fehlt | nein | nein | wartet auf Konzeptblatt oder Raum; dann Claude (Meshy oder Gemini-API) |
+| W3-B21 | Frau mit Regenschirm: Schimpfen | Bewegung | fehlt | nein | nein | wartet auf Konzeptblatt oder Raum; dann Claude (Meshy oder Gemini-API) |
+| W3-B22 | Apothekengasse: Ratte huscht | Bewegung | fehlt | nein | nein | wartet auf Konzeptblatt oder Raum; dann Claude (Meshy oder Gemini-API) |
+| W3-B23 | Apothekengasse: Automat scannt | Bewegung | fehlt | nein | nein | wartet auf Konzeptblatt oder Raum; dann Claude (Meshy oder Gemini-API) |
+| W3-B24 | Widerstandsbasis: Großrechner | Bewegung | fehlt | nein | nein | wartet auf Konzeptblatt oder Raum; dann Claude (Meshy oder Gemini-API) |
+| W3-B25 | Kühlung: Ventilator | Bewegung | fehlt | nein | nein | wartet auf Konzeptblatt oder Raum; dann Claude (Meshy oder Gemini-API) |
+| W3-B26 | Stadtstraße: Vogelschwarm im Takt | Bewegung | fehlt | nein | nein | wartet auf Konzeptblatt oder Raum; dann Claude (Meshy oder Gemini-API) |
+| W3-B27 | Küche der Orakel-Oma: Eieruhr | Bewegung | fehlt | nein | nein | wartet auf Konzeptblatt oder Raum; dann Claude (Meshy oder Gemini-API) |
+| W3-B28 | Büroturm, 50. Stock: Klone tippen | Bewegung | fehlt | nein | nein | wartet auf Konzeptblatt oder Raum; dann Claude (Meshy oder Gemini-API) |
+| W3-B29 | Kern von M.U.T.T.I.: Lichtband | Bewegung | fehlt | nein | nein | wartet auf Konzeptblatt oder Raum; dann Claude (Meshy oder Gemini-API) |
+| W3-B30 | Roboter-Hausmeister: Rollen | Bewegung | fehlt | nein | nein | wartet auf Konzeptblatt oder Raum; dann Claude (Meshy oder Gemini-API) |
+| W3-B31 | Roboter-Hausmeister: Arm drehen | Bewegung | fehlt | nein | nein | wartet auf Konzeptblatt oder Raum; dann Claude (Meshy oder Gemini-API) |
+| W3-B32 | Piepsi: Drucken | Bewegung | fehlt | nein | nein | wartet auf Konzeptblatt oder Raum; dann Claude (Meshy oder Gemini-API) |
+| W3-B33 | Pastillenautomat: Fächer öffnen | Bewegung | fehlt | nein | nein | wartet auf Konzeptblatt oder Raum; dann Claude (Meshy oder Gemini-API) |
+| W3-B34 | Glastür Büroturm: Reden | Bewegung | fehlt | nein | nein | wartet auf Konzeptblatt oder Raum; dann Claude (Meshy oder Gemini-API) |
+| W3-B35 | Bürokopierer: Rattern | Bewegung | fehlt | nein | nein | wartet auf Konzeptblatt oder Raum; dann Claude (Meshy oder Gemini-API) |
+| W3-B36 | Testkammer 3: Tür und Lautsprecher | Bewegung | fehlt | nein | nein | wartet auf Konzeptblatt oder Raum; dann Claude (Meshy oder Gemini-API) |
+| W3-G01 | Verwandlung (2×4) | Gegenstände | fehlt | nein | nein | wartet auf das Sammelbild, Sebastian (Gemini) |
+| W3-G02 | Kekse-Zustände (1×2) | Gegenstände | fehlt | nein | nein | wartet auf das Sammelbild, Sebastian (Gemini) |
+| W3-G03 | Unterstadt (2×3) | Gegenstände | fehlt | nein | nein | wartet auf das Sammelbild, Sebastian (Gemini) |
+| W3-G04 | Labor (1×5) | Gegenstände | fehlt | nein | nein | wartet auf das Sammelbild, Sebastian (Gemini) |
+| W3-G05 | Omas Sparschwein (1×3, Szenen-Sprites für Rätsel 4, kein Inventar) | Gegenstände | fehlt | nein | nein | wartet auf das Sammelbild, Sebastian (Gemini) |
+| W3-G06 | Locher (1×2, Szenen-Sprites für das Zeitlupen-Ausweichen im Büroturm, kein Inventar) | Gegenstände | fehlt | nein | nein | wartet auf das Sammelbild, Sebastian (Gemini) |
+| W3-G07 | Deko Welt 3 (3×3) | Gegenstände | fehlt | nein | nein | wartet auf das Sammelbild, Sebastian (Gemini) |
+| W3-N01 | Telefonbuchseite (Rätsel 8) | Nahansicht | fehlt | nein | nein | wartet auf das Bild, Sebastian (Gemini); Schrift setzt Claude |
+| W3-N02 | Akte (Regel 1) | Nahansicht | fehlt | nein | nein | wartet auf das Bild, Sebastian (Gemini); Schrift setzt Claude |
+| W3-N03 | Kochbuch (Regel 2) | Nahansicht | fehlt | nein | nein | wartet auf das Bild, Sebastian (Gemini); Schrift setzt Claude |
+| W3-N04 | Kritzelei (Regel 3) | Nahansicht | fehlt | nein | nein | wartet auf das Bild, Sebastian (Gemini); Schrift setzt Claude |
+| W3-N05 | Morse-Tabelle (Rätsel 13) | Nahansicht | fehlt | nein | nein | wartet auf das Bild, Sebastian (Gemini); Schrift setzt Claude |

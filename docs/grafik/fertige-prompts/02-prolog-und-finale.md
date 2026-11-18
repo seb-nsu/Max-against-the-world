@@ -169,8 +169,9 @@ NEGATIVE: no characters, people or animals in the walkable area, no text, letter
 # Figuren
 
 Je Figur den Block in Gemini kopieren und anhängen, was beim Block steht. Gebraucht wird nur die
-Seitenansicht nach rechts; Gehen und Reden entstehen per Code (`tools/figur.py`). Zweite Fassungen
-entstehen mit Maske aus dem fertigen Bild.
+Seitenansicht nach rechts. Läufe entstehen aus einem Meshy-Clip mit Teile-Rig aus diesem Bild, Reden
+über Mund und Kopf (`tools/figur.py`), Gesten über Posenbögen. Zweite Fassungen entstehen mit Maske
+aus dem fertigen Bild.
 
 ## Max
 
