@@ -2,6 +2,19 @@
 
 Erzeugt von `tools/prompts_zusammensetzen.py` aus `../welt-3.md` (dort ändern, nicht hier).
 
+# Grundlagenbilder für Welt 3
+
+Diese Bilder entstehen in Gemini, von oben nach unten. Alles andere (Posenbögen W3-P, Bewegungen und Effekte W3-B, die Code-Sicht W3-R13) macht Claude danach über Meshy oder die Gemini-API, mit dem fertigen Konzeptblatt als Vorlage. Eigene 3D-Vorlagen in T-Pose sind nicht nötig: Die Läufe und Clips kommen von den vorhandenen Meshy-Rigs (alle haben dasselbe Skelett), Aussehen und Gesicht aus dem Konzeptblatt. Braucht eine Figur doch ein eigenes Modell, macht Claude die stehende Vorlage selbst. Der Stand jeder Nummer steht in `../status-alle-shots.md`, Abschnitt Welt 3.
+
+1. **Figuren der Unterstadt** (Max' Konzeptblatt anhängen): W3-F02 Morphäus, W3-F07 Detektiv Deckert, W3-F08 Herr Vier, W3-F17 Straßenmusiker im Regen, W3-F15 Weinender Mann, W3-F16 Frau mit Regenschirm, W3-F21 Max in der Pfütze.
+2. **Figuren der Widerstandsbasis und des Labors:** W3-F09 Kabel-Kalle, W3-F11 Rebellin, W3-F12 Rebell, W3-F13 Piepsi (mit zweiter Fassung), W3-F14 Opa als Hologramm, W3-F20 Max in der Kapsel (mit zweiter Fassung), W3-F19 Max als Ente, W3-F06 Roboter-Hausmeister.
+3. **Figuren der Simulation:** W3-F03 Orakel-Oma, W3-F04 Agent Schmidt (mit zweiter Fassung), W3-F05 Schmidt-Klon (im selben Chat aus Schmidt), W3-F18 Schwarze Katze, W3-F10 Bernd, W3-F01 M.U.T.T.I. (mit zweiter Fassung).
+4. **Gegenstände:** W3-G01 bis W3-G07.
+5. **Räume:** W3-R01 Unterstadt-Straße, W3-R02 Apothekengasse, W3-R03 Widerstandsbasis, W3-R04 Kühlung, W3-R05 Laboreingang, W3-R06 Stadtstraße, W3-R07 Küche der Orakel-Oma, W3-R08 Büroturm, W3-R09 bis W3-R11 Testkammern, W3-R12 Kern. Zweite Fassungen jeweils im selben Chat aus dem fertigen Bild.
+6. **Nahansichten:** W3-N01 bis W3-N05 (nichts anhängen, Schrift setzt Claude).
+
+Als PNG in voller Größe unter `E:\Game Engine\Grafiken\assets` ablegen, Name mit der Nummer vorn (etwa `W3-F02_morphaeus.png`).
+
 Räume: je Szene den Block komplett in ChatGPT oder Gemini kopieren. Keine Skizze anhängen: Für
 diese Welt gibt es noch keine entworfenen Skizzen, die automatischen Raster widersprechen dem
 Motiv. Danach Prüfliste und Umwandeln wie in `../00-stil-und-werkzeuge.md` (Ablauf pro Szene).
@@ -15,7 +28,7 @@ Opa steht ihre feste Beschreibung wortgleich in der Zeile CHARACTER LOCK; den Fi
 
 # Shotliste
 
-111 Shots, davon 110 sicher offen („–“: Stand nicht automatisch prüfbar). Kürzel:
+111 Shots, davon 111 sicher offen („–“: Stand nicht automatisch prüfbar). Kürzel:
 R Raum, F Figur, P Posenbogen, B Bewegung, G Gegenstände, N Nahansicht, K Figurenbogen.
 
 | Shot | Bild | Stand |
@@ -49,7 +62,7 @@ R Raum, F Figur, P Posenbogen, B Bewegung, G Gegenstände, N Nahansicht, K Figur
 | W3-F14 | Opa als Hologramm | offen |
 | W3-F15 | Weinender Mann | offen |
 | W3-F16 | Frau mit Regenschirm | offen |
-| W3-F17 | Straßenmusiker | im Spiel |
+| W3-F17 | Straßenmusiker im Regen | offen |
 | W3-F18 | Schwarze Katze | offen |
 | W3-F19 | Max als Ente | offen |
 | W3-F20 | Max in der Kapsel | offen |
@@ -412,8 +425,9 @@ NEGATIVE: no characters, people or animals in the walkable area, no text, letter
 # Figuren
 
 Je Figur den Block in Gemini kopieren und anhängen, was beim Block steht. Gebraucht wird nur die
-Seitenansicht nach rechts; Gehen und Reden entstehen per Code (`tools/figur.py`). Zweite Fassungen
-entstehen mit Maske aus dem fertigen Bild.
+Seitenansicht nach rechts. Läufe entstehen aus einem Meshy-Clip mit Teile-Rig aus diesem Bild, Reden
+über Mund und Kopf (`tools/figur.py`), Gesten über Posenbögen. Zweite Fassungen entstehen mit Maske
+aus dem fertigen Bild.
 
 ## M.U.T.T.I.
 
@@ -444,7 +458,7 @@ NEGATIVE: no new objects, no changed camera or framing, no style change, no text
 
 ```text
 STYLE: Character concept sheet in exactly the same style as the attached character sheet of the boy Max: same line weight, same flat cel shading, same light from upper left, solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no text, no ground shadow. Exactly one character, full body, strict side view facing right, standing on a flat baseline, legs clearly visible. Draw only this new character: do not copy any heads, legs, shoes or other parts of the boy Max from the attached sheet into the image.
-SUBJECT: Morphäus, a calm tall man about 106 percent of the boy Max's height, short red hair, neat red beard, reading glasses pushed up on his forehead. Chunky oatmeal knitted cardigan over a dark green turtleneck, brown corduroy trousers, brown shoes. A small cardboard sign with blank lines in his right hand. Calm neutral standing pose, wise slight smile, facing right. Second pose: shrugging apologetically. No leather coat, no small dark sunglasses, not bald.
+SUBJECT: Morphäus, a calm tall man about 106 percent of the boy Max's height, short red hair, neat red beard, reading glasses pushed up on his forehead. Chunky oatmeal knitted cardigan over a dark green turtleneck, brown corduroy trousers, brown shoes. A small cardboard sign with blank lines in his right hand. Calm neutral standing pose, wise slight smile, facing right. No leather coat, no small dark sunglasses, not bald.
 NEGATIVE: no second character, no parts of the boy Max from the reference unless this is Max, no props that are not described, no environment, no floor, no ground shadow, no checkerboard, no frames, panels or cell borders, no text, labels or numbers, no motion blur, no ghosting, no duplicated or extra limbs, no change to face, proportions, clothing or colors, no photorealism, no 3D render, no watermark
 ```
 
@@ -635,7 +649,7 @@ SUBJECT: A woman about as tall as the boy Max, black bob haircut, bright yellow 
 NEGATIVE: no second character, no parts of the boy Max from the reference unless this is Max, no props that are not described, no environment, no floor, no ground shadow, no checkerboard, no frames, panels or cell borders, no text, labels or numbers, no motion blur, no ghosting, no duplicated or extra limbs, no change to face, proportions, clothing or colors, no photorealism, no 3D render, no watermark
 ```
 
-## Straßenmusiker
+## Straßenmusiker im Regen
 
 **Shot W3-F17**
 
@@ -843,7 +857,7 @@ NEGATIVE: no second character, no parts of the boy Max from the reference unless
 ```text
 STYLE: Pose sheet in exactly the same style, colors and proportions as the attached character sheet: same character, same head size, same hair and clothing colors, same line weight and flat cel shading, light from upper left. The poses side by side in one row, evenly spaced with clear empty space between them, all at the same scale on one flat baseline, each a frozen still pose, no motion blur, no ghosting, no speed lines, no duplicated limbs. Solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no text, no ground shadow, no frames or panels.
 SUBJECT: the character exactly as on the attached character sheet: same face, head size, proportions, costume and colors, nothing redesigned.
-CHARACTER (appearance only, word for word from its sheet; ignore the pose in it): Morphäus, a calm tall man about 106 percent of the boy Max's height, short red hair, neat red beard, reading glasses pushed up on his forehead. Chunky oatmeal knitted cardigan over a dark green turtleneck, brown corduroy trousers, brown shoes. A small cardboard sign with blank lines in his right hand. Calm neutral standing pose, wise slight smile, facing right. Second pose: shrugging apologetically. No leather coat, no small dark sunglasses, not bald.
+CHARACTER (appearance only, word for word from its sheet; ignore the pose in it): Morphäus, a calm tall man about 106 percent of the boy Max's height, short red hair, neat red beard, reading glasses pushed up on his forehead. Chunky oatmeal knitted cardigan over a dark green turtleneck, brown corduroy trousers, brown shoes. A small cardboard sign with blank lines in his right hand. Calm neutral standing pose, wise slight smile, facing right. No leather coat, no small dark sunglasses, not bald.
 POSES (left to right): Four poses of the calm tall man: (1) talking, holding up the small cardboard sign; (2) talking, shrugging apologetically, palms up; (3) idle: pushing the reading glasses up on his forehead; (4) idle: hands folded in front of the cardigan, patient smile.
 END POSE: the motion starts and ends in the neutral pose of the attached sheet; do not draw that pose again, but every pose must be able to return to it with the feet in the same place unless a pose says the feet move.
 CAMERA: static, strict side view as on the attached sheet, same scale and the same flat baseline in every pose, no zoom, no pan.
@@ -859,7 +873,7 @@ NEGATIVE: no second character, no parts of the boy Max from the reference unless
 ```text
 STYLE: Pose sheet in exactly the same style, colors and proportions as the attached character sheet: same character, same head size, same hair and clothing colors, same line weight and flat cel shading, light from upper left. The poses side by side in one row, evenly spaced with clear empty space between them, all at the same scale on one flat baseline, each a frozen still pose, no motion blur, no ghosting, no speed lines, no duplicated limbs. Solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no text, no ground shadow, no frames or panels.
 SUBJECT: the character exactly as on the attached character sheet: same face, head size, proportions, costume and colors, nothing redesigned.
-CHARACTER (appearance only, word for word from its sheet; ignore the pose in it): Morphäus, a calm tall man about 106 percent of the boy Max's height, short red hair, neat red beard, reading glasses pushed up on his forehead. Chunky oatmeal knitted cardigan over a dark green turtleneck, brown corduroy trousers, brown shoes. A small cardboard sign with blank lines in his right hand. Calm neutral standing pose, wise slight smile, facing right. Second pose: shrugging apologetically. No leather coat, no small dark sunglasses, not bald.
+CHARACTER (appearance only, word for word from its sheet; ignore the pose in it): Morphäus, a calm tall man about 106 percent of the boy Max's height, short red hair, neat red beard, reading glasses pushed up on his forehead. Chunky oatmeal knitted cardigan over a dark green turtleneck, brown corduroy trousers, brown shoes. A small cardboard sign with blank lines in his right hand. Calm neutral standing pose, wise slight smile, facing right. No leather coat, no small dark sunglasses, not bald.
 POSES (left to right): Four poses of the calm tall man: (1) turning the cardboard sign around with both hands; (2) one hand held out, opening it slowly, palm empty; (3) holding out a small brown paper cookie bag; (4) both arms forward and low, hands cupped as if catching a falling cat.
 END POSE: the motion starts and ends in the neutral pose of the attached sheet; do not draw that pose again, but every pose must be able to return to it with the feet in the same place unless a pose says the feet move.
 CAMERA: static, strict side view as on the attached sheet, same scale and the same flat baseline in every pose, no zoom, no pan.
@@ -1078,7 +1092,7 @@ NEGATIVE: no second character, no parts of the boy Max from the reference unless
 
 **Shot W3-P23**
 
-**Anhängen:** Konzeptblatt Straßenmusiker · **Posen:** 3 · **Wofür:** Spielen
+**Anhängen:** Konzeptblatt Straßenmusiker im Regen · **Posen:** 3 · **Wofür:** Spielen
 
 ```text
 STYLE: Pose sheet in exactly the same style, colors and proportions as the attached character sheet: same character, same head size, same hair and clothing colors, same line weight and flat cel shading, light from upper left. The poses side by side in one row, evenly spaced with clear empty space between them, all at the same scale on one flat baseline, each a frozen still pose, no motion blur, no ghosting, no speed lines, no duplicated limbs. Solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no text, no ground shadow, no frames or panels.

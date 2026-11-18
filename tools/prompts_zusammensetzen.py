@@ -102,6 +102,35 @@ STAND = {
               "schon im Spiel ist.",
 }
 
+# Welt 3 (Sebastian, 18. November 2026): Sebastian erzeugt die Grundlagenbilder in Gemini, Claude macht
+# danach Posenbögen und Bildfolgen selbst über Meshy oder die Gemini-API mit dem Konzeptblatt als Vorlage.
+REIHENFOLGE = {
+    "welt-3": [
+        "# Grundlagenbilder für Welt 3", "",
+        "Diese Bilder entstehen in Gemini, von oben nach unten. Alles andere (Posenbögen W3-P, Bewegungen und "
+        "Effekte W3-B, die Code-Sicht W3-R13) macht Claude danach über Meshy oder die Gemini-API, mit dem "
+        "fertigen Konzeptblatt als Vorlage. Eigene 3D-Vorlagen in T-Pose sind nicht nötig: Die Läufe und "
+        "Clips kommen von den vorhandenen Meshy-Rigs (alle haben dasselbe Skelett), Aussehen und Gesicht aus "
+        "dem Konzeptblatt. Braucht eine Figur doch ein eigenes Modell, macht Claude die stehende Vorlage selbst. "
+        "Der Stand jeder Nummer steht in `../status-alle-shots.md`, Abschnitt Welt 3.", "",
+        "1. **Figuren der Unterstadt** (Max' Konzeptblatt anhängen): W3-F02 Morphäus, W3-F07 Detektiv Deckert, "
+        "W3-F08 Herr Vier, W3-F17 Straßenmusiker im Regen, W3-F15 Weinender Mann, W3-F16 Frau mit Regenschirm, "
+        "W3-F21 Max in der Pfütze.",
+        "2. **Figuren der Widerstandsbasis und des Labors:** W3-F09 Kabel-Kalle, W3-F11 Rebellin, W3-F12 Rebell, "
+        "W3-F13 Piepsi (mit zweiter Fassung), W3-F14 Opa als Hologramm, W3-F20 Max in der Kapsel (mit zweiter "
+        "Fassung), W3-F19 Max als Ente, W3-F06 Roboter-Hausmeister.",
+        "3. **Figuren der Simulation:** W3-F03 Orakel-Oma, W3-F04 Agent Schmidt (mit zweiter Fassung), W3-F05 "
+        "Schmidt-Klon (im selben Chat aus Schmidt), W3-F18 Schwarze Katze, W3-F10 Bernd, W3-F01 M.U.T.T.I. (mit "
+        "zweiter Fassung).",
+        "4. **Gegenstände:** W3-G01 bis W3-G07.",
+        "5. **Räume:** W3-R01 Unterstadt-Straße, W3-R02 Apothekengasse, W3-R03 Widerstandsbasis, W3-R04 Kühlung, "
+        "W3-R05 Laboreingang, W3-R06 Stadtstraße, W3-R07 Küche der Orakel-Oma, W3-R08 Büroturm, W3-R09 bis "
+        "W3-R11 Testkammern, W3-R12 Kern. Zweite Fassungen jeweils im selben Chat aus dem fertigen Bild.",
+        "6. **Nahansichten:** W3-N01 bis W3-N05 (nichts anhängen, Schrift setzt Claude).", "",
+        "Als PNG in voller Größe unter `E:\\Game Engine\\Grafiken\\assets` ablegen, Name mit der Nummer vorn "
+        "(etwa `W3-F02_morphaeus.png`).", ""],
+}
+
 # Vertical Slice, Welt 1 Rätsel 1 bis 4 (03-produktion.md, Stufe 2), in Arbeitsreihenfolge.
 # (Überschrift in welt-1.md, Anmerkung für die Liste)
 SLICE = {
@@ -434,8 +463,9 @@ def figuren_bauen(text, bausteine):
         return []
     return ["# Figuren", "",
             "Je Figur den Block in Gemini kopieren und anhängen, was beim Block steht. Gebraucht wird nur die",
-            "Seitenansicht nach rechts; Gehen und Reden entstehen per Code (`tools/figur.py`). Zweite Fassungen",
-            "entstehen mit Maske aus dem fertigen Bild.", ""] + out
+            "Seitenansicht nach rechts. Läufe entstehen aus einem Meshy-Clip mit Teile-Rig aus diesem Bild, Reden",
+            "über Mund und Kopf (`tools/figur.py`), Gesten über Posenbögen. Zweite Fassungen entstehen mit Maske",
+            "aus dem fertigen Bild.", ""] + out
 
 
 def posen_bauen(text, bausteine):
@@ -848,6 +878,7 @@ def kopf(name, titel, quelle, anleitung):
            f"Erzeugt von `tools/prompts_zusammensetzen.py` aus `{quelle}` (dort ändern, nicht hier).", ""]
     if name in STAND:
         out += [f"**Stand:** {STAND[name]}", ""]
+    out += REIHENFOLGE.get(name, [])
     out += anleitung + [""]
     out += ["**So wird gearbeitet** (Methode in `../00-stil-und-werkzeuge.md`, „Methode seit 14. November 2026“):",
             "erst die Shotliste eines Abschnitts freigeben, dann die Bilder im Stapel erzeugen. Jeder Block ist",
