@@ -160,7 +160,7 @@ Reden mit Opa und Pixel auf dem Dachboden. Max stellt die Frage, die Antwort fol
 | P0\_DACH\_OPA\_1360 | Opa | Alles, was du anfasst, ohne es dir vorher anzusehen. Ansehen kostet nichts, Junge. Anfassen manchmal die Augenbrauen. | Hinweis auf den Rechtsklick |
 | P0\_DACH\_MAX\_1362 | Max | Opa, was hat es mit dem roten Kreis auf sich? | Option Opa (bleibt); nach der Nahansicht Kalender, nur vor P3 |
 | P0\_DACH\_OPA\_1364 | Opa | Der Kreis? Ach, der. Das ist … ein Kreis. Kreise sind wichtig. Sie sind rund. Ja. Genau. | weicht aus, schaut weg |
-| P0\_DACH\_PIX\_1366 | Pixel | Er lügt, und ich rieche es. Lügen riechen bei Menschen immer ein wenig nach Angst. // Bei deinem Großvater riecht sie außerdem nach Schokoladenkuchen, und das hatte ich bei einer Lüge noch nie. | Hinweis auf Omas Geburtstag, Kaskade |
+| P0\_DACH\_PIX\_1366 | Pixel | Er lügt, und ich rieche es. Lügen riechen bei Menschen immer ein wenig nach Angst. // Bei deinem Großvater riecht sie außerdem nach Kalender. Ich wusste nicht, dass Kalender riechen. | Hinweis auf Omas Geburtstag, Kaskade |
 | P0\_DACH\_MAX\_1370 | Max | Ich muss noch was anderes machen. | Option Opa, beendet das Gespräch |
 | P0\_DACH\_OPA\_1380 | Opa | Dann mach. Der Fernseher läuft nicht weg. Hoffe ich jedenfalls. | sieht den Zapp-O-Mat prüfend an |
 | P0\_DACH\_MAX\_1390 | Max | Kommst du mit? | Option Pixel; nach P1 |
@@ -196,7 +196,7 @@ Reden mit Opa und Pixel auf dem Dachboden. Max stellt die Frage, die Antwort fol
 | P0\_DACH\_PIX\_0310 | Pixel | Wer. Hat. Mich. Geweckt. | Halsband leuchtet türkis |
 | P0\_DACH\_PIX\_0320 | Pixel | Ich lag auf dem einzigen warmen Kabel dieses Dachbodens, einem Platz, den ich mir über Jahre erarbeitet habe. // Und ich war mitten in einem Traum von einem Lachs, der größer war als ich und sich trotzdem nicht gewehrt hat. // So einen Traum bekommt man nicht zweimal, junger Mann. |  |
 | P0\_DACH\_MAX\_0330 | Max | Moment mal. Der redet? |  |
-| P0\_DACH\_PIX\_0340 | Pixel | Der redet seit Jahren, junger Mann. Es hat ihm bisher bloß niemand zugehört, und das trage ich keinem nach. Fast keinem. // Aber genug von mir. Ist das Thunfisch in Lake oder in Öl? |  |
+| P0\_DACH\_PIX\_0340 | Pixel | Der redet seit Jahren. Es hat ihm bisher bloß niemand zugehört, und das trage ich keinem nach. Fast keinem. // Aber genug von mir. Ist das Thunfisch in Lake oder in Öl? |  |
 | P0\_DACH\_MAX\_0350 | Max | In Lake. Steht drauf. |  |
 | P0\_DACH\_PIX\_0360 | Pixel | In Lake. Natürlich. Man serviert einem Kater meines Ranges Fisch in Salzwasser, als wäre er ein gewöhnlicher Hafenkater. // Und dann auch noch aus der Dose. Aus dem Blech esse ich nicht, das liegt unter meinem Niveau. | rührt die Dose nicht an |
 | P0\_DACH\_MAX\_0362 | Max | Du hast eben noch auf einem Stromkabel geschlafen. |  |
@@ -272,8 +272,8 @@ Kurze Szene, führt die Reisetasche ein. Im Prolog gibt es nur das Pflichtfach; 
 | P0\_DACH\_MAX\_0942 | Max | Am Propeller klebt noch ein Krümel. Der Toaster hat den Flug überlebt, der Toast leider nicht. | Ansehen: Toaster, zweites Mal |
 | P0\_DACH\_PIX\_0945 | Pixel | Das ist der Staubsauger deines Großvaters. Er hat einmal mein Ohr angesaugt, ohne Vorwarnung und ohne sich danach zu entschuldigen. // Seitdem gilt zwischen uns eine klare Abmachung: Er bleibt aus, und ich bleibe weg. | Ansehen: Opas Staubsauger-Prototyp; nach P1 |
 | P0\_DACH\_PIX\_0946 | Pixel | Er hat geblinzelt. Mit dem Schalter. Ich habe es genau gesehen. // Wir werden darüber nicht weiter sprechen, und du wirst ihn auch nicht anfassen. | Ansehen: Opas Staubsauger-Prototyp, zweites Mal; nach P1 |
-| P0\_DACH\_PIX\_0950 | Pixel | Ein Eselsohr auf der Seite mit dem Schokoladenkuchen. Ein Kater merkt sich so etwas, weil es meistens mit Sahne zu tun hat. // Dein Großvater merkt es sich offenbar nicht, sonst bräuchte er kein Eselsohr. | Ansehen: Kochbuch; nach P1 |
-| P0\_DACH\_PIX\_0955 | Pixel | Neben dem Schokoladenkuchen stehen ein Datum und ein Herz, mit Bleistift gemalt. // Und darunter, sehr klein und sehr zittrig: „Nicht wieder vergessen.“ Ich finde das rührend. Und verdächtig. | Ansehen: Kochbuch, zweites Mal; nach P1 |
+| P0\_DACH\_PIX\_0950 | Pixel | Ein Eselsohr auf einer Seite voller Fettflecken. Ein Kater merkt sich so etwas, weil es meistens mit Sahne zu tun hat. // Dein Großvater merkt es sich offenbar nicht, sonst bräuchte er kein Eselsohr. | Ansehen: Kochbuch; nach P1 |
+| P0\_DACH\_PIX\_0955 | Pixel | Neben dem Rezept stehen ein Datum und ein Herz, mit Bleistift gemalt. // Und darunter, sehr klein und sehr zittrig: „Nicht wieder vergessen.“ Ich finde das rührend. Und verdächtig. | Ansehen: Kochbuch, zweites Mal; nach P1 |
 | P0\_DACH\_MAX\_0960 | Max | Eine Platte: „Schlager für Erfinder, Folge 3“. Das heißt, irgendwo gibt es noch zwei, die schlimmer sind. | Ansehen: Plattenspieler |
 | P0\_DACH\_MAX\_0965 | Max | Opa hat auf der Hülle ein Lied angekreuzt: „Mein Herz ist ein Lötkolben“. Ich hab jetzt schon Angst vor der Melodie. | Ansehen: Plattenspieler, zweites Mal |
 | P0\_DACH\_MAX\_0970 | Max | Der Ohrensessel. Er hat Opas Form. Wenn ich mich reinsetze, will ich plötzlich was erfinden. | Ansehen: Ohrensessel |
@@ -348,7 +348,7 @@ Linksklick auf Deko-Objekte: eigene Zeilen statt Ersatzzeilen, ohne Fehler-Jingl
 | P0\_DACH\_MAX\_1110 | Max | Pixel will keinen Draht. Pixel will Fisch. Ich hab das Gefühl, Pixel will immer Fisch. | Kleiderbügel auf Pixel |
 | P0\_DACH\_PIX\_1120 | Pixel | Steck mich bitte nicht in den Fernseher. Ich habe als Antenne keinerlei Ausbildung. // Und der letzte Draht, den dein Großvater an mir befestigen wollte, liegt bis heute unter dem Ohrensessel. | Pixel-Feld der Inventarleiste auf Zapp-O-Mat; nach P1 |
 | P0\_DACH\_MAX\_1130 | Max | Der Dosenöffner passt nicht in den Fernseher. Ich hab's ausprobiert, damit du es nicht musst. | Dosenöffner auf Zapp-O-Mat |
-| P0\_DACH\_OPA\_1140 | Opa | Nicht am Knopf drehen, bevor das Bild da ist! Der Werbeblock ist für den Rückweg. // Fünf Sekunden Milchwerbung, und schon bist du wieder hier. Keiner weiß, warum. | Drehknopf vor P2 |
+| P0\_DACH\_OPA\_1140 | Opa | Nicht am Knopf drehen, bevor das Bild da ist! Der Werbeblock ist für den Rückweg. // Fünf Sekunden Werbung, und schon bist du wieder hier. Keiner weiß, warum. | Drehknopf vor P2 |
 | P0\_DACH\_MAX\_1150 | Max | Erst Strom, dann Empfang. Und für Strom muss der Kater vom Kabel. | Drahtkleiderbügel oder Antenne auf Zapp-O-Mat vor P1 |
 | P0\_DACH\_OPA\_1160 | Opa | Für mich nicht, danke. Ich hatte schon Tee. Irgendwann diese Woche. | Offene Thunfischdose auf Opa |
 | P0\_DACH\_PIX\_1170 | Pixel | Ich schlafe, und zwar genau so lange, bis angerichtet ist. In Porzellan. | Offene Thunfischdose auf Pixel; nach dem Wecken |
@@ -467,7 +467,7 @@ Zufällig gezogen, wenn nichts Spezielles passt; gelten für das ganze Spiel. Ma
 | SYS\_ERS\_PIX\_0280 | Pixel | Ich fühle mich davon nicht angesprochen. Ich fühle mich grundsätzlich selten angesprochen, // es sei denn, jemand öffnet eine Dose. |
 | SYS\_ERS\_PIX\_0290 | Pixel | Sehr kreativ. Und sehr, sehr falsch. |
 | SYS\_ERS\_PIX\_0300 | Pixel | Wenn das klappt, fresse ich einen Besen. // Du kannst beruhigt sein, der Besen ist nicht in Gefahr. |
-| SYS\_ERS\_PIX\_0310 | Pixel | Das funktioniert nur in Filmen, junger Mann. // Und selbst in Filmen würde man es mich machen lassen, weil ich besser aussehe. |
+| SYS\_ERS\_PIX\_0310 | Pixel | Das funktioniert nur in Filmen. // Und selbst in Filmen würde man es mich machen lassen, weil ich besser aussehe. |
 | SYS\_ERS\_PIX\_0320 | Pixel | Ich hatte einmal einen Traum, in dem genau das funktioniert hat. // Ich bin schreiend aufgewacht und habe danach zwei Stunden lang meine Pfote geleckt. |
 | SYS\_ERS\_PIX\_0330 | Pixel | Das liegt weit unter meinem Niveau. Mein Niveau liegt, grob gesagt, auf Höhe der Futterdosen. |
 | SYS\_ERS\_PIX\_0340 | Pixel | Ich rate selten von etwas ab, weil ich mich selten genug interessiere. // Jetzt rate ich ab. Mit Nachdruck. |
@@ -508,7 +508,7 @@ Ab dem dritten Ansehen desselben Objekts im selben Zustand zufällig gezogen, ni
 | SYS\_WDH\_PIX\_0070 | Pixel | Starr nicht so. Starren ist meine Disziplin, // und ich mache das seit Jahren auf einem Niveau, das du nicht erreichen wirst. |
 | SYS\_WDH\_PIX\_0080 | Pixel | Nichts Neues. Wenn sich etwas ändert, sage ich Bescheid. // Das ist gelogen, ich sage nie Bescheid. Aber es klingt nett. |
 | SYS\_WDH\_PIX\_0090 | Pixel | Das ist das dritte Mal. Beim vierten Mal lege ich mich drauf, und dann gehört es mir. |
-| SYS\_WDH\_PIX\_0100 | Pixel | Hinsehen wird überschätzt, junger Mann. Riechen ist die Zukunft. |
+| SYS\_WDH\_PIX\_0100 | Pixel | Hinsehen wird überschätzt. Riechen ist die Zukunft. |
 
 ## 9c. Plauderoptionen erschöpft (PLA)
 

@@ -190,7 +190,7 @@ Die Zahl 405 („Type 405“) auf dem Siegel des Mehlsacks von Hand setzen, eben
 | Poster einer Pyramide und einer Neonstadt | Dachboden | Max: „Opa hat einen sehr breiten Geschmack. Oder Reisepläne.“ |
 | Alter Toaster mit Propeller | Dachboden | Max: „Fliegendes Frühstück. Nie wieder.“ |
 | Opas erster Staubsauger-Prototyp | Dachboden | Pixel: „Wir haben uns geeinigt. Er bleibt aus, ich behalte das andere Ohr.“ (erklärt die Ohrkerbe) |
-| Kochbuch mit Eselsohr | Dachboden | Pixel: „Ein Eselsohr bei Schokokuchen. Interessant.“ (Hinweis aufs Finale) |
+| Kochbuch mit Eselsohr | Dachboden | Pixel: „Ein Eselsohr auf einer Seite voller Fettflecken.“ (Hinweis aufs Finale; der Kuchen wird im Prolog bewusst nicht genannt) |
 | Plattenspieler mit Opas Lieblingsplatte | Dachboden | Max: „‚Schlager für Erfinder, Folge 3‘. Es gibt also noch zwei schlimmere.“ |
 | Familienfoto mit Oma | Wohnzimmer | Max: „Oma guckt auf jedem Foto, als hätte jemand ihren Geburtstag vergessen.“ |
 | Hut mit Propeller an der Garderobe | Treppenhaus | Max: „Opas Hut. Er trägt ihn nie, aber er hängt immer hier. Wie ein Wächter.“ |

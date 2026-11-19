@@ -14,11 +14,15 @@ extends RefCounted
 ## nach dem zweiten und dritten, die Mutter kommt nach dem ersten Gespräch mit Oma oder Opa.
 
 #region Konstanten ################################################################################
+## Heimkehr bis Opa die Hand aufhält; dann gibt der Spieler ihm die Fernbedienung selbst
+## (Fernbedienung auf Opa, Schalter FI_UEBERGABE_OFFEN), danach läuft HEIMKEHR_NACH.
 const HEIMKEHR := ["FI_DACH_NAR_0010", "FI_DACH_PIX_0020", "FI_DACH_MAX_0030", "FI_DACH_OPA_0040",
 	"FI_DACH_MAX_0050", "FI_DACH_OPA_0060", "FI_DACH_OPA_0070", "FI_DACH_NAR_0080", "FI_DACH_OPA_0090",
-	"FI_DACH_OPA_0100", "@fernbedienung", "FI_DACH_NAR_0110", "FI_DACH_OPA_0120", "FI_DACH_MAX_0130",
-	"FI_DACH_OPA_0140", "FI_DACH_MAX_0150", "FI_DACH_PIX_0160", "FI_DACH_MAX_0170", "FI_DACH_PIX_0180",
-	"FI_DACH_NAR_0190", "FI_DACH_OPA_0200", "FI_DACH_NAR_0210", "FI_DACH_OMA_0220", "FI_DACH_OPA_0230",
+	"FI_DACH_OPA_0100"]
+## Opa drängelt bei jedem anderen Klick, solange er die Hand aufhält (abwechselnd)
+const UEBERGABE_DRAENGELN := ["FI_DACH_OPA_0102", "FI_DACH_OPA_0104"]
+const HEIMKEHR_NACH := ["@fernbedienung", "FI_DACH_NAR_0110", "FI_DACH_OPA_0120", "FI_DACH_MAX_0130",
+	"FI_DACH_OPA_0140", "FI_DACH_MAX_0150", "FI_DACH_PIX_0160", "FI_DACH_NAR_0190", "FI_DACH_OPA_0200", "FI_DACH_NAR_0210", "FI_DACH_OMA_0220", "FI_DACH_OPA_0230",
 	"FI_DACH_NAR_0240", "FI_DACH_OPA_0250", "FI_DACH_MAX_0260", "FI_DACH_OPA_0270", "FI_DACH_MAX_0280"]
 
 ## Opas Zurufe in Stufe 1 (in Schleife), Pixels Reaktion nach den ersten beiden
@@ -93,6 +97,8 @@ func ereignis(art: String, obj: Variant, item: Variant) -> bool:
 		return false  # Zwischenspiele: Raumskript des Dachbodens
 	var oid := _id(obj)
 	var iid = _id(item) if item is Object else item
+	if Zustand.ist("FI_UEBERGABE_OFFEN"):
+		return await _uebergabe(art, oid, iid)
 	if art == "kombinieren":
 		for m in ["kombi_%s_%s" % [oid, iid], "kombi_%s_%s" % [iid, oid]]:
 			if has_method(m):
@@ -115,6 +121,10 @@ func wert(art: String, obj: Variant, _item: Variant) -> Variant:
 	if not Zustand.ist("FINALE"):
 		return null
 	match art:
+		"hinweis_vorher":
+			# Solange Opa die Hand aufhält, zeigt die Pfote auf die Übergabe statt auf die Luke
+			if Zustand.ist("FI_UEBERGABE_OFFEN"):
+				return "FI_DACH_PIX_0106"
 		"musik":
 			# Der Dachboden ist derselbe Raum wie in den Zwischenspielen: Im Finale läuft dort
 			# das Maschinen-Stück, sobald die Maschine an ist (FI_DACH_NAR_0190 startet es in
@@ -236,14 +246,38 @@ func nach_uebergang_dachboden(_raum, _x) -> bool:
 	Zustand.setze("FI_HEIMKEHR")
 	if _hat("omas_kekse"):
 		Zustand.setze("FI_R02_GELOEST")  # Kekse für Welt 4 eingepackt: der Bonus-Gag ist schon sicher
+	await _szene(HEIMKEHR)
+	if _hat("goldene_fernbedienung"):
+		Zustand.setze("FI_UEBERGABE_OFFEN")  # Opa hält die Hand auf, der Spieler gibt sie ihm
+		Spielstand.autospeichern()
+	else:
+		await _heimkehr_nach()
+	return true
+
+
+## Solange Opa die Hand aufhält: Nur die Fernbedienung auf Opa geht weiter, jeder andere Klick im
+## Raum lässt ihn drängeln. Inventar ansehen und kombinieren bleiben frei.
+func _uebergabe(art: String, oid: String, iid: Variant) -> bool:
+	if art == "gegenstand" and oid == "opa" and iid == "goldene_fernbedienung":
+		await _heimkehr_nach()
+		return true
+	if art not in ["benutzen", "ansehen", "gegenstand", "pixel", "ausgang"]:
+		return false
+	var n := _zaehle("FI_UEBERGABE_DRAENGELN")
+	await _sag(UEBERGABE_DRAENGELN[(n - 1) % UEBERGABE_DRAENGELN.size()])
+	return true
+
+
+## Rest der Heimkehr ab der Übergabe bis „Endgegner“, dann Stufe 1.
+func _heimkehr_nach() -> void:
+	Zustand.setze("FI_UEBERGABE_OFFEN", false)
 	var schritte := []
-	for z in HEIMKEHR:
+	for z in HEIMKEHR_NACH:
 		schritte.append(_fernbedienung_abgeben if z == "@fernbedienung" else z)
 	await _szene(schritte)
 	await _fernbedienung_abgeben()  # falls übersprungen
 	await _opa_ruft()
 	Spielstand.autospeichern()
-	return true
 
 
 ## Max gibt Opa die Goldene Fernbedienung; Opa schiebt die Zelle hinein (Zündkapsel).

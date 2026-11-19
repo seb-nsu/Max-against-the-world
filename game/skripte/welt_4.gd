@@ -480,6 +480,9 @@ func nach_uebergang_werbespot_set(_raum, _x) -> bool:
 	if _erstmals("werbespot_set"):
 		var zeilen := ["W4_WERB_WER_0010", "W4_WERB_MAX_0020", "W4_WERB_WER_0030", "W4_WERB_MAX_0040",
 			"W4_WERB_PIX_0050", "W4_WERB_WER_0060", "W4_WERB_MAX_0070", "W4_WERB_WER_0080", "W4_WERB_MAX_0090"]
+		if not _hat("handy"):  # Handy in Welt 2 verbraucht oder in der Fundkiste geblieben
+			zeilen[5] = "W4_WERB_WER_0062"
+			zeilen[6] = "W4_WERB_MAX_0072"
 		if not _hat("taste_stumm"):
 			zeilen.append("W4_WERB_PIX_0510")
 		await _szene(zeilen)

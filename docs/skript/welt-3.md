@@ -40,7 +40,7 @@ Szene beim Eintritt aus Kanal 42. Max und Pixel landen in einer Pfütze vor der 
 | W3\_STR\_MAX\_0110 | Max | „Echte Pizza“, steht da. Ich will gar nicht wissen, was im Jahr 2099 als unechte Pizza durchgeht. | Ansehen: Neon-Pizza-Plakat |
 | W3\_STR\_PIX\_0120 | Pixel | Pizza ohne Thunfisch ist, wenn ich das so deutlich sagen darf, nichts weiter als Brot mit einer Meinung. | Ansehen: Neon-Pizza-Plakat, zweites Mal |
 | W3\_STR\_MAX\_0130 | Max | Ein Einhorn aus Papier, das in einer Pfütze schwimmt. Irgendwer war vor uns hier und hatte sehr viel Zeit. | Ansehen: Origami-Einhorn |
-| W3\_STR\_PIX\_0135 | Pixel | Ein Einhorn aus Papier, und es schwimmt. Ich würde es fangen, aber dann wären meine Pfoten nass. // Nasse Pfoten für ein Tier, das nicht einmal nach etwas schmeckt? Ich habe Grundsätze, junger Mann. | Ansehen: Origami-Einhorn, zweites Mal |
+| W3\_STR\_PIX\_0135 | Pixel | Ein Einhorn aus Papier, und es schwimmt. Ich würde es fangen, aber dann wären meine Pfoten nass. // Nasse Pfoten für ein Tier, das nicht einmal nach etwas schmeckt? Ich habe Grundsätze. | Ansehen: Origami-Einhorn, zweites Mal |
 | W3\_STR\_MAX\_0140 | Max | Das ist total aufgeweicht. Wenn ich es anfasse, ist es danach ein Papierpferd ohne Horn, und das tu ich ihm nicht an. | Benutzen: Origami-Einhorn |
 | W3\_STR\_MAX\_0150 | Max | Ein Straßenmusiker mit Synthesizer, im Regen, ohne einen einzigen Zuhörer. Er spielt trotzdem. Der Regen ist sein einziger Fan und geht nicht nach Hause. | Ansehen: Straßenmusiker; trägt Beobachtung „spielt im Regen weiter“ ins Notizbuch ein |
 | W3\_STR\_MAX\_0155 | Max | Er spielt dasselbe Lied wie vorhin. Oder ein anderes, das genauso klingt. Bei Synthesizern weiß man das nie so genau. | Ansehen: Straßenmusiker, zweites Mal; trägt Beobachtung „spielt im Regen weiter“ ins Notizbuch ein |
@@ -588,7 +588,7 @@ Ebene: Simulation und Realität im Wechsel. Max tippt am Terminal, Kalle liest i
 | W3\_TERM\_MAX\_0270 | Max | Ich war gerade eine Ente. Mit Hoodie. Ich werde das niemandem erzählen, aber Pixel wird es allen erzählen. | zurück in Menschenform |
 | W3\_TERM\_PIX\_0280 | Pixel | Ich habe es gesehen. Von außen hat sich an der Kapsel zwar nichts verändert, aber ich weiß es. // Und du weißt, dass ich es weiß. Damit werden wir beide leben müssen, ich allerdings etwas lieber als du. | Realität, nach 0270 |
 | W3\_TERM\_KAL\_0290 | Kalle (Text) | übersetzung: „quak.“ nein, moment. das warst du. | Terminal, nach Ente |
-| W3\_TERM\_PIX\_0300 | Pixel | Da steckt schon ein Kabel drin. Ich stecke nichts doppelt, junger Mann, ich bin schließlich kein Anfänger. | Spielfigur Pixel: Kabel auf belegte Buchse |
+| W3\_TERM\_PIX\_0300 | Pixel | Da steckt schon ein Kabel drin. Ich stecke nichts doppelt, ich bin schließlich kein Anfänger. | Spielfigur Pixel: Kabel auf belegte Buchse |
 | W3\_TERM\_PIX\_0310 | Pixel | Alle drei Kabel sitzen, und die Kapsel summt. // Wenn er gleich aufwacht, tue ich so, als hätte ich die ganze Zeit geschlafen. Es soll ihm ja nicht zu Kopf steigen. | nach 0240 |
 | W3\_TERM\_KAL\_0320 | Kalle (Text) | grünes licht. leg dich hin, also: bleib stehen, also: du weißt schon. bis gleich, in echt. | Terminal, nach Lösung |
 | W3\_TERM\_MAX\_0330 | Max | Die Akte flackert. Die Sonnenbrille auch. Alles, was ich trage, überlegt sich gerade, was es drüben sein will. | Verwandlungs-Effekt im Inventar |
@@ -660,7 +660,7 @@ Szene beim ersten Ebenenwechsel in die Realität, egal über welchen Wecker. Ebe
 | W3\_BAS\_MAX\_0510 | Max | Vier Kapseln mit Glasdeckel. Drei leer, eine meine. Sie sieht aus wie ein Bett, das zu viel verspricht. | Ansehen: Kapseln |
 | W3\_BAS\_MAX\_0515 | Max | In einer Kapsel liegt noch ein Kissen mit Abdruck. Wer immer da lag, hat sich nicht verabschiedet. | Ansehen: Kapseln, zweites Mal |
 | W3\_BAS\_MAX\_0520 | Max | Meine Kapsel. Da drin liegt mein Körper, während ich drüben bin. Ich lieg also da und guck mir beim Liegen zu. | Ansehen: Max' Kapsel |
-| W3\_BAS\_PIX\_0525 | Pixel | Dein Körper liegt da und lächelt, und ich sitze auf dem Deckel und passe auf. // Das ist Arbeit, junger Mann. Unbezahlte Arbeit. Ich erwähne es nur, damit es einmal erwähnt ist. | Ansehen: Max' Kapsel, zweites Mal |
+| W3\_BAS\_PIX\_0525 | Pixel | Dein Körper liegt da und lächelt, und ich sitze auf dem Deckel und passe auf. // Das ist Arbeit. Unbezahlte Arbeit. Ich erwähne es nur, damit es einmal erwähnt ist. | Ansehen: Max' Kapsel, zweites Mal |
 | W3\_BAS\_PIX\_0530 | Pixel | Er liegt da, lächelt und sabbert ein wenig. Ich habe ihn fotografiert. // Innerlich, natürlich. Für immer. Ich werde mir das Bild an schlechten Tagen ansehen. | Spielfigur Pixel: Ansehen Max in der Kapsel |
 | W3\_BAS\_PIX\_0540 | Pixel | Schütteln. Mit beiden Pfoten. Er wird aufwachen und so tun, als wäre er von allein aufgewacht. | Spielfigur Pixel: Benutzen Kapsel; weckt Max aus Simulation oder Labor |
 | W3\_BAS\_MAX\_0550 | Max | Ein Terminal mit grünem Bildschirm und einer Tastatur, auf der Pixel Platz hätte. Und hatte, sagt Kalle. | Ansehen: Terminal |
@@ -813,7 +813,7 @@ Ebene: Realität, von Anfang an erreichbar. Der Roboter wischt vor der Panzertü
 | W3\_EING\_MAX\_0375 | Max | Die Buchsen leuchten im Takt, als würde das Labor durch die Kabel atmen. Ich muss da rein, also irgendwie in die Kabel. | Ansehen: geöffnete Tür, Datenanschlüsse, zweites Mal; Panzertür offen |
 | W3\_EING\_KAL\_0380 | Kalle | Bin da! Hab die Trommel mitgebracht. Leitung von hier bis zu deiner Kapsel. Achtzig Meter Kabel, zwei Knoten, eine Hoffnung. | Benutzen: Datenanschluss; Kalle kommt mit Kabeltrommel |
 | W3\_EING\_KAL\_0390 | Kalle | Fertig. Ich zapf unterwegs noch den Lautsprecher der KI an, dann hörst du den Kater auch da drin. Ich tu dir keinen Gefallen damit. Ich weiß. | Leitung liegt; Schalter W3\_LEITUNG\_LABOR; Pixel im Labor hörbar |
-| W3\_EING\_PIX\_0400 | Pixel | Er hat mich in eine Weltherrschafts-KI eingespeist. Ich werde ihr Lautsprecher sein. // Ich war schon Schlimmeres, junger Mann. Ich war heute schon mehrmals nass. |  |
+| W3\_EING\_PIX\_0400 | Pixel | Er hat mich in eine Weltherrschafts-KI eingespeist. Ich werde ihr Lautsprecher sein. // Ich war schon Schlimmeres. Ich war heute schon mehrmals nass. |  |
 | W3\_EING\_MAX\_0410 | Max | Jetzt zurück zur Kapsel, hinlegen, aufwachen im Labor. Mein Lebenslauf wird immer komischer. | nach 0390 |
 | W3\_EING\_MAX\_0420 | Max | Ein Wischeimer. Das Wasser darin ist sauberer als alles, was ich heute getrunken hab. | Ansehen: Wischeimer |
 | W3\_EING\_PIX\_0430 | Pixel | Wasser in einem Eimer, am Boden, trinkbar. // Das ist die erste zivilisierte Einrichtung dieser Welt, und ausgerechnet ein Roboter hat sie aufgestellt. | Ansehen: Wischeimer, zweites Mal |
@@ -1075,7 +1075,7 @@ Gespräch mit M.U.T.T.I. Die drei Regeln sind Optionen, sobald sie im Notizbuch 
 | W3\_KERN\_NAR\_0480 | – | Schnee fällt durch die Halle. Die Zelle zischt, dunkelt ab und bekommt eine Frostschicht. | Lösung B: Pixel öffnet das Fenster in der Basis; Schnee-Effekt |
 | W3\_KERN\_MAX\_0490 | Max | Es schneit. Im Kern. Weil ein Kater ein Fenster aufgemacht hat. Ich geb's zu: Das ist die beste Fernbedienung, die ich je hatte. | nach 0480 |
 | W3\_KERN\_MAX\_0500 | Max | Die Ewige Energiezelle. Kalt, handlich, länglich, mit Plus und Minus am Ende. Ewig. Steht drauf. Mit Garantie, hoffe ich. | Nehmen: Energiezelle, kalt; Jingle Welt geschafft |
-| W3\_KERN\_PIX\_0510 | Pixel (aus dem Lautsprecher) | Passt die auch in einen Dosenöffner? Den elektrischen bei Oma? Schreib auf: Batterien. Für den Dosenöffner. Das ist mein Wunsch für diese Welt. | Notizbuch Seite 3: „Batterien für den elektrischen Dosenöffner bei Oma“ |
+| W3\_KERN\_PIX\_0510 | Pixel (aus dem Lautsprecher) | Passt die auch in einen Dosenöffner? Den elektrischen bei Oma? Schreib auf: Batterien. Für den Dosenöffner. Das ist mein Wunsch für diese Welt. | Pixels Wunsch Welt 3; ins Notizbuch (Seite 3) kommt er erst im Zwischenspiel 3 |
 | W3\_KERN\_PIX\_0520 | Pixel (aus dem Lautsprecher) | Oder in eine Fernbedienung. Nur so ein Gedanke. Ich habe viele Gedanken. Die meisten über Fisch. | Andeutung zur Fernbedienung |
 | W3\_KERN\_MAX\_0530 | Max | Eine Fernbedienung braucht keine ewige Energiezelle. Eine Fernbedienung braucht jemanden, der sie findet. | überhört die Andeutung |
 | W3\_KERN\_MAX\_0540 | Max | M.U.T.T.I. Hängt da, dunkel, Antennen unten. Sie sieht aus wie eine Küchenmaschine, die man nach dem Backen vergessen hat. | Ansehen: M.U.T.T.I., nach dem Herunterfahren |
@@ -1098,7 +1098,8 @@ Szene. Max wacht in der Basis auf, die Zelle in der Hand. In der Realität ist s
 | ID | Sprecher | Text | Regie |
 | --- | --- | --- | --- |
 | W3\_ENDE\_NAR\_0010 | – | Zischen. Der Deckel hebt sich. Max hält eine kalte, längliche Zelle in der Hand. Pixel sitzt auf dem Rand und tut, als hätte er geschlafen. | Szene, Basis |
-| W3\_ENDE\_PIX\_0020 | Pixel | Du hast sie, und ich habe das Fenster. Wir haben also beide gearbeitet. // Aber nur einer von uns war dabei nass, und ich werde dir nicht sagen, wer. Du weißt es. |  |
+| W3\_ENDE\_PIX\_0020 | Pixel | Du hast sie, und ich habe das Fenster. Wir haben also beide gearbeitet. // Aber nur einer von uns war dabei nass, und ich werde dir nicht sagen, wer. Du weißt es. | nur wenn Pixel das Fenster geöffnet hat (Lösung B, Schalter W3\_ZELLE\_SCHNEE) |
+| W3\_ENDE\_PIX\_0022 | Pixel | Du hast sie, und ich habe auf deinen Körper aufgepasst. Wir haben also beide gearbeitet. // Aber nur einer von uns hat dabei im Schlaf gelächelt, und ich werde dir nicht sagen, wer. Du weißt es. | statt 0020, wenn die Zelle über Omas Kekse kalt wurde (Lösung A) |
 | W3\_ENDE\_KAL\_0030 | Kalle | Die Lichter drüben gehen aus! Die Kapseln öffnen sich! Die halbe Stadt wacht auf und hat Hunger. Herr Vier wird reich. | am Terminal, aufgeregt flüsternd |
 | W3\_ENDE\_MAX\_0040 | Max | Die Zelle. In der Simulation glühend, hier kalt und schwer. Für „ewig“ ist sie erstaunlich klein. | Ansehen: Energiezelle im Inventar, Realität |
 | W3\_ENDE\_MAX\_0045 | Max | Sie summt ganz leise. Ewig, sagt Opa. Ich hoffe, sie hat einen Ausschalter. Ewig ist lang. | Ansehen: Energiezelle im Inventar, Realität, zweites Mal |
@@ -1171,7 +1172,7 @@ Rechtsklick auf einen Gegenstand in der Inventarleiste. Erstes Mal die erste Zei
 | W3\_INV\_MAX\_0120 | Max | Die Energiezelle. Jetzt frostig und harmlos. Ich trag den Endgegner in der Hosentasche, und er ist kalt wie ein Eis am Stiel. | Ansehen: Energiezelle, vereist |
 | W3\_INV\_MAX\_0125 | Max | Sie beschlägt meine Tasche von innen. Ich hab jetzt eine Hose mit Klimaanlage. | Ansehen: Energiezelle, vereist, zweites Mal |
 | W3\_INV\_MAX\_0130 | Max | Die Zelle glüht in meiner Tasche. Ich spüre sie durch drei Schichten Stoff. Opa, du schuldest mir eine Hose. | Ansehen: Energiezelle, gluehend |
-| W3\_INV\_PIX\_0135 | Pixel | Du klingst nach Bügeleisen. Wenn du zurück bist, setze ich mich trotzdem auf dich. // Wärme ist Wärme, junger Mann, und ich bin gerade nicht in der Position, wählerisch zu sein. | Ansehen: Energiezelle, gluehend, zweites Mal |
+| W3\_INV\_PIX\_0135 | Pixel | Du klingst nach Bügeleisen. Wenn du zurück bist, setze ich mich trotzdem auf dich. // Wärme ist Wärme, und ich bin gerade nicht in der Position, wählerisch zu sein. | Ansehen: Energiezelle, gluehend, zweites Mal |
 
 ## 18c. Gespräch erschöpft (ABS)
 
@@ -1239,7 +1240,7 @@ Drei Stufen je Rätselschritt, vom Stups bis zur Lösung, nach den Regeln in `05
 
 | ID | Sprecher | Text | Auslöser |
 | --- | --- | --- | --- |
-| W3\_HINT\_PIX\_0110 | Pixel | Der Mann mit dem Hut will keine richtigen Antworten, sondern menschliche. Das ist nicht dasselbe, junger Mann. // Sieh dir an, was die Leute hier auf der Straße treiben. Vernünftig ist davon nichts. | R1a Beobachtungen, Stufe 1 |
+| W3\_HINT\_PIX\_0110 | Pixel | Der Mann mit dem Hut will keine richtigen Antworten, sondern menschliche. Das ist nicht dasselbe. // Sieh dir an, was die Leute hier auf der Straße treiben. Vernünftig ist davon nichts. | R1a Beobachtungen, Stufe 1 |
 | W3\_HINT\_PIX\_0120 | Pixel | Sieh dir die Leute auf der Straße an. Den Weinenden, die mit dem Schirm, den mit der Musik. Keiner von denen tut etwas Vernünftiges. Genau das brauchst du. | R1a, Stufe 2 |
 | W3\_HINT\_PIX\_0130 | Pixel | Sieh dir den weinenden Mann, die Frau mit dem Schirm und den Musiker an. Dann stehen ihre Dummheiten in deinem Notizbuch. Dann geh zum Hut. | R1a, Stufe 3 |
 | W3\_HINT\_PIX\_0140 | Pixel | Du hast die Antworten im Notizbuch. Jetzt musst du sie nur noch aussprechen, statt nachzudenken. // Für dich sollte das, bei allem Respekt, nicht besonders schwer sein. | R1b Test, Stufe 1 |

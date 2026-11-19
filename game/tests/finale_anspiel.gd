@@ -43,7 +43,16 @@ func _durchlauf() -> void:
 		await S.geben(_sn(g))
 	await S.finale_beginnen()
 	await _warte_auf_raum("dachboden")
+	# Heimkehr bis Opa die Hand aufhält; dann gibt der Spieler ihm die Fernbedienung selbst
+	await _warte_bis(func(): return Z.ist("FI_UEBERGABE_OFFEN"), 15.0)
+	_pruefe(_gesagt("FI_DACH_OPA_0100") and not _gesagt("FI_DACH_NAR_0110") and _hat("goldene_fernbedienung"),
+		"Heimkehr hält bei der Übergabe an, Fernbedienung noch bei Max")
+	await S.regel("ausgang", _hotspot("bodenluke"))
+	_pruefe(_gesagt("FI_DACH_OPA_0102") and not Z.ist("FI_LUKE_ERKANNT"), "Während der Übergabe drängelt Opa (0102)")
+	_pruefe(S.regel_wert("hinweis_vorher", "F1") == "FI_DACH_PIX_0106", "Pfote zeigt auf die Übergabe")
+	await S.regel("gegenstand", C().get_character("Opa"), _i().get_item_instance(_sn("goldene_fernbedienung")))
 	await _warte_bis(func(): return _gesagt("FI_RIEG_OPA_0010"), 15.0)
+	_pruefe(not Z.ist("FI_UEBERGABE_OFFEN") and not _gesagt("FI_DACH_MAX_0170"), "Übergabe abgeschlossen, 0170/0180 gestrichen")
 	_pruefe(Z.ist("FINALE") and Z.abschnitt == "finale", "Finale läuft im Abschnitt finale")
 	_pruefe(_gesagt("FI_DACH_NAR_0010") and _gesagt("FI_DACH_MAX_0280"), "Heimkehr-Szene (FI_DACH 0010–0280)")
 	_pruefe(not _hat("goldene_fernbedienung") and Z.wert("FI_FERNBEDIENUNG") == "grau_ohne_zelle",

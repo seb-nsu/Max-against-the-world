@@ -370,3 +370,11 @@ Komplett-Review von Prolog, Welt 1 und Welt 2 mit sieben Prüfrollen (Bericht: `
 - Schrift und Ziffern in Nahansichten per Werkzeug setzen und in Spielgröße auf Verwechslung prüfen (Fährtafel: 112 sah aus wie 118).
 - Fertige PRs nicht stapeln, gemergte Zweige löschen, festhalten, welche Sitzung `gh` und welche Werkzeuge hat (die PC-Sitzung hat kein `gh`).
 - `.import`-Dateien: Eingecheckt werden sie mit dem Asset; was ein lokaler Import an bestehenden `.import`-Dateien ändert, wird nicht mitcommittet.
+
+## 12. Externe Skript-Reviews (19. November 2026)
+
+- Ein prüfendes Modell ohne `01-konzept.md` hält etwa die Hälfte der Absichten für Fehler (Running Gags, Milch-Spots, Verwandlungen zwischen den Ebenen). Jeden Befund deshalb erst gegen den echten Skripttext und das Konzept prüfen, dann sortieren: übernehmen, anders lösen, verwerfen. Die IDs im Review stimmen nicht immer (BRUE statt WALD).
+- Die Ersatzzeilen des Modells sind oft schwächer und streichen eine Pointe, einen Rückruf oder die Regel, die ein Rätsel braucht. Eigene Zeilen schreiben und jede Änderung im Zusammenhang gegenlesen.
+- Ein zweites Review mit anderem Blickwinkel lohnt sich: Es fand die harten Zustandsfehler (Zeile gilt immer, obwohl es zwei Lösungswege gibt; Gegenstand kann verbraucht sein).
+- Zählen statt schätzen: `grep` über die Pixel-Zeilen zeigte „junger Mann“ 76-mal. Wiederkehrende Formeln gehören ins Konzept mit einer Obergrenze.
+- Bei jeder Zeile, die einen Zustand behauptet („ich habe das Fenster“, „nimmt Max' Handy“), prüfen, ob der Zustand auf allen Wegen gilt; sonst eine zweite Fassung mit Bedingung und einen Test dazu.

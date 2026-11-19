@@ -479,6 +479,7 @@ func nach_uebergang_kern(_raum, _x) -> bool:
 	# Lösung B: Pixel hat das Fenster geöffnet, während Max im Kern war
 	if Zustand.ist("W3_SCHNEE") and Zustand.geloest("R10") and not Zustand.ist("W3_ZELLE_KALT"):
 		Zustand.setze("W3_ZELLE_KALT")
+		Zustand.setze("W3_ZELLE_SCHNEE")  # für Pixels Schlusszeile („ich habe das Fenster“)
 		await _szene(["W3_KERN_NAR_0480", "W3_KERN_MAX_0490"])
 	return true
 
@@ -1462,7 +1463,9 @@ func _hinweis_stufe_3() -> bool:
 
 func _abschluss() -> void:
 	await _aufwachen()
-	var zeilen := ["W3_ENDE_NAR_0010", "W3_ENDE_PIX_0020", "W3_ENDE_KAL_0030", "W3_ENDE_REB_0050"]
+	# „Ich habe das Fenster“ nur bei Lösung B; über Omas Kekse (Lösung A) die zweite Fassung
+	var pixel := "W3_ENDE_PIX_0020" if Zustand.ist("W3_ZELLE_SCHNEE") else "W3_ENDE_PIX_0022"
+	var zeilen := ["W3_ENDE_NAR_0010", pixel, "W3_ENDE_KAL_0030", "W3_ENDE_REB_0050"]
 	if Zustand.ist("W3_FREUND_0815"):
 		zeilen.append_array(["W3_ENDE_HAU_0060", "W3_ENDE_HAU_0070"])
 	if not _hinweis_stufe_3():

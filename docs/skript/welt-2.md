@@ -73,7 +73,7 @@ Der Fährmann will einen Obolus. Max hat keinen. Sobek verneigt sich vor Pixel, 
 | --- | --- | --- | --- |
 | W2\_NIL\_MAX\_0610 | Max | Jemand ist hier mit der Hand durchs Korn gelaufen, und zwar sehr bedeutungsvoll. | Ansehen: Weizenfeld mit Handabdruck |
 | W2\_NIL\_MAX\_0615 | Max | Ein Handabdruck im Korn. Fehlt eigentlich nur noch einer in Rüstung, der traurig guckt, während irgendwo Geigen einsetzen. | Ansehen: Weizenfeld mit Handabdruck, zweites Mal |
-| W2\_NIL\_PIX\_0620 | Pixel | Korn. Daraus macht man Dinge mit Kruste, und Dinge mit Kruste sind das Beste, was Menschen je erfunden haben. // Merk dir das. Ich merke es mir auch, für alle Fälle. | Ansehen: Weizenfeld, drittes Mal; Notizbuch Seite 3: „irgendwas aus Mehl, mit Kruste“ |
+| W2\_NIL\_PIX\_0620 | Pixel | Korn. Daraus macht man Dinge mit Kruste, und Dinge mit Kruste sind das Beste, was Menschen je erfunden haben. // Merk dir das. Ich merke es mir auch, für alle Fälle. | Ansehen: Weizenfeld, drittes Mal; Pixels Wunsch Welt 2; ins Notizbuch (Seite 3) kommt er erst im Zwischenspiel 2 |
 | W2\_NIL\_MAX\_0630 | Max | Eine Sanduhr, so groß wie ich. Der Sand läuft mal nach oben, mal nach unten, je nachdem, wohin die Fähre gerade fährt. | Ansehen: Sanduhr |
 | W2\_NIL\_MAX\_0635 | Max | Wenn ich die umdrehe, spule ich vielleicht die Zeit zurück. In Spielen klappt das immer, und danach macht man einen Salto. | Ansehen: Sanduhr, zweites Mal |
 | W2\_NIL\_MAX\_0640 | Max | Eine Tafel mit drei Zeilen. Entweder der Fahrplan oder die Hausordnung, was hier vermutlich dasselbe ist. | Ansehen: Tafel; öffnet Nahansicht |
@@ -145,7 +145,7 @@ Fahrt zwischen den Anlegestellen. Die Flusskarte zeigt Ägypten, Olympia und Syr
 | W2\_FAHR\_MAX\_0120 | Max | Der Essig wird wieder Wein. Zurückspulen funktioniert also auch bei Getränken, gut zu wissen. | Essig wird Wein (flussaufwärts) |
 | W2\_FAHR\_MAX\_0130 | Max | Jetzt ist es Traubensaft. Noch ein Stück, und es sind Trauben, und noch eins, und ich halte vermutlich einen Weinberg. | Wein wird Traubensaft (weiter flussaufwärts) |
 | W2\_FAHR\_MAX\_0150 | Max | Der Setzling wächst. Ich kann zugucken. Das ist die erste Pflanze, die bei mir überlebt. | Feigensetzling wird Baum (flussabwärts) |
-| W2\_FAHR\_PIX\_0160 | Pixel | Ein ganzer Baum, mit Feigen, in einem Topf, auf einem Floß. // Diese Antike kennt kein Maß, junger Mann, und das sage ich als jemand, der sich gern etwas gönnt. | Feigenbaum im Inventar |
+| W2\_FAHR\_PIX\_0160 | Pixel | Ein ganzer Baum, mit Feigen, in einem Topf, auf einem Floß. // Diese Antike kennt kein Maß, und das sage ich als jemand, der sich gern etwas gönnt. | Feigenbaum im Inventar |
 | W2\_FAHR\_MAX\_0170 | Max | Der Setzling schrumpft, bis nur noch ein Kern übrig ist. Ich hab gerade einen Baum auf Werkseinstellungen zurückgesetzt. | Setzling wird Kern (flussaufwärts) |
 | W2\_FAHR\_PIX\_0180 | Pixel | Ein Feigenkern. Das ist der kleinste Garten, den ich je gesehen habe. // Ich würde darauf schlafen, wenn ich nicht befürchten müsste, dass er unter mir zu einem Baum wird. | Feigenkern im Inventar |
 | W2\_FAHR\_MAX\_0190 | Max | Die gepflückten Feigen bleiben einfach Feigen, der Fluss ignoriert sie. Endlich mal was, das nicht abläuft. | gepflückte Feigen an Bord |
@@ -400,7 +400,7 @@ Köchin Nebet gibt einen ganzen Krug Olivenöl nur gegen ein neues Gericht für 
 | W2\_KUCH\_MAX\_0080 | Max | Leere Amphoren. Wenn das Pfandflaschen wären, könnte ich mir davon locker eine Fährfahrt leisten. | Ansehen: Leere Amphoren |
 | W2\_KUCH\_MAX\_0085 | Max | Die leeren Amphoren stehen ordentlich in einer Reihe. Hier hat jemand nach der Party sogar aufgeräumt. | Ansehen: Leere Amphoren, zweites Mal |
 | W2\_KUCH\_MAX\_0090 | Max | Knoblauch und Kräuter hängen von der Decke. Riecht gesund, deshalb halt ich lieber Abstand. | Ansehen: Knoblauch und Kräuter |
-| W2\_KUCH\_PIX\_0095 | Pixel | Knoblauch. Den rieche ich drei Räume weit, und zwar gegen den Wind. // Er ist der einzige Grund, junger Mann, warum ich nicht auf der Stelle hier einziehe. | Ansehen: Knoblauch und Kräuter, zweites Mal |
+| W2\_KUCH\_PIX\_0095 | Pixel | Knoblauch. Den rieche ich drei Räume weit, und zwar gegen den Wind. // Er ist der einzige Grund, warum ich nicht auf der Stelle hier einziehe. | Ansehen: Knoblauch und Kräuter, zweites Mal |
 | W2\_KUCH\_MAX\_0100 | Max | Eine Amphore mit Trauben drauf. Traubensaft, steht da. Zumindest noch. | Ansehen: Traubensaft-Amphore |
 | W2\_KUCH\_MAX\_0105 | Max | Traubensaft, der in hundert Jahren Wein wird. Und danach Essig. Er hat seine Zukunft quasi schon hinter sich. | Ansehen: Traubensaft-Amphore, zweites Mal |
 | W2\_KUCH\_MAX\_0110 | Max | Ich nehm den Saft mit. Falls jemand Durst hat. Oder in ein paar Jahrhunderten Wein braucht. | Nehmen: Traubensaft; Sanduhr-Symbol im Inventar |
@@ -483,7 +483,7 @@ Die Sphinx gibt ihre Schriftrolle nur gegen ein Rätsel, das sie nicht lösen ka
 | W2\_SPHX\_SPH\_0600 | Sphinx | Dann fresse ich dich nicht. Das war früher anders, aber heute gibt es Auflagen. |  |
 | W2\_SPHX\_MAX\_0170 | Max | Wie stelle ich dir ein Rätsel? | Option Sphinx |
 | W2\_SPHX\_SPH\_0180 | Sphinx | Ein Ding, das ich nicht kenne, und drei Hinweise, die nur auf dieses Ding passen. Passt einer nicht, merke ich es. // Ich merke alles. Außer, was ich nicht kenne. |  |
-| W2\_SPHX\_PIX\_0610 | Pixel | Ein Ding, das sie nicht kennt. Das ist dein Fachgebiet, junger Mann. // Du besitzt eine erstaunliche Menge an Dingen, die niemand kennt und die auch niemand haben will. |  |
+| W2\_SPHX\_PIX\_0610 | Pixel | Ein Ding, das sie nicht kennt. Das ist dein Fachgebiet. // Du besitzt eine erstaunliche Menge an Dingen, die niemand kennt und die auch niemand haben will. |  |
 | W2\_SPHX\_MAX\_0620 | Max | Danke. Glaub ich. |  |
 | W2\_SPHX\_MAX\_0190 | Max | Was hat am Morgen vier Beine … | Option Sphinx, Gag |
 | W2\_SPHX\_SPH\_0200 | Sphinx | Der Mensch. Das ist meins. Das war meins. Jeder sagt das. Ein Tourist hat es neulich sogar auf mich draufgekritzelt. |  |
@@ -589,7 +589,7 @@ Archimedes steht an der Werkbank, König Hieron mit verschränkten Armen daneben
 | W2\_WERK\_ARC\_0540 | Archimedes | Dann bist du schlauer als ich, und ich trainiere dich aus reiner Eifersucht. Abgemacht. |  |
 | W2\_WERK\_MAX\_0350 | Max | Was ist mit der Krone? | Option Archimedes (bleibt) |
 | W2\_WERK\_ARC\_0360 | Archimedes | Der Goldschmied hat vielleicht Silber untergemischt. Die Krone wiegt genau so viel wie der Barren, den er bekam. // Wiegen hilft also nicht. Ich brauche … etwas anderes. Ich weiß nur nicht, was. | Hinweis Rätsel 5 |
-| W2\_WERK\_PIX\_0550 | Pixel | Etwas anderes als wiegen. Ich würde sie vom Tisch werfen, junger Mann. // Bei mir hilft das bei fast allem, und wenn nicht, war der Gegenstand ohnehin nicht wichtig. |  |
+| W2\_WERK\_PIX\_0550 | Pixel | Etwas anderes als wiegen. Ich würde sie vom Tisch werfen. // Bei mir hilft das bei fast allem, und wenn nicht, war der Gegenstand ohnehin nicht wichtig. |  |
 | W2\_WERK\_ARC\_0560 | Archimedes | Runterwerfen … Nein. Obwohl … Nein. Aber du denkst in die richtige Richtung, Kater. Nach unten. |  |
 | W2\_WERK\_MAX\_0370 | Max | Warum sind deine Haare nass? | Option Archimedes (bleibt) |
 | W2\_WERK\_ARC\_0380 | Archimedes | Ich denke in der Wanne, heute schon dreimal. Jedes Mal läuft Wasser über, und jedes Mal ärgere ich mich. // Dabei müsste ich … nein. Weg. Weg ist der Gedanke. | Hinweis Rätsel 5, Stufe 2 |
@@ -696,7 +696,7 @@ Beamter 1 (Startschalter) verlangt einen Bürgerschein, Beamter 2 (Bürgerschalt
 | W2\_BUER\_MAX\_0080 | Max | Ein vergilbter Zettel an der Wand. Niemand liest ihn, und deshalb gilt er wahrscheinlich immer noch. | Ansehen: Aushang; öffnet Nahansicht |
 | W2\_BUER\_MAX\_0085 | Max | Der Zettel ist so alt, dass sich die Ecken eingerollt haben. Er sieht aus wie Pixel beim Schlafen. | Ansehen: Aushang, zweites Mal; öffnet Nahansicht |
 | W2\_BUER\_MAX\_0090 | Max | „Jedes neue Rundschreiben gilt sofort und über allen anderen Vorschriften.“ Das ist eine Sicherheitslücke mit Reißzwecke. | Nahansicht Aushang; Notizbuch Seite 2 |
-| W2\_BUER\_PIX\_0100 | Pixel | Neue Regel schlägt alte Regel. In meinem Haushalt gilt dasselbe, junger Mann. // Mit dem kleinen Unterschied, dass bei uns ich die neuen Regeln mache. Und die alten auch. | Nahansicht Aushang, nach dem Lesen |
+| W2\_BUER\_PIX\_0100 | Pixel | Neue Regel schlägt alte Regel. In meinem Haushalt gilt dasselbe. // Mit dem kleinen Unterschied, dass bei uns ich die neuen Regeln mache. Und die alten auch. | Nahansicht Aushang, nach dem Lesen |
 | W2\_BUER\_MAX\_0110 | Max | Eine Bank mit Wartenden. Einer hat einen Bart bis zum Boden, und der sitzt hier bestimmt seit Nummer eins. | Ansehen: Bank mit Wartenden |
 | W2\_BUER\_PIX\_0115 | Pixel | Der Mann mit dem Bart wartet seit Nummer eins. Ich warte seit fünf Minuten. // Und ich kann dir versichern, dass wir beide gleich weit am Ende sind. | Ansehen: Bank mit Wartenden, zweites Mal |
 | W2\_BUER\_MAX\_0120 | Max | Staub in den Sonnenstrahlen. Der schwebt so langsam, dass man fast zugucken kann, wie die Zeit vergeht. | Ansehen: Staub |
@@ -792,14 +792,14 @@ Marktplatz neben dem Stadion. Cicero redet am Pult vor römischen Touristen, Tir
 | W2\_AGOR\_MAX\_0120 | Max | Griechen und Touristen in roten Togen mit Sonnenhüten. Die Touristen zeigen auf alles, die Griechen zeigen auf die Touristen. | Ansehen: Menge |
 | W2\_AGOR\_PIX\_0125 | Pixel | Lauter Leute in Röcken und Sandalen, und keiner von ihnen hat Thunfisch dabei. // Ich stelle hiermit fest: Kultur wird maßlos überschätzt. | Ansehen: Menge, zweites Mal |
 | W2\_AGOR\_MAX\_0130 | Max | Ein Tourist mit Sonnenhut, Sandalen und weißen Socken. Manche Dinge ändern sich in zweitausend Jahren einfach nicht. | Ansehen: Römischer Tourist |
-| W2\_AGOR\_MAX\_0135 | Max | Weiße Socken in Sandalen. Wenn ich zu Hause bin, erzähl ich das meinem Vater. Er wird stolz sein. | Ansehen: Römischer Tourist, zweites Mal |
+| W2\_AGOR\_MAX\_0135 | Max | Weiße Socken in Sandalen. Wenn ich zu Hause bin, erzähl ich das Opa. Er wird sich bestätigt fühlen. | Ansehen: Römischer Tourist, zweites Mal |
 | W2\_AGOR\_TOU\_0140 | Tourist | Und das hier, Liebling, ist die Agora. Steht im Reiseführer ganz oben, direkt nach „Nicht das Wasser trinken“. | Reden: Tourist |
 | W2\_AGOR\_MAX\_0150 | Max | Eine Touristin mit riesiger Sonnenbrille und Souvenir-Amphore. Sie guckt, als hätte sie das alles schon gesehen, und zwar zweimal. | Ansehen: Römische Touristin |
 | W2\_AGOR\_MAX\_0155 | Max | Sie trägt die Amphore wie eine Handtasche, und hinten drauf steht „Gruß aus Olympia“. | Ansehen: Römische Touristin, zweites Mal |
 | W2\_AGOR\_MAX\_0160 | Max | Ein Straßenmusiker mit Lyra und Hut. Im Hut liegt eine Olive. Angebissen. | Ansehen: Straßenmusiker |
 | W2\_AGOR\_PIX\_0170 | Pixel | Man sagt, er singe Steine weich. Bei mir hat das nicht funktioniert, und ich habe es versucht. // Die ganze Nacht lang. Die Steine blieben hart, und ich war am Morgen heiser. | Ansehen: Straßenmusiker, zweites Mal |
 | W2\_AGOR\_MAX\_0180 | Max | Eine Kritzelei an der Wand, auf Lateinisch. Zwei Namen und ein Herz. | Ansehen: Latein-Kritzelei |
-| W2\_AGOR\_PIX\_0190 | Pixel | Römische Touristen, junger Mann. Sie hinterlassen überall ihre Grammatikfehler. // Und ihre Socken. Ich weiß nicht, was davon schlimmer riecht. | Ansehen: Latein-Kritzelei, zweites Mal |
+| W2\_AGOR\_PIX\_0190 | Pixel | Römische Touristen. Sie hinterlassen überall ihre Grammatikfehler. // Und ihre Socken. Ich weiß nicht, was davon schlimmer riecht. | Ansehen: Latein-Kritzelei, zweites Mal |
 | W2\_AGOR\_MAX\_0200 | Max | Ein stattlicher Mann in Toga mit erhobenem Arm. Er redet, als wäre jeder Satz ein Finale. | Ansehen: Cicero |
 | W2\_AGOR\_MAX\_0205 | Max | Er hat den Arm schon wieder oben. Der geht gar nicht mehr runter. | Ansehen: Cicero, zweites Mal |
 | W2\_AGOR\_MAX\_0210 | Max | Ein dünner Schreiber mit Wachstafel. Er schreibt schneller, als Cicero redet, und das ist eigentlich unmöglich. | Ansehen: Tiro |
@@ -895,7 +895,7 @@ Nach Tag 1 hängt eine von Hermes' Sandalen oben auf der Säule mit dem Adler. D
 | W2\_SAND\_MAX\_0290 | Max | Ein ausgewachsener Feigenbaum in einem Blumentopf, voller Früchte. Und ich hab ihn erst seit zwei Minuten. | Ansehen: Feigenbaum im Inventar |
 | W2\_SAND\_MAX\_0295 | Max | Ein ganzer Baum in meinem Inventar. Pixel hat schon geguckt, ob man draufklettern kann. | Ansehen: Feigenbaum im Inventar, zweites Mal |
 | W2\_SAND\_MAX\_0300 | Max | Ich pflücke. Was ich selbst pflücke, bleibt, wie es ist. So steht's auf der Tafel, und jetzt steht's auch in meinem Notizbuch. | Benutzen: Feigenbaum im Inventar; gepflückte Feigen ohne Sanduhr; Notizbuch Seite 2 |
-| W2\_SAND\_PIX\_0310 | Pixel | Obst mit Ablaufdatum, junger Mann, aber eben nur, solange es am Baum hängt. // Kaum hat man es gepflückt, ist ihm die Zeit egal. Ich halte das für eine sehr kluge Lebenseinstellung. | nach 0300 |
+| W2\_SAND\_PIX\_0310 | Pixel | Obst mit Ablaufdatum, aber eben nur, solange es am Baum hängt. // Kaum hat man es gepflückt, ist ihm die Zeit egal. Ich halte das für eine sehr kluge Lebenseinstellung. | nach 0300 |
 | W2\_SAND\_MAX\_0320 | Max | Frische Feigen, lila und prall. Ich kenn zwei, die dafür alles tun. | Ansehen: gepflückte Feigen |
 | W2\_SAND\_MAX\_0325 | Max | Die Feigen kleben mir an den Fingern. Ich rieche jetzt wie ein ganzer Obststand. | Ansehen: gepflückte Feigen, zweites Mal |
 | W2\_SAND\_MAX\_0330 | Max | Hier, frische Feigen. Für gleichmäßigen Wind. | gepflückte Feigen auf Fächerwedler im Thronsaal |
@@ -981,7 +981,7 @@ Szene. Beginnt, sobald Startpass (3) und Hebel (5) vorhanden sind und Max die St
 | W2\_TAG1\_MAX\_0090 | Max | Ziel. Erster. Vor einer Schildkröte und einem Mann, der gerade in Syrakus ankommt. Ich nehm's. | mit Öl |
 | W2\_TAG1\_NAR\_0100 | – | Die Riemen reißen am Start. Die Sandalen heben ab, eine Richtung Agora, eine Richtung Sonne. Max steht barfuß im heißen Sand. | ohne Öl |
 | W2\_TAG1\_MAX\_0110 | Max | Heiß. Heiß. Heiß. Heiß! | ohne Öl; rennt barfuß auf Zehenspitzen |
-| W2\_TAG1\_PIX\_0120 | Pixel | Er läuft genau so, wie ich damals über die heiße Herdplatte gelaufen bin. // Mit dem einen Unterschied, junger Mann, dass ich aus der Erfahrung etwas gelernt habe. | ohne Öl |
+| W2\_TAG1\_PIX\_0120 | Pixel | Er läuft genau so, wie ich damals über die heiße Herdplatte gelaufen bin. // Mit dem einen Unterschied, dass ich aus der Erfahrung etwas gelernt habe. | ohne Öl |
 | W2\_TAG1\_MAX\_0130 | Max | Letzter, hinter der Schildkröte. Aber ich bin im Ziel, und das zählt. Sagt Ramses. Hoffentlich. | ohne Öl |
 | W2\_TAG1\_RAM\_0140 | Ramses | Er ist angekommen! Das zählt! Oder? Es zählt. Ich habe entschieden, dass es zählt. Weiter! | in jedem Fall; Lauf abgeschlossen |
 | W2\_TAG1\_LEO\_0150 | Leonidas | WO IST DAS ZIEL? ICH BIN IN SYRAKUS! HIER IST EIN NASSER MANN! | aus dem Off |
@@ -1034,8 +1034,8 @@ Gleich nach Tag 1 fehlt der offizielle Diskus. Vier Verdächtige, je zwei Aussag
 
 | ID | Sprecher | Text | Auslöser |
 | --- | --- | --- | --- |
-| W2\_DISK\_LEO\_0010 | Leonidas | DER DISKUS IST WEG! DER OFFIZIELLE! GESTOHLEN! HEUTE NACHT! IM STADION! | Szene nach Tag 1 |
-| W2\_DISK\_MAX\_0020 | Max | Ein Diebstahl, vier Leute waren in der Nähe, und jeder sagt zwei Sachen. Jeder lügt genau einmal. Am Ende war's bestimmt der Butler. | Notizbuch Seite 1: Diskus finden |
+| W2\_DISK\_LEO\_0010 | Leonidas | DER DISKUS IST WEG! DER OFFIZIELLE! GESTOHLEN! HEUTE NACHT! IM STADION! // UND JEDER HIER LÜGT GENAU EINMAL! OLYMPISCHE TRADITION! | Szene nach Tag 1 |
+| W2\_DISK\_MAX\_0020 | Max | Ein Diebstahl, vier Leute in der Nähe, und jeder lügt genau einmal. Aus Tradition. Am Ende war's bestimmt der Butler. | Notizbuch Seite 1: Diskus finden |
 | W2\_DISK\_PIX\_0030 | Pixel | Es gibt hier keinen Butler. Es gibt mich, und ich schnuppere. // Meine Nase ist unbestechlich. Meistens. Sagen wir: an guten Tagen. |  |
 | W2\_DISK\_MAX\_0040 | Max | Wo warst du heute Nacht? | Verhör Leonidas |
 | W2\_DISK\_LEO\_0050 | Leonidas | HERMES WAR ES! | Aussage 1; Notizbuch |
@@ -1053,7 +1053,7 @@ Gleich nach Tag 1 fehlt der offizielle Diskus. Vier Verdächtige, je zwei Aussag
 | W2\_DISK\_MAX\_0170 | Max | Sphinx, wo warst du heute Nacht? | Verhör Sphinx, Ägypten |
 | W2\_DISK\_SPH\_0180 | Sphinx | Ich war es nicht. Ich war hier. Ich bin immer hier, ich bin aus Stein. | Aussage 1; Notizbuch |
 | W2\_DISK\_SPH\_0190 | Sphinx | Leonidas war es. Er brüllt viel zu laut, um unschuldig zu sein. | Aussage 2; Notizbuch |
-| W2\_DISK\_PIX\_0200 | Pixel | Sie riecht nach Sand, nach Stein und nach dreihundert Jahren Nachdenken. // Unschuldig, junger Mann. Und vor allem unbeweglich, was beim Stehlen eher hinderlich ist. | Pixel schnuppert an Sphinx |
+| W2\_DISK\_PIX\_0200 | Pixel | Sie riecht nach Sand, nach Stein und nach dreihundert Jahren Nachdenken. // Unschuldig. Und vor allem unbeweglich, was beim Stehlen eher hinderlich ist. | Pixel schnuppert an Sphinx |
 | W2\_DISK\_MAX\_0210 | Max | Du warst es. | Anklage Leonidas |
 | W2\_DISK\_LEO\_0220 | Leonidas | ICH? DANN HÄTTE ICH ZWEIMAL GELOGEN! ICH LÜGE NUR EINMAL! AUS PRINZIP! | Fehlversuch |
 | W2\_DISK\_MAX\_0230 | Max | Du warst es. | Anklage Hermes |
@@ -1129,7 +1129,7 @@ Szenen. Der Finaltag beginnt, sobald Diskus oder Ersatz (7), Konter (9) und Grab
 | W2\_FINA\_MAX\_0110 | Max | Erst mal ein paar Probewürfe, zum Warmwerden. Was soll schon passieren. | Diskus-Szene beginnt |
 | W2\_FINA\_NAR\_0120 | – | Wurf eins: Der Teller segelt über den Fluss. In der Ferne fällt der Sphinx die Nase ab. Wurf zwei: Über die Agora. // Die Marmorfrau verliert beide Arme. Wurf drei: Der Glockenturm hinten neigt sich. Und bleibt so. | Gag-Folge, drei Schnitte; geworfen wird Leonidas' Mittagsteller vom Speer |
 | W2\_FINA\_MAX\_0130 | Max | Das wird noch Probleme machen. Ich hab's ja gesagt. | nach 0120 |
-| W2\_FINA\_PIX\_0140 | Pixel | Drei Würfe, drei Wahrzeichen. Die Menschheit wird Jahrtausende brauchen, um das zu erklären. // Ich sage nichts dazu, junger Mann. Ich war nicht dabei, ich habe nichts gesehen, und ich kenne dich nicht. |  |
+| W2\_FINA\_PIX\_0140 | Pixel | Drei Würfe, drei Wahrzeichen. Die Menschheit wird Jahrtausende brauchen, um das zu erklären. // Ich sage nichts dazu. Ich war nicht dabei, ich habe nichts gesehen, und ich kenne dich nicht. |  |
 | W2\_FINA\_MAX\_0150 | Max | Und jetzt der echte Wurf. Womit werf ich? | Auswahl Wurfgegenstand |
 | W2\_FINA\_NAR\_0160 | – | Der Diskus fliegt. Weit. Sehr weit. Die Kurzschrift-Kratzer pfeifen im Wind. | echter Diskus oder Wurfscheibe: weitester Wurf |
 | W2\_FINA\_NAR\_0170 | – | Der Teller fliegt. Ordentlich. Glänzend. Landet mit einem Pling. | Pharaonenteller: mittlerer Wurf |
@@ -1240,7 +1240,7 @@ Ansehen-Zeilen der Wunderdinge liefern die Rätsel-Bausteine für die Sphinx (Ab
 | W2\_INV\_PIX\_0120 | Pixel | Er redet, und ich schlafe. Das ist unsere Beziehung. // Und ich muss sagen, sie funktioniert besser als die meisten, die ich kenne. | Pixel auf Cicero |
 | W2\_INV\_PIX\_0130 | Pixel | Er brüllt, und ich lege die Ohren an. Er brüllt lauter, und ich gewinne trotzdem. // Ich habe nämlich zwei Ohren, und er hat nur eine einzige Lautstärke. | Pixel auf Leonidas |
 | W2\_INV\_PIX\_0140 | Pixel | Flügel an den Füßen und trotzdem immer zu spät. // Ich habe keine Flügel, und bin trotzdem immer pünktlich. Zumindest zum Essen. | Pixel auf Hermes |
-| W2\_INV\_PIX\_0150 | Pixel | Er riecht nach Tinte und schlechtem Gewissen. // Also, nach Tinte. Nur nach Tinte, junger Mann. Ganz sicher. Meine Nase irrt sich nie bei solchen Dingen. | Pixel auf Tiro |
+| W2\_INV\_PIX\_0150 | Pixel | Er riecht nach Tinte und schlechtem Gewissen. // Also, nach Tinte. Nur nach Tinte. Ganz sicher. Meine Nase irrt sich nie bei solchen Dingen. | Pixel auf Tiro |
 | W2\_INV\_PIX\_0160 | Pixel | Ein müder Mann, der nicht angebetet werden will. // Ich verstehe ihn nicht. Ich respektiere ihn auch nicht. Aber vor allem verstehe ich ihn nicht. | Pixel auf Brian |
 | W2\_INV\_PIX\_0170 | Pixel | Er hält seinen Stempel wie ein Zepter. Ich habe heute schon zwei Zepter gesehen. // Und seins ist, das muss man ihm lassen, das ehrlichere von allen. | Pixel auf Beamter 2 |
 | W2\_INV\_PIX\_0180 | Pixel | Er riecht nach Staub und Pyramide, und er würde mich in Stein hauen, wenn ich stillhielte. // Ich halte aber nie still. Aus Prinzip, und weil ich ein bewegliches Kunstwerk bin. | Pixel auf Steinmetz |
@@ -1261,7 +1261,7 @@ Rechtsklick auf einen Gegenstand in der Inventarleiste. Erstes Mal die erste Zei
 | W2\_INV\_MAX\_0330 | Max | Ein Fladenbrot, noch warm. Es riecht nach dem Bäcker bei uns an der Ecke, und der hat garantiert nicht dreitausend Jahre Erfahrung. | Ansehen: Brot |
 | W2\_INV\_MAX\_0335 | Max | Ich hab kurz überlegt, reinzubeißen. Dann hab ich an Pixels Gesicht gedacht und es gelassen. | Ansehen: Brot, zweites Mal |
 | W2\_INV\_MAX\_0340 | Max | Datteln, klebrig, süß und runzlig. Wie Rosinen, die es im Leben zu was gebracht haben. | Ansehen: Datteln |
-| W2\_INV\_PIX\_0345 | Pixel | Datteln. Weder Fleisch noch Fisch, junger Mann. // Ich respektiere sie ausschließlich als Wurfgeschoss, und auch da nur, wenn sie jemanden treffen, den ich nicht mag. | Ansehen: Datteln, zweites Mal |
+| W2\_INV\_PIX\_0345 | Pixel | Datteln. Weder Fleisch noch Fisch. // Ich respektiere sie ausschließlich als Wurfgeschoss, und auch da nur, wenn sie jemanden treffen, den ich nicht mag. | Ansehen: Datteln, zweites Mal |
 | W2\_INV\_MAX\_0350 | Max | Eine Zwiebel. Sie liegt in meiner Tasche, und mir tränen trotzdem die Augen. Die hat Fernwirkung. | Ansehen: Zwiebel |
 | W2\_INV\_MAX\_0355 | Max | Zwiebeln haben Schichten. Das hat mir mal jemand Großes, Grünes erklärt, und er wirkte sehr überzeugt. | Ansehen: Zwiebel, zweites Mal |
 | W2\_INV\_MAX\_0360 | Max | Ein Fladen mit Datteln drauf. Halb Pizza, halb Kuchen und ganz eindeutig ein Fehler. | Ansehen: Fladen, mit Datteln |
@@ -1346,7 +1346,7 @@ Pixel kommentiert ungefragt, wenn der Spieler 45 Sekunden nichts tut. Zufällig 
 | --- | --- | --- | --- |
 | W2\_ZURU\_PIX\_0010 | Pixel | Der Fluss fließt, der Sand rieselt, und du stehst. // Zwei von drei Dingen hier bewegen sich, und ich muss dir leider sagen, welches nicht. | Nil-Delta oder Fährsteg |
 | W2\_ZURU\_PIX\_0020 | Pixel | Das Krokodil hat sich inzwischen dreimal vor mir verneigt. Du hast dich in derselben Zeit kein einziges Mal bewegt. // Lern vom Krokodil. Das sage ich nicht oft. | Nil-Delta |
-| W2\_ZURU\_PIX\_0030 | Pixel | Der Pharao hat sich in der Zeit, in der du hier herumstehst, für gar nichts entschieden. // Ihr zwei wärt ein wunderbares Team, junger Mann. Ihr würdet gemeinsam nie irgendwo ankommen. | Thronsaal |
+| W2\_ZURU\_PIX\_0030 | Pixel | Der Pharao hat sich in der Zeit, in der du hier herumstehst, für gar nichts entschieden. // Ihr zwei wärt ein wunderbares Team. Ihr würdet gemeinsam nie irgendwo ankommen. | Thronsaal |
 | W2\_ZURU\_PIX\_0040 | Pixel | Es riecht nach Brot. Es riecht seit fünf Minuten nach Brot, und du tust nichts. // Das ist Folter. Folter mit Kruste. Ich werde das bei Gelegenheit melden. | Palastküche |
 | W2\_ZURU\_PIX\_0050 | Pixel | Die Sphinx denkt nach, und du denkst nach. Einer von euch beiden ist aus Stein. // Ich bin mir, wenn ich euch so ansehe, nicht mehr ganz sicher, wer. | Sphinx |
 | W2\_ZURU\_PIX\_0060 | Pixel | Archimedes hat in dieser Zeit zwei Dinge erfunden. Eins davon war schlecht. // Das sind trotzdem zwei mehr als du, und ich zähle sehr großzügig. | Werkstatt |
@@ -1364,7 +1364,7 @@ Drei Stufen je Rätselschritt für die Hilfe-Pfote, Wartezeiten laut Spielsystem
 | W2\_HINT\_PIX\_0010 | Pixel | Gerade weiß ich nichts Besseres, als dass du irgendwohin gehst, wo du noch nicht warst. // In diesem Land hat jeder Raum jemanden mit einer Aufgabe. Meistens eine, die er selbst nicht machen will. | kein offener Schritt in Welt 2 |
 | W2\_HINT\_PIX\_0110 | Pixel | Der Fährmann will eine Münze, und du hast keine. // Aber das Krokodil hat sich vor jemandem verneigt. Nicht vor dir. Denk darüber nach, vor wem. | R01, Stufe 1 |
 | W2\_HINT\_PIX\_0120 | Pixel | Götter fahren umsonst, und ihre Diener auch. // Ich sage das Wort „Diener“ übrigens nicht gern. Es kommt mir nur so leicht über die Lippen. | R01, Stufe 2 |
-| W2\_HINT\_PIX\_0130 | Pixel | Wechsle zu mir und lass mich auf die Fähre gehen. Oder zieh mich drauf wie einen Gegenstand. // Ich bin kein Gegenstand, junger Mann. Mach es trotzdem. | R01, Stufe 3 |
+| W2\_HINT\_PIX\_0130 | Pixel | Wechsle zu mir und lass mich auf die Fähre gehen. Oder zieh mich drauf wie einen Gegenstand. // Ich bin kein Gegenstand. Mach es trotzdem. | R01, Stufe 3 |
 | W2\_HINT\_PIX\_0211 | Pixel | Der Pharao liest nur Bilder, und der Schreiber hat eine Tafel voller Bilder. // Vier Felder, ein Satz. Mehr verlangt niemand von dir. Nicht einmal ich. | R02a, Stufe 1 |
 | W2\_HINT\_PIX\_0221 | Pixel | Die Grammatik steht an der Wand, in den Feldern neben den Säulen: wer handelt, wem er dient, wen er bittet. // Und das Ohr steht für Gehör. Ein Körperteil, das du bei mir selten benutzt. | R02a, Stufe 2 |
 | W2\_HINT\_PIX\_0231 | Pixel | Mann, Katze, Pharao, Ohr. Du dienst der Katze und bittest um Gehör. Ich habe nichts gegen diesen Satz. | R02a, Stufe 3 |
@@ -1377,7 +1377,7 @@ Drei Stufen je Rätselschritt für die Hilfe-Pfote, Wartezeiten laut Spielsystem
 | W2\_HINT\_PIX\_0312 | Pixel | Die Beamten stempeln nur, was über allen Vorschriften steht. // Ein neues Rundschreiben zum Beispiel. Oder einen Brief, den keiner versteht. | R03b, Stufe 1 |
 | W2\_HINT\_PIX\_0322 | Pixel | Ein Rundschreiben schreibst du selbst. Einen unverständlichen Brief schreibt dir die Sphinx, wenn du ihr Rätsel geschafft hast. // Eins von beiden reicht. | R03b, Stufe 2 |
 | W2\_HINT\_PIX\_0332 | Pixel | Gib das Rundschreiben oder das Empfehlungsschreiben der Sphinx am Schalter ab. Dann gibt es den Startpass. Und Hermes. Leider. | R03b, Stufe 3 |
-| W2\_HINT\_PIX\_0410 | Pixel | Die Sandalen wollen weg, und Öl hält Riemen. Öl gibt es in der Küche. // Die Köchin will dafür allerdings etwas Neues, junger Mann. Etwas, das sie noch nie gekostet hat. | R04, Stufe 1 |
+| W2\_HINT\_PIX\_0410 | Pixel | Die Sandalen wollen weg, und Öl hält Riemen. Öl gibt es in der Küche. // Die Köchin will dafür allerdings etwas Neues. Etwas, das sie noch nie gekostet hat. | R04, Stufe 1 |
 | W2\_HINT\_PIX\_0420 | Pixel | Sie kocht Fusionsküche, also etwas, das es hier nicht gibt. Und du hast Dinge, die es hier nicht gibt. // Oder du fragst mich nach einem Rezept. Ich warte schon lange darauf. | R04, Stufe 2 |
 | W2\_HINT\_PIX\_0430 | Pixel | Gib ihr den Kaugummi als ewiges Brot. Oder back Brot mit Datteln und Zwiebeln im Ofen, so wie ich es sage. Dann Öl auf die Sandalen. | R04, Stufe 3 |
 | W2\_HINT\_PIX\_0510 | Pixel | Krone und Barren wiegen gleich viel, die Waage sagt also nichts. // Aber Archimedes ärgert sich jedes Mal, wenn die Wanne überläuft. Was glaubst du, warum? | R05, Stufe 1 |
@@ -1390,7 +1390,7 @@ Drei Stufen je Rätselschritt für die Hilfe-Pfote, Wartezeiten laut Spielsystem
 | W2\_HINT\_PIX\_0622 | Pixel | Flussabwärts wird alles älter, auch Pflanzen im Topf. Das steht auf der Tafel. // Und Syrakus liegt flussabwärts. | R06b, Stufe 2 |
 | W2\_HINT\_PIX\_0632 | Pixel | Fahr den Setzling nach Syrakus, pflück die Feigen vom Baum, fahr zurück. // Gepflücktes altert nicht mehr. Gib den Wedlern die Feigen. Nicht mir. Leider. | R06b, Stufe 3 |
 | W2\_HINT\_PIX\_0710 | Pixel | Vier Verdächtige, je zwei Aussagen, und jeder lügt genau einmal. // Schreib alles auf, und streich dann durch, was nicht aufgeht. So mache ich es mit meinen Feinden. | R07, Stufe 1 |
-| W2\_HINT\_PIX\_0720 | Pixel | Prüf jeden als Dieb: Stimmt dann bei jedem genau eine Aussage? // Und, junger Mann, ganz unter uns: Meine Nase lügt bei Fisch. Einer riecht nach Fisch. | R07, Stufe 2 |
+| W2\_HINT\_PIX\_0720 | Pixel | Prüf jeden als Dieb: Stimmt dann bei jedem genau eine Aussage? // Und ganz unter uns: Meine Nase lügt bei Fisch. Einer riecht nach Fisch. | R07, Stufe 2 |
 | W2\_HINT\_PIX\_0730 | Pixel | Tiro. Er war im Stadion, Hermes war es nicht. Eine Lüge, eine Wahrheit. Klag ihn an. Er gibt den Diskus her. Mit Kratzern. | R07, Stufe 3 |
 | W2\_HINT\_PIX\_0810 | Pixel | Die Sphinx will ein Rätsel, das sie nicht lösen kann. Sie kennt alles aus ihrer Zeit. // Du dagegen trägst Dinge aus deiner Zeit mit dir herum. Ziemlich nutzlose Dinge, aber immerhin. | R08, Stufe 1 |
 | W2\_HINT\_PIX\_0820 | Pixel | Wähl ein Wunderding und drei Hinweise aus dem Notizbuch, die nur darauf passen. // Die Hinweise sammelst du, wenn du deine Sachen ansiehst oder Leute damit überraschst. | R08, Stufe 2 |
@@ -1404,7 +1404,7 @@ Drei Stufen je Rätselschritt für die Hilfe-Pfote, Wartezeiten laut Spielsystem
 | W2\_HINT\_PIX\_1012 | Pixel | Hundertsiebenunddreißig Jahre, nicht eins jünger. Stein altert auf der Fähre. // Die Tafel nennt die Jahre für jede Strecke. Rechne. Ich warte so lange. | R10b, Stufe 1 |
 | W2\_HINT\_PIX\_1022 | Pixel | Ägypten bis Olympia hundertzwölf, Olympia bis Syrakus fünfundzwanzig. Zusammen? Genau. // Der Stein muss also den ganzen Fluss hinunter. | R10b, Stufe 2 |
 | W2\_HINT\_PIX\_1032 | Pixel | Stein am Nil meißeln lassen, nach Syrakus fahren, auf den Sockel am Grabhügel stellen. // Cicero findet ihn. Archimedes steht daneben. Ich auch. | R10b, Stufe 3 |
-| W2\_HINT\_PIX\_1111 | Pixel | Der Zeremonienmeister hat dir die Ordnung genannt. Einladungen zuerst, der Spiegel braucht Mittag, die Rede braucht Leute. // Und der Gott kommt zuletzt, junger Mann. Der Gott bin ich. | R11a, Stufe 1 |
+| W2\_HINT\_PIX\_1111 | Pixel | Der Zeremonienmeister hat dir die Ordnung genannt. Einladungen zuerst, der Spiegel braucht Mittag, die Rede braucht Leute. // Und der Gott kommt zuletzt. Der Gott bin ich. | R11a, Stufe 1 |
 | W2\_HINT\_PIX\_1121 | Pixel | Über dem zweiten Feld ist eine Sonne, also gehört der Spiegel dorthin. // Davor Hermes, danach Cicero, und ganz am Ende ich. Wie es sich gehört. | R11a, Stufe 2 |
 | W2\_HINT\_PIX\_1131 | Pixel | Hermes, Spiegel, Cicero, Pixel. In dieser Reihenfolge in die vier Felder. Mein Name steht zuletzt, weil der Höhepunkt zuletzt kommt. | R11a, Stufe 3 |
 | W2\_HINT\_PIX\_1112 | Pixel | Ramses will Wein, aber es gibt keinen. Es gibt Saft im Palast und Essig in der Werkstatt. // Und was gärt, reist mit der Zeit. | R11b, Stufe 1 |
