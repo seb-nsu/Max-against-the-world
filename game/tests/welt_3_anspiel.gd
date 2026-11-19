@@ -215,6 +215,8 @@ func _durchlauf() -> void:
 	await _warte_bis(func(): return _raum_id() == "dachboden", 150.0)
 	await _warte_auf_raum("dachboden")
 	_pruefe(Z.geloest("R11", "welt-3") and Z.ist("ZS3_MITBRINGSEL_ABGEGEBEN"), "R11 Energiezelle, Welt 3 geschafft, Opa hat die Zelle")
+	_pruefe(_gesagt("W3_ENDE_PIX_0022") and not _gesagt("W3_ENDE_PIX_0020"),
+		"Lösung A über die Kekse: Pixel sagt nicht „ich habe das Fenster“")
 
 	# Zwischenspiel 3: Ankunft, Packen, Kanal 999
 	await _warte_bis(func(): return int(Z.wert("EINKAUFSLISTE", 0)) == 3, 60.0)

@@ -79,7 +79,7 @@ FI_AUFL_PIX_0080,"Bakery. I said so, after World 2, loud and clear, with a sneez
 FI_AUFL_PIX_0080_2,But nobody listens to the cat. Nobody ever listens to the cat.
 FI_AUFL_PIX_0240,I knew it. Since channel 42.
 FI_AUFL_PIX_0240_2,"The hologram. ""Help me, Max."" Who leaves an emergency message in a world he has supposedly never been to?"
-FI_AUFL_PIX_0260,That counts as censorship. I shall complain as soon as I have found out to whom.
+FI_AUFL_PIX_0260,"That counts as censorship. I already have a complaint in mind, and it is extremely sharply worded."
 FI_AUFL_PIX_0310,"That is why ""brochures"". My pile was right. My pile is always right, and tonight I am sleeping on it."
 FI_AUFL_PIX_0380,It smells of cake and of remorse.
 FI_AUFL_PIX_0380_2,"In humans, remorse smells of wet dog. I am going to the window."
@@ -314,7 +314,7 @@ FI_SUPM_MAX_0080_2,"For the first time today, nobody wants anything from me."
 FI_SUPM_NAR_0050,"Cut. Supermarket entrance, late in the evening. Max stands in front of the glass door, hands not in his pockets."
 FI_SUPM_NAR_0090,The door slides open. Max goes inside. The light from the shop falls onto the pavement. Fade to black.
 FI_WOHN_HAU_0390,I'll be back. With the tea towel.
-FI_WOHN_MAX_0070,"The cake. Lopsided, brown and warm. So that was the final boss, and I just cut it."
+FI_WOHN_MAX_0070,"The cake. Lopsided, brown and warm. So that was the final boss, and Grandma just defeated it."
 FI_WOHN_MAX_0075,"The cake is still steaming. It's been through four worlds, a dragon and a final battle. It looks very relaxed for that."
 FI_WOHN_MAX_0080,"A garland. Grandpa put it up while I was in antiquity, with drawing pins, straight into Grandma's wallpaper."
 FI_WOHN_MAX_0085,The garland is crooked. Grandpa says it's on purpose. Grandma says it's Grandpa. They're both right.
@@ -354,7 +354,7 @@ FI_WOHN_OMA_0040,A cake without milk? Konrad.
 FI_WOHN_OMA_0190,That's where I met him. I was in the front row when the oven exploded. The dough hit me. I thought: he's the one.
 FI_WOHN_OMA_0360,"The boy is all right. You're not, Konrad. But the boy is."
 FI_WOHN_OMA_0430,He apologised. With a cake. He's baked me one every year since. Usually none of them explode.
-FI_WOHN_OPA_0030,"Seventy minutes at steam pressure, mixer on setting …"
+FI_WOHN_OPA_0030,"Twelve minutes at steam pressure, mixer on setting …"
 FI_WOHN_OPA_0050,Milk was … milk wasn't on any channel.
 FI_WOHN_OPA_0210,In a minute. I wrote it down. It's somewhere I look every day.
 FI_WOHN_OPA_0290,The password. A scientist's word of honour. Here.
@@ -519,7 +519,7 @@ P0_DACH_OPA_0830,And you don't read this until you're over there. Promise?
 P0_DACH_OPA_0845,Time passes differently over there. Here it passes normally. So hurry up anyway.
 P0_DACH_OPA_0860,"Good luck! And bring the egg back in one piece! And don't read the note until you're over there, you hear?"
 P0_DACH_OPA_1140,Don't turn the dial before there's a picture! The ad break is for the way back.
-P0_DACH_OPA_1140_2,Five seconds of a milk advert and you're back here. Nobody knows why.
+P0_DACH_OPA_1140_2,Five seconds of adverts and you're back here. Nobody knows why.
 P0_DACH_OPA_1160,"Not for me, thanks. I've already had tea. Some time this week."
 P0_DACH_OPA_1320,"A TV that sends you to wherever the programme is set. The ad break brings you back, and please don't ask me why."
 P0_DACH_OPA_1324,"With arguments. He understands exactly one, and I always keep some in the house for emergencies."
@@ -573,9 +573,9 @@ P0_DACH_PIX_0945,"That is your grandfather's vacuum cleaner. It once sucked up m
 P0_DACH_PIX_0945_2,"Since then there has been a clear agreement between us: it stays off, and I stay away."
 P0_DACH_PIX_0946,It blinked. With its switch. I saw it quite clearly.
 P0_DACH_PIX_0946_2,"We shall not discuss this further, and you will not touch it either."
-P0_DACH_PIX_0950,"A dog-ear on the page with the chocolate cake. A cat remembers such things, because they usually involve cream."
+P0_DACH_PIX_0950,"A dog-ear on a page full of grease stains. A cat remembers such things, because they usually involve cream."
 P0_DACH_PIX_0950_2,"Your grandfather evidently does not remember, or he would not need a dog-ear."
-P0_DACH_PIX_0955,"Next to the chocolate cake there is a date and a heart, drawn in pencil."
+P0_DACH_PIX_0955,"Next to the recipe there is a date and a heart, drawn in pencil."
 P0_DACH_PIX_0955_2,"And underneath, very small and very shaky: ""Don't forget again."" I find that touching. And suspicious."
 P0_DACH_PIX_1120,Please do not stick me in the television. I have no training whatsoever as an aerial.
 P0_DACH_PIX_1120_2,And the last wire your grandfather tried to attach to me is still lying under the armchair.
@@ -585,7 +585,7 @@ P0_DACH_PIX_1230_2,and it would be a sin to give up this posture for something a
 P0_DACH_PIX_1240,"The television is staring at you, and you are staring back. I know duels like this from the windowsill."
 P0_DACH_PIX_1240_2,"One of you has to give in eventually, and I would bet my tuna that it is you."
 P0_DACH_PIX_1366,"He is lying, and I can smell it. With humans, lies always smell a little of fear."
-P0_DACH_PIX_1366_2,"With your grandfather it also smells of chocolate cake, and I have never had that with a lie before."
+P0_DACH_PIX_1366_2,With your grandfather it also smells of calendar. I did not know calendars had a smell.
 P0_DACH_PIX_1400,"I do not come along. I am taken along, and, where possible, carried."
 P0_DACH_PIX_1400_2,"The last time I walked anywhere myself, the neighbour was grilling salmon, and that was an exception."
 P0_DACH_PIX_1404,"So, yes. But under protest."
@@ -1287,8 +1287,8 @@ W1_HINT_PIX_1020,"Option one: the glow potion from Hogglewarz is a torch, and ke
 W1_HINT_PIX_1030,Give Grimtooth the glow potion and sign the agreement in ketchup. Or offer him the caretaker job together with Zeldina. One is enough.
 W1_HINT_PIX_1111,"Four parts, one order. Every place you found one tells you what hangs on what. Look in the notebook, not into thin air."
 W1_HINT_PIX_1112,"Three brooms, three routes. They sweep anything that moves. Preferably hair. I have hair. I can see where this is going."
-W1_HINT_PIX_1121,"Mo is the beginning, says Zeldina. The school report hangs Cuddles on Mo."
-W1_HINT_PIX_1121_2,"The song hangs Pudding on Cuddles. And Teddy comes at the end, with dots in front."
+W1_HINT_PIX_1121,"Mo is the beginning, says Zeldina. Each place you find a piece hangs it onto another one."
+W1_HINT_PIX_1121_2,"The school report and the song join up the middle, and the wall tells you what comes at the end."
 W1_HINT_PIX_1122,Switch to me and find the spots where the tile paths cross. One per route. That is where I shake myself. Under protest.
 W1_HINT_PIX_1131,Mo-Cuddles-Pudding-Teddy. Say it to the door. Never say it to me.
 W1_HINT_PIX_1132,"Switch to me and click the three crossings. The brooms run into the storeroom, you shut the door. And you buy me a brush."
@@ -1327,7 +1327,7 @@ W1_HOGG_ALW_0750,"Wrong bottle. Don't worry, it grows out. Usually upwards."
 W1_HOGG_ALW_0800,"Passed! The Potion of Glowing! Bottle it, take it, don't drink it. It tastes of pancake, and that's confusing."
 W1_HOGG_ALW_0820,"And because you passed, I'll show you how not to do it. Mouldword's school report. From the archive. As a deterrent."
 W1_HOGG_ALW_0850,His mummy signed it. He never collected it. I think that's exactly why.
-W1_HOGG_ALW_0960,The floating one. The milk has a nicer view now than I do.
+W1_HOGG_ALW_0960,"In a castle in the air. So, nowhere. Still, the milk has a nicer view up there than I do."
 W1_HOGG_ALW_0980,"I could. But then I'd have written the rhyme for nothing. I spent four days on a rhyme for ""slime""."
 W1_HOGG_ALW_0987,Exactly. Nothing decent. On the fourth day I crossed it out again and went to bed.
 W1_HOGG_ALW_1000,That's what they all say. The broom doesn't believe anyone.
@@ -1906,7 +1906,7 @@ W1_TAV_MAX_0990,"I only understand meow, but that was a very convinced meow."
 W1_TAV_MAX_1120,Gollo. I've got a riddle for you: what have I got in my pocket?
 W1_TAV_MAX_1150,No.
 W1_TAV_MAX_1170,"Nope, not that either."
-W1_TAV_MAX_1190,A tin of tuna. In brine.
+W1_TAV_MAX_1190,An empty tin of tuna. Formerly in brine.
 W1_TAV_MAX_1230,"A ring in the cheese. As of now the fondue is cursed. Or seasoned, depending on who you ask."
 W1_TAV_MAX_1290,Cheese fondue to go. I didn't even know that was a thing.
 W1_TAV_MAX_1310,No. We're definitely going to need that.
@@ -2000,7 +2000,7 @@ W1_THRO_MAX_0175,"He sniffs and then looks around to see if anyone heard. I hear
 W1_THRO_MAX_0230,"Water doesn't help against Dark Lords. Against trolls, sure, but that's another story."
 W1_THRO_MAX_0240,Sock open.
 W1_THRO_MAX_0280,Here. A replacement.
-W1_THRO_MAX_0310,Fondue residue. I call it a bond.
+W1_THRO_MAX_0310,Fondue residue. The spoon simply has taste.
 W1_THRO_MAX_0350,Mo-Cuddles-Pudding-Teddy.
 W1_THRO_MAX_0370,"Your mummy. The goblins. A wall. And a door that says ""Mummy""."
 W1_THRO_MAX_0420,Me too. But I've had practice.
@@ -2314,7 +2314,7 @@ W2_AGOR_MAX_0110,"A barrel, and there's a man sitting in it. The man is shouting
 W2_AGOR_MAX_0115,"I stood in front of the barrel, and he says I'm blocking his sun. I'm going. I don't argue with people who live in barrels."
 W2_AGOR_MAX_0120,"Greeks and tourists in red togas with sun hats. The tourists point at everything, the Greeks point at the tourists."
 W2_AGOR_MAX_0130,"A tourist with a sun hat, sandals and white socks. Some things just don't change in two thousand years."
-W2_AGOR_MAX_0135,White socks in sandals. When I'm home I'll tell my dad. He'll be proud.
+W2_AGOR_MAX_0135,White socks in sandals. When I'm home I'll tell Grandpa. He'll feel vindicated.
 W2_AGOR_MAX_0150,"A tourist with huge sunglasses and a souvenir amphora. She looks like she's seen all this before, twice."
 W2_AGOR_MAX_0155,"She carries the amphora like a handbag, and on the back it says ""Greetings from Olympia""."
 W2_AGOR_MAX_0160,A street musician with a lyre and a hat. There's an olive in the hat. With a bite out of it.
@@ -2514,7 +2514,7 @@ W2_DISK_LEO_0010,THE DISCUS IS GONE! THE OFFICIAL ONE! STOLEN! LAST NIGHT! IN TH
 W2_DISK_LEO_0050,IT WAS HERMES!
 W2_DISK_LEO_0060,IT WASN'T ME!
 W2_DISK_LEO_0220,ME? THEN I'D HAVE LIED TWICE! I ONLY LIE ONCE! ON PRINCIPLE!
-W2_DISK_MAX_0020,"A theft, four people were nearby, and each says two things. Everyone lies exactly once. In the end it was the butler, I bet."
+W2_DISK_MAX_0020,"A theft, four people nearby, and everyone lies exactly once. By tradition. In the end it was the butler, I bet."
 W2_DISK_MAX_0040,Where were you last night?
 W2_DISK_MAX_0080,"Hermes, where were you last night?"
 W2_DISK_MAX_0120,"Tiro, where were you last night?"
@@ -6216,7 +6216,7 @@ ZS1_DACH_PIX_0140_3,"A cat, mind you, with two very good eyes."
 ZS1_DACH_PIX_0190,That was a no with footnotes. Your grandfather is a lecture on two legs.
 ZS1_DACH_PIX_0190_2,"I have been listening to him for fourteen years, mostly asleep, and I have never once reached the end."
 ZS1_DACH_PIX_0210,"One moment, please. Before anyone turns anything anywhere: the notebook."
-ZS1_DACH_PIX_0220,"One egg, soft-boiled, for breakfast. That is going on my list, right at the top."
+ZS1_DACH_PIX_0220,"Notebook, page 3, as announced: one egg, soft-boiled, for breakfast. Right at the top."
 ZS1_DACH_PIX_0220_2,"Not this egg, heaven forbid. This egg has a backstory and a dragon for a mother."
 ZS1_DACH_PIX_0240,"Everyone needs a list. Yours is empty, mine has goals."
 ZS1_DACH_PIX_0240_2,"Goal one: soft. Goal two is still coming, I will not be rushed. Good lists grow slowly, like a decent belly."
@@ -6305,7 +6305,7 @@ ZS2_DACH_PIX_0120,"It smells of bakery. I am only telling you what my nose tells
 ZS2_DACH_PIX_0120_2,"It lies only about fish, and even then only out of politeness. This is not fish."
 ZS2_DACH_PIX_0180,Is he broken? Did you break him?
 ZS2_DACH_PIX_0180_2,"I have never seen him this quiet, not even during his nap, and he snores like a circular saw."
-ZS2_DACH_PIX_0230,"Notebook. Second entry: something made of flour, with a crust."
+ZS2_DACH_PIX_0230,"Notebook. Second entry, as promised: something made of flour, with a crust."
 ZS2_DACH_PIX_0230_2,"Not this sack, heaven forbid. This sack has a seal with a number on it, and I do not like numbers. They give too much away."
 ZS2_DACH_PIX_0250,It sounds like something else entirely. But please. Error code. I shall make a note: error code.
 ZS2_DACH_PIX_0320,"Egg. Flour. I am not counting out loud, I am counting quietly, to myself."
@@ -6366,7 +6366,7 @@ ZS3_DACH_MAX_0405,He keeps searching. I could have helped him. I'm going to look
 ZS3_DACH_MAX_0410,"Grandpa's lamp is humming. Everything up here hums once it gets power. Except Pixel, he only hums when he feels like it."
 ZS3_DACH_MAX_0420,"The armchair. Under it there's dust, and on top of it there'll soon be me. Right after the fourth thing."
 ZS3_DACH_MAX_0425,"I'm not allowed yet. But I've had a look at the spot, and the dent is exactly my size."
-ZS3_DACH_MAX_0430,"An old cookbook. The dog-eared page is open now, and it says ""Preheat"". Underlined."
+ZS3_DACH_MAX_0430,"Grandpa's cookbook. The dog-eared page is open now, and it says ""Preheat"". Underlined."
 ZS3_DACH_MAX_0435,"There's a heart-shaped grease stain on the page. Cookbooks have feelings, apparently. Luckily I don't, I'm sixteen."
 ZS3_DACH_MAX_0450,"Grandpa, what exactly happens once the fourth thing is here?"
 ZS3_DACH_MAX_0470,"That sounds like a plan with stages, Grandpa. And I'm not sure I want to meet all of them."
@@ -6397,7 +6397,7 @@ ZS3_DACH_PIX_0120_2,"And statistically speaking, in this household I am the one 
 ZS3_DACH_PIX_0140,"Relics belong on the altar, with the other relics."
 ZS3_DACH_PIX_0140_2,Egg. Flour. And a thing that just happens to fit in a remote.
 ZS3_DACH_PIX_0140_3,I am not saying anything. I am just putting it down.
-ZS3_DACH_PIX_0210,Notebook. Third entry: batteries for Grandma's electric tin opener.
+ZS3_DACH_PIX_0210,"Notebook, third entry, now official: batteries for Grandma's electric tin opener."
 ZS3_DACH_PIX_0210_2,"Yes, I know how that sounds. No, I am not explaining. A cat need not justify everything."
 ZS3_DACH_PIX_0230,All good lists look like that. At last you notice something.
 ZS3_DACH_PIX_0230_2,"Sadly the wrong thing. But one should praise small progress, they say. With dogs."
@@ -6454,3 +6454,8 @@ ZS3_DACH_PIX_0670_2,On you.
 FI_DACH_OPA_0102,"The remote, Max! Hand open, remote in. That's the whole trick."
 FI_DACH_OPA_0104,Max. The remote. I'm not holding my hand out for decoration.
 FI_DACH_PIX_0106,He's holding his hand out. You have what goes in it. That really is all the puzzle there is.
+W2_DISK_LEO_0010_2,AND EVERYONE HERE LIES EXACTLY ONCE! OLYMPIC TRADITION!
+W3_ENDE_PIX_0022,"You have it, and I kept an eye on your body. So we both did some work."
+W3_ENDE_PIX_0022_2,"But only one of us was smiling in his sleep the whole time, and I shan't tell you who. You know."
+W4_WERB_WER_0062,Give me your phone! Then we'll carry on there! … You haven't got one? I can't advertise to a human without a phone. How unprofessional.
+W4_WERB_MAX_0072,"No phone, no adverts. For the first time in my life that's an advantage."

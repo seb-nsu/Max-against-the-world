@@ -1075,7 +1075,7 @@ Gespräch mit M.U.T.T.I. Die drei Regeln sind Optionen, sobald sie im Notizbuch 
 | W3\_KERN\_NAR\_0480 | – | Schnee fällt durch die Halle. Die Zelle zischt, dunkelt ab und bekommt eine Frostschicht. | Lösung B: Pixel öffnet das Fenster in der Basis; Schnee-Effekt |
 | W3\_KERN\_MAX\_0490 | Max | Es schneit. Im Kern. Weil ein Kater ein Fenster aufgemacht hat. Ich geb's zu: Das ist die beste Fernbedienung, die ich je hatte. | nach 0480 |
 | W3\_KERN\_MAX\_0500 | Max | Die Ewige Energiezelle. Kalt, handlich, länglich, mit Plus und Minus am Ende. Ewig. Steht drauf. Mit Garantie, hoffe ich. | Nehmen: Energiezelle, kalt; Jingle Welt geschafft |
-| W3\_KERN\_PIX\_0510 | Pixel (aus dem Lautsprecher) | Passt die auch in einen Dosenöffner? Den elektrischen bei Oma? Schreib auf: Batterien. Für den Dosenöffner. Das ist mein Wunsch für diese Welt. | Notizbuch Seite 3: „Batterien für den elektrischen Dosenöffner bei Oma“ |
+| W3\_KERN\_PIX\_0510 | Pixel (aus dem Lautsprecher) | Passt die auch in einen Dosenöffner? Den elektrischen bei Oma? Schreib auf: Batterien. Für den Dosenöffner. Das ist mein Wunsch für diese Welt. | Pixels Wunsch Welt 3; ins Notizbuch (Seite 3) kommt er erst im Zwischenspiel 3 |
 | W3\_KERN\_PIX\_0520 | Pixel (aus dem Lautsprecher) | Oder in eine Fernbedienung. Nur so ein Gedanke. Ich habe viele Gedanken. Die meisten über Fisch. | Andeutung zur Fernbedienung |
 | W3\_KERN\_MAX\_0530 | Max | Eine Fernbedienung braucht keine ewige Energiezelle. Eine Fernbedienung braucht jemanden, der sie findet. | überhört die Andeutung |
 | W3\_KERN\_MAX\_0540 | Max | M.U.T.T.I. Hängt da, dunkel, Antennen unten. Sie sieht aus wie eine Küchenmaschine, die man nach dem Backen vergessen hat. | Ansehen: M.U.T.T.I., nach dem Herunterfahren |
@@ -1098,7 +1098,8 @@ Szene. Max wacht in der Basis auf, die Zelle in der Hand. In der Realität ist s
 | ID | Sprecher | Text | Regie |
 | --- | --- | --- | --- |
 | W3\_ENDE\_NAR\_0010 | – | Zischen. Der Deckel hebt sich. Max hält eine kalte, längliche Zelle in der Hand. Pixel sitzt auf dem Rand und tut, als hätte er geschlafen. | Szene, Basis |
-| W3\_ENDE\_PIX\_0020 | Pixel | Du hast sie, und ich habe das Fenster. Wir haben also beide gearbeitet. // Aber nur einer von uns war dabei nass, und ich werde dir nicht sagen, wer. Du weißt es. |  |
+| W3\_ENDE\_PIX\_0020 | Pixel | Du hast sie, und ich habe das Fenster. Wir haben also beide gearbeitet. // Aber nur einer von uns war dabei nass, und ich werde dir nicht sagen, wer. Du weißt es. | nur wenn Pixel das Fenster geöffnet hat (Lösung B, Schalter W3\_ZELLE\_SCHNEE) |
+| W3\_ENDE\_PIX\_0022 | Pixel | Du hast sie, und ich habe auf deinen Körper aufgepasst. Wir haben also beide gearbeitet. // Aber nur einer von uns hat dabei im Schlaf gelächelt, und ich werde dir nicht sagen, wer. Du weißt es. | statt 0020, wenn die Zelle über Omas Kekse kalt wurde (Lösung A) |
 | W3\_ENDE\_KAL\_0030 | Kalle | Die Lichter drüben gehen aus! Die Kapseln öffnen sich! Die halbe Stadt wacht auf und hat Hunger. Herr Vier wird reich. | am Terminal, aufgeregt flüsternd |
 | W3\_ENDE\_MAX\_0040 | Max | Die Zelle. In der Simulation glühend, hier kalt und schwer. Für „ewig“ ist sie erstaunlich klein. | Ansehen: Energiezelle im Inventar, Realität |
 | W3\_ENDE\_MAX\_0045 | Max | Sie summt ganz leise. Ewig, sagt Opa. Ich hoffe, sie hat einen Ausschalter. Ewig ist lang. | Ansehen: Energiezelle im Inventar, Realität, zweites Mal |

@@ -73,7 +73,7 @@ Der Fährmann will einen Obolus. Max hat keinen. Sobek verneigt sich vor Pixel, 
 | --- | --- | --- | --- |
 | W2\_NIL\_MAX\_0610 | Max | Jemand ist hier mit der Hand durchs Korn gelaufen, und zwar sehr bedeutungsvoll. | Ansehen: Weizenfeld mit Handabdruck |
 | W2\_NIL\_MAX\_0615 | Max | Ein Handabdruck im Korn. Fehlt eigentlich nur noch einer in Rüstung, der traurig guckt, während irgendwo Geigen einsetzen. | Ansehen: Weizenfeld mit Handabdruck, zweites Mal |
-| W2\_NIL\_PIX\_0620 | Pixel | Korn. Daraus macht man Dinge mit Kruste, und Dinge mit Kruste sind das Beste, was Menschen je erfunden haben. // Merk dir das. Ich merke es mir auch, für alle Fälle. | Ansehen: Weizenfeld, drittes Mal; Notizbuch Seite 3: „irgendwas aus Mehl, mit Kruste“ |
+| W2\_NIL\_PIX\_0620 | Pixel | Korn. Daraus macht man Dinge mit Kruste, und Dinge mit Kruste sind das Beste, was Menschen je erfunden haben. // Merk dir das. Ich merke es mir auch, für alle Fälle. | Ansehen: Weizenfeld, drittes Mal; Pixels Wunsch Welt 2; ins Notizbuch (Seite 3) kommt er erst im Zwischenspiel 2 |
 | W2\_NIL\_MAX\_0630 | Max | Eine Sanduhr, so groß wie ich. Der Sand läuft mal nach oben, mal nach unten, je nachdem, wohin die Fähre gerade fährt. | Ansehen: Sanduhr |
 | W2\_NIL\_MAX\_0635 | Max | Wenn ich die umdrehe, spule ich vielleicht die Zeit zurück. In Spielen klappt das immer, und danach macht man einen Salto. | Ansehen: Sanduhr, zweites Mal |
 | W2\_NIL\_MAX\_0640 | Max | Eine Tafel mit drei Zeilen. Entweder der Fahrplan oder die Hausordnung, was hier vermutlich dasselbe ist. | Ansehen: Tafel; öffnet Nahansicht |
@@ -792,7 +792,7 @@ Marktplatz neben dem Stadion. Cicero redet am Pult vor römischen Touristen, Tir
 | W2\_AGOR\_MAX\_0120 | Max | Griechen und Touristen in roten Togen mit Sonnenhüten. Die Touristen zeigen auf alles, die Griechen zeigen auf die Touristen. | Ansehen: Menge |
 | W2\_AGOR\_PIX\_0125 | Pixel | Lauter Leute in Röcken und Sandalen, und keiner von ihnen hat Thunfisch dabei. // Ich stelle hiermit fest: Kultur wird maßlos überschätzt. | Ansehen: Menge, zweites Mal |
 | W2\_AGOR\_MAX\_0130 | Max | Ein Tourist mit Sonnenhut, Sandalen und weißen Socken. Manche Dinge ändern sich in zweitausend Jahren einfach nicht. | Ansehen: Römischer Tourist |
-| W2\_AGOR\_MAX\_0135 | Max | Weiße Socken in Sandalen. Wenn ich zu Hause bin, erzähl ich das meinem Vater. Er wird stolz sein. | Ansehen: Römischer Tourist, zweites Mal |
+| W2\_AGOR\_MAX\_0135 | Max | Weiße Socken in Sandalen. Wenn ich zu Hause bin, erzähl ich das Opa. Er wird sich bestätigt fühlen. | Ansehen: Römischer Tourist, zweites Mal |
 | W2\_AGOR\_TOU\_0140 | Tourist | Und das hier, Liebling, ist die Agora. Steht im Reiseführer ganz oben, direkt nach „Nicht das Wasser trinken“. | Reden: Tourist |
 | W2\_AGOR\_MAX\_0150 | Max | Eine Touristin mit riesiger Sonnenbrille und Souvenir-Amphore. Sie guckt, als hätte sie das alles schon gesehen, und zwar zweimal. | Ansehen: Römische Touristin |
 | W2\_AGOR\_MAX\_0155 | Max | Sie trägt die Amphore wie eine Handtasche, und hinten drauf steht „Gruß aus Olympia“. | Ansehen: Römische Touristin, zweites Mal |
@@ -1034,8 +1034,8 @@ Gleich nach Tag 1 fehlt der offizielle Diskus. Vier Verdächtige, je zwei Aussag
 
 | ID | Sprecher | Text | Auslöser |
 | --- | --- | --- | --- |
-| W2\_DISK\_LEO\_0010 | Leonidas | DER DISKUS IST WEG! DER OFFIZIELLE! GESTOHLEN! HEUTE NACHT! IM STADION! | Szene nach Tag 1 |
-| W2\_DISK\_MAX\_0020 | Max | Ein Diebstahl, vier Leute waren in der Nähe, und jeder sagt zwei Sachen. Jeder lügt genau einmal. Am Ende war's bestimmt der Butler. | Notizbuch Seite 1: Diskus finden |
+| W2\_DISK\_LEO\_0010 | Leonidas | DER DISKUS IST WEG! DER OFFIZIELLE! GESTOHLEN! HEUTE NACHT! IM STADION! // UND JEDER HIER LÜGT GENAU EINMAL! OLYMPISCHE TRADITION! | Szene nach Tag 1 |
+| W2\_DISK\_MAX\_0020 | Max | Ein Diebstahl, vier Leute in der Nähe, und jeder lügt genau einmal. Aus Tradition. Am Ende war's bestimmt der Butler. | Notizbuch Seite 1: Diskus finden |
 | W2\_DISK\_PIX\_0030 | Pixel | Es gibt hier keinen Butler. Es gibt mich, und ich schnuppere. // Meine Nase ist unbestechlich. Meistens. Sagen wir: an guten Tagen. |  |
 | W2\_DISK\_MAX\_0040 | Max | Wo warst du heute Nacht? | Verhör Leonidas |
 | W2\_DISK\_LEO\_0050 | Leonidas | HERMES WAR ES! | Aussage 1; Notizbuch |

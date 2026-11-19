@@ -326,7 +326,7 @@ Rätsel 1c: Das Rätselspiel. Max zieht die Thunfischdose auf Gollo; jeder ander
 | W1\_TAV\_GOL\_1160 | Gollo | Ein zweiter Ring? Ein besserer? |  |
 | W1\_TAV\_MAX\_1170 | Max | Auch nicht. |  |
 | W1\_TAV\_GOL\_1180 | Gollo | Hände! Du hast Hände in der Tasche! Das zählt! |  |
-| W1\_TAV\_MAX\_1190 | Max | Eine Dose Thunfisch. In Lake. | zeigt die Dose |
+| W1\_TAV\_MAX\_1190 | Max | Eine leere Dose Thunfisch. Früher in Lake. | zeigt die Dose |
 | W1\_TAV\_PIX\_1200 | Pixel | Barbarisch. Aber zielführend. | von oben |
 | W1\_TAV\_GOL\_1210 | Gollo | Niemand hat eine Dose Thunfisch! Das kann man nicht wissen! Das ist Betrug! // Ich liebe es. Ich habe verloren. Endlich. | Ring-werfen-Animation; Zischen aus dem Topf |
 | W1\_TAV\_GOL\_1220 | Gollo | Er ist weg. Ich fühle mich … leicht. Hier, meine letzte Goldmünze. Ich brauche nichts mehr. Nur Schlaf. Jahrelang. | gibt die Münze, rollt sich auf der Bank zusammen |
@@ -353,7 +353,7 @@ Weitere Gegenstände und Fehlversuche in der Taverne:
 | W1\_TAV\_PIX\_1427 | Pixel | Frag sie doch erst mal, was sie will. Ich übersetze, gegen Gebühr. // Die Gebühr ist Thunfisch. Das weißt du, und Berta ahnt es. | nach 1425, erstes Mal |
 | W1\_TAV\_MAX\_1430 | Max | Ein Ei, noch warm. Berta zetert vom Dachbalken. Ich hab's verdient. | Nehmen: Ei unter dem Huhn |
 | W1\_TAV\_HUH\_1440 | Huhn | Gaaack. | nach 1430 |
-| W1\_TAV\_PIX\_1450 | Pixel | Ein Ei. Weich gekocht. Zum Frühstück. Das kommt auf meine Liste. // Nicht dieses hier, wohlgemerkt, sondern ein eigenes. Ich teile meine Eier nicht mit Kesseln. | nach 1430; Pixels Wunsch Welt 1 |
+| W1\_TAV\_PIX\_1450 | Pixel | Ein Ei. Weich gekocht. Zum Frühstück. Das kommt auf meine Liste. // Nicht dieses hier, wohlgemerkt, sondern ein eigenes. Ich teile meine Eier nicht mit Kesseln. | nach 1430; Pixels Wunsch Welt 1; ins Notizbuch (Seite 3) kommt er erst im Zwischenspiel 1 |
 | W1\_TAV\_HUH\_1460 | Huhn | Gack gack. Gaack. | Pixel redet mit Huhn |
 | W1\_TAV\_PIX\_1470 | Pixel | Sie heißt Berta. Sie legt, seit sie denken kann, und sie denkt nicht viel. // Sie steht nur für eins auf: schlechte Musik. Beim letzten Barden ist sie bis auf den Dachbalken geflohen. | Übersetzung; setzt W1\_BERTA\_MUSIK |
 | W1\_TAV\_MAX\_1480 | Max | Thunfisch in Käse. Auch ich hab irgendwo Grenzen. | Thunfischdose auf Fondue-Topf |
@@ -609,7 +609,7 @@ Gespräch mit Alwin (ab Prüfungsbeginn):
 | W1\_HOGG\_MAX\_0350 | Max | Wo gibt es hier Milch? | Option Alwin (bleibt); nach 0320 |
 | W1\_HOGG\_ALW\_0360 | Alwin | Milch? Milch gibt es im ganzen Reich nicht mehr. Der Lord trinkt seinen Kaffee jetzt schwarz. Daher die Laune. // Aber Ziegen. Ziegen haben Milch, sagt man. Ich habe nie nachgesehen. Die Milch ist in einem anderen Schloss. | Hinweis R6, Teil 1 |
 | W1\_HOGG\_MAX\_0950 | Max | In welchem Schloss? |  |
-| W1\_HOGG\_ALW\_0960 | Alwin | In dem, das schwebt. Die Milch hat jetzt einen schöneren Ausblick als ich. |  |
+| W1\_HOGG\_ALW\_0960 | Alwin | In einem Luftschloss. Also nirgends. Die Milch hat da oben trotzdem einen schöneren Ausblick als ich. |  |
 | W1\_HOGG\_MAX\_0370 | Max | Was hat es mit dem Regal auf sich? | Option Alwin (bleibt) |
 | W1\_HOGG\_ALW\_0380 | Alwin |  Sechs Flaschen. Die Etiketten hat jemand vertauscht. Vermutlich ich. // Mein Zettel sagt dir, welche die richtige ist. In Reimen. Ich war mal Barde.  | gibt Alwins Hinweiszettel |
 | W1\_HOGG\_MAX\_0970 | Max | Kannst du mir nicht einfach sagen, welche es ist? |  |
@@ -1393,7 +1393,7 @@ Das Duell. Reihenfolge: Pollen-Socke, dann Kochlöffel, dann der Spitzname im Ge
 | W1\_THRO\_MAX\_0280 | Max | Hier. Ersatz. | Kochlöffel auf Moderwort; nach dem Niesen |
 | W1\_THRO\_MOD\_0290 | Moderwort | Du wagst es … FLUCH DER EWIGEN FINSTERNIS! | Zaubern-Animation; eine Käsescheibe fällt zu Boden |
 | W1\_THRO\_MOD\_0300 | Moderwort | Käse? |  |
-| W1\_THRO\_MAX\_0310 | Max | Fondue-Rückstände. Ich nenne das eine Bindung. |  |
+| W1\_THRO\_MAX\_0310 | Max | Fondue-Rückstände. Der Löffel hat eben Geschmack. |  |
 | W1\_THRO\_MOD\_0320 | Moderwort | FLUCH DER TAUSEND … | zweiter Versuch; Käse |
 | W1\_THRO\_PIX\_0330 | Pixel | Er flucht Käse. Ich wechsle die Seite, ich stehe jetzt neben ihm. // Nur wegen des Käses, wohlgemerkt. Meine Loyalität ist unerschütterlich, aber sie hat Hunger. | geht zu den Käsescheiben |
 | W1\_THRO\_MOD\_0340 | Moderwort | Ich höre nicht auf! Ich bin der Schrecken von Schwurbelstein! Ich bin … hatschi … | weiter; Käse |
@@ -1569,7 +1569,7 @@ Drei Stufen je Rätselschritt. Die Texte zu Rätsel 1 bis 4 sind die Slice-Hinwe
 | W1\_HINT\_PIX\_1020 | Pixel | Weg eins: Der Leuchttrank aus Hoggelwarz ist eine Fackel, und Ketchup sieht aus wie Blut. Weg zwei: Zeldina braucht einen Hausmeister. | R10, Stufe 2 |
 | W1\_HINT\_PIX\_1030 | Pixel | Gib Grimmzahn den Leuchttrank und unterschreib den Vertrag mit Ketchup. Oder biete ihm mit Zeldina den Hausmeisterposten an. Eins reicht. | R10, Stufe 3 |
 | W1\_HINT\_PIX\_1111 | Pixel | Vier Teile, eine Reihenfolge. Jeder Fundort verrät, was an was hängt. Schau ins Notizbuch, nicht in die Luft. | R11 Teil 1, Stufe 1 |
-| W1\_HINT\_PIX\_1121 | Pixel |  Mo ist der Anfang, sagt Zeldina. Das Zeugnis hängt Knuddel an Mo. // Das Lied hängt Puddi an Knuddel. Und das Bärchen steht am Ende, mit Punkten davor.  | R11 Teil 1, Stufe 2 |
+| W1\_HINT\_PIX\_1121 | Pixel | Mo ist der Anfang, sagt Zeldina. Jeder Fundort hängt ein Stück an ein anderes. // Das Zeugnis und das Lied verbinden die Mitte, und die Wand verrät, was am Ende steht. | R11 Teil 1, Stufe 2 |
 | W1\_HINT\_PIX\_1131 | Pixel | Mo-Knuddel-Puddi-Bärchen. Sag es der Tür. Sag es nie mir. | R11 Teil 1, Stufe 3 |
 | W1\_HINT\_PIX\_1112 | Pixel | Drei Besen, drei Routen. Sie fegen, was sich bewegt. Am liebsten Haare. Ich habe Haare. Ich sehe, worauf das hinausläuft. | R11 Teil 2, Stufe 1 |
 | W1\_HINT\_PIX\_1122 | Pixel | Wechsel zu mir und such die Stellen, wo sich die Fliesenwege kreuzen. Eine pro Route. Dort schüttle ich mich. Unter Protest. | R11 Teil 2, Stufe 2 |

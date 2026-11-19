@@ -37,7 +37,7 @@ Szene. Fünf Sekunden Werbeblock auf dem Zapp-O-Mat (Milchglas, Kuh, Preisschild
 | ZS1\_DACH\_MAX\_0202 | Max | Jetzt sofort? Ich bin gerade erst gelandet. Meine Schuhe sind gefühlt noch im Mittelalter. |  |
 | ZS1\_DACH\_OPA\_0204 | Opa | Erst wird gepackt, dann gedreht. Dreh am Knopf, wenn du so weit bist, und die Tasche steht bereit. | nickt zum Drehknopf |
 | ZS1\_DACH\_PIX\_0210 | Pixel | Einen Moment, bitte. Bevor hier irgendjemand an irgendetwas dreht: das Notizbuch. | springt auf die Werkbank, Pfote aufs Notizbuch |
-| ZS1\_DACH\_PIX\_0220 | Pixel | Ein Ei, weich, zum Frühstück. Das kommt auf meine Liste, und zwar ganz nach oben. // Nicht dieses Ei, um Himmels willen. Dieses Ei hat eine Vorgeschichte und einen Drachen als Mutter. | Notizbuch Seite 3, Eintrag 1; Jingle Notizbuch |
+| ZS1\_DACH\_PIX\_0220 | Pixel | Notizbuch, Seite 3, wie angekündigt: ein Ei, weich, zum Frühstück. Ganz oben. // Nicht dieses Ei, um Himmels willen. Dieses Ei hat eine Vorgeschichte und einen Drachen als Mutter. | Notizbuch Seite 3, Eintrag 1; Jingle Notizbuch |
 | ZS1\_DACH\_MAX\_0230 | Max | Du hast die Liste wirklich angefangen. Ich dachte, das war ein Witz. |  |
 | ZS1\_DACH\_PIX\_0240 | Pixel | Jeder braucht eine Liste. Deine ist leer, meine hat Ziele. // Ziel eins: weich. Ziel zwei kommt noch, ich lasse mich da nicht hetzen. Gute Listen wachsen langsam, wie ein ordentlicher Bauch. |  |
 
@@ -149,7 +149,7 @@ Szene. Werbeblock, dann Ankunft. Dachboden am frühen Abend, das Licht liegt fla
 | ZS2\_DACH\_MAX\_0200 | Max | Ich nehm es zurück. Das war ein Versprecher, das hat der Sand gemacht. |  |
 | ZS2\_DACH\_OPA\_0210 | Opa | Zu spät! Ich hab's gehört, und der Kater hat's auch gehört! Das Passwort gibt es trotzdem erst nach dem vierten Ding. | wieder ganz der Alte |
 | ZS2\_DACH\_MAX\_0220 | Max | Natürlich. |  |
-| ZS2\_DACH\_PIX\_0230 | Pixel | Notizbuch. Zweiter Eintrag: irgendwas aus Mehl, mit Kruste. // Nicht dieser Sack, bewahre. Dieser Sack hat ein Siegel mit einer Zahl darauf, und ich mag Zahlen nicht. Sie verraten zu viel. | Notizbuch Seite 3, Eintrag 2; Jingle Notizbuch |
+| ZS2\_DACH\_PIX\_0230 | Pixel | Notizbuch. Zweiter Eintrag, wie versprochen: irgendwas aus Mehl, mit Kruste. // Nicht dieser Sack, bewahre. Dieser Sack hat ein Siegel mit einer Zahl darauf, und ich mag Zahlen nicht. Sie verraten zu viel. | Notizbuch Seite 3, Eintrag 2; Jingle Notizbuch |
 | ZS2\_DACH\_MAX\_0240 | Max | Vierhundertfünf. Hab ich auch gesehen. Klingt nach einem Fehlercode, wenn du mich fragst. |  |
 | ZS2\_DACH\_PIX\_0250 | Pixel | Es klingt nach etwas ganz anderem. Aber bitte. Fehlercode. Ich notiere: Fehlercode. |  |
 
@@ -231,7 +231,7 @@ Szene. Werbeblock, dann Ankunft. Abendrot durchs Dachfenster, Opa hat die Lampe 
 | ZS3\_DACH\_OPA\_0180 | Opa | Knapp. Erschreckend knapp! Wer hat dir das gesagt? Der Kater? Hat der Kater was gesagt? |  |
 | ZS3\_DACH\_MAX\_0190 | Max | Du. Gerade eben. |  |
 | ZS3\_DACH\_OPA\_0200 | Opa | Es ist nicht „Kuchen123“. Es ist etwas völlig anderes mit einer völlig anderen Zahl. Vierter Gegenstand. Dann. | fest |
-| ZS3\_DACH\_PIX\_0210 | Pixel | Notizbuch. Dritter Eintrag: Batterien für den elektrischen Dosenöffner bei Oma. // Ja, ich weiß, wie das klingt. Nein, ich erkläre es nicht. Ein Kater muss nicht alles begründen. | Notizbuch Seite 3, Eintrag 3; Jingle Notizbuch |
+| ZS3\_DACH\_PIX\_0210 | Pixel | Notizbuch, dritter Eintrag, jetzt offiziell: Batterien für den elektrischen Dosenöffner bei Oma. // Ja, ich weiß, wie das klingt. Nein, ich erkläre es nicht. Ein Kater muss nicht alles begründen. | Notizbuch Seite 3, Eintrag 3; Jingle Notizbuch |
 | ZS3\_DACH\_MAX\_0220 | Max | Ei, Mehl, Batterien. Pixel, deine Liste sieht langsam aus wie ein Einkaufszettel. |  |
 | ZS3\_DACH\_PIX\_0230 | Pixel | Alle guten Listen sehen so aus. Endlich merkst du etwas. // Leider das Falsche. Aber kleine Fortschritte soll man loben, sagt man. Bei Hunden. |  |
 
@@ -259,7 +259,7 @@ Ansehen auf dem Dachboden, Zustand Abendrot mit Lampe.
 | ZS3\_DACH\_PIX\_0415 | Pixel | Sie brummt. Ich brumme auch, allerdings nur, wenn man mich streichelt, und auch dann nur nach Absprache. // Die Lampe tut es umsonst und für jeden. Das ist billig. | Ansehen: Lampe, zweites Mal |
 | ZS3\_DACH\_MAX\_0420 | Max | Der Sessel. Unter ihm ist Staub, und über ihm bin bald ich. Gleich nach dem vierten Ding. | Ansehen: Ohrensessel |
 | ZS3\_DACH\_MAX\_0425 | Max | Ich darf noch nicht. Aber ich hab mir den Platz schon mal angesehen, und die Delle hat genau meine Größe. | Ansehen: Ohrensessel, zweites Mal |
-| ZS3\_DACH\_MAX\_0430 | Max | Ein altes Kochbuch. Die Seite mit dem Eselsohr ist jetzt aufgeschlagen, und da steht „Vorheizen“. Unterstrichen. | Ansehen: Kochbuch; neu ab ZS3 |
+| ZS3\_DACH\_MAX\_0430 | Max | Opas Kochbuch. Die Seite mit dem Eselsohr ist jetzt aufgeschlagen, und da steht „Vorheizen“. Unterstrichen. | Ansehen: Kochbuch; neu ab ZS3 |
 | ZS3\_DACH\_MAX\_0435 | Max | Auf der Seite ist ein Fettfleck in Herzform. Kochbücher haben anscheinend Gefühle. Ich zum Glück nicht, ich bin sechzehn. | Ansehen: Kochbuch, zweites Mal; neu ab ZS3 |
 | ZS3\_DACH\_PIX\_0440 | Pixel | Vorheizen. Merk dir dieses Wort. Es kommt wieder, und zwar früher, als dir lieb ist. |  |
 | ZS3\_DACH\_MAX\_0450 | Max | Opa, was genau passiert, wenn das vierte Ding da ist? | Reden: Opa, Option |
@@ -544,7 +544,7 @@ Szene. Die Maschine fährt herunter, die Nadel sinkt, Dampf zieht ab. Die Ofent�
 | FI\_AUFL\_OPA\_0230 | Opa | Ich war schon mal drin. Im Zapp-O-Mat. Einmal. Zum Testen. Durch alle Kanäle. // Auf Kanal 999 ist sie mir aus der Tasche gefallen, direkt in Zappmanns Studio. Und ich wollte nicht zugeben, wo sie liegt. Vor dem Kater schon gar nicht. | sieht Pixel nicht an |
 | FI\_AUFL\_PIX\_0240 | Pixel | Ich hab's gewusst. Seit Kanal 42. // Das Hologramm. „Hilf mir, Max.“ Wer hinterlässt eine Notfall-Nachricht in einer Welt, in der er angeblich nie war? |  |
 | FI\_AUFL\_MAX\_0250 | Max | Du hast es auf Kanal 999 laut gesagt. Und dann kam der Amboss. |  |
-| FI\_AUFL\_PIX\_0260 | Pixel | Das zählt als Zensur. Ich werde mich beschweren, sobald ich herausgefunden habe, bei wem. |  |
+| FI\_AUFL\_PIX\_0260 | Pixel | Das zählt als Zensur. Ich habe bereits eine Beschwerde im Kopf, und sie ist ausgesprochen scharf formuliert. |  |
 | FI\_AUFL\_MAX\_0270 | Max | Und Zappmann? Du kennst ihn. Lange Geschichte, hast du geblinkt. Ich hab Zeit. |  |
 | FI\_AUFL\_OPA\_0280 | Opa | 1977. „Zappis Puppenstube.“ Ich war der Bastel-Onkel. Jeden Samstag. // In der letzten Folge habe ich live einen Backofen vorgeführt. Er ist explodiert. Live. Mit Teig. Auf Zappi. | leise, dann mit einem Rest Stolz |
 | FI\_AUFL\_OPA\_0290 | Opa | Zappmann durfte danach nie wieder vor eine Kamera. Und ich backe seitdem nur noch heimlich. Auf dem Dachboden. Mit Verriegelung. |  |
@@ -587,11 +587,11 @@ Szene mit kurzer freier Phase. Wohnzimmer, Variante Geburtstag: Girlande, Luftba
 | --- | --- | --- | --- |
 | FI\_WOHN\_NAR\_0010 | – | Der Kuchen steht auf dem Couchtisch. Er ist schief, dampft und sieht großartig aus. Oma schneidet an. | Kuchen auf dem Couchtisch, Kerzen |
 | FI\_WOHN\_OMA\_0020 | Oma | Er ist aufgegangen. Das muss man dir lassen, Konrad. Er ist aufgegangen. | probiert |
-| FI\_WOHN\_OPA\_0030 | Opa | Siebzig Minuten bei Dampfdruck, Rührwerk auf Stufe … | setzt an |
+| FI\_WOHN\_OPA\_0030 | Opa | Zwölf Minuten bei Dampfdruck, Rührwerk auf Stufe … | setzt an |
 | FI\_WOHN\_OMA\_0040 | Oma | Kuchen ohne Milch? Konrad. | stutzt, legt die Gabel hin |
 | FI\_WOHN\_OPA\_0050 | Opa | Milch war … Milch war auf keinem Kanal. | ganz leise |
 | FI\_WOHN\_PIX\_0060 | Pixel | Milch war auf jedem Kanal. Fünf Sekunden lang, dreimal, mit Kuh. // Ich war der Einzige in diesem Haus, der hingesehen hat. Ich erwarte keine Entschuldigung. Doch, eigentlich schon. |  |
-| FI\_WOHN\_MAX\_0070 | Max | Der Kuchen. Schief, braun und warm. Das war also der Endgegner, und ich hab ihn eben angeschnitten. | Ansehen: Kuchen |
+| FI\_WOHN\_MAX\_0070 | Max | Der Kuchen. Schief, braun und warm. Das war also der Endgegner, und Oma hat ihn eben besiegt. | Ansehen: Kuchen |
 | FI\_WOHN\_MAX\_0075 | Max | Der Kuchen dampft noch. Er hat vier Welten, einen Drachen und einen Endkampf hinter sich. Er sieht dafür sehr entspannt aus. | Ansehen: Kuchen, zweites Mal |
 | FI\_WOHN\_MAX\_0080 | Max | Eine Girlande. Opa hat sie aufgehängt, während ich in der Antike war, mit Reißzwecken, direkt in Omas Tapete. | Ansehen: Girlande |
 | FI\_WOHN\_MAX\_0085 | Max | Die Girlande hängt schief. Opa sagt, das ist Absicht. Oma sagt, das ist Opa. Beide haben recht. | Ansehen: Girlande, zweites Mal |

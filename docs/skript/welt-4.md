@@ -857,6 +857,8 @@ Max findet den Spot in der Programmzeitschrift und schaltet hinein. Dr. Werbepau
 | W4\_WERB\_PIX\_0050 | Pixel | Du starrst auf eine Zahl, die kleiner wird, und kannst nicht weg. // Zu Hause nennst du das Freitagabend. Ich nenne es den Moment, in dem ich mein Abendessen selbst suchen muss. | auf der Schulter |
 | W4\_WERB\_WER\_0060 | Dr. Werbepause | Geben Sie mir Ihr Handy! Dann machen wir da weiter! Nächste Folge in 5 … 4 … oh. Akku leer. Wie unprofessionell. | nimmt Max' Handy, gibt es zurück |
 | W4\_WERB\_MAX\_0070 | Max | Mein Akku hat mich gerettet. Zum ersten Mal in seinem Leben war er rechtzeitig leer. |  |
+| W4\_WERB\_WER\_0062 | Dr. Werbepause | Geben Sie mir Ihr Handy! Dann machen wir da weiter! … Sie haben keins? Einen Menschen ohne Handy kann ich nicht bewerben. Wie unprofessionell. | statt 0060, wenn Max kein Handy mehr hat (in Welt 2 verbraucht oder in der Fundkiste) |
+| W4\_WERB\_MAX\_0072 | Max | Kein Handy, keine Werbung. Zum ersten Mal in meinem Leben ist das ein Vorteil. | statt 0070, nach 0062 |
 | W4\_WERB\_WER\_0080 | Dr. Werbepause | Dann eben hier! 3 … 2 … | Countdown läuft weiter, in Schleife bei 2 |
 | W4\_WERB\_MAX\_0090 | Max | Der Jingle. Solange der läuft, komm ich hier nicht weg. Ich brauch Ruhe, und ich hab eine Taste für Ruhe. | Hinweis R11b |
 | W4\_WERB\_NAR\_0100 | – | Der Jingle bricht mitten im Ton ab. Der Countdown-Ring verliert seine Farbe, die Zahl bleibt bei 2 stehen. | Stumm auf den Countdown oder auf Werbepause |
