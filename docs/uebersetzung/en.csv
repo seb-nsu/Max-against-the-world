@@ -80,7 +80,7 @@ FI_AUFL_PIX_0080_2,But nobody listens to the cat. Nobody ever listens to the cat
 FI_AUFL_PIX_0240,I knew it. Since channel 42.
 FI_AUFL_PIX_0240_2,"The hologram. ""Help me, Max."" Who leaves an emergency message in a world he has supposedly never been to?"
 FI_AUFL_PIX_0260,That counts as censorship. I shall complain as soon as I have found out to whom.
-FI_AUFL_PIX_0310,"That is why ""brochures"". My pile was right, young man. My pile is always right, and tonight I am sleeping on it."
+FI_AUFL_PIX_0310,"That is why ""brochures"". My pile was right. My pile is always right, and tonight I am sleeping on it."
 FI_AUFL_PIX_0380,It smells of cake and of remorse.
 FI_AUFL_PIX_0380_2,"In humans, remorse smells of wet dog. I am going to the window."
 FI_AUFL_PIX_0540,"I shall never get over this. I have said it once before, and now it counts double."
@@ -92,7 +92,6 @@ FI_DACH_MAX_0030,"It's dark. Grandpa, it's got really dark."
 FI_DACH_MAX_0050,"Grandpa, what is that?"
 FI_DACH_MAX_0130,That's a remote control.
 FI_DACH_MAX_0150,I carried a remote around for a whole world and thought it was an artefact.
-FI_DACH_MAX_0170,What are you saying?
 FI_DACH_MAX_0260,"Grandpa, Grandma's downstairs at the door, and we're locked up here with your work."
 FI_DACH_MAX_0280,Okay. That sounded a lot like a final boss.
 FI_DACH_NAR_0010,"The glass of milk appears, the cow takes a breath, and the screen cracks. The Golden Remote in Max's hand blinks once. Cut to the attic."
@@ -115,11 +114,10 @@ FI_DACH_OPA_0230,"No. No, no, no. Not now. Not her. Not before it's time!"
 FI_DACH_OPA_0250,Dou… pressure overload! Safety lock! The work is protecting itself!
 FI_DACH_OPA_0270,No one stops my dark work! She mustn't find out before it's complete!
 FI_DACH_PIX_0020,No advert. No cow.
-FI_DACH_PIX_0020_2,"I am missing something, young man, and until a moment ago I did not know I could miss such a thing."
+FI_DACH_PIX_0020_2,"I am missing something, and until a moment ago I did not know I could miss such a thing."
 FI_DACH_PIX_0160,Egg. Flour. Battery. Remote.
 FI_DACH_PIX_0160_2,"On channel 999 I said that out loud once, and then came an anvil."
 FI_DACH_PIX_0160_3,"Now I am saying it again, very quietly. Without an anvil, if you please."
-FI_DACH_PIX_0180,"Nothing. Just watch. This is your moment, not mine. I already had mine, with the anvil."
 FI_HINT_PIX_0010,"Your grandfather is bellowing, the hatch is blinking, and you are just standing there."
 FI_HINT_PIX_0010_2,"One of you three ought to do something, and my money is not on the hatch."
 FI_HINT_PIX_0020,"The hatch. Look at it, and then touch it. Afterwards we shall at least know what we know."
@@ -548,7 +546,7 @@ P0_DACH_PIX_0310,Who. Woke. Me.
 P0_DACH_PIX_0320,"I was lying on the only warm cable in this attic, a spot I have earned over many years."
 P0_DACH_PIX_0320_2,And I was in the middle of a dream about a salmon that was bigger than me and still did not put up a fight.
 P0_DACH_PIX_0320_3,"One does not get a dream like that twice, young man."
-P0_DACH_PIX_0340,"He has been talking for years, young man. It is simply that nobody listened until now, and I hold that against no one. Almost no one."
+P0_DACH_PIX_0340,"He has been talking for years. It is simply that nobody listened until now, and I hold that against no one. Almost no one."
 P0_DACH_PIX_0340_2,But enough about me. Is that tuna in brine or in oil?
 P0_DACH_PIX_0360,"In brine. Of course. One serves a cat of my standing fish in salt water, as if he were some common harbour cat."
 P0_DACH_PIX_0360_2,"And out of the tin at that. I do not eat from tinplate, it is beneath me."
@@ -769,7 +767,7 @@ SYS_ERS_PIX_0280_2,unless someone opens a tin.
 SYS_ERS_PIX_0290,"Very creative. And very, very wrong."
 SYS_ERS_PIX_0300,"If that works, I will eat a broom."
 SYS_ERS_PIX_0300_2,"You may rest easy, the broom is in no danger."
-SYS_ERS_PIX_0310,"That only works in films, young man."
+SYS_ERS_PIX_0310,That only works in films.
 SYS_ERS_PIX_0310_2,"And even in films they would let me do it, because I look better."
 SYS_ERS_PIX_0320,I once had a dream in which exactly that worked.
 SYS_ERS_PIX_0320_2,I woke up screaming and then licked my paw for two hours.
@@ -816,7 +814,7 @@ SYS_WDH_PIX_0070_2,and I have been doing it for years at a level you will never 
 SYS_WDH_PIX_0080,"Nothing new. If anything changes, I shall let you know."
 SYS_WDH_PIX_0080_2,"That is a lie, I never let anyone know. But it sounds nice."
 SYS_WDH_PIX_0090,"That is the third time. On the fourth I shall lie down on it, and then it belongs to me."
-SYS_WDH_PIX_0100,"Looking is overrated, young man. Smelling is the future."
+SYS_WDH_PIX_0100,Looking is overrated. Smelling is the future.
 W1_ABS_ALW_0070,I've told you everything a wizard is allowed to say. You have to work out the rest yourself. It's educational.
 W1_ABS_ALW_0080,"You shall not pass. Me, I mean. With more answers."
 W1_ABS_GOL_0210,"All said, all of it. Now we are silent, yesss. Us and our sorrow."
@@ -943,7 +941,7 @@ W1_BERG_MAX_0690,Not any more.
 W1_BERG_MAX_0710,"A collective agreement signed in ketchup. Legally shaky, but it tastes okay."
 W1_BERG_MAX_0715,"Signed in ketchup at the bottom, thumbprint stamp at the top. That'll hold up in any goblin court."
 W1_BERG_MAX_0830,What kind of offer?
-W1_BERG_PIX_0060,"Coffee from the day before yesterday. That is not a strike any more, young man, that is resignation with a filter."
+W1_BERG_PIX_0060,"Coffee from the day before yesterday. That is not a strike any more, that is resignation with a filter."
 W1_BERG_PIX_0060_2,I recognise it by the smell. Your grandfather makes his coffee exactly like this when he is stuck.
 W1_BERG_PIX_0065,"I smelled the coffee again, and it smelled back."
 W1_BERG_PIX_0065_2,"We do not respect each other, the coffee and I, and we never shall."
@@ -1019,7 +1017,7 @@ W1_BRUE_PIX_0410_3,… Fine. But I want to see that fur burn afterwards.
 W1_BRUE_PIX_0430,"I am the little goat. Tell no one, not even your grandfather."
 W1_BRUE_PIX_0430_2,"Especially not your grandfather. He would write it down, and he writes everything in capitals."
 W1_BRUE_PIX_0500,I am going. On all fours. In a rug.
-W1_BRUE_PIX_0500_2,"If anyone films this, young man, I am moving to a different household, today."
+W1_BRUE_PIX_0500_2,"If anyone films this, I am moving to a different household, today."
 W1_BRUE_PIX_0640,"I speak fluent Goatish. My grandmother taught me, a stable cat of high rank."
 W1_BRUE_PIX_0640_2,"Read the text out, I shall translate. Mostly correctly."
 W1_BRUE_PIX_0660,"Baa. Do not eat me, my brother is fatter."
@@ -1267,7 +1265,7 @@ W1_HINT_PIX_0510_2,"What do you actually have in your pockets, apart from crumbs
 W1_HINT_PIX_0520,Gollo's coin belongs in the well. And then do not wish for anything I would regret.
 W1_HINT_PIX_0530,"Coin in, wish for ""something that wants to go far"". Not pizza. I say that in pain."
 W1_HINT_PIX_0611,"Alwin wants egg, milk and a glow mushroom, so a pancake that glows."
-W1_HINT_PIX_0611_2,"Ingredients have to be gathered, young man. They do not come by themselves, I know that from the tuna."
+W1_HINT_PIX_0611_2,"Ingredients have to be gathered. They do not come by themselves, I know that from the tuna."
 W1_HINT_PIX_0612,"Six bottles, one note. Read the note. Twice."
 W1_HINT_PIX_0612_2,"It rhymes, but it does not lie. Unlike certain noses I would rather not specify."
 W1_HINT_PIX_0621,"Berta in the tavern has the egg, and she won't give it up. Ask me what she says. Mushroom in the enchanted forest, milk from animals with bells."
@@ -1397,7 +1395,7 @@ W1_HOGG_PIX_0530,"You poured all the milk into a cauldron, without a single drop
 W1_HOGG_PIX_0530_2,"I shall remember that. For life. And cats, as you know, have nine of those."
 W1_HOGG_PIX_0640,"Nettle. That is how plants smell when they are offended, and this one is very offended."
 W1_HOGG_PIX_0650,"Mushroom, and bitter. Whoever drinks this will become one."
-W1_HOGG_PIX_0650_2,"I just made that up, young man, and I am still completely certain."
+W1_HOGG_PIX_0650_2,"I just made that up, and I am still completely certain."
 W1_HOGG_PIX_0660,"Lemon, honey and a hint of trouble. Could be anything."
 W1_HOGG_PIX_0660_2,I shall not commit. Only dogs do that.
 W1_HOGG_PIX_0670,The potion! Definitely! It smells of success and lemon and … the sea.
@@ -1450,7 +1448,7 @@ W1_INV_PIX_0015,Melted cheese. It clings to everything it loves.
 W1_INV_PIX_0015_2,I am keeping my distance. I am not ready for that kind of relationship yet.
 W1_INV_PIX_0035,A fur without a goat. That is the best form of goat there is.
 W1_INV_PIX_0035_2,"I shall lie on it as soon as you are not looking. Out of revenge, so to speak."
-W1_INV_PIX_0075,"Water in a bucket. That is a weapon, young man."
+W1_INV_PIX_0075,Water in a bucket. That is a weapon.
 W1_INV_PIX_0075_2,"I know it, and you know it. We will not talk about it, and you will not point it at me."
 W1_INV_PIX_0095,"Milk. I am not proud of it, but for this jug I would do things."
 W1_INV_PIX_0095_2,Terrible things. Things after which you are no longer allowed on the sofa.
@@ -1511,7 +1509,7 @@ W1_LUFT_PIX_0070,Teddy. Someone was called Teddy here and survived it.
 W1_LUFT_PIX_0070_2,"Barely, only just. Someone once called me ""Kitty-Wiggles"", and I did not eat for three days."
 W1_LUFT_PIX_0080,"Old chalk, and tears. Someone cried while writing this."
 W1_LUFT_PIX_0080_2,With a name like that I would have done the same in his place. In public.
-W1_LUFT_PIX_0130,"At last, someone with eyes in his head. We are taking him with us, young man."
+W1_LUFT_PIX_0130,"At last, someone with eyes in his head. We are taking him with us."
 W1_LUFT_PIX_0130_2,"No? Then I shall simply come here every day. I do not mind long journeys, as long as I am carried."
 W1_LUFT_PIX_0170,"Cardboard, crown polish and determination. This woman smells of a plan."
 W1_LUFT_PIX_0170_2,"That is rare. Most people smell of lunch, and I do not mean that as a criticism."
@@ -1591,7 +1589,7 @@ W1_SCHM_MAX_0750,And what if you sold her?
 W1_SCHM_PIX_0020,Warm. Very warm. Too warm.
 W1_SCHM_PIX_0020_2,The perfect temperature is exactly two steps to the left. I measured it with my entire body.
 W1_SCHM_PIX_0025,"Two steps left, I have just measured it again. It remains two."
-W1_SCHM_PIX_0025_2,"Science has spoken, young man, and science is now going to lie down there."
+W1_SCHM_PIX_0025_2,"Science has spoken, and science is now going to lie down there."
 W1_SCHM_PIX_0060,"She eats iron. I eat tuna. We are both specialists,"
 W1_SCHM_PIX_0060_2,"but only one of us shows any taste in the matter, and I would not want to embarrass anyone by saying which."
 W1_SCHM_PIX_0065,"She just winked at me. I shall not wink back, for we are rivals."
@@ -1676,7 +1674,7 @@ W1_SMAU_PIX_0090_2,"Three minutes. Soft. For breakfast. I have a list, and it do
 W1_SMAU_PIX_0095,"I have thought about it. Three minutes is too long, two and a half is right."
 W1_SMAU_PIX_0095_2,"I am a gourmet, and gourmets are only ever wrong about other people's food."
 W1_SMAU_PIX_0160,Whoever pulls this out becomes king.
-W1_SMAU_PIX_0160_2,"Or gets a bad back, young man."
+W1_SMAU_PIX_0160_2,Or gets a bad back.
 W1_SMAU_PIX_0165,"I pulled on it, with one claw, and nothing happened. So I am not a king."
 W1_SMAU_PIX_0165_2,"I am something better, namely a cat. I knew that already, but it is nice to have it confirmed."
 W1_SMAU_PIX_0190,"Dust, gold and dragon sweat. And somewhere in there a single sock"
@@ -1977,7 +1975,7 @@ W1_TAV_PIX_1450_2,"Not this one, mind you, but one of my own. I do not share my 
 W1_TAV_PIX_1470,"Her name is Berta. She has been laying for as long as she can think, and she does not think much."
 W1_TAV_PIX_1470_2,"She only gets up for one thing: bad music. When the last bard played, she fled all the way up to the rafter."
 W1_TAV_PIX_1490,"There are no limits. But there is my tin, and it stays out of this."
-W1_TAV_PIX_1605,"That was dreadful, young man."
+W1_TAV_PIX_1605,That was dreadful.
 W1_TAV_PIX_1605_2,"Berta thought so too, and normally Berta only has opinions about grain."
 W1_TAV_PIX_1610,"The cheese has been bubbling away for ten minutes. It wants to be eaten, I can hear that sort of thing."
 W1_TAV_PIX_1610_2,"It is a gift. A heavy gift, when you are not allowed to use it."
@@ -2034,7 +2032,7 @@ W1_THRO_PIX_0180,"Pollen dust, tissues and self-pity."
 W1_THRO_PIX_0180_2,That is less a Dark Lord than a Dark Cold. With a throne.
 W1_THRO_PIX_0185,He sneezes more quietly when you look at him.
 W1_THRO_PIX_0185_2,That is fear. Lords call it politeness.
-W1_THRO_PIX_0330,"He is cursing cheese. I am switching sides, young man, I now stand beside him."
+W1_THRO_PIX_0330,"He is cursing cheese. I am switching sides, I now stand beside him."
 W1_THRO_PIX_0330_2,"Only because of the cheese, mind you. My loyalty is unshakeable, but it is hungry."
 W1_THRO_PIX_0560,You got through this whole world without a single one of my solutions.
 W1_THRO_PIX_0560_2,That was very nearly praise just now. Strike it from the record.
@@ -2177,7 +2175,7 @@ W1_WALD_PIX_0135,A shoe made of glass. You can see the toes.
 W1_WALD_PIX_0135_2,"That is not fashion, it is an X-ray, and I never wished to know anyone's toes that well."
 W1_WALD_PIX_0180,"Cardboard, ketchup and a hint of grandma. This cart has seen more than I have,"
 W1_WALD_PIX_0180_2,"and I have been inside a television. From the inside, which not every cat can claim."
-W1_WALD_PIX_0430,"You sing like a modem, young man. I mean that as a compliment."
+W1_WALD_PIX_0430,You sing like a modem. I mean that as a compliment.
 W1_WALD_PIX_0430_2,To the modem. At least those things had rhythm.
 W1_WALD_PIX_0440,Miaaaow. … They stay shut. Philistines.
 W1_WALD_PIX_0440_2,"In the back yard I was legendary. The neighbours threw shoes at me every night, out of sheer enthusiasm."
@@ -2224,7 +2222,7 @@ W1_WASS_MAX_0150,"Reeds. They rustle, but there's nothing in them. I checked, Pi
 W1_WASS_PIX_0050,"He has been practising. In front of the mirror, with the stress on ""another""."
 W1_WASS_PIX_0050_2,I can hear that sort of thing. A sentence sounds different the hundredth time you say it.
 W1_WASS_PIX_0080,"Boxes. Cats love boxes, as is common knowledge."
-W1_WASS_PIX_0080_2,"And these are taped shut. That is cruelty with sticky tape, young man, and I take it personally."
+W1_WASS_PIX_0080_2,"And these are taped shut. That is cruelty with sticky tape, and I take it personally."
 W1_WASS_PIX_0085,"I have scratched every single box, and not one has opened."
 W1_WASS_PIX_0085_2,"It is my worst defeat since the vacuum cleaner, and we do not talk about the vacuum cleaner."
 W1_WASS_PIX_0140,He says the princess moved out three weeks ago. Upwards. With all her boxes.
@@ -2360,7 +2358,7 @@ W2_AGOR_PIX_0125,"Lots of people in skirts and sandals, and not one of them has 
 W2_AGOR_PIX_0125_2,I hereby declare: culture is grossly overrated.
 W2_AGOR_PIX_0170,"They say he sings stones soft. It did not work for me, and I tried."
 W2_AGOR_PIX_0170_2,"All night long. The stones stayed hard, and in the morning I was hoarse."
-W2_AGOR_PIX_0190,"Roman tourists, young man. They leave their grammar mistakes everywhere."
+W2_AGOR_PIX_0190,Roman tourists. They leave their grammar mistakes everywhere.
 W2_AGOR_PIX_0190_2,And their socks. I do not know which smells worse.
 W2_AGOR_PIX_0290,He trusts a book more than a wet man right under his nose.
 W2_AGOR_PIX_0290_2,"I know that. I trust the tin more than the bowl too, and so far I have always been right."
@@ -2496,7 +2494,7 @@ W2_BUER_NAR_0420_2,"On top lies a single circular, fully written, never submitte
 W2_BUER_NAR_0500,"The second official stamps. Tables, scrolls, the bench, the man with the beard. Then Max's form. Three times."
 W2_BUER_PIX_0020,"Dust, boredom and sunbeams. That is, if I may say so, a perfect sleeping place."
 W2_BUER_PIX_0020_2,I understand the people on the bench. I even envy them a little.
-W2_BUER_PIX_0100,"New rule beats old rule. The same applies in my household, young man."
+W2_BUER_PIX_0100,New rule beats old rule. The same applies in my household.
 W2_BUER_PIX_0100_2,"With the small difference that in ours, I make the new rules. And the old ones too."
 W2_BUER_PIX_0115,The man with the beard has been waiting since number one. I have been waiting for five minutes.
 W2_BUER_PIX_0115_2,And I can assure you that we are both equally at the end of our tether.
@@ -2543,7 +2541,7 @@ W2_DISK_PIX_0110_2,That man has no time to steal. He does not even have time to 
 W2_DISK_PIX_0150,He smells of … squid. Definitely of squid.
 W2_DISK_PIX_0150_2,So he is quite certainly innocent. My nose is very sure about this. Exceptionally sure.
 W2_DISK_PIX_0200,"She smells of sand, of stone and of three hundred years of pondering."
-W2_DISK_PIX_0200_2,"Innocent, young man. And above all immobile, which is rather a hindrance when stealing."
+W2_DISK_PIX_0200_2,"Innocent. And above all immobile, which is rather a hindrance when stealing."
 W2_DISK_PIX_0290,Squid. I knew it. I knew it and then said the opposite.
 W2_DISK_PIX_0290_2,"That is called instinct. Wrong instinct, admittedly, but instinct."
 W2_DISK_PIX_0320,"Volume 3. Your grandfather owns all three, and he sings along every time."
@@ -2633,7 +2631,7 @@ W2_FAHR_PIX_0070_2,"I hate time travel on water even more, because water is fund
 W2_FAHR_PIX_0070_3,And I hate time travel on water with a crocodile most of all. I think. He looks at me so devotedly.
 W2_FAHR_PIX_0100,Now it is wine. A little further and it becomes something you insult a salad with.
 W2_FAHR_PIX_0160,"A whole tree, with figs, in a pot, on a raft."
-W2_FAHR_PIX_0160_2,"This antiquity knows no moderation, young man, and I say that as someone who likes to treat himself."
+W2_FAHR_PIX_0160_2,"This antiquity knows no moderation, and I say that as someone who likes to treat himself."
 W2_FAHR_PIX_0180,A fig seed. That is the smallest garden I have ever seen.
 W2_FAHR_PIX_0180_2,I would sleep on it if I did not have to fear it turning into a tree underneath me.
 W2_FAHR_PIX_0220,"Moss. Soft, cool and a tiny bit damp."
@@ -2660,7 +2658,7 @@ W2_FINA_NAR_0180,The record flies. Wobbles. Lands. Plays a bit of a pop song on 
 W2_FINA_PIX_0090,You have skewered a Spartan's lunch.
 W2_FINA_PIX_0090_2,"That is the bravest deed of your life so far, and it was an accident. I find that suits you."
 W2_FINA_PIX_0140,"Three throws, three landmarks. Humanity will need millennia to explain that."
-W2_FINA_PIX_0140_2,"I shall say nothing about it, young man. I was not there, I saw nothing, and I do not know you."
+W2_FINA_PIX_0140_2,"I shall say nothing about it. I was not there, I saw nothing, and I do not know you."
 W2_FINA_RAM_0010,"The final! Javelin, discus, wrestling! In that order! Or another one! This one!"
 W2_FINA_RAM_0100,Counted! Somehow! On to the discus!
 W2_FINA_RAM_0190,"Far enough! Or not! Far enough. Now the wrestling, against Cicero, with words. I'm afraid. For you. And of words."
@@ -2806,7 +2804,7 @@ W2_HINT_PIX_0110_2,But the crocodile bowed to someone. Not to you. Think about w
 W2_HINT_PIX_0120,"Gods travel free, and so do their servants."
 W2_HINT_PIX_0120_2,"I do not like saying the word ""servant"", by the way. It just slips out so easily."
 W2_HINT_PIX_0130,Switch to me and let me walk onto the ferry. Or drag me onto it like an item.
-W2_HINT_PIX_0130_2,"I am not an item, young man. Do it anyway."
+W2_HINT_PIX_0130_2,I am not an item. Do it anyway.
 W2_HINT_PIX_0211,"The pharaoh only reads pictures, and the scribe has a board full of pictures."
 W2_HINT_PIX_0211_2,"Four fields, one sentence. Nobody asks more of you than that. Not even me."
 W2_HINT_PIX_0212,"The court cat wants to see three things: offering, following, miracle. He himself has two."
@@ -2829,7 +2827,7 @@ W2_HINT_PIX_0331,Take a form and the ballpoint pen. Or papyrus from the Nile and
 W2_HINT_PIX_0331_2,Ask for something that does not exist. They will stamp anything just to make you leave.
 W2_HINT_PIX_0332,Hand in the circular or the Sphinx's letter of recommendation at the counter. Then you get the entry pass. And Hermes. Unfortunately.
 W2_HINT_PIX_0410,"The sandals want to get away, and oil holds straps. There is oil in the kitchen."
-W2_HINT_PIX_0410_2,"The cook wants something new for it, though, young man. Something she has never tasted."
+W2_HINT_PIX_0410_2,"The cook wants something new for it, though. Something she has never tasted."
 W2_HINT_PIX_0420,"She cooks fusion, so something that does not exist here. And you have things that do not exist here."
 W2_HINT_PIX_0420_2,Or you ask me for a recipe. I have been waiting a long time for that.
 W2_HINT_PIX_0430,"Give her the chewing gum as eternal bread. Or bake bread with dates and onions in the oven, the way I tell you. Then oil on the sandals."
@@ -2852,7 +2850,7 @@ W2_HINT_PIX_0632_2,Picked fruit does not age any more. Give the figs to the fann
 W2_HINT_PIX_0710,"Four suspects, two statements each, and everyone lies exactly once."
 W2_HINT_PIX_0710_2,"Write everything down, and then cross out what does not add up. That is what I do with my enemies."
 W2_HINT_PIX_0720,Test each one as the thief: does exactly one statement each come out true?
-W2_HINT_PIX_0720_2,"And, young man, just between us: my nose lies about fish. One of them smells of fish."
+W2_HINT_PIX_0720_2,"And, just between us: my nose lies about fish. One of them smells of fish."
 W2_HINT_PIX_0730,"Tiro. He was in the stadium, Hermes was not. One lie, one truth. Accuse him. He will hand over the discus. With scratches."
 W2_HINT_PIX_0810,The Sphinx wants a riddle she cannot solve. She knows everything from her time.
 W2_HINT_PIX_0810_2,"You, on the other hand, carry things from your time around with you. Fairly useless things, but still."
@@ -2878,7 +2876,7 @@ W2_HINT_PIX_1031,"Get the design from the workshop, give it to the stonemason by
 W2_HINT_PIX_1032,"Have the stone carved at the Nile, ride to Syracuse, put it on the plinth at the burial mound."
 W2_HINT_PIX_1032_2,Cicero finds it. Archimedes stands next to it. So do I.
 W2_HINT_PIX_1111,"The Master of Ceremonies told you the order. Invitations first, the mirror needs midday, the speech needs people."
-W2_HINT_PIX_1111_2,"And the god comes last, young man. The god is me."
+W2_HINT_PIX_1111_2,And the god comes last. The god is me.
 W2_HINT_PIX_1112,"Ramses wants wine, but there is none. There is juice in the palace and vinegar in the workshop."
 W2_HINT_PIX_1112_2,And what ferments travels with time.
 W2_HINT_PIX_1121,"There is a sun over the second field, so that is where the mirror goes."
@@ -2963,7 +2961,7 @@ W2_INV_PIX_0130_2,"Because I have two ears, and he has only one volume."
 W2_INV_PIX_0140,Wings on his feet and still always late.
 W2_INV_PIX_0140_2,I have no wings and am still always punctual. At least for meals.
 W2_INV_PIX_0150,He smells of ink and a guilty conscience.
-W2_INV_PIX_0150_2,"Well, of ink. Only of ink, young man. Quite certainly. My nose is never wrong about such things."
+W2_INV_PIX_0150_2,"Well, of ink. Only of ink. Quite certainly. My nose is never wrong about such things."
 W2_INV_PIX_0160,A tired man who does not want to be worshipped.
 W2_INV_PIX_0160_2,I do not understand him. I do not respect him either. But above all I do not understand him.
 W2_INV_PIX_0170,He holds his stamp like a sceptre. I have already seen two sceptres today.
@@ -2978,7 +2976,7 @@ W2_INV_PIX_0210,He smells of guidebook and sun cream and is drawing me on a wax 
 W2_INV_PIX_0210_2,"Naturally I am posing. Out of habit, and because my left side is my best."
 W2_INV_PIX_0325,"Golden, round and empty. If someone puts that down in front of me, I am officially a deity."
 W2_INV_PIX_0325_2,"I am only waiting for a suitable occasion. Tuna on it, for example."
-W2_INV_PIX_0345,"Dates. Neither meat nor fish, young man."
+W2_INV_PIX_0345,Dates. Neither meat nor fish.
 W2_INV_PIX_0345_2,"I respect them solely as projectiles, and even then only if they hit someone I do not like."
 W2_INV_PIX_0385,"I invented this crust, and I demand royalties for it."
 W2_INV_PIX_0385_2,"Payable in tuna, monthly and in advance."
@@ -3086,7 +3084,7 @@ W2_KUCH_PIX_0010_3,but this is exactly how it must feel to finally come home aft
 W2_KUCH_PIX_0050,"The bread has a crust. I repeat, so that it gets through to you: crust."
 W2_KUCH_PIX_0050_2,"Write that down. Yes, I know it is already in there. Write it down again anyway, and bigger."
 W2_KUCH_PIX_0095,"Garlic. I can smell it three rooms away, against the wind."
-W2_KUCH_PIX_0095_2,"It is the only reason, young man, why I am not moving in here on the spot."
+W2_KUCH_PIX_0095_2,It is the only reason why I am not moving in here on the spot.
 W2_KUCH_PIX_0200,I like this woman. She thinks in ovens.
 W2_KUCH_PIX_0200_2,That is the only way of thinking I consider truly fit for the future.
 W2_KUCH_PIX_0300,"She is chewing something that is not food, and she is happy about it."
@@ -3354,7 +3352,7 @@ W2_SAND_PIX_0220,"You cannot win. I know that well, from myself."
 W2_SAND_PIX_0220_2,"I am the cat you cannot win against. Ask your grandfather, he tried for years."
 W2_SAND_PIX_0270,"Twenty years, or one ferry ride. You did read the board."
 W2_SAND_PIX_0270_2,I even watched you read it. You moved your lips.
-W2_SAND_PIX_0310,"Fruit with a best-before date, young man, but only as long as it hangs on the tree."
+W2_SAND_PIX_0310,"Fruit with a best-before date, but only as long as it hangs on the tree."
 W2_SAND_PIX_0310_2,"Once it is picked, time does not care about it any more. I consider that a very wise attitude to life."
 W2_SAND_PIX_0350,"Two grown men, bribed with fruit, before my very eyes."
 W2_SAND_PIX_0350_2,"And I do not get a single fig. Not even half of one. I do not eat figs, admittedly, but that is not the point."
@@ -3405,7 +3403,7 @@ W2_SPHX_PIX_0530,"She has writer's block, and you solved it with a ballpoint pen
 W2_SPHX_PIX_0530_2,In any case without any discernible intelligence. It worked anyway.
 W2_SPHX_PIX_0580,"A sphinx. A relative of mine, distant. Very distant. With writing problems."
 W2_SPHX_PIX_0580_2,"We do not talk about her in the family, and I would ask you to respect that too."
-W2_SPHX_PIX_0610,"A thing she does not know. That is your specialist subject, young man."
+W2_SPHX_PIX_0610,A thing she does not know. That is your specialist subject.
 W2_SPHX_PIX_0610_2,You own an astonishing number of things that nobody knows and nobody wants.
 W2_SPHX_SPH_0080,Don't worry. It'll start rolling any moment. It has for three hundred years.
 W2_SPHX_SPH_0120,"I hear everything, boy. I just don't have a nose any more to smell it with."
@@ -3529,7 +3527,7 @@ W2_TAG1_NAR_0100,"The straps snap at the start. The sandals take off, one toward
 W2_TAG1_PIX_0070,A tortoise is overtaking him. A philosopher once proved that such a thing is impossible.
 W2_TAG1_PIX_0070_2,The philosopher never knew Max.
 W2_TAG1_PIX_0120,He is running exactly the way I once ran across the hot hob.
-W2_TAG1_PIX_0120_2,"With the one difference, young man, that I learned something from the experience."
+W2_TAG1_PIX_0120_2,With the one difference that I learned something from the experience.
 W2_TAG1_PIX_0170,"Now comes the lever. You sit down, I put nothing in, and you fly nowhere."
 W2_TAG1_PIX_0170_2,"That is how I imagine sport. It is short, it is quiet, and nobody sweats."
 W2_TAG1_RAM_0010,The games are open! Or they're beginning! Or … just get started!
@@ -3693,14 +3691,14 @@ W2_WERK_PIX_0220,"Milk prices. Always milk prices, in every world, at every time
 W2_WERK_PIX_0220_2,I am beginning to recognise a pattern. And I have decided to ignore it with all my might.
 W2_WERK_PIX_0295,"Gulls. White, loud and impudent."
 W2_WERK_PIX_0295_2,"When I get out of here, we shall have a conversation between hunters. It will be brief."
-W2_WERK_PIX_0550,"Something other than weighing. I would knock it off the table, young man."
+W2_WERK_PIX_0550,Something other than weighing. I would knock it off the table.
 W2_WERK_PIX_0550_2,"With me that helps with almost everything, and if it does not, the object was not important anyway."
 W2_ZURU_PIX_0010,"The river flows, the sand trickles, and you stand."
 W2_ZURU_PIX_0010_2,"Two out of three things here are moving, and I regret to inform you which one is not."
 W2_ZURU_PIX_0020,The crocodile has bowed to me three times by now. In the same time you have not moved once.
 W2_ZURU_PIX_0020_2,Learn from the crocodile. I do not say that often.
 W2_ZURU_PIX_0030,"In the time you have been standing around here, the pharaoh has decided on absolutely nothing."
-W2_ZURU_PIX_0030_2,"You two would make a wonderful team, young man. Together you would never get anywhere."
+W2_ZURU_PIX_0030_2,You two would make a wonderful team. Together you would never get anywhere.
 W2_ZURU_PIX_0040,"It smells of bread. It has smelled of bread for five minutes, and you are doing nothing."
 W2_ZURU_PIX_0040_2,This is torture. Torture with a crust. I shall report it at the first opportunity.
 W2_ZURU_PIX_0050,"The Sphinx is thinking, and you are thinking. One of you two is made of stone."
@@ -3889,7 +3887,7 @@ W3_BAS_PIX_0140_2,And turn that thing back into something I can ignore with dign
 W3_BAS_PIX_0170,"So now I am everywhere, in every radio and every line."
 W3_BAS_PIX_0170_2,At last my voice gets the reach it deserves. I shall use it responsibly. Mostly.
 W3_BAS_PIX_0525,"Your body lies there smiling, and I sit on the lid keeping watch."
-W3_BAS_PIX_0525_2,"That is work, young man. Unpaid work. I only mention it so that it has been mentioned once."
+W3_BAS_PIX_0525_2,That is work. Unpaid work. I only mention it so that it has been mentioned once.
 W3_BAS_PIX_0530,"He is lying there, smiling and drooling slightly. I took a photo of him."
 W3_BAS_PIX_0530_2,"Mentally, of course. For ever. I shall look at it on bad days."
 W3_BAS_PIX_0540,Shake. With both paws. He will wake up and pretend he woke up on his own.
@@ -4017,7 +4015,7 @@ W3_EING_PIX_0230,He is happy. A robot was given a list and he is happy.
 W3_EING_PIX_0230_2,"I have a list too, and I am not. Mine is missing tuna, and you can tell."
 W3_EING_PIX_0270,"I said it while packing: for everything that squeaks, tin heads included."
 W3_EING_PIX_0400,He has fed me into a world-domination AI. I am going to be its loudspeaker.
-W3_EING_PIX_0400_2,"I have been worse things, young man. I have already been wet several times today."
+W3_EING_PIX_0400_2,I have been worse things. I have already been wet several times today.
 W3_EING_PIX_0430,"Water in a bucket, on the floor, drinkable."
 W3_EING_PIX_0430_2,"That is the first civilised facility in this world, and of all things a robot set it up."
 W3_EING_PIX_0460,"Test subject 47: ""Very good, but asked for too little cake."""
@@ -4049,7 +4047,7 @@ W3_ENDE_PIX_0110_2,Do not ask me what milk sounds like. I just know.
 W3_ENDE_PIX_0130,"Wet in, wet out. I will not miss this world."
 W3_ENDE_PIX_0130_2,"Except the towel. The towel is coming with me, and nobody is going to stop me."
 W3_ENDE_REB_0050,"Thanks, kid. We're moving now. Into a house with windows. We're keeping the sunglasses."
-W3_HINT_PIX_0110,"The man in the hat does not want correct answers, he wants human ones. That is not the same thing, young man."
+W3_HINT_PIX_0110,"The man in the hat does not want correct answers, he wants human ones. That is not the same thing."
 W3_HINT_PIX_0110_2,Look at what the people on the street get up to. None of it is sensible.
 W3_HINT_PIX_0120,"Look at the people on the street. The crying man, the one with the umbrella, the one with the music. None of them is doing anything sensible. That is exactly what you need."
 W3_HINT_PIX_0130,"Look at the crying man, the woman with the umbrella and the musician. Then their silliness goes in your notebook. Then go to the hat."
@@ -4143,7 +4141,7 @@ W3_INV_PIX_0045,"The bag rustles every time you move. I can hear it, even down t
 W3_INV_PIX_0115,A rubber chicken with a hole in the middle.
 W3_INV_PIX_0115_2,"I once hunted one of those, in the living room, all night long. It screamed with every bite. I won."
 W3_INV_PIX_0135,"You sound like an iron. When you are back, I am sitting on you anyway."
-W3_INV_PIX_0135_2,"Warmth is warmth, young man, and I am in no position to be choosy right now."
+W3_INV_PIX_0135_2,"Warmth is warmth, and I am in no position to be choosy right now."
 W3_KAM1_BER_0170,…
 W3_KAM1_MAX_0030,"She sounds like the school secretary, only with lasers."
 W3_KAM1_MAX_0070,"A device on the wall. White, with a handle and an orange tip. It looks like I'm not allowed to touch it. So I'm touching it."
@@ -4639,7 +4637,7 @@ W3_STR_PIX_0090,Vandalism of public property.
 W3_STR_PIX_0090_2,At last you are doing something I understand from the bottom of my heart. I am almost proud of you.
 W3_STR_PIX_0120,"Pizza without tuna is, if I may put it so plainly, nothing more than bread with an opinion."
 W3_STR_PIX_0135,"A paper unicorn, and it is floating. I would catch it, but then my paws would be wet."
-W3_STR_PIX_0135_2,"Wet paws for an animal that does not even taste of anything? I have principles, young man."
+W3_STR_PIX_0135_2,Wet paws for an animal that does not even taste of anything? I have principles.
 W3_STR_PIX_0160,This is what rain sounds like when it is sad.
 W3_STR_PIX_0160_2,"Which, by the way, is almost always. I have watched it for a long time, and it does not have good days."
 W3_STR_PIX_0230,She is absolutely right. Objects always know more than they admit.
@@ -4730,7 +4728,7 @@ W3_TERM_PIX_0250,That was the wrong cable. I can tell because the pod is quackin
 W3_TERM_PIX_0250_2,I never thought I would say that sentence one day.
 W3_TERM_PIX_0280,"I saw it. From the outside nothing about the pod changed, but I know."
 W3_TERM_PIX_0280_2,"And you know that I know. We shall both have to live with that, although I shall enjoy it rather more than you."
-W3_TERM_PIX_0300,"There is already a cable in there. I do not plug anything in twice, young man, I am not a beginner."
+W3_TERM_PIX_0300,"There is already a cable in there. I do not plug anything in twice, I am not a beginner."
 W3_TERM_PIX_0310,"All three cables are in, and the pod is humming."
 W3_TERM_PIX_0310_2,When he wakes up I shall pretend I was asleep the whole time. We do not want it going to his head.
 W3_TERM_SCH_0370,"When you leave, take my boss with you, the cup, I shall wave it goodbye, that is the least I can do"
@@ -5008,7 +5006,7 @@ W4_EMPF_NAR_0010,"Channel search: every channel flickers across the screen, then
 W4_EMPF_NAR_0200,Pause. Both security men freeze mid-step. Max walks between them.
 W4_EMPF_PIX_0030,It smells of carpet cleaner and power.
 W4_EMPF_PIX_0030_2,"I cannot stand either, and there is decidedly too much of both here."
-W4_EMPF_PIX_0260,"And whoever has it on tape wins, young man."
+W4_EMPF_PIX_0260,And whoever has it on tape wins.
 W4_EMPF_PIX_0260_2,"I speak from experience. I once saw your grandfather dance, and I have been getting double treats ever since."
 W4_EMPF_PIX_0280,Nothing but hits nobody remembers.
 W4_EMPF_PIX_0280_2,"Your grandfather still sings them, loudly and in the shower. I have got used to it, the way one gets used to rain."
@@ -5076,7 +5074,7 @@ W4_FABR_PIX_0350_2,I am the part of this duo that looks like it knows where it i
 W4_FABR_PIX_0380,The cheese has to glow before it can sparkle.
 W4_FABR_PIX_0380_2,"Things glow where it is dark, very dark, with fog and people who go home too late. Think about it."
 W4_FABR_PIX_0385,"Glowing comes from darkness, and sparkling comes from glowing."
-W4_FABR_PIX_0385_2,"That is cheese philosophy, young man. I just invented it and expect it to be taught in schools."
+W4_FABR_PIX_0385_2,That is cheese philosophy. I just invented it and expect it to be taught in schools.
 W4_FABR_SIE_0320,Cheeseman. I like it. Sounds like an afternoon nap.
 W4_FABR_WIL_0300,An accident! A sheet! A cat! And there's already a name above you!
 W4_FERN_MAX_0010,The cheap remote. One button and five empty holes. Someone was clearly expecting more.
@@ -5111,7 +5109,7 @@ W4_FERN_MAX_0250,"The remote on the magazine? People used to use their thumb for
 W4_FERN_MAX_0270,"Switching doesn't work here. The studio has no neighbours, it's a dead end with very expensive carpet."
 W4_FERN_NAR_0060,Static wipes across the picture. The new channel is on.
 W4_FERN_PIX_0040,"All buttons, complete. And none of them says ""Food""."
-W4_FERN_PIX_0040_2,"Every technology has a gap, young man, and this one is particularly painful."
+W4_FERN_PIX_0040_2,"Every technology has a gap, and this one is particularly painful."
 W4_FERN_PIX_0045,"I counted, they are all there. I still demand a button for treats."
 W4_FERN_PIX_0045_2,"I shall write to the manufacturer. You write, I dictate, and we begin with ""Deeply disappointed Sir or Madam""."
 W4_FERN_PIX_0090,"Rewind. People used to do that with a pencil, in a cassette, turn by turn."
@@ -5163,7 +5161,7 @@ W4_FRIE_NAR_0040,"Fog, full moon, a dance floor of light-up tiles between the gr
 W4_FRIE_NAR_0340,The iron gate swings open. The path leads downhill to an old house with a television flickering in its cellar.
 W4_FRIE_PIX_0020,"Closedown. That used to happen every night: first the anthem, then the test card, then nothing at all."
 W4_FRIE_PIX_0020_2,Nothing was underrated. I took my finest naps in that nothing.
-W4_FRIE_PIX_0060,"They dance better than you, young man."
+W4_FRIE_PIX_0060,They dance better than you.
 W4_FRIE_PIX_0060_2,And before you get excited: that is no compliment to the dead.
 W4_FRIE_PIX_0140,A disco ball in a dead tree. It turns. The tree no longer does.
 W4_FRIE_PIX_0140_2,I consider that a fair division of labour.
@@ -5371,11 +5369,11 @@ W4_HINT_PIX_0410,"Press Mute on the countdown. Without the jingle, a number is j
 W4_HINT_PIX_0420,"The banana in the comic makes him slip, but it does not make him leave. It has to get worse first. Things get worse in the horror channel. Everything gets worse there."
 W4_HINT_PIX_0430,"Carry the peel into the haunted house until it is black, then into the comic. Then it has a fuse. Throw it at him. Not at me."
 W4_HINT_PIX_0440,The clock in the corner moves on a minute from panel to panel. The villain gets dirtier from panel to panel. Read the panels like a clock.
-W4_HINT_PIX_0450,"Twelve o'clock: villain laughs. One: hero jumps, banana on the ground. Two: whump in the vat. Three: villain in the cheese, hero with a crown. Thought bubble first, explosion third."
+W4_HINT_PIX_0450,The banana has to be on the ground before anything goes bang in the vat. And the villain can only laugh while he's still clean.
 W4_HINT_PIX_0460,The boss broadcasts on a channel that is not in any magazine. You find hidden channels with the button Dr. Adbreak lost.
 W4_HINT_PIX_0470,The receptionist will not say the code. She thinks it. You have a button that shows thoughts. The guards are in the way. You have a button that stops things.
 W4_HINT_PIX_0480,"Subtitles on the lady: 1988. Pause on the two wardrobes, type the code, get in. And first take the tape with puppets on it out of the compactor."
-W4_HINT_PIX_0490,"The sofa is an offer, young man."
+W4_HINT_PIX_0490,The sofa is an offer.
 W4_HINT_PIX_0490_2,For three worlds you have learned what to do with offers that sound too good. I hope at least that stuck.
 W4_HINT_PIX_0500,"Say no. Twice, if you have to. Then he starts broadcasting and you start pressing. Every button has its moment, and the moment is in the picture. Show running, he brags, applause roars, he goes quiet, ratings drop."
 W4_HINT_PIX_0510,"Pause, adapter with tape, Mute, Subtitles, Channel search. In that order. Wrong buttons cost nothing, except that he thanks you."
@@ -5489,7 +5487,7 @@ W4_KAPI_PIX_0430_2,"The soufflé episode was the best, by the way. It collapsed,
 W4_KAPI_PIX_0510,"Someone friendly from the neighbourhood lives there, unless I am mistaken."
 W4_KAPI_PIX_0510_2,"I smell spider, sense of duty and cold pizza. A sad combination."
 W4_KAPI_PIX_0580,"The anvil stays in the inventory, I know."
-W4_KAPI_PIX_0580_2,"My head remembers it, young man, very vividly and in the shape of a bump."
+W4_KAPI_PIX_0580_2,"My head remembers it, very vividly and in the shape of a bump."
 W4_KAPI_PIX_0585,"When I look at it, my head gets flatter, at least in my mind."
 W4_KAPI_PIX_0585_2,I now have memories in pancake form. The only good thing about it: I like pancakes.
 W4_KAPI_PIX_0600,"The Force is not with you. But the marketing is, and these days that is almost the same thing."
@@ -5555,7 +5553,7 @@ W4_KELL_PIX_0075,A cassette with a pencil in it. Someone was in the middle of re
 W4_KELL_PIX_0075_2,In a horror film this is the moment I leave.
 W4_KELL_PIX_0160,"This door will not open, and that is not a question of keys but of genre. Here nothing ever opens."
 W4_KELL_PIX_0160_2,"In the sitcom, on the other hand, everything opens all the time, someone bursts in every two minutes."
-W4_KELL_PIX_0160_3,"Think about it, young man. I shall be taking a nap meanwhile."
+W4_KELL_PIX_0160_3,Think about it. I shall be taking a nap meanwhile.
 W4_KELL_PIX_0350,Mute. The button I have been wishing for for years.
 W4_KELL_PIX_0350_2,"For you, for Gerd and for that laugh track. For the laugh track I press twice."
 W4_KELL_SMU_0250,"Leave him, honey. Maybe he'll bring it back. With a tie."
@@ -6128,7 +6126,7 @@ W4_ZURF_NAR_0050,The laugh track laughs. Nobody said anything.
 W4_ZURF_NAR_0160,"The fairy lights blink once, briefly. Like someone clearing their throat."
 W4_ZURF_NAR_0200,The accident happens. Again. Nobody is surprised.
 W4_ZURF_PIX_0010,"The bars are waiting, I am waiting, and Flimmer is waiting too."
-W4_ZURF_PIX_0010_2,"One of us is built for waiting, young man, and it is me. I can do it for hours, on any windowsill in the world."
+W4_ZURF_PIX_0010_2,"One of us is built for waiting, and it is me. I can do it for hours, on any windowsill in the world."
 W4_ZURF_PIX_0040,He has been smiling in the same direction for four minutes.
 W4_ZURF_PIX_0040_2,Either he is a professional or he is frozen. With him I would not rule out either.
 W4_ZURF_PIX_0060,The tape just laughed at nothing. Maybe at you.
@@ -6215,7 +6213,7 @@ ZS1_DACH_PIX_0040_2,"That is, if I may point it out, your entire problem as a sp
 ZS1_DACH_PIX_0140,Yesterday it was free-range with its own dragon as security. Today it is in an egg box.
 ZS1_DACH_PIX_0140_2,I am not saying anything. I am just a cat.
 ZS1_DACH_PIX_0140_3,"A cat, mind you, with two very good eyes."
-ZS1_DACH_PIX_0190,"That was a no with footnotes, young man. Your grandfather is a lecture on two legs."
+ZS1_DACH_PIX_0190,That was a no with footnotes. Your grandfather is a lecture on two legs.
 ZS1_DACH_PIX_0190_2,"I have been listening to him for fourteen years, mostly asleep, and I have never once reached the end."
 ZS1_DACH_PIX_0210,"One moment, please. Before anyone turns anything anywhere: the notebook."
 ZS1_DACH_PIX_0220,"One egg, soft-boiled, for breakfast. That is going on my list, right at the top."
@@ -6226,7 +6224,7 @@ ZS1_DACH_PIX_0320,It lies there as if it had always belonged here.
 ZS1_DACH_PIX_0320_2,Things from fairy tales ought to feel out of place on a workbench. This one already has its regular spot.
 ZS1_DACH_PIX_0324,"An egg. Three minutes, soft, with salt. I am not saying that as a threat. I am saying it as a vision."
 ZS1_DACH_PIX_0355,She is measuring the curtains again with a folding ruler. Twice.
-ZS1_DACH_PIX_0355_2,Whoever measures twice has once waited for a prince who never came. I know the feeling from food deliveries.
+ZS1_DACH_PIX_0355_2,Whoever measures twice once waited too long for a prince. I know the feeling from food deliveries.
 ZS1_DACH_PIX_0360,"Seventeen remotes, and your grandfather asks you, of all people, whether you have seen his."
 ZS1_DACH_PIX_0360_2,"Think about that for a moment. I have been doing so for a while, mostly at night, on this very box."
 ZS1_DACH_PIX_0365,One of them has bite marks. They are not mine.
@@ -6309,7 +6307,7 @@ ZS2_DACH_PIX_0180,Is he broken? Did you break him?
 ZS2_DACH_PIX_0180_2,"I have never seen him this quiet, not even during his nap, and he snores like a circular saw."
 ZS2_DACH_PIX_0230,"Notebook. Second entry: something made of flour, with a crust."
 ZS2_DACH_PIX_0230_2,"Not this sack, heaven forbid. This sack has a seal with a number on it, and I do not like numbers. They give too much away."
-ZS2_DACH_PIX_0250,"It sounds like something else entirely. But please, young man. Error code. I shall make a note: error code."
+ZS2_DACH_PIX_0250,It sounds like something else entirely. But please. Error code. I shall make a note: error code.
 ZS2_DACH_PIX_0320,"Egg. Flour. I am not counting out loud, I am counting quietly, to myself."
 ZS2_DACH_PIX_0320_2,"And at four, I promise you, I shall say something. Loudly and with emphasis."
 ZS2_DACH_PIX_0350,"He is lying again. It smells of fear, like last time."
@@ -6335,7 +6333,7 @@ ZS2_DACH_PIX_0580,"The ballpoint pen. Officials fear it. Machines probably do no
 ZS2_DACH_PIX_0590,"The discus, or whatever it was you threw. Round, flat, flies."
 ZS2_DACH_PIX_0590_2,"Where you are going, though, everything flies by itself, even the cars. Nobody there will be impressed."
 ZS2_DACH_PIX_0592,"The bucket. Where you are going, they say it rains without a break."
-ZS2_DACH_PIX_0592_2,"A single bucket against that much rain. I call that optimism, young man. I admire it, and I am leaving it here."
+ZS2_DACH_PIX_0592_2,"A single bucket against that much rain. I call that optimism. I admire it, and I am leaving it here."
 ZS2_DACH_PIX_0594,The glow potion is still glowing.
 ZS2_DACH_PIX_0594_2,"Where you are going, every wall glows, and in colours that do not even exist. It would not stand out there at all."
 ZS2_DACH_PIX_0596,"Ketchup. In the future, everything you are allowed to eat is probably sauce."
@@ -6401,7 +6399,7 @@ ZS3_DACH_PIX_0140_2,Egg. Flour. And a thing that just happens to fit in a remote
 ZS3_DACH_PIX_0140_3,I am not saying anything. I am just putting it down.
 ZS3_DACH_PIX_0210,Notebook. Third entry: batteries for Grandma's electric tin opener.
 ZS3_DACH_PIX_0210_2,"Yes, I know how that sounds. No, I am not explaining. A cat need not justify everything."
-ZS3_DACH_PIX_0230,"All good lists look like that. At last you notice something, young man."
+ZS3_DACH_PIX_0230,All good lists look like that. At last you notice something.
 ZS3_DACH_PIX_0230_2,"Sadly the wrong thing. But one should praise small progress, they say. With dogs."
 ZS3_DACH_PIX_0320,"Three. I have counted to three, quietly, as promised."
 ZS3_DACH_PIX_0320_2,"At four I shall say something. A cat keeps his word. Mostly, anyway."
@@ -6411,7 +6409,7 @@ ZS3_DACH_PIX_0380,"Fear, flour and now despair as well."
 ZS3_DACH_PIX_0380_2,"His nose would lie for him. Mine would not. Mine is incorruptible, except with salmon."
 ZS3_DACH_PIX_0415,"It hums. I hum too, but only when stroked, and even then only by arrangement."
 ZS3_DACH_PIX_0415_2,The lamp does it for free and for anyone. That is cheap.
-ZS3_DACH_PIX_0440,"Preheat. Remember that word, young man. It will come back, and sooner than you would like."
+ZS3_DACH_PIX_0440,"Preheat. Remember that word. It will come back, and sooner than you would like."
 ZS3_DACH_PIX_0480,With stages. And an oven door.
 ZS3_DACH_PIX_0480_2,"I am keeping quiet from now on. I have said far too much already, and nobody listened."
 ZS3_DACH_PIX_0520,The sunglasses of a man who never blinks.
@@ -6432,7 +6430,7 @@ ZS3_DACH_PIX_0580_2,"Where you are going, I crawl through the static. I do not n
 ZS3_DACH_PIX_0590,"The olive oil, or rather what is left of it. It has done its duty."
 ZS3_DACH_PIX_0590_2,"I would leave it here. Plenty of things will be squeaking up here soon, believe me."
 ZS3_DACH_PIX_0591,"The bucket. On television, a thing like that always tips off a door onto a head."
-ZS3_DACH_PIX_0591_2,"I have studied these shows, young man. It is the wrong head every single time."
+ZS3_DACH_PIX_0591_2,I have studied these shows. It is the wrong head every single time.
 ZS3_DACH_PIX_0592,"The glow potion. On television everything glows by itself already, even the hosts' teeth."
 ZS3_DACH_PIX_0592_2,It cannot compete with that.
 ZS3_DACH_PIX_0593,Ketchup. On television that has always been blood. Every cat who watches crime shows knows it.
@@ -6453,3 +6451,6 @@ ZS3_DACH_PIX_0650,He knows the man in the glitter jacket.
 ZS3_DACH_PIX_0650_2,"I am adding that to ""brochures"". The pile is growing, and soon I shall be able to sleep on it."
 ZS3_DACH_PIX_0670,Television. Finally something I understand. I have spent more hours in front of it than you.
 ZS3_DACH_PIX_0670_2,On you.
+FI_DACH_OPA_0102,"The remote, Max! Hand open, remote in. That's the whole trick."
+FI_DACH_OPA_0104,Max. The remote. I'm not holding my hand out for decoration.
+FI_DACH_PIX_0106,He's holding his hand out. You have what goes in it. That really is all the puzzle there is.

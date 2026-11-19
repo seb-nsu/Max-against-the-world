@@ -13,6 +13,8 @@ weitere_schalter:
   - EINKAUFSLISTE            # Wert: Zahl der Wünsche Pixels auf Seite 3 des Notizbuchs (1 bis 3 in den Zwischenspielen, 4 in Welt 4)
   - FINALE                   # Finale läuft (Spiel.finale_beginnen); die Regeln in skripte/finale.gd greifen nur dann
   - FI_HEIMKEHR              # Heimkehr-Szene auf dem Dachboden gespielt (FI_DACH)
+  - FI_UEBERGABE_OFFEN       # Heimkehr: Opa hält die Hand auf, bis der Spieler ihm die Fernbedienung gibt (FI_DACH 0100)
+  - FI_UEBERGABE_DRAENGELN   # Wert: wie oft Opa während der Übergabe gedrängelt hat (0102/0104 im Wechsel)
   - FI_FERNBEDIENUNG         # Wert: Zustand der Goldenen Fernbedienung (golden, grau_ohne_zelle, zuendkapsel)
   - FI_OPA_RUFE              # Wert: wie oft Opa in Stufe 1 gerufen hat (Graubox: pro Klick statt alle 15 Sekunden)
   - FI_ANSEHEN               # Wert: Objekt → wie oft im Finale angesehen (erste/zweite Zeile)

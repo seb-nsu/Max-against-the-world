@@ -196,7 +196,7 @@ Reden mit Opa und Pixel auf dem Dachboden. Max stellt die Frage, die Antwort fol
 | P0\_DACH\_PIX\_0310 | Pixel | Wer. Hat. Mich. Geweckt. | Halsband leuchtet türkis |
 | P0\_DACH\_PIX\_0320 | Pixel | Ich lag auf dem einzigen warmen Kabel dieses Dachbodens, einem Platz, den ich mir über Jahre erarbeitet habe. // Und ich war mitten in einem Traum von einem Lachs, der größer war als ich und sich trotzdem nicht gewehrt hat. // So einen Traum bekommt man nicht zweimal, junger Mann. |  |
 | P0\_DACH\_MAX\_0330 | Max | Moment mal. Der redet? |  |
-| P0\_DACH\_PIX\_0340 | Pixel | Der redet seit Jahren, junger Mann. Es hat ihm bisher bloß niemand zugehört, und das trage ich keinem nach. Fast keinem. // Aber genug von mir. Ist das Thunfisch in Lake oder in Öl? |  |
+| P0\_DACH\_PIX\_0340 | Pixel | Der redet seit Jahren. Es hat ihm bisher bloß niemand zugehört, und das trage ich keinem nach. Fast keinem. // Aber genug von mir. Ist das Thunfisch in Lake oder in Öl? |  |
 | P0\_DACH\_MAX\_0350 | Max | In Lake. Steht drauf. |  |
 | P0\_DACH\_PIX\_0360 | Pixel | In Lake. Natürlich. Man serviert einem Kater meines Ranges Fisch in Salzwasser, als wäre er ein gewöhnlicher Hafenkater. // Und dann auch noch aus der Dose. Aus dem Blech esse ich nicht, das liegt unter meinem Niveau. | rührt die Dose nicht an |
 | P0\_DACH\_MAX\_0362 | Max | Du hast eben noch auf einem Stromkabel geschlafen. |  |
@@ -467,7 +467,7 @@ Zufällig gezogen, wenn nichts Spezielles passt; gelten für das ganze Spiel. Ma
 | SYS\_ERS\_PIX\_0280 | Pixel | Ich fühle mich davon nicht angesprochen. Ich fühle mich grundsätzlich selten angesprochen, // es sei denn, jemand öffnet eine Dose. |
 | SYS\_ERS\_PIX\_0290 | Pixel | Sehr kreativ. Und sehr, sehr falsch. |
 | SYS\_ERS\_PIX\_0300 | Pixel | Wenn das klappt, fresse ich einen Besen. // Du kannst beruhigt sein, der Besen ist nicht in Gefahr. |
-| SYS\_ERS\_PIX\_0310 | Pixel | Das funktioniert nur in Filmen, junger Mann. // Und selbst in Filmen würde man es mich machen lassen, weil ich besser aussehe. |
+| SYS\_ERS\_PIX\_0310 | Pixel | Das funktioniert nur in Filmen. // Und selbst in Filmen würde man es mich machen lassen, weil ich besser aussehe. |
 | SYS\_ERS\_PIX\_0320 | Pixel | Ich hatte einmal einen Traum, in dem genau das funktioniert hat. // Ich bin schreiend aufgewacht und habe danach zwei Stunden lang meine Pfote geleckt. |
 | SYS\_ERS\_PIX\_0330 | Pixel | Das liegt weit unter meinem Niveau. Mein Niveau liegt, grob gesagt, auf Höhe der Futterdosen. |
 | SYS\_ERS\_PIX\_0340 | Pixel | Ich rate selten von etwas ab, weil ich mich selten genug interessiere. // Jetzt rate ich ab. Mit Nachdruck. |
@@ -508,7 +508,7 @@ Ab dem dritten Ansehen desselben Objekts im selben Zustand zufällig gezogen, ni
 | SYS\_WDH\_PIX\_0070 | Pixel | Starr nicht so. Starren ist meine Disziplin, // und ich mache das seit Jahren auf einem Niveau, das du nicht erreichen wirst. |
 | SYS\_WDH\_PIX\_0080 | Pixel | Nichts Neues. Wenn sich etwas ändert, sage ich Bescheid. // Das ist gelogen, ich sage nie Bescheid. Aber es klingt nett. |
 | SYS\_WDH\_PIX\_0090 | Pixel | Das ist das dritte Mal. Beim vierten Mal lege ich mich drauf, und dann gehört es mir. |
-| SYS\_WDH\_PIX\_0100 | Pixel | Hinsehen wird überschätzt, junger Mann. Riechen ist die Zukunft. |
+| SYS\_WDH\_PIX\_0100 | Pixel | Hinsehen wird überschätzt. Riechen ist die Zukunft. |
 
 ## 9c. Plauderoptionen erschöpft (PLA)
 

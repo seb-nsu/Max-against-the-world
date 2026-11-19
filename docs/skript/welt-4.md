@@ -191,7 +191,7 @@ Ansehen und Benutzen der beiden Werkzeuge der Welt. Die Programmzeitschrift ist 
 | W4\_FERN\_MAX\_0025 | Max | Ich drück abwechselnd auf beide. Es passiert nichts, aber es fühlt sich trotzdem ein bisschen nach Macht an. | Ansehen: Fernbedienung, zwei Tasten, zweites Mal |
 | W4\_FERN\_MAX\_0030 | Max | Fast voll. Opa hätte längst Klebeband drumgewickelt, damit nichts rausfällt. Und dann noch mal, aus Liebe. | Ansehen: Fernbedienung, fünf oder sechs Tasten |
 | W4\_FERN\_MAX\_0035 | Max | Die Tasten haben alle verschiedene Farben. Der Hersteller konnte sich nicht entscheiden und hat dann einfach alle genommen. | Ansehen: Fernbedienung, fünf oder sechs Tasten, zweites Mal |
-| W4\_FERN\_PIX\_0040 | Pixel | Alle Tasten, vollständig. Und keine davon heißt „Futter“. // Jede Technik hat eine Lücke, junger Mann, und diese ist besonders schmerzhaft. | Ansehen: Fernbedienung, alle Tasten; Pixel |
+| W4\_FERN\_PIX\_0040 | Pixel | Alle Tasten, vollständig. Und keine davon heißt „Futter“. // Jede Technik hat eine Lücke, und diese ist besonders schmerzhaft. | Ansehen: Fernbedienung, alle Tasten; Pixel |
 | W4\_FERN\_PIX\_0045 | Pixel | Ich habe nachgezählt, es sind alle da. Ich verlange trotzdem eine Taste für Leckerli. // Ich werde dem Hersteller einen Brief schreiben. Du schreibst, ich diktiere, und wir beginnen mit „Sehr enttäuschte Damen und Herren“. | Ansehen: Fernbedienung, alle Tasten, zweites Mal; Pixel |
 | W4\_FERN\_MAX\_0050 | Max | Umschalten. Zapp. Das kann ich. Das ist das Einzige, wofür ich nie eine Anleitung gebraucht hab. | Benutzen: Umschalten, erstes Mal |
 | W4\_FERN\_NAR\_0060 | – | Rauschen wischt übers Bild. Der neue Sender steht. | Umschalt-Effekt, jedes Mal |
@@ -476,7 +476,7 @@ Außerhalb von Mitternacht zeigt der Sender eine Pausentafel mit schlafendem Gei
 | W4\_FRIE\_MAX\_0030 | Max | In der Programmzeitschrift steht: Mitternacht. Ich muss also nicht warten, ich muss nur blättern. | nach 0010, Rückspulen im Inventar |
 | W4\_FRIE\_NAR\_0040 | – | Nebel, Vollmond, eine Tanzfläche aus Leuchtfliesen zwischen Gräbern. Synthesizer setzen ein. Sechs Zombies tanzen im Gleichschritt und versperren den Weg zum Gittertor. | Ankunft um Mitternacht |
 | W4\_FRIE\_MAX\_0050 | Max | Tanzende Tote in Senfanzügen. Das ist das Musikvideo, das Opa immer nachtanzt, wenn er denkt, dass keiner guckt. |  |
-| W4\_FRIE\_PIX\_0060 | Pixel (aus dem Rauschen) | Sie tanzen besser als du, junger Mann. // Und bevor du dich freust: Das ist kein Kompliment für die Toten. |  |
+| W4\_FRIE\_PIX\_0060 | Pixel (aus dem Rauschen) | Sie tanzen besser als du. // Und bevor du dich freust: Das ist kein Kompliment für die Toten. |  |
 | W4\_FRIE\_MAX\_0070 | Max | Der Weg zum Tor führt über die Tanzfläche, mitten durch die Choreo. Wer da durchläuft, ist danach Backgroundtänzer. | Ansehen: Gittertor hinter der Tanzfläche |
 | W4\_FRIE\_MAX\_0075 | Max | Das Tor knarrt im Takt der Musik. Selbst die Scharniere sind hier choreografiert. | Ansehen: Gittertor hinter der Tanzfläche, zweites Mal |
 | W4\_FRIE\_ZOM\_0080 | Zombie | Uuuuh. | Max betritt die Tanzfläche; die Zombies schieben ihn im Takt zurück |
@@ -551,7 +551,7 @@ Max kommt durch die Grabplatte in den Keller. Die verkettete Tür nach oben blei
 | W4\_KELL\_MAX\_0140 | Max | Eine Tür mit mehr Ketten als Holz. Da oben geht es weiter, aber von hier unten eben nicht. | Ansehen: verkettete Tür |
 | W4\_KELL\_MAX\_0145 | Max | Ich zähl die Schlösser. Sieben. Wer auch immer da oben wohnt, will wirklich keinen Besuch. | Ansehen: verkettete Tür, zweites Mal |
 | W4\_KELL\_MAX\_0150 | Max | Zu, natürlich. Im Horrorfilm ist die Tür immer zu, bis zum ungünstigsten Moment. | Benutzen: verkettete Tür |
-| W4\_KELL\_PIX\_0160 | Pixel | Diese Tür geht nicht auf, und das ist keine Frage von Schlüsseln, sondern von Genre. Hier geht grundsätzlich nichts auf. // In der Sitcom dagegen geht ständig alles auf, alle zwei Minuten platzt dort jemand herein. // Denk mal drüber nach, junger Mann. Ich mache inzwischen ein Nickerchen. | Benutzen: verkettete Tür, zweites Mal; Kaskade; Hinweis R6a |
+| W4\_KELL\_PIX\_0160 | Pixel | Diese Tür geht nicht auf, und das ist keine Frage von Schlüsseln, sondern von Genre. Hier geht grundsätzlich nichts auf. // In der Sitcom dagegen geht ständig alles auf, alle zwei Minuten platzt dort jemand herein. // Denk mal drüber nach. Ich mache inzwischen ein Nickerchen. | Benutzen: verkettete Tür, zweites Mal; Kaskade; Hinweis R6a |
 | W4\_KELL\_MAX\_0170 | Max | Die Geister. Drei Laken mit Löchern drin. Sie sehen aus wie Faschingskostüme, die nach der Party keiner abgeholt hat. | Ansehen: Geister |
 | W4\_KELL\_GST\_0180 | Geist | Buuuh? Buh. | Reden: Geist |
 | W4\_KELL\_MAX\_0190 | Max | Die sagen nichts, die machen nur „Buh“. Als hätte jemand bei denen den Ton vergessen. | nach 0180; Hinweis auf Stumm |
@@ -770,7 +770,7 @@ Gespräche und Ansehen in Kapitolis.
 | W4\_KAPI\_MAX\_0560 | Max | Ein Amboss. Er ist einfach aus dem Nichts gefallen und sieht ziemlich zufrieden damit aus. | Ansehen: Amboss |
 | W4\_KAPI\_MAX\_0565 | Max | Unten am Amboss steht der Name einer Firma. Ich hab das Gefühl, die liefert auch Raketen-Rollschuhe. | Ansehen: Amboss, zweites Mal |
 | W4\_KAPI\_MAX\_0570 | Max | Er wiegt nichts, Comic-Physik. Ich stecke einen Amboss ein, und das ist der seltsamste Satz meines Lebens. | Nehmen: Amboss |
-| W4\_KAPI\_PIX\_0580 | Pixel | Der Amboss bleibt im Inventar, ich weiß. // Mein Kopf erinnert sich an ihn, junger Mann, und zwar sehr lebhaft und in Form einer Beule. | Ansehen: Amboss im Inventar; Pixel |
+| W4\_KAPI\_PIX\_0580 | Pixel | Der Amboss bleibt im Inventar, ich weiß. // Mein Kopf erinnert sich an ihn, und zwar sehr lebhaft und in Form einer Beule. | Ansehen: Amboss im Inventar; Pixel |
 | W4\_KAPI\_PIX\_0585 | Pixel | Wenn ich ihn ansehe, wird mein Kopf flacher, zumindest in Gedanken. // Ich habe jetzt Erinnerungen in Pfannkuchenform. Das einzig Gute daran: Ich mag Pfannkuchen. | Ansehen: Amboss im Inventar, zweites Mal; Pixel |
 | W4\_KAPI\_MAX\_0590 | Max | WRRUMM. Eine riesige Blase, und die Helden weichen zurück. Die Lichtröhre ist hier ganz offiziell eine Waffe. | Benutzen: Lichtröhre im Comic-Kanal; WRRUMM-Blase |
 | W4\_KAPI\_PIX\_0600 | Pixel | Die Macht ist nicht mit dir. Aber das Marketing, und das ist heutzutage fast dasselbe. | nach 0590 |
@@ -839,7 +839,7 @@ In der Fabrik läuft ein Unfall als Schleife. Rückspulen hält an vier festen E
 | W4\_FABR\_MAX\_0360 | Max | Der Bottich ist offen, aber mein Käse ist nur normaler Käse. Wer in normalen Käse fällt, wird kein Held, sondern Abendessen. | Einzelbild 3 gewählt, Käse nicht als Wunderkäse |
 | W4\_FABR\_MAX\_0370 | Max | Ohne Umhang in den Bottich? Dann bin ich nur ein Junge voller Käse. Und das war ich im Grunde vorher schon. | Einzelbild 3 gewählt, ohne Bettlaken |
 | W4\_FABR\_PIX\_0380 | Pixel | Der Käse muss erst leuchten, bevor er funkeln kann. // Leuchten tun Dinge dort, wo es dunkel ist, sehr dunkel, mit Nebel und Leuten, die zu spät nach Hause gehen. Denk mal drüber nach. | Ansehen: normaler Käse in der Fabrik; Hinweis R10a |
-| W4\_FABR\_PIX\_0385 | Pixel | Leuchten kommt vom Dunkeln, und Funkeln kommt vom Leuchten. // Das ist Käse-Philosophie, junger Mann. Ich habe sie gerade erfunden und erwarte, dass sie an Schulen gelehrt wird. | Ansehen: normaler Käse in der Fabrik, zweites Mal; Hinweis R10a |
+| W4\_FABR\_PIX\_0385 | Pixel | Leuchten kommt vom Dunkeln, und Funkeln kommt vom Leuchten. // Das ist Käse-Philosophie. Ich habe sie gerade erfunden und erwarte, dass sie an Schulen gelehrt wird. | Ansehen: normaler Käse in der Fabrik, zweites Mal; Hinweis R10a |
 | W4\_FABR\_MAX\_0390 | Max | Pause. Der Käse hängt in der Luft, der Arbeiter winkt eingefroren, und der Bottich bleibt zu. Anhalten ist eben nicht aussuchen. | Pause in der Fabrik |
 | W4\_FABR\_MAX\_0400 | Max | Stumm. Das Blubbern ist weg, aber der Unfall passiert trotzdem. Leise Unfälle sind die schlimmsten. | Stumm in der Fabrik |
 | W4\_FABR\_MAX\_0410 | Max | Der Amboss fällt in den Bottich, platsch. Ein Amboss in Käse, und das Problem bin trotzdem immer noch ich. | Amboss auf Bottich |
@@ -952,7 +952,7 @@ Der Sendersuchlauf findet Kanal 999. Im Empfang liest Max den Aufzugscode in den
 | W4\_EMPF\_MAX\_0240 | Max | Falscher Code. Das Feld piept, und die beiden Schränke gucken mich an, als hätte ich im Aufzug gefurzt. | Zahlenfeld mit falschem Code |
 | W4\_EMPF\_MAX\_0250 | Max | Ein Porträt in Gold: Zappmann mit Sonnenbrille. Messingschild: „Intendant seit 1988. Davor: siehe Kellerarchiv.“ Wer seine Vergangenheit in den Keller schreibt, hat Angst vor ihr. | Ansehen: Porträt; vor der Begegnung |
 | W4\_EMPF\_MAX\_0255 | Max | Die Sonnenbrille auf dem Bild glänzt mehr als das Gold. Selbst sein Porträt ist für Scheinwerfer gemacht. | Ansehen: Porträt, zweites Mal; vor der Begegnung |
-| W4\_EMPF\_PIX\_0260 | Pixel | Und wer sie auf Band hat, gewinnt, junger Mann. // Ich spreche aus Erfahrung. Ich habe einmal gesehen, wie dein Großvater tanzt, und seitdem bekomme ich doppelt Leckerli. | nach 0250 |
+| W4\_EMPF\_PIX\_0260 | Pixel | Und wer sie auf Band hat, gewinnt. // Ich spreche aus Erfahrung. Ich habe einmal gesehen, wie dein Großvater tanzt, und seitdem bekomme ich doppelt Leckerli. | nach 0250 |
 | W4\_EMPF\_MAX\_0270 | Max | Ein kaputtes Radio. Das Fernsehen hat es erwischt, ganz klassischer Fall. | Ansehen: Kaputtes Radio |
 | W4\_EMPF\_MAX\_0275 | Max | Aus dem Radio kommt ein letzter Ton. Er klingt wie ein Lied über einen Videostar, der jemanden umgebracht hat. | Ansehen: Kaputtes Radio, zweites Mal |
 | W4\_EMPF\_PIX\_0280 | Pixel | Lauter Hits, die keiner mehr kennt. // Dein Großvater singt sie heute noch, laut und unter der Dusche. Ich habe mich daran gewöhnt, so wie man sich an Regen gewöhnt. | Ansehen: Wand mit goldenen Schallplatten |
@@ -1192,7 +1192,7 @@ Pixel (aus dem Rauschen oder von der Schulter), Flimmer und die Sender kommentie
 
 | ID | Sprecher | Text | Auslöser |
 | --- | --- | --- | --- |
-| W4\_ZURF\_PIX\_0010 | Pixel | Die Balken warten, ich warte, und Flimmer wartet auch. // Einer von uns ist fürs Warten gebaut, junger Mann, und das bin ich. Ich kann das stundenlang, auf jeder Fensterbank der Welt. | Testbild |
+| W4\_ZURF\_PIX\_0010 | Pixel | Die Balken warten, ich warte, und Flimmer wartet auch. // Einer von uns ist fürs Warten gebaut, und das bin ich. Ich kann das stundenlang, auf jeder Fensterbank der Welt. | Testbild |
 | W4\_ZURF\_FLI\_0020 | Flimmer | Noch da? Ich frage nur. Ich frage das alle. Keiner antwortet. | Testbild, Rauschen |
 | W4\_ZURF\_GER\_0030 | Gerd Glück | Nicht wegzappen! Oder doch! Aber mit Gefühl! | Glücksrad-Studio |
 | W4\_ZURF\_PIX\_0040 | Pixel | Er lächelt seit vier Minuten in dieselbe Richtung. // Entweder ist er ein Profi, oder er ist eingefroren. Bei ihm würde ich keins von beidem ausschließen. | Glücksrad-Studio |
@@ -1285,7 +1285,7 @@ Drei Stufen je Rätselschritt, Pixel spricht aus dem Rauschen. Schritt-IDs nach 
 | W4\_HINT\_PIX\_0430 | Pixel | Trag die Schale ins Spukhaus, bis sie schwarz ist, dann in den Comic. Dann hat sie eine Zündschnur. Wirf sie auf ihn. Nicht auf mich. | W4\_R11\_C, Stufe 2 |
 | W4\_HINT\_PIX\_0650 | Pixel | Bananenschale: Sitcom, dann Mitternachts-TV, dann Comic. // Als Käsemann die Stinkbombe auf Werbepause ziehen. Er rennt, eine Taste fällt. | W4\_R11\_C, Stufe 3 |
 | W4\_HINT\_PIX\_0440 | Pixel | Die Uhr in der Ecke läuft von Bild zu Bild eine Minute weiter. Der Schurke wird von Bild zu Bild schmutziger. Lies die Bilder wie eine Uhr. | W4\_R11\_D, Stufe 1 |
-| W4\_HINT\_PIX\_0450 | Pixel | Zwölf Uhr: Schurke lacht. Eins: Held springt, Banane liegt. Zwei: Wumm im Bottich. Drei: Schurke im Käse, Held mit Krone. Gedankenblase ganz vorn, Explosion an dritter Stelle. | W4\_R11\_D, Stufe 2 |
+| W4\_HINT\_PIX\_0450 | Pixel | Die Banane muss schon liegen, bevor es im Bottich knallt. Und lachen kann der Schurke nur, solange er noch sauber ist. | W4\_R11\_D, Stufe 2 |
 | W4\_HINT\_PIX\_0660 | Pixel | Erst die Gedankenblase, dann die Zackenblase, dann die Explosion, dann die kleine Blase. // Danach liegt unter den Panels deine Taste. | W4\_R11\_D, Stufe 3 |
 | W4\_HINT\_PIX\_0460 | Pixel | Der Chef sendet auf einem Kanal, der in keiner Zeitschrift steht. Versteckte Sender findet man mit der Taste, die Werbepause verloren hat. | W4\_R12\_A, Stufe 1 |
 | W4\_HINT\_PIX\_0670 | Pixel | Drück den Sendersuchlauf. Irgendwo, nur nicht in der Zentrale. Er findet, was sich versteckt. | W4\_R12\_A, Stufe 2 |
@@ -1293,7 +1293,7 @@ Drei Stufen je Rätselschritt, Pixel spricht aus dem Rauschen. Schritt-IDs nach 
 | W4\_HINT\_PIX\_0470 | Pixel | Die Empfangsdame sagt den Code nicht. Sie denkt ihn. Du hast eine Taste, die Gedanken zeigt. Die Wachen stehen im Weg. Du hast eine Taste, die Dinge anhält. | W4\_R12\_B, Stufe 1 |
 | W4\_HINT\_PIX\_0480 | Pixel | Untertitel auf die Dame: 1988. Pause auf die beiden Schränke, Code tippen, einsteigen. Und nimm vorher das Band aus der Presse, auf dem Puppen draufstehen. | W4\_R12\_B, Stufe 2 |
 | W4\_HINT\_PIX\_0690 | Pixel | Untertitel auf die Empfangsdame, 1988 ins Zahlenfeld, Pause auf die Sicherheitsleute. // Und vorher das Band aus der Presse im Kellerarchiv. Ohne Band fahre ich nicht mit. | W4\_R12\_B, Stufe 3 |
-| W4\_HINT\_PIX\_0490 | Pixel | Das Sofa ist ein Angebot, junger Mann. // Du hast drei Welten lang gelernt, was man mit Angeboten macht, die zu gut klingen. Ich hoffe, wenigstens das ist hängen geblieben. | W4\_R13, Stufe 1 |
+| W4\_HINT\_PIX\_0490 | Pixel | Das Sofa ist ein Angebot. // Du hast drei Welten lang gelernt, was man mit Angeboten macht, die zu gut klingen. Ich hoffe, wenigstens das ist hängen geblieben. | W4\_R13, Stufe 1 |
 | W4\_HINT\_PIX\_0500 | Pixel | Sag Nein. Zweimal, wenn es sein muss. Dann fängt er an zu senden, und du fängst an zu drücken. Jede Taste hat ihren Moment, und der Moment steht im Bild. Show läuft, er prahlt, Applaus dröhnt, er schweigt, Quote fällt. | W4\_R13, Stufe 2 |
 | W4\_HINT\_PIX\_0510 | Pixel | Pause, Adapter mit Band, Stumm, Untertitel, Sendersuchlauf. In der Reihenfolge. Falsche Tasten kosten nichts, außer dass er sich bedankt. | W4\_R13, Stufe 3 |
 | W4\_HINT\_PIX\_9990 | Pixel | Nichts mehr offen. Du hast eine Fernbedienung, und Fernbedienungen sind zum Zappen da. Ich habe gesprochen. | kein offener Schritt |
