@@ -1,0 +1,129 @@
+{
+ "stand": "stand.png",
+ "winkel": "Thoughtful_Walk.json",
+ "zyklus": [
+  5,
+  42
+ ],
+ "bilder": 8,
+ "huefte": [
+  30,
+  122
+ ],
+ "huefte_fern_dx": -4,
+ "ober": {
+  "zeilen": [
+   122,
+   152
+  ],
+  "spalten": [
+   13,
+   30
+  ],
+  "laenge": 32
+ },
+ "unter": {
+  "zeilen": [
+   153,
+   184
+  ],
+  "spalten": [
+   13,
+   30
+  ],
+  "laenge": 32
+ },
+ "schuh": {
+  "zeilen": [
+   184,
+   200
+  ],
+  "spalten": [
+   28,
+   53
+  ],
+  "gelenk": [
+   35,
+   186
+  ]
+ },
+ "rumpf_bis": 121,
+ "behalten": [
+  [
+   110,
+   131,
+   42,
+   50
+  ]
+ ],
+ "fern_dunkel": 0.6,
+ "rand": 26,
+ "ziel": "gehen.png",
+ "gif": "gehen.gif",
+ "ms": 100,
+ "bein_farben": [
+  [
+   128,
+   93,
+   66
+  ],
+  [
+   112,
+   75,
+   54
+  ],
+  [
+   14,
+   5,
+   3
+  ],
+  [
+   75,
+   39,
+   28
+  ],
+  [
+   33,
+   15,
+   13
+  ]
+ ],
+ "schuh_farben": [
+  [
+   112,
+   75,
+   54
+  ],
+  [
+   14,
+   5,
+   3
+  ],
+  [
+   75,
+   39,
+   28
+  ],
+  [
+   33,
+   15,
+   13
+  ],
+  [
+   38,
+   43,
+   68
+  ]
+ ],
+ "umriss": [
+  38,
+  43,
+  68
+ ],
+ "dicke_ober": 17,
+ "dicke_unter": 15,
+ "dicke_saum": 15,
+ "zentrieren": true,
+ "ausschlag": 0.9,
+ "fuss_faktor": 0.7
+}
