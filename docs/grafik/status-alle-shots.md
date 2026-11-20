@@ -266,11 +266,11 @@ Angelegt am 18. November 2026 aus `fertige-prompts/welt-3.md` (111 IDs). Noch ke
 | W3-R04 | Kühlung (Ende des Lüftungsschachts) | Raum | welt3/raeume/W3-R04_kuehlung.jpeg + W3-R04b_kuehlung_eimer_gekippt.jpeg | Bild da (20.11.), Pixelfassung zur Probe in welt3/raeume/pixel | nein | Einbau offen (Welt-3-Einbau): pixelieren, Laufbereich, Klickflächen |
 | W3-R05 | Laboreingang | Raum | welt3/raeume/W3-R05_laboreingang.jpeg + W3-R05b_laboreingang_offen.jpeg | Bild da (20.11.), Pixelfassung zur Probe in welt3/raeume/pixel | nein | Einbau offen (Welt-3-Einbau): pixelieren, Laufbereich, Klickflächen |
 | W3-R06 | Stadtstraße | Raum | fehlt | nein | nein | wartet auf das Konzeptbild, Sebastian (Gemini) |
-| W3-R07 | Küche der Orakel-Oma | Raum | fehlt | nein | nein | wartet auf das Konzeptbild, Sebastian (Gemini) |
-| W3-R08 | Büroturm, 50. Stock | Raum | fehlt | nein | nein | wartet auf das Konzeptbild, Sebastian (Gemini) |
-| W3-R09 | Testkammer 1 | Raum | fehlt | nein | nein | wartet auf das Konzeptbild, Sebastian (Gemini) |
-| W3-R10 | Testkammer 2 | Raum | fehlt | nein | nein | wartet auf das Konzeptbild, Sebastian (Gemini) |
-| W3-R11 | Testkammer 3 | Raum | fehlt | nein | nein | wartet auf das Konzeptbild, Sebastian (Gemini) |
+| W3-R07 | Küche der Orakel-Oma | Raum | welt3/raeume/W3-R07_kueche_orakel.jpeg + W3-R07b_kueche_scherben.jpeg | Bild da (20.11.) | nein | Einbau offen (Welt-3-Einbau): pixelieren, Laufbereich, Klickflächen |
+| W3-R08 | Büroturm, 50. Stock | Raum | welt3/raeume/W3-R08_buero_50.jpeg | Bild da (20.11.) | nein | Einbau offen (Welt-3-Einbau): pixelieren, Laufbereich, Klickflächen |
+| W3-R09 | Testkammer 1 | Raum | welt3/raeume/W3-R09_testkammer_1.jpeg + W3-R09b_testkammer_1_offen.jpeg | Bild da (20.11.) | nein | Einbau offen (Welt-3-Einbau): pixelieren, Laufbereich, Klickflächen |
+| W3-R10 | Testkammer 2 | Raum | welt3/raeume/W3-R10_testkammer_2.jpeg + W3-R10b_testkammer_2_laser_harmlos.jpeg | Bild da (20.11.) | nein | Einbau offen (Welt-3-Einbau): pixelieren, Laufbereich, Klickflächen |
+| W3-R11 | Testkammer 3 | Raum | welt3/raeume/W3-R11_testkammer_3.jpeg + W3-R11b_testkammer_3_offen.jpeg | Bild da (20.11.) | nein | Einbau offen (Welt-3-Einbau): pixelieren, Laufbereich, Klickflächen |
 | W3-R12 | Kern von M.U.T.T.I. | Raum | fehlt | nein | nein | wartet auf das Konzeptbild, Sebastian (Gemini) |
 | W3-R13 | Code-Sicht | Raum | fehlt | nein | nein | Claude in Godot aus dem fertigen Hintergrund (grüne Umrisse), kein eigenes Bild |
 | W3-F01 | M.U.T.T.I. | Figur | welt3/konzept/W3-F01_mutti.jpeg (+ welt3/konzept/W3-F01b_mutti_aus.jpeg) | Stand-Sprite welt3/stand/mutti (+ mutti_aus).png | nein | Phase 2 gebaut (20.11.), Abnahme durch Sebastian offen, dann Einbau (Welt-3-Einbau) |
@@ -332,7 +332,7 @@ Angelegt am 18. November 2026 aus `fertige-prompts/welt-3.md` (111 IDs). Noch ke
 | W3-B07 | M.U.T.T.I.: Sprechen | Bewegung | posen/W3-P26_mutti.png | ja: welt3/bewegungen/mutti_sprechen, 4 Bilder Schleife | nein | Phase 2 gebaut (20.11.), Abnahme durch Sebastian offen, dann Einbau (Welt-3-Einbau) |
 | W3-B08 | M.U.T.T.I.: Herunterfahren | Bewegung | posen/W3-P26_mutti.png | ja: welt3/bewegungen/mutti_herunterfahren, 8 Bilder | nein | Phase 2 gebaut (20.11.), Abnahme durch Sebastian offen, dann Einbau (Welt-3-Einbau) |
 | W3-B09 | Roboter-Hausmeister: Wischen | Bewegung | posen/W3-B09_hausmeister_wischen.png | ja: welt3/bewegungen/hausmeister_wischen, 4 Bilder Schleife | nein | Phase 2 gebaut (20.11.), Abnahme durch Sebastian offen, dann Einbau (Welt-3-Einbau) |
-| W3-B10 | Agent Schmidt: Kopieren | Bewegung | fehlt | nein | nein | braucht den fertigen Büroturm (Lage des Kopierers und der Ausgabe), dann Claude per Code aus Schmidts Sprites |
+| W3-B10 | Agent Schmidt: Kopieren | Bewegung | Code aus dem pixelierten Raum (tools/grafik_w3/effekte_raum2.py) | ja: effekte/fertig/W3-B10_kopieren (Lage in der JSON) | nein | gebaut (20.11.), Abnahme durch Sebastian offen; beim Einbau mit dem endgültigen Hintergrund neu rechnen |
 | W3-B11 | Verwandlung: Effekt | Bewegung | Code (tools/grafik_w3/effekte_code.py) | ja: effekte/fertig/W3-B11_verwandlung, 6 Bilder | nein | Phase 2 gebaut (20.11.), Abnahme durch Sebastian offen, dann Einbau (Welt-3-Einbau) |
 | W3-B12 | Portal: Effekt | Bewegung | effekte/W3-B12_portal_inhalt.png | ja: effekte/fertig/W3-B12_portal, 8 Bilder | nein | Phase 2 gebaut (20.11.), Abnahme durch Sebastian offen, dann Einbau (Welt-3-Einbau) |
 | W3-B13 | Regen: Effekt | Bewegung | Code | ja: effekte/fertig/W3-B13_regen, 4 Bilder, 640×360 kachelbar | nein | Phase 2 gebaut (20.11.), Abnahme durch Sebastian offen, dann Einbau (Welt-3-Einbau) |
@@ -349,16 +349,16 @@ Angelegt am 18. November 2026 aus `fertige-prompts/welt-3.md` (111 IDs). Noch ke
 | W3-B24 | Widerstandsbasis: Großrechner | Bewegung | Code aus dem pixelierten Raum (tools/grafik_w3/effekte_raum.py) | ja: effekte/fertig/W3-B24_grossrechner (Lage im Raum in der JSON) | nein | gebaut (20.11.), Abnahme durch Sebastian offen; Lage gilt für die Probe-Pixelfassung, beim Einbau mit dem endgültigen Hintergrund neu rechnen |
 | W3-B25 | Kühlung: Ventilator | Bewegung | Code aus dem pixelierten Raum (tools/grafik_w3/effekte_raum.py) | ja: effekte/fertig/W3-B25_ventilator (Lage im Raum in der JSON) | nein | gebaut (20.11.), Abnahme durch Sebastian offen; Lage gilt für die Probe-Pixelfassung, beim Einbau mit dem endgültigen Hintergrund neu rechnen |
 | W3-B26 | Stadtstraße: Vogelschwarm im Takt | Bewegung | effekte/W3-B26_vogel.png | ja: effekte/fertig/W3-B26_vogelschwarm, 6 Bilder | nein | Phase 2 gebaut (20.11.), Abnahme durch Sebastian offen, dann Einbau (Welt-3-Einbau) |
-| W3-B27 | Küche der Orakel-Oma: Eieruhr | Bewegung | fehlt | nein | nein | braucht den Ausschnitt des fertigen Raums (Prompt „matching the attached background crop“); wartet auf den Hintergrund, Sebastian |
-| W3-B28 | Büroturm, 50. Stock: Klone tippen | Bewegung | fehlt | nein | nein | braucht den Ausschnitt des fertigen Raums (Prompt „matching the attached background crop“); wartet auf den Hintergrund, Sebastian |
-| W3-B29 | Kern von M.U.T.T.I.: Lichtband | Bewegung | fehlt | nein | nein | braucht den Ausschnitt des fertigen Raums (Prompt „matching the attached background crop“); wartet auf den Hintergrund, Sebastian |
+| W3-B27 | Küche der Orakel-Oma: Eieruhr | Bewegung | Code aus dem pixelierten Raum (tools/grafik_w3/effekte_raum2.py) | ja: effekte/fertig/W3-B27_eieruhr (Lage in der JSON) | nein | gebaut (20.11.), Abnahme durch Sebastian offen; beim Einbau mit dem endgültigen Hintergrund neu rechnen |
+| W3-B28 | Büroturm, 50. Stock: Klone tippen | Bewegung | Code aus dem pixelierten Raum (tools/grafik_w3/effekte_raum2.py) | ja: effekte/fertig/W3-B28_klone_tippen (hinter der Glasscheibe links) (Lage in der JSON) | nein | gebaut (20.11.), Abnahme durch Sebastian offen; beim Einbau mit dem endgültigen Hintergrund neu rechnen |
+| W3-B29 | Kern von M.U.T.T.I.: Lichtband | Bewegung | fehlt | nein | nein | wartet auf den Hintergrund (Kern), Sebastian |
 | W3-B30 | Roboter-Hausmeister: Rollen | Bewegung | Code aus dem Stand-Sprite | ja: effekte/fertig/W3-B30_hausmeister_rollen, 6 Bilder | nein | Phase 2 gebaut (20.11.), Abnahme durch Sebastian offen, dann Einbau (Welt-3-Einbau) |
 | W3-B31 | Roboter-Hausmeister: Arm drehen | Bewegung | posen/W3-B31_hausmeister_arm.png (Meshy) | ja: welt3/bewegungen/hausmeister_arm_drehen, 6 Bilder | nein | Phase 2 gebaut (20.11.), Abnahme durch Sebastian offen, dann Einbau (Welt-3-Einbau) |
 | W3-B32 | Piepsi: Drucken | Bewegung | posen/W3-B32_piepsi_drucken.png | ja: welt3/bewegungen/piepsi_drucken, 6 Bilder | nein | Phase 2 gebaut (20.11.), Abnahme durch Sebastian offen, dann Einbau (Welt-3-Einbau) |
 | W3-B33 | Pastillenautomat: Fächer öffnen | Bewegung | Code aus dem pixelierten Raum (tools/grafik_w3/effekte_raum.py) | ja: effekte/fertig/W3-B33_faecher_oeffnen (Lage im Raum in der JSON) | nein | gebaut (20.11.), Abnahme durch Sebastian offen; Lage gilt für die Probe-Pixelfassung, beim Einbau mit dem endgültigen Hintergrund neu rechnen |
-| W3-B34 | Glastür Büroturm: Reden | Bewegung | fehlt | nein | nein | braucht den Ausschnitt des fertigen Raums (Prompt „matching the attached background crop“); wartet auf den Hintergrund, Sebastian |
-| W3-B35 | Bürokopierer: Rattern | Bewegung | fehlt | nein | nein | braucht den Ausschnitt des fertigen Raums (Prompt „matching the attached background crop“); wartet auf den Hintergrund, Sebastian |
-| W3-B36 | Testkammer 3: Tür und Lautsprecher | Bewegung | fehlt | nein | nein | braucht den Ausschnitt des fertigen Raums (Prompt „matching the attached background crop“); wartet auf den Hintergrund, Sebastian |
+| W3-B34 | Glastür Büroturm: Reden | Bewegung | fehlt | nein | nein | wartet auf den Hintergrund (Stadtstraße), Sebastian |
+| W3-B35 | Bürokopierer: Rattern | Bewegung | Code aus dem pixelierten Raum (tools/grafik_w3/effekte_raum2.py) | ja: effekte/fertig/W3-B35_kopierer (Lage in der JSON) | nein | gebaut (20.11.), Abnahme durch Sebastian offen; beim Einbau mit dem endgültigen Hintergrund neu rechnen |
+| W3-B36 | Testkammer 3: Tür und Lautsprecher | Bewegung | Code aus dem pixelierten Raum (tools/grafik_w3/effekte_raum2.py) | ja: effekte/fertig/W3-B36_lautsprecher (Lage in der JSON) | nein | gebaut (20.11.), Abnahme durch Sebastian offen; beim Einbau mit dem endgültigen Hintergrund neu rechnen |
 | W3-G01 | Verwandlung (2×4) | Gegenstände | fehlt | nein | nein | wartet auf das Sammelbild, Sebastian (Gemini) |
 | W3-G02 | Kekse-Zustände (1×2) | Gegenstände | fehlt | nein | nein | wartet auf das Sammelbild, Sebastian (Gemini) |
 | W3-G03 | Unterstadt (2×3) | Gegenstände | fehlt | nein | nein | wartet auf das Sammelbild, Sebastian (Gemini) |
