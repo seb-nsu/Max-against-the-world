@@ -309,47 +309,56 @@ def kueche():
 
 @raum("buero_50", 1280)
 def buero():
-    innenraum(tiefe=3.5, hoehe=2.8, wand=(0.88, 0.90, 0.86, 1))
+    """Vorraum vorn (Laufband), in der Mitte ein Flur, der in die Tiefe nicht aufhört
+    (Skript: „Ein Flur, der nicht aufhört“, Schmidt „am Ende des Flurs“, Klone füllen den Flur)."""
+    WANDF = (0.88, 0.90, 0.86, 1)
     TUER = (0.55, 0.57, 0.60, 1)
-
-    def tuer(x, label=None):
-        box(None, x, 3.42, 0.98, 0.04, 2.12, col=DUNKEL)                        # Zarge
-        box(label, x, 3.40, 0.86, 0.04, 2.02, col=TUER)
-        kugel(None, x + 0.3, 3.36, 0.04, 1.0, col=HELL)
-
-    def pflanze(x, label=None):
-        zyl(label, x, 3.1, 0.16, 0.35, col=HELL)
-        kugel(None, x, 3.1, 0.28, 0.65, col=GRUEN)
-
-    # ganz links: Aufzug (Ausgang), Fenster mit Kopierer davor
-    box(None, 0.6, 3.42, 1.05, 0.04, 2.25, col=DUNKEL)
-    box("elevator (exit), two sliding metal doors", 0.35, 3.38, 0.48, 0.04, 2.1, col=(0.70, 0.72, 0.75, 1))
-    box(None, 0.85, 3.38, 0.48, 0.04, 2.1, col=(0.70, 0.72, 0.75, 1))
-    box(None, 1.25, 3.38, 0.08, 0.04, 0.2, z=1.1, col=GELB)
-    box("window: shows the same corridor outside", 2.0, 3.40, 0.8, 0.04, 1.3, z=0.8, col=GLAS)
-    box("photocopier (one)", 2.0, 2.7, 0.9, 0.6, 0.95, col=HELL)
-    box(None, 2.0, 2.7, 0.9, 0.6, 0.08, z=0.95, col=MITTEL)
-    # Mitte: lange Reihe gleicher Türen, je eine Pflanze dazwischen
-    for i, x in enumerate((3.3, 4.7, 7.3, 8.7)):
-        tuer(x, "row of identical grey doors (with frame and handle)" if i == 0 else None)
-        pflanze(x + 0.7)
-    # Farbcode über dem Terminal, ein Wasserspender daneben
-    for i, (c, n) in enumerate([(ROT, "circle on red"), (GRUEN, "triangle on green"), (GELB, "square on yellow")]):
-        box(f"{n} (own field)", 5.5 + i * 0.5, 3.40, 0.42, 0.03, 0.42, z=1.65, col=c)
-    for x in (5.75, 6.25):
-        box(None, x, 3.0, 0.04, 0.04, 0.75, col=DUNKEL)
-    box("small side table + old terminal (green screen)", 6.0, 3.0, 0.7, 0.4, 0.04, z=0.75, col=DUNKEL)
-    box(None, 6.0, 3.05, 0.4, 0.3, 0.35, z=0.79, col=MITTEL)
-    box("ONE water cooler (room for a cup on top)", 6.65, 3.0, 0.35, 0.35, 0.95, col=HELL)
-    zyl(None, 6.65, 3.17, 0.15, 0.4, z=0.95, col=GLAS)
-    # rechts: noch eine Tür, Treppe an der Wand in die Decke
-    tuer(10.1)
+    LICHT = (0.97, 0.97, 0.92, 1)
+    L, R, Y0, Y1 = 4.25, 7.75, 3.0, 60.0          # Flur: linke/rechte Wand, Anfang, Ende
+    box(None, 6, -1, 30, 4.0, 0.02, z=-0.02, col=BODEN)                       # Boden Vorraum
+    box(None, 6, Y0, R - L, Y1 - Y0, 0.02, z=-0.02, col=BODEN)               # Boden Flur
+    box(None, 6, -1, 30, 4.0, 0.08, z=2.8, col=DECKE)                         # Decke Vorraum
+    box(None, 6, Y0, R - L + 0.2, Y1 - Y0, 0.08, z=2.8, col=DECKE)           # Decke Flur
+    box(None, (L - 12) / 2, Y0, L + 12, 0.15, 3.0, col=WANDF)                 # Rückwand links
+    box(None, (R + 18) / 2, Y0, 18 - R, 0.15, 3.0, col=WANDF)                 # Rückwand rechts
+    box(None, L - 0.05, Y0, 0.1, Y1 - Y0, 2.8, col=WANDF)                     # Flurwand links
+    box(None, R + 0.05, Y0, 0.1, Y1 - Y0, 2.8, col=WANDF)                     # Flurwand rechts
+    box(None, 6, Y1, R - L, 0.1, 2.8, col=WANDF)                              # fernes Ende
+    # Flur: gleiche Türen auf beiden Seiten, Pflanzen dazwischen, Deckenlichter
+    n = 0
+    for k in range(18):
+        y = Y0 + 1.0 + k * 1.7
+        for x, d in ((L + 0.02, 1), (R - 0.02, -1)):
+            box("endless row of identical grey doors on both corridor walls" if k == 1 and d == 1 else None,
+                x, y, 0.04, 0.86, 2.02, col=TUER)
+            if k % 3 == 1 and n < 12:
+                zyl("identical potted plant (twelve in all)" if n == 0 else None, x + d * 0.25, y + 0.95, 0.14, 0.32, col=HELL)
+                kugel(None, x + d * 0.25, y + 0.95, 0.24, 0.6, col=GRUEN)
+                n += 1
+        box(None, 6, y, 0.8, 0.4, 0.03, z=2.76, col=LICHT)
+    # Vorraum links: Aufzug (Ausgang), Fenster zu einem weiteren Flur, Kopierer
+    box(None, 1.1, Y0 - 0.02, 1.05, 0.04, 2.25, col=DUNKEL)
+    box("elevator (exit), two sliding metal doors", 0.85, Y0 - 0.04, 0.48, 0.04, 2.1, col=(0.70, 0.72, 0.75, 1))
+    box(None, 1.35, Y0 - 0.04, 0.48, 0.04, 2.1, col=(0.70, 0.72, 0.75, 1))
+    box(None, 1.75, Y0 - 0.04, 0.08, 0.04, 0.2, z=1.1, col=GELB)
+    box("window: outside only another corridor", 2.75, Y0 - 0.03, 1.0, 0.04, 1.3, z=0.9, col=GLAS)
+    box("photocopier with output tray", 3.4, 2.1, 0.9, 0.6, 0.95, col=HELL)
+    box(None, 3.4, 2.1, 0.9, 0.6, 0.08, z=0.95, col=MITTEL)
+    # Vorraum rechts: Farbcode über dem Terminal, ein Wasserspender, Treppe in die Decke
+    for i, (c, n_) in enumerate([(ROT, "circle on red"), (GRUEN, "triangle on green"), (GELB, "square on yellow")]):
+        box(f"{n_} (own field)", 8.35 + i * 0.5, Y0 - 0.03, 0.42, 0.03, 0.42, z=1.65, col=c)
+    for x in (8.6, 9.1):
+        box(None, x, Y0 - 0.4, 0.04, 0.04, 0.75, col=DUNKEL)
+    box("small side table + old terminal (green screen)", 8.85, Y0 - 0.45, 0.7, 0.4, 0.04, z=0.75, col=DUNKEL)
+    box(None, 8.85, Y0 - 0.4, 0.4, 0.3, 0.35, z=0.79, col=MITTEL)
+    box("ONE water cooler (room for a cup on top)", 9.85, Y0 - 0.4, 0.35, 0.35, 0.95, col=HELL)
+    zyl(None, 9.85, Y0 - 0.22, 0.15, 0.4, z=0.95, col=GLAS)
     for i in range(8):
-        box("staircase along the wall, going up INTO the ceiling" if i == 7 else None,
-            10.9 + i * 0.16, 2.9, 0.16, 1.0, 0.35 * (i + 1), col=(0.80, 0.80, 0.80, 1))
-    notiz("long clear floor for a crowd of identical clones", 6.0, 1.0, 0.05)
-    figur("Agent Schmidt", 7.6, 1.2, 1.85)
-    for x, y in ((3.0, 2.0), (4.4, 1.6), (9.4, 1.8), (10.4, 2.2)):
+        box("staircase along the wall, ending in the ceiling" if i == 7 else None,
+            10.6 + i * 0.17, Y0 - 1.0, 0.17, 1.0, 0.35 * (i + 1), col=(0.82, 0.82, 0.82, 1))
+    notiz("walk area: front lobby", 6.0, 0.6, 0.05)
+    figur("Agent Schmidt (at the far end)", 6.0, 14.0, 1.85)
+    for x, y in ((5.2, 4.5), (6.8, 6.0), (5.6, 8.5), (6.5, 11.0), (4.8, 1.8), (7.4, 2.2)):
         figur("clone", x, y, 1.85)
     max_massstab()
 
