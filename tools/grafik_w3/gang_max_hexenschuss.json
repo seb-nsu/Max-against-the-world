@@ -1,0 +1,120 @@
+{
+ "stand": "stand.png",
+ "winkel": "Injured_Walk_inplace.json",
+ "zyklus": [
+  5,
+  75
+ ],
+ "bilder": 8,
+ "huefte": [
+  36,
+  114
+ ],
+ "huefte_fern_dx": -3,
+ "ober": {
+  "zeilen": [
+   114,
+   140
+  ],
+  "spalten": [
+   28,
+   42
+  ],
+  "laenge": 34
+ },
+ "unter": {
+  "zeilen": [
+   140,
+   166
+  ],
+  "spalten": [
+   27,
+   41
+  ],
+  "laenge": 30
+ },
+ "schuh": {
+  "zeilen": [
+   166,
+   185
+  ],
+  "spalten": [
+   24,
+   58
+  ],
+  "gelenk": [
+   33,
+   168
+  ]
+ },
+ "rumpf_bis": 113,
+ "zentrieren": true,
+ "ausschlag": 0.9,
+ "fern_dunkel": 0.6,
+ "rand": 26,
+ "ziel": "gehen.png",
+ "gif": "gehen.gif",
+ "ms": 120,
+ "bein_farben": [
+  [
+   18,
+   78,
+   137
+  ],
+  [
+   38,
+   43,
+   68
+  ],
+  [
+   90,
+   105,
+   136
+  ]
+ ],
+ "schuh_farben": [
+  [
+   228,
+   59,
+   68
+  ],
+  [
+   232,
+   183,
+   150
+  ],
+  [
+   38,
+   43,
+   68
+  ],
+  [
+   115,
+   62,
+   57
+  ],
+  [
+   255,
+   255,
+   255
+  ],
+  [
+   58,
+   68,
+   102
+  ],
+  [
+   90,
+   105,
+   136
+  ]
+ ],
+ "umriss": [
+  38,
+  43,
+  68
+ ],
+ "dicke_ober": 14,
+ "dicke_unter": 12,
+ "dicke_saum": 15
+}
