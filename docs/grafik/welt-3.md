@@ -95,6 +95,7 @@ Standardweg: Konzeptbild mit dem Baustein KONZEPT in Gemini, danach `tools/pixel
 | Max als Ente | FIGUR, 101 Pixel | Max as a duck: a yellow duck about 101 pixels tall wearing a tiny oversized slate blue-grey hoodie (#3a4466) with a turquoise TV print, a tuft of messy dark brown hair over one eye, tiny red sneakers on its webbed feet, confused look, facing right |
 | Max in der Kapsel | FIGUR-GROSS, 236 Pixel breit | Max (Steckbrief) lying asleep on his back inside a sleeping pod with a glass lid, about 236 pixels wide, hoodie and sneakers exactly as in the Steckbrief, slightly drooling smile, three colored cables plugged into the side of the pod, side view, head to the left. Second version: the glass lid lifted, Max sitting up and blinking |
 | Max in der Pfütze | FIGUR-GROSS, 150 Pixel breit | Max (Steckbrief) sitting on the wet ground in a puddle, legs stretched out, soaked hoodie, rain dripping from his hair, annoyed face; the tomcat sits on top of his head, soaking wet, tail hanging down over Max's face, side view facing right. Second version: the same, the tomcat jumping down off the head (Ankunft, danach steht Max mit vom_boden_aufstehen auf) |
+| Passant der Simulation | FIGUR, 196 Pixel | A generic, suspiciously perfect simulation city pedestrian about 196 pixels tall, neat short side-parted dark blond hair, blank pleasant smile, light beige trench coat buttoned up, grey trousers, polished brown shoes, a plain brown briefcase in his far hand, perfectly upright. Neutral standing pose, facing right (zwei, drei Kopien laufen im Gleichschritt über die Stadtstraße, Kopier-Gag wie Wolke und Vögel) |
 | Porträt M.U.T.T.I. | PORTRÄT | M.U.T.T.I.'s head: the upside-down white stand-mixer head with its round orange lens eye, two pink curler antennas and part of the floral apron pattern, strict but caring look, three-quarter view facing right. Second expression: offended, eye narrowed to a slit |
 
 ### Gegenstände
@@ -256,6 +257,7 @@ Diese Bewegungen haben keinen 3D-Clip und werden Bild für Bild gemalt. Bei Effe
 | Testkammer 3 | Lautsprecher spricht | 9 | 4 | Schleife | EFFEKT, about 29x49: only the big round wall speaker, matching the attached background crop: the grille glows soft orange and trembles in rhythm. 4 frames, loops |
 | Testkammer 3 | Tür redet | 9 | 4 | Schleife | EFFEKT, about 20x36: only the small control panel beside the exit door, matching the attached background crop: three tiny green lights blink in a speaking rhythm. 4 frames, loops |
 | Max | Verwandlung in die Ente | 7 | 6 | einmalig | EFFEKT, 96x200: a green digital glitch of square pixels flickering around a standing figure and dissolving, horizontal scan streaks. 6 frames, plays once, the game cross-fades Max and Max als Ente underneath |
+| Büroturm, 50. Stock | Terminal spricht | 7 | 4 | Schleife | EFFEKT, about 30x24: only the small green-screen terminal on the side table, matching the attached background crop: short green text lines scroll up and a cursor blinks while Pixel's hints appear. 4 frames, loops |
 
 ### Posenbögen
 
@@ -294,6 +296,7 @@ Baustein POSENBOGEN, das fertige Konzeptblatt der Figur anhängen (bei Max sein 
 | Opa als Hologramm | Konzeptblatt Opa als Hologramm | 2 | Flehen | Two poses of the tiny hologram grandpa: (1) kneeling, both hands raised pleading; (2) hands clasped, looking up |
 | Morphäus 3 | Konzeptblatt Morphäus, Pixels Figurenblatt | 1 | Pixel auffangen und halten | One pose of the calm tall man holding the soaking wet tomcat in both arms against his chest, the cat smug and annoyed |
 | Max Labor | Max' Figurenblatt, Portalgerät | 2 | Portalgerät abfeuern | Two poses of the boy Max: (1) aiming the white handheld gadget with both hands, one eye squinted; (2) a spark at the tip, leaning back from the recoil, surprised |
+| Detektiv Deckert 2 | Konzeptblatt Detektiv Deckert | 3 | Regen zählen (Ruhe-Schleife unter dem Vordach) | Three poses of the weary detective under the awning: (1) looking up at the rain, counting, one finger raised; (2) two fingers raised, lips moving; (3) writing a tally mark in the notepad |
 
 ### Ablauf und Kosten
 

@@ -28,7 +28,7 @@ Opa steht ihre feste Beschreibung wortgleich in der Zeile CHARACTER LOCK; den Fi
 
 # Shotliste
 
-122 Shots, davon 122 sicher offen („–“: Stand nicht automatisch prüfbar). Kürzel:
+125 Shots, davon 125 sicher offen („–“: Stand nicht automatisch prüfbar). Kürzel:
 R Raum, F Figur, P Posenbogen, B Bewegung, G Gegenstände, N Nahansicht, K Figurenbogen.
 
 | Shot | Bild | Stand |
@@ -67,6 +67,7 @@ R Raum, F Figur, P Posenbogen, B Bewegung, G Gegenstände, N Nahansicht, K Figur
 | W3-F19 | Max als Ente | offen |
 | W3-F20 | Max in der Kapsel | offen |
 | W3-F21 | Max in der Pfütze | offen |
+| W3-F22 | Passant der Simulation | offen |
 | W3-P01 | Max Unterstadt | offen |
 | W3-P02 | Max Büroturm | offen |
 | W3-P03 | Max Welt 3 | offen |
@@ -98,6 +99,7 @@ R Raum, F Figur, P Posenbogen, B Bewegung, G Gegenstände, N Nahansicht, K Figur
 | W3-P29 | Opa als Hologramm | offen |
 | W3-P30 | Morphäus 3 | offen |
 | W3-P31 | Max Labor | offen |
+| W3-P32 | Detektiv Deckert 2 | offen |
 | W3-B01 | Schwarze Katze: Zweimal vorbeilaufen | offen |
 | W3-B02 | Max als Ente: Watscheln | offen |
 | W3-B03 | Pixel: Schacht kriechen | offen |
@@ -143,6 +145,7 @@ R Raum, F Figur, P Posenbogen, B Bewegung, G Gegenstände, N Nahansicht, K Figur
 | W3-B43 | Testkammer 3: Lautsprecher spricht | offen |
 | W3-B44 | Testkammer 3: Tür redet | offen |
 | W3-B45 | Max: Verwandlung in die Ente | offen |
+| W3-B46 | Büroturm, 50. Stock: Terminal spricht | offen |
 | W3-G01 | Verwandlung (2×4) | offen |
 | W3-G02 | Kekse-Zustände (1×2) | offen |
 | W3-G03 | Unterstadt (2×3) | offen |
@@ -741,6 +744,18 @@ KEEP: everything outside that area stays pixel-identical: same character, pose, 
 NEGATIVE: no new objects, no changed camera or framing, no style change, no text
 ```
 
+## Passant der Simulation
+
+**Shot W3-F22**
+
+**Anhängen:** Max' Konzeptblatt als Stil- und Größenvorlage
+
+```text
+STYLE: Character concept sheet in exactly the same style as the attached character sheet of the boy Max: same line weight, same flat cel shading, same light from upper left, solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no text, no ground shadow. Exactly one character, full body, strict side view facing right, standing on a flat baseline, legs clearly visible. Draw only this new character: do not copy any heads, legs, shoes or other parts of the boy Max from the attached sheet into the image.
+SUBJECT: A generic, suspiciously perfect simulation city pedestrian about 104 percent of the boy Max's height, neat short side-parted dark blond hair, blank pleasant smile, light beige trench coat buttoned up, grey trousers, polished brown shoes, a plain brown briefcase in his far hand, perfectly upright. Neutral standing pose, facing right.
+NEGATIVE: no second character, no parts of the boy Max from the reference unless this is Max, no props that are not described, no environment, no floor, no ground shadow, no checkerboard, no frames, panels or cell borders, no text, labels or numbers, no motion blur, no ghosting, no duplicated or extra limbs, no change to face, proportions, clothing or colors, no photorealism, no 3D render, no watermark
+```
+
 # Posenbögen
 
 Je Bogen das angegebene Blatt anhängen (das fertige Konzeptbild der Figur aus Gemini, bei Max sein
@@ -1238,6 +1253,22 @@ STYLE: Pose sheet in exactly the same style, colors and proportions as the attac
 SUBJECT: Max exactly as on the attached character sheet, unchanged.
 CHARACTER LOCK (word for word; where SUBJECT or POSES say otherwise, they win): Max, a lanky 16-year-old boy, the reference height for every other character, head about a quarter of his height, slight slouch with hanging shoulders. Messy dark brown hair (#733e39, shadow #3e2731, highlight #b86f50) with shaggy strands falling over his forehead and eyes. Fair skin (#e8b796, shadow #c28569), sleepy half-closed eyes, lopsided smirk, a few freckles. Oversized dark slate blue-grey hoodie (#3a4466, shadow #262b44, highlight #5a6988), hood down, sleeves partly over his hands, uneven drawstrings, a tiny retro TV print with a turquoise screen (#2ce8f5) on the chest. Dark blue jeans (#124e89) slightly too long and rolled up at the hem. Worn red sneakers (#e43b44, shadow #a22633) with white soles (#ffffff), one lace untied. Dark outline #262b44, never pure black.
 POSES (left to right): Two poses of the boy Max: (1) aiming the white handheld gadget with both hands, one eye squinted; (2) a spark at the tip, leaning back from the recoil, surprised.
+END POSE: the motion starts and ends in the neutral pose of the attached sheet; do not draw that pose again, but every pose must be able to return to it with the feet in the same place unless a pose says the feet move.
+CAMERA: static, strict side view as on the attached sheet, same scale and the same flat baseline in every pose, no zoom, no pan.
+NEGATIVE: no second character, no parts of the boy Max from the reference unless this is Max, no props that are not described, no environment, no floor, no ground shadow, no checkerboard, no frames, panels or cell borders, no text, labels or numbers, no motion blur, no ghosting, no duplicated or extra limbs, no change to face, proportions, clothing or colors, no photorealism, no 3D render, no watermark, no in-between blur, no speed lines, no smear frames, no sliding feet, no change of scale or baseline between poses, no camera movement, no zoom, no perspective change, no morphing, no extra poses beyond the ones listed
+```
+
+## Detektiv Deckert 2
+
+**Shot W3-P32**
+
+**Anhängen:** Konzeptblatt Detektiv Deckert · **Posen:** 3 · **Wofür:** Regen zählen (Ruhe-Schleife unter dem Vordach)
+
+```text
+STYLE: Pose sheet in exactly the same style, colors and proportions as the attached character sheet: same character, same head size, same hair and clothing colors, same line weight and flat cel shading, light from upper left. The poses side by side in one row, evenly spaced with clear empty space between them, all at the same scale on one flat baseline, each a frozen still pose, no motion blur, no ghosting, no speed lines, no duplicated limbs. Solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no text, no ground shadow, no frames or panels.
+SUBJECT: the character exactly as on the attached character sheet: same face, head size, proportions, costume and colors, nothing redesigned.
+CHARACTER (appearance only, word for word from its sheet; ignore the pose in it): Detektiv Deckert, a weary middle-aged detective about 106 percent of the boy Max's height, stubbly chin, tired droopy eyes. Long beige trench coat, grey wide-brimmed hat with rain dripping from the brim, dark trousers. A small notepad in his left hand, a pencil-sized flashlight in his right. Neutral standing pose, testing stare, facing right. No gun, no dark long coat with high collar, not a likeness of any actor.
+POSES (left to right): Three poses of the weary detective under the awning: (1) looking up at the rain, counting, one finger raised; (2) two fingers raised, lips moving; (3) writing a tally mark in the notepad.
 END POSE: the motion starts and ends in the neutral pose of the attached sheet; do not draw that pose again, but every pose must be able to return to it with the feet in the same place unless a pose says the feet move.
 CAMERA: static, strict side view as on the attached sheet, same scale and the same flat baseline in every pose, no zoom, no pan.
 NEGATIVE: no second character, no parts of the boy Max from the reference unless this is Max, no props that are not described, no environment, no floor, no ground shadow, no checkerboard, no frames, panels or cell borders, no text, labels or numbers, no motion blur, no ghosting, no duplicated or extra limbs, no change to face, proportions, clothing or colors, no photorealism, no 3D render, no watermark, no in-between blur, no speed lines, no smear frames, no sliding feet, no change of scale or baseline between poses, no camera movement, no zoom, no perspective change, no morphing, no extra poses beyond the ones listed
@@ -2067,6 +2098,23 @@ EFFECT: A green digital glitch of square pixels flickering around a standing fig
 FRAMES: 6 frames side by side, about 0.6 s at 10 frames per second, plays once, each frame 96x200 pixels in the game.
 SPACING: divide the image into 6 equal columns, one frame per column, with a clear strip of empty magenta between neighbouring frames, at least as wide as the character's head; every part of a frame, including raised arms, tools, tongs, tails, capes and effects, stays completely inside its own column and never reaches into or overlaps the next frame. Draw the character smaller if needed to keep the gaps, the same size in every frame.
 END: the last frame is the calm end state of the effect.
+CAMERA: static, no zoom, no pan, the effect stays centered in every frame.
+NEGATIVE: no characters unless named, no background scene, no text, no frames or panels, no checkerboard, no motion blur, no speed lines
+```
+
+## Büroturm, 50. Stock: Terminal spricht
+
+**Shot W3-B46**
+
+**Anhängen:** den passenden Ausschnitt aus dem fertigen Hintergrund (Büroturm, 50. Stock); das Ergebnis danach mit `tools/pixelieren.py` auf die Farben des Raums bringen · **Bilder:** 4 · **Ablauf:** Schleife
+
+```text
+STYLE: Visual effect frames for a 2D game, frames side by side in one row, evenly spaced, frame count as given in the motif, every frame the same size with the effect centered, flat cel shading, solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no frames or panels, no text.
+EFFECT: Only the small green-screen terminal on the side table, matching the attached background crop: short green text lines scroll up and a cursor blinks while the tomcat's hints appear.
+OVERLAY: the crop only shows where the effect sits, its size, light and colors; draw only the moving part named above on the magenta background, not the walls, furniture or anything else from the crop, so it can be laid exactly over the painted spot.
+FRAMES: 4 frames side by side, about 0.4 s at 10 frames per second, loops seamlessly: the last frame leads back into the first, each frame 30x24 pixels in the game.
+SPACING: divide the image into 4 equal columns, one frame per column, with a clear strip of empty magenta between neighbouring frames, at least as wide as the character's head; every part of a frame, including raised arms, tools, tongs, tails, capes and effects, stays completely inside its own column and never reaches into or overlaps the next frame. Draw the character smaller if needed to keep the gaps, the same size in every frame.
+END: no separate end frame, the loop closes.
 CAMERA: static, no zoom, no pan, the effect stays centered in every frame.
 NEGATIVE: no characters unless named, no background scene, no text, no frames or panels, no checkerboard, no motion blur, no speed lines
 ```

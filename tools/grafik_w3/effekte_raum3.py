@@ -138,7 +138,28 @@ def ente():
     speichern("W3-B45_verwandlung_figur", bilder, 70, None, 0, 0, schleife=False)
 
 
-radio(); kuckucksuhr(); kartenleser()
+# Terminal im Büroturm zeigt Pixels Hinweise: grüne Zeilen laufen über den Bildschirm, Cursor blinkt
+def terminal():
+    r = raum("W3-R08_buero_50"); x0, y0, W, H = 307, 205, 30, 24
+    g = r[y0:y0 + H, x0:x0 + W].copy()
+    bs = (0x26, 0x3a, 0x2c); gruen = (0x63, 0xc7, 0x4d); hell = (0xb6, 0xff, 0x9a)
+    rnd = random.Random(4)
+    zeilen = [[rnd.randint(4, 15), rnd.randint(0, 3)] for _ in range(8)]
+    bilder = []
+    for f in range(4):
+        b = g.copy(); b[3:20, 4:26, :3] = bs
+        for i in range(4):
+            laenge, ein = zeilen[(i + f) % len(zeilen)]
+            y = 5 + i * 4
+            b[y, 5 + ein:5 + ein + laenge, :3] = gruen
+        cy = 5 + 3 * 4 + 2
+        if f % 2 == 0:
+            b[cy:cy + 2, 6:8, :3] = hell
+        bilder.append(b)
+    speichern("W3-B46_terminal_buero", bilder, 180, "W3-R08_buero_50", x0, y0)
+
+
+radio(); kuckucksuhr(); kartenleser(); terminal()
 lautsprecher("W3-R09_testkammer_1", "W3-B41_lautsprecher_kammer1", 463, 49, 16, 8)
 lautsprecher("W3-R10_testkammer_2", "W3-B42_lautsprecher_kammer2", 463, 49, 16, 8)
 lautsprecher("W3-R11_testkammer_3", "W3-B43_lautsprecher_kammer3", 551, 81, 11, 21)
