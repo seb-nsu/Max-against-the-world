@@ -247,6 +247,7 @@ Diese Bewegungen haben keinen 3D-Clip und werden Bild für Bild gemalt. Bei Effe
 | Glastür Büroturm | Reden | 5 | 4 | Schleife | EFFEKT, about 32x24: only the small grey intercom plate beside the glass entrance door, matching the attached background crop: its speaker holes light up green in rhythm as if talking, a small LED blinks. 4 frames, loops, the plate stays in place |
 | Bürokopierer | Rattern | 6 | 4 | Schleife | EFFEKT, about 64x56: only the grey office photocopier, matching the attached background crop: it shakes a little, a white light bar runs under the lid, a sheet flutters in the output tray. 4 frames, loops, the base stays in place |
 | Testkammer 3 | Tür und Lautsprecher | 9 | 4 | einmalig | EFFEKT, about 48x48: only the round wall speaker of the white test chamber, matching the attached background crop: the grille snaps shut like a closed mouth, a small spark, then it sits sulking. 4 frames, plays once, the wall stays in place |
+| Piepsi | Fahren | 13 | 4 | Schleife | From the Piepsi reference sprite: he drives forward on his three little wheels, the bucket body bobbing and tilting slightly from side to side, bowler hat wobbling. 4 frames, loops, facing right, in place |
 
 ### Posenbögen
 
