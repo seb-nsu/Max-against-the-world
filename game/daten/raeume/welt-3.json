@@ -700,7 +700,7 @@
    "script_name": "Apothekengasse",
    "name_key": "UI_RAUM_APOTHEKENGASSE",
    "groesse": [
-    1280,
+    640,
     360
    ],
    "hintergrund": "res://grafik/platzhalter/raum_apothekengasse.png",
