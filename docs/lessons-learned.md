@@ -136,6 +136,8 @@ Regeln für parallele Threads:
 
 Varianten entstehen im selben Chat aus dem Grundbild. Gemini verändert dabei trotzdem Kleinigkeiten (Menge, Pflaster, Verschiebung). Deshalb **nur die geänderte Stelle nach ihrem Umriss** ins Grundbild setzen, nie als Rechteck (sonst Kante an der Agora-Statue). Dann springt beim Wechsel nichts.
 
+Welt 3 (20. November 2026): Die Farbdifferenz allein findet auch Geminis Verschiebungen im ganzen Bild. **Die Suche auf grobe Rechtecke beschränken** (`BEREICHE` in `tools/grafik_w3/raeume_pixelieren.py`) und innerhalb davon nach Umriss übernehmen; wo der Umriss zerfällt (gekippter Eimer), das ganze Rechteck nehmen. **Eine gemeinsame Palette für Grundbild und Varianten**, sonst verfärbt sich beim Wechsel der ganze Raum. Zustände, die unabhängig voneinander kommen (Schnee, Kaffee), als eigene Varianten plus Kombination; `hintergrund_nach` nimmt dafür auch Schalter und „A+B“.
+
 ### Tests und CI
 
 - Screenshot-Referenzen weichen zwischen Windows und dem Mesa-Renderer der CI um mehr als 0,5 % ab. **Referenzen nur unter Linux oder aus dem CI-Render aufnehmen.** Der Welt-Einbau pusht nur die Raumgrafik, die Referenzen nimmt ein Thread unter Linux auf.
@@ -415,3 +417,17 @@ Komplett-Review von Prolog, Welt 1 und Welt 2 mit sieben Prüfrollen (Bericht: `
 - **Raumzustände, die Gemini im Ganzen neu malt** (andere Farben, grauer Sockel), lassen sich nicht nur an der Stelle einsetzen: `zustand_einsetzen.py` findet dann überall Unterschiede. Besser den Zustand als Bearbeitung des Grundbilds bestellen („change only the energy cell … everything else exactly identical“), dann pixeln und nur die Zelle einsetzen. Sebastians Fassung bleibt als Alternative liegen.
 - **Sprites, die breiter als das halbe Vorlagenbild sind** (Auto in Seitenansicht), trifft dieselbe Bodenlinien-Falle wie breite Posen: vorher auf dreifache Breite polstern.
 - **Schrift auf schräg liegendem Papier** (Nahansichten): Gemini malt trotz „blank“ oft Schein-Schrift und legt die Seiten schräg. Die Schreibfläche flach zeichnen (Papier, Linien, Schrift) und perspektivisch auf ihr Viereck legen; die Schrift in vierfacher Größe setzen und erst nach der Perspektive auf Pixel bringen. Einzelne Buchstaben in schrägen Tabellen mindestens in Größe 20, sonst kippen E und T. Ziffern weiter aus der eigenen Tabelle (4 wurde schräg zur 9). Schein-Kritzelei an Fliesenwänden: Wand aus sauberen Paneelen mit gleicher Fugenlage nachbauen statt ausmalen. Schein-Inhalt auf schrägen Formularen nur in den Feldern entfernen und mit dem nächsten echten Papierpixel derselben Seite füllen (sonst ziehen Ränder, Schatten und Glanz hinein); übrig gebliebene kurze Linienstücke danach mit weg. Gemalte Tabellenlinien, die man beim Leeren trifft, an den gemessenen Stellen der Nachbarspalte neu ziehen.
+
+### Einbau (20. November 2026)
+
+- **Reihenfolge bei neuen Figuren-IDs:** erst `tools/spieldaten.py`, dann den `UI_OBJ_`-Schlüssel in `uebersetzung/ui.csv`, dann `tools/skript_export.py` (schreibt `texte.csv`), erst danach `godot_raeume.py`. Sonst meldet es den Schlüssel als fehlend, obwohl er in `ui.csv` steht.
+- **Raum nach Layout bauen:** `godot --headless --editor --path game -- --cq-bauen --cq-layout=<raum,…>` legt neue Figuren und Klickflächen an; eine ersetzte Figur (Straßenmusiker) bleibt als alter Knoten in der Szene und muss von Hand raus.
+- **Klickflächen ohne `name:`** und ohne Bezug im Skript landen nicht im Bauplan (Lautsprecher in Kammer 2).
+- `godot_raeume.py` schreibt auch unter Linux alle Platzhalter neu; nur die betroffenen behalten.
+- **Läufe aus dem Teile-Rig auf die Standhöhe bringen:** Max' Hinken war 8 % größer als sein Stand-Sprite. `figuren_einbau.py` verkleinert Gangarten, die größer sind; Kriechen und Tiergänge sind zu Recht flacher und bleiben. Gangarten stehen auf der Fußlinie, statt nach Umriss ausgerichtet zu werden.
+- **Effekt-Ausschnitte aus einer anderen Pixelfassung:** Nur die Pixel zeigen, die sich zwischen den Bildern ändern, und diese auf die Palette des eingebauten Hintergrunds bringen (`effekte_einbau.py`). Die „lage“ aus Sebastians Probe passte bei allen 17 Ausschnitten ohne Versatz.
+- **Raum-Skala aus einer Zielgröße rechnen:** Max' Stand-Sprite ist 185 px hoch; an der hinteren Laufkante gilt Skala mal Tiefe. Für „gut 100 px an der Glastür“ ergab 0,8 × 0,69 = 0,55 genau 104 px; im Spiel per `c.scale` nachgemessen statt geschätzt.
+- **Im Hintergrund gemalte Gegenstände:** Das Prop bekommt ein durchsichtiges Bild in Platzhaltergröße (`gegenstaende_einbau.py`, `GEMALT`), sonst liegt der orange Platzhalter über der gemalten Zelle. Die Varianten des Hintergrunds zeigen dann den richtigen Zustand.
+- **figuren_einbau.py erneut laufen lassen:** Vorher `max` und `pixel` (Bild und JSON) aus Git zurückholen, weil das Skript deren bestehende Sheets erweitert.
+- **Effekte, die mitsprechen** (Sprechanlage, Lautsprecher): `spricht: <Kürzel>` im Layout zeigt die Bildfolge nur, solange `Spiel.sagen` diese Figur sprechen lässt. Bedingungen kennen jetzt auch „A|B“ (eins von beiden), für Tag- und Nachtfassungen derselben Anzeige.
+- **Gesten-Tabellen:** `REDE_MAX` in `gesten_einsatz.gd` hat Vorrang vor den Welt-Tabellen; eine Zeile, die eine eigene Max-Geste bekommt, muss dort raus. Bei `WARTEN` gilt der erste passende Eintrag, darum steht Max' Rücken-Geste vor seinem allgemeinen Eintrag.

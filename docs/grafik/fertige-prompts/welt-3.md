@@ -28,7 +28,7 @@ Opa steht ihre feste Beschreibung wortgleich in der Zeile CHARACTER LOCK; den Fi
 
 # Shotliste
 
-125 Shots, davon 125 sicher offen („–“: Stand nicht automatisch prüfbar). Kürzel:
+125 Shots, davon 108 sicher offen („–“: Stand nicht automatisch prüfbar). Kürzel:
 R Raum, F Figur, P Posenbogen, B Bewegung, G Gegenstände, N Nahansicht, K Figurenbogen.
 
 | Shot | Bild | Stand |
@@ -47,24 +47,24 @@ R Raum, F Figur, P Posenbogen, B Bewegung, G Gegenstände, N Nahansicht, K Figur
 | W3-R12 | Kern von M.U.T.T.I. | offen |
 | W3-R13 | Code-Sicht | offen |
 | W3-F01 | M.U.T.T.I. | offen |
-| W3-F02 | Morphäus | offen |
-| W3-F03 | Orakel-Oma | offen |
-| W3-F04 | Agent Schmidt | offen |
-| W3-F05 | Schmidt-Klon | offen |
-| W3-F06 | Roboter-Hausmeister | offen |
-| W3-F07 | Detektiv Deckert | offen |
-| W3-F08 | Herr Vier | offen |
-| W3-F09 | Kabel-Kalle | offen |
-| W3-F10 | Bernd | offen |
-| W3-F11 | Rebellin | offen |
-| W3-F12 | Rebell | offen |
-| W3-F13 | Piepsi | offen |
-| W3-F14 | Opa als Hologramm | offen |
-| W3-F15 | Weinender Mann | offen |
-| W3-F16 | Frau mit Regenschirm | offen |
+| W3-F02 | Morphäus | im Spiel |
+| W3-F03 | Orakel-Oma | im Spiel |
+| W3-F04 | Agent Schmidt | im Spiel |
+| W3-F05 | Schmidt-Klon | im Spiel |
+| W3-F06 | Roboter-Hausmeister | im Spiel |
+| W3-F07 | Detektiv Deckert | im Spiel |
+| W3-F08 | Herr Vier | im Spiel |
+| W3-F09 | Kabel-Kalle | im Spiel |
+| W3-F10 | Bernd | im Spiel |
+| W3-F11 | Rebellin | im Spiel |
+| W3-F12 | Rebell | im Spiel |
+| W3-F13 | Piepsi | im Spiel |
+| W3-F14 | Opa als Hologramm | im Spiel |
+| W3-F15 | Weinender Mann | im Spiel |
+| W3-F16 | Frau mit Regenschirm | im Spiel |
 | W3-F17 | Straßenmusiker im Regen | offen |
-| W3-F18 | Schwarze Katze | offen |
-| W3-F19 | Max als Ente | offen |
+| W3-F18 | Schwarze Katze | im Spiel |
+| W3-F19 | Max als Ente | im Spiel |
 | W3-F20 | Max in der Kapsel | offen |
 | W3-F21 | Max in der Pfütze | offen |
 | W3-F22 | Passant der Simulation | offen |
@@ -2248,7 +2248,7 @@ NEGATIVE: no text, letters, numbers or symbols that could be read, no characters
 
 ```text
 STYLE: Close-up illustration for a 2D point-and-click adventure game in the style of classic 1990s adventure games, warm hand-painted look, 16:9, 640x360, the object fills the whole frame, no floor, no characters, light from upper left. No text, no letters, no numbers, all lines and fields left blank.
-SUBJECT: Close-up of a laminated sheet pinned to a riveted metal hull plate with two magnets, filling the frame; a hand-drawn table with two columns and eight rows: a blank header row, then seven rows where the left cell holds small cat paw prints in groups (single paw, short paw stroke, two paws, stroke and paw) and the right cell is empty; below the table one short empty line in small print; a brown coffee ring stain on one corner, the laminate reflecting a little dim light.
+SUBJECT: Close-up of a single laminated sheet, freshly printed by a small robot printer, lying flat on a plain neutral surface, filling the frame (an inventory item, not pinned to a wall); a printed table with two columns and eight rows: a blank header row, then seven rows where the left cell holds small cat paw prints in groups (single paw, short paw stroke, two paws, stroke and paw) and the right cell is empty; below the table one short empty line in small print; a brown coffee ring stain on one corner, the laminate reflecting a little dim light.
 PALETTE: dim cyberpunk interior palette of deep navy and concrete grey, bright accents only in neon magenta and neon cyan from screens and tubes, damp walls, a few drips, no street, no sky. Color anchors, approximate: deep navy #181425, concrete grey #3a4466, damp blue-grey #5a6988, neon magenta #ff4fd8, neon cyan #3ff7ff.
 NEGATIVE: no text, letters, numbers or symbols that could be read, no characters, no hands unless described, no floor, no frame, no photorealism, no watermark
 ```

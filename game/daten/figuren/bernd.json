@@ -1,0 +1,46 @@
+{
+ "bild": [
+  74,
+  70
+ ],
+ "animationen": {
+  "idle": {
+   "von": 0,
+   "bilder": 3,
+   "ms": 320,
+   "schleife": true,
+   "folge": [
+    0,
+    1,
+    2,
+    1
+   ]
+  },
+  "talk": {
+   "von": 3,
+   "bilder": 3,
+   "ms": 160,
+   "schleife": true,
+   "folge": [
+    0,
+    1,
+    0,
+    2
+   ]
+  },
+  "davonschweben": {
+   "von": 6,
+   "bilder": 4,
+   "ms": 160,
+   "schleife": false,
+   "folge": [
+    0,
+    1,
+    1,
+    2,
+    3,
+    3
+   ]
+  }
+ }
+}

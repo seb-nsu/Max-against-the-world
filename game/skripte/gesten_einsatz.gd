@@ -20,13 +20,15 @@ extends RefCounted
 ##           spieler_ruhe: nur, wenn die Figur gerade gesteuert wird und der Spieler so viele
 ##           Sekunden nichts getan hat (Max ist die Spielfigur).
 ##           halten: [min, max] Sekunden: Schleife so lange halten statt eines Durchgangs.
-## Bedingungen: raum (ID oder Liste), abschnitt, nach (Rätsel gelöst), vor (Rätsel offen).
-## Die Tabellen der Welten stehen in gesten_welt_1.gd und gesten_welt_2.gd (gleicher Aufbau), damit
+## Bedingungen: raum (ID oder Liste), abschnitt, nach (Rätsel gelöst), vor (Rätsel offen),
+## schalter (Zustand.ist, etwa W3_HEXENSCHUSS).
+## Die Tabellen der Welten stehen in gesten_welt_1.gd bis gesten_welt_3.gd (gleicher Aufbau), damit
 ## parallel daran gearbeitet werden kann; hier stehen der Prolog, die Zwischenspiele und Max und
 ## Pixel über alle Welten. Im Testmodus und in übersprungenen Szenen spielt nichts davon
 ## (CQFigur.gesten_aus()).
 
-const WELTEN := [preload("res://skripte/gesten_welt_1.gd"), preload("res://skripte/gesten_welt_2.gd")]
+const WELTEN := [preload("res://skripte/gesten_welt_1.gd"), preload("res://skripte/gesten_welt_2.gd"),
+	preload("res://skripte/gesten_welt_3.gd")]
 ## Standardabstand der Warte-Gesten in Sekunden
 const ABSTAND := [15.0, 45.0]
 ## Frühestens so viele Sekunden nach dem letzten Satz im Raum
@@ -388,9 +390,7 @@ const REDE_MAX := {
 	"W2_RING_MAX_0250": ["MAX", "talk_hand", "statt_talk"],
 	"W2_PARA_MAX_0170": ["MAX", "talk_hand", "statt_talk"],
 	"W2_PARA_MAX_0360": ["MAX", "talk_hand", "statt_talk"],
-	"W3_ANK_MAX_0020": ["MAX", "talk_hand", "statt_talk"],
 	"W3_ANK_MAX_0060": ["MAX", "talk_hand", "statt_talk"],
-	"W3_ANK_MAX_0100": ["MAX", "talk_hand", "statt_talk"],
 	"W3_STR_MAX_0040": ["MAX", "talk_hand", "statt_talk"],
 	"W3_STR_MAX_0140": ["MAX", "talk_hand", "statt_talk"],
 	"W3_STR_MAX_0200": ["MAX", "talk_hand", "statt_talk"],
@@ -411,14 +411,12 @@ const REDE_MAX := {
 	"W3_TEST_MAX_0040": ["MAX", "talk_hand", "statt_talk"],
 	"W3_TEST_MAX_0060": ["MAX", "talk_hand", "statt_talk"],
 	"W3_TEST_MAX_0130": ["MAX", "talk_hand", "statt_talk"],
-	"W3_TEST_MAX_0320": ["MAX", "talk_hand", "statt_talk"],
 	"W3_TEST_MAX_0350": ["MAX", "talk_hand", "statt_talk"],
 	"W3_TEST_MAX_0380": ["MAX", "talk_hand", "statt_talk"],
 	"W3_APO_MAX_0110": ["MAX", "talk_hand", "statt_talk"],
 	"W3_APO_MAX_0160": ["MAX", "talk_hand", "statt_talk"],
 	"W3_APO_MAX_0220": ["MAX", "talk_hand", "statt_talk"],
 	"W3_APO_MAX_0410": ["MAX", "talk_hand", "statt_talk"],
-	"W3_SOFA_MAX_0500": ["MAX", "talk_hand", "statt_talk"],
 	"W3_SOFA_MAX_0550": ["MAX", "talk_hand", "statt_talk"],
 	"W3_SIM_MAX_0020": ["MAX", "talk_hand", "statt_talk"],
 	"W3_SIM_MAX_0060": ["MAX", "talk_hand", "statt_talk"],
@@ -459,14 +457,11 @@ const REDE_MAX := {
 	"W3_TURM_MAX_0510": ["MAX", "talk_hand", "statt_talk"],
 	"W3_TURM_MAX_0570": ["MAX", "talk_hand", "statt_talk"],
 	"W3_TERM_MAX_0040": ["MAX", "talk_hand", "statt_talk"],
-	"W3_TERM_MAX_0080": ["MAX", "talk_hand", "statt_talk"],
 	"W3_TERM_MAX_0110": ["MAX", "talk_hand", "statt_talk"],
-	"W3_TERM_MAX_0150": ["MAX", "talk_hand", "statt_talk"],
 	"W3_TERM_MAX_0200": ["MAX", "talk_hand", "statt_talk"],
 	"W3_TERM_MAX_0270": ["MAX", "talk_hand", "statt_talk"],
 	"W3_TERM_MAX_0330": ["MAX", "talk_hand", "statt_talk"],
 	"W3_TERM_MAX_0380": ["MAX", "talk_hand", "statt_talk"],
-	"W3_BAS_MAX_0060": ["MAX", "talk_hand", "statt_talk"],
 	"W3_BAS_MAX_0130": ["MAX", "talk_hand", "statt_talk"],
 	"W3_BAS_MAX_0190": ["MAX", "talk_hand", "statt_talk"],
 	"W3_BAS_MAX_0310": ["MAX", "talk_hand", "statt_talk"],
@@ -490,7 +485,6 @@ const REDE_MAX := {
 	"W3_KERN_MAX_0420": ["MAX", "talk_hand", "statt_talk"],
 	"W3_KERN_MAX_0470": ["MAX", "talk_hand", "statt_talk"],
 	"W3_KERN_MAX_0580": ["MAX", "talk_hand", "statt_talk"],
-	"W3_ENDE_MAX_0120": ["MAX", "talk_hand", "statt_talk"],
 	"W4_TEST_MAX_0280": ["MAX", "talk_hand", "statt_talk"],
 	"W4_RAU_MAX_0340": ["MAX", "talk_hand", "statt_talk"],
 	"W4_GLUE_MAX_0070": ["MAX", "talk_hand", "statt_talk"],
@@ -553,7 +547,10 @@ const RUHE := {}
 
 const WARTEN := {
 	# Max ist die Spielfigur: nur, wenn der Spieler eine Weile nichts tut (Zurufe kommen nach 45 s)
-	"max": [{gesten = ["kopf_kratzen", "gaehnen"], abstand = [15.0, 30.0], spieler_ruhe = 25.0}],
+	# Welt 3 nach dem Hexenschuss: Max hält sich ab und zu den Rücken (Pixel zählt mit, W3_BAS_PIX_1330)
+	"max": [{gesten = ["ruecken_halten"], abschnitt = "welt-3", schalter = "W3_HEXENSCHUSS", abstand = [12.0, 25.0],
+		spieler_ruhe = 8.0},
+		{gesten = ["kopf_kratzen", "gaehnen"], abstand = [15.0, 30.0], spieler_ruhe = 25.0}],
 	# Pixel im Sitzen (character_pixel.gd, warte_geste_erlaubt)
 	"pixel": [{gesten = ["putzen", "schwanz_zucken", "schwanz_zucken"], abstand = [10.0, 25.0]}],
 	"opa": [{gesten = ["kopf_kratzen"], raum = "dachboden", abstand = [20.0, 40.0]}],
@@ -646,5 +643,7 @@ static func passt(e: Dictionary, raum: String) -> bool:
 	if e.has("nach") and not Zustand.geloest(e.nach):
 		return false
 	if e.has("vor") and Zustand.geloest(e.vor):
+		return false
+	if e.has("schalter") and not Zustand.ist(e.schalter):
 		return false
 	return true

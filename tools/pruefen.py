@@ -75,7 +75,7 @@ OHNE_ZEHNER = {"HINT", "ERS", "WDH", "PLA"}  # Szenen-Codes mit eigenem Nummerns
 MAX_ZEICHEN = 120
 MAX_BLASE = 140
 # Festgelegte Zahl der Nahansichten im ganzen Spiel (entscheidungen.md)
-NAHANSICHTEN_GESAMT = 14
+NAHANSICHTEN_GESAMT = 15
 
 fehler, warnungen, hinweise = [], [], []
 

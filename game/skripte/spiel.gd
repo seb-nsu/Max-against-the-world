@@ -12,6 +12,9 @@ extends Node
 ## nicht gezeigt. So läuft der Lösungspfad headless ohne Mausklicks durch.
 
 signal zeile_gesagt(schluessel: String)
+## Kürzel der Figur, die gerade spricht (leer, wenn niemand): Effekte mit „spricht“ im Layout
+## laufen nur dann (Sprechanlage der Glastür, W3-B34)
+var spricht := ""
 signal prolog_beendet
 signal figur_gewechselt(neu: PopochiuCharacter)
 ## Eine Ersatzzeile kam (Telemetrie: Ersatzzeilen und Fehlklicks je Objekt)
@@ -230,6 +233,7 @@ func sagen(kuerzel: String, zeile: String) -> void:
 		if kuerzel == "NAR":
 			await _erzaehlen(tr(b))
 			continue
+		spricht = kuerzel
 		var c := figur(kuerzel)
 		var quelle: PopochiuClickable = null
 		if not is_instance_valid(c):
@@ -245,12 +249,21 @@ func sagen(kuerzel: String, zeile: String) -> void:
 		if is_instance_valid(quelle):
 			await _objekt_sagt(kuerzel, quelle, blasen_text(zeile, b))
 			continue
+		# Stimme aus einem Lautsprecher im Raum (M.U.T.T.I. und Pixel in den Testkammern)
+		if not c.is_inside_tree() and kuerzel in LAUTSPRECHER_STIMMEN:
+			for oid: String in LAUTSPRECHER_STIMMEN[kuerzel]:
+				if not is_instance_valid(quelle):
+					quelle = _objekt_im_raum(oid)
+			if is_instance_valid(quelle):
+				await _objekt_sagt(kuerzel, quelle, blasen_text(zeile, b), c)
+				continue
 		var gast := not c.is_inside_tree() and is_instance_valid(R.current)
 		if gast:
 			_stimme_aus_dem_off(c, true)
 		await c.say(blasen_text(zeile, b))
 		if gast:
 			_stimme_aus_dem_off(c, false)
+	spricht = ""
 	if testmodus:
 		await get_tree().process_frame
 
@@ -313,6 +326,9 @@ func blasen_text(zeile: String, blase: String) -> String:
 ## Sprechende Objekte ohne Figur (welt-1.yaml: Figuren mit groesse_px 0) → Objekt-ID im Raum.
 ## Die Sprechblase kommt vom Objekt (G16), nicht als Systemtext.
 const OBJEKTSTIMMEN := {"BRU": "brunnen", "GRA": "grammophon", "TUE": "geheimtuer", "SPI": "spiegel"}
+## Figuren, die nicht im Raum stehen, aber durch einen Lautsprecher dort sprechen (Welt 3, Labor)
+## (Pixel im Büroturm: über das Terminal, W3-B45)
+const LAUTSPRECHER_STIMMEN := {"MUT": ["lautsprecher"], "PIX": ["lautsprecher", "terminal"]}
 ## Farbe der Objektstimmen (wie Figuren ohne eigene Schriftfarbe, 05-spielsysteme.md)
 const OBJEKTSTIMME_FARBE := Color.WHITE
 ## Je Kürzel eine Stimme; sie bleibt bestehen, weil Popochius Verlauf (History) sie festhält.
@@ -338,7 +354,7 @@ func _objekt_im_raum(oid: String) -> PopochiuClickable:
 ## Eine Sprechblase über dem Objekt: eine unsichtbare, nicht klickbare Stimme (Popochius
 ## Vorlagen-Figur) steht für die Dauer der Blase an der Oberkante des Objekts und „spricht“
 ## über Popochius Signal (Farbe, Position und Verlauf wie bei Figuren).
-func _objekt_sagt(kuerzel: String, quelle: PopochiuClickable, text: String) -> void:
+func _objekt_sagt(kuerzel: String, quelle: PopochiuClickable, text: String, figur_selbst: PopochiuCharacter = null) -> void:
 	if E.cutscene_skipped:
 		await get_tree().process_frame
 		return
@@ -352,6 +368,10 @@ func _objekt_sagt(kuerzel: String, quelle: PopochiuClickable, text: String) -> v
 		stimme.text_color = OBJEKTSTIMME_FARBE
 		stimme.dialog_pos = Vector2(0, -8)
 		_objektstimmen[kuerzel] = stimme
+	if is_instance_valid(figur_selbst):
+		# Figur spricht durch den Lautsprecher: ihre Schriftfarbe und ihr Name
+		stimme.text_color = figur_selbst.text_color
+		stimme.description = figur_selbst.description
 	var oben := 0.0
 	for p in quelle.interaction_polygon:
 		oben = minf(oben, p.y)

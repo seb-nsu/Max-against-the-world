@@ -1,0 +1,78 @@
+{
+ "bild": [
+  187,
+  344
+ ],
+ "animationen": {
+  "idle": {
+   "von": 0,
+   "bilder": 4,
+   "ms": 260,
+   "schleife": true,
+   "folge": [
+    0,
+    1,
+    2,
+    3,
+    0,
+    0
+   ]
+  },
+  "beleidigt": {
+   "von": 4,
+   "bilder": 2,
+   "ms": 120,
+   "schleife": false,
+   "folge": [
+    0,
+    0,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    0,
+    0
+   ]
+  },
+  "herunterfahren": {
+   "von": 6,
+   "bilder": 3,
+   "ms": 150,
+   "schleife": false,
+   "folge": [
+    0,
+    0,
+    1,
+    0,
+    1,
+    1,
+    2,
+    2
+   ]
+  },
+  "talk": {
+   "von": 9,
+   "bilder": 2,
+   "ms": 150,
+   "schleife": true,
+   "folge": [
+    0,
+    1,
+    1,
+    0
+   ]
+  }
+ }
+}

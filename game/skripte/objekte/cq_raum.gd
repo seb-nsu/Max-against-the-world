@@ -387,7 +387,10 @@ func _partner_folgen(delta: float) -> void:
 ## durchs Bild ziehen (nach links gespiegelt, hin und zurück im Wechsel mit „zurueck: true“), kreis
 ## [mx, my, rx, ry, sekunden] für kreisende Vögel, baseline (y für die Zeichenreihenfolge mit den
 ## Figuren, sonst der Fußpunkt), spiegeln, z, deckung (0 bis 1), an (nur solange das Prop
-## Props/<an> zu sehen ist).
+## Props/<an> zu sehen ist), wenn/sonst (nur solange die Bedingung gilt bzw. nicht gilt; Rätsel-ID,
+## Schalter, „A+B“ wie bei hintergrund_nach oder „A|B“ für eins von beiden), spricht (nur solange
+## die Figur mit diesem Kürzel spricht, zum Beispiel TUR), skala (Größe wie Figuren an dieser Stelle),
+## start (Sekunden bis zum ersten Lauf statt zufällig; gleiche Werte laufen im Gleichschritt).
 ## Im Testmodus ohne Bewegung (Bildvergleich).
 var _effekte: Array = []
 var _effekt_zeit := 0.0
@@ -400,7 +403,7 @@ func _effekte_setzen() -> void:
 		if e.art == "bild":
 			var sp := _bildfolge_anlegen(e)
 			if sp:
-				_effekte.append([e, sp, randf_range(0.5, 4.0), {bild = 0.0, lauf = e.get("ablauf", "schleife") == "schleife" and not e.has("weg"),
+				_effekte.append([e, sp, float(e.get("start", randf_range(0.5, 4.0))), {bild = 0.0, lauf = e.get("ablauf", "schleife") == "schleife" and not e.has("weg"),
 					t = 0.0, hin = true}])
 			continue
 		var n := Node2D.new()
@@ -487,6 +490,7 @@ func _bildfolge_anlegen(e: Dictionary) -> Sprite2D:
 	sp.z_index = int(e.get("z", 0))
 	sp.modulate.a = float(e.get("deckung", 1.0))
 	sp.flip_h = e.get("spiegeln", false)
+	sp.scale = Vector2.ONE * float(e.get("skala", 1.0))   # Figuren als Kulisse in Raumgröße
 	get_node("Props").add_child(sp)
 	var start: Array = e.get("pos", [0, 0])
 	if e.has("weg"):
@@ -514,6 +518,23 @@ func _bildfolge_bewegen(e: Dictionary, sp: Sprite2D, eintrag: Array, delta: floa
 	var z: Dictionary = eintrag[3]
 	var fps := float(e.get("fps", 8.0))
 	var schleife: bool = e.get("ablauf", "schleife") == "schleife"
+	if e.has("wenn") or e.has("sonst"):
+		# Nur solange eine Bedingung gilt („wenn“) oder nicht gilt („sonst“): Rätsel-ID, Schalter
+		# oder „A+B“ wie bei hintergrund_nach (Radiowecker klingelt erst nach dem Tausch)
+		var gilt := (not e.has("wenn") or _bedingung_erfuellt(String(e.wenn))) \
+			and (not e.has("sonst") or not _bedingung_erfuellt(String(e.sonst)))
+		if not gilt:
+			sp.visible = false
+			return
+		if schleife and not e.has("weg") and not e.has("kreis"):
+			sp.visible = true
+	if e.has("spricht"):
+		# Nur solange diese Figur spricht (Sprechanlage der Glastür redet mit, W3-B34)
+		if Spiel.spricht != String(e.spricht):
+			sp.visible = false
+			return
+		if schleife and not e.has("weg") and not e.has("kreis"):
+			sp.visible = true
 	if e.has("an"):
 		# Nur solange ein Prop im Raum zu sehen ist (Tintenfisch im Netz, bis Max ihn nimmt)
 		var ziel := get_node_or_null("Props/" + String(e.an)) as CanvasItem
@@ -627,16 +648,32 @@ func props_schatten() -> void:
 ## Teile, die erst nach (oder nur vor) einem Rätsel zu sehen sind („nach: R8“, „vor: R7“).
 var _bedingte_teile: Array = []
 ## Zweite Fassung des Hintergrunds nach einem Rätsel: Layout „hintergrund_nach: {R12: res://…}“
-## (Smaugis Kammer aufgeräumt, Turmkeller mit geschlossener Tür).
+## (Smaugis Kammer aufgeräumt, Turmkeller mit geschlossener Tür). Statt einer Rätsel-ID geht auch
+## ein Schalter (W3_SCHNEE) und mit „+“ mehreres zugleich (R13+W3_SCHNEE); die letzte zutreffende
+## Fassung gilt, auch wenn sich der Schalter erst im Raum ändert.
 var _hg_wechsel: Dictionary = {}
 var _hg_grund := ""
+
+
+## „A+B“: beides gilt; „A|B“: eins von beiden (+ bindet stärker als |).
+func _bedingung_erfuellt(bedingung: String) -> bool:
+	for zweig in bedingung.split("|"):
+		var alle := true
+		for teil in zweig.split("+"):
+			var erfuellt := Zustand.ist(teil) if teil.contains("_") else Zustand.geloest(teil)
+			if not erfuellt:
+				alle = false
+				break
+		if alle:
+			return true
+	return false
 
 
 func _bedingte_anpassen() -> void:
 	if not _hg_wechsel.is_empty() and has_node("Props/Background") and not _hg_grund.is_empty():
 		var soll := _hg_grund
 		for r: String in _hg_wechsel:
-			if Zustand.geloest(r):
+			if _bedingung_erfuellt(r):
 				soll = _hg_wechsel[r]
 		var bg = get_node("Props/Background")
 		if bg.texture == null or bg.texture.resource_path != soll:

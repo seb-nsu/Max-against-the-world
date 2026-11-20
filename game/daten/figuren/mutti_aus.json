@@ -1,0 +1,14 @@
+{
+ "bild": [
+  207,
+  356
+ ],
+ "animationen": {
+  "idle": {
+   "von": 0,
+   "bilder": 2,
+   "ms": 600,
+   "schleife": true
+  }
+ }
+}

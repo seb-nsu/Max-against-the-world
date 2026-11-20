@@ -46,7 +46,7 @@ func _durchlauf() -> void:
 	_pruefe(Z.ist("W3_WECHSEL_FREI"), "Ankunft in der Unterstadt")
 
 	# R1: drei Beobachtungen, dann Deckerts Test menschlich beantworten
-	for f in ["frau_regenschirm", "strassenmusiker", "weinender_mann"]:
+	for f in ["frau_regenschirm", "strassenmusiker_w3", "weinender_mann"]:
 		await S.regel("ansehen", f)
 	_pruefe(Z.geloest("R1a"), "R1a Beobachtungen")
 	# Das Gespräch muss die Option auch anbieten, sonst ist der Test im Spiel nicht zu starten.
