@@ -19,7 +19,7 @@ orakel_oma|reden|120|-|fuss|P=q10|R*2,P1*8,R*2
 orakel_oma|zum_regal|120|-|fuss|P=q10,Z=z10|R*3,Z2*2,P2*14,Z2*2,R*3
 orakel_oma|stirn|120|-|fuss|P=q10,Z=z10|R*3,Z3*2,P3*20,Z3*2,R*3
 orakel_oma|sparschwein|120|-|fuss|P=q10,Z=z10|R*3,Z4*2,P4*16,R*2
-orakel_oma|kehren|120|-|fuss|P=q11,Z=z11|R*2,Z1*2,P1*20,Z1*2,R*2
+orakel_oma|kehren|120|-|fuss|P=q11,Z=z11,A=h_kehren_a,B=h_kehren_b|R*2,Z1*2,P1*3,A1*3,P1*3,A1*3,P1*3,A1*3,P1*2,B1*4,R*2
 orakel_oma|ofen|120|-|fuss|P=q11,Z=z11|R*2,Z2*2,P2*16,Z2*2,R*2
 orakel_oma|haende_falten|120|-|fuss|P=q11|R*3,P3*24,R*3
 schmidt|reden|120|-|fuss|P=q12,Z=z12|R*3,Z1*2,P1*14,Z1*2,R*3
@@ -41,7 +41,7 @@ kalle|fluestern|120|-|fuss|P=q19|R*3,P1*16,R*3
 kalle|lachen|120|-|fuss|P=q19|R*3,P2*14,R*3
 kalle|zeigen|120|-|fuss|P=q19|R*3,P3*14,R*3
 kalle|tippen|120|-|fuss|P=q19|R*3,P4*24,R*3
-kalle|kabel|120|-|fuss|P=q20,Z=z20|R*3,Z1*2,P1*16,Z1*2,R*3|kalle_ohne_laptop.png
+kalle|kabel|120|-|fuss|P=q20,Z=z20,W=h_kabel_wackeln,H=h_kabel_hoch|R*3,Z1*2,P1*5,W1*3,P1*3,W1*3,P1*2,H1*3,R*3|kalle_ohne_laptop.png
 kalle|entsetzt|120|-|fuss|P=q20,Z=z20|R*3,Z2*2,P2*16,Z2*2,R*3|kalle_ohne_laptop.png
 kalle|tabelle|120|-|fuss|P=q20,Z=z20|R*3,Z3*2,P3*20,Z3*2,R*3|kalle_ohne_laptop.png
 kalle|jubel|120|-|fuss|P=q20,Z=z20|R*3,Z4*2,P4*14,Z4*2,R*3|kalle_ohne_laptop.png
