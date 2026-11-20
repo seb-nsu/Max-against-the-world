@@ -84,7 +84,8 @@ for fid, (hals, kx, mund, huefte, art) in F.items():
             rig["bewegungen"]["kopf_schuetteln"] = {"bilder": 8, "ms": 100, "posen": [
                 {}, {"kopf": {"a": -0.05, "dx": -1}}, {"kopf": {"a": 0.05, "dx": 1}}, {"kopf": {"a": -0.05, "dx": -1}},
                 {"kopf": {"a": 0.05, "dx": 1}}, {"kopf": {"a": -0.03}}, {}, {}]}
-    rp = TOOLS / "figuren" / f"{fid}_rig.json"
+    # Welt 2 hat eine Figur mit derselben Kennung (strassenmusiker): deren Rig nie überschreiben
+    rp = TOOLS / "figuren" / (f"{fid}_w3_rig.json" if fid == "strassenmusiker" else f"{fid}_rig.json")
     rp.write_text(json.dumps(rig, ensure_ascii=False, indent=1), encoding="utf-8")
     out = subprocess.run(["py", "-3", str(TOOLS / "figur.py"), "animieren", str(ST / f"{fid}.png"), str(rp), str(AUS)],
                          capture_output=True, text=True)
