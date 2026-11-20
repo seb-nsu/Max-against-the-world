@@ -10,32 +10,26 @@
    "ms": 450,
    "schleife": true
   },
-  "walk": {
-   "von": 6,
-   "bilder": 5,
-   "ms": 100,
-   "schleife": true
-  },
   "schlafen": {
-   "von": 11,
+   "von": 6,
    "bilder": 4,
    "ms": 550,
    "schleife": true
   },
   "talk_alt": {
-   "von": 15,
+   "von": 10,
    "bilder": 4,
    "ms": 160,
    "schleife": true
   },
   "stehen": {
-   "von": 19,
+   "von": 14,
    "bilder": 8,
    "ms": 300,
    "schleife": true
   },
   "aufstehen": {
-   "von": 27,
+   "von": 22,
    "bilder": 7,
    "ms": 110,
    "schleife": false,
@@ -58,7 +52,7 @@
    ]
   },
   "aufwachen": {
-   "von": 34,
+   "von": 29,
    "bilder": 3,
    "ms": 120,
    "schleife": false,
@@ -94,7 +88,7 @@
    ]
   },
   "fauchen": {
-   "von": 37,
+   "von": 32,
    "bilder": 5,
    "ms": 120,
    "schleife": false,
@@ -113,7 +107,7 @@
    ]
   },
   "haare": {
-   "von": 42,
+   "von": 37,
    "bilder": 5,
    "ms": 90,
    "schleife": false,
@@ -140,7 +134,7 @@
    ]
   },
   "hinlegen": {
-   "von": 47,
+   "von": 42,
    "bilder": 6,
    "ms": 120,
    "schleife": false,
@@ -165,7 +159,7 @@
    ]
   },
   "minka_umgarnen": {
-   "von": 53,
+   "von": 48,
    "bilder": 8,
    "ms": 110,
    "schleife": false,
@@ -199,7 +193,7 @@
    ]
   },
   "ohrfeige": {
-   "von": 61,
+   "von": 56,
    "bilder": 4,
    "ms": 110,
    "schleife": false,
@@ -218,7 +212,7 @@
    ]
   },
   "putzen": {
-   "von": 65,
+   "von": 60,
    "bilder": 6,
    "ms": 140,
    "schleife": true,
@@ -239,7 +233,7 @@
    ]
   },
   "talk": {
-   "von": 71,
+   "von": 66,
    "bilder": 4,
    "ms": 160,
    "schleife": true,
@@ -256,7 +250,7 @@
    ]
   },
   "schnuppern": {
-   "von": 75,
+   "von": 70,
    "bilder": 4,
    "ms": 130,
    "schleife": false,
@@ -276,7 +270,7 @@
    ]
   },
   "schwanz_zucken": {
-   "von": 79,
+   "von": 74,
    "bilder": 4,
    "ms": 140,
    "schleife": true,
@@ -294,7 +288,7 @@
    ]
   },
   "springen": {
-   "von": 83,
+   "von": 78,
    "bilder": 7,
    "ms": 110,
    "schleife": false,
@@ -313,13 +307,13 @@
    ]
   },
   "tragen": {
-   "von": 90,
+   "von": 85,
    "bilder": 8,
    "ms": 100,
    "schleife": true
   },
   "vom_schrank_fallen": {
-   "von": 98,
+   "von": 93,
    "bilder": 4,
    "ms": 100,
    "schleife": false,
@@ -336,19 +330,25 @@
    ]
   },
   "gehen_hinten": {
-   "von": 102,
+   "von": 97,
    "bilder": 8,
    "ms": 70,
    "schleife": true
   },
   "gehen_vorn": {
-   "von": 110,
+   "von": 105,
    "bilder": 8,
    "ms": 70,
    "schleife": true
   },
+  "walk": {
+   "von": 113,
+   "bilder": 8,
+   "ms": 30,
+   "schleife": true
+  },
   "hebel": {
-   "von": 118,
+   "von": 121,
    "bilder": 2,
    "ms": 120,
    "schleife": false,
@@ -374,7 +374,7 @@
    ]
   },
   "kabel": {
-   "von": 120,
+   "von": 123,
    "bilder": 3,
    "ms": 120,
    "schleife": false,
@@ -406,7 +406,7 @@
    ]
   },
   "kriechen": {
-   "von": 123,
+   "von": 126,
    "bilder": 3,
    "ms": 140,
    "schleife": true,
@@ -418,7 +418,7 @@
    ]
   },
   "morse": {
-   "von": 126,
+   "von": 129,
    "bilder": 3,
    "ms": 120,
    "schleife": false,
@@ -441,7 +441,7 @@
    ]
   },
   "schieben": {
-   "von": 129,
+   "von": 132,
    "bilder": 2,
    "ms": 120,
    "schleife": false,
@@ -467,7 +467,7 @@
    ]
   },
   "tasse": {
-   "von": 131,
+   "von": 134,
    "bilder": 3,
    "ms": 120,
    "schleife": false,

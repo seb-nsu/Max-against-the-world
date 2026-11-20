@@ -34,3 +34,18 @@ je Bild, nur Pixel, die noch dem alten Stand gleichen; „form“ für Posen mit
 `hausmeister_mopp.py` dreht den Mopp in den Hausmeister-Posen (Kopf oben weg, Stiel über der Faust, Mopp-Kopf am
 Boden) und färbt das Auge. Danach `reden_ruhe.py <stand> <aus> figur …` und `figuren_einbau.py <quelle> figur …`
 mit `welt3\korrektur_20-11\quelle` als Übergabeordner.
+
+Korrekturen 20.11., Teil 2 (Review W3-15, W3-16, W3-NS-01, W3-NS-02):
+- `figuren_einbau.py` sucht die Lage der Gesten um die Fußlinie des Stands statt um die Zellunterkante (vorher lagen
+  62 Bewegungen von 15 Figuren 2 px zu tief) und bricht ab, wenn das erste Bild einer neu eingebauten Geste nicht auf
+  der Fußlinie des Stands steht oder der Stand nur verschoben darin liegt. Quelle für alle Welt-3-Figuren ist der
+  Welt-3-Ordner (reden_ruhe, bewegungen, stand) mit `korrektur_20-11\quelle` darüber.
+- `kopf_aus_pose.py`: Morphäus' Stand bekommt den Kopf aus `morphaeus_schild_umdrehen` P1 (Brille auf der Stirn,
+  Schnitt 36 Zeilen). Danach `reden_ruhe.py … morphaeus` (Mund jetzt bei 40, 31) und
+  `stelle_uebertragen.py <alter Stand> <neuer Stand> <bewegungen> <ziel> morphaeus weit` („weit“ findet den Kopf auch
+  im Gang mit seinem großen oberen Rand).
+- `pixel_trab.py`: Pixels Trab (8 Bilder, 30 ms) aus Bild 4 des alten Gangs mit gescherten Beinen, 3 Sheet-px je
+  Bild am Boden; dazu `walk_speed` 110 in `character_pixel.tscn` (Rutschen 9 % statt 86 %). Ergebnis
+  `pixel_gehen.png/.json` in den Bewegungsordner, `figuren_einbau.py … pixel` (der Trab wird nicht verkleinert).
+- `effekte_auto_takt.py` füllt beim Federn die frei werdende Zeile (Vorlage `effekte\frei\W3-B54_auto_seite.png`);
+  das Ergebnis `W3-B54_auto_im_takt.png` kommt unverändert nach `game/grafik/ambiente/w3_auto_im_takt.png`.

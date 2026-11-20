@@ -1,5 +1,5 @@
 """Stadtstraße: rotes Auto in Seitenansicht, fährt im Takt (W3-B54). Vorlage von Gemini im Stil der parkenden Autos
-(effekte/W3-B54_auto_seite.png), auf Spielgröße gebracht; Radkappen drehen sich, die Karosserie federt um einen Pixel.
+(effekte/frei/W3-B54_auto_seite.png), auf Spielgröße gebracht; Radkappen drehen sich, die Karosserie federt um einen Pixel.
 Godot schickt drei Kopien im gleichen Abstand und gleichen Tempo von links nach rechts (Lage in der Platzierung der
 Stadtstraße). Aufruf: py -3 effekte_auto_takt.py <vorlage.png> <ausgabe-ordner>"""
 import json, sys, math
@@ -31,6 +31,8 @@ for f in range(4):
     feder = 1 if f % 2 else 0
     b[1 - feder:1 - feder + rad_unten] = auto[:rad_unten]        # Karosserie federt
     b[1 + rad_unten:1 + H] = auto[rad_unten:]                     # Räder bleiben am Boden
+    if feder:                                                     # frei gewordene Zeile füllen (Review W3-NS-01)
+        b[rad_unten] = auto[rad_unten - 1]
     for cy, cx in mitten:                                         # Speiche dreht sich
         w = f * math.pi / 2
         for t in (1, 2):

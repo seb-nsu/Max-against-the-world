@@ -57,6 +57,8 @@ UMBENENNEN = {"gehen": "walk", "reden": "talk", "sprechen": "talk"}
 AUSLASSEN_ENDUNG = ("_bogen", "_maxgang")
 # Gangarten stehen auf der Fußlinie und mittig, statt nach Umriss ausgerichtet (Umriss passt beim Kriechen nicht)
 GAENGE = {"walk", "kriechen", "hexenschuss_gehen", "watscheln"}
+# Gänge in Originalgröße: Pixels Trab (pixel_trab.py) ist wegen des hochgestellten Schwanzes höher als der sitzende Stand
+NICHT_SKALIEREN = {("pixel", "walk")}
 
 
 def streifen(pfad, n):
@@ -89,6 +91,9 @@ def beste_lage(idle, bilder, such=40):
     """Lage (x0, y0) der Bewegungsbilder auf der Idle-Fläche mit der besten Umriss-Überdeckung (IoU)."""
     im = idle[..., 3] > 0
     ih, iw = im.shape
+    # Suche um die Fußlinie des Stands, nicht um die Zellunterkante: die Idle-Zelle hat unten bis zu 8 leere
+    # Zeilen (reden_ruhe.py), bei ±6 landeten die Gesten sonst 2 px zu tief (Review 20.11., W3-16)
+    boden = int(np.nonzero(im.any(axis=1))[0].max()) + 1
     best = (-1, 0, 0)
     for b in bilder:
         bm = b[..., 3] > 0
@@ -96,7 +101,7 @@ def beste_lage(idle, bilder, such=40):
         for dy in range(-6, 7):
             for dx in range(-such - abs(bw - iw) // 2, such + abs(iw - bw) // 2 + 1):
                 x0 = iw // 2 - bw // 2 + dx
-                y0 = ih - bh + dy
+                y0 = boden - bh + dy
                 ax0, ay0 = max(0, x0), max(0, y0)
                 ax1, ay1 = min(iw, x0 + bw), min(ih, y0 + bh)
                 if ax1 <= ax0 or ay1 <= ay0:
@@ -167,6 +172,32 @@ def gesten(quelle, ids):
     return gruppen
 
 
+def erstes_bild_pruefen(fig, blatt, info, namen):
+    """Erstes Bild jeder neu eingebauten Geste (namen) gegen den Stand (erstes Idle-Bild): gleiche Fußlinie; ist es
+    der Stand selbst (nur verschoben), muss es pixelgleich liegen. Gänge sind ausgenommen (eigene Fußlinie, mittig),
+    ebenso die älteren Bewegungen von Max und Pixel (Liegen, Aufwachen, Fallen beginnen zu Recht anders)."""
+    stand = blatt[info["idle"]["von"]]
+    zeilen = lambda b: np.nonzero(b[..., 3].any(axis=1))[0]
+    fuss = int(zeilen(stand).max())
+    fehler = []
+    for name, e in info.items():
+        if name == "idle" or name in GAENGE or name not in namen:
+            continue
+        b = blatt[e["von"] + (e.get("folge") or [0])[0]]
+        if np.array_equal(b, stand):
+            continue
+        z = zeilen(b)
+        if len(z) and int(z.max()) != fuss:
+            fehler.append(f"{name}: Fußlinie {int(z.max())} statt {fuss}")
+            continue
+        for dy in range(-8, 9):
+            for dx in range(-8, 9):
+                if (dx or dy) and np.array_equal(np.roll(b, (dy, dx), axis=(0, 1)), stand):
+                    fehler.append(f"{name}: erstes Bild ist der Stand, um ({-dx}, {-dy}) versetzt")
+    if fehler:
+        sys.exit(f"{fig}: erstes Bild einer Geste passt nicht zum Stand:\n  " + "\n  ".join(fehler))
+
+
 def zusammensetzen(fig, W, H, anims, neue, bericht):
     namen = {n for n, _ in neue}
     if "talk" in namen:
@@ -188,7 +219,7 @@ def zusammensetzen(fig, W, H, anims, neue, bericht):
             # Läufe aus dem Teile-Rig sind teils größer als das Standbild (Max hinkend 8 %): auf die Idle-Höhe
             hoehe = lambda b: int(np.ptp(np.nonzero(b[..., 3].any(axis=1))[0])) + 1
             faktor = hoehe(idle) / float(np.median([hoehe(e) for e in einzig]))
-            if faktor < 0.97:   # nur verkleinern: Kriechen und Tiergänge sind zu Recht flacher
+            if faktor < 0.97 and (fig, name) not in NICHT_SKALIEREN:   # nur verkleinern: Kriechen und Tiergänge sind zu Recht flacher
                 bericht.append(f"{fig}/{name}: auf {faktor:.2f} skaliert")
                 einzig = [np.array(Image.fromarray(e).resize((max(1, round(e.shape[1] * faktor)),
                                                               max(1, round(e.shape[0] * faktor))), Image.NEAREST))
@@ -228,6 +259,7 @@ def zusammensetzen(fig, W, H, anims, neue, bericht):
         nr += len(bs)
     if unten:
         bericht.append(f"{fig}: {unten} px unter der Fußlinie abgeschnitten")
+    erstes_bild_pruefen(fig, blatt, info, namen)
     daten = {"bild": [NW, NH], "animationen": info}
     if NW * len(blatt) > TEXTURGRENZE:
         spalten = TEXTURGRENZE // NW

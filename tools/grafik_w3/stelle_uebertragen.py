@@ -9,7 +9,8 @@ Lage für alle Stellen verhindert, dass kleine Stellen zufällig woanders passen
 
 Aufruf: py -3 stelle_uebertragen.py <alter_stand.png> <neuer_stand.png> <bewegungen-quelle> <bewegungen-ziel> <präfix> [schwelle]
 Schwelle 1 überträgt nur auf Bilder, die an der Stelle pixelgleich zum Stand sind (Hausmeister: der Mopp wird in
-den Posen neu gebaut, siehe hausmeister_mopp.py). Zusatz „form“: Bilder mit eigener Farbgebung, deren Umriss um die
+den Posen neu gebaut, siehe hausmeister_mopp.py). Zusatz „weit“: senkrecht über die ganze Bildhöhe suchen (Läufe,
+Morphäus-Kopf 20.11.). Zusatz „form“: Bilder mit eigener Farbgebung, deren Umriss um die
 Stelle aber dem Stand gleicht (IoU ab 0,9, Schmidts Reden-Pose mit den Beinen des Stands), bekommen die Stelle ganz.
 Kopiert jede <präfix>_*.png (+ .json) aus der Quelle ins Ziel und meldet je Streifen, welche Bilder geändert wurden.
 """
@@ -31,13 +32,14 @@ def teile(alt, neu):
     return [(lab == i) & diff for i in range(1, n + 1)]
 
 
-def suchen(bild, alt, maske, such=12):
-    """Beste Lage (dx, dy) des alten Stands im Bild, gemessen nur auf der Stelle; liefert (Anteil, dx, dy)."""
+def suchen(bild, alt, maske, such=12, weit=False):
+    """Beste Lage (dx, dy) des alten Stands im Bild, gemessen nur auf der Stelle; liefert (Anteil, dx, dy).
+    weit: senkrecht über die ganze Bildhöhe suchen (Läufe aus dem Teile-Rig haben oben viel Rand)."""
     ys, xs = np.nonzero(maske)
     fh, fw = bild.shape[:2]
     sh, sw = alt.shape[:2]
     best = (0.0, 0, 0)
-    for dy in range(fh - sh - such, fh - sh + such + 1):
+    for dy in (range(-such, fh - sh + such + 1) if weit else range(fh - sh - such, fh - sh + such + 1)):
         for dx in range((fw - sw) // 2 - such * 4, (fw - sw) // 2 + such * 4 + 1):
             yy, xx = ys + dy, xs + dx
             ok = (yy >= 0) & (yy < fh) & (xx >= 0) & (xx < fw)
@@ -77,8 +79,8 @@ def umriss_gleich(bild, alt, stellen, dx, dy):
     return (a & f).sum() / max((a | f).sum(), 1)
 
 
-def uebertragen(bild, alt, neu, stellen, schwelle=SCHWELLE, form=False):
-    anteil, dx, dy = suchen(bild, alt, umgebung(alt, stellen))
+def uebertragen(bild, alt, neu, stellen, schwelle=SCHWELLE, form=False, weit=False):
+    anteil, dx, dy = suchen(bild, alt, umgebung(alt, stellen), weit=weit)
     voll = False
     if anteil < schwelle:
         # Posen mit eigener Farbgebung, aber den Beinen des Stands (gleicher Umriss): Stelle ganz ersetzen
@@ -109,8 +111,9 @@ def main():
     alt = np.array(Image.open(sys.argv[1]).convert("RGBA"))
     neu = np.array(Image.open(sys.argv[2]).convert("RGBA"))
     quelle, ziel, praefix = Path(sys.argv[3]), Path(sys.argv[4]), sys.argv[5]
-    schwelle = float(sys.argv[6]) if len(sys.argv) > 6 and sys.argv[6] != "form" else SCHWELLE
+    schwelle = float(sys.argv[6]) if len(sys.argv) > 6 and sys.argv[6] not in ("form", "weit") else SCHWELLE
     form = "form" in sys.argv[6:]
+    weit = "weit" in sys.argv[6:]
     ziel.mkdir(parents=True, exist_ok=True)
     alt[alt[..., 3] == 0] = 0
     neu[neu[..., 3] == 0] = 0
@@ -129,7 +132,7 @@ def main():
         meldung = []
         for i in range(n):
             b = st[:, i * w:(i + 1) * w].copy()
-            g = uebertragen(b, alt, neu, stellen, schwelle, form)
+            g = uebertragen(b, alt, neu, stellen, schwelle, form, weit)
             st[:, i * w:(i + 1) * w] = b
             if g:
                 meldung.append(f"{i}: {', '.join(g)}")

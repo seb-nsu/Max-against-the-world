@@ -13,7 +13,7 @@ MUND = "3e2731"; INNEN = "a22633"
 
 # id: Hals-Zeile, Kopf x-Bereich, Mund (x, y, Breite) oder None, Hüft-Anteil, Art des Redens
 F = {
-    "morphaeus":           (35, (14, 46), (37, 29, 3), 0.58, "mund"),
+    "morphaeus":           (35, (14, 46), (40, 31, 3), 0.58, "mund"),   # Stand mit Brille auf der Stirn (20.11.)
     "deckert":             (44, (15, 70), (50, 37, 3), 0.60, "mund"),
     "herr_vier":           (52, (8, 49), (42, 46, 3), 0.58, "mund"),
     "orakel_oma":          (54, (5, 66), (56, 44, 3), 0.58, "mund"),
