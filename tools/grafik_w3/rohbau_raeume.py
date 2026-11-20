@@ -346,14 +346,14 @@ def buero():
     box(None, 3.4, 2.1, 0.9, 0.6, 0.08, z=0.95, col=MITTEL)
     # Vorraum rechts: Farbcode über dem Terminal, ein Wasserspender, Treppe in die Decke
     for i, (c, n_) in enumerate([(ROT, "circle on red"), (GRUEN, "triangle on green"), (GELB, "square on yellow")]):
-        box(f"{n_} (own field)", 8.35 + i * 0.5, Y0 - 0.03, 0.42, 0.03, 0.42, z=1.65, col=c)
-    for x in (8.6, 9.1):
+        box(f"{n_} (own field)", 8.2 + i * 0.5, Y0 - 0.03, 0.42, 0.03, 0.42, z=1.65, col=c)
+    for x in (8.45, 8.95):
         box(None, x, Y0 - 0.4, 0.04, 0.04, 0.75, col=DUNKEL)
-    box("small side table + old terminal (green screen)", 8.85, Y0 - 0.45, 0.7, 0.4, 0.04, z=0.75, col=DUNKEL)
-    box(None, 8.85, Y0 - 0.4, 0.4, 0.3, 0.35, z=0.79, col=MITTEL)
-    box("ONE water cooler (room for a cup on top)", 9.85, Y0 - 0.4, 0.35, 0.35, 0.95, col=HELL)
-    zyl(None, 9.85, Y0 - 0.22, 0.15, 0.4, z=0.95, col=GLAS)
-    treppe(10.2, Y0 - 1.05, 2.8)
+    box("small side table + old terminal (green screen)", 8.7, Y0 - 0.45, 0.7, 0.4, 0.04, z=0.75, col=DUNKEL)
+    box(None, 8.7, Y0 - 0.4, 0.4, 0.3, 0.35, z=0.79, col=MITTEL)
+    box("ONE water cooler (room for a cup on top)", 9.55, Y0 - 0.4, 0.35, 0.35, 0.95, col=HELL)
+    zyl(None, 9.55, Y0 - 0.22, 0.15, 0.4, z=0.95, col=GLAS)
+    treppe(10.75, Y0 - 1.05, 2.8)
     notiz("walk area: front lobby", 6.0, 0.6, 0.05)
     figur("Agent Schmidt (at the far end)", 6.0, 14.0, 1.85)
     for x, y in ((5.2, 4.5), (6.8, 6.0), (5.6, 8.5), (6.5, 11.0), (4.8, 1.8), (7.4, 2.2)):
