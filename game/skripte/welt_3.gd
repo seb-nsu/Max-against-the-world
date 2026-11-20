@@ -109,6 +109,13 @@ const BUCHSEN := ["rot", "gruen", "gelb"]
 ## Pixel auf Figuren, deren Auslöser der Bauplan nicht zuordnet (gebeugte Namen)
 const PIXEL_AUF := {"herr_vier": "W3_STR_PIX_1020", "weinender_mann": "W3_STR_PIX_1040"}
 
+## Objekte, deren Regel benutzen_<id>() auch Pixel als Spielfigur behandelt (ist_pixel()). Ein Klick
+## von Pixel (Art „pixel“) geht dorthin; liefert die Regel false, schnuppert Pixel wie sonst.
+const PIXEL_BENUTZT := ["patch_panel", "kalles_tasse", "tisch_mit_kalles_tasse", "lueftungsschacht",
+	"wassereimer", "fenster", "stromkasten", "max_kapsel", "automat", "pastillenautomat", "terminal"]
+## Rätselschritte, die Pixel als Spielfigur löst (ortsbezogene Hilfe-Pfote, W3-04)
+const PIXEL_SCHRITTE := ["R7b", "R13"]
+
 ## Erste Szene beim Betreten
 const ERSTES_BETRETEN := {
 	"kueche_orakel": ["W3_KUCH_ORA_0010", "W3_KUCH_MAX_0020", "W3_KUCH_ORA_0030", "W3_KUCH_MAX_0040",
@@ -153,6 +160,10 @@ func ereignis(art: String, obj: Variant, item: Variant) -> bool:
 	var name := "%s_%s" % [art, oid]
 	if has_method(name):
 		return bool(await call(name, obj, iid))
+	# Pixel als Spielfigur klickt ein Objekt an: Die Basisklassen melden das als Art „pixel“, die
+	# Regeln von Welt 3 stehen aber als benutzen_<id>() mit ist_pixel() (Review 20.11., W3-01).
+	if art == "pixel" and Spiel.ist_pixel() and oid in PIXEL_BENUTZT:
+		return bool(await call("benutzen_" + oid, obj, iid))
 	if art == "pixel" and obj is PopochiuCharacter and PIXEL_AUF.has(oid):
 		await _sag(PIXEL_AUF[oid])
 		return true
@@ -171,10 +182,22 @@ func wert(art: String, obj: Variant, item: Variant) -> Variant:
 		"zustand_anwenden":
 			_figuren_anwenden(obj)
 			return true
-		"partner_getrennt", "wechsel_getrennt":
+		"partner_getrennt":
+			# In die Kühlung passt nur Pixel (durch den Lüftungsschacht); Max wartet in der Basis
+			return getrennt() or _raum_id() == "kuehlung"
+		"wechsel_getrennt":
 			return getrennt()
 		"wechsel_moeglich":
 			return true if getrennt() else null
+		"pixel_ausgang":
+			# Pixel geht sonst durch keine Tür; Schacht und Kühlung sind seine (W3-01)
+			return _id(obj) == "ausgang_kuehlung" or _raum_id() == "kuehlung"
+		"hinweis_rang":
+			return _hinweis_rang(str(obj), str(item))
+		"hinweis_vorher":
+			return _hinweis_vorher(str(obj))
+		"hinweis_wegweiser":
+			return _hinweis_wegweiser()
 	return null
 
 
@@ -348,6 +371,7 @@ func _einschlafen(ziel: String) -> void:
 		Zustand.setze_wert("W3_SIMULATION_BESUCHE", int(Zustand.wert("W3_SIMULATION_BESUCHE", 0)) + 1)
 	C.player = C.Max
 	Zustand.setze("W3_WECKER_KLINGELT", false)   # jeder Traum beginnt um 5:59
+	_wecker_bis = 0
 	Spiel.herkunft_raum = "Zelle" if ziel in SIMULATION else "Kapsel"
 	await R.goto_room(Bauplan.raum_script_name(ziel))
 
@@ -415,6 +439,9 @@ func _figuren_anwenden(raum: CQRaum) -> void:
 ## W3-B51). Davor gilt die Klickfläche „Radiowecker“, danach „klingelnder Radiowecker“.
 const WECKER_SEKUNDEN := 30.0
 var _wecker_wartet := false
+## Wann der Wecker in diesem Traum klingelt (Ticks, 0 = noch nicht gestellt). Einmal je Traum gestellt,
+## nicht bei jedem Betreten (Review 20.11., W3-R06-04).
+var _wecker_bis := 0
 
 
 func _wecker_anzeigen() -> void:
@@ -433,8 +460,9 @@ func _wecker_warten() -> void:
 	if _wecker_wartet or Spiel.testmodus or Zustand.ist("W3_WECKER_KLINGELT"):
 		return
 	_wecker_wartet = true
-	var bis := Time.get_ticks_msec() + int(WECKER_SEKUNDEN * 1000)
-	while Time.get_ticks_msec() < bis and _raum_id() == "stadtstrasse":
+	if _wecker_bis == 0:
+		_wecker_bis = Time.get_ticks_msec() + int(WECKER_SEKUNDEN * 1000)
+	while Time.get_ticks_msec() < _wecker_bis and _raum_id() == "stadtstrasse":
 		await Spiel.get_tree().create_timer(0.5).timeout
 	_wecker_wartet = false
 	if _raum_id() != "stadtstrasse" or Zustand.ist("W3_WECKER_KLINGELT"):
@@ -556,12 +584,18 @@ func nach_uebergang_testkammer_3(_raum, _x) -> bool:
 
 func nach_uebergang_kern(_raum, _x) -> bool:
 	await _erstes_betreten("kern")
-	# Lösung B: Pixel hat das Fenster geöffnet, während Max im Kern war
-	if Zustand.ist("W3_SCHNEE") and Zustand.geloest("R10") and not Zustand.ist("W3_ZELLE_KALT"):
+	await _loesung_b()
+	return true
+
+
+## Lösung B: Pixel hat das Fenster über der Kapsel geöffnet, es schneit auf Max' Körper. Greift beim
+## Betreten des Kerns und direkt nach dem Paradoxon, wenn das Fenster schon offen war (W3-R03-06).
+func _loesung_b() -> void:
+	if Zustand.ist("W3_SCHNEE") and Zustand.geloest("R10") and not Zustand.ist("W3_ZELLE_KALT") \
+			and _raum_id() == "kern":
 		Zustand.setze("W3_ZELLE_KALT")
 		Zustand.setze("W3_ZELLE_SCHNEE")  # für Pixels Schlusszeile („ich habe das Fenster“)
 		await _szene(["W3_KERN_NAR_0480", "W3_KERN_MAX_0490"])
-	return true
 
 
 func _erstes_betreten(rid: String) -> bool:
@@ -658,6 +692,12 @@ func option_deckert_0090() -> bool:
 		"W3_TEST_MAX_0350", "W3_TEST_PIX_0360"])
 	Zustand.loese("R1b")
 	return true
+
+
+## Der Test bleibt nach dem Durchfallen wählbar („(bleibt)“ im Skript), bis er bestanden ist
+## (Review 20.11., W3-R01-01).
+func sichtbar_deckert_0090() -> Variant:
+	return not Zustand.geloest("R1b")
 #endregion
 
 #region Rätsel 2: Die Nudelbude ####################################################################
@@ -805,6 +845,8 @@ func benutzen_inventar_rote_pastille(_obj, _x) -> bool:
 	await _szene(["W3_APO_MAX_0580", "W3_APO_PIX_0590", "W3_APO_MAX_0600", "W3_APO_MOR_0610",
 		"W3_APO_PIX_0620", "W3_APO_AUT_0630"])
 	await _abgeben("rote_pastille")
+	# Die Wahl ist gefallen: Die blaue bleibt beim Automaten (Review 20.11., W3-R02-03)
+	await _abgeben("blaue_pastille")
 	Zustand.loese("R3b")
 	await _einschlafen("stadtstrasse")
 	return true
@@ -861,6 +903,11 @@ func benutzen_max_kapsel(_obj, _x) -> bool:
 		return false
 	if not getrennt():
 		return false
+	# Aus dem Büroturm führt nur Rätsel 7 hinaus; Schütteln würde R7 und R13 überspringen
+	# (Review 20.11., W3-R08-02, Entscheidung Sebastian: sperren)
+	if str(Zustand.wert("W3_MAX_RAUM", "")) == "buero_50" and not Zustand.geloest("R7b"):
+		await _sag("W3_BAS_PIX_0545")
+		return true
 	await _sag("W3_BAS_PIX_0540")
 	await _aufwachen()
 	return true
@@ -890,7 +937,9 @@ func benutzen_fenster(_obj, _x) -> bool:
 	if not Spiel.ist_pixel():
 		await _sag("W3_BAS_MAX_0590")
 		return true
-	if Zustand.ist("W3_SCHNEE"):
+	if Zustand.ist("W3_SCHNEE") and ebene() == "labor" and not Zustand.ist("W3_ZELLE_KALT"):
+		await _sag("W3_BAS_PIX_0615")  # bleibt offen, solange Max im Labor ist (W3-R03-06)
+	elif Zustand.ist("W3_SCHNEE"):
 		Zustand.setze("W3_SCHNEE", false)
 		await _sag("W3_BAS_PIX_0610")
 	else:
@@ -1347,7 +1396,7 @@ func benutzen_panzertuer(obj, x) -> bool:
 
 #region Rätsel 12: Die vierte Zutat ################################################################
 func gegenstand_herr_vier(_obj, iid) -> bool:
-	const FALSCH := {"hundekuchen": "W3_SUPP_MAX_0170", "thunfischdose": "W3_SUPP_MAX_0180",
+	const FALSCH := {"omas_kekse": "W3_SUPP_MAX_0170", "thunfischdose": "W3_SUPP_MAX_0180",
 		"schmidts_akte": "W3_SUPP_VIE_0190"}
 	if FALSCH.has(iid):
 		await _sag(FALSCH[iid])
@@ -1430,11 +1479,24 @@ func benutzen_mutti(_obj, _x) -> bool:
 		return true
 	if _regeln() < 3:
 		await _sag("W3_KERN_MAX_0340")
-		if not Zustand.ist("W3_REGEL_1") or not Zustand.ist("W3_REGEL_2"):
-			await _sag("W3_KERN_PIX_0350")
+		# Regel 1 steht in der Akte, die Max schon trägt; nur Regel 2 liegt außerhalb des Labors
+		# (Review 20.11., W3-R12-02: die alte Zeile schickte auch bei ungelesener Akte hinaus)
+		var pixel := _regel_fehlt_zeile()
+		if not pixel.is_empty():
+			await _sag(pixel)
 		return true
 	await _paradoxon()
 	return true
+
+
+## Pixels Zeile, wenn Max M.U.T.T.I. mit zu wenigen Regeln anspricht: ungelesene Akte (Regel 1)
+## vor dem Kochbuch (Regel 2); fehlt nur Regel 3 (Kritzelei im Labor), sagt Pixel nichts.
+func _regel_fehlt_zeile() -> String:
+	if not Zustand.ist("W3_REGEL_1") and _hat("schmidts_akte"):
+		return "W3_KERN_PIX_0355"
+	if not Zustand.ist("W3_REGEL_1") or not Zustand.ist("W3_REGEL_2"):
+		return "W3_KERN_PIX_0350"
+	return ""
 
 
 func _paradoxon() -> void:
@@ -1466,6 +1528,7 @@ func _paradoxon() -> void:
 						"W3_KERN_MUT_0180", "W3_KERN_MAX_0190", "W3_KERN_MUT_0200", "W3_KERN_NAR_0210",
 						"W3_KERN_PIX_0220"])
 					Zustand.loese("R10")
+					await _loesung_b()
 					return
 				await _szene(["W3_KERN_MAX_0250", "W3_KERN_MUT_0260"])
 			3:
@@ -1650,9 +1713,61 @@ func ansehen_telefonbuch_in_der_zelle(obj, _x) -> bool:
 	return true
 
 
+## Die Morse-Tabelle als Nahansicht (N05), danach Max' Ansehen-Zeile (Review 20.11., W3-N-01)
+func ansehen_inventar_morse_tabelle(_obj, _x) -> bool:
+	await Spiel.nahansicht_zeigen("morse_tabelle")
+	return false
+
+
 func ansehen_inventar_telefonbuchseite(_obj, _x) -> bool:
 	await Spiel.nahansicht_zeigen("telefonbuchseite")
 	return false
+#endregion
+
+#region Hilfe-Pfote ################################################################################
+## Ortsbezogene Auswahl (Review 20.11., W3-04): 0 = Schritt im Raum der aktiven Figur, 1 = auf ihrer
+## Ebene erreichbar (Max im Büroturm: nur Pixels Schritte), 2 = über den Figurenwechsel oder einen
+## Ebenenwechsel, 3 = gerade nicht erreichbar.
+func _hinweis_rang(schritt: String, raum: String) -> int:
+	var hier := _raum_id()
+	if raum == hier:
+		return 0
+	if str(Zustand.wert("W3_MAX_RAUM", "")) == "buero_50" and getrennt() and not Zustand.geloest("R7b"):
+		return 1 if schritt in PIXEL_SCHRITTE else 3   # Max sitzt im Turm fest, nur Pixel kann etwas tun
+	if Spiel.ist_pixel():
+		return 1 if schritt in PIXEL_SCHRITTE else 2
+	return 1 if _ebene_von(raum) == _ebene_von(hier) else 2
+
+
+func _ebene_von(raum: String) -> String:
+	if raum in SIMULATION:
+		return "simulation"
+	if raum in LABOR:
+		return "labor"
+	return "realitaet"
+
+
+## Vor den Stufen von R10: fehlt eine Regel, sagt die Pfote dasselbe wie Pixel am Lautsprecher (W3-R12-02).
+func _hinweis_vorher(schritt: String) -> Variant:
+	if schritt != "R10" or _regeln() >= 3:
+		return null
+	var z := _regel_fehlt_zeile()
+	return z if not z.is_empty() else null
+
+
+## [gelöst, Raum noch nie betreten, Zeile]; „start“ gilt immer
+const WEGWEISER := [["R1b", "apothekengasse", "W3_HINT_PIX_0020"], ["R5", "buero_50", "W3_HINT_PIX_0030"],
+	["R3b", "kueche_orakel", "W3_HINT_PIX_0040"], ["start", "laboreingang", "W3_HINT_PIX_0050"],
+	["R9a", "testkammer_1", "W3_HINT_PIX_0060"]]
+
+
+## Nichts offen, weil der nächste Pflichtschritt in einem noch nie betretenen Raum liegt: ein Satz, der
+## den Ort nennt (W3-05). Sonst null (dann die eigene „nichts offen“-Zeile).
+func _hinweis_wegweiser() -> Variant:
+	for w in WEGWEISER:
+		if (w[0] == "start" or Zustand.geloest(w[0])) and not Zustand.war_in(w[1]):
+			return w[2]
+	return null
 #endregion
 
 #region Abschluss ##################################################################################

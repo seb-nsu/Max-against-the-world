@@ -90,7 +90,7 @@ Gespräch mit Herrn Vier, die Bestellung und das Treffen mit Morphäus. Ebene: R
 | W3\_NUD\_VIE\_0080 | Herr Vier | Vier Jahreszeiten. Vier Himmelsrichtungen. Vier Finger an jeder Hand. Die Welt hat sich entschieden, ich nur zugehört. | zeigt die Hände |
 | W3\_NUD\_PIX\_0650 | Pixel | Ich habe vier Pfoten, wie Sie sicher bemerkt haben. Steht mir da nicht ein gewisser Rabatt zu? |  |
 | W3\_NUD\_VIE\_0660 | Herr Vier | Vier Pfoten und ein Schwanz. Das sind fünf. Nein. |  |
-| W3\_NUD\_MAX\_0090 | Max | Wartet hier jemand auf jemanden? Ich bin hergeschickt worden. Glaube ich zumindest. | Option Herr Vier; vor Rätsel 2 |
+| W3\_NUD\_MAX\_0090 | Max | Wartet hier jemand auf jemanden? Ich bin hergeschickt worden. Glaube ich zumindest. | Option Herr Vier (bleibt); vor Rätsel 2 |
 | W3\_NUD\_VIE\_0100 | Herr Vier | Hier wartet jeder auf jemanden. Ich warte seit Jahren auf eine Zutat. Bestell erst mal etwas, dann sehen wir weiter. | Hinweis auf die Bestellung |
 | W3\_NUD\_MAX\_0670 | Max | Und was kann man bestellen? |  |
 | W3\_NUD\_VIE\_0680 | Herr Vier | Alles, was vier Zutaten hat. Also alles. Außer der Suppe. Der fehlt eine. |  |
@@ -176,7 +176,7 @@ Detektiv Deckert unter dem Vordach, Ebene: Realität. Drei Fragen, je drei Antwo
 | W3\_TEST\_MAX\_0060 | Max | Was ist mit dem Kater? | Option Deckert |
 | W3\_TEST\_DEC\_0070 | Deckert | Katzen bestehen den Test immer. Sie antworten nicht. Das ist die menschlichste Antwort, die es gibt. | sieht Pixel an |
 | W3\_TEST\_PIX\_0080 | Pixel | Ich bin nicht menschlich. Ich bin, wenn man es genau nimmt, ein gutes Stück darüber hinaus. // Aber danke. Es kommt selten vor, dass jemand mit Hut das erkennt. |  |
-| W3\_TEST\_MAX\_0090 | Max | Na gut. Fangen wir mit dem Test an. | Option Deckert, startet die Fragen |
+| W3\_TEST\_MAX\_0090 | Max | Na gut. Fangen wir mit dem Test an. | Option Deckert (bleibt), startet die Fragen |
 | W3\_TEST\_DEC\_0100 | Deckert | Du gehst durch die Wüste. Eine Schildkröte liegt auf dem Rücken. Sie kommt nicht hoch. Was tust du? | Frage 1; Notizblock raus |
 | W3\_TEST\_MAX\_0110 | Max | Ich dreh sie um. | Antwort 1, logisch |
 | W3\_TEST\_DEC\_0120 | Deckert | Hilfsbereit. Effizient. Ohne Zögern. So antwortet eine Maschine mit guter Kinderstube. Durchgefallen. | Test beginnt neu |
@@ -207,6 +207,8 @@ Detektiv Deckert unter dem Vordach, Ebene: Realität. Drei Fragen, je drei Antwo
 | W3\_TEST\_DEC\_0370 | Deckert | Ich habe heute vier geprüft. Drei Menschen, eine Katze. Ein guter Tag. Ein nasser, aber guter. | Reden: Deckert, nach dem Test |
 | W3\_TEST\_MAX\_0380 | Max | Ich sag nichts. Ich schau nur. Das ist der Test, oder? | Reden: Deckert, bevor eine Beobachtung im Notizbuch steht |
 | W3\_TEST\_DEC\_0390 | Deckert | Nein. Das ist Schweigen. Schweigen besteht nur, wenn man Fell hat. Sieh dich um, Junge. Die Straße ist voller Antworten. | Hinweis auf die Beobachtungen |
+| W3\_TEST\_MAX\_0420 | Max | Ich schau mich erst mal um. | Option Deckert, beendet das Gespräch |
+| W3\_TEST\_DEC\_0430 | Deckert | Tu das. Die Straße läuft nicht weg. Sie regnet nur. |  |
 
 ## 4. Apothekengasse: Rätsel 3, der Pastillenautomat
 
@@ -663,6 +665,7 @@ Szene beim ersten Ebenenwechsel in die Realität, egal über welchen Wecker. Ebe
 | W3\_BAS\_PIX\_0525 | Pixel | Dein Körper liegt da und lächelt, und ich sitze auf dem Deckel und passe auf. // Das ist Arbeit. Unbezahlte Arbeit. Ich erwähne es nur, damit es einmal erwähnt ist. | Ansehen: Max' Kapsel, zweites Mal |
 | W3\_BAS\_PIX\_0530 | Pixel | Er liegt da, lächelt und sabbert ein wenig. Ich habe ihn fotografiert. // Innerlich, natürlich. Für immer. Ich werde mir das Bild an schlechten Tagen ansehen. | Spielfigur Pixel: Ansehen Max in der Kapsel |
 | W3\_BAS\_PIX\_0540 | Pixel | Schütteln. Mit beiden Pfoten. Er wird aufwachen und so tun, als wäre er von allein aufgewacht. | Spielfigur Pixel: Benutzen Kapsel; weckt Max aus Simulation oder Labor |
+| W3\_BAS\_PIX\_0545 | Pixel | Er liegt zu tief im Turm, da kommt mein Schütteln nicht hin. // Fünfzig Stockwerke. Ich schüttle gründlich, aber nicht durch Beton. | Spielfigur Pixel: Benutzen Kapsel, solange Max im Büroturm festsitzt (vor Rätsel 7) |
 | W3\_BAS\_MAX\_0550 | Max | Ein Terminal mit grünem Bildschirm und einer Tastatur, auf der Pixel Platz hätte. Und hatte, sagt Kalle. | Ansehen: Terminal |
 | W3\_BAS\_MAX\_0555 | Max | Auf der Tastatur sind Pfotenabdrücke. Kalle hat sie nicht weggewischt. Er hängt an ihnen. | Ansehen: Terminal, zweites Mal |
 | W3\_BAS\_MAX\_0560 | Max | Ich tipp „zurück“. Die Kapsel summt. Ich leg mich hin. Zum ersten Mal ist das eine Aufgabe. | Benutzen: Terminal; Ebenenwechsel in die Simulation, Ankunft am letzten Wecker |
@@ -672,6 +675,7 @@ Szene beim ersten Ebenenwechsel in die Realität, egal über welchen Wecker. Ebe
 | W3\_BAS\_MAX\_0590 | Max | Zu hoch für mich. Nicht zu hoch für jemanden mit Krallen und keinem Respekt vor Mobiliar. | Benutzen: Fenster als Max |
 | W3\_BAS\_PIX\_0600 | Pixel | Fenster auf. Schnee fällt auf die Kapsel, und drüben schneit es jetzt irgendwo, wo es nicht schneien sollte. // Ich bin das Wetter. Das wollte ich schon immer sein. | Spielfigur Pixel: Benutzen Fenster; Simulation: Schnee |
 | W3\_BAS\_PIX\_0610 | Pixel | Fenster zu. Ich bin nass, wie immer. // Wenn diese Welt ein Motto hätte, dann dieses: Pixel ist nass. Man sollte es über den Eingang schreiben. | Spielfigur Pixel: Fenster schließen |
+| W3\_BAS\_PIX\_0615 | Pixel | Das Fenster bleibt offen. Max ist drüben noch nicht fertig, und ich bin gerade so schön kalt. | Spielfigur Pixel: Fenster schließen, solange Max im Labor ist und die Zelle glüht |
 | W3\_BAS\_MAX\_0620 | Max | Ein Lüftungsschacht. Offen. Katzengroß. Das ist eine Einladung, und sie ist nicht an mich gerichtet. | Ansehen: Lüftungsschacht |
 | W3\_BAS\_PIX\_0625 | Pixel | Der Schacht ruft mich. Ich höre es deutlich. Er sagt: Krabbel. // Ich sage: später. Ein Profi lässt sich nicht von jedem Loch in der Wand herumkommandieren. | Ansehen: Lüftungsschacht, zweites Mal |
 | W3\_BAS\_PIX\_0630 | Pixel | Ein Schacht, eng, dunkel und aus Metall. Jede Katze würde da hineingehen. // Ich bin nicht jede Katze. Ich gehe trotzdem, aber aus ganz anderen, viel besseren Gründen. | Spielfigur Pixel: Benutzen Lüftungsschacht; Animation Schacht kriechen |
@@ -1058,7 +1062,8 @@ Gespräch mit M.U.T.T.I. Die drei Regeln sind Optionen, sobald sie im Notizbuch 
 | W3\_KERN\_MUT\_0320 | M.U.T.T.I. | Von hier oben sieht man alle. Und man kann niemanden umarmen. Das ist praktisch. Umarmungen sind unhygienisch. |  |
 | W3\_KERN\_PIX\_0330 | Pixel (aus dem Lautsprecher) | Das ist das Traurigste, was ich je gehört habe. Und ich habe einen Hundekuchen in einer Kekstüte gesehen. | nach 0320 |
 | W3\_KERN\_MAX\_0340 | Max | Ich hab noch nicht alle Regeln. Sie hält mich hin, und ich kann nicht sagen, womit. | Reden: M.U.T.T.I. mit weniger als drei Regeln im Notizbuch |
-| W3\_KERN\_PIX\_0350 | Pixel (aus dem Lautsprecher) | Die fehlenden Regeln liegen nicht im Labor. Wechsel zu mir, dann schüttle ich deine Kapsel. // Und zwar mit einem Vergnügen, das ich nicht im Geringsten zu verbergen gedenke. | nach 0340, nur wenn Regel 1 oder Regel 2 fehlt; Hinweis auf den Rückweg aus dem Labor |
+| W3\_KERN\_PIX\_0350 | Pixel (aus dem Lautsprecher) | Die fehlenden Regeln liegen nicht im Labor. Wechsel zu mir, dann schüttle ich deine Kapsel. // Und zwar mit einem Vergnügen, das ich nicht im Geringsten zu verbergen gedenke. | nach 0340, nur wenn Regel 2 fehlt (oder Regel 1 ohne Akte); Hinweis auf den Rückweg aus dem Labor |
+| W3\_KERN\_PIX\_0355 | Pixel (aus dem Lautsprecher) | Was du suchst, trägst du schon mit dir herum. // Ich trage auch immer alles mit mir herum. Hauptsächlich Fell. | nach 0340, wenn Regel 1 fehlt und Max die Akte bei sich hat |
 
 ### Rätsel 11: Der glühende Kern
 
@@ -1240,6 +1245,12 @@ Drei Stufen je Rätselschritt, vom Stups bis zur Lösung, nach den Regeln in `05
 
 | ID | Sprecher | Text | Auslöser |
 | --- | --- | --- | --- |
+| W3\_HINT\_PIX\_0010 | Pixel | Mir fällt gerade nichts ein, was du tun müsstest. Genieß es. In dieser Welt hält so etwas nie lange. | Nichts offen |
+| W3\_HINT\_PIX\_0020 | Pixel | Der Mann mit dem Hut hat die Gasse freigegeben. Da hinten steht ein Automat, und ich habe das Gefühl, er wartet auf dich. | Wegweiser: Apothekengasse noch nie betreten, nach Rätsel 1 |
+| W3\_HINT\_PIX\_0030 | Pixel | Die Tür am Glaseingang redet jetzt mit jedem. Dahinter geht es nach oben. Weit nach oben. | Wegweiser: Büroturm noch nie betreten, nach Rätsel 5 |
+| W3\_HINT\_PIX\_0040 | Pixel | Irgendwo an dieser Straße backt jemand, der schon weiß, dass du gleich klingelst. Ich rieche es bis hierher. | Wegweiser: Küche der Orakel-Oma noch nie betreten, nach Rätsel 3 |
+| W3\_HINT\_PIX\_0050 | Pixel | In der Unterstadt gibt es eine Panzertür, an der wir noch nie waren. Ich gehe ungern irgendwohin, wo ich noch nie war. Du bist da weniger empfindlich. | Wegweiser: Laboreingang noch nie betreten |
+| W3\_HINT\_PIX\_0060 | Pixel | Kalles Leitung liegt. Das Labor ist jetzt nur noch ein Nickerchen entfernt. Mit Nickerchen kenne ich mich aus. | Wegweiser: Testkammer 1 noch nie betreten, nach Rätsel 9a |
 | W3\_HINT\_PIX\_0110 | Pixel | Der Mann mit dem Hut will keine richtigen Antworten, sondern menschliche. Das ist nicht dasselbe. // Sieh dir an, was die Leute hier auf der Straße treiben. Vernünftig ist davon nichts. | R1a Beobachtungen, Stufe 1 |
 | W3\_HINT\_PIX\_0120 | Pixel | Sieh dir die Leute auf der Straße an. Den Weinenden, die mit dem Schirm, den mit der Musik. Keiner von denen tut etwas Vernünftiges. Genau das brauchst du. | R1a, Stufe 2 |
 | W3\_HINT\_PIX\_0130 | Pixel | Sieh dir den weinenden Mann, die Frau mit dem Schirm und den Musiker an. Dann stehen ihre Dummheiten in deinem Notizbuch. Dann geh zum Hut. | R1a, Stufe 3 |
@@ -1250,8 +1261,8 @@ Drei Stufen je Rätselschritt, vom Stups bis zur Lösung, nach den Regeln in `05
 | W3\_HINT\_PIX\_0220 | Pixel | Zwei mal zwei. Wie viel ist das? // Sag es nicht mir, ich weiß es längst. Sag es dem Koch, der wartet auf genau eine Zahl. | R2, Stufe 2 |
 | W3\_HINT\_PIX\_0230 | Pixel | Bestell „die Nummer vier“. Nicht zwei mal zwei. Vier. Er versteht nur Vier. Ich verstehe nur Thunfisch. Jeder hat sein Wort. | R2, Stufe 3 |
 | W3\_HINT\_PIX\_0310 | Pixel | Der Automat will ein Symptom sehen, nicht hören. Etwas, das sich wiederholt. Ich wiederhole mich nie. Aber ich könnte. Gegen Bezahlung. | R3a Déjà-vu, Stufe 1 |
-| W3\_HINT\_PIX\_0320 | Pixel | Wechsel zu mir. Ich laufe am Automaten vorbei. Dann noch mal. Genau gleich. Dann wechselst du zurück und sagst dem Automaten, was du gesehen hast. | R3a, Stufe 2 |
-| W3\_HINT\_PIX\_0330 | Pixel | Wechsel zu mir und lauf zweimal über den Gehweg vor dem Automaten. Dann zurück zu dir, Automat benutzen, „Déjà-vu“ wählen. Ich will dafür Fisch. | R3a, Stufe 3 |
+| W3\_HINT\_PIX\_0320 | Pixel | Ich könnte am Automaten vorbeilaufen. Dann noch mal. Genau gleich. Du müsstest mich nur darum bitten. Danach sagst du dem Automaten, was du gesehen hast. | R3a, Stufe 2 |
+| W3\_HINT\_PIX\_0330 | Pixel | Benutz mich hier in der Gasse, dann laufe ich zweimal gleich am Automaten vorbei. Danach Automat benutzen, „Déjà-vu“ wählen. Ich will dafür Fisch. | R3a, Stufe 3 |
 | W3\_HINT\_PIX\_0340 | Pixel | Zwei Pastillen. Eine macht es bequem, eine macht es wahr. Du weißt, welche du nehmen würdest. Nimm die andere. | R3b Wahl, Stufe 1 |
 | W3\_HINT\_PIX\_0350 | Pixel | Die blaue führt aufs Sofa. Da warst du schon, sechzehn Jahre lang. // Vierzehn Jahre davon war ich dabei, und ich kann dir versichern: Es war nicht spannend. | R3b, Stufe 2 |
 | W3\_HINT\_PIX\_0360 | Pixel | Nimm die rote. Ich fange dich nicht auf. Das macht der Mann in der Strickjacke. | R3b, Stufe 3 |

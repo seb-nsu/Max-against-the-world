@@ -684,6 +684,11 @@
    "id": "R1a",
    "name": "Der Mensch-Test, Beobachtungen",
    "raum": "unterstadt_strasse",
+   "objekte": [
+    "frau_regenschirm",
+    "strassenmusiker_w3",
+    "weinender_mann"
+   ],
    "benoetigt": [],
    "ergibt": [],
    "schalter": [
@@ -698,6 +703,9 @@
    "id": "R1b",
    "name": "Der Mensch-Test, die drei Fragen",
    "raum": "unterstadt_strasse",
+   "objekte": [
+    "deckert"
+   ],
    "benoetigt": [
     "R1a"
    ],
@@ -712,6 +720,10 @@
    "id": "R2",
    "name": "Die Nudelbude „Vier“",
    "raum": "unterstadt_strasse",
+   "objekte": [
+    "herr_vier",
+    "nudelbude"
+   ],
    "benoetigt": [],
    "ergibt": [],
    "schalter": [
@@ -724,6 +736,11 @@
    "id": "R3a",
    "name": "Der Pastillenautomat, Déjà-vu",
    "raum": "apothekengasse",
+   "objekte": [
+    "automat",
+    "pastillenautomat",
+    "pixel"
+   ],
    "benoetigt": [
     "R1b",
     "R2"
@@ -742,6 +759,10 @@
    "id": "R3b",
    "name": "Der Pastillenautomat, die Wahl",
    "raum": "apothekengasse",
+   "objekte": [
+    "automat",
+    "blaue_pastille"
+   ],
    "benoetigt": [
     "R3a",
     "rote_pastille"
@@ -759,6 +780,10 @@
    "id": "R4",
    "name": "Das Sparschwein des Orakels",
    "raum": "kueche_orakel",
+   "objekte": [
+    "orakel_oma",
+    "sparschwein"
+   ],
    "benoetigt": [
     "R3b"
    ],
@@ -776,6 +801,10 @@
    "id": "R5",
    "name": "Die gesprächige Tür",
    "raum": "stadtstrasse",
+   "objekte": [
+    "tuer",
+    "schmidt"
+   ],
    "benoetigt": [
     "R3b"
    ],
@@ -791,6 +820,11 @@
    "id": "R6a",
    "name": "Die Agenten-Klone, Original und Kopie",
    "raum": "buero_50",
+   "objekte": [
+    "klone",
+    "klon",
+    "schmidt"
+   ],
    "benoetigt": [
     "R5",
     "kaffeetasse"
@@ -807,6 +841,10 @@
    "id": "R6b",
    "name": "Die Agenten-Klone, Mittagspause",
    "raum": "buero_50",
+   "objekte": [
+    "klone",
+    "klon"
+   ],
    "benoetigt": [
     "R6a",
     "kaffeetasse"
@@ -826,6 +864,10 @@
    "id": "R7a",
    "name": "Der Ausgang im 50. Stock, Farbcode",
    "raum": "buero_50",
+   "objekte": [
+    "farbcode_an_der_wand",
+    "terminal"
+   ],
    "benoetigt": [
     "R6b",
     "farbcode_zettel",
@@ -842,6 +884,9 @@
    "id": "R7b",
    "name": "Der Ausgang im 50. Stock, Kabel",
    "raum": "widerstandsbasis",
+   "objekte": [
+    "patch_panel"
+   ],
    "benoetigt": [
     "R7a"
    ],
@@ -856,6 +901,10 @@
    "id": "R8",
    "name": "Der Hausmeister Modell 08/15",
    "raum": "laboreingang",
+   "objekte": [
+    "hausmeister",
+    "telefonbuch_in_der_zelle"
+   ],
    "benoetigt": [
     "telefonbuchseite"
    ],
@@ -871,6 +920,11 @@
    "id": "R9a",
    "name": "Die Testkammern, die Leitung",
    "raum": "laboreingang",
+   "objekte": [
+    "kartenleser",
+    "datenanschluss",
+    "panzertuer"
+   ],
    "benoetigt": [
     "R8",
     "zugangskarte"
@@ -886,6 +940,10 @@
    "id": "R9b",
    "name": "Die Testkammern, Kammer 1",
    "raum": "testkammer_1",
+   "objekte": [
+    "bernd",
+    "bodenschalter"
+   ],
    "benoetigt": [
     "R9a"
    ],
@@ -899,6 +957,10 @@
    "id": "R9c",
    "name": "Die Testkammern, Kammer 2",
    "raum": "testkammer_2",
+   "objekte": [
+    "laser",
+    "sockel"
+   ],
    "benoetigt": [
     "R9b",
     "gummihuhn"
@@ -914,6 +976,11 @@
    "id": "R9d",
    "name": "Die Testkammern, Kammer 3",
    "raum": "testkammer_3",
+   "objekte": [
+    "tuer",
+    "bernd",
+    "lautsprecher"
+   ],
    "benoetigt": [
     "R9c",
     "gummihuhn"
@@ -928,6 +995,9 @@
    "id": "R10",
    "name": "Das M.U.T.T.I.-Paradoxon",
    "raum": "kern",
+   "objekte": [
+    "mutti"
+   ],
    "benoetigt": [
     "R4",
     "schmidts_akte",
@@ -945,6 +1015,10 @@
    "id": "R11",
    "name": "Der glühende Kern",
    "raum": "kern",
+   "objekte": [
+    "energiezelle",
+    "fenster"
+   ],
    "benoetigt": [
     "R10"
    ],
@@ -965,6 +1039,9 @@
    "id": "R12",
    "name": "Die vierte Zutat",
    "raum": "unterstadt_strasse",
+   "objekte": [
+    "herr_vier"
+   ],
    "benoetigt": [
     "rezeptkarte"
    ],
@@ -981,6 +1058,11 @@
    "id": "R13",
    "name": "Kalles Morse-Tabelle",
    "raum": "widerstandsbasis",
+   "objekte": [
+    "kalles_tasse",
+    "tisch_mit_kalles_tasse",
+    "piepsi"
+   ],
    "benoetigt": [
     "R3b"
    ],

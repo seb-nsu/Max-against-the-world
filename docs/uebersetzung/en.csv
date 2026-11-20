@@ -4060,8 +4060,8 @@ W3_HINT_PIX_0220,Two times two. How much is that?
 W3_HINT_PIX_0220_2,"Do not tell me, I have known for ages. Tell the cook, he is waiting for exactly one number."
 W3_HINT_PIX_0230,"Order ""number four"". Not two times two. Four. He only understands Four. I only understand tuna. Everyone has their word."
 W3_HINT_PIX_0310,"The machine wants to see a symptom, not hear one. Something that repeats. I never repeat myself. But I could. For payment."
-W3_HINT_PIX_0320,Switch to me. I shall walk past the machine. Then again. Exactly the same. Then you switch back and tell the machine what you saw.
-W3_HINT_PIX_0330,"Switch to me and walk twice across the pavement in front of the machine. Then back to you, use the machine, choose ""déjà vu"". I want fish for this."
+W3_HINT_PIX_0320,I could walk past the machine. Then again. Exactly the same. You would only have to ask me. Then you tell the machine what you saw.
+W3_HINT_PIX_0330,"Use me here in the alley, and I shall walk past the machine twice, exactly the same. Then use the machine and choose ""déjà vu"". I want fish for this."
 W3_HINT_PIX_0340,"Two lozenges. One makes it comfortable, one makes it true. You know which one you would take. Take the other."
 W3_HINT_PIX_0350,"The blue one leads to the sofa. You have been there, for sixteen years."
 W3_HINT_PIX_0350_2,"I was there for fourteen of them, and I can assure you: it was not exciting."
@@ -6455,7 +6455,20 @@ FI_DACH_OPA_0102,"The remote, Max! Hand open, remote in. That's the whole trick.
 FI_DACH_OPA_0104,Max. The remote. I'm not holding my hand out for decoration.
 FI_DACH_PIX_0106,He's holding his hand out. You have what goes in it. That really is all the puzzle there is.
 W2_DISK_LEO_0010_2,AND EVERYONE HERE LIES EXACTLY ONCE! OLYMPIC TRADITION!
+W3_BAS_PIX_0545,He is lying too deep in the tower. My shaking does not reach that far.
+W3_BAS_PIX_0545_2,"Fifty floors. I shake thoroughly, but not through concrete."
+W3_BAS_PIX_0615,"The window stays open. Max is not finished over there, and I am finally nice and cold."
 W3_ENDE_PIX_0022,"You have it, and I kept an eye on your body. So we both did some work."
 W3_ENDE_PIX_0022_2,"But only one of us was smiling in his sleep the whole time, and I shan't tell you who. You know."
+W3_HINT_PIX_0010,"I cannot think of anything you need to do right now. Enjoy it. In this world, that never lasts long."
+W3_HINT_PIX_0020,"The man in the hat has let you into the alley. There is a machine back there, and I have a feeling it is waiting for you."
+W3_HINT_PIX_0030,"The door at the glass entrance talks to everyone now. Behind it, things go up. A long way up."
+W3_HINT_PIX_0040,Somewhere on this street someone is baking who already knows you are about to ring the bell. I can smell it from here.
+W3_HINT_PIX_0050,There is an armoured door in the undercity that we have never been to. I do not like going where I have never been. You are less sensitive about that.
+W3_HINT_PIX_0060,Kalle's line is in place. The lab is now only a nap away. Naps are my field.
+W3_KERN_PIX_0355,"What you are looking for, you are already carrying around with you."
+W3_KERN_PIX_0355_2,I carry everything around with me as well. Mostly fur.
+W3_TEST_DEC_0430,Do that. The street isn't going anywhere. It just rains.
+W3_TEST_MAX_0420,I'll have a look around first.
 W4_WERB_WER_0062,Give me your phone! Then we'll carry on there! … You haven't got one? I can't advertise to a human without a phone. How unprofessional.
 W4_WERB_MAX_0072,"No phone, no adverts. For the first time in my life that's an advantage."

@@ -4489,6 +4489,8 @@ W3_TEST_PIX_0360_2,Meine Vorfahren saßen schon auf Fensterbänken und haben Men
 W3_TEST_DEC_0370,"Ich habe heute vier geprüft. Drei Menschen, eine Katze. Ein guter Tag. Ein nasser, aber guter.","I tested four today. Three humans, one cat. A good day. A wet one, but good."
 W3_TEST_MAX_0380,"Ich sag nichts. Ich schau nur. Das ist der Test, oder?","I'm not saying anything. I'm just looking. That's the test, right?"
 W3_TEST_DEC_0390,"Nein. Das ist Schweigen. Schweigen besteht nur, wenn man Fell hat. Sieh dich um, Junge. Die Straße ist voller Antworten.","No. That's silence. Silence only passes if you have fur. Look around, kid. The street is full of answers."
+W3_TEST_MAX_0420,Ich schau mich erst mal um.,I'll have a look around first.
+W3_TEST_DEC_0430,Tu das. Die Straße läuft nicht weg. Sie regnet nur.,Do that. The street isn't going anywhere. It just rains.
 W3_APO_MAX_0010,"Ein Automat mit Linse, Kreuz und zwei Fächern. Rot und blau. Sofa oder Wahrheit. Und kein Fach für beides.","A machine with a lens, a cross and two compartments. Red and blue. Sofa or truth. And no compartment for both."
 W3_APO_PIX_0020,"Er hat eine Linse, die größer ist als mein Kopf, und ich fühle mich beobachtet.","It has a lens bigger than my head, and I feel watched."
 W3_APO_PIX_0020_2,Das ist ungewohnt. Gemessen an meiner Bedeutung werde ich normalerweise viel zu selten beobachtet.,"That is unusual. Given my importance, I am normally watched far too rarely."
@@ -4898,6 +4900,8 @@ W3_BAS_PIX_0525_2,"Das ist Arbeit. Unbezahlte Arbeit. Ich erwähne es nur, damit
 W3_BAS_PIX_0530,"Er liegt da, lächelt und sabbert ein wenig. Ich habe ihn fotografiert.","He is lying there, smiling and drooling slightly. I took a photo of him."
 W3_BAS_PIX_0530_2,"Innerlich, natürlich. Für immer. Ich werde mir das Bild an schlechten Tagen ansehen.","Mentally, of course. For ever. I shall look at it on bad days."
 W3_BAS_PIX_0540,"Schütteln. Mit beiden Pfoten. Er wird aufwachen und so tun, als wäre er von allein aufgewacht.",Shake. With both paws. He will wake up and pretend he woke up on his own.
+W3_BAS_PIX_0545,"Er liegt zu tief im Turm, da kommt mein Schütteln nicht hin.",He is lying too deep in the tower. My shaking does not reach that far.
+W3_BAS_PIX_0545_2,"Fünfzig Stockwerke. Ich schüttle gründlich, aber nicht durch Beton.","Fifty floors. I shake thoroughly, but not through concrete."
 W3_BAS_MAX_0550,"Ein Terminal mit grünem Bildschirm und einer Tastatur, auf der Pixel Platz hätte. Und hatte, sagt Kalle.","A terminal with a green screen and a keyboard big enough for Pixel to sit on. And he did, says Kalle."
 W3_BAS_MAX_0555,Auf der Tastatur sind Pfotenabdrücke. Kalle hat sie nicht weggewischt. Er hängt an ihnen.,There are paw prints on the keyboard. Kalle hasn't wiped them off. He's attached to them.
 W3_BAS_MAX_0560,Ich tipp „zurück“. Die Kapsel summt. Ich leg mich hin. Zum ersten Mal ist das eine Aufgabe.,"I type ""back"". The pod hums. I lie down. For the first time that's a job."
@@ -4909,6 +4913,7 @@ W3_BAS_PIX_0600,"Fenster auf. Schnee fällt auf die Kapsel, und drüben schneit 
 W3_BAS_PIX_0600_2,Ich bin das Wetter. Das wollte ich schon immer sein.,I am the weather. I have always wanted to be.
 W3_BAS_PIX_0610,"Fenster zu. Ich bin nass, wie immer.","Window shut. I am wet, as always."
 W3_BAS_PIX_0610_2,"Wenn diese Welt ein Motto hätte, dann dieses: Pixel ist nass. Man sollte es über den Eingang schreiben.","If this world had a motto, it would be this: Pixel is wet. Someone should write it over the entrance."
+W3_BAS_PIX_0615,"Das Fenster bleibt offen. Max ist drüben noch nicht fertig, und ich bin gerade so schön kalt.","The window stays open. Max is not finished over there, and I am finally nice and cold."
 W3_BAS_MAX_0620,"Ein Lüftungsschacht. Offen. Katzengroß. Das ist eine Einladung, und sie ist nicht an mich gerichtet.","A ventilation shaft. Open. Cat-sized. That's an invitation, and it isn't addressed to me."
 W3_BAS_PIX_0625,Der Schacht ruft mich. Ich höre es deutlich. Er sagt: Krabbel.,The shaft is calling me. I can hear it clearly. It says: crawl.
 W3_BAS_PIX_0625_2,Ich sage: später. Ein Profi lässt sich nicht von jedem Loch in der Wand herumkommandieren.,I say: later. A professional does not let every hole in the wall order him about.
@@ -5258,6 +5263,8 @@ W3_KERN_PIX_0330,"Das ist das Traurigste, was ich je gehört habe. Und ich habe 
 W3_KERN_MAX_0340,"Ich hab noch nicht alle Regeln. Sie hält mich hin, und ich kann nicht sagen, womit.","I don't have all the rules yet. She's stringing me along, and I can't say how."
 W3_KERN_PIX_0350,"Die fehlenden Regeln liegen nicht im Labor. Wechsel zu mir, dann schüttle ich deine Kapsel.","The missing rules are not in the lab. Switch to me, then I shall shake your pod."
 W3_KERN_PIX_0350_2,"Und zwar mit einem Vergnügen, das ich nicht im Geringsten zu verbergen gedenke.",And with a pleasure I have not the slightest intention of hiding.
+W3_KERN_PIX_0355,"Was du suchst, trägst du schon mit dir herum.","What you are looking for, you are already carrying around with you."
+W3_KERN_PIX_0355_2,Ich trage auch immer alles mit mir herum. Hauptsächlich Fell.,I carry everything around with me as well. Mostly fur.
 W3_KERN_MAX_0410,"Die Energiezelle. Orange, glühend, auf einem Sockel. Sie ist so heiß, dass die Luft darüber flimmert. Opa will die. Opa hat nicht gesagt, dass sie glüht. Opa sagt so was nie dazu.","The energy cell. Orange, glowing, on a plinth. It's so hot the air above it shimmers. Grandpa wants it. Grandpa didn't say it glows. Grandpa never mentions that sort of thing."
 W3_KERN_PIX_0415,"Das Ding glüht wie ein Heizkissen, sagst du. Wäre ich da, würde ich mich sofort drauflegen.","That thing glows like a heat pad, you say. If I were there, I would lie down on it at once."
 W3_KERN_PIX_0415_2,"Ungefähr eine halbe Sekunde lang. Danach würde ich mich, glaube ich, umentscheiden.",For about half a second. After that I believe I would change my mind.
@@ -5410,6 +5417,12 @@ W3_EING_PIX_1040,"Zettel, Reißzwecken, Angst. Hunderte Testpersonen und kein Ku
 W3_BAS_PIX_1150,Knochenförmig. Für Hunde. Ich schnuppere einmal. Ich werde dieses eine Mal nie wieder gutmachen können.,Bone-shaped. For dogs. I sniff once. I will never be able to make up for that one time.
 W3_BAS_PIX_1160,Ein Keks mit Zettel. Ich lecke am Keks. Der Zettel schmeckt besser. Das sagt alles über Glückskekse.,A cookie with a note. I lick the cookie. The note tastes better. That says everything about fortune cookies.
 W3_BAS_PIX_1170,Die Zelle ist kalt und riecht nach Metall. Ich lege mich nicht drauf. Schlimmeres kann ich über einen Gegenstand nicht sagen.,The cell is cold and smells of metal. I am not lying down on it. I can say nothing worse about an object.
+W3_HINT_PIX_0010,"Mir fällt gerade nichts ein, was du tun müsstest. Genieß es. In dieser Welt hält so etwas nie lange.","I cannot think of anything you need to do right now. Enjoy it. In this world, that never lasts long."
+W3_HINT_PIX_0020,"Der Mann mit dem Hut hat die Gasse freigegeben. Da hinten steht ein Automat, und ich habe das Gefühl, er wartet auf dich.","The man in the hat has let you into the alley. There is a machine back there, and I have a feeling it is waiting for you."
+W3_HINT_PIX_0030,Die Tür am Glaseingang redet jetzt mit jedem. Dahinter geht es nach oben. Weit nach oben.,"The door at the glass entrance talks to everyone now. Behind it, things go up. A long way up."
+W3_HINT_PIX_0040,"Irgendwo an dieser Straße backt jemand, der schon weiß, dass du gleich klingelst. Ich rieche es bis hierher.",Somewhere on this street someone is baking who already knows you are about to ring the bell. I can smell it from here.
+W3_HINT_PIX_0050,"In der Unterstadt gibt es eine Panzertür, an der wir noch nie waren. Ich gehe ungern irgendwohin, wo ich noch nie war. Du bist da weniger empfindlich.",There is an armoured door in the undercity that we have never been to. I do not like going where I have never been. You are less sensitive about that.
+W3_HINT_PIX_0060,Kalles Leitung liegt. Das Labor ist jetzt nur noch ein Nickerchen entfernt. Mit Nickerchen kenne ich mich aus.,Kalle's line is in place. The lab is now only a nap away. Naps are my field.
 W3_HINT_PIX_0110,"Der Mann mit dem Hut will keine richtigen Antworten, sondern menschliche. Das ist nicht dasselbe.","The man in the hat does not want correct answers, he wants human ones. That is not the same thing."
 W3_HINT_PIX_0110_2,"Sieh dir an, was die Leute hier auf der Straße treiben. Vernünftig ist davon nichts.",Look at what the people on the street get up to. None of it is sensible.
 W3_HINT_PIX_0120,"Sieh dir die Leute auf der Straße an. Den Weinenden, die mit dem Schirm, den mit der Musik. Keiner von denen tut etwas Vernünftiges. Genau das brauchst du.","Look at the people on the street. The crying man, the one with the umbrella, the one with the music. None of them is doing anything sensible. That is exactly what you need."
@@ -5423,8 +5436,8 @@ W3_HINT_PIX_0220,Zwei mal zwei. Wie viel ist das?,Two times two. How much is tha
 W3_HINT_PIX_0220_2,"Sag es nicht mir, ich weiß es längst. Sag es dem Koch, der wartet auf genau eine Zahl.","Do not tell me, I have known for ages. Tell the cook, he is waiting for exactly one number."
 W3_HINT_PIX_0230,Bestell „die Nummer vier“. Nicht zwei mal zwei. Vier. Er versteht nur Vier. Ich verstehe nur Thunfisch. Jeder hat sein Wort.,"Order ""number four"". Not two times two. Four. He only understands Four. I only understand tuna. Everyone has their word."
 W3_HINT_PIX_0310,"Der Automat will ein Symptom sehen, nicht hören. Etwas, das sich wiederholt. Ich wiederhole mich nie. Aber ich könnte. Gegen Bezahlung.","The machine wants to see a symptom, not hear one. Something that repeats. I never repeat myself. But I could. For payment."
-W3_HINT_PIX_0320,"Wechsel zu mir. Ich laufe am Automaten vorbei. Dann noch mal. Genau gleich. Dann wechselst du zurück und sagst dem Automaten, was du gesehen hast.",Switch to me. I shall walk past the machine. Then again. Exactly the same. Then you switch back and tell the machine what you saw.
-W3_HINT_PIX_0330,"Wechsel zu mir und lauf zweimal über den Gehweg vor dem Automaten. Dann zurück zu dir, Automat benutzen, „Déjà-vu“ wählen. Ich will dafür Fisch.","Switch to me and walk twice across the pavement in front of the machine. Then back to you, use the machine, choose ""déjà vu"". I want fish for this."
+W3_HINT_PIX_0320,"Ich könnte am Automaten vorbeilaufen. Dann noch mal. Genau gleich. Du müsstest mich nur darum bitten. Danach sagst du dem Automaten, was du gesehen hast.",I could walk past the machine. Then again. Exactly the same. You would only have to ask me. Then you tell the machine what you saw.
+W3_HINT_PIX_0330,"Benutz mich hier in der Gasse, dann laufe ich zweimal gleich am Automaten vorbei. Danach Automat benutzen, „Déjà-vu“ wählen. Ich will dafür Fisch.","Use me here in the alley, and I shall walk past the machine twice, exactly the same. Then use the machine and choose ""déjà vu"". I want fish for this."
 W3_HINT_PIX_0340,"Zwei Pastillen. Eine macht es bequem, eine macht es wahr. Du weißt, welche du nehmen würdest. Nimm die andere.","Two lozenges. One makes it comfortable, one makes it true. You know which one you would take. Take the other."
 W3_HINT_PIX_0350,"Die blaue führt aufs Sofa. Da warst du schon, sechzehn Jahre lang.","The blue one leads to the sofa. You have been there, for sixteen years."
 W3_HINT_PIX_0350_2,"Vierzehn Jahre davon war ich dabei, und ich kann dir versichern: Es war nicht spannend.","I was there for fourteen of them, and I can assure you: it was not exciting."

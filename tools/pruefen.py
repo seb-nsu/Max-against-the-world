@@ -638,7 +638,7 @@ def pruefe_englisch(alle_ids):
 # Gespräche, die ohne „beendet das Gespräch“ auskommen, weil die Figur nach jeder Option selbst
 # geht (`_nach_option` liefert true). Alle übrigen brauchen eine beendende Option, sonst hing das
 # Spiel nach der letzten Wahl in einem leeren Menü (Review 17.11., Fund W2-29, Hermes).
-GESPRAECHE_OHNE_ABSCHIED = {"maklerin", "deckert", "sitcom_vater", "sitcom_sohn", "fbi_agent",
+GESPRAECHE_OHNE_ABSCHIED = {"maklerin", "sitcom_vater", "sitcom_sohn", "fbi_agent",
                             "fledermann", "wonder_wilma"}
 
 

@@ -8136,7 +8136,7 @@
       }
      ],
      "beendet": false,
-     "bleibt": false,
+     "bleibt": true,
      "bedingung": [
       {
        "art": "vor",
@@ -8500,8 +8500,24 @@
      "frage": "W3_TEST_MAX_0090",
      "antworten": [],
      "beendet": false,
-     "bleibt": false,
+     "bleibt": true,
      "oeffnet": true
+    },
+    {
+     "id": "0420",
+     "frage": "W3_TEST_MAX_0420",
+     "antworten": [
+      {
+       "zeile": "W3_TEST_DEC_0430",
+       "sprecher": "DEC",
+       "blasen": [
+        "W3_TEST_DEC_0430"
+       ],
+       "regie": ""
+      }
+     ],
+     "beendet": true,
+     "bleibt": false
     }
    ],
    "erschoepft": [

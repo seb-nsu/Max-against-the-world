@@ -5,7 +5,8 @@ extends CQHotspot
 ## sofort (05-spielsysteme.md, Steuerung). Ist das Ziel erst nach einem Rätsel erreichbar
 ## (Welt-Tabelle „erreichbar_ab“), sagt Max die Sperr-Zeile aus dem Layout oder eine
 ## Ersatzzeile; „versteckt“ blendet den Ausgang bis dahin aus. Sonderfälle: _darf_gehen().
-## Pixel geht nicht durch Türen (WECH 0080): Raumwechsel nur mit Max, Pixel folgt.
+## Pixel geht nicht durch Türen (WECH 0080): Raumwechsel nur mit Max, Pixel folgt; Ausnahmen liefern
+## die Regeln des Abschnitts (Spiel.regel_wert „pixel_ausgang“).
 
 
 func ziel() -> String:
@@ -68,7 +69,8 @@ func on_click() -> void:
 
 ## true, wenn die Figur hier hinaus darf. Darf sprechen (await), bevor sie false liefert.
 func _darf_gehen() -> bool:
-	if Spiel.ist_pixel():
+	# Ausnahmen nennen die Regeln des Abschnitts (Welt 3: Lüftungsschacht in die Kühlung und zurück)
+	if Spiel.ist_pixel() and Spiel.regel_wert("pixel_ausgang", self) != true:
 		await Spiel.wechsel_regel("pixel_tuer")
 		return false
 	if await Spiel.regel("ausgang", self):

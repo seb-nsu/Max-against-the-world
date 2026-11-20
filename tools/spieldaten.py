@@ -110,6 +110,8 @@ def hinweise_lesen(ab, raetsel_ids):
         zid, ausl = zellen[0].replace("\\_", "_"), zellen[-1]
         stufe = re.search(r"Stufe (\d)", ausl)
         if not stufe:
+            if ausl.startswith("Wegweiser"):
+                continue   # Ort des nächsten Schritts (Welt 3, skripte/welt_3.gd WEGWEISER), kein Sonderfall der Pfote
             # „Hilfe-Pfote in Zwischenspiel 1 bis 3“ (ZS1_HINT_PIX_0010) gilt nur in den Zwischenspielen
             art = "wartezeile" if "Warte" in ausl else "zwischenspiel" if "Zwischenspiel" in ausl else "nichts_offen"
             sonder[art] = zid
@@ -163,7 +165,9 @@ def erzeugen():
                 "offen_wenn": liste(r.get("benoetigt")),
                 "offen_wenn_eins_von": liste(r.get("benoetigt_eins_von")),
                 "geloest_schalter": liste(r.get("schalter"))[:1],
-                "objekte": [b for b in liste(r.get("benoetigt")) + liste(r.get("benoetigt_eins_von")) if b in gegen],
+                # benötigte Gegenstände, dazu Objekte im Raum aus „objekte“ (Welt 3, Review 20.11., W3-04)
+                "objekte": list(dict.fromkeys([b for b in liste(r.get("benoetigt")) + liste(r.get("benoetigt_eins_von"))
+                                               if b in gegen] + liste(r.get("objekte")))),
                 "optional": bool(r.get("optional")),
                 "sammelschritt": hat_teile,
                 "hinweise": h,
