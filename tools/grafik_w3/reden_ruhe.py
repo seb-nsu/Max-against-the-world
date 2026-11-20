@@ -1,12 +1,13 @@
 """Ruhe (Atmen) und Reden (Kopf und Mund) für die Welt-3-Figuren aus dem Stand-Sprite, dazu Kopfgesten
 (Morphäus nickt, Herr Vier schüttelt den Kopf). Schreibt je Figur tools/figuren/<id>_rig.json und rechnet mit
 figur.py die Streifen <id>_idle.png, <id>_talk.png (und Gesten) in den Ausgabeordner.
-Aufruf: py -3 reden_ruhe.py <stand-ordner> <ausgabe-ordner>"""
+Aufruf: py -3 reden_ruhe.py <stand-ordner> <ausgabe-ordner> [figur …]   (ohne Figuren: alle)"""
 import json, sys, subprocess
 from pathlib import Path
 from PIL import Image
 
 ST, AUS = Path(sys.argv[1]), Path(sys.argv[2])
+NUR = set(sys.argv[3:])
 TOOLS = Path(__file__).resolve().parent.parent
 MUND = "3e2731"; INNEN = "a22633"
 
@@ -24,7 +25,7 @@ F = {
     "rebellin":            (38, (4, 39), (31, 33, 2), 0.56, "mund"),
     "rebell":              (38, (15, 46), (37, 33, 3), 0.56, "mund"),
     "strassenmusiker":     (40, (28, 61), (55, 36, 2), 0.58, "mund"),
-    "frau_regenschirm":    (45, (10, 52), None, 0.62, "kopf"),
+    "frau_regenschirm":    (45, (10, 52), (40, 39, 4), 0.62, "mund"),   # Stand mit geschlossenem Mund (20.11.)
     "weinender_mann":      (50, (40, 82), None, 0.70, "kopf"),
     "hausmeister":         (48, (45, 88), (67, 35, 11), 0.62, "lautsprecher"),
     "opa_hologramm":       (14, (8, 25), (20, 12, 2), 0.60, "mund"),
@@ -54,6 +55,8 @@ def lautsprecher(sp, x, y, w, stufe):
 
 
 for fid, (hals, kx, mund, huefte, art) in F.items():
+    if NUR and fid not in NUR:
+        continue
     sp = Image.open(ST / f"{fid}.png").convert("RGBA"); w, h = sp.size
     if art == "schweben":
         rig = {"knochen": [{"name": "koerper", "eltern": None, "gelenk": [w // 2, h], "spitze": [w // 2, 0], "z": 1}],

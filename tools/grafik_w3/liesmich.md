@@ -26,3 +26,11 @@ Phase 2: `quellen_phase2.txt` (welche Bögen mit welchen Schaltern von `bew_w3.p
 `t2m_seite_rendern.py`: Blender im Hintergrund, rendert einen Meshy-Text-zu-Bewegung-Clip (FBX) als graue Seitenansicht; die Bilder dienen als Haltungsvorlage für gemalte Zwischenposen (`blender -b --python t2m_seite_rendern.py -- clip.fbx ziel schritt`).
 `t2m_bvh_strich.py`: Swift-Clips (BVH) als Strichmännchen in der Seitenansicht (Blender-Schritt und Zeichenschritt). `kapsel_folgen.py`: Kapsel-Bildfolgen für Aufstehen und Hinlegen samt Fußpunkt für die freie Max-Figur.
 `zustand_einsetzen.py`: Raumzustand nur an der geänderten Stelle einsetzen (8×8-Felder, eigene Paletten). `effekte_raum4.py`: Stadtstraße und Kern (Glastür, Radiowecker, Lichtband, Hitzeflimmern, Kabelpuls, Platzierung). `effekte_auto_takt.py`: rotes Auto in Seitenansicht für die Autos im Takt.
+
+Korrekturen 20.11. (Review W3-NS-03, W3-NS-04, W3-R05-02): `stand_korrektur.py` setzt aus Gemini-Varianten
+(`welt3\korrektur_20-11\`) nur die geänderte Stelle in die Stand-Sprites (Mund der Frau, Schmidts Füße, Mopp und
+gelbes Auge des Hausmeisters). `stelle_uebertragen.py` überträgt die Stelle in alle Gesten-Streifen (gemeinsame Lage
+je Bild, nur Pixel, die noch dem alten Stand gleichen; „form“ für Posen mit den Beinen des Stands).
+`hausmeister_mopp.py` dreht den Mopp in den Hausmeister-Posen (Kopf oben weg, Stiel über der Faust, Mopp-Kopf am
+Boden) und färbt das Auge. Danach `reden_ruhe.py <stand> <aus> figur …` und `figuren_einbau.py <quelle> figur …`
+mit `welt3\korrektur_20-11\quelle` als Übergabeordner.

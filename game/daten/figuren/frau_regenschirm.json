@@ -18,18 +18,12 @@
   },
   "talk": {
    "von": 2,
-   "bilder": 3,
+   "bilder": 4,
    "ms": 150,
-   "schleife": true,
-   "folge": [
-    0,
-    1,
-    0,
-    2
-   ]
+   "schleife": true
   },
   "schimpfen": {
-   "von": 5,
+   "von": 6,
    "bilder": 5,
    "ms": 140,
    "schleife": true,
