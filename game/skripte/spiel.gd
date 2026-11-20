@@ -12,6 +12,9 @@ extends Node
 ## nicht gezeigt. So läuft der Lösungspfad headless ohne Mausklicks durch.
 
 signal zeile_gesagt(schluessel: String)
+## Kürzel der Figur, die gerade spricht (leer, wenn niemand): Effekte mit „spricht“ im Layout
+## laufen nur dann (Sprechanlage der Glastür, W3-B34)
+var spricht := ""
 signal prolog_beendet
 signal figur_gewechselt(neu: PopochiuCharacter)
 ## Eine Ersatzzeile kam (Telemetrie: Ersatzzeilen und Fehlklicks je Objekt)
@@ -230,6 +233,7 @@ func sagen(kuerzel: String, zeile: String) -> void:
 		if kuerzel == "NAR":
 			await _erzaehlen(tr(b))
 			continue
+		spricht = kuerzel
 		var c := figur(kuerzel)
 		var quelle: PopochiuClickable = null
 		if not is_instance_valid(c):
@@ -259,6 +263,7 @@ func sagen(kuerzel: String, zeile: String) -> void:
 		await c.say(blasen_text(zeile, b))
 		if gast:
 			_stimme_aus_dem_off(c, false)
+	spricht = ""
 	if testmodus:
 		await get_tree().process_frame
 

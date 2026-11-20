@@ -347,6 +347,7 @@ func _einschlafen(ziel: String) -> void:
 		# Errungenschaft Déjà-vu (05-spielsysteme.md): jedes Betreten der Simulation zählt
 		Zustand.setze_wert("W3_SIMULATION_BESUCHE", int(Zustand.wert("W3_SIMULATION_BESUCHE", 0)) + 1)
 	C.player = C.Max
+	Zustand.setze("W3_WECKER_KLINGELT", false)   # jeder Traum beginnt um 5:59
 	Spiel.herkunft_raum = "Zelle" if ziel in SIMULATION else "Kapsel"
 	await R.goto_room(Bauplan.raum_script_name(ziel))
 
@@ -354,6 +355,7 @@ func _einschlafen(ziel: String) -> void:
 ## Max wacht in seiner Kapsel in der Widerstandsbasis auf.
 func _aufwachen() -> void:
 	Zustand.setze_wert("W3_EBENE", "realitaet")
+	Zustand.setze("W3_NACHT", false)   # Pixel hat den Strom längst wieder an
 	Zustand.setze_wert("W3_MAX_RAUM", "widerstandsbasis")
 	I.active = null
 	C.player = C.Max
@@ -405,7 +407,41 @@ func _figuren_anwenden(raum: CQRaum) -> void:
 		Spiel.figur_hier(sn, plan[sn], pos)
 	_max_gang()
 	if rid == "stadtstrasse":
+		_wecker_anzeigen()
 		_katze_schleife()
+
+
+## Der Radiowecker zeigt 5:59 und klingelt erst eine halbe Minute nach dem Einschlafen (W3-B50,
+## W3-B51). Davor gilt die Klickfläche „Radiowecker“, danach „klingelnder Radiowecker“.
+const WECKER_SEKUNDEN := 30.0
+var _wecker_wartet := false
+
+
+func _wecker_anzeigen() -> void:
+	var raum = R.current
+	if not is_instance_valid(raum) or _raum_id() != "stadtstrasse":
+		return
+	var klingelt := Zustand.ist("W3_WECKER_KLINGELT")
+	for h in raum.get_hotspots():
+		if h.script_name == "Radiowecker":
+			h.visible = not klingelt
+		elif h.script_name == "KlingelnderRadiowecker":
+			h.visible = klingelt
+
+
+func _wecker_warten() -> void:
+	if _wecker_wartet or Spiel.testmodus or Zustand.ist("W3_WECKER_KLINGELT"):
+		return
+	_wecker_wartet = true
+	var bis := Time.get_ticks_msec() + int(WECKER_SEKUNDEN * 1000)
+	while Time.get_ticks_msec() < bis and _raum_id() == "stadtstrasse":
+		await Spiel.get_tree().create_timer(0.5).timeout
+	_wecker_wartet = false
+	if _raum_id() != "stadtstrasse" or Zustand.ist("W3_WECKER_KLINGELT"):
+		return
+	Zustand.setze("W3_WECKER_KLINGELT")
+	Klang.geraeusch("radiowecker")
+	_wecker_anzeigen()
 
 
 ## Die schwarze Katze der Simulation läuft immer gleich über die Bordsteinkante, von rechts nach
@@ -464,6 +500,7 @@ func nach_uebergang_stadtstrasse(_raum, _x) -> bool:
 	if int(Zustand.wert("W3_SIMULATION_BESUCHE", 0)) >= 3 and _einmal("W3_DEJA_VU"):
 		await _sag("W3_SIM_PIX_0250")
 	await _zurueckgesetzt()
+	_wecker_warten()
 	return true
 
 
@@ -777,7 +814,11 @@ func benutzen_inventar_rote_pastille(_obj, _x) -> bool:
 ## Die Telefonzelle der Unterstadt ist kein Sprungpunkt (W3_STR_MAX_0040 aus dem Bauplan), am Ende
 ## klingelt dort der Werbeblock. In der Simulation wecken nur Wecker.
 func benutzen_radiowecker(_obj, _x) -> bool:
-	# Beim ersten Aufstehen 0230, danach 0240. Beide Hotspots des Weckers gelten gleich.
+	# Beim ersten Aufstehen 0230, danach 0240. Vor dem ersten Klingeln weiß Max noch nicht, dass
+	# der Wecker ihn rausholt: er tippt auf die Anzeige, es bleibt 5:59.
+	if not Zustand.ist("W3_WECKER_KLINGELT") and not Zustand.ist("W3_ZELLE_BENUTZT"):
+		await _sag("W3_SIM_MAX_0215")
+		return true
 	var zeile := "W3_SIM_MAX_0240" if Zustand.ist("W3_ZELLE_BENUTZT") else "W3_SIM_MAX_0230"
 	Zustand.setze("W3_ZELLE_BENUTZT")
 	await _wecker_aufstehen("stadtstrasse", zeile)
@@ -785,6 +826,7 @@ func benutzen_radiowecker(_obj, _x) -> bool:
 
 
 func benutzen_klingelnder_radiowecker(obj, x) -> bool:
+	Zustand.setze("W3_WECKER_KLINGELT")   # die Klickfläche gibt es nur, solange er klingelt
 	return await benutzen_radiowecker(obj, x)
 
 
@@ -827,6 +869,9 @@ func benutzen_max_kapsel(_obj, _x) -> bool:
 func benutzen_stromkasten(_obj, _x) -> bool:
 	if Spiel.ist_pixel():
 		await _sag("W3_BAS_PIX_0680")
+		# Gag: drüben wird es Nacht (Stadtstraße W3-R06b), bis Max das nächste Mal aufwacht
+		if getrennt():
+			Zustand.setze("W3_NACHT")
 		return true
 	await _sag("W3_BAS_MAX_0670")
 	return true

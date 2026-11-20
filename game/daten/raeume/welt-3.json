@@ -2847,7 +2847,43 @@
       134,
       298
      ],
-     "fps": 2
+     "fps": 2,
+     "sonst": "W3_NACHT|W3_WECKER_KLINGELT"
+    },
+    {
+     "art": "bild",
+     "bild": "res://grafik/ambiente/w3_radiowecker_559_nacht.png",
+     "bilder": 2,
+     "pos": [
+      134,
+      298
+     ],
+     "fps": 2,
+     "wenn": "W3_NACHT",
+     "sonst": "W3_WECKER_KLINGELT"
+    },
+    {
+     "art": "bild",
+     "bild": "res://grafik/ambiente/w3_radiowecker_klingelt.png",
+     "bilder": 6,
+     "pos": [
+      134,
+      298
+     ],
+     "fps": 11,
+     "wenn": "W3_WECKER_KLINGELT",
+     "sonst": "W3_NACHT"
+    },
+    {
+     "art": "bild",
+     "bild": "res://grafik/ambiente/w3_radiowecker_klingelt_nacht.png",
+     "bilder": 6,
+     "pos": [
+      134,
+      298
+     ],
+     "fps": 11,
+     "wenn": "W3_WECKER_KLINGELT+W3_NACHT"
     },
     {
      "art": "bild",
@@ -2858,7 +2894,20 @@
       265
      ],
      "fps": 8,
-     "wenn": "W3_GLASTUER_REDET"
+     "spricht": "TUR",
+     "sonst": "W3_NACHT"
+    },
+    {
+     "art": "bild",
+     "bild": "res://grafik/ambiente/w3_glastuer_redet_nacht.png",
+     "bilder": 4,
+     "pos": [
+      1197,
+      265
+     ],
+     "fps": 8,
+     "spricht": "TUR",
+     "wenn": "W3_NACHT"
     },
     {
      "art": "bild",

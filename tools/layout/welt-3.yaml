@@ -192,13 +192,19 @@ stadtstrasse:
   farbe: '#7fa36a'
   hintergrund: res://grafik/hintergruende/w3_bg_stadtstrasse_v01.png   # W3-R06, Panorama; vierte Wolke entfernt („dieselbe Wolke, dreimal“)
   hintergrund_nach:
-    W3_NACHT: res://grafik/hintergruende/w3_bg_stadtstrasse_nacht_v01.png   # W3-R06b, Strom der Kapsel aus (noch ohne Schalter im Spiel)
+    W3_NACHT: res://grafik/hintergruende/w3_bg_stadtstrasse_nacht_v01.png   # W3-R06b, Pixel stellt den Strom der Kapsel kurz ab (welt_3.gd)
   # Max schrumpft zur Glastür hin auf gut 100 px (Sebastian, 20.11.): vorn 0,8, an der Tür (y 304) 0,55
   skala: 0.8
   tiefe: 0.69
   effekte:   # Platzierung aus W3-R06_platzierung.json
-    - {art: bild, bild: res://grafik/ambiente/w3_radiowecker_559.png, bilder: 2, pos: [134, 298], fps: 2}   # W3-B50 Anzeige 5:59 blinkt
-    - {art: bild, bild: res://grafik/ambiente/w3_glastuer_redet.png, bilder: 4, pos: [1197, 265], fps: 8, wenn: W3_GLASTUER_REDET}   # W3-B34 Sprechanlage
+    # Radiowecker: 5:59 blinkt, bis er klingelt (W3_WECKER_KLINGELT, welt_3.gd); Nacht nach Pixels Stromkasten (W3_NACHT)
+    - {art: bild, bild: res://grafik/ambiente/w3_radiowecker_559.png, bilder: 2, pos: [134, 298], fps: 2, sonst: W3_NACHT|W3_WECKER_KLINGELT}   # W3-B50
+    - {art: bild, bild: res://grafik/ambiente/w3_radiowecker_559_nacht.png, bilder: 2, pos: [134, 298], fps: 2, wenn: W3_NACHT, sonst: W3_WECKER_KLINGELT}
+    - {art: bild, bild: res://grafik/ambiente/w3_radiowecker_klingelt.png, bilder: 6, pos: [134, 298], fps: 11, wenn: W3_WECKER_KLINGELT, sonst: W3_NACHT}   # W3-B51 klingelt 6:00
+    - {art: bild, bild: res://grafik/ambiente/w3_radiowecker_klingelt_nacht.png, bilder: 6, pos: [134, 298], fps: 11, wenn: W3_WECKER_KLINGELT+W3_NACHT}
+    # Sprechanlage der Glastür: läuft, solange die Tür spricht (nach Rätsel 5)
+    - {art: bild, bild: res://grafik/ambiente/w3_glastuer_redet.png, bilder: 4, pos: [1197, 265], fps: 8, spricht: TUR, sonst: W3_NACHT}   # W3-B34
+    - {art: bild, bild: res://grafik/ambiente/w3_glastuer_redet_nacht.png, bilder: 4, pos: [1197, 265], fps: 8, spricht: TUR, wenn: W3_NACHT}
     - {art: bild, bild: res://grafik/ambiente/w3_auto_im_takt.png, bilder: 4, weg: [[-170, 304], [1290, 304]], tempo: 60, fps: 11, start: 1.0, pause: [0.5, 0.5]}   # W3-B54 Autos im Takt, drei Kopien
     - {art: bild, bild: res://grafik/ambiente/w3_auto_im_takt.png, bilder: 4, weg: [[-170, 304], [1290, 304]], tempo: 60, fps: 11, start: 8.33, pause: [0.5, 0.5]}
     - {art: bild, bild: res://grafik/ambiente/w3_auto_im_takt.png, bilder: 4, weg: [[-170, 304], [1290, 304]], tempo: 60, fps: 11, start: 15.67, pause: [0.5, 0.5]}

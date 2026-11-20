@@ -388,7 +388,8 @@ func _partner_folgen(delta: float) -> void:
 ## [mx, my, rx, ry, sekunden] für kreisende Vögel, baseline (y für die Zeichenreihenfolge mit den
 ## Figuren, sonst der Fußpunkt), spiegeln, z, deckung (0 bis 1), an (nur solange das Prop
 ## Props/<an> zu sehen ist), wenn/sonst (nur solange die Bedingung gilt bzw. nicht gilt; Rätsel-ID,
-## Schalter oder „A+B“ wie bei hintergrund_nach), skala (Größe wie Figuren an dieser Stelle),
+## Schalter, „A+B“ wie bei hintergrund_nach oder „A|B“ für eins von beiden), spricht (nur solange
+## die Figur mit diesem Kürzel spricht, zum Beispiel TUR), skala (Größe wie Figuren an dieser Stelle),
 ## start (Sekunden bis zum ersten Lauf statt zufällig; gleiche Werte laufen im Gleichschritt).
 ## Im Testmodus ohne Bewegung (Bildvergleich).
 var _effekte: Array = []
@@ -527,6 +528,13 @@ func _bildfolge_bewegen(e: Dictionary, sp: Sprite2D, eintrag: Array, delta: floa
 			return
 		if schleife and not e.has("weg") and not e.has("kreis"):
 			sp.visible = true
+	if e.has("spricht"):
+		# Nur solange diese Figur spricht (Sprechanlage der Glastür redet mit, W3-B34)
+		if Spiel.spricht != String(e.spricht):
+			sp.visible = false
+			return
+		if schleife and not e.has("weg") and not e.has("kreis"):
+			sp.visible = true
 	if e.has("an"):
 		# Nur solange ein Prop im Raum zu sehen ist (Tintenfisch im Netz, bis Max ihn nimmt)
 		var ziel := get_node_or_null("Props/" + String(e.an)) as CanvasItem
@@ -647,12 +655,18 @@ var _hg_wechsel: Dictionary = {}
 var _hg_grund := ""
 
 
+## „A+B“: beides gilt; „A|B“: eins von beiden (+ bindet stärker als |).
 func _bedingung_erfuellt(bedingung: String) -> bool:
-	for teil in bedingung.split("+"):
-		var erfuellt := Zustand.ist(teil) if teil.contains("_") else Zustand.geloest(teil)
-		if not erfuellt:
-			return false
-	return true
+	for zweig in bedingung.split("|"):
+		var alle := true
+		for teil in zweig.split("+"):
+			var erfuellt := Zustand.ist(teil) if teil.contains("_") else Zustand.geloest(teil)
+			if not erfuellt:
+				alle = false
+				break
+		if alle:
+			return true
+	return false
 
 
 func _bedingte_anpassen() -> void:
