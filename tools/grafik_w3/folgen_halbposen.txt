@@ -13,3 +13,5 @@ kalle|zeigen|120|-|fuss|P=q19,H=h_kalle_zeigen|R*3,H1*2,P3*14,H1*2,R*3
 kalle|tippen|120|-|fuss|P=q19,H=h_kalle_tippen|R*3,H1*2,P4*24,H1*2,R*3
 hausmeister|lesen|120|-|fuss|P=q15,H=h_hausmeister_lesen|R*3,H1*2,P2*20,H1*2,R*3
 hausmeister|verbeugen|120|-|fuss|P=q15,H=h_hausmeister_verbeugen|R*3,H1*2,P3*12,H1*2,R*3
+morphaeus|kater_halten|120|-|fuss|P=q09,H=h_morphaeus_fangen,K=k_kater|R*2,H1*2,P4*6,K1*20
+max|portalgeraet|110|-|fuss|P=k_portal|R*2,P1*8,P2*5,P1*6,R*3

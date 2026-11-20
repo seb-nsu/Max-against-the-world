@@ -248,6 +248,14 @@ Diese Bewegungen haben keinen 3D-Clip und werden Bild für Bild gemalt. Bei Effe
 | Bürokopierer | Rattern | 6 | 4 | Schleife | EFFEKT, about 64x56: only the grey office photocopier, matching the attached background crop: it shakes a little, a white light bar runs under the lid, a sheet flutters in the output tray. 4 frames, loops, the base stays in place |
 | Testkammer 3 | Tür und Lautsprecher | 9 | 4 | einmalig | EFFEKT, about 48x48: only the round wall speaker of the white test chamber, matching the attached background crop: the grille snaps shut like a closed mouth, a small spark, then it sits sulking. 4 frames, plays once, the wall stays in place |
 | Piepsi | Fahren | 13 | 4 | Schleife | From the Piepsi reference sprite: he drives forward on his three little wheels, the bucket body bobbing and tilting slightly from side to side, bowler hat wobbling. 4 frames, loops, facing right, in place |
+| Küche der Orakel-Oma | Küchenradio spricht | 4 | 4 | Schleife | EFFEKT, about 56x28: only the small kitchen radio on the shelf, matching the attached background crop: its speaker grille glows warm in rhythm and a small green dial light blinks, as if a voice speaks from it. 4 frames, loops, the radio stays in place |
+| Küche der Orakel-Oma | Kuckucksuhr ruft | Kulisse | 8 | einmalig | EFFEKT, about 36x30: only the wooden cuckoo clock, matching the attached background crop: the little door opens, a tiny yellow bird slides out, opens its beak twice and slides back, the door closes. 8 frames, plays once, the clock stays in place |
+| Laboreingang | Kartenleser blinkt | Kulisse | 4 | Schleife | EFFEKT, about 28x38: only the wall-mounted card reader, matching the attached background crop: its small red light blinks slowly. 4 frames, loops, the reader stays in place |
+| Testkammer 1 | Lautsprecher spricht | 9 | 4 | Schleife | EFFEKT, about 39x23: only the round ceiling speaker, matching the attached background crop: the grille glows soft orange and trembles in rhythm while M.U.T.T.I. speaks. 4 frames, loops |
+| Testkammer 2 | Lautsprecher spricht | 9 | 4 | Schleife | EFFEKT, about 39x23: the same ceiling speaker in chamber 2: the grille glows soft orange and trembles in rhythm. 4 frames, loops |
+| Testkammer 3 | Lautsprecher spricht | 9 | 4 | Schleife | EFFEKT, about 29x49: only the big round wall speaker, matching the attached background crop: the grille glows soft orange and trembles in rhythm. 4 frames, loops |
+| Testkammer 3 | Tür redet | 9 | 4 | Schleife | EFFEKT, about 20x36: only the small control panel beside the exit door, matching the attached background crop: three tiny green lights blink in a speaking rhythm. 4 frames, loops |
+| Max | Verwandlung in die Ente | 7 | 6 | einmalig | EFFEKT, 96x200: a green digital glitch of square pixels flickering around a standing figure and dissolving, horizontal scan streaks. 6 frames, plays once, the game cross-fades Max and Max als Ente underneath |
 
 ### Posenbögen
 
@@ -284,6 +292,8 @@ Baustein POSENBOGEN, das fertige Konzeptblatt der Figur anhängen (bei Max sein 
 | Bernd | Konzeptblatt Bernd | 3 | Beleidigt | Three poses of the floating cube: (1) googly eyes rolled up; (2) face turned away to the side; (3) tilted, floating a bit higher |
 | Piepsi | Konzeptblatt Piepsi | 4 | Hochfahren, Piepen | Four poses of the small cleaning robot: (1) slumped and rusty, eye dark; (2) straightening up, rust flakes falling; (3) upright, eye lit blue, hat popped up; (4) tilted to one side, antenna blinking, angry eye |
 | Opa als Hologramm | Konzeptblatt Opa als Hologramm | 2 | Flehen | Two poses of the tiny hologram grandpa: (1) kneeling, both hands raised pleading; (2) hands clasped, looking up |
+| Morphäus 3 | Konzeptblatt Morphäus, Pixels Figurenblatt | 1 | Pixel auffangen und halten | One pose of the calm tall man holding the soaking wet tomcat in both arms against his chest, the cat smug and annoyed |
+| Max Labor | Max' Figurenblatt, Portalgerät | 2 | Portalgerät abfeuern | Two poses of the boy Max: (1) aiming the white handheld gadget with both hands, one eye squinted; (2) a spark at the tip, leaning back from the recoil, surprised |
 
 ### Ablauf und Kosten
 
