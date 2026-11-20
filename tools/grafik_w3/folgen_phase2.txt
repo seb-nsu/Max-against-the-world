@@ -1,5 +1,5 @@
 # id|bewegung|ms|schleife|anker|quellen|folge|R-datei
-max|zeitlupe|120|-|fuss|P=q02|R*2,P1*3,P2*12,P3*3,P4*2,P5*12,R*3
+max|zeitlupe|120|-|fuss|P=q02,A=h_zeitlupe_z1,B=h_zeitlupe_z2,C=h_zeitlupe_z3,D=h_zeitlupe_z4|R*2,A1*3,P1*3,B1*3,P2*12,C1*3,D1*2,P3*3,P4*2,P5*12,R*3
 max|pastille|120|-|fuss|P=q03|R*3,P1*16,R*3
 max|schlucken|120|-|fuss|P=q03|R*2,P2*2,P3*14,R*3
 max|code_sicht|120|-|fuss|P=q03|R*3,P4*16,R*3
@@ -29,7 +29,7 @@ schmidt|fliege|120|-|fuss|P=q12,Z=z12|R*3,Z4*2,P4*14,Z4*2,R*3
 schmidt|hausschuh|120|-|fuss|P=q13,Z=z13|R*3,Z1,P1*14,Z1,R*3
 schmidt|brille_ab|120|-|fuss|P=q13,Z=z13|R*3,Z2*2,P2*8,Z3*2,P3*10
 schmidt|akte|120|-|fuss|P=q13|R*3,P4*16,R*3|schmidt_ohne_brille.png
-klon|werfen|120|-|fuss|P=q14,Z=z14|R*3,Z1*2,P1*6,Z2*2,P2*10,R*3
+klon|werfen|120|-|fuss|P=q14,Z=z14,C=h_werfen_z3,D=h_werfen_z4|R*3,Z1*2,P1*6,C1*3,P2*10,D1*2,R*3
 klon|umsehen|120|-|fuss|P=q14|R*3,P3*16,R*3
 klon|hausschuh|120|-|fuss|P=q14,Z=z14|R*3,Z4,P4*14,Z4,R*3
 hausmeister|reden|120|-|fuss|P=q15|R*2,P1*10,R*2

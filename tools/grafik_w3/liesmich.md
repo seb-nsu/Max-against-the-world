@@ -22,3 +22,5 @@ Phase 2: `quellen_phase2.txt` (welche Bögen mit welchen Schaltern von `bew_w3.p
 `folgen_phase2.txt` und `folgen_aus_quellen.py` (Bewegungen aus Pose, Halbpose und Zusatzbogen; hängende Figuren mit Anker „oben“),
 `effekte_code.py` (Regen, Schnee, Hologramm, Verwandlung) und `effekte_bild.py` (Portal, Auto, Ratte, Vogelschwarm, Hausmeister rollen).
 `bew_w3.py` kennt zusätzlich `--farbtausch VON:NACH:-N` (nur die untersten N Zeilen).
+
+`t2m_seite_rendern.py`: Blender im Hintergrund, rendert einen Meshy-Text-zu-Bewegung-Clip (FBX) als graue Seitenansicht; die Bilder dienen als Haltungsvorlage für gemalte Zwischenposen (`blender -b --python t2m_seite_rendern.py -- clip.fbx ziel schritt`).
