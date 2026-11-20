@@ -104,7 +104,7 @@ func _poly(node: Node) -> Array:
 func _aufnahme(welt: String, rid: String) -> void:
 	var raum = root.get_node("R").current
 	var breite := int(raum.get("width")) if raum.get("width") else 640
-	var mx = root.get_node("C").get_character("Max")
+	var mx = root.get_node("C").player
 	var info := {"welt": welt, "raum": rid, "modus": modus, "breite": breite, "hotspots": [], "props": [],
 		"figuren": [], "laufbereiche": [], "marker": {}, "bauplan_laufbereich": []}
 	if raum.has_method("bauplan"):
