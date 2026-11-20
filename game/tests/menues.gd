@@ -370,7 +370,7 @@ func _errungenschaften(erg) -> void:
 	await _warten()
 	pruefe(erg.ist_frei("FUENFKAMPF") and erg.ist_frei("DEJA_VU"), "Fünfkampf und Déjà-vu")
 	var alle: Array = erg.alle_nahansichten()
-	pruefe(alle.size() == 14, "14 Nahansichten im Spiel")
+	pruefe(alle.size() == 15, "15 Nahansichten im Spiel")
 	for n in alle.slice(1):
 		zustand.nahansicht_gesehen(n)
 	await _warten()
