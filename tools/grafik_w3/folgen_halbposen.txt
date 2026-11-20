@@ -1,7 +1,7 @@
 # Nachbesserung 20.11.: Halbposen einzeln bestellt (Neutralpose + Zielpose als Vorlage), H = Halbpose
 deckert|stempeln|120|-|fuss|P=q16,H=h_deckert_stempeln|R*3,H1*2,P4*10,H1*2,R*4
 morphaeus|kekse_reichen|120|-|fuss|P=q09,H=h_morphaeus_kekse|R*3,H1*2,P3*16,H1*2,R*4
-morphaeus|fangen|120|-|fuss|P=q09,H=h_morphaeus_fangen|R*2,H1*2,P4*14,H1*2,R*3
+morphaeus|fangen|120|-|fuss|P=q09,H=h_morphaeus_fangen,S=h_fangen_schwung|R*2,H1*2,S1*3,P4*14,H1*2,R*3
 frau_regenschirm|schimpfen|140|S|rumpf|P=q25,A=h_frau_schuetteln,B=h_frau_stampfen|R*2,A1,P1*3,A1,R,B1,P2*2,B1,R
 max|hexenschuss|120|-|fuss|P=q01,H=h_max_hexenschuss|R*3,H1*2,P4*20,H1*2,R*4
 max|tasche|120|-|fuss|P=q04,H=h_max_tasche|R*3,H1*2,P1*14,H1*2,R*3
@@ -13,7 +13,11 @@ kalle|zeigen|120|-|fuss|P=q19,H=h_kalle_zeigen|R*3,H1*2,P3*14,H1*2,R*3
 kalle|tippen|120|-|fuss|P=q19,H=h_kalle_tippen|R*3,H1*2,P4*24,H1*2,R*3
 hausmeister|lesen|120|-|fuss|P=q15,H=h_hausmeister_lesen|R*3,H1*2,P2*20,H1*2,R*3
 hausmeister|verbeugen|120|-|fuss|P=q15,H=h_hausmeister_verbeugen|R*3,H1*2,P3*12,H1*2,R*3
-morphaeus|kater_halten|120|-|fuss|P=q09,H=h_morphaeus_fangen,K=k_kater|R*2,H1*2,P4*6,K1*20
+morphaeus|kater_halten|120|-|fuss|P=q09,H=h_morphaeus_fangen,S=h_fangen_schwung,K=k_kater|R*2,H1*2,S1*3,P4*2,K1*20
 max|portalgeraet|110|-|fuss|P=k_portal|R*2,P1*8,P2*5,P1*6,R*3
 max|ruecken_halten|130|-|fuss|P=q01,H=h_max_hexenschuss|R*4,H1*3,P4*6,H1*3,R*4
 deckert|regen_zaehlen|160|S|fuss|P=k_regen|R*4,P1*4,P2*4,P1*3,P2*3,P3*5,R*3
+# Meshy Text zu Bewegung (20.11.): Seitschritt; Max steigt aus der Kapsel (Figurenteil, Kapselteil siehe kapsel_folgen.py)
+deckert|seitschritt|120|-|fuss|P=q16,A=h_seitschritt|R*2,A1*4,R*2
+max|kapsel_aussteigen|120|-|fuss|P=q02,A=h_kapsel_aufstehen|A1*4,R*3
+max|kapsel_einsteigen|120|-|fuss|P=q02,A=h_kapsel_aufstehen|R*2,A1*4
