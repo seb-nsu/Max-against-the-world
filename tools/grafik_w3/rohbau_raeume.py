@@ -117,36 +117,51 @@ def max_massstab():
 # ------------------------------------------------------------------------------------------------
 @raum("unterstadt_strasse", 1280, himmel=NACHT)
 def unterstadt():
-    box(None, 6, -1, 26, 5, 0.02, z=-0.02, col=STRASSE)                      # nasse Straße
-    box(None, 6, 4.0, 26, 0.3, 0.12, col=DUNKEL)                              # Bordstein hinten
-    for i, (x, h) in enumerate([(0.5, 14), (3.0, 10), (5.5, 16), (8.5, 12), (11.0, 15), (13.5, 11)]):
-        box(None, x, 4.3 + (i % 2) * 0.5, 2.6, 2, h, col=(0.22, 0.24, 0.32, 1))
-    # links: Nudelbude
-    box("noodle stall counter (Mr Four behind it)", 1.2, 1.4, 2.2, 0.6, 1.05, col=HOLZ)
-    box("stall roof", 1.2, 1.3, 2.6, 1.6, 0.12, z=2.4, col=ROT)
-    zyl("steaming pot", 0.8, 1.7, 0.28, 0.4, z=1.05, col=DUNKEL)
-    kugel("red paper lantern", 1.9, 1.5, 0.18, 2.1, col=ROT)
+    FASSADE = (0.30, 0.32, 0.40, 1)
+    FENSTER = (0.12, 0.13, 0.18, 1)
+    box(None, 6, -1, 26, 5.2, 0.02, z=-0.02, col=STRASSE)                    # nasse Straße
+    # Häuserfront direkt hinter dem Gehweg (y = 4), mit Lücken für Luke, Gasse, Unterführung
+    for x0, x1 in [(-2, 5.4), (7.0, 9.6), (10.8, 11.0)]:
+        box(None, (x0 + x1) / 2, 4.0, x1 - x0, 0.4, 3.3, col=FASSADE)
+        for fx in [x0 + 0.6 + i * 1.1 for i in range(int((x1 - x0) / 1.1))]:
+            for fz in (2.4,):
+                box(None, fx, 3.98, 0.55, 0.04, 0.8, z=fz, col=FENSTER)
+    box(None, 6.2, 4.6, 1.8, 0.3, 3.0, z=0, col=(0.20, 0.22, 0.28, 1))          # Wand hinter der Luke
+    box(None, 6.2, 4.0, 1.8, 0.4, 0.5, z=2.8, col=FASSADE)                     # Sturz über der Luke
+    # Skyline weit hinten
+    for i, (x, h) in enumerate([(-1, 22), (2.5, 18), (6, 26), (9.5, 20), (13, 24)]):
+        box(None, x, 16 + (i % 2) * 2, 3.2, 2, h, col=(0.18, 0.20, 0.28, 1))
+    # links: Nudelbude (an der Fassade)
+    box("noodle stall counter (Mr Four behind it)", 1.4, 1.6, 2.4, 0.6, 1.05, col=HOLZ)
+    for x in (0.25, 2.55):
+        box(None, x, 1.4, 0.08, 0.08, 2.4, col=HOLZ)
+    box("stall roof", 1.4, 1.3, 2.8, 2.2, 0.12, z=2.4, col=ROT)
+    zyl("steaming pot", 0.9, 1.9, 0.28, 0.4, z=1.05, col=DUNKEL)
+    kugel("red paper lantern", 2.1, 1.4, 0.18, 2.05, col=ROT)
     for i in range(4):
-        zyl(None, 0.4 + i * 0.55, 1.05, 0.17, 0.7, col=DUNKEL)
-    notiz("4 stools", 1.2, 1.0, 0.75)
-    zyl("concrete pillar", 2.75, 1.8, 0.25, 4.0, col=MITTEL)
-    # Mitte: Telefonzelle
-    box("glass phone booth (phone book inside)", 4.3, 2.4, 1.0, 1.0, 2.3, col=GLAS)
-    box("hatch to resistance base (half open)", 6.2, 4.25, 1.4, 0.1, 1.2, col=DUNKEL)
-    box("crashed hovercraft tail fin", 6.4, 4.4, 2.2, 0.4, 0.9, z=3.2, col=(0.5, 0.35, 0.25, 1), rot=-12)
-    box("steam grate", 5.2, 0.8, 0.9, 0.6, 0.02, col=DUNKEL)
-    box("origami unicorn (hand-sized)", 3.5, 0.2, 0.18, 0.08, 0.14, col=HELL)
-    notiz("free spot: street musician", 7.2, 2.2, 0.1)
+        zyl(None, 0.6 + i * 0.55, 1.15, 0.17, 0.7, col=DUNKEL)
+    notiz("4 stools", 1.4, 1.1, 0.75)
+    zyl("concrete pillar (against the wall)", 3.0, 3.6, 0.2, 3.3, col=MITTEL)
+    # Mitte: Telefonzelle, Luke, Heckflosse
+    box("glass phone booth (phone book inside)", 4.3, 2.6, 1.0, 1.0, 2.3, col=GLAS)
+    box(None, 4.3, 2.6, 1.06, 1.06, 0.12, z=2.3, col=DUNKEL)
+    box("low riveted hatch to resistance base (half open)", 6.2, 4.3, 1.4, 0.15, 1.2, col=DUNKEL)
+    box(None, 6.2, 4.0, 1.4, 0.08, 0.9, z=1.2, col=MITTEL, rot=0)
+    box("crashed hovercraft tail fin above hatch", 6.3, 4.4, 2.0, 0.4, 1.3, z=2.9, col=(0.5, 0.35, 0.25, 1), rot=-15)
+    box("steam grate", 5.2, 0.9, 0.9, 0.6, 0.02, col=DUNKEL)
+    box("origami unicorn (hand-sized)", 3.6, 0.2, 0.18, 0.08, 0.14, col=HELL)
+    notiz("free spot: street musician", 7.3, 2.4, 0.1)
     # rechts: Vordach, Plakat, Gasse, Unterführung
-    box("dripping awning (Deckert below)", 8.6, 2.6, 2.0, 1.4, 0.1, z=2.6, col=MAGENTA)
-    box("pizza-slice neon billboard (blank)", 8.6, 4.3, 1.8, 0.1, 1.4, z=3.4, col=MAGENTA)
-    box("alley entrance to pharmacy (green glow)", 10.2, 4.25, 1.1, 0.1, 2.6, col=(0.15, 0.35, 0.2, 1))
-    box("underpass down to lab entrance", 11.6, 3.0, 1.2, 0.2, 2.2, col=(0.12, 0.12, 0.16, 1))
-    figur("Mr Four", 1.2, 1.9, 1.7)
-    figur("crying man", 2.0, 0.9, 1.75)
-    figur("street musician", 7.2, 2.2, 1.75)
+    box("dripping awning (Deckert below)", 8.4, 3.2, 2.2, 1.6, 0.1, z=2.6, col=MAGENTA)
+    box("pizza-slice neon billboard (blank)", 8.4, 3.75, 1.6, 0.1, 0.6, z=2.75, col=MAGENTA)
+    box("alley to pharmacy (green glow at far end)", 10.2, 5.5, 1.2, 0.2, 3.3, col=(0.10, 0.25, 0.15, 1))
+    box("underpass sloping down to lab (round door far back)", 11.8, 6.0, 1.6, 0.2, 2.4, col=(0.08, 0.08, 0.10, 1))
+    box(None, 11.8, 3.7, 1.6, 0.4, 0.9, z=2.4, col=FASSADE)
+    figur("Mr Four", 1.4, 2.1, 1.7)
+    figur("crying man", 2.2, 0.9, 1.75)
+    figur("street musician", 7.3, 2.4, 1.75)
     figur("woman with umbrella", 6.9, 0.8, 1.7)
-    figur("Deckert", 8.6, 2.4, 1.85)
+    figur("Deckert", 8.4, 2.6, 1.85)
     max_massstab()
 
 
@@ -229,25 +244,33 @@ def laboreingang():
 
 @raum("stadtstrasse", 1280, himmel=HIMMEL)
 def stadtstrasse():
-    box(None, 6, -1, 30, 3.2, 0.02, z=-0.02, col=(0.80, 0.80, 0.78, 1))     # Gehweg vorn (Laufband)
+    GEHWEG = (0.80, 0.80, 0.78, 1)
+    box(None, 6, -1, 30, 3.2, 0.02, z=-0.02, col=GEHWEG)                       # Gehweg vorn (Laufband)
     box("curb", 6, 2.2, 30, 0.2, 0.12, col=HELL)
-    box("ROAD for the cars in time (keep clear, cars are animated)", 6, 2.4, 30, 3.2, 0.01, col=STRASSE)
-    box(None, 6, 5.6, 30, 1.0, 0.12, col=(0.80, 0.80, 0.78, 1))              # Gehweg hinten
-    box(None, 6, 6.6, 30, 1.6, 0.02, col=RASEN)                              # Vorgärten
+    box("ROAD for the cars in time (keep clear, cars are animated)", 6, 2.4, 30, 2.2, 0.01, col=STRASSE)
+    box(None, 6, 4.6, 30, 1.0, 0.12, col=GEHWEG)                               # Gehweg hinten
+    box(None, 6, 5.6, 30, 0.6, 0.02, col=RASEN)                                # schmaler Vorgarten
+    for i in range(8):
+        x = -2.2 + i * 2.3
+        oma = (i == 4)
+        box("identical white house" if i == 2 else None, x, 6.2, 2.1, 2, 2.75, col=HELL)
+        box(None, x, 6.1, 2.3, 2.2, 0.3, z=2.75, col=ROT)
+        tuer_b, tuer_h = (1.0, 2.3) if oma else (0.8, 2.0)
+        box("Oracle Granny's house: big front door, lace curtains, door sign" if oma else None,
+            x - 0.35, 6.15, tuer_b, 0.05, tuer_h, col=HOLZ)
+        for fx in (x + 0.55,):
+            box(None, fx, 6.15, 0.6, 0.05, 0.7, z=1.2, col=GLAS)
     for i in range(7):
-        x = -1.5 + i * 2.6
-        box("identical white house" if i == 1 else None, x, 8.2, 2.2, 2, 3.2, col=HELL)
-        box(None, x, 8.1, 2.4, 2.2, 0.4, z=3.2, col=ROT)
-    box("Oracle Granny's house: door, lace curtains, door sign", 6.2, 8.15, 0.6, 0.05, 1.3, col=HOLZ)
-    for i in range(6):
-        x = 0.6 + i * 2.0
-        zyl("identical round tree + lamp" if i == 0 else None, x, 5.9, 0.07, 1.6, col=HOLZ)
-        kugel(None, x, 5.9, 0.6, 2.1, col=GRUEN)
-    for x in (2.0, 6.0, 10.0):
-        kugel("same cloud x3" if x == 2.0 else None, x, 30, 1.6, 12, col=(1, 1, 1, 1))
-    kugel("sun", 9.5, 30, 1.2, 15, col=GELB)
-    # vorn links: Nachttisch als eigenes Vordergrundteil, Gasse
-    box("narrow too-clean alley (arrival, left edge)", 0.25, 1.9, 0.5, 0.2, 2.6, col=MITTEL)
+        x = -1.05 + i * 2.3
+        zyl("identical round tree + street lamp" if i == 1 else None, x, 5.0, 0.07, 1.8, col=HOLZ)
+        kugel(None, x, 5.0, 0.55, 2.2, col=GRUEN)
+        zyl(None, x + 1.15, 4.9, 0.04, 2.6, col=DUNKEL)
+        kugel(None, x + 1.15, 4.9, 0.12, 2.65, col=HELL)
+    for x in (1.5, 5.5, 9.5):
+        kugel("same cloud x3" if x == 1.5 else None, x, 40, 1.0, 6.9, col=(1, 1, 1, 1))
+    kugel("sun", 7.5, 40, 0.7, 7.2, col=GELB)
+    # vorn links: Gasse und Nachttisch
+    box("narrow too-clean alley (arrival, left edge)", 0.3, 2.0, 0.6, 0.2, 3.0, col=MITTEL)
     box("bedside table + clock radio (own front piece)", 1.5, 0.5, 0.5, 0.4, 0.6, col=HOLZ)
     box(None, 1.5, 0.55, 0.3, 0.2, 0.12, z=0.6, col=DUNKEL)
     # rechts: Büroturm auf unserer Seite
