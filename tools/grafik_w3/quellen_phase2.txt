@@ -1,0 +1,32 @@
+# id|name|bogen (posen/frei)|posen|nehmen|zusatz
+max|q02|W3-P02_max_buero.png|5||MAX
+max|q03|W3-P03_max_welt3.png|6||MAX
+max|q04|W3-P04_max_basis.png|5|1,3,4,5|MAX
+max|z04|W3-P04_max_basis_zw.png|5|5|MAX
+max_ente|q05|W3-P05_max_ente.png|4||
+pixel|q06|W3-P06_pixel_basis.png|4||--ausschnitt 0,0,2752,800 --spiegel-pose 4
+pixel|q07|W3-P07_pixel_basis2.png|4||--ausschnitt 0,0,2752,820
+pixel|qb03|W3-B03_pixel_kriechen.png|3||--ausschnitt 1000,250,1752,1286
+orakel_oma|q10|W3-P10_orakel_oma.png|4||
+orakel_oma|z10|W3-P10_orakel_oma_zw.png|4||
+orakel_oma|q11|W3-P11_orakel_oma2.png|3||
+orakel_oma|z11|W3-P11_orakel_oma2_zw.png|3||
+schmidt|q12|W3-P12_schmidt.png|4||
+schmidt|z12|W3-P12_schmidt_zw.png|4||
+schmidt|q13|W3-P13_schmidt2.png|4||
+schmidt|z13|W3-P13_schmidt2_zw.png|4||
+klon|q14|W3-P14_klon.png|4||
+klon|z14|W3-P14_klon_zw.png|4||
+hausmeister|q15|W3-P15_hausmeister.png|4||
+hausmeister|z15|W3-P15_hausmeister_zw.png|4||
+hausmeister|qb09|W3-B09_hausmeister_wischen.png|4||
+kalle|q19|W3-P19_kalle.png|4||
+kalle|q20|W3-P20_kalle2.png|4||
+kalle|z20|W3-P20_kalle2_zw.png|4||
+rebellin|q21|W3-P21_rebellin.png|3||
+rebell|q22|W3-P22_rebell.png|2||
+mutti|q26|W3-P26_mutti.png|4||--anker rumpf --sprite mutti_beide
+bernd|q27|W3-P27_bernd.png|4||
+piepsi|q28|W3-P28_piepsi.png|4||--sprite piepsi_beide
+piepsi|qb32|W3-B32_piepsi_drucken.png|3||
+opa_hologramm|q29|W3-P29_opa_hologramm.png|3||

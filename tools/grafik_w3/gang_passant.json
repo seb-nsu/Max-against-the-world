@@ -1,0 +1,143 @@
+{
+ "stand": "stand.png",
+ "winkel": "Proud_Strut_inplace.json",
+ "zyklus": [
+  5,
+  41
+ ],
+ "bilder": 8,
+ "huefte": [
+  17,
+  116
+ ],
+ "huefte_fern_dx": -3,
+ "ober": {
+  "zeilen": [
+   128,
+   156
+  ],
+  "spalten": [
+   8,
+   27
+  ],
+  "laenge": 40
+ },
+ "unter": {
+  "zeilen": [
+   156,
+   184
+  ],
+  "spalten": [
+   8,
+   27
+  ],
+  "laenge": 30
+ },
+ "schuh": {
+  "zeilen": [
+   184,
+   196
+  ],
+  "spalten": [
+   8,
+   42
+  ],
+  "gelenk": [
+   16,
+   185
+  ]
+ },
+ "rumpf_bis": 126,
+ "zentrieren": true,
+ "ausschlag": 0.75,
+ "fern_dunkel": 0.6,
+ "rand": 24,
+ "ziel": "gehen.png",
+ "gif": "gehen.gif",
+ "ms": 100,
+ "bein_farben": [
+  [
+   130,
+   129,
+   133
+  ],
+  [
+   53,
+   61,
+   92
+  ],
+  [
+   21,
+   20,
+   53
+  ],
+  [
+   38,
+   43,
+   68
+  ],
+  [
+   35,
+   31,
+   61
+  ],
+  [
+   99,
+   95,
+   115
+  ]
+ ],
+ "schuh_farben": [
+  [
+   125,
+   83,
+   71
+  ],
+  [
+   56,
+   38,
+   44
+  ],
+  [
+   39,
+   26,
+   46
+  ],
+  [
+   30,
+   18,
+   42
+  ],
+  [
+   21,
+   20,
+   53
+  ],
+  [
+   38,
+   43,
+   68
+  ],
+  [
+   182,
+   145,
+   133
+  ]
+ ],
+ "umriss": [
+  38,
+  43,
+  68
+ ],
+ "dicke_ober": 15,
+ "dicke_unter": 13,
+ "dicke_saum": 14,
+ "behalten": [
+  [
+   100,
+   150,
+   27,
+   44
+  ]
+ ]
+}

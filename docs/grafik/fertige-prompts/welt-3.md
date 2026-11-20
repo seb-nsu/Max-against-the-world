@@ -28,7 +28,7 @@ Opa steht ihre feste Beschreibung wortgleich in der Zeile CHARACTER LOCK; den Fi
 
 # Shotliste
 
-111 Shots, davon 111 sicher offen („–“: Stand nicht automatisch prüfbar). Kürzel:
+125 Shots, davon 125 sicher offen („–“: Stand nicht automatisch prüfbar). Kürzel:
 R Raum, F Figur, P Posenbogen, B Bewegung, G Gegenstände, N Nahansicht, K Figurenbogen.
 
 | Shot | Bild | Stand |
@@ -67,6 +67,7 @@ R Raum, F Figur, P Posenbogen, B Bewegung, G Gegenstände, N Nahansicht, K Figur
 | W3-F19 | Max als Ente | offen |
 | W3-F20 | Max in der Kapsel | offen |
 | W3-F21 | Max in der Pfütze | offen |
+| W3-F22 | Passant der Simulation | offen |
 | W3-P01 | Max Unterstadt | offen |
 | W3-P02 | Max Büroturm | offen |
 | W3-P03 | Max Welt 3 | offen |
@@ -96,6 +97,9 @@ R Raum, F Figur, P Posenbogen, B Bewegung, G Gegenstände, N Nahansicht, K Figur
 | W3-P27 | Bernd | offen |
 | W3-P28 | Piepsi | offen |
 | W3-P29 | Opa als Hologramm | offen |
+| W3-P30 | Morphäus 3 | offen |
+| W3-P31 | Max Labor | offen |
+| W3-P32 | Detektiv Deckert 2 | offen |
 | W3-B01 | Schwarze Katze: Zweimal vorbeilaufen | offen |
 | W3-B02 | Max als Ente: Watscheln | offen |
 | W3-B03 | Pixel: Schacht kriechen | offen |
@@ -132,6 +136,16 @@ R Raum, F Figur, P Posenbogen, B Bewegung, G Gegenstände, N Nahansicht, K Figur
 | W3-B34 | Glastür Büroturm: Reden | offen |
 | W3-B35 | Bürokopierer: Rattern | offen |
 | W3-B36 | Testkammer 3: Tür und Lautsprecher | offen |
+| W3-B37 | Piepsi: Fahren | offen |
+| W3-B38 | Küche der Orakel-Oma: Küchenradio spricht | offen |
+| W3-B39 | Küche der Orakel-Oma: Kuckucksuhr ruft | offen |
+| W3-B40 | Laboreingang: Kartenleser blinkt | offen |
+| W3-B41 | Testkammer 1: Lautsprecher spricht | offen |
+| W3-B42 | Testkammer 2: Lautsprecher spricht | offen |
+| W3-B43 | Testkammer 3: Lautsprecher spricht | offen |
+| W3-B44 | Testkammer 3: Tür redet | offen |
+| W3-B45 | Max: Verwandlung in die Ente | offen |
+| W3-B46 | Büroturm, 50. Stock: Terminal spricht | offen |
 | W3-G01 | Verwandlung (2×4) | offen |
 | W3-G02 | Kekse-Zustände (1×2) | offen |
 | W3-G03 | Unterstadt (2×3) | offen |
@@ -164,7 +178,7 @@ NEGATIVE: no characters, people or animals in the walkable area, no text, letter
 
 **Shot W3-R02**
 
-**Zustände:** Fächer zu und offen (je eine Dose rot und blau)
+**Zustände:** Fächer zu und offen (je eine Dose rot und blau). 1280×360 als ein Panorama in einem Bild (Seitenverhältnis 32:9)
 
 ```text
 STYLE: Concept art for a 2D point-and-click adventure game in the style of classic 1990s adventure games, outdoor scene seen straight on like a wide stage, camera at the eye level of a standing person, horizon at about 40 percent of the image height, open walkable ground with gentle depth across the lower third kept free of objects except at the left and right edges, wide shot: a standing adult at the front edge would be about 52 percent of the image height, no top-down, bird's-eye or strong three-quarter view, no fisheye, every object drawn exactly as described and nothing added, signs and labels without any letters or numbers, light from the upper left with soft shadows to the lower right, humorous and whimsical.
@@ -265,7 +279,7 @@ NEGATIVE: no new objects, no changed camera or framing, no style change, no text
 
 ```text
 STYLE: Concept art for a 2D point-and-click adventure game in the style of classic 1990s adventure games, outdoor scene seen straight on like a wide stage, camera at the eye level of a standing person, horizon at about 40 percent of the image height, open walkable ground with gentle depth across the lower third kept free of objects except at the left and right edges, wide shot: a standing adult at the front edge would be about 52 percent of the image height, no top-down, bird's-eye or strong three-quarter view, no fisheye, every object drawn exactly as described and nothing added, signs and labels without any letters or numbers, light from the upper left with soft shadows to the lower right, humorous and whimsical.
-SCENE: Wide panoramic 1280x360 scene in one continuous image. Left part: A suspiciously perfect city street on a sunny day, front view with gentle depth. Left: a small wooden bedside table standing alone on the sidewalk with a 1980s clock radio on it, red digits on its display, in front of a narrow, too-clean alley entrance. Center: identical white houses with identical red cars parked in front; the middle house has lace curtains, a front door and a small blank sign beside it. Right: identical round trees and identical street lamps in a perfect row. A long clean sidewalk across the whole floor, no cracks, no gum. Perfect blue sky with one cloud. Right part: more identical trees and red cars on the left; center and right the ground floor of a tall glass office tower with a closed glass entrance door and a small grey plate beside it. Clean sidewalk continues for the black cat's walk. The same cloud repeated twice more.
+SCENE: ONE single continuous panoramic image, extra wide 32:9 (1280x360), seen through one fixed camera from the front with gentle depth: a single uninterrupted city street that runs from the left edge to the right edge without any seam, split, border, divider or second panel. The horizon line, the sidewalk, the curb and the road stay at exactly the same height across the whole width. A suspiciously perfect city street on a sunny day. From left to right: at the far left a small wooden bedside table standing alone on the sidewalk with a 1980s clock radio on it, red digits on its display, in front of a narrow, too-clean alley entrance. Then a row of identical white houses with identical red cars parked at the curb in front; one house near the middle has lace curtains, a front door and a small blank sign beside it. Then identical round trees and identical street lamps in a perfect evenly spaced row, with more identical red cars. At the far right the ground floor of a tall glass office tower that is cut off by the top edge, with a closed glass entrance door and a small grey plate beside it. One long clean sidewalk across the whole lower part of the image, no cracks, no gum, wide enough to walk on. Perfect blue sky with the same small cloud appearing exactly three times at even distances.
 PALETTE: overly clean daytime city palette with a faint green tint, flat perfect blue sky, even shadowless-looking light, no dirt anywhere, slightly too symmetrical. Color anchors, approximate: clean grey #c0cbdc, white #ffffff, flat sky blue #0099db, faint green tint #63c74d, soft green shadow #3e8948.
 NEGATIVE: no characters, people or animals in the walkable area, no text, letters, numbers or logos, no faces or robot features on objects, no loose objects that can be picked up, no objects that are not described, no top-down, bird's-eye or fisheye view, no tilted floor, no photorealism, no 3D render, no blur, no watermark
 ```
@@ -728,6 +742,18 @@ Edit the attached image. Change only the area that this change touches; if your 
 CHANGE: The same, the tomcat jumping down off the head.
 KEEP: everything outside that area stays pixel-identical: same character, pose, proportions, face, colors, line weight and the flat magenta background. Do not redraw, recolor, move, crop or add anything else.
 NEGATIVE: no new objects, no changed camera or framing, no style change, no text
+```
+
+## Passant der Simulation
+
+**Shot W3-F22**
+
+**Anhängen:** Max' Konzeptblatt als Stil- und Größenvorlage
+
+```text
+STYLE: Character concept sheet in exactly the same style as the attached character sheet of the boy Max: same line weight, same flat cel shading, same light from upper left, solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no text, no ground shadow. Exactly one character, full body, strict side view facing right, standing on a flat baseline, legs clearly visible. Draw only this new character: do not copy any heads, legs, shoes or other parts of the boy Max from the attached sheet into the image.
+SUBJECT: A generic, suspiciously perfect simulation city pedestrian about 104 percent of the boy Max's height, neat short side-parted dark blond hair, blank pleasant smile, light beige trench coat buttoned up, grey trousers, polished brown shoes, a plain brown briefcase in his far hand, perfectly upright. Neutral standing pose, facing right.
+NEGATIVE: no second character, no parts of the boy Max from the reference unless this is Max, no props that are not described, no environment, no floor, no ground shadow, no checkerboard, no frames, panels or cell borders, no text, labels or numbers, no motion blur, no ghosting, no duplicated or extra limbs, no change to face, proportions, clothing or colors, no photorealism, no 3D render, no watermark
 ```
 
 # Posenbögen
@@ -1195,6 +1221,54 @@ STYLE: Pose sheet in exactly the same style, colors and proportions as the attac
 SUBJECT: Grandpa Konrad exactly as on the attached character sheet, unchanged.
 CHARACTER LOCK (word for word; where SUBJECT or POSES say otherwise, they win): Grandpa Konrad, a tall thin old inventor about 106 percent of Max's height, stooped forward from the shoulders, knees slightly bent, long thin legs. Wild white hair (#ffffff, shadow #8b9bb4) standing up in tufts, bushy white eyebrows, long nose, big enthusiastic grin, fair wrinkled skin (#e8b796, shadow #c28569). Round brass goggles (#feae34) on a dark strap (#3e2731) pushed up on his forehead. A rust-brown knitted cardigan (#b86f50, shadow #8b5f4b) hanging to the hips, with two rows of bulging pockets stuffed with screwdrivers and pliers (#262b44). Loose light beige trousers (#e8b796, shadow #c28569). Dark red slippers (#e43b44, shadow #a22633). No lab coat, no tie, no beard. Dark outline #181425.
 POSES (left to right): Two poses of the tiny hologram grandpa: (1) kneeling, both hands raised pleading; (2) hands clasped, looking up.
+END POSE: the motion starts and ends in the neutral pose of the attached sheet; do not draw that pose again, but every pose must be able to return to it with the feet in the same place unless a pose says the feet move.
+CAMERA: static, strict side view as on the attached sheet, same scale and the same flat baseline in every pose, no zoom, no pan.
+NEGATIVE: no second character, no parts of the boy Max from the reference unless this is Max, no props that are not described, no environment, no floor, no ground shadow, no checkerboard, no frames, panels or cell borders, no text, labels or numbers, no motion blur, no ghosting, no duplicated or extra limbs, no change to face, proportions, clothing or colors, no photorealism, no 3D render, no watermark, no in-between blur, no speed lines, no smear frames, no sliding feet, no change of scale or baseline between poses, no camera movement, no zoom, no perspective change, no morphing, no extra poses beyond the ones listed
+```
+
+## Morphäus 3
+
+**Shot W3-P30**
+
+**Anhängen:** Konzeptblatt Morphäus, Pixels Figurenblatt · **Posen:** 1 · **Wofür:** Pixel auffangen und halten
+
+```text
+STYLE: Pose sheet in exactly the same style, colors and proportions as the attached character sheet: same character, same head size, same hair and clothing colors, same line weight and flat cel shading, light from upper left. The poses side by side in one row, evenly spaced with clear empty space between them, all at the same scale on one flat baseline, each a frozen still pose, no motion blur, no ghosting, no speed lines, no duplicated limbs. Solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no text, no ground shadow, no frames or panels.
+SUBJECT: the character exactly as on the attached character sheet: same face, head size, proportions, costume and colors, nothing redesigned.
+CHARACTER (appearance only, word for word from its sheet; ignore the pose in it): Morphäus, a calm tall man about 106 percent of the boy Max's height, short red hair, neat red beard, reading glasses pushed up on his forehead. Chunky oatmeal knitted cardigan over a dark green turtleneck, brown corduroy trousers, brown shoes. A small cardboard sign with blank lines in his right hand. Calm neutral standing pose, wise slight smile, facing right. No leather coat, no small dark sunglasses, not bald.
+POSES (left to right): One pose of the calm tall man holding the soaking wet tomcat in both arms against his chest, the cat smug and annoyed.
+END POSE: the motion starts and ends in the neutral pose of the attached sheet; do not draw that pose again, but every pose must be able to return to it with the feet in the same place unless a pose says the feet move.
+CAMERA: static, strict side view as on the attached sheet, same scale and the same flat baseline in every pose, no zoom, no pan.
+NEGATIVE: no second character, no parts of the boy Max from the reference unless this is Max, no props that are not described, no environment, no floor, no ground shadow, no checkerboard, no frames, panels or cell borders, no text, labels or numbers, no motion blur, no ghosting, no duplicated or extra limbs, no change to face, proportions, clothing or colors, no photorealism, no 3D render, no watermark, no in-between blur, no speed lines, no smear frames, no sliding feet, no change of scale or baseline between poses, no camera movement, no zoom, no perspective change, no morphing, no extra poses beyond the ones listed
+```
+
+## Max Labor
+
+**Shot W3-P31**
+
+**Anhängen:** Max' Figurenblatt, Portalgerät · **Posen:** 2 · **Wofür:** Portalgerät abfeuern
+
+```text
+STYLE: Pose sheet in exactly the same style, colors and proportions as the attached character sheet: same character, same head size, same hair and clothing colors, same line weight and flat cel shading, light from upper left. The poses side by side in one row, evenly spaced with clear empty space between them, all at the same scale on one flat baseline, each a frozen still pose, no motion blur, no ghosting, no speed lines, no duplicated limbs. Solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no text, no ground shadow, no frames or panels.
+SUBJECT: Max exactly as on the attached character sheet, unchanged.
+CHARACTER LOCK (word for word; where SUBJECT or POSES say otherwise, they win): Max, a lanky 16-year-old boy, the reference height for every other character, head about a quarter of his height, slight slouch with hanging shoulders. Messy dark brown hair (#733e39, shadow #3e2731, highlight #b86f50) with shaggy strands falling over his forehead and eyes. Fair skin (#e8b796, shadow #c28569), sleepy half-closed eyes, lopsided smirk, a few freckles. Oversized dark slate blue-grey hoodie (#3a4466, shadow #262b44, highlight #5a6988), hood down, sleeves partly over his hands, uneven drawstrings, a tiny retro TV print with a turquoise screen (#2ce8f5) on the chest. Dark blue jeans (#124e89) slightly too long and rolled up at the hem. Worn red sneakers (#e43b44, shadow #a22633) with white soles (#ffffff), one lace untied. Dark outline #262b44, never pure black.
+POSES (left to right): Two poses of the boy Max: (1) aiming the white handheld gadget with both hands, one eye squinted; (2) a spark at the tip, leaning back from the recoil, surprised.
+END POSE: the motion starts and ends in the neutral pose of the attached sheet; do not draw that pose again, but every pose must be able to return to it with the feet in the same place unless a pose says the feet move.
+CAMERA: static, strict side view as on the attached sheet, same scale and the same flat baseline in every pose, no zoom, no pan.
+NEGATIVE: no second character, no parts of the boy Max from the reference unless this is Max, no props that are not described, no environment, no floor, no ground shadow, no checkerboard, no frames, panels or cell borders, no text, labels or numbers, no motion blur, no ghosting, no duplicated or extra limbs, no change to face, proportions, clothing or colors, no photorealism, no 3D render, no watermark, no in-between blur, no speed lines, no smear frames, no sliding feet, no change of scale or baseline between poses, no camera movement, no zoom, no perspective change, no morphing, no extra poses beyond the ones listed
+```
+
+## Detektiv Deckert 2
+
+**Shot W3-P32**
+
+**Anhängen:** Konzeptblatt Detektiv Deckert · **Posen:** 3 · **Wofür:** Regen zählen (Ruhe-Schleife unter dem Vordach)
+
+```text
+STYLE: Pose sheet in exactly the same style, colors and proportions as the attached character sheet: same character, same head size, same hair and clothing colors, same line weight and flat cel shading, light from upper left. The poses side by side in one row, evenly spaced with clear empty space between them, all at the same scale on one flat baseline, each a frozen still pose, no motion blur, no ghosting, no speed lines, no duplicated limbs. Solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no text, no ground shadow, no frames or panels.
+SUBJECT: the character exactly as on the attached character sheet: same face, head size, proportions, costume and colors, nothing redesigned.
+CHARACTER (appearance only, word for word from its sheet; ignore the pose in it): Detektiv Deckert, a weary middle-aged detective about 106 percent of the boy Max's height, stubbly chin, tired droopy eyes. Long beige trench coat, grey wide-brimmed hat with rain dripping from the brim, dark trousers. A small notepad in his left hand, a pencil-sized flashlight in his right. Neutral standing pose, testing stare, facing right. No gun, no dark long coat with high collar, not a likeness of any actor.
+POSES (left to right): Three poses of the weary detective under the awning: (1) looking up at the rain, counting, one finger raised; (2) two fingers raised, lips moving; (3) writing a tally mark in the notepad.
 END POSE: the motion starts and ends in the neutral pose of the attached sheet; do not draw that pose again, but every pose must be able to return to it with the feet in the same place unless a pose says the feet move.
 CAMERA: static, strict side view as on the attached sheet, same scale and the same flat baseline in every pose, no zoom, no pan.
 NEGATIVE: no second character, no parts of the boy Max from the reference unless this is Max, no props that are not described, no environment, no floor, no ground shadow, no checkerboard, no frames, panels or cell borders, no text, labels or numbers, no motion blur, no ghosting, no duplicated or extra limbs, no change to face, proportions, clothing or colors, no photorealism, no 3D render, no watermark, no in-between blur, no speed lines, no smear frames, no sliding feet, no change of scale or baseline between poses, no camera movement, no zoom, no perspective change, no morphing, no extra poses beyond the ones listed
@@ -1874,6 +1948,177 @@ CAMERA: static, no zoom, no pan, the effect stays centered in every frame.
 NEGATIVE: no characters unless named, no background scene, no text, no frames or panels, no checkerboard, no motion blur, no speed lines
 ```
 
+## Piepsi: Fahren
+
+**Shot W3-B37**
+
+**Anhängen:** das fertige Konzeptblatt von Piepsi · **Bilder:** 4 · **Ablauf:** Schleife
+
+```text
+STYLE: Key pose sheet for a 2D game animation in exactly the same style, colors and proportions as the attached character sheet: same character, same head size, same hair and clothing colors, same line weight and flat cel shading, light from upper left. The key poses side by side in one row from left to right in the order of the action, evenly spaced with clear empty space between them, all at the same scale on one flat baseline, each a frozen still pose. Solid flat magenta (#ff00ff) background filling the whole image.
+SUBJECT: the character exactly as on the attached character sheet: same face, head size, proportions, costume and colors, nothing redesigned.
+CHARACTER (appearance only, word for word from its sheet; ignore the pose in it): Piepsi, a small round cleaning robot about 32 percent of the boy Max's height shaped like a dented white bucket on three little wheels, one big round blue lens eye, a tiny antenna with a red tip, a crumpled black bowler hat on top, cheeky look, facing right.
+START: From the neutral pose on the attached concept sheet of Piepsi. Keep the clean concept-art style of that sheet, not pixel art.
+ACTION (2 key poses of a 4-frame animation of about 0.4 s): (1) 0.0 s: he drives forward on his three little wheels; (2) 0.2 s: the bucket body bobbing and tilting slightly from side to side, bowler hat wobbling.
+FRAMES: draw all 4 frames side by side, left to right, in the order they play: the key poses above at their times and evenly spaced in-between frames, so the motion reads smoothly; every frame differs visibly from its neighbours, no two frames identical.
+SPACING: divide the image into 4 equal columns, one frame per column, with a clear strip of empty magenta between neighbouring frames, at least as wide as the character's head; every part of a frame, including raised arms, tools, tongs, tails, capes and effects, stays completely inside its own column and never reaches into or overlaps the next frame. Draw the character smaller if needed to keep the gaps, the same size in every frame.
+END POSE: the same as pose 1, so the loop closes seamlessly; do not draw it twice.
+HOLD STILL: in place.
+CAMERA: static, strict side view, facing right. Same scale and the same flat baseline in every pose, no zoom, no pan.
+NEGATIVE: no second character, no parts of the boy Max from the reference unless this is Max, no props that are not described, no environment, no floor, no ground shadow, no checkerboard, no frames, panels or cell borders, no text, labels or numbers, no motion blur, no ghosting, no duplicated or extra limbs, no change to face, proportions, clothing or colors, no photorealism, no 3D render, no watermark, no in-between blur, no speed lines, no smear frames, no sliding feet, no change of scale or baseline between poses, no camera movement, no zoom, no perspective change, no morphing, no extra poses beyond the ones listed
+```
+
+## Küche der Orakel-Oma: Küchenradio spricht
+
+**Shot W3-B38**
+
+**Anhängen:** den passenden Ausschnitt aus dem fertigen Hintergrund (Küche der Orakel-Oma); das Ergebnis danach mit `tools/pixelieren.py` auf die Farben des Raums bringen · **Bilder:** 4 · **Ablauf:** Schleife
+
+```text
+STYLE: Visual effect frames for a 2D game, frames side by side in one row, evenly spaced, frame count as given in the motif, every frame the same size with the effect centered, flat cel shading, solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no frames or panels, no text.
+EFFECT: Only the small kitchen radio on the shelf, matching the attached background crop: its speaker grille glows warm in rhythm and a small green dial light blinks, as if a voice speaks from it.
+OVERLAY: the crop only shows where the effect sits, its size, light and colors; draw only the moving part named above on the magenta background, not the walls, furniture or anything else from the crop, so it can be laid exactly over the painted spot.
+FRAMES: 4 frames side by side, about 0.4 s at 10 frames per second, loops seamlessly: the last frame leads back into the first, each frame 56x28 pixels in the game.
+SPACING: divide the image into 4 equal columns, one frame per column, with a clear strip of empty magenta between neighbouring frames, at least as wide as the character's head; every part of a frame, including raised arms, tools, tongs, tails, capes and effects, stays completely inside its own column and never reaches into or overlaps the next frame. Draw the character smaller if needed to keep the gaps, the same size in every frame.
+END: no separate end frame, the loop closes.
+CAMERA: static, no zoom, no pan, the effect stays centered in every frame.
+NEGATIVE: no characters unless named, no background scene, no text, no frames or panels, no checkerboard, no motion blur, no speed lines
+```
+
+## Küche der Orakel-Oma: Kuckucksuhr ruft
+
+**Shot W3-B39**
+
+**Anhängen:** den passenden Ausschnitt aus dem fertigen Hintergrund (Küche der Orakel-Oma); das Ergebnis danach mit `tools/pixelieren.py` auf die Farben des Raums bringen · **Bilder:** 8 · **Ablauf:** einmalig
+
+```text
+STYLE: Visual effect frames for a 2D game, frames side by side in one row, evenly spaced, frame count as given in the motif, every frame the same size with the effect centered, flat cel shading, solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no frames or panels, no text.
+EFFECT: Only the wooden cuckoo clock, matching the attached background crop: the little door opens, a tiny yellow bird slides out, opens its beak twice and slides back, the door closes.
+OVERLAY: the crop only shows where the effect sits, its size, light and colors; draw only the moving part named above on the magenta background, not the walls, furniture or anything else from the crop, so it can be laid exactly over the painted spot.
+FRAMES: 8 frames side by side, about 0.8 s at 10 frames per second, plays once, each frame 36x30 pixels in the game.
+SPACING: divide the image into 8 equal columns, one frame per column, with a clear strip of empty magenta between neighbouring frames, at least as wide as the character's head; every part of a frame, including raised arms, tools, tongs, tails, capes and effects, stays completely inside its own column and never reaches into or overlaps the next frame. Draw the character smaller if needed to keep the gaps, the same size in every frame.
+END: the last frame is the calm end state of the effect.
+CAMERA: static, no zoom, no pan, the effect stays centered in every frame.
+NEGATIVE: no characters unless named, no background scene, no text, no frames or panels, no checkerboard, no motion blur, no speed lines
+```
+
+## Laboreingang: Kartenleser blinkt
+
+**Shot W3-B40**
+
+**Anhängen:** den passenden Ausschnitt aus dem fertigen Hintergrund (Laboreingang); das Ergebnis danach mit `tools/pixelieren.py` auf die Farben des Raums bringen · **Bilder:** 4 · **Ablauf:** Schleife
+
+```text
+STYLE: Visual effect frames for a 2D game, frames side by side in one row, evenly spaced, frame count as given in the motif, every frame the same size with the effect centered, flat cel shading, solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no frames or panels, no text.
+EFFECT: Only the wall-mounted card reader, matching the attached background crop: its small red light blinks slowly.
+OVERLAY: the crop only shows where the effect sits, its size, light and colors; draw only the moving part named above on the magenta background, not the walls, furniture or anything else from the crop, so it can be laid exactly over the painted spot.
+FRAMES: 4 frames side by side, about 0.4 s at 10 frames per second, loops seamlessly: the last frame leads back into the first, each frame 28x38 pixels in the game.
+SPACING: divide the image into 4 equal columns, one frame per column, with a clear strip of empty magenta between neighbouring frames, at least as wide as the character's head; every part of a frame, including raised arms, tools, tongs, tails, capes and effects, stays completely inside its own column and never reaches into or overlaps the next frame. Draw the character smaller if needed to keep the gaps, the same size in every frame.
+END: no separate end frame, the loop closes.
+CAMERA: static, no zoom, no pan, the effect stays centered in every frame.
+NEGATIVE: no characters unless named, no background scene, no text, no frames or panels, no checkerboard, no motion blur, no speed lines
+```
+
+## Testkammer 1: Lautsprecher spricht
+
+**Shot W3-B41**
+
+**Anhängen:** den passenden Ausschnitt aus dem fertigen Hintergrund (Testkammer 1); das Ergebnis danach mit `tools/pixelieren.py` auf die Farben des Raums bringen · **Bilder:** 4 · **Ablauf:** Schleife
+
+```text
+STYLE: Visual effect frames for a 2D game, frames side by side in one row, evenly spaced, frame count as given in the motif, every frame the same size with the effect centered, flat cel shading, solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no frames or panels, no text.
+EFFECT: Only the round ceiling speaker, matching the attached background crop: the grille glows soft orange and trembles in rhythm while M.U.T.T.I. speaks.
+OVERLAY: the crop only shows where the effect sits, its size, light and colors; draw only the moving part named above on the magenta background, not the walls, furniture or anything else from the crop, so it can be laid exactly over the painted spot.
+FRAMES: 4 frames side by side, about 0.4 s at 10 frames per second, loops seamlessly: the last frame leads back into the first, each frame 39x23 pixels in the game.
+SPACING: divide the image into 4 equal columns, one frame per column, with a clear strip of empty magenta between neighbouring frames, at least as wide as the character's head; every part of a frame, including raised arms, tools, tongs, tails, capes and effects, stays completely inside its own column and never reaches into or overlaps the next frame. Draw the character smaller if needed to keep the gaps, the same size in every frame.
+END: no separate end frame, the loop closes.
+CAMERA: static, no zoom, no pan, the effect stays centered in every frame.
+NEGATIVE: no characters unless named, no background scene, no text, no frames or panels, no checkerboard, no motion blur, no speed lines
+```
+
+## Testkammer 2: Lautsprecher spricht
+
+**Shot W3-B42**
+
+**Anhängen:** nichts (Effekt) · **Bilder:** 4 · **Ablauf:** Schleife
+
+```text
+STYLE: Visual effect frames for a 2D game, frames side by side in one row, evenly spaced, frame count as given in the motif, every frame the same size with the effect centered, flat cel shading, solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no frames or panels, no text.
+EFFECT: The same ceiling speaker in chamber 2: the grille glows soft orange and trembles in rhythm.
+FRAMES: 4 frames side by side, about 0.4 s at 10 frames per second, loops seamlessly: the last frame leads back into the first, each frame 39x23 pixels in the game.
+SPACING: divide the image into 4 equal columns, one frame per column, with a clear strip of empty magenta between neighbouring frames, at least as wide as the character's head; every part of a frame, including raised arms, tools, tongs, tails, capes and effects, stays completely inside its own column and never reaches into or overlaps the next frame. Draw the character smaller if needed to keep the gaps, the same size in every frame.
+END: no separate end frame, the loop closes.
+CAMERA: static, no zoom, no pan, the effect stays centered in every frame.
+NEGATIVE: no characters unless named, no background scene, no text, no frames or panels, no checkerboard, no motion blur, no speed lines
+```
+
+## Testkammer 3: Lautsprecher spricht
+
+**Shot W3-B43**
+
+**Anhängen:** den passenden Ausschnitt aus dem fertigen Hintergrund (Testkammer 3); das Ergebnis danach mit `tools/pixelieren.py` auf die Farben des Raums bringen · **Bilder:** 4 · **Ablauf:** Schleife
+
+```text
+STYLE: Visual effect frames for a 2D game, frames side by side in one row, evenly spaced, frame count as given in the motif, every frame the same size with the effect centered, flat cel shading, solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no frames or panels, no text.
+EFFECT: Only the big round wall speaker, matching the attached background crop: the grille glows soft orange and trembles in rhythm.
+OVERLAY: the crop only shows where the effect sits, its size, light and colors; draw only the moving part named above on the magenta background, not the walls, furniture or anything else from the crop, so it can be laid exactly over the painted spot.
+FRAMES: 4 frames side by side, about 0.4 s at 10 frames per second, loops seamlessly: the last frame leads back into the first, each frame 29x49 pixels in the game.
+SPACING: divide the image into 4 equal columns, one frame per column, with a clear strip of empty magenta between neighbouring frames, at least as wide as the character's head; every part of a frame, including raised arms, tools, tongs, tails, capes and effects, stays completely inside its own column and never reaches into or overlaps the next frame. Draw the character smaller if needed to keep the gaps, the same size in every frame.
+END: no separate end frame, the loop closes.
+CAMERA: static, no zoom, no pan, the effect stays centered in every frame.
+NEGATIVE: no characters unless named, no background scene, no text, no frames or panels, no checkerboard, no motion blur, no speed lines
+```
+
+## Testkammer 3: Tür redet
+
+**Shot W3-B44**
+
+**Anhängen:** den passenden Ausschnitt aus dem fertigen Hintergrund (Testkammer 3); das Ergebnis danach mit `tools/pixelieren.py` auf die Farben des Raums bringen · **Bilder:** 4 · **Ablauf:** Schleife
+
+```text
+STYLE: Visual effect frames for a 2D game, frames side by side in one row, evenly spaced, frame count as given in the motif, every frame the same size with the effect centered, flat cel shading, solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no frames or panels, no text.
+EFFECT: Only the small control panel beside the exit door, matching the attached background crop: three tiny green lights blink in a speaking rhythm.
+OVERLAY: the crop only shows where the effect sits, its size, light and colors; draw only the moving part named above on the magenta background, not the walls, furniture or anything else from the crop, so it can be laid exactly over the painted spot.
+FRAMES: 4 frames side by side, about 0.4 s at 10 frames per second, loops seamlessly: the last frame leads back into the first, each frame 20x36 pixels in the game.
+SPACING: divide the image into 4 equal columns, one frame per column, with a clear strip of empty magenta between neighbouring frames, at least as wide as the character's head; every part of a frame, including raised arms, tools, tongs, tails, capes and effects, stays completely inside its own column and never reaches into or overlaps the next frame. Draw the character smaller if needed to keep the gaps, the same size in every frame.
+END: no separate end frame, the loop closes.
+CAMERA: static, no zoom, no pan, the effect stays centered in every frame.
+NEGATIVE: no characters unless named, no background scene, no text, no frames or panels, no checkerboard, no motion blur, no speed lines
+```
+
+## Max: Verwandlung in die Ente
+
+**Shot W3-B45**
+
+**Anhängen:** nichts (Effekt) · **Bilder:** 6 · **Ablauf:** einmalig
+
+```text
+STYLE: Visual effect frames for a 2D game, frames side by side in one row, evenly spaced, frame count as given in the motif, every frame the same size with the effect centered, flat cel shading, solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no frames or panels, no text.
+EFFECT: A green digital glitch of square pixels flickering around a standing figure and dissolving, horizontal scan streaks.
+FRAMES: 6 frames side by side, about 0.6 s at 10 frames per second, plays once, each frame 96x200 pixels in the game.
+SPACING: divide the image into 6 equal columns, one frame per column, with a clear strip of empty magenta between neighbouring frames, at least as wide as the character's head; every part of a frame, including raised arms, tools, tongs, tails, capes and effects, stays completely inside its own column and never reaches into or overlaps the next frame. Draw the character smaller if needed to keep the gaps, the same size in every frame.
+END: the last frame is the calm end state of the effect.
+CAMERA: static, no zoom, no pan, the effect stays centered in every frame.
+NEGATIVE: no characters unless named, no background scene, no text, no frames or panels, no checkerboard, no motion blur, no speed lines
+```
+
+## Büroturm, 50. Stock: Terminal spricht
+
+**Shot W3-B46**
+
+**Anhängen:** den passenden Ausschnitt aus dem fertigen Hintergrund (Büroturm, 50. Stock); das Ergebnis danach mit `tools/pixelieren.py` auf die Farben des Raums bringen · **Bilder:** 4 · **Ablauf:** Schleife
+
+```text
+STYLE: Visual effect frames for a 2D game, frames side by side in one row, evenly spaced, frame count as given in the motif, every frame the same size with the effect centered, flat cel shading, solid flat magenta (#ff00ff) background filling the whole image, no checkerboard, no frames or panels, no text.
+EFFECT: Only the small green-screen terminal on the side table, matching the attached background crop: short green text lines scroll up and a cursor blinks while the tomcat's hints appear.
+OVERLAY: the crop only shows where the effect sits, its size, light and colors; draw only the moving part named above on the magenta background, not the walls, furniture or anything else from the crop, so it can be laid exactly over the painted spot.
+FRAMES: 4 frames side by side, about 0.4 s at 10 frames per second, loops seamlessly: the last frame leads back into the first, each frame 30x24 pixels in the game.
+SPACING: divide the image into 4 equal columns, one frame per column, with a clear strip of empty magenta between neighbouring frames, at least as wide as the character's head; every part of a frame, including raised arms, tools, tongs, tails, capes and effects, stays completely inside its own column and never reaches into or overlaps the next frame. Draw the character smaller if needed to keep the gaps, the same size in every frame.
+END: no separate end frame, the loop closes.
+CAMERA: static, no zoom, no pan, the effect stays centered in every frame.
+NEGATIVE: no characters unless named, no background scene, no text, no frames or panels, no checkerboard, no motion blur, no speed lines
+```
+
 # Gegenstände
 
 Je Sammelbild den Block komplett in Gemini kopieren und Max' Konzeptblatt als Stilvorlage
@@ -1959,7 +2204,7 @@ Nichts anhängen. Die Schrift setzt Claude danach als Pixelschrift ein.
 
 ```text
 STYLE: Close-up illustration for a 2D point-and-click adventure game in the style of classic 1990s adventure games, warm hand-painted look, 16:9, 640x360, the object fills the whole frame, no floor, no characters, light from upper left. No text, no letters, no numbers, all lines and fields left blank.
-SUBJECT: Close-up of a torn phone book page filling the frame, four narrow columns of blank lines, torn left edge, lying on a wet metal shelf, cyan light from the phone booth.
+SUBJECT: Close-up of a single phone book page torn out along its left edge, lying slightly crooked on a wet metal shelf inside a phone booth, filling the frame; thin paper printed in four narrow columns, each column a dense stack of blank ruled entry lines with a small blank header bar on top; the third column is one long unbroken run of identical blank entries from top to bottom, faintly highlighted with a smudged pencil bracket; a few water drops on the paper, cyan light from the phone booth.
 PALETTE: dim cyberpunk interior palette of deep navy and concrete grey, bright accents only in neon magenta and neon cyan from screens and tubes, damp walls, a few drips, no street, no sky. Color anchors, approximate: deep navy #181425, concrete grey #3a4466, damp blue-grey #5a6988, neon magenta #ff4fd8, neon cyan #3ff7ff.
 NEGATIVE: no text, letters, numbers or symbols that could be read, no characters, no hands unless described, no floor, no frame, no photorealism, no watermark
 ```
@@ -1970,8 +2215,8 @@ NEGATIVE: no text, letters, numbers or symbols that could be read, no characters
 
 ```text
 STYLE: Close-up illustration for a 2D point-and-click adventure game in the style of classic 1990s adventure games, warm hand-painted look, 16:9, 640x360, the object fills the whole frame, no floor, no characters, light from upper left. No text, no letters, no numbers, all lines and fields left blank.
-SUBJECT: Close-up of an opened brown paper folder filling the frame, two pages with a blank typed form, a round red stamp and a paper clip.
-PALETTE: dim cyberpunk interior palette of deep navy and concrete grey, bright accents only in neon magenta and neon cyan from screens and tubes, damp walls, a few drips, no street, no sky. Color anchors, approximate: deep navy #181425, concrete grey #3a4466, damp blue-grey #5a6988, neon magenta #ff4fd8, neon cyan #3ff7ff.
+SUBJECT: Close-up of an opened file folder lying on a tidy office desk, filling the frame; the folder glows softly white-green at its edges like a computer file; left page: a blank title bar at the top, below it four empty ruled lines, at the bottom right a large round red stamp with an empty center; right page: a stack of report sheets held by a paper clip, two short empty ruled lines with wide spacing, the rest of the page empty; plenty of clean empty paper for writing.
+PALETTE: overly clean interior palette with a faint green tint, even shadowless-looking light, no dirt anywhere, slightly too symmetrical, no sky. Color anchors, approximate: clean grey #c0cbdc, white #ffffff, faint green tint #63c74d, pale wood #e4a672.
 NEGATIVE: no text, letters, numbers or symbols that could be read, no characters, no hands unless described, no floor, no frame, no photorealism, no watermark
 ```
 
@@ -1981,7 +2226,7 @@ NEGATIVE: no text, letters, numbers or symbols that could be read, no characters
 
 ```text
 STYLE: Close-up illustration for a 2D point-and-click adventure game in the style of classic 1990s adventure games, warm hand-painted look, 16:9, 640x360, the object fills the whole frame, no floor, no characters, light from upper left. No text, no letters, no numbers, all lines and fields left blank.
-SUBJECT: Close-up of a thick appliance manual open on a kitchen table filling the frame, a stand mixer diagram on the left page, blank numbered lines on the right page.
+SUBJECT: Close-up of a thick old kitchen appliance manual lying open on a wooden kitchen table with a checked tablecloth edge, filling the frame; left page: a neat line drawing of a stand mixer with arrows to its parts; right page: a short blank heading bar at the top, below it two empty lines underlined twice in red pen, and further down a small pale yellow boxed warning note with three empty lines; a little flour dust and a cookie crumb on the table.
 PALETTE: overly clean interior palette with a faint green tint, even shadowless-looking light, no dirt anywhere, slightly too symmetrical, no sky. Color anchors, approximate: clean grey #c0cbdc, white #ffffff, faint green tint #63c74d, pale wood #e4a672.
 NEGATIVE: no text, letters, numbers or symbols that could be read, no characters, no hands unless described, no floor, no frame, no photorealism, no watermark
 ```
@@ -1992,7 +2237,7 @@ NEGATIVE: no text, letters, numbers or symbols that could be read, no characters
 
 ```text
 STYLE: Close-up illustration for a 2D point-and-click adventure game in the style of classic 1990s adventure games, warm hand-painted look, 16:9, 640x360, the object fills the whole frame, no floor, no characters, light from upper left. No text, no letters, no numbers, all lines and fields left blank.
-SUBJECT: Close-up of a white wall panel near the floor filling the frame, big shaky black marker scribbles underlined three times and a small neat block of print beside them, all blank shapes without letters.
+SUBJECT: Close-up of a white wall panel near the floor of a clean test chamber, part of an orange warning stripe along the bottom edge, filling the frame; on the left two thirds a large clean empty area of white panel with three long shaky black felt-tip underlines beneath it, and below them a small childlike felt-tip drawing of a cake with a candle, crossed out twice; on the right a small neat light grey notice plate screwed to the wall with four empty lines; a black felt-tip pen lying on the floor edge.
 PALETTE: sterile palette of white panels, light grey and soft orange warning stripes, cold even light, only short soft shadows to the lower right. Color anchors, approximate: white panels #ffffff, light grey #c0cbdc, cold grey #8b9bb4, warning orange #f77622.
 NEGATIVE: no text, letters, numbers or symbols that could be read, no characters, no hands unless described, no floor, no frame, no photorealism, no watermark
 ```
@@ -2003,7 +2248,7 @@ NEGATIVE: no text, letters, numbers or symbols that could be read, no characters
 
 ```text
 STYLE: Close-up illustration for a 2D point-and-click adventure game in the style of classic 1990s adventure games, warm hand-painted look, 16:9, 640x360, the object fills the whole frame, no floor, no characters, light from upper left. No text, no letters, no numbers, all lines and fields left blank.
-SUBJECT: Close-up of a laminated sheet pinned to a hull plate filling the frame, a table of small cat paw symbols in two columns with blank spaces beside each, a coffee ring stain.
+SUBJECT: Close-up of a laminated sheet pinned to a riveted metal hull plate with two magnets, filling the frame; a hand-drawn table with two columns and eight rows: a blank header row, then seven rows where the left cell holds small cat paw prints in groups (single paw, short paw stroke, two paws, stroke and paw) and the right cell is empty; below the table one short empty line in small print; a brown coffee ring stain on one corner, the laminate reflecting a little dim light.
 PALETTE: dim cyberpunk interior palette of deep navy and concrete grey, bright accents only in neon magenta and neon cyan from screens and tubes, damp walls, a few drips, no street, no sky. Color anchors, approximate: deep navy #181425, concrete grey #3a4466, damp blue-grey #5a6988, neon magenta #ff4fd8, neon cyan #3ff7ff.
 NEGATIVE: no text, letters, numbers or symbols that could be read, no characters, no hands unless described, no floor, no frame, no photorealism, no watermark
 ```
