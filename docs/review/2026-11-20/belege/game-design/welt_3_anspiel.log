@@ -1,0 +1,92 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+  ok    Raum unterstadt_strasse erreicht
+  ok    Ankunft in der Unterstadt
+  ok    R1a Beobachtungen
+  ok    Deckert bietet den Mensch-Test im Gespräch an
+  ok    Logische Antwort fällt durch
+  ok    R1b Mensch-Test
+  ok    R2 Nudelbude
+  ok    Raum apothekengasse erreicht
+  ok    R3a Pastillen und Omas Kekse
+  ok    Raum stadtstrasse erreicht
+  ok    R3b in der Simulation
+  ok    Code-Sicht frei
+  ok    R5 gesprächige Tür
+  ok    Ton: Code-Sicht und Tausch
+  ok    Ton: Regen in der Unterstadt, die Simulation ohne Atmosphäre
+  ok    Ton: Opa spricht in Welt 3 als Hologramm
+  ok    Raum widerstandsbasis erreicht
+  ok    Radiowecker, erstes Aufstehen: die erste Zeile
+  ok    Raum stadtstrasse erreicht
+  ok    Raum widerstandsbasis erreicht
+  ok    Radiowecker, zweites Aufstehen: die zweite Zeile
+  ok    Raum stadtstrasse erreicht
+  ok    Raum kueche_orakel erreicht
+  ok    Orakel-Oma bietet die Frage nach dem Sparschwein an
+  ok    R4 Sparschwein, Regel 2
+  ok    Küche: Sparschwein und Eieruhr statt Vase und Wandtelefon
+  ok    Raum widerstandsbasis erreicht
+  ok    Eieruhr: Ausgang aus der Küche
+  ok    Raum kueche_orakel erreicht
+  ok    Raum buero_50 erreicht
+  ok    Büroturm: Hexenschuss
+  ok    Büroturm: Kopierer steht im Flur
+  ok    Kopierer: Ansehen zweimal, Benutzen
+  ok    R6a Original und Kopie
+  ok    R6b Mittagspause, Regel 1
+  ok    Raum widerstandsbasis erreicht
+  ok    Raum buero_50 erreicht
+  ok    R13 Morse-Tabelle (in Max' Inventar)
+  ok    R7a Farbcode
+  ok    Raum widerstandsbasis erreicht
+  ok    Raum widerstandsbasis erreicht
+  ok    R7b Max wacht auf
+  ok    Raum unterstadt_strasse erreicht
+  ok    R12 vierte Zutat
+  ok    Raum laboreingang erreicht
+  ok    Seite vor dem Ölen: Pixel warnt, die Seite bleibt bei Max
+  ok    Öl für Modell 08/15: Freund
+  ok    R8 Hausmeister
+  ok    R9a Leitung
+  ok    Raum widerstandsbasis erreicht
+  ok    Raum testkammer_1 erreicht
+  ok    Portalgerät
+  ok    R9b Kammer 1
+  ok    Raum testkammer_2 erreicht
+  ok    R9c Kammer 2, Regel 3
+  ok    Raum testkammer_3 erreicht
+  ok    R9d Kammer 3
+  ok    Raum kern erreicht
+  ok    R10 Paradoxon
+  ok    Zelle kalt, Kekse ofenwarm
+  ok    Raum dachboden erreicht
+  ok    R11 Energiezelle, Welt 3 geschafft, Opa hat die Zelle
+  ok    Lösung A über die Kekse: Pixel sagt nicht „ich habe das Fenster“
+  ok    Raum dachboden erreicht
+  ok    Ton: Grundatmosphäre in Basis und Labor, Laser in Testkammer 2
+  ok    Zwischenspiel 3
+  ok    Einkaufsliste: dritter Wunsch
+  ok    Alter Spielstand: alle 29 Schalter von Welt 3 sind am Ende der Welt gesetzt (29)
+  ok    Alter Spielstand: Versionsnummer nach dem Lesen angehoben
+  ok    Alter Spielstand: Schalter tragen nach dem Laden ihr Präfix
+      erwartet ["W3_ANKUNFT", "W3_WECHSEL_FREI", "W3_BEOBACHTUNG_SCHIRM", "W3_BEOBACHTUNG_MUSIKER", "W3_BEOBACHTUNG_SUPPE", "W3_R01_A_GELOEST", "W3_R01_B_GELOEST", "W3_STEMPEL_MENSCH", "W3_R02_GELOEST", "W3_MORPHAEUS_GETROFFEN", "W3_SYMPTOM_BEKANNT", "W3_PIXEL_DOPPELT", "W3_R03_A_GELOEST", "W3_DIAGNOSE_MATRIX", "W3_R03_B_GELOEST", "W3_SIMULATION_OFFEN", "W3_SIM_GESEHEN", "W3_TUER_ANGESEHEN", "W3_CODE_SICHT", "W3_CODE_TUTORIAL", "W3_R05_GELOEST", "W3_GLASTUER_OFFEN", "W3_WECKER_KLINGELT", "W3_ZELLE_BENUTZT", "W3_ERSTES_AUFWACHEN", "W3_PIXEL_AUF_LEITUNG", "W3_DEJA_VU", "W3_ERST_KUECHE_ORAKEL", "W3_R04_GELOEST", "W3_SPARSCHWEIN_ZERSCHLAGEN", "W3_REGEL_2", "W3_TURM_GESEHEN", "W3_HEXENSCHUSS", "W3_CODE_KLONE", "W3_R06_A_GELOEST", "W3_TASSE_ORIGINAL", "W3_R06_B_GELOEST", "W3_KLONE_MITTAGSPAUSE", "W3_REGEL_1", "W3_R13_GELOEST", "W3_MORSE_TABELLE", "W3_OPAS_NACHRICHT", "W3_TERMINAL_TURM", "W3_R07_A_GELOEST", "W3_FARBCODE_GESENDET", "W3_R07_B_GELOEST", "W3_KABEL_GESTECKT", "W3_R12_GELOEST", "W3_SUPPE_GEKOCHT", "W3_OEL_WARNUNG", "W3_FREUND_0815", "W3_R08_GELOEST", "W3_HAUSMEISTER_WEG", "W3_PANZERTUER_OFFEN", "W3_R09_A_GELOEST", "W3_LEITUNG_LABOR", "W3_LABOR_GESEHEN", "W3_PORTAL_GENOMMEN", "W3_PORTAL_BENUTZT", "W3_BERND_VORGESTELLT", "W3_CODE_KAM1", "W3_KAMMER_1_GELOEST", "W3_ERST_TESTKAMMER_2", "W3_REGEL_3", "W3_CODE_KAM2", "W3_KAMMER_2_GELOEST", "W3_ERST_TESTKAMMER_3", "W3_KAMMER_3_GELOEST", "W3_ERST_KERN", "W3_R10_GELOEST", "W3_MUTTI_AUS", "W3_CODE_KERN", "W3_KEKSE_WARM", "W3_ZELLE_KALT", "W3_R11_GELOEST", "W3_ZELLE_GEKUEHLT", "ZS3_MITBRINGSEL_ABGEGEBEN", "FI_LUKE_ERKANNT"]
+      geladen  ["W3_BEOBACHTUNG_MUSIKER", "W3_BEOBACHTUNG_SCHIRM", "W3_BEOBACHTUNG_SUPPE", "W3_CODE_SICHT", "W3_DIAGNOSE_MATRIX", "W3_FARBCODE_GESENDET", "W3_FREUND_0815", "W3_GLASTUER_OFFEN", "W3_HAUSMEISTER_WEG", "W3_HEXENSCHUSS", "W3_KABEL_GESTECKT", "W3_KAMMER_1_GELOEST", "W3_KAMMER_2_GELOEST", "W3_KAMMER_3_GELOEST", "W3_KLONE_MITTAGSPAUSE", "W3_LEITUNG_LABOR", "FI_LUKE_ERKANNT", "W3_MORPHAEUS_GETROFFEN", "W3_MORSE_TABELLE", "W3_MUTTI_AUS", "W3_OPAS_NACHRICHT", "W3_REGEL_1", "W3_REGEL_2", "W3_REGEL_3", "W3_SIMULATION_OFFEN", "W3_SPARSCHWEIN_ZERSCHLAGEN", "W3_STEMPEL_MENSCH", "W3_SUPPE_GEKOCHT", "W3_TASSE_ORIGINAL", "W3_ANKUNFT", "W3_BERND_VORGESTELLT", "W3_CODE_KAM1", "W3_CODE_KAM2", "W3_CODE_KERN", "W3_CODE_KLONE", "W3_CODE_TUTORIAL", "W3_DEJA_VU", "W3_ERSTES_AUFWACHEN", "W3_ERST_KERN", "W3_ERST_KUECHE_ORAKEL", "W3_ERST_TESTKAMMER_2", "W3_ERST_TESTKAMMER_3", "W3_KEKSE_WARM", "W3_LABOR_GESEHEN", "W3_OEL_WARNUNG", "W3_PANZERTUER_OFFEN", "W3_PIXEL_AUF_LEITUNG", "W3_PIXEL_DOPPELT", "W3_PORTAL_BENUTZT", "W3_PORTAL_GENOMMEN", "W3_R01_A_GELOEST", "W3_R01_B_GELOEST", "W3_R02_GELOEST", "W3_R03_A_GELOEST", "W3_R03_B_GELOEST", "W3_R04_GELOEST", "W3_R05_GELOEST", "W3_R06_A_GELOEST", "W3_R06_B_GELOEST", "W3_R07_A_GELOEST", "W3_R07_B_GELOEST", "W3_R08_GELOEST", "W3_R09_A_GELOEST", "W3_R10_GELOEST", "W3_R11_GELOEST", "W3_R12_GELOEST", "W3_R13_GELOEST", "W3_SIM_GESEHEN", "W3_SYMPTOM_BEKANNT", "W3_TERMINAL_TURM", "W3_TUER_ANGESEHEN", "W3_TURM_GESEHEN", "W3_WECHSEL_FREI", "W3_WECKER_KLINGELT", "W3_ZELLE_BENUTZT", "W3_ZELLE_KALT", "W3_ZELLE_GEKUEHLT", "ZS3_MITBRINGSEL_ABGEGEBEN"]
+  ok    Alter Spielstand: Code-Sicht, Freund 08/15 und die Testkammern bleiben erhalten
+  ok    Reisetasche gepackt
+  ok    Welt 4 beginnt
+
+Prüfungen: 73, Fehler: 0
+ERROR: 99 RID allocations of type '13NavObstacle2D' were leaked at exit.
+ERROR: 99 RID allocations of type '10NavAgent2D' were leaked at exit.
+ERROR: 27 RID allocations of type '11NavRegion2D' were leaked at exit.
+ERROR: 99 RID allocations of type 'P11GodotArea2D' were leaked at exit.
+ERROR: 198 RID allocations of type 'P12GodotShape2D' were leaked at exit.
+ERROR: 99 RID allocations of type 'N13RendererDummy9DummyMeshE' were leaked at exit.
+ERROR: 117 RID allocations of type 'PN13RendererDummy14TextureStorage12DummyTextureE' were leaked at exit.
+WARNING: 612 RIDs of type "CanvasItem" were leaked.
+   at: _free_rids (servers/rendering/renderer_canvas_cull.cpp:2735)
+WARNING: 1729 ObjectDB instances were leaked at exit (run with `--verbose` for details).
+   at: cleanup (core/object/object.cpp:2536)
+ERROR: 475 resources still in use at exit (run with --verbose for details).
+   at: clear (core/io/resource.cpp:822)
