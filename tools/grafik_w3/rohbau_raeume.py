@@ -250,8 +250,11 @@ def stadtstrasse():
     box("ROAD for the cars in time (keep clear, cars are animated)", 6, 2.4, 30, 2.2, 0.01, col=STRASSE)
     box(None, 6, 4.6, 30, 1.0, 0.12, col=GEHWEG)                               # Gehweg hinten
     box(None, 6, 5.6, 30, 0.6, 0.02, col=RASEN)                                # schmaler Vorgarten
+    box("narrow too-clean alley between houses (arrival)", 0.0, 7.6, 0.9, 0.2, 2.6, col=(0.55, 0.58, 0.55, 1))
     for i in range(8):
         x = -2.2 + i * 2.3
+        if abs(x - 0.0) < 0.9 or x > 9.5:
+            continue
         oma = (i == 4)
         box("identical white house" if i == 2 else None, x, 6.2, 2.1, 2, 2.75, col=HELL)
         box(None, x, 6.1, 2.3, 2.2, 0.3, z=2.75, col=ROT)
@@ -262,6 +265,8 @@ def stadtstrasse():
             box(None, fx, 6.15, 0.6, 0.05, 0.7, z=1.2, col=GLAS)
     for i in range(7):
         x = -1.05 + i * 2.3
+        if x > 9.5:
+            continue
         zyl("identical round tree + street lamp" if i == 1 else None, x, 5.0, 0.07, 1.8, col=HOLZ)
         kugel(None, x, 5.0, 0.55, 2.2, col=GRUEN)
         zyl(None, x + 1.15, 4.9, 0.04, 2.6, col=DUNKEL)
@@ -270,12 +275,13 @@ def stadtstrasse():
         kugel("same cloud x3" if x == 1.5 else None, x, 40, 1.0, 6.9, col=(1, 1, 1, 1))
     kugel("sun", 7.5, 40, 0.7, 7.2, col=GELB)
     # vorn links: Gasse und Nachttisch
-    box("narrow too-clean alley (arrival, left edge)", 0.3, 2.0, 0.6, 0.2, 3.0, col=MITTEL)
     box("bedside table + clock radio (own front piece)", 1.5, 0.5, 0.5, 0.4, 0.6, col=HOLZ)
     box(None, 1.5, 0.55, 0.3, 0.2, 0.12, z=0.6, col=DUNKEL)
     # rechts: Büroturm auf unserer Seite
-    box("glass office tower (our side, cut off at top)", 11.6, 1.8, 1.6, 3, 9, col=GLAS)
-    box("glass entrance door + intercom", 11.4, 1.75, 0.9, 0.05, 2.3, col=(0.40, 0.60, 0.70, 1))
+    box("glass office tower (behind the road, cut off at top)", 11.4, 5.6, 2.6, 3, 12, col=GLAS)
+    box("glass entrance door + intercom", 11.2, 5.55, 1.1, 0.05, 2.4, col=(0.40, 0.60, 0.70, 1))
+    for i in range(6):
+        box("zebra crossing to the tower door" if i == 0 else None, 11.2, 2.45 + i * 0.36, 1.4, 0.2, 0.012, col=HELL)
     figur("Agent Schmidt", 9.6, 1.2, 1.85)
     figur("black cat", 6.5, 0.6, 0.35, 0.5)
     max_massstab()

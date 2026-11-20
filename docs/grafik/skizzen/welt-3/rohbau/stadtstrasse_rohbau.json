@@ -14,6 +14,11 @@
    590.4270529747009
   ],
   [
+   "narrow too-clean alley between houses (arrival)",
+   604.8674392700195,
+   176.43051624298096
+  ],
+  [
    "identical white house",
    834.5064544677734,
    154.4200086593628
@@ -39,24 +44,24 @@
    3.0353164672851562
   ],
   [
-   "narrow too-clean alley (arrival, left edge)",
-   275.07240295410156,
-   86.44609451293945
-  ],
-  [
    "bedside table + clock radio (own front piece)",
    367.87139892578125,
    556.1568224430084
   ],
   [
-   "glass office tower (our side, cut off at top)",
-   2343.748321533203,
-   -1067.0562171936035
+   "glass office tower (behind the road, cut off at top)",
+   2021.1439514160156,
+   -1125.886459350586
   ],
   [
    "glass entrance door + intercom",
-   2250.5880737304688,
-   210.31097888946533
+   1952.952880859375,
+   197.3220920562744
+  ],
+  [
+   "zebra crossing to the tower door",
+   2135.966033935547,
+   588.31751704216
   ]
  ],
  "figuren": [
