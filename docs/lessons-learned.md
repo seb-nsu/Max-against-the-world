@@ -378,3 +378,15 @@ Komplett-Review von Prolog, Welt 1 und Welt 2 mit sieben Prüfrollen (Bericht: `
 - Ein zweites Review mit anderem Blickwinkel lohnt sich: Es fand die harten Zustandsfehler (Zeile gilt immer, obwohl es zwei Lösungswege gibt; Gegenstand kann verbraucht sein).
 - Zählen statt schätzen: `grep` über die Pixel-Zeilen zeigte „junger Mann“ 76-mal. Wiederkehrende Formeln gehören ins Konzept mit einer Obergrenze.
 - Bei jeder Zeile, die einen Zustand behauptet („ich habe das Fenster“, „nimmt Max' Handy“), prüfen, ob der Zustand auf allen Wegen gilt; sonst eine zweite Fassung mit Bedingung und einen Test dazu.
+
+## 13. Welt 3, Phase 1 (20. November 2026)
+
+- **Konzeptblätter mit breiten Figuren** (Schild, Mantel, Schirm über die halbe Bildbreite) schneidet `tools/figur.py sprite` falsch zu: Die Bodenlinien-Erkennung hält den Oberkörper für eine Linie. Vorher mit `tools/grafik_w3/magenta_frei.py` freistellen und seitlich polstern.
+- **Endesga-Zwang macht dunkelgraue Hosen grün.** Für Welt-3-Figuren `--palette keine`; die Farben bleiben nah am Konzept.
+- **Durchscheinendes auf Magenta** (Poncho, Tropfen, Dampf) hat einen Rosastich; vor dem Umrechnen entfärben.
+- **Posen und Stand gleich umrechnen.** Das Stand-Sprite entsteht mit Linienverstärkung 0,4; `bew.py` braucht dann `--linien 0.4 --dick 0`, sonst zerfallen Innenlinien in Striche (mit `--dick=-1` werden sie zu dick).
+- **Max-Posenbögen nicht mit dem alten Max-Konzept (`concepts/w0_concept_max.png`) bestellen**: dunkle Haare, anderer Strich. Besser das saubere Welt-2-Blatt `3d\max\bewegungen\_kopf_kratzen_bogen_sauber.png` anhängen und „never black hair“ dazuschreiben.
+- **Gemini malt bei kleinen Figuren gern mehr Posen als bestellt** (sechs statt vier, Zwischenpose doppelt). Mit `--posen 6 --nehmen 1,3,4,6` die richtigen auswählen statt neu zu bestellen.
+- **Läufe brauchen keine neuen Meshy-Credits**: Max' Gang-Winkel (`gang2_arme.json`) passten für Morphäus und Deckert besser als `walking_2_inplace` (dort schwingt das hintere Bein weit, das vordere kaum nach vorn).
+- **Blender im Hintergrundmodus**: beim Umhängen an Gelenk-Empties vorher `view_layer.update()`, sonst geht die Skalierung verloren. Workbench mit flachem Licht und ohne Kantenglättung gibt saubere Farbflächen zum Pixelieren.
+- **Größenprüfung**: Rumpfbreite taugt nicht, wenn Arme vor dem Körper sind. Kopf- und Beinbreite sind die besseren Messstellen (`tools/grafik_w3/groesse_pruefen.py`).

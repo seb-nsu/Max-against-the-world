@@ -1,0 +1,26 @@
+morphaeus|schild_zeigen|W3-P08_morphaeus.png|3|1|R*3,1*16,R*4|120|
+morphaeus|brille_hochschieben|W3-P08_morphaeus.png|3|2|R*3,1*14,R*4|120|
+morphaeus|haende_falten|W3-P08_morphaeus.png|3|3|R*3,1*24,R*4|120|
+morphaeus|schulterzucken|W3-P08_zusatz_schulterzucken.png|1|1|R*3,1*12,R*4|120|
+morphaeus|schild_umdrehen|W3-P09_morphaeus2.png|4|1|R*3,1*14,R*4|120|
+morphaeus|leere_hand|W3-P09_morphaeus2.png|4|2|R*3,1*16,R*4|120|
+morphaeus|kekse_reichen|W3-P09_morphaeus2.png|4|3|R*3,1*16,R*4|120|
+morphaeus|fangen|W3-P09_morphaeus2.png|4|4|R*2,1*14,R*3|120|
+deckert|reden|W3-P16_deckert.png|4|1|R*3,1*16,R*4|120|
+deckert|notieren|W3-P16_deckert.png|4|1,2,3|R*2,1*6,2*18,3*6,R*3|120|
+deckert|stempeln|W3-P16_deckert.png|4|4|R*3,1*10,R*4|120|
+herr_vier|vier_finger|W3-P17_herr_vier.png|4|1|R*3,1*16,R*4|120|
+herr_vier|haende_zeigen|W3-P17_herr_vier.png|4|2|R*3,1*16,R*4|120|
+herr_vier|kochen_strahlend|W3-P17_herr_vier.png|4|3|R*3,1*24,R*4|120|
+herr_vier|schale_hinstellen|W3-P17_herr_vier.png|4|4|R*3,1*12,R*4|120|
+herr_vier|glueckskeks|W3-P18_herr_vier2.png|4|1|R*3,1*14,R*4|120|
+herr_vier|zettel_lesen|W3-P18_herr_vier2.png|4|2|R*3,1*20,R*4|120|
+herr_vier|kochen_weinend|W3-P18_herr_vier2.png|4|3|R*3,1*24,R*4|120|
+herr_vier|karte_reichen|W3-P18_herr_vier2.png|4|4|R*3,1*16,R*4|120|
+strassenmusiker|spielen|W3-P23_strassenmusiker.png|3||R*2,1*2,3*2,1*2,2*3|150|S|--hist 0.7 --strich 60
+weinender_mann|weinen|W3-P24_weinender_mann.png|2||R*2,1*3,R,1*3,2*3|160|S
+frau_regenschirm|schimpfen|W3-P25_frau_regenschirm.png|2||R*2,1*3,2*2,1*3,R*2|140|S|--anker rumpf
+max|regen_wischen|W3-P01_max_unterstadt_b.png|6|1|R*3,1*12,R*4|120||--hist 0.7 --haut 5-35:e8b796 --strich 60 --linien 0
+max|handy|W3-P01_max_unterstadt_b.png|6|3|R*3,1*20,R*4|120||--hist 0.7 --haut 5-35:e8b796 --strich 60 --linien 0
+max|stempel_ansehen|W3-P01_max_unterstadt_b.png|6|4|R*3,1*16,R*4|120||--hist 0.7 --haut 5-35:e8b796 --strich 60 --linien 0
+max|hexenschuss|W3-P01_max_unterstadt_b.png|6|6|R*3,1*20,R*4|120||--hist 0.7 --haut 5-35:e8b796 --strich 60 --linien 0
