@@ -353,14 +353,36 @@ def buero():
     box(None, 8.85, Y0 - 0.4, 0.4, 0.3, 0.35, z=0.79, col=MITTEL)
     box("ONE water cooler (room for a cup on top)", 9.85, Y0 - 0.4, 0.35, 0.35, 0.95, col=HELL)
     zyl(None, 9.85, Y0 - 0.22, 0.15, 0.4, z=0.95, col=GLAS)
-    for i in range(8):
-        box("staircase along the wall, ending in the ceiling" if i == 7 else None,
-            10.6 + i * 0.17, Y0 - 1.0, 0.17, 1.0, 0.35 * (i + 1), col=(0.82, 0.82, 0.82, 1))
+    treppe(10.2, Y0 - 1.05, 2.8)
     notiz("walk area: front lobby", 6.0, 0.6, 0.05)
     figur("Agent Schmidt (at the far end)", 6.0, 14.0, 1.85)
     for x, y in ((5.2, 4.5), (6.8, 6.0), (5.6, 8.5), (6.5, 11.0), (4.8, 1.8), (7.4, 2.2)):
         figur("clone", x, y, 1.85)
     max_massstab()
+
+
+def treppe(x0, y, hoehe, stufen=14, auftritt=0.13, breite=0.95):
+    """Offene Treppe an der Rückwand: einzelne Stufen (Tritt und Setzstufe), Wange und Handlauf
+    vorn, nach rechts ansteigend; die oberste Stufe stößt gegen die Decke (Gag: endet in der Decke)."""
+    steig = hoehe / stufen
+    stufe = (0.85, 0.85, 0.85, 1)
+    for i in range(stufen):
+        box("staircase: open steps with railing, the top step hits the ceiling" if i == stufen - 1 else None,
+            x0 + i * auftritt, y, auftritt, breite, 0.04, z=(i + 1) * steig - 0.04, col=stufe)
+        box(None, x0 + i * auftritt - auftritt / 2 + 0.01, y, 0.02, breite, steig, z=i * steig, col=MITTEL)
+    lang = math.hypot(stufen * auftritt, hoehe)
+    winkel = math.atan2(hoehe, stufen * auftritt)
+    for dz, dicke, kuerzer in ((-0.12, 0.18, 0.0), (0.9, 0.04, 1.4)):
+        mx = x0 + stufen * auftritt / 2 - auftritt / 2 - kuerzer / 2 * math.cos(winkel)
+        mz = hoehe / 2 + dz - kuerzer / 2 * math.sin(winkel)
+        bpy.ops.mesh.primitive_cube_add(size=1, location=(X(mx), y - 0.02, mz))
+        o = bpy.context.object
+        o.scale = (lang - kuerzer, 0.05, dicke)
+        farbe = DUNKEL
+        o.rotation_euler[1] = -winkel
+        o.color = farbe
+    for i in range(0, stufen - 4, 4):
+        box(None, x0 + i * auftritt, y - 0.02, 0.03, 0.03, 0.9, z=(i + 1) * steig, col=DUNKEL)
 
 
 def testkammer_basis():
