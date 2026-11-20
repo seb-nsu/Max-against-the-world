@@ -7936,31 +7936,31 @@
    "id": "kochbuch",
    "name_key": "UI_OBJ_KOCHBUCH",
    "raum": "kueche_orakel",
-   "bild": "res://grafik/platzhalter/nah_kochbuch.png"
+   "bild": "res://grafik/nahansichten/kochbuch.png"
   },
   {
    "id": "kritzelei_kammer_2",
    "name_key": "UI_OBJ_KRITZELEI_KAMMER_2",
    "raum": "testkammer_2",
-   "bild": "res://grafik/platzhalter/nah_kritzelei_kammer_2.png"
+   "bild": "res://grafik/nahansichten/kritzelei_kammer_2.png"
   },
   {
    "id": "telefonbuchseite",
    "name_key": "UI_OBJ_TELEFONBUCHSEITE",
    "raum": null,
-   "bild": "res://grafik/platzhalter/nah_telefonbuchseite.png"
+   "bild": "res://grafik/nahansichten/telefonbuchseite.png"
   },
   {
    "id": "schmidts_akte",
    "name_key": "UI_OBJ_SCHMIDTS_AKTE",
    "raum": null,
-   "bild": "res://grafik/platzhalter/nah_schmidts_akte.png"
+   "bild": "res://grafik/nahansichten/schmidts_akte.png"
   },
   {
    "id": "morse_tabelle",
    "name_key": "UI_OBJ_MORSE_TABELLE",
    "raum": null,
-   "bild": "res://grafik/platzhalter/nah_morse_tabelle.png"
+   "bild": "res://grafik/nahansichten/morse_tabelle.png"
   }
  ],
  "dialoge": [
