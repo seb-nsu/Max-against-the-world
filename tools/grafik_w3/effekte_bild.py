@@ -64,15 +64,14 @@ for f_, (dy, flamme) in enumerate([(0, 1.0), (1, 0.7), (1, 0.4), (0, 0.8), (-1, 
 speichern("W3-B16_fliegendes_auto", bilder, 100)
 
 # Ratte: drei Posen, letzte Bild leer
-posen = figur.zyklus(str(V / "W3-B22_ratte.png"), 12, palette="keine", konturfarbe="262b44", farben=10, anzahl=3)
+posen = figur.zyklus(str(V / "W3-B22_ratte.png"), 18, palette="keine", konturfarbe="262b44", farben=10, anzahl=3)
 leer = np.zeros_like(posen[0])
 speichern("W3-B22_ratte", [posen[0], posen[1], posen[0], posen[2], posen[1], leer], 90, schleife=False)
 
 # Vogelschwarm: fünf gleiche Vögel in V-Formation, alle im gleichen Takt
-voegel = figur.zyklus(str(V / "W3-B26_vogel.png"), 8, palette="keine", konturfarbe="262b44", farben=6, anzahl=3)
-H, W = 24, 64
-lage = [(4, 2), (16, 7), (28, 12), (16, 17) if False else (40, 7), (52, 2)]
-lage = [(2, 14), (14, 9), (26, 4), (38, 9), (50, 14)]
+voegel = figur.zyklus(str(V / "W3-B26_vogel.png"), 13, palette="keine", konturfarbe="262b44", farben=6, anzahl=3)
+H, W = 38, 104
+lage = [(2, 22), (22, 13), (42, 4), (62, 13), (82, 22)]
 bilder = []
 for i in (0, 1, 2, 2, 1, 0):
     f = np.zeros((H, W, 4), np.uint8); v = voegel[i]
