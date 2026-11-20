@@ -1,0 +1,473 @@
+{
+  "bauplan_laufbereich": [
+    [
+      8.0,
+      300.0
+    ],
+    [
+      1180.0,
+      296.0
+    ],
+    [
+      1180.0,
+      356.0
+    ],
+    [
+      8.0,
+      356.0
+    ]
+  ],
+  "breite": 640,
+  "figuren": [
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "idle",
+        "talk"
+      ],
+      "baseline": 0,
+      "name": "Pastillenautomat",
+      "poly": [
+        [
+          637,
+          134
+        ],
+        [
+          653,
+          134
+        ],
+        [
+          653,
+          175
+        ],
+        [
+          637,
+          175
+        ]
+      ],
+      "pos": [
+        645.0,
+        175.0
+      ],
+      "rect": [
+        625,
+        121,
+        665,
+        175
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.680000007152557,
+        0.680000007152557
+      ],
+      "variante": "",
+      "walk_speed": 120.0,
+      "z": 0
+    },
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "aufheben",
+        "barfuss",
+        "benutzen",
+        "bohne",
+        "code_sicht",
+        "diskus",
+        "fallen",
+        "gaehnen",
+        "gedankentrick",
+        "gehen_hinten",
+        "gehen_vorn",
+        "handy",
+        "heisser_sand",
+        "hexenschuss",
+        "hexenschuss_gehen",
+        "hinsetzen",
+        "hochhalten",
+        "idle",
+        "kapsel_aufstehen",
+        "kapsel_aussteigen",
+        "kapsel_einsteigen",
+        "kapsel_hinlegen",
+        "katapult",
+        "kochloeffel",
+        "kopf_kratzen",
+        "melken",
+        "nudeln",
+        "pastille",
+        "portalgeraet",
+        "regen_wischen",
+        "ruecken_halten",
+        "schlucken",
+        "schulterzucken",
+        "speer",
+        "stempel_ansehen",
+        "talk",
+        "talk_hand",
+        "tasche",
+        "tippen",
+        "treppe_walk",
+        "vom_boden_aufstehen",
+        "vom_sofa_aufstehen",
+        "wackeln",
+        "walk",
+        "walk_alt",
+        "walk_d",
+        "walk_l",
+        "walk_r",
+        "walk_u",
+        "wenden",
+        "zeigen",
+        "zeitlupe"
+      ],
+      "baseline": 0,
+      "name": "Max",
+      "poly": [
+        [
+          623,
+          184
+        ],
+        [
+          657,
+          184
+        ],
+        [
+          657,
+          322
+        ],
+        [
+          623,
+          322
+        ]
+      ],
+      "pos": [
+        640.0,
+        322.0
+      ],
+      "rect": [
+        538,
+        181,
+        742,
+        322
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.73199999332428,
+        0.73199999332428
+      ],
+      "variante": "",
+      "walk_speed": 150.0,
+      "z": 0
+    },
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "aufstehen",
+        "aufwachen",
+        "fauchen",
+        "gehen_hinten",
+        "gehen_vorn",
+        "haare",
+        "hebel",
+        "hinlegen",
+        "idle",
+        "kabel",
+        "kriechen",
+        "minka_umgarnen",
+        "morse",
+        "ohrfeige",
+        "putzen",
+        "schieben",
+        "schlafen",
+        "schnuppern",
+        "schwanz_zucken",
+        "springen",
+        "stehen",
+        "talk",
+        "talk_alt",
+        "tasse",
+        "tragen",
+        "vom_schrank_fallen",
+        "walk",
+        "walk_d",
+        "walk_l",
+        "walk_r",
+        "walk_u"
+      ],
+      "baseline": 0,
+      "name": "Pixel",
+      "poly": [
+        [
+          565,
+          293
+        ],
+        [
+          625,
+          293
+        ],
+        [
+          625,
+          322
+        ],
+        [
+          565,
+          322
+        ]
+      ],
+      "pos": [
+        595.0,
+        322.0
+      ],
+      "rect": [
+        549,
+        247,
+        641,
+        322
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.73199999332428,
+        0.73199999332428
+      ],
+      "variante": "",
+      "walk_speed": 160.0,
+      "z": 0
+    }
+  ],
+  "hotspots": [
+    {
+      "baseline": 146,
+      "klickbar": true,
+      "name": "Automat",
+      "poly": [
+        [
+          545,
+          0
+        ],
+        [
+          745,
+          0
+        ],
+        [
+          745,
+          292
+        ],
+        [
+          545,
+          292
+        ]
+      ],
+      "pos": [
+        645.0,
+        146.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_AUTOMAT",
+      "walk_to": [
+        0.0,
+        170.0
+      ]
+    },
+    {
+      "baseline": 93,
+      "klickbar": true,
+      "name": "Kisten",
+      "poly": [
+        [
+          212,
+          110
+        ],
+        [
+          412,
+          110
+        ],
+        [
+          412,
+          296
+        ],
+        [
+          212,
+          296
+        ]
+      ],
+      "pos": [
+        312.0,
+        203.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_KISTEN",
+      "walk_to": [
+        -2.0,
+        109.0
+      ]
+    },
+    {
+      "baseline": 85,
+      "klickbar": true,
+      "name": "TropfendesRohr",
+      "poly": [
+        [
+          458,
+          0
+        ],
+        [
+          498,
+          0
+        ],
+        [
+          498,
+          170
+        ],
+        [
+          458,
+          170
+        ]
+      ],
+      "pos": [
+        478.0,
+        85.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_TROPFENDES_ROHR",
+      "walk_to": [
+        0.0,
+        223.0
+      ]
+    },
+    {
+      "baseline": 37,
+      "klickbar": true,
+      "name": "Wandlampe",
+      "poly": [
+        [
+          900,
+          38
+        ],
+        [
+          955,
+          38
+        ],
+        [
+          955,
+          113
+        ],
+        [
+          900,
+          113
+        ]
+      ],
+      "pos": [
+        927.5,
+        75.5
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_WANDLAMPE",
+      "walk_to": [
+        -2.5,
+        232.5
+      ]
+    },
+    {
+      "baseline": 143,
+      "klickbar": true,
+      "name": "AusgangUnterstadtStrasse",
+      "poly": [
+        [
+          60,
+          10
+        ],
+        [
+          200,
+          10
+        ],
+        [
+          200,
+          296
+        ],
+        [
+          60,
+          296
+        ]
+      ],
+      "pos": [
+        130.0,
+        153.0
+      ],
+      "sichtbar": true,
+      "text": "UI_RAUM_UNTERSTADT_STRASSE",
+      "walk_to": [
+        -10.0,
+        169.0
+      ]
+    }
+  ],
+  "kamera_max": [
+    320.0,
+    180.0
+  ],
+  "laufbereiche": [
+    {
+      "name": "Boden",
+      "polys": [
+        [
+          [
+            8,
+            300
+          ],
+          [
+            1180,
+            296
+          ],
+          [
+            1180,
+            356
+          ],
+          [
+            8,
+            356
+          ]
+        ]
+      ]
+    }
+  ],
+  "marker": {
+    "Start": [
+      640.0,
+      322.0
+    ],
+    "VonUnterstadtStrasse": [
+      140.0,
+      322.0
+    ]
+  },
+  "modus": "ende",
+  "props": [
+    {
+      "baseline": -180,
+      "klickbar": false,
+      "name": "Background",
+      "poly": [],
+      "pos": [
+        640.0,
+        0.0
+      ],
+      "rect": [
+        0,
+        0,
+        1280,
+        360
+      ],
+      "sichtbar": true,
+      "text": "UI_RAUM_APOTHEKENGASSE",
+      "walk_to": [
+        0.0,
+        180.0
+      ],
+      "z": -1
+    }
+  ],
+  "raum": "apothekengasse",
+  "skala": 0.8,
+  "tiefe": 0.85,
+  "welt": "welt-3"
+}

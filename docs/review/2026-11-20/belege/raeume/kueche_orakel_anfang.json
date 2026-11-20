@@ -1,0 +1,841 @@
+{
+  "bauplan_laufbereich": [
+    [
+      150.0,
+      286.0
+    ],
+    [
+      228.0,
+      286.0
+    ],
+    [
+      228.0,
+      348.0
+    ],
+    [
+      452.0,
+      348.0
+    ],
+    [
+      455.0,
+      286.0
+    ],
+    [
+      555.0,
+      286.0
+    ],
+    [
+      608.0,
+      338.0
+    ],
+    [
+      626.0,
+      356.0
+    ],
+    [
+      40.0,
+      356.0
+    ],
+    [
+      82.0,
+      330.0
+    ]
+  ],
+  "breite": 640,
+  "figuren": [
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "haende_falten",
+        "idle",
+        "kehren",
+        "ofen",
+        "sparschwein",
+        "stirn",
+        "talk",
+        "talk_alt",
+        "zum_regal"
+      ],
+      "baseline": 0,
+      "name": "OrakelOma",
+      "poly": [
+        [
+          170,
+          175
+        ],
+        [
+          206,
+          175
+        ],
+        [
+          206,
+          318
+        ],
+        [
+          170,
+          318
+        ]
+      ],
+      "pos": [
+        188.0,
+        318.0
+      ],
+      "rect": [
+        134,
+        163,
+        242,
+        318
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.756571412086487,
+        0.756571412086487
+      ],
+      "variante": "",
+      "walk_speed": 120.0,
+      "z": 0
+    },
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "idle",
+        "talk"
+      ],
+      "baseline": 0,
+      "name": "Radio",
+      "poly": [
+        [
+          526,
+          65
+        ],
+        [
+          544,
+          65
+        ],
+        [
+          544,
+          108
+        ],
+        [
+          526,
+          108
+        ]
+      ],
+      "pos": [
+        535.0,
+        108.0
+      ],
+      "rect": [
+        523,
+        89,
+        547,
+        108
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.720000028610229,
+        0.720000028610229
+      ],
+      "variante": "",
+      "walk_speed": 120.0,
+      "z": 0
+    },
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "aufheben",
+        "barfuss",
+        "benutzen",
+        "bohne",
+        "code_sicht",
+        "diskus",
+        "fallen",
+        "gaehnen",
+        "gedankentrick",
+        "gehen_hinten",
+        "gehen_vorn",
+        "handy",
+        "heisser_sand",
+        "hexenschuss",
+        "hexenschuss_gehen",
+        "hinsetzen",
+        "hochhalten",
+        "idle",
+        "kapsel_aufstehen",
+        "kapsel_aussteigen",
+        "kapsel_einsteigen",
+        "kapsel_hinlegen",
+        "katapult",
+        "kochloeffel",
+        "kopf_kratzen",
+        "melken",
+        "nudeln",
+        "pastille",
+        "portalgeraet",
+        "regen_wischen",
+        "ruecken_halten",
+        "schlucken",
+        "schulterzucken",
+        "speer",
+        "stempel_ansehen",
+        "talk",
+        "talk_hand",
+        "tasche",
+        "tippen",
+        "treppe_walk",
+        "vom_boden_aufstehen",
+        "vom_sofa_aufstehen",
+        "wackeln",
+        "walk",
+        "walk_alt",
+        "walk_d",
+        "walk_l",
+        "walk_r",
+        "walk_u",
+        "wenden",
+        "zeigen",
+        "zeitlupe"
+      ],
+      "baseline": 0,
+      "name": "Max",
+      "poly": [
+        [
+          311,
+          202
+        ],
+        [
+          349,
+          202
+        ],
+        [
+          349,
+          352
+        ],
+        [
+          311,
+          352
+        ]
+      ],
+      "pos": [
+        330.0,
+        352.0
+      ],
+      "rect": [
+        219,
+        198,
+        441,
+        352
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.795428574085236,
+        0.795428574085236
+      ],
+      "variante": "",
+      "walk_speed": 150.0,
+      "z": 0
+    },
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "aufstehen",
+        "aufwachen",
+        "fauchen",
+        "gehen_hinten",
+        "gehen_vorn",
+        "haare",
+        "hebel",
+        "hinlegen",
+        "idle",
+        "kabel",
+        "kriechen",
+        "minka_umgarnen",
+        "morse",
+        "ohrfeige",
+        "putzen",
+        "schieben",
+        "schlafen",
+        "schnuppern",
+        "schwanz_zucken",
+        "springen",
+        "stehen",
+        "talk",
+        "talk_alt",
+        "tasse",
+        "tragen",
+        "vom_schrank_fallen",
+        "walk",
+        "walk_d",
+        "walk_l",
+        "walk_r",
+        "walk_u"
+      ],
+      "baseline": 0,
+      "name": "Pixel",
+      "poly": [
+        [
+          253,
+          320
+        ],
+        [
+          317,
+          320
+        ],
+        [
+          317,
+          352
+        ],
+        [
+          253,
+          352
+        ]
+      ],
+      "pos": [
+        285.0,
+        352.0
+      ],
+      "rect": [
+        235,
+        270,
+        335,
+        352
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.795428574085236,
+        0.795428574085236
+      ],
+      "variante": "",
+      "walk_speed": 160.0,
+      "z": 0
+    }
+  ],
+  "hotspots": [
+    {
+      "baseline": 18,
+      "klickbar": true,
+      "name": "Sparschwein",
+      "poly": [
+        [
+          462,
+          74
+        ],
+        [
+          508,
+          74
+        ],
+        [
+          508,
+          110
+        ],
+        [
+          462,
+          110
+        ]
+      ],
+      "pos": [
+        485.0,
+        92.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_SPARSCHWEIN",
+      "walk_to": [
+        15.0,
+        208.0
+      ]
+    },
+    {
+      "baseline": 85,
+      "klickbar": true,
+      "name": "Ofen",
+      "poly": [
+        [
+          25,
+          155
+        ],
+        [
+          155,
+          155
+        ],
+        [
+          155,
+          325
+        ],
+        [
+          25,
+          325
+        ]
+      ],
+      "pos": [
+        90.0,
+        240.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_OFEN",
+      "walk_to": [
+        90.0,
+        82.0
+      ]
+    },
+    {
+      "baseline": 18,
+      "klickbar": true,
+      "name": "Kochbuch",
+      "poly": [
+        [
+          338,
+          210
+        ],
+        [
+          424,
+          210
+        ],
+        [
+          424,
+          246
+        ],
+        [
+          338,
+          246
+        ]
+      ],
+      "pos": [
+        381.0,
+        228.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_KOCHBUCH",
+      "walk_to": [
+        -1.0,
+        124.0
+      ]
+    },
+    {
+      "baseline": 6,
+      "klickbar": true,
+      "name": "Gabel",
+      "poly": [
+        [
+          252,
+          230
+        ],
+        [
+          296,
+          230
+        ],
+        [
+          296,
+          242
+        ],
+        [
+          252,
+          242
+        ]
+      ],
+      "pos": [
+        274.0,
+        236.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_GABEL",
+      "walk_to": [
+        -4.0,
+        116.0
+      ]
+    },
+    {
+      "baseline": 57,
+      "klickbar": true,
+      "name": "Kuckucksuhr",
+      "poly": [
+        [
+          395,
+          60
+        ],
+        [
+          440,
+          60
+        ],
+        [
+          440,
+          175
+        ],
+        [
+          395,
+          175
+        ]
+      ],
+      "pos": [
+        417.5,
+        117.5
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_KUCKUCKSUHR",
+      "walk_to": [
+        52.5,
+        182.5
+      ]
+    },
+    {
+      "baseline": 16,
+      "klickbar": true,
+      "name": "Eieruhr",
+      "poly": [
+        [
+          530,
+          160
+        ],
+        [
+          562,
+          160
+        ],
+        [
+          562,
+          192
+        ],
+        [
+          530,
+          192
+        ]
+      ],
+      "pos": [
+        546.0,
+        176.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_EIERUHR",
+      "walk_to": [
+        -6.0,
+        124.0
+      ]
+    },
+    {
+      "baseline": 70,
+      "klickbar": true,
+      "name": "TischMitTellerUndTeekanne",
+      "poly": [
+        [
+          230,
+          200
+        ],
+        [
+          435,
+          200
+        ],
+        [
+          435,
+          340
+        ],
+        [
+          230,
+          340
+        ]
+      ],
+      "pos": [
+        332.5,
+        270.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_TISCH_MIT_TELLER_UND_TEEKANNE",
+      "walk_to": [
+        -2.5,
+        82.0
+      ]
+    },
+    {
+      "baseline": 21,
+      "klickbar": true,
+      "name": "GlaeserAufDemRegal",
+      "poly": [
+        [
+          470,
+          114
+        ],
+        [
+          550,
+          114
+        ],
+        [
+          550,
+          156
+        ],
+        [
+          470,
+          156
+        ]
+      ],
+      "pos": [
+        510.0,
+        135.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_GLAESER_AUF_DEM_REGAL",
+      "walk_to": [
+        0.0,
+        165.0
+      ]
+    },
+    {
+      "baseline": 70,
+      "klickbar": true,
+      "name": "GardinenUndFenster",
+      "poly": [
+        [
+          258,
+          52
+        ],
+        [
+          383,
+          52
+        ],
+        [
+          383,
+          192
+        ],
+        [
+          258,
+          192
+        ]
+      ],
+      "pos": [
+        320.5,
+        122.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_GARDINEN_UND_FENSTER",
+      "walk_to": [
+        -0.5,
+        230.0
+      ]
+    },
+    {
+      "baseline": 50,
+      "klickbar": true,
+      "name": "Tapete",
+      "poly": [
+        [
+          80,
+          40
+        ],
+        [
+          250,
+          40
+        ],
+        [
+          250,
+          140
+        ],
+        [
+          80,
+          140
+        ]
+      ],
+      "pos": [
+        165.0,
+        90.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_TAPETE",
+      "walk_to": [
+        25.0,
+        228.0
+      ]
+    },
+    {
+      "baseline": 102,
+      "klickbar": true,
+      "name": "Kehrblech",
+      "poly": [
+        [
+          5,
+          140
+        ],
+        [
+          77,
+          140
+        ],
+        [
+          77,
+          345
+        ],
+        [
+          5,
+          345
+        ]
+      ],
+      "pos": [
+        41.0,
+        242.5
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_KEHRBLECH",
+      "walk_to": [
+        54.0,
+        99.5
+      ]
+    },
+    {
+      "baseline": 15,
+      "klickbar": true,
+      "name": "Scherben",
+      "poly": [
+        [
+          470,
+          286
+        ],
+        [
+          550,
+          286
+        ],
+        [
+          550,
+          316
+        ],
+        [
+          470,
+          316
+        ]
+      ],
+      "pos": [
+        510.0,
+        301.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_SCHERBEN",
+      "walk_to": [
+        -10.0,
+        19.0
+      ]
+    },
+    {
+      "baseline": 145,
+      "klickbar": true,
+      "name": "AusgangStadtstrasse",
+      "poly": [
+        [
+          578,
+          50
+        ],
+        [
+          636,
+          50
+        ],
+        [
+          636,
+          340
+        ],
+        [
+          578,
+          340
+        ]
+      ],
+      "pos": [
+        607.0,
+        195.0
+      ],
+      "sichtbar": true,
+      "text": "UI_RAUM_STADTSTRASSE",
+      "walk_to": [
+        -42.0,
+        137.0
+      ]
+    }
+  ],
+  "kamera_max": [
+    320.0,
+    180.0
+  ],
+  "laufbereiche": [
+    {
+      "name": "Boden",
+      "polys": [
+        [
+          [
+            150,
+            286
+          ],
+          [
+            228,
+            286
+          ],
+          [
+            228,
+            348
+          ],
+          [
+            452,
+            348
+          ],
+          [
+            455,
+            286
+          ],
+          [
+            555,
+            286
+          ],
+          [
+            608,
+            338
+          ],
+          [
+            626,
+            356
+          ],
+          [
+            40,
+            356
+          ],
+          [
+            82,
+            330
+          ]
+        ]
+      ]
+    }
+  ],
+  "marker": {
+    "Start": [
+      330.0,
+      352.0
+    ],
+    "VonStadtstrasse": [
+      560.0,
+      336.0
+    ],
+    "VonZelle": [
+      500.0,
+      320.0
+    ]
+  },
+  "modus": "anfang",
+  "props": [
+    {
+      "baseline": -180,
+      "klickbar": false,
+      "name": "Background",
+      "poly": [],
+      "pos": [
+        320.0,
+        0.0
+      ],
+      "rect": [
+        0,
+        0,
+        640,
+        360
+      ],
+      "sichtbar": true,
+      "text": "UI_RAUM_KUECHE_ORAKEL",
+      "walk_to": [
+        0.0,
+        180.0
+      ],
+      "z": -1
+    }
+  ],
+  "raum": "kueche_orakel",
+  "skala": 0.8,
+  "tiefe": 0.9,
+  "welt": "welt-3"
+}

@@ -1,0 +1,609 @@
+{
+  "bauplan_laufbereich": [
+    [
+      112.0,
+      272.0
+    ],
+    [
+      525.0,
+      262.0
+    ],
+    [
+      598.0,
+      300.0
+    ],
+    [
+      632.0,
+      356.0
+    ],
+    [
+      56.0,
+      356.0
+    ],
+    [
+      100.0,
+      300.0
+    ]
+  ],
+  "breite": 640,
+  "figuren": [
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "aufheben",
+        "barfuss",
+        "benutzen",
+        "bohne",
+        "code_sicht",
+        "diskus",
+        "fallen",
+        "gaehnen",
+        "gedankentrick",
+        "gehen_hinten",
+        "gehen_vorn",
+        "handy",
+        "heisser_sand",
+        "hexenschuss",
+        "hexenschuss_gehen",
+        "hinsetzen",
+        "hochhalten",
+        "idle",
+        "kapsel_aufstehen",
+        "kapsel_aussteigen",
+        "kapsel_einsteigen",
+        "kapsel_hinlegen",
+        "katapult",
+        "kochloeffel",
+        "kopf_kratzen",
+        "melken",
+        "nudeln",
+        "pastille",
+        "portalgeraet",
+        "regen_wischen",
+        "ruecken_halten",
+        "schlucken",
+        "schulterzucken",
+        "speer",
+        "stempel_ansehen",
+        "talk",
+        "talk_hand",
+        "tasche",
+        "tippen",
+        "treppe_walk",
+        "vom_boden_aufstehen",
+        "vom_sofa_aufstehen",
+        "wackeln",
+        "walk",
+        "walk_alt",
+        "walk_d",
+        "walk_l",
+        "walk_r",
+        "walk_u",
+        "wenden",
+        "zeigen",
+        "zeitlupe"
+      ],
+      "baseline": 0,
+      "name": "Max",
+      "poly": [
+        [
+          303,
+          171
+        ],
+        [
+          337,
+          171
+        ],
+        [
+          337,
+          312
+        ],
+        [
+          303,
+          312
+        ]
+      ],
+      "pos": [
+        320.0,
+        312.0
+      ],
+      "rect": [
+        216,
+        168,
+        424,
+        312
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.743829786777496,
+        0.743829786777496
+      ],
+      "variante": "",
+      "walk_speed": 150.0,
+      "z": 0
+    },
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "aufstehen",
+        "aufwachen",
+        "fauchen",
+        "gehen_hinten",
+        "gehen_vorn",
+        "haare",
+        "hebel",
+        "hinlegen",
+        "idle",
+        "kabel",
+        "kriechen",
+        "minka_umgarnen",
+        "morse",
+        "ohrfeige",
+        "putzen",
+        "schieben",
+        "schlafen",
+        "schnuppern",
+        "schwanz_zucken",
+        "springen",
+        "stehen",
+        "talk",
+        "talk_alt",
+        "tasse",
+        "tragen",
+        "vom_schrank_fallen",
+        "walk",
+        "walk_d",
+        "walk_l",
+        "walk_r",
+        "walk_u"
+      ],
+      "baseline": 0,
+      "name": "Pixel",
+      "poly": [
+        [
+          335,
+          282
+        ],
+        [
+          395,
+          282
+        ],
+        [
+          395,
+          312
+        ],
+        [
+          335,
+          312
+        ]
+      ],
+      "pos": [
+        365.0,
+        312.0
+      ],
+      "rect": [
+        318,
+        235,
+        412,
+        312
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.743829786777496,
+        0.743829786777496
+      ],
+      "variante": "",
+      "walk_speed": 160.0,
+      "z": 0
+    }
+  ],
+  "hotspots": [
+    {
+      "baseline": 70,
+      "klickbar": true,
+      "name": "Panzertuer",
+      "poly": [
+        [
+          248,
+          108
+        ],
+        [
+          400,
+          108
+        ],
+        [
+          400,
+          248
+        ],
+        [
+          248,
+          248
+        ]
+      ],
+      "pos": [
+        324.0,
+        178.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_PANZERTUER",
+      "walk_to": [
+        1.0,
+        112.0
+      ]
+    },
+    {
+      "baseline": 18,
+      "klickbar": true,
+      "name": "Kartenleser",
+      "poly": [
+        [
+          405,
+          165
+        ],
+        [
+          431,
+          165
+        ],
+        [
+          431,
+          201
+        ],
+        [
+          405,
+          201
+        ]
+      ],
+      "pos": [
+        418.0,
+        183.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_KARTENLESER",
+      "walk_to": [
+        -3.0,
+        107.0
+      ]
+    },
+    {
+      "baseline": 55,
+      "klickbar": true,
+      "name": "Datenanschluss",
+      "poly": [
+        [
+          270,
+          125
+        ],
+        [
+          360,
+          125
+        ],
+        [
+          360,
+          235
+        ],
+        [
+          270,
+          235
+        ]
+      ],
+      "pos": [
+        315.0,
+        180.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_DATENANSCHLUSS",
+      "walk_to": [
+        10.0,
+        110.0
+      ]
+    },
+    {
+      "baseline": 33,
+      "klickbar": true,
+      "name": "Wischeimer",
+      "poly": [
+        [
+          38,
+          280
+        ],
+        [
+          113,
+          280
+        ],
+        [
+          113,
+          346
+        ],
+        [
+          38,
+          346
+        ]
+      ],
+      "pos": [
+        75.5,
+        313.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_WISCHEIMER",
+      "walk_to": [
+        54.5,
+        17.0
+      ]
+    },
+    {
+      "baseline": 75,
+      "klickbar": true,
+      "name": "Pinnwand",
+      "poly": [
+        [
+          0,
+          90
+        ],
+        [
+          98,
+          90
+        ],
+        [
+          98,
+          240
+        ],
+        [
+          0,
+          240
+        ]
+      ],
+      "pos": [
+        49.0,
+        165.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_PINNWAND",
+      "walk_to": [
+        61.0,
+        147.0
+      ]
+    },
+    {
+      "baseline": 20,
+      "klickbar": true,
+      "name": "Warnstreifen",
+      "poly": [
+        [
+          180,
+          222
+        ],
+        [
+          480,
+          222
+        ],
+        [
+          480,
+          262
+        ],
+        [
+          180,
+          262
+        ]
+      ],
+      "pos": [
+        330.0,
+        242.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_WARNSTREIFEN",
+      "walk_to": [
+        -30.0,
+        50.0
+      ]
+    },
+    {
+      "baseline": 20,
+      "klickbar": true,
+      "name": "Deckenlampe",
+      "poly": [
+        [
+          305,
+          45
+        ],
+        [
+          345,
+          45
+        ],
+        [
+          345,
+          85
+        ],
+        [
+          305,
+          85
+        ]
+      ],
+      "pos": [
+        325.0,
+        65.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_DECKENLAMPE",
+      "walk_to": [
+        0.0,
+        225.0
+      ]
+    },
+    {
+      "baseline": 100,
+      "klickbar": true,
+      "name": "Gang",
+      "poly": [
+        [
+          500,
+          60
+        ],
+        [
+          592,
+          60
+        ],
+        [
+          592,
+          260
+        ],
+        [
+          500,
+          260
+        ]
+      ],
+      "pos": [
+        546.0,
+        160.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_GANG",
+      "walk_to": [
+        -26.0,
+        125.0
+      ]
+    },
+    {
+      "baseline": 30,
+      "klickbar": true,
+      "name": "PlatzDesHausmeisters",
+      "poly": [
+        [
+          440,
+          200
+        ],
+        [
+          500,
+          200
+        ],
+        [
+          500,
+          260
+        ],
+        [
+          440,
+          260
+        ]
+      ],
+      "pos": [
+        470.0,
+        230.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_PLATZ_DES_HAUSMEISTERS",
+      "walk_to": [
+        -15.0,
+        65.0
+      ]
+    },
+    {
+      "baseline": 89,
+      "klickbar": true,
+      "name": "AusgangUnterstadtStrasse",
+      "poly": [
+        [
+          110,
+          92
+        ],
+        [
+          166,
+          92
+        ],
+        [
+          166,
+          270
+        ],
+        [
+          110,
+          270
+        ]
+      ],
+      "pos": [
+        138.0,
+        181.0
+      ],
+      "sichtbar": true,
+      "text": "UI_RAUM_UNTERSTADT_STRASSE",
+      "walk_to": [
+        2.0,
+        109.0
+      ]
+    }
+  ],
+  "kamera_max": [
+    320.0,
+    180.0
+  ],
+  "laufbereiche": [
+    {
+      "name": "Boden",
+      "polys": [
+        [
+          [
+            112,
+            272
+          ],
+          [
+            525,
+            262
+          ],
+          [
+            598,
+            300
+          ],
+          [
+            632,
+            356
+          ],
+          [
+            56,
+            356
+          ],
+          [
+            100,
+            300
+          ]
+        ]
+      ]
+    }
+  ],
+  "marker": {
+    "Start": [
+      320.0,
+      312.0
+    ],
+    "VonUnterstadtStrasse": [
+      150.0,
+      300.0
+    ]
+  },
+  "modus": "ende",
+  "props": [
+    {
+      "baseline": -180,
+      "klickbar": false,
+      "name": "Background",
+      "poly": [],
+      "pos": [
+        320.0,
+        0.0
+      ],
+      "rect": [
+        0,
+        0,
+        640,
+        360
+      ],
+      "sichtbar": true,
+      "text": "UI_RAUM_LABOREINGANG",
+      "walk_to": [
+        0.0,
+        180.0
+      ],
+      "z": -1
+    }
+  ],
+  "raum": "laboreingang",
+  "skala": 0.8,
+  "tiefe": 0.85,
+  "welt": "welt-3"
+}

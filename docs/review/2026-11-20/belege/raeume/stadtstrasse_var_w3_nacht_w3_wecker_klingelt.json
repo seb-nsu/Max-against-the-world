@@ -1,0 +1,813 @@
+{
+  "bauplan_laufbereich": [
+    [
+      8.0,
+      326.0
+    ],
+    [
+      1088.0,
+      326.0
+    ],
+    [
+      1108.0,
+      304.0
+    ],
+    [
+      1192.0,
+      304.0
+    ],
+    [
+      1210.0,
+      326.0
+    ],
+    [
+      1272.0,
+      326.0
+    ],
+    [
+      1272.0,
+      354.0
+    ],
+    [
+      8.0,
+      354.0
+    ]
+  ],
+  "breite": 1280,
+  "figuren": [
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "akte",
+        "brille_ab",
+        "fliege",
+        "hausschuh",
+        "idle",
+        "kopierer",
+        "stumm",
+        "talk",
+        "talk_alt",
+        "walk"
+      ],
+      "baseline": 0,
+      "name": "Schmidt",
+      "poly": [
+        [
+          1033,
+          193
+        ],
+        [
+          1067,
+          193
+        ],
+        [
+          1067,
+          330
+        ],
+        [
+          1033,
+          330
+        ]
+      ],
+      "pos": [
+        1050.0,
+        330.0
+      ],
+      "rect": [
+        1011,
+        182,
+        1089,
+        330
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.68095999956131,
+        0.68095999956131
+      ],
+      "variante": "",
+      "walk_speed": 120.0,
+      "z": 0
+    },
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "idle",
+        "talk"
+      ],
+      "baseline": 0,
+      "name": "Tuer",
+      "poly": [
+        [
+          1141,
+          267
+        ],
+        [
+          1155,
+          267
+        ],
+        [
+          1155,
+          300
+        ],
+        [
+          1141,
+          300
+        ]
+      ],
+      "pos": [
+        1148.0,
+        300.0
+      ],
+      "rect": [
+        1141,
+        278,
+        1155,
+        300
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.551999986171722,
+        0.551999986171722
+      ],
+      "variante": "",
+      "walk_speed": 120.0,
+      "z": 0
+    },
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "idle",
+        "walk"
+      ],
+      "baseline": 0,
+      "name": "SchwarzeKatze",
+      "poly": [
+        [
+          1289,
+          280
+        ],
+        [
+          1311,
+          280
+        ],
+        [
+          1311,
+          306
+        ],
+        [
+          1289,
+          306
+        ]
+      ],
+      "pos": [
+        1300.0,
+        306.0
+      ],
+      "rect": [
+        1287,
+        280,
+        1313,
+        306
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.561919987201691,
+        0.561919987201691
+      ],
+      "variante": "",
+      "walk_speed": 120.0,
+      "z": 0
+    },
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "aufheben",
+        "barfuss",
+        "benutzen",
+        "bohne",
+        "code_sicht",
+        "diskus",
+        "fallen",
+        "gaehnen",
+        "gedankentrick",
+        "gehen_hinten",
+        "gehen_vorn",
+        "handy",
+        "heisser_sand",
+        "hexenschuss",
+        "hexenschuss_gehen",
+        "hinsetzen",
+        "hochhalten",
+        "idle",
+        "kapsel_aufstehen",
+        "kapsel_aussteigen",
+        "kapsel_einsteigen",
+        "kapsel_hinlegen",
+        "katapult",
+        "kochloeffel",
+        "kopf_kratzen",
+        "melken",
+        "nudeln",
+        "pastille",
+        "portalgeraet",
+        "regen_wischen",
+        "ruecken_halten",
+        "schlucken",
+        "schulterzucken",
+        "speer",
+        "stempel_ansehen",
+        "talk",
+        "talk_hand",
+        "tasche",
+        "tippen",
+        "treppe_walk",
+        "vom_boden_aufstehen",
+        "vom_sofa_aufstehen",
+        "wackeln",
+        "walk",
+        "walk_alt",
+        "walk_d",
+        "walk_l",
+        "walk_r",
+        "walk_u",
+        "wenden",
+        "zeigen",
+        "zeitlupe"
+      ],
+      "baseline": 0,
+      "name": "Max",
+      "poly": [
+        [
+          182,
+          202
+        ],
+        [
+          218,
+          202
+        ],
+        [
+          218,
+          344
+        ],
+        [
+          182,
+          344
+        ]
+      ],
+      "pos": [
+        200.0,
+        344.0
+      ],
+      "rect": [
+        95,
+        199,
+        305,
+        344
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.750400006771088,
+        0.750400006771088
+      ],
+      "variante": "",
+      "walk_speed": 150.0,
+      "z": 0
+    },
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "aufstehen",
+        "aufwachen",
+        "fauchen",
+        "gehen_hinten",
+        "gehen_vorn",
+        "haare",
+        "hebel",
+        "hinlegen",
+        "idle",
+        "kabel",
+        "kriechen",
+        "minka_umgarnen",
+        "morse",
+        "ohrfeige",
+        "putzen",
+        "schieben",
+        "schlafen",
+        "schnuppern",
+        "schwanz_zucken",
+        "springen",
+        "stehen",
+        "talk",
+        "talk_alt",
+        "tasse",
+        "tragen",
+        "vom_schrank_fallen",
+        "walk",
+        "walk_d",
+        "walk_l",
+        "walk_r",
+        "walk_u"
+      ],
+      "baseline": 0,
+      "name": "Pixel",
+      "poly": [
+        [
+          215,
+          314
+        ],
+        [
+          275,
+          314
+        ],
+        [
+          275,
+          344
+        ],
+        [
+          215,
+          344
+        ]
+      ],
+      "pos": [
+        245.0,
+        344.0
+      ],
+      "rect": [
+        198,
+        267,
+        292,
+        344
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.750400006771088,
+        0.750400006771088
+      ],
+      "variante": "",
+      "walk_speed": 160.0,
+      "z": 0
+    }
+  ],
+  "hotspots": [
+    {
+      "baseline": 30,
+      "klickbar": true,
+      "name": "Himmel",
+      "poly": [
+        [
+          290,
+          0
+        ],
+        [
+          980,
+          0
+        ],
+        [
+          980,
+          60
+        ],
+        [
+          290,
+          60
+        ]
+      ],
+      "pos": [
+        635.0,
+        30.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_HIMMEL",
+      "walk_to": [
+        5.0,
+        300.0
+      ]
+    },
+    {
+      "baseline": 75,
+      "klickbar": true,
+      "name": "Baeume",
+      "poly": [
+        [
+          690,
+          145
+        ],
+        [
+          1010,
+          145
+        ],
+        [
+          1010,
+          295
+        ],
+        [
+          690,
+          295
+        ]
+      ],
+      "pos": [
+        850.0,
+        220.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_BAEUME",
+      "walk_to": [
+        0.0,
+        110.0
+      ]
+    },
+    {
+      "baseline": 87,
+      "klickbar": true,
+      "name": "Haeuser",
+      "poly": [
+        [
+          285,
+          62
+        ],
+        [
+          690,
+          62
+        ],
+        [
+          690,
+          237
+        ],
+        [
+          285,
+          237
+        ]
+      ],
+      "pos": [
+        487.5,
+        149.5
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_HAEUSER",
+      "walk_to": [
+        -7.5,
+        180.5
+      ]
+    },
+    {
+      "baseline": 27,
+      "klickbar": true,
+      "name": "Autos",
+      "poly": [
+        [
+          588,
+          244
+        ],
+        [
+          802,
+          244
+        ],
+        [
+          802,
+          298
+        ],
+        [
+          588,
+          298
+        ]
+      ],
+      "pos": [
+        695.0,
+        271.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_AUTOS",
+      "walk_to": [
+        -5.0,
+        59.0
+      ]
+    },
+    {
+      "baseline": 29,
+      "klickbar": true,
+      "name": "Auto",
+      "poly": [
+        [
+          318,
+          242
+        ],
+        [
+          422,
+          242
+        ],
+        [
+          422,
+          300
+        ],
+        [
+          318,
+          300
+        ]
+      ],
+      "pos": [
+        370.0,
+        271.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_AUTO",
+      "walk_to": [
+        0.0,
+        59.0
+      ]
+    },
+    {
+      "baseline": 9,
+      "klickbar": true,
+      "name": "Radiowecker",
+      "poly": [
+        [
+          108,
+          262
+        ],
+        [
+          160,
+          262
+        ],
+        [
+          160,
+          280
+        ],
+        [
+          108,
+          280
+        ]
+      ],
+      "pos": [
+        134.0,
+        271.0
+      ],
+      "sichtbar": false,
+      "text": "UI_OBJ_RADIOWECKER",
+      "walk_to": [
+        16.0,
+        63.0
+      ]
+    },
+    {
+      "baseline": 11,
+      "klickbar": true,
+      "name": "KlingelnderRadiowecker",
+      "poly": [
+        [
+          110,
+          280
+        ],
+        [
+          158,
+          280
+        ],
+        [
+          158,
+          302
+        ],
+        [
+          110,
+          302
+        ]
+      ],
+      "pos": [
+        134.0,
+        291.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_KLINGELNDER_RADIOWECKER",
+      "walk_to": [
+        16.0,
+        43.0
+      ]
+    },
+    {
+      "baseline": 9,
+      "klickbar": true,
+      "name": "Gehweg",
+      "poly": [
+        [
+          400,
+          336
+        ],
+        [
+          880,
+          336
+        ],
+        [
+          880,
+          354
+        ],
+        [
+          400,
+          354
+        ]
+      ],
+      "pos": [
+        640.0,
+        345.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_GEHWEG",
+      "walk_to": [
+        0.0,
+        -1.0
+      ]
+    },
+    {
+      "baseline": 12,
+      "klickbar": true,
+      "name": "Sonne",
+      "poly": [
+        [
+          800,
+          0
+        ],
+        [
+          980,
+          0
+        ],
+        [
+          980,
+          24
+        ],
+        [
+          800,
+          24
+        ]
+      ],
+      "pos": [
+        890.0,
+        12.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_SONNE",
+      "walk_to": [
+        -10.0,
+        318.0
+      ]
+    },
+    {
+      "baseline": 37,
+      "klickbar": true,
+      "name": "AusgangKuecheOrakel",
+      "poly": [
+        [
+          500,
+          205
+        ],
+        [
+          540,
+          205
+        ],
+        [
+          540,
+          280
+        ],
+        [
+          500,
+          280
+        ]
+      ],
+      "pos": [
+        520.0,
+        242.5
+      ],
+      "sichtbar": true,
+      "text": "UI_RAUM_KUECHE_ORAKEL",
+      "walk_to": [
+        0.0,
+        87.5
+      ]
+    },
+    {
+      "baseline": 52,
+      "klickbar": true,
+      "name": "AusgangBuero50",
+      "poly": [
+        [
+          1112,
+          195
+        ],
+        [
+          1185,
+          195
+        ],
+        [
+          1185,
+          300
+        ],
+        [
+          1112,
+          300
+        ]
+      ],
+      "pos": [
+        1148.5,
+        247.5
+      ],
+      "sichtbar": true,
+      "text": "UI_RAUM_BUERO_50",
+      "walk_to": [
+        -0.5,
+        58.5
+      ]
+    }
+  ],
+  "kamera_max": [
+    320.0,
+    180.0
+  ],
+  "laufbereiche": [
+    {
+      "name": "Boden",
+      "polys": [
+        [
+          [
+            8,
+            326
+          ],
+          [
+            1088,
+            326
+          ],
+          [
+            1108,
+            304
+          ],
+          [
+            1192,
+            304
+          ],
+          [
+            1210,
+            326
+          ],
+          [
+            1272,
+            326
+          ],
+          [
+            1272,
+            354
+          ],
+          [
+            8,
+            354
+          ]
+        ]
+      ]
+    }
+  ],
+  "marker": {
+    "Start": [
+      200.0,
+      344.0
+    ],
+    "VonBuero50": [
+      1148.0,
+      312.0
+    ],
+    "VonKuecheOrakel": [
+      520.0,
+      330.0
+    ],
+    "VonWiderstandsbasis": [
+      200.0,
+      344.0
+    ],
+    "VonZelle": [
+      200.0,
+      344.0
+    ]
+  },
+  "modus": "var_w3_nacht_w3_wecker_klingelt",
+  "props": [
+    {
+      "baseline": -180,
+      "klickbar": false,
+      "name": "Background",
+      "poly": [],
+      "pos": [
+        640.0,
+        0.0
+      ],
+      "rect": [
+        0,
+        0,
+        1280,
+        360
+      ],
+      "sichtbar": true,
+      "text": "UI_RAUM_STADTSTRASSE",
+      "walk_to": [
+        0.0,
+        180.0
+      ],
+      "z": -1
+    }
+  ],
+  "raum": "stadtstrasse",
+  "skala": 0.8,
+  "tiefe": 0.69,
+  "welt": "welt-3"
+}

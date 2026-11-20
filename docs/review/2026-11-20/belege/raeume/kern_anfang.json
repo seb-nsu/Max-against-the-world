@@ -1,0 +1,506 @@
+{
+  "bauplan_laufbereich": [
+    [
+      60.0,
+      330.0
+    ],
+    [
+      140.0,
+      312.0
+    ],
+    [
+      300.0,
+      304.0
+    ],
+    [
+      520.0,
+      312.0
+    ],
+    [
+      600.0,
+      330.0
+    ],
+    [
+      600.0,
+      356.0
+    ],
+    [
+      60.0,
+      356.0
+    ]
+  ],
+  "breite": 640,
+  "figuren": [
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "beleidigt",
+        "herunterfahren",
+        "idle",
+        "talk"
+      ],
+      "baseline": 0,
+      "name": "Mutti",
+      "poly": [
+        [
+          439,
+          55
+        ],
+        [
+          501,
+          55
+        ],
+        [
+          501,
+          300
+        ],
+        [
+          439,
+          300
+        ]
+      ],
+      "pos": [
+        470.0,
+        300.0
+      ],
+      "rect": [
+        403,
+        52,
+        538,
+        300
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.720000028610229,
+        0.720000028610229
+      ],
+      "variante": "",
+      "walk_speed": 120.0,
+      "z": 0
+    },
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "aufheben",
+        "barfuss",
+        "benutzen",
+        "bohne",
+        "code_sicht",
+        "diskus",
+        "fallen",
+        "gaehnen",
+        "gedankentrick",
+        "gehen_hinten",
+        "gehen_vorn",
+        "handy",
+        "heisser_sand",
+        "hexenschuss",
+        "hexenschuss_gehen",
+        "hinsetzen",
+        "hochhalten",
+        "idle",
+        "kapsel_aufstehen",
+        "kapsel_aussteigen",
+        "kapsel_einsteigen",
+        "kapsel_hinlegen",
+        "katapult",
+        "kochloeffel",
+        "kopf_kratzen",
+        "melken",
+        "nudeln",
+        "pastille",
+        "portalgeraet",
+        "regen_wischen",
+        "ruecken_halten",
+        "schlucken",
+        "schulterzucken",
+        "speer",
+        "stempel_ansehen",
+        "talk",
+        "talk_hand",
+        "tasche",
+        "tippen",
+        "treppe_walk",
+        "vom_boden_aufstehen",
+        "vom_sofa_aufstehen",
+        "wackeln",
+        "walk",
+        "walk_alt",
+        "walk_d",
+        "walk_l",
+        "walk_r",
+        "walk_u",
+        "wenden",
+        "zeigen",
+        "zeitlupe"
+      ],
+      "baseline": 0,
+      "name": "Max",
+      "poly": [
+        [
+          182,
+          191
+        ],
+        [
+          218,
+          191
+        ],
+        [
+          218,
+          336
+        ],
+        [
+          182,
+          336
+        ]
+      ],
+      "pos": [
+        200.0,
+        336.0
+      ],
+      "rect": [
+        92,
+        188,
+        308,
+        336
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.769230782985687,
+        0.769230782985687
+      ],
+      "variante": "",
+      "walk_speed": 150.0,
+      "z": 0
+    },
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "aufstehen",
+        "aufwachen",
+        "fauchen",
+        "gehen_hinten",
+        "gehen_vorn",
+        "haare",
+        "hebel",
+        "hinlegen",
+        "idle",
+        "kabel",
+        "kriechen",
+        "minka_umgarnen",
+        "morse",
+        "ohrfeige",
+        "putzen",
+        "schieben",
+        "schlafen",
+        "schnuppern",
+        "schwanz_zucken",
+        "springen",
+        "stehen",
+        "talk",
+        "talk_alt",
+        "tasse",
+        "tragen",
+        "vom_schrank_fallen",
+        "walk",
+        "walk_d",
+        "walk_l",
+        "walk_r",
+        "walk_u"
+      ],
+      "baseline": 0,
+      "name": "Pixel",
+      "poly": [
+        [
+          214,
+          305
+        ],
+        [
+          276,
+          305
+        ],
+        [
+          276,
+          336
+        ],
+        [
+          214,
+          336
+        ]
+      ],
+      "pos": [
+        245.0,
+        336.0
+      ],
+      "rect": [
+        197,
+        257,
+        293,
+        336
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.769230782985687,
+        0.769230782985687
+      ],
+      "variante": "",
+      "walk_speed": 160.0,
+      "z": 0
+    }
+  ],
+  "hotspots": [
+    {
+      "baseline": 15,
+      "klickbar": true,
+      "name": "Kabel",
+      "poly": [
+        [
+          120,
+          280
+        ],
+        [
+          260,
+          280
+        ],
+        [
+          260,
+          310
+        ],
+        [
+          120,
+          310
+        ]
+      ],
+      "pos": [
+        190.0,
+        295.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_KABEL",
+      "walk_to": [
+        0.0,
+        39.0
+      ]
+    },
+    {
+      "baseline": 40,
+      "klickbar": true,
+      "name": "Sockel",
+      "poly": [
+        [
+          298,
+          248
+        ],
+        [
+          344,
+          248
+        ],
+        [
+          344,
+          328
+        ],
+        [
+          298,
+          328
+        ]
+      ],
+      "pos": [
+        321.0,
+        288.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_SOCKEL",
+      "walk_to": [
+        -41.0,
+        48.0
+      ]
+    },
+    {
+      "baseline": 10,
+      "klickbar": true,
+      "name": "Streifen",
+      "poly": [
+        [
+          96,
+          228
+        ],
+        [
+          516,
+          228
+        ],
+        [
+          516,
+          248
+        ],
+        [
+          96,
+          248
+        ]
+      ],
+      "pos": [
+        306.0,
+        238.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_STREIFEN",
+      "walk_to": [
+        14.0,
+        98.0
+      ]
+    },
+    {
+      "baseline": 95,
+      "klickbar": true,
+      "name": "AusgangTestkammer3",
+      "poly": [
+        [
+          18,
+          140
+        ],
+        [
+          80,
+          140
+        ],
+        [
+          80,
+          330
+        ],
+        [
+          18,
+          330
+        ]
+      ],
+      "pos": [
+        49.0,
+        235.0
+      ],
+      "sichtbar": true,
+      "text": "UI_RAUM_TESTKAMMER_3",
+      "walk_to": [
+        41.0,
+        105.0
+      ]
+    }
+  ],
+  "kamera_max": [
+    320.0,
+    180.0
+  ],
+  "laufbereiche": [
+    {
+      "name": "Boden",
+      "polys": [
+        [
+          [
+            60,
+            330
+          ],
+          [
+            140,
+            312
+          ],
+          [
+            300,
+            304
+          ],
+          [
+            520,
+            312
+          ],
+          [
+            600,
+            330
+          ],
+          [
+            600,
+            356
+          ],
+          [
+            60,
+            356
+          ]
+        ]
+      ]
+    }
+  ],
+  "marker": {
+    "Start": [
+      200.0,
+      336.0
+    ],
+    "VonTestkammer3": [
+      90.0,
+      340.0
+    ]
+  },
+  "modus": "anfang",
+  "props": [
+    {
+      "baseline": -180,
+      "klickbar": false,
+      "name": "Background",
+      "poly": [],
+      "pos": [
+        320.0,
+        0.0
+      ],
+      "rect": [
+        0,
+        0,
+        640,
+        360
+      ],
+      "sichtbar": true,
+      "text": "UI_RAUM_KERN",
+      "walk_to": [
+        0.0,
+        180.0
+      ],
+      "z": -1
+    },
+    {
+      "baseline": 35,
+      "klickbar": true,
+      "name": "Energiezelle",
+      "poly": [
+        [
+          306,
+          196
+        ],
+        [
+          326,
+          196
+        ],
+        [
+          326,
+          266
+        ],
+        [
+          306,
+          266
+        ]
+      ],
+      "pos": [
+        316.0,
+        266.0
+      ],
+      "rect": [
+        306,
+        223,
+        326,
+        239
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_ENERGIEZELLE",
+      "walk_to": [
+        -26.0,
+        70.0
+      ],
+      "z": 0
+    }
+  ],
+  "raum": "kern",
+  "skala": 0.8,
+  "tiefe": 0.9,
+  "welt": "welt-3"
+}

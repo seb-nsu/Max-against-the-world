@@ -1,0 +1,1006 @@
+{
+  "bauplan_laufbereich": [
+    [
+      8.0,
+      288.0
+    ],
+    [
+      585.0,
+      288.0
+    ],
+    [
+      600.0,
+      280.0
+    ],
+    [
+      640.0,
+      280.0
+    ],
+    [
+      965.0,
+      286.0
+    ],
+    [
+      990.0,
+      280.0
+    ],
+    [
+      1040.0,
+      280.0
+    ],
+    [
+      1150.0,
+      292.0
+    ],
+    [
+      1272.0,
+      300.0
+    ],
+    [
+      1272.0,
+      356.0
+    ],
+    [
+      8.0,
+      356.0
+    ]
+  ],
+  "breite": 1280,
+  "figuren": [
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "idle",
+        "notieren",
+        "regen_zaehlen",
+        "seitschritt",
+        "stempeln",
+        "talk",
+        "talk_alt",
+        "walk"
+      ],
+      "baseline": 0,
+      "name": "Deckert",
+      "poly": [
+        [
+          832,
+          157
+        ],
+        [
+          868,
+          157
+        ],
+        [
+          868,
+          300
+        ],
+        [
+          832,
+          300
+        ]
+      ],
+      "pos": [
+        850.0,
+        300.0
+      ],
+      "rect": [
+        812,
+        146,
+        888,
+        300
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.711578965187073,
+        0.711578965187073
+      ],
+      "variante": "",
+      "walk_speed": 120.0,
+      "z": 0
+    },
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "glueckskeks",
+        "haende_zeigen",
+        "idle",
+        "karte_reichen",
+        "kochen_strahlend",
+        "kochen_weinend",
+        "kopf_schuetteln",
+        "schale_hinstellen",
+        "talk",
+        "vier_finger",
+        "zettel_lesen"
+      ],
+      "baseline": 0,
+      "name": "HerrVier",
+      "poly": [
+        [
+          88,
+          137
+        ],
+        [
+          120,
+          137
+        ],
+        [
+          120,
+          266
+        ],
+        [
+          88,
+          266
+        ]
+      ],
+      "pos": [
+        104.0,
+        266.0
+      ],
+      "rect": [
+        69,
+        127,
+        139,
+        266
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.680000007152557,
+        0.680000007152557
+      ],
+      "variante": "",
+      "walk_speed": 120.0,
+      "z": 0
+    },
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "idle",
+        "talk",
+        "weinen"
+      ],
+      "baseline": 0,
+      "name": "WeinenderMann",
+      "poly": [
+        [
+          135,
+          145
+        ],
+        [
+          169,
+          145
+        ],
+        [
+          169,
+          278
+        ],
+        [
+          135,
+          278
+        ]
+      ],
+      "pos": [
+        152.0,
+        278.0
+      ],
+      "rect": [
+        113,
+        144,
+        191,
+        278
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.680000007152557,
+        0.680000007152557
+      ],
+      "variante": "",
+      "walk_speed": 120.0,
+      "z": 0
+    },
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "idle",
+        "schimpfen",
+        "talk"
+      ],
+      "baseline": 0,
+      "name": "FrauRegenschirm",
+      "poly": [
+        [
+          683,
+          166
+        ],
+        [
+          717,
+          166
+        ],
+        [
+          717,
+          300
+        ],
+        [
+          683,
+          300
+        ]
+      ],
+      "pos": [
+        700.0,
+        300.0
+      ],
+      "rect": [
+        633,
+        146,
+        768,
+        300
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.711578965187073,
+        0.711578965187073
+      ],
+      "variante": "",
+      "walk_speed": 120.0,
+      "z": 0
+    },
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "idle",
+        "spielen",
+        "talk"
+      ],
+      "baseline": 0,
+      "name": "StrassenmusikerW3",
+      "poly": [
+        [
+          475,
+          155
+        ],
+        [
+          509,
+          155
+        ],
+        [
+          509,
+          292
+        ],
+        [
+          475,
+          292
+        ]
+      ],
+      "pos": [
+        492.0,
+        292.0
+      ],
+      "rect": [
+        454,
+        144,
+        530,
+        292
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.698947370052338,
+        0.698947370052338
+      ],
+      "variante": "",
+      "walk_speed": 90.0,
+      "z": 0
+    },
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "aufheben",
+        "barfuss",
+        "benutzen",
+        "bohne",
+        "code_sicht",
+        "diskus",
+        "fallen",
+        "gaehnen",
+        "gedankentrick",
+        "gehen_hinten",
+        "gehen_vorn",
+        "handy",
+        "heisser_sand",
+        "hexenschuss",
+        "hexenschuss_gehen",
+        "hinsetzen",
+        "hochhalten",
+        "idle",
+        "kapsel_aufstehen",
+        "kapsel_aussteigen",
+        "kapsel_einsteigen",
+        "kapsel_hinlegen",
+        "katapult",
+        "kochloeffel",
+        "kopf_kratzen",
+        "melken",
+        "nudeln",
+        "pastille",
+        "portalgeraet",
+        "regen_wischen",
+        "ruecken_halten",
+        "schlucken",
+        "schulterzucken",
+        "speer",
+        "stempel_ansehen",
+        "talk",
+        "talk_hand",
+        "tasche",
+        "tippen",
+        "treppe_walk",
+        "vom_boden_aufstehen",
+        "vom_sofa_aufstehen",
+        "wackeln",
+        "walk",
+        "walk_alt",
+        "walk_d",
+        "walk_l",
+        "walk_r",
+        "walk_u",
+        "wenden",
+        "zeigen",
+        "zeitlupe"
+      ],
+      "baseline": 0,
+      "name": "Max",
+      "poly": [
+        [
+          623,
+          180
+        ],
+        [
+          657,
+          180
+        ],
+        [
+          657,
+          320
+        ],
+        [
+          623,
+          320
+        ]
+      ],
+      "pos": [
+        640.0,
+        320.0
+      ],
+      "rect": [
+        536,
+        177,
+        744,
+        320
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.743157923221588,
+        0.743157923221588
+      ],
+      "variante": "",
+      "walk_speed": 150.0,
+      "z": 0
+    },
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "aufstehen",
+        "aufwachen",
+        "fauchen",
+        "gehen_hinten",
+        "gehen_vorn",
+        "haare",
+        "hebel",
+        "hinlegen",
+        "idle",
+        "kabel",
+        "kriechen",
+        "minka_umgarnen",
+        "morse",
+        "ohrfeige",
+        "putzen",
+        "schieben",
+        "schlafen",
+        "schnuppern",
+        "schwanz_zucken",
+        "springen",
+        "stehen",
+        "talk",
+        "talk_alt",
+        "tasse",
+        "tragen",
+        "vom_schrank_fallen",
+        "walk",
+        "walk_d",
+        "walk_l",
+        "walk_r",
+        "walk_u"
+      ],
+      "baseline": 0,
+      "name": "Pixel",
+      "poly": [
+        [
+          655,
+          290
+        ],
+        [
+          715,
+          290
+        ],
+        [
+          715,
+          320
+        ],
+        [
+          655,
+          320
+        ]
+      ],
+      "pos": [
+        685.0,
+        320.0
+      ],
+      "rect": [
+        638,
+        243,
+        732,
+        320
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.743157923221588,
+        0.743157923221588
+      ],
+      "variante": "",
+      "walk_speed": 160.0,
+      "z": 0
+    }
+  ],
+  "hotspots": [
+    {
+      "baseline": 86,
+      "klickbar": true,
+      "name": "Nudelbude",
+      "poly": [
+        [
+          28,
+          100
+        ],
+        [
+          200,
+          100
+        ],
+        [
+          200,
+          272
+        ],
+        [
+          28,
+          272
+        ]
+      ],
+      "pos": [
+        114.0,
+        186.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_NUDELBUDE",
+      "walk_to": [
+        6.0,
+        116.0
+      ]
+    },
+    {
+      "baseline": 85,
+      "klickbar": true,
+      "name": "Telefonzelle",
+      "poly": [
+        [
+          352,
+          112
+        ],
+        [
+          442,
+          112
+        ],
+        [
+          442,
+          282
+        ],
+        [
+          352,
+          282
+        ]
+      ],
+      "pos": [
+        397.0,
+        197.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_TELEFONZELLE",
+      "walk_to": [
+        1.0,
+        103.0
+      ]
+    },
+    {
+      "baseline": 14,
+      "klickbar": true,
+      "name": "TelefonbuchInDerZelle",
+      "poly": [
+        [
+          358,
+          186
+        ],
+        [
+          404,
+          186
+        ],
+        [
+          404,
+          214
+        ],
+        [
+          358,
+          214
+        ]
+      ],
+      "pos": [
+        381.0,
+        200.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_TELEFONBUCH_IN_DER_ZELLE",
+      "walk_to": [
+        17.0,
+        100.0
+      ]
+    },
+    {
+      "baseline": 36,
+      "klickbar": true,
+      "name": "Vordach",
+      "poly": [
+        [
+          775,
+          100
+        ],
+        [
+          935,
+          100
+        ],
+        [
+          935,
+          172
+        ],
+        [
+          775,
+          172
+        ]
+      ],
+      "pos": [
+        855.0,
+        136.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_VORDACH",
+      "walk_to": [
+        -5.0,
+        166.0
+      ]
+    },
+    {
+      "baseline": 49,
+      "klickbar": true,
+      "name": "NeonPizzaPlakat",
+      "poly": [
+        [
+          790,
+          0
+        ],
+        [
+          930,
+          0
+        ],
+        [
+          930,
+          98
+        ],
+        [
+          790,
+          98
+        ]
+      ],
+      "pos": [
+        860.0,
+        49.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_NEON_PIZZA_PLAKAT",
+      "walk_to": [
+        0.0,
+        253.0
+      ]
+    },
+    {
+      "baseline": 22,
+      "klickbar": true,
+      "name": "OrigamiEinhorn",
+      "poly": [
+        [
+          500,
+          288
+        ],
+        [
+          566,
+          288
+        ],
+        [
+          566,
+          332
+        ],
+        [
+          500,
+          332
+        ]
+      ],
+      "pos": [
+        533.0,
+        310.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_ORIGAMI_EINHORN",
+      "walk_to": [
+        -63.0,
+        8.0
+      ]
+    },
+    {
+      "baseline": 21,
+      "klickbar": true,
+      "name": "Pfuetzen",
+      "poly": [
+        [
+          1130,
+          318
+        ],
+        [
+          1280,
+          318
+        ],
+        [
+          1280,
+          360
+        ],
+        [
+          1130,
+          360
+        ]
+      ],
+      "pos": [
+        1205.0,
+        339.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_PFUETZEN",
+      "walk_to": [
+        -85.0,
+        -17.0
+      ]
+    },
+    {
+      "baseline": 50,
+      "klickbar": true,
+      "name": "HimmelMitFliegendenAutos",
+      "poly": [
+        [
+          250,
+          0
+        ],
+        [
+          420,
+          0
+        ],
+        [
+          420,
+          100
+        ],
+        [
+          250,
+          100
+        ]
+      ],
+      "pos": [
+        335.0,
+        50.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_HIMMEL_MIT_FLIEGENDEN_AUTOS",
+      "walk_to": [
+        -5.0,
+        250.0
+      ]
+    },
+    {
+      "baseline": 13,
+      "klickbar": true,
+      "name": "Dampfgitter",
+      "poly": [
+        [
+          998,
+          292
+        ],
+        [
+          1096,
+          292
+        ],
+        [
+          1096,
+          318
+        ],
+        [
+          998,
+          318
+        ]
+      ],
+      "pos": [
+        1047.0,
+        305.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_DAMPFGITTER",
+      "walk_to": [
+        -2.0,
+        21.0
+      ]
+    },
+    {
+      "baseline": 74,
+      "klickbar": true,
+      "name": "AusgangApothekengasse",
+      "poly": [
+        [
+          972,
+          135
+        ],
+        [
+          1042,
+          135
+        ],
+        [
+          1042,
+          283
+        ],
+        [
+          972,
+          283
+        ]
+      ],
+      "pos": [
+        1007.0,
+        209.0
+      ],
+      "sichtbar": true,
+      "text": "UI_RAUM_APOTHEKENGASSE",
+      "walk_to": [
+        1.0,
+        79.0
+      ]
+    },
+    {
+      "baseline": 80,
+      "klickbar": true,
+      "name": "AusgangLaboreingang",
+      "poly": [
+        [
+          1180,
+          140
+        ],
+        [
+          1280,
+          140
+        ],
+        [
+          1280,
+          300
+        ],
+        [
+          1180,
+          300
+        ]
+      ],
+      "pos": [
+        1230.0,
+        220.0
+      ],
+      "sichtbar": true,
+      "text": "UI_RAUM_LABOREINGANG",
+      "walk_to": [
+        28.0,
+        102.0
+      ]
+    },
+    {
+      "baseline": 39,
+      "klickbar": true,
+      "name": "AusgangWiderstandsbasis",
+      "poly": [
+        [
+          586,
+          188
+        ],
+        [
+          640,
+          188
+        ],
+        [
+          640,
+          266
+        ],
+        [
+          586,
+          266
+        ]
+      ],
+      "pos": [
+        613.0,
+        227.0
+      ],
+      "sichtbar": true,
+      "text": "UI_RAUM_WIDERSTANDSBASIS",
+      "walk_to": [
+        -1.0,
+        65.0
+      ]
+    }
+  ],
+  "kamera_max": [
+    640.0,
+    180.0
+  ],
+  "laufbereiche": [
+    {
+      "name": "Boden",
+      "polys": [
+        [
+          [
+            8,
+            288
+          ],
+          [
+            585,
+            288
+          ],
+          [
+            600,
+            280
+          ],
+          [
+            640,
+            280
+          ],
+          [
+            965,
+            286
+          ],
+          [
+            990,
+            280
+          ],
+          [
+            1040,
+            280
+          ],
+          [
+            1150,
+            292
+          ],
+          [
+            1272,
+            300
+          ],
+          [
+            1272,
+            356
+          ],
+          [
+            8,
+            356
+          ]
+        ]
+      ]
+    }
+  ],
+  "marker": {
+    "Start": [
+      640.0,
+      320.0
+    ],
+    "VonApothekengasse": [
+      1008.0,
+      300.0
+    ],
+    "VonLaboreingang": [
+      1235.0,
+      325.0
+    ],
+    "VonWiderstandsbasis": [
+      612.0,
+      298.0
+    ]
+  },
+  "modus": "ende",
+  "props": [
+    {
+      "baseline": -180,
+      "klickbar": false,
+      "name": "Background",
+      "poly": [],
+      "pos": [
+        640.0,
+        0.0
+      ],
+      "rect": [
+        0,
+        0,
+        1280,
+        360
+      ],
+      "sichtbar": true,
+      "text": "UI_RAUM_UNTERSTADT_STRASSE",
+      "walk_to": [
+        0.0,
+        180.0
+      ],
+      "z": -1
+    },
+    {
+      "baseline": 6,
+      "klickbar": true,
+      "name": "Telefonbuchseite",
+      "poly": [
+        [
+          372,
+          192
+        ],
+        [
+          390,
+          192
+        ],
+        [
+          390,
+          204
+        ],
+        [
+          372,
+          204
+        ]
+      ],
+      "pos": [
+        381.0,
+        204.0
+      ],
+      "rect": [
+        372,
+        192,
+        390,
+        204
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_TELEFONBUCHSEITE",
+      "walk_to": [
+        17.0,
+        96.0
+      ],
+      "z": 0
+    }
+  ],
+  "raum": "unterstadt_strasse",
+  "skala": 0.8,
+  "tiefe": 0.85,
+  "welt": "welt-3"
+}
