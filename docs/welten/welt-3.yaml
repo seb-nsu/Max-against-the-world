@@ -20,7 +20,7 @@ raeume:
   - id: apothekengasse
     name: Apothekengasse mit Pastillenautomat
     skript_code: [APO, SOFA]   # SOFA: Traum auf Opas Sofa (Prolog-Wohnzimmer mit Filter), Max' Körper bleibt in der Gasse
-    groesse: 640x360
+    groesse: 1280x360   # Breitbild wie gemalt (Entscheidung 20.11.2026)
     ausgaenge: [unterstadt_strasse]
     erreichbar_ab: R1b
     musik: w3_unterstadt

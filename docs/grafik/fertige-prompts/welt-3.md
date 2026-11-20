@@ -164,7 +164,7 @@ NEGATIVE: no characters, people or animals in the walkable area, no text, letter
 
 **Shot W3-R02**
 
-**Zustände:** Fächer zu und offen (je eine Dose rot und blau)
+**Zustände:** Fächer zu und offen (je eine Dose rot und blau). 1280×360 als ein Panorama in einem Bild (Seitenverhältnis 32:9)
 
 ```text
 STYLE: Concept art for a 2D point-and-click adventure game in the style of classic 1990s adventure games, outdoor scene seen straight on like a wide stage, camera at the eye level of a standing person, horizon at about 40 percent of the image height, open walkable ground with gentle depth across the lower third kept free of objects except at the left and right edges, wide shot: a standing adult at the front edge would be about 52 percent of the image height, no top-down, bird's-eye or strong three-quarter view, no fisheye, every object drawn exactly as described and nothing added, signs and labels without any letters or numbers, light from the upper left with soft shadows to the lower right, humorous and whimsical.
