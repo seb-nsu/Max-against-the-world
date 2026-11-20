@@ -1,0 +1,25 @@
+# id|bewegung|ms|schleife|anker|zw-streifen|folge
+morphaeus|schild_zeigen|120|-|fuss|zw08|R*3,Z1*2,P1*16,Z1*2,R*4
+morphaeus|brille_hochschieben|120|-|fuss|zw08|R*3,Z2*2,P1*14,Z2*2,R*4
+morphaeus|haende_falten|120|-|fuss|zw08|R*3,Z3*2,P1*24,Z3*2,R*4
+morphaeus|schulterzucken|120|-|fuss|zw08|R*3,Z4*2,P1*12,Z4*2,R*4
+morphaeus|schild_umdrehen|120|-|fuss|zw09|R*3,Z1*2,P1*14,Z1*2,R*4
+morphaeus|leere_hand|120|-|fuss|zw09|R*3,Z2*2,P1*16,Z2*2,R*4
+morphaeus|kekse_reichen|120|-|fuss|zw09|R*3,Z3*2,P1*16,Z3*2,R*4
+morphaeus|fangen|120|-|fuss|zw09|R*2,Z4*2,P1*14,Z4*2,R*3
+deckert|reden|120|-|fuss|zw16|R*3,Z1*2,P1*16,Z1*2,R*4
+deckert|notieren|120|-|fuss|zw16|R*2,Z1*2,P1*6,Z2*2,P2*18,Z3*2,P3*6,Z3*2,R*3
+deckert|stempeln|120|-|fuss|zw16|R*3,Z4*2,P1*10,Z4*2,R*4
+herr_vier|vier_finger|120|-|fuss|zw17|R*3,Z1*2,P1*16,Z1*2,R*4
+herr_vier|haende_zeigen|120|-|fuss|zw17|R*3,Z2*2,P1*16,Z2*2,R*4
+herr_vier|kochen_strahlend|120|-|fuss|zw17|R*3,Z3*2,P1*24,Z3*2,R*4
+herr_vier|schale_hinstellen|120|-|fuss|zw17|R*3,Z4*2,P1*12,Z4*2,R*4
+herr_vier|glueckskeks|120|-|fuss|zw18|R*3,Z1*2,P1*14,Z1*2,R*4
+herr_vier|zettel_lesen|120|-|fuss|zw18|R*3,Z2*2,P1*20,Z2*2,R*4
+herr_vier|kochen_weinend|120|-|fuss|zw18|R*3,Z3*2,P1*24,Z3*2,R*4
+herr_vier|karte_reichen|120|-|fuss|zw18|R*3,Z4*2,P1*16,Z4*2,R*4
+max|regen_wischen|120|-|fuss|zw01|R*3,Z1*2,P1*12,Z1*2,R*4
+max|handy|120|-|fuss|zw01|R*3,Z2*2,P1*20,Z2*2,R*4
+max|stempel_ansehen|120|-|fuss|zw01|R*3,Z3*2,P1*16,Z3*2,R*4
+strassenmusiker|spielen|150|S|fuss|zw23|R*2,Z1,P1*2,Z3,P3*2,Z3,P1*2,Z2,P2*3,Z2
+weinender_mann|weinen|160|S|fuss|zw24|R*2,P1*3,R,P1*3,Z2,P2*3,Z2

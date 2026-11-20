@@ -256,7 +256,7 @@ Stand 15. November 2026, Zweig-Angaben am 17. November auf main nachgeführt (be
 
 ## Welt 3
 
-Angelegt am 18. November 2026 aus `fertige-prompts/welt-3.md` (111 IDs). Noch kein Bild im Spiel. Stand 20. November 2026: alle 27 Konzeptblätter liegen unter `welt3/konzept/` (Name = Nummer), Phase 1 (Unterstadt) gebaut: Stand-Sprites der Unterstadt-Figuren, Posenbögen W3-P01, P08, P09, P16 bis P18, P23 bis P25, Bewegungen W3-B01, B19 bis B21, dazu die Läufe von Morphäus und Deckert (Teile-Rig, `welt3/bewegungen/morphaeus_gehen` und `deckert_gehen`). Prüfbilder unter `welt3/pruefung/`. Arbeitsdateien und Befehlsliste unter `E:\Game Engine\Grafiken\3d\welt3\` (`liste_phase1.txt`). Reihenfolge der Grundlagenbilder steht oben in `fertige-prompts/welt-3.md`.
+Angelegt am 18. November 2026 aus `fertige-prompts/welt-3.md` (111 IDs). Noch kein Bild im Spiel. Stand 20. November 2026: alle 27 Konzeptblätter liegen unter `welt3/konzept/` (Name = Nummer), Phase 1 (Unterstadt) gebaut (Nachbesserung 20.11. nach Sebastians Rückmeldung: Halbposen als Zwischenbilder in allen Gesten, Katze neu gemalt statt gerendert): Stand-Sprites der Unterstadt-Figuren, Posenbögen W3-P01, P08, P09, P16 bis P18, P23 bis P25, Bewegungen W3-B01, B19 bis B21, dazu die Läufe von Morphäus und Deckert (Teile-Rig, `welt3/bewegungen/morphaeus_gehen` und `deckert_gehen`). Prüfbilder unter `welt3/pruefung/`. Arbeitsdateien und Befehlsliste unter `E:\Game Engine\Grafiken\3d\welt3\` (`liste_phase1.txt`). Reihenfolge der Grundlagenbilder steht oben in `fertige-prompts/welt-3.md`.
 
 | ID | Titel | Art | Quelle (Bogen/Bild) | Bewegung gebaut | im Spiel | offen: Grund, wer erledigt |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -323,7 +323,7 @@ Angelegt am 18. November 2026 aus `fertige-prompts/welt-3.md` (111 IDs). Noch ke
 | W3-P27 | Bernd | Posenbogen | fehlt | nein | nein | Konzeptblatt da; Posenbogen in Phase 2 (Basis, Labor, Simulation), Claude (Gemini-API) |
 | W3-P28 | Piepsi | Posenbogen | fehlt | nein | nein | Konzeptblatt da; Posenbogen in Phase 2 (Basis, Labor, Simulation), Claude (Gemini-API) |
 | W3-P29 | Opa als Hologramm | Posenbogen | fehlt | nein | nein | Konzeptblatt da; Posenbogen in Phase 2 (Basis, Labor, Simulation), Claude (Gemini-API) |
-| W3-B01 | Schwarze Katze: Zweimal vorbeilaufen | Bewegung | Blender-Render `3d/welt3/schwarze_katze/katze_lauf.py` | ja: welt3/bewegungen/schwarze_katze_gehen, 8 Bilder | nein | Phase 1 gebaut (20.11.), wartet auf Sebastians Abnahme, dann Einbau (Welt-3-Einbau) |
+| W3-B01 | Schwarze Katze: Zweimal vorbeilaufen | Bewegung | welt3/katze/W3-B01_katze_f1 bis f8 (Gemini gemalt, Beinstellung aus dem Blender-Render) | ja: welt3/bewegungen/schwarze_katze_gehen, 8 Bilder | nein | Phase 1 gebaut (20.11.), wartet auf Sebastians Abnahme, dann Einbau (Welt-3-Einbau) |
 | W3-B02 | Max als Ente: Watscheln | Bewegung | fehlt | nein | nein | wartet auf Konzeptblatt oder Raum; dann Claude (Meshy oder Gemini-API) |
 | W3-B03 | Pixel: Schacht kriechen | Bewegung | fehlt | nein | nein | wartet auf Konzeptblatt oder Raum; dann Claude (Meshy oder Gemini-API) |
 | W3-B04 | Bernd: Beleidigt davonschweben | Bewegung | fehlt | nein | nein | wartet auf Konzeptblatt oder Raum; dann Claude (Meshy oder Gemini-API) |
