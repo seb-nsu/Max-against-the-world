@@ -1,0 +1,10 @@
+Raumbreite=640 Kamera-Grenze rechts=640
+BILD LD-01_max_am_automaten
+Max am Automaten: pos=(640.0, 322.0) Kamera=(320.0, 180.0)
+Pfote: Schritt=R3a
+Spieler=Pixel
+Pixel benutzt Automat 1 (Automat): PIXEL_EINMAL=false PIXEL_DOPPELT=false
+Pixel benutzt Automat 2 (-): PIXEL_EINMAL=false PIXEL_DOPPELT=false
+Pixel-Zeilen: ["W3_APO_PIX_0230", "W3_APO_PIX_0230"]
+Max wählt Déjà-vu: Zeilen=["W3_APO_AUT_0040", "W3_APO_MAX_0090", "W3_APO_AUT_0100"] R3a=false
+BILD GD-01_dejavu_ohne_befund

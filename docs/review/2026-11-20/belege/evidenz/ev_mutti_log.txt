@@ -1,0 +1,8 @@
+W3_KERN_MUT_0200: Mutti anim=talk
+BILD AN-01_kern_W3_KERN_MUT_0200
+W3_KERN_NAR_0210: Mutti anim=idle
+BILD AN-01_kern_W3_KERN_NAR_0210
+W3_KERN_PIX_0220: Mutti anim=idle
+BILD AN-01_kern_W3_KERN_PIX_0220
+R10=true, Mutti sichtbar=true anim=idle
+BILD AN-01_kern_nach_R10
