@@ -4,54 +4,54 @@
  "hoehe": 720,
  "labels": [
   [
-   "ROW OF IDENTICAL GREY DOORS",
-   640.0,
-   248.64266395568848
+   "elevator (exit), two sliding metal doors",
+   224.84197616577148,
+   241.17620944976807
   ],
   [
-   "identical potted plant between each door",
-   655.4575347900391,
-   458.5392737388611
-  ],
-  [
-   "elevator door (exit) + window to same corridor",
-   271.61705017089844,
+   "window: shows the same corridor outside",
+   417.435302734375,
    241.12213611602783
   ],
   [
+   "row of identical grey doors (with frame and handle)",
+   563.2996368408203,
+   253.420729637146
+  ],
+  [
    "circle on red (own field)",
-   547.673225402832,
-   225.75518131256104
+   678.3645629882812,
+   245.73583602905273
   ],
   [
    "triangle on green (own field)",
-   663.0816650390625,
-   225.75518131256104
+   755.0937652587891,
+   245.73583602905273
   ],
   [
    "square on yellow (own field)",
-   778.4901428222656,
-   225.75518131256104
+   831.8228912353516,
+   245.73583602905273
   ],
   [
-   "terminal on side table",
-   663.8536071777344,
-   433.7615418434143
+   "small side table + old terminal (green screen)",
+   758.0954742431641,
+   448.9486598968506
   ],
   [
-   "photocopier",
-   901.9783020019531,
-   407.51537561416626
+   "photocopier (one)",
+   405.05958557128906,
+   429.85092401504517
   ],
   [
-   "water cooler (room for a cup)",
-   1010.2679443359375,
-   371.88750743865967
+   "ONE water cooler (room for a cup on top)",
+   860.7169342041016,
+   423.92581701278687
   ],
   [
-   "staircase ending in the ceiling",
-   1103.817138671875,
-   130.04915714263916
+   "staircase along the wall, going up INTO the ceiling",
+   1264.6569061279297,
+   129.30989742279053
   ],
   [
    "long clear floor for many clones in depth",
@@ -76,10 +76,10 @@
   ],
   [
    "clone",
-   830.1749420166016,
-   286.1350107192993,
-   917.0054626464844,
-   592.0560443401337
+   837.6348876953125,
+   289.15629386901855,
+   928.0431365966797,
+   607.0305705070496
   ],
   [
    "Max 1.75 m (front)",

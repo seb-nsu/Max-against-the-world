@@ -309,24 +309,48 @@ def kueche():
 
 @raum("buero_50", 640)
 def buero():
-    innenraum(tiefe=3.5, hoehe=2.8, wand=(0.85, 0.88, 0.82, 1))
-    for i in range(7):
-        x = -1.2 + i * 1.4
-        box("ROW OF IDENTICAL GREY DOORS" if i == 3 else None, x, 3.45, 0.85, 0.05, 2.05, col=MITTEL)
-        if i < 6:
-            zyl(None, x + 0.7, 3.2, 0.15, 0.6, col=GRUEN)
-    notiz("identical potted plant between each door", 3.1, 3.2, 0.7)
-    box("elevator door (exit) + window to same corridor", 0.6, 3.4, 0.9, 0.1, 2.1, col=DUNKEL)
-    for i, (c, s) in enumerate([(ROT, "circle"), (GRUEN, "triangle"), (GELB, "square")]):
-        box(f"{s} on {['red', 'green', 'yellow'][i]} (own field)", 2.4 + i * 0.75, 3.38, 0.6, 0.05, 0.6, z=1.6, col=c)
-    box("terminal on side table", 3.15, 2.9, 0.6, 0.4, 0.9, col=DUNKEL)
-    box("photocopier", 4.6, 2.6, 0.9, 0.7, 1.1, col=MITTEL)
-    box("water cooler (room for a cup)", 5.3, 2.8, 0.35, 0.35, 1.3, col=GLAS)
-    box("staircase ending in the ceiling", 5.9, 3.0, 0.6, 1.0, 2.8, col=HELL, rot=0)
+    innenraum(tiefe=3.5, hoehe=2.8, wand=(0.88, 0.90, 0.86, 1))
+    TUER = (0.55, 0.57, 0.60, 1)
+
+    def tuer(x, label=None):
+        box(None, x, 3.42, 0.98, 0.04, 2.12, col=DUNKEL)                        # Zarge
+        box(label, x, 3.40, 0.86, 0.04, 2.02, col=TUER)
+        kugel(None, x + 0.3, 3.36, 0.04, 1.0, col=HELL)
+
+    def pflanze(x, label=None):
+        zyl(label, x, 3.1, 0.16, 0.35, col=HELL)
+        kugel(None, x, 3.1, 0.28, 0.65, col=GRUEN)
+
+    # links: Aufzug und Fenster
+    box(None, 0.55, 3.42, 1.05, 0.04, 2.25, col=DUNKEL)
+    box("elevator (exit), two sliding metal doors", 0.3, 3.38, 0.48, 0.04, 2.1, col=(0.70, 0.72, 0.75, 1))
+    box(None, 0.8, 3.38, 0.48, 0.04, 2.1, col=(0.70, 0.72, 0.75, 1))
+    box(None, 1.2, 3.38, 0.08, 0.04, 0.2, z=1.1, col=GELB)
+    box("window: shows the same corridor outside", 1.55, 3.40, 0.7, 0.04, 1.3, z=0.8, col=GLAS)
+    # Rückwand: Reihe gleicher Türen, je eine Pflanze dazwischen
+    tuer(-0.7)
+    tuer(2.5, "row of identical grey doors (with frame and handle)")
+    pflanze(3.1)
+    tuer(4.95)
+    # Farbcode über dem Terminal, drei getrennte Felder mit Symbol
+    for i, (c, n) in enumerate([(ROT, "circle on red"), (GRUEN, "triangle on green"), (GELB, "square on yellow")]):
+        box(f"{n} (own field)", 3.25 + i * 0.5, 3.40, 0.42, 0.03, 0.42, z=1.65, col=c)
+    for x in (3.5, 4.0):
+        box(None, x, 3.0, 0.04, 0.04, 0.75, col=DUNKEL)
+    box("small side table + old terminal (green screen)", 3.75, 3.0, 0.7, 0.4, 0.04, z=0.75, col=DUNKEL)
+    box(None, 3.75, 3.05, 0.4, 0.3, 0.35, z=0.79, col=MITTEL)
+    # rechts: Kopierer, ein Wasserspender, Treppe in die Decke
+    box("photocopier (one)", 1.55, 2.7, 0.9, 0.6, 0.95, col=HELL)
+    box(None, 1.55, 2.7, 0.9, 0.6, 0.08, z=0.95, col=MITTEL)
+    box("ONE water cooler (room for a cup on top)", 4.4, 3.0, 0.35, 0.35, 0.95, col=HELL)
+    zyl(None, 4.4, 3.17, 0.15, 0.4, z=0.95, col=GLAS)
+    for i in range(8):
+        box("staircase along the wall, going up INTO the ceiling" if i == 7 else None,
+            5.75 + i * 0.16, 2.9, 0.16, 1.0, 0.35 * (i + 1), col=(0.80, 0.80, 0.80, 1))
     notiz("long clear floor for many clones in depth", 3.0, 1.0, 0.05)
     figur("Agent Schmidt", 3.6, 1.2, 1.85)
     figur("clone", 2.0, 2.0, 1.85)
-    figur("clone", 4.4, 2.4, 1.85)
+    figur("clone", 4.4, 2.0, 1.85)
     max_massstab()
 
 
