@@ -8,3 +8,7 @@ game/.godot/
 
 # Testbuilds (game/export_presets.cfg, Workflow „Testbuild“)
 build/
+
+# Persönliche Arbeitskopien von Prüf- und Aufnahmeskripten (nicht committen; feste Werkzeuge
+# liegen in game/tests/werkzeuge/, Review 20.11. WF-16)
+game/tests/_*

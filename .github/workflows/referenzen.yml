@@ -1,28 +1,73 @@
 name: Screenshot-Referenzen erneuern
 
 # Nimmt die Bildschirm-Referenzen (tests/bildschirm/referenz/) unter Linux neu auf und committet sie
-# auf den Zweig, von dem aus der Lauf gestartet wurde. Start: Actions → „Screenshot-Referenzen
-# erneuern“ → Run workflow → Zweig wählen. Ersetzt die Handarbeit „Referenz nur unter Linux
-# aufnehmen“ nach gewollten Grafik- und Layout-Änderungen (Review 17.11., WF-03).
-# Nie auf main starten: nur auf einem PR-Zweig, dort sieht man die Bildänderungen im Diff.
+# auf einen PR-Zweig. Ersetzt die Handarbeit „Referenz nur unter Linux aufnehmen“ nach gewollten
+# Grafik- und Layout-Änderungen (Review 17.11., WF-03; Review 20.11., WF-01 und WF-03).
+#
+# Start auf zwei Wegen, beide nie auf main:
+#   1. Am PR das Label „referenzen“ setzen: läuft auf dem PR-Zweig und nimmt das Label danach wieder
+#      ab (für einen weiteren Lauf einfach wieder setzen).
+#   2. Actions → „Screenshot-Referenzen erneuern“ → Run workflow → Zweig im Auswahlfeld wählen
+#      oder im Feld „zweig“ eintragen (das Feld gewinnt).
+#
+# Grafik-PRs erneuern die Referenzen im selben PR. Danach das Artefakt „referenzen-alt-neu“ ansehen
+# (je geänderter Raum ein Bild alt | neu, dazu die Übersichten aller Räume) und im PR nennen,
+# welche Räume sich gewollt geändert haben. Geänderte Räume außerhalb der eigenen Welt sind ein
+# Warnzeichen. Die Liste der geänderten Räume steht auch in der Commit-Nachricht und in der
+# Zusammenfassung des Laufs.
+#
+# Commits mit dem GITHUB_TOKEN starten keine neuen Läufe; deshalb startet der letzte Schritt
+# „Prüfen“ auf dem Zweig, damit die Pflicht-Checks auf dem neuen Stand laufen.
 
 on:
   workflow_dispatch:
+    inputs:
+      zweig:
+        description: "Zweig, auf dem die Referenzen erneuert werden (leer: der oben gewählte Zweig; nie main)"
+        required: false
+        default: ""
+  pull_request:
+    types: [labeled]
 
 permissions:
   contents: write
+  actions: write
+  pull-requests: write
+
+concurrency:
+  group: referenzen-${{ github.event.pull_request.head.ref || inputs.zweig || github.ref_name }}
+  cancel-in-progress: false
 
 jobs:
   erneuern:
-    if: github.ref != 'refs/heads/main'
+    # Bei pull_request nur für das Label „referenzen“ und nur für Zweige aus diesem Repository
+    # (auf Fork-Zweige darf der Workflow nicht schreiben)
+    if: >-
+      github.event_name == 'workflow_dispatch' ||
+      (github.event.label.name == 'referenzen' &&
+       github.event.pull_request.head.repo.full_name == github.repository)
     runs-on: ubuntu-latest
     env:
       GODOT_VERSION: "4.7.2"
+      ZWEIG: ${{ github.event.pull_request.head.ref || inputs.zweig || github.ref_name }}
+      GH_TOKEN: ${{ github.token }}
     steps:
-      - uses: actions/checkout@v4
-      - name: Godot laden, Xvfb und Mesa
+      - name: Zweig prüfen (nie main)
         run: |
-          sudo apt-get update -qq && sudo apt-get install -y -qq xvfb libgl1-mesa-dri > /dev/null
+          echo "Zweig: $ZWEIG"
+          if [ -z "$ZWEIG" ] || [ "$ZWEIG" = "main" ]; then
+            echo "::error::Referenzen nur auf einem PR-Zweig erneuern, nie auf main."
+            exit 1
+          fi
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ env.ZWEIG }}
+      - name: Label wieder abnehmen (damit es für den nächsten Lauf neu gesetzt werden kann)
+        if: github.event_name == 'pull_request'
+        run: gh pr edit "${{ github.event.pull_request.number }}" --remove-label referenzen || true
+      - name: Godot laden, Xvfb, Mesa und ImageMagick
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq xvfb libgl1-mesa-dri imagemagick > /dev/null
           curl -sSL -o godot.zip "https://github.com/godotengine/godot/releases/download/${GODOT_VERSION}-stable/Godot_v${GODOT_VERSION}-stable_linux.x86_64.zip"
           unzip -q godot.zip
           mv "Godot_v${GODOT_VERSION}-stable_linux.x86_64" godot
@@ -32,14 +77,80 @@ jobs:
         run: |
           timeout 900 xvfb-run -a -s "-screen 0 1280x720x24" ./godot --path game --rendering-driver opengl3 \
             --resolution 640x360 -s res://tests/bildschirm_vergleich.gd -- --aktualisieren "$PWD/bildschirm"
+      - name: Geänderte Räume auflisten, Bilder alt | neu zusammenstellen
+        run: |
+          git add -A tests/bildschirm/referenz
+          git diff --cached --no-renames --name-status -- tests/bildschirm/referenz > geaendert.txt
+          mkdir -p artefakt/einzeln
+          cp bildschirm/uebersicht_*.png artefakt/ 2>/dev/null || true
+          : > raeume.txt
+          while IFS=$'\t' read -r art pfad; do
+            raum="${pfad#tests/bildschirm/referenz/}"
+            raum="${raum%.png}"
+            name="$(echo "$raum" | tr '/' '_')"
+            case "$art" in
+              A) echo "neu:       $raum" >> raeume.txt ;;
+              D) echo "entfernt:  $raum" >> raeume.txt ;;
+              *) echo "geändert:  $raum" >> raeume.txt ;;
+            esac
+            # Alt aus dem letzten Commit, neu aus dem Arbeitsstand; fehlt eins, steht dort ein graues Feld
+            if git cat-file -e "HEAD:$pfad" 2>/dev/null; then
+              git show "HEAD:$pfad" > "artefakt/einzeln/${name}_alt.png"
+            else
+              convert -size 640x360 xc:gray30 "artefakt/einzeln/${name}_alt.png"
+            fi
+            if [ -f "$pfad" ]; then
+              cp "$pfad" "artefakt/einzeln/${name}_neu.png"
+            else
+              convert -size 640x360 xc:gray30 "artefakt/einzeln/${name}_neu.png"
+            fi
+            convert "artefakt/einzeln/${name}_alt.png" "artefakt/einzeln/${name}_neu.png" +append \
+              "artefakt/alt_neu_${name}.png"
+          done < geaendert.txt
+          cp raeume.txt artefakt/geaenderte_raeume.txt
+          anzahl=$(wc -l < raeume.txt)
+          echo "ANZAHL=$anzahl" >> "$GITHUB_ENV"
+          {
+            echo "## Screenshot-Referenzen auf \`$ZWEIG\`"
+            echo
+            if [ "$anzahl" -eq 0 ]; then
+              echo "Keine Referenz hat sich geändert."
+            else
+              echo "$anzahl Räume geändert (Bilder alt | neu im Artefakt **referenzen-alt-neu**):"
+              echo
+              echo '```'
+              cat raeume.txt
+              echo '```'
+              echo
+              echo "Bitte im PR nennen, welche Räume sich gewollt geändert haben."
+            fi
+          } >> "$GITHUB_STEP_SUMMARY"
+          cat raeume.txt
+      - name: Übersicht alt | neu hochladen
+        uses: actions/upload-artifact@v4
+        with:
+          name: referenzen-alt-neu
+          path: artefakt/
+          if-no-files-found: ignore
       - name: Geänderte Referenzen committen
         run: |
+          if [ "$ANZAHL" -eq 0 ]; then
+            echo "Keine Referenz hat sich geändert."
+            exit 0
+          fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add tests/bildschirm/referenz
-          if git diff --cached --quiet; then
-            echo "Keine Referenz hat sich geändert."
-          else
-            git commit -m "Screenshot-Referenzen unter Linux neu aufgenommen (Workflow)"
-            git push
-          fi
+          {
+            echo "Screenshot-Referenzen unter Linux neu aufgenommen (Workflow, $ANZAHL Räume)"
+            echo
+            echo "Geänderte Räume (Bilder alt | neu im Artefakt referenzen-alt-neu,"
+            echo "$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID):"
+            echo
+            cat raeume.txt
+          } > nachricht.txt
+          git commit -F nachricht.txt
+          git push origin "HEAD:$ZWEIG"
+          echo "COMMITTET=1" >> "$GITHUB_ENV"
+      - name: Prüfen auf dem neuen Stand starten
+        if: env.COMMITTET == '1'
+        run: gh workflow run pruefen.yml --ref "$ZWEIG"
