@@ -2778,71 +2778,276 @@
     1280,
     360
    ],
-   "hintergrund": "res://grafik/platzhalter/raum_stadtstrasse.png",
+   "hintergrund": "res://grafik/hintergruende/w3_bg_stadtstrasse_v01.png",
    "farbe": "#7fa36a",
    "laufbereich": [
     [
      8,
-     280
+     326
+    ],
+    [
+     1088,
+     326
+    ],
+    [
+     1108,
+     304
+    ],
+    [
+     1192,
+     304
+    ],
+    [
+     1210,
+     326
     ],
     [
      1272,
-     280
+     326
     ],
     [
      1272,
-     356
+     354
     ],
     [
      8,
-     356
+     354
     ]
    ],
    "marker": {
     "start": [
-     640,
-     320
+     200,
+     344
     ],
     "von_kueche_orakel": [
-     48,
-     320
+     520,
+     330
     ],
     "von_buero_50": [
-     1232,
-     320
+     1148,
+     312
     ],
     "von_widerstandsbasis": [
-     640,
-     320
+     200,
+     344
     ],
     "von_zelle": [
-     267,
-     320
+     200,
+     344
     ]
+   },
+   "tiefe": 0.69,
+   "skala": 0.8,
+   "effekte": [
+    {
+     "art": "bild",
+     "bild": "res://grafik/ambiente/w3_radiowecker_559.png",
+     "bilder": 2,
+     "pos": [
+      134,
+      298
+     ],
+     "fps": 2
+    },
+    {
+     "art": "bild",
+     "bild": "res://grafik/ambiente/w3_glastuer_redet.png",
+     "bilder": 4,
+     "pos": [
+      1197,
+      265
+     ],
+     "fps": 8,
+     "wenn": "W3_GLASTUER_REDET"
+    },
+    {
+     "art": "bild",
+     "bild": "res://grafik/ambiente/w3_auto_im_takt.png",
+     "bilder": 4,
+     "weg": [
+      [
+       -170,
+       304
+      ],
+      [
+       1290,
+       304
+      ]
+     ],
+     "tempo": 60,
+     "fps": 11,
+     "start": 1.0,
+     "pause": [
+      0.5,
+      0.5
+     ]
+    },
+    {
+     "art": "bild",
+     "bild": "res://grafik/ambiente/w3_auto_im_takt.png",
+     "bilder": 4,
+     "weg": [
+      [
+       -170,
+       304
+      ],
+      [
+       1290,
+       304
+      ]
+     ],
+     "tempo": 60,
+     "fps": 11,
+     "start": 8.33,
+     "pause": [
+      0.5,
+      0.5
+     ]
+    },
+    {
+     "art": "bild",
+     "bild": "res://grafik/ambiente/w3_auto_im_takt.png",
+     "bilder": 4,
+     "weg": [
+      [
+       -170,
+       304
+      ],
+      [
+       1290,
+       304
+      ]
+     ],
+     "tempo": 60,
+     "fps": 11,
+     "start": 15.67,
+     "pause": [
+      0.5,
+      0.5
+     ]
+    },
+    {
+     "art": "bild",
+     "bild": "res://grafik/ambiente/w3_passant_gehen.png",
+     "bilder": 8,
+     "weg": [
+      [
+       1190,
+       336
+      ],
+      [
+       -80,
+       336
+      ]
+     ],
+     "tempo": 45,
+     "fps": 10,
+     "skala": 0.71,
+     "start": 6.0,
+     "pause": [
+      14,
+      14
+     ]
+    },
+    {
+     "art": "bild",
+     "bild": "res://grafik/ambiente/w3_passant_gehen.png",
+     "bilder": 8,
+     "weg": [
+      [
+       1260,
+       336
+      ],
+      [
+       -10,
+       336
+      ]
+     ],
+     "tempo": 45,
+     "fps": 10,
+     "skala": 0.71,
+     "start": 6.0,
+     "pause": [
+      14,
+      14
+     ]
+    },
+    {
+     "art": "bild",
+     "bild": "res://grafik/ambiente/w3_passant_gehen.png",
+     "bilder": 8,
+     "weg": [
+      [
+       1330,
+       336
+      ],
+      [
+       60,
+       336
+      ]
+     ],
+     "tempo": 45,
+     "fps": 10,
+     "skala": 0.71,
+     "start": 6.0,
+     "pause": [
+      14,
+      14
+     ]
+    },
+    {
+     "art": "bild",
+     "bild": "res://grafik/ambiente/w3_vogelschwarm.png",
+     "bilder": 6,
+     "weg": [
+      [
+       -70,
+       70
+      ],
+      [
+       640,
+       46
+      ],
+      [
+       1350,
+       70
+      ]
+     ],
+     "tempo": 120,
+     "fps": 10,
+     "start": 3.0,
+     "pause": [
+      0.2,
+      0.2
+     ]
+    }
+   ],
+   "hintergrund_nach": {
+    "W3_NACHT": "res://grafik/hintergruende/w3_bg_stadtstrasse_nacht_v01.png"
    },
    "figuren": [
     {
      "id": "schmidt",
      "script_name": "Schmidt",
      "pos": [
-      267,
-      309
+      1050,
+      330
      ]
     },
     {
      "id": "tuer",
      "script_name": "Tuer",
      "pos": [
-      640,
-      309
+      1148,
+      300
      ]
     },
     {
      "id": "schwarze_katze",
      "script_name": "SchwarzeKatze",
      "pos": [
-      1013,
-      309
+      1300,
+      306
      ]
     }
    ],
@@ -2852,14 +3057,14 @@
      "script_name": "Himmel",
      "name_key": "UI_OBJ_HIMMEL",
      "rect": [
-      59,
-      40,
-      119,
-      64
+      290,
+      0,
+      690,
+      60
      ],
      "gehe": [
-      117,
-      313
+      640,
+      330
      ],
      "ansehen": [
       {
@@ -2884,14 +3089,14 @@
      "script_name": "Baeume",
      "name_key": "UI_OBJ_BAEUME",
      "rect": [
-      188,
-      40,
-      119,
-      64
+      690,
+      145,
+      320,
+      150
      ],
      "gehe": [
-      247,
-      313
+      850,
+      330
      ],
      "ansehen": [
       {
@@ -2916,14 +3121,14 @@
      "script_name": "Haeuser",
      "name_key": "UI_OBJ_HAEUSER",
      "rect": [
-      317,
-      40,
-      119,
-      64
+      285,
+      62,
+      405,
+      175
      ],
      "gehe": [
-      376,
-      313
+      480,
+      330
      ],
      "ansehen": [
       {
@@ -2948,14 +3153,14 @@
      "script_name": "Autos",
      "name_key": "UI_OBJ_AUTOS",
      "rect": [
-      447,
-      40,
-      119,
-      64
+      588,
+      244,
+      214,
+      54
      ],
      "gehe": [
-      505,
-      313
+      690,
+      330
      ],
      "ansehen": [
       {
@@ -2980,14 +3185,14 @@
      "script_name": "Auto",
      "name_key": "UI_OBJ_AUTO",
      "rect": [
-      576,
-      40,
-      119,
-      64
+      318,
+      242,
+      104,
+      58
      ],
      "gehe": [
-      635,
-      313
+      370,
+      330
      ],
      "ansehen": [],
      "benutzen": [
@@ -3005,14 +3210,14 @@
      "script_name": "Radiowecker",
      "name_key": "UI_OBJ_RADIOWECKER",
      "rect": [
-      705,
-      40,
-      119,
-      64
+      108,
+      262,
+      52,
+      18
      ],
      "gehe": [
-      764,
-      313
+      150,
+      334
      ],
      "ansehen": [
       {
@@ -3050,14 +3255,14 @@
      "script_name": "KlingelnderRadiowecker",
      "name_key": "UI_OBJ_KLINGELNDER_RADIOWECKER",
      "rect": [
-      835,
-      40,
-      119,
-      64
+      110,
+      280,
+      48,
+      22
      ],
      "gehe": [
-      893,
-      313
+      150,
+      334
      ],
      "ansehen": [
       {
@@ -3092,14 +3297,14 @@
      "script_name": "Gehweg",
      "name_key": "UI_OBJ_GEHWEG",
      "rect": [
-      964,
-      40,
-      119,
-      64
+      400,
+      336,
+      480,
+      18
      ],
      "gehe": [
-      1023,
-      313
+      640,
+      344
      ],
      "ansehen": [
       {
@@ -3124,14 +3329,14 @@
      "script_name": "Sonne",
      "name_key": "UI_OBJ_SONNE",
      "rect": [
-      1093,
-      40,
-      119,
-      64
+      800,
+      0,
+      180,
+      24
      ],
      "gehe": [
-      1152,
-      313
+      880,
+      330
      ],
      "ansehen": [
       {
@@ -3160,14 +3365,14 @@
      "ziel": "kueche_orakel",
      "name_key": "UI_RAUM_KUECHE_ORAKEL",
      "rect": [
-      8,
-      140,
-      36,
-      140
+      500,
+      205,
+      40,
+      75
      ],
      "gehe": [
-      48,
-      320
+      520,
+      330
      ],
      "erreichbar_ab": "R3b",
      "ansehen": [
@@ -3212,14 +3417,14 @@
      "ziel": "buero_50",
      "name_key": "UI_RAUM_BUERO_50",
      "rect": [
-      1236,
-      140,
-      36,
-      140
+      1112,
+      195,
+      73,
+      105
      ],
      "gehe": [
-      1232,
-      320
+      1148,
+      306
      ],
      "erreichbar_ab": "R5",
      "ansehen": [
@@ -5507,43 +5712,95 @@
     640,
     360
    ],
-   "hintergrund": "res://grafik/platzhalter/raum_kern.png",
+   "hintergrund": "res://grafik/hintergruende/w3_bg_kern_v01.png",
    "farbe": "#2c2c3c",
    "laufbereich": [
     [
-     8,
-     280
+     60,
+     330
     ],
     [
-     632,
-     280
+     140,
+     312
     ],
     [
-     632,
+     300,
+     304
+    ],
+    [
+     520,
+     312
+    ],
+    [
+     600,
+     330
+    ],
+    [
+     600,
      356
     ],
     [
-     8,
+     60,
      356
     ]
    ],
    "marker": {
     "start": [
-     320,
-     320
+     200,
+     336
     ],
     "von_testkammer_3": [
-     48,
-     320
+     90,
+     340
     ]
+   },
+   "tiefe": 0.9,
+   "skala": 0.8,
+   "effekte": [
+    {
+     "art": "bild",
+     "bild": "res://grafik/ambiente/w3_kern_lichtband.png",
+     "bilder": 8,
+     "pos": [
+      349,
+      260
+     ],
+     "fps": 9
+    },
+    {
+     "art": "bild",
+     "bild": "res://grafik/ambiente/w3_kern_hitzeflimmern.png",
+     "bilder": 4,
+     "pos": [
+      320,
+      186
+     ],
+     "fps": 8,
+     "sonst": "W3_ZELLE_KALT"
+    },
+    {
+     "art": "bild",
+     "bild": "res://grafik/ambiente/w3_kern_kabel_puls.png",
+     "bilder": 6,
+     "pos": [
+      350,
+      350
+     ],
+     "fps": 8,
+     "sonst": "R10"
+    }
+   ],
+   "hintergrund_nach": {
+    "W3_ZELLE_KALT": "res://grafik/hintergruende/w3_bg_kern_vereist_v01.png",
+    "R11": "res://grafik/hintergruende/w3_bg_kern_sockel_leer_v01.png"
    },
    "figuren": [
     {
      "id": "mutti",
      "script_name": "Mutti",
      "pos": [
-      320,
-      309
+      470,
+      300
      ]
     }
    ],
@@ -5553,14 +5810,14 @@
      "script_name": "Kabel",
      "name_key": "UI_OBJ_KABEL",
      "rect": [
-      59,
-      40,
-      167,
-      64
+      120,
+      280,
+      140,
+      30
      ],
      "gehe": [
-      141,
-      313
+      190,
+      334
      ],
      "ansehen": [
       {
@@ -5585,14 +5842,14 @@
      "script_name": "Sockel",
      "name_key": "UI_OBJ_SOCKEL",
      "rect": [
-      236,
-      40,
-      167,
-      64
+      298,
+      248,
+      46,
+      80
      ],
      "gehe": [
-      319,
-      313
+      280,
+      336
      ],
      "ansehen": [
       {
@@ -5619,14 +5876,14 @@
      "script_name": "Streifen",
      "name_key": "UI_OBJ_STREIFEN",
      "rect": [
-      413,
-      40,
-      167,
-      64
+      96,
+      228,
+      420,
+      20
      ],
      "gehe": [
-      496,
-      313
+      320,
+      336
      ],
      "ansehen": [
       {
@@ -5653,16 +5910,16 @@
      "script_name": "Energiezelle",
      "name_key": "UI_OBJ_ENERGIEZELLE",
      "rect": [
-      133,
-      260,
+      306,
+      196,
       20,
-      16
+      70
      ],
      "gehe": [
-      143,
-      313
+      290,
+      336
      ],
-     "textur": "res://grafik/platzhalter/prop_energiezelle.png",
+     "textur": "res://grafik/props/energiezelle.png",
      "gegenstand": "energiezelle",
      "ansehen": [
       {
@@ -5711,14 +5968,14 @@
      "ziel": "testkammer_3",
      "name_key": "UI_RAUM_TESTKAMMER_3",
      "rect": [
-      8,
+      18,
       140,
-      36,
-      140
+      62,
+      190
      ],
      "gehe": [
-      48,
-      320
+      90,
+      340
      ],
      "erreichbar_ab": "R9c",
      "ansehen": []

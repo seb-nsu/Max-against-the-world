@@ -62,7 +62,7 @@
   },
   "kehren": {
    "von": 8,
-   "bilder": 3,
+   "bilder": 5,
    "ms": 120,
    "schleife": false,
    "folge": [
@@ -73,31 +73,33 @@
     2,
     2,
     2,
+    3,
+    3,
+    3,
     2,
     2,
     2,
+    3,
+    3,
+    3,
     2,
     2,
     2,
+    3,
+    3,
+    3,
     2,
     2,
-    2,
-    2,
-    2,
-    2,
-    2,
-    2,
-    2,
-    2,
-    2,
-    1,
-    1,
+    4,
+    4,
+    4,
+    4,
     0,
     0
    ]
   },
   "ofen": {
-   "von": 11,
+   "von": 13,
    "bilder": 3,
    "ms": 120,
    "schleife": false,
@@ -129,7 +131,7 @@
    ]
   },
   "talk": {
-   "von": 14,
+   "von": 16,
    "bilder": 2,
    "ms": 120,
    "schleife": false,
@@ -149,7 +151,7 @@
    ]
   },
   "sparschwein": {
-   "von": 16,
+   "von": 18,
    "bilder": 3,
    "ms": 120,
    "schleife": false,
@@ -180,7 +182,7 @@
    ]
   },
   "stirn": {
-   "von": 19,
+   "von": 21,
    "bilder": 3,
    "ms": 120,
    "schleife": false,
@@ -218,7 +220,7 @@
    ]
   },
   "zum_regal": {
-   "von": 22,
+   "von": 24,
    "bilder": 3,
    "ms": 120,
    "schleife": false,

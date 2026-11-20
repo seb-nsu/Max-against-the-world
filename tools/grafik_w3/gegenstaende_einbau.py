@@ -25,6 +25,8 @@ ICONS = {   # Quelle → Ziel (ohne .png)
 # omas_kekse_hundekuchen.png gibt es schon (Nacht-Bilder, PR #25) und bleibt
 PROPS = ["gummihuhn", "kaffeetasse", "schmidts_akte", "telefonbuchseite", "sonnenbrille"]
 # die Sonnenbrille ist weltenübergreifend und hat ihr Icon schon (game/grafik/gegenstaende/sonnenbrille.png)
+# im Hintergrund schon gemalt (Kern: Zelle auf dem Sockel, glühend oder vereist): Prop bleibt durchsichtig
+GEMALT = ["energiezelle"]
 
 
 def verkleinern(bild, groesse):
@@ -48,7 +50,10 @@ def main():
         if not datei.exists():
             datei = WURZEL / f"game/grafik/gegenstaende/{p}.png"
         verkleinern(Image.open(datei).convert("RGBA"), platz.size).save(WURZEL / f"game/grafik/props/{p}.png")
-    print(len(ICONS), "Icons,", len(PROPS), "Props")
+    for p in GEMALT:
+        platz = Image.open(WURZEL / f"game/grafik/platzhalter/prop_{p}.png")
+        Image.new("RGBA", platz.size).save(WURZEL / f"game/grafik/props/{p}.png")
+    print(len(ICONS), "Icons,", len(PROPS) + len(GEMALT), "Props")
 
 
 if __name__ == "__main__":

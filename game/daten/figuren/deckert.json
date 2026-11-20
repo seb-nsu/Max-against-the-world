@@ -1,6 +1,6 @@
 {
  "bild": [
-  99,
+  107,
   217
  ],
  "animationen": {
@@ -148,8 +148,24 @@
     0
    ]
   },
-  "stempeln": {
+  "seitschritt": {
    "von": 28,
+   "bilder": 2,
+   "ms": 120,
+   "schleife": false,
+   "folge": [
+    0,
+    0,
+    1,
+    1,
+    1,
+    1,
+    0,
+    0
+   ]
+  },
+  "stempeln": {
+   "von": 30,
    "bilder": 3,
    "ms": 120,
    "schleife": false,

@@ -387,7 +387,9 @@ func _partner_folgen(delta: float) -> void:
 ## durchs Bild ziehen (nach links gespiegelt, hin und zurück im Wechsel mit „zurueck: true“), kreis
 ## [mx, my, rx, ry, sekunden] für kreisende Vögel, baseline (y für die Zeichenreihenfolge mit den
 ## Figuren, sonst der Fußpunkt), spiegeln, z, deckung (0 bis 1), an (nur solange das Prop
-## Props/<an> zu sehen ist).
+## Props/<an> zu sehen ist), wenn/sonst (nur solange die Bedingung gilt bzw. nicht gilt; Rätsel-ID,
+## Schalter oder „A+B“ wie bei hintergrund_nach), skala (Größe wie Figuren an dieser Stelle),
+## start (Sekunden bis zum ersten Lauf statt zufällig; gleiche Werte laufen im Gleichschritt).
 ## Im Testmodus ohne Bewegung (Bildvergleich).
 var _effekte: Array = []
 var _effekt_zeit := 0.0
@@ -400,7 +402,7 @@ func _effekte_setzen() -> void:
 		if e.art == "bild":
 			var sp := _bildfolge_anlegen(e)
 			if sp:
-				_effekte.append([e, sp, randf_range(0.5, 4.0), {bild = 0.0, lauf = e.get("ablauf", "schleife") == "schleife" and not e.has("weg"),
+				_effekte.append([e, sp, float(e.get("start", randf_range(0.5, 4.0))), {bild = 0.0, lauf = e.get("ablauf", "schleife") == "schleife" and not e.has("weg"),
 					t = 0.0, hin = true}])
 			continue
 		var n := Node2D.new()
@@ -487,6 +489,7 @@ func _bildfolge_anlegen(e: Dictionary) -> Sprite2D:
 	sp.z_index = int(e.get("z", 0))
 	sp.modulate.a = float(e.get("deckung", 1.0))
 	sp.flip_h = e.get("spiegeln", false)
+	sp.scale = Vector2.ONE * float(e.get("skala", 1.0))   # Figuren als Kulisse in Raumgröße
 	get_node("Props").add_child(sp)
 	var start: Array = e.get("pos", [0, 0])
 	if e.has("weg"):
@@ -514,6 +517,16 @@ func _bildfolge_bewegen(e: Dictionary, sp: Sprite2D, eintrag: Array, delta: floa
 	var z: Dictionary = eintrag[3]
 	var fps := float(e.get("fps", 8.0))
 	var schleife: bool = e.get("ablauf", "schleife") == "schleife"
+	if e.has("wenn") or e.has("sonst"):
+		# Nur solange eine Bedingung gilt („wenn“) oder nicht gilt („sonst“): Rätsel-ID, Schalter
+		# oder „A+B“ wie bei hintergrund_nach (Radiowecker klingelt erst nach dem Tausch)
+		var gilt := (not e.has("wenn") or _bedingung_erfuellt(String(e.wenn))) \
+			and (not e.has("sonst") or not _bedingung_erfuellt(String(e.sonst)))
+		if not gilt:
+			sp.visible = false
+			return
+		if schleife and not e.has("weg") and not e.has("kreis"):
+			sp.visible = true
 	if e.has("an"):
 		# Nur solange ein Prop im Raum zu sehen ist (Tintenfisch im Netz, bis Max ihn nimmt)
 		var ziel := get_node_or_null("Props/" + String(e.an)) as CanvasItem

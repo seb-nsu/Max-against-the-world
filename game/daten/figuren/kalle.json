@@ -124,7 +124,7 @@
   },
   "kabel": {
    "von": 15,
-   "bilder": 3,
+   "bilder": 5,
    "ms": 120,
    "schleife": false,
    "folge": [
@@ -138,26 +138,27 @@
     2,
     2,
     2,
+    3,
+    3,
+    3,
     2,
     2,
     2,
+    3,
+    3,
+    3,
     2,
     2,
-    2,
-    2,
-    2,
-    2,
-    2,
-    2,
-    1,
-    1,
+    4,
+    4,
+    4,
     0,
     0,
     0
    ]
   },
   "lachen": {
-   "von": 18,
+   "von": 20,
    "bilder": 3,
    "ms": 120,
    "schleife": false,
@@ -189,7 +190,7 @@
    ]
   },
   "tabelle": {
-   "von": 21,
+   "von": 23,
    "bilder": 3,
    "ms": 120,
    "schleife": false,
@@ -227,7 +228,7 @@
    ]
   },
   "tippen": {
-   "von": 24,
+   "von": 26,
    "bilder": 3,
    "ms": 120,
    "schleife": false,
@@ -269,7 +270,7 @@
    ]
   },
   "zeigen": {
-   "von": 27,
+   "von": 29,
    "bilder": 3,
    "ms": 120,
    "schleife": false,

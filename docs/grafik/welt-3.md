@@ -48,6 +48,8 @@ Welt 3 hat drei klar unterscheidbare Looks, damit der Spieler beim Springen zwis
 | Kühlung | Eimer und Pfütze kommen als ganzes Rechteck aus der Variante | Die Farbdifferenz fand den Eimer nur in Stücken |
 | Büroturm, 50. Stock | Keine Reihe gleicher Türen im Bild; die Klickfläche „Türen“ liegt auf den Türen hinter der Glaswand, der Ausgang ist der Aufzug | Gemini hat den Flur anders gemalt |
 | Testkammern 1 bis 3 | M.U.T.T.I. ist dort unsichtbar und spricht aus dem Lautsprecher (Kammer 2 hat dafür eine eigene Klickfläche), Pixel aus Lautsprecher oder Terminal | Sie hat in den Kammern keinen Körper |
+| Stadtstraße | Vierte Wolke rechts entfernt (Himmel aus der Umgebung, Tag und Nacht); Raum-Skala 0,8 vorn, Tiefe 0,69, damit Max an der Glastür auf 104 px schrumpft; Passanten, rote Autos und Vogelschwarm laufen als Effekte nach `W3-R06_platzierung.json`, die schwarze Katze geht als Figur (`welt_3.gd`, alle 20 s dieselbe Strecke) | Skript: „Dieselbe Wolke, dreimal“; die Katze bleibt anklickbar |
+| Kern von M.U.T.T.I. | Die Energiezelle ist im Hintergrund gemalt, das Prop ist durchsichtig und dient nur zum Nehmen; M.U.T.T.I. hängt als Figur rechts | Zelle wechselt mit den Varianten (glühend, vereist, Sockel leer) |
 | Code-Sicht | Kein eigenes Bild: grüne Umrisse aus dem jeweiligen Hintergrund, die Wörter auf den Etiketten setzt `welt_3.gd` aus den Tausch-Texten | Übersetzbar, passt immer zum Raum |
 
 ## Prompts

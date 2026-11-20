@@ -29,6 +29,7 @@ const ZEILE := {
 	"W3_TEST_DEC_0210": ["DEC", "notieren", "mit"],
 	"W3_TEST_DEC_0310": ["DEC", "stempeln", "vor"],           # Stempel auf Max' Handrücken
 	"W3_TEST_MAX_0320": ["MAX", "stempel_ansehen", "vor"],
+	"W3_TEST_DEC_0330": ["DEC", "seitschritt", "mit"],        # tritt zur Seite
 	# Apothekengasse (Rätsel 3)
 	"W3_APO_MOR_0420": ["MOR", "kekse_reichen", "vor"],
 	"W3_APO_MOR_0440": ["MOR", "schulterzucken", "mit"],

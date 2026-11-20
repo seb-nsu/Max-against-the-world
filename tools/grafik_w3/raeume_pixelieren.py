@@ -9,6 +9,7 @@ dort aus der Variante übernommen (lessons-learned.md, Zustände und Varianten).
 Aufruf: python3 tools/grafik_w3/raeume_pixelieren.py <ordner mit W3-R*.jpg> <ziel: game/grafik/hintergruende>
         [--masken <ordner>]   schreibt die Masken als PNG zur Kontrolle
 """
+import io
 import sys
 from pathlib import Path
 
@@ -21,6 +22,8 @@ from pixelieren import farben_32, palette_finden, verkleinern  # noqa: E402
 # Raum: (Breite, Grundbild, {Ausgabe: Quelle}, {Kombination: [Varianten, übereinandergelegt]})
 RAEUME = {
     "unterstadt_strasse": (1280, "W3-R01_unterstadt", {}, {}),
+    "stadtstrasse": (1280, "W3-R06_stadtstrasse_tag", {}, {}),
+    "stadtstrasse_nacht": (1280, "W3-R06b_stadtstrasse_nacht", {}, {}),   # eigenes Bild, eigene Palette
     "apothekengasse": (1280, "W3-R02_apothekengasse", {"faecher_offen": "W3-R02b_apothekengasse_faecher_offen"}, {}),
     "widerstandsbasis": (1280, "W3-R03_basis", {"schnee": "W3-R03b_basis_schnee",
                                                 "kaffee": "W3-R03c_basis_schnee_pfuetze_pixel"},
@@ -45,6 +48,12 @@ BEREICHE = {
     ("testkammer_1", "offen"): [[510, 100, 60, 200]],
     ("testkammer_2", "laser_gestoert"): [[135, 175, 375, 25]],
     ("testkammer_3", "offen"): [[510, 100, 70, 220]],
+}
+# Retusche im Original vor dem Verkleinern: Rechteck [x, y, b, h] mit dem Himmel der Zeile füllen
+# (Stadtstraße: die vierte Wolke rechts muss weg, „dieselbe Wolke, dreimal“, W3_SIM_MAX_0040)
+HIMMEL = {
+    "W3-R06_stadtstrasse_tag": [[2700, 30, 294, 135]],
+    "W3-R06b_stadtstrasse_nacht": [[2700, 30, 294, 135]],
 }
 SCHWELLE = 42      # Farbabstand (RGB), ab dem ein Pixel als geändert gilt
 MIN_FLECK = 40     # kleinere zusammenhängende Flecken sind Rauschen (Gemini ändert Kleinigkeiten)
@@ -77,6 +86,20 @@ def _flecken(m):
     return out
 
 
+def laden(datei):
+    """Original laden; Rechtecke aus HIMMEL mit der Himmelsfarbe links daneben füllen."""
+    if datei.stem not in HIMMEL:
+        return datei
+    a = np.asarray(Image.open(datei).convert("RGB")).copy()
+    for x, y, w, h in HIMMEL[datei.stem]:
+        probe = a[y:y + h, x - 24:x - 4].astype(np.float32).mean(1)        # Himmel je Zeile
+        a[y:y + h, x:x + w] = probe[:, None, :].astype(np.uint8)
+    puffer = io.BytesIO()
+    Image.fromarray(a).save(puffer, "PNG")
+    puffer.seek(0)
+    return puffer
+
+
 def maske(a, b):
     d = np.sqrt(((a.astype(np.float32) - b.astype(np.float32)) ** 2).sum(-1))
     m = d > SCHWELLE
@@ -107,9 +130,9 @@ def main():
         if nur and raum not in nur:
             continue
         H = 360
-        klein = {"": verkleinern(quelle / f"{grund}.jpg", W, H)}
+        klein = {"": verkleinern(laden(quelle / f"{grund}.jpg"), W, H)}
         for name, datei in varianten.items():
-            klein[name] = verkleinern(quelle / f"{datei}.jpg", W, H)
+            klein[name] = verkleinern(laden(quelle / f"{datei}.jpg"), W, H)
         rng = np.random.default_rng(1)
         px = np.concatenate([k.reshape(-1, 3)[rng.choice(W * H, 60000, replace=False)] for k in klein.values()])
         pal, _ = palette_finden(px.astype(np.float32), 32)

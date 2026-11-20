@@ -1,6 +1,6 @@
 {
  "bild": [
-  101,
+  153,
   217
  ],
  "animationen": {
@@ -73,7 +73,7 @@
   },
   "fangen": {
    "von": 13,
-   "bilder": 3,
+   "bilder": 4,
    "ms": 120,
    "schleife": false,
    "folge": [
@@ -84,17 +84,20 @@
     2,
     2,
     2,
-    2,
-    2,
-    2,
-    2,
-    2,
-    2,
-    2,
-    2,
-    2,
-    2,
-    2,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
     1,
     1,
     0,
@@ -103,13 +106,13 @@
    ]
   },
   "walk": {
-   "von": 16,
+   "von": 17,
    "bilder": 8,
    "ms": 100,
    "schleife": true
   },
   "haende_falten": {
-   "von": 24,
+   "von": 25,
    "bilder": 3,
    "ms": 120,
    "schleife": false,
@@ -152,8 +155,8 @@
    ]
   },
   "kater_halten": {
-   "von": 27,
-   "bilder": 4,
+   "von": 28,
+   "bilder": 5,
    "ms": 120,
    "schleife": false,
    "folge": [
@@ -164,33 +167,32 @@
     2,
     2,
     2,
-    2,
-    2,
-    2,
     3,
     3,
-    3,
-    3,
-    3,
-    3,
-    3,
-    3,
-    3,
-    3,
-    3,
-    3,
-    3,
-    3,
-    3,
-    3,
-    3,
-    3,
-    3,
-    3
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4
    ]
   },
   "kekse_reichen": {
-   "von": 31,
+   "von": 33,
    "bilder": 3,
    "ms": 120,
    "schleife": false,
@@ -225,7 +227,7 @@
    ]
   },
   "leere_hand": {
-   "von": 34,
+   "von": 36,
    "bilder": 3,
    "ms": 120,
    "schleife": false,
@@ -260,7 +262,7 @@
    ]
   },
   "schild_umdrehen": {
-   "von": 37,
+   "von": 39,
    "bilder": 3,
    "ms": 120,
    "schleife": false,
@@ -293,7 +295,7 @@
    ]
   },
   "schild_zeigen": {
-   "von": 40,
+   "von": 42,
    "bilder": 3,
    "ms": 120,
    "schleife": false,
@@ -328,7 +330,7 @@
    ]
   },
   "schulterzucken": {
-   "von": 43,
+   "von": 45,
    "bilder": 3,
    "ms": 120,
    "schleife": false,

@@ -404,6 +404,36 @@ func _figuren_anwenden(raum: CQRaum) -> void:
 			pos = raum.get_marker_position(sn)
 		Spiel.figur_hier(sn, plan[sn], pos)
 	_max_gang()
+	if rid == "stadtstrasse":
+		_katze_schleife()
+
+
+## Die schwarze Katze der Simulation läuft immer gleich über die Bordsteinkante, von rechts nach
+## links, alle 20 Sekunden (Déjà-vu, W3_SIM_MAX_0040; Platzierung W3-R06_platzierung.json)
+const KATZE_WEG := [1300.0, -60.0, 306.0]   # von x, nach x, Fußlinie
+var _katze_laeuft := false
+
+
+func _katze_schleife() -> void:
+	if _katze_laeuft or Spiel.testmodus:
+		return
+	_katze_laeuft = true
+	while _raum_id() == "stadtstrasse":
+		var k: PopochiuCharacter = C.get_runtime_character("SchwarzeKatze")
+		if not is_instance_valid(k) or not k.is_inside_tree():
+			break
+		k.position = Vector2(KATZE_WEG[0], KATZE_WEG[2])
+		k.update_scale()
+		k.face_left()
+		k.play_animation("walk")
+		var tw := k.create_tween()
+		tw.tween_property(k, "position:x", KATZE_WEG[1], (KATZE_WEG[0] - KATZE_WEG[1]) / 55.0)
+		await tw.finished
+		if not is_instance_valid(k):
+			break
+		k._play_idle()
+		await Spiel.get_tree().create_timer(20.0).timeout
+	_katze_laeuft = false
 
 
 ## Nach dem Hexenschuss hinkt Max bis zum Ende der Welt (Hand am Rücken, W3-B47)
