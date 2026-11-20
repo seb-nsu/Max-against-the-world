@@ -17,3 +17,8 @@ Ablauf: Stand-Sprite mit `magenta_frei.py` (rand 1000) und `tools/figur.py sprit
 Posenbogen mit `magenta_frei.py` (rand 0) und `bew_w3.py ... --dick 0 --linien 0.4 --saett 1.3`;
 Läufe mit `3d\skripte\bein_rig2.py` und Max' Gang-Winkeln `3d\max\teile\gang2_arme.json` (Zyklus 5 bis 32, `zentrieren: true`).
 Katze: `blender -b --python katze_lauf.py -- <render>` liefert die Beinstellungen, Gemini malt jedes Bild nach (nur Konzeptblatt und Posenvorlage anhängen), dann `magenta_frei.py` und `katze_gemalt.py`. `katze_pixel.py` (direkt aus dem Render) wirkte zu steif und ist nur noch Ersatzweg.
+
+Phase 2: `quellen_phase2.txt` (welche Bögen mit welchen Schaltern von `bew_w3.py --probe` umgerechnet werden),
+`folgen_phase2.txt` und `folgen_aus_quellen.py` (Bewegungen aus Pose, Halbpose und Zusatzbogen; hängende Figuren mit Anker „oben“),
+`effekte_code.py` (Regen, Schnee, Hologramm, Verwandlung) und `effekte_bild.py` (Portal, Auto, Ratte, Vogelschwarm, Hausmeister rollen).
+`bew_w3.py` kennt zusätzlich `--farbtausch VON:NACH:-N` (nur die untersten N Zeilen).

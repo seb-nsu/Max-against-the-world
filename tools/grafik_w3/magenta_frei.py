@@ -3,7 +3,7 @@
 Aufruf: py -3 magenta_frei.py quelle ziel.png [rand]
 rand (Standard 1000): Pixel links und rechts anfügen. Konzeptblätter mit breiten Figuren brauchen das, sonst hält
 tools/figur.py den Oberkörper für eine Bodenlinie (Zeile über die halbe Bildbreite) und schneidet die Figur.
-Für Posenbögen rand 0."""
+Für Posenbögen rand 0. Viertes Argument „ohne“: keinen Magenta-Stich entfärben (Figuren mit echtem Rosa oder Lila)."""
 import sys
 import numpy as np
 from PIL import Image
@@ -21,6 +21,8 @@ P = int(sys.argv[3]) if len(sys.argv) > 3 else 1000
 out = np.pad(out, ((0, 0), (P, P), (0, 0)))
 Image.fromarray(out, "RGBA").save(sys.argv[2])
 # Magenta-Stich in durchscheinenden Teilen (Poncho, Regentropfen) entfärben: rosa -> kühles Grau-Blau
+if len(sys.argv) > 4 and sys.argv[4] == "ohne":
+    sys.exit(0)
 o = np.asarray(Image.open(sys.argv[2])).copy()
 r, g, b = (o[..., i].astype(int) for i in range(3))
 stich = (o[..., 3] > 0) & (r - g > 25) & (b - g > 25) & (np.abs(r - b) < 90)

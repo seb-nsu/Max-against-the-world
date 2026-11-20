@@ -383,7 +383,7 @@ Komplett-Review von Prolog, Welt 1 und Welt 2 mit sieben Prüfrollen (Bericht: `
 
 - **Konzeptblätter mit breiten Figuren** (Schild, Mantel, Schirm über die halbe Bildbreite) schneidet `tools/figur.py sprite` falsch zu: Die Bodenlinien-Erkennung hält den Oberkörper für eine Linie. Vorher mit `tools/grafik_w3/magenta_frei.py` freistellen und seitlich polstern.
 - **Endesga-Zwang macht dunkelgraue Hosen grün.** Für Welt-3-Figuren `--palette keine`; die Farben bleiben nah am Konzept.
-- **Durchscheinendes auf Magenta** (Poncho, Tropfen, Dampf) hat einen Rosastich; vor dem Umrechnen entfärben.
+- **Durchscheinendes auf Magenta** (Poncho, Tropfen, Dampf, Hologramm) hat einen Rosastich; vor dem Umrechnen entfärben, aber nur bei solchen Figuren: Die Entfärbung trifft auch echtes Rosa und Lila (Lockenwickler, Plüschpantoffeln, lila Haare). `magenta_frei.py … ohne` schaltet sie ab.
 - **Posen und Stand gleich umrechnen.** Das Stand-Sprite entsteht mit Linienverstärkung 0,4; `bew.py` braucht dann `--linien 0.4 --dick 0`, sonst zerfallen Innenlinien in Striche (mit `--dick=-1` werden sie zu dick).
 - **Max-Posenbögen nicht mit dem alten Max-Konzept (`concepts/w0_concept_max.png`) bestellen**: dunkle Haare, anderer Strich. Besser das saubere Welt-2-Blatt `3d\max\bewegungen\_kopf_kratzen_bogen_sauber.png` anhängen und „never black hair“ dazuschreiben.
 - **Gemini malt bei kleinen Figuren gern mehr Posen als bestellt** (sechs statt vier, Zwischenpose doppelt). Mit `--posen 6 --nehmen 1,3,4,6` die richtigen auswählen statt neu zu bestellen.
@@ -392,3 +392,13 @@ Komplett-Review von Prolog, Welt 1 und Welt 2 mit sieben Prüfrollen (Bericht: `
 - **Gesten brauchen Halbposen.** Stand direkt neben Zielpose springt. Je Posenbogen ein Zwischenbogen „halfway between the neutral pose and the target pose, clearly less extreme“ mit Konzeptblatt und Posenbogen als Vorlage; etwa drei von vier Halbposen taugen, die übrigen liegen nahe an der Zielpose. Folge Stand, Halbpose ×2, Pose, Halbpose ×2, Stand (`tools/grafik_w3/folgen_mit_zwischenbildern.py`).
 - **Blender im Hintergrundmodus**: beim Umhängen an Gelenk-Empties vorher `view_layer.update()`, sonst geht die Skalierung verloren. Workbench mit flachem Licht und ohne Kantenglättung gibt saubere Farbflächen zum Pixelieren.
 - **Größenprüfung**: Rumpfbreite taugt nicht, wenn Arme vor dem Körper sind. Kopf- und Beinbreite sind die besseren Messstellen (`tools/grafik_w3/groesse_pruefen.py`).
+
+### Phase 2 (20. November 2026)
+
+- **12 Farben sind zu wenig** für Figuren mit kleinen bunten Details (M.U.T.T.I.s Auge und Blumen, Pixels Augen, rosa Pantoffeln): Sie gehen in Weiß und Grau auf. Für Welt 3 `--farben 24`.
+- **Helligkeitsangleich bei Max (`--hist`) färbt die roten Schuhe braun.** `bew_w3.py --farbtausch 733e39:e43b44:-14,e8b796:ffffff:-14` tauscht nur in den untersten 14 Zeilen zurück.
+- **Halbposen-Bögen lohnen sich nur bei großen Bewegungen.** Bei Gesten nahe am Stand (Kalle 1, Hausmeister, Max Basis) hat Gemini meist die Zielposen kopiert. Max-Bögen liefern oft von selbst Zwischenposen (5 bis 6 Figuren statt 4), die man direkt nutzen kann.
+- **Gemini verweigert manche harmlosen Bögen** (Hausmeister-Arm im Kreis: zweimal leere Antwort). Dasselbe Modell über Meshy (4 Credits) hat es sofort gemalt.
+- **Pixel-Posen am Spiel-Sprite ausrichten**: Mit der Median-Höhe wurden die Posen 25 % zu groß. `--ref-pose` auf eine Sitzpose setzen; rot gewordene Augen mit `--kragen e43b44:e43b44` auf Bernstein.
+- **Parallele Gemini-Aufrufe** brachen bei Netzschwankungen ab (Zeitüberschreitung, DNS). Eine Zeitüberschreitung kann trotzdem ein Bild speichern: vor dem Wiederholen Datei und `ki_protokoll.csv` prüfen.
+- **Raumabhängige Effekte erst nach dem Hintergrund**: 13 Bewegungen (Nudeltopf, Kopierer, Automat …) brauchen den fertigen Raumausschnitt und bleiben bis dahin offen.

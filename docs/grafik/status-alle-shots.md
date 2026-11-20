@@ -256,7 +256,7 @@ Stand 15. November 2026, Zweig-Angaben am 17. November auf main nachgeführt (be
 
 ## Welt 3
 
-Angelegt am 18. November 2026 aus `fertige-prompts/welt-3.md` (111 IDs). Noch kein Bild im Spiel. Stand 20. November 2026: alle 27 Konzeptblätter liegen unter `welt3/konzept/` (Name = Nummer), Phase 1 (Unterstadt) gebaut (Nachbesserung 20.11. nach Sebastians Rückmeldung: Halbposen als Zwischenbilder in allen Gesten, Katze neu gemalt statt gerendert): Stand-Sprites der Unterstadt-Figuren, Posenbögen W3-P01, P08, P09, P16 bis P18, P23 bis P25, Bewegungen W3-B01, B19 bis B21, dazu die Läufe von Morphäus und Deckert (Teile-Rig, `welt3/bewegungen/morphaeus_gehen` und `deckert_gehen`). Prüfbilder unter `welt3/pruefung/`. Arbeitsdateien und Befehlsliste unter `E:\Game Engine\Grafiken\3d\welt3\` (`liste_phase1.txt`). Reihenfolge der Grundlagenbilder steht oben in `fertige-prompts/welt-3.md`.
+Angelegt am 18. November 2026 aus `fertige-prompts/welt-3.md` (111 IDs). Noch kein Bild im Spiel. Stand 20. November 2026: alle 27 Konzeptblätter liegen unter `welt3/konzept/` (Name = Nummer), Phase 1 (Unterstadt) gebaut (Nachbesserung 20.11. nach Sebastians Rückmeldung: Halbposen als Zwischenbilder in allen Gesten, Katze neu gemalt statt gerendert): Stand-Sprites der Unterstadt-Figuren, Posenbögen W3-P01, P08, P09, P16 bis P18, P23 bis P25, Bewegungen W3-B01, B19 bis B21, dazu die Läufe von Morphäus und Deckert (Teile-Rig, `welt3/bewegungen/morphaeus_gehen` und `deckert_gehen`). Prüfbilder unter `welt3/pruefung/`. Phase 2 (20.11.): alle übrigen Stand-Sprites, Posenbögen W3-P02 bis P07, P10 bis P15, P19 bis P22, P26 bis P29 (57 Bewegungen, Halbposen wo brauchbar), Läufe Schmidt und Klon, Bildfolgen und Effekte W3-B02 bis B09, B11 bis B16, B22, B26, B30 bis B32. Offen bleiben nur die 13 Bewegungen, die den fertigen Raum brauchen (B10, B17, B18, B23 bis B25, B27 bis B29, B33 bis B36). Arbeitsdateien und Befehlsliste unter `E:\Game Engine\Grafiken\3d\welt3\` (`liste_phase1.txt`). Reihenfolge der Grundlagenbilder steht oben in `fertige-prompts/welt-3.md`.
 
 | ID | Titel | Art | Quelle (Bogen/Bild) | Bewegung gebaut | im Spiel | offen: Grund, wer erledigt |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -273,92 +273,92 @@ Angelegt am 18. November 2026 aus `fertige-prompts/welt-3.md` (111 IDs). Noch ke
 | W3-R11 | Testkammer 3 | Raum | fehlt | nein | nein | wartet auf das Konzeptbild, Sebastian (Gemini) |
 | W3-R12 | Kern von M.U.T.T.I. | Raum | fehlt | nein | nein | wartet auf das Konzeptbild, Sebastian (Gemini) |
 | W3-R13 | Code-Sicht | Raum | fehlt | nein | nein | Claude in Godot aus dem fertigen Hintergrund (grüne Umrisse), kein eigenes Bild |
-| W3-F01 | M.U.T.T.I. | Figur | welt3/konzept/W3-F01_mutti.jpeg (+ welt3/konzept/W3-F01b_mutti_aus.jpeg) | nein | nein | Konzeptblatt da; Stand-Sprite in Phase 2, Claude |
+| W3-F01 | M.U.T.T.I. | Figur | welt3/konzept/W3-F01_mutti.jpeg (+ welt3/konzept/W3-F01b_mutti_aus.jpeg) | Stand-Sprite welt3/stand/mutti (+ mutti_aus).png | nein | Phase 2 gebaut (20.11.), Abnahme durch Sebastian offen, dann Einbau (Welt-3-Einbau) |
 | W3-F02 | Morphäus | Figur | welt3/konzept/W3-F02_morphaeus.jpeg | Stand-Sprite welt3/stand/morphaeus.png | nein | Phase 1 gebaut (20.11.), wartet auf Sebastians Abnahme, dann Einbau (Welt-3-Einbau) |
-| W3-F03 | Orakel-Oma | Figur | welt3/konzept/W3-F03_orakel_oma.jpeg | nein | nein | Konzeptblatt da; Stand-Sprite in Phase 2, Claude |
-| W3-F04 | Agent Schmidt | Figur | welt3/konzept/W3-F04_agent_schmidt.jpeg (+ welt3/konzept/W3-F04b_schmidt_ohne_brille.jpeg) | nein | nein | Konzeptblatt da; Stand-Sprite in Phase 2, Claude |
-| W3-F05 | Schmidt-Klon | Figur | welt3/konzept/W3-F05_schmidt_klon.jpeg | nein | nein | Konzeptblatt da; Stand-Sprite in Phase 2, Claude |
-| W3-F06 | Roboter-Hausmeister | Figur | welt3/konzept/W3-F06_roboter_hausmeister.jpeg | nein | nein | Konzeptblatt da; Stand-Sprite in Phase 2, Claude |
+| W3-F03 | Orakel-Oma | Figur | welt3/konzept/W3-F03_orakel_oma.jpeg | Stand-Sprite welt3/stand/orakel_oma.png | nein | Phase 2 gebaut (20.11.), Abnahme durch Sebastian offen, dann Einbau (Welt-3-Einbau) |
+| W3-F04 | Agent Schmidt | Figur | welt3/konzept/W3-F04_agent_schmidt.jpeg (+ welt3/konzept/W3-F04b_schmidt_ohne_brille.jpeg) | Stand-Sprite welt3/stand/schmidt (+ schmidt_ohne_brille).png | nein | Phase 2 gebaut (20.11.), Abnahme durch Sebastian offen, dann Einbau (Welt-3-Einbau) |
+| W3-F05 | Schmidt-Klon | Figur | welt3/konzept/W3-F05_schmidt_klon.jpeg | Stand-Sprite welt3/stand/klon.png | nein | Phase 2 gebaut (20.11.), Abnahme durch Sebastian offen, dann Einbau (Welt-3-Einbau) |
+| W3-F06 | Roboter-Hausmeister | Figur | welt3/konzept/W3-F06_roboter_hausmeister.jpeg | Stand-Sprite welt3/stand/hausmeister.png | nein | Phase 2 gebaut (20.11.), Abnahme durch Sebastian offen, dann Einbau (Welt-3-Einbau) |
 | W3-F07 | Detektiv Deckert | Figur | welt3/konzept/W3-F07_deckert.jpeg | Stand-Sprite welt3/stand/deckert.png | nein | Phase 1 gebaut (20.11.), wartet auf Sebastians Abnahme, dann Einbau (Welt-3-Einbau) |
 | W3-F08 | Herr Vier | Figur | welt3/konzept/W3-F08_herr_vier.jpeg | Stand-Sprite welt3/stand/herr_vier.png | nein | Phase 1 gebaut (20.11.), wartet auf Sebastians Abnahme, dann Einbau (Welt-3-Einbau) |
-| W3-F09 | Kabel-Kalle | Figur | welt3/konzept/W3-F09_kabel_kalle.jpeg | nein | nein | Konzeptblatt da; Stand-Sprite in Phase 2, Claude |
-| W3-F10 | Bernd | Figur | welt3/konzept/W3-F10_bernd.jpeg | nein | nein | Konzeptblatt da; Stand-Sprite in Phase 2, Claude |
-| W3-F11 | Rebellin | Figur | welt3/konzept/W3-F11_rebellin.jpeg | nein | nein | Konzeptblatt da; Stand-Sprite in Phase 2, Claude |
-| W3-F12 | Rebell | Figur | welt3/konzept/W3-F12_rebell.jpeg | nein | nein | Konzeptblatt da; Stand-Sprite in Phase 2, Claude |
-| W3-F13 | Piepsi | Figur | welt3/konzept/W3-F13_piepsi.jpeg (+ welt3/konzept/W3-F13b_piepsi_rostig.jpeg) | nein | nein | Konzeptblatt da; Stand-Sprite in Phase 2, Claude |
-| W3-F14 | Opa als Hologramm | Figur | welt3/konzept/W3-F14_opa_hologramm.jpeg | nein | nein | Konzeptblatt da; Stand-Sprite in Phase 2, Claude |
+| W3-F09 | Kabel-Kalle | Figur | welt3/konzept/W3-F09_kabel_kalle.jpeg | Stand-Sprite welt3/stand/kalle.png | nein | Phase 2 gebaut (20.11.), Abnahme durch Sebastian offen, dann Einbau (Welt-3-Einbau) |
+| W3-F10 | Bernd | Figur | welt3/konzept/W3-F10_bernd.jpeg | Stand-Sprite welt3/stand/bernd.png | nein | Phase 2 gebaut (20.11.), Abnahme durch Sebastian offen, dann Einbau (Welt-3-Einbau) |
+| W3-F11 | Rebellin | Figur | welt3/konzept/W3-F11_rebellin.jpeg | Stand-Sprite welt3/stand/rebellin.png | nein | Phase 2 gebaut (20.11.), Abnahme durch Sebastian offen, dann Einbau (Welt-3-Einbau) |
+| W3-F12 | Rebell | Figur | welt3/konzept/W3-F12_rebell.jpeg | Stand-Sprite welt3/stand/rebell.png | nein | Phase 2 gebaut (20.11.), Abnahme durch Sebastian offen, dann Einbau (Welt-3-Einbau) |
+| W3-F13 | Piepsi | Figur | welt3/konzept/W3-F13_piepsi.jpeg (+ welt3/konzept/W3-F13b_piepsi_rostig.jpeg) | Stand-Sprite welt3/stand/piepsi (+ piepsi_rostig).png | nein | Phase 2 gebaut (20.11.), Abnahme durch Sebastian offen, dann Einbau (Welt-3-Einbau) |
+| W3-F14 | Opa als Hologramm | Figur | welt3/konzept/W3-F14_opa_hologramm.jpeg | Stand-Sprite welt3/stand/opa_hologramm.png | nein | Phase 2 gebaut (20.11.), Abnahme durch Sebastian offen, dann Einbau (Welt-3-Einbau) |
 | W3-F15 | Weinender Mann | Figur | welt3/konzept/W3-F15_weinender_mann.jpeg | Stand-Sprite welt3/stand/weinender_mann.png | nein | Phase 1 gebaut (20.11.), wartet auf Sebastians Abnahme, dann Einbau (Welt-3-Einbau) |
 | W3-F16 | Frau mit Regenschirm | Figur | welt3/konzept/W3-F16_frau_regenschirm.jpeg | Stand-Sprite welt3/stand/frau_regenschirm.png | nein | Phase 1 gebaut (20.11.), wartet auf Sebastians Abnahme, dann Einbau (Welt-3-Einbau) |
 | W3-F17 | Straßenmusiker im Regen | Figur | welt3/konzept/W3-F17_strassenmusiker.jpeg | Stand-Sprite welt3/stand/strassenmusiker.png | nein | Phase 1 gebaut (20.11.), wartet auf Sebastians Abnahme, dann Einbau (Welt-3-Einbau) |
 | W3-F18 | Schwarze Katze | Figur | welt3/konzept/W3-F18_schwarze_katze.jpeg | Stand-Sprite welt3/stand/schwarze_katze.png | nein | Phase 1 gebaut (20.11.), wartet auf Sebastians Abnahme, dann Einbau (Welt-3-Einbau) |
-| W3-F19 | Max als Ente | Figur | welt3/konzept/W3-F19_max_ente.jpeg | nein | nein | Konzeptblatt da; Stand-Sprite in Phase 2, Claude |
-| W3-F20 | Max in der Kapsel | Figur | welt3/konzept/W3-F20_max_kapsel.jpeg (+ welt3/konzept/W3-F20b_max_kapsel_offen.jpeg) | nein | nein | Konzeptblatt da; Stand-Sprite in Phase 2, Claude |
-| W3-F21 | Max in der Pfütze | Figur | welt3/konzept/W3-F21_max_pfuetze.jpeg (+ welt3/konzept/W3-F21b_max_pfuetze_kater_springt.jpeg) | nein | nein | Konzeptblatt da; Stand-Sprite in Phase 2, Claude |
+| W3-F19 | Max als Ente | Figur | welt3/konzept/W3-F19_max_ente.jpeg | Stand-Sprite welt3/stand/max_ente.png | nein | Phase 2 gebaut (20.11.), Abnahme durch Sebastian offen, dann Einbau (Welt-3-Einbau) |
+| W3-F20 | Max in der Kapsel | Figur | welt3/konzept/W3-F20_max_kapsel.jpeg (+ welt3/konzept/W3-F20b_max_kapsel_offen.jpeg) | Stand-Sprite welt3/stand/max_kapsel (+ max_kapsel_offen).png | nein | Phase 2 gebaut (20.11.), Abnahme durch Sebastian offen, dann Einbau (Welt-3-Einbau) |
+| W3-F21 | Max in der Pfütze | Figur | welt3/konzept/W3-F21_max_pfuetze.jpeg (+ welt3/konzept/W3-F21b_max_pfuetze_kater_springt.jpeg) | Stand-Sprite welt3/stand/max_pfuetze (+ max_pfuetze_kater_springt).png | nein | Phase 2 gebaut (20.11.), Abnahme durch Sebastian offen, dann Einbau (Welt-3-Einbau) |
 | W3-P01 | Max Unterstadt | Posenbogen | welt3/posen/W3-P01_max_unterstadt_b.png | ja: welt3/bewegungen/max_regen_wischen, max_handy, max_stempel_ansehen, max_hexenschuss | nein | Phase 1 gebaut (20.11.), wartet auf Sebastians Abnahme, dann Einbau (Welt-3-Einbau) |
-| W3-P02 | Max Büroturm | Posenbogen | fehlt | nein | nein | Konzeptblatt da; Posenbogen in Phase 2 (Basis, Labor, Simulation), Claude (Gemini-API) |
-| W3-P03 | Max Welt 3 | Posenbogen | fehlt | nein | nein | Konzeptblatt da; Posenbogen in Phase 2 (Basis, Labor, Simulation), Claude (Gemini-API) |
-| W3-P04 | Max Basis | Posenbogen | fehlt | nein | nein | Konzeptblatt da; Posenbogen in Phase 2 (Basis, Labor, Simulation), Claude (Gemini-API) |
-| W3-P05 | Max als Ente | Posenbogen | fehlt | nein | nein | Konzeptblatt da; Posenbogen in Phase 2 (Basis, Labor, Simulation), Claude (Gemini-API) |
-| W3-P06 | Pixel Basis | Posenbogen | fehlt | nein | nein | Konzeptblatt da; Posenbogen in Phase 2 (Basis, Labor, Simulation), Claude (Gemini-API) |
-| W3-P07 | Pixel Basis 2 | Posenbogen | fehlt | nein | nein | Konzeptblatt da; Posenbogen in Phase 2 (Basis, Labor, Simulation), Claude (Gemini-API) |
+| W3-P02 | Max Büroturm | Posenbogen | welt3/posen/W3-P02_max_buero.png | ja: welt3/bewegungen/max_zeitlupe | nein | Phase 2 gebaut (20.11.), Abnahme durch Sebastian offen, dann Einbau (Welt-3-Einbau) |
+| W3-P03 | Max Welt 3 | Posenbogen | welt3/posen/W3-P03_max_welt3.png | ja: welt3/bewegungen/max_pastille, _schlucken, _code_sicht, _gedankentrick | nein | Phase 2 gebaut (20.11.), Abnahme durch Sebastian offen, dann Einbau (Welt-3-Einbau) |
+| W3-P04 | Max Basis | Posenbogen | welt3/posen/W3-P04_max_basis.png (+ _zw) | ja: welt3/bewegungen/max_tasche, _nudeln, _tippen, _hochhalten | nein | Phase 2 gebaut (20.11.), Abnahme durch Sebastian offen, dann Einbau (Welt-3-Einbau) |
+| W3-P05 | Max als Ente | Posenbogen | welt3/posen/W3-P05_max_ente.png | ja: welt3/bewegungen/max_ente_watscheln (= W3-B02) | nein | Phase 2 gebaut (20.11.), Abnahme durch Sebastian offen, dann Einbau (Welt-3-Einbau) |
+| W3-P06 | Pixel Basis | Posenbogen | welt3/posen/W3-P06_pixel_basis.png | ja: welt3/bewegungen/pixel_kabel, pixel_morse | nein | Phase 2 gebaut (20.11.), Abnahme durch Sebastian offen, dann Einbau (Welt-3-Einbau) |
+| W3-P07 | Pixel Basis 2 | Posenbogen | welt3/posen/W3-P07_pixel_basis2.png | ja: welt3/bewegungen/pixel_tasse, _hebel, _schieben | nein | Phase 2 gebaut (20.11.), Abnahme durch Sebastian offen, dann Einbau (Welt-3-Einbau) |
 | W3-P08 | Morphäus | Posenbogen | welt3/posen/W3-P08_morphaeus.png + konzept/W3-P08_zusatz_morphaeus_schulterzucken.jpeg | ja: welt3/bewegungen/morphaeus_schild_zeigen, _brille_hochschieben, _haende_falten, _schulterzucken | nein | Phase 1 gebaut (20.11.), wartet auf Sebastians Abnahme, dann Einbau (Welt-3-Einbau) |
 | W3-P09 | Morphäus 2 | Posenbogen | welt3/posen/W3-P09_morphaeus2.png | ja: welt3/bewegungen/morphaeus_schild_umdrehen, _leere_hand, _kekse_reichen, _fangen | nein | Phase 1 gebaut (20.11.), wartet auf Sebastians Abnahme, dann Einbau (Welt-3-Einbau) |
-| W3-P10 | Orakel-Oma | Posenbogen | fehlt | nein | nein | Konzeptblatt da; Posenbogen in Phase 2 (Basis, Labor, Simulation), Claude (Gemini-API) |
-| W3-P11 | Orakel-Oma Küche | Posenbogen | fehlt | nein | nein | Konzeptblatt da; Posenbogen in Phase 2 (Basis, Labor, Simulation), Claude (Gemini-API) |
-| W3-P12 | Agent Schmidt | Posenbogen | fehlt | nein | nein | Konzeptblatt da; Posenbogen in Phase 2 (Basis, Labor, Simulation), Claude (Gemini-API) |
-| W3-P13 | Agent Schmidt 2 | Posenbogen | fehlt | nein | nein | Konzeptblatt da; Posenbogen in Phase 2 (Basis, Labor, Simulation), Claude (Gemini-API) |
-| W3-P14 | Schmidt-Klon | Posenbogen | fehlt | nein | nein | Konzeptblatt da; Posenbogen in Phase 2 (Basis, Labor, Simulation), Claude (Gemini-API) |
-| W3-P15 | Roboter-Hausmeister | Posenbogen | fehlt | nein | nein | Konzeptblatt da; Posenbogen in Phase 2 (Basis, Labor, Simulation), Claude (Gemini-API) |
+| W3-P10 | Orakel-Oma | Posenbogen | welt3/posen/W3-P10_orakel_oma.png (+ _zw) | ja: welt3/bewegungen/orakel_oma_reden, _zum_regal, _stirn, _sparschwein | nein | Phase 2 gebaut (20.11.), Abnahme durch Sebastian offen, dann Einbau (Welt-3-Einbau) |
+| W3-P11 | Orakel-Oma Küche | Posenbogen | welt3/posen/W3-P11_orakel_oma2.png (+ _zw) | ja: welt3/bewegungen/orakel_oma_kehren, _ofen, _haende_falten | nein | Phase 2 gebaut (20.11.), Abnahme durch Sebastian offen, dann Einbau (Welt-3-Einbau) |
+| W3-P12 | Agent Schmidt | Posenbogen | welt3/posen/W3-P12_schmidt.png (+ _zw) | ja: welt3/bewegungen/schmidt_reden, _stumm, _kopierer, _fliege | nein | Phase 2 gebaut (20.11.), Abnahme durch Sebastian offen, dann Einbau (Welt-3-Einbau) |
+| W3-P13 | Agent Schmidt 2 | Posenbogen | welt3/posen/W3-P13_schmidt2.png (+ _zw) | ja: welt3/bewegungen/schmidt_hausschuh, _brille_ab, _akte | nein | Phase 2 gebaut (20.11.), Abnahme durch Sebastian offen, dann Einbau (Welt-3-Einbau) |
+| W3-P14 | Schmidt-Klon | Posenbogen | welt3/posen/W3-P14_klon.png (+ _zw) | ja: welt3/bewegungen/klon_werfen, _umsehen, _hausschuh | nein | Phase 2 gebaut (20.11.), Abnahme durch Sebastian offen, dann Einbau (Welt-3-Einbau) |
+| W3-P15 | Roboter-Hausmeister | Posenbogen | welt3/posen/W3-P15_hausmeister.png (+ _zw) | ja: welt3/bewegungen/hausmeister_reden, _lesen, _verbeugen, _warten | nein | Phase 2 gebaut (20.11.), Abnahme durch Sebastian offen, dann Einbau (Welt-3-Einbau) |
 | W3-P16 | Detektiv Deckert | Posenbogen | welt3/posen/W3-P16_deckert.png | ja: welt3/bewegungen/deckert_reden, _notieren, _stempeln | nein | Phase 1 gebaut (20.11.), wartet auf Sebastians Abnahme, dann Einbau (Welt-3-Einbau) |
 | W3-P17 | Herr Vier | Posenbogen | welt3/posen/W3-P17_herr_vier.png | ja: welt3/bewegungen/herr_vier_vier_finger, _haende_zeigen, _kochen_strahlend, _schale_hinstellen | nein | Phase 1 gebaut (20.11.), wartet auf Sebastians Abnahme, dann Einbau (Welt-3-Einbau) |
 | W3-P18 | Herr Vier 2 | Posenbogen | welt3/posen/W3-P18_herr_vier2.png | ja: welt3/bewegungen/herr_vier_glueckskeks, _zettel_lesen, _kochen_weinend, _karte_reichen | nein | Phase 1 gebaut (20.11.), wartet auf Sebastians Abnahme, dann Einbau (Welt-3-Einbau) |
-| W3-P19 | Kabel-Kalle | Posenbogen | fehlt | nein | nein | Konzeptblatt da; Posenbogen in Phase 2 (Basis, Labor, Simulation), Claude (Gemini-API) |
-| W3-P20 | Kabel-Kalle 2 | Posenbogen | fehlt | nein | nein | Konzeptblatt da; Posenbogen in Phase 2 (Basis, Labor, Simulation), Claude (Gemini-API) |
-| W3-P21 | Rebellin | Posenbogen | fehlt | nein | nein | Konzeptblatt da; Posenbogen in Phase 2 (Basis, Labor, Simulation), Claude (Gemini-API) |
-| W3-P22 | Rebell | Posenbogen | fehlt | nein | nein | Konzeptblatt da; Posenbogen in Phase 2 (Basis, Labor, Simulation), Claude (Gemini-API) |
+| W3-P19 | Kabel-Kalle | Posenbogen | welt3/posen/W3-P19_kalle.png | ja: welt3/bewegungen/kalle_fluestern, _lachen, _zeigen, _tippen | nein | Phase 2 gebaut (20.11.), Abnahme durch Sebastian offen, dann Einbau (Welt-3-Einbau) |
+| W3-P20 | Kabel-Kalle 2 | Posenbogen | welt3/posen/W3-P20_kalle2.png (+ _zw) | ja: welt3/bewegungen/kalle_kabel, _entsetzt, _tabelle, _jubel | nein | Phase 2 gebaut (20.11.), Abnahme durch Sebastian offen, dann Einbau (Welt-3-Einbau) |
+| W3-P21 | Rebellin | Posenbogen | welt3/posen/W3-P21_rebellin.png | ja: welt3/bewegungen/rebellin_karton, _essen | nein | Phase 2 gebaut (20.11.), Abnahme durch Sebastian offen, dann Einbau (Welt-3-Einbau) |
+| W3-P22 | Rebell | Posenbogen | welt3/posen/W3-P22_rebell.png | ja: welt3/bewegungen/rebell_essen | nein | Phase 2 gebaut (20.11.), Abnahme durch Sebastian offen, dann Einbau (Welt-3-Einbau) |
 | W3-P23 | Straßenmusiker | Posenbogen | welt3/posen/W3-P23_strassenmusiker.png | ja: welt3/bewegungen/strassenmusiker_spielen (= W3-B19) | nein | Phase 1 gebaut (20.11.), wartet auf Sebastians Abnahme, dann Einbau (Welt-3-Einbau) |
 | W3-P24 | Weinender Mann | Posenbogen | welt3/posen/W3-P24_weinender_mann.png | ja: welt3/bewegungen/weinender_mann_weinen (= W3-B20) | nein | Phase 1 gebaut (20.11.), wartet auf Sebastians Abnahme, dann Einbau (Welt-3-Einbau) |
 | W3-P25 | Frau mit Regenschirm | Posenbogen | welt3/posen/W3-P25_frau_regenschirm.png | ja: welt3/bewegungen/frau_regenschirm_schimpfen (= W3-B21) | nein | Phase 1 gebaut (20.11.), wartet auf Sebastians Abnahme, dann Einbau (Welt-3-Einbau) |
-| W3-P26 | M.U.T.T.I. | Posenbogen | fehlt | nein | nein | Konzeptblatt da; Posenbogen in Phase 2 (Basis, Labor, Simulation), Claude (Gemini-API) |
-| W3-P27 | Bernd | Posenbogen | fehlt | nein | nein | Konzeptblatt da; Posenbogen in Phase 2 (Basis, Labor, Simulation), Claude (Gemini-API) |
-| W3-P28 | Piepsi | Posenbogen | fehlt | nein | nein | Konzeptblatt da; Posenbogen in Phase 2 (Basis, Labor, Simulation), Claude (Gemini-API) |
-| W3-P29 | Opa als Hologramm | Posenbogen | fehlt | nein | nein | Konzeptblatt da; Posenbogen in Phase 2 (Basis, Labor, Simulation), Claude (Gemini-API) |
+| W3-P26 | M.U.T.T.I. | Posenbogen | welt3/posen/W3-P26_mutti.png | ja: welt3/bewegungen/mutti_sprechen, _beleidigt, _herunterfahren | nein | Phase 2 gebaut (20.11.), Abnahme durch Sebastian offen, dann Einbau (Welt-3-Einbau) |
+| W3-P27 | Bernd | Posenbogen | welt3/posen/W3-P27_bernd.png | ja: welt3/bewegungen/bernd_davonschweben | nein | Phase 2 gebaut (20.11.), Abnahme durch Sebastian offen, dann Einbau (Welt-3-Einbau) |
+| W3-P28 | Piepsi | Posenbogen | welt3/posen/W3-P28_piepsi.png | ja: welt3/bewegungen/piepsi_hochfahren, _piepen | nein | Phase 2 gebaut (20.11.), Abnahme durch Sebastian offen, dann Einbau (Welt-3-Einbau) |
+| W3-P29 | Opa als Hologramm | Posenbogen | welt3/posen/W3-P29_opa_hologramm.png | ja: welt3/bewegungen/opa_hologramm_flehen | nein | Phase 2 gebaut (20.11.), Abnahme durch Sebastian offen, dann Einbau (Welt-3-Einbau) |
 | W3-B01 | Schwarze Katze: Zweimal vorbeilaufen | Bewegung | welt3/katze/W3-B01_katze_f1 bis f8 (Gemini gemalt, Beinstellung aus dem Blender-Render) | ja: welt3/bewegungen/schwarze_katze_gehen, 8 Bilder | nein | Phase 1 gebaut (20.11.), wartet auf Sebastians Abnahme, dann Einbau (Welt-3-Einbau) |
-| W3-B02 | Max als Ente: Watscheln | Bewegung | fehlt | nein | nein | wartet auf Konzeptblatt oder Raum; dann Claude (Meshy oder Gemini-API) |
-| W3-B03 | Pixel: Schacht kriechen | Bewegung | fehlt | nein | nein | wartet auf Konzeptblatt oder Raum; dann Claude (Meshy oder Gemini-API) |
-| W3-B04 | Bernd: Beleidigt davonschweben | Bewegung | fehlt | nein | nein | wartet auf Konzeptblatt oder Raum; dann Claude (Meshy oder Gemini-API) |
-| W3-B05 | Piepsi: Hochfahren | Bewegung | fehlt | nein | nein | wartet auf Konzeptblatt oder Raum; dann Claude (Meshy oder Gemini-API) |
-| W3-B06 | Piepsi: Piepen | Bewegung | fehlt | nein | nein | wartet auf Konzeptblatt oder Raum; dann Claude (Meshy oder Gemini-API) |
-| W3-B07 | M.U.T.T.I.: Sprechen | Bewegung | fehlt | nein | nein | wartet auf Konzeptblatt oder Raum; dann Claude (Meshy oder Gemini-API) |
-| W3-B08 | M.U.T.T.I.: Herunterfahren | Bewegung | fehlt | nein | nein | wartet auf Konzeptblatt oder Raum; dann Claude (Meshy oder Gemini-API) |
-| W3-B09 | Roboter-Hausmeister: Wischen | Bewegung | fehlt | nein | nein | wartet auf Konzeptblatt oder Raum; dann Claude (Meshy oder Gemini-API) |
-| W3-B10 | Agent Schmidt: Kopieren | Bewegung | fehlt | nein | nein | wartet auf Konzeptblatt oder Raum; dann Claude (Meshy oder Gemini-API) |
-| W3-B11 | Verwandlung: Effekt | Bewegung | fehlt | nein | nein | wartet auf Konzeptblatt oder Raum; dann Claude (Meshy oder Gemini-API) |
-| W3-B12 | Portal: Effekt | Bewegung | fehlt | nein | nein | wartet auf Konzeptblatt oder Raum; dann Claude (Meshy oder Gemini-API) |
-| W3-B13 | Regen: Effekt | Bewegung | fehlt | nein | nein | wartet auf Konzeptblatt oder Raum; dann Claude (Meshy oder Gemini-API) |
-| W3-B14 | Schnee: Effekt | Bewegung | fehlt | nein | nein | wartet auf Konzeptblatt oder Raum; dann Claude (Meshy oder Gemini-API) |
-| W3-B15 | Hologramm: Effekt | Bewegung | fehlt | nein | nein | wartet auf Konzeptblatt oder Raum; dann Claude (Meshy oder Gemini-API) |
-| W3-B16 | Unterstadt: Fliegende Autos | Bewegung | fehlt | nein | nein | wartet auf Konzeptblatt oder Raum; dann Claude (Meshy oder Gemini-API) |
-| W3-B17 | Unterstadt: Nudeltopf dampft | Bewegung | fehlt | nein | nein | wartet auf Konzeptblatt oder Raum; dann Claude (Meshy oder Gemini-API) |
-| W3-B18 | Unterstadt: Neonschild mit Wackelkontakt | Bewegung | fehlt | nein | nein | wartet auf Konzeptblatt oder Raum; dann Claude (Meshy oder Gemini-API) |
+| W3-B02 | Max als Ente: Watscheln | Bewegung | posen/W3-P05_max_ente.png | ja: welt3/bewegungen/max_ente_watscheln, 8 Bilder Schleife | nein | Phase 2 gebaut (20.11.), Abnahme durch Sebastian offen, dann Einbau (Welt-3-Einbau) |
+| W3-B03 | Pixel: Schacht kriechen | Bewegung | posen/W3-B03_pixel_kriechen.png | ja: welt3/bewegungen/pixel_kriechen, 4 Bilder Schleife | nein | Phase 2 gebaut (20.11.), Abnahme durch Sebastian offen, dann Einbau (Welt-3-Einbau) |
+| W3-B04 | Bernd: Beleidigt davonschweben | Bewegung | posen/W3-P27_bernd.png | ja: welt3/bewegungen/bernd_davonschweben, 6 Bilder | nein | Phase 2 gebaut (20.11.), Abnahme durch Sebastian offen, dann Einbau (Welt-3-Einbau) |
+| W3-B05 | Piepsi: Hochfahren | Bewegung | posen/W3-P28_piepsi.png | ja: welt3/bewegungen/piepsi_hochfahren, 8 Bilder | nein | Phase 2 gebaut (20.11.), Abnahme durch Sebastian offen, dann Einbau (Welt-3-Einbau) |
+| W3-B06 | Piepsi: Piepen | Bewegung | posen/W3-P28_piepsi.png | ja: welt3/bewegungen/piepsi_piepen, 4 Bilder Schleife | nein | Phase 2 gebaut (20.11.), Abnahme durch Sebastian offen, dann Einbau (Welt-3-Einbau) |
+| W3-B07 | M.U.T.T.I.: Sprechen | Bewegung | posen/W3-P26_mutti.png | ja: welt3/bewegungen/mutti_sprechen, 4 Bilder Schleife | nein | Phase 2 gebaut (20.11.), Abnahme durch Sebastian offen, dann Einbau (Welt-3-Einbau) |
+| W3-B08 | M.U.T.T.I.: Herunterfahren | Bewegung | posen/W3-P26_mutti.png | ja: welt3/bewegungen/mutti_herunterfahren, 8 Bilder | nein | Phase 2 gebaut (20.11.), Abnahme durch Sebastian offen, dann Einbau (Welt-3-Einbau) |
+| W3-B09 | Roboter-Hausmeister: Wischen | Bewegung | posen/W3-B09_hausmeister_wischen.png | ja: welt3/bewegungen/hausmeister_wischen, 4 Bilder Schleife | nein | Phase 2 gebaut (20.11.), Abnahme durch Sebastian offen, dann Einbau (Welt-3-Einbau) |
+| W3-B10 | Agent Schmidt: Kopieren | Bewegung | fehlt | nein | nein | braucht den fertigen Büroturm (Lage des Kopierers und der Ausgabe), dann Claude per Code aus Schmidts Sprites |
+| W3-B11 | Verwandlung: Effekt | Bewegung | Code (tools/grafik_w3/effekte_code.py) | ja: effekte/fertig/W3-B11_verwandlung, 6 Bilder | nein | Phase 2 gebaut (20.11.), Abnahme durch Sebastian offen, dann Einbau (Welt-3-Einbau) |
+| W3-B12 | Portal: Effekt | Bewegung | effekte/W3-B12_portal_inhalt.png | ja: effekte/fertig/W3-B12_portal, 8 Bilder | nein | Phase 2 gebaut (20.11.), Abnahme durch Sebastian offen, dann Einbau (Welt-3-Einbau) |
+| W3-B13 | Regen: Effekt | Bewegung | Code | ja: effekte/fertig/W3-B13_regen, 4 Bilder, 640×360 kachelbar | nein | Phase 2 gebaut (20.11.), Abnahme durch Sebastian offen, dann Einbau (Welt-3-Einbau) |
+| W3-B14 | Schnee: Effekt | Bewegung | Code | ja: effekte/fertig/W3-B14_schnee, 4 Bilder, 640×360 kachelbar | nein | Phase 2 gebaut (20.11.), Abnahme durch Sebastian offen, dann Einbau (Welt-3-Einbau) |
+| W3-B15 | Hologramm: Effekt | Bewegung | Code | ja: effekte/fertig/W3-B15_hologramm, 6 Bilder | nein | Phase 2 gebaut (20.11.), Abnahme durch Sebastian offen, dann Einbau (Welt-3-Einbau) |
+| W3-B16 | Unterstadt: Fliegende Autos | Bewegung | effekte/W3-B16_auto.png | ja: effekte/fertig/W3-B16_fliegendes_auto, 6 Bilder | nein | Phase 2 gebaut (20.11.), Abnahme durch Sebastian offen, dann Einbau (Welt-3-Einbau) |
+| W3-B17 | Unterstadt: Nudeltopf dampft | Bewegung | fehlt | nein | nein | braucht den Ausschnitt des fertigen Raums (Prompt „matching the attached background crop“); wartet auf den Hintergrund, Sebastian |
+| W3-B18 | Unterstadt: Neonschild mit Wackelkontakt | Bewegung | fehlt | nein | nein | braucht den Ausschnitt des fertigen Raums (Prompt „matching the attached background crop“); wartet auf den Hintergrund, Sebastian |
 | W3-B19 | Straßenmusiker: Spielen | Bewegung | posen/W3-P23_strassenmusiker.png | ja: welt3/bewegungen/strassenmusiker_spielen, 11 Bilder Schleife | nein | Phase 1 gebaut (20.11.), wartet auf Sebastians Abnahme, dann Einbau (Welt-3-Einbau) |
 | W3-B20 | Weinender Mann: Weinen | Bewegung | posen/W3-P24_weinender_mann.png | ja: welt3/bewegungen/weinender_mann_weinen, 12 Bilder Schleife | nein | Phase 1 gebaut (20.11.), wartet auf Sebastians Abnahme, dann Einbau (Welt-3-Einbau) |
 | W3-B21 | Frau mit Regenschirm: Schimpfen | Bewegung | posen/W3-P25_frau_regenschirm.png | ja: welt3/bewegungen/frau_regenschirm_schimpfen, 12 Bilder Schleife | nein | Phase 1 gebaut (20.11.), wartet auf Sebastians Abnahme, dann Einbau (Welt-3-Einbau) |
-| W3-B22 | Apothekengasse: Ratte huscht | Bewegung | fehlt | nein | nein | wartet auf Konzeptblatt oder Raum; dann Claude (Meshy oder Gemini-API) |
-| W3-B23 | Apothekengasse: Automat scannt | Bewegung | fehlt | nein | nein | wartet auf Konzeptblatt oder Raum; dann Claude (Meshy oder Gemini-API) |
-| W3-B24 | Widerstandsbasis: Großrechner | Bewegung | fehlt | nein | nein | wartet auf Konzeptblatt oder Raum; dann Claude (Meshy oder Gemini-API) |
-| W3-B25 | Kühlung: Ventilator | Bewegung | fehlt | nein | nein | wartet auf Konzeptblatt oder Raum; dann Claude (Meshy oder Gemini-API) |
-| W3-B26 | Stadtstraße: Vogelschwarm im Takt | Bewegung | fehlt | nein | nein | wartet auf Konzeptblatt oder Raum; dann Claude (Meshy oder Gemini-API) |
-| W3-B27 | Küche der Orakel-Oma: Eieruhr | Bewegung | fehlt | nein | nein | wartet auf Konzeptblatt oder Raum; dann Claude (Meshy oder Gemini-API) |
-| W3-B28 | Büroturm, 50. Stock: Klone tippen | Bewegung | fehlt | nein | nein | wartet auf Konzeptblatt oder Raum; dann Claude (Meshy oder Gemini-API) |
-| W3-B29 | Kern von M.U.T.T.I.: Lichtband | Bewegung | fehlt | nein | nein | wartet auf Konzeptblatt oder Raum; dann Claude (Meshy oder Gemini-API) |
-| W3-B30 | Roboter-Hausmeister: Rollen | Bewegung | fehlt | nein | nein | wartet auf Konzeptblatt oder Raum; dann Claude (Meshy oder Gemini-API) |
-| W3-B31 | Roboter-Hausmeister: Arm drehen | Bewegung | fehlt | nein | nein | wartet auf Konzeptblatt oder Raum; dann Claude (Meshy oder Gemini-API) |
-| W3-B32 | Piepsi: Drucken | Bewegung | fehlt | nein | nein | wartet auf Konzeptblatt oder Raum; dann Claude (Meshy oder Gemini-API) |
-| W3-B33 | Pastillenautomat: Fächer öffnen | Bewegung | fehlt | nein | nein | wartet auf Konzeptblatt oder Raum; dann Claude (Meshy oder Gemini-API) |
-| W3-B34 | Glastür Büroturm: Reden | Bewegung | fehlt | nein | nein | wartet auf Konzeptblatt oder Raum; dann Claude (Meshy oder Gemini-API) |
-| W3-B35 | Bürokopierer: Rattern | Bewegung | fehlt | nein | nein | wartet auf Konzeptblatt oder Raum; dann Claude (Meshy oder Gemini-API) |
-| W3-B36 | Testkammer 3: Tür und Lautsprecher | Bewegung | fehlt | nein | nein | wartet auf Konzeptblatt oder Raum; dann Claude (Meshy oder Gemini-API) |
+| W3-B22 | Apothekengasse: Ratte huscht | Bewegung | effekte/W3-B22_ratte.png | ja: effekte/fertig/W3-B22_ratte, 6 Bilder | nein | Phase 2 gebaut (20.11.), Abnahme durch Sebastian offen, dann Einbau (Welt-3-Einbau) |
+| W3-B23 | Apothekengasse: Automat scannt | Bewegung | fehlt | nein | nein | braucht den Ausschnitt des fertigen Raums (Prompt „matching the attached background crop“); wartet auf den Hintergrund, Sebastian |
+| W3-B24 | Widerstandsbasis: Großrechner | Bewegung | fehlt | nein | nein | braucht den Ausschnitt des fertigen Raums (Prompt „matching the attached background crop“); wartet auf den Hintergrund, Sebastian |
+| W3-B25 | Kühlung: Ventilator | Bewegung | fehlt | nein | nein | braucht den Ausschnitt des fertigen Raums (Prompt „matching the attached background crop“); wartet auf den Hintergrund, Sebastian |
+| W3-B26 | Stadtstraße: Vogelschwarm im Takt | Bewegung | effekte/W3-B26_vogel.png | ja: effekte/fertig/W3-B26_vogelschwarm, 6 Bilder | nein | Phase 2 gebaut (20.11.), Abnahme durch Sebastian offen, dann Einbau (Welt-3-Einbau) |
+| W3-B27 | Küche der Orakel-Oma: Eieruhr | Bewegung | fehlt | nein | nein | braucht den Ausschnitt des fertigen Raums (Prompt „matching the attached background crop“); wartet auf den Hintergrund, Sebastian |
+| W3-B28 | Büroturm, 50. Stock: Klone tippen | Bewegung | fehlt | nein | nein | braucht den Ausschnitt des fertigen Raums (Prompt „matching the attached background crop“); wartet auf den Hintergrund, Sebastian |
+| W3-B29 | Kern von M.U.T.T.I.: Lichtband | Bewegung | fehlt | nein | nein | braucht den Ausschnitt des fertigen Raums (Prompt „matching the attached background crop“); wartet auf den Hintergrund, Sebastian |
+| W3-B30 | Roboter-Hausmeister: Rollen | Bewegung | Code aus dem Stand-Sprite | ja: effekte/fertig/W3-B30_hausmeister_rollen, 6 Bilder | nein | Phase 2 gebaut (20.11.), Abnahme durch Sebastian offen, dann Einbau (Welt-3-Einbau) |
+| W3-B31 | Roboter-Hausmeister: Arm drehen | Bewegung | posen/W3-B31_hausmeister_arm.png (Meshy) | ja: welt3/bewegungen/hausmeister_arm_drehen, 6 Bilder | nein | Phase 2 gebaut (20.11.), Abnahme durch Sebastian offen, dann Einbau (Welt-3-Einbau) |
+| W3-B32 | Piepsi: Drucken | Bewegung | posen/W3-B32_piepsi_drucken.png | ja: welt3/bewegungen/piepsi_drucken, 6 Bilder | nein | Phase 2 gebaut (20.11.), Abnahme durch Sebastian offen, dann Einbau (Welt-3-Einbau) |
+| W3-B33 | Pastillenautomat: Fächer öffnen | Bewegung | fehlt | nein | nein | braucht den Ausschnitt des fertigen Raums (Prompt „matching the attached background crop“); wartet auf den Hintergrund, Sebastian |
+| W3-B34 | Glastür Büroturm: Reden | Bewegung | fehlt | nein | nein | braucht den Ausschnitt des fertigen Raums (Prompt „matching the attached background crop“); wartet auf den Hintergrund, Sebastian |
+| W3-B35 | Bürokopierer: Rattern | Bewegung | fehlt | nein | nein | braucht den Ausschnitt des fertigen Raums (Prompt „matching the attached background crop“); wartet auf den Hintergrund, Sebastian |
+| W3-B36 | Testkammer 3: Tür und Lautsprecher | Bewegung | fehlt | nein | nein | braucht den Ausschnitt des fertigen Raums (Prompt „matching the attached background crop“); wartet auf den Hintergrund, Sebastian |
 | W3-G01 | Verwandlung (2×4) | Gegenstände | fehlt | nein | nein | wartet auf das Sammelbild, Sebastian (Gemini) |
 | W3-G02 | Kekse-Zustände (1×2) | Gegenstände | fehlt | nein | nein | wartet auf das Sammelbild, Sebastian (Gemini) |
 | W3-G03 | Unterstadt (2×3) | Gegenstände | fehlt | nein | nein | wartet auf das Sammelbild, Sebastian (Gemini) |
