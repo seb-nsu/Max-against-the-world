@@ -627,16 +627,26 @@ func props_schatten() -> void:
 ## Teile, die erst nach (oder nur vor) einem Rätsel zu sehen sind („nach: R8“, „vor: R7“).
 var _bedingte_teile: Array = []
 ## Zweite Fassung des Hintergrunds nach einem Rätsel: Layout „hintergrund_nach: {R12: res://…}“
-## (Smaugis Kammer aufgeräumt, Turmkeller mit geschlossener Tür).
+## (Smaugis Kammer aufgeräumt, Turmkeller mit geschlossener Tür). Statt einer Rätsel-ID geht auch
+## ein Schalter (W3_SCHNEE) und mit „+“ mehreres zugleich (R13+W3_SCHNEE); die letzte zutreffende
+## Fassung gilt, auch wenn sich der Schalter erst im Raum ändert.
 var _hg_wechsel: Dictionary = {}
 var _hg_grund := ""
+
+
+func _bedingung_erfuellt(bedingung: String) -> bool:
+	for teil in bedingung.split("+"):
+		var erfuellt := Zustand.ist(teil) if teil.contains("_") else Zustand.geloest(teil)
+		if not erfuellt:
+			return false
+	return true
 
 
 func _bedingte_anpassen() -> void:
 	if not _hg_wechsel.is_empty() and has_node("Props/Background") and not _hg_grund.is_empty():
 		var soll := _hg_grund
 		for r: String in _hg_wechsel:
-			if Zustand.geloest(r):
+			if _bedingung_erfuellt(r):
 				soll = _hg_wechsel[r]
 		var bg = get_node("Props/Background")
 		if bg.texture == null or bg.texture.resource_path != soll:

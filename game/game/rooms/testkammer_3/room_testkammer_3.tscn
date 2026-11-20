@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://dgb8pyogdox6j"]
 
-[ext_resource type="Script" path="res://game/rooms/testkammer_3/room_testkammer_3.gd" id="1_s3p8m"]
+[ext_resource type="Script" uid="uid://bd0b05jiayuos" path="res://game/rooms/testkammer_3/room_testkammer_3.gd" id="1_s3p8m"]
 [ext_resource type="PackedScene" uid="uid://bske2l8k5vxet" path="res://game/rooms/testkammer_3/walkable_areas/boden/walkable_area_boden.tscn" id="2_6iv4e"]
 [ext_resource type="PackedScene" uid="uid://b5ig113xynf7m" path="res://game/rooms/testkammer_3/props/background/prop_background.tscn" id="3_k3dvu"]
-[ext_resource type="Texture2D" uid="uid://dnrxq6685ad21" path="res://grafik/platzhalter/raum_testkammer_3.png" id="4_18mt5"]
+[ext_resource type="Texture2D" uid="uid://jv1f2igik8wx" path="res://grafik/hintergruende/w3_bg_testkammer_3_v01.png" id="4_6iv4e"]
 [ext_resource type="PackedScene" uid="uid://b7rwyswv1tlf2" path="res://game/rooms/testkammer_3/hotspots/lautsprecher/hotspot_lautsprecher.tscn" id="5_08753"]
 [ext_resource type="PackedScene" uid="uid://c1ghiy40sp8wd" path="res://game/rooms/testkammer_3/hotspots/ausgang_testkammer_2/hotspot_ausgang_testkammer_2.tscn" id="6_yjgdk"]
 [ext_resource type="PackedScene" uid="uid://b116ihgn2xyl3" path="res://game/rooms/testkammer_3/hotspots/ausgang_kern/hotspot_ausgang_kern.tscn" id="7_ipgvv"]
@@ -23,57 +23,60 @@ height = 360
 [node name="WalkableAreas" type="Node2D" parent="." unique_id=1284088585]
 
 [node name="Boden" parent="WalkableAreas" unique_id=94503712 instance=ExtResource("2_6iv4e")]
-interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(8, 280, 632, 280, 632, 356, 8, 356)])
+interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(105, 294, 145, 266, 405, 266, 440, 300, 470, 330, 530, 330, 512, 266, 560, 300, 600, 340, 640, 356, 0, 356, 30, 330)])
 
 [node name="Props" type="Node2D" parent="." unique_id=174080766]
 
 [node name="Background" parent="Props" unique_id=1525132495 instance=ExtResource("3_k3dvu")]
 position = Vector2(320, 180)
-texture = ExtResource("4_18mt5")
+texture = ExtResource("4_6iv4e")
 description = "UI_RAUM_TESTKAMMER_3"
 
 [node name="Hotspots" type="Node2D" parent="." unique_id=1335762777]
 
 [node name="Lautsprecher" parent="Hotspots" unique_id=21852730 instance=ExtResource("5_08753")]
-position = Vector2(320, 72)
+position = Vector2(550, 82)
 description = "UI_OBJ_LAUTSPRECHER"
-baseline = 32
-walk_to_point = Vector2(0, 241)
+baseline = 28
+walk_to_point = Vector2(-30, 218)
+interaction_polygon = PackedVector2Array(-18, -28, 18, -28, 18, 28, -18, 28)
 
 [node name="AusgangTestkammer2" parent="Hotspots" unique_id=1769844564 instance=ExtResource("6_yjgdk")]
-position = Vector2(26.0, 210.0)
+position = Vector2(61, 206)
 description = "UI_RAUM_TESTKAMMER_2"
-baseline = 69
-walk_to_point = Vector2(22.0, 110.0)
+baseline = 110
+walk_to_point = Vector2(9, 124)
 cursor = 9
+interaction_polygon = PackedVector2Array(-25, -110, 25, -110, 25, 110, -25, 110)
 
 [node name="AusgangKern" parent="Hotspots" unique_id=1262942552 instance=ExtResource("7_ipgvv")]
-position = Vector2(614.0, 210.0)
+position = Vector2(552, 208)
 description = "UI_RAUM_KERN"
-baseline = 69
-walk_to_point = Vector2(-22.0, 110.0)
+baseline = 100
+walk_to_point = Vector2(-17, 92)
 cursor = 9
+interaction_polygon = PackedVector2Array(-30, -100, 30, -100, 30, 100, -30, 100)
 
 [node name="Regions" type="Node2D" parent="." unique_id=710141081]
 
 [node name="Markers" type="Node2D" parent="." unique_id=838827215]
 
 [node name="Start" parent="Markers" unique_id=1908889921 instance=ExtResource("8_pnfsm")]
-position = Vector2(320, 320)
+position = Vector2(300, 322)
 
 [node name="VonTestkammer2" parent="Markers" unique_id=1768377504 instance=ExtResource("9_fao46")]
-position = Vector2(48, 320)
+position = Vector2(100, 318)
 
 [node name="VonKern" parent="Markers" unique_id=950491300 instance=ExtResource("10_ne4ri")]
-position = Vector2(592, 320)
+position = Vector2(535, 300)
 
 [node name="Characters" type="Node2D" parent="." unique_id=936763417]
 
 [node name="CharacterTuer *" parent="Characters" unique_id=1898839801 instance=ExtResource("11_utu7w")]
-position = Vector2(160, 309)
+position = Vector2(593, 228)
 
 [node name="CharacterMutti *" parent="Characters" unique_id=609514072 instance=ExtResource("12_npdm8")]
-position = Vector2(320, 309)
+position = Vector2(545, 112)
 
 [node name="CharacterBernd *" parent="Characters" unique_id=601399039 instance=ExtResource("13_cd7rv")]
-position = Vector2(480, 309)
+position = Vector2(380, 300)

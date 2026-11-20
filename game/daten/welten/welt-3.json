@@ -332,7 +332,7 @@
    "spielbar": false
   },
   {
-   "id": "strassenmusiker",
+   "id": "strassenmusiker_w3",
    "name": "Straßenmusiker",
    "kuerzel": "MUS",
    "raum": "unterstadt_strasse",
@@ -1004,6 +1004,7 @@
   "W3_MAX_RAUM",
   "W3_PIXEL_RAUM",
   "W3_LETZTE_ZELLE",
+  "W3_EIMER_GEKIPPT",
   "W3_SIMULATION_BESUCHE",
   "W3_SYMPTOM_BEKANNT",
   "W3_PIXEL_DOPPELT",

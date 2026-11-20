@@ -39,6 +39,17 @@ Welt 3 hat drei klar unterscheidbare Looks, damit der Spieler beim Springen zwis
 
 **Weitere Gegenstände:** Rote Pastille und Blaue Pastille (je in einer kleinen Apothekendose), Kaffeetasse, Telefonbuchseite, Portalgerät mit leerer Batterie, Gummihuhn (harmlos und tödlich), Morse-Tabelle, Farbcode-Zettel, Ewige Energiezelle (glühend und vereist). Agent Schmidts Sonnenbrille steht bei den weltenübergreifenden Gegenständen.
 
+**Umgesetzt und Abweichungen** (Stand 20. November 2026). Bei Räumen mit echtem Hintergrund gilt das Bild in `game/grafik/hintergruende/`, nicht mehr die Layout-Skizze; Lage und Umrisse stehen in `tools/layout/welt-3.yaml`. Gepixelt mit `tools/grafik_w3/raeume_pixelieren.py` (gemeinsame Palette je Raum, Varianten nur an der geänderten Stelle, Bereiche in `BEREICHE`), Code-Sicht mit `tools/grafik_w3/code_sicht.py`.
+
+| Raum | Was vom ersten Entwurf (Skizze, Motiv) abweicht | Warum |
+| --- | --- | --- |
+| Unterstadt, Straße | Herr Vier steht hinter dem Tresen der Nudelbude; der Tresen ist ein eigener Vordergrund-Ausschnitt | Sonst steht er vor dem Tresen |
+| Widerstandsbasis | Ausgang zur Kühlung liegt auf dem Lüftungsschacht und ist bis zum Rätsel versteckt; Schnee und Kaffee als eigene Varianten, beide zusammen als Kombination | Das Bild zeigt keine Tür; Schnee und Kaffee können in beliebiger Reihenfolge kommen |
+| Kühlung | Eimer und Pfütze kommen als ganzes Rechteck aus der Variante | Die Farbdifferenz fand den Eimer nur in Stücken |
+| Büroturm, 50. Stock | Keine Reihe gleicher Türen im Bild; die Klickfläche „Türen“ liegt auf den Türen hinter der Glaswand, der Ausgang ist der Aufzug | Gemini hat den Flur anders gemalt |
+| Testkammern 1 bis 3 | M.U.T.T.I. ist dort unsichtbar und spricht aus dem Lautsprecher (Kammer 2 hat dafür eine eigene Klickfläche), Pixel aus Lautsprecher oder Terminal | Sie hat in den Kammern keinen Körper |
+| Code-Sicht | Kein eigenes Bild: grüne Umrisse aus dem jeweiligen Hintergrund, die Wörter auf den Etiketten setzt `welt_3.gd` aus den Tausch-Texten | Übersetzbar, passt immer zum Raum |
+
 ## Prompts
 
 Vorne den Baustein aus `00-stil-und-werkzeuge.md`, dann das Motiv, hinten den Farb-Baustein der jeweiligen Ebene. Figuren, die in mehreren Ebenen auftreten, einmal erzeugen und nur für die Simulation per Farbkorrektur grünstichiger machen. Alle Figuren entstehen nach rechts blickend in einer ruhigen Referenzpose; schaut eine Figur im Raum nach links, spiegelt Godot sie. Räume mit 1280×360 entstehen als ein Panorama in einem Bild (Welt 2 hat gezeigt: zwei Hälften brauchen danach eine Naht-Reparatur). Laufbereich ist immer das flache Bodenband im unteren Drittel; Ausgänge liegen an den Bildrändern oder in der Rückwand.

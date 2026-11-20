@@ -136,6 +136,8 @@ Regeln für parallele Threads:
 
 Varianten entstehen im selben Chat aus dem Grundbild. Gemini verändert dabei trotzdem Kleinigkeiten (Menge, Pflaster, Verschiebung). Deshalb **nur die geänderte Stelle nach ihrem Umriss** ins Grundbild setzen, nie als Rechteck (sonst Kante an der Agora-Statue). Dann springt beim Wechsel nichts.
 
+Welt 3 (20. November 2026): Die Farbdifferenz allein findet auch Geminis Verschiebungen im ganzen Bild. **Die Suche auf grobe Rechtecke beschränken** (`BEREICHE` in `tools/grafik_w3/raeume_pixelieren.py`) und innerhalb davon nach Umriss übernehmen; wo der Umriss zerfällt (gekippter Eimer), das ganze Rechteck nehmen. **Eine gemeinsame Palette für Grundbild und Varianten**, sonst verfärbt sich beim Wechsel der ganze Raum. Zustände, die unabhängig voneinander kommen (Schnee, Kaffee), als eigene Varianten plus Kombination; `hintergrund_nach` nimmt dafür auch Schalter und „A+B“.
+
 ### Tests und CI
 
 - Screenshot-Referenzen weichen zwischen Windows und dem Mesa-Renderer der CI um mehr als 0,5 % ab. **Referenzen nur unter Linux oder aus dem CI-Render aufnehmen.** Der Welt-Einbau pusht nur die Raumgrafik, die Referenzen nimmt ein Thread unter Linux auf.
@@ -407,3 +409,10 @@ Komplett-Review von Prolog, Welt 1 und Welt 2 mit sieben Prüfrollen (Bericht: `
 - **Halbposen einzeln bestellen.** Ein Bogen mit vier Halbposen kopiert oft die Zielposen. Besser je Geste ein Bild: Neutralpose (Konzeptblatt) und die ausgeschnittene Zielpose als zwei Vorlagen, „ONE single figure exactly halfway … clearly different from both images“. 15 von 15 waren brauchbar.
 - **Kopfgröße nachträglich angleichen** (`tools/grafik_w3/kopf_angleichen.py`): nur bei stehenden Posen; Hocke und erhobene Arme verfälschen die Messung und werden übersprungen.
 - **Gegenstand wechselt zwischen Posen** (Kalles Laptop): eigenes Standbild ohne Gegenstand im selben Gemini-Chat bearbeiten lassen und als „R“ der betroffenen Gesten nehmen.
+
+### Einbau (20. November 2026)
+
+- **Reihenfolge bei neuen Figuren-IDs:** erst `tools/spieldaten.py`, dann den `UI_OBJ_`-Schlüssel in `uebersetzung/ui.csv`, dann `tools/skript_export.py` (schreibt `texte.csv`), erst danach `godot_raeume.py`. Sonst meldet es den Schlüssel als fehlend, obwohl er in `ui.csv` steht.
+- **Raum nach Layout bauen:** `godot --headless --editor --path game -- --cq-bauen --cq-layout=<raum,…>` legt neue Figuren und Klickflächen an; eine ersetzte Figur (Straßenmusiker) bleibt als alter Knoten in der Szene und muss von Hand raus.
+- **Klickflächen ohne `name:`** und ohne Bezug im Skript landen nicht im Bauplan (Lautsprecher in Kammer 2).
+- `godot_raeume.py` schreibt auch unter Linux alle Platzhalter neu; nur die betroffenen behalten.

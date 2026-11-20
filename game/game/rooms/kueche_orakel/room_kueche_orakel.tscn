@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://yju73rrvtisv"]
 
-[ext_resource type="Script" path="res://game/rooms/kueche_orakel/room_kueche_orakel.gd" id="1_waaj7"]
+[ext_resource type="Script" uid="uid://cgeg5kb0o05k3" path="res://game/rooms/kueche_orakel/room_kueche_orakel.gd" id="1_waaj7"]
 [ext_resource type="PackedScene" uid="uid://cl5fh4jk0ncbd" path="res://game/rooms/kueche_orakel/walkable_areas/boden/walkable_area_boden.tscn" id="2_ip1l6"]
 [ext_resource type="PackedScene" uid="uid://btj2nnbiyetj3" path="res://game/rooms/kueche_orakel/props/background/prop_background.tscn" id="3_hjjik"]
-[ext_resource type="Texture2D" uid="uid://brakj4p628ud7" path="res://grafik/platzhalter/raum_kueche_orakel.png" id="4_3g5sk"]
+[ext_resource type="Texture2D" uid="uid://68wva3kksdu7" path="res://grafik/hintergruende/w3_bg_kueche_orakel_v01.png" id="4_ip1l6"]
 [ext_resource type="PackedScene" uid="uid://7v6m0u88y5fn" path="res://game/rooms/kueche_orakel/hotspots/sparschwein/hotspot_sparschwein.tscn" id="5_0ryu1"]
 [ext_resource type="PackedScene" uid="uid://bt54gxxaro03e" path="res://game/rooms/kueche_orakel/hotspots/ofen/hotspot_ofen.tscn" id="6_5b4lm"]
 [ext_resource type="PackedScene" uid="uid://df1ir333qty63" path="res://game/rooms/kueche_orakel/hotspots/kochbuch/hotspot_kochbuch.tscn" id="7_tixl3"]
@@ -32,113 +32,126 @@ height = 360
 [node name="WalkableAreas" type="Node2D" parent="." unique_id=135782301]
 
 [node name="Boden" parent="WalkableAreas" unique_id=585347557 instance=ExtResource("2_ip1l6")]
-interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(8, 280, 632, 280, 632, 356, 8, 356)])
+interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(150, 286, 228, 286, 228, 348, 452, 348, 455, 286, 555, 286, 608, 338, 626, 356, 40, 356, 82, 330)])
 
 [node name="Props" type="Node2D" parent="." unique_id=2134928435]
 
 [node name="Background" parent="Props" unique_id=38786185 instance=ExtResource("3_hjjik")]
 position = Vector2(320, 180)
-texture = ExtResource("4_3g5sk")
+texture = ExtResource("4_ip1l6")
 description = "UI_RAUM_KUECHE_ORAKEL"
 
 [node name="Hotspots" type="Node2D" parent="." unique_id=593920457]
 
 [node name="Sparschwein" parent="Hotspots" unique_id=1263338610 instance=ExtResource("5_0ryu1")]
-position = Vector2(97, 72)
+position = Vector2(485, 92)
 description = "UI_OBJ_SPARSCHWEIN"
-baseline = 32
-walk_to_point = Vector2(0, 241)
+baseline = 18
+walk_to_point = Vector2(15, 208)
+interaction_polygon = PackedVector2Array(-23, -18, 23, -18, 23, 18, -23, 18)
 
 [node name="Ofen" parent="Hotspots" unique_id=1752845131 instance=ExtResource("6_5b4lm")]
-position = Vector2(185, 72)
+position = Vector2(90, 240)
 description = "UI_OBJ_OFEN"
-baseline = 32
-walk_to_point = Vector2(0, 241)
+baseline = 85
+walk_to_point = Vector2(90, 82)
+interaction_polygon = PackedVector2Array(-65, -85, 65, -85, 65, 85, -65, 85)
 
 [node name="Kochbuch" parent="Hotspots" unique_id=1426063152 instance=ExtResource("7_tixl3")]
-position = Vector2(273, 72)
+position = Vector2(381, 228)
 description = "UI_OBJ_KOCHBUCH"
-baseline = 32
-walk_to_point = Vector2(0, 241)
+baseline = 18
+walk_to_point = Vector2(-1, 124)
+interaction_polygon = PackedVector2Array(-43, -18, 43, -18, 43, 18, -43, 18)
 
 [node name="Gabel" parent="Hotspots" unique_id=1994437873 instance=ExtResource("8_kheio")]
-position = Vector2(361, 72)
+position = Vector2(274, 236)
 description = "UI_OBJ_GABEL"
-baseline = 32
-walk_to_point = Vector2(0, 241)
+baseline = 6
+walk_to_point = Vector2(-4, 116)
+interaction_polygon = PackedVector2Array(-22, -6, 22, -6, 22, 6, -22, 6)
 
 [node name="Kuckucksuhr" parent="Hotspots" unique_id=419432225 instance=ExtResource("9_s0uqs")]
-position = Vector2(449, 72)
+position = Vector2(417.5, 117.5)
 description = "UI_OBJ_KUCKUCKSUHR"
-baseline = 32
-walk_to_point = Vector2(0, 241)
+baseline = 57
+walk_to_point = Vector2(52.5, 182.5)
+interaction_polygon = PackedVector2Array(-22.5, -57.5, 22.5, -57.5, 22.5, 57.5, -22.5, 57.5)
 
 [node name="Eieruhr" parent="Hotspots" unique_id=1709442925 instance=ExtResource("10_r4p7o")]
-position = Vector2(537, 72)
+position = Vector2(546, 176)
 description = "UI_OBJ_EIERUHR"
-baseline = 32
-walk_to_point = Vector2(0, 241)
+baseline = 16
+walk_to_point = Vector2(-6, 124)
+interaction_polygon = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 
 [node name="TischMitTellerUndTeekanne" parent="Hotspots" unique_id=1880763587 instance=ExtResource("11_21bx2")]
-position = Vector2(97, 152)
+position = Vector2(332.5, 270)
 description = "UI_OBJ_TISCH_MIT_TELLER_UND_TEEKANNE"
-baseline = 32
-walk_to_point = Vector2(0, 161)
+baseline = 70
+walk_to_point = Vector2(-2.5, 82)
+interaction_polygon = PackedVector2Array(-102.5, -70, 102.5, -70, 102.5, 70, -102.5, 70)
 
 [node name="GlaeserAufDemRegal" parent="Hotspots" unique_id=1587356528 instance=ExtResource("12_6hj0u")]
-position = Vector2(185, 152)
+position = Vector2(510, 135)
 description = "UI_OBJ_GLAESER_AUF_DEM_REGAL"
-baseline = 32
-walk_to_point = Vector2(0, 161)
+baseline = 21
+walk_to_point = Vector2(0, 165)
+interaction_polygon = PackedVector2Array(-40, -21, 40, -21, 40, 21, -40, 21)
 
 [node name="GardinenUndFenster" parent="Hotspots" unique_id=1486485759 instance=ExtResource("13_07ow8")]
-position = Vector2(273, 152)
+position = Vector2(320.5, 122)
 description = "UI_OBJ_GARDINEN_UND_FENSTER"
-baseline = 32
-walk_to_point = Vector2(0, 161)
+baseline = 70
+walk_to_point = Vector2(-0.5, 230)
+interaction_polygon = PackedVector2Array(-62.5, -70, 62.5, -70, 62.5, 70, -62.5, 70)
 
 [node name="Tapete" parent="Hotspots" unique_id=993868797 instance=ExtResource("14_b0sdx")]
-position = Vector2(361, 152)
+position = Vector2(165, 90)
 description = "UI_OBJ_TAPETE"
-baseline = 32
-walk_to_point = Vector2(0, 161)
+baseline = 50
+walk_to_point = Vector2(25, 228)
+interaction_polygon = PackedVector2Array(-85, -50, 85, -50, 85, 50, -85, 50)
 
 [node name="Kehrblech" parent="Hotspots" unique_id=255308940 instance=ExtResource("15_hfn5g")]
-position = Vector2(449, 152)
+position = Vector2(41, 242.5)
 description = "UI_OBJ_KEHRBLECH"
-baseline = 32
-walk_to_point = Vector2(0, 161)
+baseline = 102
+walk_to_point = Vector2(54, 99.5)
+interaction_polygon = PackedVector2Array(-36, -102.5, 36, -102.5, 36, 102.5, -36, 102.5)
 
 [node name="Scherben" parent="Hotspots" unique_id=108497739 instance=ExtResource("16_x488x")]
-position = Vector2(537, 152)
+position = Vector2(510, 301)
 description = "UI_OBJ_SCHERBEN"
-baseline = 32
-walk_to_point = Vector2(0, 161)
+baseline = 15
+walk_to_point = Vector2(-10, 19)
+interaction_polygon = PackedVector2Array(-40, -15, 40, -15, 40, 15, -40, 15)
 
 [node name="AusgangStadtstrasse" parent="Hotspots" unique_id=422752743 instance=ExtResource("17_aflun")]
-position = Vector2(26.0, 210.0)
+position = Vector2(607, 195)
 description = "UI_RAUM_STADTSTRASSE"
-baseline = 69
-walk_to_point = Vector2(22.0, 110.0)
+baseline = 145
+walk_to_point = Vector2(-42, 137)
 cursor = 9
+interaction_polygon = PackedVector2Array(-29, -145, 29, -145, 29, 145, -29, 145)
 
 [node name="Regions" type="Node2D" parent="." unique_id=7871848]
 
 [node name="Markers" type="Node2D" parent="." unique_id=1755690356]
 
 [node name="Start" parent="Markers" unique_id=76080651 instance=ExtResource("18_8baa5")]
-position = Vector2(320, 320)
+position = Vector2(330, 352)
 
 [node name="VonStadtstrasse" parent="Markers" unique_id=486313761 instance=ExtResource("19_2plge")]
-position = Vector2(48, 320)
+position = Vector2(560, 336)
 
 [node name="VonZelle" parent="Markers" unique_id=664789530 instance=ExtResource("20_bemth")]
-position = Vector2(533, 320)
+position = Vector2(500, 320)
 
 [node name="Characters" type="Node2D" parent="." unique_id=979105823]
 
 [node name="CharacterOrakelOma *" parent="Characters" unique_id=676729534 instance=ExtResource("21_7g5wl")]
-position = Vector2(200, 309)
+position = Vector2(188, 318)
 
 [node name="CharacterRadio *" parent="Characters" unique_id=120766654 instance=ExtResource("22_fvai7")]
-position = Vector2(440, 309)
+position = Vector2(535, 108)

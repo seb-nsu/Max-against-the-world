@@ -33,16 +33,44 @@
     1280,
     360
    ],
-   "hintergrund": "res://grafik/platzhalter/raum_unterstadt_strasse.png",
+   "hintergrund": "res://grafik/hintergruende/w3_bg_unterstadt_strasse_v01.png",
    "farbe": "#3b3f58",
    "laufbereich": [
     [
      8,
+     288
+    ],
+    [
+     585,
+     288
+    ],
+    [
+     600,
      280
     ],
     [
-     1272,
+     640,
      280
+    ],
+    [
+     965,
+     286
+    ],
+    [
+     990,
+     280
+    ],
+    [
+     1040,
+     280
+    ],
+    [
+     1150,
+     292
+    ],
+    [
+     1272,
+     300
     ],
     [
      1272,
@@ -59,65 +87,109 @@
      320
     ],
     "von_apothekengasse": [
-     48,
-     320
+     1008,
+     300
     ],
     "von_laboreingang": [
-     1232,
-     320
+     1235,
+     325
     ],
     "von_widerstandsbasis": [
-     636,
-     296
+     612,
+     298
     ]
    },
+   "tiefe": 0.85,
+   "skala": 0.8,
+   "vordergrund": {
+    "tresen": {
+     "bild": "res://grafik/props/w3_tresen_nudelbude.png",
+     "rect": [
+      28,
+      214,
+      172,
+      62
+     ],
+     "baseline": 276
+    }
+   },
+   "effekte": [
+    {
+     "art": "dampf",
+     "pos": [
+      82,
+      196
+     ],
+     "breite": 24
+    },
+    {
+     "art": "dampf",
+     "pos": [
+      1045,
+      300
+     ],
+     "breite": 60
+    },
+    {
+     "art": "flackern",
+     "pos": [
+      172,
+      165
+     ],
+     "r": [
+      20,
+      26
+     ],
+     "farbe": "#ff4fa0"
+    }
+   ],
    "figuren": [
-    {
-     "id": "morphaeus",
-     "script_name": "Morphaeus",
-     "pos": [
-      173,
-      309
-     ]
-    },
-    {
-     "id": "deckert",
-     "script_name": "Deckert",
-     "pos": [
-      360,
-      309
-     ]
-    },
     {
      "id": "herr_vier",
      "script_name": "HerrVier",
      "pos": [
-      547,
-      309
+      104,
+      266
      ]
     },
     {
      "id": "weinender_mann",
      "script_name": "WeinenderMann",
      "pos": [
-      733,
-      309
+      152,
+      278
+     ]
+    },
+    {
+     "id": "strassenmusiker_w3",
+     "script_name": "StrassenmusikerW3",
+     "pos": [
+      492,
+      292
      ]
     },
     {
      "id": "frau_regenschirm",
      "script_name": "FrauRegenschirm",
      "pos": [
-      920,
-      309
+      700,
+      300
      ]
     },
     {
-     "id": "strassenmusiker",
-     "script_name": "Strassenmusiker",
+     "id": "deckert",
+     "script_name": "Deckert",
      "pos": [
-      1107,
-      309
+      850,
+      300
+     ]
+    },
+    {
+     "id": "morphaeus",
+     "script_name": "Morphaeus",
+     "pos": [
+      945,
+      300
      ]
     }
    ],
@@ -127,14 +199,14 @@
      "script_name": "Nudelbude",
      "name_key": "UI_OBJ_NUDELBUDE",
      "rect": [
-      59,
-      40,
-      119,
-      64
+      28,
+      100,
+      172,
+      172
      ],
      "gehe": [
-      117,
-      313
+      120,
+      302
      ],
      "ansehen": [
       {
@@ -169,14 +241,14 @@
      "script_name": "Telefonzelle",
      "name_key": "UI_OBJ_TELEFONZELLE",
      "rect": [
-      188,
-      40,
-      119,
-      64
+      352,
+      112,
+      90,
+      170
      ],
      "gehe": [
-      247,
-      313
+      398,
+      300
      ],
      "ansehen": [
       {
@@ -264,14 +336,14 @@
      "script_name": "TelefonbuchInDerZelle",
      "name_key": "UI_OBJ_TELEFONBUCH_IN_DER_ZELLE",
      "rect": [
-      317,
-      40,
-      119,
-      64
+      358,
+      186,
+      46,
+      28
      ],
      "gehe": [
-      376,
-      313
+      398,
+      300
      ],
      "ansehen": [
       {
@@ -296,14 +368,14 @@
      "script_name": "Vordach",
      "name_key": "UI_OBJ_VORDACH",
      "rect": [
-      447,
-      40,
-      119,
-      64
+      775,
+      100,
+      160,
+      72
      ],
      "gehe": [
-      505,
-      313
+      850,
+      302
      ],
      "ansehen": [
       {
@@ -328,14 +400,14 @@
      "script_name": "NeonPizzaPlakat",
      "name_key": "UI_OBJ_NEON_PIZZA_PLAKAT",
      "rect": [
-      576,
-      40,
-      119,
-      64
+      790,
+      0,
+      140,
+      98
      ],
      "gehe": [
-      635,
-      313
+      860,
+      302
      ],
      "ansehen": [
       {
@@ -368,14 +440,14 @@
      "script_name": "OrigamiEinhorn",
      "name_key": "UI_OBJ_ORIGAMI_EINHORN",
      "rect": [
-      705,
-      40,
-      119,
-      64
+      500,
+      288,
+      66,
+      44
      ],
      "gehe": [
-      764,
-      313
+      470,
+      318
      ],
      "ansehen": [
       {
@@ -418,14 +490,14 @@
      "script_name": "Pfuetzen",
      "name_key": "UI_OBJ_PFUETZEN",
      "rect": [
-      835,
-      40,
-      119,
-      64
+      1130,
+      318,
+      150,
+      42
      ],
      "gehe": [
-      893,
-      313
+      1120,
+      322
      ],
      "ansehen": [
       {
@@ -450,14 +522,14 @@
      "script_name": "HimmelMitFliegendenAutos",
      "name_key": "UI_OBJ_HIMMEL_MIT_FLIEGENDEN_AUTOS",
      "rect": [
-      964,
-      40,
-      119,
-      64
+      250,
+      0,
+      170,
+      100
      ],
      "gehe": [
-      1023,
-      313
+      330,
+      300
      ],
      "ansehen": [
       {
@@ -482,14 +554,14 @@
      "script_name": "Dampfgitter",
      "name_key": "UI_OBJ_DAMPFGITTER",
      "rect": [
-      1093,
-      40,
-      119,
-      64
+      998,
+      292,
+      98,
+      26
      ],
      "gehe": [
-      1152,
-      313
+      1045,
+      326
      ],
      "ansehen": [
       {
@@ -517,14 +589,14 @@
      "script_name": "Telefonbuchseite",
      "name_key": "UI_OBJ_TELEFONBUCHSEITE",
      "rect": [
-      133,
-      260,
-      20,
-      16
+      372,
+      192,
+      18,
+      12
      ],
      "gehe": [
-      143,
-      313
+      398,
+      300
      ],
      "textur": "res://grafik/platzhalter/prop_telefonbuchseite.png",
      "gegenstand": "telefonbuchseite",
@@ -561,14 +633,14 @@
      "ziel": "apothekengasse",
      "name_key": "UI_RAUM_APOTHEKENGASSE",
      "rect": [
-      8,
-      140,
-      36,
-      140
+      972,
+      135,
+      70,
+      148
      ],
      "gehe": [
-      48,
-      320
+      1008,
+      288
      ],
      "erreichbar_ab": "R1b",
      "ansehen": [
@@ -622,14 +694,14 @@
      "ziel": "laboreingang",
      "name_key": "UI_RAUM_LABOREINGANG",
      "rect": [
-      1236,
+      1180,
       140,
-      36,
-      140
+      100,
+      160
      ],
      "gehe": [
-      1232,
-      320
+      1258,
+      322
      ],
      "erreichbar_ab": "start",
      "ansehen": [
@@ -656,14 +728,14 @@
      "ziel": "widerstandsbasis",
      "name_key": "UI_RAUM_WIDERSTANDSBASIS",
      "rect": [
-      600,
-      160,
-      72,
-      80
+      586,
+      188,
+      54,
+      78
      ],
      "gehe": [
-      636,
-      296
+      612,
+      292
      ],
      "erreichbar_ab": "R3b",
      "ansehen": []
@@ -703,19 +775,19 @@
     1280,
     360
    ],
-   "hintergrund": "res://grafik/platzhalter/raum_apothekengasse.png",
+   "hintergrund": "res://grafik/hintergruende/w3_bg_apothekengasse_v01.png",
    "farbe": "#46405e",
    "laufbereich": [
     [
      8,
-     280
+     300
     ],
     [
-     632,
-     280
+     1180,
+     296
     ],
     [
-     632,
+     1180,
      356
     ],
     [
@@ -725,29 +797,56 @@
    ],
    "marker": {
     "start": [
-     320,
-     320
+     640,
+     322
     ],
     "von_unterstadt_strasse": [
-     48,
-     320
+     140,
+     322
     ]
+   },
+   "tiefe": 0.85,
+   "skala": 0.8,
+   "effekte": [
+    {
+     "art": "flackern",
+     "pos": [
+      925,
+      70
+     ],
+     "r": [
+      26,
+      30
+     ],
+     "farbe": "#7fe8ff"
+    },
+    {
+     "art": "dampf",
+     "pos": [
+      960,
+      285
+     ],
+     "breite": 50
+    }
+   ],
+   "hintergrund_nach": {
+    "R3a": "res://grafik/hintergruende/w3_bg_apothekengasse_faecher_offen_v01.png"
    },
    "figuren": [
     {
      "id": "morphaeus",
      "script_name": "Morphaeus",
      "pos": [
-      200,
-      309
+      470,
+      306
      ]
     },
     {
      "id": "pastillenautomat",
      "script_name": "Pastillenautomat",
      "pos": [
-      440,
-      309
+      645,
+      175
      ]
     }
    ],
@@ -757,14 +856,14 @@
      "script_name": "Automat",
      "name_key": "UI_OBJ_AUTOMAT",
      "rect": [
-      59,
-      40,
-      123,
-      64
+      545,
+      0,
+      200,
+      292
      ],
      "gehe": [
-      120,
-      313
+      645,
+      316
      ],
      "ansehen": [
       {
@@ -810,14 +909,14 @@
      "script_name": "Kisten",
      "name_key": "UI_OBJ_KISTEN",
      "rect": [
-      192,
-      40,
-      123,
-      64
+      212,
+      110,
+      200,
+      186
      ],
      "gehe": [
-      253,
-      313
+      310,
+      312
      ],
      "ansehen": [
       {
@@ -851,14 +950,14 @@
      "script_name": "TropfendesRohr",
      "name_key": "UI_OBJ_TROPFENDES_ROHR",
      "rect": [
-      325,
+      458,
+      0,
       40,
-      123,
-      64
+      170
      ],
      "gehe": [
-      387,
-      313
+      478,
+      308
      ],
      "ansehen": [
       {
@@ -884,14 +983,14 @@
      "script_name": "Wandlampe",
      "name_key": "UI_OBJ_WANDLAMPE",
      "rect": [
-      459,
-      40,
-      123,
-      64
+      900,
+      38,
+      55,
+      75
      ],
      "gehe": [
-      520,
-      313
+      925,
+      308
      ],
      "ansehen": [
       {
@@ -921,14 +1020,14 @@
      "ziel": "unterstadt_strasse",
      "name_key": "UI_RAUM_UNTERSTADT_STRASSE",
      "rect": [
-      8,
+      60,
+      10,
       140,
-      36,
-      140
+      286
      ],
      "gehe": [
-      48,
-      320
+      120,
+      322
      ],
      "erreichbar_ab": "start",
      "ansehen": []
@@ -959,99 +1058,148 @@
     1280,
     360
    ],
-   "hintergrund": "res://grafik/platzhalter/raum_widerstandsbasis.png",
+   "hintergrund": "res://grafik/hintergruende/w3_bg_widerstandsbasis_v01.png",
    "farbe": "#4a4a40",
    "laufbereich": [
     [
-     8,
-     280
+     30,
+     330
+    ],
+    [
+     100,
+     304
+    ],
+    [
+     470,
+     300
+    ],
+    [
+     1095,
+     306
+    ],
+    [
+     1120,
+     330
     ],
     [
      1272,
-     280
+     335
     ],
     [
      1272,
      356
     ],
     [
-     8,
+     30,
      356
     ]
    ],
    "marker": {
     "start": [
      640,
-     320
+     330
     ],
     "von_unterstadt_strasse": [
-     48,
-     320
+     95,
+     336
     ],
     "von_kuehlung": [
-     1232,
-     320
+     1180,
+     340
     ],
     "von_stadtstrasse": [
-     640,
-     320
+     170,
+     326
     ],
     "von_testkammer_1": [
-     640,
-     320
+     170,
+     326
     ],
     "von_kapsel": [
-     200,
-     320
+     170,
+     326
     ]
    },
+   "tiefe": 0.85,
+   "skala": 0.8,
+   "effekte": [
+    {
+     "art": "flackern",
+     "pos": [
+      905,
+      78
+     ],
+     "r": [
+      30,
+      30
+     ],
+     "farbe": "#ffe680"
+    },
+    {
+     "art": "flackern",
+     "pos": [
+      578,
+      182
+     ],
+     "r": [
+      26,
+      18
+     ],
+     "farbe": "#7fff9f"
+    }
+   ],
+   "hintergrund_nach": {
+    "W3_SCHNEE": "res://grafik/hintergruende/w3_bg_widerstandsbasis_schnee_v01.png",
+    "R13": "res://grafik/hintergruende/w3_bg_widerstandsbasis_kaffee_v01.png",
+    "R13+W3_SCHNEE": "res://grafik/hintergruende/w3_bg_widerstandsbasis_schnee_kaffee_v01.png"
+   },
    "figuren": [
-    {
-     "id": "opa",
-     "script_name": "Opa",
-     "pos": [
-      173,
-      309
-     ]
-    },
-    {
-     "id": "kalle",
-     "script_name": "Kalle",
-     "pos": [
-      360,
-      309
-     ]
-    },
     {
      "id": "rebellin",
      "script_name": "Rebellin",
      "pos": [
-      547,
-      309
+      380,
+      318
      ]
     },
     {
      "id": "rebell",
      "script_name": "Rebell",
      "pos": [
-      733,
-      309
+      700,
+      320
      ]
     },
     {
-     "id": "piepsi",
-     "script_name": "Piepsi",
+     "id": "kalle",
+     "script_name": "Kalle",
      "pos": [
-      920,
-      309
+      815,
+      318
      ]
     },
     {
      "id": "hausmeister",
      "script_name": "Hausmeister",
      "pos": [
-      1107,
-      309
+      610,
+      334
+     ]
+    },
+    {
+     "id": "opa",
+     "script_name": "Opa",
+     "pos": [
+      1180,
+      330
+     ]
+    },
+    {
+     "id": "piepsi",
+     "script_name": "Piepsi",
+     "pos": [
+      1238,
+      334
      ]
     }
    ],
@@ -1061,14 +1209,14 @@
      "script_name": "Kapseln",
      "name_key": "UI_OBJ_KAPSELN",
      "rect": [
-      59,
-      40,
-      72,
-      64
+      225,
+      182,
+      225,
+      115
      ],
      "gehe": [
-      95,
-      313
+      330,
+      322
      ],
      "ansehen": [
       {
@@ -1093,14 +1241,14 @@
      "script_name": "MaxKapsel",
      "name_key": "UI_OBJ_MAX_KAPSEL",
      "rect": [
-      141,
-      40,
-      72,
-      64
+      112,
+      182,
+      113,
+      115
      ],
      "gehe": [
-      177,
-      313
+      170,
+      326
      ],
      "ansehen": [
       {
@@ -1144,14 +1292,14 @@
      "script_name": "Terminal",
      "name_key": "UI_OBJ_TERMINAL",
      "rect": [
-      224,
-      40,
-      72,
-      64
+      500,
+      155,
+      140,
+      88
      ],
      "gehe": [
-      260,
-      313
+      565,
+      322
      ],
      "ansehen": [
       {
@@ -1207,14 +1355,14 @@
      "script_name": "Fenster",
      "name_key": "UI_OBJ_FENSTER",
      "rect": [
-      389,
-      40,
-      72,
-      64
+      256,
+      4,
+      88,
+      70
      ],
      "gehe": [
-      425,
-      313
+      300,
+      322
      ],
      "ansehen": [
       {
@@ -1248,14 +1396,14 @@
      "script_name": "Lueftungsschacht",
      "name_key": "UI_OBJ_LUEFTUNGSSCHACHT",
      "rect": [
-      555,
-      40,
-      72,
-      64
+      1122,
+      296,
+      120,
+      36
      ],
      "gehe": [
-      591,
-      313
+      1180,
+      340
      ],
      "ansehen": [
       {
@@ -1289,14 +1437,14 @@
      "script_name": "Stromkasten",
      "name_key": "UI_OBJ_STROMKASTEN",
      "rect": [
-      637,
-      40,
-      72,
-      64
+      650,
+      150,
+      80,
+      72
      ],
      "gehe": [
-      673,
-      313
+      690,
+      322
      ],
      "ansehen": [
       {
@@ -1330,14 +1478,14 @@
      "script_name": "PatchPanel",
      "name_key": "UI_OBJ_PATCH_PANEL",
      "rect": [
-      803,
-      40,
-      72,
-      64
+      443,
+      92,
+      70,
+      116
      ],
      "gehe": [
-      839,
-      313
+      478,
+      322
      ],
      "ansehen": [
       {
@@ -1371,14 +1519,14 @@
      "script_name": "Pizzakartons",
      "name_key": "UI_OBJ_PIZZAKARTONS",
      "rect": [
-      968,
-      40,
-      72,
-      64
+      1095,
+      15,
+      95,
+      278
      ],
      "gehe": [
-      1004,
-      313
+      1110,
+      324
      ],
      "ansehen": [
       {
@@ -1412,14 +1560,14 @@
      "script_name": "Handtuch",
      "name_key": "UI_OBJ_HANDTUCH",
      "rect": [
-      1051,
-      40,
-      72,
-      64
+      1022,
+      112,
+      32,
+      95
      ],
      "gehe": [
-      1087,
-      313
+      1038,
+      322
      ],
      "ansehen": [
       {
@@ -1463,14 +1611,14 @@
      "script_name": "Grossrechner",
      "name_key": "UI_OBJ_GROSSRECHNER",
      "rect": [
-      1133,
-      40,
-      72,
-      64
+      865,
+      60,
+      90,
+      235
      ],
      "gehe": [
-      1169,
-      313
+      905,
+      322
      ],
      "ansehen": [
       {
@@ -1513,14 +1661,14 @@
      "script_name": "Steuerpult",
      "name_key": "UI_OBJ_STEUERPULT",
      "rect": [
-      59,
+      745,
+      155,
       120,
-      72,
-      64
+      135
      ],
      "gehe": [
-      95,
-      313
+      800,
+      322
      ],
      "ansehen": [
       {
@@ -1553,14 +1701,14 @@
      "script_name": "TischMitKallesTasse",
      "name_key": "UI_OBJ_TISCH_MIT_KALLES_TASSE",
      "rect": [
-      141,
-      120,
-      72,
-      64
+      950,
+      222,
+      140,
+      90
      ],
      "gehe": [
-      177,
-      313
+      1020,
+      322
      ],
      "ansehen": [
       {
@@ -1597,14 +1745,14 @@
      "script_name": "KallesTasse",
      "name_key": "UI_OBJ_KALLES_TASSE",
      "rect": [
-      224,
-      120,
-      72,
-      64
+      1038,
+      208,
+      32,
+      30
      ],
      "gehe": [
-      260,
-      313
+      1050,
+      322
      ],
      "ansehen": [
       {
@@ -1643,14 +1791,14 @@
      "script_name": "Plakat",
      "name_key": "UI_OBJ_PLAKAT",
      "rect": [
-      389,
-      120,
-      72,
-      64
+      640,
+      20,
+      80,
+      120
      ],
      "gehe": [
-      425,
-      313
+      680,
+      322
      ],
      "ansehen": [
       {
@@ -1692,14 +1840,14 @@
      "script_name": "Rebellen",
      "name_key": "UI_OBJ_REBELLEN",
      "rect": [
-      472,
-      120,
-      72,
-      64
+      340,
+      230,
+      400,
+      30
      ],
      "gehe": [
-      508,
-      313
+      540,
+      330
      ],
      "ansehen": [
       {
@@ -1724,14 +1872,14 @@
      "script_name": "Kaffeepfuetze",
      "name_key": "UI_OBJ_KAFFEEPFUETZE",
      "rect": [
-      555,
-      120,
-      72,
-      64
+      760,
+      318,
+      470,
+      40
      ],
      "gehe": [
-      591,
-      313
+      900,
+      336
      ],
      "ansehen": [
       {
@@ -1760,14 +1908,14 @@
      "ziel": "unterstadt_strasse",
      "name_key": "UI_RAUM_UNTERSTADT_STRASSE",
      "rect": [
-      8,
-      140,
-      36,
-      140
+      12,
+      48,
+      92,
+      282
      ],
      "gehe": [
-      48,
-      320
+      80,
+      340
      ],
      "erreichbar_ab": "start",
      "ansehen": []
@@ -1778,17 +1926,18 @@
      "ziel": "kuehlung",
      "name_key": "UI_RAUM_KUEHLUNG",
      "rect": [
-      1236,
-      140,
-      36,
-      140
+      1122,
+      296,
+      120,
+      36
      ],
      "gehe": [
-      1232,
-      320
+      1180,
+      340
      ],
      "erreichbar_ab": "R3b",
-     "ansehen": []
+     "ansehen": [],
+     "versteckt": true
     }
    ],
    "zurufe": [
@@ -1825,24 +1974,40 @@
     640,
     360
    ],
-   "hintergrund": "res://grafik/platzhalter/raum_kuehlung.png",
-   "farbe": "#3c5560",
+   "hintergrund": "res://grafik/hintergruende/w3_bg_kuehlung_v01.png",
+   "farbe": "#3c4658",
    "laufbereich": [
     [
-     8,
-     280
+     60,
+     284
     ],
     [
-     632,
-     280
+     485,
+     282
     ],
     [
-     632,
+     485,
+     308
+    ],
+    [
+     545,
+     312
+    ],
+    [
+     600,
+     338
+    ],
+    [
+     622,
      356
     ],
     [
-     8,
+     18,
      356
+    ],
+    [
+     40,
+     330
     ]
    ],
    "marker": {
@@ -1851,9 +2016,27 @@
      320
     ],
     "von_widerstandsbasis": [
-     48,
-     320
+     120,
+     322
     ]
+   },
+   "tiefe": 0.85,
+   "effekte": [
+    {
+     "art": "flackern",
+     "pos": [
+      416,
+      147
+     ],
+     "r": [
+      8,
+      8
+     ],
+     "farbe": "#9fe8ff"
+    }
+   ],
+   "hintergrund_nach": {
+    "W3_EIMER_GEKIPPT": "res://grafik/hintergruende/w3_bg_kuehlung_taut_v01.png"
    },
    "figuren": [],
    "hotspots": [
@@ -1862,14 +2045,14 @@
      "script_name": "Wassereimer",
      "name_key": "UI_OBJ_WASSEREIMER",
      "rect": [
-      267,
-      200,
-      53,
-      67
+      486,
+      248,
+      60,
+      60
      ],
      "gehe": [
-      293,
-      313
+      462,
+      304
      ],
      "ansehen": []
     }
@@ -1882,14 +2065,14 @@
      "ziel": "widerstandsbasis",
      "name_key": "UI_RAUM_WIDERSTANDSBASIS",
      "rect": [
-      8,
-      140,
-      36,
-      140
+      24,
+      205,
+      146,
+      130
      ],
      "gehe": [
-      48,
-      320
+      110,
+      322
      ],
      "erreichbar_ab": "R3b",
      "ansehen": []
@@ -1905,51 +2088,90 @@
     640,
     360
    ],
-   "hintergrund": "res://grafik/platzhalter/raum_laboreingang.png",
+   "hintergrund": "res://grafik/hintergruende/w3_bg_laboreingang_v01.png",
    "farbe": "#585858",
    "laufbereich": [
     [
-     8,
-     280
+     112,
+     272
     ],
     [
-     632,
-     280
+     525,
+     262
+    ],
+    [
+     598,
+     300
     ],
     [
      632,
      356
     ],
     [
-     8,
+     56,
      356
+    ],
+    [
+     100,
+     300
     ]
    ],
    "marker": {
     "start": [
      320,
-     320
+     312
     ],
     "von_unterstadt_strasse": [
-     48,
-     320
+     150,
+     300
     ]
    },
-   "figuren": [
+   "tiefe": 0.85,
+   "skala": 0.8,
+   "effekte": [
     {
-     "id": "kalle",
-     "script_name": "Kalle",
+     "art": "flackern",
      "pos": [
-      200,
-      309
-     ]
+      325,
+      70
+     ],
+     "r": [
+      34,
+      22
+     ],
+     "farbe": "#e8f4ff"
     },
+    {
+     "art": "flackern",
+     "pos": [
+      425,
+      172
+     ],
+     "r": [
+      4,
+      4
+     ],
+     "farbe": "#ff4040"
+    }
+   ],
+   "hintergrund_nach": {
+    "W3_PANZERTUER_OFFEN": "res://grafik/hintergruende/w3_bg_laboreingang_offen_v01.png"
+   },
+   "figuren": [
     {
      "id": "hausmeister",
      "script_name": "Hausmeister",
      "pos": [
-      440,
-      309
+      470,
+      292
+     ]
+    },
+    {
+     "id": "kalle",
+     "script_name": "Kalle",
+     "pos": [
+      215,
+      312
      ]
     }
    ],
@@ -1959,14 +2181,14 @@
      "script_name": "Panzertuer",
      "name_key": "UI_OBJ_PANZERTUER",
      "rect": [
-      59,
-      40,
-      77,
-      64
+      248,
+      108,
+      152,
+      140
      ],
      "gehe": [
-      97,
-      313
+      325,
+      290
      ],
      "ansehen": [
       {
@@ -2027,14 +2249,14 @@
      "script_name": "Kartenleser",
      "name_key": "UI_OBJ_KARTENLESER",
      "rect": [
-      147,
-      40,
-      77,
-      64
+      405,
+      165,
+      26,
+      36
      ],
      "gehe": [
-      185,
-      313
+      415,
+      290
      ],
      "ansehen": [
       {
@@ -2099,14 +2321,14 @@
      "script_name": "Datenanschluss",
      "name_key": "UI_OBJ_DATENANSCHLUSS",
      "rect": [
-      235,
-      40,
-      77,
-      64
+      270,
+      125,
+      90,
+      110
      ],
      "gehe": [
-      273,
-      313
+      325,
+      290
      ],
      "ansehen": [],
      "benutzen": [
@@ -2125,14 +2347,14 @@
      "script_name": "Wischeimer",
      "name_key": "UI_OBJ_WISCHEIMER",
      "rect": [
-      323,
-      40,
-      77,
-      64
+      38,
+      280,
+      75,
+      66
      ],
      "gehe": [
-      361,
-      313
+      130,
+      330
      ],
      "ansehen": [
       {
@@ -2176,14 +2398,14 @@
      "script_name": "Pinnwand",
      "name_key": "UI_OBJ_PINNWAND",
      "rect": [
-      411,
-      40,
-      77,
-      64
+      0,
+      90,
+      98,
+      150
      ],
      "gehe": [
-      449,
-      313
+      110,
+      312
      ],
      "ansehen": [
       {
@@ -2224,14 +2446,14 @@
      "script_name": "Warnstreifen",
      "name_key": "UI_OBJ_WARNSTREIFEN",
      "rect": [
-      499,
-      40,
-      77,
-      64
+      180,
+      222,
+      300,
+      40
      ],
      "gehe": [
-      537,
-      313
+      300,
+      292
      ],
      "ansehen": [
       {
@@ -2256,14 +2478,14 @@
      "script_name": "Deckenlampe",
      "name_key": "UI_OBJ_DECKENLAMPE",
      "rect": [
-      59,
-      120,
-      77,
-      64
+      305,
+      45,
+      40,
+      40
      ],
      "gehe": [
-      97,
-      313
+      325,
+      290
      ],
      "ansehen": [
       {
@@ -2288,14 +2510,14 @@
      "script_name": "Gang",
      "name_key": "UI_OBJ_GANG",
      "rect": [
-      147,
-      120,
-      77,
-      64
+      500,
+      60,
+      92,
+      200
      ],
      "gehe": [
-      185,
-      313
+      520,
+      285
      ],
      "ansehen": [
       {
@@ -2320,14 +2542,14 @@
      "script_name": "PlatzDesHausmeisters",
      "name_key": "UI_OBJ_PLATZ_DES_HAUSMEISTERS",
      "rect": [
-      235,
-      120,
-      77,
-      64
+      440,
+      200,
+      60,
+      60
      ],
      "gehe": [
-      273,
-      313
+      455,
+      295
      ],
      "ansehen": [
       {
@@ -2368,14 +2590,14 @@
      "ziel": "unterstadt_strasse",
      "name_key": "UI_RAUM_UNTERSTADT_STRASSE",
      "rect": [
-      8,
-      140,
-      36,
-      140
+      110,
+      92,
+      56,
+      178
      ],
      "gehe": [
-      48,
-      320
+      140,
+      290
      ],
      "erreichbar_ab": "start",
      "ansehen": []
@@ -2933,55 +3155,98 @@
     640,
     360
    ],
-   "hintergrund": "res://grafik/platzhalter/raum_kueche_orakel.png",
+   "hintergrund": "res://grafik/hintergruende/w3_bg_kueche_orakel_v01.png",
    "farbe": "#b49a72",
    "laufbereich": [
     [
-     8,
-     280
+     150,
+     286
     ],
     [
-     632,
-     280
+     228,
+     286
     ],
     [
-     632,
+     228,
+     348
+    ],
+    [
+     452,
+     348
+    ],
+    [
+     455,
+     286
+    ],
+    [
+     555,
+     286
+    ],
+    [
+     608,
+     338
+    ],
+    [
+     626,
      356
     ],
     [
-     8,
+     40,
      356
+    ],
+    [
+     82,
+     330
     ]
    ],
    "marker": {
     "start": [
-     320,
-     320
+     330,
+     352
     ],
     "von_stadtstrasse": [
-     48,
-     320
+     560,
+     336
     ],
     "von_zelle": [
-     533,
+     500,
      320
     ]
+   },
+   "tiefe": 0.9,
+   "skala": 0.8,
+   "effekte": [
+    {
+     "art": "flackern",
+     "pos": [
+      130,
+      245
+     ],
+     "r": [
+      24,
+      22
+     ],
+     "farbe": "#ffb347"
+    }
+   ],
+   "hintergrund_nach": {
+    "R4": "res://grafik/hintergruende/w3_bg_kueche_orakel_scherben_v01.png"
    },
    "figuren": [
     {
      "id": "orakel_oma",
      "script_name": "OrakelOma",
      "pos": [
-      200,
-      309
+      188,
+      318
      ]
     },
     {
      "id": "radio",
      "script_name": "Radio",
      "pos": [
-      440,
-      309
+      535,
+      108
      ]
     }
    ],
@@ -2991,14 +3256,14 @@
      "script_name": "Sparschwein",
      "name_key": "UI_OBJ_SPARSCHWEIN",
      "rect": [
-      59,
-      40,
-      77,
-      64
+      462,
+      74,
+      46,
+      36
      ],
      "gehe": [
-      97,
-      313
+      500,
+      300
      ],
      "ansehen": [
       {
@@ -3033,14 +3298,14 @@
      "script_name": "Ofen",
      "name_key": "UI_OBJ_OFEN",
      "rect": [
-      147,
-      40,
-      77,
-      64
+      25,
+      155,
+      130,
+      170
      ],
      "gehe": [
-      185,
-      313
+      180,
+      322
      ],
      "ansehen": [
       {
@@ -3076,14 +3341,14 @@
      "script_name": "Kochbuch",
      "name_key": "UI_OBJ_KOCHBUCH",
      "rect": [
-      235,
-      40,
-      77,
-      64
+      338,
+      210,
+      86,
+      36
      ],
      "gehe": [
-      273,
-      313
+      380,
+      352
      ],
      "ansehen": [
       {
@@ -3119,14 +3384,14 @@
      "script_name": "Gabel",
      "name_key": "UI_OBJ_GABEL",
      "rect": [
-      323,
-      40,
-      77,
-      64
+      252,
+      230,
+      44,
+      12
      ],
      "gehe": [
-      361,
-      313
+      270,
+      352
      ],
      "ansehen": [
       {
@@ -3162,14 +3427,14 @@
      "script_name": "Kuckucksuhr",
      "name_key": "UI_OBJ_KUCKUCKSUHR",
      "rect": [
-      411,
-      40,
-      77,
-      64
+      395,
+      60,
+      45,
+      115
      ],
      "gehe": [
-      449,
-      313
+      470,
+      300
      ],
      "ansehen": [
       {
@@ -3221,14 +3486,14 @@
      "script_name": "Eieruhr",
      "name_key": "UI_OBJ_EIERUHR",
      "rect": [
-      499,
-      40,
-      77,
-      64
+      530,
+      160,
+      32,
+      32
      ],
      "gehe": [
-      537,
-      313
+      540,
+      300
      ],
      "ansehen": [
       {
@@ -3263,14 +3528,14 @@
      "script_name": "TischMitTellerUndTeekanne",
      "name_key": "UI_OBJ_TISCH_MIT_TELLER_UND_TEEKANNE",
      "rect": [
-      59,
-      120,
-      77,
-      64
+      230,
+      200,
+      205,
+      140
      ],
      "gehe": [
-      97,
-      313
+      330,
+      352
      ],
      "ansehen": [
       {
@@ -3295,14 +3560,14 @@
      "script_name": "GlaeserAufDemRegal",
      "name_key": "UI_OBJ_GLAESER_AUF_DEM_REGAL",
      "rect": [
-      147,
-      120,
-      77,
-      64
+      470,
+      114,
+      80,
+      42
      ],
      "gehe": [
-      185,
-      313
+      510,
+      300
      ],
      "ansehen": [
       {
@@ -3327,14 +3592,14 @@
      "script_name": "GardinenUndFenster",
      "name_key": "UI_OBJ_GARDINEN_UND_FENSTER",
      "rect": [
-      235,
-      120,
-      77,
-      64
+      258,
+      52,
+      125,
+      140
      ],
      "gehe": [
-      273,
-      313
+      320,
+      352
      ],
      "ansehen": [
       {
@@ -3359,14 +3624,14 @@
      "script_name": "Tapete",
      "name_key": "UI_OBJ_TAPETE",
      "rect": [
-      323,
-      120,
-      77,
-      64
+      80,
+      40,
+      170,
+      100
      ],
      "gehe": [
-      361,
-      313
+      190,
+      318
      ],
      "ansehen": [
       {
@@ -3391,14 +3656,14 @@
      "script_name": "Kehrblech",
      "name_key": "UI_OBJ_KEHRBLECH",
      "rect": [
-      411,
-      120,
-      77,
-      64
+      5,
+      140,
+      72,
+      205
      ],
      "gehe": [
-      449,
-      313
+      95,
+      342
      ],
      "ansehen": [
       {
@@ -3425,14 +3690,14 @@
      "script_name": "Scherben",
      "name_key": "UI_OBJ_SCHERBEN",
      "rect": [
-      499,
-      120,
-      77,
-      64
+      470,
+      286,
+      80,
+      30
      ],
      "gehe": [
-      537,
-      313
+      500,
+      320
      ],
      "ansehen": [
       {
@@ -3463,14 +3728,14 @@
      "ziel": "stadtstrasse",
      "name_key": "UI_RAUM_STADTSTRASSE",
      "rect": [
-      8,
-      140,
-      36,
-      140
+      578,
+      50,
+      58,
+      290
      ],
      "gehe": [
-      48,
-      320
+      565,
+      332
      ],
      "erreichbar_ab": "R3b",
      "ansehen": []
@@ -3501,51 +3766,79 @@
     640,
     360
    ],
-   "hintergrund": "res://grafik/platzhalter/raum_buero_50.png",
-   "farbe": "#8c96a0",
+   "hintergrund": "res://grafik/hintergruende/w3_bg_buero_50_v01.png",
+   "farbe": "#9aa8b8",
    "laufbereich": [
     [
-     8,
-     280
+     80,
+     322
     ],
     [
-     632,
-     280
+     150,
+     270
     ],
     [
-     632,
+     465,
+     268
+    ],
+    [
+     470,
+     300
+    ],
+    [
+     530,
+     330
+    ],
+    [
+     560,
      356
     ],
     [
-     8,
+     20,
      356
     ]
    ],
    "marker": {
     "start": [
-     320,
+     300,
      320
     ],
     "von_stadtstrasse": [
-     48,
-     320
+     105,
+     330
     ]
    },
-   "figuren": [
+   "tiefe": 0.8,
+   "skala": 0.8,
+   "effekte": [
     {
-     "id": "schmidt",
-     "script_name": "Schmidt",
+     "art": "flackern",
      "pos": [
-      200,
-      309
-     ]
-    },
+      320,
+      215
+     ],
+     "r": [
+      16,
+      12
+     ],
+     "farbe": "#7fff9f"
+    }
+   ],
+   "figuren": [
     {
      "id": "klon",
      "script_name": "Klon",
      "pos": [
-      440,
-      309
+      250,
+      300
+     ]
+    },
+    {
+     "id": "schmidt",
+     "script_name": "Schmidt",
+     "pos": [
+      420,
+      286
      ]
     }
    ],
@@ -3555,14 +3848,14 @@
      "script_name": "Flur",
      "name_key": "UI_OBJ_FLUR",
      "rect": [
-      59,
-      40,
-      77,
-      64
+      165,
+      85,
+      310,
+      45
      ],
      "gehe": [
-      97,
-      313
+      320,
+      292
      ],
      "ansehen": [
       {
@@ -3587,14 +3880,14 @@
      "script_name": "Tueren",
      "name_key": "UI_OBJ_TUEREN",
      "rect": [
-      147,
-      40,
-      77,
-      64
+      95,
+      150,
+      55,
+      72
      ],
      "gehe": [
-      185,
-      313
+      140,
+      318
      ],
      "ansehen": [],
      "benutzen": [
@@ -3612,14 +3905,14 @@
      "script_name": "Topfpflanzen",
      "name_key": "UI_OBJ_TOPFPFLANZEN",
      "rect": [
-      235,
-      40,
-      77,
-      64
+      150,
+      188,
+      46,
+      84
      ],
      "gehe": [
-      273,
-      313
+      175,
+      300
      ],
      "ansehen": [
       {
@@ -3646,14 +3939,14 @@
      "script_name": "Fenster",
      "name_key": "UI_OBJ_FENSTER",
      "rect": [
-      323,
-      40,
-      77,
-      64
+      90,
+      60,
+      66,
+      215
      ],
      "gehe": [
-      361,
-      313
+      140,
+      318
      ],
      "ansehen": [
       {
@@ -3687,14 +3980,14 @@
      "script_name": "EndlosTreppe",
      "name_key": "UI_OBJ_ENDLOS_TREPPE",
      "rect": [
-      411,
-      40,
-      77,
-      64
+      590,
+      20,
+      50,
+      305
      ],
      "gehe": [
-      449,
-      313
+      555,
+      350
      ],
      "ansehen": [
       {
@@ -3728,14 +4021,14 @@
      "script_name": "Wasserspender",
      "name_key": "UI_OBJ_WASSERSPENDER",
      "rect": [
-      499,
-      40,
-      77,
-      64
+      538,
+      180,
+      45,
+      140
      ],
      "gehe": [
-      537,
-      313
+      525,
+      338
      ],
      "ansehen": [
       {
@@ -3769,14 +4062,14 @@
      "script_name": "Kopierer",
      "name_key": "UI_OBJ_KOPIERER",
      "rect": [
-      147,
-      120,
-      77,
-      64
+      470,
+      180,
+      70,
+      120
      ],
      "gehe": [
-      185,
-      313
+      470,
+      318
      ],
      "ansehen": [
       {
@@ -3810,14 +4103,14 @@
      "script_name": "Klone",
      "name_key": "UI_OBJ_KLONE",
      "rect": [
-      59,
-      120,
-      77,
-      64
+      200,
+      228,
+      100,
+      46
      ],
      "gehe": [
-      97,
-      313
+      250,
+      312
      ],
      "ansehen": [
       {
@@ -3863,14 +4156,14 @@
      "script_name": "FarbcodeAnDerWand",
      "name_key": "UI_OBJ_FARBCODE_AN_DER_WAND",
      "rect": [
-      235,
-      120,
-      77,
-      64
+      163,
+      135,
+      316,
+      76
      ],
      "gehe": [
-      273,
-      313
+      320,
+      292
      ],
      "ansehen": [
       {
@@ -3895,14 +4188,14 @@
      "script_name": "Terminal",
      "name_key": "UI_OBJ_TERMINAL",
      "rect": [
-      323,
-      120,
-      77,
-      64
+      293,
+      200,
+      58,
+      72
      ],
      "gehe": [
-      361,
-      313
+      320,
+      292
      ],
      "ansehen": [
       {
@@ -3929,14 +4222,14 @@
      "script_name": "Kaffeetasse",
      "name_key": "UI_OBJ_KAFFEETASSE",
      "rect": [
-      133,
-      260,
-      20,
-      16
+      546,
+      226,
+      14,
+      14
      ],
      "gehe": [
-      143,
-      313
+      525,
+      338
      ],
      "textur": "res://grafik/platzhalter/prop_kaffeetasse.png",
      "gegenstand": "kaffeetasse",
@@ -3970,14 +4263,14 @@
      "script_name": "Sonnenbrille",
      "name_key": "UI_OBJ_SONNENBRILLE",
      "rect": [
-      213,
-      260,
-      20,
-      16
+      562,
+      230,
+      16,
+      8
      ],
      "gehe": [
-      223,
-      313
+      525,
+      338
      ],
      "textur": "res://grafik/platzhalter/prop_sonnenbrille.png",
      "gegenstand": "sonnenbrille",
@@ -3995,14 +4288,14 @@
      "script_name": "SchmidtsAkte",
      "name_key": "UI_OBJ_SCHMIDTS_AKTE",
      "rect": [
-      293,
-      260,
-      20,
-      16
+      432,
+      270,
+      18,
+      14
      ],
      "gehe": [
-      303,
-      313
+      440,
+      300
      ],
      "textur": "res://grafik/platzhalter/prop_schmidts_akte.png",
      "gegenstand": "schmidts_akte",
@@ -4023,14 +4316,14 @@
      "ziel": "stadtstrasse",
      "name_key": "UI_RAUM_STADTSTRASSE",
      "rect": [
-      8,
-      140,
-      36,
-      140
+      15,
+      82,
+      62,
+      268
      ],
      "gehe": [
-      48,
-      320
+      90,
+      336
      ],
      "erreichbar_ab": "R3b",
      "ansehen": []
@@ -4061,75 +4354,96 @@
     640,
     360
    ],
-   "hintergrund": "res://grafik/platzhalter/raum_testkammer_1.png",
+   "hintergrund": "res://grafik/hintergruende/w3_bg_testkammer_1_v01.png",
    "farbe": "#d8d8d8",
    "laufbereich": [
     [
-     8,
-     280
+     105,
+     294
     ],
     [
-     632,
-     280
+     145,
+     266
     ],
     [
-     632,
+     495,
+     266
+    ],
+    [
+     552,
+     296
+    ],
+    [
+     548,
+     330
+    ],
+    [
+     540,
      356
     ],
     [
-     8,
+     0,
      356
+    ],
+    [
+     30,
+     330
     ]
    ],
    "marker": {
     "start": [
      320,
-     320
+     322
     ],
     "von_testkammer_2": [
-     48,
-     320
+     510,
+     300
     ],
     "von_widerstandsbasis": [
-     320,
-     320
+     95,
+     322
     ],
     "von_kapsel": [
-     320,
-     320
+     95,
+     322
     ]
+   },
+   "tiefe": 0.8,
+   "skala": 0.8,
+   "hintergrund_nach": {
+    "R9b": "res://grafik/hintergruende/w3_bg_testkammer_1_offen_v01.png"
    },
    "figuren": [
     {
      "id": "opa",
      "script_name": "Opa",
      "pos": [
-      140,
-      309
+      200,
+      300
      ]
     },
     {
      "id": "mutti",
      "script_name": "Mutti",
      "pos": [
-      260,
-      309
+      465,
+      52
      ]
     },
     {
      "id": "bernd",
      "script_name": "Bernd",
      "pos": [
-      380,
-      309
+      400,
+      312
      ]
     },
     {
      "id": "portalgeraet_stimme",
      "script_name": "PortalgeraetStimme",
      "pos": [
-      500,
-      309
+      122,
+      190
      ]
     }
    ],
@@ -4139,14 +4453,14 @@
      "script_name": "PortalgeraetInDerHalterung",
      "name_key": "UI_OBJ_PORTALGERAET_IN_DER_HALTERUNG",
      "rect": [
-      59,
-      40,
-      77,
-      64
+      106,
+      180,
+      32,
+      42
      ],
      "gehe": [
-      97,
-      313
+      128,
+      320
      ],
      "ansehen": [
       {
@@ -4171,14 +4485,14 @@
      "script_name": "Bodenschalter",
      "name_key": "UI_OBJ_BODENSCHALTER",
      "rect": [
-      147,
-      40,
-      77,
-      64
+      278,
+      282,
+      86,
+      40
      ],
      "gehe": [
-      185,
-      313
+      320,
+      338
      ],
      "ansehen": [
       {
@@ -4238,14 +4552,14 @@
      "script_name": "Pappkuchen",
      "name_key": "UI_OBJ_PAPPKUCHEN",
      "rect": [
-      323,
-      40,
-      77,
-      64
+      555,
+      250,
+      70,
+      105
      ],
      "gehe": [
-      361,
-      313
+      528,
+      334
      ],
      "ansehen": [
       {
@@ -4299,14 +4613,14 @@
      "script_name": "Lautsprecher",
      "name_key": "UI_OBJ_LAUTSPRECHER",
      "rect": [
-      411,
+      446,
       40,
-      77,
-      64
+      42,
+      18
      ],
      "gehe": [
-      449,
-      313
+      430,
+      292
      ],
      "ansehen": [
       {
@@ -4331,14 +4645,14 @@
      "script_name": "Wandplatten",
      "name_key": "UI_OBJ_WANDPLATTEN",
      "rect": [
-      499,
-      40,
-      77,
-      64
+      150,
+      85,
+      340,
+      170
      ],
      "gehe": [
-      537,
-      313
+      320,
+      292
      ],
      "ansehen": [
       {
@@ -4363,14 +4677,14 @@
      "script_name": "Halterung",
      "name_key": "UI_OBJ_HALTERUNG",
      "rect": [
-      59,
-      120,
-      77,
-      64
+      108,
+      184,
+      28,
+      36
      ],
      "gehe": [
-      97,
-      313
+      128,
+      320
      ],
      "ansehen": [
       {
@@ -4401,14 +4715,14 @@
      "ziel": "testkammer_2",
      "name_key": "UI_RAUM_TESTKAMMER_2",
      "rect": [
-      8,
-      140,
-      36,
-      140
+      518,
+      104,
+      42,
+      182
      ],
      "gehe": [
-      48,
-      320
+      522,
+      298
      ],
      "erreichbar_ab": "R9b",
      "ansehen": [
@@ -4457,64 +4771,101 @@
     640,
     360
    ],
-   "hintergrund": "res://grafik/platzhalter/raum_testkammer_2.png",
+   "hintergrund": "res://grafik/hintergruende/w3_bg_testkammer_2_v01.png",
    "farbe": "#d0d0d0",
    "laufbereich": [
     [
-     8,
-     280
+     105,
+     294
     ],
     [
-     632,
-     280
+     145,
+     266
     ],
     [
-     632,
+     495,
+     266
+    ],
+    [
+     560,
+     294
+    ],
+    [
+     600,
+     340
+    ],
+    [
+     640,
      356
     ],
     [
-     8,
+     0,
      356
+    ],
+    [
+     30,
+     330
     ]
    ],
    "marker": {
     "start": [
      320,
-     320
+     322
     ],
     "von_testkammer_1": [
-     48,
-     320
+     100,
+     318
     ],
     "von_testkammer_3": [
-     592,
-     320
+     530,
+     302
     ]
+   },
+   "tiefe": 0.8,
+   "skala": 0.8,
+   "hintergrund_nach": {
+    "R9c": "res://grafik/hintergruende/w3_bg_testkammer_2_laser_gestoert_v01.png"
    },
    "figuren": [
     {
      "id": "mutti",
      "script_name": "Mutti",
      "pos": [
-      320,
-      309
+      465,
+      52
      ]
     }
    ],
    "hotspots": [
     {
+     "id": "lautsprecher",
+     "script_name": "Lautsprecher",
+     "name_key": "UI_OBJ_LAUTSPRECHER",
+     "rect": [
+      446,
+      40,
+      42,
+      18
+     ],
+     "gehe": [
+      430,
+      292
+     ],
+     "ansehen": []
+    },
+    {
      "id": "laser",
      "script_name": "Laser",
      "name_key": "UI_OBJ_LASER",
      "rect": [
-      59,
-      40,
-      123,
-      64
+      140,
+      176,
+      366,
+      18
      ],
      "gehe": [
-      120,
-      313
+      320,
+      292
      ],
      "ansehen": [
       {
@@ -4584,14 +4935,14 @@
      "script_name": "Kritzelei",
      "name_key": "UI_OBJ_KRITZELEI",
      "rect": [
-      192,
-      40,
-      123,
-      64
+      410,
+      214,
+      76,
+      42
      ],
      "gehe": [
-      253,
-      313
+      440,
+      292
      ],
      "ansehen": [
       {
@@ -4625,14 +4976,14 @@
      "script_name": "Sockel",
      "name_key": "UI_OBJ_SOCKEL",
      "rect": [
-      325,
-      40,
-      123,
-      64
+      146,
+      220,
+      34,
+      54
      ],
      "gehe": [
-      387,
-      313
+      170,
+      296
      ],
      "ansehen": [
       {
@@ -4661,14 +5012,14 @@
      "script_name": "Gummihuhn",
      "name_key": "UI_OBJ_GUMMIHUHN",
      "rect": [
-      133,
-      260,
-      20,
-      16
+      152,
+      204,
+      22,
+      18
      ],
      "gehe": [
-      143,
-      313
+      170,
+      296
      ],
      "textur": "res://grafik/platzhalter/prop_gummihuhn.png",
      "gegenstand": "gummihuhn",
@@ -4714,14 +5065,14 @@
      "ziel": "testkammer_1",
      "name_key": "UI_RAUM_TESTKAMMER_1",
      "rect": [
-      8,
-      140,
       36,
-      140
+      96,
+      50,
+      220
      ],
      "gehe": [
-      48,
-      320
+      70,
+      330
      ],
      "erreichbar_ab": "R9a",
      "ansehen": []
@@ -4732,14 +5083,14 @@
      "ziel": "testkammer_3",
      "name_key": "UI_RAUM_TESTKAMMER_3",
      "rect": [
-      596,
-      140,
-      36,
-      140
+      518,
+      104,
+      42,
+      182
      ],
      "gehe": [
-      592,
-      320
+      522,
+      298
      ],
      "erreichbar_ab": "R9c",
      "ansehen": []
@@ -4755,63 +5106,100 @@
     640,
     360
    ],
-   "hintergrund": "res://grafik/platzhalter/raum_testkammer_3.png",
+   "hintergrund": "res://grafik/hintergruende/w3_bg_testkammer_3_v01.png",
    "farbe": "#c8c8c8",
    "laufbereich": [
     [
-     8,
-     280
+     105,
+     294
     ],
     [
-     632,
-     280
+     145,
+     266
     ],
     [
-     632,
+     405,
+     266
+    ],
+    [
+     440,
+     300
+    ],
+    [
+     470,
+     330
+    ],
+    [
+     530,
+     330
+    ],
+    [
+     512,
+     266
+    ],
+    [
+     560,
+     300
+    ],
+    [
+     600,
+     340
+    ],
+    [
+     640,
      356
     ],
     [
-     8,
+     0,
      356
+    ],
+    [
+     30,
+     330
     ]
    ],
    "marker": {
     "start": [
-     320,
-     320
+     300,
+     322
     ],
     "von_testkammer_2": [
-     48,
-     320
+     100,
+     318
     ],
     "von_kern": [
-     592,
-     320
+     535,
+     300
     ]
+   },
+   "tiefe": 0.8,
+   "skala": 0.8,
+   "hintergrund_nach": {
+    "R9d": "res://grafik/hintergruende/w3_bg_testkammer_3_offen_v01.png"
    },
    "figuren": [
     {
      "id": "tuer",
      "script_name": "Tuer",
      "pos": [
-      160,
-      309
+      593,
+      228
      ]
     },
     {
      "id": "mutti",
      "script_name": "Mutti",
      "pos": [
-      320,
-      309
+      545,
+      112
      ]
     },
     {
      "id": "bernd",
      "script_name": "Bernd",
      "pos": [
-      480,
-      309
+      380,
+      300
      ]
     }
    ],
@@ -4821,14 +5209,14 @@
      "script_name": "Lautsprecher",
      "name_key": "UI_OBJ_LAUTSPRECHER",
      "rect": [
-      59,
-      40,
-      523,
-      64
+      532,
+      54,
+      36,
+      56
      ],
      "gehe": [
-      320,
-      313
+      520,
+      300
      ],
      "ansehen": [
       {
@@ -4866,14 +5254,14 @@
      "ziel": "testkammer_2",
      "name_key": "UI_RAUM_TESTKAMMER_2",
      "rect": [
-      8,
-      140,
       36,
-      140
+      96,
+      50,
+      220
      ],
      "gehe": [
-      48,
-      320
+      70,
+      330
      ],
      "erreichbar_ab": "R9b",
      "ansehen": []
@@ -4884,14 +5272,14 @@
      "ziel": "kern",
      "name_key": "UI_RAUM_KERN",
      "rect": [
-      596,
-      140,
-      36,
-      140
+      522,
+      108,
+      60,
+      200
      ],
      "gehe": [
-      592,
-      320
+      535,
+      300
      ],
      "erreichbar_ab": "R9d",
      "ansehen": [
@@ -5529,14 +5917,14 @@
    ]
   },
   {
-   "id": "strassenmusiker",
-   "script_name": "Strassenmusiker",
+   "id": "strassenmusiker_w3",
+   "script_name": "StrassenmusikerW3",
    "kuerzel": "MUS",
-   "name_key": "UI_OBJ_STRASSENMUSIKER",
+   "name_key": "UI_OBJ_STRASSENMUSIKER_W3",
    "groesse_px": 196,
    "spielbar": false,
    "textfarbe": "#ffffff",
-   "sprite": "res://grafik/platzhalter/figur_strassenmusiker.png",
+   "sprite": "res://grafik/platzhalter/figur_strassenmusiker_w3.png",
    "raeume": [
     "unterstadt_strasse"
    ],

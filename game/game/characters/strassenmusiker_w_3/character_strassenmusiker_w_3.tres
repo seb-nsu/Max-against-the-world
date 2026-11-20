@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://bjhnaldtf2rss"]
+
+[ext_resource type="Script" path="res://game/characters/strassenmusiker_w_3/character_strassenmusiker_w_3_state.gd" id="1_jifwb"]
+
+[resource]
+resource_name = "StrassenmusikerW3"
+script = ExtResource("1_jifwb")
+script_name = "StrassenmusikerW3"
+scene = "res://game/characters/strassenmusiker_w_3/character_strassenmusiker_w_3.tscn"

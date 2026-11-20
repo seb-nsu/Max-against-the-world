@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://dake8nv4fae85"]
 
-[ext_resource type="Script" path="res://game/rooms/testkammer_2/room_testkammer_2.gd" id="1_iymyp"]
+[ext_resource type="Script" uid="uid://bwb7h504etp61" path="res://game/rooms/testkammer_2/room_testkammer_2.gd" id="1_iymyp"]
 [ext_resource type="PackedScene" uid="uid://dc5ip3sb7it86" path="res://game/rooms/testkammer_2/walkable_areas/boden/walkable_area_boden.tscn" id="2_wclmo"]
 [ext_resource type="PackedScene" uid="uid://brbltvw74qsv8" path="res://game/rooms/testkammer_2/props/background/prop_background.tscn" id="3_o35a5"]
-[ext_resource type="Texture2D" uid="uid://dvpm78jg4x2ug" path="res://grafik/platzhalter/raum_testkammer_2.png" id="4_mb34r"]
+[ext_resource type="Texture2D" uid="uid://bltnrmaew36x1" path="res://grafik/hintergruende/w3_bg_testkammer_2_v01.png" id="4_wclmo"]
 [ext_resource type="PackedScene" uid="uid://ddhrw6l3dgpfj" path="res://game/rooms/testkammer_2/props/gummihuhn/prop_gummihuhn.tscn" id="5_qrh1l"]
 [ext_resource type="Texture2D" uid="uid://blndxvyx4wvgi" path="res://grafik/platzhalter/prop_gummihuhn.png" id="6_lxdnf"]
 [ext_resource type="PackedScene" uid="uid://d1jkhrlgcsrsw" path="res://game/rooms/testkammer_2/hotspots/laser/hotspot_laser.tscn" id="7_lqu50"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://bal4h5o8esqil" path="res://game/rooms/testkammer_2/hotspots/ausgang_testkammer_1/hotspot_ausgang_testkammer_1.tscn" id="10_78sem"]
 [ext_resource type="PackedScene" uid="uid://cbsmdj004xkur" path="res://game/rooms/testkammer_2/hotspots/ausgang_testkammer_3/hotspot_ausgang_testkammer_3.tscn" id="11_y1fcy"]
 [ext_resource type="PackedScene" uid="uid://cepgi84f4d4um" path="res://game/rooms/testkammer_2/markers/start/marker_start.tscn" id="12_k2dnl"]
+[ext_resource type="PackedScene" uid="uid://dbkhdd0oqmngi" path="res://game/rooms/testkammer_2/hotspots/lautsprecher/hotspot_lautsprecher.tscn" id="12_o35a5"]
 [ext_resource type="PackedScene" uid="uid://cxkii4mgvqhnu" path="res://game/rooms/testkammer_2/markers/von_testkammer_1/marker_von_testkammer_1.tscn" id="13_vdeub"]
 [ext_resource type="PackedScene" uid="uid://cvpvka750j05j" path="res://game/rooms/testkammer_2/markers/von_testkammer_3/marker_von_testkammer_3.tscn" id="14_ljsmt"]
 [ext_resource type="PackedScene" uid="uid://vvrxdid0yqmy" path="res://game/characters/mutti/character_mutti.tscn" id="15_6pnsn"]
@@ -25,70 +26,81 @@ height = 360
 [node name="WalkableAreas" type="Node2D" parent="." unique_id=278264253]
 
 [node name="Boden" parent="WalkableAreas" unique_id=1352723084 instance=ExtResource("2_wclmo")]
-interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(8, 280, 632, 280, 632, 356, 8, 356)])
 
 [node name="Props" type="Node2D" parent="." unique_id=1590606816]
 
 [node name="Background" parent="Props" unique_id=1560848219 instance=ExtResource("3_o35a5")]
 position = Vector2(320, 180)
-texture = ExtResource("4_mb34r")
+texture = ExtResource("4_wclmo")
 description = "UI_RAUM_TESTKAMMER_2"
 
 [node name="Gummihuhn" parent="Props" unique_id=1218023172 instance=ExtResource("5_qrh1l")]
-position = Vector2(143.333, 268)
+position = Vector2(163, 213)
 texture = ExtResource("6_lxdnf")
 description = "UI_OBJ_GUMMIHUHN"
-baseline = 8
-walk_to_point = Vector2(-0.666667, 45)
+baseline = 9
+walk_to_point = Vector2(7, 83)
+interaction_polygon = PackedVector2Array(-11, -9, 11, -9, 11, 9, -11, 9)
 
 [node name="Hotspots" type="Node2D" parent="." unique_id=273968366]
 
 [node name="Laser" parent="Hotspots" unique_id=378879691 instance=ExtResource("7_lqu50")]
-position = Vector2(120, 72)
+position = Vector2(323, 185)
 description = "UI_OBJ_LASER"
-baseline = 32
-walk_to_point = Vector2(0, 241)
+baseline = 9
+walk_to_point = Vector2(-3, 107)
+interaction_polygon = PackedVector2Array(-183, -9, 183, -9, 183, 9, -183, 9)
 
 [node name="Kritzelei" parent="Hotspots" unique_id=301648218 instance=ExtResource("8_aqrg2")]
-position = Vector2(253, 72)
+position = Vector2(448, 235)
 description = "UI_OBJ_KRITZELEI"
-baseline = 32
-walk_to_point = Vector2(0, 241)
+baseline = 21
+walk_to_point = Vector2(-8, 57)
+interaction_polygon = PackedVector2Array(-38, -21, 38, -21, 38, 21, -38, 21)
 
 [node name="Sockel" parent="Hotspots" unique_id=104811519 instance=ExtResource("9_n1fco")]
-position = Vector2(387, 72)
+position = Vector2(163, 247)
 description = "UI_OBJ_SOCKEL"
-baseline = 32
-walk_to_point = Vector2(0, 241)
+baseline = 27
+walk_to_point = Vector2(7, 49)
+interaction_polygon = PackedVector2Array(-17, -27, 17, -27, 17, 27, -17, 27)
 
 [node name="AusgangTestkammer1" parent="Hotspots" unique_id=1457831466 instance=ExtResource("10_78sem")]
-position = Vector2(26.0, 210.0)
+position = Vector2(61, 206)
 description = "UI_RAUM_TESTKAMMER_1"
-baseline = 69
-walk_to_point = Vector2(22.0, 110.0)
+baseline = 110
+walk_to_point = Vector2(9, 124)
 cursor = 9
+interaction_polygon = PackedVector2Array(-25, -110, 25, -110, 25, 110, -25, 110)
 
 [node name="AusgangTestkammer3" parent="Hotspots" unique_id=475798825 instance=ExtResource("11_y1fcy")]
-position = Vector2(614.0, 210.0)
+position = Vector2(539, 195)
 description = "UI_RAUM_TESTKAMMER_3"
-baseline = 69
-walk_to_point = Vector2(-22.0, 110.0)
+baseline = 91
+walk_to_point = Vector2(-17, 103)
 cursor = 9
+interaction_polygon = PackedVector2Array(-21, -91, 21, -91, 21, 91, -21, 91)
+
+[node name="Lautsprecher" parent="Hotspots" unique_id=1651310681 instance=ExtResource("12_o35a5")]
+position = Vector2(467, 49)
+description = "UI_OBJ_LAUTSPRECHER"
+baseline = 9
+walk_to_point = Vector2(-37, 243)
 
 [node name="Regions" type="Node2D" parent="." unique_id=1679282431]
 
 [node name="Markers" type="Node2D" parent="." unique_id=509319609]
 
 [node name="Start" parent="Markers" unique_id=1508881074 instance=ExtResource("12_k2dnl")]
-position = Vector2(320, 320)
+position = Vector2(320, 322)
 
 [node name="VonTestkammer1" parent="Markers" unique_id=1728785638 instance=ExtResource("13_vdeub")]
-position = Vector2(48, 320)
+position = Vector2(100, 318)
 
 [node name="VonTestkammer3" parent="Markers" unique_id=1546418689 instance=ExtResource("14_ljsmt")]
-position = Vector2(592, 320)
+position = Vector2(530, 302)
 
 [node name="Characters" type="Node2D" parent="." unique_id=836776349]
 
 [node name="CharacterMutti *" parent="Characters" unique_id=609514072 instance=ExtResource("15_6pnsn")]
-position = Vector2(320, 309)
+position = Vector2(465, 52)

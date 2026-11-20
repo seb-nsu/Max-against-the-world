@@ -171,7 +171,7 @@ figuren:
     raum: unterstadt_strasse
     groesse_px: 189
     spielbar: false
-  - id: strassenmusiker
+  - id: strassenmusiker_w3   # eigene Figur, nicht der Lyra-Spieler aus Welt 2 (Synthesizer, Regen)
     name: Straßenmusiker
     kuerzel: MUS
     raum: unterstadt_strasse
@@ -531,6 +531,7 @@ weitere_schalter:
   - W3_MAX_RAUM                # Wert: Raum, in dem Max steht, solange er nicht in der Realität ist
   - W3_PIXEL_RAUM              # Wert: Raum, in dem Pixel steht, solange Max drüben ist
   - W3_LETZTE_ZELLE            # Wert: zuletzt benutzter Wecker (stadtstrasse oder kueche_orakel); der Name stammt aus der Fassung mit Telefonzellen
+  - W3_EIMER_GEKIPPT           # Eimer in der Kühlung umgekippt: Hintergrund „taut“ (nur Grafik)
   - W3_SIMULATION_BESUCHE      # Wert: Zahl der Eintritte in die Simulation (Errungenschaft Déjà-vu)
   - W3_SYMPTOM_BEKANNT         # Morphäus hat das Déjà-vu beschrieben (W3_NUD_MOR_0490)
   - W3_PIXEL_DOPPELT           # Pixel ist zweimal gleich am Automaten vorbeigegangen

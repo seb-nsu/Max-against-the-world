@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://ckiigabo2xm1e"]
+
+[ext_resource type="Script" path="res://game/characters/strassenmusiker_w_3/character_strassenmusiker_w_3.gd" id="1_12wmf"]
+[ext_resource type="Texture2D" uid="uid://wchh37diixt4" path="res://grafik/platzhalter/figur_strassenmusiker_w3.png" id="2_c7qkb"]
+
+[node name="CharacterStrassenmusikerW3" type="Area2D" unique_id=1924275449]
+script = ExtResource("1_12wmf")
+walk_speed = 90.0
+dialog_pos = Vector2(0, -200)
+script_name = "StrassenmusikerW3"
+description = "UI_OBJ_STRASSENMUSIKER_W3"
+cursor = 8
+interaction_polygon = PackedVector2Array(-24.5, -196, 24.5, -196, 24.5, 0, -24.5, 0)
+
+[node name="ScalingPolygon" type="CollisionPolygon2D" parent="." unique_id=1480583436]
+polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=709841500]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1402528580]
+texture_filter = 1
+texture = ExtResource("2_c7qkb")
+offset = Vector2(0, -98)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=996038123]
+visible = false
+polygon = PackedVector2Array(-24.5, -196, 24.5, -196, 24.5, 0, -24.5, 0)
+
+[node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=1408240990]
+visible = false
+affect_navigation_mesh = true
+carve_navigation_mesh = true

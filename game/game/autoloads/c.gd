@@ -101,6 +101,7 @@ const PCWettkandidat := preload("res://game/characters/wettkandidat/character_we
 const PCOma := preload("res://game/characters/oma/character_oma.gd")
 const PCMutter := preload("res://game/characters/mutter/character_mutter.gd")
 const PCModell0815 := preload("res://game/characters/modell_0815/character_modell_0815.gd")
+const PCStrassenmusikerW3 := preload("res://game/characters/strassenmusiker_w_3/character_strassenmusiker_w_3.gd")
 # ---- classes
 
 # nodes ----
@@ -203,6 +204,7 @@ var Wettkandidat: PCWettkandidat : get = get_Wettkandidat
 var Oma: PCOma : get = get_Oma
 var Mutter: PCMutter : get = get_Mutter
 var Modell0815: PCModell0815 : get = get_Modell0815
+var StrassenmusikerW3: PCStrassenmusikerW3 : get = get_StrassenmusikerW3
 # ---- nodes
 
 # functions ----
@@ -305,5 +307,6 @@ func get_Wettkandidat() -> PCWettkandidat: return get_runtime_character("Wettkan
 func get_Oma() -> PCOma: return get_runtime_character("Oma")
 func get_Mutter() -> PCMutter: return get_runtime_character("Mutter")
 func get_Modell0815() -> PCModell0815: return get_runtime_character("Modell0815")
+func get_StrassenmusikerW3() -> PCStrassenmusikerW3: return get_runtime_character("StrassenmusikerW3")
 # ---- functions
 

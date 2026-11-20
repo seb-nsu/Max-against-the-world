@@ -18,237 +18,164 @@ _figur_alias: {detektiv_deckert: deckert, morphaeus_in_der_gasse: morphaeus, oma
 unterstadt_strasse:
   alias: {apothekengasse: ausgang_apothekengasse, durchgang_zum_laboreingang: ausgang_laboreingang, detektiv_deckert: deckert, herrn_vier: herr_vier, weinenden_mann: weinender_mann, nudeltopf: nudelbude, pizza_plakat: neon_pizza_plakat}
   farbe: '#3b3f58'
-  laufbereich:
-  - [8, 280]
-  - [1272, 280]
-  - [1272, 356]
-  - [8, 356]
+  hintergrund: res://grafik/hintergruende/w3_bg_unterstadt_strasse_v01.png   # W3-R01, Panorama
+  tiefe: 0.85
+  skala: 0.8
+  effekte:
+    - {art: dampf, pos: [82, 196], breite: 24}             # Nudeltopf (bis der gemalte Dampf W3-B17 kommt)
+    - {art: dampf, pos: [1045, 300], breite: 60}           # Dampfgitter
+    - {art: flackern, pos: [172, 165], r: [20, 26], farbe: "#ff4fa0"}   # rote Papierlaterne
+  laufbereich: [[8, 288], [585, 288], [600, 280], [640, 280], [965, 286], [990, 280], [1040, 280], [1150, 292], [1272, 300], [1272, 356], [8, 356]]
   marker:
     start: [640, 320]
-    von_apothekengasse: [48, 320]
-    von_laboreingang: [1232, 320]
-    von_widerstandsbasis: [636, 296]
+    von_apothekengasse: [1008, 300]
+    von_laboreingang: [1235, 325]
+    von_widerstandsbasis: [612, 298]
   figuren:
-    morphaeus: [173, 309]
-    deckert: [360, 309]
-    herr_vier: [547, 309]
-    weinender_mann: [733, 309]
-    frau_regenschirm: [920, 309]
-    strassenmusiker: [1107, 309]
+    herr_vier: [104, 266]            # hinter dem Tresen der Nudelbude (Tresen als Vordergrund)
+    weinender_mann: [152, 278]       # auf dem rechten Hocker vor seiner Suppe
+    strassenmusiker_w3: [492, 292]      # freier Gehweg rechts der Telefonzelle
+    frau_regenschirm: [700, 300]
+    deckert: [850, 300]              # unter dem Vordach (trockener Streifen)
+    morphaeus: [945, 300]            # an der Gassenmündung zur Apothekengasse
+  vordergrund:
+    tresen: {bild: res://grafik/props/w3_tresen_nudelbude.png, rect: [28, 214, 172, 62], baseline: 276}
   hotspots:
-    nudelbude:
-      rect: [59, 40, 119, 64]
-      gehe: [117, 313]
-    telefonzelle:
-      rect: [188, 40, 119, 64]
-      gehe: [247, 313]
-    telefonbuch_in_der_zelle:
-      rect: [317, 40, 119, 64]
-      gehe: [376, 313]
-    vordach:
-      rect: [447, 40, 119, 64]
-      gehe: [505, 313]
-    neon_pizza_plakat:
-      rect: [576, 40, 119, 64]
-      gehe: [635, 313]
-    origami_einhorn:
-      rect: [705, 40, 119, 64]
-      gehe: [764, 313]
-    pfuetzen:
-      rect: [835, 40, 119, 64]
-      gehe: [893, 313]
-    himmel_mit_fliegenden_autos:
-      rect: [964, 40, 119, 64]
-      gehe: [1023, 313]
-    dampfgitter:
-      rect: [1093, 40, 119, 64]
-      gehe: [1152, 313]
+    nudelbude: {rect: [28, 100, 172, 172], gehe: [120, 302]}
+    himmel_mit_fliegenden_autos: {rect: [250, 0, 170, 100], gehe: [330, 300]}
+    telefonzelle: {rect: [352, 112, 90, 170], gehe: [398, 300]}
+    telefonbuch_in_der_zelle: {rect: [358, 186, 46, 28], gehe: [398, 300]}
+    neon_pizza_plakat: {rect: [790, 0, 140, 98], gehe: [860, 302]}
+    vordach: {rect: [775, 100, 160, 72], gehe: [850, 302]}
+    pfuetzen: {rect: [1130, 318, 150, 42], gehe: [1120, 322], boden: true}
+    dampfgitter: {rect: [998, 292, 98, 26], gehe: [1045, 326], boden: true}
+    origami_einhorn: {rect: [500, 288, 66, 44], gehe: [470, 318], boden: true}
   props:
-    telefonbuchseite:
-      rect: [133, 260, 20, 16]
-      gehe: [143, 313]
+    telefonbuchseite: {rect: [372, 192, 18, 12], gehe: [398, 300]}
   ausgaenge:
-    apothekengasse:
-      rect: [8, 140, 36, 140]
-      gehe: [48, 320]
-    laboreingang:
-      rect: [1236, 140, 36, 140]
-      gehe: [1232, 320]
-    widerstandsbasis:
-      rect: [600, 160, 72, 80]
-      gehe: [636, 296]
+    widerstandsbasis: {rect: [586, 188, 54, 78], gehe: [612, 292]}
+    apothekengasse: {rect: [972, 135, 70, 148], gehe: [1008, 288]}
+    laboreingang: {rect: [1180, 140, 100, 160], gehe: [1258, 322]}
 apothekengasse:
   alias: {morphaeus_in_der_gasse: morphaeus}
   farbe: '#46405e'
-  laufbereich:
-  - [8, 280]
-  - [632, 280]
-  - [632, 356]
-  - [8, 356]
+  hintergrund: res://grafik/hintergruende/w3_bg_apothekengasse_v01.png   # W3-R02, Panorama
+  hintergrund_nach:
+    R3a: res://grafik/hintergruende/w3_bg_apothekengasse_faecher_offen_v01.png   # W3-R02b, Fächer offen
+  tiefe: 0.85
+  skala: 0.8
+  effekte:
+    - {art: flackern, pos: [925, 70], r: [26, 30], farbe: "#7fe8ff"}   # Wandlampe
+    - {art: dampf, pos: [960, 285], breite: 50}                      # Gully vor der Ziegelwand
+  laufbereich: [[8, 300], [1180, 296], [1180, 356], [8, 356]]
   marker:
-    start: [320, 320]
-    von_unterstadt_strasse: [48, 320]
+    start: [640, 322]
+    von_unterstadt_strasse: [140, 322]
   figuren:
-    morphaeus: [200, 309]
-    pastillenautomat: [440, 309]
+    morphaeus: [470, 306]
+    pastillenautomat: [645, 175]     # Stimme aus der Linse (unsichtbar)
   hotspots:
-    automat:
-      rect: [59, 40, 123, 64]
-      gehe: [120, 313]
-    kisten:
-      rect: [192, 40, 123, 64]
-      gehe: [253, 313]
-    tropfendes_rohr:
-      rect: [325, 40, 123, 64]
-      gehe: [387, 313]
-    wandlampe:
-      rect: [459, 40, 123, 64]
-      gehe: [520, 313]
+    kisten: {rect: [212, 110, 200, 186], gehe: [310, 312]}
+    tropfendes_rohr: {rect: [458, 0, 40, 170], gehe: [478, 308]}
+    automat: {rect: [545, 0, 200, 292], gehe: [645, 316]}
+    wandlampe: {rect: [900, 38, 55, 75], gehe: [925, 308]}
   ausgaenge:
-    unterstadt_strasse:
-      rect: [8, 140, 36, 140]
-      gehe: [48, 320]
+    unterstadt_strasse: {rect: [60, 10, 140, 286], gehe: [120, 322]}
 widerstandsbasis:
   alias: {fenster_als_max: fenster, stromkasten_als_max: stromkasten, patch_panel_als_max: patch_panel, terminal_mit_ziel_labor: terminal, plakat_m_u_t_t_i: plakat, max_in_der_kapsel: max_kapsel}
   farbe: '#4a4a40'
-  laufbereich:
-  - [8, 280]
-  - [1272, 280]
-  - [1272, 356]
-  - [8, 356]
+  hintergrund: res://grafik/hintergruende/w3_bg_widerstandsbasis_v01.png   # W3-R03, Panorama
+  hintergrund_nach:                # Reihenfolge zählt: die letzte zutreffende Fassung gilt
+    W3_SCHNEE: res://grafik/hintergruende/w3_bg_widerstandsbasis_schnee_v01.png          # W3-R03b, Fenster offen
+    R13: res://grafik/hintergruende/w3_bg_widerstandsbasis_kaffee_v01.png                # W3-R03c, Kaffee am Boden
+    R13+W3_SCHNEE: res://grafik/hintergruende/w3_bg_widerstandsbasis_schnee_kaffee_v01.png
+  tiefe: 0.85
+  skala: 0.8
+  effekte:
+    - {art: flackern, pos: [905, 78], r: [30, 30], farbe: "#ffe680"}   # gelbe Lampe auf dem Großrechner
+    - {art: flackern, pos: [578, 182], r: [26, 18], farbe: "#7fff9f"}  # grüner Bildschirm
   wechsel: [stadtstrasse, testkammer_1]
+  laufbereich: [[30, 330], [100, 304], [470, 300], [1095, 306], [1120, 330], [1272, 335], [1272, 356], [30, 356]]
   marker:
-    start: [640, 320]
-    von_unterstadt_strasse: [48, 320]
-    von_kuehlung: [1232, 320]
-    von_stadtstrasse: [640, 320]
-    von_testkammer_1: [640, 320]
-    von_kapsel: [200, 320]
+    start: [640, 330]
+    von_unterstadt_strasse: [95, 336]
+    von_kuehlung: [1180, 340]
+    von_stadtstrasse: [170, 326]
+    von_testkammer_1: [170, 326]
+    von_kapsel: [170, 326]
   figuren:
-    opa: [173, 309]
-    kalle: [360, 309]
-    rebellin: [547, 309]
-    rebell: [733, 309]
-    piepsi: [920, 309]
-    hausmeister: [1107, 309]
+    rebellin: [380, 318]
+    rebell: [700, 320]
+    kalle: [815, 318]                # am Steuerpult
+    hausmeister: [610, 334]
+    opa: [1180, 330]                 # Hologramm aus Piepsi
+    piepsi: [1238, 334]              # die leere Ecke rechts
   hotspots:
-    kapseln:
-      rect: [59, 40, 72, 64]
-      gehe: [95, 313]
-    max_kapsel:
-      rect: [141, 40, 72, 64]
-      gehe: [177, 313]
-    terminal:
-      rect: [224, 40, 72, 64]
-      gehe: [260, 313]
-    fenster:
-      rect: [389, 40, 72, 64]
-      gehe: [425, 313]
-    lueftungsschacht:
-      rect: [555, 40, 72, 64]
-      gehe: [591, 313]
-    stromkasten:
-      rect: [637, 40, 72, 64]
-      gehe: [673, 313]
-    patch_panel:
-      rect: [803, 40, 72, 64]
-      gehe: [839, 313]
-    pizzakartons:
-      rect: [968, 40, 72, 64]
-      gehe: [1004, 313]
-    handtuch:
-      rect: [1051, 40, 72, 64]
-      gehe: [1087, 313]
-    grossrechner:
-      rect: [1133, 40, 72, 64]
-      gehe: [1169, 313]
-    steuerpult:
-      rect: [59, 120, 72, 64]
-      gehe: [95, 313]
-    tisch_mit_kalles_tasse:
-      rect: [141, 120, 72, 64]
-      gehe: [177, 313]
-    kalles_tasse:
-      rect: [224, 120, 72, 64]
-      gehe: [260, 313]
-    plakat:
-      rect: [389, 120, 72, 64]
-      gehe: [425, 313]
-    rebellen:
-      rect: [472, 120, 72, 64]
-      gehe: [508, 313]
-    kaffeepfuetze:
-      rect: [555, 120, 72, 64]
-      gehe: [591, 313]
+    kapseln: {rect: [225, 182, 225, 115], gehe: [330, 322]}
+    max_kapsel: {rect: [112, 182, 113, 115], gehe: [170, 326]}
+    fenster: {rect: [256, 4, 88, 70], gehe: [300, 322]}
+    plakat: {rect: [640, 20, 80, 120], gehe: [680, 322]}
+    patch_panel: {rect: [443, 92, 70, 116], gehe: [478, 322]}
+    terminal: {rect: [500, 155, 140, 88], gehe: [565, 322]}
+    stromkasten: {rect: [650, 150, 80, 72], gehe: [690, 322]}
+    steuerpult: {rect: [745, 155, 120, 135], gehe: [800, 322]}
+    grossrechner: {rect: [865, 60, 90, 235], gehe: [905, 322]}
+    tisch_mit_kalles_tasse: {rect: [950, 222, 140, 90], gehe: [1020, 322]}
+    handtuch: {rect: [1022, 112, 32, 95], gehe: [1038, 322]}
+    kalles_tasse: {rect: [1038, 208, 32, 30], gehe: [1050, 322]}
+    pizzakartons: {rect: [1095, 15, 95, 278], gehe: [1110, 324]}
+    rebellen: {rect: [340, 230, 400, 30], gehe: [540, 330]}
+    kaffeepfuetze: {rect: [760, 318, 470, 40], gehe: [900, 336], boden: true}
+    lueftungsschacht: {rect: [1122, 296, 120, 36], gehe: [1180, 340], boden: true}
   ausgaenge:
-    unterstadt_strasse:
-      rect: [8, 140, 36, 140]
-      gehe: [48, 320]
-    kuehlung:
-      rect: [1236, 140, 36, 140]
-      gehe: [1232, 320]
+    unterstadt_strasse: {rect: [12, 48, 92, 282], gehe: [80, 340]}
+    kuehlung: {rect: [1122, 296, 120, 36], gehe: [1180, 340], versteckt: true}   # nur Pixel, über den Lüftungsschacht
 kuehlung:
-  farbe: '#3c5560'
-  laufbereich:
-  - [8, 280]
-  - [632, 280]
-  - [632, 356]
-  - [8, 356]
+  farbe: '#3c4658'
+  hintergrund: res://grafik/hintergruende/w3_bg_kuehlung_v01.png   # W3-R04
+  hintergrund_nach:
+    W3_EIMER_GEKIPPT: res://grafik/hintergruende/w3_bg_kuehlung_taut_v01.png   # W3-R04b
+  tiefe: 0.85
+  effekte:
+    - {art: flackern, pos: [416, 147], r: [8, 8], farbe: "#9fe8ff"}   # Statuslicht am Kühlgerät
+  laufbereich: [[60, 284], [485, 282], [485, 308], [545, 312], [600, 338], [622, 356], [18, 356], [40, 330]]
   marker:
     start: [320, 320]
-    von_widerstandsbasis: [48, 320]
-  ausgaenge:
-    widerstandsbasis:
-      rect: [8, 140, 36, 140]
-      gehe: [48, 320]
+    von_widerstandsbasis: [120, 322]
   hotspots:
-    wassereimer: {rect: [267, 200, 53, 67], gehe: [293, 313], name: Wassereimer}
+    wassereimer: {rect: [486, 248, 60, 60], gehe: [462, 304], name: Wassereimer}
+  ausgaenge:
+    widerstandsbasis: {rect: [24, 205, 146, 130], gehe: [110, 322]}
 laboreingang:
   alias: {geoeffnete_tuer: panzertuer}
   farbe: '#585858'
-  laufbereich:
-  - [8, 280]
-  - [632, 280]
-  - [632, 356]
-  - [8, 356]
+  hintergrund: res://grafik/hintergruende/w3_bg_laboreingang_v01.png   # W3-R05
+  hintergrund_nach:
+    W3_PANZERTUER_OFFEN: res://grafik/hintergruende/w3_bg_laboreingang_offen_v01.png   # W3-R05b
+  tiefe: 0.85
+  skala: 0.8
+  effekte:
+    - {art: flackern, pos: [325, 70], r: [34, 22], farbe: "#e8f4ff"}   # Deckenlampe
+    - {art: flackern, pos: [425, 172], r: [4, 4], farbe: "#ff4040"}    # rotes Licht am Kartenleser
+  laufbereich: [[112, 272], [525, 262], [598, 300], [632, 356], [56, 356], [100, 300]]
   marker:
-    start: [320, 320]
-    von_unterstadt_strasse: [48, 320]
+    start: [320, 312]
+    von_unterstadt_strasse: [150, 300]
   figuren:
-    kalle: [200, 309]
-    hausmeister: [440, 309]
+    hausmeister: [470, 292]          # bewacht die Tür, rechts neben dem Kartenleser
+    kalle: [215, 312]
   hotspots:
-    panzertuer:
-      rect: [59, 40, 77, 64]
-      gehe: [97, 313]
-    kartenleser:
-      rect: [147, 40, 77, 64]
-      gehe: [185, 313]
-    datenanschluss:
-      rect: [235, 40, 77, 64]
-      gehe: [273, 313]
-    wischeimer:
-      rect: [323, 40, 77, 64]
-      gehe: [361, 313]
-    pinnwand:
-      rect: [411, 40, 77, 64]
-      gehe: [449, 313]
-    warnstreifen:
-      rect: [499, 40, 77, 64]
-      gehe: [537, 313]
-    deckenlampe:
-      rect: [59, 120, 77, 64]
-      gehe: [97, 313]
-    gang:
-      rect: [147, 120, 77, 64]
-      gehe: [185, 313]
-    platz_des_hausmeisters:
-      rect: [235, 120, 77, 64]
-      gehe: [273, 313]
+    pinnwand: {rect: [0, 90, 98, 150], gehe: [110, 312]}
+    gang: {rect: [500, 60, 92, 200], gehe: [520, 285]}
+    panzertuer: {rect: [248, 108, 152, 140], gehe: [325, 290]}
+    datenanschluss: {rect: [270, 125, 90, 110], gehe: [325, 290]}
+    deckenlampe: {rect: [305, 45, 40, 40], gehe: [325, 290]}
+    warnstreifen: {rect: [180, 222, 300, 40], gehe: [300, 292]}
+    kartenleser: {rect: [405, 165, 26, 36], gehe: [415, 290]}
+    platz_des_hausmeisters: {rect: [440, 200, 60, 60], gehe: [455, 295]}
+    wischeimer: {rect: [38, 280, 75, 66], gehe: [130, 330]}
   ausgaenge:
-    unterstadt_strasse:
-      rect: [8, 140, 36, 140]
-      gehe: [48, 320]
+    unterstadt_strasse: {rect: [110, 92, 56, 178], gehe: [140, 290]}
 stadtstrasse:
   alias: {eingang_bueroturm: ausgang_buero_50, haus_der_orakel_oma: ausgang_kueche_orakel, haustuer: ausgang_kueche_orakel}
   farbe: '#7fa36a'
@@ -305,222 +232,144 @@ stadtstrasse:
       gehe: [1232, 320]
 kueche_orakel:
   farbe: '#b49a72'
-  laufbereich:
-  - [8, 280]
-  - [632, 280]
-  - [632, 356]
-  - [8, 356]
+  hintergrund: res://grafik/hintergruende/w3_bg_kueche_orakel_v01.png   # W3-R07
+  hintergrund_nach:
+    R4: res://grafik/hintergruende/w3_bg_kueche_orakel_scherben_v01.png   # W3-R07b, Sparschwein zerbrochen
+  tiefe: 0.9
+  skala: 0.8
+  effekte:
+    - {art: flackern, pos: [130, 245], r: [24, 22], farbe: "#ffb347"}   # warmes Licht im Ofenfenster
+  laufbereich: [[150, 286], [228, 286], [228, 348], [452, 348], [455, 286], [555, 286], [608, 338], [626, 356], [40, 356], [82, 330]]
   marker:
-    start: [320, 320]
-    von_stadtstrasse: [48, 320]
-    von_zelle: [533, 320]
+    start: [330, 352]
+    von_stadtstrasse: [560, 336]
+    von_zelle: [500, 320]
   figuren:
-    orakel_oma: [200, 309]
-    radio: [440, 309]
+    orakel_oma: [188, 318]           # zwischen Ofen und Tisch
+    radio: [535, 108]                # Stimme aus dem Küchenradio (unsichtbar)
   hotspots:
-    sparschwein:
-      rect: [59, 40, 77, 64]
-      gehe: [97, 313]
-    ofen:
-      rect: [147, 40, 77, 64]
-      gehe: [185, 313]
-    kochbuch:
-      rect: [235, 40, 77, 64]
-      gehe: [273, 313]
-    gabel:
-      rect: [323, 40, 77, 64]
-      gehe: [361, 313]
-    kuckucksuhr:
-      rect: [411, 40, 77, 64]
-      gehe: [449, 313]
-    eieruhr:
-      rect: [499, 40, 77, 64]
-      gehe: [537, 313]
-    tisch_mit_teller_und_teekanne:
-      rect: [59, 120, 77, 64]
-      gehe: [97, 313]
-    glaeser_auf_dem_regal:
-      rect: [147, 120, 77, 64]
-      gehe: [185, 313]
-    gardinen_und_fenster:
-      rect: [235, 120, 77, 64]
-      gehe: [273, 313]
-    tapete:
-      rect: [323, 120, 77, 64]
-      gehe: [361, 313]
-    kehrblech:
-      rect: [411, 120, 77, 64]
-      gehe: [449, 313]
-    scherben:
-      rect: [499, 120, 77, 64]
-      gehe: [537, 313]
+    tapete: {rect: [80, 40, 170, 100], gehe: [190, 318]}
+    gardinen_und_fenster: {rect: [258, 52, 125, 140], gehe: [320, 352]}
+    ofen: {rect: [25, 155, 130, 170], gehe: [180, 322]}
+    kehrblech: {rect: [5, 140, 72, 205], gehe: [95, 342]}
+    tisch_mit_teller_und_teekanne: {rect: [230, 200, 205, 140], gehe: [330, 352]}
+    kochbuch: {rect: [338, 210, 86, 36], gehe: [380, 352]}
+    gabel: {rect: [252, 230, 44, 12], gehe: [270, 352]}
+    kuckucksuhr: {rect: [395, 60, 45, 115], gehe: [470, 300]}
+    sparschwein: {rect: [462, 74, 46, 36], gehe: [500, 300]}
+    glaeser_auf_dem_regal: {rect: [470, 114, 80, 42], gehe: [510, 300]}
+    eieruhr: {rect: [530, 160, 32, 32], gehe: [540, 300]}
+    scherben: {rect: [470, 286, 80, 30], gehe: [500, 320], boden: true}
   ausgaenge:
-    stadtstrasse:
-      rect: [8, 140, 36, 140]
-      gehe: [48, 320]
+    stadtstrasse: {rect: [578, 50, 58, 290], gehe: [565, 332]}
 buero_50:
   alias: {akte: schmidts_akte, kaffeetasse_auf_klone: klone}
-  farbe: '#8c96a0'
-  laufbereich:
-  - [8, 280]
-  - [632, 280]
-  - [632, 356]
-  - [8, 356]
+  farbe: '#9aa8b8'
+  hintergrund: res://grafik/hintergruende/w3_bg_buero_50_v01.png   # W3-R08
+  tiefe: 0.8
+  skala: 0.8
+  effekte:
+    - {art: flackern, pos: [320, 215], r: [16, 12], farbe: "#7fff9f"}   # grüner Bildschirm (bis W3-B45 Terminal spricht)
+  laufbereich: [[80, 322], [150, 270], [465, 268], [470, 300], [530, 330], [560, 356], [20, 356]]
   marker:
-    start: [320, 320]
-    von_stadtstrasse: [48, 320]
+    start: [300, 320]
+    von_stadtstrasse: [105, 330]
   figuren:
-    schmidt: [200, 309]
-    klon: [440, 309]
+    klon: [250, 300]
+    schmidt: [420, 286]              # das Original steht hinten
   hotspots:
-    flur:
-      rect: [59, 40, 77, 64]
-      gehe: [97, 313]
-    tueren:
-      rect: [147, 40, 77, 64]
-      gehe: [185, 313]
-    topfpflanzen:
-      rect: [235, 40, 77, 64]
-      gehe: [273, 313]
-    fenster:
-      rect: [323, 40, 77, 64]
-      gehe: [361, 313]
-    endlos_treppe:
-      rect: [411, 40, 77, 64]
-      gehe: [449, 313]
-    wasserspender:
-      rect: [499, 40, 77, 64]
-      gehe: [537, 313]
-    klone:
-      rect: [59, 120, 77, 64]
-      gehe: [97, 313]
-    kopierer:
-      rect: [147, 120, 77, 64]
-      gehe: [185, 313]
-    farbcode_an_der_wand:
-      rect: [235, 120, 77, 64]
-      gehe: [273, 313]
-    terminal:
-      rect: [323, 120, 77, 64]
-      gehe: [361, 313]
+    flur: {rect: [165, 85, 310, 45], gehe: [320, 292]}
+    farbcode_an_der_wand: {rect: [163, 135, 316, 76], gehe: [320, 292]}
+    terminal: {rect: [293, 200, 58, 72], gehe: [320, 292]}
+    topfpflanzen: {rect: [150, 188, 46, 84], gehe: [175, 300]}
+    fenster: {rect: [90, 60, 66, 215], gehe: [140, 318]}
+    tueren: {rect: [95, 150, 55, 72], gehe: [140, 318]}
+    klone: {rect: [200, 228, 100, 46], gehe: [250, 312]}
+    kopierer: {rect: [470, 180, 70, 120], gehe: [470, 318]}
+    wasserspender: {rect: [538, 180, 45, 140], gehe: [525, 338]}
+    endlos_treppe: {rect: [590, 20, 50, 305], gehe: [555, 350]}
   props:
-    kaffeetasse:
-      rect: [133, 260, 20, 16]
-      gehe: [143, 313]
-    sonnenbrille:
-      rect: [213, 260, 20, 16]
-      gehe: [223, 313]
-    schmidts_akte:
-      rect: [293, 260, 20, 16]
-      gehe: [303, 313]
+    kaffeetasse: {rect: [546, 226, 14, 14], gehe: [525, 338]}
+    sonnenbrille: {rect: [562, 230, 16, 8], gehe: [525, 338]}
+    schmidts_akte: {rect: [432, 270, 18, 14], gehe: [440, 300]}
   ausgaenge:
-    stadtstrasse:
-      rect: [8, 140, 36, 140]
-      gehe: [48, 320]
+    stadtstrasse: {rect: [15, 82, 62, 268], gehe: [90, 336]}    # Aufzug
 testkammer_1:
   alias: {ausgangstuer: ausgang_testkammer_2, bernd_auf_bodenschalter: bodenschalter}
   farbe: '#d8d8d8'
-  laufbereich:
-  - [8, 280]
-  - [632, 280]
-  - [632, 356]
-  - [8, 356]
+  hintergrund: res://grafik/hintergruende/w3_bg_testkammer_1_v01.png   # W3-R09
+  hintergrund_nach:
+    R9b: res://grafik/hintergruende/w3_bg_testkammer_1_offen_v01.png   # W3-R09b, Ausgangstür offen
+  tiefe: 0.8
+  skala: 0.8
+  laufbereich: [[105, 294], [145, 266], [495, 266], [552, 296], [548, 330], [540, 356], [0, 356], [30, 330]]
   wechsel: [widerstandsbasis]
   marker:
-    start: [320, 320]
-    von_testkammer_2: [48, 320]
-    von_widerstandsbasis: [320, 320]
-    von_kapsel: [320, 320]
+    start: [320, 322]
+    von_testkammer_2: [510, 300]
+    von_widerstandsbasis: [95, 322]
+    von_kapsel: [95, 322]
   figuren:
-    opa: [140, 309]
-    mutti: [260, 309]
-    bernd: [380, 309]
-    portalgeraet_stimme: [500, 309]
+    opa: [200, 300]
+    mutti: [465, 52]                 # nur Stimme aus dem Deckenlautsprecher, sichtbar erst im Kern
+    bernd: [400, 312]
+    portalgeraet_stimme: [122, 190]
   hotspots:
-    portalgeraet_in_der_halterung:
-      rect: [59, 40, 77, 64]
-      gehe: [97, 313]
-    bodenschalter:
-      rect: [147, 40, 77, 64]
-      gehe: [185, 313]
-    pappkuchen:
-      rect: [323, 40, 77, 64]
-      gehe: [361, 313]
-    lautsprecher:
-      rect: [411, 40, 77, 64]
-      gehe: [449, 313]
-    wandplatten:
-      rect: [499, 40, 77, 64]
-      gehe: [537, 313]
-    halterung:
-      rect: [59, 120, 77, 64]
-      gehe: [97, 313]
+    wandplatten: {rect: [150, 85, 340, 170], gehe: [320, 292]}
+    lautsprecher: {rect: [446, 40, 42, 18], gehe: [430, 292]}
+    halterung: {rect: [108, 184, 28, 36], gehe: [128, 320]}
+    portalgeraet_in_der_halterung: {rect: [106, 180, 32, 42], gehe: [128, 320]}
+    bodenschalter: {rect: [278, 282, 86, 40], gehe: [320, 338], boden: true}
+    pappkuchen: {rect: [555, 250, 70, 105], gehe: [528, 334]}
   ausgaenge:
-    testkammer_2:
-      rect: [8, 140, 36, 140]
-      gehe: [48, 320]
+    testkammer_2: {rect: [518, 104, 42, 182], gehe: [522, 298]}
 testkammer_2:
   alias: {laser_mit_bernd_idee: laser}
   farbe: '#d0d0d0'
-  laufbereich:
-  - [8, 280]
-  - [632, 280]
-  - [632, 356]
-  - [8, 356]
+  hintergrund: res://grafik/hintergruende/w3_bg_testkammer_2_v01.png   # W3-R10
+  hintergrund_nach:
+    R9c: res://grafik/hintergruende/w3_bg_testkammer_2_laser_gestoert_v01.png   # W3-R10b, Laser harmlos
+  tiefe: 0.8
+  skala: 0.8
+  laufbereich: [[105, 294], [145, 266], [495, 266], [560, 294], [600, 340], [640, 356], [0, 356], [30, 330]]
   marker:
-    start: [320, 320]
-    von_testkammer_1: [48, 320]
-    von_testkammer_3: [592, 320]
+    start: [320, 322]
+    von_testkammer_1: [100, 318]
+    von_testkammer_3: [530, 302]
   figuren:
-    mutti: [320, 309]
+    mutti: [465, 52]                 # nur Stimme aus dem Deckenlautsprecher
   hotspots:
-    laser:
-      rect: [59, 40, 123, 64]
-      gehe: [120, 313]
-    kritzelei:
-      rect: [192, 40, 123, 64]
-      gehe: [253, 313]
-    sockel:
-      rect: [325, 40, 123, 64]
-      gehe: [387, 313]
+    laser: {rect: [140, 176, 366, 18], gehe: [320, 292]}
+    sockel: {rect: [146, 220, 34, 54], gehe: [170, 296]}
+    kritzelei: {rect: [410, 214, 76, 42], gehe: [440, 292]}
+    lautsprecher: {rect: [446, 40, 42, 18], gehe: [430, 292], name: Lautsprecher}   # M.U.T.T.I. und Pixel sprechen hier
   props:
-    gummihuhn:
-      rect: [133, 260, 20, 16]
-      gehe: [143, 313]
+    gummihuhn: {rect: [152, 204, 22, 18], gehe: [170, 296]}
   ausgaenge:
-    testkammer_1:
-      rect: [8, 140, 36, 140]
-      gehe: [48, 320]
-    testkammer_3:
-      rect: [596, 140, 36, 140]
-      gehe: [592, 320]
+    testkammer_1: {rect: [36, 96, 50, 220], gehe: [70, 330]}
+    testkammer_3: {rect: [518, 104, 42, 182], gehe: [522, 298]}
 testkammer_3:
   alias: {ausgangstuer: ausgang_kern}
   farbe: '#c8c8c8'
-  laufbereich:
-  - [8, 280]
-  - [632, 280]
-  - [632, 356]
-  - [8, 356]
+  hintergrund: res://grafik/hintergruende/w3_bg_testkammer_3_v01.png   # W3-R11
+  hintergrund_nach:
+    R9d: res://grafik/hintergruende/w3_bg_testkammer_3_offen_v01.png   # W3-R11b, Tür offen
+  tiefe: 0.8
+  skala: 0.8
+  laufbereich: [[105, 294], [145, 266], [405, 266], [440, 300], [470, 330], [530, 330], [512, 266], [560, 300], [600, 340], [640, 356], [0, 356], [30, 330]]
   marker:
-    start: [320, 320]
-    von_testkammer_2: [48, 320]
-    von_kern: [592, 320]
+    start: [300, 322]
+    von_testkammer_2: [100, 318]
+    von_kern: [535, 300]
   figuren:
-    tuer: [160, 309]
-    mutti: [320, 309]
-    bernd: [480, 309]
+    tuer: [593, 228]                 # spricht über das Bedienfeld neben der Tür (unsichtbar)
+    mutti: [545, 112]                # nur Stimme aus dem Wandlautsprecher
+    bernd: [380, 300]
   hotspots:
-    lautsprecher:
-      rect: [59, 40, 523, 64]
-      gehe: [320, 313]
+    lautsprecher: {rect: [532, 54, 36, 56], gehe: [520, 300]}
   ausgaenge:
-    testkammer_2:
-      rect: [8, 140, 36, 140]
-      gehe: [48, 320]
-    kern:
-      rect: [596, 140, 36, 140]
-      gehe: [592, 320]
+    testkammer_2: {rect: [36, 96, 50, 220], gehe: [70, 330]}
+    kern: {rect: [522, 108, 60, 200], gehe: [535, 300]}
 kern:
   farbe: '#2c2c3c'
   laufbereich:

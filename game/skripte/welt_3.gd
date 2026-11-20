@@ -18,51 +18,52 @@ extends RefCounted
 const SIMULATION := ["stadtstrasse", "kueche_orakel", "buero_50"]
 const LABOR := ["testkammer_1", "testkammer_2", "testkammer_3", "kern"]
 
-## Tausche je Raum: Text (UI), Zeilen, gelöst-Kennung (leer = Fehltausch), benötigt Gegenstand
+## Tausche je Raum: Text (UI), beteiligte Objekte (für die Etiketten der Code-Sicht), Zeilen,
+## gelöst-Kennung (leer = Fehltausch), benötigt Gegenstand
 const TAUSCHE := {
 	"stadtstrasse": [
-		{"text": "UI_W3_TAUSCH_TUER_SCHMIDT", "loesung": "R5",
+		{"text": "UI_W3_TAUSCH_TUER_SCHMIDT", "objekte": ["tuer", "schmidt"], "loesung": "R5",
 			"zeilen": ["W3_TUER_NAR_0190", "W3_TUER_TUR_0200", "W3_TUER_TUR_0210", "W3_TUER_SCH_0220", "W3_TUER_MAX_0230"]},
-		{"text": "UI_W3_TAUSCH_TUER_AUTO", "zeilen": ["W3_TUER_MAX_0250"]},
-		{"text": "UI_W3_TAUSCH_TUER_HAUSSCHUHE", "zeilen": ["W3_TUER_MAX_0260", "W3_TUER_SCH_0270"]},
-		{"text": "UI_W3_TAUSCH_SCHMIDT_BAUM", "zeilen": ["W3_TUER_MAX_0280"]},
+		{"text": "UI_W3_TAUSCH_TUER_AUTO", "objekte": ["tuer", "auto"], "zeilen": ["W3_TUER_MAX_0250"]},
+		{"text": "UI_W3_TAUSCH_TUER_HAUSSCHUHE", "objekte": ["tuer", "schmidt"], "zeilen": ["W3_TUER_MAX_0260", "W3_TUER_SCH_0270"]},
+		{"text": "UI_W3_TAUSCH_SCHMIDT_BAUM", "objekte": ["schmidt", "baeume"], "zeilen": ["W3_TUER_MAX_0280"]},
 	],
 	"buero_50": [
-		{"text": "UI_W3_TAUSCH_ORIGINAL_TASSE", "loesung": "R6a", "braucht": "kaffeetasse",
+		{"text": "UI_W3_TAUSCH_ORIGINAL_TASSE", "objekte": ["schmidt", "kaffeetasse"], "loesung": "R6a", "braucht": "kaffeetasse",
 			"zeilen": ["W3_TURM_NAR_0350", "W3_TURM_SCH_0360", "W3_TURM_KLO_0370", "W3_TURM_MAX_0380"]},
-		{"text": "UI_W3_TAUSCH_ORIGINAL_KLON", "zeilen": ["W3_TURM_MAX_0490", "W3_TURM_KLO_0500"]},
-		{"text": "UI_W3_TAUSCH_HAUSSCHUHE_TASSE", "braucht": "kaffeetasse", "zeilen": ["W3_TURM_MAX_0510"]},
-		{"text": "UI_W3_TAUSCH_ORIGINAL_PFLANZE", "zeilen": ["W3_TURM_MAX_0520"]},
+		{"text": "UI_W3_TAUSCH_ORIGINAL_KLON", "objekte": ["schmidt", "klon"], "zeilen": ["W3_TURM_MAX_0490", "W3_TURM_KLO_0500"]},
+		{"text": "UI_W3_TAUSCH_HAUSSCHUHE_TASSE", "objekte": ["schmidt", "kaffeetasse"], "braucht": "kaffeetasse", "zeilen": ["W3_TURM_MAX_0510"]},
+		{"text": "UI_W3_TAUSCH_ORIGINAL_PFLANZE", "objekte": ["schmidt", "topfpflanzen"], "zeilen": ["W3_TURM_MAX_0520"]},
 	],
 	"testkammer_1": [
-		{"text": "UI_W3_TAUSCH_BERND_MAX", "loesung": "R9b",
+		{"text": "UI_W3_TAUSCH_BERND_MAX", "objekte": ["bernd", "max"], "loesung": "R9b",
 			"zeilen": ["W3_KAM1_NAR_0440", "W3_KAM1_MAX_0450", "W3_KAM1_NAR_0460", "W3_KAM1_MAX_0470",
 				"W3_KAM1_PIX_0480", "W3_KAM1_MUT_0490"]},
-		{"text": "UI_W3_TAUSCH_BERND_KUCHEN", "zeilen": ["W3_KAM1_MAX_0530"]},
-		{"text": "UI_W3_TAUSCH_BERND_EHRLICH", "zeilen": ["W3_KAM1_MAX_0540"]},
-		{"text": "UI_W3_TAUSCH_SCHALTER_MUEDE", "zeilen": ["W3_KAM1_MAX_0550"]},
+		{"text": "UI_W3_TAUSCH_BERND_KUCHEN", "objekte": ["bernd", "pappkuchen"], "zeilen": ["W3_KAM1_MAX_0530"]},
+		{"text": "UI_W3_TAUSCH_BERND_EHRLICH", "objekte": ["bernd", "max"], "zeilen": ["W3_KAM1_MAX_0540"]},
+		{"text": "UI_W3_TAUSCH_SCHALTER_MUEDE", "objekte": ["bodenschalter", "max"], "zeilen": ["W3_KAM1_MAX_0550"]},
 	],
 	"testkammer_2": [
-		{"text": "UI_W3_TAUSCH_LASER_HUHN", "loesung": "R9c", "braucht": "gummihuhn",
+		{"text": "UI_W3_TAUSCH_LASER_HUHN", "objekte": ["laser", "gummihuhn"], "loesung": "R9c", "braucht": "gummihuhn",
 			"zeilen": ["W3_KAM2_NAR_0090", "W3_KAM2_MAX_0100", "W3_KAM2_MUT_0120"]},
-		{"text": "UI_W3_TAUSCH_LASER_FARBE", "braucht": "gummihuhn", "zeilen": ["W3_KAM2_MAX_0190"]},
-		{"text": "UI_W3_TAUSCH_LASER_SOCKEL", "zeilen": ["W3_KAM2_MAX_0200"]},
-		{"text": "UI_W3_TAUSCH_HUHN_KRITZELEI", "braucht": "gummihuhn", "zeilen": ["W3_KAM2_MAX_0210"]},
+		{"text": "UI_W3_TAUSCH_LASER_FARBE", "objekte": ["laser", "gummihuhn"], "braucht": "gummihuhn", "zeilen": ["W3_KAM2_MAX_0190"]},
+		{"text": "UI_W3_TAUSCH_LASER_SOCKEL", "objekte": ["laser", "sockel"], "zeilen": ["W3_KAM2_MAX_0200"]},
+		{"text": "UI_W3_TAUSCH_HUHN_KRITZELEI", "objekte": ["gummihuhn", "kritzelei"], "braucht": "gummihuhn", "zeilen": ["W3_KAM2_MAX_0210"]},
 	],
 	"testkammer_3": [
-		{"text": "UI_W3_TAUSCH_TUER_LAUTSPRECHER", "loesung": "tuer",
+		{"text": "UI_W3_TAUSCH_TUER_LAUTSPRECHER", "objekte": ["tuer", "lautsprecher"], "loesung": "tuer",
 			"zeilen": ["W3_KAM3_NAR_0100", "W3_KAM3_TUR_0110", "W3_KAM3_MAX_0120", "W3_KAM3_MUT_0130", "W3_KAM3_PIX_0140"]},
-		{"text": "UI_W3_TAUSCH_BERND_HUHN", "loesung": "bernd", "braucht": "gummihuhn",
+		{"text": "UI_W3_TAUSCH_BERND_HUHN", "objekte": ["bernd", "gummihuhn"], "loesung": "bernd", "braucht": "gummihuhn",
 			"zeilen": ["W3_KAM3_NAR_0150", "W3_KAM3_MAX_0160"]},
-		{"text": "UI_W3_TAUSCH_TUER_BERND", "zeilen": ["W3_KAM3_MAX_0190", "W3_KAM3_PIX_0200"]},
-		{"text": "UI_W3_TAUSCH_LAUTSPRECHER_HUHN", "braucht": "gummihuhn", "zeilen": ["W3_KAM3_MAX_0210"]},
-		{"text": "UI_W3_TAUSCH_LAUTSPRECHER_BERND", "zeilen": ["W3_KAM3_MAX_0220", "W3_KAM3_BER_0230"]},
-		{"text": "UI_W3_TAUSCH_TUER_HUHN", "braucht": "gummihuhn", "zeilen": ["W3_KAM3_MAX_0240"]},
+		{"text": "UI_W3_TAUSCH_TUER_BERND", "objekte": ["tuer", "bernd"], "zeilen": ["W3_KAM3_MAX_0190", "W3_KAM3_PIX_0200"]},
+		{"text": "UI_W3_TAUSCH_LAUTSPRECHER_HUHN", "objekte": ["lautsprecher", "gummihuhn"], "braucht": "gummihuhn", "zeilen": ["W3_KAM3_MAX_0210"]},
+		{"text": "UI_W3_TAUSCH_LAUTSPRECHER_BERND", "objekte": ["lautsprecher", "bernd"], "zeilen": ["W3_KAM3_MAX_0220", "W3_KAM3_BER_0230"]},
+		{"text": "UI_W3_TAUSCH_TUER_HUHN", "objekte": ["tuer", "gummihuhn"], "braucht": "gummihuhn", "zeilen": ["W3_KAM3_MAX_0240"]},
 	],
 	"kern": [
-		{"text": "UI_W3_TAUSCH_ZELLE_KEKSE", "loesung": "kern", "braucht": "omas_kekse",
+		{"text": "UI_W3_TAUSCH_ZELLE_KEKSE", "objekte": ["energiezelle", "omas_kekse"], "loesung": "kern", "braucht": "omas_kekse",
 			"zeilen": ["W3_KERN_NAR_0440", "W3_KERN_MAX_0450", "W3_KERN_PIX_0460"]},
-		{"text": "UI_W3_TAUSCH_ZELLE_MAX", "zeilen": ["W3_KERN_MAX_0600"]},
+		{"text": "UI_W3_TAUSCH_ZELLE_MAX", "objekte": ["energiezelle", "max"], "zeilen": ["W3_KERN_MAX_0600"]},
 	],
 }
 const BUDGET := {"stadtstrasse": 2, "buero_50": 2, "testkammer_1": 2, "testkammer_2": 2,
@@ -98,7 +99,7 @@ const TEST := [
 ]
 ## Beobachtungen (R1a): Figur → Schalter
 const BEOBACHTUNG := {"frau_regenschirm": "W3_BEOBACHTUNG_SCHIRM",
-	"strassenmusiker": "W3_BEOBACHTUNG_MUSIKER", "weinender_mann": "W3_BEOBACHTUNG_SUPPE"}
+	"strassenmusiker_w3": "W3_BEOBACHTUNG_MUSIKER", "weinender_mann": "W3_BEOBACHTUNG_SUPPE"}
 
 ## Patch-Panel (R7b): Kabel → richtige Buchse und Zeile
 const KABEL := {"kreis": ["rot", "W3_TERM_PIX_0220"], "dreieck": ["gruen", "W3_TERM_PIX_0230"],
@@ -393,6 +394,7 @@ func _figuren_anwenden(raum: CQRaum) -> void:
 		"Klon": rid == "buero_50" and not Zustand.geloest("R6b"),
 		"Bernd": (rid == "testkammer_1" and not Zustand.geloest("R9b")) or (rid == "testkammer_3" and not Zustand.geloest("R9d")),
 		"Kalle": rid == "widerstandsbasis",
+		"Mutti": rid == "kern",       # in den Testkammern nur Stimme aus dem Lautsprecher
 		"Opa": false,                 # spricht nur als Hologramm und durch das Portal
 		"PortalgeraetStimme": false,  # nur Stimme
 	}
@@ -539,8 +541,8 @@ func ansehen_frau_regenschirm(_obj, _x) -> bool:
 	return false
 
 
-func ansehen_strassenmusiker(_obj, _x) -> bool:
-	_beobachtung("strassenmusiker")
+func ansehen_strassenmusiker_w3(_obj, _x) -> bool:
+	_beobachtung("strassenmusiker_w3")
 	return false
 
 
@@ -815,6 +817,7 @@ func benutzen_wassereimer(_obj, _x) -> bool:
 	if not Spiel.ist_pixel():
 		return false
 	await _sag("W3_BAS_PIX_0650")
+	Zustand.setze("W3_EIMER_GEKIPPT")  # Kühlung taut (Hintergrund W3-R04b)
 	return true
 #endregion
 
@@ -861,12 +864,126 @@ func _code_sicht(oid: String) -> bool:
 	var texte: Array = liste.map(func(t): return t.text)
 	texte.append("UI_W3_CODE_SICHT_AUS")
 	Klang.geraeusch("code_sicht")  # Code-Sicht an
+	_code_sicht_zeigen(rid)
 	var w := await Spiel.auswahl(texte)
+	_code_sicht_weg()
 	if w < 0 or w >= liste.size():
 		Klang.geraeusch("code_sicht")  # und wieder aus
 		return true
 	await _tauschen(rid, liste[w])
 	return true
+
+
+## Code-Sicht als Bild (grafik/welt-3.md): der Hintergrund als grüne Umrisse
+## (tools/grafik_w3/code_sicht.py) über dem Hintergrund und unter den Figuren, die Figuren grün
+## getönt, an jedem Tauschobjekt ein Etikett mit seinen Wörtern. Die Wörter kommen aus den
+## Texten der Tausche („Tür: verschlossen ↔ Schmidt: gesprächig“), also auch auf Englisch.
+const CODE_SICHT_BILD := "res://grafik/oberflaeche/code_sicht/%s.png"
+const CODE_GRUEN := Color("63ff7a")
+var _code_ebene: Node2D = null
+var _code_toenung := {}
+
+
+func _code_sicht_zeigen(rid: String) -> void:
+	_code_sicht_weg()
+	var raum := R.current
+	if not is_instance_valid(raum) or not raum.has_node("Props/Background"):
+		return
+	var bg := raum.get_node("Props/Background") as Node2D
+	if ResourceLoader.exists(CODE_SICHT_BILD % rid):
+		var bild := Sprite2D.new()
+		bild.name = "CodeSicht"
+		bild.texture = load(CODE_SICHT_BILD % rid)
+		bild.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
+		bild.modulate.a = 0.92
+		bg.add_child(bild)  # über dem Hintergrund, unter Figuren und Props
+		bild.global_position = bg.global_position
+		bild.centered = true
+	for c in raum.get_characters():
+		_code_toenung[c] = c.modulate
+		c.modulate = Color(0.45, 1.0, 0.55, c.modulate.a)
+	_code_ebene = Node2D.new()
+	_code_ebene.name = "CodeEtiketten"
+	_code_ebene.z_index = 100
+	raum.add_child(_code_ebene)
+	# Wörter je Objekt aus den Tauschtexten
+	var woerter := {}
+	var namen := {}
+	for t: Dictionary in TAUSCHE.get(rid, []):
+		var haelften := tr(t.text).split("↔")
+		for i in mini(haelften.size(), t.get("objekte", []).size()):
+			var teil := haelften[i].split(":")
+			var oid: String = t.objekte[i]
+			var wort := teil[teil.size() - 1].strip_edges()
+			namen[oid] = teil[0].strip_edges()
+			if not woerter.has(oid):
+				woerter[oid] = []
+			if not wort in woerter[oid]:
+				woerter[oid].append(wort)
+	var max_versatz := 0.0
+	for oid: String in woerter:
+		var text := " ".join(woerter[oid].map(func(w): return "[%s]" % w))
+		var ort := _code_ort(raum, oid)
+		if ort == Vector2.INF:
+			if not _hat(oid):
+				continue
+			# Gegenstand in Max' Tasche: Etikett neben Max
+			ort = _code_ort(raum, "max") + Vector2(0, -14.0 - max_versatz)
+			max_versatz += 14.0
+			text = "%s: %s" % [namen[oid], text]
+		_code_etikett(text, ort)
+
+
+## Oberkante (Mitte) eines Objekts im Raum: Figur, Hotspot oder Prop; INF, wenn nicht da.
+func _code_ort(raum: CQRaum, oid: String) -> Vector2:
+	for c in raum.get_characters():
+		if c.has_method("objekt_id") and c.objekt_id() == oid or str(c.script_name).to_snake_case() == oid:
+			var h := 60.0
+			if c.has_node("Sprite2D") and c.get_node("Sprite2D").texture:
+				var sp := c.get_node("Sprite2D") as Sprite2D
+				h = sp.get_rect().size.y * absf(sp.scale.y) * absf(c.scale.y)
+			return c.global_position + Vector2(0, -h - 4.0)
+	for o in raum.get_hotspots() + raum.get_props():
+		if o.has_method("objekt_id") and o.objekt_id() == oid and o.visible:
+			var oben := 0.0
+			for p in o.interaction_polygon:
+				oben = minf(oben, p.y)
+			return o.global_position + Vector2(0, oben - 2.0)
+	return Vector2.INF
+
+
+func _code_etikett(text: String, ort: Vector2) -> void:
+	var l := Label.new()
+	l.text = text
+	l.theme = load("res://game/gui/resources/gui_theme.tres")
+	l.add_theme_font_size_override("font_size", 8)
+	l.add_theme_color_override("font_color", CODE_GRUEN)
+	var kasten := StyleBoxFlat.new()
+	kasten.bg_color = Color(0.02, 0.07, 0.04, 0.85)
+	kasten.border_color = CODE_GRUEN
+	kasten.set_border_width_all(1)
+	kasten.content_margin_left = 3
+	kasten.content_margin_right = 3
+	kasten.content_margin_top = 1
+	kasten.content_margin_bottom = 1
+	l.add_theme_stylebox_override("normal", kasten)
+	l.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	_code_ebene.add_child(l)
+	l.reset_size()
+	var raum_breite: float = R.current.width if "width" in R.current else 640.0
+	l.position = Vector2(clampf(ort.x - l.size.x / 2.0, 2.0, raum_breite - l.size.x - 2.0), maxf(ort.y - l.size.y, 2.0))
+
+
+func _code_sicht_weg() -> void:
+	if is_instance_valid(_code_ebene):
+		_code_ebene.queue_free()
+	_code_ebene = null
+	if is_instance_valid(R.current) and R.current.has_node("Props/Background/CodeSicht"):
+		R.current.get_node("Props/Background/CodeSicht").queue_free()
+	for c in _code_toenung:
+		if is_instance_valid(c):
+			c.modulate = _code_toenung[c]
+	_code_toenung.clear()
 
 
 func _tauschen(rid: String, t: Dictionary) -> void:
