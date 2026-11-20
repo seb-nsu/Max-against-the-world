@@ -2204,7 +2204,7 @@ Nichts anhängen. Die Schrift setzt Claude danach als Pixelschrift ein.
 
 ```text
 STYLE: Close-up illustration for a 2D point-and-click adventure game in the style of classic 1990s adventure games, warm hand-painted look, 16:9, 640x360, the object fills the whole frame, no floor, no characters, light from upper left. No text, no letters, no numbers, all lines and fields left blank.
-SUBJECT: Close-up of a torn phone book page filling the frame, four narrow columns of blank lines, torn left edge, lying on a wet metal shelf, cyan light from the phone booth.
+SUBJECT: Close-up of a single phone book page torn out along its left edge, lying slightly crooked on a wet metal shelf inside a phone booth, filling the frame; thin paper printed in four narrow columns, each column a dense stack of blank ruled entry lines with a small blank header bar on top; the third column is one long unbroken run of identical blank entries from top to bottom, faintly highlighted with a smudged pencil bracket; a few water drops on the paper, cyan light from the phone booth.
 PALETTE: dim cyberpunk interior palette of deep navy and concrete grey, bright accents only in neon magenta and neon cyan from screens and tubes, damp walls, a few drips, no street, no sky. Color anchors, approximate: deep navy #181425, concrete grey #3a4466, damp blue-grey #5a6988, neon magenta #ff4fd8, neon cyan #3ff7ff.
 NEGATIVE: no text, letters, numbers or symbols that could be read, no characters, no hands unless described, no floor, no frame, no photorealism, no watermark
 ```
@@ -2215,8 +2215,8 @@ NEGATIVE: no text, letters, numbers or symbols that could be read, no characters
 
 ```text
 STYLE: Close-up illustration for a 2D point-and-click adventure game in the style of classic 1990s adventure games, warm hand-painted look, 16:9, 640x360, the object fills the whole frame, no floor, no characters, light from upper left. No text, no letters, no numbers, all lines and fields left blank.
-SUBJECT: Close-up of an opened brown paper folder filling the frame, two pages with a blank typed form, a round red stamp and a paper clip.
-PALETTE: dim cyberpunk interior palette of deep navy and concrete grey, bright accents only in neon magenta and neon cyan from screens and tubes, damp walls, a few drips, no street, no sky. Color anchors, approximate: deep navy #181425, concrete grey #3a4466, damp blue-grey #5a6988, neon magenta #ff4fd8, neon cyan #3ff7ff.
+SUBJECT: Close-up of an opened file folder lying on a tidy office desk, filling the frame; the folder glows softly white-green at its edges like a computer file; left page: a blank title bar at the top, below it four empty ruled lines, at the bottom right a large round red stamp with an empty center; right page: a stack of report sheets held by a paper clip, two short empty ruled lines with wide spacing, the rest of the page empty; plenty of clean empty paper for writing.
+PALETTE: overly clean interior palette with a faint green tint, even shadowless-looking light, no dirt anywhere, slightly too symmetrical, no sky. Color anchors, approximate: clean grey #c0cbdc, white #ffffff, faint green tint #63c74d, pale wood #e4a672.
 NEGATIVE: no text, letters, numbers or symbols that could be read, no characters, no hands unless described, no floor, no frame, no photorealism, no watermark
 ```
 
@@ -2226,7 +2226,7 @@ NEGATIVE: no text, letters, numbers or symbols that could be read, no characters
 
 ```text
 STYLE: Close-up illustration for a 2D point-and-click adventure game in the style of classic 1990s adventure games, warm hand-painted look, 16:9, 640x360, the object fills the whole frame, no floor, no characters, light from upper left. No text, no letters, no numbers, all lines and fields left blank.
-SUBJECT: Close-up of a thick appliance manual open on a kitchen table filling the frame, a stand mixer diagram on the left page, blank numbered lines on the right page.
+SUBJECT: Close-up of a thick old kitchen appliance manual lying open on a wooden kitchen table with a checked tablecloth edge, filling the frame; left page: a neat line drawing of a stand mixer with arrows to its parts; right page: a short blank heading bar at the top, below it two empty lines underlined twice in red pen, and further down a small pale yellow boxed warning note with three empty lines; a little flour dust and a cookie crumb on the table.
 PALETTE: overly clean interior palette with a faint green tint, even shadowless-looking light, no dirt anywhere, slightly too symmetrical, no sky. Color anchors, approximate: clean grey #c0cbdc, white #ffffff, faint green tint #63c74d, pale wood #e4a672.
 NEGATIVE: no text, letters, numbers or symbols that could be read, no characters, no hands unless described, no floor, no frame, no photorealism, no watermark
 ```
@@ -2237,7 +2237,7 @@ NEGATIVE: no text, letters, numbers or symbols that could be read, no characters
 
 ```text
 STYLE: Close-up illustration for a 2D point-and-click adventure game in the style of classic 1990s adventure games, warm hand-painted look, 16:9, 640x360, the object fills the whole frame, no floor, no characters, light from upper left. No text, no letters, no numbers, all lines and fields left blank.
-SUBJECT: Close-up of a white wall panel near the floor filling the frame, big shaky black marker scribbles underlined three times and a small neat block of print beside them, all blank shapes without letters.
+SUBJECT: Close-up of a white wall panel near the floor of a clean test chamber, part of an orange warning stripe along the bottom edge, filling the frame; on the left two thirds a large clean empty area of white panel with three long shaky black felt-tip underlines beneath it, and below them a small childlike felt-tip drawing of a cake with a candle, crossed out twice; on the right a small neat light grey notice plate screwed to the wall with four empty lines; a black felt-tip pen lying on the floor edge.
 PALETTE: sterile palette of white panels, light grey and soft orange warning stripes, cold even light, only short soft shadows to the lower right. Color anchors, approximate: white panels #ffffff, light grey #c0cbdc, cold grey #8b9bb4, warning orange #f77622.
 NEGATIVE: no text, letters, numbers or symbols that could be read, no characters, no hands unless described, no floor, no frame, no photorealism, no watermark
 ```
@@ -2248,7 +2248,7 @@ NEGATIVE: no text, letters, numbers or symbols that could be read, no characters
 
 ```text
 STYLE: Close-up illustration for a 2D point-and-click adventure game in the style of classic 1990s adventure games, warm hand-painted look, 16:9, 640x360, the object fills the whole frame, no floor, no characters, light from upper left. No text, no letters, no numbers, all lines and fields left blank.
-SUBJECT: Close-up of a laminated sheet pinned to a hull plate filling the frame, a table of small cat paw symbols in two columns with blank spaces beside each, a coffee ring stain.
+SUBJECT: Close-up of a laminated sheet pinned to a riveted metal hull plate with two magnets, filling the frame; a hand-drawn table with two columns and eight rows: a blank header row, then seven rows where the left cell holds small cat paw prints in groups (single paw, short paw stroke, two paws, stroke and paw) and the right cell is empty; below the table one short empty line in small print; a brown coffee ring stain on one corner, the laminate reflecting a little dim light.
 PALETTE: dim cyberpunk interior palette of deep navy and concrete grey, bright accents only in neon magenta and neon cyan from screens and tubes, damp walls, a few drips, no street, no sky. Color anchors, approximate: deep navy #181425, concrete grey #3a4466, damp blue-grey #5a6988, neon magenta #ff4fd8, neon cyan #3ff7ff.
 NEGATIVE: no text, letters, numbers or symbols that could be read, no characters, no hands unless described, no floor, no frame, no photorealism, no watermark
 ```
