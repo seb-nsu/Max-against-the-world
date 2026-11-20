@@ -134,7 +134,7 @@ Baustein NAHANSICHT, je ein Bild in 640×360, nichts anhängen; die Nahansicht f
 | Akte (Regel 1) | Realität innen | Close-up of an opened brown paper folder filling the frame, two pages with a blank typed form, a round red stamp and a paper clip |
 | Kochbuch (Regel 2) | Simulation innen | Close-up of a thick appliance manual open on a kitchen table filling the frame, a stand mixer diagram on the left page, blank numbered lines on the right page |
 | Kritzelei (Regel 3) | Labor | Close-up of a white wall panel near the floor filling the frame, big shaky black marker scribbles underlined three times and a small neat block of print beside them, all blank shapes without letters |
-| Morse-Tabelle (Rätsel 13) | Realität innen | Close-up of a laminated sheet pinned to a hull plate filling the frame, a table of small cat paw symbols in two columns with blank spaces beside each, a coffee ring stain |
+| Morse-Tabelle (Rätsel 13) | Realität innen | Close-up of a single freshly printed, laminated sheet lying flat on a plain neutral surface, filling the frame, a table of small cat paw symbols in two columns with blank spaces beside each, glossy laminate edges, a coffee ring stain |
 
 ### Nur zum Ansehen
 

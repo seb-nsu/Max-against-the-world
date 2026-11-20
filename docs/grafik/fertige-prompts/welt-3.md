@@ -2248,7 +2248,7 @@ NEGATIVE: no text, letters, numbers or symbols that could be read, no characters
 
 ```text
 STYLE: Close-up illustration for a 2D point-and-click adventure game in the style of classic 1990s adventure games, warm hand-painted look, 16:9, 640x360, the object fills the whole frame, no floor, no characters, light from upper left. No text, no letters, no numbers, all lines and fields left blank.
-SUBJECT: Close-up of a laminated sheet pinned to a hull plate filling the frame, a table of small cat paw symbols in two columns with blank spaces beside each, a coffee ring stain.
+SUBJECT: Close-up of a single freshly printed, laminated sheet lying flat on a plain neutral surface, filling the frame, a table of small cat paw symbols in two columns with blank spaces beside each, glossy laminate edges, a coffee ring stain.
 PALETTE: dim cyberpunk interior palette of deep navy and concrete grey, bright accents only in neon magenta and neon cyan from screens and tubes, damp walls, a few drips, no street, no sky. Color anchors, approximate: deep navy #181425, concrete grey #3a4466, damp blue-grey #5a6988, neon magenta #ff4fd8, neon cyan #3ff7ff.
 NEGATIVE: no text, letters, numbers or symbols that could be read, no characters, no hands unless described, no floor, no frame, no photorealism, no watermark
 ```

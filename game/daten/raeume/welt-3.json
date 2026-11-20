@@ -7670,7 +7670,7 @@
     "normal"
    ],
    "reist_mit": true,
-   "nahansicht": false,
+   "nahansicht": true,
    "icon": "res://grafik/gegenstaende/morse_tabelle_normal.png",
    "icons": {},
    "ansehen": [
@@ -7955,6 +7955,12 @@
    "name_key": "UI_OBJ_SCHMIDTS_AKTE",
    "raum": null,
    "bild": "res://grafik/platzhalter/nah_schmidts_akte.png"
+  },
+  {
+   "id": "morse_tabelle",
+   "name_key": "UI_OBJ_MORSE_TABELLE",
+   "raum": null,
+   "bild": "res://grafik/platzhalter/nah_morse_tabelle.png"
   }
  ],
  "dialoge": [

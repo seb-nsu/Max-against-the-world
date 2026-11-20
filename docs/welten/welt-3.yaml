@@ -339,7 +339,7 @@ gegenstaende:
     zustaende: [normal]
     verwendet_in: [R7a]
     reist_mit: true
-    nahansicht: false
+    nahansicht: true
   - id: zugangskarte
     name: Zugangskarte
     herkunft: R12   # von Herrn Vier
