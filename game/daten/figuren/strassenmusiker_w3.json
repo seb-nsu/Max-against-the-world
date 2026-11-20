@@ -1,0 +1,56 @@
+{
+ "bild": [
+  109,
+  212
+ ],
+ "animationen": {
+  "idle": {
+   "von": 0,
+   "bilder": 2,
+   "ms": 320,
+   "schleife": true,
+   "folge": [
+    0,
+    1,
+    1,
+    0
+   ]
+  },
+  "talk": {
+   "von": 2,
+   "bilder": 3,
+   "ms": 150,
+   "schleife": true,
+   "folge": [
+    0,
+    1,
+    0,
+    2
+   ]
+  },
+  "spielen": {
+   "von": 5,
+   "bilder": 7,
+   "ms": 150,
+   "schleife": true,
+   "folge": [
+    0,
+    0,
+    1,
+    2,
+    2,
+    3,
+    4,
+    4,
+    3,
+    2,
+    2,
+    5,
+    6,
+    6,
+    6,
+    5
+   ]
+  }
+ }
+}

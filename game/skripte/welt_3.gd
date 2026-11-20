@@ -403,6 +403,17 @@ func _figuren_anwenden(raum: CQRaum) -> void:
 		if plan[sn] and not raum.has_character(sn) and raum.has_marker(sn):
 			pos = raum.get_marker_position(sn)
 		Spiel.figur_hier(sn, plan[sn], pos)
+	_max_gang()
+
+
+## Nach dem Hexenschuss hinkt Max bis zum Ende der Welt (Hand am Rücken, W3-B47)
+func _max_gang(hinkt := true) -> void:
+	if not is_instance_valid(C.Max) or not C.Max.has_method("hat_animation"):
+		return
+	var gang := "walk"
+	if hinkt and Zustand.ist("W3_HEXENSCHUSS") and C.Max.hat_animation("hexenschuss_gehen"):
+		gang = "hexenschuss_gehen"
+	C.Max.walk_animation = gang
 #endregion
 
 #region Ankunft und Räume ##########################################################################
@@ -1592,5 +1603,6 @@ func _abschluss() -> void:
 	await Spiel.raum_wechseln_und_warten(Bauplan.raum_script_name("unterstadt_strasse"))
 	await _szene(["W3_ENDE_NAR_0090", "W3_ENDE_MAX_0100", "W3_ENDE_PIX_0110", "W3_ENDE_MAX_0120",
 		"W3_ENDE_PIX_0130", "W3_ENDE_DEC_0140"])
+	_max_gang(false)
 	await Spiel.zwischenspiel_beginnen(3)
 #endregion

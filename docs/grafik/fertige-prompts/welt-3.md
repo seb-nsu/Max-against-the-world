@@ -28,7 +28,7 @@ Opa steht ihre feste Beschreibung wortgleich in der Zeile CHARACTER LOCK; den Fi
 
 # Shotliste
 
-125 Shots, davon 125 sicher offen („–“: Stand nicht automatisch prüfbar). Kürzel:
+125 Shots, davon 108 sicher offen („–“: Stand nicht automatisch prüfbar). Kürzel:
 R Raum, F Figur, P Posenbogen, B Bewegung, G Gegenstände, N Nahansicht, K Figurenbogen.
 
 | Shot | Bild | Stand |
@@ -47,24 +47,24 @@ R Raum, F Figur, P Posenbogen, B Bewegung, G Gegenstände, N Nahansicht, K Figur
 | W3-R12 | Kern von M.U.T.T.I. | offen |
 | W3-R13 | Code-Sicht | offen |
 | W3-F01 | M.U.T.T.I. | offen |
-| W3-F02 | Morphäus | offen |
-| W3-F03 | Orakel-Oma | offen |
-| W3-F04 | Agent Schmidt | offen |
-| W3-F05 | Schmidt-Klon | offen |
-| W3-F06 | Roboter-Hausmeister | offen |
-| W3-F07 | Detektiv Deckert | offen |
-| W3-F08 | Herr Vier | offen |
-| W3-F09 | Kabel-Kalle | offen |
-| W3-F10 | Bernd | offen |
-| W3-F11 | Rebellin | offen |
-| W3-F12 | Rebell | offen |
-| W3-F13 | Piepsi | offen |
-| W3-F14 | Opa als Hologramm | offen |
-| W3-F15 | Weinender Mann | offen |
-| W3-F16 | Frau mit Regenschirm | offen |
+| W3-F02 | Morphäus | im Spiel |
+| W3-F03 | Orakel-Oma | im Spiel |
+| W3-F04 | Agent Schmidt | im Spiel |
+| W3-F05 | Schmidt-Klon | im Spiel |
+| W3-F06 | Roboter-Hausmeister | im Spiel |
+| W3-F07 | Detektiv Deckert | im Spiel |
+| W3-F08 | Herr Vier | im Spiel |
+| W3-F09 | Kabel-Kalle | im Spiel |
+| W3-F10 | Bernd | im Spiel |
+| W3-F11 | Rebellin | im Spiel |
+| W3-F12 | Rebell | im Spiel |
+| W3-F13 | Piepsi | im Spiel |
+| W3-F14 | Opa als Hologramm | im Spiel |
+| W3-F15 | Weinender Mann | im Spiel |
+| W3-F16 | Frau mit Regenschirm | im Spiel |
 | W3-F17 | Straßenmusiker im Regen | offen |
-| W3-F18 | Schwarze Katze | offen |
-| W3-F19 | Max als Ente | offen |
+| W3-F18 | Schwarze Katze | im Spiel |
+| W3-F19 | Max als Ente | im Spiel |
 | W3-F20 | Max in der Kapsel | offen |
 | W3-F21 | Max in der Pfütze | offen |
 | W3-F22 | Passant der Simulation | offen |

@@ -1,0 +1,20 @@
+{
+ "bild": [
+  46,
+  47
+ ],
+ "animationen": {
+  "idle": {
+   "von": 0,
+   "bilder": 1,
+   "ms": 320,
+   "schleife": true
+  },
+  "walk": {
+   "von": 1,
+   "bilder": 8,
+   "ms": 110,
+   "schleife": true
+  }
+ }
+}

@@ -22,7 +22,12 @@ unterstadt_strasse:
   tiefe: 0.85
   skala: 0.8
   effekte:
-    - {art: dampf, pos: [82, 196], breite: 24}             # Nudeltopf (bis der gemalte Dampf W3-B17 kommt)
+    - {art: bild, bild: res://grafik/ambiente/w3_nudeltopf_dampf.png, bilder: 6, pos: [76, 202], fps: 8}   # W3-B17 Nudeltopf
+    - {art: bild, bild: res://grafik/ambiente/w3_neonschild.png, bilder: 6, pos: [288, 196], fps: 9}   # W3-B18 Neon flackert
+    - {art: bild, bild: res://grafik/ambiente/w3_fliegendes_auto.png, bilder: 6, weg: [[-30, 52], [1310, 46]], tempo: 70, zurueck: true, fps: 10, pause: [6, 18]}   # W3-B16 obere Spur
+    - {art: bild, bild: res://grafik/ambiente/w3_fliegendes_auto.png, bilder: 6, weg: [[1310, 92], [-30, 98]], tempo: 50, zurueck: true, fps: 10, pause: [10, 25]}   # W3-B16 untere Spur
+    - {art: bild, bild: res://grafik/ambiente/w3_regen.png, bilder: 4, pos: [320, 360], fps: 14, z: 50}   # W3-B13 Regen, linke Hälfte
+    - {art: bild, bild: res://grafik/ambiente/w3_regen.png, bilder: 4, pos: [960, 360], fps: 14, z: 50}   # W3-B13 Regen, rechte Hälfte
     - {art: dampf, pos: [1045, 300], breite: 60}           # Dampfgitter
     - {art: flackern, pos: [172, 165], r: [20, 26], farbe: "#ff4fa0"}   # rote Papierlaterne
   laufbereich: [[8, 288], [585, 288], [600, 280], [640, 280], [965, 286], [990, 280], [1040, 280], [1150, 292], [1272, 300], [1272, 356], [8, 356]]
@@ -67,6 +72,10 @@ apothekengasse:
   effekte:
     - {art: flackern, pos: [925, 70], r: [26, 30], farbe: "#7fe8ff"}   # Wandlampe
     - {art: dampf, pos: [960, 285], breite: 50}                      # Gully vor der Ziegelwand
+    - {art: bild, bild: res://grafik/ambiente/w3_automat_scannt.png, bilder: 6, pos: [647, 156], fps: 9}   # W3-B23 Linse scannt
+    - {art: bild, bild: res://grafik/ambiente/w3_ratte.png, bilder: 6, weg: [[1040, 292], [1180, 287]], tempo: 60, ausblenden: 10, fps: 11, pause: [15, 40]}   # W3-B22 Ratte ins Loch am Rohr
+    - {art: bild, bild: res://grafik/ambiente/w3_regen.png, bilder: 4, pos: [320, 360], fps: 14, z: 50}   # W3-B13 Regen
+    - {art: bild, bild: res://grafik/ambiente/w3_regen.png, bilder: 4, pos: [960, 360], fps: 14, z: 50}
   laufbereich: [[8, 300], [1180, 296], [1180, 356], [8, 356]]
   marker:
     start: [640, 322]
@@ -94,6 +103,7 @@ widerstandsbasis:
   effekte:
     - {art: flackern, pos: [905, 78], r: [30, 30], farbe: "#ffe680"}   # gelbe Lampe auf dem Großrechner
     - {art: flackern, pos: [578, 182], r: [26, 18], farbe: "#7fff9f"}  # grüner Bildschirm
+    - {art: bild, bild: res://grafik/ambiente/w3_grossrechner.png, bilder: 4, pos: [900, 154], fps: 6}   # W3-B24 Bandspulen
   wechsel: [stadtstrasse, testkammer_1]
   laufbereich: [[30, 330], [100, 304], [470, 300], [1095, 306], [1120, 330], [1272, 335], [1272, 356], [30, 356]]
   marker:
@@ -138,6 +148,7 @@ kuehlung:
   tiefe: 0.85
   effekte:
     - {art: flackern, pos: [416, 147], r: [8, 8], farbe: "#9fe8ff"}   # Statuslicht am Kühlgerät
+    - {art: bild, bild: res://grafik/ambiente/w3_ventilator.png, bilder: 4, pos: [413, 258], fps: 9}   # W3-B25 Ventilator
   laufbereich: [[60, 284], [485, 282], [485, 308], [545, 312], [600, 338], [622, 356], [18, 356], [40, 330]]
   marker:
     start: [320, 320]
@@ -156,7 +167,7 @@ laboreingang:
   skala: 0.8
   effekte:
     - {art: flackern, pos: [325, 70], r: [34, 22], farbe: "#e8f4ff"}   # Deckenlampe
-    - {art: flackern, pos: [425, 172], r: [4, 4], farbe: "#ff4040"}    # rotes Licht am Kartenleser
+    - {art: bild, bild: res://grafik/ambiente/w3_kartenleser.png, bilder: 4, pos: [418, 202], fps: 3}   # W3-B40 Kartenleser blinkt
   laufbereich: [[112, 272], [525, 262], [598, 300], [632, 356], [56, 356], [100, 300]]
   marker:
     start: [320, 312]
@@ -239,6 +250,8 @@ kueche_orakel:
   skala: 0.8
   effekte:
     - {art: flackern, pos: [130, 245], r: [24, 22], farbe: "#ffb347"}   # warmes Licht im Ofenfenster
+    - {art: bild, bild: res://grafik/ambiente/w3_eieruhr.png, bilder: 4, pos: [544, 192], fps: 4}   # W3-B27 Eieruhr
+    - {art: bild, bild: res://grafik/ambiente/w3_kuckucksuhr.png, bilder: 8, pos: [418, 94], fps: 7, ablauf: einmalig, ruhe_sichtbar: true, pause: [25, 50]}   # W3-B39 Kuckucksuhr
   laufbereich: [[150, 286], [228, 286], [228, 348], [452, 348], [455, 286], [555, 286], [608, 338], [626, 356], [40, 356], [82, 330]]
   marker:
     start: [330, 352]
@@ -269,7 +282,9 @@ buero_50:
   tiefe: 0.8
   skala: 0.8
   effekte:
-    - {art: flackern, pos: [320, 215], r: [16, 12], farbe: "#7fff9f"}   # grüner Bildschirm (bis W3-B45 Terminal spricht)
+    - {art: bild, bild: res://grafik/ambiente/w3_terminal_buero.png, bilder: 4, pos: [322, 229], fps: 6}   # W3-B46 Terminal
+    - {art: bild, bild: res://grafik/ambiente/w3_klone_tippen.png, bilder: 6, pos: [123, 220], fps: 7}   # W3-B28 Klone tippen im Hintergrund
+    - {art: bild, bild: res://grafik/ambiente/w3_kopierer.png, bilder: 4, pos: [505, 304], fps: 11}   # W3-B35 Kopierer rattert
   laufbereich: [[80, 322], [150, 270], [465, 268], [470, 300], [530, 330], [560, 356], [20, 356]]
   marker:
     start: [300, 320]

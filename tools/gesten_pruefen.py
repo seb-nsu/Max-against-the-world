@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Prüft die Gesten-Tabellen (game/skripte/gesten_einsatz.gd, gesten_welt_1.gd, gesten_welt_2.gd).
+"""Prüft die Gesten-Tabellen (game/skripte/gesten_einsatz.gd, gesten_welt_1.gd bis gesten_welt_3.gd).
 
 Für jede Zeile der Tabelle ZEILE: Gibt es die Zeilen-ID im Skript (lokalisierung/texte.csv), gibt es
 das Kürzel als Figur, und hat diese Figur (oder eine ihrer Bild-Varianten) die Bewegung? Für RUHE und
@@ -30,6 +30,7 @@ TABELLEN = {
     "gesten_einsatz.gd": ["prolog", "finale", "welt-1", "welt-2", "welt-3", "welt-4"],
     "gesten_welt_1.gd": ["welt-1"],
     "gesten_welt_2.gd": ["welt-2"],
+    "gesten_welt_3.gd": ["welt-3"],
 }
 
 

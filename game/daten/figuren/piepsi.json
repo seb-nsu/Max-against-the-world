@@ -1,0 +1,68 @@
+{
+ "bild": [
+  51,
+  63
+ ],
+ "animationen": {
+  "idle": {
+   "von": 0,
+   "bilder": 1,
+   "ms": 320,
+   "schleife": true
+  },
+  "drucken": {
+   "von": 1,
+   "bilder": 4,
+   "ms": 140,
+   "schleife": false,
+   "folge": [
+    0,
+    1,
+    1,
+    2,
+    3,
+    3
+   ]
+  },
+  "fahren": {
+   "von": 5,
+   "bilder": 3,
+   "ms": 110,
+   "schleife": true,
+   "folge": [
+    0,
+    1,
+    0,
+    2
+   ]
+  },
+  "hochfahren": {
+   "von": 8,
+   "bilder": 4,
+   "ms": 140,
+   "schleife": false,
+   "folge": [
+    0,
+    0,
+    1,
+    1,
+    2,
+    2,
+    3,
+    3
+   ]
+  },
+  "piepen": {
+   "von": 12,
+   "bilder": 2,
+   "ms": 160,
+   "schleife": true,
+   "folge": [
+    0,
+    1,
+    0,
+    1
+   ]
+  }
+ }
+}
