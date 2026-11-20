@@ -307,7 +307,7 @@ def kueche():
     max_massstab()
 
 
-@raum("buero_50", 640)
+@raum("buero_50", 1280)
 def buero():
     innenraum(tiefe=3.5, hoehe=2.8, wand=(0.88, 0.90, 0.86, 1))
     TUER = (0.55, 0.57, 0.60, 1)
@@ -321,36 +321,36 @@ def buero():
         zyl(label, x, 3.1, 0.16, 0.35, col=HELL)
         kugel(None, x, 3.1, 0.28, 0.65, col=GRUEN)
 
-    # links: Aufzug und Fenster
-    box(None, 0.55, 3.42, 1.05, 0.04, 2.25, col=DUNKEL)
-    box("elevator (exit), two sliding metal doors", 0.3, 3.38, 0.48, 0.04, 2.1, col=(0.70, 0.72, 0.75, 1))
-    box(None, 0.8, 3.38, 0.48, 0.04, 2.1, col=(0.70, 0.72, 0.75, 1))
-    box(None, 1.2, 3.38, 0.08, 0.04, 0.2, z=1.1, col=GELB)
-    box("window: shows the same corridor outside", 1.55, 3.40, 0.7, 0.04, 1.3, z=0.8, col=GLAS)
-    # Rückwand: Reihe gleicher Türen, je eine Pflanze dazwischen
-    tuer(-0.7)
-    tuer(2.5, "row of identical grey doors (with frame and handle)")
-    pflanze(3.1)
-    tuer(4.95)
-    # Farbcode über dem Terminal, drei getrennte Felder mit Symbol
+    # ganz links: Aufzug (Ausgang), Fenster mit Kopierer davor
+    box(None, 0.6, 3.42, 1.05, 0.04, 2.25, col=DUNKEL)
+    box("elevator (exit), two sliding metal doors", 0.35, 3.38, 0.48, 0.04, 2.1, col=(0.70, 0.72, 0.75, 1))
+    box(None, 0.85, 3.38, 0.48, 0.04, 2.1, col=(0.70, 0.72, 0.75, 1))
+    box(None, 1.25, 3.38, 0.08, 0.04, 0.2, z=1.1, col=GELB)
+    box("window: shows the same corridor outside", 2.0, 3.40, 0.8, 0.04, 1.3, z=0.8, col=GLAS)
+    box("photocopier (one)", 2.0, 2.7, 0.9, 0.6, 0.95, col=HELL)
+    box(None, 2.0, 2.7, 0.9, 0.6, 0.08, z=0.95, col=MITTEL)
+    # Mitte: lange Reihe gleicher Türen, je eine Pflanze dazwischen
+    for i, x in enumerate((3.3, 4.7, 7.3, 8.7)):
+        tuer(x, "row of identical grey doors (with frame and handle)" if i == 0 else None)
+        pflanze(x + 0.7)
+    # Farbcode über dem Terminal, ein Wasserspender daneben
     for i, (c, n) in enumerate([(ROT, "circle on red"), (GRUEN, "triangle on green"), (GELB, "square on yellow")]):
-        box(f"{n} (own field)", 3.25 + i * 0.5, 3.40, 0.42, 0.03, 0.42, z=1.65, col=c)
-    for x in (3.5, 4.0):
+        box(f"{n} (own field)", 5.5 + i * 0.5, 3.40, 0.42, 0.03, 0.42, z=1.65, col=c)
+    for x in (5.75, 6.25):
         box(None, x, 3.0, 0.04, 0.04, 0.75, col=DUNKEL)
-    box("small side table + old terminal (green screen)", 3.75, 3.0, 0.7, 0.4, 0.04, z=0.75, col=DUNKEL)
-    box(None, 3.75, 3.05, 0.4, 0.3, 0.35, z=0.79, col=MITTEL)
-    # rechts: Kopierer, ein Wasserspender, Treppe in die Decke
-    box("photocopier (one)", 1.55, 2.7, 0.9, 0.6, 0.95, col=HELL)
-    box(None, 1.55, 2.7, 0.9, 0.6, 0.08, z=0.95, col=MITTEL)
-    box("ONE water cooler (room for a cup on top)", 4.4, 3.0, 0.35, 0.35, 0.95, col=HELL)
-    zyl(None, 4.4, 3.17, 0.15, 0.4, z=0.95, col=GLAS)
+    box("small side table + old terminal (green screen)", 6.0, 3.0, 0.7, 0.4, 0.04, z=0.75, col=DUNKEL)
+    box(None, 6.0, 3.05, 0.4, 0.3, 0.35, z=0.79, col=MITTEL)
+    box("ONE water cooler (room for a cup on top)", 6.65, 3.0, 0.35, 0.35, 0.95, col=HELL)
+    zyl(None, 6.65, 3.17, 0.15, 0.4, z=0.95, col=GLAS)
+    # rechts: noch eine Tür, Treppe an der Wand in die Decke
+    tuer(10.1)
     for i in range(8):
         box("staircase along the wall, going up INTO the ceiling" if i == 7 else None,
-            5.75 + i * 0.16, 2.9, 0.16, 1.0, 0.35 * (i + 1), col=(0.80, 0.80, 0.80, 1))
-    notiz("long clear floor for many clones in depth", 3.0, 1.0, 0.05)
-    figur("Agent Schmidt", 3.6, 1.2, 1.85)
-    figur("clone", 2.0, 2.0, 1.85)
-    figur("clone", 4.4, 2.0, 1.85)
+            10.9 + i * 0.16, 2.9, 0.16, 1.0, 0.35 * (i + 1), col=(0.80, 0.80, 0.80, 1))
+    notiz("long clear floor for a crowd of identical clones", 6.0, 1.0, 0.05)
+    figur("Agent Schmidt", 7.6, 1.2, 1.85)
+    for x, y in ((3.0, 2.0), (4.4, 1.6), (9.4, 1.8), (10.4, 2.2)):
+        figur("clone", x, y, 1.85)
     max_massstab()
 
 
