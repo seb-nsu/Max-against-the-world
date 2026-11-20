@@ -1,0 +1,5 @@
+Sonnenbrille vorher: sichtbar=true klickbar=true, R6a=false R6b=false
+Sonnenbrille nach Klick: Zeilen=W3_TURM_MAX_0440, im Inventar=true, Prop noch sichtbar=false, R6b=false
+SchmidtsAkte vorher: sichtbar=true klickbar=true, R6a=false R6b=false
+SchmidtsAkte nach Klick: Zeilen=W3_TURM_MAX_0460, im Inventar=true, Prop noch sichtbar=false, R6b=false
+Energiezelle (heiß, R10 gelöst) Klick: Zeilen=W3_KERN_MAX_0430, im Inventar=false, W3_ZELLE_KALT=false
