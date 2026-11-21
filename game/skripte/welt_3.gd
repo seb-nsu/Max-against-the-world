@@ -2429,9 +2429,27 @@ func _ente_aus() -> void:
 
 
 # --- Kapsel (W3-10): aussteigen beim Aufwachen, einsteigen vor dem Ebenenwechsel ---
-## Die Bildfolgen „kapsel_aufstehen“ und „kapsel_hinlegen“ zeigen die Kapsel der ersten Fassung (seitlich);
-## zu den Kapseln der zweiten Hintergründe passen nur die freien Bewegungen aussteigen und einsteigen.
-const KAPSEL_FUSS := Vector2(277, 316)
+## Die Bildfolgen „kapsel_aufstehen“ und „kapsel_hinlegen“ im Max-Blatt zeigen die Kapsel der ersten Fassung
+## (seitlich). Für den Kasten der zweiten Hintergründe gibt es w3_kapsel_max_v02.png (tools/grafik_w3/kapsel_v02.py):
+## Deckel offen mit Max liegend, sitzend, auf der rechten Kante, leer. Danach bzw. davor die freie Figur rechts
+## neben dem Kasten mit aussteigen/einsteigen.
+const KAPSEL_FUSS := Vector2(326, 316)            # rechts neben Max' Kasten, wo die Beine über die Kante hängen
+const KAPSEL_BILD := AMBIENTE + "w3_kapsel_max_v02.png"
+const KAPSEL_BILD_FUSS := Vector2(284, 307)       # Bild 87 × 169, oben links (240, 138) auf dem Hintergrund
+const KAPSEL_BILD_BASIS := 292.0                  # hinter Max, der davor steht
+const KAPSEL_HALTEN := [0.7, 0.5, 0.6]             # liegt, sitzt, auf der Kante (Sekunden)
+
+
+func _kapsel_bild() -> Sprite2D:
+	if not ResourceLoader.exists(KAPSEL_BILD) or not is_instance_valid(R.current) or not R.current.has_node("Props"):
+		return null
+	return _bild_sprite(KAPSEL_BILD, 4, KAPSEL_BILD_FUSS, KAPSEL_BILD_BASIS)
+
+
+func _max_hinstellen(mx, pos: Vector2) -> void:
+	mx.position = pos
+	if mx.has_method("sync_buffered_position"):
+		mx.sync_buffered_position()
 
 
 func _kapsel_aussteigen() -> void:
@@ -2442,10 +2460,19 @@ func _kapsel_aussteigen() -> void:
 	if CQFigur.gesten_aus() or not mx.hat_animation("kapsel_aussteigen"):
 		mx.modulate.a = 1.0
 		return
+	var sp := _kapsel_bild()
+	if sp:
+		for i in 3:                       # Deckel auf: liegt, setzt sich auf, rutscht auf die Kante
+			sp.frame = i
+			await mx.get_tree().create_timer(KAPSEL_HALTEN[i]).timeout
+		sp.frame = 3                      # leer, Max steht daneben in der Hocke
+		_max_hinstellen(mx, KAPSEL_FUSS)
 	mx.schauen_zu(mx.position.x + 10.0)
 	mx.geste("kapsel_aussteigen", false)
 	mx.modulate.a = 1.0
 	await mx.get_tree().create_timer(0.85).timeout
+	if is_instance_valid(sp):
+		sp.queue_free()                   # Deckel zu: der Hintergrund zeigt den geschlossenen Kasten
 
 
 func _kapsel_einsteigen() -> void:
@@ -2454,8 +2481,19 @@ func _kapsel_einsteigen() -> void:
 		return
 	if mx.position.distance_to(KAPSEL_FUSS) > 6.0:
 		await mx.walk_to(KAPSEL_FUSS)
+	var sp := _kapsel_bild()
+	if sp:
+		sp.frame = 3                      # Deckel geht auf, bevor er einsteigt
 	mx.schauen_zu(mx.position.x + 10.0)
 	await mx.geste("kapsel_einsteigen", true, CQFigur.GESTE_HALTEN)
+	if sp:
+		mx.modulate.a = 0.0
+		mx.geste_ende()
+		for i in [2, 1, 0]:               # auf die Kante, hineinsetzen, hinlegen
+			sp.frame = i
+			await mx.get_tree().create_timer(KAPSEL_HALTEN[i]).timeout
+		sp.queue_free()                   # Deckel zu
+		return
 	var t := mx.create_tween()
 	t.tween_property(mx, "modulate:a", 0.0, 0.3)
 	await t.finished
