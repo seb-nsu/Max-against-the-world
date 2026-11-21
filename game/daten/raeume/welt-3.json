@@ -5104,7 +5104,8 @@
       "zeile": "W3_TURM_MAX_0460",
       "sprecher": "MAX",
       "blasen": [
-       "W3_TURM_MAX_0460"
+       "W3_TURM_MAX_0460",
+       "W3_TURM_MAX_0460_2"
       ]
      }
     }
@@ -6371,8 +6372,7 @@
        "zeile": "W3_KERN_MAX_0550",
        "sprecher": "MAX",
        "blasen": [
-        "W3_KERN_MAX_0550",
-        "W3_KERN_MAX_0550_2"
+        "W3_KERN_MAX_0550"
        ]
       },
       {
@@ -7384,8 +7384,7 @@
      "zeile": "W3_EING_PIX_1010",
      "sprecher": "PIX",
      "blasen": [
-      "W3_EING_PIX_1010",
-      "W3_EING_PIX_1010_2"
+      "W3_EING_PIX_1010"
      ],
      "raum": "laboreingang"
     }
@@ -9758,7 +9757,8 @@
        "zeile": "W3_BAS_KAL_0340",
        "sprecher": "KAL",
        "blasen": [
-        "W3_BAS_KAL_0340"
+        "W3_BAS_KAL_0340",
+        "W3_BAS_KAL_0340_2"
        ],
        "regie": ""
       },
@@ -9953,7 +9953,8 @@
        "zeile": "W3_EING_HAU_0080",
        "sprecher": "HAU",
        "blasen": [
-        "W3_EING_HAU_0080"
+        "W3_EING_HAU_0080",
+        "W3_EING_HAU_0080_2"
        ],
        "regie": ""
       },
@@ -9978,7 +9979,8 @@
        "zeile": "W3_EING_HAU_0110",
        "sprecher": "HAU",
        "blasen": [
-        "W3_EING_HAU_0110"
+        "W3_EING_HAU_0110",
+        "W3_EING_HAU_0110_2"
        ],
        "regie": ""
       },

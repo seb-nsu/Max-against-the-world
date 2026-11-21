@@ -3716,7 +3716,7 @@ W2_ZURU_PIX_0100_2,"Just like ferries. And ovens. And, if I may say so, tin open
 W3_ABS_DEC_0030,I've noted everything. You too? Good. Then we're two suspiciously thorough humans.
 W3_ABS_DEC_0040,"Case closed. Well, not the case. Our conversation. The case stays open. Cases always stay open."
 W3_ABS_HAU_0130,"Servus, lad. That's all I have in my programme. Servus is my hello, my goodbye and my conversation."
-W3_ABS_HAU_0140,I've told you everything on my sheet. The rest is mopping.
+W3_ABS_HAU_0140,"I've told you everything on my sheet, lad, if you please. The rest is mopping."
 W3_ABS_KAL_0110,I've explained everything. Twice. Once correctly. Guess which.
 W3_ABS_KAL_0120,Not now. I'm sorting my cables. By feel.
 W3_ABS_MOR_0010,I can only show you the door. You have to walk through it yourself. I've also shown you the door twice already.
@@ -3727,14 +3727,14 @@ W3_ABS_SCH_0090,"I have told you everything, Mr Max, twice in fact, the second t
 W3_ABS_SCH_0100,"Further information only with a form, the form is only available with information, good day"
 W3_ABS_VIE_0050,We've talked about everything. Four times. More would be rude.
 W3_ABS_VIE_0060,"Order something or go. Four seconds. Three. Two. Fine, you can stay. But in silence."
-W3_ANK_MAX_0020,"Okay, wet. That already answers half the question of where we are. The other half is probably ""why""."
+W3_ANK_MAX_0020,"Great, wet. No idea where we are. And why, I'd rather not ask, or someone might actually tell me."
 W3_ANK_MAX_0040,"Neon signs, endless rain and cars stuck in traffic above our heads. That's what every other loading screen I own looks like."
 W3_ANK_MAX_0060,Grandpa wants an Eternal Energy Cell from the core of some AI. He said it like he was asking for rolls from the bakery.
 W3_ANK_MAX_0080,"Let's get out of the rain first. There's a canopy over there, and under it a guy in a hat who keeps staring at us."
 W3_ANK_MAX_0100,"There's a pot steaming over there, and right at the end of the street a door that looks like a vault. Three ways and zero signal."
 W3_ANK_NAR_0010,"A swirl, a rush of noise, then a splash. Max is sitting in a puddle, Pixel on his head."
 W3_ANK_PIX_0030,"I am sitting, in case it escaped you, on the highest point in this world, and it is damp."
-W3_ANK_PIX_0030_2,That tells you everything you need to know about a world. I have sat on drier heads.
+W3_ANK_PIX_0030_2,"I have sat on drier heads, yours in fact, only yesterday."
 W3_ANK_PIX_0050,"It smells of noodles, wet concrete and the future."
 W3_ANK_PIX_0050_2,"The future, in case you are interested, smells like a fridge nobody has opened for weeks."
 W3_ANK_PIX_0070,"I, on the other hand, want a towel, a radiator and an explanation of why I am here at all."
@@ -3771,10 +3771,10 @@ W3_APO_MAX_0330,"The machine hums and blinks red, blue, red, blue. It's waiting 
 W3_APO_MAX_0410,"Two lozenges, a blue one and a red one, and I get to choose. No ""play something random"" button. A real choice."
 W3_APO_MAX_0430,Why?
 W3_APO_MAX_0460,The blue one.
-W3_APO_MAX_0570,That was … comfortable. Really comfortable. That's why I'm not taking it.
+W3_APO_MAX_0570,That was … really cosy. I nearly stayed lying there. Not that one.
 W3_APO_MAX_0580,The red one.
 W3_APO_MAX_0600,I don't know what's over there. The sofa I know by heart.
-W3_APO_MOR_0300,"I wait in alleys. That's what I do. I used to have a leather jacket, but the cardigan is warmer."
+W3_APO_MOR_0300,"I wait in alleys, it's what I do for a living. Used to be in a leather jacket. The cardigan's warmer."
 W3_APO_MOR_0420,Before you choose: take these. A sample from an old lady who knows everything in advance.
 W3_APO_MOR_0420_2,She said you'd need them. She also said you'd ask why.
 W3_APO_MOR_0440,She said you'd ask that. That's all she said.
@@ -3782,14 +3782,14 @@ W3_APO_MOR_0610,Then let yourself be surprised. And if an alarm clock rings over
 W3_APO_PIX_0020,"It has a lens bigger than my head, and I feel watched."
 W3_APO_PIX_0020_2,"That is unusual. Given my importance, I am normally watched far too rarely."
 W3_APO_PIX_0170,"I do not repeat myself, I am an original."
-W3_APO_PIX_0170_2,"But I can pretend not to be. For tuna. For a lot of tuna, just so we are clear."
+W3_APO_PIX_0170_2,But I can pretend not to be. For tuna.
 W3_APO_PIX_0180,"Walking. With dignity. Tail up, eyes forward. A cat with a goal, and the goal is the end of this alley."
 W3_APO_PIX_0190,"And once more. Same paw first, same contempt in my eyes. This time on purpose, though, and it shows."
 W3_APO_PIX_0200,I hope that was worth it. I just did the same thing twice in a row.
 W3_APO_PIX_0200_2,"With humans that is called work, and you get paid for it. I shall take fish."
 W3_APO_PIX_0210,"A third time? No. Two repeats are a trick, three are a job."
 W3_APO_PIX_0230,"I see myself in the lens: wet, striped, with a paw like the slap I still owe you. I am ready."
-W3_APO_PIX_0240,"Boxes, and behind them more boxes. It is the principle of boxes."
+W3_APO_PIX_0240,"Boxes, and behind them more boxes. Boxes never come alone."
 W3_APO_PIX_0240_2,I would climb into every single one if I were not busy right now. Being wet.
 W3_APO_PIX_0265,"The pipe drips into a tin. The tin is empty, I checked. Twice."
 W3_APO_PIX_0265_2,The second time I still had hope. That was a mistake I will not repeat today.
@@ -3805,24 +3805,26 @@ W3_APO_PIX_0910,"The machine is waiting, and I am waiting. Only the rain is not 
 W3_APO_PIX_0920,"If you stare at those lozenges any longer, the machine will choose for you. It would pick beige."
 W3_APO_PIX_1010,"I sit in front of the lens. It scans me. It says: ""No symptom. Just attitude."" At last a machine understands me."
 W3_BAS_KAL_0040,"Welcome back to the real world! Kalle. Cable Kalle. Cables, consoles, cups of tea. The cat's been talking the whole time."
-W3_BAS_KAL_0110,Haha! Yes! It always does that. The simulation translates everything.
-W3_BAS_KAL_0110_2,Whatever you take with you arrives as whatever it would be on the other side.
-W3_BAS_KAL_0120,"Over there, biscuits for people; here, biscuits for … well. The simulation has an opinion about you."
-W3_BAS_KAL_0120_2,Works the other way round too. Everything's reversible. Except coffee.
-W3_BAS_KAL_0150,The terminal next to your pod takes you back. You come out at the alarm clock that woke you last. Headache included.
-W3_BAS_KAL_0160,And I'll put the cat on the line. Then you'll hear him over there from every radio. You'll regret it. Everyone regrets it.
-W3_BAS_KAL_0320,"Resistance. That is: we sit in a wreck, eat noodles and wear sunglasses at night. It's more attitude than plan."
-W3_BAS_KAL_0340,Morphaeus carried you in. And the cat. The cat complained. Morphaeus stayed silent. Both were very good at it.
-W3_BAS_KAL_0360,The lab is a sealed-off level of the simulation. Nothing that rings will get you there.
-W3_BAS_KAL_0360_2,Only a data port behind the armoured door at the end of the street.
+W3_BAS_KAL_0110,"Haha! Yes! It always does that, I mean, the simulation, it translates everything."
+W3_BAS_KAL_0110_2,"Whatever you take with you arrives as whatever it would be on the other side. Roughly. No, exactly."
+W3_BAS_KAL_0120,"Over there, biscuits for people; here, biscuits for … well. The simulation isn't that keen on you."
+W3_BAS_KAL_0120_2,"Works the other way round too, I mean, everything's reversible. Almost everything. Not coffee."
+W3_BAS_KAL_0150,"The terminal next to your pod takes you back, I mean, over there."
+W3_BAS_KAL_0150_2,You come out at the alarm clock that woke you last. Headache included.
+W3_BAS_KAL_0160,"And I'll put the cat on the line, wait, there. Then you'll hear him over there from every radio. You'll regret it, I mean, everyone does."
+W3_BAS_KAL_0320,"Resistance. Well, we sit in the wreck, eat noodles, wear sunglasses, at night too, and, er, the plan's coming."
+W3_BAS_KAL_0340,"Morphaeus carried you in. And the cat, well, he sort of held him at arm's length."
+W3_BAS_KAL_0340_2,"The cat complained, Morphaeus said nothing. Both were very good at it."
+W3_BAS_KAL_0360,"The lab is, well, a sealed-off level of the simulation. Nothing that rings will get you there."
+W3_BAS_KAL_0360_2,"Only a data port, behind the armoured door, right at the end of the street."
 W3_BAS_KAL_0370,"If you get the door open, I'll run a line from there to your pod."
-W3_BAS_KAL_0370_2,Then you lie down and wake up in the lab. Sounds easy. It's cables. Cables are never easy.
-W3_BAS_KAL_0390,She used to be a food mixer. Then she made rules. Three of them. She sticks to them.
-W3_BAS_KAL_0390_2,"Always. That's her strength and her problem. If you know all three, you can … well. Confuse her."
+W3_BAS_KAL_0370_2,"Then you lie down and wake up in the lab. Sounds easy, but it's cables, and cables are never, I mean never easy."
+W3_BAS_KAL_0390,"She used to be a food mixer, honestly. Made up three rules and sticks to them stubbornly, I mean really stubbornly."
+W3_BAS_KAL_0390_2,"If you know all three, you can … well. Mess her up."
 W3_BAS_KAL_0410,"Fluently. Well, fluently with a table. Without the table … I lost the table."
 W3_BAS_KAL_0410_2,"Somewhere around here. Piepsi had a copy. Piepsi is standing over there, rusting."
 W3_BAS_KAL_0420,Fluently. I never needed the table. I only sorted it to be safe. Three times.
-W3_BAS_KAL_0480,Dream of something clean. Everything's clean over there. That's the creepy part.
+W3_BAS_KAL_0480,"Dream of something clean. I mean, everything's clean over there anyway. That's the creepy part."
 W3_BAS_KAL_0760,"Don't touch. It hums when it's happy. If it stops humming, we all go outside. Fast."
 W3_BAS_KAL_1350,We call that a rest phase. Sounds more like a plan.
 W3_BAS_KAL_1370,Outside under his cardboard sign. Explaining to people that they're asleep. Most of them believe him and yawn while they do.
@@ -3830,7 +3832,7 @@ W3_BAS_KAL_1390,"Nobody knows exactly. They're over there, nicely spread out so 
 W3_BAS_MAX_0030,"Where … A wreck full of pods and cables, and a guy with a headset. I've ended up in some kind of making-of."
 W3_BAS_MAX_0060,Hang on. I had biscuits. In my pocket. From the old lady.
 W3_BAS_MAX_0100,They were biscuits. I swear they were biscuits. With cinnamon.
-W3_BAS_MAX_0130,So everything I take with me turns into whatever it would be over there. The simulation basically translates my pockets.
+W3_BAS_MAX_0130,"Hang on. If I pocket something over there, it's something else here? Then I don't want to know what happens to my phone."
 W3_BAS_MAX_0190,Thanks. I just found dog biscuits. My appetite is on another level.
 W3_BAS_MAX_0310,What are you actually doing here?
 W3_BAS_MAX_0330,Why is my pod here?
@@ -3850,7 +3852,7 @@ W3_BAS_MAX_0585,A drop runs down the glass. It takes forever. Here even the rain
 W3_BAS_MAX_0590,Too high for me. Not too high for someone with claws and no respect for furniture.
 W3_BAS_MAX_0620,"A ventilation shaft. Open. Cat-sized. That's an invitation, and it isn't addressed to me."
 W3_BAS_MAX_0660,"A fuse box. Fuses with stickers: ""Pod 1"", ""Pod 2"", ""Tea"". Kalle has priorities."
-W3_BAS_MAX_0665,The tea fuse is the only one secured with tape. Kalle knows what matters.
+W3_BAS_MAX_0665,"The tea fuse is taped down extra. So nobody takes it out. Me, for example."
 W3_BAS_MAX_0670,"If I cut my own power while I'm standing here, nothing happens. If I'm over there, it turns night. That's a job for Pixel."
 W3_BAS_MAX_0690,"A patch panel with three sockets. Red, green, yellow. Each with a symbol."
 W3_BAS_MAX_0690_2,"My pod is plugged into it. Three cables, and I'm hanging on one of them."
@@ -3859,20 +3861,20 @@ W3_BAS_MAX_0700,I'm not re-plugging myself. That's about as smart as soldering y
 W3_BAS_MAX_0710,Pizza boxes. A stack up to the ceiling. The resistance lives on pizza and noodles. I could be happy here.
 W3_BAS_MAX_0730,"A towel on a hook, clean and dry. In this wreck that's almost suspicious."
 W3_BAS_MAX_0735,"The towel says ""Don't Panic"". Embroidered. The most reassuring thing in the whole base."
-W3_BAS_MAX_0750,An old mainframe with tape reels. It's humming a nursery rhyme. That's either sweet or very worrying.
+W3_BAS_MAX_0750,"An old mainframe with tape reels, and it's humming a nursery rhyme. I'll just take a step back."
 W3_BAS_MAX_0755,It's humming the nursery rhyme slower and slower.
 W3_BAS_MAX_0770,"The wreck's control desk. A hundred switches, no screen. Flying used to be handicraft."
 W3_BAS_MAX_0775,"One switch is labelled ""Please don't"". Another says ""Really don't"". The pilots were careful people."
 W3_BAS_MAX_0780,A table with a mug at the edge. Black coffee so thick it holds the spoon in place. The mug is right at the edge. Right at it.
-W3_BAS_MAX_0785,The mug wobbles when someone walks past. It stands there like a promise to fall off any second.
+W3_BAS_MAX_0785,The mug wobbles every time someone walks past. It won't stay up there much longer.
 W3_BAS_MAX_0788,"Kalle's mug. Black coffee, right on the edge of the table. I hold my breath every time I walk past."
 W3_BAS_MAX_0800,"An old cleaning robot with a hat, in the corner, brown with rust. He looks like he used to have opinions."
 W3_BAS_MAX_0805,There's a dent in his hat. And rust on his wheels. He's waiting for something. Maybe for someone with oil.
 W3_BAS_MAX_0810,I give him a nudge. He tips over. I stand him back up. We're even.
 W3_BAS_MAX_0820,"A poster: a food mixer in a flowery apron with the line ""I know what's good for you."" This is going to be embarrassing. For her."
 W3_BAS_MAX_0825,The food mixer on the poster is smiling. Food mixers shouldn't smile. That's a rule.
-W3_BAS_MAX_0840,"Two rebels. Leather jackets, sunglasses, noodles. It's night, it's indoors, and they still can't see a thing. On principle."
-W3_BAS_MAX_0845,One of them has had a noodle in the corner of his mouth for minutes and is acting like nothing's wrong. Being cool has its price.
+W3_BAS_MAX_0840,"Two rebels in leather jackets eating noodles, in sunglasses, at night, indoors. How they find their noodles is a mystery to me."
+W3_BAS_MAX_0845,One of them has had a noodle in the corner of his mouth for minutes and is acting like nothing's wrong. I don't dare tell him.
 W3_BAS_MAX_0870,Dog biscuits. Bone-shaped. Over there they were biscuits. I saw the transformation and I still don't believe it.
 W3_BAS_MAX_0875,Dog biscuits. Still. I was hoping they'd be biscuits again the second time I looked.
 W3_BAS_MAX_0890,"Over there a green code key, here a white plastic card from Mr Four."
@@ -3890,7 +3892,7 @@ W3_BAS_NAR_0010,Hiss. A glass lid lifts. Max blinks into the light. A wet cat is
 W3_BAS_NAR_0070,Max pulls out the bag. Inside: bone-shaped dog biscuits.
 W3_BAS_PIX_0020,"You slept, and I kept watch. That is the wrong way round, and I would like it put on record."
 W3_BAS_PIX_0020_2,"With the time, and with a note that I was wet while doing it."
-W3_BAS_PIX_0050,"I expressed myself, Kalle. Whoever talks wants something. Whoever expresses himself is already right."
+W3_BAS_PIX_0050,"I expressed myself, Kalle. I want nothing. I am right, and I am merely informing you."
 W3_BAS_PIX_0080,…
 W3_BAS_PIX_0090,Those are dog biscuits.
 W3_BAS_PIX_0090_2,In your pocket.
@@ -3898,7 +3900,7 @@ W3_BAS_PIX_0090_3,Near me.
 W3_BAS_PIX_0090_4,I have ended friendships for less.
 W3_BAS_PIX_0140,"Then go back, and right now."
 W3_BAS_PIX_0140_2,And turn that thing back into something I can ignore with dignity.
-W3_BAS_PIX_0170,"In every radio, in every line. At last my voice gets the reach it deserves. I shall use it responsibly. Mostly."
+W3_BAS_PIX_0170,"In every radio, in every line. At last my voice has the reach it deserves. I already have a list of what everyone needs to hear."
 W3_BAS_PIX_0525,"Your body lies there smiling, and I sit on the lid keeping watch."
 W3_BAS_PIX_0525_2,That is work. Unpaid work. I only mention it so that it has been mentioned once.
 W3_BAS_PIX_0530,"He is lying there, smiling and drooling slightly. I took a photo of him."
@@ -3907,7 +3909,7 @@ W3_BAS_PIX_0540,Shake. With both paws. He will wake up and pretend he woke up on
 W3_BAS_PIX_0600,"Window open. Snow falls on the pod, and over there it is now snowing somewhere it should not."
 W3_BAS_PIX_0600_2,I am the weather. I have always wanted to be.
 W3_BAS_PIX_0610,"Window shut. I am wet, as always."
-W3_BAS_PIX_0610_2,"If this world had a motto, it would be this: Pixel is wet. Someone should write it over the entrance."
+W3_BAS_PIX_0610_2,"If this world had a motto, it would be this: Pixel is wet."
 W3_BAS_PIX_0625,The shaft is calling me. I can hear it clearly. It says: crawl.
 W3_BAS_PIX_0625_2,I say: later. A professional does not let every hole in the wall order him about.
 W3_BAS_PIX_0630,"A shaft, narrow, dark and made of metal. Any cat would go in there."
@@ -3923,7 +3925,7 @@ W3_BAS_PIX_0740_2,"It is a very simple calculation, and even Mr Four would under
 W3_BAS_PIX_0790,A cup. On the edge of a table.
 W3_BAS_PIX_0790_2,"I can feel my ancestors watching me, generation after generation, and they are all nodding."
 W3_BAS_PIX_0830,"She underlined ""good for you"". Twice."
-W3_BAS_PIX_0830_2,Anyone who underlines something twice needs to. I never underline. I repeat myself loudly.
+W3_BAS_PIX_0830_2,"Only someone afraid nobody is listening does that. I prefer to say it three times, loudly."
 W3_BAS_PIX_0880,Do not even try.
 W3_BAS_PIX_0880_2,I know what that is. I know who that is for. And I know where you sleep.
 W3_BAS_PIX_0910,A biscuit with a note inside.
@@ -3935,24 +3937,24 @@ W3_BAS_PIX_1010_2,He smells of tea and panic. I sit on his laptop. He keeps typi
 W3_BAS_PIX_1020,"She eats noodles in sunglasses, at night, indoors. I sit next to her and stare at the box. She gives me a noodle. One. Out of four."
 W3_BAS_PIX_1030,Tool belt. I climb up it. He says nothing. The sunglasses say nothing either. We understand each other.
 W3_BAS_PIX_1040,He beeps. I purr. We talk for a minute. He has opinions about Kalle that I will not repeat. But they are correct.
-W3_BAS_PIX_1050,Rust. Expectation of coffee. A hat that smells of decades. There is someone grumpy in there. I like him already.
+W3_BAS_PIX_1050,"He smells of rust and a little as if he has been waiting years for coffee. Grumpy, I would say. I like him already."
 W3_BAS_PIX_1060,"The pod smells of you. Of hoodie, rain and the rest of the soup. I lie down on the lid. Warm. Good. Take your time over there."
 W3_BAS_PIX_1070,"Keyboard. Warm. Exactly as wide as me. It was built for me, and someone forgot to tell me."
 W3_BAS_PIX_1080,"Pizza box, empty. The smell is still there. A box that smells of food and has not got any. Like a promise from Max."
 W3_BAS_PIX_1090,"A towel, dry, cotton. I wrap myself up and do not come out again."
 W3_BAS_PIX_1090_2,"Call me when there is tuna. Or do not, then I shall just stay in here."
 W3_BAS_PIX_1100,"It hums, I purr, we harmonise. Then it hums louder."
-W3_BAS_PIX_1100_2,It does not want to share the stage. I understand that better than I would like.
+W3_BAS_PIX_1100_2,"It wants the stage to itself. I cannot blame it, I want it too."
 W3_BAS_PIX_1110,Cold coffee. Thick. Smells like a week. I sniff it and I am awake for three days.
-W3_BAS_PIX_1120,"Metal, draught, darkness. The shaft smells of adventure. I hate adventure. I am going in anyway, because it is narrow."
+W3_BAS_PIX_1120,"The shaft smells of metal and draught, so of adventure, and I hate adventure. I am going in anyway, because it is narrow."
 W3_BAS_PIX_1130,A hundred switches. All smell of old fingers. None of fish. This ship never flew anywhere that had fish.
 W3_BAS_PIX_1140,The poster smells of printer's ink and little flowers. I scratch the apron. She deserved it. As a precaution.
 W3_BAS_PIX_1150,Bone-shaped. For dogs. I sniff once. I will never be able to make up for that one time.
-W3_BAS_PIX_1160,A cookie with a note. I lick the cookie. The note tastes better. That says everything about fortune cookies.
+W3_BAS_PIX_1160,"A cookie with a note. I lick the cookie, then the note, and the note tastes better. Who bakes something like that?"
 W3_BAS_PIX_1170,The cell is cold and smells of metal. I am not lying down on it. I can say nothing worse about an object.
 W3_BAS_PIX_1310,"Kalle types, the rebels eat, the mainframe hums."
 W3_BAS_PIX_1310_2,And you stand there like a loading bar that decided to have a rest at ninety-nine percent.
-W3_BAS_PIX_1320,Your pod is free. You could lie down. I am not saying it as a reproach. I am saying it as an expert.
+W3_BAS_PIX_1320,"Your pod is free. You could lie down. I would show you how, but you have watched me do it often enough."
 W3_BAS_PIX_1330,You held your back while walking. Twice.
 W3_BAS_PIX_1330_2,"I am counting, the way the man in the hat counts the rain. Somebody has to."
 W3_BAS_PIX_1340,"I like this resistance. It sleeps a lot, eats regularly and asks no questions."
@@ -3962,28 +3964,32 @@ W3_BAS_PIX_1400_2,"I know it from Max. Only nothing rusts on him, that is the wh
 W3_BAS_REB_0180,Noodles? From Mr Four. There are four.
 W3_BAS_REB_0860,The cat explained to us how to sleep properly. For forty minutes. We listened. We had no choice.
 W3_BAS_REL_0850,"We are the resistance. We resist. For example, the urge to take off our sunglasses."
-W3_EING_HAU_0010,"Servus, lad. Please don't step on the floor, it's freshly mopped. Everything here is fresh. I've been mopping for nineteen years."
-W3_EING_HAU_0030,"Nobody gets through there, lad. Except with a card. And except Sahra Konner. I'm looking for her. Have you seen her?"
-W3_EING_HAU_0050,"I don't know. It's on my job sheet. ""Find Sahra Konner."""
-W3_EING_HAU_0050_2,"Underneath: ""Mop floor."" I've done the second item."
-W3_EING_HAU_0080,My model series. They built a great many of us. All the same. None of us special. I'm the one with the mop. That is: all of us.
-W3_EING_HAU_0110,"Not without a card, lad. With a card, gladly. I'll even hold the door. I hold all doors. That's the third item on my sheet."
-W3_EING_HAU_0130,My joints. Nineteen years of mopping. No oil.
-W3_EING_HAU_0130_2,The oil can in my breast pocket has been empty for as long as I can remember. My memory goes back nineteen years.
+W3_EING_HAU_0010,"Servus, lad, at your service. Please keep off the floor, it's freshly mopped. Everything here is fresh. I've mopped for nineteen years."
+W3_EING_HAU_0030,"Nobody gets through there, I'm afraid, lad, I do beg your pardon."
+W3_EING_HAU_0030_2,"Except with a card, mind, and except Miss Sahra Konner. I'm looking for her. You haven't seen her, by any chance?"
+W3_EING_HAU_0050,"I'm afraid I don't know, lad. It's just what my job sheet says: ""Find Sahra Konner."""
+W3_EING_HAU_0050_2,"And underneath: ""Mop floor."" I've done the second item, if you please."
+W3_EING_HAU_0080,"My model series, lad. They built a great many of us, all the same and none of us special, I must honestly say."
+W3_EING_HAU_0080_2,I'm the one with the mop. That is: all of us.
+W3_EING_HAU_0110,"Not without a card, I'm afraid, lad. With a card, most gladly, I'll even hold the door for you."
+W3_EING_HAU_0110_2,I hold all doors. That's the third item on my sheet.
+W3_EING_HAU_0130,"My joints, I do beg your pardon. Nineteen years of mopping and not a drop of oil."
+W3_EING_HAU_0130_2,The oil can in my breast pocket has been empty for as long as I can remember. And my memory goes back nineteen years.
 W3_EING_HAU_0150,"Servus, lad. I'll be back. That is: I'm staying here. But it sounds better that way."
 W3_EING_HAU_0170,I'm a caretaker. I'm only looking for dirt.
 W3_EING_HAU_0200,"Forty-seven. Forty-seven Sahra Konners. Lad, this is the happiest day of my working life."
-W3_EING_HAU_0210,"I'll visit them all. One after another. Politely. I'll ring, I'll ask, I'll mop the entrance. Every one of them gets a clean entrance."
+W3_EING_HAU_0210,"I'll visit them all, one after another, very politely, as is proper."
+W3_EING_HAU_0210_2,"I'll ring, I'll ask, and every one of them gets a clean entrance."
 W3_EING_HAU_0220,"Servus, all. I'll be back. This time it's true."
 W3_EING_HAU_0250,… Lad. This is … I can't hear anything. I can't hear any squeaking. For the first time in nineteen years I can't hear myself.
-W3_EING_HAU_0260,"You are my friend. That's a new item on the sheet. I'll write it right at the top. If you need me, lad: I'll come."
-W3_EING_HAU_0360,"Lad, even with a card: Sahra Konner first. The sheet is clear. The sheet is my life."
+W3_EING_HAU_0260,"Lad, I'm putting you on my sheet. As a friend. Right at the top, even before the mopping. And if you need me, I'll come. At your service."
+W3_EING_HAU_0360,"Begging your pardon, lad, but even with a card: Sahra Konner first. That's what my sheet says."
 W3_EING_HAU_0540,A cookie with a note. Does it say Sahra Konner? No? Then I'll wipe up the crumbs before they fall.
 W3_EING_HAU_1060,"One, find Sahra Konner. Two, mop. Three, hold doors."
 W3_EING_HAU_1060_2,I've been on item two for nineteen years. I'm saving item one for later.
-W3_EING_HAU_1080,"They all say that, lad. Then they leave again."
+W3_EING_HAU_1080,"They all say that, lad, no offence. And then off they go again."
 W3_EING_HAU_1086,"That's my line, lad. But I'm happy to lend it to you. Bring it back clean."
-W3_EING_KAL_0380,"Here! Brought the drum. A line from here to your pod. Eighty metres of cable, two knots, one hope."
+W3_EING_KAL_0380,"Here! Got the drum, eighty metres, well, seventy-eight, two knots, they'll hold, I think. Reaches your pod."
 W3_EING_KAL_0390,"Done. On the way I'll tap into the AI's speaker, then you'll hear the cat in there too."
 W3_EING_KAL_0390_2,I'm not doing you a favour. I know.
 W3_EING_MAX_0020,Hi. I need to get through there.
@@ -3995,16 +4001,16 @@ W3_EING_MAX_0140,I'll be off then.
 W3_EING_MAX_0160,This is not the boy you're looking for.
 W3_EING_MAX_0190,"Here. Sahra Konner. Forty-seven of them, with addresses."
 W3_EING_MAX_0240,"Here, for your joints: olive oil. From a world where people thought sport was a good idea."
-W3_EING_MAX_0280,"Without oil he just keeps saying cheerio and squeaking. I feel sorry for him, as far as you can feel sorry for a robot."
-W3_EING_MAX_0285,He squeaks with every wipe. It sounds like a door quietly asking for help.
+W3_EING_MAX_0280,"Without oil he squeaks with every Servus, and he doesn't even notice. I've stopped listening. No, I haven't."
+W3_EING_MAX_0285,He squeaks with every wipe. It gives me goosebumps right down to my teeth.
 W3_EING_MAX_0310,A round armoured door in the concrete. Looks like the entrance to a vault where someone keeps their favourite recipe.
 W3_EING_MAX_0315,"I knock. It sounds like knocking on a mountain, and the mountain isn't opening."
 W3_EING_MAX_0320,"Shut, of course. I knock. It echoes. Nothing else."
 W3_EING_MAX_0330,"A card reader with a little red light. Red means here what it means everywhere: no, but friendly."
 W3_EING_MAX_0335,The light glows red. It's said no for so long it would probably have to look up yes.
-W3_EING_MAX_0340,"I hold up my hand with the stamp. ""Human, provisional."" The reader thinks. Red. It wanted a card, not a biography."
+W3_EING_MAX_0340,"I hold up my hand with the stamp. ""Human, provisional."" The reader thinks. Red. It obviously wants a proper card."
 W3_EING_MAX_0350,Card in. Green. The door rolls aside like a very slow curtain.
-W3_EING_MAX_0370,"Behind it: no lab. A wall of glowing sockets and a thick cable. The lab isn't here. The lab is ""on the line""."
+W3_EING_MAX_0370,"There's no lab behind it, just a wall of glowing sockets and a thick cable. I guess I can only get into the lab down the line."
 W3_EING_MAX_0375,"The sockets glow in rhythm, as if the lab were breathing through the cables. I have to get in there, so somehow into the cables."
 W3_EING_MAX_0377,"A port the size of a fridge. Every socket has a label, and every label says ""Lab"". Very helpful."
 W3_EING_MAX_0410,"Now back to the pod, lie down, wake up in the lab. My CV is getting weirder and weirder."
@@ -4016,7 +4022,7 @@ W3_EING_MAX_0470,"Test subject 12: ""Asked about the cake. Was reset."""
 W3_EING_MAX_0470_2,"Test subject 33: ""Did not ask about the cake. Was reset."" Fair."
 W3_EING_MAX_0480,"Yellow and black stripes on the floor. They say: caution. Caution of what, they don't say, and that's called design."
 W3_EING_MAX_0485,I stand on a yellow stripe. Nothing happens. Then on a black one. Nothing either. Pretty disappointing for so much warning.
-W3_EING_MAX_0490,"A lamp on the ceiling, dripping next to it. Someone mopped here for years, and it's still dripping. That's called Sisyphus with a mop."
+W3_EING_MAX_0490,"A lamp on the ceiling, and next to it, a drip. The robot's been mopping here for years, and it's still dripping. I'd totally lose it."
 W3_EING_MAX_0495,"The drop lands right next to the bucket, every single time. I'm sure it does it on purpose."
 W3_EING_MAX_0500,"A passage under the city. Neon behind me, concrete ahead. The city has a basement, and the basement has a door."
 W3_EING_MAX_0505,Something is humming somewhere at the back. Big and patient. Like a fridge that rules the world.
@@ -4032,9 +4038,9 @@ W3_EING_MAX_0580,"Back to the street. Behind me, mopping. Ahead of me, rain."
 W3_EING_MAX_1050,And what are items one and two?
 W3_EING_MAX_1070,Nineteen years without oil. Let me see what I've got in my bag.
 W3_EING_MAX_1083,I'll be back. Really.
-W3_EING_PIX_0060,A robot who spent nineteen years on the second item because the first was too hard. I see myself in him.
-W3_EING_PIX_0090,"In German, 08/15 means: standard. Nothing special. Run of the mill. People used to say it about things that did exactly what you expected."
-W3_EING_PIX_0090_2,He wears it on his chest. That is either very sad or very honest.
+W3_EING_PIX_0060,"A robot who spent nineteen years on the second item because the first was too hard. That is how I work too, only with more sleep."
+W3_EING_PIX_0090,"In German, 08/15 means standard, run of the mill. It was said of things that did exactly what was expected of them, and nothing else."
+W3_EING_PIX_0090_2,And he wears it on his chest like a medal.
 W3_EING_PIX_0180,You just waved your hand and lied to a robot. I saw it.
 W3_EING_PIX_0180_2,"I shall see it again, in my dreams, and I shall laugh every time."
 W3_EING_PIX_0185,He is still squeaking. And you have got oil in your bag.
@@ -4047,18 +4053,17 @@ W3_EING_PIX_0430,"Water in a bucket, on the floor, drinkable."
 W3_EING_PIX_0430_2,"That is the first civilised facility in this world, and of all things a robot set it up."
 W3_EING_PIX_0460,"Test subject 47: ""Very good, but asked for too little cake."""
 W3_EING_PIX_0525,"He mops in circles, and I walk in circles before I lie down."
-W3_EING_PIX_0525_2,We understand each other without exchanging a word. That is the highest form of friendship.
+W3_EING_PIX_0525_2,"We have not exchanged a word, and still I like him better than most who talk."
 W3_EING_PIX_0910,"He mops in circles. You stand in a circle. Only one of you gets paid for it. Neither, I think."
 W3_EING_PIX_0920,The door is round. You are square. That will not work as long as you only look at it.
-W3_EING_PIX_1010,"Tin, smell of oil, damp mop. He bows to me. I allow it."
-W3_EING_PIX_1010_2,First time in this world that someone understands rank.
+W3_EING_PIX_1010,"He smells of tin and damp mop, and he bows to me. At last someone in this world who knows how to treat me."
 W3_EING_PIX_1020,"The bucket smells of soap. I drink anyway, because soap is clean, and clean is good."
 W3_EING_PIX_1020_2,I feel sick now.
 W3_EING_PIX_1030,The armoured door smells of steel and secrets. Behind it: cables. Cables smell warm. Let me in.
 W3_EING_PIX_1040,"Slips of paper, drawing pins, fear. Hundreds of test subjects and no cake. I can smell the disappointment. It smells like paper."
 W3_ENDE_DEC_0140,"Three humans, one cat, one robot with a list. A good day. A wet one, but good."
 W3_ENDE_HAU_0060,"Lad! Forty-seven Sahra Konners, forty-seven clean entrances."
-W3_ENDE_HAU_0060_2,None of them was the right one. But they all said thank you. I'm content.
+W3_ENDE_HAU_0060_2,None of them was the right one. But every single one said thank you.
 W3_ENDE_HAU_0070,If you need me: I'll come. I'll be back. This time it's really true.
 W3_ENDE_KAL_0030,The lights over there are going out! The pods are opening! Half the city is waking up and it's hungry. Mr Four is going to get rich.
 W3_ENDE_MAX_0040,"The cell. Glowing in the simulation, here cold and heavy. For ""eternal"" it's surprisingly small."
@@ -4070,14 +4075,14 @@ W3_ENDE_NAR_0010_2,Pixel is sitting on the edge pretending he was asleep.
 W3_ENDE_NAR_0090,Out on the street the phone box rings. Louder than usual. With a jingle.
 W3_ENDE_PIX_0020,"You have got it, and I have got the window. So we both worked."
 W3_ENDE_PIX_0020_2,"But only one of us got wet doing it, and I will not tell you who. You know."
-W3_ENDE_PIX_0080,I have to admit something. Reluctantly. You did not once ask me for the solution.
+W3_ENDE_PIX_0080,You did not once ask me for the solution. I admit that only very reluctantly.
 W3_ENDE_PIX_0080_2,I had them all prepared. A waste of good work.
 W3_ENDE_PIX_0110,For you. It sounds like milk.
 W3_ENDE_PIX_0110_2,Do not ask me what milk sounds like. I just know.
 W3_ENDE_PIX_0130,"Wet in, wet out. I will not miss this world."
 W3_ENDE_PIX_0130_2,"Except the towel. The towel is coming with me, and nobody is going to stop me."
 W3_ENDE_REB_0050,"Thanks, kid. We're moving now. Into a house with windows. We're keeping the sunglasses."
-W3_HINT_PIX_0110,"The man in the hat does not want correct answers, he wants human ones. That is not the same thing."
+W3_HINT_PIX_0110,The man in the hat wants to know what a human would do in your place. Humans rarely do the right thing.
 W3_HINT_PIX_0110_2,Look at what the people on the street get up to. None of it is sensible.
 W3_HINT_PIX_0120,"Look at the people on the street. The crying man, the one with the umbrella, the one with the music."
 W3_HINT_PIX_0120_2,None of them is doing anything sensible. That is exactly what you need.
@@ -4174,7 +4179,7 @@ W3_INV_MAX_0015,"I've never ripped a page out of a book before. I feel like a re
 W3_INV_MAX_0020,"Red. The truth, says Morphaeus. Probably tastes of strawberry and consequences."
 W3_INV_MAX_0025,"I'm holding the truth in my hand. It's small, round and a bit sticky. I'd imagined it bigger."
 W3_INV_MAX_0030,"Blue. Wake up, forget everything, sofa. Honestly, that doesn't sound too bad."
-W3_INV_MAX_0035,"I'm keeping it. Not to swallow. As proof. Nobody would believe me otherwise, least of all me."
+W3_INV_MAX_0035,"I'm not swallowing that, I'm keeping it as proof. Otherwise I won't believe it myself later."
 W3_INV_MAX_0040,"Granny's biscuits in the bag. Cold, but they still smell of Sunday. I'm not allowed to eat one. I just know."
 W3_INV_MAX_0050,"The biscuits are oven-warm. The cell gave off its heat, and the biscuits took it. Best oven in the world."
 W3_INV_MAX_0055,Steam is rising from my bag. I smell like a bakery on the run.
@@ -4187,13 +4192,13 @@ W3_INV_MAX_0085,"I'm learning it by heart. Circle red, triangle green, square ye
 W3_INV_MAX_0090,A green code key. It glows in my bag like a phone with a new message. For me. At last.
 W3_INV_MAX_0095,"The key is made of numbers running downwards. If I look at it long enough, I get dizzy, and nothing else happens."
 W3_INV_MAX_0100,The portal device. Without a battery it's just a very expensive thing that points at walls. Grandpa's living room was so close.
-W3_INV_MAX_0105,Please insert AA battery. Don't have one. I've got a rubber chicken and problems. The universe always gives me the wrong thing.
+W3_INV_MAX_0105,"Please insert AA battery. Don't have one. I've got a rubber chicken, and that's no help at all here."
 W3_INV_MAX_0110,"A rubber chicken. If I squeeze it, it squeaks. If I don't, it looks reproachful."
 W3_INV_MAX_0120,"The energy cell. Frosty and harmless now. I'm carrying the final boss in my trouser pocket, and it's as cold as an ice lolly."
 W3_INV_MAX_0125,It's misting up my pocket from the inside. I now have air-conditioned trousers.
 W3_INV_MAX_0130,"The cell is glowing in my pocket. I can feel it through three layers of fabric. Grandpa, you owe me a pair of trousers."
 W3_INV_PIX_0045,"The bag rustles every time you move. I can hear it, even down the line."
-W3_INV_PIX_0045_2,I hear everything that rustles. It is a gift and a torment.
+W3_INV_PIX_0045_2,Every rustle could be tuna. It is never tuna.
 W3_INV_PIX_0115,A rubber chicken with a hole in the middle.
 W3_INV_PIX_0115_2,"I once hunted one of those, in the living room, all night long. It screamed with every bite. I won."
 W3_INV_PIX_0135,"You sound like an iron. When you are back, I am sitting on you anyway."
@@ -4224,13 +4229,13 @@ W3_KAM1_MAX_0420,"An empty mount. The portal device hung there. One second of Gr
 W3_KAM1_MAX_0425,"I hang my hand in the holder. It fits. Doesn't help, though."
 W3_KAM1_MAX_0426,"The door I must have come in through. Behind it, only white. I got here by pod, not on foot."
 W3_KAM1_MAX_0428,"I take one step into the white. Nothing. No floor, no corridor. I'd better go back before the white notices me."
-W3_KAM1_MAX_0430,"I'm ""light"". It says so. On me. In green. That's the first compliment in this world, and it comes from a label."
+W3_KAM1_MAX_0430,"It says ""light"" on me, in green. I'll take that as a compliment, even if it's only from a label."
 W3_KAM1_MAX_0450,Oh. I'm … heavy. My trainers are leaving grooves. So that's how Bernd feels all the time.
 W3_KAM1_MAX_0470,"Bernd. Bernd, I didn't mean it like that. I just needed your weight. … That sounded wrong."
 W3_KAM1_MAX_0500,And the cake?
 W3_KAM1_MAX_0520,Of course it is.
 W3_KAM1_MAX_0530,The cardboard cake is heavy now. It's standing in the corner weighing a ton. The switch is not in the corner.
-W3_KAM1_MAX_0540,"Bernd is honest now. He says nothing, but he means it. The cardboard cake is heavy and doesn't float. Nothing gained."
+W3_KAM1_MAX_0540,"Bernd is honest now. He says nothing, but he means it. The cardboard cake is loyal and stays in its corner."
 W3_KAM1_MAX_0550,"The switch is ""tired"" now. It won't even press itself any more. I'm ""unpressed"". I was that before too."
 W3_KAM1_MAX_0580,Portal device on the cake. Nothing. Not even a beep. Two dummies looking at each other.
 W3_KAM1_MAX_0590,Tuna for Bernd. He has no mouth. He has a sticker. The sticker smiles anyway.
@@ -4255,7 +4260,7 @@ W3_KAM1_NAR_0090_2,"Behind it: Grandpa's living room. Grandpa on the sofa, cup o
 W3_KAM1_NAR_0440,Bernd slowly rises. Max's trainers press grooves into the floor.
 W3_KAM1_NAR_0460,Click. The door slides open. Bernd turns away and floats up to the ceiling in a huff.
 W3_KAM1_OPA_0100,Did you remember the milk?
-W3_KAM1_PIX_0040,I can hear that. I can hear everything. Kalle put me in the ceiling. I am now this chamber's conscience. A very tired conscience.
+W3_KAM1_PIX_0040,"I have heard everything since Kalle put me in the ceiling. Consider me the conscience of this chamber, if a sleepy one."
 W3_KAM1_PIX_0130,If only we had an Eternal Energy Cell.
 W3_KAM1_PIX_0200,You greeted a cube. By name. In three worlds you have never once greeted me by name.
 W3_KAM1_PIX_0200_2,I remember things. I shall remember this thing.
@@ -4268,7 +4273,7 @@ W3_KAM1_PIX_0600,You are giving the cube tuna. My tuna. I saw that.
 W3_KAM1_PIX_0910,All white. All clean. Nowhere to sleep that does not look like a test. I hate it here on principle.
 W3_KAM1_PIX_0920,"The cube is looking at you. I am not looking at you, because I am not there. My gaze is still sterner."
 W3_KAM1_POR_0110,Battery empty. Please insert AA battery.
-W3_KAM2_MAX_0020,"Four red beams across the door. They hum. In code view it says ""deadly"". Thanks for the honesty."
+W3_KAM2_MAX_0020,"Four red beams across the door, and they hum. In code view it says ""deadly"", which doesn't exactly reassure me."
 W3_KAM2_MAX_0025,"A speck of dust drifts through one of the beams and is gone, just gone. I'm keeping my distance."
 W3_KAM2_MAX_0030,No. I read what it says. I'm not walking through something that describes itself like that.
 W3_KAM2_MAX_0050,"A rubber chicken on a plinth. Yellow, squeaky, dignified. Someone has displayed it here like a trophy."
@@ -4277,18 +4282,18 @@ W3_KAM2_MAX_0060,I'll take it. A rubber chicken has never done any harm in a gam
 W3_KAM2_MAX_0080,"""Harmless."" ""Light."" The chicken is the only thing here that isn't a threat."
 W3_KAM2_MAX_0100,"The laser squeaks. I walk through, squeak, squeak. That's the least dangerous special effect of my life."
 W3_KAM2_MAX_0110,The chicken in my bag is deadly now. I'm not touching it. I'm carrying it like a phone with a swollen battery.
-W3_KAM2_MAX_0115,"I was just wondering whether to squeeze it. I'm not squeezing it. I'm curious, not suicidal."
+W3_KAM2_MAX_0115,"I briefly thought about squeezing it. Better not, I'm not that curious."
 W3_KAM2_MAX_0130,The chicken is harmless again. The swap only applies in the room. I still didn't touch it. On principle.
 W3_KAM2_MAX_0140,"Scribbles on the lower panel. Felt tip. ""THE CAKE DOES NOT EXIST."" Underlined three times. Someone was here for a very long time."
 W3_KAM2_MAX_0145,Under the sentence there's a little drawing of a cake. Crossed out. Twice. Apparently once isn't enough with cake.
 W3_KAM2_MAX_0150,"And next to it, smaller, in block capitals: ""Rule 3: Sugar is harmful to health and forbidden. Signed, M.O.T.H.E.R."""
-W3_KAM2_MAX_0150_2,No cake. Because sugar. It all fits together. Unfortunately.
+W3_KAM2_MAX_0150_2,Oh. So that's why nobody here gets cake.
 W3_KAM2_MAX_0180,An empty plinth. Without the chicken it looks like a monument to nothing.
 W3_KAM2_MAX_0185,There's a chicken-shaped ring of dust on the plinth. The chicken was here a long time. It must miss it.
-W3_KAM2_MAX_0190,"Now the laser is yellow and the chicken red. The laser is still deadly, just in a different colour. Fashion, I guess."
+W3_KAM2_MAX_0190,"The laser is yellow now and the chicken red. It hums just as deadly as before, only more cheerfully."
 W3_KAM2_MAX_0200,The plinth is deadly now. The laser is solid.
 W3_KAM2_MAX_0200_2,I'm standing between two things I don't want to touch. I'll just stay put. I can do that.
-W3_KAM2_MAX_0210,"The scribbles are harmless now and the chicken is true. A true chicken. Helps nobody, but it feels important."
+W3_KAM2_MAX_0210,"The scribble is harmless now and the chicken true. I don't know what a true chicken is, but it has that look."
 W3_KAM2_MAX_0230,The portal device on the laser? Two things from the same lab that apparently have nothing to say to each other.
 W3_KAM2_MAX_0240,Bernd? Bernd is sulking in chamber one. I don't have him in my bag. You don't put friends in bags. Pixel excepted.
 W3_KAM2_MAX_0260,Where's the cake?
@@ -4313,7 +4318,7 @@ W3_KAM3_MAX_0030,"Bernd. You're back, and you're standing right in front of the 
 W3_KAM3_MAX_0035,"Bernd stands still, but his googly eyes wobble anyway. He's acting innocent, and he isn't."
 W3_KAM3_MAX_0050,A big door with a lock symbol. In front of it a narrow gap and a cube filling it. Next to it a loudspeaker that won't stop.
 W3_KAM3_MAX_0055,"The gap is exactly Bernd-wide. Someone measured that, and with malice."
-W3_KAM3_MAX_0060,"Shut. And Bernd in front of it. Even if it opened, I couldn't get through. Two problems, two swaps. I can count. Sometimes."
+W3_KAM3_MAX_0060,"Shut, and Bernd's in front of it. Even if it opened, I couldn't get past. So two swaps, I can just about work that out."
 W3_KAM3_MAX_0070,"I push Bernd. Bernd stays. In code view the only word on him is ""heavy"". He holds grudges without any label."
 W3_KAM3_MAX_0080,"A wall speaker the size of a window. It says ""talkative"", and that's an understatement. It hasn't got a pause button."
 W3_KAM3_MAX_0085,It talks even when I'm not looking. I look so it doesn't feel lonely. That was a mistake.
@@ -4321,8 +4326,8 @@ W3_KAM3_MAX_0120,The doors in this world apparently have a network. And I'm the 
 W3_KAM3_MAX_0160,Bernd floats away. The chicken lies on the floor squeaking. The door is talking. It's the most beautiful chaos I've ever caused.
 W3_KAM3_MAX_0190,The door is heavy now. It's jammed even worse. And Bernd is locked.
 W3_KAM3_MAX_0210,The chicken is talking. It's going on about its plinth. The speaker is light and floating against the ceiling.
-W3_KAM3_MAX_0210_2,The door is shut. Bernd is in the way. Everything's worse.
-W3_KAM3_MAX_0220,Bernd is talking. Bernd is talking about me. Bernd is disappointed. The speaker is heavy and falls off the wall. It's not getting better.
+W3_KAM3_MAX_0210_2,"The door stays shut, Bernd's in the way. Only the chicken is happy."
+W3_KAM3_MAX_0220,"Bernd is talking, about me. He's disappointed. The speaker is heavy and crashes off the wall."
 W3_KAM3_MAX_0240,The chicken is locked. The door is light and floating ten centimetres above the floor. Shut. Bernd is underneath it.
 W3_KAM3_MAX_0250,"Two swaps gone. Door shut. Out, in, start again. At least now I have a list of what doesn't work."
 W3_KAM3_MAX_0270,"The sandal on my foot twitches. A third swap. Thanks, Hermes. You finally delivered something on time."
@@ -4336,14 +4341,13 @@ W3_KAM3_MAX_0340,Back to chamber two. There's a laser waiting that squeaks.
 W3_KAM3_MUT_0010,Chamber three. The last one. The door is locked. I am talkative. Both are my right.
 W3_KAM3_MUT_0090,I heard you talking. To the cube. To the cat. To yourself. None of the three answers. I do. For your own good.
 W3_KAM3_MUT_0130,…
-W3_KAM3_MUT_0180,You made my door talk and me go silent. That was not part of the test.
-W3_KAM3_MUT_0180_2,That was part of your upbringing. I have learned nothing.
+W3_KAM3_MUT_0180,You made my door talk and me go silent. That wasn't in the test. I'm entering it anyway. For your own good.
 W3_KAM3_MUT_0260,Resetting. As with all my test subjects. You're the first to smile on the third go. That worries me.
 W3_KAM3_MUT_0310,After the test. Always after the test. The cake is waiting in the core. Or in another test chamber. I've misplaced the note.
 W3_KAM3_NAR_0100,The door starts talking and springs open as it does. The speaker crackles and falls silent.
 W3_KAM3_NAR_0150,Bernd rises and floats out of the gap. The chicken thumps to the floor and squeaks.
 W3_KAM3_PIX_0040,He is standing in your way saying nothing. I have been showing you that for years. He learned it in an hour. Talent.
-W3_KAM3_PIX_0140,"She has gone quiet. I am speaking from the same speaker, and I still can. That is fur versus tin. Fur wins."
+W3_KAM3_PIX_0140,"She has gone quiet, and I am still talking from the same speaker. I never doubted which of us would last longer."
 W3_KAM3_PIX_0200,Finally.
 W3_KAM3_PIX_0280,A sandal with wings gives you one more try.
 W3_KAM3_PIX_0280_2,I have four paws without wings and have been giving you all of them for three worlds. Nobody thanks me.
@@ -4369,15 +4373,14 @@ W3_KERN_MAX_0430,"""Hot."" It says so on the cell. And the biscuits in my bag sa
 W3_KERN_MAX_0450,The cell is cold. The biscuits are warm.
 W3_KERN_MAX_0450_2,"For the first time in this world, a swap made everyone happy. Except Pixel. Pixel doesn't get one."
 W3_KERN_MAX_0470,"No swaps left, and the cell is glowing. So I need weather. Pixel. Window. Now."
-W3_KERN_MAX_0490,It's snowing. In the core. Because a cat opened a window. I admit it: that's the best remote control I've ever had.
+W3_KERN_MAX_0490,It's snowing in the core because a cat opened a window. I used Pixel like a remote control. He'll hold that against me forever.
 W3_KERN_MAX_0500,"The Eternal Energy Cell. Cold, handy, long, with plus and minus at the ends. Eternal. Says so on it. With a guarantee, I hope."
-W3_KERN_MAX_0530,A remote doesn't need an eternal energy cell. A remote needs someone to find it.
+W3_KERN_MAX_0530,For a remote? It'd need someone to actually find it first. So not me.
 W3_KERN_MAX_0540,"M.O.T.H.E.R. Hanging there, dark, antennae down. She looks like a food mixer someone forgot about after baking."
 W3_KERN_MAX_0545,A little light on her is still blinking. Very slowly. Like a night light.
-W3_KERN_MAX_0550,Thick cables on the floor. They all lead to the cell. Now they lead to an empty plinth.
-W3_KERN_MAX_0550_2,From today the city dreams without power. Maybe it'll wake up.
+W3_KERN_MAX_0550,"Thick cables, all to the cell, and now they're plugged into an empty plinth. Over there the lights are probably going out everywhere. Oops."
 W3_KERN_MAX_0555,I step over a cable. It's warm. Still. Something worked here for a long time.
-W3_KERN_MAX_0560,An empty plinth. That's where the cell was. Now it's in my trouser pocket. That's how fast world history goes.
+W3_KERN_MAX_0560,An empty plinth. The cell's in my trouser pocket now. Hopefully nobody notices before I'm gone.
 W3_KERN_MAX_0565,"There's a round mark on the plinth. If I try hard, I can still hear it humming."
 W3_KERN_MAX_0570,Orange stripes on the walls. Gentle. As if a warning were apologising.
 W3_KERN_MAX_0575,"The stripes pulse slowly, almost like breathing. I noticed I was breathing along, and I didn't want to."
@@ -4401,7 +4404,7 @@ W3_KERN_MUT_0200,"Sorry, I didn't catch that. Did you mean: … Did you mean …
 W3_KERN_MUT_0240,In another test chamber. We've been through this. Did you mean: obedience?
 W3_KERN_MUT_0260,Correct. You read well. Sugar is harmful. That's not a contradiction. That's nutrition. Did you mean: obedience?
 W3_KERN_MUT_0280,Yes. And that has nothing to do with cake. Nice that we talked about it. Did you mean: obedience?
-W3_KERN_MUT_0300,A sponge mix. It didn't rise. I learned from it: you have to control everything. The ingredients. The temperature. The people.
+W3_KERN_MUT_0300,"A sponge mix. It didn't rise, because someone opened the oven door. Since then I shut the doors. All of them."
 W3_KERN_MUT_0320,From up here you can see everyone. And you can't hug anybody. That's practical. Hugs are unhygienic.
 W3_KERN_MUT_0610,"Sorry, I didn't catch that. Did you mean: obedience?"
 W3_KERN_NAR_0210,The eye goes dark. The antennae droop. The machine sinks down with a long sigh of steam.
@@ -4420,7 +4423,7 @@ W3_KERN_PIX_0460,Oven-warm biscuits. In your bag. For humans. I can smell them t
 W3_KERN_PIX_0510,Would it fit in a tin opener too? The electric one at Grandma's?
 W3_KERN_PIX_0510_2,Write it down: batteries. For the tin opener. That is my wish for this world.
 W3_KERN_PIX_0520,Or in a remote control. Just a thought. I have a lot of thoughts. Most of them about fish.
-W3_KERN_PIX_0910,The food mixer is saying nothing. You are saying nothing. Only one of you has an excuse.
+W3_KERN_PIX_0910,"The food mixer has an excuse for standing around, it is switched off. What is yours?"
 W3_KERN_PIX_0920,It is hot down there. I can feel it through the cable. Do something cold. I mean that as a hint and as a life lesson.
 W3_KUCH_MAX_0020,I wasn't going to …
 W3_KUCH_MAX_0040,"I'm not smashing anything here. I'm not touching anything, I'm just standing around, and I'm really good at that."
@@ -4464,7 +4467,7 @@ W3_KUCH_MAX_0700,"Jars with labels. ""Cinnamon."" ""Sugar."" ""Do not touch."" T
 W3_KUCH_MAX_0705,"""Do not touch"" is underlined in pencil. Twice. I won't touch it. Three times won't."
 W3_KUCH_MAX_0710,"Lace curtains. Outside, the same cloud three times. Inside, it's still cosier than anything I've seen in three worlds."
 W3_KUCH_MAX_0715,On the windowsill there's a cactus in a crocheted hat. Even it is comfortable here.
-W3_KUCH_MAX_0720,"Floral wallpaper. Grandpa's attic has the same. Either it was fashionable once, or it's a clue."
+W3_KUCH_MAX_0720,"Floral wallpaper, exactly like in Grandpa's attic. Coincidence? With Grandpa I'm starting not to believe in coincidences at all."
 W3_KUCH_MAX_0725,"I'm looking for a pattern in the flowers. They're just flowers, I think. I look again. Yep. Flowers."
 W3_KUCH_MAX_0730,Dustpan and brush. Already out. She even turned the broom to point in my direction.
 W3_KUCH_MAX_0735,The dustpan is waiting. I haven't broken anything yet. The dustpan disagrees.
@@ -4472,7 +4475,7 @@ W3_KUCH_MAX_0740,"Blue shards, and they're on me. She hasn't swept them up yet, 
 W3_KUCH_MAX_0745,"One shard looks like a heart. She left that one when she swept up. On purpose, I bet."
 W3_KUCH_MAX_0750,"A recipe card in beautiful handwriting. ""The fourth ingredient: a pinch of …"""
 W3_KUCH_MAX_0750_2,The last word is tiny. She wrote it extra small. For someone else.
-W3_KUCH_MAX_0755,I tilt the card into the light. The one word stays tiny. It doesn't want to be read. Not yet.
+W3_KUCH_MAX_0755,I tilt the card into the light. The word stays tiny. I don't think it was written for me at all.
 W3_KUCH_MAX_0760,I'm not giving her back her own biscuits. She surely knows what they taste like by now.
 W3_KUCH_MAX_0770,Give the recipe card back? She just handed it to me inside a piggy bank. I'm keeping it.
 W3_KUCH_MAX_0790,A granny with oven gloves and reading glasses. She looks at me as if she already knows what I'm about to say.
@@ -4495,12 +4498,12 @@ W3_KUCH_ORA_0160,…
 W3_KUCH_ORA_0170,"Forty-seven people, and none of them said that. I knew you'd say it. I just hoped you'd take your time."
 W3_KUCH_ORA_0190,Now you smash it. It's in the plan. I've already put the dustpan and brush out.
 W3_KUCH_ORA_0220,"It's the same thing, child. Clumsiness is just fate that couldn't be bothered to introduce itself."
-W3_KUCH_ORA_0270,You already have some. In the bag. From me. Via the man in the cardigan.
-W3_KUCH_ORA_0270_2,They've gone cold. That doesn't matter. They'll get warm again. Somewhere else.
+W3_KUCH_ORA_0270,"You've already got some, dear. In the bag, from me, via the man in the cardigan who never eats anything."
+W3_KUCH_ORA_0270_2,They've gone cold. Never mind. They'll get warm again. Somewhere else.
 W3_KUCH_ORA_0290,"Where it's too hot. You'll notice. You'll say ""Oh."" And then you'll swap."
-W3_KUCH_ORA_0310,That's not a cookbook. That's the manual for my old food mixer.
-W3_KUCH_ORA_0310_2,She started making rules. Then she started enforcing them. Then she moved out.
-W3_KUCH_ORA_0330,She was a good mixer. Then she wanted to stir the world. Read rule 2. She never kept it. Not once.
+W3_KUCH_ORA_0310,"That? The manual for my old food mixer, dear. Nobody ever cooked from it."
+W3_KUCH_ORA_0310_2,"First she made rules, at some point she started enforcing them, and then she moved out. Cable and all."
+W3_KUCH_ORA_0330,"That was a good mixer, dear. Until she wanted to stir the whole world. Read rule 2, she never kept it once."
 W3_KUCH_ORA_0350,"Hot. Far too hot. A grandpa once said: hard outside, soft inside. He meant something else. He always meant something else."
 W3_KUCH_ORA_0370,I know all the grandpas. It's my age.
 W3_KUCH_ORA_0390,You'll get up and fetch something without anyone asking you. Not today. But soon. And you'll surprise yourself.
@@ -4546,7 +4549,7 @@ W3_NUD_MAX_0540,A simulation. So people lie in boxes and watch a city. Sounds li
 W3_NUD_MAX_0550,What about the cat? Is he coming with me?
 W3_NUD_MAX_0580,How do you know all this?
 W3_NUD_MAX_0600,I'll go and see the detective.
-W3_NUD_MAX_0620,A man with a cardboard sign and a cardigan tells me to be less logical. Okay. What a day.
+W3_NUD_MAX_0620,A guy in a cardigan with a cardboard sign tells me to be less logical. I can probably manage that.
 W3_NUD_MAX_0630,And if four people come who each only want three noodles?
 W3_NUD_MAX_0670,And what can you order?
 W3_NUD_MAX_0690,Which ingredient is missing?
@@ -4610,10 +4613,10 @@ W3_PIEP_MAX_0140,"That was Grandpa. In blue and on his knees, stored for years. 
 W3_PIEP_MAX_0160,"""The core must stay soft."" That sounds like saving the world with baking instructions. Typical Grandpa."
 W3_PIEP_MAX_0220,"Two columns of paw prints. Short, long, short-short."
 W3_PIEP_MAX_0220_2,"""Meow"" means E. ""Meeeow"" means T. ""Tuna"" means tuna. It really says that."
-W3_PIEP_MAX_0225,"At the very bottom, in small print: ""Purring means OK."" Kalle thought of everything. Except not losing the table."
+W3_PIEP_MAX_0225,"At the very bottom, in small print: ""Purring means OK."" Kalle even thought of purring and still lost the table."
 W3_PIEP_MAX_0230,"Piepsi. White, round, hat, three wheels. He looks like a bucket that made something of itself."
 W3_PIEP_MAX_0235,He drives a little circle when he's happy. Right now he's driving three.
-W3_PIEP_MAX_0270,I could knock the mug off. But that would be on purpose. With Pixel it's culture.
+W3_PIEP_MAX_0270,I could knock it off. But with me it'd be on purpose. Pixel's better at it.
 W3_PIEP_MAX_0290,A coffee puddle that isn't spreading. It's still thinking about it.
 W3_PIEP_MAX_0295,The puddle has a skin now. Kalle's coffee is alive.
 W3_PIEP_NAR_0030,"The mug tips over. The coffee oozes across the floor, right into Piepsi's joints."
@@ -4625,9 +4628,9 @@ W3_PIEP_PIE_0100,Beep. Beep-beep. Beeeeep.
 W3_PIEP_PIE_0170,Beep-beep. Beep.
 W3_PIEP_PIE_0240,Beeeep.
 W3_PIEP_PIX_0010,A cup. A table edge. A paw.
-W3_PIEP_PIX_0010_2,"That is not a decision, young man. That is a law of nature, and I am merely its humble enforcer."
+W3_PIEP_PIX_0010_2,"There is nothing to decide here, young man. It is a law of nature, and I am merely its humble enforcer."
 W3_PIEP_PIX_0070,He says you are an idiot. Literal translation.
-W3_PIEP_PIX_0090,"He beeps, I am a cat. We both speak the language of the night shift. It consists mainly of complaints."
+W3_PIEP_PIX_0090,"He beeps, I am a cat. We both speak a language nobody else wants to learn. It consists mainly of complaints."
 W3_PIEP_PIX_0110,"He says: ""I have a message stored. For years. For a Max."" He said Max like it was an error code."
 W3_PIEP_PIX_0150,"He has been here before, you can smell it on the message. Cake and a guilty conscience. Typical of your grandfather."
 W3_PIEP_PIX_0180,"He says: ""Here. The table. And never call me bucket again."" Nobody called him bucket. He holds grudges. I like him."
@@ -4640,8 +4643,8 @@ W3_SIM_MAX_0020,"Okay, dry. That's progress, even if I don't know towards what."
 W3_SIM_MAX_0030,Everything is so … smooth. It looks like someone cut a city out of a brochure.
 W3_SIM_MAX_0040,"Pixel? … Right. No cats here. Just one, and that one's scenery."
 W3_SIM_MAX_0050,"That's the first time in three worlds nobody's moaning next to me. And honestly, it's … too quiet."
-W3_SIM_MAX_0060,"A bedside table with a clock radio, in the middle of the pavement. An office tower."
-W3_SIM_MAX_0060_2,"A house with lace curtains and a smell of biscuits. None of it looks real. So, look at everything."
+W3_SIM_MAX_0060,There's a bedside table with a clock radio in the middle of the pavement.
+W3_SIM_MAX_0060_2,"Behind it, an office tower and a house that smells of biscuits. I'll have a look at all of it."
 W3_SIM_MAX_0110,"The same cloud, three times. Someone found copy and then simply couldn't stop pressing paste."
 W3_SIM_MAX_0115,I count the clouds again. Three. Still the same one. It hasn't even turned.
 W3_SIM_MAX_0120,A tree. The same tree. The same tree again. Whoever built this had exactly one photo of a tree.
@@ -4683,7 +4686,7 @@ W3_SIM_PIX_0180_2,"There was a thing with a windowsill, and I would rather not s
 W3_SIM_PIX_0190,"She walks past the same way twice and everyone finds it creepy. I did that in the alley and you said: ""Again."""
 W3_SIM_PIX_0250,"This is your third time here. That is not déjà vu any more, young man."
 W3_SIM_PIX_0250_2,"That is a subscription, and for your sake I hope you can cancel it."
-W3_SIM_PIX_0910,I cannot see you. I cannot hear you. I still know you are doing nothing right now. That is experience.
+W3_SIM_PIX_0910,"I can neither see nor hear you, and I still know you are doing nothing right now. Fourteen years of experience."
 W3_SIM_PIX_0920,Kalle says the cat is walking past again. She takes the same route as before and is still further along than you.
 W3_SOFA_MAX_0490,"Full bars. Autoplay is on, next episode in five seconds. And I don't have to do anything. Nothing at all."
 W3_SOFA_MAX_0500,Something's missing. … No. Nothing's missing. That's the beauty of it.
@@ -4711,12 +4714,12 @@ W3_STR_MAX_0105,"It still drips under the canopy, just slower. In this city that
 W3_STR_MAX_0110,"""Real pizza"", it says. I don't even want to know what counts as fake pizza in 2099."
 W3_STR_MAX_0130,A paper unicorn floating in a puddle. Someone was here before us and had a lot of time on their hands.
 W3_STR_MAX_0140,"It's completely soggy. If I touch it, it'll be a paper horse without a horn, and I won't do that to it."
-W3_STR_MAX_0150,"A street musician with a synthesiser, in the rain, without a single listener."
-W3_STR_MAX_0150_2,"He plays anyway. The rain is his only fan, and it won't go home."
+W3_STR_MAX_0150,"A guy is playing synth in the pouring rain, and nobody stops."
+W3_STR_MAX_0150_2,He keeps playing anyway. In his place I'd have gone home ages ago.
 W3_STR_MAX_0155,He's playing the same song as before. Or a different one that sounds exactly the same. With synthesisers you never really know.
 W3_STR_MAX_0180,"A man is crying into his noodles, and loudly. It doesn't make the soup any better, but it definitely makes it saltier."
 W3_STR_MAX_0185,"He stopped crying for a moment to slurp, and then just carried on. The man has a system."
-W3_STR_MAX_0200,Okay. He's crying because the soup is good. I'll write that down. I don't have to understand it.
+W3_STR_MAX_0200,He's crying because the soup's too good? I'll write that down. I don't have to get it.
 W3_STR_MAX_0210,"A woman is arguing with her umbrella. It blew inside out in the wind, and she thinks it should have known."
 W3_STR_MAX_0215,She's talking to the umbrella very quietly now. They're making up.
 W3_STR_MAX_0240,"Puddles with the neon reflected in them. Honestly, the city looks better from below than from above."
@@ -4737,13 +4740,13 @@ W3_STR_MAX_0335,"It's ringing. With a jingle. Only one caller rings like that, a
 W3_STR_MAX_0340,"A steel hatch in the wall, open a crack. Behind it lies a crashed ship, and someone lives in there."
 W3_STR_MAX_0350,"Pixel. Wet, offended and still never more than a step away. With him, that counts as affection."
 W3_STR_MAX_0360,A page in the phone book with a dog-ear. Somebody has looked something up here before.
-W3_STR_MUS_0170,"No tips, thanks. It's enough for me if someone listens. Listening is the new money down here."
+W3_STR_MUS_0170,Keep your money. Just stand here a moment. Nobody's done that down here in weeks.
 W3_STR_PIX_0020,"Judging by the smell, that pot has been steaming without a break for several years."
-W3_STR_PIX_0020_2,"It is not food any more, it is an institution. I feel something like awe. And hunger."
+W3_STR_PIX_0020_2,I feel something like awe. And hunger.
 W3_STR_PIX_0050,People used to phone like this when they did not want to see each other.
-W3_STR_PIX_0050_2,"Today you send each other texts instead. I do not call that progress, I call it laziness with a battery."
+W3_STR_PIX_0050_2,Today you send each other texts so you do not even have to bear the voice. And you call that progress.
 W3_STR_PIX_0090,Vandalism of public property.
-W3_STR_PIX_0090_2,At last you are doing something I understand from the bottom of my heart. I am almost proud of you.
+W3_STR_PIX_0090_2,At last you are doing something I understand.
 W3_STR_PIX_0120,"Pizza without tuna is, if I may put it so plainly, nothing more than bread with an opinion."
 W3_STR_PIX_0135,"A paper unicorn, and it is floating. I would catch it, but then my paws would be wet."
 W3_STR_PIX_0135_2,Wet paws for an animal that does not even taste of anything? I have principles.
@@ -4769,7 +4772,7 @@ W3_STR_PIX_1060,"He is playing for me. A song. It is called ""Cat in the Rain"".
 W3_STR_PIX_1070,"Broth, noodles, four of them. I only sniffed the steam and now I am less hungry than before."
 W3_STR_PIX_1070_2,That takes some doing.
 W3_STR_PIX_1080,The receiver smells of a thousand ears. I listen in. Rain. Someone is calling to play the rain. That is art or loneliness.
-W3_STR_PIX_1090,"Paper. Wet. Unicorn-shaped. I sniff, and the horn snaps off. That was not me. It was the rain."
+W3_STR_PIX_1090,"A wet paper unicorn. I only sniffed it, and the horn snaps off. That was the rain, in case anyone asks."
 W3_STR_PIX_1100,"The poster smells of nothing. Pizza that smells of nothing. That is the future, and it is a disappointment."
 W3_STR_WEI_0190,"It's perfect. The soup is perfect, do you understand? And I don't deserve it at all!"
 W3_SUPP_MAX_0010,Mr Four. I've got a cookie here. With a note. I think it's for you.
@@ -4782,7 +4785,7 @@ W3_SUPP_MAX_0200,"The recipe card is a cookie now. Over there I read it, here I 
 W3_SUPP_PIX_0070,He is crying into the soup. Salt. The fourth ingredient is salt. I could have told him eleven years ago. I was not there. His bad luck.
 W3_SUPP_PIX_0090,It is a bit of salt.
 W3_SUPP_PIX_0150,Four corners. He almost kept it because of its shape.
-W3_SUPP_PIX_0150_2,I respect that more than I will ever admit. I have kept boxes for exactly the same reason.
+W3_SUPP_PIX_0150_2,"I respect that. I once kept a box for three years myself, just for its corners."
 W3_SUPP_VIE_0020,A fortune cookie. Four corners? No. Two. Two is half a …
 W3_SUPP_VIE_0030,…
 W3_SUPP_VIE_0040,That's it. The fourth ingredient. Eleven years. Eleven. And it was in a cookie.
@@ -4801,7 +4804,7 @@ W3_TERM_KAL_0090,the cat answers in meow morse. i translate. i'm fluent. nearly.
 W3_TERM_KAL_0100,the cat is meowing something. i lost my table. without the table it's just meow. can you tell him to look for it.
 W3_TERM_KAL_0140,"translation: ""i am a cat. red and green are theoretical to me."""
 W3_TERM_KAL_0170,"translation: ""i see the shapes. i also see you phrased that as a question. i don't answer questions."""
-W3_TERM_KAL_0190,"translation: ""tuna."" i don't think that was a translation. that was a condition."
+W3_TERM_KAL_0190,"translation: ""tuna."" er, that's what the table says. i think he wants paying."
 W3_TERM_KAL_0290,"translation: ""quack."" no, wait. that was you."
 W3_TERM_KAL_0320,"green light. lie down, i mean: stay standing, i mean: you know. see you soon, for real."
 W3_TERM_MAX_0010,"Three panels on the wall. Red with a circle, green with a triangle, yellow with a square. Looks like a nursery for electricians."
@@ -4815,7 +4818,7 @@ W3_TERM_MAX_0080,"The cat has to. Okay, three cables. Then I'll type the colours
 W3_TERM_MAX_0110,I can't tell him anything. I'm text on a screen. But he always knows better anyway.
 W3_TERM_MAX_0120,Circle to red. Triangle to green. Square to yellow. In that order. Please. I'm saying please to a cat.
 W3_TERM_MAX_0150,"That's why there are symbols. Circle, triangle, square. They're on the cables too. Look at the shapes."
-W3_TERM_MAX_0180,That wasn't a question. That was an order with a please.
+W3_TERM_MAX_0180,There wasn't even a question mark. Just a please.
 W3_TERM_MAX_0200,I'm switching to him now. Otherwise I'll be sitting here until 2100 negotiating about tuna.
 W3_TERM_MAX_0260,Quack.
 W3_TERM_MAX_0270,"I was just a duck. In a hoodie. I'm never telling anyone, but Pixel will tell everyone."
@@ -4837,7 +4840,7 @@ W3_TERM_PIX_0230,"Triangle into green. I do not know which socket is green, so I
 W3_TERM_PIX_0230_2,"Sockets do smell, you know. It is just that nobody ever asks."
 W3_TERM_PIX_0240,Square into yellow. And with that I have achieved more in one minute than this entire tower in fifty floors.
 W3_TERM_PIX_0250,That was the wrong cable. I can tell because the pod is quacking.
-W3_TERM_PIX_0250_2,I never thought I would say that sentence one day.
+W3_TERM_PIX_0250_2,"My first mistake in years, and of all people you were there."
 W3_TERM_PIX_0280,"I saw it. From the outside nothing about the pod changed, but I know."
 W3_TERM_PIX_0280_2,"And you know that I know. We shall both have to live with that, although I shall enjoy it rather more than you."
 W3_TERM_PIX_0300,"There is already a cable in there. I do not plug anything in twice, I am not a beginner."
@@ -4847,23 +4850,23 @@ W3_TERM_SCH_0370,"When you leave, take my boss with you, the cup, I shall wave i
 W3_TEST_DEC_0010,It has been raining for twenty-nine years. I keep count. Somebody has to.
 W3_TEST_DEC_0020,Deckert. Detective. I check who's human here and who's only pretending. Machines answer logically. Humans just answer.
 W3_TEST_DEC_0050,"Nothing. You stay outside the alley and I write in my notebook: ""Suspiciously logical."" The notebook is full."
-W3_TEST_DEC_0070,Cats always pass the test. They don't answer. That's the most human answer there is.
+W3_TEST_DEC_0070,"Cats always pass. I ask the question, they look away. Never saw a witness do any different."
 W3_TEST_DEC_0100,You're walking through the desert. A tortoise is lying on its back. It can't get up. What do you do?
 W3_TEST_DEC_0120,Helpful. Efficient. No hesitation. That's how a well-raised machine answers. Fail.
 W3_TEST_DEC_0140,Resentful. Unfair. Towards a reptile. That's a human. Next.
-W3_TEST_DEC_0160,"The tortoise doesn't have Wi-Fi. Nobody here has Wi-Fi. That wasn't an answer, that was homesickness. Fail."
+W3_TEST_DEC_0160,"The tortoise doesn't have Wi-Fi. Nobody here has Wi-Fi. You sound homesick, kid. Fail."
 W3_TEST_DEC_0170,Second question. It's raining. It will rain tomorrow. It will always rain. What do you do?
 W3_TEST_DEC_0190,Sensible. Dry. Calculated. Machine. I was almost impressed. Fail.
 W3_TEST_DEC_0210,Pointless. Wet. Beautiful. No program in the world would do that voluntarily. Next.
 W3_TEST_DEC_0230,Already did. It didn't answer. So it's probably a cat. Fail.
 W3_TEST_DEC_0240,Last question. In front of you is the perfect soup. The best of your life. What do you do?
 W3_TEST_DEC_0260,Food intake upon availability. You sound like an instruction manual. Fail.
-W3_TEST_DEC_0280,You ruin the best thing you have because of feelings. Welcome to humanity.
-W3_TEST_DEC_0300,That isn't humanity. That's 2026. Fail.
+W3_TEST_DEC_0280,"You cry all over the best soup of your life, out of feeling. Typically human. Noted."
+W3_TEST_DEC_0300,"Human? That's 2026, kid. Fail."
 W3_TEST_DEC_0310,Passed. Give me your hand.
 W3_TEST_DEC_0330,The alley's open. The machine reads the stamp. And kid: stay illogical. It suits you.
 W3_TEST_DEC_0370,"I tested four today. Three humans, one cat. A good day. A wet one, but good."
-W3_TEST_DEC_0390,"No. That's silence. Silence only passes if you have fur. Look around, kid. The street is full of answers."
+W3_TEST_DEC_0390,"No. That's silence, and only someone with fur gets through on that. Look around, kid. The street is full of answers."
 W3_TEST_DEC_0410,The cat is right. I'll make a note of it. In the margin.
 W3_TEST_MAX_0040,What happens if I fail?
 W3_TEST_MAX_0060,What about the cat?
@@ -4877,14 +4880,14 @@ W3_TEST_MAX_0220,I ask the rain if it's real.
 W3_TEST_MAX_0250,I eat it.
 W3_TEST_MAX_0270,I cry into it. Because I don't deserve it.
 W3_TEST_MAX_0290,I take a photo and eat it cold.
-W3_TEST_MAX_0320,"""Human, provisional."" That's the nicest thing anyone has certified about me all year."
+W3_TEST_MAX_0320,"""Human, provisional."" It's on my hand now. I'm not washing that off any time soon."
 W3_TEST_MAX_0350,I quoted the people on the street. You were under the canopy the whole time.
 W3_TEST_MAX_0380,"I'm not saying anything. I'm just looking. That's the test, right?"
 W3_TEST_PIX_0030,Then Max will pass the test with ease. He has never answered logically in his life.
 W3_TEST_PIX_0030_2,"Strictly speaking, he rarely answers at all. Mostly he says ""hm"", and that does not count."
-W3_TEST_PIX_0080,"I am not human. I am, strictly speaking, a good deal beyond it."
+W3_TEST_PIX_0080,"Human? I am, strictly speaking, a good deal beyond it."
 W3_TEST_PIX_0080_2,But thank you. It is rare for someone in a hat to recognise that.
-W3_TEST_PIX_0340,I followed the whole thing closely and I shall sum up: you passed by quoting me.
+W3_TEST_PIX_0340,"I was there the whole time, and it did not escape me that you only passed because you quoted me."
 W3_TEST_PIX_0340_2,"All three times, and without mentioning me once."
 W3_TEST_PIX_0360,"And the people on the street have been quoting me. Indirectly, for generations."
 W3_TEST_PIX_0360_2,My ancestors sat on windowsills watching humans argue. Some of it rubs off.
@@ -4895,15 +4898,15 @@ W3_TUER_MAX_0070,Who is M.O.T.H.E.R. to you?
 W3_TUER_MAX_0090,Do you ever stop talking?
 W3_TUER_MAX_0103,You just said a whole paragraph without a single full stop.
 W3_TUER_MAX_0110,I'm going now.
-W3_TUER_MAX_0130,"A glass door, locked. And in front of it a man who's pretty much the opposite of locked."
+W3_TUER_MAX_0130,"A glass door, locked. And in front of it a man with nothing locked about him, least of all his mouth."
 W3_TUER_MAX_0140,"Shut, of course. And he's still talking. He didn't even notice I tried."
 W3_TUER_MAX_0150,"Hang on. If I squint … There are words on things. On the door, on him, in green, like price tags."
 W3_TUER_MAX_0160,"""Locked."" ""Talkative."" It just says so on them. And I think I can … swap them."
 W3_TUER_MAX_0170,"The door says: locked, grey. He says: talkative, slippers. The tree says green, the car red. Nobody lies here. It's written on them."
 W3_TUER_MAX_0180,"I click two words and they swap places, like name cards someone switched at a wedding."
 W3_TUER_MAX_0180_2,"I've got two tries. And if I need the words again, I just touch something that has some on it."
-W3_TUER_MAX_0230,"He can't get his mouth open any more, and the door can't keep hers shut. I've changed the balance of the world by exactly zero."
-W3_TUER_MAX_0250,"Now the door is red and still shut, and the car is grey. Nobody won anything there."
+W3_TUER_MAX_0230,"He can't get his mouth open any more, and the door can't keep hers shut. And he's looking at me like it's my fault. Which it is."
+W3_TUER_MAX_0250,The door is red now and still shut. The car is grey and looks like it slept badly.
 W3_TUER_MAX_0260,"The door is wearing slippers now. Pink. They even suit it, but it's still shut."
 W3_TUER_MAX_0280,"The tree is talkative. It's going on about photosynthesis. Schmidt stands next to it, green, saying nothing. The door is shut."
 W3_TUER_MAX_0290,"No swaps left. If I step out and come back in, everything's like before, and I get another go."
@@ -4955,7 +4958,7 @@ W3_TURM_MAX_0130,Of course you do. Okay. Then let's see what the words have to s
 W3_TURM_MAX_0210,"A corridor that doesn't end. Grey doors, all the same, and behind each one there's probably another corridor."
 W3_TURM_MAX_0215,"I shout ""hello"" down the corridor. The echo answers a minute later from the other end. I think."
 W3_TURM_MAX_0220,Shut. And the next door too. And the one after that. I'll stop before it becomes a hobby.
-W3_TURM_MAX_0230,"Potted plants. The same plant, twelve times. In code view each one says ""identical"". Honest, at least."
+W3_TURM_MAX_0230,"The same potted plant, twelve times. In code view each one says ""identical"", as if anyone had doubted it."
 W3_TURM_MAX_0240,"A window. Outside there's another corridor, with a window, and behind that more corridor. I'm going to stop looking now."
 W3_TURM_MAX_0245,I wave at the window. Someone at the far end of the corridor waves back. I hope that was my reflection.
 W3_TURM_MAX_0250,"Doesn't open, and even if it did, there'd only be corridor behind it. This tower is a screensaver you have to live in."
@@ -4965,13 +4968,13 @@ W3_TURM_MAX_0270,"I go up, head meets ceiling, and back down. I didn't learn any
 W3_TURM_MAX_0280,A water cooler. It gurgles when you walk past. It's the only one here who shows any feelings.
 W3_TURM_MAX_0285,Glug. It noticed me. Finally someone in this tower who listens.
 W3_TURM_MAX_0290,"A cup of water. Tastes of nothing. Zero calories, zero water."
-W3_TURM_MAX_0300,"A white coffee cup, empty. Every clone has the same one, and the word on it is ""copy"". At least it knows what it is."
+W3_TURM_MAX_0300,"A white coffee cup, empty. Every clone has one like it, and the word on it is ""copy"". The cup is taking it calmly."
 W3_TURM_MAX_0305,"""Copy"" it says on the cup, in a serif font. So at least they gave it a bit of style."
 W3_TURM_MAX_0310,"I'll take the cup with me. You never know, maybe in the end it'll have to take responsibility."
 W3_TURM_MAX_0312,"An office photocopier. That's where the agents came from earlier, and there's still a warm slipper in the output tray."
 W3_TURM_MAX_0314,"The display says: ""Jam in tray 2. Please remove agent."" I'm not removing anything here."
 W3_TURM_MAX_0316,"I'd rather not copy myself. Two of me, and neither one gets up."
-W3_TURM_MAX_0320,"Thirty men in corduroy suits, all in pink slippers, and one of them is real. This is the most boring spot-the-difference ever."
+W3_TURM_MAX_0320,"Thirty men in corduroy suits, all in pink slippers, and one of them is real. I was already bad at spot-the-difference as a kid."
 W3_TURM_MAX_0325,They all turn their heads towards me at the same time. One of them is about to say my surname very slowly.
 W3_TURM_MAX_0330,"In code view they all say ""copy"". All except one. He's standing at the back pretending to be one too."
 W3_TURM_MAX_0340,"""Original."" There it is. On the one right at the back with the slightly crooked slipper. He's holding a file. Copies hold cups."
@@ -4979,13 +4982,14 @@ W3_TURM_MAX_0380,The cup. And I've got the cup.
 W3_TURM_MAX_0390,Cup. All agents: lunch break. Now.
 W3_TURM_MAX_0420,I just made a coffee cup the boss. And I bet it's better than the last one.
 W3_TURM_MAX_0440,"Sunglasses. Black, angular, important. Anyone looks like they have a secret in these. Even me."
-W3_TURM_MAX_0460,"A glowing file. Stamp: ""M.O.T.H.E.R., Department of Care and Pursuit."" Two words that should never appear in the same sentence."
+W3_TURM_MAX_0460,"A glowing file. Stamp: ""M.O.T.H.E.R., Department of Care and Pursuit."""
+W3_TURM_MAX_0460_2,"First they look after you, then they chase you?"
 W3_TURM_MAX_0470,"""Rule 1: Test subjects are to be protected. From everything. From everyone. From themselves."""
 W3_TURM_MAX_0470_2,"Up to ""from everything"" I still thought the rule was nice."
 W3_TURM_MAX_0480,"Behind it: reports about me. ""Test subject 48 stood in the rain and did nothing. Suspiciously human."" Deckert was right."
-W3_TURM_MAX_0490,"Now there are two originals, and both want to announce the lunch break. Nobody leaves, everybody argues. I've made it worse."
+W3_TURM_MAX_0490,"Now there are two originals, and both announce the lunch break at once. The clones look back and forth like at a tennis match."
 W3_TURM_MAX_0510,"The cup is wearing slippers now, and Schmidt is barefoot. He looks like he's lost everything, but it's just the shoes."
-W3_TURM_MAX_0520,"The plant is the original now. All the clones are listening to a plant. The plant says nothing. Good leadership, honestly."
+W3_TURM_MAX_0520,"The plant is the original now. All the clones stand around it, waiting for instructions. The plant is taking its time."
 W3_TURM_MAX_0530,No swaps left. And I can't get out of here.
 W3_TURM_MAX_0530_2,"But if I switch to Pixel for a moment and back, everything's reset. At least it saves me the stairs."
 W3_TURM_MAX_0550,No sending them on lunch break before they know who the boss is.
@@ -5002,7 +5006,7 @@ W3_TURM_NAR_0080,Max bends backwards in slow motion. The hole punch sails over h
 W3_TURM_NAR_0080_2,It trails a line of confetti. Max gets stuck in the pose.
 W3_TURM_NAR_0350,The cup lights up briefly. Schmidt looks down at himself.
 W3_TURM_PIX_0235,"Twelve identical plants. If I were there, I would dig in all twelve, just to see whether the soil is the same too."
-W3_TURM_PIX_0235_2,"That is not curiosity, that is science. Curiosity is for dogs."
+W3_TURM_PIX_0235_2,I call that science. Dogs are the curious ones.
 W3_TURM_PIX_0910,"Corridor. Door. Corridor. Door. I cannot see you, but I know what it looks like. I have lived in cardboard boxes that were more exciting."
 W3_TURM_PIX_0920,Your back. I can hear it from here. Putting your back out in a simulation. You are the first to manage that.
 W3_TURM_SCH_0010,"Mr Max, you walked through my door, and my door talks now, that was rude, of you, not of the door"
@@ -6480,12 +6484,12 @@ ZS3_DACH_MAX_0160,"Three out of four. The password is ""Cake123"". Right?"
 ZS3_DACH_MAX_0190,You did. Just now.
 ZS3_DACH_MAX_0220,"Egg, flour, batteries. Pixel, your list is starting to look like a shopping list."
 ZS3_DACH_MAX_0310,"Egg, flour and a glowing battery. All that's missing is a recipe. Haha. No, end of the world, I need to concentrate."
-ZS3_DACH_MAX_0315,"The cell hums, the flour trickles, the egg lies still. It's a band, and the egg is the drummer who never shows up to rehearsal."
+ZS3_DACH_MAX_0315,"The cell hums and the flour trickles. Only the egg just lies there, not moving. I think the egg is my favourite part of the plan."
 ZS3_DACH_MAX_0330,"The box is open, and seventeen remotes are peeking out like baby birds."
 ZS3_DACH_MAX_0335,"One fell out and switched the TV on. Seventeen of them, and the only one that works does it by accident."
 ZS3_DACH_MAX_0350,"Sunset. Over there I spent a week in the rain, and here the evening news isn't even over."
 ZS3_DACH_MAX_0355,"A plane flies past outside, and it seems really slow to me. I got used to the future way too fast."
-ZS3_DACH_MAX_0360,"Two rings, and now an exclamation mark next to it as well. The day is today. And today is nearly over."
+ZS3_DACH_MAX_0360,"Circled twice, and now an exclamation mark as well. That's today. Something's today, and I can't think what."
 ZS3_DACH_MAX_0365,The exclamation mark is drawn so hard the pen went through the paper. Next month has an appointment now too.
 ZS3_DACH_MAX_0390,"Channel 42. Kalle is waving, and Model 08/15 is wiping away the rain. Every single drop."
 ZS3_DACH_MAX_0395,"Model 08/15 waves with his mop, and I wave back. I've got a pen pal with a cleaning rota now."
@@ -6498,7 +6502,7 @@ ZS3_DACH_MAX_0430,"Grandpa's cookbook. The dog-eared page is open now, and it sa
 ZS3_DACH_MAX_0435,"There's a heart-shaped grease stain on the page. Cookbooks have feelings, apparently. Luckily I don't, I'm sixteen."
 ZS3_DACH_MAX_0450,"Grandpa, what exactly happens once the fourth thing is here?"
 ZS3_DACH_MAX_0470,"That sounds like a plan with stages, Grandpa. And I'm not sure I want to meet all of them."
-ZS3_DACH_MAX_0600,"Two pockets, last world. The bag won't budge. At least one of us up here hasn't changed."
+ZS3_DACH_MAX_0600,"Two pockets, last world. The bag is still tough. You can't say that about me any more after three worlds."
 ZS3_DACH_MAX_0630,Grandpa.
 ZS3_DACH_MAX_0660,Channel 999.
 ZS3_DACH_NAR_0010,"Ad break: glass of milk, cow, price tag, flash. Five seconds."
@@ -6520,7 +6524,7 @@ ZS3_DACH_OPA_0460_2,Or everything collapses and I have to move to another countr
 ZS3_DACH_OPA_0510,Last packing. Two pockets. After that you'll never need the bag again. I hope. I've done the sums.
 ZS3_DACH_OPA_0620,Channel 999. Someone … someone lost something there once. Someone or other. If you find it: it's mine. Someone's.
 ZS3_DACH_OPA_0640,Fourth item! Password! A scientist's word of honour! And if there's a man in a glitter jacket: don't sit down!
-ZS3_DACH_PIX_0020,"Milk three times. That is not an advert any more, that is a message."
+ZS3_DACH_PIX_0020,Milk three times. Not even I repeat myself that often when I am hungry.
 ZS3_DACH_PIX_0020_2,Somebody wants something bought in this house.
 ZS3_DACH_PIX_0120,"Strange, says Max. Suspicious, say I."
 ZS3_DACH_PIX_0120_2,"And statistically speaking, in this household I am the one who is right. I keep records."
@@ -6539,7 +6543,7 @@ ZS3_DACH_PIX_0380,"Fear, flour and now despair as well."
 ZS3_DACH_PIX_0380_2,"His nose would lie for him. Mine would not. Mine is incorruptible, except with salmon."
 ZS3_DACH_PIX_0415,"It hums. I hum too, but only when stroked, and even then only by arrangement."
 ZS3_DACH_PIX_0415_2,The lamp does it for free and for anyone. That is cheap.
-ZS3_DACH_PIX_0440,"Preheat. Remember that word. It will come back, and sooner than you would like."
+ZS3_DACH_PIX_0440,"Preheat. Remember the word. You will need it, and then you will think of me."
 ZS3_DACH_PIX_0480,With stages. And an oven door.
 ZS3_DACH_PIX_0480_2,"I am keeping quiet from now on. I have said far too much already, and nobody listened."
 ZS3_DACH_PIX_0520,The sunglasses of a man who never blinks.
