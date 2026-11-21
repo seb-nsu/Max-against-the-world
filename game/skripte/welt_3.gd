@@ -10,9 +10,10 @@ extends RefCounted
 ## ist, sind Max und Pixel getrennt: Der Figurenwechsel springt in den Raum der anderen Figur
 ## (W3_MAX_RAUM, W3_PIXEL_RAUM), und keiner steht neben dem anderen.
 ##
-## Code-Sicht (ab Rätsel 5): Benutzen auf einem Tauschobjekt öffnet die Auswahl der Tausche des
-## Raums. Tausche und Budget gelten nur, solange Max im Raum bleibt (_tausch, nie gespeichert);
-## gespeichert wird nur, ob das Rätsel gelöst ist.
+## Code-Sicht (ab Rätsel 5): Benutzen auf einem Tauschobjekt zeigt die Wörter des Raums; Max klickt
+## ein Wort an einem Objekt an, dann eins an einem anderen, und die beiden tauschen (zweistufige
+## Wahl, oberflaeche/code_sicht_wahl.gd). Tausche und Budget gelten nur, solange Max im Raum bleibt
+## (_tausch, nie gespeichert); gespeichert wird nur, ob das Rätsel gelöst ist.
 
 #region Konstanten ################################################################################
 const SIMULATION := ["stadtstrasse", "kueche_orakel", "buero_50"]
@@ -40,7 +41,7 @@ const TAUSCHE := {
 			"zeilen": ["W3_KAM1_NAR_0440", "W3_KAM1_MAX_0450", "W3_KAM1_NAR_0460", "W3_KAM1_MAX_0470",
 				"W3_KAM1_PIX_0480", "W3_KAM1_MUT_0490"]},
 		{"text": "UI_W3_TAUSCH_BERND_KUCHEN", "objekte": ["bernd", "pappkuchen"], "zeilen": ["W3_KAM1_MAX_0530"]},
-		{"text": "UI_W3_TAUSCH_BERND_EHRLICH", "objekte": ["bernd", "max"], "zeilen": ["W3_KAM1_MAX_0540"]},
+		{"text": "UI_W3_TAUSCH_BERND_EHRLICH", "objekte": ["bernd", "pappkuchen"], "zeilen": ["W3_KAM1_MAX_0540"]},
 		{"text": "UI_W3_TAUSCH_SCHALTER_MUEDE", "objekte": ["bodenschalter", "max"], "zeilen": ["W3_KAM1_MAX_0550"]},
 	],
 	"testkammer_2": [
@@ -69,7 +70,8 @@ const TAUSCHE := {
 const BUDGET := {"stadtstrasse": 2, "buero_50": 2, "testkammer_1": 2, "testkammer_2": 2,
 	"testkammer_3": 2, "kern": 1}
 const BUDGET_LEER := {"stadtstrasse": ["W3_TUER_MAX_0290"], "buero_50": ["W3_TURM_MAX_0530"],
-	"testkammer_1": ["W3_KAM1_MUT_0570"], "testkammer_2": ["W3_KAM1_MUT_0570"],
+	# Büro und Kammer 1 haben keinen offenen Ausgang: Die Zeilen nennen den Figurenwechsel (W3-R08-01)
+	"testkammer_1": ["W3_KAM1_MUT_0570", "W3_KAM1_PIX_0575"], "testkammer_2": ["W3_KAM1_MUT_0570"],
 	"testkammer_3": ["W3_KAM3_MAX_0250"], "kern": ["W3_KERN_MAX_0470"]}
 ## Zurücksetzen beim Wiederbetreten nach Fehltauschen
 const ZURUECK := {"stadtstrasse": "W3_TUER_MAX_0300", "buero_50": "W3_TURM_SCH_0540",
@@ -957,69 +959,188 @@ func benutzen_wassereimer(_obj, _x) -> bool:
 #endregion
 
 #region Code-Sicht und Tausche ######################################################################
-## Rätsel 5: Beim zweiten Ansehen der Tür am Glaseingang schaltet Max die Code-Sicht frei.
+## Rätsel 5: Beim zweiten Ansehen der Tür am Glaseingang schaltet Max die Code-Sicht frei und sieht
+## die Wörter gleich (Regie 0150–0180). Die Glasfläche gehört zur Tür: Ansehen des Ausgangs zählt
+## vor der Freischaltung mit (Review 20.11., W3-R06-01, ansehen_ausgang_buero_50()).
 func ansehen_tuer(_obj, _x) -> bool:
 	if _raum_id() != "stadtstrasse" or Zustand.ist("W3_CODE_SICHT"):
 		return false
 	if _einmal("W3_TUER_ANGESEHEN"):
 		return false
-	await _szene(["W3_TUER_MAX_0150", "W3_TUER_MAX_0160", "W3_TUER_MAX_0170"])
+	await _sag("W3_TUER_MAX_0150")
 	Zustand.setze("W3_CODE_SICHT")
+	_code_frisch = true
+	await _code_sicht("tuer")
 	return true
 
 
-## Code-Sicht im Raum: Auswahl der Tausche. true, wenn die Code-Sicht offen war.
-func _code_sicht(oid: String) -> bool:
+## Die Glastür ist zugleich der Ausgang zum Büroturm; vor der Freischaltung zählt ihr Ansehen wie
+## das der Tür (erstes Mal die Zeile des Ausgangs, zweites Mal die Freischaltung).
+func ansehen_ausgang_buero_50(obj, x) -> bool:
+	if _raum_id() != "stadtstrasse" or Zustand.ist("W3_CODE_SICHT"):
+		return false
+	return await ansehen_tuer(obj, x)
+
+
+## Sprechanlage der Glastür (Klickfläche kommt mit dem Layout, siehe AP-02-Antwort): wie die Tür.
+func ansehen_sprechanlage(obj, x) -> bool:
+	return await ansehen_ausgang_buero_50(obj, x)
+
+
+## Code-Sicht im Raum: Wörter zeigen, zwei wählen lassen, tauschen (W3-03, zweistufige Wahl statt
+## einer Liste fertiger Tauschsätze). true, wenn die Code-Sicht zuständig war.
+##
+## Ein Paar mit eigenem Eintrag in TAUSCHE spielt dessen Zeilen (Lösung oder Fehltausch mit Pointe).
+## Jedes andere Paar aus zwei Objekten ist auch ein Tausch: Es kostet einen Versuch und zählt als
+## Fehltausch, Max sagt die allgemeine Zeile 0390. Begründung: Laut Rätseldoku kann Max beliebige
+## Eigenschaften zwischen zwei Dingen tauschen, und jeder Tausch kostet Budget; ein kostenloses
+## Durchprobieren würde die Paare mit Pointe (und damit die Lösung) verraten. Kostenlos und ohne
+## Tausch bleiben nur zwei Wörter am selben Objekt (0400) und das Zurücktauschen eines schon gelösten
+## Paares in Kammer 3 (0410). Etiketten bleiben nach Fehltauschen, wie sie waren (wie bisher die
+## Liste); nach einem Lösungstausch in Kammer 3 stehen die beiden Wörter am neuen Objekt.
+func _code_sicht(_oid: String) -> bool:
 	var rid := _raum_id()
 	if not Zustand.ist("W3_CODE_SICHT") or _raum_geloest():
 		return false
-	if rid == "kern":
-		if not Zustand.geloest("R10") or Zustand.ist("W3_ZELLE_KALT"):
-			return false
-		if _einmal("W3_CODE_KERN"):
-			await _sag("W3_KERN_MAX_0430")
-	match rid:
-		"stadtstrasse":
-			if _einmal("W3_CODE_TUTORIAL"):
-				await _sag("W3_TUER_MAX_0180")
-		"buero_50":
-			if _einmal("W3_CODE_KLONE"):
-				await _szene(["W3_TURM_MAX_0330", "W3_TURM_MAX_0340"])
-		"testkammer_1":
-			if _einmal("W3_CODE_KAM1"):
-				await _sag("W3_KAM1_MAX_0430")
-		"testkammer_2":
-			if _hat("gummihuhn") and _einmal("W3_CODE_KAM2"):
-				await _sag("W3_KAM2_MAX_0080")
+	if rid == "kern" and (not Zustand.geloest("R10") or Zustand.ist("W3_ZELLE_KALT")):
+		return false
+	if _code_offen:
+		return true   # zweiter Klick, während die Code-Sicht schon offen ist
 	if _tausch.get("budget", 0) <= 0:
 		await _szene(BUDGET_LEER.get(rid, []))
 		return true
-	var liste: Array = TAUSCHE.get(rid, []).filter(func(t):
-		return (not t.has("braucht") or _hat(t.braucht)) and not t.get("loesung", "") in _tausch.geloest)
-	var texte: Array = liste.map(func(t): return t.text)
-	texte.append("UI_W3_CODE_SICHT_AUS")
+	_code_offen = true
 	Klang.geraeusch("code_sicht")  # Code-Sicht an
-	_code_sicht_zeigen(rid)
-	var w := await Spiel.auswahl(texte)
-	_code_sicht_weg()
-	if w < 0 or w >= liste.size():
-		Klang.geraeusch("code_sicht")  # und wieder aus
-		return true
-	await _tauschen(rid, liste[w])
+	_code_sicht_zeigen(rid, true)   # Wörter außerhalb des Bildausschnitts an den Rand holen
+	var erst := _code_einfuehrung(rid)
+	if not erst.is_empty():
+		await _szene(erst)
+	while is_instance_valid(_code_wahl):
+		Spiel.in_szene += 1   # Figurenwechsel und Zurufe ruhen, Controller rastet nur auf Wörtern ein
+		var wahl: Array = await _code_wahl.waehlen()
+		Spiel.in_szene -= 1
+		if wahl.is_empty():
+			_code_sicht_weg()
+			Klang.geraeusch("code_sicht")  # und wieder aus
+			break
+		var a: Dictionary = _code_woerter[wahl[0]]
+		var b: Dictionary = _code_woerter[wahl[1]]
+		if a.oid == b.oid:
+			await _sag("W3_TUER_MAX_0400")
+			continue
+		if _code_zurueck(rid, a, b):
+			await _sag("W3_TUER_MAX_0410")
+			continue
+		Telemetrie.auswahl("%s:%s ↔ %s:%s" % [a.oid, a.wort, b.oid, b.wort], 0)
+		_code_sicht_weg()
+		var t := _code_tausch(rid, a, b)
+		await _tauschen(rid, t if not t.is_empty() else {"zeilen": ["W3_TUER_MAX_0390"]})
+		break
+	_code_offen = false
+	_code_frisch = false
 	return true
+
+
+## Zeilen beim ersten Öffnen je Raum, gesprochen, während die Wörter schon zu sehen sind.
+func _code_einfuehrung(rid: String) -> Array:
+	match rid:
+		"stadtstrasse":
+			if _einmal("W3_CODE_TUTORIAL"):
+				# 0160/0170 nur direkt nach der Freischaltung (alte Spielstände haben sie schon gehört)
+				return (["W3_TUER_MAX_0160", "W3_TUER_MAX_0170"] if _code_frisch else []) + ["W3_TUER_MAX_0180"]
+		"buero_50":
+			if _einmal("W3_CODE_KLONE"):
+				return ["W3_TURM_MAX_0330", "W3_TURM_MAX_0340"]
+		"testkammer_1":
+			if _einmal("W3_CODE_KAM1"):
+				return ["W3_KAM1_MAX_0430"]
+		"testkammer_2":
+			if _hat("gummihuhn") and _einmal("W3_CODE_KAM2"):
+				return ["W3_KAM2_MAX_0080"]
+		"kern":
+			if _einmal("W3_CODE_KERN"):
+				return ["W3_KERN_MAX_0430"]
+	return []
+
+
+## Wörter des Raums aus den Tauschtexten („Tür: verschlossen ↔ Schmidt: gesprächig“, also auch auf
+## Englisch): je Wort {oid (wo es gerade hängt), von (wo es herkommt), wort, name}. Gelöste Tausche
+## in Kammer 3 stehen vertauscht.
+func _code_woerter_lesen(rid: String) -> Array:
+	var liste := []
+	var gesehen := {}
+	for t: Dictionary in TAUSCHE.get(rid, []):
+		var haelften := tr(t.text).split("↔")
+		for i in mini(haelften.size(), t.get("objekte", []).size()):
+			var teil := haelften[i].split(":")
+			var oid: String = t.objekte[i]
+			var wort := teil[teil.size() - 1].strip_edges()
+			if gesehen.has(oid + "|" + wort):
+				continue
+			gesehen[oid + "|" + wort] = true
+			liste.append({"oid": oid, "von": oid, "wort": wort, "name": teil[0].strip_edges()})
+	for t: Dictionary in TAUSCHE.get(rid, []):
+		if t.get("loesung", "") in _tausch.get("geloest", []):
+			var paar := _code_paar(t)
+			for w: Dictionary in liste:
+				if w.von == paar[0].oid and w.wort == paar[0].wort:
+					w.oid = paar[1].oid
+				elif w.von == paar[1].oid and w.wort == paar[1].wort:
+					w.oid = paar[0].oid
+	return liste
+
+
+## Die beiden Wörter eines Tauschs: [{oid, wort}, {oid, wort}]
+func _code_paar(t: Dictionary) -> Array:
+	var haelften := tr(t.text).split("↔")
+	var paar := []
+	for i in 2:
+		var teil := haelften[i].split(":")
+		paar.append({"oid": t.objekte[i], "wort": teil[teil.size() - 1].strip_edges()})
+	return paar
+
+
+## Eintrag in TAUSCHE für zwei gewählte Wörter (an ihren jetzigen Objekten), sonst {}.
+func _code_tausch(rid: String, a: Dictionary, b: Dictionary) -> Dictionary:
+	for t: Dictionary in TAUSCHE.get(rid, []):
+		if t.get("loesung", "") in _tausch.get("geloest", []):
+			continue
+		var p := _code_paar(t)
+		var passt := func(x: Dictionary, y: Dictionary) -> bool:
+			return x.oid == y.oid and x.wort == y.wort
+		if (passt.call(a, p[0]) and passt.call(b, p[1])) or (passt.call(a, p[1]) and passt.call(b, p[0])):
+			return t
+	return {}
+
+
+## Die zwei Wörter eines schon gelösten Tauschs zurücktauschen?
+func _code_zurueck(rid: String, a: Dictionary, b: Dictionary) -> bool:
+	for t: Dictionary in TAUSCHE.get(rid, []):
+		if not t.get("loesung", "") in _tausch.get("geloest", []):
+			continue
+		var p := _code_paar(t)
+		var ids := [a.von + "|" + a.wort, b.von + "|" + b.wort]
+		if p[0].oid + "|" + p[0].wort in ids and p[1].oid + "|" + p[1].wort in ids:
+			return true
+	return false
 
 
 ## Code-Sicht als Bild (grafik/welt-3.md): der Hintergrund als grüne Umrisse
 ## (tools/grafik_w3/code_sicht.py) über dem Hintergrund und unter den Figuren, die Figuren grün
-## getönt, an jedem Tauschobjekt ein Etikett mit seinen Wörtern. Die Wörter kommen aus den
-## Texten der Tausche („Tür: verschlossen ↔ Schmidt: gesprächig“), also auch auf Englisch.
+## getönt, an jedem Tauschobjekt die Wörter als Knöpfe (oberflaeche/code_sicht_wahl.gd).
+## Gegenstände, die ein Tausch braucht, sind nur in Max' Tasche wählbar; im Raum steht ihr Etikett
+## ausgegraut (wie früher: zu sehen, aber nicht in der Auswahl).
 const CODE_SICHT_BILD := "res://grafik/oberflaeche/code_sicht/%s.png"
-const CODE_GRUEN := Color("63ff7a")
-var _code_ebene: Node2D = null
+const CODE_WAHL := "res://oberflaeche/code_sicht_wahl.gd"
+var _code_wahl: Node = null
+var _code_woerter: Array = []
 var _code_toenung := {}
+var _code_offen := false
+## Die Code-Sicht öffnet sich direkt nach der Freischaltung (für die Einführungszeilen 0160/0170)
+var _code_frisch := false
 
 
-func _code_sicht_zeigen(rid: String) -> void:
+func _code_sicht_zeigen(rid: String, am_rand := false) -> void:
 	_code_sicht_weg()
 	var raum := R.current
 	if not is_instance_valid(raum) or not raum.has_node("Props/Background"):
@@ -1031,42 +1152,56 @@ func _code_sicht_zeigen(rid: String) -> void:
 		bild.texture = load(CODE_SICHT_BILD % rid)
 		bild.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
 		bild.modulate.a = 0.92
+		bild.centered = false
 		bg.add_child(bild)  # über dem Hintergrund, unter Figuren und Props
-		bild.global_position = bg.global_position
-		bild.centered = true
+		# Am Sprite des Hintergrunds ausrichten, nicht am Prop-Knoten: Popochiu setzt den Knoten auf
+		# seine Baseline (y 0) und das Sprite darunter auf y 180 (Review 20.11., W3-02, L-S08).
+		bild.global_position = _bild_oben_links(bg)
 	for c in raum.get_characters():
 		_code_toenung[c] = c.modulate
 		c.modulate = Color(0.45, 1.0, 0.55, c.modulate.a)
-	_code_ebene = Node2D.new()
-	_code_ebene.name = "CodeEtiketten"
-	_code_ebene.z_index = 100
-	raum.add_child(_code_ebene)
-	# Wörter je Objekt aus den Tauschtexten
-	var woerter := {}
-	var namen := {}
+	_code_wahl = (load(CODE_WAHL) as GDScript).new()
+	_code_wahl.name = "CodeSichtWahl"
+	_code_wahl.am_rand = am_rand
+	Spiel.add_child(_code_wahl)
+	_code_woerter = []
+	var reihen := {}   # oid → [Wörter], in der Reihenfolge der Tausche
+	var namen := {}    # oid → Name aus dem Tauschtext („Omas Kekse“)
+	for w: Dictionary in _code_woerter_lesen(rid):
+		if not reihen.has(w.oid):
+			reihen[w.oid] = []
+		reihen[w.oid].append(w)
+		namen[w.von] = w.name
+	var braucht := {}
 	for t: Dictionary in TAUSCHE.get(rid, []):
-		var haelften := tr(t.text).split("↔")
-		for i in mini(haelften.size(), t.get("objekte", []).size()):
-			var teil := haelften[i].split(":")
-			var oid: String = t.objekte[i]
-			var wort := teil[teil.size() - 1].strip_edges()
-			namen[oid] = teil[0].strip_edges()
-			if not woerter.has(oid):
-				woerter[oid] = []
-			if not wort in woerter[oid]:
-				woerter[oid].append(wort)
+		if t.has("braucht"):
+			braucht[t.braucht] = true
 	var max_versatz := 0.0
-	for oid: String in woerter:
-		var text := " ".join(woerter[oid].map(func(w): return "[%s]" % w))
+	for oid: String in reihen:
 		var ort := _code_ort(raum, oid)
+		var praefix := ""
+		var aktiv := not braucht.has(oid) or _hat(oid)
 		if ort == Vector2.INF:
 			if not _hat(oid):
 				continue
 			# Gegenstand in Max' Tasche: Etikett neben Max
 			ort = _code_ort(raum, "max") + Vector2(0, -14.0 - max_versatz)
 			max_versatz += 14.0
-			text = "%s: %s" % [namen[oid], text]
-		_code_etikett(text, ort)
+			praefix = namen.get(oid, reihen[oid][0].name)
+		var eintraege := []
+		for w: Dictionary in reihen[oid]:
+			eintraege.append({"oid": oid, "wort": w.wort, "aktiv": aktiv})
+			_code_woerter.append(w)
+		_code_wahl.reihe(eintraege, ort, praefix)
+	_code_wahl.anordnen(raum.width if "width" in raum else 640.0)
+
+
+## Obere linke Ecke des Hintergrundbilds in Weltkoordinaten (Sprite2D des Background-Props).
+func _bild_oben_links(bg: Node2D) -> Vector2:
+	var sp := bg.get_node_or_null("Sprite2D") as Sprite2D
+	if sp == null or sp.texture == null:
+		return bg.global_position
+	return sp.to_global(sp.get_rect().position)
 
 
 ## Oberkante (Mitte) eines Objekts im Raum: Figur, Hotspot oder Prop; INF, wenn nicht da.
@@ -1087,32 +1222,10 @@ func _code_ort(raum: CQRaum, oid: String) -> Vector2:
 	return Vector2.INF
 
 
-func _code_etikett(text: String, ort: Vector2) -> void:
-	var l := Label.new()
-	l.text = text
-	l.theme = load("res://game/gui/resources/gui_theme.tres")
-	l.add_theme_font_size_override("font_size", 8)
-	l.add_theme_color_override("font_color", CODE_GRUEN)
-	var kasten := StyleBoxFlat.new()
-	kasten.bg_color = Color(0.02, 0.07, 0.04, 0.85)
-	kasten.border_color = CODE_GRUEN
-	kasten.set_border_width_all(1)
-	kasten.content_margin_left = 3
-	kasten.content_margin_right = 3
-	kasten.content_margin_top = 1
-	kasten.content_margin_bottom = 1
-	l.add_theme_stylebox_override("normal", kasten)
-	l.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	_code_ebene.add_child(l)
-	l.reset_size()
-	var raum_breite: float = R.current.width if "width" in R.current else 640.0
-	l.position = Vector2(clampf(ort.x - l.size.x / 2.0, 2.0, raum_breite - l.size.x - 2.0), maxf(ort.y - l.size.y, 2.0))
-
-
 func _code_sicht_weg() -> void:
-	if is_instance_valid(_code_ebene):
-		_code_ebene.queue_free()
-	_code_ebene = null
+	if is_instance_valid(_code_wahl):
+		_code_wahl.queue_free()
+	_code_wahl = null
 	if is_instance_valid(R.current) and R.current.has_node("Props/Background/CodeSicht"):
 		R.current.get_node("Props/Background/CodeSicht").queue_free()
 	for c in _code_toenung:
@@ -1312,12 +1425,19 @@ func _kabel_stecken() -> bool:
 #endregion
 
 #region Rätsel 13: Kalles Morse-Tabelle ############################################################
+## Läuft die Szene schon (zweiter Klick auf die Tasse währenddessen), nichts ein zweites Mal starten.
+var _r13_laeuft := false
+
+
 func benutzen_kalles_tasse(_obj, _x) -> bool:
+	if _r13_laeuft:
+		return true
 	if Zustand.geloest("R13"):
 		return false
 	if not Spiel.ist_pixel():
 		await _sag("W3_PIEP_MAX_0270")
 		return true
+	_r13_laeuft = true
 	await _szene(["W3_PIEP_PIX_0010", "W3_PIEP_KAL_0020", "W3_PIEP_NAR_0030", "W3_PIEP_KAL_0040",
 		"W3_PIEP_NAR_0050", "W3_PIEP_PIE_0060", "W3_PIEP_PIX_0070", "W3_PIEP_KAL_0080",
 		"W3_PIEP_PIX_0090", "W3_PIEP_PIE_0100", "W3_PIEP_PIX_0110", "W3_PIEP_OPA_0120",
@@ -1326,6 +1446,7 @@ func benutzen_kalles_tasse(_obj, _x) -> bool:
 	await _geben("morse_tabelle")  # in Max' Inventar, auch wenn er in der Kapsel liegt
 	await _szene(["W3_PIEP_PIX_0200", "W3_PIEP_KAL_0210"])
 	Zustand.loese("R13")
+	_r13_laeuft = false
 	return true
 
 

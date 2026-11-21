@@ -3,7 +3,8 @@ extends SceneTree
 ## geht über die Funktion, die Popochiu bei einem Klick aufruft (on_click(), on_right_click(),
 ## on_item_used() an Hotspot, Prop, Figur oder Gegenstand), mit der Spielfigur, die das im Spiel tut.
 ## Gespräche laufen über das Gesprächsmenü (nur sichtbare Optionen, Klick auf die Option im Menü),
-## Auswahlmenüs (Test, Bestellung, Code-Sicht, Kabel) über das Inline-Menü, Raumwechsel über die
+## Auswahlmenüs (Test, Bestellung, Kabel) über das Inline-Menü, die Code-Sicht über echte Mausklicks
+## auf die Wort-Etiketten (zweistufige Wahl, W3-03), Raumwechsel über die
 ## Ausgänge, der Figurenwechsel über Pixels Porträt. Review 20.11. (W3-01, W3-R01-01, L-S01): Der
 ## alte Test rief die Regeln direkt auf und übersah so zwei harte Sackgassen.
 ##
@@ -109,13 +110,23 @@ func _durchlauf() -> void:
 	_pruefe(Z.geloest("R3b") and Z.wert("W3_EBENE") == "simulation", "R3b in der Simulation")
 	_pruefe(not _hat("blaue_pastille"), "Die blaue Pastille bleibt nach der Wahl zurück (W3-R02-03)")
 
-	# R5: Code-Sicht an der Tür (zweimal ansehen), dann tauschen
-	await _ansehen("tuer")
-	await _ansehen("tuer")
-	_pruefe(Z.ist("W3_CODE_SICHT"), "Code-Sicht frei")
-	_inline = [0]
-	await _klick("tuer")
-	_pruefe(Z.geloest("R5"), "R5 gesprächige Tür")
+	# R5: Die Glasfläche (Ausgang zum Büroturm) zählt wie die Tür (W3-R06-01): zweimal ansehen schaltet
+	# frei, und die Code-Sicht öffnet sich gleich. Per Maus (W3-03): zwei Wörter am selben Ding kosten
+	# nichts, Rechtsklick nimmt das erste Wort zurück, dann ein Fehltausch mit Pointe (grau ↔ rot).
+	_leeren()
+	await _ansehen("ausgang_buero_50")
+	_pruefe(_gesagt("W3_SIM_MAX_0260") and not Z.ist("W3_CODE_SICHT"), "Glasfläche, erstes Mal: Zeile des Ausgangs")
+	await _code_sicht(func(): await _objekt("ausgang_buero_50").on_right_click(),
+		["tuer:verschlossen", "rechts", "tuer:verschlossen", "tuer:grau", "tuer:grau", "auto:rot"])
+	_pruefe(Z.ist("W3_CODE_SICHT") and _gesagt("W3_TUER_MAX_0150") and _gesagt("W3_TUER_MAX_0180"),
+		"Glasfläche, zweites Mal: Code-Sicht frei und gleich offen, mit Einführung")
+	_pruefe(_gesagt("W3_TUER_MAX_0400") and _gesagt("W3_TUER_MAX_0250") and not Z.geloest("R5")
+		and _spiel().regeln()._tausch.budget == 1, "Code-Sicht per Maus: selbes Ding kostenlos, Fehltausch grau ↔ rot kostet")
+	# Wieder öffnen (Tür benutzen), mit Esc schließen: kostet nichts
+	await _code_sicht(func(): await _objekt("tuer").on_click(), ["esc"])
+	_pruefe(_spiel().regeln()._tausch.budget == 1 and _spiel().regeln()._code_wahl == null, "Esc schließt die Code-Sicht")
+	await _code_sicht(func(): await _objekt("tuer").on_click(), ["schmidt:gesprächig", "tuer:verschlossen"])
+	_pruefe(Z.geloest("R5"), "R5 gesprächige Tür (gesprächig an Schmidt, dann verschlossen an der Tür)")
 	var klaenge: Array = root.get_node("Klang").protokoll
 	_pruefe("geraeusch/code_sicht" in klaenge and "geraeusch/glitch" in klaenge, "Ton: Code-Sicht und Tausch")
 	_pruefe("atmo/regen_strasse" in klaenge and "atmo/keine" in klaenge, "Ton: Regen in der Unterstadt, die Simulation ohne Atmosphäre")
@@ -167,9 +178,8 @@ func _durchlauf() -> void:
 	await _klick("kaffeetasse")
 	_pruefe(_hat("kaffeetasse"), "Kaffeetasse genommen")
 	_pruefe(H.schritt_waehlen() == "R6a", "Pfote im Büroturm: R6a (W3-04), gewählt: " + H.schritt_waehlen())
-	_inline = [0]
-	await _klick("klone")
-	_pruefe(Z.geloest("R6a"), "R6a Original und Kopie")
+	await _code_sicht(func(): await _objekt("klone").on_click(), ["schmidt:Original", "kaffeetasse:Kopie"])
+	_pruefe(Z.geloest("R6a"), "R6a Original und Kopie (Tasse in der Tasche, Wort neben Max)")
 	await _inv_benutzen("kaffeetasse")
 	_pruefe(Z.geloest("R6b") and _hat("schmidts_akte") and not Z.ist("W3_REGEL_1"),
 		"R6b Mittagspause, die Akte noch ungelesen")
@@ -250,8 +260,22 @@ func _durchlauf() -> void:
 	await _inv_benutzen("portalgeraet")
 	_pruefe(_hat("portalgeraet") and Z.ist("W3_PORTAL_BENUTZT"), "Portalgerät")
 	_pruefe(H.schritt_waehlen() == "R9b", "Pfote in Kammer 1: R9b (W3-04), gewählt: " + H.schritt_waehlen())
-	_inline = [0]
+	# Zwei Fehlversuche (einer ohne eigene Pointe, kostet trotzdem), dann nennen M.U.T.T.I. und Pixel
+	# den Rücksetzweg (W3-R08-01): zu Pixel wechseln und zurück.
+	_leeren()
+	await _code_sicht(func(): await _objekt("bernd").on_click(), ["pappkuchen:Pappe", "max:müde"])
+	_pruefe(_gesagt("W3_TUER_MAX_0390") and not Z.geloest("R9b"), "Kammer 1: Paar ohne eigene Zeile, allgemeine Zeile")
+	await _code_sicht(func(): await _objekt("bernd").on_click(), ["bernd:schwer", "pappkuchen:Pappe"])
+	_pruefe(_gesagt("W3_KAM1_MAX_0530") and _gesagt("W3_KAM1_MUT_0570") and _gesagt("W3_KAM1_PIX_0575"),
+		"Kammer 1: Budget leer, Pixel nennt den Figurenwechsel")
+	_leeren()
 	await _klick("bernd")
+	_pruefe(_gesagt("W3_KAM1_PIX_0575") and _spiel().regeln()._code_wahl == null, "Budget leer: keine Code-Sicht, nur die Zeilen")
+	await _wechsel_zu("Pixel", "widerstandsbasis")
+	_leeren()
+	await _wechsel_zu("Max", "testkammer_1")
+	_pruefe(_gesagt("W3_KAM1_MUT_0560") and _spiel().regeln()._tausch.budget == 2, "Kammer 1: nach dem Wechsel zurückgesetzt")
+	await _code_sicht(func(): await _objekt("bernd").on_click(), ["bernd:schwer", "max:leicht"])
 	_pruefe(Z.geloest("R9b"), "R9b Kammer 1")
 	# Pixel holt Max aus dem Labor: Fenster bleibt offen, solange die Zelle drüben glüht (W3-R03-06)
 	await _wechsel_zu("Pixel", "widerstandsbasis")
@@ -274,15 +298,14 @@ func _durchlauf() -> void:
 	await _ansehen("kritzelei")
 	await _klick("gummihuhn")
 	_pruefe(_hat("gummihuhn"), "Gummihuhn genommen")
-	_inline = [0]
-	await _klick("laser")
+	await _code_sicht(func(): await _objekt("laser").on_click(), ["laser:tödlich", "gummihuhn:harmlos"])
 	_pruefe(Z.geloest("R9c") and Z.ist("W3_REGEL_3"), "R9c Kammer 2, Regel 3")
 	await _ausgang("testkammer_3")
-	_inline = [0]
-	await _klick("tuer")
-	_inline = [0]
-	await _klick("bernd")
-	_pruefe(Z.geloest("R9d"), "R9d Kammer 3")
+	await _code_sicht(func(): await _objekt("tuer").on_click(), ["tuer:verschlossen", "lautsprecher:gesprächig"])
+	# Nach dem ersten Lösungstausch stehen die Wörter vertauscht; zurücktauschen kostet nichts
+	await _code_sicht(func(): await _objekt("bernd").on_click(),
+		["tuer:gesprächig", "lautsprecher:verschlossen", "bernd:schwer", "gummihuhn:leicht"])
+	_pruefe(_gesagt("W3_TUER_MAX_0410") and Z.geloest("R9d"), "R9d Kammer 3 (Zurücktauschen abgewiesen, dann schwer ↔ leicht)")
 
 	# R10 und R11: Kern. Erst mit ungelesener Akte (W3-R12-02), dann lesen und das Paradoxon
 	await _ausgang("kern")
@@ -299,8 +322,7 @@ func _durchlauf() -> void:
 	_pruefe(Z.geloest("R10"), "R10 Paradoxon")
 	# Code-Sicht an der Zelle: „heiß“ gegen „kalt“ (Kekse). Danach nimmt Max die kalte Zelle im selben
 	# Klick, und der Abschluss wechselt den Raum: darum ohne Warten auf den Klick.
-	_inline = [0]
-	_klick_ohne_warten("energiezelle")
+	_code_sicht(func(): await _objekt("energiezelle").on_click(), ["energiezelle:heiß", "omas_kekse:kalt"], false)
 	await _warte_bis(func(): return Z.ist("W3_ZELLE_KALT"), 20.0)
 	_pruefe(Z.ist("W3_ZELLE_KALT") and Z.ist("W3_KEKSE_WARM"), "Zelle kalt, Kekse ofenwarm")
 	await _warte_bis(func(): return Z.geloest("R11") or (_raum_id() == "kern" and _spiel().in_szene == 0), 20.0)
@@ -524,6 +546,79 @@ func _option_klicken(opt: PopochiuDialogOption) -> void:
 		m._on_option_clicked(opt)
 	else:
 		_d().option_selected.emit(opt)
+
+
+## Code-Sicht per Maus (W3-03): ausloeser öffnet sie (Klick oder Ansehen), dann je Schritt ein echter
+## Maus- oder Tastenklick an den Viewport: „oid:wort“ Linksklick auf das Wort, „rechts“ Rechtsklick,
+## „esc“ die Taste Esc. Vor jedem Schritt wartet der Test, bis die Wahl offen ist.
+func _code_sicht(ausloeser: Callable, schritte: Array, warten := true) -> void:
+	var fertig := [false]
+	var lauf := func():
+		await ausloeser.call()
+		fertig[0] = true
+	lauf.call()
+	for s: String in schritte:
+		await _warte_bis(func(): return _code_wahl_offen() or fertig[0], 20.0)
+		if not _code_wahl_offen():
+			_fehler("Code-Sicht: Wahl nicht offen vor „%s“ (%s)" % [s, _raum_id()])
+			return
+		for i in 2:
+			await process_frame
+		match s:
+			"rechts":
+				_maus(MOUSE_BUTTON_RIGHT, Vector2(320, 200))
+			"esc":
+				for gedrueckt in [true, false]:
+					var k := InputEventKey.new()
+					k.keycode = KEY_ESCAPE
+					k.physical_keycode = KEY_ESCAPE
+					k.pressed = gedrueckt
+					root.push_input(k, true)
+			_:
+				var knopf := _code_knopf(s)
+				if knopf == null:
+					_fehler("Code-Sicht: Wort „%s“ nicht wählbar in %s" % [s, _raum_id()])
+					return
+				_maus(MOUSE_BUTTON_LEFT, knopf.get_global_rect().get_center())
+		for i in 2:
+			await process_frame
+	if warten:
+		if not await _warte_bis(func(): return fertig[0], 30.0):
+			_fehler("Code-Sicht: bleibt nach %s offen (%s)" % [schritte, _raum_id()])
+		await _ruhe()
+
+
+func _code_wahl_offen() -> bool:
+	var w = _spiel().regeln()._code_wahl
+	return is_instance_valid(w) and w.waehlt()
+
+
+## Knopf des Worts „oid:wort“ in der offenen Code-Sicht (nur aktive Knöpfe)
+func _code_knopf(s: String) -> Button:
+	var w = _spiel().regeln()._code_wahl
+	if not is_instance_valid(w):
+		return null
+	var teil := s.split(":")
+	for e: Dictionary in w.woerter:
+		if e.oid == teil[0] and e.wort == teil[1] and not e.knopf.disabled and e.knopf.is_visible_in_tree():
+			return e.knopf
+	return null
+
+
+## Mausklick (drücken, loslassen) an eine Stelle des Viewports, wie Controller.gd ihn schickt.
+func _maus(knopf: MouseButton, pos: Vector2) -> void:
+	var bewegung := InputEventMouseMotion.new()
+	bewegung.position = pos
+	bewegung.global_position = pos
+	root.push_input(bewegung, true)
+	for gedrueckt in [true, false]:
+		var k := InputEventMouseButton.new()
+		k.button_index = knopf
+		k.pressed = gedrueckt
+		k.position = pos
+		k.global_position = pos
+		k.button_mask = (MOUSE_BUTTON_MASK_LEFT if knopf == MOUSE_BUTTON_LEFT else MOUSE_BUTTON_MASK_RIGHT) if gedrueckt else 0
+		root.push_input(k, true)
 
 
 ## Inline-Menü (Spiel.auswahl): die nächste Vorgabe wählen, wie ein Klick im Menü.

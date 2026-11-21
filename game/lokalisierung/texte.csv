@@ -615,6 +615,7 @@ UI_OBJ_DAMPFGITTER,Dampfgitter,Steam grate
 UI_OBJ_DATENANSCHLUSS,Datenanschluss,Data port
 UI_OBJ_DECKENLAMPE,Deckenlampe,Ceiling lamp
 UI_OBJ_DECKERT,Deckert,Deckert
+UI_OBJ_EINGANG,Eingang,Entrance
 UI_OBJ_ENDLOS_TREPPE,Endlos-Treppe,Endless staircase
 UI_OBJ_ENERGIEZELLE,Ewige Energiezelle,Eternal energy cell
 UI_OBJ_FARBCODE_AN_DER_WAND,Farbcode an der Wand,Colour code on the wall
@@ -722,7 +723,7 @@ UI_W3_TAUSCH_HAUSSCHUHE_TASSE,Schmidt: Hausschuhe ↔ Kaffeetasse: leer,Schmidt:
 UI_W3_TAUSCH_ORIGINAL_PFLANZE,Schmidt: Original ↔ Topfpflanze: gleich,Schmidt: original ↔ Potted plant: identical
 UI_W3_TAUSCH_BERND_MAX,Bernd: schwer ↔ Max: leicht,Bernd: heavy ↔ Max: light
 UI_W3_TAUSCH_BERND_KUCHEN,Bernd: schwer ↔ Pappkuchen: Pappe,Bernd: heavy ↔ Cardboard cake: cardboard
-UI_W3_TAUSCH_BERND_EHRLICH,Bernd: treu ↔ Max: ehrlich,Bernd: loyal ↔ Max: honest
+UI_W3_TAUSCH_BERND_EHRLICH,Bernd: treu ↔ Pappkuchen: ehrlich,Bernd: loyal ↔ Cardboard cake: honest
 UI_W3_TAUSCH_SCHALTER_MUEDE,Bodenschalter: ungedrückt ↔ Max: müde,Floor switch: unpressed ↔ Max: tired
 UI_W3_TAUSCH_LASER_HUHN,Laser: tödlich ↔ Gummihuhn: harmlos,Laser: deadly ↔ Rubber chicken: harmless
 UI_W3_TAUSCH_LASER_FARBE,Laser: rot ↔ Gummihuhn: gelb,Laser: red ↔ Rubber chicken: yellow
@@ -736,7 +737,8 @@ UI_W3_TAUSCH_LAUTSPRECHER_BERND,Lautsprecher: gesprächig ↔ Bernd: schwer,Spea
 UI_W3_TAUSCH_TUER_HUHN,Tür: verschlossen ↔ Gummihuhn: leicht,Door: locked ↔ Rubber chicken: light
 UI_W3_TAUSCH_ZELLE_KEKSE,Energiezelle: heiß ↔ Omas Kekse: kalt,Energy cell: hot ↔ Granny's biscuits: cold
 UI_W3_TAUSCH_ZELLE_MAX,Energiezelle: heiß ↔ Max: müde,Energy cell: hot ↔ Max: tired
-UI_W3_CODE_SICHT_AUS,Code-Sicht schließen,Close code sight
+UI_W3_CODE_WAHL_1,Code-Sicht: ein Wort anklicken · Rechtsklick schließt,Code view: click a word · right-click closes
+UI_W3_CODE_WAHL_2,„%s“ tauschen mit … · Rechtsklick: anderes Wort,Swap “%s” with … · right-click: other word
 UI_W3_REGEL_1,Regel 1 vorhalten,Quote rule 1
 UI_W3_REGEL_2,Regel 2 vorhalten,Quote rule 2
 UI_W3_REGEL_3,Regel 3 vorhalten,Quote rule 3
@@ -4628,7 +4630,8 @@ W3_TUER_MAX_0140,"Zu, natürlich. Und er redet immer noch. Er hat nicht mal geme
 W3_TUER_MAX_0150,"Moment. Wenn ich die Augen zusammenkneife … Da hängen Wörter dran. An der Tür, an ihm, in grün, wie Preisschilder.","Hang on. If I squint … There are words on things. On the door, on him, in green, like price tags."
 W3_TUER_MAX_0160,"„Verschlossen.“ „Gesprächig.“ Das steht da einfach dran. Und ich glaube, ich kann das … umhängen.","""Locked."" ""Talkative."" It just says so on them. And I think I can … swap them."
 W3_TUER_MAX_0170,"Die Tür sagt: verschlossen, grau. Er sagt: gesprächig, Hausschuhe. Der Baum sagt grün, das Auto rot. Hier lügt keiner. Es steht ja dran.","The door says: locked, grey. He says: talkative, slippers. The tree says green, the car red. Nobody lies here. It's written on them."
-W3_TUER_MAX_0180,"Ich klick zwei Wörter an, und sie tauschen die Plätze, wie vertauschte Namensschilder auf einer Hochzeit. Ich hab zwei Versuche.","I click two words and they swap places, like name cards someone switched at a wedding. I've got two tries."
+W3_TUER_MAX_0180,"Ich klick zwei Wörter an, und sie tauschen die Plätze, wie vertauschte Namensschilder auf einer Hochzeit.","I click two words and they swap places, like name cards someone switched at a wedding."
+W3_TUER_MAX_0180_2,"Ich hab zwei Versuche. Und wenn ich die Wörter wieder brauch, fass ich einfach was an, an dem welche hängen.","I've got two tries. And if I need the words again, I just touch something that has some on it."
 W3_TUER_NAR_0190,Tausch: verschlossen ↔ gesprächig. Die Tür springt auf. Schmidt öffnet den Mund. Nichts.,Swap: locked ↔ talkative. The door springs open. Schmidt opens his mouth. Nothing.
 W3_TUER_TUR_0200,"Oh! Oh, endlich! Wissen Sie, wie lange ich zu war? Wissen Sie, wie viele Leute an mir vorbeigegangen sind, ohne ein Wort?","Oh! Oh, at last! Do you know how long I've been shut? Do you know how many people have walked past me without a word?"
 W3_TUER_TUR_0210,"Ich habe so viel zu erzählen! Der Flur dahinter, die Klinke, der Typ mit den Hausschuhen, der ständig redet, der hat mir nie zugehört!","I have so much to tell! The corridor behind me, the handle, the guy in the slippers who never stops talking, he never listened to me!"
@@ -4645,6 +4648,9 @@ W3_TUER_MAX_0310,"Ein Mann im Cordanzug mit Fliege, Sonnenbrille und rosa Haussc
 W3_TUER_MAX_0315,"Rosa Hausschuhe zu einem Cordanzug. Entweder hat ihm jemand etwas angetan, oder er hat es sich selbst angetan.","Pink slippers with a corduroy suit. Either someone did this to him, or he did it to himself."
 W3_TUER_MAX_0320,Er zeigt auf seinen Hals und dann auf die Tür. Das heißt: „Gib's zurück.“ Nö.,"He points at his throat and then at the door. That means: ""Give it back."" Nope."
 W3_TUER_MAX_0325,"Jetzt zeigt er auf mich, auf die Tür und auf sein Herz. Das Herz notier ich nicht. Zu seinem Schutz.","Now he's pointing at me, at the door and at his heart. I'm not writing down the heart. For his protection."
+W3_TUER_MAX_0390,"Getauscht. Es flackert kurz, aber keins der beiden Wörter passt an sein neues Ding. Der Versuch ist trotzdem weg.","Swapped. It flickers for a second, but neither word fits its new thing. The try's gone anyway."
+W3_TUER_MAX_0400,"Die hängen beide am selben Ding. Da tauscht sich nichts, das ist bloß Umräumen.","Those both hang on the same thing. Nothing swaps there, that's just rearranging."
+W3_TUER_MAX_0410,Die zwei hab ich gerade erst getauscht. Zurücktauschen wär ein Versuch für gar nichts.,I only just swapped those two. Swapping them back would be a try for nothing.
 W3_KUCH_ORA_0010,"Setz dich. Du willst gleich fragen, ob ich wirklich alles vorher weiß. Ja. Du willst dann einen Keks. Nein. Die sind noch heiß.",Sit down. You're about to ask whether I really know everything in advance. Yes. Then you'll want a biscuit. No. They're still hot.
 W3_KUCH_MAX_0020,Ich wollte gar nicht …,I wasn't going to …
 W3_KUCH_ORA_0030,"Doch. Und bevor du gehst, wirst du mein Sparschwein zerschlagen. Das blaue. Vom Regal. Ich hab es trotzdem nicht weggestellt. Man soll dem Schicksal nicht die Arbeit abnehmen.","You were. And before you leave, you'll smash my piggy bank. The blue one. On the shelf. I've left it where it is all the same. You shouldn't do fate's work for it."
@@ -4789,7 +4795,8 @@ W3_TURM_MAX_0490,"Jetzt gibt es zwei Originale, und beide wollen die Mittagspaus
 W3_TURM_KLO_0500,Ich bin das Original. Ich habe schon immer anders gerochen.,I am the original. I've always smelled different.
 W3_TURM_MAX_0510,"Die Tasse trägt jetzt Hausschuhe, und Schmidt ist barfuß. Er guckt, als hätte er alles verloren, dabei sind es nur die Schuhe.","The cup is wearing slippers now, and Schmidt is barefoot. He looks like he's lost everything, but it's just the shoes."
 W3_TURM_MAX_0520,Die Pflanze ist jetzt das Original. Alle Klone hören auf eine Pflanze. Die Pflanze sagt nichts. Gute Führung.,"The plant is the original now. All the clones are listening to a plant. The plant says nothing. Good leadership, honestly."
-W3_TURM_MAX_0530,"Keine Tausche mehr. Einmal raus und wieder rein, dann ist alles zurückgesetzt, und ich darf die Treppe noch mal genießen.","No swaps left. Out and back in once, then everything's reset, and I get to enjoy the stairs all over again."
+W3_TURM_MAX_0530,Keine Tausche mehr. Und raus komm ich hier nicht.,No swaps left. And I can't get out of here.
+W3_TURM_MAX_0530_2,"Aber wenn ich kurz zu Pixel wechsle und zurück, ist alles zurückgesetzt. Spart mir wenigstens die Treppe.","But if I switch to Pixel for a moment and back, everything's reset. At least it saves me the stairs."
 W3_TURM_SCH_0540,"Sie wieder, wir wieder, alles wieder","You again, us again, everything again"
 W3_TURM_MAX_0550,"Nicht in die Mittagspause schicken, bevor sie wissen, wer der Chef ist. Sie hören nur aufs Original. Und das bin weder ich noch die Tasse. Noch.",No sending them on lunch break before they know who the boss is. They only listen to the original. And that's neither me nor the cup. Yet.
 W3_TURM_SCH_0560,"Ich bin eine Kopie, ich habe keine Meinung, ich hatte nie eine, aber jetzt weiß ich es wenigstens","I am a copy, I have no opinion, I never had one, but now at least I know it"
@@ -5051,11 +5058,13 @@ W3_EING_MAX_0350,Die Karte rein. Grün. Die Tür rollt zur Seite wie ein sehr la
 W3_EING_HAU_0360,"Bursche, auch mit Karte: erst Sahra Konner. Der Zettel ist eindeutig. Der Zettel ist mein Leben.","Lad, even with a card: Sahra Konner first. The sheet is clear. The sheet is my life."
 W3_EING_MAX_0370,Dahinter: kein Labor. Eine Wand mit leuchtenden Buchsen und ein dickes Kabel. Das Labor ist nicht hier. Das Labor ist „dran“.,"Behind it: no lab. A wall of glowing sockets and a thick cable. The lab isn't here. The lab is ""on the line""."
 W3_EING_MAX_0375,"Die Buchsen leuchten im Takt, als würde das Labor durch die Kabel atmen. Ich muss da rein, also irgendwie in die Kabel.","The sockets glow in rhythm, as if the lab were breathing through the cables. I have to get in there, so somehow into the cables."
+W3_EING_MAX_0377,"Ein Anschluss, so groß wie ein Kühlschrank. Jede Buchse hat ein Etikett, und auf allen steht: „Labor“. Sehr hilfreich.","A port the size of a fridge. Every socket has a label, and every label says ""Lab"". Very helpful."
 W3_EING_KAL_0380,"Bin da! Hab die Trommel mitgebracht. Leitung von hier bis zu deiner Kapsel. Achtzig Meter Kabel, zwei Knoten, eine Hoffnung.","Here! Brought the drum. A line from here to your pod. Eighty metres of cable, two knots, one hope."
 W3_EING_KAL_0390,"Fertig. Ich zapf unterwegs noch den Lautsprecher der KI an, dann hörst du den Kater auch da drin. Ich tu dir keinen Gefallen damit. Ich weiß.","Done. On the way I'll tap into the AI's speaker, then you'll hear the cat in there too. I'm not doing you a favour. I know."
 W3_EING_PIX_0400,Er hat mich in eine Weltherrschafts-KI eingespeist. Ich werde ihr Lautsprecher sein.,He has fed me into a world-domination AI. I am going to be its loudspeaker.
 W3_EING_PIX_0400_2,Ich war schon Schlimmeres. Ich war heute schon mehrmals nass.,I have been worse things. I have already been wet several times today.
 W3_EING_MAX_0410,"Jetzt zurück zur Kapsel, hinlegen, aufwachen im Labor. Mein Lebenslauf wird immer komischer.","Now back to the pod, lie down, wake up in the lab. My CV is getting weirder and weirder."
+W3_EING_MAX_0415,Kalles Kabel steckt fest drin. Ich zieh nicht dran. Achtzig Meter Hoffnung reißt man nicht einfach raus.,Kalle's cable is plugged in tight. I'm not pulling it. You don't just yank out eighty metres of hope.
 W3_EING_MAX_0420,"Ein Wischeimer. Das Wasser darin ist sauberer als alles, was ich heute getrunken hab.",A mop bucket. The water in it is cleaner than anything I've drunk today.
 W3_EING_PIX_0430,"Wasser in einem Eimer, am Boden, trinkbar.","Water in a bucket, on the floor, drinkable."
 W3_EING_PIX_0430_2,"Das ist die erste zivilisierte Einrichtung dieser Welt, und ausgerechnet ein Roboter hat sie aufgestellt.","That is the first civilised facility in this world, and of all things a robot set it up."
@@ -5069,6 +5078,7 @@ W3_EING_MAX_0490,"Eine Lampe an der Decke, es tropft daneben. Jemand hat hier ja
 W3_EING_MAX_0495,"Der Tropfen fällt genau neben den Eimer, und zwar jedes Mal. Ich bin mir sicher, er macht das mit Absicht.","The drop lands right next to the bucket, every single time. I'm sure it does it on purpose."
 W3_EING_MAX_0500,"Ein Gang unter der Stadt. Hinter mir Neon, vor mir Beton. Die Stadt hat einen Keller, und der Keller hat eine Tür.","A passage under the city. Neon behind me, concrete ahead. The city has a basement, and the basement has a door."
 W3_EING_MAX_0505,"Irgendwo hinten summt etwas. Groß und geduldig. Wie ein Kühlschrank, der die Welt regiert.",Something is humming somewhere at the back. Big and patient. Like a fridge that rules the world.
+W3_EING_MAX_0507,"Ich geh ein paar Schritte rein. Beton, Rohre, noch mehr Beton. Der Gang hört nicht auf, also hör ich auf.","I take a few steps in. Concrete, pipes, more concrete. The passage doesn't stop, so I do."
 W3_EING_MAX_0510,"Der Roboter ist weg, aber der Boden ist noch nass. Er hat es bis zum Schluss ernst gemeint.","The robot's gone, but the floor is still wet. He meant it right to the end."
 W3_EING_MAX_0515,Am Boden ist noch der letzte Kreis vom Wischen zu sehen. Perfekt rund. Er hat sogar im Gehen noch gewischt.,You can still see the last circle of mopping on the floor. Perfectly round. He was still mopping on his way out.
 W3_EING_MAX_0520,"Er wischt in Kreisen. Immer in Kreisen. Wenn er jemals eine Gerade wischt, ist etwas passiert.","He mops in circles. Always circles. If he ever mops a straight line, something's happened."
@@ -5140,6 +5150,8 @@ W3_KAM1_MAX_0410,"Weiße Platten, quadratisch, hundert Stück, alle gleich. Wer 
 W3_KAM1_MAX_0415,"Eine Platte hat einen Fingerabdruck. Einen einzigen. Jemand war vor mir hier, und er hat gelebt.","One panel has a fingerprint. A single one. Someone was here before me, and they were alive."
 W3_KAM1_MAX_0420,"Eine leere Halterung. Da hing das Portalgerät. Eine Sekunde Opa, und dann das hier.","An empty mount. The portal device hung there. One second of Grandpa, and then this."
 W3_KAM1_MAX_0425,Ich häng meine Hand in die Halterung. Passt. Hilft aber nichts.,"I hang my hand in the holder. It fits. Doesn't help, though."
+W3_KAM1_MAX_0426,"Die Tür, durch die ich reingekommen sein müsste. Dahinter nur Weiß. Ich bin über die Kapsel hier, nicht zu Fuß.","The door I must have come in through. Behind it, only white. I got here by pod, not on foot."
+W3_KAM1_MAX_0428,"Ich geh einen Schritt ins Weiß. Nichts. Kein Boden, kein Flur. Ich geh lieber zurück, bevor das Weiß mich bemerkt.","I take one step into the white. Nothing. No floor, no corridor. I'd better go back before the white notices me."
 W3_KAM1_MAX_0430,"Ich bin „leicht“. Steht da. An mir. In grün. Das ist das erste Kompliment dieser Welt, und es kommt von einem Etikett.","I'm ""light"". It says so. On me. In green. That's the first compliment in this world, and it comes from a label."
 W3_KAM1_NAR_0440,Tausch: schwer (Bernd) ↔ leicht (Max). Bernd steigt langsam auf. Max' Sneaker drücken Rillen in den Boden.,Swap: heavy (Bernd) ↔ light (Max). Bernd slowly rises. Max's trainers press grooves into the floor.
 W3_KAM1_MAX_0450,Oh. Ich bin … schwer. Meine Sneaker machen Rillen. So fühlt sich Bernd also die ganze Zeit.,Oh. I'm … heavy. My trainers are leaving grooves. So that's how Bernd feels all the time.
@@ -5156,6 +5168,7 @@ W3_KAM1_MAX_0540,"Bernd ist jetzt ehrlich. Er sagt nichts, aber er meint es. Der
 W3_KAM1_MAX_0550,Der Schalter ist jetzt „müde“. Er drückt sich nicht mal mehr selbst. Ich bin „ungedrückt“. Das war ich vorher auch.,"The switch is ""tired"" now. It won't even press itself any more. I'm ""unpressed"". I was that before too."
 W3_KAM1_MUT_0560,Zurücksetzen. Wie bei allen meinen Testpersonen.,Resetting. As with all my test subjects.
 W3_KAM1_MUT_0570,Keine Tausche mehr. Du darfst gehen und wiederkommen. Ich vergesse nichts. Aber ich tue so. Zu deinem Besten.,No swaps left. You may leave and come back. I forget nothing. But I pretend to. For your own good.
+W3_KAM1_PIX_0575,"Gehen? Durch welche Tür denn? Wechsel kurz zu mir und zurück, dann tut sie so, als wär nichts gewesen.","Leave? Through which door? Switch to me and back, and she'll pretend nothing happened."
 W3_KAM1_MAX_0580,"Das Portalgerät auf den Kuchen. Nichts. Nicht mal ein Pieps. Zwei Attrappen, die sich ansehen.",Portal device on the cake. Nothing. Not even a beep. Two dummies looking at each other.
 W3_KAM1_MAX_0590,Thunfisch für Bernd. Er hat keinen Mund. Er hat einen Aufkleber. Der Aufkleber lächelt trotzdem.,Tuna for Bernd. He has no mouth. He has a sticker. The sticker smiles anyway.
 W3_KAM1_PIX_0600,Du gibst dem Würfel Thunfisch. Meinen Thunfisch. Ich habe es gesehen.,You are giving the cube tuna. My tuna. I saw that.
@@ -5447,7 +5460,7 @@ W3_HINT_PIX_0420,"Wenn etwas sowieso passiert, kann man es auch gleich hinter si
 W3_HINT_PIX_0430,"Frag sie erst nach dem Sparschwein, dann sag: „Wenn ich es sowieso zerschlage, gib es mir gleich.“ Sie seufzt und gibt es dir. Sie weiß es schon.","Ask her about the piggy bank first, then say: ""If I'm going to smash it anyway, give it to me now."" She will sigh and hand it over. She already knows."
 W3_HINT_PIX_0510,"Die Tür ist zu und sagt nichts. Der Mann davor ist offen und sagt alles. Das ist falsch herum. Fast so, als könnte man es umdrehen.",The door is shut and says nothing. The man in front is open and says everything. That is the wrong way round. Almost as if you could turn it round.
 W3_HINT_PIX_0520,Kneif die Augen zusammen und sieh dir die Tür an. Zweimal. Da hängen Wörter dran. Wörter kann man verschieben.,Squint and look at the door. Twice. There are words on it. Words can be moved.
-W3_HINT_PIX_0530,"Code-Sicht öffnen, „verschlossen“ an der Tür anklicken, „gesprächig“ an Schmidt anklicken. Die Tür redet, er schweigt, du gehst durch.","Open code view, click ""locked"" on the door, click ""talkative"" on Schmidt. The door talks, he goes quiet, you walk through."
+W3_HINT_PIX_0530,"Code-Sicht öffnen, erst „verschlossen“ an der Tür anklicken, dann „gesprächig“ an Schmidt. Die Tür redet, er schweigt, du gehst durch.","Open code view, first click ""locked"" on the door, then ""talkative"" on Schmidt. The door talks, he goes quiet, you walk through."
 W3_HINT_PIX_0610,Nur das Original kann die Kopien wegschicken. Alle tragen Hausschuhe. Aber nur einer trägt das Wort „Original“. Wörter sieht man in der Code-Sicht.,"Only the original can send the copies away. They all wear slippers. But only one wears the word ""original"". You see words in code view."
 W3_HINT_PIX_0620,"Du kannst das Original nicht befehligen. Aber du kannst etwas befehligen, das du in der Hand hältst. Eine Tasse zum Beispiel. Tassen sind Kopien. Alle.","You cannot command the original. But you can command something you are holding. A cup, for example. Cups are copies. All of them."
 W3_HINT_PIX_0630,Nimm die Tasse vom Wasserspender. Code-Sicht: „Original“ am hintersten Schmidt gegen „Kopie“ an der Tasse tauschen. Dann gehört die Tasse allen.,"Take the cup from the water cooler. Code view: swap ""original"" on the Schmidt at the very back with ""copy"" on the cup. Then the cup is in charge of everyone."

@@ -3986,7 +3986,9 @@ W3_EING_MAX_0340,"I hold up my hand with the stamp. ""Human, provisional."" The 
 W3_EING_MAX_0350,Card in. Green. The door rolls aside like a very slow curtain.
 W3_EING_MAX_0370,"Behind it: no lab. A wall of glowing sockets and a thick cable. The lab isn't here. The lab is ""on the line""."
 W3_EING_MAX_0375,"The sockets glow in rhythm, as if the lab were breathing through the cables. I have to get in there, so somehow into the cables."
+W3_EING_MAX_0377,"A port the size of a fridge. Every socket has a label, and every label says ""Lab"". Very helpful."
 W3_EING_MAX_0410,"Now back to the pod, lie down, wake up in the lab. My CV is getting weirder and weirder."
+W3_EING_MAX_0415,Kalle's cable is plugged in tight. I'm not pulling it. You don't just yank out eighty metres of hope.
 W3_EING_MAX_0420,A mop bucket. The water in it is cleaner than anything I've drunk today.
 W3_EING_MAX_0440,"I'm not taking the bucket. The robot would notice. And he'd notice politely, which is the worst part."
 W3_EING_MAX_0450,"A noticeboard with test results. Hundreds of sheets, all with grades and all with a column for cake. The cake column is empty."
@@ -3997,6 +3999,7 @@ W3_EING_MAX_0490,"A lamp on the ceiling, dripping next to it. Someone mopped her
 W3_EING_MAX_0495,"The drop lands right next to the bucket, every single time. I'm sure it does it on purpose."
 W3_EING_MAX_0500,"A passage under the city. Neon behind me, concrete ahead. The city has a basement, and the basement has a door."
 W3_EING_MAX_0505,Something is humming somewhere at the back. Big and patient. Like a fridge that rules the world.
+W3_EING_MAX_0507,"I take a few steps in. Concrete, pipes, more concrete. The passage doesn't stop, so I do."
 W3_EING_MAX_0510,"The robot's gone, but the floor is still wet. He meant it right to the end."
 W3_EING_MAX_0515,You can still see the last circle of mopping on the floor. Perfectly round. He was still mopping on his way out.
 W3_EING_MAX_0520,"He mops in circles. Always circles. If he ever mops a straight line, something's happened."
@@ -4071,7 +4074,7 @@ W3_HINT_PIX_0420,"If something is going to happen anyway, you might as well get 
 W3_HINT_PIX_0430,"Ask her about the piggy bank first, then say: ""If I'm going to smash it anyway, give it to me now."" She will sigh and hand it over. She already knows."
 W3_HINT_PIX_0510,The door is shut and says nothing. The man in front is open and says everything. That is the wrong way round. Almost as if you could turn it round.
 W3_HINT_PIX_0520,Squint and look at the door. Twice. There are words on it. Words can be moved.
-W3_HINT_PIX_0530,"Open code view, click ""locked"" on the door, click ""talkative"" on Schmidt. The door talks, he goes quiet, you walk through."
+W3_HINT_PIX_0530,"Open code view, first click ""locked"" on the door, then ""talkative"" on Schmidt. The door talks, he goes quiet, you walk through."
 W3_HINT_PIX_0610,"Only the original can send the copies away. They all wear slippers. But only one wears the word ""original"". You see words in code view."
 W3_HINT_PIX_0620,"You cannot command the original. But you can command something you are holding. A cup, for example. Cups are copies. All of them."
 W3_HINT_PIX_0630,"Take the cup from the water cooler. Code view: swap ""original"" on the Schmidt at the very back with ""copy"" on the cup. Then the cup is in charge of everyone."
@@ -4166,6 +4169,8 @@ W3_KAM1_MAX_0410,"White panels, square, a hundred of them, all the same. Whoever
 W3_KAM1_MAX_0415,"One panel has a fingerprint. A single one. Someone was here before me, and they were alive."
 W3_KAM1_MAX_0420,"An empty mount. The portal device hung there. One second of Grandpa, and then this."
 W3_KAM1_MAX_0425,"I hang my hand in the holder. It fits. Doesn't help, though."
+W3_KAM1_MAX_0426,"The door I must have come in through. Behind it, only white. I got here by pod, not on foot."
+W3_KAM1_MAX_0428,"I take one step into the white. Nothing. No floor, no corridor. I'd better go back before the white notices me."
 W3_KAM1_MAX_0430,"I'm ""light"". It says so. On me. In green. That's the first compliment in this world, and it comes from a label."
 W3_KAM1_MAX_0450,Oh. I'm … heavy. My trainers are leaving grooves. So that's how Bernd feels all the time.
 W3_KAM1_MAX_0470,"Bernd. Bernd, I didn't mean it like that. I just needed your weight. … That sounded wrong."
@@ -4188,6 +4193,7 @@ W3_KAM1_MUT_0490,"Very good. Test passed. You won't manage this, but I believe i
 W3_KAM1_MUT_0510,Your cake is in another test chamber.
 W3_KAM1_MUT_0560,Resetting. As with all my test subjects.
 W3_KAM1_MUT_0570,No swaps left. You may leave and come back. I forget nothing. But I pretend to. For your own good.
+W3_KAM1_PIX_0575,"Leave? Through which door? Switch to me and back, and she'll pretend nothing happened."
 W3_KAM1_NAR_0010,White. White everywhere. Max is standing in a chamber of panels that all look the same. A red button in the floor. A door. A loudspeaker.
 W3_KAM1_NAR_0090,"Max pulls the trigger. A shimmering round hole opens in the wall. Behind it: Grandpa's living room. Grandpa on the sofa, cup of tea in his hand."
 W3_KAM1_NAR_0440,Swap: heavy (Bernd) ↔ light (Max). Bernd slowly rises. Max's trainers press grooves into the floor.
@@ -4788,7 +4794,8 @@ W3_TUER_MAX_0140,"Shut, of course. And he's still talking. He didn't even notice
 W3_TUER_MAX_0150,"Hang on. If I squint … There are words on things. On the door, on him, in green, like price tags."
 W3_TUER_MAX_0160,"""Locked."" ""Talkative."" It just says so on them. And I think I can … swap them."
 W3_TUER_MAX_0170,"The door says: locked, grey. He says: talkative, slippers. The tree says green, the car red. Nobody lies here. It's written on them."
-W3_TUER_MAX_0180,"I click two words and they swap places, like name cards someone switched at a wedding. I've got two tries."
+W3_TUER_MAX_0180,"I click two words and they swap places, like name cards someone switched at a wedding."
+W3_TUER_MAX_0180_2,"I've got two tries. And if I need the words again, I just touch something that has some on it."
 W3_TUER_MAX_0230,"He can't get his mouth open any more, and the door can't keep hers shut. I've changed the balance of the world by exactly zero."
 W3_TUER_MAX_0250,"Now the door is red and still shut, and the car is grey. Nobody won anything there."
 W3_TUER_MAX_0260,"The door is wearing slippers now. Pink. They even suit it, but it's still shut."
@@ -4802,6 +4809,9 @@ W3_TUER_MAX_0325,"Now he's pointing at me, at the door and at his heart. I'm not
 W3_TUER_MAX_0330,That … what?
 W3_TUER_MAX_0350,Pink suits you.
 W3_TUER_MAX_0370,And what is good for us?
+W3_TUER_MAX_0390,"Swapped. It flickers for a second, but neither word fits its new thing. The try's gone anyway."
+W3_TUER_MAX_0400,"Those both hang on the same thing. Nothing swaps there, that's just rearranging."
+W3_TUER_MAX_0410,"I only just swapped those two. Swapping them back would be a try for nothing."
 W3_TUER_NAR_0190,Swap: locked ↔ talkative. The door springs open. Schmidt opens his mouth. Nothing.
 W3_TUER_SCH_0010,"Mr Max, we have been expecting you, that is, I have been expecting you, that is, I expect everyone as a rule,"
 W3_TUER_SCH_0010_2,"because that is my profession, Department of Care and Pursuit, and I take both very seriously, especially the care"
@@ -4869,7 +4879,8 @@ W3_TURM_MAX_0480,"Behind it: reports about me. ""Test subject 48 stood in the ra
 W3_TURM_MAX_0490,"Now there are two originals, and both want to announce the lunch break. Nobody leaves, everybody argues. I've made it worse."
 W3_TURM_MAX_0510,"The cup is wearing slippers now, and Schmidt is barefoot. He looks like he's lost everything, but it's just the shoes."
 W3_TURM_MAX_0520,"The plant is the original now. All the clones are listening to a plant. The plant says nothing. Good leadership, honestly."
-W3_TURM_MAX_0530,"No swaps left. Out and back in once, then everything's reset, and I get to enjoy the stairs all over again."
+W3_TURM_MAX_0530,"No swaps left. And I can't get out of here."
+W3_TURM_MAX_0530_2,"But if I switch to Pixel for a moment and back, everything's reset. At least it saves me the stairs."
 W3_TURM_MAX_0550,No sending them on lunch break before they know who the boss is. They only listen to the original. And that's neither me nor the cup. Yet.
 W3_TURM_MAX_0570,"The corridor is empty. Just Schmidt, a cup with responsibilities and me. No exit, no alarm clock, but there's a terminal back there."
 W3_TURM_NAR_0080,"Max bends backwards in slow motion. The hole punch sails over him, trailing a line of confetti. Max gets stuck in the pose."

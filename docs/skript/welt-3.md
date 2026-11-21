@@ -360,9 +360,9 @@ Eingang des Büroturms auf der Stadtstraße. Agent Schmidt bewacht die verschlos
 | W3\_TUER\_MAX\_0130 | Max | Eine Glastür, verschlossen. Und davor ein Mann, der so ziemlich das Gegenteil von verschlossen ist. | Ansehen: Tür |
 | W3\_TUER\_MAX\_0140 | Max | Zu, natürlich. Und er redet immer noch. Er hat nicht mal gemerkt, dass ich's probiert hab. | Benutzen: Tür; vor dem Tausch |
 | W3\_TUER\_MAX\_0150 | Max | Moment. Wenn ich die Augen zusammenkneife … Da hängen Wörter dran. An der Tür, an ihm, in grün, wie Preisschilder. | Ansehen: Tür, zweites Mal; Animation Code-Sicht einschalten; Code-Sicht freigeschaltet |
-| W3\_TUER\_MAX\_0160 | Max | „Verschlossen.“ „Gesprächig.“ Das steht da einfach dran. Und ich glaube, ich kann das … umhängen. | Code-Sicht zum ersten Mal geöffnet; Tutorial |
+| W3\_TUER\_MAX\_0160 | Max | „Verschlossen.“ „Gesprächig.“ Das steht da einfach dran. Und ich glaube, ich kann das … umhängen. | Code-Sicht zum ersten Mal geöffnet (gleich nach 0150, die Wörter stehen schon da); Tutorial |
 | W3\_TUER\_MAX\_0170 | Max | Die Tür sagt: verschlossen, grau. Er sagt: gesprächig, Hausschuhe. Der Baum sagt grün, das Auto rot. Hier lügt keiner. Es steht ja dran. | Code-Sicht: Etiketten ansehen |
-| W3\_TUER\_MAX\_0180 | Max | Ich klick zwei Wörter an, und sie tauschen die Plätze, wie vertauschte Namensschilder auf einer Hochzeit. Ich hab zwei Versuche. | Code-Sicht: erster Klick auf ein Etikett |
+| W3\_TUER\_MAX\_0180 | Max | Ich klick zwei Wörter an, und sie tauschen die Plätze, wie vertauschte Namensschilder auf einer Hochzeit. // Ich hab zwei Versuche. Und wenn ich die Wörter wieder brauch, fass ich einfach was an, an dem welche hängen. | Code-Sicht: vor der ersten Wahl (erst ein Wort an einem Ding anklicken, dann eins an einem anderen) |
 | W3\_TUER\_NAR\_0190 | – | Tausch: verschlossen ↔ gesprächig. Die Tür springt auf. Schmidt öffnet den Mund. Nichts. | Code-Sicht: Lösung; Jingle „Rätsel gelöst“ |
 | W3\_TUER\_TUR\_0200 | Die Tür | Oh! Oh, endlich! Wissen Sie, wie lange ich zu war? Wissen Sie, wie viele Leute an mir vorbeigegangen sind, ohne ein Wort? | Tür redet, Schmidt stumm |
 | W3\_TUER\_TUR\_0210 | Die Tür | Ich habe so viel zu erzählen! Der Flur dahinter, die Klinke, der Typ mit den Hausschuhen, der ständig redet, der hat mir nie zugehört! |  |
@@ -379,6 +379,9 @@ Eingang des Büroturms auf der Stadtstraße. Agent Schmidt bewacht die verschlos
 | W3\_TUER\_MAX\_0315 | Max | Rosa Hausschuhe zu einem Cordanzug. Entweder hat ihm jemand etwas angetan, oder er hat es sich selbst angetan. | Ansehen: Schmidt, zweites Mal |
 | W3\_TUER\_MAX\_0320 | Max | Er zeigt auf seinen Hals und dann auf die Tür. Das heißt: „Gib's zurück.“ Nö. | Ansehen: Schmidt, nach dem Tausch |
 | W3\_TUER\_MAX\_0325 | Max | Jetzt zeigt er auf mich, auf die Tür und auf sein Herz. Das Herz notier ich nicht. Zu seinem Schutz. | Ansehen: Schmidt, nach dem Tausch, zweites Mal |
+| W3\_TUER\_MAX\_0390 | Max | Getauscht. Es flackert kurz, aber keins der beiden Wörter passt an sein neues Ding. Der Versuch ist trotzdem weg. | Code-Sicht: Tausch ohne eigene Pointe (jedes Paar aus zwei Dingen ohne eigene Zeile, in allen Räumen); kostet einen Tausch, zählt als Fehltausch |
+| W3\_TUER\_MAX\_0400 | Max | Die hängen beide am selben Ding. Da tauscht sich nichts, das ist bloß Umräumen. | Code-Sicht: zwei Wörter am selben Ding gewählt (alle Räume); kostet nichts |
+| W3\_TUER\_MAX\_0410 | Max | Die zwei hab ich gerade erst getauscht. Zurücktauschen wär ein Versuch für gar nichts. | Code-Sicht: einen gelösten Tausch zurücktauschen (Kammer 3); kostet nichts |
 
 ## 7. Küche der Orakel-Oma: Rätsel 4
 
@@ -547,7 +550,7 @@ Ebene: Simulation. Der Tausch von der Straße gilt nur dort, hier redet Schmidt 
 | W3\_TURM\_KLO\_0500 | Klon | Ich bin das Original. Ich habe schon immer anders gerochen. | nach 0490 |
 | W3\_TURM\_MAX\_0510 | Max | Die Tasse trägt jetzt Hausschuhe, und Schmidt ist barfuß. Er guckt, als hätte er alles verloren, dabei sind es nur die Schuhe. | Code-Sicht: Fehltausch Hausschuhe ↔ leer |
 | W3\_TURM\_MAX\_0520 | Max | Die Pflanze ist jetzt das Original. Alle Klone hören auf eine Pflanze. Die Pflanze sagt nichts. Gute Führung. | Code-Sicht: Fehltausch Original ↔ gleich |
-| W3\_TURM\_MAX\_0530 | Max | Keine Tausche mehr. Einmal raus und wieder rein, dann ist alles zurückgesetzt, und ich darf die Treppe noch mal genießen. | Code-Sicht: Budget aufgebraucht |
+| W3\_TURM\_MAX\_0530 | Max | Keine Tausche mehr. Und raus komm ich hier nicht. // Aber wenn ich kurz zu Pixel wechsle und zurück, ist alles zurückgesetzt. Spart mir wenigstens die Treppe. | Code-Sicht: Budget aufgebraucht (der Turm hat keinen offenen Ausgang, W3-R08-01) |
 | W3\_TURM\_SCH\_0540 | Schmidt | Sie wieder, wir wieder, alles wieder | 50. Stock erneut betreten nach Fehltauschen |
 | W3\_TURM\_MAX\_0550 | Max | Nicht in die Mittagspause schicken, bevor sie wissen, wer der Chef ist. Sie hören nur aufs Original. Und das bin weder ich noch die Tasse. Noch. | Kaffeetasse auf Klone, vor dem Tausch |
 | W3\_TURM\_SCH\_0560 | Schmidt | Ich bin eine Kopie, ich habe keine Meinung, ich hatte nie eine, aber jetzt weiß ich es wenigstens | Reden: Schmidt, nach dem Tausch |
@@ -815,10 +818,12 @@ Ebene: Realität, von Anfang an erreichbar. Der Roboter wischt vor der Panzertü
 | W3\_EING\_HAU\_0360 | Modell 08/15 | Bursche, auch mit Karte: erst Sahra Konner. Der Zettel ist eindeutig. Der Zettel ist mein Leben. | Zugangskarte auf Kartenleser; vor Rätsel 8 |
 | W3\_EING\_MAX\_0370 | Max | Dahinter: kein Labor. Eine Wand mit leuchtenden Buchsen und ein dickes Kabel. Das Labor ist nicht hier. Das Labor ist „dran“. | Ansehen: geöffnete Tür, Datenanschlüsse; Panzertür offen |
 | W3\_EING\_MAX\_0375 | Max | Die Buchsen leuchten im Takt, als würde das Labor durch die Kabel atmen. Ich muss da rein, also irgendwie in die Kabel. | Ansehen: geöffnete Tür, Datenanschlüsse, zweites Mal; Panzertür offen |
-| W3\_EING\_KAL\_0380 | Kalle | Bin da! Hab die Trommel mitgebracht. Leitung von hier bis zu deiner Kapsel. Achtzig Meter Kabel, zwei Knoten, eine Hoffnung. | Benutzen: Datenanschluss; Kalle kommt mit Kabeltrommel |
+| W3\_EING\_MAX\_0377 | Max | Ein Anschluss, so groß wie ein Kühlschrank. Jede Buchse hat ein Etikett, und auf allen steht: „Labor“. Sehr hilfreich. | Ansehen: Datenanschluss |
+| W3\_EING\_KAL\_0380 | Kalle | Bin da! Hab die Trommel mitgebracht. Leitung von hier bis zu deiner Kapsel. Achtzig Meter Kabel, zwei Knoten, eine Hoffnung. | Benutzen: Datenanschluss; vor Rätsel 9a; Kalle kommt mit Kabeltrommel |
 | W3\_EING\_KAL\_0390 | Kalle | Fertig. Ich zapf unterwegs noch den Lautsprecher der KI an, dann hörst du den Kater auch da drin. Ich tu dir keinen Gefallen damit. Ich weiß. | Leitung liegt; Schalter W3\_LEITUNG\_LABOR; Pixel im Labor hörbar |
 | W3\_EING\_PIX\_0400 | Pixel | Er hat mich in eine Weltherrschafts-KI eingespeist. Ich werde ihr Lautsprecher sein. // Ich war schon Schlimmeres. Ich war heute schon mehrmals nass. |  |
 | W3\_EING\_MAX\_0410 | Max | Jetzt zurück zur Kapsel, hinlegen, aufwachen im Labor. Mein Lebenslauf wird immer komischer. | nach 0390 |
+| W3\_EING\_MAX\_0415 | Max | Kalles Kabel steckt fest drin. Ich zieh nicht dran. Achtzig Meter Hoffnung reißt man nicht einfach raus. | Benutzen: Datenanschluss, nach Rätsel 9a |
 | W3\_EING\_MAX\_0420 | Max | Ein Wischeimer. Das Wasser darin ist sauberer als alles, was ich heute getrunken hab. | Ansehen: Wischeimer |
 | W3\_EING\_PIX\_0430 | Pixel | Wasser in einem Eimer, am Boden, trinkbar. // Das ist die erste zivilisierte Einrichtung dieser Welt, und ausgerechnet ein Roboter hat sie aufgestellt. | Ansehen: Wischeimer, zweites Mal |
 | W3\_EING\_MAX\_0440 | Max | Ich nehm den Eimer nicht mit. Der Roboter würde es merken. Und er würde es höflich merken, das ist das Schlimmste. | Benutzen: Wischeimer |
@@ -831,6 +836,7 @@ Ebene: Realität, von Anfang an erreichbar. Der Roboter wischt vor der Panzertü
 | W3\_EING\_MAX\_0495 | Max | Der Tropfen fällt genau neben den Eimer, und zwar jedes Mal. Ich bin mir sicher, er macht das mit Absicht. | Ansehen: Deckenlampe, zweites Mal |
 | W3\_EING\_MAX\_0500 | Max | Ein Gang unter der Stadt. Hinter mir Neon, vor mir Beton. Die Stadt hat einen Keller, und der Keller hat eine Tür. | Ansehen: Gang |
 | W3\_EING\_MAX\_0505 | Max | Irgendwo hinten summt etwas. Groß und geduldig. Wie ein Kühlschrank, der die Welt regiert. | Ansehen: Gang, zweites Mal |
+| W3\_EING\_MAX\_0507 | Max | Ich geh ein paar Schritte rein. Beton, Rohre, noch mehr Beton. Der Gang hört nicht auf, also hör ich auf. | Benutzen: Gang |
 | W3\_EING\_MAX\_0510 | Max | Der Roboter ist weg, aber der Boden ist noch nass. Er hat es bis zum Schluss ernst gemeint. | Ansehen: Platz des Hausmeisters, nach Rätsel 8 |
 | W3\_EING\_MAX\_0515 | Max | Am Boden ist noch der letzte Kreis vom Wischen zu sehen. Perfekt rund. Er hat sogar im Gehen noch gewischt. | Ansehen: Platz des Hausmeisters, nach Rätsel 8, zweites Mal |
 | W3\_EING\_MAX\_0520 | Max | Er wischt in Kreisen. Immer in Kreisen. Wenn er jemals eine Gerade wischt, ist etwas passiert. | Ansehen: Hausmeister, vor Rätsel 8; mit Olivenöl |
@@ -917,6 +923,8 @@ Ebene: Labor (abgeschottete Simulation). Max wacht nach dem Hinlegen in der Kaps
 | W3\_KAM1\_MAX\_0415 | Max | Eine Platte hat einen Fingerabdruck. Einen einzigen. Jemand war vor mir hier, und er hat gelebt. | Ansehen: Wandplatten, zweites Mal |
 | W3\_KAM1\_MAX\_0420 | Max | Eine leere Halterung. Da hing das Portalgerät. Eine Sekunde Opa, und dann das hier. | Ansehen: Halterung, nach dem Portal |
 | W3\_KAM1\_MAX\_0425 | Max | Ich häng meine Hand in die Halterung. Passt. Hilft aber nichts. | Ansehen: Halterung, nach dem Portal, zweites Mal |
+| W3\_KAM1\_MAX\_0426 | Max | Die Tür, durch die ich reingekommen sein müsste. Dahinter nur Weiß. Ich bin über die Kapsel hier, nicht zu Fuß. | Ansehen: Eingang |
+| W3\_KAM1\_MAX\_0428 | Max | Ich geh einen Schritt ins Weiß. Nichts. Kein Boden, kein Flur. Ich geh lieber zurück, bevor das Weiß mich bemerkt. | Benutzen: Eingang |
 | W3\_KAM1\_MAX\_0430 | Max | Ich bin „leicht“. Steht da. An mir. In grün. Das ist das erste Kompliment dieser Welt, und es kommt von einem Etikett. | Code-Sicht: Max ansehen |
 | W3\_KAM1\_NAR\_0440 | – | Tausch: schwer (Bernd) ↔ leicht (Max). Bernd steigt langsam auf. Max' Sneaker drücken Rillen in den Boden. | Code-Sicht: Lösung |
 | W3\_KAM1\_MAX\_0450 | Max | Oh. Ich bin … schwer. Meine Sneaker machen Rillen. So fühlt sich Bernd also die ganze Zeit. | geht zum Schalter |
@@ -932,6 +940,7 @@ Ebene: Labor (abgeschottete Simulation). Max wacht nach dem Hinlegen in der Kaps
 | W3\_KAM1\_MAX\_0550 | Max | Der Schalter ist jetzt „müde“. Er drückt sich nicht mal mehr selbst. Ich bin „ungedrückt“. Das war ich vorher auch. | Code-Sicht: Fehltausch müde ↔ ungedrückt |
 | W3\_KAM1\_MUT\_0560 | M.U.T.T.I. | Zurücksetzen. Wie bei allen meinen Testpersonen. | Kammer verlassen und erneut betreten; Eigenschaften zurück |
 | W3\_KAM1\_MUT\_0570 | M.U.T.T.I. | Keine Tausche mehr. Du darfst gehen und wiederkommen. Ich vergesse nichts. Aber ich tue so. Zu deinem Besten. | Code-Sicht: Budget aufgebraucht |
+| W3\_KAM1\_PIX\_0575 | Pixel (aus dem Lautsprecher) | Gehen? Durch welche Tür denn? Wechsel kurz zu mir und zurück, dann tut sie so, als wär nichts gewesen. | Code-Sicht: Budget aufgebraucht, nur in Kammer 1 (kein offener Ausgang, W3-R08-01); zweite Blase nach M.U.T.T.I. |
 | W3\_KAM1\_MAX\_0580 | Max | Das Portalgerät auf den Kuchen. Nichts. Nicht mal ein Pieps. Zwei Attrappen, die sich ansehen. | Portalgerät auf Pappkuchen |
 | W3\_KAM1\_MAX\_0590 | Max | Thunfisch für Bernd. Er hat keinen Mund. Er hat einen Aufkleber. Der Aufkleber lächelt trotzdem. | Thunfischdose auf Bernd |
 | W3\_KAM1\_PIX\_0600 | Pixel (aus dem Lautsprecher) | Du gibst dem Würfel Thunfisch. Meinen Thunfisch. Ich habe es gesehen. | nach 0590 |
@@ -1271,7 +1280,7 @@ Drei Stufen je Rätselschritt, vom Stups bis zur Lösung, nach den Regeln in `05
 | W3\_HINT\_PIX\_0430 | Pixel (aus dem Küchenradio) | Frag sie erst nach dem Sparschwein, dann sag: „Wenn ich es sowieso zerschlage, gib es mir gleich.“ Sie seufzt und gibt es dir. Sie weiß es schon. | R4, Stufe 3 |
 | W3\_HINT\_PIX\_0510 | Pixel (aus dem Radiowecker) | Die Tür ist zu und sagt nichts. Der Mann davor ist offen und sagt alles. Das ist falsch herum. Fast so, als könnte man es umdrehen. | R5 Tür, Stufe 1 |
 | W3\_HINT\_PIX\_0520 | Pixel (aus dem Radiowecker) | Kneif die Augen zusammen und sieh dir die Tür an. Zweimal. Da hängen Wörter dran. Wörter kann man verschieben. | R5, Stufe 2 |
-| W3\_HINT\_PIX\_0530 | Pixel (aus dem Radiowecker) | Code-Sicht öffnen, „verschlossen“ an der Tür anklicken, „gesprächig“ an Schmidt anklicken. Die Tür redet, er schweigt, du gehst durch. | R5, Stufe 3 |
+| W3\_HINT\_PIX\_0530 | Pixel (aus dem Radiowecker) | Code-Sicht öffnen, erst „verschlossen“ an der Tür anklicken, dann „gesprächig“ an Schmidt. Die Tür redet, er schweigt, du gehst durch. | R5, Stufe 3 |
 | W3\_HINT\_PIX\_0610 | Pixel (aus dem Terminal) | Nur das Original kann die Kopien wegschicken. Alle tragen Hausschuhe. Aber nur einer trägt das Wort „Original“. Wörter sieht man in der Code-Sicht. | R6a Tasse, Stufe 1 |
 | W3\_HINT\_PIX\_0620 | Pixel (aus dem Terminal) | Du kannst das Original nicht befehligen. Aber du kannst etwas befehligen, das du in der Hand hältst. Eine Tasse zum Beispiel. Tassen sind Kopien. Alle. | R6a, Stufe 2 |
 | W3\_HINT\_PIX\_0630 | Pixel (aus dem Terminal) | Nimm die Tasse vom Wasserspender. Code-Sicht: „Original“ am hintersten Schmidt gegen „Kopie“ an der Tasse tauschen. Dann gehört die Tasse allen. | R6a, Stufe 3 |
