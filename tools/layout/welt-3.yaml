@@ -201,7 +201,7 @@ laboreingang:
     deckenlampe: {rect: [296, 26, 56, 28], gehe: [327, 316]}
     warnstreifen: {rect: [120, 276, 440, 18], gehe: [400, 318]}
     kartenleser: {rect: [420, 156, 28, 38], gehe: [432, 312]}
-    platz_des_hausmeisters: {rect: [208, 282, 60, 30], gehe: [285, 320], boden: true}   # neben dem Hausmeister (236), W3-14
+    platz_des_hausmeisters: {rect: [208, 282, 60, 30], gehe: [285, 320], boden: true, nach: R8}   # neben dem Hausmeister (236), W3-14
     wischeimer: {rect: [168, 250, 52, 54], gehe: [186, 326]}   # nur der Eimer, Mopp an der Wand entfernt
   ausgaenge:
     unterstadt_strasse: {rect: [14, 62, 116, 218], gehe: [80, 304]}
@@ -282,6 +282,7 @@ stadtstrasse:
       rect: [640, 24, 56, 16]   # nachts steht dort der Mond
       gehe: [665, 330]
       vor: W3_NACHT
+    mond: {rect: [640, 24, 56, 16], gehe: [665, 330], nach: W3_NACHT}   # AP-07: eigene Ansehen-Zeilen bei Nacht (W3_SIM_MAX_0327)
   ausgaenge:
     kueche_orakel:
       rect: [648, 118, 56, 118]   # Haustür der Orakel-Oma mit Spitzenfenster

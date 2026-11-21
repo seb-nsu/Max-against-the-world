@@ -715,7 +715,15 @@
      ],
      "textur": "res://grafik/props/telefonbuchseite.png",
      "gegenstand": "telefonbuchseite",
-     "ansehen": [],
+     "ansehen": [
+      {
+       "zeile": "W3_STR_MAX_0360",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_STR_MAX_0360"
+       ]
+      }
+     ],
      "nehmen": {
       "zeile": "W3_STR_MAX_0080",
       "sprecher": "MAX",
@@ -853,7 +861,15 @@
       288
      ],
      "erreichbar_ab": "R3b",
-     "ansehen": []
+     "ansehen": [
+      {
+       "zeile": "W3_STR_MAX_0340",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_STR_MAX_0340"
+       ]
+      }
+     ]
     }
    ],
    "zurufe": [
@@ -1043,6 +1059,13 @@
         "W3_APO_PIX_0230"
        ],
        "figur": "PIX"
+      },
+      {
+       "zeile": "W3_APO_MAX_0330",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_APO_MAX_0330"
+       ]
       }
      ],
      "benutzen": [
@@ -1200,7 +1223,15 @@
       304
      ],
      "erreichbar_ab": "start",
-     "ansehen": []
+     "ansehen": [
+      {
+       "zeile": "W3_APO_MAX_0310",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_APO_MAX_0310"
+       ]
+      }
+     ]
     }
    ],
    "zurufe": [
@@ -1681,7 +1712,8 @@
        "zeile": "W3_BAS_MAX_0690",
        "sprecher": "MAX",
        "blasen": [
-        "W3_BAS_MAX_0690"
+        "W3_BAS_MAX_0690",
+        "W3_BAS_MAX_0690_2"
        ]
       },
       {
@@ -1945,6 +1977,19 @@
      ],
      "ansehen": [
       {
+       "zeile": "W3_BAS_MAX_0788",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_BAS_MAX_0788"
+       ],
+       "bedingung": [
+        {
+         "art": "vor",
+         "raetsel": "R13"
+        }
+       ]
+      },
+      {
        "zeile": "W3_BAS_PIX_0790",
        "sprecher": "PIX",
        "blasen": [
@@ -2077,7 +2122,15 @@
       336
      ],
      "erreichbar_ab": "start",
-     "ansehen": []
+     "ansehen": [
+      {
+       "zeile": "W3_BAS_MAX_0950",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_BAS_MAX_0950"
+       ]
+      }
+     ]
     },
     {
      "id": "ausgang_kuehlung",
@@ -2621,7 +2674,8 @@
        "zeile": "W3_EING_MAX_0470",
        "sprecher": "MAX",
        "blasen": [
-        "W3_EING_MAX_0470"
+        "W3_EING_MAX_0470",
+        "W3_EING_MAX_0470_2"
        ],
        "mal": 3
       },
@@ -2782,7 +2836,8 @@
        ],
        "mal": 2
       }
-     ]
+     ],
+     "nach": "R8"
     }
    ],
    "props": [],
@@ -2803,7 +2858,15 @@
       304
      ],
      "erreichbar_ab": "start",
-     "ansehen": []
+     "ansehen": [
+      {
+       "zeile": "W3_EING_MAX_0580",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_EING_MAX_0580"
+       ]
+      }
+     ]
     }
    ],
    "zurufe": [
@@ -3380,7 +3443,15 @@
       310,
       330
      ],
-     "ansehen": [],
+     "ansehen": [
+      {
+       "zeile": "W3_SIM_MAX_0330",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_SIM_MAX_0330"
+       ]
+      }
+     ],
      "benutzen": [
       {
        "zeile": "W3_SIM_MAX_0150",
@@ -3455,7 +3526,8 @@
        "zeile": "W3_SIM_MAX_0220",
        "sprecher": "MAX",
        "blasen": [
-        "W3_SIM_MAX_0220"
+        "W3_SIM_MAX_0220",
+        "W3_SIM_MAX_0220_2"
        ]
       },
       {
@@ -3542,6 +3614,39 @@
       }
      ],
      "vor": "W3_NACHT"
+    },
+    {
+     "id": "mond",
+     "script_name": "Mond",
+     "name_key": "UI_OBJ_MOND",
+     "rect": [
+      640,
+      24,
+      56,
+      16
+     ],
+     "gehe": [
+      665,
+      330
+     ],
+     "ansehen": [
+      {
+       "zeile": "W3_SIM_MAX_0327",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_SIM_MAX_0327"
+       ]
+      },
+      {
+       "zeile": "W3_SIM_MAX_0328",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_SIM_MAX_0328"
+       ],
+       "mal": 2
+      }
+     ],
+     "nach": "W3_NACHT"
     }
    ],
    "props": [],
@@ -4015,7 +4120,8 @@
        "zeile": "W3_KUCH_MAX_0580",
        "sprecher": "MAX",
        "blasen": [
-        "W3_KUCH_MAX_0580"
+        "W3_KUCH_MAX_0580",
+        "W3_KUCH_MAX_0580_2"
        ],
        "bedingung_text": "Max starrt drei Sekunden"
       },
@@ -4078,6 +4184,14 @@
         "W3_KUCH_NAR_0610"
        ],
        "folge": [
+        {
+         "zeile": "W3_KUCH_NAR_0615",
+         "sprecher": "NAR",
+         "blasen": [
+          "W3_KUCH_NAR_0615"
+         ],
+         "bedingung_text": "Sprechblase an der Kuckucksuhr, ein Geräusch ohne Sprecher (welt_3.gd, W3-R07-02)"
+        },
         {
          "zeile": "W3_KUCH_MAX_0620",
          "sprecher": "MAX",
@@ -4356,7 +4470,15 @@
       300
      ],
      "erreichbar_ab": "R3b",
-     "ansehen": []
+     "ansehen": [
+      {
+       "zeile": "W3_KUCH_MAX_0800",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_KUCH_MAX_0800"
+       ]
+      }
+     ]
     }
    ],
    "zurufe": [
@@ -4542,7 +4664,15 @@
       760,
       310
      ],
-     "ansehen": [],
+     "ansehen": [
+      {
+       "zeile": "W3_TURM_MAX_0600",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_TURM_MAX_0600"
+       ]
+      }
+     ],
      "benutzen": [
       {
        "zeile": "W3_TURM_MAX_0220",
@@ -4797,7 +4927,8 @@
        "zeile": "W3_TURM_MAX_0550",
        "sprecher": "MAX",
        "blasen": [
-        "W3_TURM_MAX_0550"
+        "W3_TURM_MAX_0550",
+        "W3_TURM_MAX_0550_2"
        ],
        "bedingung_text": "vor dem Tausch",
        "gegenstand": "kaffeetasse"
@@ -4927,7 +5058,15 @@
      ],
      "textur": "res://grafik/props/sonnenbrille.png",
      "gegenstand": "sonnenbrille",
-     "ansehen": [],
+     "ansehen": [
+      {
+       "zeile": "W3_TURM_MAX_0610",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_TURM_MAX_0610"
+       ]
+      }
+     ],
      "nehmen": {
       "zeile": "W3_TURM_MAX_0440",
       "sprecher": "MAX",
@@ -4952,7 +5091,15 @@
      ],
      "textur": "res://grafik/props/schmidts_akte.png",
      "gegenstand": "schmidts_akte",
-     "ansehen": [],
+     "ansehen": [
+      {
+       "zeile": "W3_TURM_MAX_0620",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_TURM_MAX_0620"
+       ]
+      }
+     ],
      "nehmen": {
       "zeile": "W3_TURM_MAX_0460",
       "sprecher": "MAX",
@@ -4979,7 +5126,15 @@
       312
      ],
      "erreichbar_ab": "R3b",
-     "ansehen": []
+     "ansehen": [
+      {
+       "zeile": "W3_TURM_MAX_0630",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_TURM_MAX_0630"
+       ]
+      }
+     ]
     }
    ],
    "zurufe": [
@@ -5571,7 +5726,15 @@
       320,
       300
      ],
-     "ansehen": []
+     "ansehen": [
+      {
+       "zeile": "W3_KAM2_MAX_0280",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_KAM2_MAX_0280"
+       ]
+      }
+     ]
     },
     {
      "id": "laser",
@@ -5795,7 +5958,15 @@
       300
      ],
      "erreichbar_ab": "R9a",
-     "ansehen": []
+     "ansehen": [
+      {
+       "zeile": "W3_KAM2_MAX_0290",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_KAM2_MAX_0290"
+       ]
+      }
+     ]
     },
     {
      "id": "ausgang_testkammer_3",
@@ -5813,7 +5984,34 @@
       300
      ],
      "erreichbar_ab": "R9c",
-     "ansehen": []
+     "ansehen": [
+      {
+       "zeile": "W3_KAM2_MAX_0300",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_KAM2_MAX_0300"
+       ],
+       "bedingung": [
+        {
+         "art": "vor",
+         "raetsel": "R9c"
+        }
+       ]
+      },
+      {
+       "zeile": "W3_KAM2_MAX_0305",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_KAM2_MAX_0305"
+       ],
+       "bedingung": [
+        {
+         "art": "nach",
+         "raetsel": "R9c"
+        }
+       ]
+      }
+     ]
     }
    ],
    "zurufe": []
@@ -5988,7 +6186,15 @@
       300
      ],
      "erreichbar_ab": "R9b",
-     "ansehen": []
+     "ansehen": [
+      {
+       "zeile": "W3_KAM3_MAX_0340",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_KAM3_MAX_0340"
+       ]
+      }
+     ]
     },
     {
      "id": "ausgang_kern",
@@ -6165,7 +6371,8 @@
        "zeile": "W3_KERN_MAX_0550",
        "sprecher": "MAX",
        "blasen": [
-        "W3_KERN_MAX_0550"
+        "W3_KERN_MAX_0550",
+        "W3_KERN_MAX_0550_2"
        ]
       },
       {
@@ -6267,7 +6474,8 @@
        "zeile": "W3_KERN_MAX_0410",
        "sprecher": "MAX",
        "blasen": [
-        "W3_KERN_MAX_0410"
+        "W3_KERN_MAX_0410",
+        "W3_KERN_MAX_0410_2"
        ],
        "bedingung_text": "glühend"
       },
@@ -6319,7 +6527,15 @@
       310
      ],
      "erreichbar_ab": "R9c",
-     "ansehen": []
+     "ansehen": [
+      {
+       "zeile": "W3_KERN_MAX_0620",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_KERN_MAX_0620"
+       ]
+      }
+     ]
     }
    ],
    "zurufe": [
@@ -6387,7 +6603,40 @@
     "laboreingang"
    ],
    "tier": false,
-   "ansehen": [],
+   "ansehen": [
+    {
+     "zeile": "W3_STR_MAX_0350",
+     "sprecher": "MAX",
+     "blasen": [
+      "W3_STR_MAX_0350"
+     ],
+     "raum": "unterstadt_strasse"
+    },
+    {
+     "zeile": "W3_APO_MAX_0320",
+     "sprecher": "MAX",
+     "blasen": [
+      "W3_APO_MAX_0320"
+     ],
+     "raum": "apothekengasse"
+    },
+    {
+     "zeile": "W3_BAS_MAX_0940",
+     "sprecher": "MAX",
+     "blasen": [
+      "W3_BAS_MAX_0940"
+     ],
+     "raum": "widerstandsbasis"
+    },
+    {
+     "zeile": "W3_EING_MAX_0570",
+     "sprecher": "MAX",
+     "blasen": [
+      "W3_EING_MAX_0570"
+     ],
+     "raum": "laboreingang"
+    }
+   ],
    "pixel_auf": [],
    "pixel_redet": [],
    "gegenstand_auf": [
@@ -6726,7 +6975,8 @@
      "zeile": "W3_STR_MAX_0150",
      "sprecher": "MAX",
      "blasen": [
-      "W3_STR_MAX_0150"
+      "W3_STR_MAX_0150",
+      "W3_STR_MAX_0150_2"
      ],
      "bedingung_text": "trägt Beobachtung „spielt im Regen weiter“ ins Notizbuch ein",
      "raum": "unterstadt_strasse",
@@ -6836,13 +7086,31 @@
     "laboreingang"
    ],
    "tier": false,
-   "ansehen": [],
+   "ansehen": [
+    {
+     "zeile": "W3_BAS_MAX_0920",
+     "sprecher": "MAX",
+     "blasen": [
+      "W3_BAS_MAX_0920"
+     ],
+     "raum": "widerstandsbasis"
+    },
+    {
+     "zeile": "W3_EING_MAX_0560",
+     "sprecher": "MAX",
+     "blasen": [
+      "W3_EING_MAX_0560"
+     ],
+     "raum": "laboreingang"
+    }
+   ],
    "pixel_auf": [
     {
      "zeile": "W3_BAS_PIX_1010",
      "sprecher": "PIX",
      "blasen": [
-      "W3_BAS_PIX_1010"
+      "W3_BAS_PIX_1010",
+      "W3_BAS_PIX_1010_2"
      ],
      "raum": "widerstandsbasis"
     }
@@ -6910,7 +7178,16 @@
     "widerstandsbasis"
    ],
    "tier": false,
-   "ansehen": [],
+   "ansehen": [
+    {
+     "zeile": "W3_BAS_MAX_0930",
+     "sprecher": "MAX",
+     "blasen": [
+      "W3_BAS_MAX_0930"
+     ],
+     "raum": "widerstandsbasis"
+    }
+   ],
    "pixel_auf": [
     {
      "zeile": "W3_BAS_PIX_1030",
@@ -7107,7 +7384,8 @@
      "zeile": "W3_EING_PIX_1010",
      "sprecher": "PIX",
      "blasen": [
-      "W3_EING_PIX_1010"
+      "W3_EING_PIX_1010",
+      "W3_EING_PIX_1010_2"
      ],
      "raum": "laboreingang"
     }
@@ -7148,7 +7426,25 @@
     "kueche_orakel"
    ],
    "tier": false,
-   "ansehen": [],
+   "ansehen": [
+    {
+     "zeile": "W3_KUCH_MAX_0790",
+     "sprecher": "MAX",
+     "blasen": [
+      "W3_KUCH_MAX_0790"
+     ],
+     "raum": "kueche_orakel"
+    },
+    {
+     "zeile": "W3_KUCH_MAX_0795",
+     "sprecher": "MAX",
+     "blasen": [
+      "W3_KUCH_MAX_0795"
+     ],
+     "mal": 2,
+     "raum": "kueche_orakel"
+    }
+   ],
    "pixel_auf": [],
    "pixel_redet": [],
    "gegenstand_auf": [
@@ -7309,6 +7605,34 @@
      "bedingung_text": "nach dem Tausch",
      "mal": 2,
      "raum": "stadtstrasse"
+    },
+    {
+     "zeile": "W3_TURM_MAX_0580",
+     "sprecher": "MAX",
+     "blasen": [
+      "W3_TURM_MAX_0580"
+     ],
+     "bedingung": [
+      {
+       "art": "vor",
+       "raetsel": "R6a"
+      }
+     ],
+     "raum": "buero_50"
+    },
+    {
+     "zeile": "W3_TURM_MAX_0585",
+     "sprecher": "MAX",
+     "blasen": [
+      "W3_TURM_MAX_0585"
+     ],
+     "bedingung": [
+      {
+       "art": "nach",
+       "raetsel": "R6a"
+      }
+     ],
+     "raum": "buero_50"
     }
    ],
    "pixel_auf": [],
@@ -7329,7 +7653,16 @@
     "buero_50"
    ],
    "tier": false,
-   "ansehen": [],
+   "ansehen": [
+    {
+     "zeile": "W3_TURM_MAX_0590",
+     "sprecher": "MAX",
+     "blasen": [
+      "W3_TURM_MAX_0590"
+     ],
+     "raum": "buero_50"
+    }
+   ],
    "pixel_auf": [],
    "pixel_redet": [],
    "gegenstand_auf": [],
@@ -7367,6 +7700,34 @@
      "bedingung_text": "Animation Code-Sicht einschalten, Code-Sicht freigeschaltet",
      "mal": 2,
      "raum": "stadtstrasse"
+    },
+    {
+     "zeile": "W3_KAM3_MAX_0330",
+     "sprecher": "MAX",
+     "blasen": [
+      "W3_KAM3_MAX_0330"
+     ],
+     "bedingung": [
+      {
+       "art": "vor",
+       "raetsel": "R9d"
+      }
+     ],
+     "raum": "testkammer_3"
+    },
+    {
+     "zeile": "W3_KAM3_MAX_0335",
+     "sprecher": "MAX",
+     "blasen": [
+      "W3_KAM3_MAX_0335"
+     ],
+     "bedingung": [
+      {
+       "art": "nach",
+       "raetsel": "R9d"
+      }
+     ],
+     "raum": "testkammer_3"
     }
    ],
    "pixel_auf": [],
@@ -7758,7 +8119,8 @@
      "zeile": "W3_INV_PIX_0045",
      "sprecher": "PIX",
      "blasen": [
-      "W3_INV_PIX_0045"
+      "W3_INV_PIX_0045",
+      "W3_INV_PIX_0045_2"
      ],
      "bedingung_text": "Pixel auf der Leitung",
      "mal": 2,
@@ -7813,7 +8175,8 @@
      "zeile": "W3_KUCH_MAX_0750",
      "sprecher": "MAX",
      "blasen": [
-      "W3_KUCH_MAX_0750"
+      "W3_KUCH_MAX_0750",
+      "W3_KUCH_MAX_0750_2"
      ],
      "bedingung_text": "Simulation"
     },
@@ -7956,7 +8319,8 @@
      "zeile": "W3_TERM_MAX_0350",
      "sprecher": "MAX",
      "blasen": [
-      "W3_TERM_MAX_0350"
+      "W3_TERM_MAX_0350",
+      "W3_TERM_MAX_0350_2"
      ],
      "bedingung_text": "Realität"
     },
@@ -8037,7 +8401,8 @@
      "zeile": "W3_PIEP_MAX_0220",
      "sprecher": "MAX",
      "blasen": [
-      "W3_PIEP_MAX_0220"
+      "W3_PIEP_MAX_0220",
+      "W3_PIEP_MAX_0220_2"
      ]
     },
     {
@@ -8071,7 +8436,8 @@
      "zeile": "W3_BAS_MAX_0890",
      "sprecher": "MAX",
      "blasen": [
-      "W3_BAS_MAX_0890"
+      "W3_BAS_MAX_0890",
+      "W3_BAS_MAX_0890_2"
      ],
      "bedingung_text": "Realität"
     },
@@ -8478,7 +8844,8 @@
        "zeile": "W3_NUD_VIE_0700",
        "sprecher": "VIE",
        "blasen": [
-        "W3_NUD_VIE_0700"
+        "W3_NUD_VIE_0700",
+        "W3_NUD_VIE_0700_2"
        ],
        "regie": ""
       },
@@ -8629,7 +8996,8 @@
        "zeile": "W3_NUD_MOR_0520",
        "sprecher": "MOR",
        "blasen": [
-        "W3_NUD_MOR_0520"
+        "W3_NUD_MOR_0520",
+        "W3_NUD_MOR_0520_2"
        ],
        "regie": ""
       },
@@ -9036,7 +9404,8 @@
        "zeile": "W3_KUCH_ORA_0120",
        "sprecher": "ORA",
        "blasen": [
-        "W3_KUCH_ORA_0120"
+        "W3_KUCH_ORA_0120",
+        "W3_KUCH_ORA_0120_2"
        ],
        "regie": ""
       },
@@ -9133,7 +9502,8 @@
        "zeile": "W3_KUCH_NAR_0200",
        "sprecher": "NAR",
        "blasen": [
-        "W3_KUCH_NAR_0200"
+        "W3_KUCH_NAR_0200",
+        "W3_KUCH_NAR_0200_2"
        ],
        "regie": "Szene; Sparschwein vom Regal verschwindet; Inventar: Omas Rezeptkarte"
       },
@@ -9157,7 +9527,8 @@
        "zeile": "W3_KUCH_RAD_0230",
        "sprecher": "RAD",
        "blasen": [
-        "W3_KUCH_RAD_0230"
+        "W3_KUCH_RAD_0230",
+        "W3_KUCH_RAD_0230_2"
        ],
        "regie": "Radio-Moment; läuft direkt nach 0220, leicht verrauscht"
       },
@@ -9191,7 +9562,8 @@
        "zeile": "W3_KUCH_ORA_0270",
        "sprecher": "ORA",
        "blasen": [
-        "W3_KUCH_ORA_0270"
+        "W3_KUCH_ORA_0270",
+        "W3_KUCH_ORA_0270_2"
        ],
        "regie": "Hinweis Rätsel 11"
       },
@@ -9223,7 +9595,8 @@
        "zeile": "W3_KUCH_ORA_0310",
        "sprecher": "ORA",
        "blasen": [
-        "W3_KUCH_ORA_0310"
+        "W3_KUCH_ORA_0310",
+        "W3_KUCH_ORA_0310_2"
        ],
        "regie": "Hinweis Rätsel 10"
       },
@@ -9319,7 +9692,8 @@
        "zeile": "W3_KUCH_ORA_0430",
        "sprecher": "ORA",
        "blasen": [
-        "W3_KUCH_ORA_0430"
+        "W3_KUCH_ORA_0430",
+        "W3_KUCH_ORA_0430_2"
        ],
        "regie": ""
       }
@@ -9416,7 +9790,8 @@
        "zeile": "W3_BAS_KAL_0360",
        "sprecher": "KAL",
        "blasen": [
-        "W3_BAS_KAL_0360"
+        "W3_BAS_KAL_0360",
+        "W3_BAS_KAL_0360_2"
        ],
        "regie": "Hinweis Rätsel 8 und 9"
       },
@@ -9424,7 +9799,8 @@
        "zeile": "W3_BAS_KAL_0370",
        "sprecher": "KAL",
        "blasen": [
-        "W3_BAS_KAL_0370"
+        "W3_BAS_KAL_0370",
+        "W3_BAS_KAL_0370_2"
        ],
        "regie": ""
       }
@@ -9440,7 +9816,8 @@
        "zeile": "W3_BAS_KAL_0390",
        "sprecher": "KAL",
        "blasen": [
-        "W3_BAS_KAL_0390"
+        "W3_BAS_KAL_0390",
+        "W3_BAS_KAL_0390_2"
        ],
        "regie": "Hinweis Rätsel 10"
       },
@@ -9472,7 +9849,8 @@
        "zeile": "W3_BAS_KAL_0410",
        "sprecher": "KAL",
        "blasen": [
-        "W3_BAS_KAL_0410"
+        "W3_BAS_KAL_0410",
+        "W3_BAS_KAL_0410_2"
        ],
        "regie": "Hinweis Rätsel 13; vor der Lösung"
       },
@@ -9550,7 +9928,8 @@
        "zeile": "W3_EING_HAU_0050",
        "sprecher": "HAU",
        "blasen": [
-        "W3_EING_HAU_0050"
+        "W3_EING_HAU_0050",
+        "W3_EING_HAU_0050_2"
        ],
        "regie": ""
       },
@@ -9615,7 +9994,8 @@
        "zeile": "W3_EING_HAU_1060",
        "sprecher": "HAU",
        "blasen": [
-        "W3_EING_HAU_1060"
+        "W3_EING_HAU_1060",
+        "W3_EING_HAU_1060_2"
        ],
        "regie": ""
       }
@@ -9631,7 +10011,8 @@
        "zeile": "W3_EING_HAU_0130",
        "sprecher": "HAU",
        "blasen": [
-        "W3_EING_HAU_0130"
+        "W3_EING_HAU_0130",
+        "W3_EING_HAU_0130_2"
        ],
        "regie": "Hinweis Olivenöl"
       },

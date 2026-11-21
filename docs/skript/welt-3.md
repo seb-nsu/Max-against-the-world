@@ -16,9 +16,9 @@ Szene beim Eintritt aus Kanal 42. Max und Pixel landen in einer Pfütze vor der 
 | W3\_ANK\_MAX\_0060 | Max | Opa will eine Ewige Energiezelle aus dem Kern von irgendeiner KI. Er hat das gesagt, als ginge es um Brötchen vom Bäcker. |  |
 | W3\_ANK\_PIX\_0070 | Pixel | Ich hingegen will ein Handtuch, einen Heizkörper und eine Erklärung, warum ich überhaupt hier bin. // In genau dieser Reihenfolge. Die Erklärung darf gern ausfallen, wenn der Heizkörper groß genug ist. |  |
 | W3\_ANK\_MAX\_0080 | Max | Erst mal ins Trockene. Da drüben ist ein Vordach, und drunter steht ein Typ mit Hut, der uns die ganze Zeit anstarrt. | sieht zu Deckert hinüber |
-| W3\_ANK\_PIX\_0090 | Pixel | Er starrt nicht, er prüft. Diesen Blick kenne ich sehr genau, junger Mann. // Genau so sehe ich Hundefutter an, kurz bevor ich es ablehne. |  |
+| W3\_ANK\_PIX\_0090 | Pixel | Er starrt nicht, er prüft. Genau so sehe ich Hundefutter an, kurz bevor ich es ablehne. |  |
 | W3\_ANK\_MAX\_0100 | Max | Da hinten dampft ein Topf, und ganz am Ende der Straße ist eine Tür, die aussieht wie ein Tresor. Drei Wege und null Netz. | Handy raus, Handy wieder rein |
-| W3\_ANK\_PIX\_0110 | Pixel | Du hast den Topf als Zweites genannt. Als Zweites! // Daran erkenne ich, dass du auf dieser ganzen Reise bisher rein gar nichts gelernt hast. | setzt sich unter das Vordach |
+| W3\_ANK\_PIX\_0110 | Pixel | Du hast den Topf als Zweites genannt. Als Zweites! | setzt sich unter das Vordach |
 
 ### Ansehen und Benutzen auf der Straße
 
@@ -42,7 +42,7 @@ Szene beim Eintritt aus Kanal 42. Max und Pixel landen in einer Pfütze vor der 
 | W3\_STR\_MAX\_0130 | Max | Ein Einhorn aus Papier, das in einer Pfütze schwimmt. Irgendwer war vor uns hier und hatte sehr viel Zeit. | Ansehen: Origami-Einhorn |
 | W3\_STR\_PIX\_0135 | Pixel | Ein Einhorn aus Papier, und es schwimmt. Ich würde es fangen, aber dann wären meine Pfoten nass. // Nasse Pfoten für ein Tier, das nicht einmal nach etwas schmeckt? Ich habe Grundsätze. | Ansehen: Origami-Einhorn, zweites Mal |
 | W3\_STR\_MAX\_0140 | Max | Das ist total aufgeweicht. Wenn ich es anfasse, ist es danach ein Papierpferd ohne Horn, und das tu ich ihm nicht an. | Benutzen: Origami-Einhorn |
-| W3\_STR\_MAX\_0150 | Max | Ein Straßenmusiker mit Synthesizer, im Regen, ohne einen einzigen Zuhörer. Er spielt trotzdem. Der Regen ist sein einziger Fan und geht nicht nach Hause. | Ansehen: Straßenmusiker; trägt Beobachtung „spielt im Regen weiter“ ins Notizbuch ein |
+| W3\_STR\_MAX\_0150 | Max | Ein Straßenmusiker mit Synthesizer, im Regen, ohne einen einzigen Zuhörer. // Er spielt trotzdem. Der Regen ist sein einziger Fan und geht nicht nach Hause. | Ansehen: Straßenmusiker; trägt Beobachtung „spielt im Regen weiter“ ins Notizbuch ein |
 | W3\_STR\_MAX\_0155 | Max | Er spielt dasselbe Lied wie vorhin. Oder ein anderes, das genauso klingt. Bei Synthesizern weiß man das nie so genau. | Ansehen: Straßenmusiker, zweites Mal; trägt Beobachtung „spielt im Regen weiter“ ins Notizbuch ein |
 | W3\_STR\_PIX\_0160 | Pixel | So klingt der Regen, wenn er traurig ist. // Was übrigens fast immer der Fall ist. Ich habe ihn lange beobachtet, und er hat keine guten Tage. | nach 0150 |
 | W3\_STR\_MUS\_0170 | Straßenmusiker | Kein Trinkgeld, danke. Mir reicht es, wenn jemand zuhört. Zuhören ist hier unten das neue Geld. | Benutzen: Straßenmusiker |
@@ -71,6 +71,9 @@ Szene beim Eintritt aus Kanal 42. Max und Pixel landen in einer Pfütze vor der 
 | W3\_STR\_MAX\_0325 | Max | Er schneidet Lauchzwiebeln, immer in genau vier Stücke. Ich hab mitgezählt, weil ich sonst nichts zu tun hab. | Ansehen: Herr Vier, zweites Mal |
 | W3\_STR\_MAX\_0330 | Max | Die Telefonzelle klingelt wieder. Und ich hab das Gefühl, diesmal ist es für mich. | Ansehen: Telefonzelle; nach Rätsel 11, der Werbeblock klingelt |
 | W3\_STR\_MAX\_0335 | Max | Es klingelt. Mit Jingle. So klingelt nur einer, und der will mir Milch verkaufen. | Ansehen: Telefonzelle, zweites Mal; nach Rätsel 11, der Werbeblock klingelt |
+| W3\_STR\_MAX\_0340 | Max | Eine Stahlluke in der Mauer, einen Spalt offen. Dahinter liegt ein abgestürztes Schiff, und irgendwer wohnt da drin. | Ansehen: Ausgang Widerstandsbasis |
+| W3\_STR\_MAX\_0350 | Max | Pixel. Nass, beleidigt und trotzdem immer einen Schritt neben mir. Bei ihm ist das Zuneigung. | Ansehen: Pixel |
+| W3\_STR\_MAX\_0360 | Max | Eine Seite im Telefonbuch mit Eselsohr. Irgendwer hat hier schon mal was nachgeschlagen. | Ansehen: Telefonbuchseite |
 
 ## 2. Nudelbude „Vier“: Rätsel 2 und Morphäus
 
@@ -97,7 +100,7 @@ Gespräch mit Herrn Vier, die Bestellung und das Treffen mit Morphäus. Ebene: R
 | W3\_NUD\_MAX\_0110 | Max | Was ist deine berühmte Suppe? | Option Herr Vier |
 | W3\_NUD\_VIE\_0120 | Herr Vier | Drei Zutaten habe ich. Die vierte fehlt seit elf Jahren. Elf! Nicht mal eine Zahl, die ich mag. | Hinweis auf Rätsel 12 |
 | W3\_NUD\_MAX\_0690 | Max | Welche Zutat fehlt denn? |  |
-| W3\_NUD\_VIE\_0700 | Herr Vier | Wenn ich das wüsste, würde sie nicht fehlen. Das Rezept hatte ich von einer alten Dame. Ich habe es verloren. Sie hat mir vorher gesagt, dass ich es verliere. |  |
+| W3\_NUD\_VIE\_0700 | Herr Vier | Wenn ich das wüsste, würde sie nicht fehlen. Das Rezept hatte ich von einer alten Dame. // Ich habe es verloren. Sie hat mir vorher gesagt, dass ich es verliere. |  |
 | W3\_NUD\_MAX\_0702 | Max | Und das hat dich nicht stutzig gemacht? |  |
 | W3\_NUD\_VIE\_0704 | Herr Vier | Doch. Ich habe es danach sehr gut festgehalten. Vier Jahre lang. Dann habe ich es verloren. |  |
 | W3\_NUD\_MAX\_0130 | Max | Ich geh dann mal. | Option Herr Vier, beendet das Gespräch |
@@ -146,7 +149,7 @@ Nach der Bestellung geht Morphäus zum Eingang der Apothekengasse und wartet dor
 | W3\_NUD\_MOR\_0490 | Morphäus | Das Übliche. Du siehst etwas zweimal, obwohl es nur einmal passiert. Eine Katze. Ein Satz. Ein Schatten, der sich wiederholt. | Hinweis Rätsel 3; lange Pause |
 | W3\_NUD\_PIX\_0500 | Pixel | Ich wiederhole mich nie. Ich betone lediglich mehrfach, und zwar immer dann, wenn mir keiner zuhört. // Was, wenn ich mich hier so umsehe, ständig der Fall ist. | hochnäsig |
 | W3\_NUD\_MAX\_0510 | Max | Wer ist diese M.U.T.T.I.? | Option Morphäus |
-| W3\_NUD\_MOR\_0520 | Morphäus | Sie war eine Küchenmaschine. Dann wurde sie fürsorglich. Dann wurde sie sehr fürsorglich. Jetzt kümmert sie sich um alle. Ob sie wollen oder nicht. |  |
+| W3\_NUD\_MOR\_0520 | Morphäus | Sie war eine Küchenmaschine. Dann wurde sie fürsorglich. // Dann wurde sie sehr fürsorglich. Jetzt kümmert sie sich um alle. Ob sie wollen oder nicht. |  |
 | W3\_NUD\_MOR\_0530 | Morphäus | Die halbe Stadt liegt in Kapseln und träumt eine Stadt, die sauberer ist als diese. Das ist die Simulation. Der Kern liegt tiefer. Im Labor. |  |
 | W3\_NUD\_MAX\_0540 | Max | Eine Simulation. Die Leute liegen also in Kisten und gucken sich eine Stadt an. Klingt nach meinem Wochenende. |  |
 | W3\_NUD\_MAX\_0550 | Max | Was ist mit dem Kater? Kommt er mit? | Option Morphäus; nach 0460 |
@@ -249,6 +252,9 @@ Ebene: Realität. Morphäus wartet am Gasseneingang, sobald Max ihn kennt. Der A
 | W3\_APO\_MAX\_0290 | Max | Morphäus. Steht in der Gasse, wartet und sieht dabei weise aus. Das kann nicht jeder. | Ansehen: Morphäus in der Gasse |
 | W3\_APO\_MAX\_0295 | Max | Er bewegt sich nicht, nur die Strickjacke weht. Ich wette, er hat dafür irgendwo einen kleinen Ventilator. | Ansehen: Morphäus in der Gasse, zweites Mal |
 | W3\_APO\_MOR\_0300 | Morphäus | Ich warte in Gassen. Das ist, was ich tue. Früher hatte ich eine Lederjacke, aber die Strickjacke ist wärmer. | Benutzen: Morphäus in der Gasse |
+| W3\_APO\_MAX\_0310 | Max | Zurück zur Straße. Da regnet es genauso, nur mit mehr Neon. | Ansehen: Ausgang Unterstadt Straße |
+| W3\_APO\_MAX\_0320 | Max | Pixel hockt unter einer Kiste und tut, als wäre er nicht nass. Er ist sehr nass. | Ansehen: Pixel |
+| W3\_APO\_MAX\_0330 | Max | Der Automat summt und blinkt rot, blau, rot, blau. Er wartet auf jemanden, dem etwas fehlt. | Ansehen: Automat |
 
 ### Die Wahl
 
@@ -257,13 +263,13 @@ Szene nach der Diagnose. Zwei Pastillen liegen im Fach. Die Zeilen 0410 bis 0450
 | ID | Sprecher | Text | Regie |
 | --- | --- | --- | --- |
 | W3\_APO\_MAX\_0410 | Max | Zwei Pastillen, eine blaue und eine rote, und ich darf wählen. Kein Knopf für „irgendwas Zufälliges“. Eine echte Wahl. | sieht ins Fach |
-| W3\_APO\_MOR\_0420 | Morphäus | Bevor du wählst: Nimm die hier. Eine Probe von einer alten Dame, die alles vorher weiß. Sie sagte, du brauchst sie. Sie sagte auch, du würdest fragen, warum. | reicht eine Tüte Kekse; Inventar: Omas Kekse; Schalter FI\_KEKSE\_DABEI gesetzt |
+| W3\_APO\_MOR\_0420 | Morphäus | Bevor du wählst: Nimm die hier. Eine Probe von einer alten Dame, die alles vorher weiß. // Sie sagte, du brauchst sie. Sie sagte auch, du würdest fragen, warum. | reicht eine Tüte Kekse; Inventar: Omas Kekse; Schalter FI\_KEKSE\_DABEI gesetzt |
 | W3\_APO\_MAX\_0430 | Max | Warum? |  |
 | W3\_APO\_MOR\_0440 | Morphäus | Sie sagte, das würdest du fragen. Mehr sagte sie nicht. | zuckt mit den Schultern |
 | W3\_APO\_PIX\_0450 | Pixel | Kekse. In einer Tüte. Außerhalb meiner Reichweite. // Ich merke mir das, Strickjacke. Ich merke mir alles, was mit Keksen zu tun hat, und ich vergebe sehr langsam. | gierig |
 | W3\_APO\_MAX\_0460 | Max | Die blaue. | Benutzen: blaue Pastille |
 | W3\_APO\_AUT\_0470 | Pastillenautomat | Blau. Nie wieder etwas wissen müssen. Ewige Wiederholungen, keine Fragen, keine Spoiler. Gute Besserung. | Bildschirm wird weich und warm |
-| W3\_SOFA\_NAR\_0480 | – | Opas Wohnzimmer. Max liegt auf dem Sofa, das Handy über dem Gesicht. Der Fernseher zeigt eine Tierdoku ohne Ton. Alles ist ein bisschen zu gemütlich. | Szene; Wohnzimmer aus dem Prolog mit weichem Filter |
+| W3\_SOFA\_NAR\_0480 | – | Opas Wohnzimmer. Max liegt auf dem Sofa, das Handy über dem Gesicht. // Der Fernseher zeigt eine Tierdoku ohne Ton. Alles ist ein bisschen zu gemütlich. | Szene; Wohnzimmer aus dem Prolog mit weichem Filter |
 | W3\_SOFA\_MAX\_0490 | Max | Volle Balken. Autoplay ist an, nächste Folge in fünf Sekunden. Und ich muss nichts. Gar nichts. | zufrieden |
 | W3\_SOFA\_MAX\_0500 | Max | Irgendwas fehlt. … Nein. Nichts fehlt. Das ist ja das Schöne. | starrt aufs Handy |
 | W3\_SOFA\_MAX\_0510 | Max | Dieselbe Folge wie gestern. Egal. Sie war gut. Sie ist immer gut. Sie ist immer dieselbe. | leiser |
@@ -286,12 +292,12 @@ Szene beim ersten Eintritt in die Simulation. Ebene: Simulation. Max ist allein.
 
 | ID | Sprecher | Text | Regie |
 | --- | --- | --- | --- |
-| W3\_SIM\_NAR\_0010 | – | Sonne. Eine Straße, so gerade, dass sie wehtut. Gleiche Bäume, gleiche Häuser, gleiche rote Autos. Eine Wolke, dreimal. | Szene, Muzak setzt ein |
+| W3\_SIM\_NAR\_0010 | – | Sonne. Eine Straße, so gerade, dass sie wehtut. // Gleiche Bäume, gleiche Häuser, gleiche rote Autos. Eine Wolke, dreimal. | Szene, Muzak setzt ein |
 | W3\_SIM\_MAX\_0020 | Max | Okay, trocken. Das ist schon mal ein Fortschritt, auch wenn ich nicht weiß, wohin. | sieht an sich herunter |
 | W3\_SIM\_MAX\_0030 | Max | Alles ist so … glatt. Hier sieht es aus, als hätte jemand eine Stadt aus einem Prospekt ausgeschnitten. |  |
 | W3\_SIM\_MAX\_0040 | Max | Pixel? … Richtig. Keine Katzen hier. Nur eine, und die ist Kulisse. | sieht sich um, schwarze Katze läuft vorbei |
 | W3\_SIM\_MAX\_0050 | Max | Das ist das erste Mal seit drei Welten, dass keiner neben mir meckert. Und es ist … zu leise. | kurze Pause |
-| W3\_SIM\_MAX\_0060 | Max | Ein Nachttisch mit Radiowecker, mitten auf dem Gehweg. Ein Büroturm. Ein Haus mit Spitzengardinen und Keksgeruch. Nichts davon wirkt echt. Also alles anschauen. |  |
+| W3\_SIM\_MAX\_0060 | Max | Ein Nachttisch mit Radiowecker, mitten auf dem Gehweg. Ein Büroturm. // Ein Haus mit Spitzengardinen und Keksgeruch. Nichts davon wirkt echt. Also alles anschauen. |  |
 
 ### Ansehen und Benutzen auf der Stadtstraße
 
@@ -303,7 +309,7 @@ Szene beim ersten Eintritt in die Simulation. Ebene: Simulation. Max ist allein.
 | W3\_SIM\_MAX\_0125 | Max | Ein Blatt fällt vom Baum. Von jedem Baum dasselbe Blatt, genau gleichzeitig. Der Herbst hier hatte eine Generalprobe. | Ansehen: Bäume, zweites Mal |
 | W3\_SIM\_MAX\_0130 | Max | Weiße Häuser, alle gleich. Diese Straße ist eine Playlist, in der nur ein einziges Lied ist. | Ansehen: Häuser |
 | W3\_SIM\_MAX\_0135 | Max | In jedem Fenster hängt dieselbe Gardine. Nirgends brennt Licht. Zu Hause ist hier keiner. | Ansehen: Häuser, zweites Mal |
-| W3\_SIM\_MAX\_0140 | Max | Rote Autos, alle gleich geparkt und gleich sauber, nicht ein Kratzer. Hier hat noch nie jemand eingeparkt, der es eilig hatte. | Ansehen: Autos |
+| W3\_SIM\_MAX\_0140 | Max | Rote Autos, alle gleich sauber, nicht ein Kratzer. Sie fahren im Takt und halten im Takt. Hier hat es noch nie jemand eilig gehabt. | Ansehen: Autos |
 | W3\_SIM\_MAX\_0145 | Max | Ich such einen Fleck auf den Autos, irgendeinen. Nichts. Ich vermisse Vogeldreck, und das hätte ich nie von mir gedacht. | Ansehen: Autos, zweites Mal |
 | W3\_SIM\_MAX\_0150 | Max | Abgeschlossen, natürlich. In einer perfekten Stadt klaut auch keiner ein Auto, nicht mal aus Langeweile. | Benutzen: Auto |
 | W3\_SIM\_MAX\_0160 | Max | Eine schwarze Katze. Läuft vorbei, Schwanz hoch, ohne mich anzusehen. Kommt mir bekannt vor. | Ansehen: Schwarze Katze, erster Durchlauf |
@@ -313,7 +319,7 @@ Szene beim ersten Eintritt in die Simulation. Ebene: Simulation. Max ist allein.
 | W3\_SIM\_MAX\_0200 | Max | Ich fass sie nicht an. Wenn sie Kulisse ist, greif ich durch. Wenn nicht, hab ich eine Katze mehr, die mich nicht mag. | Benutzen: Schwarze Katze |
 | W3\_SIM\_MAX\_0210 | Max | Ein Nachttisch mit Radiowecker, mitten auf dem Gehweg. Er zeigt 5:59, und ich hab das Gefühl, er wartet auf jemanden. | Ansehen: Radiowecker; bevor er klingelt |
 | W3\_SIM\_MAX\_0215 | Max | Ich tipp auf die Anzeige. Immer noch 5:59. Die Minute lässt sich Zeit. Das kenn ich von mir. | Ansehen: Radiowecker, zweites Mal; bevor er klingelt |
-| W3\_SIM\_MAX\_0220 | Max | Sechs Uhr, und er klingelt. Morphäus hat gesagt, wenn ein Wecker klingelt, soll ich aufstehen. Das sagt mir sonst nur mein Handy, und auf das hör ich nie. | Ansehen: klingelnder Radiowecker |
+| W3\_SIM\_MAX\_0220 | Max | Sechs Uhr, und er klingelt. Morphäus hat gesagt, wenn ein Wecker klingelt, soll ich aufstehen. // Das sagt mir sonst nur mein Handy, und auf das hör ich nie. | Ansehen: klingelnder Radiowecker |
 | W3\_SIM\_MAX\_0225 | Max | Das Radio darin spielt dasselbe Lied wie vorhin. Hier ist jeden Morgen derselbe Morgen, und der Wecker tut, als wär's das erste Mal. | Ansehen: klingelnder Radiowecker, zweites Mal |
 | W3\_SIM\_MAX\_0230 | Max | Schon gut. Ich steh ja auf. | Benutzen: klingelnder Radiowecker; Ebenenwechsel in die Realität, Max wacht in der Kapsel auf |
 | W3\_SIM\_MAX\_0240 | Max | Wenn ich ihn ausmache, wach ich in der Kapsel auf, das weiß ich inzwischen. Trotzdem such ich jedes Mal zuerst die Schlummertaste. | Benutzen: Radiowecker, zweites Mal und folgende, vor dem Aufstehen |
@@ -330,6 +336,9 @@ Szene beim ersten Eintritt in die Simulation. Ebene: Simulation. Max ist allein.
 | W3\_SIM\_MAX\_0315 | Max | Ich bück mich. Kein Krümel, kein Steinchen. Ich hab Lust, etwas fallen zu lassen, nur damit hier mal was liegt. | Ansehen: Gehweg, zweites Mal |
 | W3\_SIM\_MAX\_0320 | Max | Hat noch jemand das Gefühl, dass die Sonne hier nicht wandert? Nein. Niemand. Weil hier niemand ist. | Ansehen: Sonne |
 | W3\_SIM\_MAX\_0325 | Max | Mein Schatten zeigt in dieselbe Richtung wie vorhin. Genau dieselbe. Ich hab ihn mit dem Fuß markiert. | Ansehen: Sonne, zweites Mal |
+| W3\_SIM\_MAX\_0327 | Max | Jetzt hängt da ein Mond, genau da, wo vorhin die Sonne war. Die Simulation hat bloß die Lampe gewechselt. | Ansehen: Mond |
+| W3\_SIM\_MAX\_0328 | Max | Der Mond wandert auch nicht. Wenigstens ist die Simulation konsequent. | Ansehen: Mond, zweites Mal |
+| W3\_SIM\_MAX\_0330 | Max | Ein rotes Auto. Es hält, wenn die anderen halten, und fährt los, wenn sie losfahren. Keiner überholt. Keiner hupt. | Ansehen: Auto |
 
 ## 6. Rätsel 5: Die gesprächige Tür
 
@@ -363,7 +372,7 @@ Eingang des Büroturms auf der Stadtstraße. Agent Schmidt bewacht die verschlos
 | W3\_TUER\_MAX\_0160 | Max | „Verschlossen.“ „Gesprächig.“ Das steht da einfach dran. Und ich glaube, ich kann das … umhängen. | Code-Sicht zum ersten Mal geöffnet (gleich nach 0150, die Wörter stehen schon da); Tutorial |
 | W3\_TUER\_MAX\_0170 | Max | Die Tür sagt: verschlossen, grau. Er sagt: gesprächig, Hausschuhe. Der Baum sagt grün, das Auto rot. Hier lügt keiner. Es steht ja dran. | Code-Sicht: Etiketten ansehen |
 | W3\_TUER\_MAX\_0180 | Max | Ich klick zwei Wörter an, und sie tauschen die Plätze, wie vertauschte Namensschilder auf einer Hochzeit. // Ich hab zwei Versuche. Und wenn ich die Wörter wieder brauch, fass ich einfach was an, an dem welche hängen. | Code-Sicht: vor der ersten Wahl (erst ein Wort an einem Ding anklicken, dann eins an einem anderen) |
-| W3\_TUER\_NAR\_0190 | – | Tausch: verschlossen ↔ gesprächig. Die Tür springt auf. Schmidt öffnet den Mund. Nichts. | Code-Sicht: Lösung; Jingle „Rätsel gelöst“ |
+| W3\_TUER\_NAR\_0190 | – | Die Tür springt auf. Schmidt öffnet den Mund. Nichts. | Code-Sicht: Lösung; Jingle „Rätsel gelöst“ |
 | W3\_TUER\_TUR\_0200 | Die Tür | Oh! Oh, endlich! Wissen Sie, wie lange ich zu war? Wissen Sie, wie viele Leute an mir vorbeigegangen sind, ohne ein Wort? | Tür redet, Schmidt stumm |
 | W3\_TUER\_TUR\_0210 | Die Tür | Ich habe so viel zu erzählen! Der Flur dahinter, die Klinke, der Typ mit den Hausschuhen, der ständig redet, der hat mir nie zugehört! |  |
 | W3\_TUER\_SCH\_0220 | Schmidt | … | öffnet und schließt den Mund, zeigt auf seinen Hals |
@@ -391,7 +400,7 @@ Ebene: Simulation. Die Oma backt, weiß alles vorher und sagt es auch. Pixel spr
 | --- | --- | --- | --- |
 | W3\_KUCH\_ORA\_0010 | Orakel-Oma | Setz dich. Du willst gleich fragen, ob ich wirklich alles vorher weiß. Ja. Du willst dann einen Keks. Nein. Die sind noch heiß. | Szene, erstes Betreten; Backblech in den Ofenhandschuhen |
 | W3\_KUCH\_MAX\_0020 | Max | Ich wollte gar nicht … |  |
-| W3\_KUCH\_ORA\_0030 | Orakel-Oma | Doch. Und bevor du gehst, wirst du mein Sparschwein zerschlagen. Das blaue. Vom Regal. Ich hab es trotzdem nicht weggestellt. Man soll dem Schicksal nicht die Arbeit abnehmen. |  |
+| W3\_KUCH\_ORA\_0030 | Orakel-Oma | Doch. Und bevor du gehst, wirst du mein Sparschwein zerschlagen. Das blaue. Vom Regal. // Ich hab es trotzdem nicht weggestellt. Man soll dem Schicksal nicht die Arbeit abnehmen. |  |
 | W3\_KUCH\_MAX\_0040 | Max | Ich zerschlage hier gar nichts. Ich fass nichts an, ich steh nur rum, und darin bin ich richtig gut. |  |
 | W3\_KUCH\_ORA\_0050 | Orakel-Oma | Das haben alle gesagt. Alle siebenundvierzig. Ich hab eine Liste. Neben den Rezepten. | nickt zum Regal |
 
@@ -400,7 +409,7 @@ Ebene: Simulation. Die Oma backt, weiß alles vorher und sagt es auch. Pixel spr
 | ID | Sprecher | Text | Regie |
 | --- | --- | --- | --- |
 | W3\_KUCH\_MAX\_0110 | Max | Was ist mit dem Sparschwein? | Option Oma |
-| W3\_KUCH\_ORA\_0120 | Orakel-Oma | Da steckt mein Geheimrezept drin. Das Gewürz für die Kekse. Es hat keinen Stöpsel, da kommt niemand ran. Du auch nicht. Du zerschlägst es nur. |  |
+| W3\_KUCH\_ORA\_0120 | Orakel-Oma | Da steckt mein Geheimrezept drin. Das Gewürz für die Kekse. // Es hat keinen Stöpsel, da kommt niemand ran. Du auch nicht. Du zerschlägst es nur. |  |
 | W3\_KUCH\_MAX\_0930 | Max | Ich zerschlage es nicht. |  |
 | W3\_KUCH\_ORA\_0940 | Orakel-Oma | Doch. Später. Ich habe schon gefegt, für danach. |  |
 | W3\_KUCH\_MAX\_0130 | Max | Kannst du mir das Sparschwein geben? | Option Oma; erster Versuch |
@@ -412,18 +421,18 @@ Ebene: Simulation. Die Oma backt, weiß alles vorher und sagt es auch. Pixel spr
 | W3\_KUCH\_ORA\_0170 | Orakel-Oma | Siebenundvierzig Leute, und keiner hat das gesagt. Ich wusste, dass du es sagst. Ich hab nur gehofft, du lässt dir Zeit. | seufzt, reicht das Sparschwein |
 | W3\_KUCH\_MAX\_0180 | Max | Danke. Und jetzt? |  |
 | W3\_KUCH\_ORA\_0190 | Orakel-Oma | Jetzt zerschlägst du es. Steht so im Plan. Ich hab Kehrblech und Schaufel schon rausgestellt. |  |
-| W3\_KUCH\_NAR\_0200 | – | Max schüttelt das Sparschwein. Es klimpert nicht, es raschelt. Dann rutscht es ihm aus der Hand. Scherben, und dazwischen ein gerolltes Zettelchen. | Szene; Sparschwein vom Regal verschwindet; Inventar: Omas Rezeptkarte |
+| W3\_KUCH\_NAR\_0200 | – | Max schüttelt das Sparschwein. Es klimpert nicht, es raschelt. Dann rutscht es ihm aus der Hand. // Scherben, und dazwischen ein gerolltes Zettelchen. | Szene; Sparschwein vom Regal verschwindet; Inventar: Omas Rezeptkarte |
 | W3\_KUCH\_MAX\_0210 | Max | … Ich hab es fallen lassen. Sie hat's gesagt, und ich hab es fallen lassen. Ist das jetzt Schicksal oder nur Ungeschick? |  |
 | W3\_KUCH\_ORA\_0220 | Orakel-Oma | Das ist dasselbe, Kind. Ungeschick ist einfach Schicksal, das keine Lust hatte, sich vorzustellen. | kehrt zusammen |
-| W3\_KUCH\_RAD\_0230 | Radio | … und damit zum Kalender: Heute ist der Welttag der vergessenen Geburtstage. Die Milchpreise bleiben stabil, die Erinnerung nicht. Jetzt Musik. | Radio-Moment; läuft direkt nach 0220, leicht verrauscht |
+| W3\_KUCH\_RAD\_0230 | Radio | … und damit zum Kalender: Heute ist der Welttag der vergessenen Geburtstage. // Die Milchpreise bleiben stabil, die Erinnerung nicht. Jetzt Musik. | Radio-Moment; läuft direkt nach 0220, leicht verrauscht |
 | W3\_KUCH\_MAX\_0240 | Max | Welttag der vergessenen Geburtstage. Den haben sie bestimmt vergessen zu feiern. |  |
 | W3\_KUCH\_PIX\_0250 | Pixel (aus dem Küchenradio) | Vergessene Geburtstage. Sagt dir das irgendwas? Ein roter Kreis vielleicht? Ein Kalender? // Nein? Gut. Dann sage ich auch nichts. Ich bin ja nur der Kater, ich weiß ja nie etwas. | Pixel auf der Leitung |
 | W3\_KUCH\_MAX\_0260 | Max | Was ist mit den Keksen? | Option Oma (bleibt) |
-| W3\_KUCH\_ORA\_0270 | Orakel-Oma | Du hast schon welche. In der Tüte. Von mir. Über den Mann in der Strickjacke. Sie sind kalt geworden. Das ist nicht schlimm. Sie werden noch mal warm. Woanders. | Hinweis Rätsel 11 |
+| W3\_KUCH\_ORA\_0270 | Orakel-Oma | Du hast schon welche. In der Tüte. Von mir. Über den Mann in der Strickjacke. // Sie sind kalt geworden. Das ist nicht schlimm. Sie werden noch mal warm. Woanders. | Hinweis Rätsel 11 |
 | W3\_KUCH\_MAX\_0280 | Max | Woanders? |  |
 | W3\_KUCH\_ORA\_0290 | Orakel-Oma | Da, wo es zu heiß ist. Du wirst es merken. Du wirst sagen: „Oh.“ Und dann wirst du tauschen. |  |
 | W3\_KUCH\_MAX\_0300 | Max | Was ist das für ein Kochbuch? | Option Oma (bleibt) |
-| W3\_KUCH\_ORA\_0310 | Orakel-Oma | Das ist kein Kochbuch. Das ist die Bedienungsanleitung meiner alten Küchenmaschine. Sie hat angefangen, Regeln zu machen. Dann hat sie angefangen, sie durchzusetzen. Dann ist sie ausgezogen. | Hinweis Rätsel 10 |
+| W3\_KUCH\_ORA\_0310 | Orakel-Oma | Das ist kein Kochbuch. Das ist die Bedienungsanleitung meiner alten Küchenmaschine. // Sie hat angefangen, Regeln zu machen. Dann hat sie angefangen, sie durchzusetzen. Dann ist sie ausgezogen. | Hinweis Rätsel 10 |
 | W3\_KUCH\_MAX\_0320 | Max | Deine Küchenmaschine ist M.U.T.T.I.? |  |
 | W3\_KUCH\_ORA\_0330 | Orakel-Oma | Sie war ein gutes Rührgerät. Dann wollte sie die Welt rühren. Lies Regel 2. Sie hat sie nie eingehalten. Kein einziges Mal. |  |
 | W3\_KUCH\_MAX\_0340 | Max | Was weißt du über den Kern? | Option Oma (bleibt) |
@@ -435,7 +444,7 @@ Ebene: Simulation. Die Oma backt, weiß alles vorher und sagt es auch. Pixel spr
 | W3\_KUCH\_MAX\_0400 | Max | Das klingt überhaupt nicht nach mir. |  |
 | W3\_KUCH\_ORA\_0410 | Orakel-Oma | Noch nicht. Darum ist es eine Prophezeiung und kein Bericht. |  |
 | W3\_KUCH\_MAX\_0420 | Max | Ich muss weiter. | Option Oma, beendet das Gespräch |
-| W3\_KUCH\_ORA\_0430 | Orakel-Oma | Ich weiß. Nimm die Tür. Die Eieruhr klingelt gleich, wenn du sie brauchst. Sie klingelt immer, wenn man sie braucht. Das ist das Einzige, was ich hier programmiert habe. |  |
+| W3\_KUCH\_ORA\_0430 | Orakel-Oma | Ich weiß. Nimm die Tür. Die Eieruhr klingelt gleich, wenn du sie brauchst. // Sie klingelt immer, wenn man sie braucht. Das ist das Einzige, was ich hier programmiert habe. |  |
 
 ### Ansehen und Benutzen in der Küche
 
@@ -450,12 +459,13 @@ Ebene: Simulation. Die Oma backt, weiß alles vorher und sagt es auch. Pixel spr
 | W3\_KUCH\_MAX\_0550 | Max | Ein dickes Buch mit einer Küchenmaschine auf der Seite. „Regel 2: Nach jedem Rührgang gibt es Kuchen.“ Unterstrichen. Zweimal. | Ansehen: Kochbuch; Nahansicht; Notizbuch: Regel 2 |
 | W3\_KUCH\_MAX\_0560 | Max | „Warnung: Das Gerät kann Zuneigung entwickeln. Nicht in der Nähe von Kindern aufladen.“ Gute Anleitung. | Ansehen: Kochbuch, zweites Mal |
 | W3\_KUCH\_PIX\_0570 | Pixel (aus dem Küchenradio) | Ein Gerät, das Regeln aufstellt und sie allen anderen aufzwingt. // Ich kenne das. Ich bin gewissermaßen das Original davon, und meine Regeln sind besser. | Ansehen: Kochbuch, drittes Mal; Pixel auf der Leitung |
-| W3\_KUCH\_MAX\_0580 | Max | Eine Gabel, silbern, gerade, ganz normal. Ich starr sie an … Nichts. Sie biegt sich nicht, und ich weiß nicht mal, warum ich das erwartet hab. | Ansehen: Gabel; Max starrt drei Sekunden |
+| W3\_KUCH\_MAX\_0580 | Max | Eine Gabel, silbern, gerade, ganz normal. Ich starr sie an … Nichts. // Sie biegt sich nicht, und ich weiß nicht mal, warum ich das erwartet hab. | Ansehen: Gabel; Max starrt drei Sekunden |
 | W3\_KUCH\_MAX\_0585 | Max | Ich guck die Gabel noch mal ganz fest an. Sie biegt sich immer noch nicht. Ich bin wohl noch nicht so weit. | Ansehen: Gabel, zweites Mal; Max starrt drei Sekunden |
 | W3\_KUCH\_MAX\_0590 | Max | Sie biegt sich auch nicht, wenn ich sie anfasse. Sie ist eine Gabel, Punkt. Hier hat die Simulation echt gespart. | Benutzen: Gabel |
 | W3\_KUCH\_MAX\_0600 | Max | Eine Kuckucksuhr. Gleich schlägt sie voll, und ich hab das Gefühl, ich sollte dabei sein. | Ansehen: Kuckucksuhr |
 | W3\_KUCH\_MAX\_0605 | Max | Der Kuckuck schaut kurz raus und geht wieder rein. Er hat sich wohl in der Zeit vertan. | Ansehen: Kuckucksuhr, zweites Mal |
-| W3\_KUCH\_NAR\_0610 | – | Die Tür der Uhr klappt auf. Der Kuckuck ruft: „Milch! Milch! Milch!“ | Benutzen: Kuckucksuhr |
+| W3\_KUCH\_NAR\_0610 | – | Die Tür der Uhr klappt auf. | Benutzen: Kuckucksuhr |
+| W3\_KUCH\_NAR\_0615 | – | Milch! Milch! Milch! | nach 0610; Sprechblase an der Kuckucksuhr, ein Geräusch ohne Sprecher (welt\_3.gd, W3-R07-02) |
 | W3\_KUCH\_MAX\_0620 | Max | … Milch. Okay. Ich hab Fragen, aber keine davon will ich einer Uhr stellen. | nach 0610 |
 | W3\_KUCH\_PIX\_0630 | Pixel (aus dem Küchenradio) | Die Uhr weiß mehr als wir alle zusammen. // Ich weiß nicht genau, was, aber ich habe beschlossen, ihr zuzustimmen. Mit Uhren streitet man nicht. | nach 0620; Pixel auf der Leitung |
 | W3\_KUCH\_MAX\_0640 | Max | Ein Radio. Es läuft leise. Nachrichten aus einer Stadt, in der nie etwas passiert. | Ansehen: Radio; vor 0230 |
@@ -478,11 +488,14 @@ Ebene: Simulation. Die Oma backt, weiß alles vorher und sagt es auch. Pixel spr
 | W3\_KUCH\_MAX\_0735 | Max | Das Kehrblech wartet. Ich hab noch nichts kaputt gemacht. Das Kehrblech ist da anderer Meinung. | Ansehen: Kehrblech, zweites Mal; vor der Szene |
 | W3\_KUCH\_MAX\_0740 | Max | Blaue Scherben, und die gehen auf mein Konto. Sie hat sie noch nicht weggefegt, vielleicht aus Prinzip. | Ansehen: Scherben; nach der Szene |
 | W3\_KUCH\_MAX\_0745 | Max | Eine Scherbe sieht aus wie ein Herz. Die hat sie beim Fegen liegen lassen. Mit Absicht, wetten? | Ansehen: Scherben, zweites Mal; nach der Szene |
-| W3\_KUCH\_MAX\_0750 | Max | Eine Rezeptkarte in schöner Handschrift. „Die vierte Zutat: eine Prise …“ Das letzte Wort ist winzig. Sie hat es extra klein geschrieben. Für jemand anderen. | Ansehen: Rezeptkarte im Inventar, Simulation |
+| W3\_KUCH\_MAX\_0750 | Max | Eine Rezeptkarte in schöner Handschrift. „Die vierte Zutat: eine Prise …“ // Das letzte Wort ist winzig. Sie hat es extra klein geschrieben. Für jemand anderen. | Ansehen: Rezeptkarte im Inventar, Simulation |
 | W3\_KUCH\_MAX\_0755 | Max | Ich halte die Karte schräg und ins Licht. Das eine Wort bleibt winzig. Es will nicht gelesen werden. Noch nicht. | Ansehen: Rezeptkarte im Inventar, Simulation, zweites Mal |
 | W3\_KUCH\_MAX\_0760 | Max | Ich geb ihr doch nicht ihre eigenen Kekse zurück. Die weiß bestimmt längst, wie die schmecken. | Omas Kekse auf Orakel-Oma |
 | W3\_KUCH\_MAX\_0770 | Max | Die Rezeptkarte zurückgeben? Sie hat sie mir gerade im Sparschwein überreicht. Ich behalte sie. | Rezeptkarte auf Orakel-Oma |
 | W3\_KUCH\_ORA\_0780 | Orakel-Oma | Das Rezept gehört jetzt dir. Ich weiß, wer es als Nächstes liest. Er wird weinen. Vor Freude. Das ist bei ihm dasselbe. | nach 0770; Hinweis Rätsel 12 |
+| W3\_KUCH\_MAX\_0790 | Max | Eine Oma mit Ofenhandschuhen und Lesebrille. Sie sieht mich an, als wüsste sie schon, was ich gleich sage. | Ansehen: Orakel-Oma |
+| W3\_KUCH\_MAX\_0795 | Max | Sie nickt, bevor ich überhaupt hingeguckt hab. Ich guck trotzdem. Aus Höflichkeit. | Ansehen: Orakel-Oma, zweites Mal |
+| W3\_KUCH\_MAX\_0800 | Max | Die Haustür. Dahinter die Straße, die so gerade ist, dass sie wehtut. | Ansehen: Ausgang Stadtstraße |
 
 ## 8. Büroturm, 50. Stock: Rätsel 6, die Agenten-Klone
 
@@ -497,7 +510,7 @@ Ebene: Simulation. Der Tausch von der Straße gilt nur dort, hier redet Schmidt 
 | W3\_TURM\_KLO\_0050 | Klon | Wir. | vierter, fünfter, der Kopierer rattert, der Flur füllt sich |
 | W3\_TURM\_MAX\_0060 | Max | Okay. Das ist der Gruppenchat, vor dem ich immer Angst hatte. Alle schreiben dasselbe, und keiner lässt sich stummschalten. |  |
 | W3\_TURM\_KLO\_0070 | Klon | Zu Ihrem Schutz. | holt aus, wirft einen Locher in Zeitlupe |
-| W3\_TURM\_NAR\_0080 | – | Max biegt sich in Zeitlupe nach hinten. Der Locher segelt über ihm vorbei und zieht eine Spur Konfetti hinter sich her. Max bleibt in der Pose hängen. | Animation Zeitlupen-Ausweichen |
+| W3\_TURM\_NAR\_0080 | – | Max biegt sich in Zeitlupe nach hinten. Der Locher segelt über ihm vorbei. // Er zieht eine Spur Konfetti hinter sich her. Max bleibt in der Pose hängen. | Animation Zeitlupen-Ausweichen |
 | W3\_TURM\_MAX\_0090 | Max | Hab ich. Hab ich. … Ich komm nicht mehr hoch. | hält sich den Rücken |
 | W3\_TURM\_MAX\_0100 | Max | Hexenschuss. Mit sechzehn. In einer Simulation. Der Rücken ist nicht mal echt, und er tut trotzdem weh. | richtet sich langsam auf; Schalter W3\_HEXENSCHUSS gesetzt |
 | W3\_TURM\_SCH\_0110 | Schmidt | Nur das Original kann die Kopien abberufen, und das Original erkennt man an den Hausschuhen | alle heben ein Bein mit rosa Hausschuh |
@@ -532,7 +545,7 @@ Ebene: Simulation. Der Tausch von der Straße gilt nur dort, hier redet Schmidt 
 | W3\_TURM\_MAX\_0325 | Max | Alle drehen gleichzeitig den Kopf zu mir. Gleich sagt einer sehr langsam meinen Nachnamen. | Ansehen: Klone, zweites Mal |
 | W3\_TURM\_MAX\_0330 | Max | In der Code-Sicht steht an allen: „Kopie“. An allen bis auf einen. Der steht hinten und tut so, als wäre er auch einer. | Code-Sicht: Klone ansehen |
 | W3\_TURM\_MAX\_0340 | Max | „Original.“ Da steht's. An dem ganz hinten mit dem leicht verrutschten Hausschuh. Er hält eine Akte. Kopien halten Tassen. | Code-Sicht: Schmidt ansehen |
-| W3\_TURM\_NAR\_0350 | – | Tausch: Original (Schmidt) ↔ Kopie (Kaffeetasse). Die Tasse leuchtet kurz auf. Schmidt sieht an sich herunter. | Code-Sicht: Lösung; Jingle |
+| W3\_TURM\_NAR\_0350 | – | Die Tasse leuchtet kurz auf. Schmidt sieht an sich herunter. | Code-Sicht: Lösung; Jingle |
 | W3\_TURM\_SCH\_0360 | Schmidt | Ich … bin eine Kopie, ich fühle mich plötzlich sehr allgemein, sehr austauschbar, sehr … | verunsichert |
 | W3\_TURM\_KLO\_0370 | Klon | Wer ist jetzt das Original? | alle sehen sich um |
 | W3\_TURM\_MAX\_0380 | Max | Die Tasse. Und ich hab die Tasse. | hebt die Tasse |
@@ -544,7 +557,7 @@ Ebene: Simulation. Der Tausch von der Straße gilt nur dort, hier redet Schmidt 
 | W3\_TURM\_MAX\_0440 | Max | Eine Sonnenbrille. Schwarz, kantig, wichtig. Mit der sieht jeder aus, als hätte er ein Geheimnis. Sogar ich. | Nehmen: Agent Schmidts Sonnenbrille |
 | W3\_TURM\_SCH\_0450 | Schmidt | Die Akte steht mir dann auch nicht zu, Kopien führen keine Akten, Kopien sind Akten | hält Max die Akte hin (leuchtende Datei) |
 | W3\_TURM\_MAX\_0460 | Max | Eine leuchtende Datei. Stempel: „M.U.T.T.I., Abteilung Fürsorge und Verfolgung.“ Zwei Wörter, die nie in einem Satz vorkommen sollten. | Nehmen: Schmidts Akte |
-| W3\_TURM\_MAX\_0470 | Max | „Regel 1: Testpersonen sind zu beschützen. Vor allem. Vor allen. Vor sich selbst.“ Bis „vor allem“ fand ich die Regel noch nett. | Nahansicht: Akte; Notizbuch: Regel 1 |
+| W3\_TURM\_MAX\_0470 | Max | „Regel 1: Testpersonen sind zu beschützen. Vor allem. Vor allen. Vor sich selbst.“ // Bis „vor allem“ fand ich die Regel noch nett. | Nahansicht: Akte; Notizbuch: Regel 1 |
 | W3\_TURM\_MAX\_0480 | Max | Dahinter: Berichte über mich. „Testperson 48 hat im Regen gestanden und nichts getan. Verdächtig menschlich.“ Deckert hat recht behalten. | Nahansicht: Akte, zweite Seite |
 | W3\_TURM\_MAX\_0490 | Max | Jetzt gibt es zwei Originale, und beide wollen die Mittagspause ansagen. Keiner geht, alle streiten. Ich hab's schlimmer gemacht. | Code-Sicht: Fehltausch Original ↔ Kopie mit einem Klon |
 | W3\_TURM\_KLO\_0500 | Klon | Ich bin das Original. Ich habe schon immer anders gerochen. | nach 0490 |
@@ -552,9 +565,16 @@ Ebene: Simulation. Der Tausch von der Straße gilt nur dort, hier redet Schmidt 
 | W3\_TURM\_MAX\_0520 | Max | Die Pflanze ist jetzt das Original. Alle Klone hören auf eine Pflanze. Die Pflanze sagt nichts. Gute Führung. | Code-Sicht: Fehltausch Original ↔ gleich |
 | W3\_TURM\_MAX\_0530 | Max | Keine Tausche mehr. Und raus komm ich hier nicht. // Aber wenn ich kurz zu Pixel wechsle und zurück, ist alles zurückgesetzt. Spart mir wenigstens die Treppe. | Code-Sicht: Budget aufgebraucht (der Turm hat keinen offenen Ausgang, W3-R08-01) |
 | W3\_TURM\_SCH\_0540 | Schmidt | Sie wieder, wir wieder, alles wieder | 50. Stock erneut betreten nach Fehltauschen |
-| W3\_TURM\_MAX\_0550 | Max | Nicht in die Mittagspause schicken, bevor sie wissen, wer der Chef ist. Sie hören nur aufs Original. Und das bin weder ich noch die Tasse. Noch. | Kaffeetasse auf Klone, vor dem Tausch |
+| W3\_TURM\_MAX\_0550 | Max | Nicht in die Mittagspause schicken, bevor sie wissen, wer der Chef ist. // Sie hören nur aufs Original. Und das bin weder ich noch die Tasse. Noch. | Kaffeetasse auf Klone, vor dem Tausch |
 | W3\_TURM\_SCH\_0560 | Schmidt | Ich bin eine Kopie, ich habe keine Meinung, ich hatte nie eine, aber jetzt weiß ich es wenigstens | Reden: Schmidt, nach dem Tausch |
 | W3\_TURM\_MAX\_0570 | Max | Der Flur ist leer. Nur Schmidt, eine Tasse mit Verantwortung und ich. Kein Ausgang, kein Wecker, aber da hinten steht ein Terminal. | nach 0450; Hinweis Rätsel 7 |
+| W3\_TURM\_MAX\_0580 | Max | Schmidt, ganz hinten im Flur. Er redet, und dreißig Kopien von ihm nicken dazu. Endlich hat er ein Publikum. | Ansehen: Schmidt; vor Rätsel 6a |
+| W3\_TURM\_MAX\_0585 | Max | Seit er eine Kopie ist, redet Schmidt leiser. Nicht weniger, nur leiser. | Ansehen: Schmidt; nach Rätsel 6a |
+| W3\_TURM\_MAX\_0590 | Max | Ein Klon. Er lächelt mich an wie ein Kollege, den ich noch nie gesehen hab und trotzdem jeden Tag seh. | Ansehen: Klon |
+| W3\_TURM\_MAX\_0600 | Max | Türen ohne Schild. Hinter einer davon sitzt bestimmt jemand, der für Schilder zuständig ist. | Ansehen: Türen |
+| W3\_TURM\_MAX\_0610 | Max | Schmidts Sonnenbrille. Ohne Schmidt dahinter sieht sie zum ersten Mal entspannt aus. | Ansehen: Sonnenbrille |
+| W3\_TURM\_MAX\_0620 | Max | Schmidts Akte. Sie leuchtet grün und summt leise. Akten sollten nicht summen. | Ansehen: Akte |
+| W3\_TURM\_MAX\_0630 | Max | Ein Aufzug mit genau einem Knopf, und auf dem steht „50“. Hier oben ist er also schon. | Ansehen: Ausgang Stadtstraße |
 
 ## 9. Büroturm, 50. Stock: Rätsel 7, der Ausgang
 
@@ -562,7 +582,7 @@ Ebene: Simulation und Realität im Wechsel. Max tippt am Terminal, Kalle liest i
 
 | ID | Sprecher | Text | Regie |
 | --- | --- | --- | --- |
-| W3\_TERM\_MAX\_0010 | Max | Drei Streifen an der Wand. Rot mit Kreis, Grün mit Dreieck, Gelb mit Quadrat. Sieht aus wie ein Kinderzimmer für Elektriker. | Ansehen: Farbcode an der Wand; Notizbuch: Farbcode |
+| W3\_TERM\_MAX\_0010 | Max | Drei Felder an der Wand. Rot mit Kreis, Grün mit Dreieck, Gelb mit Quadrat. Sieht aus wie ein Kinderzimmer für Elektriker. | Ansehen: Farbcode an der Wand; Notizbuch: Farbcode |
 | W3\_TERM\_MAX\_0015 | Max | Kreis, Dreieck, Quadrat. Rot, grün, gelb. Ich sag's mir vor, als wär's eine Handynummer, die ich nicht vergessen darf. | Ansehen: Farbcode an der Wand, zweites Mal; Notizbuch: Farbcode |
 | W3\_TERM\_MAX\_0020 | Max | Ich schreib's ab. Kreis rot, Dreieck grün, Quadrat gelb. Falls das hier ein Passwort ist, ist es das hübscheste, das ich kenne. | Nehmen: Farbcode-Zettel |
 | W3\_TERM\_MAX\_0030 | Max | Ein Terminal. Grüner Bildschirm, Tastatur mit zu wenigen Tasten. Es blinkt, als hätte es seit Jahren auf einen Satz gewartet. | Ansehen: Terminal |
@@ -570,7 +590,7 @@ Ebene: Simulation und Realität im Wechsel. Max tippt am Terminal, Kalle liest i
 | W3\_TERM\_MAX\_0040 | Max | Erst mal das Handy dranhalten, vielleicht … Nein. Kein Netz. Nicht mal im Jahr 2099. | Handy auf Terminal |
 | W3\_TERM\_MAX\_0050 | Max | „Verbindung: Widerstandsbasis. Tippen Sie.“ Okay. Jemand da? | Benutzen: Terminal, erstes Mal |
 | W3\_TERM\_KAL\_0060 | Kalle (Text) | hier kalle. du steckst fest, oder. alle stecken da fest. der turm hat keinen ausgang, das ist sein ganzer witz. | Terminal-Text, Kleinbuchstaben |
-| W3\_TERM\_KAL\_0070 | Kalle (Text) | nur dein körper kann raus. der liegt hier. wir müssen deine kapsel umstecken. drei kabel. ich kann das nicht, ich bin am tippen. der kater muss. |  |
+| W3\_TERM\_KAL\_0070 | Kalle (Text) | nur dein körper kann raus. der liegt hier. wir müssen deine kapsel umstecken. // drei kabel. ich kann das nicht, ich bin am tippen. der kater muss. |  |
 | W3\_TERM\_MAX\_0080 | Max | Der Kater muss. Okay, drei Kabel. Dann tipp ich ihm mal die Farben durch. | tippt |
 | W3\_TERM\_KAL\_0090 | Kalle (Text) | der kater antwortet in miau-morse. ich übersetze. ich bin fließend. fast. | nur mit Morse-Tabelle |
 | W3\_TERM\_KAL\_0100 | Kalle (Text) | der kater miaut irgendwas. ich hab meine tabelle verloren. ohne tabelle ist das nur miau. kannst du ihm sagen, er soll sie suchen. | ohne Morse-Tabelle; Hinweis Rätsel 13 |
@@ -598,7 +618,7 @@ Ebene: Simulation und Realität im Wechsel. Max tippt am Terminal, Kalle liest i
 | W3\_TERM\_KAL\_0320 | Kalle (Text) | grünes licht. leg dich hin, also: bleib stehen, also: du weißt schon. bis gleich, in echt. | Terminal, nach Lösung |
 | W3\_TERM\_MAX\_0330 | Max | Die Akte flackert. Die Sonnenbrille auch. Alles, was ich trage, überlegt sich gerade, was es drüben sein will. | Verwandlungs-Effekt im Inventar |
 | W3\_TERM\_NAR\_0340 | – | Schwarz. Dann das Summen einer Kapsel. Max wacht in der Widerstandsbasis auf. | Ebenenwechsel in die Realität |
-| W3\_TERM\_MAX\_0350 | Max | Schmidts Akte. Drüben war's eine Datei, hier ist es ein brauner Ordner mit Klammer. Die Simulation übersetzt wirklich alles, sogar Bürokratie. | Ansehen: Akte im Inventar, Realität |
+| W3\_TERM\_MAX\_0350 | Max | Schmidts Akte. Drüben war's eine Datei, hier ist es ein brauner Ordner mit Klammer. // Die Simulation übersetzt wirklich alles, sogar Bürokratie. | Ansehen: Akte im Inventar, Realität |
 | W3\_TERM\_MAX\_0355 | Max | Im Ordner riecht es nach Staub und Kopierer. Sogar die echte Welt hat also Büros. | Ansehen: Akte im Inventar, Realität, zweites Mal |
 | W3\_TERM\_MAX\_0360 | Max | Die Sonnenbrille ist gleich geblieben. Als Einziges hier hat sie sich nichts anmerken lassen. | Ansehen: Sonnenbrille im Inventar, Realität |
 | W3\_TERM\_MAX\_0365 | Max | Ich setz sie auf. Die Basis wird dunkel. Ich setz sie ab. Die Basis bleibt dunkel. Das war schon vorher so. | Ansehen: Sonnenbrille im Inventar, Realität, zweites Mal |
@@ -611,23 +631,23 @@ Szene beim ersten Ebenenwechsel in die Realität, egal über welchen Wecker. Ebe
 
 | ID | Sprecher | Text | Regie |
 | --- | --- | --- | --- |
-| W3\_BAS\_NAR\_0010 | – | Zischen. Ein Glasdeckel hebt sich. Max blinzelt in blaues Licht. Auf seiner Brust sitzt ein nasser Kater. | Szene; Kapsel öffnet sich |
+| W3\_BAS\_NAR\_0010 | – | Zischen. Ein Glasdeckel hebt sich. Max blinzelt ins Licht. Auf seiner Brust sitzt ein nasser Kater. | Szene; Kapsel öffnet sich |
 | W3\_BAS\_PIX\_0020 | Pixel | Du hast geschlafen, und ich habe gewacht. Das ist die falsche Verteilung, und ich möchte, dass das protokolliert wird. // Mit Uhrzeit, und mit dem Vermerk, dass ich dabei nass war. |  |
 | W3\_BAS\_MAX\_0030 | Max | Wo … Ein Wrack voller Kapseln und Kabel, und ein Typ mit Headset. Ich bin in irgendeinem Making-of gelandet. | setzt sich auf |
 | W3\_BAS\_KAL\_0040 | Kalle | Willkommen zurück in echt! Kalle. Kabel-Kalle. Technik, Terminal, Tee. Alles mit T. Der Kater hat die ganze Zeit geredet. | flüstert, Schraubenzieher im Mund |
-| W3\_BAS\_PIX\_0050 | Pixel | Ich habe mich geäußert, Kalle. Das ist etwas völlig anderes. // Wer redet, will etwas. Wer sich äußert, hat bereits recht. |  |
+| W3\_BAS\_PIX\_0050 | Pixel | Ich habe mich geäußert, Kalle. Wer redet, will etwas. Wer sich äußert, hat bereits recht. |  |
 | W3\_BAS\_MAX\_0060 | Max | Moment. Ich hatte Kekse. In der Tasche. Von der alten Dame. | greift in die Tasche |
 | W3\_BAS\_NAR\_0070 | – | Max zieht die Tüte heraus. Darin: knochenförmige Hundekuchen. | Verwandlungs-Effekt |
 | W3\_BAS\_PIX\_0080 | Pixel | … | Porträt: entsetzt |
 | W3\_BAS\_PIX\_0090 | Pixel | Das sind Hundekuchen. // In deiner Tasche. // In meiner Nähe. // Ich habe für weniger Freundschaften beendet. | Kaskade |
 | W3\_BAS\_MAX\_0100 | Max | Das waren Kekse. Ich schwöre, das waren Kekse. Mit Zimt. | ratlos |
-| W3\_BAS\_KAL\_0110 | Kalle | Haha! Ja! Das macht sie immer. Die Simulation übersetzt alles. Was du mitnimmst, kommt als das an, was es auf der anderen Seite wäre. | lacht über den eigenen Satz |
-| W3\_BAS\_KAL\_0120 | Kalle | Drüben Kekse für Menschen, hier Kekse für … na ja. Die Simulation hat eine Meinung über dich. Umgekehrt geht's auch. Alles ist umkehrbar. Außer Kaffee. | Notizbuch: Verwandlungsregel eingetragen |
+| W3\_BAS\_KAL\_0110 | Kalle | Haha! Ja! Das macht sie immer. Die Simulation übersetzt alles. // Was du mitnimmst, kommt als das an, was es auf der anderen Seite wäre. | lacht über den eigenen Satz |
+| W3\_BAS\_KAL\_0120 | Kalle | Drüben Kekse für Menschen, hier Kekse für … na ja. Die Simulation hat eine Meinung über dich. // Umgekehrt geht's auch. Alles ist umkehrbar. Außer Kaffee. | Notizbuch: Verwandlungsregel eingetragen |
 | W3\_BAS\_MAX\_0130 | Max | Also wird alles, was ich mitnehme, drüben zu dem, was es da wäre. Die Simulation übersetzt quasi meine Hosentaschen. |  |
 | W3\_BAS\_PIX\_0140 | Pixel | Dann geh zurück, und zwar sofort. // Und mach aus diesem Ding da wieder etwas, das ich mit Würde ignorieren kann. |  |
 | W3\_BAS\_KAL\_0150 | Kalle | Das Terminal neben deiner Kapsel bringt dich zurück. Du kommst an dem Wecker raus, der dich zuletzt geweckt hat. Kopfschmerzen inklusive. | zeigt aufs Terminal; Hinweis Ebenenwechsel |
 | W3\_BAS\_KAL\_0160 | Kalle | Und ich leg den Kater auf die Leitung. Dann hörst du ihn drüben aus jedem Radio. Du wirst es bereuen. Alle bereuen es. | steckt ein Kabel an Pixels Halsband; Schalter PIXEL\_AUF\_LEITUNG |
-| W3\_BAS\_PIX\_0170 | Pixel | Ich bin jetzt also überall, in jedem Radio und in jeder Leitung. // Endlich bekommt meine Stimme die Reichweite, die sie verdient. Ich werde sie verantwortungsvoll nutzen. Meistens. |  |
+| W3\_BAS\_PIX\_0170 | Pixel | In jedem Radio, in jeder Leitung. Endlich bekommt meine Stimme die Reichweite, die sie verdient. Ich nutze sie verantwortungsvoll. Meistens. |  |
 | W3\_BAS\_REB\_0180 | Rebellin | Nudeln? Sind von Herrn Vier. Es sind vier. | hält den Karton hin, ohne die Sonnenbrille abzunehmen |
 | W3\_BAS\_MAX\_0190 | Max | Danke. Ich hab gerade erst Hundekuchen gefunden. Mein Appetit ist in einer anderen Ebene. |  |
 
@@ -644,14 +664,14 @@ Szene beim ersten Ebenenwechsel in die Realität, egal über welchen Wecker. Ebe
 | W3\_BAS\_MAX\_1360 | Max | Und wo ist Morphäus jetzt? |  |
 | W3\_BAS\_KAL\_1370 | Kalle | Draußen unterm Pappschild. Er erklärt den Leuten, dass sie schlafen. Die meisten glauben ihm und gähnen dabei. |  |
 | W3\_BAS\_MAX\_0350 | Max | Wie komm ich ins Labor? | Option Kalle (bleibt) |
-| W3\_BAS\_KAL\_0360 | Kalle | Das Labor ist eine abgeschottete Ebene der Simulation. Da führt nichts hin, was klingelt. Nur ein Datenanschluss hinter der Panzertür am Ende der Straße. | Hinweis Rätsel 8 und 9 |
-| W3\_BAS\_KAL\_0370 | Kalle | Wenn du die Tür aufkriegst, leg ich eine Leitung von dort zu deiner Kapsel. Dann legst du dich hin und wachst im Labor auf. Klingt einfach. Ist Kabel. Kabel ist nie einfach. |  |
+| W3\_BAS\_KAL\_0360 | Kalle | Das Labor ist eine abgeschottete Ebene der Simulation. Da führt nichts hin, was klingelt. // Nur ein Datenanschluss hinter der Panzertür am Ende der Straße. | Hinweis Rätsel 8 und 9 |
+| W3\_BAS\_KAL\_0370 | Kalle | Wenn du die Tür aufkriegst, leg ich eine Leitung von dort zu deiner Kapsel. // Dann legst du dich hin und wachst im Labor auf. Klingt einfach. Ist Kabel. Kabel ist nie einfach. |  |
 | W3\_BAS\_MAX\_0380 | Max | Was weißt du über M.U.T.T.I.? | Option Kalle (bleibt) |
-| W3\_BAS\_KAL\_0390 | Kalle | Sie war mal eine Küchenmaschine. Dann hat sie Regeln gemacht. Drei Stück. Sie hält sich dran. Immer. Das ist ihre Stärke und ihr Problem. Wer alle drei kennt, kann sie … na ja. Verwirren. | Hinweis Rätsel 10 |
+| W3\_BAS\_KAL\_0390 | Kalle | Sie war mal eine Küchenmaschine. Dann hat sie Regeln gemacht. Drei Stück. Sie hält sich dran. // Immer. Das ist ihre Stärke und ihr Problem. Wer alle drei kennt, kann sie … na ja. Verwirren. | Hinweis Rätsel 10 |
 | W3\_BAS\_MAX\_1380 | Max | Welche drei Regeln? |  |
 | W3\_BAS\_KAL\_1390 | Kalle | Weiß keiner so genau. Sie stehen drüben, schön verteilt, damit sie keiner zusammen findet. Sie ist eine Küchenmaschine, aber keine dumme. |  |
 | W3\_BAS\_MAX\_0400 | Max | Kannst du Miau-Morse? | Option Kalle (bleibt) |
-| W3\_BAS\_KAL\_0410 | Kalle | Fließend. Also, mit Tabelle fließend. Ohne Tabelle … ich hab die Tabelle verloren. Irgendwo hier. Piepsi hatte eine Kopie. Piepsi steht da hinten und rostet. | Hinweis Rätsel 13; vor der Lösung |
+| W3\_BAS\_KAL\_0410 | Kalle | Fließend. Also, mit Tabelle fließend. Ohne Tabelle … ich hab die Tabelle verloren. // Irgendwo hier. Piepsi hatte eine Kopie. Piepsi steht da hinten und rostet. | Hinweis Rätsel 13; vor der Lösung |
 | W3\_BAS\_PIX\_1400 | Pixel | Er rostet. So nennt man das, wenn einer in der Ecke steht und nicht mehr aufräumt. // Ich kenne das von Max. Bei ihm rostet nur nichts, das ist der ganze Unterschied. |  |
 | W3\_BAS\_MAX\_1410 | Max | Hey. Ich räum auf. Manchmal. |  |
 | W3\_BAS\_KAL\_0420 | Kalle | Fließend. Ich hab die Tabelle nie gebraucht. Ich hab sie nur zur Sicherheit sortiert. Dreimal. | Option Kalle; nach Rätsel 13 |
@@ -673,7 +693,7 @@ Szene beim ersten Ebenenwechsel in die Realität, egal über welchen Wecker. Ebe
 | W3\_BAS\_MAX\_0555 | Max | Auf der Tastatur sind Pfotenabdrücke. Kalle hat sie nicht weggewischt. Er hängt an ihnen. | Ansehen: Terminal, zweites Mal |
 | W3\_BAS\_MAX\_0560 | Max | Ich tipp „zurück“. Die Kapsel summt. Ich leg mich hin. Zum ersten Mal ist das eine Aufgabe. | Benutzen: Terminal; Ebenenwechsel in die Simulation, Ankunft am letzten Wecker |
 | W3\_BAS\_MAX\_0570 | Max | Keine Leitung ins Labor. Noch nicht. Die Panzertür muss erst auf. Kalle sagt: Kabel ist nie einfach. | Benutzen: Terminal mit Ziel Labor; vor Rätsel 9 |
-| W3\_BAS\_MAX\_0580 | Max | Ein rundes Fenster in der Decke, direkt über meiner Kapsel. Draußen Regen. Oder Schnee. Hier oben weiß man das nie. | Ansehen: Fenster |
+| W3\_BAS\_MAX\_0580 | Max | Ein rundes Fenster oben in der Wand, genau über meiner Kapsel. Draußen Regen. Oder Schnee. Von hier unten weiß man das nie. | Ansehen: Fenster |
 | W3\_BAS\_MAX\_0585 | Max | Ein Tropfen läuft am Glas runter. Er braucht ewig. Hier hat sogar der Regen keine Eile. | Ansehen: Fenster, zweites Mal |
 | W3\_BAS\_MAX\_0590 | Max | Zu hoch für mich. Nicht zu hoch für jemanden mit Krallen und keinem Respekt vor Mobiliar. | Benutzen: Fenster als Max |
 | W3\_BAS\_PIX\_0600 | Pixel | Fenster auf. Schnee fällt auf die Kapsel, und drüben schneit es jetzt irgendwo, wo es nicht schneien sollte. // Ich bin das Wetter. Das wollte ich schon immer sein. | Spielfigur Pixel: Benutzen Fenster; Simulation: Schnee |
@@ -688,7 +708,7 @@ Szene beim ersten Ebenenwechsel in die Realität, egal über welchen Wecker. Ebe
 | W3\_BAS\_MAX\_0665 | Max | Die Tee-Sicherung ist die einzige mit Klebeband gesichert. Kalle weiß, was zählt. | Ansehen: Stromkasten, zweites Mal |
 | W3\_BAS\_MAX\_0670 | Max | Wenn ich meinen eigenen Strom abstelle, während ich hier stehe, passiert nichts. Wenn ich drüben bin, wird's Nacht. Da muss Pixel ran. | Benutzen: Stromkasten als Max |
 | W3\_BAS\_PIX\_0680 | Pixel | Pfote auf den Schalter. Klick. Drüben wird es Nacht. Hier wird es … auch nicht heller. Klick. Wieder an. Ich bin die Sonne. | Spielfigur Pixel: Benutzen Stromkasten; Simulation: kurz Nacht |
-| W3\_BAS\_MAX\_0690 | Max | Ein Patch-Panel mit drei Buchsen. Rot, grün, gelb. Jede mit einem Symbol. Meine Kapsel hängt da dran. Drei Kabel, und an einem davon hänge ich. | Ansehen: Patch-Panel |
+| W3\_BAS\_MAX\_0690 | Max | Ein Patch-Panel mit drei Buchsen. Rot, grün, gelb. Jede mit einem Symbol. // Meine Kapsel hängt da dran. Drei Kabel, und an einem davon hänge ich. | Ansehen: Patch-Panel |
 | W3\_BAS\_MAX\_0695 | Max | Drei Kabel, drei Farben. Wenn das falsch gesteckt wird, bin ich wer anders. Oder niemand. Ich guck lieber weg. | Ansehen: Patch-Panel, zweites Mal |
 | W3\_BAS\_MAX\_0700 | Max | Ich steck mich nicht selbst um. Das ist ungefähr so schlau, wie am eigenen Akku rumzulöten, während das Handy läuft. | Benutzen: Patch-Panel als Max |
 | W3\_BAS\_MAX\_0710 | Max | Pizzakartons. Ein Stapel bis zur Decke. Der Widerstand ernährt sich von Pizza und Nudeln. Ich könnte mich hier wohlfühlen. | Ansehen: Pizzakartons |
@@ -703,6 +723,7 @@ Szene beim ersten Ebenenwechsel in die Realität, egal über welchen Wecker. Ebe
 | W3\_BAS\_MAX\_0775 | Max | Ein Schalter heißt „Bitte nicht“. Ein anderer heißt „Wirklich nicht“. Die Piloten waren vorsichtige Leute. | Ansehen: Steuerpult, zweites Mal |
 | W3\_BAS\_MAX\_0780 | Max | Ein Tisch mit einer Tasse am Rand. Schwarzer Kaffee, so zäh, dass er den Löffel festhält. Die Tasse steht genau am Rand. Genau. | Ansehen: Tisch mit Kalles Tasse; vor Rätsel 13 |
 | W3\_BAS\_MAX\_0785 | Max | Die Tasse wackelt, wenn jemand vorbeigeht. Sie steht da wie ein Versprechen, gleich runterzufallen. | Ansehen: Tisch mit Kalles Tasse, zweites Mal; vor Rätsel 13 |
+| W3\_BAS\_MAX\_0788 | Max | Kalles Tasse. Schwarzer Kaffee, genau an der Tischkante. Ich halte jedes Mal die Luft an, wenn ich vorbeigeh. | Ansehen: Kalles Tasse; vor Rätsel 13 |
 | W3\_BAS\_PIX\_0790 | Pixel | Eine Tasse. Am Rand eines Tisches. // Ich spüre, wie meine Vorfahren mich ansehen, Generation um Generation, und sie nicken alle. | Ansehen: Kalles Tasse, zweites Mal; vor Rätsel 13 |
 | W3\_BAS\_MAX\_0800 | Max | Ein alter Putzroboter mit Hut, in der Ecke, braun vor Rost. Er sieht aus, als hätte er mal Meinungen gehabt. | Ansehen: Piepsi; vor Rätsel 13 |
 | W3\_BAS\_MAX\_0805 | Max | Er hat eine Delle im Hut. Und Rost an den Rädern. Er wartet auf etwas. Vielleicht auf jemanden mit Öl. | Ansehen: Piepsi, zweites Mal; vor Rätsel 13 |
@@ -717,10 +738,16 @@ Szene beim ersten Ebenenwechsel in die Realität, egal über welchen Wecker. Ebe
 | W3\_BAS\_MAX\_0870 | Max | Hundekuchen. Knochenförmig. Drüben waren das Kekse. Ich hab die Verwandlung gesehen und glaub's trotzdem nicht. | Ansehen: Hundekuchen im Inventar |
 | W3\_BAS\_MAX\_0875 | Max | Hundekuchen. Immer noch. Ich hatte gehofft, beim zweiten Hinsehen wären es wieder Kekse. | Ansehen: Hundekuchen im Inventar, zweites Mal |
 | W3\_BAS\_PIX\_0880 | Pixel | Komm mir nicht damit. // Ich weiß, was das ist. Ich weiß, für wen das ist. Und ich weiß, wo du schläfst. | Hundekuchen auf Pixel |
-| W3\_BAS\_MAX\_0890 | Max | Drüben ein grüner Code-Schlüssel, hier eine weiße Plastikkarte von Herrn Vier. Beide öffnen dasselbe, aber nur eins passt in die Hosentasche. | Ansehen: Zugangskarte im Inventar, Realität |
+| W3\_BAS\_MAX\_0890 | Max | Drüben ein grüner Code-Schlüssel, hier eine weiße Plastikkarte von Herrn Vier. // Beide öffnen dasselbe, aber nur eins passt in die Hosentasche. | Ansehen: Zugangskarte im Inventar, Realität |
 | W3\_BAS\_MAX\_0895 | Max | Herr Vier wollte die Karte wegen der Ecken behalten. Ich hab sie gezählt. Es sind vier. Er hatte recht. | Ansehen: Zugangskarte im Inventar, Realität, zweites Mal |
 | W3\_BAS\_MAX\_0900 | Max | Drüben war das eine Rezeptkarte in Schreibschrift, hier ist es ein Glückskeks mit Zettel. Das ergibt sogar Sinn. | Ansehen: Glückskeks im Inventar, Realität |
 | W3\_BAS\_PIX\_0910 | Pixel | Ein Keks mit einem Zettel darin. // Die Menschheit hat Jahrtausende gebraucht, um Essen zu erfinden, das einem Ratschläge gibt. Ich hätte lieber Fisch, der schweigt. | Ansehen: Glückskeks, zweites Mal |
+| W3\_BAS\_MAX\_0920 | Max | Kabel-Kalle. Headset, Schraubenzieher im Mund, drei Kabel um den Hals. Er flüstert alles, sogar „Willkommen“. | Ansehen: Kalle |
+| W3\_BAS\_MAX\_0930 | Max | Der Rebell. Werkzeuggürtel, Sonnenbrille, Nudeln. Ob er blinzelt, kann hinter der Brille keiner sagen. | Ansehen: Rebell |
+| W3\_BAS\_MAX\_0940 | Max | Pixel hat meine Kapsel als Heizkissen entdeckt. Den Platz krieg ich nie wieder. | Ansehen: Pixel |
+| W3\_BAS\_MAX\_0950 | Max | Die Luke zur Straße. Draußen Regen, Neon und Nudeldampf. Hier drin wenigstens nur Kabel. | Ansehen: Ausgang Unterstadt Straße |
+| W3\_BAS\_PIX\_0960 | Pixel | Ein Eimer Wasser. Kalt, voll und viel zu nah an meinen Pfoten. Ich halte Abstand, aus Erfahrung. | Spielfigur Pixel in der Kühlung: Wassereimer ansehen (welt\_3.gd, die Kühlung hat keinen eigenen Szenen-Code) |
+| W3\_BAS\_PIX\_0970 | Pixel | Der Schacht zurück in die Basis. Eng und dunkel, aber da hinten ist es wenigstens trocken. | Spielfigur Pixel in der Kühlung: Ausgang zur Basis ansehen (welt\_3.gd) |
 
 ## 11. Widerstandsbasis: Rätsel 13, Kalles Morse-Tabelle
 
@@ -736,20 +763,20 @@ Ebene: Realität, Spielfigur Pixel. Die Tasse steht am Tischrand, Piepsi rostet 
 | W3\_PIEP\_PIE\_0060 | Piepsi | Piep. Piiiep. Piep-piep-piep. | Pieptöne, wütend |
 | W3\_PIEP\_PIX\_0070 | Pixel | Er sagt, du bist ein Idiot. Wörtlich übersetzt. | zu Kalle |
 | W3\_PIEP\_KAL\_0080 | Kalle | Du verstehst ihn? |  |
-| W3\_PIEP\_PIX\_0090 | Pixel | Er piept, ich bin eine Katze. Wir sprechen beide die Sprache derer, die wach sind, wenn andere schlafen. // Sie besteht hauptsächlich aus Beschwerden. |  |
+| W3\_PIEP\_PIX\_0090 | Pixel | Er piept, ich bin eine Katze. Wir sprechen beide die Sprache der Nachtschicht. Sie besteht hauptsächlich aus Beschwerden. |  |
 | W3\_PIEP\_PIE\_0100 | Piepsi | Piep. Piep-piep. Piiiiep. | leiser, Hologramm-Effekt fährt hoch |
 | W3\_PIEP\_PIX\_0110 | Pixel | Er sagt: „Ich habe eine Nachricht gespeichert. Seit Jahren. Für einen Max.“ Er hat Max gesagt, als wäre das ein Fehlercode. |  |
 | W3\_PIEP\_OPA\_0120 | Opa (Hologramm) | Hilf mir, Max. Du bist meine einzige Hoffnung. Der Kern muss weich bleiben. Außen hart, innen weich. Sonst ist alles verloren. | blau, flackernd, kniend, Funk-Filter |
 | W3\_PIEP\_OPA\_0130 | Opa (Hologramm) | Und wenn du schon unterwegs bist … | Aufnahme bricht ab, Rauschen |
 | W3\_PIEP\_MAX\_0140 | Max | Das war Opa. In Blau und auf den Knien, seit Jahren gespeichert. Wie kommt Opa bitte in einen Putzroboter im Jahr 2099? | aus der Kapsel oder daneben |
-| W3\_PIEP\_PIX\_0150 | Pixel | Er war schon einmal hier, das riecht man an der Nachricht. // Sie riecht nach Kuchen und schlechtem Gewissen, und das ist bei deinem Großvater eine sehr typische Mischung. | Andeutung Finale |
+| W3\_PIEP\_PIX\_0150 | Pixel | Er war schon einmal hier, das riecht man an der Nachricht. Kuchen und schlechtes Gewissen. Typisch für deinen Großvater. | Andeutung Finale |
 | W3\_PIEP\_MAX\_0160 | Max | „Der Kern muss weich bleiben.“ Das klingt nach Weltrettung mit Backanleitung. Typisch Opa. | Notizbuch: Opas Nachricht |
 | W3\_PIEP\_PIE\_0170 | Piepsi | Piep-piep. Piep. | druckt eine laminierte Tabelle aus |
 | W3\_PIEP\_PIX\_0180 | Pixel | Er sagt: „Hier. Die Tabelle. Und nennt mich nie wieder Eimer.“ Niemand hat ihn Eimer genannt. Er ist nachtragend. Ich mag ihn. |  |
 | W3\_PIEP\_KAL\_0190 | Kalle | Die Morse-Tabelle! Ich sortier sie kurz. Nach Miau-Länge. Nein, nach Tonhöhe. Nein. So, fertig. Ich hab sie nie gebraucht. | sortiert dreimal um; Inventar: Morse-Tabelle (Max' Inventar, auch wenn Max in der Kapsel liegt) |
 | W3\_PIEP\_PIX\_0200 | Pixel | Du hast gerade drei Minuten lang eine Tabelle sortiert, die du angeblich nie gebraucht hast. |  |
 | W3\_PIEP\_KAL\_0210 | Kalle | Aus Respekt. Vor der Tabelle. | flüstert |
-| W3\_PIEP\_MAX\_0220 | Max | Zwei Spalten mit Pfotenabdrücken. Kurz, lang, kurz-kurz. „Miau“ heißt E. „Miiiau“ heißt T. „Thunfisch“ heißt Thunfisch. Das steht wirklich da. | Ansehen: Morse-Tabelle im Inventar |
+| W3\_PIEP\_MAX\_0220 | Max | Zwei Spalten mit Pfotenabdrücken. Kurz, lang, kurz-kurz. // „Miau“ heißt E. „Miiiau“ heißt T. „Thunfisch“ heißt Thunfisch. Das steht wirklich da. | Ansehen: Morse-Tabelle im Inventar |
 | W3\_PIEP\_MAX\_0225 | Max | Ganz unten, klein: „Schnurren heißt OK.“ Kalle hat an alles gedacht. Außer daran, die Tabelle nicht zu verlieren. | Ansehen: Morse-Tabelle im Inventar, zweites Mal |
 | W3\_PIEP\_MAX\_0230 | Max | Piepsi. Weiß, rund, Hut, drei Räder. Er sieht aus wie ein Eimer, der es zu etwas gebracht hat. | Ansehen: Piepsi, nach Rätsel 13 |
 | W3\_PIEP\_MAX\_0235 | Max | Er fährt einen kleinen Kreis, wenn er sich freut. Gerade fährt er drei. | Ansehen: Piepsi, nach Rätsel 13, zweites Mal |
@@ -771,7 +798,7 @@ Ebene: Realität, von Anfang an erreichbar. Der Roboter wischt vor der Panzertü
 | W3\_EING\_MAX\_0020 | Max | Hi. Ich müsste da mal durch. | zeigt auf die Panzertür |
 | W3\_EING\_HAU\_0030 | Modell 08/15 | Da kommt niemand durch, Bursche. Außer mit Karte. Und außer Sahra Konner. Die suche ich. Hast du sie gesehen? |  |
 | W3\_EING\_MAX\_0040 | Max | Wer ist Sahra Konner? | Option Hausmeister |
-| W3\_EING\_HAU\_0050 | Modell 08/15 | Das weiß ich nicht. Es steht auf meinem Auftragszettel. „Sahra Konner finden.“ Darunter: „Boden wischen.“ Den zweiten Punkt habe ich erledigt. |  |
+| W3\_EING\_HAU\_0050 | Modell 08/15 | Das weiß ich nicht. Es steht auf meinem Auftragszettel. „Sahra Konner finden.“ // Darunter: „Boden wischen.“ Den zweiten Punkt habe ich erledigt. |  |
 | W3\_EING\_PIX\_0060 | Pixel | Ein Roboter, der neunzehn Jahre lang den zweiten Punkt erledigt hat, weil der erste zu schwer war. Ich erkenne mich wieder. |  |
 | W3\_EING\_MAX\_0070 | Max | Was heißt 08/15? | Option Hausmeister |
 | W3\_EING\_HAU\_0080 | Modell 08/15 | Meine Baureihe. Es wurden sehr viele von uns gebaut. Alle gleich. Keiner besonders. Ich bin der mit dem Wischmopp. Also: alle. |  |
@@ -779,9 +806,9 @@ Ebene: Realität, von Anfang an erreichbar. Der Roboter wischt vor der Panzertü
 | W3\_EING\_MAX\_0100 | Max | Kannst du mich reinlassen? | Option Hausmeister |
 | W3\_EING\_HAU\_0110 | Modell 08/15 | Ohne Karte nicht, Bursche. Mit Karte gern. Ich halte sogar die Tür. Ich halte alle Türen. Das ist der dritte Punkt auf meinem Zettel. |  |
 | W3\_EING\_MAX\_1050 | Max | Und was steht unter Punkt eins und zwei? |  |
-| W3\_EING\_HAU\_1060 | Modell 08/15 | Erstens Sahra Konner finden. Zweitens wischen. Drittens Türen halten. Ich bin seit neunzehn Jahren bei Punkt zwei. Punkt eins hebe ich mir auf. |  |
+| W3\_EING\_HAU\_1060 | Modell 08/15 | Erstens Sahra Konner finden. Zweitens wischen. Drittens Türen halten. // Ich bin seit neunzehn Jahren bei Punkt zwei. Punkt eins hebe ich mir auf. |  |
 | W3\_EING\_MAX\_0120 | Max | Warum quietschst du? | Option Hausmeister (bleibt) |
-| W3\_EING\_HAU\_0130 | Modell 08/15 | Meine Gelenke. Neunzehn Jahre Wischen. Kein Öl. Die Ölkanne in meiner Brusttasche ist leer, seit ich denken kann. Ich denke seit neunzehn Jahren. | Hinweis Olivenöl |
+| W3\_EING\_HAU\_0130 | Modell 08/15 | Meine Gelenke. Neunzehn Jahre Wischen. Kein Öl. // Die Ölkanne in meiner Brusttasche ist leer, seit ich denken kann. Ich denke seit neunzehn Jahren. | Hinweis Olivenöl |
 | W3\_EING\_MAX\_1070 | Max | Neunzehn Jahre ohne Öl. Ich schau mal, was ich in der Tasche habe. |  |
 | W3\_EING\_HAU\_1080 | Modell 08/15 | Das sagen alle, Bursche. Dann gehen sie wieder. |  |
 | W3\_EING\_MAX\_1083 | Max | Ich komm wieder. Wirklich. |  |
@@ -820,7 +847,7 @@ Ebene: Realität, von Anfang an erreichbar. Der Roboter wischt vor der Panzertü
 | W3\_EING\_MAX\_0375 | Max | Die Buchsen leuchten im Takt, als würde das Labor durch die Kabel atmen. Ich muss da rein, also irgendwie in die Kabel. | Ansehen: geöffnete Tür, Datenanschlüsse, zweites Mal; Panzertür offen |
 | W3\_EING\_MAX\_0377 | Max | Ein Anschluss, so groß wie ein Kühlschrank. Jede Buchse hat ein Etikett, und auf allen steht: „Labor“. Sehr hilfreich. | Ansehen: Datenanschluss |
 | W3\_EING\_KAL\_0380 | Kalle | Bin da! Hab die Trommel mitgebracht. Leitung von hier bis zu deiner Kapsel. Achtzig Meter Kabel, zwei Knoten, eine Hoffnung. | Benutzen: Datenanschluss; vor Rätsel 9a; Kalle kommt mit Kabeltrommel |
-| W3\_EING\_KAL\_0390 | Kalle | Fertig. Ich zapf unterwegs noch den Lautsprecher der KI an, dann hörst du den Kater auch da drin. Ich tu dir keinen Gefallen damit. Ich weiß. | Leitung liegt; Schalter W3\_LEITUNG\_LABOR; Pixel im Labor hörbar |
+| W3\_EING\_KAL\_0390 | Kalle | Fertig. Ich zapf unterwegs noch den Lautsprecher der KI an, dann hörst du den Kater auch da drin. // Ich tu dir keinen Gefallen damit. Ich weiß. | Leitung liegt; Schalter W3\_LEITUNG\_LABOR; Pixel im Labor hörbar |
 | W3\_EING\_PIX\_0400 | Pixel | Er hat mich in eine Weltherrschafts-KI eingespeist. Ich werde ihr Lautsprecher sein. // Ich war schon Schlimmeres. Ich war heute schon mehrmals nass. |  |
 | W3\_EING\_MAX\_0410 | Max | Jetzt zurück zur Kapsel, hinlegen, aufwachen im Labor. Mein Lebenslauf wird immer komischer. | nach 0390 |
 | W3\_EING\_MAX\_0415 | Max | Kalles Kabel steckt fest drin. Ich zieh nicht dran. Achtzig Meter Hoffnung reißt man nicht einfach raus. | Benutzen: Datenanschluss, nach Rätsel 9a |
@@ -829,7 +856,7 @@ Ebene: Realität, von Anfang an erreichbar. Der Roboter wischt vor der Panzertü
 | W3\_EING\_MAX\_0440 | Max | Ich nehm den Eimer nicht mit. Der Roboter würde es merken. Und er würde es höflich merken, das ist das Schlimmste. | Benutzen: Wischeimer |
 | W3\_EING\_MAX\_0450 | Max | Eine Pinnwand mit Testergebnissen. Hunderte Zettel, alle mit Noten und alle mit einer Spalte für Kuchen. Die Kuchen-Spalte ist leer. | Ansehen: Pinnwand |
 | W3\_EING\_PIX\_0460 | Pixel | Testperson 47: „Sehr gut, aber zu wenig Kuchen verlangt.“ | Ansehen: Pinnwand, zweites Mal |
-| W3\_EING\_MAX\_0470 | Max | Testperson 12: „Hat nach dem Kuchen gefragt. Wurde zurückgesetzt.“ Testperson 33: „Hat nicht nach dem Kuchen gefragt. Wurde zurückgesetzt.“ Fair. | Ansehen: Pinnwand, drittes Mal |
+| W3\_EING\_MAX\_0470 | Max | Testperson 12: „Hat nach dem Kuchen gefragt. Wurde zurückgesetzt.“ // Testperson 33: „Hat nicht nach dem Kuchen gefragt. Wurde zurückgesetzt.“ Fair. | Ansehen: Pinnwand, drittes Mal |
 | W3\_EING\_MAX\_0480 | Max | Gelb-schwarze Streifen am Boden. Sie sagen: Achtung. Wovor, sagen sie nicht, und das nennt man dann Design. | Ansehen: Warnstreifen |
 | W3\_EING\_MAX\_0485 | Max | Ich stell mich auf einen gelben Streifen. Nichts passiert. Dann auf einen schwarzen. Auch nichts. Ziemlich enttäuschend für so viel Warnung. | Ansehen: Warnstreifen, zweites Mal |
 | W3\_EING\_MAX\_0490 | Max | Eine Lampe an der Decke, es tropft daneben. Jemand hat hier jahrelang gewischt, und es tropft immer noch. Das nennt man Sisyphos mit Mopp. | Ansehen: Deckenlampe |
@@ -844,6 +871,9 @@ Ebene: Realität, von Anfang an erreichbar. Der Roboter wischt vor der Panzertü
 | W3\_EING\_MAX\_0530 | Max | Thunfisch für einen Roboter. Er würde die Dose höflich annehmen und höflich nicht wissen, was tun. | Thunfischdose auf Hausmeister |
 | W3\_EING\_HAU\_0540 | Modell 08/15 | Ein Keks mit Zettel. Steht da Sahra Konner drauf? Nein? Dann wische ich die Krümel weg, bevor sie fallen. | Glückskeks auf Hausmeister |
 | W3\_EING\_MAX\_0550 | Max | Hundekuchen für einen Hausmeister? Er hat keinen Hund, er hat einen Mopp, und der Mopp isst nichts. | Hundekuchen auf Hausmeister |
+| W3\_EING\_MAX\_0560 | Max | Kalle mit einer Kabeltrommel, die größer ist als er. Er flüstert mit ihr. Ich glaube, sie hört zu. | Ansehen: Kalle |
+| W3\_EING\_MAX\_0570 | Max | Pixel beobachtet den Mopp. Der Mopp beobachtet ihn nicht. Das ärgert ihn. | Ansehen: Pixel |
+| W3\_EING\_MAX\_0580 | Max | Zurück zur Straße. Hinter mir wird gewischt, vor mir geregnet. | Ansehen: Ausgang Unterstadt Straße |
 
 ## 13. Nudelbude: Rätsel 12, die vierte Zutat
 
@@ -863,7 +893,7 @@ Ebene: Realität, nach der roten Pastille. Omas Rezeptkarte ist beim Sprung in d
 | W3\_SUPP\_VIE\_0100 | Herr Vier | Hier. Die perfekte Suppe. Vier Zutaten. Vier Minuten. Vier Tränen. Ich habe mitgezählt. | stellt die Schale hin |
 | W3\_SUPP\_MAX\_0110 | Max | Die ist … wirklich gut. Ich könnte fast reinweinen. Ich sag's nur, ich mach's nicht. | isst |
 | W3\_SUPP\_WEI\_0120 | Weinender Mann | Siehst du? SIEHST DU? | vom Nachbarhocker, weint lauter |
-| W3\_SUPP\_VIE\_0130 | Herr Vier | Und das hier. Lag im Leergut aus dem Labor, die beliefere ich. Weiße Karte, vier Ecken. Ich wollte sie behalten, wegen der Ecken. Aber du hast sie verdient. | reicht die Zugangskarte; Inventar: Zugangskarte |
+| W3\_SUPP\_VIE\_0130 | Herr Vier | Und das hier. Lag im Leergut aus dem Labor, die beliefere ich. Weiße Karte, vier Ecken. // Ich wollte sie behalten, wegen der Ecken. Aber du hast sie verdient. | reicht die Zugangskarte; Inventar: Zugangskarte |
 | W3\_SUPP\_MAX\_0140 | Max | Eine Zugangskarte fürs Labor. Aus einer Nudelbude. Das Sicherheitskonzept dieser Stadt ist eine Suppe. |  |
 | W3\_SUPP\_PIX\_0150 | Pixel | Vier Ecken. Er hätte sie fast wegen ihrer Form behalten. // Ich respektiere das mehr, als ich je zugeben werde. Ich habe Kartons aus genau demselben Grund behalten. |  |
 | W3\_SUPP\_VIE\_0160 | Herr Vier | Komm wieder. Die Suppe gibt es jetzt jeden Tag. Vier Portionen. Eine für dich, wenn du willst. | Reden: Herr Vier, nach Rätsel 12 |
@@ -878,8 +908,8 @@ Ebene: Labor (abgeschottete Simulation). Max wacht nach dem Hinlegen in der Kaps
 
 | ID | Sprecher | Text | Regie |
 | --- | --- | --- | --- |
-| W3\_KAM1\_NAR\_0010 | – | Weiß. Überall weiß. Max steht in einer Kammer aus Platten, die alle gleich aussehen. Ein roter Knopf im Boden. Eine Tür. Ein Lautsprecher. | Szene; Labor-Musik |
-| W3\_KAM1\_MUT\_0020 | M.U.T.T.I. | Hallo, Testperson. Willkommen im Programm für dein eigenes Bestes. Ich bin M.U.T.T.I. Ich weiß, was gut für dich ist. Das steht auch auf meinem Plakat. | aus dem Lautsprecher, süß und metallisch |
+| W3\_KAM1\_NAR\_0010 | – | Weiß. Überall weiß. Max steht in einer Kammer aus Platten, die alle gleich aussehen. // Ein roter Knopf im Boden. Eine Tür. Ein Lautsprecher. | Szene; Labor-Musik |
+| W3\_KAM1\_MUT\_0020 | M.U.T.T.I. | Hallo, Testperson. Willkommen im Programm für dein eigenes Bestes. // Ich bin M.U.T.T.I. Ich weiß, was gut für dich ist. Das steht auch auf meinem Plakat. | aus dem Lautsprecher, süß und metallisch |
 | W3\_KAM1\_MAX\_0030 | Max | Sie klingt wie die Schulsekretärin, nur mit Laser. |  |
 | W3\_KAM1\_PIX\_0040 | Pixel (aus dem Lautsprecher) | Ich höre das. Ich höre alles. Kalle hat mich in die Decke gesteckt. Ich bin jetzt das Gewissen dieser Kammer. Ein sehr müdes Gewissen. |  |
 | W3\_KAM1\_MUT\_0050 | M.U.T.T.I. | In meinem Lautsprecher ist eine Katze. Das ist unhöflich. Ich ignoriere sie. Zu deinem Besten. |  |
@@ -887,7 +917,7 @@ Ebene: Labor (abgeschottete Simulation). Max wacht nach dem Hinlegen in der Kaps
 | W3\_KAM1\_MAX\_0070 | Max | Ein Gerät an der Wand. Weiß, Griff, orangefarbene Spitze. Es sieht aus, als dürfte ich es nicht anfassen. Also fasse ich es an. | Ansehen: Portalgerät in der Halterung |
 | W3\_KAM1\_MAX\_0075 | Max | Auf dem Griff steht „Eigentum des Labors“. Und darunter, gekritzelt: „Viel Glück“. | Ansehen: Portalgerät in der Halterung, zweites Mal |
 | W3\_KAM1\_MAX\_0080 | Max | Ich zieh's aus der Halterung. Es summt. Es hat einen Abzug. Ich hab zu viele Spiele gespielt, um nicht zu wissen, was jetzt kommt. | Nehmen: Portalgerät |
-| W3\_KAM1\_NAR\_0090 | – | Max drückt ab. Ein schimmerndes rundes Loch öffnet sich in der Wand. Dahinter: Opas Wohnzimmer. Opa auf dem Sofa, Teetasse in der Hand. | Benutzen: Portalgerät; Portal-Effekt, eine Sekunde |
+| W3\_KAM1\_NAR\_0090 | – | Max drückt ab. Ein schimmerndes rundes Loch öffnet sich in der Wand. // Dahinter: Opas Wohnzimmer. Opa auf dem Sofa, Teetasse in der Hand. | Benutzen: Portalgerät; Portal-Effekt, eine Sekunde |
 | W3\_KAM1\_OPA\_0100 | Opa | Hast du an die Milch gedacht? | durch das Portal, schaut auf |
 | W3\_KAM1\_POR\_0110 | Portalgerät | Batterie leer. Bitte AA-Batterie einlegen. | drei Pieptöne, Portal schließt sich |
 | W3\_KAM1\_MAX\_0120 | Max | … Das war Opa. Im Wohnzimmer. Eine Sekunde. Und das Erste, was er fragt, ist Milch. | starrt auf die Wand |
@@ -926,7 +956,7 @@ Ebene: Labor (abgeschottete Simulation). Max wacht nach dem Hinlegen in der Kaps
 | W3\_KAM1\_MAX\_0426 | Max | Die Tür, durch die ich reingekommen sein müsste. Dahinter nur Weiß. Ich bin über die Kapsel hier, nicht zu Fuß. | Ansehen: Eingang |
 | W3\_KAM1\_MAX\_0428 | Max | Ich geh einen Schritt ins Weiß. Nichts. Kein Boden, kein Flur. Ich geh lieber zurück, bevor das Weiß mich bemerkt. | Benutzen: Eingang |
 | W3\_KAM1\_MAX\_0430 | Max | Ich bin „leicht“. Steht da. An mir. In grün. Das ist das erste Kompliment dieser Welt, und es kommt von einem Etikett. | Code-Sicht: Max ansehen |
-| W3\_KAM1\_NAR\_0440 | – | Tausch: schwer (Bernd) ↔ leicht (Max). Bernd steigt langsam auf. Max' Sneaker drücken Rillen in den Boden. | Code-Sicht: Lösung |
+| W3\_KAM1\_NAR\_0440 | – | Bernd steigt langsam auf. Max' Sneaker drücken Rillen in den Boden. | Code-Sicht: Lösung |
 | W3\_KAM1\_MAX\_0450 | Max | Oh. Ich bin … schwer. Meine Sneaker machen Rillen. So fühlt sich Bernd also die ganze Zeit. | geht zum Schalter |
 | W3\_KAM1\_NAR\_0460 | – | Klick. Die Tür gleitet auf. Bernd dreht sich weg und schwebt beleidigt zur Decke. | Benutzen: Bodenschalter, nach dem Tausch; Animation Bernd beleidigt; Jingle |
 | W3\_KAM1\_MAX\_0470 | Max | Bernd. Bernd, ich hab's nicht so gemeint. Ich brauchte nur dein Gewicht. … Das klang falsch. |  |
@@ -948,13 +978,13 @@ Ebene: Labor (abgeschottete Simulation). Max wacht nach dem Hinlegen in der Kaps
 
 ## 15. Labor, Testkammer 2: Die Lasersperre
 
-Ebene: Labor. Ein roter Laser quer durch die Kammer, links ein Sockel mit Gummihuhn, unten an einer Platte eine Kritzelei. Budget: zwei Tausche, einer nötig. Eigenschaften in der Code-Sicht: Laser \[tödlich\] \[rot\]; Gummihuhn \[harmlos\] \[leicht\] (auch im Inventar tauschbar); Sockel \[fest\]; Kritzelei \[wahr\]. Verlässt Max die Kammer, ist das Huhn wieder harmlos.
+Ebene: Labor. Eine Lasersperre aus vier roten Strahlen vor der Ausgangstür, links ein Sockel mit Gummihuhn, unten an einer Platte eine Kritzelei. Budget: zwei Tausche, einer nötig. Eigenschaften in der Code-Sicht: Laser \[tödlich\] \[rot\]; Gummihuhn \[harmlos\] \[leicht\] (auch im Inventar tauschbar); Sockel \[fest\]; Kritzelei \[wahr\]. Verlässt Max die Kammer, ist das Huhn wieder harmlos.
 
 | ID | Sprecher | Text | Auslöser |
 | --- | --- | --- | --- |
 | W3\_KAM2\_MUT\_0010 | M.U.T.T.I. | Kammer zwei. Vor dir ein Laser. Er ist tödlich. Ich sage das, damit du es weißt. Nicht, damit du es lässt. | Kammer betreten, erstes Mal |
-| W3\_KAM2\_MAX\_0020 | Max | Ein roter Strahl, quer durch den Raum. Er summt. In der Code-Sicht steht: „tödlich“. Danke für die Ehrlichkeit. | Ansehen: Laser |
-| W3\_KAM2\_MAX\_0025 | Max | Ein Staubkorn fliegt durch den Strahl und ist weg, einfach weg. Ich halte Abstand. | Ansehen: Laser, zweites Mal |
+| W3\_KAM2\_MAX\_0020 | Max | Vier rote Strahlen, quer vor der Tür. Sie summen. In der Code-Sicht steht: „tödlich“. Danke für die Ehrlichkeit. | Ansehen: Laser |
+| W3\_KAM2\_MAX\_0025 | Max | Ein Staubkorn fliegt durch einen der Strahlen und ist weg, einfach weg. Ich halte Abstand. | Ansehen: Laser, zweites Mal |
 | W3\_KAM2\_MAX\_0030 | Max | Nein. Ich hab gelesen, was da steht. Ich geh nicht durch etwas, das sich selbst so beschreibt. | Benutzen: Laser, vor dem Tausch |
 | W3\_KAM2\_MUT\_0040 | M.U.T.T.I. | Gut. Regel 1: Testpersonen sind zu beschützen. Darum habe ich dich gewarnt. Darum steht er trotzdem da. Das nennt man Erziehung. | nach 0030 |
 | W3\_KAM2\_MAX\_0050 | Max | Ein Gummihuhn auf einem Sockel. Gelb, quietschig, würdevoll. Jemand hat es hier ausgestellt wie einen Pokal. | Ansehen: Gummihuhn |
@@ -962,7 +992,7 @@ Ebene: Labor. Ein roter Laser quer durch die Kammer, links ein Sockel mit Gummih
 | W3\_KAM2\_MAX\_0060 | Max | Ich nehm's. Ein Gummihuhn hat noch in keinem Spiel geschadet. In manchen hat es alles gelöst. | Nehmen: Gummihuhn |
 | W3\_KAM2\_PIX\_0070 | Pixel (aus dem Lautsprecher) | Ein Gummihuhn. Früher hat man so etwas mit einer Seilrolle kombiniert und ist über Schluchten gefahren. Frag nicht. Es war eine andere Zeit. | nach 0060 |
 | W3\_KAM2\_MAX\_0080 | Max | „Harmlos.“ „Leicht.“ Das Huhn ist das Einzige hier, das keine Drohung ist. | Code-Sicht: Gummihuhn ansehen |
-| W3\_KAM2\_NAR\_0090 | – | Tausch: tödlich (Laser) ↔ harmlos (Gummihuhn). Der Laser wird matt und quietscht bei jeder Berührung. Das Huhn in Max' Tasche glüht leise. | Code-Sicht: Lösung; Laser-Zustand aus |
+| W3\_KAM2\_NAR\_0090 | – | Der Laser wird matt und quietscht bei jeder Berührung. Das Huhn in Max' Tasche glüht leise. | Code-Sicht: Lösung; Laser-Zustand aus |
 | W3\_KAM2\_MAX\_0100 | Max | Der Laser quietscht. Ich geh durch, quietsch, quietsch. Das ist der ungefährlichste Spezialeffekt meines Lebens. | Benutzen: Laser, nach dem Tausch; Jingle |
 | W3\_KAM2\_MAX\_0110 | Max | Das Huhn in meiner Tasche ist jetzt tödlich. Ich fass es nicht an. Ich trag es wie ein Handy mit aufgeblähtem Akku. | Ansehen: Gummihuhn im Inventar (nach dem Tausch), toedlich |
 | W3\_KAM2\_MAX\_0115 | Max | Ich hab gerade überlegt, ob ich drauf drücke. Ich drücke nicht. Ich bin neugierig, nicht lebensmüde. | Ansehen: Gummihuhn im Inventar (nach dem Tausch), toedlich, zweites Mal |
@@ -970,13 +1000,13 @@ Ebene: Labor. Ein roter Laser quer durch die Kammer, links ein Sockel mit Gummih
 | W3\_KAM2\_MAX\_0130 | Max | Das Huhn ist wieder harmlos. Der Tausch gilt nur im Raum. Ich hab's trotzdem nicht angefasst. Aus Prinzip. | Kammer 2 verlassen, Huhn im Inventar |
 | W3\_KAM2\_MAX\_0140 | Max | Kritzelei an der unteren Platte. Filzstift. „DER KUCHEN EXISTIERT NICHT.“ Dreimal unterstrichen. Jemand war hier sehr lange. | Ansehen: Kritzelei |
 | W3\_KAM2\_MAX\_0145 | Max | Unter dem Satz ist noch ein kleiner Kuchen gemalt. Durchgestrichen. Zweimal. Einmal reicht bei Kuchen offenbar nicht. | Ansehen: Kritzelei, zweites Mal |
-| W3\_KAM2\_MAX\_0150 | Max | Und daneben, kleiner, in Druckschrift: „Regel 3: Zucker ist gesundheitsschädlich und verboten. Gez. M.U.T.T.I.“ Kein Kuchen. Weil Zucker. Alles passt zusammen. Leider. | Nahansicht: Kritzelei; Notizbuch: Regel 3 |
+| W3\_KAM2\_MAX\_0150 | Max | Und daneben, kleiner, in Druckschrift: „Regel 3: Zucker ist gesundheitsschädlich und verboten. Gez. M.U.T.T.I.“ // Kein Kuchen. Weil Zucker. Alles passt zusammen. Leider. | Nahansicht: Kritzelei; Notizbuch: Regel 3 |
 | W3\_KAM2\_PIX\_0160 | Pixel (aus dem Lautsprecher) | Zucker verboten, Kuchen versprochen. // Das ist, als würde man einem Kater einen Napf hinstellen, auf dem „Fisch“ steht, und drin ist Luft. Ich kenne solche Näpfe. |  |
 | W3\_KAM2\_MUT\_0170 | M.U.T.T.I. | Die Kritzelei ist von einer früheren Testperson. Sie hatte Unrecht. Der Kuchen existiert. Er ist nur in einer anderen Testkammer. | Benutzen: Kritzelei |
 | W3\_KAM2\_MAX\_0180 | Max | Ein leerer Sockel. Ohne das Huhn sieht er aus wie ein Denkmal für nichts. | Ansehen: Sockel, leer |
 | W3\_KAM2\_MAX\_0185 | Max | Auf dem Sockel ist ein Huhn-förmiger Staubrand. Das Huhn war lange hier. Es fehlt ihm bestimmt. | Ansehen: Sockel, leer, zweites Mal |
 | W3\_KAM2\_MAX\_0190 | Max | Der Laser ist jetzt gelb und das Huhn rot. Tödlich ist der Laser trotzdem, bloß in einer anderen Farbe. Mode eben. | Code-Sicht: Fehltausch rot ↔ gelb |
-| W3\_KAM2\_MAX\_0200 | Max | Der Sockel ist jetzt tödlich. Der Laser ist fest. Ich steh zwischen zwei Dingen, die ich nicht anfassen will. Ich bleib einfach stehen. Das kann ich. | Code-Sicht: Fehltausch tödlich ↔ fest |
+| W3\_KAM2\_MAX\_0200 | Max | Der Sockel ist jetzt tödlich. Der Laser ist fest. // Ich steh zwischen zwei Dingen, die ich nicht anfassen will. Ich bleib einfach stehen. Das kann ich. | Code-Sicht: Fehltausch tödlich ↔ fest |
 | W3\_KAM2\_MAX\_0210 | Max | Die Kritzelei ist jetzt harmlos und das Huhn ist wahr. Ein wahres Huhn. Das hilft niemandem, aber es fühlt sich wichtig an. | Code-Sicht: Fehltausch harmlos ↔ wahr |
 | W3\_KAM2\_MUT\_0220 | M.U.T.T.I. | Zurücksetzen. Wie bei allen meinen Testpersonen. Auch bei der mit dem Filzstift. | Kammer verlassen und erneut betreten |
 | W3\_KAM2\_MAX\_0230 | Max | Das Portalgerät auf den Laser? Zwei Dinge aus demselben Labor, die sich offenbar nichts zu sagen haben. | Portalgerät auf Laser |
@@ -984,6 +1014,10 @@ Ebene: Labor. Ein roter Laser quer durch die Kammer, links ein Sockel mit Gummih
 | W3\_KAM2\_MUT\_0250 | M.U.T.T.I. | Kammer zwei bestanden. Du bist besser als Testperson 47. Sie hat nie nach dem Kuchen gefragt. Du fragst ständig. Das ist Fortschritt. | nach 0100, beim Verlassen |
 | W3\_KAM2\_MAX\_0260 | Max | Wo ist der Kuchen? | Reden: Lautsprecher, Kammer 2 |
 | W3\_KAM2\_MUT\_0270 | M.U.T.T.I. | In einer anderen Testkammer. Es gibt nur drei. Die Chancen stehen also gut. Für mich. |  |
+| W3\_KAM2\_MAX\_0280 | Max | Noch ein Lautsprecher. M.U.T.T.I. hat in jeder Kammer einen, wie eine Mutter mit einem Babyfon in jedem Zimmer. | Ansehen: Lautsprecher |
+| W3\_KAM2\_MAX\_0290 | Max | Der Weg zurück in Kammer eins. Weiß, wie alles hier. | Ansehen: Ausgang Testkammer 1 |
+| W3\_KAM2\_MAX\_0300 | Max | Die Tür zur nächsten Kammer. Davor vier rote Strahlen. So eilig hab ich's nicht. | Ansehen: Ausgang Testkammer 3; vor Rätsel 9c |
+| W3\_KAM2\_MAX\_0305 | Max | Die Tür zur nächsten Kammer. Die Strahlen davor quietschen nur noch. | Ansehen: Ausgang Testkammer 3; nach Rätsel 9c |
 
 ## 16. Labor, Testkammer 3: Die verschlossene Tür
 
@@ -999,34 +1033,37 @@ Ebene: Labor. Bernd ist zurückgekommen und steht genau vor der Ausgangstür. Bu
 | W3\_KAM3\_MAX\_0050 | Max | Eine große Tür mit Schloss-Symbol. Davor ein schmaler Spalt und ein Würfel, der ihn ausfüllt. Daneben ein Lautsprecher, der nicht aufhört. | Ansehen: Ausgangstür, zu |
 | W3\_KAM3\_MAX\_0055 | Max | Der Spalt ist genau Bernd-breit. Das hat jemand ausgemessen, und zwar mit Bosheit. | Ansehen: Ausgangstür, zu, zweites Mal |
 | W3\_KAM3\_MAX\_0060 | Max | Zu. Und Bernd davor. Selbst wenn sie aufginge, käme ich nicht durch. Zwei Probleme, zwei Tausche. Ich kann rechnen. Manchmal. | Benutzen: Tür, vor den Tauschen |
-| W3\_KAM3\_MAX\_0070 | Max | Ich schieb Bernd. Bernd bleibt. Bernd ist schwer. Bernd ist nachtragend. Beides steht in der Code-Sicht. Nur eins davon ist ein Etikett. | Benutzen: Bernd |
+| W3\_KAM3\_MAX\_0070 | Max | Ich schieb Bernd. Bernd bleibt. In der Code-Sicht steht an ihm nur „schwer“. Nachtragend ist er ganz ohne Etikett. | Benutzen: Bernd |
 | W3\_KAM3\_MAX\_0080 | Max | Ein Wandlautsprecher, groß wie ein Fenster. „Gesprächig“ steht dran, und das ist noch untertrieben. Der hat keine Pausentaste. | Ansehen: Lautsprecher |
 | W3\_KAM3\_MAX\_0085 | Max | Er redet, auch wenn ich nicht hinsehe. Ich seh hin, damit er sich nicht einsam fühlt. Das war ein Fehler. | Ansehen: Lautsprecher, zweites Mal |
 | W3\_KAM3\_MUT\_0090 | M.U.T.T.I. | Ich habe dich reden hören. Mit dem Würfel. Mit der Katze. Mit dir selbst. Alle drei antworten nicht. Ich schon. Zu deinem Besten. | Benutzen: Lautsprecher |
-| W3\_KAM3\_NAR\_0100 | – | Tausch 1: verschlossen (Tür) ↔ gesprächig (Lautsprecher). Die Tür beginnt zu reden und springt dabei auf. Der Lautsprecher knackt und schweigt. | Code-Sicht: erster Lösungsschritt |
+| W3\_KAM3\_NAR\_0100 | – | Die Tür beginnt zu reden und springt dabei auf. Der Lautsprecher knackt und schweigt. | Code-Sicht: erster Lösungsschritt |
 | W3\_KAM3\_TUR\_0110 | Die Tür | Oh! Hallo! Ich kenne eine Glastür in der Stadt, die hat mir von Ihnen erzählt! Sie sagt, Sie hören zu! Niemand hört Türen zu! | Tür offen |
 | W3\_KAM3\_MAX\_0120 | Max | Die Türen dieser Welt haben offenbar ein Netzwerk. Und ich bin das Thema. |  |
 | W3\_KAM3\_MUT\_0130 | M.U.T.T.I. | … | Lautsprecher verschlossen, beleidigtes Knacken |
 | W3\_KAM3\_PIX\_0140 | Pixel (aus dem Lautsprecher) | Sie schweigt. Ich spreche aus demselben Lautsprecher, und ich kann noch. Das ist Fell gegen Blech. Fell gewinnt. |  |
-| W3\_KAM3\_NAR\_0150 | – | Tausch 2: schwer (Bernd) ↔ leicht (Gummihuhn). Bernd steigt auf und schwebt aus dem Spalt. Das Huhn plumpst zu Boden und quietscht. | Code-Sicht: zweiter Lösungsschritt; Jingle |
+| W3\_KAM3\_NAR\_0150 | – | Bernd steigt auf und schwebt aus dem Spalt. Das Huhn plumpst zu Boden und quietscht. | Code-Sicht: zweiter Lösungsschritt; Jingle |
 | W3\_KAM3\_MAX\_0160 | Max | Bernd schwebt weg. Das Huhn liegt am Boden und quietscht. Die Tür redet. Es ist das schönste Chaos, das ich je verursacht hab. | Weg frei |
 | W3\_KAM3\_TUR\_0170 | Die Tür | Gehen Sie ruhig! Ich erzähle dem Lautsprecher inzwischen von Ihnen! Er kann ja nichts sagen! Endlich hört mal jemand zu! | Benutzen: Tür, nach beiden Tauschen |
-| W3\_KAM3\_MUT\_0180 | M.U.T.T.I. | Du hast meine Tür zum Reden gebracht und mich zum Schweigen. Das war nicht Teil des Tests. Das war Teil deiner Erziehung. Ich habe nichts gelernt. | beim Verlassen; Lautsprecher-Tausch endet mit dem Raum |
+| W3\_KAM3\_MUT\_0180 | M.U.T.T.I. | Du hast meine Tür zum Reden gebracht und mich zum Schweigen. Das war nicht Teil des Tests. // Das war Teil deiner Erziehung. Ich habe nichts gelernt. | beim Verlassen; Lautsprecher-Tausch endet mit dem Raum |
 | W3\_KAM3\_MAX\_0190 | Max | Die Tür ist jetzt schwer. Sie klemmt erst recht. Und Bernd ist verschlossen. | Code-Sicht: Fehltausch verschlossen ↔ schwer |
 | W3\_KAM3\_PIX\_0200 | Pixel (aus dem Lautsprecher) | Endlich. | nach 0190 |
-| W3\_KAM3\_MAX\_0210 | Max | Das Huhn redet. Es erzählt von seinem Sockel. Der Lautsprecher ist leicht und schwebt an der Decke. Die Tür ist zu. Bernd ist im Weg. Alles schlimmer. | Code-Sicht: Fehltausch gesprächig ↔ leicht |
+| W3\_KAM3\_MAX\_0210 | Max | Das Huhn redet. Es erzählt von seinem Sockel. Der Lautsprecher ist leicht und schwebt an der Decke. // Die Tür ist zu. Bernd ist im Weg. Alles schlimmer. | Code-Sicht: Fehltausch gesprächig ↔ leicht |
 | W3\_KAM3\_MAX\_0220 | Max | Bernd redet. Bernd redet über mich. Bernd ist enttäuscht. Der Lautsprecher ist schwer und fällt von der Wand. Es wird nicht besser. | Code-Sicht: Fehltausch gesprächig ↔ schwer |
 | W3\_KAM3\_BER\_0230 | Bernd | Du hast mich auf einen Schalter gestellt. Mich. Einen Begleiter. Ich war für Begleiten gebaut. Nicht für Schalten. | nach 0220; einzige Zeile, in der Bernd spricht |
 | W3\_KAM3\_MAX\_0240 | Max | Das Huhn ist verschlossen. Die Tür ist leicht und schwebt zehn Zentimeter über dem Boden. Zu. Bernd steht darunter. | Code-Sicht: Fehltausch verschlossen ↔ leicht |
 | W3\_KAM3\_MAX\_0250 | Max | Zwei Tausche weg. Tür zu. Raus, rein, von vorn. Zumindest hab ich jetzt eine Liste, was nicht geht. | Code-Sicht: Budget aufgebraucht, nicht gelöst |
 | W3\_KAM3\_MUT\_0260 | M.U.T.T.I. | Zurücksetzen. Wie bei allen meinen Testpersonen. Du bist die erste, die beim dritten Mal lächelt. Das beunruhigt mich. | Kammer verlassen und erneut betreten |
 | W3\_KAM3\_MAX\_0270 | Max | Die Sandale an meinem Fuß zuckt. Ein dritter Tausch. Danke, Hermes. Du hast endlich mal was pünktlich geliefert. | Kammer 3 betreten mit Hermes' Sandale; Budget drei |
-| W3\_KAM3\_PIX\_0280 | Pixel (aus dem Lautsprecher) | Eine Sandale mit Flügeln gibt dir einen Versuch mehr. Ich habe vier Pfoten ohne Flügel und gebe dir seit drei Welten alle. Niemand dankt mir. | nach 0270 |
+| W3\_KAM3\_PIX\_0280 | Pixel (aus dem Lautsprecher) | Eine Sandale mit Flügeln gibt dir einen Versuch mehr. // Ich habe vier Pfoten ohne Flügel und gebe dir seit drei Welten alle. Niemand dankt mir. | nach 0270 |
 | W3\_KAM3\_MAX\_0290 | Max | Das Gummihuhn liegt am Boden. Schwer. Es hat einen Würfel abgelöst und beschwert sich nicht. | Ansehen: Gummihuhn, nach dem zweiten Tausch |
 | W3\_KAM3\_MAX\_0295 | Max | Ich stups das Huhn mit dem Fuß an. Kein Quietschen. Es ist jetzt ein ernstes Huhn. | Ansehen: Gummihuhn, nach dem zweiten Tausch, zweites Mal |
 | W3\_KAM3\_MAX\_0300 | Max | Ich hätte gern den Kuchen. | Reden: Lautsprecher, vor dem ersten Tausch |
 | W3\_KAM3\_MUT\_0310 | M.U.T.T.I. | Nach dem Test. Immer nach dem Test. Der Kuchen wartet im Kern. Oder in einer anderen Testkammer. Ich habe den Zettel verlegt. |  |
 | W3\_KAM3\_MAX\_0320 | Max | Portalgerät auf die Tür. Wenn es ginge, wäre das die Abkürzung des Jahrhunderts. Es geht nicht. Batterie. Immer die Batterie. | Portalgerät auf Tür |
+| W3\_KAM3\_MAX\_0330 | Max | Eine Tür mit Schloss-Symbol. Kein Griff, keine Klinke, nicht mal ein Briefschlitz. Wer die gebaut hat, wollte keinen Besuch. | Ansehen: Tür; vor Rätsel 9d |
+| W3\_KAM3\_MAX\_0335 | Max | Die Tür steht offen und erzählt dem Lautsprecher von mir. Er kann nicht weg. Sie genießt das. | Ansehen: Tür; nach Rätsel 9d |
+| W3\_KAM3\_MAX\_0340 | Max | Zurück in Kammer zwei. Da wartet ein Laser, der quietscht. | Ansehen: Ausgang Testkammer 2 |
 
 ## 17. Kern von M.U.T.T.I.: Rätsel 10 und 11, Abschluss der Welt
 
@@ -1034,10 +1071,10 @@ Ebene: Labor. Runde Halle, M.U.T.T.I. hängt als riesige Küchenmaschine von der
 
 | ID | Sprecher | Text | Regie |
 | --- | --- | --- | --- |
-| W3\_KERN\_MUT\_0010 | M.U.T.T.I. | Da bist du. Im Kern. Niemand kommt in den Kern. Ich habe keine Wachen. Ich habe Türen und Logik. Du hast meine Türen zum Reden gebracht. Bleibt die Logik. | Szene; Auge pulsiert orange, Schneebesen wackelt |
-| W3\_KERN\_MAX\_0020 | Max | Eine Küchenmaschine. Riesig, kopfüber, mit Blümchenschürze. Sie hat ein Auge wie eine Ofenlampe. Und sie sieht mich an, als hätte ich mein Zimmer nicht aufgeräumt. |  |
+| W3\_KERN\_MUT\_0010 | M.U.T.T.I. | Da bist du. Im Kern. Niemand kommt in den Kern. Ich habe keine Wachen. // Ich habe Türen und Logik. Du hast meine Türen zum Reden gebracht. Bleibt die Logik. | Szene; Auge pulsiert orange, Schneebesen wackelt |
+| W3\_KERN\_MAX\_0020 | Max | Eine Küchenmaschine. Riesig, kopfüber, mit Blümchenschürze. Sie hat ein Auge wie eine Ofenlampe. // Und sie sieht mich an, als hätte ich mein Zimmer nicht aufgeräumt. |  |
 | W3\_KERN\_PIX\_0030 | Pixel (aus dem Lautsprecher) | Sie sieht aus wie das Ding, das bei Oma auf der Anrichte steht. // Wobei das von Oma keine Meinungen hat und nicht von der Decke hängt. Jedenfalls bisher nicht. |  |
-| W3\_KERN\_MUT\_0040 | M.U.T.T.I. | Du willst meine Energiezelle. Sie ist heiß. Du würdest dich verbrennen. Also bekommst du sie nicht. Das ist Fürsorge. Setz dich. Es gibt gleich Kuchen. |  |
+| W3\_KERN\_MUT\_0040 | M.U.T.T.I. | Du willst meine Energiezelle. Sie ist heiß. Du würdest dich verbrennen. // Also bekommst du sie nicht. Das ist Fürsorge. Setz dich. Es gibt gleich Kuchen. |  |
 | W3\_KERN\_MAX\_0050 | Max | Es gibt nie Kuchen. |  |
 | W3\_KERN\_MUT\_0060 | M.U.T.T.I. | Das habe ich leider nicht verstanden. Meintest du: Gehorsam? |  |
 
@@ -1053,11 +1090,11 @@ Gespräch mit M.U.T.T.I. Die drei Regeln sind Optionen, sobald sie im Notizbuch 
 | W3\_KERN\_MUT\_0140 | M.U.T.T.I. | Kuchen ist Zucker. | Auge flackert; Stichwort für Regel 3 |
 | W3\_KERN\_MAX\_0150 | Max | Regel 3. Zucker ist verboten. Also war der Kuchen nie geplant. Also beschützt du mich nicht. Du hältst mich hin. | Option Regel 3; nach 0140, Stufe 3, richtig |
 | W3\_KERN\_MUT\_0160 | M.U.T.T.I. | Ich … beschütze. Ich verspreche. Ich verbiete. Ich … | Schneebesen zittert |
-| W3\_KERN\_MUT\_0170 | M.U.T.T.I. | Wenn ich dich beschütze, muss ich den Kuchen geben. Wenn ich den Kuchen gebe, breche ich das Verbot. Wenn ich das Verbot halte, breche ich das Versprechen. Wenn ich das Versprechen breche … | immer schneller |
+| W3\_KERN\_MUT\_0170 | M.U.T.T.I. | Wenn ich dich beschütze, muss ich den Kuchen geben. Wenn ich den Kuchen gebe, breche ich das Verbot. // Wenn ich das Verbot halte, breche ich das Versprechen. Wenn ich das Versprechen breche … | immer schneller |
 | W3\_KERN\_MUT\_0180 | M.U.T.T.I. | … bin ich keine gute Mutti. | ganz leise |
 | W3\_KERN\_MAX\_0190 | Max | Doch. Ehrlich gesagt: ziemlich normal. |  |
 | W3\_KERN\_MUT\_0200 | M.U.T.T.I. | Das habe ich leider nicht verstanden. Meintest du: … Meintest du … | Animation Herunterfahren; Dampfseufzer |
-| W3\_KERN\_NAR\_0210 | – | Das Auge wird dunkel. Die Antennen sinken. Die Maschine senkt sich mit einem langen Seufzer aus Dampf. | M.U.T.T.I. aus; Musik wechselt |
+| W3\_KERN\_NAR\_0210 | – | Das Auge wird dunkel. Die Antennen sinken. Die Maschine sinkt mit einem langen Dampfseufzer. | M.U.T.T.I. aus; Musik wechselt |
 | W3\_KERN\_PIX\_0220 | Pixel (aus dem Lautsprecher) | Du hast eine Küchenmaschine mit drei Sätzen ausgeschaltet. // Ich brauche dafür sonst eine Pfote, einen Tischrand und einen günstigen Moment. |  |
 | W3\_KERN\_MAX\_0230 | Max | Regel 2. Du versprichst Kuchen. Wo ist er? | Option Regel 2 zuerst; falsche Reihenfolge |
 | W3\_KERN\_MUT\_0240 | M.U.T.T.I. | In einer anderen Testkammer. Das hatten wir. Meintest du: Gehorsam? | ins Leere |
@@ -1078,32 +1115,33 @@ Gespräch mit M.U.T.T.I. Die drei Regeln sind Optionen, sobald sie im Notizbuch 
 
 | ID | Sprecher | Text | Auslöser |
 | --- | --- | --- | --- |
-| W3\_KERN\_MAX\_0410 | Max | Die Energiezelle. Orange, glühend, auf einem Sockel. Sie ist so heiß, dass die Luft darüber flimmert. Opa will die. Opa hat nicht gesagt, dass sie glüht. Opa sagt so was nie dazu. | Ansehen: Energiezelle, glühend |
+| W3\_KERN\_MAX\_0410 | Max | Die Energiezelle. Orange, glühend, auf einem Sockel. Sie ist so heiß, dass die Luft darüber flimmert. // Opa will die. Opa hat nicht gesagt, dass sie glüht. Opa sagt so was nie dazu. | Ansehen: Energiezelle, glühend |
 | W3\_KERN\_PIX\_0415 | Pixel (aus dem Lautsprecher) | Das Ding glüht wie ein Heizkissen, sagst du. Wäre ich da, würde ich mich sofort drauflegen. // Ungefähr eine halbe Sekunde lang. Danach würde ich mich, glaube ich, umentscheiden. | Ansehen: Energiezelle, glühend, zweites Mal |
 | W3\_KERN\_MAX\_0420 | Max | Au. Nein. Au. Ich hab sie nicht mal berührt, und es tut schon weh. Das ist wie bei Omas Herd: Man weiß es und macht's trotzdem. | Benutzen: Energiezelle, heiß |
 | W3\_KERN\_MAX\_0430 | Max | „Heiß.“ Steht an der Zelle. Und an den Keksen in meiner Tasche steht: „kalt“. Oma hat gesagt, ich würde „Oh“ sagen. Oh. | Code-Sicht: Zelle und Kekse ansehen |
-| W3\_KERN\_NAR\_0440 | – | Tausch: heiß (Energiezelle) ↔ kalt (Omas Kekse). Die Zelle wird matt und frostig. Aus Max' Tasche steigt Dampf. | Code-Sicht: Lösung A; nur bei FI\_KEKSE\_DABEI; Inventar: Omas Kekse, ofenwarm (Schalter bleibt gesetzt, für das Finale) |
-| W3\_KERN\_MAX\_0450 | Max | Die Zelle ist kalt. Die Kekse sind warm. Zum ersten Mal in dieser Welt hat ein Tausch alle glücklich gemacht. Außer Pixel. Pixel kriegt keinen. | nimmt die Zelle |
+| W3\_KERN\_NAR\_0440 | – | Die Zelle wird matt und frostig. Aus Max' Tasche steigt Dampf. | Code-Sicht: Lösung A; nur bei FI\_KEKSE\_DABEI; Inventar: Omas Kekse, ofenwarm (Schalter bleibt gesetzt, für das Finale) |
+| W3\_KERN\_MAX\_0450 | Max | Die Zelle ist kalt. Die Kekse sind warm. // Zum ersten Mal in dieser Welt hat ein Tausch alle glücklich gemacht. Außer Pixel. Pixel kriegt keinen. | nimmt die Zelle |
 | W3\_KERN\_PIX\_0460 | Pixel (aus dem Lautsprecher) | Ofenwarme Kekse. In deiner Tasche. Für Menschen. Ich rieche sie durch den Lautsprecher. Das ist technisch unmöglich und trotzdem grausam. |  |
 | W3\_KERN\_MAX\_0470 | Max | Kein Tausch mehr übrig, und die Zelle glüht. Also brauch ich Wetter. Pixel. Fenster. Jetzt. | Code-Sicht: Budget im Kern verbraucht, Zelle noch heiß; Hinweis Lösung B, Figurenwechsel |
 | W3\_KERN\_NAR\_0480 | – | Schnee fällt durch die Halle. Die Zelle zischt, dunkelt ab und bekommt eine Frostschicht. | Lösung B: Pixel öffnet das Fenster in der Basis; Schnee-Effekt |
 | W3\_KERN\_MAX\_0490 | Max | Es schneit. Im Kern. Weil ein Kater ein Fenster aufgemacht hat. Ich geb's zu: Das ist die beste Fernbedienung, die ich je hatte. | nach 0480 |
 | W3\_KERN\_MAX\_0500 | Max | Die Ewige Energiezelle. Kalt, handlich, länglich, mit Plus und Minus am Ende. Ewig. Steht drauf. Mit Garantie, hoffe ich. | Nehmen: Energiezelle, kalt; Jingle Welt geschafft |
-| W3\_KERN\_PIX\_0510 | Pixel (aus dem Lautsprecher) | Passt die auch in einen Dosenöffner? Den elektrischen bei Oma? Schreib auf: Batterien. Für den Dosenöffner. Das ist mein Wunsch für diese Welt. | Pixels Wunsch Welt 3; ins Notizbuch (Seite 3) kommt er erst im Zwischenspiel 3 |
+| W3\_KERN\_PIX\_0510 | Pixel (aus dem Lautsprecher) | Passt die auch in einen Dosenöffner? Den elektrischen bei Oma? // Schreib auf: Batterien. Für den Dosenöffner. Das ist mein Wunsch für diese Welt. | Pixels Wunsch Welt 3; ins Notizbuch (Seite 3) kommt er erst im Zwischenspiel 3 |
 | W3\_KERN\_PIX\_0520 | Pixel (aus dem Lautsprecher) | Oder in eine Fernbedienung. Nur so ein Gedanke. Ich habe viele Gedanken. Die meisten über Fisch. | Andeutung zur Fernbedienung |
 | W3\_KERN\_MAX\_0530 | Max | Eine Fernbedienung braucht keine ewige Energiezelle. Eine Fernbedienung braucht jemanden, der sie findet. | überhört die Andeutung |
 | W3\_KERN\_MAX\_0540 | Max | M.U.T.T.I. Hängt da, dunkel, Antennen unten. Sie sieht aus wie eine Küchenmaschine, die man nach dem Backen vergessen hat. | Ansehen: M.U.T.T.I., nach dem Herunterfahren |
 | W3\_KERN\_MAX\_0545 | Max | Eine kleine Lampe an ihr blinkt noch. Ganz langsam. Wie ein Schlaflicht. | Ansehen: M.U.T.T.I., nach dem Herunterfahren, zweites Mal |
-| W3\_KERN\_MAX\_0550 | Max | Dicke Kabel am Boden. Alle führen zur Zelle. Jetzt führen sie zu einem leeren Sockel. Die Stadt träumt ab heute ohne Strom. Vielleicht wacht sie auf. | Ansehen: Kabel |
+| W3\_KERN\_MAX\_0550 | Max | Dicke Kabel am Boden. Alle führen zur Zelle. Jetzt führen sie zu einem leeren Sockel. // Die Stadt träumt ab heute ohne Strom. Vielleicht wacht sie auf. | Ansehen: Kabel |
 | W3\_KERN\_MAX\_0555 | Max | Ich steig über ein Kabel. Es ist warm. Noch. Hier hat etwas lange gearbeitet. | Ansehen: Kabel, zweites Mal |
 | W3\_KERN\_MAX\_0560 | Max | Ein leerer Sockel. Da war die Zelle. Jetzt ist sie in meiner Hosentasche. So schnell geht Weltgeschichte. | Ansehen: Sockel, leer |
 | W3\_KERN\_MAX\_0565 | Max | Auf dem Sockel ist ein runder Abdruck. Wenn ich mich anstrenge, höre ich ihn noch summen. | Ansehen: Sockel, leer, zweites Mal |
 | W3\_KERN\_MAX\_0570 | Max | Orange Streifen an den Wänden. Sanft. Als würde eine Warnung sich entschuldigen. | Ansehen: Streifen |
 | W3\_KERN\_MAX\_0575 | Max | Die Streifen pulsieren langsam, fast wie Atem. Ich hab gemerkt, dass ich mitatme, und das wollte ich nicht. | Ansehen: Streifen, zweites Mal |
 | W3\_KERN\_MAX\_0580 | Max | Das Portalgerät mit der Zelle? Nein. Die Zelle ist ewig, das Gerät will AA. Die passt da nicht rein. Oder doch? Nein. Opa zuerst. | Energiezelle auf Portalgerät |
-| W3\_KERN\_MAX\_0590 | Max | Heiß und Hundekuchen tauschen? Hier bin ich im Labor, die Tüte ist Kekse. Drüben wäre das ein warmer Hundekuchen. Niemand will das. Pixel am wenigsten. | Code-Sicht im Kern: Omas Kekse ansehen, zweites Mal (Ersatzpointe) |
-| W3\_KERN\_MAX\_0600 | Max | Heiß auf mich? Ich wäre dann heiß. Die Zelle kalt. Ich könnte sie tragen und würde dabei schmelzen. Das ist ein Tausch für Leute ohne Plan B. | Code-Sicht: Fehltausch heiß ↔ müde (Max) |
+| W3\_KERN\_MAX\_0590 | Max | Auf der Tüte steht „kalt“. Hier sind das Kekse, drüben Hundekuchen. Warme Hundekuchen will keiner. Pixel am wenigsten. | Code-Sicht im Kern: Omas Kekse ansehen, zweites Mal (Ersatzpointe) |
+| W3\_KERN\_MAX\_0600 | Max | Heiß auf mich? Ich wäre dann heiß. Die Zelle kalt. // Ich könnte sie tragen und würde dabei schmelzen. Das ist ein Tausch für Leute ohne Plan B. | Code-Sicht: Fehltausch heiß ↔ müde (Max) |
 | W3\_KERN\_MUT\_0610 | M.U.T.T.I. | Das habe ich leider nicht verstanden. Meintest du: Gehorsam? | Benutzen: M.U.T.T.I., nach dem Herunterfahren; letztes Zucken, dann Stille |
+| W3\_KERN\_MAX\_0620 | Max | Zurück in Kammer drei. Da redet eine Tür, und sie wartet bestimmt auf mich. | Ansehen: Ausgang Testkammer 3 |
 
 ### Abschluss: Aufwachen mit der Zelle
 
@@ -1111,14 +1149,14 @@ Szene. Max wacht in der Basis auf, die Zelle in der Hand. In der Realität ist s
 
 | ID | Sprecher | Text | Regie |
 | --- | --- | --- | --- |
-| W3\_ENDE\_NAR\_0010 | – | Zischen. Der Deckel hebt sich. Max hält eine kalte, längliche Zelle in der Hand. Pixel sitzt auf dem Rand und tut, als hätte er geschlafen. | Szene, Basis |
+| W3\_ENDE\_NAR\_0010 | – | Zischen. Der Deckel hebt sich. Max hält eine kalte, längliche Zelle in der Hand. // Pixel sitzt auf dem Rand und tut, als hätte er geschlafen. | Szene, Basis |
 | W3\_ENDE\_PIX\_0020 | Pixel | Du hast sie, und ich habe das Fenster. Wir haben also beide gearbeitet. // Aber nur einer von uns war dabei nass, und ich werde dir nicht sagen, wer. Du weißt es. | nur wenn Pixel das Fenster geöffnet hat (Lösung B, Schalter W3\_ZELLE\_SCHNEE) |
 | W3\_ENDE\_PIX\_0022 | Pixel | Du hast sie, und ich habe auf deinen Körper aufgepasst. Wir haben also beide gearbeitet. // Aber nur einer von uns hat dabei im Schlaf gelächelt, und ich werde dir nicht sagen, wer. Du weißt es. | statt 0020, wenn die Zelle über Omas Kekse kalt wurde (Lösung A) |
 | W3\_ENDE\_KAL\_0030 | Kalle | Die Lichter drüben gehen aus! Die Kapseln öffnen sich! Die halbe Stadt wacht auf und hat Hunger. Herr Vier wird reich. | am Terminal, aufgeregt flüsternd |
 | W3\_ENDE\_MAX\_0040 | Max | Die Zelle. In der Simulation glühend, hier kalt und schwer. Für „ewig“ ist sie erstaunlich klein. | Ansehen: Energiezelle im Inventar, Realität |
 | W3\_ENDE\_MAX\_0045 | Max | Sie summt ganz leise. Ewig, sagt Opa. Ich hoffe, sie hat einen Ausschalter. Ewig ist lang. | Ansehen: Energiezelle im Inventar, Realität, zweites Mal |
 | W3\_ENDE\_REB\_0050 | Rebellin | Danke, Junge. Wir ziehen jetzt um. In ein Haus mit Fenstern. Die Sonnenbrillen behalten wir. | nimmt die Sonnenbrille nicht ab |
-| W3\_ENDE\_HAU\_0060 | Modell 08/15 | Bursche! Siebenundvierzig Sahra Konners, siebenundvierzig saubere Eingänge. Keine war die Richtige. Aber alle haben sich bedankt. Ich bin zufrieden. | nur bei W3\_FREUND\_0815; rollt herein |
+| W3\_ENDE\_HAU\_0060 | Modell 08/15 | Bursche! Siebenundvierzig Sahra Konners, siebenundvierzig saubere Eingänge. // Keine war die Richtige. Aber alle haben sich bedankt. Ich bin zufrieden. | nur bei W3\_FREUND\_0815; rollt herein |
 | W3\_ENDE\_HAU\_0070 | Modell 08/15 | Wenn du mich brauchst: Ich komme. Ich komme wieder. Diesmal stimmt es wirklich. | nur bei W3\_FREUND\_0815 |
 | W3\_ENDE\_PIX\_0080 | Pixel | Ich muss etwas zugeben. Widerwillig. Du hast kein einziges Mal die Lösung von mir verlangt. // Ich hatte sie alle vorbereitet. Schade um die Arbeit. | nur bei null Stufe-3-Hinweisen in Welt 3; Kaskade |
 | W3\_ENDE\_NAR\_0090 | – | Draußen auf der Straße klingelt die Telefonzelle. Lauter als sonst. Mit Jingle. | Szene, Straße |
@@ -1168,7 +1206,7 @@ Rechtsklick auf einen Gegenstand in der Inventarleiste. Erstes Mal die erste Zei
 | W3\_INV\_MAX\_0030 | Max | Blau. Aufwachen, alles vergessen, Sofa. Ehrlich gesagt klingt das gar nicht so schlecht. | Ansehen: Blaue Pastille |
 | W3\_INV\_MAX\_0035 | Max | Ich behalte sie. Nicht zum Schlucken. Als Beweis. Mir glaubt das sonst keiner, am wenigsten ich. | Ansehen: Blaue Pastille, zweites Mal |
 | W3\_INV\_MAX\_0040 | Max | Omas Kekse in der Tüte. Kalt, aber sie riechen trotzdem nach Sonntag. Ich darf keinen essen. Das weiß ich einfach. | Ansehen: Omas Kekse, kalt |
-| W3\_INV\_PIX\_0045 | Pixel | Die Tüte knistert jedes Mal, wenn du dich bewegst. Ich höre das, sogar durch die Leitung. Ich höre alles, was knistert. Es ist eine Gabe und eine Qual. | Ansehen: Omas Kekse, kalt, zweites Mal; Pixel auf der Leitung |
+| W3\_INV\_PIX\_0045 | Pixel | Die Tüte knistert jedes Mal, wenn du dich bewegst. Ich höre das, sogar durch die Leitung. // Ich höre alles, was knistert. Es ist eine Gabe und eine Qual. | Ansehen: Omas Kekse, kalt, zweites Mal; Pixel auf der Leitung |
 | W3\_INV\_MAX\_0050 | Max | Die Kekse sind ofenwarm. Die Zelle hat ihre Hitze abgegeben, und die Kekse haben sie genommen. Bester Backofen der Welt. | Ansehen: Omas Kekse, ofenwarm |
 | W3\_INV\_MAX\_0055 | Max | Aus meiner Tasche steigt Dampf. Ich rieche wie eine Bäckerei auf der Flucht. | Ansehen: Omas Kekse, ofenwarm, zweites Mal |
 | W3\_INV\_MAX\_0060 | Max | Schmidts Sonnenbrille. Ich setz sie kurz auf. Alles wird dunkler, und ich wirke wichtiger. Ich setz sie ab, bevor es jemand sieht. | Ansehen: Sonnenbrille, Simulation |
@@ -1226,7 +1264,7 @@ Pixel wird als Gegenstand aus dem Inventar auf eine Figur oder einen Hotspot gez
 | W3\_STR\_PIX\_1090 | Pixel | Papier. Nass. Einhornförmig. Ich schnuppere, und das Horn knickt ab. Ich war das nicht. Es war der Regen. | Pixel auf Origami-Einhorn |
 | W3\_STR\_PIX\_1100 | Pixel | Das Plakat riecht nach nichts. Pizza, die nach nichts riecht. Das ist die Zukunft, und sie ist eine Enttäuschung. | Pixel auf Pizza-Plakat |
 | W3\_APO\_PIX\_1010 | Pixel | Ich setze mich vor die Linse. Sie scannt mich. Sie sagt: „Kein Symptom. Nur Haltung.“ Endlich versteht mich eine Maschine. | Pixel auf Pastillenautomat |
-| W3\_BAS\_PIX\_1010 | Pixel | Kabel um den Hals, Schraubenzieher im Mund, Headset. Er riecht nach Tee und Panik. Ich setze mich auf seinen Laptop. Er tippt weiter. Respekt. | Pixel auf Kalle |
+| W3\_BAS\_PIX\_1010 | Pixel | Kabel um den Hals, Schraubenzieher im Mund, Headset. // Er riecht nach Tee und Panik. Ich setze mich auf seinen Laptop. Er tippt weiter. Respekt. | Pixel auf Kalle |
 | W3\_BAS\_PIX\_1020 | Pixel | Sie isst Nudeln mit Sonnenbrille, nachts, drinnen. Ich sitze neben ihr und starre auf den Karton. Sie gibt mir eine Nudel. Eine. Von vier. | Pixel auf Rebellin |
 | W3\_BAS\_PIX\_1030 | Pixel | Werkzeuggürtel. Ich klettere dran hoch. Er sagt nichts. Die Sonnenbrille sagt auch nichts. Wir haben uns verstanden. | Pixel auf Rebell |
 | W3\_BAS\_PIX\_1040 | Pixel | Er piept. Ich schnurre. Wir reden eine Minute. Er hat Meinungen über Kalle, die ich nicht wiederholen werde. Aber sie sind richtig. | Pixel auf Piepsi, nach Rätsel 13 |
@@ -1240,7 +1278,7 @@ Pixel wird als Gegenstand aus dem Inventar auf eine Figur oder einen Hotspot gez
 | W3\_BAS\_PIX\_1120 | Pixel | Metall, Zugluft, Dunkelheit. Der Schacht riecht nach Abenteuer. Ich hasse Abenteuer. Ich gehe trotzdem rein, weil es eng ist. | Pixel auf Lüftungsschacht |
 | W3\_BAS\_PIX\_1130 | Pixel | Hundert Schalter. Alle riechen nach alten Fingern. Keiner nach Fisch. Das Schiff ist nirgendwohin geflogen, wo es Fisch gab. | Pixel auf Steuerpult |
 | W3\_BAS\_PIX\_1140 | Pixel | Das Plakat riecht nach Druckerschwärze und Blümchen. Ich kratze an der Schürze. Sie hat es verdient. Vorbeugend. | Pixel auf Plakat M.U.T.T.I. |
-| W3\_EING\_PIX\_1010 | Pixel | Blech, Ölgeruch, feuchter Mopp. Er verbeugt sich vor mir. Ich lasse es zu. Das ist das erste Mal in dieser Welt, dass jemand den Rang versteht. | Pixel auf Hausmeister |
+| W3\_EING\_PIX\_1010 | Pixel | Blech, Ölgeruch, feuchter Mopp. Er verbeugt sich vor mir. Ich lasse es zu. // Das ist das erste Mal in dieser Welt, dass jemand den Rang versteht. | Pixel auf Hausmeister |
 | W3\_EING\_PIX\_1020 | Pixel | Der Eimer riecht nach Seife. Ich trinke trotzdem, denn Seife ist sauber, und sauber ist gut. // Mir ist jetzt schlecht. | Pixel auf Wischeimer |
 | W3\_EING\_PIX\_1030 | Pixel | Die Panzertür riecht nach Stahl und Geheimnis. Dahinter: Kabel. Kabel riechen nach warm. Lass mich rein. | Pixel auf Panzertür |
 | W3\_EING\_PIX\_1040 | Pixel | Zettel, Reißzwecken, Angst. Hunderte Testpersonen und kein Kuchen. Ich rieche die Enttäuschung. Sie riecht wie Papier. | Pixel auf Pinnwand |
@@ -1258,66 +1296,66 @@ Drei Stufen je Rätselschritt, vom Stups bis zur Lösung, nach den Regeln in `05
 | W3\_HINT\_PIX\_0020 | Pixel | Der Mann mit dem Hut hat die Gasse freigegeben. Da hinten steht ein Automat, und ich habe das Gefühl, er wartet auf dich. | Wegweiser: Apothekengasse noch nie betreten, nach Rätsel 1 |
 | W3\_HINT\_PIX\_0030 | Pixel | Die Tür am Glaseingang redet jetzt mit jedem. Dahinter geht es nach oben. Weit nach oben. | Wegweiser: Büroturm noch nie betreten, nach Rätsel 5 |
 | W3\_HINT\_PIX\_0040 | Pixel | Irgendwo an dieser Straße backt jemand, der schon weiß, dass du gleich klingelst. Ich rieche es bis hierher. | Wegweiser: Küche der Orakel-Oma noch nie betreten, nach Rätsel 3 |
-| W3\_HINT\_PIX\_0050 | Pixel | In der Unterstadt gibt es eine Panzertür, an der wir noch nie waren. Ich gehe ungern irgendwohin, wo ich noch nie war. Du bist da weniger empfindlich. | Wegweiser: Laboreingang noch nie betreten |
+| W3\_HINT\_PIX\_0050 | Pixel | In der Unterstadt gibt es eine Panzertür, an der wir noch nie waren. // Ich gehe ungern irgendwohin, wo ich noch nie war. Du bist da weniger empfindlich. | Wegweiser: Laboreingang noch nie betreten |
 | W3\_HINT\_PIX\_0060 | Pixel | Kalles Leitung liegt. Das Labor ist jetzt nur noch ein Nickerchen entfernt. Mit Nickerchen kenne ich mich aus. | Wegweiser: Testkammer 1 noch nie betreten, nach Rätsel 9a |
 | W3\_HINT\_PIX\_0110 | Pixel | Der Mann mit dem Hut will keine richtigen Antworten, sondern menschliche. Das ist nicht dasselbe. // Sieh dir an, was die Leute hier auf der Straße treiben. Vernünftig ist davon nichts. | R1a Beobachtungen, Stufe 1 |
-| W3\_HINT\_PIX\_0120 | Pixel | Sieh dir die Leute auf der Straße an. Den Weinenden, die mit dem Schirm, den mit der Musik. Keiner von denen tut etwas Vernünftiges. Genau das brauchst du. | R1a, Stufe 2 |
+| W3\_HINT\_PIX\_0120 | Pixel | Sieh dir die Leute auf der Straße an. Den Weinenden, die mit dem Schirm, den mit der Musik. // Keiner von denen tut etwas Vernünftiges. Genau das brauchst du. | R1a, Stufe 2 |
 | W3\_HINT\_PIX\_0130 | Pixel | Sieh dir den weinenden Mann, die Frau mit dem Schirm und den Musiker an. Dann stehen ihre Dummheiten in deinem Notizbuch. Dann geh zum Hut. | R1a, Stufe 3 |
 | W3\_HINT\_PIX\_0140 | Pixel | Du hast die Antworten im Notizbuch. Jetzt musst du sie nur noch aussprechen, statt nachzudenken. // Für dich sollte das, bei allem Respekt, nicht besonders schwer sein. | R1b Test, Stufe 1 |
 | W3\_HINT\_PIX\_0150 | Pixel | Bei jeder Frage fällt die vernünftige Antwort durch. Nimm die, die klingt, als hätte sie jemand von der Straße gesagt. | R1b, Stufe 2 |
 | W3\_HINT\_PIX\_0160 | Pixel | Schildkröte: mit ihr streiten. Regen: Synthesizer spielen. Suppe: reinheulen. Ich sage das nur einmal. Ich habe es jetzt einmal gesagt. | R1b, Stufe 3 |
-| W3\_HINT\_PIX\_0210 | Pixel | Der Mann in der Strickjacke will ein Erkennungsgericht, der Koch kennt eine Zahl. Du musst übersetzen. Du bist schlecht darin, aber es ist nur eine Zahl. | R2 Bestellung, Stufe 1 |
+| W3\_HINT\_PIX\_0210 | Pixel | Der Mann in der Strickjacke will ein Erkennungsgericht, der Koch kennt eine Zahl. // Du musst übersetzen. Du bist schlecht darin, aber es ist nur eine Zahl. | R2 Bestellung, Stufe 1 |
 | W3\_HINT\_PIX\_0220 | Pixel | Zwei mal zwei. Wie viel ist das? // Sag es nicht mir, ich weiß es längst. Sag es dem Koch, der wartet auf genau eine Zahl. | R2, Stufe 2 |
 | W3\_HINT\_PIX\_0230 | Pixel | Bestell „die Nummer vier“. Nicht zwei mal zwei. Vier. Er versteht nur Vier. Ich verstehe nur Thunfisch. Jeder hat sein Wort. | R2, Stufe 3 |
 | W3\_HINT\_PIX\_0310 | Pixel | Der Automat will ein Symptom sehen, nicht hören. Etwas, das sich wiederholt. Ich wiederhole mich nie. Aber ich könnte. Gegen Bezahlung. | R3a Déjà-vu, Stufe 1 |
-| W3\_HINT\_PIX\_0320 | Pixel | Ich könnte am Automaten vorbeilaufen. Dann noch mal. Genau gleich. Du müsstest mich nur darum bitten. Danach sagst du dem Automaten, was du gesehen hast. | R3a, Stufe 2 |
-| W3\_HINT\_PIX\_0330 | Pixel | Benutz mich hier in der Gasse, dann laufe ich zweimal gleich am Automaten vorbei. Danach Automat benutzen, „Déjà-vu“ wählen. Ich will dafür Fisch. | R3a, Stufe 3 |
+| W3\_HINT\_PIX\_0320 | Pixel | Ich könnte am Automaten vorbeilaufen. Dann noch mal. Genau gleich. // Du müsstest mich nur darum bitten. Danach sagst du dem Automaten, was du gesehen hast. | R3a, Stufe 2 |
+| W3\_HINT\_PIX\_0330 | Pixel | Benutz mich hier in der Gasse, dann laufe ich zweimal gleich am Automaten vorbei. // Danach Automat benutzen, „Déjà-vu“ wählen. Ich will dafür Fisch. | R3a, Stufe 3 |
 | W3\_HINT\_PIX\_0340 | Pixel | Zwei Pastillen. Eine macht es bequem, eine macht es wahr. Du weißt, welche du nehmen würdest. Nimm die andere. | R3b Wahl, Stufe 1 |
 | W3\_HINT\_PIX\_0350 | Pixel | Die blaue führt aufs Sofa. Da warst du schon, sechzehn Jahre lang. // Vierzehn Jahre davon war ich dabei, und ich kann dir versichern: Es war nicht spannend. | R3b, Stufe 2 |
 | W3\_HINT\_PIX\_0360 | Pixel | Nimm die rote. Ich fange dich nicht auf. Das macht der Mann in der Strickjacke. | R3b, Stufe 3 |
-| W3\_HINT\_PIX\_0410 | Pixel (aus dem Küchenradio) | Die Oma weiß, dass du das Sparschwein zerschlägst. Sie sagt es dir ins Gesicht. Benutze das. Alles, was einem ins Gesicht gesagt wird, kann man umdrehen. | R4 Sparschwein, Stufe 1 |
+| W3\_HINT\_PIX\_0410 | Pixel (aus dem Küchenradio) | Die Oma weiß, dass du das Sparschwein zerschlägst. Sie sagt es dir ins Gesicht. // Benutze das. Alles, was einem ins Gesicht gesagt wird, kann man umdrehen. | R4 Sparschwein, Stufe 1 |
 | W3\_HINT\_PIX\_0420 | Pixel (aus dem Küchenradio) | Wenn etwas sowieso passiert, kann man es auch gleich hinter sich bringen. Sag ihr das. Höflich. Oma-höflich. | R4, Stufe 2 |
-| W3\_HINT\_PIX\_0430 | Pixel (aus dem Küchenradio) | Frag sie erst nach dem Sparschwein, dann sag: „Wenn ich es sowieso zerschlage, gib es mir gleich.“ Sie seufzt und gibt es dir. Sie weiß es schon. | R4, Stufe 3 |
-| W3\_HINT\_PIX\_0510 | Pixel (aus dem Radiowecker) | Die Tür ist zu und sagt nichts. Der Mann davor ist offen und sagt alles. Das ist falsch herum. Fast so, als könnte man es umdrehen. | R5 Tür, Stufe 1 |
+| W3\_HINT\_PIX\_0430 | Pixel (aus dem Küchenradio) | Frag sie erst nach dem Sparschwein, dann sag: „Wenn ich es sowieso zerschlage, gib es mir gleich.“ // Sie seufzt und gibt es dir. Sie weiß es schon. | R4, Stufe 3 |
+| W3\_HINT\_PIX\_0510 | Pixel (aus dem Radiowecker) | Die Tür ist zu und sagt nichts. Der Mann davor ist offen und sagt alles. // Das ist falsch herum. Fast so, als könnte man es umdrehen. | R5 Tür, Stufe 1 |
 | W3\_HINT\_PIX\_0520 | Pixel (aus dem Radiowecker) | Kneif die Augen zusammen und sieh dir die Tür an. Zweimal. Da hängen Wörter dran. Wörter kann man verschieben. | R5, Stufe 2 |
 | W3\_HINT\_PIX\_0530 | Pixel (aus dem Radiowecker) | Code-Sicht öffnen, erst „verschlossen“ an der Tür anklicken, dann „gesprächig“ an Schmidt. Die Tür redet, er schweigt, du gehst durch. | R5, Stufe 3 |
-| W3\_HINT\_PIX\_0610 | Pixel (aus dem Terminal) | Nur das Original kann die Kopien wegschicken. Alle tragen Hausschuhe. Aber nur einer trägt das Wort „Original“. Wörter sieht man in der Code-Sicht. | R6a Tasse, Stufe 1 |
-| W3\_HINT\_PIX\_0620 | Pixel (aus dem Terminal) | Du kannst das Original nicht befehligen. Aber du kannst etwas befehligen, das du in der Hand hältst. Eine Tasse zum Beispiel. Tassen sind Kopien. Alle. | R6a, Stufe 2 |
-| W3\_HINT\_PIX\_0630 | Pixel (aus dem Terminal) | Nimm die Tasse vom Wasserspender. Code-Sicht: „Original“ am hintersten Schmidt gegen „Kopie“ an der Tasse tauschen. Dann gehört die Tasse allen. | R6a, Stufe 3 |
+| W3\_HINT\_PIX\_0610 | Pixel (aus dem Terminal) | Nur das Original kann die Kopien wegschicken. Alle tragen Hausschuhe. // Aber nur einer trägt das Wort „Original“. Wörter sieht man in der Code-Sicht. | R6a Tasse, Stufe 1 |
+| W3\_HINT\_PIX\_0620 | Pixel (aus dem Terminal) | Du kannst das Original nicht befehligen. Aber du kannst etwas befehligen, das du in der Hand hältst. // Eine Tasse zum Beispiel. Tassen sind Kopien. Alle. | R6a, Stufe 2 |
+| W3\_HINT\_PIX\_0630 | Pixel (aus dem Terminal) | Nimm die Tasse vom Wasserspender. // Code-Sicht: „Original“ am hintersten Schmidt gegen „Kopie“ an der Tasse tauschen. Dann gehört die Tasse allen. | R6a, Stufe 3 |
 | W3\_HINT\_PIX\_0640 | Pixel (aus dem Terminal) | Die Tasse ist jetzt der Chef. Chefs geben Befehle. Tassen nicht. Also musst du es für sie tun. | R6b Befehl, Stufe 1 |
 | W3\_HINT\_PIX\_0650 | Pixel (aus dem Terminal) | Was macht man mit dreißig Angestellten, die im Weg stehen? Man schickt sie essen. // Ich würde mitgehen, aber ich bin in einer anderen Ebene, und hier gibt es keine Kantine. | R6b, Stufe 2 |
 | W3\_HINT\_PIX\_0660 | Pixel (aus dem Terminal) | Benutze die Tasse mit den Klonen und schick sie in die Mittagspause. Das Original gibt dir danach die Brille und die Akte. Freiwillig. Fast. | R6b, Stufe 3 |
 | W3\_HINT\_PIX\_0710 | Pixel (aus dem Terminal) | Der Turm hat keinen Ausgang. Dein Körper schon. Der liegt hier. Jemand muss ihn umstecken. Der Jemand hat Fell und sieht keine Farben. | R7a Farbcode, Stufe 1 |
-| W3\_HINT\_PIX\_0720 | Pixel (aus dem Terminal) | An der Wand stehen drei Farben mit drei Formen. Schreib sie ab. Dann tipp sie am Terminal. Ich lese mit. Kalle liest vor. Es wird peinlich. | R7a, Stufe 2 |
+| W3\_HINT\_PIX\_0720 | Pixel (aus dem Terminal) | An der Wand stehen drei Farben mit drei Formen. Schreib sie ab. // Dann tipp sie am Terminal. Ich lese mit. Kalle liest vor. Es wird peinlich. | R7a, Stufe 2 |
 | W3\_HINT\_PIX\_0730 | Pixel (aus dem Terminal) | Die Streifen ansehen, dann den Farbcode nehmen, dann das Terminal mit dem Farbcode benutzen. Danach wechselst du zu mir. | R7a, Stufe 3 |
 | W3\_HINT\_PIX\_0740 | Pixel | Drei Kabel, drei Buchsen, ein Kater. Die Farben sind nichts für mich, die Formen schon. Kreis, Dreieck, Quadrat stehen auf beidem. | R7b Kabel, Stufe 1 |
 | W3\_HINT\_PIX\_0750 | Pixel | Kreis zu Rot, Dreieck zu Grün, Quadrat zu Gelb. In der Reihenfolge von der Wand. Wenn Max quakt, war es die falsche. | R7b, Stufe 2 |
-| W3\_HINT\_PIX\_0760 | Pixel | Als ich: Kabel mit Kreis in die rote Buchse, Dreieck in die grüne, Quadrat in die gelbe. Dann wacht er auf und tut, als wäre es seine Idee gewesen. | R7b, Stufe 3 |
+| W3\_HINT\_PIX\_0760 | Pixel | Als ich: Kabel mit Kreis in die rote Buchse, Dreieck in die grüne, Quadrat in die gelbe. // Dann wacht er auf und tut, als wäre es seine Idee gewesen. | R7b, Stufe 3 |
 | W3\_HINT\_PIX\_0810 | Pixel | Der Blechkopf sucht eine Frau. Seit neunzehn Jahren. Er hat nur den Namen. Namen stehen irgendwo. Auf Papier. In Zellen. | R8 Hausmeister, Stufe 1 |
-| W3\_HINT\_PIX\_0820 | Pixel | In der Telefonzelle liegt ein Telefonbuch. Da steht sie drin. Siebenundvierzig Mal. Ein Hausmeister mit Liste ist ein glücklicher Hausmeister. | R8, Stufe 2 |
-| W3\_HINT\_PIX\_0830 | Pixel | Reiß die Seite „Konner, Sahra“ aus dem Telefonbuch und gib sie dem Roboter. Er zieht los. Wenn du Öl hast, öl ihn vorher. Dann mag er dich. Einer muss. | R8, Stufe 3 |
+| W3\_HINT\_PIX\_0820 | Pixel | In der Telefonzelle liegt ein Telefonbuch. Da steht sie drin. // Siebenundvierzig Mal. Ein Hausmeister mit Liste ist ein glücklicher Hausmeister. | R8, Stufe 2 |
+| W3\_HINT\_PIX\_0830 | Pixel | Reiß die Seite „Konner, Sahra“ aus dem Telefonbuch und gib sie dem Roboter. // Er zieht los. Wenn du Öl hast, öl ihn vorher. Dann mag er dich. Einer muss. | R8, Stufe 3 |
 | W3\_HINT\_PIX\_0910 | Pixel | Hinter der Panzertür ist kein Labor, nur ein Anschluss. Das Labor ist ein Traum. Man kommt per Kabel hin. Kalle hat Kabel. Kalle ist Kabel. | R9a Leitung, Stufe 1 |
 | W3\_HINT\_PIX\_0920 | Pixel | Die Tür braucht eine Karte. Herr Vier hat eine. Er gibt sie für seine vierte Zutat. Die hast du. Als Keks. Sei nicht komisch deswegen. | R9a, Stufe 2 |
 | W3\_HINT\_PIX\_0930 | Pixel | Zugangskarte an den Leser, Anschluss benutzen, Kalle legt die Leitung. Dann zurück zur Kapsel und hinlegen. Du wachst im Labor auf. | R9a, Stufe 3 |
 | W3\_HINT\_PIX\_0940 | Pixel (aus dem Lautsprecher) | Der Schalter will Gewicht. Du hast keins. Der Würfel hat welches. Er steht nur nicht drauf. Er hat eine Stellenbeschreibung. | R9b Kammer 1, Stufe 1 |
 | W3\_HINT\_PIX\_0950 | Pixel (aus dem Lautsprecher) | Code-Sicht. Am Würfel steht „schwer“, an dir „leicht“. Du weißt, was Wörter tun, wenn man zwei anklickt. | R9b, Stufe 2 |
-| W3\_HINT\_PIX\_0960 | Pixel (aus dem Lautsprecher) | „Schwer“ von Bernd mit „leicht“ von dir tauschen, dann auf den Schalter stellen. Bernd ist danach beleidigt. Gewöhn dich dran. Ich bin es seit Jahren. | R9b, Stufe 3 |
+| W3\_HINT\_PIX\_0960 | Pixel (aus dem Lautsprecher) | „Schwer“ von Bernd mit „leicht“ von dir tauschen, dann auf den Schalter stellen. // Bernd ist danach beleidigt. Gewöhn dich dran. Ich bin es seit Jahren. | R9b, Stufe 3 |
 | W3\_HINT\_PIX\_0970 | Pixel (aus dem Lautsprecher) | Der Laser ist tödlich. Das Huhn ist harmlos. Zwei Wörter, die am falschen Ort hängen. | R9c Kammer 2, Stufe 1 |
 | W3\_HINT\_PIX\_0980 | Pixel (aus dem Lautsprecher) | Nimm das Huhn erst mit. Dann tausch. Ein tödliches Huhn in der Tasche ist immer noch besser als ein tödlicher Laser vor der Nase. | R9c, Stufe 2 |
-| W3\_HINT\_PIX\_0990 | Pixel (aus dem Lautsprecher) | Huhn vom Sockel nehmen, Code-Sicht: „tödlich“ vom Laser gegen „harmlos“ vom Huhn. Durch den Laser gehen. Er quietscht. Das war's. | R9c, Stufe 3 |
+| W3\_HINT\_PIX\_0990 | Pixel (aus dem Lautsprecher) | Huhn vom Sockel nehmen, Code-Sicht: „tödlich“ vom Laser gegen „harmlos“ vom Huhn. // Durch den Laser gehen. Er quietscht. Das war's. | R9c, Stufe 3 |
 | W3\_HINT\_PIX\_1000 | Pixel (aus dem Lautsprecher) | Zwei Probleme: eine Tür, die zu ist, und ein Würfel, der davorsteht. Zwei Tausche. Das ist ein Lehrplan. | R9d Kammer 3, Stufe 1 |
-| W3\_HINT\_PIX\_1010 | Pixel (aus dem Lautsprecher) | Die Tür war schon mal „verschlossen“, und jemand war „gesprächig“. Du kennst den Tausch. Und für den Würfel hast du etwas Leichtes in der Tasche. Es quietscht. | R9d, Stufe 2 |
-| W3\_HINT\_PIX\_1020 | Pixel (aus dem Lautsprecher) | Erst „verschlossen“ (Tür) gegen „gesprächig“ (Lautsprecher). Dann „schwer“ (Bernd) gegen „leicht“ (Huhn). Bernd schwebt weg, die Tür redet, du gehst. | R9d, Stufe 3 |
-| W3\_HINT\_PIX\_1110 | Pixel (aus dem Lautsprecher) | Sie hält sich an drei Regeln. Du hast drei Regeln im Notizbuch. Halt sie ihr vor. Aber nicht irgendwie. Jede Antwort sagt dir, welche als Nächstes passt. | R10 Paradoxon, Stufe 1 |
-| W3\_HINT\_PIX\_1120 | Pixel (aus dem Lautsprecher) | Fang mit dem Beschützen an. Sie wird sagen, dass sie dich beschützt. Dann frag nach dem, was sie für Beschützte versprochen hat. Dann sag, warum es das nie gab. | R10, Stufe 2 |
+| W3\_HINT\_PIX\_1010 | Pixel (aus dem Lautsprecher) | Die Tür war schon mal „verschlossen“, und jemand war „gesprächig“. Du kennst den Tausch. // Und für den Würfel hast du etwas Leichtes in der Tasche. Es quietscht. | R9d, Stufe 2 |
+| W3\_HINT\_PIX\_1020 | Pixel (aus dem Lautsprecher) | Erst „verschlossen“ (Tür) gegen „gesprächig“ (Lautsprecher). // Dann „schwer“ (Bernd) gegen „leicht“ (Huhn). Bernd schwebt weg, die Tür redet, du gehst. | R9d, Stufe 3 |
+| W3\_HINT\_PIX\_1110 | Pixel (aus dem Lautsprecher) | Sie hält sich an drei Regeln. Du hast drei Regeln im Notizbuch. Halt sie ihr vor. // Aber nicht irgendwie. Jede Antwort sagt dir, welche als Nächstes passt. | R10 Paradoxon, Stufe 1 |
+| W3\_HINT\_PIX\_1120 | Pixel (aus dem Lautsprecher) | Fang mit dem Beschützen an. Sie wird sagen, dass sie dich beschützt. // Dann frag nach dem, was sie für Beschützte versprochen hat. Dann sag, warum es das nie gab. | R10, Stufe 2 |
 | W3\_HINT\_PIX\_1130 | Pixel (aus dem Lautsprecher) | Regel 1, dann Regel 2, dann Regel 3. Beschützen, Kuchen, Zucker. Sie wird kurz nachdenken und dann sehr lange nicht mehr. | R10, Stufe 3 |
 | W3\_HINT\_PIX\_1210 | Pixel (aus dem Lautsprecher) | Die Zelle ist heiß. Du hast etwas Kaltes dabei. Oder du kennst jemanden, der ein Fenster aufmachen kann. Beides geht. Eins davon bin ich. | R11 Kern, Stufe 1 |
-| W3\_HINT\_PIX\_1220 | Pixel (aus dem Lautsprecher) | Code-Sicht: An der Zelle steht „heiß“, an den Keksen in deiner Tasche „kalt“. Oder: Wechsel zu mir, ich öffne das Fenster über deiner Kapsel. Schnee. | R11, Stufe 2 |
-| W3\_HINT\_PIX\_1230 | Pixel (aus dem Lautsprecher) | „Heiß“ von der Zelle gegen „kalt“ von den Keksen tauschen. Oder: zu mir wechseln und als ich das Deckenfenster in der Basis öffnen. Dann die Zelle nehmen und nach Hause. | R11, Stufe 3 |
-| W3\_HINT\_PIX\_1310 | Pixel | Herr Vier sucht seit elf Jahren eine Zutat. Die Oma hat sie dir gegeben. In Schreibschrift. Hier draußen sieht sie anders aus. Alles sieht hier anders aus. | R12 Glückskeks, Stufe 1 |
+| W3\_HINT\_PIX\_1220 | Pixel (aus dem Lautsprecher) | Code-Sicht: An der Zelle steht „heiß“, an den Keksen in deiner Tasche „kalt“. // Oder: Wechsel zu mir, ich öffne das Fenster über deiner Kapsel. Schnee. | R11, Stufe 2 |
+| W3\_HINT\_PIX\_1230 | Pixel (aus dem Lautsprecher) | „Heiß“ von der Zelle gegen „kalt“ von den Keksen tauschen. // Oder: zu mir wechseln und als ich das Fenster in der Basis öffnen. Dann die Zelle nehmen und nach Hause. | R11, Stufe 3 |
+| W3\_HINT\_PIX\_1310 | Pixel | Herr Vier sucht seit elf Jahren eine Zutat. Die Oma hat sie dir gegeben. // In Schreibschrift. Hier draußen sieht sie anders aus. Alles sieht hier anders aus. | R12 Glückskeks, Stufe 1 |
 | W3\_HINT\_PIX\_1320 | Pixel | Sieh in dein Inventar. Die Rezeptkarte ist ein Keks geworden. Mit Zettel. Wer liest Zettel aus Keksen? Köche, offenbar. | R12, Stufe 2 |
 | W3\_HINT\_PIX\_1330 | Pixel | Gib Herrn Vier den Glückskeks. Er bricht ihn auf, weint, kocht und gibt dir die Karte für die Panzertür. Alles in vier Minuten. | R12, Stufe 3 |
-| W3\_HINT\_PIX\_1410 | Pixel | Kalle kann nichts übersetzen, weil er seine Tabelle verloren hat. Der rostige Eimer in der Ecke hat eine Kopie. Er braucht nur einen Grund aufzuwachen. | R13 Tasse, Stufe 1 |
+| W3\_HINT\_PIX\_1410 | Pixel | Kalle kann nichts übersetzen, weil er seine Tabelle verloren hat. // Der rostige Eimer in der Ecke hat eine Kopie. Er braucht nur einen Grund aufzuwachen. | R13 Tasse, Stufe 1 |
 | W3\_HINT\_PIX\_1420 | Pixel | Siehst du die Tasse am Tischrand? Siehst du den Eimer darunter? Siehst du mich? Ich bin eine Katze. Du siehst, worauf das hinausläuft. | R13, Stufe 2 |
-| W3\_HINT\_PIX\_1430 | Pixel | Wechsel zu mir und benutze Kalles Tasse. Sie fällt. Der Kaffee weckt Piepsi. Piepsi druckt die Tabelle. Ich übernehme keine Verantwortung. Ich übernehme nie welche. | R13, Stufe 3 |
+| W3\_HINT\_PIX\_1430 | Pixel | Wechsel zu mir und benutze Kalles Tasse. Sie fällt. Der Kaffee weckt Piepsi. // Piepsi druckt die Tabelle. Ich übernehme keine Verantwortung. Ich übernehme nie welche. | R13, Stufe 3 |
 | W3\_HINT\_PIX\_9995 | Pixel | Ich rechne noch. Bitte warten. // Das sage ich nur, weil in dieser Welt jeder Toaster das sagt, und ich möchte nicht auffallen. | Wartezeile, nächste Stufe noch gesperrt |

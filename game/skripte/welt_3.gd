@@ -993,6 +993,22 @@ func benutzen_wassereimer(_obj, _x) -> bool:
 	await _sag("W3_BAS_PIX_0650")
 	Zustand.setze("W3_EIMER_GEKIPPT")  # Kühlung taut (Hintergrund W3-R04b)
 	return true
+
+
+## Ansehen in der Kühlung: Die Kühlung hat keinen eigenen Szenen-Code, Pixels Zeilen stehen unter
+## BAS (Review 20.11., W3-13). Andere Räume behalten ihre Zeilen aus dem Bauplan.
+func ansehen_wassereimer(_obj, _x) -> bool:
+	if _raum_id() != "kuehlung":
+		return false
+	await _sag("W3_BAS_PIX_0960")
+	return true
+
+
+func ansehen_ausgang_widerstandsbasis(_obj, _x) -> bool:
+	if _raum_id() != "kuehlung":
+		return false
+	await _sag("W3_BAS_PIX_0970")
+	return true
 #endregion
 
 #region Code-Sicht und Tausche ######################################################################
@@ -1331,6 +1347,22 @@ func ansehen_kochbuch(obj, _x) -> bool:
 		await obj.ansehen()
 	await Spiel.nahansicht_zeigen("kochbuch")
 	Zustand.setze("W3_REGEL_2")
+	return true
+
+
+## Kuckucksuhr: Der Kuckuck ruft „Milch!“ als Sprechblase an der Uhr statt als Erzählzeile oben im
+## Bild (Review 20.11., W3-R07-02). Er ist ein Geräusch, keine Figur: Die Blase kommt über die
+## Objektstimme der Uhr (wie Brunnen und Spiegel in Welt 1), ohne Sprecheraufnahme.
+func benutzen_kuckucksuhr(obj, _x) -> bool:
+	await _sag("W3_KUCH_NAR_0610")
+	const RUF := "W3_KUCH_NAR_0615"
+	Spiel.protokoll.append(RUF)
+	Spiel.zeile_gesagt.emit(RUF)
+	if not Spiel.testmodus and obj is PopochiuClickable:
+		await Spiel._objekt_sagt("KUC", obj, RUF)
+	await _sag("W3_KUCH_MAX_0620")
+	if Zustand.ist("W3_PIXEL_AUF_LEITUNG"):
+		await _sag("W3_KUCH_PIX_0630")
 	return true
 
 

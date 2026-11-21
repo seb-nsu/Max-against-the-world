@@ -214,16 +214,16 @@ Szene. Werbeblock, dann Ankunft. Abendrot durchs Dachfenster, Opa hat die Lampe 
 | ZS3\_DACH\_PIX\_0020 | Pixel | Dreimal Milch. Das ist keine Werbung mehr, das ist eine Botschaft. // Jemand will, dass in diesem Haus etwas gekauft wird. | kommt aus dem Bildschirm |
 | ZS3\_DACH\_MAX\_0030 | Max | Es regnet nicht mehr. Ich hatte schon vergessen, wie sich das anfühlt, wenn einem nichts auf den Kopf tropft. | sieht an sich herunter, noch nass |
 | ZS3\_DACH\_OPA\_0040 | Opa | Die Zelle. Die Ewige Energiezelle. Gib sie mir. Langsam. Mit beiden Händen. | kommt mit ausgestreckten Armen, fast andachtsvoll |
-| ZS3\_DACH\_MAX\_0050 | Max | Sie ist warm, aber nicht mehr heiß. Das ist eine lange Geschichte mit einer Küchenmaschine, die mich nicht leiden konnte. | reicht sie über |
+| ZS3\_DACH\_MAX\_0050 | Max | Sie war eiskalt. Im Fernseher ist sie wieder warm geworden. // Das ist eine lange Geschichte mit einer Küchenmaschine, die mich nicht leiden konnte. | reicht sie über |
 | ZS3\_DACH\_NAR\_0060 | – | Opa hält die Zelle ins Licht. Glitzer, Plopp. Sie ist jetzt genau so groß wie sein kleiner Finger. | Effekt Verwandlung |
 | ZS3\_DACH\_OPA\_0070 | Opa | Rückverwandlungs… | fängt an |
 | ZS3\_DACH\_MAX\_0080 | Max | …schwund. Ich weiß. |  |
-| ZS3\_DACH\_NAR\_0090 | – | Opa trägt die Zelle quer über den Dachboden, öffnet die Kiste mit den kaputten Fernbedienungen und legt sie hinein. Dann schließt er die Kiste nicht. | Kiste bleibt offen |
+| ZS3\_DACH\_NAR\_0090 | – | Opa trägt die Zelle über den Dachboden und legt sie in die Kiste mit den kaputten Fernbedienungen. // Dann schließt er die Kiste nicht. | Kiste bleibt offen |
 | ZS3\_DACH\_MAX\_0100 | Max | Du legst die ewige Energiequelle der Menschheit zu deinem Fernbedienungsschrott. Einfach so. |  |
 | ZS3\_DACH\_OPA\_0110 | Opa | Dort ist sie am sichersten. Niemand sucht Wertvolles bei Fernbedienungen. Das weiß ich aus Erfahrung. | ausweichend |
 | ZS3\_DACH\_MAX\_0112 | Max | Aus Erfahrung? Was hast du denn bitte für Erfahrungen mit Fernbedienungen? |  |
 | ZS3\_DACH\_PIX\_0120 | Pixel | Seltsam, sagt Max. Verdächtig, sage ich. // Und rein statistisch bin in diesem Haushalt ich derjenige, der recht hat. Ich führe darüber Buch. | zu Max |
-| ZS3\_DACH\_NAR\_0130 | – | Pixel springt in die Kiste, wühlt, taucht mit der Zelle im Maul wieder auf. Er legt sie auf die Werkbank, genau neben Ei und Mehl. | Werkbank-Ablage Zustand 3, Zelle glüht |
+| ZS3\_DACH\_NAR\_0130 | – | Pixel springt in die Kiste, wühlt, taucht mit der Zelle im Maul wieder auf. // Er legt sie auf die Werkbank, genau neben Ei und Mehl. | Werkbank-Ablage Zustand 3, Zelle glüht |
 | ZS3\_DACH\_PIX\_0140 | Pixel | Reliquien gehören auf den Altar, zu den anderen Reliquien. // Ei. Mehl. Und ein Ding, das ganz zufällig in eine Fernbedienung passt. // Ich sage nichts. Ich lege es nur hin. | setzt sich kerzengerade, Schwanz um die Pfoten |
 | ZS3\_DACH\_OPA\_0150 | Opa | Der Kater sortiert um. Schön. Sehr wissenschaftlich, Pixel. Toll. Wirklich ganz toll. | schwitzt |
 | ZS3\_DACH\_MAX\_0160 | Max | Drei von vier. Das Passwort ist „Kuchen123“. Oder? | trocken, aus dem Nichts |
@@ -284,7 +284,7 @@ Reisetasche packen für Welt 4. Neu sind die Dinge aus Welt 3. Omas Kekse liegen
 | ZS3\_DACH\_PIX\_0592 | Pixel | Der Leuchttrank. Im Fernsehen leuchtet schon alles von allein, sogar die Zähne der Moderatoren. // Dagegen kommt er nicht an. | Berühren: Leuchttrank; aus der Fundkiste, nur Goblin-Weg B |
 | ZS3\_DACH\_PIX\_0593 | Pixel | Ketchup. Im Fernsehen ist das seit jeher Blut, das weiß jede Katze, die Krimis schaut. // Jedes Opfer dort riecht nach Pommes, und kein Kommissar sagt etwas. | Berühren: Ketchup; aus der Fundkiste, nur Goblin-Weg B |
 | ZS3\_DACH\_PIX\_0594 | Pixel | „Die sieben Antworten.“ Im Fernsehen reicht eine einzige, und die lautet: nach der Werbung. // Sieben wären dort Verschwendung. | Berühren: Schriftrolle „Die sieben Antworten“; aus der Fundkiste |
-| ZS3\_DACH\_PIX\_0595 | Pixel | Dein Handy, immer noch drei Prozent. // Du willst einen kleinen Bildschirm in einen großen mitnehmen. Der große frisst den kleinen. So ist das bei Bildschirmen, und bei Fischen übrigens auch. | Berühren: Handy; aus der Fundkiste, nur wenn in Welt 2 nicht verbraucht |
+| ZS3\_DACH\_PIX\_0595 | Pixel | Dein Handy, immer noch drei Prozent. // Du willst einen kleinen Bildschirm in einen großen mitnehmen. Der große frisst den kleinen. // So ist das bei Bildschirmen, und bei Fischen übrigens auch. | Berühren: Handy; aus der Fundkiste, nur wenn in Welt 2 nicht verbraucht |
 | ZS3\_DACH\_PIX\_0596 | Pixel | Kaugummi. Im Fernsehen klebt so etwas unter jedem Stuhl, in jeder Sendung, seit Jahrzehnten. // Du würdest also nichts Neues beitragen. | Berühren: Kaugummi; aus der Fundkiste, nur wenn in Welt 2 nicht verbraucht |
 | ZS3\_DACH\_PIX\_0597 | Pixel | Der Kugelschreiber. Im Fernsehen unterschreibt man damit Verträge, die man vorher nicht gelesen hat. // Ich rate ab. Vom Lesen wie vom Unterschreiben. | Berühren: Kugelschreiber; aus der Fundkiste, nur wenn in Welt 2 nicht verbraucht |
 | ZS3\_DACH\_PIX\_0598 | Pixel | Die Scheibe, was immer sie diesmal ist. Rund, flach, fliegt. // Im Fernsehen fliegen nur Torten, und die treffen immer. Dagegen bist du mit dem Ding ein Anfänger. | Berühren: Diskus oder Ersatz; aus der Fundkiste, nur wenn behalten |

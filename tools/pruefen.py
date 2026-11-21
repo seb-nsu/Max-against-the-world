@@ -77,6 +77,12 @@ ZEILE_RE = re.compile(r"^([A-Z]+[0-9]?)_([A-Z0-9]+)_([A-Z0-9]+)_(\d{4})$")
 OHNE_ZEHNER = {"HINT", "ERS", "WDH", "PLA"}  # Szenen-Codes mit eigenem Nummernschema
 MAX_ZEICHEN = 120
 MAX_BLASE = 140
+# Erzählzeilen (NAR) stehen höchstens 8 s oben im Bild (13 Zeichen je Sekunde): 100 Zeichen je Blase
+MAX_NAR = 100
+# Längen (Blasen, NAR, englische Spalte) brechen ab für Abschnitte, die schon gekürzt sind
+# (Review 20.11., W3-11); die übrigen melden sie als Hinweis, bis sie gekürzt sind.
+LAENGE_STRENG_ORTE = ("prolog", "welt-1", "welt-2", "welt-3")   # deutsche Blasen über MAX_BLASE
+LAENGE_STRENG_PRAEFIX = ("W3_", "ZS3_")                          # dazu NAR-Länge und englische Spalte
 # Festgelegte Zahl der Nahansichten im ganzen Spiel (entscheidungen.md)
 NAHANSICHTEN_GESAMT = 15
 
@@ -386,7 +392,11 @@ def pruefe_skript(ab, d, codes, kuerzel, alle_ids):
                 # Blasen über 140 Zeichen werden fünfzeilig und wachsen hinter die Porträts
                 # (Review Prolog und Welt 1, Fund 10): mit „//“ teilen
                 if len(teil.strip()) > MAX_BLASE:
-                    (W if any(a in ort for a in ("prolog", "welt-1", "welt-2")) else H)(ort, f"{roh}: Blase mit {len(teil.strip())} Zeichen (über {MAX_BLASE}), mit „//“ teilen")
+                    streng = any(a in ort for a in LAENGE_STRENG_ORTE) or roh.startswith(LAENGE_STRENG_PRAEFIX)
+                    (W if streng else H)(ort, f"{roh}: Blase mit {len(teil.strip())} Zeichen (über {MAX_BLASE}), mit „//“ teilen")
+                if kz == "NAR" and len(teil.strip()) > MAX_NAR:
+                    (W if roh.startswith(LAENGE_STRENG_PRAEFIX) else H)(
+                        ort, f"{roh}: Erzählzeile mit {len(teil.strip())} Zeichen (über {MAX_NAR}), kürzen oder mit „//“ teilen")
                 for satz in re.split(r"(?<=[.!?…“])\s+", teil.strip()):
                     if len(satz) > MAX_ZEICHEN:
                         W(ort, f"{roh}: Satz mit {len(satz)} Zeichen passt in keine Blase (über {MAX_ZEICHEN}, teilen)")
@@ -631,6 +641,14 @@ def pruefe_englisch(alle_ids):
         if da and len(da) != n:
             F(rel, f"{z['id']}: {n} Sprechblasen auf Deutsch, {len(da)} auf Englisch "
                    f"(neu eintragen mit tools/en_eintragen.py)")
+        # Längen der englischen Blasen wie im Deutschen (Review 20.11., W3-11); eine zu lange
+        # englische Blase wird im Deutschen an derselben Stelle mit „//“ geteilt.
+        grenze = MAX_NAR if z["sprecher"] == "NAR" else MAX_BLASE
+        for k in da:
+            if len(en[k]) > grenze:
+                (W if z["id"].startswith(LAENGE_STRENG_PRAEFIX) else H)(
+                    rel, f"{k}: englische Blase mit {len(en[k])} Zeichen (über {grenze}), "
+                         f"im Deutschen und Englischen an derselben Stelle teilen oder kürzen")
     for k, text in en.items():
         if "//" in text:
             F(rel, f"{k}: „//“ im englischen Text (Kaskade über tools/en_eintragen.py eintragen)")
