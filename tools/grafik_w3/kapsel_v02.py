@@ -90,6 +90,57 @@ for nr, f in enumerate(bilder[:3]):
     unten = np.zeros(anders.shape, bool); unten[voll:] = True
     f[unten & ~anders, 3] = 0
 bilder[3][voll:, :, 3] = 0
+
+# Der Kasten im Hintergrund ist schräg von oben gemalt: Deckelfläche vorn y 226 von x 240 bis 301, hinten y 211,5
+# von x 275 bis 331. Gemini malt ihn gerade von vorn. Darum Öffnung und Deckel zeilenweise auf diese Fläche
+# umrechnen (Deckel steht senkrecht auf der Hinterkante) und Max um die halbe Verschiebung mitnehmen.
+VORN_Y, HINTEN_Y = 226.0, 211.5
+VORN, HINTEN = (240, 301), (275, 331)
+MAX_VERSATZ = 8
+ox, oy = KASTEN_LINKS - links_px, OBERKANTE_SPIEL - voll
+B2 = HINTEN[1] - ox + 2
+
+
+def ziel_spanne(y):
+    if y >= VORN_Y:
+        return VORN
+    if y <= HINTEN_Y:
+        return HINTEN
+    t = (VORN_Y - y) / (VORN_Y - HINTEN_Y)
+    return (round(VORN[0] + (HINTEN[0] - VORN[0]) * t), round(VORN[1] + (HINTEN[1] - VORN[1]) * t))
+
+
+kasten = np.zeros((fh, B2, 4), np.uint8)
+for r in range(voll):
+    xs = np.nonzero(leer[r, :, 3])[0]
+    if not len(xs):
+        continue
+    sl, sr = int(xs.min()), int(xs.max())
+    tl, tr = ziel_spanne(r + oy)
+    for x in range(tl, tr + 1):
+        q = sl + round((x - tl) * (sr - sl) / max(1, tr - tl))
+        kasten[r, x - ox] = leer[r, q]
+neu_bilder = []
+for nr, f in enumerate(bilder):
+    g = kasten.copy()
+    if nr < 3:
+        m = (f[..., 3] > 0) & ((leer[..., 3] == 0) | (np.abs(f[..., :3].astype(int) - leer[..., :3].astype(int)).sum(-1) > 30))
+        m[voll:] = f[voll:, :, 3] > 0
+        m[:voll] &= ndimage.binary_dilation(ndimage.binary_opening(m[:voll], iterations=2), iterations=2)   # angehängte Linien
+        lab, n = ndimage.label(m)    # nur große Stücke: Max; schmale Reste vom Gemini-Deckel fallen weg
+        if n:
+            gr = ndimage.sum(m, lab, range(1, n + 1))
+            dick = [min(sl[0].stop - sl[0].start, sl[1].stop - sl[1].start) >= 5 for sl in ndimage.find_objects(lab)]
+            boxen = ndimage.find_objects(lab)
+            gross = boxen[int(np.argmax(gr))]
+            neben = [boxen[k][1].stop > gross[1].start - 2 and boxen[k][1].start < gross[1].stop + 2 for k in range(n)]
+            # Deckelkanten sind dünne Linien oder liegen neben Max (Gemini-Deckel steht in jeder Spalte etwas anders)
+            m = np.isin(lab, [k + 1 for k in range(n) if gr[k] >= 40 and dick[k] and neben[k]])
+        ys, xs = np.nonzero(m)
+        ok = xs + MAX_VERSATZ < B2
+        g[ys[ok], xs[ok] + MAX_VERSATZ] = f[ys[ok], xs[ok]]
+    neu_bilder.append(g)
+bilder, fw = neu_bilder, B2
 Image.fromarray(np.concatenate(bilder, 1)).save(W0 / "game/grafik/ambiente/w3_kapsel_max_v02.png")
-lage = {"bild": [fw, fh], "bilder": 4, "oben_links": [KASTEN_LINKS - links_px, OBERKANTE_SPIEL - voll]}
+lage = {"bild": [fw, fh], "bilder": 4, "oben_links": [ox, oy]}
 print("w3_kapsel_max_v02", json.dumps(lage))

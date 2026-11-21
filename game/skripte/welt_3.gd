@@ -2435,7 +2435,7 @@ func _ente_aus() -> void:
 ## neben dem Kasten mit aussteigen/einsteigen.
 const KAPSEL_FUSS := Vector2(326, 316)            # rechts neben Max' Kasten, wo die Beine über die Kante hängen
 const KAPSEL_BILD := AMBIENTE + "w3_kapsel_max_v02.png"
-const KAPSEL_BILD_FUSS := Vector2(284, 307)       # Bild 87 × 169, oben links (240, 138) auf dem Hintergrund
+const KAPSEL_BILD_FUSS := Vector2(287, 307)       # Bild 93 × 169, oben links (240, 138) auf dem Hintergrund
 const KAPSEL_BILD_BASIS := 292.0                  # hinter Max, der davor steht
 const KAPSEL_HALTEN := [0.7, 0.5, 0.6]             # liegt, sitzt, auf der Kante (Sekunden)
 
