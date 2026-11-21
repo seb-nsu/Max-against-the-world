@@ -56,3 +56,12 @@ Sebastians 24 JPEG-Originale (Median 3×3 gegen JPEG-Ränder, Palette je Raum, Z
 Kaffeespur, Schnee, drittes Glas, Krakel, roter Laser, Weckeranzeige; Tresen und Nachttisch Tag/Nacht als
 Vordergrundteile `game/grafik/props/w3_*_v02.png`). Danach `effekte_raum_v02.py` (18 raumabhängige Effekte neu auf den
 _v02-Bildern, Layout-Zeilen mit Fußpunkt) und `code_sicht.py` (liest jetzt _v02).
+
+Bewegungen einhängen (AP-05, 21.11.): `effekte_raum_v02.py` baut zusätzlich die sechs Effekte, die vorher Ausschnitte
+der ersten Räume waren, auf den _v02-Bildern neu (Fächer öffnen, Küchenradio mit eigener Fassung ab R4, Lautsprecher
+der drei Testkammern, Schlüsselloch der Tür in Kammer 3, Kopieren) und das Traumbild der blauen Pastille
+(`w3_sofa_traum.png`: Prolog-Wohnzimmer weich und warm, Max-Sofa-Standbild doppelt groß). `figuren_einbau.py` behält
+bei Figuren mit Mund-Schleife (reden_ruhe) `talk` und nennt die Armgeste aus dem Posenbogen `rede_geste` (W3-09),
+kürzt gehaltene Zielposen auf etwa 0,6 s (W3-18, Ausnahmen in `HALTEN_AUSNAHMEN`) und kennt abweichende Bilddauern
+(`MS`, Max hinkt mit 85 ms). Aufruf wie oben mit `welt3\korrektur_20-11\quelle` als Quelle (alle Figuren auf einmal).
+Prüfung „Grafikdatei ohne Fundstelle“: `tools/grafik_fundstellen.py` (in `alles_pruefen.py` und CI).

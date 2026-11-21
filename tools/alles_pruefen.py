@@ -28,6 +28,7 @@ SCHRITTE = [
     ("abdeckung.py", True),
     ("prompts_zusammensetzen.py", True),
     ("gesten_pruefen.py", False),
+    ("grafik_fundstellen.py", False),   # Review 20.11., AP-05: Welt-3-Grafik ohne Aufruf
 ]
 
 

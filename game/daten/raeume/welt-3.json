@@ -2541,10 +2541,10 @@
      "script_name": "Wischeimer",
      "name_key": "UI_OBJ_WISCHEIMER",
      "rect": [
-      138,
-      252,
-      80,
-      52
+      168,
+      250,
+      52,
+      54
      ],
      "gehe": [
       186,
@@ -3166,6 +3166,30 @@
       0.2,
       0.2
      ]
+    },
+    {
+     "art": "bild",
+     "bild": "res://grafik/ambiente/w3_schnee.png",
+     "bilder": 4,
+     "pos": [
+      320,
+      360
+     ],
+     "fps": 5,
+     "z": 50,
+     "wenn": "W3_SCHNEE"
+    },
+    {
+     "art": "bild",
+     "bild": "res://grafik/ambiente/w3_schnee.png",
+     "bilder": 4,
+     "pos": [
+      960,
+      360
+     ],
+     "fps": 5,
+     "z": 50,
+     "wenn": "W3_SCHNEE"
     }
    ],
    "hintergrund_nach": {
@@ -3771,6 +3795,54 @@
       25,
       50
      ]
+    },
+    {
+     "art": "bild",
+     "bild": "res://grafik/ambiente/w3_kuechenradio_v02.png",
+     "bilder": 4,
+     "pos": [
+      432,
+      144
+     ],
+     "fps": 8,
+     "spricht": "RAD",
+     "sonst": "R4"
+    },
+    {
+     "art": "bild",
+     "bild": "res://grafik/ambiente/w3_kuechenradio_v02.png",
+     "bilder": 4,
+     "pos": [
+      432,
+      144
+     ],
+     "fps": 8,
+     "spricht": "PIX",
+     "sonst": "R4"
+    },
+    {
+     "art": "bild",
+     "bild": "res://grafik/ambiente/w3_kuechenradio_r4_v02.png",
+     "bilder": 4,
+     "pos": [
+      432,
+      144
+     ],
+     "fps": 8,
+     "spricht": "RAD",
+     "wenn": "R4"
+    },
+    {
+     "art": "bild",
+     "bild": "res://grafik/ambiente/w3_kuechenradio_r4_v02.png",
+     "bilder": 4,
+     "pos": [
+      432,
+      144
+     ],
+     "fps": 8,
+     "spricht": "PIX",
+     "wenn": "R4"
     }
    ],
    "hintergrund_nach": {
@@ -4991,6 +5063,30 @@
    },
    "tiefe": 0.74,
    "skala": 1.0,
+   "effekte": [
+    {
+     "art": "bild",
+     "bild": "res://grafik/ambiente/w3_lautsprecher_kammer1_v02.png",
+     "bilder": 4,
+     "pos": [
+      320,
+      45
+     ],
+     "fps": 8,
+     "spricht": "MUT"
+    },
+    {
+     "art": "bild",
+     "bild": "res://grafik/ambiente/w3_lautsprecher_kammer1_v02.png",
+     "bilder": 4,
+     "pos": [
+      320,
+      45
+     ],
+     "fps": 8,
+     "spricht": "PIX"
+    }
+   ],
    "hintergrund_nach": {
     "R9b": "res://grafik/hintergruende/w3_bg_testkammer_1_offen_v02.png"
    },
@@ -5423,6 +5519,30 @@
    },
    "tiefe": 0.74,
    "skala": 1.0,
+   "effekte": [
+    {
+     "art": "bild",
+     "bild": "res://grafik/ambiente/w3_lautsprecher_kammer2_v02.png",
+     "bilder": 4,
+     "pos": [
+      320,
+      123
+     ],
+     "fps": 8,
+     "spricht": "MUT"
+    },
+    {
+     "art": "bild",
+     "bild": "res://grafik/ambiente/w3_lautsprecher_kammer2_v02.png",
+     "bilder": 4,
+     "pos": [
+      320,
+      123
+     ],
+     "fps": 8,
+     "spricht": "PIX"
+    }
+   ],
    "hintergrund_nach": {
     "R9c": "res://grafik/hintergruende/w3_bg_testkammer_2_laser_gestoert_v02.png"
    },
@@ -5742,6 +5862,42 @@
    },
    "tiefe": 0.75,
    "skala": 1.0,
+   "effekte": [
+    {
+     "art": "bild",
+     "bild": "res://grafik/ambiente/w3_lautsprecher_kammer3_v02.png",
+     "bilder": 4,
+     "pos": [
+      344,
+      226
+     ],
+     "fps": 8,
+     "spricht": "MUT"
+    },
+    {
+     "art": "bild",
+     "bild": "res://grafik/ambiente/w3_lautsprecher_kammer3_v02.png",
+     "bilder": 4,
+     "pos": [
+      344,
+      226
+     ],
+     "fps": 8,
+     "spricht": "PIX"
+    },
+    {
+     "art": "bild",
+     "bild": "res://grafik/ambiente/w3_tuer_kammer3_redet_v02.png",
+     "bilder": 5,
+     "pos": [
+      473,
+      216
+     ],
+     "fps": 8,
+     "spricht": "TUR",
+     "sonst": "R9d"
+    }
+   ],
    "hintergrund_nach": {
     "R9d": "res://grafik/hintergruende/w3_bg_testkammer_3_offen_v02.png"
    },
@@ -5961,6 +6117,18 @@
      ],
      "fps": 8,
      "sonst": "R10"
+    },
+    {
+     "art": "bild",
+     "bild": "res://grafik/ambiente/w3_schnee.png",
+     "bilder": 4,
+     "pos": [
+      320,
+      360
+     ],
+     "fps": 5,
+     "z": 50,
+     "wenn": "W3_ZELLE_SCHNEE"
     }
    ],
    "hintergrund_nach": {

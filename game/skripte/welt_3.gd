@@ -228,10 +228,11 @@ func _sag(zeile: String) -> void:
 	await Spiel.sagen(zeile.split("_")[2], zeile)
 
 
+## Zeilen-IDs und eigene Schritte (Callables, etwa ein Effekt zwischen zwei Zeilen) als Szene
 func _szene(zeilen: Array) -> void:
 	var schritte := []
 	for z in zeilen:
-		schritte.append(Spiel.z(z.split("_")[2], z))
+		schritte.append(z if z is Callable else Spiel.z(z.split("_")[2], z))
 	await Spiel.szene(schritte)
 
 
@@ -365,6 +366,8 @@ func _wechsel_getrennt() -> void:
 ## Max legt sich in die Kapsel (oder schluckt die rote Pastille) und erscheint im Zielraum.
 func _einschlafen(ziel: String) -> void:
 	var rid := _raum_id()
+	if rid == "widerstandsbasis" and C.player == C.Max:
+		await _kapsel_einsteigen()
 	Zustand.setze_wert("W3_EBENE", "labor" if ziel in LABOR else "simulation")
 	Zustand.setze_wert("W3_PIXEL_RAUM", rid if rid in ["widerstandsbasis", "laboreingang", "kuehlung"] else "widerstandsbasis")
 	Zustand.setze_wert("W3_MAX_RAUM", ziel)
@@ -387,7 +390,13 @@ func _aufwachen() -> void:
 	C.player = C.Max
 	Spiel.figur_gewechselt.emit(C.player)
 	Spiel.herkunft_raum = "Kapsel"
+	# Max steigt in der Basis aus seiner Kapsel, sobald der Raum steht (W3-10); bis dahin liegt er unsichtbar darin
+	if not CQFigur.gesten_aus() and is_instance_valid(C.Max) and C.Max.hat_animation("kapsel_aussteigen"):
+		_aus_der_kapsel = true
+		C.Max.modulate.a = 0.0
 	await Spiel.raum_wechseln_und_warten(Bauplan.raum_script_name("widerstandsbasis"))
+	if _aus_der_kapsel:
+		await _kapsel_aussteigen()
 
 
 ## Klingelnder Radiowecker oder Omas Eieruhr: zurück in die Realität. Die Werte W3_LETZTE_ZELLE und
@@ -423,7 +432,7 @@ func _figuren_anwenden(raum: CQRaum) -> void:
 		"Bernd": (rid == "testkammer_1" and not Zustand.geloest("R9b")) or (rid == "testkammer_3" and not Zustand.geloest("R9d")),
 		"Kalle": rid == "widerstandsbasis",
 		"Mutti": rid == "kern",       # in den Testkammern nur Stimme aus dem Lautsprecher
-		"Opa": false,                 # spricht nur als Hologramm und durch das Portal
+		"Opa": _hologramm_laeuft,     # nur als Hologramm (R13) und als Stimme durch das Portal
 		"PortalgeraetStimme": false,  # nur Stimme
 	}
 	for sn in plan:
@@ -431,6 +440,19 @@ func _figuren_anwenden(raum: CQRaum) -> void:
 		if plan[sn] and not raum.has_character(sn) and raum.has_marker(sn):
 			pos = raum.get_marker_position(sn)
 		Spiel.figur_hier(sn, plan[sn], pos)
+	# Zustand, den eine Geste herbeigeführt hat, bleibt (Review 20.11., W3-R12-01, W3-R08-03)
+	_variante("Mutti", "mutti_aus" if Zustand.geloest("R10") else "")
+	_variante("Schmidt", "schmidt_ohne_brille" if Zustand.geloest("R6b") else "")
+	_variante("Opa", "opa_hologramm" if _hologramm_laeuft else "")
+	if rid == "buero_50":
+		# Sonnenbrille und Akte trägt Schmidt; Max bekommt sie erst in Rätsel 6 (W3-R08-03)
+		for p in raum.get_props():
+			if p.has_method("objekt_id") and p.objekt_id() in ["sonnenbrille", "schmidts_akte"]:
+				p.visible = false
+	if is_instance_valid(C.Max) and not (_aus_der_kapsel and rid == "widerstandsbasis"):
+		# Max ist nur unsichtbar, solange er in der Kapsel liegt (_aufwachen) oder sich gerade hineinlegt
+		_aus_der_kapsel = false
+		C.Max.modulate.a = 1.0
 	_max_gang()
 	if rid == "stadtstrasse":
 		_wecker_anzeigen()
@@ -502,14 +524,23 @@ func _katze_schleife() -> void:
 	_katze_laeuft = false
 
 
-## Nach dem Hexenschuss hinkt Max bis zum Ende der Welt (Hand am Rücken, W3-B47)
+## Nach dem Hexenschuss hinkt Max bis zum Ende der Welt (Hand am Rücken, W3-B47), mit eigenem Tempo: die Bilder
+## laufen 85 ms (figuren_einbau.py), der Körper 90 statt 150 px/s, sonst rutschen die Füße (W3-R08-04)
+const HINKEN_TEMPO := 90.0
+
+
 func _max_gang(hinkt := true) -> void:
 	if not is_instance_valid(C.Max) or not C.Max.has_method("hat_animation"):
 		return
+	if not C.Max.has_meta("tempo_normal"):
+		C.Max.set_meta("tempo_normal", C.Max.walk_speed)
 	var gang := "walk"
+	var tempo: float = C.Max.get_meta("tempo_normal")
 	if hinkt and Zustand.ist("W3_HEXENSCHUSS") and C.Max.hat_animation("hexenschuss_gehen"):
 		gang = "hexenschuss_gehen"
+		tempo = HINKEN_TEMPO
 	C.Max.walk_animation = gang
+	C.Max.walk_speed = tempo
 #endregion
 
 #region Ankunft und Räume ##########################################################################
@@ -540,11 +571,13 @@ func nach_uebergang_kueche_orakel(_raum, _x) -> bool:
 
 func nach_uebergang_buero_50(_raum, _x) -> bool:
 	if _einmal("W3_TURM_GESEHEN"):
-		await _szene(["W3_TURM_SCH_0010", "W3_TURM_MAX_0020", "W3_TURM_SCH_0030", "W3_TURM_SCH_0040",
+		if not CQFigur.gesten_aus():
+			Spiel.figur_hier("Klon", false)   # kommt erst aus dem Kopierer (W3-B10)
+		await _szene(["W3_TURM_SCH_0010", "W3_TURM_MAX_0020", "W3_TURM_SCH_0030", _kopie_steigt_aus, "W3_TURM_SCH_0040",
 			"W3_TURM_KLO_0050", "W3_TURM_MAX_0060", "W3_TURM_KLO_0070", "W3_TURM_NAR_0080",
 			"W3_TURM_MAX_0090", "W3_TURM_MAX_0100"])
 		Zustand.setze("W3_HEXENSCHUSS")
-		await _szene(["W3_TURM_SCH_0110", "W3_TURM_KLO_0120", "W3_TURM_MAX_0130"])
+		await _szene([_klon_hausschuh, "W3_TURM_SCH_0110", "W3_TURM_KLO_0120", "W3_TURM_MAX_0130"])
 	await _zurueckgesetzt()
 	return true
 
@@ -706,8 +739,10 @@ func sichtbar_deckert_0090() -> Variant:
 func option_herr_vier_0090() -> bool:
 	if Zustand.geloest("R2"):
 		return false
-	await _szene(["W3_NUD_MOR_0210", "W3_NUD_MAX_0220", "W3_NUD_MOR_0230", "W3_NUD_PIX_0240"])
+	await _szene([_morphaeus_im_schatten, "W3_NUD_MOR_0210", "W3_NUD_MAX_0220", "W3_NUD_MOR_0230", "W3_NUD_PIX_0240"])
 	await bestellen()
+	if not Zustand.geloest("R2"):
+		_morphaeus_weg()   # Bestellung abgebrochen: er wartet wieder im Schatten
 	return true
 
 
@@ -726,7 +761,7 @@ func bestellen() -> void:
 			await _sag(antwort[o])
 			continue
 		break
-	await _szene(["W3_NUD_VIE_0310", "W3_NUD_PIX_0340", "W3_NUD_MOR_0350", "W3_NUD_MAX_0360",
+	await _szene(["W3_NUD_VIE_0310", "W3_NUD_PIX_0340", _morphaeus_tritt_vor, "W3_NUD_MOR_0350", "W3_NUD_MAX_0360",
 		"W3_NUD_MOR_0370", "W3_NUD_VIE_0380", "W3_NUD_PIX_0390"])
 	Zustand.loese("R2")
 	_figuren_anwenden(R.current)
@@ -809,8 +844,9 @@ func _automat() -> bool:
 		"W3_APO_MAX_0140":
 			await _szene(["W3_APO_MAX_0140", "W3_APO_AUT_0150"])
 		"W3_APO_MAX_0110":
-			await _szene(["W3_APO_MAX_0110", "W3_APO_AUT_0120", "W3_APO_AUT_0130"])
+			await _szene(["W3_APO_MAX_0110", "W3_APO_AUT_0120", _faecher_auf, "W3_APO_AUT_0130"])
 			Zustand.loese("R3a")
+			_faecher_weg()
 			await _geben("rote_pastille")
 			await _geben("blaue_pastille")
 			await _szene(["W3_APO_MAX_0410", "W3_APO_MOR_0420"])
@@ -837,9 +873,10 @@ func benutzen_pixel(_obj, _x) -> bool:
 
 
 func benutzen_inventar_blaue_pastille(_obj, _x) -> bool:
-	await _szene(["W3_APO_MAX_0460", "W3_APO_AUT_0470", "W3_SOFA_NAR_0480", "W3_SOFA_MAX_0490",
-		"W3_SOFA_MAX_0500", "W3_SOFA_MAX_0510", "W3_SOFA_PIX_0520", "W3_SOFA_MAX_0530",
-		"W3_SOFA_PIX_0540", "W3_SOFA_MAX_0550", "W3_SOFA_PIX_0560", "W3_APO_MAX_0570"])
+	await _szene(["W3_APO_MAX_0460", "W3_APO_AUT_0470", _sofa_traum_an, "W3_SOFA_NAR_0480", "W3_SOFA_MAX_0490",
+		"W3_SOFA_MAX_0500", "W3_SOFA_MAX_0510", _sofa_pixel_springt, "W3_SOFA_PIX_0520", "W3_SOFA_MAX_0530",
+		"W3_SOFA_PIX_0540", "W3_SOFA_MAX_0550", _sofa_traum_aus, "W3_SOFA_PIX_0560", "W3_APO_MAX_0570"])
+	_sofa_traum_weg()
 	return true
 
 
@@ -1237,7 +1274,11 @@ func _code_sicht_weg() -> void:
 func _tauschen(rid: String, t: Dictionary) -> void:
 	_tausch.budget = int(_tausch.budget) - 1
 	Klang.geraeusch("glitch")  # jeder Tausch ist ein Fehler im Bild
-	await _szene(t.zeilen)
+	var zeilen: Array = t.zeilen.duplicate()
+	var i := zeilen.find("W3_KAM1_NAR_0460")
+	if i >= 0:
+		zeilen.insert(i + 1, _bernd_zur_decke)   # „schwebt beleidigt zur Decke“ (W3-R09-02)
+	await _szene(zeilen)
 	var l: String = t.get("loesung", "")
 	if l.is_empty():
 		var fehl := _liste("W3_FEHLTAUSCHE")
@@ -1327,11 +1368,13 @@ func _tasse_befiehlt(iid: String) -> bool:
 		return true
 	if Zustand.geloest("R6b"):
 		return false
-	await _szene(["W3_TURM_MAX_0390", "W3_TURM_KLO_0400", "W3_TURM_KLO_0410", "W3_TURM_MAX_0420",
-		"W3_TURM_SCH_0430", "W3_TURM_MAX_0440"])
+	await _szene(["W3_TURM_MAX_0390", "W3_TURM_KLO_0400", "W3_TURM_KLO_0410", _klon_geht_ab, "W3_TURM_MAX_0420",
+		"W3_TURM_SCH_0430", _schmidt_ohne_brille, "W3_TURM_MAX_0440"])
 	await _geben("sonnenbrille")
 	await _szene(["W3_TURM_SCH_0450", "W3_TURM_MAX_0460"])
 	await _geben("schmidts_akte")
+	while _klon_unterwegs:
+		await Spiel.get_tree().process_frame
 	_loese("R6b", ["W3_REGEL_1"])
 	_figuren_anwenden(R.current)
 	await _sag("W3_TURM_MAX_0570")
@@ -1416,8 +1459,9 @@ func _kabel_stecken() -> bool:
 				break
 			else:
 				# falsches Kabel: Max ist drüben kurz eine Ente
-				await _szene(["W3_TERM_PIX_0250", "W3_TERM_MAX_0260", "W3_TERM_MAX_0270",
-					"W3_TERM_PIX_0280", "W3_TERM_KAL_0290"])
+				await _szene(["W3_TERM_PIX_0250", _ente_an, "W3_TERM_MAX_0260", _ente_zurueck, "W3_TERM_MAX_0270",
+					_ente_aus, "W3_TERM_PIX_0280", "W3_TERM_KAL_0290"])
+				_ente_aus()
 	await _szene(["W3_TERM_PIX_0310", "W3_TERM_KAL_0320", "W3_TERM_MAX_0330", "W3_TERM_NAR_0340"])
 	Zustand.loese("R7b")
 	await _aufwachen()
@@ -1440,9 +1484,10 @@ func benutzen_kalles_tasse(_obj, _x) -> bool:
 	_r13_laeuft = true
 	await _szene(["W3_PIEP_PIX_0010", "W3_PIEP_KAL_0020", "W3_PIEP_NAR_0030", "W3_PIEP_KAL_0040",
 		"W3_PIEP_NAR_0050", "W3_PIEP_PIE_0060", "W3_PIEP_PIX_0070", "W3_PIEP_KAL_0080",
-		"W3_PIEP_PIX_0090", "W3_PIEP_PIE_0100", "W3_PIEP_PIX_0110", "W3_PIEP_OPA_0120",
-		"W3_PIEP_OPA_0130", "W3_PIEP_MAX_0140", "W3_PIEP_PIX_0150", "W3_PIEP_MAX_0160",
+		"W3_PIEP_PIX_0090", "W3_PIEP_PIE_0100", _hologramm_an, "W3_PIEP_PIX_0110", "W3_PIEP_OPA_0120",
+		"W3_PIEP_OPA_0130", _hologramm_aus, "W3_PIEP_MAX_0140", "W3_PIEP_PIX_0150", "W3_PIEP_MAX_0160",
 		"W3_PIEP_PIE_0170", "W3_PIEP_PIX_0180", "W3_PIEP_KAL_0190"])
+	_hologramm_aus()
 	await _geben("morse_tabelle")  # in Max' Inventar, auch wenn er in der Kapsel liegt
 	await _szene(["W3_PIEP_PIX_0200", "W3_PIEP_KAL_0210"])
 	Zustand.loese("R13")
@@ -1480,8 +1525,10 @@ func gegenstand_hausmeister(_obj, iid) -> bool:
 			if _hat("olivenoel") and not Zustand.ist("W3_FREUND_0815") and _einmal("W3_OEL_WARNUNG"):
 				await _sag("W3_EING_PIX_0185")
 				return true
-			await _szene(["W3_EING_MAX_0190", "W3_EING_HAU_0200", "W3_EING_HAU_0210", "W3_EING_HAU_0220",
-				"W3_EING_PIX_0230"])
+			await _szene(["W3_EING_MAX_0190", "W3_EING_HAU_0200", "W3_EING_HAU_0210", _hausmeister_rollt_los,
+				"W3_EING_HAU_0220", "W3_EING_PIX_0230"])
+			while _hausmeister_rollt:
+				await Spiel.get_tree().process_frame
 			await _abgeben("telefonbuchseite")
 			_loese("R8", ["W3_FREUND_0815"])
 			_figuren_anwenden(R.current)
@@ -1548,10 +1595,11 @@ func benutzen_portalgeraet_in_der_halterung(_obj, _x) -> bool:
 func benutzen_inventar_portalgeraet(_obj, _x) -> bool:
 	if not _einmal("W3_PORTAL_BENUTZT"):
 		return false
-	await _szene(["W3_KAM1_NAR_0090", "W3_KAM1_OPA_0100", "W3_KAM1_POR_0110", "W3_KAM1_MAX_0120",
-		"W3_KAM1_PIX_0130", "W3_KAM1_MAX_0140", "W3_KAM1_MUT_0150"])
+	await _szene(["W3_KAM1_NAR_0090", _portal_auf, "W3_KAM1_OPA_0100", _portal_zu, "W3_KAM1_POR_0110",
+		"W3_KAM1_MAX_0120", "W3_KAM1_PIX_0130", "W3_KAM1_MAX_0140", "W3_KAM1_MUT_0150"])
+	_portal_weg()
 	if _einmal("W3_BERND_VORGESTELLT"):
-		await _szene(["W3_KAM1_MUT_0160", "W3_KAM1_BER_0170", "W3_KAM1_MUT_0180", "W3_KAM1_MAX_0190",
+		await _szene(["W3_KAM1_MUT_0160", _bernd_schwebt_heran, "W3_KAM1_BER_0170", "W3_KAM1_MUT_0180", "W3_KAM1_MAX_0190",
 			"W3_KAM1_PIX_0200"])
 	return true
 
@@ -1647,7 +1695,7 @@ func _paradoxon() -> void:
 				if _paradox_stufe == 2:
 					await _szene(["W3_KERN_MAX_0150", "W3_KERN_MUT_0160", "W3_KERN_MUT_0170",
 						"W3_KERN_MUT_0180", "W3_KERN_MAX_0190", "W3_KERN_MUT_0200", "W3_KERN_NAR_0210",
-						"W3_KERN_PIX_0220"])
+						_mutti_aus, "W3_KERN_PIX_0220"])
 					Zustand.loese("R10")
 					await _loesung_b()
 					return
@@ -1844,6 +1892,576 @@ func ansehen_inventar_telefonbuchseite(_obj, _x) -> bool:
 	await Spiel.nahansicht_zeigen("telefonbuchseite")
 	return false
 #endregion
+
+#region Bild-Pointen und Bewegungen (Review 20.11., AP-05) ############################################
+## Gebaute Bildfolgen und Varianten an ihre Ereignisse gehängt (W3-07, W3-10, W3-17, W3-R08-03, W3-R09-02,
+## W3-R12-01). Alles hier ist Darstellung: Im Testmodus und beim Überspringen (CQFigur.gesten_aus()) passiert
+## nichts außer dem Aufräumen, die Regeln bleiben, wie sie waren.
+const AMBIENTE := "res://grafik/ambiente/"
+var _aus_der_kapsel := false
+var _hologramm_laeuft := false
+var _klon_unterwegs := false
+var _hausmeister_rollt := false
+var _traum: Node2D = null
+var _traum_vorher := {}
+var _ente: Node2D = null
+var _portal: Sprite2D = null
+var _faecher: Sprite2D = null
+var _hologramm: Sprite2D = null
+var _hologramm_flackern: Tween = null
+
+
+## Figur sn auf eine Bildvariante setzen (leer = ihr normales Blatt), nur wenn sie im Raum steht.
+func _variante(sn: String, variante: String) -> void:
+	var c = C.get_character(sn)
+	if not c is CQFigur or not c.is_inside_tree():
+		return
+	var soll := variante if variante != c.objekt_id() else ""
+	if c.grafik_variante != soll:
+		c.grafik_laden(soll)
+
+
+## Bildfolge als Sprite in Props des Raums (nach baseline sortiert wie die Ambiente-Effekte), Fußpunkt unten
+## in der Mitte; baseline < 0: der Fußpunkt.
+func _bild_sprite(pfad: String, bilder: int, fuss: Vector2, baseline := -1.0, eltern: Node = null) -> Sprite2D:
+	var sp := Sprite2D.new()
+	sp.texture = load(pfad)
+	sp.hframes = maxi(1, bilder)
+	sp.centered = false
+	sp.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
+	var w := sp.texture.get_width() / float(sp.hframes)
+	var h := float(sp.texture.get_height())
+	var basis := baseline if baseline >= 0.0 else fuss.y
+	sp.position = Vector2(roundf(fuss.x), basis)
+	sp.offset = Vector2(-roundf(w / 2.0), roundf(fuss.y - basis) - h)
+	(eltern if eltern else R.current.get_node("Props")).add_child(sp)
+	return sp
+
+
+## Bilder von bis bis (einschließlich) einmal abspielen.
+func _bilder_spielen(sp: Sprite2D, von: int, bis: int, fps: float) -> void:
+	if not is_instance_valid(sp):
+		return
+	var t := sp.create_tween()
+	t.tween_method(func(f: float) -> void:
+		if is_instance_valid(sp):
+			sp.frame = clampi(int(f), von, bis), float(von), float(bis) + 0.999, (bis - von + 1) / fps)
+	await t.finished
+
+
+## Gemalte Bildfolge einmal im Raum. halten: das letzte Bild bleibt stehen (das Sprite kommt zurück).
+func _bildfolge(pfad: String, bilder: int, fuss: Vector2, fps := 9.0, baseline := -1.0, halten := false) -> Sprite2D:
+	if CQFigur.gesten_aus() or not is_instance_valid(R.current) or not R.current.has_node("Props") \
+			or not ResourceLoader.exists(pfad):
+		return null
+	var sp := _bild_sprite(pfad, bilder, fuss, baseline)
+	await _bilder_spielen(sp, 0, bilder - 1, fps)
+	if halten:
+		return sp
+	if is_instance_valid(sp):
+		sp.queue_free()
+	return null
+
+
+## Schleife (Hologramm, Hausmeister rollt): läuft, bis das Sprite weg ist.
+func _schleife(sp: Sprite2D, fps: float) -> void:
+	var t := sp.create_tween().set_loops()
+	t.tween_method(func(f: float) -> void:
+		if is_instance_valid(sp):
+			sp.frame = int(f) % sp.hframes, 0.0, float(sp.hframes) - 0.001, sp.hframes / fps)
+
+
+## Linke obere Ecke des sichtbaren Bildausschnitts in Raumkoordinaten (breite Räume scrollen).
+func _bild_ecke() -> Vector2:
+	return R.current.get_viewport().get_canvas_transform().affine_inverse() * Vector2.ZERO
+
+
+# --- Blaue Pastille: Opas Wohnzimmer als Traumbild, Pixel ohrfeigt Max wach (W3-07, SOFA 0480 bis 0560) ---
+const TRAUM_BILD := AMBIENTE + "w3_sofa_traum.png"
+const TRAUM_PIXEL := Vector2(40, 332)     # links vom Kopf auf dem Sofa (Bild 640×360)
+const TRAUM_PIXEL_SKALA := 1.8            # Max liegt dort in doppelter Größe
+
+
+func _sofa_traum_an() -> void:
+	if CQFigur.gesten_aus() or not ResourceLoader.exists(TRAUM_BILD) or is_instance_valid(_traum):
+		return
+	_traum = Node2D.new()
+	_traum.z_index = 100
+	_traum.position = _bild_ecke().round()
+	var bild := Sprite2D.new()
+	bild.texture = load(TRAUM_BILD)
+	bild.centered = false
+	bild.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
+	_traum.add_child(bild)
+	_traum.modulate.a = 0.0
+	R.current.add_child(_traum)   # Max bleibt stehen (sonst fährt die Kamera mit); seine Blasen kommen von dort
+	var t := _traum.create_tween()
+	t.tween_property(_traum, "modulate:a", 1.0, 0.8)   # „Bildschirm wird weich und warm“
+	await t.finished
+
+
+## Pixel springt von links ins Traumbild (die Ohrfeigen spielt die Tabelle ZEILE an 0520 und 0540).
+func _sofa_pixel_springt() -> void:
+	var px = C.get_character("Pixel")
+	if not is_instance_valid(_traum) or not px is CQFigur or not px.is_inside_tree():
+		return
+	_traum_vorher["pixel"] = [px.get_parent(), px.position, px.scale, px.z_index, px.scaling_region, px.default_scale]
+	px.reparent(_traum, false)
+	px.scaling_region = {}   # sonst setzt Popochiu die Größe aus der Tiefe der Gasse zurück
+	px.default_scale = Vector2.ONE * TRAUM_PIXEL_SKALA
+	px.scale = Vector2.ONE * TRAUM_PIXEL_SKALA
+	px.position = TRAUM_PIXEL + Vector2(-90, 8)
+	px.sync_buffered_position()
+	await px.springen_zu(TRAUM_PIXEL, 40.0, 0.45)
+	px.schauen_zu(px.global_position.x + 10.0)
+
+
+## „Bild flackert“ (nach 0550): das Traumbild flackert weg, zurück in der Gasse.
+func _sofa_traum_aus() -> void:
+	if is_instance_valid(_traum) and not CQFigur.gesten_aus():
+		var t := _traum.create_tween()
+		for a in [0.3, 1.0, 0.15, 0.8, 0.0]:
+			t.tween_property(_traum, "modulate:a", a, 0.09)
+		await t.finished
+	_sofa_traum_weg()
+
+
+func _sofa_traum_weg() -> void:
+	if _traum_vorher.has("pixel"):
+		var px = C.get_character("Pixel")
+		var v: Array = _traum_vorher["pixel"]
+		if is_instance_valid(px) and is_instance_valid(v[0]):
+			px.reparent(v[0], false)
+			px.position = v[1]
+			px.default_scale = v[5]
+			px.scaling_region = v[4]
+			px.scale = v[2]
+			px.z_index = v[3]
+			px.sync_buffered_position()
+			px.update_scale()
+	_traum_vorher.clear()
+	if is_instance_valid(_traum):
+		_traum.queue_free()
+	_traum = null
+
+
+# --- Fächer des Automaten öffnen sich (AUT_0130, W3-B33); ab R3a zeigt der Hintergrund sie offen ---
+func _faecher_auf() -> void:
+	_faecher = await _bildfolge(AMBIENTE + "w3_faecher_oeffnen_v02.png", 6, Vector2(641, 254), 8.0, 298.0, true)
+
+
+func _faecher_weg() -> void:
+	if not is_instance_valid(_faecher):
+		return
+	var sp := _faecher
+	_faecher = null
+	# erst nach dem Wechsel des Hintergrunds (CQRaum._process) weg, sonst blitzt das geschlossene Bild auf
+	for i in 3:
+		await Spiel.get_tree().process_frame
+	if is_instance_valid(sp):
+		sp.queue_free()
+
+
+# --- M.U.T.T.I. fährt herunter und bleibt aus (W3-R12-01): Geste an NAR_0210 (bleibt), danach die Variante ---
+func _mutti_aus() -> void:
+	_variante("Mutti", "mutti_aus")
+
+
+# --- Schmidt nimmt die Brille ab und behält sie ab (W3-R08-03) ---
+func _schmidt_ohne_brille() -> void:
+	_variante("Schmidt", "schmidt_ohne_brille")
+
+
+# --- Büro 50: Schmidt kopiert sich (TURM_SCH_0030, W3-B10), die Kopie geht an ihren Platz im Flur (W3-17) ---
+const KOPIE_FUSS := Vector2(336, 318)     # wie tools/grafik_w3/effekte_raum_v02.py
+## Tempo der Gänge der Nebenfiguren bei Größe 1; mal Größe, damit die Füße nicht rutschen (W3-17, AN-09)
+const GANG_TEMPO := {"Klon": 72.0, "Morphaeus": 80.0}
+
+
+func _gang_tempo(c: Node2D) -> float:
+	return float(GANG_TEMPO.get(c.script_name, 80.0)) * absf(c.scale.x)
+
+
+func _kopie_steigt_aus() -> void:
+	var raum: CQRaum = R.current
+	if raum.has_character("Klon"):
+		return
+	var ziel := raum.get_marker_position("Klon") if raum.has_marker("Klon") else Vector2(600, 282)
+	var sp := await _bildfolge(AMBIENTE + "w3_kopieren_v02.png", 8, Vector2(379, 320), 9.0, KOPIE_FUSS.y, true)
+	if sp == null:
+		Spiel.figur_hier("Klon", true, ziel)
+		return
+	Spiel.figur_hier("Klon", true, KOPIE_FUSS)
+	var k = C.get_character("Klon")
+	await Spiel.get_tree().process_frame   # Größe aus der Tiefe, dann erst das Bild der Folge weg
+	sp.queue_free()
+	if k is CQFigur:
+		k.laufen_zu(ziel, _gang_tempo(k))
+
+
+# --- Büro 50: „Mittagspause“, der Klon geht zur Treppe und steigt in die Decke (TURM_KLO_0400/0410, W3-17) ---
+const TREPPE_UNTEN := Vector2(1046, 302)
+const TREPPE_OBEN := Vector2(1112, 226)
+
+
+## „alle heben ein Bein mit rosa Hausschuh“: der Klon mit Schmidt (dessen Geste steht in der Tabelle ZEILE)
+func _klon_hausschuh() -> void:
+	var k = C.get_character("Klon")
+	if k is CQFigur and k.is_inside_tree():
+		k.geste("hausschuh", false)
+
+
+func _klon_geht_ab() -> void:
+	var k = C.get_character("Klon")
+	if CQFigur.gesten_aus() or not k is CQFigur or not k.is_inside_tree():
+		return
+	_klon_unterwegs = true
+	_klon_weg(k)
+
+
+func _klon_weg(k: CQFigur) -> void:
+	await k.laufen_zu(TREPPE_UNTEN, _gang_tempo(k))
+	if is_instance_valid(k) and k.is_inside_tree():
+		k.schauen_zu(TREPPE_OBEN.x)
+		if k.hat_animation("treppe"):
+			(k.get_node("AnimationPlayer") as AnimationPlayer).play("treppe")
+		var t := k.create_tween().set_parallel()
+		t.tween_property(k, "position", TREPPE_OBEN, 1.6)
+		t.tween_property(k, "modulate:a", 0.0, 1.6).set_ease(Tween.EASE_IN)
+		await t.finished
+		if is_instance_valid(k):
+			Spiel.figur_hier("Klon", false)
+			k.modulate.a = 1.0
+	_klon_unterwegs = false
+
+
+# --- Nudelbude: Morphäus wartet im Schatten an der Säule und tritt bei 0350 heraus (W3-17) ---
+const MOR_SCHATTEN := Vector2(356, 292)
+const MOR_VORN := Vector2(410, 302)
+
+
+func _morphaeus_im_schatten() -> void:
+	if CQFigur.gesten_aus() or R.current.has_character("Morphaeus"):
+		return
+	Spiel.figur_hier("Morphaeus", true, MOR_SCHATTEN)
+	var m = C.get_character("Morphaeus")
+	m.modulate.a = 0.35
+	m.clickable = false
+	if is_instance_valid(C.Max):
+		m.schauen_zu(C.Max.position.x)
+
+
+func _morphaeus_tritt_vor() -> void:
+	if CQFigur.gesten_aus():
+		return
+	if not R.current.has_character("Morphaeus"):
+		_morphaeus_im_schatten()
+	var m = C.get_character("Morphaeus")
+	if not m is CQFigur:
+		return
+	var t := m.create_tween()
+	t.tween_property(m, "modulate:a", 1.0, 1.0)
+	await m.laufen_zu(MOR_VORN, _gang_tempo(m))
+	m.clickable = true
+	if is_instance_valid(C.Max):
+		m.schauen_zu(C.Max.position.x)
+
+
+func _morphaeus_weg() -> void:
+	var m = C.get_character("Morphaeus")
+	if is_instance_valid(m) and R.current.has_character("Morphaeus") and not Zustand.geloest("R2"):
+		Spiel.figur_hier("Morphaeus", false)
+		m.modulate.a = 1.0
+		m.clickable = true
+
+
+# --- Laboreingang: Modell 08/15 rollt los, Richtung Straße (EING_HAU_0210/0220, W3-B30) ---
+const ROLLEN_ZIEL_X := -80.0
+
+
+func _hausmeister_rollt_los() -> void:
+	var h = C.get_character("Hausmeister")
+	if CQFigur.gesten_aus() or not h is CQFigur or not h.is_inside_tree():
+		return
+	_hausmeister_rollt = true
+	_rollen(h)
+
+
+func _rollen(h: CQFigur) -> void:
+	var sp := _bild_sprite(AMBIENTE + "w3_hausmeister_rollen.png", 6, h.position, h.position.y)
+	sp.scale = Vector2(absf(h.scale.x), h.scale.y)
+	sp.flip_h = true                      # das Bild schaut nach rechts, er rollt nach links hinaus
+	sp.modulate = h.modulate
+	_schleife(sp, 9.0)
+	h.get_node("Sprite2D").visible = false   # die Figur bleibt für die Blase (0220 im Abgehen)
+	var dauer := absf(h.position.x - ROLLEN_ZIEL_X) / 75.0
+	var t := h.create_tween()
+	t.tween_method(func(x: float) -> void:
+		if is_instance_valid(h):
+			h.position.x = x
+		if is_instance_valid(sp):
+			sp.position.x = roundf(x)
+			sp.modulate.a = clampf((x - ROLLEN_ZIEL_X) / 60.0, 0.0, 1.0), h.position.x, ROLLEN_ZIEL_X, dauer)
+	await t.finished
+	if is_instance_valid(sp):
+		sp.queue_free()
+	if is_instance_valid(h):
+		h.get_node("Sprite2D").visible = true
+	_hausmeister_rollt = false
+
+
+# --- Basis, R13: Piepsi spielt Opas Hologramm ab (PIEP_PIE_0100 bis OPA_0130, W3-07) ---
+func _hologramm_an() -> void:
+	var p = C.get_character("Piepsi")
+	if CQFigur.gesten_aus() or not is_instance_valid(p) or not p.is_inside_tree():
+		return
+	var oben: Vector2 = p.position + Vector2(0, -58.0 * absf(p.scale.y))   # Projektor oben auf Piepsi
+	_hologramm = _bild_sprite(AMBIENTE + "w3_hologramm.png", 6, oben + Vector2(0, 4), oben.y - 2.0)
+	_hologramm.modulate.a = 0.0
+	_schleife(_hologramm, 9.0)
+	var t := _hologramm.create_tween()
+	t.tween_property(_hologramm, "modulate:a", 0.75, 0.5)
+	await t.finished
+	_hologramm_laeuft = true
+	Spiel.figur_hier("Opa", true, oben)
+	var o = C.get_character("Opa")
+	if o is CQFigur:
+		o.grafik_laden("opa_hologramm")
+		o.clickable = false
+		_hologramm_flackern = o.create_tween().set_loops()   # blau, flackernd
+		for a in [0.85, 0.55, 0.8, 0.7]:
+			_hologramm_flackern.tween_property(o, "modulate:a", a, 0.12)
+
+
+func _hologramm_aus() -> void:
+	var o = C.get_character("Opa")
+	if _hologramm_flackern and _hologramm_flackern.is_valid():
+		_hologramm_flackern.kill()   # Opa ist eine Figur für alle Welten: sein Flackern darf nicht bleiben
+	_hologramm_flackern = null
+	if _hologramm_laeuft and is_instance_valid(o):
+		_hologramm_laeuft = false
+		Spiel.figur_hier("Opa", false)
+		o.grafik_laden("")
+		o.modulate.a = 1.0
+		o.clickable = true
+	_hologramm_laeuft = false
+	if is_instance_valid(_hologramm):
+		var sp := _hologramm
+		_hologramm = null
+		var t := sp.create_tween()
+		t.tween_property(sp, "modulate:a", 0.0, 0.3)   # „Aufnahme bricht ab, Rauschen“
+		t.tween_callback(sp.queue_free)
+
+
+# --- Kammer 1: Portal zu Opas Wohnzimmer, eine Sekunde (KAM1_NAR_0090 bis POR_0110, W3-B12) ---
+func _portal_auf() -> void:
+	if CQFigur.gesten_aus() or not is_instance_valid(C.Max):
+		return
+	var x: float = C.Max.position.x + (110.0 if C.Max.position.x < 320.0 else -110.0)
+	x = clampf(x, 215.0, 345.0)    # auf den Wandplatten
+	C.Max.schauen_zu(x)
+	_portal = _bild_sprite(AMBIENTE + "w3_portal.png", 8, Vector2(x, 262), 270.0)
+	_portal.frame = 0
+	await _bilder_spielen(_portal, 0, 3, 9.0)
+
+
+func _portal_zu() -> void:
+	if is_instance_valid(_portal):
+		_portal_schliessen(_portal)   # schließt sich während der Batteriewarnung
+	_portal = null
+
+
+func _portal_schliessen(sp: Sprite2D) -> void:
+	await _bilder_spielen(sp, 4, 7, 9.0)
+	if is_instance_valid(sp):
+		sp.queue_free()
+
+
+func _portal_weg() -> void:
+	if is_instance_valid(_portal):
+		_portal.queue_free()
+	_portal = null
+
+
+# --- Kammer 1: Bernd schwebt heran (KAM1_BER_0170) und nach dem Tausch beleidigt zur Decke (NAR_0460) ---
+func _bernd_schwebt_heran() -> void:
+	var b = C.get_character("Bernd")
+	if CQFigur.gesten_aus() or not b is CQFigur or not b.is_inside_tree() or not is_instance_valid(C.Max):
+		return
+	var richtung := signf(C.Max.position.x - b.position.x)
+	var ziel: Vector2 = b.position + Vector2(30.0 * richtung, 0)
+	b.schauen_zu(C.Max.position.x)
+	var t := b.create_tween()
+	t.tween_property(b, "position", ziel + Vector2(0, -6), 0.6).set_trans(Tween.TRANS_SINE)
+	t.tween_property(b, "position", ziel, 0.4).set_trans(Tween.TRANS_SINE)
+	await t.finished
+
+
+func _bernd_zur_decke() -> void:
+	var b = C.get_character("Bernd")
+	if CQFigur.gesten_aus() or not b is CQFigur or not b.is_inside_tree():
+		return
+	var t := b.create_tween().set_parallel()
+	t.tween_property(b, "position:y", b.position.y - 140.0, 2.2).set_trans(Tween.TRANS_SINE)
+	t.tween_property(b, "modulate:a", 0.0, 2.2).set_ease(Tween.EASE_IN)
+	t.chain().tween_callback(func() -> void:
+		if is_instance_valid(b) and R.current.has_character("Bernd") and Zustand.geloest("R9b"):
+			Spiel.figur_hier("Bernd", false)
+		b.modulate.a = 1.0)
+
+
+# --- Basis, R7b: falsches Kabel, drüben im Büroturm ist Max kurz eine Ente (TERM_MAX_0260, W3-B11/B45) ---
+## Bild im Bild oben rechts: Ausschnitt des Büros am Terminal, Max verwandelt sich mit dem Code-Glitch.
+const ENTE_AUSSCHNITT := Rect2(760, 140, 270, 190)
+const ENTE_FUSS := Vector2(110, 180)      # im Ausschnitt
+const ENTE_SKALA := 0.6
+
+
+func _figur_bild(id: String, anim: String) -> Dictionary:
+	var pfad := "res://daten/figuren/%s.json" % id
+	if not FileAccess.file_exists(pfad) or not ResourceLoader.exists("res://grafik/figuren/%s.png" % id):
+		return {}
+	var d: Dictionary = JSON.parse_string(FileAccess.get_file_as_string(pfad))
+	if not d.animationen.has(anim):
+		return {}
+	var a: Dictionary = d.animationen[anim]
+	var gesamt := 0
+	for e: Dictionary in d.animationen.values():
+		gesamt = maxi(gesamt, int(e.von) + int(e.bilder))
+	var folge: Array = a.get("folge", range(int(a.bilder)))
+	return {"tex": load("res://grafik/figuren/%s.png" % id), "spalten": int(d.get("spalten", gesamt)), "gesamt": gesamt,
+		"h": float(d.bild[1]), "bilder": folge.map(func(i): return int(a.von) + int(i)), "ms": float(a.ms)}
+
+
+func _figur_sprite(info: Dictionary, fuss: Vector2) -> Sprite2D:
+	var sp := Sprite2D.new()
+	sp.texture = info.tex
+	sp.hframes = info.spalten
+	sp.vframes = ceili(float(info.gesamt) / info.spalten)
+	sp.frame = info.bilder[0]
+	sp.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
+	sp.offset = Vector2(0, -info.h / 2.0)
+	sp.position = fuss
+	return sp
+
+
+func _ente_an() -> void:
+	if CQFigur.gesten_aus() or is_instance_valid(_ente) or not is_instance_valid(R.current):
+		return
+	var mensch := _figur_bild("max", "idle")
+	var ente := _figur_bild("max_ente", "watscheln")
+	var buero := "res://grafik/hintergruende/w3_bg_buero_50_v02.png"
+	if mensch.is_empty() or ente.is_empty() or not ResourceLoader.exists(buero):
+		return
+	_ente = Node2D.new()
+	_ente.z_index = 100
+	_ente.position = _bild_ecke().round() + Vector2(640 - 18 - ENTE_AUSSCHNITT.size.x * ENTE_SKALA, 58)   # unter der Pfote oben rechts
+	_ente.scale = Vector2.ONE * ENTE_SKALA
+	var rahmen := ColorRect.new()
+	rahmen.color = Color("63c74d")
+	rahmen.position = Vector2(-4, -4) / ENTE_SKALA
+	rahmen.size = ENTE_AUSSCHNITT.size + Vector2(8, 8) / ENTE_SKALA
+	_ente.add_child(rahmen)
+	var bild := Sprite2D.new()
+	bild.texture = load(buero)
+	bild.region_enabled = true
+	bild.region_rect = ENTE_AUSSCHNITT
+	bild.centered = false
+	bild.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
+	_ente.add_child(bild)
+	var m := _figur_sprite(mensch, ENTE_FUSS)
+	m.name = "Mensch"
+	m.scale = Vector2.ONE * 0.85      # Größe im Büro vorn
+	_ente.add_child(m)
+	var e := _figur_sprite(ente, ENTE_FUSS)
+	e.name = "Ente"
+	e.scale = Vector2.ONE * 0.85
+	e.visible = false
+	_ente.add_child(e)
+	_ente.modulate.a = 0.0
+	R.current.add_child(_ente)
+	var t := _ente.create_tween()
+	t.tween_property(_ente, "modulate:a", 1.0, 0.25)
+	await t.finished
+	await _ente_glitch(true)
+	# watscheln, solange das Bild steht
+	var schritte: Array = ente.bilder
+	var w := e.create_tween().set_loops()
+	w.tween_method(func(f: float) -> void:
+		if is_instance_valid(e):
+			e.frame = schritte[int(f) % schritte.size()], 0.0, float(schritte.size()) - 0.001, schritte.size() * ente.ms / 1000.0)
+
+
+## Grüner Code-Glitch über der Figur (W3-B45 in Max' Größe, zurück W3-B11 in Entengröße); in der Mitte wechselt
+## Mensch und Ente.
+func _ente_glitch(zur_ente: bool) -> void:
+	if not is_instance_valid(_ente):
+		return
+	var pfad := AMBIENTE + ("w3_verwandlung_figur.png" if zur_ente else "w3_verwandlung.png")
+	var g := _bild_sprite(pfad, 6, ENTE_FUSS + Vector2(0, 4 if zur_ente else -10), -1.0, _ente)
+	g.scale = Vector2.ONE * (0.85 if zur_ente else 1.2)
+	var t := g.create_tween()
+	t.tween_method(func(f: float) -> void:
+		if not is_instance_valid(g) or not is_instance_valid(_ente):
+			return
+		g.frame = clampi(int(f), 0, 5)
+		if int(f) >= 3:
+			_ente.get_node("Ente").visible = zur_ente
+			_ente.get_node("Mensch").visible = not zur_ente, 0.0, 5.999, 6 * 0.07)
+	await t.finished
+	if is_instance_valid(g):
+		g.queue_free()
+
+
+func _ente_zurueck() -> void:
+	await _ente_glitch(false)
+
+
+func _ente_aus() -> void:
+	if not is_instance_valid(_ente):
+		_ente = null
+		return
+	var e := _ente
+	_ente = null
+	var t := e.create_tween()
+	t.tween_property(e, "modulate:a", 0.0, 0.25)
+	t.tween_callback(e.queue_free)
+
+
+# --- Kapsel (W3-10): aussteigen beim Aufwachen, einsteigen vor dem Ebenenwechsel ---
+## Die Bildfolgen „kapsel_aufstehen“ und „kapsel_hinlegen“ zeigen die Kapsel der ersten Fassung (seitlich);
+## zu den Kapseln der zweiten Hintergründe passen nur die freien Bewegungen aussteigen und einsteigen.
+const KAPSEL_FUSS := Vector2(277, 316)
+
+
+func _kapsel_aussteigen() -> void:
+	_aus_der_kapsel = false
+	var mx = C.Max
+	if not is_instance_valid(mx):
+		return
+	if CQFigur.gesten_aus() or not mx.hat_animation("kapsel_aussteigen"):
+		mx.modulate.a = 1.0
+		return
+	mx.schauen_zu(mx.position.x + 10.0)
+	mx.geste("kapsel_aussteigen", false)
+	mx.modulate.a = 1.0
+	await mx.get_tree().create_timer(0.85).timeout
+
+
+func _kapsel_einsteigen() -> void:
+	var mx = C.Max
+	if CQFigur.gesten_aus() or not is_instance_valid(mx) or not mx.hat_animation("kapsel_einsteigen"):
+		return
+	if mx.position.distance_to(KAPSEL_FUSS) > 6.0:
+		await mx.walk_to(KAPSEL_FUSS)
+	mx.schauen_zu(mx.position.x + 10.0)
+	await mx.geste("kapsel_einsteigen", true, CQFigur.GESTE_HALTEN)
+	var t := mx.create_tween()
+	t.tween_property(mx, "modulate:a", 0.0, 0.3)
+	await t.finished
+	mx.geste_ende()   # unsichtbar bis zum nächsten Raum (_figuren_anwenden macht ihn wieder sichtbar)
+#endregion
+
 
 #region Hilfe-Pfote ################################################################################
 ## Ortsbezogene Auswahl (Review 20.11., W3-04): 0 = Schritt im Raum der aktiven Figur, 1 = auf ihrer

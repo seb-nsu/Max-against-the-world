@@ -25,6 +25,7 @@ VARIANTEN = {
     "pixel": ["pixel_ziege"],
     "max": ["max_pilz"],
     "faecherwedler": ["faecherwedler_gelb"],
+    "opa": ["opa_hologramm"],   # Welt 3: Hologramm aus Piepsi (welt_3.gd)
 }
 TABELLEN = {
     "gesten_einsatz.gd": ["prolog", "finale", "welt-1", "welt-2", "welt-3", "welt-4"],

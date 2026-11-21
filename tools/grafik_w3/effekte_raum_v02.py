@@ -7,9 +7,13 @@ sich zwischen den Bildern ändert (wie effekte_einbau.py), alles andere ist durc
 Ausgabe: game/grafik/ambiente/w3_<name>_v02.png (Bilder nebeneinander) und eine Zeile je Effekt mit Fußpunkt (pos,
 unten in der Mitte) und Bildzahl für tools/layout/welt-3.yaml. Ohne Bild-KI.
 
-Aufruf: py -3 tools/grafik_w3/effekte_raum_v02.py [<stand-ordner mit klon.png>]
-        (Standard E:/Game Engine/Grafiken/assets/welt3/stand, nur für die Klone hinter dem Fenster im Büro)
+AP-05 (21.11.): dazu die sechs Effekte, die bis dahin Ausschnitte der ersten Räume waren (Fächer, Küchenradio,
+Lautsprecher der drei Testkammern, Tür in Kammer 3, Kopieren) und das Traumbild der blauen Pastille (w3_sofa_traum).
+
+Aufruf: py -3 tools/grafik_w3/effekte_raum_v02.py [<stand-ordner mit klon.png und max_sofa_handy.png>]
+        (Standard E:/Game Engine/Grafiken/assets/welt3/stand: Klone hinter dem Fenster im Büro, Sofa-Standbild)
 """
+import json
 import math
 import random
 import sys
@@ -346,12 +350,224 @@ def kern():
     speichern("kern_kabel_puls", bilder, x0, y0, 8)
 
 
+# --- AP-05 (21.11.): sechs Effekte, die bis dahin Ausschnitte der ersten Hintergründe waren -------------------------
+ORANGE = np.array([0xf7, 0x76, 0x22])
+GRUEN, GRUEN_HELL = np.array([0x63, 0xc7, 0x4d]), np.array([0xb6, 0xff, 0x9a])
+
+
+def tonen(b, maske, farbe, anteil):
+    """Pixel unter der Maske zur Farbe hin mischen (Licht auf hellem und dunklem Grund)."""
+    if anteil > 0:
+        b[maske, :3] = np.clip(b[maske, :3] * (1 - anteil) + np.asarray(farbe) * anteil, 0, 255).astype(np.uint8)
+
+
+def wellen(b, cx, cy, rx, ry, stufe, farbe, seiten=("l", "r")):
+    """Schallbögen neben einem Lautsprecher: kurze Kreisbögen außerhalb des Rands, je Stufe einer mehr."""
+    h, w = b.shape[:2]
+    for k in range(stufe):
+        d = 3 + 3 * k
+        for t in np.linspace(-0.6, 0.6, 9):
+            for seite in seiten:
+                sx = -1 if seite == "l" else 1
+                x = int(round(cx + sx * (rx + d) * math.cos(t)))
+                y = int(round(cy + (ry + d) * math.sin(t)))
+                if 0 <= x < w and 0 <= y < h:
+                    b[y, x, :3] = farbe
+
+
+# Apothekengasse: Linse leuchtet grün auf, dann klappen beide Fächer von oben nach unten auf (W3-B33, AUT_0130).
+# Das letzte Bild ist die Fassung „faecher_offen“, die ab R3a als Hintergrund gilt.
+def faecher_oeffnen():
+    zu = raum("apothekengasse")
+    offen = np.asarray(Image.open(HG / "w3_bg_apothekengasse_faecher_offen_v02.png").convert("RGBA"))
+    x0, y0, W, H = 572, 112, 138, 142
+    a, o = zu[y0:y0 + H, x0:x0 + W].copy(), offen[y0:y0 + H, x0:x0 + W].copy()
+    yy, xx = np.mgrid[0:H, 0:W]
+    linse = (np.hypot(yy - (149 - y0), xx - (640 - x0)) <= 27) & (a[..., :3].astype(int).sum(-1) < 330)
+    anders = (a[..., :3].astype(int) != o[..., :3].astype(int)).any(-1)
+    ys = np.nonzero(anders.any(1))[0]
+    oben, unten = int(ys.min()), int(ys.max()) + 1
+
+    def bild(glanz, anteil):
+        b = a.copy()
+        if anteil > 0:
+            grenze = oben + int(round((unten - oben) * anteil))
+            b[oben:grenze] = o[oben:grenze]
+        tonen(b, linse, GRUEN, glanz)
+        return b
+    bilder = [bild(0.3, 0), bild(0.55, 0), bild(0.55, 0.34), bild(0.4, 0.67), bild(0.2, 1.0), o.copy()]
+    speichern("faecher_oeffnen", bilder, x0, y0, 8)
+
+
+# Küche: Pixel (oder die Nachrichten) aus dem Küchenradio: Gitter glimmt im Takt, zittert, Schallbögen (W3-B38).
+# Die Fassung mit Scherben (ab R4) hat am Regal andere Farbwerte, darum ein eigener Streifen.
+def kuechenradio(fassung=""):
+    r = raum("kueche_orakel" + fassung)
+    x0, y0, W, H = 412, 104, 40, 40
+    g = r[y0:y0 + H, x0:x0 + W]
+    yy, xx = np.mgrid[0:H, 0:W]
+    cx, cy = 426 - x0, 132 - y0
+    e = ((xx - cx) / 6.0) ** 2 + ((yy - cy) / 7.0) ** 2
+    innen = e <= 0.85
+    bilder = []
+    for stufe, dx in ((0, 0), (2, 1), (1, 0), (2, -1)):
+        b = g.copy()
+        if dx:
+            b[innen] = np.roll(g, dx, axis=1)[innen]   # das Gitter zittert, der Kasten bleibt
+        tonen(b, innen, ORANGE, (0, 0.3, 0.55)[stufe])
+        bilder.append(b)
+    speichern("kuechenradio" + ("_r4" if fassung else ""), bilder, x0, y0, 8)
+
+
+# Testkammern: M.U.T.T.I. oder Pixel spricht aus dem Lautsprecher: Gitter leuchtet orange im Takt, Schallbögen
+# daneben auf der Wand (W3-B41 bis B43)
+def lautsprecher(raumname, name, cx, cy, rx, ry, innen_r, seiten=("l", "r"), farbe=(0x7c, 0x84, 0x9c)):
+    r = raum(raumname)
+    rand = 12
+    x0, y0 = cx - rx - rand, max(0, cy - ry - rand)
+    W, H = 2 * (rx + rand) + 1, (cy + ry + rand + 1) - y0
+    g = r[y0:y0 + H, x0:x0 + W]
+    yy, xx = np.mgrid[0:H, 0:W]
+    innen = ((xx - (cx - x0)) / innen_r[0]) ** 2 + ((yy - (cy - y0)) / innen_r[1]) ** 2 <= 1.0
+    bilder = []
+    for stufe in (0, 2, 1, 2):
+        b = g.copy()
+        tonen(b, innen, ORANGE, (0, 0.3, 0.55)[stufe])
+        wellen(b, cx - x0, cy - y0, rx, ry, stufe, farbe, seiten)
+        bilder.append(b)
+    speichern(name, bilder, x0, y0, 8)
+
+
+# Testkammer 3: Die Tür redet (nach dem Tausch mit dem Lautsprecher): das Schlüsselloch im Schloss-Symbol leuchtet
+# grün und geht beim Sprechen auf und zu wie ein Mund (W3-B44)
+def tuer_kammer3_redet():
+    r = raum("testkammer_3")
+    x0, y0, W, H = 452, 160, 42, 56
+    g = r[y0:y0 + H, x0:x0 + W]
+    c = g[..., :3].astype(int)
+    feld = np.zeros(c.shape[:2], bool)
+    feld[189 - y0:205 - y0, 467 - x0:479 - x0] = True
+    schloss = c[200 - y0, 460 - x0]               # Farbe des Schlosskörpers
+    naht = c.sum(-1) < 150                          # die dunkle Fuge zwischen den Türhälften bleibt
+    loch = feld & (np.abs(c - schloss).sum(-1) > 30) & ~naht
+    gross = loch.copy()
+    gross[1:] |= loch[:-1]; gross[:-1] |= loch[1:]; gross[:, 1:] |= loch[:, :-1]; gross[:, :-1] |= loch[:, 1:]
+    gross &= feld & ~naht
+    bilder = []
+    for stufe in (1, 2, 1, 2, 0):
+        b = g.copy()
+        if stufe == 2:
+            b[gross, :3] = GRUEN
+            b[loch, :3] = GRUEN_HELL
+        elif stufe == 1:
+            b[loch, :3] = GRUEN
+        bilder.append(b)
+    speichern("tuer_kammer3_redet", bilder, x0, y0, 8)
+
+
+# Büro 50: Schmidt legt die Hand auf den Kopierer, Blitz unter dem Deckel, ein Blatt gleitet aus der Ablage auf den
+# Boden und richtet sich als Kopie auf (W3-B10, W3_TURM_SCH_0030). Das letzte Bild ist der Klon in Spielgröße an seinem Fußpunkt
+# KOPIE_FUSS; danach übernimmt die Figur Klon (welt_3.gd, gleiche Stelle).
+KOPIE_FUSS = (336, 318)
+
+
+def kopieren():
+    r = raum("buero_50")
+    x0, y0, W, H = 286, 120, 186, 200
+    g = r[y0:y0 + H, x0:x0 + W]
+    d = json.load(open(WURZEL / "game/daten/figuren/klon.json", encoding="utf-8"))
+    zw, zh = d["bild"]
+    zelle = np.asarray(Image.open(WURZEL / "game/grafik/figuren/klon.png").convert("RGBA"))[:zh, :zw]
+    # Größe wie im Spiel: Tiefe des Büros (0,39 ab y 200, 1,0 an der Unterkante des Laufbereichs y 356)
+    skala = 0.39 + (KOPIE_FUSS[1] - 200) / (356 - 200) * (1 - 0.39)
+    kw, kh = max(1, round(zw * skala)), max(1, round(zh * skala))
+    klon = np.asarray(Image.fromarray(zelle).resize((kw, kh), Image.NEAREST))
+    ys, xs = np.nonzero(klon[..., 3] > 0)
+    klon = klon[ys.min():ys.max() + 1, xs.min():xs.max() + 1]
+    links = KOPIE_FUSS[0] - kw // 2 + xs.min() - x0       # Umriss liegt wie bei der Figur
+    unten_voll = KOPIE_FUSS[1] - kh + ys.max() + 1 - y0
+    ablage = 236 - y0                                       # linke Ablage des Kopierers
+    glas = (393 - x0, 452 - x0, 213 - y0)
+
+    def blitz(b, staerke):
+        hell = 255 if staerke == 2 else 210
+        b[glas[2]:glas[2] + 3, glas[0]:glas[1], :3] = (hell, hell, 0xf0)
+        if staerke == 2:
+            m = np.zeros(b.shape[:2], bool)
+            m[glas[2] - 9:glas[2], glas[0] - 4:glas[1] + 4] = True
+            tonen(b, m, (0xff, 0xff, 0xf4), 0.55)
+
+    def blatt_legen(b, y, breite, mx):
+        # das kopierte Blatt, flach (2 px hoch)
+        b[y - 2:y, mx - breite // 2:mx + breite // 2, :3] = (0xf4, 0xf4, 0xf4)
+        b[y, mx - breite // 2:mx + breite // 2, :3] = (0xc0, 0xcb, 0xdc)
+
+    def kopie(b, anteil):
+        # richtet sich vom Boden aus auf: Füße bleiben am Fußpunkt, die Höhe wächst
+        h = max(2, int(round(klon.shape[0] * anteil)))
+        k = np.asarray(Image.fromarray(klon).resize((klon.shape[1], h), Image.NEAREST))
+        ky, kx = np.nonzero(k[..., 3] > 0)
+        yy, xx = unten_voll - h + ky, links + kx
+        ok = (yy >= 0) & (yy < H) & (xx >= 0) & (xx < W)
+        b[yy[ok], xx[ok]] = k[ky[ok], kx[ok]]
+
+    bilder = []
+    for st, schritt in ((1, ""), (2, ""), (1, "ablage"), (0, "boden"), (0, 0.3), (0, 0.65), (0, 1.0), (0, 1.0)):
+        b = g.copy()
+        if st:
+            blitz(b, st)
+        if schritt == "ablage":
+            blatt_legen(b, ablage, 20, 364 - x0)
+        elif schritt == "boden":
+            blatt_legen(b, unten_voll, 26, links + klon.shape[1] // 2)
+        elif schritt:
+            kopie(b, schritt)
+        bilder.append(b)
+    speichern("kopieren", bilder, x0, y0, 9)
+
+
+# Opas Wohnzimmer als Traumbild (blaue Pastille, W3_SOFA_NAR_0480 „Wohnzimmer aus dem Prolog mit weichem Filter“):
+# Prolog-Wohnzimmer weich und warm, davor Max mit Handy auf dem Sofa (Standbild max_sofa_handy, doppelte Größe).
+# Ein Bild 640×360; welt_3.gd blendet es über die Gasse.
+SOFA_LAGE = (30, 172)
+
+
+def sofa_traum(sofa_png):
+    from PIL import ImageFilter
+    bg = Image.open(WURZEL / "game/grafik/hintergruende/w0_bg_wohnzimmer_v03.png").convert("RGB")
+    bg = bg.filter(ImageFilter.GaussianBlur(2.2))
+    a = np.asarray(bg).astype(float)
+    a = a * 0.82 + np.array([255, 196, 140]) * 0.18                 # warm
+    yy, xx = np.mgrid[0:360, 0:640]
+    rand = np.clip(np.hypot((xx - 320) / 360.0, (yy - 180) / 230.0) - 0.55, 0, 1)
+    a = a * (1 - 0.55 * rand[..., None])                             # Vignette
+    bild = Image.fromarray(a.astype(np.uint8)).convert("RGBA")
+    sofa = Image.open(sofa_png).convert("RGBA")
+    sofa = sofa.resize((sofa.width * 2, sofa.height * 2), Image.NEAREST)
+    bild.alpha_composite(sofa, SOFA_LAGE)
+    bild.save(AUS / "w3_sofa_traum.png")
+    print("sofa_traum: res://grafik/ambiente/w3_sofa_traum.png 640x360, Sofa bei", SOFA_LAGE, "Größe", sofa.size)
+
+
+def ap05(sofa_png):
+    faecher_oeffnen(); kuechenradio(); kuechenradio("_scherben")
+    lautsprecher("testkammer_1", "lautsprecher_kammer1", 320, 26, 14, 6, (11, 4))
+    lautsprecher("testkammer_2", "lautsprecher_kammer2", 320, 90, 20, 20, (16, 16))
+    lautsprecher("testkammer_3", "lautsprecher_kammer3", 344, 166, 47, 47, (42, 42))
+    tuer_kammer3_redet(); kopieren()
+    if Path(sofa_png).exists():
+        sofa_traum(sofa_png)
+    else:
+        print("Sofa-Standbild fehlt:", sofa_png)
+
+
 def main():
     automat_scannt(); grossrechner(); ventilator(); kartenleser()
     wecker("w3_nachttisch_v02.png", (150, 262), (171, 267), "")
     wecker("w3_nachttisch_nacht_v02.png", (152, 262), (173, 268), "_nacht")
     sprechanlage("stadtstrasse", 1023, 180, ""); sprechanlage("stadtstrasse_nacht", 1026, 180, "_nacht")
     eieruhr(); kuckucksuhr(); terminal(); kopierer(); klone_tippen(); kern()
+    ap05(STAND / "max_sofa_handy.png")
 
 
 if __name__ == "__main__":

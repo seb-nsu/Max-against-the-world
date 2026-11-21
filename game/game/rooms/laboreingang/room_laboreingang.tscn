@@ -28,7 +28,6 @@ height = 360
 [node name="WalkableAreas" type="Node2D" parent="." unique_id=1740347346]
 
 [node name="Boden" parent="WalkableAreas" unique_id=1766857655 instance=ExtResource("2_bwodm")]
-interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(30, 300, 120, 290, 560, 292, 610, 320, 620, 356, 10, 356)])
 
 [node name="Props" type="Node2D" parent="." unique_id=1488443493]
 
@@ -61,11 +60,11 @@ walk_to_point = Vector2(-0.5, 117)
 interaction_polygon = PackedVector2Array(-62.5, -70, 62.5, -70, 62.5, 70, -62.5, 70)
 
 [node name="Wischeimer" parent="Hotspots" unique_id=1759888675 instance=ExtResource("8_n14v0")]
-position = Vector2(178, 278)
+position = Vector2(194, 277)
 description = "UI_OBJ_WISCHEIMER"
-baseline = 26
-walk_to_point = Vector2(8, 48)
-interaction_polygon = PackedVector2Array(-40, -26, 40, -26, 40, 26, -40, 26)
+baseline = 27
+walk_to_point = Vector2(-8, 49)
+interaction_polygon = PackedVector2Array(-26, -27, 26, -27, 26, 27, -26, 27)
 
 [node name="Pinnwand" parent="Hotspots" unique_id=1399196427 instance=ExtResource("9_74uuq")]
 position = Vector2(204, 149)

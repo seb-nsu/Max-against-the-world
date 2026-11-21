@@ -8,8 +8,9 @@ Quelle ist der Übergabeordner von Sebastians PC (Branch claude/welt3-transfer, 
 1. Grundblatt je Welt-3-Figur: idle und talk aus reden_ruhe (sonst das Standbild als einziges Bild).
 2. Gesten dazu wie in tools/gesten_einbau.py: gleiche Bilder nur einmal (Reihenfolge in „folge“), jede
    Geste so verschoben, dass ihr bestpassendes Bild auf dem ersten Idle-Bild liegt (Umriss-Überdeckung).
-   „gehen“ wird walk, „reden“/„sprechen“ wird talk (das alte heißt talk_alt). Max und Pixel behalten ihr
-   Blatt, die Welt-3-Gesten kommen dazu.
+   „gehen“ wird walk, „reden“/„sprechen“ wird talk; hat die Figur schon eine Mund-Schleife aus reden_ruhe, bleibt
+   die talk und die Armgeste heißt rede_geste (Review 20.11., W3-09; vorher wurde die Mund-Schleife zu talk_alt und
+   jeder Satz bekam dieselbe Armbewegung). Max und Pixel behalten ihr Blatt, die Welt-3-Gesten kommen dazu.
 Ausgabe: game/grafik/figuren/<id>.png und game/daten/figuren/<id>.json (Format wie tools/figur.py paket).
 
 Aufruf: python3 tools/grafik_w3/figuren_einbau.py <transfer/welt3> [figur …]
@@ -57,6 +58,9 @@ UMBENENNEN = {"gehen": "walk", "reden": "talk", "sprechen": "talk"}
 AUSLASSEN_ENDUNG = ("_bogen", "_maxgang")
 # Gangarten stehen auf der Fußlinie und mittig, statt nach Umriss ausgerichtet (Umriss passt beim Kriechen nicht)
 GAENGE = {"walk", "kriechen", "hexenschuss_gehen", "watscheln"}
+# Bilddauer, die von der Quelle abweicht: Max hinkt mit kürzeren Bildern und eigenem Tempo (walk_speed in
+# welt_3.gd _max_gang), sonst rutschen die Füße (Review 20.11., W3-R08-04)
+MS = {("max", "hexenschuss_gehen"): 85}
 # Gänge in Originalgröße: Pixels Trab (pixel_trab.py) ist wegen des hochgestellten Schwanzes höher als der sitzende Stand
 NICHT_SKALIEREN = {("pixel", "walk")}
 
@@ -65,6 +69,30 @@ def streifen(pfad, n):
     st = np.array(Image.open(pfad).convert("RGBA"))
     w = st.shape[1] // n
     return [st[:, i * w:(i + 1) * w] for i in range(n)]
+
+
+# Gehaltene Zielposen in Gesten höchstens etwa 0,6 s (Review 20.11., W3-18: 47 „vor“-Gesten hielten die Szenen
+# zusammen 138 s an). Nur Haltezeiten zwischen Anfang und Ende; Warte-Gesten (Kulisse) und Zeitlupe behalten ihre.
+HALTEN_MS = 600
+HALTEN_AUSNAHMEN = {"haende_falten", "tippen", "umsehen", "warten", "beleidigt", "vier_finger", "zeitlupe"}
+
+
+def halten_kuerzen(name, folge, ms):
+    if name in HALTEN_AUSNAHMEN or name.startswith("kapsel_") or len(folge) < 3:
+        return folge
+    hoechstens = max(1, round(HALTEN_MS / ms))
+    laeufe = []
+    for i in folge:
+        if laeufe and laeufe[-1][0] == i:
+            laeufe[-1][1] += 1
+        else:
+            laeufe.append([i, 1])
+    aus = []
+    for k, (i, n) in enumerate(laeufe):
+        if 0 < k < len(laeufe) - 1:
+            n = min(n, hoechstens)
+        aus += [i] * n
+    return aus
 
 
 def einmalig(bilder):
@@ -181,8 +209,8 @@ def erstes_bild_pruefen(fig, blatt, info, namen):
     fuss = int(zeilen(stand).max())
     fehler = []
     for name, e in info.items():
-        if name == "idle" or name in GAENGE or name not in namen:
-            continue
+        if name == "idle" or name in GAENGE or name not in namen or name.startswith("kapsel_"):
+            continue   # Kapsel-Bewegungen beginnen liegend in der Kapsel
         b = blatt[e["von"] + (e.get("folge") or [0])[0]]
         if np.array_equal(b, stand):
             continue
@@ -199,6 +227,9 @@ def erstes_bild_pruefen(fig, blatt, info, namen):
 
 
 def zusammensetzen(fig, W, H, anims, neue, bericht):
+    if fig in GRUNDBLATT and any(a[0] == "talk" for a in anims):
+        # Mund-Schleife aus reden_ruhe behalten, die Armgeste aus dem Posenbogen wird rede_geste (W3-09)
+        neue = [("rede_geste" if n == "talk" else n, j) for n, j in neue]
     namen = {n for n, _ in neue}
     if "talk" in namen:
         for a in anims:
@@ -233,7 +264,9 @@ def zusammensetzen(fig, W, H, anims, neue, bericht):
             s, bx, by = beste_lage(idle, einzig)
         bericht.append(f"{fig}/{name}: Überdeckung mit Idle {s:.2f}")
         schleife = bool(info.get("schleife", name == "walk"))
-        anims.append([name, [(bx, by, e) for e in einzig], int(info["ms"]), schleife,
+        if not schleife and name not in GAENGE:
+            folge = halten_kuerzen(name, folge, MS.get((fig, name), int(info["ms"])))
+        anims.append([name, [(bx, by, e) for e in einzig], MS.get((fig, name), int(info["ms"])), schleife,
                       folge if folge != list(range(len(einzig))) else None])
     # neue Zellgröße: Fußpunkt (unten, Mitte von W) bleibt; links und rechts gleich viel Rand
     links = max([0] + [-x for _, bs, *_ in anims for x, y, b in bs])

@@ -202,7 +202,7 @@ laboreingang:
     warnstreifen: {rect: [120, 276, 440, 18], gehe: [400, 318]}
     kartenleser: {rect: [420, 156, 28, 38], gehe: [432, 312]}
     platz_des_hausmeisters: {rect: [208, 282, 60, 30], gehe: [285, 320], boden: true}   # neben dem Hausmeister (236), W3-14
-    wischeimer: {rect: [138, 252, 80, 52], gehe: [186, 326]}
+    wischeimer: {rect: [168, 250, 52, 54], gehe: [186, 326]}   # nur der Eimer, Mopp an der Wand entfernt
   ausgaenge:
     unterstadt_strasse: {rect: [14, 62, 116, 218], gehe: [80, 304]}
 stadtstrasse:
@@ -233,6 +233,9 @@ stadtstrasse:
     - {art: bild, bild: res://grafik/ambiente/w3_passant_gehen.png, bilder: 8, weg: [[1030, 256], [-30, 256]], tempo: 30, fps: 10, skala: 0.62, start: 6.0, pause: [14, 14]}
     - {art: bild, bild: res://grafik/ambiente/w3_passant_gehen.png, bilder: 8, weg: [[1080, 256], [20, 256]], tempo: 30, fps: 10, skala: 0.62, start: 6.0, pause: [14, 14]}
     - {art: bild, bild: res://grafik/ambiente/w3_vogelschwarm.png, bilder: 6, weg: [[-70, 70], [640, 46], [1350, 70]], tempo: 120, fps: 10, start: 3.0, pause: [0.2, 0.2]}   # W3-B26 immer dieselbe Bahn, alle 12 s
+    # W3-B14 Schnee in der Simulation, solange Pixel das Fenster über der Kapsel offen hat (AP-05, W3-07)
+    - {art: bild, bild: res://grafik/ambiente/w3_schnee.png, bilder: 4, pos: [320, 360], fps: 5, z: 50, wenn: W3_SCHNEE}
+    - {art: bild, bild: res://grafik/ambiente/w3_schnee.png, bilder: 4, pos: [960, 360], fps: 5, z: 50, wenn: W3_SCHNEE}
   vordergrund:
     nachttisch: {bild: res://grafik/props/w3_nachttisch_v02.png, rect: [150, 262, 81, 78], baseline: 340, vor: W3_NACHT}   # AP-09: eigenes Teil, Max geht dahinter
     nachttisch_nacht: {bild: res://grafik/props/w3_nachttisch_nacht_v02.png, rect: [152, 262, 81, 79], baseline: 341, nach: W3_NACHT}
@@ -297,6 +300,11 @@ kueche_orakel:
     - {art: flackern, pos: [138, 243], r: [24, 18], farbe: "#ffb347"}   # warmes Licht im Ofenfenster
     - {art: bild, bild: res://grafik/ambiente/w3_eieruhr_v02.png, bilder: 4, pos: [439, 202], fps: 4}   # W3-B27 Eieruhr
     - {art: bild, bild: res://grafik/ambiente/w3_kuckucksuhr_v02.png, bilder: 8, pos: [212, 126], fps: 7, ablauf: einmalig, ruhe_sichtbar: true, pause: [25, 50]}   # W3-B39 Kuckucksuhr
+    # W3-B38 Küchenradio spricht (Nachrichten RAD, Pixel auf der Leitung PIX); ab R4 aus dem Bild mit Scherben (AP-05)
+    - {art: bild, bild: res://grafik/ambiente/w3_kuechenradio_v02.png, bilder: 4, pos: [432, 144], fps: 8, spricht: RAD, sonst: R4}
+    - {art: bild, bild: res://grafik/ambiente/w3_kuechenradio_v02.png, bilder: 4, pos: [432, 144], fps: 8, spricht: PIX, sonst: R4}
+    - {art: bild, bild: res://grafik/ambiente/w3_kuechenradio_r4_v02.png, bilder: 4, pos: [432, 144], fps: 8, spricht: RAD, wenn: R4}
+    - {art: bild, bild: res://grafik/ambiente/w3_kuechenradio_r4_v02.png, bilder: 4, pos: [432, 144], fps: 8, spricht: PIX, wenn: R4}
   # Tisch und Stuhl (x 236–436) ausgespart: dahinter stünde Max über den Möbeln
   laufbereich: [[80, 285], [236, 285], [236, 322], [436, 322], [436, 285], [560, 285], [600, 320], [630, 356], [10, 356], [50, 320]]
   marker:
@@ -365,6 +373,10 @@ testkammer_1:
     R9b: res://grafik/hintergruende/w3_bg_testkammer_1_offen_v02.png   # W3-R09b, Ausgangstür offen
   skala: 1.0
   tiefe: 0.74
+  effekte:
+    # W3-B41 Deckenlautsprecher spricht (M.U.T.T.I. oder Pixel), AP-05 (W3-08)
+    - {art: bild, bild: res://grafik/ambiente/w3_lautsprecher_kammer1_v02.png, bilder: 4, pos: [320, 45], fps: 8, spricht: MUT}
+    - {art: bild, bild: res://grafik/ambiente/w3_lautsprecher_kammer1_v02.png, bilder: 4, pos: [320, 45], fps: 8, spricht: PIX}
   # Pappkuchen (x 520–580) ausgespart
   laufbereich: [[30, 290], [520, 290], [520, 308], [580, 308], [580, 290], [610, 290], [635, 356], [5, 356]]
   wechsel: [widerstandsbasis]
@@ -397,6 +409,10 @@ testkammer_2:
     R9c: res://grafik/hintergruende/w3_bg_testkammer_2_laser_gestoert_v02.png   # W3-R10b, Laser harmlos
   skala: 1.0
   tiefe: 0.74
+  effekte:
+    # W3-B42 Wandlautsprecher spricht (M.U.T.T.I. oder Pixel), AP-05 (W3-08)
+    - {art: bild, bild: res://grafik/ambiente/w3_lautsprecher_kammer2_v02.png, bilder: 4, pos: [320, 123], fps: 8, spricht: MUT}
+    - {art: bild, bild: res://grafik/ambiente/w3_lautsprecher_kammer2_v02.png, bilder: 4, pos: [320, 123], fps: 8, spricht: PIX}
   laufbereich: [[30, 292], [610, 292], [635, 356], [5, 356]]
   marker:
     start: [320, 338]
@@ -422,6 +438,11 @@ testkammer_3:
     R9d: res://grafik/hintergruende/w3_bg_testkammer_3_offen_v02.png   # W3-R11b, Tür offen
   skala: 1.0
   tiefe: 0.75
+  effekte:
+    # W3-B43 runder Lautsprecher spricht, W3-B44 die Tür redet (Schlüsselloch), solange sie zu ist; AP-05 (W3-08)
+    - {art: bild, bild: res://grafik/ambiente/w3_lautsprecher_kammer3_v02.png, bilder: 4, pos: [344, 226], fps: 8, spricht: MUT}
+    - {art: bild, bild: res://grafik/ambiente/w3_lautsprecher_kammer3_v02.png, bilder: 4, pos: [344, 226], fps: 8, spricht: PIX}
+    - {art: bild, bild: res://grafik/ambiente/w3_tuer_kammer3_redet_v02.png, bilder: 5, pos: [473, 216], fps: 8, spricht: TUR, sonst: R9d}
   laufbereich: [[30, 294], [610, 294], [635, 356], [5, 356]]
   marker:
     start: [300, 338]
@@ -448,6 +469,7 @@ kern:
     - {art: bild, bild: res://grafik/ambiente/w3_kern_lichtband_v02.png, bilder: 8, pos: [320, 214], fps: 9}   # W3-B29 Lichtband im Streifen
     - {art: bild, bild: res://grafik/ambiente/w3_kern_hitzeflimmern_v02.png, bilder: 4, pos: [321, 172], fps: 8, sonst: W3_ZELLE_KALT|R11}   # W3-B52 über der glühenden Zelle
     - {art: bild, bild: res://grafik/ambiente/w3_kern_kabel_puls_v02.png, bilder: 6, pos: [420, 360], fps: 8, sonst: R10}   # W3-B53 Kabel pulsieren, bis M.U.T.T.I. aus ist
+    - {art: bild, bild: res://grafik/ambiente/w3_schnee.png, bilder: 4, pos: [320, 360], fps: 5, z: 50, wenn: W3_ZELLE_SCHNEE}   # W3-B14 Lösung B: Schnee fällt durch die Halle (AP-05)
   # Sockel der Zelle (x 288–350 bis y 306) ausgespart: Max lief sonst hindurch (W3-R12-04)
   laufbereich: [[60, 296], [288, 296], [288, 306], [350, 306], [350, 296], [580, 296], [630, 356], [20, 356]]
   marker:
