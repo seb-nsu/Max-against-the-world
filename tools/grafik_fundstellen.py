@@ -46,9 +46,9 @@ ZURUECKGESTELLT = {
                      "_v02-Bild; die Bildfolge ist ein Ausschnitt der ersten Fassung",
     "w3_schwarze_katze_gehen": "doppelt zur Figur schwarze_katze, die welt_3.gd über die Straße laufen lässt",
     # Bewegungen
-    "max/kapsel_aufstehen": "zeigt die seitliche Kapsel der ersten Fassung; die Kapseln der _v02-Basis sind Kästen "
-                            "von vorn, braucht eine neue Bildfolge (Aussteigen läuft schon)",
-    "max/kapsel_hinlegen": "wie kapsel_aufstehen (Einsteigen läuft schon)",
+    "max/kapsel_aufstehen": "zeigt die seitliche Kapsel der ersten Fassung; abgelöst durch w3_kapsel_max_v02.png "
+                            "(Kasten der _v02-Basis, welt_3.gd _kapsel_aussteigen)",
+    "max/kapsel_hinlegen": "wie kapsel_aufstehen (welt_3.gd _kapsel_einsteigen)",
     "pixel/tragen": "keine Regie-Stelle in Welt 3",
     "pixel/vom_schrank_fallen": "keine Regie-Stelle in Welt 3",
     "pixel/schieben": "keine Regie-Stelle in Welt 3 (Tasse schieben spielt „tasse“)",

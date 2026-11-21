@@ -1,8 +1,8 @@
 # Lessons Learned
 
-Gesammelt aus der Arbeit an Prolog, Welt 1 und Welt 2 (6. bis 17. November 2026, Abschnitt 11 aus dem Review vom 17. November). Das Dokument soll Welt 3, Welt 4 und das Finale schneller machen: Was hat funktioniert, wo hat es mehrere Runden gebraucht, und wie sparen wir uns die beim nächsten Mal.
+Gesammelt aus der Arbeit an Prolog, Welt 1 und Welt 2 (6. bis 17. November 2026, Abschnitt 11 aus dem Review vom 17. November), ergänzt um Welt 3 und die Umsetzung des Reviews vom 20. November (bis 21. November 2026). Das Dokument soll Welt 3, Welt 4 und das Finale schneller machen: Was hat funktioniert, wo hat es mehrere Runden gebraucht, und wie sparen wir uns die beim nächsten Mal.
 
-Die verbindlichen Regeln für Stil, Bausteine und Prompts stehen weiterhin in `grafik/00-stil-und-werkzeuge.md`, Entscheidungen in `entscheidungen.md`. Hier steht das Warum und die Arbeitsweise.
+Die verbindlichen Regeln für Stil, Bausteine und Prompts stehen weiterhin in `grafik/00-stil-und-werkzeuge.md`, Entscheidungen in `entscheidungen.md`. Hier steht das Warum und die Arbeitsweise. Schalter und Aufrufe einzelner Werkzeuge gehören in deren `liesmich.md` (zum Beispiel `tools/grafik_w3/liesmich.md`, `game/tests/werkzeuge/liesmich.md`), nicht hierher.
 
 ## Die zehn wichtigsten Regeln
 
@@ -11,7 +11,7 @@ Die verbindlichen Regeln für Stil, Bausteine und Prompts stehen weiterhin in `g
 3. **Ein Thread je Zuständigkeit.** Ein Thread für Prompts, Posen und Animationen, einer für den Welt-Einbau. Wer was macht, steht am Anfang fest.
 4. **Läufe nie direkt von Gemini.** Bewegung aus dem Meshy-Clip, Aussehen aus dem gemalten Sprite (Teile-Rig), 8 Bilder nach Slynyrd-Schema, automatische Prüfung auf genau zwei Beine und keine Löcher.
 5. **Posenbögen mit festen Spalten.** Höchstens vier Posen, jede in eigener Spalte, mindestens eine Kopfbreite Magenta dazwischen, Vorlage ist immer das saubere Konzeptblatt.
-6. **Varianten im selben Chat aus dem Grundbild.** Zweite Fassungen (Tür offen, Nase ab) und Korrekturen per Maske, und beim Einbau nur die geänderte Stelle ins Grundbild setzen.
+6. **Varianten im selben Chat aus dem Grundbild.** Zweite Fassungen (Tür offen, Nase ab) und Korrekturen per Maske, und beim Einbau nur die geänderte Stelle ins Grundbild setzen. **Vor jedem Einbau in einen bestehenden Raum dessen aktuellen Zustand und die Perspektive des Gegenstands prüfen** (feste Regel, Sebastian 21.11., Abschnitt 4).
 7. **Breite Räume als ein Panorama.** Ein fertiges Bild im selben Chat auf 32:9 verbreitern lassen statt zwei Hälften einzeln zu erzeugen.
 8. **Vor der Abgabe selbst so schauen wie Sebastian.** Figuren über den Hintergrund legen, Einzelbilder vergrößert prüfen, GIF in Spieltempo ansehen.
 9. **Kosten vorher nennen und ehrlich zählen.** Budgetgrenze vor jedem Stapel, echte Kosten inklusive Wiederholungen und Vorlagen.
@@ -83,6 +83,8 @@ Diese Fehler hat Sebastian gefunden, nicht wir. Sie gehören in die automatische
 
 - **Besitzerregel aus `00-aufbau.md` gilt auch für Grafik-Listen.** Es gab zeitweise `welt-2-offen.md`, `welt-1-offen.md`, `00-offen-prolog-welt-1-welt-2.md`, eine ältere Kopie auf Sebastians Rechner und ein Artifact mit „benötigten Bildern“. Sebastian: „ein reines Chaos, wo welche Prompts stehen.“ Künftig: **eine** Gesamtliste je Abschnitt (Vorbild `grafik/status-alle-shots.md`), andere Listen verweisen nur darauf.
 - **Statusliste mit IDs von Anfang an.** Jede Zeile: ID, Titel, Art, Quelldatei oder „fehlt“, gebaut ja/nein, im Spiel (main / Branch / nein), Grund und Zuständigkeit, wenn offen. Effekte und lebendige Hintergründe gehören mit hinein. Nach jeder Runde aktualisieren und die Zahlen je Status melden.
+- **Den Status setzt der Einbau-PR** (20.11.): „wartet auf Abnahme“ und „im Spiel“ nicht im selben PR mischen. In Welt 3 standen 113 von 133 Zeilen auf „nein“, obwohl sie eingebaut waren; nachgeführt am 21.11., mit `tools/grafik_fundstellen.py` als Gegenprobe.
+- **Übergabe PC → Cloud-Thread über einen Übergabezweig** `claude/<welt>-transfer` (20.11.): nie mergen, nach dem Einbau löschen.
 - **Erzeugte Dateien nie von Hand mergen.** Alles in `grafik/fertige-prompts/` erzeugt `tools/prompts_zusammensetzen.py` aus den Grafik-Dateien. Bei Konflikten die Quellen mergen und das Werkzeug neu laufen lassen. Gleiches gilt für `game/daten/` und `texte.csv`.
 - **Abweichungen dokumentieren.** Wenn das fertige Bild von Skizze oder Motiv abweicht (Klassenzimmer neu aufgeteilt, Brücke mit Rampen), steht das je Raum in „Umgesetzt und Abweichungen“ der Grafik-Datei. Ab dem fertigen Bild gilt das Bild, nicht mehr die Skizze. Motive vor dem Malen mit dem Spiel abgleichen (Welt 2: fünf Motive beschrieben die Dinge in anderer Reihenfolge als das Spiel).
 - **Nacharbeiten als Liste führen.** Jede Nachfärbung, jedes eingesetzte Objekt, jede übermalte Stelle in `offene-punkte.md` (P15) mit Raum, Stelle und Grund. Das hat das spätere Review und den Aseprite-Durchgang stark vereinfacht.
@@ -103,12 +105,13 @@ Am 14. und 15. November liefen meist zwei Threads parallel („Offene Grafik-Pro
 
 Regeln für parallele Threads:
 
-1. **Zuständigkeit beim Start festlegen** und in den Thread-Auftrag schreiben: welche Dateien, welche IDs, wer merged.
+1. **Zuständigkeit beim Start festlegen** und in den Thread-Auftrag schreiben: welche Dateien, welche IDs, wer merged. Grafik-Notiz und Prompts einer Welt haben genau einen Besitzer-Thread, und jeder PR bekommt einen neuen Zweig (20.11.: Stadtstraßen-Prompt lief in zwei PRs).
 2. **Ein Thread übernimmt die Merges nach main** (bisher der Prompt-/Animations-Thread, weil dort `gh` verfügbar war). Andere Threads melden „Branch X ist fertig, main schon eingemischt, Test grün“.
 3. **Gemeinsamer Code wird angekündigt** (Beispiel: `CQFigur.laufen_zu` bekam einen dritten Parameter). Dateien, die beide anfassen (Figuren-JSON, `cq_raum.gd`, Screenshot-Referenzen), haben einen Besitzer.
 4. **Jeder Thread arbeitet in eigenem Checkout oder Worktree**, nie im gemeinsamen Ordner `E:\Claude\Couch Quest`, in dem Sebastians Godot-Änderungen liegen.
 5. **Vor jedem Push pullen** und main einmischen.
 6. Ein dritter Thread lohnt sich nur für klar abgegrenzte Arbeit (Review, Audio, ein Fehler). Mehr als drei bringt nichts, weil Sebastian die Bilder liefert und abnimmt und damit der Engpass ist.
+7. **Arbeitspakete parallel im selben Checkout** (Welt-3-Review, 21.11.): Jedes Paket ändert nur seine eigenen Dateien und committet nicht selbst; was eine Datei eines anderen Pakets bräuchte, wird gemeldet statt geändert.
 
 ---
 
@@ -119,11 +122,23 @@ Regeln für parallele Threads:
 1. Sebastian (oder Claude) erzeugt das Bild mit Prompt plus Layout-Skizze. Bei schwierigen Räumen Positionsangaben in Prozent dazuschreiben.
 2. Claude prüft gegen Skizze, Motiv und Rätsel **bevor** gemalt wird, was danach kommt (Varianten). Typische Funde: doppelte Pyramide an der Naht, orange Fläche, Ausgänge zu nah beieinander, Turm zu klein für den späteren Gag.
 3. Original in voller Größe ablegen (PNG, „Bild speichern unter“), nicht als Screenshot und nicht als ZIP über den Chat (kam einmal leer an).
-4. `tools/pixelieren.py` auf 640×360 (Breitbild 1280×360), 32 Farben. Kleine Dinge, die dabei untergehen (Grammophon, rosa Schloss, Kesselfeuer, Pilzhüte), gezielt nachfärben und in P15 eintragen.
+4. `tools/pixelieren.py` auf 640×360 (Breitbild 1280×360), 32 Farben; Räume mit kleinen, kräftigen Farben (Sparschwein, Laser) brauchen 40 Farben oder Nachfärben (21.11.). Kleine Dinge, die dabei untergehen (Grammophon, rosa Schloss, Kesselfeuer, Pilzhüte), gezielt nachfärben und in P15 eintragen.
 5. Gegenstände, die Max mitnimmt, als eigene Sprites ausschneiden und die Stelle übermalen (Aseprite-Skript im Batch-Modus).
-6. Laufbereich, Klickflächen, Ausgänge und Figurenplätze **am fertigen Bild** vermessen, nicht an der Skizze.
+6. Laufbereich, Klickflächen, Ausgänge und Figurenplätze **am fertigen Bild** vermessen, nicht an der Skizze. Klickflächen, die einen Zustand zeigen (Pfütze, Scherben, Datenanschluss, Brille), bekommen dieselbe Bedingung wie das Bild (20.11.). Größen auch gegen Möbel messen: Max ist etwa 1,75 m, Tischplatte etwa Hüfthöhe, Tür etwa 1,2 × Max; `skala` 1,0 vorn und die Tiefe aus dem Rohbau (Welt 3, 21.11.).
 7. Figuren über das Bild legen und je Raum prüfen: Steht jemand vor dem Pult oder im Weg? Stimmt die Blickrichtung? Verdeckt eine Figur einen Gegenstand? Passt die Größe zum gemalten Publikum?
 8. Bildschirmfoto des Raums, Test der Welt (zum Beispiel `welt_2_anspiel`), pushen. Den vollen Durchspieltest und `pruefen.py` lässt die CI beim PR laufen; lokal reichen Bildschirmfoto und Welt-Test, solange keine Spiellogik geändert wird (Sebastians Entscheidung vom 13. November).
+
+### Bild in einen bestehenden Raum einsetzen (feste Regel, Sebastian 21. November 2026)
+
+**Vor jedem Einbau eines Bildes in einen bestehenden Raum zuerst den aktuellen Zustand des Raums (welcher Hintergrund, welche Variante gilt gerade) und die Perspektive des Gegenstands prüfen.** Anlass: Gemini malte den Kapsel-Kasten gerade von vorn, Sebastians Kasten ist schräg von oben gemalt (Hinterkante 35 px nach rechts versetzt), der Deckel saß daneben.
+
+1. Aktuellen Hintergrund und Variante aus dem Layout nehmen, nicht aus Erinnerung oder der ersten Fassung.
+2. Fluchtkanten und Ecken des Gegenstands im Hintergrund vermessen (Raster-Zoom).
+3. Die Vorlage für Gemini aus dem aktuellen Hintergrund ausschneiden und die Schrägsicht im Prompt nennen.
+4. Beim Einsetzen nur die geänderten Teile übernehmen (bei der Kapsel Deckel, Öffnung und Max; die Vorderseite bleibt aus dem Hintergrund) und auf die gemessenen Kanten umrechnen (`tools/grafik_w3/kapsel_v02.py`). Ein Gemini-Bild (0,07 $) reichte.
+5. Erst dann vergrößert im Raum ansehen und zeigen.
+
+Dasselbe gilt für Effekte, die eine Figur zeigen: immer aus Bild 0 des aktuellen Spiel-Blatts bauen. Der Hausmeister rollte zuerst aus dem alten Stand, mit dem Mopp oben und in falscher Größe (`tools/grafik_w3/hausmeister_rollen.py`). Bildfolgen mit Möbel (Kapsel) hängen am Hintergrund: Wird der Raum neu gemalt, müssen sie mit.
 
 ### Figuren und Animationen
 
@@ -138,12 +153,25 @@ Varianten entstehen im selben Chat aus dem Grundbild. Gemini verändert dabei tr
 
 Welt 3 (20. November 2026): Die Farbdifferenz allein findet auch Geminis Verschiebungen im ganzen Bild. **Die Suche auf grobe Rechtecke beschränken** (`BEREICHE` in `tools/grafik_w3/raeume_pixelieren.py`) und innerhalb davon nach Umriss übernehmen; wo der Umriss zerfällt (gekippter Eimer), das ganze Rechteck nehmen. **Eine gemeinsame Palette für Grundbild und Varianten**, sonst verfärbt sich beim Wechsel der ganze Raum. Zustände, die unabhängig voneinander kommen (Schnee, Kaffee), als eigene Varianten plus Kombination; `hintergrund_nach` nimmt dafür auch Schalter und „A+B“.
 
+Effekte und Varianten (21. November 2026):
+
+- **Ausschnitt-Effekte gegen jede Hintergrund-Variante bauen** (die Küche hat ab R4 andere Farbwerte) und im Layout mit `wenn`/`sonst` trennen.
+- **Effektstreifen gegen den Hintergrund vergleichen**, nicht nur zwischen den Bildern; sonst verschwinden feste Teile wie die Weckerziffern.
+- **Einmalige Effekte, die einen neuen Hintergrund vorwegnehmen** (Fächer des Automaten): letztes Bild halten und erst ein paar Frames nach dem Hintergrundwechsel entfernen.
+- **Effekt-Sheets auf leere Zeilen prüfen**: Das „Federn“ der Autos ließ eine Zeile durchsichtig, im Spiel ein waagrechter Strich.
+
 ### Tests und CI
 
 - Screenshot-Referenzen weichen zwischen Windows und dem Mesa-Renderer der CI um mehr als 0,5 % ab. **Referenzen nur unter Linux oder aus dem CI-Render aufnehmen.** Der Welt-Einbau pusht nur die Raumgrafik, die Referenzen nimmt ein Thread unter Linux auf.
 - Wer Raumgehalt verschiebt (Minka auf den Tresen), muss die Referenz dieses Raums mit erneuern, sonst ist main rot.
 - Eine rote CI auf main zuerst auf fremde Änderungen prüfen: Die Taverne-Abweichung in PR #21 kam aus main, nicht aus Welt 2.
 - `.import`-Dateien und `game/project.godot` aus Sebastians Arbeitskopie nie mitcommitten.
+- **Referenzen im selben Grafik-PR erneuern** (Workflow auf dem PR-Zweig, Übersicht alt/neu ansehen, gewollt geänderte Räume im PR nennen). Ein über einen Tag roter main ist ein Stopp-Signal (Welt 3: 66 Stunden rot, 20.11.).
+- **Eine Warnung in `pruefen.py` bricht `alles_pruefen.py` ab.** Neue strenge Prüfungen deshalb erst für den bearbeiteten Abschnitt einschalten und den Rest als Hinweis melden (Längen: `LAENGE_STRENG_PRAEFIX`, 21.11.).
+- **Nach `--erzeugen` Godot neu starten**: Ein laufendes Godot liest erzeugte Daten nur beim Start. Neue Effekt-PNGs vorher headless importieren (`--headless --path game --import`), sonst lädt es die alte Fassung.
+- **Python `write_text` schreibt unter Windows CRLF**; für erzeugte Dateien `newline="\n"` setzen.
+- **Eigene Prüfskripte, die im Wohnzimmer starten:** Die Prolog-Szene bricht beim `welt_beginnen` ab und lässt `Spiel.in_szene` hochgezählt, und Max' Sofa-Pose bleibt hängen (Hauptbild aus). `Spiel.in_szene` auf 0 setzen, Kinder „Pose*“ entfernen, Sprite sichtbar und Alpha 1 (in `raumaufnahme.gd` seit 21.11.).
+- **Das Zeigerraster kommt in Welt 3 nicht über das Wohnzimmer hinaus** (mit unbegrenzten FPS hängt es). Ersatz bis zur Reparatur: Abdeckung aus den Aufnahme-JSONs rechnen (`docs/review/2026-11-20/belege/umsetzung/ap04_abdeckung.tsv`).
 
 ### Sebastians lokaler Ordner
 
@@ -168,6 +196,7 @@ Nach jedem Merge den lokalen Ordner per `git pull --ff-only` nachziehen. Nie res
 
 - **Seit 15. November laufen Posenbögen und Bilder über Meshy statt über das Gemini-Konto.** Gleiches Modell, 4 Credits je Bild, Credits waren reichlich da (Stand am 15.11.: etwa 1.700 nach allen Läufen und Gesten).
 - **Hintergründe malt Sebastian im Gemini-Chat besser selbst.** Bei der Trollbrücke war seine Fassung nach 4 Runden besser als Claudes nach 6. Der Chat ist flexibler und ohne Kosten pro Bild, hat aber ein Tageskontingent. Das Kontingent ist der Engpass des Projekts, nicht der Einbau.
+- **Nahansichten malt Sebastian im Chat, Claude setzt nur die Schrift** (Welt 3, 20.11.).
 - **Meshy ersetzt kein Malen.** Es liefert Bewegung, Timing und Beinwinkel. Aussehen und Gesicht kommen immer aus dem gemalten Sprite.
 - **Rigs wiederverwenden.** Alle Meshy-Rigs haben dasselbe Skelett. Ein Clip lässt sich auf jedes Rig legen, das spart neue Figuren-Rigs (Läufe aller Welt-1-Leute für 15 statt etwa 350 Credits).
 - **Für Figuren, die nur sitzen oder in etwas stecken** (Beamter 1 auf dem Hocker, Philosoph in der Tonne), braucht Meshy eine stehende Vorlage in T-Pose auf Weiß (Baustein 3D-VORLAGE).
@@ -204,6 +233,10 @@ Nach jedem Merge den lokalen Ordner per `git pull --ff-only` nachziehen. Nie res
 | Freigaben | Karte gewählt, PC-Sitzung erkennt sie nicht | 1 je Freigabe | Satz zum Abtippen anbieten |
 | Screenshot-CI | Windows-Referenzen fallen auf Linux durch | mehrere Pushes | Nur Linux-Referenzen, ein zuständiger Thread |
 | Doppelte Arbeit | Zwei Threads führten Welt-2-Posen und Offen-Listen | – | Zuständigkeit beim Start festlegen |
+| Kapsel-Deckel (Welt 3, 21.11.) | Gemini malte den Kasten gerade von vorn, der Hintergrund zeigt ihn schräg von oben; Deckel 35 px daneben | 2 | Feste Regel aus Abschnitt 4: Zustand und Perspektive vor dem Einbau prüfen |
+| Hausmeister rollt (Welt 3, 21.11.) | Streifen aus dem alten Stand: Mopp oben, falsche Größe | 2 | Effekte mit Figur aus Bild 0 des aktuellen Spiel-Blatts |
+| Code-Sicht (Welt 3, 20./21.11.) | Liste fertiger Tauschsätze verriet die Lösung, Tutorial und Hinweise sagten „anklicken“ | Review plus Umbau | Bedienung und Texte zusammen entwerfen; Lösungen nie als Auswahl anbieten, freie Versuche kosten etwas |
+| Pixels Trab (alle Welten, 21.11.) | Pfoten wanderten 11 px je Zyklus bei 160 px/s, 86 % Rutschen, seit Welt 1 unbemerkt | 1 | Schrittweite und Tempo zusammen rechnen; jede neue Gangart bekommt ihr eigenes Tempo (Hinken 85 ms, 90 px/s) |
 
 ---
 
@@ -256,16 +289,24 @@ Mehrere Schätzungen waren zu niedrig oder zu hoch. Beides schadet: Zu niedrig v
 | Meshy-Bild | „3 bis 9“ bzw. „6 Credits pro Bild“ | 4 Credits | Preis nicht nachgeschaut |
 | Gesten-Runde | Grenze 120, dann 250, 350, 480 Credits | 139 bei 114 Bewegungen, 243 nach Nachhol-Runde | Umfang war unbekannt, weil die vollständige Liste fehlte |
 | Gemini-Bilder bis Spielende | etwa 290 Bilder | noch offen | Schätzung ohne ID-Liste je Welt |
+| Welt 3 Meshy (Stand 20.11.) | 150 bis 200 Credits | 54 Credits | Gänge aus Bibliotheks-Clips, Swift-Clips (3 Credits) als Haltungsvorlage, Max' Winkel wiederverwendet |
+| Welt 3 Gemini (Stand 20.11.) | 15 bis 20 € | nach KI-Protokoll etwa 8 bis 9 $, Kontostand nicht abgefragt | geschätzt aus dem Protokoll; Chat-Bilder fehlen darin |
+| Nacharbeit AP-06 (21.11.) | grob unter 1 $ | 3 Bilder, etwa 0,21 $ | gezielte Varianten aus dem Grundbild statt neuer Bögen |
+| Kapsel zweite Fassung (21.11.) | – | 1 Bild, 0,07 $ | nur die geänderten Teile aus Gemini |
+
+Dauer: Der Einbau der 24 neuen Welt-3-Hintergründe (AP-09) brauchte rund 2,6 Stunden, davon viel Prüfen und das hängende Zeigerraster.
 
 **Regeln für künftige Schätzungen**
 
 1. **Erst die vollständige Liste, dann die Zahl.** Ohne ID-Liste wird jede Schätzung mehrfach nach oben korrigiert.
 2. **Realen Stückpreis ansetzen:** Bildpreis plus Vorlagen plus durchschnittlich 1,5 Wiederholungen. Für Läufe und Gesten eher Faktor 2.
 3. **Preise vor der Schätzung nachsehen** (Meshy-Preisliste, AI Studio) und das Modell prüfen, das wirklich läuft.
-4. **Kontostand vorher und nachher abfragen** und die echte Differenz melden, nicht die eigene Zählung. Bei Gemini zeigt nur AI Studio den echten Betrag, deshalb Sebastian früh um einen Blick bitten.
+4. **Kontostand vorher und nachher abfragen** und die echte Differenz melden, nicht die eigene Zählung; die Ist-Kosten je Welt unter der Schätzung festhalten. Bei Gemini zeigt nur AI Studio den echten Betrag, deshalb Sebastian früh um einen Blick bitten.
 5. **Bei 70 % der Grenze anhalten und melden**, nicht erst am Ende.
 6. **Wiederverwendung zuerst prüfen** (vorhandene Rigs, Clips, Modelle). Das hat bei Meshy mehrere hundert Credits gespart und hätte die hohen Schätzungen erspart.
 7. **Jede Schätzung mit Bandbreite und Annahmen nennen** („bei zwei Versuchen je Bild“), damit Sebastian sieht, woran sie hängt.
+8. **Das KI-Protokoll erfasst jede Erzeugung** (Chat, API, Meshy, leere Antworten) mit Status und Kosten (20.11.).
+9. **Werkzeuge, die Geld kosten, nehmen ohne Angabe das günstige Modell** (Gemini-MCP seit 20.11. `gemini-nano-banana-2.1`).
 
 ---
 
@@ -283,6 +324,8 @@ Angelehnt an die Arbeitsstruktur aus der Agenten-Sammlung agency-agents (NEXUS, 
 | 3. Bauen | Einbau, Läufe, Gesten, Ambiente | jede Lieferung hat die Bauen-Prüfen-Schleife bestanden |
 | 4. Härten | Detailprüfung aller Einzelbilder, Review mit frischem Blick, Fix-Runde | Review-Funde der Stufe A erledigt, CI grün, Statusliste ohne offene Zeilen |
 | 5. Abnahme | Sebastian spielt, Playtest | Sebastian gibt frei |
+
+Das Prüftor 0 (Handskizze) gilt auch unter Zeitdruck: Welt 3 entstand ohne Skizze, und vier Räume passten nicht zu ihrem Rätsel (Laser, Spalt, Farbcode, Straße); die zweite Fassung entstand mit Blender-Rohbau als Vorlage und brauchte nur noch kleine Nacharbeit (20./21.11.). Die Häkchenliste steht in `.github/pull_request_template.md`.
 
 ### Bauen-Prüfen-Schleife
 
@@ -316,6 +359,12 @@ So mussten Übergaben bisher oft nachgefragt oder korrigiert werden (Posen-Zust�
 - Figuren hinter Fenstern brauchen Rahmen und Sprossen als Ebene davor.
 - Pixel folgt Max ab Welt 1 (ab 110 px Abstand), sitzt erst nach etwa 12 Sekunden Leerlauf, und auf erhöhten Plätzen bleibt er oben. Neue Räume mit erhöhten Plätzen dort eintragen.
 - Gegenstände nie einfach erscheinen lassen: Pixel springt sichtbar auf Werkbank und Dachbalken. Die Sprungfunktion wiederverwenden.
+- Überlagerungen am Sprite des Hintergrunds ausrichten, nicht am Prop-Knoten: Popochiu setzt den Knoten auf y 0 und das Sprite auf y 180 (Code-Sicht lag 180 px zu hoch, 20.11.).
+- Nach dem Versetzen einer Figur `sync_buffered_position()` aufrufen, sonst springt sie ans Ende des vorigen Laufs zurück (Lauftests, Kapsel).
+- Figur in ein Überlagerungsbild übernehmen (Pixel im Traumbild der blauen Pastille): `scaling_region` leeren, `default_scale` setzen, nach jeder Position `sync_buffered_position()`, danach alles zurücksetzen (21.11.).
+- Figuren, die in mehreren Welten vorkommen (Opa als Hologramm): Varianten und Endlos-Tweens selbst beenden (21.11.).
+- `HBoxContainer` ordnet Knöpfe erst ein Bild später; Lage danach lesen. Etiketten, die kurz verschwinden sollen (Pfeile der Code-Sicht), per Alpha ausblenden statt `visible`, sonst springt die Anordnung.
+- Gesten, die einen Zustand ändern (Brille ab, Herunterfahren), laden danach eine Folgevariante (`schmidt_ohne_brille`, `mutti_aus`), sonst springt die Figur zurück.
 
 ### Was Sebastian sich wünscht (wiederkehrend)
 
@@ -342,31 +391,34 @@ Komplett-Review von Prolog, Welt 1 und Welt 2 mit sieben Prüfrollen (Bericht: `
 
 **Prüfen, bevor eine Welt als fertig gilt**
 
-- Jede Welt bekommt einen Klick-Durchlauf im echten Spiel: jedes Gespräch bis zum Ende, jeden Hotspot links und rechts, jede Ankunftsstelle ansehen. Der Regeltest (`welt_2_anspiel`) umgeht Räume und Klickflächen; der einzige Hänger des Spiels (Hermes-Gespräch ohne Abschied) fiel nur beim Klicken auf.
+- Jede Welt bekommt einen Klick-Durchlauf im echten Spiel: jedes Gespräch bis zum Ende, jeden Hotspot links und rechts, jede Ankunftsstelle ansehen. Der Regeltest (`welt_2_anspiel`) umgeht Räume und Klickflächen; der einzige Hänger des Spiels (Hermes-Gespräch ohne Abschied) fiel nur beim Klicken auf. **Nachtrag 20.11.:** Auch der automatische Anspieltest löst die Schritte über den echten Weg aus (`on_click()` mit der richtigen Spielfigur, `d.waehlen()`), nicht über `S.regel(...)`; beide Sackgassen von Welt 3 waren im grünen Regeltest unsichtbar. Jeden Stufe-3-Hinweis wörtlich als Schritt nachspielen. `welt_3_anspiel` ist umgestellt, Welt 1 und 2 stehen in `offene-punkte.md`.
 - Jedes Gespräch braucht eine Option, die es beendet. `pruefen.py` prüft das jetzt; `CQDialog` beendet ein Gespräch zusätzlich selbst, wenn keine Option mehr sichtbar ist.
-- Nach dem Grafikeinbau jede Ansehen-Zeile gegen das fertige Bild lesen (Anzahl, Material, wer hält was). Die Texte entstehen vor den Bildern; in Welt 2 passten Säulen, Thron, Wedler, Pult, Bart, Bauplan und Wurfhebel nicht.
+- Optionen, die ein Rätsel starten, das man nicht beim ersten Mal lösen muss, brauchen „(bleibt)“; eine Sichtbarkeitsregel reicht nicht, weil `option_sichtbar()` zuerst `used` prüft (Mensch-Test, 20.11.).
+- Pflichträtsel gegen allgemeine Rückwege prüfen: Ein Rückweg wie „Kapsel schütteln“ machte Rätsel 7 und 13 still freiwillig (20.11., jetzt gesperrt).
+- Nach dem Grafikeinbau jede Ansehen-Zeile gegen das fertige Bild lesen (Anzahl, Material, wer hält was). Die Texte entstehen vor den Bildern; in Welt 2 passten Säulen, Thron, Wedler, Pult, Bart, Bauplan und Wurfhebel nicht. Tutorial- und Hinweistexte zusätzlich gegen die gebaute Bedienung lesen (Code-Sicht, 20.11.).
 - Figuren im Raum vergrößert ansehen, nicht nur im Sheet: Fußlinie gegen die gemalte Kante (Waldemar stand auf der Brüstung), Mund beim Reden auch in Posen, jede Figur redend und stehend.
 - Startstellen und Figurenplätze prüfen: kein Ankunftsmarker näher als eine Figurbreite an einer Figur, keine zwei Figuren am selben Platz, keine Figur außerhalb des Bildes. Achtung: Das Aufnahmeskript betritt Räume über `start`, das Spiel über `von_<raum>`; beide Marker setzen.
 - Überdeckung von Klickflächen messen statt schätzen (Zeigerraster aus beiden Mausrichtungen). Seit dem Review entscheidet `Spiel.zeiger_betritt` nach Fläche und Rang; Figuren unter 70 % ihrer Fläche gelten trotzdem als Fehler.
 - Prüfregeln gelten für alle Abschnitte, die schon gebaut sind, nicht nur für die gerade bearbeiteten (die 140-Zeichen-Regel galt nur für Prolog und Welt 1).
-- Gebaute Animationen gelten erst als fertig, wenn ein Skript oder eine Tabelle sie aufruft (Melken, Pixels Haare und das Rennen an Tag 1 waren gebaut und nie zu sehen).
-- Reden und Ruhe aus der Standpose bauen; die 5-%-Regel gilt auch für `talk` und Ruhe-Schleifen (Opa, Gollo, Grimmzahn, XXL-Ziege).
+- Gebaute Animationen gelten erst als fertig, wenn ein Skript oder eine Tabelle sie aufruft (Melken, Pixels Haare und das Rennen an Tag 1 waren gebaut und nie zu sehen). In Welt 3 waren es trotzdem 35 Bewegungen und 14 Effekte; seit 21.11. prüft `tools/grafik_fundstellen.py` das in der CI, bewusst Zurückgestelltes steht dort mit Grund.
+- Reden und Ruhe aus der Standpose bauen; die 5-%-Regel gilt auch für `talk` und Ruhe-Schleifen (Opa, Gollo, Grimmzahn, XXL-Ziege). Wird „reden“ aus dem Posenbogen zu `talk`, die Mund-Schleife behalten und die Armgeste als `rede_geste` führen (vier Welt-3-Figuren redeten ohne Mund).
 
 **Code und Daten**
 
 - Fixes an Klickflächen gehören ins Layout (`tools/layout/*.yaml`), nicht nur in die `.tscn`; der nächste `--cq-layout`-Bau setzt sie sonst zurück.
 - Neue Welt, neue Sonderzeilen im Hinweissystem: eigene „nichts offen“-Zeile, freiwillige Rätsel nachrangig und nach ihrer Gelegenheit geschlossen.
+- Hinweise ortsbezogen wählen, wenn Räume Einbahnstraßen sind: erst Schritte im Raum der aktiven Figur, bei unbesuchten Räumen den Ort nennen (Pfote schickte aus dem Büroturm zur Oma, 20.11.).
 - Abläufe mit Läufen gehören in eine Szene oder sperren die Oberfläche; sonst nimmt das Spiel Klicks an und Esc überspringt nur Teile.
 - Lauftempo und Tiefe getrennt sehen: Popochiu multipliziert das Tempo mit der Größe; die Raum-„skala“ wird seit dem Review ausgeglichen.
-- Bei Effekten im Testmodus daran denken: Ambiente-Bildfolgen laufen dort nicht. Wer ein Ambiente prüft, schaltet den Testmodus vor dem Betreten des Raums aus.
+- Bei Effekten im Testmodus daran denken: Ambiente-Bildfolgen laufen dort nicht. Wer ein Ambiente prüft, schaltet den Testmodus vor dem Betreten des Raums aus und sieht die Effekt-Bahnen gegen die gemalten Gegenstände an (Autos fuhren durch geparkte Autos und den Nachttisch, 20.11.).
 
 **Werkzeuge, Tests und Abläufe (aus Git-Historie und PRs)**
 
 - Lokal dieselben Prüfungen wie die CI: `python3 tools/alles_pruefen.py` (drei rote Läufe kamen nur von veralteten erzeugten Dateien).
-- main bleibt grün; nie direkt auf main. Die Webseite wird seit dem Review erst nach grünem „Prüfen“ gebaut.
+- main bleibt grün; nie direkt auf main. Die Webseite wird seit dem Review erst nach grünem „Prüfen“ gebaut. Erst mergen, wenn der Lauf auf dem Endstand fertig und grün ist (#42 bis #44 wurden vorher gemergt, 20.11.); dafür Branch-Schutz.
 - Der Web-Export ist eine eigene Plattform: grüne Desktop-Tests heißen nicht, dass die Seite läuft (PR #38). Popochiu ist für den Web-Export an fünf Stellen gepatcht (Kommentar „Couch Quest:“); vor einem Popochiu-Update diese Stellen sichern.
 - Screenshot-Referenzen: Der Workflow „Screenshot-Referenzen erneuern“ nimmt sie unter Linux neu auf und committet sie auf den PR-Zweig. Der Test sieht bei breiten Räumen nur den Kameraausschnitt.
-- Werkzeuge gehören ins Repo, nicht nur die Ergebnisse: eine gültige Fassung statt `_2`, `_3`, Pfade über eine Umgebungsvariable. Die Teile-Rig-Skripte und die Prüfung „zwei Beine, keine Löcher“ liegen bisher nur unter `E:\Game Engine\Grafiken`.
+- Werkzeuge gehören ins Repo, nicht nur die Ergebnisse: eine gültige Fassung statt `_2`, `_3`, Pfade über eine Umgebungsvariable. Die Teile-Rig-Skripte und die Prüfung „zwei Beine, keine Löcher“ liegen bisher nur unter `E:\Game Engine\Grafiken`. Prüfskripte brauchen Grenzwerte und einen Rückgabewert, sonst melden sie nur (20.11.).
 - Originale nur als PNG mit festem Namensschema; 3 GB Originale brauchen eine Sicherung.
 - Statuslisten und Regie-Dauern aus den Daten erzeugen statt von Hand führen; nur „in main“ zählt als eingebaut.
 - Schrift und Ziffern in Nahansichten per Werkzeug setzen und in Spielgröße auf Verwechslung prüfen (Fährtafel: 112 sah aus wie 118).
@@ -405,7 +457,7 @@ Komplett-Review von Prolog, Welt 1 und Welt 2 mit sieben Prüfrollen (Bericht: `
 - **Parallele Gemini-Aufrufe** brachen bei Netzschwankungen ab (Zeitüberschreitung, DNS). Eine Zeitüberschreitung kann trotzdem ein Bild speichern: vor dem Wiederholen Datei und `ki_protokoll.csv` prüfen.
 - **Raumabhängige Effekte erst nach dem Hintergrund**: 13 Bewegungen (Nudeltopf, Kopierer, Automat …) brauchen den fertigen Raumausschnitt und bleiben bis dahin offen.
 - **Gegenstände ausschneiden:** `figur.py gegenstaende` setzt ein gleichmäßiges Raster voraus. Gemini verteilt die Dinge aber frei, und lose Teile (Dampf, Scherben, Konfetti, Uhrgewichte) zerfallen. `tools/grafik_w3/gegenstaende_schneiden.py` trennt Zeilen und Spalten über Lücken in der Projektion; dicht stehende Dinge brauchen eine kleinere Spaltenlücke (Labor: 4).
-- **Schrift auf Nahansichten:** Überschriften nicht in Pixelify 16 setzen (2 sieht aus wie 8), sondern in 12 mit Doppeldruck. Zu kleine gemalte Schilder lieber durch ein eigenes ersetzen; Tabellen erst ausmessen, dann füllen.
+- **Schrift auf Nahansichten:** Überschriften nicht in Pixelify 16 setzen (2 sieht aus wie 8). (Pixelify 12 mit Doppeldruck ist seit 21.11. überholt, siehe „Umsetzung nach dem Review“.) Zu kleine gemalte Schilder lieber durch ein eigenes ersetzen; Tabellen erst ausmessen, dann füllen.
 - **Halbposen einzeln bestellen.** Ein Bogen mit vier Halbposen kopiert oft die Zielposen. Besser je Geste ein Bild: Neutralpose (Konzeptblatt) und die ausgeschnittene Zielpose als zwei Vorlagen, „ONE single figure exactly halfway … clearly different from both images“. 15 von 15 waren brauchbar.
 - **Kopfgröße nachträglich angleichen** (`tools/grafik_w3/kopf_angleichen.py`): nur bei stehenden Posen; Hocke und erhobene Arme verfälschen die Messung und werden übersprungen.
 - **Gegenstand wechselt zwischen Posen** (Kalles Laptop): eigenes Standbild ohne Gegenstand im selben Gemini-Chat bearbeiten lassen und als „R“ der betroffenen Gesten nehmen.
@@ -416,7 +468,7 @@ Komplett-Review von Prolog, Welt 1 und Welt 2 mit sieben Prüfrollen (Bericht: `
 - **Figur mit Möbel (Kapsel):** Varianten als Bearbeitung des Konzeptbilds bestellen („keep the pod … EXACTLY identical, change only the boy“), dann nur Max einsetzen: Unterschied zur leeren Kapsel als Maske, auf die Kapsel aus dem vorhandenen Sprite kleben (`kapsel_folgen.py`). Aussteigen, sobald Max höher als die Kapsel wird, als freie Figur davor.
 - **Raumzustände, die Gemini im Ganzen neu malt** (andere Farben, grauer Sockel), lassen sich nicht nur an der Stelle einsetzen: `zustand_einsetzen.py` findet dann überall Unterschiede. Besser den Zustand als Bearbeitung des Grundbilds bestellen („change only the energy cell … everything else exactly identical“), dann pixeln und nur die Zelle einsetzen. Sebastians Fassung bleibt als Alternative liegen.
 - **Sprites, die breiter als das halbe Vorlagenbild sind** (Auto in Seitenansicht), trifft dieselbe Bodenlinien-Falle wie breite Posen: vorher auf dreifache Breite polstern.
-- **Schrift auf schräg liegendem Papier** (Nahansichten): Gemini malt trotz „blank“ oft Schein-Schrift und legt die Seiten schräg. Die Schreibfläche flach zeichnen (Papier, Linien, Schrift) und perspektivisch auf ihr Viereck legen; die Schrift in vierfacher Größe setzen und erst nach der Perspektive auf Pixel bringen. Einzelne Buchstaben in schrägen Tabellen mindestens in Größe 20, sonst kippen E und T. Ziffern weiter aus der eigenen Tabelle (4 wurde schräg zur 9). Schein-Kritzelei an Fliesenwänden: Wand aus sauberen Paneelen mit gleicher Fugenlage nachbauen statt ausmalen. Schein-Inhalt auf schrägen Formularen nur in den Feldern entfernen und mit dem nächsten echten Papierpixel derselben Seite füllen (sonst ziehen Ränder, Schatten und Glanz hinein); übrig gebliebene kurze Linienstücke danach mit weg. Gemalte Tabellenlinien, die man beim Leeren trifft, an den gemessenen Stellen der Nachbarspalte neu ziehen.
+- **Schrift auf schräg liegendem Papier** (Nahansichten): Gemini malt trotz „blank“ oft Schein-Schrift und legt die Seiten schräg. (Überholt am 21.11.: Schrift nicht mehr perspektivisch verzerren, siehe „Umsetzung nach dem Review“.) Ziffern weiter aus der eigenen Tabelle (4 wurde schräg zur 9). Schein-Kritzelei an Fliesenwänden: Wand aus sauberen Paneelen mit gleicher Fugenlage nachbauen statt ausmalen. Schein-Inhalt auf schrägen Formularen nur in den Feldern entfernen und mit dem nächsten echten Papierpixel derselben Seite füllen (sonst ziehen Ränder, Schatten und Glanz hinein); übrig gebliebene kurze Linienstücke danach mit weg. Gemalte Tabellenlinien, die man beim Leeren trifft, an den gemessenen Stellen der Nachbarspalte neu ziehen.
 
 ### Einbau (20. November 2026)
 
@@ -431,3 +483,14 @@ Komplett-Review von Prolog, Welt 1 und Welt 2 mit sieben Prüfrollen (Bericht: `
 - **figuren_einbau.py erneut laufen lassen:** Vorher `max` und `pixel` (Bild und JSON) aus Git zurückholen, weil das Skript deren bestehende Sheets erweitert.
 - **Effekte, die mitsprechen** (Sprechanlage, Lautsprecher): `spricht: <Kürzel>` im Layout zeigt die Bildfolge nur, solange `Spiel.sagen` diese Figur sprechen lässt. Bedingungen kennen jetzt auch „A|B“ (eins von beiden), für Tag- und Nachtfassungen derselben Anzeige.
 - **Gesten-Tabellen:** `REDE_MAX` in `gesten_einsatz.gd` hat Vorrang vor den Welt-Tabellen; eine Zeile, die eine eigene Max-Geste bekommt, muss dort raus. Bei `WARTEN` gilt der erste passende Eintrag, darum steht Max' Rücken-Geste vor seinem allgemeinen Eintrag.
+
+### Umsetzung nach dem Review (21. November 2026)
+
+Elf Arbeitspakete aus dem Review vom 20.11. (`review/2026-11-20/arbeitspakete.md`, Stand je Paket in der Kontrolltabelle).
+
+- **Schrift auf Nahansichten mit eigenen Glyphen.** Pixelify 12 hat mehrdeutige Versalien (B, C, E, T, R, Z) und abstehendes a und t. Auf schrägen Flächen nicht verzerren, sondern die Zeilen kursiv verschieben und die Buchstaben treppen (`tools/nahansichten_welt3_schrift.py`).
+- **Gesten-Streifen enthalten den Stand.** Eine Korrektur am Stand (Schmidts Fuß, der Mund der Frau) mit `tools/grafik_w3/stelle_uebertragen.py` in alle Streifen übernehmen, mit gemeinsamer Lage je Bild. Gehaltene Gegenstände (Mopp, Kelle) in allen Posen gleich herum.
+- **Erstes Bild jeder Geste gegen den Stand prüfen.** `beste_lage()` suchte ±6 px um die Zellunterkante statt um die Fußlinie; 62 Bewegungen standen 2 px versetzt. Jetzt prüft `erstes_bild_pruefen()` in `figuren_einbau.py`. Die Quellen-Überlagerung (`korrektur_20-11/quelle`) beim Einbau immer mitgeben.
+- **Neue Hintergründe mit Blender-Rohbau als Vorlage:** Laser, Spalt, Farbfelder und Fahrbahn stehen jetzt dort, wo das Rätsel sie braucht; übrig blieb kleine Nacharbeit (Türrahmen in der Basis, Tasse an der Tischkante, Einhorn). Die Raumgröße für Figuren über `skala` 1,0 vorn und die Tiefe aus dem Rohbau, Max an der Glastür nachgemessen.
+- **Code-Sicht zweistufig:** Jedes Paar aus zwei Dingen kostet einen Versuch, auch ohne Pointe; kostenlos sind nur Wörter am selben Ding und das Zurücktauschen. So bleibt die Lösung ein Rätsel und ist nicht durchprobierbar.
+- **Texte in zwei Stufen:** erst Bild-Texte, Längen und fehlende Zeilen, dann KI-Klang in einem eigenen Commit mit Vorher/Nachher-Liste und den Spalten „erhalten?“ und „leichter?“. Vier Vorschläge mussten abgeschwächt werden, weil sie Hinweise deutlicher gemacht hätten.

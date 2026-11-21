@@ -75,6 +75,7 @@ func _lauf() -> void:
 		S.welt_beginnen(welt)
 		await _warte_bis(func(): return _raum_id() != "" and _raum_id() != "wohnzimmer", 15.0)
 		await _warte_bis(func(): return root.get_node("Spiel").in_szene == 0, 30.0)
+		S.in_szene = 0   # die abgebrochene Prolog-Szene lässt den Zähler sonst oben (AP-05, 21.11.)
 	if modus == "ende":
 		for r in _raetsel(welt):
 			Z.loese(r)
@@ -143,6 +144,15 @@ func _aufnahme(welt: String, rid: String) -> void:
 	var raum = root.get_node("R").current
 	var breite := int(raum.get("width")) if raum.get("width") else 640
 	var mx = root.get_node("C").player
+	# Start im Wohnzimmer: die Sofa-Pose („Pose“) bleibt hängen und Max' Hauptbild aus (AP-05, 21.11.)
+	for k in mx.get_children():
+		if str(k.name).begins_with("Pose"):
+			k.queue_free()
+	var haupt = mx.get_node_or_null("Sprite2D")
+	if haupt:
+		haupt.visible = true
+		haupt.modulate.a = 1.0
+	mx.modulate.a = 1.0
 	var info := {"welt": welt, "raum": rid, "modus": modus, "breite": breite, "hotspots": [], "props": [],
 		"figuren": [], "laufbereiche": [], "marker": {}, "bauplan_laufbereich": []}
 	if raum.has_method("bauplan"):

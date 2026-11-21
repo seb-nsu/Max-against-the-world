@@ -135,7 +135,7 @@ Jedes Geräusch hat eine Kennung; die Datei heißt `audio/geraeusche/<Kennung>.o
 | werbeblock_start | commercial break start: cheerful TV sting cut off by static | Zwischenspiele, Beginn des Werbeblocks |
 | umschalten | remote channel change: heavy plastic click and a short static burst | Welt 4, Fernbedienung, jeder Kanalwechsel |
 | zeitfaehre | time ferry departure: hourglass flip and a deep wooden bell | Welt 2, Abfahrt der Zeitfähre an den drei Fährstegen (Nil-Delta, Olympia, Syrakus) |
-| code_sicht | code view toggle: digital shimmer rising then falling | Welt 3, Code-Sicht an und aus (Auswahl der Tausche geht auf und zu) |
+| code_sicht | code view toggle: digital shimmer rising then falling | Welt 3, Code-Sicht an (die Wort-Etiketten im Raum erscheinen zur zweistufigen Wahl) und wieder aus, wenn Max ohne Tausch schließt (Esc oder Rechtsklick); nach einem Tausch klingt stattdessen `glitch` |
 | portalgeraet | portal device battery: three rising electronic beeps | Welt 3, Portalgerät: jede Benutzung und der erste Schuss in Testkammer 1 |
 
 **Max und Pixel, Gegenwart**

@@ -183,18 +183,18 @@ Grundlage: [`bericht.md`](bericht.md) (65 Spiel-Funde, Nachtrag mit 4 Funden aus
 
 ## Kontrolle: jeder Fund einem Paket zugeordnet
 
-| Paket | Funde |
-| --- | --- |
-| AP-01 | W3-01, W3-R01-01, W3-R08-02 |
-| AP-02 | W3-02, W3-03, W3-R06-01, W3-R08-01, W3-R10-02 |
-| AP-03 | W3-04, W3-05, W3-R01-04, W3-R02-02, W3-R02-03, W3-R03-06, W3-R06-04, W3-R12-02, W3-N-01 |
-| AP-04 | W3-12, W3-14, W3-19, W3-R02-01, W3-R03-01, W3-R03-02, W3-R03-03, W3-R03-04, W3-R05-01, W3-R05-03, W3-R06-05, W3-R09-01, W3-R12-04 |
-| AP-05 | W3-07, W3-08, W3-09, W3-10, W3-17, W3-18, W3-R08-03, W3-R08-04, W3-R09-02, W3-R12-01 |
-| AP-06 | W3-15, W3-16, W3-R05-02, W3-NS-01, W3-NS-02, W3-NS-03, W3-NS-04 |
-| AP-07 | W3-11, W3-13, W3-R01-02, W3-R03-05, W3-R07-02, W3-R12-05, W3-N-04, W3-N-05, ND-13 bis ND-16, 50 KI-Klang-Vorschläge, `W3_KAM3_MAX_0070` |
-| AP-08 | W3-N-02, W3-N-03 |
-| AP-09 | W3-06, W3-R01-03, W3-R03-07, W3-R06-02, W3-R06-03, W3-R06-06, W3-R07-01, W3-R08-05, W3-R08-06, W3-R10-01, W3-R11-01, W3-R12-03 |
-| AP-10 | WF-01, WF-02, WF-03, WF-11, WF-14, WF-16 |
-| AP-11 | WF-04 bis WF-10, WF-12, WF-13, WF-15, GD-12, AN-17, L-S01 bis L-S18, L-W01 bis L-W13 |
+| Paket | Funde | Umsetzung (Stand 21. November 2026, Zweig `claude/project-thread-w7ya4x`) |
+| --- | --- | --- |
+| AP-01 | W3-01, W3-R01-01, W3-R08-02 | erledigt, `e4b87eb6`: Pixel-Klicks, Mensch-Test wiederholbar, Kapsel im Büroturm bis R7b gesperrt (Entscheidung Sebastian), Anspieltest über echte Klicks und Gesprächsmenüs. Offen: derselbe Klick-Anspieltest für Welt 1 und 2 (L-S01, `offene-punkte.md`) |
+| AP-02 | W3-02, W3-03, W3-R06-01, W3-R08-01, W3-R10-02 | erledigt, `77f30279` (Sprechanlage als Klickfläche in `3c2e2fe4`): Code-Sicht zweistufig (Entscheidung Sebastian), Bild am Hintergrund, Glastür und Sprechanlage schalten frei, Budget-Zeilen, Etiketten weichen aus |
+| AP-03 | W3-04, W3-05, W3-R01-04, W3-R02-02, W3-R02-03, W3-R03-06, W3-R06-04, W3-R12-02, W3-N-01 | erledigt, `e4b87eb6`: Pfote ortsbezogen, eigene Zeilen, Déjà-vu, Lösung B, blaue Pastille, Kekse, Wecker einmal je Traum, Morse-Tabelle zeigt die Nahansicht. Bewusst anders: Regel 1 gilt weiter erst beim Lesen der Akte (W3-R12-02), damit kein Rätsel leichter wird |
+| AP-04 | W3-12, W3-14, W3-19, W3-R02-01, W3-R03-01, W3-R03-02, W3-R03-03, W3-R03-04, W3-R05-01, W3-R05-03, W3-R06-05, W3-R09-01, W3-R12-04 | erledigt, `3c2e2fe4` (zusammen mit AP-09): Layout aller zwölf Räume neu, Zustands-Klickflächen mit Bedingung, Platzhalter weg, Apothekengasse 1280, Ausgänge, Gehe-Punkte; Platz des Hausmeisters erst nach R8 (`ca6029ef`). Teilweise: Das Zeigerraster kommt in Welt 3 nicht über das Wohnzimmer hinaus, die Abnahme lief über eine Abdeckungsrechnung aus den Aufnahme-JSONs (`belege/umsetzung/ap04_abdeckung.tsv`) |
+| AP-05 | W3-07, W3-08, W3-09, W3-10, W3-17, W3-18, W3-R08-03, W3-R08-04, W3-R09-02, W3-R12-01 | erledigt, `9658b867`; Kapsel der zweiten Fassung `b7fba515` und `35505a58`, Hausmeister rollt neu `63798fd8`: Bild-Pointen, mitsprechende Lautsprecher, talk mit Mund, Schmidt ohne Brille, Hinken, Gänge, Gesten „mit“, Prüfung `grafik_fundstellen.py` in der CI. Zurückgestellt mit Grund (Liste im Werkzeug): Morphäus hält den Kater, schmollender Lautsprecher in Kammer 3, Pixel `tragen`/`schieben`/`vom_schrank_fallen`, Gänge von Deckert und Schmidt |
+| AP-06 | W3-15, W3-16, W3-R05-02, W3-NS-01, W3-NS-02, W3-NS-03, W3-NS-04 | erledigt, `41825190` (3 Gemini-Bilder, etwa 0,21 $) und `9a467e25`: Autos ohne Strich, Pixels Trab ohne Rutschen (alle Welten), Schmidt, Frau mit Mund, Fußlinie von 62 Bewegungen mit Prüfung, Morphäus-Stand, Mopp. Offen: Pixels Gang in der Kühlung im Lauftest (Testaufbau ohne Pixel im Raum) |
+| AP-07 | W3-11, W3-13, W3-R01-02, W3-R03-05, W3-R07-02, W3-R12-05, W3-N-04, W3-N-05, ND-13 bis ND-16, 50 KI-Klang-Vorschläge, `W3_KAM3_MAX_0070` | teilweise, `ca6029ef` (Stufe 1: Bild-Texte, Längen Welt 3/ZS3, 35 Ansehen-Zeilen, Kuckuck, Englisch, Sachfehler 0070) und `818bc0a4` (Stufe 2: 123 Zeilen KI-Klang, Pointen erhalten). Offen: „Ich sage nichts“ sechsmal (Humanizer-Regel 6), KI-Klang-Prüfung für Prolog bis Welt 2, 259 Überlängen anderer Welten (nur Hinweis), W3-N-05 Pixels Handtuch (Bild, Grafik) |
+| AP-08 | W3-N-02, W3-N-03 | erledigt, `f01f7d0b`: eigene Pixelschrift ohne Verzerrung, Morse-Tabelle mit Pfoten und richtigem T, Akte grünlich (DE und EN) |
+| AP-09 | W3-06, W3-R01-03, W3-R03-07, W3-R06-02, W3-R06-03, W3-R06-06, W3-R07-01, W3-R08-05, W3-R08-06, W3-R10-01, W3-R11-01, W3-R12-03 | erledigt mit Rest, `3c2e2fe4` und `85071413`: 24 Hintergründe als `_v02`, 18 Effekte neu, Nachttisch vorn, Autos auf der Fahrbahn, Laser, Spalt, Farbfelder, vereiste Zelle, Raumlicht in den Räumen der Realität. Offen: Stadtstraße nachts ohne eigenes Raumlicht (W3-06), Zeigerraster neu (hängt), Mond- und Sonnen-Klickfläche unter den Porträts prüfen |
+| AP-10 | WF-01, WF-02, WF-03, WF-11, WF-14, WF-16 | Werkzeugteil erledigt, `0ad7006f`: günstiges Gemini-Standardmodell, Referenzen auf dem PR-Zweig mit Alt/Neu-Übersicht, PR-Vorlage mit Prüftor, Raumaufnahme und Zeigerraster als Werkzeuge. Die GitHub-Einstellungen (Branch-Schutz, Auto-Merge, Zweige löschen) setzt Sebastian; ihr Stand ist von hier nicht prüfbar (kein `gh`) |
+| AP-11 | WF-04 bis WF-10, WF-12, WF-13, WF-15, GD-12, AN-17, L-S01 bis L-S18, L-W01 bis L-W13 | teilweise (21.11.): Lessons ergänzt, Doku richtiggestellt (Audio, Entscheidungen, Rätseldoku, Gesten-Regie), Statusliste Welt 3 von Hand nachgeführt, Kontrolltabelle, offene Punkte, Raumaufnahme zeigt Max wieder. Offen: Statusliste aus den Daten erzeugen (WF-04), KI-Protokoll und Ist-Kosten (WF-05, WF-10), Lauf-Rig und Bein-Prüfung ins Repo (WF-08, WF-09), PNG statt JPEG (WF-12), CI-Cache (WF-13), Rezepte aus den Lessons ins `liesmich.md` (WF-15) |
 
 Zählung: AP-01 bis AP-09 enthalten 65 Spiel-Funde aus den Tabellen des Berichts plus 4 aus dem Nachtrag (W3-NS-01 bis -04); AP-10 und AP-11 die 16 Workflow-Funde.
