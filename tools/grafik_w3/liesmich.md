@@ -34,6 +34,8 @@ je Bild, nur Pixel, die noch dem alten Stand gleichen; „form“ für Posen mit
 `hausmeister_mopp.py` dreht den Mopp in den Hausmeister-Posen (Kopf oben weg, Stiel über der Faust, Mopp-Kopf am
 Boden) und färbt das Auge. Danach `reden_ruhe.py <stand> <aus> figur …` und `figuren_einbau.py <quelle> figur …`
 mit `welt3\korrektur_20-11\quelle` als Übergabeordner.
+`hausmeister_rollen.py` baut den Roll-Streifen (W3-B30) aus Bild 0 des Spiel-Blatts neu (Mopp am Boden, gleiche
+Größe wie die Figur); nach `effekte_bild.py`/`effekte_einbau.py` erneut laufen lassen, sonst kommt der alte Streifen zurück.
 
 Korrekturen 20.11., Teil 2 (Review W3-15, W3-16, W3-NS-01, W3-NS-02):
 - `figuren_einbau.py` sucht die Lage der Gesten um die Fußlinie des Stands statt um die Zellunterkante (vorher lagen
