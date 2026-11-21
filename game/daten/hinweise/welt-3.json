@@ -1,6 +1,7 @@
 {
  "abschnitt": "welt-3",
  "sonderzeilen": {
+  "nichts_offen": "W3_HINT_PIX_0010",
   "wartezeile": "W3_HINT_PIX_9995"
  },
  "schritte": [
@@ -13,7 +14,11 @@
    "geloest_schalter": [
     "W3_R01_A_GELOEST"
    ],
-   "objekte": [],
+   "objekte": [
+    "frau_regenschirm",
+    "strassenmusiker_w3",
+    "weinender_mann"
+   ],
    "optional": false,
    "sammelschritt": false,
    "hinweise": [
@@ -42,7 +47,9 @@
    "geloest_schalter": [
     "W3_R01_B_GELOEST"
    ],
-   "objekte": [],
+   "objekte": [
+    "deckert"
+   ],
    "optional": false,
    "sammelschritt": false,
    "hinweise": [
@@ -69,7 +76,10 @@
    "geloest_schalter": [
     "W3_R02_GELOEST"
    ],
-   "objekte": [],
+   "objekte": [
+    "herr_vier",
+    "nudelbude"
+   ],
    "optional": false,
    "sammelschritt": false,
    "hinweise": [
@@ -99,7 +109,11 @@
    "geloest_schalter": [
     "W3_R03_A_GELOEST"
    ],
-   "objekte": [],
+   "objekte": [
+    "automat",
+    "pastillenautomat",
+    "pixel"
+   ],
    "optional": false,
    "sammelschritt": false,
    "hinweise": [
@@ -130,7 +144,9 @@
     "W3_R03_B_GELOEST"
    ],
    "objekte": [
-    "rote_pastille"
+    "rote_pastille",
+    "automat",
+    "blaue_pastille"
    ],
    "optional": false,
    "sammelschritt": false,
@@ -160,7 +176,10 @@
    "geloest_schalter": [
     "W3_R04_GELOEST"
    ],
-   "objekte": [],
+   "objekte": [
+    "orakel_oma",
+    "sparschwein"
+   ],
    "optional": false,
    "sammelschritt": false,
    "hinweise": [
@@ -189,7 +208,10 @@
    "geloest_schalter": [
     "W3_R05_GELOEST"
    ],
-   "objekte": [],
+   "objekte": [
+    "tuer",
+    "schmidt"
+   ],
    "optional": false,
    "sammelschritt": false,
    "hinweise": [
@@ -220,7 +242,10 @@
     "W3_R06_A_GELOEST"
    ],
    "objekte": [
-    "kaffeetasse"
+    "kaffeetasse",
+    "klone",
+    "klon",
+    "schmidt"
    ],
    "optional": false,
    "sammelschritt": false,
@@ -252,7 +277,9 @@
     "W3_R06_B_GELOEST"
    ],
    "objekte": [
-    "kaffeetasse"
+    "kaffeetasse",
+    "klone",
+    "klon"
    ],
    "optional": false,
    "sammelschritt": false,
@@ -286,7 +313,9 @@
    ],
    "objekte": [
     "farbcode_zettel",
-    "morse_tabelle"
+    "morse_tabelle",
+    "farbcode_an_der_wand",
+    "terminal"
    ],
    "optional": false,
    "sammelschritt": false,
@@ -316,7 +345,9 @@
    "geloest_schalter": [
     "W3_R07_B_GELOEST"
    ],
-   "objekte": [],
+   "objekte": [
+    "patch_panel"
+   ],
    "optional": false,
    "sammelschritt": false,
    "hinweise": [
@@ -346,7 +377,9 @@
     "W3_R08_GELOEST"
    ],
    "objekte": [
-    "telefonbuchseite"
+    "telefonbuchseite",
+    "hausmeister",
+    "telefonbuch_in_der_zelle"
    ],
    "optional": false,
    "sammelschritt": false,
@@ -378,7 +411,10 @@
     "W3_R09_A_GELOEST"
    ],
    "objekte": [
-    "zugangskarte"
+    "zugangskarte",
+    "kartenleser",
+    "datenanschluss",
+    "panzertuer"
    ],
    "optional": false,
    "sammelschritt": false,
@@ -408,7 +444,10 @@
    "geloest_schalter": [
     "W3_KAMMER_1_GELOEST"
    ],
-   "objekte": [],
+   "objekte": [
+    "bernd",
+    "bodenschalter"
+   ],
    "optional": false,
    "sammelschritt": false,
    "hinweise": [
@@ -439,7 +478,9 @@
     "W3_KAMMER_2_GELOEST"
    ],
    "objekte": [
-    "gummihuhn"
+    "gummihuhn",
+    "laser",
+    "sockel"
    ],
    "optional": false,
    "sammelschritt": false,
@@ -471,7 +512,10 @@
     "W3_KAMMER_3_GELOEST"
    ],
    "objekte": [
-    "gummihuhn"
+    "gummihuhn",
+    "tuer",
+    "bernd",
+    "lautsprecher"
    ],
    "optional": false,
    "sammelschritt": false,
@@ -505,7 +549,8 @@
     "W3_R10_GELOEST"
    ],
    "objekte": [
-    "schmidts_akte"
+    "schmidts_akte",
+    "mutti"
    ],
    "optional": false,
    "sammelschritt": false,
@@ -539,7 +584,9 @@
     "W3_R11_GELOEST"
    ],
    "objekte": [
-    "omas_kekse"
+    "omas_kekse",
+    "energiezelle",
+    "fenster"
    ],
    "optional": false,
    "sammelschritt": false,
@@ -570,7 +617,8 @@
     "W3_R12_GELOEST"
    ],
    "objekte": [
-    "rezeptkarte"
+    "rezeptkarte",
+    "herr_vier"
    ],
    "optional": false,
    "sammelschritt": false,
@@ -600,7 +648,11 @@
    "geloest_schalter": [
     "W3_R13_GELOEST"
    ],
-   "objekte": [],
+   "objekte": [
+    "kalles_tasse",
+    "tisch_mit_kalles_tasse",
+    "piepsi"
+   ],
    "optional": false,
    "sammelschritt": false,
    "hinweise": [

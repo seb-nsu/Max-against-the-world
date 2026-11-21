@@ -1,0 +1,18 @@
+Max Ausgang Büro: Raum=buero_50 Zeilen=[]
+BILD GS-01_buero_ausgang_gesperrt
+nach Wechsel: Raum=widerstandsbasis Spieler=Pixel ist_pixel=true
+Pixel klickt KallesTasse (unter Maus: -): Zeilen=["SYS_ERS_PIX_0200", "W3_BAS_PIX_1110", "SYS_ERS_PIX_0200_2"] | R13=false R7b=false NACHT=false SCHNEE=false Ebene=simulation Raum=widerstandsbasis
+  KallesTasse per on_click(): Zeilen=["W3_BAS_PIX_1110"] | R13=false R7b=false NACHT=false SCHNEE=false Ebene=simulation Raum=widerstandsbasis
+Pixel klickt PatchPanel (unter Maus: -): Zeilen=["SYS_ERS_PIX_0210", "SYS_ERS_PIX_0210_2"] | R13=false R7b=false NACHT=false SCHNEE=false Ebene=simulation Raum=widerstandsbasis
+BILD GS-01_pixel_klickt_PatchPanel
+  PatchPanel per on_click(): Zeilen=["SYS_ERS_PIX_0130", "SYS_ERS_PIX_0130_2"] | R13=false R7b=false NACHT=false SCHNEE=false Ebene=simulation Raum=widerstandsbasis
+Pixel klickt Stromkasten (unter Maus: -): Zeilen=["SYS_ERS_PIX_0200", "W3_BAS_PIX_1020", "SYS_ERS_PIX_0200_2"] | R13=false R7b=false NACHT=false SCHNEE=false Ebene=simulation Raum=widerstandsbasis
+  Stromkasten per on_click(): Zeilen=["SYS_ERS_PIX_0210", "SYS_ERS_PIX_0210_2"] | R13=false R7b=false NACHT=false SCHNEE=false Ebene=simulation Raum=widerstandsbasis
+Pixel klickt Fenster (unter Maus: -): Zeilen=["SYS_ERS_PIX_0330"] | R13=false R7b=false NACHT=false SCHNEE=false Ebene=simulation Raum=widerstandsbasis
+  Fenster per on_click(): Zeilen=["SYS_ERS_PIX_0280", "SYS_ERS_PIX_0280_2"] | R13=false R7b=false NACHT=false SCHNEE=false Ebene=simulation Raum=widerstandsbasis
+Pixel klickt MaxKapsel (unter Maus: -): Zeilen=["W3_BAS_PIX_0530", "W3_BAS_PIX_0530_2"] | R13=false R7b=false NACHT=false SCHNEE=false Ebene=simulation Raum=widerstandsbasis
+BILD GS-01_pixel_klickt_MaxKapsel
+  MaxKapsel per on_click(): Zeilen=["W3_BAS_PIX_0530", "W3_BAS_PIX_0530_2"] | R13=false R7b=false NACHT=false SCHNEE=false Ebene=simulation Raum=widerstandsbasis
+Pixel klickt Lueftungsschacht (unter Maus: -): Zeilen=["SYS_ERS_PIX_0180", "W3_BAS_PIX_1120", "SYS_ERS_PIX_0180_2"] | R13=false R7b=false NACHT=false SCHNEE=false Ebene=simulation Raum=widerstandsbasis
+  Lueftungsschacht per on_click(): Zeilen=["W3_BAS_PIX_1120"] | R13=false R7b=false NACHT=false SCHNEE=false Ebene=simulation Raum=widerstandsbasis
+Gegenprobe Regelaufruf benutzen max_kapsel: Zeilen=["W3_BAS_PIX_0540", "W3_BAS_NAR_0010", "W3_BAS_PIX_0020"] Ebene=realitaet Raum=widerstandsbasis

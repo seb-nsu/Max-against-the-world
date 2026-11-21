@@ -1,0 +1,1053 @@
+{
+  "bauplan_laufbereich": [
+    [
+      30.0,
+      330.0
+    ],
+    [
+      100.0,
+      304.0
+    ],
+    [
+      470.0,
+      300.0
+    ],
+    [
+      1095.0,
+      306.0
+    ],
+    [
+      1120.0,
+      330.0
+    ],
+    [
+      1272.0,
+      335.0
+    ],
+    [
+      1272.0,
+      356.0
+    ],
+    [
+      30.0,
+      356.0
+    ]
+  ],
+  "breite": 1280,
+  "figuren": [
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "entsetzt",
+        "fluestern",
+        "idle",
+        "jubel",
+        "kabel",
+        "lachen",
+        "tabelle",
+        "talk",
+        "tippen",
+        "zeigen"
+      ],
+      "baseline": 0,
+      "name": "Kalle",
+      "poly": [
+        [
+          797,
+          177
+        ],
+        [
+          833,
+          177
+        ],
+        [
+          833,
+          318
+        ],
+        [
+          797,
+          318
+        ]
+      ],
+      "pos": [
+        815.0,
+        318.0
+      ],
+      "rect": [
+        765,
+        166,
+        865,
+        318
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.718571424484253,
+        0.718571424484253
+      ],
+      "variante": "",
+      "walk_speed": 120.0,
+      "z": 0
+    },
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "essen",
+        "idle",
+        "karton",
+        "talk"
+      ],
+      "baseline": 0,
+      "name": "Rebellin",
+      "poly": [
+        [
+          682,
+          178
+        ],
+        [
+          718,
+          178
+        ],
+        [
+          718,
+          320
+        ],
+        [
+          682,
+          320
+        ]
+      ],
+      "pos": [
+        700.0,
+        320.0
+      ],
+      "rect": [
+        649,
+        167,
+        751,
+        320
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.722857117652893,
+        0.722857117652893
+      ],
+      "variante": "",
+      "walk_speed": 120.0,
+      "z": 0
+    },
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "drucken",
+        "fahren",
+        "hochfahren",
+        "idle",
+        "piepen"
+      ],
+      "baseline": 0,
+      "name": "Piepsi",
+      "poly": [
+        [
+          1223,
+          288
+        ],
+        [
+          1253,
+          288
+        ],
+        [
+          1253,
+          334
+        ],
+        [
+          1223,
+          334
+        ]
+      ],
+      "pos": [
+        1238.0,
+        334.0
+      ],
+      "rect": [
+        1219,
+        287,
+        1258,
+        334
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.752857148647308,
+        0.752857148647308
+      ],
+      "variante": "",
+      "walk_speed": 120.0,
+      "z": 0
+    },
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "aufheben",
+        "barfuss",
+        "benutzen",
+        "bohne",
+        "code_sicht",
+        "diskus",
+        "fallen",
+        "gaehnen",
+        "gedankentrick",
+        "gehen_hinten",
+        "gehen_vorn",
+        "handy",
+        "heisser_sand",
+        "hexenschuss",
+        "hexenschuss_gehen",
+        "hinsetzen",
+        "hochhalten",
+        "idle",
+        "kapsel_aufstehen",
+        "kapsel_aussteigen",
+        "kapsel_einsteigen",
+        "kapsel_hinlegen",
+        "katapult",
+        "kochloeffel",
+        "kopf_kratzen",
+        "melken",
+        "nudeln",
+        "pastille",
+        "portalgeraet",
+        "regen_wischen",
+        "ruecken_halten",
+        "schlucken",
+        "schulterzucken",
+        "speer",
+        "stempel_ansehen",
+        "talk",
+        "talk_hand",
+        "tasche",
+        "tippen",
+        "treppe_walk",
+        "vom_boden_aufstehen",
+        "vom_sofa_aufstehen",
+        "wackeln",
+        "walk",
+        "walk_alt",
+        "walk_d",
+        "walk_l",
+        "walk_r",
+        "walk_u",
+        "wenden",
+        "zeigen",
+        "zeitlupe"
+      ],
+      "baseline": 0,
+      "name": "Max",
+      "poly": [
+        [
+          623,
+          189
+        ],
+        [
+          657,
+          189
+        ],
+        [
+          657,
+          330
+        ],
+        [
+          623,
+          330
+        ]
+      ],
+      "pos": [
+        640.0,
+        330.0
+      ],
+      "rect": [
+        536,
+        186,
+        744,
+        330
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.744285702705383,
+        0.744285702705383
+      ],
+      "variante": "",
+      "walk_speed": 150.0,
+      "z": 0
+    },
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "aufstehen",
+        "aufwachen",
+        "fauchen",
+        "gehen_hinten",
+        "gehen_vorn",
+        "haare",
+        "hebel",
+        "hinlegen",
+        "idle",
+        "kabel",
+        "kriechen",
+        "minka_umgarnen",
+        "morse",
+        "ohrfeige",
+        "putzen",
+        "schieben",
+        "schlafen",
+        "schnuppern",
+        "schwanz_zucken",
+        "springen",
+        "stehen",
+        "talk",
+        "talk_alt",
+        "tasse",
+        "tragen",
+        "vom_schrank_fallen",
+        "walk",
+        "walk_d",
+        "walk_l",
+        "walk_r",
+        "walk_u"
+      ],
+      "baseline": 0,
+      "name": "Pixel",
+      "poly": [
+        [
+          655,
+          300
+        ],
+        [
+          715,
+          300
+        ],
+        [
+          715,
+          330
+        ],
+        [
+          655,
+          330
+        ]
+      ],
+      "pos": [
+        685.0,
+        330.0
+      ],
+      "rect": [
+        638,
+        253,
+        732,
+        330
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.744285702705383,
+        0.744285702705383
+      ],
+      "variante": "",
+      "walk_speed": 160.0,
+      "z": 0
+    }
+  ],
+  "hotspots": [
+    {
+      "baseline": 57,
+      "klickbar": true,
+      "name": "Kapseln",
+      "poly": [
+        [
+          225,
+          182
+        ],
+        [
+          450,
+          182
+        ],
+        [
+          450,
+          297
+        ],
+        [
+          225,
+          297
+        ]
+      ],
+      "pos": [
+        337.5,
+        239.5
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_KAPSELN",
+      "walk_to": [
+        -7.5,
+        82.5
+      ]
+    },
+    {
+      "baseline": 57,
+      "klickbar": true,
+      "name": "MaxKapsel",
+      "poly": [
+        [
+          112,
+          182
+        ],
+        [
+          225,
+          182
+        ],
+        [
+          225,
+          297
+        ],
+        [
+          112,
+          297
+        ]
+      ],
+      "pos": [
+        168.5,
+        239.5
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_MAX_KAPSEL",
+      "walk_to": [
+        1.5,
+        86.5
+      ]
+    },
+    {
+      "baseline": 44,
+      "klickbar": true,
+      "name": "Terminal",
+      "poly": [
+        [
+          500,
+          155
+        ],
+        [
+          640,
+          155
+        ],
+        [
+          640,
+          243
+        ],
+        [
+          500,
+          243
+        ]
+      ],
+      "pos": [
+        570.0,
+        199.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_TERMINAL",
+      "walk_to": [
+        -5.0,
+        123.0
+      ]
+    },
+    {
+      "baseline": 35,
+      "klickbar": true,
+      "name": "Fenster",
+      "poly": [
+        [
+          256,
+          4
+        ],
+        [
+          344,
+          4
+        ],
+        [
+          344,
+          74
+        ],
+        [
+          256,
+          74
+        ]
+      ],
+      "pos": [
+        300.0,
+        39.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_FENSTER",
+      "walk_to": [
+        0.0,
+        283.0
+      ]
+    },
+    {
+      "baseline": 18,
+      "klickbar": true,
+      "name": "Lueftungsschacht",
+      "poly": [
+        [
+          1122,
+          296
+        ],
+        [
+          1242,
+          296
+        ],
+        [
+          1242,
+          332
+        ],
+        [
+          1122,
+          332
+        ]
+      ],
+      "pos": [
+        1182.0,
+        314.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_LUEFTUNGSSCHACHT",
+      "walk_to": [
+        -2.0,
+        26.0
+      ]
+    },
+    {
+      "baseline": 36,
+      "klickbar": true,
+      "name": "Stromkasten",
+      "poly": [
+        [
+          650,
+          150
+        ],
+        [
+          730,
+          150
+        ],
+        [
+          730,
+          222
+        ],
+        [
+          650,
+          222
+        ]
+      ],
+      "pos": [
+        690.0,
+        186.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_STROMKASTEN",
+      "walk_to": [
+        0.0,
+        136.0
+      ]
+    },
+    {
+      "baseline": 58,
+      "klickbar": true,
+      "name": "PatchPanel",
+      "poly": [
+        [
+          443,
+          92
+        ],
+        [
+          513,
+          92
+        ],
+        [
+          513,
+          208
+        ],
+        [
+          443,
+          208
+        ]
+      ],
+      "pos": [
+        478.0,
+        150.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_PATCH_PANEL",
+      "walk_to": [
+        0.0,
+        172.0
+      ]
+    },
+    {
+      "baseline": 139,
+      "klickbar": true,
+      "name": "Pizzakartons",
+      "poly": [
+        [
+          1095,
+          15
+        ],
+        [
+          1190,
+          15
+        ],
+        [
+          1190,
+          293
+        ],
+        [
+          1095,
+          293
+        ]
+      ],
+      "pos": [
+        1142.5,
+        154.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_PIZZAKARTONS",
+      "walk_to": [
+        -32.5,
+        170.0
+      ]
+    },
+    {
+      "baseline": 47,
+      "klickbar": true,
+      "name": "Handtuch",
+      "poly": [
+        [
+          1022,
+          112
+        ],
+        [
+          1054,
+          112
+        ],
+        [
+          1054,
+          207
+        ],
+        [
+          1022,
+          207
+        ]
+      ],
+      "pos": [
+        1038.0,
+        159.5
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_HANDTUCH",
+      "walk_to": [
+        0.0,
+        162.5
+      ]
+    },
+    {
+      "baseline": 117,
+      "klickbar": true,
+      "name": "Grossrechner",
+      "poly": [
+        [
+          865,
+          60
+        ],
+        [
+          955,
+          60
+        ],
+        [
+          955,
+          295
+        ],
+        [
+          865,
+          295
+        ]
+      ],
+      "pos": [
+        910.0,
+        177.5
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_GROSSRECHNER",
+      "walk_to": [
+        -5.0,
+        144.5
+      ]
+    },
+    {
+      "baseline": 67,
+      "klickbar": true,
+      "name": "Steuerpult",
+      "poly": [
+        [
+          745,
+          155
+        ],
+        [
+          865,
+          155
+        ],
+        [
+          865,
+          290
+        ],
+        [
+          745,
+          290
+        ]
+      ],
+      "pos": [
+        805.0,
+        222.5
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_STEUERPULT",
+      "walk_to": [
+        -5.0,
+        99.5
+      ]
+    },
+    {
+      "baseline": 45,
+      "klickbar": true,
+      "name": "TischMitKallesTasse",
+      "poly": [
+        [
+          950,
+          222
+        ],
+        [
+          1090,
+          222
+        ],
+        [
+          1090,
+          312
+        ],
+        [
+          950,
+          312
+        ]
+      ],
+      "pos": [
+        1020.0,
+        267.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_TISCH_MIT_KALLES_TASSE",
+      "walk_to": [
+        0.0,
+        55.0
+      ]
+    },
+    {
+      "baseline": 15,
+      "klickbar": true,
+      "name": "KallesTasse",
+      "poly": [
+        [
+          1038,
+          208
+        ],
+        [
+          1070,
+          208
+        ],
+        [
+          1070,
+          238
+        ],
+        [
+          1038,
+          238
+        ]
+      ],
+      "pos": [
+        1054.0,
+        223.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_KALLES_TASSE",
+      "walk_to": [
+        -4.0,
+        99.0
+      ]
+    },
+    {
+      "baseline": 60,
+      "klickbar": true,
+      "name": "Plakat",
+      "poly": [
+        [
+          640,
+          20
+        ],
+        [
+          720,
+          20
+        ],
+        [
+          720,
+          140
+        ],
+        [
+          640,
+          140
+        ]
+      ],
+      "pos": [
+        680.0,
+        80.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_PLAKAT",
+      "walk_to": [
+        0.0,
+        242.0
+      ]
+    },
+    {
+      "baseline": 15,
+      "klickbar": true,
+      "name": "Rebellen",
+      "poly": [
+        [
+          340,
+          230
+        ],
+        [
+          740,
+          230
+        ],
+        [
+          740,
+          260
+        ],
+        [
+          340,
+          260
+        ]
+      ],
+      "pos": [
+        540.0,
+        245.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_REBELLEN",
+      "walk_to": [
+        0.0,
+        85.0
+      ]
+    },
+    {
+      "baseline": 20,
+      "klickbar": true,
+      "name": "Kaffeepfuetze",
+      "poly": [
+        [
+          760,
+          318
+        ],
+        [
+          1230,
+          318
+        ],
+        [
+          1230,
+          358
+        ],
+        [
+          760,
+          358
+        ]
+      ],
+      "pos": [
+        995.0,
+        338.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_KAFFEEPFUETZE",
+      "walk_to": [
+        -95.0,
+        -2.0
+      ]
+    },
+    {
+      "baseline": 141,
+      "klickbar": true,
+      "name": "AusgangUnterstadtStrasse",
+      "poly": [
+        [
+          12,
+          48
+        ],
+        [
+          104,
+          48
+        ],
+        [
+          104,
+          330
+        ],
+        [
+          12,
+          330
+        ]
+      ],
+      "pos": [
+        58.0,
+        189.0
+      ],
+      "sichtbar": true,
+      "text": "UI_RAUM_UNTERSTADT_STRASSE",
+      "walk_to": [
+        22.0,
+        151.0
+      ]
+    },
+    {
+      "baseline": 18,
+      "klickbar": true,
+      "name": "AusgangKuehlung",
+      "poly": [
+        [
+          1122,
+          296
+        ],
+        [
+          1242,
+          296
+        ],
+        [
+          1242,
+          332
+        ],
+        [
+          1122,
+          332
+        ]
+      ],
+      "pos": [
+        1182.0,
+        314.0
+      ],
+      "sichtbar": false,
+      "text": "UI_RAUM_KUEHLUNG",
+      "walk_to": [
+        -2.0,
+        26.0
+      ]
+    }
+  ],
+  "kamera_max": [
+    640.0,
+    180.0
+  ],
+  "laufbereiche": [
+    {
+      "name": "Boden",
+      "polys": [
+        [
+          [
+            30,
+            330
+          ],
+          [
+            100,
+            304
+          ],
+          [
+            470,
+            300
+          ],
+          [
+            1095,
+            306
+          ],
+          [
+            1120,
+            330
+          ],
+          [
+            1272,
+            335
+          ],
+          [
+            1272,
+            356
+          ],
+          [
+            30,
+            356
+          ]
+        ]
+      ]
+    }
+  ],
+  "marker": {
+    "Start": [
+      640.0,
+      330.0
+    ],
+    "VonKapsel": [
+      170.0,
+      326.0
+    ],
+    "VonKuehlung": [
+      1180.0,
+      340.0
+    ],
+    "VonStadtstrasse": [
+      170.0,
+      326.0
+    ],
+    "VonTestkammer1": [
+      170.0,
+      326.0
+    ],
+    "VonUnterstadtStrasse": [
+      95.0,
+      336.0
+    ]
+  },
+  "modus": "var_w3_schnee",
+  "props": [
+    {
+      "baseline": -180,
+      "klickbar": false,
+      "name": "Background",
+      "poly": [],
+      "pos": [
+        640.0,
+        0.0
+      ],
+      "rect": [
+        0,
+        0,
+        1280,
+        360
+      ],
+      "sichtbar": true,
+      "text": "UI_RAUM_WIDERSTANDSBASIS",
+      "walk_to": [
+        0.0,
+        180.0
+      ],
+      "z": -1
+    }
+  ],
+  "raum": "widerstandsbasis",
+  "skala": 0.8,
+  "tiefe": 0.85,
+  "welt": "welt-3"
+}

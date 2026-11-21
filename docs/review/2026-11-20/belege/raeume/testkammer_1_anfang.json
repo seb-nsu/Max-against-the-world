@@ -1,0 +1,580 @@
+{
+  "bauplan_laufbereich": [
+    [
+      105.0,
+      294.0
+    ],
+    [
+      145.0,
+      266.0
+    ],
+    [
+      495.0,
+      266.0
+    ],
+    [
+      552.0,
+      296.0
+    ],
+    [
+      548.0,
+      330.0
+    ],
+    [
+      540.0,
+      356.0
+    ],
+    [
+      0.0,
+      356.0
+    ],
+    [
+      30.0,
+      330.0
+    ]
+  ],
+  "breite": 640,
+  "figuren": [
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "davonschweben",
+        "idle",
+        "talk"
+      ],
+      "baseline": 0,
+      "name": "Bernd",
+      "poly": [
+        [
+          386,
+          273
+        ],
+        [
+          414,
+          273
+        ],
+        [
+          414,
+          312
+        ],
+        [
+          386,
+          312
+        ]
+      ],
+      "pos": [
+        400.0,
+        312.0
+      ],
+      "rect": [
+        373,
+        261,
+        427,
+        312
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.7217777967453,
+        0.7217777967453
+      ],
+      "variante": "",
+      "walk_speed": 120.0,
+      "z": 0
+    },
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "aufheben",
+        "barfuss",
+        "benutzen",
+        "bohne",
+        "code_sicht",
+        "diskus",
+        "fallen",
+        "gaehnen",
+        "gedankentrick",
+        "gehen_hinten",
+        "gehen_vorn",
+        "handy",
+        "heisser_sand",
+        "hexenschuss",
+        "hexenschuss_gehen",
+        "hinsetzen",
+        "hochhalten",
+        "idle",
+        "kapsel_aufstehen",
+        "kapsel_aussteigen",
+        "kapsel_einsteigen",
+        "kapsel_hinlegen",
+        "katapult",
+        "kochloeffel",
+        "kopf_kratzen",
+        "melken",
+        "nudeln",
+        "pastille",
+        "portalgeraet",
+        "regen_wischen",
+        "ruecken_halten",
+        "schlucken",
+        "schulterzucken",
+        "speer",
+        "stempel_ansehen",
+        "talk",
+        "talk_hand",
+        "tasche",
+        "tippen",
+        "treppe_walk",
+        "vom_boden_aufstehen",
+        "vom_sofa_aufstehen",
+        "wackeln",
+        "walk",
+        "walk_alt",
+        "walk_d",
+        "walk_l",
+        "walk_r",
+        "walk_u",
+        "wenden",
+        "zeigen",
+        "zeitlupe"
+      ],
+      "baseline": 0,
+      "name": "Max",
+      "poly": [
+        [
+          303,
+          182
+        ],
+        [
+          337,
+          182
+        ],
+        [
+          337,
+          322
+        ],
+        [
+          303,
+          322
+        ]
+      ],
+      "pos": [
+        320.0,
+        322.0
+      ],
+      "rect": [
+        216,
+        179,
+        424,
+        322
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.739555537700653,
+        0.739555537700653
+      ],
+      "variante": "",
+      "walk_speed": 150.0,
+      "z": 0
+    },
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "aufstehen",
+        "aufwachen",
+        "fauchen",
+        "gehen_hinten",
+        "gehen_vorn",
+        "haare",
+        "hebel",
+        "hinlegen",
+        "idle",
+        "kabel",
+        "kriechen",
+        "minka_umgarnen",
+        "morse",
+        "ohrfeige",
+        "putzen",
+        "schieben",
+        "schlafen",
+        "schnuppern",
+        "schwanz_zucken",
+        "springen",
+        "stehen",
+        "talk",
+        "talk_alt",
+        "tasse",
+        "tragen",
+        "vom_schrank_fallen",
+        "walk",
+        "walk_d",
+        "walk_l",
+        "walk_r",
+        "walk_u"
+      ],
+      "baseline": 0,
+      "name": "Pixel",
+      "poly": [
+        [
+          335,
+          292
+        ],
+        [
+          395,
+          292
+        ],
+        [
+          395,
+          322
+        ],
+        [
+          335,
+          322
+        ]
+      ],
+      "pos": [
+        365.0,
+        322.0
+      ],
+      "rect": [
+        318,
+        246,
+        412,
+        322
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.739555537700653,
+        0.739555537700653
+      ],
+      "variante": "",
+      "walk_speed": 160.0,
+      "z": 0
+    }
+  ],
+  "hotspots": [
+    {
+      "baseline": 21,
+      "klickbar": true,
+      "name": "PortalgeraetInDerHalterung",
+      "poly": [
+        [
+          106,
+          180
+        ],
+        [
+          138,
+          180
+        ],
+        [
+          138,
+          222
+        ],
+        [
+          106,
+          222
+        ]
+      ],
+      "pos": [
+        122.0,
+        201.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_PORTALGERAET_IN_DER_HALTERUNG",
+      "walk_to": [
+        6.0,
+        119.0
+      ]
+    },
+    {
+      "baseline": 20,
+      "klickbar": true,
+      "name": "Bodenschalter",
+      "poly": [
+        [
+          278,
+          282
+        ],
+        [
+          364,
+          282
+        ],
+        [
+          364,
+          322
+        ],
+        [
+          278,
+          322
+        ]
+      ],
+      "pos": [
+        321.0,
+        302.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_BODENSCHALTER",
+      "walk_to": [
+        -1.0,
+        36.0
+      ]
+    },
+    {
+      "baseline": 52,
+      "klickbar": true,
+      "name": "Pappkuchen",
+      "poly": [
+        [
+          555,
+          250
+        ],
+        [
+          625,
+          250
+        ],
+        [
+          625,
+          355
+        ],
+        [
+          555,
+          355
+        ]
+      ],
+      "pos": [
+        590.0,
+        302.5
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_PAPPKUCHEN",
+      "walk_to": [
+        -62.0,
+        31.5
+      ]
+    },
+    {
+      "baseline": 9,
+      "klickbar": true,
+      "name": "Lautsprecher",
+      "poly": [
+        [
+          446,
+          40
+        ],
+        [
+          488,
+          40
+        ],
+        [
+          488,
+          58
+        ],
+        [
+          446,
+          58
+        ]
+      ],
+      "pos": [
+        467.0,
+        49.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_LAUTSPRECHER",
+      "walk_to": [
+        -37.0,
+        243.0
+      ]
+    },
+    {
+      "baseline": 85,
+      "klickbar": true,
+      "name": "Wandplatten",
+      "poly": [
+        [
+          150,
+          85
+        ],
+        [
+          490,
+          85
+        ],
+        [
+          490,
+          255
+        ],
+        [
+          150,
+          255
+        ]
+      ],
+      "pos": [
+        320.0,
+        170.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_WANDPLATTEN",
+      "walk_to": [
+        0.0,
+        122.0
+      ]
+    },
+    {
+      "baseline": 18,
+      "klickbar": true,
+      "name": "Halterung",
+      "poly": [
+        [
+          108,
+          184
+        ],
+        [
+          136,
+          184
+        ],
+        [
+          136,
+          220
+        ],
+        [
+          108,
+          220
+        ]
+      ],
+      "pos": [
+        122.0,
+        202.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_HALTERUNG",
+      "walk_to": [
+        6.0,
+        118.0
+      ]
+    },
+    {
+      "baseline": 91,
+      "klickbar": true,
+      "name": "AusgangTestkammer2",
+      "poly": [
+        [
+          518,
+          104
+        ],
+        [
+          560,
+          104
+        ],
+        [
+          560,
+          286
+        ],
+        [
+          518,
+          286
+        ]
+      ],
+      "pos": [
+        539.0,
+        195.0
+      ],
+      "sichtbar": true,
+      "text": "UI_RAUM_TESTKAMMER_2",
+      "walk_to": [
+        -17.0,
+        103.0
+      ]
+    }
+  ],
+  "kamera_max": [
+    320.0,
+    180.0
+  ],
+  "laufbereiche": [
+    {
+      "name": "Boden",
+      "polys": [
+        [
+          [
+            105,
+            294
+          ],
+          [
+            145,
+            266
+          ],
+          [
+            495,
+            266
+          ],
+          [
+            552,
+            296
+          ],
+          [
+            548,
+            330
+          ],
+          [
+            540,
+            356
+          ],
+          [
+            0,
+            356
+          ],
+          [
+            30,
+            330
+          ]
+        ]
+      ]
+    }
+  ],
+  "marker": {
+    "Start": [
+      320.0,
+      322.0
+    ],
+    "VonKapsel": [
+      95.0,
+      322.0
+    ],
+    "VonTestkammer2": [
+      510.0,
+      300.0
+    ],
+    "VonWiderstandsbasis": [
+      95.0,
+      322.0
+    ]
+  },
+  "modus": "anfang",
+  "props": [
+    {
+      "baseline": -180,
+      "klickbar": false,
+      "name": "Background",
+      "poly": [],
+      "pos": [
+        320.0,
+        0.0
+      ],
+      "rect": [
+        0,
+        0,
+        640,
+        360
+      ],
+      "sichtbar": true,
+      "text": "UI_RAUM_TESTKAMMER_1",
+      "walk_to": [
+        0.0,
+        180.0
+      ],
+      "z": -1
+    }
+  ],
+  "raum": "testkammer_1",
+  "skala": 0.8,
+  "tiefe": 0.8,
+  "welt": "welt-3"
+}

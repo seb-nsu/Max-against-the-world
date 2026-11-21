@@ -21,6 +21,9 @@ Geprüft wird:
      Lieder-Tabelle gibt es (Fehler).
   6. Nahansichten: Summe aller nahansicht: true und aller Einträge unter
      nahansichten: über alle Welt-Tabellen ist NAHANSICHTEN_GESAMT (Fehler).
+  7. Raumszenen: Szenenbreite = Breite des Hintergrunds, und in Räumen mit fertigem
+     Hintergrund zeigt kein Prop auf einen Platzhalter oder die Platzhalterfarbe (Fehler);
+     Ausgänge unter 50 px, Klickflächen unter der Leiste oben oder über den Rand (Warnung).
 
 Fehler (exit 1) müssen behoben werden, Warnungen werden geprüft.
 """
@@ -74,6 +77,12 @@ ZEILE_RE = re.compile(r"^([A-Z]+[0-9]?)_([A-Z0-9]+)_([A-Z0-9]+)_(\d{4})$")
 OHNE_ZEHNER = {"HINT", "ERS", "WDH", "PLA"}  # Szenen-Codes mit eigenem Nummernschema
 MAX_ZEICHEN = 120
 MAX_BLASE = 140
+# Erzählzeilen (NAR) stehen höchstens 8 s oben im Bild (13 Zeichen je Sekunde): 100 Zeichen je Blase
+MAX_NAR = 100
+# Längen (Blasen, NAR, englische Spalte) brechen ab für Abschnitte, die schon gekürzt sind
+# (Review 20.11., W3-11); die übrigen melden sie als Hinweis, bis sie gekürzt sind.
+LAENGE_STRENG_ORTE = ("prolog", "welt-1", "welt-2", "welt-3")   # deutsche Blasen über MAX_BLASE
+LAENGE_STRENG_PRAEFIX = ("W3_", "ZS3_")                          # dazu NAR-Länge und englische Spalte
 # Festgelegte Zahl der Nahansichten im ganzen Spiel (entscheidungen.md)
 NAHANSICHTEN_GESAMT = 15
 
@@ -383,7 +392,11 @@ def pruefe_skript(ab, d, codes, kuerzel, alle_ids):
                 # Blasen über 140 Zeichen werden fünfzeilig und wachsen hinter die Porträts
                 # (Review Prolog und Welt 1, Fund 10): mit „//“ teilen
                 if len(teil.strip()) > MAX_BLASE:
-                    (W if any(a in ort for a in ("prolog", "welt-1", "welt-2")) else H)(ort, f"{roh}: Blase mit {len(teil.strip())} Zeichen (über {MAX_BLASE}), mit „//“ teilen")
+                    streng = any(a in ort for a in LAENGE_STRENG_ORTE) or roh.startswith(LAENGE_STRENG_PRAEFIX)
+                    (W if streng else H)(ort, f"{roh}: Blase mit {len(teil.strip())} Zeichen (über {MAX_BLASE}), mit „//“ teilen")
+                if kz == "NAR" and len(teil.strip()) > MAX_NAR:
+                    (W if roh.startswith(LAENGE_STRENG_PRAEFIX) else H)(
+                        ort, f"{roh}: Erzählzeile mit {len(teil.strip())} Zeichen (über {MAX_NAR}), kürzen oder mit „//“ teilen")
                 for satz in re.split(r"(?<=[.!?…“])\s+", teil.strip()):
                     if len(satz) > MAX_ZEICHEN:
                         W(ort, f"{roh}: Satz mit {len(satz)} Zeichen passt in keine Blase (über {MAX_ZEICHEN}, teilen)")
@@ -628,6 +641,14 @@ def pruefe_englisch(alle_ids):
         if da and len(da) != n:
             F(rel, f"{z['id']}: {n} Sprechblasen auf Deutsch, {len(da)} auf Englisch "
                    f"(neu eintragen mit tools/en_eintragen.py)")
+        # Längen der englischen Blasen wie im Deutschen (Review 20.11., W3-11); eine zu lange
+        # englische Blase wird im Deutschen an derselben Stelle mit „//“ geteilt.
+        grenze = MAX_NAR if z["sprecher"] == "NAR" else MAX_BLASE
+        for k in da:
+            if len(en[k]) > grenze:
+                (W if z["id"].startswith(LAENGE_STRENG_PRAEFIX) else H)(
+                    rel, f"{k}: englische Blase mit {len(en[k])} Zeichen (über {grenze}), "
+                         f"im Deutschen und Englischen an derselben Stelle teilen oder kürzen")
     for k, text in en.items():
         if "//" in text:
             F(rel, f"{k}: „//“ im englischen Text (Kaskade über tools/en_eintragen.py eintragen)")
@@ -638,7 +659,7 @@ def pruefe_englisch(alle_ids):
 # Gespräche, die ohne „beendet das Gespräch“ auskommen, weil die Figur nach jeder Option selbst
 # geht (`_nach_option` liefert true). Alle übrigen brauchen eine beendende Option, sonst hing das
 # Spiel nach der letzten Wahl in einem leeren Menü (Review 17.11., Fund W2-29, Hermes).
-GESPRAECHE_OHNE_ABSCHIED = {"maklerin", "deckert", "sitcom_vater", "sitcom_sohn", "fbi_agent",
+GESPRAECHE_OHNE_ABSCHIED = {"maklerin", "sitcom_vater", "sitcom_sohn", "fbi_agent",
                             "fledermann", "wonder_wilma"}
 
 
@@ -653,6 +674,141 @@ def pruefe_gespraeche():
                 continue
             if not any(o.get("beendet") for o in g.get("optionen", [])):
                 F(f"daten/raeume/{datei.name}", f"Gespräch {g['id']} hat keine Option, die das Gespräch beendet")
+
+
+# --------------------------------------------------------------------------
+# 7. Raumszenen gegen Bauplan und Bilder (Review 20.11., W3-R02-01 und W3-12)
+# --------------------------------------------------------------------------
+
+PLATZHALTER_FARBE = (228, 166, 114)
+KLICKFLAECHEN_GEPRUEFT = {"welt-3"}      # Abschnitte, deren Klickflächen schon nach W3-19 gesetzt sind   # orange Prop-Platzhalter aus tools/godot_raeume.py (#e4a672)
+
+
+def png_lesen(pfad):
+    """(breite, hoehe, zeilen) einer 8-Bit-PNG ohne Pillow (die CI hat nur PyYAML); zeilen ist eine
+    Liste von Pixel-Tupeln (RGB oder RGBA). Nur für kleine Bilder (Props) gedacht."""
+    import struct
+    import zlib
+    daten = Path(pfad).read_bytes()
+    pos, idat, palette, trns = 8, b"", None, None
+    breite = hoehe = tiefe = art = 0
+    while pos < len(daten):
+        laenge, typ = struct.unpack(">I4s", daten[pos:pos + 8])
+        inhalt = daten[pos + 8:pos + 8 + laenge]
+        if typ == b"IHDR":
+            breite, hoehe, tiefe, art = struct.unpack(">IIBB", inhalt[:10])
+        elif typ == b"PLTE":
+            palette = [tuple(inhalt[i:i + 3]) for i in range(0, len(inhalt), 3)]
+        elif typ == b"tRNS":
+            trns = inhalt
+        elif typ == b"IDAT":
+            idat += inhalt
+        pos += 12 + laenge
+    if tiefe != 8 or art not in (2, 3, 6):
+        return breite, hoehe, None   # selten (16 Bit, Graustufen): nicht prüfen
+    bpp = {2: 3, 3: 1, 6: 4}[art]
+    roh = zlib.decompress(idat)
+    zeile_len = breite * bpp
+    vorige = bytearray(zeile_len)
+    zeilen = []
+    for y in range(hoehe):
+        start = y * (zeile_len + 1)
+        f, z = roh[start], bytearray(roh[start + 1:start + 1 + zeile_len])
+        for i in range(zeile_len):
+            a = z[i - bpp] if i >= bpp else 0
+            b = vorige[i]
+            c = vorige[i - bpp] if i >= bpp else 0
+            if f == 1:
+                z[i] = (z[i] + a) & 255
+            elif f == 2:
+                z[i] = (z[i] + b) & 255
+            elif f == 3:
+                z[i] = (z[i] + (a + b) // 2) & 255
+            elif f == 4:
+                pa, pb, pc = abs(b - c), abs(a - c), abs(a + b - 2 * c)
+                z[i] = (z[i] + (a if pa <= pb and pa <= pc else b if pb <= pc else c)) & 255
+        vorige = z
+        if art == 3:
+            zeilen.append([palette[v] + ((trns[v],) if trns and v < len(trns) else (255,)) for v in z])
+        else:
+            zeilen.append([tuple(z[i:i + bpp]) for i in range(0, zeile_len, bpp)])
+    return breite, hoehe, zeilen
+
+
+def png_groesse(pfad):
+    import struct
+    kopf = Path(pfad).read_bytes()[:24]
+    return struct.unpack(">II", kopf[16:24])
+
+
+def pruefe_raumszenen():
+    """Szenenbreite = Breite des Hintergrunds (Apothekengasse war 640 statt 1280 breit und
+    scrollte nicht) und kein oranger Prop-Platzhalter in einem Raum mit fertigem Hintergrund
+    (fünf orange Kästen in Welt 3: Die Szenen zeigten noch auf grafik/platzhalter/prop_*.png)."""
+    game = ROOT / "game"
+    for bauplan in sorted((game / "daten" / "raeume").glob("*.json")):
+        plan = json.loads(bauplan.read_text(encoding="utf-8"))
+        for r in plan.get("raeume", []):
+            szene = game / "game" / "rooms" / r["id"] / f"room_{r['id']}.tscn"
+            if not szene.exists():
+                continue
+            ort = f"game/game/rooms/{r['id']}/{szene.name}"
+            text = szene.read_text(encoding="utf-8")
+            pfade = dict((m.group(2), m.group(1)) for m in re.finditer(
+                r'^\[ext_resource type="Texture2D"[^\]]*path="res://([^"]+)" id="([^"]+)"\]', text, re.M))
+            m = re.search(r"^width = (\d+)", text, re.M)
+            breite = int(m.group(1)) if m else None
+            bg = re.search(r'^\[node name="Background" parent="Props"[^\]]*\]\n(?:[^\[\n].*\n)*?'
+                           r'texture = ExtResource\("([^"]+)"\)', text, re.M)
+            bg_pfad = pfade.get(bg.group(1)) if bg else None
+            fertig = bool(bg_pfad) and "/platzhalter/" not in bg_pfad
+            if fertig and (game / bg_pfad).exists():
+                bild_breite = png_groesse(game / bg_pfad)[0]
+                if breite != bild_breite:
+                    F(ort, f"Szenenbreite {breite} passt nicht zur Breite des Hintergrunds "
+                           f"{bild_breite} ({bg_pfad}); Bau mit --cq-layout={r['id']} wiederholen")
+                if r["groesse"][0] != bild_breite:
+                    F(ort, f"Welt-Tabelle groesse {r['groesse'][0]} passt nicht zur Breite des "
+                           f"Hintergrunds {bild_breite} ({bg_pfad})")
+            if not fertig:
+                continue
+            # Klickflächen am fertigen Bild: Ausgänge mindestens 50 px breit, nichts unter der Leiste oben
+            # (y < 24) und nichts über den Bildrand hinaus (Review 20.11., W3-19); gilt ab Welt 3, die
+            # älteren Abschnitte haben noch Flächen bis an den Rand (Review 17.11., X-06/X-07)
+            klickflaechen = r.get("hotspots", []) + r.get("ausgaenge", []) + r.get("props", [])
+            if bauplan.stem not in KLICKFLAECHEN_GEPRUEFT:
+                klickflaechen = []
+            for h in klickflaechen:
+                x, y, w, hh = h["rect"]
+                art = "Ausgang" if h in r.get("ausgaenge", []) else "Klickfläche"
+                if art == "Ausgang" and w < 50 and not h.get("versteckt"):
+                    W(ort, f"{art} {h['id']} ist nur {w} px breit (mindestens 50)")
+                if y < 24:
+                    W(ort, f"{art} {h['id']} beginnt bei y {y}, unter der Leiste oben (ab y 24)")
+                if x < 0 or x + w > r["groesse"][0] or y + hh > r["groesse"][1]:
+                    W(ort, f"{art} {h['id']} ragt über den Bildrand ({h['rect']})")
+            for knoten in re.finditer(r'^\[node name="([^"]+)" parent="Props"[^\]]*\]\n((?:[^\[\n].*\n)*)',
+                                      text, re.M):
+                if knoten.group(1) == "Background":
+                    continue
+                tm = re.search(r'^texture = ExtResource\("([^"]+)"\)', knoten.group(2), re.M)
+                pfad = pfade.get(tm.group(1)) if tm else None
+                if not pfad or not (game / pfad).exists():
+                    continue
+                if "/platzhalter/" in pfad:
+                    F(ort, f"Prop {knoten.group(1)} zeigt auf den Platzhalter {pfad}, obwohl der Raum "
+                           f"fertig ist (echte Grafik nach grafik/props/, dann --cq-layout={r['id']})")
+                    continue
+                _, _, zeilen = png_lesen(game / pfad)
+                if not zeilen:
+                    continue
+                # Der Platzhalter ist eine volle Fläche in dieser Farbe mit Rand (über 60 %); echte
+                # Bilder enthalten sie höchstens stellenweise (Ei in der Taverne 29 %)
+                sichtbar = [px for zeile in zeilen for px in zeile if len(px) < 4 or px[3] > 0]
+                orange = sum(1 for px in sichtbar if px[:3] == PLATZHALTER_FARBE)
+                if sichtbar and orange / len(sichtbar) > 0.5:
+                    F(ort, f"Prop {knoten.group(1)}: {pfad} ist ein Platzhalter (Fläche in der "
+                           f"Platzhalterfarbe {PLATZHALTER_FARBE})")
 
 
 def main():
@@ -673,6 +829,7 @@ def main():
     pruefe_code_schalter(alle)
     pruefe_englisch(alle_ids)
     pruefe_gespraeche()
+    pruefe_raumszenen()
     import importlib.util
     spec = importlib.util.spec_from_file_location("diagramme", Path(__file__).with_name("diagramme.py"))
     dia = importlib.util.module_from_spec(spec)

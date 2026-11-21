@@ -8,7 +8,7 @@ Umrisse: Helligkeitssprung zu einem Nachbarpixel über der Schwelle; starke Spr�
 dunkler. Ohne Bild-KI, nur aus dem fertigen Hintergrund.
 
 Aufruf: python3 tools/grafik_w3/code_sicht.py <raum_id> [<raum_id> …]
-        (liest game/grafik/hintergruende/w3_bg_<raum>_v01.png, schreibt game/grafik/oberflaeche/code_sicht/<raum>.png)
+        (liest game/grafik/hintergruende/w3_bg_<raum>_v02.png (zweite Fassung, AP-09), schreibt game/grafik/oberflaeche/code_sicht/<raum>.png)
 """
 import sys
 from pathlib import Path
@@ -20,6 +20,9 @@ WURZEL = Path(__file__).resolve().parents[2]
 HELL = np.array([0x63, 0xff, 0x7a])     # leuchtendes Grün
 DUNKEL = np.array([0x1e, 0x8a, 0x3c])   # schwache Kanten
 GRUND = np.array([0x05, 0x0d, 0x08])    # fast Schwarz, leicht grün
+VERSION = "v02"                          # Fassung der Hintergründe (raeume_pixelieren.py)
+# Vordergrundteile, die aus dem Hintergrund ausgeschnitten sind, für die Umrisse wieder einsetzen
+EINSETZEN = {"stadtstrasse": [("game/grafik/props/w3_nachttisch_v02.png", 150, 262)]}
 
 
 def umrisse(rgb):
@@ -36,8 +39,11 @@ def umrisse(rgb):
 
 def main():
     for raum in sys.argv[1:]:
-        quelle = WURZEL / f"game/grafik/hintergruende/w3_bg_{raum}_v01.png"
-        rgb = np.asarray(Image.open(quelle).convert("RGB"))
+        quelle = WURZEL / f"game/grafik/hintergruende/w3_bg_{raum}_{VERSION}.png"
+        bild = Image.open(quelle).convert("RGBA")
+        for datei, x, y in EINSETZEN.get(raum, []):
+            bild.alpha_composite(Image.open(WURZEL / datei).convert("RGBA"), (x, y))
+        rgb = np.asarray(bild.convert("RGB"))
         stark, schwach = umrisse(rgb)
         out = np.empty_like(rgb)
         out[:] = GRUND

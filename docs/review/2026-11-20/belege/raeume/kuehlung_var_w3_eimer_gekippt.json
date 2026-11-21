@@ -1,0 +1,361 @@
+{
+  "bauplan_laufbereich": [
+    [
+      60.0,
+      284.0
+    ],
+    [
+      485.0,
+      282.0
+    ],
+    [
+      485.0,
+      308.0
+    ],
+    [
+      545.0,
+      312.0
+    ],
+    [
+      600.0,
+      338.0
+    ],
+    [
+      622.0,
+      356.0
+    ],
+    [
+      18.0,
+      356.0
+    ],
+    [
+      40.0,
+      330.0
+    ]
+  ],
+  "breite": 640,
+  "figuren": [
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "aufheben",
+        "barfuss",
+        "benutzen",
+        "bohne",
+        "code_sicht",
+        "diskus",
+        "fallen",
+        "gaehnen",
+        "gedankentrick",
+        "gehen_hinten",
+        "gehen_vorn",
+        "handy",
+        "heisser_sand",
+        "hexenschuss",
+        "hexenschuss_gehen",
+        "hinsetzen",
+        "hochhalten",
+        "idle",
+        "kapsel_aufstehen",
+        "kapsel_aussteigen",
+        "kapsel_einsteigen",
+        "kapsel_hinlegen",
+        "katapult",
+        "kochloeffel",
+        "kopf_kratzen",
+        "melken",
+        "nudeln",
+        "pastille",
+        "portalgeraet",
+        "regen_wischen",
+        "ruecken_halten",
+        "schlucken",
+        "schulterzucken",
+        "speer",
+        "stempel_ansehen",
+        "talk",
+        "talk_hand",
+        "tasche",
+        "tippen",
+        "treppe_walk",
+        "vom_boden_aufstehen",
+        "vom_sofa_aufstehen",
+        "wackeln",
+        "walk",
+        "walk_alt",
+        "walk_d",
+        "walk_l",
+        "walk_r",
+        "walk_u",
+        "wenden",
+        "zeigen",
+        "zeitlupe"
+      ],
+      "baseline": 0,
+      "name": "Max",
+      "poly": [
+        [
+          298,
+          145
+        ],
+        [
+          342,
+          145
+        ],
+        [
+          342,
+          320
+        ],
+        [
+          298,
+          320
+        ]
+      ],
+      "pos": [
+        320.0,
+        320.0
+      ],
+      "rect": [
+        190,
+        141,
+        450,
+        320
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.92702704668045,
+        0.92702704668045
+      ],
+      "variante": "",
+      "walk_speed": 150.0,
+      "z": 0
+    },
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "aufstehen",
+        "aufwachen",
+        "fauchen",
+        "gehen_hinten",
+        "gehen_vorn",
+        "haare",
+        "hebel",
+        "hinlegen",
+        "idle",
+        "kabel",
+        "kriechen",
+        "minka_umgarnen",
+        "morse",
+        "ohrfeige",
+        "putzen",
+        "schieben",
+        "schlafen",
+        "schnuppern",
+        "schwanz_zucken",
+        "springen",
+        "stehen",
+        "talk",
+        "talk_alt",
+        "tasse",
+        "tragen",
+        "vom_schrank_fallen",
+        "walk",
+        "walk_d",
+        "walk_l",
+        "walk_r",
+        "walk_u"
+      ],
+      "baseline": 0,
+      "name": "Pixel",
+      "poly": [
+        [
+          327,
+          283
+        ],
+        [
+          403,
+          283
+        ],
+        [
+          403,
+          320
+        ],
+        [
+          327,
+          320
+        ]
+      ],
+      "pos": [
+        365.0,
+        320.0
+      ],
+      "rect": [
+        307,
+        225,
+        423,
+        320
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.92702704668045,
+        0.92702704668045
+      ],
+      "variante": "",
+      "walk_speed": 160.0,
+      "z": 0
+    }
+  ],
+  "hotspots": [
+    {
+      "baseline": 30,
+      "klickbar": true,
+      "name": "Wassereimer",
+      "poly": [
+        [
+          486,
+          248
+        ],
+        [
+          546,
+          248
+        ],
+        [
+          546,
+          308
+        ],
+        [
+          486,
+          308
+        ]
+      ],
+      "pos": [
+        516.0,
+        278.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_WASSEREIMER",
+      "walk_to": [
+        -54.0,
+        26.0
+      ]
+    },
+    {
+      "baseline": 65,
+      "klickbar": true,
+      "name": "AusgangWiderstandsbasis",
+      "poly": [
+        [
+          24,
+          205
+        ],
+        [
+          170,
+          205
+        ],
+        [
+          170,
+          335
+        ],
+        [
+          24,
+          335
+        ]
+      ],
+      "pos": [
+        97.0,
+        270.0
+      ],
+      "sichtbar": true,
+      "text": "UI_RAUM_WIDERSTANDSBASIS",
+      "walk_to": [
+        13.0,
+        52.0
+      ]
+    }
+  ],
+  "kamera_max": [
+    320.0,
+    180.0
+  ],
+  "laufbereiche": [
+    {
+      "name": "Boden",
+      "polys": [
+        [
+          [
+            60,
+            284
+          ],
+          [
+            485,
+            282
+          ],
+          [
+            485,
+            308
+          ],
+          [
+            545,
+            312
+          ],
+          [
+            600,
+            338
+          ],
+          [
+            622,
+            356
+          ],
+          [
+            18,
+            356
+          ],
+          [
+            40,
+            330
+          ]
+        ]
+      ]
+    }
+  ],
+  "marker": {
+    "Start": [
+      320.0,
+      320.0
+    ],
+    "VonWiderstandsbasis": [
+      120.0,
+      322.0
+    ]
+  },
+  "modus": "var_w3_eimer_gekippt",
+  "props": [
+    {
+      "baseline": -180,
+      "klickbar": false,
+      "name": "Background",
+      "poly": [],
+      "pos": [
+        320.0,
+        0.0
+      ],
+      "rect": [
+        0,
+        0,
+        640,
+        360
+      ],
+      "sichtbar": true,
+      "text": "UI_RAUM_KUEHLUNG",
+      "walk_to": [
+        0.0,
+        180.0
+      ],
+      "z": -1
+    }
+  ],
+  "raum": "kuehlung",
+  "skala": null,
+  "tiefe": 0.85,
+  "welt": "welt-3"
+}

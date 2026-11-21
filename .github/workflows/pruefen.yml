@@ -38,6 +38,8 @@ jobs:
         run: python3 tools/prompts_zusammensetzen.py --pruefen
       - name: Gesten-Tabellen passen zu Skript und Figuren
         run: python3 tools/gesten_pruefen.py
+      - name: Welt-3-Grafik hat eine Fundstelle (Effekte und Bewegungen)
+        run: python3 tools/grafik_fundstellen.py
 
   godot:
     runs-on: ubuntu-latest

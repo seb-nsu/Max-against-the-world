@@ -33,40 +33,60 @@
     1280,
     360
    ],
-   "hintergrund": "res://grafik/hintergruende/w3_bg_unterstadt_strasse_v01.png",
+   "hintergrund": "res://grafik/hintergruende/w3_bg_unterstadt_strasse_v02.png",
    "farbe": "#3b3f58",
    "laufbereich": [
     [
      8,
-     288
+     302
     ],
     [
-     585,
-     288
+     330,
+     302
+    ],
+    [
+     340,
+     292
     ],
     [
      600,
-     280
-    ],
-    [
-     640,
-     280
-    ],
-    [
-     965,
-     286
-    ],
-    [
-     990,
-     280
-    ],
-    [
-     1040,
-     280
-    ],
-    [
-     1150,
      292
+    ],
+    [
+     610,
+     280
+    ],
+    [
+     700,
+     280
+    ],
+    [
+     710,
+     292
+    ],
+    [
+     915,
+     292
+    ],
+    [
+     930,
+     262
+    ],
+    [
+     985,
+     262
+    ],
+    [
+     1000,
+     292
+    ],
+    [
+     1060,
+     296
+    ],
+    [
+     1200,
+     300
     ],
     [
      1272,
@@ -84,55 +104,70 @@
    "marker": {
     "start": [
      640,
-     320
+     330
     ],
     "von_apothekengasse": [
-     1008,
+     957,
      300
     ],
     "von_laboreingang": [
-     1235,
-     325
+     1160,
+     316
     ],
     "von_widerstandsbasis": [
-     612,
-     298
+     652,
+     296
     ]
    },
-   "tiefe": 0.85,
-   "skala": 0.8,
+   "tiefe": 0.63,
+   "skala": 1.0,
    "vordergrund": {
     "tresen": {
-     "bild": "res://grafik/props/w3_tresen_nudelbude.png",
+     "bild": "res://grafik/props/w3_tresen_nudelbude_v02.png",
      "rect": [
-      28,
-      214,
-      172,
-      62
+      72,
+      176,
+      251,
+      123
      ],
-     "baseline": 276
+     "baseline": 299
     }
    },
+   "licht": "#c8c4dc",
    "effekte": [
     {
      "art": "bild",
      "bild": "res://grafik/ambiente/w3_nudeltopf_dampf.png",
      "bilder": 6,
      "pos": [
-      76,
-      202
+      172,
+      180
      ],
      "fps": 8
     },
     {
-     "art": "bild",
-     "bild": "res://grafik/ambiente/w3_neonschild.png",
-     "bilder": 6,
+     "art": "flackern",
      "pos": [
-      288,
-      196
+      504,
+      32
      ],
-     "fps": 9
+     "r": [
+      18,
+      30
+     ],
+     "farbe": "#ff5ce0"
+    },
+    {
+     "art": "flackern",
+     "pos": [
+      828,
+      42
+     ],
+     "r": [
+      70,
+      40
+     ],
+     "farbe": "#ff4fd8"
     },
     {
      "art": "bild",
@@ -140,16 +175,17 @@
      "bilder": 6,
      "weg": [
       [
-       -30,
-       52
+       392,
+       40
       ],
       [
-       1310,
-       46
+       588,
+       34
       ]
      ],
-     "tempo": 70,
+     "tempo": 50,
      "zurueck": true,
+     "ausblenden": 12,
      "fps": 10,
      "pause": [
       6,
@@ -162,16 +198,17 @@
      "bilder": 6,
      "weg": [
       [
-       1310,
-       92
+       588,
+       70
       ],
       [
-       -30,
-       98
+       392,
+       76
       ]
      ],
-     "tempo": 50,
+     "tempo": 40,
      "zurueck": true,
+     "ausblenden": 12,
      "fps": 10,
      "pause": [
       10,
@@ -203,20 +240,20 @@
     {
      "art": "dampf",
      "pos": [
-      1045,
-      300
+      562,
+      324
      ],
-     "breite": 60
+     "breite": 80
     },
     {
      "art": "flackern",
      "pos": [
-      172,
-      165
+      266,
+      128
      ],
      "r": [
-      20,
-      26
+      12,
+      16
      ],
      "farbe": "#ff4fa0"
     }
@@ -226,23 +263,23 @@
      "id": "herr_vier",
      "script_name": "HerrVier",
      "pos": [
-      104,
-      266
+      246,
+      284
      ]
     },
     {
      "id": "weinender_mann",
      "script_name": "WeinenderMann",
      "pos": [
-      152,
-      278
+      262,
+      302
      ]
     },
     {
      "id": "strassenmusiker_w3",
      "script_name": "StrassenmusikerW3",
      "pos": [
-      492,
+      760,
       292
      ]
     },
@@ -250,24 +287,24 @@
      "id": "frau_regenschirm",
      "script_name": "FrauRegenschirm",
      "pos": [
-      700,
-      300
+      880,
+      338
      ]
     },
     {
      "id": "deckert",
      "script_name": "Deckert",
      "pos": [
-      850,
-      300
+      822,
+      290
      ]
     },
     {
      "id": "morphaeus",
      "script_name": "Morphaeus",
      "pos": [
-      945,
-      300
+      1018,
+      296
      ]
     }
    ],
@@ -277,14 +314,14 @@
      "script_name": "Nudelbude",
      "name_key": "UI_OBJ_NUDELBUDE",
      "rect": [
-      28,
-      100,
-      172,
-      172
+      40,
+      86,
+      290,
+      210
      ],
      "gehe": [
-      120,
-      302
+      200,
+      320
      ],
      "ansehen": [
       {
@@ -319,14 +356,14 @@
      "script_name": "Telefonzelle",
      "name_key": "UI_OBJ_TELEFONZELLE",
      "rect": [
-      352,
-      112,
-      90,
-      170
+      450,
+      92,
+      100,
+      201
      ],
      "gehe": [
-      398,
-      300
+      500,
+      306
      ],
      "ansehen": [
       {
@@ -414,14 +451,14 @@
      "script_name": "TelefonbuchInDerZelle",
      "name_key": "UI_OBJ_TELEFONBUCH_IN_DER_ZELLE",
      "rect": [
-      358,
-      186,
-      46,
-      28
+      466,
+      170,
+      34,
+      32
      ],
      "gehe": [
-      398,
-      300
+      500,
+      306
      ],
      "ansehen": [
       {
@@ -446,14 +483,14 @@
      "script_name": "Vordach",
      "name_key": "UI_OBJ_VORDACH",
      "rect": [
-      775,
-      100,
-      160,
-      72
+      740,
+      98,
+      165,
+      52
      ],
      "gehe": [
-      850,
-      302
+      776,
+      304
      ],
      "ansehen": [
       {
@@ -478,14 +515,14 @@
      "script_name": "NeonPizzaPlakat",
      "name_key": "UI_OBJ_NEON_PIZZA_PLAKAT",
      "rect": [
-      790,
-      0,
-      140,
-      98
+      755,
+      24,
+      145,
+      62
      ],
      "gehe": [
-      860,
-      302
+      776,
+      304
      ],
      "ansehen": [
       {
@@ -518,14 +555,14 @@
      "script_name": "OrigamiEinhorn",
      "name_key": "UI_OBJ_ORIGAMI_EINHORN",
      "rect": [
-      500,
-      288,
-      66,
-      44
+      366,
+      326,
+      32,
+      20
      ],
      "gehe": [
-      470,
-      318
+      345,
+      336
      ],
      "ansehen": [
       {
@@ -568,14 +605,14 @@
      "script_name": "Pfuetzen",
      "name_key": "UI_OBJ_PFUETZEN",
      "rect": [
-      1130,
-      318,
-      150,
-      42
+      1120,
+      304,
+      152,
+      40
      ],
      "gehe": [
-      1120,
-      322
+      1110,
+      324
      ],
      "ansehen": [
       {
@@ -600,14 +637,14 @@
      "script_name": "HimmelMitFliegendenAutos",
      "name_key": "UI_OBJ_HIMMEL_MIT_FLIEGENDEN_AUTOS",
      "rect": [
-      250,
-      0,
-      170,
-      100
+      386,
+      24,
+      206,
+      66
      ],
      "gehe": [
-      330,
-      300
+      560,
+      310
      ],
      "ansehen": [
       {
@@ -632,14 +669,14 @@
      "script_name": "Dampfgitter",
      "name_key": "UI_OBJ_DAMPFGITTER",
      "rect": [
-      998,
-      292,
-      98,
-      26
+      515,
+      314,
+      96,
+      20
      ],
      "gehe": [
-      1045,
-      326
+      560,
+      336
      ],
      "ansehen": [
       {
@@ -667,18 +704,26 @@
      "script_name": "Telefonbuchseite",
      "name_key": "UI_OBJ_TELEFONBUCHSEITE",
      "rect": [
-      372,
-      192,
+      476,
+      184,
       18,
       12
      ],
      "gehe": [
-      398,
-      300
+      500,
+      306
      ],
      "textur": "res://grafik/props/telefonbuchseite.png",
      "gegenstand": "telefonbuchseite",
-     "ansehen": [],
+     "ansehen": [
+      {
+       "zeile": "W3_STR_MAX_0360",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_STR_MAX_0360"
+       ]
+      }
+     ],
      "nehmen": {
       "zeile": "W3_STR_MAX_0080",
       "sprecher": "MAX",
@@ -711,14 +756,14 @@
      "ziel": "apothekengasse",
      "name_key": "UI_RAUM_APOTHEKENGASSE",
      "rect": [
-      972,
-      135,
-      70,
-      148
+      905,
+      60,
+      95,
+      230
      ],
      "gehe": [
-      1008,
-      288
+      957,
+      270
      ],
      "erreichbar_ab": "R1b",
      "ansehen": [
@@ -772,14 +817,14 @@
      "ziel": "laboreingang",
      "name_key": "UI_RAUM_LABOREINGANG",
      "rect": [
-      1180,
-      140,
+      1050,
       100,
-      160
+      222,
+      196
      ],
      "gehe": [
-      1258,
-      322
+      1180,
+      306
      ],
      "erreichbar_ab": "start",
      "ansehen": [
@@ -806,17 +851,25 @@
      "ziel": "widerstandsbasis",
      "name_key": "UI_RAUM_WIDERSTANDSBASIS",
      "rect": [
-      586,
-      188,
-      54,
-      78
+      605,
+      182,
+      95,
+      86
      ],
      "gehe": [
-      612,
-      292
+      652,
+      288
      ],
      "erreichbar_ab": "R3b",
-     "ansehen": []
+     "ansehen": [
+      {
+       "zeile": "W3_STR_MAX_0340",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_STR_MAX_0340"
+       ]
+      }
+     ]
     }
    ],
    "zurufe": [
@@ -853,7 +906,7 @@
     1280,
     360
    ],
-   "hintergrund": "res://grafik/hintergruende/w3_bg_apothekengasse_v01.png",
+   "hintergrund": "res://grafik/hintergruende/w3_bg_apothekengasse_v02.png",
    "farbe": "#46405e",
    "laufbereich": [
     [
@@ -861,11 +914,11 @@
      300
     ],
     [
-     1180,
-     296
+     1272,
+     300
     ],
     [
-     1180,
+     1272,
      356
     ],
     [
@@ -876,43 +929,44 @@
    "marker": {
     "start": [
      640,
-     322
+     326
     ],
     "von_unterstadt_strasse": [
-     140,
-     322
+     165,
+     312
     ]
    },
-   "tiefe": 0.85,
-   "skala": 0.8,
+   "tiefe": 0.78,
+   "skala": 1.0,
+   "licht": "#c4c8dc",
    "effekte": [
     {
      "art": "flackern",
      "pos": [
-      925,
-      70
+      900,
+      86
      ],
      "r": [
-      26,
-      30
+      24,
+      28
      ],
      "farbe": "#7fe8ff"
     },
     {
      "art": "dampf",
      "pos": [
-      960,
-      285
+      830,
+      296
      ],
-     "breite": 50
+     "breite": 70
     },
     {
      "art": "bild",
-     "bild": "res://grafik/ambiente/w3_automat_scannt.png",
+     "bild": "res://grafik/ambiente/w3_automat_scannt_v02.png",
      "bilder": 6,
      "pos": [
-      647,
-      156
+      640,
+      185
      ],
      "fps": 9
     },
@@ -922,12 +976,12 @@
      "bilder": 6,
      "weg": [
       [
-       1040,
-       292
+       1000,
+       298
       ],
       [
-       1180,
-       287
+       1143,
+       288
       ]
      ],
      "tempo": 60,
@@ -962,23 +1016,23 @@
     }
    ],
    "hintergrund_nach": {
-    "R3a": "res://grafik/hintergruende/w3_bg_apothekengasse_faecher_offen_v01.png"
+    "R3a": "res://grafik/hintergruende/w3_bg_apothekengasse_faecher_offen_v02.png"
    },
    "figuren": [
     {
      "id": "morphaeus",
      "script_name": "Morphaeus",
      "pos": [
-      470,
-      306
+      424,
+      312
      ]
     },
     {
      "id": "pastillenautomat",
      "script_name": "Pastillenautomat",
      "pos": [
-      645,
-      175
+      640,
+      150
      ]
     }
    ],
@@ -988,14 +1042,14 @@
      "script_name": "Automat",
      "name_key": "UI_OBJ_AUTOMAT",
      "rect": [
-      545,
-      0,
-      200,
-      292
+      572,
+      56,
+      136,
+      242
      ],
      "gehe": [
-      645,
-      316
+      640,
+      320
      ],
      "ansehen": [
       {
@@ -1005,6 +1059,13 @@
         "W3_APO_PIX_0230"
        ],
        "figur": "PIX"
+      },
+      {
+       "zeile": "W3_APO_MAX_0330",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_APO_MAX_0330"
+       ]
       }
      ],
      "benutzen": [
@@ -1041,14 +1102,14 @@
      "script_name": "Kisten",
      "name_key": "UI_OBJ_KISTEN",
      "rect": [
-      212,
-      110,
-      200,
-      186
+      243,
+      190,
+      120,
+      108
      ],
      "gehe": [
-      310,
-      312
+      300,
+      318
      ],
      "ansehen": [
       {
@@ -1082,14 +1143,14 @@
      "script_name": "TropfendesRohr",
      "name_key": "UI_OBJ_TROPFENDES_ROHR",
      "rect": [
-      458,
-      0,
-      40,
-      170
+      360,
+      24,
+      26,
+      270
      ],
      "gehe": [
-      478,
-      308
+      378,
+      322
      ],
      "ansehen": [
       {
@@ -1115,14 +1176,14 @@
      "script_name": "Wandlampe",
      "name_key": "UI_OBJ_WANDLAMPE",
      "rect": [
-      900,
-      38,
-      55,
-      75
+      886,
+      64,
+      30,
+      50
      ],
      "gehe": [
-      925,
-      308
+      900,
+      316
      ],
      "ansehen": [
       {
@@ -1152,17 +1213,25 @@
      "ziel": "unterstadt_strasse",
      "name_key": "UI_RAUM_UNTERSTADT_STRASSE",
      "rect": [
-      60,
-      10,
-      140,
-      286
+      112,
+      76,
+      102,
+      212
      ],
      "gehe": [
-      120,
-      322
+      160,
+      304
      ],
      "erreichbar_ab": "start",
-     "ansehen": []
+     "ansehen": [
+      {
+       "zeile": "W3_APO_MAX_0310",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_APO_MAX_0310"
+       ]
+      }
+     ]
     }
    ],
    "zurufe": [
@@ -1190,32 +1259,40 @@
     1280,
     360
    ],
-   "hintergrund": "res://grafik/hintergruende/w3_bg_widerstandsbasis_v01.png",
+   "hintergrund": "res://grafik/hintergruende/w3_bg_widerstandsbasis_v02.png",
    "farbe": "#4a4a40",
    "laufbereich": [
     [
-     30,
+     60,
      330
     ],
     [
-     100,
-     304
+     105,
+     318
     ],
     [
-     470,
-     300
+     230,
+     305
     ],
     [
-     1095,
-     306
+     985,
+     305
     ],
     [
-     1120,
-     330
+     990,
+     318
+    ],
+    [
+     1100,
+     318
+    ],
+    [
+     1110,
+     320
     ],
     [
      1272,
-     335
+     322
     ],
     [
      1272,
@@ -1229,103 +1306,104 @@
    "marker": {
     "start": [
      640,
-     330
+     336
     ],
     "von_unterstadt_strasse": [
      95,
-     336
+     338
     ],
     "von_kuehlung": [
-     1180,
-     340
+     1158,
+     330
     ],
     "von_stadtstrasse": [
-     170,
-     326
+     277,
+     316
     ],
     "von_testkammer_1": [
-     170,
-     326
+     277,
+     316
     ],
     "von_kapsel": [
-     170,
-     326
+     277,
+     316
     ]
    },
-   "tiefe": 0.85,
-   "skala": 0.8,
+   "tiefe": 0.8,
+   "skala": 1.0,
+   "licht": "#ccd0e0",
    "effekte": [
     {
      "art": "flackern",
      "pos": [
-      905,
-      78
+      983,
+      201
      ],
      "r": [
-      30,
-      30
+      14,
+      14
      ],
      "farbe": "#ffe680"
     },
     {
      "art": "flackern",
      "pos": [
-      578,
-      182
+      678,
+      190
      ],
      "r": [
-      26,
+      24,
       18
      ],
      "farbe": "#7fff9f"
     },
     {
      "art": "bild",
-     "bild": "res://grafik/ambiente/w3_grossrechner.png",
+     "bild": "res://grafik/ambiente/w3_grossrechner_v02.png",
      "bilder": 4,
      "pos": [
-      900,
-      154
+      961,
+      212
      ],
      "fps": 6
     }
    ],
    "hintergrund_nach": {
-    "W3_SCHNEE": "res://grafik/hintergruende/w3_bg_widerstandsbasis_schnee_v01.png",
-    "R13": "res://grafik/hintergruende/w3_bg_widerstandsbasis_kaffee_v01.png",
-    "R13+W3_SCHNEE": "res://grafik/hintergruende/w3_bg_widerstandsbasis_schnee_kaffee_v01.png"
+    "W3_SCHNEE": "res://grafik/hintergruende/w3_bg_widerstandsbasis_schnee_v02.png",
+    "R13": "res://grafik/hintergruende/w3_bg_widerstandsbasis_kaffee_v02.png",
+    "R13+W3_SCHNEE": "res://grafik/hintergruende/w3_bg_widerstandsbasis_schnee_kaffee_v02.png"
    },
    "figuren": [
     {
      "id": "rebellin",
      "script_name": "Rebellin",
      "pos": [
-      380,
-      318
+      414,
+      320
      ]
     },
     {
      "id": "rebell",
      "script_name": "Rebell",
      "pos": [
-      700,
-      320
+      962,
+      336
      ]
     },
     {
      "id": "kalle",
      "script_name": "Kalle",
      "pos": [
-      815,
-      318
+      900,
+      312
      ]
     },
     {
      "id": "hausmeister",
      "script_name": "Hausmeister",
      "pos": [
-      610,
-      334
+      600,
+      338
      ]
     },
     {
@@ -1333,15 +1411,15 @@
      "script_name": "Opa",
      "pos": [
       1180,
-      330
+      334
      ]
     },
     {
      "id": "piepsi",
      "script_name": "Piepsi",
      "pos": [
-      1238,
-      334
+      1245,
+      336
      ]
     }
    ],
@@ -1351,13 +1429,13 @@
      "script_name": "Kapseln",
      "name_key": "UI_OBJ_KAPSELN",
      "rect": [
-      225,
-      182,
-      225,
-      115
+      315,
+      208,
+      233,
+      90
      ],
      "gehe": [
-      330,
+      460,
       322
      ],
      "ansehen": [
@@ -1383,14 +1461,14 @@
      "script_name": "MaxKapsel",
      "name_key": "UI_OBJ_MAX_KAPSEL",
      "rect": [
-      112,
-      182,
-      113,
-      115
+      237,
+      208,
+      80,
+      90
      ],
      "gehe": [
-      170,
-      326
+      277,
+      322
      ],
      "ansehen": [
       {
@@ -1434,13 +1512,13 @@
      "script_name": "Terminal",
      "name_key": "UI_OBJ_TERMINAL",
      "rect": [
-      500,
-      155,
-      140,
-      88
+      645,
+      160,
+      66,
+      72
      ],
      "gehe": [
-      565,
+      690,
       322
      ],
      "ansehen": [
@@ -1497,13 +1575,13 @@
      "script_name": "Fenster",
      "name_key": "UI_OBJ_FENSTER",
      "rect": [
-      256,
-      4,
-      88,
-      70
+      258,
+      24,
+      76,
+      60
      ],
      "gehe": [
-      300,
+      295,
       322
      ],
      "ansehen": [
@@ -1538,14 +1616,14 @@
      "script_name": "Lueftungsschacht",
      "name_key": "UI_OBJ_LUEFTUNGSSCHACHT",
      "rect": [
-      1122,
-      296,
-      120,
-      36
+      1100,
+      288,
+      115,
+      26
      ],
      "gehe": [
-      1180,
-      340
+      1158,
+      330
      ],
      "ansehen": [
       {
@@ -1579,13 +1657,13 @@
      "script_name": "Stromkasten",
      "name_key": "UI_OBJ_STROMKASTEN",
      "rect": [
-      650,
-      150,
-      80,
-      72
+      736,
+      138,
+      58,
+      74
      ],
      "gehe": [
-      690,
+      764,
       322
      ],
      "ansehen": [
@@ -1620,13 +1698,13 @@
      "script_name": "PatchPanel",
      "name_key": "UI_OBJ_PATCH_PANEL",
      "rect": [
-      443,
-      92,
-      70,
-      116
+      476,
+      116,
+      78,
+      96
      ],
      "gehe": [
-      478,
+      515,
       322
      ],
      "ansehen": [
@@ -1634,7 +1712,8 @@
        "zeile": "W3_BAS_MAX_0690",
        "sprecher": "MAX",
        "blasen": [
-        "W3_BAS_MAX_0690"
+        "W3_BAS_MAX_0690",
+        "W3_BAS_MAX_0690_2"
        ]
       },
       {
@@ -1661,14 +1740,14 @@
      "script_name": "Pizzakartons",
      "name_key": "UI_OBJ_PIZZAKARTONS",
      "rect": [
-      1095,
-      15,
-      95,
-      278
+      1052,
+      90,
+      90,
+      200
      ],
      "gehe": [
       1110,
-      324
+      330
      ],
      "ansehen": [
       {
@@ -1702,13 +1781,13 @@
      "script_name": "Handtuch",
      "name_key": "UI_OBJ_HANDTUCH",
      "rect": [
-      1022,
-      112,
-      32,
-      95
+      1010,
+      120,
+      30,
+      88
      ],
      "gehe": [
-      1038,
+      1025,
       322
      ],
      "ansehen": [
@@ -1753,13 +1832,13 @@
      "script_name": "Grossrechner",
      "name_key": "UI_OBJ_GROSSRECHNER",
      "rect": [
-      865,
-      60,
-      90,
-      235
+      905,
+      108,
+      95,
+      176
      ],
      "gehe": [
-      905,
+      952,
       322
      ],
      "ansehen": [
@@ -1803,13 +1882,13 @@
      "script_name": "Steuerpult",
      "name_key": "UI_OBJ_STEUERPULT",
      "rect": [
-      745,
-      155,
-      120,
-      135
+      806,
+      158,
+      102,
+      126
      ],
      "gehe": [
-      800,
+      852,
       322
      ],
      "ansehen": [
@@ -1843,14 +1922,14 @@
      "script_name": "TischMitKallesTasse",
      "name_key": "UI_OBJ_TISCH_MIT_KALLES_TASSE",
      "rect": [
-      950,
+      988,
       222,
-      140,
-      90
+      114,
+      92
      ],
      "gehe": [
-      1020,
-      322
+      1060,
+      330
      ],
      "ansehen": [
       {
@@ -1887,16 +1966,29 @@
      "script_name": "KallesTasse",
      "name_key": "UI_OBJ_KALLES_TASSE",
      "rect": [
-      1038,
-      208,
-      32,
-      30
+      1056,
+      216,
+      28,
+      26
      ],
      "gehe": [
-      1050,
-      322
+      1068,
+      330
      ],
      "ansehen": [
+      {
+       "zeile": "W3_BAS_MAX_0788",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_BAS_MAX_0788"
+       ],
+       "bedingung": [
+        {
+         "art": "vor",
+         "raetsel": "R13"
+        }
+       ]
+      },
       {
        "zeile": "W3_BAS_PIX_0790",
        "sprecher": "PIX",
@@ -1926,20 +2018,21 @@
        ],
        "figur": "PIX"
       }
-     ]
+     ],
+     "vor": "R13"
     },
     {
      "id": "plakat",
      "script_name": "Plakat",
      "name_key": "UI_OBJ_PLAKAT",
      "rect": [
-      640,
-      20,
-      80,
-      120
+      732,
+      52,
+      72,
+      80
      ],
      "gehe": [
-      680,
+      764,
       322
      ],
      "ansehen": [
@@ -1978,50 +2071,18 @@
      ]
     },
     {
-     "id": "rebellen",
-     "script_name": "Rebellen",
-     "name_key": "UI_OBJ_REBELLEN",
-     "rect": [
-      340,
-      230,
-      400,
-      30
-     ],
-     "gehe": [
-      540,
-      330
-     ],
-     "ansehen": [
-      {
-       "zeile": "W3_BAS_MAX_0840",
-       "sprecher": "MAX",
-       "blasen": [
-        "W3_BAS_MAX_0840"
-       ]
-      },
-      {
-       "zeile": "W3_BAS_MAX_0845",
-       "sprecher": "MAX",
-       "blasen": [
-        "W3_BAS_MAX_0845"
-       ],
-       "mal": 2
-      }
-     ]
-    },
-    {
      "id": "kaffeepfuetze",
      "script_name": "Kaffeepfuetze",
      "name_key": "UI_OBJ_KAFFEEPFUETZE",
      "rect": [
-      760,
-      318,
-      470,
-      40
+      1044,
+      300,
+      236,
+      32
      ],
      "gehe": [
-      900,
-      336
+      1150,
+      338
      ],
      "ansehen": [
       {
@@ -2039,7 +2100,8 @@
        ],
        "mal": 2
       }
-     ]
+     ],
+     "nach": "R13"
     }
    ],
    "props": [],
@@ -2050,17 +2112,25 @@
      "ziel": "unterstadt_strasse",
      "name_key": "UI_RAUM_UNTERSTADT_STRASSE",
      "rect": [
-      12,
-      48,
+      10,
+      72,
       92,
-      282
+      240
      ],
      "gehe": [
       80,
-      340
+      336
      ],
      "erreichbar_ab": "start",
-     "ansehen": []
+     "ansehen": [
+      {
+       "zeile": "W3_BAS_MAX_0950",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_BAS_MAX_0950"
+       ]
+      }
+     ]
     },
     {
      "id": "ausgang_kuehlung",
@@ -2068,14 +2138,14 @@
      "ziel": "kuehlung",
      "name_key": "UI_RAUM_KUEHLUNG",
      "rect": [
-      1122,
-      296,
-      120,
-      36
+      1096,
+      284,
+      124,
+      34
      ],
      "gehe": [
-      1180,
-      340
+      1158,
+      330
      ],
      "erreichbar_ab": "R3b",
      "ansehen": [],
@@ -2116,79 +2186,77 @@
     640,
     360
    ],
-   "hintergrund": "res://grafik/hintergruende/w3_bg_kuehlung_v01.png",
+   "hintergrund": "res://grafik/hintergruende/w3_bg_kuehlung_v02.png",
    "farbe": "#3c4658",
    "laufbereich": [
     [
-     60,
-     284
-    ],
-    [
-     485,
-     282
-    ],
-    [
-     485,
-     308
-    ],
-    [
-     545,
-     312
+     40,
+     300
     ],
     [
      600,
-     338
+     300
     ],
     [
-     622,
+     630,
      356
     ],
     [
-     18,
+     10,
      356
-    ],
-    [
-     40,
-     330
     ]
    ],
    "marker": {
     "start": [
      320,
-     320
+     330
     ],
     "von_widerstandsbasis": [
-     120,
-     322
+     150,
+     320
     ]
    },
-   "tiefe": 0.85,
+   "tiefe": 0.8,
+   "skala": 0.8,
+   "licht": "#c8d2e4",
    "effekte": [
     {
      "art": "flackern",
      "pos": [
-      416,
-      147
+      249,
+      195
      ],
      "r": [
-      8,
+      6,
       8
      ],
-     "farbe": "#9fe8ff"
+     "farbe": "#ff6080"
+    },
+    {
+     "art": "flackern",
+     "pos": [
+      389,
+      181
+     ],
+     "r": [
+      6,
+      8
+     ],
+     "farbe": "#ff6080"
     },
     {
      "art": "bild",
-     "bild": "res://grafik/ambiente/w3_ventilator.png",
+     "bild": "res://grafik/ambiente/w3_ventilator_v02.png",
      "bilder": 4,
      "pos": [
-      413,
-      258
+      341,
+      293
      ],
      "fps": 9
     }
    ],
    "hintergrund_nach": {
-    "W3_EIMER_GEKIPPT": "res://grafik/hintergruende/w3_bg_kuehlung_taut_v01.png"
+    "W3_EIMER_GEKIPPT": "res://grafik/hintergruende/w3_bg_kuehlung_taut_v02.png"
    },
    "figuren": [],
    "hotspots": [
@@ -2197,14 +2265,14 @@
      "script_name": "Wassereimer",
      "name_key": "UI_OBJ_WASSEREIMER",
      "rect": [
-      486,
-      248,
-      60,
-      60
+      456,
+      268,
+      46,
+      46
      ],
      "gehe": [
-      462,
-      304
+      438,
+      322
      ],
      "ansehen": []
     }
@@ -2217,14 +2285,14 @@
      "ziel": "widerstandsbasis",
      "name_key": "UI_RAUM_WIDERSTANDSBASIS",
      "rect": [
-      24,
-      205,
-      146,
-      130
+      90,
+      236,
+      100,
+      76
      ],
      "gehe": [
-      110,
-      322
+      140,
+      318
      ],
      "erreichbar_ab": "R3b",
      "ansehen": []
@@ -2240,88 +2308,89 @@
     640,
     360
    ],
-   "hintergrund": "res://grafik/hintergruende/w3_bg_laboreingang_v01.png",
+   "hintergrund": "res://grafik/hintergruende/w3_bg_laboreingang_v02.png",
    "farbe": "#585858",
    "laufbereich": [
     [
-     112,
-     272
-    ],
-    [
-     525,
-     262
-    ],
-    [
-     598,
+     30,
      300
     ],
     [
-     632,
+     120,
+     290
+    ],
+    [
+     560,
+     292
+    ],
+    [
+     610,
+     320
+    ],
+    [
+     620,
      356
     ],
     [
-     56,
+     10,
      356
-    ],
-    [
-     100,
-     300
     ]
    ],
    "marker": {
     "start": [
-     320,
-     312
+     330,
+     330
     ],
     "von_unterstadt_strasse": [
-     150,
-     300
+     90,
+     312
     ]
    },
-   "tiefe": 0.85,
-   "skala": 0.8,
+   "tiefe": 0.74,
+   "skala": 1.0,
+   "licht": "#ccd0dc",
    "effekte": [
     {
      "art": "flackern",
      "pos": [
-      325,
-      70
+      324,
+      42
      ],
      "r": [
-      34,
-      22
+      30,
+      14
      ],
      "farbe": "#e8f4ff"
     },
     {
      "art": "bild",
-     "bild": "res://grafik/ambiente/w3_kartenleser.png",
+     "bild": "res://grafik/ambiente/w3_kartenleser_v02.png",
      "bilder": 4,
      "pos": [
-      418,
-      202
+      435,
+      192
      ],
      "fps": 3
     }
    ],
    "hintergrund_nach": {
-    "W3_PANZERTUER_OFFEN": "res://grafik/hintergruende/w3_bg_laboreingang_offen_v01.png"
+    "W3_PANZERTUER_OFFEN": "res://grafik/hintergruende/w3_bg_laboreingang_offen_v02.png"
    },
    "figuren": [
     {
      "id": "hausmeister",
      "script_name": "Hausmeister",
      "pos": [
-      470,
-      292
+      236,
+      314
      ]
     },
     {
      "id": "kalle",
      "script_name": "Kalle",
      "pos": [
-      215,
-      312
+      470,
+      320
      ]
     }
    ],
@@ -2331,14 +2400,14 @@
      "script_name": "Panzertuer",
      "name_key": "UI_OBJ_PANZERTUER",
      "rect": [
-      248,
-      108,
-      152,
-      140
+      243,
+      112,
+      170,
+      170
      ],
      "gehe": [
-      325,
-      290
+      327,
+      312
      ],
      "ansehen": [
       {
@@ -2399,14 +2468,14 @@
      "script_name": "Kartenleser",
      "name_key": "UI_OBJ_KARTENLESER",
      "rect": [
-      405,
-      165,
-      26,
-      36
+      420,
+      156,
+      28,
+      38
      ],
      "gehe": [
-      415,
-      290
+      432,
+      312
      ],
      "ansehen": [
       {
@@ -2471,16 +2540,25 @@
      "script_name": "Datenanschluss",
      "name_key": "UI_OBJ_DATENANSCHLUSS",
      "rect": [
-      270,
+      265,
       125,
-      90,
-      110
+      125,
+      140
      ],
      "gehe": [
-      325,
-      290
+      327,
+      312
      ],
-     "ansehen": [],
+     "ansehen": [
+      {
+       "zeile": "W3_EING_MAX_0377",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_EING_MAX_0377"
+       ]
+      }
+     ],
+     "nach": "W3_PANZERTUER_OFFEN",
      "benutzen": [
       {
        "zeile": "W3_EING_KAL_0380",
@@ -2488,7 +2566,26 @@
        "blasen": [
         "W3_EING_KAL_0380"
        ],
+       "bedingung": [
+        {
+         "art": "vor",
+         "raetsel": "R9a"
+        }
+       ],
        "bedingung_text": "Kalle kommt mit Kabeltrommel"
+      },
+      {
+       "zeile": "W3_EING_MAX_0415",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_EING_MAX_0415"
+       ],
+       "bedingung": [
+        {
+         "art": "nach",
+         "raetsel": "R9a"
+        }
+       ]
       }
      ]
     },
@@ -2497,14 +2594,14 @@
      "script_name": "Wischeimer",
      "name_key": "UI_OBJ_WISCHEIMER",
      "rect": [
-      38,
-      280,
-      75,
-      66
+      168,
+      250,
+      52,
+      54
      ],
      "gehe": [
-      130,
-      330
+      186,
+      326
      ],
      "ansehen": [
       {
@@ -2548,14 +2645,14 @@
      "script_name": "Pinnwand",
      "name_key": "UI_OBJ_PINNWAND",
      "rect": [
-      0,
-      90,
-      98,
-      150
+      164,
+      112,
+      80,
+      74
      ],
      "gehe": [
-      110,
-      312
+      196,
+      330
      ],
      "ansehen": [
       {
@@ -2577,7 +2674,8 @@
        "zeile": "W3_EING_MAX_0470",
        "sprecher": "MAX",
        "blasen": [
-        "W3_EING_MAX_0470"
+        "W3_EING_MAX_0470",
+        "W3_EING_MAX_0470_2"
        ],
        "mal": 3
       },
@@ -2596,14 +2694,14 @@
      "script_name": "Warnstreifen",
      "name_key": "UI_OBJ_WARNSTREIFEN",
      "rect": [
-      180,
-      222,
-      300,
-      40
+      120,
+      276,
+      440,
+      18
      ],
      "gehe": [
-      300,
-      292
+      400,
+      318
      ],
      "ansehen": [
       {
@@ -2628,14 +2726,14 @@
      "script_name": "Deckenlampe",
      "name_key": "UI_OBJ_DECKENLAMPE",
      "rect": [
-      305,
-      45,
-      40,
-      40
+      296,
+      26,
+      56,
+      28
      ],
      "gehe": [
-      325,
-      290
+      327,
+      316
      ],
      "ansehen": [
       {
@@ -2660,14 +2758,14 @@
      "script_name": "Gang",
      "name_key": "UI_OBJ_GANG",
      "rect": [
-      500,
-      60,
-      92,
-      200
+      598,
+      30,
+      42,
+      280
      ],
      "gehe": [
-      520,
-      285
+      580,
+      326
      ],
      "ansehen": [
       {
@@ -2685,6 +2783,15 @@
        ],
        "mal": 2
       }
+     ],
+     "benutzen": [
+      {
+       "zeile": "W3_EING_MAX_0507",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_EING_MAX_0507"
+       ]
+      }
      ]
     },
     {
@@ -2692,14 +2799,14 @@
      "script_name": "PlatzDesHausmeisters",
      "name_key": "UI_OBJ_PLATZ_DES_HAUSMEISTERS",
      "rect": [
-      440,
-      200,
+      208,
+      282,
       60,
-      60
+      30
      ],
      "gehe": [
-      455,
-      295
+      285,
+      320
      ],
      "ansehen": [
       {
@@ -2729,7 +2836,8 @@
        ],
        "mal": 2
       }
-     ]
+     ],
+     "nach": "R8"
     }
    ],
    "props": [],
@@ -2740,17 +2848,25 @@
      "ziel": "unterstadt_strasse",
      "name_key": "UI_RAUM_UNTERSTADT_STRASSE",
      "rect": [
-      110,
-      92,
-      56,
-      178
+      14,
+      62,
+      116,
+      218
      ],
      "gehe": [
-      140,
-      290
+      80,
+      304
      ],
      "erreichbar_ab": "start",
-     "ansehen": []
+     "ansehen": [
+      {
+       "zeile": "W3_EING_MAX_0580",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_EING_MAX_0580"
+       ]
+      }
+     ]
     }
    ],
    "zurufe": [
@@ -2778,120 +2894,164 @@
     1280,
     360
    ],
-   "hintergrund": "res://grafik/hintergruende/w3_bg_stadtstrasse_v01.png",
+   "hintergrund": "res://grafik/hintergruende/w3_bg_stadtstrasse_v02.png",
    "farbe": "#7fa36a",
    "laufbereich": [
     [
      8,
-     326
+     302
     ],
     [
-     1088,
-     326
+     1010,
+     302
     ],
     [
-     1108,
-     304
+     955,
+     264
     ],
     [
-     1192,
-     304
+     942,
+     262
     ],
     [
-     1210,
-     326
+     946,
+     247
+    ],
+    [
+     1016,
+     247
+    ],
+    [
+     1020,
+     262
+    ],
+    [
+     1060,
+     264
+    ],
+    [
+     1128,
+     302
     ],
     [
      1272,
-     326
+     302
     ],
     [
      1272,
-     354
+     356
     ],
     [
      8,
-     354
+     356
     ]
    ],
    "marker": {
     "start": [
-     200,
+     240,
      344
     ],
     "von_kueche_orakel": [
-     520,
-     330
+     676,
+     316
     ],
     "von_buero_50": [
-     1148,
-     312
+     980,
+     256
     ],
     "von_widerstandsbasis": [
-     200,
+     240,
      344
     ],
     "von_zelle": [
-     200,
+     240,
      344
     ]
    },
-   "tiefe": 0.69,
-   "skala": 0.8,
+   "tiefe": 0.565,
+   "skala": 1.0,
+   "vordergrund": {
+    "nachttisch": {
+     "bild": "res://grafik/props/w3_nachttisch_v02.png",
+     "rect": [
+      150,
+      262,
+      81,
+      78
+     ],
+     "baseline": 340,
+     "vor": "W3_NACHT"
+    },
+    "nachttisch_nacht": {
+     "bild": "res://grafik/props/w3_nachttisch_nacht_v02.png",
+     "rect": [
+      152,
+      262,
+      81,
+      79
+     ],
+     "baseline": 341,
+     "nach": "W3_NACHT"
+    }
+   },
    "effekte": [
     {
      "art": "bild",
-     "bild": "res://grafik/ambiente/w3_radiowecker_559.png",
+     "bild": "res://grafik/ambiente/w3_radiowecker_559_v02.png",
      "bilder": 2,
      "pos": [
-      134,
-      298
+      182,
+      278
      ],
+     "baseline": 342,
      "fps": 2,
      "sonst": "W3_NACHT|W3_WECKER_KLINGELT"
     },
     {
      "art": "bild",
-     "bild": "res://grafik/ambiente/w3_radiowecker_559_nacht.png",
+     "bild": "res://grafik/ambiente/w3_radiowecker_559_nacht_v02.png",
      "bilder": 2,
      "pos": [
-      134,
-      298
+      184,
+      279
      ],
+     "baseline": 342,
      "fps": 2,
      "wenn": "W3_NACHT",
      "sonst": "W3_WECKER_KLINGELT"
     },
     {
      "art": "bild",
-     "bild": "res://grafik/ambiente/w3_radiowecker_klingelt.png",
+     "bild": "res://grafik/ambiente/w3_radiowecker_klingelt_v02.png",
      "bilder": 6,
      "pos": [
-      134,
-      298
+      182,
+      278
      ],
+     "baseline": 342,
      "fps": 11,
      "wenn": "W3_WECKER_KLINGELT",
      "sonst": "W3_NACHT"
     },
     {
      "art": "bild",
-     "bild": "res://grafik/ambiente/w3_radiowecker_klingelt_nacht.png",
+     "bild": "res://grafik/ambiente/w3_radiowecker_klingelt_nacht_v02.png",
      "bilder": 6,
      "pos": [
-      134,
-      298
+      184,
+      279
      ],
+     "baseline": 342,
      "fps": 11,
      "wenn": "W3_WECKER_KLINGELT+W3_NACHT"
     },
     {
      "art": "bild",
-     "bild": "res://grafik/ambiente/w3_glastuer_redet.png",
+     "bild": "res://grafik/ambiente/w3_glastuer_redet_v02.png",
      "bilder": 4,
      "pos": [
-      1197,
-      265
+      1032,
+      206
      ],
      "fps": 8,
      "spricht": "TUR",
@@ -2899,11 +3059,11 @@
     },
     {
      "art": "bild",
-     "bild": "res://grafik/ambiente/w3_glastuer_redet_nacht.png",
+     "bild": "res://grafik/ambiente/w3_glastuer_redet_nacht_v02.png",
      "bilder": 4,
      "pos": [
-      1197,
-      265
+      1035,
+      206
      ],
      "fps": 8,
      "spricht": "TUR",
@@ -2916,11 +3076,11 @@
      "weg": [
       [
        -170,
-       304
+       294
       ],
       [
        1290,
-       304
+       294
       ]
      ],
      "tempo": 60,
@@ -2938,11 +3098,11 @@
      "weg": [
       [
        -170,
-       304
+       294
       ],
       [
        1290,
-       304
+       294
       ]
      ],
      "tempo": 60,
@@ -2960,11 +3120,11 @@
      "weg": [
       [
        -170,
-       304
+       294
       ],
       [
        1290,
-       304
+       294
       ]
      ],
      "tempo": 60,
@@ -2981,17 +3141,17 @@
      "bilder": 8,
      "weg": [
       [
-       1190,
-       336
+       980,
+       256
       ],
       [
        -80,
-       336
+       256
       ]
      ],
-     "tempo": 45,
+     "tempo": 30,
      "fps": 10,
-     "skala": 0.71,
+     "skala": 0.62,
      "start": 6.0,
      "pause": [
       14,
@@ -3004,17 +3164,17 @@
      "bilder": 8,
      "weg": [
       [
-       1260,
-       336
+       1030,
+       256
       ],
       [
-       -10,
-       336
+       -30,
+       256
       ]
      ],
-     "tempo": 45,
+     "tempo": 30,
      "fps": 10,
-     "skala": 0.71,
+     "skala": 0.62,
      "start": 6.0,
      "pause": [
       14,
@@ -3027,17 +3187,17 @@
      "bilder": 8,
      "weg": [
       [
-       1330,
-       336
+       1080,
+       256
       ],
       [
-       60,
-       336
+       20,
+       256
       ]
      ],
-     "tempo": 45,
+     "tempo": 30,
      "fps": 10,
-     "skala": 0.71,
+     "skala": 0.62,
      "start": 6.0,
      "pause": [
       14,
@@ -3069,26 +3229,50 @@
       0.2,
       0.2
      ]
+    },
+    {
+     "art": "bild",
+     "bild": "res://grafik/ambiente/w3_schnee.png",
+     "bilder": 4,
+     "pos": [
+      320,
+      360
+     ],
+     "fps": 5,
+     "z": 50,
+     "wenn": "W3_SCHNEE"
+    },
+    {
+     "art": "bild",
+     "bild": "res://grafik/ambiente/w3_schnee.png",
+     "bilder": 4,
+     "pos": [
+      960,
+      360
+     ],
+     "fps": 5,
+     "z": 50,
+     "wenn": "W3_SCHNEE"
     }
    ],
    "hintergrund_nach": {
-    "W3_NACHT": "res://grafik/hintergruende/w3_bg_stadtstrasse_nacht_v01.png"
+    "W3_NACHT": "res://grafik/hintergruende/w3_bg_stadtstrasse_nacht_v02.png"
    },
    "figuren": [
     {
      "id": "schmidt",
      "script_name": "Schmidt",
      "pos": [
-      1050,
-      330
+      1090,
+      324
      ]
     },
     {
      "id": "tuer",
      "script_name": "Tuer",
      "pos": [
-      1148,
-      300
+      1032,
+      246
      ]
     },
     {
@@ -3102,17 +3286,33 @@
    ],
    "hotspots": [
     {
+     "id": "sprechanlage",
+     "script_name": "Sprechanlage",
+     "name_key": "UI_OBJ_SPRECHANLAGE",
+     "rect": [
+      1020,
+      178,
+      24,
+      30
+     ],
+     "gehe": [
+      1000,
+      252
+     ],
+     "ansehen": []
+    },
+    {
      "id": "himmel",
      "script_name": "Himmel",
      "name_key": "UI_OBJ_HIMMEL",
      "rect": [
-      290,
-      0,
-      690,
-      60
+      100,
+      24,
+      540,
+      28
      ],
      "gehe": [
-      640,
+      400,
       330
      ],
      "ansehen": [
@@ -3138,13 +3338,13 @@
      "script_name": "Baeume",
      "name_key": "UI_OBJ_BAEUME",
      "rect": [
-      690,
-      145,
-      320,
-      150
+      590,
+      74,
+      80,
+      182
      ],
      "gehe": [
-      850,
+      630,
       330
      ],
      "ansehen": [
@@ -3170,13 +3370,13 @@
      "script_name": "Haeuser",
      "name_key": "UI_OBJ_HAEUSER",
      "rect": [
-      285,
-      62,
-      405,
-      175
+      0,
+      60,
+      250,
+      190
      ],
      "gehe": [
-      480,
+      130,
       330
      ],
      "ansehen": [
@@ -3202,13 +3402,13 @@
      "script_name": "Autos",
      "name_key": "UI_OBJ_AUTOS",
      "rect": [
-      588,
-      244,
-      214,
-      54
+      380,
+      262,
+      560,
+      36
      ],
      "gehe": [
-      690,
+      640,
       330
      ],
      "ansehen": [
@@ -3234,16 +3434,24 @@
      "script_name": "Auto",
      "name_key": "UI_OBJ_AUTO",
      "rect": [
-      318,
-      242,
-      104,
-      58
+      240,
+      262,
+      140,
+      36
      ],
      "gehe": [
-      370,
+      310,
       330
      ],
-     "ansehen": [],
+     "ansehen": [
+      {
+       "zeile": "W3_SIM_MAX_0330",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_SIM_MAX_0330"
+       ]
+      }
+     ],
      "benutzen": [
       {
        "zeile": "W3_SIM_MAX_0150",
@@ -3259,14 +3467,14 @@
      "script_name": "Radiowecker",
      "name_key": "UI_OBJ_RADIOWECKER",
      "rect": [
-      108,
-      262,
+      166,
+      261,
       52,
       18
      ],
      "gehe": [
-      150,
-      334
+      195,
+      350
      ],
      "ansehen": [
       {
@@ -3304,21 +3512,22 @@
      "script_name": "KlingelnderRadiowecker",
      "name_key": "UI_OBJ_KLINGELNDER_RADIOWECKER",
      "rect": [
-      110,
-      280,
-      48,
-      22
+      166,
+      261,
+      52,
+      18
      ],
      "gehe": [
-      150,
-      334
+      195,
+      350
      ],
      "ansehen": [
       {
        "zeile": "W3_SIM_MAX_0220",
        "sprecher": "MAX",
        "blasen": [
-        "W3_SIM_MAX_0220"
+        "W3_SIM_MAX_0220",
+        "W3_SIM_MAX_0220_2"
        ]
       },
       {
@@ -3346,10 +3555,10 @@
      "script_name": "Gehweg",
      "name_key": "UI_OBJ_GEHWEG",
      "rect": [
-      400,
-      336,
-      480,
-      18
+      300,
+      330,
+      600,
+      24
      ],
      "gehe": [
       640,
@@ -3378,13 +3587,13 @@
      "script_name": "Sonne",
      "name_key": "UI_OBJ_SONNE",
      "rect": [
-      800,
-      0,
-      180,
-      24
+      640,
+      24,
+      56,
+      16
      ],
      "gehe": [
-      880,
+      665,
       330
      ],
      "ansehen": [
@@ -3403,7 +3612,41 @@
        ],
        "mal": 2
       }
-     ]
+     ],
+     "vor": "W3_NACHT"
+    },
+    {
+     "id": "mond",
+     "script_name": "Mond",
+     "name_key": "UI_OBJ_MOND",
+     "rect": [
+      640,
+      24,
+      56,
+      16
+     ],
+     "gehe": [
+      665,
+      330
+     ],
+     "ansehen": [
+      {
+       "zeile": "W3_SIM_MAX_0327",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_SIM_MAX_0327"
+       ]
+      },
+      {
+       "zeile": "W3_SIM_MAX_0328",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_SIM_MAX_0328"
+       ],
+       "mal": 2
+      }
+     ],
+     "nach": "W3_NACHT"
     }
    ],
    "props": [],
@@ -3414,14 +3657,14 @@
      "ziel": "kueche_orakel",
      "name_key": "UI_RAUM_KUECHE_ORAKEL",
      "rect": [
-      500,
-      205,
-      40,
-      75
+      648,
+      118,
+      56,
+      118
      ],
      "gehe": [
-      520,
-      330
+      676,
+      312
      ],
      "erreichbar_ab": "R3b",
      "ansehen": [
@@ -3466,14 +3709,14 @@
      "ziel": "buero_50",
      "name_key": "UI_RAUM_BUERO_50",
      "rect": [
-      1112,
-      195,
-      73,
-      105
+      950,
+      138,
+      62,
+      108
      ],
      "gehe": [
-      1148,
-      306
+      980,
+      252
      ],
      "erreichbar_ab": "R5",
      "ansehen": [
@@ -3559,96 +3802,96 @@
     640,
     360
    ],
-   "hintergrund": "res://grafik/hintergruende/w3_bg_kueche_orakel_v01.png",
+   "hintergrund": "res://grafik/hintergruende/w3_bg_kueche_orakel_v02.png",
    "farbe": "#b49a72",
    "laufbereich": [
     [
-     150,
-     286
+     80,
+     285
     ],
     [
-     228,
-     286
+     236,
+     285
     ],
     [
-     228,
-     348
+     236,
+     322
     ],
     [
-     452,
-     348
+     436,
+     322
     ],
     [
-     455,
-     286
+     436,
+     285
     ],
     [
-     555,
-     286
+     560,
+     285
     ],
     [
-     608,
-     338
+     600,
+     320
     ],
     [
-     626,
+     630,
      356
     ],
     [
-     40,
+     10,
      356
     ],
     [
-     82,
-     330
+     50,
+     320
     ]
    ],
    "marker": {
     "start": [
      330,
-     352
+     342
     ],
     "von_stadtstrasse": [
-     560,
-     336
+     520,
+     310
     ],
     "von_zelle": [
-     500,
-     320
+     480,
+     330
     ]
    },
-   "tiefe": 0.9,
-   "skala": 0.8,
+   "tiefe": 0.72,
+   "skala": 1.0,
    "effekte": [
     {
      "art": "flackern",
      "pos": [
-      130,
-      245
+      138,
+      243
      ],
      "r": [
       24,
-      22
+      18
      ],
      "farbe": "#ffb347"
     },
     {
      "art": "bild",
-     "bild": "res://grafik/ambiente/w3_eieruhr.png",
+     "bild": "res://grafik/ambiente/w3_eieruhr_v02.png",
      "bilder": 4,
      "pos": [
-      544,
-      192
+      439,
+      202
      ],
      "fps": 4
     },
     {
      "art": "bild",
-     "bild": "res://grafik/ambiente/w3_kuckucksuhr.png",
+     "bild": "res://grafik/ambiente/w3_kuckucksuhr_v02.png",
      "bilder": 8,
      "pos": [
-      418,
-      94
+      212,
+      126
      ],
      "fps": 7,
      "ablauf": "einmalig",
@@ -3657,26 +3900,74 @@
       25,
       50
      ]
+    },
+    {
+     "art": "bild",
+     "bild": "res://grafik/ambiente/w3_kuechenradio_v02.png",
+     "bilder": 4,
+     "pos": [
+      432,
+      144
+     ],
+     "fps": 8,
+     "spricht": "RAD",
+     "sonst": "R4"
+    },
+    {
+     "art": "bild",
+     "bild": "res://grafik/ambiente/w3_kuechenradio_v02.png",
+     "bilder": 4,
+     "pos": [
+      432,
+      144
+     ],
+     "fps": 8,
+     "spricht": "PIX",
+     "sonst": "R4"
+    },
+    {
+     "art": "bild",
+     "bild": "res://grafik/ambiente/w3_kuechenradio_r4_v02.png",
+     "bilder": 4,
+     "pos": [
+      432,
+      144
+     ],
+     "fps": 8,
+     "spricht": "RAD",
+     "wenn": "R4"
+    },
+    {
+     "art": "bild",
+     "bild": "res://grafik/ambiente/w3_kuechenradio_r4_v02.png",
+     "bilder": 4,
+     "pos": [
+      432,
+      144
+     ],
+     "fps": 8,
+     "spricht": "PIX",
+     "wenn": "R4"
     }
    ],
    "hintergrund_nach": {
-    "R4": "res://grafik/hintergruende/w3_bg_kueche_orakel_scherben_v01.png"
+    "R4": "res://grafik/hintergruende/w3_bg_kueche_orakel_scherben_v02.png"
    },
    "figuren": [
     {
      "id": "orakel_oma",
      "script_name": "OrakelOma",
      "pos": [
-      188,
-      318
+      78,
+      322
      ]
     },
     {
      "id": "radio",
      "script_name": "Radio",
      "pos": [
-      535,
-      108
+      425,
+      128
      ]
     }
    ],
@@ -3686,14 +3977,14 @@
      "script_name": "Sparschwein",
      "name_key": "UI_OBJ_SPARSCHWEIN",
      "rect": [
-      462,
-      74,
-      46,
-      36
+      380,
+      114,
+      37,
+      28
      ],
      "gehe": [
-      500,
-      300
+      400,
+      334
      ],
      "ansehen": [
       {
@@ -3712,6 +4003,7 @@
        "mal": 2
       }
      ],
+     "vor": "R4",
      "benutzen": [
       {
        "zeile": "W3_KUCH_ORA_0520",
@@ -3728,14 +4020,14 @@
      "script_name": "Ofen",
      "name_key": "UI_OBJ_OFEN",
      "rect": [
-      25,
-      155,
-      130,
-      170
+      105,
+      188,
+      78,
+      105
      ],
      "gehe": [
-      180,
-      322
+      140,
+      330
      ],
      "ansehen": [
       {
@@ -3771,14 +4063,14 @@
      "script_name": "Kochbuch",
      "name_key": "UI_OBJ_KOCHBUCH",
      "rect": [
-      338,
-      210,
-      86,
-      36
+      330,
+      222,
+      42,
+      28
      ],
      "gehe": [
-      380,
-      352
+      350,
+      334
      ],
      "ansehen": [
       {
@@ -3814,21 +4106,22 @@
      "script_name": "Gabel",
      "name_key": "UI_OBJ_GABEL",
      "rect": [
-      252,
+      314,
       230,
-      44,
-      12
+      16,
+      18
      ],
      "gehe": [
-      270,
-      352
+      322,
+      334
      ],
      "ansehen": [
       {
        "zeile": "W3_KUCH_MAX_0580",
        "sprecher": "MAX",
        "blasen": [
-        "W3_KUCH_MAX_0580"
+        "W3_KUCH_MAX_0580",
+        "W3_KUCH_MAX_0580_2"
        ],
        "bedingung_text": "Max starrt drei Sekunden"
       },
@@ -3857,14 +4150,14 @@
      "script_name": "Kuckucksuhr",
      "name_key": "UI_OBJ_KUCKUCKSUHR",
      "rect": [
-      395,
-      60,
-      45,
-      115
+      190,
+      98,
+      44,
+      70
      ],
      "gehe": [
-      470,
-      300
+      212,
+      330
      ],
      "ansehen": [
       {
@@ -3892,6 +4185,14 @@
        ],
        "folge": [
         {
+         "zeile": "W3_KUCH_NAR_0615",
+         "sprecher": "NAR",
+         "blasen": [
+          "W3_KUCH_NAR_0615"
+         ],
+         "bedingung_text": "Sprechblase an der Kuckucksuhr, ein Geräusch ohne Sprecher (welt_3.gd, W3-R07-02)"
+        },
+        {
          "zeile": "W3_KUCH_MAX_0620",
          "sprecher": "MAX",
          "blasen": [
@@ -3916,14 +4217,14 @@
      "script_name": "Eieruhr",
      "name_key": "UI_OBJ_EIERUHR",
      "rect": [
-      530,
-      160,
-      32,
-      32
+      426,
+      178,
+      26,
+      26
      ],
      "gehe": [
-      540,
-      300
+      440,
+      330
      ],
      "ansehen": [
       {
@@ -3958,14 +4259,14 @@
      "script_name": "TischMitTellerUndTeekanne",
      "name_key": "UI_OBJ_TISCH_MIT_TELLER_UND_TEEKANNE",
      "rect": [
-      230,
-      200,
-      205,
-      140
+      244,
+      210,
+      140,
+      108
      ],
      "gehe": [
-      330,
-      352
+      314,
+      334
      ],
      "ansehen": [
       {
@@ -3990,14 +4291,14 @@
      "script_name": "GlaeserAufDemRegal",
      "name_key": "UI_OBJ_GLAESER_AUF_DEM_REGAL",
      "rect": [
-      470,
-      114,
-      80,
-      42
+      433,
+      110,
+      46,
+      32
      ],
      "gehe": [
-      510,
-      300
+      456,
+      330
      ],
      "ansehen": [
       {
@@ -4022,14 +4323,14 @@
      "script_name": "GardinenUndFenster",
      "name_key": "UI_OBJ_GARDINEN_UND_FENSTER",
      "rect": [
-      258,
-      52,
-      125,
-      140
+      262,
+      100,
+      104,
+      100
      ],
      "gehe": [
-      320,
-      352
+      314,
+      330
      ],
      "ansehen": [
       {
@@ -4054,14 +4355,14 @@
      "script_name": "Tapete",
      "name_key": "UI_OBJ_TAPETE",
      "rect": [
-      80,
-      40,
-      170,
-      100
+      236,
+      56,
+      24,
+      160
      ],
      "gehe": [
-      190,
-      318
+      250,
+      330
      ],
      "ansehen": [
       {
@@ -4086,14 +4387,14 @@
      "script_name": "Kehrblech",
      "name_key": "UI_OBJ_KEHRBLECH",
      "rect": [
-      5,
-      140,
-      72,
-      205
+      176,
+      184,
+      48,
+      108
      ],
      "gehe": [
-      95,
-      342
+      210,
+      330
      ],
      "ansehen": [
       {
@@ -4120,14 +4421,14 @@
      "script_name": "Scherben",
      "name_key": "UI_OBJ_SCHERBEN",
      "rect": [
-      470,
-      286,
-      80,
-      30
+      428,
+      280,
+      56,
+      34
      ],
      "gehe": [
-      500,
-      320
+      456,
+      330
      ],
      "ansehen": [
       {
@@ -4147,7 +4448,8 @@
        "bedingung_text": "nach der Szene",
        "mal": 2
       }
-     ]
+     ],
+     "nach": "R4"
     }
    ],
    "props": [],
@@ -4158,17 +4460,25 @@
      "ziel": "stadtstrasse",
      "name_key": "UI_RAUM_STADTSTRASSE",
      "rect": [
-      578,
-      50,
-      58,
-      290
+      487,
+      115,
+      76,
+      172
      ],
      "gehe": [
-      565,
-      332
+      525,
+      300
      ],
      "erreichbar_ab": "R3b",
-     "ansehen": []
+     "ansehen": [
+      {
+       "zeile": "W3_KUCH_MAX_0800",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_KUCH_MAX_0800"
+       ]
+      }
+     ]
     }
    ],
    "zurufe": [
@@ -4193,81 +4503,98 @@
    "script_name": "Buero50",
    "name_key": "UI_RAUM_BUERO_50",
    "groesse": [
-    640,
+    1280,
     360
    ],
-   "hintergrund": "res://grafik/hintergruende/w3_bg_buero_50_v01.png",
+   "hintergrund": "res://grafik/hintergruende/w3_bg_buero_50_v02.png",
    "farbe": "#9aa8b8",
    "laufbereich": [
     [
-     80,
-     322
-    ],
-    [
-     150,
-     270
-    ],
-    [
-     465,
-     268
-    ],
-    [
-     470,
+     20,
      300
     ],
     [
-     530,
-     330
+     345,
+     300
     ],
     [
-     560,
+     345,
+     314
+    ],
+    [
+     495,
+     314
+    ],
+    [
+     495,
+     296
+    ],
+    [
+     790,
+     296
+    ],
+    [
+     1010,
+     304
+    ],
+    [
+     1050,
+     314
+    ],
+    [
+     1272,
+     316
+    ],
+    [
+     1272,
      356
     ],
     [
-     20,
+     8,
      356
     ]
    ],
    "marker": {
     "start": [
-     300,
-     320
+     640,
+     330
     ],
     "von_stadtstrasse": [
-     105,
-     330
+     235,
+     318
     ]
    },
-   "tiefe": 0.8,
-   "skala": 0.8,
+   "tiefe": 0.39,
+   "skala": 1.0,
+   "tiefe_oben_y": 200.0,
    "effekte": [
     {
      "art": "bild",
-     "bild": "res://grafik/ambiente/w3_terminal_buero.png",
+     "bild": "res://grafik/ambiente/w3_terminal_buero_v02.png",
      "bilder": 4,
      "pos": [
-      322,
-      229
+      866,
+      222
      ],
      "fps": 6
     },
     {
      "art": "bild",
-     "bild": "res://grafik/ambiente/w3_klone_tippen.png",
+     "bild": "res://grafik/ambiente/w3_klone_tippen_v02.png",
      "bilder": 6,
      "pos": [
-      123,
-      220
+      382,
+      206
      ],
      "fps": 7
     },
     {
      "art": "bild",
-     "bild": "res://grafik/ambiente/w3_kopierer.png",
+     "bild": "res://grafik/ambiente/w3_kopierer_v02.png",
      "bilder": 4,
      "pos": [
-      505,
-      304
+      421,
+      310
      ],
      "fps": 11
     }
@@ -4277,16 +4604,16 @@
      "id": "klon",
      "script_name": "Klon",
      "pos": [
-      250,
-      300
+      600,
+      282
      ]
     },
     {
      "id": "schmidt",
      "script_name": "Schmidt",
      "pos": [
-      420,
-      286
+      646,
+      232
      ]
     }
    ],
@@ -4296,14 +4623,14 @@
      "script_name": "Flur",
      "name_key": "UI_OBJ_FLUR",
      "rect": [
-      165,
-      85,
-      310,
-      45
+      560,
+      96,
+      170,
+      56
      ],
      "gehe": [
-      320,
-      292
+      640,
+      304
      ],
      "ansehen": [
       {
@@ -4328,16 +4655,24 @@
      "script_name": "Tueren",
      "name_key": "UI_OBJ_TUEREN",
      "rect": [
-      95,
-      150,
-      55,
-      72
+      740,
+      105,
+      40,
+      170
      ],
      "gehe": [
-      140,
-      318
+      760,
+      310
      ],
-     "ansehen": [],
+     "ansehen": [
+      {
+       "zeile": "W3_TURM_MAX_0600",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_TURM_MAX_0600"
+       ]
+      }
+     ],
      "benutzen": [
       {
        "zeile": "W3_TURM_MAX_0220",
@@ -4353,14 +4688,14 @@
      "script_name": "Topfpflanzen",
      "name_key": "UI_OBJ_TOPFPFLANZEN",
      "rect": [
-      150,
-      188,
-      46,
-      84
+      532,
+      192,
+      40,
+      60
      ],
      "gehe": [
-      175,
-      300
+      552,
+      316
      ],
      "ansehen": [
       {
@@ -4387,14 +4722,14 @@
      "script_name": "Fenster",
      "name_key": "UI_OBJ_FENSTER",
      "rect": [
-      90,
-      60,
-      66,
-      215
+      334,
+      88,
+      94,
+      128
      ],
      "gehe": [
-      140,
-      318
+      330,
+      322
      ],
      "ansehen": [
       {
@@ -4428,14 +4763,14 @@
      "script_name": "EndlosTreppe",
      "name_key": "UI_OBJ_ENDLOS_TREPPE",
      "rect": [
-      590,
-      20,
-      50,
-      305
+      1015,
+      24,
+      225,
+      290
      ],
      "gehe": [
-      555,
-      350
+      1080,
+      330
      ],
      "ansehen": [
       {
@@ -4469,14 +4804,14 @@
      "script_name": "Wasserspender",
      "name_key": "UI_OBJ_WASSERSPENDER",
      "rect": [
-      538,
-      180,
-      45,
-      140
+      903,
+      172,
+      48,
+      130
      ],
      "gehe": [
-      525,
-      338
+      925,
+      322
      ],
      "ansehen": [
       {
@@ -4510,14 +4845,14 @@
      "script_name": "Kopierer",
      "name_key": "UI_OBJ_KOPIERER",
      "rect": [
-      470,
-      180,
-      70,
-      120
+      350,
+      195,
+      140,
+      115
      ],
      "gehe": [
-      470,
-      318
+      420,
+      330
      ],
      "ansehen": [
       {
@@ -4551,14 +4886,14 @@
      "script_name": "Klone",
      "name_key": "UI_OBJ_KLONE",
      "rect": [
-      200,
-      228,
-      100,
-      46
+      545,
+      152,
+      170,
+      138
      ],
      "gehe": [
-      250,
-      312
+      600,
+      322
      ],
      "ansehen": [
       {
@@ -4592,7 +4927,8 @@
        "zeile": "W3_TURM_MAX_0550",
        "sprecher": "MAX",
        "blasen": [
-        "W3_TURM_MAX_0550"
+        "W3_TURM_MAX_0550",
+        "W3_TURM_MAX_0550_2"
        ],
        "bedingung_text": "vor dem Tausch",
        "gegenstand": "kaffeetasse"
@@ -4604,14 +4940,14 @@
      "script_name": "FarbcodeAnDerWand",
      "name_key": "UI_OBJ_FARBCODE_AN_DER_WAND",
      "rect": [
-      163,
-      135,
-      316,
-      76
+      795,
+      90,
+      192,
+      66
      ],
      "gehe": [
-      320,
-      292
+      890,
+      322
      ],
      "ansehen": [
       {
@@ -4636,14 +4972,14 @@
      "script_name": "Terminal",
      "name_key": "UI_OBJ_TERMINAL",
      "rect": [
-      293,
-      200,
-      58,
-      72
+      826,
+      190,
+      76,
+      52
      ],
      "gehe": [
-      320,
-      292
+      865,
+      322
      ],
      "ansehen": [
       {
@@ -4670,14 +5006,14 @@
      "script_name": "Kaffeetasse",
      "name_key": "UI_OBJ_KAFFEETASSE",
      "rect": [
-      546,
-      226,
+      918,
+      248,
       14,
       14
      ],
      "gehe": [
-      525,
-      338
+      925,
+      322
      ],
      "textur": "res://grafik/props/kaffeetasse.png",
      "gegenstand": "kaffeetasse",
@@ -4711,18 +5047,26 @@
      "script_name": "Sonnenbrille",
      "name_key": "UI_OBJ_SONNENBRILLE",
      "rect": [
-      562,
-      230,
+      893,
+      228,
       16,
       8
      ],
      "gehe": [
-      525,
-      338
+      880,
+      322
      ],
      "textur": "res://grafik/props/sonnenbrille.png",
      "gegenstand": "sonnenbrille",
-     "ansehen": [],
+     "ansehen": [
+      {
+       "zeile": "W3_TURM_MAX_0610",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_TURM_MAX_0610"
+       ]
+      }
+     ],
      "nehmen": {
       "zeile": "W3_TURM_MAX_0440",
       "sprecher": "MAX",
@@ -4736,23 +5080,32 @@
      "script_name": "SchmidtsAkte",
      "name_key": "UI_OBJ_SCHMIDTS_AKTE",
      "rect": [
-      432,
-      270,
+      662,
+      214,
       18,
       14
      ],
      "gehe": [
-      440,
-      300
+      646,
+      304
      ],
      "textur": "res://grafik/props/schmidts_akte.png",
      "gegenstand": "schmidts_akte",
-     "ansehen": [],
+     "ansehen": [
+      {
+       "zeile": "W3_TURM_MAX_0620",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_TURM_MAX_0620"
+       ]
+      }
+     ],
      "nehmen": {
       "zeile": "W3_TURM_MAX_0460",
       "sprecher": "MAX",
       "blasen": [
-       "W3_TURM_MAX_0460"
+       "W3_TURM_MAX_0460",
+       "W3_TURM_MAX_0460_2"
       ]
      }
     }
@@ -4764,17 +5117,25 @@
      "ziel": "stadtstrasse",
      "name_key": "UI_RAUM_STADTSTRASSE",
      "rect": [
-      15,
-      82,
-      62,
-      268
+      172,
+      88,
+      128,
+      206
      ],
      "gehe": [
-      90,
-      336
+      235,
+      312
      ],
      "erreichbar_ab": "R3b",
-     "ansehen": []
+     "ansehen": [
+      {
+       "zeile": "W3_TURM_MAX_0630",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_TURM_MAX_0630"
+       ]
+      }
+     ]
     }
    ],
    "zurufe": [
@@ -4802,113 +5163,170 @@
     640,
     360
    ],
-   "hintergrund": "res://grafik/hintergruende/w3_bg_testkammer_1_v01.png",
+   "hintergrund": "res://grafik/hintergruende/w3_bg_testkammer_1_v02.png",
    "farbe": "#d8d8d8",
    "laufbereich": [
     [
-     105,
-     294
-    ],
-    [
-     145,
-     266
-    ],
-    [
-     495,
-     266
-    ],
-    [
-     552,
-     296
-    ],
-    [
-     548,
-     330
-    ],
-    [
-     540,
-     356
-    ],
-    [
-     0,
-     356
-    ],
-    [
      30,
-     330
+     290
+    ],
+    [
+     520,
+     290
+    ],
+    [
+     520,
+     308
+    ],
+    [
+     580,
+     308
+    ],
+    [
+     580,
+     290
+    ],
+    [
+     610,
+     290
+    ],
+    [
+     635,
+     356
+    ],
+    [
+     5,
+     356
     ]
    ],
    "marker": {
     "start": [
      320,
-     322
+     338
     ],
     "von_testkammer_2": [
-     510,
-     300
+     470,
+     306
     ],
     "von_widerstandsbasis": [
-     95,
-     322
+     113,
+     306
     ],
     "von_kapsel": [
-     95,
-     322
+     113,
+     306
     ]
    },
-   "tiefe": 0.8,
-   "skala": 0.8,
+   "tiefe": 0.74,
+   "skala": 1.0,
+   "effekte": [
+    {
+     "art": "bild",
+     "bild": "res://grafik/ambiente/w3_lautsprecher_kammer1_v02.png",
+     "bilder": 4,
+     "pos": [
+      320,
+      45
+     ],
+     "fps": 8,
+     "spricht": "MUT"
+    },
+    {
+     "art": "bild",
+     "bild": "res://grafik/ambiente/w3_lautsprecher_kammer1_v02.png",
+     "bilder": 4,
+     "pos": [
+      320,
+      45
+     ],
+     "fps": 8,
+     "spricht": "PIX"
+    }
+   ],
    "hintergrund_nach": {
-    "R9b": "res://grafik/hintergruende/w3_bg_testkammer_1_offen_v01.png"
+    "R9b": "res://grafik/hintergruende/w3_bg_testkammer_1_offen_v02.png"
    },
    "figuren": [
     {
      "id": "opa",
      "script_name": "Opa",
      "pos": [
-      200,
-      300
+      262,
+      302
      ]
     },
     {
      "id": "mutti",
      "script_name": "Mutti",
      "pos": [
-      465,
-      52
+      320,
+      30
      ]
     },
     {
      "id": "bernd",
      "script_name": "Bernd",
      "pos": [
-      400,
-      312
+      425,
+      306
      ]
     },
     {
      "id": "portalgeraet_stimme",
      "script_name": "PortalgeraetStimme",
      "pos": [
-      122,
-      190
+      212,
+      160
      ]
     }
    ],
    "hotspots": [
     {
+     "id": "eingang",
+     "script_name": "Eingang",
+     "name_key": "UI_OBJ_EINGANG",
+     "rect": [
+      66,
+      102,
+      96,
+      180
+     ],
+     "gehe": [
+      113,
+      300
+     ],
+     "ansehen": [
+      {
+       "zeile": "W3_KAM1_MAX_0426",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_KAM1_MAX_0426"
+       ]
+      }
+     ],
+     "benutzen": [
+      {
+       "zeile": "W3_KAM1_MAX_0428",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_KAM1_MAX_0428"
+       ]
+      }
+     ]
+    },
+    {
      "id": "portalgeraet_in_der_halterung",
      "script_name": "PortalgeraetInDerHalterung",
      "name_key": "UI_OBJ_PORTALGERAET_IN_DER_HALTERUNG",
      "rect": [
-      106,
-      180,
-      32,
-      42
+      196,
+      136,
+      34,
+      48
      ],
      "gehe": [
-      128,
-      320
+      212,
+      306
      ],
      "ansehen": [
       {
@@ -4926,20 +5344,21 @@
        ],
        "mal": 2
       }
-     ]
+     ],
+     "vor": "W3_PORTAL_GENOMMEN"
     },
     {
      "id": "bodenschalter",
      "script_name": "Bodenschalter",
      "name_key": "UI_OBJ_BODENSCHALTER",
      "rect": [
-      278,
-      282,
-      86,
-      40
+      270,
+      290,
+      92,
+      36
      ],
      "gehe": [
-      320,
+      316,
       338
      ],
      "ansehen": [
@@ -5000,14 +5419,14 @@
      "script_name": "Pappkuchen",
      "name_key": "UI_OBJ_PAPPKUCHEN",
      "rect": [
-      555,
-      250,
-      70,
-      105
+      526,
+      248,
+      48,
+      58
      ],
      "gehe": [
-      528,
-      334
+      520,
+      322
      ],
      "ansehen": [
       {
@@ -5061,14 +5480,14 @@
      "script_name": "Lautsprecher",
      "name_key": "UI_OBJ_LAUTSPRECHER",
      "rect": [
-      446,
+      300,
+      24,
       40,
-      42,
-      18
+      14
      ],
      "gehe": [
-      430,
-      292
+      330,
+      300
      ],
      "ansehen": [
       {
@@ -5093,14 +5512,14 @@
      "script_name": "Wandplatten",
      "name_key": "UI_OBJ_WANDPLATTEN",
      "rect": [
-      150,
-      85,
-      340,
-      170
+      165,
+      40,
+      230,
+      236
      ],
      "gehe": [
       320,
-      292
+      300
      ],
      "ansehen": [
       {
@@ -5125,14 +5544,14 @@
      "script_name": "Halterung",
      "name_key": "UI_OBJ_HALTERUNG",
      "rect": [
-      108,
-      184,
-      28,
-      36
+      196,
+      136,
+      34,
+      48
      ],
      "gehe": [
-      128,
-      320
+      212,
+      306
      ],
      "ansehen": [
       {
@@ -5152,7 +5571,8 @@
        "bedingung_text": "nach dem Portal",
        "mal": 2
       }
-     ]
+     ],
+     "nach": "W3_PORTAL_GENOMMEN"
     }
    ],
    "props": [],
@@ -5163,14 +5583,14 @@
      "ziel": "testkammer_2",
      "name_key": "UI_RAUM_TESTKAMMER_2",
      "rect": [
-      518,
-      104,
-      42,
-      182
+      397,
+      103,
+      152,
+      180
      ],
      "gehe": [
-      522,
-      298
+      470,
+      300
      ],
      "erreichbar_ab": "R9b",
      "ansehen": [
@@ -5219,68 +5639,76 @@
     640,
     360
    ],
-   "hintergrund": "res://grafik/hintergruende/w3_bg_testkammer_2_v01.png",
+   "hintergrund": "res://grafik/hintergruende/w3_bg_testkammer_2_v02.png",
    "farbe": "#d0d0d0",
    "laufbereich": [
     [
-     105,
-     294
-    ],
-    [
-     145,
-     266
-    ],
-    [
-     495,
-     266
-    ],
-    [
-     560,
-     294
-    ],
-    [
-     600,
-     340
-    ],
-    [
-     640,
-     356
-    ],
-    [
-     0,
-     356
-    ],
-    [
      30,
-     330
+     292
+    ],
+    [
+     610,
+     292
+    ],
+    [
+     635,
+     356
+    ],
+    [
+     5,
+     356
     ]
    ],
    "marker": {
     "start": [
      320,
-     322
+     338
     ],
     "von_testkammer_1": [
-     100,
-     318
+     113,
+     306
     ],
     "von_testkammer_3": [
-     530,
-     302
+     506,
+     306
     ]
    },
-   "tiefe": 0.8,
-   "skala": 0.8,
+   "tiefe": 0.74,
+   "skala": 1.0,
+   "effekte": [
+    {
+     "art": "bild",
+     "bild": "res://grafik/ambiente/w3_lautsprecher_kammer2_v02.png",
+     "bilder": 4,
+     "pos": [
+      320,
+      123
+     ],
+     "fps": 8,
+     "spricht": "MUT"
+    },
+    {
+     "art": "bild",
+     "bild": "res://grafik/ambiente/w3_lautsprecher_kammer2_v02.png",
+     "bilder": 4,
+     "pos": [
+      320,
+      123
+     ],
+     "fps": 8,
+     "spricht": "PIX"
+    }
+   ],
    "hintergrund_nach": {
-    "R9c": "res://grafik/hintergruende/w3_bg_testkammer_2_laser_gestoert_v01.png"
+    "R9c": "res://grafik/hintergruende/w3_bg_testkammer_2_laser_gestoert_v02.png"
    },
    "figuren": [
     {
      "id": "mutti",
      "script_name": "Mutti",
      "pos": [
-      465,
-      52
+      320,
+      90
      ]
     }
    ],
@@ -5290,30 +5718,38 @@
      "script_name": "Lautsprecher",
      "name_key": "UI_OBJ_LAUTSPRECHER",
      "rect": [
-      446,
-      40,
-      42,
-      18
+      298,
+      66,
+      44,
+      46
      ],
      "gehe": [
-      430,
-      292
+      320,
+      300
      ],
-     "ansehen": []
+     "ansehen": [
+      {
+       "zeile": "W3_KAM2_MAX_0280",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_KAM2_MAX_0280"
+       ]
+      }
+     ]
     },
     {
      "id": "laser",
      "script_name": "Laser",
      "name_key": "UI_OBJ_LASER",
      "rect": [
-      140,
-      176,
-      366,
-      18
+      462,
+      180,
+      104,
+      92
      ],
      "gehe": [
-      320,
-      292
+      430,
+      306
      ],
      "ansehen": [
       {
@@ -5383,14 +5819,14 @@
      "script_name": "Kritzelei",
      "name_key": "UI_OBJ_KRITZELEI",
      "rect": [
-      410,
-      214,
-      76,
-      42
+      286,
+      218,
+      92,
+      50
      ],
      "gehe": [
-      440,
-      292
+      330,
+      302
      ],
      "ansehen": [
       {
@@ -5424,14 +5860,14 @@
      "script_name": "Sockel",
      "name_key": "UI_OBJ_SOCKEL",
      "rect": [
-      146,
-      220,
-      34,
-      54
+      186,
+      222,
+      40,
+      72
      ],
      "gehe": [
-      170,
-      296
+      206,
+      310
      ],
      "ansehen": [
       {
@@ -5460,14 +5896,14 @@
      "script_name": "Gummihuhn",
      "name_key": "UI_OBJ_GUMMIHUHN",
      "rect": [
-      152,
-      204,
+      195,
+      205,
       22,
       18
      ],
      "gehe": [
-      170,
-      296
+      206,
+      310
      ],
      "textur": "res://grafik/props/gummihuhn.png",
      "gegenstand": "gummihuhn",
@@ -5513,17 +5949,25 @@
      "ziel": "testkammer_1",
      "name_key": "UI_RAUM_TESTKAMMER_1",
      "rect": [
-      36,
-      96,
-      50,
-      220
+      76,
+      112,
+      76,
+      172
      ],
      "gehe": [
-      70,
-      330
+      113,
+      300
      ],
      "erreichbar_ab": "R9a",
-     "ansehen": []
+     "ansehen": [
+      {
+       "zeile": "W3_KAM2_MAX_0290",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_KAM2_MAX_0290"
+       ]
+      }
+     ]
     },
     {
      "id": "ausgang_testkammer_3",
@@ -5531,17 +5975,44 @@
      "ziel": "testkammer_3",
      "name_key": "UI_RAUM_TESTKAMMER_3",
      "rect": [
-      518,
-      104,
-      42,
-      182
+      464,
+      112,
+      86,
+      170
      ],
      "gehe": [
-      522,
-      298
+      506,
+      300
      ],
      "erreichbar_ab": "R9c",
-     "ansehen": []
+     "ansehen": [
+      {
+       "zeile": "W3_KAM2_MAX_0300",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_KAM2_MAX_0300"
+       ],
+       "bedingung": [
+        {
+         "art": "vor",
+         "raetsel": "R9c"
+        }
+       ]
+      },
+      {
+       "zeile": "W3_KAM2_MAX_0305",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_KAM2_MAX_0305"
+       ],
+       "bedingung": [
+        {
+         "art": "nach",
+         "raetsel": "R9c"
+        }
+       ]
+      }
+     ]
     }
    ],
    "zurufe": []
@@ -5554,100 +6025,104 @@
     640,
     360
    ],
-   "hintergrund": "res://grafik/hintergruende/w3_bg_testkammer_3_v01.png",
+   "hintergrund": "res://grafik/hintergruende/w3_bg_testkammer_3_v02.png",
    "farbe": "#c8c8c8",
    "laufbereich": [
     [
-     105,
+     30,
      294
     ],
     [
-     145,
-     266
+     610,
+     294
     ],
     [
-     405,
-     266
-    ],
-    [
-     440,
-     300
-    ],
-    [
-     470,
-     330
-    ],
-    [
-     530,
-     330
-    ],
-    [
-     512,
-     266
-    ],
-    [
-     560,
-     300
-    ],
-    [
-     600,
-     340
-    ],
-    [
-     640,
+     635,
      356
     ],
     [
-     0,
+     5,
      356
-    ],
-    [
-     30,
-     330
     ]
    ],
    "marker": {
     "start": [
      300,
-     322
+     338
     ],
     "von_testkammer_2": [
-     100,
-     318
+     113,
+     306
     ],
     "von_kern": [
-     535,
-     300
+     475,
+     306
     ]
    },
-   "tiefe": 0.8,
-   "skala": 0.8,
+   "tiefe": 0.75,
+   "skala": 1.0,
+   "effekte": [
+    {
+     "art": "bild",
+     "bild": "res://grafik/ambiente/w3_lautsprecher_kammer3_v02.png",
+     "bilder": 4,
+     "pos": [
+      344,
+      226
+     ],
+     "fps": 8,
+     "spricht": "MUT"
+    },
+    {
+     "art": "bild",
+     "bild": "res://grafik/ambiente/w3_lautsprecher_kammer3_v02.png",
+     "bilder": 4,
+     "pos": [
+      344,
+      226
+     ],
+     "fps": 8,
+     "spricht": "PIX"
+    },
+    {
+     "art": "bild",
+     "bild": "res://grafik/ambiente/w3_tuer_kammer3_redet_v02.png",
+     "bilder": 5,
+     "pos": [
+      473,
+      216
+     ],
+     "fps": 8,
+     "spricht": "TUR",
+     "sonst": "R9d"
+    }
+   ],
    "hintergrund_nach": {
-    "R9d": "res://grafik/hintergruende/w3_bg_testkammer_3_offen_v01.png"
+    "R9d": "res://grafik/hintergruende/w3_bg_testkammer_3_offen_v02.png"
    },
    "figuren": [
     {
      "id": "tuer",
      "script_name": "Tuer",
      "pos": [
-      593,
-      228
+      538,
+      210
      ]
     },
     {
      "id": "mutti",
      "script_name": "Mutti",
      "pos": [
-      545,
-      112
+      342,
+      166
      ]
     },
     {
      "id": "bernd",
      "script_name": "Bernd",
      "pos": [
-      380,
-      300
+      480,
+      290
      ]
     }
    ],
@@ -5657,14 +6132,14 @@
      "script_name": "Lautsprecher",
      "name_key": "UI_OBJ_LAUTSPRECHER",
      "rect": [
-      532,
-      54,
-      36,
-      56
+      294,
+      118,
+      98,
+      96
      ],
      "gehe": [
-      520,
-      300
+      342,
+      304
      ],
      "ansehen": [
       {
@@ -5702,17 +6177,25 @@
      "ziel": "testkammer_2",
      "name_key": "UI_RAUM_TESTKAMMER_2",
      "rect": [
-      36,
-      96,
-      50,
-      220
+      76,
+      110,
+      76,
+      172
      ],
      "gehe": [
-      70,
-      330
+      113,
+      300
      ],
      "erreichbar_ab": "R9b",
-     "ansehen": []
+     "ansehen": [
+      {
+       "zeile": "W3_KAM3_MAX_0340",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_KAM3_MAX_0340"
+       ]
+      }
+     ]
     },
     {
      "id": "ausgang_kern",
@@ -5720,13 +6203,13 @@
      "ziel": "kern",
      "name_key": "UI_RAUM_KERN",
      "rect": [
-      522,
-      108,
-      60,
-      200
+      422,
+      94,
+      106,
+      186
      ],
      "gehe": [
-      535,
+      475,
       300
      ],
      "erreichbar_ab": "R9d",
@@ -5761,94 +6244,110 @@
     640,
     360
    ],
-   "hintergrund": "res://grafik/hintergruende/w3_bg_kern_v01.png",
+   "hintergrund": "res://grafik/hintergruende/w3_bg_kern_v02.png",
    "farbe": "#2c2c3c",
    "laufbereich": [
     [
      60,
-     330
+     296
     ],
     [
-     140,
-     312
+     288,
+     296
     ],
     [
-     300,
-     304
+     288,
+     306
     ],
     [
-     520,
-     312
+     350,
+     306
     ],
     [
-     600,
-     330
+     350,
+     296
     ],
     [
-     600,
+     580,
+     296
+    ],
+    [
+     630,
      356
     ],
     [
-     60,
+     20,
      356
     ]
    ],
    "marker": {
     "start": [
      200,
-     336
+     338
     ],
     "von_testkammer_3": [
-     90,
-     340
+     120,
+     316
     ]
    },
-   "tiefe": 0.9,
-   "skala": 0.8,
+   "tiefe": 0.77,
+   "skala": 1.0,
    "effekte": [
     {
      "art": "bild",
-     "bild": "res://grafik/ambiente/w3_kern_lichtband.png",
+     "bild": "res://grafik/ambiente/w3_kern_lichtband_v02.png",
      "bilder": 8,
      "pos": [
-      349,
-      260
+      320,
+      214
      ],
      "fps": 9
     },
     {
      "art": "bild",
-     "bild": "res://grafik/ambiente/w3_kern_hitzeflimmern.png",
+     "bild": "res://grafik/ambiente/w3_kern_hitzeflimmern_v02.png",
      "bilder": 4,
      "pos": [
-      320,
-      186
+      321,
+      172
      ],
      "fps": 8,
-     "sonst": "W3_ZELLE_KALT"
+     "sonst": "W3_ZELLE_KALT|R11"
     },
     {
      "art": "bild",
-     "bild": "res://grafik/ambiente/w3_kern_kabel_puls.png",
+     "bild": "res://grafik/ambiente/w3_kern_kabel_puls_v02.png",
      "bilder": 6,
      "pos": [
-      350,
-      350
+      420,
+      360
      ],
      "fps": 8,
      "sonst": "R10"
+    },
+    {
+     "art": "bild",
+     "bild": "res://grafik/ambiente/w3_schnee.png",
+     "bilder": 4,
+     "pos": [
+      320,
+      360
+     ],
+     "fps": 5,
+     "z": 50,
+     "wenn": "W3_ZELLE_SCHNEE"
     }
    ],
    "hintergrund_nach": {
-    "W3_ZELLE_KALT": "res://grafik/hintergruende/w3_bg_kern_vereist_v01.png",
-    "R11": "res://grafik/hintergruende/w3_bg_kern_sockel_leer_v01.png"
+    "W3_ZELLE_KALT": "res://grafik/hintergruende/w3_bg_kern_vereist_v02.png",
+    "R11": "res://grafik/hintergruende/w3_bg_kern_sockel_leer_v02.png"
    },
    "figuren": [
     {
      "id": "mutti",
      "script_name": "Mutti",
      "pos": [
-      470,
+      455,
       300
      ]
     }
@@ -5859,14 +6358,14 @@
      "script_name": "Kabel",
      "name_key": "UI_OBJ_KABEL",
      "rect": [
-      120,
-      280,
-      140,
-      30
+      205,
+      256,
+      295,
+      42
      ],
      "gehe": [
-      190,
-      334
+      250,
+      330
      ],
      "ansehen": [
       {
@@ -5891,14 +6390,14 @@
      "script_name": "Sockel",
      "name_key": "UI_OBJ_SOCKEL",
      "rect": [
-      298,
-      248,
-      46,
+      293,
+      220,
+      52,
       80
      ],
      "gehe": [
-      280,
-      336
+      270,
+      330
      ],
      "ansehen": [
       {
@@ -5925,14 +6424,14 @@
      "script_name": "Streifen",
      "name_key": "UI_OBJ_STREIFEN",
      "rect": [
-      96,
-      228,
-      420,
-      20
+      160,
+      176,
+      300,
+      40
      ],
      "gehe": [
-      320,
-      336
+      400,
+      330
      ],
      "ansehen": [
       {
@@ -5960,13 +6459,13 @@
      "name_key": "UI_OBJ_ENERGIEZELLE",
      "rect": [
       306,
-      196,
-      20,
-      70
+      162,
+      28,
+      60
      ],
      "gehe": [
-      290,
-      336
+      270,
+      330
      ],
      "textur": "res://grafik/props/energiezelle.png",
      "gegenstand": "energiezelle",
@@ -5975,7 +6474,8 @@
        "zeile": "W3_KERN_MAX_0410",
        "sprecher": "MAX",
        "blasen": [
-        "W3_KERN_MAX_0410"
+        "W3_KERN_MAX_0410",
+        "W3_KERN_MAX_0410_2"
        ],
        "bedingung_text": "glühend"
       },
@@ -6017,17 +6517,25 @@
      "ziel": "testkammer_3",
      "name_key": "UI_RAUM_TESTKAMMER_3",
      "rect": [
-      18,
-      140,
-      62,
+      80,
+      100,
+      80,
       190
      ],
      "gehe": [
-      90,
-      340
+      120,
+      310
      ],
      "erreichbar_ab": "R9c",
-     "ansehen": []
+     "ansehen": [
+      {
+       "zeile": "W3_KERN_MAX_0620",
+       "sprecher": "MAX",
+       "blasen": [
+        "W3_KERN_MAX_0620"
+       ]
+      }
+     ]
     }
    ],
    "zurufe": [
@@ -6095,7 +6603,40 @@
     "laboreingang"
    ],
    "tier": false,
-   "ansehen": [],
+   "ansehen": [
+    {
+     "zeile": "W3_STR_MAX_0350",
+     "sprecher": "MAX",
+     "blasen": [
+      "W3_STR_MAX_0350"
+     ],
+     "raum": "unterstadt_strasse"
+    },
+    {
+     "zeile": "W3_APO_MAX_0320",
+     "sprecher": "MAX",
+     "blasen": [
+      "W3_APO_MAX_0320"
+     ],
+     "raum": "apothekengasse"
+    },
+    {
+     "zeile": "W3_BAS_MAX_0940",
+     "sprecher": "MAX",
+     "blasen": [
+      "W3_BAS_MAX_0940"
+     ],
+     "raum": "widerstandsbasis"
+    },
+    {
+     "zeile": "W3_EING_MAX_0570",
+     "sprecher": "MAX",
+     "blasen": [
+      "W3_EING_MAX_0570"
+     ],
+     "raum": "laboreingang"
+    }
+   ],
    "pixel_auf": [],
    "pixel_redet": [],
    "gegenstand_auf": [
@@ -6434,7 +6975,8 @@
      "zeile": "W3_STR_MAX_0150",
      "sprecher": "MAX",
      "blasen": [
-      "W3_STR_MAX_0150"
+      "W3_STR_MAX_0150",
+      "W3_STR_MAX_0150_2"
      ],
      "bedingung_text": "trägt Beobachtung „spielt im Regen weiter“ ins Notizbuch ein",
      "raum": "unterstadt_strasse",
@@ -6544,13 +7086,31 @@
     "laboreingang"
    ],
    "tier": false,
-   "ansehen": [],
+   "ansehen": [
+    {
+     "zeile": "W3_BAS_MAX_0920",
+     "sprecher": "MAX",
+     "blasen": [
+      "W3_BAS_MAX_0920"
+     ],
+     "raum": "widerstandsbasis"
+    },
+    {
+     "zeile": "W3_EING_MAX_0560",
+     "sprecher": "MAX",
+     "blasen": [
+      "W3_EING_MAX_0560"
+     ],
+     "raum": "laboreingang"
+    }
+   ],
    "pixel_auf": [
     {
      "zeile": "W3_BAS_PIX_1010",
      "sprecher": "PIX",
      "blasen": [
-      "W3_BAS_PIX_1010"
+      "W3_BAS_PIX_1010",
+      "W3_BAS_PIX_1010_2"
      ],
      "raum": "widerstandsbasis"
     }
@@ -6572,7 +7132,25 @@
     "widerstandsbasis"
    ],
    "tier": false,
-   "ansehen": [],
+   "ansehen": [
+    {
+     "zeile": "W3_BAS_MAX_0840",
+     "sprecher": "MAX",
+     "blasen": [
+      "W3_BAS_MAX_0840"
+     ],
+     "raum": "widerstandsbasis"
+    },
+    {
+     "zeile": "W3_BAS_MAX_0845",
+     "sprecher": "MAX",
+     "blasen": [
+      "W3_BAS_MAX_0845"
+     ],
+     "mal": 2,
+     "raum": "widerstandsbasis"
+    }
+   ],
    "pixel_auf": [
     {
      "zeile": "W3_BAS_PIX_1020",
@@ -6600,7 +7178,16 @@
     "widerstandsbasis"
    ],
    "tier": false,
-   "ansehen": [],
+   "ansehen": [
+    {
+     "zeile": "W3_BAS_MAX_0930",
+     "sprecher": "MAX",
+     "blasen": [
+      "W3_BAS_MAX_0930"
+     ],
+     "raum": "widerstandsbasis"
+    }
+   ],
    "pixel_auf": [
     {
      "zeile": "W3_BAS_PIX_1030",
@@ -6838,7 +7425,25 @@
     "kueche_orakel"
    ],
    "tier": false,
-   "ansehen": [],
+   "ansehen": [
+    {
+     "zeile": "W3_KUCH_MAX_0790",
+     "sprecher": "MAX",
+     "blasen": [
+      "W3_KUCH_MAX_0790"
+     ],
+     "raum": "kueche_orakel"
+    },
+    {
+     "zeile": "W3_KUCH_MAX_0795",
+     "sprecher": "MAX",
+     "blasen": [
+      "W3_KUCH_MAX_0795"
+     ],
+     "mal": 2,
+     "raum": "kueche_orakel"
+    }
+   ],
    "pixel_auf": [],
    "pixel_redet": [],
    "gegenstand_auf": [
@@ -6999,6 +7604,34 @@
      "bedingung_text": "nach dem Tausch",
      "mal": 2,
      "raum": "stadtstrasse"
+    },
+    {
+     "zeile": "W3_TURM_MAX_0580",
+     "sprecher": "MAX",
+     "blasen": [
+      "W3_TURM_MAX_0580"
+     ],
+     "bedingung": [
+      {
+       "art": "vor",
+       "raetsel": "R6a"
+      }
+     ],
+     "raum": "buero_50"
+    },
+    {
+     "zeile": "W3_TURM_MAX_0585",
+     "sprecher": "MAX",
+     "blasen": [
+      "W3_TURM_MAX_0585"
+     ],
+     "bedingung": [
+      {
+       "art": "nach",
+       "raetsel": "R6a"
+      }
+     ],
+     "raum": "buero_50"
     }
    ],
    "pixel_auf": [],
@@ -7019,7 +7652,16 @@
     "buero_50"
    ],
    "tier": false,
-   "ansehen": [],
+   "ansehen": [
+    {
+     "zeile": "W3_TURM_MAX_0590",
+     "sprecher": "MAX",
+     "blasen": [
+      "W3_TURM_MAX_0590"
+     ],
+     "raum": "buero_50"
+    }
+   ],
    "pixel_auf": [],
    "pixel_redet": [],
    "gegenstand_auf": [],
@@ -7057,6 +7699,34 @@
      "bedingung_text": "Animation Code-Sicht einschalten, Code-Sicht freigeschaltet",
      "mal": 2,
      "raum": "stadtstrasse"
+    },
+    {
+     "zeile": "W3_KAM3_MAX_0330",
+     "sprecher": "MAX",
+     "blasen": [
+      "W3_KAM3_MAX_0330"
+     ],
+     "bedingung": [
+      {
+       "art": "vor",
+       "raetsel": "R9d"
+      }
+     ],
+     "raum": "testkammer_3"
+    },
+    {
+     "zeile": "W3_KAM3_MAX_0335",
+     "sprecher": "MAX",
+     "blasen": [
+      "W3_KAM3_MAX_0335"
+     ],
+     "bedingung": [
+      {
+       "art": "nach",
+       "raetsel": "R9d"
+      }
+     ],
+     "raum": "testkammer_3"
     }
    ],
    "pixel_auf": [],
@@ -7448,7 +8118,8 @@
      "zeile": "W3_INV_PIX_0045",
      "sprecher": "PIX",
      "blasen": [
-      "W3_INV_PIX_0045"
+      "W3_INV_PIX_0045",
+      "W3_INV_PIX_0045_2"
      ],
      "bedingung_text": "Pixel auf der Leitung",
      "mal": 2,
@@ -7503,7 +8174,8 @@
      "zeile": "W3_KUCH_MAX_0750",
      "sprecher": "MAX",
      "blasen": [
-      "W3_KUCH_MAX_0750"
+      "W3_KUCH_MAX_0750",
+      "W3_KUCH_MAX_0750_2"
      ],
      "bedingung_text": "Simulation"
     },
@@ -7646,7 +8318,8 @@
      "zeile": "W3_TERM_MAX_0350",
      "sprecher": "MAX",
      "blasen": [
-      "W3_TERM_MAX_0350"
+      "W3_TERM_MAX_0350",
+      "W3_TERM_MAX_0350_2"
      ],
      "bedingung_text": "Realität"
     },
@@ -7727,7 +8400,8 @@
      "zeile": "W3_PIEP_MAX_0220",
      "sprecher": "MAX",
      "blasen": [
-      "W3_PIEP_MAX_0220"
+      "W3_PIEP_MAX_0220",
+      "W3_PIEP_MAX_0220_2"
      ]
     },
     {
@@ -7761,7 +8435,8 @@
      "zeile": "W3_BAS_MAX_0890",
      "sprecher": "MAX",
      "blasen": [
-      "W3_BAS_MAX_0890"
+      "W3_BAS_MAX_0890",
+      "W3_BAS_MAX_0890_2"
      ],
      "bedingung_text": "Realität"
     },
@@ -8136,7 +8811,7 @@
       }
      ],
      "beendet": false,
-     "bleibt": false,
+     "bleibt": true,
      "bedingung": [
       {
        "art": "vor",
@@ -8168,7 +8843,8 @@
        "zeile": "W3_NUD_VIE_0700",
        "sprecher": "VIE",
        "blasen": [
-        "W3_NUD_VIE_0700"
+        "W3_NUD_VIE_0700",
+        "W3_NUD_VIE_0700_2"
        ],
        "regie": ""
       },
@@ -8319,7 +8995,8 @@
        "zeile": "W3_NUD_MOR_0520",
        "sprecher": "MOR",
        "blasen": [
-        "W3_NUD_MOR_0520"
+        "W3_NUD_MOR_0520",
+        "W3_NUD_MOR_0520_2"
        ],
        "regie": ""
       },
@@ -8500,8 +9177,24 @@
      "frage": "W3_TEST_MAX_0090",
      "antworten": [],
      "beendet": false,
-     "bleibt": false,
+     "bleibt": true,
      "oeffnet": true
+    },
+    {
+     "id": "0420",
+     "frage": "W3_TEST_MAX_0420",
+     "antworten": [
+      {
+       "zeile": "W3_TEST_DEC_0430",
+       "sprecher": "DEC",
+       "blasen": [
+        "W3_TEST_DEC_0430"
+       ],
+       "regie": ""
+      }
+     ],
+     "beendet": true,
+     "bleibt": false
     }
    ],
    "erschoepft": [
@@ -8710,7 +9403,8 @@
        "zeile": "W3_KUCH_ORA_0120",
        "sprecher": "ORA",
        "blasen": [
-        "W3_KUCH_ORA_0120"
+        "W3_KUCH_ORA_0120",
+        "W3_KUCH_ORA_0120_2"
        ],
        "regie": ""
       },
@@ -8807,7 +9501,8 @@
        "zeile": "W3_KUCH_NAR_0200",
        "sprecher": "NAR",
        "blasen": [
-        "W3_KUCH_NAR_0200"
+        "W3_KUCH_NAR_0200",
+        "W3_KUCH_NAR_0200_2"
        ],
        "regie": "Szene; Sparschwein vom Regal verschwindet; Inventar: Omas Rezeptkarte"
       },
@@ -8831,7 +9526,8 @@
        "zeile": "W3_KUCH_RAD_0230",
        "sprecher": "RAD",
        "blasen": [
-        "W3_KUCH_RAD_0230"
+        "W3_KUCH_RAD_0230",
+        "W3_KUCH_RAD_0230_2"
        ],
        "regie": "Radio-Moment; läuft direkt nach 0220, leicht verrauscht"
       },
@@ -8865,7 +9561,8 @@
        "zeile": "W3_KUCH_ORA_0270",
        "sprecher": "ORA",
        "blasen": [
-        "W3_KUCH_ORA_0270"
+        "W3_KUCH_ORA_0270",
+        "W3_KUCH_ORA_0270_2"
        ],
        "regie": "Hinweis Rätsel 11"
       },
@@ -8897,7 +9594,8 @@
        "zeile": "W3_KUCH_ORA_0310",
        "sprecher": "ORA",
        "blasen": [
-        "W3_KUCH_ORA_0310"
+        "W3_KUCH_ORA_0310",
+        "W3_KUCH_ORA_0310_2"
        ],
        "regie": "Hinweis Rätsel 10"
       },
@@ -8993,7 +9691,8 @@
        "zeile": "W3_KUCH_ORA_0430",
        "sprecher": "ORA",
        "blasen": [
-        "W3_KUCH_ORA_0430"
+        "W3_KUCH_ORA_0430",
+        "W3_KUCH_ORA_0430_2"
        ],
        "regie": ""
       }
@@ -9058,7 +9757,8 @@
        "zeile": "W3_BAS_KAL_0340",
        "sprecher": "KAL",
        "blasen": [
-        "W3_BAS_KAL_0340"
+        "W3_BAS_KAL_0340",
+        "W3_BAS_KAL_0340_2"
        ],
        "regie": ""
       },
@@ -9090,7 +9790,8 @@
        "zeile": "W3_BAS_KAL_0360",
        "sprecher": "KAL",
        "blasen": [
-        "W3_BAS_KAL_0360"
+        "W3_BAS_KAL_0360",
+        "W3_BAS_KAL_0360_2"
        ],
        "regie": "Hinweis Rätsel 8 und 9"
       },
@@ -9098,7 +9799,8 @@
        "zeile": "W3_BAS_KAL_0370",
        "sprecher": "KAL",
        "blasen": [
-        "W3_BAS_KAL_0370"
+        "W3_BAS_KAL_0370",
+        "W3_BAS_KAL_0370_2"
        ],
        "regie": ""
       }
@@ -9114,7 +9816,8 @@
        "zeile": "W3_BAS_KAL_0390",
        "sprecher": "KAL",
        "blasen": [
-        "W3_BAS_KAL_0390"
+        "W3_BAS_KAL_0390",
+        "W3_BAS_KAL_0390_2"
        ],
        "regie": "Hinweis Rätsel 10"
       },
@@ -9146,7 +9849,8 @@
        "zeile": "W3_BAS_KAL_0410",
        "sprecher": "KAL",
        "blasen": [
-        "W3_BAS_KAL_0410"
+        "W3_BAS_KAL_0410",
+        "W3_BAS_KAL_0410_2"
        ],
        "regie": "Hinweis Rätsel 13; vor der Lösung"
       },
@@ -9224,7 +9928,8 @@
        "zeile": "W3_EING_HAU_0050",
        "sprecher": "HAU",
        "blasen": [
-        "W3_EING_HAU_0050"
+        "W3_EING_HAU_0050",
+        "W3_EING_HAU_0050_2"
        ],
        "regie": ""
       },
@@ -9248,7 +9953,8 @@
        "zeile": "W3_EING_HAU_0080",
        "sprecher": "HAU",
        "blasen": [
-        "W3_EING_HAU_0080"
+        "W3_EING_HAU_0080",
+        "W3_EING_HAU_0080_2"
        ],
        "regie": ""
       },
@@ -9273,7 +9979,8 @@
        "zeile": "W3_EING_HAU_0110",
        "sprecher": "HAU",
        "blasen": [
-        "W3_EING_HAU_0110"
+        "W3_EING_HAU_0110",
+        "W3_EING_HAU_0110_2"
        ],
        "regie": ""
       },
@@ -9289,7 +9996,8 @@
        "zeile": "W3_EING_HAU_1060",
        "sprecher": "HAU",
        "blasen": [
-        "W3_EING_HAU_1060"
+        "W3_EING_HAU_1060",
+        "W3_EING_HAU_1060_2"
        ],
        "regie": ""
       }
@@ -9305,7 +10013,8 @@
        "zeile": "W3_EING_HAU_0130",
        "sprecher": "HAU",
        "blasen": [
-        "W3_EING_HAU_0130"
+        "W3_EING_HAU_0130",
+        "W3_EING_HAU_0130_2"
        ],
        "regie": "Hinweis Olivenöl"
       },

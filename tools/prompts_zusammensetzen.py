@@ -11,7 +11,8 @@ der Zeile „**Außenszenen** (Baustein KONZEPT-AUSSEN): …“ (Szenennamen wie
 Semikolon getrennt). Ein Name, den die Tabelle nicht kennt, ist ein Fehler.
 
 Welt 3 und 4 haben noch keine entworfenen Skizzen, nur automatische Raster (Prüfbericht, G4).
-Für sie entfällt der Skizzen-Satz, bis es Handskizzen gibt (Liste OHNE_SKIZZE).
+Für sie entfällt der Skizzen-Satz, bis es Handskizzen gibt (Liste OHNE_SKIZZE). Steht in der Grafik-Datei
+eine Zeile „**Rohbau** (…): [Raum](pfad), …“, hängt stattdessen der Blender-Rohbau mit eigenem Satz an.
 
 Kein Raten: Passt der Schlüssel einer Szene (Epoche, Ebene, Sender) zu keinem Farb-Baustein,
 bricht das Werkzeug mit einer Meldung ab. Zeilen ohne eigenes Konzeptbild werden ausgelassen:
@@ -68,6 +69,9 @@ ZIEL = GRAFIK / "fertige-prompts"
 DATEIEN = ["02-prolog-und-finale", "welt-1", "welt-2", "welt-3", "welt-4"]
 SKIZZE_SATZ = ("Use the attached sketch only for the position and size of objects and exits, "
                "not for style, colors or text. Leave the orange marked spots empty.")
+ROHBAU_SATZ = ("Use the attached grey blockout only for layout, perspective, horizon height and the size "
+               "of every object relative to the 1.75 m person; paint in the style of the reference image, "
+               "do not copy the grey colours, do not paint any people or animals.")
 DUESTER = ("Keller", "Kammer", "Thronsaal", "Turm")
 OHNE_SKIZZE = ("welt-3", "welt-4")
 AUSSEN_MARKE = "**Außenszenen** (Baustein KONZEPT-AUSSEN):"
@@ -262,6 +266,13 @@ def aussenszenen(text, datei, szenen):
     for n in sorted(namen - set(szenen)):
         fehler.append(f"{datei}.md, Außenszenen: „{n}“ steht nicht in der Tabelle „Szenen“")
     return namen
+
+
+def rohbau(text):
+    m = re.search(r"\*\*Rohbau\*\*[^:]*\): (.*?)\.\n", text)
+    if not m:
+        return {}
+    return dict(re.findall(r"\[([^\]]+)\]\(([^)]+)\)", m.group(1)))
 
 
 def skizze_fuer(liste, szene):
@@ -862,13 +873,13 @@ def slice_bauen(welt1):
     return "\n".join(out).rstrip() + "\n"
 
 
-def raum_prompt(baustein, motiv, pal, skizze, bausteine, karte=False):
+def raum_prompt(baustein, motiv, pal, skizze, bausteine, karte=False, satz=SKIZZE_SATZ):
     neg = bausteine["NEG-RAUM"]
     if karte:
         neg = neg.replace("no top-down, bird's-eye or fisheye view, ", "no fisheye view, ").replace("no tilted floor, ", "")
     zeilen = [f"STYLE: {baustein}", f"SCENE: {motiv.rstrip('.')}.", pal]
     if skizze:
-        zeilen.append(f"LAYOUT: {SKIZZE_SATZ}")
+        zeilen.append(f"LAYOUT: {satz}")
     zeilen.append(f"NEGATIVE: {neg}")
     return "\n".join(zeilen)
 
@@ -892,12 +903,18 @@ def kopf(name, titel, quelle, anleitung):
 def datei_bauen(name, konzept, konzept_aussen, bausteine):
     text = (GRAFIK / f"{name}.md").read_text(encoding="utf-8")
     werte = farb_bausteine(text)
-    liste = {} if name in OHNE_SKIZZE else skizzen(text)
+    rb = rohbau(text)
+    liste = rb or ({} if name in OHNE_SKIZZE else skizzen(text))
+    satz = ROHBAU_SATZ if rb else SKIZZE_SATZ
     aussen = aussenszenen(text, name, [z[0] for z in tabelle(text, "### Szenen")])
     titel = text.split("\n", 1)[0].lstrip("# ").replace("Grafik: ", "")
     anleitung = ["Räume: je Szene den Block komplett in ChatGPT oder Gemini kopieren und die Layout-Skizze als",
                  "Bild anhängen. Danach Prüfliste und Umwandeln wie in `../00-stil-und-werkzeuge.md` (Ablauf pro Szene)."]
-    if name in OHNE_SKIZZE:
+    if rb:
+        anleitung = ["Räume: je Szene den Block komplett in Gemini kopieren und den Rohbau (graues Blender-Bild) als",
+                     "Bild anhängen, dazu wie immer das Stil-Referenzbild. Danach Prüfliste und Umwandeln wie in",
+                     "`../00-stil-und-werkzeuge.md` (Ablauf pro Szene)."]
+    elif name in OHNE_SKIZZE:
         anleitung = ["Räume: je Szene den Block komplett in ChatGPT oder Gemini kopieren. Keine Skizze anhängen: Für",
                      "diese Welt gibt es noch keine entworfenen Skizzen, die automatischen Raster widersprechen dem",
                      "Motiv. Danach Prüfliste und Umwandeln wie in `../00-stil-und-werkzeuge.md` (Ablauf pro Szene)."]
@@ -917,7 +934,7 @@ def datei_bauen(name, konzept, konzept_aussen, bausteine):
             out.append("")
         sk = skizze_fuer(liste, szene)
         if sk:
-            out.append(f"**Layout-Skizze:** [{sk[0]}](../{sk[1]})")
+            out.append(f"**{'Rohbau' if rb else 'Layout-Skizze'}:** [{sk[0]}](../{sk[1]})")
             out.append("")
         baustein = konzept_aussen if szene in aussen else konzept
         motiv, folge = fassungen(motiv)
@@ -925,7 +942,7 @@ def datei_bauen(name, konzept, konzept_aussen, bausteine):
         if karte:
             motiv = motiv[6:].strip()
             baustein, motiv, sk = bausteine["KARTE"], motiv[:1].upper() + motiv[1:], None
-        out += ["```text", raum_prompt(baustein, motiv, pal, sk, bausteine, karte), "```", ""]
+        out += ["```text", raum_prompt(baustein, motiv, pal, sk, bausteine, karte, satz), "```", ""]
         if "LEFT HALF" in motiv:
             out += ["**Breitbild:** erst die linke Hälfte erzeugen (alle Zeilen, aus SCENE nur Anfang, „LEFT HALF“",
                     "und Hintergrund), dann im selben Chat die rechte Hälfte, die nahtlos anschließt. Zusammensetzen",

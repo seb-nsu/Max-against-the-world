@@ -46,9 +46,6 @@ func pfote_aktiv() -> bool:
 ## nicht, damit die Pfote nie leuchtet, ohne dass Pixel etwas zu sagen hat.
 func schritt_waehlen() -> String:
 	var offen: Array = Zustand.offene_schritte()
-	for bevorzugt in [Zustand.notizbuch_ziel, Zustand.letzter_schritt]:
-		if bevorzugt in offen and not zeilen_schritt(bevorzugt).is_empty():
-			return zeilen_schritt(bevorzugt)
 	var mit_zeilen: Array = []
 	for s in offen:
 		var z := zeilen_schritt(s)
@@ -57,14 +54,31 @@ func schritt_waehlen() -> String:
 	if mit_zeilen.is_empty():
 		return ""
 	# Freiwillige Schritte (Welt 2: Öl, Sandale, Feigen) erst, wenn kein Pflichtschritt mit Zeilen
-	# offen ist; sonst nach Nummer (Review 17.11., W2-02)
+	# offen ist; sonst nach Nummer (Review 17.11., W2-02). Abschnitte mit Einbahnräumen (Welt 3)
+	# ordnen vorher nach dem Ort: erst der Raum der aktiven Figur (Review 20.11., W3-04).
 	mit_zeilen.sort_custom(func(a, b):
 		var fa := bool(_schritt(a).get("optional", false))
 		var fb := bool(_schritt(b).get("optional", false))
 		if fa != fb:
 			return fb
+		var ra := rang(a)
+		var rb := rang(b)
+		if ra != rb:
+			return ra < rb
 		return a.naturalnocasecmp_to(b) < 0)
+	# Zuletzt berührt oder im Notizbuch gewählt (Regel 3) gilt, wenn er nicht weiter weg liegt
+	for bevorzugt in [Zustand.notizbuch_ziel, Zustand.letzter_schritt]:
+		if bevorzugt in offen and not zeilen_schritt(bevorzugt).is_empty() \
+				and rang(zeilen_schritt(bevorzugt)) <= rang(mit_zeilen[0]):
+			return zeilen_schritt(bevorzugt)
 	return mit_zeilen[0]
+
+
+## Wie nah ein Schritt liegt (0 = hier); die Regeln des Abschnitts entscheiden („hinweis_rang“),
+## ohne Antwort zählt der Ort nicht (alle 0).
+func rang(schritt: String) -> int:
+	var r = Spiel.regel_wert("hinweis_rang", schritt, str(_schritt(schritt).get("raum", "")))
+	return int(r) if r != null else 0
 
 
 ## Der Schritt, dessen Hinweiszeilen für einen offenen Schritt gelten: er selbst oder, wenn er
@@ -149,7 +163,9 @@ func pfote_geklickt() -> void:
 	if schritt.is_empty():
 		# Regel 5: „nichts offen“-Zeile (0010 bzw. 9990), falls der Abschnitt eine hat
 		hinweis_gegeben.emit("", 0, false, false, "pfote")
-		var nichts := _nichts_offen_zeile()
+		# Liegt der nächste Schritt in einem noch nie betretenen Raum, nennt Pixel den Ort (Welt 3, W3-05)
+		var weg = Spiel.regel_wert("hinweis_wegweiser")
+		var nichts: String = weg if weg is String and not weg.is_empty() else _nichts_offen_zeile()
 		if not nichts.is_empty():
 			await Spiel.sagen("PIX", nichts)
 		return

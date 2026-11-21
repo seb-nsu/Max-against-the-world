@@ -1,0 +1,16 @@
+== Weg: klick
+ist_pixel=true getrennt=true
+Stromkasten (klick): Zeilen=SYS_ERS_PIX_0240 | vorher NACHT=false SCHNEE=false R7b=false | nachher NACHT=false SCHNEE=false R7b=false | Raum jetzt widerstandsbasis | Ebene simulation
+Fenster (klick): Zeilen=SYS_ERS_PIX_0350 | vorher NACHT=false SCHNEE=false R7b=false | nachher NACHT=false SCHNEE=false R7b=false | Raum jetzt widerstandsbasis | Ebene simulation
+PatchPanel (klick): Zeilen=SYS_ERS_PIX_0180,SYS_ERS_PIX_0180_2 | vorher NACHT=false SCHNEE=false R7b=false | nachher NACHT=false SCHNEE=false R7b=false | Raum jetzt widerstandsbasis | Ebene simulation
+Lueftungsschacht (klick): Zeilen=W3_BAS_PIX_1120 | vorher NACHT=false SCHNEE=false R7b=false | nachher NACHT=false SCHNEE=false R7b=false | Raum jetzt widerstandsbasis | Ebene simulation
+MaxKapsel (klick): Zeilen=W3_BAS_PIX_0530,W3_BAS_PIX_0530_2 | vorher NACHT=false SCHNEE=false R7b=false | nachher NACHT=false SCHNEE=false R7b=false | Raum jetzt widerstandsbasis | Ebene simulation
+Wassereimer (klick): Zeilen=SYS_ERS_PIX_0290 | W3_EIMER_GEKIPPT=false
+== Weg: regel
+ist_pixel=true getrennt=true
+Stromkasten (regel): Zeilen=W3_BAS_PIX_0680 | vorher NACHT=false SCHNEE=false R7b=false | nachher NACHT=true SCHNEE=false R7b=false | Raum jetzt widerstandsbasis | Ebene simulation
+Fenster (regel): Zeilen=W3_BAS_PIX_0600,W3_BAS_PIX_0600_2 | vorher NACHT=true SCHNEE=false R7b=false | nachher NACHT=true SCHNEE=true R7b=false | Raum jetzt widerstandsbasis | Ebene simulation
+PatchPanel (regel): Zeilen=W3_TERM_PIX_0210,W3_TERM_PIX_0210_2,W3_TERM_PIX_0220,W3_TERM_PIX_0220_2,W3_TERM_PIX_0230,W3_TERM_PIX_0230_2,W3_TERM_PIX_0240,W3_TERM_PIX_0310,W3_TERM_PIX_0310_2,W3_TERM_KAL_0320,W3_TERM_MAX_0330,W3_TERM_NAR_0340,W3_BAS_NAR_0010,W3_BAS_PIX_0020,W3_BAS_PIX_0020_2,W3_BAS_MAX_0030,W3_BAS_KAL_0040,W3_BAS_PIX_0050,W3_BAS_PIX_0050_2,W3_BAS_MAX_0060,W3_BAS_NAR_0070,W3_BAS_PIX_0080,W3_BAS_PIX_0090,W3_BAS_PIX_0090_2,W3_BAS_PIX_0090_3,W3_BAS_PIX_0090_4,W3_BAS_MAX_0100,W3_BAS_KAL_0110,W3_BAS_KAL_0120,W3_BAS_MAX_0130,W3_BAS_PIX_0140,W3_BAS_PIX_0140_2,W3_BAS_KAL_0150,W3_BAS_KAL_0160,W3_BAS_PIX_0170,W3_BAS_PIX_0170_2,W3_BAS_REB_0180,W3_BAS_MAX_0190 | vorher NACHT=true SCHNEE=true R7b=false | nachher NACHT=false SCHNEE=true R7b=true | Raum jetzt widerstandsbasis | Ebene realitaet
+Lueftungsschacht (regel): Zeilen= | vorher NACHT=false SCHNEE=true R7b=true | nachher NACHT=false SCHNEE=true R7b=true | Raum jetzt widerstandsbasis | Ebene realitaet
+MaxKapsel (regel): Zeilen= | vorher NACHT=false SCHNEE=true R7b=true | nachher NACHT=false SCHNEE=true R7b=true | Raum jetzt widerstandsbasis | Ebene realitaet
+Wassereimer (regel): Zeilen=W3_BAS_PIX_0650,W3_BAS_PIX_0650_2 | W3_EIMER_GEKIPPT=true

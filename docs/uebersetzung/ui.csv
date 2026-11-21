@@ -615,6 +615,7 @@ UI_OBJ_DAMPFGITTER,Dampfgitter,Steam grate
 UI_OBJ_DATENANSCHLUSS,Datenanschluss,Data port
 UI_OBJ_DECKENLAMPE,Deckenlampe,Ceiling lamp
 UI_OBJ_DECKERT,Deckert,Deckert
+UI_OBJ_EINGANG,Eingang,Entrance
 UI_OBJ_ENDLOS_TREPPE,Endlos-Treppe,Endless staircase
 UI_OBJ_ENERGIEZELLE,Ewige Energiezelle,Eternal energy cell
 UI_OBJ_FARBCODE_AN_DER_WAND,Farbcode an der Wand,Colour code on the wall
@@ -695,6 +696,7 @@ UI_OBJ_TELEFONZELLE,Telefonzelle,Phone box
 UI_OBJ_RADIOWECKER,Radiowecker,Clock radio
 UI_OBJ_KOPIERER,Kopierer,Photocopier
 UI_OBJ_TERMINAL,Terminal,Terminal
+UI_OBJ_SPRECHANLAGE,Sprechanlage,Intercom
 UI_OBJ_TISCH_MIT_KALLES_TASSE,Tisch mit Kalles Tasse,Table with Kalle's mug
 UI_OBJ_TISCH_MIT_TELLER_UND_TEEKANNE,Tisch mit Teller und Teekanne,Table with plate and teapot
 UI_OBJ_TOPFPFLANZEN,Topfpflanzen,Potted plants
@@ -722,7 +724,7 @@ UI_W3_TAUSCH_HAUSSCHUHE_TASSE,Schmidt: Hausschuhe ↔ Kaffeetasse: leer,Schmidt:
 UI_W3_TAUSCH_ORIGINAL_PFLANZE,Schmidt: Original ↔ Topfpflanze: gleich,Schmidt: original ↔ Potted plant: identical
 UI_W3_TAUSCH_BERND_MAX,Bernd: schwer ↔ Max: leicht,Bernd: heavy ↔ Max: light
 UI_W3_TAUSCH_BERND_KUCHEN,Bernd: schwer ↔ Pappkuchen: Pappe,Bernd: heavy ↔ Cardboard cake: cardboard
-UI_W3_TAUSCH_BERND_EHRLICH,Bernd: treu ↔ Max: ehrlich,Bernd: loyal ↔ Max: honest
+UI_W3_TAUSCH_BERND_EHRLICH,Bernd: treu ↔ Pappkuchen: ehrlich,Bernd: loyal ↔ Cardboard cake: honest
 UI_W3_TAUSCH_SCHALTER_MUEDE,Bodenschalter: ungedrückt ↔ Max: müde,Floor switch: unpressed ↔ Max: tired
 UI_W3_TAUSCH_LASER_HUHN,Laser: tödlich ↔ Gummihuhn: harmlos,Laser: deadly ↔ Rubber chicken: harmless
 UI_W3_TAUSCH_LASER_FARBE,Laser: rot ↔ Gummihuhn: gelb,Laser: red ↔ Rubber chicken: yellow
@@ -736,7 +738,8 @@ UI_W3_TAUSCH_LAUTSPRECHER_BERND,Lautsprecher: gesprächig ↔ Bernd: schwer,Spea
 UI_W3_TAUSCH_TUER_HUHN,Tür: verschlossen ↔ Gummihuhn: leicht,Door: locked ↔ Rubber chicken: light
 UI_W3_TAUSCH_ZELLE_KEKSE,Energiezelle: heiß ↔ Omas Kekse: kalt,Energy cell: hot ↔ Granny's biscuits: cold
 UI_W3_TAUSCH_ZELLE_MAX,Energiezelle: heiß ↔ Max: müde,Energy cell: hot ↔ Max: tired
-UI_W3_CODE_SICHT_AUS,Code-Sicht schließen,Close code sight
+UI_W3_CODE_WAHL_1,Code-Sicht: ein Wort anklicken · Rechtsklick schließt,Code view: click a word · right-click closes
+UI_W3_CODE_WAHL_2,"„%s“ tauschen mit … · Rechtsklick: anderes Wort","Swap “%s” with … · right-click: other word"
 UI_W3_REGEL_1,Regel 1 vorhalten,Quote rule 1
 UI_W3_REGEL_2,Regel 2 vorhalten,Quote rule 2
 UI_W3_REGEL_3,Regel 3 vorhalten,Quote rule 3

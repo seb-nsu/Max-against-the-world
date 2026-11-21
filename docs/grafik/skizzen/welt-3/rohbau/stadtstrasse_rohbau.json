@@ -1,0 +1,97 @@
+{
+ "raum": "stadtstrasse",
+ "breite": 2560,
+ "hoehe": 720,
+ "labels": [
+  [
+   "curb",
+   1280.0,
+   579.4643068313599
+  ],
+  [
+   "ROAD for the cars in time (keep clear, cars are animated)",
+   1280.0,
+   590.4270529747009
+  ],
+  [
+   "narrow too-clean alley between houses (arrival)",
+   604.8674392700195,
+   176.43051624298096
+  ],
+  [
+   "identical white house",
+   834.5064544677734,
+   154.4200086593628
+  ],
+  [
+   "Oracle Granny's house: big front door, lace curtains, door sign",
+   1360.5012512207031,
+   210.31097888946533
+  ],
+  [
+   "identical round tree + street lamp",
+   641.785888671875,
+   277.73780822753906
+  ],
+  [
+   "same cloud x3",
+   1114.0479278564453,
+   3.0353164672851562
+  ],
+  [
+   "sun",
+   1335.3173828125,
+   3.0353164672851562
+  ],
+  [
+   "bedside table + clock radio (own front piece)",
+   367.87139892578125,
+   556.1568224430084
+  ],
+  [
+   "glass office tower (behind the road, cut off at top)",
+   2021.1439514160156,
+   -1125.886459350586
+  ],
+  [
+   "glass entrance door + intercom",
+   1952.952880859375,
+   197.3220920562744
+  ],
+  [
+   "zebra crossing to the tower door",
+   2135.966033935547,
+   588.31751704216
+  ]
+ ],
+ "figuren": [
+  [
+   "Agent Schmidt",
+   1904.7309875488281,
+   295.9837818145752,
+   2010.3001403808594,
+   640.8041042089462
+  ],
+  [
+   "black cat",
+   1329.8014831542969,
+   601.5218281745911,
+   1429.915771484375,
+   670.165286064148
+  ],
+  [
+   "Max 1.75 m (front)",
+   78.06353569030762,
+   328.325514793396,
+   152.26947784423828,
+   694.9562358856201
+  ],
+  [
+   "Max (back of walk area)",
+   2169.893035888672,
+   310.5875301361084,
+   2265.4769897460938,
+   623.2278835773468
+  ]
+ ]
+}

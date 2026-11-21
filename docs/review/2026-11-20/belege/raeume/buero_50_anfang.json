@@ -1,0 +1,873 @@
+{
+  "bauplan_laufbereich": [
+    [
+      80.0,
+      322.0
+    ],
+    [
+      150.0,
+      270.0
+    ],
+    [
+      465.0,
+      268.0
+    ],
+    [
+      470.0,
+      300.0
+    ],
+    [
+      530.0,
+      330.0
+    ],
+    [
+      560.0,
+      356.0
+    ],
+    [
+      20.0,
+      356.0
+    ]
+  ],
+  "breite": 640,
+  "figuren": [
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "akte",
+        "brille_ab",
+        "fliege",
+        "hausschuh",
+        "idle",
+        "kopierer",
+        "stumm",
+        "talk",
+        "talk_alt",
+        "walk"
+      ],
+      "baseline": 0,
+      "name": "Schmidt",
+      "poly": [
+        [
+          403,
+          151
+        ],
+        [
+          437,
+          151
+        ],
+        [
+          437,
+          286
+        ],
+        [
+          403,
+          286
+        ]
+      ],
+      "pos": [
+        420.0,
+        286.0
+      ],
+      "rect": [
+        382,
+        140,
+        458,
+        286
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.672727286815643,
+        0.672727286815643
+      ],
+      "variante": "",
+      "walk_speed": 120.0,
+      "z": 0
+    },
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "hausschuh",
+        "idle",
+        "talk",
+        "treppe",
+        "umsehen",
+        "walk",
+        "werfen"
+      ],
+      "baseline": 0,
+      "name": "Klon",
+      "poly": [
+        [
+          233,
+          160
+        ],
+        [
+          267,
+          160
+        ],
+        [
+          267,
+          300
+        ],
+        [
+          233,
+          300
+        ]
+      ],
+      "pos": [
+        250.0,
+        300.0
+      ],
+      "rect": [
+        199,
+        148,
+        302,
+        300
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.698181807994843,
+        0.698181807994843
+      ],
+      "variante": "",
+      "walk_speed": 120.0,
+      "z": 0
+    },
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "aufheben",
+        "barfuss",
+        "benutzen",
+        "bohne",
+        "code_sicht",
+        "diskus",
+        "fallen",
+        "gaehnen",
+        "gedankentrick",
+        "gehen_hinten",
+        "gehen_vorn",
+        "handy",
+        "heisser_sand",
+        "hexenschuss",
+        "hexenschuss_gehen",
+        "hinsetzen",
+        "hochhalten",
+        "idle",
+        "kapsel_aufstehen",
+        "kapsel_aussteigen",
+        "kapsel_einsteigen",
+        "kapsel_hinlegen",
+        "katapult",
+        "kochloeffel",
+        "kopf_kratzen",
+        "melken",
+        "nudeln",
+        "pastille",
+        "portalgeraet",
+        "regen_wischen",
+        "ruecken_halten",
+        "schlucken",
+        "schulterzucken",
+        "speer",
+        "stempel_ansehen",
+        "talk",
+        "talk_hand",
+        "tasche",
+        "tippen",
+        "treppe_walk",
+        "vom_boden_aufstehen",
+        "vom_sofa_aufstehen",
+        "wackeln",
+        "walk",
+        "walk_alt",
+        "walk_d",
+        "walk_l",
+        "walk_r",
+        "walk_u",
+        "wenden",
+        "zeigen",
+        "zeitlupe"
+      ],
+      "baseline": 0,
+      "name": "Max",
+      "poly": [
+        [
+          283,
+          181
+        ],
+        [
+          317,
+          181
+        ],
+        [
+          317,
+          320
+        ],
+        [
+          283,
+          320
+        ]
+      ],
+      "pos": [
+        300.0,
+        320.0
+      ],
+      "rect": [
+        197,
+        178,
+        403,
+        320
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.734545469284058,
+        0.734545469284058
+      ],
+      "variante": "",
+      "walk_speed": 150.0,
+      "z": 0
+    },
+    {
+      "anim_aktuell": "idle",
+      "anims": [
+        "aufstehen",
+        "aufwachen",
+        "fauchen",
+        "gehen_hinten",
+        "gehen_vorn",
+        "haare",
+        "hebel",
+        "hinlegen",
+        "idle",
+        "kabel",
+        "kriechen",
+        "minka_umgarnen",
+        "morse",
+        "ohrfeige",
+        "putzen",
+        "schieben",
+        "schlafen",
+        "schnuppern",
+        "schwanz_zucken",
+        "springen",
+        "stehen",
+        "talk",
+        "talk_alt",
+        "tasse",
+        "tragen",
+        "vom_schrank_fallen",
+        "walk",
+        "walk_d",
+        "walk_l",
+        "walk_r",
+        "walk_u"
+      ],
+      "baseline": 0,
+      "name": "Pixel",
+      "poly": [
+        [
+          315,
+          291
+        ],
+        [
+          375,
+          291
+        ],
+        [
+          375,
+          320
+        ],
+        [
+          315,
+          320
+        ]
+      ],
+      "pos": [
+        345.0,
+        320.0
+      ],
+      "rect": [
+        299,
+        244,
+        391,
+        320
+      ],
+      "sichtbar": true,
+      "skala": [
+        0.734545469284058,
+        0.734545469284058
+      ],
+      "variante": "",
+      "walk_speed": 160.0,
+      "z": 0
+    }
+  ],
+  "hotspots": [
+    {
+      "baseline": 22,
+      "klickbar": true,
+      "name": "Flur",
+      "poly": [
+        [
+          165,
+          85
+        ],
+        [
+          475,
+          85
+        ],
+        [
+          475,
+          130
+        ],
+        [
+          165,
+          130
+        ]
+      ],
+      "pos": [
+        320.0,
+        107.5
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_FLUR",
+      "walk_to": [
+        0.0,
+        184.5
+      ]
+    },
+    {
+      "baseline": 36,
+      "klickbar": true,
+      "name": "Tueren",
+      "poly": [
+        [
+          95,
+          150
+        ],
+        [
+          150,
+          150
+        ],
+        [
+          150,
+          222
+        ],
+        [
+          95,
+          222
+        ]
+      ],
+      "pos": [
+        122.5,
+        186.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_TUEREN",
+      "walk_to": [
+        17.5,
+        132.0
+      ]
+    },
+    {
+      "baseline": 42,
+      "klickbar": true,
+      "name": "Topfpflanzen",
+      "poly": [
+        [
+          150,
+          188
+        ],
+        [
+          196,
+          188
+        ],
+        [
+          196,
+          272
+        ],
+        [
+          150,
+          272
+        ]
+      ],
+      "pos": [
+        173.0,
+        230.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_TOPFPFLANZEN",
+      "walk_to": [
+        2.0,
+        70.0
+      ]
+    },
+    {
+      "baseline": 107,
+      "klickbar": true,
+      "name": "Fenster",
+      "poly": [
+        [
+          90,
+          60
+        ],
+        [
+          156,
+          60
+        ],
+        [
+          156,
+          275
+        ],
+        [
+          90,
+          275
+        ]
+      ],
+      "pos": [
+        123.0,
+        167.5
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_FENSTER",
+      "walk_to": [
+        17.0,
+        150.5
+      ]
+    },
+    {
+      "baseline": 152,
+      "klickbar": true,
+      "name": "EndlosTreppe",
+      "poly": [
+        [
+          590,
+          20
+        ],
+        [
+          640,
+          20
+        ],
+        [
+          640,
+          325
+        ],
+        [
+          590,
+          325
+        ]
+      ],
+      "pos": [
+        615.0,
+        172.5
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_ENDLOS_TREPPE",
+      "walk_to": [
+        -60.0,
+        177.5
+      ]
+    },
+    {
+      "baseline": 70,
+      "klickbar": true,
+      "name": "Wasserspender",
+      "poly": [
+        [
+          538,
+          180
+        ],
+        [
+          583,
+          180
+        ],
+        [
+          583,
+          320
+        ],
+        [
+          538,
+          320
+        ]
+      ],
+      "pos": [
+        560.5,
+        250.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_WASSERSPENDER",
+      "walk_to": [
+        -35.5,
+        88.0
+      ]
+    },
+    {
+      "baseline": 23,
+      "klickbar": true,
+      "name": "Klone",
+      "poly": [
+        [
+          200,
+          228
+        ],
+        [
+          300,
+          228
+        ],
+        [
+          300,
+          274
+        ],
+        [
+          200,
+          274
+        ]
+      ],
+      "pos": [
+        250.0,
+        251.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_KLONE",
+      "walk_to": [
+        0.0,
+        61.0
+      ]
+    },
+    {
+      "baseline": 38,
+      "klickbar": true,
+      "name": "FarbcodeAnDerWand",
+      "poly": [
+        [
+          163,
+          135
+        ],
+        [
+          479,
+          135
+        ],
+        [
+          479,
+          211
+        ],
+        [
+          163,
+          211
+        ]
+      ],
+      "pos": [
+        321.0,
+        173.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_FARBCODE_AN_DER_WAND",
+      "walk_to": [
+        -1.0,
+        119.0
+      ]
+    },
+    {
+      "baseline": 36,
+      "klickbar": true,
+      "name": "Terminal",
+      "poly": [
+        [
+          293,
+          200
+        ],
+        [
+          351,
+          200
+        ],
+        [
+          351,
+          272
+        ],
+        [
+          293,
+          272
+        ]
+      ],
+      "pos": [
+        322.0,
+        236.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_TERMINAL",
+      "walk_to": [
+        -2.0,
+        56.0
+      ]
+    },
+    {
+      "baseline": 134,
+      "klickbar": true,
+      "name": "AusgangStadtstrasse",
+      "poly": [
+        [
+          15,
+          82
+        ],
+        [
+          77,
+          82
+        ],
+        [
+          77,
+          350
+        ],
+        [
+          15,
+          350
+        ]
+      ],
+      "pos": [
+        46.0,
+        216.0
+      ],
+      "sichtbar": true,
+      "text": "UI_RAUM_STADTSTRASSE",
+      "walk_to": [
+        44.0,
+        120.0
+      ]
+    },
+    {
+      "baseline": 60,
+      "klickbar": true,
+      "name": "Kopierer",
+      "poly": [
+        [
+          470,
+          180
+        ],
+        [
+          540,
+          180
+        ],
+        [
+          540,
+          300
+        ],
+        [
+          470,
+          300
+        ]
+      ],
+      "pos": [
+        505.0,
+        240.0
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_KOPIERER",
+      "walk_to": [
+        -35.0,
+        78.0
+      ]
+    }
+  ],
+  "kamera_max": [
+    320.0,
+    180.0
+  ],
+  "laufbereiche": [
+    {
+      "name": "Boden",
+      "polys": [
+        [
+          [
+            80,
+            322
+          ],
+          [
+            150,
+            270
+          ],
+          [
+            465,
+            268
+          ],
+          [
+            470,
+            300
+          ],
+          [
+            530,
+            330
+          ],
+          [
+            560,
+            356
+          ],
+          [
+            20,
+            356
+          ]
+        ]
+      ]
+    }
+  ],
+  "marker": {
+    "Start": [
+      300.0,
+      320.0
+    ],
+    "VonStadtstrasse": [
+      105.0,
+      330.0
+    ]
+  },
+  "modus": "anfang",
+  "props": [
+    {
+      "baseline": -180,
+      "klickbar": false,
+      "name": "Background",
+      "poly": [],
+      "pos": [
+        320.0,
+        0.0
+      ],
+      "rect": [
+        0,
+        0,
+        640,
+        360
+      ],
+      "sichtbar": true,
+      "text": "UI_RAUM_BUERO_50",
+      "walk_to": [
+        0.0,
+        180.0
+      ],
+      "z": -1
+    },
+    {
+      "baseline": 7,
+      "klickbar": true,
+      "name": "Kaffeetasse",
+      "poly": [
+        [
+          546,
+          226
+        ],
+        [
+          560,
+          226
+        ],
+        [
+          560,
+          240
+        ],
+        [
+          546,
+          240
+        ]
+      ],
+      "pos": [
+        553.0,
+        240.0
+      ],
+      "rect": [
+        546,
+        226,
+        560,
+        240
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_KAFFEETASSE",
+      "walk_to": [
+        -28.0,
+        98.0
+      ],
+      "z": 0
+    },
+    {
+      "baseline": 4,
+      "klickbar": true,
+      "name": "Sonnenbrille",
+      "poly": [
+        [
+          562,
+          230
+        ],
+        [
+          578,
+          230
+        ],
+        [
+          578,
+          238
+        ],
+        [
+          562,
+          238
+        ]
+      ],
+      "pos": [
+        570.0,
+        238.0
+      ],
+      "rect": [
+        562,
+        230,
+        578,
+        238
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_SONNENBRILLE",
+      "walk_to": [
+        -45.0,
+        100.0
+      ],
+      "z": 0
+    },
+    {
+      "baseline": 7,
+      "klickbar": true,
+      "name": "SchmidtsAkte",
+      "poly": [
+        [
+          432,
+          270
+        ],
+        [
+          450,
+          270
+        ],
+        [
+          450,
+          284
+        ],
+        [
+          432,
+          284
+        ]
+      ],
+      "pos": [
+        441.0,
+        284.0
+      ],
+      "rect": [
+        432,
+        270,
+        450,
+        284
+      ],
+      "sichtbar": true,
+      "text": "UI_OBJ_SCHMIDTS_AKTE",
+      "walk_to": [
+        -1.0,
+        16.0
+      ],
+      "z": 0
+    }
+  ],
+  "raum": "buero_50",
+  "skala": 0.8,
+  "tiefe": 0.8,
+  "welt": "welt-3"
+}

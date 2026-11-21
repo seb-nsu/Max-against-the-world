@@ -1,0 +1,96 @@
+ZUST 1_tag_start effekt w3_radiowecker_559.png sichtbar=true frame=0
+ZUST 1_tag_start effekt w3_radiowecker_559_nacht.png sichtbar=false frame=0
+ZUST 1_tag_start effekt w3_radiowecker_klingelt.png sichtbar=false frame=0
+ZUST 1_tag_start effekt w3_radiowecker_klingelt_nacht.png sichtbar=false frame=0
+ZUST 1_tag_start effekt w3_glastuer_redet.png sichtbar=false frame=0
+ZUST 1_tag_start effekt w3_glastuer_redet_nacht.png sichtbar=false frame=0
+ZUST 1_tag_start hotspot Radiowecker sichtbar=true
+ZUST 1_tag_start hotspot KlingelnderRadiowecker sichtbar=false
+ZUST 1_tag_start hintergrund w3_bg_stadtstrasse_v01.png
+ZUST 1_tag_start W3_NACHT=false W3_WECKER_KLINGELT=false spricht=
+ZUST wecker klingelt nach 33.0 s
+ZUST 2_tag_klingelt effekt w3_radiowecker_559.png sichtbar=false frame=1
+ZUST 2_tag_klingelt effekt w3_radiowecker_559_nacht.png sichtbar=false frame=0
+ZUST 2_tag_klingelt effekt w3_radiowecker_klingelt.png sichtbar=true frame=5
+ZUST 2_tag_klingelt effekt w3_radiowecker_klingelt_nacht.png sichtbar=false frame=0
+ZUST 2_tag_klingelt effekt w3_glastuer_redet.png sichtbar=false frame=0
+ZUST 2_tag_klingelt effekt w3_glastuer_redet_nacht.png sichtbar=false frame=0
+ZUST 2_tag_klingelt hotspot Radiowecker sichtbar=false
+ZUST 2_tag_klingelt hotspot KlingelnderRadiowecker sichtbar=true
+ZUST 2_tag_klingelt hintergrund w3_bg_stadtstrasse_v01.png
+ZUST 2_tag_klingelt W3_NACHT=false W3_WECKER_KLINGELT=true spricht=
+ZUST 3_nacht_klingelt effekt w3_radiowecker_559.png sichtbar=false frame=1
+ZUST 3_nacht_klingelt effekt w3_radiowecker_559_nacht.png sichtbar=false frame=0
+ZUST 3_nacht_klingelt effekt w3_radiowecker_klingelt.png sichtbar=false frame=0
+ZUST 3_nacht_klingelt effekt w3_radiowecker_klingelt_nacht.png sichtbar=true frame=5
+ZUST 3_nacht_klingelt effekt w3_glastuer_redet.png sichtbar=false frame=0
+ZUST 3_nacht_klingelt effekt w3_glastuer_redet_nacht.png sichtbar=false frame=0
+ZUST 3_nacht_klingelt hotspot Radiowecker sichtbar=false
+ZUST 3_nacht_klingelt hotspot KlingelnderRadiowecker sichtbar=true
+ZUST 3_nacht_klingelt hintergrund w3_bg_stadtstrasse_nacht_v01.png
+ZUST 3_nacht_klingelt W3_NACHT=true W3_WECKER_KLINGELT=true spricht=
+ZUST 4_nacht_0559 effekt w3_radiowecker_559.png sichtbar=false frame=1
+ZUST 4_nacht_0559 effekt w3_radiowecker_559_nacht.png sichtbar=true frame=1
+ZUST 4_nacht_0559 effekt w3_radiowecker_klingelt.png sichtbar=false frame=0
+ZUST 4_nacht_0559 effekt w3_radiowecker_klingelt_nacht.png sichtbar=false frame=0
+ZUST 4_nacht_0559 effekt w3_glastuer_redet.png sichtbar=false frame=0
+ZUST 4_nacht_0559 effekt w3_glastuer_redet_nacht.png sichtbar=false frame=0
+ZUST 4_nacht_0559 hotspot Radiowecker sichtbar=false
+ZUST 4_nacht_0559 hotspot KlingelnderRadiowecker sichtbar=true
+ZUST 4_nacht_0559 hintergrund w3_bg_stadtstrasse_nacht_v01.png
+ZUST 4_nacht_0559 W3_NACHT=true W3_WECKER_KLINGELT=false spricht=
+ZUST 5_tuer_spricht_tag effekt w3_radiowecker_559.png sichtbar=true frame=0
+ZUST 5_tuer_spricht_tag effekt w3_radiowecker_559_nacht.png sichtbar=false frame=0
+ZUST 5_tuer_spricht_tag effekt w3_radiowecker_klingelt.png sichtbar=false frame=0
+ZUST 5_tuer_spricht_tag effekt w3_radiowecker_klingelt_nacht.png sichtbar=false frame=0
+ZUST 5_tuer_spricht_tag effekt w3_glastuer_redet.png sichtbar=true frame=0
+ZUST 5_tuer_spricht_tag effekt w3_glastuer_redet_nacht.png sichtbar=false frame=0
+ZUST 5_tuer_spricht_tag hotspot Radiowecker sichtbar=false
+ZUST 5_tuer_spricht_tag hotspot KlingelnderRadiowecker sichtbar=true
+ZUST 5_tuer_spricht_tag hintergrund w3_bg_stadtstrasse_v01.png
+ZUST 5_tuer_spricht_tag W3_NACHT=false W3_WECKER_KLINGELT=false spricht=TUR
+ZUST 6_tuer_still_tag effekt w3_radiowecker_559.png sichtbar=true frame=0
+ZUST 6_tuer_still_tag effekt w3_radiowecker_559_nacht.png sichtbar=false frame=0
+ZUST 6_tuer_still_tag effekt w3_radiowecker_klingelt.png sichtbar=false frame=0
+ZUST 6_tuer_still_tag effekt w3_radiowecker_klingelt_nacht.png sichtbar=false frame=0
+ZUST 6_tuer_still_tag effekt w3_glastuer_redet.png sichtbar=false frame=1
+ZUST 6_tuer_still_tag effekt w3_glastuer_redet_nacht.png sichtbar=false frame=0
+ZUST 6_tuer_still_tag hotspot Radiowecker sichtbar=false
+ZUST 6_tuer_still_tag hotspot KlingelnderRadiowecker sichtbar=true
+ZUST 6_tuer_still_tag hintergrund w3_bg_stadtstrasse_v01.png
+ZUST 6_tuer_still_tag W3_NACHT=false W3_WECKER_KLINGELT=false spricht=PIX
+ZUST 5_tuer_spricht_nacht effekt w3_radiowecker_559.png sichtbar=false frame=0
+ZUST 5_tuer_spricht_nacht effekt w3_radiowecker_559_nacht.png sichtbar=true frame=1
+ZUST 5_tuer_spricht_nacht effekt w3_radiowecker_klingelt.png sichtbar=false frame=0
+ZUST 5_tuer_spricht_nacht effekt w3_radiowecker_klingelt_nacht.png sichtbar=false frame=0
+ZUST 5_tuer_spricht_nacht effekt w3_glastuer_redet.png sichtbar=false frame=1
+ZUST 5_tuer_spricht_nacht effekt w3_glastuer_redet_nacht.png sichtbar=true frame=0
+ZUST 5_tuer_spricht_nacht hotspot Radiowecker sichtbar=false
+ZUST 5_tuer_spricht_nacht hotspot KlingelnderRadiowecker sichtbar=true
+ZUST 5_tuer_spricht_nacht hintergrund w3_bg_stadtstrasse_nacht_v01.png
+ZUST 5_tuer_spricht_nacht W3_NACHT=true W3_WECKER_KLINGELT=false spricht=TUR
+ZUST 6_tuer_still_nacht effekt w3_radiowecker_559.png sichtbar=false frame=0
+ZUST 6_tuer_still_nacht effekt w3_radiowecker_559_nacht.png sichtbar=true frame=0
+ZUST 6_tuer_still_nacht effekt w3_radiowecker_klingelt.png sichtbar=false frame=0
+ZUST 6_tuer_still_nacht effekt w3_radiowecker_klingelt_nacht.png sichtbar=false frame=0
+ZUST 6_tuer_still_nacht effekt w3_glastuer_redet.png sichtbar=false frame=1
+ZUST 6_tuer_still_nacht effekt w3_glastuer_redet_nacht.png sichtbar=true frame=3
+ZUST 6_tuer_still_nacht hotspot Radiowecker sichtbar=false
+ZUST 6_tuer_still_nacht hotspot KlingelnderRadiowecker sichtbar=true
+ZUST 6_tuer_still_nacht hintergrund w3_bg_stadtstrasse_nacht_v01.png
+ZUST 6_tuer_still_nacht W3_NACHT=true W3_WECKER_KLINGELT=false spricht=TUR
+ZUST codesicht bild global (640.0, 0.0), Rechteck oben-links (0.0, -180.0), Hintergrund-Sprite global (640.0, 180.0), Background-Knoten (640.0, 0.0)
+ZUST gespeichert true
+ZUST laden gestartet true
+ZUST 7_nach_laden effekt w3_radiowecker_559.png sichtbar=false frame=0
+ZUST 7_nach_laden effekt w3_radiowecker_559_nacht.png sichtbar=false frame=0
+ZUST 7_nach_laden effekt w3_radiowecker_klingelt.png sichtbar=false frame=0
+ZUST 7_nach_laden effekt w3_radiowecker_klingelt_nacht.png sichtbar=true frame=3
+ZUST 7_nach_laden effekt w3_glastuer_redet.png sichtbar=false frame=0
+ZUST 7_nach_laden effekt w3_glastuer_redet_nacht.png sichtbar=false frame=0
+ZUST 7_nach_laden hotspot Radiowecker sichtbar=false
+ZUST 7_nach_laden hotspot KlingelnderRadiowecker sichtbar=true
+ZUST 7_nach_laden hintergrund w3_bg_stadtstrasse_nacht_v01.png
+ZUST 7_nach_laden W3_NACHT=true W3_WECKER_KLINGELT=true spricht=ORA
+ZUST stromkasten als Pixel (getrennt) -> W3_NACHT=true
+FERTIG

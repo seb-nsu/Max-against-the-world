@@ -1,0 +1,11 @@
+unter der Maus bei (1125.0, 230.0): Baeume
+unter der Maus bei (1170.0, 230.0): Baeume
+unter der Maus bei (1148.0, 210.0): Baeume
+unter der Maus bei (1148.0, 283.0): Baeume
+unter der Maus bei (1197.0, 250.0): Baeume
+Rechtsklick Glasfläche 1 (Baeume): Zeilen=["W3_SIM_MAX_0260"] CODE_SICHT=false
+Rechtsklick Glasfläche 2 (-): Zeilen=["W3_SIM_MAX_0265"] CODE_SICHT=false
+BILD GS-02_glastuer_hover_ausgang
+BILD GS-02_glastuer_hover_tuer_streifen
+Rechtsklick Streifen 1 (Baeume): Zeilen=["W3_TUER_MAX_0130"] CODE_SICHT=false
+Rechtsklick Streifen 2 (-): Zeilen=["SYS_WDH_MAX_0120", "W3_TUER_MAX_0150", "W3_TUER_MAX_0160", "W3_TUER_MAX_0170"] CODE_SICHT=false

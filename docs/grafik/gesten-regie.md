@@ -206,6 +206,16 @@
 | zeremonienmeister | ankuendigen | 4 Bilder, 41 Schritte × 120 ms = 4,9 s, einmalig | R11, `W2_PARA_ZER_0040` (gibt den Plan), `W2_PARA_ZER_0150` („Das ist eine Parade“) | `welt_2.gd`, `_finaltag()` und `parade_planen()` | `mit` zur Zeile | – |
 | zeremonienmeister | federkrone | 2 Bilder, 21 Schritte × 120 ms = 2,5 s, einmalig | Kulisse: zufällige Warte-Geste im Stadion nach dem Finaltag | Tabelle `WARTEN` | Zufällige Warte-Geste | – |
 
+## Welt 3
+
+Stand 21. November 2026 (Review 20.11., AN-17). Für Welt 3 gibt es hier keine eigene Tabelle je Bewegung; die Zuordnung steht im Code, und die Prüfungen halten sie aktuell:
+
+- **Zeilen, Ruhe und Warten:** `game/skripte/gesten_welt_3.gd` (90 Skriptzeilen mit Geste, Ruhe-Schleifen für Straßenmusiker, weinenden Mann, Deckert, Rebell, Rebellin und den Hausmeister bis Rätsel 8, Warte-Gesten für zehn Figuren). Aufbau und Arten wie in `gesten_einsatz.gd`; wiederholbare Gesten laufen „mit“ der Zeile, Haltezeiten etwa 0,6 s. Max' Welt-3-Gesten mit Vorrang stehen in `REDE_MAX` in `gesten_einsatz.gd`.
+- **Reden:** `talk` ist bei allen Welt-3-Figuren die Mund-Schleife aus dem Stand; die Armgeste aus dem Posenbogen spielt als `rede_geste` (W3-09).
+- **Bild-Pointen und Szenen-Bewegungen:** `game/skripte/welt_3.gd`, Region „Bild-Pointen und Bewegungen“: Traumbild mit Pixels Ohrfeigen (blaue Pastille), Fächer des Automaten, M.U.T.T.I. fährt herunter und bleibt aus, Schmidt ohne Brille ab Rätsel 6b, Schmidt kopiert sich, Klon geht zur Treppe, Morphäus tritt aus dem Schatten, Hausmeister rollt davon, Opas Hologramm aus Piepsi, Portal in Kammer 1, Bernd schwebt heran und zur Decke, Max als Ente beim falschen Kabel, Max steigt aus der Kapsel und legt sich hinein. Im Testmodus und beim Überspringen bleibt davon nur das Aufräumen.
+- **Mitsprechende Dinge:** Glastür (Tag und Nacht), Küchenradio (Radio und Pixel), Lautsprecher der drei Kammern (M.U.T.T.I. und Pixel) und Tür in Kammer 3 über `spricht:` im Layout (`tools/layout/welt-3.yaml`); das Terminal im Büro flackert dauernd, der Radiowecker blinkt und klingelt nach `W3_WECKER_KLINGELT`.
+- **Bewusst nicht eingebunden:** Liste mit Grund in `ZURUECKGESTELLT` in `tools/grafik_fundstellen.py` (unter anderem Morphäus hält den Kater, Pixel `tragen`, `schieben`, `vom_schrank_fallen`, Gänge von Deckert und Schmidt). Die Prüfung meldet in der CI jede Welt-3-Bewegung und jeden Effekt ohne Aufruf.
+
 ## Weltenübergreifend: Max und Pixel
 
 **Regel für Max' Redegesten (Sebastian, 17. November 2026, aus dem Review):** Max spricht in fast jeder zweiten Zeile. Beim normalen Reden bewegt er nur Mund und Kopf (talk), keine Geste. Gesten bekommt er gezielt: bei Pointen, Ärger, Staunen und wenn er auf etwas zeigt, grob jede fünfte Zeile. Beim Ansehen von Gegenständen meist keine. Neue Einträge in der Tabelle ZEILE in gesten_einsatz.gd folgen dieser Regel; bestehende werden beim nächsten Durchgang daran gemessen.

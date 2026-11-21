@@ -3,16 +3,16 @@
 [ext_resource type="Script" uid="uid://bfb5nogxk7t1t" path="res://game/rooms/laboreingang/walkable_areas/boden/walkable_area_boden.gd" id="1_88wun"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_88wun"]
-vertices = PackedVector2Array(598, 300, 632, 356, 56, 356, 100, 300, 525, 262, 112, 272)
-polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4), PackedInt32Array(4, 3, 5)])
-outlines = Array[PackedVector2Array]([PackedVector2Array(112, 272, 525, 262, 598, 300, 632, 356, 56, 356, 100, 300)])
+vertices = PackedVector2Array(560, 292, 610, 320, 620, 356, 10, 356, 30, 300, 120, 290)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4, 5)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(30, 300, 120, 290, 560, 292, 610, 320, 620, 356, 10, 356)])
 agent_radius = 0.0
 
 [node name="Boden" type="Node2D" unique_id=1766857655]
 script = ExtResource("1_88wun")
 script_name = "Boden"
 description = "Boden"
-interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(112, 272, 525, 262, 598, 300, 632, 356, 56, 356, 100, 300)])
+interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(30, 300, 120, 290, 560, 292, 610, 320, 620, 356, 10, 356)])
 
 [node name="Perimeter" type="NavigationRegion2D" parent="." unique_id=974869123]
 modulate = Color(0, 1, 0, 1)

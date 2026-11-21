@@ -16,7 +16,10 @@ from google.genai import types
 from mcp.server.fastmcp import FastMCP, Image
 from PIL import Image as PILImage
 
-STANDARD_MODELL = "gemini-3-pro-image"  # Nano Banana Pro
+# Ohne Angabe immer das guenstige Modell (Review 20.11., WF-11): ein vergessener Parameter darf
+# nicht das teure Pro-Modell kosten. Pro nur mit pro_erlaubt=True.
+STANDARD_MODELL = "gemini-nano-banana-2.1"  # Nano Banana 2.1, etwa 0,07 $ je Bild
+PRO_MODELL = "gemini-3-pro-image"  # Nano Banana Pro, ein Mehrfaches teurer
 BASIS = Path(os.environ.get("COUCHQUEST_ASSETS", Path(__file__).parent / "bilder"))
 PROTOKOLL = BASIS / "ki_protokoll.csv"
 
@@ -68,6 +71,7 @@ def bild_erzeugen(
     seitenverhaeltnis: str = "1:1",
     aufloesung: str = "1K",
     modell: str = STANDARD_MODELL,
+    pro_erlaubt: bool = False,
 ) -> list:
     """Erzeugt ein Bild mit Gemini und speichert es als PNG.
 
@@ -77,8 +81,16 @@ def bild_erzeugen(
                     Mit Referenz und passendem Prompt laesst sich ein Bild auch bearbeiten.
     seitenverhaeltnis: z. B. "1:1", "16:9", "3:4".
     aufloesung: "1K", "2K" oder "4K" (4K nur bei Nano Banana Pro, teurer).
-    modell: Standard gemini-3-pro-image-preview (Nano Banana Pro); alternativ z. B. gemini-nano-banana-2.1.
+    modell: Standard gemini-nano-banana-2.1 (guenstig). Das teure Pro-Modell gemini-3-pro-image
+            (Nano Banana Pro) nur zusammen mit pro_erlaubt=True.
+    pro_erlaubt: muss ausdruecklich True sein, damit ein Pro-Modell laeuft (Kostenschutz).
     """
+    if "pro" in modell.lower() and not pro_erlaubt:
+        return [
+            f"Abgelehnt: {modell} ist ein Pro-Modell und kostet ein Mehrfaches. "
+            f"Ohne Angabe gilt {STANDARD_MODELL}; Pro nur mit pro_erlaubt=True "
+            "und nach Freigabe mit Stueckpreis."
+        ]
     referenzen = referenzbilder or []
     teile: list = [prompt]
     for pfad_text in referenzen:
@@ -100,7 +112,7 @@ def bild_erzeugen(
             elif teil.text:
                 texte.append(teil.text)
     if bilddaten is None:
-        return [f"Kein Bild erhalten. Antwort des Modells: {' '.join(texte) or 'leer'}"]
+        return [f"Kein Bild erhalten (Modell {modell}). Antwort des Modells: {' '.join(texte) or 'leer'}"]
 
     ziel = BASIS / dateiname
     if ziel.suffix.lower() != ".png":
@@ -111,7 +123,7 @@ def bild_erzeugen(
     PILImage.open(io.BytesIO(bilddaten)).save(ziel, format="PNG")
     _protokoll(ziel, modell, prompt, referenzen)
 
-    info = f"Gespeichert: {ziel}"
+    info = f"Gespeichert: {ziel}\nModell: {modell}"
     if texte:
         info += f"\nHinweis des Modells: {' '.join(texte)}"
     return [info, _vorschau(bilddaten)]

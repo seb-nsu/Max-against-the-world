@@ -75,7 +75,7 @@ raeume:
   - id: buero_50
     name: Büroturm, 50. Stock
     skript_code: [TURM, TERM]   # TERM: Pixels Teil spielt in der Basis
-    groesse: 640x360
+    groesse: 1280x360   # Panorama mit endlosem Flur (Entscheidung Sebastian, 21.11.2026)
     ausgaenge: [stadtstrasse]   # Einbahn: hinein durch den Glaseingang, heraus nur über R7 und das Terminal der Basis
     erreichbar_ab: R5
     musik: w3_simulation
@@ -382,6 +382,7 @@ raetsel:
   - id: R1a
     name: Der Mensch-Test, Beobachtungen
     raum: unterstadt_strasse
+    objekte: [frau_regenschirm, strassenmusiker_w3, weinender_mann]   # Hilfe-Pfote: Objekte im Raum, die zum Schritt gehören (Max zeigt darauf)
     benoetigt: []
     ergibt: []
     schalter: [W3_R01_A_GELOEST, W3_BEOBACHTUNG_SCHIRM, W3_BEOBACHTUNG_MUSIKER, W3_BEOBACHTUNG_SUPPE]
@@ -389,6 +390,7 @@ raetsel:
   - id: R1b
     name: Der Mensch-Test, die drei Fragen
     raum: unterstadt_strasse
+    objekte: [deckert]   # Hilfe-Pfote: Objekte im Raum, die zum Schritt gehören (Max zeigt darauf)
     benoetigt: [R1a]
     ergibt: []
     schalter: [W3_R01_B_GELOEST, W3_STEMPEL_MENSCH]   # Stempel auf dem Handrücken, öffnet die Apothekengasse
@@ -396,6 +398,7 @@ raetsel:
   - id: R2
     name: Die Nudelbude „Vier“
     raum: unterstadt_strasse
+    objekte: [herr_vier, nudelbude]   # Hilfe-Pfote: Objekte im Raum, die zum Schritt gehören (Max zeigt darauf)
     benoetigt: []
     ergibt: []
     schalter: [W3_R02_GELOEST, W3_MORPHAEUS_GETROFFEN]
@@ -403,6 +406,7 @@ raetsel:
   - id: R3a
     name: Der Pastillenautomat, Déjà-vu
     raum: apothekengasse
+    objekte: [automat, pastillenautomat, pixel]   # Hilfe-Pfote: Objekte im Raum, die zum Schritt gehören (Max zeigt darauf)
     benoetigt: [R1b, R2]   # Option „Déjà-vu“ erst nach Morphäus' Hinweis
     ergibt: [rote_pastille, blaue_pastille]
     schalter: [W3_R03_A_GELOEST, W3_DIAGNOSE_MATRIX]
@@ -410,6 +414,7 @@ raetsel:
   - id: R3b
     name: Der Pastillenautomat, die Wahl
     raum: apothekengasse
+    objekte: [automat, blaue_pastille]   # Hilfe-Pfote: Objekte im Raum, die zum Schritt gehören (Max zeigt darauf)
     benoetigt: [R3a, rote_pastille]
     ergibt: [omas_kekse]
     schalter: [W3_R03_B_GELOEST, W3_SIMULATION_OFFEN]
@@ -417,6 +422,7 @@ raetsel:
   - id: R4
     name: Das Sparschwein des Orakels
     raum: kueche_orakel
+    objekte: [orakel_oma, sparschwein]   # Hilfe-Pfote: Objekte im Raum, die zum Schritt gehören (Max zeigt darauf)
     benoetigt: [R3b]
     ergibt: [rezeptkarte]
     schalter: [W3_R04_GELOEST, W3_SPARSCHWEIN_ZERSCHLAGEN, W3_REGEL_2]   # W3_REGEL_2 aus der Nahansicht Kochbuch, jederzeit in der Küche
@@ -424,6 +430,7 @@ raetsel:
   - id: R5
     name: Die gesprächige Tür
     raum: stadtstrasse
+    objekte: [tuer, schmidt]   # Hilfe-Pfote: Objekte im Raum, die zum Schritt gehören (Max zeigt darauf)
     benoetigt: [R3b]
     ergibt: []
     schalter: [W3_R05_GELOEST, W3_CODE_SICHT, W3_GLASTUER_OFFEN]
@@ -431,6 +438,7 @@ raetsel:
   - id: R6a
     name: Die Agenten-Klone, Original und Kopie
     raum: buero_50
+    objekte: [klone, klon, schmidt]   # Hilfe-Pfote: Objekte im Raum, die zum Schritt gehören (Max zeigt darauf)
     benoetigt: [R5, kaffeetasse]
     ergibt: []
     schalter: [W3_R06_A_GELOEST, W3_HEXENSCHUSS, W3_TASSE_ORIGINAL]   # W3_HEXENSCHUSS schon in der Eintrittsszene
@@ -438,6 +446,7 @@ raetsel:
   - id: R6b
     name: Die Agenten-Klone, Mittagspause
     raum: buero_50
+    objekte: [klone, klon]   # Hilfe-Pfote: Objekte im Raum, die zum Schritt gehören (Max zeigt darauf)
     benoetigt: [R6a, kaffeetasse]
     ergibt: [sonnenbrille, schmidts_akte]
     schalter: [W3_R06_B_GELOEST, W3_KLONE_MITTAGSPAUSE, W3_REGEL_1]   # W3_REGEL_1 aus der Nahansicht Akte
@@ -445,6 +454,7 @@ raetsel:
   - id: R7a
     name: Der Ausgang im 50. Stock, Farbcode
     raum: buero_50
+    objekte: [farbcode_an_der_wand, terminal]   # Hilfe-Pfote: Objekte im Raum, die zum Schritt gehören (Max zeigt darauf)
     benoetigt: [R6b, farbcode_zettel, morse_tabelle]   # ohne Morse-Tabelle (R13) kann Kalle nicht übersetzen
     ergibt: []
     schalter: [W3_R07_A_GELOEST, W3_FARBCODE_GESENDET]
@@ -452,6 +462,7 @@ raetsel:
   - id: R7b
     name: Der Ausgang im 50. Stock, Kabel
     raum: widerstandsbasis   # Pixel am Patch-Panel; Max wacht danach in der Basis auf
+    objekte: [patch_panel]   # Hilfe-Pfote: Objekte im Raum, die zum Schritt gehören (Max zeigt darauf)
     benoetigt: [R7a]
     ergibt: []
     schalter: [W3_R07_B_GELOEST, W3_KABEL_GESTECKT]
@@ -459,6 +470,7 @@ raetsel:
   - id: R8
     name: Der Hausmeister Modell 08/15
     raum: laboreingang
+    objekte: [hausmeister, telefonbuch_in_der_zelle]   # Hilfe-Pfote: Objekte im Raum, die zum Schritt gehören (Max zeigt darauf)
     benoetigt: [telefonbuchseite]
     ergibt: []
     schalter: [W3_R08_GELOEST, W3_HAUSMEISTER_WEG, W3_FREUND_0815]   # W3_FREUND_0815 nur mit Olivenöl aus Welt 2, vor der Übergabe
@@ -466,6 +478,7 @@ raetsel:
   - id: R9a
     name: Die Testkammern, die Leitung
     raum: laboreingang
+    objekte: [kartenleser, datenanschluss, panzertuer]   # Hilfe-Pfote: Objekte im Raum, die zum Schritt gehören (Max zeigt darauf)
     benoetigt: [R8, zugangskarte]
     ergibt: []
     schalter: [W3_R09_A_GELOEST, W3_LEITUNG_LABOR]   # Kalle zapft dabei M.U.T.T.I.s Lautsprecher an
@@ -473,6 +486,7 @@ raetsel:
   - id: R9b
     name: Die Testkammern, Kammer 1
     raum: testkammer_1
+    objekte: [bernd, bodenschalter]   # Hilfe-Pfote: Objekte im Raum, die zum Schritt gehören (Max zeigt darauf)
     benoetigt: [R9a]
     ergibt: []
     schalter: [W3_KAMMER_1_GELOEST]
@@ -480,6 +494,7 @@ raetsel:
   - id: R9c
     name: Die Testkammern, Kammer 2
     raum: testkammer_2
+    objekte: [laser, sockel]   # Hilfe-Pfote: Objekte im Raum, die zum Schritt gehören (Max zeigt darauf)
     benoetigt: [R9b, gummihuhn]
     ergibt: []
     schalter: [W3_KAMMER_2_GELOEST, W3_REGEL_3]   # W3_REGEL_3 aus der Nahansicht Kritzelei
@@ -487,6 +502,7 @@ raetsel:
   - id: R9d
     name: Die Testkammern, Kammer 3
     raum: testkammer_3
+    objekte: [tuer, bernd, lautsprecher]   # Hilfe-Pfote: Objekte im Raum, die zum Schritt gehören (Max zeigt darauf)
     benoetigt: [R9c, gummihuhn]   # mit Hermes' Sandale aus Welt 2 ein dritter Tausch
     ergibt: []
     schalter: [W3_KAMMER_3_GELOEST]
@@ -494,6 +510,7 @@ raetsel:
   - id: R10
     name: Das M.U.T.T.I.-Paradoxon
     raum: kern
+    objekte: [mutti]   # Hilfe-Pfote: Objekte im Raum, die zum Schritt gehören (Max zeigt darauf)
     benoetigt: [R4, schmidts_akte, R9c, R9d]   # Regeln 2 (Kochbuch), 1 (Akte), 3 (Kammer 2); den Turm verlässt Max nur über R7
     ergibt: []
     schalter: [W3_R10_GELOEST, W3_MUTTI_AUS]
@@ -501,6 +518,7 @@ raetsel:
   - id: R11
     name: Der glühende Kern
     raum: kern
+    objekte: [energiezelle, fenster]   # Hilfe-Pfote: Objekte im Raum, die zum Schritt gehören (Max zeigt darauf)
     benoetigt: [R10]
     benoetigt_eins_von: [omas_kekse, R3b]   # Lösung A Omas Kekse (Tausch heiß/kalt); Lösung B Pixel öffnet das Fenster in der Basis (seit R3b dort)
     ergibt: [energiezelle]
@@ -509,6 +527,7 @@ raetsel:
   - id: R12
     name: Die vierte Zutat
     raum: unterstadt_strasse
+    objekte: [herr_vier]   # Hilfe-Pfote: Objekte im Raum, die zum Schritt gehören (Max zeigt darauf)
     benoetigt: [rezeptkarte]   # als Glückskeks, also nach einem Sprung in die Realität
     ergibt: [zugangskarte]
     schalter: [W3_R12_GELOEST, W3_SUPPE_GEKOCHT]
@@ -516,6 +535,7 @@ raetsel:
   - id: R13
     name: Kalles Morse-Tabelle
     raum: widerstandsbasis
+    objekte: [kalles_tasse, tisch_mit_kalles_tasse, piepsi]   # Hilfe-Pfote: Objekte im Raum, die zum Schritt gehören (Max zeigt darauf)
     benoetigt: [R3b]   # Spielfigur Pixel
     ergibt: [morse_tabelle]
     schalter: [W3_R13_GELOEST, W3_MORSE_TABELLE, W3_OPAS_NACHRICHT]

@@ -26,3 +26,44 @@ Phase 2: `quellen_phase2.txt` (welche Bögen mit welchen Schaltern von `bew_w3.p
 `t2m_seite_rendern.py`: Blender im Hintergrund, rendert einen Meshy-Text-zu-Bewegung-Clip (FBX) als graue Seitenansicht; die Bilder dienen als Haltungsvorlage für gemalte Zwischenposen (`blender -b --python t2m_seite_rendern.py -- clip.fbx ziel schritt`).
 `t2m_bvh_strich.py`: Swift-Clips (BVH) als Strichmännchen in der Seitenansicht (Blender-Schritt und Zeichenschritt). `kapsel_folgen.py`: Kapsel-Bildfolgen für Aufstehen und Hinlegen samt Fußpunkt für die freie Max-Figur.
 `zustand_einsetzen.py`: Raumzustand nur an der geänderten Stelle einsetzen (8×8-Felder, eigene Paletten). `effekte_raum4.py`: Stadtstraße und Kern (Glastür, Radiowecker, Lichtband, Hitzeflimmern, Kabelpuls, Platzierung). `effekte_auto_takt.py`: rotes Auto in Seitenansicht für die Autos im Takt.
+
+Korrekturen 20.11. (Review W3-NS-03, W3-NS-04, W3-R05-02): `stand_korrektur.py` setzt aus Gemini-Varianten
+(`welt3\korrektur_20-11\`) nur die geänderte Stelle in die Stand-Sprites (Mund der Frau, Schmidts Füße, Mopp und
+gelbes Auge des Hausmeisters). `stelle_uebertragen.py` überträgt die Stelle in alle Gesten-Streifen (gemeinsame Lage
+je Bild, nur Pixel, die noch dem alten Stand gleichen; „form“ für Posen mit den Beinen des Stands).
+`hausmeister_mopp.py` dreht den Mopp in den Hausmeister-Posen (Kopf oben weg, Stiel über der Faust, Mopp-Kopf am
+Boden) und färbt das Auge. Danach `reden_ruhe.py <stand> <aus> figur …` und `figuren_einbau.py <quelle> figur …`
+mit `welt3\korrektur_20-11\quelle` als Übergabeordner.
+`hausmeister_rollen.py` baut den Roll-Streifen (W3-B30) aus Bild 0 des Spiel-Blatts neu (Mopp am Boden, gleiche
+Größe wie die Figur); nach `effekte_bild.py`/`effekte_einbau.py` erneut laufen lassen, sonst kommt der alte Streifen zurück.
+
+Korrekturen 20.11., Teil 2 (Review W3-15, W3-16, W3-NS-01, W3-NS-02):
+- `figuren_einbau.py` sucht die Lage der Gesten um die Fußlinie des Stands statt um die Zellunterkante (vorher lagen
+  62 Bewegungen von 15 Figuren 2 px zu tief) und bricht ab, wenn das erste Bild einer neu eingebauten Geste nicht auf
+  der Fußlinie des Stands steht oder der Stand nur verschoben darin liegt. Quelle für alle Welt-3-Figuren ist der
+  Welt-3-Ordner (reden_ruhe, bewegungen, stand) mit `korrektur_20-11\quelle` darüber.
+- `kopf_aus_pose.py`: Morphäus' Stand bekommt den Kopf aus `morphaeus_schild_umdrehen` P1 (Brille auf der Stirn,
+  Schnitt 36 Zeilen). Danach `reden_ruhe.py … morphaeus` (Mund jetzt bei 40, 31) und
+  `stelle_uebertragen.py <alter Stand> <neuer Stand> <bewegungen> <ziel> morphaeus weit` („weit“ findet den Kopf auch
+  im Gang mit seinem großen oberen Rand).
+- `pixel_trab.py`: Pixels Trab (8 Bilder, 30 ms) aus Bild 4 des alten Gangs mit gescherten Beinen, 3 Sheet-px je
+  Bild am Boden; dazu `walk_speed` 110 in `character_pixel.tscn` (Rutschen 9 % statt 86 %). Ergebnis
+  `pixel_gehen.png/.json` in den Bewegungsordner, `figuren_einbau.py … pixel` (der Trab wird nicht verkleinert).
+- `effekte_auto_takt.py` füllt beim Federn die frei werdende Zeile (Vorlage `effekte\frei\W3-B54_auto_seite.png`);
+  das Ergebnis `W3-B54_auto_im_takt.png` kommt unverändert nach `game/grafik/ambiente/w3_auto_im_takt.png`.
+
+Zweite Fassung der Räume (AP-09, 21.11.): `raeume_pixelieren.py <raeume_v2> [raum …] [--masken <ordner>]` rechnet
+Sebastians 24 JPEG-Originale (Median 3×3 gegen JPEG-Ränder, Palette je Raum, Zustände nur an der Stelle) auf
+`w3_bg_<raum>[_<zustand>]_v02.png` und macht die Nacharbeit aus dem Prüfbericht im Skript (Einhorn, Türrahmen, Tasse,
+Kaffeespur, Schnee, drittes Glas, Krakel, roter Laser, Weckeranzeige; Tresen und Nachttisch Tag/Nacht als
+Vordergrundteile `game/grafik/props/w3_*_v02.png`). Danach `effekte_raum_v02.py` (18 raumabhängige Effekte neu auf den
+_v02-Bildern, Layout-Zeilen mit Fußpunkt) und `code_sicht.py` (liest jetzt _v02).
+
+Bewegungen einhängen (AP-05, 21.11.): `effekte_raum_v02.py` baut zusätzlich die sechs Effekte, die vorher Ausschnitte
+der ersten Räume waren, auf den _v02-Bildern neu (Fächer öffnen, Küchenradio mit eigener Fassung ab R4, Lautsprecher
+der drei Testkammern, Schlüsselloch der Tür in Kammer 3, Kopieren) und das Traumbild der blauen Pastille
+(`w3_sofa_traum.png`: Prolog-Wohnzimmer weich und warm, Max-Sofa-Standbild doppelt groß). `figuren_einbau.py` behält
+bei Figuren mit Mund-Schleife (reden_ruhe) `talk` und nennt die Armgeste aus dem Posenbogen `rede_geste` (W3-09),
+kürzt gehaltene Zielposen auf etwa 0,6 s (W3-18, Ausnahmen in `HALTEN_AUSNAHMEN`) und kennt abweichende Bilddauern
+(`MS`, Max hinkt mit 85 ms). Aufruf wie oben mit `welt3\korrektur_20-11\quelle` als Quelle (alle Figuren auf einmal).
+Prüfung „Grafikdatei ohne Fundstelle“: `tools/grafik_fundstellen.py` (in `alles_pruefen.py` und CI).

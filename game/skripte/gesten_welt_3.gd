@@ -16,7 +16,7 @@ const ZEILE := {
 	# Nudelbude (Rätsel 2)
 	"W3_NUD_VIE_0080": ["VIE", "haende_zeigen", "mit"],
 	"W3_NUD_VIE_0270": ["VIE", "kopf_schuetteln", "mit"],
-	"W3_NUD_VIE_0310": ["VIE", "kochen_strahlend", "vor"],
+	"W3_NUD_VIE_0310": ["VIE", "kochen_strahlend", "mit"],    # strahlt und kocht beim Reden (W3-18)
 	"W3_NUD_VIE_0380": ["VIE", "schale_hinstellen", "vor"],
 	"W3_NUD_MOR_0210": ["MOR", "brille_hochschieben", "mit"], # aus dem Schatten, Brille auf der Stirn
 	"W3_NUD_MOR_0370": ["MOR", "schild_zeigen", "vor"],       # hebt das Pappschild
@@ -36,7 +36,8 @@ const ZEILE := {
 	"W3_APO_MAX_0570": ["MAX", "pastille", "vor"],            # sieht auf die rote Pastille
 	"W3_APO_MAX_0600": ["MAX", "schlucken", "vor"],
 	"W3_APO_MOR_0610": ["MOR", "fangen", "vor"],              # fängt Pixel auf
-	"W3_SOFA_MAX_0500": ["MAX", "handy", "vor"],              # starrt aufs Handy
+	"W3_SOFA_PIX_0520": ["PIX", "ohrfeige", "vor"],           # Pixel springt ins Traumbild, erste Ohrfeige (W3-07)
+	"W3_SOFA_PIX_0540": ["PIX", "ohrfeige", "vor"],           # zweite Ohrfeige
 	# Tür und Schmidt (Rätsel 5)
 	"W3_TUER_MAX_0150": ["MAX", "code_sicht", "vor"],         # Code-Sicht einschalten
 	"W3_TUER_SCH_0220": ["SCH", "stumm", "mit"],              # zeigt auf seinen Hals
@@ -56,15 +57,15 @@ const ZEILE := {
 	"W3_TURM_SCH_0430": ["SCH", "brille_ab", "vor"],
 	"W3_TURM_SCH_0450": ["SCH", "akte", "mit"],               # hält Max die Akte hin
 	# Basis und Terminal (Rätsel 7, 13)
-	"W3_TERM_MAX_0080": ["MAX", "tippen", "vor"],
-	"W3_TERM_MAX_0120": ["MAX", "tippen", "vor"],
-	"W3_TERM_MAX_0150": ["MAX", "tippen", "vor"],
+	"W3_TERM_MAX_0080": ["MAX", "tippen", "mit"],
+	"W3_TERM_MAX_0120": ["MAX", "tippen", "mit"],
+	"W3_TERM_MAX_0150": ["MAX", "tippen", "mit"],
 	"W3_TERM_PIX_0130": ["PIX", "morse", "vor"],              # Miau-Morse am Terminal der Basis
-	"W3_TERM_PIX_0220": ["PIX", "kabel", "vor"],
-	"W3_TERM_PIX_0230": ["PIX", "kabel", "vor"],
-	"W3_TERM_PIX_0240": ["PIX", "kabel", "vor"],
-	"W3_TERM_PIX_0250": ["PIX", "kabel", "vor"],
-	"W3_TERM_PIX_0300": ["PIX", "kabel", "vor"],
+	"W3_TERM_PIX_0220": ["PIX", "kabel", "mit"],
+	"W3_TERM_PIX_0230": ["PIX", "kabel", "mit"],
+	"W3_TERM_PIX_0240": ["PIX", "kabel", "mit"],
+	"W3_TERM_PIX_0250": ["PIX", "kabel", "mit"],
+	"W3_TERM_PIX_0300": ["PIX", "kabel", "mit"],
 	"W3_BAS_KAL_0040": ["KAL", "fluestern", "statt_talk"],    # Schraubenzieher im Mund
 	"W3_BAS_MAX_0060": ["MAX", "tasche", "vor"],
 	"W3_BAS_KAL_0110": ["KAL", "lachen", "mit"],
@@ -96,9 +97,21 @@ const ZEILE := {
 	"W3_SUPP_WEI_0120": ["WEI", "weinen", "mit"],             # weint lauter
 	"W3_SUPP_VIE_0130": ["VIE", "karte_reichen", "vor"],
 	# Testkammern und Kern
-	"W3_KAM1_MAX_0140": ["MAX", "portalgeraet", "vor"],
-	"W3_KAM1_BER_0170": ["BER", "davonschweben", "vor"],
-	"W3_KERN_MUT_0200": ["MUT", "herunterfahren", "vor"],
+	"W3_KAM1_NAR_0090": ["MAX", "portalgeraet", "vor"],       # Max drückt ab, dann öffnet sich das Portal
+	"W3_KAM1_NAR_0460": ["BER", "davonschweben", "vor"],      # dreht sich weg, schwebt beleidigt zur Decke (W3-R09-02)
+	# Herunterfahren zur Erzählzeile und auf dem letzten Bild halten, danach „mutti_aus“ (welt_3.gd, W3-R12-01)
+	"W3_KERN_NAR_0210": ["MUT", "herunterfahren", "bleibt"],
+	# Redegesten (Armbewegung aus dem Posenbogen) an ausgewählten Zeilen; sonst redet die Figur mit dem Mund (W3-09)
+	"W3_TEST_DEC_0020": ["DEC", "rede_geste", "mit"],
+	"W3_TEST_DEC_0050": ["DEC", "rede_geste", "mit"],
+	"W3_TUER_SCH_0010": ["SCH", "rede_geste", "mit"],
+	"W3_TUER_SCH_0080": ["SCH", "rede_geste", "mit"],
+	"W3_TURM_SCH_0010": ["SCH", "rede_geste", "mit"],
+	"W3_KUCH_ORA_0030": ["ORA", "rede_geste", "mit"],
+	"W3_KUCH_ORA_0120": ["ORA", "rede_geste", "mit"],
+	"W3_EING_HAU_0030": ["HAU", "rede_geste", "mit"],
+	"W3_EING_HAU_0080": ["HAU", "rede_geste", "mit"],
+	"W3_PIEP_OPA_0120": ["OPA", "flehen", "halten_mit", 3.0],  # Hologramm, kniend
 }
 
 const RUHE := {
@@ -119,5 +132,8 @@ const WARTEN := {
 	"klon": [{gesten = ["umsehen"], raum = "buero_50", abstand = [15.0, 30.0]}],
 	"hausmeister": [{gesten = ["warten"], raum = "laboreingang", nach = "R8", abstand = [20.0, 40.0]}],
 	"frau_regenschirm": [{gesten = ["schimpfen"], raum = "unterstadt_strasse", abstand = [20.0, 40.0]}],
-	"mutti": [{gesten = ["beleidigt"], raum = "kern", abstand = [20.0, 40.0]}],
+	"mutti": [{gesten = ["beleidigt"], raum = "kern", vor = "R10", abstand = [20.0, 40.0]}],
+	# Schmidt rückt die Fliege; Piepsi fährt nach R13 kleine Freudenkreise (W3_PIEP_MAX_0235), AP-05
+	"schmidt": [{gesten = ["fliege"], raum = "stadtstrasse", abstand = [20.0, 40.0]}],
+	"piepsi": [{gesten = ["fahren"], raum = "widerstandsbasis", nach = "R13", abstand = [15.0, 30.0]}],
 }
