@@ -8,7 +8,8 @@ docs/review/2026-11-20/notizen/hintergruende-pruefung.md):
    mit eigener Palette, weil Gemini es neu belichtet und gedehnt hat).
 3. Nacharbeit im gepixelten Bild (NACHARBEIT, nur Kopieren und Malen mit Palettenfarben): Einhorn
    kleiner, leerer Türrahmen in der Basis weg, Tasse an die Tischkante, Kaffeespur, Weckeranzeige
-   schwarz und Nachttisch als Vordergrundteil, drittes Glas in der Küche, Kritzelei ohne Schein-Schrift.
+   schwarz und Nachttisch als Vordergrundteil, drittes Glas in der Küche, Kritzelei ohne Schein-Schrift,
+   Mopp im Laboreingang weg.
 4. Zustände nur an der geänderten Stelle: Unterschied der verkleinerten Bilder innerhalb grober
    Rechtecke (BEREICHE), nach Umriss übernommen; „ganz“ nimmt das Rechteck vollständig. Kombinationen
    aus den Masken mehrerer Zustände (Basis: Schnee + Kaffee). Gemalte Zustände (Kaffee) entstehen
@@ -431,6 +432,32 @@ def nach_nachttisch(raum):
 
 NACHARBEIT["stadtstrasse"] = [nach_nachttisch("stadtstrasse")]
 NACHARBEIT["stadtstrasse_nacht"] = [nach_nachttisch("stadtstrasse_nacht")]
+
+
+def nach_laboreingang(bilder, pal):
+    """Mopp an der Wand weg (Sebastian, 21.11.: „mopp kann raus“; der Hausmeister hat seinen eigenen).
+    Je Band die Stelle derselben Zeilen, deren Rand am besten anschließt (gesucht über die Randpixel):
+    Wand hinter dem Stiel 351 px weiter rechts, Warnstreifen 343 px weiter rechts. Boden darunter neu
+    gerastert: je Zeile Verlauf zwischen dem Boden links (x 124–133) und rechts vom Eimer (x 226–235)."""
+    for name, a in bilder.items():
+        if a is None:
+            continue
+        alt = a.copy()
+        a[166:268, 146:162] = alt[166:268, 497:513]
+        a[268:289, 136:171] = alt[268:289, 479:514]
+        y0, y1, x0, x1 = 289, 305, 134, 174
+        links = ndimage.uniform_filter1d(alt[y0:y1, 124:134].astype(np.float32).mean(1), 7, axis=0)
+        rechts = ndimage.uniform_filter1d(alt[y0:y1, 226:236].astype(np.float32).mean(1), 7, axis=0)
+        t = ((np.arange(x0, x1) - 129) / (231 - 129))[None, :, None]
+        flaeche = np.zeros(a.shape, np.float32)
+        flaeche[y0:y1, x0:x1] = links[:, None] * (1 - t) + rechts[:, None] * t
+        feld = np.zeros(a.shape[:2], bool)
+        feld[y0:y1, x0:x1] = True
+        gerastert(a, flaeche, feld, pal)
+    return bilder
+
+
+NACHARBEIT["laboreingang"] = [nach_laboreingang]
 
 
 def raum_bauen(quelle, raum, masken=None):
