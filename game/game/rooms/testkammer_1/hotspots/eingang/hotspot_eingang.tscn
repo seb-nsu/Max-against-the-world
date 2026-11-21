@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://d0yc6rd4cygov"]
+
+[ext_resource type="Script" path="res://game/rooms/testkammer_1/hotspots/eingang/hotspot_eingang.gd" id="1_iqv4n"]
+
+[node name="Eingang" type="Area2D" unique_id=690515699]
+script = ExtResource("1_iqv4n")
+script_name = "Eingang"
+description = "Eingang"
+cursor = 1
+interaction_polygon = PackedVector2Array(-36, -117.5, 36, -117.5, 36, 117.5, -36, 117.5)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1896659970]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

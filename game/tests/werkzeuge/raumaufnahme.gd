@@ -24,11 +24,16 @@ var nur: Array = []
 ## gelöst). Neue Welten hier ergänzen.
 const VARIANTEN := {
 	"welt-3": {
-		"widerstandsbasis": ["W3_SCHNEE", "R13+W3_SCHNEE"],
+		"apothekengasse": ["R3a"],
+		"widerstandsbasis": ["W3_SCHNEE", "R13", "R13+W3_SCHNEE"],
 		"kuehlung": ["W3_EIMER_GEKIPPT"],
 		"laboreingang": ["W3_PANZERTUER_OFFEN"],
 		"stadtstrasse": ["W3_NACHT", "W3_WECKER_KLINGELT", "W3_NACHT+W3_WECKER_KLINGELT"],
-		"kern": ["W3_ZELLE_KALT"],
+		"kueche_orakel": ["R4"],
+		"testkammer_1": ["R9b+W3_PORTAL_GENOMMEN"],
+		"testkammer_2": ["R9c"],
+		"testkammer_3": ["R9d"],
+		"kern": ["W3_ZELLE_KALT", "R11"],
 	},
 }
 

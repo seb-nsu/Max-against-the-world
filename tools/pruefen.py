@@ -21,6 +21,9 @@ Geprüft wird:
      Lieder-Tabelle gibt es (Fehler).
   6. Nahansichten: Summe aller nahansicht: true und aller Einträge unter
      nahansichten: über alle Welt-Tabellen ist NAHANSICHTEN_GESAMT (Fehler).
+  7. Raumszenen: Szenenbreite = Breite des Hintergrunds, und in Räumen mit fertigem
+     Hintergrund zeigt kein Prop auf einen Platzhalter oder die Platzhalterfarbe (Fehler);
+     Ausgänge unter 50 px, Klickflächen unter der Leiste oben oder über den Rand (Warnung).
 
 Fehler (exit 1) müssen behoben werden, Warnungen werden geprüft.
 """
@@ -655,6 +658,141 @@ def pruefe_gespraeche():
                 F(f"daten/raeume/{datei.name}", f"Gespräch {g['id']} hat keine Option, die das Gespräch beendet")
 
 
+# --------------------------------------------------------------------------
+# 7. Raumszenen gegen Bauplan und Bilder (Review 20.11., W3-R02-01 und W3-12)
+# --------------------------------------------------------------------------
+
+PLATZHALTER_FARBE = (228, 166, 114)
+KLICKFLAECHEN_GEPRUEFT = {"welt-3"}      # Abschnitte, deren Klickflächen schon nach W3-19 gesetzt sind   # orange Prop-Platzhalter aus tools/godot_raeume.py (#e4a672)
+
+
+def png_lesen(pfad):
+    """(breite, hoehe, zeilen) einer 8-Bit-PNG ohne Pillow (die CI hat nur PyYAML); zeilen ist eine
+    Liste von Pixel-Tupeln (RGB oder RGBA). Nur für kleine Bilder (Props) gedacht."""
+    import struct
+    import zlib
+    daten = Path(pfad).read_bytes()
+    pos, idat, palette, trns = 8, b"", None, None
+    breite = hoehe = tiefe = art = 0
+    while pos < len(daten):
+        laenge, typ = struct.unpack(">I4s", daten[pos:pos + 8])
+        inhalt = daten[pos + 8:pos + 8 + laenge]
+        if typ == b"IHDR":
+            breite, hoehe, tiefe, art = struct.unpack(">IIBB", inhalt[:10])
+        elif typ == b"PLTE":
+            palette = [tuple(inhalt[i:i + 3]) for i in range(0, len(inhalt), 3)]
+        elif typ == b"tRNS":
+            trns = inhalt
+        elif typ == b"IDAT":
+            idat += inhalt
+        pos += 12 + laenge
+    if tiefe != 8 or art not in (2, 3, 6):
+        return breite, hoehe, None   # selten (16 Bit, Graustufen): nicht prüfen
+    bpp = {2: 3, 3: 1, 6: 4}[art]
+    roh = zlib.decompress(idat)
+    zeile_len = breite * bpp
+    vorige = bytearray(zeile_len)
+    zeilen = []
+    for y in range(hoehe):
+        start = y * (zeile_len + 1)
+        f, z = roh[start], bytearray(roh[start + 1:start + 1 + zeile_len])
+        for i in range(zeile_len):
+            a = z[i - bpp] if i >= bpp else 0
+            b = vorige[i]
+            c = vorige[i - bpp] if i >= bpp else 0
+            if f == 1:
+                z[i] = (z[i] + a) & 255
+            elif f == 2:
+                z[i] = (z[i] + b) & 255
+            elif f == 3:
+                z[i] = (z[i] + (a + b) // 2) & 255
+            elif f == 4:
+                pa, pb, pc = abs(b - c), abs(a - c), abs(a + b - 2 * c)
+                z[i] = (z[i] + (a if pa <= pb and pa <= pc else b if pb <= pc else c)) & 255
+        vorige = z
+        if art == 3:
+            zeilen.append([palette[v] + ((trns[v],) if trns and v < len(trns) else (255,)) for v in z])
+        else:
+            zeilen.append([tuple(z[i:i + bpp]) for i in range(0, zeile_len, bpp)])
+    return breite, hoehe, zeilen
+
+
+def png_groesse(pfad):
+    import struct
+    kopf = Path(pfad).read_bytes()[:24]
+    return struct.unpack(">II", kopf[16:24])
+
+
+def pruefe_raumszenen():
+    """Szenenbreite = Breite des Hintergrunds (Apothekengasse war 640 statt 1280 breit und
+    scrollte nicht) und kein oranger Prop-Platzhalter in einem Raum mit fertigem Hintergrund
+    (fünf orange Kästen in Welt 3: Die Szenen zeigten noch auf grafik/platzhalter/prop_*.png)."""
+    game = ROOT / "game"
+    for bauplan in sorted((game / "daten" / "raeume").glob("*.json")):
+        plan = json.loads(bauplan.read_text(encoding="utf-8"))
+        for r in plan.get("raeume", []):
+            szene = game / "game" / "rooms" / r["id"] / f"room_{r['id']}.tscn"
+            if not szene.exists():
+                continue
+            ort = f"game/game/rooms/{r['id']}/{szene.name}"
+            text = szene.read_text(encoding="utf-8")
+            pfade = dict((m.group(2), m.group(1)) for m in re.finditer(
+                r'^\[ext_resource type="Texture2D"[^\]]*path="res://([^"]+)" id="([^"]+)"\]', text, re.M))
+            m = re.search(r"^width = (\d+)", text, re.M)
+            breite = int(m.group(1)) if m else None
+            bg = re.search(r'^\[node name="Background" parent="Props"[^\]]*\]\n(?:[^\[\n].*\n)*?'
+                           r'texture = ExtResource\("([^"]+)"\)', text, re.M)
+            bg_pfad = pfade.get(bg.group(1)) if bg else None
+            fertig = bool(bg_pfad) and "/platzhalter/" not in bg_pfad
+            if fertig and (game / bg_pfad).exists():
+                bild_breite = png_groesse(game / bg_pfad)[0]
+                if breite != bild_breite:
+                    F(ort, f"Szenenbreite {breite} passt nicht zur Breite des Hintergrunds "
+                           f"{bild_breite} ({bg_pfad}); Bau mit --cq-layout={r['id']} wiederholen")
+                if r["groesse"][0] != bild_breite:
+                    F(ort, f"Welt-Tabelle groesse {r['groesse'][0]} passt nicht zur Breite des "
+                           f"Hintergrunds {bild_breite} ({bg_pfad})")
+            if not fertig:
+                continue
+            # Klickflächen am fertigen Bild: Ausgänge mindestens 50 px breit, nichts unter der Leiste oben
+            # (y < 24) und nichts über den Bildrand hinaus (Review 20.11., W3-19); gilt ab Welt 3, die
+            # älteren Abschnitte haben noch Flächen bis an den Rand (Review 17.11., X-06/X-07)
+            klickflaechen = r.get("hotspots", []) + r.get("ausgaenge", []) + r.get("props", [])
+            if bauplan.stem not in KLICKFLAECHEN_GEPRUEFT:
+                klickflaechen = []
+            for h in klickflaechen:
+                x, y, w, hh = h["rect"]
+                art = "Ausgang" if h in r.get("ausgaenge", []) else "Klickfläche"
+                if art == "Ausgang" and w < 50 and not h.get("versteckt"):
+                    W(ort, f"{art} {h['id']} ist nur {w} px breit (mindestens 50)")
+                if y < 24:
+                    W(ort, f"{art} {h['id']} beginnt bei y {y}, unter der Leiste oben (ab y 24)")
+                if x < 0 or x + w > r["groesse"][0] or y + hh > r["groesse"][1]:
+                    W(ort, f"{art} {h['id']} ragt über den Bildrand ({h['rect']})")
+            for knoten in re.finditer(r'^\[node name="([^"]+)" parent="Props"[^\]]*\]\n((?:[^\[\n].*\n)*)',
+                                      text, re.M):
+                if knoten.group(1) == "Background":
+                    continue
+                tm = re.search(r'^texture = ExtResource\("([^"]+)"\)', knoten.group(2), re.M)
+                pfad = pfade.get(tm.group(1)) if tm else None
+                if not pfad or not (game / pfad).exists():
+                    continue
+                if "/platzhalter/" in pfad:
+                    F(ort, f"Prop {knoten.group(1)} zeigt auf den Platzhalter {pfad}, obwohl der Raum "
+                           f"fertig ist (echte Grafik nach grafik/props/, dann --cq-layout={r['id']})")
+                    continue
+                _, _, zeilen = png_lesen(game / pfad)
+                if not zeilen:
+                    continue
+                # Der Platzhalter ist eine volle Fläche in dieser Farbe mit Rand (über 60 %); echte
+                # Bilder enthalten sie höchstens stellenweise (Ei in der Taverne 29 %)
+                sichtbar = [px for zeile in zeilen for px in zeile if len(px) < 4 or px[3] > 0]
+                orange = sum(1 for px in sichtbar if px[:3] == PLATZHALTER_FARBE)
+                if sichtbar and orange / len(sichtbar) > 0.5:
+                    F(ort, f"Prop {knoten.group(1)}: {pfad} ist ein Platzhalter (Fläche in der "
+                           f"Platzhalterfarbe {PLATZHALTER_FARBE})")
+
+
 def main():
     nur_fehler = "--nur-fehler" in sys.argv
     alle = lade_tabellen()
@@ -673,6 +811,7 @@ def main():
     pruefe_code_schalter(alle)
     pruefe_englisch(alle_ids)
     pruefe_gespraeche()
+    pruefe_raumszenen()
     import importlib.util
     spec = importlib.util.spec_from_file_location("diagramme", Path(__file__).with_name("diagramme.py"))
     dia = importlib.util.module_from_spec(spec)

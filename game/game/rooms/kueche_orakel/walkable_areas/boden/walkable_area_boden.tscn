@@ -3,16 +3,16 @@
 [ext_resource type="Script" uid="uid://cd0h3v3fw5ee0" path="res://game/rooms/kueche_orakel/walkable_areas/boden/walkable_area_boden.gd" id="1_tfxm5"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_tfxm5"]
-vertices = PackedVector2Array(150, 286, 228, 286, 228, 348, 82, 330, 452, 348, 455, 286, 555, 286, 608, 338, 626, 356, 40, 356)
-polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(4, 5, 6, 7, 8), PackedInt32Array(4, 8, 9, 2), PackedInt32Array(3, 2, 9)])
-outlines = Array[PackedVector2Array]([PackedVector2Array(150, 286, 228, 286, 228, 348, 452, 348, 455, 286, 555, 286, 608, 338, 626, 356, 40, 356, 82, 330)])
+vertices = PackedVector2Array(630, 356, 10, 356, 50, 320, 236, 322, 436, 322, 436, 285, 560, 285, 600, 320, 80, 285, 236, 285)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(0, 4, 5, 6, 7), PackedInt32Array(8, 9, 3, 2), PackedInt32Array(0, 3, 4)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(80, 285, 236, 285, 236, 322, 436, 322, 436, 285, 560, 285, 600, 320, 630, 356, 10, 356, 50, 320)])
 agent_radius = 0.0
 
 [node name="Boden" type="Node2D" unique_id=585347557]
 script = ExtResource("1_tfxm5")
 script_name = "Boden"
 description = "Boden"
-interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(150, 286, 228, 286, 228, 348, 452, 348, 455, 286, 555, 286, 608, 338, 626, 356, 40, 356, 82, 330)])
+interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(80, 285, 236, 285, 236, 322, 436, 322, 436, 285, 560, 285, 600, 320, 630, 356, 10, 356, 50, 320)])
 
 [node name="Perimeter" type="NavigationRegion2D" parent="." unique_id=1464396052]
 modulate = Color(0, 1, 0, 1)

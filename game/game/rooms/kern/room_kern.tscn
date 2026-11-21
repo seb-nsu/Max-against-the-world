@@ -3,9 +3,9 @@
 [ext_resource type="Script" uid="uid://d0qgsfbenipnm" path="res://game/rooms/kern/room_kern.gd" id="1_0hh8a"]
 [ext_resource type="PackedScene" uid="uid://c05w62s0xt8dw" path="res://game/rooms/kern/walkable_areas/boden/walkable_area_boden.tscn" id="2_s4lk5"]
 [ext_resource type="PackedScene" uid="uid://bk4lrw0en52rp" path="res://game/rooms/kern/props/background/prop_background.tscn" id="3_s4a1f"]
-[ext_resource type="Texture2D" uid="uid://b8sc8uu7ll3rf" path="res://grafik/hintergruende/w3_bg_kern_v01.png" id="4_s4lk5"]
+[ext_resource type="Texture2D" uid="uid://nxntrd65wud" path="res://grafik/hintergruende/w3_bg_kern_v02.png" id="4_s4lk5"]
 [ext_resource type="PackedScene" uid="uid://cl43k8b27uru4" path="res://game/rooms/kern/props/energiezelle/prop_energiezelle.tscn" id="5_b2h5r"]
-[ext_resource type="Texture2D" uid="uid://wp0wc3ynkfk7" path="res://grafik/platzhalter/prop_energiezelle.png" id="6_8usrf"]
+[ext_resource type="Texture2D" uid="uid://cerr20xygsdhp" path="res://grafik/props/energiezelle.png" id="6_s4lk5"]
 [ext_resource type="PackedScene" uid="uid://bvyk0mx5ut1a3" path="res://game/rooms/kern/hotspots/kabel/hotspot_kabel.tscn" id="7_oovwj"]
 [ext_resource type="PackedScene" uid="uid://dt208jnis77vr" path="res://game/rooms/kern/hotspots/sockel/hotspot_sockel.tscn" id="8_eo2xw"]
 [ext_resource type="PackedScene" uid="uid://d1sscqyvowfok" path="res://game/rooms/kern/hotspots/streifen/hotspot_streifen.tscn" id="9_ddwwm"]
@@ -23,7 +23,6 @@ height = 360
 [node name="WalkableAreas" type="Node2D" parent="." unique_id=310747753]
 
 [node name="Boden" parent="WalkableAreas" unique_id=1544770129 instance=ExtResource("2_s4lk5")]
-interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(60, 330, 140, 312, 300, 304, 520, 312, 600, 330, 600, 356, 60, 356)])
 
 [node name="Props" type="Node2D" parent="." unique_id=2002114959]
 
@@ -33,55 +32,55 @@ texture = ExtResource("4_s4lk5")
 description = "UI_RAUM_KERN"
 
 [node name="Energiezelle" parent="Props" unique_id=1250973328 instance=ExtResource("5_b2h5r")]
-position = Vector2(316, 231)
-texture = ExtResource("6_8usrf")
+position = Vector2(320, 192)
+texture = ExtResource("6_s4lk5")
 description = "UI_OBJ_ENERGIEZELLE"
-baseline = 35
-walk_to_point = Vector2(-26, 105)
-interaction_polygon = PackedVector2Array(-10, -35, 10, -35, 10, 35, -10, 35)
+baseline = 30
+walk_to_point = Vector2(-50, 138)
+interaction_polygon = PackedVector2Array(-14, -30, 14, -30, 14, 30, -14, 30)
 
 [node name="Hotspots" type="Node2D" parent="." unique_id=257761001]
 
 [node name="Kabel" parent="Hotspots" unique_id=961481908 instance=ExtResource("7_oovwj")]
-position = Vector2(190, 295)
+position = Vector2(352.5, 277)
 description = "UI_OBJ_KABEL"
-baseline = 15
-walk_to_point = Vector2(0, 39)
-interaction_polygon = PackedVector2Array(-70, -15, 70, -15, 70, 15, -70, 15)
+baseline = 21
+walk_to_point = Vector2(-102.5, 53)
+interaction_polygon = PackedVector2Array(-147.5, -21, 147.5, -21, 147.5, 21, -147.5, 21)
 
 [node name="Sockel" parent="Hotspots" unique_id=193590444 instance=ExtResource("8_eo2xw")]
-position = Vector2(321, 288)
+position = Vector2(319, 260)
 description = "UI_OBJ_SOCKEL"
 baseline = 40
-walk_to_point = Vector2(-41, 48)
-interaction_polygon = PackedVector2Array(-23, -40, 23, -40, 23, 40, -23, 40)
+walk_to_point = Vector2(-49, 70)
+interaction_polygon = PackedVector2Array(-26, -40, 26, -40, 26, 40, -26, 40)
 
 [node name="Streifen" parent="Hotspots" unique_id=483139755 instance=ExtResource("9_ddwwm")]
-position = Vector2(306, 238)
+position = Vector2(310, 196)
 description = "UI_OBJ_STREIFEN"
-baseline = 10
-walk_to_point = Vector2(14, 98)
-interaction_polygon = PackedVector2Array(-210, -10, 210, -10, 210, 10, -210, 10)
+baseline = 20
+walk_to_point = Vector2(90, 134)
+interaction_polygon = PackedVector2Array(-150, -20, 150, -20, 150, 20, -150, 20)
 
 [node name="AusgangTestkammer3" parent="Hotspots" unique_id=871211212 instance=ExtResource("10_23ush")]
-position = Vector2(49, 235)
+position = Vector2(120, 195)
 description = "UI_RAUM_TESTKAMMER_3"
 baseline = 95
-walk_to_point = Vector2(41, 105)
+walk_to_point = Vector2(0, 115)
 cursor = 9
-interaction_polygon = PackedVector2Array(-31, -95, 31, -95, 31, 95, -31, 95)
+interaction_polygon = PackedVector2Array(-40, -95, 40, -95, 40, 95, -40, 95)
 
 [node name="Regions" type="Node2D" parent="." unique_id=403488364]
 
 [node name="Markers" type="Node2D" parent="." unique_id=1884130571]
 
 [node name="Start" parent="Markers" unique_id=380376828 instance=ExtResource("11_ne50c")]
-position = Vector2(200, 336)
+position = Vector2(200, 338)
 
 [node name="VonTestkammer3" parent="Markers" unique_id=1080842806 instance=ExtResource("12_sw1lo")]
-position = Vector2(90, 340)
+position = Vector2(120, 316)
 
 [node name="Characters" type="Node2D" parent="." unique_id=937518944]
 
 [node name="CharacterMutti *" parent="Characters" unique_id=609514072 instance=ExtResource("13_x00w8")]
-position = Vector2(470, 300)
+position = Vector2(455, 300)

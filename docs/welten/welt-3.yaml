@@ -75,7 +75,7 @@ raeume:
   - id: buero_50
     name: Büroturm, 50. Stock
     skript_code: [TURM, TERM]   # TERM: Pixels Teil spielt in der Basis
-    groesse: 640x360
+    groesse: 1280x360   # Panorama mit endlosem Flur (Entscheidung Sebastian, 21.11.2026)
     ausgaenge: [stadtstrasse]   # Einbahn: hinein durch den Glaseingang, heraus nur über R7 und das Terminal der Basis
     erreichbar_ab: R5
     musik: w3_simulation

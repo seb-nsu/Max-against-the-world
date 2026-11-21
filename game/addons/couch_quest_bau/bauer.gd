@@ -345,7 +345,7 @@ func _raum(r: Dictionary) -> void:
 		var knoten := "Character%s *" % fd.script_name
 		var schon := false
 		for c in raum.get_node("Characters").get_children():
-			if c.name.begins_with("Character" + fd.script_name):
+			if _ist_figur_knoten(c, fd.script_name):
 				schon = true
 		if schon:
 			continue
@@ -381,6 +381,10 @@ func _layout_uebernehmen(r: Dictionary) -> void:
 	var snake := sn.to_snake_case()
 	var pfad := "res://game/rooms/%s/room_%s.tscn" % [snake, snake]
 	var raum: PopochiuRoom = load(pfad).instantiate(PackedScene.GEN_EDIT_STATE_INSTANCE)
+	# Raumgröße aus der Welt-Tabelle: _raum() setzt sie nur beim Anlegen (Apothekengasse blieb
+	# 640 breit, obwohl Bild und Laufbereich 1280 sind; Review 20.11., W3-R02-01)
+	raum.width = r.groesse[0]
+	raum.height = r.groesse[1]
 	var bg := raum.get_node("Props/Background") as PopochiuProp
 	if bg:
 		bg.texture = load(r.hintergrund)
@@ -430,11 +434,18 @@ func _layout_uebernehmen(r: Dictionary) -> void:
 			knoten.frames = _bilder_in_reihe(knoten.texture, rect)
 	for fd in r.figuren:
 		for c in raum.get_node("Characters").get_children():
-			if c.name.begins_with("Character" + fd.script_name):
+			if _ist_figur_knoten(c, fd.script_name):
 				c.position = Vector2(fd.pos[0], fd.pos[1])
 	_szene_speichern(raum, pfad)
 	raum.free()
 	_angelegt.append("Layout übernommen: " + sn)
+
+
+## Knoten „CharacterRebellin *“ gehört zur Figur Rebellin, nicht zu Rebell (Präfix allein verwechselte
+## beide: der Rebell fehlte in der Basis, und sein Platz landete bei der Rebellin; Review 20.11., W3-R03-02).
+func _ist_figur_knoten(c: Node, script_name: String) -> bool:
+	var name := String(c.name)
+	return name == "Character" + script_name or name.begins_with("Character" + script_name + " ")
 
 
 func _hotspot(raum: PopochiuRoom, h: Dictionary, basis: String) -> void:

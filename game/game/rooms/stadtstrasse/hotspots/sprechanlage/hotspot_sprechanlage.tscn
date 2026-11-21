@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://7kr87t1nlvil"]
+
+[ext_resource type="Script" path="res://game/rooms/stadtstrasse/hotspots/sprechanlage/hotspot_sprechanlage.gd" id="1_vi02m"]
+
+[node name="Sprechanlage" type="Area2D" unique_id=1072163770]
+script = ExtResource("1_vi02m")
+script_name = "Sprechanlage"
+description = "Sprechanlage"
+cursor = 1
+interaction_polygon = PackedVector2Array(-12, -15, 12, -15, 12, 15, -12, 15)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1755190107]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

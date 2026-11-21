@@ -1,0 +1,7 @@
+buero_50	Klone	43 % frei
+kern	Kabel	42 % frei
+kern	Streifen	64 % frei
+laboreingang	PlatzDesHausmeisters	33 % frei
+testkammer_2	AusgangTestkammer3	46 % frei
+widerstandsbasis	Handtuch	33 % frei
+widerstandsbasis	TischMitKallesTasse	54 % frei

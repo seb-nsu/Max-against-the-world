@@ -139,6 +139,13 @@ def bedingungen(text, gegenstand_id=None, zeile_id=None):
     return liste, ", ".join(rest)
 
 
+def sichtbar_bedingung(h):
+    """Klickfläche, die einen Zustand zeigt, nur mit demselben Zustand wie das Bild (Review 20.11.,
+    W3-R03-01): Layout „nach: R13“ (ab dem Rätsel oder Schalter, auch „A+B“, „A|B“) und „vor: …“
+    (nur bis dahin). Das Spiel blendet die Klickfläche danach ein oder aus (CQRaum)."""
+    return {k: str(h[k]) for k in ("nach", "vor") if h.get(k)}
+
+
 def objekt_aus_ausloeser(ausloeser):
     """„Ansehen: Kalender, zweites Mal“ → ("kalender", "Kalender", "zweites Mal")."""
     rest = ausloeser.split(":", 1)[1].strip() if ":" in ausloeser else ausloeser.strip()
@@ -354,6 +361,7 @@ def baue(abschnitt):
                     "rect": h["rect"], "gehe": h.get("gehe", [0, 0]), "ansehen": [],
                     **({"versteckt": True} if h.get("versteckt") else {}),
                     **({"boden": True} if h.get("boden") else {}),
+                    **sichtbar_bedingung(h),
                 })
         raeume.append(raum)
     raum_nach_id = {r["id"]: r for r in raeume}
@@ -369,7 +377,8 @@ def baue(abschnitt):
             n = len(raum["hotspots"])
             lay = {"rect": [s_(4 + (n % 8) * 38), s_(4 + (n // 8) * 20), s_(34), s_(16)], "gehe": [BREITE // 2, s_(160)]}
         o = {"id": oid, "script_name": pascal(oid), "name_key": name_key(oid, anzeige),
-             "rect": lay["rect"], "gehe": lay.get("gehe", [0, 0]), "ansehen": []}
+             "rect": lay["rect"], "gehe": lay.get("gehe", [0, 0]), "ansehen": [],
+             **sichtbar_bedingung(lay)}
         raum["hotspots"].append(o)
         return o
 

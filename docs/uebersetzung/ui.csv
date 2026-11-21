@@ -696,6 +696,7 @@ UI_OBJ_TELEFONZELLE,Telefonzelle,Phone box
 UI_OBJ_RADIOWECKER,Radiowecker,Clock radio
 UI_OBJ_KOPIERER,Kopierer,Photocopier
 UI_OBJ_TERMINAL,Terminal,Terminal
+UI_OBJ_SPRECHANLAGE,Sprechanlage,Intercom
 UI_OBJ_TISCH_MIT_KALLES_TASSE,Tisch mit Kalles Tasse,Table with Kalle's mug
 UI_OBJ_TISCH_MIT_TELLER_UND_TEEKANNE,Tisch mit Teller und Teekanne,Table with plate and teapot
 UI_OBJ_TOPFPFLANZEN,Topfpflanzen,Potted plants

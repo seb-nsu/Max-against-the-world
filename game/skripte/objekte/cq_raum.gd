@@ -105,7 +105,7 @@ func _process(_delta: float) -> void:
 		_warte_gesten(_delta)
 	if bauplan().has("stufen") and not Engine.is_editor_hint():
 		stufen_anwenden()
-	if not _bedingte_teile.is_empty() or not _hg_wechsel.is_empty():
+	if not _bedingte_teile.is_empty() or not _hg_wechsel.is_empty() or not _bedingte_hotspots.is_empty():
 		_bedingte_anpassen()
 
 
@@ -241,6 +241,12 @@ func blicke_anpassen() -> void:
 func vordergrund_setzen() -> void:
 	_hg_wechsel = bauplan().get("hintergrund_nach", {})
 	_hg_grund = ""
+	_bedingte_hotspots = []
+	for h in get_hotspots():
+		if h is CQHotspot and not h is CQAusgang and h.has_method("bauplan"):
+			var hb: Dictionary = h.bauplan()
+			if hb.has("nach") or hb.has("vor"):
+				_bedingte_hotspots.append([h, String(hb.get("nach", "")), String(hb.get("vor", ""))])
 	if has_node("Props/Background"):
 		var bg = get_node("Props/Background")
 		if bg.get("texture"):
@@ -647,6 +653,10 @@ func props_schatten() -> void:
 
 ## Teile, die erst nach (oder nur vor) einem Rätsel zu sehen sind („nach: R8“, „vor: R7“).
 var _bedingte_teile: Array = []
+## Klickflächen mit demselben Zustand wie das Bild (Layout „nach:“/„vor:“ am Hotspot, Review 20.11.,
+## W3-R03-01): Kaffeepfütze erst mit Kaffee am Boden, Datenanschluss erst bei offener Panzertür.
+## Rätsel-ID oder Schalter, auch „A+B“ und „A|B“ wie bei hintergrund_nach.
+var _bedingte_hotspots: Array = []
 ## Zweite Fassung des Hintergrunds nach einem Rätsel: Layout „hintergrund_nach: {R12: res://…}“
 ## (Smaugis Kammer aufgeräumt, Turmkeller mit geschlossener Tür). Statt einer Rätsel-ID geht auch
 ## ein Schalter (W3_SCHNEE) und mit „+“ mehreres zugleich (R13+W3_SCHNEE); die letzte zutreffende
@@ -678,9 +688,15 @@ func _bedingte_anpassen() -> void:
 		var bg = get_node("Props/Background")
 		if bg.texture == null or bg.texture.resource_path != soll:
 			bg.texture = load(soll)
+	for b in _bedingte_hotspots:
+		if is_instance_valid(b[0]):
+			var sichtbar: bool = (b[1].is_empty() or _bedingung_erfuellt(b[1])) and (b[2].is_empty() or not _bedingung_erfuellt(b[2]))
+			if b[0].visible != sichtbar:
+				b[0].visible = sichtbar
 	for b in _bedingte_teile:
 		if is_instance_valid(b[0]):
-			b[0].visible = (b[1].is_empty() or Zustand.geloest(b[1])) and (b[2].is_empty() or not Zustand.geloest(b[2]))
+			# Rätsel-ID oder Schalter wie bei den Klickflächen (Nachttisch bei Tag und Nacht, W3_NACHT)
+			b[0].visible = (b[1].is_empty() or _bedingung_erfuellt(b[1])) and (b[2].is_empty() or not _bedingung_erfuellt(b[2]))
 
 
 ## Lebendiger Hintergrund (P16): Vögel, Windstöße usw., wenn der Bauplan „ambiente“ hat.

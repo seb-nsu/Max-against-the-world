@@ -3,9 +3,9 @@
 [ext_resource type="Script" uid="uid://bmshnb1ogdy08" path="res://game/rooms/unterstadt_strasse/room_unterstadt_strasse.gd" id="1_46qk1"]
 [ext_resource type="PackedScene" uid="uid://cvyl3wbnogxju" path="res://game/rooms/unterstadt_strasse/walkable_areas/boden/walkable_area_boden.tscn" id="2_cn1vk"]
 [ext_resource type="PackedScene" uid="uid://dmujor5s3acwp" path="res://game/rooms/unterstadt_strasse/props/background/prop_background.tscn" id="3_bwcnd"]
-[ext_resource type="Texture2D" uid="uid://clryuwm2nvcwn" path="res://grafik/hintergruende/w3_bg_unterstadt_strasse_v01.png" id="4_cn1vk"]
+[ext_resource type="Texture2D" uid="uid://c8gepgsijgei" path="res://grafik/hintergruende/w3_bg_unterstadt_strasse_v02.png" id="4_cn1vk"]
 [ext_resource type="PackedScene" uid="uid://banxspvpwoaop" path="res://game/rooms/unterstadt_strasse/props/telefonbuchseite/prop_telefonbuchseite.tscn" id="5_4f5jq"]
-[ext_resource type="Texture2D" uid="uid://deodc13g244l4" path="res://grafik/platzhalter/prop_telefonbuchseite.png" id="6_le1lh"]
+[ext_resource type="Texture2D" uid="uid://dx6wid4x51rhg" path="res://grafik/props/telefonbuchseite.png" id="6_cn1vk"]
 [ext_resource type="PackedScene" uid="uid://dl0jliai4s7ji" path="res://game/rooms/unterstadt_strasse/hotspots/nudelbude/hotspot_nudelbude.tscn" id="7_8iqpg"]
 [ext_resource type="PackedScene" uid="uid://c23lcwpg6khgr" path="res://game/rooms/unterstadt_strasse/hotspots/telefonzelle/hotspot_telefonzelle.tscn" id="8_32me3"]
 [ext_resource type="PackedScene" uid="uid://bt1nulp085ei" path="res://game/rooms/unterstadt_strasse/hotspots/telefonbuch_in_der_zelle/hotspot_telefonbuch_in_der_zelle.tscn" id="9_md4uo"]
@@ -47,134 +47,134 @@ texture = ExtResource("4_cn1vk")
 description = "UI_RAUM_UNTERSTADT_STRASSE"
 
 [node name="Telefonbuchseite" parent="Props" unique_id=831596464 instance=ExtResource("5_4f5jq")]
-position = Vector2(381, 198)
-texture = ExtResource("6_le1lh")
+position = Vector2(485, 190)
+texture = ExtResource("6_cn1vk")
 description = "UI_OBJ_TELEFONBUCHSEITE"
 baseline = 6
-walk_to_point = Vector2(17, 102)
+walk_to_point = Vector2(15, 116)
 interaction_polygon = PackedVector2Array(-9, -6, 9, -6, 9, 6, -9, 6)
 
 [node name="Hotspots" type="Node2D" parent="." unique_id=119001925]
 
 [node name="Nudelbude" parent="Hotspots" unique_id=1749237561 instance=ExtResource("7_8iqpg")]
-position = Vector2(114, 186)
+position = Vector2(185, 191)
 description = "UI_OBJ_NUDELBUDE"
-baseline = 86
-walk_to_point = Vector2(6, 116)
-interaction_polygon = PackedVector2Array(-86, -86, 86, -86, 86, 86, -86, 86)
+baseline = 105
+walk_to_point = Vector2(15, 129)
+interaction_polygon = PackedVector2Array(-145, -105, 145, -105, 145, 105, -145, 105)
 
 [node name="Telefonzelle" parent="Hotspots" unique_id=1563726528 instance=ExtResource("8_32me3")]
-position = Vector2(397, 197)
+position = Vector2(500, 192.5)
 description = "UI_OBJ_TELEFONZELLE"
-baseline = 85
-walk_to_point = Vector2(1, 103)
-interaction_polygon = PackedVector2Array(-45, -85, 45, -85, 45, 85, -45, 85)
+baseline = 100
+walk_to_point = Vector2(0, 113.5)
+interaction_polygon = PackedVector2Array(-50, -100.5, 50, -100.5, 50, 100.5, -50, 100.5)
 
 [node name="TelefonbuchInDerZelle" parent="Hotspots" unique_id=103867590 instance=ExtResource("9_md4uo")]
-position = Vector2(381, 200)
+position = Vector2(483, 186)
 description = "UI_OBJ_TELEFONBUCH_IN_DER_ZELLE"
-baseline = 14
-walk_to_point = Vector2(17, 100)
-interaction_polygon = PackedVector2Array(-23, -14, 23, -14, 23, 14, -23, 14)
+baseline = 16
+walk_to_point = Vector2(17, 120)
+interaction_polygon = PackedVector2Array(-17, -16, 17, -16, 17, 16, -17, 16)
 
 [node name="Vordach" parent="Hotspots" unique_id=633887438 instance=ExtResource("10_xhpm4")]
-position = Vector2(855, 136)
+position = Vector2(822.5, 124)
 description = "UI_OBJ_VORDACH"
-baseline = 36
-walk_to_point = Vector2(-5, 166)
-interaction_polygon = PackedVector2Array(-80, -36, 80, -36, 80, 36, -80, 36)
+baseline = 26
+walk_to_point = Vector2(-46.5, 180)
+interaction_polygon = PackedVector2Array(-82.5, -26, 82.5, -26, 82.5, 26, -82.5, 26)
 
 [node name="NeonPizzaPlakat" parent="Hotspots" unique_id=686557563 instance=ExtResource("11_kcbhs")]
-position = Vector2(860, 49)
+position = Vector2(827.5, 55)
 description = "UI_OBJ_NEON_PIZZA_PLAKAT"
-baseline = 49
-walk_to_point = Vector2(0, 253)
-interaction_polygon = PackedVector2Array(-70, -49, 70, -49, 70, 49, -70, 49)
+baseline = 31
+walk_to_point = Vector2(-51.5, 249)
+interaction_polygon = PackedVector2Array(-72.5, -31, 72.5, -31, 72.5, 31, -72.5, 31)
 
 [node name="OrigamiEinhorn" parent="Hotspots" unique_id=144899073 instance=ExtResource("12_dniaa")]
-position = Vector2(533, 310)
+position = Vector2(382, 336)
 description = "UI_OBJ_ORIGAMI_EINHORN"
-baseline = 22
-walk_to_point = Vector2(-63, 8)
-interaction_polygon = PackedVector2Array(-33, -22, 33, -22, 33, 22, -33, 22)
+baseline = 10
+walk_to_point = Vector2(-37, 0)
+interaction_polygon = PackedVector2Array(-16, -10, 16, -10, 16, 10, -16, 10)
 
 [node name="Pfuetzen" parent="Hotspots" unique_id=1207024256 instance=ExtResource("13_pbvm8")]
-position = Vector2(1205, 339)
+position = Vector2(1196, 324)
 description = "UI_OBJ_PFUETZEN"
-baseline = 21
-walk_to_point = Vector2(-85, -17)
-interaction_polygon = PackedVector2Array(-75, -21, 75, -21, 75, 21, -75, 21)
+baseline = 20
+walk_to_point = Vector2(-86, 0)
+interaction_polygon = PackedVector2Array(-76, -20, 76, -20, 76, 20, -76, 20)
 
 [node name="HimmelMitFliegendenAutos" parent="Hotspots" unique_id=196927587 instance=ExtResource("14_q1jtn")]
-position = Vector2(335, 50)
+position = Vector2(489, 57)
 description = "UI_OBJ_HIMMEL_MIT_FLIEGENDEN_AUTOS"
-baseline = 50
-walk_to_point = Vector2(-5, 250)
-interaction_polygon = PackedVector2Array(-85, -50, 85, -50, 85, 50, -85, 50)
+baseline = 33
+walk_to_point = Vector2(71, 253)
+interaction_polygon = PackedVector2Array(-103, -33, 103, -33, 103, 33, -103, 33)
 
 [node name="Dampfgitter" parent="Hotspots" unique_id=1716115174 instance=ExtResource("15_hmoao")]
-position = Vector2(1047, 305)
+position = Vector2(563, 324)
 description = "UI_OBJ_DAMPFGITTER"
-baseline = 13
-walk_to_point = Vector2(-2, 21)
-interaction_polygon = PackedVector2Array(-49, -13, 49, -13, 49, 13, -49, 13)
+baseline = 10
+walk_to_point = Vector2(-3, 12)
+interaction_polygon = PackedVector2Array(-48, -10, 48, -10, 48, 10, -48, 10)
 
 [node name="AusgangApothekengasse" parent="Hotspots" unique_id=2071626766 instance=ExtResource("16_awcax")]
-position = Vector2(1007, 209)
+position = Vector2(952.5, 175)
 description = "UI_RAUM_APOTHEKENGASSE"
-baseline = 74
-walk_to_point = Vector2(1, 79)
+baseline = 115
+walk_to_point = Vector2(4.5, 95)
 cursor = 9
-interaction_polygon = PackedVector2Array(-35, -74, 35, -74, 35, 74, -35, 74)
+interaction_polygon = PackedVector2Array(-47.5, -115, 47.5, -115, 47.5, 115, -47.5, 115)
 
 [node name="AusgangLaboreingang" parent="Hotspots" unique_id=412077471 instance=ExtResource("17_ox08u")]
-position = Vector2(1230, 220)
+position = Vector2(1161, 198)
 description = "UI_RAUM_LABOREINGANG"
-baseline = 80
-walk_to_point = Vector2(28, 102)
+baseline = 98
+walk_to_point = Vector2(19, 108)
 cursor = 9
-interaction_polygon = PackedVector2Array(-50, -80, 50, -80, 50, 80, -50, 80)
+interaction_polygon = PackedVector2Array(-111, -98, 111, -98, 111, 98, -111, 98)
 
 [node name="AusgangWiderstandsbasis" parent="Hotspots" unique_id=1771101895 instance=ExtResource("18_ygnuq")]
-position = Vector2(613, 227)
+position = Vector2(652.5, 225)
 description = "UI_RAUM_WIDERSTANDSBASIS"
-baseline = 39
-walk_to_point = Vector2(-1, 65)
+baseline = 43
+walk_to_point = Vector2(-0.5, 63)
 cursor = 9
-interaction_polygon = PackedVector2Array(-27, -39, 27, -39, 27, 39, -27, 39)
+interaction_polygon = PackedVector2Array(-47.5, -43, 47.5, -43, 47.5, 43, -47.5, 43)
 
 [node name="Regions" type="Node2D" parent="." unique_id=59842487]
 
 [node name="Markers" type="Node2D" parent="." unique_id=518921881]
 
 [node name="Start" parent="Markers" unique_id=1992931261 instance=ExtResource("19_dmuaf")]
-position = Vector2(640, 320)
+position = Vector2(640, 330)
 
 [node name="VonApothekengasse" parent="Markers" unique_id=1698733634 instance=ExtResource("20_e21hq")]
-position = Vector2(1008, 300)
+position = Vector2(957, 300)
 
 [node name="VonLaboreingang" parent="Markers" unique_id=1799372312 instance=ExtResource("21_6ov06")]
-position = Vector2(1235, 325)
+position = Vector2(1160, 316)
 
 [node name="VonWiderstandsbasis" parent="Markers" unique_id=12297098 instance=ExtResource("22_o343o")]
-position = Vector2(612, 298)
+position = Vector2(652, 296)
 
 [node name="Characters" type="Node2D" parent="." unique_id=1004855085]
 
 [node name="CharacterMorphaeus *" parent="Characters" unique_id=327095610 instance=ExtResource("23_1w8xu")]
-position = Vector2(945, 300)
+position = Vector2(1018, 296)
 
 [node name="CharacterDeckert *" parent="Characters" unique_id=1552755411 instance=ExtResource("24_vjb3x")]
-position = Vector2(850, 300)
+position = Vector2(822, 290)
 
 [node name="CharacterHerrVier *" parent="Characters" unique_id=1125115703 instance=ExtResource("25_tf4qj")]
-position = Vector2(104, 266)
+position = Vector2(246, 284)
 
 [node name="CharacterWeinenderMann *" parent="Characters" unique_id=463555414 instance=ExtResource("26_rjs58")]
-position = Vector2(152, 278)
+position = Vector2(262, 302)
 
 [node name="CharacterFrauRegenschirm *" parent="Characters" unique_id=629299622 instance=ExtResource("27_3qknm")]
-position = Vector2(700, 300)
+position = Vector2(880, 338)
 
 [node name="CharacterStrassenmusikerW3 *" parent="Characters" unique_id=1924275449 instance=ExtResource("29_bwcnd")]
-position = Vector2(492, 292)
+position = Vector2(760, 292)

@@ -49,3 +49,10 @@ Korrekturen 20.11., Teil 2 (Review W3-15, W3-16, W3-NS-01, W3-NS-02):
   `pixel_gehen.png/.json` in den Bewegungsordner, `figuren_einbau.py … pixel` (der Trab wird nicht verkleinert).
 - `effekte_auto_takt.py` füllt beim Federn die frei werdende Zeile (Vorlage `effekte\frei\W3-B54_auto_seite.png`);
   das Ergebnis `W3-B54_auto_im_takt.png` kommt unverändert nach `game/grafik/ambiente/w3_auto_im_takt.png`.
+
+Zweite Fassung der Räume (AP-09, 21.11.): `raeume_pixelieren.py <raeume_v2> [raum …] [--masken <ordner>]` rechnet
+Sebastians 24 JPEG-Originale (Median 3×3 gegen JPEG-Ränder, Palette je Raum, Zustände nur an der Stelle) auf
+`w3_bg_<raum>[_<zustand>]_v02.png` und macht die Nacharbeit aus dem Prüfbericht im Skript (Einhorn, Türrahmen, Tasse,
+Kaffeespur, Schnee, drittes Glas, Krakel, roter Laser, Weckeranzeige; Tresen und Nachttisch Tag/Nacht als
+Vordergrundteile `game/grafik/props/w3_*_v02.png`). Danach `effekte_raum_v02.py` (18 raumabhängige Effekte neu auf den
+_v02-Bildern, Layout-Zeilen mit Fußpunkt) und `code_sicht.py` (liest jetzt _v02).

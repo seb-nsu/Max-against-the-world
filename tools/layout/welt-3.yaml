@@ -9,6 +9,15 @@
 # vor der Aktion läuft. Sonderschlüssel wie in welt-1.yaml; dazu je Raum:
 #   wechsel   Ziele, die nur ein Ebenenwechsel verbindet (Wecker, Terminal, Kapsel,
 #             Kalles Leitung; kein eigener Ausgang, skripte/welt_3.gd)
+#   hotspots.<id>.nach / .vor   Klickfläche nur ab bzw. bis zu einem Rätsel oder Schalter
+#             (R13, W3_PANZERTUER_OFFEN, auch „A+B“, „A|B“); dieselbe Bedingung wie das Bild,
+#             das den Zustand zeigt (Review 20.11., W3-R03-01). Wirkt im Spiel über CQRaum.
+#             Vordergrundteile kennen dieselben Bedingungen (Nachttisch bei Tag und Nacht).
+#
+# Zweite Fassung der Hintergründe (AP-09, 21.11.): Bilder _v02 aus tools/grafik_w3/raeume_pixelieren.py,
+# raumabhängige Effekte _v02 aus tools/grafik_w3/effekte_raum_v02.py. Größen wie im Rohbau
+# (docs/grafik/skizzen/welt-3/rohbau: Max 1,75 m = 183 px bei y 347, 157 px bei y 312, Horizont y 100):
+# skala 1.0 vorn (y 356), tiefe = Größe an der Hinterkante des Laufbereichs; nur die Kühlung bleibt bei 0,8.
 
 _alias:
   glueckskeks: rezeptkarte@glueckskeks
@@ -18,424 +27,449 @@ _figur_alias: {detektiv_deckert: deckert, morphaeus_in_der_gasse: morphaeus, oma
 unterstadt_strasse:
   alias: {apothekengasse: ausgang_apothekengasse, durchgang_zum_laboreingang: ausgang_laboreingang, detektiv_deckert: deckert, herrn_vier: herr_vier, weinenden_mann: weinender_mann, nudeltopf: nudelbude, pizza_plakat: neon_pizza_plakat}
   farbe: '#3b3f58'
-  hintergrund: res://grafik/hintergruende/w3_bg_unterstadt_strasse_v01.png   # W3-R01, Panorama
-  tiefe: 0.85
-  skala: 0.8
+  hintergrund: res://grafik/hintergruende/w3_bg_unterstadt_strasse_v02.png   # W3-R01, Panorama (Einhorn handgroß)
+  licht: "#c8c4dc"            # Tönung der Figuren in der nassen Neon-Nacht
+  skala: 1.0
+  tiefe: 0.63                 # Hinterkante y 262 in der Gassenmündung; am Gehweg (y 292) etwa 140 px
   effekte:
-    - {art: bild, bild: res://grafik/ambiente/w3_nudeltopf_dampf.png, bilder: 6, pos: [76, 202], fps: 8}   # W3-B17 Nudeltopf
-    - {art: bild, bild: res://grafik/ambiente/w3_neonschild.png, bilder: 6, pos: [288, 196], fps: 9}   # W3-B18 Neon flackert
-    - {art: bild, bild: res://grafik/ambiente/w3_fliegendes_auto.png, bilder: 6, weg: [[-30, 52], [1310, 46]], tempo: 70, zurueck: true, fps: 10, pause: [6, 18]}   # W3-B16 obere Spur
-    - {art: bild, bild: res://grafik/ambiente/w3_fliegendes_auto.png, bilder: 6, weg: [[1310, 92], [-30, 98]], tempo: 50, zurueck: true, fps: 10, pause: [10, 25]}   # W3-B16 untere Spur
+    - {art: bild, bild: res://grafik/ambiente/w3_nudeltopf_dampf.png, bilder: 6, pos: [172, 180], fps: 8}   # W3-B17 Nudeltopf (frei gezeichnet, kein Bildausschnitt)
+    - {art: flackern, pos: [504, 32], r: [18, 30], farbe: "#ff5ce0"}   # W3-B18 senkrechtes Neonschild flackert
+    - {art: flackern, pos: [828, 42], r: [70, 40], farbe: "#ff4fd8"}   # Pizza-Neon
+    - {art: bild, bild: res://grafik/ambiente/w3_fliegendes_auto.png, bilder: 6, weg: [[392, 40], [588, 34]], tempo: 50, zurueck: true, ausblenden: 12, fps: 10, pause: [6, 18]}   # W3-B16 in der Himmelslücke über der Zelle
+    - {art: bild, bild: res://grafik/ambiente/w3_fliegendes_auto.png, bilder: 6, weg: [[588, 70], [392, 76]], tempo: 40, zurueck: true, ausblenden: 12, fps: 10, pause: [10, 25]}
     - {art: bild, bild: res://grafik/ambiente/w3_regen.png, bilder: 4, pos: [320, 360], fps: 14, z: 50}   # W3-B13 Regen, linke Hälfte
     - {art: bild, bild: res://grafik/ambiente/w3_regen.png, bilder: 4, pos: [960, 360], fps: 14, z: 50}   # W3-B13 Regen, rechte Hälfte
-    - {art: dampf, pos: [1045, 300], breite: 60}           # Dampfgitter
-    - {art: flackern, pos: [172, 165], r: [20, 26], farbe: "#ff4fa0"}   # rote Papierlaterne
-  laufbereich: [[8, 288], [585, 288], [600, 280], [640, 280], [965, 286], [990, 280], [1040, 280], [1150, 292], [1272, 300], [1272, 356], [8, 356]]
+    - {art: dampf, pos: [562, 324], breite: 80}           # Dampfgitter
+    - {art: flackern, pos: [266, 128], r: [12, 16], farbe: "#ff4fa0"}   # rote Papierlaterne
+  laufbereich: [[8, 302], [330, 302], [340, 292], [600, 292], [610, 280], [700, 280], [710, 292], [915, 292], [930, 262], [985, 262], [1000, 292], [1060, 296], [1200, 300], [1272, 300], [1272, 356], [8, 356]]
   marker:
-    start: [640, 320]
-    von_apothekengasse: [1008, 300]
-    von_laboreingang: [1235, 325]
-    von_widerstandsbasis: [612, 298]
+    start: [640, 330]
+    von_apothekengasse: [957, 300]
+    von_laboreingang: [1160, 316]
+    von_widerstandsbasis: [652, 296]
   figuren:
-    herr_vier: [104, 266]            # hinter dem Tresen der Nudelbude (Tresen als Vordergrund)
-    weinender_mann: [152, 278]       # auf dem rechten Hocker vor seiner Suppe
-    strassenmusiker_w3: [492, 292]      # freier Gehweg rechts der Telefonzelle
-    frau_regenschirm: [700, 300]
-    deckert: [850, 300]              # unter dem Vordach (trockener Streifen)
-    morphaeus: [945, 300]            # an der Gassenmündung zur Apothekengasse
+    herr_vier: [246, 284]            # hinter dem Tresen (Tresen samt Hockern als Vordergrund, baseline 299)
+    weinender_mann: [262, 302]       # auf dem rechten Hocker vor seiner Suppe
+    strassenmusiker_w3: [760, 292]   # Rohbau: freier Platz vor dem Pizza-Laden
+    frau_regenschirm: [880, 338]     # vorn auf der Straße, nicht vor der Luke (W3-14)
+    deckert: [822, 290]              # unter dem Vordach (trockener Streifen)
+    morphaeus: [1018, 296]           # rechts neben der Gassenmündung zur Apothekengasse
   vordergrund:
-    tresen: {bild: res://grafik/props/w3_tresen_nudelbude.png, rect: [28, 214, 172, 62], baseline: 276}
+    tresen: {bild: res://grafik/props/w3_tresen_nudelbude_v02.png, rect: [72, 176, 251, 123], baseline: 299}
   hotspots:
-    nudelbude: {rect: [28, 100, 172, 172], gehe: [120, 302]}
-    himmel_mit_fliegenden_autos: {rect: [250, 0, 170, 100], gehe: [330, 300]}
-    telefonzelle: {rect: [352, 112, 90, 170], gehe: [398, 300]}
-    telefonbuch_in_der_zelle: {rect: [358, 186, 46, 28], gehe: [398, 300]}
-    neon_pizza_plakat: {rect: [790, 0, 140, 98], gehe: [860, 302]}
-    vordach: {rect: [775, 100, 160, 72], gehe: [850, 302]}
-    pfuetzen: {rect: [1130, 318, 150, 42], gehe: [1120, 322], boden: true}
-    dampfgitter: {rect: [998, 292, 98, 26], gehe: [1045, 326], boden: true}
-    origami_einhorn: {rect: [500, 288, 66, 44], gehe: [470, 318], boden: true}
+    nudelbude: {rect: [40, 86, 290, 210], gehe: [200, 320]}   # vor den Hockern, nicht im weinenden Mann (W3-14)
+    himmel_mit_fliegenden_autos: {rect: [386, 24, 206, 66], gehe: [560, 310]}
+    telefonzelle: {rect: [450, 92, 100, 201], gehe: [500, 306]}
+    telefonbuch_in_der_zelle: {rect: [466, 170, 34, 32], gehe: [500, 306]}
+    neon_pizza_plakat: {rect: [755, 24, 145, 62], gehe: [776, 304]}   # neben Deckert (822), nicht in ihm (W3-14)
+    vordach: {rect: [740, 98, 165, 52], gehe: [776, 304]}
+    pfuetzen: {rect: [1120, 304, 152, 40], gehe: [1110, 324], boden: true}
+    dampfgitter: {rect: [515, 314, 96, 20], gehe: [560, 336], boden: true}
+    origami_einhorn: {rect: [366, 326, 32, 20], gehe: [345, 336], boden: true}
   props:
-    telefonbuchseite: {rect: [372, 192, 18, 12], gehe: [398, 300]}
+    telefonbuchseite: {rect: [476, 184, 18, 12], gehe: [500, 306]}
   ausgaenge:
-    widerstandsbasis: {rect: [586, 188, 54, 78], gehe: [612, 292]}
-    apothekengasse: {rect: [972, 135, 70, 148], gehe: [1008, 288]}
-    laboreingang: {rect: [1180, 140, 100, 160], gehe: [1258, 322]}
+    widerstandsbasis: {rect: [605, 182, 95, 86], gehe: [652, 288]}
+    apothekengasse: {rect: [905, 60, 95, 230], gehe: [957, 270]}
+    laboreingang: {rect: [1050, 100, 222, 196], gehe: [1180, 306]}
 apothekengasse:
   alias: {morphaeus_in_der_gasse: morphaeus}
   farbe: '#46405e'
-  hintergrund: res://grafik/hintergruende/w3_bg_apothekengasse_v01.png   # W3-R02, Panorama
+  hintergrund: res://grafik/hintergruende/w3_bg_apothekengasse_v02.png   # W3-R02, Panorama
   hintergrund_nach:
-    R3a: res://grafik/hintergruende/w3_bg_apothekengasse_faecher_offen_v01.png   # W3-R02b, Fächer offen
-  tiefe: 0.85
-  skala: 0.8
+    R3a: res://grafik/hintergruende/w3_bg_apothekengasse_faecher_offen_v02.png   # W3-R02b, Fächer offen
+  licht: "#c4c8dc"
+  skala: 1.0
+  tiefe: 0.78                 # Hinterkante y 300 an der Wand
   effekte:
-    - {art: flackern, pos: [925, 70], r: [26, 30], farbe: "#7fe8ff"}   # Wandlampe
-    - {art: dampf, pos: [960, 285], breite: 50}                      # Gully vor der Ziegelwand
-    - {art: bild, bild: res://grafik/ambiente/w3_automat_scannt.png, bilder: 6, pos: [647, 156], fps: 9}   # W3-B23 Linse scannt
-    - {art: bild, bild: res://grafik/ambiente/w3_ratte.png, bilder: 6, weg: [[1040, 292], [1180, 287]], tempo: 60, ausblenden: 10, fps: 11, pause: [15, 40]}   # W3-B22 Ratte ins Loch am Rohr
+    - {art: flackern, pos: [900, 86], r: [24, 28], farbe: "#7fe8ff"}   # Wandlampe
+    - {art: dampf, pos: [830, 296], breite: 70}                      # Bodennebel vor der Ziegelwand
+    - {art: bild, bild: res://grafik/ambiente/w3_automat_scannt_v02.png, bilder: 6, pos: [640, 185], fps: 9}   # W3-B23 Linse scannt
+    - {art: bild, bild: res://grafik/ambiente/w3_ratte.png, bilder: 6, weg: [[1000, 298], [1143, 288]], tempo: 60, ausblenden: 10, fps: 11, pause: [15, 40]}   # W3-B22 Ratte ins Loch neben dem Container
     - {art: bild, bild: res://grafik/ambiente/w3_regen.png, bilder: 4, pos: [320, 360], fps: 14, z: 50}   # W3-B13 Regen
     - {art: bild, bild: res://grafik/ambiente/w3_regen.png, bilder: 4, pos: [960, 360], fps: 14, z: 50}
-  laufbereich: [[8, 300], [1180, 296], [1180, 356], [8, 356]]
+  laufbereich: [[8, 300], [1272, 300], [1272, 356], [8, 356]]
   marker:
-    start: [640, 322]
-    von_unterstadt_strasse: [140, 322]
+    start: [640, 326]
+    von_unterstadt_strasse: [165, 312]
   figuren:
-    morphaeus: [470, 306]
-    pastillenautomat: [645, 175]     # Stimme aus der Linse (unsichtbar)
+    morphaeus: [424, 312]            # Rohbau: rechts neben den Kisten, Automat frei
+    pastillenautomat: [640, 150]     # Stimme aus der Linse (unsichtbar)
   hotspots:
-    kisten: {rect: [212, 110, 200, 186], gehe: [310, 312]}
-    tropfendes_rohr: {rect: [458, 0, 40, 170], gehe: [478, 308]}
-    automat: {rect: [545, 0, 200, 292], gehe: [645, 316]}
-    wandlampe: {rect: [900, 38, 55, 75], gehe: [925, 308]}
+    kisten: {rect: [243, 190, 120, 108], gehe: [300, 318]}
+    tropfendes_rohr: {rect: [360, 24, 26, 270], gehe: [378, 322]}   # Rechtecke unter y 24 (Leiste oben, W3-19)
+    automat: {rect: [572, 56, 136, 242], gehe: [640, 320]}   # unter den Porträts, wenn die Kamera rechts steht (W3-19)
+    wandlampe: {rect: [886, 64, 30, 50], gehe: [900, 316]}
   ausgaenge:
-    unterstadt_strasse: {rect: [60, 10, 140, 286], gehe: [120, 322]}
+    unterstadt_strasse: {rect: [112, 76, 102, 212], gehe: [160, 304]}
 widerstandsbasis:
-  alias: {fenster_als_max: fenster, stromkasten_als_max: stromkasten, patch_panel_als_max: patch_panel, terminal_mit_ziel_labor: terminal, plakat_m_u_t_t_i: plakat, max_in_der_kapsel: max_kapsel}
+  alias: {fenster_als_max: fenster, stromkasten_als_max: stromkasten, patch_panel_als_max: patch_panel, terminal_mit_ziel_labor: terminal, plakat_m_u_t_t_i: plakat, max_in_der_kapsel: max_kapsel, rebellen: rebellin}   # „Ansehen: Rebellen“ an der Rebellin (W3-R03-03)
   farbe: '#4a4a40'
-  hintergrund: res://grafik/hintergruende/w3_bg_widerstandsbasis_v01.png   # W3-R03, Panorama
+  hintergrund: res://grafik/hintergruende/w3_bg_widerstandsbasis_v02.png   # W3-R03, Panorama (Türrahmen übermalt, Tasse am Rand)
   hintergrund_nach:                # Reihenfolge zählt: die letzte zutreffende Fassung gilt
-    W3_SCHNEE: res://grafik/hintergruende/w3_bg_widerstandsbasis_schnee_v01.png          # W3-R03b, Fenster offen
-    R13: res://grafik/hintergruende/w3_bg_widerstandsbasis_kaffee_v01.png                # W3-R03c, Kaffee am Boden
-    R13+W3_SCHNEE: res://grafik/hintergruende/w3_bg_widerstandsbasis_schnee_kaffee_v01.png
-  tiefe: 0.85
-  skala: 0.8
+    W3_SCHNEE: res://grafik/hintergruende/w3_bg_widerstandsbasis_schnee_v02.png          # W3-R03b, Fenster offen
+    R13: res://grafik/hintergruende/w3_bg_widerstandsbasis_kaffee_v02.png                # Kaffee am Boden (gemalt)
+    R13+W3_SCHNEE: res://grafik/hintergruende/w3_bg_widerstandsbasis_schnee_kaffee_v02.png
+  licht: "#ccd0e0"
+  skala: 1.0
+  tiefe: 0.80                 # Hinterkante y 305 vor Kapseln und Pult
   effekte:
-    - {art: flackern, pos: [905, 78], r: [30, 30], farbe: "#ffe680"}   # gelbe Lampe auf dem Großrechner
-    - {art: flackern, pos: [578, 182], r: [26, 18], farbe: "#7fff9f"}  # grüner Bildschirm
-    - {art: bild, bild: res://grafik/ambiente/w3_grossrechner.png, bilder: 4, pos: [900, 154], fps: 6}   # W3-B24 Bandspulen
+    - {art: flackern, pos: [983, 201], r: [14, 14], farbe: "#ffe680"}   # gelbe Lampe am Großrechner
+    - {art: flackern, pos: [678, 190], r: [24, 18], farbe: "#7fff9f"}  # grüner Bildschirm
+    - {art: bild, bild: res://grafik/ambiente/w3_grossrechner_v02.png, bilder: 4, pos: [961, 212], fps: 6}   # W3-B24 Bandspulen
   wechsel: [stadtstrasse, testkammer_1]
-  laufbereich: [[30, 330], [100, 304], [470, 300], [1095, 306], [1120, 330], [1272, 335], [1272, 356], [30, 356]]
+  laufbereich: [[60, 330], [105, 318], [230, 305], [985, 305], [990, 318], [1100, 318], [1110, 320], [1272, 322], [1272, 356], [30, 356]]
   marker:
-    start: [640, 330]
-    von_unterstadt_strasse: [95, 336]
-    von_kuehlung: [1180, 340]
-    von_stadtstrasse: [170, 326]
-    von_testkammer_1: [170, 326]
-    von_kapsel: [170, 326]
+    start: [640, 336]
+    von_unterstadt_strasse: [95, 338]
+    von_kuehlung: [1158, 330]
+    von_stadtstrasse: [277, 316]
+    von_testkammer_1: [277, 316]
+    von_kapsel: [277, 316]
   figuren:
-    rebellin: [380, 318]
-    rebell: [700, 320]
-    kalle: [815, 318]                # am Steuerpult
-    hausmeister: [610, 334]
-    opa: [1180, 330]                 # Hologramm aus Piepsi
-    piepsi: [1238, 334]              # die leere Ecke rechts
+    rebellin: [414, 320]             # Rohbau: vor den Kapseln
+    rebell: [962, 336]               # vor dem Großrechner; Handtuch und Tisch mit Tasse bleiben frei, nicht vor dem Stromkasten (W3-R03-02)
+    kalle: [900, 312]                # am Steuerpult
+    hausmeister: [600, 338]
+    opa: [1180, 334]                 # Hologramm aus Piepsi
+    piepsi: [1245, 336]              # die leere Ecke rechts
   hotspots:
-    kapseln: {rect: [225, 182, 225, 115], gehe: [330, 322]}
-    max_kapsel: {rect: [112, 182, 113, 115], gehe: [170, 326]}
-    fenster: {rect: [256, 4, 88, 70], gehe: [300, 322]}
-    plakat: {rect: [640, 20, 80, 120], gehe: [680, 322]}
-    patch_panel: {rect: [443, 92, 70, 116], gehe: [478, 322]}
-    terminal: {rect: [500, 155, 140, 88], gehe: [565, 322]}
-    stromkasten: {rect: [650, 150, 80, 72], gehe: [690, 322]}
-    steuerpult: {rect: [745, 155, 120, 135], gehe: [800, 322]}
-    grossrechner: {rect: [865, 60, 90, 235], gehe: [905, 322]}
-    tisch_mit_kalles_tasse: {rect: [950, 222, 140, 90], gehe: [1020, 322]}
-    handtuch: {rect: [1022, 112, 32, 95], gehe: [1038, 322]}
-    kalles_tasse: {rect: [1038, 208, 32, 30], gehe: [1050, 322]}
-    pizzakartons: {rect: [1095, 15, 95, 278], gehe: [1110, 324]}
-    rebellen: {rect: [340, 230, 400, 30], gehe: [540, 330]}
-    kaffeepfuetze: {rect: [760, 318, 470, 40], gehe: [900, 336], boden: true}
-    lueftungsschacht: {rect: [1122, 296, 120, 36], gehe: [1180, 340], boden: true}
+    kapseln: {rect: [315, 208, 233, 90], gehe: [460, 322]}
+    max_kapsel: {rect: [237, 208, 80, 90], gehe: [277, 322]}
+    fenster: {rect: [258, 24, 76, 60], gehe: [295, 322]}
+    plakat: {rect: [732, 52, 72, 80], gehe: [764, 322]}   # unter den Porträts (W3-19)
+    patch_panel: {rect: [476, 116, 78, 96], gehe: [515, 322]}
+    terminal: {rect: [645, 160, 66, 72], gehe: [690, 322]}
+    stromkasten: {rect: [736, 138, 58, 74], gehe: [764, 322]}
+    steuerpult: {rect: [806, 158, 102, 126], gehe: [852, 322]}   # neben Kalle (900), W3-14
+    grossrechner: {rect: [905, 108, 95, 176], gehe: [952, 322]}
+    tisch_mit_kalles_tasse: {rect: [988, 222, 114, 92], gehe: [1060, 330]}
+    handtuch: {rect: [1010, 120, 30, 88], gehe: [1025, 322]}
+    kalles_tasse: {rect: [1056, 216, 28, 26], gehe: [1068, 330], vor: R13}   # Tasse an der Tischkante; ab R13 liegt der Kaffee am Boden
+    pizzakartons: {rect: [1052, 90, 90, 200], gehe: [1110, 330]}
+    # Kaffeepfütze erst mit Kaffee am Boden (Bild ab R13) und auf der gemalten Spur (W3-R03-01)
+    kaffeepfuetze: {rect: [1044, 300, 236, 32], gehe: [1150, 338], boden: true, nach: R13}
+    # Schacht liegt innerhalb des Ausgangs Kühlung: Die kleinere Fläche gewinnt immer (W3-R03-04)
+    lueftungsschacht: {rect: [1100, 288, 115, 26], gehe: [1158, 330], boden: true}
   ausgaenge:
-    unterstadt_strasse: {rect: [12, 48, 92, 282], gehe: [80, 340]}
-    kuehlung: {rect: [1122, 296, 120, 36], gehe: [1180, 340], versteckt: true}   # nur Pixel, über den Lüftungsschacht
+    unterstadt_strasse: {rect: [10, 72, 92, 240], gehe: [80, 336]}
+    kuehlung: {rect: [1096, 284, 124, 34], gehe: [1158, 330], versteckt: true}   # nur Pixel, über den Lüftungsschacht
 kuehlung:
   farbe: '#3c4658'
-  hintergrund: res://grafik/hintergruende/w3_bg_kuehlung_v01.png   # W3-R04
+  hintergrund: res://grafik/hintergruende/w3_bg_kuehlung_v02.png   # W3-R04
   hintergrund_nach:
-    W3_EIMER_GEKIPPT: res://grafik/hintergruende/w3_bg_kuehlung_taut_v01.png   # W3-R04b
-  tiefe: 0.85
+    W3_EIMER_GEKIPPT: res://grafik/hintergruende/w3_bg_kuehlung_taut_v02.png   # W3-R04b
+  licht: "#c8d2e4"
+  skala: 0.8   # Entscheidung 21.11.: nur Pixel ist hier
+  tiefe: 0.8
   effekte:
-    - {art: flackern, pos: [416, 147], r: [8, 8], farbe: "#9fe8ff"}   # Statuslicht am Kühlgerät
-    - {art: bild, bild: res://grafik/ambiente/w3_ventilator.png, bilder: 4, pos: [413, 258], fps: 9}   # W3-B25 Ventilator
-  laufbereich: [[60, 284], [485, 282], [485, 308], [545, 312], [600, 338], [622, 356], [18, 356], [40, 330]]
+    - {art: flackern, pos: [249, 195], r: [6, 8], farbe: "#ff6080"}   # Statuslichter am Kühlgerät
+    - {art: flackern, pos: [389, 181], r: [6, 8], farbe: "#ff6080"}
+    - {art: bild, bild: res://grafik/ambiente/w3_ventilator_v02.png, bilder: 4, pos: [341, 293], fps: 9}   # W3-B25 Lüfter im Gitter
+  laufbereich: [[40, 300], [600, 300], [630, 356], [10, 356]]
   marker:
-    start: [320, 320]
-    von_widerstandsbasis: [120, 322]
+    start: [320, 330]
+    von_widerstandsbasis: [150, 320]
   hotspots:
-    wassereimer: {rect: [486, 248, 60, 60], gehe: [462, 304], name: Wassereimer}
+    wassereimer: {rect: [456, 268, 46, 46], gehe: [438, 322], name: Wassereimer}
   ausgaenge:
-    widerstandsbasis: {rect: [24, 205, 146, 130], gehe: [110, 322]}
+    widerstandsbasis: {rect: [90, 236, 100, 76], gehe: [140, 318]}
 laboreingang:
   alias: {geoeffnete_tuer: panzertuer}
   farbe: '#585858'
-  hintergrund: res://grafik/hintergruende/w3_bg_laboreingang_v01.png   # W3-R05
+  hintergrund: res://grafik/hintergruende/w3_bg_laboreingang_v02.png   # W3-R05
   hintergrund_nach:
-    W3_PANZERTUER_OFFEN: res://grafik/hintergruende/w3_bg_laboreingang_offen_v01.png   # W3-R05b
-  tiefe: 0.85
-  skala: 0.8
+    W3_PANZERTUER_OFFEN: res://grafik/hintergruende/w3_bg_laboreingang_offen_v02.png   # W3-R05b
+  licht: "#ccd0dc"
+  skala: 1.0
+  tiefe: 0.74                 # Hinterkante y 290 an den Warnstreifen
   effekte:
-    - {art: flackern, pos: [325, 70], r: [34, 22], farbe: "#e8f4ff"}   # Deckenlampe
-    - {art: bild, bild: res://grafik/ambiente/w3_kartenleser.png, bilder: 4, pos: [418, 202], fps: 3}   # W3-B40 Kartenleser blinkt
-  laufbereich: [[112, 272], [525, 262], [598, 300], [632, 356], [56, 356], [100, 300]]
+    - {art: flackern, pos: [324, 42], r: [30, 14], farbe: "#e8f4ff"}   # Deckenlampe
+    - {art: bild, bild: res://grafik/ambiente/w3_kartenleser_v02.png, bilder: 4, pos: [435, 192], fps: 3}   # W3-B40 Kartenleser blinkt
+  laufbereich: [[30, 300], [120, 290], [560, 292], [610, 320], [620, 356], [10, 356]]
   marker:
-    start: [320, 312]
-    von_unterstadt_strasse: [150, 300]
+    start: [330, 330]
+    von_unterstadt_strasse: [90, 312]
   figuren:
-    hausmeister: [470, 292]          # bewacht die Tür, rechts neben dem Kartenleser
-    kalle: [215, 312]
+    hausmeister: [236, 314]          # Rohbau: vor Pinnwand und Tür
+    kalle: [470, 320]                # rechts der Tür beim Kartenleser
   hotspots:
-    pinnwand: {rect: [0, 90, 98, 150], gehe: [110, 312]}
-    gang: {rect: [500, 60, 92, 200], gehe: [520, 285]}
-    panzertuer: {rect: [248, 108, 152, 140], gehe: [325, 290]}
-    datenanschluss: {rect: [270, 125, 90, 110], gehe: [325, 290]}
-    deckenlampe: {rect: [305, 45, 40, 40], gehe: [325, 290]}
-    warnstreifen: {rect: [180, 222, 300, 40], gehe: [300, 292]}
-    kartenleser: {rect: [405, 165, 26, 36], gehe: [415, 290]}
-    platz_des_hausmeisters: {rect: [440, 200, 60, 60], gehe: [455, 295]}
-    wischeimer: {rect: [38, 280, 75, 66], gehe: [130, 330]}
+    pinnwand: {rect: [164, 112, 80, 74], gehe: [196, 330]}
+    gang: {rect: [598, 30, 42, 280], gehe: [580, 326]}   # dunkler Gang rechts hinter dem Pfeiler
+    panzertuer: {rect: [243, 112, 170, 170], gehe: [327, 312]}
+    datenanschluss: {rect: [265, 125, 125, 140], gehe: [327, 312], nach: W3_PANZERTUER_OFFEN}   # erst hinter der offenen Tür (W3-R05-01)
+    deckenlampe: {rect: [296, 26, 56, 28], gehe: [327, 316]}
+    warnstreifen: {rect: [120, 276, 440, 18], gehe: [400, 318]}
+    kartenleser: {rect: [420, 156, 28, 38], gehe: [432, 312]}
+    platz_des_hausmeisters: {rect: [208, 282, 60, 30], gehe: [285, 320], boden: true}   # neben dem Hausmeister (236), W3-14
+    wischeimer: {rect: [138, 252, 80, 52], gehe: [186, 326]}
   ausgaenge:
-    unterstadt_strasse: {rect: [110, 92, 56, 178], gehe: [140, 290]}
+    unterstadt_strasse: {rect: [14, 62, 116, 218], gehe: [80, 304]}
 stadtstrasse:
   alias: {eingang_bueroturm: ausgang_buero_50, haus_der_orakel_oma: ausgang_kueche_orakel, haustuer: ausgang_kueche_orakel}
   farbe: '#7fa36a'
-  hintergrund: res://grafik/hintergruende/w3_bg_stadtstrasse_v01.png   # W3-R06, Panorama; vierte Wolke entfernt („dieselbe Wolke, dreimal“)
+  hintergrund: res://grafik/hintergruende/w3_bg_stadtstrasse_v02.png   # W3-R06, Panorama (Nachttisch als Vordergrundteil ausgeschnitten)
   hintergrund_nach:
-    W3_NACHT: res://grafik/hintergruende/w3_bg_stadtstrasse_nacht_v01.png   # W3-R06b, Pixel stellt den Strom der Kapsel kurz ab (welt_3.gd)
-  # Max schrumpft zur Glastür hin auf gut 100 px (Sebastian, 20.11.): vorn 0,8, an der Tür (y 304) 0,55
-  skala: 0.8
-  tiefe: 0.69
-  effekte:   # Platzierung aus W3-R06_platzierung.json
-    # Radiowecker: 5:59 blinkt, bis er klingelt (W3_WECKER_KLINGELT, welt_3.gd); Nacht nach Pixels Stromkasten (W3_NACHT)
-    - {art: bild, bild: res://grafik/ambiente/w3_radiowecker_559.png, bilder: 2, pos: [134, 298], fps: 2, sonst: W3_NACHT|W3_WECKER_KLINGELT}   # W3-B50
-    - {art: bild, bild: res://grafik/ambiente/w3_radiowecker_559_nacht.png, bilder: 2, pos: [134, 298], fps: 2, wenn: W3_NACHT, sonst: W3_WECKER_KLINGELT}
-    - {art: bild, bild: res://grafik/ambiente/w3_radiowecker_klingelt.png, bilder: 6, pos: [134, 298], fps: 11, wenn: W3_WECKER_KLINGELT, sonst: W3_NACHT}   # W3-B51 klingelt 6:00
-    - {art: bild, bild: res://grafik/ambiente/w3_radiowecker_klingelt_nacht.png, bilder: 6, pos: [134, 298], fps: 11, wenn: W3_WECKER_KLINGELT+W3_NACHT}
+    W3_NACHT: res://grafik/hintergruende/w3_bg_stadtstrasse_nacht_v02.png   # W3-R06b, eigenes Vollbild (Pixel stellt den Strom der Kapsel kurz ab)
+  # Max geht über den Zebrastreifen bis vor die Glastür (y 247): dort gut 100 px (Sebastian, 20.11.)
+  skala: 1.0
+  tiefe: 0.565
+  effekte:
+    # Radiowecker: 5:59 blinkt, bis er klingelt (W3_WECKER_KLINGELT, welt_3.gd); Nacht nach Pixels Stromkasten (W3_NACHT).
+    # baseline 342: über dem Nachttisch (Vordergrund, baseline 340/341)
+    - {art: bild, bild: res://grafik/ambiente/w3_radiowecker_559_v02.png, bilder: 2, pos: [182, 278], baseline: 342, fps: 2, sonst: W3_NACHT|W3_WECKER_KLINGELT}   # W3-B50
+    - {art: bild, bild: res://grafik/ambiente/w3_radiowecker_559_nacht_v02.png, bilder: 2, pos: [184, 279], baseline: 342, fps: 2, wenn: W3_NACHT, sonst: W3_WECKER_KLINGELT}
+    - {art: bild, bild: res://grafik/ambiente/w3_radiowecker_klingelt_v02.png, bilder: 6, pos: [182, 278], baseline: 342, fps: 11, wenn: W3_WECKER_KLINGELT, sonst: W3_NACHT}   # W3-B51 klingelt 6:00
+    - {art: bild, bild: res://grafik/ambiente/w3_radiowecker_klingelt_nacht_v02.png, bilder: 6, pos: [184, 279], baseline: 342, fps: 11, wenn: W3_WECKER_KLINGELT+W3_NACHT}
     # Sprechanlage der Glastür: läuft, solange die Tür spricht (nach Rätsel 5)
-    - {art: bild, bild: res://grafik/ambiente/w3_glastuer_redet.png, bilder: 4, pos: [1197, 265], fps: 8, spricht: TUR, sonst: W3_NACHT}   # W3-B34
-    - {art: bild, bild: res://grafik/ambiente/w3_glastuer_redet_nacht.png, bilder: 4, pos: [1197, 265], fps: 8, spricht: TUR, wenn: W3_NACHT}
-    - {art: bild, bild: res://grafik/ambiente/w3_auto_im_takt.png, bilder: 4, weg: [[-170, 304], [1290, 304]], tempo: 60, fps: 11, start: 1.0, pause: [0.5, 0.5]}   # W3-B54 Autos im Takt, drei Kopien
-    - {art: bild, bild: res://grafik/ambiente/w3_auto_im_takt.png, bilder: 4, weg: [[-170, 304], [1290, 304]], tempo: 60, fps: 11, start: 8.33, pause: [0.5, 0.5]}
-    - {art: bild, bild: res://grafik/ambiente/w3_auto_im_takt.png, bilder: 4, weg: [[-170, 304], [1290, 304]], tempo: 60, fps: 11, start: 15.67, pause: [0.5, 0.5]}
-    - {art: bild, bild: res://grafik/ambiente/w3_passant_gehen.png, bilder: 8, weg: [[1190, 336], [-80, 336]], tempo: 45, fps: 10, skala: 0.71, start: 6.0, pause: [14, 14]}   # Passanten im Gleichschritt
-    - {art: bild, bild: res://grafik/ambiente/w3_passant_gehen.png, bilder: 8, weg: [[1260, 336], [-10, 336]], tempo: 45, fps: 10, skala: 0.71, start: 6.0, pause: [14, 14]}
-    - {art: bild, bild: res://grafik/ambiente/w3_passant_gehen.png, bilder: 8, weg: [[1330, 336], [60, 336]], tempo: 45, fps: 10, skala: 0.71, start: 6.0, pause: [14, 14]}
+    - {art: bild, bild: res://grafik/ambiente/w3_glastuer_redet_v02.png, bilder: 4, pos: [1032, 206], fps: 8, spricht: TUR, sonst: W3_NACHT}   # W3-B34
+    - {art: bild, bild: res://grafik/ambiente/w3_glastuer_redet_nacht_v02.png, bilder: 4, pos: [1035, 206], fps: 8, spricht: TUR, wenn: W3_NACHT}
+    # W3-B54 Autos im Takt auf der Fahrbahn (y 262–298), drei Kopien, hinter den Figuren
+    - {art: bild, bild: res://grafik/ambiente/w3_auto_im_takt.png, bilder: 4, weg: [[-170, 294], [1290, 294]], tempo: 60, fps: 11, start: 1.0, pause: [0.5, 0.5]}
+    - {art: bild, bild: res://grafik/ambiente/w3_auto_im_takt.png, bilder: 4, weg: [[-170, 294], [1290, 294]], tempo: 60, fps: 11, start: 8.33, pause: [0.5, 0.5]}
+    - {art: bild, bild: res://grafik/ambiente/w3_auto_im_takt.png, bilder: 4, weg: [[-170, 294], [1290, 294]], tempo: 60, fps: 11, start: 15.67, pause: [0.5, 0.5]}
+    # Passanten im Gleichschritt auf dem Gehweg drüben, aus der Glastür nach links
+    - {art: bild, bild: res://grafik/ambiente/w3_passant_gehen.png, bilder: 8, weg: [[980, 256], [-80, 256]], tempo: 30, fps: 10, skala: 0.62, start: 6.0, pause: [14, 14]}
+    - {art: bild, bild: res://grafik/ambiente/w3_passant_gehen.png, bilder: 8, weg: [[1030, 256], [-30, 256]], tempo: 30, fps: 10, skala: 0.62, start: 6.0, pause: [14, 14]}
+    - {art: bild, bild: res://grafik/ambiente/w3_passant_gehen.png, bilder: 8, weg: [[1080, 256], [20, 256]], tempo: 30, fps: 10, skala: 0.62, start: 6.0, pause: [14, 14]}
     - {art: bild, bild: res://grafik/ambiente/w3_vogelschwarm.png, bilder: 6, weg: [[-70, 70], [640, 46], [1350, 70]], tempo: 120, fps: 10, start: 3.0, pause: [0.2, 0.2]}   # W3-B26 immer dieselbe Bahn, alle 12 s
-  laufbereich: [[8, 326], [1088, 326], [1108, 304], [1192, 304], [1210, 326], [1272, 326], [1272, 354], [8, 354]]
+  vordergrund:
+    nachttisch: {bild: res://grafik/props/w3_nachttisch_v02.png, rect: [150, 262, 81, 78], baseline: 340, vor: W3_NACHT}   # AP-09: eigenes Teil, Max geht dahinter
+    nachttisch_nacht: {bild: res://grafik/props/w3_nachttisch_nacht_v02.png, rect: [152, 262, 81, 79], baseline: 341, nach: W3_NACHT}
+  laufbereich: [[8, 302], [1010, 302], [955, 264], [942, 262], [946, 247], [1016, 247], [1020, 262], [1060, 264], [1128, 302], [1272, 302], [1272, 356], [8, 356]]
   wechsel: [widerstandsbasis]
   marker:
-    start: [200, 344]
-    von_kueche_orakel: [520, 330]
-    von_buero_50: [1148, 312]
-    von_widerstandsbasis: [200, 344]
-    von_zelle: [200, 344]
+    start: [240, 344]
+    von_kueche_orakel: [676, 316]
+    von_buero_50: [980, 256]
+    von_widerstandsbasis: [240, 344]
+    von_zelle: [240, 344]
   figuren:
-    schmidt: [1050, 330]
-    tuer: [1148, 300]
-    schwarze_katze: [1300, 306]   # läuft per welt_3.gd (_katze_schleife) über die Bordsteinkante
+    schmidt: [1090, 324]             # rechts vom Zebrastreifen vor dem Turm
+    tuer: [1032, 246]                # spricht über die Sprechanlage neben der Glastür (unsichtbar)
+    schwarze_katze: [1300, 306]      # läuft per welt_3.gd (_katze_schleife) an der Bordsteinkante
   hotspots:
     himmel:
-      rect: [290, 0, 690, 60]
-      gehe: [640, 330]
+      rect: [100, 24, 540, 28]   # unter der Leiste oben (W3-19)
+      gehe: [400, 330]
     baeume:
-      rect: [690, 145, 320, 150]
-      gehe: [850, 330]
+      rect: [590, 74, 80, 182]
+      gehe: [630, 330]
     haeuser:
-      rect: [285, 62, 405, 175]
-      gehe: [480, 330]
+      rect: [0, 60, 250, 190]
+      gehe: [130, 330]
     autos:
-      rect: [588, 244, 214, 54]
-      gehe: [690, 330]
+      rect: [380, 262, 560, 36]   # Fahrbahn, auf der die Autos im Takt fahren
+      gehe: [640, 330]
     auto:
-      rect: [318, 242, 104, 58]
-      gehe: [370, 330]
-    radiowecker:
-      rect: [108, 262, 52, 18]
-      gehe: [150, 334]
+      rect: [240, 262, 140, 36]
+      gehe: [310, 330]
+    radiowecker:   # beide Zustände auf demselben Rechteck; welt_3.gd blendet je einen aus (W3-R06-05)
+      rect: [166, 261, 52, 18]
+      gehe: [195, 350]
     klingelnder_radiowecker:
-      rect: [110, 280, 48, 22]
-      gehe: [150, 334]
+      rect: [166, 261, 52, 18]
+      gehe: [195, 350]
     gehweg:
-      rect: [400, 336, 480, 18]
+      rect: [300, 330, 600, 24]
       gehe: [640, 344]
+    # Sprechanlage neben der Glastür (Code-Sicht, AP-02: ansehen_sprechanlage in welt_3.gd)
+    sprechanlage: {rect: [1020, 178, 24, 30], gehe: [1000, 252], name: Sprechanlage}
     sonne:
-      rect: [800, 0, 180, 24]
-      gehe: [880, 330]
+      rect: [640, 24, 56, 16]   # nachts steht dort der Mond
+      gehe: [665, 330]
+      vor: W3_NACHT
   ausgaenge:
     kueche_orakel:
-      rect: [500, 205, 40, 75]   # Haustür der Orakel-Oma
-      gehe: [520, 330]
+      rect: [648, 118, 56, 118]   # Haustür der Orakel-Oma mit Spitzenfenster
+      gehe: [676, 312]
     buero_50:
-      rect: [1112, 195, 73, 105]   # Glastür des Büroturms
-      gehe: [1148, 306]
+      rect: [950, 138, 62, 108]   # Glastür des Büroturms, über den Zebrastreifen
+      gehe: [980, 252]
 kueche_orakel:
   farbe: '#b49a72'
-  hintergrund: res://grafik/hintergruende/w3_bg_kueche_orakel_v01.png   # W3-R07
+  hintergrund: res://grafik/hintergruende/w3_bg_kueche_orakel_v02.png   # W3-R07 (drittes Glas ergänzt)
   hintergrund_nach:
-    R4: res://grafik/hintergruende/w3_bg_kueche_orakel_scherben_v01.png   # W3-R07b, Sparschwein zerbrochen
-  tiefe: 0.9
-  skala: 0.8
+    R4: res://grafik/hintergruende/w3_bg_kueche_orakel_scherben_v02.png   # W3-R07b, Sparschwein zerbrochen
+  skala: 1.0
+  tiefe: 0.72                 # Hinterkante y 285 an der Wand
   effekte:
-    - {art: flackern, pos: [130, 245], r: [24, 22], farbe: "#ffb347"}   # warmes Licht im Ofenfenster
-    - {art: bild, bild: res://grafik/ambiente/w3_eieruhr.png, bilder: 4, pos: [544, 192], fps: 4}   # W3-B27 Eieruhr
-    - {art: bild, bild: res://grafik/ambiente/w3_kuckucksuhr.png, bilder: 8, pos: [418, 94], fps: 7, ablauf: einmalig, ruhe_sichtbar: true, pause: [25, 50]}   # W3-B39 Kuckucksuhr
-  laufbereich: [[150, 286], [228, 286], [228, 348], [452, 348], [455, 286], [555, 286], [608, 338], [626, 356], [40, 356], [82, 330]]
+    - {art: flackern, pos: [138, 243], r: [24, 18], farbe: "#ffb347"}   # warmes Licht im Ofenfenster
+    - {art: bild, bild: res://grafik/ambiente/w3_eieruhr_v02.png, bilder: 4, pos: [439, 202], fps: 4}   # W3-B27 Eieruhr
+    - {art: bild, bild: res://grafik/ambiente/w3_kuckucksuhr_v02.png, bilder: 8, pos: [212, 126], fps: 7, ablauf: einmalig, ruhe_sichtbar: true, pause: [25, 50]}   # W3-B39 Kuckucksuhr
+  # Tisch und Stuhl (x 236–436) ausgespart: dahinter stünde Max über den Möbeln
+  laufbereich: [[80, 285], [236, 285], [236, 322], [436, 322], [436, 285], [560, 285], [600, 320], [630, 356], [10, 356], [50, 320]]
   marker:
-    start: [330, 352]
-    von_stadtstrasse: [560, 336]
-    von_zelle: [500, 320]
+    start: [330, 342]
+    von_stadtstrasse: [520, 310]
+    von_zelle: [480, 330]
   figuren:
-    orakel_oma: [188, 318]           # zwischen Ofen und Tisch
-    radio: [535, 108]                # Stimme aus dem Küchenradio (unsichtbar)
+    orakel_oma: [78, 322]            # vor der linken Wand neben dem Ofen; Ofen, Besen und Kehrblech bleiben frei
+    radio: [425, 128]                # Stimme aus dem Küchenradio (unsichtbar)
   hotspots:
-    tapete: {rect: [80, 40, 170, 100], gehe: [190, 318]}
-    gardinen_und_fenster: {rect: [258, 52, 125, 140], gehe: [320, 352]}
-    ofen: {rect: [25, 155, 130, 170], gehe: [180, 322]}
-    kehrblech: {rect: [5, 140, 72, 205], gehe: [95, 342]}
-    tisch_mit_teller_und_teekanne: {rect: [230, 200, 205, 140], gehe: [330, 352]}
-    kochbuch: {rect: [338, 210, 86, 36], gehe: [380, 352]}
-    gabel: {rect: [252, 230, 44, 12], gehe: [270, 352]}
-    kuckucksuhr: {rect: [395, 60, 45, 115], gehe: [470, 300]}
-    sparschwein: {rect: [462, 74, 46, 36], gehe: [500, 300]}
-    glaeser_auf_dem_regal: {rect: [470, 114, 80, 42], gehe: [510, 300]}
-    eieruhr: {rect: [530, 160, 32, 32], gehe: [540, 300]}
-    scherben: {rect: [470, 286, 80, 30], gehe: [500, 320], boden: true}
+    tapete: {rect: [236, 56, 24, 160], gehe: [250, 330]}   # Streifen zwischen Uhr und Fenster
+    gardinen_und_fenster: {rect: [262, 100, 104, 100], gehe: [314, 330]}
+    ofen: {rect: [105, 188, 78, 105], gehe: [140, 330]}
+    kehrblech: {rect: [176, 184, 48, 108], gehe: [210, 330]}
+    tisch_mit_teller_und_teekanne: {rect: [244, 210, 140, 108], gehe: [314, 334]}
+    kochbuch: {rect: [330, 222, 42, 28], gehe: [350, 334]}
+    gabel: {rect: [314, 230, 16, 18], gehe: [322, 334]}
+    kuckucksuhr: {rect: [190, 98, 44, 70], gehe: [212, 330]}
+    sparschwein: {rect: [380, 114, 37, 28], gehe: [400, 334], vor: R4}   # ab R4 liegen nur noch Scherben
+    glaeser_auf_dem_regal: {rect: [433, 110, 46, 32], gehe: [456, 330]}
+    eieruhr: {rect: [426, 178, 26, 26], gehe: [440, 330]}
+    scherben: {rect: [428, 280, 56, 34], gehe: [456, 330], boden: true, nach: R4}   # erst nach dem Sparschwein (W3-R03-01)
   ausgaenge:
-    stadtstrasse: {rect: [578, 50, 58, 290], gehe: [565, 332]}
+    stadtstrasse: {rect: [487, 115, 76, 172], gehe: [525, 300]}
 buero_50:
   alias: {akte: schmidts_akte, kaffeetasse_auf_klone: klone}
   farbe: '#9aa8b8'
-  hintergrund: res://grafik/hintergruende/w3_bg_buero_50_v01.png   # W3-R08
-  tiefe: 0.8
-  skala: 0.8
+  hintergrund: res://grafik/hintergruende/w3_bg_buero_50_v02.png   # W3-R08, Panorama (Entscheidung Sebastian: 1280 breit)
+  skala: 1.0
+  tiefe: 0.39                 # ab y 200 (hinten im Flur), damit Schmidt dort klein ist; im Vorraum (y 296) etwa 0,77
+  tiefe_oben_y: 200
   effekte:
-    - {art: bild, bild: res://grafik/ambiente/w3_terminal_buero.png, bilder: 4, pos: [322, 229], fps: 6}   # W3-B46 Terminal
-    - {art: bild, bild: res://grafik/ambiente/w3_klone_tippen.png, bilder: 6, pos: [123, 220], fps: 7}   # W3-B28 Klone tippen im Hintergrund
-    - {art: bild, bild: res://grafik/ambiente/w3_kopierer.png, bilder: 4, pos: [505, 304], fps: 11}   # W3-B35 Kopierer rattert
-  laufbereich: [[80, 322], [150, 270], [465, 268], [470, 300], [530, 330], [560, 356], [20, 356]]
+    - {art: bild, bild: res://grafik/ambiente/w3_terminal_buero_v02.png, bilder: 4, pos: [866, 222], fps: 6}   # W3-B46 Terminal
+    - {art: bild, bild: res://grafik/ambiente/w3_klone_tippen_v02.png, bilder: 6, pos: [382, 206], fps: 7}   # W3-B28 Klone tippen, jetzt im Flur hinter dem Fenster (keine Schreibtische mehr im Raum)
+    - {art: bild, bild: res://grafik/ambiente/w3_kopierer_v02.png, bilder: 4, pos: [421, 310], fps: 11}   # W3-B35 Kopierer rattert
+  # Vorraum; Kopierer (x 345–495) ausgespart, der Flur in die Tiefe bleibt den Klonen
+  laufbereich: [[20, 300], [345, 300], [345, 314], [495, 314], [495, 296], [790, 296], [1010, 304], [1050, 314], [1272, 316], [1272, 356], [8, 356]]
   marker:
-    start: [300, 320]
-    von_stadtstrasse: [105, 330]
+    start: [640, 330]
+    von_stadtstrasse: [235, 318]
   figuren:
-    klon: [250, 300]
-    schmidt: [420, 286]              # das Original steht hinten
+    klon: [600, 282]                 # vorn im Flur
+    schmidt: [646, 232]              # das Original steht hinten im Flur
   hotspots:
-    flur: {rect: [165, 85, 310, 45], gehe: [320, 292]}
-    farbcode_an_der_wand: {rect: [163, 135, 316, 76], gehe: [320, 292]}
-    terminal: {rect: [293, 200, 58, 72], gehe: [320, 292]}
-    topfpflanzen: {rect: [150, 188, 46, 84], gehe: [175, 300]}
-    fenster: {rect: [90, 60, 66, 215], gehe: [140, 318]}
-    tueren: {rect: [95, 150, 55, 72], gehe: [140, 318]}
-    klone: {rect: [200, 228, 100, 46], gehe: [250, 312]}
-    kopierer: {rect: [470, 180, 70, 120], gehe: [470, 318]}
-    wasserspender: {rect: [538, 180, 45, 140], gehe: [525, 338]}
-    endlos_treppe: {rect: [590, 20, 50, 305], gehe: [555, 350]}
+    flur: {rect: [560, 96, 170, 56], gehe: [640, 304]}   # das hintere Ende; davor gehört die Fläche den Klonen
+    farbcode_an_der_wand: {rect: [795, 90, 192, 66], gehe: [890, 322]}
+    terminal: {rect: [826, 190, 76, 52], gehe: [865, 322]}
+    topfpflanzen: {rect: [532, 192, 40, 60], gehe: [552, 316]}
+    fenster: {rect: [334, 88, 94, 128], gehe: [330, 322]}
+    tueren: {rect: [740, 105, 40, 170], gehe: [760, 310]}
+    klone: {rect: [545, 152, 170, 138], gehe: [600, 322]}
+    kopierer: {rect: [350, 195, 140, 115], gehe: [420, 330]}
+    wasserspender: {rect: [903, 172, 48, 130], gehe: [925, 322]}
+    endlos_treppe: {rect: [1015, 24, 225, 290], gehe: [1080, 330]}
   props:
-    kaffeetasse: {rect: [546, 226, 14, 14], gehe: [525, 338]}
-    sonnenbrille: {rect: [562, 230, 16, 8], gehe: [525, 338]}
-    schmidts_akte: {rect: [432, 270, 18, 14], gehe: [440, 300]}
+    kaffeetasse: {rect: [918, 248, 14, 14], gehe: [925, 322]}       # am Wasserspender (Skript)
+    sonnenbrille: {rect: [893, 228, 16, 8], gehe: [880, 322]}       # auf dem Beistelltisch neben dem Terminal
+    schmidts_akte: {rect: [662, 214, 18, 14], gehe: [646, 304]}     # neben Schmidt (646)
   ausgaenge:
-    stadtstrasse: {rect: [15, 82, 62, 268], gehe: [90, 336]}    # Aufzug
+    stadtstrasse: {rect: [172, 88, 128, 206], gehe: [235, 312]}    # Aufzug
 testkammer_1:
   alias: {ausgangstuer: ausgang_testkammer_2, bernd_auf_bodenschalter: bodenschalter}
   farbe: '#d8d8d8'
-  hintergrund: res://grafik/hintergruende/w3_bg_testkammer_1_v01.png   # W3-R09
+  hintergrund: res://grafik/hintergruende/w3_bg_testkammer_1_v02.png   # W3-R09
   hintergrund_nach:
-    R9b: res://grafik/hintergruende/w3_bg_testkammer_1_offen_v01.png   # W3-R09b, Ausgangstür offen
-  tiefe: 0.8
-  skala: 0.8
-  laufbereich: [[105, 294], [145, 266], [495, 266], [552, 296], [548, 330], [540, 356], [0, 356], [30, 330]]
+    R9b: res://grafik/hintergruende/w3_bg_testkammer_1_offen_v02.png   # W3-R09b, Ausgangstür offen
+  skala: 1.0
+  tiefe: 0.74
+  # Pappkuchen (x 520–580) ausgespart
+  laufbereich: [[30, 290], [520, 290], [520, 308], [580, 308], [580, 290], [610, 290], [635, 356], [5, 356]]
   wechsel: [widerstandsbasis]
   marker:
-    start: [320, 322]
-    von_testkammer_2: [510, 300]
-    von_widerstandsbasis: [95, 322]
-    von_kapsel: [95, 322]
+    start: [320, 338]
+    von_testkammer_2: [470, 306]
+    von_widerstandsbasis: [113, 306]
+    von_kapsel: [113, 306]
   figuren:
-    opa: [200, 300]
-    mutti: [465, 52]                 # nur Stimme aus dem Deckenlautsprecher, sichtbar erst im Kern
-    bernd: [400, 312]
-    portalgeraet_stimme: [122, 190]
+    opa: [262, 302]                  # neben der Halterung, verdeckt sie nicht (Portalgerät klickbar, AP-04)
+    mutti: [320, 30]                 # nur Stimme aus dem Deckenlautsprecher, sichtbar erst im Kern
+    bernd: [425, 306]                # Rohbau: rechts vom Bodenschalter
+    portalgeraet_stimme: [212, 160]
   hotspots:
-    wandplatten: {rect: [150, 85, 340, 170], gehe: [320, 292]}
-    lautsprecher: {rect: [446, 40, 42, 18], gehe: [430, 292]}
-    halterung: {rect: [108, 184, 28, 36], gehe: [128, 320]}
-    portalgeraet_in_der_halterung: {rect: [106, 180, 32, 42], gehe: [128, 320]}
-    bodenschalter: {rect: [278, 282, 86, 40], gehe: [320, 338], boden: true}
-    pappkuchen: {rect: [555, 250, 70, 105], gehe: [528, 334]}
+    wandplatten: {rect: [165, 40, 230, 236], gehe: [320, 300]}
+    lautsprecher: {rect: [300, 24, 40, 14], gehe: [330, 300]}
+    # Halterung erst leer, wenn das Gerät genommen ist; vorher gehört die Fläche dem Portalgerät (W3-R09-01)
+    halterung: {rect: [196, 136, 34, 48], gehe: [212, 306], nach: W3_PORTAL_GENOMMEN}
+    portalgeraet_in_der_halterung: {rect: [196, 136, 34, 48], gehe: [212, 306], vor: W3_PORTAL_GENOMMEN}
+    eingang: {rect: [66, 102, 96, 180], gehe: [113, 300], name: Eingang}   # offene Eingangstür links (W3-R05-03)
+    bodenschalter: {rect: [270, 290, 92, 36], gehe: [316, 338], boden: true}
+    pappkuchen: {rect: [526, 248, 48, 58], gehe: [520, 322]}
   ausgaenge:
-    testkammer_2: {rect: [518, 104, 42, 182], gehe: [522, 298]}
+    testkammer_2: {rect: [397, 103, 152, 180], gehe: [470, 300]}
 testkammer_2:
   alias: {laser_mit_bernd_idee: laser}
   farbe: '#d0d0d0'
-  hintergrund: res://grafik/hintergruende/w3_bg_testkammer_2_v01.png   # W3-R10
+  hintergrund: res://grafik/hintergruende/w3_bg_testkammer_2_v02.png   # W3-R10 (Kritzelei ohne Schein-Schrift)
   hintergrund_nach:
-    R9c: res://grafik/hintergruende/w3_bg_testkammer_2_laser_gestoert_v01.png   # W3-R10b, Laser harmlos
-  tiefe: 0.8
-  skala: 0.8
-  laufbereich: [[105, 294], [145, 266], [495, 266], [560, 294], [600, 340], [640, 356], [0, 356], [30, 330]]
+    R9c: res://grafik/hintergruende/w3_bg_testkammer_2_laser_gestoert_v02.png   # W3-R10b, Laser harmlos
+  skala: 1.0
+  tiefe: 0.74
+  laufbereich: [[30, 292], [610, 292], [635, 356], [5, 356]]
   marker:
-    start: [320, 322]
-    von_testkammer_1: [100, 318]
-    von_testkammer_3: [530, 302]
+    start: [320, 338]
+    von_testkammer_1: [113, 306]
+    von_testkammer_3: [506, 306]
   figuren:
-    mutti: [465, 52]                 # nur Stimme aus dem Deckenlautsprecher
+    mutti: [320, 90]                 # nur Stimme aus dem Lautsprecher
   hotspots:
-    laser: {rect: [140, 176, 366, 18], gehe: [320, 292]}
-    sockel: {rect: [146, 220, 34, 54], gehe: [170, 296]}
-    kritzelei: {rect: [410, 214, 76, 42], gehe: [440, 292]}
-    lautsprecher: {rect: [446, 40, 42, 18], gehe: [430, 292], name: Lautsprecher}   # M.U.T.T.I. und Pixel sprechen hier
+    laser: {rect: [462, 180, 104, 92], gehe: [430, 306]}   # quer vor der Ausgangstür
+    sockel: {rect: [186, 222, 40, 72], gehe: [206, 310]}
+    kritzelei: {rect: [286, 218, 92, 50], gehe: [330, 302]}
+    lautsprecher: {rect: [298, 66, 44, 46], gehe: [320, 300], name: Lautsprecher}   # M.U.T.T.I. und Pixel sprechen hier
   props:
-    gummihuhn: {rect: [152, 204, 22, 18], gehe: [170, 296]}
+    gummihuhn: {rect: [195, 205, 22, 18], gehe: [206, 310]}
   ausgaenge:
-    testkammer_1: {rect: [36, 96, 50, 220], gehe: [70, 330]}
-    testkammer_3: {rect: [518, 104, 42, 182], gehe: [522, 298]}
+    testkammer_1: {rect: [76, 112, 76, 172], gehe: [113, 300]}
+    testkammer_3: {rect: [464, 112, 86, 170], gehe: [506, 300]}
 testkammer_3:
   alias: {ausgangstuer: ausgang_kern}
   farbe: '#c8c8c8'
-  hintergrund: res://grafik/hintergruende/w3_bg_testkammer_3_v01.png   # W3-R11
+  hintergrund: res://grafik/hintergruende/w3_bg_testkammer_3_v02.png   # W3-R11
   hintergrund_nach:
-    R9d: res://grafik/hintergruende/w3_bg_testkammer_3_offen_v01.png   # W3-R11b, Tür offen
-  tiefe: 0.8
-  skala: 0.8
-  laufbereich: [[105, 294], [145, 266], [405, 266], [440, 300], [470, 330], [530, 330], [512, 266], [560, 300], [600, 340], [640, 356], [0, 356], [30, 330]]
+    R9d: res://grafik/hintergruende/w3_bg_testkammer_3_offen_v02.png   # W3-R11b, Tür offen
+  skala: 1.0
+  tiefe: 0.75
+  laufbereich: [[30, 294], [610, 294], [635, 356], [5, 356]]
   marker:
-    start: [300, 322]
-    von_testkammer_2: [100, 318]
-    von_kern: [535, 300]
+    start: [300, 338]
+    von_testkammer_2: [113, 306]
+    von_kern: [475, 306]
   figuren:
-    tuer: [593, 228]                 # spricht über das Bedienfeld neben der Tür (unsichtbar)
-    mutti: [545, 112]                # nur Stimme aus dem Wandlautsprecher
-    bernd: [380, 300]
+    tuer: [538, 210]                 # spricht über die Tür (unsichtbar)
+    mutti: [342, 166]                # nur Stimme aus dem runden Wandlautsprecher
+    bernd: [480, 290]                # im Spalt direkt vor der Tür (Rohbau)
   hotspots:
-    lautsprecher: {rect: [532, 54, 36, 56], gehe: [520, 300]}
+    lautsprecher: {rect: [294, 118, 98, 96], gehe: [342, 304]}
   ausgaenge:
-    testkammer_2: {rect: [36, 96, 50, 220], gehe: [70, 330]}
-    kern: {rect: [522, 108, 60, 200], gehe: [535, 300]}
+    testkammer_2: {rect: [76, 110, 76, 172], gehe: [113, 300]}
+    kern: {rect: [422, 94, 106, 186], gehe: [475, 300]}
 kern:
   farbe: '#2c2c3c'
-  hintergrund: res://grafik/hintergruende/w3_bg_kern_v01.png   # W3-R12, Zelle glühend
+  hintergrund: res://grafik/hintergruende/w3_bg_kern_v02.png   # W3-R12, Zelle glühend
   hintergrund_nach:
-    W3_ZELLE_KALT: res://grafik/hintergruende/w3_bg_kern_vereist_v01.png   # W3-R12b
-    R11: res://grafik/hintergruende/w3_bg_kern_sockel_leer_v01.png          # W3-R12c, Zelle genommen
-  skala: 0.8
-  tiefe: 0.9
+    W3_ZELLE_KALT: res://grafik/hintergruende/w3_bg_kern_vereist_v02.png   # W3-R12b
+    R11: res://grafik/hintergruende/w3_bg_kern_sockel_leer_v02.png          # W3-R12c, Zelle genommen
+  skala: 1.0
+  tiefe: 0.77
   effekte:
-    - {art: bild, bild: res://grafik/ambiente/w3_kern_lichtband.png, bilder: 8, pos: [349, 260], fps: 9}   # W3-B29 Lichtband im Ring
-    - {art: bild, bild: res://grafik/ambiente/w3_kern_hitzeflimmern.png, bilder: 4, pos: [320, 186], fps: 8, sonst: W3_ZELLE_KALT}   # W3-B52 über der glühenden Zelle
-    - {art: bild, bild: res://grafik/ambiente/w3_kern_kabel_puls.png, bilder: 6, pos: [350, 350], fps: 8, sonst: R10}   # W3-B53 Kabel pulsieren, bis M.U.T.T.I. aus ist
-  laufbereich: [[60, 330], [140, 312], [300, 304], [520, 312], [600, 330], [600, 356], [60, 356]]
+    - {art: bild, bild: res://grafik/ambiente/w3_kern_lichtband_v02.png, bilder: 8, pos: [320, 214], fps: 9}   # W3-B29 Lichtband im Streifen
+    - {art: bild, bild: res://grafik/ambiente/w3_kern_hitzeflimmern_v02.png, bilder: 4, pos: [321, 172], fps: 8, sonst: W3_ZELLE_KALT|R11}   # W3-B52 über der glühenden Zelle
+    - {art: bild, bild: res://grafik/ambiente/w3_kern_kabel_puls_v02.png, bilder: 6, pos: [420, 360], fps: 8, sonst: R10}   # W3-B53 Kabel pulsieren, bis M.U.T.T.I. aus ist
+  # Sockel der Zelle (x 288–350 bis y 306) ausgespart: Max lief sonst hindurch (W3-R12-04)
+  laufbereich: [[60, 296], [288, 296], [288, 306], [350, 306], [350, 296], [580, 296], [630, 356], [20, 356]]
   marker:
-    start: [200, 336]
-    von_testkammer_3: [90, 340]
+    start: [200, 338]
+    von_testkammer_3: [120, 316]
   figuren:
-    mutti: [470, 300]
+    mutti: [455, 300]
   hotspots:
     kabel:
-      rect: [120, 280, 140, 30]
-      gehe: [190, 334]
+      rect: [205, 256, 295, 42]
+      gehe: [250, 330]
     sockel:
-      rect: [298, 248, 46, 80]
-      gehe: [280, 336]
+      rect: [293, 220, 52, 80]
+      gehe: [270, 330]
     streifen:
-      rect: [96, 228, 420, 20]
-      gehe: [320, 336]
+      rect: [160, 176, 300, 40]
+      gehe: [400, 330]
   props:
     energiezelle:
-      rect: [306, 196, 20, 70]
-      gehe: [290, 336]
+      rect: [306, 162, 28, 60]
+      gehe: [270, 330]
   ausgaenge:
     testkammer_3:
-      rect: [18, 140, 62, 190]   # Tür links
-      gehe: [90, 340]
+      rect: [80, 100, 80, 190]   # Tür links
+      gehe: [120, 310]
