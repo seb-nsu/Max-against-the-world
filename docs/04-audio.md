@@ -6,7 +6,7 @@ Aufgebaut wie die Grafik-Dateien: erst die Werkzeuge, dann Regeln für Prompts, 
 
 | Aufgabe | Empfehlung | Kosten | Warum |
 | --- | --- | --- | --- |
-| Sprachausgabe (Dialoge) | ElevenLabs, Voice Design | Starter 6 $/Monat zum Testen, für die Gesamtproduktion etwa vier Monate Pro (rund 400 $, Rechnung unter „Sprachausgabe“) | Beste deutsche Betonung, Stimmen per Beschreibung erfinden, kommerzielle Rechte ab Starter |
+| Sprachausgabe (Dialoge) | ElevenLabs, Voice Design | Nutzung nach Bedarf ohne Abo, 80 $ je Million Zeichen: das ganze Spiel 41–124 $ je nach Zahl der Versuche (Rechnung unter „Vertonung mit dem Werkzeug“, Stand 24.11.2026) | Beste deutsche Betonung, Stimmen per Beschreibung erfinden, kommerzielle Rechte ab Starter |
 | Geräusche (SFX) | ElevenLabs Sound Effects | im selben Abo | Geräusch per Satz beschreiben, mehrere Varianten pro Klick |
 | Musik, Cloud | ElevenLabs Music | im selben Abo | Mit lizenzierter Musik trainiert, Spiele ausdrücklich erlaubt; verbietet Künstlernamen im Prompt, passt also zur Parodie-Regel |
 | Musik, lokal | ACE-Step 1.5 in ComfyUI Desktop | kostenlos | Apache-2.0-Lizenz (beim Download prüfen und so in die Credits eintragen), laut AMD läuft es unter Windows auf Radeon über ComfyUI Desktop (Vorlage „ACE Step 1.5 Turbo AIO“); ideal zum Ausprobieren vieler Varianten |
@@ -371,7 +371,27 @@ Opas Hologramm in Welt 3 ist Opas Stimme mit Funk-Filter und leichtem Rauschen i
 
 **Sprechanweisungen:** Englische Stichworte je Zeile in `docs/audio/betonung/`. Ohne Eintrag nimmt das Werkzeug, was die Regie-Spalte hergibt (flüstert, ruft, seufzt …). ElevenLabs bekommt sie als Audio-Tags (`[bored] [sighs]`), Fish in eckigen Klammern, Gemini als Stil zusammen mit dem Figuren-Prompt. Geschrieben werden sie je Abschnitt erst nach dessen Review, weil jede Textänderung eine bezahlte Aufnahme wertlos macht.
 
-**Anbieter (Stand 24. November 2026):** Für die rund 516.000 Zeichen eines Durchgangs nennt das Werkzeug grob 41 $ bei ElevenLabs (API-Preis 80 $ je Million Zeichen; im Abo andere Rechnung), 8 $ bei Fish Audio S2.1 Pro und 9 $ bei Gemini 3.8 Flash TTS (bis 31.12.2026, danach doppelt). Mit drei bis fünf Versuchen bei Pointen eher das Zwei- bis Dreifache. Gemini hat nur 30 feste Stimmen und kein Voice Design. Fish und Gemini machen keine Geräusche. Entschieden wird nach einem Blindtest mit 20 Zeilen von Max, Pixel und Opa aus dem Vertical Slice (`--anbieter fish` bzw. `gemini`, gleiche Zeilen). Lokal und ohne Kosten je Zeile gehen Stimmen mit VoxCPM2 und Geräusche mit Stable Audio Open (nächster Abschnitt). Der Anbieter `test` erzeugt ohne Kosten einen Ton, um den Ablauf zu prüfen.
+**Kosten (API-Preise nach Bedarf, Stand 24. November 2026):** Grundlage sind 516.000 Zeichen Sprache je Durchgang (bei Fish 531.000 UTF-8-Bytes), 71 Geräusche mit je 3 Varianten (etwa 10 Minuten) und rund 48 Minuten Musik (30 Raum-Schleifen zu 90 Sekunden, 3 Lieder, Stings und Jingles). „Günstig“ heißt jede Zeile und jedes Stück einmal, „realistisch“ jede Zeile im Schnitt zweimal und jedes Stück dreimal, „hoch“ jede Zeile dreimal.
+
+| Preis | Einheit |
+| --- | --- |
+| ElevenLabs TTS v4 | 80 $ je Mio. Zeichen |
+| ElevenLabs Soundeffekte | etwa 0,12 $ je Minute |
+| ElevenLabs Musik | etwa 0,14 $ je Minute |
+| Fish S2.1 Pro / Drama 3 | 15 $ / 50 $ je Mio. UTF-8-Bytes (Drama 3 bis 30.11.2026 für 10 $); Stimmentwurf 0,01 $; Abo-Credits gelten nicht für die API |
+| Gemini 3.8 Flash TTS | 0,50 $ je Mio. Text-Tokens und 9 $ je Mio. Audio-Tokens (25 je Sekunde), ab 1.1.2027 das Doppelte; nur 30 feste Stimmen |
+| VoxCPM2, Stable Audio Open, ACE-Step (lokal) | 0 $, nur Strom und Zeit |
+
+| Mischung (Stimmen + Geräusche und Musik) | Günstig | Realistisch | Hoch |
+| --- | --- | --- | --- |
+| Alles ElevenLabs | 49 $ | 104 $ | 145 $ |
+| Fish Drama 3 + ElevenLabs | 36 $ | 76 $ | 102 $ |
+| Fish S2.1 Pro + ElevenLabs | 17 $ | 39 $ | 47 $ |
+| Gemini (Preis ab 2027) + ElevenLabs | 25 $ | 54 $ | 71 $ |
+| Fish Drama 3 + lokal | 28 $ | 54 $ | 81 $ |
+| Alles lokal | 0 $ | 0 $ | 0 $ |
+
+Entschieden wird nach dem Klang in einem Blindtest mit 20 Zeilen von Max, Pixel und Opa aus dem Vertical Slice (unter 10 $), nicht nach dem Preis; der Unterschied zwischen den Cloud-Mischungen liegt für das ganze Spiel unter 100 $. Der Anbieter `test` erzeugt ohne Kosten einen Ton, um den Ablauf zu prüfen.
 
 ### Lokale Modelle (geprüft am 24. November 2026)
 
