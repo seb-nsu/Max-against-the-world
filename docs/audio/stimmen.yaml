@@ -4,7 +4,8 @@
 # Anbieters entstanden ist (python3 tools/vertonung.py waehlen <Figur> --id <ID> --anbieter fish).
 # Die Namen sind die Figuren-Namen aus 04-audio.md ohne Klammerzusatz.
 
-anbieter: elevenlabs      # Standard für vorschlagen und erzeugen
+anbieter: elevenlabs      # Standard für vorschlagen und erzeugen (lokal: voxcpm)
+geraeusch_anbieter: elevenlabs   # Standard für geraeusche (lokal: stableaudio)
 
 modelle:                  # bei neuen Modellen hier umstellen
   elevenlabs: eleven_v3
@@ -12,6 +13,8 @@ modelle:                  # bei neuen Modellen hier umstellen
   elevenlabs_geraeusch: eleven_text_to_sound_v3
   fish: s2.1-pro          # oder drama-3
   gemini: gemini-3.8-flash-tts
+  voxcpm: openbmb/VoxCPM2
+  stableaudio: stabilityai/stable-audio-open-1.0
 
 # Nebenfiguren, die statt der Variante einer Hauptstimme eine eigene Stimme bekommen
 # (zum Beispiel, wenn eine weibliche Variante einer Männerstimme nicht trägt)

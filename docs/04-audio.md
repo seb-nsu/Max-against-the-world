@@ -371,4 +371,24 @@ Opas Hologramm in Welt 3 ist Opas Stimme mit Funk-Filter und leichtem Rauschen i
 
 **Sprechanweisungen:** Englische Stichworte je Zeile in `docs/audio/betonung/`. Ohne Eintrag nimmt das Werkzeug, was die Regie-Spalte hergibt (flüstert, ruft, seufzt …). ElevenLabs bekommt sie als Audio-Tags (`[bored] [sighs]`), Fish in eckigen Klammern, Gemini als Stil zusammen mit dem Figuren-Prompt. Geschrieben werden sie je Abschnitt erst nach dessen Review, weil jede Textänderung eine bezahlte Aufnahme wertlos macht.
 
-**Anbieter (Stand 24. November 2026):** Für die rund 516.000 Zeichen eines Durchgangs nennt das Werkzeug grob 41 $ bei ElevenLabs (API-Preis 80 $ je Million Zeichen; im Abo andere Rechnung), 8 $ bei Fish Audio S2.1 Pro und 9 $ bei Gemini 3.8 Flash TTS (bis 31.12.2026, danach doppelt). Mit drei bis fünf Versuchen bei Pointen eher das Zwei- bis Dreifache. Gemini hat nur 30 feste Stimmen und kein Voice Design. Fish und Gemini machen keine Geräusche. Entschieden wird nach einem Blindtest mit 20 Zeilen von Max, Pixel und Opa aus dem Vertical Slice (`--anbieter fish` bzw. `gemini`, gleiche Zeilen). Lokale Modelle (Qwen3-TTS in ComfyUI) sind auf Radeon nicht getestet und beim Gefühl je Zeile schwächer; das Werkzeug kann sie später als weiteren Anbieter bekommen. Der Anbieter `test` erzeugt ohne Kosten einen Ton, um den Ablauf zu prüfen.
+**Anbieter (Stand 24. November 2026):** Für die rund 516.000 Zeichen eines Durchgangs nennt das Werkzeug grob 41 $ bei ElevenLabs (API-Preis 80 $ je Million Zeichen; im Abo andere Rechnung), 8 $ bei Fish Audio S2.1 Pro und 9 $ bei Gemini 3.8 Flash TTS (bis 31.12.2026, danach doppelt). Mit drei bis fünf Versuchen bei Pointen eher das Zwei- bis Dreifache. Gemini hat nur 30 feste Stimmen und kein Voice Design. Fish und Gemini machen keine Geräusche. Entschieden wird nach einem Blindtest mit 20 Zeilen von Max, Pixel und Opa aus dem Vertical Slice (`--anbieter fish` bzw. `gemini`, gleiche Zeilen). Lokal und ohne Kosten je Zeile gehen Stimmen mit VoxCPM2 und Geräusche mit Stable Audio Open (nächster Abschnitt). Der Anbieter `test` erzeugt ohne Kosten einen Ton, um den Ablauf zu prüfen.
+
+### Lokale Modelle (geprüft am 24. November 2026)
+
+| Anbieter im Werkzeug | Modell | Lizenz | Kann | Grenzen |
+| --- | --- | --- | --- | --- |
+| `voxcpm` | VoxCPM2 von OpenBMB, 2 Mrd. Parameter, etwa 8 GB Grafikspeicher | Apache-2.0, kommerziell frei | Deutsch, Stimme per Beschreibung, dann Klonen mit Regie in Klammern je Zeile, 48 kHz | Ergebnisse schwanken zwischen Läufen (Karte empfiehlt 1–3 Versuche); deutsche Qualität gegenüber ElevenLabs ungeprüft |
+| `stableaudio` | Stable Audio Open 1.0 über `diffusers`, bis 47 Sekunden | Stability AI Community License: frei bis 1 Mio. $ Jahresumsatz, vorher bei Stability registrieren, „Powered by Stability AI“ in die Credits | Geräusche, Atmosphären, Einzeltöne | Schwächer als ElevenLabs; Modell auf Hugging Face freischalten und `huggingface-cli login` |
+
+Bei VoxCPM2 ist die gewählte Stimme eine kurze Aufnahme: `docs/audio/stimmproben/<Figur>.flac` mit ihrem Text daneben (`.txt`). Jede Zeile wird aus ihr geklont, die Sprechanweisung steht in Klammern davor, zum Beispiel `(bored, sighs)Und ich bin ziemlich sicher …`. Die Stimmproben kommen ins Repo, damit die Stimme bei jedem Lauf gleich bleibt.
+
+Nicht kommerziell nutzbar und deshalb nicht eingebaut: F5-TTS (auch die deutschen Feintunings), XTTS-v2, MiraToffel, Fish S2 lokal, Higgs Audio, VibeVoice; für Geräusche AudioGen, TangoFlux, MMAudio, AudioLDM2 und Tango 2. Weitere deutsche Kandidaten mit freier Lizenz, falls VoxCPM2 nicht trägt: Qwen3-TTS (Apache-2.0) und Kartoffelbox (deutsches Chatterbox, MIT, Laut-Tags wie `<chuckle>`).
+
+**Einrichtung auf dem PC (Radeon, Windows):** Keins der Modelle nennt AMD ausdrücklich; PyTorch mit ROCm läuft aber unter Windows (dieselbe Grundlage wie ComfyUI Desktop). Ablauf:
+
+1. Python 3.12 und eine eigene Umgebung: `py -3.12 -m venv C:\cq-audio`, dann `C:\cq-audio\Scripts\activate`.
+2. PyTorch mit ROCm nach der Anleitung von AMD installieren ([ROCm: PyTorch und ComfyUI](https://rocm.docs.amd.com/en/docs-7.9.0/install/pytorch-comfyui.html)).
+3. `pip install voxcpm diffusers soundfile pyyaml`. Danach prüfen, dass pip PyTorch nicht durch die CUDA-Fassung ersetzt hat: `python -c "import torch; print(torch.cuda.is_available(), torch.version.hip)"` muss `True` und eine HIP-Version zeigen. Sonst Schritt 2 wiederholen.
+4. Erster Lauf mit einer Figur: `python tools/vertonung.py vorschlagen --anbieter voxcpm --figur Max --los`. Beim ersten Mal lädt das Modell (einige GB).
+
+Geräusche ergänzen sich mit CC0-Sammlungen: Klicks, Schritte und UI-Töne sind dort oft besser als jede KI.

@@ -28,8 +28,9 @@ Aufruf:
   python3 tools/vertonung.py uebernehmen [auswahl.json]   ohne Pfad: neueste aus Downloads
   python3 tools/vertonung.py waehlen Max --id <Stimmen-ID> [--anbieter fish]   von Hand
 
-Anbieter: elevenlabs (ELEVENLABS_API_KEY), fish (FISH_API_KEY), gemini (GEMINI_API_KEY) und
-test (erzeugt einen Ton ohne Kosten, um den Ablauf zu prüfen). Braucht ffmpeg im PATH.
+Anbieter: elevenlabs (ELEVENLABS_API_KEY), fish (FISH_API_KEY), gemini (GEMINI_API_KEY),
+voxcpm (lokal, Stimmen) und stableaudio (lokal, Geräusche), beide mit PyTorch auf der eigenen
+Grafikkarte, sowie test (ein Ton ohne Kosten, um den Ablauf zu prüfen). Braucht ffmpeg im PATH.
 """
 from __future__ import annotations
 
@@ -72,9 +73,11 @@ ABSCHNITT = {"prolog": ("P0", "SYS"), "welt-1": ("W1",), "welt-2": ("W2",), "wel
 
 # Grobe Listenpreise in Dollar je 1 Mio. Zeichen (Stand 24.11.2026, vor dem Kauf prüfen).
 # Gemini rechnet in Tokens: etwa 14 Zeichen je Sekunde, 25 Audio-Tokens je Sekunde, 9 $ je Mio.
-PREIS_JE_MIO = {"elevenlabs": 80.0, "fish": 15.0, "gemini": 17.0, "test": 0.0}
-PREIS_STIMMENTWURF = {"elevenlabs": 0.05, "fish": 0.0, "gemini": 0.01, "test": 0.0}
-PREIS_GERAEUSCH = 0.10   # ElevenLabs, je Variante, grob
+# voxcpm und stableaudio laufen lokal auf der Grafikkarte und kosten nur Strom.
+PREIS_JE_MIO = {"elevenlabs": 80.0, "fish": 15.0, "gemini": 17.0, "voxcpm": 0.0, "test": 0.0}
+PREIS_STIMMENTWURF = {"elevenlabs": 0.05, "fish": 0.0, "gemini": 0.01, "voxcpm": 0.0, "test": 0.0}
+PREIS_GERAEUSCH = {"elevenlabs": 0.10, "stableaudio": 0.0, "test": 0.0}   # je Variante, grob
+STIMMPROBEN = AUDIO_DOCS / "stimmproben"   # Referenz-Aufnahmen der lokal entworfenen Stimmen
 
 # ---------------------------------------------------------------------------------------------
 # Beschreibungen aus der Spalte „Lösung“ (Nebenstimmen) → ffmpeg-Filter oder Sprechanweisung
@@ -415,7 +418,7 @@ class Anbieter:
         raise SystemExit(f"{self.name}: Stimmen bitte auf der Website anlegen und mit "
                          f"„waehlen {fig.name} --id …“ eintragen")
 
-    def entwurf_speichern(self, fig: Figur, entwurf_id: str) -> str:
+    def entwurf_speichern(self, fig: Figur, entwurf_id: str, audio: Path) -> str:
         return entwurf_id
 
 
@@ -447,7 +450,7 @@ class ElevenLabs(Anbieter):
         return [(base64.b64decode(p["audio_base_64"]), "mp3", p["generated_voice_id"])
                 for p in antwort.get("previews", [])]
 
-    def entwurf_speichern(self, fig, entwurf_id):
+    def entwurf_speichern(self, fig, entwurf_id, audio):
         antwort = self.anfrage(f"{self.basis}/text-to-voice",
                                {"voice_name": f"Couch Quest {fig.name}",
                                 "voice_description": fig.prompt[:1000],
@@ -559,7 +562,127 @@ class Test(Anbieter):
         return self.sprechen(prompt, "x" * int((sekunden or 2) * 14))
 
 
-ANBIETER = {"elevenlabs": ElevenLabs, "fish": Fish, "gemini": Gemini, "test": Test}
+class Lokal(Anbieter):
+    """Gemeinsames für Modelle, die mit PyTorch auf der eigenen Grafikkarte laufen
+    (NVIDIA mit CUDA, Radeon mit ROCm; torch.cuda meint bei ROCm ebenfalls die Radeon)."""
+    _modell = None
+
+    @staticmethod
+    def geraet() -> str:
+        try:
+            import torch
+        except ImportError:
+            raise SystemExit("PyTorch fehlt. Einrichtung: docs/04-audio.md, „Lokale Modelle“")
+        if torch.cuda.is_available():
+            return "cuda"
+        print("Hinweis: keine Grafikkarte gefunden, es läuft auf dem Prozessor (sehr langsam).")
+        return "cpu"
+
+    @staticmethod
+    def als_wav(werte, rate: int) -> bytes:
+        import numpy as np
+        werte = np.asarray(werte, dtype="float32")
+        if werte.ndim == 2:                       # (Kanäle, Samples) oder (Samples, Kanäle)
+            werte = werte.mean(axis=0 if werte.shape[0] < werte.shape[1] else 1)
+        pcm = (np.clip(werte, -1, 1) * 32767).astype("<i2").tobytes()
+        return pcm_zu_wav(pcm, rate)
+
+
+class VoxCPM(Lokal):
+    """VoxCPM2 (openbmb, Apache-2.0): Stimme per Beschreibung, dann Klonen mit Regie je Zeile.
+    Die Beschreibung bzw. Anweisung steht in Klammern vor dem Text. Die gewählte Stimme ist
+    eine Referenz-Aufnahme in docs/audio/stimmproben/<Figur>.flac mit ihrem Text daneben."""
+    name = "voxcpm"
+
+    def lade(self):
+        if VoxCPM._modell is None:
+            self.geraet()
+            try:
+                from voxcpm import VoxCPM as Modell
+            except ImportError:
+                raise SystemExit("voxcpm fehlt. Einrichtung: docs/04-audio.md, „Lokale Modelle“")
+            print("Lade VoxCPM2 (beim ersten Mal Download, etwa 5 GB) …")
+            VoxCPM._modell = Modell.from_pretrained(self.modelle.get("voxcpm", "openbmb/VoxCPM2"),
+                                                    load_denoiser=False)
+        return VoxCPM._modell
+
+    def text_mit_anweisung(self, text, anweisung, fig):
+        return f"({anweisung}){text}" if anweisung else text
+
+    def erzeugen(self, seed: int | None = None, **kw) -> tuple[bytes, str]:
+        """generate() von voxcpm 2.x: text, prompt_wav_path, prompt_text, reference_wav_path,
+        cfg_value, inference_timesteps …; liefert ein float32-Array. Einen Seed kennt es nicht,
+        deshalb über torch."""
+        import torch
+        m = self.lade()
+        if seed is not None:
+            torch.manual_seed(seed)
+        kw.setdefault("cfg_value", 2.0)
+        kw.setdefault("inference_timesteps", 10)
+        werte = m.generate(**kw)
+        rate = getattr(getattr(m, "tts_model", None), "sample_rate", 48000)
+        return self.als_wav(werte, rate), "wav"
+
+    def entwuerfe(self, fig, probe):
+        beschreibung = f"{fig.prompt}. German speaker, speaks German"
+        return [(*self.erzeugen(text=f"({beschreibung}){probe}", seed=s), str(s)) for s in (11, 22, 33)]
+
+    def entwurf_speichern(self, fig, entwurf_id, audio):
+        ffmpeg_pruefen()
+        STIMMPROBEN.mkdir(parents=True, exist_ok=True)
+        ziel = STIMMPROBEN / f"{fig.name}.flac"
+        r = subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", str(audio), "-ac", "1",
+                            "-ar", "48000", str(ziel)], capture_output=True, text=True)
+        if r.returncode:
+            raise SystemExit(f"ffmpeg: {r.stderr.strip()[:300]}")
+        probe = (audio.parent / "probe.txt").read_text(encoding="utf-8")
+        ziel.with_suffix(".txt").write_text(probe, encoding="utf-8")
+        return ziel.relative_to(ROOT).as_posix()
+
+    def sprechen(self, stimme, text, anweisung, fig):
+        ref = ROOT / stimme
+        if not ref.exists():
+            raise SystemExit(f"voxcpm: Stimmprobe {stimme} fehlt")
+        probe = ref.with_suffix(".txt").read_text(encoding="utf-8").strip()
+        return self.erzeugen(text=self.text_mit_anweisung(text, anweisung, fig),
+                             reference_wav_path=str(ref), prompt_wav_path=str(ref),
+                             prompt_text=probe)
+
+
+class StableAudio(Lokal):
+    """Stable Audio Open 1.0 über diffusers, für Geräusche. Lizenz: Stability AI Community
+    License, kostenlos bis 1 Mio. $ Jahresumsatz, vorher bei Stability registrieren, Hinweis
+    „Powered by Stability AI“ in die Credits. Das Modell ist auf Hugging Face freizuschalten
+    (Bedingungen annehmen, danach `huggingface-cli login`)."""
+    name = "stableaudio"
+
+    def lade(self):
+        if StableAudio._modell is None:
+            geraet = self.geraet()
+            try:
+                import torch
+                from diffusers import StableAudioPipeline
+            except ImportError:
+                raise SystemExit("diffusers fehlt. Einrichtung: docs/04-audio.md, „Lokale Modelle“")
+            print("Lade Stable Audio Open (beim ersten Mal Download) …")
+            pipe = StableAudioPipeline.from_pretrained(
+                self.modelle.get("stableaudio", "stabilityai/stable-audio-open-1.0"),
+                torch_dtype=torch.float16 if geraet == "cuda" else torch.float32)
+            StableAudio._modell = pipe.to(geraet)
+        return StableAudio._modell
+
+    def geraeusch(self, prompt, sekunden, schleife):
+        import torch
+        pipe = self.lade()
+        erzeuger = torch.Generator(pipe.device).manual_seed(int.from_bytes(os.urandom(4), "little"))
+        audio = pipe(prompt, negative_prompt="low quality, music, speech", num_inference_steps=100,
+                     audio_end_in_s=min(47.0, sekunden or 3.0), num_waveforms_per_prompt=1,
+                     generator=erzeuger).audios[0]
+        return self.als_wav(audio.float().cpu().numpy(), pipe.vae.sampling_rate), "wav"
+
+
+ANBIETER = {"elevenlabs": ElevenLabs, "fish": Fish, "gemini": Gemini, "voxcpm": VoxCPM,
+            "stableaudio": StableAudio, "test": Test}
 
 
 def pcm_zu_wav(pcm: bytes, rate: int) -> bytes:
@@ -645,6 +768,10 @@ def befehl_pruefen(args) -> int:
     for name in sorted(set(daten["stimmen"]) | set(daten["eigene_stimme"]) | set(daten["abschnitt_filter"])):
         if name not in namen:
             fehler.append(f"docs/audio/stimmen.yaml: Figur „{name}“ gibt es in 04-audio.md nicht")
+    for name, je in daten["stimmen"].items():
+        probe = (je or {}).get("voxcpm")
+        if probe and not ((ROOT / probe).exists() and (ROOT / probe).with_suffix(".txt").exists()):
+            fehler.append(f"docs/audio/stimmen.yaml: Stimmprobe {probe} von {name} fehlt (mit .txt)")
     for f in list(haupt.values()) + list(neben.values()):
         if f.name in daten["eigene_stimme"]:
             continue   # bekommt eine eigene Stimme, die Beschreibung geht in den Entwurf
@@ -846,14 +973,14 @@ def geraeusch_liste() -> list[tuple[str, str]]:
 
 def befehl_geraeusche(args) -> int:
     daten = stimmen_lesen()
-    anbieter = ANBIETER[args.anbieter or "elevenlabs"](daten)
+    anbieter = ANBIETER[args.anbieter or daten.get("geraeusch_anbieter", "elevenlabs")](daten)
     if not hasattr(anbieter, "geraeusch"):
-        raise SystemExit(f"{anbieter.name} erzeugt keine Geräusche (elevenlabs oder test)")
+        raise SystemExit(f"{anbieter.name} erzeugt keine Geräusche (elevenlabs, stableaudio oder test)")
     ordner_spiel = GAME_AUDIO / "geraeusche"
     da = {p.stem for p in ordner_spiel.glob("*")} if ordner_spiel.is_dir() else set()
     liste = [(k, p) for k, p in geraeusch_liste()
              if (args.kennung and k in args.kennung.split(",")) or (not args.kennung and k not in da)]
-    dollar = len(liste) * args.varianten * PREIS_GERAEUSCH * (anbieter.name != "test")
+    dollar = len(liste) * args.varianten * PREIS_GERAEUSCH.get(anbieter.name, 0)
     if not freigabe(f"{len(liste)} Geräusche mit je {args.varianten} Varianten ({anbieter.name})",
                     dollar, args.grenze, args.los):
         return 0
@@ -986,7 +1113,8 @@ def befehl_uebernehmen(args) -> int:
             anbieter.bereit()
             ordner = ARBEIT / "entwuerfe" / anb_name / id_
             eid = (ordner / f"{n}.id").read_text(encoding="utf-8").strip()
-            stimme = anbieter.entwurf_speichern(figuren[id_], eid)
+            datei = next(p for p in ordner.glob(f"{n}.*") if p.suffix != ".id")
+            stimme = anbieter.entwurf_speichern(figuren[id_], eid, datei)
             daten["stimmen"].setdefault(id_, {})[anb_name] = stimme
             shutil.rmtree(ordner)
             stimmen_geaendert += 1
@@ -1042,7 +1170,7 @@ def main() -> int:
     s.add_argument("--los", action="store_true")
     s = u.add_parser("geraeusche")
     s.add_argument("--kennung", help="einzelne Kennungen mit Komma; sonst alle fehlenden")
-    s.add_argument("--anbieter", choices=("elevenlabs", "test"))
+    s.add_argument("--anbieter", choices=("elevenlabs", "stableaudio", "test"))
     s.add_argument("--varianten", type=int, default=3)
     s.add_argument("--grenze", type=float, default=10.0)
     s.add_argument("--los", action="store_true")
