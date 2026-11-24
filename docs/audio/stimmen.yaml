@@ -1,0 +1,26 @@
+# Gewählte Stimmen je Figur und Anbieter (tools/vertonung.py, Ablauf in docs/04-audio.md,
+# Abschnitt „Vertonung mit dem Werkzeug“). Den Block „stimmen“ schreibt das Werkzeug beim
+# Übernehmen von der Hörseite; von Hand nur eintragen, wenn eine Stimme auf der Website des
+# Anbieters entstanden ist (python3 tools/vertonung.py waehlen <Figur> --id <ID> --anbieter fish).
+# Die Namen sind die Figuren-Namen aus 04-audio.md ohne Klammerzusatz.
+
+anbieter: elevenlabs      # Standard für vorschlagen und erzeugen
+
+modelle:                  # bei neuen Modellen hier umstellen
+  elevenlabs: eleven_v3
+  elevenlabs_entwurf: eleven_ttv_v3
+  elevenlabs_geraeusch: eleven_text_to_sound_v3
+  fish: s2.1-pro          # oder drama-3
+  gemini: gemini-3.8-flash-tts
+
+# Nebenfiguren, die statt der Variante einer Hauptstimme eine eigene Stimme bekommen
+# (zum Beispiel, wenn eine weibliche Variante einer Männerstimme nicht trägt)
+eigene_stimme:
+  - Rebellin            # „Variante von Kalle, weiblich“: Tonhöhe allein macht keine Frauenstimme
+
+# Zusätzliche Filter je Figur und Abschnitt (Effekte: funk, hall, schacht, blech, trichter)
+abschnitt_filter:
+  Opa:
+    W3: [funk]            # Opa spricht in Welt 3 nur als Hologramm
+
+stimmen: {}

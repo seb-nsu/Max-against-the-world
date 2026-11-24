@@ -346,3 +346,29 @@ Empfehlung: erst ohne Stimmen entwickeln. Entschieden wird spätestens zu Beginn
 | WET | Wettkandidat | welt-4 | Variante von Toadi (TOA), etwas tiefer |
 
 Opas Hologramm in Welt 3 ist Opas Stimme mit Funk-Filter und leichtem Rauschen in Audacity; Piepsi bekommt keine Stimme, nur Pieptöne. Pixels Kaskaden (zwei kurze Sprechblasen hintereinander, `05-spielsysteme.md`) werden als zwei Dateien erzeugt, damit die Pause dazwischen sitzt. Die Hyäne lacht nur in `W4_VERH_HYA_0350` und `W4_VERH_HYA_0400` (das sind die „marked lines“ ihres Prompts); alle anderen Zeilen bleiben flach und ernst, sonst verrät die Stimme das Rätsel.
+
+## Vertonung mit dem Werkzeug
+
+`tools/vertonung.py` erzeugt Stimmen, Sprechblasen und Geräusche über die API des Anbieters. Sebastian wählt nur noch aus: je Figur eine von drei Stimmen, bei Pointen eine von mehreren Fassungen, bei Geräuschen eine Variante. Es läuft auf dem PC mit dem eigenen API-Schlüssel als Umgebungsvariable (`ELEVENLABS_API_KEY`, `FISH_API_KEY`, `GEMINI_API_KEY`) und braucht `ffmpeg` (Windows: `winget install ffmpeg`).
+
+| Datei | Inhalt | Wer schreibt |
+| --- | --- | --- |
+| `docs/04-audio.md` | Voice-Design-Prompts, Nebenstimmen als „Variante von …“, Geräusch-Prompts | von Hand (Besitzer) |
+| `docs/audio/stimmen.yaml` | gewählte Stimme je Figur und Anbieter, Modelle, eigene Stimmen für Nebenfiguren, Filter je Abschnitt | Block `stimmen` das Werkzeug, Rest von Hand |
+| `docs/audio/betonung/<Abschnitt>.csv` | Sprechanweisung und Zahl der Versuche je Zeilen-ID (Format in der `README.md` daneben) | Claude je Abschnitt nach dessen Review, Sebastian liest gegen |
+| `docs/audio/vertont.csv` | je fertiger Aufnahme Prüfsumme des Textes, Anbieter, Stimme, Anweisung | das Werkzeug |
+| `arbeit/vertonung/` | Entwürfe, Versuche, Hörseite, Kostenprotokoll (nicht im Repo) | das Werkzeug |
+
+**Ablauf:**
+
+1. `python3 tools/vertonung.py vorschlagen --los` erzeugt je Figur ohne Stimme drei Vorschläge mit eigenen Zeilen als Probetext und schreibt `arbeit/vertonung/hoerseite.html`.
+2. Hörseite im Browser öffnen, je Figur eine Nummer wählen, „Auswahl speichern“. Dann `python3 tools/vertonung.py uebernehmen` (nimmt die neueste `auswahl.json` aus Downloads). Die Stimme wird beim Anbieter gespeichert, ihre ID kommt nach `stimmen.yaml`.
+3. `python3 tools/vertonung.py erzeugen --abschnitt P0` zeigt Zeichen und geschätzte Kosten; mit `--los` wird erzeugt. Zeilen mit einem Versuch kommen gleich nach `game/audio/stimmen/de/`, Zeilen mit mehreren auf die Hörseite. `--figur`, `--zeilen` und `--grenze` (Dollar) begrenzen einen Lauf.
+4. `python3 tools/vertonung.py geraeusche --los` erzeugt alle fehlenden Geräusche aus den Tabellen oben in drei Varianten (ElevenLabs), Auswahl wieder über die Hörseite.
+5. `python3 tools/vertonung.py` (läuft auch in der CI) prüft: jede Sprechblase hat eine Figur in den Stimmen-Tabellen, jede Sprechanweisung eine Zeile im Skript. Es meldet Aufnahmen, deren Text sich seither geändert hat; `erzeugen` macht genau diese neu.
+
+**Nebenfiguren:** Eine „Variante von …“ spricht mit der gewählten Stimme der Hauptfigur. Tonhöhe, Tempo und Filter (Hall, Funk, Blech, Trichter) setzt ffmpeg danach, Wörter wie „schläfrig“ oder „flüsternd“ werden zur Sprechanweisung. Was das Werkzeug nicht kann (Flimmers Stottern), meldet die Prüfung zum Nacharbeiten in Audacity. Trägt eine Variante nicht, kommt die Figur unter `eigene_stimme` in `stimmen.yaml` und bekommt eigene Vorschläge (Rebellin ist schon eingetragen). Laute, Brabbel-Laute und stumme Figuren werden nicht gesprochen.
+
+**Sprechanweisungen:** Englische Stichworte je Zeile in `docs/audio/betonung/`. Ohne Eintrag nimmt das Werkzeug, was die Regie-Spalte hergibt (flüstert, ruft, seufzt …). ElevenLabs bekommt sie als Audio-Tags (`[bored] [sighs]`), Fish in eckigen Klammern, Gemini als Stil zusammen mit dem Figuren-Prompt. Geschrieben werden sie je Abschnitt erst nach dessen Review, weil jede Textänderung eine bezahlte Aufnahme wertlos macht.
+
+**Anbieter (Stand 24. November 2026):** Für die rund 516.000 Zeichen eines Durchgangs nennt das Werkzeug grob 41 $ bei ElevenLabs (API-Preis 80 $ je Million Zeichen; im Abo andere Rechnung), 8 $ bei Fish Audio S2.1 Pro und 9 $ bei Gemini 3.8 Flash TTS (bis 31.12.2026, danach doppelt). Mit drei bis fünf Versuchen bei Pointen eher das Zwei- bis Dreifache. Gemini hat nur 30 feste Stimmen und kein Voice Design. Fish und Gemini machen keine Geräusche. Entschieden wird nach einem Blindtest mit 20 Zeilen von Max, Pixel und Opa aus dem Vertical Slice (`--anbieter fish` bzw. `gemini`, gleiche Zeilen). Lokale Modelle (Qwen3-TTS in ComfyUI) sind auf Radeon nicht getestet und beim Gefühl je Zeile schwächer; das Werkzeug kann sie später als weiteren Anbieter bekommen. Der Anbieter `test` erzeugt ohne Kosten einen Ton, um den Ablauf zu prüfen.

@@ -16,7 +16,8 @@ Jede Information hat genau einen Besitzer. Andere Dateien dürfen sie nennen, ab
 | Englischer Wortlaut je Schlüssel; Menü- und Systemtexte (de, en) | `uebersetzung/en.csv`, `uebersetzung/ui.csv` | – |
 | Spieldaten für Godot (`game/daten/`, `game/lokalisierung/texte.csv`) | werden erzeugt (`tools/spieldaten.py`, `tools/skript_export.py`), nie von Hand bearbeitet | – |
 | Aussehen, Prompts, Zustandsbilder, Animationen | `grafik/*.md` | – |
-| Musik, Geräusche, Stimmen | `04-audio.md` | – |
+| Musik, Geräusche, Stimmen (Prompts, Varianten) | `04-audio.md` | – |
+| Gewählte Stimmen, Sprechanweisungen je Zeile, Stand der Aufnahmen | `audio/stimmen.yaml`, `audio/betonung/*.csv`, `audio/vertont.csv` | `tools/vertonung.py` liest und schreibt sie |
 | Dialogsystem, Schrift, UI, Hinweissystem, Speichern, ID-Schemata | `05-spielsysteme.md` | – |
 | Technik, Werkzeuge, Kosten, Meilensteine, Recht und Markt | `03-produktion.md` | – |
 | Entscheidungen mit Begründung (Kurzfassung) | `entscheidungen.md` | – |
