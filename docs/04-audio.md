@@ -354,7 +354,7 @@ Opas Hologramm in Welt 3 ist Opas Stimme mit Funk-Filter und leichtem Rauschen i
 | Datei | Inhalt | Wer schreibt |
 | --- | --- | --- |
 | `docs/04-audio.md` | Voice-Design-Prompts, Nebenstimmen als „Variante von …“, Geräusch-Prompts | von Hand (Besitzer) |
-| `docs/audio/stimmen.yaml` | gewählte Stimme je Figur und Anbieter, Modelle, eigene Stimmen für Nebenfiguren, Filter je Abschnitt | Block `stimmen` das Werkzeug, Rest von Hand |
+| `docs/audio/stimmen.yaml` | gewählte Stimme je Figur und Anbieter, Anbieter je Figur, Modelle, eigene Stimmen für Nebenfiguren, Filter je Abschnitt | Block `stimmen` das Werkzeug, Rest von Hand |
 | `docs/audio/betonung/<Abschnitt>.csv` | Sprechanweisung und Zahl der Versuche je Zeilen-ID (Format in der `README.md` daneben) | Claude je Abschnitt nach dessen Review, Sebastian liest gegen |
 | `docs/audio/vertont.csv` | je fertiger Aufnahme Prüfsumme des Textes, Anbieter, Stimme, Anweisung | das Werkzeug |
 | `arbeit/vertonung/` | Entwürfe, Versuche, Hörseite, Kostenprotokoll (nicht im Repo) | das Werkzeug |
@@ -366,6 +366,8 @@ Opas Hologramm in Welt 3 ist Opas Stimme mit Funk-Filter und leichtem Rauschen i
 3. `python3 tools/vertonung.py erzeugen --abschnitt P0` zeigt Zeichen und geschätzte Kosten; mit `--los` wird erzeugt. Zeilen mit einem Versuch kommen gleich nach `game/audio/stimmen/de/`, Zeilen mit mehreren auf die Hörseite. `--figur`, `--zeilen` und `--grenze` (Dollar) begrenzen einen Lauf.
 4. `python3 tools/vertonung.py geraeusche --los` erzeugt alle fehlenden Geräusche aus den Tabellen oben in drei Varianten (ElevenLabs), Auswahl wieder über die Hörseite.
 5. `python3 tools/vertonung.py` (läuft auch in der CI) prüft: jede Sprechblase hat eine Figur in den Stimmen-Tabellen, jede Sprechanweisung eine Zeile im Skript. Es meldet Aufnahmen, deren Text sich seither geändert hat; `erzeugen` macht genau diese neu.
+
+**Anbieter je Figur:** `anbieter` in `stimmen.yaml` ist der Standard, `anbieter_je_figur` nennt Ausnahmen. Eingestellt (Sebastian, 24.11.2026): Max, Pixel und Opa sprechen mit ElevenLabs (79 % der Zeichen), alle anderen mit Fish Drama 3. Varianten folgen ihrer Hauptfigur (der Sitcom-Sohn als Variante von Max also ElevenLabs). `vorschlagen` und `erzeugen` wählen den Anbieter je Figur selbst; `--anbieter` überschreibt das für einen Lauf, etwa für den Blindtest. Beide Anbieter laufen durch dieselbe Lautheitsangleichung, ein Unterschied im Klang bleibt trotzdem möglich und gehört in den Blindtest.
 
 **Nebenfiguren:** Eine „Variante von …“ spricht mit der gewählten Stimme der Hauptfigur. Tonhöhe, Tempo und Filter (Hall, Funk, Blech, Trichter) setzt ffmpeg danach, Wörter wie „schläfrig“ oder „flüsternd“ werden zur Sprechanweisung. Was das Werkzeug nicht kann (Flimmers Stottern), meldet die Prüfung zum Nacharbeiten in Audacity. Trägt eine Variante nicht, kommt die Figur unter `eigene_stimme` in `stimmen.yaml` und bekommt eigene Vorschläge (Rebellin ist schon eingetragen). Laute, Brabbel-Laute und stumme Figuren werden nicht gesprochen.
 
@@ -385,6 +387,7 @@ Opas Hologramm in Welt 3 ist Opas Stimme mit Funk-Filter und leichtem Rauschen i
 | Mischung (Stimmen + Geräusche und Musik) | Günstig | Realistisch | Hoch |
 | --- | --- | --- | --- |
 | Alles ElevenLabs | 49 $ | 104 $ | 145 $ |
+| **Eingestellt:** Max, Pixel, Opa mit ElevenLabs, alle anderen mit Fish Drama 3, Geräusche und Musik ElevenLabs | 47 $ | 99 $ | 137 $ |
 | Fish Drama 3 + ElevenLabs | 36 $ | 76 $ | 102 $ |
 | Fish S2.1 Pro + ElevenLabs | 17 $ | 39 $ | 47 $ |
 | Gemini (Preis ab 2027) + ElevenLabs | 25 $ | 54 $ | 71 $ |

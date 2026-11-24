@@ -75,7 +75,7 @@ ABSCHNITT = {"prolog": ("P0", "SYS"), "welt-1": ("W1",), "welt-2": ("W2",), "wel
 # Gemini rechnet in Tokens: etwa 14 Zeichen je Sekunde, 25 Audio-Tokens je Sekunde, 9 $ je Mio.
 # voxcpm und stableaudio laufen lokal auf der Grafikkarte und kosten nur Strom.
 PREIS_JE_MIO = {"elevenlabs": 80.0, "fish": 15.0, "gemini": 17.0, "voxcpm": 0.0, "test": 0.0}
-PREIS_STIMMENTWURF = {"elevenlabs": 0.05, "fish": 0.0, "gemini": 0.01, "voxcpm": 0.0, "test": 0.0}
+PREIS_STIMMENTWURF = {"elevenlabs": 0.05, "fish": 0.01, "gemini": 0.01, "voxcpm": 0.0, "test": 0.0}
 PREIS_GERAEUSCH = {"elevenlabs": 0.10, "stableaudio": 0.0, "test": 0.0}   # je Variante, grob
 STIMMPROBEN = AUDIO_DOCS / "stimmproben"   # Referenz-Aufnahmen der lokal entworfenen Stimmen
 
@@ -251,9 +251,21 @@ def stimmen_lesen() -> dict:
     daten.setdefault("stimmen", {})
     daten.setdefault("eigene_stimme", [])
     daten.setdefault("abschnitt_filter", {})
-    for k in ("stimmen", "abschnitt_filter"):
+    daten.setdefault("anbieter_je_figur", {})
+    for k in ("stimmen", "abschnitt_filter", "anbieter_je_figur"):
         daten[k] = daten[k] or {}
     return daten
+
+
+def anbieter_name(figur: str, daten: dict, vorgabe: str | None = None) -> str:
+    """--anbieter gilt für alle; sonst der Eintrag in anbieter_je_figur, sonst der Standard."""
+    return vorgabe or daten["anbieter_je_figur"].get(figur) or daten["anbieter"]
+
+
+def preis_je_mio(name: str, daten: dict) -> float:
+    if name == "fish" and str(daten["modelle"].get("fish", "")).startswith("drama"):
+        return 50.0
+    return PREIS_JE_MIO.get(name, 0.0)
 
 
 def stimmen_schreiben(daten: dict):
@@ -469,7 +481,39 @@ class ElevenLabs(Anbieter):
 
 
 class Fish(Anbieter):
+    """TTS über /v1/tts; Stimmen per /v1/voice-design (0,01 $ je Anfrage, bis zu 4 Kandidaten),
+    die gewählte wird mit POST /model (multipart, train_mode=fast) zur festen Stimme."""
     name, schluessel_env = "fish", "FISH_API_KEY"
+
+    def entwuerfe(self, fig, probe):
+        antwort = self.anfrage("https://api.fish.audio/v1/voice-design",
+                               {"instruction": f"{fig.prompt}. German speaker."[:2000],
+                                "reference_text": probe[:150], "language": "de", "n": 3},
+                               {"Authorization": f"Bearer {self.schluessel}",
+                                "model": "voice-design-1"})
+        return [(base64.b64decode(k["audio_base64"]), "wav", k["id"])
+                for k in antwort.get("candidates", [])]
+
+    def entwurf_speichern(self, fig, entwurf_id, audio):
+        grenze = "----couchquest" + hashlib.sha1(os.urandom(8)).hexdigest()
+        teile = []
+        for feld, wert in (("type", "tts"), ("title", f"Couch Quest {fig.name}"),
+                           ("train_mode", "fast"), ("visibility", "private")):
+            teile.append(f'--{grenze}\r\nContent-Disposition: form-data; name="{feld}"\r\n\r\n'
+                         f"{wert}\r\n".encode())
+        teile.append(f'--{grenze}\r\nContent-Disposition: form-data; name="voices"; '
+                     f'filename="{audio.name}"\r\nContent-Type: audio/wav\r\n\r\n'.encode()
+                     + audio.read_bytes() + b"\r\n")
+        teile.append(f"--{grenze}--\r\n".encode())
+        anfrage = urllib.request.Request(
+            "https://api.fish.audio/model", b"".join(teile),
+            {"Authorization": f"Bearer {self.schluessel}",
+             "Content-Type": f"multipart/form-data; boundary={grenze}"})
+        try:
+            with urllib.request.urlopen(anfrage, timeout=180) as antwort:
+                return json.loads(antwort.read())["_id"]
+        except urllib.error.HTTPError as e:
+            raise SystemExit(f"fish: HTTP {e.code}: {e.read().decode('utf-8', 'replace')[:400]}")
 
     def sprechen(self, stimme, text, anweisung, fig):
         modell = self.modelle.get("fish", "s2.1-pro")
@@ -746,7 +790,7 @@ def befehl_pruefen(args) -> int:
     ids = {z["ID"] for z in zeilen} | {z["Basis"] for z in zeilen}
     hinweise = []
 
-    arten, zeichen, ohne_stimme, mit_betonung = {}, 0, set(), 0
+    arten, zeichen, ohne_stimme, mit_betonung, kosten_je = {}, 0, set(), 0, 0.0
     for z in zeilen:
         fig = figur_fuer(z, haupt, neben)
         if not fig:
@@ -758,14 +802,20 @@ def befehl_pruefen(args) -> int:
             continue
         zeichen += len(z["Text"])
         sf = stimm_figur(fig, daten, haupt)
-        if not (daten["stimmen"].get(sf.name) or {}).get(daten["anbieter"]):
+        anb = anbieter_name(sf.name, daten)
+        kosten_je += len(z["Text"]) / 1e6 * preis_je_mio(anb, daten)
+        if not (daten["stimmen"].get(sf.name) or {}).get(anb):
             ohne_stimme.add(sf.name)
         if z["ID"] in betonung or z["Basis"] in betonung:
             mit_betonung += 1
     for id_ in sorted(set(betonung) - ids):
         fehler.append(f"docs/audio/betonung: {id_} gibt es im Skript nicht (mehr)")
     namen = set(haupt) | {f.name for f in neben.values()}
-    for name in sorted(set(daten["stimmen"]) | set(daten["eigene_stimme"]) | set(daten["abschnitt_filter"])):
+    for name, anb in daten["anbieter_je_figur"].items():
+        if anb not in ANBIETER:
+            fehler.append(f"docs/audio/stimmen.yaml: anbieter_je_figur {name}: „{anb}“ unbekannt")
+    for name in sorted(set(daten["stimmen"]) | set(daten["eigene_stimme"]) | set(daten["abschnitt_filter"])
+                       | set(daten["anbieter_je_figur"])):
         if name not in namen:
             fehler.append(f"docs/audio/stimmen.yaml: Figur „{name}“ gibt es in 04-audio.md nicht")
     for name, je in daten["stimmen"].items():
@@ -789,8 +839,8 @@ def befehl_pruefen(args) -> int:
     print("Vertonung (Stand):")
     print(f"  Sprechblasen          {len(zeilen):6}   davon " +
           ", ".join(f"{k} {v}" for k, v in sorted(arten.items())))
-    print(f"  zu sprechen, Zeichen  {zeichen:6}   ({daten['anbieter']}, grob "
-          f"{zeichen / 1e6 * PREIS_JE_MIO.get(daten['anbieter'], 0):.0f} $ je Durchgang)")
+    print(f"  zu sprechen, Zeichen  {zeichen:6}   (grob {kosten_je:.0f} $ je Durchgang mit den "
+          "eingestellten Anbietern)")
     print(f"  mit Sprechanweisung   {mit_betonung:6}")
     print(f"  vertont               {len(vertont):6}   veraltet {len(veraltet)}, ohne Zeile {len(verwaist)}")
     if ohne_stimme:
@@ -852,7 +902,6 @@ def probe_text(fig: Figur, zeilen: list[dict], haupt, neben) -> str:
 def befehl_vorschlagen(args) -> int:
     haupt, neben, _ = figuren_lesen()
     daten = stimmen_lesen()
-    anbieter = ANBIETER[args.anbieter or daten["anbieter"]](daten)
     zeilen = zeilen_lesen()
     eigene = [f for f in neben.values() if f.name in daten["eigene_stimme"]]
     kandidaten = [f for f in list(haupt.values()) + eigene if f.art == "stimme" or f in eigene]
@@ -861,28 +910,35 @@ def befehl_vorschlagen(args) -> int:
         if not kandidaten:
             raise SystemExit(f"Figur {args.figur} nicht gefunden oder ohne eigene Stimme")
     elif not args.neu:
-        kandidaten = [f for f in kandidaten
-                      if not (daten["stimmen"].get(f.name) or {}).get(anbieter.name)]
+        kandidaten = [f for f in kandidaten if not (daten["stimmen"].get(f.name) or {}).get(
+            anbieter_name(f.name, daten, args.anbieter))]
     for f in eigene:
         if not f.prompt:
             f.prompt = f"{haupt[f.eltern].prompt}. Variation: {f.loesung}"
-    dollar = len(kandidaten) * PREIS_STIMMENTWURF.get(anbieter.name, 0)
-    if not freigabe(f"Stimmen-Vorschläge ({anbieter.name}) für {len(kandidaten)} Figuren: "
-                    + ", ".join(f.name for f in kandidaten), dollar, args.grenze, args.los):
-        return 0
-    anbieter.bereit()
+    gruppen = {}
     for f in kandidaten:
-        ordner = ARBEIT / "entwuerfe" / anbieter.name / f.name
-        if ordner.exists():
-            shutil.rmtree(ordner)
-        ordner.mkdir(parents=True)
-        probe = probe_text(f, zeilen, haupt, neben)
-        for i, (audio, endung, eid) in enumerate(anbieter.entwuerfe(f, probe), start=1):
-            (ordner / f"{i}.{endung}").write_bytes(audio)
-            (ordner / f"{i}.id").write_text(eid, encoding="utf-8")
-        (ordner / "probe.txt").write_text(probe, encoding="utf-8")
-        print(f"  {f.name}: Vorschläge in {ordner.relative_to(ROOT)}")
-    kosten_merken(anbieter.name, "Stimmen-Vorschläge", 0, dollar)
+        gruppen.setdefault(anbieter_name(f.name, daten, args.anbieter), []).append(f)
+    dollar = sum(len(fs) * PREIS_STIMMENTWURF.get(a, 0) for a, fs in gruppen.items())
+    if not freigabe("Stimmen-Vorschläge für " + "; ".join(
+            f"{a}: {', '.join(f.name for f in fs)}" for a, fs in sorted(gruppen.items())),
+            dollar, args.grenze, args.los):
+        return 0
+    for name, figuren in sorted(gruppen.items()):
+        anbieter = ANBIETER[name](daten)
+        anbieter.bereit()
+        for f in figuren:
+            ordner = ARBEIT / "entwuerfe" / anbieter.name / f.name
+            if ordner.exists():
+                shutil.rmtree(ordner)
+            ordner.mkdir(parents=True)
+            probe = probe_text(f, zeilen, haupt, neben)
+            for i, (audio, endung, eid) in enumerate(anbieter.entwuerfe(f, probe), start=1):
+                (ordner / f"{i}.{endung}").write_bytes(audio)
+                (ordner / f"{i}.id").write_text(eid, encoding="utf-8")
+            (ordner / "probe.txt").write_text(probe, encoding="utf-8")
+            print(f"  {f.name}: Vorschläge in {ordner.relative_to(ROOT)}")
+        kosten_merken(name, "Stimmen-Vorschläge", 0,
+                      len(figuren) * PREIS_STIMMENTWURF.get(name, 0))
     hoerseite_schreiben()
     return 0
 
@@ -890,7 +946,12 @@ def befehl_vorschlagen(args) -> int:
 def befehl_erzeugen(args) -> int:
     haupt, neben, _ = figuren_lesen()
     daten = stimmen_lesen()
-    anbieter = ANBIETER[args.anbieter or daten["anbieter"]](daten)
+    instanzen = {}
+
+    def anbieter_fuer(name):
+        if name not in instanzen:
+            instanzen[name] = ANBIETER[name](daten)
+        return instanzen[name]
     betonung, _ = betonung_lesen()
     vertont = vertont_lesen()
     auftraege, fehlende = [], set()
@@ -908,25 +969,33 @@ def befehl_erzeugen(args) -> int:
         if v and v["Textprüfsumme"] == pruefsumme(z["Text"]) and not args.neu:
             continue
         sf = stimm_figur(fig, daten, haupt)
+        anbieter = anbieter_fuer(anbieter_name(sf.name, daten, args.anbieter))
         stimme = (daten["stimmen"].get(sf.name) or {}).get(anbieter.name)
         if not stimme and anbieter.name != "test":
-            fehlende.add(sf.name)
+            fehlende.add(f"{sf.name} ({anbieter.name})")
             continue
-        auftraege.append((z, fig, sf, stimme or f"test-{sf.kuerzel}"))
+        auftraege.append((z, fig, sf, stimme or f"test-{sf.kuerzel}", anbieter))
     if fehlende:
         print("Ohne gewählte Stimme übersprungen: " + ", ".join(sorted(fehlende)))
     if not auftraege:
         print("Nichts zu erzeugen.")
         return 0
-    zeichen = sum(len(z["Text"]) * versuche_fuer(z, betonung, args.versuche) for z, *_ in auftraege)
-    dollar = zeichen / 1e6 * PREIS_JE_MIO.get(anbieter.name, 0)
-    if not freigabe(f"{len(auftraege)} Sprechblasen, {zeichen} Zeichen mit allen Versuchen "
-                    f"({anbieter.name})", dollar, args.grenze, args.los):
+    je_anbieter = {}
+    for z, *_, anb in auftraege:
+        je_anbieter[anb.name] = je_anbieter.get(anb.name, 0) + len(z["Text"]) * versuche_fuer(
+            z, betonung, args.versuche)
+    zeichen = sum(je_anbieter.values())
+    dollar = sum(n / 1e6 * preis_je_mio(a, daten) for a, n in je_anbieter.items())
+    if not freigabe(f"{len(auftraege)} Sprechblasen, {zeichen} Zeichen mit allen Versuchen ("
+                    + ", ".join(f"{a} {n}" for a, n in sorted(je_anbieter.items())) + ")",
+                    dollar, args.grenze, args.los):
         return 0
-    anbieter.bereit()
+    for anb in instanzen.values():
+        if anb.name in je_anbieter:
+            anb.bereit()
     ffmpeg_pruefen()
     ziel_ordner = GAME_AUDIO / "stimmen" / SPRACHE
-    for n, (z, fig, sf, stimme) in enumerate(auftraege, start=1):
+    for n, (z, fig, sf, stimme, anbieter) in enumerate(auftraege, start=1):
         ton = anweisung(z, fig, betonung)
         text = anbieter.text_mit_anweisung(z["Text"], ton, sf)
         ordner = ARBEIT / "zeilen" / z["ID"]
@@ -947,7 +1016,8 @@ def befehl_erzeugen(args) -> int:
             uebernehmen_zeile(z["ID"], 1, ziel_ordner, vertont)
         print(f"  [{n}/{len(auftraege)}] {z['ID']}  {versuche} Versuch(e)")
     vertont_schreiben(vertont)
-    kosten_merken(anbieter.name, "Zeilen", zeichen, dollar)
+    for a, n in je_anbieter.items():
+        kosten_merken(a, "Zeilen", n, n / 1e6 * preis_je_mio(a, daten))
     hoerseite_schreiben()
     return 0
 
