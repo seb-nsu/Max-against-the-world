@@ -446,7 +446,7 @@ class ElevenLabs(Anbieter):
         return f"{tags} {text}".strip()
 
     def sprechen(self, stimme, text, anweisung, fig):
-        modell = self.modelle.get("elevenlabs", "eleven_v3")
+        modell = self.modelle.get("elevenlabs", "eleven_v4")
         audio = self.anfrage(f"{self.basis}/text-to-speech/{stimme}?output_format=mp3_44100_128",
                              {"text": self.text_mit_anweisung(text, anweisung, fig),
                               "model_id": modell, "language_code": SPRACHE},
