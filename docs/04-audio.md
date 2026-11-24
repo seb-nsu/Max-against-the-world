@@ -6,7 +6,7 @@ Aufgebaut wie die Grafik-Dateien: erst die Werkzeuge, dann Regeln für Prompts, 
 
 | Aufgabe | Empfehlung | Kosten | Warum |
 | --- | --- | --- | --- |
-| Sprachausgabe (Dialoge) | ElevenLabs, Voice Design | Starter 6 $/Monat zum Testen, für die Gesamtproduktion etwa vier Monate Pro (rund 400 $, Rechnung unter „Sprachausgabe“) | Beste deutsche Betonung, Stimmen per Beschreibung erfinden, kommerzielle Rechte ab Starter |
+| Sprachausgabe (Dialoge) | ElevenLabs, Voice Design | Nutzung nach Bedarf ohne Abo, 80 $ je Million Zeichen: das ganze Spiel 41–124 $ je nach Zahl der Versuche (Rechnung unter „Vertonung mit dem Werkzeug“, Stand 24.11.2026) | Beste deutsche Betonung, Stimmen per Beschreibung erfinden, kommerzielle Rechte ab Starter |
 | Geräusche (SFX) | ElevenLabs Sound Effects | im selben Abo | Geräusch per Satz beschreiben, mehrere Varianten pro Klick |
 | Musik, Cloud | ElevenLabs Music | im selben Abo | Mit lizenzierter Musik trainiert, Spiele ausdrücklich erlaubt; verbietet Künstlernamen im Prompt, passt also zur Parodie-Regel |
 | Musik, lokal | ACE-Step 1.5 in ComfyUI Desktop | kostenlos | Apache-2.0-Lizenz (beim Download prüfen und so in die Credits eintragen), laut AMD läuft es unter Windows auf Radeon über ComfyUI Desktop (Vorlage „ACE Step 1.5 Turbo AIO“); ideal zum Ausprobieren vieler Varianten |
@@ -346,3 +346,72 @@ Empfehlung: erst ohne Stimmen entwickeln. Entschieden wird spätestens zu Beginn
 | WET | Wettkandidat | welt-4 | Variante von Toadi (TOA), etwas tiefer |
 
 Opas Hologramm in Welt 3 ist Opas Stimme mit Funk-Filter und leichtem Rauschen in Audacity; Piepsi bekommt keine Stimme, nur Pieptöne. Pixels Kaskaden (zwei kurze Sprechblasen hintereinander, `05-spielsysteme.md`) werden als zwei Dateien erzeugt, damit die Pause dazwischen sitzt. Die Hyäne lacht nur in `W4_VERH_HYA_0350` und `W4_VERH_HYA_0400` (das sind die „marked lines“ ihres Prompts); alle anderen Zeilen bleiben flach und ernst, sonst verrät die Stimme das Rätsel.
+
+## Vertonung mit dem Werkzeug
+
+`tools/vertonung.py` erzeugt Stimmen, Sprechblasen und Geräusche über die API des Anbieters. Sebastian wählt nur noch aus: je Figur eine von drei Stimmen, bei Pointen eine von mehreren Fassungen, bei Geräuschen eine Variante. Es läuft auf dem PC mit dem eigenen API-Schlüssel als Umgebungsvariable (`ELEVENLABS_API_KEY`, `FISH_API_KEY`, `GEMINI_API_KEY`) und braucht `ffmpeg` (Windows: `winget install ffmpeg`).
+
+| Datei | Inhalt | Wer schreibt |
+| --- | --- | --- |
+| `docs/04-audio.md` | Voice-Design-Prompts, Nebenstimmen als „Variante von …“, Geräusch-Prompts | von Hand (Besitzer) |
+| `docs/audio/stimmen.yaml` | gewählte Stimme je Figur und Anbieter, Anbieter je Figur, Modelle, eigene Stimmen für Nebenfiguren, Filter je Abschnitt | Block `stimmen` das Werkzeug, Rest von Hand |
+| `docs/audio/betonung/<Abschnitt>.csv` | Sprechanweisung und Zahl der Versuche je Zeilen-ID (Format in der `README.md` daneben) | Claude je Abschnitt nach dessen Review, Sebastian liest gegen |
+| `docs/audio/vertont.csv` | je fertiger Aufnahme Prüfsumme des Textes, Anbieter, Stimme, Anweisung | das Werkzeug |
+| `arbeit/vertonung/` | Entwürfe, Versuche, Hörseite, Kostenprotokoll (nicht im Repo) | das Werkzeug |
+
+**Ablauf:**
+
+1. `python3 tools/vertonung.py vorschlagen --los` erzeugt je Figur ohne Stimme drei Vorschläge mit eigenen Zeilen als Probetext und schreibt `arbeit/vertonung/hoerseite.html`.
+2. Hörseite im Browser öffnen, je Figur eine Nummer wählen, „Auswahl speichern“. Dann `python3 tools/vertonung.py uebernehmen` (nimmt die neueste `auswahl.json` aus Downloads). Die Stimme wird beim Anbieter gespeichert, ihre ID kommt nach `stimmen.yaml`.
+3. `python3 tools/vertonung.py erzeugen --abschnitt P0` zeigt Zeichen und geschätzte Kosten; mit `--los` wird erzeugt. Zeilen mit einem Versuch kommen gleich nach `game/audio/stimmen/de/`, Zeilen mit mehreren auf die Hörseite. `--figur`, `--zeilen` und `--grenze` (Dollar) begrenzen einen Lauf.
+4. `python3 tools/vertonung.py geraeusche --los` erzeugt alle fehlenden Geräusche aus den Tabellen oben in drei Varianten (ElevenLabs), Auswahl wieder über die Hörseite.
+5. `python3 tools/vertonung.py` (läuft auch in der CI) prüft: jede Sprechblase hat eine Figur in den Stimmen-Tabellen, jede Sprechanweisung eine Zeile im Skript. Es meldet Aufnahmen, deren Text sich seither geändert hat; `erzeugen` macht genau diese neu.
+
+**Anbieter je Figur:** `anbieter` in `stimmen.yaml` ist der Standard, `anbieter_je_figur` nennt Ausnahmen. Eingestellt (Sebastian, 24.11.2026): Max, Pixel und Opa sprechen mit ElevenLabs (79 % der Zeichen), alle anderen mit Fish Drama 3. Varianten folgen ihrer Hauptfigur (der Sitcom-Sohn als Variante von Max also ElevenLabs). `vorschlagen` und `erzeugen` wählen den Anbieter je Figur selbst; `--anbieter` überschreibt das für einen Lauf, etwa für den Blindtest. Beide Anbieter laufen durch dieselbe Lautheitsangleichung, ein Unterschied im Klang bleibt trotzdem möglich und gehört in den Blindtest.
+
+**Nebenfiguren:** Eine „Variante von …“ spricht mit der gewählten Stimme der Hauptfigur. Tonhöhe, Tempo und Filter (Hall, Funk, Blech, Trichter) setzt ffmpeg danach, Wörter wie „schläfrig“ oder „flüsternd“ werden zur Sprechanweisung. Was das Werkzeug nicht kann (Flimmers Stottern), meldet die Prüfung zum Nacharbeiten in Audacity. Trägt eine Variante nicht, kommt die Figur unter `eigene_stimme` in `stimmen.yaml` und bekommt eigene Vorschläge (Rebellin ist schon eingetragen). Laute, Brabbel-Laute und stumme Figuren werden nicht gesprochen.
+
+**Sprechanweisungen:** Englische Stichworte je Zeile in `docs/audio/betonung/`. Ohne Eintrag nimmt das Werkzeug, was die Regie-Spalte hergibt (flüstert, ruft, seufzt …). ElevenLabs bekommt sie als Audio-Tags (`[bored] [sighs]`), Fish in eckigen Klammern, Gemini als Stil zusammen mit dem Figuren-Prompt. Geschrieben werden sie je Abschnitt erst nach dessen Review, weil jede Textänderung eine bezahlte Aufnahme wertlos macht.
+
+**Kosten (API-Preise nach Bedarf, Stand 24. November 2026):** Grundlage sind 516.000 Zeichen Sprache je Durchgang (bei Fish 531.000 UTF-8-Bytes), 71 Geräusche mit je 3 Varianten (etwa 10 Minuten) und rund 48 Minuten Musik (30 Raum-Schleifen zu 90 Sekunden, 3 Lieder, Stings und Jingles). „Günstig“ heißt jede Zeile und jedes Stück einmal, „realistisch“ jede Zeile im Schnitt zweimal und jedes Stück dreimal, „hoch“ jede Zeile dreimal.
+
+| Preis | Einheit |
+| --- | --- |
+| ElevenLabs TTS v4 | 80 $ je Mio. Zeichen |
+| ElevenLabs Soundeffekte | etwa 0,12 $ je Minute |
+| ElevenLabs Musik | etwa 0,14 $ je Minute |
+| Fish S2.1 Pro / Drama 3 | 15 $ / 50 $ je Mio. UTF-8-Bytes (Drama 3 bis 30.11.2026 für 10 $); Stimmentwurf 0,01 $; Abo-Credits gelten nicht für die API |
+| Gemini 3.8 Flash TTS | 0,50 $ je Mio. Text-Tokens und 9 $ je Mio. Audio-Tokens (25 je Sekunde), ab 1.1.2027 das Doppelte; nur 30 feste Stimmen |
+| VoxCPM2, Stable Audio Open, ACE-Step (lokal) | 0 $, nur Strom und Zeit |
+
+| Mischung (Stimmen + Geräusche und Musik) | Günstig | Realistisch | Hoch |
+| --- | --- | --- | --- |
+| Alles ElevenLabs | 49 $ | 104 $ | 145 $ |
+| **Eingestellt:** Max, Pixel, Opa mit ElevenLabs, alle anderen mit Fish Drama 3, Geräusche und Musik ElevenLabs | 47 $ | 99 $ | 137 $ |
+| Fish Drama 3 + ElevenLabs | 36 $ | 76 $ | 102 $ |
+| Fish S2.1 Pro + ElevenLabs | 17 $ | 39 $ | 47 $ |
+| Gemini (Preis ab 2027) + ElevenLabs | 25 $ | 54 $ | 71 $ |
+| Fish Drama 3 + lokal | 28 $ | 54 $ | 81 $ |
+| Alles lokal | 0 $ | 0 $ | 0 $ |
+
+Entschieden wird nach dem Klang in einem Blindtest mit 20 Zeilen von Max, Pixel und Opa aus dem Vertical Slice (unter 10 $), nicht nach dem Preis; der Unterschied zwischen den Cloud-Mischungen liegt für das ganze Spiel unter 100 $. Der Anbieter `test` erzeugt ohne Kosten einen Ton, um den Ablauf zu prüfen.
+
+### Lokale Modelle (geprüft am 24. November 2026)
+
+| Anbieter im Werkzeug | Modell | Lizenz | Kann | Grenzen |
+| --- | --- | --- | --- | --- |
+| `voxcpm` | VoxCPM2 von OpenBMB, 2 Mrd. Parameter, etwa 8 GB Grafikspeicher | Apache-2.0, kommerziell frei | Deutsch, Stimme per Beschreibung, dann Klonen mit Regie in Klammern je Zeile, 48 kHz | Ergebnisse schwanken zwischen Läufen (Karte empfiehlt 1–3 Versuche); deutsche Qualität gegenüber ElevenLabs ungeprüft |
+| `stableaudio` | Stable Audio Open 1.0 über `diffusers`, bis 47 Sekunden | Stability AI Community License: frei bis 1 Mio. $ Jahresumsatz, vorher bei Stability registrieren, „Powered by Stability AI“ in die Credits | Geräusche, Atmosphären, Einzeltöne | Schwächer als ElevenLabs; Modell auf Hugging Face freischalten und `huggingface-cli login` |
+
+Bei VoxCPM2 ist die gewählte Stimme eine kurze Aufnahme: `docs/audio/stimmproben/<Figur>.flac` mit ihrem Text daneben (`.txt`). Jede Zeile wird aus ihr geklont, die Sprechanweisung steht in Klammern davor, zum Beispiel `(bored, sighs)Und ich bin ziemlich sicher …`. Die Stimmproben kommen ins Repo, damit die Stimme bei jedem Lauf gleich bleibt.
+
+Nicht kommerziell nutzbar und deshalb nicht eingebaut: F5-TTS (auch die deutschen Feintunings), XTTS-v2, MiraToffel, Fish S2 lokal, Higgs Audio, VibeVoice; für Geräusche AudioGen, TangoFlux, MMAudio, AudioLDM2 und Tango 2. Weitere deutsche Kandidaten mit freier Lizenz, falls VoxCPM2 nicht trägt: Qwen3-TTS (Apache-2.0) und Kartoffelbox (deutsches Chatterbox, MIT, Laut-Tags wie `<chuckle>`).
+
+**Einrichtung auf dem PC (Radeon, Windows):** Keins der Modelle nennt AMD ausdrücklich; PyTorch mit ROCm läuft aber unter Windows (dieselbe Grundlage wie ComfyUI Desktop). Ablauf:
+
+1. Python 3.12 und eine eigene Umgebung: `py -3.12 -m venv C:\cq-audio`, dann `C:\cq-audio\Scripts\activate`.
+2. PyTorch mit ROCm nach der Anleitung von AMD installieren ([ROCm: PyTorch und ComfyUI](https://rocm.docs.amd.com/en/docs-7.9.0/install/pytorch-comfyui.html)).
+3. `pip install voxcpm diffusers soundfile pyyaml`. Danach prüfen, dass pip PyTorch nicht durch die CUDA-Fassung ersetzt hat: `python -c "import torch; print(torch.cuda.is_available(), torch.version.hip)"` muss `True` und eine HIP-Version zeigen. Sonst Schritt 2 wiederholen.
+4. Erster Lauf mit einer Figur: `python tools/vertonung.py vorschlagen --anbieter voxcpm --figur Max --los`. Beim ersten Mal lädt das Modell (einige GB).
+
+Geräusche ergänzen sich mit CC0-Sammlungen: Klicks, Schritte und UI-Töne sind dort oft besser als jede KI.
