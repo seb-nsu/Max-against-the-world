@@ -1,6 +1,6 @@
 # pr-w1: Welt-Prüfer Welt 1 „Schwurbelstein“ (Fortsetzung in der Cloud, ab 25.11.2026)
 
-**Stand: fertig (25.11.2026).**
+**Stand: Teil 1 fertig (25.11.2026); Teil 2 (Nachprüfung, ganz unten) in Arbeit.**
 
 **Zahlen:** 56 Funde, davon 3 kritisch, 27 wichtig, 26 kosmetisch. Neu (R5-W1-…): 37 (1 kritisch, 19 wichtig, 17 kosmetisch). Mit alter ID bestätigt oder weiterhin offen (GD-W1-…, GD-W2-03, W1-13, W1-20): 19 (2 kritisch, 8 wichtig, 9 kosmetisch).
 
@@ -352,4 +352,40 @@ Nicht gemessen: Ankunftsszene (W1-01), Gespräche mit Lesezeit je Raum.
 - `@id`-Klicks dauern so lange, dass ein Zuruf dazwischen starten und den Klick schlucken kann (zweimal bei Zeldina in den Abstellkammern); für Proben, auf die es ankommt, Koordinaten nehmen.
 - Nach `stand holen` in einem frischen Prozess lassen sich nur Figuren ansprechen, mit denen im Stand noch nie geredet wurde (R5-W1-34). Abhilfe für Tests: im selben Prozess durchspielen (Lauf `pr-w1-weg`) und von dort Stände holen; dann greift aber GD-W2-03 für Props.
 
-FERTIG
+## Teil 2: Nachprüfung (Auftrag vom 25.11., zweiter Durchgang)
+
+Stand: in Arbeit. Ein Godot-Prozess (Lauf `pr-w1-haupt`, nach Neustart). Protokolle der Befehlsfolgen liegen unter `/home/user/lauf/b2/` (nicht im Repo), Auszüge unter `belege/pr-w1/t2_*`.
+
+### T2.0 Neue Funde aus Teil 2
+
+(folgt)
+
+### T2.1 Frühere Funde, Stand heute, vollständig
+
+(folgt)
+
+### T2.2 Hilfe-Pfote, alle drei Stufen je Schritt
+
+(folgt)
+
+### T2.3 Englisch im Spiel
+
+(folgt)
+
+### T2.4 Speichern und Laden mitten in den Ketten
+
+(folgt)
+
+### T2.5 Reihenfolgen und Varianten, Ankunftsszene
+
+(folgt)
+
+### T2.6 Figuren außerhalb des Raums
+
+(folgt)
+
+### T2.7 Nicht geprüft (Teil 2)
+
+(folgt)
+
+TEIL 2 IN ARBEIT
