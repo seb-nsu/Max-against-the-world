@@ -15,8 +15,8 @@ Geprüft wird: Humor und Ton, eigene Stimme je Figur, KI-Klang jeder Dialogzeile
 | ZS2_ | 87 | 87 |
 | ZS3_ | 112 | 112 |
 | W1_ | 1433 | 1433 |
-| SYS_ | 0 | 108 |
-| UI_ | 0 | 965 |
+| SYS_ | 108 | 108 |
+| UI_ | 965 | 965 |
 
 ## Stand
 
@@ -24,7 +24,7 @@ Geprüft wird: Humor und Ton, eigene Stimme je Figur, KI-Klang jeder Dialogzeile
 - [x] Prolog
 - [x] Zwischenspiele 1–3
 - [x] Welt 1
-- [ ] SYS, UI
+- [x] SYS, UI
 - [ ] Auswertung (Stimmen, Anspielungen, Running Gags, Lokalisierung, Top 10)
 
 Vorgänger `nd-a.md`: enthält nur Kopf und Arbeitsplan, keine Funde. Es gibt nichts zu übernehmen außer dem Auszugs-Werkzeug.
@@ -306,3 +306,15 @@ Zu R5-TX-15: Wird `W1_DORF_PIX_1320_2` wie vorgeschlagen geändert, bleibt `W1_H
 | 8 | `W1_TAV_PIX_1610_2` | Es ist eine Gabe. Eine schwere Gabe, wenn man sie nicht nutzen darf. | Er wird langsam ungeduldig. Ich übrigens auch. |
 | 9 | `W1_STAB_MAX_0555` | Mein Zauberstab, gemacht aus Holz, Käse und Hoffnung. Zwei davon sind haltbar. | Mein Zauberstab. Ein Kochlöffel mit Käse dran. Haltbar ist davon nur der Löffel. |
 | 10 | `W1_DORF_PIX_1320`/`_2` | Das Schloss da oben bewegt sich nicht. Entweder ist es gut festgemacht oder sehr faul. // Ich respektiere beides, das Zweite allerdings ein wenig mehr. | Das Schloss da oben bewegt sich nicht. Es ist gut festgemacht oder sehr faul. // Ich hoffe auf faul. Mit so einem Schloss könnte ich mich anfreunden. |
+
+## System und Oberfläche (`SYS_` 108 Zeilen, `UI_` 965 Zeilen)
+
+`SYS_` (Ersatz-, Wiederholungs- und Plauderzeilen) habe ich wie Dialog gelesen, `UI_` auf Lokalisierung, Länge und einheitliche Benennung. In keiner Zeile des Umfangs fehlt das Englische oder ist leer.
+
+**KI-Klang `SYS_`: gering.** 108 Zeilen, kein Fund im Deutschen. Die Pools sind abwechslungsreich gebaut und halten die Stimmen: Max kurz und mit Medienwort (16 von 46 Max-Zeilen, was bei einem Pool gewollt ist), Pixel in zwei Blasen mit Nachsatz. Stark: „Ich kannte einmal eine Katze, die genau das versucht hat. // Sie spricht bis heute nicht darüber, und wir respektieren das alle.“ (`SYS_ERS_PIX_0190`), „Lädt. Lädt immer noch. Ich nehm das als Nein.“ (`SYS_ERS_MAX_0140`), „Nichts Neues. Wenn sich etwas ändert, sage ich Bescheid. // Das ist gelogen, ich sage nie Bescheid. Aber es klingt nett.“ (`SYS_WDH_PIX_0080`).
+
+| ID | Zeilen-ID | Sprecher | Priorität | Muster | Original | Grund | Vorschlag |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| R5-TX-42 | `UI_OBJ_LEUCHTPILZ`, `UI_OBJ_LEUCHTPILZE`, `UI_OBJ_LEUCHTTRANK`, `UI_OBJ_BACH`, `UI_OBJ_TEPPICH`, `UI_OBJ_FLASCHE`, `UI_OBJ_STREIKSCHILDER`, `UI_OBJ_HUHN`, `UI_RAUM_DORFPLATZ`, `UI_OBJ_OPAS_PAPYRUS`, `UI_OBJ_HAUFEN`; `W1_HINT_PIX_0330`, `W1_HINT_PIX_0631` | – | kosmetisch | Lokalisierung: Objektname und Dialog benennen im Englischen dasselbe Ding verschieden | „Glowing mushroom“ gegen „glow mushroom“ (5 Dialogzeilen) · „Glowing potion“ gegen „glow potion“ (4) · „Brook“ gegen „stream“ (5) · „Carpet“ gegen „rug“ (`W1_WASS_MAX_0100`) · „Little bottle“ gegen „vial“ (2) · „Strike signs“ gegen „picket signs“ · „Hen“ gegen „chicken“ (6) · „Smithy goat“ gegen „forge goat“, „jug from the forge“ gegen „from the smithy“ · „Lower Crumbly“ gegen „Castle Crumble“ · „Grandpa's Papyrus“, „Crumbled Heap“ groß, alle anderen Namen klein | Der Spieler liest den Namen am Hotspot und hört im Satz daneben ein anderes Wort. Bei den Hinweisen stört es am meisten: „forge“ heißt im Spiel die Esse (`UI_OBJ_ESSE`), die Schmiede heißt „Smithy“. | Namen an den Dialog angleichen: „Glow mushroom(s)“, „Glow potion“, „Stream“, „Rug“, „Vial“, „Picket signs“, „Chicken“, „Lower Crumble square“ (20 Zeichen statt 28), „Grandpa's papyrus“, „Crumbled heap“. Hinweise: „Fetch the smithy goat.“ / „Then the jug from the smithy …“ |
+| R5-TX-43 | `UI_W2_BAUSTEIN_BLAU` | (Rätselbaustein) | kosmetisch | Lehnübersetzung (M45) | „Es ist blau und hat trotzdem keine Laune“ (EN: „It is blue and still not sad“) | Das Wortspiel ist englisch (blue für traurig). Im Deutschen heißt „blau“ betrunken; „keine Laune“ ergibt mit „blau“ keinen Witz. | „Es ist blau und trotzdem nüchtern“ (Englisch bleibt) |
+| R5-TX-44 | `SYS_ERS_PIX_0300`/`_2`, `SYS_WDH_MAX_0080`, `UI_TASCHE_HILFE` | Pixel, Max | kosmetisch | Lokalisierung: Redewendung wörtlich übersetzt, steifes Englisch | „If that works, I will eat a broom.“ / „Grandpa says a lot of things when the day is long.“ / „Select packs or unpacks. Look at: ask Pixel.“ | „Einen Besen fressen“ und „viel reden, wenn der Tag lang ist“ gibt es im Englischen nicht; beide Zeilen stehen im Pool und kommen oft. Die Taschenhilfe liest sich wie eine Wortliste. | „If that works, I shall eat my own tail. // You may rest easy, the tail is in no danger.“ · „Grandpa says you spot something new the third time you look. Grandpa says a lot of things.“ · „Select to pack or unpack. Look to ask Pixel.“ |
