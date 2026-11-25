@@ -1,6 +1,6 @@
 # pr-w2: Welt 2 „Antikodonien“ bis zum Anfang von Welt 3 (Komplett-Review 21.11.2026, Fortsetzung in der Cloud ab 25.11.)
 
-**Stand: FERTIG (25.11.2026).** Zahlen am Ende unter „Zählung“.
+**Stand: Teil 1 fertig (25.11.2026), Teil 2 „hinter den Blockern“ in Arbeit (ganz unten).** Zahlen am Ende unter „Zählung“.
 
 - **Rolle:** Welt-Prüfer `pr-w2` (ein Durchgang aus fünf Blickwinkeln: Beleg-Sammler, Level-Designer, Game-Designer, Technical Artist, Gameplay-Scripter).
 - **Umfang:** Welt 2 vollständig, alle Räume in allen Zuständen, alle Rätselketten, vom ersten freien Moment im Nil-Delta bis zum ersten freien Moment in Welt 3 (einschließlich Welt-Ende, Übergang und Zwischenspiel 2 im Spielfluss).
@@ -347,4 +347,84 @@ Dazu in Welt 2 zweimal bestätigt, bei pr-w1 gezählt: **R5-W1-34** (Gespräche 
 
 Wegen R5-W2-24 und R5-W2-28 nicht erreicht und deshalb nicht geprüft: R7-Anklage, R10a/b, Finaltag, Rede-Ringen, R11a/b, Welt-Ende und Übergang im Spielfluss. `welt2_ende.json` ist kein voller Endstand: Inventar echt, Schalter R7, R10, R11, R13 offen, erreicht über `start zs 2`.
 
-FERTIG
+# Teil 2: hinter den Blockern
+
+Auftrag des Koordinators vom 25.11. (Nachmittag): Ursache von R5-W2-24 und R5-W2-28 klären (A), den Rest von Welt 2 mit einer eng begrenzten Umgehung prüfen (B), danach Reste aus „Nicht geprüft“ (C). Neuer Lauf `pr-w2-c`: frischer Prozess, `stand holen welt1_ende`, Lösungsweg Blöcke 1 bis 6 mit echten Klicks (wieder fehlerfrei durchgelaufen, zum dritten Mal).
+
+## A. Ursache der Blocker R5-W2-24 und R5-W2-28 (und von GD-W1-K1)
+
+**Gemeinsame Ursache: Popochiu führt für jede Figur eine zweite Position (`_buffered_position`), und der eigene Code des Spiels gleicht sie nach einem Lauf nicht wieder ab.**
+
+So hängt es zusammen (alles im Quelltext gelesen, die Werte danach im laufenden Spiel bestätigt):
+
+1. `PopochiuCharacter` hat neben `position` den Puffer `_buffered_position` (`popochiu_character.gd` Z. 257). Solange er `null` ist, gilt `position`.
+2. Bei **jedem Bildwechsel des Sprites** (`frame_changed`, verbunden in Z. 303) ruft die Figur `_update_position()` (Z. 1808) → `PopochiuRoom.update_characters_position()` (`popochiu_room.gd` Z. 292) → `update_position()`: `position = get_buffered_position()`. Dasselbe geschieht in `add_character()` (Z. 192). Popochiu braucht das für sein „Anti-Gleiten“ beim Gehen. Folge: **Ist der Puffer gesetzt, wird jede direkt gesetzte `position` beim nächsten Animationsbild wieder überschrieben.**
+3. `CQFigur.laufen_zu()` (`cq_figur.gd` Z. 164 bis 190) bewegt die Figur mit einem Tween und ruft am Ende `sync_buffered_position()` (Z. 189). Danach steht der Puffer auf dem Laufziel. Das ist für sich richtig.
+4. Geleert wird der Puffer nur in `PopochiuRoom.exit_room()` (Z. 165 bis 167), und nur für Figuren, die beim Verlassen noch im Raum hängen. `Spiel.figur_hier(sn, false)` (`spiel.gd` Z. 1004) nimmt die Figur nur aus dem Baum, der Puffer bleibt.
+5. `Spiel.figur_hier(sn, true, pos)` (`spiel.gd` Z. 998 bis 1003) ruft erst `add_character()` (Position = alter Puffer) und setzt dann `c.position = pos` **ohne** `sync_buffered_position()`. Beim nächsten Animationsbild steht die Figur wieder am alten Laufziel. Genauso beim Betreten eines Raums: `i_room.gd` Z. 280 setzt die gespeicherte Position, Z. 316 `add_character()` überschreibt sie mit dem alten Puffer.
+6. Beim Verlassen des Raums und beim Speichern wird die falsche Position als Raumzustand gesichert. Deshalb bleibt der Fehler nach Raumwechsel, Speichern/Laden und Programm-Neustart.
+
+Die drei Fälle:
+
+| Fund | Stelle | Ablauf | Im Spiel gemessen |
+| --- | --- | --- | --- |
+| **R5-W2-24 Leonidas** | `welt_2.gd` Z. 1255/1256 | `await leo.laufen_zu(Vector2(-80, …))` setzt den Puffer auf (−80, 300). `leo.position = leo_start` ohne Abgleich: beim nächsten Bild der Idle-Animation zurück auf −80. | Lauf c, Tempo 1, `textmodus nie`, alle 0,1 bis 0,6 s gelesen: bis Spielzeit 2023,8 Position (960, 300), Puffer `null`; 2024,2 unterwegs (878, 300); ab 2028,4 Position (−80, 300), Puffer (−80, 300); bleibt so. Der Sprung zurück auf 960 dauert höchstens ein Animationsbild und lag zwischen zwei Messungen. |
+| **R5-W2-28 Archimedes** | `welt_2.gd` Z. 1159 bis 1164 | `_figur_laeuft(…, Vector2(_raum_breite() + 80, …))` setzt den Puffer auf (720, 300). `figur_hier(false)`, vier Zeilen später `figur_hier("Archimedes", true, start)`: `add_character()` stellt ihn auf den Puffer, `c.position = start` hält nur bis zum nächsten Animationsbild. | Lauf c, Tempo 1: vor der Szene (300, 300), Puffer `null`; nach dem Lauf (720, 300)/(720, 300), nicht im Baum; **bei 1656,07 wieder im Baum mit Position (300, 300) und Puffer (720, 300); bei 1658,35 Position (720, 300)**. Genau der vorhergesagte Ablauf. |
+| **GD-W1-K1 Rotkäppchen** (Welt 1, nur gelesen) | `room_dorfplatz.gd` Z. 279/280 | `laufen_zu(rechts)` mit rechts = (1270, 290), dann `figur_hier(false)`: Puffer bleibt (1270, 290). Im Zauberwald steht sie in der Raumszene; beim Betreten setzt `i_room.gd` ihre Soll-Position, `add_character()` überschreibt sie mit dem Puffer. | von gd-w1 und pr-w1 gemessen: (1270, 290) im Zauberwald. Passt genau zum Puffer vom Dorfplatz. Nicht von mir nachgespielt. |
+
+**Die Fernsteuerung ist nicht der Grund.** Ihr Eingriff „Laufziel“ (`_r5_fernsteuerung.gd` Z. 555 bis 590) hängt sich nur an das Signal `started_walk_to` von Max, Pixel und Opa und handelt nur, wenn die Figur die Spielfigur ist (`c != _spieler()` → Abbruch). `laufen_zu` ist ein Tween und löst `started_walk_to` gar nicht aus. Die Fernsteuerung setzt nirgends Position oder Puffer einer Nebenfigur (gesucht nach `position =`, `_buffered`, `walk`: nur Zeigerbild und Zeigerklick-Marken). Der Fehler entsteht allein aus Spielcode und Popochiu.
+
+**Warum die Tests es nicht merken:** Im Testmodus und beim Überspringen setzt `laufen_zu` nur `position = ziel` und kehrt zurück (Z. 165 bis 167), ohne Puffer. Der Fehler tritt nur beim echten Laufen auf.
+
+**Dass der Mechanismus im Projekt bekannt ist**, zeigen vier Stellen, die den Abgleich schon machen: `cq_figur.gd` Z. 153 (Kommentar: „sonst setzt Popochius Anti-Gleiten die alte Stelle zurück“), `room_taverne.gd` Z. 72, `room_trollbruecke.gd` Z. 237, `welt_3.gd` Z. 2046, 2072, 2483.
+
+**Vorschlag (eine Stelle behebt fast alles):** In `Spiel.figur_hier()` beim Herausnehmen `c.reset_buffered_position()` und nach `c.position = pos` ein `c.sync_buffered_position()`; in `welt_2.gd` Z. 1256 nach `leo.position = leo_start` ebenfalls. Besser noch eine Funktion `CQFigur.hinstellen(pos)` (Position plus Abgleich), die alle direkten `position =` auf Figuren ersetzt. Dazu ein Prüflauf ohne Testmodus, der nach jeder Szene meldet, wenn bei einer Figur `position` und `_buffered_position` auseinanderliegen oder die Figur außerhalb der Raumbreite steht.
+
+### Alle Stellen, an denen derselbe Fehler entstehen kann
+
+Die Regel dahinter: **Eine Figur ist gefährdet, sobald sie einmal mit `laufen_zu`, `springen_zu` oder `walk` bewegt wurde und danach (a) im selben Raumbesuch per `position =` versetzt wird oder (b) mit `figur_hier(false)` herausgenommen wurde und später wieder erscheint** (im selben oder in einem anderen Raum, in derselben Programmsitzung). Ob das Ziel außerhalb der Raumbreite liegt, entscheidet nur, ob man die Figur noch sieht. Durchsucht: `welt_1.gd` bis `welt_4.gd`, `finale.gd`, `spiel.gd`, `cq_raum.gd`, alle Raum- und Gesprächsskripte (`laufen_zu(`, `springen_zu(`, `walk_to(`, `figur_hier(`, `.position =`).
+
+| Datei:Zeile | Figur | Lauf, Ziel | danach | Folge / Einschätzung |
+| --- | --- | --- | --- | --- |
+| `welt_2.gd`:1255 | Leonidas | `laufen_zu` nach (−80, y), **außerhalb** | `position = leo_start` ohne Abgleich | **Fehler bestätigt (R5-W2-24)** |
+| `welt_2.gd`:1159 | Archimedes | `_figur_laeuft` nach (Raumbreite + 80, y), **außerhalb** | `figur_hier(false)`, dann `figur_hier(true, start)` | **Fehler bestätigt (R5-W2-28)** |
+| `welt_2.gd`:424 | Hermes (Nil-Delta, bringt Opas Papyrus) | `_figur_laeuft` nach (min(Ziel + 380, Raumbreite + 60), y), **außerhalb oder am Rand** | `figur_hier(false)`, Puffer bleibt | **Kandidat:** Betritt man danach das Stadion (Hermes steht dort nach Tag 1), stellt `add_character()` ihn auf die Nil-Delta-Koordinaten. Wird in Teil B nachgespielt. |
+| `welt_2.gd`:419, 987 | Hermes (Auftritt Nil-Delta, Startbüro) | `_figur_laeuft` von außerhalb zum Marker | bleibt stehen | unkritisch, der Lauf endet mit Abgleich am Marker; ein alter Puffer wird dabei repariert |
+| `welt_2.gd`:852 | Hofkater | `laufen_zu` zur Tür (Marker `VonNilDelta`, innerhalb) | `ausblenden_und_weg()` (= `figur_hier(false)`) | Puffer bleibt; unkritisch, solange der Hofkater nie wieder erscheint (laut Plan Z. 366 nur vor R2b) |
+| `welt_2.gd`:550 | Fährmann | `laufen_zu` 50 px nach links (innerhalb, mindestens x 30) | bleibt, Raumwechsel durch die Fahrt | Kandidat anderer Art: Die neue Position wird als Raumzustand gespeichert; bei jeder Abfahrt vom selben Steg rückt er 50 px weiter (noch im Spiel zu prüfen) |
+| `welt_2.gd`:1229 | Max | `laufen_zu` (barfuß, innerhalb) | bleibt | unkritisch (Abgleich am Ende) |
+| `welt_2.gd`:1252 | Schildkröte | `laufen_zu` 260 px nach links, nicht abgewartet | bleibt | unkritisch; sie steht danach dauerhaft 260 px weiter links (750 statt 1010) |
+| `welt_2.gd`:394 | Sobek (folgt Pixel) | kein Lauf | `position =` bei jedem Anwenden | unkritisch, solange Sobek nie läuft (Puffer `null`) |
+| `welt_2.gd`:1718 | Cicero, Archimedes (Grabhügel, R10b) | kein Lauf | `figur_hier(true, Marker)` | Archimedes' Puffer wird beim Verlassen der Werkstatt geleert, weil er dann im Raum hängt; unkritisch, wird in Teil B gespielt |
+| `room_dorfplatz.gd`:279 | Rotkäppchen | `laufen_zu` nach (Raumbreite − 10, y) = (1270, 290) | `figur_hier(false)` | **Fehler bestätigt (GD-W1-K1)** |
+| `room_dorfplatz.gd`:275 | XXL-Ziege | `laufen_zu` zum Lieferplatz | folgt Max; `welt_1.gd`:69 `position = pos` | Kandidat im selben Raumbesuch: steht bis zum Verlassen des Dorfplatzes am Lieferplatz, egal was Z. 69 setzt |
+| `dialog_waldemar.gd`:32 | Waldemar | `laufen_zu` nach (700, y) auf der Trollbrücke | `figur_hier(false)`; `room_zauberwald.gd`:43 `figur_hier(true, (824, 300))` | **Kandidat, sehr wahrscheinlich Fehler:** Er steht im Zauberwald bei (700, Brücken-y) statt (824, 300). pr-w1 meldet, die Gesangsnummer finde „außerhalb des Bildes“ statt; die Position dort nachmessen. |
+| `room_taverne.gd`:134/135 | Minka | `laufen_zu` zur Tür | `ausblenden_und_weg()` | Puffer bleibt; Kandidat, falls Minka später in einem anderen Raum erscheint |
+| `room_taverne.gd`:145 | Humbert | `laufen_zu` zur Kellertür | Geste, `ausblenden_und_weg()` | **Kandidat:** Humbert folgt später (`welt_1.gd`:59 bis 71, `figur_hier(sn, true, pos)` und Z. 69 `position = pos`): Er stünde in jedem Raum auf den Taverne-Koordinaten der Kellertür, bis die Sitzung neu gestartet wird. Nachmessen. |
+| `room_taverne.gd`:65 bis 72, 121 | Pixel | `walk_to`, `springen_zu`, `laufen_zu` | Z. 71/72 mit Abgleich | in Ordnung |
+| `hotspot_laute_mit_muenzbecher.gd`:29/30 | Huhn | `springen_zu` (mit Abgleich) | `room_taverne.gd`:26 `C.Huhn.position = Marker` | Kandidat im selben Raumbesuch (Position wird zurückgesetzt) |
+| `dialog_maklerin.gd`:53 | Maklerin | `springen_zu` um (+70, +40) | `figur_hier(false)` (Z. 14, `room_luftschloss.gd`:23) | Puffer bleibt; Kandidat, falls sie wieder erscheint |
+| `welt_1.gd`:69, `room_trollbruecke.gd`:49, `room_bergwerk.gd`:55, `room_schmiede.gd`:81 | Begleiter (Ziege, XXL, Zeldina, Grimmzahn, Humbert), Ziegen-Reihe | je nach Vorgeschichte | `position =` ohne Abgleich | Kandidaten, sobald die Figur vorher im selben Raumbesuch gelaufen ist |
+| `cq_raum.gd`:750/752 | Partner (Pixel oder Max) | geht ständig (`walk_to`, Z. 382) | `figur_hier(true, pos)` bzw. `partner.position = pos` (`neben_spieler`) | Kandidat im selben Raumbesuch; nach Raumwechsel in Ordnung, weil `exit_room()` den Puffer leert |
+| `room_dachboden.gd`:132, `room_dorfplatz.gd`:64 bis 104, `room_turmkeller.gd`:191, `room_wohnzimmer.gd`:58/69 | Max, Pixel, Toadi | Szenenaufbau | `position =` ohne Abgleich | Kandidaten, wenn die Figur vorher im selben Raumbesuch gegangen ist (Laden mitten im Raum) |
+| `welt_3.gd`:2131, 2155 bis 2165 | Klon | `laufen_zu` zum Marker; später zur Treppe (1046, 302), Tween nach oben ohne Abgleich | `figur_hier("Klon", false)`; erscheint wieder über Z. 442 oder 2124/2126 | **Kandidat:** erscheint beim nächsten Mal an der Treppe statt am Kopierer; der Aufstieg (Tween Z. 2160) wird bei jedem Animationsbild auf den Treppenfuß zurückgesetzt |
+| `welt_3.gd`:2196 | Morphäus | `laufen_zu` nach `MOR_VORN` (410, 302) | `_morphaeus_weg()`: `figur_hier(false)`; später über den Plan Z. 442 | **Kandidat:** stünde beim Wiedererscheinen auf (410, 302) statt am Marker |
+| `welt_3.gd`:513 bis 518 | Schwarze Katze | Tween auf `position:x` von 1300 nach −60 | Schleife | unkritisch (kein Puffer, sie läuft absichtlich aus dem Bild) |
+| `welt_3.gd`:2045 bis 2072, 2482, 2515 | Pixel, Max | `springen_zu`, `walk_to` | jeweils mit Abgleich | in Ordnung |
+| `welt_4.gd`, `finale.gd` | – | kein `laufen_zu`, kein `walk`; nur Platzieren über den Plan (`figur_hier(sn, an, pos)`, Z. 387 bzw. 239) | – | nur gefährdet, wenn eine der Figuren ihren Puffer aus Welt 1 bis 3 mitbringt (dieselbe Sitzung, Figur für alle Welten: Opa, Hermes?) |
+
+Die Einträge zu Welt 1, 3, 4 und Finale sind **nur aus dem Code geschlossen**; im Spiel gemessen sind Leonidas und Archimedes (hier) und Rotkäppchen (gd-w1, pr-w1).
+
+## B. Die Umgehung
+
+Nur diese zwei Befehle, sonst nichts im Code ausgelöst (kein `Zustand.loese/setze`, kein `on_click()`):
+
+```
+lies [C.get_character("Archimedes").set("position", Vector2(300,300)), C.get_character("Archimedes").sync_buffered_position()]
+lies [C.get_character("Leonidas").set("position", Vector2(960,300)), C.get_character("Leonidas").sync_buffered_position()]
+```
+
+Soll-Plätze aus `belege/raeume/welt-2/werkstatt_anfang.json` (Archimedes 300, 300) und `stadion_anfang.json` (Leonidas 960, 300). Beides in einem Ausdruck, damit kein Animationsbild dazwischenliegt. Der Befehl wird im Raum der Figur gegeben.
+
+Archimedes: in der Werkstatt direkt nach der Trainingsszene gesetzt (Stand `c_05u`); nach 3 s noch (300, 300), `objekte` meldet ihn bei x 279 bis 320 anklickbar. Ob die Umgehung nach Raumwechseln hält, steht im nächsten Block.
+
