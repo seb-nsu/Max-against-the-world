@@ -109,6 +109,71 @@ Nur mit `start zs 2` und `start zs 3` geprüft (Schnellstart: Die Schalter des P
 | R5-P-28 | Dachboden | wichtig | Positionierung | In der Weck-Szene und beim Servieren steht Max mit den Füßen genau hinter Pixel (Max (262,262), Pixel (262,272)): Pixel sitzt auf Max' Schuhen, die Dose „unter die Nase halten“ ist nicht zu sehen, weil Max aufrecht dasteht und nach rechts schaut. Je nach Ausgangspunkt steht Max auch bei (310,272) rechts neben Pixel; dann stimmt das Bild. | `belege/pr-p/dach_wecken_max_steht_auf_pixel.png`; `belege/pr-p/anim_pixel_aufwachen_bogen.png` | Festen Standpunkt rechts von Pixel (etwa (315,272)), Blick nach links, dann die Geste `benutzen` nach unten. |
 | R5-P-29 | alle | kosmetisch | Sonstiges | Der Text unter dem Zeiger („Use Thunfischdose with UI_OBJ_PIXEL“) bleibt nach dem Klick rund 8 s stehen, während die Szene schon läuft. | `belege/pr-p/dach_wecken_max_steht_auf_pixel.png` (Bilder 41 und 61) | Zeigertext ausblenden, sobald eine Szene beginnt. |
 
+## Rätselübersicht
+
+| Rätsel | Lösung im Spiel bestätigt | Hinweise | Andere Reihenfolge | Urteil |
+| --- | --- | --- | --- | --- |
+| P1 Pixel vom Kabel | Dose (Treppenhaus) mit Dosenöffner (Werkbank) öffnen, Pixel damit wecken, Dose in die Teetasse (Wohnzimmer) füllen, servieren | Opa, Frage „Wie krieg ich Pixel vom Kabel?“, drei Stufen (sofort, nach 30 s, nach 60 s); Pfote vor P1 grau | Tasse nachholen möglich; Füllen vor dem Wecken spielt beides in einem Zug | fair, gut gelöst; die Tasse im Wohnzimmer ist der einzige Rückweg |
+| P2 Antenne | Drahtkleiderbügel (Schrank) auf den Zapp-O-Mat | Pfote, drei Stufen (kennt das Inventar nicht, R5-P-16) | Bügel schon vor P1 nehmbar | fair, sehr leicht |
+| P3 Kanal | Kalender ansehen (Nahansicht, Kanal 3), Drehknopf | Pfote, drei Stufen; Stufe 2 führt ins Leere, wenn der Kalender schon gesehen ist (GD-P-08) | Kalender schon vor P1 ansehbar; ohne Kalender stellt Max Kanal 4 ein, nichts geht verloren | fair; Max stellt den Kanal selbst ein, der Spieler muss die Zahl nicht wissen |
+| Zwischenspiele | Tasche packen (zwei Wahlfächer), zweimal Drehknopf | Pfote, eine Stufe | – | kein Rätsel, nur Auswahl; Reisetasche als Wahlfach ist eine Falle (R5-P-20) |
+
+## Frühere Funde, Stand heute
+
+| Alter Fund | Stand | Woran gesehen |
+| --- | --- | --- |
+| P-01 (17.11.), Textschild im schwarzen Einstieg | behoben | Eröffnung in Tempo 1: schwarzes Bild nur mit Sprechtext (`belege/pr-p/esc_eroeffnung_keine_wirkung_bis_klick.png`) |
+| P-04 (17.11.), Mund des liegenden Max | behoben | `belege/pr-p/wohn_liegen_mund_am_gesicht.png` |
+| P-03 (17.11.), Länge der Szene im Zwischenspiel 1 | nicht nachgemessen (siehe „Nicht geprüft“) | – |
+| P-02 (17.11.), Klickflächen Opa und Bodenluke | teilweise offen | Bodenluke gewinnt an 29 von 36 Probestellen, an 7 gewinnt Opa, wenn er an der Luke steht |
+| X-07 (17.11.), Dachfenster | nicht nachgeprüft | Die Fläche (x 65–135, y 10–65) liegt weiter unter Porträts und Inventarleiste (siehe auch R5-P-17) |
+| X-08 (17.11.), Rechtsklick auf Ausgänge | weiterhin offen | GD-P-03 |
+| A-01 bis A-08 (17.11.), Animationen | nicht einzeln nachgeprüft | siehe Abschnitt „Animationen“ |
+| 14.11. Nr. 2, Figuren verdecken sich | weiterhin offen | R5-P-11, R5-P-12, R5-P-23, R5-P-28 |
+| 14.11. Nr. 4, Nahansichten nur als Text | behoben | Kalender und Zettel gemalt, deutsch und englisch lesbar (`nah_kalender_de.png`, `nah_kalender_en.png`) |
+| 14.11. Nr. 8, Aufstehen vom Sofa als Sprung | behoben | `belege/pr-p/wohn_aufstehen_bildfolge.png` |
+| 14.11. Nr. 11, Gesprächsmenü schneidet Optionen ab | weiterhin offen | R5-P-13 |
+| 14.11. Nr. 29, Notizbuch ohne Hintergrund | behoben | Papierhintergrund vorhanden (`notizbuch_ziele_leer_bei_ankunft_en.png`) |
+| GD-P-01 bis GD-P-08 (Vorgänger gd-p, 21.11.) | alle bestätigt, alle offen | je eigene Zeile oben |
+
+## Nicht bestätigt
+
+- Ein scheinbar verstümmeltes Zeichen auf Opas Zettel („bleibe▯“) war das Zeigerbild über dem Text.
+- Errungenschaften-Seite zeigt im frischen Lauf „4 of 13“: Die Fernsteuerung setzt die eigene Datei erst nach dem Laden; gelesen wird die gemeinsame `user://errungenschaften.cfg`. Werkzeug, kein Spielfehler.
+- Mit `start zs N` ist der Fernseher dunkel und ohne Antenne, Benutzen bringt „Kein Strom. Pixel liegt auf dem Kabel …“: Der Schnellstart setzt die Schalter des Prologs nicht. Am echten Stand (`w43_zs1_dachboden`) stimmen Bild und Zeile.
+- Der Dosenöffner liegt im Zwischenspiel 1 wieder auf der Werkbank: gewollt (`spiel.gd` Z. 1187, er bleibt auf dem Dachboden und ist ein Wahlfach).
+- Ankunftsszene der Zwischenspiele bleibt stehen (`STEHT seit 20 Spielsekunden`, `in_szene=1`): trat nur auf, nachdem im selben Prozess schon mehrere `start`-Befehle gelaufen waren (45 Skriptfehler „previously freed instance“ im `godot.log`). In frischen Prozessen liefen alle drei Ankünfte durch. Werkzeug.
+- Sechsmal dieselbe Zeile (`W1_DORF_PIX_1330_2`) beim Holen von `p00` aus Welt 1 heraus: nicht geklärt, trat nur beim Zurückspringen in laufender Sitzung auf (Umfeld von R5-P-01).
+- Ein `klick @teetasse` ohne Wirkung im Lauf `pr-p-raum`: sehr wahrscheinlich ein Zuruf (R5-P-08), nicht getrennt nachgestellt.
+
+## Gut gelöst
+
+- Der Prolog ist deutsch und englisch mit demselben Lösungsweg (`belege/pr-p/loesungsweg.txt`, 42 Schritte) ohne Hänger durchspielbar; jede andere Reihenfolge, die ich probiert habe, führt ans Ziel.
+- Gefüllte Tasse auf den schlafenden Pixel: Wecken und Servieren werden zusammengezogen, statt den Spieler abzuweisen.
+- Opas drei Hinweisstufen zu P1 und die drei Stufen der Pfote bei P2 und P3 funktionieren mit Wartezeit und eigener Wartezeile; vor P1 ist die Pfote sichtbar grau.
+- Fast jeder Fehlversuch mit Rätselgegenständen hat eine eigene, witzige Zeile (Dose, Tasse, Bügel, Dosenöffner, Pixel-Kachel auf den Zapp-O-Mat).
+- Alle Deko-Objekte in Wohnzimmer und Treppenhaus haben eigene Zeilen für Ansehen und Benutzen; die Finale-Objekte (Girlande, Kuchen, Geschenke) sind im Prolog unsichtbar und nicht anklickbar.
+- Nach P1 ist der Rückweg gesperrt, mit Begründung; alles Nötige liegt oben.
+- Überspringen mit Esc führt in allen geprüften Szenen zum selben Endzustand wie das Durchspielen (Inventar und Schalter verglichen).
+- F5/F9 mitten in der Rätselkette stellt Schalter, Inventar und Bild richtig wieder her, solange danach nichts Neues aufgenommen wurde.
+- Hotspot-Anzeige mit Umschalt, Sicherheitsabfrage vor „Hauptmenü“, Esc schließt Notizbuch und Nahansicht.
+- Reisetasche: klares Bild, Pflichtfach und Wahlfächer, Pixels Kommentar je Gegenstand, automatisches Speichern nach dem Packen.
+- Lichtstimmungen des Dachbodens je Rückkehr und das Bild auf dem Zapp-O-Mat (Schnee, Farbrauschen, Kanal).
+
+## Nicht geprüft
+
+- Ton, Musik, Sprachausgabe (die Fernsteuerung läuft ohne Ton).
+- Controller; Windows-Fassung auf Sebastians Rechner; Vollbild und Fensterskalierung.
+- Freischalten der Errungenschaften (Werkzeug, siehe „Nicht bestätigt“).
+- Zwischenspiele 2 und 3 an einem echten Spielstand (nur Schnellstart): Packen mit echtem Inventar, Bild der Werkbank und des Fernsehers, Zeilen, die von Welt 2 und 3 abhängen.
+- Laden über das Pausemenü und F9 **innerhalb** der Zwischenspiele (gesehen nur F5 und das automatische Speichern); Laden eines Zwischenspiel-Stands nach Neustart nur für `w43` (dabei R5-P-19).
+- Esc einzeln in der Auftrag-Szene, der Weck-Szene, beim Abschluss von P1 und P2 und in den Ankünften der Zwischenspiele (geprüft: Eröffnung, P3 mit Reisetasche, Ankunft Welt 1).
+- Pfote nach dem Laden; die Zeile für „nichts offen“.
+- Systematische Laufproben und Klickflächen auf dem Dachboden (X-07, P-02 nur am Rand).
+- Greifbewegung beim Nehmen und die Atem-Schleifen (A-05) Bild für Bild; Opas `panik` bei P3.
+- R5-P-11 (Opa bleibt mitten im Weg stehen) ist in Tempo 4 gesehen und aus dem Code erklärt, in Tempo 1 nicht eigens nachgestellt.
+- Englische Texte inhaltlich (nur Durchlauf und Menüs); Länge der Zwischenspiel-Szenen in Tempo 1 (siehe Zeitmessungen).
+
 ## Animationen
 
 **Bestand** (aus `game/daten/figuren/*.json`, Bilder je Animation): Max 48 Animationen, im Prolog gebraucht: `idle` 8, `walk` 8, `talk` 4, `talk_hand` 6, `treppe_walk` 17, `vom_sofa_aufstehen` 9, `aufheben` 7, `benutzen` 7, `handy` 3, `kopf_kratzen` 7, `schulterzucken` 5, `zeigen` 5. Pixel 27 Animationen, im Prolog: `schlafen` 4, `aufwachen` 3, `stehen` 8, `hinlegen` 6, `springen` 7, `idle` 6, `talk` 4, `schwanz_zucken` 4. Opa 9 Animationen: `idle` 8, `talk` 9, `walk` 12, `erklaeren` 6, `kopf_kratzen` 8, `panik` 12, `werkbank` 5.
@@ -154,5 +219,28 @@ Tempo 1, `textmodus lesen` (Tippzeit plus 55 ms je Zeichen, mindestens 1,2 s je 
 | Drehknopf ohne Kalender (Kanal 4) | 12,4 s | |
 
 Zwischen dem Betreten des Dachbodens und dem ersten eigenen Klick liegen 2 min 18 s Szene, bis Pixel wach und P1 gelöst ist kommen weitere knapp 3 min Szenen dazu. Zusammen mit der Eröffnung sind das im Prolog rund 7,5 min Zuschauen bei drei kleinen Rätseln.
+
+## Vorschläge für die Lessons Learned
+
+- **Sichtbarkeit nie aus flüchtigen Merkmalen der Engine ableiten.** R5-P-01 und R5-P-19 haben dieselbe Wurzel (`ever_collected` wird nicht gespeichert und nie zurückgesetzt). Regel: Alles, was man im Raum sieht, hängt an gespeicherten Schaltern. Dazu zwei feste Tests je Abschnitt: (a) speichern, Programm neu starten, laden, Liste der sichtbaren Props vergleichen; (b) in laufender Sitzung einen älteren Stand laden, dieselbe Liste vergleichen.
+- **Ersatzzeilen zählen.** Die Fernsteuerung meldet jede `ERSATZZEILE`. Ein Lauf „jedes Objekt in jedem Zustand einmal ansehen und benutzen“ mit der Auswertung „welche Rätselobjekte und Figuren fallen in den Ersatzpool“ hätte GD-P-03, GD-P-07, R5-P-21 und R5-P-26 automatisch gefunden.
+- **Texte, die eine Bildänderung behaupten, brauchen einen Eintrag in der Shot-Liste.** Eierkarton, Mehlsack, Batterie und die Kalender-Zustände stehen im Skript und im Grafikplan, aber nicht im Spiel (R5-P-24). Beim Schreiben einer Zeile wie „Der Kreis ist jetzt doppelt umrandet“ sofort die Shot-ID anlegen.
+- **Szenen über 60 s in Tempo 1 und Lesetempo messen und ansehen.** Die Auftrag-Szene (138 s) fällt in Tempo 4 mit Durchklicken nicht auf. Regel: ab 60 s mindestens ein Ortswechsel einer Figur, ab 120 s kürzen oder teilen.
+- **Feste Standpunkte für Gespräche und Übergaben.** Wo Max sich hinstellt, hängt heute davon ab, woher er kommt (R5-P-12, R5-P-23, R5-P-28). Je ansprechbarer Figur einen Standpunkt mit Abstand und Blickrichtung im Bauplan festlegen.
+- **Eingaben, die „nichts tun“, sind Fehler.** Esc ohne sichtbare Wirkung (R5-P-15), ein Klick, den ein Zuruf schluckt (R5-P-08), ein Menü außerhalb des Bildes (R5-P-09): Der Spieler hält das Spiel für kaputt. Jede Eingabe braucht innerhalb von 0,2 s eine sichtbare Antwort.
+
+## Werkzeug
+
+- `dklick` schickt nur einen Klick mit Doppelklick-Merker; ein echter Doppelklick geht mit `drueck`/`los`/`warte 0.25`/`drueck`/`los`.
+- `knopf Hauptmenü` beendet den ferngesteuerten Prozess (das Spiel startet sich neu, die Argumente der Fernsteuerung gehen verloren): Lauf danach neu starten.
+- Errungenschaften: Die Fernsteuerung liest die gemeinsame `user://errungenschaften.cfg`; Freischalten ist so nicht prüfbar.
+- Tempo 4: Das erste Gesprächsmenü einer Sitzung kann außerhalb des Bildes liegen (R5-P-09); vor dem ersten Gespräch `tempo 1` setzen.
+- Zurufe: Nach 45 s ohne Befehl läuft ein Zuruf, der den nächsten Klick (bei zwei Zeilen zwei Klicks) schluckt. Vor einer Befehlsreihe zweimal auf den Boden klicken (`klick 330 335`). `weiter` klickt an der letzten Zeigerstelle und kann dort etwas auslösen (zum Beispiel die Pfote). Wünschenswert: ein Befehl `zurufe aus`.
+- `textmodus nie` plus `taste esc` plus ein Klick ist der Weg, das Überspringen zu prüfen; `lies E.cutscene_skipped` zeigt, ob Esc angekommen ist.
+- Gesprächsoptionen besser mit der Kennung wählen (`option 1370`, `option zs1_0460`), die Nummern verschieben sich.
+- Mehrere `start`-Befehle im selben Prozess hinterlassen freigegebene Figuren (Skriptfehler im `godot.log`, Szenen bleiben stehen). Für jede Messung einen frischen Prozess nehmen. Ebenso `stand holen` nur im frischen Prozess (R5-P-01), und danach keine wieder aufgetauchten Gegenstände einsammeln (R5-P-19).
+- `start`-Befehle direkt nach dem Prozessstart können zurückkehren, bevor die Szene beginnt; `warte` hilft nicht immer. Erst `knopf Verstanden` oder `warte 3`.
+- Filme: `gif_bauen.py` schreibt 10 Bilder/s; ein Film mit 5 Bildern/s läuft im GIF doppelt so schnell. Eigenes Hilfsskript `werkzeuge/pr-p_bogen.py` baut Kontaktbögen aus einem Filmordner (Ausschnitt, Bereich, Anzahl, Vergrößerung).
+- Ein Aufruf von `git pull` ist den Prüfern nicht erlaubt; `sichern.sh` erledigt das Abgleichen.
 
 ZWISCHENSTAND (nicht fertig)
