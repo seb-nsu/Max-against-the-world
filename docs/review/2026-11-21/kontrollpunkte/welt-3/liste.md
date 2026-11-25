@@ -48,3 +48,6 @@ Alle Stände sind mit echten Klicks über die Fernsteuerung entstanden (`stand s
 | w3_alt_zs3_dachboden_frei_echtes_inventar | (Nebenweg, aus start welt-3) | siehe notizen/pr-w3.md, Zwischenspiel 3 |
 | w3_alt_zs3_gepackt_tasse_akte | (Nebenweg, aus start welt-3) | siehe notizen/pr-w3.md, Zwischenspiel 3 |
 | w3_alt_welt4_anfang_tasse_akte | (Nebenweg, aus start welt-3) | siehe notizen/pr-w3.md, Zwischenspiel 3 |
+| w3e_07_sim_anfang | stadtstrasse | **aus `welt2_ende` (echtes Inventar aus Welt 2)**: R1a, R2, R1b, R3a, R3b; erster freier Moment in der Simulation | Lösungsweg Blöcke 1 bis 4 vom Stand `kontrollpunkte/welt-2/welt2_ende` | thunfischdose, PixelFeld, notizbuch, kochloeffel, olivenoel, sandale, telefonbuchseite, omas_kekse |
+| w3e_14_nach_R12 | unterstadt_strasse | aus `welt2_ende`: dazu R4, R5, R13, erstes Aufwachen, R12 | von Hand weitergespielt (siehe notizen/pr-w3.md, „Lauf vom Stand welt2_ende“) | wie oben, dazu morse_tabelle, zugangskarte |
+| w3e_15b_geoelt | laboreingang | aus `welt2_ende`: Hausmeister mit Olivenöl geölt (`W3_FREUND_0815`), R8 noch offen (Seite noch nicht übergeben) | `klick inv:olivenoel`, `klick @hausmeister` | wie oben (Olivenöl bleibt im Inventar) |

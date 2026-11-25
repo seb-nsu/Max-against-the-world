@@ -1,6 +1,8 @@
 # Lösungsweg Welt 3 (pr-w3), eine Fernsteuerungs-Zeile je Schritt.
 # Anfang: `start welt-3` im Hauptmenü (oder `stand holen welt2_ende`), erster freier Moment in der Unterstadt.
 # Aufruf: fs ORDNER -f loesungsweg.txt   (Tempo 4, Textmodus klick). Zeilen mit # sind Kommentare.
+# Achtung: blockweise abspielen und nach jedem Block `status` prüfen. Zurufe (alle 45 s Nichtstun) schlucken den
+# nächsten Klick (R5-P-08); dann den Befehl wiederholen. Eine Befehlsdatei darf höchstens 900 s Echtzeit laufen.
 #-- Block 1: R1a Beobachtungen
 stand sichern w3_00_anfang
 rklick @frau_regenschirm
@@ -60,9 +62,8 @@ klick inv:rote_pastille
 warte
 stand sichern w3_07_sim_anfang
 #-- Block 5: Küche, R4, Regel 2 (Kochbuch)
+# Berichtigt 25.11.: vom Ankunftspunkt (240,344) genügt ein Laufklick nach rechts, dann ist die Haustür im Bild
 klick 600 320
-warte
-klick 20 320
 warte
 klick @ausgang_kueche_orakel
 warte
@@ -97,6 +98,7 @@ klick 20 320
 warte
 klick 20 320
 warte
+# Der Wecker klingelt erst 30 s ECHTZEIT nach dem Einschlafen (bei Tempo 4 also nach 120 Spielsekunden); vorher gegebenenfalls warten
 klick @klingelnder_radiowecker
 warte
 stand sichern w3_11_basis_erstes_aufwachen
