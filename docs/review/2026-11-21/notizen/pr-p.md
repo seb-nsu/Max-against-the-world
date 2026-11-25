@@ -101,7 +101,37 @@ Nur mit `start zs 2` und `start zs 3` geprüft (Schnellstart: Die Schalter des P
 | R5-P-25 | Dachboden (Zwischenspiele 2 und 3) | kosmetisch | Grafik | Die Figuren machen die Lichtstimmung nicht mit: Im frühen Abend und im Abendrot ist der Raum deutlich dunkler und wärmer, Max, Opa und Pixel stehen in vollen Tagesfarben davor (Opas helle Hose und Pixels Fell leuchten). | `belege/pr-p/zs3_abendrot_figuren_nicht_abgedunkelt.png` | Figuren je Stimmung einfärben (`modulate` am Figuren-Knoten, Werte aus `tools/stimmung.py` ableiten). |
 | R5-P-26 | Dachboden (Zwischenspiele 2 und 3) | kosmetisch | Humor | Ansehen der Fundkiste hat nur im Zwischenspiel 1 eine Zeile; in 2 und 3 kommt eine Ersatzzeile (`SYS_ERS_MAX_0220`, `0110`). Benutzen der Lampe im Zwischenspiel 3: Ersatzzeile (`SYS_ERS_MAX_0080`). Rechtsklick auf Opa: in allen dreien Ersatzzeile. | Lauf `pr-p-zs`, `rklick @fundkiste`, `klick @lampe`, `rklick @opa` | Je eine Zeile ergänzen; die Fundkiste könnte sagen, was gerade drin liegt. |
 
-(weitere Blöcke folgen)
+### Dachboden, Szenenbild (aus den Tempo-1-Filmen)
+
+| ID | Raum | Priorität | Kategorie | Beschreibung | Beleg | Vorschlag |
+| --- | --- | --- | --- | --- | --- | --- |
+| R5-P-27 | Dachboden | wichtig | Timing | Die Auftrag-Szene dauert 137,8 s (Tempo 1, Lesetempo) und ist ein Standbild: Opa und Max stehen die ganze Zeit am rechten Rand neben der Bodenluke und reden. Opa geht nicht zum Zapp-O-Mat, zeigt nicht auf Pixel, den Kalender oder die Werkbank; bewegt werden nur Hände und Münder. Der Zapp-O-Mat, um den es geht, steht unbeachtet in der Bildmitte. Es ist die erste Szene nach der Eröffnung, und der Spieler hat bis dahin drei Klicks gemacht. | `belege/pr-p/dach_auftrag_szene_137s_zwei_figuren_am_rand.png` (16 Bilder über die ganze Szene); Zeitmessung Lauf `pr-p-zeit` | Szene in Bewegung auflösen: Opa geht zum Gerät (`walk`), klopft drauf, zeigt auf Pixel auf dem Kabel (Max dreht sich mit), geht zum Kalender. Text um ein Drittel kürzen oder einen Teil in die Gesprächsoptionen legen (dort stehen „Warum eigentlich ich?“ und „Was ist drüben gefährlich?“ schon). |
+| R5-P-28 | Dachboden | wichtig | Positionierung | In der Weck-Szene und beim Servieren steht Max mit den Füßen genau hinter Pixel (Max (262,262), Pixel (262,272)): Pixel sitzt auf Max' Schuhen, die Dose „unter die Nase halten“ ist nicht zu sehen, weil Max aufrecht dasteht und nach rechts schaut. Je nach Ausgangspunkt steht Max auch bei (310,272) rechts neben Pixel; dann stimmt das Bild. | `belege/pr-p/dach_wecken_max_steht_auf_pixel.png`; `belege/pr-p/anim_pixel_aufwachen_bogen.png` | Festen Standpunkt rechts von Pixel (etwa (315,272)), Blick nach links, dann die Geste `benutzen` nach unten. |
+| R5-P-29 | alle | kosmetisch | Sonstiges | Der Text unter dem Zeiger („Use Thunfischdose with UI_OBJ_PIXEL“) bleibt nach dem Klick rund 8 s stehen, während die Szene schon läuft. | `belege/pr-p/dach_wecken_max_steht_auf_pixel.png` (Bilder 41 und 61) | Zeigertext ausblenden, sobald eine Szene beginnt. |
+
+## Animationen
+
+**Bestand** (aus `game/daten/figuren/*.json`, Bilder je Animation): Max 48 Animationen, im Prolog gebraucht: `idle` 8, `walk` 8, `talk` 4, `talk_hand` 6, `treppe_walk` 17, `vom_sofa_aufstehen` 9, `aufheben` 7, `benutzen` 7, `handy` 3, `kopf_kratzen` 7, `schulterzucken` 5, `zeigen` 5. Pixel 27 Animationen, im Prolog: `schlafen` 4, `aufwachen` 3, `stehen` 8, `hinlegen` 6, `springen` 7, `idle` 6, `talk` 4, `schwanz_zucken` 4. Opa 9 Animationen: `idle` 8, `talk` 9, `walk` 12, `erklaeren` 6, `kopf_kratzen` 8, `panik` 12, `werkbank` 5.
+
+**Im laufenden Spiel gesehen** (Tempo 1, Filme mit 4 bis 8 Bildern/s im Lauf `pr-p-zeit`; die GIFs laufen mit doppeltem Tempo):
+
+- Max steht vom Sofa auf: als Bewegung vorhanden, Decke und Kissen stimmen (`belege/pr-p/wohn_aufstehen_bildfolge.png`). Mund bewegt sich im Liegen am Gesicht (`wohn_liegen_mund_am_gesicht.png`).
+- Max steigt die Treppe: eigene Animation, Aufstieg rund 7,5 s (`trep_treppe_klick_bleibt_unten_dann_ausgang.png`).
+- Max hält die Dose hin (`benutzen`) und zückt am Ende von P1 das Handy: beides zu sehen.
+- Pixel schläft eingerollt, wacht auf, steht, setzt sich, legt sich wieder hin, springt auf die Werkbank und sitzt dort: alle Zustände vorhanden.
+- Opa: Reden mit Handbewegung (`erklaeren`) in der Auftrag-Szene, Umhergehen vor P1.
+- Beim Nehmen (Tasse, Dose, Dosenöffner, Bügel) steht Max mit dem Rücken zum Betrachter bzw. vor dem Gegenstand; eine Greifbewegung war in den 8-Bilder/s-Filmen nicht sicher zu erkennen (siehe „Nicht geprüft“).
+
+### Kandidaten für bessere Animationen
+
+| Figur | Animation | Wo | Was stört | Beleg | Was gebraucht wird |
+| --- | --- | --- | --- | --- | --- |
+| Pixel | `aufwachen` (3 Bilder) | Dachboden, Weck-Szene | Sprung von eingerollt zu stehend ohne Zwischenpose; die Posen sind verschieden groß (die geduckte Pose ist sichtbar kleiner als die stehende), der Kater „pumpt“. | `belege/pr-p/anim_pixel_aufwachen.gif`, `anim_pixel_aufwachen_bogen.png` | 6 bis 8 Bilder: Ohr zuckt, Nase hebt sich, ein Auge, zweites Auge (so steht es im Erzählertext `P0_DACH_NAR_0290`), strecken, aufstehen; gleiche Größe wie `stehen`. |
+| Pixel | `springen` (7 Bilder) | Dachboden, Ende P1, Sprung auf die Werkbank | Flugbahn springt: Luftpose am Boden, dann zwei Bilder Lauf am Boden, dann ein hoher Bogen bis über das Regal und Landung in Streckpose. Wirkt wie zwei verschiedene Sprünge. | `belege/pr-p/anim_pixel_sprung_werkbank.gif`, `anim_pixel_sprung_werkbank_bogen.png` | Anlauf (2), Abdrücken (1), Flug in flachem Bogen zur Tischkante (3), Landen und Setzen (2); Weg als Kurve im Code, nicht höher als die Tischplatte plus eine Katzenlänge. |
+| Opa | Szenenspiel | Dachboden, Auftrag-Szene (137 s) | Opa steht die ganze Szene auf einem Fleck; `walk`, `werkbank`, `panik`, `kopf_kratzen` kommen nicht vor. | `belege/pr-p/dach_auftrag_szene_137s_zwei_figuren_am_rand.png` | Keine neue Grafik nötig: vorhandene Animationen in die Szene einbauen; zusätzlich eine Zeige-Geste für Opa (4 bis 5 Bilder). |
+| Max | Hinknien zur Katze | Dachboden, Weck-Szene und Servieren | Max steht aufrecht über Pixel; „unter die Nase halten“ und „servieren“ haben kein eigenes Bild. | `belege/pr-p/dach_wecken_max_steht_auf_pixel.png` | 5 bis 6 Bilder: in die Hocke gehen, Arm mit Dose bzw. Tasse nach unten, halten, aufstehen. |
+| Pixel | Fressen | Dachboden, Servieren | Pixel bekommt die Tasse und steht nur da; gefressen wird im Text. | `belege/pr-p/anim_pixel_sprung_werkbank.gif` (Anfang) | 4 Bilder Kopf in der Tasse als Schleife; Tasse als kleines Prop vor ihm. |
+| Max, Opa | Reden im Gespräch | Dachboden | Die Figuren stehen beim Gespräch ineinander (R5-P-12, R5-P-23); die Sprechanimation ist dadurch kaum zu sehen. | `belege/pr-p/dach_max_opa_gesichter_ueberlappen_vierte_option_abgeschnitten.png` | Keine neue Grafik; Abstand herstellen. |
 
 ## Zeitmessungen
 
