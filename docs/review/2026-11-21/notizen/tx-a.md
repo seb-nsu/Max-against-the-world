@@ -11,9 +11,9 @@ Geprüft wird: Humor und Ton, eigene Stimme je Figur, KI-Klang jeder Dialogzeile
 | Präfix | gelesen | von |
 | --- | --- | --- |
 | P0_ | 333 | 333 |
-| ZS1_ | 0 | 110 |
-| ZS2_ | 0 | 87 |
-| ZS3_ | 0 | 112 |
+| ZS1_ | 110 | 110 |
+| ZS2_ | 87 | 87 |
+| ZS3_ | 112 | 112 |
 | W1_ | 0 | 1433 |
 | SYS_ | 0 | 108 |
 | UI_ | 0 | 965 |
@@ -22,7 +22,7 @@ Geprüft wird: Humor und Ton, eigene Stimme je Figur, KI-Klang jeder Dialogzeile
 
 - [x] Auftrag, humanizer-de, Rolle, Konzept, Skripte, Rätsel, frühere Reviews gelesen
 - [x] Prolog
-- [ ] Zwischenspiele 1–3
+- [x] Zwischenspiele 1–3
 - [ ] Welt 1
 - [ ] SYS, UI
 - [ ] Auswertung (Stimmen, Anspielungen, Running Gags, Lokalisierung, Top 10)
@@ -95,3 +95,57 @@ Der Abstand zu den guten Zeilen ist klein; „schwach“ heißt hier Bauplan, ni
 - Das Wechselspiel sitzt: „Also ja.“ – „Also ja. Aber unter Protest.“ (`P0_DACH_MAX_1402`/`PIX_1404`), „Du hast eben noch auf einem Stromkabel geschlafen.“ – „Auf einem warmen Stromkabel, das ist ein Unterschied.“ (`0362`/`0364`).
 - Hinweise: Stufe 3 ist überall eindeutig und trotzdem in der Figur („Ich würde es selbst tun, aber ich habe Pfoten und einen Ruf.“, `P0_HINT_PIX_0230_2`). Der Hinweis auf den Geburtstag liegt dreifach und unaufdringlich (`P0_DACH_MAX_0620`, `PIX_1366`, `PIX_0955_2`).
 - Englisch: Pixel ohne Kurzformen („I do not come along. I am taken along …“) gibt ihm auch im Englischen eine eigene Stimme (offener Punkt P10: aus meiner Sicht behalten). „NOPE“ für „NEIN“ (vier Buchstaben) ist sauber gelöst.
+
+## Zwischenspiele 1–3 (`ZS1_` 110, `ZS2_` 87, `ZS3_` 112 Zeilen)
+
+### KI-Klang: Einschätzung
+
+**Gering**, in Zwischenspiel 1 gering bis mittel. Die drei Szenen sind die besten Dialoge meines Umfangs: echte Wechsel, Figuren weichen aus, statt zu erklären, und die Kuchen-Spur läuft über Gerüche und Versprecher statt über Erklärsätze. Zwischenspiel 3 ist seit AP-07 sauber; was dort bleibt, ist der bekannte Rest W3-1.
+
+| Muster | ZS1 | ZS2 | ZS3 | Urteil |
+| --- | --- | --- | --- | --- |
+| Kontrast „kein X, das ist Y“ / „nicht X, sondern Y“ / Schwanz „…, nicht Y“ (M8) | 6 (`OPA_0160`, `PIX_0324`, `MAX_0434`, `PIX_0436_2`, `PIX_0454_2`, `PIX_0530`) | 2 (`OPA_0130`, `PIX_0320`), beide tragen | 0 | ZS1: Fund R5-TX-10 |
+| Pack-Kommentar nach Schablone „Gegenstand. Wo du hinfährst / Im Fernsehen … Urteil.“ (M55/M61) | 0 (vier verschiedene Anfänge) | 5 × „Wo du hinfährst“ | 9 × „Im Fernsehen“, 2 × „Wo du hinfährst“ | Fund R5-TX-11 |
+| „Ich sage nichts“ mit anschließendem Sagen (Couch-Quest-Regel 6) | 1 (`PIX_0140_2`) | 1 (`PIX_0390_2`) | 3 (`PIX_0140_3`, `0480_2`, `0540_2`) | ZS3: weiterhin offen (W3-1), R5-TX-12 |
+| Kalenderspruch „Wer X, hat Y“ (M56) | 1 (`PIX_0355_2`) | 0 | 0 | in den zehn schwächsten |
+| „Das nennt man / das nenne ich“ | 0 | 2 (`PIX_0592_2`, `PIX_0670_2`) | 0 | in den zehn schwächsten |
+| Entweder-oder-Schluss | 1 (`PIX_0600_2`), wird in `ZS2_DACH_PIX_0596_2` aufgegriffen | 0 | 0 | bleibt (Rückruf) |
+| Fragmentreihen | 1 | 3 | 4 | alle gewollt (Opas „Dann … Dann … Dann“, Niesen, Zählen) |
+| Floskeln aus Sebastians Liste, KI-Wörter (M64), Gedankenstriche | 0 | 0 | 0 | |
+
+Eine Messung, die kein Fund ist, aber zur Stimme gehört: Pixel wird von Abschnitt zu Abschnitt kürzer. Wörter je Satz: Prolog 7,8, ZS1 6,9, ZS2 6,1, ZS3 5,5; Anteil Kurzsätze (höchstens drei Wörter): 15 %, 23 %, 31 %, 34 %. Das liegt an den Pack-Kommentaren („Der Eimer.“, „Ketchup.“, „Gepackt.“). Laut Konzept holt Pixel aus und wird nur für einen Effekt kurz.
+
+### Funde Zwischenspiele
+
+| ID | Zeilen-ID | Sprecher | Priorität | Muster | Original | Grund | Vorschlag |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| R5-TX-10 | `ZS1_DACH_MAX_0434`, `ZS1_DACH_PIX_0436_2`, `ZS1_DACH_PIX_0454_2`, `ZS1_DACH_PIX_0530` | Max, Pixel | kosmetisch | Kontrast-Schablone (M8 negative Parallelismen) | „Das sagt mir keine Uhr, das sagen mir meine Füße.“ / „Meine Pfoten sind für Teppich gebaut, nicht für Burggräben und Ziegenpfade.“ / „… das ist bei deinem Großvater keine Lüge mehr, das ist schon Tradition.“ / „Das ist kein Gepäck, junger Mann, das ist mein Glaube …“ | Fünfmal derselbe Bau in einer Szene, davon `0434` und `0436_2` direkt hintereinander bei zwei Figuren. `ZS1_DACH_PIX_0324` („nicht als Drohung … als Vision“) ist ein Rückruf auf `P0_DACH_PIX_0215_2` und bleibt; Opas `0160` ist Vortragston und bleibt. | `0434`: „Drüben waren es Tage, Opa. Frag meine Füße.“ (Pixels „Meine auch. Alle vier …“ schließt weiter an) · `0436_2`: „Ich bin ein Wohnungskater. Meine Pfoten sind für Teppich gebaut, und drüben gab es drei Tage lang nur Burggraben und Ziegenpfad.“ · `0454_2`: „Zweimal dieselbe Ausrede. Beim dritten Mal trägt er sie als Brauchtum in den Kalender ein.“ · `0530`: „Der Thunfisch bleibt. Über Gepäck lasse ich mit mir reden, junger Mann, über meinen Glauben nicht.“ |
+| R5-TX-11 | `ZS2_DACH_PIX_0520_2`, `0560_2`, `0590_2`, `0592`, `0594_2`; `ZS3_DACH_PIX_0520_2`, `0560_2`, `0570_2`, `0580_2`, `0591`, `0592`, `0593`, `0594`, `0596`, `0597`, `0598_2` | Pixel | kosmetisch | Gleicher Satzanfang, gleicher Bauplan (M55/M61) | „Wo du hinfährst, quietscht vieles.“ / „Wo du hinfährst, gibt es Strom.“ / „Wo du hinfährst, fliegt allerdings alles von selbst …“ / „Im Fernsehen leuchtet schon alles von allein …“ / „Im Fernsehen klebt so etwas unter jedem Stuhl …“ / „Im Fernsehen unterschreibt man damit Verträge …“ | Die Pack-Kommentare sollen kryptisch, aber ehrlich sagen, ob sich ein Gegenstand lohnt. In ZS2 und ZS3 tun sie es alle im selben Bau: Name, „Wo du hinfährst“ oder „Im Fernsehen“, Urteil („Dagegen kommt er nicht an.“, „Du würdest also nichts Neues beitragen.“, „Sieben wären dort Verschwendung.“). Wer die Fundkiste durchklickt, hört in ZS3 neunmal „Im Fernsehen“. In ZS1 hat jeder Kommentar einen eigenen Anfang; so sollte es bleiben. | Bei jeder zweiten Zeile den Ort ins Bild ziehen statt voranstellen, Auskunft bleibt: `ZS2_0592` „Der Eimer. In der Zukunft soll es ohne Pause regnen.“ · `ZS2_0594_2` „Die Zukunft leuchtet an jeder Hauswand, in Farben, die es gar nicht gibt. Daneben ist er eine Kerze am Mittag.“ · `ZS3_0592` „Der Leuchttrank. Gegen die Zähne eines Moderators hat er keine Chance, die leuchten von allein.“ (zweite Blase: „Lass ihn hier.“) · `ZS3_0596` „Kaugummi. Unter jedem Stuhl jeder Talkshow klebt seit Jahrzehnten welches.“ · `ZS3_0597` „Der Kugelschreiber. Damit unterschreiben sie drüben Verträge, die keiner gelesen hat.“ |
+| R5-TX-12 | `ZS3_DACH_PIX_0540_2` (dazu `0140_3`, `0480_2`) | Pixel | kosmetisch | „Ich sage nichts“-Figur; **weiterhin offen (W3-1 in `offene-punkte.md`)** | „Ich sage nicht, womit. Es steht praktisch daneben.“ | Über alle drei Zwischenspiele ist der Gag gut dosiert (ZS1 einmal, ZS2 einmal), nur ZS3 hat ihn dreimal. `0140_3` („Ich sage nichts. Ich lege es nur hin.“) ist die beste Fassung, `0480_2` („Ich schweige ab jetzt …“) ist die Auflösung des Gags. Übrig ist `0540_2`. | „Das Futter liegt praktisch daneben.“ (Hinweis bleibt, Formel entfällt; damit zwei in ZS3 wie in der Regel) |
+| R5-TX-13 | `ZS1_DACH_OPA_0390`, `ZS1_DACH_MAX_0400` | Opa, Max | wichtig | Lokalisierung: Pointe geht im Englischen verloren | DE: „… sonst geht es nicht auf.“ – „‚Aufgehen‘? Du meinst, so wie ein Plan aufgeht. Oder?“ EN: „… or it won't rise.“ – „‚Rise‘? You mean like a plan coming together. Right?“ | „Aufgehen“ ist im Deutschen doppeldeutig (Teig, Plan). „Rise“ heißt nur das Erste; Max' Umdeutung ergibt im Englischen keinen Sinn, und damit fällt die wichtigste Kuchen-Andeutung von ZS1 flach. | Ein Wort nehmen, das für Kuchen und Pläne gilt: Opa: „… I'm not saying more, or it'll fall flat.“ – Max: „‚Fall flat‘? You mean like a plan falls flat. Right?“ – Pixel unverändert („Like a plan. Naturally. How else.“). |
+| R5-TX-14 | `ZS1_DACH_OPA_0514` / `ZS2_DACH_OPA_0510`; `ZS2_DACH_OPA_0040`; `ZS1_DACH_OPA_0452`; `ZS1_DACH_MAX_0420`; `ZS1_DACH_OPA_0510` / `ZS2_DACH_OPA_0510` / `ZS2_DACH_MAX_0600` | Opa, Max | kosmetisch | Lokalisierung: Running Gags im Englischen nicht wortgleich; eine Zeile zu lang | „I never throw anything away. Ever.“ gegen „… Never.“ · „A hero, grandson model!“ gegen „model coat hanger“, „The cat, model Pixel“ · „A round appointment.“ · `0420`: 143 Zeichen · „Two free pockets“ / „Two compartments“ / „Two pockets“ | Opas Satz „Ich werfe nichts weg. Nie.“ und seine „Modell …“-Bezeichnungen sind Running Gags und müssen im Englischen jedes Mal gleich gebaut sein. „Runder Termin“ spielt auf den runden Geburtstag an; „round appointment“ sagt im Englischen nichts. `0420` liegt über der 140-Zeichen-Grenze. | Überall „I never throw anything away. Ever.“ · „A hero, model grandson!“ · `0452`: „An occasion. A big round occasion. Hence the circle.“ · `0420`: „Grandpa's lost-and-found box. Anything that won't fit in the bag goes in. He never throws things away. He calls it his archive.“ (128) · „pockets“ durchgehend, passend zu den UI-Texten (siehe System/UI). |
+
+### Die zehn schwächsten Zeilen der Zwischenspiele
+
+| # | Zeile | Original | Umschreibung |
+| --- | --- | --- | --- |
+| 1 | `ZS1_DACH_MAX_0434` | Drüben waren es Tage, Opa. Das sagt mir keine Uhr, das sagen mir meine Füße. | Drüben waren es Tage, Opa. Frag meine Füße. |
+| 2 | `ZS1_DACH_PIX_0454_2` | Zweimal dieselbe Ausrede, das ist bei deinem Großvater keine Lüge mehr, das ist schon Tradition. | Zweimal dieselbe Ausrede. Beim dritten Mal trägt er sie als Brauchtum in den Kalender ein. |
+| 3 | `ZS1_DACH_PIX_0436_2` | Ich bin ein Wohnungskater. Meine Pfoten sind für Teppich gebaut, nicht für Burggräben und Ziegenpfade. | Ich bin ein Wohnungskater. Meine Pfoten sind für Teppich gebaut, und drüben gab es drei Tage lang nur Burggraben und Ziegenpfad. |
+| 4 | `ZS1_DACH_PIX_0530` | Der Thunfisch bleibt. Das ist kein Gepäck, junger Mann, das ist mein Glaube, und über den wird nicht verhandelt. | Der Thunfisch bleibt. Über Gepäck lasse ich mit mir reden, junger Mann, über meinen Glauben nicht. |
+| 5 | `ZS1_DACH_PIX_0355_2` | Wer zweimal misst, hat einmal zu lange auf einen Prinzen gewartet. Ich kenne das von Futterlieferungen. | So misst nur jemand, der zu lange auf einen Prinzen gewartet hat. Ich kenne das von Futterlieferungen. |
+| 6 | `ZS2_DACH_PIX_0594_2` | Wo du hinfährst, leuchtet jede Hauswand, und zwar in Farben, die es gar nicht gibt. Er würde dort nicht einmal auffallen. | Die Zukunft leuchtet an jeder Hauswand, in Farben, die es gar nicht gibt. Daneben ist er eine Kerze am Mittag. |
+| 7 | `ZS2_DACH_PIX_0592_2` | Ein einzelner Eimer gegen so viel Regen, das nenne ich Optimismus. Ich bewundere ihn und lasse ihn hier. | Ein einzelner Eimer gegen so viel Regen. Ich bewundere seinen Optimismus und lasse ihn hier. |
+| 8 | `ZS2_DACH_PIX_0670_2` | Ich bin dagegen, und zwar jetzt schon, ohne es probiert zu haben. Das nennt man Prinzipien. | Ich bin dagegen, und zwar jetzt schon, ohne es probiert zu haben. Bei Dosenfutter bin ich konservativ. |
+| 9 | `ZS3_DACH_PIX_0540_2` | Ich sage nicht, womit. Es steht praktisch daneben. | Das Futter liegt praktisch daneben. |
+| 10 | `ZS3_DACH_PIX_0596` | Kaugummi. Im Fernsehen klebt so etwas unter jedem Stuhl, in jeder Sendung, seit Jahrzehnten. | Kaugummi. Unter jedem Stuhl jeder Talkshow klebt seit Jahrzehnten welches. |
+
+### Gut in den Zwischenspielen (Belegzeilen)
+
+- Der Versprecher in ZS2 ist die beste Figurenszene des Umfangs: „Oder … ich helf dir dafür. Im Haushalt.“ – „Opa sagt nichts. Opa sagt sehr lange nichts.“ – „Ist er kaputt? Hast du ihn kaputt gemacht?“ – „Du hast gerade … Haushalt gesagt. Freiwillig.“ – „Ich nehm es zurück. … das hat der Sand gemacht.“ (`ZS2_DACH_MAX_0160` bis `0200`). Hier steht Max' Entwicklung in einer Reaktion, nicht in einer Rede. „Freiwillig“ fällt genau einmal und an der richtigen Stelle.
+- „Hatschi. // Bäckerei.“ – „Gesundheit. Und was?“ (`ZS2_DACH_PIX_0100`/`MAX_0110`): Pixels einziger Kurzsatz als Effekt, wie im Konzept vorgesehen.
+- Die Passwort-Versuche steigern sich, wie das Konzept es will: Viertel (`ZS1_DACH_MAX_0150`), halbes Passwort mit Versprecher (`ZS2_DACH_MAX_0140`–`0160`), „Kuchen123“ (`ZS3_DACH_MAX_0160`, „Du. Gerade eben.“ `0190`).
+- Opas Ausreden haben eine Linie und werden jedes Mal dünner: „Ein runder Termin. Deshalb ja auch der Kreis.“ (`ZS1_DACH_OPA_0452`), „Ein Verstärkungskreis.“ (`ZS2_DACH_OPA_0340`), „Ein Betonungszeichen. Rein wissenschaftlich.“ (`ZS3_DACH_OPA_0370`). Dazu Pixels Geruchsreihe Angst und Kuchen, Angst und Mehl, Angst, Mehl und Verzweiflung.
+- Max klingt nach sechzehn: „ich schwör's“ (`ZS1_DACH_MAX_0120`), „Meine Schuhe sind gefühlt noch im Mittelalter.“ (`0202`), „Ich zum Glück nicht, ich bin sechzehn.“ (`ZS3_DACH_MAX_0435`), „Haha. Nein, Weltuntergang, ich muss mich konzentrieren.“ (`ZS3_DACH_MAX_0310`).
+- Opa: „Siehst du! Und das ganz ohne WLAN. Stell dir vor, was du mit WLAN alles nicht geschafft hättest.“ (`ZS1_DACH_OPA_0194`), „Das Prinzip hab ich vom Schnellkochtopf.“ (`ZS2_DACH_OPA_0060`), „Rückverwandlungs…“ – „…schwund. Ich weiß.“ (`ZS3_DACH_OPA_0070`/`MAX_0080`).
+- Kleine Rückrufe sitzen: Ketchup „Chance oder Problem“ (`ZS1_DACH_PIX_0600_2`) wird zu „weder Chance noch Problem“ (`ZS2_DACH_PIX_0596_2`); „Prospekte“ wird ein Stapel, auf dem Pixel bald schlafen kann (`ZS2_DACH_PIX_0650_2`, `ZS3_DACH_PIX_0650_2`).
