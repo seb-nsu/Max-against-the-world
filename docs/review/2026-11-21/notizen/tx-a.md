@@ -14,7 +14,7 @@ Geprüft wird: Humor und Ton, eigene Stimme je Figur, KI-Klang jeder Dialogzeile
 | ZS1_ | 110 | 110 |
 | ZS2_ | 87 | 87 |
 | ZS3_ | 112 | 112 |
-| W1_ | 0 | 1433 |
+| W1_ | 496 | 1433 |
 | SYS_ | 0 | 108 |
 | UI_ | 0 | 965 |
 
@@ -149,3 +149,42 @@ Eine Messung, die kein Fund ist, aber zur Stimme gehört: Pixel wird von Abschni
 - Max klingt nach sechzehn: „ich schwör's“ (`ZS1_DACH_MAX_0120`), „Meine Schuhe sind gefühlt noch im Mittelalter.“ (`0202`), „Ich zum Glück nicht, ich bin sechzehn.“ (`ZS3_DACH_MAX_0435`), „Haha. Nein, Weltuntergang, ich muss mich konzentrieren.“ (`ZS3_DACH_MAX_0310`).
 - Opa: „Siehst du! Und das ganz ohne WLAN. Stell dir vor, was du mit WLAN alles nicht geschafft hättest.“ (`ZS1_DACH_OPA_0194`), „Das Prinzip hab ich vom Schnellkochtopf.“ (`ZS2_DACH_OPA_0060`), „Rückverwandlungs…“ – „…schwund. Ich weiß.“ (`ZS3_DACH_OPA_0070`/`MAX_0080`).
 - Kleine Rückrufe sitzen: Ketchup „Chance oder Problem“ (`ZS1_DACH_PIX_0600_2`) wird zu „weder Chance noch Problem“ (`ZS2_DACH_PIX_0596_2`); „Prospekte“ wird ein Stapel, auf dem Pixel bald schlafen kann (`ZS2_DACH_PIX_0650_2`, `ZS3_DACH_PIX_0650_2`).
+
+## Welt 1 (`W1_`, 1433 Zeilen)
+
+Für Welt 1 gab es bisher keinen KI-Klang-Durchgang (offener Punkt W3-2). Die Funde stehen je Raum; die Einschätzung mit Zahlen, die raumübergreifenden Funde und die zehn schwächsten Zeilen folgen am Ende des Abschnitts.
+
+### Ankunft und Dorfplatz (`W1_ANK`, `W1_DORF`, 173 Zeilen)
+
+| ID | Zeilen-ID | Sprecher | Priorität | Muster | Original | Grund | Vorschlag |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| R5-TX-15 | `W1_ANK_PIX_0090_2`, `W1_DORF_PIX_0200_2`, `W1_DORF_PIX_1320`/`_2` | Pixel | kosmetisch | Entweder-oder-Schluss mit „beides“ | „Oder Hunger. Nach meiner Erfahrung meistens beides …“ / „Entweder ist dieser Mann sehr böse, oder der Zeichner war sehr schlecht. Aus Erfahrung tippe ich auf beides.“ / „Entweder ist es gut festgemacht oder sehr faul. // Ich respektiere beides …“ | Dreimal löst Pixel in den ersten beiden Räumen eine Alternative mit „beides“ auf, zweimal sogar mit „(aus) Erfahrung“. Derselbe Schluss steht schon in `P0_TREP_MAX_0010` und `ZS1_DACH_PIX_0600_2`. Toadis „Ich kann auch beides!“ (`W1_DORF_TOA_0620`) ist Panik und bleibt. | `0200_2` behalten (beste Fassung, passt zum Steckbrief ohne Gesicht). `0090_2`: „Oder Hunger. Bei mir sieht das genauso aus, meistens kurz vor dem Abendessen.“ · `1320`/`_2`: „Das Schloss da oben bewegt sich nicht. Es ist gut festgemacht oder sehr faul. // Ich hoffe auf faul. Mit so einem Schloss könnte ich mich anfreunden.“ |
+| R5-TX-16 | `W1_DORF_TOA_0430` | Toadi | kosmetisch | Lehnübersetzung (M45; Regel 8 der Couch-Quest-Regeln nennt genau „Meinungen haben“) | „Eine Katze! Ist sie gefährlich? Sie sieht aus, als hätte sie Meinungen!“ | „To have opinions“ ist eine englische Wendung; ein Deutscher sagt „zu allem eine Meinung haben“ oder „alles besser wissen“. (Weitere Stellen in Welt 1 siehe raumübergreifende Funde.) | „Eine Katze! Ist sie gefährlich? Sie guckt, als wüsste sie alles besser!“ |
+| R5-TX-17 | `W1_DORF_MAX_1140` | Max | kosmetisch | Gedankenstrich (M16, Regel 9) | „Gießen. Und jetzt warten wir drei Wochen, oder –“ (EN ebenso „or –“) | Einziger Gedankenstrich in Welt 1; Abbrüche schreibt das Spiel sonst mit „…“. | „Gießen. Und jetzt warten wir drei Wochen, oder …“ / „Water it. And now we wait three weeks, or …“ |
+| R5-TX-18 | `W1_DORF_MAX_0840`, `W1_DORF_BRU_0850`, `W1_DORF_PIX_0870`, `W1_HINT_PIX_0530` | Max, Brunnen, Pixel | wichtig | Lokalisierung: Doppelsinn und Rätselhinweis gehen verloren | EN: „Something that wants to go far.“ / „Oh, it wants to go far all right.“ / „wish for "something that wants to go far"“ | „Hoch hinaus“ heißt ehrgeizig und wörtlich nach oben; genau deshalb liefert der Brunnen eine Bohne, die zum Luftschloss wächst. „Go far“ zeigt in die Ferne, nicht nach oben; die Bohne passt im Englischen nicht zum Wunsch, und der Hinweis in `HINT_0530` zeigt in die falsche Richtung. | „Something that aims high.“ / „Something that aims high. Granted. No returns, no exchanges.“ / „Oh, it aims high all right. Plants just have a very slow sense of humour.“ / Hinweis: „Coin in, wish for "something that aims high". …“ |
+| R5-TX-19 | `W1_DORF_MAX_0160` | Max (liest Schild) | kosmetisch | Lokalisierung: Wortspiel falsch aufgelöst | EN: „Everything Grandma doesn't wear any more.“ | „Alles, was Oma nicht mehr trägt“ meint beim Lieferdienst das Tragen des Korbs. „Wear“ macht daraus einen Altkleiderhandel; der Witz ist weg und die Zeile mit 117 Zeichen länger als das Deutsche. | „"Little Red's Delivery. Everything Grandma can't carry any more. There in ten minutes or the basket's free."“ (106) |
+
+Stand der Zeilen, die der Durchgang vom 14.11. als schwächste nannte: `W1_ANK_MAX_0050` (Staffel übersprungen), `W1_DORF_MAX_0110` (Apps) und `W1_DORF_MAX_1160` (Download bei Opa) stehen unverändert. Als KI-Klang zähle ich sie nicht; es sind Max' Medienvergleiche, die das Konzept will. `1160` hat mit „Okay.“ einen leeren Anlauf, der sich streichen lässt: „Das ging schneller als jeder Download bei Opa. Und der hat Glasfaser bestellt. Vor drei Jahren.“
+
+### Taverne (`W1_TAV`, 176 Zeilen)
+
+| ID | Zeilen-ID | Sprecher | Priorität | Muster | Original | Grund | Vorschlag |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| R5-TX-20 | `W1_TAV_PIX_1610_2` | Pixel | kosmetisch | Stockphrase mit Echo-Nachklapp (M62, Regel 5) | „Es ist eine Gabe. Eine schwere Gabe, wenn man sie nicht nutzen darf.“ | Fertigfloskel („eine Gabe und ein Fluch“). Der Zuruf soll zum Fondue lenken; die zweite Blase bringt nichts Neues und klingt nach Kalender. | „Er wird langsam ungeduldig. Ich übrigens auch.“ |
+| R5-TX-21 | `W1_TAV_MAX_0120` | Max | kosmetisch | Symmetrisches Satzpaar („A nennt das X. Ich nenne das Y.“) | „Ein Topf voll blubberndem Käse. Gollo nennt das Vulkan. Ich nenne das Abendessen.“ | Gebaute Zweizeiler-Pointe; Max untertreibt sonst und baut keine Parallelen. „Nennen“ als Pointenwort steht außerdem in `W1_DORF_PIX_0400`, `W1_STAB_STA_0240_2` und `W1_STAB_MAX_0550` (die letzte ist die Beispielzeile aus dem Konzept und bleibt). | „Ein Topf voll blubberndem Käse. Gollo sagt Vulkan dazu. Für mich sieht das nach Abendessen aus.“ |
+
+`W1_TAV_MAX_1230` (14.11. als schwach genannt) ist überarbeitet und hat kein „In Serien“ mehr; `W1_TAV_MAX_1330` („In Serien braucht man irgendwann alles.“) und `W1_TAV_MAX_0360` (Handy bei einem Prozent) stehen noch, sind aber je einmal im Raum und tragen.
+
+### Schmiede (`W1_SCHM`, 65 Zeilen)
+
+Kein eigener Fund. `W1_SCHM_PIX_0300_2` („Das ist keine Treue, das ist Anbiederung.“) ist die einzige Kontrast-Formel im Raum und sitzt, weil Pixel hier wirklich einen Begriff zurückweist. `W1_SCHM_MAX_0010` (Esse so heiß wie mein Handy) steht unverändert.
+
+### Zauberstab-Laden (`W1_STAB`, 82 Zeilen)
+
+| ID | Zeilen-ID | Sprecher | Priorität | Muster | Original | Grund | Vorschlag |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| R5-TX-22 | `W1_STAB_MAX_0430`, `W1_STAB_MAX_0460` (im Verbund mit `0410`, `0480`, `PIX_0490`) | Max | kosmetisch | Kontrast-Schablone (M8), Häufung in einer Rätselfolge | „Er wählt mich nicht, er pikst mich nur.“ / „Ich fühl mich nicht gewählt, ich fühl mich bloß vermessen.“ / „Das ist ein Partysnack, kein Zauberstab.“ / „Thunfisch klebt nicht, Thunfisch stinkt.“ – „Thunfisch stinkt nicht. Thunfisch duftet …“ | Fünf Kontraste in den Fehlversuchen eines Rätsels, die man hintereinander hört. `0410` spielt auf „Der Stab wählt den Zauberer“ an und bleibt; `0480`/`0490` ist ein echter Widerspruch zwischen zwei Figuren und trägt die Rätselauskunft „klebt nicht“. Übrig sind zwei. | `0430`: „Zwei Meter ausgeklappt. Ich fühl mich bloß vermessen.“ (der Doppelsinn bleibt, „gewählt“ kennt der Spieler aus `0410`/`0420`) · `0460`: „Zahnstocher mit Käse. Damit verzaubere ich höchstens ein Buffet.“ |
+| R5-TX-23 | `W1_STAB_MAX_0555` (dazu `W1_STAB_PIX_0120`, `W1_STAB_STA_0530`) | Max | kosmetisch | Zeugma konkret + abstrakt als Dreier (M9) | „Mein Zauberstab, gemacht aus Holz, Käse und Hoffnung. Zwei davon sind haltbar.“ | Dreimal im selben Raum dieselbe Bauart: „Staub, Samt und Hoffnung“ (Pixel), „Honig, Käse, Schicksal“ (Stabmacher), „Holz, Käse und Hoffnung“ (Max), zweimal mit demselben Wort. Pixels Zeile wird in `0120_2` weitergeführt („Die Hoffnung riecht schon ein wenig abgestanden“) und bleibt, die des Stabmachers ist seine Feierlichkeit. Bei Max ist es geliehene Stimme. | „Mein Zauberstab. Ein Kochlöffel mit Käse dran. Haltbar ist davon nur der Löffel.“ |
+| R5-TX-24 | `W1_STAB_STA_0220` | Stabmacher | kosmetisch | Lokalisierung: Anrede im Englischen ergänzt | EN: „The wand chooses the wizard, young man. Not the other way round. I have three left.“ | Im Deutschen fehlt die Anrede. „Young man“ ist Pixels Erkennungswort (höchstens viermal je Abschnitt) und fällt im selben Raum in `W1_STAB_PIX_0490`. Das Zitat ist ohne Anrede genauso erkennbar. | „The wand chooses the wizard. Not the other way round. I have three left.“ |
+
+Gut in diesen fünf Räumen (Belegzeilen, ausführlich im Abschnitt „Gut gelöst“): `W1_DORF_MAX_0950` („Das ist keine Ziege. Das ist ein Sofa mit Hörnern.“), `W1_ANK_MAX_0121`, `W1_DORF_TOA_0522`, `W1_DORF_ROT_0930`, `W1_TAV_PIX_0340` („Meine Nase lügt nie. Sie interpretiert.“) mit Rückruf in `W1_STAB_PIX_0540`, `W1_TAV_HUM_0540`, `W1_TAV_GOL_1210`, `W1_SCHM_SCH_0240`, `W1_STAB_STA_0222` („Das sagst du. Der Löffel hat sich dazu noch nicht geäußert.“), `W1_STAB_STA_0282`, `W1_STAB_STA_0420`.
