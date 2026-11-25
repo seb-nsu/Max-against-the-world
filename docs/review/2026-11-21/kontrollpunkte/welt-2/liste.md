@@ -32,3 +32,6 @@ Alle Stände stammen aus dem Lauf `pr-w2-haupt`: Anfang ist `kontrollpunkte/welt
 | `w2_25_werkstatt_anfang` | werkstatt | Werkstatt erstmals betreten, vor dem Gespräch mit Hieron | wie oben | Klickweg |
 | `w2_26_vor_R5_21_teile` | werkstatt | Krone und Goldbarren von Hieron; Waage, Messbecher, Brennspiegel, Essigkrug genommen. **21 Teile: Messbecher, Brennspiegel, Essigkrug liegen rechts außerhalb des Bildes (R5-W2-17)** | + krone, goldbarren, waage, messbecher, brennspiegel, essigkrug | Hieron Option 0470 |
 | `w2_27_nach_R5` | werkstatt | + R5, Trainings-Szene gelaufen | – krone, goldbarren (19 Teile) | Krone, Messbecher, Barren, Messbecher auf die Badewanne |
+| `w2_28_stadion_vor_tag1` | stadion | Lauf A (21 Teile gesammelt): R5 gelöst, Stadion erstmals betreten, vor der Startlinie | 19 Teile | Klickweg |
+| `w2_29_nach_tag1` | stadion | Lauf A: Tag 1 gelaufen (R12). **Leonidas steht bei x −80 außerhalb des Raums (R5-W2-24); Wurfscheibe und Schallplatte rechts außerhalb der Leiste** | + schallplatte, wurfscheibe; – sandalen | Startlinie, Hebel mit Pixel im Korb |
+| `w2b_07_nach_tag1_leonidas_weg` | stadion | **Lauf B** (Lösungsweg Blöcke 1–6 von `welt1_ende`, nur Pflicht-Gegenstände, 13 Teile): R1–R5, R8, R9, R12 gelöst, Hermes verhört. Leonidas bei x −80: R7 nicht lösbar | 13 Teile | Lösungsweg |

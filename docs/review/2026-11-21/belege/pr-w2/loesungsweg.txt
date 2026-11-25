@@ -19,8 +19,6 @@ option "Doch nicht"
 warte
 rklick inv:handy
 warte
-klick @papyrusblatt
-warte
 klick 620 320
 warte
 klick 620 320
@@ -90,8 +88,6 @@ klick @datteln
 warte
 klick @zwiebel
 warte
-klick @traubensaft
-warte
 klick inv:datteln
 klick inv:brot
 warte 4
@@ -109,8 +105,6 @@ klick @nebet
 warte
 #-- Block 4: Sphinx (R8), erste Fährfahrt, Agora (R9), Startbüro (R3)
 klick @ausgang_thronsaal
-warte
-klick @pharaonenteller
 warte
 klick 5 330
 warte
@@ -176,4 +170,73 @@ klick @beamter_1
 warte
 klick inv:olivenoel
 klick inv:sandalen
+warte
+
+#-- Block 5: Fähre nach Syrakus, Werkstatt (R5)
+# Nur der Messbecher wird genommen: Mit mehr als 14 Teilen sind die zuletzt erhaltenen nicht mehr anklickbar (R5-W2-17).
+warte
+klick @ausgang_agora
+warte
+klick 630 320
+warte
+klick 630 320
+warte
+klick 630 320
+warte
+klick @weg_zum_faehrsteg
+warte
+klick @faehre
+option "Hafen Syrakus"
+warte
+warte 3
+warte
+klick @gasse_zur_werkstatt
+warte
+warte 2
+warte
+klick @hieron
+option 0470
+option 0490
+option 0510
+warte
+klick @messbecher
+warte 3
+warte
+klick inv:krone
+klick @badewanne
+warte 3
+klick inv:messbecher
+klick @badewanne
+warte 3
+klick inv:goldbarren
+klick @badewanne
+warte 3
+klick inv:messbecher
+klick @badewanne
+warte 8
+warte
+
+#-- Block 6: Fähre nach Olympia, Stadion, Wettkampftag 1 (Lauf, Hebel mit Pixel im Korb)
+warte
+klick @ausgang_hafen
+warte
+klick @faehre
+option "Fährsteg Olympia"
+warte
+warte 3
+warte
+klick @weg_zur_agora
+warte
+klick 5 320
+warte
+klick 5 320
+warte
+klick 5 320
+warte
+klick @bogen_zum_stadion
+warte
+warte 3
+warte
+klick @startlinie
+warte 5
 warte
