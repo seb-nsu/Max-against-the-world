@@ -207,7 +207,12 @@ Noch nicht nachgeprüft: 14.11. übrige Nummern; 17.11. W1-01, -03 bis -07, -09 
 
 ## Vorschläge für die Lessons Learned
 
-(folgen)
+- **Speichern und Laden immer über einen Programmneustart prüfen.** Alle bisherigen Tests laden im selben Programmlauf; dort sind Gesprächsoptionen, aufgehobene Props und Ähnliches noch im Speicher. Der Fehler R5-W1-34 (Gespräche ohne Optionen nach Neustart) und R5-P-01 (Props nach Rücksprung) fallen nur auf, wenn man speichert, das Programm beendet, neu startet, lädt und dann **jede schon benutzte Figur anspricht**. Vorschlag für die CI: ein Test, der genau das mit einem Stand je Welt tut. Beleg: R5-W1-34.
+- **Popochiu speichert alle Skript-Variablen einer Ressource, auch interne** (`_has_done_init`). Neue Variablen an Gesprächen, Räumen und Figuren deshalb daraufhin prüfen, ob sie in den Spielstand gehören; sonst in `cq_save_load.gd` beim Laden überspringen. Beleg: Speicherstand `kontrollpunkte/welt-1/w33_bergwerk_vor_R10.json`, Schlüssel `popochiu.dialogs.*`.
+- **Szenen brauchen eine Kamera-Regie.** In breiten Räumen spielt eine Szene dort, wo die Figuren stehen, die Kamera bleibt aber bei Max. Jede Szene, die beim Betreten eines Breitraums startet, vor dem Zeigen in Tempo 1 filmen und prüfen, ob alle Sprecher im Bild sind. Beleg: R5-W1-17 (Waldemars Lied), R5-W1-05.
+- **Folgende und wartende Figuren im Raum mit allen anderen Figuren prüfen** (Regel steht schon in CLAUDE.md, „im Raum mit allen Figuren prüfen“), und zwar je Zustand: Abnehmer in den Abstellkammern, Zeldina an der Brücke, XXL-Ziege vor Schild und Schmiede. Beleg: R5-W1-30, GD-W1-10, R5-W1-12.
+- **Hinweis-Schritte mit zwei Lösungswegen als ein Schritt führen.** R10a blieb nach Weg B offen und hat die Pfote für den Rest der Welt blockiert. Beleg: R5-W1-01.
+- **Auswahlmenüs mit Reihenfolge-Rätseln nie in Lösungsreihenfolge anlegen.** Beleg: R5-W1-29.
 
 ## Werkzeug
 
