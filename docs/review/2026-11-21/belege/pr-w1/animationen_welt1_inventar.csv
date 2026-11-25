@@ -1,0 +1,134 @@
+figur;animation;von;bilder;schritte;ms;dauer_s;schleife;status;regie;aufrufe;name_im_code_unklar;gleich_wie;bilder_gleich_idle
+max_pilz;idle;0;8;14;160;2.24;ja;generisch;;;"skripte/welt_3.gd:2383; skripte/objekte/cq_raum.gd:794; game/characters/pixel/character_pixel.gd:27; game/characters/pixel/character_pixel.gd:34; game/characters/pixel/character_pixel.gd:71; game/rooms/dorfplatz/room_dorfplatz.gd:28";;
+max_pilz;walk;8;8;8;60;0.48;ja;generisch;;;"skripte/welt_3.gd:516; skripte/welt_3.gd:537; skripte/objekte/cq_figur.gd:164; skripte/objekte/cq_figur.gd:172; skripte/objekte/cq_figur.gd:173; skripte/objekte/cq_figur.gd:173";;0/8
+max_pilz;talk;16;6;14;130;1.82;ja;generisch;;;game/rooms/dorfplatz/room_dorfplatz.gd:161;;0/6
+max_pilz;gehen_vorn;22;8;8;60;0.48;ja;generisch;;;"skripte/objekte/cq_figur.gd:287; skripte/objekte/cq_figur.gd:296";;0/8
+max_pilz;gehen_hinten;30;8;8;60;0.48;ja;generisch;;;skripte/objekte/cq_figur.gd:287;;0/8
+pixel_ziege;idle;0;4;4;320;1.28;ja;generisch;;"game/characters/pixel/character_pixel.gd:27; game/characters/pixel/character_pixel.gd:34; game/characters/pixel/character_pixel.gd:71; game/rooms/taverne/room_taverne.gd:64; game/rooms/taverne/room_taverne.gd:69; game/rooms/dachboden/room_dachboden.gd:197; … 9 Stellen";"skripte/welt_3.gd:2383; skripte/objekte/cq_raum.gd:794; game/rooms/dorfplatz/room_dorfplatz.gd:28; game/rooms/dorfplatz/room_dorfplatz.gd:62; game/rooms/klassenzimmer/room_klassenzimmer.gd:63; game/rooms/dachboden/room_dachboden.gd:148";walk;
+pixel_ziege;talk;4;4;4;150;0.60;ja;generisch;;;game/rooms/dorfplatz/room_dorfplatz.gd:161;;2/4
+pixel_ziege;walk;8;4;4;200;0.80;ja;generisch;;;"skripte/welt_3.gd:516; skripte/welt_3.gd:537; skripte/objekte/cq_figur.gd:164; skripte/objekte/cq_figur.gd:172; skripte/objekte/cq_figur.gd:173; skripte/objekte/cq_figur.gd:173";idle;4/4
+pixel_ziege;gehen;12;8;8;110;0.88;ja;pruefen (Name im Code, Figur unklar);ja;;"skripte/objekte/cq_figur.gd:296; skripte/objekte/cq_figur.gd:298";;0/8
+toadi;idle;0;4;4;320;1.28;ja;generisch;;;"skripte/welt_3.gd:2383; skripte/objekte/cq_raum.gd:794; game/characters/pixel/character_pixel.gd:27; game/characters/pixel/character_pixel.gd:34; game/characters/pixel/character_pixel.gd:71; game/rooms/dorfplatz/room_dorfplatz.gd:28";;
+toadi;talk_alt;4;4;4;150;0.60;ja;Altfassung;;;;;1/4
+toadi;walk;8;8;8;80;0.64;ja;generisch;;;"skripte/welt_3.gd:516; skripte/welt_3.gd:537; skripte/objekte/cq_figur.gd:164; skripte/objekte/cq_figur.gd:172; skripte/objekte/cq_figur.gd:173; skripte/objekte/cq_figur.gd:173";;0/8
+toadi;auf_max_zeigen;16;6;6;140;0.84;nein;aufgerufen;ja;ZEILE W1_ANK_TOA_0120 (vor);;;0/6
+toadi;haende_ringen;22;6;6;130;0.78;ja;aufgerufen;ja;WARTEN gesten_welt_1.gd;;;0/6
+toadi;keuchen;28;4;4;180;0.72;ja;aufgerufen;ja;"ZEILE W1_WASS_TOA_0020 (halten_mit); game/rooms/dorfplatz/room_dorfplatz.gd:165";;;0/4
+toadi;talk;32;8;8;150;1.20;ja;generisch;;;game/rooms/dorfplatz/room_dorfplatz.gd:161;;0/8
+alwin;idle;0;4;4;320;1.28;ja;generisch;;;"skripte/welt_3.gd:2383; skripte/objekte/cq_raum.gd:794; game/characters/pixel/character_pixel.gd:27; game/characters/pixel/character_pixel.gd:34; game/characters/pixel/character_pixel.gd:71; game/rooms/dorfplatz/room_dorfplatz.gd:28";;
+alwin;talk_alt;4;4;4;150;0.60;ja;Altfassung;;;;;2/4
+alwin;walk;8;8;8;45;0.36;ja;generisch;;;"skripte/welt_3.gd:516; skripte/welt_3.gd:537; skripte/objekte/cq_figur.gd:164; skripte/objekte/cq_figur.gd:172; skripte/objekte/cq_figur.gd:173; skripte/objekte/cq_figur.gd:173";;0/8
+alwin;kochbuch;16;6;16;120;1.92;ja;aufgerufen;ja;"ZEILE W1_HOGG_ALW_0402 (vor); WARTEN gesten_welt_1.gd";skripte/welt_3.gd:1348;;0/6
+alwin;talk;22;8;10;150;1.50;ja;generisch;;;game/rooms/dorfplatz/room_dorfplatz.gd:161;;0/8
+alwin;ruehren;30;8;8;140;1.12;ja;aufgerufen;ja;game/rooms/klassenzimmer/room_klassenzimmer.gd:92;game/rooms/klassenzimmer/room_klassenzimmer.gd:91;;0/8
+zeldina;idle;0;4;4;320;1.28;ja;generisch;;;"skripte/welt_3.gd:2383; skripte/objekte/cq_raum.gd:794; game/characters/pixel/character_pixel.gd:27; game/characters/pixel/character_pixel.gd:34; game/characters/pixel/character_pixel.gd:71; game/rooms/dorfplatz/room_dorfplatz.gd:28";;
+zeldina;talk_alt;4;4;4;150;0.60;ja;Altfassung;;;;;2/4
+zeldina;walk;8;8;8;60;0.48;ja;generisch;;;"skripte/welt_3.gd:516; skripte/welt_3.gd:537; skripte/objekte/cq_figur.gd:164; skripte/objekte/cq_figur.gd:172; skripte/objekte/cq_figur.gd:173; skripte/objekte/cq_figur.gd:173";;0/8
+zeldina;kiste_schwert;16;10;12;130;1.56;nein;aufgerufen;ja;WARTEN gesten_welt_1.gd;;;0/10
+zeldina;talk;26;6;21;110;2.31;ja;generisch;;;game/rooms/dorfplatz/room_dorfplatz.gd:161;;0/6
+gollo;idle;0;4;4;320;1.28;ja;generisch;;;"skripte/welt_3.gd:2383; skripte/objekte/cq_raum.gd:794; game/characters/pixel/character_pixel.gd:27; game/characters/pixel/character_pixel.gd:34; game/characters/pixel/character_pixel.gd:71; game/rooms/dorfplatz/room_dorfplatz.gd:28";;
+gollo;walk;8;8;8;55;0.44;ja;generisch;;;"skripte/welt_3.gd:516; skripte/welt_3.gd:537; skripte/objekte/cq_figur.gd:164; skripte/objekte/cq_figur.gd:172; skripte/objekte/cq_figur.gd:173; skripte/objekte/cq_figur.gd:173";;0/8
+gollo;ring_werfen;20;6;9;130;1.17;nein;aufgerufen;ja;ZEILE W1_TAV_GOL_1210 (mit);;;0/6
+gollo;ringschachtel;26;6;15;110;1.65;ja;aufgerufen;ja;RUHE gesten_welt_1.gd;;;0/6
+gollo;talk_geste;16;4;17;120;2.04;ja;UNGENUTZT;;;;;0/4
+gollo;talk;4;4;4;150;0.60;ja;generisch;;;game/rooms/dorfplatz/room_dorfplatz.gd:161;;1/4
+humbert;idle;0;4;4;320;1.28;ja;generisch;;;"skripte/welt_3.gd:2383; skripte/objekte/cq_raum.gd:794; game/characters/pixel/character_pixel.gd:27; game/characters/pixel/character_pixel.gd:34; game/characters/pixel/character_pixel.gd:71; game/rooms/dorfplatz/room_dorfplatz.gd:28";;
+humbert;talk_alt;4;4;4;150;0.60;ja;Altfassung;;;;;1/4
+humbert;walk;8;8;8;60;0.48;ja;generisch;;;"skripte/welt_3.gd:516; skripte/welt_3.gd:537; skripte/objekte/cq_figur.gd:164; skripte/objekte/cq_figur.gd:172; skripte/objekte/cq_figur.gd:173; skripte/objekte/cq_figur.gd:173";;0/8
+humbert;keller;16;10;13;130;1.69;nein;aufgerufen;ja;game/rooms/taverne/room_taverne.gd:146;;;0/10
+humbert;polieren;26;7;8;150;1.20;ja;aufgerufen;ja;RUHE gesten_welt_1.gd;;;0/7
+humbert;talk;33;6;28;110;3.08;ja;generisch;;;game/rooms/dorfplatz/room_dorfplatz.gd:161;;0/6
+schmied;idle;0;4;4;320;1.28;ja;generisch;;;"skripte/welt_3.gd:2383; skripte/objekte/cq_raum.gd:794; game/characters/pixel/character_pixel.gd:27; game/characters/pixel/character_pixel.gd:34; game/characters/pixel/character_pixel.gd:71; game/rooms/dorfplatz/room_dorfplatz.gd:28";;
+schmied;talk_alt;4;4;4;150;0.60;ja;Altfassung;;;;;2/4
+schmied;walk;8;8;8;45;0.36;ja;generisch;;;"skripte/welt_3.gd:516; skripte/welt_3.gd:537; skripte/objekte/cq_figur.gd:164; skripte/objekte/cq_figur.gd:172; skripte/objekte/cq_figur.gd:173; skripte/objekte/cq_figur.gd:173";;0/8
+schmied;abschrecken;16;6;10;130;1.30;nein;UNGENUTZT;ja;;;;0/6
+schmied;blasebalg;22;6;6;130;0.78;ja;UNGENUTZT;ja;;;;0/6
+schmied;haemmern;28;7;10;100;1.00;ja;aufgerufen;ja;"game/rooms/schmiede/room_schmiede.gd:53; game/rooms/schmiede/room_schmiede.gd:66";"game/rooms/schmiede/room_schmiede.gd:52; game/rooms/schmiede/room_schmiede.gd:63";;0/7
+schmied;ins_feuer;35;8;12;120;1.44;nein;UNGENUTZT;ja;;;;0/8
+schmied;talk;43;8;9;150;1.35;ja;generisch;;;game/rooms/dorfplatz/room_dorfplatz.gd:161;;0/8
+schmied;schweiss_abwischen;51;7;20;110;2.20;nein;aufgerufen;ja;WARTEN gesten_welt_1.gd;;;1/7
+schmied;zum_amboss;58;8;11;120;1.32;nein;UNGENUTZT;ja;;;;0/8
+waldemar;idle;0;4;4;320;1.28;ja;generisch;;;"skripte/welt_3.gd:2383; skripte/objekte/cq_raum.gd:794; game/characters/pixel/character_pixel.gd:27; game/characters/pixel/character_pixel.gd:34; game/characters/pixel/character_pixel.gd:71; game/rooms/dorfplatz/room_dorfplatz.gd:28";;
+waldemar;talk_alt;4;4;4;150;0.60;ja;Altfassung;;;;;2/4
+waldemar;walk;8;12;12;45;0.54;ja;generisch;;;"skripte/welt_3.gd:516; skripte/welt_3.gd:537; skripte/objekte/cq_figur.gd:164; skripte/objekte/cq_figur.gd:172; skripte/objekte/cq_figur.gd:173; skripte/objekte/cq_figur.gd:173";;0/12
+waldemar;fussbad;20;2;10;160;1.60;ja;aufgerufen;ja;ZEILE W1_BRUE_WAL_0960 (halten);;;0/2
+waldemar;musical;22;3;16;130;2.08;ja;aufgerufen;ja;"ZEILE W1_WALD_WAL_0490 (statt_talk); ZEILE W1_WALD_WAL_0500 (statt_talk)";;;0/3
+waldemar;talk;25;6;26;110;2.86;ja;generisch;;;game/rooms/dorfplatz/room_dorfplatz.gd:161;;0/6
+waldemar;regelbuch;31;5;14;120;1.68;ja;aufgerufen;ja;"ZEILE W1_BRUE_WAL_0220 (vor); ZEILE W1_BRUE_WAL_0460 (vor); WARTEN gesten_welt_1.gd";;;0/5
+stabmacher;idle;0;4;4;320;1.28;ja;generisch;;;"skripte/welt_3.gd:2383; skripte/objekte/cq_raum.gd:794; game/characters/pixel/character_pixel.gd:27; game/characters/pixel/character_pixel.gd:34; game/characters/pixel/character_pixel.gd:71; game/rooms/dorfplatz/room_dorfplatz.gd:28";;
+stabmacher;talk_alt;4;4;4;150;0.60;ja;Altfassung;;;;;1/4
+stabmacher;walk;8;8;8;58;0.46;ja;generisch;;;"skripte/welt_3.gd:516; skripte/welt_3.gd:537; skripte/objekte/cq_figur.gd:164; skripte/objekte/cq_figur.gd:172; skripte/objekte/cq_figur.gd:173; skripte/objekte/cq_figur.gd:173";;0/8
+stabmacher;mustern;16;3;18;140;2.52;ja;aufgerufen;ja;"ZEILE W1_STAB_STA_0710 (vor); WARTEN gesten_welt_1.gd";;;0/3
+stabmacher;talk;19;9;9;140;1.26;ja;generisch;;;game/rooms/dorfplatz/room_dorfplatz.gd:161;;0/9
+rotkaeppchen;idle;0;4;4;320;1.28;ja;generisch;;;"skripte/welt_3.gd:2383; skripte/objekte/cq_raum.gd:794; game/characters/pixel/character_pixel.gd:27; game/characters/pixel/character_pixel.gd:34; game/characters/pixel/character_pixel.gd:71; game/rooms/dorfplatz/room_dorfplatz.gd:28";;
+rotkaeppchen;talk_alt;4;4;4;150;0.60;ja;Altfassung;;;;;2/4
+rotkaeppchen;walk;8;8;8;60;0.48;ja;generisch;;;"skripte/welt_3.gd:516; skripte/welt_3.gd:537; skripte/objekte/cq_figur.gd:164; skripte/objekte/cq_figur.gd:172; skripte/objekte/cq_figur.gd:173; skripte/objekte/cq_figur.gd:173";;0/8
+rotkaeppchen;pakete;16;4;15;120;1.80;ja;aufgerufen;ja;RUHE gesten_welt_1.gd;;;0/4
+rotkaeppchen;talk;20;6;24;110;2.64;ja;generisch;;;game/rooms/dorfplatz/room_dorfplatz.gd:161;;0/6
+maklerin;idle;0;4;4;320;1.28;ja;generisch;;;"skripte/welt_3.gd:2383; skripte/objekte/cq_raum.gd:794; game/characters/pixel/character_pixel.gd:27; game/characters/pixel/character_pixel.gd:34; game/characters/pixel/character_pixel.gd:71; game/rooms/dorfplatz/room_dorfplatz.gd:28";;
+maklerin;talk_alt;4;4;4;150;0.60;ja;Altfassung;;;;;2/4
+maklerin;walk;8;8;8;50;0.40;ja;generisch;;;"skripte/welt_3.gd:516; skripte/welt_3.gd:537; skripte/objekte/cq_figur.gd:164; skripte/objekte/cq_figur.gd:172; skripte/objekte/cq_figur.gd:173; skripte/objekte/cq_figur.gd:173";;0/8
+maklerin;notieren;16;3;16;140;2.24;ja;aufgerufen;ja;"ZEILE W1_LUFT_MAK_0420 (mit); WARTEN gesten_welt_1.gd";;;1/3
+maklerin;talk;19;4;21;110;2.31;ja;generisch;;;game/rooms/dorfplatz/room_dorfplatz.gd:161;;0/4
+grimmzahn;idle;0;4;4;320;1.28;ja;generisch;;;"skripte/welt_3.gd:2383; skripte/objekte/cq_raum.gd:794; game/characters/pixel/character_pixel.gd:27; game/characters/pixel/character_pixel.gd:34; game/characters/pixel/character_pixel.gd:71; game/rooms/dorfplatz/room_dorfplatz.gd:28";;
+grimmzahn;walk;8;8;8;45;0.36;ja;generisch;;;"skripte/welt_3.gd:516; skripte/welt_3.gd:537; skripte/objekte/cq_figur.gd:164; skripte/objekte/cq_figur.gd:172; skripte/objekte/cq_figur.gd:173; skripte/objekte/cq_figur.gd:173";;0/8
+grimmzahn;protest;16;3;17;130;2.21;ja;aufgerufen;ja;RUHE gesten_welt_1.gd;;;1/3
+grimmzahn;talk_geste;19;5;21;110;2.31;ja;UNGENUTZT;;;;;0/5
+grimmzahn;talk;4;4;4;150;0.60;ja;generisch;;;game/rooms/dorfplatz/room_dorfplatz.gd:161;;0/4
+goblin_1;idle;0;4;4;320;1.28;ja;generisch;;;"skripte/welt_3.gd:2383; skripte/objekte/cq_raum.gd:794; game/characters/pixel/character_pixel.gd:27; game/characters/pixel/character_pixel.gd:34; game/characters/pixel/character_pixel.gd:71; game/rooms/dorfplatz/room_dorfplatz.gd:28";;
+goblin_1;talk_alt;4;4;4;150;0.60;ja;Altfassung;;;;;2/4
+goblin_1;walk;8;8;8;40;0.32;ja;generisch;;;"skripte/welt_3.gd:516; skripte/welt_3.gd:537; skripte/objekte/cq_figur.gd:164; skripte/objekte/cq_figur.gd:172; skripte/objekte/cq_figur.gd:173; skripte/objekte/cq_figur.gd:173";;0/8
+goblin_1;pickel;16;2;6;140;0.84;ja;aufgerufen;ja;RUHE gesten_welt_1.gd;;;0/2
+goblin_1;talk;18;2;13;110;1.43;ja;generisch;;;game/rooms/dorfplatz/room_dorfplatz.gd:161;;0/2
+goblin_2;idle;0;4;4;320;1.28;ja;generisch;;;"skripte/welt_3.gd:2383; skripte/objekte/cq_raum.gd:794; game/characters/pixel/character_pixel.gd:27; game/characters/pixel/character_pixel.gd:34; game/characters/pixel/character_pixel.gd:71; game/rooms/dorfplatz/room_dorfplatz.gd:28";;
+goblin_2;talk_alt;4;4;4;150;0.60;ja;Altfassung;;;;;0/4
+goblin_2;walk;8;8;8;35;0.28;ja;generisch;;;"skripte/welt_3.gd:516; skripte/welt_3.gd:537; skripte/objekte/cq_figur.gd:164; skripte/objekte/cq_figur.gd:172; skripte/objekte/cq_figur.gd:173; skripte/objekte/cq_figur.gd:173";;0/8
+goblin_2;gaehnen;16;4;20;120;2.40;ja;aufgerufen;ja;WARTEN gesten_welt_1.gd;;;0/4
+goblin_2;talk;20;4;13;130;1.69;ja;generisch;;;game/rooms/dorfplatz/room_dorfplatz.gd:161;;0/4
+moderwort;idle;0;4;4;320;1.28;ja;generisch;;;"skripte/welt_3.gd:2383; skripte/objekte/cq_raum.gd:794; game/characters/pixel/character_pixel.gd:27; game/characters/pixel/character_pixel.gd:34; game/characters/pixel/character_pixel.gd:71; game/rooms/dorfplatz/room_dorfplatz.gd:28";;
+moderwort;talk_alt;4;4;4;150;0.60;ja;Altfassung;;;;;0/4
+moderwort;walk;8;8;8;70;0.56;ja;generisch;;;"skripte/welt_3.gd:516; skripte/welt_3.gd:537; skripte/objekte/cq_figur.gd:164; skripte/objekte/cq_figur.gd:172; skripte/objekte/cq_figur.gd:173; skripte/objekte/cq_figur.gd:173";;0/8
+moderwort;nase_putzen;16;5;13;120;1.56;ja;aufgerufen;ja;WARTEN gesten_welt_1.gd;;;0/5
+moderwort;niesen;21;9;28;90;2.52;nein;aufgerufen;ja;ZEILE W1_THRO_MOD_0250 (vor);;;1/9
+moderwort;talk;30;6;22;110;2.42;ja;generisch;;;game/rooms/dorfplatz/room_dorfplatz.gd:161;;0/6
+moderwort;zaubern;36;4;21;120;2.52;nein;aufgerufen;ja;ZEILE W1_THRO_MOD_0050 (vor);;;1/4
+smaugi;idle;0;4;4;320;1.28;ja;generisch;;;"skripte/welt_3.gd:2383; skripte/objekte/cq_raum.gd:794; game/characters/pixel/character_pixel.gd:27; game/characters/pixel/character_pixel.gd:34; game/characters/pixel/character_pixel.gd:71; game/rooms/dorfplatz/room_dorfplatz.gd:28";walk;
+smaugi;talk_alt;4;4;4;150;0.60;ja;Altfassung;;;;;0/4
+smaugi;walk;8;4;4;200;0.80;ja;generisch;;;"skripte/welt_3.gd:516; skripte/welt_3.gd:537; skripte/objekte/cq_figur.gd:164; skripte/objekte/cq_figur.gd:172; skripte/objekte/cq_figur.gd:173; skripte/objekte/cq_figur.gd:173";idle;4/4
+smaugi;kram_hergeben;12;6;24;120;2.88;ja;aufgerufen;ja;"ZEILE W1_SMAU_SMA_0510 (vor); ZEILE W1_SMAU_HUM_0530 (vor); ZEILE W1_SMAU_GRI_0550 (vor); ZEILE W1_SMAU_ZEL_0580 (vor)";;;0/6
+smaugi;talk;18;4;9;130;1.17;ja;generisch;;;game/rooms/dorfplatz/room_dorfplatz.gd:161;;0/4
+smaugi;schniefen;22;3;19;130;2.47;ja;aufgerufen;ja;"ZEILE W1_SMAU_SMA_0380 (statt_talk); ZEILE W1_SMAU_SMA_0540 (statt_talk); ZEILE W1_SMAU_SMA_0610 (statt_talk)";;;1/3
+smaugi;staubwedel;25;6;16;110;1.76;ja;aufgerufen;ja;RUHE gesten_welt_1.gd;;;0/6
+minka;idle;0;4;4;320;1.28;ja;generisch;;;"skripte/welt_3.gd:2383; skripte/objekte/cq_raum.gd:794; game/characters/pixel/character_pixel.gd:27; game/characters/pixel/character_pixel.gd:34; game/characters/pixel/character_pixel.gd:71; game/rooms/dorfplatz/room_dorfplatz.gd:28";;
+minka;talk;4;4;4;150;0.60;ja;generisch;;;game/rooms/dorfplatz/room_dorfplatz.gd:161;;2/4
+minka;walk;8;16;16;66;1.06;ja;generisch;;;"skripte/welt_3.gd:516; skripte/welt_3.gd:537; skripte/objekte/cq_figur.gd:164; skripte/objekte/cq_figur.gd:172; skripte/objekte/cq_figur.gd:173; skripte/objekte/cq_figur.gd:173";;0/16
+minka;putzen;24;3;16;140;2.24;ja;aufgerufen;ja;WARTEN gesten_welt_1.gd;;;1/3
+huhn;idle;0;4;4;320;1.28;ja;generisch;;;"skripte/welt_3.gd:2383; skripte/objekte/cq_raum.gd:794; game/characters/pixel/character_pixel.gd:27; game/characters/pixel/character_pixel.gd:34; game/characters/pixel/character_pixel.gd:71; game/rooms/dorfplatz/room_dorfplatz.gd:28";walk;
+huhn;talk;4;4;4;150;0.60;ja;generisch;;;game/rooms/dorfplatz/room_dorfplatz.gd:161;;2/4
+huhn;walk;8;4;4;200;0.80;ja;generisch;;;"skripte/welt_3.gd:516; skripte/welt_3.gd:537; skripte/objekte/cq_figur.gd:164; skripte/objekte/cq_figur.gd:172; skripte/objekte/cq_figur.gd:173; skripte/objekte/cq_figur.gd:173";idle;4/4
+huhn;plustern;12;3;14;140;1.96;ja;aufgerufen;ja;"ZEILE W1_TAV_PIX_1470 (vor); WARTEN gesten_welt_1.gd";;;1/3
+huhn;springen;15;7;7;90;0.63;nein;pruefen (Name im Code, Figur unklar);;;"skripte/objekte/cq_figur.gd:139; skripte/objekte/cq_figur.gd:715";;2/7
+schmiede_ziege;idle;0;4;4;320;1.28;ja;generisch;;;"skripte/welt_3.gd:2383; skripte/objekte/cq_raum.gd:794; game/characters/pixel/character_pixel.gd:27; game/characters/pixel/character_pixel.gd:34; game/characters/pixel/character_pixel.gd:71; game/rooms/dorfplatz/room_dorfplatz.gd:28";;
+schmiede_ziege;talk;4;4;4;150;0.60;ja;generisch;;;game/rooms/dorfplatz/room_dorfplatz.gd:161;;2/4
+schmiede_ziege;walk;8;12;12;100;1.20;ja;generisch;;;"skripte/welt_3.gd:516; skripte/welt_3.gd:537; skripte/objekte/cq_figur.gd:164; skripte/objekte/cq_figur.gd:172; skripte/objekte/cq_figur.gd:173; skripte/objekte/cq_figur.gd:173";;0/12
+schmiede_ziege;drehen;20;4;18;120;2.16;nein;aufgerufen;ja;WARTEN gesten_welt_1.gd;;;1/4
+schmiede_ziege;gehen;24;8;8;110;0.88;ja;pruefen (Name im Code, Figur unklar);ja;;"skripte/objekte/cq_figur.gd:296; skripte/objekte/cq_figur.gd:298";;0/8
+xxl_ziege;idle;0;4;4;320;1.28;ja;generisch;;;"skripte/welt_3.gd:2383; skripte/objekte/cq_raum.gd:794; game/characters/pixel/character_pixel.gd:27; game/characters/pixel/character_pixel.gd:34; game/characters/pixel/character_pixel.gd:71; game/rooms/dorfplatz/room_dorfplatz.gd:28";;
+xxl_ziege;talk;4;4;4;150;0.60;ja;generisch;;;game/rooms/dorfplatz/room_dorfplatz.gd:161;;2/4
+xxl_ziege;walk;8;12;12;110;1.32;ja;generisch;;;"skripte/welt_3.gd:516; skripte/welt_3.gd:537; skripte/objekte/cq_figur.gd:164; skripte/objekte/cq_figur.gd:172; skripte/objekte/cq_figur.gd:173; skripte/objekte/cq_figur.gd:173";;0/12
+xxl_ziege;gehen;20;8;8;110;0.88;ja;pruefen (Name im Code, Figur unklar);ja;;"skripte/objekte/cq_figur.gd:296; skripte/objekte/cq_figur.gd:298";;0/8
+xxl_ziege;kauen;28;2;8;220;1.76;ja;UNGENUTZT;ja;;;;0/2
+schwan;idle;0;4;4;320;1.28;ja;generisch;;;"skripte/welt_3.gd:2383; skripte/objekte/cq_raum.gd:794; game/characters/pixel/character_pixel.gd:27; game/characters/pixel/character_pixel.gd:34; game/characters/pixel/character_pixel.gd:71; game/rooms/dorfplatz/room_dorfplatz.gd:28";walk;
+schwan;talk;4;4;4;150;0.60;ja;generisch;;;game/rooms/dorfplatz/room_dorfplatz.gd:161;;2/4
+schwan;walk;8;4;4;200;0.80;ja;generisch;;;"skripte/welt_3.gd:516; skripte/welt_3.gd:537; skripte/objekte/cq_figur.gd:164; skripte/objekte/cq_figur.gd:172; skripte/objekte/cq_figur.gd:173; skripte/objekte/cq_figur.gd:173";idle;4/4
+schwan;fauchen;12;3;18;120;2.16;nein;aufgerufen;ja;WARTEN gesten_welt_1.gd;;;0/3
+zauberbesen;idle;0;4;4;320;1.28;ja;generisch;;game/rooms/klassenzimmer/room_klassenzimmer.gd:63;"skripte/welt_3.gd:2383; skripte/objekte/cq_raum.gd:794; game/characters/pixel/character_pixel.gd:27; game/characters/pixel/character_pixel.gd:34; game/characters/pixel/character_pixel.gd:71; game/rooms/dorfplatz/room_dorfplatz.gd:28";walk;
+zauberbesen;talk;4;4;4;150;0.60;ja;generisch;;;game/rooms/dorfplatz/room_dorfplatz.gd:161;;0/4
+zauberbesen;walk;8;4;4;200;0.80;ja;generisch;;"game/rooms/klassenzimmer/room_klassenzimmer.gd:63; game/rooms/turmkeller/room_turmkeller.gd:76";"skripte/welt_3.gd:516; skripte/welt_3.gd:537; skripte/objekte/cq_figur.gd:164; skripte/objekte/cq_figur.gd:172; skripte/objekte/cq_figur.gd:173; skripte/objekte/cq_figur.gd:173";idle;4/4
+zauberbesen;fegen;12;3;6;130;0.78;ja;aufgerufen;ja;"game/rooms/turmkeller/room_turmkeller.gd:76; game/rooms/turmkeller/room_turmkeller.gd:76; game/rooms/turmkeller/room_turmkeller.gd:145";;;0/3
+zauberbesen;haarspur;15;3;8;110;0.88;ja;aufgerufen;ja;"game/rooms/turmkeller/room_turmkeller.gd:77; game/rooms/turmkeller/room_turmkeller.gd:145";;;0/3
+zauberbesen;max_wegfegen;18;8;22;100;2.20;nein;aufgerufen;ja;"game/rooms/turmkeller/room_turmkeller.gd:201; game/rooms/turmkeller/room_turmkeller.gd:203; game/rooms/turmkeller/room_turmkeller.gd:204";;;0/8
+uebungsbesen;idle;0;4;4;320;1.28;ja;generisch;;game/rooms/klassenzimmer/room_klassenzimmer.gd:63;"skripte/welt_3.gd:2383; skripte/objekte/cq_raum.gd:794; game/characters/pixel/character_pixel.gd:27; game/characters/pixel/character_pixel.gd:34; game/characters/pixel/character_pixel.gd:71; game/rooms/dorfplatz/room_dorfplatz.gd:28";walk;
+uebungsbesen;talk;4;4;4;150;0.60;ja;generisch;;;game/rooms/dorfplatz/room_dorfplatz.gd:161;;2/4
+uebungsbesen;walk;8;4;4;200;0.80;ja;generisch;;"game/rooms/klassenzimmer/room_klassenzimmer.gd:63; game/rooms/turmkeller/room_turmkeller.gd:76";"skripte/welt_3.gd:516; skripte/welt_3.gd:537; skripte/objekte/cq_figur.gd:164; skripte/objekte/cq_figur.gd:172; skripte/objekte/cq_figur.gd:173; skripte/objekte/cq_figur.gd:173";idle;4/4
+uebungsbesen;jagen;12;5;23;120;2.76;nein;aufgerufen;ja;game/rooms/klassenzimmer/room_klassenzimmer.gd:65;;;1/5
