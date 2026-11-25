@@ -66,6 +66,39 @@
 | R5-P-17 | Dachboden | kosmetisch | Sonstiges | Hotspot-Anzeige (Umschalt halten): Die Namen überdecken sich oder sind abgeschnitten: „Dachfenster“ liegt unter den Porträts („…nster“), „Werkbank“ und „Pixel“ stehen ineinander, „Umzugskartons“ läuft links aus dem Bild. | `belege/pr-p/dach_hotspots_umschalt_namen_ueberdecken_sich.png` | Namen am Bildrand einrücken und bei Überschneidung versetzen; die Leiste oben aussparen. |
 | R5-P-18 | Dachboden | kosmetisch | Humor | Offene Thunfischdose auf Opa: „Für mich nicht, danke. Ich hatte schon Tee.“ (`P0_DACH_OPA_1160`). Die Antwort passt zur Tasse, nicht zur Dose. Die Tasse auf Opa bringt dagegen nur eine Ersatzzeile (`SYS_ERS_MAX_0220`). | `klick inv:thunfischdose`, `klick @opa` → `1160`; `klick inv:teetasse`, `klick @opa` → Ersatzzeile | `1160` auf die Tasse legen; für die Dose eine eigene Zeile („Für mich nicht, danke. Ich hatte schon Fisch. Irgendwann dieses Jahr.“). |
 
+### Sackgassen-Suche Prolog (Ergebnis)
+
+Im laufenden Spiel mit echten Klicks geprüft, Lauf `pr-p-raum` und `pr-p-zeit`. **Keine Sackgasse gefunden**, abgesehen vom Ladefehler R5-P-01.
+
+- Andere Reihenfolge: Tasse erst nach dem Aufstieg geholt (Bodenluke vor P1 offen, `P0_DACH_MAX_1020`; Rückweg Wohnzimmer und zurück in Tempo 4 rund 60 s); Bügel vor P1 genommen; Kalender vor P1 angesehen; Tasse **vor** dem Wecken gefüllt: Die gefüllte Tasse auf den schlafenden Pixel spielt Wecken und Servieren in einem Zug (`0285` bis `0390`), P1 ist gelöst. Gut gelöst.
+- Nach P1 ist die Bodenluke gesperrt (`P0_DACH_MAX_1000`, `1005`); alles Nötige liegt dann oben.
+- Drehknopf ohne Kalender (nach P2, Kalender nie angesehen): „Kanal 4. Bunte Streifen und ein Pfeifton …“ (`P0_DACH_MAX_0680`), P3 bleibt offen, nichts geht verloren. Drehknopf vor P2: Opa hält Max zurück (`P0_DACH_OPA_1140`).
+- Fehlversuche mit eigener Zeile: geschlossene Dose auf Pixel (`0270`), kalter Tee auf Pixel (`1180`), geschlossene Dose und Tasse (`P0_INV_MAX_0070`), Bügel auf Zapp-O-Mat vor P1 (`1150`), Bügel auf Pixel (`1110`), Dosenöffner auf Zapp-O-Mat (`1130`), offene Dose auf Opa (`1160`, siehe R5-P-18), Pixel-Kachel auf Zapp-O-Mat (`1120`). Nur Ersatzzeilen: Bügel auf Opa, Tasse auf Opa, Tasse auf Werkbank, Dose auf Zapp-O-Mat, Dosenöffner auf Pixel, Dosenöffner auf Tasse, Bügel auf Dose, offene Dose auf Pixel nach P1.
+- Gegenstände: Dosenöffner und Bügel bleiben nach Gebrauch nicht übrig bzw. werden beim Aufbruch entfernt; in Welt 1 kommen an: Thunfischdose, Pixel-Kachel, Reisetasche, Notizbuch, Opas Zettel (mit und ohne Überspringen gleich).
+- Speichern und Laden mitten in der Kette: F5 vor P2, P2 gelöst, F9: Schalter, Inventar, Antenne und Bildschirm wieder auf dem Stand vor P2 (`f8_vergleich.png` im Lauf). Der Ladefehler R5-P-01 trifft nur Gegenstände, die nach dem Speichern aufgenommen wurden.
+
 (weitere Blöcke folgen)
+
+## Zeitmessungen
+
+Tempo 1, `textmodus lesen` (Tippzeit plus 55 ms je Zeichen, mindestens 1,2 s je Zeile), Lauf `pr-p-zeit`, jeweils vom Klick bis zur nächsten freien Eingabe.
+
+| Abschnitt | Dauer | Bemerkung |
+| --- | --- | --- |
+| Eröffnung „Kein WLAN“ (Neues Spiel bis frei im Wohnzimmer) | 74,8 s | 13 Zeilen; mit Esc und einem Klick unter 1 s |
+| Teetasse nehmen (Weg, Zeile, Greifen) | 17,5 s | eine lange Zeile |
+| Wohnzimmer → Treppenhaus | 7,0 s | |
+| Thunfischdose nehmen | 21,0 s | zwei Ansehen-Zeilen vor dem Greifen (GD-P-06) |
+| Treppenhaus → Dachboden mit Auftrag-Szene | 137,8 s | davon Aufstieg rund 7,5 s; **längste Szene des Prologs** |
+| Dosenöffner nehmen | 20,7 s | |
+| Dose öffnen | 12,5 s | |
+| Weck-Szene (offene Dose auf Pixel) | 104,0 s | |
+| Tasse füllen | 8,2 s | |
+| Servieren, Abschluss P1 | 70,2 s | |
+| Kleiderbügel nehmen | 15,6 s | |
+| Antenne aufstecken, Abschluss P2 | 50,8 s | |
+| Drehknopf ohne Kalender (Kanal 4) | 12,4 s | |
+
+Zwischen dem Betreten des Dachbodens und dem ersten eigenen Klick liegen 2 min 18 s Szene, bis Pixel wach und P1 gelöst ist kommen weitere knapp 3 min Szenen dazu. Zusammen mit der Eröffnung sind das im Prolog rund 7,5 min Zuschauen bei drei kleinen Rätseln.
 
 ZWISCHENSTAND (nicht fertig)
