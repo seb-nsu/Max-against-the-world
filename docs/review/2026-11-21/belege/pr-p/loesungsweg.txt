@@ -1,0 +1,47 @@
+# Lösungsweg Prolog (pr-p), gerader Durchlauf mit echten Klicks. Beginn: frischer Lauf, erster Programmstart.
+# Aufruf: fs start ORDNER tempo=4 frisch ; fs ORDNER -f loesungsweg.txt
+# Am 25.11.2026 so gespielt (Lauf pr-p-haupt); die Zeilen "stand sichern" legen die Kontrollpunkte an.
+knopf Verstanden
+knopf "Neues Spiel"
+warte
+stand sichern p00_wohn_anfang
+klick @teetasse
+stand sichern p01_tasse
+klick @ausgang_treppenhaus
+warte
+klick @thunfischdose
+stand sichern p02_dose
+klick @ausgang_dachboden
+warte
+stand sichern p03_dach_nach_auftrag
+klick @dosenoeffner
+stand sichern p04_oeffner
+klick inv:dosenoeffner
+klick inv:thunfischdose
+stand sichern p05_dose_offen
+klick inv:thunfischdose
+klick @pixel
+warte
+stand sichern p06_pixel_geweckt
+klick inv:thunfischdose
+klick inv:teetasse
+stand sichern p07_tasse_gefuellt
+klick inv:teetasse
+klick @pixel
+warte
+stand sichern p08_p1_geloest
+klick @drahtkleiderbuegel
+stand sichern p09_buegel
+klick inv:drahtkleiderbuegel
+klick @zapp_o_mat
+warte
+stand sichern p10_p2_geloest
+rklick @kalender
+warte
+knopf X
+stand sichern p11_kalender_gesehen
+klick @drehknopf
+warte
+knopf X
+warte
+stand sichern prolog_ende
