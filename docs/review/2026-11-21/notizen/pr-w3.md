@@ -199,3 +199,38 @@ Nebenbeobachtungen aus diesen 12 Minuten (für `w4`, nicht weiter untersucht):
 
 - **Das erste Umschalten wechselt den Sender nicht.** Erster Gebrauch der Fernbedienung (Flimmer erklärt die Regel, `W4_RAU_FLI_0050`), Sender gewählt, Erzähler: „Rauschen wischt übers Bild. Der neue Sender steht.“ (`W4_FERN_NAR_0060`), Max steht weiter im Glücksrad-Studio. Erst der zweite Gebrauch bringt ihn in den beim ersten Mal gewählten Sender. Zweimal gesehen (Sitcom-Küche in der ersten Sitzung, Kapitolis nach Neustart und `stand holen w4_nach_R2`).
 - Die Graubox-Räume von Welt 4 haben Hotspots als Raster oben im Bild (`objekte`: y 40–104 und 120–184), wie erwartet ohne Grafik.
+
+## Gut gelöst
+
+- **Die Reihenfolge ist frei und trägt trotzdem.** Turm vor dem ersten Aufwachen, R13 vor oder nach R12, R8 gleich am Weltanfang, Kammer 3 in beiden Reihenfolgen, Regeln im Kern in falscher Reihenfolge: nichts davon führt in eine Sackgasse, und fast überall gibt es dafür eigene Zeilen. Das erste Aufwachen wird nach R7b nachgeholt, „Ins Labor“ erklärt, was noch fehlt.
+- **Leere Budgets sind kein Festsitzen mehr.** Büro, Kammer 1, 2, 3 und Kern sagen, wie man zurücksetzt (Pixel-Wechsel, Raus-und-Rein, Fenster), und es funktioniert (W3-R08-01 behoben).
+- **Die Code-Sicht** ist als Bild klar (grüne Umrisse, Etiketten als Knöpfe, Fußzeile „ein Wort anklicken · Rechtsklick schließt“), zweistufig, und Fehltausche haben oft eine eigene Pointe („Der Pappkuchen ist jetzt schwer. Er steht in der Ecke und wiegt eine Tonne.“, „Die Tür ist jetzt schwer. … Und Bernd ist verschlossen.“ – „Endlich.“).
+- **Lösung B im Kern** (Pixel öffnet das Fenster) ist sauber angekündigt („Also brauch ich Wetter. Pixel. Fenster. Jetzt.“) und hat eine eigene Folgezeile im Zwischenspiel („Sie war eiskalt …“).
+- **Der Mensch-Test** lässt sich beliebig wiederholen; ohne Beobachtungen gibt es zwei falsche Antworten mit Pointe, und Deckert schickt einen beim dritten Mal von selbst auf die Straße.
+- **Die Hilfe-Pfote** hat an jedem abgefragten Schritt drei sauber gestufte Zeilen in Pixels Ton; „nichts offen“ zeigt auf den nächsten Ort.
+- **Pixel hat an fast jedem Hotspot der Basis eine eigene Zeile** (Steuerpult, Großrechner, Plakat, Terminal, Kalle, Rebellin), und seine drei Eingriffe (Fenster, Strom, Eimer) verändern sichtbar etwas.
+- **Die blaue Pastille** als Schleife statt Sackgasse, das Sparschwein („dann bring ich's hinter mich“), die falschen Bestellungen bei Herrn Vier, der Stempel am Kartenleser („Mensch, vorläufig.“ – Rot).
+- **Die neuen Hintergründe** tragen die Rätsel: Laser quer vor der Tür, Bernd im Spalt vor der Tür, drei getrennte Farbfelder im Büro, M.U.T.T.I. als hängende Küchenmaschine, Zelle glühend, vereist und fort; die Kühlung mit umgekipptem Eimer.
+- **M.U.T.T.I. fährt herunter und bleibt aus** (Auge dunkel, auch nach dem Laden).
+- **Speichern und Laden mitten in den Ketten** (F5/F9 in Turm, Kammer, Code-Sicht, Zwischenspiel 3) hat in derselben Sitzung nach vorn nie etwas zerstört; die Reisetasche lässt kein Speichern zu.
+
+## Vorschläge für die Lessons Learned
+
+- **Jede Szene, die nach einem Rätsel „von selbst“ weiterläuft, braucht einen Zustand, an dem sie beim Laden wieder anspringt.** Das erste Aufwachen hängt an `W3_ERSTES_AUFWACHEN` und wird nachgeholt; das Welt-Ende hängt am Ablauf und ist nach „Fortsetzen“ weg (R5-W3-22). Prüfregel für jede Welt: bei jedem Autospeicher einmal das Programm beenden, „Fortsetzen“, und schauen, ob das Spiel weitergeht.
+- **Kein Autospeicher zwischen Rätsellösung und Folgeszene.** Erst speichern, wenn der Spieler wieder dran ist.
+- **Anspieltests in mehreren Reihenfolgen.** Der gerade Weg nach der Rätseldoku war sauber; die Schwächen lagen im naheliegenden anderen Weg (Turm zuerst, Kammer ohne Portalgerät, Bernd vor der Tür). Je Welt zwei, drei „falsche“ Reihenfolgen als feste Klick-Tests.
+- **Texte an Zustände hängen, nicht an Wortpaare oder Objekte.** „Die Tür redet“, „Er liegt da und sabbert“, „Bin da!“ und Bernds Vorstellung kamen in Zuständen, in denen sie nicht stimmen. Beim Schreiben je Zeile die Bedingung dazuschreiben und in `pruefen.py` abfragen (Zeile ohne Bedingung an einem Objekt mit mehreren Zuständen = Warnung).
+- **Pflichtgegenstände nie als winziges Prop in einem größeren Hotspot.** Telefonbuchseite (18 × 12 px im Telefonbuch) und Portalgerät (unsichtbar in der Halterung): Der Klick auf das große Ding muss dasselbe tun.
+- **Gesperrte Rätsel-Türen bekommen eine eigene Zeile**, die Ersatzzeilen sind für Unsinn da. Prüfung: Ausgang mit Bedingung, aber ohne eigene Absage = Fehler.
+- **„Gegenstand auf Figur“ und Fern-Aktionen brauchen den Gehe-Punkt.** Übergaben und Code-Sicht aus 200 bis 300 px Entfernung sehen wie ein Fehler aus und machen Folgeschritte (Bodenschalter) unsichtbar.
+- **Zurufe:** ein Zuruf darf den nächsten Klick nicht schlucken und muss von selbst verschwinden; sonst trifft er genau die Wartezeit der dritten Hinweisstufe.
+- **Fernsteuerung:** Die Ereignisse stehen erst nach dem nächsten Befehl im Verlauf; auf eine Szene warten heißt `warte`, nicht die Datei beobachten. `LAGE frei` zwischen zwei Teilen einer Kette kann eine halbe Sekunde Lücke sein, vor einem Fund mit `stand sichern` prüfen (wird abgelehnt, wenn das Spiel beschäftigt ist).
+
+## Werkzeug
+
+- Fernsteuerung `werkzeuge/cloud/fs` über den Kurzaufruf `werkzeuge/pr-w3_k.sh` (filtert Klick- und Schalterzeilen; `CUT=` Zeilenlänge, `ALLES=1` ungefiltert).
+- `werkzeuge/pr-w3_abtasten.py LAUF STAND [lauf_y] [figur]`: lädt einen Kontrollpunkt, sieht jedes sichtbare Objekt an (`rklick`) und benutzt jeden Hotspot (`klick`), schließt Überlagerungen und Menüs, zählt Ersatzzeilen und meldet, wer an den Probestellen gewinnt. Nur echte Klicks.
+- `werkzeuge/pr-w3_raumbogen.py ZIEL.png SPALTEN BILDER…`: Kontaktbogen aus Raumaufnahmen mit Dateinamen.
+- Pfoten-Lauf und Film-Lauf als Befehlsdateien im Lauf-Ordner (`/home/user/lauf/pr-w3-pfote/lauf.sh`, `/home/user/lauf/pr-w3-haupt/film.txt`; nicht im Repo, Inhalt in dieser Notiz beschrieben).
+- Läufe: `/home/user/lauf/pr-w3-haupt` (Hauptlauf, mehrere Sitzungen), `/home/user/lauf/pr-w3-pfote` (Pfote, danach Abtasten). Zeitweise liefen zwei eigene Godot-Prozesse neben dem von `pr-w2`.
+- Fallen der Fernsteuerung, die Zeit gekostet haben: `klick @opa` und Koordinaten aus `knoepfe` (Mittelpunkte); erstes Menü einer Sitzung nur in Tempo 1 (R5-P-09); nach einem Hänger hilft nur `stop` und `start`.
