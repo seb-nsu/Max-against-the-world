@@ -1,0 +1,182 @@
+> stand holen w13_vor_bestellung
+KONTROLLPUNKT w13_vor_bestellung geladen
+[ 1186.4] INVENTAR - thunfischdose (Max)
+[ 1186.8] INVENTAR - PixelFeld (Max)
+[ 1187.0] INVENTAR - reisetasche (Max)
+[ 1187.2] INVENTAR - notizbuch (Max)
+[ 1187.4] INVENTAR - opas_zettel (Max)
+[ 1187.5] INVENTAR + thunfischdose (Max)
+[ 1187.5] INVENTAR + PixelFeld (Max)
+[ 1187.5] INVENTAR + reisetasche (Max)
+[ 1187.5] INVENTAR + notizbuch (Max)
+[ 1187.5] INVENTAR + opas_zettel (Max)
+[ 1187.5] INVENTAR + eimer (Max)
+[ 1187.5] INVENTAR + bestellzettel (Max)
+[ 1187.5] INVENTAR + steckbrief (Max)
+[ 1187.5] INVENTAR + ziegenfell_vorleger (Max)
+[ 1187.5] INVENTAR + ei (Max)
+[ 1187.5] INVENTAR + kochloeffel (Max)
+[ 1187.5] INVENTAR + socke (Max)
+[ 1187.5] INVENTAR + krug (Max)
+[ 1187.5] ZUSTAND *
+[ 1187.5] GELADEN Platz 12
+[ 1191.0] RAUM dorfplatz (vorher -)
+LAGE frei | Raum dorfplatz | Max (1075,258) Skala 0.38 | Kamera x=640 | Hand: - | Dauer 0.0 s
+> warte 2
+LAGE frei | Raum dorfplatz | Max (1075,258) Skala 0.38 | Kamera x=640 | Hand: - | Dauer 3.7 s
+> warte
+LAGE frei | Raum dorfplatz | Max (1075,258) Skala 0.38 | Kamera x=640 | Hand: - | Dauer 1.5 s
+> rklick inv:notizbuch
+GEGENSTAND notizbuch „Notizbuch“ in der Leiste bei (215,24)
+RKLICK (215,24) auf: Oberfläche Gegenstand Notizbuch
+[ 1197.7] ERSATZZEILE (MAX) SYS_ERS_MAX_0220
+[ 1197.7] SAGT SYS_ERS_MAX_0220 | MAX: Das wäre eine Folge, die sich niemand zweimal anguckt.
+LAGE frei | Raum dorfplatz | Max (1075,258) Skala 0.38 | Kamera x=640 | Hand: - | Dauer 4.4 s
+> warte
+LAGE frei | Raum dorfplatz | Max (1075,258) Skala 0.38 | Kamera x=640 | Hand: - | Dauer 1.6 s
+> klick inv:ziegenfell_vorleger
+GEGENSTAND ziegenfell_vorleger „Ziegenfell-Vorleger“ in der Leiste bei (410,24)
+KLICK (410,24) auf: statue „Statue“, Oberfläche Gegenstand ZiegenfellVorleger
+LAGE frei | Raum dorfplatz | Max (1075,258) Skala 0.38 | Kamera x=640 | Hand: ziegenfell_vorleger | Dauer 1.6 s
+> klick inv:PixelFeld
+GEGENSTAND PixelFeld „Pixel“ in der Leiste bei (98,24)
+KLICK (98,24) auf: statue „Statue“, Oberfläche @TextureButton@16 (TextureButton)
+[ 1205.4] FIGUR jetzt Pixel
+[ 1205.4] SAGT W1_WECH_PIX_0020 | PIX: Vier Pfoten, ein Gehirn und kein Inventar. Ich bin bereit. Schon immer.
+LAGE frei | Raum dorfplatz | Pixel (1030,258) Skala 0.38 | Kamera x=640 | Hand: - | Dauer 4.7 s
+> warte
+LAGE frei | Raum dorfplatz | Pixel (1030,258) Skala 0.38 | Kamera x=640 | Hand: - | Dauer 1.8 s
+> rklick 300 330
+RKLICK (300,330) auf: nichts (freie Fläche)
+[ 1211.7] LÄUFT zum Zeiger, Raumpunkt (940,330)
+LAGE frei | Raum dorfplatz | Pixel (940,330) Skala 0.63 | Kamera x=620 | Hand: - | Dauer 3.2 s
+> stand holen w31_luft_maklerin_frei
+KONTROLLPUNKT w31_luft_maklerin_frei geladen
+[ 1214.7] INVENTAR - thunfischdose (Pixel)
+[ 1214.9] INVENTAR - PixelFeld (Pixel)
+[ 1215.0] INVENTAR - reisetasche (Pixel)
+[ 1215.2] INVENTAR - notizbuch (Pixel)
+[ 1215.4] INVENTAR - opas_zettel (Pixel)
+[ 1215.5] INVENTAR - eimer (Pixel)
+[ 1215.8] INVENTAR - bestellzettel (Pixel)
+[ 1216.0] INVENTAR - steckbrief (Pixel)
+[ 1216.2] INVENTAR - ziegenfell_vorleger (Pixel)
+[ 1216.3] INVENTAR - ei (Pixel)
+[ 1216.5] INVENTAR - kochloeffel (Pixel)
+[ 1216.7] INVENTAR - socke (Pixel)
+[ 1216.9] INVENTAR - krug (Pixel)
+[ 1217.1] INVENTAR + thunfischdose (Max)
+[ 1217.1] INVENTAR + PixelFeld (Max)
+[ 1217.1] INVENTAR + reisetasche (Max)
+[ 1217.1] INVENTAR + notizbuch (Max)
+[ 1217.1] INVENTAR + opas_zettel (Max)
+[ 1217.1] INVENTAR + eimer (Max)
+[ 1217.1] INVENTAR + steckbrief (Max)
+[ 1217.1] INVENTAR + kochloeffel (Max)
+[ 1217.1] INVENTAR + socke (Max)
+[ 1217.1] INVENTAR + ziegenfell_vorleger (Max)
+[ 1217.1] INVENTAR + leuchttrank (Max)
+[ 1217.1] INVENTAR + zeugnis (Max)
+[ 1217.1] ZUSTAND *
+[ 1217.1] GELADEN Platz 12
+[ 1220.7] RAUM luftschloss (vorher -)
+LAGE frei | Raum luftschloss | Max (967,267) Skala 0.77 | Kamera x=640 | Hand: - | Dauer 0.0 s
+> warte 2
+LAGE frei | Raum luftschloss | Max (967,267) Skala 0.77 | Kamera x=640 | Hand: - | Dauer 3.6 s
+> status
+LAGE frei | Raum luftschloss | Max (967,267) Skala 0.77 | Kamera x=640 | Hand: -
+Abschnitt welt-1 | Spielzeit 7782 s | Sprache de | Textmodus klick | Tempo 4.0
+Figuren im Raum: Maklerin bei Raum (965,262) Bild-x 325, Skala 0.75; Max bei Raum (967,267) Bild-x 327, Skala 0.77; Pixel bei Raum (922,267) Bild-x 282, Skala 0.77; Zeldina bei Raum (1010,268) Bild-x 370, Skala 0.77
+Raumbreite 1280 px
+Pfote: aktiv, leuchtet
+Wechsel möglich: true
+Offene Rätselschritte (laut Spiel): R9, R10a
+Gesetzte Schalter: P0_DOSE_OFFEN, P0_P1_GELOEST, P0_P2_GELOEST, P0_P3_GELOEST, P0_PIXEL_GEWECKT, P0_TASSE_GEFUELLT, W1_BERTA_MUSIK, W1_BERTA_WEG, W1_BOHNE_GEPFLANZT, W1_KESSEL_EI, W1_KESSEL_MILCH, W1_KESSEL_PILZ, W1_MAKL
+Werte: W1_EIMER=leer, W1_FLASCHE=0, W1_R4A_REIHE=3, W1_R4B_XXL_VERSUCHE=2, W1_R4B_ZIE_VERSUCHE=2, W1_SCHNUPPER=2, W1_TAVERNE_WECHSEL=2
+> klick 395 238
+KLICK (395,238) auf: nichts (freie Fläche)
+[ 1225.9] LÄUFT zum Zeiger, Raumpunkt (1035,238)
+LAGE frei | Raum luftschloss | Max (1035,238) Skala 0.67 | Kamera x=640 | Hand: - | Dauer 2.5 s
+> warte
+LAGE frei | Raum luftschloss | Max (1035,238) Skala 0.67 | Kamera x=640 | Hand: - | Dauer 1.4 s
+> status
+LAGE frei | Raum luftschloss | Max (1035,238) Skala 0.67 | Kamera x=640 | Hand: -
+Abschnitt welt-1 | Spielzeit 7786 s | Sprache de | Textmodus klick | Tempo 4.0
+Figuren im Raum: Maklerin bei Raum (965,262) Bild-x 325, Skala 0.75; Max bei Raum (1035,238) Bild-x 395, Skala 0.67; Pixel bei Raum (990,238) Bild-x 350, Skala 0.67; Zeldina bei Raum (1010,268) Bild-x 370, Skala 0.77
+Raumbreite 1280 px
+Pfote: aktiv, leuchtet
+Wechsel möglich: true
+Offene Rätselschritte (laut Spiel): R9, R10a
+Gesetzte Schalter: P0_DOSE_OFFEN, P0_P1_GELOEST, P0_P2_GELOEST, P0_P3_GELOEST, P0_PIXEL_GEWECKT, P0_TASSE_GEFUELLT, W1_BERTA_MUSIK, W1_BERTA_WEG, W1_BOHNE_GEPFLANZT, W1_KESSEL_EI, W1_KESSEL_MILCH, W1_KESSEL_PILZ, W1_MAKL
+Werte: W1_EIMER=leer, W1_FLASCHE=0, W1_R4A_REIHE=3, W1_R4B_XXL_VERSUCHE=2, W1_R4B_ZIE_VERSUCHE=2, W1_SCHNUPPER=2, W1_TAVERNE_WECHSEL=2
+> foto w113_brunnen_lauf
+FOTO /home/user/lauf/pr-w1-haupt/fotos/w113_brunnen_lauf.png (640x360)
+> klick 630 290
+KLICK (630,290) auf: nichts (freie Fläche)
+[ 1230.2] LÄUFT zum Zeiger, Raumpunkt (1270,290)
+LAGE frei | Raum luftschloss | Max (1210,234) Skala 0.66 | Kamera x=640 | Hand: - | Dauer 3.5 s
+> warte
+LAGE frei | Raum luftschloss | Max (1210,234) Skala 0.66 | Kamera x=640 | Hand: - | Dauer 1.4 s
+> foto w115_naht
+FOTO /home/user/lauf/pr-w1-haupt/fotos/w115_naht.png (640x360)
+> status
+LAGE frei | Raum luftschloss | Max (1210,234) Skala 0.66 | Kamera x=640 | Hand: -
+Abschnitt welt-1 | Spielzeit 7791 s | Sprache de | Textmodus klick | Tempo 4.0
+Figuren im Raum: Maklerin bei Raum (965,262) Bild-x 325, Skala 0.75; Max bei Raum (1210,234) Bild-x 570, Skala 0.66; Pixel bei Raum (1165,234) Bild-x 525, Skala 0.66; Zeldina bei Raum (1010,268) Bild-x 370, Skala 0.77
+Raumbreite 1280 px
+Pfote: aktiv, leuchtet
+Wechsel möglich: true
+Offene Rätselschritte (laut Spiel): R9, R10a
+Gesetzte Schalter: P0_DOSE_OFFEN, P0_P1_GELOEST, P0_P2_GELOEST, P0_P3_GELOEST, P0_PIXEL_GEWECKT, P0_TASSE_GEFUELLT, W1_BERTA_MUSIK, W1_BERTA_WEG, W1_BOHNE_GEPFLANZT, W1_KESSEL_EI, W1_KESSEL_MILCH, W1_KESSEL_PILZ, W1_MAKL
+Werte: W1_EIMER=leer, W1_FLASCHE=0, W1_R4A_REIHE=3, W1_R4B_XXL_VERSUCHE=2, W1_R4B_ZIE_VERSUCHE=2, W1_SCHNUPPER=2, W1_TAVERNE_WECHSEL=2
+> stand holen w21_nach_R4
+KONTROLLPUNKT w21_nach_R4 geladen
+[ 1234.5] INVENTAR - thunfischdose (Max)
+[ 1235.0] INVENTAR - PixelFeld (Max)
+[ 1235.2] INVENTAR - reisetasche (Max)
+[ 1235.4] INVENTAR - notizbuch (Max)
+[ 1235.5] INVENTAR - opas_zettel (Max)
+[ 1235.7] INVENTAR - eimer (Max)
+[ 1235.9] INVENTAR - steckbrief (Max)
+[ 1236.1] INVENTAR - ziegenfell_vorleger (Max)
+[ 1236.2] INVENTAR - kochloeffel (Max)
+[ 1236.4] INVENTAR - socke (Max)
+[ 1236.6] INVENTAR - leuchttrank (Max)
+[ 1236.8] INVENTAR - zeugnis (Max)
+[ 1236.9] INVENTAR + thunfischdose (Max)
+[ 1236.9] INVENTAR + PixelFeld (Max)
+[ 1236.9] INVENTAR + reisetasche (Max)
+[ 1236.9] INVENTAR + notizbuch (Max)
+[ 1236.9] INVENTAR + opas_zettel (Max)
+[ 1236.9] INVENTAR + eimer (Max)
+[ 1236.9] INVENTAR + steckbrief (Max)
+[ 1236.9] INVENTAR + ei (Max)
+[ 1236.9] INVENTAR + kochloeffel (Max)
+[ 1236.9] INVENTAR + socke (Max)
+[ 1236.9] INVENTAR + krug (Max)
+[ 1236.9] INVENTAR + ziegenfell_vorleger (Max)
+[ 1236.9] ZUSTAND *
+[ 1236.9] GELADEN Platz 12
+[ 1236.9] RAUM luftschloss (vorher -)
+[ 1238.9] RAUM trollbruecke (vorher luftschloss)
+LAGE frei | Raum trollbruecke | Max (355,172) Skala 0.41 | Kamera x=0 | Hand: - | Dauer 0.0 s
+> warte 2
+LAGE frei | Raum trollbruecke | Max (355,172) Skala 0.41 | Kamera x=0 | Hand: - | Dauer 3.5 s
+> warte
+LAGE frei | Raum trollbruecke | Max (355,172) Skala 0.41 | Kamera x=0 | Hand: - | Dauer 1.3 s
+> klick 315 182
+KLICK (315,182) auf: bruecke „Brücke“
+[ 1246.8] LÄUFT zum Zeiger, Raumpunkt (315,182)
+LAGE frei | Raum trollbruecke | Max (315,182) Skala 0.44 | Kamera x=0 | Hand: - | Dauer 2.4 s
+> warte
+LAGE frei | Raum trollbruecke | Max (315,182) Skala 0.44 | Kamera x=0 | Hand: - | Dauer 1.2 s
+> status
+LAGE frei | Raum trollbruecke | Max (315,182) Skala 0.44 | Kamera x=0 | Hand: -
+Abschnitt welt-1 | Spielzeit 4559 s | Sprache de | Textmodus klick | Tempo 4.0
+Figuren im Raum: Max bei Raum (315,182) Bild-x 315, Skala 0.44; Pixel bei Raum (310,172) Bild-x 310, Skala 0.41; Waldemar bei Raum (395,168) Bild-x 395, Skala 0.40; XxlZiege bei Raum (338,178) Bild-x 338, Skala 0.43
+Raumbreite 640 px
+Pfote: aktiv
+Wechsel möglich: true
+Offene Rätselschritte (laut Spiel): -
+Gesetzte Schalter: P0_DOSE_OFFEN, P0_P1_GELOEST, P0_P2_GELOEST, P0_P3_GELOEST, P0_PIXEL_GEWECKT, P0_TASSE_GEFUELLT, W1_BERTA_MUSIK, W1_BERTA_WEG, W1_BOHNE_GEPFLANZT, W1_R01_A_GELOEST, W1_R01_B_GELOEST, W1_R01_C_GELOEST, 
+Werte: W1_EIMER=leer, W1_R4A_REIHE=3, W1_R4B_XXL_VERSUCHE=2, W1_R4B_ZIE_VERSUCHE=2, W1_TAVERNE_WECHSEL=2
