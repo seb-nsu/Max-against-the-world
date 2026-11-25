@@ -318,3 +318,129 @@ Zu R5-TX-15: Wird `W1_DORF_PIX_1320_2` wie vorgeschlagen geändert, bleibt `W1_H
 | R5-TX-42 | `UI_OBJ_LEUCHTPILZ`, `UI_OBJ_LEUCHTPILZE`, `UI_OBJ_LEUCHTTRANK`, `UI_OBJ_BACH`, `UI_OBJ_TEPPICH`, `UI_OBJ_FLASCHE`, `UI_OBJ_STREIKSCHILDER`, `UI_OBJ_HUHN`, `UI_RAUM_DORFPLATZ`, `UI_OBJ_OPAS_PAPYRUS`, `UI_OBJ_HAUFEN`; `W1_HINT_PIX_0330`, `W1_HINT_PIX_0631` | – | kosmetisch | Lokalisierung: Objektname und Dialog benennen im Englischen dasselbe Ding verschieden | „Glowing mushroom“ gegen „glow mushroom“ (5 Dialogzeilen) · „Glowing potion“ gegen „glow potion“ (4) · „Brook“ gegen „stream“ (5) · „Carpet“ gegen „rug“ (`W1_WASS_MAX_0100`) · „Little bottle“ gegen „vial“ (2) · „Strike signs“ gegen „picket signs“ · „Hen“ gegen „chicken“ (6) · „Smithy goat“ gegen „forge goat“, „jug from the forge“ gegen „from the smithy“ · „Lower Crumbly“ gegen „Castle Crumble“ · „Grandpa's Papyrus“, „Crumbled Heap“ groß, alle anderen Namen klein | Der Spieler liest den Namen am Hotspot und hört im Satz daneben ein anderes Wort. Bei den Hinweisen stört es am meisten: „forge“ heißt im Spiel die Esse (`UI_OBJ_ESSE`), die Schmiede heißt „Smithy“. | Namen an den Dialog angleichen: „Glow mushroom(s)“, „Glow potion“, „Stream“, „Rug“, „Vial“, „Picket signs“, „Chicken“, „Lower Crumble square“ (20 Zeichen statt 28), „Grandpa's papyrus“, „Crumbled heap“. Hinweise: „Fetch the smithy goat.“ / „Then the jug from the smithy …“ |
 | R5-TX-43 | `UI_W2_BAUSTEIN_BLAU` | (Rätselbaustein) | kosmetisch | Lehnübersetzung (M45) | „Es ist blau und hat trotzdem keine Laune“ (EN: „It is blue and still not sad“) | Das Wortspiel ist englisch (blue für traurig). Im Deutschen heißt „blau“ betrunken; „keine Laune“ ergibt mit „blau“ keinen Witz. | „Es ist blau und trotzdem nüchtern“ (Englisch bleibt) |
 | R5-TX-44 | `SYS_ERS_PIX_0300`/`_2`, `SYS_WDH_MAX_0080`, `UI_TASCHE_HILFE` | Pixel, Max | kosmetisch | Lokalisierung: Redewendung wörtlich übersetzt, steifes Englisch | „If that works, I will eat a broom.“ / „Grandpa says a lot of things when the day is long.“ / „Select packs or unpacks. Look at: ask Pixel.“ | „Einen Besen fressen“ und „viel reden, wenn der Tag lang ist“ gibt es im Englischen nicht; beide Zeilen stehen im Pool und kommen oft. Die Taschenhilfe liest sich wie eine Wortliste. | „If that works, I shall eat my own tail. // You may rest easy, the tail is in no danger.“ · „Grandpa says you spot something new the third time you look. Grandpa says a lot of things.“ · „Select to pack or unpack. Look to ask Pixel.“ |
+
+## Stimmen der Figuren
+
+Messwerte aus `tx-a_zaehlen.py sprecher` (Wörter je Satz, Anteil Sätze mit höchstens drei Wörtern).
+
+| Figur | Woran man sie erkennt | Belegzeilen | Wo sie aus der Rolle fällt |
+| --- | --- | --- | --- |
+| **Max** (Prolog 6,8 Wörter je Satz, Welt 1 6,1) | Trocken, untertreibt, redet wie ein Sechzehnjähriger: Schule, Handy, Serien, „ich schwör's“. Stellt fest und hängt einen kurzen Nachsatz an. Seine Entwicklung steht in Reaktionen, nie in Reden. | „Ich hab keine Haltung. Ich hab einen Hoodie.“ (`W1_ANK_MAX_0121`) · „Das ging schneller als bei mir. Und ohne Stimmbruch.“ (`W1_INV_MAX_0140`) · „Der hat mehr Echo als meine Klasse, wenn der Lehrer was fragt.“ (`W1_INV_MAX_0060`) · „Ja. … Trotzdem.“ (`W1_LUFT_MAX_0310`) · „Fußbad. Zählt.“ (`W1_BRUE_MAX_0980`) | Wo er gebaute Zweizeiler spricht, klingt er nach Autor: „Gollo nennt das Vulkan. Ich nenne das Abendessen.“ (`W1_TAV_MAX_0120`), „Alwin nennt das Grundlage. Ich nenne das verdächtig.“ (`W1_HOGG_MAX_0130`), „aus Holz, Käse und Hoffnung“ (`W1_STAB_MAX_0555`), „Das ist keine Prinzessin, die …“ (`W1_LUFT_MAX_0165`). Die Medienvergleiche (rund 25 in 575 Zeilen, höchstens vier je Raum) sind Figur und kein Fund. |
+| **Pixel** (Prolog 7,8, Welt 1 6,7, ZS3 5,5) | Hochnäsig, ausführlich, Sätze über zwei Blasen mit „und zwar“, „wohlgemerkt“, „junger Mann“; alles führt zu Essen, Schlafplätzen oder Würde. Englisch ohne Kurzformen. Kurzsatz nur als Effekt. | „Meine Nase lügt nie. Sie interpretiert.“ (`W1_TAV_PIX_0340`) · „Ich habe Haare, ich habe Würde, // und für diese Aufgabe opfere ich genau eines von beiden.“ (`W1_TURM_PIX_0150`) · „Nein. // Nein. // … Gut. Aber ich will das Fell danach brennen sehen.“ (`W1_BRUE_PIX_0410`) · „Hatschi. // Bäckerei.“ (`ZS2_DACH_PIX_0100`) | Seine Stimme ist klar, aber seine Zeilen sind die mit den meisten Bauplänen: Schnupper-Dreier (R5-TX-39), Zuruf-Reihe (R5-TX-40), „beides“-Schluss (R5-TX-15), „kein X mehr, das ist Y“ (R5-TX-31). In ZS3 wird er kurzatmig (34 % Kurzsätze gegen 15 % in ZS1), dort klingt er stellenweise wie Max. Sechs englische Zeilen mit Kurzformen (R5-TX-33). |
+| **Opa** (Prolog 5,8) | Ausrufe, Erfinderstolz, benennt alles als „Modell …“, „Ehrenwort eines Wissenschaftlers“, weicht beim Kalender aus. Redet wie ein Opa: Vergleiche aus Haushalt und Technik von früher. | „Die Menschheit steht am Abgrund, und du kommst in Socken!“ (`P0_DACH_OPA_0010`) · „Zu einem Flugzeug sagst du ja auch nicht Bus.“ (`P0_DACH_OPA_0060`) · „Stell dir vor, was du mit WLAN alles nicht geschafft hättest.“ (`ZS1_DACH_OPA_0194`) · „Das Prinzip hab ich vom Schnellkochtopf.“ (`ZS2_DACH_OPA_0060`) | Im Deutschen nirgends. Im Englischen schwankt die Anrede zwischen „boy“ und „lad“ (R5-TX-06), und „Modell“-Wendungen sind nicht gleich gebaut (R5-TX-14). |
+| **Toadi** (4,7; 41 % Kurzsätze) | Panik in Ausrufen, korrigiert sich im selben Atemzug, sagt seinen Satz mit dem Schloss. | „Ich hatte keine dabei, nur Panik.“ (`W1_ANK_TOA_0190`) · „Ich hole … ich habe nichts zum Holen. Ich hole Luft.“ (`W1_DORF_TOA_0880`) · „Das ist Finden mit Anlauf.“ (`W1_LUFT_TOA_0640`) | Nur `W1_DORF_TOA_0430` („als hätte sie Meinungen“, R5-TX-16). |
+| **Humbert** | Warmer Wirt, gibt Schwertern Vornamen und behandelt sie als Familie. | „Das ist Gerhard, mein Liebling. … Klaus-Dieter rostet aus Prinzip.“ (`W1_TAV_HUM_0540`) · „Du heißt Ingrid. Du Ingrid die Zweite.“ (`W1_SMAU_HUM_0530`) | nirgends |
+| **Gollo** (3,1; 68 % Kurzsätze) | Stakkato, gedehnte Zischlaute, „wir“ für sich selbst, will den Ring loswerden. | „Ich liebe es. Ich habe verloren. Endlich.“ (`W1_TAV_GOL_1210_2`) · „Jetzt schweigen wirsss. Wir und unser Kummer.“ (`W1_ABS_GOL_0210`) | nirgends |
+| **Schmied** (3,8) | Resigniert, knapp, jede Antwort endet bei Blech oder der Ziege. | „Sie ist eines Morgens aufgetaucht. Wie Schulden.“ (`W1_SCHM_SCH_0240`) · „Nur nicht die Hoffnung, die habe ich selbst nicht mehr.“ (`W1_SCHM_SCH_0100`) | nirgends |
+| **Stabmacher** (4,8) | Feierlich und geschäftstüchtig zugleich, nimmt Gegenstände als Personen. | „Das sagst du. Der Löffel hat sich dazu noch nicht geäußert.“ (`W1_STAB_STA_0222`) · „Ohne Schachteln ist es ein Flur.“ (`W1_STAB_STA_0260`) | Englisch: „young man“ ergänzt (R5-TX-24). |
+| **Alwin** (4,6) | Zerstreut, fragt sich selbst und antwortet, alles wird Küche. | „Ist es? Ist es nicht? Die Grenzen sind fließend. Wie Teig.“ (`W1_HOGG_ALW_0340`) · „Ich habe vier Tage an ‚Schleim‘ gesessen.“ (`W1_HOGG_ALW_0980`) | nirgends; `W1_ABS_ALW_0080` verfehlt nur das Zitat (R5-TX-35). |
+| **Waldemar** (4,2; 48 % Kurzsätze) | Paragrafen, Amtsdeutsch, Gefühl nur als Nachsatz. Die klarste Nebenstimme. | „Die Versammlung bin ich. Ich bin nie beschlussfähig.“ (`W1_BRUE_WAL_1270`) · „Zugelassen. Mit Bauchschmerzen.“ (`W1_BRUE_WAL_0460_2`) · „Ich melde sie jedes Mal an, und jedes Mal lehne ich sie ab.“ (`W1_BRUE_WAL_0266`) | Die Dublette „Ich bin Troll, kein Anwalt / kein Vorleser“ (R5-TX-27). |
+| **Rotkäppchen** (4,1) | Lieferdienst-Ton, Satzfetzen ohne Subjekt, Bewertungssprache. | „Ich frag nicht. Trinkgeld stimmt.“ (`W1_WALD_ROT_0260`) · „Bewertung nicht vergessen! Fünf Körbe!“ (`W1_WALD_ROT_0300`) | nirgends |
+| **Zeldina** (4,4) | Praktisch, trocken, rechnet in Miete und Kartons. | „Umzugsfirmen kosten. Dunkle Lords tragen Kisten umsonst.“ (`W1_LUFT_ZEL_0260`) · „Die kriegt Smaugis Teekannen. Alle dreihundert.“ (`W1_THRO_ZEL_0530`) | Dreimal „X, kein(e) Y“ (`W1_LUFT_ZEL_0220`, `0290`, `W1_ABS_ZEL_0010`); noch kein Fund, aber an der Grenze. |
+| **Maklerin** | Siezt als Einzige, Zuschläge und Kleingedrucktes. | „Vier. Feilschen kostet extra. Fünf, wenn Sie so weitergucken.“ (`W1_LUFT_MAK_0420`) | nirgends |
+| **Grimmzahn und Goblins** (3,7; 56 % Kurzsätze) | Parolen, Ausrufe, „Wir sind traditionell“. Die Goblins sprechen in Einzelwörtern. | „Ich habe keinen mehr!“ / „Ich habe doch noch einen!“ (`W1_BERG_GRI_0320_2`, `0520`) · „Hell!“ – „Zu hell.“ (`W1_BERG_GO1_0530`, `GO2_0540`) | nirgends; die Formel „Wir sind X, keine Y“ ist hier Parole. |
+| **Smaugi** (3,7; 58 % Kurzsätze) | Zögert, nimmt zurück, hängt an jedem Ding. Spiegelt Opas „Ich werfe nichts weg“. | „Aber nimm nichts mit. Doch, nimm. Nein. Ach.“ (`W1_SMAU_SMA_0400`) · „Ich sammle nicht. Ich bewahre.“ (`W1_SMAU_SMA_0380`) | nirgends |
+| **Moderwort** (2,5; 74 % Kurzsätze) | Großbuchstaben-Drohungen, vom Niesen zerhackt; am Ende leise. | „Sie hat Fotos gemacht! Vom Schlafzimmer!“ (`W1_THRO_MOD_0050`) · „Ich wollte nur, dass mich einer ernst nimmt. Einmal. Ohne zu niesen.“ (`W1_THRO_MOD_0380`) | nirgends |
+| **Brunnen, Geheimtür, Spiegel** | Automatenstimme („Gewährt. Nicht zurückgeben, nicht umtauschen.“ `W1_DORF_BRU_0850`), Kichern („… Kicher. Richtig. Mama?“ `W1_SMAU_TUE_0770`), Schmeichler (`W1_LUFT_SPI_0100`). | | nirgends |
+
+Kurz: Die Nebenfiguren sind die Stärke des Textes; man erkennt jede an einem Satz, auch ohne Namen. Max redet wie ein Jugendlicher, Opa wie ein Opa. Max und Pixel rücken in Welt 1 beim Satzbau zusammen (6,1 und 6,7 Wörter je Satz, Kurzsätze 25 % und 22 %); auseinander hält sie der Inhalt, weniger der Rhythmus. Wenn Pixels Schablonen (R5-TX-39, 40) gelöst werden, sollte er dabei seine langen Sätze behalten.
+
+## Anspielungen und Filmzitate
+
+| Zeile | Quelle | Passt? | Warum |
+| --- | --- | --- | --- |
+| `P0_DACH_PIX_0420` („Schnee“, Sendeschluss) | Fernsehen vor dem 24-Stunden-Programm | passt | Pixel ist das Haustier eines alten Bastlers; Max kennt es nicht, das trennt die Stimmen. |
+| `ZS1_DACH_MAX_0425` (Zauberwürfel, „seit 1982“) | Rubik-Würfel | passt | Charakterisiert Opa in einem Satz. |
+| `ZS3_DACH_PIX_0550` („Konner, Sahra“, Telefonbuch) | Terminator | passt | Wer es kennt, lacht, wer nicht, liest einen Namen. |
+| `W1_ANK_TOA_0130`, Figuren Toadi und Zeldina | Super Mario, Zelda | passt | Die Welt ist der Fantasy-Kanal; Namen reichen als Hinweis. |
+| `W1_DORF_TOA_1200`, `W1_WASS_TOA_0020`, `W1_LUFT_TOA_0600`, `W1_THRO_TOA_0540` | „Die Prinzessin ist in einem anderen Schloss“ (Super Mario Bros.) | passt genau | Siehe Running Gags; wird aufgebaut, wiederholt, gebrochen. |
+| `W1_LUFT_ZEL_0860` (Rohr) | Super Mario | passt | Erklärt nebenbei, warum Toadi nie ankommt. |
+| `W1_WALD_MAX_0010`, `0015` (Pilze, draufspringen, größer werden) | Super Mario | passt | Max nennt das Spiel nicht („Jedes Spiel aus meiner Kindheit“). |
+| `W1_DORF_MAX_0130`, `0135` (Tierstapel, Räuber) | Bremer Stadtmusikanten | passt | „Boyband, die sich nie auf einen Sänger einigen konnte“ ist Max. |
+| `W1_DORF_MAX_0250`, `0255`, `W1_TAV_PIX_0970`, `1000` (Kokosnusshälften) | Die Ritter der Kokosnuss | passt | Ohne Titel, nur das Geräusch; wird in der Taverne zum Rätselbaustein. |
+| `W1_DORF_MAX_0260`, `W1_TAV_HUM_0010` („Zum tänzelnden Pony-Express“) | Der Herr der Ringe | passt | Wirtshausname plus Lieferdienst-Thema der Welt. |
+| `W1_DORF_MAX_0240`, `0245` („Einer für alles“, „Ringe bitte nicht ins Feuer werfen“) | Der Herr der Ringe | passt | Als Ladenschild trocken genug. |
+| `W1_TAV_GOL_0720`, `1570`, `W1_ABS_GOL_0220` („Mein Ssschätzchen“) | Gollum | passt | Einzige zitatnahe Stelle; im Englischen „My preciousss“. |
+| `W1_TAV_MAX_0785`, `W1_HINT_PIX_0133` („Was hab ich in meiner Tasche?“) | Der Hobbit, Rätselspiel | passt genau | Die Anspielung ist die Rätsellösung; wer das Buch kennt, wird belohnt, wer nicht, bekommt den Hinweis. |
+| `W1_TAV_MAX_0270`, `W1_TAV_HUM_0580` (Jahrgang Schicksalsberg) | Der Herr der Ringe | passt | Englisch „Mount Doomsday“, leicht verschoben, bleibt erkennbar. |
+| `W1_TAV_MAX_0290` (Vielsaft-Limo) | Harry Potter | passt | „Schmeckt wie jemand anderes.“ |
+| `W1_STAB_STA_0220`, `W1_INV_MAX_0020`, `W1_HINT_PIX_0210` („Der Stab wählt den Zauberer“) | Harry Potter | passt | Trägt das ganze Rätsel 2; Max' Antwort „Dieser hier hat Eintopf gewählt.“ |
+| `W1_STAB_STA_0280` (Sortierhut in Rente, Socke), Hoggelwarz, Moderwort ohne Nase | Harry Potter | passt | Parodie über Namen und Bild, kein Zitat. |
+| `W1_BRUE_WAL_0040` bis `0060` | Die drei Böcke Gruff | passt | Das Märchen ist das Rätsel. |
+| `W1_BRUE_WAL_0262` („das mit der Katze, die auf dem Dach singt“) | Cats (mit Anklang an Anatevka) | passt | Absichtlich ungenau, so redet jemand, der es heimlich hört. |
+| `W1_WALD_MAX_0120` bis `W1_WALD_PIX_0130` (Kürbis, Glasschuh, Mitternacht) | Aschenputtel | passt | „Mitternachts-Garantie“. |
+| `W1_WALD_ROT_0260`, `0780` (Wolf als Kunde, Oma auf Mallorca) | Rotkäppchen | passt | Englisch „Spain“ statt Mallorca, in Ordnung. |
+| `W1_LUFT_SPI_0100` („Spiegel, Spiegel …“) | Schneewittchen | passt | Der Spiegel schmeichelt jedem. |
+| `W1_TURM_MAX_0135` („Hei-ho“) | Schneewittchen | passt | Ein Wort, kein Kommentar. |
+| `W1_TURM_MAX_0095` (alter Meister mit Hut, „Halt“) | Der Zauberlehrling / Fantasia | **passt nicht ganz** | Erklärt die Vorlage („kommt nur in Filmen“), siehe R5-TX-32. |
+| `W1_SMAU_MAX_0140`, `0145`, `0150` (Okarina, sieben Löcher, Regen) | Zelda: Ocarina of Time | passt | „Irgendwie kenn ich sie trotzdem“ ist die beste Art, ein Spiel zu zitieren. |
+| `W1_SMAU_PIX_0160`, `W1_SMAU_MAX_0170` (Schwert im Stein) | Artus | passt | „Oder er bekommt Rücken.“ |
+| Smaugi, Goldhaufen, Ei | Der Hobbit | passt | Drache als Sammler mit Putzfimmel; spiegelt Opa. |
+| `W1_INV_MAX_0135` („Trink mich“) | Alice im Wunderland | passt | „Ich hab in Büchern gelesen, was danach passiert“ bleibt allgemein. |
+| `W1_ABS_ALW_0080` („Du wirst nicht vorbeikommen.“) | Der Herr der Ringe (Gandalf) | **passt im Deutschen nicht** | Die deutsche Filmfassung sagt „Du kannst nicht vorbei!“, siehe R5-TX-35. |
+| `UI_W4_ZS_TIERTORT` („Tiertort Savanne“ / „Paw and Order: Savannah“) | Tatort / Law & Order | passt | Gut lokalisiert, jede Sprache hat ihre eigene Krimireihe. |
+| `UI_ERR_FREUND_0815`, `UI_OBJ_MODELL_0815` („Modell 08/15“) | deutsche Redewendung | im Englischen ohne Witz | Als Name tragbar; „Model 08/15“ sagt englischen Spielern nichts. Kein Fund, weil Welt 3 nicht in meinem Umfang liegt. |
+
+Ergebnis: 31 Anspielungen im Umfang, 29 passen. Keine einzige nennt Titel oder Figur der Vorlage beim Namen; das ist die Stärke. Zwei Stellen fallen ab (`W1_TURM_MAX_0095`, `W1_ABS_ALW_0080`).
+
+## Running Gags
+
+| Gag | Vorkommen im Umfang | Urteil |
+| --- | --- | --- |
+| „… in einem anderen Schloss“ | 6: Toadi kündigt an (`W1_DORF_TOA_1200`), sagt es (`W1_WASS_TOA_0020`), wird unterbrochen (`W1_LUFT_TOA_0600`), löst auf (`W1_THRO_TOA_0540`); dazu Alwins Milch (`W1_HOGG_ALW_0360_2`) und Toadis Gesprächsende (`W1_ABS_TOA_0090`) | Trägt. Vorbildlich gebaut: jedes Mal anders, am Ende die Umkehrung. Alwins Variante weicht von „wörtlich nur Toadi“ im Konzept ab, ist aber seit Fund 19 so gewollt und führt zum Luftschloss. |
+| Pixels Essenswunsch und Einkaufsliste | Ei, weich: 10 Zeilen in Welt 1 und ZS1 (`W1_TAV_PIX_1450`, `W1_SMAU_PIX_0090_2`, `0095`, `0640_2`, `W1_INV_PIX_0105`, `0175_2`, `W1_THRO_PIX_0570_2`, `W1_HINT_PIX_1230`, `ZS1_DACH_PIX_0220`, `0324`); Liste in `UI_EINKAUF_1` bis `4` | Trägt. Die Steigerung von drei auf zweieinhalb Minuten hält ihn frisch. Zehnmal ist die obere Grenze; mehr sollte es in Welt 1 nicht werden. |
+| „Meine Nase lügt nie. Sie interpretiert.“ | 3 (`W1_TAV_PIX_0340`, `W1_STAB_PIX_0540`, `W1_HOGG_PIX_0780`) | Trägt, bester Gag der Welt: Behauptung, Rückruf, Pointe in einem Wort. |
+| Pixel wird getragen | 5 (`P0_DACH_PIX_1400`, `W1_DORF_PIX_0340`, `W1_LUFT_PIX_0020`, `0130_2`, `W1_HINT_PIX_0830`) | Trägt. |
+| Der Staubsauger | 3 (`P0_DACH_PIX_0945`, `W1_WASS_PIX_0085_2`, `W1_LUFT_PIX_0485_2`) | Trägt, gut dosiert. |
+| Schwerter mit Vornamen | Taverne durchgehend, `W1_SMAU_HUM_0530`, `W1_ABS_HUM_0060`, `W1_INV_MAX_0080` | Trägt; „Ingrid die Zweite“ ist die Auszahlung. |
+| „Ich hab Übung.“ | 3 (`W1_LUFT_ZEL_0560`, `W1_THRO_ZEL_0260`, `W1_THRO_MAX_0420`) | Trägt; Max übernimmt Zeldinas Satz im letzten Moment. |
+| „Fünf Körbe“ | 2 (`W1_WALD_ROT_0300`, `W1_WALD_MAX_0560`) | Trägt. |
+| Opas Zettel („Alles hängt davon ab.“) | 3 (`W1_ANK_OPA_0070`, `W1_SMAU_MAX_0630`, `W1_THRO_MAX_0580`) | Trägt als roter Faden; Max weiß bis zum Schluss nicht, wovon. |
+| Radio-Moment, Milch-Werbung | Welt 1 einmal (`W1_BRUE_GRA_0110`), Werbeblock in ZS1 bis ZS3 je einmal | Trägt und steigert sich; „Nur für Vergessliche“ zeigt auf Opa, ohne ihn zu nennen. |
+| Passwort-Versuche | 4 (Prolog Viertel, ZS1 Viertel, ZS2 halbes mit Versprecher, ZS3 „Kuchen123“) | Trägt, steigert sich wie geplant. |
+| „Ehrenwort eines Wissenschaftlers“ | 3 (`P0_DACH_OPA_0110`, `ZS1_DACH_OPA_0200`, `ZS3_DACH_OPA_0640`) | Trägt. |
+| „Ich werfe nichts weg. Nie.“ | 2 wörtlich (`ZS1_DACH_OPA_0514`, `ZS2_DACH_OPA_0510`), einmal über Max (`ZS1_DACH_MAX_0420`); Echo bei Smaugi | Trägt; im Englischen nicht wortgleich (R5-TX-14). |
+| „Modell …“ | 5 bei Opa (Pixel, Kleiderbügel zweimal, Spezialzwecke, Enkel) | Trägt. |
+| Roter Kreis im Kalender, Opas Ausreden | Prolog, ZS1, ZS2, ZS3 | Trägt; jede Ausrede ist dünner. |
+| Rückverwandlungsschwund | ZS1, ZS2, ZS3 (abgekürzt) | Trägt; die Abkürzung in ZS3 ist richtig. |
+| 17 Fernbedienungen | Prolog, ZS1, ZS2, ZS3 | Trägt. |
+| „junger Mann“ | Prolog 2, ZS1 1, Welt 1 4 (`W1_ANK_PIX_0020_2`, `W1_TAV_PIX_0150_2`, `W1_STAB_PIX_0490`, `W1_TURM_PIX_0170`) | Eingehalten (Grenze vier je Abschnitt). |
+| „Ich sage nichts“ / „Ich nenne keine Namen“ | Welt 1 einmal (`W1_HINT_PIX_0111_2`), ZS1 einmal, ZS3 dreimal | In ZS3 einmal zu viel (R5-TX-12, W3-1). |
+| „freiwillig“ | Prolog 2, Welt 1 4, ZS2 1 | Trägt; die Auszahlung in ZS2 („Haushalt … Freiwillig.“) sitzt. |
+| Pixels Schnupper-Dreier | 15 in Welt 1 | **Abgenutzt ab dem dritten Raum** (R5-TX-39). Als Gag war er nie gemeint; er ist ein Bauplan. |
+| „beides“ / „das Zweite mehr“ | 5 in Welt 1, je einmal in Prolog und ZS1 | Abgenutzt ab dem zweiten Mal (R5-TX-15). |
+
+## Lokalisierung, Zusammenfassung
+
+- **Fehlend oder leer:** keine Zeile. Englisch und Deutsch gleich nur bei Namen, Lauten und Fachwörtern (Prüfung `tx-a_zaehlen.py en`).
+- **Pointe oder Hinweis im Englischen verloren:** `ZS1_DACH_OPA_0390`/`MAX_0400` (aufgehen/rise, R5-TX-13), `W1_DORF_MAX_0840` und drei weitere (hoch hinaus/go far, R5-TX-18), `W1_DORF_MAX_0160` (trägt/wear, R5-TX-19), `SYS_ERS_PIX_0300`, `SYS_WDH_MAX_0080` (R5-TX-44). Kleiner: `W1_DORF_MAX_0270` (meckern), `W1_ABS_SCH_0160` (Blech).
+- **Namen und Begriffe:** „Moderwort“ statt „Mouldword“ in zwei englischen Zeilen (R5-TX-33); Objektnamen gegen Dialog (R5-TX-42); „pockets“ gegen „compartments“ (R5-TX-14); „boy“ gegen „lad“ (R5-TX-06).
+- **Stimme:** Pixel englisch ohne Kurzformen in 693 von 699 Zeilen, sechs Ausreißer (R5-TX-33); „young man“ beim Stabmacher ergänzt (R5-TX-24). Zum offenen Punkt P10 (passt Pixels Tonfall ohne Kurzformen?): Aus meiner Sicht ja. Es ist das englische Gegenstück zu seinen langen deutschen Sätzen und trennt ihn hörbar von Max.
+- **Länge, Sprechblasen:** Deutsch nie über 140. Englisch über 140: `P0_DACH_MAX_0282` (144), `ZS1_DACH_MAX_0420` (143) und sechs Zeilen in Welt 1 (R5-TX-38). Englisch ist im Schnitt kürzer (Welt 1: 70 gegen 74 Zeichen).
+- **Länge, Oberfläche (Abschneide-Risiko, nicht im Spiel geprüft):** Englisch deutlich länger als Deutsch bei `UI_RAUM_DORFPLATZ` (28 gegen 21), `UI_RAUM_LUFTSCHLOSS` / `UI_OBJ_LUFTSCHLOSS` (17 gegen 11), `UI_RAUM_ZAUBERWALD` (16 gegen 10), `UI_RAUM_STARTBUERO` (19 gegen 9), `UI_RAUM_GRABHUEGEL` (24 gegen 17), `UI_OBJ_ZEUGNIS` (25 gegen 17), `UI_OBJ_TARIFVERTRAG` (20 gegen 12), `UI_OBJ_RANKENENDE` (20 gegen 10), `UI_OBJ_FUNDKISTE` (18 gegen 9), `UI_W4_ZS_TIERTORT` (23 gegen 16), `UI_W4_ZS_KANAL_999` (33 gegen 25), `UI_EINKAUF_1` (35 gegen 28), `UI_EINKAUF_2` (37 gegen 30), `UI_OPT_FARBENBLIND_HILFE` (55 gegen 48), `UI_ERR_OHNE_PFOTE_1_TEXT` bis `4` (59 gegen 54), `UI_LADEN_NACH_SZENE` (35 gegen 30), `UI_OPT_GERAEUSCHE` (13 gegen 9). Wo ein Feld auf die deutsche Länge gebaut ist, sind das die ersten Kandidaten.
+- **Blasen ungleich geteilt:** `W1_HINT_PIX_0330`/`_2` (R5-TX-37).
+- **Lehrbuch-Englisch:** selten. Fundstellen in R5-TX-07 (Prolog), R5-TX-44. Sonst liest sich das Englische britisch und gesprochen („beanpole“, „knocking-off time“, „Not happening“).
+- **Gut lokalisiert:** „Waffleton“, „Mouldword“, „Manyjuice Lemonade“, „Paw and Order: Savannah“, Größe 38 wird „size 5“, „Mausi“ wird „Kitty-Wiggles“, „We're traditional, not fussy.“ (`W1_BERG_GRI_0360`), die Reime auf Alwins Zettel halten alle drei Rätselregeln.
+
+## Frühere Funde, Stand heute
+
+| Alter Fund | Stand | Beleg |
+| --- | --- | --- |
+| Durchgang 14.11., Fund 7 (Minka und Topf, Text gegen Bild) | Text passt; Bild nicht geprüft | `W1_HINT_PIX_0111` „lässt dich nicht an den Topf“ |
+| Fund 9 (Toadi als Pilz) | Text unverändert stimmig; Bild nicht geprüft | „Familie?“ `W1_HOGG_TOA_0730` |
+| Fund 10 (Blasen über 140 Zeichen) | Deutsch behoben (Höchstwert 140); Englisch 8 Zeilen darüber | R5-TX-07, R5-TX-14, R5-TX-38 |
+| Fund 19 („In welchem Schloss?“ ohne Bezug) | behoben | `W1_HOGG_ALW_0360_2` |
+| Fund 25 (Text gegen Bild) | Kessel und Streikschilder im Text bereinigt. **Etiketten weiterhin widersprüchlich**, siehe R5-TX-45 unten | `W1_HOGG_MAX_0140`, `W1_HOGG_PIX_0150` |
+| Fund 28 (Muster) | „junger Mann“ eingehalten. Medienvergleiche: höchstens vier je Raum, kein Fund mehr. „Ich hab …“ als Zeilenanfang: in Welt 1 22 Zeilen, höchstens drei je Raum, kein Fund; im Prolog weiterhin gehäuft (R5-TX-01) | Zählung |
+| Schwächste Zeilen laut 14.11., Abschnitt 4 | `W1_TAV_MAX_1230` und `W1_THRO_MAX_0310` überarbeitet. Unverändert, aber aus meiner Sicht tragbar: `W1_ANK_MAX_0050`, `W1_DORF_MAX_0110`, `W1_SCHM_MAX_0010`, `W1_STAB_MAX_0090`, `W1_TAV_MAX_0360`, `W1_HOGG_MAX_0040`, `W1_BRUE_MAX_0030`, `W1_SMAU_MAX_0690`. Weiterhin schwach: `W1_TURM_MAX_0095` (R5-TX-32), `W1_DORF_MAX_1160` (leeres „Okay.“) | siehe Raumtabellen |
+| ND-22 (Ankunft Welt 1 lang) | nicht neu gemessen; `W1_ANK` hat weiterhin 34 Zeilen | Zeilenzahl |
+| ND-23 (Rückkehr ZS1 als eine Szene, 32 Zeilen) | weiterhin offen | `room_dachboden.gd`, eine Szene |
+| ND-24 (vier Erzählzeilen über 75 Zeichen) | weiterhin offen, Längen unverändert: `W1_HOGG_NAR_0010` (122), `W1_DORF_NAR_0920` (105), `W1_DORF_NAR_1150` (96), `W1_TAV_NAR_0040` (91) | Zählung |
+| P10 (Pixel englisch ohne Kurzformen) | Entscheidung offen; Empfehlung: beibehalten, sechs Ausreißer angleichen | R5-TX-33 |
+| P11 (`P0_WOHN_MAX_0355`, neun/acht Buchstaben) | weiterhin offen | R5-TX-04 |
+| W3-1 („Ich sage nichts“ in ZS3) | weiterhin offen, eine Zeile übrig | R5-TX-12 |
+| W3-2 (kein KI-Klang-Durchgang für Welt 1, ZS1, ZS2) | mit dieser Notiz geprüft; Umsetzung steht aus | diese Notiz |
+
+| ID | Zeilen-ID | Sprecher | Priorität | Muster | Original | Grund | Vorschlag |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| R5-TX-45 | `W1_HOGG_PIX_0150` (gegen `W1_HOGG_MAX_0140`, `W1_HOGG_ALW_0380`, `W1_HOGG_MAX_0930`) | Pixel | kosmetisch | Widerspruch im Rätseltext; **weiterhin offen (Fund 25 vom 14.11., Teil Etiketten)** | Pixel: „Sechs Flaschen, kein Etikett.“ – Max am selben Hotspot: „Sechs braune Flaschen mit vertauschten Etiketten“, Alwin: „Die Etiketten hat jemand vertauscht.“, Max: „Eine Flasche, deren Etikett lügt.“ | Am selben Regal sagt eine Figur „vertauscht“, die andere „keins“. Für das Flaschenrätsel ist das die Frage, ob Lesen hilft. Welche Fassung zum Bild passt, habe ich nicht geprüft. | Wenn die Flaschen im Bild Etiketten tragen: „Sechs Flaschen, und kein Etikett stimmt. Ich rieche sie von hier aus, alle sechs.“ Wenn nicht: `0140` „Sechs braune Flaschen ohne Etikett, und zwei davon sind deutlich größer.“, `0930` „Eine Flasche ohne Etikett.“, Alwin „Die Etiketten hat jemand abgemacht. Vermutlich ich.“ |
