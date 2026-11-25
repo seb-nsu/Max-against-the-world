@@ -104,3 +104,72 @@ warte
 klick inv:fladen
 klick @nebet
 warte
+#-- Block 4: Sphinx (R8), erste Fährfahrt, Agora (R9), Startbüro (R3)
+klick @ausgang_thronsaal
+warte
+klick @pharaonenteller
+warte
+klick 5 330
+warte
+klick 5 330
+warte
+klick 5 330
+warte
+klick @ausgang_nil_delta
+warte
+klick @duenenpfad
+warte
+klick @sphinx_figur
+warte
+option 0250
+option "Handy"
+option "„Es stirbt bei drei Prozent“"
+option "„Es klingelt, wenn jemand dich will“"
+option "„Es leuchtet im Dunkeln, aber nur kurz“"
+warte
+option 0230
+warte
+klick @ausgang_nil_delta
+warte
+klick 5 320
+warte
+klick 5 320
+warte
+klick 5 320
+warte
+klick @faehre
+option "Fährsteg Olympia"
+warte
+klick @weg_zur_agora
+warte
+klick @menge
+warte
+option 0420
+warte
+option 0430
+warte
+klick @cicero
+warte
+option 0250
+warte
+option 0340
+warte
+klick 5 320
+warte
+portraet pixel
+klick @tonne
+warte
+portraet max
+klick @tuer_zum_startbuero
+warte
+klick @leeres_formular
+warte
+klick inv:kugelschreiber
+klick inv:leeres_formular
+warte
+klick inv:rundschreiben
+klick @beamter_1
+warte
+klick inv:olivenoel
+klick inv:sandalen
+warte

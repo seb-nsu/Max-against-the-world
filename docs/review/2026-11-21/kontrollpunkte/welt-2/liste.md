@@ -16,3 +16,14 @@ Alle Stände stammen aus dem Lauf `pr-w2-haupt`: Anfang ist `kontrollpunkte/welt
 | `w2_09_kueche_anfang` | palastkueche | wie oben, Küche erstmals betreten | wie oben | Klickweg |
 | `w2_10_kueche_zutaten` | palastkueche | Nebet befragt; Brot, Datteln, Zwiebel, Traubensaft genommen | + brot, datteln, zwiebel, traubensaft | Klickweg |
 | `w2_11_fladen_fertig` | palastkueche | Fladen mit Kruste | – brot, datteln, zwiebel; + fladen | Datteln auf Brot, Zwiebel auf Fladen, Fladen in den Ofen |
+| `w2_12_nach_R4` | palastkueche | R1, R2a, R2b, R4 | – fladen; + olivenoel | Fladen auf Nebet |
+| `w2_13_sphinx_anfang` | sphinx | wie oben, Pharaonenteller genommen, Sphinx erstmals betreten | + pharaonenteller | Klickweg |
+| `w2_14_nach_R8` | sphinx | + R8 (Wort Handy), Konter 1 bis 3 | + schriftrolle | Sphinx Option 0250 |
+| `w2_15_vor_erster_fahrt` | nil_delta | wie oben, am Steg | wie oben | Klickweg |
+| `w2_16_olympia_steg` | faehrsteg_olympia | erste Fahrt gemacht, Traubensaft ist Essig | wie oben | Flusskarte „Fährsteg Olympia“ |
+| `w2_17_agora_anfang` | agora | Agora erstmals betreten, mit niemandem geredet | wie oben | Klickweg |
+| `w2_18_nach_R9` | agora | + R9 (Konter 4, 5) | wie oben | Menge, Option 0420 |
+| `w2_19_buero_anfang` | startbuero | + Cicero befragt (`W2_CICERO_FORDERUNG`), Baustein „blau“, Konter 6 und 7 (Tonne), Brian befragt; Büro erstmals betreten | wie oben | Klickweg |
+| `w2_20_buero_formular` | startbuero | Beamte befragt, Hermes im Büro, leeres Formular | + leeres_formular | Klickweg |
+| `w2_21_rundschreiben` | startbuero | + R3a (Weg A) | – kugelschreiber, leeres_formular; + rundschreiben | Kugelschreiber auf Formular |
+| `w2_22_nach_R3` | startbuero | + R3b, Sandalen | – rundschreiben; + startpass, sandalen | Rundschreiben auf Beamter 1 |
