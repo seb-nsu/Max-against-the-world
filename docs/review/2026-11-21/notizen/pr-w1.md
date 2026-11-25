@@ -196,7 +196,48 @@ Noch nicht nachgeprüft: 14.11. übrige Nummern; 17.11. W1-01, -03 bis -07, -09 
 
 ## Animationen
 
-(folgt nach den Filmen in Tempo 1)
+Grundlage: (a) Filme in Tempo 1 mit `textmodus lesen` aus dem laufenden Spiel (`film an`), (b) Bestand aus den Sheet-Dateien und Aufruf-Tabellen, erzeugt mit dem vorhandenen Werkzeug `werkzeuge/an-a_inventar.py` (Ausgabe in einen Arbeitsordner umgelenkt; Auszug für Welt 1 in `belege/pr-w1/animationen_welt1_inventar.csv` und `…_messwerte_animationen.csv`). Was nur aus (b) stammt, ist als „aus den Dateien“ markiert.
+
+### Im Spiel gefilmt
+
+| Szene | Was zu sehen ist | Urteil |
+| --- | --- | --- |
+| R7, Waldemars Lied (Zauberwald) | Kamera bleibt am Eingang; Waldemar (`musical`), Niesrosen, Rotkäppchen, Toadi außerhalb des Bildes | Die teuerste Szene der Welt ist nicht zu sehen (R5-W1-17) |
+| R11b, Kreuzungen (Turmkeller) | Pixel läuft hin, `haare` spielt, Büschel bleibt liegen | gut (W1-19 behoben) |
+| R11b, Besen | `fegen`-Schleife auf drei Routen, laufen bis nach der letzten Zeile weiter, dann weg; `haarspur` und `max_wegfegen` nicht gesehen | Auflösung fehlt im Bild (R5-W1-27) |
+| Abstellkammer 1 | keine Besen | W1-20 weiterhin offen |
+| Klassenzimmer | Alwin `ruehren` mit eigenem Kessel im Figurenbild, der Max' Beine überdeckt | R5-W1-21 |
+| Abstellkammern nach R12 | Smaugi `staubwedel`, Raum aufgeräumt | gut |
+
+(Thronsaal, Melken, Pilz-Verwandlung, Fußbad, Lieferszene: siehe Nachtrag unten, soweit gefilmt.)
+
+### Bestand gegen Gesten-Regie (aus den Dateien)
+
+- 24 Figuren und Objekte der Welt 1 mit zusammen 133 Bildfolgen. Jede Figur hat `idle` (4 Bilder, 320 ms), `talk` und `walk`.
+- **Gebaut, aber nicht aufgerufen:** Gollo `talk_geste`, Grimmzahn `talk_geste`, Schmied `abschrecken`, `blasebalg`, `ins_feuer`, `zum_amboss`, XXL-Ziege `kauen`. Dazu je Figur eine Altfassung `talk_alt` (11 Stück), die nur Platz im Sheet kostet (A-07 weiterhin offen).
+- **`walk` besteht aus den Standbildern** (Figur gleitet, wenn sie bewegt wird): Smaugi, Huhn Berta, Schwan, Zauberbesen, Übungsbesen (A-06 weiterhin offen). Pixel im Fell und die Ziegen haben eine eigene Folge `gehen` (8 Bilder).
+- **Früher gemeldet, nach den Messwerten behoben:** Gollo `talk` ist jetzt so hoch wie der Stand (144 px gegen 143–144; die gebückte Fassung liegt als ungenutztes `talk_geste` im Sheet) → W1-05 behoben. Grimmzahn `talk` 134–136 px gegen 134–135 → W1-16 behoben (Schild im Film nicht eigens geprüft). Max als Pilz hat einen eigenen Gang mit 8 Bildern (`max_pilz walk`, nicht gleich `idle`) → W1-09 nach den Dateien behoben, im Spiel nicht gesehen. `melken` und `haare` stehen in der Aufruf-Tabelle (`gesten_einsatz.gd` Z. 88–91) → W1-06 und W1-19 angebunden.
+- **Fehlt ganz:** Max spielt die Laute (R6a, Berta flieht) ohne eigene Bewegung; Max als Abnehmer-Übergabe bei Smaugi, Zeldina fängt den Zauberstab (R13), Maklerin läuft ab (R9), Rotkäppchen liefert (R3) haben keine eigene Folge außer `walk`/`talk` (Zeldina `kiste_schwert` ist für R13 gebaut und aufgerufen).
+- Sprech-Schleifen mit nur 4 Bildern ohne Geste: Gollo, Grimmzahn, Minka, Huhn, beide Ziegen, Max (4 × 130 ms).
+
+### Kandidaten für bessere Animationen (für `ext`)
+
+| Figur oder Objekt | Bewegung | Datei | Bildzahl und Größe | Was daran schwach ist | Was man bräuchte |
+| --- | --- | --- | --- | --- | --- |
+| Zauberbesen (Turmkeller) | Lauf auf der Route, Abgang in die Kammer | `game/grafik/figuren/zauberbesen.png` | `fegen` 3 Bilder, 100 px hoch; `walk` = Standbilder | gleitet beim Fahren; Abgang in die Kammer wird nicht gespielt | Fege-Lauf von der Seite, 6–8 Bilder, etwa 48 × 100; kurzer „hinterherjagen“-Zyklus |
+| Übungsbesen (Klassenzimmer) | jagt Pixels Haaren nach | `…/uebungsbesen.png` | `jagen` 5 Bilder, 74 px; `walk` = Standbilder | nur einmalige Geste, kein Laufzyklus | derselbe Besen-Lauf wie oben |
+| Smaugi | Sitzen, Atmen, Reden | `…/smaugi.png` | `idle` 4, `talk` 4 Bilder, 250 px hoch | große Figur mit wenig Bewegung; `walk` = Standbilder | Atem-Schleife 8 Bilder (Bauch, Flügel), Blinzeln, Rauch aus den Nüstern |
+| Huhn Berta | Flattern auf den Balken | `…/huhn.png` | `springen` 7 Bilder, 34–47 px; `walk` = Standbilder | Flucht ist ein Sprungbogen ohne Flügelschlag | Flattern 4–6 Bilder, etwa 40 × 40, Seitenansicht |
+| Schwan (Wasserschloss) | Schwimmen | `…/schwan.png` | `idle` 4 Bilder, 79 px; `walk` = Standbilder | steht im Wasser | Schwimm-Schleife 4–6 Bilder mit Wasserring |
+| Schmiede-Ziege, XXL-Ziege | Gehen von der Seite | `…/schmiede_ziege.png`, `…/xxl_ziege.png` | `gehen` 8 Bilder; 93 und 236 px hoch | XXL-Ziege schwankt in der Höhe 223–244 px (9 %) | Gehzyklus Vierbeiner von der Seite, 8 Bilder, sauber auf einer Fußlinie |
+| Pixel im Ziegenfell | Gehen | `…/pixel_ziege.png` | `gehen` 8 Bilder, 56–61 px | Höhe schwankt, `walk` = Standbilder als Rückfall | Gehzyklus Katze mit Fell, 8 Bilder, etwa 64 × 60 |
+| Waldemar | Musical-Nummer | `…/waldemar.png` | `musical` 3 Bilder in 16 Schritten, 270 px | drei Bilder für die größte Nummer der Welt | Tanz- oder Gesangsschleife 8–12 Bilder (Arme, Schritt), dazu Notenblasen als Effekt |
+| Waldemar | Fußbad | `…/waldemar.png` | `fussbad` 2 Bilder | zwei Bilder | Hinsetzen 4–6 Bilder plus Planschen-Schleife 4 Bilder, Wasserspritzer als Effekt |
+| Max | Laute spielen | `…/max.png` | fehlt | Max steht beim Spielen still | Zupfen 4–6 Bilder, 185 px hoch, Seitenansicht |
+| Max | Melken | `…/max.png` | `melken` 8 Bilder × 140 ms, 136–141 px | wird noch im Spiel angesehen (siehe Nachtrag) | falls steif: Hocken und Armzug 8 Bilder |
+| Niesrosen (Zauberwald) | Aufgehen, Pollenwolke | Hintergrund, kein eigenes Bild gefunden | fehlt | Rosen „öffnen sich“ nur im Text | Blüten-Schleife 4–6 Bilder (zu, halb, offen) und Wolken-Effekt |
+| Fackeln (Bergwerk, Turm) | Flamme | Ambiente | nicht geprüft | laut `offene-punkte.md` Flammen nach dem Umrechnen blass | Feuer-Schleife 4–6 Bilder, 16 × 24 |
+| Gollo, Grimmzahn, Minka | Reden | jeweilige Sheets | `talk` 4 Bilder | nur Mund, keine Geste (die Gesten-Fassungen sind zu groß und deshalb ungenutzt) | Rede-Geste in Standhöhe, 6–8 Bilder |
 
 ## Zeitmessungen
 
