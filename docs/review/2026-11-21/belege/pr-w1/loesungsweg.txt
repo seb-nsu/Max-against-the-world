@@ -1,0 +1,424 @@
+# Lösungsweg Welt 1 (pr-w1), gerader Durchlauf mit echten Klicks, vom echten Prolog-Endstand bis zum ersten freien Moment in Welt 2.
+# Vorbereitung: kontrollpunkte/prolog/prolog_ende.json nach ORDNER/staende/ kopieren.
+# Aufruf: fs start ORDNER tempo=1 ; fs ORDNER -f loesungsweg.txt
+# Rätsel 10 über Weg B (Weg A ist wegen GD-W1-K1 nicht lösbar). "warte" vor Klicks fängt Pixels Zurufe ab (GD-W1-04).
+# Abschnitte (#-- Block) lassen sich einzeln ausführen; "stand sichern" legt Vergleichsstände an.
+#-- Block 1: Dorfplatz, Taverne (R1)
+stand holen prolog_ende
+warte
+klick @toadi
+warte
+option 0610
+tempo 4
+warte
+klick @eimer
+warte
+klick @bestellzettel
+warte
+klick @steckbrief
+warte
+klick 10 300
+warte
+klick 10 300
+warte
+klick @taverne_von_aussen
+warte
+klick @humbert
+warte
+option 0620
+warte
+option 0640
+warte
+portraet pixel
+warte
+klick @huhn
+warte
+klick @minka
+warte
+portraet max
+warte
+klick @gollo
+warte
+option 0750
+warte
+option 0790
+warte
+klick @humbert
+warte
+option 0570
+warte
+option 0590
+warte
+klick inv:thunfischdose
+klick @gollo
+warte
+stand sichern l01_nach_R1
+klick @laute_mit_muenzbecher
+warte
+klick @ziegenfell_vorleger
+warte
+klick @ei
+warte
+klick @ausgang_dorfplatz
+warte
+#-- Block 2: Zauberstab-Laden (R2), Brunnen (R5), Bohne (R8)
+warte
+klick 630 290
+warte
+klick @zauberstab_laden_von_aussen
+warte
+klick @stabmacher
+warte
+option 0210
+warte
+option 0290
+warte
+klick @kochloeffel
+warte
+klick inv:kaesefondue
+klick inv:kochloeffel
+warte
+klick @ausgang_dorfplatz
+warte
+klick inv:goldmuenze
+klick @brunnen
+warte
+option "hoch hinaus"
+warte
+klick inv:zauberbohne
+klick @erdfleck
+warte
+klick inv:eimer
+klick @brunnen
+warte
+klick inv:eimer
+klick @erdfleck
+warte
+klick inv:eimer
+klick @brunnen
+warte
+stand sichern l02_nach_R2_R5_R8
+#-- Block 3: Schmiede, Bestellung, Brücke (R3, R4)
+warte
+klick 600 290
+warte
+klick @schmiede_von_aussen
+warte
+klick @schmied
+warte
+option 0210
+warte
+option 0230
+warte
+option 0250
+warte
+option 0310
+warte
+klick @schmiede_ziege
+warte
+klick @krug
+warte
+klick @ausgang_dorfplatz
+warte
+klick inv:bestellzettel
+klick @dorfbrett
+warte
+warte
+klick @waldweg
+warte
+rklick @schild
+warte
+knopf X
+warte
+klick @waldemar
+warte
+option 0230
+warte
+option 0310
+warte
+klick inv:ziegenfell_vorleger
+klick @pixel
+warte
+stand sichern l03_nach_R3
+klick @pixel
+warte
+klick @schmiede_ziege
+warte
+klick @xxl_ziege
+warte
+klick @schild
+warte
+knopf X
+warte
+portraet pixel
+warte
+klick @schmiede_ziege
+warte
+klick @schmiede_ziege
+warte
+klick @xxl_ziege
+warte
+klick @xxl_ziege
+warte
+portraet max
+warte
+klick inv:eimer
+klick @waldemar
+warte
+warte
+stand sichern l04_nach_R4
+#-- Block 4: Zauberwald, Bergwerk, Waldemar singt (R7)
+warte
+klick @waldweg
+warte
+klick 630 290
+warte
+klick @leuchtpilze
+warte
+klick @niesrosen
+warte
+klick 630 290
+warte
+klick @stolleneingang
+warte
+klick 630 330
+warte
+klick 630 330
+warte
+klick @grimmzahn
+warte
+option 0310
+warte
+option 0330
+warte
+option 0370
+warte
+option 0430
+warte
+klick 10 330
+warte
+klick 10 330
+warte
+klick 10 330
+warte
+klick @ausgang_zauberwald
+warte
+klick 10 280
+warte
+klick 10 280
+warte
+klick 10 280
+warte
+klick @ausgang_trollbruecke
+warte
+klick @waldemar
+warte
+option 0290
+warte
+klick @waldweg
+warte
+warte
+stand sichern l05_nach_R7
+#-- Block 5: Hoggelwarz (R6)
+warte
+klick @ausgang_trollbruecke
+warte
+klick @ausgang_dorfplatz
+warte
+klick 10 290
+warte
+klick 10 290
+warte
+klick @weg_nach_hoggelwarz
+warte
+warte
+klick @alwin
+warte
+option 0310
+warte
+option 0370
+warte
+option 0430
+warte
+klick inv:ei
+klick @kessel
+warte
+klick inv:leuchtpilz
+klick @kessel
+warte
+klick @ausgang_dorfplatz
+warte
+klick 630 290
+warte
+klick 630 290
+warte
+klick @schmiede_von_aussen
+warte
+klick inv:krug
+klick @schmiede_ziege
+warte
+klick @ausgang_dorfplatz
+warte
+klick 10 290
+warte
+klick 10 290
+warte
+klick @weg_nach_hoggelwarz
+warte
+klick inv:krug
+klick @kessel
+warte
+klick @flasche_3
+warte
+klick inv:flasche
+klick @kessel
+warte
+knopf X
+warte
+warte
+stand sichern l06_nach_R6
+#-- Block 6: Luftschloss (R9)
+warte
+klick @ausgang_dorfplatz
+warte
+klick @bohnenranke
+warte
+warte
+klick 630 290
+warte
+klick 630 290
+warte
+klick @zeldina
+warte
+option 0280
+warte
+option 0320
+warte
+klick @maklerin
+warte
+option 0470
+warte
+warte
+rklick @kritzelei
+warte
+knopf X
+warte
+klick @zeldina
+warte
+option 0710
+warte
+option 0750
+warte
+option 0770
+warte
+stand sichern l07_nach_R9
+#-- Block 7: Bergwerk (R10 Weg B), Turmkeller (R11b)
+warte
+klick 10 290
+warte
+klick 10 290
+warte
+klick 10 290
+warte
+klick @rankenende
+warte
+klick 630 290
+warte
+klick @waldweg
+warte
+klick @waldweg
+warte
+klick 630 300
+warte
+klick 630 300
+warte
+klick @stolleneingang
+warte
+klick 630 330
+warte
+klick 630 330
+warte
+klick @grimmzahn
+warte
+option 0390
+warte
+warte
+klick @rune_tuer
+warte
+warte
+portraet pixel
+warte
+klick @kreuzung_1
+warte
+klick @kreuzung_2
+warte
+klick @kreuzung_3
+warte
+portraet max
+warte
+klick @kammertuer
+warte
+stand sichern l08_nach_R11b
+#-- Block 8: Abstellkammern (R12, R11a), Thronsaal (R13)
+warte
+klick @treppe_nach_oben
+warte
+warte
+klick @schwerter_buendel
+warte
+klick inv:schwerter_buendel
+klick @humbert
+warte
+klick @fackel_buendel
+warte
+klick inv:fackel_buendel
+klick @grimmzahn
+warte
+klick @kronleuchter
+warte
+klick inv:kronleuchter
+klick @zeldina
+warte
+warte
+klick @geheimtuer
+warte
+option 1
+warte
+option 1
+warte
+option 1
+warte
+option 1
+warte
+warte
+stand sichern l09_nach_R12_R11a
+klick @geheimtuer
+warte
+warte
+klick inv:socke
+klick @moderwort
+warte
+klick inv:kochloeffel
+klick @moderwort
+warte
+klick @moderwort
+warte
+warte
+#-- Block 9: Zwischenspiel 1 (packen: Socke, Dosenöffner), Kanal 7
+warte
+stand sichern l10_zs1
+klick @drehknopf
+warte
+klick 283 165
+warte
+klick 115 165
+warte
+knopf "Fertig gepackt"
+warte
+warte
+klick @drehknopf
+warte
+warte
+stand sichern l11_welt2_anfang
+status
+inv
