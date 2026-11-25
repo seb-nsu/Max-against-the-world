@@ -117,6 +117,38 @@ Jede Zeile im laufenden Spiel mit echten Klicks, von Kontrollpunkten aus (älter
 | Kern: Fehltausch an der Zelle, dann Lösung B | nach R10: `klick @energiezelle`, `knopf heiß`, `knopf müde` | „Heiß auf mich? … Das ist ein Tausch für Leute ohne Plan B.“, dann „Kein Tausch mehr übrig, und die Zelle glüht. Also brauch ich Wetter. Pixel. Fenster. Jetzt.“ (`W3_KERN_MAX_0470`). `portraet pixel`, `klick @fenster`, `portraet max` → Schnee im Kern, `W3_ZELLE_KALT`, `W3_ZELLE_SCHNEE` (`W3_KERN_NAR_0480`). **Lösung B trägt** (W3-R03-06 behoben). Stand: `w3_alt_kern_loesung_b_zelle_kalt`. |
 | F5 und Esc in der Code-Sicht | Kammer 2, Code-Sicht offen: `taste f5`, `taste esc` | F5 speichert (Platz 13), Esc schließt die Code-Sicht; ohne Code-Sicht öffnet Esc das Pausemenü. Laden bei offener Code-Sicht lässt das Spiel nicht zu. |
 
+## Hilfe-Pfote an jedem Schritt
+
+Eigener Lauf `pr-w3-pfote` (Tempo 4, ein Prozess, Kontrollpunkte in aufsteigender Reihenfolge): je Kontrollpunkt `pfote`, `warte 31`, `pfote`, `warte 61`, `pfote` als Max, dann dasselbe als Pixel. Alle 34 Stände von `w3_00_anfang` bis `w3_33_nach_R10`. Ausgabe: `/home/user/lauf/pr-w3-pfote/ausgabe.txt` (nicht im Repo).
+
+| Schritt | Stufe 1 | Stufe 2 | Stufe 3 | Bemerkung |
+| --- | --- | --- | --- | --- |
+| R1a | `0110` | `0120` | `0130` | passt |
+| R1b | `0140` | `0150` | `0160` | Stufe 3 nennt die drei Antworten |
+| R2 | (nicht einzeln abgefragt) | | | R1a/R1b hatten in den Ständen Vorrang |
+| R3a | `0310` | `0320` | `0330` | „Benutz mich hier in der Gasse“ passt zum Klick auf Pixel |
+| R3b | `0340` | `0350` | `0360` | sagt nicht, **wie** man schluckt (GD-W3-04) |
+| R4 | `0410` | `0420` | (im Lauf nicht erreicht, Pixel bekam R13) | |
+| R5 | `0510` | `0520` | (ebenso) | |
+| R13 | `1410` | `1420` | `1430` | nennt Kalle und die Tabelle auch vor dem ersten Aufwachen (R5-W3-10, R5-W3-19) |
+| R12 | `1310` | `1320` | `1330` | Wartezeile `9995` („Ich rechne noch. Bitte warten.“) kommt, wenn man zu früh klickt |
+| R8 | `0810` | `0820` | `0830` | Stufe 3 erwähnt das Öl |
+| R9a | `0910` | `0920` | `0930` | Stufe 2 erklärt, wie man an die Karte kommt, auch wenn man sie schon hat (Stand `w3_16_nach_R8`) |
+| R6a | `0610` | `0620` | `0630` | passt |
+| R6b | `0640` | `0650` | `0660` | passt |
+| R7a | `0710` | `0720` | `0730` | Stufe 3: „Die Streifen ansehen“, der Hotspot heißt „Farbcode an der Wand“ |
+| R7b | `0740` | `0750` | `0760` | passt (das Menü macht den Hinweis überflüssig, R5-W3-04) |
+| R9b | `0940` | `0950` | `0960` | Stufe 3: „… dann auf den Schalter stellen“; die Kammer löst sich schon beim Tausch (R5-W3-07) |
+| R9c | `0970` | `0980` | `0990` | passt |
+| R9d | `1000` | `1010` | `1020` | passt |
+| R10 | `1110` | `1120` | `1130` | passt |
+| R11 | `1210` | `1220` | `1230` | beide Lösungen genannt; nach kalter Zelle unverändert (R5-W3-18) |
+
+- **Alle abgefragten Schritte haben drei verschiedene Stufen**, die Wartezeiten (30 s, 60 s) greifen, eine vierte Anfrage wiederholt Stufe 3. Die IDs oben sind `W3_HINT_PIX_<Nummer>`.
+- **„Nichts offen“ ist ortsbezogen (W3-05 behoben):** nach R1b „Der Mann mit dem Hut hat die Gasse freigegeben …“ (`0020`), nach R12 und nach R9a „Die Tür am Glaseingang redet jetzt mit jedem …“ (`0030`), nach R7b „Kalles Leitung liegt. Das Labor ist jetzt nur noch ein Nickerchen entfernt.“ (`0060`). Lücke: zwischen den Kammern nur `0010` (R5-W3-18).
+- **Der dritte Pfoten-Klick als Max wurde in fast jedem Stand von einem Zuruf geschluckt** (R5-P-08): Der Zuruf kommt 45 s nach der letzten Eingabe, also genau in die 60 s Wartezeit bis Stufe 3; der Klick auf die Pfote klickt dann nur die erste Zuruf-Hälfte weiter. Wer auf Stufe 3 wartet, muss zweimal klicken. In den Kammern 2 und 3 und im Kern gab es im Lauf keinen Zuruf, dort kam Stufe 3 beim ersten Klick.
+- Nach dem Laden bleiben die erreichten Stufen erhalten (Stand `w3_13_nach_R13`: R12 stand schon auf Stufe 1, die Pfote ging mit Stufe 2 weiter).
+
 ## Zwischenspiel 3 im Spielfluss
 
 Zweimal gespielt: im geraden Durchlauf (Stände `w3_34_zs3_dachboden_frei`, `w3_35_zs3_gepackt`) und nach dem Nebenweg mit Lösung B (Stände `w3_alt_zs3_dachboden_frei_echtes_inventar`, `w3_alt_zs3_gepackt_tasse_akte`, `w3_alt_welt4_anfang_tasse_akte`). Beide Male begann die Welt mit `start welt-3`; das Pflichtfach und die Werkbank entsprechen deshalb nicht einem echten Spielstand aus Welt 1 und 2.

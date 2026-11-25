@@ -17,6 +17,10 @@ def lage():
     m = re.findall(r"^LAGE (\S+)", fs("status"), re.M)
     return m[-1] if m else "?"
 
+def raum():
+    m = re.findall(r"^LAGE \S+ \| Raum (\S+)", fs("status"), re.M)
+    return m[-1] if m else "?"
+
 def aufraeumen():
     for _ in range(4):
         l = lage()
@@ -37,6 +41,8 @@ fs("stand holen " + stand, "warte")
 if figur == "pixel":
     fs("portraet pixel", "warte")
 erledigt, ersatz = set(), []
+start_raum = raum()
+print("Raum:", start_raum)
 for stellung in range(4):
     o = fs("objekte")
     for z in o.splitlines():
@@ -63,6 +69,8 @@ for stellung in range(4):
             ersatz += [(oid, a, i) for i in ids if i.startswith("SYS_ERS")]
             if not aufraeumen():
                 print("ABBRUCH: Lage nicht frei nach", a, oid, lage()); sys.exit(1)
+            if raum() != start_raum:
+                print("ABBRUCH: Raum gewechselt nach", a, oid, "->", raum()); sys.exit(1)
     # weiter nach rechts laufen
     vor = re.search(r"Kamera x=(-?\d+)", o)
     fs("klick 630 " + lauf_y, "warte", "klick 630 " + lauf_y, "warte")
