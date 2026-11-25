@@ -15,3 +15,9 @@ Bei `tempo 4` kann das **erste** Gesprächsmenü einer Programmsitzung über dem
 ## Nachtrag 25.11. (pr-p): verbrauchte Gegenstände tauchen nach dem Laden wieder auf (R5-P-19)
 
 Nach `fs start` und `stand holen` in einem frischen Prozess sind Props von Gegenständen, die schon verbraucht wurden, wieder sichtbar und lassen sich erneut nehmen (gesehen: Drahtkleiderbügel im Schrank trotz Antenne, Teetasse im Wohnzimmer). Das ist ein Spielfehler, kein Fehler der Fernsteuerung. Wer einen Kontrollpunkt holt, sollte solche Gegenstände nicht noch einmal einsammeln, sonst stimmt der weitere Lauf nicht mit einem durchgehenden Spiel überein.
+
+## Dritte Falle: Gespräche hängen nach Neustart und Laden (Fund R5-W1-34, pr-w1, 25.11.2026)
+
+Lädt man in einem **frisch gestarteten** Programm einen Stand, in dem ein Gespräch schon einmal geöffnet war, hat dieses Gespräch keine Optionen mehr: Das Spiel bleibt mit leerem Menü stehen (`STEHT … G.blocked=true dialog=<Figur>`), Esc hilft nicht. Das ist ein Fehler des Spiels (`_has_done_init` steht im Speicherstand), kein Fehler der Kontrollpunkte; siehe `notizen/pr-w1.md`, R5-W1-34.
+
+Für die Prüfung heißt das: Nach `fs start` + `stand holen` lassen sich nur Figuren ansprechen, mit denen im gespeicherten Stand noch **nie** geredet wurde. Wer mit einer schon angesprochenen Figur weiterreden muss, lädt den Stand ohne Neustart (dann gilt die erste Falle für aufgehobene Gegenstände) oder spielt von einem früheren Stand bis dorthin.
